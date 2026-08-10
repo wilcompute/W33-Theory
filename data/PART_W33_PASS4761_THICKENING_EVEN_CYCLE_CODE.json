@@ -1,0 +1,33 @@
+{
+  "pass": 4761,
+  "carrier": {
+    "graph": "W33 line-intersection graph = dual GQ(4,3) point graph",
+    "vertices": 40,
+    "edges": 240,
+    "SRG": [40, 12, 2, 4]
+  },
+  "thickening_edge_incidence": {
+    "rows": 1620,
+    "columns": 240,
+    "row_weight": 28,
+    "column_weight": 189,
+    "binary_rank": 200,
+    "all_rows_eulerian": true,
+    "all_rows_even_weight": true
+  },
+  "cycle_space": {
+    "dimension": 201,
+    "even_cycle_hyperplane_dimension": 200,
+    "row_code_equals_even_cycle_hyperplane": true
+  },
+  "code": {
+    "parameters": "[240,200,4]_2",
+    "dual_parameters": "[240,40,12]_2",
+    "dual_description": "Cut(X)+<1_E>",
+    "cut_space_dimension": 39,
+    "edge_connectivity": 12,
+    "all_edge_coset_min_lower_bound": 80
+  },
+  "theorem": "The 1620 support-12 apartment thickenings, read as their 28 induced edges in the dual W33 line graph, generate exactly the even-weight cycle hyperplane [240,200,4]_2. Its dual is Cut(X)+<1_E>, a [240,40,12]_2 code.",
+  "boundary": "Exact binary graph-code theorem on the dual line graph. This coordinate carrier is not identified with the point-edge CSS carrier by dimension or length alone."
+}
