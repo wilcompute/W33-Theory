@@ -1,0 +1,52 @@
+\subsection*{Passes 4793--4800: BLT closure, orientation chirality, $F_4/E_6$ crosswalk, and a qutrit triangle code}
+\addcontentsline{toc}{subsection}{Passes 4793--4800: BLT, chirality, F4/E6 crosswalk, qutrit triangle code}
+
+\paragraph{Pass 4793: the $q=7$ shell has two BLT equivalence classes.}
+Passes 4754 and 4778 identify the minimum words of $\ker_{\mathbb F_2}A_*(W(3,q))$ with BLT-sets.  Betten's complete $q=7$ census has exactly the Linear and Fi/K2 classes, with full projective-orthogonal stabilizer orders $5376$ and $384$.  Since the full group has order $276595200$, the corresponding class sizes are $51450$ and $720300$.  Thus the complete minimum shell has two classes at this equivalence level and total size $771750$.  The finer $\PSp(4,7)$ orbit split is not asserted without a separate index-two certificate.
+
+\paragraph{Pass 4794: the H10 covering radius is $14$ or $15$.}
+For a coset let $s$ be the number of the $270$ weight-four dual checks evaluating oddly.  Pass 4781 gives $s\le179$.  If an even coset had minimum at least $16$, complement symmetry and OA strength three force
+\[
+ A_{16}=A_{24}=a,\quad A_{18}=A_{22}=1280-4a,\quad A_{20}=6a-1536,
+ \qquad 256\le a\le320.
+\]
+The fourth Krawtchouk moment and coset MacWilliams identity give $a=1760-8s$, hence $a\ge328$, a contradiction.  Therefore
+\[
+ \boxed{14\le\rho(H10)\le15}.
+\]
+Only an odd distance-$15$ coset can still make the upper value sharp; a separate exact MILP producer records that final decision only if it terminates decisively.
+
+\paragraph{Pass 4795: orbitals $8/9$ are an orientation torsor.}
+The $45$-point quotient has three maximal $K_5$ lines through each point.  The $\PSp(4,3)$ point stabilizer has order $576$ and induces $C_3$ on those three lines, whereas the full outer extension has stabilizer order $1152$ and induces $S_3$.  Hence there are exactly two opposite global cyclic-orientation sheets: $\PSp$ preserves either sheet and the outer coset reverses it.  After the cold orbital is removed, the two local orientation signs are exactly the paired residue orbitals $8$ and $9$.  Cold orbital $1$ occurs in both signs, so orientation and cold selection are distinct data; no $H^2$ claim is made.
+
+\paragraph{Pass 4796: the $270$ carrier is intrinsic to $GQ(4,2)$.}
+Starting from $Q^-(5,2)$ alone gives the $45$-point graph $\operatorname{SRG}(45,12,3,3)$ with exactly $27$ maximal $K_5$ lines.  Every graph triangle lies in a unique $K_5$, so
+\[
+ 27\binom53=270
+\]
+is the complete carrier.  Equivalently a carrier state is the complement duad of a triangle inside its unique $K_5$.  The ten triangles of each $K_5$, adjacent when their intersection has size one, form Petersen, recovering all $27$ hot fibers and $405$ hot edges.  The triangle hypergraph is lossless: the $45$ original points are its $18$-triangle stars and adjacency is recovered by triangle co-occurrence three.  No $40$-line W33 coordinates are needed.
+
+\paragraph{Pass 4797: the cube-triality quotient is explicitly the compiler $F_4/E_6$ quotient.}
+An executable graph isomorphism maps the $45$ three-cube $W(D_4)$ packets of Pass 4782 to the independently reconstructed BT167/168 $F_4$-normalizer quotient.  The witness preserves all $27$ maximal $K_5$ lines and therefore all $270$ triangle states.  BT169 already supplies the explicit line-preserving second leg from the compiler quotient to the older W33 center-quad/$E_6$ geometry.  Thus the new router is attached to the established $F_4/E_6$ carrier by finite crosswalks rather than order coincidences.  The central-versus-outer order-$51840$ extensions remain distinct, and the existing tomotope-$H$ obstruction is unchanged.
+
+\paragraph{Passes 4798--4799: a characteristic-three triangle code.}
+Let $B$ be the $45\times270$ point--triangle incidence matrix.  Each row has weight $18$, each column weight $3$, adjacent quotient points co-occur in three triangles, and nonadjacent points in none, so
+\[
+ BB^T=18I+3A_{45}\equiv0\pmod3.
+\]
+The only ternary row dependency is the global all-point sum, giving $\operatorname{rank}_{\mathbb F_3}B=44$; the same rows have rank $45$ over $\mathbb F_2$ and $\mathbb F_5$.  On one $K_5$, a nonconstant coefficient pattern has local triangle weight $6$ or $9$.  Removing fewer than three GQ lines never disconnects the constant-coefficient graph, while the $45$ minimum three-line cuts are exactly point pencils.  Hence
+\[
+ \boxed{C_\triangle=[270,44,18]_3}
+\]
+is self-orthogonal, with exactly $90$ minimum words, the two nonzero single-point perturbations at each quotient point.
+
+\paragraph{Pass 4800: the intrinsic triangle CSS code.}
+Taking $H_X=H_Z=B$ is valid because $BB^T=0$ over $\mathbb F_3$.  Both check ranks are $44$, so $k=270-88=182$.  The dual has no dependency of weight at most three among distinct weight-three triangle columns.  A weight-four dependency is supplied by any four points inside one $K_5$: the four corresponding $3$-subsets sum to zero because every point occurs three times.  Since $d(C_\triangle)=18$, these dual weight-four words are not stabilizers.  Therefore
+\[
+ \boxed{[[270,182,4]]_3}.
+\]
+This is a finite qutrit CSS theorem only; no physical locality, fault-tolerance threshold, or microscopic energy scale is inferred.
+
+\begin{quote}\small
+\textbf{Evidence boundary.}  The finite claims have executable producers and frozen JSON certificates under Passes 4793--4800.  BLT class names/completeness at $q=7$ are prior art.  The exact H10 radius remains unpromoted unless the separate distance-$15$ MILP terminates decisively.  The $F_4/E_6$ bridge is a quotient/incidence crosswalk and does not identify the inequivalent central and outer order-$51840$ extensions or revive the previously falsified tomotope=$W(D_4)$ count identification.
+\end{quote}
