@@ -1,0 +1,34 @@
+{
+  "passes": [4756,4758,4760],
+  "4756_dependency_geometry": {
+    "cold_triangles": 1080,
+    "dependency_triangles": 540,
+    "nondependency_triangles": 540,
+    "edge_triangle_law": "Every cold edge lies in exactly one triangle of each species.",
+    "triangle_incidence_components": "135 Q3 cubes",
+    "A3": 540,
+    "A4": 3645,
+    "A4_PSp_orbits": [405,1620,1620],
+    "A5": 29376,
+    "pair_xor_multiplicity": {"1":25650,"2":3240,"3":135,"4":540,"6":270}
+  },
+  "4758_cube_reconstruction": {
+    "cube_residues": 6,
+    "residue_graph_per_cube": "K6 minus 3K2",
+    "cube_union_lines": 8,
+    "cube_union_words": 135,
+    "PSp_orbit": 135,
+    "stabilizer_order": 192,
+    "union_intersection4_graph_equals_selected135": true,
+    "six_residues_equal_six_incident_selected270_lines": true
+  },
+  "4760_binary_intersection_code": {
+    "description": "span(135 cube-union words) = point-star incidence code intersect H10^perp",
+    "parameters": "[40,24,6]",
+    "weight_enumerator": {"0":1,"6":240,"8":1485,"10":27792,"12":169600,"14":707760,"16":1909170,"18":3491280,"20":4162560,"22":3491280,"24":1909170,"26":707760,"28":169600,"30":27792,"32":1485,"34":240,"40":1},
+    "dual_weight_enumerator": {"0":1,"10":252,"12":310,"14":2700,"16":7695,"18":15480,"20":12660,"22":15480,"24":7695,"26":2700,"28":310,"30":252,"40":1},
+    "minimum_shell_240": "Exactly star_p + star_q for the 240 collinear W33 point pairs.",
+    "distinguished_weight8_cube_orbit": 135
+  },
+  "boundary": "All promoted identifications are explicit PSp-equivariant or binary-code equalities. Repeated dimensions and cardinalities are not used as identification evidence by themselves."
+}
