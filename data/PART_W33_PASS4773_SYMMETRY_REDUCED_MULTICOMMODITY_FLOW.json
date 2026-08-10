@@ -1,0 +1,51 @@
+{
+  "pass": 4773,
+  "demand_convention": "unit demand for every ordered distinct selected270 vertex pair; cold edge capacity 1 and hot edge capacity rho",
+  "intact_router": {
+    "ordered_pair_orbits": 11,
+    "ordered_pair_count": 72630,
+    "aggregate_integer_usage_frontier": [[113400,64530],[147960,29970],[167400,17010],[201420,0]],
+    "frontier_coordinate_meaning": "[total cold traversals,total hot traversals] per unit concurrent demand after PSp orbit averaging",
+    "technology_breakpoints_rho": ["63/155","111/137","239/105"],
+    "exact_piecewise_lambda": [
+      {"rho_range":"0 < rho <= 63/155","lambda":"3(rho+2)/746"},
+      {"rho_range":"63/155 <= rho <= 111/137","lambda":"3(3rho+8)/2858"},
+      {"rho_range":"111/137 <= rho <= 239/105","lambda":"3(rho+4)/1318"},
+      {"rho_range":"rho >= 239/105","lambda":"1/70"}
+    ],
+    "equal_capacity_exact_lambda": "15/1318",
+    "equal_capacity_float": 0.011380880121396054,
+    "saturation_lambda": "1/70"
+  },
+  "pair_orbit_path_frontiers": [
+    {"subdegree":3,"frontier":[[0,1],[2,0]]},
+    {"subdegree":6,"frontier":[[0,2],[4,0]]},
+    {"subdegree":12,"frontier":[[1,0]]},
+    {"subdegree":12,"frontier":[[1,2],[4,0]]},
+    {"subdegree":12,"frontier":[[1,2],[4,0]]},
+    {"subdegree":16,"frontier":[[2,0]]},
+    {"subdegree":16,"frontier":[[1,2],[3,0]]},
+    {"subdegree":24,"frontier":[[1,1],[3,0]]},
+    {"subdegree":24,"frontier":[[1,1],[3,0]]},
+    {"subdegree":48,"frontier":[[2,0]]},
+    {"subdegree":96,"frontier":[[2,1],[3,0]]}
+  ],
+  "quotient_27": {
+    "graph":"SRG(27,10,1,5)",
+    "ordered_all_pairs_shortest_traversals":1134,
+    "physical_cold_capacity_per_quotient_edge":12,
+    "exact_concurrent_lambda":"10/7",
+    "proof":"the total capacity/distance upper bound is attained by automorphism-averaged shortest routing"
+  },
+  "failure_cases_equal_capacity": {
+    "one_hot_fiber_outage":{"vertices":270,"edges":2010,"diameter":4,"ordered_shortest_path_max_edge_load":138.95555555555578,"feasible_lambda":0.007196545658084108,"single_vertex_cut_upper_bound":0.022304832713754646},
+    "two_hot_adjacent":{"vertices":270,"edges":1995,"diameter":4,"ordered_shortest_path_max_edge_load":146.80346320346337,"feasible_lambda":0.006811828400901159,"single_vertex_cut_upper_bound":0.022304832713754646},
+    "two_hot_nonadjacent":{"vertices":270,"edges":1995,"diameter":4,"ordered_shortest_path_max_edge_load":146.1333333333334,"feasible_lambda":0.006843065693430653,"single_vertex_cut_upper_bound":0.022304832713754646},
+    "one_vertex_fiber_removed":{"vertices":260,"edges":1890,"diameter":3,"ordered_shortest_path_max_edge_load":147.59999999999997,"feasible_lambda":0.006775067750677508,"single_vertex_cut_upper_bound":0.025096525096525095},
+    "two_vertex_adjacent_removed":{"vertices":250,"edges":1767,"diameter":3,"ordered_shortest_path_max_edge_load":172.74285714285685,"feasible_lambda":0.005788951372808478,"single_vertex_cut_upper_bound":0.02208835341365462},
+    "two_vertex_nonadjacent_removed":{"vertices":250,"edges":1755,"diameter":3,"ordered_shortest_path_max_edge_load":148.98095238095237,"feasible_lambda":0.006712267467877006,"single_vertex_cut_upper_bound":0.02208835341365462}
+  },
+  "execution": "independent reconstruction of the eleven PSp ordered-pair orbitals, exact nondominated cold/hot path signatures, integer Minkowski lower hull, rational balance-ray intersection, and separate NetworkX all-shortest-path feasible routings for symmetry-broken failure cases",
+  "theorem": "The intact selected270 all-ordered-pairs fractional concurrent-flow problem reduces exactly to a four-vertex two-resource convex frontier. It yields the explicit piecewise throughput law above, including lambda=15/1318 at equal capacities and saturation at 1/70 once rho reaches 239/105. The 27-fiber quotient has exact ordered-all-pairs throughput 10/7.",
+  "boundary": "The intact symmetric-router and quotient values are exact fractional multicommodity optima. Failure-case numbers are certified all-shortest-path feasible lower bounds plus cut upper bounds, not claimed optimal; no queueing, latency or measured hardware model is inferred."
+}
