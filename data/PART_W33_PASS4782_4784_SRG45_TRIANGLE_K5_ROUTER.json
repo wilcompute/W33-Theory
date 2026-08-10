@@ -1,0 +1,8 @@
+{
+  "passes": [4782,4783,4784],
+  "4782_triangle_model": {"quotient":"SRG(45,12,3,3)","quotient_edges":270,"selected135_edges_per_quotient_edge":3,"quotient_triangles":270,"residues":270,"residue_triangle_bijection":true},
+  "4783_K5_Petersen": {"maximal_K5":27,"triangles_per_K5":10,"each_triangle_in_unique_K5":true,"Petersen_fibers":27,"hot_edges":405},
+  "4784_local_chirality": {"neighborhood_of_each_quotient_vertex":"3 K4","shared_edge_orbital":5,"shared_edge_subdegree":6,"shared_one_vertex_orbitals":[1,8,9,11],"cold_orbital":1,"hot_orbital":11,"paired_chiral_orbitals":[8,9],"outer_orbital_permutation":[0,1,2,3,4,5,6,7,9,8,10,11]},
+  "theorem": "The 270-residue router is the triangle geometry of SRG(45,12,3,3): residues are all triangles, the 27 Petersen fibers are the ten triangles inside its 27 maximal K5s, and the PGSp outer involution reverses the paired PSp triangle chirality 8<->9.",
+  "boundary": "Exact graph/group identification; chirality means paired directed PSp orbitals."
+}
