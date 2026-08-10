@@ -1,0 +1,87 @@
+name: Passes 4571-4578 Composition Enumerator Binary
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4571_dual_middle_module_composition.py'
+      - 'analysis/w33_pass4572_support89_enumerator.py'
+      - 'analysis/w33_pass4573_general_gq_c8_selector_obstruction.py'
+      - 'analysis/w33_pass4574_q53_global_prism_action_observed.py'
+      - 'analysis/w33_pass4575_cubic_incidence_binary_code.py'
+      - 'analysis/w33_pass4576_o8plus_o6minus_quadratic_no_go.py'
+      - 'analysis/w33_pass4577_apartment_fibers_reconstruct_o8plus_polarity.py'
+      - 'analysis/w33_pass4578_anisotropic120_vs_double_six_triples.py'
+      - 'analysis/PASS4571_4578_composition_enumerator_c8_q53_binary_bonkers_insert.tex'
+      - 'analysis/PASS4571_4578_composition_enumerator_binary_index_insert.html'
+      - 'data/PART_W33_PASS457*.json'
+      - 'data/w33_public_frontier_extension_pass4461_4464.json'
+      - 'docs/apartment-composition-enumerator-binary.html'
+      - 'tests/test_w33_pass4571_4578_composition_enumerator_binary.py'
+      - '.github/workflows/w33_pass4571_4578_composition_enumerator_binary.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pass4571-4578-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install verifier dependencies
+        run: python -m pip install --disable-pip-version-check numpy sympy pytest
+      - name: Frozen semantic regression
+        run: pytest -q tests/test_w33_pass4571_4578_composition_enumerator_binary.py
+      - name: Recompute 186D composition and 64D irreducibility
+        run: python analysis/w33_pass4571_dual_middle_module_composition.py | tee /tmp/pass4571.log
+      - name: Recompute complete support-8 and support-9 spectra
+        run: python analysis/w33_pass4572_support89_enumerator.py | tee /tmp/pass4572.log
+      - name: Recompute C8 selector counterexample
+        run: python analysis/w33_pass4573_general_gq_c8_selector_obstruction.py | tee /tmp/pass4573.log
+      - name: Recompute observed Q53 global prism action
+        run: python analysis/w33_pass4574_q53_global_prism_action_observed.py | tee /tmp/pass4574.log
+      - name: Recompute cubic binary orthogonal code
+        run: python analysis/w33_pass4575_cubic_incidence_binary_code.py | tee /tmp/pass4575.log
+      - name: Recompute three outside-box certificates
+        run: |
+          python analysis/w33_pass4576_o8plus_o6minus_quadratic_no_go.py | tee /tmp/pass4576.log
+          python analysis/w33_pass4577_apartment_fibers_reconstruct_o8plus_polarity.py | tee /tmp/pass4577.log
+          python analysis/w33_pass4578_anisotropic120_vs_double_six_triples.py | tee /tmp/pass4578.log
+      - name: Re-run semantic regression on regenerated outputs
+        run: pytest -q tests/test_w33_pass4571_4578_composition_enumerator_binary.py
+      - name: Dry-run safe restored-site materializer
+        run: |
+          mkdir -p evidence/pass4571_4578
+          python tools/integrate_bt3376_bt3389.py --report evidence/pass4571_4578/site.json
+          test "$(grep -c 'id=\"pass4571-4578-composition-enumerator-binary\"' docs/index.html)" -eq 1
+          grep -q '350,343,565' docs/apartment-composition-enumerator-binary.html
+          grep -q 'full enumerator is still open' analysis/PASS4571_4578_composition_enumerator_binary_index_insert.html
+      - uses: WtfJoke/setup-tectonic@v3
+        with: {github-token: '${{ secrets.GITHUB_TOKEN }}'}
+      - name: Compile canonical manuscripts
+        run: |
+          mkdir -p evidence/pass4571_4578
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass4571_4578/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+      - name: Evidence boundaries
+        run: |
+          grep -q 'support-$10$ through $20$ therefore remain open' analysis/PASS4571_4578_composition_enumerator_c8_q53_binary_bonkers_insert.tex
+          grep -q 'not every extension class' analysis/PASS4571_4578_composition_enumerator_c8_q53_binary_bonkers_insert.tex
+          grep -q 'does not conflict with the later Pass~4583' analysis/PASS4571_4578_composition_enumerator_c8_q53_binary_bonkers_insert.tex
+          grep -q 'PASS4571_4578_composition_enumerator_c8_q53_binary_bonkers_insert' analysis/PASS4552_4559_rank_filtration_basis_shell_insert.tex
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pass4571-4578-composition-enumerator-binary-evidence
+          path: |
+            evidence/pass4571_4578/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
