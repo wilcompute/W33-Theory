@@ -1,0 +1,37 @@
+{
+  "pass": 4648,
+  "stacked_coupling": {
+    "shape": [27, 108],
+    "rank_Q": 21,
+    "kernel_dimension": 87
+  },
+  "dark_sector": {
+    "dimension": 72,
+    "tensor_model": "Std_2(S3_sheet) tensor Q[36_spreads]",
+    "PSp_restriction": "2*(1 + 20 + 15)",
+    "PSp_dimensions": {"1": 2, "20": 40, "15": 30},
+    "killed_identically_by_RRR": true
+  },
+  "bright_kernel": {
+    "dimension": 15,
+    "PSp_constituent": "15"
+  },
+  "full_kernel_PSp": {
+    "multiplicities": {"1": 2, "20": 2, "15": 3},
+    "dimension": 87
+  },
+  "sheet_S3_kernel_character": {
+    "identity": 87,
+    "transposition": 15,
+    "three_cycle": -21
+  },
+  "sheet_C3": {
+    "minimal_polynomial_on_dark_over_Q": "x^2+x+1",
+    "complex_split": "36_omega + 36_omega^2",
+    "F2_behavior": "36 copies of the irreducible 2D C3 module",
+    "F3_behavior": "36 nonsemisimple 2D unipotent blocks; (C-I)^2=0 and rank(C-I)=1 per block"
+  },
+  "spread_module_A36_spectrum": {"15": 1, "3": 15, "-3": 20},
+  "theorem": "The 72-dimensional dark sector is exactly the sheet-standard tensor the 36-spread permutation module. The full 87-dimensional kernel restricts to PSp as 1^2 + 20^2 + 15^3.",
+  "boundary": "The commuting abstract sheet S3 is exact after canonical alignment. The ambient PGSp transposition additionally applies the W33 outer automorphism on the spread carrier."
+}
