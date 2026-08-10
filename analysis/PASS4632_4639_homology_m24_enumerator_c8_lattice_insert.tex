@@ -1,0 +1,125 @@
+% Passes 4632--4639: periodic homology, M24 sextet, support-11 enumerator, C8 collision criterion, Construction-A boundary, and three outside-box closures.
+\section*{Current paired-axis frontier: homology, Golay stabilizers, and exact glue}
+\addcontentsline{toc}{section}{Current paired-axis frontier: homology, Golay stabilizers, and exact glue}
+
+\paragraph{The equal-dimensional periodic homologies are not the W33 point modules.}
+Let $R\in\mathbb F_2^{27\times36}$ be the cubic-line/double-six incidence matrix of Pass~4575, so $RR^{\mathsf T}=R^{\mathsf T}R=0$ and $\operatorname{rank}_2R=6$.  The two periodic homologies have dimensions
+\[
+ H_{36}=\ker R/\operatorname{im}R^{\mathsf T},\quad \dim H_{36}=24,
+ \qquad
+ H_{27}=\ker R^{\mathsf T}/\operatorname{im}R,\quad \dim H_{27}=15.
+\]
+Pass~4632 compares them with the point-side $40$-object W33 module produced by the compatible-$\mathbb F_4$ structures of Pass~4628.  Its adjacency matrix has $\operatorname{rank}_2A=16$, hence comparison layers
+\[
+ Q_{24}=\mathbb F_2^{40}/\operatorname{row}(A),
+ \qquad
+ Q_{15}=\operatorname{row}(A)/\langle\mathbf1\rangle.
+\]
+The full equivariance equations give one-dimensional Hom spaces in all four directions, but the unique nonzero maps have ranks
+\[
+ H_{36}\to Q_{24}:9,\qquad Q_{24}\to H_{36}:1,
+\]
+\[
+ H_{27}\to Q_{15}:14,\qquad Q_{15}\to H_{27}:1.
+\]
+Thus neither equal-dimensional pair is isomorphic.  The shared dimensions encode nontrivial subquotient relationships, not an identification.
+
+\paragraph{Corrected Golay sextet and its exact $M_{24}$ stabilizers.}
+Pass~4633 re-executes the Pass~4615 $720$-matching search and repairs a stale frozen certificate.  The unique zero-coordinate assignment is
+\[
+ (21,20,19,18,22,17),
+\]
+producing tetrads
+\[
+ 02721,\;161620,\;341319,\;581823,\;9\,11\,14\,22,\;10\,12\,15\,17
+\]
+(where the compressed notation only lists coordinate labels).  Conjugating the standard $24$-point $M_{24}$ generators into the repository Golay coordinates and applying Schreier orbit--stabilizer gives
+\[
+ |M_{24}|=244823040,\qquad |\mathcal O_{\rm sextet}|=1771,\qquad |H_{\rm sextet}|=138240.
+\]
+The action on the six tetrads has image $S_6$ and kernel $192$.  The actual six-zero-coordinate transversal has orbit $64$ inside the sextet; its stabilizer $K$ has
+\[
+ |K|=2160.
+\]
+It acts faithfully and transitively on the $18$ active coordinates and on the $45$ section octads.  Its orbits on the $64$ section codewords have sizes
+\[
+ 1+18+45.
+\]
+
+\paragraph{The exact labelled apartment enumerator now reaches support eleven.}
+Pass~4634 evaluates every
+\[
+ \binom{40}{11}=2311801440
+\]
+eleven-row coefficient subset by a native XOR/popcount census.  The support-$11$ shell contains $153$ distinct weights, from
+\[
+ 614\quad(12960\text{ words})
+\]
+to
+\[
+ 1026\quad(1080\text{ words}).
+\]
+Together with Pass~4593, complete labelled support spectra are therefore exact through support $11$.  Supports $12$--$20$, and hence the complete $2^{39}$ numerical enumerator, remain open.
+
+\paragraph{A six-species local criterion explains the exceptional $C_8$ collision.}
+Pass~4635 classifies every length-eight nonbacktracking walk contributing to a four-line primitive-$C_8$ coefficient.  Apartments admit exactly four line-multiplicity species
+\[
+ 1111|22,\qquad1115|,\qquad1133|,\qquad1111|4,
+\]
+while $K_{1,3}$ supports admit only
+\[
+ 1111|22,\qquad1113|2.
+\]
+The primitive coefficient is one eighth of the total raw mass, so collision occurs exactly when the four apartment masses equal the two star masses.  In $GQ(2,2)$,
+\[
+ 224+64=96+192=288,
+\]
+explaining the $36=36$ collision as cancellation between different walk species.  In $GQ(2,4)$ the masses give $60$ versus $36$; in W33 they give $712$ versus $180$.  Closed arbitrary-$(s,t)$ formulas for the six masses remain open.
+
+\paragraph{Construction A reaches $A_1^{24}$ before Leech.}
+For
+\[
+ L(C)=\frac1{\sqrt2}\{x\in\mathbb Z^{24}:x\bmod2\in C\},
+\]
+Pass~4636 finds
+\[
+ \det L(C_6)=2^{12}=4096,\qquad \det L(G_{24})=1,\qquad [L(G_{24}):L(C_6)]=64.
+\]
+The $64$ quotient words of $G_{24}/C_6$ are exactly the glue cosets.  Both lattices contain the $48$ coordinate roots $\pm\sqrt2 e_i$, so the immediate unimodular endpoint is the rooted $A_1^{24}$ Niemeier lattice, not rootless Leech.  A further neighbor/shift (holy-construction) step is required.
+
+\paragraph{Outside-box closure I: the $64$ sextet transversals are the $64$ section codewords.}
+Under $K$, the orbit of the chosen sextet transversals and the section codewords both split as $1+18+45$.  Pass~4637 proves more: stabilizer-fixed-point tests leave exactly one equivariant bijection on the $18$-orbits and exactly one on the $45$-orbits, with the chosen zero transversal forced to the zero word.  Transporting XOR therefore gives this $64$-transversal orbit an $\mathbb F_2^6$ affine structure relative to the chosen section.
+
+\paragraph{Outside-box closure II: Golay glue is the six-tetrad permutation module.}
+Pass~4638 computes the $K$-action on $G_{24}/C_6$.  Its image has order $720$ and kernel $3$, exactly as on the six tetrads.  The intertwiner space between the two six-dimensional binary modules has dimension two; its three nonzero maps have ranks
+\[
+ 1,6,6.
+\]
+Hence two explicit full-rank intertwiners identify the $64$ lattice glue cosets with the binary permutation geometry of the six tetrads, while the rank-one sum records the residual ambiguity.
+
+\paragraph{Outside-box closure III: characteristic-two differential cancellation.}
+On all $63$ nonzero vectors of the natural six-space, split the polar matrix into the cross-shell differential $D_0$ and within-shell differential $\Delta$.  Both satisfy
+\[
+ D_0^2=\Delta^2=0,\qquad \operatorname{rank}D_0=\operatorname{rank}\Delta=12,
+\]
+and they have the same $12$-dimensional image.  Their sum is the full polar matrix $D$, but in characteristic two
+\[
+ \operatorname{rank}(D_0+\Delta)=6.
+\]
+Thus homology jumps from
+\[
+ 63-2\cdot12=39
+\]
+to
+\[
+ 63-2\cdot6=51.
+\]
+The row code of $D$ is the $[63,6,32]$ simplex code, giving the fused CSS code
+\[
+ \boxed{[[63,51,3]]}.
+\]
+
+\begin{center}
+\fbox{\parbox{0.94\linewidth}{\textbf{Evidence boundary.}
+All statements in this insert are finite code, group, graph, module, or lattice statements with executable witnesses and frozen certificates.  Equal dimensions are not treated as module identifications; the stale Pass~4615 sextet certificate is explicitly repaired; the full apartment enumerator is still open beyond support $11$; the six $C_8$ signature masses do not yet have closed all-$(s,t)$ formulas; and the paired-axis Construction-A lattice is explicitly \emph{not} the Leech lattice.}}
+\end{center}
