@@ -1,0 +1,19 @@
+{
+  "schema": "w33.public_frontier_extension.v1",
+  "passes": [4753,4754,4755,4756,4757,4758,4759,4760],
+  "public_sections": [
+    {"kind":"id","token":"pass4753-4760-algebra-q-dependency","source":"analysis/PASS4753_4760_algebra_q_dependency_index_insert.html"}
+  ],
+  "standalone_public_pages": [
+    {"token":"pass4753-4760-algebra-q-dependency-page","source":"docs/residue-algebra-q-dependency-24d.html"}
+  ],
+  "materializer": "tools/integrate_pass4753_4760.py",
+  "manuscript_insert": "analysis/PASS4753_4760_algebra_q_lattice_dependency_insert.tex",
+  "evidence": [
+    "data/PART_W33_PASS4753_ORBITAL_WEDDERBURN.json",
+    "data/PART_W33_PASS4754_ODDQ_KERNEL_DISTANCE.json",
+    "data/PART_W33_PASS4755_4759_NONCOORDINATE_24D_LATTICE.json",
+    "data/PART_W33_PASS4756_4758_4760_DEPENDENCY_CUBES.json",
+    "data/PART_W33_PASS4757_HAMILTONIAN_LOW_ENERGY_NOISE.json"
+  ]
+}
