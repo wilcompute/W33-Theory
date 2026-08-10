@@ -1,0 +1,75 @@
+name: W33 Passes 4579-4586 O8plus exceptional bridge
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4579_*.py'
+      - 'analysis/w33_pass458[0-6]_*.py'
+      - 'analysis/PASS4579_4586_*'
+      - 'data/PART_W33_PASS4579_*.json'
+      - 'data/PART_W33_PASS458[0-6]_*.json'
+      - 'tests/test_w33_pass4579_4586_o8plus_exceptional_bridge.py'
+      - '.github/workflows/w33_pass4579_4586_o8plus_exceptional_bridge.yml'
+  pull_request:
+    paths:
+      - 'analysis/w33_pass4579_*.py'
+      - 'analysis/w33_pass458[0-6]_*.py'
+      - 'tests/test_w33_pass4579_4586_o8plus_exceptional_bridge.py'
+
+jobs:
+  exact-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install focused dependencies
+        run: python -m pip install --upgrade numpy pytest
+      - name: Snapshot frozen certificates
+        run: |
+          mkdir -p /tmp/w33_4579_4586
+          cp data/PART_W33_PASS4579_W33_LIFT_O8PLUS255.json /tmp/w33_4579_4586/
+          cp data/PART_W33_PASS4580_QMINUS_BINARY_RANK_REDUCTION.json /tmp/w33_4579_4586/
+          cp data/PART_W33_PASS4581_APARTMENT_FIBER_EQUIVARIANCE.json /tmp/w33_4579_4586/
+          cp data/PART_W33_PASS4582_OPTIMAL_ERASURE_ROBUST_H10_READOUT.json /tmp/w33_4579_4586/
+          cp data/PART_W33_PASS4583_WEDGE2_EXCEPTIONAL_SIX_BRIDGE.json /tmp/w33_4579_4586/
+          cp data/PART_W33_PASS4584_CROSS_SHELL_INCIDENCE_CODE.json /tmp/w33_4579_4586/
+          cp data/PART_W33_PASS4585_FORTYFIVE_SINGULAR_SUPPORT_LINES.json /tmp/w33_4579_4586/
+          cp data/PART_W33_PASS4586_FORTYFIVE_BY_FORTY_POINT_DUALITY_BRIDGE.json /tmp/w33_4579_4586/
+      - name: Re-run exact witnesses
+        run: |
+          set -euo pipefail
+          python analysis/w33_pass4579_w33_lift_reconstructs_o8plus255.py
+          python analysis/w33_pass4580_qminus_binary_rank_dual_containing_reduction.py
+          python analysis/w33_pass4581_apartment_fiber_equivariance.py
+          python analysis/w33_pass4582_optimal_erasure_robust_h10_readout.py
+          python analysis/w33_pass4583_wedge2_exceptional_six_bridge.py
+          python analysis/w33_pass4584_cross_shell_incidence_code.py
+          python analysis/w33_pass4585_fortyfive_singular_support_lines.py
+          python analysis/w33_pass4586_fortyfive_by_forty_point_duality_bridge.py
+      - name: Frozen certificates regenerate semantically
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          names=[
+            'PART_W33_PASS4579_W33_LIFT_O8PLUS255.json',
+            'PART_W33_PASS4580_QMINUS_BINARY_RANK_REDUCTION.json',
+            'PART_W33_PASS4581_APARTMENT_FIBER_EQUIVARIANCE.json',
+            'PART_W33_PASS4582_OPTIMAL_ERASURE_ROBUST_H10_READOUT.json',
+            'PART_W33_PASS4583_WEDGE2_EXCEPTIONAL_SIX_BRIDGE.json',
+            'PART_W33_PASS4584_CROSS_SHELL_INCIDENCE_CODE.json',
+            'PART_W33_PASS4585_FORTYFIVE_SINGULAR_SUPPORT_LINES.json',
+            'PART_W33_PASS4586_FORTYFIVE_BY_FORTY_POINT_DUALITY_BRIDGE.json']
+          for n in names:
+              a=json.loads((pathlib.Path('/tmp/w33_4579_4586')/n).read_text())
+              b=json.loads((pathlib.Path('data')/n).read_text())
+              assert a==b, n
+          PY
+      - name: Focused regression
+        run: pytest -q tests/test_w33_pass4579_4586_o8plus_exceptional_bridge.py
+      - name: TeX insertion hygiene
+        run: |
+          if test -f scripts/check_tex_insertions.py; then python scripts/check_tex_insertions.py; fi
