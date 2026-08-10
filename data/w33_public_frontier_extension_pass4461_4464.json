@@ -14,7 +14,7 @@
     {"kind":"id","token":"pass4520-4527-enumerator-q53-orthogonal","source":"analysis/PASS4520_4527_enumerator_q53_orthogonal_tomography_index_insert.html"},
     {"kind":"id","token":"pass4528-4535-borel-building-compiler-edge","source":"analysis/PASS4528_4535_borel_building_compiler_edge_index_insert.html"},
     {"kind":"id","token":"pass4536-4543-parity-decoder","source":"analysis/PASS4536_4543_parity_decoder_index_insert.html"},
-    {"kind":"id","token":"pass4544-4551-module-cubic-enumerator-zeta","source":"analysis/PASS4544_4551_module_cubic_enumerator_zeta_index_insert.html"},
+    {"kind":"id","token":"pass4544-4551-module-cubic-enumerator-zeta","source":"analysis/PASS4544_4551_module_cubic_zeta_index_insert.html"},
     {"kind":"id","token":"pass4552-4559-rank-filtration-basis-shells","source":"analysis/PASS4552_4559_rank_filtration_basis_shell_index_insert.html"},
     {"kind":"id","token":"pass4571-4578-composition-enumerator-binary","source":"analysis/PASS4571_4578_composition_enumerator_binary_index_insert.html"},
     {"kind":"id","token":"pass4579-4586-o8plus-exceptional-bridge","source":"analysis/PASS4579_4586_o8plus_exceptional_bridge_index_insert.html"},
@@ -29,6 +29,7 @@
     {"kind":"id","token":"pass4656-4663-cohomology-code-e6-routing","source":"analysis/PASS4656_4663_cohomology_code_e6_routing_index_insert.html"},
     {"kind":"id","token":"pass4681-4688-dualshell-petersen-optimizer","source":"analysis/PASS4681_4688_dualshell_petersen_optimizer_index_insert.html"},
     {"kind":"id","token":"pass4697-4704-affine-leech-c8-support12","source":"analysis/PASS4697_4704_affine_leech_c8_support12_index_insert.html"},
+    {"kind":"id","token":"pass4713-4720-invariant-gq-bundle-flow","source":"analysis/PASS4713_4720_invariant_gq_bundle_flow_index_insert.html"},
     {"kind":"id","token":"pass4721-4724-support12-involution-cover","source":"analysis/PASS4721_4724_support12_involution_square_root_cover_index_insert.html"},
     {"kind":"id","token":"pass4725-4726-involution-residue-dual-code","source":"analysis/PASS4725_4726_involution_residue_dual_code_index_insert.html"}
   ],
@@ -59,6 +60,7 @@
     {"token":"pass4656-4663-cohomology-code-e6-routing-page","source":"docs/cohomology-code-e6-petersen-routing.html"},
     {"token":"pass4681-4688-dualshell-petersen-optimizer-page","source":"docs/dualshell-petersen-module-routing.html"},
     {"token":"pass4697-4704-affine-leech-c8-support12-page","source":"docs/affine-golay-leech-c8-support12.html"},
+    {"token":"pass4713-4720-invariant-gq-bundle-flow-page","source":"docs/invariant-gq-s3-bundle-capacity-code.html"},
     {"token":"pass4721-4726-support12-involution-cover-page","source":"docs/support12-involution-square-root-cover.html"}
   ]
 }
