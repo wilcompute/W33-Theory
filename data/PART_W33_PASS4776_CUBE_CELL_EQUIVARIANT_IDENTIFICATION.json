@@ -1,0 +1,25 @@
+{
+  "pass": 4776,
+  "G_set": {
+    "cube_count": 135,
+    "cell_count": 135,
+    "PSp_transitive": true,
+    "representative_stabilizer_order": 192,
+    "stabilizers_equal_as_subgroups": true,
+    "equivariant_map": "dependency cube union u -> selected135 vertex phiU(u) -> its Pass4748 packet-coordinate coding cell"
+  },
+  "local_geometry": {
+    "cube_residues": 6,
+    "dependency_cold_edges": 12,
+    "dependency_graph": "K6 - 3K2",
+    "missing_pairs": 3,
+    "missing_pairs_equal_Petersen_hot_edges": true,
+    "completed_physical_cell": "K6",
+    "physical_edges": 15,
+    "cold_partition": "three K2,2 blocks between the three matched residue pairs"
+  },
+  "global_partition": {"135_cells_partition_all_2025_router_edges": true},
+  "execution": "independent reconstruction of all 135 dependency Q3 components, the Pass4737 residue-to-selected270 intertwiner, the Pass4758 cube-to-selected135 intertwiner, all 2025 hot/cold router edges, and literal stabilizer equality in PSp(4,3)",
+  "theorem": "The 135 dependency cubes and the 135 cross-fiber coding cells are literally the same PSp(4,3) G-set. Each cube is K6-3K2 in the cold residue graph; its three missing pairs are exactly the Petersen-hot matching, so the physical router completes it to K6. The 135 completed K6 cells partition all 2025 router edges exactly once.",
+  "boundary": "Exact finite incidence/G-set theorem. The K6 completion is a router combinatorial structure, not a six-particle interaction."
+}
