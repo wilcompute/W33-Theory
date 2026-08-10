@@ -1,15 +1,16 @@
-# Passes 4689--4696 reservation
+# Passes 4689--4696 implementation-alias notice
 
-Reserved for the five explicitly queued attacks after Passes 4632--4639 plus three independent outside-box probes.  This range begins after the concurrently reserved 4681--4688 dual-shell/cohomology/Petersen lane and does not reuse historical namespaces.
+This range was initially reserved for the five-plus-three packet after Passes 4632--4639.  During execution a parallel commit surfaced using the pre-existing prose labels 4689--4690 as part of another 4683--4690 sequence.  To keep the public theorem ledger unambiguous, this packet was canonically renumbered in full to **Passes 4697--4704** before manuscript/public integration.
 
-Primary fronts:
-- 4689: compare the dimension-39 periodic-homology sum H36+H27, the rank-39 apartment code, and the 63-point cross-shell homology under the actual PSp/PGSp action.  Compute full equivariant Hom spaces/intertwiner ranks; promote only explicit isomorphisms.
-- 4690: promote the 64-transversal affine F2^6 structure from the order-2160 section stabilizer to the full 138240 sextet stabilizer.  Explicitly recover the normal translation 2^6, quotient/action, and internal 2^6:3.S6 structure if valid.
-- 4691: construct an explicit A1^24 -> Leech neighbor/shift starting from the exact Golay Construction-A lattice and six-tetrad/glue data.  Require an exact basis/Gram determinant/minimum-norm certificate or a decisive obstruction.
-- 4692: derive closed formulas for the six primitive-C8 local walk masses in generalized quadrangle parameters as far as possible; verify against GQ(2,2), GQ(2,4), GQ(4,2), and W33.  If a formula depends on an additional embedding invariant, isolate it exactly rather than forcing an (s,t)-only law.
-- 4693: attack complete apartment-code support 12, target C(40,12)=5,586,853,480 exact mass with orbit/prefix/MITM acceleration.  No full-enumerator claim without supports through 20 and 2^39 checksum.
+The source and JSON files first created as 4689--4696 are retained as immutable implementation/collision aliases and provenance for the expensive computations.  They are not the canonical public pass identifiers.  The exact map is:
 
-Outside-box probes:
-- 4694--4696: three independent exact consequences chosen after the primary fronts.  Favor interactions among the 39-dimensional carriers, M24 sextet affine geometry, Leech neighbor glue, C8 signature algebra, and apartment-code shells.  Require executable theorem/certificate or explicit negative result.
+- alias 4689 -> canonical 4697: three dimension-39 carrier comparison;
+- alias 4690 -> canonical 4698: full affine C2^6 Golay sextet stabilizer;
+- alias 4691 -> canonical 4699: explicit A1^24-to-Leech two-neighbor;
+- alias 4692 -> canonical 4700: closed primitive-C8 local mass formulas;
+- alias 4693 -> canonical 4701: complete exact support-12 census;
+- alias 4694 -> canonical 4702: Golay affine six-space / cubic U6 invariant-form no-go;
+- alias 4695 -> canonical 4703: support-12 minima as apartment corner-star thickenings;
+- alias 4696 -> canonical 4704: thickening span equals the [1620,38,270] even apartment subcode.
 
-Evidence discipline: dimensions, group orders, and cardinality coincidences do not imply identifications; Leech requires explicit rootless even unimodular lattice evidence; all enumerator mass claims require exact checksums; and any generalized-GQ formula must be tested on independent geometries/null controls.
+The canonical reservation/execution ledger is `analysis/PASS4697_4704_RESERVATION.md`.  Evidence boundaries are unchanged: dimensions/counts do not imply identifications; the Leech result requires the explicit even-unimodular rootless basis certificate; C8 requires embedding invariants; and the full apartment enumerator remains open beyond support 12.
