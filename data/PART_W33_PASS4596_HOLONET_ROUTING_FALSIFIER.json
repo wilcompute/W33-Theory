@@ -1,0 +1,57 @@
+{
+  "pass": 4596,
+  "selected_point_router": {
+    "vertices": 135,
+    "edges": 810,
+    "degree": 12,
+    "diameter": 3,
+    "distance_shells": [1,12,56,66],
+    "mean_distance": "161/67",
+    "vertex_connectivity": 12,
+    "edge_connectivity": 12,
+    "spectrum": {"12":1,"6":15,"3":20,"0":60,"-3":24,"-6":15},
+    "normalized_positive_spectral_gap": "1/2"
+  },
+  "selected_line_router": {
+    "vertices": 270,
+    "edges": 2025,
+    "degree": 15,
+    "diameter": 3,
+    "distance_shells": [1,15,118,136],
+    "mean_distance": "659/269",
+    "vertex_connectivity": 15,
+    "edge_connectivity": 15,
+    "spectrum": {"15":1,"9":15,"6":20,"3":60,"0":24,"-3":150},
+    "normalized_positive_spectral_gap": "2/5"
+  },
+  "reference_layers": {
+    "W33": {
+      "vertices": 40,
+      "degree": 12,
+      "diameter": 2,
+      "mean_distance": "22/13",
+      "vertex_connectivity": 12,
+      "edge_connectivity": 12,
+      "spectrum": {"12":1,"2":24,"-4":15}
+    },
+    "point_line_Levi": {
+      "vertices": 80,
+      "degree": 4,
+      "diameter": 4,
+      "mean_distance": "244/79",
+      "vertex_connectivity": 4,
+      "edge_connectivity": 4
+    },
+    "Levi_flag_line_graph": {
+      "vertices": 160,
+      "degree": 6,
+      "diameter": 4,
+      "mean_distance": "176/53",
+      "vertex_connectivity": 6,
+      "edge_connectivity": 6
+    }
+  },
+  "routing_readout": "The 270-router selected-line layer scales the address space far beyond W33 while retaining diameter 3 and exact 15-vertex/15-edge connectivity; the 135-router point layer gives diameter 3 with connectivity 12. Both are shorter and more highly connected than the 160-flag Levi line graph, but W33 itself remains the strongest compact mixer at only 40 addresses.",
+  "falsifier_boundary": "This is an exact unweighted graph-routing comparison. It does not include optical loss, switch latency, detector error, weighted coupler cost, fabrication constraints, or fault-tolerance thresholds; any hardware claim must be tested after those weights are supplied.",
+  "correction": "This run also caught and corrected the Pass-4589 selected-line spectral multiplicity: eigenvalue -3 has multiplicity 150, not 165, so the spectrum sums to 270."
+}
