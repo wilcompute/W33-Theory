@@ -33,7 +33,8 @@
     {"kind":"id","token":"pass4721-4724-support12-involution-cover","source":"analysis/PASS4721_4724_support12_involution_square_root_cover_index_insert.html"},
     {"kind":"id","token":"pass4725-4726-involution-residue-dual-code","source":"analysis/PASS4725_4726_involution_residue_dual_code_index_insert.html"},
     {"kind":"id","token":"pass4737-4744-residue-router-breakthrough","source":"analysis/PASS4737_4744_residue_router_breakthrough_index_insert.html"},
-    {"kind":"id","token":"pass4745-4752-invariant-bundle-code-capacity","source":"analysis/PASS4745_4752_invariant_bundle_code_capacity_index_insert.html"}
+    {"kind":"id","token":"pass4745-4752-invariant-bundle-code-capacity","source":"analysis/PASS4745_4752_invariant_bundle_code_capacity_index_insert.html"},
+    {"kind":"id","token":"pass4785-4792-support12-grid-cycle-golay","source":"analysis/PASS4785_4792_support12_grid_cycle_golay_index_insert.html"}
   ],
   "standalone_public_pages": [
     {"token":"pass4461-4471-line-signing-apartment-parity-page","source":"docs/line-signing-apartment-parity.html"},
@@ -63,8 +64,9 @@
     {"token":"pass4681-4688-dualshell-petersen-optimizer-page","source":"docs/dualshell-petersen-module-routing.html"},
     {"token":"pass4697-4704-affine-leech-c8-support12-page","source":"docs/affine-golay-leech-c8-support12.html"},
     {"token":"pass4713-4720-invariant-gq-bundle-flow-page","source":"docs/invariant-gq-s3-bundle-capacity-code.html"},
-    {"token":"pass4721-4726-support12-involution-cover-page","source":"docs/support12-involution-square-root-cover.html"},
+    {"token":"pass4721-4726-support12-involution-cover-page","source":"docs/support12-involution-square_root_cover.html"},
     {"token":"pass4737-4744-residue-router-breakthrough-page","source":"docs/residue-router-involution-code.html"},
-    {"token":"pass4745-4752-invariant-bundle-code-capacity-page","source":"docs/invariant-cohomology-router-spectrum-coding-capacity.html"}
+    {"token":"pass4745-4752-invariant-bundle-code-capacity-page","source":"docs/invariant-cohomology-router-spectrum-coding-capacity.html"},
+    {"token":"pass4785-4792-support12-grid-cycle-golay-page","source":"docs/support12-grid-cycle-golay.html"}
   ]
 }
