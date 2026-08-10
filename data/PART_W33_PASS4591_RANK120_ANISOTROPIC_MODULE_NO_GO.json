@@ -1,0 +1,16 @@
+{
+  "boundary": "This is a representation-theoretic non-identification. It does not preclude nonlinear correspondences, subquotient relations, or maps after changing groups/fields.",
+  "modules": {
+    "anisotropic_permutation_degree": 120,
+    "selected_line_incidence_rowspace_dimension_Q": 120
+  },
+  "pass": 4591,
+  "separating_element": {
+    "anisotropic_permutation_character": 3,
+    "order": 6,
+    "selected_incidence_rowspace_character": -1,
+    "word": "g4*g0 in the deterministic five-transvection generating set"
+  },
+  "shallow_generator_trace_pairs": [[3,3],[3,3],[3,3],[3,3],[3,3]],
+  "theorem": "The 120-dimensional rational rowspace of the apartment-selected 135x270 incidence matrix is not isomorphic to the 120-point anisotropic permutation module of PSp(4,3)."
+}
