@@ -1,0 +1,38 @@
+{
+  "S186": {
+    "Q66_factors": {
+      "6": 3,
+      "8": 1,
+      "40": 1
+    },
+    "S120_factors": {
+      "6": 2,
+      "14": 2,
+      "40": 2
+    },
+    "composition_factor_dimension_check": 186,
+    "composition_factors": {
+      "6": 5,
+      "8": 1,
+      "14": 2,
+      "40": 3
+    },
+    "dimension": 186,
+    "standard_basis_cyclic_dimensions": {
+      "120": 1,
+      "186": 185
+    },
+    "visible_S120_dimension": 120
+  },
+  "S250_over_S186": {
+    "dimension": 64,
+    "irreducible": true
+  },
+  "boundary": "Composition factors of S186 and irreducibility of the 64D quotient are closed. This does not claim every extension class or the complete unlabeled Loewy lattice below S186 has been enumerated.",
+  "certification": {
+    "hidden_submodules": "multiplicity-one factor-kernel plus group spin, with dual-annihilator layers used when visible",
+    "large_terminal_factors": "full-degree irreducible characteristic polynomial of a deterministic GF(2) group-algebra element for dimensions 40 and 64",
+    "small_terminal_factors": "all nonzero vectors exhausted for dimensions 6,8,14"
+  },
+  "pass": 4571
+}
