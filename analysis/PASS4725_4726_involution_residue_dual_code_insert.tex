@@ -69,12 +69,29 @@ W_{K_R}(z)={}&1+270z^4+6720z^6+152685z^8+1651392z^{10}
 The all-one word lies in $K_R$, accounting for the paired weight-$4$ and
 weight-$36$ shells.
 
+\paragraph{Prior-art boundary.}
+The binary adjacency code itself is not claimed as new.  Haemers, Peeters, and
+van Rijckevorsel, \emph{Binary Codes of Strongly Regular Graphs}, Designs,
+Codes and Cryptography \textbf{17} (1999), 187--209, computed the adjacency
+codes for all $\operatorname{SRG}(40,12,2,4)$ graphs.  For their GQ$(3,3)$
+entry no.~23 they report dimension $10$ and exactly the weight enumerator above,
+with the forty adjacency rows comprising all weight-$12$ words.  The new content
+here is the W33-specific dual identification
+\[
+ H_{10}^{\perp}=\operatorname{span}\{\text{270 inner-involution fixed-line residues}\},
+\]
+the proof that those $270$ words are the \emph{complete} dual minimum shell,
+and the upstream support-$12$/outer-order-four double-cover interpretation of
+Passes~4721--4724.
+
 \begin{quote}\small
 \textbf{Evidence boundary.}
 The code equality is proved by direct annihilation and rank, while completeness
 of the minimum shell is verified by exhaustive weights $1$--$4$.  The full
 $2^{30}$ dual need not be enumerated: its exact weight enumerator follows from
-the verified $2^{10}$ protected code via MacWilliams.  The result is binary
-coding and finite W33 incidence; no physical interpretation is inferred from
-code duality.
+the verified $2^{10}$ adjacency code via MacWilliams.  Literature establishes
+the underlying $[40,10,12]$ adjacency code; this work claims only the new
+involution/support-shell identification and exact dual-minimum reconstruction.
+The result is binary coding and finite W33 incidence; no physical interpretation
+is inferred from code duality.
 \end{quote}
