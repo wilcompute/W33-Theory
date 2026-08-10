@@ -1,0 +1,115 @@
+name: Passes 4777-4784 matrix BLT D4 triangle router
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4777_matrix_units_outer.py'
+      - 'analysis/w33_pass4778_blt_minimum_orbits.py'
+      - 'analysis/w33_pass4779_rational_24d_leech_obstruction.py'
+      - 'analysis/w33_pass4780_d4_cube_triality.py'
+      - 'analysis/w33_pass4781_hamiltonian_covering_bounds.py'
+      - 'analysis/w33_pass4782_4784_srg45_triangle_k5_router.py'
+      - 'analysis/PASS4777_4784_*'
+      - 'data/PART_W33_PASS4777_*'
+      - 'data/PART_W33_PASS4778_*'
+      - 'data/PART_W33_PASS4779_*'
+      - 'data/PART_W33_PASS4780_*'
+      - 'data/PART_W33_PASS4781_*'
+      - 'data/PART_W33_PASS4782_4784_*'
+      - 'tools/integrate_pass4777_4784.py'
+      - 'docs/residue-triangle-d4-blt-router.html'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - 'holonet_machine_blueprint.tex'
+      - '.github/workflows/w33_pass4777_4784_matrix_blt_triangle_router.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pass4777-4784-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install exact-analysis dependencies
+        run: python -m pip install --disable-pip-version-check numpy scipy networkx sympy
+      - name: Execute Passes 4777-4784
+        shell: bash
+        run: |
+          set -o pipefail
+          LOG=analysis/PASS4777_4784_RUN.log
+          : > "$LOG"
+          for script in \
+            analysis/w33_pass4777_matrix_units_outer.py \
+            analysis/w33_pass4778_blt_minimum_orbits.py \
+            analysis/w33_pass4779_rational_24d_leech_obstruction.py \
+            analysis/w33_pass4780_d4_cube_triality.py \
+            analysis/w33_pass4781_hamiltonian_covering_bounds.py \
+            analysis/w33_pass4782_4784_srg45_triangle_k5_router.py
+          do
+            echo "===== $script =====" | tee -a "$LOG"
+            python "$script" 2>&1 | tee -a "$LOG"
+          done
+      - name: Check theorem boundaries
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          D=Path('data')
+          a=json.loads((D/'PART_W33_PASS4777_MATRIX_UNITS_OUTER.json').read_text())
+          assert a['outer_action']['matrix_units_fixed_pointwise']
+          assert a['outer_action']['swapped_orbitals']==[8,9]
+          b=json.loads((D/'PART_W33_PASS4778_BLT_MINIMUM_ORBITS.json').read_text())
+          q5=b.get('cases',{}).get('5',b.get('q5'))
+          assert q5['minimum_words']==19500 and q5['PSp_orbits']==[6500,13000]
+          c=json.loads((D/'PART_W33_PASS4779_RATIONAL_24D_LEECH_OBSTRUCTION.json').read_text())
+          assert c['lattice']['rational_square_class']==5
+          d=json.loads((D/'PART_W33_PASS4780_D4_CUBE_TRIALITY.json').read_text())
+          assert d['cube_stabilizer']['structure']=='2^3:S4 = W(D4)'
+          e=json.loads((D/'PART_W33_PASS4781_HAMILTONIAN_COVERING_BOUNDS.json').read_text())
+          assert e['H10']['covering_radius_lower_bound']==14 and e['H10']['covering_radius_upper_bound']==16
+          assert e['syndrome_code']['certified_weight_upper_bound']==179
+          f=json.loads((D/'PART_W33_PASS4782_4784_SRG45_TRIANGLE_K5_ROUTER.json').read_text())
+          assert f['4782_triangle_model']['residue_triangle_bijection']
+          assert f['4783_K5_Petersen']['maximal_K5']==27
+          assert f['4784_local_chirality']['paired_chiral_orbitals']==[8,9]
+          PY
+      - name: Materialize public theorem card
+        run: |
+          python tools/integrate_pass4777_4784.py
+          test "$(grep -c 'id=\"pass4777-4784-matrix-blt-d4-triangle-router\"' docs/index.html)" -eq 1
+          test -s docs/residue-triangle-d4-blt-router.html
+      - uses: WtfJoke/setup-tectonic@v3
+        with: {github-token: '${{ secrets.GITHUB_TOKEN }}'}
+      - name: Compile canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "/tmp/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+      - name: Commit generated evidence and index
+        shell: bash
+        run: |
+          git config user.name 'w33-evidence-bot'
+          git config user.email 'w33-evidence-bot@users.noreply.github.com'
+          git add analysis/PASS4777_4784_RUN.log \
+            data/PART_W33_PASS4777_MATRIX_UNITS_OUTER.json \
+            data/PART_W33_PASS4778_BLT_MINIMUM_ORBITS.json \
+            data/PART_W33_PASS4779_RATIONAL_24D_LEECH_OBSTRUCTION.json \
+            data/PART_W33_PASS4780_D4_CUBE_TRIALITY.json \
+            data/PART_W33_PASS4781_HAMILTONIAN_COVERING_BOUNDS.json \
+            data/PART_W33_PASS4782_4784_SRG45_TRIANGLE_K5_ROUTER.json \
+            docs/index.html
+          if git diff --cached --quiet; then
+            echo 'generated evidence already materialized'
+            exit 0
+          fi
+          git commit -m 'Materialize Passes 4777-4784 exact evidence and theorem card'
+          git pull --rebase origin master
+          git push origin HEAD:master
