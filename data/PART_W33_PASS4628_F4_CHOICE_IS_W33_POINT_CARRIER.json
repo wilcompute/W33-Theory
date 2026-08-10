@@ -1,0 +1,25 @@
+{
+  "pass": 4628,
+  "compatible_F4_structures": {
+    "definition": "unoriented {J,J^2} with J^2+J+I=0 on the outer-stable U6",
+    "oriented_J": 80,
+    "unoriented_pairs": 40,
+    "centralizer_order": 648,
+    "normalizer_order": 1296,
+    "PGSp_orbit_size": 40
+  },
+  "W33_intertwiner": {
+    "normalizer_fixed_points": [0],
+    "normalizer_fixed_lines": [],
+    "carrier": "point-side W33",
+    "criterion": "the representative F4-structure normalizer fixes exactly one W33 point and no line; orbit-stabilizer gives the equivariant 40-to-40 bijection"
+  },
+  "Golay_MOG_bridge": {
+    "Pass4592": "a compatible F4 structure is exactly the extra choice used before the hexacode [18,6,8] embedding",
+    "Pass4615": "the frozen chosen structure/embedding then uniquely reconstructs one Golay MOG sextet",
+    "new_reading": "W33 points parameterize the compatible F4 structures on U6"
+  },
+  "half_spinor_context": "The same U6 has the 27 singular plus 36 anisotropic coordinate split used by the concrete D4/cubic half-spinor lane; the three external degree-36 sheets do not themselves remove the F4 choice.",
+  "theorem": "The noncanonical F4 step in the paired-axis Golay construction has an exact W33 parameter space: the 40 compatible F4 structures on the natural minus six-space form the point-side W33 PGSp G-set. A representative structure has unitary centralizer 648 and semilinear normalizer 1296 fixing a unique W33 point.",
+  "boundary": "This identifies the F4-choice G-set. The frozen Golay coordinate embedding is not PGSp-equivariant and no O^-(6,2) subgroup of M24 is claimed."
+}
