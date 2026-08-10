@@ -1,0 +1,22 @@
+{
+  "boundary": "Finite PSp(4,3) permutation-carrier identification only; no physical particle or field interpretation is inferred.",
+  "conclusion": "The previously unnamed degree-27 orbit of maximal singular generators carries the Schlaefli graph under the induced PSp(4,3) action. This is certified by the orbit action, stabilizer, subdegrees and orbital graph, not by 27=27 cardinality.",
+  "degree16_orbital_graph": {
+    "parameters": "SRG(27,16,10,8)",
+    "spectrum": {
+      "-2": 20,
+      "16": 1,
+      "4": 6
+    }
+  },
+  "degree27_orbit": 27,
+  "group_order": 25920,
+  "pass": 4592,
+  "point_stabilizer_order": 960,
+  "subdegrees": [
+    1,
+    10,
+    16
+  ],
+  "verification": "Independent reconstruction in this run from GF(3)^4 -> W33 lines -> protected V8 quotient -> 270 maximal singular generators -> PSp(4,3) orbit action."
+}
