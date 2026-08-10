@@ -1,0 +1,32 @@
+{
+  "pass": 4691,
+  "neighbor": {
+    "base": "Golay Construction-A A1^24 Niemeier",
+    "distinguished_coordinate": 0,
+    "distinguished_coordinate_sextet_tetrad": [0,2,7,21],
+    "v_integer_numerator": [3,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    "v_norm": 16,
+    "definition": "M={x in N:(x,v) even}; L=M+Z(v/2)",
+    "neighbor_index_each_way": 2
+  },
+  "explicit_basis": {
+    "coordinate_scale": "1/(2*sqrt(2))",
+    "integer_numerator_determinant": 68719476736,
+    "integer_numerator_determinant_power_of_two": 36,
+    "gram_determinant": 1,
+    "integral_even_gram": true,
+    "exhibited_basis_minimum_norm": 4,
+    "basis_source": "analysis/w33_pass4691_explicit_leech_two_neighbor.py"
+  },
+  "rootlessness": {
+    "old_N_roots": "exactly 48 coordinate roots +/-sqrt(2)e_i",
+    "all_old_roots_have_odd_v_pairing": true,
+    "new_coset_all_24_numerators_odd": true,
+    "new_coset_raw_norm_lower_bound": 3,
+    "even_lattice_strengthens_lower_bound_to": 4,
+    "minimum_norm": 4
+  },
+  "sextet_weld": {"24_distinguished_coordinate_neighbors_in_one_sextet_stabilizer_orbit": true},
+  "theorem": "The explicit two-neighbor of the Golay Construction-A A1^24 Niemeier lattice defined by v=(3,1^23)/sqrt(2) is even, unimodular, rootless, and has minimum norm four. Its frozen basis has Gram determinant one. Hence it is the Leech lattice; the 24 coordinate choices form one orbit of the corrected sextet stabilizer.",
+  "boundary": "Exact lattice construction. The Leech identification uses the standard uniqueness of the rootless even unimodular lattice in dimension 24; no physical interpretation is inferred."
+}
