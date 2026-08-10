@@ -1,0 +1,83 @@
+\section*{Support-twelve involution and square-root cover closure}
+\addcontentsline{toc}{section}{Support-twelve involution and square-root cover closure}
+
+\paragraph{Pass 4721: disjoint support turns the $1620$ minima into $540$ triangles.}
+Let $\mathcal T$ be the exact support-$12$ minimum shell from Pass~4703, so
+$|\mathcal T|=1620$ and every element is the corner-star thickening $T(A)$ of a
+unique W33 apartment.  Join two thickenings when their twelve-line supports are
+disjoint.  Exact enumeration gives degree two at every vertex and
+\[
+ \boxed{\Delta_{12}=540K_3.}
+\]
+The three supports in a component cover $36$ of the $40$ W33 lines.  Their
+four-line complement is always pairwise disjoint.  The $540$ components yield
+exactly $270$ distinct complements, each with two preimages.
+
+\paragraph{Pass 4722: the old unnamed $270$ is the four-fixed-line involution orbit.}
+The inner group $G=\PSp(4,3)$ has $315$ involutions in the explicit line action,
+with fixed-line census
+\[
+ \boxed{4^{270}\oplus16^{45}.}
+\]
+The $270$ four-fixed-line sets are distinct and equal exactly to the $270$
+Pass~4721 residues.  A residue stabilizer has order $96$, hence orbit size
+$25920/96=270$, and each residue determines a unique inner involution.
+This corrects the negative conclusion in historical Pass~1830: that GAP script
+defined its permutation group on the $40$ W33 \emph{points} and then applied it
+to a set of \emph{line indices}.  The reported orbit $2880$ was therefore not
+the induced action on the four-line object.  Under the actual line action the
+four-line invariant is the desired $270$-orbit.
+
+\paragraph{Pass 4723: the two triangle sheets are outer order-four square-root sheets.}
+Fix a residue $R$ and its unique inner involution $g$.  In
+$\PGSp(4,3)$ there are exactly eight outer solutions of $h^2=g$; all have order
+four, and exactly two fix four W33 lines.  Those two are $h$ and $h^{-1}$.
+There are also exactly two support-disjointness triangles over $R$, and either
+four-fixing root swaps the two.  More strongly, for either triangle $C$ over
+$R$ and either four-fixing root,
+\[
+ \boxed{\operatorname{Stab}_{G}(C)=C_G(h),\qquad |C_G(h)|=48.}
+\]
+Thus
+\[
+ \boxed{
+ \{540\text{ support-disjointness triangles}\}
+ \cong_G
+ \{540\text{ four-fixing outer order-four elements}\}.
+ }
+\]
+Both are two-fold covers of the same $270$ residue/involution orbit.  The two
+$G$-equivariant identifications differ by $h\leftrightarrow h^{-1}$.
+The full $\PGSp(4,3)$ triangle stabilizer and root centralizer both have order
+$96$ but are distinct extensions with common inner intersection of order $48$;
+accordingly no untwisted full-$\PGSp$ identification is claimed.
+
+\paragraph{Pass 4724: the $270$ residues factor the complement line relation.}
+Let $B\in\{0,1\}^{40\times270}$ be line-versus-residue incidence and let $A_*$
+be the W33 line-intersection adjacency matrix.  Every residue has four lines,
+every line lies in $27$ residues, every skew line-pair lies in exactly three,
+and an intersecting pair lies in none.  Hence
+\[
+ \boxed{BB^{\mathsf T}=27I+3(J-I-A_*).}
+\]
+Since the complement of $\operatorname{SRG}(40,12,2,4)$ has spectrum
+$27^1\oplus(-3)^{24}\oplus3^{15}$,
+\[
+ \boxed{\operatorname{spec}(BB^{\mathsf T})
+ =108^1\oplus18^{24}\oplus36^{15}.}
+\]
+Thus $B$ has real rank $40$.  Over $\mathbb F_2$ its residue-mask span has rank
+$30$; no module identification is inferred from that dimension alone.  A
+representative $270$-class involution fixes exactly $24$ support-$12$
+thickenings and eight of the $540$ triangles.
+
+\begin{center}
+\fbox{\parbox{0.94\linewidth}{\textbf{Evidence boundary.}
+These are exact finite incidence and permutation-group statements verified by
+\texttt{analysis/w33\_pass4721\_4724\_support12\_involution\_square\_root\_cover.py}.
+The result repairs an action-domain error in Pass~1830 and then adds a genuine
+minimum-shell/square-root-cover theorem.  Equal cardinalities are never used as
+a substitute for an intertwiner: fixed sets, square maps, stabilizers,
+centralizers, orbits, and the Gram identity are checked explicitly.  No physical
+interpretation is inferred.}}
+\end{center}
