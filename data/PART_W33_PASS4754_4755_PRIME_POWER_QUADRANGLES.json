@@ -1,0 +1,128 @@
+{
+  "all_parameters_correct": true,
+  "boundary": "the constructor is verified against the known SRG parameters of W(3,q) at q = 2,3,4,5 and NOT beyond; isomorphism is decided by BLISS canonical form, which is exact. This pass does NOT compute Track C's six walk masses and therefore does not test the Pass 4695 prediction itself -- it removes the obstacle that made the test impossible. GF(p^k) is supported only for the irreducible polynomials recorded in IRRED",
+  "method": "BLISS canonical labelling via python-igraph; VF2 does not terminate on a 156-vertex strongly regular graph",
+  "parity_rule_holds": true,
+  "pass_4754_construction": [
+    {
+      "field": "GF(2)",
+      "lines": 15,
+      "ok": true,
+      "points": 15,
+      "q": 2,
+      "seconds": 0.0,
+      "srg_built": [
+        15,
+        6,
+        1,
+        3
+      ],
+      "srg_expected": [
+        15,
+        6,
+        1,
+        3
+      ]
+    },
+    {
+      "field": "GF(3)",
+      "lines": 40,
+      "ok": true,
+      "points": 40,
+      "q": 3,
+      "seconds": 0.01,
+      "srg_built": [
+        40,
+        12,
+        2,
+        4
+      ],
+      "srg_expected": [
+        40,
+        12,
+        2,
+        4
+      ]
+    },
+    {
+      "field": "GF(2^2)",
+      "lines": 85,
+      "ok": true,
+      "points": 85,
+      "q": 4,
+      "seconds": 0.03,
+      "srg_built": [
+        85,
+        20,
+        3,
+        5
+      ],
+      "srg_expected": [
+        85,
+        20,
+        3,
+        5
+      ]
+    },
+    {
+      "field": "GF(5)",
+      "lines": 156,
+      "ok": true,
+      "points": 156,
+      "q": 5,
+      "seconds": 0.13,
+      "srg_built": [
+        156,
+        30,
+        4,
+        6
+      ],
+      "srg_expected": [
+        156,
+        30,
+        4,
+        6
+      ]
+    }
+  ],
+  "pass_4755_self_duality": [
+    {
+      "agrees": true,
+      "even": true,
+      "isomorphic_to_dual": true,
+      "n": 15,
+      "predicted": true,
+      "q": 2,
+      "seconds": 0.0
+    },
+    {
+      "agrees": true,
+      "even": false,
+      "isomorphic_to_dual": false,
+      "n": 40,
+      "predicted": false,
+      "q": 3,
+      "seconds": 0.0
+    },
+    {
+      "agrees": true,
+      "even": true,
+      "isomorphic_to_dual": true,
+      "n": 85,
+      "predicted": true,
+      "q": 4,
+      "seconds": 0.0
+    },
+    {
+      "agrees": true,
+      "even": false,
+      "isomorphic_to_dual": false,
+      "n": 156,
+      "predicted": false,
+      "q": 5,
+      "seconds": 0.0
+    }
+  ],
+  "q4_self_dual": true,
+  "q5_self_dual": false
+}
