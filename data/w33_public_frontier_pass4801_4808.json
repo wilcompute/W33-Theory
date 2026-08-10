@@ -1,0 +1,23 @@
+{
+  "schema": "w33.public_frontier_extension.v1",
+  "passes": [4801,4802,4803,4804,4805,4806,4807,4808],
+  "public_sections": [
+    {"kind":"id","token":"pass4801-4808-radius-golay-homology","source":"analysis/PASS4801_4808_radius_golay_homology_index_insert.html"}
+  ],
+  "standalone_public_pages": [
+    {"token":"pass4801-4808-radius-golay-homology-page","source":"docs/radius14-ternary-golay-levi-homology.html"}
+  ],
+  "materializer": "tools/integrate_pass4801_4808.py",
+  "manuscript_insert": "analysis/PASS4801_4808_radius_golay_homology_insert.tex",
+  "synthesis": "analysis/PASS4801_4808_RADIUS_GOLAY_HOMOLOGY_BREAKTHROUGH.md",
+  "evidence": [
+    "data/PART_W33_PASS4801_H10_COVERING_RADIUS_SAT.json",
+    "data/PART_W33_PASS4802_WEIGHT4_LOGICAL_SHELL.json",
+    "data/PART_W33_PASS4803_TRIANGLE_CSS_DECODER_SCHEDULE.json",
+    "data/PART_W33_PASS4804_EQUIVARIANT_F4_E6_INTERTWINER.json",
+    "data/PART_W33_PASS4805_Q9_BLT_MINIMUM_SHELL.json",
+    "data/PART_W33_PASS4806_LOCAL_TERNARY_GOLAY.json",
+    "data/PART_W33_PASS4807_GOLAY_LEVI_HOMOLOGY.json",
+    "data/PART_W33_PASS4808_HOMOLOGY_DISTANCE_K33.json"
+  ]
+}
