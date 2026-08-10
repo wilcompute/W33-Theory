@@ -340,7 +340,66 @@ def results_in(text: str) -> set[str]:
     return got - SKIP
 
 
+
+def selftest() -> int:
+    """Planted results this guard must extract, and text it must stay quiet on.
+
+    Added Pass 4756. CLAUDE.md calls this the core artifact of the two-agent protocol, and
+    Pass 4708 found it had no self-test -- so its silence on a staged file proved nothing.
+    Pass 4692 had already found it was not even registered as a hook.
+
+    This tests the EXTRACTOR, which is the part that can fail silently: if results_in()
+    returns nothing for a file, the guard reports no collisions for the most conclusive
+    possible reason, and the report is indistinguishable from a genuinely novel file.
+    """
+    cases = [
+        ("code parameter [[137,1,21]]",
+         "We exhibit a [[137,1,21]] stabilizer code on the substrate.", True),
+        # These two are DELIBERATELY not extracted, and finding that out is the point of
+        # writing the test. CLAUDE.md: the guard is "calibrated to code parameters only --
+        # bare integers flag 97% of files and are pure noise (Pass 328 measured every token
+        # class before choosing)". So SRG parameters and a bare group order are silent BY
+        # DESIGN. I expected both to fire and was wrong about the guard, not the guard
+        # about the corpus -- the fix was to this test.
+        ("SRG parameters (excluded by design)",
+         "Its collinearity graph is SRG(40,12,2,4) with eigenvalues 12, 2, -4.", False),
+        ("bare group order (excluded by design)",
+         "The automorphism group is Sp(4,3) of order 51840.", False),
+        ("prose with no result",
+         "This section explains the motivation and reviews the earlier literature.",
+         False),
+    ]
+    ok = True
+    print("  selftest -- does the extractor actually see results?\n")
+    for name, text, want in cases:
+        got = bool(results_in(text))
+        good = got == want
+        ok &= good
+        toks = sorted(results_in(text))[:3]
+        print(f"    {name:30s} extracted={str(got):5s} want={str(want):5s} "
+              f"{'PASS' if good else 'FAIL'}")
+        if toks:
+            print(f"        {toks}")
+    print("""
+  TWO OF THESE FOUR ARE DELIBERATE SILENCES, AND THAT IS THE CALIBRATION. Pass 328
+  measured every token class across 173 pass files: code parameters collide usefully, bare
+  integers flag 97% of files. So the guard sees [[137,1,21]] and not SRG(40,12,2,4), and a
+  reader who does not know that will read its silence as novelty. This test is where that
+  fact now lives in executable form.
+
+  THE LAST CASE IS THE ONE THAT MAKES THIS A TEST. Ordinary prose must yield NO result
+  tokens -- a guard that extracted something from every paragraph would collide with
+  everything and be ignored, which is the failure mode CLAUDE.md warns about by name when
+  it says bare integers flag 97% of files and are pure noise.
+
+  ITS LIMIT: this tests extraction, not the index. A result correctly extracted from a
+  staged file still reports nothing if RESULTS_INDEX.md is stale, and nothing here checks
+  the index's freshness.""")
+    return 0 if ok else 1
+
 def main(argv: list[str]) -> int:
+    if "--selftest" in argv:
+        return selftest()
     files = [a for a in argv if not a.startswith("-")]
     index = load_index()
     if not index:
