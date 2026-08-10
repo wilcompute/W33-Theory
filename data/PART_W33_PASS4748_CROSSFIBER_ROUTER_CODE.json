@@ -1,0 +1,19 @@
+{
+  "pass":4748,
+  "cell_decomposition":{"cells":135,"physical_edges_per_cell":15,"partition_all_2025_edges":true,"hot_edges_per_cell":3,"cold_K2_2_blocks_per_cell":3,"cold_edges_per_block":4,"symbolic_geometry":"triangle with three hot vertex symbols of physical weight 1 and three cold edge symbols of physical weight 4"},
+  "S3_invariant_local_subspaces":{"count":25,"dimension_distance_pairs":[[1,3],[1,12],[1,15],[2,2],[2,3],[2,8],[2,10],[3,1],[3,2],[3,3],[3,4],[3,5],[3,6],[3,7],[4,1],[4,2],[4,3],[5,1],[5,2],[6,1]],
+    "Pareto":[
+      {"local_dimension":1,"weighted_distance":15,"global_parameters":"[2025,135,15]_2","rate":"1/15"},
+      {"local_dimension":2,"weighted_distance":10,"global_parameters":"[2025,270,10]_2","rate":"2/15"},
+      {"local_dimension":3,"weighted_distance":7,"global_parameters":"[2025,405,7]_2","rate":"1/5"},
+      {"local_dimension":4,"weighted_distance":3,"global_parameters":"[2025,540,3]_2","rate":"4/15"},
+      {"local_dimension":5,"weighted_distance":2,"global_parameters":"[2025,675,2]_2","rate":"1/3"},
+      {"local_dimension":6,"weighted_distance":1,"global_parameters":"[2025,810,1]_2","rate":"2/5"}
+    ]},
+  "uncoupled_baseline":{"parameters":"[2025,567,4]_2","dimension":567,"distance":4,"rate":"7/25","K_times_d":2268,"construction":"27 Petersen [15,6,5] cycle codes plus 405 independent [4,1,4] cold-block repetition codes"},
+  "comparison":{"crossfiber_choice":"[2025,405,7]_2","K_times_d":2835,"baseline_K_times_d":2268,"improves_this_specific_metric":true,"tradeoff":"lower rate, higher distance"},
+  "symmetry":"The 135 cells are intrinsic packet-coordinate objects; PSp and PGSp permute cells and induce the triangle S3 action, so every S3-invariant local code lifts to a PGSp-invariant global direct-sum code.",
+  "theorem":"The 3K2,2 connection law canonically partitions all 2025 router edges into 135 fifteen-edge cross-fiber cells. Exhausting all 25 S3-invariant binary local subspaces gives the exact weighted rate-distance Pareto points (1,15),(2,10),(3,7),(4,3),(5,2),(6,1). In particular [2025,405,7]_2 is a genuine cross-fiber code and improves K*d over the simple uncoupled [2025,567,4]_2 baseline while explicitly trading rate for distance.",
+  "execution":"independent reconstruction of all 2025 physical edges and exhaustive enumeration of all 2825 binary subspaces of F2^6, retaining exactly 25 S3-invariant subspaces",
+  "boundary":"Exact binary-code/symmetry result. K*d is one stated comparison metric; no universal coding optimum or physical fault-tolerance threshold is claimed."
+}
