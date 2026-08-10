@@ -1,0 +1,23 @@
+{
+  "pass": 4696,
+  "coefficient_space": {
+    "ambient": "F2^40",
+    "apartment_generator_kernel": "<all-ones>",
+    "even_hyperplane_dimension": 39,
+    "thickening_masks": 1620,
+    "thickening_mask_weight": 12,
+    "thickening_mask_rank": 39,
+    "thickening_masks_span": "entire even-weight hyperplane"
+  },
+  "image_subcode": {
+    "dimension": 38,
+    "parameters": "[1620,38,270]",
+    "thickening_codeword_weight": 608,
+    "thickening_shell_size": 1620,
+    "minimum_weight": 270,
+    "minimum_words": 240,
+    "minimum_shell": "adjacent generator-pair sums = W33 edges"
+  },
+  "theorem": "The 1620 support-12 apartment-thickening words span exactly the even-coefficient subcode E40/<1> of the apartment code. This canonical [1620,38,270] subcode has 240 minimum words, precisely the W33 edge carrier, giving an explicit apartment-thickening-to-edge coding bridge.",
+  "boundary": "Exact binary-code/building theorem. Minimum distance 270 uses the already exhaustive Pass4495 low-weight apartment-code certificate; no physical interpretation is inferred."
+}
