@@ -1,0 +1,93 @@
+{
+  "all_verified": true,
+  "boundary": "each map is verified as a graph isomorphism edge by edge, which is exact. The map is ONE duality, not a canonical one: composing with any automorphism of the quadrangle gives another, so its order and cycle type describe the representative BLISS produced and are NOT invariants of the geometry. Only q = 2,4,8 are treated",
+  "maps": [
+    {
+      "cycle_type": {
+        "1": 2,
+        "10": 1,
+        "3": 1
+      },
+      "edges": 45,
+      "edges_verified": 45,
+      "is_isomorphism": true,
+      "map_head": [
+        0,
+        2,
+        10,
+        1,
+        6,
+        11,
+        3,
+        8,
+        4,
+        5,
+        13,
+        9
+      ],
+      "n": 15,
+      "order": 30,
+      "q": 2
+    },
+    {
+      "cycle_type": {
+        "1": 3,
+        "16": 1,
+        "3": 1,
+        "63": 1
+      },
+      "edges": 850,
+      "edges_verified": 850,
+      "is_isomorphism": true,
+      "map_head": [
+        0,
+        1,
+        62,
+        19,
+        37,
+        56,
+        12,
+        30,
+        4,
+        55,
+        2,
+        38
+      ],
+      "n": 85,
+      "order": 1008,
+      "q": 4
+    },
+    {
+      "cycle_type": {
+        "1": 4,
+        "14": 1,
+        "15": 1,
+        "23": 1,
+        "24": 1,
+        "505": 1
+      },
+      "edges": 21060,
+      "edges_verified": 21060,
+      "is_isomorphism": true,
+      "map_head": [
+        0,
+        1,
+        519,
+        396,
+        485,
+        570,
+        480,
+        149,
+        495,
+        533,
+        391,
+        314
+      ],
+      "n": 585,
+      "order": 1951320,
+      "q": 8
+    }
+  ],
+  "total_edge_checks": 21955,
+  "why_verified_separately": "the canonical-form verdict compares two independently computed labellings; composing them into an explicit permutation adds an inversion step the comparison never exercised, and Pass 4755's first version got a composition of exactly that kind wrong"
+}
