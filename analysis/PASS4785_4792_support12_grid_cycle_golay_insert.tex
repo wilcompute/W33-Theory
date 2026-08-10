@@ -1,0 +1,103 @@
+% Canonical Passes 4785--4792; implementation aliases 4761--4768 retained after namespace collision.
+\section*{Support-12 minima reconstruct the protected 45, dual cycle code, point-edge shell, and Golay neighbor relations}
+\addcontentsline{toc}{section}{Support-12 minima reconstruct the protected 45 and Golay neighbor relations}
+
+\paragraph{Pass 4785: the thickening edge code is the full even cycle hyperplane.}
+For every one of the $1620$ support-$12$ apartment thickenings, record the $28$ edges induced in the $40$-vertex W33 line-intersection graph $X$.  The resulting $1620\times240$ binary incidence has constant column weight $189$ and rank $200$.  Every row is an even-weight Eulerian edge set.  Since
+\[
+\dim Z_1(X;\mathbb F_2)=240-40+1=201,
+\]
+the row code is exactly
+\[
+\boxed{C_{\rm thick}=Z_1(X;\mathbb F_2)\cap\{\text{even edge weight}\}=[240,200,4]_2.}
+\]
+Its dual is
+\[
+\boxed{C_{\rm thick}^{\perp}=\operatorname{Cut}(X)+\langle\mathbf1_E\rangle=[240,40,12]_2.}
+\]
+The dual distance is $12$: the ordinary cut space has edge-connectivity $12$, while the all-edge coset has weight at least $80$ by the $\lambda_{\min}=-4$ max-cut bound.
+
+\paragraph{Pass 4786: a canonical partner involution recovers the protected 45 literally.}
+For two thickening edge-vectors, their intersection sizes lie in
+\[
+0,1,2,6,7,8,12,16,21.
+\]
+Every minimum has exactly one partner at overlap $8$, producing $810$ pairs.  The two $12$-line supports of a partner pair meet in eight lines and have a $16$-line union.  The $810$ unions collapse $18$-to-$1$ onto exactly $45$ supports.  Every support induces
+\[
+\operatorname{SRG}(16,6,2,2)
+\]
+with eight maximal $K_4$s, hence the $4\times4$ rook graph $L_2(4)$.  Rebuilding the old $135$ singular apartment fibers shows that these $45$ subsets are \emph{literally the same} $45$ protected/E$_6$ center-quad--tritangent supports, not merely an isomorphic carrier.
+
+\paragraph{Pass 4787: the support-$12$ shell independently reconstructs the exceptional transport graph.}
+Two of the $45$ rook grids meet in either $7$ or $4$ W33 lines.  Declaring intersection $7$ adjacent gives
+\[
+\boxed{\operatorname{SRG}(45,32,22,24).}
+\]
+For the $45\times40$ grid-line incidence matrix $T$,
+\[
+TT^{\mathsf T}=12I_{45}+3A_{45}+4J_{45},
+\qquad
+T^{\mathsf T}T=12I_{40}+3A_{\rm dual}+6J_{40}.
+\]
+Hence $\operatorname{rank}_{\mathbb Q}T=25$ and $\operatorname{rank}_{2}T=24$.  Modulo two, the two Gram matrices reduce to $A_{45}$ and $A_{\rm dual}$, of ranks $14$ and $10$ respectively.
+
+\paragraph{Pass 4788: the local $36$-state shell is a rectangle product with an extra central partner.}
+Each $16$-line rook grid contains exactly
+\[
+\binom42\binom42=36
+\]
+support-$12$ minima.  The eight rook $K_4$s split into two families of four, so a minimum is canonically labelled by
+\[
+(R,C)\in\binom{[4]}2\times\binom{[4]}2.
+\]
+The overlap-$8$ partner is simultaneous complementation
+\[
+(R,C)\mapsto(R^c,C^c),
+\]
+and the partner apartment is exactly the four-line complement of the thickening inside the grid.  The $PGSp$ and $PSp$ grid stabilizers have orders $1152$ and $576$, each with pointwise kernel $2$ on the sixteen lines; their induced rectangle actions therefore have orders $576$ and $288$ and are transitive.  The partner involution is not in the $PGSp$ image, centralizes it, and doubles the $36$-set permutation group to order $1152$.
+
+\paragraph{Pass 4789: the two $240$ edge coordinate carriers are not equivariantly identical.}
+The new code lives on edges of the W33 line-intersection graph, whereas the established CSS/Hodge carrier uses edges of the W33 point-collinearity graph.  A dual-line-edge stabilizer has order $108$ and suborbits
+\[
+1,1,2,2,18,18,18,18,27,27,54,54
+\]
+on its own $240$-set, but on the point-edge $240$-set its suborbits are
+\[
+6,6,6,6,54,54,54,54.
+\]
+It fixes no point edge.  The $PGSp$ outer twist leaves the obstruction unchanged.  Thus there is no canonical $PSp$ coordinate bijection between the two edge carriers.
+
+\paragraph{Pass 4790: nevertheless the $45$-grid code recovers the point-edge carrier as its minimum shell.}
+The binary row code of $T$ is
+\[
+\boxed{C_{45}=[40,24,6]_2}
+\]
+with $240$ minimum words.  If $B$ is the $40\times40$ point-line incidence matrix and $p\sim q$, then
+\[
+w_{pq}=\operatorname{Star}(p)\triangle\operatorname{Star}(q)
+\]
+has weight six; the $240$ such words are exactly the entire minimum shell of $C_{45}$.  Algebraically,
+\[
+C_{45}=B^{\mathsf T}(\text{even point coefficients}).
+\]
+The dual is
+\[
+\boxed{C_{45}^{\perp}=[40,16,10]_2=\{y:By\in\langle\mathbf1\rangle\}.}
+\]
+Its $252$ minimum words split into $216$ kernel words with point-degree profile $0^{20}2^{20}$ and exactly $36$ spreads with point-degree profile $1^{40}$.
+
+\paragraph{Pass 4791: the $24$ Leech-neighbor parity characters have Golay as their full relation code.}
+For the explicit two-neighbors of Pass~4699 let
+\[
+v_i=(1,\ldots,1,3_i,1,\ldots,1)/\sqrt2,
+\qquad \chi_i(x)=(x,v_i)\pmod2.
+\]
+Evaluating the $24$ characters on an exact generating set of the Golay Construction-A Niemeier lattice gives a rank-$12$ character system whose binary relation space is \emph{exactly} the extended Golay code $G_{24}$.  Therefore every subset of at most seven neighbor characters is independent and the first dependencies are precisely the $759$ octads.  The corrected sextet supplies $15$ explicit octad relations as unions of two tetrads.  Its order-$138240$ stabilizer is transitive on the $24$ neighbors; a neighbor stabilizer has order $5760$ and point suborbits $1+3+20$.
+
+\paragraph{Pass 4792: the deck and even-cycle parity lines are analogous but not canonically the same.}
+The codimension-one quotient $Z_1(X)/C_{\rm thick}$ is dual to the mod-two all-edge cohomology class on $X$.  A triangle witnesses that the class is nonzero.  It is group-fixed in characteristic two, while the edge stabilizer contains $54$ endpoint reversers, eliminating an invariant characteristic-zero oriented lift.  This parallels the Pass~4745/4752 apartment deck line.  However the two transitive bases have $PSp$ vertex stabilizers of orders $648$ and $96$.  Since neither divides the other, no equivariant map exists between the $40$- and $270$-vertex bases in either direction.  The shared one-dimensional $\mathbb F_2$ type is therefore not promoted to a common cohomology object.
+
+\begin{center}
+\fbox{\parbox{0.94\linewidth}{\textbf{Evidence firewall.}
+Passes 4785--4792 are exact finite graph/code/group/lattice/cohomology statements.  The canonical numbering repairs a later namespace collision; the original 4761--4768 implementation files are retained as provenance aliases.  The point- and line-edge coordinate carriers remain nonisomorphic under the canonical action even though the grid code recovers the point-edge carrier nonlinearly as a minimum-word shell.  The apartment enumerator remains open beyond exact support $12$.}}
+\end{center}
