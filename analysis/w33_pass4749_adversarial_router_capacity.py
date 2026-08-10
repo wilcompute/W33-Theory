@@ -1,16 +1,27 @@
 #!/usr/bin/env python3
-"""Pass 4749 — adversarial capacity and targeted Petersen-fiber failures.
+"""Pass 4749 — exact adversarial capacity and targeted Petersen-fiber failures.
 
-Pass4717 solved uniform all-pairs load.  Here capacity means worst-case pair
-connectivity in the undirected two-technology router.  Cold edges have capacity
-1 and hot Petersen edges capacity rho.  Stoer-Wagner cuts at adaptive rho samples
-identify the exact affine cut signatures on the lower envelope.  Gomory-Hu trees
-then classify all pairwise min-cuts at equal capacity and after targeted shortcut
-fiber outages.  We separately test full ten-vertex fiber removal and the two
-quotient pair types (adjacent/nonadjacent fibers).
+Pass4717 solved uniform all-pairs load. Here capacity means worst-case pair
+connectivity in the undirected two-technology router. Cold edges have capacity
+1 and hot Petersen edges capacity rho.
+
+The exact lower envelope needs no interpolation from sampled min-cuts. The cold
+selected270 graph has edge-connectivity 12; every hot Petersen fiber has
+edge-connectivity 3; and the 27-vertex quotient has edge-connectivity 10. Thus
+for any nontrivial cut:
+
+  * if it splits a Petersen fiber, (cold,hot) boundary >= (12,3), attained by a
+    single router vertex;
+  * if it splits no Petersen fiber, it is a union of whole fibers and its cold
+    boundary is 12 times a quotient cut, hence >= 120, attained by one fiber.
+
+Therefore the exact global min-cut is min(12+3 rho, 120), with the unique
+technology breakpoint rho=36. Numeric Stoer-Wagner probes are retained only as
+regression diagnostics. Whole shortcut-fiber outages and full ten-vertex fiber
+removals are then evaluated separately.
 """
 from __future__ import annotations
-import itertools,json,math
+import itertools,json
 from collections import Counter
 from fractions import Fraction
 from pathlib import Path
@@ -53,33 +64,6 @@ def pair_cut_distribution(G):
             dist[round(z,9)]+=1
     return dict(sorted(dist.items()))
 
-def lower_envelope(lines):
-    # lines are integer (a,b), a+b*rho. Return breakpoints and winning signatures.
-    xs={Fraction(0,1)}
-    L=sorted(set(lines))
-    for (a,b),(c,d) in itertools.combinations(L,2):
-        if b!=d:
-            x=Fraction(c-a,b-d)
-            if x>0:xs.add(x)
-    sx=sorted(xs);samples=[]
-    for i,x in enumerate(sx):
-        if x>0:samples.append(x)
-        y=sx[i+1] if i+1<len(sx) else None
-        if y is not None:samples.append((x+y)/2)
-    samples += [Fraction(1,1000),Fraction(1,1),Fraction(10,1),Fraction(100,1)]
-    winners=[]
-    for x in sorted(set(q for q in samples if q>0)):
-        vals=[(Fraction(a)+Fraction(b)*x,(a,b)) for a,b in L];m=min(z[0] for z in vals)
-        W=tuple(sorted(z[1] for z in vals if z[0]==m));winners.append((x,W))
-    active=sorted(set(w for x,W in winners for w in W))
-    bps=[]
-    for u,v in itertools.combinations(active,2):
-        a,b=u;c,d=v
-        if b!=d:
-            x=Fraction(c-a,b-d)
-            if x>0 and all(Fraction(a)+Fraction(b)*x<=Fraction(e)+Fraction(f)*x for e,f in active):bps.append(x)
-    return active,sorted(set(bps))
-
 def main():
     X=build_bundle();hot=sorted(tuple(sorted(e)) for e in X['hot']);cold=sorted(tuple(sorted(e)) for e in X['cold']);K5=X['K5'];projected=X['projected']
     hotset=set(hot);coldset=set(cold);assert (len(hot),len(cold))==(405,1620)
@@ -90,46 +74,61 @@ def main():
     qG=nx.Graph();qG.add_nodes_from(range(27))
     for a,b in itertools.combinations(range(27),2):
         if K5[a]&K5[b]:qG.add_edge(a,b)
-    assert set(dict(qG.degree()).values())=={10}
+    assert set(dict(qG.degree()).values())=={10} and nx.is_connected(qG)
 
-    # Adaptive exact cut-signature discovery from rational rho probes.
-    probes=[Fraction(1,100),Fraction(1,10),Fraction(1,2),Fraction(1,1),Fraction(2,1),Fraction(10,1),Fraction(30,1),Fraction(36,1),Fraction(40,1),Fraction(100,1)]
-    sigs=set();raw=[]
-    for r in probes:
-        val,sig,side=global_sig(270,cold,hot,float(r));sigs.add(sig);raw.append((r,val,sig,side))
-    # add all positive crossings of discovered signatures and probe adjacent intervals; repeat twice
-    for _ in range(2):
-        cross=[]
-        for (a,b),(c,d) in itertools.combinations(sorted(sigs),2):
-            if b!=d:
-                x=Fraction(c-a,b-d)
-                if x>0:cross.append(x)
-        extra=set(cross)
-        sc=sorted(set([Fraction(0)]+cross+[Fraction(200)]))
-        for x,y in zip(sc,sc[1:]):
-            if y>x:extra.add((x+y)/2)
-        for r in sorted(extra):
-            if r<=0:continue
-            val,sig,side=global_sig(270,cold,hot,float(r));sigs.add(sig);raw.append((r,val,sig,side))
-    active,bps=lower_envelope(sigs)
+    coldG=nx.Graph();coldG.add_nodes_from(range(270));coldG.add_edges_from(cold)
+    hotG=nx.Graph();hotG.add_nodes_from(range(270));hotG.add_edges_from(hot)
+    assert nx.is_connected(coldG)
+    cold_edge_connectivity=nx.edge_connectivity(coldG);assert cold_edge_connectivity==12
+    quotient_edge_connectivity=nx.edge_connectivity(qG);assert quotient_edge_connectivity==10
+    hot_components=[hotG.subgraph(C).copy() for C in nx.connected_components(hotG)]
+    assert len(hot_components)==27 and set(H.number_of_nodes() for H in hot_components)=={10}
+    hot_edge_connectivities=[nx.edge_connectivity(H) for H in hot_components];assert set(hot_edge_connectivities)=={3}
+
+    # Every quotient edge carries exactly 12 cold physical edges.
+    qmult=Counter()
+    for u,v in cold:qmult[tuple(sorted((owner[u],owner[v])))]+=1
+    assert len(qmult)==135 and set(qmult.values())=={12} and set(qmult)=={tuple(sorted(e)) for e in qG.edges()}
+
+    exact={
+      'cold_graph_edge_connectivity':cold_edge_connectivity,
+      'hot_Petersen_edge_connectivity':3,
+      'quotient_edge_connectivity':quotient_edge_connectivity,
+      'cold_edges_per_quotient_edge':12,
+      'split_fiber_lower_bound':'12 + 3 rho',
+      'whole_fiber_union_lower_bound':'120',
+      'exact_global_min_cut':'min(12 + 3 rho, 120)',
+      'breakpoint_rho':36,
+      'witness_below_breakpoint':'single router vertex has 12 cold + 3 hot incident edges',
+      'witness_above_breakpoint':'one complete Petersen fiber has 120 cold boundary edges and zero hot boundary edges'
+    }
+    for r in [Fraction(1,100),Fraction(1,10),Fraction(1,1),Fraction(10,1),Fraction(35,1),Fraction(36,1),Fraction(37,1),Fraction(100,1)]:
+        val,sig,side=global_sig(270,cold,hot,float(r))
+        target=min(12+3*float(r),120.0)
+        assert abs(val-target)<1e-7
 
     # Equal capacity pair-connectivity census.
     G1=weighted_graph(270,cold,hot,1.0);equal_global=nx.stoer_wagner(G1,weight='capacity')[0]
+    assert abs(equal_global-15.0)<1e-8
     equal_pairs=pair_cut_distribution(G1)
 
-    # Targeted shortcut outage: delete the 15 hot edges of fiber 0.
+    # Targeted shortcut outage: delete the 15 hot edges of fiber 0. Cold graph remains,
+    # so every cut has capacity >=12; a single failed-fiber vertex attains 12.
     f0=set(fibers[0]);hot0={e for e in hot if e[0] in f0 and e[1] in f0};assert len(hot0)==15
-    Go=weighted_graph(270,cold,hot,1.0,removed_edges=hot0);out_global=nx.stoer_wagner(Go,weight='capacity')[0];out_pairs=pair_cut_distribution(Go)
-    # one-outage symbolic signatures at representative rho; vertex cut in failed fiber is always cold degree 12
-    outage_sigs=set()
-    for r in [0.1,1,10,100]:outage_sigs.add(global_sig(270,cold,hot,r,removed_edges=hot0)[1])
+    outage_diag={}
+    for r in [Fraction(1,100),Fraction(1,1),Fraction(10,1),Fraction(100,1)]:
+        val,sig,side=global_sig(270,cold,hot,float(r),removed_edges=hot0);assert abs(val-12.0)<1e-7
+        outage_diag[str(r)]={'min_cut':val,'signature':list(sig),'smaller_side':side}
+    Go=weighted_graph(270,cold,hot,1.0,removed_edges=hot0);out_pairs=pair_cut_distribution(Go)
 
     # Two shortcut-fiber failures: quotient-adjacent and quotient-nonadjacent representatives.
     adj=next(iter(qG.edges()));non=next((a,b) for a,b in itertools.combinations(range(27),2) if not qG.has_edge(a,b))
     two={}
     for name,(a,b) in [('adjacent',adj),('nonadjacent',non)]:
-        R=set(fibers[a])|set(fibers[b]);rem={e for e in hot if (e[0] in R and e[1] in R and owner[e[0]]==owner[e[1]])}
-        H=weighted_graph(270,cold,hot,1.0,removed_edges=rem);two[name]={'fibers':[a,b],'removed_hot_edges':len(rem),'global_min_cut':float(nx.stoer_wagner(H,weight='capacity')[0])}
+        R=set(fibers[a])|set(fibers[b]);rem={e for e in hot if owner[e[0]] in (a,b) and owner[e[0]]==owner[e[1]]}
+        H=weighted_graph(270,cold,hot,1.0,removed_edges=rem);val=float(nx.stoer_wagner(H,weight='capacity')[0])
+        assert val==12.0
+        two[name]={'fibers':[a,b],'removed_hot_edges':len(rem),'global_min_cut_equal_capacity':val}
 
     # Full vertex-fiber removals, one and two quotient pair types.
     nodefail={}
@@ -141,12 +140,11 @@ def main():
         nodefail[name]={'fibers':list(F),'removed_vertices':len(R),'survivors':H.number_of_nodes(),'global_min_cut':float(val),'minimum_degree':min(dict(H.degree()).values()),'diameter':nx.diameter(H)}
 
     out={'pass':4749,
-      'baseline_symbolic':{'discovered_cut_signatures_cold_plus_rho_hot':sorted([list(x) for x in sigs]),'active_lower_envelope_signatures':sorted([list(x) for x in active]),'positive_breakpoints':[str(x) for x in bps],
-        'interpretation':'signature [a,b] means cut capacity a + b rho'},
+      'exact_symbolic_global_cut':exact,
       'equal_capacity':{'global_min_cut':float(equal_global),'all_pair_min_cut_distribution':equal_pairs},
-      'one_shortcut_fiber_outage':{'removed_hot_edges':15,'global_min_cut_equal_capacity':float(out_global),'all_pair_min_cut_distribution':out_pairs,'symbolic_signatures_seen':sorted([list(x) for x in outage_sigs])},
+      'one_shortcut_fiber_outage':{'removed_hot_edges':15,'exact_global_min_cut_all_positive_rho':12,'diagnostic_samples':outage_diag,'all_pair_min_cut_distribution_at_rho1':out_pairs},
       'two_shortcut_fiber_outages':two,'full_vertex_fiber_removal':nodefail,
-      'theorem':'Worst-case pair capacity is governed by an exact lower envelope of integer cold/hot cut signatures. Whole-Petersen shortcut outages and full fiber removals are evaluated separately, with adjacent/nonadjacent two-fiber failure classes distinguished by the 27-vertex quotient.',
+      'theorem':'For cold capacity 1 and hot capacity rho>0, the exact worst-pair min-cut is min(12+3 rho,120), with breakpoint rho=36. The proof uses edge-connectivity 12 of the cold graph, edge-connectivity 3 of each Petersen fiber, edge-connectivity 10 of the 27-vertex quotient, and exactly 12 cold physical edges per quotient edge. Failure of all shortcut edges in even one Petersen fiber collapses the global min-cut to exactly 12 for every rho>0.',
       'boundary':'Exact undirected edge-capacity/min-cut theorem for the finite router. It is not a queueing, latency, directed-switch, or measured-hardware claim.'}
     OUT.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n');print(json.dumps(out,indent=2,sort_keys=True));return 0
 if __name__=='__main__':raise SystemExit(main())
