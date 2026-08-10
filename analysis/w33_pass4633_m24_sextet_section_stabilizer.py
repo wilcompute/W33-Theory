@@ -18,7 +18,7 @@ calculation then gives:
 """
 from __future__ import annotations
 import itertools,json
-from collections import Counter,deque
+from collections import deque
 from pathlib import Path
 import w33_pass4592_paired_axes_simplex_hexacode_golay as p4592
 ROOT=Path(__file__).resolve().parents[1]
@@ -113,7 +113,6 @@ def induced_order(group,items,action):return len({tuple(items.index(action(x,g))
 def build():
     Gset,octads,C6,Z,active,triples,sextet=golay_section()
     repo_gens=[conj_atlas_to_repo(B11),conj_atlas_to_repo(B21)]
-    # Freeze the design conjugation, not merely a group-order assertion.
     atlas_seed=frozenset(i-1 for i in (1,2,3,4,5,11,17,24));atlas_orb={atlas_seed};Q=deque([atlas_seed])
     while Q:
         x=Q.popleft()
@@ -129,22 +128,20 @@ def build():
     tetrads=[frozenset(x) for x in sextet];tetrad_image=induced_order(H,tetrads,act_set);assert tetrad_image==720
     kernel_tetrad=sum(all(act_set(T,g)==T for T in tetrads) for g in H);assert kernel_tetrad==192
 
-    # All transversals choose one point from each tetrad; the section zero set is one.
-    trans=[frozenset(x) for x in itertools.product(*[sorted(T) for T in tetrads])]
-    assert len(set(trans))==4**6
+    trans=[frozenset(x) for x in itertools.product(*[sorted(T) for T in tetrads])];assert len(set(trans))==4**6
     orbZ={act_set(Z,g) for g in H};assert len(orbZ)==64
     repsZ,candK=schreier(Z,Hgens,act_set);assert len(repsZ)==64
     Kgens,K=shrink(candK,2160);assert len(K)==2160 and 2160*64==138240
-    sec_oct=[x for x in C6 if x.bit_count()==8];sec_dod=[x for x in C6 if x.bit_count()==12]
+    sec_oct=sorted(x for x in C6 if x.bit_count()==8);sec_dod=sorted(x for x in C6 if x.bit_count()==12);codewords=sorted(C6);cidx={x:i for i,x in enumerate(codewords)}
     assert orbit_sizes(active,K,lambda x,g:g[x])==[18]
     assert len({tuple(g[i] for i in active) for g in K})==2160
     assert orbit_sizes(sec_oct,K,act_word)==[45] and orbit_sizes(sec_dod,K,act_word)==[18]
-    assert len({tuple(sorted(act_word(x,g) for x in C6)) for g in K})==2160
-    code_orbits=orbit_sizes(list(C6),K,act_word);assert code_orbits==[1,18,45]
+    assert len({tuple(cidx[act_word(x,g)] for x in codewords) for g in K})==2160
+    code_orbits=orbit_sizes(codewords,K,act_word);assert code_orbits==[1,18,45]
     zero_image=induced_order(K,sorted(Z),lambda x,g:g[x]);assert zero_image==720
     kernel_zero=len(K)//zero_image;assert kernel_zero==3
     return {'repo_gens':repo_gens,'Hgens':Hgens,'Kgens':Kgens,'H':H,'K':K,'G24':Gset,'octads':octads,'C6':C6,'Z':Z,'active':active,'sextet':sextet,'transversal_orbit':orbZ}
 
 def main()->int:
-    d=build();C6=d['C6'];out={'pass':4633,'corrected_Pass4615':{'zero_coordinate_assignment':[21,20,19,18,22,17],'six_tetrads':[list(x) for x in d['sextet']],'stale_frozen_assignment_retracted':[21,22,17,18,20,19]},'M24_action':{'computed_order_from_orbit_stabilizer':244823040,'sextet_orbit':1771,'sextet_stabilizer_order':138240,'six_tetrad_image_order':720,'six_tetrad_kernel_order':192,'standard_structure':'2^6:3.S6'},'section_stabilizer':{'zero_transversal_orbit_inside_sextet':64,'order':2160,'zero_coordinate_image_order':720,'zero_coordinate_kernel_order':3,'active18':'transitive faithful, point stabilizer 120','section_octads45':'transitive faithful, stabilizer 48','section_codeword_orbits':[1,18,45]},'theorem':'The corrected Golay sextet has M24 stabilizer order 138240 with S6 tetrad image and kernel 192. Stabilizing the actual six-zero-coordinate transversal cuts this to a faithful order-2160 section group, transitive on the 18 active points and 45 section octads, with codeword orbits 1+18+45.','boundary':'Exact permutation/code theorem in the repository coordinate model. The paired cubic O^-(6,2) group is not identified as a subgroup of M24.'};OUT.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n');print(json.dumps(out,indent=2,sort_keys=True));return 0
+    d=build();out={'pass':4633,'corrected_Pass4615':{'zero_coordinate_assignment':[21,20,19,18,22,17],'six_tetrads':[list(x) for x in d['sextet']],'stale_frozen_assignment_retracted':[21,22,17,18,20,19]},'M24_action':{'computed_order_from_orbit_stabilizer':244823040,'sextet_orbit':1771,'sextet_stabilizer_order':138240,'six_tetrad_image_order':720,'six_tetrad_kernel_order':192,'standard_structure':'2^6:3.S6'},'section_stabilizer':{'zero_transversal_orbit_inside_sextet':64,'order':2160,'zero_coordinate_image_order':720,'zero_coordinate_kernel_order':3,'active18':'transitive faithful, point stabilizer 120','section_octads45':'transitive faithful, stabilizer 48','section_codeword_orbits':[1,18,45]},'theorem':'The corrected Golay sextet has M24 stabilizer order 138240 with S6 tetrad image and kernel 192. Stabilizing the actual six-zero-coordinate transversal cuts this to a faithful order-2160 section group, transitive on the 18 active points and 45 section octads, with codeword orbits 1+18+45.','boundary':'Exact permutation/code theorem in the repository coordinate model. The paired cubic O^-(6,2) group is not identified as a subgroup of M24.'};OUT.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n');print(json.dumps(out,indent=2,sort_keys=True));return 0
 if __name__=='__main__':raise SystemExit(main())
