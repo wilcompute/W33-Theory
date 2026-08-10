@@ -1,0 +1,144 @@
+{
+  "boundary": "isomorphism is decided by BLISS canonical form and is exact. The zoo is the quadrangles this repository can currently construct -- W(3,q) and its dual for q = 2,3,4,5 plus Q(5,2), H(3,4), Q(5,3) and H(3,9) where the builder is available -- and is not the complete list of generalised quadrangles at these parameters",
+  "conclusion": "parameter-equal quadrangles split both ways under canonical form, so equal SRG parameters license nothing about isomorphism -- the test Pass 4685 ran could not have detected the difference",
+  "different": 2,
+  "members": {
+    "H(3,4)": [
+      45,
+      12,
+      3,
+      3
+    ],
+    "H(3,9)": [
+      280,
+      36,
+      8,
+      4
+    ],
+    "Q(4,2)": [
+      15,
+      6,
+      1,
+      3
+    ],
+    "Q(4,3)": [
+      40,
+      12,
+      2,
+      4
+    ],
+    "Q(4,4)": [
+      85,
+      20,
+      3,
+      5
+    ],
+    "Q(4,5)": [
+      156,
+      30,
+      4,
+      6
+    ],
+    "Q(5,2)": [
+      27,
+      10,
+      1,
+      5
+    ],
+    "Q(5,3)": [
+      112,
+      30,
+      2,
+      10
+    ],
+    "W(3,2)": [
+      15,
+      6,
+      1,
+      3
+    ],
+    "W(3,3)": [
+      40,
+      12,
+      2,
+      4
+    ],
+    "W(3,4)": [
+      85,
+      20,
+      3,
+      5
+    ],
+    "W(3,5)": [
+      156,
+      30,
+      4,
+      6
+    ]
+  },
+  "pairs": [
+    {
+      "a": "Q(4,2)",
+      "b": "W(3,2)",
+      "isomorphic": true,
+      "params": [
+        15,
+        6,
+        1,
+        3
+      ]
+    },
+    {
+      "a": "Q(4,3)",
+      "b": "W(3,3)",
+      "isomorphic": false,
+      "params": [
+        40,
+        12,
+        2,
+        4
+      ]
+    },
+    {
+      "a": "Q(4,4)",
+      "b": "W(3,4)",
+      "isomorphic": true,
+      "params": [
+        85,
+        20,
+        3,
+        5
+      ]
+    },
+    {
+      "a": "Q(4,5)",
+      "b": "W(3,5)",
+      "isomorphic": false,
+      "params": [
+        156,
+        30,
+        4,
+        6
+      ]
+    }
+  ],
+  "parameter_groups": {
+    "(15, 6, 1, 3)": [
+      "Q(4,2)",
+      "W(3,2)"
+    ],
+    "(156, 30, 4, 6)": [
+      "Q(4,5)",
+      "W(3,5)"
+    ],
+    "(40, 12, 2, 4)": [
+      "Q(4,3)",
+      "W(3,3)"
+    ],
+    "(85, 20, 3, 5)": [
+      "Q(4,4)",
+      "W(3,4)"
+    ]
+  },
+  "same": 2
+}
