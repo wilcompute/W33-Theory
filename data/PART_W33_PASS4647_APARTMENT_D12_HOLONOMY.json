@@ -1,0 +1,8 @@
+{
+  "pass":4647,
+  "homogeneous_cover":{"group":"PSp(4,3)","group_order":25920,"apartments":1620,"selected_lines":270,"apartment_stabilizer_order":16,"selected_line_stabilizer_order":96,"fiber_size":6,"subgroup_index":6},
+  "local_monodromy":{"core_kernel_order":8,"image_order":12,"image_isomorphism":"D12","element_order_census":{"1":1,"2":7,"3":2,"6":2},"fixed_sheet_census":{"0":8,"2":3,"6":1}},
+  "flag_block_system":{"blocks":3,"sheets_per_block":2,"block_labels":"three singular points on the selected line","quotient_image":"S3","quotient_order":6,"quotient_element_orders":{"1":1,"2":3,"3":2},"kernel_in_D12":"central C2 half-turn","half_turn_action":"fixed-point-free; swaps the two apartment lifts above each selected point-line flag"},
+  "theorem":"The 1620-to-270 apartment map is the homogeneous six-sheet cover G/K -> G/H with |K|=16 and |H|=96. Its local monodromy is D12; the natural 3x2 flag block system quotients D12 to S3, and the kernel is the central half-turn exchanging the two lifts of every point-line flag.",
+  "boundary":"Finite cover monodromy/selector obstruction only; not an optical or dynamical holonomy."
+}
