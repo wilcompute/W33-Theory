@@ -1,0 +1,21 @@
+{
+  "PGSp_outer": {
+    "canonical_outer_stable_factor": true,
+    "cycle_type": "1+2",
+    "fixed_factor_inner_image_order": 25920,
+    "fixed_factor_outer_image_order": 51840,
+    "permutation_on_three_submodules": [0,2,1],
+    "unique_fixed_factor": 0
+  },
+  "PSp": {
+    "canonical_factor_under_PSp": false,
+    "commutant_dimension_F2": 4,
+    "commutant_elements": 16,
+    "commutant_units": 6,
+    "six_submodules": 3,
+    "unit_action_on_three_submodules": "all six permutations = S3"
+  },
+  "boundary": "The commutant S3 is an internal multiplicity-space symmetry. It is not identified with geometric D4 triality without a separate explicit intertwiner.",
+  "pass": 4594,
+  "theorem": "The three Pass4583 U6 factors form a projective line for the PSp commutant GL(2,2)=S3; the actual W33 outer similitude fixes exactly one factor and swaps the other two, canonically selecting a PGSp-stable U6 target."
+}
