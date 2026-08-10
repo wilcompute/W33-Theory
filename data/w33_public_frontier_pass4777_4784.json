@@ -1,0 +1,21 @@
+{
+  "passes": [4777,4778,4779,4780,4781,4782,4783,4784],
+  "title": "Matrix units, BLT minima, D4 triality and the SRG45 triangle router",
+  "standalone_page": "docs/residue-triangle-d4-blt-router.html",
+  "index_card": "analysis/PASS4777_4784_matrix_blt_d4_triangle_router_index_insert.html",
+  "materializer": "tools/integrate_pass4777_4784.py",
+  "manuscript_insert": "analysis/PASS4777_4784_matrix_blt_d4_triangle_router_insert.tex",
+  "certificates": [
+    "data/PART_W33_PASS4777_MATRIX_UNITS_OUTER.json",
+    "data/PART_W33_PASS4778_BLT_MINIMUM_ORBITS.json",
+    "data/PART_W33_PASS4779_RATIONAL_24D_LEECH_OBSTRUCTION.json",
+    "data/PART_W33_PASS4780_D4_CUBE_TRIALITY.json",
+    "data/PART_W33_PASS4781_HAMILTONIAN_COVERING_BOUNDS.json",
+    "data/PART_W33_PASS4782_4784_SRG45_TRIANGLE_K5_ROUTER.json"
+  ],
+  "boundaries": [
+    "Linear/Fisher BLT classification is prior art",
+    "Pass4779 is a rational orthogonal-form no-go, not a ban on all abstract 24D U4(2) representations",
+    "Pass4781 proves only 14 <= rho(H10) <= 16"
+  ]
+}
