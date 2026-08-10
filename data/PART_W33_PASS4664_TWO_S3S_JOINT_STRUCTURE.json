@@ -1,0 +1,30 @@
+{
+  "boundary": "Finite group/action theorem only; abstract S3 isomorphism is not used as an intertwiner and no physical family symmetry is inferred.",
+  "d4_sheet_S3": {
+    "normalizer_order": 155520,
+    "order3_location": "centralizer C3 outside PSp in (C3 x PSp):C2",
+    "order3_subgroup": "C3_sheet intersects PSp trivially",
+    "quotient_over_PSp": "S3",
+    "reflection": "W33 outer similitude coset"
+  },
+  "fiber_reading": "The packet S3 acts locally on three maximal partial spreads over one 45-object; the D4 sheet S3 acts globally on the three degree-36 spread sheets. Their standard 3-point permutation representations are abstractly isomorphic but the ambient actions are transverse.",
+  "joint_group": {
+    "C3_intersection_order": 1,
+    "C3s_commute": true,
+    "common_outer_reflection_inverts_both": true,
+    "generated_order": 18,
+    "generated_structure": "(C3 x C3):C2",
+    "rotation_order": 9,
+    "rotation_subgroup": "C3 x C3"
+  },
+  "packet_S3": {
+    "order3_location": "inside PSp support stabilizer",
+    "order3_subgroup": "C3_packet <= PSp",
+    "reflection": "outer PGSp coset element in support stabilizer"
+  },
+  "pass": 4664,
+  "separation": {
+    "reason": "C3_packet is nontrivial inside PSp, whereas C3_sheet centralizes all of PSp and intersects PSp trivially; no automorphism preserving the distinguished PSp subgroup can identify them.",
+    "same_ambient_S3": false
+  }
+}
