@@ -1,0 +1,30 @@
+{
+  "pass": 4642,
+  "incidence": {
+    "shape": [135,270],
+    "row_degree": 6,
+    "column_degree": 3,
+    "rank_Q": 120,
+    "rank_F2": 119,
+    "rank_F3": 120,
+    "rank_F5": 120,
+    "rank_F7": 120,
+    "rank_F11": 120,
+    "smith_nonzero_profile": {"1":119,"2":1},
+    "smith_zero_count": 15,
+    "cokernel": "Z^15 plus Z/2"
+  },
+  "rank_jump_explanation": "The Q-rank 120 versus F2-rank 119 jump is caused by exactly one Smith invariant 2.",
+  "PSp_coherent_configuration": {
+    "point_stabilizer_order": 192,
+    "rank": 9,
+    "subdegrees": [1,1,1,12,12,12,32,32,32],
+    "transpose_pairing": [0,2,1,4,3,5,6,7,8],
+    "noncommuting_unordered_orbital_pairs": 15,
+    "selected_12_regular_graph_is_one_symmetric_orbital": true
+  },
+  "corrected_selected_line_graph_spectrum": {"15":1,"9":15,"6":20,"3":60,"0":24,"-3":150},
+  "correction": "Pass4589 previously recorded -3 multiplicity 165. Exact singular-value accounting gives 150; multiplicities then sum to 270.",
+  "theorem": "The apartment-selected 135_6-270_3 incidence has Smith form 1^119,2^1,0^15. The single 2-torsion invariant exactly explains its one-dimensional binary rank drop, while the PSp point action yields a noncommutative rank-9 Schurian coherent configuration.",
+  "boundary": "Exact integral incidence and finite orbital algebra only."
+}
