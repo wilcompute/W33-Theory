@@ -1,0 +1,32 @@
+{
+  "apartment_to_singular_line": {
+    "apartment_lifts_per_point_line_flag": 2,
+    "apartments": 1620,
+    "apartments_per_selected_line": 6,
+    "selected_line_points": 3,
+    "selected_line_stabilizer_order": 96,
+    "selected_lines_through_each_singular_point": 6,
+    "selected_singular_lines": 270
+  },
+  "boundary": "The degree-27 orbit is deliberately left unnamed until a G-set identification is proved; no physical spinor interpretation is asserted.",
+  "half_spinor_PSp_orbits": [27, 36, 36, 36, 135],
+  "local_selector_test": {
+    "apartment_action": "transitive degree 6",
+    "apartment_lifts": 6,
+    "both_image_orders": 12,
+    "common_kernel_order": 8,
+    "equivariant_bijection": false,
+    "fixed_point_pair_profile": {"(0,1)": 16, "(0,3)": 16, "(0,4)": 32, "(2,2)": 24, "(6,6)": 8},
+    "generator_action_orbits": [1, 2, 3],
+    "maximal_singular_generators_containing_line": 6,
+    "obstruction": "different permutation characters"
+  },
+  "pass": 4588,
+  "selected_line_counts_inside_maximal_generators": {"0": 72, "10": 27, "15": 36, "6": 135},
+  "spread_bridge": {
+    "W33_spreads": 36,
+    "certificate": "each degree-36 representative stabilizer has order 720 and fixes exactly one W33 spread",
+    "degree36_half_spinor_orbits": 3
+  },
+  "theorem": "Apartments form a two-fold cover of the flags of a distinguished 135_6-270_3 singular-line geometry. Their six lifts over a selected line are not the six half-spinor generators as an H-set. One half-spinor family nevertheless contains three genuine PSp(4,3)-equivariant copies of the 36-spread carrier."
+}
