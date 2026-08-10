@@ -1,0 +1,74 @@
+name: W33 Passes 4648-4655 evidence
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass4648_dark_sheet_module.py'
+      - 'analysis/w33_pass4649_full_triality_group_and_intersections.py'
+      - 'analysis/w33_pass4650_global_d12_cover_factorization.py'
+      - 'analysis/w33_pass4651_selected_incidence_binary_code_critical_groups.py'
+      - 'analysis/w33_pass4652_weighted_holonet_routing_pareto.py'
+      - 'analysis/w33_pass4653_characteristic3_sheet_fourier_obstruction.py'
+      - 'analysis/w33_pass4654_triality_plane_w33_point_intertwiner.py'
+      - 'analysis/w33_pass4655_internal_schlafli_from_selected_code.py'
+      - 'data/PART_W33_PASS4648_*'
+      - 'data/PART_W33_PASS4649_*'
+      - 'data/PART_W33_PASS4650_*'
+      - 'data/PART_W33_PASS4651_*'
+      - 'data/PART_W33_PASS4652_*'
+      - 'data/PART_W33_PASS4653_*'
+      - 'data/PART_W33_PASS4654_*'
+      - 'data/PART_W33_PASS4655_*'
+      - 'tests/test_w33_pass4648_4655_dark_triality_code_routing.py'
+      - '.github/workflows/w33_pass4648_4655_dark_triality_code_routing.yml'
+  workflow_dispatch:
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install focused dependencies
+        run: python -m pip install --upgrade pip numpy sympy pytest
+      - name: Snapshot frozen certificates
+        run: |
+          mkdir -p /tmp/pass4648_4655
+          cp data/PART_W33_PASS4648_DARK_SHEET_MODULE.json /tmp/pass4648_4655/
+          cp data/PART_W33_PASS4649_FULL_TRIALITY_GROUP_INTERSECTIONS.json /tmp/pass4648_4655/
+          cp data/PART_W33_PASS4650_GLOBAL_D12_COVER_FACTORIZATION.json /tmp/pass4648_4655/
+          cp data/PART_W33_PASS4651_SELECTED_BINARY_CODE_CRITICAL_GROUPS.json /tmp/pass4648_4655/
+          cp data/PART_W33_PASS4652_WEIGHTED_HOLONET_ROUTING_PARETO.json /tmp/pass4648_4655/
+          cp data/PART_W33_PASS4653_CHARACTERISTIC3_SHEET_FOURIER_OBSTRUCTION.json /tmp/pass4648_4655/
+          cp data/PART_W33_PASS4654_TRIALITY_PLANE_W33_POINT_INTERTWINER.json /tmp/pass4648_4655/
+          cp data/PART_W33_PASS4655_INTERNAL_SCHLAEFLI_FROM_SELECTED_CODE.json /tmp/pass4648_4655/
+      - name: Regenerate exact witnesses
+        run: |
+          PYTHONPATH=analysis python analysis/w33_pass4648_dark_sheet_module.py
+          PYTHONPATH=analysis python analysis/w33_pass4649_full_triality_group_and_intersections.py
+          PYTHONPATH=analysis python analysis/w33_pass4650_global_d12_cover_factorization.py
+          PYTHONPATH=analysis python analysis/w33_pass4651_selected_incidence_binary_code_critical_groups.py
+          PYTHONPATH=analysis python analysis/w33_pass4652_weighted_holonet_routing_pareto.py
+          PYTHONPATH=analysis python analysis/w33_pass4653_characteristic3_sheet_fourier_obstruction.py
+          PYTHONPATH=analysis python analysis/w33_pass4654_triality_plane_w33_point_intertwiner.py
+          PYTHONPATH=analysis python analysis/w33_pass4655_internal_schlafli_from_selected_code.py
+      - name: Compare regenerated certificates semantically
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          root=pathlib.Path('data'); snap=pathlib.Path('/tmp/pass4648_4655')
+          names=[
+            'PART_W33_PASS4648_DARK_SHEET_MODULE.json',
+            'PART_W33_PASS4649_FULL_TRIALITY_GROUP_INTERSECTIONS.json',
+            'PART_W33_PASS4650_GLOBAL_D12_COVER_FACTORIZATION.json',
+            'PART_W33_PASS4651_SELECTED_BINARY_CODE_CRITICAL_GROUPS.json',
+            'PART_W33_PASS4652_WEIGHTED_HOLONET_ROUTING_PARETO.json',
+            'PART_W33_PASS4653_CHARACTERISTIC3_SHEET_FOURIER_OBSTRUCTION.json',
+            'PART_W33_PASS4654_TRIALITY_PLANE_W33_POINT_INTERTWINER.json',
+            'PART_W33_PASS4655_INTERNAL_SCHLAEFLI_FROM_SELECTED_CODE.json']
+          for n in names:
+              a=json.loads((root/n).read_text()); b=json.loads((snap/n).read_text())
+              assert a==b, n
+          PY
+      - name: Run focused regression
+        run: PYTHONPATH=analysis pytest -q tests/test_w33_pass4648_4655_dark_triality_code_routing.py
