@@ -1,0 +1,29 @@
+{
+  "boundary": "Finite incidence automorphism theorem. No external E6 Lie-group or physical symmetry is inferred.",
+  "full_automorphism_group": "PGSp(4,3)",
+  "full_automorphism_order": 51840,
+  "incidence_graph": {
+    "degrees_by_part": [8, 9],
+    "parts": [45, 40],
+    "side_swap_possible": false,
+    "vertices": 85
+  },
+  "intrinsic_reconstruction": {
+    "columns_to_point_graph": "off-diagonal column co-occurrence 3 reconstructs point-side W33",
+    "point_graph_to_lines": "the 40 maximal K4 cliques are exactly the W33 lines",
+    "rows": "the 45 distinct rows reconstruct the center-quad/E6 carrier by intersection 2, so their permutation is forced by the column permutation"
+  },
+  "lower_bound": {
+    "group": "PGSp(4,3)",
+    "order": 51840,
+    "reason": "Projective symplectic similitudes preserve W33 point incidence and the 45 center-quad/sentinel minimum supports, hence preserve T."
+  },
+  "pass": 4665,
+  "theorem": "The full automorphism group of the 85-vertex bipartite incidence graph defined by T is exactly PGSp(4,3). The incidence object therefore packages the E6/center-quad 45 together with both inequivalent W33 point/line carriers under their complete common automorphism group.",
+  "upper_bound": {
+    "Aut_W33": "PGSp(4,3)",
+    "field_automorphism_factor": 1,
+    "order": 51840,
+    "reason": "Every automorphism of T induces an automorphism of the reconstructed W(3,3) incidence geometry."
+  }
+}
