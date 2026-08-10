@@ -1,0 +1,18 @@
+{
+  "bounded_distance_decoder_radius": 1,
+  "boundary": "This is a bounded-distance algebraic decoder and a hardware-independent interaction coloring. It does not address noisy syndrome extraction, hook-error ordering, repeated measurement, thresholds, or a physical gate set.",
+  "check_families": 90,
+  "check_weight": 18,
+  "data_degree_combined_XZ": 6,
+  "interaction_layers": 18,
+  "interactions_per_layer": 90,
+  "pass": 4803,
+  "quantum_code": "[[270,182,4]]_3",
+  "schedule_lower_bound": "each weight-18 check needs 18 distinct one-interaction layers",
+  "schedule_optimal": true,
+  "schedule_sha256": "906f6bf9ffb1adde3f816440900d0f7eb6b6c54c097187550848d914e8a325e1",
+  "single_qutrit_nontrivial_Paulis": 2160,
+  "theorem": "The point-triangle CSS code has an exact lookup decoder for every nontrivial single-qutrit Pauli error, and its combined X/Z Tanner interactions admit an optimal 18-layer conflict-free schedule. Each layer services all 90 checks on 90 distinct data qutrits.",
+  "total_interactions": 1620,
+  "unique_single_qutrit_syndromes": 2160
+}
