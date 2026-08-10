@@ -1,0 +1,85 @@
+name: Passes 4745-4752 invariant bundle code capacity
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4745_invariant_h1_character.py'
+      - 'analysis/w33_pass4746_s3_connection_classification.py'
+      - 'analysis/w33_pass4747_router_spectral_representation.py'
+      - 'analysis/w33_pass4748_crossfiber_router_code.py'
+      - 'analysis/w33_pass4749_adversarial_router_capacity.py'
+      - 'analysis/w33_pass4750_residue_circuit_chain_complex.py'
+      - 'analysis/w33_pass4751_s3_fourier_voltage.py'
+      - 'analysis/w33_pass4752_deck_normalizer_twist_comparison.py'
+      - '.github/workflows/w33_pass4745_4752_invariant_bundle_code_capacity.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pass4745-4752-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install exact-analysis dependencies
+        run: python -m pip install --disable-pip-version-check numpy scipy networkx sympy
+      - name: Execute all eight passes and retain diagnostics
+        shell: bash
+        run: |
+          set +e
+          LOG=analysis/PASS4745_4752_RUN.log
+          STATUS=analysis/PASS4745_4752_RUN.status
+          : > "$LOG"
+          rc=0
+          for script in \
+            analysis/w33_pass4745_invariant_h1_character.py \
+            analysis/w33_pass4746_s3_connection_classification.py \
+            analysis/w33_pass4747_router_spectral_representation.py \
+            analysis/w33_pass4748_crossfiber_router_code.py \
+            analysis/w33_pass4749_adversarial_router_capacity.py \
+            analysis/w33_pass4750_residue_circuit_chain_complex.py \
+            analysis/w33_pass4751_s3_fourier_voltage.py \
+            analysis/w33_pass4752_deck_normalizer_twist_comparison.py
+          do
+            echo "===== $script =====" | tee -a "$LOG"
+            python "$script" 2>&1 | tee -a "$LOG"
+            here=${PIPESTATUS[0]}
+            echo "rc=$here" | tee -a "$LOG"
+            if [ "$here" -ne 0 ]; then rc=$here; break; fi
+          done
+          echo "$rc" > "$STATUS"
+          exit 0
+      - name: Commit execution evidence even on theorem failure
+        shell: bash
+        run: |
+          git config user.name 'w33-evidence-bot'
+          git config user.email 'w33-evidence-bot@users.noreply.github.com'
+          git add analysis/PASS4745_4752_RUN.log analysis/PASS4745_4752_RUN.status
+          for f in \
+            data/PART_W33_PASS4745_INVARIANT_H1_CHARACTER.json \
+            data/PART_W33_PASS4746_S3_CONNECTION_CLASSIFICATION.json \
+            data/PART_W33_PASS4747_ROUTER_SPECTRAL_REPRESENTATION.json \
+            data/PART_W33_PASS4748_CROSSFIBER_ROUTER_CODE.json \
+            data/PART_W33_PASS4749_ADVERSARIAL_ROUTER_CAPACITY.json \
+            data/PART_W33_PASS4750_RESIDUE_CIRCUIT_CHAIN_COMPLEX.json \
+            data/PART_W33_PASS4751_S3_FOURIER_VOLTAGE.json \
+            data/PART_W33_PASS4752_DECK_NORMALIZER_TWIST_COMPARISON.json
+          do
+            test -f "$f" && git add "$f"
+          done
+          if ! git diff --cached --quiet; then
+            git commit -m 'Materialize Passes 4745-4752 execution evidence'
+            git pull --rebase origin master
+            git push origin HEAD:master
+          fi
+      - name: Enforce execution result after evidence is preserved
+        shell: bash
+        run: |
+          rc=$(cat analysis/PASS4745_4752_RUN.status)
+          test "$rc" -eq 0
