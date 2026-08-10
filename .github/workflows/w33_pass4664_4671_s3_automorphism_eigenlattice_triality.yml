@@ -1,0 +1,65 @@
+name: W33 Passes 4664-4671 evidence
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass4664_two_s3s_joint_structure.py'
+      - 'analysis/w33_pass4665_full_automorphism_of_T.py'
+      - 'analysis/w33_pass4666_hermitian_two_adic_eigenlattice.py'
+      - 'analysis/w33_pass4667_selected_smith_bit_h10_head_socle.py'
+      - 'analysis/w33_pass4668_f4_moduli_to_triality_planes.py'
+      - 'analysis/w33_pass4669_oriented_f4_triality_double_cover.py'
+      - 'analysis/w33_pass4670_d4_lane_reconstructs_T_h10_css.py'
+      - 'analysis/w33_pass4671_local_f4_triality_s3_stabilizer.py'
+      - 'data/PART_W33_PASS4664_*'
+      - 'data/PART_W33_PASS4665_*'
+      - 'data/PART_W33_PASS4666_*'
+      - 'data/PART_W33_PASS4667_*'
+      - 'data/PART_W33_PASS4668_*'
+      - 'data/PART_W33_PASS4669_*'
+      - 'data/PART_W33_PASS4670_*'
+      - 'data/PART_W33_PASS4671_*'
+      - 'tests/test_w33_pass4664_4671_s3_automorphism_eigenlattice_triality.py'
+      - '.github/workflows/w33_pass4664_4671_s3_automorphism_eigenlattice_triality.yml'
+  workflow_dispatch:
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install focused test dependency
+        run: python -m pip install --upgrade pip pytest
+      - name: Snapshot frozen certificates
+        run: |
+          mkdir -p /tmp/pass4664_4671
+          cp data/PART_W33_PASS4664_TWO_S3S_JOINT_STRUCTURE.json /tmp/pass4664_4671/
+          cp data/PART_W33_PASS4665_FULL_AUTOMORPHISM_T.json /tmp/pass4664_4671/
+          cp data/PART_W33_PASS4666_HERMITIAN_TWO_ADIC_EIGENLATTICE.json /tmp/pass4664_4671/
+          cp data/PART_W33_PASS4667_SELECTED_SMITH_BIT_H10_HEAD_SOCLE.json /tmp/pass4664_4671/
+          cp data/PART_W33_PASS4668_F4_MODULI_TO_TRIALITY_PLANES.json /tmp/pass4664_4671/
+          cp data/PART_W33_PASS4669_ORIENTED_F4_TRIALITY_DOUBLE_COVER.json /tmp/pass4664_4671/
+          cp data/PART_W33_PASS4670_D4_LANE_RECONSTRUCTS_T_H10_CSS.json /tmp/pass4664_4671/
+          cp data/PART_W33_PASS4671_LOCAL_F4_TRIALITY_S3_STABILIZER.json /tmp/pass4664_4671/
+      - name: Regenerate exact witnesses
+        run: |
+          PYTHONPATH=analysis python analysis/w33_pass4664_two_s3s_joint_structure.py
+          PYTHONPATH=analysis python analysis/w33_pass4665_full_automorphism_of_T.py
+          PYTHONPATH=analysis python analysis/w33_pass4666_hermitian_two_adic_eigenlattice.py
+          PYTHONPATH=analysis python analysis/w33_pass4667_selected_smith_bit_h10_head_socle.py
+          PYTHONPATH=analysis python analysis/w33_pass4668_f4_moduli_to_triality_planes.py
+          PYTHONPATH=analysis python analysis/w33_pass4669_oriented_f4_triality_double_cover.py
+          PYTHONPATH=analysis python analysis/w33_pass4670_d4_lane_reconstructs_T_h10_css.py
+          PYTHONPATH=analysis python analysis/w33_pass4671_local_f4_triality_s3_stabilizer.py
+      - name: Compare regenerated certificates semantically
+        run: |
+          python - <<'PY'
+          import json,pathlib
+          root=pathlib.Path('data'); snap=pathlib.Path('/tmp/pass4664_4671')
+          names=[p.name for p in snap.glob('*.json')]
+          for n in names:
+              assert json.loads((root/n).read_text())==json.loads((snap/n).read_text()), n
+          PY
+      - name: Run focused regression
+        run: PYTHONPATH=analysis pytest -q tests/test_w33_pass4664_4671_s3_automorphism_eigenlattice_triality.py
