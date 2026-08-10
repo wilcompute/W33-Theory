@@ -1,0 +1,7 @@
+{
+  "pass": 4780,
+  "cube_stabilizer": {"order":192,"kernel":"C2^3","kernel_order":8,"six_residue_image":"S4 tetrahedron-edge action","image_order":24,"split_complement_order":24,"structure":"2^3:S4 = W(D4)"},
+  "triality_packet": {"cubes":3,"PSp_packet_stabilizer":576,"PSp_quotient":"C3","PGSp_packet_stabilizer":1152,"PGSp_quotient":"S3"},
+  "theorem": "The dependency cube stabilizer is literally W(D4). Its three-cube packet carries cyclic triality in PSp and full S3 triality after adjoining the PGSp outer coset.",
+  "boundary": "Exact finite permutation-group theorem."
+}
