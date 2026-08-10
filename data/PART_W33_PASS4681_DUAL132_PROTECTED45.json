@@ -1,0 +1,27 @@
+{
+  "pass": 4681,
+  "dual_weight132": {
+    "words": 45,
+    "complement_size": 3,
+    "complement_triples": 45,
+    "partition_135": "45 x 3",
+    "pairwise_complement_intersection": 0
+  },
+  "protected45_intertwiner": {
+    "literal_triple_equality_with_Pass4585_4624_singular_fiber_packets": true,
+    "PSp_orbit_size": 45,
+    "PSp_stabilizer_order": 576,
+    "PGSp_orbit_size": 45,
+    "PGSp_stabilizer_order": 1152
+  },
+  "incidence_with_dual_weight3": {
+    "selected_lines": 270,
+    "packet_intersection_per_selected_line": "three distinct packets",
+    "projected_triples": 270,
+    "packet_pair_multiplicity": 3,
+    "pair_graph": "SRG(45,12,3,3)",
+    "identification": "complement of protected SRG(45,32,22,24)"
+  },
+  "theorem": "The 45 weight-132 words of C^perp have disjoint 3-coordinate complements that are literally the protected singular-fiber packets. The dual minimum shell projects through those packets to SRG(45,12,3,3), giving a second code-internal realization of the protected/E6 45 carrier.",
+  "boundary": "Exact binary-code/hypergraph/G-set theorem only."
+}
