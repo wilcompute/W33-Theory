@@ -8,16 +8,16 @@ explicitly from the Pass4716 voltages and prove its polynomial
     X (X^2 - 36 I) = 0.
 
 The integral sum-zero basis is not orthonormal, so this block need not be
-symmetric in those coordinates; its spectrum is obtained with the general
-matrix eigensolver and cross-checked against the exact polynomial and the full
-135x135 symmetric lift. Together with the trivial 45x45 GQ block this gives the
-full selected135 spectrum. The regular 6-sheet S3 closure then splits as
-trivial + sign + two standard blocks, reproducing Pass4719 exactly.
+symmetric in those coordinates; it is self-adjoint for the natural Gram form.
+The source-target convention matters: if sig(u,v) maps a source sheet i to a
+target sheet j, the (u,v) adjacency block has its 1 in row i, column j, hence is
+the transpose of the usual column-action permutation matrix.  This orientation
+is cross-checked by the exact selected135 spectrum.
 
-This also tests the tempting idea that selected270's 1±sqrt(13) sector is the
-same S3 Fourier mechanism. It is not: no Fourier block here has factor
-x^2-2x-12. The radical belongs to the distinct multiplicity-two PSp(20)
-router sector isolated in Pass4747.
+Together with the trivial 45x45 GQ block this gives the full selected135
+spectrum. The regular 6-sheet S3 closure then splits as trivial + sign + two
+standard blocks, reproducing Pass4719 exactly. The selected270 1±sqrt(13)
+sector is tested separately and does not occur in these S3 Fourier blocks.
 """
 from __future__ import annotations
 import json
@@ -34,9 +34,7 @@ def perm_matrix3(p):
     return M
 
 def std_matrix(p):
-    # Integral standard sum-zero basis b1=(1,-1,0), b2=(0,1,-1).
     B=np.array([[1,0],[-1,1],[0,-1]],dtype=int);Y=perm_matrix3(p)@B
-    # Solve B C = Y using first and third coordinates: c1=Y0, c2=-Y2.
     C=np.vstack((Y[0,:],-Y[2,:])).astype(int)
     assert np.array_equal(B@C,Y)
     return C
@@ -44,8 +42,7 @@ def std_matrix(p):
 def spectrum_counter_symmetric(A):
     z=np.linalg.eigvalsh(A.astype(float));return Counter(round(float(x),8) for x in z)
 def spectrum_counter_general(A):
-    z=np.linalg.eigvals(A.astype(float));
-    assert max(abs(float(x.imag)) for x in z)<1e-7
+    z=np.linalg.eigvals(A.astype(float));assert max(abs(float(x.imag)) for x in z)<1e-7
     return Counter(round(float(x.real),8) for x in z)
 
 def main():
@@ -53,12 +50,15 @@ def main():
     A=np.zeros((n,n),dtype=int);S=np.zeros((2*n,2*n),dtype=int);L=np.zeros((3*n,3*n),dtype=int)
     for u,v in G.edges():
         A[u,v]=A[v,u]=1
-        P=perm_matrix3(sig[(u,v)]);L[3*u:3*u+3,3*v:3*v+3]=P;L[3*v:3*v+3,3*u:3*u+3]=P.T
+        P=perm_matrix3(sig[(u,v)])
+        # sig(u,v): source u coordinate -> target v coordinate.  Adjacency
+        # rows are source coordinates and columns are target coordinates.
+        L[3*u:3*u+3,3*v:3*v+3]=P.T
+        L[3*v:3*v+3,3*u:3*u+3]=P
         T=std_matrix(sig[(u,v)]);Ti=std_matrix(sig[(v,u)])
-        S[2*u:2*u+2,2*v:2*v+2]=T;S[2*v:2*v+2,2*u:2*u+2]=Ti
+        S[2*u:2*u+2,2*v:2*v+2]=Ti
+        S[2*v:2*v+2,2*u:2*u+2]=T
     assert np.array_equal(L,L.T)
-    # In the integral sum-zero basis, inverse group matrices are adjoint for the
-    # Gram form B^T B, not necessarily ordinary transposes.
     B=np.array([[1,0],[-1,1],[0,-1]],dtype=int);Q=B.T@B
     Qbig=np.kron(np.eye(45,dtype=int),Q)
     assert np.array_equal(S.T@Qbig,Qbig@S)
@@ -70,8 +70,8 @@ def main():
     assert base_spec==Counter({12.0:1,3.0:20,-3.0:24})
     assert std_spec==Counter({6.0:15,0.0:60,-6.0:15})
     assert lift_spec==base_spec+std_spec
+    assert lift_spec==Counter({12.0:1,6.0:15,3.0:20,0.0:60,-3.0:24,-6.0:15})
 
-    # Regular closure Fourier: trivial A, sign -A (Pass4719 parity gauge), two Std copies.
     regular=base_spec+Counter({-k:v for k,v in base_spec.items()})+Counter({k:2*v for k,v in std_spec.items()})
     expected=Counter({12.0:1,6.0:30,3.0:44,0.0:120,-3.0:44,-6.0:30,-12.0:1})
     assert regular==expected
@@ -79,6 +79,7 @@ def main():
     out={'pass':4751,
       'selected135_fourier':{'permutation_representation':'1 + Std_2','trivial_block_dimension':45,'standard_block_dimension':90,
         'integral_standard_basis_Gram':Q.tolist(),'standard_block_is_Gram_self_adjoint':True,
+        'source_target_orientation_checked':True,
         'trivial_block_polynomial':'(x-12)(x-3)(x+3)','standard_block_polynomial':'x(x^2-36)',
         'trivial_spectrum':dict(base_spec),'standard_spectrum':dict(std_spec),'full_spectrum':dict(lift_spec)},
       'regular_S3_closure':{'decomposition':'trivial + sign + 2 Std_2','spectrum':dict(regular),'matches_Pass4719':True},
