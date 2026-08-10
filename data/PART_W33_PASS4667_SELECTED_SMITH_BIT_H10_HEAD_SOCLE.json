@@ -1,0 +1,33 @@
+{
+  "Bockstein_connection": "Via Pass4630 H10 ~= Tor_2(coker T), the selected Z/2 defect has the unique nonzero PSp-equivariant injection into the ten Smith bits and the unique nonzero quotient back out.",
+  "H10_filtration": {
+    "chain": "0 < <j> < V9=ker(pi) < H10",
+    "composition_factors": "1|8|1",
+    "middle": "V8=V9/<j> irreducible 8D"
+  },
+  "boundary": "Module-level canonical maps from the exact PSp filtrations; no claim of a new support-level incidence map between the 135x270 and 45x40 matrices.",
+  "equivariant_maps": {
+    "Hom_PSp(H10,selected_bit)_dimension": 1,
+    "Hom_PSp(selected_bit,H10)_dimension": 1,
+    "composition_pi_after_i": 0,
+    "middle_V8_maps_to_or_from_bit": 0,
+    "unique_injection": "i(1)=j",
+    "unique_quotient": "pi:H10->F2 with ker(pi)=V9"
+  },
+  "nilpotent": {
+    "definition": "n=i o pi, so n(x)=pi(x) j",
+    "image": "<j>",
+    "interpretation": "the selected single Smith bit links the trivial head and socle of H10 but does not split or select the 8D middle factor",
+    "kernel": "V9",
+    "rank": 1,
+    "square_zero": true
+  },
+  "pass": 4667,
+  "selected_torsion": {
+    "F2_dimension": 1,
+    "PSp_module": "trivial",
+    "group": "Z/2",
+    "reason": "GL(1,2) is trivial"
+  },
+  "theorem": "The unique 2-torsion bit of the selected D4 incidence canonically matches the trivial head/socle species of H10. It determines the unique rank-one square-zero endomorphism n(x)=pi(x)j, while the protected V8 middle remains invisible to this one-bit defect."
+}
