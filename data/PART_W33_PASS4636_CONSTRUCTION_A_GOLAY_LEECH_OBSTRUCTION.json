@@ -1,0 +1,19 @@
+{
+  "Leech_obstruction": "Leech is rootless (minimum norm 4); these Construction-A lattices contain 48 norm-2 roots. A further neighbor/shift/holy-construction step is required.",
+  "boundary": "Exact code/glue/determinant/root obstruction. No direct C6-to-Leech isometry is claimed.",
+  "codes": {
+    "C6": {"dimension": 6, "weight_enumerator": {"0":1,"8":45,"12":18}},
+    "G24": {"dimension": 12, "weight_enumerator": {"0":1,"8":759,"12":2576,"16":759,"24":1}},
+    "quotient_G24_over_C6": 64
+  },
+  "construction_A": {
+    "definition": "(1/sqrt(2)){x in Z^24: x mod 2 in C}",
+    "det_L_C6": 4096,
+    "det_L_G24": 1,
+    "index_LG24_over_LC6": 64,
+    "norm2_roots_LC6": 48,
+    "norm2_roots_LG24": 48
+  },
+  "pass": 4636,
+  "theorem": "The paired-axis C6 lattice is an index-64 sublattice of the full Golay Construction-A lattice. Adding all 64 G24/C6 glue cosets makes the lattice unimodular but preserves 48 A1 coordinate roots, so the endpoint is the A1^24 Niemeier lattice rather than Leech."
+}
