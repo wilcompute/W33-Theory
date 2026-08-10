@@ -1,0 +1,9 @@
+{
+  "pass":4750,
+  "dependency_circuit_shell":{"vertices":270,"circuits":540,"circuit_word_span_rank":240,"linear_relations_among_540_circuit_words":300},
+  "cold_triangle_chain_complex":{"C2_dimension":540,"C1_dimension":1620,"C0_dimension":270,"rank_d2":540,"rank_d1":269,"d1_d2_zero":true,"H1_dimension":811,"triangle_boundaries_edge_disjoint":true},
+  "descent_no_go":{"linear_map_from_span_of_dependency_circuit_words_sending_each_word_to_its_triangle_boundary_exists":false,"reason":"the 540 residue circuit vectors have 300 independent linear relations, whereas the 540 edge-boundary images are linearly independent because their triangle supports partition the 1620 cold edges"},
+  "theorem":"The 540 minimum dependency circuits define an injective 2-boundary module inside the cold-router cycle space, yielding a canonical binary chain complex F2^540 -> F2^1620 -> F2^270 with H1 dimension 811. But this boundary assignment cannot descend to a linear map from the [270,240,3] dependency code itself: its 540 minimum words have a 300-dimensional relation space while the 540 triangle boundaries are independent.",
+  "execution":"independent reconstruction of all 270 four-line residues, all 1620 cold edges, all 540 six-line dependency triangles, exact GF(2) ranks and edge-partition verification",
+  "boundary":"Exact binary matroid/chain-complex theorem. The free circuit module is not identified with the [270,240,3] dependency code."
+}
