@@ -1,0 +1,8 @@
+{
+  "pass": 4781,
+  "H10": {"parameters":"[40,10,12]","covering_radius_lower_bound":14,"covering_radius_upper_bound":16,"radius14_witness":253626779097,"witness_weight":20,"witness_coset_distribution":{"14":64,"16":128,"18":192,"20":256,"22":192,"24":128,"26":64},"unresolved":"rho=14,15,or16"},
+  "syndrome_code": {"parameters":"[270,30,27]","dependency_triangles":540,"incidence_bound":180,"weight180_exact_transversal_feasible":false,"certified_weight_upper_bound":179,"radius14_witness_syndrome_weight":156},
+  "Hamiltonian": {"energy_formula":"E=-270+2s","certified_energy_ceiling":88},
+  "theorem": "The covering radius is rigorously bracketed 14<=rho<=16; independently, syndrome weight 180 is impossible and all finite commuting-check energies are <=88.",
+  "boundary": "No exact covering-radius equality is claimed."
+}
