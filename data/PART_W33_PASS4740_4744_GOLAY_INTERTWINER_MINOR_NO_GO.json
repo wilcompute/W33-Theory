@@ -1,27 +1,72 @@
 {
-  "passes": [4740, 4744],
   "4740_coordinate_intertwiner_no_go": {
-    "PSp_order": 25920,
-    "PSp_factorization": "2^6 * 3^4 * 5",
-    "M24_order": 244823040,
     "M24_factorization": "2^10 * 3^3 * 5 * 7 * 11 * 23",
+    "M24_order": 244823040,
+    "PSp_factorization": "2^6 * 3^4 * 5",
+    "PSp_order": 25920,
     "PSp_order_divides_M24": false,
     "conclusion": "No faithful PSp(4,3) action by permutations of the 24 extended-Golay coordinates.",
-    "scope_boundary": "Does not rule out non-coordinate embeddings into Conway/Leech symmetry.",
     "involution_fixed16_complement": {
+      "Golay_subcode_obstruction": "punctured H10 has weight 6 < extended Golay minimum 8",
       "orbit_size": 45,
-      "punctured_H10": {"dimension": 10, "minimum_distance": 6, "weight_enumerator": {"0": 1, "6": 16, "8": 87, "10": 240, "12": 336, "14": 240, "16": 87, "18": 16, "24": 1}},
-      "shortened_H10": {"dimension": 2, "minimum_distance": 16, "weight_enumerator": {"0": 1, "16": 3}},
+      "punctured_H10": {
+        "dimension": 10,
+        "minimum_distance": 6,
+        "weight_enumerator": {
+          "0": 1,
+          "10": 240,
+          "12": 336,
+          "14": 240,
+          "16": 87,
+          "18": 16,
+          "24": 1,
+          "6": 16,
+          "8": 87
+        }
+      },
       "punctured_dual": "[24,22,2]",
-      "Golay_subcode_obstruction": "punctured H10 has weight 6 < extended Golay minimum 8"
-    }
+      "shortened_H10": {
+        "dimension": 2,
+        "minimum_distance": 16,
+        "weight_enumerator": {
+          "0": 1,
+          "16": 3
+        }
+      }
+    },
+    "scope_boundary": "Does not rule out non-coordinate embeddings into Conway/Leech symmetry."
   },
   "4744_minor_census": {
+    "Golay_subcode_obstruction": "minimum 4 < 8",
     "H10_weight16_supports": 135,
-    "complement24_puncture_signature": {"dimension": 9, "minimum_distance": 4, "weight_enumerator": {"0": 1, "4": 4, "8": 55, "10": 64, "12": 264, "14": 64, "16": 55, "20": 4, "24": 1}},
-    "complement24_shorten_signature": {"dimension": 1, "minimum_distance": 24, "weight_enumerator": {"0": 1, "24": 1}},
     "all_135_same_signature": true,
-    "Golay_subcode_obstruction": "minimum 4 < 8"
+    "complement24_puncture_signature": {
+      "dimension": 9,
+      "minimum_distance": 4,
+      "weight_enumerator": {
+        "0": 1,
+        "10": 64,
+        "12": 264,
+        "14": 64,
+        "16": 55,
+        "20": 4,
+        "24": 1,
+        "4": 4,
+        "8": 55
+      }
+    },
+    "complement24_shorten_signature": {
+      "dimension": 1,
+      "minimum_distance": 24,
+      "weight_enumerator": {
+        "0": 1,
+        "24": 1
+      }
+    }
   },
-  "boundary": "The old W33/Golay parameter equalities remain arithmetic observations. These tests block the two canonical 24-coordinate code intertwiners and any faithful PSp coordinate-permutation action; they do not disprove a genuinely non-coordinate Leech-lattice representation."
+  "boundary": "The old W33/Golay parameter equalities remain arithmetic observations.  These tests block the two canonical 24-coordinate code intertwiners and any faithful PSp coordinate-permutation action; they do not disprove a genuinely non-coordinate Leech-lattice representation.",
+  "passes": [
+    4740,
+    4744
+  ]
 }

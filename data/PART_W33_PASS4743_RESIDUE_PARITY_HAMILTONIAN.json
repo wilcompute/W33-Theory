@@ -1,14 +1,39 @@
 {
-  "pass": 4743,
-  "hamiltonian": "H = - sum_{R in 270 residues} prod_{i in R} Z_i",
-  "checks": 270,
-  "check_weight": 4,
+  "boundary": "Exact commuting parity-check Hamiltonian and syndrome theorem; no microscopic implementation or thermodynamic-limit claim.",
   "check_rank": 30,
-  "ground_space": {"dimension_log2": 10, "degeneracy": 1024, "classical_Z_basis_code": "H10=[40,10,12]", "ground_energy": -270},
-  "syndrome_code": {"parameters": "[270,30,27]", "minimum_distance_MILP": 27, "complete_minimum_shell": 40, "minimum_words": "the forty line-incidence syndrome rows"},
-  "spectral_floor": {"gap": 54, "first_excited_degeneracy": 40960},
-  "defects": {"single_line_violated_terms": 27, "two_skew_lines_violated_terms": 48, "two_meeting_lines_violated_terms": 54},
-  "operator_redundancy": {"weight3_check_identities": 540, "identity": "S_a S_b S_c = I"},
-  "measurement_schedule": {"layers": 27, "terms_per_layer": 10, "support_disjoint_within_layer": true, "optimal": true},
-  "boundary": "Exact commuting parity-check Hamiltonian and syndrome theorem; no microscopic implementation or thermodynamic-limit claim."
+  "check_weight": 4,
+  "checks": 270,
+  "defects": {
+    "single_line_violated_terms": 27,
+    "two_meeting_lines_violated_terms": 54,
+    "two_skew_lines_violated_terms": 48
+  },
+  "ground_space": {
+    "classical_Z_basis_code": "H10=[40,10,12]",
+    "degeneracy": 1024,
+    "dimension_log2": 10,
+    "ground_energy": -270
+  },
+  "hamiltonian": "H = - sum_{R in 270 residues} prod_{i in R} Z_i",
+  "measurement_schedule": {
+    "layers": 27,
+    "optimal": true,
+    "support_disjoint_within_layer": true,
+    "terms_per_layer": 10
+  },
+  "operator_redundancy": {
+    "identity": "S_a S_b S_c = I",
+    "weight3_check_identities": 540
+  },
+  "pass": 4743,
+  "spectral_floor": {
+    "first_excited_degeneracy": 40960,
+    "gap": 54
+  },
+  "syndrome_code": {
+    "complete_minimum_shell": 40,
+    "minimum_distance_MILP": 27,
+    "minimum_words": "the forty line-incidence syndrome rows",
+    "parameters": "[270,30,27]"
+  }
 }
