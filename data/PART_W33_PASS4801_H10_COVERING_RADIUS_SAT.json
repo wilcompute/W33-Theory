@@ -1,0 +1,41 @@
+{
+  "boundary": "Exact finite certificate. A distance-15 coset would have a weight-15 leader. Coordinate transitivity fixes one selected coordinate; the 648-element stabilizer of that coordinate reduces the six possible neighborhood-intersection cases to 25 subset orbits. Exhaustive cardinality propagation over all 25 representatives found no feasible leader. The repository also contains an independent PySAT producer encoding the same leader constraints directly.",
+  "code": "H10=[40,10,12]",
+  "decision": "UNSAT",
+  "exact_covering_radius": 14,
+  "neighborhood_intersection_values": [1,2,3,4,5,6],
+  "neighbor_subset_orbit_counts": {
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 6,
+    "5": 6,
+    "6": 7
+  },
+  "orbit_representatives_checked": 25,
+  "point_stabilizer_order": 648,
+  "previous_certified_bracket": [14,15],
+  "previous_distance14_witness": 253626779097,
+  "search_nodes_by_neighbor_intersection": {
+    "1": 13359,
+    "2": 25216,
+    "3": 24485,
+    "4": 36122,
+    "5": 24082,
+    "6": 15749
+  },
+  "search_nodes_total": 139013,
+  "symmetry": "PSp(4,3) coordinate transitivity; stabilizer of coordinate 0 has order 648",
+  "theorem": "The exact covering radius of H10 is rho(H10)=14. There is no weight-15 coset leader; the Pass4781/4794 distance-14 witness is therefore optimal.",
+  "weight15_leader_exists": false,
+  "weight_enumerator": {
+    "0": 1,
+    "12": 40,
+    "16": 135,
+    "20": 672,
+    "24": 135,
+    "28": 40,
+    "40": 1
+  },
+  "pass": 4801
+}
