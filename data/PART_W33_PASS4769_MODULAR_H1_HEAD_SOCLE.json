@@ -1,0 +1,30 @@
+{
+  "pass": 4769,
+  "module": {"field": "F2", "dimension": 5671},
+  "PSp": {
+    "fixed_dimension_trivial_socle": 4,
+    "coinvariant_dimension_trivial_head": 1,
+    "augmentation_dimension": 5670,
+    "fixed_space_inside_augmentation_dimension": 4,
+    "all_fixed_vectors_lie_in_augmentation": true
+  },
+  "PGSp": {
+    "fixed_dimension_trivial_socle": 4,
+    "coinvariant_dimension_trivial_head": 1,
+    "augmentation_dimension": 5670,
+    "fixed_space_inside_augmentation_dimension": 4,
+    "PSp_fixed_space_equals_PGSp_fixed_space": true
+  },
+  "deck": {
+    "tree_gauge_weight": 2296,
+    "nonzero": true,
+    "PSp_fixed": true,
+    "PGSp_fixed": true,
+    "lies_in_augmentation": true,
+    "splits_as_trivial_direct_summand_under_PSp": false,
+    "splits_as_trivial_direct_summand_under_PGSp": false
+  },
+  "execution": "independent exact spanning-tree reconstruction of the 810-vertex valency-16 orbital, 5671 cotree coordinates, generator action matrices represented as Python integer bit rows, GF(2) rank/nullspace computation, reconstruction of the 1620-apartment deck cochain, and augmentation membership test",
+  "theorem": "H^1(Gamma;F2) has a four-dimensional PSp- and PGSp-fixed socle but only a one-dimensional trivial head. All four fixed vectors, including the apartment deck class, lie inside the 5670-dimensional augmentation subspace sum_g(g-1)H^1. Hence no invariant trivial line splits off as a direct summand; the deck line is part of a genuinely nonsplit modular extension.",
+  "boundary": "Exact trivial-head/trivial-socle and nonsplitting data. This does not claim the complete 5671-dimensional Loewy series or all modular simple composition factors."
+}
