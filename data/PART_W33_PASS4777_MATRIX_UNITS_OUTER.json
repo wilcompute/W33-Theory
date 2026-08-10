@@ -1,0 +1,17 @@
+{
+  "pass": 4777,
+  "matrix_block": {
+    "central_rank": 40,
+    "minimal_idempotent_ranks": [20, 20],
+    "offdiagonal_normalization": "e12=e11*A_cold*e22; e21=(25/324)e22*A_cold*e11",
+    "relations": "e_ij e_kl = delta_jk e_il",
+    "wedderburn_factor": "M2(Q)"
+  },
+  "outer_action": {
+    "orbital_permutation": [0,1,2,3,4,5,6,7,9,8,10,11],
+    "swapped_orbitals": [8,9],
+    "matrix_units_fixed_pointwise": true
+  },
+  "theorem": "The unique noncommutative residue orbital factor has literal rational matrix units, and PGSp/PSp fixes that M2(Q) factor pointwise while swapping orbitals 8 and 9.",
+  "boundary": "Exact rational orbital-algebra statement."
+}
