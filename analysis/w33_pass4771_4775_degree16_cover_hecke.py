@@ -89,7 +89,6 @@ def main():
     K={g for g in G if compose(g,hroot)==compose(hroot,g)};assert len(K)==48 and K<H
     deckel=next(iter(H-K))
 
-    # Enumerate right cosets gK; left G acts by x:gK -> (xg)K.
     elem_to_coset={};reps=[]
     for g in sorted(G):
         if g in elem_to_coset:continue
@@ -97,7 +96,7 @@ def main():
         for x in C:elem_to_coset[x]=idx
     assert len(reps)==540 and len(elem_to_coset)==25920
     base_of=[act(0,g) for g in reps]
-    assert Counter(base_of.values())==Counter({i:2 for i in range(270)})
+    assert Counter(base_of)==Counter({i:2 for i in range(270)})
     deck=[elem_to_coset[compose(g,deckel)] for g in reps]
     assert all(deck[deck[i]]==i and deck[i]!=i and base_of[deck[i]]==base_of[i] for i in range(540))
 
@@ -119,9 +118,7 @@ def main():
             candidates.append((oi,seed,baseE,CG,diam))
     good=[x for x in candidates if x[4]==4]
     assert good
-    # Frozen Pass4752 gives a single descended homogeneous cover invariant class;
-    # if both sheet seeds generate the same edge set they are the same candidate.
-    uniq={frozenset(x[3].edges()):x for x in good}
+    uniq={frozenset(tuple(sorted(e)) for e in x[3].edges()):x for x in good}
     assert len(uniq)==1
     oi,seed,baseE,CG,diam=next(iter(uniq.values()))
     BG=nx.Graph();BG.add_nodes_from(range(270));BG.add_edges_from(baseE)
@@ -133,7 +130,6 @@ def main():
     sspec=Counter({k:v for k,v in sspec.items() if v})
     btri=sum(nx.triangles(BG).values())//3;ctri=sum(nx.triangles(CG).values())//3
 
-    # Ordinary character decomposition of base, cover and signed sheet sector.
     cd,sizes,chars,labels,cmap=character_table(G,gens)
     def cov_act(i,g):return elem_to_coset[compose(g,reps[i])]
     pcb=[];pcc=[]
@@ -161,7 +157,6 @@ def main():
       'boundary':'Exact finite homogeneous graph/representation theorem. The signed sheet sector is a finite induced representation, not a physical gauge field.'}
     OUT1.write_text(json.dumps(out1,indent=2,sort_keys=True)+'\n')
 
-    # Pass4775: rebuild the orbital multiplication tensor and explicit M2(Q) representation.
     H0=list(H);unseen=set(range(270));orbs2=[]
     while unseen:
         x=min(unseen);O=sorted({act(x,h) for h in H0});orbs2.append(O);unseen-=set(O)
@@ -187,12 +182,11 @@ def main():
     A11=[Fraction(0)]*12;A11[11]=1
     F20=[x/Fraction(5) for x in mul(E40,[A11[i]+2*E40[i] for i in range(12)])]
     assert mul(F20,F20)==F20
-    e=F20
-    basis=[e]
+    e=F20;basis=[e]
     for j in range(12):
         Aj=[Fraction(int(i==j)) for i in range(12)];v=mul(Aj,e)
-        if sp.Matrix([[sp.Rational(x.numerator,x.denominator) for x in q] for q in basis+[v]]).rank()>len(basis):
-            basis.append(v);break
+        M=sp.Matrix([[sp.Rational(x.numerator,x.denominator) for x in q] for q in basis+[v]])
+        if M.rank()>len(basis):basis.append(v);break
     assert len(basis)==2
     B=sp.Matrix.hstack(*[sp.Matrix([sp.Rational(x.numerator,x.denominator) for x in v]) for v in basis])
     mats=[]
@@ -201,7 +195,7 @@ def main():
         for b in basis:
             y=sp.Matrix([sp.Rational(x.numerator,x.denominator) for x in mul(Ai,b)])
             sol=B.gauss_jordan_solve(y)[0];colsM.append(sol)
-        M=sp.Matrix.hstack(*colsM);mats.append(M)
+        mats.append(sp.Matrix.hstack(*colsM))
     for i in range(12):
         for j in range(12):
             lhs=mats[i]*mats[j];rhs=sp.zeros(2)
