@@ -1,0 +1,34 @@
+{
+  "boundary": "q = 2 and q = 4 are settled by ENUMERATING the full automorphism group of the Levi graph, so the absence of a polarity at q = 4 is exhaustive, not a failed search. q = 8 is NOT computed here -- its Levi graph has 1,170 vertices and the group is far too large for this method. The identification of the absolute-point set with the Suzuki-Tits ovoid and of its stabiliser with Sz(q) is CITED classical theory used to interpret the count, not derived here; what is computed is the count and the existence split",
+  "rows": [
+    {
+      "absolute_points": 5,
+      "agrees": true,
+      "aut_order": 1440,
+      "dualities": 720,
+      "points": 15,
+      "polarities": 36,
+      "polarity_exists": true,
+      "predicted": true,
+      "q": 2,
+      "q2_plus_1": 5
+    },
+    {
+      "absolute_points": null,
+      "agrees": true,
+      "aut_order": 3916800,
+      "dualities": 1958400,
+      "points": 85,
+      "polarities": 0,
+      "polarity_exists": false,
+      "predicted": false,
+      "q": 4,
+      "q2_plus_1": 17
+    }
+  ],
+  "rule_polarity": "q an odd power of 2 (Tits)",
+  "rule_self_duality": "q even",
+  "split_matches_odd_power_of_two": true,
+  "suzuki_connection": "the absolute points of the polarity form the Suzuki-Tits ovoid of q^2+1 points, stabilised by Sz(q) of order q^2(q^2+1)(q-1); the polarity is the square root of the special isogeny of B2 = C2 in characteristic 2, which is also how the Suzuki groups are defined",
+  "why_finer": "self-duality asks whether a duality exists; polarity asks whether an involutory one does. q = 4 is self-dual with no polarity, so the even family splits and Pass 4774's rule is not the finest statement"
+}
