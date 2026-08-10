@@ -1,0 +1,80 @@
+\subsection*{The $270$ involution residues are the complete minimum shell of $H_{10}^{\perp}$}
+\addcontentsline{toc}{subsection}{The 270 involution residues are the complete minimum shell of H10 dual}
+
+\paragraph{Pass 4725: the residue span is the adjacency-kernel code.}
+Let $A_*$ be the W33 line-intersection adjacency matrix over $\mathbb F_2$ and
+let $K_R$ be the span of the $270$ four-line residues of Passes~4721--4724.
+Every residue mask $r$ satisfies
+\[
+ A_*r=0.
+\]
+The exact ranks are
+\[
+ \operatorname{rank}_{2}A_*=10,
+ \qquad
+ \dim K_R=30.
+\]
+Hence inclusion plus dimension gives the canonical equality
+\[
+ \boxed{K_R=\ker_{\mathbb F_2}(A_*)=(\operatorname{im}_{\mathbb F_2}A_*)^\perp.}
+\]
+Exhausting all subsets of the forty line coordinates through weight four gives
+\[
+ A_1=A_2=A_3=0,
+ \qquad
+ \boxed{A_4=270},
+\]
+and the $270$ weight-four words are exactly the four-line fixed sets of the
+inner involution class.  Therefore
+\[
+ \boxed{K_R=[40,30,4].}
+\]
+
+\paragraph{Pass 4726: the involution orbit is the complete minimum parity-check shell of $H_{10}$.}
+The protected code of Pass~4536 is
+\[
+ H_{10}=\operatorname{im}_{\mathbb F_2}(A_*),
+ \qquad [40,10,12].
+\]
+Since $A_*$ is symmetric, Pass~4725 gives
+\[
+ \boxed{K_R=H_{10}^{\perp}.}
+\]
+Consequently the $270$ involution residues are not merely codewords of the dual:
+they are its complete minimum shell, and they reconstruct the protected code by
+orthogonality,
+\[
+ \boxed{
+ H_{10}=
+ \{x\in\mathbb F_2^{40}:\langle r,x\rangle=0
+   \text{ for every one of the }270\text{ residue checks }r\}.
+ }
+\]
+Enumerating the $2^{10}$ words of $H_{10}$ gives
+\[
+ W_{H_{10}}(z)=1+40z^{12}+135z^{16}+672z^{20}
+ +135z^{24}+40z^{28}+z^{40}.
+\]
+The binary MacWilliams transform then gives the complete dual enumerator
+\[
+\begin{aligned}
+W_{K_R}(z)={}&1+270z^4+6720z^6+152685z^8+1651392z^{10}
++10921000z^{12}+45288000z^{14}\\
+&+122873490z^{16}+221227200z^{18}+269500308z^{20}
++221227200z^{22}+122873490z^{24}\\
+&+45288000z^{26}+10921000z^{28}+1651392z^{30}
++152685z^{32}+6720z^{34}+270z^{36}+z^{40}.
+\end{aligned}
+\]
+The all-one word lies in $K_R$, accounting for the paired weight-$4$ and
+weight-$36$ shells.
+
+\begin{quote}\small
+\textbf{Evidence boundary.}
+The code equality is proved by direct annihilation and rank, while completeness
+of the minimum shell is verified by exhaustive weights $1$--$4$.  The full
+$2^{30}$ dual need not be enumerated: its exact weight enumerator follows from
+the verified $2^{10}$ protected code via MacWilliams.  The result is binary
+coding and finite W33 incidence; no physical interpretation is inferred from
+code duality.
+\end{quote}
