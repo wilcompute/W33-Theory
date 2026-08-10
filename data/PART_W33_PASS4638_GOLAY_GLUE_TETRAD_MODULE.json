@@ -1,0 +1,9 @@
+{
+  "boundary": "The isomorphism is for the section stabilizer K. It is not an M24-equivariant splitting of G24, and the two full-rank intertwiners show a residual one-bit ambiguity rather than a unique coordinate identification.",
+  "glue_quotient": {"code_quotient":"G24/C6","dimension":6,"elements":64,"induced_group_order":720,"kernel_order":3},
+  "intertwiner_space": {"dimension":2,"full_rank_isomorphisms":2,"ranks_of_three_nonzero_maps":[1,6,6]},
+  "pass": 4638,
+  "section_group_order": 2160,
+  "tetrad_module": {"dimension":6,"image":"S6","induced_group_order":720,"kernel_order":3},
+  "theorem": "The six-dimensional Golay glue quotient G24/C6 is K-equivariantly isomorphic to the binary permutation module on the six sextet tetrads. Thus the 64 Construction-A glue cosets carry the sextet tetrad permutation geometry."
+}
