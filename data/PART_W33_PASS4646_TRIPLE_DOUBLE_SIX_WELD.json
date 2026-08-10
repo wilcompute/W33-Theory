@@ -1,0 +1,9 @@
+{
+  "pass":4646,
+  "natural_relation":"For degree-27 generator X and degree-36 generator Y, incidence iff |X intersect Y|=1 in protected V8.",
+  "per_sheet":{"shape":[27,36],"row_sum":16,"column_sum":12,"rank_Q":21,"pair_intersection_profile":{"1":432,"4":540},"RRt":"10 I27 + 2 A27 + 6 J27","RtR":"6 I36 - 2 A36 + 6 J36"},
+  "classical_match":"Exact match to Passes4545-4549 Schlaefli-line/double-six incidence identities.",
+  "three_sheet_collapse":{"canonical_chart":"index each sheet by its unique PSp-equivariant map to the 36 W33 spreads","R1_equals_R2_equals_R3":true,"stacked_matrix":"[R R R]","stacked_shape":[27,108],"stacked_rank_Q":21,"sheet_difference_kernel_dimension":72,"total_kernel_dimension":87,"sheet_symmetry":"S3"},
+  "theorem":"The 27-orbit and each of the three degree-36 spread copies reproduce the exact classical cubic-line/double-six incidence carrier. In the canonical spread chart the three matrices are literally equal, so only the symmetric sheet mode couples to the 27-line carrier and the two sheet-difference modes are dark.",
+  "boundary":"Finite incidence/module statement; the sheet S3 is not a physical generation assignment."
+}
