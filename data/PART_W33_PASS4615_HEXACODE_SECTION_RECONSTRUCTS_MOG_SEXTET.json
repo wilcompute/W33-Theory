@@ -1,9 +1,28 @@
 {
   "boundary": "Coordinate-explicit code/design theorem; no O^-(6,2) subgroup-of-M24 claim.",
   "canonical_renumbering_from_collision_alias": 4607,
-  "hexacode_section": {"active_points":18,"pair_frequency_distribution":{"8":135,"10":18},"parameters":"[18,6,8] zero-padded inside G24","point_frequency_in_45_octads":20,"weight8_octads":45,"zero_coordinates":[17,18,19,20,21,22]},
+  "hexacode_section": {
+    "active_points": 18,
+    "pair_frequency_distribution": {"8": 135, "10": 18},
+    "parameters": "[18,6,8] zero-padded inside G24",
+    "point_frequency_in_45_octads": 20,
+    "weight8_octads": 45,
+    "zero_coordinates": [17,18,19,20,21,22]
+  },
   "pass": 4615,
-  "recovered_inner_columns": {"graph":"6 disjoint K3","high_pair_frequency":10,"triples":[[0,2,7],[1,6,16],[3,4,13],[5,8,23],[9,11,14],[10,12,15]]},
-  "sextet_completion": {"all_pairwise_unions_are_Golay_octads":true,"matchings_tested":720,"pairwise_tetrad_unions_checked":15,"six_tetrads":[[0,2,7,21],[1,6,16,22],[3,4,13,17],[5,8,18,23],[9,11,14,20],[10,12,15,19]],"valid_matchings":1,"zero_coordinate_assignment":[21,22,17,18,20,19]},
-  "theorem": "The exact 6D Golay/hexacode section recovered from the paired cubic axes reconstructs six inner-code triples, and ambient G24 uniquely matches its six zero coordinates to complete them to a Golay sextet."
+  "recovered_inner_columns": {
+    "graph": "6 disjoint K3",
+    "high_pair_frequency": 10,
+    "triples": [[0,2,7],[1,6,16],[3,4,13],[5,8,23],[9,11,14],[10,12,15]]
+  },
+  "sextet_completion": {
+    "all_pairwise_unions_are_Golay_octads": true,
+    "matchings_tested": 720,
+    "pairwise_tetrad_unions_checked": 15,
+    "six_tetrads": [[0,2,7,21],[1,6,16,20],[3,4,13,19],[5,8,18,23],[9,11,14,22],[10,12,15,17]],
+    "valid_matchings": 1,
+    "zero_coordinate_assignment": [21,20,19,18,22,17]
+  },
+  "theorem": "The exact 6D Golay/hexacode section recovered from the paired cubic axes reconstructs six inner-code triples, and ambient G24 uniquely matches its six zero coordinates to complete them to a Golay sextet.",
+  "repair_note": "Pass4633 re-executed the 720-match search and found that the previously frozen assignment was stale and failed 12 of the 15 Golay-octad pair-union checks. This file now matches the executable Pass4615 source and Pass4633 M24 stabilizer certificate."
 }
