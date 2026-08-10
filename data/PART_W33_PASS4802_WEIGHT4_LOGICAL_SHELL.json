@@ -1,0 +1,27 @@
+{
+  "K5_count": 27,
+  "all_weight4_words_are_single_K5_local": true,
+  "boundary": "The 5+10+15 split is the explicit geometric S5 split of the displayed K5 model. Identification of the local [10,6,4]_3 code with punctured ternary Golay is handled separately in Pass4806, not inferred from parameters alone.",
+  "local_kernel": "[10,6,4]_3",
+  "local_weight_enumerator": {
+    "0": 1,
+    "4": 60,
+    "5": 144,
+    "6": 60,
+    "7": 240,
+    "8": 180,
+    "9": 20,
+    "10": 24
+  },
+  "nonzero_scalar_weight4_logicals": 1620,
+  "pass": 4802,
+  "per_K5_projective_minimum_words": 30,
+  "projective_shell_split": {
+    "five_points_2plus2": 405,
+    "five_points_3plus1": 270,
+    "four_points_all_same": 135
+  },
+  "projective_weight4_logicals": 810,
+  "quantum_code": "[[270,182,4]]_3",
+  "theorem": "Every minimum logical operator of the intrinsic qutrit CSS code is supported inside exactly one GQ(4,2) K5 fiber. The 810 projective weight-4 words split 135+270+405, i.e. 5+10+15 per K5; including scalar multiples gives 1620 nonzero weight-4 dual words."
+}
