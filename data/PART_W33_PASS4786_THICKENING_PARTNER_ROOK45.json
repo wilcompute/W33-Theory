@@ -1,0 +1,10 @@
+{
+  "boundary":"Exact finite set/graph equality. The partner involution is defined on support-12 minima; no dynamical meaning is inferred.",
+  "implementation_alias":4762,
+  "minimum_shell":{"edge_image_weight":28,"pairwise_edge_overlap_distribution":{"0":375840,"1":259200,"2":239760,"6":77760,"7":272160,"8":810,"12":64800,"16":14580,"21":6480},"thickenings":1620},
+  "partner_involution":{"fixed_points":0,"pairs":810,"partner_apartments_disjoint":true,"partner_overlap":8},
+  "pass":4786,
+  "protected45_comparison":{"literal_set_equality":true,"old_apartment_fibers":135,"old_protected_supports":45,"target":"Pass4585/4616 protected E6-tritangent/center-quad 45"},
+  "rook_quotient":{"distinct_16_line_unions":45,"induced_graph":"SRG(16,6,2,2)=L_2(4) rook graph","maximal_K4_per_union":8,"partner_pairs_per_union":18},
+  "theorem":"The support-12 minimum shell has a canonical overlap-8 partner involution. Its 810 pairs collapse 18-to-1 onto 45 sixteen-line rook grids, and these 45 supports are literally the previously protected E6/center-quad 45."
+}
