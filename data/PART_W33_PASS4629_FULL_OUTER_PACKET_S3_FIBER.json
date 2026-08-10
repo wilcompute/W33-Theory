@@ -1,0 +1,8 @@
+{
+  "pass": 4629,
+  "fiber": {"base_objects":45,"fiber_size":3,"fiber_objects":"maximal size-8 partial spreads"},
+  "PSp": {"support_stabilizer_order":576,"kernel_H_order":192,"quotient":"C3=A3","induced_permutations":3},
+  "PGSp": {"support_stabilizer_order":1152,"kernel_H_order":192,"quotient":"S3","induced_permutations":6,"PSp_image_is_even_subgroup":true},
+  "theorem": "The three-valued maximal-partial-spread lift of each protected/E6 45-object is a genuine S3 fiber under full PGSp: 1 -> H_192 -> Htilde_1152 -> S3 -> 1. Its PSp restriction is the C3=A3 deck rotation and the outer coset supplies transpositions.",
+  "boundary": "Finite stabilizer/fiber theorem. The S3 is an actual induced permutation action on the three W33 partial spreads, not a physical family symmetry."
+}
