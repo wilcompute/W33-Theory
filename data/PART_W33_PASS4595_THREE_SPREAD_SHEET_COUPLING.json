@@ -1,0 +1,23 @@
+{
+  "pass": 4595,
+  "PSp_group_order": 25920,
+  "spread_carrier": {
+    "W33_spreads": 36,
+    "half_spinor_degree36_orbits": 3,
+    "representative_stabilizer_order": 720,
+    "fixed_spreads_per_representative_stabilizer": 1,
+    "equivariant_bijections": 3,
+    "bijection_sizes": [36,36,36],
+    "bijections_are_unique_from_stabilizer_fixed_point": true
+  },
+  "PGSp_outer_involution": {
+    "order_extension": 51840,
+    "sheet_action": "1 + 2",
+    "description": "one degree-36 sheet is fixed and the other two are swapped",
+    "commutes_with_spread_bijections": true
+  },
+  "centralizer_boundary": "Because a degree-36 representative stabilizer fixes exactly one spread, the corresponding transitive PSp G-set has no nontrivial G-equivariant relabeling fixing the chosen stabilizer chart.",
+  "theorem": "The three degree-36 half-spinor PSp-orbits are three genuine copies of the same 36-spread G-set. PGSp realizes a concrete transposition on the three-copy fiber, but not a transitive S3 action by itself.",
+  "verification": "Independently recomputed in this run from the 270 maximal singular generators, exact W33 spread enumeration and the PSp/PGSp actions.",
+  "boundary": "This is finite G-set transport. A full ambient S3 on the three sheets requires an additional order-three automorphism and is not inferred here from the copy count."
+}
