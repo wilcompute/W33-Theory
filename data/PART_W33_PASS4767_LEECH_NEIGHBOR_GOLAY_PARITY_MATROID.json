@@ -1,0 +1,26 @@
+{
+  "pass": 4767,
+  "neighbors": {
+    "count": 24,
+    "sextet_stabilizer_order": 138240,
+    "one_neighbor_stabilizer_order": 5760,
+    "point_suborbits": [1,3,20],
+    "transitive": true
+  },
+  "parity_characters": {
+    "count": 24,
+    "span_dimension": 12,
+    "relation_space_dimension": 12,
+    "relation_space": "extended binary Golay G24",
+    "minimum_relation_weight": 8,
+    "minimum_relations": 759,
+    "all_subsets_size_at_most_7_independent": true
+  },
+  "sextet_relations": {
+    "tetrads": 6,
+    "two_tetrad_unions": 15,
+    "all_are_octad_relations": true
+  },
+  "theorem": "The 24 Leech-neighbor parity characters have exactly the extended Golay code as their binary relation space. Their first dependencies are the 759 Golay octads; the corrected sextet supplies 15 explicit two-tetrad octad relations.",
+  "boundary": "Exact Construction-A/M24 lattice-character theorem. The 24 neighbors are a transitive sextet-stabilizer G-set; no physical state interpretation is inferred."
+}
