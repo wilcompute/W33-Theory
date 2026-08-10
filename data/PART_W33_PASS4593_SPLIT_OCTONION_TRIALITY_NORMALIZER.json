@@ -1,0 +1,51 @@
+{
+  "pass": 4593,
+  "explicit_triality": {
+    "model": "split octonions over F2 in Zorn-vector-matrix coordinates",
+    "quadratic_norm": "N(a,b,u,v)=ab+u dot v",
+    "norm_multiplicative_exhaustive_pairs": 65536,
+    "nonzero_singular_vectors": 135,
+    "left_annihilators": 135,
+    "right_annihilators": 135,
+    "annihilator_size": 16,
+    "all_annihilators_totally_singular": true,
+    "two_annihilator_families_exhaust_270_maximal_singular_4_spaces": true,
+    "W33_hyperbolic_transport": {
+      "basis_size": 8,
+      "quotient_classes": 256,
+      "canonical_form": "q=c0*c1+c2*c3+c4*c5+c6*c7",
+      "left_family_matches_one_W33_half_spinor_family": 135,
+      "right_family_matches_other_W33_half_spinor_family": 135
+    },
+    "type_cycle": "P(x) -> LAnn(x) -> RAnn(x) -> P(x)",
+    "order": 3,
+    "incidence_failures": {
+      "point_left_to_left_right": 0,
+      "point_right_to_left_point": 0,
+      "left_right_to_right_point": 0
+    },
+    "cross_edges_per_type_pair": 2025
+  },
+  "PSp_type_preserving_normalizer": {
+    "PSp_order": 25920,
+    "singular_point_centralizer_maps": 3,
+    "singular_point_centralizer_orders": [1,3,3],
+    "transitive_half_spinor_centralizer_maps": 3,
+    "transitive_half_spinor_centralizer_orders": [1,3,3],
+    "degree27_centralizer_maps": 1,
+    "three_degree36_sheet_permutations_tested": 6,
+    "full_building_incidence_preserving_centralizer_combinations": 3,
+    "centralizer": "C3",
+    "nontrivial_C3_action": "cycles the three degree-36 spread sheets while acting equivariantly on the 135-point and transitive 135-generator carriers and fixing the 27-orbit pointwise",
+    "PGSp_involution_order": 2,
+    "PGSp_sheet_action": "fix one 36-sheet, swap the other two",
+    "conjugation_law": "s c s^{-1}=c^{-1}",
+    "generated_normalizer_structure": "(3 x PSp(4,3)):2",
+    "generated_normalizer_order": 155520,
+    "normalizer_quotient_order": 6,
+    "normalizer_quotient": "S3"
+  },
+  "external_cross_check": "GAP Character Table Library lists (3 x U4(2)):2, order 155520, as maximal subgroups 10/11/12 of O8+(2); U4(2) is isomorphic to PSp(4,3).",
+  "theorem": "The W33-derived plus-type V8 admits an explicit split-octonion order-three triality cycling its three D4 outer node types. Independently, the type-preserving normalizer of the embedded PSp(4,3) is realized as (3 x PSp(4,3)):2: the central C3 is the unique incidence-preserving PSp-centralizer that cycles the three 36-spread sheets, and the PGSp involution inverts it.",
+  "boundary": "The type-cycling triality automorphism is distinct from the type-preserving PSp normalizer. No physical spinor, generation, or particle interpretation is inferred."
+}
