@@ -1,0 +1,14 @@
+{
+  "block_size5_possible": false,
+  "boundary": "Finite G-set obstruction. It says nothing about symmetry-breaking maps or maps with auxiliary state/input.",
+  "compatibility": "Pass4583 v,w -> v wedge w -> U6 survives because it is a two-input map through a larger module, not a unary map.",
+  "cubic_U6_orbits": [1,27,36],
+  "group": "PSp(4,3)",
+  "group_order": 25920,
+  "pass": 4604,
+  "proof_summary": ["120 cannot map transitively to 27 or36 because fiber sizes are nonintegral","135->36 is nonintegral; 135->27 would require a block of size5","actual 135-point stabilizer suborbits admit no block-size5 union","27/36 cannot map nontrivially onto the larger 120/135 V8 orbits"],
+  "protected_V8_orbits": [1,135,120],
+  "singular135_stabilizer_order": 192,
+  "singular135_stabilizer_suborbits": [1,1,1,12,12,12,32,32,32],
+  "theorem": "Every unary PSp(4,3)-equivariant set map V8->U6 and U6->V8 is zero; hence there is no nonzero unary Boolean polynomial map at any degree."
+}
