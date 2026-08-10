@@ -1,0 +1,28 @@
+{
+  "pass": 4594,
+  "incidence": {
+    "shape": [135, 270],
+    "row_degree": 6,
+    "column_degree": 3,
+    "rank_Q": 120,
+    "rank_F2": 119,
+    "rank_F3": 120,
+    "rank_F5": 120,
+    "rank_F7": 120,
+    "rank_F11": 120,
+    "smith_nonzero_profile": {"1": 119, "2": 1},
+    "smith_zero_count": 15,
+    "cokernel": "Z^15 plus Z/2"
+  },
+  "rank_jump_explanation": "The entire Q-rank 120 versus F2-rank 119 jump is one and only one Smith invariant equal to 2; there is no hidden higher 2-primary multiplicity.",
+  "PSp_schurian_coherent_configuration": {
+    "point_stabilizer_order": 192,
+    "rank": 9,
+    "subdegrees": [1,1,1,12,12,12,32,32,32],
+    "transpose_pairing": [0,2,1,4,3,5,6,7,8],
+    "noncommuting_unordered_orbital_pairs": 15,
+    "selected_graph_is_one_symmetric_degree12_orbital": true
+  },
+  "boundary": "Exact integral incidence and PSp(4,3) orbital algebra only. Code minimum distances beyond the displayed row generators are not asserted here.",
+  "verification": "Independently recomputed in this run from GF(3)^4 and exact Smith normal form over Z."
+}
