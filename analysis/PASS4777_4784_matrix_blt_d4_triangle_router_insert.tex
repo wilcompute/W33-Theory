@@ -1,0 +1,68 @@
+\subsection*{Passes 4777--4784: matrix units, BLT minima, $D_4$ triality, and the 45-point triangle router}
+\addcontentsline{toc}{subsection}{Passes 4777--4784: matrix units, BLT minima, D4 triality, and triangle router}
+
+\paragraph{Pass 4777: literal matrix units in the unique noncommutative block.}
+Let $E_{40}$ be the rank-$40$ central idempotent of the $270$-residue orbital algebra and let $A_{\rm hot},A_{\rm cold}$ denote the degree-$3$ and degree-$12$ orbital elements.  With
+\[
+ e_{11}=\frac15E_{40}(A_{\rm hot}+2E_{40}),\qquad e_{22}=E_{40}-e_{11},
+\]
+\[
+ e_{12}=e_{11}A_{\rm cold}e_{22},\qquad e_{21}=\frac{25}{324}e_{22}A_{\rm cold}e_{11},
+\]
+exact multiplication gives $e_{ij}e_{k\ell}=\delta_{jk}e_{i\ell}$.  These are rational matrix units for the $M_2(\mathbb Q)$ factor of Pass~4753.  The outer $\mathrm{PGSp}/\mathrm{PSp}$ involution fixes all four matrix units and swaps only the paired orbital relations $8\leftrightarrow9$.
+
+\paragraph{Pass 4778: minimum words are BLT-sets, and $q=5$ has two orbits.}
+Equality in the odd-$q$ distance theorem is precisely the BLT condition: $q+1$ pairwise-skew lines such that every external $W(3,q)$ line meets zero or two selected lines.  At $q=3$ all $270$ minima are planar.  At $q=5$ the complete minimum shell has two $\mathrm{PSp}(4,5)$ orbits,
+\[
+ \boxed{6500+13000=19500},
+\]
+with stabilizers $720$ and $360$ and Pluecker span ranks $3$ and $5$.  A MILP excluding both orbits is infeasible.  These are the classical Linear and Fisher/Fi BLT classes; the BLT naming and small-order classification are prior art.
+
+\paragraph{Pass 4779: rational square-class firewall against Leech.}
+The $45$-vector quotient has Gram matrix $G_{45}=15I-5A_{45}+J$, rank $24$, and
+\[
+ \det G_{45}=2^{10}3^{10}5^{23}.
+\]
+Hence its determinant square class over $\mathbb Q$ is $5$.  Rational basis changes multiply determinant by a square, while rational rescaling in dimension $24$ contributes a $24$th power, also a square.  Since the Leech lattice is unimodular with square class $1$, no lattice commensurable with this rational orthogonal constituent can be rationally isometric to Leech, even after rational scaling.  This is a quadratic-form obstruction, not a denial of other abstract $24$-dimensional representations of $U_4(2)$.
+
+\paragraph{Pass 4780: the dependency-cube stabilizer is $W(D_4)$ with literal triality.}
+The stabilizer of one dependency cube has order $192$, kernel $C_2^3$ on its six residue vertices, and quotient $S_4$ in the six-edge action of a tetrahedron.  An order-$24$ complement is explicit, hence
+\[
+ \boxed{H_{\rm cube}\cong 2^3\!:\!S_4=W(D_4).}
+\]
+It fixes a canonical packet of three cubes.  The packet stabilizer has order $576$ in $\mathrm{PSp}(4,3)$ and quotient $C_3$ over $W(D_4)$; adjoining the outer coset gives order $1152$ and quotient $S_3$.  Thus the three-cube packet carries literal $D_4$ triality.
+
+\paragraph{Pass 4781: exact landscape bounds without overclaiming the radius.}
+The explicit H10 coset represented by $253626779097$ has minimum distance $14$ and weight distribution
+\[
+ 64z^{14}+128z^{16}+192z^{18}+256z^{20}+192z^{22}+128z^{24}+64z^{26}.
+\]
+Orthogonal-array strength three and complement symmetry exclude coset minimum at least $17$, so
+\[
+ \boxed{14\le\rho(H_{10})\le16}.
+\]
+The exact value $14,15,$ or $16$ remains open here.  For the $[270,30,27]$ syndrome code, the $540$ dependency triangles imply weight at most $180$; equality would require a $90$-point exact transversal meeting every dependency triangle once, and an exact binary MILP proves this infeasible.  Hence syndrome weight is at most $179$, giving the finite parity Hamiltonian energy ceiling $-270+2(179)=88$.
+
+\paragraph{Pass 4782: the $270$ residues are the $270$ triangles of the $45$-point quotient.}
+The three-cube triality packets form $45$ quotient vertices.  The selected-$135$ graph projects three-to-one on edges to
+\[
+ \operatorname{SRG}(45,12,3,3).
+\]
+Each residue belongs to three cubes lying in three distinct packets, and those three quotient vertices form a triangle.  The resulting $270$ triangles are distinct and exhaust all triangles of the quotient:
+\[
+ \boxed{\{\text{involution residues}\}\cong\{\text{triangles of }\operatorname{SRG}(45,12,3,3)\}.}
+\]
+
+\paragraph{Pass 4783: Petersen fibers are the triangle geometry of the $27$ maximal $K_5$'s.}
+The quotient has exactly $27$ maximal cliques, all $K_5$, and every quotient triangle lies in exactly one of them.  Each $K_5$ contains ten triangles.  Joining two when they intersect in one quotient vertex gives a Petersen graph.  Across all $27$ cliques these are exactly the $405$ hot router edges.
+
+\paragraph{Pass 4784: the outer involution is a triangle-chirality reversal.}
+The neighborhood of every quotient vertex is $3K_4$.  In the triangle model, shared-edge pairs form the degree-$6$ orbital $5$; pairs sharing exactly one quotient vertex split into orbitals $1,8,9,11$.  Orbital $1$ is cold, orbital $11$ is hot, and $8,9$ are paired directed relations of degree $12$.  The outer involution fixes the shared-edge, cold, and hot relations and swaps precisely
+\[
+ \boxed{8\longleftrightarrow9}.
+\]
+Thus its simplest nontrivial router action is a reversal of this paired triangle chirality, not an action on the $M_2(\mathbb Q)$ multiplicity space.
+
+\begin{quote}\small
+\textbf{Evidence boundary.} All finite claims above have executable reconstruction scripts and frozen JSON certificates.  The Linear/Fisher BLT classification is prior art; Pass~4779 is a rational quadratic-form no-go only; and Pass~4781 deliberately records the unresolved covering-radius trichotomy rather than promoting a radius-$14$ witness to an equality.
+\end{quote}
