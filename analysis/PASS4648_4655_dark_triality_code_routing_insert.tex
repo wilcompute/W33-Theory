@@ -1,0 +1,163 @@
+% Passes 4648--4655: dark sheet module, full D4 triality closure, global D12 cover,
+% selected-code reconstruction, and weighted routing Pareto frontier.
+\subsection{Triality closure, dark sheet modules, and internal Schlaefli reconstruction}
+\label{subsec:pass4648-4655}
+
+The three degree-$36$ half-spinor sheets of Pass~4643 become literally identical
+copies of the same W33 spread carrier in the canonical spread chart.  Writing
+$R\in\{0,1\}^{27\times36}$ for the Schlaefli-line/double-six incidence map, the
+three-sheet coupling is therefore
+\[
+  \mathcal R=[R\;R\;R].
+\]
+Its sheet-difference kernel is not merely a $72$-dimensional count.  Over
+characteristic zero it is exactly
+\[
+  \mathrm{Std}_2(S_3)\otimes \mathbb Q[36],
+\]
+and since the spread permutation module restricts to $PSp(4,3)$ as
+$1\oplus20\oplus15$, the dark sector restricts as
+\[
+  2(1\oplus20\oplus15).
+\]
+The remaining bright kernel is the $15$ killed by $R$, so
+\[
+  \ker\mathcal R\downarrow_{PSp(4,3)}
+  \cong 1^2\oplus20^2\oplus15^3,
+  \qquad \dim\ker\mathcal R=87.
+\]
+On the dark factor a sheet $3$-cycle has minimal polynomial $x^2+x+1$; over
+$\mathbb C$ this is $36_\omega\oplus36_{\omega^2}$.  Characteristic three is
+exceptional: the natural sheet module has the nonsplit filtration
+\[
+  0<T\subset W\subset \mathbb F_3^3,
+  \qquad T\cong1,\quad W/T\cong\mathrm{sgn},\quad \mathbb F_3^3/W\cong1,
+\]
+because $(1,1,1)\in W=\ker(x_1+x_2+x_3)$.  Thus the rational bright/dark
+Fourier projectors $J/3$ and $I-J/3$ do not descend to characteristic three.
+This is a modular representation obstruction, not a physical generation or
+phase statement.
+
+\paragraph{Full finite $D_4$ triality closure.}
+Transporting the W33-derived plus-type $V_8$ to the split-octonion Zorn model
+produces an explicit order-three triality
+\[
+  P(x)\longmapsto L\!\operatorname{Ann}(x)
+  \longmapsto R\!\operatorname{Ann}(x)
+  \longmapsto P(x).
+\]
+The three triality-conjugate embedded copies of $PSp(4,3)$ generate the
+full type-preserving group
+\[
+  \Omega_8^+(2),\qquad |\Omega_8^+(2)|=174182400.
+\]
+Adjoining the order-three triality gives order $522547200$, and adjoining
+split-octonion conjugation, which inverts triality, gives
+\[
+  \Omega_8^+(2):S_3,\qquad |\Omega_8^+(2):S_3|=1045094400.
+\]
+Pairwise triality-conjugate $PSp(4,3)$ copies intersect in order $216$; all
+three intersect in an $S_3$ of order $6$.
+
+The order-$216$ pairwise intersection fixes pointwise the three nonzero vectors
+of one anisotropic $\mathbb F_2$ two-space.  Its $PSp(4,3)$ orbit consists of
+$40$ pairwise disjoint anisotropic two-spaces partitioning all $120$
+nonsingular vectors as $40\times3$.  Two such planes have either $3$ or $9$
+polar-orthogonal cross-pairs; total cross-orthogonality gives exactly
+\[
+  \operatorname{SRG}(40,12,2,4).
+\]
+An action-level stabilizer test decides which W33 carrier this is: the base
+plane stabilizer has order $648$, fixes exactly one W33 point and no W33 line,
+and the map $gP_0\mapsto gp_0$ is a well-defined equivariant bijection.  Hence
+this triality-intersection construction reconstructs the W33 \emph{point}
+carrier, preserving the odd-$q$ point/line inequivalence.
+
+\paragraph{Global apartment-cover factorization.}
+Let $K$ be an apartment stabilizer, $H$ its selected-line stabilizer, and $C$
+the core of $K$ in $H$.  The exact subgroup orders are
+\[
+  |C|=8<|K|=16<|N_H(K)|=32<|H|=96.
+\]
+Since $H/C\cong D_{12}$ and $K/C$ is a reflection, its normalizer in $D_{12}$
+is $V_4$.  Therefore the six-sheet apartment cover factors globally as
+\[
+  1620\ \text{apartments}
+  \xrightarrow[\text{deck }C_2]{2:1}
+  810\ \text{selected point--line flags}
+  \xrightarrow[\text{monodromy }S_3]{3:1}
+  270\ \text{selected lines}.
+\]
+The central half-turn is a genuine global deck involution of the first stage.
+No nonzero cohomology class is asserted without first specifying a connected
+base graph or complex.
+
+\paragraph{The selected incidence geometry contains its own spread and cubic-surface carriers.}
+For the selected $135_6$--$270_3$ incidence matrix $N$, the binary left relation
+code is exactly
+\[
+  C=\ker_{\mathbb F_2}(N^T)=[135,16,30]_2.
+\]
+Its full $2^{16}$-word census has exactly $36$ minimum words.  Every pair of
+minimum supports meets in $6$ coordinates, each of the $135$ coordinates lies
+in $8$ minimum supports, and a minimum-word stabilizer has order $720$ and fixes
+exactly one W33 spread.  Hence the $36$ minimum words are equivariantly the W33
+spread carrier.
+
+Now compare the $27$-orbit of maximal singular generators with these $36$
+minimum supports.  Removing zero, each generator has $15$ singular points and
+each minimum support has $30$.  Exhaustively,
+\[
+  |G\cap c|\in\{0,6\},
+  \qquad 0^{432},\;6^{540}.
+\]
+Declare incidence when $|G\cap c|=0$.  The resulting
+$27\times36$ matrix has row degree $16$, column degree $12$, rational rank
+$21$, and satisfies
+\[
+ RR^T=10I+2A_{27}+6J,
+ \qquad
+ R^TR=6I-2A_{36}+6J,
+\]
+\[
+ 3A_{27}R+RA_{36}=20J,
+\]
+where
+\[
+ A_{27}=\operatorname{SRG}(27,10,1,5),
+ \qquad
+ A_{36}=\operatorname{SRG}(36,15,6,6).
+\]
+Thus the selected geometry internally reconstructs the complete
+Schlaefli-line/double-six incidence carrier from its own maximal singular
+objects and binary code, without importing classical labels.
+
+The point and line graph critical-group orders are additionally
+\[
+ |K_{135}|=2^{150}3^{166}5^{23},
+ \qquad
+ |K_{270}|=2^{284}3^{436}5^{23},
+\]
+with $(2,3,5)$-ranks $(62,74,23)$ and $(164,164,23)$ respectively.
+
+\paragraph{Weighted routing is a Pareto frontier.}
+For a common per-hop power transmission $0<\eta<1$, the exact distance-shell
+profiles give the strict mean destination-delivery hierarchy
+\[
+  W33>135\text{-router}>270\text{-router}>160\text{-flag router}.
+\]
+Conversely, the $270$-router has strictly larger aggregate delivered-destination
+score than each of the other three for every $0<\eta\le1$.  Therefore no
+architecture is a scalar winner before a workload objective is specified:
+W33 is the compact loss/latency optimum per destination, whereas the
+$270$-router is the aggregate-address-throughput/connectivity extreme.  The
+component-loss examples used in the associated executable witness deliberately
+mix published component platforms and are sensitivity anchors only, not a
+measured integrated Holonet stack.
+
+\paragraph{Evidence firewall.}
+Passes~4648--4655 are finite group, module, incidence, coding, critical-group,
+cover, and symbolic routing theorems with executable witnesses.  The words
+``triality'', ``octonion'', ``Schlaefli'', ``spread'', and ``Holonet'' here do
+not by themselves identify particles, generations, optical phases, or hardware
+performance.
