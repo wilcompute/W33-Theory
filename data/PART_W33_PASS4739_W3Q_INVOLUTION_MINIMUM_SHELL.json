@@ -1,0 +1,10 @@
+{
+  "pass": 4739,
+  "cases": {
+    "2": {"lines": 15, "binary_adjacency_rank": 14, "kernel_dimension": 1, "exact_kernel_minimum": 15, "minimum_witness_pairwise_skew": false},
+    "3": {"lines": 40, "binary_adjacency_rank": 10, "kernel_dimension": 30, "elliptic_fixed_lines": 4, "elliptic_mask_in_kernel": true, "elliptic_fixed_lines_pairwise_skew": true, "split_fixed_lines": 16, "split_mask_in_kernel": true, "split_formula_matches_(q+1)^2": true, "exact_kernel_minimum": 4, "minimum_witness_pairwise_skew": true},
+    "5": {"lines": 156, "binary_adjacency_rank": 26, "kernel_dimension": 130, "elliptic_fixed_lines": 8, "elliptic_mask_in_kernel": true, "elliptic_fixed_lines_pairwise_skew": false, "split_fixed_lines": 36, "split_mask_in_kernel": true, "split_formula_matches_(q+1)^2": true, "exact_kernel_minimum": 6, "minimum_witness_pairwise_skew": true},
+    "7": {"lines": 400, "binary_adjacency_rank": 50, "kernel_dimension": 350, "elliptic_fixed_lines": 8, "elliptic_mask_in_kernel": true, "elliptic_fixed_lines_pairwise_skew": true, "split_fixed_lines": 64, "split_mask_in_kernel": true, "split_formula_matches_(q+1)^2": true, "exact_kernel_minimum": "not claimed", "certified_upper_bound": 8}
+  },
+  "theorem_boundary": "The q=3 minimum-shell=involution-shell identification is exceptional as stated: q=5 has exact d=6 while the canonical elliptic projective involution fixes 8 lines. The odd-q adjacency ranks tested are q^2+1, but no new all-q rank theorem is claimed here."
+}
