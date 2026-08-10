@@ -1,0 +1,143 @@
+% Passes 4664--4671: transverse S3 actions, full automorphism of T,
+% Hermitian 2-adic eigenlattice frontier, Smith-bit head/socle probe,
+% and F4/triality moduli closure.
+\section{Passes 4664--4671: transverse triality symmetries and the integral protected incidence}
+\label{sec:pass4664-4671}
+
+\paragraph{4664: the two three-sheet symmetries are transverse, not identical.}
+The $S_3$ acting on the three maximal-partial-spread lifts over one protected
+45-object and the $S_3$ acting on the three global degree-36 D4 spread sheets
+have different ambient order-three directions.  The packet rotation
+$C_3^{\rm pkt}$ lies inside $\mathrm{PSp}(4,3)$, while the sheet rotation
+$C_3^{\rm sh}$ is the type-preserving centralizer $C_3$ outside the distinguished
+$\mathrm{PSp}(4,3)$.  Hence they cannot be identified by an automorphism preserving
+that subgroup.  They commute and intersect trivially.  A common outer reflection
+inverts both, giving the joint finite symmetry
+\[
+ (C_3^{\rm pkt}\times C_3^{\rm sh}){:}C_2,
+ \qquad |\cdot|=18.
+\]
+Their abstract three-point permutation representations are isomorphic, but their
+ambient actions are transverse.
+
+\paragraph{4665: the full automorphism group of the $45\times40$ incidence.}
+Let $T$ be the center-quad/sentinel incidence of Pass~4625.  Its two bipartite
+parts have sizes $45,40$ and degrees $8,9$, so they cannot be interchanged.
+Column co-occurrence intrinsically reconstructs the point-side W33 graph, whose
+40 maximal $K_4$ cliques reconstruct the W33 lines and therefore the full
+$W(3,3)$ incidence geometry.  Thus every automorphism of $T$ injects into
+$\operatorname{Aut}(W(3,3))$.  Conversely projective symplectic similitudes
+preserve both W33 and the complete 45-row center-quad/sentinel shell.  Since
+$\mathbf F_3$ has no nontrivial field automorphism,
+\[
+ \boxed{\operatorname{Aut}(T)=\mathrm{PGSp}(4,3),\qquad |\operatorname{Aut}(T)|=51840.}
+\]
+Thus one 85-vertex bipartite incidence packages the E6/center-quad 45 and both
+inequivalent W33 point/line carriers under their complete common automorphism group.
+
+\paragraph{4666: the Hermitian binary-rank problem is a 2-adic eigenlattice problem.}
+For $Q^-(5,q)=GQ(q,q^2)$ let $N$ be the integral point-line incidence matrix,
+$L=\operatorname{im}_{\mathbf Z}N$, and $K=\ker_{\mathbf Z}N^T$.  The kernel $K$
+is primitive and
+\[
+ NN^T=(q^2+1)I+A_{\rm point},
+ \qquad
+ K=\ker_{\mathbf Z}(NN^T),
+\]
+so $K$ is exactly the integral $-(q^2+1)$ eigenlattice of the point graph.
+Since $L_{\mathbf Q}=K_{\mathbf Q}^{\perp}$,
+\[
+ L_{\rm sat}=(L\otimes\mathbf Q)\cap\mathbf Z^v=K_{\mathbf Z}^{\perp}.
+\]
+Therefore the all-odd-$q$ binary rank conjecture is precisely
+\[
+ \boxed{L\otimes\mathbf Z_2=K_{\mathbf Z}^{\perp}\otimes\mathbf Z_2.}
+\]
+Equivalently the finite saturation quotient $K^{\perp}/L$ has no 2-primary part,
+or every nonzero Smith factor of $N$ is odd.  The exact $q=3,5,7$ anchors satisfy
+this equality.  The general 2-adic equality remains open.
+
+\paragraph{4667: the selected one-bit Smith defect pins the head and socle of $H_{10}$.}
+The selected $135\times270$ incidence has one $\mathbf Z/2$ Smith torsion factor,
+hence a one-dimensional trivial $\mathbf F_2\mathrm{PSp}(4,3)$ module.  The
+protected module has canonical filtration
+\[
+0<\langle j\rangle<V_9=\ker\pi<H_{10},
+\qquad 1\mid8\mid1.
+\]
+There is therefore one nonzero equivariant injection of the selected bit into
+$H_{10}$ and one nonzero quotient back out:
+\[
+ i(1)=j,\qquad \pi:H_{10}\to\mathbf F_2.
+\]
+Since $\pi(j)=0$, their composition vanishes.  Equivalently
+\[
+ n=i\pi,\qquad n(x)=\pi(x)j,\qquad n^2=0,
+\]
+with rank one, image $\langle j\rangle$, and kernel $V_9$.  The selected Smith
+bit therefore detects the trivial head/socle layers but no direction in the
+irreducible eight-dimensional middle factor.
+
+\paragraph{4668: the hexacode $\mathbf F_4$ choice is a D4 triality-plane modulus.}
+Pass~4628 identifies the 40 compatible unoriented structures $\{J,J^2\}$ on
+$U_6$ with W33 points.  Pass~4654 independently identifies the 40 anisotropic
+2-planes fixed by pairwise triality-conjugate $\mathrm{PSp}(4,3)$ intersections
+with the same W33 point carrier.  Composing the two frozen charts gives an
+explicit equivariant bijection
+\[
+ \{J,J^2\}\longmapsto p(J)\longmapsto P(p(J)).
+\]
+The stabilizer tower is
+\[
+216<648<1296,
+\]
+for pointwise triality-plane intersection, PSp point/plane stabilizer, and full
+semilinear F4 normalizer respectively.  Thus the noncanonical F4 choice feeding
+the hexacode/Golay construction has a concrete D4-side moduli realization.
+
+\paragraph{4669: oriented moduli form an 80-to-40 double cover.}
+There are 80 oriented operators $J$ above the 40 pairs $\{J,J^2\}$.  On the
+triality side, the $648/216\cong C_3$ quotient gives a cyclic orientation of the
+three nonzero vectors of each anisotropic plane, and the full outer involution
+reverses that orientation.  Hence both descriptions possess the same
+$80\to40$ orientation cover.  An equivariant oriented identification is unique
+after one base orientation is chosen; the other choice is simultaneous global
+reversal.
+
+\paragraph{4670: the D4-selected lane reconstructs $T$, $H_{10}$, and the CSS code.}
+The selected $135_6$--$270_3$ geometry internally reconstructs the 45 cubic
+tritangents, with an action-level map to the protected 45.  Triality-conjugate
+subgroup intersections reconstruct the 40 W33-point/F4 moduli.  Transporting the
+cross relation along these two maps recovers the same $45\times40$ matrix $T$.
+Consequently the D4-derived carriers recover
+\[
+ \operatorname{SNF}(T)=1^{15}2^{10}0^{15},\qquad
+ H_{10}\cong\operatorname{Tor}_2(\operatorname{coker}T),\qquad
+ [[40,10,4]].
+\]
+This is a commuting finite-incidence reconstruction, not an implementation claim.
+
+\paragraph{4671: the local F4/triality stabilizer has an exact $S_3$ quotient.}
+The subgroup classification gives
+\[
+(3^{1+2}{:}Q_8)_{216}
+<
+(3^{1+2}{:}SL(2,3))_{648}
+<
+H_{1296}.
+\]
+The first group is the pairwise triality-conjugate PSp intersection and fixes the
+three nonzero plane vectors pointwise.  The quotient $648/216=C_3=A_3$ rotates
+them cyclically.  The full semilinear layer adds the orientation-reversing outer
+involution, so
+\[
+ \boxed{1\to(3^{1+2}{:}Q_8)_{216}\to H_{1296}\to S_3\to1,}
+\]
+with the $648$ subgroup the preimage of $A_3$.
+
+\paragraph{Evidence boundary.}
+All closed statements above are finite group, incidence, module, code, or integral
+lattice theorems.  The general odd-$q$ Hermitian 2-saturation statement in
+Pass~4666 remains open.  The oriented double cover requires one global orientation
+choice.  No M24 subgroup, physical chirality, family symmetry, or dynamical
+interpretation follows from these finite structures alone.
