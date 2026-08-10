@@ -1,11 +1,11 @@
-% Passes 4587--4589: W33-derived finite D4 triality, apartment flag cover, and selected singular graph.
+% Passes 4587--4591: W33-derived finite D4 triality, apartment flag cover, selected singular graph, and rank-120 no-go.
 \section*{Current protected frontier: finite $D_4$ triality from the W33 lift}
 \addcontentsline{toc}{section}{Current protected frontier: finite $D_4$ triality from the W33 lift}
 
 The protected binary quotient reconstructed from the W33 line/apartment system has
 $256$ classes and a plus-type quadratic form.  Pass~4579 had already shown that its
 $255$ nonzero classes split as $135$ singular apartment classes and $120$
-anisotropic opposite-edge classes.  Passes~4587--4589 now reconstruct the full
+anisotropic opposite-edge classes.  Passes~4587--4591 now reconstruct the full
 outer-node triality geometry \emph{inside that same W33-derived quotient}, without
 importing an $E_8$ coordinate model.
 
@@ -89,9 +89,22 @@ recovered from the graph alone.  Moreover,
   \qquad
   \operatorname{rank}_{\mathbb F_2}N=119.
 \]
-The equality $\operatorname{rank}_{\mathbb Q}N=120$ is recorded only as an
-incidence-rank theorem; it is \emph{not} used to identify this module with the
-separate $120$ anisotropic quotient classes.
+
+\paragraph{The tempting $120=120$ identification is false.}
+The protected quotient also has $120$ anisotropic points.  Pass~4591 compares the
+actual $\PSp(4,3)$ characters rather than the dimensions.  On the deterministic
+five-transvection generating set, all five generators happen to have trace $3$ on
+both the rational rowspace of $N$ and the anisotropic permutation module, so a
+shallow generator check is misleading.  The short order-$6$ word $g_4g_0$ separates
+them:
+\[
+  \chi_{\operatorname{row}_{\mathbb Q}N}(g_4g_0)=-1,
+  \qquad
+  \chi_{\rm aniso}(g_4g_0)=3.
+\]
+Therefore the two $120$-dimensional rational $\PSp(4,3)$ modules are not
+isomorphic.  This rules out a cardinality/rank promotion while leaving nonlinear
+or subquotient relationships as separate questions.
 
 \paragraph{A useful obstruction, not an identification.}
 A selected singular line lies in six maximal singular $4$-spaces and has six W33
@@ -125,5 +138,6 @@ a cardinality argument.}}
 
 \noindent\textbf{Executable witnesses:}
 \texttt{analysis/w33\_pass4587\_w33\_derived\_d4\_triality.py},
-\texttt{analysis/w33\_pass4588\_apartment\_triality\_obstruction\_spread\_bridge.py}, and
-\texttt{analysis/w33\_pass4589\_apartment\_selected\_singular\_graph.py}.
+\texttt{analysis/w33\_pass4588\_apartment\_triality\_obstruction\_spread\_bridge.py},
+\texttt{analysis/w33\_pass4589\_apartment\_selected\_singular\_graph.py}, and
+\texttt{analysis/w33\_pass4591\_rank120\_anisotropic\_module\_no\_go.py}.
