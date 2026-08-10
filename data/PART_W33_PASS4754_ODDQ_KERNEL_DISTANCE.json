@@ -1,0 +1,10 @@
+{
+  "pass": 4754,
+  "cases": {
+    "3": {"lines":40,"binary_adjacency_rank":10,"proved_distance_by_general_theorem":4,"canonical_involution_fixed_lines":4,"involution_mask_in_kernel":true,"fixed_lines_pairwise_skew":true,"q_mod_4":3,"independent_exact_MILP_distance":4},
+    "5": {"lines":156,"binary_adjacency_rank":26,"proved_distance_by_general_theorem":6,"canonical_involution_fixed_lines":8,"involution_mask_in_kernel":true,"fixed_lines_pairwise_skew":true,"q_mod_4":1,"independent_exact_MILP_distance":6},
+    "7": {"lines":400,"binary_adjacency_rank":50,"proved_distance_by_general_theorem":8,"canonical_involution_fixed_lines":8,"involution_mask_in_kernel":true,"fixed_lines_pairwise_skew":true,"q_mod_4":3}
+  },
+  "theorem": "For every odd prime power q, the binary kernel of the line-intersection adjacency matrix of W(3,q) has minimum distance q+1. Minimum words are pairwise-skew (q+1)-sets with the exact 0/2 transversal parity law; an anisotropic-plane conic in the dual Q(4,q) supplies equality. The canonical projective J-involution fixes q+1 lines for q=3 mod 4 and q+3 lines for q=1 mod 4.",
+  "prior_art_boundary": "Related odd-q line/neighborhood codes of Sp(4,q) and O(5,q) were studied by Bagchi-Brouwer-Wilbrink (1991), and related symplectic adjacency codes by Key-Moori-Rodrigues (2005). This certificate records the explicit line-intersection-kernel proof and involution branch used here without asserting publication novelty."
+}
