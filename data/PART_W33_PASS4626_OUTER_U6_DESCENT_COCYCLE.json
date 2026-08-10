@@ -1,0 +1,29 @@
+{
+  "pass": 4626,
+  "module": "Q12=K27/K15",
+  "PSp_splitting": {
+    "U_dimension": 6,
+    "W_dimension": 6,
+    "inner_generators_block_diagonal": true,
+    "Hom_PSp_W_to_U_dimension": 1,
+    "PSp_invariant_six_spaces": 3
+  },
+  "outer": {
+    "action_on_three_six_spaces": [0, 2, 1],
+    "preserves_U": true,
+    "swaps_two_complements": true,
+    "lower_left_block_zero": true,
+    "off_diagonal_B_rank": 6,
+    "off_diagonal_B_matrix": [[1,0,0,0,0,0],[1,1,0,0,0,0],[0,0,0,1,0,0],[0,0,1,0,0,0],[0,0,0,0,1,0],[0,0,0,0,1,1]]
+  },
+  "cocycle": {
+    "coefficient_torsor": "Hom_PSp(W,U)=F2",
+    "restriction_to_PSp": "zero",
+    "outer_generator": "nonzero element",
+    "H1_C2_F2": "one-dimensional; displayed class is nonzero",
+    "interpretation": "the two PSp-equivariant complements form an F2 torsor and outer translation exchanges them"
+  },
+  "comparison_boundary": "This obstruction vanishes on PSp and lives entirely in outer descent. It is therefore a different mechanism from earlier apartment section obstructions already nonsplit on PSp; no equality of cohomology classes is inferred from dimensions.",
+  "theorem": "The PGSp nonsplit 6|6 extension has an explicit one-bit outer descent obstruction: in a PSp direct-sum basis the inner action is block diagonal, while the outer involution carries a full-rank six-by-six off-diagonal block and exchanges the two PSp complements. The complement torsor has Hom dimension one, so this is the unique nonzero affine C2 cocycle on that torsor.",
+  "boundary": "This computes the descent class inside the PSp-split extension problem; it does not claim a complete global computation of Ext^1_PGSp(U6,U6)."
+}
