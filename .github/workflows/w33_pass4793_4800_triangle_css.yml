@@ -1,0 +1,80 @@
+name: Passes 4793-4800 BLT radius triangle CSS
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4793_*'
+      - 'analysis/w33_pass4794_*'
+      - 'analysis/w33_pass4795_*'
+      - 'analysis/w33_pass4796_*'
+      - 'analysis/w33_pass4797_*'
+      - 'analysis/w33_pass4798_*'
+      - 'analysis/w33_pass4799_*'
+      - 'analysis/w33_pass4800_*'
+      - '.github/workflows/w33_pass4793_4800_triangle_css.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pass4793-4800-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check numpy scipy networkx sympy
+      - name: Execute Passes 4793-4800 primary certificates
+        shell: bash
+        run: |
+          set +e
+          LOG=analysis/PASS4793_4800_RUN.log
+          STATUS=analysis/PASS4793_4800_RUN.status
+          : > "$LOG"
+          rc=0
+          for script in \
+            analysis/w33_pass4793_q7_blt_shell_audit.py \
+            analysis/w33_pass4794_covering_radius_k4_obstruction.py \
+            analysis/w33_pass4795_triangle_chirality_orientation_torsor.py \
+            analysis/w33_pass4796_intrinsic_gq42_triangle_carrier.py \
+            analysis/w33_pass4797_cube_f4_e6_explicit_crosswalk.py \
+            analysis/w33_pass4798_bonkers_triangle_qutrit_code.py \
+            analysis/w33_pass4799_bonkers_triangle_qutrit_distance.py \
+            analysis/w33_pass4800_bonkers_triangle_qutrit_css.py
+          do
+            echo "===== $script =====" | tee -a "$LOG"
+            python "$script" 2>&1 | tee -a "$LOG"
+            here=${PIPESTATUS[0]}
+            echo "rc=$here" | tee -a "$LOG"
+            if [ "$here" -ne 0 ]; then rc=$here; break; fi
+          done
+          echo "$rc" > "$STATUS"
+          exit 0
+      - name: Exact remaining H10 distance-15 MILP
+        shell: bash
+        run: |
+          set +e
+          python analysis/w33_pass4794_covering_radius_exact_milp.py 2>&1 | tee analysis/PASS4794_EXACT_MILP.log
+          echo ${PIPESTATUS[0]} > analysis/PASS4794_EXACT_MILP.status
+          exit 0
+      - name: Commit generated evidence before enforcing primary status
+        shell: bash
+        run: |
+          git config user.name 'w33-evidence-bot'
+          git config user.email 'w33-evidence-bot@users.noreply.github.com'
+          git add analysis/PASS4793_4800_RUN.log analysis/PASS4793_4800_RUN.status analysis/PASS4794_EXACT_MILP.log analysis/PASS4794_EXACT_MILP.status
+          for f in data/PART_W33_PASS4793_*.json data/PART_W33_PASS4794_*.json data/PART_W33_PASS4795_*.json data/PART_W33_PASS4796_*.json data/PART_W33_PASS4797_*.json data/PART_W33_PASS4798_*.json data/PART_W33_PASS4799_*.json data/PART_W33_PASS4800_*.json; do
+            test -f "$f" && git add "$f"
+          done
+          if ! git diff --cached --quiet; then
+            git commit -m 'Materialize Passes 4793-4800 exact execution evidence'
+            git pull --rebase origin master
+            git push origin HEAD:master
+          fi
+      - name: Enforce primary execution
+        run: test "$(cat analysis/PASS4793_4800_RUN.status)" -eq 0
