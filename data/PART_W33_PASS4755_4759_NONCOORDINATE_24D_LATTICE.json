@@ -1,0 +1,27 @@
+{
+  "passes": [4755,4759],
+  "4755_canonical_24d_lattice": {
+    "vectors": 270,
+    "rank": 24,
+    "norm": 24,
+    "pair_inner_products": [9,4,-1,-6,-16],
+    "lattice_determinant": 720812988281250000000000,
+    "factorization": "2^10 * 3^10 * 5^23",
+    "generator_coordinate_saturation_index": 3,
+    "unimodular_embedding_no_go": "For any scalar c making this Gram integral, c is an integer because an inner product 1 occurs. det(cL)=c^24 det(L) retains odd 5-adic valuation, so it cannot be the determinant-square of a full-rank sublattice of an integral unimodular lattice.",
+    "representation_boundary": "This blocks the canonical projected residue lattice, not the abstract 24-dimensional PSp representation or another commensurable invariant lattice."
+  },
+  "4759_cube_sum_45_frame": {
+    "cube_sums": 135,
+    "equal_vector_packets": 45,
+    "packet_size": 3,
+    "normalized_norm": 16,
+    "normalized_inner_products": [-4,1],
+    "Gram_formula": "15 I - 5 A + J",
+    "A_parameters": "SRG(45,12,3,3)",
+    "Gram_rank": 24,
+    "nonzero_Gram_eigenvalue": 30,
+    "interpretation": "The cube-sum vectors collapse through three-packets to the canonical 24-dimensional spherical embedding of the 45-point GQ quotient."
+  },
+  "boundary": "The 24-dimensional representation bridge is distinct from a Leech-lattice embedding; the latter requires an explicit invariant lattice isometry, and the most canonical residue lattice fails the unimodular determinant test."
+}
