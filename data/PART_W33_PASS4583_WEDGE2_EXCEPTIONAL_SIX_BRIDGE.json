@@ -1,0 +1,30 @@
+{
+  "alternating_square": {
+    "core_dimension": 15,
+    "cyclic_profile_nonzero": {"6":189,"12":3906},
+    "dimension": 28,
+    "contraction_kernel_dimension": 27,
+    "quotient": "K27/K15",
+    "quotient_dimension": 12,
+    "six_submodules": 3,
+    "structure": "U6 direct-sum U6"
+  },
+  "boundary": "The bridge is bilinear and pair-valued; it is not a canonical unary map from one protected state to one cubic-surface object, and choosing one of the three U6 factors is an additional equivariant splitting choice.",
+  "bridge": {
+    "domain": "unordered distinct orthogonal pairs (v,w) in nonzero V8",
+    "each_nonzero_U6_preimages": 240,
+    "equivariance": "exact for PSp(4,3)",
+    "image_size": 64,
+    "map": "(v,w) -> v wedge w in K27 -> K27/K15 -> chosen invariant U6 factor",
+    "pair_count": 16065,
+    "zero_preimages": 945
+  },
+  "pass": 4583,
+  "theorem": "Although no nonzero equivariant linear H10<->U6 map exists, the orthogonal-pair alternating square gives an exact PSp-equivariant bilinear bridge from protected V8 pairs onto the exceptional O-(6,2) six-space.",
+  "U6_factor": {
+    "dimension": 6,
+    "irreducible_exhaustive": true,
+    "nonzero_orbits": [27,36],
+    "PSp_image_order": 25920
+  }
+}
