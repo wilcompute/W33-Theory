@@ -1,0 +1,26 @@
+{
+  "BT794_skew_charts": 540,
+  "boundary": "Both are four-line pairwise-skew W33 objects, but they are disjoint families with uniform cross-intersection at most two. The residue shell must not be identified with the BT794 regulus-transversal carrier by shape or cardinality.",
+  "distinct_BT794_transversal_sets": 540,
+  "family_intersection_size": 0,
+  "falsified_claim": "the 270 involution residues are BT794 four-transversal regulus sets",
+  "global_pair_intersection_profile": {
+    "0": 97200,
+    "1": 38880,
+    "2": 9720
+  },
+  "involution_residues": 270,
+  "kind": "companion falsifier",
+  "maximum_cross_intersection": 2,
+  "pass": 4726,
+  "per_residue_profile_against_540_transversal_sets": {
+    "0": 360,
+    "1": 144,
+    "2": 36
+  },
+  "per_transversal_profile_against_270_residues": {
+    "0": 180,
+    "1": 72,
+    "2": 18
+  }
+}
