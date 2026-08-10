@@ -1,0 +1,33 @@
+{
+  "boundary": "Exact finite permutation action on Q(5,3). The order-1440 rung image is not assigned an abstract group name from order alone.",
+  "construction": "dual action on the 112 totally isotropic lines of the explicit GF(9) H(3,9) construction",
+  "generators": {
+    "PSU_order": 3265920,
+    "four_unitary_transvections": [
+      {"a":3,"v":[0,0,1,4]},
+      {"a":3,"v":[0,0,1,5]},
+      {"a":3,"v":[0,1,0,4]},
+      {"a":3,"v":[1,0,0,4]}
+    ],
+    "full_projective_order": 13063680,
+    "outer_unitary_diagonal": "diag(3,1,1,1)"
+  },
+  "global_prism_action": {
+    "orbit_size": 544320,
+    "stabilizer_order": 24,
+    "transitive": true
+  },
+  "noncollinear_pair_action": {
+    "common_neighbor_rungs": 10,
+    "orbit_size": 4536,
+    "ordered_distinct_triple_orbit_size": 720,
+    "pointwise_stabilizer_order": 1440,
+    "rung_image_order": 1440,
+    "rung_kernel_order": 2,
+    "setwise_stabilizer_order": 2880,
+    "three_transitive_on_rungs": true,
+    "unordered_3_subset_orbit_size": 120
+  },
+  "pass": 4574,
+  "status": "OBSERVED_EXACT_REPRODUCTION"
+}
