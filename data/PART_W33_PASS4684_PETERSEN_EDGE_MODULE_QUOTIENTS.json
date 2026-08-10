@@ -1,0 +1,18 @@
+{
+  "pass": 4684,
+  "hot_module": {
+    "edges":405,"PSp_orbit":405,"edge_stabilizer_order":64,
+    "component_quotient":27,"component_stabilizer_order":960,"fiber_size":15,
+    "homogeneous_form":"G/H64 -> G/H960","incidence_gram":"15 I27","kernel_dimension_of_pushforward":378
+  },
+  "cold_module": {
+    "edges":1620,"PSp_orbit":1620,"edge_stabilizer_order":16,
+    "quotient_edges":135,"quotient_edge_stabilizer_order":192,"fiber_size":12,
+    "homogeneous_form":"G/H16 -> G/H192","quotient_graph":"SRG(27,10,1,5)",
+    "quotient_edge_to_vertex_incidence_smith":"1^26 2^1",
+    "kernel_dimension_first_pushforward":1485,"edge_module_to_vertex_module_secondary_kernel":108
+  },
+  "vertex_module": {"dimension":27,"A27_eigen_multiplicities":{"10":1,"1":20,"-5":6},"rational_split_dimensions":[1,20,6]},
+  "theorem":"The selected270 routing-edge decomposition is an exact PSp-homogeneous bundle over the internal Schlaefli 27: shortcut edges are a 15-fold fiber over vertices, while base edges are a 12-fold fiber over the 135 edges of SRG(27,10,1,5).",
+  "boundary":"Exact permutation-module quotient theorem; irreducibility of the large kernels is not asserted."
+}
