@@ -1,0 +1,1283 @@
+{
+  "boundary": "1000 random signings per (carrier, model), 16 points total, so every percentage and mean carries a sampling error of order std/sqrt(1000) -- these are densities over the uniform measure on signings, never existence claims: a measured 0.0% means no Ramanujan signing was SAMPLED, not that none exists, and the min_rho column is the only existence evidence here. NOT ESTABLISHED: (i) any functional form for x or for delta x -- the log-linear fit is a scatter diagnostic, not a claimed law, and no functional form is fitted to the collapse; (ii) the collapse of delta x onto b at any block size other than b=3 and b=6, the only two with more than one carrier -- b=10 and b=45 are single geometries and test nothing, so the collapse is verified over a factor 2.8 in n and 2.5 in d WITHIN a shared block size, at two block sizes, and extrapolating it to b=45 is not licensed; (iii) any asymptotic statement, since n spans only 15..280 and the finite-size correction to the Bordenave limit is itself n-dependent and is exactly what the b=1 control measures; (iv) isomorphism of W(3,2) with Q(4,2) or of any pair here -- they are used as a replicate on the strength of identical verified GQ and SRG parameters, which is necessary and not sufficient, so the noise floor they define is an UPPER bound on measurement noise and may contain real structure; (v) that the three candidate collapse variables exhaust the possibilities -- b/|E| = 1/(number of lines) has NO discriminating pair in this dataset and is reported untested rather than passed, and a negative result on b, b/d and b/|E| says nothing about s, t or n separately; (vi) any causal reading of the correlation between b and x; (vii) any critical block size as a property of b alone -- the bracket quoted is bracketed by these eight geometries and the two sides of it still differ in n and d.",
+  "collapse_tests_raw_excess": {
+    "b": {
+      "discriminating_pairs": 30,
+      "discriminating_pairs_detail": [
+        {
+          "a": "W(3,2)/free",
+          "b": "Q(5,2)/free",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.01233628879,
+          "v": 1.0,
+          "x_a": -0.068791314039,
+          "x_b": -0.056455025249,
+          "z": 6.034225341606
+        },
+        {
+          "a": "W(3,2)/free",
+          "b": "W(3,3)/free",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.029353921919,
+          "v": 1.0,
+          "x_a": -0.068791314039,
+          "x_b": -0.03943739212,
+          "z": 15.19434294747
+        },
+        {
+          "a": "W(3,2)/free",
+          "b": "Q(4,3)/free",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.028752311015,
+          "v": 1.0,
+          "x_a": -0.068791314039,
+          "x_b": -0.040039003024,
+          "z": 14.826126184381
+        },
+        {
+          "a": "W(3,2)/free",
+          "b": "H(3,4)/free",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.034032973076,
+          "v": 1.0,
+          "x_a": -0.068791314039,
+          "x_b": -0.034758340964,
+          "z": 18.114522622671
+        },
+        {
+          "a": "W(3,2)/free",
+          "b": "Q(5,3)/free",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.047055323781,
+          "v": 1.0,
+          "x_a": -0.068791314039,
+          "x_b": -0.021735990258,
+          "z": 27.283577067618
+        },
+        {
+          "a": "W(3,2)/free",
+          "b": "H(3,9)/free",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.0601797403,
+          "v": 1.0,
+          "x_a": -0.068791314039,
+          "x_b": -0.008611573739,
+          "z": 36.597422725342
+        },
+        {
+          "a": "Q(4,2)/free",
+          "b": "Q(5,2)/free",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.012805504328,
+          "v": 1.0,
+          "x_a": -0.069260529577,
+          "x_b": -0.056455025249,
+          "z": 6.07387613326
+        },
+        {
+          "a": "Q(4,2)/free",
+          "b": "W(3,3)/free",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.029823137457,
+          "v": 1.0,
+          "x_a": -0.069260529577,
+          "x_b": -0.03943739212,
+          "z": 14.916027221868
+        },
+        {
+          "a": "Q(4,2)/free",
+          "b": "Q(4,3)/free",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.029221526553,
+          "v": 1.0,
+          "x_a": -0.069260529577,
+          "x_b": -0.040039003024,
+          "z": 14.563029990017
+        },
+        {
+          "a": "Q(4,2)/free",
+          "b": "H(3,4)/free",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.034502188614,
+          "v": 1.0,
+          "x_a": -0.069260529577,
+          "x_b": -0.034758340964,
+          "z": 17.710565403815
+        },
+        {
+          "a": "Q(4,2)/free",
+          "b": "Q(5,3)/free",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.047524539319,
+          "v": 1.0,
+          "x_a": -0.069260529577,
+          "x_b": -0.021735990258,
+          "z": 26.402988887989
+        },
+        {
+          "a": "Q(4,2)/free",
+          "b": "H(3,9)/free",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.060648955838,
+          "v": 1.0,
+          "x_a": -0.069260529577,
+          "x_b": -0.008611573739,
+          "z": 35.196034750931
+        },
+        {
+          "a": "Q(5,2)/free",
+          "b": "W(3,3)/free",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.017017633129,
+          "v": 1.0,
+          "x_a": -0.056455025249,
+          "x_b": -0.03943739212,
+          "z": 10.186865978306
+        },
+        {
+          "a": "Q(5,2)/free",
+          "b": "Q(4,3)/free",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.016416022224,
+          "v": 1.0,
+          "x_a": -0.056455025249,
+          "x_b": -0.040039003024,
+          "z": 9.776671973147
+        },
+        {
+          "a": "Q(5,2)/free",
+          "b": "H(3,4)/free",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.021696684285,
+          "v": 1.0,
+          "x_a": -0.056455025249,
+          "x_b": -0.034758340964,
+          "z": 13.486189287816
+        },
+        {
+          "a": "Q(5,2)/free",
+          "b": "Q(5,3)/free",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.034719034991,
+          "v": 1.0,
+          "x_a": -0.056455025249,
+          "x_b": -0.021735990258,
+          "z": 24.349988584419
+        },
+        {
+          "a": "Q(5,2)/free",
+          "b": "H(3,9)/free",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.047843451509,
+          "v": 1.0,
+          "x_a": -0.056455025249,
+          "x_b": -0.008611573739,
+          "z": 36.038270150899
+        },
+        {
+          "a": "W(3,3)/free",
+          "b": "H(3,4)/free",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.004679051157,
+          "v": 1.0,
+          "x_a": -0.03943739212,
+          "x_b": -0.034758340964,
+          "z": 3.197804351672
+        },
+        {
+          "a": "W(3,3)/free",
+          "b": "Q(5,3)/free",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.017701401862,
+          "v": 1.0,
+          "x_a": -0.03943739212,
+          "x_b": -0.021735990258,
+          "z": 14.057075471744
+        },
+        {
+          "a": "W(3,3)/free",
+          "b": "H(3,9)/free",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.030825818381,
+          "v": 1.0,
+          "x_a": -0.03943739212,
+          "x_b": -0.008611573739,
+          "z": 26.879700946634
+        },
+        {
+          "a": "Q(4,3)/free",
+          "b": "H(3,4)/free",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.005280662061,
+          "v": 1.0,
+          "x_a": -0.040039003024,
+          "x_b": -0.034758340964,
+          "z": 3.585051370128
+        },
+        {
+          "a": "Q(4,3)/free",
+          "b": "Q(5,3)/free",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.018303012766,
+          "v": 1.0,
+          "x_a": -0.040039003024,
+          "x_b": -0.021735990258,
+          "z": 14.405252056788
+        },
+        {
+          "a": "Q(4,3)/free",
+          "b": "H(3,9)/free",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.031427429285,
+          "v": 1.0,
+          "x_a": -0.040039003024,
+          "x_b": -0.008611573739,
+          "z": 27.110540024055
+        },
+        {
+          "a": "H(3,4)/free",
+          "b": "Q(5,3)/free",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.013022350705,
+          "v": 1.0,
+          "x_a": -0.034758340964,
+          "x_b": -0.021735990258,
+          "z": 11.072321414985
+        },
+        {
+          "a": "H(3,4)/free",
+          "b": "H(3,9)/free",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.026146767224,
+          "v": 1.0,
+          "x_a": -0.034758340964,
+          "x_b": -0.008611573739,
+          "z": 24.787264450458
+        },
+        {
+          "a": "Q(5,3)/free",
+          "b": "H(3,9)/free",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.013124416519,
+          "v": 1.0,
+          "x_a": -0.021735990258,
+          "x_b": -0.008611573739,
+          "z": 17.57843880479
+        },
+        {
+          "a": "W(3,2)/line",
+          "b": "Q(5,2)/line",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.016028043048,
+          "v": 3.0,
+          "x_a": -0.069239568602,
+          "x_b": -0.053211525554,
+          "z": 6.414579540599
+        },
+        {
+          "a": "Q(4,2)/line",
+          "b": "Q(5,2)/line",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.01697857876,
+          "v": 3.0,
+          "x_a": -0.070190104315,
+          "x_b": -0.053211525554,
+          "z": 6.849919143257
+        },
+        {
+          "a": "W(3,3)/line",
+          "b": "Q(5,3)/line",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.015241917653,
+          "v": 6.0,
+          "x_a": 0.047077578342,
+          "x_b": 0.062319495995,
+          "z": 5.943904728751
+        },
+        {
+          "a": "Q(4,3)/line",
+          "b": "Q(5,3)/line",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.017210138215,
+          "v": 6.0,
+          "x_a": 0.04510935778,
+          "x_b": 0.062319495995,
+          "z": 6.510518429913
+        }
+      ],
+      "discriminating_pairs_disagreeing": 30,
+      "fit": {
+        "intercept": -0.090865538758,
+        "max_residual": 0.24125564803,
+        "r2": 0.685642033054,
+        "rms_residual": 0.093772399973,
+        "slope": 0.289659527841
+      },
+      "pairs_sharing_variable": 34,
+      "rank_correlation": 0.7,
+      "verdict": "refuted",
+      "worst_dx_at_equal_v": 0.060648955838
+    },
+    "b/d": {
+      "discriminating_pairs": 6,
+      "discriminating_pairs_detail": [
+        {
+          "a": "W(3,3)/free",
+          "b": "H(3,4)/free",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.004679051157,
+          "v": 0.083333333333,
+          "x_a": -0.03943739212,
+          "x_b": -0.034758340964,
+          "z": 3.197804351672
+        },
+        {
+          "a": "Q(4,3)/free",
+          "b": "H(3,4)/free",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.005280662061,
+          "v": 0.083333333333,
+          "x_a": -0.040039003024,
+          "x_b": -0.034758340964,
+          "z": 3.585051370128
+        },
+        {
+          "a": "W(3,2)/line",
+          "b": "W(3,3)/line",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.116317146944,
+          "v": 0.5,
+          "x_a": -0.069239568602,
+          "x_b": 0.047077578342,
+          "z": 41.379330954633
+        },
+        {
+          "a": "W(3,2)/line",
+          "b": "Q(4,3)/line",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.114348926382,
+          "v": 0.5,
+          "x_a": -0.069239568602,
+          "x_b": 0.04510935778,
+          "z": 39.658014172059
+        },
+        {
+          "a": "Q(4,2)/line",
+          "b": "W(3,3)/line",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.117267682657,
+          "v": 0.5,
+          "x_a": -0.070190104315,
+          "x_b": 0.047077578342,
+          "z": 41.983248847805
+        },
+        {
+          "a": "Q(4,2)/line",
+          "b": "Q(4,3)/line",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.115299462095,
+          "v": 0.5,
+          "x_a": -0.070190104315,
+          "x_b": 0.04510935778,
+          "z": 40.229679978984
+        }
+      ],
+      "discriminating_pairs_disagreeing": 6,
+      "fit": {
+        "intercept": 0.156490722547,
+        "max_residual": 0.454669029323,
+        "r2": 0.277386192023,
+        "rms_residual": 0.142172605858,
+        "slope": 0.186762058952
+      },
+      "pairs_sharing_variable": 10,
+      "rank_correlation": 0.279411764706,
+      "verdict": "refuted",
+      "worst_dx_at_equal_v": 0.117267682657
+    },
+    "b/|E|": {
+      "discriminating_pairs": 2,
+      "discriminating_pairs_detail": [
+        {
+          "a": "W(3,2)/free",
+          "b": "Q(5,2)/line",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.015579788485,
+          "v": 0.022222222222,
+          "x_a": -0.068791314039,
+          "x_b": -0.053211525554,
+          "z": 6.836180591272
+        },
+        {
+          "a": "Q(4,2)/free",
+          "b": "Q(5,2)/line",
+          "disagrees": true,
+          "discriminating": true,
+          "dx": 0.016049004023,
+          "v": 0.022222222222,
+          "x_a": -0.069260529577,
+          "x_b": -0.053211525554,
+          "z": 6.868774607163
+        }
+      ],
+      "discriminating_pairs_disagreeing": 2,
+      "fit": {
+        "intercept": 0.024059610411,
+        "max_residual": 0.603912391371,
+        "r2": 6.54036e-06,
+        "rms_residual": 0.167248170346,
+        "slope": -0.00062797791
+      },
+      "pairs_sharing_variable": 6,
+      "rank_correlation": -0.276470588235,
+      "verdict": "refuted",
+      "worst_dx_at_equal_v": 0.016049004023
+    }
+  },
+  "collapse_verdict_raw": "none of b, b/d, b/|E| collapses the RAW x; tightest scatter is b",
+  "confound_corrected": {
+    "collapse_tests": {
+      "b": {
+        "discriminating_pairs": 4,
+        "discriminating_pairs_detail": [
+          {
+            "a": "W(3,2)",
+            "b": "Q(5,2)",
+            "disagrees": false,
+            "discriminating": true,
+            "dx": 0.003691754257,
+            "v": 3.0,
+            "x_a": -0.000448254563,
+            "x_b": 0.003243499694,
+            "z": 1.143502528165
+          },
+          {
+            "a": "Q(4,2)",
+            "b": "Q(5,2)",
+            "disagrees": false,
+            "discriminating": true,
+            "dx": 0.004173074432,
+            "v": 3.0,
+            "x_a": -0.000929574738,
+            "x_b": 0.003243499694,
+            "z": 1.28243819919
+          },
+          {
+            "a": "W(3,3)",
+            "b": "Q(5,3)",
+            "disagrees": false,
+            "discriminating": true,
+            "dx": 0.002459484209,
+            "v": 6.0,
+            "x_a": 0.086514970462,
+            "x_b": 0.084055486253,
+            "z": 0.860922152171
+          },
+          {
+            "a": "Q(4,3)",
+            "b": "Q(5,3)",
+            "disagrees": false,
+            "discriminating": true,
+            "dx": 0.001092874551,
+            "v": 6.0,
+            "x_a": 0.085148360804,
+            "x_b": 0.084055486253,
+            "z": 0.372621100734
+          }
+        ],
+        "discriminating_pairs_disagreeing": 0,
+        "fit": {
+          "intercept": -0.289502417471,
+          "max_residual": 0.051915127429,
+          "r2": 0.956552674112,
+          "rms_residual": 0.041513257318,
+          "slope": 0.529625543049
+        },
+        "pairs_sharing_variable": 6,
+        "rank_correlation": 0.880952380952,
+        "verdict": "collapses",
+        "worst_dx_at_equal_v": 0.004173074432
+      },
+      "b/d": {
+        "discriminating_pairs": 4,
+        "discriminating_pairs_detail": [
+          {
+            "a": "W(3,2)",
+            "b": "W(3,3)",
+            "disagrees": true,
+            "discriminating": true,
+            "dx": 0.086963225025,
+            "v": 0.5,
+            "x_a": -0.000448254563,
+            "x_b": 0.086514970462,
+            "z": 25.496020816806
+          },
+          {
+            "a": "W(3,2)",
+            "b": "Q(4,3)",
+            "disagrees": true,
+            "discriminating": true,
+            "dx": 0.085596615367,
+            "v": 0.5,
+            "x_a": -0.000448254563,
+            "x_b": 0.085148360804,
+            "z": 24.63302523472
+          },
+          {
+            "a": "Q(4,2)",
+            "b": "W(3,3)",
+            "disagrees": true,
+            "discriminating": true,
+            "dx": 0.0874445452,
+            "v": 0.5,
+            "x_a": -0.000929574738,
+            "x_b": 0.086514970462,
+            "z": 25.456539016433
+          },
+          {
+            "a": "Q(4,2)",
+            "b": "Q(4,3)",
+            "disagrees": true,
+            "discriminating": true,
+            "dx": 0.086077935542,
+            "v": 0.5,
+            "x_a": -0.000929574738,
+            "x_b": 0.085148360804,
+            "z": 24.603346820305
+          }
+        ],
+        "discriminating_pairs_disagreeing": 4,
+        "fit": {
+          "intercept": 0.325017675604,
+          "max_residual": 0.251828135084,
+          "r2": 0.518768420836,
+          "rms_residual": 0.138160006511,
+          "slope": 0.629704058332
+        },
+        "pairs_sharing_variable": 6,
+        "rank_correlation": 0.761904761905,
+        "verdict": "refuted",
+        "worst_dx_at_equal_v": 0.0874445452
+      },
+      "b/|E|": {
+        "discriminating_pairs": 0,
+        "discriminating_pairs_detail": [],
+        "discriminating_pairs_disagreeing": 0,
+        "fit": {
+          "intercept": -0.221171280202,
+          "max_residual": 0.414010618186,
+          "r2": 0.192613117197,
+          "rms_residual": 0.178955944976,
+          "slope": -0.217171182502
+        },
+        "pairs_sharing_variable": 2,
+        "rank_correlation": -0.47619047619,
+        "verdict": "untested (no pair shares this variable while differing in n, d or b)",
+        "worst_dx_at_equal_v": 0.0
+      }
+    },
+    "definition": "delta x = x(line) - x(free) on the SAME carrier, so n, d, |E| and the unsigned spectrum cancel between the two terms",
+    "range": 0.63880001391,
+    "replicate_noise_floor": 0.000481320175,
+    "rows": [
+      {
+        "block": 3,
+        "degree": 6,
+        "delta_x": -0.000448254563,
+        "edges": 45,
+        "n": 15,
+        "name": "W(3,2)",
+        "se": 0.002484057317
+      },
+      {
+        "block": 3,
+        "degree": 6,
+        "delta_x": -0.000929574738,
+        "edges": 45,
+        "n": 15,
+        "name": "Q(4,2)",
+        "se": 0.002517180009
+      },
+      {
+        "block": 3,
+        "degree": 10,
+        "delta_x": 0.003243499694,
+        "edges": 135,
+        "n": 27,
+        "name": "Q(5,2)",
+        "se": 0.002062140876
+      },
+      {
+        "block": 6,
+        "degree": 12,
+        "delta_x": 0.086514970462,
+        "edges": 240,
+        "n": 40,
+        "name": "W(3,3)",
+        "se": 0.002337389511
+      },
+      {
+        "block": 6,
+        "degree": 12,
+        "delta_x": 0.085148360804,
+        "edges": 240,
+        "n": 40,
+        "name": "Q(4,3)",
+        "se": 0.002429855196
+      },
+      {
+        "block": 6,
+        "degree": 30,
+        "delta_x": 0.084055486253,
+        "edges": 1680,
+        "n": 112,
+        "name": "Q(5,3)",
+        "se": 0.001642537212
+      },
+      {
+        "block": 10,
+        "degree": 12,
+        "delta_x": 0.188207998149,
+        "edges": 270,
+        "n": 45,
+        "name": "H(3,4)",
+        "se": 0.002557752721
+      },
+      {
+        "block": 45,
+        "degree": 36,
+        "delta_x": 0.637870439172,
+        "edges": 5040,
+        "n": 280,
+        "name": "H(3,9)",
+        "se": 0.002229544881
+      }
+    ],
+    "untested_variables": [
+      "b/|E|"
+    ],
+    "verdict": "delta x collapses onto b alone at the block sizes with replicates (b=3, b=6)",
+    "within_block_span_tested": {
+      "d_factor": 2.5,
+      "n_factor": 2.8
+    }
+  },
+  "critical_block_size": {
+    "alive_blocks": [
+      1,
+      3,
+      6
+    ],
+    "ambiguous_blocks": [],
+    "bracket": [
+      6,
+      10
+    ],
+    "dead_blocks": [
+      10,
+      45
+    ],
+    "mechanism": "the Ramanujan fraction is the tail probability of the bound inside the sampled rho distribution, so it is governed by z_bound = (mean rho - bound)/std rather than by the excess alone; the fraction dies where the excess overtakes the width",
+    "single_threshold_in_b": true,
+    "z_bound_by_block_line_signing": {
+      "H(3,4)": [
+        10,
+        2.055547556257
+      ],
+      "H(3,9)": [
+        45,
+        9.056733411131
+      ],
+      "Q(4,2)": [
+        3,
+        -1.184686410125
+      ],
+      "Q(4,3)": [
+        6,
+        0.657720307784
+      ],
+      "Q(5,2)": [
+        3,
+        -1.036921090876
+      ],
+      "Q(5,3)": [
+        6,
+        1.304014159256
+      ],
+      "W(3,2)": [
+        3,
+        -1.152388526359
+      ],
+      "W(3,3)": [
+        6,
+        0.718622743896
+      ]
+    }
+  },
+  "dataset": [
+    {
+      "block": 1,
+      "bound": 4.472135955,
+      "degree": 6,
+      "edges": 45,
+      "excess_x": -0.068791314039,
+      "fraction_ramanujan": 0.909,
+      "gauge_dof": 45,
+      "gauge_dof_mod_switching": 31,
+      "max_rho": 5.150213682291,
+      "mean_rho": 4.164491846093,
+      "min_rho": 3.556599215789,
+      "mode": "free",
+      "n": 15,
+      "name": "W(3,2)",
+      "s": 2,
+      "samples": 1000,
+      "se_x": 0.001600159487,
+      "std_rho": 0.226296724807,
+      "t": 2,
+      "z_bound": -1.3594722114
+    },
+    {
+      "block": 1,
+      "bound": 4.472135955,
+      "degree": 6,
+      "edges": 45,
+      "excess_x": -0.069260529577,
+      "fraction_ramanujan": 0.906,
+      "gauge_dof": 45,
+      "gauge_dof_mod_switching": 31,
+      "max_rho": 5.003580169562,
+      "mean_rho": 4.162393450415,
+      "min_rho": 3.526020693819,
+      "mode": "free",
+      "n": 15,
+      "name": "Q(4,2)",
+      "s": 2,
+      "samples": 1000,
+      "se_x": 0.001681038165,
+      "std_rho": 0.23773469714,
+      "t": 2,
+      "z_bound": -1.302891451314
+    },
+    {
+      "block": 1,
+      "bound": 6.0,
+      "degree": 10,
+      "edges": 135,
+      "excess_x": -0.056455025249,
+      "fraction_ramanujan": 0.903,
+      "gauge_dof": 135,
+      "gauge_dof_mod_switching": 109,
+      "max_rho": 6.414236515328,
+      "mean_rho": 5.661269848507,
+      "min_rho": 5.046091373022,
+      "mode": "free",
+      "n": 27,
+      "name": "Q(5,2)",
+      "s": 2,
+      "samples": 1000,
+      "se_x": 0.00127240157,
+      "std_rho": 0.241421223484,
+      "t": 4,
+      "z_bound": -1.403066998854
+    },
+    {
+      "block": 1,
+      "bound": 6.633249580711,
+      "degree": 12,
+      "edges": 240,
+      "excess_x": -0.03943739212,
+      "fraction_ramanujan": 0.873,
+      "gauge_dof": 240,
+      "gauge_dof_mod_switching": 201,
+      "max_rho": 7.27970765663,
+      "mean_rho": 6.371651515966,
+      "min_rho": 5.790029748626,
+      "mode": "free",
+      "n": 40,
+      "name": "W(3,3)",
+      "s": 3,
+      "samples": 1000,
+      "se_x": 0.001082460067,
+      "std_rho": 0.227058739187,
+      "t": 3,
+      "z_bound": -1.152116257146
+    },
+    {
+      "block": 1,
+      "bound": 6.633249580711,
+      "degree": 12,
+      "edges": 240,
+      "excess_x": -0.040039003024,
+      "fraction_ramanujan": 0.878,
+      "gauge_dof": 240,
+      "gauge_dof_mod_switching": 201,
+      "max_rho": 7.325137819376,
+      "mean_rho": 6.367660880687,
+      "min_rho": 5.802184226336,
+      "mode": "free",
+      "n": 40,
+      "name": "Q(4,3)",
+      "s": 3,
+      "samples": 1000,
+      "se_x": 0.001095616395,
+      "std_rho": 0.229818433924,
+      "t": 3,
+      "z_bound": -1.155645765615
+    },
+    {
+      "block": 1,
+      "bound": 6.633249580711,
+      "degree": 12,
+      "edges": 270,
+      "excess_x": -0.034758340964,
+      "fraction_ramanujan": 0.864,
+      "gauge_dof": 270,
+      "gauge_dof_mod_switching": 226,
+      "max_rho": 7.188884622159,
+      "mean_rho": 6.402688830088,
+      "min_rho": 5.862530018273,
+      "mode": "free",
+      "n": 45,
+      "name": "H(3,4)",
+      "s": 4,
+      "samples": 1000,
+      "se_x": 0.000984508126,
+      "std_rho": 0.206512166755,
+      "t": 2,
+      "z_bound": -1.116451172083
+    },
+    {
+      "block": 1,
+      "bound": 10.770329614269,
+      "degree": 30,
+      "edges": 1680,
+      "excess_x": -0.021735990258,
+      "fraction_ramanujan": 0.857,
+      "gauge_dof": 1680,
+      "gauge_dof_mod_switching": 1569,
+      "max_rho": 11.518647084452,
+      "mean_rho": 10.536225834696,
+      "min_rho": 10.01617051453,
+      "mode": "free",
+      "n": 112,
+      "name": "Q(5,3)",
+      "s": 3,
+      "samples": 1000,
+      "se_x": 0.00064342526,
+      "std_rho": 0.219142746862,
+      "t": 9,
+      "z_bound": -1.068270718178
+    },
+    {
+      "block": 1,
+      "bound": 11.832159566199,
+      "degree": 36,
+      "edges": 5040,
+      "excess_x": -0.008611573739,
+      "fraction_ramanujan": 0.785,
+      "gauge_dof": 5040,
+      "gauge_dof_mod_switching": 4761,
+      "max_rho": 12.19905375096,
+      "mean_rho": 11.730266051599,
+      "min_rho": 11.360085907696,
+      "mode": "free",
+      "n": 280,
+      "name": "H(3,9)",
+      "s": 9,
+      "samples": 1000,
+      "se_x": 0.000378742096,
+      "std_rho": 0.141712316156,
+      "t": 3,
+      "z_bound": -0.719016648401
+    },
+    {
+      "block": 3,
+      "bound": 4.472135955,
+      "degree": 6,
+      "edges": 45,
+      "excess_x": -0.069239568602,
+      "fraction_ramanujan": 0.841,
+      "gauge_dof": 15,
+      "gauge_dof_mod_switching": 15,
+      "max_rho": 5.531128874149,
+      "mean_rho": 4.162487190745,
+      "min_rho": 3.551597448529,
+      "mode": "line",
+      "n": 15,
+      "name": "W(3,2)",
+      "s": 2,
+      "samples": 1000,
+      "se_x": 0.001900007992,
+      "std_rho": 0.268701707082,
+      "t": 2,
+      "z_bound": -1.152388526359
+    },
+    {
+      "block": 3,
+      "bound": 4.472135955,
+      "degree": 6,
+      "edges": 45,
+      "excess_x": -0.070190104315,
+      "fraction_ramanujan": 0.851,
+      "gauge_dof": 15,
+      "gauge_dof_mod_switching": 15,
+      "max_rho": 5.314265942683,
+      "mean_rho": 4.158236265809,
+      "min_rho": 3.551597448529,
+      "mode": "line",
+      "n": 15,
+      "name": "Q(4,2)",
+      "s": 2,
+      "samples": 1000,
+      "se_x": 0.001873581033,
+      "std_rho": 0.264964370747,
+      "t": 2,
+      "z_bound": -1.184686410125
+    },
+    {
+      "block": 3,
+      "bound": 6.0,
+      "degree": 10,
+      "edges": 135,
+      "excess_x": -0.053211525554,
+      "fraction_ramanujan": 0.871,
+      "gauge_dof": 45,
+      "gauge_dof_mod_switching": 45,
+      "max_rho": 6.972879614946,
+      "mean_rho": 5.680730846674,
+      "min_rho": 4.961247558211,
+      "mode": "line",
+      "n": 27,
+      "name": "Q(5,2)",
+      "s": 2,
+      "samples": 1000,
+      "se_x": 0.001622781328,
+      "std_rho": 0.307901108518,
+      "t": 4,
+      "z_bound": -1.036921090876
+    },
+    {
+      "block": 6,
+      "bound": 6.633249580711,
+      "degree": 12,
+      "edges": 240,
+      "excess_x": 0.047077578342,
+      "fraction_ramanujan": 0.251,
+      "gauge_dof": 40,
+      "gauge_dof_mod_switching": 40,
+      "max_rho": 8.687244580351,
+      "mean_rho": 6.945526907509,
+      "min_rho": 6.007750217204,
+      "mode": "line",
+      "n": 40,
+      "name": "W(3,3)",
+      "s": 3,
+      "samples": 1000,
+      "se_x": 0.002071634603,
+      "std_rho": 0.43454974039,
+      "t": 3,
+      "z_bound": 0.718622743896
+    },
+    {
+      "block": 6,
+      "bound": 6.633249580711,
+      "degree": 12,
+      "edges": 240,
+      "excess_x": 0.04510935778,
+      "fraction_ramanujan": 0.272,
+      "gauge_dof": 40,
+      "gauge_dof_mod_switching": 40,
+      "max_rho": 8.742744175029,
+      "mean_rho": 6.932471209291,
+      "min_rho": 5.951410357889,
+      "mode": "line",
+      "n": 40,
+      "name": "Q(4,3)",
+      "s": 3,
+      "samples": 1000,
+      "se_x": 0.002168829405,
+      "std_rho": 0.454937494006,
+      "t": 3,
+      "z_bound": 0.657720307784
+    },
+    {
+      "block": 6,
+      "bound": 10.770329614269,
+      "degree": 30,
+      "edges": 1680,
+      "excess_x": 0.062319495995,
+      "fraction_ramanujan": 0.093,
+      "gauge_dof": 280,
+      "gauge_dof_mod_switching": 280,
+      "max_rho": 13.424232359379,
+      "mean_rho": 11.441531127531,
+      "min_rho": 10.206875045936,
+      "mode": "line",
+      "n": 112,
+      "name": "Q(5,3)",
+      "s": 3,
+      "samples": 1000,
+      "se_x": 0.001511268483,
+      "std_rho": 0.514719497865,
+      "t": 9,
+      "z_bound": 1.304014159256
+    },
+    {
+      "block": 10,
+      "bound": 6.633249580711,
+      "degree": 12,
+      "edges": 270,
+      "excess_x": 0.153449657185,
+      "fraction_ramanujan": 0.0,
+      "gauge_dof": 27,
+      "gauge_dof_mod_switching": 27,
+      "max_rho": 9.583150491141,
+      "mean_rho": 7.651119454896,
+      "min_rho": 6.668094618627,
+      "mode": "line",
+      "n": 45,
+      "name": "H(3,4)",
+      "s": 4,
+      "samples": 1000,
+      "se_x": 0.00236068692,
+      "std_rho": 0.495181865818,
+      "t": 2,
+      "z_bound": 2.055547556257
+    },
+    {
+      "block": 45,
+      "bound": 11.832159566199,
+      "degree": 36,
+      "edges": 5040,
+      "excess_x": 0.629258865433,
+      "fraction_ramanujan": 0.0,
+      "gauge_dof": 112,
+      "gauge_dof_mod_switching": 112,
+      "max_rho": 22.933717844364,
+      "mean_rho": 19.277650870445,
+      "min_rho": 17.084936967072,
+      "mode": "line",
+      "n": 280,
+      "name": "H(3,9)",
+      "s": 9,
+      "samples": 1000,
+      "se_x": 0.002197140141,
+      "std_rho": 0.822094563929,
+      "t": 3,
+      "z_bound": 9.056733411131
+    }
+  ],
+  "free_control_spread": {
+    "max_x": -0.008611573739,
+    "min_x": -0.069260529577,
+    "note": "eight carriers at identical block size b=1; any spread here is size dependence that the original line-signing table attributed to b"
+  },
+  "geometries": [
+    {
+      "block": 3,
+      "construction": "symplectic GF(2), PG(3,2)",
+      "degree": 6,
+      "edges": 45,
+      "lines": 15,
+      "n": 15,
+      "name": "W(3,2)",
+      "s": 2,
+      "srg": [
+        15,
+        6,
+        1,
+        3
+      ],
+      "switch_dim_free": 14,
+      "switch_dim_line": 0,
+      "t": 2
+    },
+    {
+      "block": 3,
+      "construction": "parabolic quadric PG(4,2)",
+      "degree": 6,
+      "edges": 45,
+      "lines": 15,
+      "n": 15,
+      "name": "Q(4,2)",
+      "s": 2,
+      "srg": [
+        15,
+        6,
+        1,
+        3
+      ],
+      "switch_dim_free": 14,
+      "switch_dim_line": 0,
+      "t": 2
+    },
+    {
+      "block": 3,
+      "construction": "elliptic quadric PG(5,2)",
+      "degree": 10,
+      "edges": 135,
+      "lines": 45,
+      "n": 27,
+      "name": "Q(5,2)",
+      "s": 2,
+      "srg": [
+        27,
+        10,
+        1,
+        5
+      ],
+      "switch_dim_free": 26,
+      "switch_dim_line": 0,
+      "t": 4
+    },
+    {
+      "block": 6,
+      "construction": "symplectic GF(3), PG(3,3)",
+      "degree": 12,
+      "edges": 240,
+      "lines": 40,
+      "n": 40,
+      "name": "W(3,3)",
+      "s": 3,
+      "srg": [
+        40,
+        12,
+        2,
+        4
+      ],
+      "switch_dim_free": 39,
+      "switch_dim_line": 0,
+      "t": 3
+    },
+    {
+      "block": 6,
+      "construction": "parabolic quadric PG(4,3)",
+      "degree": 12,
+      "edges": 240,
+      "lines": 40,
+      "n": 40,
+      "name": "Q(4,3)",
+      "s": 3,
+      "srg": [
+        40,
+        12,
+        2,
+        4
+      ],
+      "switch_dim_free": 39,
+      "switch_dim_line": 0,
+      "t": 3
+    },
+    {
+      "block": 10,
+      "construction": "Hermitian PG(3,4)/GF(4)",
+      "degree": 12,
+      "edges": 270,
+      "lines": 27,
+      "n": 45,
+      "name": "H(3,4)",
+      "s": 4,
+      "srg": [
+        45,
+        12,
+        3,
+        3
+      ],
+      "switch_dim_free": 44,
+      "switch_dim_line": 0,
+      "t": 2
+    },
+    {
+      "block": 6,
+      "construction": "elliptic quadric PG(5,3)",
+      "degree": 30,
+      "edges": 1680,
+      "lines": 280,
+      "n": 112,
+      "name": "Q(5,3)",
+      "s": 3,
+      "srg": [
+        112,
+        30,
+        2,
+        10
+      ],
+      "switch_dim_free": 111,
+      "switch_dim_line": 0,
+      "t": 9
+    },
+    {
+      "block": 45,
+      "construction": "Hermitian PG(3,9)/GF(9)",
+      "degree": 36,
+      "edges": 5040,
+      "lines": 112,
+      "n": 280,
+      "name": "H(3,9)",
+      "s": 9,
+      "srg": [
+        280,
+        36,
+        8,
+        4
+      ],
+      "switch_dim_free": 279,
+      "switch_dim_line": 0,
+      "t": 3
+    }
+  ],
+  "method": {
+    "excess": "x = (mean rho - 2 sqrt(d-1)) / (2 sqrt(d-1))",
+    "samples_per_point": 1000,
+    "seed": 4564,
+    "signing_models": {
+      "free": "one independent sign per edge (b=1), the unconfounded control on the identical graph",
+      "line": "one sign per line, shared by all C(s+1,2) edges of that line"
+    },
+    "verification": "s and t read off the incidence; point/line counts asserted against (s+1)(st+1) and (t+1)(st+1); block partition of the edge set asserted; SRG(n, s(t+1), s-1, t+1) asserted; block-preserving switching dimension computed over GF(2)"
+  },
+  "replicate_noise_floor": {
+    "free": 0.000469215538,
+    "line": 0.000950535713,
+    "pair": "W(3,2) vs Q(4,2), the same GQ(2,2) built twice"
+  },
+  "x_range": 0.699448969747
+}
