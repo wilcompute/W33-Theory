@@ -1,0 +1,8 @@
+{
+  "pass":4645,
+  "centered_triality":{"D":"D_ij=9M_ij-J","rank_Q":50,"gram":"D_ij D_ij^T=54^2 E_50","composition":"D_PA D_AB=54 D_PB cyclically"},
+  "normalized_maps":{"U_PA":"D_PA^T/54","U_AB":"D_AB^T/54","U_BP":"D_PB/54"},
+  "three_cycle":{"P":"U_BP U_AB U_PA=E_P","A":"cyclic result E_A","B":"cyclic result E_B","holonomy":"identity on the active 50-dimensional constituent"},
+  "theorem":"The normalized centered D4 triality intertwiners form a flat three-leg connection: one complete triality Fourier cycle returns exactly the identity projector on each active rank-50 constituent.",
+  "boundary":"Finite incidence-algebra holonomy only; not a Berry/optical/dynamical phase."
+}
