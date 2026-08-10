@@ -1,0 +1,25 @@
+{
+  "pass":4685,
+  "exact_path_frontier": {
+    "uniform_over_270_sources":true,
+    "breakpoints":[1,1.5,2],
+    "regions": {
+      "R0_shortcut_favor":{"ratio_interval":"0<r<1","base_traversals_per_source":420,"shortcut_traversals_per_source":239,"mean_base_hops":1.5613382899628252,"mean_shortcut_hops":0.8884758364312267,"unordered_pair_base_traversals":56700,"unordered_pair_shortcut_traversals":32265},
+      "R1_mixed":{"ratio_interval":"1<r<3/2","base_traversals_per_source":548,"shortcut_traversals_per_source":111,"mean_base_hops":2.037174721189591,"mean_shortcut_hops":0.41263940520446096,"unordered_pair_base_traversals":73980,"unordered_pair_shortcut_traversals":14985},
+      "R2_base_favor":{"ratio_interval":"3/2<r<2","base_traversals_per_source":620,"shortcut_traversals_per_source":63,"mean_base_hops":2.3048327137546467,"mean_shortcut_hops":0.2342007434944238,"unordered_pair_base_traversals":83700,"unordered_pair_shortcut_traversals":8505},
+      "R3_base_only":{"ratio_interval":"r>2","base_traversals_per_source":746,"shortcut_traversals_per_source":0,"mean_base_hops":2.7732342007434942,"mean_shortcut_hops":0.0,"unordered_pair_base_traversals":100710,"unordered_pair_shortcut_traversals":0}
+    }
+  },
+  "reliability_mapping":"For independent edge survivals q_b,q_s, set c_b=-ln(q_b), c_s=-ln(q_s); the same exact breakpoints apply to maximum-survival routing.",
+  "sensitivity_model": {
+    "base_edge_loss_db":1.5377,"shortcut_edge_loss_db":2.1177,
+    "base_edge_latency_s":0.00005600004884045482,"shortcut_edge_latency_s":2.588840454818913e-9,
+    "loss_ratio_shortcut_over_base":1.377186707420173,"latency_ratio_shortcut_over_base":4.622925351716331e-5,
+    "loss_optimal_region":"R1_mixed","latency_optimal_region":"R0_shortcut_favor",
+    "R0_mean_success":0.38020341374252087,"R1_mean_success":0.40004150236359354,"R2_mean_success":0.3981140237447694,"R3_mean_success":0.37893140036819234,
+    "pareto_regions_for_these_anchors":["R0_shortcut_favor","R1_mixed"],
+    "warning":"component-mixed published anchors plus explicit architecture assumptions; not a demonstrated integrated stack"
+  },
+  "theorem":"The exact selected270 base/Petersen graph has four all-pairs path policies separated only by c_s/c_b=1,3/2,2. Distinct base and shortcut technologies therefore admit analytic crossover regions rather than one architecture-wide winner.",
+  "boundary":"Exact finite multiobjective routing plus parameter sensitivity. Published component values come from separate platforms; no measured Holonet performance is claimed."
+}
