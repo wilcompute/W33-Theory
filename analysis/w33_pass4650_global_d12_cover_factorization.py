@@ -1,0 +1,161 @@
+#!/usr/bin/env python3
+"""Pass 4650 — global factorization of the apartment D12 six-sheet cover.
+
+Pass4647 proved that for G=PSp(4,3), an apartment stabilizer K (|K|=16)
+is contained in its selected-line stabilizer H (|H|=96), and H acts on the
+six apartments above that selected line through D12 with core C of order 8.
+Pass4588 independently proved that the six sheets are three point-line flags,
+with exactly two apartment lifts over each flag.
+
+This verifier turns those facts into the global subgroup/deck chain.  In the
+natural degree-six D12 action, K/C is a reflection.  Its normalizer is V4,
+so N_H(K) has order 32 and N_H(K)/K=C2.  The original 6:1 homogeneous map
+therefore factors canonically as a regular 2:1 deck cover onto the 810 flags,
+followed by the nonregular 3:1 S3-monodromy flag-to-line map.
+
+No H^1 class is promoted without choosing a specific connected base complex;
+the C2 statement is a theorem of transitive G-sets/deck transformations.
+"""
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / "data/PART_W33_PASS4650_GLOBAL_D12_COVER_FACTORIZATION.json"
+
+
+def compose(p, q):
+    return tuple(p[q[i]] for i in range(len(q)))
+
+
+def generated(gens):
+    ident = tuple(range(len(gens[0])))
+    seen = {ident}
+    todo = [ident]
+    while todo:
+        a = todo.pop()
+        for g in gens:
+            b = compose(g, a)
+            if b not in seen:
+                seen.add(b)
+                todo.append(b)
+    return seen
+
+
+def order(p):
+    x = tuple(range(len(p)))
+    y = x
+    for n in range(1, 100):
+        y = compose(p, y)
+        if y == x:
+            return n
+    raise RuntimeError
+
+
+def main():
+    # Natural D12 action on a hexagon. r is the 6-cycle; s fixes vertex 0.
+    r = tuple((i + 1) % 6 for i in range(6))
+    s = tuple((-i) % 6 for i in range(6))
+    D = generated([r, s])
+    assert len(D) == 12
+    assert sorted(order(g) for g in D).count(6) == 2
+
+    ident = tuple(range(6))
+    r3 = compose(compose(r, r), r)
+    assert order(r3) == 2
+    assert all(compose(r3, g) == compose(g, r3) for g in D)
+
+    # K/C is the point stabilizer <s>, a reflection of order two.
+    S = {ident, s}
+    normalizer = {
+        g for g in D
+        if {compose(compose(g, h), inverse(g)) for h in S} == S
+    }
+    assert len(normalizer) == 4
+    assert r3 in normalizer and r3 not in S
+    assert {order(g) for g in normalizer} <= {1, 2}
+
+    # The central half-turn has three 2-element orbits.  These are the flag
+    # blocks found geometrically in Pass4588/4647.
+    blocks = []
+    unseen = set(range(6))
+    while unseen:
+        i = min(unseen)
+        B = frozenset((i, r3[i]))
+        blocks.append(B)
+        unseen -= B
+    assert len(blocks) == 3 and all(len(B) == 2 for B in blocks)
+
+    # D12/C2_center acts faithfully on the three blocks as S3.
+    block_index = {B: i for i, B in enumerate(blocks)}
+    qperms = set()
+    for g in D:
+        p = []
+        for B in blocks:
+            im = frozenset(g[x] for x in B)
+            p.append(block_index[im])
+        qperms.add(tuple(p))
+    assert len(qperms) == 6
+    assert sorted(order(p) for p in qperms) == [1, 2, 2, 2, 3, 3]
+
+    # Lift group orders from the exact local quotient H/C=D12.
+    G_order = 25920
+    C_order = 8
+    K_order = 16
+    NHK_order = C_order * len(normalizer)
+    H_order = C_order * len(D)
+    assert (C_order, K_order, NHK_order, H_order) == (8, 16, 32, 96)
+    assert NHK_order // K_order == 2
+
+    apartments = G_order // K_order
+    flags = G_order // NHK_order
+    selected_lines = G_order // H_order
+    assert (apartments, flags, selected_lines) == (1620, 810, 270)
+    assert apartments // flags == 2 and flags // selected_lines == 3
+
+    out = {
+        "pass": 4650,
+        "subgroup_chain": {
+            "G": {"name": "PSp(4,3)", "order": 25920},
+            "core_C": {"order": 8, "meaning": "core_H(K), kernel of local six-sheet action"},
+            "apartment_K": {"order": 16, "quotient_K_over_C": "C2 reflection"},
+            "flag_N_equals_NH_K": {"order": 32, "quotient_N_over_C": "V4", "quotient_N_over_K": "C2"},
+            "selected_line_H": {"order": 96, "quotient_H_over_C": "D12"}
+        },
+        "global_factorization": {
+            "apartments": 1620,
+            "flags": 810,
+            "selected_lines": 270,
+            "stage1": "G/K -> G/N_H(K), regular 2:1",
+            "stage1_deck_group": "C2",
+            "stage1_deck_action": "central hexagon half-turn; swaps the two apartment lifts over every point-line flag",
+            "stage2": "G/N_H(K) -> G/H, nonregular 3:1",
+            "stage2_monodromy": "S3",
+            "composite_monodromy": "D12"
+        },
+        "fiber_algebra": {
+            "D12_point_stabilizer": "reflection C2",
+            "normalizer_of_reflection_in_D12": "V4",
+            "center_of_D12": "C2 generated by half-turn",
+            "D12_mod_center": "S3",
+            "block_system": "3 blocks x 2 lifts"
+        },
+        "cohomology_boundary": "The global C2 deck coordinate is exact as a homogeneous G-set cover. A nonzero H^1 class requires a chosen connected graph/complex on the 810 flag base and is not asserted here.",
+        "theorem": "The apartment six-sheet cover factors globally and canonically as a regular C2 double cover of the 810 selected point-line flags followed by a nonregular S3 three-sheet flag-to-line cover.",
+        "boundary": "Finite cover/deck theorem only; not optical phase or dynamical holonomy."
+    }
+    OUT.write_text(json.dumps(out, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(json.dumps(out, indent=2, sort_keys=True))
+    return 0
+
+
+def inverse(p):
+    q = [0] * len(p)
+    for i, j in enumerate(p):
+        q[j] = i
+    return tuple(q)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
