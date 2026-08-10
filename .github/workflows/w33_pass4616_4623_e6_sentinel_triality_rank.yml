@@ -1,0 +1,72 @@
+name: W33 Passes 4616-4623 evidence
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass4616_4617_e6_sentinel_transport_closure.py'
+      - 'analysis/w33_pass4618_outer_canonical_u6_factor.py'
+      - 'analysis/w33_pass4619_concrete_d4_triality_w33_lifts.py'
+      - 'analysis/w33_pass4620_qminus_hermitian_binary_rank_reformulation.py'
+      - 'analysis/w33_pass4621_sentinel_minimum_shell_self_reconstruction.py'
+      - 'analysis/w33_pass4622_partial_spread_stabilizer_packets.py'
+      - 'analysis/w33_pass4623_outer_nonsplit_u6_extension.py'
+      - 'data/PART_W33_PASS4616_*'
+      - 'data/PART_W33_PASS4617_*'
+      - 'data/PART_W33_PASS4618_*'
+      - 'data/PART_W33_PASS4619_*'
+      - 'data/PART_W33_PASS4620_*'
+      - 'data/PART_W33_PASS4621_*'
+      - 'data/PART_W33_PASS4622_*'
+      - 'data/PART_W33_PASS4623_*'
+      - 'tests/test_w33_pass4616_4623_e6_sentinel_triality_rank.py'
+      - '.github/workflows/w33_pass4616_4623_e6_sentinel_triality_rank.yml'
+  workflow_dispatch:
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install focused dependencies
+        run: python -m pip install --upgrade pip numpy pytest
+      - name: Snapshot frozen certificates
+        run: |
+          mkdir -p /tmp/pass4616_4623
+          cp data/PART_W33_PASS4616_EXPLICIT_45_E6_INTERTWINER.json /tmp/pass4616_4623/
+          cp data/PART_W33_PASS4617_SENTINEL_MINIMUM_SHELL_TRANSPORT.json /tmp/pass4616_4623/
+          cp data/PART_W33_PASS4618_OUTER_CANONICAL_U6_FACTOR.json /tmp/pass4616_4623/
+          cp data/PART_W33_PASS4619_CONCRETE_D4_TRIALITY_W33_LIFTS.json /tmp/pass4616_4623/
+          cp data/PART_W33_PASS4620_QMINUS_HERMITIAN_BINARY_RANK_REFORMULATION.json /tmp/pass4616_4623/
+          cp data/PART_W33_PASS4621_SENTINEL_MINIMUM_SHELL_SELF_RECONSTRUCTION.json /tmp/pass4616_4623/
+          cp data/PART_W33_PASS4622_PARTIAL_SPREAD_STABILIZER_PACKETS.json /tmp/pass4616_4623/
+          cp data/PART_W33_PASS4623_OUTER_NONSPLIT_U6_EXTENSION.json /tmp/pass4616_4623/
+      - name: Regenerate exact witnesses
+        run: |
+          PYTHONPATH=analysis python analysis/w33_pass4616_4617_e6_sentinel_transport_closure.py
+          PYTHONPATH=analysis python analysis/w33_pass4618_outer_canonical_u6_factor.py
+          PYTHONPATH=analysis python analysis/w33_pass4619_concrete_d4_triality_w33_lifts.py
+          PYTHONPATH=analysis python analysis/w33_pass4620_qminus_hermitian_binary_rank_reformulation.py
+          PYTHONPATH=analysis python analysis/w33_pass4621_sentinel_minimum_shell_self_reconstruction.py
+          PYTHONPATH=analysis python analysis/w33_pass4622_partial_spread_stabilizer_packets.py
+          PYTHONPATH=analysis python analysis/w33_pass4623_outer_nonsplit_u6_extension.py
+      - name: Compare regenerated certificates semantically
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          root=pathlib.Path('data'); snap=pathlib.Path('/tmp/pass4616_4623')
+          names=[
+            'PART_W33_PASS4616_EXPLICIT_45_E6_INTERTWINER.json',
+            'PART_W33_PASS4617_SENTINEL_MINIMUM_SHELL_TRANSPORT.json',
+            'PART_W33_PASS4618_OUTER_CANONICAL_U6_FACTOR.json',
+            'PART_W33_PASS4619_CONCRETE_D4_TRIALITY_W33_LIFTS.json',
+            'PART_W33_PASS4620_QMINUS_HERMITIAN_BINARY_RANK_REFORMULATION.json',
+            'PART_W33_PASS4621_SENTINEL_MINIMUM_SHELL_SELF_RECONSTRUCTION.json',
+            'PART_W33_PASS4622_PARTIAL_SPREAD_STABILIZER_PACKETS.json',
+            'PART_W33_PASS4623_OUTER_NONSPLIT_U6_EXTENSION.json']
+          for n in names:
+              a=json.loads((root/n).read_text()); b=json.loads((snap/n).read_text())
+              assert a==b, n
+          PY
+      - name: Run focused regression
+        run: PYTHONPATH=analysis pytest -q tests/test_w33_pass4616_4623_e6_sentinel_triality_rank.py
