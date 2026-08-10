@@ -1,0 +1,101 @@
+name: Passes 4697-4704 Affine Leech C8 Support12
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4689_three_39d_module_comparison.py'
+      - 'analysis/w33_pass4690_full_sextet_affine_group.py'
+      - 'analysis/w33_pass4691_explicit_leech_two_neighbor.py'
+      - 'analysis/w33_pass4692_c8_closed_local_mass_formulas.py'
+      - 'analysis/w33_pass4693_support12_transitivity_exact.py'
+      - 'analysis/w33_pass4694_golay_affine_u6_form_nogo.py'
+      - 'analysis/w33_pass4695_support12_minima_are_apartment_thickenings.py'
+      - 'analysis/w33_pass4696_thickening_span_even_apartment_subcode.py'
+      - 'analysis/PASS4697_4704_*'
+      - 'data/PART_W33_PASS4689_*'
+      - 'data/PART_W33_PASS469[0-6]_*'
+      - 'docs/affine-golay-leech-c8-support12.html'
+      - 'tests/test_w33_pass4697_4704_affine_leech_c8_support12.py'
+      - '.github/workflows/w33_pass4697_4704_affine_leech_c8_support12.yml'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - 'holonet_machine_blueprint.tex'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pass4697-4704-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-core:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check numpy pytest
+      - name: Frozen regression first
+        run: pytest -q tests/test_w33_pass4697_4704_affine_leech_c8_support12.py
+      - name: Recompute 39D, affine sextet, and Leech certificates
+        run: |
+          python analysis/w33_pass4689_three_39d_module_comparison.py | tee /tmp/pass4697.log
+          python analysis/w33_pass4690_full_sextet_affine_group.py | tee /tmp/pass4698.log
+          python analysis/w33_pass4691_explicit_leech_two_neighbor.py | tee /tmp/pass4699.log
+      - name: Recompute C8 and three outside-box certificates
+        run: |
+          python analysis/w33_pass4692_c8_closed_local_mass_formulas.py | tee /tmp/pass4700.log
+          python analysis/w33_pass4694_golay_affine_u6_form_nogo.py | tee /tmp/pass4702.log
+          python analysis/w33_pass4695_support12_minima_are_apartment_thickenings.py | tee /tmp/pass4703.log
+          python analysis/w33_pass4696_thickening_span_even_apartment_subcode.py | tee /tmp/pass4704.log
+      - name: Re-run frozen regressions
+        run: pytest -q tests/test_w33_pass4697_4704_affine_leech_c8_support12.py
+      - name: Safe public materializer dry-run
+        run: |
+          mkdir -p evidence/pass4697_4704
+          python tools/integrate_bt3376_bt3389.py --report evidence/pass4697_4704/site.json
+          test "$(grep -c 'id=\"pass4697-4704-affine-leech-c8-support12\"' docs/index.html)" -eq 1
+          grep -q '5,586,853,480' docs/affine-golay-leech-c8-support12.html
+      - uses: WtfJoke/setup-tectonic@v3
+        with: {github-token: '${{ secrets.GITHUB_TOKEN }}'}
+      - name: Compile canonical manuscripts
+        run: |
+          mkdir -p evidence/pass4697_4704
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass4697_4704/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pass4697-4704-core-evidence
+          path: |
+            evidence/pass4697_4704/**
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
+  support12-exhaustive:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install NumPy
+        run: python -m pip install --disable-pip-version-check numpy
+      - name: Recompute fixed-point support-12 census
+        run: python analysis/w33_pass4693_support12_transitivity_exact.py | tee /tmp/pass4701.log
+      - name: Verify exact support-12 checksums
+        run: |
+          python - <<'PY'
+          import json,math
+          d=json.load(open('data/PART_W33_PASS4693_SUPPORT12_TRANSITIVITY_EXACT.json'))
+          assert d['transitivity_reduction']['fixed_point_subsets']==math.comb(39,11)==1676056044
+          assert d['subsets']==math.comb(40,12)==5586853480
+          assert sum(d['spectrum'].values())==5586853480
+          assert len(d['spectrum'])==151
+          assert (d['minimum_weight'],d['minimum_count'])==(608,1620)
+          assert (d['maximum_weight'],d['maximum_count'])==(990,4320)
+          PY
