@@ -1,0 +1,140 @@
+% Passes 4640--4647: canonical D4/Schlaefli/spread/holonomy continuation.
+% Transient 4592--4599 files from this lane are noncanonical due namespace collision.
+\section{Passes 4640--4647: explicit triality, Schlaefli carriers, spread sheets, and cover holonomy}
+\label{sec:pass4640-4647}
+
+\paragraph{4640: the degree-27 half-spinor orbit is the Schlaefli carrier.}
+The previously unnamed $27$-orbit of maximal totally singular four-spaces is now
+identified by its actual $\mathrm{PSp}(4,3)$ action rather than by cardinality.
+A point stabilizer has order $960$, with subdegrees
+\[
+1,\ 10,\ 16.
+\]
+The degree-$16$ orbital is exactly
+\[
+\operatorname{SRG}(27,16,10,8),
+\qquad
+\operatorname{spec}=16^1\oplus4^6\oplus(-2)^{20},
+\]
+so this is the Schlaefli/cubic-surface-line permutation carrier.
+
+\paragraph{4641: explicit split-octonion $D_4$ triality.}
+Put the protected plus-type quotient into the split-octonion Zorn model over
+$\mathbf F_2$, with norm
+\[
+N(a,b,u,v)=ab+u\!\cdot\!v.
+\]
+For every one of the $135$ nonzero singular elements $x$, the left and right
+annihilators are $16$-element maximal totally singular four-spaces.  The two
+annihilator families contain $135+135$ distinct spaces and exhaust all $270$
+maximal singular generators.  After an explicit hyperbolic transport to the
+W33-derived $V_8$, the order-three map
+\[
+P(x)\longmapsto L\!\operatorname{Ann}(x)
+\longmapsto R\!\operatorname{Ann}(x)
+\longmapsto P(x)
+\]
+preserves all three outer-type incidence relations exactly.  Independently,
+the type-preserving centralizer of the embedded $\mathrm{PSp}(4,3)$ is $C_3$;
+together with the W33 outer similitude it gives
+\[
+(3\times \mathrm{PSp}(4,3)){:}2,
+\qquad |\cdot|=155520,
+\qquad N/\mathrm{PSp}(4,3)\cong S_3.
+\]
+The order-three type-cycling triality and this type-preserving normalizer are
+logically distinct constructions.
+
+\paragraph{4642: the selected $135_6$--$270_3$ incidence has one binary torsion defect.}
+For its incidence matrix $N\in\{0,1\}^{135\times270}$,
+\[
+\operatorname{rank}_{\mathbf Q}N=120,
+\qquad
+\operatorname{rank}_{\mathbf F_2}N=119,
+\]
+while the Smith nonzero invariants are exactly
+\[
+1^{119},\ 2^1.
+\]
+Thus the one-dimensional binary rank loss is explained by one and only one
+$\mathbf Z/2$ torsion factor; the cokernel is
+$\mathbf Z^{15}\oplus\mathbf Z/2$.
+The $\mathrm{PSp}(4,3)$ point action has a noncommutative rank-$9$ Schurian
+coherent configuration with subdegrees
+$1,1,1,12,12,12,32,32,32$.
+This pass also corrects the selected-line intersection spectrum to
+\[
+15^1\oplus9^{15}\oplus6^{20}\oplus3^{60}\oplus0^{24}\oplus(-3)^{150};
+\]
+the former multiplicity $165$ double-counted the $15$-dimensional point-gram
+nullity.
+
+\paragraph{4643 and 4646: three spread sheets and the cubic-line weld.}
+The three degree-$36$ half-spinor orbits are three genuine
+$\mathrm{PSp}(4,3)$-equivariant copies of the $36$ W33 spreads: a representative
+stabilizer has order $720$ and fixes exactly one spread.  The building-centralizer
+$C_3$ cycles the three sheets and the outer involution supplies a transposition,
+realizing $S_3$ on the sheet fiber.
+For the degree-$27$ orbit $X$ and any one sheet $Y$, the natural relation
+$|X\cap Y|=1$ gives a $27\times36$ matrix $R$ with
+\[
+\mathbf 1^TR=16\,\mathbf1^T,
+\qquad R\mathbf1=12\,\mathbf1,
+\qquad \operatorname{rank}_{\mathbf Q}R=21,
+\]
+and exact Gram laws
+\[
+RR^T=10I+2A_{27}+6J,
+\qquad
+R^TR=6I-2A_{36}+6J.
+\]
+These are precisely the previously frozen Schlaefli-line/double-six identities.
+After indexing all three sheets by their unique maps to the same spread carrier,
+\[
+R_1=R_2=R_3.
+\]
+Hence the combined coupling is $[R\ R\ R]$: it sees only the symmetric sheet
+mode and has a $72$-dimensional sheet-difference dark sector.
+
+\paragraph{4644: routing falsifier.}
+The selected point graph is a $135$-vertex, $12$-regular, diameter-$3$ router
+with shell profile $(1,12,56,66)$ and vertex/edge connectivity $12$.
+The selected-line graph is a $270$-vertex, $15$-regular, diameter-$3$ router
+with shell profile $(1,15,118,136)$ and vertex/edge connectivity $15$.
+These exact unweighted metrics outperform the Levi flag line graph on diameter
+and connectivity at larger address count; W33 itself remains the stronger compact
+$40$-address mixer.  Optical loss, latency, detector noise, weighted coupler cost,
+and fault-tolerance remain outside this finite comparison.
+
+\paragraph{4645: flat triality Fourier cycle.}
+For the centered cross-incidence matrices $D_{ij}=9M_{ij}-J$,
+\[
+D_{ij}D_{ij}^T=54^2E_{50},
+\qquad
+D_{PA}D_{AB}=54D_{PB}
+\]
+cyclically.  Normalizing by $54$ gives partial isometries whose three-cycle is
+exactly the identity projector on the active $50$-dimensional constituent.
+Thus the finite triality connection has trivial three-cycle holonomy; no Berry or
+optical phase is inferred.
+
+\paragraph{4647: apartment-cover monodromy.}
+The apartment map is the homogeneous six-sheet cover
+\[
+G/K\longrightarrow G/H,
+\qquad |G|=25920,\quad |K|=16,\quad |H|=96,
+\]
+from $1620$ apartments to $270$ selected singular lines.  The local monodromy
+image on the six sheets is the dihedral group $D_{12}$ of order $12$, with
+order census $1^1 2^7 3^2 6^2$.  The natural $3\times2$ block system records
+the three singular points of the selected line and the two apartment lifts over
+each point-line flag.  Its quotient is $S_3$, while the kernel is the central
+$C_2$ half-turn, acting fixed-point-freely by swapping the two lifts in every
+block.
+
+\paragraph{Evidence boundary.}
+All statements in this section are finite incidence, group-action, integral
+linear-algebra, graph-routing, or cover-monodromy results.  Equal dimensions are
+never used as identifications without an explicit action or intertwiner.  No
+particle-generation, physical-spinor, optical-phase, or laboratory-performance
+claim follows from these finite theorems alone.
