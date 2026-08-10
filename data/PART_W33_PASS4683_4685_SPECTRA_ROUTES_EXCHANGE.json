@@ -1,0 +1,215 @@
+{
+  "boundary": "4683's recoveries are exact integer arithmetic; 4684's incidence counts are exact but the joules multiply them by an assumed one erased bit per hop, which is an L5 policy choice and not a measurement; 4685 tests trace quantities only and does not reproduce the other track's walk masses",
+  "pass_4683_spectra": {
+    "H(3,4)": {
+      "charpoly": "(x - 12)*(x - 3)**20*(x + 3)**24",
+      "complete": true,
+      "degree": 12,
+      "n": 45,
+      "spectrum": {
+        "-3": 24,
+        "12": 1,
+        "3": 20
+      },
+      "traces_exact": true
+    },
+    "H(3,9)": {
+      "charpoly": "(x - 36)*(x - 8)**90*(x + 4)**189",
+      "complete": true,
+      "degree": 36,
+      "n": 280,
+      "spectrum": {
+        "-4": 189,
+        "36": 1,
+        "8": 90
+      },
+      "traces_exact": true
+    },
+    "Q(4,2)": {
+      "charpoly": "(x - 6)*(x - 1)**9*(x + 3)**5",
+      "complete": true,
+      "degree": 6,
+      "n": 15,
+      "spectrum": {
+        "-3": 5,
+        "1": 9,
+        "6": 1
+      },
+      "traces_exact": true
+    },
+    "Q(4,3)": {
+      "charpoly": "(x - 12)*(x - 2)**24*(x + 4)**15",
+      "complete": true,
+      "degree": 12,
+      "n": 40,
+      "spectrum": {
+        "-4": 15,
+        "12": 1,
+        "2": 24
+      },
+      "traces_exact": true
+    },
+    "Q(5,2)": {
+      "charpoly": "(x - 10)*(x - 1)**20*(x + 5)**6",
+      "complete": true,
+      "degree": 10,
+      "n": 27,
+      "spectrum": {
+        "-5": 6,
+        "1": 20,
+        "10": 1
+      },
+      "traces_exact": true
+    },
+    "Q(5,3)": {
+      "charpoly": "(x - 30)*(x - 2)**90*(x + 10)**21",
+      "complete": true,
+      "degree": 30,
+      "n": 112,
+      "spectrum": {
+        "-10": 21,
+        "2": 90,
+        "30": 1
+      },
+      "traces_exact": true
+    },
+    "W(3,2)": {
+      "charpoly": "(x - 6)*(x - 1)**9*(x + 3)**5",
+      "complete": true,
+      "degree": 6,
+      "n": 15,
+      "spectrum": {
+        "-3": 5,
+        "1": 9,
+        "6": 1
+      },
+      "traces_exact": true
+    },
+    "W(3,3)": {
+      "charpoly": "(x - 12)*(x - 2)**24*(x + 4)**15",
+      "complete": true,
+      "degree": 12,
+      "n": 40,
+      "spectrum": {
+        "-4": 15,
+        "12": 1,
+        "2": 24
+      },
+      "traces_exact": true
+    }
+  },
+  "pass_4684_landauer_J": 0.0,
+  "pass_4684_routes": {
+    "H(3,4)": {
+      "joules_per_route": 0.0,
+      "mean_hops": 1.727272727273,
+      "one_hop": 270,
+      "pairs": 990,
+      "relay_fraction": 0.727272727273,
+      "two_hop": 720
+    },
+    "H(3,9)": {
+      "joules_per_route": 0.0,
+      "mean_hops": 1.870967741935,
+      "one_hop": 5040,
+      "pairs": 39060,
+      "relay_fraction": 0.870967741935,
+      "two_hop": 34020
+    },
+    "Q(4,2)": {
+      "joules_per_route": 0.0,
+      "mean_hops": 1.571428571429,
+      "one_hop": 45,
+      "pairs": 105,
+      "relay_fraction": 0.571428571429,
+      "two_hop": 60
+    },
+    "Q(4,3)": {
+      "joules_per_route": 0.0,
+      "mean_hops": 1.692307692308,
+      "one_hop": 240,
+      "pairs": 780,
+      "relay_fraction": 0.692307692308,
+      "two_hop": 540
+    },
+    "Q(5,2)": {
+      "joules_per_route": 0.0,
+      "mean_hops": 1.615384615385,
+      "one_hop": 135,
+      "pairs": 351,
+      "relay_fraction": 0.615384615385,
+      "two_hop": 216
+    },
+    "Q(5,3)": {
+      "joules_per_route": 0.0,
+      "mean_hops": 1.72972972973,
+      "one_hop": 1680,
+      "pairs": 6216,
+      "relay_fraction": 0.72972972973,
+      "two_hop": 4536
+    },
+    "W(3,2)": {
+      "joules_per_route": 0.0,
+      "mean_hops": 1.571428571429,
+      "one_hop": 45,
+      "pairs": 105,
+      "relay_fraction": 0.571428571429,
+      "two_hop": 60
+    },
+    "W(3,3)": {
+      "joules_per_route": 0.0,
+      "mean_hops": 1.692307692308,
+      "one_hop": 240,
+      "pairs": 780,
+      "relay_fraction": 0.692307692308,
+      "two_hop": 540
+    }
+  },
+  "pass_4685_exchange": {
+    "constraint_survives": true,
+    "tests": [
+      {
+        "equal": false,
+        "k": 3,
+        "line": 1620,
+        "pair": "Q(5,2)/H(3,4)",
+        "point": 270
+      },
+      {
+        "equal": false,
+        "k": 4,
+        "line": 24300,
+        "pair": "Q(5,2)/H(3,4)",
+        "point": 13770
+      },
+      {
+        "equal": false,
+        "k": 3,
+        "line": 80640,
+        "pair": "Q(5,3)/H(3,9)",
+        "point": 6720
+      },
+      {
+        "equal": false,
+        "k": 4,
+        "line": 2096640,
+        "pair": "Q(5,3)/H(3,9)",
+        "point": 1021440
+      },
+      {
+        "equal": true,
+        "k": 3,
+        "line": 960,
+        "pair": "W(3,3)/Q(4,3)",
+        "point": 960
+      },
+      {
+        "equal": true,
+        "k": 4,
+        "line": 24960,
+        "pair": "W(3,3)/Q(4,3)",
+        "point": 24960
+      }
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "all_agree_with_published": true,
+  "boundary": "LC-class counts for n <= 6 are ENUMERATED here by union-find over all labelled graphs and agree with the published sequence; n = 7..9 are quoted, not computed. The reduction from 315,057,600 to 26 applies ONLY if the distillation condition is invariant under the full local Clifford group, which depends on whether the protocol fixes an input state or an input state up to local Clifford -- NOT settled here. Under copy permutation alone the reduction is at most 6x. This pass does not run the distillation search or claim a witness exists",
+  "conclusion": "the orbit reduction Pass 4680 recommended is worth 12,117,600x if the condition is local-Clifford invariant, taking the three-copy search from infeasible sampling to 26 exhaustive tests; the invariance is a premise about the protocol's definition and is stated as open rather than assumed",
+  "counts": [
+    {
+      "agrees": true,
+      "lc_classes": 1,
+      "n": 1,
+      "published": 1,
+      "reduction": 6.0,
+      "stabilizer_states": 6
+    },
+    {
+      "agrees": true,
+      "lc_classes": 2,
+      "n": 2,
+      "published": 2,
+      "reduction": 30.0,
+      "stabilizer_states": 60
+    },
+    {
+      "agrees": true,
+      "lc_classes": 3,
+      "n": 3,
+      "published": 3,
+      "reduction": 360.0,
+      "stabilizer_states": 1080
+    },
+    {
+      "agrees": true,
+      "lc_classes": 6,
+      "n": 4,
+      "published": 6,
+      "reduction": 6120.0,
+      "stabilizer_states": 36720
+    },
+    {
+      "agrees": true,
+      "lc_classes": 11,
+      "n": 5,
+      "published": 11,
+      "reduction": 220320.0,
+      "stabilizer_states": 2423520
+    },
+    {
+      "agrees": true,
+      "lc_classes": 26,
+      "n": 6,
+      "published": 26,
+      "reduction": 12117600.0,
+      "stabilizer_states": 315057600
+    }
+  ],
+  "premises": [
+    {
+      "premise": "qubit permutation across the 3 copies",
+      "reason": "the protocol treats the copies symmetrically by construction; relabelling copies maps a witness to a witness",
+      "verdict": "HOLDS"
+    },
+    {
+      "premise": "local Clifford on each qubit",
+      "reason": "holds iff the error model is Clifford-covariant (depolarizing is) AND the clean input is specified only up to local Clifford. If the protocol fixes a particular input state in a particular basis, local Cliffords move it and the orbit reduction does NOT apply at full strength",
+      "verdict": "CONDITIONAL"
+    },
+    {
+      "premise": "global phase / stabilizer-group vs state",
+      "reason": "maximal stabilizer groups and stabilizer states are in bijection, so counting either is the same count",
+      "verdict": "HOLDS"
+    }
+  ],
+  "published_sequence": {
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 6,
+    "5": 11,
+    "6": 26,
+    "7": 59,
+    "8": 182,
+    "9": 675
+  },
+  "search_space_n6": {
+    "lc_classes": 26,
+    "reduction_if_lc_invariant": 12117600.0,
+    "space_if_permutation_only": 52509600,
+    "stabilizer_groups": 315057600
+  }
+}

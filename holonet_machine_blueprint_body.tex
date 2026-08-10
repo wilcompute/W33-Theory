@@ -1376,8 +1376,10 @@ stationary distribution is exactly uniform --- \emph{no frame is preferred}.
 \]
 \end{spec}
 
-\headline{A frame forgets its origin by $1/e$ in $9.4$ instructions and is statistically
-gone after $15$ --- \textbf{$71.8$\,ns} at the measured $208.86$\,MHz.}
+\headline{A frame forgets its origin by $1/e$ in \textbf{$9.4$ instructions} and is
+statistically gone after \textbf{$15$} --- a count fixed at L1 by the geometry, on every
+realization. Only its conversion to time is part-specific: $71.8$\,ns at the measured
+$208.86$\,MHz on the iCE40, and something else on anything else.}
 
 \begin{spec}[And what the worst case actually looks like, Pass 2885]
 Only $188$ of $4{,}199{,}040$ elements sit at distance exactly $19$ --- $0.0045\%$. The
