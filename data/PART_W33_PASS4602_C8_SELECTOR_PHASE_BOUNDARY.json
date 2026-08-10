@@ -1,0 +1,11 @@
+{
+  "boundary": "Three anchors are exhausted exactly. A closed symbolic criterion in arbitrary (s,t) is still OPEN.",
+  "exact_anchors": {
+    "GQ(2,2)": {"C8_alone_selects_apartments":false,"apartment_coefficient":36,"collision":"60 K1,3 supports also coefficient36"},
+    "GQ(2,4)": {"C8_alone_selects_apartments":true,"apartment_coefficient":60,"apartments":1080,"coefficient60_supports":1080,"full_degree4_spectrum":{"0":75375,"4":6480,"6":25920,"10":12960,"12":2160,"16":9720,"24":1620,"32":12960,"36":720,"60":1080}},
+    "GQ(3,3)": {"C8_alone_selects_apartments":true,"apartment_coefficient":712,"apartments":1620}
+  },
+  "pass": 4602,
+  "phase_boundary": "the minimal GQ(2,2) collision disappears in GQ(2,4); C8-alone selection is not controlled by s=2 alone",
+  "universal_fallback": "C6 degree-two reconstructs line adjacency for every thick GQ, hence apartments as induced C4s"
+}
