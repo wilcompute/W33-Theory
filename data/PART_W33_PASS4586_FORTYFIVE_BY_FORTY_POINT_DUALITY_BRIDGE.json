@@ -1,0 +1,33 @@
+{
+  "boundary": "This is a finite incidence/duality bridge. It explicitly respects the fact that point-side and line-side W(3,3) are inequivalent G-sets at odd q.",
+  "column_gram": {
+    "different_from_protected_line_graph_Astar": true,
+    "exactly_point_graph": true,
+    "graph": "point-side W33 = SRG(40,12,2,4)",
+    "identity": "R^T R = 8 I40 + 2 A_point + J40",
+    "pair_intersections": {"1":540,"3":240}
+  },
+  "incidence": {
+    "binary_rank": 15,
+    "column_weight": 9,
+    "criterion": "all 3x3 cross pairs polar-orthogonal",
+    "cross_orthogonality_counts": {"3":1440,"9":360},
+    "row_weight": 8,
+    "shape": [45,40]
+  },
+  "mod2": {"RRt":"0","RtR":"J40"},
+  "objects": {
+    "anisotropic_line_definition": "three opposite-edge V8 classes in the K4 pencil through one original W33 point",
+    "point_pencil_anisotropic_lines": 40,
+    "singular_line_definition": "three singular V8 classes sharing one 16-line apartment support",
+    "singular_support_lines": 45
+  },
+  "pass": 4586,
+  "rediscovery_boundary": "The repository already contains natural 45-object carriers and an SRG(45,32,22,24). This pass constructs the 45-set and transport independently but does not claim identity with a prior E6/center-quad carrier until an explicit action intertwiner is certified.",
+  "row_gram": {
+    "graph": "SRG(45,32,22,24)",
+    "identity": "R R^T = 8 I45 + 2 A45",
+    "pair_intersections": {"0":270,"2":720}
+  },
+  "theorem": "The protected line-side O+(8,2) shell canonically generates a rank-15 45x40 incidence transport whose column Gram reconstructs the non-self-dual point-side W33 graph and whose row Gram reconstructs SRG(45,32,22,24)."
+}
