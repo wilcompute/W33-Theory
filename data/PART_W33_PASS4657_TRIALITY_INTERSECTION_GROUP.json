@@ -1,0 +1,37 @@
+{
+  "pass": 4657,
+  "W33_point_stabilizer": {
+    "order": 648,
+    "derived_series_orders": [648, 216, 54, 27, 3, 1],
+    "structure": "3^{1+2}:SL(2,3) = 3^{1+2}:2A4"
+  },
+  "triality_pair_intersection": {
+    "order": 216,
+    "center_order": 3,
+    "derived_order": 54,
+    "structure": "3^{1+2}:Q8",
+    "equals_W33_point_stabilizer_derived_subgroup": true
+  },
+  "extraspecial_radical": {
+    "order": 27,
+    "center_order": 3,
+    "derived_order": 3,
+    "nonidentity_element_order_census": {"3": 26},
+    "structure": "3_+^{1+2}"
+  },
+  "quotients": {
+    "intersection_mod_3radical": {
+      "order": 8,
+      "element_order_census": {"1": 1, "2": 1, "4": 6},
+      "isomorphism": "Q8"
+    },
+    "point_stabilizer_mod_3radical": {
+      "order": 24,
+      "element_order_census": {"1": 1, "2": 1, "3": 8, "4": 6, "6": 8},
+      "isomorphism": "SL(2,3)=2A4"
+    }
+  },
+  "tower": "3^{1+2}:Q8 (216) < 3^{1+2}:2A4 (648) < PSp(4,3) (25920)",
+  "theorem": "The order-216 pairwise intersection of triality-conjugate PSp(4,3) copies is exactly the derived subgroup of the W33 point stabilizer and has structure 3^{1+2}:Q8. The common order-27 radical is extraspecial of exponent three.",
+  "boundary": "Exact finite subgroup/action theorem; no physical interpretation is inferred."
+}
