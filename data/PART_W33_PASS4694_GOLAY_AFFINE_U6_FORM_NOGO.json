@@ -1,0 +1,9 @@
+{
+  "pass": 4694,
+  "module": "faithful 6D F2 translation module N of the Golay sextet section stabilizer K",
+  "K_order": 2160,
+  "invariant_quadratic_space_dimension": 0,
+  "invariant_bilinear_space_dimension": 0,
+  "theorem": "The faithful Golay sextet translation module has no nonzero K-invariant quadratic form and no nonzero K-invariant bilinear form. It is therefore not an orthogonal six-space and cannot be identified with the cubic O^-(6,2) module U6.",
+  "boundary": "Exact negative representation theorem. It does not exclude more indirect functors, subquotients, or nonlinear relations between the Golay and cubic six-dimensional constructions."
+}
