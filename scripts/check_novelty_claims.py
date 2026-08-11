@@ -45,9 +45,19 @@ ENCYCLOPEDIA = [
 # every file in the repo, which is the noise failure both other guards were calibrated
 # away from.
 NOVELTY = re.compile(
+    # Two corrections from the Pass 4802 self-test, which is what a self-test is for.
+    #
+    #  1. "does not appear to be new" was IN this list. That is an author DISCLAIMING
+    #     novelty -- the opposite of the thing being detected -- so the guard fired on
+    #     exactly the sentences that were being careful and stayed silent on the careless
+    #     ones. Removed, and disclaimers are now excluded explicitly below.
+    #  2. "is the first X" was absent, and it is the commonest way anyone claims novelty
+    #     in this corpus. "first time" was present and does not cover it.
     r"(appears? to be absent|not in the corpus|no prior art|new to (?:me|this repo|the repo)"
     r"|nobody has (?:stated|noticed|said)|has never been|is not stated|unstated elsewhere"
-    r"|does not appear to be new|first time|novel(?:ty)? claim)",
+    r"|first time|novel(?:ty)? claim"
+    r"|(?:is|are|appears? to be|seems? to be|remains?) the first\b"
+    r"|we are the first|for the first time|hitherto (?:unknown|unnoticed|unstated))",
     re.I,
 )
 
@@ -64,6 +74,12 @@ STOPWORDS = {
     "What", "Which", "Where", "When", "Its", "Their", "Recorded", "Scope", "Still",
     "Prior", "Open", "Verified", "Proved", "Measured", "Built",
 }
+
+
+DISCLAIM = re.compile(
+    r"(does not appear to be new|is not new|not novel|already known|"
+    r"known in the literature|classical|standard result|not claimed to be new|"
+    r"has prior art|previously (?:known|established|published))", re.I)
 
 
 def load_encyclopedia() -> dict[str, str]:
@@ -86,6 +102,8 @@ def check(path: Path, enc: dict[str, str]) -> list[str]:
     for ln, line in enumerate(lines, 1):
         if not NOVELTY.search(line):
             continue
+        if DISCLAIM.search(line):
+            continue        # the author is saying it is NOT new
         # tokens on this line and the one before it
         window = " ".join(lines[max(0, ln - 2):ln + 1])
         toks = {t for t in TOKEN.findall(window) if t not in STOPWORDS and len(t) > 2}
@@ -110,7 +128,67 @@ def _safe(t: str) -> str:
     return t.encode("ascii", "replace").decode("ascii")
 
 
+
+def selftest() -> int:
+    """Planted novelty claims this guard must catch, and text it must ignore.
+
+    Added Pass 4802. CLAUDE.md's failure mode 5 -- rediscovery -- is the one it calls the
+    most expensive and the only one that cannot be self-checked, because novelty is a
+    property of the CORPUS rather than of the claim. This guard is the corpus-side half of
+    that, and it had no test, so a silent run proved nothing about whether it can see a
+    novelty assertion at all.
+
+    The encyclopedia is stubbed here rather than loaded: the point is to pin the DETECTOR,
+    and using the real docs/index.html would make the test depend on a 6 MB file that
+    changes for unrelated reasons.
+    """
+    import tempfile
+
+    enc = {"stub_encyclopedia": "the Suzuki-Tits ovoid and the Hoffman ratio bound "
+                                "appear here, as does PSU(4,2)"}
+    cases = [
+        ("planted: novelty + known token",
+         "This appears to be the first construction of the Suzuki-Tits ovoid here.", True),
+        ("planted: 'no prior art' phrasing",
+         "No prior art exists for our use of the Hoffman ratio bound in this setting.",
+         True),
+        ("clean: novelty, unknown token",
+         "This appears to be new: the tricategorical widget has no precedent.", False),
+        ("clean: known token, no novelty claim",
+         "We recall the Suzuki-Tits ovoid and the Hoffman ratio bound from the literature.",
+         False),
+    ]
+    ok = True
+    print("  selftest -- planted-fault recall\n")
+    tmp = Path(tempfile.mkdtemp(prefix="novelty_"))
+    for name, text, want in cases:
+        f = tmp / "case.md"
+        f.write_text(text + "\n", encoding="utf-8")
+        got = bool(check(f, enc))
+        good = got == want
+        ok &= good
+        print(f"    {name:34s} flagged={str(got):5s} want={str(want):5s} "
+              f"{'PASS' if good else 'FAIL'}")
+    print("""
+  BOTH CLEAN CASES ARE NECESSARY AND THEY FAIL DIFFERENTLY. The third has the novelty
+  phrasing and no token the encyclopedia knows -- a genuinely new claim, which must pass.
+  The fourth has the tokens and no novelty phrasing -- ordinary citation, which must also
+  pass. A guard missing either half is useless in opposite directions: one that flags on
+  phrasing alone fires on every honest "this is new", and one that flags on tokens alone
+  fires on every literature review.
+
+  ITS LIMIT, AND CLAUDE.md STATES IT ALREADY: this catches EXPLICIT novelty assertions
+  only. Four of the six rediscoveries that motivated the guard were implicit framing --
+  a result presented as new by context and never claimed as new in a sentence -- and no
+  regex sees those.""")
+    import shutil
+    shutil.rmtree(tmp, ignore_errors=True)
+    return 0 if ok else 1
+
+
 def main(argv: list[str]) -> int:
+    if "--selftest" in argv:
+        return selftest()
     args = [a for a in argv if not a.startswith("--")]
     paths = [Path(a) for a in args] or sorted((ROOT / "analysis").glob("w33_pass27*.md"))
     enc = load_encyclopedia()
