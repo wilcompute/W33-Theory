@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>W33 Passes 4809–4816 — Golay / Levi / decoder continuation</title><style>body{max-width:980px;margin:40px auto;padding:0 22px;font:17px/1.55 system-ui,sans-serif;color:#161616}code{background:#f2f2f2;padding:.1em .25em;border-radius:4px}h1,h2{line-height:1.15}.eq{font-family:Georgia,serif;text-align:center;font-size:1.15em;margin:1.3em}.note{border-left:4px solid #777;padding:.5em 1em;background:#f7f7f7}.good{border-left:4px solid #237a36;padding:.5em 1em;background:#f3fbf5}table{border-collapse:collapse;width:100%}th,td{border:1px solid #ccc;padding:.45em .6em;text-align:left}</style></head><body>
+<h1>Passes 4809–4816: complete K₃,₃ homology shell, Golay decoder, and orientation cover</h1>
+<p>This page records exact finite computations in the W33/GQ(4,2) qutrit-code program. The central filtration is</p>
+<div class="eq">C ⊂ L = G₁₀<sup>⊕27</sup> ⊂ C<sup>⊥</sup>, &nbsp; C<sup>⊥</sup>/L ≅ H₁(Levi(GQ(4,2)); F₃).</div>
+<h2>Complete first nonlocal shell</h2>
+<p>The quotient minimum lift weight is six. Exhaustion of every total-cost-six local-state pattern leaves exactly <strong>360 projective classes</strong>, all induced K₃,₃ configurations. Mixed cost-1/cost-2 patterns do not occur. The 360 classes form one PSp(4,3) orbit with stabilizer 72 and one orbit under the full order-51840 outer action with stabilizer 144.</p>
+<h2>Exact hierarchical decoder</h2>
+<p>Each ten-coordinate punctured-Golay fiber has 81 point-syndrome states with minimum lift-cost census <strong>1 at cost 0, 20 at cost 1, 60 at cost 2</strong>. Exact Hamming-weight decoding of one ternary X- or Z-component therefore reduces to 27 local state choices plus 45 global point-sum constraints.</p>
+<table><tr><th>Exact error weight</th><th>Syndrome multiplicities</th><th>Interpretation</th></tr><tr><td>2</td><td>1×140400, 3×1620</td><td>All ambiguity is same-fiber punctured Golay.</td></tr><tr><td>3</td><td>1×23385600, 2×7200, 3×842400, 12×2160</td><td>The 7200 twofold classes are the first global ambiguity and come exactly from K₃,₃ weight-six logicals.</td></tr></table>
+<p class="note">Boundary: this is exact component decoding. Separately minimizing X and Z Hamming weights is not asserted to minimize joint qutrit Pauli support.</p>
+<h2>Golay extension directions form an orientation cover</h2>
+<p>On one K₅ fiber, the two projective G₁₀→G₁₁ extension directions transform by the sign character of S₅: even point permutations preserve each direction, odd point permutations exchange them. Globally this produces a 54-object double cover: PSp(4,3) has two 27-sheets and the full outer group is transitive on all 54.</p>
+<div class="eq">W(E₆)/(2⁴:A₅) → W(E₆)/(2⁴:S₅).</div>
+<p>The base stabilizer has order 1920 and structure 2⁴:S₅; a direction stabilizer has order 960 and structure 2⁴:A₅. Choosing one PSp sheet gives <code>27 G11 = [297,162,5]₃</code>; adjoining both gives the self-dual <code>27 G12 = [324,162,6]₃</code>.</p>
+<p class="note">This orientation twist blocks an untwisted identification with two independent full-W(E₆) 27-sets. Any representation-theoretic identification with 27/dual-27 requires an explicit intertwiner.</p>
+<h2>K₃,₃ multidesign and decoder reconstruction</h2>
+<p>Across the 360 projective minima, the 27 line fibers, 45 GQ points, and 270 physical triangle coordinates have replications <strong>80, 72, and 8</strong>. Adjacent line pairs occur 24 times; nonadjacent pairs occur 10 times. Every one of the 720 independent triples in the 27-line graph is one side of a unique K₃,₃, and every induced K₁,₃ has a unique K₃,₃ completion.</p>
+<p>Each projective K₃,₃ has two nonzero scalars and ten unordered 3+3 support partitions, hence 20 exactly-twofold weight-three collision classes. Therefore <strong>360×20=7200</strong>, exactly the complete twofold decoder census. Subtracting the two colliding errors reconstructs the signed weight-six logical, so decoder ambiguity intrinsically reconstructs the whole first nonlocal shell.</p>
+<h2>q=9 shell under PSp(4,9)</h2>
+<p>The complete q=9 BLT/minimum-shell classes remain exactly three after restricting from full projective-semilinear orthogonal equivalence to PSp(4,9):</p>
+<table><tr><th>Class</th><th>PSp orbit size</th><th>PSp stabilizer</th></tr><tr><td>Linear</td><td>239112</td><td>7200</td></tr><tr><td>K1</td><td>1195560</td><td>1440</td></tr><tr><td>Fi/Mondello</td><td>17216064</td><td>100</td></tr></table>
+<p class="note">Prior-art firewall: Betten supplies the BLT classification, names, completeness, representatives, and full semilinear stabilizers. The repository result here is the evaluation of the outer quotient and the conclusion that no class splits further under PSp.</p>
+<h2>H10 deep-hole boundary</h2>
+<p>The exact covering radius remains 14. One certified deep-hole coset orbit contains 12960 cosets; a representative has 64 weight-14 leaders and coset distribution 64,128,192,256,192,128,64 on weights 14,16,18,20,22,24,26. An exact 30-bit quotient-SAT orbit classifier is committed and blocks complete PSp coset orbits before resolving the next candidate.</p>
+<p class="good"><strong>Release boundary:</strong> this page does not claim the 12960-coset orbit is the complete deep-hole set unless the final orbit-blocked SAT instance has been frozen as UNSAT.</p>
+<p><a href="index.html">Back to the W33 research index</a></p>
+</body></html>
