@@ -1,0 +1,12 @@
+{
+  "pass": 4824,
+  "Levi_H1": {"field":"F2","dimension":64,"PSp_image_order":25920,"fixed_dimension":0,"coinvariant_dimension":0},
+  "flag_H1": {"dimension":5671,"trivial_socle_dimension":4,"trivial_head_dimension":1},
+  "Hom_obstruction": {
+    "Hom_PSp_trivial_to_Levi_H1_dimension":0,
+    "Hom_PSp_Levi_H1_to_trivial_dimension":0,
+    "nonzero_transfer_from_flag_trivial_socle_to_Levi_H1":false
+  },
+  "theorem":"The binary GQ Levi homology has neither a PSp-fixed vector nor a trivial quotient. Hence the four-dimensional characteristic-two trivial socle of flag H1 cannot transfer equivariantly into Levi H1, and Levi H1 cannot map equivariantly onto a trivial line.",
+  "boundary":"Exact linear PSp-module obstruction; nonlinear correspondences or maps through larger induced modules are not excluded."
+}
