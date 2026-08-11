@@ -98,3 +98,4 @@ jobs:
           fi
       - name: Enforce final status after evidence is preserved
         run: test "$(cat analysis/PASS4817_4824_RUN.status)" -eq 0
+# Retriggered after the frozen 4819--4824 certificates and shared frontier integration were installed.
