@@ -1,0 +1,117 @@
+{
+  "boundary": "scoping to 'another lane' is by filename pattern -- BT-numbered files, their reserved PASS ranges, and .g sources -- which will misattribute any file whose name does not follow those conventions. Silence from a guard is NOT evidence the files are clean; it means no pattern in this set matched, and the set encodes one author's failure modes",
+  "guards_firing": 2,
+  "guards_run": 15,
+  "interpretation": "findings mean the fault classes generalise beyond their author; silence means the set may be fitted to one author's habits, and is not evidence of clean files",
+  "other_lane_files": 2225,
+  "rows": [
+    {
+      "findings": 0,
+      "hook": "stale-boundaries",
+      "sample": [],
+      "seconds": 4.9,
+      "their_files": 1195
+    },
+    {
+      "findings": 0,
+      "hook": "shifted-adjacency-descendants",
+      "sample": [],
+      "seconds": 0.3,
+      "their_files": 1921
+    },
+    {
+      "findings": 0,
+      "hook": "tag-540-check",
+      "sample": [],
+      "seconds": 0.4,
+      "their_files": 1921
+    },
+    {
+      "findings": 0,
+      "hook": "pass-namespace-collision-guard",
+      "sample": [],
+      "seconds": 0.2,
+      "their_files": 2208
+    },
+    {
+      "findings": 0,
+      "hook": "s-min-formula-guard",
+      "sample": [],
+      "seconds": 0.2,
+      "their_files": 1566
+    },
+    {
+      "findings": 0,
+      "hook": "topical-aliases",
+      "sample": [],
+      "seconds": 3.0,
+      "their_files": 1655
+    },
+    {
+      "findings": 10,
+      "hook": "certificate-digests",
+      "sample": [],
+      "seconds": 0.3,
+      "their_files": 346
+    },
+    {
+      "findings": 4,
+      "hook": "novelty-claims",
+      "sample": [
+        "BT1056_chain_native_Q_operator.md:13",
+        "BT1299_harmonic_microframe_runtime.md:87"
+      ],
+      "seconds": 0.3,
+      "their_files": 1195
+    },
+    {
+      "findings": 0,
+      "hook": "rediscovery",
+      "sample": [],
+      "seconds": 0.5,
+      "their_files": 1197
+    },
+    {
+      "findings": 0,
+      "hook": "search-power",
+      "sample": [],
+      "seconds": 0.3,
+      "their_files": 1197
+    },
+    {
+      "findings": 0,
+      "hook": "layer-conformance",
+      "sample": [],
+      "seconds": 0.6,
+      "their_files": 368
+    },
+    {
+      "findings": 0,
+      "hook": "regex-deadends",
+      "sample": [],
+      "seconds": 0.2,
+      "their_files": 2
+    },
+    {
+      "findings": 0,
+      "hook": "retraction-propagation",
+      "sample": [],
+      "seconds": 0.4,
+      "their_files": 1565
+    },
+    {
+      "findings": 0,
+      "hook": "stdlib-shadow",
+      "sample": [],
+      "seconds": 0.2,
+      "their_files": 2
+    },
+    {
+      "findings": 0,
+      "hook": "heredoc-regex",
+      "sample": [],
+      "seconds": 0.2,
+      "their_files": 2
+    }
+  ]
+}
