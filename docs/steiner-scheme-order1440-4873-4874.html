@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Exact Pass 4873–4874 separation of two order-1440 groups and the four-class Steiner refinement of W(3,3).">
+  <title>Passes 4873–4874 — two order-1440 groups and the Steiner scheme</title>
+  <style>
+    :root{color-scheme:dark;--bg:#08111c;--panel:#101c2a;--line:#2b435c;--ink:#eef5ff;
+      --muted:#a8b9cb;--cyan:#67e8d4;--blue:#91c7ff;--rose:#fb7185}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);
+      font:16px/1.62 Inter,ui-sans-serif,system-ui,sans-serif}
+    main{width:min(1020px,calc(100% - 36px));margin:auto;padding:42px 0 68px}a{color:var(--blue)}
+    h1,h2{line-height:1.14}h1{font-size:clamp(2.15rem,6vw,4.5rem);letter-spacing:-.04em;margin:.3rem 0 1rem}
+    .eyebrow{color:var(--cyan);font-weight:800;text-transform:uppercase;letter-spacing:.11em}
+    .lede{font-size:1.13rem;color:#cad7e7;max-width:850px}.grid{display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin:24px 0}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:19px}
+    .metric{font:800 1.5rem/1.2 ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--cyan)}
+    .eq{overflow:auto;background:#050b12;border:1px solid var(--line);border-radius:11px;padding:14px 16px;
+      font:1rem/1.55 ui-monospace,SFMono-Regular,Consolas,monospace}
+    .boundary{border-left:4px solid var(--rose);background:#24131b;padding:15px 18px}
+    table{width:100%;border-collapse:collapse;margin:1rem 0}th,td{padding:.65rem;border:1px solid var(--line);text-align:left}
+    code{background:#172437;padding:.12em .3em;border-radius:4px}footer{margin-top:42px;border-top:1px solid var(--line);padding-top:18px;color:var(--muted)}
+  </style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">← Back to the W33 atlas</a></p>
+  <div class="eyebrow">Passes 4873–4874 · exact finite certificates</div>
+  <h1>One number hid two groups. Four relations expose the Steiner cover.</h1>
+  <p class="lede">The marked-double-six residue and the exceptional outer automorphism of
+    S<sub>6</sub> both produce order 1440, but not the same group. Separately, the 120 Steiner
+    triangles carry a complete imprimitive four-class association scheme whose quotient is
+    exactly W(3,3).</p>
+
+  <div class="grid">
+    <div class="card"><div class="metric">1440 ≠ identification</div><p>different centers, involution counts, and element orders</p></div>
+    <div class="card"><div class="metric">120 = 40 × 3</div><p>forty intrinsic three-element Steiner fibers</p></div>
+    <div class="card"><div class="metric">1, 2, 27, 36, 54</div><p>exact scheme valencies</p></div>
+    <div class="card"><div class="metric">1+24+15 | 20+60</div><p>fiber-constant W33 sector | transverse sector</p></div>
+  </div>
+
+  <h2>Pass 4873: the two order-1440 extensions are nonisomorphic</h2>
+  <table>
+    <thead><tr><th>Carrier</th><th>Group</th><th>Center</th><th>Involutions</th><th>Order-8 elements</th></tr></thead>
+    <tbody>
+      <tr><td>marked double-six residue</td><td>S<sub>6</sub> × C<sub>2</sub></td><td>2</td><td>151</td><td>0</td></tr>
+      <tr><td>duad–syntheme outer action</td><td>Aut(S<sub>6</sub>) = S<sub>6</sub>:Out(S<sub>6</sub>)</td><td>1</td><td>111</td><td>360</td></tr>
+    </tbody>
+  </table>
+  <p>The first C<sub>2</sub> is the central operation that fixes duads and complements
+    triads. The second is the exceptional outer-automorphism direction, certified by sending
+    a transposition to a triple transposition. Their common order is a count coincidence, not
+    a group identification.</p>
+
+  <h2>Pass 4874: the complete Steiner association scheme</h2>
+  <p>The four nonidentity relations on the 120 Steiner triangles have the exact meanings:</p>
+  <div class="eq">R₁: 120 pairs, valency 2  = forty K₃ fibers
+R₂: 1620 pairs, valency 27 = a perfect matching across each nonedge fiber pair
+R₃: 2160 pairs, valency 36 = all nine pairs across each W33 edge
+R₄: 3240 pairs, valency 54 = the complementary six pairs across each nonedge</div>
+  <p>The exact first eigenmatrix is</p>
+  <div class="eq">[ 1,  2, 27,  36, 54]
+[ 1,  2, -3,   6, -6]
+[ 1,  2,  3, -12,  6]
+[ 1, -1,  9,   0, -9]
+[ 1, -1, -3,   0,  3]</div>
+  <p>with primitive multiplicities <code>1,24,15,20,60</code>. The first three sectors
+    are the 40-dimensional fiber-constant W33 Bose–Mesner module: dividing the lifted
+    adjacency eigenvalues <code>36,6,−12</code> by the fiber size three recovers
+    <code>12,2,−4</code>. The transverse 80-space splits as <code>20+60</code> and is
+    annihilated by the W33 adjacency lift.</p>
+
+  <h2>Reproduce</h2>
+  <pre class="eq"><code>python3 analysis/w33_pass4873_two_order1440_extensions.py
+python3 analysis/w33_pass4874_steiner_w33_association_scheme.py</code></pre>
+  <ul>
+    <li><a href="https://github.com/wilcompute/W33-Theory/blob/master/data/PART_W33_PASS4873_TWO_ORDER1440_EXTENSIONS.json">Pass 4873 certificate</a></li>
+    <li><a href="https://github.com/wilcompute/W33-Theory/blob/master/data/PART_W33_PASS4874_STEINER_W33_ASSOCIATION_SCHEME.json">Pass 4874 certificate</a></li>
+    <li><a href="pass4870-steiner-w33-quadratic.html">Preceding Pass 4870 three-cover and quadratic bridge</a></li>
+  </ul>
+
+  <div class="boundary"><strong>Evidence boundary.</strong> The association relations,
+    including the 3+6 refinement over every W33 nonedge, are canonical. Naming the three
+    elements inside each fiber is additional gauge or coordinate data. The group theorem
+    distinguishes two finite actions but selects neither as a physical symmetry. The complete
+    <code>[360,36,20]₂</code> weight enumerator is closed, but its covering radius remains open
+    at the certified bound <code>124 ≤ ρ(K) ≤ 179</code>.</div>
+
+  <footer>Finite group and association-scheme certificates only; no selected physical
+    coupling, continuum normalization, hardware implementation, or preferred fiber gauge is inferred.</footer>
+</main>
+</body>
+</html>

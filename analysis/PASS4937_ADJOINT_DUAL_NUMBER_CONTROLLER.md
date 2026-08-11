@@ -32,6 +32,13 @@ v\longmapsto vA_g+w,
 This is an exact finite controller candidate. No HoloBox instruction currently
 executes that update.
 
+The subsequently merged Pass 4871 gives an independent, stronger provenance
+statement for the same Lie bracket: it is the unique nonzero equivariant
+alternating product on the incidence-derived ten-space, up to
+\(\mathbb F_3^\times\) scalar. Pass 4872 separately compiles each of the 45
+local \(S_3\) sheet-to-port choices as one trit plus one bit. Neither result
+already contains the global ten-trit affine offset register constructed here.
+
 ## Why dual numbers appear
 
 Let
@@ -139,6 +146,11 @@ receipt or panel trace into \(w\).
 - Pass 4864 owns the explicit \(Q_{10}\cong\mathfrak{sp}_4(\mathbb F_3)\)
   intertwiner and Lie bracket.
 - Pass 4861 owns the minimal port matching and residual global \(PGSp(4,3)\).
+- Pass 4871 owns the incidence-intrinsic uniqueness of the bracket; it
+  cross-certifies, rather than replaces, the Pass-4864 coordinate model.
+- Pass 4872 owns the qutrit-plus-bit compiler for the 45 local port matchings;
+  that local table is distinct from this pass's global ten-trit correction
+  register.
 - The tangent-space description of classical groups over dual numbers is
   standard mathematics. The repository-specific advance is its explicit
   composition with the certified W33 quotient, port-matching boundary, group
