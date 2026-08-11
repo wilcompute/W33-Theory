@@ -1,0 +1,80 @@
+\subsection{Passes 4849--4856: the $E_6$ switching code, orbital algebra, and oriented ternary lift}
+\label{subsec:pass4849-4856}
+
+The one-dimensional gap left in Pass~4848 admits an exact geometric resolution.  Let $M$ be the $1080\times360$ binary incidence matrix between Levi eight-cycles and induced $K_{3,3}$ witnesses, and let
+\[
+K=\ker_{\mathbb F_2}M=[360,36,20]_2.
+\]
+Its $36$ minimum words are exactly the twelve-line $K_{6,6}$-minus-matching carriers.  Cross-certification with Pass~4659 identifies these carriers objectwise with the classical $36$ cubic-surface double-sixes.  Every $K_{3,3}$ lies in exactly two such carriers, so the $36\times360$ minimum-shell incidence matrix is the vertex--edge incidence matrix of
+\[
+H_{36}=\operatorname{SRG}(36,20,10,12),
+\]
+whose complement is the previously certified $\operatorname{SRG}(36,15,6,6)$ double-six overlap graph.  Consequently the minimum shell spans the $35$-dimensional binary cut code of $H_{36}$.
+
+An independent construction from the $E_6$ Cartan matrix produces $72$ roots and $36$ projective root pairs.  Their nonorthogonality graph $|\langle r,s\rangle|=1$ is explicitly isomorphic to $H_{36}$, and under this isomorphism the full order-$51840$ action on the double-sixes is conjugate to the Weyl action $W(E_6)$ on projective roots.  Choosing a positive root from each pair and recording the edges with negative root inner product gives a weight-$120$ vector $\sigma_{E_6}\in K$ with
+\[
+K=\operatorname{Cut}(H_{36})+\langle\sigma_{E_6}\rangle.
+\]
+The corresponding signed adjacency matrix has spectrum $10^6+(-2)^{30}$, and $2I+B$ is the rank-six projective-root Gram matrix with nonzero spectrum $12^6$.
+
+The nontrivial switching coset has exact minimum $120$.  If $N_-$ is the number of negative nonorthogonal pairs among one representative from each projective root pair, then
+\[
+\Bigl\|\sum r\Bigr\|^2=792-4N_-.
+\]
+For a positive $E_6$ root system, $\sum r=2\rho$ and $\|2\rho\|^2=312$, giving $N_-=120$.  Equality orientations are Weyl chambers; opposite chambers yield the same edge signing.  Hence the complete coset-minimum shell has $51840/2=25920$ words.  The full group is transitive on them with stabilizer two, while $PSp(4,3)$ splits them into two orbits of $12960$.
+
+The characteristic-two extension
+\[
+0\longrightarrow \operatorname{Cut}(H_{36})
+\longrightarrow K\longrightarrow \mathbb F_2\longrightarrow0
+\]
+is nonsplit for both $PSp(4,3)$ and its full outer extension.  Both groups are transitive on the $360$ coordinates, so the ambient fixed space is the all-one line; that vector is not in $K$ because every defining incidence row has odd weight three.  Thus the trivial quotient has no fixed lift.  The dual code is
+\[
+K^\perp=[360,324,3]_2,
+\]
+and its $1080$ minimum words are precisely the $E_6$-sign-even triangles of $H_{36}$, equivalently the binary Levi cycles.  The exact low shell below weight $64$ is
+\[
+A_{20}=36,\quad A_{38}=360,\quad A_{40}=270,\quad
+A_{54}=1200,\quad A_{56}=3240,\quad A_{58}=2160,\quad A_{60}=540.
+\]
+The full coordinate automorphism group of $K$ has order $51840$ and is the certified $W(E_6)\cong PGSp(4,3)$ action on projective roots/double-sixes.  Maximum-likelihood decoding reduces to two signed switching/MaxCut problems on $H_{36}$, one for each cut-code coset; $d=20$ gives bounded-distance radius nine.
+
+The $1080$-point Levi-minimum orbital algebras can also be resolved exactly.  For $PSp(4,3)$ the orbital algebra has dimension $59$ and center dimension $15$, with complex Wedderburn type
+\[
+\mathbb C^7\times M_2(\mathbb C)^4\times M_3(\mathbb C)^4
+\]
+and rational center
+\[
+\mathbb Q^9\times\mathbb Q(\sqrt{-3})^3.
+\]
+For the full $PGSp$ action the corresponding values are dimension $49$, center dimension $13$, and
+\[
+\mathbb C^6\times M_2(\mathbb C)^4\times M_3(\mathbb C)^3,
+\qquad
+Z(\mathcal A_{\mathbb Q})\cong\mathbb Q^{13}.
+\]
+Thus the outer involution fuses ten stabilizer orbitals and removes the three Eisenstein center factors.  The $K_{3,3}$ incidence Gram operator is especially sparse in the full orbital basis,
+\[
+MM^T=3A_0+A_1+A_5,
+\]
+but is not central; its commutant inside the $49$-dimensional orbital algebra has dimension $27$.  Split-versus-division status of every noncommutative rational simple block is not asserted without explicit rational matrix units.
+
+The residual three-sheet symmetry in the $[2025,399,14]_2$ code is likewise resolved, but as a falsifier of the earlier goal.  The $S_3^{45}$ action is a genuine automorphism subgroup of the complete classical code: the three sheet cells over every recovered $GQ(4,2)$ point are identical copies with the same outer labels.  Together with arbitrary permutations inside equal generator-column classes, the full coordinate automorphism structure is
+\[
+\bigl(S_4^{405}\times S_3^{135}\bigr)
+\rtimes
+\bigl(S_3^{45}\rtimes PGSp(4,3)\bigr).
+\]
+No higher intrinsic codeword or dual shell can remove this sheet kernel; breaking it requires structure external to the binary code, such as fixed placement, timing, dynamics, or labels.
+
+Finally, the binary cycle--$K_{3,3}$ incidence has a precise but twisted ternary lift.  Pass~4807 gives
+\[
+C^\perp/\bigoplus_{27}G_{10}
+\cong H_1(\operatorname{Levi}(GQ(4,2));\mathbb F_3),
+\qquad \dim=64.
+\]
+The $1080$ projective Levi eight-cycle lines span all $64$ dimensions, while the $360$ canonical projective $K_{3,3}$ weight-six witnesses span only $54$, leaving a ten-dimensional quotient.  The unweighted $1080\times360$ incidence matrix has ternary rank $359$ and kernel $\langle\mathbf1\rangle$, but an exact sign-gauge feasibility test proves that no choice of projective $\pm$ orientations makes the signed sum of all $360$ homology witnesses vanish.  Hence the unweighted projective incidence quotient cannot factor linearly to the $K_{3,3}$ homology map.
+
+The correct object is the oriented $720$-object double cover: deck reversal acts by $-1$, and the anti-invariant map sending an oriented $K_{3,3}$ to its signed $18$-edge Levi flow is $PGSp$-equivariant with rank $54$ and kernel dimension $306$.  Via the Pass~4807 isomorphism this gives a canonical $54$-dimensional subspace of the nonlocal ternary Golay/Levi logical quotient.  The complementary ten dimensions are left unidentified pending an explicit module-theoretic construction.
+
+All statements in this subsection are exact finite root, graph, code, group, and homology results.  No physical $E_6$ field, particle assignment, hardware clock depth, or experimental threshold is inferred.
