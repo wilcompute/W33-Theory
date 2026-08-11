@@ -1,0 +1,19 @@
+{
+  "pass": 4834,
+  "code": "[2025,399,14]_2",
+  "schedule_model": "canonical sparse 1620 local check basis; global W6 checks may choose arbitrary representatives inside each fourfold cold repetition class",
+  "optimal_schedule_depth": 3,
+  "lower_bound": 3,
+  "lower_bound_proof": "With the fixed sparse local basis, every K6-cell local conflict graph is connected bipartite, so its two-coloring is unique up to swap. In every fourfold cold repetition class e0,e1,e2 are occupied by local checks of both colors and e3 is available in only one color. Thus in any two-layer extension at most one global sparse representative can use a given logical class. The six W6 basis supports would have to be pairwise disjoint on the 27 outer coordinates, so their total outer weight would be at most 27, but W6 has minimum weight 12 and any six-word basis has total weight at least 72.",
+  "witness_outer_basis_masks": [49566025,82588050,123565340,90843305,42620585,19196967],
+  "outer_basis_weights": [12,12,16,12,12,12],
+  "outer_coordinate_multiplicity_census": {"1":4,"2":6,"3":8,"4":9},
+  "maximum_outer_coordinate_multiplicity": 4,
+  "basis_candidates_completed_before_witness": 1072,
+  "layer_check_counts": [945,675,6],
+  "rank": 1626,
+  "decoder_radius_preserved": 6,
+  "representative_assignment": "Put the canonical 945 and 675 local checks in their two Pass4821 layers. Put all six W6 global checks in a third layer. For each logical cold repetition class, the active global checks are at most four; assign them injectively to its four equal physical coordinates. Adding local repetition checks changes only the physical representative of the same outer syndrome functional, so the six quotient checks remain independent modulo the 1620-dimensional local dual.",
+  "theorem": "Allowing local-dual-equivalent physical representatives for the six W6 global checks reduces the certified [2025,399,14]_2 syndrome schedule from eight layers to exactly three in the canonical sparse-local-basis model: two original local layers plus one layer containing all six mutually disjoint representative-adjusted global checks. Two layers are impossible in this model.",
+  "boundary": "Optimality is for the stated sparse check family and disjoint-physical-support scheduling model. Arbitrary dense changes of the 1626-dimensional dual basis are outside this theorem, and no measured hardware clock depth is inferred."
+}
