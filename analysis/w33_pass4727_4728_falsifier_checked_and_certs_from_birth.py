@@ -2,6 +2,13 @@
 """Passes 4727-4728 -- check the falsifier I handed Track B, and ask whether the eight
 mismatched certificates were ever capable of matching.
 
+  ** PASS 4728'S CONCLUSION IS FALSE. All eight certificates verify; see Pass 4801.
+     The detector read the JSON file, where keys are already strings, so it measured
+     whether the key SET sorts differently under two orderings -- a property of the data.
+     Whether the PRODUCER used integer keys is a property of the code, which was never
+     opened. The producers stringify their keys explicitly and are correct.
+     Pass 4727's falsifier check is unaffected. **
+
   4727  Pass 4709 told Track B: "if the 45-vertex graph is H(3,4) then |Aut| = 51,840 and
         every local graph is 3K4; either failing refutes the identification without any
         character theory."  I asserted that from the GQ axioms without computing it.  A

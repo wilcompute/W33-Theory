@@ -1,0 +1,46 @@
+{
+  "accused": [
+    {
+      "certificate": "w33_pass1801_component.json",
+      "verifies": true
+    },
+    {
+      "certificate": "w33_pass1828_weight_frontier.json",
+      "verifies": true
+    },
+    {
+      "certificate": "w33_pass1829_weight4_decoder.json",
+      "verifies": true
+    },
+    {
+      "certificate": "w33_pass1837_middle_layer_compression.json",
+      "verifies": true
+    },
+    {
+      "certificate": "w33_pass1847_exact_weight5_decoder_completion.json",
+      "verifies": true
+    },
+    {
+      "certificate": "w33_pass1856_duad_syntheme_contraction_frontier.json",
+      "verifies": true
+    },
+    {
+      "certificate": "w33_pass1857_weight5_syndrome_orbit_atlas.json",
+      "verifies": true
+    },
+    {
+      "certificate": "w33_pass1860_weight6_decoder_frontier.json",
+      "verifies": true
+    }
+  ],
+  "boundary": "each verdict is check_certificates.py run on the single file, which tries both serialisation conventions in use here. This pass does not claim the Pass 2482 trap is unreal -- it is, and it cost a genuinely unverifiable certificate -- only that none of these eight is an instance",
+  "pass_4728_claim": "eight certificates unverifiable from birth",
+  "reverted": [
+    "analysis/w33_pass1837_middle_layer_compression.py",
+    "analysis/w33_pass1856_duad_syntheme_contraction_frontier.py",
+    "analysis/w33_pass1857_weight5_syndrome_orbit_atlas.py"
+  ],
+  "root_cause": "the detector inspected the JSON file, where keys are already strings, so it could only measure whether the key SET sorts differently under two orderings. That is a property of the data; whether the producer used integer keys is a property of the code, which was not read",
+  "verdict": "FALSE -- all eight reproduce their digests",
+  "verify_count": 8
+}
