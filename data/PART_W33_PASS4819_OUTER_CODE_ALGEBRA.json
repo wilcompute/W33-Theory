@@ -1,0 +1,38 @@
+{
+  "pass": 4819,
+  "carrier": "27 GQ(4,2) quotient lines / SRG(27,10,1,5)",
+  "full_automorphism_order": 51840,
+  "even_module": {
+    "dimension": 26,
+    "uniserial_chain_dimensions": [0,6,20,26],
+    "successive_irreducible_dimensions": [6,14,6],
+    "W6_weight_enumerator": {"0":1,"12":36,"16":27},
+    "W20_min_distance": 4,
+    "lower_extension_splits": false,
+    "upper_extension_splits": false
+  },
+  "all_invariant_outer_codes": [
+    {"name":"0","dimension":0,"distance":null},
+    {"name":"1","dimension":1,"distance":27},
+    {"name":"W6","dimension":6,"distance":12},
+    {"name":"W6+1","dimension":7,"distance":11},
+    {"name":"W20","dimension":20,"distance":4},
+    {"name":"W20+1","dimension":21,"distance":3},
+    {"name":"E26","dimension":26,"distance":2},
+    {"name":"F2^27","dimension":27,"distance":1}
+  ],
+  "physical_preimage_families": [
+    {"outer":"0","outer_dimension":0,"physical_parameters":"[2025,378,14]_2","physical_dimension":378,"physical_distance":14,"K_times_d":5292},
+    {"outer":"1","outer_dimension":1,"physical_parameters":"[2025,379,14]_2","physical_dimension":379,"physical_distance":14,"K_times_d":5306},
+    {"outer":"W6","outer_dimension":6,"physical_parameters":"[2025,384,14]_2","physical_dimension":384,"physical_distance":14,"K_times_d":5376},
+    {"outer":"W6+1","outer_dimension":7,"physical_parameters":"[2025,385,14]_2","physical_dimension":385,"physical_distance":14,"K_times_d":5390},
+    {"outer":"W20","outer_dimension":20,"physical_parameters":"[2025,398,14]_2","physical_dimension":398,"physical_distance":14,"K_times_d":5572},
+    {"outer":"W20+1","outer_dimension":21,"physical_parameters":"[2025,399,14]_2","physical_dimension":399,"physical_distance":14,"K_times_d":5586},
+    {"outer":"E26","outer_dimension":26,"physical_parameters":"[2025,404,8]_2","physical_dimension":404,"physical_distance":8,"K_times_d":3232},
+    {"outer":"F2^27","outer_dimension":27,"physical_parameters":"[2025,405,7]_2","physical_dimension":405,"physical_distance":7,"K_times_d":2835}
+  ],
+  "max_dimension_retaining_distance14": 399,
+  "outer_repetition_physical_distances": {"1":2025,"W6":720,"W6+1":720,"W20":384,"W20+1":297,"E26":192,"F2^27":105},
+  "theorem": "The full PGSp-invariant binary submodule lattice on the 27 quotient lines has exactly eight codes. Their preimages under the canonical line-parity map give the complete invariant preimage family; [2025,399,14]_2 is the largest member retaining distance 14.",
+  "boundary": "Classification is for preimages under the canonical 27-line parity map, not every PGSp-invariant physical subcode."
+}
