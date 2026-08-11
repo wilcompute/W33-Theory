@@ -1,0 +1,17 @@
+{
+  "GQ_points": {"block_size": 9, "points": 45, "replication": 72},
+  "K33_per_induced_K13": 1,
+  "K33_per_induced_P3": 6,
+  "K33_sides_per_independent_triple": 1,
+  "adjacent_line_pair_replication": 24,
+  "boundary": "These are exact incidence/completion statements in the GQ(4,2) line graph; no external design name is inferred from parameters alone.",
+  "independent_triples": 720,
+  "induced_K13_stars": 2160,
+  "induced_P3_triples": 1080,
+  "line_fibers": {"block_size": 6, "points": 27, "replication": 80},
+  "nonadjacent_line_pair_replication": 10,
+  "pass": 4815,
+  "physical_triangles": {"block_size": 6, "points": 270, "replication": 8},
+  "projective_K33_minima": 360,
+  "theorem": "The complete 360-class K3,3 homology shell is simultaneously regular on the 27 line fibers, 45 GQ points, and 270 physical triangle coordinates, with replications 80,72,8. Every independent triple is a unique K3,3 side and every induced K1,3 has a unique K3,3 completion."
+}
