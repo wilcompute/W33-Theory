@@ -1,0 +1,79 @@
+name: Passes 4833-4840 code interaction symmetry cycles
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4833_4838_levi_subcode_code399.py'
+      - 'analysis/w33_pass4834_code399_optimal_schedule.py'
+      - 'analysis/w33_pass4835_4839_intrinsic_dualshell_aut_falsifier.py'
+      - 'analysis/w33_pass4836_4840_levi_cycle_orbits_k33.py'
+      - '.github/workflows/w33_pass4833_4840_code_interaction_cycles.yml'
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4833_4838_levi_subcode_code399.py'
+      - 'analysis/w33_pass4834_code399_optimal_schedule.py'
+      - 'analysis/w33_pass4835_4839_intrinsic_dualshell_aut_falsifier.py'
+      - 'analysis/w33_pass4836_4840_levi_cycle_orbits_k33.py'
+      - '.github/workflows/w33_pass4833_4840_code_interaction_cycles.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pass4833-4840-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check numpy scipy networkx sympy pytest
+      - name: Execute current packet producers independently
+        shell: bash
+        run: |
+          set +e
+          LOG=analysis/PASS4833_4840_RUN.log
+          STATUS=analysis/PASS4833_4840_RUN.status
+          : > "$LOG"
+          rc=0
+          run_one() {
+            echo "===== $* =====" | tee -a "$LOG"
+            "$@" 2>&1 | tee -a "$LOG"
+            here=${PIPESTATUS[0]}
+            echo "rc=$here" | tee -a "$LOG"
+            if [ "$here" -ne 0 ]; then rc=1; fi
+          }
+          run_one python analysis/w33_pass4833_4838_levi_subcode_code399.py
+          run_one python analysis/w33_pass4834_code399_optimal_schedule.py
+          run_one python analysis/w33_pass4835_4839_intrinsic_dualshell_aut_falsifier.py
+          run_one python analysis/w33_pass4836_4840_levi_cycle_orbits_k33.py
+          echo "$rc" > "$STATUS"
+          exit 0
+      - name: Preserve generated evidence on direct runs
+        if: github.event_name != 'pull_request'
+        shell: bash
+        run: |
+          git config user.name 'w33-evidence-bot'
+          git config user.email 'w33-evidence-bot@users.noreply.github.com'
+          git add analysis/PASS4833_4840_RUN.log analysis/PASS4833_4840_RUN.status
+          for f in \
+            data/PART_W33_PASS4833_4838_LEVI_SUBCODE_CODE399.json \
+            data/PART_W33_PASS4834_CODE399_OPTIMAL_SCHEDULE.json \
+            data/PART_W33_PASS4835_4839_INTRINSIC_DUALSHELL_AUT_FALSIFIER.json \
+            data/PART_W33_PASS4836_LEVI_MINIMUM_ORBITS.json \
+            data/PART_W33_PASS4840_LEVI_CYCLE_K33_INCIDENCE.json
+          do
+            test -f "$f" && git add "$f"
+          done
+          if ! git diff --cached --quiet; then
+            git commit -m 'Materialize Passes 4833-4840 exact evidence'
+            git pull --rebase origin master
+            git push origin HEAD:master
+          fi
+      - name: Enforce final status
+        run: test "$(cat analysis/PASS4833_4840_RUN.status)" -eq 0
