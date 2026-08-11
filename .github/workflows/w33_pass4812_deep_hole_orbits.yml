@@ -43,3 +43,5 @@ jobs:
           path: |
             pass4812.log
             data/PART_W33_PASS4812_H10_DEEP_HOLE_ORBITS.json
+
+# Trigger marker: workflow installed before this push so the path-filtered run is observable.
