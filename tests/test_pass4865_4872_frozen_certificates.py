@@ -55,6 +55,21 @@ def test_pass4869_marked_double_six_chart():
     assert d["residue_automorphism_group"]["order"]==1440
     assert d["residue_automorphism_group"]["full_by_exhaustive_graph_automorphism_count"]
 
+def test_pass4870_steiner_three_cover_and_quadratic_bridge():
+    d=load("PART_W33_PASS4870_STEINER_W33_QUADRATIC_BRIDGE.json")
+    c=d["intrinsic_three_cover"]
+    assert c["Steiner_triangles"]==120
+    assert c["fibers"]==40 and c["fiber_size"]==3
+    assert c["adjacency_lift_pairs"]==2160
+    assert c["quotient"]=="SRG(40,12,2,4)"
+    assert c["explicit_isomorphism_to_standard_W33"]
+    assert c["PSp_action_on_quotient_order"]==25920
+    q=d["quadratic_bridge"]
+    assert q["Hom_PSp_Sym2H2_to_Q10_dimension"]==2
+    assert q["orbit_fixed_space_table"]["pair_2160"]["Q10_fixed_dimension"]==2
+    for name in ("diagonal","pair_120","pair_1620","pair_3240"):
+        assert q["orbit_fixed_space_table"][name]["Q10_fixed_dimension"]==0
+
 def test_pass4871_intrinsic_bracket():
     d=load("PART_W33_PASS4871_INTRINSIC_LEVI_ADJOINT_BRACKET.json")
     h=d["equivariant_alternating_products"]
@@ -74,9 +89,12 @@ def test_shared_manuscript_frontier_promotes_packet_once():
     live=(ROOT/"analysis/W33_CURRENT_FRONTIER_MANIFEST.tex").read_text()
     legacy=(ROOT/"analysis/W33_CURRENT_FRONTIER_MANIFEST_THROUGH_4864.tex").read_text()
     insert=(ROOT/"analysis/PASS4865_4872_ternary_clique_cut_symplectic_insert.tex").read_text()
+    quad=(ROOT/"analysis/PASS4870_steiner_w33_quadratic_bridge_insert.tex").read_text()
     assert "W33_CURRENT_FRONTIER_MANIFEST_THROUGH_4864" in live
     assert live.count("PASS4865_4872_ternary_clique_cut_symplectic_insert")==1
+    assert live.count("PASS4870_steiner_w33_quadratic_bridge_insert")==1
     assert "W33_CURRENT_FRONTIER_MANIFEST" not in legacy
     assert "WDDPassFourEightSixFivePacketLoaded" in insert
+    assert "WDDPassFourEightSevenZeroLoaded" in quad
     for wrapper in ("w33_paper.tex","photonic_holonet.tex","holonet_machine_blueprint.tex"):
         assert "W33_CURRENT_FRONTIER_MANIFEST" in (ROOT/wrapper).read_text()
