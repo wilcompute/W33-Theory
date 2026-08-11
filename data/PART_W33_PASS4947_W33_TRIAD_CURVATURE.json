@@ -1,0 +1,16 @@
+{
+  "pass": 4947,
+  "W33_independent_triads": 3240,
+  "curvature": {
+    "flat_identity": 1080,
+    "reflection_transposition": 2160,
+    "order3": 0
+  },
+  "geometric_classification": {
+    "acentric_common_neighbors_0": 1080,
+    "centric_common_neighbors_2": 2160,
+    "equivalence": "matching holonomy is identity iff the W33 triad is acentric; it is a transposition iff the triad has two centers"
+  },
+  "theorem": "The S3 matching connection detects the intrinsic triad geometry of W33. Among the 3240 triples of pairwise noncollinear W33 points, exactly 1080 have no common neighbor and carry flat identity holonomy; exactly 2160 have two common neighbors and carry reflection holonomy. No complement triangle has order-three curvature. Hence the connection curvature is an exact finite detector of the acentric/centric triad dichotomy.",
+  "boundary": "Finite holonomy/triad theorem. The terminology centric/acentric is classical. The numerical 1080 also occurs elsewhere in the repo, but no identification with those 1080 objects is claimed without an explicit equivariant map."
+}
