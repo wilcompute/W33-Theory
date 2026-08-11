@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>W33 Passes 4817–4824 — PGSp moduli, outer codes, outage flow and decoding</title>
+<style>body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;max-width:980px;margin:40px auto;padding:0 24px;line-height:1.55;color:#171717}h1,h2{line-height:1.18}.box{border:1px solid #ddd;border-radius:12px;padding:18px 22px;margin:20px 0}code{background:#f2f2f2;padding:.1rem .3rem;border-radius:4px}table{border-collapse:collapse;width:100%}th,td{padding:8px;border-bottom:1px solid #ddd;text-align:left}.boundary{background:#fafafa}</style>
+</head><body>
+<h1>Passes 4817–4824: PGSp moduli, invariant outer codes, exact outage flow and decoding</h1>
+<p>This packet executes five queued fronts and three outside-box probes with exact finite graph, module, code, homology, decoder and fractional-flow evidence.</p>
+<div class="box"><h2>Complete invariant 27-line outer-code family</h2>
+<p>On the 27 quotient lines the binary even permutation module has the nonsplit uniserial chain <code>0 &lt; W6 &lt; W20 &lt; E26</code> with dimensions 0,6,20,26 and irreducible successive dimensions 6,14,6. Splitting off the all-one line leaves exactly eight PGSp-invariant outer codes.</p>
+<table><tr><th>Outer dimension</th><th>Outer distance</th><th>Physical preimage</th></tr>
+<tr><td>0</td><td>∞</td><td>[2025,378,14]₂</td></tr><tr><td>1</td><td>27</td><td>[2025,379,14]₂</td></tr><tr><td>6</td><td>12</td><td>[2025,384,14]₂</td></tr><tr><td>7</td><td>11</td><td>[2025,385,14]₂</td></tr><tr><td>20</td><td>4</td><td>[2025,398,14]₂</td></tr><tr><td>21</td><td>3</td><td><strong>[2025,399,14]₂</strong></td></tr><tr><td>26</td><td>2</td><td>[2025,404,8]₂</td></tr><tr><td>27</td><td>1</td><td>[2025,405,7]₂</td></tr></table>
+<p>Thus 399 is the maximum dimension in this complete invariant line-parity preimage family that retains distance 14.</p></div>
+<div class="box"><h2>Exact post-failure fractional throughput</h2>
+<p>The six symmetry-breaking cases from Pass 4773 now have exact rational primal/dual certificates:</p>
+<table><tr><th>Failure</th><th>Exact λ</th></tr><tr><td>one hot Petersen fiber</td><td>67/5952</td></tr><tr><td>two adjacent hot fibers</td><td>665/59746</td></tr><tr><td>two nonadjacent hot fibers</td><td>133/11946</td></tr><tr><td>one ten-vertex fiber removed</td><td>189/16538</td></tr><tr><td>two adjacent fibers removed</td><td>1767/153094</td></tr><tr><td>two nonadjacent fibers removed</td><td>351/30670</td></tr></table>
+<p>Each certificate rechecks commodity conservation, surviving-edge capacities, dual normalization, exact shortest-path separation and primal/dual equality.</p></div>
+<div class="box"><h2>Sparse parity checks and bounded-distance decoder</h2>
+<p>The [2025,378,14]₂ code has 1647 independent checks: 1485 local weight-two rows, 135 local weight-four rows and 27 global weight-fifteen line rows. They admit an optimal two-layer schedule under the model that simultaneous checks have disjoint physical-bit support.</p>
+<p>Each local [15,3,7]₂ cell has 4096 syndromes and exactly eight representatives per syndrome. Because a nonzero zero-local-syndrome error has weight at least seven, every total error of weight at most six can be decoded by searching only cells with nonzero local syndrome; the raw worst-case candidate count is at most 8⁶=262144, with the 27 global syndrome bits selecting the unique candidate.</p></div>
+<div class="box"><h2>Binary GQ Levi homology</h2>
+<p>The 27 router line-parity checks are exactly pullbacks of the 27 line-vertex star vectors in the binary cut space of the 72-vertex, 135-edge GQ(4,2) Levi graph. They are cut-space checks, not homology checks.</p>
+<p>The binary Levi cycle space has dimension 64 and girth 8. Repeating each Levi cycle across the three sheet coordinates and applying the local physical generator map gives a canonical <strong>[2025,64,96]₂</strong> homology subcode with physical weight equal to 12 times Levi-cycle weight.</p></div>
+<div class="box"><h2>Characteristic-two transfer falsifier</h2>
+<p>Binary Levi H¹ has neither PSp-fixed vectors nor a trivial quotient: fixed and coinvariant dimensions are both zero. Therefore the four-dimensional trivial socle in the 5671-dimensional flag H¹ cannot map nontrivially and PSp-equivariantly into Levi H¹, and Levi H¹ cannot transfer onto a trivial line. The tempting same-characteristic bridge fails at the module-intertwiner level.</p></div>
+<div class="box boundary"><h2>Representation-computation boundary</h2>
+<p>The repository now contains exact producers for the PSp/PGSp actions on the 64-dimensional binary sign-cohomology module and the 225-dimensional twisted-F3 deformation module. It also contains a GAP/CTblLib producer for the exact characteristic-two Brauer decomposition matrix of U4(2)≅PSp(4,3), combined with the frozen ordinary H¹ character. Until those evidence jobs materialize, the complete astronomical S3-moduli orbit census and the full nontrivial Loewy-layer ordering are not promoted. Existing exact module-level data remain: trivial socle dimension four, trivial head dimension one and nonsplitting of the deck line.</p></div>
+</body></html>
