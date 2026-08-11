@@ -1,0 +1,20 @@
+{
+  "pass": 4860,
+  "double_sixes": 36,
+  "double_six_graph": "SRG(36,20,10,12)",
+  "graph_edges": 360,
+  "graph_triangles": 1200,
+  "triangle_triple_intersection_profile": {"0": 120, "4": 1080},
+  "Steiner_trihedral_pairs": 120,
+  "intrinsic_definition": "A graph triangle is odd iff its three 12-line double-sixes have empty triple intersection (equivalently the MCCCXCVI Steiner trihedral-pair condition; pairwise overlap is already six and the union is then 18).",
+  "triangle_edge_matrix_rank_F2": 325,
+  "switching_solution_affine_dimension": 35,
+  "cut_space_dimension": 35,
+  "canonical_rref_representative_weight": 120,
+  "root_crosscheck": {
+    "E6_negative_edge_signing_has_same_120_odd_triangles": true,
+    "difference_from_intrinsic_rref_solution_is_a_cut": true
+  },
+  "theorem": "The E6 switching class sigma_E6 is intrinsic to the classical 27-36-45 cubic-surface incidence data: it is the unique edge-signing class modulo cuts whose odd graph triangles are exactly the 120 Steiner trihedral pairs. Root coordinates are unnecessary for defining the class; the E6 root signing is an independent cross-certificate of the same class.",
+  "boundary": "Finite two-graph/cubic-surface theorem; no physical sign or phase is assigned to hardware without an additional realization map."
+}
