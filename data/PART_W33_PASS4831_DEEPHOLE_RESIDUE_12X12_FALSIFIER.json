@@ -1,0 +1,19 @@
+{
+  "pass": 4831,
+  "H10_deep_hole_orbits": {
+    "count": 12,
+    "orbit_size_multiset": {"1080": 1, "2160": 2, "3240": 1, "4320": 2, "6480": 2, "12960": 4},
+    "stabilizer_order_multiset": {"2": 4, "4": 2, "6": 2, "8": 1, "12": 2, "24": 1}
+  },
+  "residue_ordered_pair_orbitals": {
+    "count": 12,
+    "subdegrees": [1,12,16,48,16,6,24,96,12,12,24,3],
+    "orbit_size_multiset": {"270": 1, "810": 1, "1620": 1, "3240": 3, "4320": 2, "6480": 2, "12960": 1, "25920": 1},
+    "ordered_pair_stabilizer_order_multiset": {"1": 1, "2": 1, "4": 2, "6": 2, "8": 3, "16": 1, "32": 1, "96": 1}
+  },
+  "componentwise_PSp_Gset_identification_exists": false,
+  "obstruction": "Homogeneous PSp orbit sizes and stabilizer-order multisets differ. The residue orbital decomposition contains sizes 270, 810, 1620 and 25920, whereas the H10 deep-hole decomposition contains sizes 1080 and 2160 and no components of those residue sizes.",
+  "theorem": "The equality 12=12 between the Pass4812 H10 deep-hole orbit count and the Pass4737 residue-action orbital rank is numerology, not an equivariant identification. No componentwise PSp-homogeneous G-set bijection can match the two twelve-part decompositions.",
+  "boundary": "This falsifies the direct twelve-component G-set identification. It does not forbid more indirect incidence maps between H10 cosets and residue-pair geometry.",
+  "execution": "Exact arithmetic from the frozen Pass4812 PSp deep-hole orbit sizes and the Pass4737 residue subdegrees; ordered-pair orbit sizes are 270*d and stabilizers are 96/d."
+}
