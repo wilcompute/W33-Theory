@@ -1,0 +1,16 @@
+# Passes 4817–4824 reservation
+
+Collision-free continuation after occupied/reserved frontier through Pass4816.
+
+Five requested fronts plus three outside-box probes:
+
+- 4817: quotient the Pass4770/4774 S3-connection moduli by the full PGSp(4,3) action as far as exact finite linear/orbit computation permits. Build the induced action on the 64-dimensional binary sign solution space and the 225-dimensional twisted F3 deformation cohomology; compute fixed-space/orbit invariants and stabilizer data for the selected connection. Preserve any remaining global orbit enumeration boundary.
+- 4818: continue the modular structure of the 5671-dimensional invariant-flag H^1(F2): compute generator ranks for radical/socle layers, Brauer-constituent data accessible from fixed/coinvariant tests on subgroup elements, and the extension position of the four-dimensional trivial socle. Do not infer semisimplicity from ordinary characters.
+- 4819: classify PGSp-invariant binary outer codes on the 27 GQ(4,2) quotient lines and lift them through the local [15,3,7]_2 cell code. Freeze exact [2025,K,D] families and a rigorous Pareto frontier wherever the outer-code distance-to-physical-distance transfer is exact.
+- 4820: solve symmetry-broken fractional multicommodity flow exactly for one/two failed Petersen-hot fibers and one/two removed ten-vertex fibers by stabilizer-orbit reduction of vertices, edges and ordered commodities. Replace Pass4773's lower/upper bounds only where the reduced LP is exact.
+- 4821: build an explicit sparse parity-check matrix, syndrome map and decoder/schedule for the [2025,378,14]_2 code using the literal 135 dependency-cube = physical-K6-cell identification and 27 quotient-line parity constraints. Prove correction radius and scheduling depth under the stated local operation model.
+- 4822: OUTSIDE BOX — test whether the 27-line outer parity code used in Pass4772 is literally a cycle/cut/homology code of the GQ(4,2) Levi structure identified in Pass4807. Require equality/intertwiner of coordinate carriers, not dimension/count matching; if positive, transport homology generators into physical router codewords.
+- 4823: OUTSIDE BOX — study the selected S3 connection as a distinguished point/orbit in the 64-bit sign space crossed with twisted PG(224,3). Search for a low-degree PGSp-invariant polynomial/quadratic form, support statistic, or orbit signature that singles it out despite the massive triangle-holonomy moduli.
+- 4824: OUTSIDE BOX — couple the characteristic-two four-dimensional H^1 socle to the new characteristic-two support12/Levi homology structures only through explicit restriction/transfer maps. Seek a Mackey/transfer diagram through shared PSp subgroups; freeze either a nonzero intertwiner or a subgroup-theoretic obstruction.
+
+Evidence discipline: promote only exact finite graph/group/module/code/homology/flow/decoder results or explicit falsifiers. Preserve characteristic boundaries. No object identification from equal dimensions/counts/group orders; require explicit maps, stabilizers, matrices, spectra, codes or subgroup equalities. No particle/generation/gauge-field/measured-hardware/fault-tolerance-threshold inference.
