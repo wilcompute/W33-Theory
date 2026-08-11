@@ -1,0 +1,11 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [4938, 4939],
+  "slug": "adjoint_root_compiler_and_chamber_steiner_intertwiner",
+  "title": "Adjoint root compiler and chamber-Steiner intertwiner",
+  "status": "RESERVED",
+  "owner": "openai-codex",
+  "reserved_at": "2026-08-11",
+  "purpose": "Certify the ten-trit transvection-root compiler with its chirality and symmetry-loss boundaries, then construct the exact rational rank-24 intertwiner between the chamber and Steiner fiber-constant carriers.",
+  "boundary": "Reservation only. No theorem is claimed until the native GAP owners, frozen certificates, regressions, rediscovery audit, and scoped reports pass."
+}
