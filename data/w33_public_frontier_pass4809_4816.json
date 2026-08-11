@@ -1,23 +1,26 @@
 {
   "passes": [4809,4810,4811,4812,4813,4814,4815,4816],
-  "status": "seven theorem-level lanes frozen; Pass4812 all-orbit deep-hole completeness awaits final orbit-blocked UNSAT certificate",
-  "headline": "Complete K3,3 homology shell; exact Golay-Levi decoder; 54-object orientation cover; q=9 PSp classes; decoder reconstructs topology",
+  "status": "all eight lanes theorem-level and frozen",
+  "headline": "Complete K3,3 homology shell; exact Golay-Levi decoder; complete H10 deep-hole census; 54-object orientation cover; q=9 PSp classes; decoder reconstructs topology",
   "theorems": {
     "4809": "The complete projective minimum shell of C^perp/L has 360 lift-weight-six classes, all induced K3,3, one PSp orbit and one full outer orbit.",
     "4810": "Exact component ML decoding factors through 27 local 81-state Golay tables and 45 global point constraints; weight-three twofold collisions are exactly the K3,3 global ambiguity sector.",
     "4811": "The 54 Golay extension directions form two PSp 27-sheets exchanged by the full outer action.",
+    "4812": "H10 has exactly 82080 radius-14 cosets in 12 PSp(4,3) orbits; the full order-51840 action preserves all 12 orbit sets, and the complete minimum-leader population is 6428160.",
     "4813": "The q=9 Linear, K1, and Fi/Mondello full semilinear classes do not split further under PSp(4,9).",
     "4814": "The 54-to-27 cover is the orientation cover W(E6)/(2^4:A5) -> W(E6)/(2^4:S5).",
     "4815": "The 360 K3,3 minima form a regular incidence/completion geometry with replications 80/72/8 on fibers/GQ-points/physical-triangles.",
     "4816": "Exactly-twofold weight-three decoder collisions reconstruct the complete projective K3,3 homology shell, 20 collision classes per projective minimum."
   },
-  "4812_boundary": {
-    "known_deep_hole_coset_orbit": 12960,
-    "known_PSp_stabilizer": 2,
-    "known_full_stabilizer": 4,
-    "classifier": "analysis/w33_pass4812_h10_deep_hole_orbit_sat.py",
-    "final_completeness_certificate_observed": false,
-    "required_for_promotion": "data/PART_W33_PASS4812_H10_DEEP_HOLE_ORBITS.json with final_orbit_blocked_SAT=UNSAT"
+  "4812_evidence": {
+    "deep_hole_cosets_total": 82080,
+    "PSp_orbits": 12,
+    "full_orbits": 12,
+    "outer_fusions": 0,
+    "weight14_leaders_total": 6428160,
+    "symmetry_verifier": "analysis/w33_pass4812_h10_deep_hole_orbit_symmetry_verify.py",
+    "quotient_sat_independent_path": "analysis/w33_pass4812_h10_deep_hole_orbit_sat.py",
+    "frozen_certificate": "data/PART_W33_PASS4812_H10_DEEP_HOLE_ORBITS.json"
   },
   "public_page": "docs/golay-homology-decoder-orientation.html",
   "card_source": "analysis/PASS4809_4816_golay_homology_decoder_index_insert.html",
@@ -29,6 +32,6 @@
     "Component ML does not imply joint-Pauli-weight ML.",
     "The 54-cover is orientation-twisted and is not identified with E6 27 plus dual-27 without an intertwiner.",
     "Betten's q=9 BLT classification data are prior art; only the PSp split evaluation is new here.",
-    "No complete H10 deep-hole orbit classification is claimed before the final blocked-SAT UNSAT certificate is observed."
+    "Deep-hole orbits classify cosets, while leader multiplicities are separate coset invariants."
   ]
 }
