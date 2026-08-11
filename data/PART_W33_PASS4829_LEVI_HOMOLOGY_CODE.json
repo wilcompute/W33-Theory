@@ -1,0 +1,52 @@
+{
+  "pass": 4829,
+  "code": "[2025,64,96]_2",
+  "effective_punctured_code": "[1620,64,96]_2",
+  "exact_structure": "405 forced-zero hot coordinates plus 12-fold repetition of the binary cycle code H1 of the GQ(4,2) Levi graph on its 135 incidence edges",
+  "Levi": {
+    "vertices": 72,
+    "edges": 135,
+    "cycle_dimension": 64,
+    "girth": 8,
+    "edge_connectivity": 3,
+    "minimum_8_cycle_count": 1080
+  },
+  "physical": {
+    "hot_zero_coordinates": 405,
+    "cold_repetition_blocks": 135,
+    "coordinates_per_block": 12,
+    "cold_support": 1620,
+    "minimum_distance": 96,
+    "minimum_weight_codewords": 1080
+  },
+  "dual": {
+    "dimension": 1961,
+    "minimum_distance": 1,
+    "weight1_dual_words": 405,
+    "weight2_dual_words": 90720,
+    "sparse_basis": {
+      "weight1_rows": 405,
+      "weight2_repetition_rows": 1485,
+      "Levi_star_rows": 71,
+      "total_rank": 1961
+    }
+  },
+  "syndrome_schedule": {
+    "explicit_depth": 4,
+    "layers": [
+      "405 hot singleton checks plus alternating repetition-chain half",
+      "other repetition-chain half",
+      "45 point-star checks",
+      "26 independent line-star checks"
+    ],
+    "global_optimality_claimed": false
+  },
+  "decoder": {
+    "guaranteed_arbitrary_error_radius": 47,
+    "algorithm": "Set the 405 forced-zero hot bits to zero. For each 12-fold cold block let a_e be the number of received ones and c_e=12-2a_e. Let N be the negative-cost Levi edges and T=boundary(N). Maximum-likelihood decoding is exactly a minimum-weight T-join on the 72-vertex Levi graph with weights |c_e|, followed by symmetric difference with N.",
+    "polynomial_graph_reduction": true
+  },
+  "theorem": "The binary GQ(4,2) Levi-homology code is exactly a zero-hot plus twelvefold-repeated Levi cycle code. It has 1080 minimum weight-96 words, a rank-1961 sparse dual, an explicit four-layer syndrome schedule, and an exact minimum-T-join decoder correcting every arbitrary error pattern of weight at most 47.",
+  "boundary": "The four-layer schedule is an explicit construction, not claimed globally minimum. The decoder is exact for the classical binary code; no physical fault-tolerance threshold is inferred.",
+  "execution": "Exact incidence/cell algebra frozen independently; analysis/w33_pass4829_levi_code_corrected.py regenerates the objectwise repetition blocks, 8-cycle shell, sparse dual basis, and schedule."
+}
