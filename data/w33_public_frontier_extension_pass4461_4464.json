@@ -37,7 +37,8 @@
     {"kind":"id","token":"pass4769-4776-modular-moduli-cover-code-flow","source":"analysis/PASS4769_4776_modular_moduli_cover_code_flow_index_insert.html"},
     {"kind":"id","token":"pass4785-4792-support12-grid-cycle-golay","source":"analysis/PASS4785_4792_support12_grid_cycle_golay_index_insert.html"},
     {"kind":"id","token":"pass4817-4824-pgsp-loewy-code-flow-decoder","source":"analysis/PASS4817_4824_pgsp_loewy_code_flow_decoder_index_insert.html"},
-    {"kind":"id","token":"pass4825-4832-loewy-decoder-moduli-outage-levi","source":"analysis/PASS4825_4832_loewy_decoder_moduli_outage_levi_index_insert.html"}
+    {"kind":"id","token":"pass4825-4832-loewy-decoder-moduli-outage-levi","source":"analysis/PASS4825_4832_loewy_decoder_moduli_outage_levi_index_insert.html"},
+    {"kind":"id","token":"pass4833-4840-code-interaction-cycles","source":"analysis/PASS4833_4840_code_interaction_cycles_index_insert.html"}
   ],
   "standalone_public_pages": [
     {"token":"pass4461-4471-line-signing-apartment-parity-page","source":"docs/line-signing-apartment-parity.html"},
@@ -73,6 +74,7 @@
     {"token":"pass4769-4776-modular-moduli-cover-code-flow-page","source":"docs/modular-h1-s3-moduli-normalizer-code-flow.html"},
     {"token":"pass4785-4792-support12-grid-cycle-golay-page","source":"docs/support12-grid-cycle-golay.html"},
     {"token":"pass4817-4824-pgsp-loewy-code-flow-decoder-page","source":"docs/pgsp-moduli-outer-code-outage-decoder.html"},
-    {"token":"pass4825-4832-code399-levi-cycle-decoder-page","source":"docs/code399-levi-cycle-decoder.html"}
+    {"token":"pass4825-4832-code399-levi-cycle-decoder-page","source":"docs/code399-levi-cycle-decoder.html"},
+    {"token":"pass4833-4840-code-interaction-cycles-page","source":"docs/code399-levi-cohomology-cycles.html"}
   ]
 }
