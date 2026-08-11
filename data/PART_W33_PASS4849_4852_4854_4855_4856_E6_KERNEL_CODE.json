@@ -1,0 +1,62 @@
+{
+  "passes": [4849, 4852, 4854, 4855, 4856],
+  "kernel_code": {
+    "parameters": "[360,36,20]_2",
+    "minimum_shell_size": 36,
+    "minimum_shell_span_dimension": 35,
+    "structure": "Cut(SRG(36,20,10,12)) + <E6 root-inner-product signing>",
+    "low_weight_shell_below_64": {"20":36,"38":360,"40":270,"54":1200,"56":3240,"58":2160,"60":540},
+    "dual": {"parameters":"[360,324,3]_2","weight3_words":1080,"interpretation":"even-E6-sign triangles / binary Levi cycles"},
+    "bounded_distance_radius": 9,
+    "ML_decoder": "two exact signed-MaxCut/switching instances on the 36-vertex E6 root graph, one for each coset of the cut code",
+    "automorphism_group_order": 51840,
+    "automorphism_group": "W(E6) = PGSp(4,3) on projective E6 roots/double-sixes"
+  },
+  "minimum_carriers": {
+    "count": 36,
+    "line_support_size": 12,
+    "induced_graph": "K6,6 minus perfect matching",
+    "classical_identity": "the 36 cubic-surface double-sixes of Pass4659",
+    "carrier_graph": "SRG(36,20,10,12)",
+    "carrier_graph_complement": "SRG(36,15,6,6) double-six overlap scheme",
+    "spectrum": {"20":1,"2":20,"-4":15}
+  },
+  "E6_identification": {
+    "roots": 72,
+    "projective_root_pairs": 36,
+    "explicit_graph_isomorphism": true,
+    "full_action_conjugacy_to_Weyl_group": true,
+    "Weyl_order": 51840,
+    "signed_adjacency_spectrum": {"10":6,"-2":30},
+    "root_Gram": "2I+B, rank 6, nonzero eigenvalue 12^6"
+  },
+  "extra_kernel_coset": {
+    "canonical_generator": "negative-inner-product edges after choosing an E6 positive system",
+    "representative_weight": 120,
+    "minimum_coset_weight": 120,
+    "complete_minimum_shell_size": 25920,
+    "PGSp_orbit_size": 25920,
+    "PGSp_stabilizer_order": 2,
+    "PSp_orbits": 2,
+    "PSp_orbit_size_each": 12960,
+    "PSp_stabilizer_order": 2,
+    "Weyl_chamber_proof": "For one representative from each root pair, ||sum r||^2 = 792-4 N_minus. A positive system has sum=2 rho and ||2 rho||^2=312, so N_minus=120. Equality orientations are Weyl chambers; opposite chambers give the same edge signing, hence 51840/2=25920 minimum signings."
+  },
+  "characteristic_two_extension": {
+    "exact_sequence": "0 -> Cut(H36) [360,35,20] -> K [360,36,20] -> F2 -> 0",
+    "quotient_is_trivial_module": true,
+    "splits_over_PSp": false,
+    "splits_over_PGSp": false,
+    "proof": "Both groups are transitive on 360 coordinates, so the ambient fixed subspace is <1>; the all-one vector is not in K because each of the 1080 defining rows has odd weight 3. A split trivial quotient would require a fixed lift."
+  },
+  "carrier_incidence_36x360": {
+    "row_degree": 20,
+    "column_degree": 2,
+    "ranks": {"2":35,"3":36,"5":36,"7":36},
+    "binary_row_span": "35-dimensional cut code",
+    "real_singular_square_spectrum": {"40":1,"22":20,"16":15},
+    "right_Gram": "2I + adjacency(line graph of SRG(36,20,10,12)); zero multiplicity 324"
+  },
+  "theorem": "The unresolved one-bit quotient of the [360,36,20]_2 incidence kernel is the E6 root-signing switching class. The 36 minimum words are exactly the cubic-surface double-sixes/projective E6 roots, their K3,3 incidence is the edge incidence of SRG(36,20,10,12), and the kernel is its cut code plus the nonsplit E6 signing. The nontrivial coset has exact minimum 120 and 25920 Weyl-chamber minima.",
+  "boundary": "The E6 statement is an exact finite root/double-six/code identification. No physical E6 field or particle interpretation is inferred."
+}

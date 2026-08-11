@@ -1,0 +1,60 @@
+{
+  "passes": [4842,4846,4847,4848],
+  "incidence": "1080 binary Levi cycles x 360 induced K3,3 witnesses",
+  "row_degree": 3,
+  "column_degree": 9,
+  "modular_ranks": {"2":324,"3":359,"5":360,"7":360},
+  "F2_right_kernel": {
+    "parameters": "[360,36,20]_2",
+    "minimum_shell_size": 36,
+    "minimum_shell_rank": 35,
+    "minimum_carrier": "K6,6 minus a perfect matching on 12 quotient lines; the word consists of all 20 contained induced K3,3 witnesses",
+    "minimum_carrier_orbit_size_PSp": 36,
+    "minimum_carrier_orbit_size_PGSp": 36,
+    "minimum_carrier_stabilizer_order_PSp": 720,
+    "minimum_carrier_stabilizer_order_PGSp": 1440,
+    "K33_memberships_in_minimum_shell": 2,
+    "minimum_shell_total_xor_zero": true,
+    "complete_minimum_shell_certified_by_exclusion_MILP": true,
+    "boundary": "The 36 minimum words span only 35 of the 36 kernel dimensions; one additional binary kernel direction remains outside their span."
+  },
+  "F3_right_kernel": {
+    "dimension": 1,
+    "generator": "all-one vector on the 360 K3,3 witnesses",
+    "proof": "each binary cycle has incidence degree 3 = 0 mod 3 and rank_F3(M)=359"
+  },
+  "K33_intersection_graph": {
+    "vertices": 360,
+    "degree": 18,
+    "edges": 3240,
+    "connected": true,
+    "diameter": 4,
+    "distance_shells_from_every_vertex": [1,18,108,227,6],
+    "adjacency_spectrum": {
+      "18": 1,
+      "-5": 60,
+      "-2": 84,
+      "-1": 81,
+      "4": 64,
+      "(13+sqrt(97))/2": 20,
+      "(13-sqrt(97))/2": 20,
+      "(1+sqrt(73))/2": 15,
+      "(1-sqrt(73))/2": 15
+    },
+    "distance_regular": false
+  },
+  "singular_square_spectrum_M": {
+    "27": 1,
+    "4": 60,
+    "7": 84,
+    "8": 81,
+    "13": 64,
+    "(31+sqrt(97))/2": 20,
+    "(31-sqrt(97))/2": 20,
+    "(19+sqrt(73))/2": 15,
+    "(19-sqrt(73))/2": 15
+  },
+  "theorem": "The 1080_3--360_9 incidence matrix has a geometric binary right kernel [360,36,20]_2 with a complete 36-word minimum orbit carried by K6,6-minus-matching twelve-line subgraphs. Over F3 its only column relation is the global all-one sum. Over characteristic zero it has full column rank and an exact nine-eigenvalue singular spectrum.",
+  "execution": "Independent bare-GQ(4,2) enumeration plus exact binary MILP minimum/exclusion certificates; the real spectrum was diagonalized and recognized by exact quadratic minimal polynomials.",
+  "boundary": "No pre-existing 36-object shell is identified from dimension alone. The extra one-dimensional quotient of the F2 kernel by the minimum-word span remains open."
+}

@@ -1,0 +1,36 @@
+{
+  "pass": 4837,
+  "closed_carryovers": [4825,4827,4828,4830],
+  "4825_Brauer": {
+    "module_dimension": 5671,
+    "simple_degree_multiplicities": [[1,71],[4,70],[4,70],[6,154],[14,70],[20,56],[20,56],[64,14]],
+    "trivial_socle_dimension": 4,
+    "trivial_head_dimension": 1,
+    "trivial_internal_factors_at_least": 66,
+    "Loewy_length_lower_bound": 3,
+    "full_nontrivial_Loewy_ordering_known": false
+  },
+  "4827_sign_Burnside": {
+    "PSp_orbits": 711679993497112,
+    "PGSp_orbits": 355840805040988,
+    "PSp_linear_fixed_dimension": 0,
+    "PGSp_linear_fixed_dimension": 0,
+    "unique_fully_symmetric_affine_sign_sector": true,
+    "canonical_fixed_sector": "all-odd edge signing"
+  },
+  "4828_parametric_outages": {
+    "all_six_phase_diagrams_closed": true,
+    "all_rho1_values_match_Pass4820": true,
+    "failure_changes_intact_breakpoints": true,
+    "certificate": "data/PART_W33_PASS4828_PARAMETRIC_OUTAGE_FLOW.json"
+  },
+  "4830_binary_64_module_intertwiner": {
+    "PSp_Hom_dimension": 1,
+    "PGSp_Hom_dimension": 1,
+    "unique_nonzero_intertwiner_rank": 64,
+    "isomorphic_as_PSp_modules": true,
+    "isomorphic_as_PGSp_modules": true
+  },
+  "theorem": "Every heavy evidence gate carried from Pass4825-4832 is now closed. The flag-H1 characteristic-two Brauer semisimplification is exact with Loewy length at least three; the 64-dimensional sign-sector quotient has exact PSp/PGSp Burnside orbit counts and a unique fully symmetric affine sign class; all six failed-router arbitrary-rho phase diagrams are exact; and sign H1 is uniquely nonzero-equivariantly isomorphic to binary Levi H1 as a PGSp module.",
+  "boundary": "The complete nontrivial Loewy ordering of the 5671-dimensional module remains a genuine MeatAxe problem. The 225-dimensional twisted-F3 projective moduli remain separate. Flow statements are fractional-network theorems only."
+}

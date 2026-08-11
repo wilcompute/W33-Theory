@@ -1,0 +1,58 @@
+\subsection{Passes 4857--4864: rational orbital splitting, the Steiner two-graph, and the ternary adjoint quotient}
+\label{subsec:pass4857-4864}
+
+The rational ambiguity left by Pass~4850 can be closed completely.  The full projective action is the already certified Weyl action $PGSp(4,3)\cong W(E_6)$.  Combining the exact Pass~4850 center and complex block multiplicities with the classical Schur-index-one theorem for the exceptional Weyl groups gives
+\[
+ \mathcal A_{PGSp,\mathbb Q}\cong
+ \mathbb Q^6\times M_2(\mathbb Q)^4\times M_3(\mathbb Q)^3.
+\]
+Writing $K=\mathbb Q(\sqrt{-3})$, restriction to the index-two projective symplectic subgroup yields
+\[
+ \mathcal A_{PSp,\mathbb Q}\cong
+ \mathbb Q^3\times K^2\times M_2(\mathbb Q)^2\times M_2(K)\times M_3(\mathbb Q)^4.
+\]
+Thus every noncommutative rational factor is split over its center.  The Schur-index theorem itself is classical prior art; the statement here is its exact allocation to the explicitly reconstructed 1080-point orbital algebras.
+
+The ten ternary homology dimensions left outside the canonical oriented $K_{3,3}$ span are also no longer anonymous.  Exact induced matrices on
+\[
+ Q_{10}=H_1(\operatorname{Levi}(GQ(4,2));\mathbb F_3)/\langle K_{3,3}\text{ witnesses}\rangle
+\]
+have endomorphism ring exactly $\mathbb F_3$ for both $PSp$ and $PGSp$; exhaustive cyclic-span testing of all $29524$ projective nonzero vectors proves absolute irreducibility.  Independently, in $PG(4,3)$ the standard five-dimensional orthogonal form has projective norm-class sizes
+\[
+ 40,\quad45,\quad36.
+\]
+The nonorthogonality graph on the 36 norm-two points is exactly the double-six graph $\operatorname{SRG}(36,20,10,12)$.  Using the same eight $PGSp$ generators, the 36-point action lifts to orthogonal $5\times5$ matrices, and their exterior squares give a ten-dimensional module.  The simultaneous intertwiner space
+\[
+ \operatorname{Hom}_{PGSp}(Q_{10},\Lambda^2\mathbb F_3^5)
+\]
+has dimension one and its nonzero map has rank ten.  Hence
+\[
+ \boxed{Q_{10}\cong\Lambda^2(\mathbb F_3^5)}
+\]
+equivariantly.  Under the standard bivector-to-skew-endomorphism map this is $\mathfrak{so}_5(\mathbb F_3)\cong\mathfrak{sp}_4(\mathbb F_3)$.  The transported commutator bracket has zero center and full ten-dimensional derived algebra, satisfies Jacobi exactly, and is preserved by all common $PGSp$ generators.  This is a finite characteristic-three Lie-algebra theorem, not a continuum gauge-field claim.
+
+The $E_6$ switching sign likewise admits a root-free definition.  The 36 cubic-surface double-sixes have 1200 triangles in their overlap-six graph.  Their triple intersections split exactly as
+\[
+ 1080\times4\quad\sqcup\quad120\times0.
+\]
+The 120 empty-triple-intersection triangles are precisely the independently reconstructed Steiner trihedral-pair triples.  Let
+\[
+ \delta:\mathbb F_2^{360}\longrightarrow\mathbb F_2^{1200}
+\]
+record triangle parity.  Exact elimination gives $\operatorname{rank}\delta=325$.  If $p_{\rm St}$ is the characteristic vector of those 120 Steiner triangles, then the parity equation $\delta\sigma=p_{\rm St}$ is solvable and its full solution set has dimension 35, exactly the graph cut-space dimension.  Therefore the switching class is uniquely determined modulo cuts by Steiner incidence alone.  The root-inner-product signing of Pass~4849 is an independent representative of that same class.
+
+This yields the exact two-graph description
+\[
+ \boxed{K_{360}=\delta^{-1}(\langle p_{\rm St}\rangle)}.
+\]
+Its kernel over the Steiner parity line is the $35$-dimensional cut space.  The 1080 non-Steiner/even-sign triangles span exactly $324$ dimensions and are the binary Levi minimum checks, so
+\[
+ K_{360}^{\perp}=\langle\text{1080 even Steiner triangles}\rangle=[360,324,3]_2.
+\]
+
+For the nontrivial switching coset of $K_{360}$, an exact rank-six $E_6$ root-sum dynamic program gives the complete $2^{35}$-word enumerator on forty even weights from $120$ through $198$, beginning with the $25920$ Weyl-chamber minima.  The ordinary cut-space Ising polynomial does not collapse to that rank-six statistic and remains open.  The covering radius is likewise not promoted as exact: a symmetric signed-graph witness together with an exact rational LDL certificate gives the lower bound $124$, while orthogonal-array strength two from $d(K_{360}^{\perp})=3$ gives the universal upper bound $179$:
+\[
+ \boxed{124\le \rho(K_{360})\le179}.
+\]
+
+Finally, Pass~4851 showed that the $S_3^{45}$ sheet action in $C_{399}$ is a genuine code symmetry.  The minimal local datum that removes it is a full bijection between the three physical sheet cells above each recovered $GQ(4,2)$ point and its three incident quotient-line ports.  There are six such bijections and the local $S_3$ action on them is simply transitive, so the stabilizer is trivial and the datum is minimal.  A global system of these port matchings leaves a diagonal/cocycle copy of $PGSp(4,3)$; adjoining the previously certified global chirality choice reduces that stabilizer to $PSp(4,3)$.  This removes compilation ambiguity without changing the abstract code parameters or decoder guarantee.

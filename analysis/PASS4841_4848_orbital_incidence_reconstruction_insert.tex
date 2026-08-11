@@ -1,0 +1,90 @@
+\subsection{Passes 4841--4848: orbital refinement, modular incidence codes, and the first cross-cell reconstruction threshold}
+\label{subsec:pass4841-4848}
+
+The $1080$ minimum words of the binary Levi code carry a substantially finer symmetry than their shared-edge census suggests.  The stabilizer of one minimum word has order $24$ in $PSp(4,3)$ and $48$ in $PGSp(4,3)$, and exact stabilizer-orbit enumeration gives permutation ranks
+\[
+\boxed{59\quad\text{and}\quad49},
+\]
+respectively.  The corresponding subdegree censuses are
+\[
+1^1,3^1,4^2,6^2,12^{18},24^{35}
+\]
+for $PSp$, and
+\[
+1^1,3^1,4^2,6^2,12^{16},24^{18},48^9
+\]
+for $PGSp$.  Thus the outer involution fuses ten pairs of inner suborbits, and the coarse partition by the number of shared Levi edges is only a strong quotient of the true orbital algebra.
+
+Let $M\in\{0,1\}^{1080\times360}$ denote the incidence matrix from binary Levi minimum cycles to the $360$ induced-$K_{3,3}$ ternary witnesses of Pass~4840.  Its modular ranks are
+\[
+\operatorname{rank}_{\mathbb F_2}M=324,
+\qquad
+\operatorname{rank}_{\mathbb F_3}M=359,
+\qquad
+\operatorname{rank}_{\mathbb F_5}M=\operatorname{rank}_{\mathbb F_7}M=360.
+\]
+The binary right kernel is an exact
+\[
+\boxed{[360,36,20]_2}
+\]
+code.  Exact integer optimization proves distance twenty, and an exclusion certificate shows that its complete minimum shell contains exactly $36$ words.  Each such minimum word consists of all twenty induced $K_{3,3}$ witnesses contained in a twelve-line carrier
+\[
+\boxed{K_{6,6}\setminus M_6}.
+\]
+The $36$ carriers form one $PSp$ orbit and one $PGSp$ orbit, with stabilizer orders $720$ and $1440$.  The $36$ minimum words span dimension $35$; every one of the $360$ $K_{3,3}$ witnesses lies in exactly two minima, so the XOR of all $36$ minimum words vanishes.  The remaining one-dimensional quotient of the binary kernel by this minimum-word span is left unresolved.
+
+Characteristic three collapses in a completely different way.  Every binary cycle is incident with exactly three $K_{3,3}$ witnesses, so $M\mathbf 1=0$ modulo three.  Since $\operatorname{rank}_{\mathbb F_3}M=359$,
+\[
+\boxed{\ker_{\mathbb F_3}M=\langle\mathbf 1\rangle}.
+\]
+Thus the complete ternary column relation is the single global sum of all $360$ projective witnesses.
+
+Over characteristic zero the columns are independent.  In fact
+\[
+M^TM=9I+A,
+\]
+where $A$ is the connected $18$-regular graph on the $360$ $K_{3,3}$ witnesses obtained by joining two witnesses when they share a binary Levi cycle.  It has $3240$ edges, diameter four, uniform distance shells
+\[
+1,18,108,227,6,
+\]
+and exact adjacency spectrum
+\[
+18^1,\;(-5)^{60},\;(-2)^{84},\;(-1)^{81},\;4^{64},
+\left(\frac{13\pm\sqrt{97}}2\right)^{20},
+\left(\frac{1\pm\sqrt{73}}2\right)^{15}.
+\]
+Hence the squared singular values of $M$ are
+\[
+27^1,\;4^{60},\;7^{84},\;8^{81},\;13^{64},
+\left(\frac{31\pm\sqrt{97}}2\right)^{20},
+\left(\frac{19\pm\sqrt{73}}2\right)^{15}.
+\]
+The graph is not distance-regular, despite its uniform shell sizes.  The rank defects in characteristics two and three are therefore genuinely modular.
+
+The intrinsic-code reconstruction threshold can now be stated exactly.  Pass~4832 gives a $141$-dimensional dependency code on the $540$ repetition classes.  Its $135$ disjoint local minimum relations are independent, so exactly six cross-cell dimensions remain.  These are the global
+\[
+W_6=[27,6,12]_2
+\]
+sector, with enumerator $1+36z^{12}+27z^{16}$.  On the $540$ class carrier this becomes the cross-cell shell
+\[
+36z^{180}+27z^{240}.
+\]
+The six-dimensional residual generator has $135$ zero columns, precisely the hot classes, and $27$ distinct nonzero column types, each repeated on $15$ cold classes.  The three cold classes in every local cell therefore acquire three intrinsic quotient-line labels.  Grouping the $135$ cells by their unordered triple of such labels produces exactly $45$ triples, each repeated on three sheets.  Thus
+\[
+\boxed{27\text{ line types}+45\text{ line triples}=GQ(4,2)}
+\]
+is recovered from the code shells themselves.  This repairs the Pass~4839 falsifier: the local weight-two/minimum-weight-four shells alone are insufficient, but adjoining the first six-dimensional cross-cell shell is sufficient.  At the quotient-class level the resulting shell-design automorphism group is
+\[
+\boxed{S_3^{45}:\operatorname{Aut}(GQ(4,2))},
+\]
+with $|\operatorname{Aut}(GQ(4,2))|=51840$; the $S_3^{45}$ kernel permutes the three indistinguishable sheet cells above each recovered point.  This is not yet a theorem about the complete $2025$-coordinate code automorphism group.
+
+Finally, the quotient metric from the invariant inclusion $C_{\mathrm{Levi}}\le C_{399}$ is exact.  One local $[15,3,7]_2$ cell has nonzero weights $7,7,7,8,8,8,15$, so an ambient word of weight fourteen consists of exactly two weight-seven singleton generators.  Since the outer code has distance three, those generators must carry the same quotient-line label.  Therefore the complete ambient weight-fourteen shell has
+\[
+27\binom{15}{2}=2835
+\]
+words.  As $d(C_{\mathrm{Levi}})=96$, all $2835$ give distinct nonzero Levi cosets, and hence
+\[
+\boxed{\dim(C_{399}/C_{\mathrm{Levi}})=335,\qquad d_{\rm coset}=14}
+\]
+with exactly $2835$ minimum cosets.  No $PGSp$-module splitting is inferred from this quotient-metric statement.

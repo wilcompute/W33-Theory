@@ -1,0 +1,32 @@
+{
+  "passes": [4843,4845],
+  "quotient_dependency_dimension": 141,
+  "local_disjoint_relation_dimension": 135,
+  "first_cross_cell_dimension": 6,
+  "first_cross_cell_code": "W6=[27,6,12]_2",
+  "W6_weight_enumerator": {"0":1,"12":36,"16":27},
+  "intrinsic_540_class_weight_enumerator_nonzero": {"180":36,"240":27},
+  "first_cross_cell_weight": 180,
+  "residual_generator_columns": {
+    "hot_zero_columns": 135,
+    "distinct_nonzero_line_column_types": 27,
+    "multiplicity_of_each_nonzero_type_on_cold_classes": 15
+  },
+  "GQ_reconstruction": {
+    "cells": 135,
+    "three_nonzero_line_types_per_cell": true,
+    "distinct_unordered_line_triples": 45,
+    "multiplicity_per_line_triple": 3,
+    "recovered_points": 45,
+    "recovered_lines": 27,
+    "recovered_incidence": "GQ(4,2)"
+  },
+  "combined_class_design_automorphism_group": {
+    "structure": "S3^45 : Aut(GQ(4,2))",
+    "Aut_GQ_order": 51840,
+    "quotient_by_sheet_kernel": "PGSp(4,3) degree-45/27 incidence action",
+    "sheet_kernel": "S3^45"
+  },
+  "theorem": "The first cross-cell dual shell is exactly the six-dimensional W6 sector. Its 27 distinct nonzero generator-column types intrinsically recover the quotient lines. Combining those labels with the 135 local (4,4,4,3) cells produces 45 unordered line triples, each repeated on three sheets, recovering the full GQ(4,2) quotient. The huge S135 symmetry of the local dual-shell design collapses to S3^45 semidirect the 51840-element GQ automorphism group.",
+  "boundary": "This is the automorphism group of the quotient-class shell design after adding the first cross-cell sector. It is not yet the full 2025-coordinate code automorphism group; repetition-coordinate kernels require additional data to remove."
+}

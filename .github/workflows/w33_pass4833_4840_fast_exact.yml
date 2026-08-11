@@ -1,0 +1,47 @@
+name: Passes 4833-4840 fast exact evidence
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4833_4838_code399_levi_inclusion.py'
+      - 'analysis/w33_pass4834_code399_optimal_mixed_schedule.py'
+      - 'analysis/w33_pass4835_4839_intrinsic_dualshell_symmetry_falsifier.py'
+      - 'analysis/w33_pass4836_4840_levi_cycle_orbits_association.py'
+      - '.github/workflows/w33_pass4833_4840_fast_exact.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pass4833-4840-fast-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  fast-exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --disable-pip-version-check numpy scipy networkx sympy
+      - name: Execute exact producers
+        run: |
+          set -euo pipefail
+          python analysis/w33_pass4833_4838_code399_levi_inclusion.py
+          python analysis/w33_pass4834_code399_optimal_mixed_schedule.py
+          python analysis/w33_pass4835_4839_intrinsic_dualshell_symmetry_falsifier.py
+          python analysis/w33_pass4836_4840_levi_cycle_orbits_association.py
+      - name: Freeze generated evidence
+        run: |
+          git config user.name 'w33-evidence-bot'
+          git config user.email 'w33-evidence-bot@users.noreply.github.com'
+          git add \
+            data/PART_W33_PASS4833_4838_CODE399_LEVI_INCLUSION.json \
+            data/PART_W33_PASS4834_CODE399_OPTIMAL_MIXED_SCHEDULE.json \
+            data/PART_W33_PASS4835_4839_INTRINSIC_DUALSHELL_SYMMETRY_FALSIFIER.json \
+            data/PART_W33_PASS4836_4840_LEVI_CYCLE_ORBITS_ASSOCIATION.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Materialize fast Passes 4833-4840 exact evidence'
+            git pull --rebase origin master
+            git push origin HEAD:master
+          fi

@@ -1,0 +1,91 @@
+name: Passes 4833-4840 code interaction symmetry cycles
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4833_4838_code399_levi_inclusion.py'
+      - 'analysis/w33_pass4834_code399_optimal_mixed_schedule.py'
+      - 'analysis/w33_pass4835_4839_intrinsic_dualshell_symmetry_falsifier.py'
+      - 'analysis/w33_pass4836_4840_levi_cycle_orbits_association.py'
+      - '.github/workflows/w33_pass4833_4840_code_interaction_symmetry_cycles.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pass4833-4840-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install dependencies
+        run: |
+          python -m pip install --disable-pip-version-check numpy scipy networkx sympy pytest
+          sudo apt-get update -qq
+          sudo apt-get install -y gap gap-character-tables || sudo apt-get install -y gap gap-ctbllib
+      - name: Execute Passes 4833-4840 and gated carryovers
+        shell: bash
+        run: |
+          set +e
+          LOG=analysis/PASS4833_4840_RUN.log
+          STATUS=analysis/PASS4833_4840_RUN.status
+          : > "$LOG"
+          rc=0
+          run_one() {
+            echo "===== $* =====" | tee -a "$LOG"
+            "$@" 2>&1 | tee -a "$LOG"
+            here=${PIPESTATUS[0]}
+            echo "rc=$here" | tee -a "$LOG"
+            if [ "$here" -ne 0 ]; then rc=1; fi
+          }
+          run_one python analysis/w33_pass4833_4838_code399_levi_inclusion.py
+          run_one python analysis/w33_pass4834_code399_optimal_mixed_schedule.py
+          run_one python analysis/w33_pass4835_4839_intrinsic_dualshell_symmetry_falsifier.py
+          run_one python analysis/w33_pass4836_4840_levi_cycle_orbits_association.py
+          # Pass4837: re-run every still-gated exact producer from 4825/4827/4828/4830.
+          echo '===== Pass4837 GAP U4(2) mod-2 Brauer extraction =====' | tee -a "$LOG"
+          gap -q analysis/PASS4818_U42_MOD2_BRAUER.g > analysis/PASS4818_U42_MOD2_BRAUER.txt 2>> "$LOG"
+          here=$?; cat analysis/PASS4818_U42_MOD2_BRAUER.txt >> "$LOG" 2>/dev/null || true
+          echo "rc=$here" | tee -a "$LOG"; if [ "$here" -ne 0 ]; then rc=1; fi
+          run_one python analysis/w33_pass4818_modular_h1_brauer_loewy_boundary.py
+          run_one python analysis/w33_pass4825_brauer_loewy_closure.py
+          run_one python analysis/w33_pass4817_4823_pgsp_s3_moduli_certified.py
+          run_one python analysis/w33_pass4827_pgsp_sign_burnside.py
+          run_one python analysis/w33_pass4828_parametric_outage_flow.py
+          run_one python analysis/w33_pass4829_4830_levi_code_sign_module_hardened.py
+          echo "$rc" > "$STATUS"
+          exit 0
+      - name: Freeze generated evidence on direct runs
+        shell: bash
+        run: |
+          git config user.name 'w33-evidence-bot'
+          git config user.email 'w33-evidence-bot@users.noreply.github.com'
+          git add analysis/PASS4833_4840_RUN.log analysis/PASS4833_4840_RUN.status
+          test -f analysis/PASS4818_U42_MOD2_BRAUER.txt && git add analysis/PASS4818_U42_MOD2_BRAUER.txt
+          for f in \
+            data/PART_W33_PASS4833_4838_CODE399_LEVI_INCLUSION.json \
+            data/PART_W33_PASS4834_CODE399_OPTIMAL_MIXED_SCHEDULE.json \
+            data/PART_W33_PASS4835_4839_INTRINSIC_DUALSHELL_SYMMETRY_FALSIFIER.json \
+            data/PART_W33_PASS4836_4840_LEVI_CYCLE_ORBITS_ASSOCIATION.json \
+            data/PART_W33_PASS4818_MODULAR_H1_BRAUER_LOEWY.json \
+            data/PART_W33_PASS4825_BRAUER_LOEWY_CLOSURE.json \
+            data/PART_W33_PASS4817_PGSP_S3_MODULI_MODULE.json \
+            data/PART_W33_PASS4823_SELECTED_CONNECTION_INVARIANT_LINE.json \
+            data/PART_W33_PASS4827_PGSP_SIGN_BURNSIDE.json \
+            data/PART_W33_PASS4828_PARAMETRIC_OUTAGE_FLOW.json \
+            data/PART_W33_PASS4830_SIGN_LEVI_MODULE_INTERTWINER.json
+          do
+            test -f "$f" && git add "$f"
+          done
+          if ! git diff --cached --quiet; then
+            git commit -m 'Materialize Passes 4833-4840 exact evidence'
+            git pull --rebase origin master
+            git push origin HEAD:master
+          fi
+      - name: Enforce aggregate status
+        run: test "$(cat analysis/PASS4833_4840_RUN.status)" -eq 0

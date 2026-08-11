@@ -1,0 +1,61 @@
+\subsection{Passes 4833--4840: invariant Levi subcode, three-layer scheduling, and binary--ternary cycle incidence}
+\label{subsec:pass4833-4840}
+
+The binary Levi repetition-cycle code sits strictly inside the maximal distance-$14$ line-parity preimage.  On the common $2025$-coordinate carrier one has the exact inclusions
+\[
+C_{\mathrm{Levi}}\le C_{378}\le C_{399},
+\]
+where
+\[
+\dim C_{\mathrm{Levi}}=64,
+\qquad
+\dim C_{378}=378,
+\qquad
+\dim C_{399}=399.
+\]
+Thus $\dim(C_{399}/C_{\mathrm{Levi}})=335$.  Moreover, puncturing the $405$ hot coordinates is injective on $C_{399}$, so the ambient code retains dimension $399$ on the $1620$ cold coordinates.  The Levi code is $PGSp(4,3)$-invariant, but no invariant complement or direct-summand interpretation is inferred.
+
+The syndrome schedule of the $[2025,399,14]_2$ code admits a substantial correction and improvement.  The earlier eight-layer construction treated the six global $W_6$ checks as fixed physical representatives.  However, the fourfold cold repetition classes allow a global functional to be shifted by local dual checks among four equal physical coordinates.  For the canonical sparse rank-$1620$ local basis, an exact finite search yields a $W_6$ basis of weights
+\[
+12,12,16,12,12,12
+\]
+with maximum coordinate multiplicity four.  Assigning active global occurrences injectively to the four repeated physical representatives puts all six global checks into a single third layer, while retaining the two local layers of sizes $945$ and $675$.  Therefore
+\[
+\boxed{\text{optimal sparse-check schedule depth}=3}.
+\]
+Two layers are impossible in this stated model: the connected bipartite local-cell conflict graph fixes the local two-colouring up to swap and leaves at most one globally usable representative in each logical repetition class.  Six outer basis supports would then have to be disjoint on $27$ outer coordinates, forcing total outer weight at most $27$, whereas every $W_6$ basis has total weight at least $6\cdot12=72$.  This theorem supersedes the previous eight-layer upper-bound paragraph and the first, overly rigid six-layer continuation argument; it is not a hardware clock-depth claim.
+
+The low intrinsic dual shells do \emph{not} by themselves recover the global router geometry.  Pass~4832 gives $540$ generator-column classes, namely $405$ cold classes of size four and $135$ hot classes of size three.  The $135$ minimum quotient relations, each of type $(4,4,4,3)$, partition all $540$ classes.  Consequently the specified dual-shell design is simply $135$ disconnected typed cells and has exact class-level automorphism group
+\[
+\boxed{S_3^{135}:S_{135}}.
+\]
+The physical-coordinate design has additional internal repetition-class symmetry containing $S_4^{405}\times S_3^{135}$.  This is vastly larger than $PGSp(4,3)$ and proves that the weight-two shell plus minimum quotient shell alone cannot reconstruct the $45$ packets, $27$ generalized-quadrangle lines, Petersen fibers, or global router action.  Higher-shell/full-code relations are necessary to break the free $S_{135}$ cell symmetry.
+
+The complete minimum shell of the Levi code is also now classified.  Its $1080$ weight-$96$ words are exactly the twelvefold repetitions of Levi eight-cycles, equivalently the $1080$ four-cycles of the $27$-line graph $\operatorname{SRG}(27,10,1,5)$.  They form one $PSp(4,3)$ orbit and one $PGSp(4,3)$ orbit, with stabilizer orders
+\[
+24\qquad\text{and}\qquad48,
+\]
+respectively.  Relative to any fixed minimum word, the other minima split by the number of shared Levi edges as
+\[
+0^{759},\qquad1^{192},\qquad2^{88},\qquad3^{24},\qquad4^{16}.
+\]
+
+Finally, the relation between these $1080$ binary minima and the $360$ induced-$K_{3,3}$ ternary homology witnesses is objectwise rather than numerical.  A binary minimum four-cycle is incident with a ternary witness precisely when its four quotient-line vertices lie inside the six vertices of the induced $K_{3,3}$.  The exact biregular law is
+\[
+\boxed{1080_3\;\text{--}\;360_9},
+\]
+that is, every binary cycle lies in exactly three induced $K_{3,3}$s and every induced $K_{3,3}$ contains exactly nine binary cycles.  Hence
+\[
+1080\cdot3=360\cdot9=3240.
+\]
+The incidence graph is connected; its incidence-matrix ranks over $\mathbb F_2,\mathbb F_3,\mathbb F_5,\mathbb F_7$ are respectively
+\[
+324,\qquad359,\qquad360,\qquad360.
+\]
+The coarse partition of pairs of binary minima only by shared-edge count is not itself an association scheme: already in the shared-one-edge relation the number of common same-relation neighbours takes the three values $30,31,36$.
+
+The four heavy carryovers are now closed as well.  The characteristic-two Brauer semisimplification of the $5671$-dimensional invariant-flag cohomology is
+\[
+71\cdot1+70\cdot4_a+70\cdot4_b+154\cdot6+70\cdot14+56\cdot20_a+56\cdot20_b+14\cdot64.
+\]
+Together with the exact trivial socle dimension $4$ and trivial head dimension $1$, at least $66$ trivial composition factors are forced into internal nonsplit layers, so the Loewy length is at least three; the full nontrivial Loewy ordering remains open.  On the $64$-dimensional binary sign-cohomology module, exact Burnside enumeration gives $711679993497112$ $PSp$-orbits and $355840805040988$ $PGSp$-orbits.  The linear fixed space is zero for both groups, hence the canonical all-odd affine signing is the unique fully symmetric sign sector.  Moreover, the sign-cohomology module and binary Levi homology are $PGSp$-isomorphic: the simultaneous intertwiner space has dimension one and its unique nonzero element has rank $64$.  Finally, all six failed-router capacity functions are now exact piecewise-rational lower envelopes in the hot/cold capacity ratio $\rho$; every failure type shifts the intact-router phase boundaries, while the value at $\rho=1$ reproduces the independently frozen Pass~4820 optimum in each case.

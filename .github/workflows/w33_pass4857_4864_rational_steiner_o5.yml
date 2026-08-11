@@ -1,0 +1,83 @@
+name: Passes 4857-4864 rational Steiner O5 adjoint
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4857_rational_orbital_blocks.py'
+      - 'analysis/w33_pass4858_ternary_ten_module.py'
+      - 'analysis/w33_pass4859_switching_enumerator_radius.py'
+      - 'analysis/w33_pass4860_intrinsic_steiner_signing.py'
+      - 'analysis/w33_pass4861_port_matching_symmetry_break.py'
+      - 'analysis/w33_pass4862_steiner_two_graph_code.py'
+      - 'analysis/w33_pass4863_4864_o5_adjoint_homology.py'
+      - 'tests/test_w33_pass4857_4864_rational_steiner_o5.py'
+      - '.github/workflows/w33_pass4857_4864_rational_steiner_o5.yml'
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pass4857-4864-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install exact-analysis dependencies
+        run: python -m pip install --disable-pip-version-check numpy scipy networkx sympy pytest
+      - name: Execute all producers and regression
+        shell: bash
+        run: |
+          set +e
+          LOG=analysis/PASS4857_4864_RUN.log
+          STATUS=analysis/PASS4857_4864_RUN.status
+          : > "$LOG"
+          rc=0
+          run_one() {
+            echo "===== $* =====" | tee -a "$LOG"
+            "$@" 2>&1 | tee -a "$LOG"
+            here=${PIPESTATUS[0]}
+            echo "rc=$here" | tee -a "$LOG"
+            if [ "$here" -ne 0 ]; then rc=1; fi
+          }
+          run_one python analysis/w33_pass4857_rational_orbital_blocks.py
+          run_one python analysis/w33_pass4858_ternary_ten_module.py
+          run_one python analysis/w33_pass4859_switching_enumerator_radius.py
+          run_one python analysis/w33_pass4860_intrinsic_steiner_signing.py
+          run_one python analysis/w33_pass4861_port_matching_symmetry_break.py
+          run_one python analysis/w33_pass4862_steiner_two_graph_code.py
+          run_one python analysis/w33_pass4863_4864_o5_adjoint_homology.py
+          run_one pytest -q tests/test_w33_pass4857_4864_rational_steiner_o5.py
+          echo "$rc" > "$STATUS"
+          exit 0
+      - name: Preserve exact evidence on direct runs
+        if: github.event_name != 'pull_request'
+        shell: bash
+        run: |
+          git config user.name 'w33-evidence-bot'
+          git config user.email 'w33-evidence-bot@users.noreply.github.com'
+          git add analysis/PASS4857_4864_RUN.log analysis/PASS4857_4864_RUN.status
+          for f in \
+            data/PART_W33_PASS4857_RATIONAL_ORBITAL_BLOCKS.json \
+            data/PART_W33_PASS4858_TERNARY_TEN_MODULE.json \
+            data/PART_W33_PASS4859_SWITCHING_ENUMERATOR_RADIUS.json \
+            data/PART_W33_PASS4860_INTRINSIC_STEINER_SIGNING.json \
+            data/PART_W33_PASS4861_PORT_MATCHING_SYMMETRY_BREAK.json \
+            data/PART_W33_PASS4862_STEINER_TWO_GRAPH_CODE.json \
+            data/PART_W33_PASS4863_4864_O5_ADJOINT_HOMOLOGY.json
+          do
+            test -f "$f" && git add "$f"
+          done
+          if ! git diff --cached --quiet; then
+            git commit -m 'Materialize Passes 4857-4864 exact evidence'
+            git pull --rebase origin master
+            git push origin HEAD:master
+          fi
+      - name: Enforce aggregate status
+        run: test "$(cat analysis/PASS4857_4864_RUN.status)" -eq 0

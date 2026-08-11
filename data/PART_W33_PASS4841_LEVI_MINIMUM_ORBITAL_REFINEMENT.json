@@ -1,0 +1,18 @@
+{
+  "pass": 4841,
+  "minimum_shell_size": 1080,
+  "PSp": {
+    "stabilizer_order": 24,
+    "permutation_rank": 59,
+    "subdegree_census": {"1":1,"3":1,"4":2,"6":2,"12":18,"24":35}
+  },
+  "PGSp": {
+    "stabilizer_order": 48,
+    "permutation_rank": 49,
+    "subdegree_census": {"1":1,"3":1,"4":2,"6":2,"12":16,"24":18,"48":9}
+  },
+  "PSp_subdegrees_sorted": [1,3,4,4,6,6,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24],
+  "PGSp_subdegrees_sorted": [1,3,4,4,6,6,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,48,48,48,48,48,48,48,48,48],
+  "theorem": "The PSp(4,3) action on the 1080 binary Levi minima has permutation rank 59; the full PGSp action has rank 49. Thus the outer involution fuses ten pairs of PSp stabilizer suborbits. Shared-edge count is only a coarse collapse of a much finer exact orbital scheme.",
+  "boundary": "Exact bare-GQ(4,2) stabilizer-orbit computation. No representation labels are inferred solely from the subdegrees."
+}

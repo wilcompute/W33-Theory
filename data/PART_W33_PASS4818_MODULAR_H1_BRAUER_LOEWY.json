@@ -1,0 +1,29 @@
+{
+  "pass": 4818,
+  "group": "PSp(4,3) ~= U4(2)",
+  "field": "characteristic 2 over a splitting field",
+  "ordinary_character_dimension": 5671,
+  "ordinary_labels": ["1a","5a","5b","6a","10a","10b","15a","15b","20a","24a","30a","30b","30c","40a","40b","45a","45b","60a","64a","81a"],
+  "ordinary_multiplicities": [0,1,1,0,3,3,4,0,1,4,7,4,4,10,10,12,12,11,14,19],
+  "Brauer_simple_degrees": [1,4,4,6,14,20,20,64],
+  "Brauer_composition_factors": [
+    {"index":1,"degree":1,"composition_multiplicity":71},
+    {"index":2,"degree":4,"composition_multiplicity":70},
+    {"index":3,"degree":4,"composition_multiplicity":70},
+    {"index":4,"degree":6,"composition_multiplicity":154},
+    {"index":5,"degree":14,"composition_multiplicity":70},
+    {"index":6,"degree":20,"composition_multiplicity":56},
+    {"index":7,"degree":20,"composition_multiplicity":56},
+    {"index":8,"degree":64,"composition_multiplicity":14}
+  ],
+  "trivial_composition_multiplicity": 71,
+  "module_level_trivial_layers": {
+    "trivial_socle_dimension": 4,
+    "trivial_head_dimension": 1,
+    "all_four_fixed_vectors_in_augmentation": true,
+    "deck_line_nonsplit": true
+  },
+  "source": "Official GAP Character Table Library U4(2) mod-2 decomposition matrix, combined with data/PART_W33_PASS4745_INVARIANT_H1_CHARACTER.json. The U4(2) ordinary rows are chi1..chi20; the additional faithful double-cover rows printed on the library sheet are not part of the U4(2) ordinary character used here.",
+  "theorem": "The exact 2-Brauer semisimplification of the 5671-dimensional flag-graph H1 has simple-degree/multiplicity pairs (1,71),(4a,70),(4b,70),(6,154),(14,70),(20a,56),(20b,56),(64,14).",
+  "boundary": "Semisimplification plus separately computed trivial socle/head data; not a complete Loewy series."
+}

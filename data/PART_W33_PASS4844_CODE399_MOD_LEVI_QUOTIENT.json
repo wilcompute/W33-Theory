@@ -1,0 +1,18 @@
+{
+  "pass": 4844,
+  "ambient": "C399=[2025,399,14]_2",
+  "subcode": "C_Levi=[2025,64,96]_2",
+  "quotient_dimension": 335,
+  "quotient_metric": "minimum physical Hamming weight among representatives of a nonzero Levi coset",
+  "quotient_minimum_distance": 14,
+  "minimum_quotient_cosets": 2835,
+  "ambient_weight14_shell": {
+    "size": 2835,
+    "structure": "27 fibers, one per outer line; each fiber is C(15,2)=105 unordered pairs of weight-7 local singleton generators carrying that line label",
+    "all_minima_lie_in_C378": true
+  },
+  "count_proof": "Each local [15,3,7]_2 cell has nonzero weights 7,7,7,8,8,8,15. Thus total weight14 requires two weight7 singleton words. Their outer labels must coincide because O21=[27,21,3]_2 has no weight1 or weight2 words. There are 15 singleton coordinates over each of 27 quotient lines, giving 27*C(15,2)=2835.",
+  "injectivity_into_quotient": "If two distinct weight14 words represented the same Levi coset, their difference would be a nonzero Levi word of weight at most28, contradicting d(C_Levi)=96.",
+  "theorem": "C399/C_Levi has dimension335 and physical coset minimum distance14. Its complete minimum shell consists of exactly2835 distinct cosets represented by pairs of local weight7 generators with the same outer-line label.",
+  "boundary": "This is a quotient metric theorem, not a PGSp-module direct-sum or invariant-complement claim."
+}

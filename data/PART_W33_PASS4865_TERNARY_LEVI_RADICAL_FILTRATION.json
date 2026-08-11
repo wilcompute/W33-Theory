@@ -1,0 +1,36 @@
+{
+  "ATLAS_crosscheck": "U4(2)=S4(3)=PSp(4,3) lists all faithful characteristic-3 irreducibles in dimensions 5,10,14,25,81; the repo-derived nontrivial irreducible factors 5,10,14,25 match these classes.",
+  "K33_generated_submodule_dimension": 54,
+  "PGSp_invariance": {
+    "radical": true,
+    "submodule_14": true,
+    "submodule_19": true,
+    "submodule_24": true
+  },
+  "PSp_submodule_lattice": {
+    "composition_factor_dimensions_H1": [14,5,10,25,10],
+    "composition_factor_dimensions_K33": [14,5,10,25],
+    "composition_factor_dimensions_radical": [14,5,10],
+    "diamond": {"14_in_19": true,"14_in_24": true,"intersection_19_24": 14,"sum_19_24": 29},
+    "irreducibility_certificates": {
+      "14": {"all_cyclic_spans": 14,"tested": 44},
+      "19_over_14": {"all_cyclic_spans": 5,"tested": 5},
+      "24_over_14": {"all_cyclic_spans": 10,"tested": 8},
+      "29_over_19": {"all_cyclic_spans": 10,"tested": 8},
+      "29_over_24": {"all_cyclic_spans": 5,"tested": 5},
+      "54_over_29": {"all_cyclic_spans": 25,"tested": 161}
+    },
+    "proper_nonzero_submodule_dimensions": [14,19,24],
+    "radical_dimension": 29
+  },
+  "ambient_Levi_H1_dimension_F3": 64,
+  "boundary": "Finite characteristic-three module and bilinear-form theorem. ATLAS labels are external cross-checks; no continuum field or particle interpretation follows.",
+  "canonical_edge_pairing": {"K33_radical_dimension": 29,"K33_restriction_rank": 25,"ambient_radical_contained_in_K33_submodule": true,"ambient_radical_dimension": 29,"ambient_rank": 35},
+  "extensions": {
+    "0_to_29_to_54_to_25": {"PGSp": {"augmented_rank": 726,"coefficient_rank": 725,"splits": false,"unknowns": 725},"PSp": {"augmented_rank": 726,"coefficient_rank": 725,"splits": false,"unknowns": 725}},
+    "0_to_54_to_64_to_10": {"PGSp": {"augmented_rank": 541,"coefficient_rank": 540,"splits": false,"unknowns": 540},"PSp": {"augmented_rank": 541,"coefficient_rank": 540,"splits": false,"unknowns": 540}}
+  },
+  "nondegenerate_quotient": {"H1_over_radical_dimension": 35,"K33_over_radical_dimension": 25,"PGSp_Hom_to_original_adjoint10_dimension": 1,"PSp_Hom_to_original_adjoint10_dimension": 1,"orthogonal_complement_dimension": 10,"orthogonal_complement_nondegenerate": true,"orthogonal_decomposition": "H1/rad = (K33/rad)_25 orthogonal-sum Q10"},
+  "pass": 4865,
+  "theorem": "The canonical F3 edge pairing on Levi H1 has a 29-dimensional radical contained in the 54-dimensional oriented-K3,3 submodule. That radical has the exact PSp/PGSp-invariant diamond 14 < {19,24} < 29, with simple factors 14,5,10; the quotient 54/29 is irreducible 25. Both 29->54->25 and 54->64->10 are nonsplit for PSp and PGSp. After quotienting the pairing radical, H1/rad is nondegenerate and decomposes canonically as 25 orthogonal-sum 10, with the 10-space explicitly isomorphic to the previously certified adjoint quotient."
+}

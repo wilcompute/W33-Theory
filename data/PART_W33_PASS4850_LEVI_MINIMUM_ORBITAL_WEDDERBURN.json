@@ -1,0 +1,31 @@
+{
+  "pass": 4850,
+  "PSp": {
+    "orbital_dimension": 59,
+    "center_dimension": 15,
+    "complex_Wedderburn": "C^7 x M2(C)^4 x M3(C)^4",
+    "rational_center": "Q^9 x Q(sqrt(-3))^3",
+    "generic_central_charpoly": "(lambda - 147356)*(lambda - 20006)^9*(lambda - 17276)^4*(lambda - 10412)^9*(lambda - 5468)^4*(lambda - 4652)^9*(lambda + 1364)^9*(lambda + 85096)*(lambda + 120184)*(lambda^2 - 22840*lambda + 130755088)*(lambda^2 + 21416*lambda + 114968464)*(lambda^2 + 57704*lambda + 832686736)^4",
+    "regular_eigenvalue_multiplicity_census": {"1":7,"4":4,"9":4}
+  },
+  "PGSp": {
+    "orbital_dimension": 49,
+    "center_dimension": 13,
+    "complex_Wedderburn": "C^6 x M2(C)^4 x M3(C)^3",
+    "rational_center": "Q^13",
+    "generic_central_charpoly": "(lambda - 15861)*(lambda - 1749)*(lambda - 1677)^4*(lambda - 1661)*(lambda - 381)^4*(lambda - 201)*(lambda + 75)*(lambda + 87)^9*(lambda + 195)*(lambda + 483)^4*(lambda + 663)^9*(lambda + 691)^4*(lambda + 1041)^9",
+    "regular_eigenvalue_multiplicity_census": {"1":6,"4":4,"9":3}
+  },
+  "outer_action": "The PGSp outer extension lowers permutation rank 59->49 and center dimension 15->13; the PSp rational center has three Eisenstein Q(sqrt(-3)) factors whereas the PGSp center is completely split over Q.",
+  "coarse_operator_embedding": {
+    "shared_Levi_edge_orbital_count_census": {"0":34,"1":6,"2":5,"3":1,"4":2,"8":1},
+    "K33_incidence_Gram": "M M^T = 3 A_0 + A_1 + A_5 in deterministic PGSp orbital order",
+    "nonzero_orbitals": [0,1,5],
+    "subdegrees": [1,12,12],
+    "shared_Levi_edges": [8,4,2],
+    "is_central": false,
+    "commutant_dimension_inside_orbital_algebra": 27
+  },
+  "theorem": "The exact 1080-point orbital algebras are noncommutative. Over C the PSp algebra is C^7 x M2^4 x M3^4 and the PGSp algebra is C^6 x M2^4 x M3^3. The PSp rational center retains three Q(sqrt(-3)) components, while the outer extension yields a fully rational PGSp center Q^13. The K3,3 incidence Gram occupies only three PGSp orbitals and is not central.",
+  "boundary": "Complex matrix-block sizes and rational centers are exact. Split-versus-division status of every noncommutative rational simple block is not asserted without explicit rational matrix units."
+}
