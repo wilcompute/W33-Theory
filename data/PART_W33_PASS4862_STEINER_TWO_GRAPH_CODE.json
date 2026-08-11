@@ -1,0 +1,28 @@
+{
+  "pass": 4862,
+  "graph": "36-double-six SRG(36,20,10,12)",
+  "vertices": 36,
+  "edges": 360,
+  "triangles": 1200,
+  "triangle_parity_map": {
+    "shape": [1200,360],
+    "rank_F2": 325,
+    "kernel_dimension": 35,
+    "kernel": "binary cut space of the connected 36-vertex graph"
+  },
+  "Steiner_parity": {
+    "odd_triangles": 120,
+    "even_triangles": 1080,
+    "odd_definition": "empty triple intersection of the three double-six 12-line supports"
+  },
+  "code_exact_sequence": "K = delta^{-1}(<p_Steiner>), dimension 36; 0 -> Cut(H36) -> K -> <p_Steiner> -> 0",
+  "dual": {
+    "parameters": "[360,324,3]_2",
+    "cycle_space_dimension": 325,
+    "even_triangle_span_dimension": 324,
+    "minimum_checks": 1080,
+    "minimum_checks_identity": "the 1080 non-Steiner/even-sign double-six triangles = binary Levi minimum checks"
+  },
+  "theorem": "The E6 switching code is exactly the one-dimensional Steiner-parity extension of the cut space. Its dual is exactly the codimension-one subspace of the graph cycle space with even Steiner-sign pairing, and the 1080 even triangles span the full 324-dimensional dual.",
+  "boundary": "Finite F2 chain/two-graph theorem; no continuum topology is inferred."
+}
