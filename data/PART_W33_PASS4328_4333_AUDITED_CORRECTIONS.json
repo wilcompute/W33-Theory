@@ -1,0 +1,85 @@
+{
+  "schema": "w33.pass4328_4333.audited_corrections.v1",
+  "status": "PASS",
+  "pass_4328_ihara_correction": {
+    "bass_formula": "det(I-uB)=(1-u^2)^(E-V) det(I-uA+u^2(D-I)) for a finite graph",
+    "kotani_sunada_nonreal_pole_annulus": "(d_max-1)^(-1/2) <= |u| <= (d_min-1)^(-1/2)",
+    "shipped_graph_u_annulus": "1/sqrt(7) <= |u| <= 1",
+    "reciprocal_lambda_annulus": "1 <= |lambda| <= sqrt(7), for the corresponding non-real roots only",
+    "withdrawn": "Pass 4239's no-square-root band filling and closest-irregular-Ramanujan metric"
+  },
+  "pass_4329_voltage_cover_retraction": {
+    "base_cycle_zero_based": [3,52,4,48,8,66,18,53],
+    "edge_indices_zero_based": [48,49,33,34,104,105,54,52],
+    "signed_voltages": [0,0,0,0,1328,-542,801,-1587],
+    "voltage_sum_mod_2731": 0,
+    "corrected_cover_girth": 8,
+    "retraction": "The frozen Pass 4253 Z_2731 cover does not certify girth >=16; Pass 4260's radius-seven tree count is not realized by that cover.",
+    "surviving_ladder": "Z_359 girth >=14 (Pass 4214); Z_750019 girth >=18 (Pass 4261)."
+  },
+  "pass_4330_point_frequency_symmetry": {
+    "machine_swap_invariance_A_B_C_D": [false,true,false,true],
+    "machine_A_stir": ["1","8/9","2/3","2/3"],
+    "machine_B_stir": ["1","8/9","1","8/9"],
+    "machine_C_stir": ["1","26/27","2/3","2/3"],
+    "machine_D_stir": ["1","26/27","1","26/27"],
+    "correction": "B and D are exactly p/f-swap invariant. The reported 0.460435 localization is symmetric on the swapped coordinates and is not residual p/f bias.",
+    "load_port_boundary": "An affine translation acts on the 81 frames but descends to neither 40-point nor 40-line projective carrier; the old forced point-side load-port chain is retracted.",
+    "hardware_boundary": "Pass 4321 priced opcodes and finite spectral metrics; it did not synthesize B or D in Yosys."
+  },
+  "pass_4331_incidence_comparator": {
+    "differential_single_rail_detected": 1656,
+    "differential_single_rail_trials": 1920,
+    "differential_detection_fraction": "69/80",
+    "shared_control_detected": 0,
+    "shared_control_trials": 960,
+    "scope_name": "linear-opcode mismatch incidence census",
+    "prior_broader_comparator": "Passes 4367/4374: arbitrary one-register flag substitutions detect 36/39=12/13 at q=3 and generalize over W(3,q).",
+    "boundary": "This is the restricted census for mismatched tested linear opcodes on two rails, not the first or general flag comparator. A shared wrong opcode preserves incidence and is invisible. Pass 4304 used a golden run; Passes 4367/4374 own the broader arbitrary-register substitution law."
+  },
+  "pass_4332_degree33_galois_pair": {
+    "degree": 33,
+    "irreducible_over_Q": true,
+    "growth_root_isolating_interval": ["574/100","575/100"],
+    "slow_root_isolating_interval": ["3349/1000","3350/1000"],
+    "roots_in_each_interval": [1,1],
+    "conclusion": "The global nonbacktracking growth root and the reported slow real root lie in the same irreducible degree-33 primary factor, hence are algebraic conjugates.",
+    "boundary": "This does not yet construct the 33-dimensional rational projector or make the localization basis-invariant."
+  },
+  "pass_4333_universal_census_correction": {
+    "sizes_4_through_10": [24,80,114,90,41,10,1],
+    "total": 360,
+    "shipped_rho_rank": "six-way numerical tie occupying positions 7 through 12; only six sets are strictly lower at tolerance 1e-10",
+    "correction": "Pass 4238's 12-of-360 wording was not a strict rank, and its own size bands overlap."
+  },
+  "checks": {
+    "affine_translation_not_projectively_well_defined": true,
+    "corrected_universal_size_census_sums_360": true,
+    "degree_33": true,
+    "degree_33_irreducible_over_Q": true,
+    "differential_comparator_census": true,
+    "falsifier_cycle_is_simple_base_cycle": true,
+    "falsifier_edge_indices": true,
+    "falsifier_signed_voltages": true,
+    "falsifier_unsigned_voltages": true,
+    "falsifier_voltage_zero_mod_2731": true,
+    "geometry_40_40_160": true,
+    "kotani_sunada_square_root_translation": true,
+    "machine_A_stir_counts": true,
+    "machine_B_graph_swap_invariant": true,
+    "machine_B_stir_counts": true,
+    "machine_C_stir_counts": true,
+    "machine_D_graph_swap_invariant": true,
+    "machine_D_stir_counts": true,
+    "machine_opcode_counts": true,
+    "machine_swap_invariance_false_true_false_true": true,
+    "one_rail_comparator_census": true,
+    "shared_control_comparator_boundary": true,
+    "swap_conjugates_cx_pair": true,
+    "swap_conjugates_fp_ff": true,
+    "swap_conjugates_load_pair": true,
+    "unique_growth_root_in_interval": true,
+    "unique_slow_root_in_interval": true,
+    "voltage_tree_cotree_79_81": true
+  }
+}

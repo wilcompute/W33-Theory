@@ -7735,58 +7735,53 @@ itself --- so the cosmological-constant cancellation (Pass 18) is a property of 
 Thus the CC, the Einstein--Hilbert action, and the Starobinsky inflation are the three heat-kernel
 coefficients of one action. (Witness: \path{analysis/w33_gravity_spectral_action.py}.)
 
-\emph{The continuum gap is two theorems, not a sector.} The gravity \emph{dynamics} is therefore
-derived. What is \emph{not} yet proven narrows to two precisely-located theorems: \textbf{(T1)} the
-$a_2$ positivity / curved-$4$D refinement --- proving the Einstein--Hilbert coefficient on the
-curved tower gives a \emph{positive} Newton constant ($\tfrac1{16\pi G}\sim\Lambda^2 v$), with the
-spectral data pinned and the geometric-route convergence established but the curved positivity open;
-and \textbf{(T2)} the emergence of the spacetime manifold $M^4$ from the discrete substrate (Connes
-reconstruction of a smooth manifold from the finite datum) --- the substrate supplies $F=W(3,3)$,
-while $M^4$ is currently tensored in, not derived. So Pass~28's single open item splits: the gravity
-dynamics moves to \textsc{derived}, and the open frontier becomes (T1)$+$(T2). (Witness:
-\path{analysis/w33_continuum_gap.py}.)
+\emph{The continuum gap has two named necessary components, not an exhaustive two-theorem
+closure.}  The finite calculation supplies a candidate spectral-action coefficient ledger.
+It does not derive continuum gravity.  In particular, \textbf{(T1)} must show that a specified
+curved four-dimensional spectral triple gives the required Einstein--Hilbert sign and a positive
+Newton constant, and \textbf{(T2)} must construct metric spectral triples from the discrete
+substrate and prove that they converge to a smooth four-manifold.  At present $M^4$ is tensored
+in rather than reconstructed.  Other analytic and physical consistency conditions may remain,
+so (T1) and (T2) are concrete obligations, not a proof that they are the only obligations.
+(Audit witness: \path{analysis/w33_continuum_gap.py}.)
 
 \emph{Honest scope:} the Chamseddine--Connes spectral action and the $a_0/a_2/a_4=$CC/EH/$R^2$
-identification are established machinery; the substrate content is that $F=W(3,3)$, so the weights
-are the specific moments $\{40,480,6240\}$ and the $M_1=240+240$ split is the structural
-supersymmetry. This pass shows gravity \emph{is} the substrate's spectral action and locates the
-frontier precisely; it does \emph{not} prove (T1) or (T2). The continuum gravity lift is thus
-narrowed from a missing sector to two named theorems --- the genuine, honestly-stated edge of the
-solution.
+identification are established machinery once a suitable continuum spectral triple is supplied.
+The substrate calculation contributes the finite moments $\{40,480,6240\}$ and a reported
+$M_1=240+240$ split.  Those data can be inserted into the machinery; they do not prove that
+gravity, supersymmetry, or a continuum manifold emerges from $W(3,3)$.  The useful result here is
+that two missing maps are now stated explicitly enough to attack and falsify.
 
-\subsection{Pass 30 --- the emergent spacetime is K3, and (T2) reduces to one convergence theorem}
+\subsection{Pass 30 --- K3 as a candidate continuum target, with convergence still open}
 \label{sec:capstone-thirty}
 
-The deeper of the two residual theorems, (T2) the manifold emergence, is taken on: the continuum
-$4$-manifold is identified, its topology is shown to be substrate data, and the open question
-reduces to a single named convergence statement.
+The K3 surface is a mathematically rich candidate for testing (T2).  The calculations below
+compare its invariants with finite substrate counts; they do not identify it uniquely or derive
+it from the finite datum.
 
-\emph{The emergent spacetime is K3.} The continuum manifold $M^4$ is not a free choice: it is the
-K3 surface, and every topological invariant is a $W(3,3)$ integer. The Euler characteristic
+\emph{Why K3 is an interesting candidate.} The Euler characteristic
 $\chi(K3)=24=f$ (the gauge-mode count, $\dim\mathrm{SU}(5)$); the signature $\sigma(K3)=-16=-\mu^2$
 (the matter gap); the Betti numbers $(1,0,22,0,1)$ with $b_2^+=3=q$; and the K3 intersection lattice
 $E_8(-1)^2\oplus H^3$, whose two $E_8$ summands carry $2\times240=480=M_1=\mathrm{Tr}\,L$ --- the
-substrate's first heat-kernel moment (Pass 29). So the manifold's topology \emph{is} the substrate's
-spectral data. The spectral action's topological gravity term, the Gauss--Bonnet integral
+substrate's first heat-kernel moment (Pass 29), form a compact compatibility ledger.  Equal integers
+do not constitute an object-level reconstruction map and need not select K3 uniquely.  Likewise,
+the spectral action's topological gravity term, the Gauss--Bonnet integral
 $\tfrac1{32\pi^2}\!\int\!\mathrm{GB}=\chi$, is fixed on K3 to $\chi=24=f$: the gauge-mode count is the
-Euler characteristic of spacetime. And the substrate realises K3 concretely as an edgewise
-triangulation tower (the BT984--1135 program), whose homology is forced to K3's Betti numbers at
-every refinement level. (Witness: \path{analysis/w33_manifold_emergence_k3.py}.)
+same integer as the candidate's Euler characteristic, not evidence that the former causes the
+latter.  The BT984--1135 edgewise-triangulation program studies a K3-targeted refinement tower;
+until an inverse reconstruction or uniqueness theorem is supplied, it is a candidate
+approximation, not emergence. (Witness: \path{analysis/w33_manifold_emergence_k3.py}.)
 
-\emph{(T2) reduces to spectral-propinquity convergence.} Latr\'emoli\`ere's \emph{spectral
-propinquity} (Math.\ Ann.\ 2023) is a metric on spectral triples for which the Dirac spectrum
-\emph{and} the spectral action $\mathrm{Tr}\,f(D^2/\Lambda^2)$ are \emph{continuous} functionals. So
-the gravity$+$matter action (Pass 29) is continuous for the propinquity, and (T2) reduces to the
-single statement: does $[\,W(3,3)\otimes\text{(edgewise-K3 tower)}\,]$ converge in the propinquity to
-$K3\otimes W(3,3)$? If it does, the spectral action --- Einstein--Hilbert, the cosmological constant,
-$R^2$ and the Standard Model --- converges \emph{rigorously} and $M^4=K3$ emerges from the discrete
-substrate. The inputs are in place: the limit (K3, topology $=$ substrate integers), the action's
-continuity (Latr\'emoli\`ere), the triangulation tower, the symmetry densification $\mathrm{Sp}(4,
-\mathbb{F}_q)=W(E_6)\to\mathrm{Sp}(4,\mathbb{R})\to\mathrm{AdS}_4\to$ Minkowski, and term-by-term
-geometric convergence. So the \emph{whole theory's open frontier} is now exactly two named theorems:
-\textbf{(T1)} the $a_2$ curved positivity (Newton constant $G>0$) and \textbf{(T2$'$)} the
-spectral-propinquity convergence of the $W(3,3)\times K3$ tower --- everything else derived or
-matched. (Witness: \path{analysis/w33_propinquity_reduction.py}.)
+\emph{Spectral propinquity supplies a conditional bridge, not the convergence proof.}
+Latr\'emoli\`ere proves that convergence of suitable metric spectral triples for the spectral
+propinquity entails convergence of their Dirac spectra and continuity for a broad class of action
+functionals.  To use that theorem here one must still define the metric spectral triple at every
+stage, construct quantitative tunnels, prove convergence, identify the limiting triple with K3,
+and check that the desired action lies in the covered class.  None of those steps follows from
+matching topological integers or from the displayed symmetry chain.  Thus
+$W(3,3)\otimes\text{(edgewise-K3 tower)}\to K3\otimes W(3,3)$ is a precise research program and a
+falsifiable candidate bridge; it is not yet a continuum proof or a reduction of the whole theory
+to one remaining theorem. (Audit witness: \path{analysis/w33_propinquity_reduction.py}.)
 
 \emph{Honest scope:} ``the continuum is K3'' is a candidate identification (strong invariant
 matches --- $\chi=f$, $\sigma=-\mu^2$, $b_2^+=q$, lattice $=2E_8\oplus3H=M_1$ --- plus the corpus's
@@ -8259,9 +8254,11 @@ it does not make every proposed architecture layer free or implemented. (Witness
 \path{analysis/w33_fractal_datacenter.py}.)
 
 The current software advance is \path{analysis/holobox.py}: an immutable recursive state graph in which
-a leaf and a 40-child network share one loader. At six levels it denotes $105{,}025{,}641$ logical VMs
-and $4{,}096{,}000{,}000$ leaf chamber slots with six uniform blobs; a depth-five mailbox send and guest
-execution each copy exactly six blobs. Its table-free $2n$ route counts logical W33 line-bus
+a leaf and a 40-child network share one loader. At six levels it denotes $105{,}025{,}641$ internal
+network VMs plus $4{,}096{,}000{,}000$ addressable leaf VMs---$4{,}201{,}025{,}641$ stateful VMs in
+all---with seven uniform state blobs. In the certified fresh transition, a depth-six mailbox send
+creates seven path-state blobs plus one receipt, while guest execution creates seven path-state blobs;
+content-identical replay may allocate none. Its table-free $2n$ route counts logical W33 line-bus
 transactions, not BT827 chart micro-moves. This is a deterministic Python runtime, not a photonic,
 KVM-isolated, or OCI-conformant deployment.
 

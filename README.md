@@ -243,8 +243,10 @@ or a performance result. See the [runtime guide](docs/W33_FRACTAL_MICROVM_RUNTIM
   no-square-root “band filling”/“closest irregular Ramanujan” score is withdrawn.
 - Affine translations act on 81 frames but descend to neither projective 40-carrier; they
   do not force a point-side projective load port.
-- The true incidence comparator detects 1656/1920 = 69/80 differential rail substitutions
-  and 0/960 shared-control substitutions. The former 95.71% result used a golden run.
+- Pass 4331's linear-opcode mismatch incidence census detects 1656/1920 = 69/80
+  differential rail substitutions and 0/960 shared-control substitutions. It is narrower
+  than the Pass 4367/4374 intrinsic flag-register comparator, which detects 36/39 = 12/13
+  arbitrary one-register substitutions at q=3. The former 95.71% result used a golden run.
 - The complete universal-set census is 360, and the shipped ISA is tied 7th–12th by the
   reported ρ value, not strictly 12th.
 

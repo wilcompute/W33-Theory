@@ -116415,5 +116415,778 @@
       "incident"
     ],
     "files": []
+  },
+  {
+    "id": "4f88879d-af6b-45b2-8ec5-cabbc054abe8",
+    "question": "Why distinguish HoloBox panel transitions from the full guest ISA?",
+    "answer": "The runtime guide source and public evidence card now call HP0..2/HL0..2 the six deterministic panel-transition opcodes, not the entire ISA, and explicitly list ADD, RECV, YIELD, and HALT. This prevents the finite chamber motion alphabet from being confused with executable data/control instructions.",
+    "timestamp": "2026-08-11T21:15:35.080Z",
+    "tags": [
+      "docs",
+      "holobox",
+      "isa",
+      "scope",
+      "why"
+    ],
+    "files": [],
+    "status": "active",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "metadata": {
+      "source": "cli",
+      "status": "active"
+    },
+    "commitHashes": [],
+    "history": [
+      {
+        "timestamp": "2026-08-11T21:15:35.084Z",
+        "action": "created"
+      }
+    ],
+    "provenance": {
+      "author": {
+        "name": "Wil",
+        "email": "wiljd4@gmail.com"
+      },
+      "source": "cli",
+      "timestamp": "2026-08-11T21:15:35.071Z"
+    }
+  },
+  {
+    "id": "b76c9383-9a8f-47ee-b8c7-b8e37b753689",
+    "question": "Why regenerate HoloBox artifacts after the ISA vocabulary correction?",
+    "answer": "The source-owned runtime JSON and Markdown were replayed after separating six panel-transition opcodes from the full guest ISA. The witness remains 19/19 PASS with unchanged mathematical/runtime data; the guide now matches executable instruction semantics.",
+    "timestamp": "2026-08-11T21:15:54.754Z",
+    "tags": [
+      "certificate",
+      "docs",
+      "holobox",
+      "isa",
+      "replay",
+      "why"
+    ],
+    "files": [],
+    "status": "active",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "metadata": {
+      "source": "cli",
+      "status": "active"
+    },
+    "commitHashes": [],
+    "history": [
+      {
+        "timestamp": "2026-08-11T21:15:54.754Z",
+        "action": "created"
+      }
+    ],
+    "provenance": {
+      "author": {
+        "name": "Wil",
+        "email": "wiljd4@gmail.com"
+      },
+      "source": "cli",
+      "timestamp": "2026-08-11T21:15:54.749Z"
+    }
+  },
+  {
+    "id": "cb186888-cf26-4408-a9fa-e14ca5dd57cb",
+    "question": "How should Pass4331 distinguish its comparator census from Passes4367/4374?",
+    "answer": "The GAP-owned certificate now names Pass4331 as the restricted linear-opcode mismatch incidence census: 1656/1920 differential tested-opcode trials and 0/960 shared-control trials. It explicitly cites Passes4367/4374 as owners of the broader arbitrary one-register flag comparator, 36/39=12/13 at q=3 and its W(3,q) law.",
+    "timestamp": "2026-08-11T21:24:55.068Z",
+    "tags": [
+      "comparator",
+      "gap",
+      "how",
+      "pass4331",
+      "prior-art",
+      "scope",
+      "w33"
+    ],
+    "files": [],
+    "status": "active",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "metadata": {
+      "source": "cli",
+      "status": "active"
+    },
+    "commitHashes": [],
+    "history": [
+      {
+        "timestamp": "2026-08-11T21:24:55.071Z",
+        "action": "created"
+      }
+    ],
+    "entities": {
+      "technologies": [
+        "rest"
+      ],
+      "patterns": [],
+      "concepts": []
+    },
+    "provenance": {
+      "author": {
+        "name": "Wil",
+        "email": "wiljd4@gmail.com"
+      },
+      "source": "cli",
+      "timestamp": "2026-08-11T21:24:55.062Z"
+    }
+  },
+  {
+    "id": "24aab65d-9159-4b54-98d6-5ec9e5d34b47",
+    "question": "Why correct Pass4331 ownership in the audited chamber report?",
+    "answer": "The report now separates three fault models: Pass4331's tested linear-opcode mismatch census, Pass4367/4374's broader arbitrary-register flag comparator and all-q law, and Pass4304's golden-run comparison. This preserves the 69/80 result while removing a false first/general ownership claim.",
+    "timestamp": "2026-08-11T21:25:26.986Z",
+    "tags": [
+      "comparator",
+      "correction",
+      "docs",
+      "ownership",
+      "pass4331",
+      "w33",
+      "why"
+    ],
+    "files": [],
+    "status": "active",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "metadata": {
+      "source": "cli",
+      "status": "active"
+    },
+    "commitHashes": [],
+    "history": [
+      {
+        "timestamp": "2026-08-11T21:25:26.987Z",
+        "action": "created"
+      }
+    ],
+    "entities": {
+      "technologies": [],
+      "patterns": [],
+      "concepts": [
+        "audit"
+      ]
+    },
+    "provenance": {
+      "author": {
+        "name": "Wil",
+        "email": "wiljd4@gmail.com"
+      },
+      "source": "cli",
+      "timestamp": "2026-08-11T21:25:26.980Z"
+    }
+  },
+  {
+    "id": "07616e4b-4fa3-4d9f-8668-092658466e1d",
+    "question": "Why propagate the Pass 4331 comparator ownership correction through every visible chamber surface?",
+    "answer": "Pass 4331 certifies the narrower linear-opcode mismatch incidence census, 1656/1920=69/80 with 0/960 shared-control detection. Passes 4367/4374 already own the broader intrinsic flag-register substitution comparator, 36/39=12/13 at q=3. README, vocabulary, insert, evidence page, both indexes, W33_FOR_EVERYONE, and the practical paper now distinguish those objects and retain the golden-run boundary.",
+    "timestamp": "2026-08-11T21:28:58.635Z",
+    "tags": [
+      "comparator",
+      "correction",
+      "docs",
+      "pass4331",
+      "prior-art",
+      "w33",
+      "why"
+    ],
+    "files": [],
+    "status": "active",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "metadata": {
+      "source": "cli",
+      "status": "active"
+    },
+    "commitHashes": [],
+    "history": [
+      {
+        "timestamp": "2026-08-11T21:28:58.636Z",
+        "action": "created"
+      }
+    ],
+    "provenance": {
+      "author": {
+        "name": "Wil",
+        "email": "wiljd4@gmail.com"
+      },
+      "source": "cli",
+      "timestamp": "2026-08-11T21:28:58.631Z"
+    }
+  },
+  {
+    "id": "fce50770-16e9-4c5d-a855-ec2c887e62c1",
+    "question": "Why regenerate the Pass 4328-4333 GAP certificate after correcting comparator scope?",
+    "answer": "Native GAP replay passed 28/28 and regenerated the frozen correction certificate with scope_name=linear-opcode mismatch incidence census plus an explicit Pass 4367/4374 broader-comparator boundary. This makes the ownership correction machine-readable and keeps prose and witness aligned.",
+    "timestamp": "2026-08-11T21:29:21.912Z",
+    "tags": [
+      "certificate",
+      "comparator",
+      "gap",
+      "pass4331",
+      "scope",
+      "w33",
+      "why"
+    ],
+    "files": [],
+    "status": "active",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "metadata": {
+      "source": "cli",
+      "status": "active"
+    },
+    "commitHashes": [],
+    "history": [
+      {
+        "timestamp": "2026-08-11T21:29:21.912Z",
+        "action": "created"
+      }
+    ],
+    "provenance": {
+      "author": {
+        "name": "Wil",
+        "email": "wiljd4@gmail.com"
+      },
+      "source": "cli",
+      "timestamp": "2026-08-11T21:29:21.908Z"
+    }
+  },
+  {
+    "id": "c25ff25d-6de4-4260-9794-68845e447bc8",
+    "question": "Why narrow the blueprint's isolation and corruption claims?",
+    "answer": "The finite four-opcode algebra proves only that a verified trace without CX has no direct cross-half instruction; it does not enforce the trace or cover host, devices, malformed guests, scheduling, memory, or side channels. Likewise, closure holds for substitutions inside the abstract 40-symbol alphabet, not arbitrary 8-bit corruption because 216 byte patterns are invalid. The blueprint now states both exact boundaries and aligns with HoloBox's rejecting decoder.",
+    "timestamp": "2026-08-11T21:30:12.051Z",
+    "tags": [
+      "blueprint",
+      "correction",
+      "decoder",
+      "holobox",
+      "isolation",
+      "security",
+      "why"
+    ],
+    "files": [],
+    "status": "active",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "metadata": {
+      "source": "cli",
+      "status": "active"
+    },
+    "commitHashes": [],
+    "history": [
+      {
+        "timestamp": "2026-08-11T21:30:12.053Z",
+        "action": "created"
+      }
+    ],
+    "provenance": {
+      "author": {
+        "name": "Wil",
+        "email": "wiljd4@gmail.com"
+      },
+      "source": "cli",
+      "timestamp": "2026-08-11T21:30:12.047Z"
+    }
+  },
+  {
+    "id": "e104648c-465c-47bc-b45d-6c17797922d3",
+    "question": "How is a HoloBox receipt bound to the state that owns it?",
+    "answer": "Required each delivery blob to carry its canonical integer message preimage and verify its digest; graph verification now carries logical state addresses, requires every receipt chain to target its owning state, verifies source and target existence, binds a nonempty inbox to its head receipt, and rejects address-aliased delivery-bearing subtrees without expanding the full 40^n tree.",
+    "timestamp": "2026-08-11T21:30:13.181Z",
+    "tags": [
+      "bugfix",
+      "holobox",
+      "how",
+      "receipt",
+      "security",
+      "verification"
+    ],
+    "files": [],
+    "status": "active",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "metadata": {
+      "source": "cli",
+      "status": "active"
+    },
+    "commitHashes": [],
+    "history": [
+      {
+        "timestamp": "2026-08-11T21:30:13.182Z",
+        "action": "created"
+      }
+    ],
+    "provenance": {
+      "author": {
+        "name": "Wil",
+        "email": "wiljd4@gmail.com"
+      },
+      "source": "cli",
+      "timestamp": "2026-08-11T21:30:13.175Z"
+    }
+  },
+  {
+    "id": "1d1e3dcd-ed89-4671-acd8-78a1d22acac1",
+    "question": "Which adversarial cases freeze HoloBox receipt ownership?",
+    "answer": "Added regressions that require the stored receipt message preimage to hash correctly, then forge (a) a valid canonical receipt targeting a different leaf and (b) a valid canonical receipt committing a different message than the newest inbox entry. Graph verification must reject both instead of returning PASS.",
+    "timestamp": "2026-08-11T21:30:40.868Z",
+    "tags": [
+      "bugfix",
+      "falsifier",
+      "holobox",
+      "receipt",
+      "testing"
+    ],
+    "files": [],
+    "status": "active",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "metadata": {
+      "source": "cli",
+      "status": "active"
+    },
+    "commitHashes": [],
+    "history": [
+      {
+        "timestamp": "2026-08-11T21:30:40.869Z",
+        "action": "created"
+      }
+    ],
+    "provenance": {
+      "author": {
+        "name": "Wil",
+        "email": "wiljd4@gmail.com"
+      },
+      "source": "cli",
+      "timestamp": "2026-08-11T21:30:40.859Z"
+    }
+  },
+  {
+    "id": "33e91f08-0d7b-42f4-853e-48d972bb0d2d",
+    "question": "How does HoloBox avoid deleting output before an operation is known valid?",
+    "answer": "Split output handling into a non-mutating overlap/existence validator and a final replacement step. Build, send, run, and fork now complete argument, bundle, and in-memory transition validation before replacement. Output names remain absolute without following the final symlink; forced replacement unlinks a symlink itself instead of recursively deleting its target.",
+    "timestamp": "2026-08-11T21:31:26.429Z",
+    "tags": [
+      "bugfix",
+      "cli",
+      "holobox",
+      "how",
+      "safety",
+      "symlink",
+      "transactional"
+    ],
+    "files": [],
+    "status": "active",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "metadata": {
+      "source": "cli",
+      "status": "active"
+    },
+    "commitHashes": [],
+    "history": [
+      {
+        "timestamp": "2026-08-11T21:31:26.430Z",
+        "action": "created"
+      }
+    ],
+    "provenance": {
+      "author": {
+        "name": "Wil",
+        "email": "wiljd4@gmail.com"
+      },
+      "source": "cli",
+      "timestamp": "2026-08-11T21:31:26.420Z"
+    }
+  },
+  {
+    "id": "6e452134-e688-4dc3-9327-b2cb4af3af95",
+    "question": "Why rewrite the photonic manuscript's K3 and spectral-propinquity capstone?",
+    "answer": "The cited spectral-propinquity theorem is conditional: convergence of suitable metric spectral triples gives spectral and broad action-functional continuity, but it does not construct the W33-to-K3 sequence or prove its convergence. Matching K3 integers also does not select or reconstruct K3. The paper now presents K3 as a candidate target, names the missing triple/tunnel/limit maps, and removes the unsupported claims that continuum gravity and everything else were derived.",
+    "timestamp": "2026-08-11T21:31:35.300Z",
+    "tags": [
+      "continuum",
+      "correction",
+      "k3",
+      "photonic",
+      "scope",
+      "spectral-propinquity",
+      "why"
+    ],
+    "files": [],
+    "status": "active",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "metadata": {
+      "source": "cli",
+      "status": "active"
+    },
+    "commitHashes": [],
+    "history": [
+      {
+        "timestamp": "2026-08-11T21:31:35.301Z",
+        "action": "created"
+      }
+    ],
+    "provenance": {
+      "author": {
+        "name": "Wil",
+        "email": "wiljd4@gmail.com"
+      },
+      "source": "cli",
+      "timestamp": "2026-08-11T21:31:35.296Z"
+    }
+  },
+  {
+    "id": "2b2f3004-0f1e-48bf-93f7-2ea32f5a4b16",
+    "question": "Which regressions prove HoloBox output replacement is non-destructive?",
+    "answer": "The end-to-end CLI test now plants a marker in an existing forced-output directory, issues an invalid send, and requires the marker to survive. It also forces a valid send through an output symlink and requires HoloBox to replace only the symlink while preserving the target directory and marker.",
+    "timestamp": "2026-08-11T21:31:58.573Z",
+    "tags": [
+      "bugfix",
+      "cli",
+      "falsifier",
+      "holobox",
+      "symlink",
+      "testing"
+    ],
+    "files": [],
+    "status": "active",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "metadata": {
+      "source": "cli",
+      "status": "active"
+    },
+    "commitHashes": [],
+    "history": [
+      {
+        "timestamp": "2026-08-11T21:31:58.574Z",
+        "action": "created"
+      }
+    ],
+    "entities": {
+      "technologies": [],
+      "patterns": [],
+      "concepts": [
+        "cli"
+      ]
+    },
+    "provenance": {
+      "author": {
+        "name": "Wil",
+        "email": "wiljd4@gmail.com"
+      },
+      "source": "cli",
+      "timestamp": "2026-08-11T21:31:58.560Z"
+    }
+  },
+  {
+    "id": "54b138ab-dd15-4cbf-8992-737b614ee6b9",
+    "question": "Why regenerate the HoloBox frozen certificate after receipt binding?",
+    "answer": "Replayed the canonical runtime generator after adding the receipt message preimage and end-to-end address/message verification. The source-owned JSON and Markdown are synchronized again at 19/19 PASS; exact VM counts, seven-layer copy-on-write law, and 2n route result remain unchanged while receipt/root digests advance to the bound schema.",
+    "timestamp": "2026-08-11T21:32:54.280Z",
+    "tags": [
+      "certificate",
+      "docs",
+      "holobox",
+      "receipt",
+      "replay",
+      "why"
+    ],
+    "files": [],
+    "status": "active",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "metadata": {
+      "source": "cli",
+      "status": "active"
+    },
+    "commitHashes": [],
+    "history": [
+      {
+        "timestamp": "2026-08-11T21:32:54.282Z",
+        "action": "created"
+      }
+    ],
+    "entities": {
+      "technologies": [],
+      "patterns": [],
+      "concepts": [
+        "schema"
+      ]
+    },
+    "provenance": {
+      "author": {
+        "name": "Wil",
+        "email": "wiljd4@gmail.com"
+      },
+      "source": "cli",
+      "timestamp": "2026-08-11T21:32:54.271Z"
+    }
+  },
+  {
+    "id": "1d4efbad-c7a5-4742-9f83-948b86d41387",
+    "question": "How should HoloBox treat a dangling output symlink?",
+    "answer": "Output validation now treats any symlink as an existing destination even when its target is missing. Without --force it fails before execution; with --force the replacement step unlinks only the symlink. This closes the dangling-link edge case in the non-destructive output policy.",
+    "timestamp": "2026-08-11T21:33:22.437Z",
+    "tags": [
+      "bugfix",
+      "cli",
+      "holobox",
+      "how",
+      "safety",
+      "symlink"
+    ],
+    "files": [],
+    "status": "active",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "metadata": {
+      "source": "cli",
+      "status": "active"
+    },
+    "commitHashes": [],
+    "history": [
+      {
+        "timestamp": "2026-08-11T21:33:22.438Z",
+        "action": "created"
+      }
+    ],
+    "provenance": {
+      "author": {
+        "name": "Wil",
+        "email": "wiljd4@gmail.com"
+      },
+      "source": "cli",
+      "timestamp": "2026-08-11T21:33:22.430Z"
+    }
+  },
+  {
+    "id": "e6a98214-b514-423c-9476-030edb82452f",
+    "question": "How is receipt address binding tested through a deduplicated ancestor?",
+    "answer": "Extended the adversarial receipt regression with a depth-two graph whose delivery-bearing subtree is deliberately installed under two root slots. The verifier must reject the aliased subtree even though deduplication normally skips the second subtree expansion, freezing the non-exponential address-integrity check.",
+    "timestamp": "2026-08-11T21:35:45.046Z",
+    "tags": [
+      "deduplication",
+      "falsifier",
+      "holobox",
+      "how",
+      "receipt",
+      "testing"
+    ],
+    "files": [],
+    "status": "active",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "metadata": {
+      "source": "cli",
+      "status": "active"
+    },
+    "commitHashes": [],
+    "history": [
+      {
+        "timestamp": "2026-08-11T21:35:45.047Z",
+        "action": "created"
+      }
+    ],
+    "provenance": {
+      "author": {
+        "name": "Wil",
+        "email": "wiljd4@gmail.com"
+      },
+      "source": "cli",
+      "timestamp": "2026-08-11T21:35:45.041Z"
+    }
+  },
+  {
+    "id": "20c8c3b6-1856-4cbd-a607-22292ebfdb47",
+    "question": "Why synchronize every HoloBox publication surface to the repaired level-zero-leaf model?",
+    "answer": "The executable model has 105,025,641 internal network VMs plus 4,096,000,000 addressable leaves, 4,201,025,641 stateful VMs total, seven uniform state blobs, and depth-six addressing. The certified fresh send allocates seven path-state blobs plus one receipt; run allocates seven path-state blobs, while identical replay may allocate zero. Both indexes and four manuscripts now match the 19/19 Python and 7/7 GAP certificates.",
+    "timestamp": "2026-08-11T21:36:37.855Z",
+    "tags": [
+      "copy-on-write",
+      "counts",
+      "docs",
+      "holobox",
+      "publication",
+      "python",
+      "receipt",
+      "why"
+    ],
+    "files": [],
+    "status": "active",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "metadata": {
+      "source": "cli",
+      "status": "active"
+    },
+    "commitHashes": [],
+    "history": [
+      {
+        "timestamp": "2026-08-11T21:36:37.858Z",
+        "action": "created"
+      }
+    ],
+    "entities": {
+      "technologies": [
+        "python"
+      ],
+      "patterns": [],
+      "concepts": []
+    },
+    "provenance": {
+      "author": {
+        "name": "Wil",
+        "email": "wiljd4@gmail.com"
+      },
+      "source": "cli",
+      "timestamp": "2026-08-11T21:36:37.845Z"
+    }
+  },
+  {
+    "id": "743026b7-a59d-4f72-901a-9b3ef5578227",
+    "question": "Why correct the Pass 4324-4334 namespace registry's comparator claim?",
+    "answer": "The registry now names Pass4331 as the narrower linear-opcode mismatch incidence census and explicitly assigns the broader arbitrary one-register flag comparator to Passes4367/4374. This prevents generated tooling from reintroducing the ownership overread after the human-facing pages were corrected.",
+    "timestamp": "2026-08-11T21:37:40.798Z",
+    "tags": [
+      "comparator",
+      "correction",
+      "ownership",
+      "pass4331",
+      "registry",
+      "why"
+    ],
+    "files": [],
+    "status": "active",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "metadata": {
+      "source": "cli",
+      "status": "active"
+    },
+    "commitHashes": [],
+    "history": [
+      {
+        "timestamp": "2026-08-11T21:37:40.799Z",
+        "action": "created"
+      }
+    ],
+    "provenance": {
+      "author": {
+        "name": "Wil",
+        "email": "wiljd4@gmail.com"
+      },
+      "source": "cli",
+      "timestamp": "2026-08-11T21:37:40.792Z"
+    }
   }
 ]

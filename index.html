@@ -29009,8 +29009,11 @@ deliberately &mdash; including the parts that turned out to be wrong.</p>
     <li>Machines B and D are exactly p/f-swap invariant. D removes both named asymmetries;
       0.460435 is symmetric localisation. Affine translations descend to neither
       projective 40-carrier.</li>
-    <li>The incidence comparator detects 1,656/1,920=69/80 differential rail faults and
-      0/960 shared-control faults. The former 95.71% experiment used a golden run.</li>
+    <li>Pass 4331's linear-opcode mismatch incidence census detects
+      1,656/1,920=69/80 differential rail faults and 0/960 shared-control faults. The
+      broader Pass 4367/4374 intrinsic flag-register comparator detects 36/39=12/13
+      arbitrary one-register substitutions at q=3. The former 95.71% experiment used a
+      golden run.</li>
   </ul>
 
   <p><strong>One arithmetic component joins growth and memory.</strong> The irreducible
@@ -29038,10 +29041,13 @@ deliberately &mdash; including the parts that turned out to be wrong.</p>
     changes and persists.</p>
 
   <p><strong>The level-six object is enormous logically and tiny structurally.</strong>
-    A uniform root denotes 105,025,641 logical VM instances and 4,096,000,000 leaf
-    chamber slots, yet stores only six unique node blobs. A depth-five mailbox delivery
-    creates six blobs; recipient execution creates six more; every untouched sibling
-    keeps the same digest. The checked six-digit route takes 12 legal W33 line
+    A uniform root denotes 105,025,641 internal network VMs plus 4,096,000,000
+    addressable leaf VMs: 4,201,025,641 stateful VMs represented by seven unique state
+    blobs. In the certified fresh transition, a depth-six mailbox delivery creates seven
+    path-state blobs plus one content-addressed receipt; recipient execution creates seven
+    path-state blobs. These are structural upper bounds because a content-identical replay
+    can reuse every key. Every untouched sibling keeps the same digest. The checked
+    six-digit route takes 12 legal W33 line
     transactions, exactly the bound 2n, with no next-hop tables. That unit is a
     logical line-bus transaction; BT827's separate chart-aware lowering remains 8n
     because it counts three cube plus five chart-web moves per digit.</p>
@@ -29056,8 +29062,8 @@ deliberately &mdash; including the parts that turned out to be wrong.</p>
   <p><strong>Reproduce:</strong>
     <a href="holobox-fractal-microvm.html">open the standalone HoloBox evidence card</a>,
     then run <code>analysis/holobox.py</code> and
-    <code>tests/test_w33_fractal_microvm_runtime.py</code>. The frozen witness reports
-    14/14 exact checks.</p>
+    <code>tests/test_w33_fractal_microvm_runtime.py</code>. The frozen witnesses report
+    19/19 Python checks and 7/7 independent GAP routing checks.</p>
 </section>
 </body>
 

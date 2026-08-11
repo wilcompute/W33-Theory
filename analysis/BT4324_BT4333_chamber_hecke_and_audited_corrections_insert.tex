@@ -1,0 +1,122 @@
+\subsection*{Passes 4324--4334: the chamber Hecke machine and an exact frontier correction}
+
+\paragraph{4324: two native chamber switches.}
+On the $160$ incident point--line chambers, let $P$ change the line while holding the
+point fixed and let $L$ change the point while holding the line fixed.  Each is forty
+disjoint copies of the $K_4$ adjacency operator, and GAP proves
+\[
+ P^2=2P+3I,\qquad L^2=2L+3I,\qquad PLPL=LPLP.
+\]
+The eight standard type-$C_2$ words are linearly independent.  Thus this chamber carrier
+realizes the full eight-dimensional $q=3$ Iwahori--Hecke image.  Its exact module ledger is
+\[
+ 1\chi_{3,3}+15\chi_{3,-1}+15\chi_{-1,3}+81\chi_{-1,-1}+24V_2,
+\]
+which explains the long-standing flag-scheme dimensions $1+30+48+81=160$.
+
+\paragraph{4325--4326: the Hashimoto turn and its chirality.}
+With the $320$ oriented Levi edges ordered by orientation,
+\[
+ B_{\rm Levi}=\begin{pmatrix}0&L\\P&0\end{pmatrix},\qquad
+ B_{\rm Levi}^2=\operatorname{diag}(LP,PL).
+\]
+The two products are disjoint binary $9$-out halves of the chamber distance-two shell.
+For $K=LP$,
+\[
+ \chi_K(x)=(x-9)(x-1)^{81}(x+3)^{30}(x^2+9)^{24}.
+\]
+The antisymmetric turn $\Omega=LP-PL$ has
+\[
+ \chi_\Omega(x)=x^{112}(x^2+60)^{24},\quad
+ \Pi_{48}=-\Omega^2/60,\quad \operatorname{rank}\Pi_{48}=48.
+\]
+Consequently $\Omega/\sqrt{60}$ is a canonical complex structure on the conjugate
+$24+24$ chamber channel.  This is a finite operator theorem, not a $W(G_2)$ action.
+
+\paragraph{4327: exact folded-propagator normal form.}
+Let $C=P+L$, $X=(C-2I)\Pi_{48}$, and let $F$ be the old folded cubic point-Hashimoto
+operator compressed to $\Pi_{48}$.  In the four-dimensional packet algebra
+$\{\Pi_{48},X,\Omega,X\Omega\}$,
+\[
+ F=-68\Pi_{48}-31X-\frac{21}{2}\Omega+\frac23X\Omega,
+ \qquad (F+68\Pi_{48})^2=-689\Pi_{48}.
+\]
+The old numerical $-6455$ is now explained exactly by the square of the off-diagonal
+part.  No continuum propagator, particle, mass, or coupling identification follows.
+
+\paragraph{4334: the $24+24$ count becomes an object-level carrier split.}
+Let $E_p,E_\ell$ be the eigenvalue-$2$ projectors of the W33 point graph and its
+dual line graph, and pull them to the chamber space as orthogonal rank-$24$ projectors
+$Q_p,Q_\ell$.  GAP proves
+\[
+ \operatorname{im}\Pi_{48}
+ =\operatorname{im}Q_p\oplus\operatorname{im}Q_\ell,\qquad
+ Q_pQ_\ell Q_p=\frac38Q_p,\quad
+ Q_\ell Q_pQ_\ell=\frac38Q_\ell.
+\]
+Thus the two natural summands meet only in zero but are uniformly nonorthogonal: all
+$24$ principal angles have cosine $\sqrt6/4$.  With $Q=Q_p+Q_\ell$,
+\[
+ \Pi_{48}=\frac85(2Q-Q^2)=-\frac{\Omega^2}{60}.
+\]
+The conjugate channel is therefore literally the joined point/line eigenvalue-$2$
+carriers, not just a multiplicity ledger.
+
+\paragraph{4328: the irregular Ihara boundary corrected.}
+Bass's determinant formula already applies to general finite graphs with $D-I$.  The
+Kotani--Sunada theorem bounds non-real poles by
+\[
+ (d_{\max}-1)^{-1/2}\le |u|\le(d_{\min}-1)^{-1/2},
+\]
+not by the same expression without square roots, and it does not put every nontrivial
+root in that annulus.  For the shipped degree-$2$--$8$ frame graph the reciprocal-root
+form is $1\le|\lambda|\le\sqrt7$ for the corresponding non-real roots.  The old
+``band filling'' and ``closest irregular Ramanujan'' metric is withdrawn.
+
+\paragraph{4329: a cover certificate retracted by one cycle.}
+The stored $\mathbb Z_{2731}$ voltage vector from Pass 4253 has the base eight-cycle
+\[
+ (3,52,4,48,8,66,18,53)
+\]
+with signed voltage sum $1328-542+801-1587=0\pmod{2731}$.  The lifted cover therefore
+has girth exactly $8$, not at least $16$.  Pass 4260's $4373$-vertex radius-seven tree
+ball remains a correct conditional tree count but is not realized by that cover.  The
+valid cover ladder is the earlier $\mathbb Z_{359}$ girth-at-least-$14$ cover followed by
+the much larger $\mathbb Z_{750019}$ girth-at-least-$18$ cover.
+
+\paragraph{4330--4331: what symmetry and fault detection actually survive.}
+Under the literal pair swap
+$S(x_0,x_1,x_2,x_3)=(x_2,x_3,x_0,x_1)$, machines A/B/C/D are invariant in the pattern
+false/true/false/true.  Machine D therefore removes both the directed time arrow and the
+point/frequency structural asymmetry.  Its $0.460435$ peak is symmetric localization,
+not residual point/frequency bias.  Affine translations act on the $81$ frames but
+descend to neither projective $40$-carrier, so they do not force a point-side load port.
+
+Pass~4331's linear-opcode mismatch census tests incidence after two rails choose among
+three selected linear panel opcodes.  It detects $1656/1920=69/80$ differential
+single-rail opcode substitutions and $0/960$ shared-control substitutions.  This is
+narrower than the Pass~4367/4374 intrinsic flag-register comparator, which detects
+$36/39=12/13$ arbitrary one-register substitutions at $q=3$.  The earlier $95.71\%$
+number compared each faulty rail with a golden run and was not a dual-rail comparator.
+
+\paragraph{4332--4333: one arithmetic component, and an honest rank.}
+The irreducible degree-$33$ factor of the instruction Hashimoto pencil has exactly one
+real root in $(5.74,5.75)$ and one in $(3.349,3.350)$ by an exact Sturm certificate.
+Thus the global nonbacktracking growth root and the reported slow real mode are Galois
+conjugates in one rational primary component.  The rational projector and a
+basis-independent localization theorem remain open.
+
+Finally, the complete universal-set census by sizes $4$ through $10$ is
+\[
+ 24,\ 80,\ 114,\ 90,\ 41,\ 10,\ 1,
+\]
+totalling $360$.  The shipped ISA is not strictly ``12th'': only six sets have lower
+$\rho$ at the stated tolerance, while six isomorphic sets share its numerical value and
+occupy positions $7$--$12$.  Size is a coarse correlate whose bands overlap, not an
+explanation of that tie.
+
+\paragraph{Evidence boundary.}
+The three GAP witnesses replay $31/31$, $28/28$, and $17/17$ exact checks.  The panel operators are
+three-way relations, not yet a deterministic opcode selector or synthesized B/D RTL.
+The exact finite algebra and the retractions above should therefore be read separately
+from hardware, continuum, thermodynamic, and phenomenological interpretations.

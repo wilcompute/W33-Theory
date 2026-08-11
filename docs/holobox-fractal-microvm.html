@@ -66,10 +66,11 @@
     <div><b>verify</b>replay every reachable hash</div>
   </div>
   <p>Each guest state is an incident point–line chamber. The six deterministic
-    instructions are named by behavior: <code>HP0..HP2</code> hold the point and
-    change the line; <code>HL0..HL2</code> hold the line and change the point. The
-    selector order is a declared software chart, not an intrinsic ordering supplied
-    by the geometry.</p>
+    panel-transition opcodes are named by behavior: <code>HP0..HP2</code> hold the
+    point and change the line; <code>HL0..HL2</code> hold the line and change the
+    point. The small VM ISA also has <code>ADD:&lt;int&gt;</code>, <code>RECV</code>,
+    <code>YIELD</code>, and <code>HALT</code>. The selector order is a declared
+    software chart, not an intrinsic ordering supplied by the geometry.</p>
 
   <div class="proof"><strong>Exact fresh-transition check.</strong> At depth six,
     delivery of the value <code>13</code> creates seven path-state blobs and one

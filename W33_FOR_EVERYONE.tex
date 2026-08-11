@@ -4832,8 +4832,11 @@ The same audit that found this algebra also corrected the nearby frontier.
 The proposed $\mathbb Z_{2731}$ girth-$16$ cover has an explicit zero-voltage
 eight-cycle and therefore girth exactly $8$; machine D is exactly symmetric
 under exchange of the two register pairs; affine translations descend to
-neither projective $40$-set; and the true incidence comparator detects
-$1656/1920=69/80$ differential rail faults but no shared-control substitution.
+neither projective $40$-set; and Pass~4331's linear-opcode mismatch incidence
+census detects $1656/1920=69/80$ differential rail faults but no shared-control
+substitution. That census is narrower than the Pass~4367/4374 intrinsic
+flag-register comparator, which detects $36/39=12/13$ arbitrary one-register
+substitutions at $q=3$.
 Keeping those retractions beside the theorem is part of the result: the
 machine becomes clearer when the things it cannot yet do are named exactly.
 
@@ -4845,12 +4848,15 @@ and a network of forty such machines in the same kind of immutable record. A
 network can contain forty networks, and so on, without inventing a second file
 format or a second loader.
 
-At six levels the uniform record stands for $105{,}025{,}641$ logical machines
-and $4{,}096{,}000{,}000$ leaf chamber slots, but repeated subtrees collapse to
-six stored node blobs. Send the number $13$ to one machine five addresses down:
-only the six records on that path change. Run the recipient: six records change
-again, it consumes the message, and every untouched sibling keeps exactly the
-same cryptographic digest. That is the precise sense in which the network is
+At six levels the uniform record stands for $105{,}025{,}641$ internal network
+machines plus $4{,}096{,}000{,}000$ addressable leaf machines---
+$4{,}201{,}025{,}641$ stateful machines in all---but repeated subtrees collapse to
+seven stored state blobs. In the certified fresh transition, sending the number
+$13$ to one machine six addresses down creates seven path-state blobs and one
+content-addressed receipt. Running the recipient creates seven path-state blobs,
+consumes the message, and leaves every untouched sibling with exactly the same
+cryptographic digest. These are structural upper bounds; replaying identical
+content can allocate no new keys. That is the precise sense in which the network is
 itself a machine: it receives, runs, forks, and checkpoints through the same
 interface as a leaf.
 
@@ -4866,7 +4872,7 @@ content-addressed containers, policies, receipts, and WASM/OCI components.
 HoloBox adds executable nested state, mailbox delivery, persistent execution,
 and copy-on-write to that roadmap. It is a deterministic Python reference, not
 an OCI-certified container engine, Linux or KVM isolation, a photonic machine,
-or a performance benchmark. Its 14 Python checks and seven GAP checks make the
+or a performance benchmark. Its 19 Python checks and seven GAP checks make the
 implemented part reproducible without pretending the missing parts exist.
 
 \section{What the machine cannot do --- and why that is a result}

@@ -1,0 +1,49 @@
+name: Passes 4324-4334 chamber Hecke and audited-correction regression
+
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass4324_4327_chamber_hecke_hashimoto.g'
+      - 'analysis/w33_pass4328_4333_audited_corrections.g'
+      - 'analysis/w33_pass4334_point_line_chiral_carrier.g'
+      - 'data/PART_W33_PASS4324_4327_CHAMBER_HECKE_HASHIMOTO.json'
+      - 'data/PART_W33_PASS4328_4333_AUDITED_CORRECTIONS.json'
+      - 'data/PART_W33_PASS4334_POINT_LINE_CHIRAL_CARRIER.json'
+      - 'tests/test_w33_pass4324_4327_chamber_hecke_hashimoto.py'
+      - 'tests/test_w33_pass4328_4333_audited_corrections.py'
+      - 'tests/test_w33_pass4334_point_line_chiral_carrier.py'
+      - '.github/workflows/w33_pass4324_4334_chamber_hecke_audit.yml'
+  pull_request:
+    paths:
+      - 'analysis/w33_pass4324_4327_chamber_hecke_hashimoto.g'
+      - 'analysis/w33_pass4328_4333_audited_corrections.g'
+      - 'analysis/w33_pass4334_point_line_chiral_carrier.g'
+      - 'data/PART_W33_PASS4324_4327_CHAMBER_HECKE_HASHIMOTO.json'
+      - 'data/PART_W33_PASS4328_4333_AUDITED_CORRECTIONS.json'
+      - 'data/PART_W33_PASS4334_POINT_LINE_CHIRAL_CARRIER.json'
+      - 'tests/test_w33_pass4324_4327_chamber_hecke_hashimoto.py'
+      - 'tests/test_w33_pass4328_4333_audited_corrections.py'
+      - 'tests/test_w33_pass4334_point_line_chiral_carrier.py'
+  workflow_dispatch:
+
+jobs:
+  exact-gap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install native GAP and pytest
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y gap
+          python -m pip install pytest
+      - name: Replay exact witnesses and frozen-byte regressions
+        run: |
+          set -euo pipefail
+          pytest -q \
+            tests/test_w33_pass4324_4327_chamber_hecke_hashimoto.py \
+            tests/test_w33_pass4328_4333_audited_corrections.py \
+            tests/test_w33_pass4334_point_line_chiral_carrier.py

@@ -38,7 +38,8 @@ most rediscovery.
 **Aliases:** `incident flags`, `160 chambers`, `320 directed chambers`,
 `panel operators`, `P and L`, `type-C2 Hecke`, `Levi Hashimoto square`,
 `LP versus PL`, `Omega`, `Pi_48`, `24+24 conjugate channel`,
-`folded cubic normal form`, `6455`, `689=13*53`, and `69/80 comparator`.
+`folded cubic normal form`, `6455`, `689=13*53`, and
+`69/80 linear-opcode mismatch census`.
 
 **Canonical object:** on the 160 incident point--line chambers of
 \(GQ(3,3)\), \(P\) holds the point and changes the line, while \(L\) holds
@@ -67,9 +68,11 @@ cubic packet has the exact shifted square
 **Audit companion:** the same release freezes the explicit girth-eight
 falsifier for the retracted Pass-4253 cover, the corrected Kotani--Sunada
 square-root annulus, the exact A/B/C/D point-frequency swap verdict
-`false/true/false/true`, and the intrinsic flag-comparator boundary
-\(1656/1920=69/80\) for differential substitutions but \(0/960\) for
-shared-control substitutions.
+`false/true/false/true`, and Pass 4331's linear-opcode mismatch incidence
+census: \(1656/1920=69/80\) for differential substitutions but \(0/960\)
+for shared-control substitutions.  This is distinct from the broader
+Pass 4367/4374 intrinsic flag-register comparator, which detects
+\(36/39=12/13\) arbitrary one-register substitutions at \(q=3\).
 
 **Boundary:** do not identify this `P/L` algebra with the older integral
 adjacency `K operator`; do not call either panel relation a selected

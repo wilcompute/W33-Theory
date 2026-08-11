@@ -1,0 +1,71 @@
+{
+  "schema": "w33.pass4324_4327.chamber_hecke_hashimoto.v1",
+  "status": "PASS",
+  "objects": {"points": 40, "lines": 40, "chambers": 160, "directed_chambers": 320, "point_graph_arcs": 480},
+  "pass_4324_hecke_machine": {
+    "panel_relations": "P^2=2P+3I, L^2=2L+3I, PLPL=LPLP",
+    "generated_algebra_dimension": 8,
+    "chamber_module": "1*chi_(3,3) + 15*chi_(3,-1) + 15*chi_(-1,3) + 81*chi_(-1,-1) + 24*V_2",
+    "hashimoto_factorization": "B_Levi=[[0,L],[P,0]], B_Levi^2=diag(LP,PL)"
+  },
+  "pass_4325_oriented_distance_two": {
+    "forward": "K=LP is a binary 9-out regular oriented distance-two half",
+    "reverse": "K^T=PL is the disjoint reverse half",
+    "symmetric_sum": "K+K^T=C^2-2C-6I",
+    "K_characteristic_polynomial": "(x-9)(x-1)^81(x+3)^30(x^2+9)^24",
+    "critical_subspace_dimension_per_orientation": 78,
+    "critical_clock": "K^4=81I on ker((K+3I)(K^2+9I)); equivalently (K/3)^4=I"
+  },
+  "pass_4326_conjugate_channel": {
+    "chirality": "Omega=LP-PL",
+    "characteristic_polynomial": "x^112(x^2+60)^24",
+    "projector": "Pi_48=-Omega^2/60",
+    "rank": 48,
+    "complex_structure": "(Omega/sqrt(60))^2=-I on im(Pi_48)",
+    "conjugate_swap": "Omega(C-2I)=-(C-2I)Omega; C eigenvalues 2+sqrt(6) and 2-sqrt(6) are exchanged",
+    "exact_scope": "This constructs the conjugate 24+24 channel; it does not construct a W(G2) action."
+  },
+  "pass_4327_folded_cubic_normal_form": {
+    "operator": "F=Pi_48 (T B_W33^3 T^T) Pi_48",
+    "basis": "{Pi_48, X=(C-2I)Pi_48, Omega, X Omega}",
+    "normal_form": "F=-68Pi_48-31X-(21/2)Omega+(2/3)XOmega",
+    "off_diagonal_square": "(-(21/2)Omega+(2/3)XOmega)^2=-6455Pi_48",
+    "full_packet_polynomial": "F^2+136F+5313Pi_48=0",
+    "packet_complex_structure": "(F+68Pi_48)^2=-689Pi_48, with 689=13*53",
+    "boundary": "Exact finite operator identity. No continuum, particle, mass, or coupling identification is asserted."
+  },
+  "prior_art_bridge": ["BT557 flag action", "BT617 folded cubic sector action", "BT622 conjugate root channel boundary", "BT744 Tits building dictionary", "Pass 4322 directed flags are the Levi Hashimoto carrier"],
+  "checks": {
+    "c2_braid_length_4": true,
+    "chambers_160": true,
+    "chiral_polynomial": true,
+    "chiral_rank_48": true,
+    "chiral_square_flag_polynomial": true,
+    "conjugate_packet_is_24_copies_of_dim2": true,
+    "conjugate_projector_exact": true,
+    "conjugate_swap_law": true,
+    "coxeter_minimal_polynomial": true,
+    "coxeter_spectrum_multiplicities": true,
+    "critical_clock_fourth_power_81": true,
+    "critical_clock_rank_78": true,
+    "distance_two_split": true,
+    "folded_cubic_coefficients": true,
+    "folded_cubic_complex_structure_689": true,
+    "folded_cubic_exact_normal_form": true,
+    "folded_cubic_minimal_polynomial": true,
+    "four_one_dimensional_multiplicities": true,
+    "hashimoto_block_factorization": true,
+    "hashimoto_square_panel_orders": true,
+    "hecke_image_dimension_8": true,
+    "lines_40": true,
+    "old_6455_explained": true,
+    "oriented_halves_are_binary_degree_9": true,
+    "oriented_halves_disjoint": true,
+    "packet_basis_dimension_4": true,
+    "packet_clifford_relations": true,
+    "panel_quadratics": true,
+    "panel_row_sums_3": true,
+    "points_40": true,
+    "time_reversal_transposes_hashimoto": true
+  }
+}

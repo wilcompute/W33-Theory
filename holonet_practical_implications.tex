@@ -402,10 +402,12 @@ algebraic structure into an operating-system security theorem before the enforce
 
 The current executable result is narrower and more useful. \texttt{analysis/holobox.py} stores a leaf
 VM and a recursively nested $40$-child network in the same immutable state grammar. At six levels a
-uniform root denotes $105{,}025{,}641$ logical VM instances and $4{,}096{,}000{,}000$ leaf chamber
-slots using six unique node blobs. A mailbox delivery to a depth-five guest, and that guest's later
-execution, each replace exactly six blobs on one content-addressed path while untouched siblings keep
-their digests. The 14-check certificate proves deterministic composition, addressed execution,
+uniform root denotes $105{,}025{,}641$ internal network VMs plus $4{,}096{,}000{,}000$ addressable
+leaf VMs---$4{,}201{,}025{,}641$ stateful VMs in all---using seven unique state blobs. In the
+certified fresh transition, mailbox delivery to a depth-six guest creates seven path-state blobs plus
+one receipt, while that guest's later execution creates seven path-state blobs. These are structural
+upper bounds: a content-identical replay can reuse every key, and untouched siblings retain their
+digests. The 19-check certificate proves deterministic composition, addressed execution,
 mailbox persistence, copy-on-write, and the $2n$ table-free route bound measured in logical W33
 line-bus transactions. This does not replace BT827's chart-aware $8n$ lowering, whose unit is three
 cube moves plus five chart-web moves per digit. It remains a Python reference
@@ -1143,15 +1145,17 @@ $\Pi_{48}=\frac85(2Q-Q^2)$ for $Q=Q_p+Q_\ell$. This supplies an exact
 point-bank/line-bank interface; it does not yet choose the three-way panel branch.
 
 This gives a concrete compiler target: a chamber register, a point-panel selector, a
-line-panel selector, and one orientation bit. It is also a safety target. Running point and
-line rails separately and checking incidence detects exactly
+line-panel selector, and one orientation bit. It is also a safety target. Pass~4331's
+linear-opcode mismatch census runs point and line rails separately and checks incidence;
+among the three tested linear panel opcodes it detects exactly
 \[
 \frac{1656}{1920}=\frac{69}{80}=86.25\%
 \]
 of differential single-rail opcode substitutions. It detects none of the $960$ shared
 control substitutions, because the same wrong symmetry preserves incidence on both rails.
-An independent control syndrome is therefore required; duplicated shared decode is not
-fault containment.
+This is not the broader intrinsic flag-register comparator of Passes~4367/4374, which
+detects $36/39=12/13$ arbitrary one-register substitutions at $q=3$. An independent
+control syndrome is therefore required; duplicated shared decode is not fault containment.
 
 The analytic $2\times2$ ISA table is now corrected as well. Machine D is exactly invariant
 under the point/frequency pair swap and exactly inverse-closed, so both named asymmetries can
@@ -1161,7 +1165,8 @@ still require a deterministic selector encoding. Those are implementation tasks,
 theorems.
 
 \begin{honestbox}
-The GAP witnesses establish a finite Hecke algebra and exact comparator census. They do not
+The GAP witnesses establish a finite Hecke algebra and an exact linear-opcode mismatch
+census. They do not
 establish a fabricated chamber processor, switching energy, optical loss, timing closure, or
 physical quantum advantage. The earlier $\mathbb Z_{2731}$ girth-$16$ cover used in one
 capacity estimate is also retracted: an explicit zero-voltage eight-cycle makes its girth

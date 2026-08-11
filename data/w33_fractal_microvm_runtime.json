@@ -1,0 +1,867 @@
+{
+  "schema": "w33.fractal_microvm_runtime.v1",
+  "status": "PASS",
+  "name": "W33 Fractal MicroVM Runtime",
+  "composition": {
+    "unit": "one 160-state incident point-line chamber microVM",
+    "placement_reading": "point=endpoint label/address, line=active four-member line/bus context",
+    "deterministic_panel_isa": [
+      "HP0",
+      "HP1",
+      "HP2",
+      "HL0",
+      "HL1",
+      "HL2"
+    ],
+    "opcode_names": "HP=hold_point/change_line; HL=hold_line/change_point",
+    "selector_boundary": "The selector labels are a canonical software chart, not an intrinsic geometric ordering.",
+    "same_interface_every_depth": [
+      "load",
+      "step",
+      "run",
+      "send",
+      "snapshot",
+      "fork",
+      "seal"
+    ]
+  },
+  "guest_replay": {
+    "image_digest": "sha256:bb13bf1e6659cfbaef6e035a8f8f0ee061bb2c5286607887af07e023b009767d",
+    "snapshot_digest": "sha256:8c4d766e5fec36193e6a12049f1554f3d06bc2cfe7f5394a5a1db3225e74e50f",
+    "result_accumulator": 7,
+    "final_chamber": [
+      9,
+      28
+    ],
+    "trace_root": "sha256:3d6473356acc41e783f72c79e6aabaf542cbbb8445fd125b69ea71e9f39e4a6c"
+  },
+  "recursive_image": {
+    "root": "sha256:65d427658beda0f0ae5d8b25061a2ed602e1570106a6dd22de16cfe76aceef55",
+    "levels": 6,
+    "network_vm_instances": 105025641,
+    "leaf_vm_instances": 4096000000,
+    "total_stateful_vm_instances": 4201025641,
+    "unique_node_blobs": 7,
+    "node_digests": [
+      "sha256:73b9736e65163f49a17a103121e1fbc4bfc0e15a31780c0eedb32a26bc73ab9e",
+      "sha256:12bc28483c78fd42c73491e5841b9ba5bbfd5fdc7107bda27ca363804a020b3f",
+      "sha256:e2f8a95e18cdc63b0ff91a55ef6e07a6605f937d5c634b8b9de3e7103d3bcf98",
+      "sha256:981856e53bd1c263cda1d9f68e26978ced9ee1baabef66e8fff8865a6464ded0",
+      "sha256:410cbd24e3a4b0365d40c857b26b6bc7469d49317c155ade5a988ba94179bea5",
+      "sha256:12d8b97fba56f9fab03e6017879c98d905ca9d757b6160c18d3d8e9f3dda0a8e",
+      "sha256:65d427658beda0f0ae5d8b25061a2ed602e1570106a6dd22de16cfe76aceef55"
+    ],
+    "mutation_address": [
+      3,
+      10,
+      17,
+      24,
+      31,
+      38
+    ],
+    "copy_on_write_new_blobs": 7,
+    "mutated_root": "sha256:6acf0eca77cfdb1fb2cc82de898b6e0e797694d9e52d7645ba5e78519dd8fac9",
+    "nested_execution": {
+      "root": "sha256:a959a9cfd0412754336345a1282425c1cc272823299bde53c1be8021291bc8dd",
+      "old_target": "sha256:73b9736e65163f49a17a103121e1fbc4bfc0e15a31780c0eedb32a26bc73ab9e",
+      "new_target": "sha256:94f321b95d51d4c34375021209e291f1853ebb3db5b1cb41d6bafb52baf20712",
+      "new_blobs": 7,
+      "address": [
+        3,
+        10,
+        17,
+        24,
+        31,
+        38
+      ],
+      "accumulator": 7,
+      "final_chamber": [
+        9,
+        28
+      ],
+      "halted": true,
+      "inbox_depth": 0,
+      "trace_root": "sha256:3d6473356acc41e783f72c79e6aabaf542cbbb8445fd125b69ea71e9f39e4a6c"
+    },
+    "mailbox_delivery": {
+      "root": "sha256:0b7f409f4b38df5aee4adc960825773ae73bb4f405c5860a7e3a6557403ba932",
+      "old_target": "sha256:6a24f6fc191be939d10fc1e28079e7413234d97acf80a6cd089d9857c41f31b2",
+      "new_target": "sha256:5f107ef09d79022d46f44878f6b0471ec62750c99e6d0fb9f6a8f788ecbadd78",
+      "new_blobs": 8,
+      "path_copy_new_blobs": 7,
+      "receipt_new_blobs": 1,
+      "address": [
+        3,
+        10,
+        17,
+        24,
+        31,
+        38
+      ],
+      "source": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "route": [
+        {
+          "level": 0,
+          "from": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "to": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "line_bus": 0
+        },
+        {
+          "level": 1,
+          "from": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "to": [
+            3,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "line_bus": 0
+        },
+        {
+          "level": 1,
+          "from": [
+            3,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "to": [
+            3,
+            10,
+            0,
+            0,
+            0,
+            0
+          ],
+          "line_bus": 4
+        },
+        {
+          "level": 2,
+          "from": [
+            3,
+            10,
+            0,
+            0,
+            0,
+            0
+          ],
+          "to": [
+            3,
+            10,
+            17,
+            0,
+            0,
+            0
+          ],
+          "line_bus": 2
+        },
+        {
+          "level": 3,
+          "from": [
+            3,
+            10,
+            17,
+            0,
+            0,
+            0
+          ],
+          "to": [
+            3,
+            10,
+            17,
+            3,
+            0,
+            0
+          ],
+          "line_bus": 0
+        },
+        {
+          "level": 3,
+          "from": [
+            3,
+            10,
+            17,
+            3,
+            0,
+            0
+          ],
+          "to": [
+            3,
+            10,
+            17,
+            24,
+            0,
+            0
+          ],
+          "line_bus": 12
+        },
+        {
+          "level": 4,
+          "from": [
+            3,
+            10,
+            17,
+            24,
+            0,
+            0
+          ],
+          "to": [
+            3,
+            10,
+            17,
+            24,
+            2,
+            0
+          ],
+          "line_bus": 0
+        },
+        {
+          "level": 4,
+          "from": [
+            3,
+            10,
+            17,
+            24,
+            2,
+            0
+          ],
+          "to": [
+            3,
+            10,
+            17,
+            24,
+            31,
+            0
+          ],
+          "line_bus": 7
+        },
+        {
+          "level": 5,
+          "from": [
+            3,
+            10,
+            17,
+            24,
+            31,
+            0
+          ],
+          "to": [
+            3,
+            10,
+            17,
+            24,
+            31,
+            2
+          ],
+          "line_bus": 0
+        },
+        {
+          "level": 5,
+          "from": [
+            3,
+            10,
+            17,
+            24,
+            31,
+            2
+          ],
+          "to": [
+            3,
+            10,
+            17,
+            24,
+            31,
+            38
+          ],
+          "line_bus": 9
+        }
+      ],
+      "route_hops": 10,
+      "message_digest": "sha256:f179b3f47640de899d41394ff0800f8ca50f1ca8cecc1744720673478ab2e32b",
+      "delivery_receipt": "sha256:93b16e7396ede198977d2841f0e80bc8472426141047d0e0f6bbec4d74e9286d",
+      "delivery_log_head": "sha256:93b16e7396ede198977d2841f0e80bc8472426141047d0e0f6bbec4d74e9286d"
+    },
+    "alternate_source_delivery": {
+      "root": "sha256:3be2eb3905daeef1d072c0efad1c44a791ba086546e18f1db12661d07598242b",
+      "old_target": "sha256:6a24f6fc191be939d10fc1e28079e7413234d97acf80a6cd089d9857c41f31b2",
+      "new_target": "sha256:4a0222d68a6372199d7d8bb6c6ea442810a5cca49b8a10b3cf2b7146fc578435",
+      "new_blobs": 8,
+      "path_copy_new_blobs": 7,
+      "receipt_new_blobs": 1,
+      "address": [
+        3,
+        10,
+        17,
+        24,
+        31,
+        38
+      ],
+      "source": [
+        39,
+        39,
+        39,
+        39,
+        39,
+        39
+      ],
+      "route": [
+        {
+          "level": 0,
+          "from": [
+            39,
+            39,
+            39,
+            39,
+            39,
+            39
+          ],
+          "to": [
+            2,
+            39,
+            39,
+            39,
+            39,
+            39
+          ],
+          "line_bus": 7
+        },
+        {
+          "level": 0,
+          "from": [
+            2,
+            39,
+            39,
+            39,
+            39,
+            39
+          ],
+          "to": [
+            3,
+            39,
+            39,
+            39,
+            39,
+            39
+          ],
+          "line_bus": 0
+        },
+        {
+          "level": 1,
+          "from": [
+            3,
+            39,
+            39,
+            39,
+            39,
+            39
+          ],
+          "to": [
+            3,
+            10,
+            39,
+            39,
+            39,
+            39
+          ],
+          "line_bus": 32
+        },
+        {
+          "level": 2,
+          "from": [
+            3,
+            10,
+            39,
+            39,
+            39,
+            39
+          ],
+          "to": [
+            3,
+            10,
+            9,
+            39,
+            39,
+            39
+          ],
+          "line_bus": 28
+        },
+        {
+          "level": 2,
+          "from": [
+            3,
+            10,
+            9,
+            39,
+            39,
+            39
+          ],
+          "to": [
+            3,
+            10,
+            17,
+            39,
+            39,
+            39
+          ],
+          "line_bus": 29
+        },
+        {
+          "level": 3,
+          "from": [
+            3,
+            10,
+            17,
+            39,
+            39,
+            39
+          ],
+          "to": [
+            3,
+            10,
+            17,
+            24,
+            39,
+            39
+          ],
+          "line_bus": 32
+        },
+        {
+          "level": 4,
+          "from": [
+            3,
+            10,
+            17,
+            24,
+            39,
+            39
+          ],
+          "to": [
+            3,
+            10,
+            17,
+            24,
+            31,
+            39
+          ],
+          "line_bus": 7
+        },
+        {
+          "level": 5,
+          "from": [
+            3,
+            10,
+            17,
+            24,
+            31,
+            39
+          ],
+          "to": [
+            3,
+            10,
+            17,
+            24,
+            31,
+            2
+          ],
+          "line_bus": 7
+        },
+        {
+          "level": 5,
+          "from": [
+            3,
+            10,
+            17,
+            24,
+            31,
+            2
+          ],
+          "to": [
+            3,
+            10,
+            17,
+            24,
+            31,
+            38
+          ],
+          "line_bus": 9
+        }
+      ],
+      "route_hops": 9,
+      "message_digest": "sha256:f179b3f47640de899d41394ff0800f8ca50f1ca8cecc1744720673478ab2e32b",
+      "delivery_receipt": "sha256:618e7a8d99079ee7bf4ab3f1d83aae516403f83d54864b14549e1f49c1adb3bf",
+      "delivery_log_head": "sha256:618e7a8d99079ee7bf4ab3f1d83aae516403f83d54864b14549e1f49c1adb3bf"
+    },
+    "mailbox_execution": {
+      "root": "sha256:9c765f11ac0d06d1a524b159691f1e0f47f694003877d19b46f8f69658c481e5",
+      "old_target": "sha256:5f107ef09d79022d46f44878f6b0471ec62750c99e6d0fb9f6a8f788ecbadd78",
+      "new_target": "sha256:eee95c433023963e7559e7a438d1271959f642a9ff84357aba76b2dcfae67d29",
+      "new_blobs": 7,
+      "address": [
+        3,
+        10,
+        17,
+        24,
+        31,
+        38
+      ],
+      "accumulator": 13,
+      "final_chamber": [
+        0,
+        0
+      ],
+      "halted": true,
+      "inbox_depth": 0,
+      "trace_root": "sha256:1e7691c6b0227f4e2d1d31bb5e1d088a9a53a67bc2c4d74b529ae80dd8c0db35"
+    },
+    "graph_handle": {
+      "methods": [
+        "load",
+        "step",
+        "run",
+        "send",
+        "snapshot",
+        "fork",
+        "seal"
+      ],
+      "root_children": 40,
+      "leaf_children": 0,
+      "forked_root": "sha256:62f7b6bff74c2d256d1e98e36d4f559aaa1726a19c1ca87a970ff339b145f20e",
+      "fork_path_copy_new_blobs": 7,
+      "fork_receipt_new_blobs": 1,
+      "fork_total_new_blobs": 8
+    },
+    "stored_next_hop_tables": 0
+  },
+  "recursive_network": {
+    "address_radix": 40,
+    "hop_unit": "one logical W33 collinearity/line-bus transaction",
+    "source": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "target": [
+      39,
+      38,
+      37,
+      36,
+      35,
+      34
+    ],
+    "hop_count": 12,
+    "proven_bound": 12,
+    "trace": [
+      {
+        "level": 0,
+        "from": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "to": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "line_bus": 0
+      },
+      {
+        "level": 0,
+        "from": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "to": [
+          39,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "line_bus": 7
+      },
+      {
+        "level": 1,
+        "from": [
+          39,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "to": [
+          39,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "line_bus": 0
+      },
+      {
+        "level": 1,
+        "from": [
+          39,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "to": [
+          39,
+          38,
+          0,
+          0,
+          0,
+          0
+        ],
+        "line_bus": 9
+      },
+      {
+        "level": 2,
+        "from": [
+          39,
+          38,
+          0,
+          0,
+          0,
+          0
+        ],
+        "to": [
+          39,
+          38,
+          2,
+          0,
+          0,
+          0
+        ],
+        "line_bus": 0
+      },
+      {
+        "level": 2,
+        "from": [
+          39,
+          38,
+          2,
+          0,
+          0,
+          0
+        ],
+        "to": [
+          39,
+          38,
+          37,
+          0,
+          0,
+          0
+        ],
+        "line_bus": 8
+      },
+      {
+        "level": 3,
+        "from": [
+          39,
+          38,
+          37,
+          0,
+          0,
+          0
+        ],
+        "to": [
+          39,
+          38,
+          37,
+          2,
+          0,
+          0
+        ],
+        "line_bus": 0
+      },
+      {
+        "level": 3,
+        "from": [
+          39,
+          38,
+          37,
+          2,
+          0,
+          0
+        ],
+        "to": [
+          39,
+          38,
+          37,
+          36,
+          0,
+          0
+        ],
+        "line_bus": 8
+      },
+      {
+        "level": 4,
+        "from": [
+          39,
+          38,
+          37,
+          36,
+          0,
+          0
+        ],
+        "to": [
+          39,
+          38,
+          37,
+          36,
+          2,
+          0
+        ],
+        "line_bus": 0
+      },
+      {
+        "level": 4,
+        "from": [
+          39,
+          38,
+          37,
+          36,
+          2,
+          0
+        ],
+        "to": [
+          39,
+          38,
+          37,
+          36,
+          35,
+          0
+        ],
+        "line_bus": 7
+      },
+      {
+        "level": 5,
+        "from": [
+          39,
+          38,
+          37,
+          36,
+          35,
+          0
+        ],
+        "to": [
+          39,
+          38,
+          37,
+          36,
+          35,
+          2
+        ],
+        "line_bus": 0
+      },
+      {
+        "level": 5,
+        "from": [
+          39,
+          38,
+          37,
+          36,
+          35,
+          2
+        ],
+        "to": [
+          39,
+          38,
+          37,
+          36,
+          35,
+          34
+        ],
+        "line_bus": 9
+      }
+    ],
+    "metric_boundary": "This 2n logical bound does not replace BT827's 8n chart-aware lowering, which counts three cube moves plus five chart-web moves per recursive digit."
+  },
+  "prior_art_reused": [
+    "analysis/w33_packet_vm.py",
+    "analysis/w33_packet_vm_kernel.py",
+    "analysis/bt1700_recursive_holonet_packet_compiler.py",
+    "analysis/w33_recursive_instance_compression.py",
+    "analysis/w33_BREAKTHROUGH_339_SQNA_capacity_threshold.py",
+    "analysis/w33_BREAKTHROUGH_350_fractal_SQNA.py",
+    "analysis/w33_pass2640_2649_the_holonet_node_is_its_own_network.md",
+    "analysis/w33_pass4324_4327_chamber_hecke_hashimoto.g",
+    "analysis/holonet_uor_certificate.py",
+    "analysis/holonet_uor_mock_runtime.py",
+    "papers/dahn_asi_toe/witting_architecture_v2.tex"
+  ],
+  "checks": {
+    "geometry_is_40_points_40_lines_160_chambers": true,
+    "geometry_has_240_edges_and_diameter_two": true,
+    "six_deterministic_panel_opcodes_per_chamber": true,
+    "panel_opcodes_preserve_the_selected_incidence_rail": true,
+    "deterministic_guest_replay": true,
+    "uniform_tree_matches_recursive_instance_law": true,
+    "uniform_tree_has_40n_addressable_leaf_vms": true,
+    "uniform_tree_counts_every_stateful_vm": true,
+    "uniform_tree_uses_one_node_blob_per_level": true,
+    "network_root_uses_same_state_media_type_as_leaf": true,
+    "single_leaf_mutation_is_path_length_copy_on_write": true,
+    "nested_guest_execution_is_path_length_copy_on_write": true,
+    "mailbox_delivery_and_receive_are_persistent": true,
+    "delivery_receipt_commits_source_and_route": true,
+    "root_and_leaf_share_graph_preserving_handle_interface": true,
+    "handle_fork_is_immutable_and_path_copying": true,
+    "recursive_route_reaches_target": true,
+    "recursive_route_bound_is_two_per_address_digit": true,
+    "every_recursive_hop_is_one_legal_line_transaction": true
+  },
+  "boundary": "This is an executable deterministic reference runtime and immutable content graph. It does not provide Linux process isolation, a guest kernel, hardware virtualization, confidential-computing attestation, or measured performance. Firecracker/Kata, OCI, and WebAssembly Component Model adapters are implementation targets, not completed here."
+}

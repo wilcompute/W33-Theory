@@ -1,0 +1,33 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [4324, 4334],
+  "slug": "chamber_hecke_hashimoto_chirality_folded_cubic_audited_frontier_corrections",
+  "title": "Chamber Hecke machine, exact Hashimoto chirality, folded-cubic normal form, and audited correction packet",
+  "status": "COMPLETED_EXACT_31_PLUS_28_PLUS_17_CHECKS_WITH_RETRACTIONS_AND_PUBLICATION_REPAIR",
+  "owner": "openai-codex",
+  "reserved_at": "2026-08-08",
+  "completed_at": "2026-08-08",
+  "purpose": "Construct the object-level algebra behind the 160-chamber and 320-oriented-flag carriers, then audit and repair every material claim in the immediately preceding machine frontier before publication.",
+  "result": "The two chamber panel operators satisfy the q=3 type-C2 Hecke relations and generate an 8-dimensional algebra; the Levi Hashimoto operator factors as [[0,L],[P,0]]; chirality Omega=LP-PL gives an exact rank-48 projector and complex structure; the folded cubic has a four-term exact normal form and shifted square -689. Pass 4334 proves at object level that this chiral image is the zero-intersection sum of the natural rank-24 point and line eigencarriers, uniformly isoclinic with squared cosine 3/8, with rational span projector Pi_48=(8/5)(2Q-Q^2). The correction witness retracts the false Z_2731 girth-16 cover, restores the square roots and scope in the Kotani-Sunada annulus, proves machine swap invariance A/B/C/D=false/true/false/true, proves affine translations descend to neither projective 40-carrier, freezes the narrower Pass4331 linear-opcode mismatch incidence census at 69/80 differential coverage and zero shared-control coverage while citing the broader Pass4367/4374 flag-register comparator at 12/13, isolates two algebraically conjugate real roots of one irreducible degree-33 factor, and corrects the universal-set census and rank tie. Pass 4334 leaves a single Pages publisher and exact native-GAP regression gates.",
+  "certificates": [
+    "data/PART_W33_PASS4324_4327_CHAMBER_HECKE_HASHIMOTO.json",
+    "data/PART_W33_PASS4328_4333_AUDITED_CORRECTIONS.json",
+    "data/PART_W33_PASS4334_POINT_LINE_CHIRAL_CARRIER.json"
+  ],
+  "verifiers": [
+    "analysis/w33_pass4324_4327_chamber_hecke_hashimoto.g",
+    "analysis/w33_pass4328_4333_audited_corrections.g",
+    "analysis/w33_pass4334_point_line_chiral_carrier.g"
+  ],
+  "regressions": [
+    "tests/test_w33_pass4324_4327_chamber_hecke_hashimoto.py",
+    "tests/test_w33_pass4328_4333_audited_corrections.py",
+    "tests/test_w33_pass4334_point_line_chiral_carrier.py"
+  ],
+  "report": "analysis/BT4324_BT4334_CHAMBER_HECKE_AND_AUDITED_CORRECTIONS.md",
+  "manuscript_insert": "analysis/BT4324_BT4333_chamber_hecke_and_audited_corrections_insert.tex",
+  "public_page": "docs/chamber-hecke-audited-corrections-4324-4333.html",
+  "workflow": ".github/workflows/w33_pass4324_4334_chamber_hecke_audit.yml",
+  "checks": {"chamber_witness": 31, "correction_witness": 28, "point_line_carrier_witness": 17},
+  "boundary": "Exact finite incidence, Hecke, Hashimoto, polynomial, affine-conjugation, projective-descent, linear-opcode mismatch-census and certificate-retraction statements only. Pass4331 is not the first or general intrinsic flag comparator; Passes4367/4374 own the broader arbitrary one-register substitution theorem. The panel operators are relations rather than deterministic selectors; B/D RTL and hardware pricing remain unbuilt; no continuum propagator, physical entropy rate, particle, mass, coupling, fabricated device, gravity, cosmology, or theory of everything is established."
+}

@@ -1,0 +1,58 @@
+name: W33 fractal microVM runtime
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_fractal_microvm_runtime.py'
+      - 'analysis/w33_fractal_microvm_routing.g'
+      - 'analysis/holobox.py'
+      - 'data/w33_fractal_microvm_runtime.json'
+      - 'data/w33_fractal_microvm_routing_gap.json'
+      - 'docs/W33_FRACTAL_MICROVM_RUNTIME.md'
+      - 'tests/test_w33_fractal_microvm_runtime.py'
+      - '.github/workflows/w33_fractal_microvm_runtime.yml'
+  pull_request:
+    paths:
+      - 'analysis/w33_fractal_microvm_runtime.py'
+      - 'analysis/w33_fractal_microvm_routing.g'
+      - 'analysis/holobox.py'
+      - 'data/w33_fractal_microvm_runtime.json'
+      - 'data/w33_fractal_microvm_routing_gap.json'
+      - 'docs/W33_FRACTAL_MICROVM_RUNTIME.md'
+      - 'tests/test_w33_fractal_microvm_runtime.py'
+      - '.github/workflows/w33_fractal_microvm_runtime.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-runtime:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install GAP and test runner
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gap
+          python -m pip install pytest
+      - name: Replay Python certificate byte-exact
+        run: |
+          python analysis/w33_fractal_microvm_runtime.py \
+            --json-out /tmp/w33_fractal_microvm_runtime.json \
+            --md-out /tmp/W33_FRACTAL_MICROVM_RUNTIME.md
+          cmp data/w33_fractal_microvm_runtime.json /tmp/w33_fractal_microvm_runtime.json
+          cmp docs/W33_FRACTAL_MICROVM_RUNTIME.md /tmp/W33_FRACTAL_MICROVM_RUNTIME.md
+      - name: Replay GAP route certificate byte-exact
+        run: |
+          mkdir -p /tmp/holobox-gap/data
+          cd /tmp/holobox-gap
+          gap -q -b "$GITHUB_WORKSPACE/analysis/w33_fractal_microvm_routing.g"
+          cmp "$GITHUB_WORKSPACE/data/w33_fractal_microvm_routing_gap.json" \
+            data/w33_fractal_microvm_routing_gap.json
+      - name: Run focused lifecycle regression
+        run: python -m pytest -q tests/test_w33_fractal_microvm_runtime.py

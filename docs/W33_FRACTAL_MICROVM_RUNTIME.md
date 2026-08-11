@@ -6,9 +6,9 @@ loaded through the same state descriptor as one leaf microVM.
 
 ## What is new
 
-The repo already had a packet interpreter, a controller-wrapped VM, the BT350
-network-as-node concept and unproved `2n` diameter assertion, Passes 2642--2644's
-same-port recursive hardware module, a `40^n` recursive packet count,
+The repo already had a packet interpreter, a controller-wrapped VM, BT339's
+unproved `2n` hierarchy assertion, BT350's network-as-node/nested-VM concept,
+Passes 2642--2644's same-port recursive hardware module, a `40^n` recursive packet count,
 recursive routing-table compression, UOR-shaped canonical content IDs and
 command certificates, and a paper design for
 immutable CID containers, WASM/OCI components, policies, receipts, and a
@@ -17,8 +17,9 @@ roadmap.
 What was missing was an executable nested state and lifecycle layer. This
 runtime adds:
 
-- a deterministic six-opcode chamber ISA (`HP0..HP2` means hold point and
-  change line; `HL0..HL2` means hold line and change point);
+- six deterministic panel-transition opcodes (`HP0..HP2` means hold point and
+  change line; `HL0..HL2` means hold line and change point) inside a small VM
+  ISA that also includes `ADD:<int>`, `RECV`, `YIELD`, and `HALT`;
 - immutable content-addressed images and snapshots;
 - recursive 40-way child manifests;
 - lazy structural deduplication and path-only copy-on-write;
@@ -45,7 +46,9 @@ At `6` levels the uniform manifest denotes
 `4,096,000,000` addressable leaf VMs---
 `4,201,025,641` stateful VMs in all---but identical subtrees require
 only `7` node blobs. Mutating one leaf copies only
-`7` blobs along its digest path. The root
+`7` blobs along its digest path in the
+certified fresh transition. Structurally this is an upper bound: replaying an
+identical content transition can allocate zero new CAS keys. The root
 digest is itself a normal microVM-state descriptor, so the network and the leaf
 share one loader ABI.
 
@@ -53,7 +56,7 @@ This is now an operational identity, not only a media-type identity. A runtime
 can resolve any nested radix-40 address without expanding its siblings, append a
 mailbox value, execute that guest, and checkpoint the result by replacing only
 the digests on the addressed path. The frozen witness delivers and consumes
-`13` at depth six. Execution allocates exactly
+`13` at depth six. In that fresh witness, execution allocates exactly
 `7` path-state blobs; delivery allocates the
 same path plus one separately addressable receipt blob. Every untouched sibling
 keeps its digest. The reachable delivery receipt commits the source, target,
@@ -71,7 +74,8 @@ The hop unit matters. This is a logical W33 collinearity/line-bus transaction,
 whose GAP-checked base diameter is 2. BT827's separate chart-aware lowering
 budgets three cube moves plus five chart-web moves per digit, hence `8n`. The
 two bounds describe different layers and are not competing measurements.
-BT350 first asserted the `2n` law in the corpus. The independent
+BT339 is the first `2n` assertion located in the corpus; BT350 owns the explicit
+nested-VM framing. The independent
 [`w33_fractal_microvm_routing.g`](../analysis/w33_fractal_microvm_routing.g)
 witness now proves it for this explicit Cartesian W33 routing object and freezes
 the metric distinction at 7/7 checks.

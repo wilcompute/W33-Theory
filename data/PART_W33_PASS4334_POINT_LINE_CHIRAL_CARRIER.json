@@ -1,0 +1,47 @@
+{
+  "schema": "w33.pass4334.point_line_chiral_carrier.v1",
+  "status": "PASS",
+  "objects": {"points": 40, "lines": 40, "chambers": 160, "point_carrier_rank": 24, "line_carrier_rank": 24, "chiral_rank": 48},
+  "spectral_projectors": {
+    "point": "E_p=-(A_p-12I)(A_p+4I)/60",
+    "line": "E_l=-(A_l-12I)(A_l+4I)/60",
+    "chamber_lifts": "Q_p=(1/4)R_p E_p R_p^T, Q_l=(1/4)R_l E_l R_l^T"
+  },
+  "object_level_split": {
+    "identity": "im(Pi_48)=im(Q_p) direct_sum im(Q_l)",
+    "dimensions": "48=24+24",
+    "point_line_intersection_dimension": 0,
+    "panel_actions": "P Q_p=3Q_p and L Q_l=3Q_l"
+  },
+  "uniform_isoclinicity": {
+    "laws": "Q_p Q_l Q_p=(3/8)Q_p, Q_l Q_p Q_l=(3/8)Q_l",
+    "squared_cosine": "3/8",
+    "cosine": "sqrt(6)/4",
+    "multiplicity": 24
+  },
+  "rational_span_projector": {
+    "Q": "Q_p+Q_l",
+    "quadratic": "Q^2-2Q+(5/8)Pi_48=0",
+    "formula": "Pi_48=(8/5)(2Q-Q^2)=-Omega^2/60"
+  },
+  "boundary": "Exact finite rational carrier identity. The point and line summands are nonorthogonal but have zero intersection. No deterministic panel selector, W(G2) action, continuum, particle, mass, or coupling identification is asserted.",
+  "checks": {
+    "carrier_sum_quadratic": true,
+    "chambers_160": true,
+    "chiral_image_contains_both_carriers": true,
+    "chiral_image_is_point_line_direct_sum": true,
+    "cross_maps_full_rank_24": true,
+    "isoclinic_line_law": true,
+    "isoclinic_point_law": true,
+    "lifted_line_carrier_rank_24": true,
+    "lifted_point_carrier_rank_24": true,
+    "line_eigenprojector_rank_24": true,
+    "lines_40": true,
+    "panel_fixed_carriers": true,
+    "point_eigenprojector_rank_24": true,
+    "point_line_intersection_zero": true,
+    "point_line_sum_rank_48": true,
+    "points_40": true,
+    "rational_span_projector_exact": true
+  }
+}

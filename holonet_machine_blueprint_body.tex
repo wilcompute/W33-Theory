@@ -2410,8 +2410,9 @@ Two guests fit side by side, one on each qutrit. The interesting part is what ke
 apart.
 
 In a conventional computer, isolation is \emph{enforced}: a memory management unit checks
-every access and refuses the ones that cross a boundary. Correctness depends on that check
-being present and right. Here there is nothing to check.
+every access and refuses the ones that cross a boundary. The finite instruction algebra
+below supplies a useful noninterference invariant for a restricted trace, but it does not
+remove the need to enforce which trace actually runs.
 \end{plain}
 
 \begin{spec}[Structural isolation]
@@ -2419,10 +2420,12 @@ Of the four opcodes, exactly two --- $\mathrm{CX}_{p\to f}$ and $\mathrm{CX}_{f\
 touch both halves of the frame. The other two act within one half.
 
 \smallskip\noindent
-\textbf{A hypervisor that never issues $\mathrm{CX}$ to a guest cannot leak between
-guests.} Not ``is not permitted to'': \emph{cannot}. There is no instruction that would do
-it. The guarantee comes from the algebra, not from an enforcement mechanism, and it cannot
-be defeated by a bug in the checker because there is no checker.
+\textbf{Within this four-opcode model, a verified trace containing no $\mathrm{CX}$ has
+no direct instruction that couples the two halves.} This is an algebraic property of that
+selected trace, not a complete isolation boundary. A real hypervisor must still prevent
+unverified decode or control paths from issuing $\mathrm{CX}$ and must cover memory,
+devices, scheduling, malformed guests, and side channels. The algebra makes one policy
+easy to state and test; it does not replace its enforcement.
 \end{spec}
 
 \subsection{And it was built}
@@ -2461,8 +2464,12 @@ contexts. It does not prove a network of nested machines or a distributed hyperv
 The software-side object that now closes part of that gap is HoloBox
 (\path{analysis/holobox.py}). A leaf VM and a recursively nested 40-child network use one
 immutable state grammar; addressed mailbox delivery and guest execution replace only one
-digest path. At six levels the uniform graph denotes $105{,}025{,}641$ logical VMs with six
-node blobs, and an independent GAP witness proves the logical W33 line-route bound $2n$.
+digest path. At six levels the uniform graph denotes $105{,}025{,}641$ internal network VMs
+plus $4{,}096{,}000{,}000$ addressable leaf VMs---$4{,}201{,}025{,}641$ stateful VMs in
+all---with seven uniform state blobs. In the certified fresh transition a depth-six send
+creates seven path-state blobs plus one receipt and execution creates seven path-state blobs;
+content-identical replay may allocate none. An independent GAP witness proves the logical
+W33 line-route bound $2n$.
 That is still a Python reference runtime, not an FPGA network, KVM boundary, OCI-conformant
 container engine, or measured distributed system. BT827's separate chart-aware lowering
 continues to cost $8n=(3+5)n$ micro-moves.
@@ -2582,13 +2589,13 @@ strings were parsed with $0$ failures.
 \begin{plain}
 Look at the tree: every branch ends in a valid address. Nothing dangles.
 
-The engineering consequence is unusual and worth stating plainly. In a normal computer, a
-corrupted instruction stream can produce an \emph{illegal instruction} --- a bit pattern
-that means nothing, which the processor must detect and trap. Here that cannot happen. A
-corrupted packet is always a legal packet addressed somewhere else. The fault model
-therefore has no ``decode error'' term at all; it has only a ``wrong result'' term. That
-simplifies the error correction enormously, and it is forced by the geometry rather than
-designed in.
+The engineering consequence is narrower and still useful. At the abstract $40$-symbol
+layer, a channel fault constrained to substitute one valid symbol for another never leaves
+the address alphabet: it becomes a legal packet addressed somewhere else. That does
+\emph{not} hold for an arbitrary corrupted bit or byte stream. The eight-bit packing below
+uses only $40$ of $256$ patterns, so framing and decode must reject the other $216$, just as
+the executable HoloBox ISA rejects an unknown opcode. Geometry removes holes from the ideal
+$40$-ary substitution model; it does not eliminate the decoder's error state.
 
 That property is not free, and it is now possible to say exactly what it costs.
 \end{plain}

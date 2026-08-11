@@ -1,0 +1,28 @@
+{
+  "schema": "w33.fractal_microvm_routing_gap.v1",
+  "status": "PASS",
+  "w33": {
+    "points": 40,
+    "degree": 12,
+    "srg_parameters": [40, 12, 2, 4],
+    "distance_distribution": [1, 12, 27],
+    "diameter": 2
+  },
+  "recursive_route": {
+    "address_depth": 6,
+    "sample_digit_distances": [2, 2, 2, 2, 2, 2],
+    "sample_hops": 12,
+    "logical_bound": "2n W33 line-bus transactions",
+    "stored_next_hop_tables": 0
+  },
+  "metric_boundary": "BT827's 8n bound counts a separate chart-aware lowering: three cube moves plus five chart-web moves per digit. HoloBox 2n counts logical W33 line-bus transactions.",
+  "checks": {
+    "forty_projective_points": true,
+    "degree_twelve": true,
+    "distance_distribution_1_12_27": true,
+    "diameter_two": true,
+    "srg_lambda_two": true,
+    "srg_mu_four": true,
+    "sample_six_digit_route_is_twelve": true
+  }
+}

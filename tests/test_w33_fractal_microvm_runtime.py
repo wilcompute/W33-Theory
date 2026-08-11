@@ -109,6 +109,9 @@ def test_nested_mailbox_execution_is_persistent() -> None:
     assert store.state_at(delivered["root"], address)[1]["inbox"] == ["11"]
     graph = store.verify_graph(delivered["root"])
     assert graph["reachable_delivery_blobs"] == 1
+    receipt = store.get(delivered["delivery_receipt"])
+    assert receipt["message"] == "11"
+    assert receipt["messageDigest"] == runtime.digest({"message": "11"})
     receipt_payload = store.blobs.pop(delivered["delivery_receipt"])
     with pytest.raises(ValueError, match="missing delivery blob"):
         store.verify_graph(delivered["root"])
@@ -132,6 +135,60 @@ def test_nested_mailbox_execution_is_persistent() -> None:
     with pytest.raises(ValueError, match="invalid literal"):
         store.send_at(tree["root"], address, "hello", (0, 0, 0, 0))
     assert len(store.blobs) == before
+
+
+def test_delivery_receipt_is_bound_to_state_address_and_inbox() -> None:
+    image = runtime.MicroVMImage("mailbox-binding", ("RECV", "HALT"))
+    store = runtime.ContentStore()
+    tree = store.uniform_tree(image, 1)
+    delivered = store.send_at(tree["root"], (1,), "11", (0,))
+    real_receipt = store.get(delivered["delivery_receipt"])
+
+    wrong_target = {
+        **real_receipt,
+        "target": [2],
+        "route": runtime.route_address((0,), (2,)),
+    }
+    wrong_target_key = store.put(wrong_target)
+
+    def retarget_state(row: dict[str, object]) -> dict[str, object]:
+        row["deliveryLogHead"] = wrong_target_key
+        return row
+
+    wrong_target_root, _, _, _ = store._rewrite_at(
+        delivered["root"], (1,), retarget_state
+    )
+    with pytest.raises(ValueError, match="does not match its receiving state address"):
+        store.verify_graph(wrong_target_root)
+
+    wrong_message = {
+        **real_receipt,
+        "message": "99",
+        "messageDigest": runtime.digest({"message": "99"}),
+    }
+    wrong_message_key = store.put(wrong_message)
+
+    def remessage_state(row: dict[str, object]) -> dict[str, object]:
+        row["deliveryLogHead"] = wrong_message_key
+        return row
+
+    wrong_message_root, _, _, _ = store._rewrite_at(
+        delivered["root"], (1,), remessage_state
+    )
+    with pytest.raises(ValueError, match="does not match the newest inbox value"):
+        store.verify_graph(wrong_message_root)
+
+    deep_store = runtime.ContentStore()
+    deep_tree = deep_store.uniform_tree(image, 2)
+    deep_delivery = deep_store.send_at(deep_tree["root"], (2, 2), "7", (0, 0))
+    aliased_root = deep_store.get(deep_delivery["root"])
+    children = {child["slot"]: child["digest"] for child in aliased_root["children"]}
+    children[1] = children[2]
+    aliased_root["children"] = [
+        {"slot": slot, "digest": children[slot]} for slot in sorted(children)
+    ]
+    with pytest.raises(ValueError, match="referenced at multiple addresses"):
+        deep_store.verify_graph(deep_store.put(aliased_root))
 
 
 def test_graph_handle_preserves_children_and_forks_immutably() -> None:
@@ -334,6 +391,59 @@ def test_holobox_end_to_end_lifecycle(tmp_path: Path) -> None:
     assert routed["status"] == "ROUTED"
     assert routed["hops"] <= routed["bound"] == 6
     assert routed["stored_next_hop_tables"] == 0
+
+    valuable_output = tmp_path / "valuable-output"
+    valuable_output.mkdir()
+    valuable_marker = valuable_output / "KEEP"
+    valuable_marker.write_text("must survive invalid input", encoding="utf-8")
+    invalid_send = subprocess.run(
+        [
+            sys.executable,
+            str(cli),
+            "send",
+            str(bundle),
+            "--source",
+            "0/0/0",
+            "--target",
+            "1/2/3",
+            "--message",
+            "not-an-integer",
+            "--output",
+            str(valuable_output),
+            "--force",
+        ],
+        cwd=ROOT,
+        check=False,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        timeout=60,
+    )
+    assert invalid_send.returncode != 0
+    assert valuable_marker.read_text(encoding="utf-8") == "must survive invalid input"
+
+    symlink_target = tmp_path / "symlink-target"
+    symlink_target.mkdir()
+    symlink_marker = symlink_target / "KEEP"
+    symlink_marker.write_text("must not be recursively deleted", encoding="utf-8")
+    symlink_output = tmp_path / "symlink-output"
+    symlink_output.symlink_to(symlink_target, target_is_directory=True)
+    symlink_send = invoke(
+        "send",
+        str(bundle),
+        "--source",
+        "0/0/0",
+        "--target",
+        "1/2/3",
+        "--message",
+        "5",
+        "--output",
+        str(symlink_output),
+        "--force",
+    )
+    assert symlink_send["status"] == "DELIVERED"
+    assert symlink_marker.read_text(encoding="utf-8") == "must not be recursively deleted"
+    assert symlink_output.is_dir() and not symlink_output.is_symlink()
 
     for dangerous_output in (bundle, bundle / "derived", tmp_path):
         destructive = subprocess.run(
