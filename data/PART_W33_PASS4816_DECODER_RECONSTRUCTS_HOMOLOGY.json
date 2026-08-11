@@ -1,0 +1,11 @@
+{
+  "boundary": "This reconstruction concerns the exactly-twofold exact-weight-3 collision sector. Local 3-fold and 12-fold Golay ambiguities are separate sectors classified in Pass4810.",
+  "collision_classes_per_projective_K33": 20,
+  "construction": "2 nonzero scalars x 10 unordered 3+3 support partitions",
+  "difference_recovers_weight6_logical": true,
+  "exact_weight3_twofold_collision_classes": 7200,
+  "pass": 4816,
+  "projective_K33_classes": 360,
+  "projectivized_difference_recovers_unique_K33": true,
+  "theorem": "The complete twofold weight-3 syndrome-collision relation reconstructs the complete 360-class projective K3,3 homology shell. Each projective K3,3 has exactly 20 collision preimages, and the difference of the colliding errors is its signed weight-6 logical."
+}
