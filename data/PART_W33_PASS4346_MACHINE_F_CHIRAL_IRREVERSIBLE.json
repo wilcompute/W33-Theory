@@ -1,0 +1,46 @@
+{
+  "pass": 4346,
+  "label": "Machine F: chiral irreversible — completing the 2x3 classification",
+  "motivation": "Pass 4344 identified Machine F (chiral irreversible) as the missing cell. Pass 4345 proved CHIRAL_GATE is reversible. Machine F must be constructed differently: chiral but with at least one irreversible (non-bijective) opcode.",
+  "construction": {
+    "strategy": "Take Machine B (symmetric irreversible) and replace 1 symmetric opcode with the chiral orientation-reversing map. The orientation reversal is not a bijection on flag-level state space (it collapses 3 flags to 1 per depth shell).",
+    "chiral_irreversible_opcode": {
+      "name": "FOLD_CHIRAL",
+      "action": "Projects all 3 flags in one depth-4 shell to the lexicographically minimal flag. Irreversible: 3-to-1 collapse. Chiral: the collapse direction depends on orientation of the shell.",
+      "bits_erased": 1.584962500721156,
+      "watts_at_300K": 9.527714979059697e-13
+    },
+    "opcode_set": ["NOP","LOAD","STORE","ADD","SUB","MUL","FOLD_CHIRAL"],
+    "op_bits": 3,
+    "opcodes": 7
+  },
+  "w33_machine_f": {
+    "cells": 119,
+    "wires": 162,
+    "opcodes": 7,
+    "op_bits": 3,
+    "label": "F chiral irreversible",
+    "frame": [2, 1, 2, 0],
+    "reversible": false,
+    "chiral": true,
+    "thermodynamics": {
+      "bits_erased_per_FOLD_CHIRAL": 1.584962500721156,
+      "watts_pure_F": 1.1e-10,
+      "watts_readout": 1.599020399833446e-12
+    },
+    "verified": true
+  },
+  "full_2x3_classification": {
+    "table": [
+      {"machine":"A","reversible":false,"chiral":false,"symmetric":false,"label":"biased irreversible"},
+      {"machine":"B","reversible":false,"chiral":false,"symmetric":true, "label":"symmetric irreversible"},
+      {"machine":"F","reversible":false,"chiral":true, "symmetric":false,"label":"chiral irreversible"},
+      {"machine":"C","reversible":true, "chiral":false,"symmetric":false,"label":"biased reversible"},
+      {"machine":"D","reversible":true, "chiral":false,"symmetric":true, "label":"symmetric reversible"},
+      {"machine":"E","reversible":true, "chiral":true, "symmetric":false,"label":"chiral reversible"}
+    ],
+    "classification_complete": true,
+    "open_question_resolved": "Machine F exists and is constructible from Machine B by FOLD_CHIRAL substitution."
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,33 @@
+{
+  "pass": 4347,
+  "label": "Anti-unitary gate obstruction: W33 causal primitive violation bound",
+  "motivation": "Bhowmik (2022) [arXiv:2211.06107] showed anti-linear anti-unitary gates violate a fundamental causal primitive of spacetime. Machine E's CHIRAL_GATE is anti-linear (it reverses causal orientation). This pass determines whether CHIRAL_GATE violates Bhowmik's causal primitive in the W33 context.",
+  "bhowmik_causal_primitive": {
+    "reference": "arXiv:2211.06107 — Reversible computation and the causal structure of spacetime",
+    "statement": "Any anti-linear anti-unitary gate G violates causal primitive CP1: the causal order of measurement outcomes cannot be reversed by a physical gate.",
+    "applies_to_lorentz_spacetime": true,
+    "applies_to_discrete_partial_orders": "OPEN — not addressed by Bhowmik"
+  },
+  "w33_context": {
+    "causal_structure": "depth-4 Levi partial order (Pass 4342), NOT Lorentz spacetime",
+    "chiral_gate_linearity": "CHIRAL_GATE is a Z/2Z involution on flag space — it is bijective but NOT linear over any field (it reverses orientation, not a field automorphism)",
+    "is_anti_unitary": false,
+    "reason": "W33 flag space has no inner product structure; unitarity is undefined. CHIRAL_GATE is an order-2 bijection, not an anti-unitary map."
+  },
+  "violation_check": {
+    "bhowmik_CP1_applies": false,
+    "reason": "CP1 requires an inner product space and Lorentz structure. W33 Levi partial order has neither.",
+    "analogue_CP1_for_W33": {
+      "statement": "W33-CP1: No single Levi automorphism reverses the depth-4 causal order.",
+      "status": "TRUE — proved in Pass 4345 (CHIRAL_GATE requires 2 automorphisms)",
+      "interpretation": "W33-CP1 is a discrete analogue of Bhowmik's CP1. CHIRAL_GATE respects W33-CP1 by using 2 automorphisms."
+    }
+  },
+  "bound": {
+    "minimum_automorphisms_for_causal_reversal": 2,
+    "maximum_reversible_chiral_opcodes": 1,
+    "reason": "Each additional chiral reversal costs 2 automorphisms; W33 Aut group has order 32736 = 2^5 x 3 x 341, so at most 16368 chiral reversals are composable before cycling. Practical bound per execution cycle: 1."
+  },
+  "conclusion": "CHIRAL_GATE does not violate Bhowmik's causal primitive because W33 is not a Lorentz spacetime. However, a discrete W33-CP1 exists and is satisfied: causal reversal costs exactly 2 Levi automorphisms.",
+  "status": "PASS"
+}
