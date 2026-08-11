@@ -202,3 +202,13 @@ repos:
         language: system
         pass_filenames: true
         files: ^(scripts|analysis)/.*[.]py$
+      # Added Pass 4882. check_certificates produced four false-positive families in one
+      # session, all from assuming a key name implies a convention. The sharpest: it
+      # defines SELF_DIGEST_KEYS with three canonical names, documents why all three are
+      # needed, then hard-codes one of them six lines below. Warns, never blocks.
+      - id: hardcoded-keys
+        name: single-key lookups beside a canonical list
+        entry: py -3 scripts/check_hardcoded_keys.py
+        language: system
+        pass_filenames: true
+        files: ^(scripts|analysis)/.*[.]py$

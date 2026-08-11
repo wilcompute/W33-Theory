@@ -127,7 +127,10 @@ def stale_pointers(paths: list[Path]) -> list[dict]:
             continue
         if not isinstance(d, dict) or not is_pointer_entry(d):
             continue
-        recorded = d.get("sha256")
+        # The registry schema uses "sha256"; read it through the canonical list
+        # anyway, so a registry variant under another name is not silently skipped.
+        recorded = next((d[k] for k in SELF_DIGEST_KEYS
+                         if isinstance(d.get(k), str)), None)
         target = d.get("certificate")
         if not (isinstance(recorded, str) and isinstance(target, str)):
             continue
