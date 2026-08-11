@@ -47,13 +47,14 @@ repos:
           the current exact certificates pass, prior synthesis remains clean, and
           obsolete transport scaffolds are absent.
 
+        # No files: pattern meant pre-commit passed it nothing. Two namespace
+        # collisions happened in one day with this guard registered and disconnected.
+        files: ^(analysis|data)/.*$
+
       # Moved out of an inline `entry:` at Pass 4692.  The inline form opened a
       # double-quoted YAML scalar whose continuation lines started at column 0, which ends
       # the scalar -- so this FILE did not parse, and every hook in it was dead. The guard
       # was present, documented, and had never run once.  Scripts, not inline entries.
-        # No files: pattern meant pre-commit passed it nothing. Two namespace
-        # collisions happened in one day with this guard registered and disconnected.
-        files: ^(analysis|data)/.*$
       - id: s-min-formula-guard
         name: Guard S_min formula correctness
         entry: py -3 scripts/check_smin_formula.py
@@ -180,3 +181,14 @@ repos:
         language: system
         pass_filenames: true
         files: \.py$
+      # Added Pass 4811. check_novelty_claims had "does not appear to be new" inside its
+      # ASSERTION list, so it fired on authors disclaiming novelty and stayed silent on
+      # authors claiming it -- for as long as it existed, because nothing asked it to
+      # classify a known case. A negation applied to the claim word reverses a pattern's
+      # meaning and is invisible to running it.
+      - id: pattern-inversions
+        name: assertion patterns are not inverted
+        entry: py -3 scripts/check_pattern_inversions.py
+        language: system
+        pass_filenames: true
+        files: ^scripts/.*[.]py$
