@@ -1,0 +1,20 @@
+{
+  "pass": 4822,
+  "Levi": {"vertices":72,"edges":135,"boundary_rank_F2":71,"H1_dimension_F2":64,"girth":8},
+  "Pass4772_parity_checks": {
+    "count":27,
+    "rank":27,
+    "identification":"pullback of the 27 line-vertex star vectors in the binary Levi cut space under the 3-coordinate collapse F2^405 -> F2^135",
+    "is_cycle_or_homology_check_space":false
+  },
+  "binary_homology_subcode": {
+    "construction":"repeat each binary Levi cycle on all three sheet coordinates, then apply the local [15,3,7]_2 physical generator map",
+    "parameters":"[2025,64,96]_2",
+    "dimension":64,
+    "distance":96,
+    "physical_weight_formula":"wt_phys = 12 * wt_Levi_cycle"
+  },
+  "comparison_with_Pass4807":"The same GQ(4,2) Levi graph has H1 dimension 64 over F3 in Pass4807 and over F2 here; no cross-characteristic vector-space identification follows from equal dimension.",
+  "theorem":"The 27 global router parity checks are literally a line-star cut-space layer of the GQ(4,2) Levi graph. Independently, binary Levi homology injects as a canonical [2025,64,96]_2 physical subcode.",
+  "boundary":"Exact binary incidence/homology statement; the binary and ternary Levi H1 spaces are coefficient-field-distinct objects."
+}
