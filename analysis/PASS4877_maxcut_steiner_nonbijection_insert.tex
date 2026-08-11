@@ -1,0 +1,48 @@
+% Pass4877 — 120 maximum cuts and 120 Steiner triangles are different PGSp G-sets.
+\ifdefined\WDDPassFourEightSevenSevenLoaded
+  \expandafter\endinput
+\else
+  \gdef\WDDPassFourEightSevenSevenLoaded{1}%
+\fi
+
+\section{The two $120$-object carriers are not the same \texorpdfstring{$PGSp$}{PGSp} set}
+\label{sec:pass4877-maxcut-steiner}
+
+Pass~4867 found exactly $120$ maximum cuts of weight $216$ in the double-six
+graph, while the Steiner layer contains exactly $120$ maximal/Steiner
+triangles.  Pass~4877 tests the equality rather than promoting it.
+
+A marked-double-six $K_6$ chart constructs a maximum cut with a Hamilton
+$C_6$ duad state and exactly two triad completions.  Its full $PGSp(4,3)$
+orbit has size $120$.  Thus both the maximum-cut set and the Steiner-triangle
+set are transitive $PGSp$ sets with stabilizer order
+\[
+  51840/120=432.
+\]
+The stabilizers are nevertheless nonconjugate.  The maximum-cut stabilizer
+fixes no Steiner triangle and has element-order census
+\[
+  1^1\,2^{45}\,3^{26}\,4^{54}\,6^{90}\,8^{108}\,12^{108},
+\]
+whereas a Steiner-triangle stabilizer fixes exactly its defining Steiner
+triangle and has census
+\[
+  1^1\,2^{87}\,3^{26}\,4^{72}\,6^{210}\,12^{36}.
+\]
+In particular, the first stabilizer has $108$ elements of order $8$ and the
+second has none.  Hence
+\[
+  \boxed{\{
+  \text{maximum cuts}\}\not\cong_{PGSp}
+  \{\text{Steiner triangles}\}.}
+\]
+There is no $PGSp$-equivariant bijection between the two $120$-sets.  Their
+equal cardinalities and equal stabilizer orders are not an identification.
+
+\paragraph{Evidence firewall.}
+The producer is
+\texttt{analysis/w33\_pass4877\_maxcut\_steiner\_nonbijection.py}, with frozen
+certificate
+\texttt{data/PART\_W33\_PASS4877\_MAXCUT\_STEINER\_NONBIJECTION.json}.  An
+arbitrary coordinate-dependent bijection between two sets of size $120$ is of
+course possible; the theorem excludes the canonical equivariant one.

@@ -1,0 +1,60 @@
+% Pass4875 — full PGSp selection rule on the quadratic Steiner-to-adjoint Hom space.
+\ifdefined\WDDPassFourEightSevenFiveLoaded
+  \expandafter\endinput
+\else
+  \gdef\WDDPassFourEightSevenFiveLoaded{1}%
+\fi
+
+\section{The quadratic Steiner-to-adjoint bridge is odd under the outer \texorpdfstring{$PGSp/PSp$}{PGSp/PSp} involution}
+\label{sec:pass4875-pgsp-quadratic}
+
+Pass~4870 found
+\[
+  \dim\operatorname{Hom}_{PSp}(\operatorname{Sym}^2H_2,Q_{10})=2,
+\]
+with both dimensions supported on the $2160$-pair relation lifting W33
+adjacency.  Pass~4875 repeats the exact stabilizer-fixed-space calculation for
+the full $PGSp(4,3)$ action.
+
+The four unordered-pair orbit sizes remain
+\[
+  120,\qquad1620,\qquad2160,\qquad3240,
+\]
+but each stabilizer doubles.  For $PSp$ the pairs
+\[
+  (|G_x|,\dim Q_{10}^{G_x})
+\]
+are
+\[
+  (216,0),\ (16,0),\ (12,2),\ (8,0),
+\]
+while for $PGSp$ they become
+\[
+  (432,0),\ (32,0),\ (24,0),\ (16,0).
+\]
+The diagonal orbit contributes zero in both groups.  Therefore
+\[
+  \boxed{\dim\operatorname{Hom}_{PGSp}
+  (\operatorname{Sym}^2H_2,Q_{10})=0.}
+\]
+
+Since $PGSp/PSp\cong C_2$ and $2$ is invertible in $\mathbb F_3$, the outer
+involution acts semisimply on the two-dimensional $PSp$ Hom space.  Its
+$+1$ eigenspace is exactly the $PGSp$-equivariant Hom space, hence is zero.
+Consequently the full two-dimensional space is the $-1$ eigenspace:
+\[
+  \boxed{\tau_{\rm out}|_{\operatorname{Hom}_{PSp}}=-I_2.}
+\]
+Thus every nonzero quadratic map changes sign under the projective outer
+involution.  No nonzero quadratic map is fully $PGSp$-equivariant.  At the
+same time, multiplication by $-1$ fixes every one-dimensional projective line
+setwise, so this sign rule still does not select a preferred projective
+quadratic channel.
+
+\paragraph{Evidence firewall.}
+The producer is
+\texttt{analysis/w33\_pass4875\_pgsp\_quadratic\_chirality.py}, with frozen
+certificate
+\texttt{data/PART\_W33\_PASS4875\_PGSP\_QUADRATIC\_CHIRALITY.json}.  Here
+``odd'' refers only to the finite $PGSp/PSp$ outer involution; it is not being
+identified automatically with a spacetime parity or CP operation.
