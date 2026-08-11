@@ -1,0 +1,28 @@
+{
+  "all_minimum_classes_are_induced_K33": true,
+  "boundary": "This classifies quotient classes in the minimum triangle-lift metric. It does not identify the quotient with an unrelated 360-object merely from the count.",
+  "full_group_order": 51840,
+  "full_orbits": 1,
+  "full_stabilizer_order": 144,
+  "minimum_lift_weight": 6,
+  "mixed_cost_patterns_survive": false,
+  "pass": 4809,
+  "projective_minimum_classes": 360,
+  "PSp_group_order": 25920,
+  "PSp_orbits": 1,
+  "PSp_stabilizer_order": 72,
+  "quotient": "C^perp/L ~= H_1(Levi(GQ(4,2));F3)",
+  "support_case_counts": {
+    "cost_1x0_plus_2x3": 2925,
+    "cost_1x2_plus_2x2": 105300,
+    "cost_1x4_plus_2x1": 403650,
+    "cost_1x6": 296010
+  },
+  "surviving_projective_classes_by_cost_pattern": {
+    "0,3": 0,
+    "2,2": 0,
+    "4,1": 0,
+    "6,0": 360
+  },
+  "theorem": "The 360 induced K3,3 witnesses of Pass4808 are the complete projective minimum-lift shell of C^perp/L. No mixed cost-1/cost-2 pattern survives. The shell is one orbit under PSp(4,3) and also one orbit under the full order-51840 outer action, with stabilizers 72 and 144."
+}
