@@ -9,6 +9,11 @@ on:
       - 'analysis/w33_pass4943_common_s6_carrier_crosswalk.py'
       - 'analysis/w33_pass4944_port_selector_rtl_report.py'
       - 'analysis/w33_pass4945_4947_steiner_connection_maxcut_duality.py'
+      - 'analysis/PASS4940_4947_radius_quartic_holonomy_duality_insert.tex'
+      - 'analysis/PASS4940_4947_radius_quartic_holonomy_index_insert.html'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'docs/pass4940-4947-radius-quartic-holonomy.html'
+      - 'tools/integrate_pass4940_4947_public.py'
       - 'rtl/w33_pass4944_port_selector45.sv'
       - 'rtl/tb_w33_pass4944_port_selector45.sv'
       - 'tests/test_w33_pass4940_4947_exact_packet.py'
@@ -56,9 +61,11 @@ jobs:
           yosys -q -p "read_verilog -sv rtl/w33_pass4944_port_selector45.sv; synth -top w33_agl13_port_selector; tee -o analysis/PASS4944_ONE_YOSYS_STAT.json stat -json"
           yosys -q -p "read_verilog -sv rtl/w33_pass4944_port_selector45.sv; synth -top w33_port_selector45; tee -o analysis/PASS4944_45_YOSYS_STAT.json stat -json"
           python analysis/w33_pass4944_port_selector_rtl_report.py
-      - name: Focused frozen-certificate regression
+      - name: Focused frozen-certificate and integration regression
         run: pytest -q tests/test_w33_pass4940_4947_exact_packet.py
-      - name: Preserve exact generated evidence on master
+      - name: Materialize public root card
+        run: python tools/integrate_pass4940_4947_public.py
+      - name: Preserve exact generated evidence and public roots on master
         shell: bash
         run: |
           set -euo pipefail
@@ -75,8 +82,9 @@ jobs:
             data/PART_W33_PASS4947_W33_TRIAD_CURVATURE.json \
             analysis/PASS4944_IVERILOG.log \
             analysis/PASS4944_ONE_YOSYS_STAT.json \
-            analysis/PASS4944_45_YOSYS_STAT.json
+            analysis/PASS4944_45_YOSYS_STAT.json \
+            docs/index.html index.html
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m 'Materialize Passes 4940-4947 exact evidence'
+          git commit -m 'Materialize Passes 4940-4947 exact evidence and public root card'
           git pull --rebase origin master
           git push origin HEAD:master
