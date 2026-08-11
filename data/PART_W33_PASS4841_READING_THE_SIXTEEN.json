@@ -1,0 +1,90 @@
+{
+  "boundary": "the verdict column is a JUDGEMENT made by reading each sentence and its surrounding paragraph; another reader could disagree on one or two. What is not a judgement is that seven of the sixteen state their internal scope explicitly -- 'in the packet', 'in the programme', 'the first FILE' -- and those are quoted",
+  "conclusion": "the explicit-novelty guard finds zero explicit priority assertions across 1,705 files; this corpus does not claim priority in sentences, and the rediscovery risk is entirely implicit framing, which CLAUDE.md already names as the half no regex sees",
+  "corrects": "Pass 4804's heuristic keyed on repo-object tokens (BT####, Pass NNNN) and missed that this corpus marks internal scope with phrases -- 'in the packet', 'in the chain', 'in the programme' -- which carry the same meaning and none of the tokens",
+  "internal_sequencing": 16,
+  "literature_priority_claims": 0,
+  "pass_4804_estimate": 16,
+  "read": [
+    {
+      "file": "2026-05-31_BREAKTHROUGH_CHAIN_summary",
+      "verdict": "internal",
+      "why": "first time THIS work treats it dynamically"
+    },
+    {
+      "file": "2026-05-31_substrate_quantum_signature",
+      "verdict": "internal",
+      "why": "'rather than as a static counting object' -- prior state is this project's"
+    },
+    {
+      "file": "BT1056_chain_native_Q_operator",
+      "verdict": "internal",
+      "why": "'first concrete W33 chain' -- the chain is ours"
+    },
+    {
+      "file": "BT1872_BT1874_summary",
+      "verdict": "internal",
+      "why": "'IN THE K12/F12 CHAIN'"
+    },
+    {
+      "file": "BT1872_dual_face_Z_checks",
+      "verdict": "internal",
+      "why": "'first exact local CSS layer' -- layer of our construction"
+    },
+    {
+      "file": "BT3670_BT3686 (explanation)",
+      "verdict": "internal",
+      "why": "'IN THIS PACKET'"
+    },
+    {
+      "file": "BT3670_BT3686 (glue closure)",
+      "verdict": "internal",
+      "why": "'of the projector lattice' -- ours"
+    },
+    {
+      "file": "BT3715_BT3721",
+      "verdict": "internal",
+      "why": "'IN THE PACKET'"
+    },
+    {
+      "file": "BT4169_BT4176",
+      "verdict": "internal",
+      "why": "'N=29 is the first below 5 percent' -- mesh ordering"
+    },
+    {
+      "file": "BT781_cube_tomotope_48_split",
+      "verdict": "internal",
+      "why": "'we compared against published generators for the first time'"
+    },
+    {
+      "file": "BT867_cache_split_transport",
+      "verdict": "internal",
+      "why": "'of the holonet's control plane' -- ours"
+    },
+    {
+      "file": "CANON_240_81_3",
+      "verdict": "internal",
+      "why": "'the first FILE to assert' -- repo file ordering, 'four minutes apart'"
+    },
+    {
+      "file": "PASS4495_4502_RESERVATION",
+      "verdict": "internal",
+      "why": "'u^5 is the first coefficient' -- series index"
+    },
+    {
+      "file": "PASS456_Q5_COLLISION_ANATOMY",
+      "verdict": "internal",
+      "why": "'IN THE PROGRAMME'"
+    },
+    {
+      "file": "w33_pass1928_1933",
+      "verdict": "internal",
+      "why": "'first dimensionful anchor' -- in our sequence"
+    },
+    {
+      "file": "w33_pass2496_2501",
+      "verdict": "internal",
+      "why": "'first route to a decision' -- our attempts"
+    }
+  ]
+}
