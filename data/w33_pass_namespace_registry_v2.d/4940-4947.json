@@ -3,9 +3,27 @@
   "range": [4940, 4947],
   "slug": "radius_quartic_transverse_s6_ports_and_three_bonkers",
   "title": "Covering radius, quartic adjoint bridge, transverse Steiner sectors, S6 crosswalk, port RTL, and three outside-box probes",
-  "status": "RESERVED",
+  "status": "EXECUTED",
   "owner": "openai-gpt5.6-sol",
   "reserved_at": "2026-08-11",
-  "purpose": "Execute the five queued fronts from Pass4877 plus three independent exact probes: exact hard-word covering distance; ambiguity-cancelling quartic Steiner-adjoint operation; 20+60 transverse-sector structure; explicit common-S6 carrier crosswalk; qutrit-native 45-port RTL; nonedge matching holonomy; maximum-cut/Steiner cross-incidence; and fiber-constant/transverse support of the nonlinear bridge.",
-  "boundary": "Reservation only. Each pass remains pending its executable owner, frozen certificate, focused regression, and manuscript/public evidence promotion."
+  "executed_at": "2026-08-11",
+  "outcomes": {
+    "4940": "Pass4859 hard word has exact distance 134 from K; rigorous covering-radius interval is 134..179",
+    "4941": "two outer-odd quadratic channels wedge through the intrinsic Q10 bracket to a PGSp-even projective quartic with full 10D image",
+    "4942": "direct 120-point F3 relation matrices give N^2=0 rank40 and R2 nilpotent ranks 34,14,0 with Jordan type 3^14 2^6 1^66",
+    "4943": "marked-double-six and duad-syntheme carriers share a literal S6 core but their order-1440 extensions do not identify",
+    "4944": "45-way AGL(1,3) selector RTL committed; semantic exhaustive permutation test gives zero local collisions and an 18-bit locality premium; gate-level synthesis evidence remains queued",
+    "4945": "canonical nonedge matching connection has full S3 holonomy",
+    "4946": "120 maximum cuts and 120 Steiner triangles collapse three-to-one to dual 40-line/40-point W33 incidence",
+    "4947": "S3 matching curvature is identity exactly on 1080 acentric triads and transposition exactly on 2160 centric triads"
+  },
+  "evidence": {
+    "frozen_certificates": 8,
+    "focused_regression": "tests/test_w33_pass4940_4947_exact_packet.py",
+    "shared_manuscript_insert": "analysis/PASS4940_4947_radius_quartic_holonomy_duality_insert.tex",
+    "public_page": "docs/pass4940-4947-radius-quartic-holonomy.html",
+    "public_root_materializer": "tools/integrate_pass4940_4947_public.py",
+    "workflow": ".github/workflows/w33_pass4940_4947_exact_packet.yml"
+  },
+  "boundary": "The global covering radius remains open above 134. Pass4944 gate-level cell/timing evidence remains pending an actual runner. No finite polynomial, holonomy, or RTL result is promoted to a continuum-field or microscopic-device derivation."
 }
