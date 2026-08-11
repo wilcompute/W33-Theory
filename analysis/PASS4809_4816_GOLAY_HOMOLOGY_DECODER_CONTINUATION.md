@@ -7,10 +7,9 @@ The local-to-global qutrit-code architecture from Passes 4801–4808 is now much
 1. The quotient minimum shell is complete: all 360 projective lift-weight-six classes are induced K3,3 configurations, one PSp(4,3) orbit (stabilizer 72) and one full order-51840 orbit (stabilizer 144).
 2. Exact component decoding factors through 27 local 81-state punctured-Golay tables and the 45 global GQ(4,2) point constraints. At weight two every ambiguity is local Golay; at weight three the first genuinely global ambiguity is exactly the K3,3 homology shell.
 3. The two Golay extension directions on every K5 globalize to a canonical 54-object orientation cover. PSp preserves two 27-sheets; the full outer action exchanges them.
-4. At q=9 the Linear, K1, and Fi/Mondello minimum-shell classes do not split further under PSp(4,9); each is already one PSp orbit. Betten's BLT classification/names/stabilizers remain prior art; the repo result is the outer-quotient/PSp split computation.
-5. The 360 K3,3 minima form a rigid multidesign and can be reconstructed from the decoder's exactly-twofold weight-three collision relation alone.
-
-Pass 4812 is deliberately not promoted to a complete theorem here: an exact 30-bit quotient-SAT orbit classifier has been committed, and the previously known deep-hole coset orbit contains 12,960 cosets, with PSp/full stabilizers 2/4. The final all-orbit blocked-SAT UNSAT certificate has not yet been observed in the repository, so completeness remains open at this release boundary.
+4. H10 has exactly 82080 radius-14 deep-hole cosets in 12 PSp(4,3) orbits; the full order-51840 outer action preserves all 12 orbits setwise, so there are no outer fusions.
+5. At q=9 the Linear, K1, and Fi/Mondello minimum-shell classes do not split further under PSp(4,9); each is already one PSp orbit. Betten's BLT classification/names/stabilizers remain prior art; the repo result is the outer-quotient/PSp split computation.
+6. The 360 K3,3 minima form a rigid multidesign and can be reconstructed from the decoder's exactly-twofold weight-three collision relation alone.
 
 ## Pass 4809 — complete weight-six homology shell
 
@@ -61,17 +60,50 @@ Either PSp sheet gives a monomially equivariant direct sum of 27 perfect ternary
 
 No identification with E6 27 plus conjugate-27 modules is inferred from cardinality.
 
-## Pass 4812 — exact deep-hole classifier, completeness pending evidence
+## Pass 4812 — complete H10 deep-hole census
 
-The committed classifier represents H10 cosets by a 30-bit syndrome under a parity-check basis. A weight-14 deep-hole leader is constrained by wt(x)=14 and d(x,c)>=14 for every c in H10. After one solution is found, its complete PSp orbit of 30-bit coset syndromes is blocked, and the SAT instance is solved again. Iteration to a final UNSAT is an exhaustive orbit classifier.
-
-The already certified witness coset has 64 weight-14 leaders and weight distribution
+The exact covering radius is 14. Radius-14 cosets are classified by their 30-bit parity-check syndrome. The final census is
 
 \[
-64z^{14}+128z^{16}+192z^{18}+256z^{20}+192z^{22}+128z^{24}+64z^{26}.
+\boxed{82080\text{ deep-hole cosets in }12\ PSp(4,3)\text{ orbits}.}
 \]
 
-Its PSp orbit contains 12960 distinct deep-hole cosets (stabilizer 2); the full order-51840 orbit is the same 12960 cosets (stabilizer 4). No claim is made here that this is the only deep-hole orbit until the final blocked-SAT UNSAT certificate is frozen.
+The PSp orbit-size multiset is
+
+\[
+1080^1,\quad2160^2,\quad3240^1,\quad4320^2,\quad6480^2,\quad12960^4.
+\]
+
+For every one of the 12 classes, its orbit under the full order-51840 outer group has the same size as its PSp orbit. Hence the outer involution preserves each class setwise: there are also 12 full-group orbits and zero outer fusions.
+
+The cosets fall into three complete weight-distribution species:
+
+- four PSp orbits, 29160 cosets total, with 64 minimum leaders and distribution
+  \[
+  64z^{14}+128z^{16}+192z^{18}+256z^{20}+192z^{22}+128z^{24}+64z^{26};
+  \]
+- seven PSp orbits, 39960 cosets total, with 96 minimum leaders and distribution
+  \[
+  96z^{14}+416z^{18}+416z^{22}+96z^{26};
+  \]
+- one PSp orbit, 12960 cosets, with 56 minimum leaders and distribution
+  \[
+  56z^{14}+144z^{16}+200z^{18}+224z^{20}+200z^{22}+144z^{24}+56z^{26}.
+  \]
+
+Thus the complete population of weight-14 leaders is
+
+\[
+\boxed{6428160}.
+\]
+
+Completeness has an independent symmetry proof. Fix one selected coordinate in a weight-14 leader by coordinate transitivity. Its stabilizer has order 648 and preserves the 12-coordinate neighborhood codeword. The leader can meet that block in only 0 through 6 coordinates. The stabilizer has respectively
+
+\[
+1,1,2,3,6,6,7
+\]
+
+orbits on those subsets, only 26 cases total. For each case an exact branch search on the remaining 27 coordinates enforces the 511 complement-paired H10 distance constraints and checks the resulting 30-bit coset syndrome against the 12 known orbit sets. All 26 cases contain no unblocked deep-hole leader. The quotient-SAT orbit sieve remains a separate independent certificate path.
 
 ## Pass 4813 — q=9 classes remain three PSp orbits
 
@@ -125,4 +157,4 @@ Pass 4810 independently exhausts the complete weight-three error space and finds
 - The decoder theorem is per ternary component, not a joint-Pauli-weight optimality theorem.
 - The 54 Golay-direction cover is orientation-twisted; no E6 module identification follows from 27+27 counts.
 - q=9 BLT classification data are prior art; only the PSp split evaluation is claimed here.
-- Pass 4812 remains incomplete until the final orbit-blocked SAT instance is observed UNSAT.
+- Deep-hole classification is by cosets; leader multiplicities are properties of those cosets and are not orbit counts by themselves.
