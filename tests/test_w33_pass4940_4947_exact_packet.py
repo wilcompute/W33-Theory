@@ -47,7 +47,6 @@ def test_4944_rtl():
     assert v['distinct_permutations_realized']==6
     assert v['all_selector_states_bijective'] and v['local_output_collisions']==0
     assert v['parallel_selectors']==45 and v['selector_stage_depth']==1
-    # Cell-level evidence is deliberately optional until a real Yosys run lands.
     if d.get('synthesis',{}).get('status')=='COMPLETE':
         assert d['synthesis']['yosys_single_selector']['num_cells']>0
         assert d['synthesis']['yosys_45_parallel']['num_cells']>0
@@ -73,3 +72,18 @@ def test_4947_curvature():
     assert d['curvature']=={'flat_identity':1080,'order3':0,'reflection_transposition':2160}
     assert d['geometric_classification']['acentric_common_neighbors_0']==1080
     assert d['geometric_classification']['centric_common_neighbors_2']==2160
+
+def test_shared_manuscripts_and_public_sources():
+    manifest=(ROOT/'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex').read_text()
+    assert manifest.count('PASS4940_4947_radius_quartic_holonomy_duality_insert')==1
+    insert=(ROOT/'analysis/PASS4940_4947_radius_quartic_holonomy_duality_insert.tex').read_text()
+    assert 'WDDPassFourNineFourZeroPacketLoaded' in insert
+    assert '134\\le\\rho(K)\\le179' in insert
+    for wrapper in ('w33_paper.tex','photonic_holonet.tex','holonet_machine_blueprint.tex'):
+        assert 'W33_CURRENT_FRONTIER_MANIFEST' in (ROOT/wrapper).read_text()
+    card=(ROOT/'analysis/PASS4940_4947_radius_quartic_holonomy_index_insert.html').read_text()
+    assert 'W33_PASS4940_4947_RADIUS_QUARTIC_HOLONOMY_CARD' in card
+    page=(ROOT/'docs/pass4940-4947-radius-quartic-holonomy.html').read_text()
+    assert '134 ≤ ρ(K) ≤ 179' in page and 'Hol = S₃' in page
+    materializer=(ROOT/'tools/integrate_pass4940_4947_public.py').read_text()
+    assert "INDEXES=(ROOT/'docs/index.html',ROOT/'index.html')" in materializer
