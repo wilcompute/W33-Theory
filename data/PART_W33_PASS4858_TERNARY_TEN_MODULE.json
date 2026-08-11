@@ -1,0 +1,24 @@
+{
+  "pass": 4858,
+  "ambient_Levi_H1_dimension_F3": 64,
+  "oriented_K33_span_dimension_F3": 54,
+  "quotient_dimension_F3": 10,
+  "PSp": {
+    "order": 25920,
+    "endomorphism_ring_dimension_F3": 1,
+    "projective_vectors_tested": 29524,
+    "cyclic_span_profile": {"10": 29524},
+    "irreducible": true,
+    "absolutely_irreducible": true
+  },
+  "PGSp": {
+    "order": 51840,
+    "endomorphism_ring_dimension_F3": 1,
+    "irreducible": true,
+    "absolutely_irreducible": true,
+    "extension_of_PSp_module": true
+  },
+  "ATLAS_crosscheck": "ATLAS lists the faithful 10-dimensional GF(3) irreducible of U4(2)=PSp(4,3); since PSp is simple, this nontrivial 10D quotient is faithful and the exhaustive irreducibility certificate places it in that 10D isomorphism class.",
+  "theorem": "The ten ternary homology dimensions outside the canonical K3,3 span form an absolutely irreducible 10-dimensional PSp(4,3)-module over F3, and the action extends absolutely irreducibly to PGSp(4,3). The PSp and PGSp endomorphism rings are both exactly F3.",
+  "boundary": "No identification with Lambda^2 of the natural 5D O5(3) module is promoted here without an explicit common-generator intertwiner; that stronger identification is reserved for a separate probe."
+}
