@@ -1,0 +1,26 @@
+{
+  "pass": 4942,
+  "characteristic_zero_input": {
+    "fiber_constant_dimension": 40,
+    "transverse_dimension": 80,
+    "transverse_primitive_dimensions": [20,60],
+    "R2_eigenvalues_on_transverse": [9,-3]
+  },
+  "characteristic_three": {
+    "fiber_sum_operator": "N=I+R1 is block J3 on each classical Steiner triad",
+    "N_rank": 40,
+    "N_square_zero": true,
+    "image_dimension": 40,
+    "kernel_dimension": 80,
+    "image_contained_in_kernel": true,
+    "R2_nilpotent_ranks": [34,14,0],
+    "R2_Jordan_blocks": {"size1":66,"size2":6,"size3":14},
+    "R3_nilpotent_rank": 39,
+    "R3_square_zero": true,
+    "R2_on_fiber_constant_rank": 14,
+    "R2_on_fiber_constant_square_zero": true
+  },
+  "interpretation": "The rational 20+60 eigensplitting is not a direct-sum decomposition in defining characteristic. Because 9=-3=0 mod3 and every fiber has size3, the three-fiber layer becomes a nonsemisimple nilpotent filtration: im(N)_40 is contained in ker(N)_80, while R2 has Jordan type 3^14 2^6 1^66.",
+  "theorem": "The 20+60 transverse sectors of the Steiner association scheme undergo an exact defining-characteristic collapse over F3. The fiber-sum operator N=I+R1 has rank40 and N^2=0, so the 40-dimensional fiber-constant module lies inside the 80-dimensional fiber-sum-zero module. The R2 operator, whose rational transverse eigenvalues are 9 and -3, becomes nilpotent of index three with ranks 34,14,0 and Jordan type 3^14 2^6 1^66. R3 is square-zero of rank39. Thus the characteristic-three nonlinear bridge lives on a nonsemisimple three-fiber extension, not on the rational 20 and 60 eigenspaces separately.",
+  "boundary": "Exact finite association-module theorem. It identifies the characteristic-three degeneration; it does not assign particle multiplets or continuum fields to the rational 20- or 60-dimensional sectors. It also does not assert that the W33 Bose-Mesner algebra has rank two in F3."
+}
