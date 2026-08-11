@@ -1,0 +1,19 @@
+{
+  "base_degree": 27,
+  "base_stabilizer_order": 1920,
+  "base_stabilizer_structure": "2^4:S5",
+  "coset_cover": "W(E6)/(2^4:A5) -> W(E6)/(2^4:S5)",
+  "direction_stabilizer_order": 960,
+  "direction_stabilizer_structure": "2^4:A5",
+  "E6_firewall": "This rules out an untwisted identification with a disjoint union of two W(E6)-invariant 27-sets. Any relation to the 27 and dual-27 E6 modules must incorporate the nontrivial orientation twist and requires a representation-level intertwiner.",
+  "full_action": "one transitive 54-set",
+  "full_group": "order-51840 W(E6)/outer W33 action",
+  "local_kernel_order": 16,
+  "local_kernel_structure": "C2^4",
+  "local_S5_image_order": 120,
+  "orientation_character": "sign:S5->C2",
+  "oriented_degree": 54,
+  "pass": 4814,
+  "PSp_restriction": "two 27-sheets",
+  "theorem": "The 54 Golay extension directions are the orientation double cover of the standard 27-object action: the fiber stabilizer 2^4:S5 is reduced by the local sign character to 2^4:A5."
+}
