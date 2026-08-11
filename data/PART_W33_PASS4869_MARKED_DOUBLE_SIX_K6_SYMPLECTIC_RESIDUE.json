@@ -1,0 +1,28 @@
+{
+  "adjacency_laws": {
+    "duad_duad": "adjacent iff intersection size 1 (T(6)=L(K6))",
+    "duad_triad": "adjacent iff intersection size 1",
+    "triad_triad": "adjacent iff intersection size 0 or 2",
+    "unified": "adjacent iff B(x,y)=1 for B(x,y)=x.y+wt(x)wt(y) mod 2"
+  },
+  "boundary": "Finite marked-residue theorem. The 35-shell is not the whole 63-point W(5,2), and the marked double-six is additional structure.",
+  "canonical_labels": {
+    "15_non_neighbors": "duads C(6,2): intersection with the marked double-six is two complete opposite columns",
+    "20_neighbors": "triads C(6,3): intersection takes exactly one line from each column, with a 3+3 side split"
+  },
+  "marked_double_six": {"columns": 6,"neighbor_orbit": 20,"nonneighbor_orbit": 15,"residue_vertices": 35},
+  "pass": 4869,
+  "repo_bridge": {
+    "BT632_duad_carrier": "The formerly model-level 15 K6-duad carrier is now canonically realized after marking one double-six.",
+    "boundary": "The marking is extra data; there is no globally preferred double-six, so this does not canonically label the unmarked 36-carrier."
+  },
+  "residue_automorphism_group": {
+    "C2": "fixes duads and complements each triad",
+    "S6": "permutes six marked double-six columns",
+    "explicit_model": "S6 x C2",
+    "full_by_exhaustive_graph_automorphism_count": true,
+    "order": 1440
+  },
+  "symplectic_chart": {"alternating": true,"ambient": "35-vertex weight-{2,3} shell inside F2^6 under a nondegenerate symplectic form","matrix": "I_6+J_6 over F2","nondegenerate_rank": 6},
+  "theorem": "Marking one double-six canonically coordinatizes the other 35 double-sixes by the 15 duads and 20 triads of its six opposite columns. The entire marked residue adjacency is the restriction of the nondegenerate alternating form I+J on F2^6 to weights 2 and 3, and the residue automorphism group is exactly S6 x C2 of order 1440. This upgrades the repo's earlier K6-duad carrier from a model to an incidence-derived chart relative to a marked double-six."
+}
