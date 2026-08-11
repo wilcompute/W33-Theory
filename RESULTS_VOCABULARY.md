@@ -30,6 +30,8 @@ most rediscovery.
 | `50 quadratic maps`, `Hom bases`, `25+25`, `32+18`, `quadratic S3` | all quadratic maps from the signed-edge 90, with combined phase/outer module \(16\mathbf1\oplus16\mathrm{sgn}\oplus9\mathrm{std}\) | [Pass 2301 bases](analysis/w33_pass2301_complete_quadratic_hom_bases.py), [Pass 2307 character](PASS2307_QUADRATIC_HOM_S3_DECOMPOSITION.md) | the Pass-2200 outer-even half, or physical coupling constants |
 | `controller 48`, `single-J 24`, `R4 U6`, `golden word`, `common inverter` | three distinct objects: abstract \((C_4\times C_6):C_2\), canonical \(C_{12}:C_2\) quotient, and overlapping \(SL_3(\mathbb Z)\) carrier | [Pass 2306](PASS2306_CONTROLLER_REPRESENTATION_TRICHOTOMY.md) | a single group in three coordinate systems, or a selected physical observable |
 | `160 chambers`, `panel P/L`, `C2 Hecke`, `rank-48 chirality`, `Omega`, `shifted square -689` | the exact point/line panel algebra on incident W33 chambers, its Levi-Hashimoto factorization, and the conjugate \(24+24\) folded-cubic packet | [Passes 4324--4334](analysis/BT4324_BT4334_CHAMBER_HECKE_AND_AUDITED_CORRECTIONS.md) | the older adjacency `K operator`, a deterministic panel selector, a constructed \(W(G_2)\) action, or a particle spectrum |
+| `chamber M2(Q)`, `packet matrix units`, `Z/S switch`, `3840 nilpotents`, `HP/HL checksum` | literal \(M_2(\mathbb Q)\) split of the rank-48 chamber packet and chart-independent whole-family panel checksum | [Pass 4936](analysis/PASS4936_CHAMBER_PACKET_MATRIX_UNITS_AND_HOLOBOX_CHECKSUM.md) | an individual-selector intertwiner, 24 physical qubits, a unitary gate, or the earlier rank-40 Pass-4777 matrix-unit block |
+| `missing ten`, `10-trit controller`, `adjoint residual`, `dual numbers`, `59049 offsets`, `17 classes` | affine controller candidate \(\mathbb F_3^{10}\rtimes PGSp(4,3)\) after port matching, with a complete 17-orbit offset atlas | [Pass 4937](analysis/PASS4937_ADJOINT_DUAL_NUMBER_CONTROLLER.md) | the equal-order but different group \(Sp_4(\mathbb F_3[\epsilon]/\epsilon^2)\), the abelian kernel's group commutator, or an implemented HoloBox opcode |
 | `HoloBox`, `fractal microVM`, `network-as-VM`, `105025641`, `4096000000`, `2n route` | executable immutable 40-ary VM state graph with addressed mailbox/run, path-copy checkpoints, and one leaf/network loader | [runtime guide](docs/W33_FRACTAL_MICROVM_RUNTIME.md), [Python witness](analysis/w33_fractal_microvm_runtime.py), [GAP route witness](analysis/w33_fractal_microvm_routing.g) | the older count-only recursion, Witting's roadmap container design, OCI conformance, or a KVM/security boundary |
 | `137 QR`, `quadratic residue CSS`, `[[137,1,d]]` | corrected binary quantum code \([[137,1,21]]\) | [Passes 363–367](PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md) | the retracted unsupported \([[137,1,3]]\) intake claim |
 
@@ -83,6 +85,88 @@ into a \(W(G_2)\) action, continuum operator, particle, mass, or coupling.
 the [GAP theorem witness](analysis/w33_pass4324_4327_chamber_hecke_hashimoto.g),
 the [GAP correction witness](analysis/w33_pass4328_4333_audited_corrections.g),
 and the [public correction ledger](docs/chamber-hecke-audited-corrections-4324-4333.html).
+
+## Chamber matrix units and the aggregate selector checksum
+
+**Aliases:** `packet matrix units`, `chamber M2(Q)`, `two-state multiplicity`,
+`24 lanes`, `Z/S switch`, `nilpotent pair`, `factor 3840`, `HP family sum`,
+`HL family sum`, `packet reflection`, and `infinite-order aggregate turn`.
+
+**Canonical object:** Pass 4936 stays inside the rank-48 chamber packet of
+Passes 4324 and 4334. Its literal rational matrices
+
+\[
+e_{11}=Q_p,\quad e_{22}=\Pi_{48}-Q_p,\quad
+e_{21}=(\Pi_{48}-Q_p)Q_\ell Q_p,\quad
+e_{12}=\frac{64}{15}Q_pQ_\ell(\Pi_{48}-Q_p)
+\]
+
+satisfy all sixteen laws
+\(e_{ij}e_{k\ell}=\delta_{jk}e_{i\ell}\). Thus this particular
+four-dimensional algebra is literally \(M_2(\mathbb Q)\) on a two-state
+multiplicity coordinate repeated on 24 representation lanes. The switch
+elements \(Z=e_{11}-e_{22}\) and \(S=e_{12}+e_{21}\) obey
+\(Z^2=S^2=\Pi_{48}\), \(ZS=-SZ\), and \((SZ)^2=-\Pi_{48}\).
+
+**Exact HoloBox intersection:** the three chart-dependent `HP` transition
+matrices sum to the intrinsic point panel, and the three `HL` transitions sum
+to the line panel. Only those complete family sums compress to the two packet
+reflections. Their product \(T\) satisfies
+\(2T^2+T+2\Pi_{48}=0\) and has infinite order on the packet.
+
+**Boundary:** `24 lanes` means representation multiplicity, not 24 physical
+qubits. The rational switch is not an orthogonal or unitary gate. Pass 4936
+does not give an intertwiner for any individual `HPi`/`HLi`, a HoloBox guest
+update, recursive checksum law, security boundary, or hardware result. Pass
+4777 owns the repository's earlier matrix-unit method on a different rank-40
+residue block.
+
+**Primary artifacts:** [theorem and boundary](analysis/PASS4936_CHAMBER_PACKET_MATRIX_UNITS_AND_HOLOBOX_CHECKSUM.md),
+[native GAP witness](analysis/w33_pass4936_chamber_packet_matrix_units.g),
+[byte-exact certificate](data/PART_W33_PASS4936_CHAMBER_PACKET_MATRIX_UNITS.json),
+and [public card](docs/chamber-controller-stack-4936-4937.html).
+
+## The missing ten, dual numbers, and the finite affine controller
+
+**Aliases:** `missing ten`, `Q10`, `adjoint residual`, `sp4(F3)`,
+`dual-number tangent`, `square-zero kernel`, `10-trit register`,
+`59049 offsets`, `PGSp frame`, `17 state classes`, `equal-order extensions`,
+and `center 2 versus 1`.
+
+**Canonical composition:** Pass 4864 owns the equivariant identification
+\(Q_{10}\cong\mathfrak{sp}_4(\mathbb F_3)\). Pass 4861 owns the port matching
+that removes the local \(S_3^{45}\) sheet gauge and leaves global
+\(PGSp(4,3)\). Pass 4937 composes them as
+
+\[
+\mathbb F_3^{10}\rtimes PGSp(4,3),\qquad
+v\longmapsto vA_g+w,
+\qquad |G|=3^{10}\cdot51{,}840=3{,}061{,}100{,}160.
+\]
+
+The complete offset register has exactly 17 frame orbits, of sizes
+
+\[
+1,80,240,480,540,540,1080,1080,4320,4320,
+5184,5184,5760,6480,6480,8640,8640.
+\]
+
+**Equal-order firewall:**
+\(Sp_4(\mathbb F_3[\epsilon]/\epsilon^2)\) has the same order, but its center
+has order 2; the affine \(PGSp\) controller has trivial center. The
+square-zero kernel is elementary abelian, so its group commutator is zero.
+The nonabelian Lie bracket is tangent data transported from Pass 4864, not a
+commutator in that kernel.
+
+**Boundary:** the 17-orbit atlas is a finite compiler taxonomy, not a
+canonical-representative algorithm. No individual selector, HoloBox opcode,
+guest transition, hardware timing, isolation result, continuum gauge field,
+particle, mass, or coupling is constructed.
+
+**Primary artifacts:** [theorem and boundary](analysis/PASS4937_ADJOINT_DUAL_NUMBER_CONTROLLER.md),
+[native GAP witness](analysis/w33_pass4937_adjoint_dual_number_controller.g),
+[byte-exact certificate](data/PART_W33_PASS4937_ADJOINT_DUAL_NUMBER_CONTROLLER.json),
+and [public card](docs/chamber-controller-stack-4936-4937.html).
 
 ## HoloBox, the executable fractal microVM state graph
 

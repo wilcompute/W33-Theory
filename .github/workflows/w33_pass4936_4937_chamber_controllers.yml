@@ -1,0 +1,48 @@
+name: Passes 4936-4937 chamber matrix units and adjoint controller
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4936_chamber_packet_matrix_units.g'
+      - 'analysis/w33_pass4937_adjoint_dual_number_controller.g'
+      - 'data/PART_W33_PASS4936_CHAMBER_PACKET_MATRIX_UNITS.json'
+      - 'data/PART_W33_PASS4937_ADJOINT_DUAL_NUMBER_CONTROLLER.json'
+      - 'tests/test_w33_pass4936_chamber_packet_matrix_units.py'
+      - 'tests/test_w33_pass4937_adjoint_dual_number_controller.py'
+      - '.github/workflows/w33_pass4936_4937_chamber_controllers.yml'
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4936_chamber_packet_matrix_units.g'
+      - 'analysis/w33_pass4937_adjoint_dual_number_controller.g'
+      - 'data/PART_W33_PASS4936_CHAMBER_PACKET_MATRIX_UNITS.json'
+      - 'data/PART_W33_PASS4937_ADJOINT_DUAL_NUMBER_CONTROLLER.json'
+      - 'tests/test_w33_pass4936_chamber_packet_matrix_units.py'
+      - 'tests/test_w33_pass4937_adjoint_dual_number_controller.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-gap:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install native GAP and pytest
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y gap
+          python -m pip install --disable-pip-version-check pytest
+      - name: Replay both native-GAP witnesses byte-for-byte
+        run: |
+          set -euo pipefail
+          pytest -q \
+            tests/test_w33_pass4936_chamber_packet_matrix_units.py \
+            tests/test_w33_pass4937_adjoint_dual_number_controller.py

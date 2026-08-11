@@ -89,6 +89,7 @@ held to, and it is the reason to trust the rest.
 | Complete quadratic map module | Full `PSp(4,3)` Hom dimensions are `Sym=(3,6,5,12)`, `Λ=(3,4,5,12)` on targets `(15,24,30,81)`; the combined `S₃` module is `16·1⊕16·sgn⊕9·std` | [Pass 2301 bases](analysis/w33_pass2301_complete_quadratic_hom_bases.py) · [Pass 2307 character theorem](PASS2307_QUADRATIC_HOM_S3_DECOMPOSITION.md) |
 | Canonical Weil outer action | At `q=7,11`, complex conjugation realizes the nonsquare outer similitude on both parity constituents and reverses the realified complex structure, giving exact `D₄` relations | [Pass 2302](analysis/w33_pass2302_q7_q11_weil_outer_inversion.py) |
 | Chamber Hecke and chiral carrier | The two 160-chamber panels generate the 8D type-`C₂` Hecke image; `Ω` has a literal, uniformly isoclinic point/line `24+24` carrier with squared coupling `3/8` | [Passes 4324–4334](analysis/BT4324_BT4334_CHAMBER_HECKE_AND_AUDITED_CORRECTIONS.md) |
+| Chamber logic and finite control plane | The rank-48 packet is literally `M₂(Q)` on a two-state multiplicity coordinate repeated over 24 lanes; the separate ten-dimensional ternary residual gives `F₃¹⁰ ⋊ PGSp(4,3)` with 17 exact offset classes | [Passes 4936–4937](docs/chamber-controller-stack-4936-4937.html) |
 | Executable recursive runtime | HoloBox gives addressed mailbox/run, immutable path-copy checkpoints, one leaf/network loader, `4,201,025,641` level-six stateful VMs represented by seven uniform node blobs, and independent Python/GAP certificates | [runtime guide](docs/W33_FRACTAL_MICROVM_RUNTIME.md) · [evidence card](docs/holobox-fractal-microvm.html) |
 
 Those are the compact front doors. The larger [certified backbone](#certified-finite-backbone)
@@ -104,7 +105,7 @@ reader to guess which of several historical versions is strongest.
 | Reproducer / reviewer | [Reproduction commands](#reproduce-the-flagship-results) | [certificates](data/) · [tests](tests/) · [correction ledger](#things-we-got-wrong-on-purpose-and-in-public) |
 | Lattice / deformation researcher | [Determinant-law paper](docs/pdf/heisenberg_weyl_determinant_law.pdf) | [eigenlattice table](#eigenlattices-gluing-and-the-e₈-boundary--the-2026-07-arc) |
 | Photonic / systems reader | [Photonic Holonet](docs/pdf/photonic_holonet.pdf) · [source](photonic_holonet.tex) | [`HOLONET.md`](HOLONET.md); treat implementation claims as conditional |
-| Runtime / distributed-systems builder | [HoloBox evidence card](docs/holobox-fractal-microvm.html) · [CLI](analysis/holobox.py) | [runtime guide](docs/W33_FRACTAL_MICROVM_RUNTIME.md) · [focused regression](tests/test_w33_fractal_microvm_runtime.py) |
+| Runtime / distributed-systems builder | [HoloBox evidence card](docs/holobox-fractal-microvm.html) · [CLI](analysis/holobox.py) | [finite controller card](docs/chamber-controller-stack-4936-4937.html) · [runtime guide](docs/W33_FRACTAL_MICROVM_RUNTIME.md) · [focused regression](tests/test_w33_fractal_microvm_runtime.py) |
 | Assessing whether to fund this | [Machine blueprint](holonet_machine_blueprint.pdf), Part I | then **What is not built** and the **errata index**, both at the end of that document |
 
 The corpus is too large to navigate by filenames. Search the **result itself**
@@ -186,12 +187,48 @@ All 24 principal angles therefore have cosine `√6/4`, and for `Q=Qₚ+Qℓ` th
 span projector is `Π₄₈=(8/5)(2Q−Q²)`. The conjugate packet is exactly the joined point and
 line eigencarriers, not merely a matching dimension count.
 
+Pass 4936 now splits that same four-dimensional packet algebra into literal rational matrix
+units `eᵢⱼeₖℓ=δⱼₖeᵢℓ`. Consequently it is exactly `M₂(Q)` on a two-state multiplicity
+coordinate repeated over 24 representation lanes. With `Z=e₁₁−e₂₂` and `S=e₁₂+e₂₁`,
+
+\[
+Z^2=S^2=\Pi_{48},\qquad ZS=-SZ,\qquad (SZ)^2=-\Pi_{48}.
+\]
+
+This is an exact algebraic logic switch, not 24 physical qubits or a synthesized unitary gate.
+The three chart-dependent HoloBox `HP` selectors sum to the intrinsic point panel, and the
+three `HL` selectors sum to the line panel. Only those complete family aggregates compress to
+the two packet reflections. No individual-selector packet intertwiner is asserted.
+
 Reproduce it with [the GAP witness](analysis/w33_pass4324_4327_chamber_hecke_hashimoto.g)
 and [focused regression](tests/test_w33_pass4324_4327_chamber_hecke_hashimoto.py), plus the
 [Pass-4334 carrier witness](analysis/w33_pass4334_point_line_chiral_carrier.g) and
-[regression](tests/test_w33_pass4334_point_line_chiral_carrier.py). The
-operators are exact finite relations; a deterministic three-way selector and synthesized
+[regression](tests/test_w33_pass4334_point_line_chiral_carrier.py), then the
+[Pass-4936 matrix-unit witness](analysis/w33_pass4936_chamber_packet_matrix_units.g) and
+[regression](tests/test_w33_pass4936_chamber_packet_matrix_units.py). The operators and
+family checksum are exact finite relations; a deterministic three-way selector and synthesized
 chamber datapath are not yet built.
+
+### Exact finite control-plane candidate: the missing ten
+
+Pass 4864 identifies the ten-dimensional ternary quotient outside the oriented `K₃,₃` span
+with `sp₄(F₃)`. Pass 4861 independently proves that full three-port matching removes the
+local `S₃⁴⁵` sheet gauge and leaves one global `PGSp(4,3)` frame. Pass 4937 composes those
+certified objects into the affine update
+
+\[
+v\longmapsto vA_g+w,\qquad
+\mathbb F_3^{10}\rtimes PGSp(4,3),\qquad
+|\mathbb F_3^{10}\rtimes PGSp(4,3)|=3{,}061{,}100{,}160.
+\]
+
+The `59,049` offsets fall into exactly 17 `PGSp(4,3)` orbits, so the result already supplies
+a complete finite state taxonomy. It does not supply a canonical-representative compiler or
+a HoloBox opcode. The equal-order group `Sp₄(F₃[ε]/ε²)` is not this controller: their center
+orders are 2 and 1 respectively, and the square-zero tangent kernel is abelian even though
+its transported Lie algebra is not. See the [public controller card](docs/chamber-controller-stack-4936-4937.html),
+[exact GAP witness](analysis/w33_pass4937_adjoint_dual_number_controller.g), and
+[byte-exact regression](tests/test_w33_pass4937_adjoint_dual_number_controller.py).
 
 ### HoloBox: a recursive network that executes as one VM
 
@@ -830,6 +867,12 @@ py -3 analysis/w33_pass2302_q7_q11_weil_outer_inversion.py --verify-frozen
 py -3 analysis/w33_pass2304_known_q27_spread_spectra.py --verify-frozen
 gap -q analysis/w33_pass2307_quadratic_hom_s3_decomposition.g
 py -3 -m pytest -q tests/test_w33_pass2307_quadratic_hom_s3_decomposition.py
+
+# chamber matrix units, HoloBox family checksum, and ten-trit affine controller
+gap -q analysis/w33_pass4936_chamber_packet_matrix_units.g
+py -3 -m pytest -q tests/test_w33_pass4936_chamber_packet_matrix_units.py
+gap -q -b analysis/w33_pass4937_adjoint_dual_number_controller.g
+py -3 -m pytest -q tests/test_w33_pass4937_adjoint_dual_number_controller.py
 
 # corpus and claim guards
 py -3 analysis/build_results_index.py

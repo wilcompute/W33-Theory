@@ -1,0 +1,88 @@
+\subsection{Passes 4936--4937: exact chamber matrix units and a finite adjoint controller}
+\label{subsec:pass4936-4937}
+
+The rank-$48$ chamber packet of Passes~4324 and~4334 now has literal rational
+matrix units.  In the packet algebra
+\[
+ \mathcal A_{48}=\langle\Pi_{48},X,\Omega,X\Omega\rangle_{\mathbb Q},
+ \qquad X^2=6\Pi_{48},\quad \Omega^2=-60\Pi_{48},\quad
+ X\Omega=-\Omega X,
+\]
+the point and line carriers are
+\[
+ Q_p=\frac12\Pi_{48}+\frac18X+\frac1{48}X\Omega,
+ \qquad
+ Q_\ell=\frac12\Pi_{48}+\frac18X-\frac1{48}X\Omega.
+\]
+Putting
+\[
+ e_{11}=Q_p,\quad e_{22}=\Pi_{48}-Q_p,\quad
+ e_{21}=(\Pi_{48}-Q_p)Q_\ell Q_p,\quad
+ e_{12}=\frac{64}{15}Q_pQ_\ell(\Pi_{48}-Q_p)
+\]
+gives all sixteen relations
+\[
+ e_{ij}e_{k\ell}=\delta_{jk}e_{i\ell}.
+\]
+Hence
+\[
+ \boxed{\mathcal A_{48}\cong M_2(\mathbb Q)}
+\]
+on the packet representation: one exact two-state multiplicity algebra repeated
+on $24$ representation lanes.  This is not a construction of $24$ physical
+qubits.
+
+The bridge to the checked-in chamber ISA is deliberately aggregate.  If the
+three deterministic point-panel transitions are denoted $HP_i$ and the three
+line-panel transitions $HL_i$, their chart-independent family sums are $P$ and
+$L$.  Their packet compressions
+\[
+ H_p=\frac{\Pi_{48}P\Pi_{48}-\Pi_{48}}2=2Q_p-\Pi_{48},
+ \qquad
+ H_\ell=\frac{\Pi_{48}L\Pi_{48}-\Pi_{48}}2=2Q_\ell-\Pi_{48}
+\]
+satisfy
+\[
+ H_p^2=H_\ell^2=\Pi_{48},\qquad
+ H_pH_\ell+H_\ell H_p=-\frac12\Pi_{48}.
+\]
+For $T=H_pH_\ell$ one has
+\[
+ 2T^2+T+2\Pi_{48}=0,\qquad
+ \chi_T(t)=t^{112}\left(t^2+\frac12t+1\right)^{24},
+\]
+so the aggregate turn has infinite order on the packet.  These identities
+certify the complete $HP$ or $HL$ family only; no individual selector is
+asserted to preserve the packet.
+
+Pass~4864 identified the remaining ternary ten-space with
+$\mathfrak{sp}_4(\mathbb F_3)$, while Pass~4861 showed that full local port
+matching leaves one global $PGSp(4,3)$.  Pass~4937 composes those certified
+objects.  Over $R=\mathbb F_3[\epsilon]/(\epsilon^2)$ it verifies the split
+sequence
+\[
+ 1\longrightarrow\mathfrak{sp}_4(\mathbb F_3)^+
+ \longrightarrow Sp_4(R)\longrightarrow Sp_4(3)\longrightarrow1,
+\]
+whose elementary-abelian tangent kernel has order $3^{10}=59049$.  Port
+matching instead gives the faithful affine controller candidate
+\[
+ \mathbb F_3^{10}\rtimes PGSp(4,3),\qquad
+ v\longmapsto vA_g+w,\qquad
+ |\mathbb F_3^{10}\rtimes PGSp(4,3)|=3{,}061{,}100{,}160.
+\]
+The $59049$ offsets form exactly $17$ $PGSp(4,3)$-orbits.  The dual-number
+group has the same order as this affine group but is not the same group: their
+centers have orders $2$ and $1$, respectively.  Moreover, multiplication in
+the square-zero kernel is addition, so its group commutator is zero; the
+nonabelian Lie bracket is tangent data inherited from Pass~4864, not a hidden
+kernel commutator.
+
+\paragraph{Evidence boundary.}
+The two native GAP witnesses replay $20/20$ and $30/30$ exact checks and emit
+byte-stable certificates.  Pass~4936 proves a finite rational packet algebra
+and a chart-independent selector-family checksum.  Pass~4937 proves a finite
+characteristic-three tangent group, affine semidirect product, and orbit
+atlas.  Neither pass implements an individual chamber selector, a HoloBox
+guest transition, a compiler lowering, an isolation or security guarantee,
+hardware timing, a continuum gauge field, or a particle, mass, or coupling.

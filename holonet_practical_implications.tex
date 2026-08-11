@@ -1144,6 +1144,24 @@ onto the combined bank is recovered without diagonalization as
 $\Pi_{48}=\frac85(2Q-Q^2)$ for $Q=Q_p+Q_\ell$. This supplies an exact
 point-bank/line-bank interface; it does not yet choose the three-way panel branch.
 
+Pass~4936 now turns that two-bank interface into a literal rational $2\times2$
+instruction algebra on the packet multiplicity coordinate. Four explicit maps
+$e_{ij}$ satisfy
+\[
+ e_{ij}e_{k\ell}=\delta_{jk}e_{i\ell},
+ \qquad \mathcal A_{48}\cong M_2(\mathbb Q),
+\]
+and $Z=e_{11}-e_{22}$, $S=e_{12}+e_{21}$ obey
+$Z^2=S^2=\Pi_{48}$ and $ZS=-SZ$. This is one exact two-state algebra repeated
+on $24$ representation lanes, not $24$ physical qubits. The checked-in selector
+labels also gain a bounded consistency test:
+\[
+ HP_0+HP_1+HP_2=P,\qquad HL_0+HL_1+HL_2=L.
+\]
+Compressing either complete family gives a packet reflection. Individual
+$HP_i$ and $HL_i$ remain chart dependent and are not proved to preserve the
+packet, so this checksum does not implement the missing branch selector.
+
 This gives a concrete compiler target: a chamber register, a point-panel selector, a
 line-panel selector, and one orientation bit. It is also a safety target. Pass~4331's
 linear-opcode mismatch census runs point and line rails separately and checks incidence;
@@ -1163,6 +1181,26 @@ be removed in the finite model. The remaining localization is symmetric. However
 have not been synthesized in Yosys, and the three alternatives behind each panel relation
 still require a deterministic selector encoding. Those are implementation tasks, not hidden
 theorems.
+
+There is now an equally explicit target for the next control-plane register.
+Passes~4861 and~4864 leave, after full three-port matching, one global
+$PGSp(4,3)$ frame acting on a ten-dimensional ternary adjoint space. Pass~4937
+builds the affine update
+\[
+ v\longmapsto vA_g+w,\qquad
+ (v,w)\in\mathbb F_3^{10}\times\mathbb F_3^{10},\quad
+ g\in PGSp(4,3),
+\]
+with exact controller group
+\[
+ \mathbb F_3^{10}\rtimes PGSp(4,3),\qquad
+ |\mathbb F_3^{10}\rtimes PGSp(4,3)|=3{,}061{,}100{,}160.
+\]
+Its $59049$ offsets fall into only $17$ symmetry classes, giving a compact
+state taxonomy for a future compiler. The identically sized dual-number group
+$Sp_4(\mathbb F_3[\epsilon]/\epsilon^2)$ is not this controller: the two
+centers have orders $2$ and $1$. No runtime register, opcode lowering, or map
+from a packet trace or receipt to the offset $w$ has yet been implemented.
 
 \begin{honestbox}
 The GAP witnesses establish a finite Hecke algebra and an exact linear-opcode mismatch
@@ -1198,8 +1236,9 @@ leaves come online.
 \begin{itemize}[leftmargin=1.4em]
 \item No physical build of the full holonet exists; the contextual-fraction measurement has not been
 performed on the complete $W(3,3)$ geometry.
-\item The chamber $P/L$ relations are exact, but the deterministic three-way selector, B/D RTL,
-independent shared-control syndrome, and synthesized resource/timing table remain unbuilt.
+\item The chamber $P/L$ relations, packet matrix units, and complete-family checksum are exact, but
+the deterministic three-way selector, B/D RTL, independent shared-control syndrome, ten-trit
+controller lowering, and synthesized resource/timing table remain unbuilt.
 \item The fractal scaling laws are combinatorial theorems; physical realization at depth $n\ge 2$ is an
 open engineering problem, and the first hard arithmetic guard band (a desynchronization at $n=5$) is
 computed but not engineered around.
@@ -1221,7 +1260,7 @@ attack models are not yet published.
 \section{Conclusion}
 On its technical merits the \emph{Photonic Holonet} is a large finite architecture with an unusually
 deep executable core: exact incidence carriers, codes, routes, finite operators, compiler contracts,
-and now a two-switch chamber algebra. It is not yet a complete device specification. Loss, selectors,
+and now a two-switch chamber algebra with a finite controller target. It is not yet a complete device specification. Loss, selectors,
 shared-control fault detection, fabrication rules, B/D synthesis and end-to-end performance remain
 measured engineering questions.
 
@@ -1242,6 +1281,9 @@ that keeps revealing both new structure and its own mistakes.
 edition; repository \texttt{github.com/wilcompute/W33-Theory}. \textbf{Witnesses for this paper:}
 \texttt{analysis/w33\_fractal\_datacenter.py}, \texttt{analysis/w33\_demonstrator\_experiment.py},
 \texttt{analysis/w33\_physics\_bridge.py}, and the Pass~34--38 computer-engineering arc.
+The exact chamber/controller additions are owned by
+\texttt{analysis/w33\_pass4936\_chamber\_packet\_matrix\_units.g} and
+\texttt{analysis/w33\_pass4937\_adjoint\_dual\_number\_controller.g}.
 \textbf{Energy data:} IEA \emph{Energy and AI} (2025); S\&P Global (2025). \textbf{Photonic hardware:}
 Zheng \emph{et al.}, \emph{PRL} (2025); OAM-multiplexing integrated photonics (2024--2025).
 \textbf{Thermodynamics:} Landauer (1961), Bennett (1973).}

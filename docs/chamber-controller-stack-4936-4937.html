@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Exact GAP-certified chamber matrix units and finite ten-trit adjoint controller for W(3,3).">
+  <title>Passes 4936–4937 — chamber logic and finite adjoint controller</title>
+  <style>
+    :root{color-scheme:dark;--bg:#07111d;--panel:#101b2a;--line:#29425e;
+      --ink:#eef5ff;--muted:#a7b8cc;--cyan:#5eead4;--blue:#8bc2ff;--rose:#fb7185}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);
+      font:16px/1.62 Inter,ui-sans-serif,system-ui,sans-serif}
+    main{width:min(1050px,calc(100% - 36px));margin:auto;padding:42px 0 68px}
+    a{color:var(--blue)}h1,h2{line-height:1.14}h1{font-size:clamp(2.2rem,6vw,4.7rem);
+      letter-spacing:-.04em;margin:.3rem 0 1rem}.eyebrow{color:var(--cyan);font-weight:800;
+      text-transform:uppercase;letter-spacing:.11em}.lede{font-size:1.15rem;color:#cad7e7;max-width:850px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin:26px 0}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:19px}
+    .metric{font:800 1.65rem/1.15 ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--cyan)}
+    .eq{overflow:auto;background:#050b12;border:1px solid var(--line);border-radius:11px;
+      padding:14px 16px;font:1rem/1.55 ui-monospace,SFMono-Regular,Consolas,monospace}
+    .boundary{border-left:4px solid var(--rose);background:#24131b;padding:15px 18px}
+    .proof{border-left:4px solid var(--cyan);background:#0b2525;padding:15px 18px}
+    code{background:#172437;padding:.12em .3em;border-radius:4px}li{margin:.35rem 0}
+    footer{margin-top:45px;border-top:1px solid var(--line);padding-top:20px;color:var(--muted)}
+  </style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">← Back to the W33 atlas</a></p>
+  <div class="eyebrow">Passes 4936–4937 · native GAP · 20/20 + 30/30</div>
+  <h1>The chamber packet is a logic algebra. The missing ten is a finite controller.</h1>
+  <p class="lede">Two previously separate exact carriers now have explicit systems-level
+    forms: the rank-48 chamber packet is literally a two-state rational matrix algebra
+    repeated on 24 representation lanes, and the ten-dimensional ternary adjoint quotient
+    is a 10-trit affine control register after global port matching.</p>
+
+  <div class="grid">
+    <div class="card"><div class="metric">M₂(Q)</div><p>all four literal matrix units on the 160-chamber carrier</p></div>
+    <div class="card"><div class="metric">24 × 2</div><p>one multiplicity switch repeated on 24 representation lanes—not 24 physical qubits</p></div>
+    <div class="card"><div class="metric">3¹⁰ = 59,049</div><p>exact first-order correction offsets</p></div>
+    <div class="card"><div class="metric">17 classes</div><p>complete PGSp(4,3) orbit atlas for the offset register</p></div>
+  </div>
+
+  <h2>Pass 4936: literal matrix units</h2>
+  <p>Let Π<sub>48</sub> be the rank-48 chamber projector and let Q<sub>p</sub>,
+    Q<sub>ℓ</sub> be the rank-24 point and line carriers from Pass 4334. Exact rational
+    matrices give</p>
+  <div class="eq">e₁₁ = Qₚ,
+e₂₂ = Π₄₈ − Qₚ,
+e₂₁ = (Π₄₈ − Qₚ)QℓQₚ,
+e₁₂ = (64/15)QₚQℓ(Π₄₈ − Qₚ),
+
+eᵢⱼeₖℓ = δⱼₖeᵢℓ.</div>
+  <p>Thus the four-dimensional packet algebra is literally <code>M₂(Q)</code> on the
+    multiplicity coordinate. The exact switch pair</p>
+  <div class="eq">Z = e₁₁ − e₂₂,  S = e₁₂ + e₂₁,
+Z² = S² = Π₄₈,  ZS = −SZ,  (SZ)² = −Π₄₈</div>
+  <p>is algebraic logic on that coordinate. Its rational normalization is not an
+    orthogonal or unitary gate construction.</p>
+
+  <h2>The precise HoloBox checksum</h2>
+  <p>The deterministic HoloBox labels <code>HP0..HP2</code> and
+    <code>HL0..HL2</code> depend on a software chart. Their complete family sums do not:
+    they recover the intrinsic point and line panel relations. Compression and affine
+    normalization yield two exact packet reflections H<sub>p</sub>, H<sub>ℓ</sub> with</p>
+  <div class="eq">Hₚ² = Hℓ² = Π₄₈,
+HₚHℓ + HℓHₚ = −(1/2)Π₄₈,
+2(HₚHℓ)² + HₚHℓ + 2Π₄₈ = 0.</div>
+  <p>The aggregate turn has infinite order on the packet. This certifies whole-family
+    consistency; it does not prove that one selected <code>HPi</code> or
+    <code>HLi</code> preserves the packet.</p>
+
+  <h2>Pass 4937: the ten-trit affine controller</h2>
+  <p>Pass 4864 identifies the residual quotient with
+    <code>sp₄(F₃)</code>. Pass 4861 shows that full port matching removes the local
+    <code>S₃⁴⁵</code> sheet gauge and leaves one global <code>PGSp(4,3)</code> frame.
+    Their smallest direct composition is</p>
+  <div class="eq">F₃¹⁰ ⋊ PGSp(4,3),
+v ↦ vA_g + w,
+|F₃¹⁰ ⋊ PGSp(4,3)| = 3¹⁰ · 51,840 = 3,061,100,160.</div>
+  <p>The 59,049 offsets have exactly seventeen frame-symmetry classes:</p>
+  <div class="eq">1, 80, 240, 480, 540, 540, 1080, 1080,
+4320, 4320, 5184, 5184, 5760, 6480, 6480, 8640, 8640.</div>
+  <p class="proof"><strong>Compiler reading.</strong> A future control plane can first
+    classify a ten-trit correction state into one of 17 exact symmetry classes, then lower
+    a chosen representative. The certificate supplies the taxonomy and update law, not
+    the representative-selection algorithm or runtime opcode.</p>
+
+  <h2>The equal-order firewall</h2>
+  <p>The dual-number tangent extension
+    <code>Sp₄(F₃[ε]/ε²)</code> and the affine PGSp controller both have order
+    3,061,100,160, but they are not the same group:</p>
+  <div class="eq">|Z(Sp₄(F₃[ε]/ε²))| = 2,
+|Z(F₃¹⁰ ⋊ PGSp(4,3))| = 1.</div>
+  <p>The square-zero kernel is elementary abelian, so its group commutator vanishes.
+    The nonabelian Lie bracket is tangent data inherited from matrix commutators before
+    imposing ε²=0; it is not a commutator inside that kernel.</p>
+
+  <h2>Reproduce the exact certificates</h2>
+  <pre class="eq"><code>gap -q analysis/w33_pass4936_chamber_packet_matrix_units.g
+python3 -m pytest -q tests/test_w33_pass4936_chamber_packet_matrix_units.py
+gap -q -b analysis/w33_pass4937_adjoint_dual_number_controller.g
+python3 -m pytest -q tests/test_w33_pass4937_adjoint_dual_number_controller.py</code></pre>
+  <ul>
+    <li><a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/PASS4936_CHAMBER_PACKET_MATRIX_UNITS_AND_HOLOBOX_CHECKSUM.md">Pass 4936 theorem and boundary</a></li>
+    <li><a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/PASS4937_ADJOINT_DUAL_NUMBER_CONTROLLER.md">Pass 4937 theorem and boundary</a></li>
+    <li><a href="https://github.com/wilcompute/W33-Theory/blob/master/data/PART_W33_PASS4936_CHAMBER_PACKET_MATRIX_UNITS.json">20-check certificate</a></li>
+    <li><a href="https://github.com/wilcompute/W33-Theory/blob/master/data/PART_W33_PASS4937_ADJOINT_DUAL_NUMBER_CONTROLLER.json">30-check certificate</a></li>
+  </ul>
+
+  <div class="boundary"><strong>Evidence boundary.</strong> These are exact finite
+    rational and characteristic-three theorems. They do not construct an individual-selector
+    packet intertwiner, a HoloBox guest-state update, a recursive checksum law, an opcode
+    lowering, hardware timing, operating-system isolation, a security guarantee, a physical
+    qubit, a continuum gauge field, a particle, a mass, or a coupling.</div>
+
+  <footer>W33 exact-results atlas · Pass 4777 owns the repository's earlier matrix-unit
+    method; dual-number tangent spaces are standard mathematics. The repository-specific
+    results are the explicit chamber split, family checksum, W33 quotient/frame composition,
+    group separation, and complete 17-orbit atlas.</footer>
+</main>
+</body>
+</html>

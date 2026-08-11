@@ -1,0 +1,31 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [4936, 4937],
+  "slug": "chamber_matrix_units_and_adjoint_dual_number_controller",
+  "title": "Rational chamber matrix units and the finite adjoint controller",
+  "status": "COMPLETED_EXACT_20_PLUS_30_NATIVE_GAP_CHECKS",
+  "owner": "openai-codex",
+  "reserved_at": "2026-08-11",
+  "completed_at": "2026-08-11",
+  "purpose": "Split the Pass-4334 rank-48 chamber packet into literal rational matrix units, then compose the Pass-4864 ten-dimensional adjoint quotient with the Pass-4861 residual PGSp frame as an exact finite controller.",
+  "result": "Pass4936 proves the chamber packet algebra is literally M2(Q) on the multiplicity coordinate of 24 lanes, gives all four matrix units and a factor-3840 nilpotent pair, and identifies the chart-independent HP/HL family aggregates as exact packet reflections whose product has infinite order. Pass4937 identifies the 59049-element adjoint offset space with the square-zero symplectic tangent kernel, constructs F3^10:PGSp(4,3) of order 3061100160, separates it from the equal-order dual-number symplectic group by centers 1 versus 2, and freezes all 17 PGSp offset orbits.",
+  "certificates": [
+    "data/PART_W33_PASS4936_CHAMBER_PACKET_MATRIX_UNITS.json",
+    "data/PART_W33_PASS4937_ADJOINT_DUAL_NUMBER_CONTROLLER.json"
+  ],
+  "verifiers": [
+    "analysis/w33_pass4936_chamber_packet_matrix_units.g",
+    "analysis/w33_pass4937_adjoint_dual_number_controller.g"
+  ],
+  "regressions": [
+    "tests/test_w33_pass4936_chamber_packet_matrix_units.py",
+    "tests/test_w33_pass4937_adjoint_dual_number_controller.py"
+  ],
+  "reports": [
+    "analysis/PASS4936_CHAMBER_PACKET_MATRIX_UNITS_AND_HOLOBOX_CHECKSUM.md",
+    "analysis/PASS4937_ADJOINT_DUAL_NUMBER_CONTROLLER.md"
+  ],
+  "workflow": ".github/workflows/w33_pass4936_4937_chamber_controllers.yml",
+  "checks": {"pass4936": 20, "pass4937": 30},
+  "boundary": "Exact finite rational and characteristic-three matrix, Lie, semidirect-product, and orbit statements only. Pass4936 certifies selector-family aggregates, not individual charted opcodes. Pass4937 is a finite compiler/control-plane target, not an implemented HoloBox register or update. No hardware timing, isolation/security theorem, continuum gauge field, particle, mass, or coupling follows."
+}

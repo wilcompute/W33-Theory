@@ -4817,6 +4817,34 @@ $Q=Q_p+Q_\ell$, then
 So ``$24+24$'' literally means the point modes joined to the line modes at one
 exact angle. It is not merely two numbers that happen to add to $48$.
 
+Pass~4936 closes the algebra generated on those joined banks.  Four explicit
+rational maps $e_{11},e_{12},e_{21},e_{22}$ obey the ordinary $2$-by-$2$
+matrix-unit rule
+\[
+ e_{ij}e_{k\ell}=\delta_{jk}e_{i\ell}.
+\]
+In other words, the four-dimensional packet algebra is exactly
+$M_2(\mathbb Q)$: one two-state logic coordinate repeated across the $24$
+representation modes.  The operators
+\[
+ Z=e_{11}-e_{22},\qquad S=e_{12}+e_{21}
+\]
+satisfy $Z^2=S^2=\Pi_{48}$ and $ZS=-SZ$.  This is an exact finite logic
+switch, not a claim that the modes are physical qubits.
+
+There is also a precise checksum for the chamber instruction names, but only
+after their arbitrary labels are forgotten.  The sum of all three point-panel
+choices is $P$, and the sum of all three line-panel choices is $L$.  After
+compression and normalization these two complete families become reflections
+$H_p,H_\ell$ with
+\[
+ H_p^2=H_\ell^2=\Pi_{48},\qquad
+ H_pH_\ell+H_\ell H_p=-\frac12\Pi_{48}.
+\]
+Their product has infinite order.  Nothing here says that a particular
+``choice zero'', ``choice one'', or ``choice two'' preserves the packet; those
+individual selector numbers still depend on the chosen chart.
+
 This closes an old numerical thread too. If $F$ is the folded cubic
 point-Hashimoto operator on the rank-$48$ packet and
 $X=(P+L-2I)\Pi_{48}$, then
@@ -4839,6 +4867,22 @@ flag-register comparator, which detects $36/39=12/13$ arbitrary one-register
 substitutions at $q=3$.
 Keeping those retractions beside the theorem is part of the result: the
 machine becomes clearer when the things it cannot yet do are named exactly.
+
+A second, separate finite control layer now has an exact target.  After the
+local three-port labels are matched consistently, the surviving global frame
+group is $PGSp(4,3)$ and the leftover ternary correction space has ten
+coordinates.  Pass~4937 therefore builds the finite affine update
+\[
+ v\longmapsto vA_g+w,\qquad v,w\in\mathbb F_3^{10},\quad
+ g\in PGSp(4,3).
+\]
+There are $3^{10}=59049$ possible offsets, but symmetry sorts them into only
+$17$ exact classes.  The corresponding affine group has order
+$3{,}061{,}100{,}160$.  A dual-number symplectic group has that same order,
+but the two groups are not interchangeable: their centers have sizes $1$ and
+$2$.  The ten-coordinate register is a finite controller candidate, not yet a
+HoloBox register or instruction, and its Lie bracket is tangent information,
+not the commutator of its elementary-abelian offset group.
 
 \section{HoloBox: when a network can be loaded like one machine}
 

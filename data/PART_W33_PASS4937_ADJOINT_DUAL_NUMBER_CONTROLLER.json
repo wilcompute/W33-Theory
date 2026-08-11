@@ -1,0 +1,70 @@
+{
+  "schema": "w33.pass4937.adjoint_dual_number_controller.v1",
+  "status": "PASS",
+  "inputs": {
+    "pass_4864": "Q10 is PGSp-equivariantly sp4(F3), dimension 10, center 0, derived dimension 10",
+    "pass_4861": "full local port matching removes S3^45 and leaves global PGSp(4,3) of order 51840"
+  },
+  "dual_number_tangent_group": {
+    "ring": "F3[epsilon]/(epsilon^2)",
+    "kernel": "{I+epsilon X : X in sp4(F3)} ~= sp4(F3)^+",
+    "kernel_order": 59049,
+    "exact_sequence": "1 -> sp4(F3)^+ -> Sp4(F3[epsilon]/epsilon^2) -> Sp4(F3) -> 1",
+    "split": true,
+    "multiplication": "(I+epsilon X)(I+epsilon Y)=I+epsilon(X+Y)",
+    "conjugation": "g^{-1}(I+epsilon X)g=I+epsilon(g^{-1}Xg)",
+    "group_order": 3061100160,
+    "center_order": 2,
+    "action_kernel": "the scalar center C2 of Sp4(F3)"
+  },
+  "affine_pgsp_controller": {
+    "group": "sp4(F3)^+ : PGSp(4,3)",
+    "state_update": "v |-> v A_g + w on F3^10",
+    "offset_states": 59049,
+    "frame_states": 51840,
+    "group_order": 3061100160,
+    "center_order": 1,
+    "offset_orbit_count": 17,
+    "offset_orbit_sizes": [1, 80, 240, 480, 540, 540, 1080, 1080, 4320, 4320, 5184, 5184, 5760, 6480, 6480, 8640, 8640]
+  },
+  "extension_firewall": "The dual-number symplectic group and affine PGSp controller have equal order 3061100160 but are not isomorphic: their centers have orders 2 and 1. The square-zero kernel is elementary abelian; the nonabelian Lie bracket is tangent data transported from Pass4864, not the commutator inside that abelian kernel.",
+  "logic_reading": "After Pass4861 port matching removes local S3^45 gauge, the 10-trit residual supplies a canonical first-order correction register with 59049 offsets and 17 exact PGSp state classes. This is a finite compiler/control-plane candidate, not an implemented HoloBox opcode or security boundary.",
+  "prior_art": [
+    "Pass 4864 owns the explicit Q10 ~= sp4(F3) Lie-algebra intertwiner",
+    "Pass 4861 owns the minimal port matching and residual PGSp symmetry",
+    "The tangent-space identity for classical groups over dual numbers is standard; this certificate claims the explicit W33 quotient/controller composition and orbit atlas"
+  ],
+  "boundary": "Exact finite characteristic-three Lie, matrix-group, semidirect-product, and orbit theorem. No individual HoloBox selector, guest-state transition, compiler lowering, hardware timing, isolation guarantee, continuum gauge field, particle, mass, or coupling is constructed.",
+  "checks": {
+    "affine_controller_center_order_1": true,
+    "affine_controller_order_3061100160": true,
+    "affine_controller_quotient_order_51840": true,
+    "dual_kernel_law_is_addition": true,
+    "dual_number_sp4_order_3061100160": true,
+    "dual_sequence_split_by_constants": true,
+    "equal_order_extensions_are_not_identical": true,
+    "outer_similitude_multiplier_2": true,
+    "pgsp_action_preserves_bracket": true,
+    "pgsp_adjoint_action_order_51840": true,
+    "pgsp_fixed_vector_space_zero": true,
+    "pgsp_linear_centralizer_dimension_1": true,
+    "pgsp_offset_orbit_atlas": true,
+    "pgsp_offset_orbit_count_17": true,
+    "pgsp_offset_orbits_partition_59049": true,
+    "sp4_center_order_2": true,
+    "sp4_order_51840": true,
+    "sp_adjoint_action_kernel_order_2": true,
+    "sp_adjoint_action_order_25920": true,
+    "symplectic_form_preserved": true,
+    "tangent_center_dimension_0": true,
+    "tangent_closed_under_bracket": true,
+    "tangent_condition_all_basis": true,
+    "tangent_derived_dimension_10": true,
+    "tangent_jacobi_on_basis": true,
+    "tangent_kernel_order_59049": true,
+    "tangent_nullity_10": true,
+    "translation_group_elementary_abelian": true,
+    "translation_group_order_59049": true,
+    "translations_normal_in_controller": true
+  }
+}
