@@ -1,0 +1,28 @@
+{
+  "code": "K=[360,36,20]_2",
+  "covering_radius_update": {
+    "certified_lower_bound": 134,
+    "exact_radius_closed": false,
+    "previous_lower_bound": 124,
+    "upper_bound": 179
+  },
+  "exact_cut_representative_vertices": [6,7,8,9,10,11,13,14,16,17,18,19,20,21,23,26,30,35],
+  "exact_search": {
+    "Boolean_vertex_variables": 36,
+    "method": "deterministic bitset branch-and-bound",
+    "objective_distance": 134,
+    "odd_signed_triangles": 700,
+    "pruned_nodes": 4121374,
+    "search_nodes": 8242747,
+    "status": "EXHAUSTED",
+    "symmetry_fix": "y0=0"
+  },
+  "pass": 4940,
+  "theorem": "The Pass4859 hard received word has exact distance 134 from the ordinary cut class by exhaustive integer branch-and-bound. Its certified twist automorphism sends x to x+sigma, so the switched class has the same distance. Hence d(x,K)=134 and the covering-radius lower bound rises from 124 to 134.",
+  "twist_cross_certificate": {
+    "g_x_equals_x_plus_sigma": true,
+    "therefore_two_switching_class_distances_equal": true
+  },
+  "boundary": "This closes the distance of one hard coset exactly, not the global covering radius. The current rigorous interval is 134<=rho(K)<=179.",
+  "witness_hex": "4743dfaba7bb36874b9fcb5de87ed19c21ff7927d7754391d7d5d134b3bb04eefeccacde1ec769b98b7dffcf8"
+}
