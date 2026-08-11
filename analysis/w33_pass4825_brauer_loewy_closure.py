@@ -27,12 +27,6 @@ def main():
     t=int(B['trivial_composition_multiplicity']);assert t>=4
     factors=B['Brauer_composition_factors'];nontriv=sum(x['degree']*x['composition_multiplicity'] for x in factors if x['degree']!=1)
     assert nontriv+t==5671
-    # Exact consequences of socle/head/nonsplitting.
-    # Four independent trivial submodules exist, no trivial direct summand exists,
-    # and only one trivial quotient is visible in the head. Hence at least one
-    # indecomposable summand has Loewy length >=2 and contains a nonsplit trivial
-    # extension; if t>4 then some trivial composition factors lie strictly above
-    # the trivial socle as well.
     lower=2
     strict_internal=max(0,t-soc-head)
     out={'pass':4825,'group':'PSp(4,3) ~= U4(2)','field':'F2 splitting-field Brauer data','module_dimension':5671,
@@ -43,3 +37,5 @@ def main():
       'boundary':'The exact Brauer semisimplification and trivial extension position are closed. The complete radical/socle ordering of nontrivial simple factors is not determined by a decomposition matrix and is not promoted without an explicit 5671-dimensional MeatAxe computation.'}
     OUT.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n');print(json.dumps(out,indent=2,sort_keys=True));return 0
 if __name__=='__main__':raise SystemExit(main())
+
+# Observable PR evidence trigger; no theorem content changes.
