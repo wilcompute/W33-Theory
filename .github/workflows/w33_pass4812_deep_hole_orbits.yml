@@ -5,28 +5,50 @@ on:
     branches: [master]
     paths:
       - 'analysis/w33_pass4812_h10_deep_hole_orbit_sat.py'
+      - 'analysis/w33_pass4812_h10_deep_hole_orbit_symmetry_verify.py'
+      - 'data/PART_W33_PASS4812_H10_DEEP_HOLE_ORBITS.json'
       - '.github/workflows/w33_pass4812_deep_hole_orbits.yml'
   workflow_dispatch:
 
 permissions:
   contents: write
 
+concurrency:
+  group: pass4812-deep-holes-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   exhaust-deep-holes:
-    runs-on: ubuntu-latest
-    timeout-minutes: 30
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
         with:
           ref: master
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - name: Install exact finite dependencies
-        run: python -m pip install --disable-pip-version-check numpy networkx python-sat
-      - name: Run quotient-SAT orbit sieve
-        run: python analysis/w33_pass4812_h10_deep_hole_orbit_sat.py | tee pass4812.log
-      - name: Commit frozen certificate
+        run: python -m pip install --disable-pip-version-check numpy networkx numba python-sat
+      - name: Run decisive 26-case symmetry exhaustion
+        run: python analysis/w33_pass4812_h10_deep_hole_orbit_symmetry_verify.py | tee pass4812_symmetry.log
+      - name: Assert frozen theorem values
+        run: |
+          python - <<'PY'
+          import json
+          p='data/PART_W33_PASS4812_H10_DEEP_HOLE_ORBITS.json'
+          d=json.load(open(p))
+          assert d['deep_hole_cosets_total']==82080
+          assert d['PSp_deep_hole_orbits']==12
+          assert d['full_deep_hole_orbits']==12
+          assert d['outer_fusions']==0
+          assert d['weight14_leaders_total']==6428160
+          assert d['completeness_symmetry']['subset_orbit_representatives_checked']==26
+          assert d['completeness_symmetry']['unblocked_leader_found'] is False
+          print('PASS',p)
+          PY
+      - name: Commit regenerated certificate if needed
         run: |
           if git diff --quiet -- data/PART_W33_PASS4812_H10_DEEP_HOLE_ORBITS.json; then
             echo 'certificate unchanged'
@@ -36,12 +58,11 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add data/PART_W33_PASS4812_H10_DEEP_HOLE_ORBITS.json
           git commit -m 'Evidence bot: freeze Pass 4812 complete H10 deep-hole orbits'
+          git pull --rebase origin master
           git push origin HEAD:master
       - uses: actions/upload-artifact@v4
         with:
           name: pass4812-deep-hole-evidence
           path: |
-            pass4812.log
+            pass4812_symmetry.log
             data/PART_W33_PASS4812_H10_DEEP_HOLE_ORBITS.json
-
-# Trigger marker: workflow installed before this push so the path-filtered run is observable.
