@@ -1,5 +1,5 @@
 % Passes 4809--4816: complete K3,3 shell, hierarchical decoder, Golay orientation cover,
-% q=9 PSp splitting, and three outside-the-box closures.
+% q=9 PSp splitting, H10 deep holes, and three outside-the-box closures.
 \section{Complete nonlocal Golay--Levi shell and decoder reconstruction}
 \label{sec:pass4809-4816-golay-levi}
 
@@ -60,9 +60,29 @@ The decoder sees the same geometry intrinsically.  For a projective signed $K_{3
 \]
 which equals the complete twofold collision census above.  Subtracting the two colliding errors recovers the signed weight-six logical, so the twofold weight-three collision relation reconstructs the entire projective minimum nonlocal shell.
 
-\paragraph{Deep-hole boundary.}
-The binary adjacency code $H_{10}$ has exact covering radius $14$.  An exact quotient-SAT classifier has now been committed: it represents cosets by $30$-bit parity-check syndromes, blocks complete $PSp(4,3)$ orbits after each solution, and terminates only when the orbit-blocked instance is UNSAT.  The already certified witness orbit contains $12960$ deep-hole cosets, with $PSp$ stabilizer order $2$ and full-group stabilizer order $4$; a representative coset contains $64$ weight-$14$ leaders and has distribution
+\paragraph{Complete $H_{10}$ deep-hole census.}
+The binary adjacency code $H_{10}$ has exact covering radius $14$, and its radius-$14$ cosets now admit a complete orbit classification:
 \[
- 64z^{14}+128z^{16}+192z^{18}+256z^{20}+192z^{22}+128z^{24}+64z^{26}.
+ \boxed{82080\text{ deep-hole cosets in }12\ PSp(4,3)\text{ orbits}.}
 \]
-At this insertion boundary the final orbit-blocked UNSAT certificate has not yet been observed in the repository, so no completeness claim for the deep-hole orbit list is made here.
+The inner orbit-size multiset is
+\[
+1080^1,\quad2160^2,\quad3240^1,\quad4320^2,\quad6480^2,\quad12960^4.
+\]
+Each of these twelve orbit sets is preserved by the full order-$51840$ outer action, so there are also twelve full-group orbits and no outer fusions.
+
+There are three coset-distribution species.  Four inner orbits, $29160$ cosets total, have $64$ minimum leaders and distribution
+\[
+64z^{14}+128z^{16}+192z^{18}+256z^{20}+192z^{22}+128z^{24}+64z^{26}.
+\]
+Seven inner orbits, $39960$ cosets total, have $96$ minimum leaders and distribution
+\[
+96z^{14}+416z^{18}+416z^{22}+96z^{26}.
+\]
+The remaining $12960$-coset orbit has $56$ minimum leaders and distribution
+\[
+56z^{14}+144z^{16}+200z^{18}+224z^{20}+200z^{22}+144z^{24}+56z^{26}.
+\]
+Hence there are exactly $6428160$ weight-$14$ leaders.
+
+Completeness is independently certified by symmetry.  Fix one coordinate of a minimum leader.  Its order-$648$ stabilizer acts on the twelve-coordinate neighborhood codeword; the allowed intersection sizes are $0,1,\ldots,6$, with respectively $1,1,2,3,6,6,7$ stabilizer orbits, only $26$ representatives total.  Exact branch search over the remaining $27$ coordinates enforces the $511$ complement-paired distance constraints and finds no leader whose $30$-bit coset syndrome lies outside the twelve blocked orbit sets.  The quotient-SAT orbit sieve remains an independent certificate path.
