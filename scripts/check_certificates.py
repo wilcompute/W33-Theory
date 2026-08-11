@@ -65,11 +65,34 @@ def digest_without(d: dict, key: str) -> list[str]:
 SELF_DIGEST_KEYS = ("sha256_without_hash_field", "sha256", "universe_sha256")
 
 
+# POINTER SEMANTICS. A registry entry uses `sha256` to name the digest of the certificate
+# it REGISTERS, not its own. Such a file can never satisfy a self-digest check, and the guard
+# reported 10 of them as HASH MISMATCH (Pass 4855) -- found only by aiming it at another
+# lane's files, since this lane writes no registry entries.
+#
+# This is the second false-positive family in this checker from the same assumption: that a
+# key NAME implies a convention. Pass 4801 found the first, where the presence of numeric
+# keys was read as evidence the producer used integer keys.
+POINTER_MARKERS = ("certificate", "registers", "target", "points_to", "artifact_path")
+
+
+def is_pointer_entry(d: dict) -> bool:
+    """True when the digest field names ANOTHER object's digest, not this file's."""
+    for k in POINTER_MARKERS:
+        v = d.get(k)
+        if isinstance(v, str) and v.endswith(".json"):
+            return True
+    return False
+
+
 def hash_key(d: dict) -> str | None:
     """The key holding this object's OWN digest, or None.
 
-    A usable field is one of the canonical names above holding a 64-char hex string.
+    A usable field is one of the canonical names above holding a 64-char hex string, in a
+    file that is not a pointer entry.
     """
+    if is_pointer_entry(d):
+        return None
     for k in SELF_DIGEST_KEYS:
         v = d.get(k)
         if isinstance(v, str) and len(v) == 64:
@@ -79,6 +102,70 @@ def hash_key(d: dict) -> str | None:
                 continue
             return k
     return None
+
+
+def stale_pointers(paths: list[Path]) -> list[dict]:
+    """Registry entries whose recorded digest cannot be reconciled with their target.
+
+    Two outcomes, and they are not the same finding:
+
+      STALE         the target HAS a self-digest and it differs from what was recorded.
+      UNVERIFIABLE  the target has NO self-digest, and the recorded value matches none of
+                    raw bytes / compact JSON / indent=2 JSON. The convention is unknown,
+                    not violated.
+
+    The first version of this function called both STALE. It could not: for 5 of the 10
+    registry entries the target carries no digest at all, so there is nothing to be stale
+    against. Asserting a convention from a key name is what produced this checker's other
+    two false-positive families (Passes 4801, 4855) and it nearly produced a third here.
+    """
+    out = []
+    for p in sorted(paths):
+        try:
+            d = json.loads(p.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        if not isinstance(d, dict) or not is_pointer_entry(d):
+            continue
+        recorded = d.get("sha256")
+        target = d.get("certificate")
+        if not (isinstance(recorded, str) and isinstance(target, str)):
+            continue
+        tp = ROOT / target
+        if not tp.is_file():
+            out.append({"registry": p.name, "target": target, "status": "target missing"})
+            continue
+        try:
+            td = json.loads(tp.read_text(encoding="utf-8"))
+        except Exception:
+            out.append({"registry": p.name, "target": target,
+                        "status": "target unreadable"})
+            continue
+        # DO NOT SAY "STALE" WITHOUT KNOWING THE CONVENTION. The first version of this
+        # function compared the registry's digest against the target's own sha256 field and
+        # labelled every mismatch STALE. For 5 of the 10 the target has NO sha256 field at
+        # all, and the recorded value matches none of raw bytes, compact JSON, or indent=2
+        # JSON of the target. So the convention is unknown, not violated -- and asserting a
+        # convention from a key name is the exact mistake that produced this checker's other
+        # two false-positive families (Passes 4801 and 4855).
+        actual = td.get("sha256") if isinstance(td, dict) else None
+        if actual is None:
+            candidates = {
+                "raw": hashlib.sha256(tp.read_bytes()).hexdigest(),
+                "compact": hashlib.sha256(json.dumps(
+                    td, sort_keys=True, separators=(",", ":")).encode()).hexdigest(),
+                "indent2": hashlib.sha256((json.dumps(
+                    td, indent=2, sort_keys=True) + "\n").encode()).hexdigest(),
+            }
+            hit = next((k for k, v in candidates.items() if v == recorded), None)
+            out.append({"registry": p.name, "target": target,
+                        "status": "verified" if hit else "UNVERIFIABLE",
+                        "matched_serialisation": hit,
+                        "recorded": recorded[:16], "actual": "no self-digest field"})
+        elif actual != recorded:
+            out.append({"registry": p.name, "target": target, "status": "STALE",
+                        "recorded": recorded[:16], "actual": actual[:16]})
+    return [o for o in out if o["status"] != "verified"]
 
 
 def sweep(paths: list[Path], quiet: bool = False) -> int:
@@ -189,6 +276,15 @@ def selftest() -> int:
     ik.write_text(json.dumps(live_out, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     cases.append(("integer-key trap (Pass 2482)", ik, True))
 
+    # 5. a POINTER entry: sha256 names ANOTHER file's digest, not its own. Pass 4855
+    #    found 10 of these reported as HASH MISMATCH, because the checker read the key
+    #    name as implying self-digest semantics.
+    ptr = tmp / "registry_entry.json"
+    ptr.write_text(json.dumps(
+        {"pass": 1856, "certificate": "data/whatever.json", "owner": "track-b",
+         "sha256": "a" * 64}, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    cases.append(("registry pointer entry", ptr, False))
+
     ok = True
     print("  selftest -- planted-fault recall\n")
     for name, path, want in cases:
@@ -210,7 +306,12 @@ def selftest() -> int:
   stale digest in the report, and the fix is completely different -- re-running the producer
   repairs a stale digest and cannot repair this one.
 
-  ITS LIMIT: recall is measured against the four fault shapes above. A certificate that is
+  THE POINTER CASE IS THE ONE THAT TOOK TWO PASSES TO FIND. A registry entry carries a
+  sha256 that names the certificate it registers. Nothing distinguishes it from a
+  self-digest except the presence of a `certificate` field, and this lane writes no
+  registry entries -- so it took aiming the guard at another lane's files to surface.
+
+  ITS LIMIT: recall is measured against the five fault shapes above. A certificate that is
   wrong in some other way -- right digest over wrong content -- passes every one of them.""")
     import shutil
     shutil.rmtree(tmp, ignore_errors=True)
@@ -220,6 +321,15 @@ def selftest() -> int:
 def main(argv: list[str]) -> int:
     if "--selftest" in argv:
         return selftest()
+    if "--pointers" in argv:
+        reg = sorted((ROOT / "data").rglob("*.json"))
+        bad = stale_pointers(reg)
+        for b in bad:
+            print(f"  {b['status']:16s} {b['registry']} -> {b['target']}")
+            if b.get("recorded"):
+                print(f"      recorded {b['recorded']}...  actual {b['actual']}...")
+        print(f"\n  {len(bad)} registry pointer(s) that cannot be reconciled")
+        return 0
     quiet = "--quiet" in argv
     args = [a for a in argv if not a.startswith("--")]
     if args:
