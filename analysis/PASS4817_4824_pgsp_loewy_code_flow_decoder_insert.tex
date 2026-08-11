@@ -1,0 +1,59 @@
+\subsection*{Passes 4817--4824: PGSp moduli, invariant outer codes, outage flow, and decoding}
+
+\paragraph{Finite $S_3$-moduli and the modular boundary (Passes 4817--4818).}
+The selected three-sheet connection lives in two exact finite deformation modules: a $64$-dimensional binary sign-cohomology quotient and a $225$-dimensional sign-twisted $\mathbb F_3$ quotient.  Executable generators for the full $\PGSp(4,3)$ action on both quotients are now installed; the selected binary sign sector is tested against the full group and the selected $A_3$ exponent class against its projective stabilizer.  The complete astronomical orbit census is deliberately not inferred from dimensions or from the triangle rule.  For the $5671$-dimensional flag-graph $H^1(\mathbb F_2)$, GAP/CTblLib extraction of the exact characteristic-two decomposition matrix is wired to the frozen ordinary character.  This determines the Brauer semisimplification once materialized, while the already exact module-level data remain: four-dimensional trivial socle, one-dimensional trivial head, all four fixed vectors in the augmentation image, and a nonsplit apartment deck line.  A decomposition matrix is not promoted to a full Loewy ordering.
+
+\paragraph{Complete invariant line-parity preimage family (Pass 4819).}
+On the $27$ quotient lines the even binary permutation module has the exact uniserial chain
+\[
+0<W_6<W_{20}<E_{26},\qquad \dim=(0,6,20,26),
+\]
+with irreducible successive factors of dimensions $6,14,6$ and both extensions nonsplit.  Splitting off the all-one line leaves exactly eight $\PGSp$-invariant outer codes of dimensions
+\[
+0,1,6,7,20,21,26,27
+\]
+and minimum distances $\infty,27,12,11,4,3,2,1$.  Pullback through the canonical $27$ line-parity map gives
+\[
+[2025,378,14], [2025,379,14], [2025,384,14], [2025,385,14],
+[2025,398,14], \boxed{[2025,399,14]}, [2025,404,8], [2025,405,7].
+\]
+Thus $399$ is the largest dimension in this complete invariant preimage family retaining distance $14$.
+
+\paragraph{Exact symmetry-broken fractional flow (Pass 4820).}
+The six failure cases left bracketed in Pass 4773 are now solved exactly by stabilizer-orbit reduction plus a metric-dual cutting-plane calculation and matching rational primal certificates.  At unit surviving-edge capacities and ordered all-pairs demand on surviving vertices,
+\[
+\lambda_{\rm one\ hot}=\frac{67}{5952},\quad
+\lambda_{\rm two\ hot,adj}=\frac{665}{59746},\quad
+\lambda_{\rm two\ hot,nonadj}=\frac{133}{11946},
+\]
+\[
+\lambda_{\rm one\ fiber\ removed}=\frac{189}{16538},\quad
+\lambda_{\rm two\ fibers,adj}=\frac{1767}{153094},\quad
+\lambda_{\rm two\ fibers,nonadj}=\frac{351}{30670}.
+\]
+Each frozen certificate rechecks commodity conservation, edge capacities, dual normalization, exact rational shortest-path separation, and primal--dual equality.
+
+\paragraph{Sparse decoder and optimal two-layer syndrome schedule (Pass 4821).}
+The $[2025,378,14]_2$ code has an explicit rank-$1647$ parity-check matrix: $1485$ local weight-two repetition rows, $135$ local weight-four coupling rows, and $27$ global weight-fifteen line rows.  In the disjoint-support check model all $1647$ checks schedule in exactly two layers ($945+702$), and depth one is impossible.  Each local $[15,3,7]_2$ cell has $4096$ syndromes with eight representatives per syndrome and zero-syndrome weights $0,7,8,15$.  Consequently every arbitrary error pattern of weight at most six is decoded exactly by searching only the nonzero-local-syndrome cells, with raw bound at most $8^6$, and the global $27$ syndrome bits select the unique candidate.
+
+\paragraph{Binary Levi cut/homology bridge (Pass 4822).}
+The $27$ global router checks are literally the pullback of the $27$ line-vertex star vectors in the binary cut space of the $72$-vertex, $135$-edge Levi graph of $GQ(4,2)$; they are not homology checks.  The same Levi graph has binary $H_1$ dimension $64$ and girth $8$.  Repeating a Levi cycle on the three sheet coordinates and applying the local physical generator map gives an exact
+\[
+\boxed{[2025,64,96]_2}
+\]
+homology subcode with $w_{\rm phys}=12w_{\rm Levi}$.  The equal dimension $64$ of the ternary Levi homology in Pass 4807 is not used to identify the two coefficient-field modules.
+
+\paragraph{Selected-connection invariant and transfer falsifier (Passes 4823--4824).}
+The selected $A_3$ exponent class is now represented explicitly in the $225$-dimensional twisted $\mathbb F_3$ quotient; the certified producer computes its $PSp/PGSp$ fixed-space dimensions and tests whether its projective line is the unique $PSp$-invariant line rather than inferring uniqueness from the triangle condition.  Independently, binary Levi homology has
+\[
+\dim H_1^{PSp}=0,\qquad \dim (H_1)_{PSp}=0.
+\]
+Hence
+\[
+\operatorname{Hom}_{PSp}(\mathbf 1,H_1)=
+\operatorname{Hom}_{PSp}(H_1,\mathbf 1)=0,
+\]
+so none of the four characteristic-two trivial flag-$H^1$ socle lines transfers linearly and equivariantly into Levi homology.  This closes the tempting same-characteristic bridge by an explicit module obstruction.
+
+\paragraph{Evidence boundary.}
+All promoted numerical statements above are exact finite graph, code, module, homology, decoder, or fractional-flow results.  Pass 4817 deliberately leaves the complete orbit enumeration of $2^{64}$ sign sectors and $PG(224,3)$ points to the installed finite-action computation.  Pass 4818 separates the Brauer semisimplification from the still-harder complete nontrivial Loewy extension ordering.  No physical gauge field, measured hardware timing, or fault-tolerance threshold is inferred.
