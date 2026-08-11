@@ -12,6 +12,18 @@ on:
       - 'analysis/w33_pass4829_4830_levi_code_sign_module_hardened.py'
       - 'analysis/w33_pass4831_deephole_residue_12x12_falsifier.py'
       - '.github/workflows/w33_pass4825_4832_loewy_decoder_moduli_outage_levi.yml'
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4825_brauer_loewy_closure.py'
+      - 'analysis/w33_pass4826_4832_code399_decoder_dualshell.py'
+      - 'analysis/w33_pass4827_pgsp_sign_burnside.py'
+      - 'analysis/w33_pass4828_parametric_outage_flow.py'
+      - 'analysis/w33_pass4829_levi_code_corrected.py'
+      - 'analysis/w33_pass4829_4830_levi_code_sign_module.py'
+      - 'analysis/w33_pass4829_4830_levi_code_sign_module_hardened.py'
+      - 'analysis/w33_pass4831_deephole_residue_12x12_falsifier.py'
+      - '.github/workflows/w33_pass4825_4832_loewy_decoder_moduli_outage_levi.yml'
   workflow_dispatch:
 permissions:
   contents: write
@@ -67,7 +79,8 @@ jobs:
           run_one python analysis/w33_pass4828_parametric_outage_flow.py
           echo "$rc" > "$STATUS"
           exit 0
-      - name: Preserve generated evidence and diagnostics
+      - name: Preserve generated evidence and diagnostics on direct runs
+        if: github.event_name != 'pull_request'
         shell: bash
         run: |
           git config user.name 'w33-evidence-bot'
@@ -94,5 +107,5 @@ jobs:
             git pull --rebase origin master
             git push origin HEAD:master
           fi
-      - name: Enforce final aggregate status after preserving evidence
+      - name: Enforce final aggregate status
         run: test "$(cat analysis/PASS4825_4832_RUN.status)" -eq 0
