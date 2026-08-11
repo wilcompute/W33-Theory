@@ -1,0 +1,28 @@
+{
+  "boundary": "The decoder is exact for one ternary X- or Z-error component in Hamming weight. Independent component ML is not asserted to minimize joint qutrit Pauli support when X and Z occur on the same data qutrit. Local G10 words are logical ambiguity, not correctable syndrome information.",
+  "component_code": "syndrome map B:F3^270 -> F3^45",
+  "exact_decoder": "Choose one of 81 states on each of 27 fibers, minimize total local cost, and enforce the 45 point sums modulo 3. This is exact because replacing a fiber error by its minimum representative changes it by G10 subset C^perp.",
+  "fibers": 27,
+  "local_exact_weight_syndrome_multiplicity_through_5": {
+    "0": {"1": 1},
+    "1": {"1": 20},
+    "2": {"3": 60},
+    "3": {"12": 80},
+    "4": {"39": 60, "48": 20, "60": 1},
+    "5": {"90": 20, "102": 60, "144": 1}
+  },
+  "local_minimum_cost_census": {"0": 1, "1": 20, "2": 60},
+  "local_states_per_fiber": 81,
+  "pass": 4810,
+  "weight2_cross_fiber_unique_errors": 140400,
+  "weight2_errors": 145260,
+  "weight2_same_fiber_ambiguity_classes": 1620,
+  "weight2_same_fiber_errors": 4860,
+  "weight2_syndrome_multiplicities": {"1": 140400, "3": 1620},
+  "weight3_errors": 25953120,
+  "weight3_syndrome_multiplicities": {"1": 23385600, "2": 7200, "3": 842400, "12": 2160},
+  "weight3_threefold_local2_plus_external_classes": 842400,
+  "weight3_twelvefold_single_fiber_classes": 2160,
+  "weight3_twofold_K33_classes": 7200,
+  "theorem": "An exact ML syndrome decoder for each ternary CSS component factors through 27 local punctured-Golay state tables followed by the global GQ(4,2) point constraints. At weight two all ambiguity is local Golay. At weight three the first genuinely global ambiguity consists exactly of the 7200 twofold syndrome classes obtained by splitting the 720 nonzero K3,3 weight-six homology logicals into two triples."
+}
