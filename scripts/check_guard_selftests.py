@@ -74,7 +74,14 @@ def main() -> int:
             continue
         r = subprocess.run(["py", "-3", str(p), "--selftest"], cwd=ROOT,
                            capture_output=True, text=True, timeout=600)
-        green = r.returncode == 0 and "FAIL" not in r.stdout
+        # The exit code is the verdict. The first version ALSO required "FAIL" to be absent
+        # from stdout, which flagged check_novelty_claims as failing because its explanatory
+        # prose contains the sentence "both clean cases ... fail differently". A checker
+        # reading its subject's commentary as its subject's result is the same category of
+        # error this whole session keeps finding: measuring the text around the answer
+        # instead of the answer.
+        result_lines = [l for l in r.stdout.splitlines() if "want=" in l]
+        green = r.returncode == 0 and not any("FAIL" in l for l in result_lines)
         tested += 1
         if not green:
             failed += 1
