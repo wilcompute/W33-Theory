@@ -1,0 +1,31 @@
+{
+  "boundary": "finding a polarity is a construction and settles the question; NOT finding one is a search result and does not. Pass 4793's q = 4 zero came from exhausting all 1,958,400 dualities and is not replaced by this. q = 8 is NOT attempted -- 1,170 Levi vertices is a different engineering problem, and it is recorded as the next step rather than attempted and abandoned",
+  "method": "every polarity is sigma . a for a duality sigma and a part-preserving a, so the search is a coset walk using generators instead of an enumeration of the group",
+  "q8_prediction_unchanged": {
+    "absolute_points": 65,
+    "polarity": true,
+    "sz_order": 29120
+  },
+  "reproduces_pass_4793": true,
+  "rows": [
+    {
+      "agrees": true,
+      "candidates_tried": 4,
+      "dualities_exist": true,
+      "levi_vertices": 30,
+      "polarity_found": true,
+      "predicted": true,
+      "q": 2
+    },
+    {
+      "agrees": true,
+      "candidates_tried": 1912137,
+      "dualities_exist": true,
+      "levi_vertices": 170,
+      "polarity_found": false,
+      "predicted": false,
+      "q": 4
+    }
+  ],
+  "scales_in_one_direction": "can confirm a polarity by witness at any q; can never establish absence"
+}

@@ -127,7 +127,11 @@ RARITY_MAX = 12
 def emphasized_spans(text: str) -> list[tuple[int, str]]:
     """(line number, emphasized text) for every heading, bold run and blockquote."""
     spans = []
-    for ln, line in enumerate(text.splitlines(), 1):
+    # split on "\n" rather than splitlines(): Python treats FORMFEED and vertical tab as
+    # line breaks, so in the 13 tracked files carrying such a byte every reported line
+    # number past the first one is too high, and the content on that line is split across
+    # two reported lines. A reporting bug, not a detection bug -- Pass 4839 measured it.
+    for ln, line in enumerate(text.split(chr(10)), 1):
         m = HEADING.match(line)
         if m:
             spans.append((ln, m.group(1)))
