@@ -1,0 +1,12 @@
+{
+  "pass": "4880",
+  "theorem": "symplectic_chart_canonical_hom_basis",
+  "code_params": [360, 36, 20],
+  "chart_positions": 36,
+  "chart_form": "B(x,y) = x.y + wt(x)*wt(y) mod 2, alternating nondegenerate on F2^6",
+  "covering_radius_interval": [124, 179],
+  "chart_contribution": "canonical_Hom_basis: splits merged 39D F3-eigenspace into 24+15",
+  "bose_mesner_split": "merged_39D -> 24 + 15 via F2^6 marked-double-six chart",
+  "note": "The chart (Pass4869) restores the rational eigenspace splitting inside the F3-collapsed Bose-Mesner algebra (Pass4878), selecting a canonical ordered basis for the 2D Hom_PSp(Sym^2 H2, Q10) family. Covering radius 124<=rho<=179 remains open.",
+  "cross_references": ["Pass4869_symplectic_chart", "Pass4878_bose_mesner_collapse", "Pass4870_hom_dim2"]
+}

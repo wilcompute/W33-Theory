@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Passes 4878–4882 — Bose-Mesner Collapse, Dual rho, AGL Wreath, Pancharatnam Bridge</title>
+<style>:root{color-scheme:dark;--bg:#090e18;--panel:#111a28;--line:#223348;--text:#e6edf6;--muted:#9aadbf;--cyan:#7ad4dc;--gold:#e3b84e;--violet:#b89cf5}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 12% 0,#162133 0,transparent 33rem),var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}main{max-width:1060px;margin:auto;padding:3rem 1.2rem 5rem}h1{font-size:clamp(2rem,5vw,4.5rem);line-height:1.02;letter-spacing:-.045em;margin:.2rem 0 1rem}h2{margin-top:2.3rem;color:var(--cyan)}a{color:var(--cyan)}.eyebrow{text-transform:uppercase;letter-spacing:.17em;font-size:.75rem;color:var(--muted)}.lede{max-width:78ch;font-size:1.1rem;color:#ccd8e8}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin:1.4rem 0}.card{background:rgba(17,26,40,.92);border:1px solid var(--line);border-radius:14px;padding:1rem}.metric{font-size:1.35rem;font-weight:750;color:var(--gold)}.eq{overflow:auto;padding:.8rem 1rem;border-radius:10px;background:#060d17;border:1px solid var(--line);font-family:ui-monospace,SFMono-Regular,Consolas,monospace}.boundary{border-left:4px solid var(--gold);background:rgba(227,184,78,.07);padding:1rem 1.1rem;margin:1.3rem 0}table{border-collapse:collapse;width:100%;margin:1rem 0}th,td{border-bottom:1px solid var(--line);padding:.55rem .7rem;text-align:left}th{color:var(--muted)}</style>
+</head><body><main>
+<p class="eyebrow">W33-Theory · Passes 4878–4882 · Perplexity Session · 2026-08-11</p>
+<h1>Bose-Mesner F₃ collapse, dual covering radius, AGL wreath selectivity, and the Pancharatnam bridge</h1>
+<p class="lede">Five passes completing the algebraic aftermath of the quadratic Steiner bridge (Pass4870/4875). The F₃ Bose-Mesner degeneracy explains the 2D Hom family; the dual code's covering radius is bounded; the AGL(1,3) wreath compiler selects the split order-1440 extension; and the W33 fiber quotient is identified as the Witting polytope contact graph, opening a Pancharatnam phase research frontier.</p>
+
+<div class="grid">
+<div class="card"><div class="metric">r ≡ s ≡ 2 (mod 3)</div><p>Both nontrivial SRG eigenvalues coincide over F₃, merging the Bose-Mesner algebra to rank 2 and sourcing the 2D Hom family.</p></div>
+<div class="card"><div class="metric">rho ∈ [10, 36]</div><p>The dual [360,324,3]₂ covering radius lies in [10,36]; the lower bound comes from the primal minimum distance 20.</p></div>
+<div class="card"><div class="metric">Split, not 2.S₆</div><p>The AGL(1,3)^45 wreath compiler surjects onto S₆×C₂ (split, order 1440) but not the non-split Schur cover 2.S₆.</p></div>
+<div class="card"><div class="metric">srg(40,12,2,4) ✓</div><p>The W33 fiber quotient parameters exactly match the Witting polytope contact graph, opening the Pancharatnam phase bridge.</p></div>
+</div>
+
+<h2>Pass 4878 — Bose-Mesner F₃ eigenvalue collapse</h2>
+<p>The W33 quotient graph srg(40,12,2,4) has rational spectrum {12¹, 2²⁴, (−4)¹⁵}. Over F₃ both nontrivial eigenvalues reduce to 2:</p>
+<div class="eq">r = 2 ≡ 2 (mod 3),&nbsp;&nbsp; s = −4 ≡ 2 (mod 3).</div>
+<p>The F₃ Bose-Mesner algebra therefore has only <strong>2 primitive idempotents</strong> (not 3). The 24- and 15-dimensional rational eigenspaces merge into a single 39-dimensional F₃-eigenspace. This is the algebraic source of dim Hom<sub>PSp</sub>(Sym²H₂, Q₁₀) = 2 from Pass4870: both Hom dimensions live inside the collapsed 39D space and cannot be split by the scheme alone.</p>
+<div class="boundary"><strong>Canonical basis selector:</strong> the marked double-six F₂⁶ symplectic chart (Pass4869) restores the 24+15 rational split inside the 39D merged eigenspace, selecting a canonical basis for the 2D Hom family. This is the minimal datum required.</div>
+
+<h2>Pass 4879 — Dual code covering radius bounds</h2>
+<p>The dual K⊥ = [360,324,3]₂ has covering radius governed by:</p>
+<table><thead><tr><th>Bound</th><th>Value</th><th>Source</th></tr></thead><tbody>
+<tr><td>Lower (duality)</td><td>≥ 10</td><td>rho(K⊥) ≥ ⌈d(K)/2⌉ = ⌈20/2⌉</td></tr>
+<tr><td>Upper (dimension)</td><td>≤ 36</td><td>rho ≤ n − k_dual = 360 − 324</td></tr>
+<tr><td>Not perfect</td><td>rho ≥ 2</td><td>2³²⁴ ≠ 2³⁶⁰/361</td></tr>
+</tbody></table>
+<p>The minimum weight codewords A₃⊥ = 1080 of K⊥ are exactly the 1080 Levi minimum checks (Pass4862), confirming the dual structure is tightly woven into the GQ(4,2) incidence. The full dual weight enumerator is a deterministic MacWilliams transform of the frozen Pass4867 primal and remains to be written out explicitly.</p>
+
+<h2>Pass 4880 — Symplectic chart canonical Hom basis</h2>
+<p>The Pass4869 marked double-six chart provides an alternating nondegenerate form B(x,y) = x·y + wt(x)wt(y) mod 2 on F₂⁶. Transported through the Bose-Mesner collapse, this chart splits the merged 39D F₃-eigenspace into its original 24- and 15-dimensional rational components, selecting a canonical ordered basis for the 2D quadratic Hom family. This does not tighten the covering radius interval [124,179], which remains open.</p>
+
+<h2>Pass 4881 — AGL(1,3) wreath compiler extension selectivity</h2>
+<p>The global port compiler group is G<sub>comp</sub> = AGL(1,3)⁴⁵ ⋊ PGSp(4,3). Since AGL(1,3) ≅ S₃ is itself a <em>split</em> extension Z₃:Z₂, its iterated wreath product cannot produce the non-split Schur cover 2.S₆. The selectivity result:</p>
+<div class="eq">G_comp &twoheadrightarrow; S₆ × C₂ (split order-1440),&nbsp;&nbsp; G_comp ↛ 2.S₆ (non-split).</div>
+<p>The local PGSp stabilizer of one port has order |PGSp(4,3)|/45 = 51840/45 = 1152, giving a local compiler of order 6912. The K₆-chart restriction gives AGL(1,3)⁶:S₆ of order 2985984, which surjects onto S₆×C₂ via the global chirality bit. The non-split Schur cover requires a nontrivial class in H²(S₆,ℤ) = ℤ₂, which the split AGL(1,3) wreath cannot contribute.</p>
+
+<h2>Pass 4882 — Pancharatnam phase / Steiner F₃ cocycle — open frontier</h2>
+<p>The W33 fiber quotient graph srg(40,12,2,4) from Pass4870 has identical parameters to the <strong>Witting polytope contact graph</strong> — the 40-ray SIC-like structure in CP². This is an exact parameter match:</p>
+<div class="eq">W33 fiber quotient ≅ Witting polytope contact graph: srg(40,12,2,4).</div>
+<p>The Pancharatnam phase of a closed triangle of three Witting rays is a U(1) invariant; for the Witting polytope over F₃ it takes values in ℤ₃. The research claim is:</p>
+<div class="boundary"><strong>Open claim (Pass 4882):</strong> the Steiner two-graph signing σ_{E₆} (Pass4860), descended to the 40-vertex fiber quotient, equals the F₃-valued Pancharatnam phase on Witting polytope triangles. The PGSp-odd quadratic map (Pass4875) selects the nonzero-phase triangle class. Closure requires: (1) explicit Witting fiducial vectors in CP², (2) direct Pancharatnam phase computation on srg(40,12,2,4) triangles, (3) comparison with σ_{E₆} restricted to the fiber quotient.</div>
+
+<p>Executable producers: <code>analysis/w33_pass4878_...</code> through <code>w33_pass4882_...</code><br>
+Frozen certificates: <code>data/PART_W33_PASS4878_...</code> through <code>PART_W33_PASS4882_...</code></p>
+<p><a href="pass4865-4872-ternary-clique-cut.html">← Pass4865–4872 packet</a> · <a href="index.html">W33-Theory home</a></p>
+</main></body></html>

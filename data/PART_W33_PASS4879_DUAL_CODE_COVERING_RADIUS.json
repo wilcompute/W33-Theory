@@ -1,0 +1,16 @@
+{
+  "pass": "4879",
+  "theorem": "dual_code_covering_radius_bounds",
+  "primal_params": [360, 36, 20],
+  "dual_params": [360, 324, 3],
+  "rho_lower": 10,
+  "rho_upper": 36,
+  "rho_interval": [10, 36],
+  "A3_perp": 1080,
+  "A3_perp_interpretation": "1080 Levi minimum checks = minimum-weight codewords of K^perp",
+  "known_dual_coefficients": {"A0": 1, "A3": 1080, "A4": 10530, "A5": 127656, "A6": 2329680},
+  "lower_bound_source": "rho(C^perp) >= ceil(d(C)/2) = ceil(20/2) = 10",
+  "upper_bound_source": "rho(C^perp) <= n - k_dual = 360 - 324 = 36",
+  "not_perfect": "2^324 != 2^360 / 361, so rho >= 2; primal duality gives rho >= 10",
+  "note": "Full dual enumerator from MacWilliams transform of frozen Pass4867 primal (82 nonzero weight levels). Deterministic, no new combinatorics."
+}

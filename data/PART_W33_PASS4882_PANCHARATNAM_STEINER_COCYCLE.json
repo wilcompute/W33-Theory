@@ -1,0 +1,23 @@
+{
+  "pass": "4882",
+  "theorem": "pancharatnam_steiner_f3_cocycle_bridge",
+  "status": "open_research_claim",
+  "established": {
+    "W33_fiber_graph": "srg(40,12,2,4)",
+    "Witting_polytope_contact_graph": "srg(40,12,2,4)",
+    "parameter_match": true,
+    "reference": "Witting polytope: 40 rays in CP^2 with contact graph srg(40,12,2,4)"
+  },
+  "open_claim": "The Steiner two-graph signing sigma_{E6} (Pass4860), descended to the 40-vertex W33 fiber quotient, equals the F3-valued Pancharatnam phase on Witting polytope triangles. The PGSp-odd quadratic map (Pass4875) selects the nonzero-phase triangle class.",
+  "required_for_closure": [
+    "Explicit Witting fiducial vectors in CP^2 (40 rays)",
+    "Direct Pancharatnam phase computation on all triangles of srg(40,12,2,4)",
+    "Comparison with sigma_{E6} restricted to the 40-vertex fiber quotient"
+  ],
+  "cross_references": [
+    "Pass4860: E6 signing intrinsic to cubic-surface incidence",
+    "Pass4870: W33 fiber quotient = srg(40,12,2,4)",
+    "Pass4875: PGSp-odd quadratic map",
+    "docs/pancharatnam_symplectic_invariants.md"
+  ]
+}

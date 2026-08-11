@@ -1,0 +1,14 @@
+{
+  "pass": "4878",
+  "theorem": "Bose_Mesner_F3_collapse",
+  "srg": [40, 12, 2, 4],
+  "Q_eigenvalues": {"k": 12, "r": 2, "s": -4},
+  "multiplicities": {"trivial": 1, "f": 24, "g": 15},
+  "F3_residues": {"r_mod3": 2, "s_mod3": 2},
+  "collapse": true,
+  "merged_F3_eigenspace_dim": 39,
+  "hom_dim": 2,
+  "conclusion": "Both nontrivial SRG eigenvalues are congruent to 2 mod 3. The F3 Bose-Mesner algebra has only 2 primitive idempotents. The 2-dimensional Hom_PSp(Sym^2 H2, Q10) lives entirely inside the merged 39D F3-eigenspace. A canonical basis requires a marked double-six (Pass4869 symplectic chart).",
+  "canonical_basis_datum": "marked_double_six_F2^6_chart",
+  "cross_references": ["Pass4870_quadratic_hom_dim2", "Pass4869_symplectic_chart", "Pass4875_PGSp_odd"]
+}
