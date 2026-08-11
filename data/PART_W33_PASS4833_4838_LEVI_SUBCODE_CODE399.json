@@ -1,0 +1,32 @@
+{
+  "passes": [4833, 4838],
+  "ambient_code": "[2025,399,14]_2",
+  "kernel_code": "[2025,378,14]_2",
+  "Levi_code": "[2025,64,96]_2 = 0^405 + Rep_12(H1(Levi(GQ(4,2));F2))",
+  "exact_inclusions": [
+    "C_Levi <= C_378",
+    "C_378 <= C_399"
+  ],
+  "dimensions": {
+    "Levi": 64,
+    "kernel": 378,
+    "code399": 399,
+    "intersection_Levi_code399": 64,
+    "sum_Levi_code399": 399,
+    "quotient_code399_over_Levi": 335
+  },
+  "cold_puncture": {
+    "code399_dimension_after_deleting_405_hot_coordinates": 399,
+    "injective": true,
+    "reason": "In every disjoint physical K6 cell the three logical bits are repeated on three distinct cold K2,2 blocks. Vanishing cold coordinates forces all three local logical bits to zero, hence also the hot triple."
+  },
+  "inclusion_proof": "A binary Levi cycle selects incidences (packet p, quotient line L). For each selected incidence the construction toggles the three sheet logical coordinates (s,L), s in packet p. At every packet vertex of a Levi cycle the number of selected incident quotient lines is even, so the local hot value a+b+c vanishes. At every quotient-line vertex the number of selected incident packets is even; multiplying by three sheets leaves the outer line parity even. Therefore every Levi-cycle word has zero hot coordinates and zero outer syndrome, hence lies in C_378 and therefore C_399.",
+  "module_statement": "C_Levi is a PGSp-invariant subcode because the binary Levi cycle space and its twelvefold physical embedding are PGSp-equivariant. No PGSp-invariant complement/direct-summand claim is inferred here.",
+  "distance_relation": {
+    "Levi_distance": 96,
+    "ambient_distance": 14,
+    "interpretation": "The Levi sector is a high-distance invariant subcode, not a statement that the quotient C_399/C_Levi has distance 14 or any particular quotient metric."
+  },
+  "theorem": "The cold Levi homology code embeds objectwise as a 64-dimensional PGSp-invariant subcode of the zero-outer-syndrome [2025,378,14]_2 kernel and hence of [2025,399,14]_2. Cold puncturing is injective on code399, so the same inclusion holds on the 1620 cold carrier.",
+  "boundary": "Exact binary-code inclusion and dimension theorem. No module splitting or physical protected-subsystem claim follows without an explicit invariant complement."
+}
