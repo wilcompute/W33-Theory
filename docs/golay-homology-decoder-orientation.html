@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>W33 Passes 4809–4816 — Golay / Levi / decoder continuation</title><style>body{max-width:980px;margin:40px auto;padding:0 22px;font:17px/1.55 system-ui,sans-serif;color:#161616}code{background:#f2f2f2;padding:.1em .25em;border-radius:4px}h1,h2{line-height:1.15}.eq{font-family:Georgia,serif;text-align:center;font-size:1.15em;margin:1.3em}.note{border-left:4px solid #777;padding:.5em 1em;background:#f7f7f7}.good{border-left:4px solid #237a36;padding:.5em 1em;background:#f3fbf5}table{border-collapse:collapse;width:100%}th,td{border:1px solid #ccc;padding:.45em .6em;text-align:left}</style></head><body>
-<h1>Passes 4809–4816: complete K₃,₃ homology shell, Golay decoder, and orientation cover</h1>
+<h1>Passes 4809–4816: complete K₃,₃ homology shell, Golay decoder, and H10 deep holes</h1>
 <p>This page records exact finite computations in the W33/GQ(4,2) qutrit-code program. The central filtration is</p>
 <div class="eq">C ⊂ L = G₁₀<sup>⊕27</sup> ⊂ C<sup>⊥</sup>, &nbsp; C<sup>⊥</sup>/L ≅ H₁(Levi(GQ(4,2)); F₃).</div>
 <h2>Complete first nonlocal shell</h2>
@@ -17,12 +17,13 @@
 <h2>K₃,₃ multidesign and decoder reconstruction</h2>
 <p>Across the 360 projective minima, the 27 line fibers, 45 GQ points, and 270 physical triangle coordinates have replications <strong>80, 72, and 8</strong>. Adjacent line pairs occur 24 times; nonadjacent pairs occur 10 times. Every one of the 720 independent triples in the 27-line graph is one side of a unique K₃,₃, and every induced K₁,₃ has a unique K₃,₃ completion.</p>
 <p>Each projective K₃,₃ has two nonzero scalars and ten unordered 3+3 support partitions, hence 20 exactly-twofold weight-three collision classes. Therefore <strong>360×20=7200</strong>, exactly the complete twofold decoder census. Subtracting the two colliding errors reconstructs the signed weight-six logical, so decoder ambiguity intrinsically reconstructs the whole first nonlocal shell.</p>
+<h2>Complete H10 deep-hole census</h2>
+<p>The exact covering radius is 14. There are exactly <strong>82,080 radius-14 cosets</strong> in <strong>12 PSp(4,3) orbits</strong>, with orbit-size multiset 1080¹, 2160², 3240¹, 4320², 6480², 12960⁴. The full order-51840 outer action preserves every PSp orbit setwise, so there are also 12 full-group orbits and <strong>no outer fusions</strong>.</p>
+<table><tr><th>Species</th><th>PSp orbits</th><th>Cosets</th><th>Minimum leaders / coset</th><th>Coset weights</th></tr><tr><td>A</td><td>4</td><td>29160</td><td>64</td><td>14:64, 16:128, 18:192, 20:256, 22:192, 24:128, 26:64</td></tr><tr><td>B</td><td>7</td><td>39960</td><td>96</td><td>14:96, 18:416, 22:416, 26:96</td></tr><tr><td>C</td><td>1</td><td>12960</td><td>56</td><td>14:56, 16:144, 18:200, 20:224, 22:200, 24:144, 26:56</td></tr></table>
+<p>Altogether these cosets contain exactly <strong>6,428,160 weight-14 leaders</strong>. Completeness is certified independently of the quotient-SAT producer: fix one selected coordinate, reduce its possible intersections with the 12-neighbor block to the 26 subset orbits of the order-648 stabilizer (counts 1,1,2,3,6,6,7 for intersections 0 through 6), then exhaust the remaining 27 coordinates under all 511 complement-paired H10 distance constraints. No leader exists outside the 12 blocked coset-orbit sets.</p>
 <h2>q=9 shell under PSp(4,9)</h2>
 <p>The complete q=9 BLT/minimum-shell classes remain exactly three after restricting from full projective-semilinear orthogonal equivalence to PSp(4,9):</p>
 <table><tr><th>Class</th><th>PSp orbit size</th><th>PSp stabilizer</th></tr><tr><td>Linear</td><td>239112</td><td>7200</td></tr><tr><td>K1</td><td>1195560</td><td>1440</td></tr><tr><td>Fi/Mondello</td><td>17216064</td><td>100</td></tr></table>
 <p class="note">Prior-art firewall: Betten supplies the BLT classification, names, completeness, representatives, and full semilinear stabilizers. The repository result here is the evaluation of the outer quotient and the conclusion that no class splits further under PSp.</p>
-<h2>H10 deep-hole boundary</h2>
-<p>The exact covering radius remains 14. One certified deep-hole coset orbit contains 12960 cosets; a representative has 64 weight-14 leaders and coset distribution 64,128,192,256,192,128,64 on weights 14,16,18,20,22,24,26. An exact 30-bit quotient-SAT orbit classifier is committed and blocks complete PSp coset orbits before resolving the next candidate.</p>
-<p class="good"><strong>Release boundary:</strong> this page does not claim the 12960-coset orbit is the complete deep-hole set unless the final orbit-blocked SAT instance has been frozen as UNSAT.</p>
 <p><a href="index.html">Back to the W33 research index</a></p>
 </body></html>
