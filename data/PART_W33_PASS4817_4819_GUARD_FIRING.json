@@ -1,0 +1,111 @@
+{
+  "boundary": "4817 runs each guard once over its scoped corpus and counts reported findings; a silent guard may be silent because its subject was cleaned this session, and this pass does NOT distinguish that from a guard that never had anything to find. 4819 counts withdrawal PHRASES, an upper bound on claims -- the exact count needs reading and is still not done",
+  "guards_firing": 2,
+  "guards_silent": 14,
+  "pass_4817_guard_findings": [
+    {
+      "findings": 0,
+      "hook": "stale-boundaries",
+      "scoped": 1730,
+      "seconds": 5.3
+    },
+    {
+      "findings": 0,
+      "hook": "shifted-adjacency-descendants",
+      "scoped": 24619,
+      "seconds": 0.8
+    },
+    {
+      "findings": 0,
+      "hook": "tag-540-check",
+      "scoped": 24619,
+      "seconds": 2.0
+    },
+    {
+      "findings": 0,
+      "hook": "pass-namespace-collision-guard",
+      "scoped": 10877,
+      "seconds": 0.2
+    },
+    {
+      "findings": 0,
+      "hook": "s-min-formula-guard",
+      "scoped": 17392,
+      "seconds": 0.3
+    },
+    {
+      "findings": 0,
+      "hook": "topical-aliases",
+      "scoped": 3951,
+      "seconds": 3.3
+    },
+    {
+      "findings": 1,
+      "hook": "certificate-digests",
+      "scoped": 4344,
+      "seconds": 0.2
+    },
+    {
+      "findings": 3,
+      "hook": "novelty-claims",
+      "scoped": 1702,
+      "seconds": 0.3
+    },
+    {
+      "findings": 0,
+      "hook": "rtl-folds",
+      "scoped": 68,
+      "seconds": 34.3
+    },
+    {
+      "findings": 0,
+      "hook": "rediscovery",
+      "scoped": 5829,
+      "seconds": 0.8
+    },
+    {
+      "findings": 0,
+      "hook": "search-power",
+      "scoped": 5829,
+      "seconds": 0.3
+    },
+    {
+      "findings": 0,
+      "hook": "layer-conformance",
+      "scoped": 652,
+      "seconds": 1.0
+    },
+    {
+      "findings": 0,
+      "hook": "regex-deadends",
+      "scoped": 4577,
+      "seconds": 0.3
+    },
+    {
+      "findings": 0,
+      "hook": "retraction-propagation",
+      "scoped": 6481,
+      "seconds": 0.6
+    },
+    {
+      "findings": 0,
+      "hook": "stdlib-shadow",
+      "scoped": 12536,
+      "seconds": 0.2
+    },
+    {
+      "findings": 0,
+      "hook": "pattern-inversions",
+      "scoped": 822,
+      "seconds": 0.4
+    }
+  ],
+  "pass_4818_cross_lane_inversions": [],
+  "pass_4818_files_scanned": 11714,
+  "pass_4819_bounds": {
+    "lower_claims": 21,
+    "upper_claims": 45
+  },
+  "pass_4819_commits_with_withdrawal": 21,
+  "pass_4819_withdrawal_phrases": 45
+}
