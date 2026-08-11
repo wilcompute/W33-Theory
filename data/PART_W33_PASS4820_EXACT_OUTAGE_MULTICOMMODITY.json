@@ -1,0 +1,16 @@
+{
+  "pass": 4820,
+  "demand_convention": "unit demand for every ordered distinct surviving vertex pair, unit surviving-edge capacities",
+  "intact_reference": "15/1318",
+  "cases": {
+    "one_hot": {"failed_fibers":[0],"node_removal":false,"surviving_vertices":270,"surviving_edges":2010,"failure_stabilizer_order":960,"edge_orbits":9,"ordered_pair_orbits":123,"path_constraints_at_closure":238,"cutting_plane_iterations":5,"exact_lambda":"67/5952","exact_congestion":"5952/67","rational_primal_dual_certificate":true},
+    "two_hot_adjacent": {"failed_fibers":[0,1],"node_removal":false,"surviving_vertices":270,"surviving_edges":1995,"failure_stabilizer_order":192,"edge_orbits":23,"ordered_pair_orbits":470,"path_constraints_at_closure":873,"cutting_plane_iterations":6,"exact_lambda":"665/59746","exact_congestion":"59746/665","rational_primal_dual_certificate":true},
+    "two_hot_nonadjacent": {"failed_fibers":[0,4],"node_removal":false,"surviving_vertices":270,"surviving_edges":1995,"failure_stabilizer_order":120,"edge_orbits":34,"ordered_pair_orbits":714,"path_constraints_at_closure":1581,"cutting_plane_iterations":8,"exact_lambda":"133/11946","exact_congestion":"11946/133","rational_primal_dual_certificate":true},
+    "one_vertex_fiber_removed": {"failed_fibers":[0],"node_removal":true,"surviving_vertices":260,"surviving_edges":1890,"failure_stabilizer_order":960,"edge_orbits":8,"ordered_pair_orbits":103,"path_constraints_at_closure":159,"cutting_plane_iterations":4,"exact_lambda":"189/16538","exact_congestion":"16538/189","rational_primal_dual_certificate":true},
+    "two_vertex_adjacent_removed": {"failed_fibers":[0,1],"node_removal":true,"surviving_vertices":250,"surviving_edges":1767,"failure_stabilizer_order":192,"edge_orbits":19,"ordered_pair_orbits":376,"path_constraints_at_closure":830,"cutting_plane_iterations":8,"exact_lambda":"1767/153094","exact_congestion":"153094/1767","rational_primal_dual_certificate":true},
+    "two_vertex_nonadjacent_removed": {"failed_fibers":[0,4],"node_removal":true,"surviving_vertices":250,"surviving_edges":1755,"failure_stabilizer_order":120,"edge_orbits":30,"ordered_pair_orbits":603,"path_constraints_at_closure":1176,"cutting_plane_iterations":7,"exact_lambda":"351/30670","exact_congestion":"30670/351","rational_primal_dual_certificate":true}
+  },
+  "exact_verification": "For every case, rational reconstruction gives exact commodity sums 1, exact capacity loads <= z with at least one tight orbit, dual normalization 1, exact rational shortest-path separation with no violated dual path inequality, and primal congestion z = 1/lambda equal to the dual objective reciprocal.",
+  "theorem": "All six Pass4773 failure scenarios have exact symmetry-reduced fractional multicommodity optima, replacing the previous feasible-lower/cut-upper brackets.",
+  "boundary": "Exact fractional-flow values only under the stated post-failure ordered-demand convention; no unsplittable, queueing, latency, or measured-hardware claim."
+}
