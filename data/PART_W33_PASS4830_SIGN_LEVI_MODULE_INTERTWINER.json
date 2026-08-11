@@ -1,0 +1,32 @@
+{
+  "pass": 4830,
+  "field": "F2",
+  "modules": {
+    "sign_H1": "H^1 of the triangle-filled GQ(4,2) point graph, dimension 64",
+    "Levi_H1": "H_1 of the GQ(4,2) Levi graph, dimension 64"
+  },
+  "common_generator_construction": true,
+  "PSp": {
+    "group_order": 25920,
+    "Hom_dimension": 1,
+    "unique_nonzero_intertwiner_rank": 64,
+    "invertible_intertwiner_exists": true,
+    "isomorphic": true
+  },
+  "PGSp": {
+    "group_order": 51840,
+    "Hom_dimension": 1,
+    "unique_nonzero_intertwiner_rank": 64,
+    "invertible_intertwiner_exists": true,
+    "isomorphic": true
+  },
+  "linear_system": {
+    "unknowns": 4096,
+    "PGSp_equation_rank": 4095,
+    "PSp_equation_rank": 4095,
+    "PGSp_unique_free_coordinate_in_frozen_row_echelon_basis": 39,
+    "nonzero_intertwiner_flat_weight": 1919
+  },
+  "theorem": "The two independently constructed 64-dimensional binary cohomology carriers are isomorphic as PSp(4,3)-modules and as PGSp(4,3)-modules. The simultaneous common-generator intertwiner space has dimension one in each case, and its unique nonzero element is invertible of rank 64. Over F2 this gives a unique nonzero equivariant isomorphism.",
+  "boundary": "This identifies the 64-dimensional sign-cohomology and Levi-homology modules. It does not identify either with the unrelated 5671-dimensional flag-graph H1 or imply a physical gauge field."
+}
