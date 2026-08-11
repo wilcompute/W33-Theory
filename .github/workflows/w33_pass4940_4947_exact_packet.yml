@@ -1,0 +1,82 @@
+name: Passes 4940-4947 exact eight-front packet
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4940_exact_hardword_cover_distance.py'
+      - 'analysis/w33_pass4941_quartic_ambiguity_cancellation.py'
+      - 'analysis/w33_pass4942_transverse_char3_degeneration.py'
+      - 'analysis/w33_pass4943_common_s6_carrier_crosswalk.py'
+      - 'analysis/w33_pass4944_port_selector_rtl_report.py'
+      - 'analysis/w33_pass4945_4947_steiner_connection_maxcut_duality.py'
+      - 'rtl/w33_pass4944_port_selector45.sv'
+      - 'rtl/tb_w33_pass4944_port_selector45.sv'
+      - 'tests/test_w33_pass4940_4947_exact_packet.py'
+      - '.github/workflows/w33_pass4940_4947_exact_packet.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pass4940-4947-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install exact-analysis and RTL dependencies
+        run: |
+          set -euo pipefail
+          python -m pip install --disable-pip-version-check numpy networkx ortools pytest
+          sudo apt-get update
+          sudo apt-get install -y iverilog yosys
+      - name: Run algebraic and combinatorial producers
+        run: |
+          set -euo pipefail
+          python analysis/w33_pass4942_transverse_char3_degeneration.py
+          python analysis/w33_pass4943_common_s6_carrier_crosswalk.py
+          python analysis/w33_pass4945_4947_steiner_connection_maxcut_duality.py
+          python analysis/w33_pass4941_quartic_ambiguity_cancellation.py
+      - name: Solve the hard covering-distance instance exactly
+        run: python analysis/w33_pass4940_exact_hardword_cover_distance.py
+      - name: Simulate all AGL13 selector states
+        run: |
+          set -euo pipefail
+          iverilog -g2012 -s tb_w33_pass4944_port_selector45 -o /tmp/pass4944_sim \
+            rtl/w33_pass4944_port_selector45.sv rtl/tb_w33_pass4944_port_selector45.sv
+          vvp /tmp/pass4944_sim | tee analysis/PASS4944_IVERILOG.log
+          grep -q 'PASS Pass4944' analysis/PASS4944_IVERILOG.log
+      - name: Synthesize one selector and the complete 45-way fabric
+        run: |
+          set -euo pipefail
+          yosys -q -p "read_verilog -sv rtl/w33_pass4944_port_selector45.sv; synth -top w33_agl13_port_selector; tee -o analysis/PASS4944_ONE_YOSYS_STAT.json stat -json"
+          yosys -q -p "read_verilog -sv rtl/w33_pass4944_port_selector45.sv; synth -top w33_port_selector45; tee -o analysis/PASS4944_45_YOSYS_STAT.json stat -json"
+          python analysis/w33_pass4944_port_selector_rtl_report.py
+      - name: Focused frozen-certificate regression
+        run: pytest -q tests/test_w33_pass4940_4947_exact_packet.py
+      - name: Preserve exact generated evidence on master
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'w33-evidence-bot'
+          git config user.email 'w33-evidence-bot@users.noreply.github.com'
+          git add \
+            data/PART_W33_PASS4940_EXACT_HARDWORD_COVER_DISTANCE.json \
+            data/PART_W33_PASS4941_QUARTIC_AMBIGUITY_CANCELLATION.json \
+            data/PART_W33_PASS4942_TRANSVERSE_CHAR3_DEGENERATION.json \
+            data/PART_W33_PASS4943_COMMON_S6_CARRIER_CROSSWALK.json \
+            data/PART_W33_PASS4944_PORT_SELECTOR_RTL.json \
+            data/PART_W33_PASS4945_STEINER_NONEDGE_S3_HOLONOMY.json \
+            data/PART_W33_PASS4946_MAXCUT_STEINER_DUAL_W33_INCIDENCE.json \
+            data/PART_W33_PASS4947_W33_TRIAD_CURVATURE.json \
+            analysis/PASS4944_IVERILOG.log \
+            analysis/PASS4944_ONE_YOSYS_STAT.json \
+            analysis/PASS4944_45_YOSYS_STAT.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Materialize Passes 4940-4947 exact evidence'
+          git pull --rebase origin master
+          git push origin HEAD:master
