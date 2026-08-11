@@ -1,0 +1,28 @@
+{
+  "passes": [4835, 4839],
+  "intrinsic_design": {
+    "quotient_classes": 540,
+    "cold_classes_size4": 405,
+    "hot_classes_size3": 135,
+    "minimum_relations": 135,
+    "relation_profile": "three cold size-4 classes plus one hot size-3 class",
+    "partition_property": "the 135 minimum relations partition all 540 quotient classes"
+  },
+  "quotient_incidence_structure": "135 disconnected typed 4-stars: in each component one relation node is incident with three indistinguishable cold-class leaves and one distinguished hot-class leaf",
+  "quotient_automorphism_group": {
+    "structure": "S3^135 : S135",
+    "order_formula": "6^135 * 135!"
+  },
+  "physical_coordinate_automorphism_lower_bound": {
+    "structure": "(S4^405 x S3^135) : (S3^135 : S135)",
+    "reason": "each size-4 repetition class admits arbitrary internal S4 permutations, each size-3 class arbitrary internal S3 permutations, the three cold classes inside every cell may be permuted, and the 135 cells may be permuted arbitrarily"
+  },
+  "comparison_to_PGSp": {
+    "PGSp_order": 51840,
+    "equal": false,
+    "conclusion": "The weight-2 repetition shell plus the weight-4 quotient minimum shell alone has enormous extra symmetry and cannot reconstruct the PGSp(4,3) router symmetry, 45 packets, 27 GQ lines, or Petersen-fiber arrangement."
+  },
+  "reconstruction_falsifier": "Because the quotient incidence graph is disconnected into 135 mutually indistinguishable components, there is no intrinsic relation between distinct cells from which a unique 45-point/27-line GQ(4,2) quotient could be recovered. Additional higher-shell or codeword data are necessary to break S135 cell symmetry.",
+  "theorem": "The intrinsic dual-shell design certified in Pass4832 is insufficient by itself to recover the global router geometry. Its exact quotient automorphism group is S3^135:S135, vastly larger than PGSp(4,3), and the coordinate-level design has still larger internal repetition-class symmetry.",
+  "boundary": "This falsifies reconstruction from the specified dual shells only. It does not claim the full [2025,399,14]_2 code has this automorphism group; higher-weight code structure may and does break the extra symmetry."
+}
