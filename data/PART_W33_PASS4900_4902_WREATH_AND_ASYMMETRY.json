@@ -1,0 +1,134 @@
+{
+  "boundary": "4900 verifies that the wreath structure FOLLOWS from the reported combinatorics -- 135 disjoint cells over 405 cold and 135 hot blocks. It does NOT verify that their code's low shells have that structure, which needs their generator matrix. 4902 counts by filename attribution and citation grep, so it undercounts any check either lane ran without recording it",
+  "pass_4900": {
+    "cells": 135,
+    "cold_available": 405,
+    "cold_used": 405,
+    "hot_available": 135,
+    "hot_used": 135,
+    "order_digits": 336,
+    "partition_closes": true,
+    "pgsp_order": 51840,
+    "their_negative_stands": true,
+    "wreath": "S_3^135 : S_135"
+  },
+  "pass_4902": {
+    "mine_on_theirs": [
+      {
+        "pass": "4709",
+        "what": "their SRG(45,12,3,3) and SRG(27,10,1,5) are a dual pair"
+      },
+      {
+        "pass": "4824",
+        "what": "six Levi invariants of GQ(4,2), all agreeing"
+      },
+      {
+        "pass": "4826",
+        "what": "their dual-shell arithmetic closes"
+      },
+      {
+        "pass": "4855",
+        "what": "the guard set aimed at their files"
+      },
+      {
+        "pass": "4866",
+        "what": "their 1,080 four-cycles of SRG(27,10,1,5)"
+      },
+      {
+        "pass": "4900",
+        "what": "their S_3^135 : S_135 wreath product"
+      }
+    ],
+    "ratio": "6:22",
+    "theirs_on_mine": [
+      {
+        "cites": "Pass4816",
+        "file": "analysis/PASS4817_4824_RESERVATION.md"
+      },
+      {
+        "cites": "Pass 4773",
+        "file": "analysis/PASS4817_4824_pgsp_loewy_code_flow_decoder_index_insert.html"
+      },
+      {
+        "cites": "Pass 4819",
+        "file": "analysis/PASS4817_4824_pgsp_loewy_code_flow_decoder_insert.tex"
+      },
+      {
+        "cites": "Pass4769",
+        "file": "analysis/PASS4825_4832_RESERVATION.md"
+      },
+      {
+        "cites": "Pass4833",
+        "file": "analysis/PASS4833_4840_RESERVATION.md"
+      },
+      {
+        "cites": "Pass 4838",
+        "file": "analysis/PASS4838_REPLY_TO_TRACK_B.md"
+      },
+      {
+        "cites": "Pass4772",
+        "file": "analysis/w33_pass4819_4822_outer_code_levi_classification.py"
+      },
+      {
+        "cites": "Pass 4820",
+        "file": "analysis/w33_pass4820_exact_outage_multicommodity.py"
+      },
+      {
+        "cites": "Pass 4821",
+        "file": "analysis/w33_pass4821_global_router_decoder_schedule.py"
+      },
+      {
+        "cites": "Pass 4824",
+        "file": "analysis/w33_pass4824_flag_h1_levi_transfer_obstruction.py"
+      },
+      {
+        "cites": "Pass 4824",
+        "file": "analysis/w33_pass4824_verifying_track_b_levi_facts.py"
+      },
+      {
+        "cites": "Pass 4825",
+        "file": "analysis/w33_pass4825_brauer_loewy_closure.py"
+      },
+      {
+        "cites": "Pass4819",
+        "file": "analysis/w33_pass4826_4832_code399_decoder_dualshell.py"
+      },
+      {
+        "cites": "Pass 4826",
+        "file": "analysis/w33_pass4826_track_b_arithmetic_and_the_51840_warning.py"
+      },
+      {
+        "cites": "Pass 4827",
+        "file": "analysis/w33_pass4827_pgsp_sign_burnside.py"
+      },
+      {
+        "cites": "Pass 4828",
+        "file": "analysis/w33_pass4828_parametric_outage_flow.py"
+      },
+      {
+        "cites": "Pass4817",
+        "file": "analysis/w33_pass4829_4830_levi_code_sign_module.py"
+      },
+      {
+        "cites": "Pass4830",
+        "file": "analysis/w33_pass4829_4830_levi_code_sign_module_hardened.py"
+      },
+      {
+        "cites": "Pass 4829",
+        "file": "analysis/w33_pass4829_levi_code_corrected.py"
+      },
+      {
+        "cites": "Pass 4831",
+        "file": "analysis/w33_pass4831_deephole_residue_12x12_falsifier.py"
+      },
+      {
+        "cites": "Pass 4827",
+        "file": "analysis/w33_pass4839_4840_splitlines_and_what_the_tooling_is_for.py"
+      },
+      {
+        "cites": "Pass 4841",
+        "file": "analysis/w33_pass4841_i_read_the_sixteen_and_none_is_a_priority_claim.py"
+      }
+    ]
+  }
+}

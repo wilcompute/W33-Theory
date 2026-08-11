@@ -1,0 +1,22 @@
+{
+  "absolute_points": 65,
+  "boundary": "the q=8 polarity is a WITNESS -- one object exhibited and verified as an involutory part-exchanging automorphism with 65 absolute points. This settles the positive prediction and could never have settled a negative one. The identification of the absolute-point set with the Suzuki-Tits ovoid and its stabiliser with Sz(8) is CITED classical theory used to interpret the count of 65; the count is computed",
+  "candidates_tried": 36300,
+  "evidence_kinds": {
+    "q=2": "exhaustive (Pass 4793)",
+    "q=4": "exhaustive, zero of 1,958,400 dualities (Pass 4793)",
+    "q=8": "witness (here) -- absence could not have been shown this way"
+  },
+  "generators": 7,
+  "levi_edges": 5265,
+  "levi_vertices": 1170,
+  "lines": 585,
+  "method": "coset walk (Pass 4892): every polarity is sigma . a, searched by generators rather than enumeration",
+  "part_exchanging_generators": 1,
+  "points": 585,
+  "polarity_found": true,
+  "predicted": 65,
+  "prediction_holds": true,
+  "q": 8,
+  "sz8_order": 29120
+}
