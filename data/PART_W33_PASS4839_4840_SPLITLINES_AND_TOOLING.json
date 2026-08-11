@@ -1,0 +1,40 @@
+{
+  "boundary": "4839 classifies by static pattern -- 'reads file content' and 'enumerates splitlines' are regex judgements and may miss a guard that does both across several statements. No guard is fixed here. 4840's attribution of each tool to a corpus or session fault is a judgement I made about my own work, which is the least reliable kind",
+  "pass_4839_corpus_files_checked": 17587,
+  "pass_4839_corpus_files_with_splitting_byte": 13,
+  "pass_4839_exposed_count": 2,
+  "pass_4839_exposed_guards": [
+    {
+      "file": "check_implicit_novelty.py",
+      "reads_file_content": true,
+      "reports_line_numbers": true
+    },
+    {
+      "file": "count_quotes.py",
+      "reads_file_content": true,
+      "reports_line_numbers": true
+    }
+  ],
+  "pass_4840_fraction_session_caused": 0.42,
+  "pass_4840_new_tools": {
+    "check_certificates_regenerate.py": "corpus",
+    "check_guard_selftests.py": "SESSION (guards found untested)",
+    "check_guards_reachable.py": "SESSION (guards found unreachable)",
+    "check_heredoc_regex.py": "SESSION (my heredocs, six times)",
+    "check_layer_conformance.py": "corpus (blueprint may-claim table)",
+    "check_pattern_inversions.py": "corpus (novelty guard inverted)",
+    "check_regex_deadends.py": "SESSION (my 51,840 statistic was 12.5% not 44%)",
+    "check_retraction_propagation.py": "corpus (Pass 4563's retraction)",
+    "check_search_power.py": "corpus (Pass 4680's null)",
+    "check_smin_formula.py": "pre-existing (resurrected from a dead config)",
+    "check_stdlib_shadow.py": "SESSION (my scratch bisect.py broke igraph)",
+    "compile_sweep.py": "corpus (a manuscript that never built)"
+  },
+  "pass_4840_session_caused": [
+    "check_guards_reachable.py",
+    "check_guard_selftests.py",
+    "check_stdlib_shadow.py",
+    "check_regex_deadends.py",
+    "check_heredoc_regex.py"
+  ]
+}

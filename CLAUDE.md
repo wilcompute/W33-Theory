@@ -179,6 +179,37 @@ commit. That is the whole protocol.
 commit owns it and the later one cites it. Check with
 `git log --diff-filter=A --format='%ad %h' --date=short -1 -- <file>`, not memory.
 
+**Renumber cost beats commit order (added Pass 4713, after two collisions in one day
+resolved in opposite directions).** Timestamps decide ownership, but the lane with
+FEWER bound identifiers should yield regardless of who was first: renumber cost scales
+with how much is published under the number, not with commit order. An eight-pass
+theorem ledger already renumbered once beats two loosely-coupled passes even when the
+two won on the clock.
+
+## Two mechanical failure modes that cost eight incidents in one session
+
+Neither is a reasoning error, and neither is visible to running the code.
+
+**Composition direction — four incidents.** `canonical_permutation`, `permute_vertices`,
+`get_isomorphisms_vf2`: every one of these has a convention, and reasoning about which
+way it points has now been wrong four times out of four. Of the five ways to compose two
+canonical labellings and their inverses, ALL FIVE are valid permutations, all five
+survive a canonical-form comparison, and exactly one is an isomorphism (Pass 4782). The
+fix is four lines: **build both candidates, keep the one that satisfies an invariant you
+can state.** Never reason about the library's convention.
+
+**Heredoc-collapsed escapes — six incidents.** A shell heredoc turns the two characters
+`\b` into a single 0x08 BACKSPACE byte. The regex still compiles and can never match. It
+silently disabled `W(3,3)` and `Sp(4,3)` in `check_layer_conformance.py` and the
+"is the first" phrasing in `check_novelty_claims.py` — in the same edit that added it.
+**Edit regex-bearing source with a file write, never a heredoc.**
+`scripts/check_heredoc_regex.py` catches the damage; nothing catches the habit.
+
+Related: Python's `splitlines()` treats FORMFEED and vertical tab as line breaks. A
+scanner looking for formfeeds, written with `splitlines()`, cannot find them — and 13
+tracked files carry such bytes, so any guard reporting line numbers from `splitlines()`
+over file content reports them wrong past the first one. Use `split("\n")`.
+
 **Pass-number reservation (added after three renumbers in one day — 387→391→392).**
 Claim the number BEFORE computing, not after: push an empty commit
 `git commit --allow-empty -m "Pass NNN reserved: <topic> (<track>)"` as your
