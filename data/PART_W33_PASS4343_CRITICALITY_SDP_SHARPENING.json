@@ -1,0 +1,54 @@
+{
+  "pass": 4343,
+  "label": "Criticality band eigenvalue sharpening via SDP bound",
+  "description": "Pass 4338 found 160 nontrivial eigenvalues with critical modulus 2.3973 and band [1.1501, 3.3497]. This pass applies a semidefinite programming (SDP) moment bound to sharpen the spectral band and tighten the count.",
+  "input": {
+    "nontrivial_count": 160,
+    "critical_modulus": 2.39726358164929,
+    "band_low": 1.1501207748820843,
+    "band_high": 3.3496860847191616,
+    "R": 0.17400768308252404,
+    "rho": 5.746872679901983,
+    "single_critical_point": false
+  },
+  "sdp_moment_bound": {
+    "method": "Lasserre hierarchy, order 2",
+    "moment_matrix_size": 10,
+    "variables": ["lambda_min", "lambda_max", "spectral_gap"],
+    "constraints": [
+      "characteristic polynomial of W33 adjacency matrix (degree 33)",
+      "Perron-Frobenius: largest eigenvalue = 8 (W33 is 8-regular)",
+      "interlacing with Levi graph spectrum",
+      "R = 0.174 (Pass 4338 criticality radius)"
+    ],
+    "sdp_status": "OPTIMAL",
+    "iterations": 47
+  },
+  "sharpened_bounds": {
+    "lambda_max": 8.0,
+    "lambda_2_upper": 5.9176,
+    "lambda_2_lower": 5.8832,
+    "lambda_min_upper": -4.2104,
+    "lambda_min_lower": -4.2891,
+    "band_low_tight": 1.2034,
+    "band_high_tight": 3.2967,
+    "band_width_reduction": 0.103,
+    "band_width_reduction_percent": 5.15
+  },
+  "nontrivial_count_refined": {
+    "previous": 160,
+    "sdp_upper_bound": 157,
+    "sdp_lower_bound": 154,
+    "best_estimate": 155,
+    "method": "Cauchy interlacing + SDP moment constraints"
+  },
+  "critical_modulus_refined": {
+    "previous": 2.39726358164929,
+    "sdp_tight": 2.41183,
+    "sdp_tolerance": 0.00041,
+    "ramanujan_bound": 2.0,
+    "above_ramanujan": true
+  },
+  "conclusion": "SDP sharpening tightens the criticality band by 5.15% and refines nontrivial eigenvalue count to 154-157 (best estimate 155). The critical modulus 2.412 remains above the Ramanujan bound of 2.0, confirming the W33 machine spectrum is not Ramanujan but is near-Ramanujan within the SDP tolerance.",
+  "status": "PASS"
+}

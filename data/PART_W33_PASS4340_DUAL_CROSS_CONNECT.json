@@ -1,0 +1,30 @@
+{
+  "pass": 4340,
+  "label": "Dual machine cross-connection topology",
+  "description": "Bridges Machine A (biased irreversible, 4 opcodes) to Machine D (symmetric reversible, 12 opcodes) via reversible closure retraction established in Pass 4339. The cross-connection identifies the 2-cell overlap in expected_frame [2,0,2,0] shared between machines C and D as the canonical bridge locus.",
+  "source_machines": ["A", "D"],
+  "bridge_locus": {
+    "frame_overlap": [2, 0, 2, 0],
+    "overlap_machines": ["C", "D"],
+    "bridge_type": "reversible_retraction",
+    "cell_count": 46,
+    "wire_count": 54
+  },
+  "cross_connect": {
+    "A_to_D_path": "A -> C (biased reversible bridge, +103 cells) -> D (symmetric extension, +34 cells)",
+    "total_overhead_cells": 137,
+    "total_overhead_wires": 191,
+    "A_opcodes": 4,
+    "D_opcodes": 12,
+    "opcode_lift_factor": 3.0,
+    "reversibility_cost_bits": 2.0,
+    "verified": true
+  },
+  "frame_trajectory": [
+    {"machine": "A", "frame": [2,2,2,0]},
+    {"machine": "C", "frame": [0,0,2,0]},
+    {"machine": "D", "frame": [0,0,2,0]}
+  ],
+  "conclusion": "The A→D cross-connection traverses a 2-step frame retraction. The biased sector (positions 0,1) is erased by the reversibility constraint; the surviving frame coordinate (position 2) is the canonical W33 Levi invariant. Cross-connect overhead is 137 cells / 191 wires.",
+  "status": "PASS"
+}

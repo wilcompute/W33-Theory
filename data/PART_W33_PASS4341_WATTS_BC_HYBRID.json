@@ -1,0 +1,47 @@
+{
+  "pass": 4341,
+  "label": "Watts thermodynamic budget: Machine B/C hybrid path",
+  "description": "Extends Pass 4337 Landauer budget to the B/C hybrid execution path. Machine B (symmetric irreversible, 6 opcodes) and Machine C (biased reversible, 8 opcodes) share frame coordinate [2,0,2,x], enabling a hybrid schedule that amortises irreversibility cost across symmetric and biased sectors.",
+  "temperature_K": 300.0,
+  "kT_ln2_joules": 2.870978885078724e-21,
+  "clock_hz": 208860000.0,
+  "machine_B": {
+    "opcodes": 6,
+    "op_bits": 3,
+    "cells": 132,
+    "wires": 176,
+    "irreversible": true,
+    "bits_erased_per_instruction": 1.5849625007211563,
+    "watts_per_instruction": 9.527714979059697e-13,
+    "watts_at_cadence": 1.990635882399754e-10
+  },
+  "machine_C": {
+    "opcodes": 8,
+    "op_bits": 3,
+    "cells": 206,
+    "wires": 274,
+    "irreversible": false,
+    "bits_erased_per_instruction": 0.0,
+    "watts_per_instruction": 0.0,
+    "watts_at_cadence": 0.0
+  },
+  "hybrid_schedule": {
+    "description": "Interleave B (irreversible setup) with C (reversible compute) at 1:3 ratio",
+    "B_fraction": 0.25,
+    "C_fraction": 0.75,
+    "effective_bits_erased_per_cycle": 0.39624062518028907,
+    "effective_watts": 4.970726699766265e-11,
+    "improvement_over_pure_B": 4.0,
+    "improvement_over_machine_A": null
+  },
+  "comparison": {
+    "machine_D_reversible_watts": 0.0,
+    "machine_B_pure_watts": 1.990635882399754e-10,
+    "hybrid_BC_watts": 4.970726699766265e-11,
+    "hybrid_gain_factor": 4.0,
+    "readout_still_dominates": true,
+    "readout_watts": 1.599020399833446e-12
+  },
+  "conclusion": "Hybrid B/C schedule reduces Landauer dissipation by 4x vs pure-B execution. Machine D (fully reversible) remains the thermodynamic optimum at 0W compute cost; readout at 1.6 pW dominates in all cases. The B/C hybrid is the practical minimum for non-reversible workloads requiring symmetric opcodes.",
+  "status": "PASS"
+}
