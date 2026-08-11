@@ -39,17 +39,12 @@ def null2(rows,n):
   out.append(x)
  return out
 def main()->int:
- # Bare GQ(4,2) incidence and W6.
  qp=[x for x in range(1,64) if Q(bits(x))==0];pts=sorted({tuple(sorted((a,b,a^b))) for a,b in itertools.combinations(qp,2) if a^b in qp});lines=[tuple(i for i,P in enumerate(pts) if x in P) for x in qp]
  inc=[sum(1<<L for L,S in enumerate(lines) if p in S) for p in range(45)];W6b=null2(inc,27);assert len(W6b)==6
  W=[0]
  for b in W6b:W += [x^b for x in W]
  wd=Counter(x.bit_count() for x in W);assert wd==Counter({0:1,12:36,16:27})
- # Coordinate columns of W6, basis-independent up to GL(6,2).
- cols=[]
- for L in range(27):cols.append(tuple((b>>L)&1 for b in W6b))
- assert len(set(cols))==27 and all(any(c) for c in cols)
- # Intrinsic 135 cells = 45 packet triples x 3 sheets.  Cold columns inherit line type; hot is zero.
+ cols=[tuple((b>>L)&1 for b in W6b) for L in range(27)];assert len(set(cols))==27 and all(any(c) for c in cols)
  cell_triples=[];coldcols=[]
  for p in range(45):
   incident=tuple(sorted(L for L,S in enumerate(lines) if p in S));assert len(incident)==3
@@ -57,9 +52,7 @@ def main()->int:
   for _ in range(3):cell_triples.append(T);coldcols.extend(cols[L] for L in incident)
  assert len(cell_triples)==135 and len(coldcols)==405
  assert Counter(coldcols)==Counter({c:15 for c in cols})
- assert Counter(cell_triples).values()==Counter({3:45}).values()
- # Residual cross-cell shell has physical quotient weights 15*wt(W6).
- residual=Counter({180:36,240:27})
+ tc=Counter(cell_triples);assert len(tc)==45 and set(tc.values())=={3}
  local_dep_dim=135;quot_dep_dim=141;cross=quot_dep_dim-local_dep_dim;assert cross==6
  out={'passes':[4843,4845],'quotient_dependency_dimension':141,'local_disjoint_relation_dimension':135,'first_cross_cell_dimension':cross,
  'first_cross_cell_code':'W6=[27,6,12]_2','W6_weight_enumerator':{'0':1,'12':36,'16':27},'intrinsic_540_class_weight_enumerator_nonzero':{'180':36,'240':27},'first_cross_cell_weight':180,
