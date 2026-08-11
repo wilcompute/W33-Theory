@@ -1,0 +1,29 @@
+{
+  "passes": [4863,4864],
+  "natural_O5_model": {
+    "PG4_3_projective_points": 121,
+    "norm_profile": {"0":40,"1":45,"2":36},
+    "norm2_nonorthogonality_graph": "SRG(36,20,10,12)",
+    "explicit_isomorphism_to_double_six_graph": true,
+    "common_PGSp_generator_count": 8,
+    "all_lifted_generators_orthogonal": true
+  },
+  "exterior_square_intertwiner": {
+    "quotient_dimension": 10,
+    "Lambda2_dimension": 10,
+    "simultaneous_Hom_dimension_F3": 1,
+    "unique_nonzero_intertwiner_rank": 10,
+    "equivariant_isomorphism": true
+  },
+  "Lie_algebra": {
+    "model": "Lambda^2(F3^5) ~= so5(F3) via bivectors to skew endomorphisms",
+    "dimension": 10,
+    "center_dimension": 0,
+    "derived_dimension": 10,
+    "Jacobi_verified_on_basis": true,
+    "PGSp_generators_preserve_bracket": true,
+    "classical_identification": "so5(F3) ~= sp4(F3) (type B2=C2 in odd characteristic)"
+  },
+  "theorem": "The ten-dimensional ternary homology quotient outside the oriented K3,3 span is explicitly PGSp-equivariantly isomorphic to Lambda^2 of the natural five-dimensional O5(3) module. Under the standard bivector/skew-endomorphism map it is the simple adjoint Lie algebra so5(F3) ~= sp4(F3), with the bracket transported canonically to the homology quotient.",
+  "boundary": "Finite characteristic-three module/Lie-algebra theorem; no continuum gauge field, particle multiplet, or physical local Lie symmetry is inferred."
+}
