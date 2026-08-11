@@ -1,0 +1,33 @@
+{
+  "pass": 4832,
+  "code": "[2025,399,14]_2",
+  "dual_dimension": 1626,
+  "weight2_shell": {
+    "column_equivalence_classes": 540,
+    "class_size_profile": {"3": 135, "4": 405},
+    "weight2_dual_words": 2835,
+    "weight2_span_dimension": 1485
+  },
+  "quotient_by_weight2_span": {
+    "length": 540,
+    "dimension": 141,
+    "minimum_weight": 4,
+    "weight4_dependency_count": 135,
+    "weight4_class_size_profile": [3,4,4,4],
+    "minimum_dependencies_partition_all_540_classes": true,
+    "physical_weight4_representatives_outside_weight2_span": 25920,
+    "outer_six_direction_minimum_quotient_weights": [180,240]
+  },
+  "intrinsic_reconstruction": {
+    "hot_coordinate_classes": 135,
+    "hot_class_size": 3,
+    "cold_K22_coordinate_classes": 405,
+    "cold_class_size": 4,
+    "K6_cells_recovered": 135,
+    "cell_relation": "A+B+C+H=0 on three size-4 cold classes and one size-3 hot class"
+  },
+  "theorem": "The [2025,399,14]_2 code intrinsically reconstructs the router cell decomposition from its dual shells. Equal generator columns recover 405 size-4 cold K2,2 classes and 135 size-3 hot classes. After quotienting the full weight-two span, the unique minimum dependencies are 135 disjoint weight-four relations of profile (4,4,4,3), exactly the physical K6 cells.",
+  "proof_of_no_outer_weight4": "The six extra dual directions are W6 outer words. At every GQ point a W6 word meets an even number of the three incident quotient lines, hence 0 or 2. Adding the local four-class relation changes k to 4-k, so the minimum local quotient contribution remains 0 or 2 on each of three sheet cells. A W6 word of weight 12 or 16 therefore has minimum quotient weight 15*w = 180 or 240, never 4.",
+  "boundary": "The weight-four statement is for the quotient by the complete weight-two span; the full raw weight-four dual enumerator also contains sums of repetition checks and is not identified with the 135-cell shell.",
+  "execution": "Exact generator-column and compressed-cell algebra; analysis/w33_pass4826_4832_code399_decoder_dualshell.py independently regenerates the column classes and pair-XOR dependency shell."
+}
