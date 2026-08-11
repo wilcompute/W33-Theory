@@ -1,0 +1,67 @@
+% Pass4874 — exact association-scheme refinement of W33 by Steiner triangles.
+\ifdefined\WDDPassFourEightSevenFourLoaded
+  \expandafter\endinput
+\else
+  \gdef\WDDPassFourEightSevenFourLoaded{1}%
+\fi
+
+\section{The Steiner three-cover is a four-class association-scheme refinement of \texorpdfstring{$W(3,3)$}{W(3,3)}}
+\label{sec:pass4874-steiner-association}
+
+Pass~4870 identified forty intrinsic three-element fibers among the $120$
+Steiner triangles and recovered $W(3,3)$ after quotienting those fibers.
+Pass~4874 closes the full pair algebra.  Besides the identity relation, the
+four symmetric relations have valencies
+\[
+  2,\qquad27,\qquad36,\qquad54,
+\]
+and unordered-pair counts
+\[
+  120,\qquad1620,\qquad2160,\qquad3240.
+\]
+They close under matrix multiplication to a commutative imprimitive
+four-class association scheme.
+
+With relation order $(R_0,R_1,R_2,R_3,R_4)$ equal to identity, fiber, first
+nonedge refinement, W33-adjacency lift, and second nonedge refinement, the
+first eigenmatrix is
+\[
+P=\begin{pmatrix}
+1&2&27&36&54\\
+1&2&-3&6&-6\\
+1&2&3&-12&6\\
+1&-1&9&0&-9\\
+1&-1&-3&0&3
+\end{pmatrix},
+\]
+with primitive multiplicities
+\[
+  1,\qquad24,\qquad15,\qquad20,\qquad60.
+\]
+The fiber-constant $40$-space is exactly the first three primitive sectors.
+On it, the $2160$-pair adjacency-lift relation has eigenvalues
+\[
+  36,\quad6,\quad-12,
+\]
+which are three times the W33 adjacency eigenvalues $12,2,-4$.  The remaining
+$80$ transverse directions split as $20+60$ and are annihilated by the
+adjacency-lift relation.
+
+The refinement is also exact over W33 nonedges.  Every adjacent pair of
+three-element fibers contributes all nine cross pairs, i.e. a $K_{3,3}$.  For
+each of the $540$ W33 nonedges, the nine cross pairs instead split canonically
+as
+\[
+  3+6,
+\]
+where the three-pair relation is a perfect matching and the other relation is
+its six-edge complement.  Thus the Steiner layer refines both adjacency and
+nonadjacency of W33, not merely its vertex set.
+
+\paragraph{Evidence firewall.}
+The producer is
+\texttt{analysis/w33\_pass4874\_steiner\_w33\_association\_scheme.py}, with
+frozen certificate
+\texttt{data/PART\_W33\_PASS4874\_STEINER\_W33\_ASSOCIATION\_SCHEME.json}.
+The $3+6$ matching relation is intrinsic; choosing labels inside an individual
+three-element fiber is still extra coordinate or gauge data.
