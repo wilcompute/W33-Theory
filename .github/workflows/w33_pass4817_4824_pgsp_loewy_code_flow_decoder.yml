@@ -1,0 +1,100 @@
+name: Passes 4817-4824 PGSp Loewy code flow decoder
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4817_4823_pgsp_s3_moduli_certified.py'
+      - 'analysis/PASS4818_U42_MOD2_BRAUER.g'
+      - 'analysis/w33_pass4818_modular_h1_brauer_loewy_boundary.py'
+      - 'analysis/w33_pass4819_4822_outer_code_levi_classification.py'
+      - 'analysis/w33_pass4820_exact_outage_multicommodity.py'
+      - 'analysis/w33_pass4821_global_router_decoder_schedule.py'
+      - 'analysis/w33_pass4824_flag_h1_levi_transfer_obstruction.py'
+      - '.github/workflows/w33_pass4817_4824_pgsp_loewy_code_flow_decoder.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pass4817-4824-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install Python exact-analysis dependencies
+        run: python -m pip install --disable-pip-version-check numpy scipy networkx sympy pytest
+      - name: Install GAP and character tables
+        shell: bash
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y gap gap-character-tables || sudo apt-get install -y gap gap-ctbllib
+      - name: Execute all eight passes
+        shell: bash
+        run: |
+          set +e
+          LOG=analysis/PASS4817_4824_RUN.log
+          STATUS=analysis/PASS4817_4824_RUN.status
+          : > "$LOG"
+          rc=0
+          echo '===== GAP U4(2) mod-2 Brauer extraction =====' | tee -a "$LOG"
+          gap -q analysis/PASS4818_U42_MOD2_BRAUER.g > analysis/PASS4818_U42_MOD2_BRAUER.txt 2>> "$LOG"
+          here=$?
+          cat analysis/PASS4818_U42_MOD2_BRAUER.txt >> "$LOG" 2>/dev/null || true
+          if [ "$here" -ne 0 ]; then rc=$here; fi
+          for script in \
+            analysis/w33_pass4817_4823_pgsp_s3_moduli_certified.py \
+            analysis/w33_pass4818_modular_h1_brauer_loewy_boundary.py \
+            analysis/w33_pass4819_4822_outer_code_levi_classification.py \
+            analysis/w33_pass4820_exact_outage_multicommodity.py \
+            analysis/w33_pass4821_global_router_decoder_schedule.py \
+            analysis/w33_pass4824_flag_h1_levi_transfer_obstruction.py
+          do
+            if [ "$rc" -ne 0 ]; then break; fi
+            echo "===== $script =====" | tee -a "$LOG"
+            python "$script" 2>&1 | tee -a "$LOG"
+            here=${PIPESTATUS[0]}
+            echo "rc=$here" | tee -a "$LOG"
+            if [ "$here" -ne 0 ]; then rc=$here; fi
+          done
+          echo "$rc" > "$STATUS"
+          exit 0
+      - name: Run frozen regression when producers succeed
+        shell: bash
+        run: |
+          rc=$(cat analysis/PASS4817_4824_RUN.status)
+          if [ "$rc" -eq 0 ] && [ -f tests/test_w33_pass4817_4824_pgsp_loewy_code_flow_decoder.py ]; then
+            pytest -q tests/test_w33_pass4817_4824_pgsp_loewy_code_flow_decoder.py
+            echo $? > analysis/PASS4817_4824_RUN.status
+          fi
+          exit 0
+      - name: Preserve generated evidence and diagnostics
+        shell: bash
+        run: |
+          git config user.name 'w33-evidence-bot'
+          git config user.email 'w33-evidence-bot@users.noreply.github.com'
+          git add analysis/PASS4817_4824_RUN.log analysis/PASS4817_4824_RUN.status
+          test -f analysis/PASS4818_U42_MOD2_BRAUER.txt && git add analysis/PASS4818_U42_MOD2_BRAUER.txt
+          for f in \
+            data/PART_W33_PASS4817_PGSP_S3_MODULI_MODULE.json \
+            data/PART_W33_PASS4818_MODULAR_H1_BRAUER_LOEWY.json \
+            data/PART_W33_PASS4819_OUTER_CODE_ALGEBRA.json \
+            data/PART_W33_PASS4820_EXACT_OUTAGE_MULTICOMMODITY.json \
+            data/PART_W33_PASS4821_GLOBAL_ROUTER_DECODER_SCHEDULE.json \
+            data/PART_W33_PASS4822_LEVI_BINARY_ROUTER_HOMOLOGY.json \
+            data/PART_W33_PASS4823_SELECTED_CONNECTION_INVARIANT_LINE.json \
+            data/PART_W33_PASS4824_FLAG_H1_LEVI_TRANSFER_OBSTRUCTION.json
+          do
+            test -f "$f" && git add "$f"
+          done
+          if ! git diff --cached --quiet; then
+            git commit -m 'Materialize Passes 4817-4824 exact evidence'
+            git pull --rebase origin master
+            git push origin HEAD:master
+          fi
+      - name: Enforce final status after evidence is preserved
+        run: test "$(cat analysis/PASS4817_4824_RUN.status)" -eq 0
