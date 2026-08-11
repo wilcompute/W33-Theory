@@ -1,0 +1,82 @@
+{
+  "pass": 4828,
+  "capacity_model": "cold edge capacity 1, surviving hot edge capacity rho>0; unit ordered-pair demand among surviving vertices",
+  "intact_breakpoints": ["63/155","111/137","239/105"],
+  "cases": {
+    "one_hot": {
+      "failed_fibers": [0], "node_removal": false, "failure_stabilizer_order": 960, "edge_orbits": 9, "ordered_pair_orbits": 123,
+      "breakpoints": ["378/937","8802/10777","171126/74867"],
+      "pieces": [
+        {"rho_low":"0","rho_high":"378/937","A":"3/373","B":"13/3357","lambda":"3/373 + (13/3357) rho"},
+        {"rho_low":"378/937","rho_high":"8802/10777","A":"18/2147","B":"13/4294","lambda":"18/2147 + (13/4294) rho"},
+        {"rho_low":"8802/10777","rho_high":"171126/74867","A":"9/992","B":"13/5952","lambda":"9/992 + (13/5952) rho"},
+        {"rho_low":"171126/74867","rho_high":null,"A":"81/5759","B":"0","lambda":"81/5759"}
+      ],
+      "lambda_at_rho1":"67/5952"
+    },
+    "two_hot_adjacent": {
+      "failed_fibers": [0,1], "node_removal": false, "failure_stabilizer_order": 192, "edge_orbits": 23, "ordered_pair_orbits": 470,
+      "breakpoints": ["189/472","42921/52300","840969/365450"],
+      "pieces": [
+        {"rho_low":"0","rho_high":"189/472","A":"3/373","B":"25/6714","lambda":"3/373 + (25/6714) rho"},
+        {"rho_low":"189/472","rho_high":"42921/52300","A":"36/4301","B":"25/8602","lambda":"36/4301 + (25/8602) rho"},
+        {"rho_low":"42921/52300","rho_high":"840969/365450","A":"270/29873","B":"125/59746","lambda":"270/29873 + (125/59746) rho"},
+        {"rho_low":"840969/365450","rho_high":null,"A":"405/29236","B":"0","lambda":"405/29236"}
+      ],
+      "lambda_at_rho1":"665/59746"
+    },
+    "two_hot_nonadjacent": {
+      "failed_fibers": [0,4], "node_removal": false, "failure_stabilizer_order": 120, "edge_orbits": 34, "ordered_pair_orbits": 714,
+      "breakpoints": ["189/472","783/950","168021/73100"],
+      "pieces": [
+        {"rho_low":"0","rho_high":"189/472","A":"3/373","B":"25/6714","lambda":"3/373 + (25/6714) rho"},
+        {"rho_low":"189/472","rho_high":"783/950","A":"36/4301","B":"25/8602","lambda":"36/4301 + (25/8602) rho"},
+        {"rho_low":"783/950","rho_high":"168021/73100","A":"18/1991","B":"25/11946","lambda":"18/1991 + (25/11946) rho"},
+        {"rho_low":"168021/73100","rho_high":null,"A":"81/5848","B":"0","lambda":"81/5848"}
+      ],
+      "lambda_at_rho1":"133/11946"
+    },
+    "one_vertex_fiber_removed": {
+      "failed_fibers": [0], "node_removal": true, "failure_stabilizer_order": 960, "edge_orbits": 8, "ordered_pair_orbits": 103,
+      "breakpoints": ["1425/3989","5525/11367","37275/44057","3019/1365"],
+      "pieces": [
+        {"rho_low":"0","rho_high":"1425/3989","A":"15/1892","B":"39/9460","lambda":"15/1892 + (39/9460) rho"},
+        {"rho_low":"1425/3989","rho_high":"5525/11367","A":"75/9346","B":"18/4673","lambda":"75/9346 + (18/4673) rho"},
+        {"rho_low":"5525/11367","rho_high":"37275/44057","A":"150/18029","B":"117/36058","lambda":"150/18029 + (117/36058) rho"},
+        {"rho_low":"37275/44057","rho_high":"3019/1365","A":"75/8269","B":"39/16538","lambda":"75/8269 + (39/16538) rho"},
+        {"rho_low":"3019/1365","rho_high":null,"A":"1/70","B":"0","lambda":"1/70"}
+      ],
+      "lambda_at_rho1":"189/16538"
+    },
+    "two_vertex_adjacent_removed": {
+      "failed_fibers": [0,1], "node_removal": true, "failure_stabilizer_order": 192, "edge_orbits": 19, "ordered_pair_orbits": 376,
+      "breakpoints": ["5916/18917","3654/9085","514518/1060597","424647/483625","816263/378125"],
+      "pieces": [
+        {"rho_low":"0","rho_high":"5916/18917","A":"696/88469","B":"753/176938","lambda":"696/88469 + (753/176938) rho"},
+        {"rho_low":"5916/18917","rho_high":"3654/9085","A":"696/88367","B":"747/176734","lambda":"696/88367 + (747/176734) rho"},
+        {"rho_low":"3654/9085","rho_high":"514518/1060597","A":"87/11038","B":"93/22076","lambda":"87/11038 + (93/22076) rho"},
+        {"rho_low":"514518/1060597","rho_high":"424647/483625","A":"1392/167737","B":"1125/335474","lambda":"1392/167737 + (1125/335474) rho"},
+        {"rho_low":"424647/483625","rho_high":"816263/378125","A":"696/76547","B":"375/153094","lambda":"696/76547 + (375/153094) rho"},
+        {"rho_low":"816263/378125","rho_high":null,"A":"87/6050","B":"0","lambda":"87/6050"}
+      ],
+      "lambda_at_rho1":"1767/153094"
+    },
+    "two_vertex_nonadjacent_removed": {
+      "failed_fibers": [0,4], "node_removal": true, "failure_stabilizer_order": 120, "edge_orbits": 30, "ordered_pair_orbits": 603,
+      "breakpoints": ["1173/3794","77556/153259","67689/77450","25921/12125"],
+      "pieces": [
+        {"rho_low":"0","rho_high":"1173/3794","A":"69/8863","B":"75/17726","lambda":"69/8863 + (75/17726) rho"},
+        {"rho_low":"1173/3794","rho_high":"77556/153259","A":"276/35299","B":"291/70598","lambda":"276/35299 + (291/70598) rho"},
+        {"rho_low":"77556/153259","rho_high":"67689/77450","A":"276/33613","B":"225/67226","lambda":"276/33613 + (225/67226) rho"},
+        {"rho_low":"67689/77450","rho_high":"25921/12125","A":"138/15335","B":"15/6134","lambda":"138/15335 + (15/6134) rho"},
+        {"rho_low":"25921/12125","rho_high":null,"A":"69/4850","B":"0","lambda":"69/4850"}
+      ],
+      "lambda_at_rho1":"351/30670",
+      "independent_final_region_and_breakpoint_rechecks": true
+    }
+  },
+  "rho1_cross_check": "All six rho=1 values exactly reproduce the frozen Pass4820 primal-dual optima.",
+  "exact_method": "For each failure stabilizer, surviving edge and ordered-pair commodities are reduced to group orbits. A metric-dual shortest-path cutting-plane oracle yields rational affine lines A+B*rho; candidate intersections are recursively queried and every final region/breakpoint is rechecked. Rational shortest-path separation certifies the dual lines; rho=1 matching primal certificates are inherited/cross-checked against Pass4820.",
+  "theorem": "All six symmetry-broken failure throughput functions are exact piecewise-rational lower envelopes of finitely many affine forms A+B*rho. Failure changes every intact phase boundary; none of the six failure diagrams simply inherits the intact 63/155,111/137,239/105 breakpoints.",
+  "boundary": "Exact splittable fractional multicommodity flow under the stated surviving-vertex ordered-demand convention. No queueing, unsplittable routing, latency, or measured hardware performance is inferred."
+}
