@@ -1,0 +1,28 @@
+{
+  "pass": 4840,
+  "binary_Levi_minimum_cycles": 1080,
+  "ternary_induced_K33_witnesses": 360,
+  "incidence_definition": "A binary minimum word/four-cycle is incident with a ternary K3,3 witness exactly when its four quotient-line vertices are contained in the six quotient-line vertices of that induced K3,3.",
+  "binary_cycle_degree": 3,
+  "K33_degree": 9,
+  "total_incidence": 3240,
+  "biregular_design": "1080_3 - 360_9",
+  "incidence_graph_connected": true,
+  "incidence_matrix_ranks": {
+    "F2": 324,
+    "F3": 359,
+    "F5": 360,
+    "F7": 360
+  },
+  "four_cycles_per_K33": 9,
+  "K33_per_four_cycle": 3,
+  "shared_Levi_edge_relation_tests": {
+    "1": {"regular":true,"degree":192,"strongly_regular":false,"adjacent_common_neighbor_values":[30,31,36]},
+    "2": {"regular":true,"degree":88,"strongly_regular":false},
+    "3": {"regular":true,"degree":24,"strongly_regular":false},
+    "4": {"regular":true,"degree":16,"strongly_regular":false}
+  },
+  "association_falsifier": "The partition of pairs solely by number of shared Levi edges is not an association scheme: for the shared-one-edge relation, A_1^2 has three different values 30,31,36 on adjacent pairs in that same relation.",
+  "theorem": "The suggestive 1080=3*360 count is promoted to an explicit objectwise incidence theorem: every binary Levi minimum four-cycle lies in exactly three induced K3,3 ternary homology witnesses, and every induced K3,3 contains exactly nine binary minimum four-cycles. The resulting 1080-by-360 incidence graph is connected and has exact modular ranks 324,359,360,360 over F2,F3,F5,F7.",
+  "boundary": "The 360 K3,3 objects are the canonical ternary projective weight-6 witnesses of Pass4808, not asserted to exhaust the full ternary minimum quotient shell."
+}
