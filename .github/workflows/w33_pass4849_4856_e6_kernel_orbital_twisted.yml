@@ -1,0 +1,81 @@
+name: Passes 4849-4856 E6 kernel orbital twisted lift
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4849_4852_4854_4855_4856_e6_kernel_code.py'
+      - 'analysis/w33_pass4850_levi_minimum_orbital_wedderburn.py'
+      - 'analysis/w33_pass4851_code399_full_automorphism.py'
+      - 'analysis/w33_pass4853_ternary_incidence_golay_twisted_lift.py'
+      - 'tests/test_w33_pass4849_4856_e6_kernel_orbital_twisted.py'
+      - '.github/workflows/w33_pass4849_4856_e6_kernel_orbital_twisted.yml'
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4849_4852_4854_4855_4856_e6_kernel_code.py'
+      - 'analysis/w33_pass4850_levi_minimum_orbital_wedderburn.py'
+      - 'analysis/w33_pass4851_code399_full_automorphism.py'
+      - 'analysis/w33_pass4853_ternary_incidence_golay_twisted_lift.py'
+      - 'tests/test_w33_pass4849_4856_e6_kernel_orbital_twisted.py'
+      - '.github/workflows/w33_pass4849_4856_e6_kernel_orbital_twisted.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pass4849-4856-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install exact-analysis dependencies
+        run: python -m pip install --disable-pip-version-check numpy scipy networkx sympy pytest
+      - name: Execute producers independently
+        shell: bash
+        run: |
+          set +e
+          LOG=analysis/PASS4849_4856_RUN.log
+          STATUS=analysis/PASS4849_4856_RUN.status
+          : > "$LOG"
+          rc=0
+          run_one() {
+            echo "===== $* =====" | tee -a "$LOG"
+            "$@" 2>&1 | tee -a "$LOG"
+            here=${PIPESTATUS[0]}
+            echo "rc=$here" | tee -a "$LOG"
+            if [ "$here" -ne 0 ]; then rc=1; fi
+          }
+          run_one python analysis/w33_pass4849_4852_4854_4855_4856_e6_kernel_code.py
+          run_one python analysis/w33_pass4850_levi_minimum_orbital_wedderburn.py
+          run_one python analysis/w33_pass4851_code399_full_automorphism.py
+          run_one python analysis/w33_pass4853_ternary_incidence_golay_twisted_lift.py
+          run_one pytest -q tests/test_w33_pass4849_4856_e6_kernel_orbital_twisted.py
+          echo "$rc" > "$STATUS"
+          exit 0
+      - name: Preserve exact evidence on direct runs
+        if: github.event_name != 'pull_request'
+        shell: bash
+        run: |
+          git config user.name 'w33-evidence-bot'
+          git config user.email 'w33-evidence-bot@users.noreply.github.com'
+          git add analysis/PASS4849_4856_RUN.log analysis/PASS4849_4856_RUN.status
+          for f in \
+            data/PART_W33_PASS4849_4852_4854_4855_4856_E6_KERNEL_CODE.json \
+            data/PART_W33_PASS4850_LEVI_MINIMUM_ORBITAL_WEDDERBURN.json \
+            data/PART_W33_PASS4851_CODE399_FULL_AUTOMORPHISM.json \
+            data/PART_W33_PASS4853_TERNARY_INCIDENCE_GOLAY_TWISTED_LIFT.json
+          do
+            test -f "$f" && git add "$f"
+          done
+          if ! git diff --cached --quiet; then
+            git commit -m 'Materialize Passes 4849-4856 exact evidence'
+            git pull --rebase origin master
+            git push origin HEAD:master
+          fi
+      - name: Enforce aggregate status
+        run: test "$(cat analysis/PASS4849_4856_RUN.status)" -eq 0
