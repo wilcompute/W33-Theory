@@ -1,0 +1,15 @@
+{
+  "pass": 4945,
+  "base_graph": "complement of W33 on the 40 Steiner fibers",
+  "edges": 540,
+  "connection": "each W33 nonedge carries the intrinsic R2 perfect matching, hence an S3 transport after local fiber labels are chosen",
+  "fundamental_cycle_holonomy": {
+    "group_order": 6,
+    "group": "S3",
+    "all_six_permutations_seen": true,
+    "non_tree_cycle_count": 501,
+    "order3_four_cycle_witness": [0,1,5,11,[1,2,0]]
+  },
+  "theorem": "The canonical perfect matchings across W33 nonedges define a genuine non-flat S3 connection on the 40 Steiner fibers. After any local labeling of each three-element fiber, the fundamental-cycle transports generate all of S3. Consequently no global relabeling can trivialize all 540 nonedge matchings, and the connection does not reduce globally to C3 or C2.",
+  "boundary": "The edge permutations depend on local labels, but the conjugacy class of the holonomy group and its order are gauge invariant."
+}
