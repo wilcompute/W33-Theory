@@ -1,0 +1,10 @@
+{
+  "45_point_table": {"entropy_bits": 116.32331253245202,"independent_local_binary_bits": 135,"independent_local_binary_overhead_bits": 18,"native_mixed_radix": "45 trits + 45 bits","optimal_global_fixed_binary_bits": 117,"state_count": 103945637534048876111514866313854976},
+  "boundary": "Information/control accounting theorem. It does not assert a particular FPGA/photonic implementation realizes the entropy bound, and Landauer cost is not incurred by reversible routing unless information is erased.",
+  "compiler": {"capability": "removes all local representative ambiguity while preserving the diagonal PGSp action certified in Pass4861","decode": "two-stage affine port map: optional reflection i->-i followed by trit rotation i->i+r","table_free_option": "If hardware supplies a deterministic coordinate-derived matching rule, the 6^45 table need not be stored; that rule is extra physical/placement structure and is not supplied by the intrinsic code."},
+  "landauer_symbolic": {"boundary": "Thermodynamic lower bound applies only to logically irreversible reset/erasure, not to reversible routing itself.","plus_chirality": "k_B T (45 ln 6 + ln 2)","port_table_reset_minimum": "45 k_B T ln 6"},
+  "local_selector": {"affine_rule": "i -> (-1)^b i + r mod 3","group": "S3 ~= AGL(1,3) ~= F3 : F2","native_state": "one trit r plus one bit b","states": 6},
+  "pass": 4872,
+  "theorem": "The minimal S3-breaking port datum has an exact qutrit-native compiler: every local three-port matching is the affine map i->(-1)^b i+r over F3, so the 45-point selector table is exactly 45 trits plus 45 bits. An arbitrary global table has 6^45 states, Shannon information 45 log2(6)=116.323... bits, and therefore needs at least 117 fixed binary bits globally (or 135 bits if each point is encoded independently in 3 bits). Adding the global chirality bit raises the optimum to 118 bits.",
+  "with_global_chirality": {"entropy_bits": 117.32331253245202,"native_mixed_radix": "45 trits + 46 bits","optimal_global_fixed_binary_bits": 118,"state_count": 207891275068097752223029732627709952}
+}
