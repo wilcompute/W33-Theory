@@ -1,4 +1,4 @@
-# Passes 4924--4936 reservation
+# Passes 4924--4937 reservation
 
 This reservation reconciles the local Track-A lane with the canonical remote
 Passes 4826--4872 and preserves the parallel Passes 4926--4927 witness without
@@ -16,7 +16,9 @@ The collision-free ownership map is:
 - 4933: local former Pass 4857 certificate-guard near miss;
 - 4934--4935: local former Passes 4866--4867 four-cycle count and digest-convention boundary;
 - 4936: exact rational matrix units and chart-independent panel-family checksums on
-  the Pass-4334 rank-48 chamber carrier.
+  the Pass-4334 rank-48 chamber carrier;
+- 4937: identify the Pass-4864 adjoint ten-space as the square-zero tangent
+  kernel over the dual numbers and construct the exact affine PGSp controller.
 
 Four earlier local reservation-only commits for 4833--4864 and the local
 4865--4872 reservation are superseded by this mapping. Canonical remote pass
@@ -27,3 +29,7 @@ Pass 4936 is reserved for an exact native-GAP witness. Its required falsifiers
 are failure of any matrix-unit product, packet-algebra dimension other than four,
 failure of either compressed panel-family identity, or promotion of an aggregate
 relation to an individual selector/runtime claim without an intertwining map.
+
+Pass 4937 must distinguish the additive square-zero kernel from its transported
+Lie bracket, prove the group orders and action kernel exactly, and remain a
+finite controller construction rather than a continuum gauge-field claim.

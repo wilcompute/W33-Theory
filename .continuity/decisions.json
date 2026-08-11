@@ -117287,5 +117287,146 @@
       "source": "cli",
       "timestamp": "2026-08-11T21:42:57.835Z"
     }
+  },
+  {
+    "id": "57cb621d-0059-4ef8-8a6c-c3a956349666",
+    "question": "What does reservation commit 3c2282097 protect?",
+    "answer": "Commit 3c2282097 reserves the collision-free Pass4924-4936 block after the canonical remote merge, preserves Pass4926-4927 for the parallel witness, records the exact old-to-new mapping through 4935, and reserves Pass4936 for the native-GAP chamber matrix-unit theorem.",
+    "timestamp": "2026-08-11T21:43:14.783Z",
+    "tags": [
+      "3c2282097",
+      "commit",
+      "namespace",
+      "pass4936",
+      "reservation"
+    ],
+    "files": [],
+    "status": "active",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "metadata": {
+      "source": "cli",
+      "commitHash": "3c2282097",
+      "status": "active"
+    },
+    "commitHashes": [
+      "3c2282097"
+    ],
+    "history": [
+      {
+        "timestamp": "2026-08-11T21:43:14.784Z",
+        "action": "created"
+      }
+    ],
+    "provenance": {
+      "author": {
+        "name": "Wil",
+        "email": "wiljd4@gmail.com"
+      },
+      "source": "cli",
+      "timestamp": "2026-08-11T21:43:14.779Z"
+    }
+  },
+  {
+    "id": "44ee3e15-364e-4f8c-94f9-3ef7c9508dfd",
+    "question": "Why add the Pass 4936 native GAP owner?",
+    "answer": "The new witness reconstructs the 160 W33 chambers exactly, splits the Pass 4324 four-dimensional packet algebra with Pass 4334 point and line idempotents into literal M2(Q) matrix units, and checks the HoloBox HP/HL family aggregates as packet reflections. It keeps individual selector labels, guest execution, recursive composition, security, and physics outside the proved scope.",
+    "timestamp": "2026-08-11T21:45:56.948Z",
+    "tags": [
+      "gap",
+      "holobox",
+      "matrix-units",
+      "pass4936",
+      "scope",
+      "security",
+      "w33",
+      "why"
+    ],
+    "files": [],
+    "status": "active",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "metadata": {
+      "source": "cli",
+      "status": "active"
+    },
+    "commitHashes": [],
+    "history": [
+      {
+        "timestamp": "2026-08-11T21:45:56.949Z",
+        "action": "created"
+      }
+    ],
+    "entities": {
+      "technologies": [],
+      "patterns": [],
+      "concepts": [
+        "security"
+      ]
+    },
+    "provenance": {
+      "author": {
+        "name": "Wil",
+        "email": "wiljd4@gmail.com"
+      },
+      "source": "cli",
+      "timestamp": "2026-08-11T21:45:56.943Z"
+    }
+  },
+  {
+    "id": "f63a5076-a9b3-4ffc-922e-062f1677bfa9",
+    "question": "Why extend the reconciliation reservation through Pass 4937?",
+    "answer": "After a fresh GitKraken fetch/pull showed remote work only through reserved Pass4869, Pass4937 was free. It is reserved to test the Pass4864 adjoint ten-space as the 3^10 square-zero symplectic tangent kernel and to construct its finite PGSp affine controller, with explicit separation between additive kernel, Lie bracket, and any unbuilt runtime or continuum interpretation.",
+    "timestamp": "2026-08-11T21:46:13.279Z",
+    "tags": [
+      "adjoint",
+      "controller",
+      "dual-numbers",
+      "gap",
+      "pass4937",
+      "reservation",
+      "why"
+    ],
+    "files": [],
+    "status": "active",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "metadata": {
+      "source": "cli",
+      "status": "active"
+    },
+    "commitHashes": [],
+    "history": [
+      {
+        "timestamp": "2026-08-11T21:46:13.281Z",
+        "action": "created"
+      }
+    ],
+    "provenance": {
+      "author": {
+        "name": "Wil",
+        "email": "wiljd4@gmail.com"
+      },
+      "source": "cli",
+      "timestamp": "2026-08-11T21:46:13.265Z"
+    }
   }
 ]
