@@ -15,10 +15,16 @@ next to it.
 
 WHAT IT DOES
 ------------
-Finds every .tex with a `\\documentclass` (the standalone ones -- `*_body.tex` and the
-`manuscripts/tex/part*.tex` fragments are includes and are skipped), compiles each in a
-scratch directory so the tree is untouched, and reports pass/fail with the first error line.
+Finds every standalone document -- a root .tex that nothing else includes AND from which a
+`\\documentclass` is reachable through its include chain -- compiles each in place with
+`--outdir` so the tree is untouched, and reports pass/fail with the first real error line.
 
+That definition is the third one.  The first two both skipped the project's three largest
+manuscripts, which are WRAPPERS around bodies; see `standalone_tex`.  `--selftest` pins the
+classification against known cases, which is what would have caught all three misses.
+
+    py -3 scripts/compile_sweep.py --selftest
+    py -3 scripts/compile_sweep.py --includes     # unresolved \\input targets
     py -3 scripts/compile_sweep.py [--jobs N]
 """
 
@@ -129,10 +135,128 @@ def compile_one(p: Path):
         shutil.rmtree(tmp, ignore_errors=True)
 
 
+
+def missing_includes():
+    r"""Every \input target that does not resolve, with the nearest name that does.
+
+    Added Pass 4805. Two of the project's three main manuscripts referenced inserts that do
+    not exist -- \input{analysis/BT2305_five_continuations_insert} where the file is
+    BT2305_five_frontiers_insert, and BT2475_seven_frontiers_insert where it is
+    BT2475_five_frontiers_insert. Near-miss names: "continuations" for "frontiers", "seven"
+    for "five". Both halted the build at the first bad include, so everything after it was
+    never typeset and nothing said so.
+
+    Reporting the nearest existing name matters more than reporting the miss: a missing
+    include is ambiguous between "file was deleted" and "name was typed wrong", and those
+    need different fixes.
+    """
+    import difflib
+
+    have = {q.stem for q in ROOT.rglob("*.tex")}
+    out = []
+    for p_ in sorted(ROOT.glob("*.tex")) + sorted(ROOT.glob("*_body.tex")):
+        try:
+            src = p_.read_text(encoding="utf-8", errors="replace")
+        except OSError:
+            continue
+        live = "\n".join(l for l in src.splitlines() if not l.lstrip().startswith("%"))
+        for tgt in INPUT_RE.findall(live):
+            stem = tgt.split("/")[-1]
+            stem = stem[:-4] if stem.endswith(".tex") else stem
+            if stem in have:
+                continue
+            near = difflib.get_close_matches(stem, have, n=1, cutoff=0.6)
+            out.append({"file": p_.name, "target": tgt,
+                        "nearest": near[0] if near else None})
+    return out
+
+
+def selftest() -> int:
+    r"""Planted faults the STANDALONE DETECTOR must get right.
+
+    This function has been wrong three times, twice while wired into CI:
+
+      v1  reported ten failures whose "error" was a Fontconfig warning off stderr.
+      v1  copied sources to a scratch tree with a guessed dependency list, missing
+          analysis/*.tex and root *.png -- three more false failures.
+      v1  required \documentclass in the file, so the three MAIN manuscripts, which are
+          wrappers around bodies, were swept by nothing while it reported 20/20.
+      v2  "not included by anything" swept in nine orphan fragments.
+
+    Every one of those was a classification error, and none would have survived a test that
+    asked the function to classify known cases.
+    """
+    import shutil
+    import tempfile
+
+    tmp = Path(tempfile.mkdtemp(prefix="sweep_st_"))
+    files = {
+        "doc_plain.tex": "\\documentclass{article}\n\\begin{document}Hi\\end{document}\n",
+        "wrapper.tex": "\\providecommand{\\X}{x}\n\\input{wrapper_body.tex}\n",
+        "wrapper_body.tex": "\\documentclass{article}\n\\begin{document}B\\end{document}\n",
+        "orphan_fragment.tex": "\\section{Loose}\nNo preamble anywhere.\n",
+        "included_frag.tex": "\\section{Used}\n",
+        "uses_frag.tex": ("\\documentclass{article}\n\\begin{document}\n"
+                          "\\input{included_frag}\n\\end{document}\n"),
+    }
+    for name, body in files.items():
+        (tmp / name).write_text(body.replace("\\\\", "\\"), encoding="utf-8")
+
+    global ROOT
+    saved = ROOT
+    ROOT = tmp
+    try:
+        got = {q.name for q in standalone_tex()}
+    finally:
+        ROOT = saved
+
+    want = {"doc_plain.tex", "wrapper.tex", "uses_frag.tex"}
+    cases = [
+        ("plain document", "doc_plain.tex", True),
+        ("WRAPPER around a body", "wrapper.tex", True),
+        ("the body itself", "wrapper_body.tex", False),
+        ("orphan fragment", "orphan_fragment.tex", False),
+        ("included fragment", "included_frag.tex", False),
+        ("document using a fragment", "uses_frag.tex", True),
+    ]
+    ok = True
+    print("  selftest -- standalone classification\n")
+    for label, name, expect in cases:
+        hit = name in got
+        good = hit == expect
+        ok &= good
+        print(f"    {label:28s} standalone={str(hit):5s} want={str(expect):5s} "
+              f"{'PASS' if good else 'FAIL'}")
+
+    print("""
+  THE WRAPPER AND THE BODY ARE THE TWO THAT MATTER, and they are the pair every earlier
+  version got backwards. A wrapper has no \\documentclass and IS a document; a body has one
+  and is NOT. Any rule keying on content alone, or on the '_body' suffix alone, gets exactly
+  one of them wrong -- and the repository's three largest manuscripts are wrappers.
+
+  ITS LIMIT: this tests CLASSIFICATION, not compilation. A file correctly identified as
+  standalone can still fail to build for reasons this says nothing about, and the Fontconfig
+  and missing-dependency bugs were in the compile path, not here.""")
+    shutil.rmtree(tmp, ignore_errors=True)
+    return 0 if ok else 1
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--jobs", type=int, default=3)
+    ap.add_argument("--selftest", action="store_true")
+    ap.add_argument("--includes", action="store_true",
+                    help="audit \\input targets that do not resolve")
     a = ap.parse_args()
+    if a.selftest:
+        return selftest()
+    if a.includes:
+        bad = missing_includes()
+        for b in bad:
+            near = f"  nearest: {b['nearest']}" if b["nearest"] else ""
+            print(f"  {b['file']}: \\input{{{b['target']}}} does not resolve{near}")
+        print(f"\n  {len(bad)} unresolved include(s)")
+        return 0
     if not TECTONIC.exists():
         print(f"  tectonic not found at {TECTONIC}")
         return 1

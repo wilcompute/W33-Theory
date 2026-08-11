@@ -42,6 +42,15 @@ jobs:
           sudo mv tectonic /usr/local/bin/
           tectonic --version
 
+      - name: Self-test the classifier
+        run: |
+          # This script has been wrong three times, twice while wired into this workflow.
+          # Every failure was a misclassification, and none would have survived this.
+          python scripts/compile_sweep.py --selftest
+
+      - name: Unresolved includes
+        run: python scripts/compile_sweep.py --includes
+
       - name: Sweep
         run: |
           # the script looks for tectonic at a Windows path by default
