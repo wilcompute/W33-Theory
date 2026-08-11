@@ -1,0 +1,86 @@
+name: Passes 4809-4816 Golay homology decoder continuation
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4809_*'
+      - 'analysis/w33_pass4810_*'
+      - 'analysis/w33_pass4811_*'
+      - 'analysis/w33_pass4813_*'
+      - 'analysis/w33_pass4814_*'
+      - 'analysis/w33_pass4815_*'
+      - 'analysis/w33_pass4816_*'
+      - 'analysis/PASS4809_4816_*'
+      - 'data/PART_W33_PASS4809_*'
+      - 'data/PART_W33_PASS4810_*'
+      - 'data/PART_W33_PASS4811_*'
+      - 'data/PART_W33_PASS4813_*'
+      - 'data/PART_W33_PASS4814_*'
+      - 'data/PART_W33_PASS4815_*'
+      - 'data/PART_W33_PASS4816_*'
+      - 'data/w33_public_frontier_pass4809_4816.json'
+      - 'docs/golay-homology-decoder-orientation.html'
+      - 'tools/integrate_pass4809_4816.py'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - '.github/workflows/w33_pass4809_4816_golay_decoder.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pass4809-4816-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install finite-model dependencies
+        run: python -m pip install --disable-pip-version-check numpy networkx sympy
+      - name: Recompute closed Passes 4809-4811 and 4813-4816
+        shell: bash
+        run: |
+          set -euo pipefail
+          : > analysis/PASS4809_4816_RUN.log
+          for script in \
+            analysis/w33_pass4809_complete_weight6_homology_shell.py \
+            analysis/w33_pass4810_hierarchical_golay_levi_decoder.py \
+            analysis/w33_pass4811_global_golay_extension_chirality.py \
+            analysis/w33_pass4813_q9_psp_blt_split.py \
+            analysis/w33_pass4814_bonkers_oriented_27_cover.py \
+            analysis/w33_pass4815_bonkers_k33_multidesign.py \
+            analysis/w33_pass4816_bonkers_decoder_reconstructs_homology.py
+          do
+            echo "===== $script =====" | tee -a analysis/PASS4809_4816_RUN.log
+            python "$script" 2>&1 | tee -a analysis/PASS4809_4816_RUN.log
+          done
+      - name: Materialize public theorem card
+        run: |
+          python tools/integrate_pass4809_4816.py
+          test "$(grep -c 'id=\"pass4809-4816-golay-homology-decoder\"' docs/index.html)" -eq 1
+          test -s docs/golay-homology-decoder-orientation.html
+      - uses: WtfJoke/setup-tectonic@v3
+        with: {github-token: '${{ secrets.GITHUB_TOKEN }}'}
+      - name: Compile canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "/tmp/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+      - name: Commit regenerated evidence and index card
+        shell: bash
+        run: |
+          git config user.name 'w33-evidence-bot'
+          git config user.email 'w33-evidence-bot@users.noreply.github.com'
+          git add analysis/PASS4809_4816_RUN.log docs/index.html
+          for f in data/PART_W33_PASS4809_*.json data/PART_W33_PASS4810_*.json data/PART_W33_PASS4811_*.json data/PART_W33_PASS4813_*.json data/PART_W33_PASS4814_*.json data/PART_W33_PASS4815_*.json data/PART_W33_PASS4816_*.json; do
+            test -f "$f" && git add "$f"
+          done
+          if ! git diff --cached --quiet; then
+            git commit -m 'Materialize Passes 4809-4816 exact evidence and theorem card'
+            git pull --rebase origin master
+            git push origin HEAD:master
+          fi
