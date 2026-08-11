@@ -1,0 +1,18 @@
+{
+  "classes": [
+    {"PSp_orbit_size": 239112, "PSp_orbits_in_full_class": 1, "PSp_stabilizer": 7200, "PgammaO_stabilizer": 28800, "name": "Linear", "outer_image_order": 4},
+    {"PSp_orbit_size": 1195560, "PSp_orbits_in_full_class": 1, "PSp_stabilizer": 1440, "PgammaO_stabilizer": 5760, "name": "K1", "outer_image_order": 4},
+    {"PSp_orbit_size": 17216064, "PSp_orbits_in_full_class": 1, "PSp_stabilizer": 100, "PgammaO_stabilizer": 400, "name": "Fi/Mondello", "outer_image_order": 4}
+  ],
+  "Fi_generator_outer_labels": [[1,0],[0,0],[1,1],[1,1],[1,0],[1,1]],
+  "Fi_outer_image_order": 4,
+  "K1_generator_outer_labels": [[1,1],[0,1],[0,0],[1,0],[1,1],[0,1],[0,0],[0,1],[0,1],[1,1]],
+  "K1_outer_image_order": 4,
+  "Linear_outer_image_order": 4,
+  "outer_quotient": "C2 x C2 (orthogonal spinor/similitude, Frobenius)",
+  "pass": 4813,
+  "PgammaO_order": 6886425600,
+  "prior_art_boundary": "Betten supplies the complete PΓO classification, representatives, stabilizer matrices/orders, and names. This pass adds the outer-quotient evaluation and PSp orbit conclusion; it does not claim the original BLT classification.",
+  "PSp_order": 1721606400,
+  "theorem": "None of the three q=9 full semilinear BLT/minimum-shell classes splits under PSp(4,9). Linear, K1, and Fi/Mondello are already single PSp orbits of sizes 239112, 1195560, and 17216064, with PSp stabilizers 7200, 1440, and 100."
+}
