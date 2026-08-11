@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-r"""Passes 4839-4840 -- how far the splitlines() hazard reaches, and what this session's
+r"""Passes 4929-4930 -- how far the splitlines() hazard reaches, and what this session's
 tooling was actually built for.
 
-  4839  Pass 4827's self-test found that Python's splitlines() treats FORMFEED as a line
+  4929  Pass 4925's self-test found that Python's splitlines() treats FORMFEED as a line
         break, which defeated a scanner looking for formfeeds.  The same call appears 50
         times across scripts/.  Most are harmless -- splitting subprocess output, which
         contains no control bytes.  The ones that matter read FILE CONTENT and report LINE
@@ -12,10 +12,10 @@ tooling was actually built for.
         This repository has files with those bytes: 19 .md and 85 .txt carry formfeeds as
         PDF-extraction artifacts.
 
-  4840  A harder question.  Counting this session's new tooling by what it was built to
+  4930  A harder question.  Counting this session's new tooling by what it was built to
         catch: how much of it exists because of a mistake made in this same session?
 
-    py -3 analysis/w33_pass4839_4840_splitlines_and_what_the_tooling_is_for.py
+    py -3 analysis/w33_pass4929_4930_splitlines_and_what_the_tooling_is_for.py
 """
 
 from __future__ import annotations
@@ -43,11 +43,11 @@ CTRL = ("\x0c", "\x0b", "\x1c", "\x1d", "\x1e", "\x85")
 
 def main() -> int:
     print("=" * 78)
-    print("Passes 4839-4840")
+    print("Passes 4929-4930")
     print("=" * 78)
 
-    # ---- 4839: which guards are exposed? ---------------------------------
-    print("\n  PASS 4839 -- splitlines() on file content, with line numbers reported\n")
+    # ---- 4929: which guards are exposed? ---------------------------------
+    print("\n  PASS 4929 -- splitlines() on file content, with line numbers reported\n")
     exposed, benign = [], []
     for p in sorted((ROOT / "scripts").glob("*.py")):
         try:
@@ -101,8 +101,8 @@ def main() -> int:
     to guards, made quickly, is how the inversions and the collapsed escapes got in. The
     list is the deliverable.""")
 
-    # ---- 4840: what is the tooling for? ----------------------------------
-    print("\n  PASS 4840 -- what this session's new tooling was built to catch\n")
+    # ---- 4930: what is the tooling for? ----------------------------------
+    print("\n  PASS 4930 -- what this session's new tooling was built to catch\n")
     NEW = {
         "check_search_power.py": "corpus (Pass 4680's null)",
         "check_layer_conformance.py": "corpus (blueprint may-claim table)",
@@ -145,20 +145,20 @@ def main() -> int:
     happens again.""")
 
     out = {
-        "boundary": ("4839 classifies by static pattern -- 'reads file content' and "
+        "boundary": ("4929 classifies by static pattern -- 'reads file content' and "
                      "'enumerates splitlines' are regex judgements and may miss a guard "
                      "that does both across several statements. No guard is fixed here. "
-                     "4840's attribution of each tool to a corpus or session fault is a "
+                     "4930's attribution of each tool to a corpus or session fault is a "
                      "judgement I made about my own work, which is the least reliable kind"),
-        "pass_4839_exposed_guards": exposed,
-        "pass_4839_exposed_count": len(exposed),
-        "pass_4839_corpus_files_with_splitting_byte": affected,
-        "pass_4839_corpus_files_checked": checked,
-        "pass_4840_new_tools": NEW,
-        "pass_4840_session_caused": sess,
-        "pass_4840_fraction_session_caused": round(len(sess) / len(NEW), 2),
+        "pass_4929_exposed_guards": exposed,
+        "pass_4929_exposed_count": len(exposed),
+        "pass_4929_corpus_files_with_splitting_byte": affected,
+        "pass_4929_corpus_files_checked": checked,
+        "pass_4930_new_tools": NEW,
+        "pass_4930_session_caused": sess,
+        "pass_4930_fraction_session_caused": round(len(sess) / len(NEW), 2),
     }
-    fp = ROOT / "data" / "PART_W33_PASS4839_4840_SPLITLINES_AND_TOOLING.json"
+    fp = ROOT / "data" / "PART_W33_PASS4929_4930_SPLITLINES_AND_TOOLING.json"
     fp.write_text(cert_util.dumps(out), encoding="utf-8")
     print(f"\nwrote {fp.relative_to(ROOT).as_posix()}")
     return 0

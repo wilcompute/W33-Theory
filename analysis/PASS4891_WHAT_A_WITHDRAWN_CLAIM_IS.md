@@ -17,8 +17,8 @@ Three exclusions follow from it, and each removes something the earlier counts i
   because a claim stood and fell.
 - **A commit is not the unit.** Pass 4795 published two claims that later failed, and one
   commit withdrawing both is two withdrawals, not one.
-- **A tool's false positive is not a claim** unless it was reported as a finding. Pass 4855's
-  ten "hash mismatches" became a finding the moment I wrote them down; Pass 4857's "five
+- **A tool's false positive is not a claim** unless it was reported as a finding. Pass 4932's
+  ten "hash mismatches" became a finding the moment I wrote them down; Pass 4933's "five
   stale" likewise. Both count.
 
 ## The count
@@ -34,10 +34,10 @@ Three exclusions follow from it, and each removes something the earlier counts i
 | 5 | the Hoffman deficit at odd q equals q | 4795 | 4800 — α(W(3,5)) = 18, not 21; deficit 8 |
 | 6 | 720 = 36 × 20 is a coset partition by Sz(2) | 4795 | 4797 — 6 ovoids, stabiliser 120 |
 | 7 | eight certificates are unverifiable from birth | 4728 | 4801 — all eight verify |
-| 8 | sixteen literature-priority novelty claims | 4804 | 4841 — zero of sixteen |
+| 8 | sixteen literature-priority novelty claims | 4804 | 4931 — zero of sixteen |
 | 9 | the six ovoids are the synthematic totals | 4799 | 4813 — they are the six stars |
-| 10 | ten registry entries are hash mismatches | 4855 | 4857 — pointer semantics, not self-digest |
-| 11 | five registry pointers are stale | 4857 | 4873 — the registry is correct; one certificate is stale |
+| 10 | ten registry entries are hash mismatches | 4932 | 4933 — pointer semantics, not self-digest |
+| 11 | five registry pointers are stale | 4933 | 4873 — the registry is correct; one certificate is stale |
 
 ## What the number is worth
 
@@ -55,7 +55,7 @@ Pass 4882 now has a guard for.
 
 The alternative to eleven withdrawals is not zero withdrawals; it is eleven claims still
 standing. Pass 4761 found a retraction that sat unpropagated for two hundred passes, and
-Pass 4841 found a corpus in which the phrase "the first" is used sixteen times and never
+Pass 4931 found a corpus in which the phrase "the first" is used sixteen times and never
 once against the literature. Those are what a low correction rate looks like from inside.
 
 ## Boundary

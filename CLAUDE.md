@@ -217,7 +217,7 @@ comparison object, never from their result:
 | pass | I reported | cause | invariant that would have caught it |
 |---|---|---|---|
 | 4824 | 540 eight-cycles vs their 1,080 | divided by 2 twice | a cycle found from its least vertex is found **twice** |
-| 4866 | 5 registry digests unverifiable | looked up `sha256` when the file declared `sha256_without_hash_field` | the canonical list has **three** names |
+| 4934 | 5 registry digests unverifiable | looked up `sha256` when the file declared `sha256_without_hash_field` | the canonical list has **three** names |
 | 4913 | 52 projective E₆ roots vs their 36 | root set not closed under negation | 72 roots give **36** pairs |
 
 **Before comparing against another lane's number, state one invariant your own object must

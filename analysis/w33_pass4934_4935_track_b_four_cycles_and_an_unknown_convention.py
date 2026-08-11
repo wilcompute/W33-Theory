@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
-"""Passes 4866-4867 -- verify Track B's 1,080 four-cycles, and report a convention I cannot
+"""Passes 4934-4935 -- verify Track B's 1,080 four-cycles, and report a convention I cannot
 determine.
 
-  4866  Track B's newest packet states that the 1,080 minimum words of their
+  4934  Track B's newest packet states that the 1,080 minimum words of their
         [1620,64,96]_2 code are the Levi 8-cycles of GQ(4,2) and, equivalently, "all 1,080
         four-cycles of SRG(27,10,1,5)".  That second graph is Q(5,2), built in this lane at
         Pass 4562 over GF(2).  Pass 4824 verified their Levi 8-cycle count from H(3,4); this
         checks the other half of the same identity from the dual side.
 
-  4867  Pass 4857 found five registry entries whose recorded sha256 matches nothing this
+  4935  Pass 4933 found five registry entries whose recorded sha256 matches nothing this
         lane can compute.  Eight serialisations were tried.  None matches.  The honest
         report is that the convention is unknown and needs its producer, not that the
         entries are stale.
 
-    py -3 analysis/w33_pass4866_4867_track_b_four_cycles_and_an_unknown_convention.py
+    py -3 analysis/w33_pass4934_4935_track_b_four_cycles_and_an_unknown_convention.py
 """
 
 from __future__ import annotations
@@ -73,11 +73,11 @@ def count_four_cycles(g: igraph.Graph) -> int:
 
 def main() -> int:
     print("=" * 78)
-    print("Passes 4866-4867")
+    print("Passes 4934-4935")
     print("=" * 78)
 
-    # ---- 4866 -----------------------------------------------------------
-    print("\n  PASS 4866 -- four-cycles of SRG(27,10,1,5) = Q(5,2)\n")
+    # ---- 4934 -----------------------------------------------------------
+    print("\n  PASS 4934 -- four-cycles of SRG(27,10,1,5) = Q(5,2)\n")
     pts, lines = P62.build_q52()
     g = graph_of(pts, lines)
     prm = PP.srg_params(g)
@@ -108,8 +108,8 @@ def main() -> int:
     counts are 1,080 in constructions that share nothing with their code -- and Q(5,2) and
     H(3,4) are dual to each other, which is why the two counts have any right to coincide.""")
 
-    # ---- 4867 -----------------------------------------------------------
-    print("\n  PASS 4867 -- the registry digest convention, still unknown\n")
+    # ---- 4935 -----------------------------------------------------------
+    print("\n  PASS 4935 -- the registry digest convention, still unknown\n")
     reg = ROOT / "data" / "w33_pass_namespace_registry_v2.d" / "1876.json"
     tried = []
     if reg.is_file():
@@ -153,7 +153,7 @@ def main() -> int:
     and git shows both files written the same day in single commits, so nothing changed
     underneath the entry.
 
-    THE HONEST REPORT IS 'CONVENTION UNKNOWN', NOT 'STALE'. Pass 4857 nearly labelled these
+    THE HONEST REPORT IS 'CONVENTION UNKNOWN', NOT 'STALE'. Pass 4933 nearly labelled these
     stale, which would have been the third false positive in one checker from assuming a
     key name implies a convention. There is no evidence they are wrong -- only that this
     lane cannot verify them, which is a different statement and belongs to whoever wrote
@@ -163,21 +163,21 @@ def main() -> int:
     sha256 field?""")
 
     out = {
-        "boundary": ("4866 verifies COUNTS, not the identification: Track B claims the same "
+        "boundary": ("4934 verifies COUNTS, not the identification: Track B claims the same "
                      "1,080 objects are both Levi 8-cycles and SRG(27,10,1,5) four-cycles, "
-                     "and a bijection is not exhibited here. 4867 reports a negative -- "
+                     "and a bijection is not exhibited here. 4935 reports a negative -- "
                      "eight serialisations tried, none matches -- which establishes that "
                      "this lane cannot verify the registry digests, NOT that they are wrong"),
-        "pass_4866": {"geometry": "Q(5,2)", "srg": list(prm),
+        "pass_4934": {"geometry": "Q(5,2)", "srg": list(prm),
                       "track_b_claim": claimed, "computed": n4,
                       "agree": n4 == claimed,
                       "companion": "Pass 4824 verified 1,080 Levi 8-cycles from H(3,4)"},
-        "pass_4867": {"registry_sample": "1876.json", "serialisations_tried": tried,
+        "pass_4935": {"registry_sample": "1876.json", "serialisations_tried": tried,
                       "any_match": any(t["matches"] for t in tried),
                       "verdict": "convention unknown; needs the registry producer",
                       "not_a_verdict": "these entries are NOT shown to be stale"},
     }
-    fp = ROOT / "data" / "PART_W33_PASS4866_4867_FOUR_CYCLES_AND_CONVENTION.json"
+    fp = ROOT / "data" / "PART_W33_PASS4934_4935_FOUR_CYCLES_AND_CONVENTION.json"
     fp.write_text(cert_util.dumps(out), encoding="utf-8")
     print(f"\nwrote {fp.relative_to(ROOT).as_posix()}")
     return 0

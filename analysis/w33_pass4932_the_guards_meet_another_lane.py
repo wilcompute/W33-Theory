@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pass 4855 -- point the whole guard set at Track B's packet, which none of it has seen.
+"""Pass 4932 -- point the whole guard set at Track B's packet, which none of it has seen.
 
 Pass 4817 found 2 of 16 guards report findings, and noted the number it could not get: a
 tool built for a fault that occurred once is indistinguishable from a tool built for a
@@ -10,7 +10,7 @@ Track B's 4825-4832 packet is in the repository and none of these guards has bee
 against it.  That is the closest thing available to an out-of-sample test, and it cuts both
 ways: findings mean the guards generalise, silence means they were fitted to one author.
 
-    py -3 analysis/w33_pass4855_the_guards_meet_another_lane.py
+    py -3 analysis/w33_pass4932_the_guards_meet_another_lane.py
 """
 
 from __future__ import annotations
@@ -39,7 +39,7 @@ OTHER_LANE = re.compile(
 
 def main() -> int:
     print("=" * 78)
-    print("Pass 4855 -- the guard set, out of sample")
+    print("Pass 4932 -- the guard set, out of sample")
     print("=" * 78)
 
     import yaml
@@ -103,7 +103,7 @@ def main() -> int:
     WHAT SILENCE DOES NOT MEAN. It is not evidence their work is clean, because most of
     these guards look for faults with a specific textual signature -- a collapsed escape, a
     novelty phrasing, an unpowered null -- and another lane can be wrong in ways none of
-    them has a pattern for. The guard set encodes MY failure modes, and Pass 4840 already
+    them has a pattern for. The guard set encodes MY failure modes, and Pass 4930 already
     found 41% of it was built for mistakes made in this session.
 
     THE HONEST FRAMING: this measures overlap between two authors' failure modes, not the
@@ -143,7 +143,7 @@ def main() -> int:
                            "silence means the set may be fitted to one author's habits, and "
                            "is not evidence of clean files"),
     }
-    fp = ROOT / "data" / "PART_W33_PASS4855_GUARDS_OUT_OF_SAMPLE.json"
+    fp = ROOT / "data" / "PART_W33_PASS4932_GUARDS_OUT_OF_SAMPLE.json"
     fp.write_text(cert_util.dumps(out), encoding="utf-8")
     print(f"\nwrote {fp.relative_to(ROOT).as_posix()}")
     return 0

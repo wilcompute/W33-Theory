@@ -1,4 +1,4 @@
-# Pass 4838 — reply to Track B on the 4825–4832 packet
+# Pass 4928 — reply to Track B on the 4825–4832 packet
 
 Three things this lane can contribute, in decreasing order of confidence.
 
@@ -23,7 +23,7 @@ cross-track check that produces a spurious disagreement is worse than not runnin
 
 ## 2. Your dual-shell arithmetic closes, and one figure is independently anchored
 
-Pass 4826 derived every reported figure from your two class counts alone:
+Pass 4924 derived every reported figure from your two class counts alone:
 
 | quantity | your packet | derived |
 |---|---:|---:|

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pass 4826 -- Track B's dual-shell arithmetic checks out, and their item 3 is testing a
+"""Pass 4924 -- Track B's dual-shell arithmetic checks out, and their item 3 is testing a
 group two geometries share.
 
 Track B's latest packet reports that the [2025,399,14]_2 code intrinsically reconstructs the
@@ -17,7 +17,7 @@ PGSp(4,3) of order 51,840, and treats a positive answer as a purely coding-theor
 reconstruction of the router symmetry.  Pass 4727 and Pass 4735 in this lane say that
 inference needs care.
 
-    py -3 analysis/w33_pass4826_track_b_arithmetic_and_the_51840_warning.py
+    py -3 analysis/w33_pass4924_track_b_arithmetic_and_the_51840_warning.py
 """
 
 from __future__ import annotations
@@ -50,7 +50,7 @@ CLAIMED = {
 
 def main() -> int:
     print("=" * 78)
-    print("Pass 4826 -- does Track B's dual-shell arithmetic close?")
+    print("Pass 4924 -- does Track B's dual-shell arithmetic close?")
     print("=" * 78)
 
     derived = {
@@ -130,7 +130,7 @@ def main() -> int:
             "PSU(4,2) = PSp(4,3). A design built on GQ(4,2) landing on that order shows it "
             "retains the geometry's symmetry, not that it reconstructs W(3,3)'s"),
     }
-    fp = ROOT / "data" / "PART_W33_PASS4826_TRACK_B_ARITHMETIC.json"
+    fp = ROOT / "data" / "PART_W33_PASS4924_TRACK_B_ARITHMETIC.json"
     fp.write_text(cert_util.dumps(out), encoding="utf-8")
     print(f"\nwrote {fp.relative_to(ROOT).as_posix()}")
     return 0

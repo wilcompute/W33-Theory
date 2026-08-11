@@ -11,7 +11,7 @@ extracted from three spurious cross-lane disagreements.
         another lane.
 
   4923  Three cross-lane checks this session reported a disagreement that was MY error --
-        Pass 4824 (divided by two twice), Pass 4866 (looked up the wrong key), Pass 4913
+        Pass 4824 (divided by two twice), Pass 4934 (looked up the wrong key), Pass 4913
         (root system not closed under negation).  Each time the other lane's number was
         right.  The fix each time was a one-line invariant statable before running.
 

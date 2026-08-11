@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pass 4841 -- I read the sixteen literature-priority collisions. None of them is one.
+"""Pass 4931 -- I read the sixteen literature-priority collisions. None of them is one.
 
 Pass 4804 ran the corrected novelty guard over 1,705 analysis files, found 47 novelty
 claims colliding with the encyclopedia, split them into "internal sequencing" and
@@ -32,7 +32,7 @@ priority in sentences.  CLAUDE.md already says the dangerous form is implicit fr
 "four of the six failures were implicit framing, which no regex sees" -- and the reading
 turns that from a caveat into the whole story: there is no explicit half to catch.
 
-    py -3 analysis/w33_pass4841_i_read_the_sixteen_and_none_is_a_priority_claim.py
+    py -3 analysis/w33_pass4931_i_read_the_sixteen_and_none_is_a_priority_claim.py
 """
 
 from __future__ import annotations
@@ -73,7 +73,7 @@ READING = [
 
 def main() -> int:
     print("=" * 78)
-    print("Pass 4841 -- reading the sixteen")
+    print("Pass 4931 -- reading the sixteen")
     print("=" * 78)
 
     print(f"\n  {'file':44s} {'verdict':>9s}  why")
@@ -132,7 +132,7 @@ def main() -> int:
                        "sentences, and the rediscovery risk is entirely implicit framing, "
                        "which CLAUDE.md already names as the half no regex sees"),
     }
-    fp = ROOT / "data" / "PART_W33_PASS4841_READING_THE_SIXTEEN.json"
+    fp = ROOT / "data" / "PART_W33_PASS4931_READING_THE_SIXTEEN.json"
     fp.write_text(cert_util.dumps(out), encoding="utf-8")
     print(f"\nwrote {fp.relative_to(ROOT).as_posix()}")
     return 0

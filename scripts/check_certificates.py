@@ -67,7 +67,7 @@ SELF_DIGEST_KEYS = ("sha256_without_hash_field", "sha256", "universe_sha256")
 
 # POINTER SEMANTICS. A registry entry uses `sha256` to name the digest of the certificate
 # it REGISTERS, not its own. Such a file can never satisfy a self-digest check, and the guard
-# reported 10 of them as HASH MISMATCH (Pass 4855) -- found only by aiming it at another
+# reported 10 of them as HASH MISMATCH (Pass 4932) -- found only by aiming it at another
 # lane's files, since this lane writes no registry entries.
 #
 # This is the second false-positive family in this checker from the same assumption: that a
@@ -117,7 +117,7 @@ def stale_pointers(paths: list[Path]) -> list[dict]:
     The first version of this function called both STALE. It could not: for 5 of the 10
     registry entries the target carries no digest at all, so there is nothing to be stale
     against. Asserting a convention from a key name is what produced this checker's other
-    two false-positive families (Passes 4801, 4855) and it nearly produced a third here.
+    two false-positive families (Passes 4801, 4932) and it nearly produced a third here.
     """
     out = []
     for p in sorted(paths):
@@ -150,11 +150,11 @@ def stale_pointers(paths: list[Path]) -> list[dict]:
         # all, and the recorded value matches none of raw bytes, compact JSON, or indent=2
         # JSON of the target. So the convention is unknown, not violated -- and asserting a
         # convention from a key name is the exact mistake that produced this checker's other
-        # two false-positive families (Passes 4801 and 4855).
+        # two false-positive families (Passes 4801 and 4932).
         # THE TARGET'S SELF-DIGEST MAY BE UNDER ANY OF THE CANONICAL NAMES. Looking only
         # for "sha256" reported 5 entries as unverifiable when the target used
         # "sha256_without_hash_field" -- the FOURTH time in this checker that a key name
-        # was assumed rather than looked up (Passes 4801, 4855, 4857, and here).
+        # was assumed rather than looked up (Passes 4801, 4932, 4933, and here).
         actual = None
         if isinstance(td, dict):
             for k in SELF_DIGEST_KEYS:
@@ -288,7 +288,7 @@ def selftest() -> int:
     ik.write_text(json.dumps(live_out, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     cases.append(("integer-key trap (Pass 2482)", ik, True))
 
-    # 5. a POINTER entry: sha256 names ANOTHER file's digest, not its own. Pass 4855
+    # 5. a POINTER entry: sha256 names ANOTHER file's digest, not its own. Pass 4932
     #    found 10 of these reported as HASH MISMATCH, because the checker read the key
     #    name as implying self-digest semantics.
     ptr = tmp / "registry_entry.json"

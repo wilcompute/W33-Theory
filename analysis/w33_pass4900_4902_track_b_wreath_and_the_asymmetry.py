@@ -82,7 +82,7 @@ def main() -> int:
 
     WHAT THIS DOES NOT CHECK. That their code's low shells ARE 405 four-classes, 135
     three-classes and 135 (4,4,4,3) relations. Given that combinatorial input the group
-    follows; the input itself needs their generator matrix. Pass 4826 verified the
+    follows; the input itself needs their generator matrix. Pass 4924 verified the
     arithmetic of those counts is self-consistent, which is a weaker statement.""")
 
     # ---- 4902: which direction does the checking run? --------------------
@@ -90,9 +90,9 @@ def main() -> int:
     mine_on_theirs = [
         ("4709", "their SRG(45,12,3,3) and SRG(27,10,1,5) are a dual pair"),
         ("4824", "six Levi invariants of GQ(4,2), all agreeing"),
-        ("4826", "their dual-shell arithmetic closes"),
-        ("4855", "the guard set aimed at their files"),
-        ("4866", "their 1,080 four-cycles of SRG(27,10,1,5)"),
+        ("4924", "their dual-shell arithmetic closes"),
+        ("4932", "the guard set aimed at their files"),
+        ("4934", "their 1,080 four-cycles of SRG(27,10,1,5)"),
         ("4900", "their S_3^135 : S_135 wreath product"),
     ]
     # anything in their files citing a Pass number from this lane's ranges
@@ -139,7 +139,7 @@ def main() -> int:
     good record for them and says nothing about whether my own output would survive the
     same treatment.
 
-    THE ASK, stated once: run your checks against this lane's files. Pass 4855 found a
+    THE ASK, stated once: run your checks against this lane's files. Pass 4932 found a
     false-positive family in my own guard the moment it met someone else's data, and the
     same is likely true in reverse.""")
 

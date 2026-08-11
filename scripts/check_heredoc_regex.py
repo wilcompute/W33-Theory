@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-r"""Refuse regex edits written through a shell heredoc.  Pass 4827.
+r"""Refuse regex edits written through a shell heredoc.  Pass 4925.
 
 WHY THIS EXISTS, AND WHY A DETECTOR IS NOT ENOUGH
 -------------------------------------------------

@@ -7,8 +7,8 @@ WHY THIS EXISTS
 reduce to one habit: assuming a key name implies a convention.
 
   Pass 4801  numeric keys read as evidence the producer used integer keys
-  Pass 4855  `sha256` read as self-digest inside registry POINTER entries
-  Pass 4857  a mismatch read as staleness when the target had no digest at all
+  Pass 4932  `sha256` read as self-digest inside registry POINTER entries
+  Pass 4933  a mismatch read as staleness when the target had no digest at all
   Pass 4873  the target's digest looked up under ONE name when THREE are canonical
 
 The fourth is the sharpest: that file defines `SELF_DIGEST_KEYS = ("sha256_without_hash_
