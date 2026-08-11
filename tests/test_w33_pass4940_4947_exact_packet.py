@@ -6,11 +6,13 @@ def load(name):return json.loads((DATA/name).read_text())
 
 def test_4940_radius_hardword():
     d=load('PART_W33_PASS4940_EXACT_HARDWORD_COVER_DISTANCE.json')
-    assert d['cp_sat']['status']=='OPTIMAL'
-    assert d['cp_sat']['objective_distance']==d['cp_sat']['best_bound']
-    assert d['cp_sat']['objective_distance']>=124
+    s=d['exact_search']
+    assert s['status']=='EXHAUSTED'
+    assert s['method']=='deterministic bitset branch-and-bound'
+    assert s['objective_distance']==134
+    assert s['search_nodes']>=8_000_000
     assert d['twist_cross_certificate']['g_x_equals_x_plus_sigma']
-    assert d['covering_radius_update']['upper_bound']==179
+    assert d['covering_radius_update']=={'certified_lower_bound':134,'exact_radius_closed':False,'previous_lower_bound':124,'upper_bound':179}
 
 def test_4941_quartic():
     d=load('PART_W33_PASS4941_QUARTIC_AMBIGUITY_CANCELLATION.json')
