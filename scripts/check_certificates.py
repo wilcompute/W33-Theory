@@ -148,7 +148,16 @@ def stale_pointers(paths: list[Path]) -> list[dict]:
         # JSON of the target. So the convention is unknown, not violated -- and asserting a
         # convention from a key name is the exact mistake that produced this checker's other
         # two false-positive families (Passes 4801 and 4855).
-        actual = td.get("sha256") if isinstance(td, dict) else None
+        # THE TARGET'S SELF-DIGEST MAY BE UNDER ANY OF THE CANONICAL NAMES. Looking only
+        # for "sha256" reported 5 entries as unverifiable when the target used
+        # "sha256_without_hash_field" -- the FOURTH time in this checker that a key name
+        # was assumed rather than looked up (Passes 4801, 4855, 4857, and here).
+        actual = None
+        if isinstance(td, dict):
+            for k in SELF_DIGEST_KEYS:
+                if isinstance(td.get(k), str):
+                    actual = td[k]
+                    break
         if actual is None:
             candidates = {
                 "raw": hashlib.sha256(tp.read_bytes()).hexdigest(),
