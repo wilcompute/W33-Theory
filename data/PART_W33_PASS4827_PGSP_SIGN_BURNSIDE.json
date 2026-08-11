@@ -1,0 +1,48 @@
+{
+  "pass": 4827,
+  "carrier": "64-dimensional F2 sign cohomology of the triangle-filled GQ(4,2) point graph",
+  "affine_origin": "the all-odd edge signing; each triangle has odd edge sum and the signing is fixed by every graph automorphism",
+  "PSp": {
+    "matrix_image_order": 25920,
+    "faithful": true,
+    "global_fixed_subspace_dimension": 0,
+    "affine_fixed_sign_sectors": 1,
+    "Burnside_orbit_count": 711679993497112,
+    "element_fixed_dimension_census": {
+      "4":4320,
+      "6":5760,
+      "8":720,
+      "10":1440,
+      "12":8784,
+      "16":3860,
+      "20":480,
+      "24":240,
+      "32":315,
+      "64":1
+    }
+  },
+  "PGSp": {
+    "matrix_image_order": 51840,
+    "faithful": true,
+    "global_fixed_subspace_dimension": 0,
+    "affine_fixed_sign_sectors": 1,
+    "Burnside_orbit_count": 355840805040988,
+    "element_fixed_dimension_census": {
+      "4":4320,
+      "6":10080,
+      "8":12384,
+      "10":5760,
+      "12":10224,
+      "14":1440,
+      "16":6020,
+      "20":480,
+      "24":240,
+      "32":855,
+      "40":36,
+      "64":1
+    }
+  },
+  "Burnside_formula": "#orbits = |G|^{-1} sum_g 2^{dim Fix(g)}",
+  "theorem": "The affine binary sign-sector moduli admit an exact group quotient without enumerating 2^64 vectors. Translation by the all-odd PGSp-fixed solution identifies the affine space with the faithful 64-dimensional linear sign-cohomology module. Burnside gives 711679993497112 PSp orbits and 355840805040988 PGSp orbits. Because the global linear fixed space is zero, the all-odd signing is the unique fully PSp-fixed and unique fully PGSp-fixed affine sign sector.",
+  "boundary": "This closes the binary sign-sector quotient. The independent 225-dimensional twisted F3 deformation/projective moduli are a separate characteristic-three problem."
+}
