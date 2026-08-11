@@ -1,0 +1,25 @@
+{
+  "pass": 4941,
+  "inputs": {
+    "PSp_quadratic_Hom_dimension": 2,
+    "PGSp_quadratic_Hom_dimension": 0,
+    "outer_action_on_quadratic_plane": "-I_2",
+    "intrinsic_bracket_Hom_dimension": 1
+  },
+  "quartic_operation": {
+    "formula": "F(x)=[q1(x),q2(x)]",
+    "homogeneous_degree": 4,
+    "change_of_quadratic_basis": "F scales by det of the GL2 basis change",
+    "PGSp_outer_parity": "even: two outer minus signs cancel",
+    "nonzero": true,
+    "image_span_dimension": 10,
+    "full_rank_witness_class": "three-support Steiner inputs"
+  },
+  "support_structure": {
+    "two_support_inputs_zero": true,
+    "fiber_constant_40_space_annihilated_by_each_quadratic_channel": true,
+    "reason": "for every W33 adjacency edge, the sum of each Q10-valued quadratic map over its complete 3x3 Steiner lift is zero in F3"
+  },
+  "theorem": "Let q1,q2 be any basis of the two-dimensional PSp-equivariant quadratic Steiner-to-adjoint Hom plane. The intrinsic Lie bracket defines the quartic F(x)=[q1(x),q2(x)]. Under a GL2 basis change F scales only by the determinant, so it is a canonical projective quartic line. The PGSp outer involution multiplies both qi by -1 and therefore fixes F. Exact evaluation on three-support inputs spans all ten dimensions of Q10, while every two-support input and the entire 40-dimensional fiber-constant subspace vanish. Thus the quadratic ambiguity cancels at degree four without selecting an arbitrary quadratic channel.",
+  "boundary": "Finite characteristic-three polynomial-module theorem. Projective uniqueness still leaves an overall nonzero scalar and supplies no continuum normalization or physical coupling."
+}
