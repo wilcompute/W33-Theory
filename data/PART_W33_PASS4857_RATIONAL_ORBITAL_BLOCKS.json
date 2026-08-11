@@ -1,0 +1,29 @@
+{
+  "pass": 4857,
+  "PGSp": {
+    "group": "PGSp(4,3) = W(E6) on the certified 36-root/double-six carrier",
+    "rational_Wedderburn": "Q^6 x M2(Q)^4 x M3(Q)^3",
+    "all_noncommutative_blocks_split": true,
+    "dimension_Q": 49,
+    "splitting_certificate": "Benard Schur-index-one theorem for exceptional Weyl groups, applied to the certified W(E6) action; Pass4850 supplies the block multiplicities and Q^13 center."
+  },
+  "PSp": {
+    "field_K": "Q(sqrt(-3))",
+    "rational_Wedderburn": "Q^3 x K^2 x M2(Q)^2 x M2(K) x M3(Q)^4",
+    "all_noncommutative_blocks_split_over_their_centers": true,
+    "dimension_Q": 59,
+    "center": "Q^9 x K^3",
+    "quadratic_center_blocks": "two scalar K factors plus one M2(K) factor",
+    "splitting_certificate": "Restrict the Q-realizable W(E6) modules to the index-two PSp subgroup. For each quadratic-central restriction the commuting field K acts on the same rational module, making it a K-vector space of the exact matrix degree. The central-simple image therefore has full dimension n^2 over K inside End_K(V), forcing M_n(K), not a division algebra."
+  },
+  "complexification_check": {
+    "PSp": "Q^3 + K^2 -> C^7; M2(Q)^2 + M2(K) -> M2(C)^4; M3(Q)^4 -> M3(C)^4",
+    "PGSp": "Q^6 -> C^6; M2(Q)^4; M3(Q)^3"
+  },
+  "external_prior_art": {
+    "Benard_1971": "M. Benard, On the Schur indices of characters of the exceptional Weyl groups, Annals of Mathematics 94 (1971), 89-107.",
+    "scope": "Schur-index theorem is classical prior art; the repo result is its application to the explicitly reconstructed Pass4850 orbital algebra and the exact PSp/PGSp block allocation."
+  },
+  "theorem": "Every noncommutative rational simple factor of the Pass4850 orbital algebras is split over its center. PGSp gives Q^6 x M2(Q)^4 x M3(Q)^3. PSp gives Q^3 x Q(sqrt(-3))^2 x M2(Q)^2 x M2(Q(sqrt(-3))) x M3(Q)^4.",
+  "boundary": "Exact rational-algebra decomposition using Pass4850 finite structure plus Benard Schur-index prior art; not a new proof of Benard's Weyl-group theorem."
+}
