@@ -1,0 +1,39 @@
+{
+  "pass": 4821,
+  "code": "[2025,378,14]_2",
+  "parity_check": {
+    "rows":1647,
+    "rank":1647,
+    "local_rows":1620,
+    "global_rows":27,
+    "local_row_weights":{"2":1485,"4":135},
+    "global_row_weight":15,
+    "maximum_row_weight":15
+  },
+  "schedule": {
+    "depth":2,
+    "optimal":true,
+    "layer_A_checks":945,
+    "layer_B_checks":702,
+    "model":"checks in one layer must have disjoint physical-bit supports"
+  },
+  "local_code": {
+    "parameters":"[15,3,7]_2",
+    "syndromes":4096,
+    "candidates_per_syndrome":8,
+    "zero_syndrome_weight_distribution":{"0":1,"7":3,"8":3,"15":1}
+  },
+  "bounded_distance_decoder": {
+    "guaranteed_arbitrary_error_radius":6,
+    "worst_case_raw_candidate_bound":262144,
+    "algorithm":[
+      "measure the 1620 local and 27 global checks in two conflict-free layers",
+      "discard zero-local-syndrome cells; under total error weight <=6 they contain no nonzero local-code error",
+      "enumerate the eight local-coset candidates only on affected cells and prune total weight >6",
+      "use the 27 global syndrome bits to select the unique remaining candidate"
+    ],
+    "uniqueness":"distance 14 implies uniqueness through radius 6"
+  },
+  "theorem":"The [2025,378,14]_2 router code admits an explicit rank-1647 sparse parity-check matrix, an optimal two-layer conflict-free syndrome schedule, and a finite local-coset decoder correcting every pattern of at most six arbitrary physical bit errors.",
+  "boundary":"Schedule depth is exact only in the disjoint-support check model and is not a measured hardware clock depth; radius 6 is the classical bounded-distance guarantee, not a physical threshold."
+}
