@@ -1,0 +1,29 @@
+{
+  "pass": 4943,
+  "common_core": {
+    "group": "S6",
+    "order": 720,
+    "coordinate_set": "the same six labels 0..5",
+    "shared_duad_carrier": "15 two-subsets; adjacent-transposition generators agree coordinate-for-coordinate",
+    "marked_residue_extra_orbit": "20 three-subsets (triads)"
+  },
+  "marked_double_six_extension": {
+    "group": "S6 x C2",
+    "order": 1440,
+    "center_order": 2,
+    "extra_involution": "fixes all 15 duads and complements every 3-subset triad"
+  },
+  "duad_syntheme_extension": {
+    "group": "Aut(S6)=S6:2",
+    "order": 1440,
+    "center_order": 1,
+    "outer_involution": "Pass1848 exact bijection swaps the 15 duads with the 15 synthemes"
+  },
+  "crosswalk": {
+    "inner_S6_intertwiner": "identity on the six labels, hence identity on the 15 duads",
+    "extends_to_order1440_groups": false,
+    "obstruction": "the marked-residue involution centralizes S6 and fixes the duad orbit; the exceptional involution is noncentral and swaps duads with synthemes"
+  },
+  "theorem": "The Pass4869 marked-double-six shell and the Pass1848 duad-syntheme construction have a literal common S6 core, not merely an equal-order resemblance: after using the same six column labels, their S6 generators agree exactly on all 15 duads. The extensions diverge at the extra involution. One is the central triad-complement extension S6 x C2 on 15+20 objects; the other is the exceptional outer extension Aut(S6) on 15 duads plus 15 synthemes. Therefore the common S6 carrier is explicit, but no crosswalk fixing that carrier can identify the two order-1440 groups.",
+  "boundary": "Finite marked-coordinate crosswalk. Choosing the marked double-six and an ordering of its six opposite columns is extra coordinate data."
+}
