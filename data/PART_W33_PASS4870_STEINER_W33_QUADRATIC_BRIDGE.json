@@ -1,0 +1,37 @@
+{
+  "boundary": "Finite characteristic-three association-module theorem. The two-dimensional quadratic Hom space does not select a preferred physical coupling, normalization, or continuum field without additional structure.",
+  "intrinsic_three_cover": {
+    "PSp_action_on_quotient_order": 25920,
+    "Steiner_triangles": 120,
+    "adjacency_lift_pairs": 2160,
+    "between_adjacent_fibers": "all 9 pairs, i.e. K3,3",
+    "explicit_isomorphism_to_standard_W33": true,
+    "fiber_relation": "40 disjoint K3s",
+    "fiber_size": 3,
+    "fibers": 40,
+    "quotient": "SRG(40,12,2,4)"
+  },
+  "pass": 4870,
+  "quadratic_bridge": {
+    "Hom_PSp_Sym2H2_to_Q10_dimension": 2,
+    "field": "F3",
+    "interpretation": "there is a two-dimensional family of PSp-equivariant homogeneous quadratic maps H2(F3)->Q10, even though Pass4866 proved all linear maps vanish",
+    "nonzero_maps_surjective": true,
+    "orbit_fixed_space_table": {
+      "diagonal": {"Q10_fixed_dimension": 0,"orbit_size": 120,"stabilizer_order": 216},
+      "pair_120": {"Q10_fixed_dimension": 0,"orbit_size": 120,"stabilizer_order": 216},
+      "pair_1620": {"Q10_fixed_dimension": 0,"orbit_size": 1620,"stabilizer_order": 16},
+      "pair_2160": {"Q10_fixed_dimension": 2,"orbit_size": 2160,"stabilizer_order": 12},
+      "pair_3240": {"Q10_fixed_dimension": 0,"orbit_size": 3240,"stabilizer_order": 8}
+    },
+    "reason_Sym2_equals_quadratic": "2 is invertible in F3",
+    "support": "both dimensions occur exclusively on the 2160-pair W33-adjacency lift relation"
+  },
+  "steiner_pair_orbits": [
+    {"cross_edges": 0,"degree": 2,"role": "fiber relation: 40 disjoint K3s","size": 120,"triangle_intersection": 0},
+    {"cross_edges": 6,"degree": 27,"role": "nonadjacent-fiber refinement","size": 1620,"triangle_intersection": 1},
+    {"cross_edges": 6,"degree": 36,"role": "W33 adjacency lift: complete K3,3 between adjacent fibers","size": 2160,"triangle_intersection": 0},
+    {"cross_edges": 4,"degree": 54,"role": "nonadjacent-fiber refinement","size": 3240,"triangle_intersection": 0}
+  ],
+  "theorem": "The 120 Steiner triangles form an intrinsic 3-fiber refinement of W33. A 120-pair relation partitions them into 40 triples; the 2160-pair relation is exactly the complete K3,3 lift of adjacency on the quotient, and the quotient is explicitly isomorphic to W(3,3)=SRG(40,12,2,4) with faithful PSp(4,3) action. This same W33-adjacency relation supports the first nonlinear Steiner-to-adjoint bridge: Hom_PSp(Sym^2 H2,Q10) has dimension 2, while all other diagonal/pair orbit modules contribute zero. Thus the linear obstruction of Pass4866 is sharp: the first equivariant bridge occurs quadratically, mediated by the recovered W33 quotient."
+}

@@ -1,0 +1,49 @@
+name: Passes 4865-4873 exact packet release
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/PASS4865_4872_ternary_clique_cut_index_insert.html'
+      - 'analysis/PASS4870_steiner_w33_quadratic_index_insert.html'
+      - 'tools/integrate_pass4865_4872_public.py'
+      - 'tests/test_pass4865_4872_frozen_certificates.py'
+      - 'tests/test_pass4873_two_order1440_extensions.py'
+      - '.github/workflows/w33_pass4865_4872_release.yml'
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pass4865-4873-release-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  frozen-evidence-and-publication:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install regression dependencies
+        run: python -m pip install --disable-pip-version-check pytest
+      - name: Verify frozen exact certificates and shared manuscript frontier
+        run: pytest -q tests/test_pass4865_4872_frozen_certificates.py tests/test_pass4873_two_order1440_extensions.py
+      - name: Materialize public root cards
+        if: github.event_name != 'pull_request'
+        run: python tools/integrate_pass4865_4872_public.py
+      - name: Commit materialized root on direct runs
+        if: github.event_name != 'pull_request'
+        shell: bash
+        run: |
+          if git diff --quiet -- docs/index.html; then
+            echo 'Public root already materialized'
+            exit 0
+          fi
+          git config user.name 'w33-evidence-bot'
+          git config user.email 'w33-evidence-bot@users.noreply.github.com'
+          git add docs/index.html
+          git commit -m 'Materialize Passes 4865-4873 public root cards'
+          git pull --rebase origin master
+          git push origin HEAD:master

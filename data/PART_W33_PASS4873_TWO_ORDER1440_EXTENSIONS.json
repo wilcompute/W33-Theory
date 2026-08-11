@@ -1,0 +1,34 @@
+{
+  "boundary": "Finite group-extension theorem. It distinguishes the actions but does not choose one extension as a physical symmetry without an independently specified carrier.",
+  "direct_marked_residue_extension": {
+    "center_order": 2,
+    "central_involution": "fix duads; complement triads",
+    "element_order_census": {"1":1,"2":151,"3":80,"4":360,"5":144,"6":560,"10":144},
+    "group": "S6 x C2",
+    "involution_count": 151,
+    "order": 1440
+  },
+  "duad_syntheme_outer_extension": {
+    "alpha_squared_inner_conjugator": [1,4,3,2,5,0],
+    "center_order": 1,
+    "element_order_census": {"1":1,"2":111,"3":80,"4":360,"5":144,"6":240,"8":360,"10":144},
+    "group": "Aut(S6) = S6 : Out(S6)",
+    "involution_count": 111,
+    "involutive_outer_representatives_after_inner_adjustment": 36,
+    "order": 1440,
+    "outer_class_certificate": "an adjacent transposition of cycle type 2,1,1,1,1 maps to a triple transposition of type 2,2,2"
+  },
+  "nonisomorphism_certificates": {
+    "different_centers": "2 versus 1",
+    "different_complete_order_census": true,
+    "different_involution_counts": "151 versus 111",
+    "order8_elements": "direct has 0; outer extension has 360"
+  },
+  "pass": 4873,
+  "repo_bridge": {
+    "Pass1848": "the frozen duad-to-syntheme bijection reconstructs the exceptional outer automorphism class",
+    "Pass4869": "the marked double-six residue independently gives the direct product S6 x C2",
+    "warning": "the common numerical order 1440 is not an isomorphism; the two C2 extensions encode different operations"
+  },
+  "theorem": "The two order-1440 six-set symmetry extensions in the repo are provably different. The marked-double-six residue group is the direct product S6 x C2 with center order 2 and 151 involutions. The Pass1848 duad-syntheme carrier reconstructs the exceptional outer automorphism class and hence Aut(S6)=S6:2, which has trivial center, 111 involutions, and 360 elements of order 8. Equal order 1440 is therefore a count coincidence across two nonisomorphic extensions, not a shared group identification."
+}

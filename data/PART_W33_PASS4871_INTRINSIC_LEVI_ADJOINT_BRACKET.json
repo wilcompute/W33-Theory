@@ -1,0 +1,10 @@
+{
+  "Lie_checks": {"Jacobi_all_1000_basis_triples": true,"center_dimension": 0,"derived_dimension": 10,"perfect": true},
+  "boundary": "Finite characteristic-three Lie-algebra theorem. Uniqueness up to nonzero F3 scalar does not select a continuum normalization or physical gauge coupling.",
+  "comparison": "Pass4864's O5/Lambda2 construction is now an independent cross-certificate: the bracket is already forced up to F3^* scalar by the incidence-derived module action.",
+  "equivariant_alternating_products": {"PGSp_Hom_Lambda2Q_to_Q_dimension": 1,"PSp_Hom_Lambda2Q_to_Q_dimension": 1,"same_line_up_to_scalar": true,"unique_nonzero_map_rank": 10},
+  "module_dimension": 10,
+  "pass": 4871,
+  "source": "Levi H1 / oriented-K3,3 span over F3; no O5 coordinates used",
+  "theorem": "The ten-dimensional ternary Levi quotient carries a unique nonzero PSp- and PGSp-equivariant alternating product Lambda^2 Q10 -> Q10 up to scalar. That product is surjective, centerless, perfect, and satisfies Jacobi. Therefore the finite Lie algebra structure Q10 ~= sp4(F3) is intrinsic to the Levi incidence action; O5(3) coordinates are not needed to define the bracket."
+}

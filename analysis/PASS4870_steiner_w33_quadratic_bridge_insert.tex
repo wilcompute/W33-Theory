@@ -1,0 +1,81 @@
+% Pass4870 — intrinsic Steiner three-cover of W33 and first nonlinear adjoint bridge.
+\ifdefined\WDDPassFourEightSevenZeroLoaded
+  \expandafter\endinput
+\else
+  \gdef\WDDPassFourEightSevenZeroLoaded{1}%
+\fi
+
+\section{The Steiner-triangle three-cover of \texorpdfstring{$W(3,3)$}{W(3,3)} and the first nonlinear adjoint bridge}
+\label{sec:pass4870-steiner-w33-quadratic}
+
+Pass~4866 proved two facts that appeared, at first, to pull in opposite
+directions: the $120$ Steiner/maximal triangles form the full
+$H_2(-;\mathbb F_3)$ coordinate module of the double-six clique complex, but
+\[
+  \operatorname{Hom}_{PSp}(H_2,Q_{10})
+  =\operatorname{Hom}_{PSp}(Q_{10},H_2)=0.
+\]
+The linear obstruction is exact.  Pass~4870 determines the first nonlinear
+layer rather than bypassing that obstruction.
+
+The action of $PSp(4,3)$ on unordered pairs of Steiner triangles has four
+orbits, of sizes
+\[
+  120,\qquad1620,\qquad2160,\qquad3240,
+\]
+with per-triangle degrees $2,27,36,54$.  Their intrinsic incidence types are,
+respectively,
+\[
+  (|T\cap T'|,e_\times)=(0,0),(1,6),(0,6),(0,4),
+\]
+where $e_\times$ is the number of double-six-graph edges joining the two
+triangles.
+
+The $120$-pair relation is $40K_3$.  Hence the $120$ Steiner triangles split
+intrinsically into forty three-element fibers.  The $2160$-pair relation is
+then exactly the complete $K_{3,3}$ lift between adjacent fibers.  Quotienting
+by the three-element fibers gives a graph with
+\[
+  v=40,\qquad k=12,\qquad\lambda=2,\qquad\mu=4.
+\]
+An explicit graph isomorphism identifies this quotient with the standard
+symplectic $W(3,3)$ collinearity graph, and the induced projective symplectic
+action has order $25920$.  Thus the Steiner triangles are not merely a
+$120$-object exceptional count: they form an intrinsic three-fiber refinement
+of the original $W(3,3)$ substrate.
+
+Because $2$ is invertible in $\mathbb F_3$, equivariant homogeneous quadratic
+maps $H_2\to Q_{10}$ are equivalent to equivariant symmetric bilinear maps, or
+\[
+  \operatorname{Hom}_{PSp}(\operatorname{Sym}^2 H_2,Q_{10}).
+\]
+For a permutation module, $\operatorname{Sym}^2 H_2$ splits into the diagonal
+permutation module and the four unordered-pair orbit modules above.  The
+stabilizer orders and $Q_{10}$ fixed-space dimensions are
+\[
+\begin{array}{c|ccccc}
+\text{orbit}&\text{diagonal}&120&1620&2160&3240\\\hline
+|G_x|&216&216&16&12&8\\
+\dim Q_{10}^{G_x}&0&0&0&2&0.
+\end{array}
+\]
+Therefore
+\[
+  \boxed{\dim\operatorname{Hom}_{PSp}
+  (\operatorname{Sym}^2H_2,Q_{10})=2.}
+\]
+Both dimensions are supported exclusively on the $2160$-pair relation that
+lifts $W(3,3)$ adjacency.  Since $Q_{10}$ is irreducible, every nonzero map in
+this two-dimensional family is surjective.
+
+This gives a precise characteristic-three answer to the preceding obstruction:
+the first equivariant Steiner-to-adjoint bridge is quadratic, not linear, and
+the mediator is the recovered $W(3,3)$ quotient itself.
+
+\paragraph{Evidence firewall.}
+The producer is
+\texttt{analysis/w33\_pass4870\_steiner\_w33\_quadratic\_bridge.py}, with
+frozen certificate
+\texttt{data/PART\_W33\_PASS4870\_STEINER\_W33\_QUADRATIC\_BRIDGE.json}.
+The two-dimensional Hom space does not select a preferred normalization,
+physical coupling, or continuum field without extra structure.
