@@ -1,0 +1,59 @@
+{
+  "all_agree": true,
+  "boundary": "H(3,4) is built here over GF(4) from the Hermitian form; Track B's numbers are quoted from their packet and their CODE is not reconstructed. Agreement of graph invariants does not verify their code-theoretic claims -- only that the graph they describe is the one this lane builds",
+  "claimed_by_track_b": {
+    "cycle_dimension": 64,
+    "edge_connectivity": 3,
+    "eight_cycles": 1080,
+    "girth": 8,
+    "levi_edges": 135,
+    "levi_vertices": 72
+  },
+  "comparison": [
+    {
+      "agree": true,
+      "quantity": "levi_vertices",
+      "this_lane": 72,
+      "track_b": 72
+    },
+    {
+      "agree": true,
+      "quantity": "levi_edges",
+      "this_lane": 135,
+      "track_b": 135
+    },
+    {
+      "agree": true,
+      "quantity": "cycle_dimension",
+      "this_lane": 64,
+      "track_b": 64
+    },
+    {
+      "agree": true,
+      "quantity": "girth",
+      "this_lane": 8,
+      "track_b": 8
+    },
+    {
+      "agree": true,
+      "quantity": "edge_connectivity",
+      "this_lane": 3,
+      "track_b": 3
+    },
+    {
+      "agree": true,
+      "quantity": "eight_cycles",
+      "this_lane": 1080,
+      "track_b": 1080
+    }
+  ],
+  "computed_here": {
+    "cycle_dimension": 64,
+    "edge_connectivity": 3,
+    "eight_cycles": 1080,
+    "girth": 8,
+    "levi_edges": 135,
+    "levi_vertices": 72
+  },
+  "contribution_to_their_item_3": "|Aut(H(3,4))| = 51,840 was computed at Pass 4727, and the reason is the exceptional isomorphism PSU(4,2) = PSp(4,3). A coding-theoretic reconstruction landing on that order is therefore NOT evidence of contact with W(3,3) specifically; both geometries have the group independently"
+}
