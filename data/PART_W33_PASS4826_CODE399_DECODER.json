@@ -1,0 +1,32 @@
+{
+  "pass": 4826,
+  "code": "[2025,399,14]_2",
+  "outer_code": "W20+<1>=[27,21,3]_2",
+  "outer_dual": "W6=[27,6,12]_2",
+  "parity_check": {
+    "rows": 1626,
+    "rank": 1626,
+    "local_rows": 1620,
+    "global_rows": 6,
+    "global_row_weight_set": [180,240]
+  },
+  "explicit_schedule": {
+    "local_layers": 2,
+    "global_conflict_chromatic_number": 6,
+    "global_conflict_graph": "K6",
+    "total_depth_upper_bound": 8,
+    "global_optimality": "six separate global layers are necessary because every two distinct nonzero W6 checks intersect; combined local/global depth 8 is an explicit upper bound, not claimed globally minimum"
+  },
+  "bounded_distance_decoder": {
+    "guaranteed_arbitrary_error_radius": 6,
+    "local_syndromes": 4096,
+    "candidates_per_local_syndrome": 8,
+    "maximum_affected_cells": 6,
+    "raw_candidate_bound": 262144,
+    "global_syndrome_bits": 6,
+    "uniqueness_proof": "two weight<=6 candidates with identical local and six global syndromes differ by a [2025,399,14] codeword of weight <=12, contradicting d=14"
+  },
+  "theorem": "The maximal distance-14 invariant preimage [2025,399,14]_2 has rank-1626 parity checks: the unchanged 1620 local K6 checks plus six outer-dual W6 checks. The local eight-candidate decoder therefore extends unchanged and the six global syndrome bits uniquely decode every arbitrary physical error of weight at most six.",
+  "boundary": "The eight-layer schedule is a certified construction under the disjoint-support check model. Only the six-layer global part is proved minimum; no measured hardware timing or fault-tolerance threshold is inferred.",
+  "execution": "Exact algebra from the frozen Pass4819 outer-code lattice and Pass4821 local syndrome cosets; the producer analysis/w33_pass4826_4832_code399_decoder_dualshell.py independently regenerates the full matrices."
+}
