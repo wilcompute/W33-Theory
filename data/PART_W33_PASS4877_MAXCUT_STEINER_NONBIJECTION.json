@@ -1,0 +1,32 @@
+{
+  "pass":4877,
+  "maximum_cuts":{
+    "count":120,
+    "weight":216,
+    "PGSp_orbit_size":120,
+    "stabilizer_order":432,
+    "marked_chart_certificate":"duad state C6 has exactly two triad completions at weight 216",
+    "stabilizer_fixed_Steiner_triangles":0,
+    "stabilizer_order_census":{"1":1,"2":45,"3":26,"4":54,"6":90,"8":108,"12":108}
+  },
+  "Steiner_triangles":{
+    "count":120,
+    "PGSp_orbit_size":120,
+    "stabilizer_order":432,
+    "stabilizer_fixed_Steiner_triangles":1,
+    "stabilizer_order_census":{"1":1,"2":87,"3":26,"4":72,"6":210,"12":36}
+  },
+  "nonbijection":{
+    "same_cardinality":true,
+    "same_stabilizer_order":true,
+    "stabilizers_conjugate":false,
+    "PGSp_equivariant_bijection_exists":false,
+    "certificates":[
+      "maximum-cut stabilizer fixes no Steiner triangle; every conjugate of a Steiner stabilizer fixes one",
+      "maximum-cut stabilizer has 108 order-8 elements; Steiner stabilizer has none",
+      "complete element-order censuses differ"
+    ]
+  },
+  "theorem":"The 120 maximum cuts of the double-six graph and the 120 Steiner triangles are distinct transitive PGSp(4,3) G-sets. Both have stabilizer order 432, but the stabilizers are nonconjugate and have different element-order spectra: the maximum-cut stabilizer has 108 elements of order 8 and fixes no Steiner triangle, whereas a Steiner stabilizer has no order-8 elements and fixes exactly its defining triangle. Therefore no PGSp-equivariant bijection exists between the two 120-sets. The equality of counts is not an identification.",
+  "boundary":"Finite G-set obstruction. This rules out a canonical PGSp-equivariant identification; it does not rule out arbitrary coordinate-dependent bijections."
+}
