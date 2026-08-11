@@ -210,6 +210,21 @@ scanner looking for formfeeds, written with `splitlines()`, cannot find them —
 tracked files carry such bytes, so any guard reporting line numbers from `splitlines()`
 over file content reports them wrong past the first one. Use `split("\n")`.
 
+**Cross-lane comparison — three incidents, all mine (added Pass 4923).** Three times in one
+session a check against the other lane's number reported a disagreement that came from MY
+comparison object, never from their result:
+
+| pass | I reported | cause | invariant that would have caught it |
+|---|---|---|---|
+| 4824 | 540 eight-cycles vs their 1,080 | divided by 2 twice | a cycle found from its least vertex is found **twice** |
+| 4866 | 5 registry digests unverifiable | looked up `sha256` when the file declared `sha256_without_hash_field` | the canonical list has **three** names |
+| 4913 | 52 projective E₆ roots vs their 36 | root set not closed under negation | 72 roots give **36** pairs |
+
+**Before comparing against another lane's number, state one invariant your own object must
+satisfy and check it** — not the quantity under test, a structural fact you already know.
+A cross-lane check that reports a spurious disagreement is worse than not running one: the
+natural next move is to doubt the other lane, and they were right all three times.
+
 **Pass-number reservation (added after three renumbers in one day — 387→391→392).**
 Claim the number BEFORE computing, not after: push an empty commit
 `git commit --allow-empty -m "Pass NNN reserved: <topic> (<track>)"` as your

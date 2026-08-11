@@ -1,0 +1,57 @@
+{
+  "boundary": "4921 transfers alpha by ISOMORPHISM, verified by canonical form; no independence number is computed at 585 vertices and none could be. 4922 reports and does not repair -- the certificate belongs to another lane and this session has three examples of my reading of another lane's convention being wrong. 4923 is a census of my own errors and asserts nothing about anyone else's work",
+  "pass_4921": {
+    "alpha_q48": 65,
+    "alpha_w38": 65,
+    "hoffman": 65,
+    "method": "isomorphism transfer, not computation",
+    "q": 8,
+    "self_dual": true,
+    "srg": [
+      585,
+      72,
+      7,
+      9
+    ]
+  },
+  "pass_4922": {
+    "declared": "ac0e784eda0af4bf0caa13ef4b4eee027d65a23cb033490cfe2b67ec5b78480d",
+    "digest_key": "sha256_without_hash_field",
+    "file": "w33_pass1872_1876_five_frontiers.json",
+    "match": false,
+    "owner": "outer-doily-five-front-execution-track",
+    "recomputed": "029c7457279076621043ef16432af4d071804ba3a5e1c76b8ef00a1609dbfe96",
+    "registry_entries_affected": [
+      "1872",
+      "1873",
+      "1874",
+      "1875"
+    ]
+  },
+  "pass_4923": {
+    "incidents": [
+      {
+        "cause": "divided by 2 twice -- once for direction of travel, once by mistake",
+        "invariant": "a cycle counted from its least vertex is found exactly twice",
+        "object": "Levi eight-cycles",
+        "pass": "4824",
+        "reported": "reported 540 vs their 1,080"
+      },
+      {
+        "cause": "looked up 'sha256' when the target declared 'sha256_without_hash_field'",
+        "invariant": "the file's own SELF_DIGEST_KEYS lists three names",
+        "object": "registry digest",
+        "pass": "4866",
+        "reported": "reported 5 entries unverifiable"
+      },
+      {
+        "cause": "root set not closed under negation -- outer sign varied independently",
+        "invariant": "72 roots must give exactly 36 pairs",
+        "object": "E6 projective roots",
+        "pass": "4913",
+        "reported": "reported 52 pairs vs their 36"
+      }
+    ],
+    "rule": "before comparing against another lane's number, state one invariant your own comparison object must satisfy and check it -- not the quantity under test, a structural fact already known"
+  }
+}
