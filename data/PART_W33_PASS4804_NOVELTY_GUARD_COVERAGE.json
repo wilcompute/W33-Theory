@@ -1,0 +1,109 @@
+{
+  "boundary": "collision with the encyclopedia is not evidence a claim is false -- the encyclopedia containing a token says nothing about whether a specific construction is new. The literature/internal split is a heuristic written from ten examples and is applied HERE, not baked into the guard, precisely because a ten-example heuristic in a shared guard is how the previous inversion got in",
+  "coverage_before_pct": 44.7,
+  "files_scanned": 1705,
+  "literature_claims": [
+    {
+      "file": "2026-05-31_BREAKTHROUGH_CHAIN_summary.md",
+      "internal_sequencing": false,
+      "line": "For the first time, the substrate is being treated as a DYNAMICAL",
+      "newly_visible": true
+    },
+    {
+      "file": "2026-05-31_substrate_quantum_signature.md",
+      "internal_sequencing": false,
+      "line": "This is the first time the W(3,3) substrate has been studied as a",
+      "newly_visible": true
+    },
+    {
+      "file": "BT1056_chain_native_Q_operator.md",
+      "internal_sequencing": false,
+      "line": "This is not asserted to be the physical Higgs/Yukawa scalar. It is the first concrete W33 chain",
+      "newly_visible": true
+    },
+    {
+      "file": "BT1872_BT1874_summary.md",
+      "internal_sequencing": false,
+      "line": "This is the first bona fide finite CSS matrix code in the K12/F12 chain.",
+      "newly_visible": true
+    },
+    {
+      "file": "BT1872_dual_face_Z_checks.md",
+      "internal_sequencing": false,
+      "line": "So this is the first exact local CSS layer:",
+      "newly_visible": true
+    },
+    {
+      "file": "BT3670_BT3686_monster_tomotope_amalgamation.md",
+      "internal_sequencing": false,
+      "line": "This is the first structural explanation in this packet for the repeated 540 carrier count. It i",
+      "newly_visible": true
+    },
+    {
+      "file": "BT3670_BT3686_monster_tomotope_amalgamation.md",
+      "internal_sequencing": false,
+      "line": "This is the first exact non-scalar glue closure of the projector lattice: every local discrimina",
+      "newly_visible": true
+    },
+    {
+      "file": "BT3715_BT3721_carrier_tournament_process_budget_identification_scheduler_twirl.md",
+      "internal_sequencing": false,
+      "line": "This is the first fair same-degree tournament in the packet. It identifies a real W33 advantage:",
+      "newly_visible": true
+    },
+    {
+      "file": "BT4169_BT4176_discrete_c2_hawking_backreaction_gray_levi_casimir_axion.md",
+      "internal_sequencing": false,
+      "line": "Among the audited meshes, `N=29` is the first below 5 percent response-integration error. Its ph",
+      "newly_visible": true
+    },
+    {
+      "file": "BT781_cube_tomotope_48_split.md",
+      "internal_sequencing": false,
+      "line": "> against the PUBLISHED generators of `Gamma(T)` for the first time.",
+      "newly_visible": true
+    },
+    {
+      "file": "BT867_cache_split_transport_nonsplit_boundary.md",
+      "internal_sequencing": false,
+      "line": "operator. This is the first exact separation of the holonet's control plane",
+      "newly_visible": true
+    },
+    {
+      "file": "CANON_240_81_3.md",
+      "internal_sequencing": false,
+      "line": "is the first file to assert the full parameter string. Four minutes apart, same",
+      "newly_visible": true
+    },
+    {
+      "file": "PASS4495_4502_RESERVATION.md",
+      "internal_sequencing": false,
+      "line": "- **4497:** signed Hashimoto/Artin--Ihara expansion through `u^8`; `u^5` is the first coefficien",
+      "newly_visible": true
+    },
+    {
+      "file": "PASS456_Q5_COLLISION_ANATOMY.md",
+      "internal_sequencing": false,
+      "line": "**Breakthrough.** This is the first q=5 pair in the programme that is simultaneously nonisomorph",
+      "newly_visible": true
+    },
+    {
+      "file": "w33_pass1928_1933_the_phase_quantum_is_a_sixth.md",
+      "internal_sequencing": false,
+      "line": "Six items. The last one is the physics, and it is the first dimensionful anchor",
+      "newly_visible": true
+    },
+    {
+      "file": "w33_pass2496_2501_the_k8_criterion_and_the_gauss_sum_closes.md",
+      "internal_sequencing": false,
+      "line": "is the first route to a decision rather than another failed search.",
+      "newly_visible": true
+    }
+  ],
+  "newly_visible": 26,
+  "newly_visible_internal": 10,
+  "newly_visible_literature": 16,
+  "note": "the guard's earlier clean runs covered less than half the novelty assertions in this corpus, because the commonest phrasing was unmatchable",
+  "total_hits": 47,
+  "visible_before_4802": 21
+}

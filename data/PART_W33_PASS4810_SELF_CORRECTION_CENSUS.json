@@ -1,0 +1,87 @@
+{
+  "boundary": "classification is by commit-message keywords over commits in this session's window, so it measures what the messages SAY. A silent correction -- a claim quietly edited without a commit saying so -- is invisible to this, and would be the more worrying kind. The bugfix/self-correction split is a judgement encoded as two keyword sets",
+  "by_kind": {
+    "bugfix": 10,
+    "reservation": 12,
+    "result": 7,
+    "self-correction": 14
+  },
+  "commits": 43,
+  "corrections": [
+    {
+      "kind": "self-correction",
+      "sha": "3606e4a5a",
+      "subject": "Pass 4801: there were no born-broken certificates, and I had started \"fixing\" them"
+    },
+    {
+      "kind": "self-correction",
+      "sha": "729ff962a",
+      "subject": "Passes 4801-4805: the sweep that was wrong three times now has a self-test"
+    },
+    {
+      "kind": "self-correction",
+      "sha": "e05fd1295",
+      "subject": "Pass 4800: my deficit-q law is false, and the compile sweep was skipping the main papers"
+    },
+    {
+      "kind": "self-correction",
+      "sha": "7b57f327c",
+      "subject": "Pass 4799: duality does not preserve \"has an ovoid\" -- both dual pairs split"
+    },
+    {
+      "kind": "self-correction",
+      "sha": "8da41d436",
+      "subject": "Pass 4797: alpha separates the dual pair, and the coset arithmetic was a coincidence"
+    },
+    {
+      "kind": "self-correction",
+      "sha": "0f2db3bf2",
+      "subject": "Passes 4785, 4792: the self-duality sweep reaches zero, and a shadow checker"
+    },
+    {
+      "kind": "self-correction",
+      "sha": "81522ed5c",
+      "subject": "Passes 4769-4770: fix the live self-duality assertions, and close the gap that let them "
+    },
+    {
+      "kind": "self-correction",
+      "sha": "b47cde97e",
+      "subject": "Pass 4761: read the 26 candidates, found a retraction that never propagated"
+    },
+    {
+      "kind": "self-correction",
+      "sha": "a9179830e",
+      "subject": "Passes 4754-4755: W(3,q) over any prime power, and self-duality settled at q=4 and q=5"
+    },
+    {
+      "kind": "self-correction",
+      "sha": "32ab5b098",
+      "subject": "Passes 4729-4736: all 20 manuscripts build, and two of my own checkers were wrong again"
+    },
+    {
+      "kind": "self-correction",
+      "sha": "e4a82c910",
+      "subject": "Passes 4721-4728: manuscripts 14/20 -> 18/20, and the falsifier I gave Track B holds"
+    },
+    {
+      "kind": "self-correction",
+      "sha": "d83ce58c5",
+      "subject": "Passes 4707-4709, 4713-4720: guards audited, manuscripts swept, and this lane yields 468"
+    },
+    {
+      "kind": "self-correction",
+      "sha": "e95f54961",
+      "subject": "Passes 4691-4698: every pre-commit hook was dead for 14 days, and two of my own results "
+    },
+    {
+      "kind": "self-correction",
+      "sha": "f27413d00",
+      "subject": "Pass 4571: give the blueprint a layer map, map the VM onto the hardware, fix the README'"
+    }
+  ],
+  "lesson": "in every case the falsifying computation was named by the pass that made the claim; running it before publishing costs nothing extra",
+  "previously_claimed_from_memory": "three of my last five passes",
+  "self_correction_pct": 45.2,
+  "self_corrections": 14,
+  "substantive": 31
+}
