@@ -35,7 +35,8 @@
     {"kind":"id","token":"pass4737-4744-residue-router-breakthrough","source":"analysis/PASS4737_4744_residue_router_breakthrough_index_insert.html"},
     {"kind":"id","token":"pass4745-4752-invariant-bundle-code-capacity","source":"analysis/PASS4745_4752_invariant_bundle_code_capacity_index_insert.html"},
     {"kind":"id","token":"pass4769-4776-modular-moduli-cover-code-flow","source":"analysis/PASS4769_4776_modular_moduli_cover_code_flow_index_insert.html"},
-    {"kind":"id","token":"pass4785-4792-support12-grid-cycle-golay","source":"analysis/PASS4785_4792_support12_grid_cycle_golay_index_insert.html"}
+    {"kind":"id","token":"pass4785-4792-support12-grid-cycle-golay","source":"analysis/PASS4785_4792_support12_grid_cycle_golay_index_insert.html"},
+    {"kind":"id","token":"pass4817-4824-pgsp-loewy-code-flow-decoder","source":"analysis/PASS4817_4824_pgsp_loewy_code_flow_decoder_index_insert.html"}
   ],
   "standalone_public_pages": [
     {"token":"pass4461-4471-line-signing-apartment-parity-page","source":"docs/line-signing-apartment-parity.html"},
@@ -69,6 +70,7 @@
     {"token":"pass4737-4744-residue-router-breakthrough-page","source":"docs/residue-router-involution-code.html"},
     {"token":"pass4745-4752-invariant-bundle-code-capacity-page","source":"docs/invariant-cohomology-router-spectrum-coding-capacity.html"},
     {"token":"pass4769-4776-modular-moduli-cover-code-flow-page","source":"docs/modular-h1-s3-moduli-normalizer-code-flow.html"},
-    {"token":"pass4785-4792-support12-grid-cycle-golay-page","source":"docs/support12-grid-cycle-golay.html"}
+    {"token":"pass4785-4792-support12-grid-cycle-golay-page","source":"docs/support12-grid-cycle-golay.html"},
+    {"token":"pass4817-4824-pgsp-loewy-code-flow-decoder-page","source":"docs/pgsp-moduli-outer-code-outage-decoder.html"}
   ]
 }
