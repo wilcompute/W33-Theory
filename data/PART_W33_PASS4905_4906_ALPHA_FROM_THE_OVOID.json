@@ -1,0 +1,57 @@
+{
+  "alpha": 65,
+  "boundary": "alpha = 65 is established by a WITNESS (the 65 absolute points, verified pairwise non-collinear over all 2,080 pairs) meeting a SPECTRAL bound (Hoffman = q^2+1). No exhaustive search was run and none is possible at 585 vertices. The polarity's cycle type describes the representative found, not the geometry",
+  "bounds_meet": true,
+  "collinear_pairs": 0,
+  "hoffman": 65,
+  "independent": true,
+  "ovoid_first_12": [
+    0,
+    2,
+    19,
+    25,
+    37,
+    42,
+    53,
+    59,
+    66,
+    85,
+    90,
+    98
+  ],
+  "ovoid_size": 65,
+  "pairs_checked": 2080,
+  "polarity_cycle_type": {
+    "2": 585
+  },
+  "q": 8,
+  "srg": [
+    585,
+    72,
+    7,
+    9
+  ],
+  "table": {
+    "q=2": [
+      5,
+      5
+    ],
+    "q=3": [
+      7,
+      10
+    ],
+    "q=4": [
+      17,
+      17
+    ],
+    "q=5": [
+      18,
+      26
+    ],
+    "q=8": [
+      65,
+      65
+    ]
+  },
+  "why_this_matters": "585 vertices is far beyond exhaustive independence -- Pass 4800 needed 2,075 s for 156 and Pass 4812 failed at 112. A witness plus a spectral bound settles it in seconds"
+}
