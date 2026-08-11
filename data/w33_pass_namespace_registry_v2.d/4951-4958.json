@@ -1,0 +1,11 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [4951, 4958],
+  "slug": "radius_moment_gq_duality_holonomy_quartic_second_wave",
+  "title": "Radius moment bound, dual-GQ incidence, holonomy cohomology, quartic geometry, and second-wave probes",
+  "status": "RESERVED",
+  "owner": "openai-gpt56-sol",
+  "reserved_at": "2026-08-11",
+  "purpose": "Continue from frozen Passes4940-4947 with an exact third-moment covering-radius bound, a 40x40 generalized-quadrangle incidence identification behind Pass4946, an abelianized curvature/cohomology analysis of Pass4945-4947, structural characterization of the Pass4941 quartic bridge, improved selector compression/control results, and three independent outside-box finite probes.",
+  "boundary": "Reservation only. No theorem is promoted until executable or symbolic proof artifacts and focused regression checks are frozen. Passes4948-4950 remain independently owned and are not modified."
+}
