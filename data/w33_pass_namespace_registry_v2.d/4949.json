@@ -1,0 +1,11 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "pass": 4949,
+  "slug": "w33_augmentation_middle_and_levi_radical_19_space",
+  "title": "W33 augmentation middle and Levi radical 19-space",
+  "status": "RESERVED",
+  "owner": "openai-codex",
+  "reserved_at": "2026-08-11",
+  "purpose": "Determine by explicit native-GAP intertwiners whether ker(A+I)/im(A+I) on the W33 point augmentation module is the distinguished 19-dimensional Levi radical layer from Pass4865, and resolve its 14+5 submodule structure rather than relying on a dimension coincidence.",
+  "boundary": "Reservation only. No module identification is claimed until both carriers and a full-rank equivariant map are constructed over F3 with exact scope and prior-result checks."
+}
