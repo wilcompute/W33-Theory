@@ -1,0 +1,193 @@
+% Passes 4940--4947 — radius, quartic bridge, modular Steiner filtration, S6 crosswalk, RTL, holonomy and dual W33 incidence.
+\ifdefined\WDDPassFourNineFourZeroPacketLoaded
+  \expandafter\endinput
+\else
+  \gdef\WDDPassFourNineFourZeroPacketLoaded{1}%
+\fi
+
+\section{Passes 4940--4947: exact radius witness, quartic adjoint bridge, and the dual Steiner--cut reconstruction}
+\label{sec:pass4940-4947}
+
+This packet executes five queued fronts and three independent probes.  Every
+claim below is finite and executable.  In particular, neither the remaining
+covering-radius interval nor the physical interpretation of the polynomial
+maps is promoted beyond the evidence actually obtained.
+
+\subsection{Pass 4940: the hard covering witness is exactly $134$ away}
+Pass~4859 exhibited a received word $x\in\mathbb F_2^{360}$ with an exact
+automorphism $g$ satisfying
+\[
+ g(x)=x+\sigma_{E_6},
+\]
+so its distances to the ordinary cut class and to the switched class agree.
+Pass~4940 solves the remaining cut-class minimization by deterministic integer
+branch-and-bound on the $36$ vertex bits.  Fixing the cut/complement symmetry
+at one vertex, the exhaustive search visits $8{,}242{,}747$ nodes and certifies
+\[
+  \boxed{d(x,K)=134.}
+\]
+Consequently the rigorous global interval improves from $124\le\rho(K)\le179$
+to
+\[
+  \boxed{134\le\rho(K)\le179.}
+\]
+The upper endpoint remains open; this is an exact hard-coset distance, not yet
+a determination of the full covering radius.
+
+\subsection{Pass 4941: the quadratic ambiguity cancels at degree four}
+Passes~4870 and 4875 give a two-dimensional $PSp$-equivariant quadratic Hom
+plane
+\[
+  \operatorname{Hom}_{PSp}(\operatorname{Sym}^2H_2,Q_{10})
+\]
+on which the outer $PGSp/PSp$ involution acts as $-I_2$.  Pass~4871 supplies
+the unique intrinsic equivariant Lie bracket on $Q_{10}$.  For any basis
+$q_1,q_2$ of the quadratic Hom plane define
+\[
+  \mathcal F(x)=[q_1(x),q_2(x)].
+\]
+Then $\mathcal F$ is homogeneous of degree four, and under a basis change
+$A\in GL_2(\mathbb F_3)$ it scales only by $\det A$.  Thus it defines a
+canonical projective quartic line.  The two outer minus signs cancel, so the
+quartic is $PGSp$-even.  Direct exact evaluation finds three-support inputs
+whose images span all ten dimensions of $Q_{10}$:
+\[
+  \boxed{\dim\langle\mathcal F(x)\rangle=10.}
+\]
+Every two-support input vanishes.  Moreover each quadratic channel separately
+annihilates the entire $40$-dimensional fiber-constant subspace, because the
+sum over every complete $3\times3$ lift of a $W(3,3)$ edge is zero in
+$\mathbb F_3$.  Hence the quartic construction is genuinely carried by the
+non-semisimple three-fiber layer rather than by the quotient alone.
+
+\subsection{Pass 4942: the rational $20+60$ transverse split degenerates over $\mathbb F_3$}
+The rational Steiner association scheme has a $40$-dimensional fiber-constant
+sector and an $80=20+60$ transverse sector.  In defining characteristic the
+fiber-sum operator
+\[
+  N=I+R_1
+\]
+has rank $40$ and satisfies $N^2=0$.  Therefore
+\[
+  \operatorname{im}N\subset\ker N,
+  \qquad \dim\operatorname{im}N=40,
+  \qquad \dim\ker N=80.
+\]
+The nonedge-matching relation $R_2$ is nilpotent of index three with exact ranks
+\[
+  34\longrightarrow14\longrightarrow0,
+\]
+and Jordan type
+\[
+  \boxed{3^{14}\,2^6\,1^{66}.}
+\]
+The adjacency-lift relation $R_3$ has rank $39$ and is square-zero.  Thus the
+characteristic-zero $20+60$ eigensplitting is not a direct-sum decomposition
+in characteristic three.  This direct $120\times120$ matrix calculation also
+serves as a guardrail: coincidence of rational eigenvalues modulo $3$ does
+\emph{not} by itself justify reducing the full modular Bose--Mesner algebra to
+``rank two.''
+
+\subsection{Pass 4943: a literal common $S_6$ core, but two different extensions}
+After marking one double-six, both the Pass~4869 residue and the Pass~1848
+duad--syntheme construction can be placed on the same six literal labels.
+Their adjacent-transposition generators then agree coordinate-for-coordinate
+on the same $15$ duads.  Hence the common order-$720$ $S_6$ carrier is an
+explicit intertwiner, not an order match.
+
+The extra involutions remain different.  In the marked-double-six shell it is
+central, fixes every duad, and complements every triad, yielding
+$S_6\times C_2$.  In the duad--syntheme carrier it is the exceptional outer
+automorphism swapping the two $15$-sets, yielding
+$\operatorname{Aut}(S_6)=S_6{:}2$.  The common $S_6$ crosswalk therefore does
+not extend to an identification of the order-$1440$ groups.
+
+\subsection{Pass 4944: the $45$ local port matchings are now literal RTL}
+The Pass~4872 local state
+\[
+  i\longmapsto(-1)^b i+r\pmod3,
+  \qquad r\in\mathbb F_3,\ b\in\mathbb F_2,
+\]
+is implemented by \texttt{rtl/w33\_pass4944\_port\_selector45.sv}.  Exhaustive
+semantic evaluation checks all $6\times3=18$ valid selector/input cases and
+recovers all six permutations of three ports with zero local collisions.
+Forty-five selectors operate in one parallel combinational layer.
+
+The physically local control representation uses $45$ two-bit trit fields and
+$45$ reflection bits, namely $135$ binary wires.  Against the information-only
+fixed-binary optimum of $117$ bits from Pass~4872, this is an exact
+\[
+  \boxed{135-117=18\text{-bit locality premium}.}
+\]
+Gate-level Yosys cell counts are kept separate until an actual synthesis run
+finishes; no timing, placement, optical-loss, or end-to-end scheduling claim is
+made by the functional RTL theorem.
+
+\subsection{Pass 4945: the nonedge matchings have full $S_3$ holonomy}
+Each nonedge of the recovered $W(3,3)$ quotient carries the canonical perfect
+matching between its two three-element Steiner fibers.  After arbitrary local
+fiber labels these become $S_3$ transports on the $540$ edges of the
+complement graph.  Gauge-fixing along a spanning tree leaves $501$ fundamental
+cycles, whose transports generate all six permutations:
+\[
+  \boxed{\operatorname{Hol}=S_3.}
+\]
+Therefore no global relabeling can make all matchings simultaneously trivial,
+and the connection does not globally reduce to $C_3$ or $C_2$.  Only the local
+edge representatives depend on the chosen labels; the holonomy-group
+conjugacy class is gauge invariant.
+
+\subsection{Pass 4946: the two inequivalent $120$-shells recover dual point/line actions}
+Pass~4877 proved that the $120$ maximum cuts and $120$ Steiner triangles are
+not equivariantly bijective.  Instead define a cross-incidence matrix by
+\[
+  B(C,T)=1
+  \quad\Longleftrightarrow\quad
+  \text{the maximum cut $C$ splits the Steiner triangle $T$}.
+\]
+Every row and column has weight $108$.  Exactly forty classes of three rows
+are identical, and exactly forty classes of three columns are identical; the
+column classes are the classical forty Steiner triads already recovered in
+Pass~4870.  On the $40\times40$ quotient, the complementary relation
+$Z=1-B$ has row and column weight four.  Two quotient columns are collinear
+exactly when they share a $Z$-row, and the resulting graph is explicitly
+isomorphic to
+\[
+  \boxed{W(3,3)=\operatorname{SRG}(40,12,2,4).}
+\]
+Thus the failed $120\leftrightarrow120$ identification is replaced by a
+stronger structure: the two shells collapse three-to-one to the dual line and
+point actions of the original generalized quadrangle.
+
+\subsection{Pass 4947: matching curvature detects centric versus acentric triads}
+The complement graph has $3240$ triangles, i.e. triples of pairwise
+noncollinear quotient points.  Their matching transports split exactly as
+\[
+  1080\text{ identity},\qquad2160\text{ transposition},\qquad0\text{ three-cycle}.
+\]
+Independently counting common $W(3,3)$ neighbors gives an exact equivalence:
+identity holonomy occurs precisely for the $1080$ triads with no common
+center, while reflection holonomy occurs precisely for the $2160$ triads with
+two centers.  In the classical generalized-quadrangle terminology,
+\[
+  \boxed{\text{flat}\iff\text{acentric},\qquad
+         \text{reflection}\iff\text{centric}.}
+\]
+The terminology is classical; the exact holonomy realization and the
+$1080+2160$ executable classification are the repo-specific content.  The
+appearance of the number $1080$ elsewhere in the project is not promoted to
+an identification without an equivariant map.
+
+\paragraph{Executable evidence and boundaries.}
+The producers are
+\texttt{analysis/w33\_pass4940\_exact\_hardword\_cover\_distance.py},
+\texttt{analysis/w33\_pass4941\_quartic\_ambiguity\_cancellation.py},
+\texttt{analysis/w33\_pass4942\_transverse\_char3\_degeneration.py},
+\texttt{analysis/w33\_pass4943\_common\_s6\_carrier\_crosswalk.py},
+\texttt{analysis/w33\_pass4944\_port\_selector\_rtl\_report.py}, and
+\texttt{analysis/w33\_pass4945\_4947\_steiner\_connection\_maxcut\_duality.py},
+with one frozen JSON certificate per pass and focused regression in
+\texttt{tests/test\_w33\_pass4940\_4947\_exact\_packet.py}.  The covering
+radius remains open above $134$, the quartic is projectively defined only up
+to nonzero scalar, and no finite control or holonomy statement here is a
+continuum gauge-field or microscopic-device derivation.
