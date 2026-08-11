@@ -192,3 +192,13 @@ repos:
         language: system
         pass_filenames: true
         files: ^scripts/.*[.]py$
+      # Added Pass 4827. Six times in one session a shell heredoc collapsed the two
+      # characters backslash-b into a single 0x08 byte inside a regex. The pattern still
+      # compiles and can never match. It disabled W(3,3) and Sp(4,3) in the layer checker
+      # and the "is the first" phrasing in the novelty checker, both silently.
+      - id: heredoc-regex
+        name: no collapsed escapes in regex source
+        entry: py -3 scripts/check_heredoc_regex.py
+        language: system
+        pass_filenames: true
+        files: ^(scripts|analysis)/.*[.]py$
