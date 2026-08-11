@@ -1,0 +1,54 @@
+% Pass4873 — the two order-1440 S6 extensions are not the same group.
+\ifdefined\WDDPassFourEightSevenThreeLoaded
+  \expandafter\endinput
+\else
+  \gdef\WDDPassFourEightSevenThreeLoaded{1}%
+\fi
+
+\section{Two order-$1440$ six-set extensions: a necessary non-isomorphism firewall}
+\label{sec:pass4873-two-1440}
+
+The marked-double-six chart of Pass~4869 and the earlier duad--syntheme
+transfer of Pass~1848 both expose symmetry scales of order $1440$.  They do
+\emph{not} expose the same group.
+
+For the marked double-six, the six opposite columns carry the direct product
+\[
+  G_{\mathrm{res}}\cong S_6\times C_2,
+\]
+where the central involution fixes all duads and complements every triad.  Its
+exact element-order census is
+\[
+  1^1\,2^{151}\,3^{80}\,4^{360}\,5^{144}\,6^{560}\,10^{144}.
+\]
+In particular $|Z(G_{\mathrm{res}})|=2$ and there are no elements of order $8$.
+
+The frozen Pass~1848 duad-to-syntheme bijection instead reconstructs the
+exceptional outer automorphism class of $S_6$: a transposition of cycle type
+$(2,1,1,1,1)$ is carried to a triple transposition of type $(2,2,2)$.  After an
+explicit inner adjustment one obtains an involutive representative of the
+outer class and hence
+\[
+  G_{\mathrm{out}}\cong\operatorname{Aut}(S_6)=S_6{:}\operatorname{Out}(S_6).
+\]
+Its exact order census is
+\[
+  1^1\,2^{111}\,3^{80}\,4^{360}\,5^{144}\,6^{240}\,8^{360}\,10^{144}.
+\]
+Thus $Z(G_{\mathrm{out}})=1$, it has only $111$ involutions, and it contains
+$360$ elements of order $8$.
+
+Therefore
+\[
+  \boxed{S_6\times C_2\not\cong\operatorname{Aut}(S_6),}
+\]
+despite the common order $1440$.  The first $C_2$ is a central triad-complement
+operation; the second is the exceptional outer-automorphism direction.  Their
+numerical equality must not be used as an identification.
+
+\paragraph{Evidence firewall.}
+The producer is \texttt{analysis/w33\_pass4873\_two\_order1440\_extensions.py}
+and the frozen certificate is
+\texttt{data/PART\_W33\_PASS4873\_TWO\_ORDER1440\_EXTENSIONS.json}.  This is a
+finite group-extension distinction and does not decide which carrier, if
+either, is physically realized.
