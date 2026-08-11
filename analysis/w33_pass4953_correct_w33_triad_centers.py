@@ -1,21 +1,23 @@
 #!/usr/bin/env python3
-"""Pass4953 — correction of the Pass4947 W33 triad-center classification.
+"""Pass4953 — standard W(3,3) triad-center baseline.
 
-Pass4870 identifies the 40-fiber quotient explicitly with the standard
-symplectic W(3,3) point graph.  In that graph, three pairwise noncollinear
-projective points span either a 3-space or a nondegenerate projective line.
-Their common perpendicular therefore has projective size 1 or 4, not 0 or 2.
+The repo contains two nonisomorphic GQ(3,3) collinearity graphs with the same
+SRG(40,12,2,4) parameters: the standard symplectic W(3,3) point graph and the
+point graph of its dual Q(4,3).  Pass4954 identifies the Steiner 40-fiber
+quotient as the latter.  This pass freezes the standard W(3,3) baseline:
+three pairwise noncollinear projective points have exactly 1 or 4 common
+neighbors, with distribution 2880 and 360.
 
-This verifier constructs W(3,3) directly over F3, counts all independent
-triads, and identifies the 360 four-center triads with the 90 non-isotropic
-projective lines times four 3-subsets per line.
+The 360 four-center triads are exactly the 3-subsets of the 90 non-isotropic
+projective lines of PG(3,3).  Thus the earlier 0/2 statistics are not wrong
+arithmetic; they belong to the dual Q(4,3) quotient rather than W(3,3) points.
 """
 from __future__ import annotations
 import itertools, json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "data/PART_W33_PASS4953_CORRECT_W33_TRIAD_CENTERS.json"
+OUT = ROOT / "data/PART_W33_PASS4953_STANDARD_W33_TRIAD_CENTERS.json"
 
 
 def canon(v):
@@ -75,7 +77,6 @@ def main() -> int:
     assert center_hist == {1: 2880, 4: 360}
     assert span_center_hist == {(3, 1): 2880, (2, 4): 360}
 
-    # Enumerate projective lines by 2-dimensional spans of pairs.
     lines = set()
     for i, j in itertools.combinations(range(40), 2):
         vecs = set()
@@ -99,13 +100,13 @@ def main() -> int:
 
     out = {
         "pass": 4953,
-        "correction_target": "Pass4947 geometric center-count equivalence",
+        "role": "standard W(3,3) point-graph baseline for duality correction",
         "standard_W33": {
             "model": "projective points of F3^4 with symplectic collinearity",
             "parameters": [40, 12, 2, 4],
         },
         "pairwise_noncollinear_triads": 3240,
-        "correct_common_neighbor_distribution": {
+        "common_neighbor_distribution": {
             "one_center": 2880,
             "four_centers": 360,
         },
@@ -120,12 +121,12 @@ def main() -> int:
             "three_subsets_per_nonisotropic_line": 4,
             "four_center_triads": 360,
         },
-        "Pass4947_status": {
-            "claimed_center_counts_0_and_2": "FALSE for standard W(3,3)",
-            "raw_holonomy_counts_1080_2160": "not invalidated by this verifier, but their claimed equivalence to 0/2 center counts is invalid and requires recomputation",
+        "duality_context": {
+            "Pass4947_counts_0_2": "belong to the Steiner quotient identified in Pass4954 as the dual Q(4,3) point graph",
+            "Pass4870_error": "the Steiner quotient was incorrectly promoted to the standard W(3,3) point graph"
         },
         "theorem": "In standard W(3,3), every pairwise noncollinear triple has exactly one or four common neighbors. The distribution is 2880 one-center and 360 four-center triples. The four-center triples are exactly the 3-subsets of the 90 non-isotropic projective lines.",
-        "boundary": "This corrects only the geometric center classification in Pass4947. It does not yet recompute the S3 holonomy cross-tab against the correct 1/4-center classes.",
+        "boundary": "This pass classifies the standard W(3,3) point graph only. Pass4954 separately identifies the Steiner quotient with the dual Q(4,3) line-intersection graph.",
     }
     OUT.write_text(json.dumps(out, indent=2, sort_keys=True) + "\n")
     print(json.dumps(out, indent=2, sort_keys=True))
