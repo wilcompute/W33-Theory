@@ -1,0 +1,18 @@
+{
+  "both_sheets_code": "direct_sum_27 G12 = [324,162,6]_3, self-dual and full-outer equivariant",
+  "boundary": "The two 27-sheets are not identified with E6 27 and conjugate-27 representations from cardinality alone. Any such identification requires an explicit representation intertwiner.",
+  "full_direction_stabilizer_order": 960,
+  "full_orbit_sizes": [54],
+  "full_order": 51840,
+  "global_cover_size": 54,
+  "local_S5_action": "A5 fixes both directions; every odd permutation swaps them",
+  "local_even_permutations_checked": 60,
+  "local_odd_permutations_checked": 60,
+  "local_projective_extension_directions": 2,
+  "one_sheet_code": "direct_sum_27 G11 = [297,162,5]_3, monomially PSp-equivariant",
+  "pass": 4811,
+  "PSp_direction_stabilizer_order": 960,
+  "PSp_orbit_sizes": [27,27],
+  "PSp_order": 25920,
+  "theorem": "The 54 local Golay extension directions form a canonical two-sheet cover of the 27 GQ(4,2) fibers. PSp(4,3) preserves the two 27-sheets separately; the outer extension exchanges them and is transitive on all 54."
+}
