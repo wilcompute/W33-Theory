@@ -1,0 +1,68 @@
+% Passes 4809--4816: complete K3,3 shell, hierarchical decoder, Golay orientation cover,
+% q=9 PSp splitting, and three outside-the-box closures.
+\section{Complete nonlocal Golay--Levi shell and decoder reconstruction}
+\label{sec:pass4809-4816-golay-levi}
+
+The local-to-global filtration of the intrinsic qutrit triangle code can be sharpened substantially.  Write
+\[
+ C\subset L:=G_{10}^{\oplus 27}\subset C^\perp,
+ \qquad
+ C^\perp/L\cong H_1(\operatorname{Levi}(GQ(4,2));\mathbb F_3),
+\]
+where $G_{10}=[10,6,4]_3$ is the punctured ternary Golay code on a single $K_5$ fibre.
+
+\paragraph{Complete minimum nonlocal shell.}
+The quotient has triangle-lift distance six.  Exhausting all local cost patterns of total cost six shows that the previously exhibited $360$ induced $K_{3,3}$ witnesses are complete: all mixed cost-one/cost-two patterns are empty.  Thus there are exactly $360$ projective minimum classes.  They form one orbit under $PSp(4,3)$, with stabilizer order $72$, and one orbit under the full order-$51840$ outer action, with stabilizer order $144$.
+
+\paragraph{Exact hierarchical component decoder.}
+A single ten-triangle fibre has exactly $81$ point-syndrome states, whose minimum local lift costs occur with multiplicities
+\[
+ 1\times0+20\times1+60\times2.
+\]
+Consequently exact minimum-Hamming-weight decoding of one ternary $X$- or $Z$-error component reduces to choosing one of $81$ states on each of the $27$ fibres, minimizing the sum of their exact local costs, and imposing the $45$ global point-sum constraints modulo three.  The exact weight-two census is
+\[
+ 145260=140400+3\cdot1620,
+\]
+so every weight-two ambiguity is local Golay.  At weight three the syndrome multiplicity census is
+\[
+ 1^{23385600},\quad 2^{7200},\quad 3^{842400},\quad 12^{2160}.
+\]
+The $7200$ twofold classes are precisely the first genuinely global ambiguity sector: they are the two complementary weight-three halves of the $720$ nonzero scalar $K_{3,3}$ weight-six logicals.  This statement concerns one ternary component; independent component decoding is not asserted to minimize joint qutrit Pauli support.
+
+\paragraph{Global Golay extension chirality.}
+The two projective one-coordinate extension directions $G_{10}\to G_{11}$ transform under the local $S_5$ by its sign character: every even permutation fixes both directions separately and every odd permutation exchanges them.  Globally the resulting $54$ directions form two $27$-orbits under $PSp(4,3)$ but one transitive $54$-orbit under the full order-$51840$ group.  Choosing either inner sheet gives a monomially $PSp$-equivariant direct sum
+\[
+ G_{11}^{\oplus27}=[297,162,5]_3,
+\]
+while adjoining both directions gives the self-dual full-outer-equivariant
+\[
+ G_{12}^{\oplus27}=[324,162,6]_3.
+\]
+The full stabilizer of a base fibre has structure $2^4{:}S_5$ and order $1920$; the direction stabilizer is the sign-kernel preimage $2^4{:}A_5$ of order $960$.  Hence the $54\to27$ map is the orientation cover
+\[
+ W(E_6)/(2^4{:}A_5)\longrightarrow W(E_6)/(2^4{:}S_5).
+\]
+In particular this is not an untwisted disjoint union of two full-$W(E_6)$ invariant $27$-sets; an identification with the $27$ and dual-$27$ modules would require a representation-level intertwiner.
+
+\paragraph{$q=9$ minimum-shell splitting.}
+Using the published $q=9$ BLT stabilizers and evaluating their Frobenius and orthogonal/spinor outer bits, each of the three complete $P\Gamma O(5,9)$ classes already forms a single $PSp(4,9)$ orbit.  The orbit/stabilizer pairs are
+\[
+ (239112,7200),\qquad (1195560,1440),\qquad (17216064,100)
+\]
+for the Linear, K1, and Fi/Mondello classes respectively.  The BLT classification, names, completeness, and $P\Gamma O$ stabilizers are prior art; the additional result here is the outer-quotient evaluation and the consequent absence of further $PSp$ splitting.
+
+\paragraph{$K_{3,3}$ multidesign and intrinsic reconstruction.}
+The complete $360$-class minimum shell is simultaneously regular on three natural coordinate sets: its blocks contain six of the $27$ line fibres, nine of the $45$ GQ points, and six of the $270$ physical triangle coordinates, with replication numbers $80$, $72$, and $8$ respectively.  Adjacent line pairs occur in $24$ blocks and nonadjacent pairs in $10$.  Every one of the $720$ independent triples in the $27$-line graph is one side of a unique $K_{3,3}$, and every induced $K_{1,3}$ has a unique $K_{3,3}$ completion.
+
+The decoder sees the same geometry intrinsically.  For a projective signed $K_{3,3}$ logical, its two nonzero scalars and ten unordered $3+3$ support partitions produce exactly $20$ twofold weight-three syndrome collisions.  Therefore
+\[
+ 360\cdot20=7200,
+\]
+which equals the complete twofold collision census above.  Subtracting the two colliding errors recovers the signed weight-six logical, so the twofold weight-three collision relation reconstructs the entire projective minimum nonlocal shell.
+
+\paragraph{Deep-hole boundary.}
+The binary adjacency code $H_{10}$ has exact covering radius $14$.  An exact quotient-SAT classifier has now been committed: it represents cosets by $30$-bit parity-check syndromes, blocks complete $PSp(4,3)$ orbits after each solution, and terminates only when the orbit-blocked instance is UNSAT.  The already certified witness orbit contains $12960$ deep-hole cosets, with $PSp$ stabilizer order $2$ and full-group stabilizer order $4$; a representative coset contains $64$ weight-$14$ leaders and has distribution
+\[
+ 64z^{14}+128z^{16}+192z^{18}+256z^{20}+192z^{22}+128z^{24}+64z^{26}.
+\]
+At this insertion boundary the final orbit-blocked UNSAT certificate has not yet been observed in the repository, so no completeness claim for the deep-hole orbit list is made here.
