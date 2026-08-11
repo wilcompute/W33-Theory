@@ -8,6 +8,7 @@ on:
       - 'analysis/w33_pass4827_pgsp_sign_burnside.py'
       - 'analysis/w33_pass4828_parametric_outage_flow.py'
       - 'analysis/w33_pass4829_4830_levi_code_sign_module.py'
+      - 'analysis/w33_pass4829_4830_levi_code_sign_module_hardened.py'
       - 'analysis/w33_pass4831_deephole_residue_12x12_falsifier.py'
       - '.github/workflows/w33_pass4825_4832_loewy_decoder_moduli_outage_levi.yml'
   workflow_dispatch:
@@ -59,7 +60,7 @@ jobs:
           run_one python analysis/w33_pass4817_4823_pgsp_s3_moduli_certified.py
           run_one python analysis/w33_pass4827_pgsp_sign_burnside.py
           run_one python analysis/w33_pass4826_4832_code399_decoder_dualshell.py
-          run_one python analysis/w33_pass4829_4830_levi_code_sign_module.py
+          run_one python analysis/w33_pass4829_4830_levi_code_sign_module_hardened.py
           run_one python analysis/w33_pass4831_deephole_residue_12x12_falsifier.py
           run_one python analysis/w33_pass4828_parametric_outage_flow.py
           echo "$rc" > "$STATUS"
