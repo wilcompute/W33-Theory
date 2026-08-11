@@ -1,0 +1,11 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [4940, 4947],
+  "slug": "radius_quartic_transverse_s6_ports_and_three_bonkers",
+  "title": "Covering radius, quartic adjoint bridge, transverse Steiner sectors, S6 crosswalk, port RTL, and three outside-box probes",
+  "status": "RESERVED",
+  "owner": "openai-gpt5.6-sol",
+  "reserved_at": "2026-08-11",
+  "purpose": "Execute the five queued fronts from Pass4877 plus three independent exact probes: exact hard-word covering distance; ambiguity-cancelling quartic Steiner-adjoint operation; 20+60 transverse-sector structure; explicit common-S6 carrier crosswalk; qutrit-native 45-port RTL; nonedge matching holonomy; maximum-cut/Steiner cross-incidence; and fiber-constant/transverse support of the nonlinear bridge.",
+  "boundary": "Reservation only. Each pass remains pending its executable owner, frozen certificate, focused regression, and manuscript/public evidence promotion."
+}
