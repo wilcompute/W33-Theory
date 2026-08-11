@@ -1,0 +1,43 @@
+{
+  "boundary": "independence numbers computed where they finished inside 300s; H(3,9) at 280 vertices may be absent rather than zero. The duad labelling of W(3,2) is VERIFIED by canonical form against the complement-of-T(6) construction, and the star identification follows from that labelling by construction, not by counting",
+  "correction_to_4799": "the 6 ovoids are NOT synthematic totals. Under the duad labelling, points are duads and collinearity is disjointness, so an independent set is a pairwise INTERSECTING family -- a star of the 5 duads through one letter. Six letters, six stars, stabiliser S5 of order 120 permuting the other five. Pass 4799's count-match found the right size and the wrong object",
+  "pass_4812_third_pair": [
+    {
+      "alpha": 16,
+      "geometry": "Q(5,3)",
+      "hoffman": 28,
+      "meets_bound": false,
+      "n": 112,
+      "s": 3,
+      "seconds": 24.3,
+      "srg": [
+        112,
+        30,
+        2,
+        10
+      ],
+      "st_plus_1": 28,
+      "t": 9
+    },
+    {
+      "alpha": null,
+      "geometry": "H(3,9)",
+      "hoffman": 28,
+      "meets_bound": null,
+      "n": 280,
+      "s": 9,
+      "seconds": 300.1,
+      "srg": [
+        280,
+        36,
+        8,
+        4
+      ],
+      "st_plus_1": 28,
+      "t": 3
+    }
+  ],
+  "pass_4813_labelling_verified": true,
+  "pass_4813_ovoids_are_stars": true,
+  "third_pair_splits": null
+}
