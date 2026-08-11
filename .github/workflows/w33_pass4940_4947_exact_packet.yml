@@ -18,7 +18,7 @@ permissions:
   contents: write
 concurrency:
   group: pass4940-4947-${{ github.ref }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   exact-evidence:
     runs-on: ubuntu-24.04
@@ -31,7 +31,7 @@ jobs:
       - name: Install exact-analysis and RTL dependencies
         run: |
           set -euo pipefail
-          python -m pip install --disable-pip-version-check numpy networkx ortools pytest
+          python -m pip install --disable-pip-version-check numpy networkx pytest
           sudo apt-get update
           sudo apt-get install -y iverilog yosys
       - name: Run algebraic and combinatorial producers
@@ -41,7 +41,7 @@ jobs:
           python analysis/w33_pass4943_common_s6_carrier_crosswalk.py
           python analysis/w33_pass4945_4947_steiner_connection_maxcut_duality.py
           python analysis/w33_pass4941_quartic_ambiguity_cancellation.py
-      - name: Solve the hard covering-distance instance exactly
+      - name: Exhaust the hard covering-distance branch-and-bound
         run: python analysis/w33_pass4940_exact_hardword_cover_distance.py
       - name: Simulate all AGL13 selector states
         run: |
