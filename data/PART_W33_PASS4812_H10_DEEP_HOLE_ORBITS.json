@@ -1,12 +1,37 @@
 {
+  "PSp_deep_hole_orbits": 12,
+  "PSp_orbit_size_multiset": {
+    "1080": 1,
+    "2160": 2,
+    "3240": 1,
+    "4320": 2,
+    "6480": 2,
+    "12960": 4
+  },
   "boundary": "Deep holes are cosets, not individual leaders. Completeness is proved by coordinate transitivity plus exhaustive stabilizer-representative branch search; the separate quotient-SAT producer remains an independent certificate path.",
   "code": "H10=[40,10,12]",
   "completeness_symmetry": {
     "coordinate_stabilizer_order": 648,
     "fixed_coordinate": 0,
     "neighbor_block_size": 12,
-    "neighbor_intersection_values": [0,1,2,3,4,5,6],
-    "subset_orbit_counts": [1,1,2,3,6,6,7],
+    "neighbor_intersection_values": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "subset_orbit_counts": [
+      1,
+      1,
+      2,
+      3,
+      6,
+      6,
+      7
+    ],
     "subset_orbit_representatives_checked": 26,
     "unblocked_leader_found": false
   },
@@ -14,19 +39,40 @@
     {
       "PSp_orbits": 4,
       "cosets": 29160,
-      "distribution": {"14":64,"16":128,"18":192,"20":256,"22":192,"24":128,"26":64},
+      "distribution": {
+        "14": 64,
+        "16": 128,
+        "18": 192,
+        "20": 256,
+        "22": 192,
+        "24": 128,
+        "26": 64
+      },
       "leaders_per_coset": 64
     },
     {
       "PSp_orbits": 7,
       "cosets": 39960,
-      "distribution": {"14":96,"18":416,"22":416,"26":96},
+      "distribution": {
+        "14": 96,
+        "18": 416,
+        "22": 416,
+        "26": 96
+      },
       "leaders_per_coset": 96
     },
     {
       "PSp_orbits": 1,
       "cosets": 12960,
-      "distribution": {"14":56,"16":144,"18":200,"20":224,"22":200,"24":144,"26":56},
+      "distribution": {
+        "14": 56,
+        "16": 144,
+        "18": 200,
+        "20": 224,
+        "22": 200,
+        "24": 144,
+        "26": 56
+      },
       "leaders_per_coset": 56
     }
   ],
@@ -35,23 +81,192 @@
   "final_symmetry_exhaustion": "PASS: all 26 stabilizer subset representatives contain no deep-hole leader outside the 12 blocked PSp coset orbits",
   "full_deep_hole_orbits": 12,
   "orbits": [
-    {"representative":253626779097,"PSp_cosets":12960,"PSp_stabilizer":2,"full_cosets":12960,"full_stabilizer":4,"leaders_per_coset":64,"coset_weight_distribution":{"14":64,"16":128,"18":192,"20":256,"22":192,"24":128,"26":64}},
-    {"representative":584170144127,"PSp_cosets":2160,"PSp_stabilizer":12,"full_cosets":2160,"full_stabilizer":24,"leaders_per_coset":96,"coset_weight_distribution":{"14":96,"18":416,"22":416,"26":96}},
-    {"representative":554055173999,"PSp_cosets":12960,"PSp_stabilizer":2,"full_cosets":12960,"full_stabilizer":4,"leaders_per_coset":96,"coset_weight_distribution":{"14":96,"18":416,"22":416,"26":96}},
-    {"representative":68786758527,"PSp_cosets":4320,"PSp_stabilizer":6,"full_cosets":4320,"full_stabilizer":12,"leaders_per_coset":96,"coset_weight_distribution":{"14":96,"18":416,"22":416,"26":96}},
-    {"representative":365073467515,"PSp_cosets":12960,"PSp_stabilizer":2,"full_cosets":12960,"full_stabilizer":4,"leaders_per_coset":96,"coset_weight_distribution":{"14":96,"18":416,"22":416,"26":96}},
-    {"representative":70003361550,"PSp_cosets":6480,"PSp_stabilizer":4,"full_cosets":6480,"full_stabilizer":8,"leaders_per_coset":64,"coset_weight_distribution":{"14":64,"16":128,"18":192,"20":256,"22":192,"24":128,"26":64}},
-    {"representative":67682091011,"PSp_cosets":2160,"PSp_stabilizer":12,"full_cosets":2160,"full_stabilizer":24,"leaders_per_coset":96,"coset_weight_distribution":{"14":96,"18":416,"22":416,"26":96}},
-    {"representative":1047338713089,"PSp_cosets":12960,"PSp_stabilizer":2,"full_cosets":12960,"full_stabilizer":4,"leaders_per_coset":56,"coset_weight_distribution":{"14":56,"16":144,"18":200,"20":224,"22":200,"24":144,"26":56}},
-    {"representative":978636013569,"PSp_cosets":3240,"PSp_stabilizer":8,"full_cosets":3240,"full_stabilizer":16,"leaders_per_coset":64,"coset_weight_distribution":{"14":64,"16":128,"18":192,"20":256,"22":192,"24":128,"26":64}},
-    {"representative":738365327361,"PSp_cosets":4320,"PSp_stabilizer":6,"full_cosets":4320,"full_stabilizer":12,"leaders_per_coset":96,"coset_weight_distribution":{"14":96,"18":416,"22":416,"26":96}},
-    {"representative":974726938627,"PSp_cosets":6480,"PSp_stabilizer":4,"full_cosets":6480,"full_stabilizer":8,"leaders_per_coset":64,"coset_weight_distribution":{"14":64,"16":128,"18":192,"20":256,"22":192,"24":128,"26":64}},
-    {"representative":367999860755,"PSp_cosets":1080,"PSp_stabilizer":24,"full_cosets":1080,"full_stabilizer":48,"leaders_per_coset":96,"coset_weight_distribution":{"14":96,"18":416,"22":416,"26":96}}
+    {
+      "PSp_cosets": 12960,
+      "PSp_stabilizer": 2,
+      "coset_weight_distribution": {
+        "14": 64,
+        "16": 128,
+        "18": 192,
+        "20": 256,
+        "22": 192,
+        "24": 128,
+        "26": 64
+      },
+      "full_cosets": 12960,
+      "full_stabilizer": 4,
+      "leaders_per_coset": 64,
+      "representative": 253626779097
+    },
+    {
+      "PSp_cosets": 2160,
+      "PSp_stabilizer": 12,
+      "coset_weight_distribution": {
+        "14": 96,
+        "18": 416,
+        "22": 416,
+        "26": 96
+      },
+      "full_cosets": 2160,
+      "full_stabilizer": 24,
+      "leaders_per_coset": 96,
+      "representative": 584170144127
+    },
+    {
+      "PSp_cosets": 12960,
+      "PSp_stabilizer": 2,
+      "coset_weight_distribution": {
+        "14": 96,
+        "18": 416,
+        "22": 416,
+        "26": 96
+      },
+      "full_cosets": 12960,
+      "full_stabilizer": 4,
+      "leaders_per_coset": 96,
+      "representative": 554055173999
+    },
+    {
+      "PSp_cosets": 4320,
+      "PSp_stabilizer": 6,
+      "coset_weight_distribution": {
+        "14": 96,
+        "18": 416,
+        "22": 416,
+        "26": 96
+      },
+      "full_cosets": 4320,
+      "full_stabilizer": 12,
+      "leaders_per_coset": 96,
+      "representative": 68786758527
+    },
+    {
+      "PSp_cosets": 12960,
+      "PSp_stabilizer": 2,
+      "coset_weight_distribution": {
+        "14": 96,
+        "18": 416,
+        "22": 416,
+        "26": 96
+      },
+      "full_cosets": 12960,
+      "full_stabilizer": 4,
+      "leaders_per_coset": 96,
+      "representative": 365073467515
+    },
+    {
+      "PSp_cosets": 6480,
+      "PSp_stabilizer": 4,
+      "coset_weight_distribution": {
+        "14": 64,
+        "16": 128,
+        "18": 192,
+        "20": 256,
+        "22": 192,
+        "24": 128,
+        "26": 64
+      },
+      "full_cosets": 6480,
+      "full_stabilizer": 8,
+      "leaders_per_coset": 64,
+      "representative": 70003361550
+    },
+    {
+      "PSp_cosets": 2160,
+      "PSp_stabilizer": 12,
+      "coset_weight_distribution": {
+        "14": 96,
+        "18": 416,
+        "22": 416,
+        "26": 96
+      },
+      "full_cosets": 2160,
+      "full_stabilizer": 24,
+      "leaders_per_coset": 96,
+      "representative": 67682091011
+    },
+    {
+      "PSp_cosets": 12960,
+      "PSp_stabilizer": 2,
+      "coset_weight_distribution": {
+        "14": 56,
+        "16": 144,
+        "18": 200,
+        "20": 224,
+        "22": 200,
+        "24": 144,
+        "26": 56
+      },
+      "full_cosets": 12960,
+      "full_stabilizer": 4,
+      "leaders_per_coset": 56,
+      "representative": 1047338713089
+    },
+    {
+      "PSp_cosets": 3240,
+      "PSp_stabilizer": 8,
+      "coset_weight_distribution": {
+        "14": 64,
+        "16": 128,
+        "18": 192,
+        "20": 256,
+        "22": 192,
+        "24": 128,
+        "26": 64
+      },
+      "full_cosets": 3240,
+      "full_stabilizer": 16,
+      "leaders_per_coset": 64,
+      "representative": 978636013569
+    },
+    {
+      "PSp_cosets": 4320,
+      "PSp_stabilizer": 6,
+      "coset_weight_distribution": {
+        "14": 96,
+        "18": 416,
+        "22": 416,
+        "26": 96
+      },
+      "full_cosets": 4320,
+      "full_stabilizer": 12,
+      "leaders_per_coset": 96,
+      "representative": 738365327361
+    },
+    {
+      "PSp_cosets": 6480,
+      "PSp_stabilizer": 4,
+      "coset_weight_distribution": {
+        "14": 64,
+        "16": 128,
+        "18": 192,
+        "20": 256,
+        "22": 192,
+        "24": 128,
+        "26": 64
+      },
+      "full_cosets": 6480,
+      "full_stabilizer": 8,
+      "leaders_per_coset": 64,
+      "representative": 974726938627
+    },
+    {
+      "PSp_cosets": 1080,
+      "PSp_stabilizer": 24,
+      "coset_weight_distribution": {
+        "14": 96,
+        "18": 416,
+        "22": 416,
+        "26": 96
+      },
+      "full_cosets": 1080,
+      "full_stabilizer": 48,
+      "leaders_per_coset": 96,
+      "representative": 367999860755
+    }
   ],
   "outer_fusions": 0,
   "pass": 4812,
-  "PSp_deep_hole_orbits": 12,
-  "PSp_orbit_size_multiset": {"1080":1,"2160":2,"3240":1,"4320":2,"6480":2,"12960":4},
   "theorem": "H10 has exactly 82080 radius-14 cosets in 12 PSp(4,3) orbits. The full order-51840 outer action fixes every PSp orbit setwise, so there are also 12 full-group orbits and no outer fusions. The complete minimum-leader population is 6428160.",
   "weight14_leaders_total": 6428160
 }
