@@ -1,19 +1,44 @@
-# Passes 4849–4856 reservation
+# Passes 4849–4856 — CLOSED
 
-Collision-free continuation after frozen frontier through Pass4848; canonical 4849/4856 commits were searched and absent immediately before reservation.
+Reserved collision-free at commit `aa5439c1253feefdc6e10cb4d0b89cf31e60e336`. A post-execution namespace search found no competing canonical Pass4849–4856 reservation or result packet.
 
-Five queued fronts:
+All five queued fronts and all three outside-box probes were executed and frozen.
 
-- 4849: crack the one-dimensional quotient of the binary incidence kernel `K=[360,36,20]_2` by the rank-35 span of its 36 minimum `K6,6-M6` carrier words. Construct a canonical extra kernel vector or canonical coset, determine its minimum coset weight/orbit/stabilizer, and test whether the resulting 35<36 module extension splits under PSp/PGSp.
-- 4850: build the exact orbital algebra for the transitive PSp/PGSp action on the 1080 binary Levi minima (permutation ranks 59/49). Compute commutativity, center dimension, rational/complex Wedderburn information where tractable, and locate the coarse shared-edge/K3,3 incidence operators inside the exact algebra.
-- 4851: determine the first intrinsic full-code data that kills the residual `S3^45` sheet kernel left after the W6 cross-cell shell. Use higher dual/codeword shells and explicit coordinate actions to bound or determine `Aut(C399)`; do not identify it with PGSp from order alone.
-- 4852: develop `K=[360,36,20]_2` as a standalone exact code: low weight shells, dual parameters/minimum shell where tractable, covering/decoding bounds, sparse checks or geometric decoder, and automorphism bounds.
-- 4853: lift the exact `1080_3--360_9` binary-cycle/ternary-K3,3 incidence into the existing ternary Levi/Golay filtration. Require an explicit linear/functorial map and rank/kernel/image statements; equal dimensions or shell counts are not evidence.
+## Frozen evidence
 
-Three outside-box probes:
+- Passes 4849/4852/4854/4855/4856: `data/PART_W33_PASS4849_4852_4854_4855_4856_E6_KERNEL_CODE.json`
+  - `K=[360,36,20]_2 = Cut(SRG(36,20,10,12)) + <sigma_E6>`;
+  - 36 minimum carriers are exactly the cubic-surface double-sixes / projective E6 root pairs;
+  - nontrivial switching coset minimum 120 with 25920 Weyl-chamber minima;
+  - nonsplit one-dimensional characteristic-two extension;
+  - dual `[360,324,3]_2` with 1080 minimum checks;
+  - full automorphism order 51840, explicitly the conjugate `W(E6) ~= PGSp(4,3)` action.
+- Pass4850: `data/PART_W33_PASS4850_LEVI_MINIMUM_ORBITAL_WEDDERBURN.json`
+  - PSp orbital algebra `dim=59`, center `dim=15`, complex type `C^7 x M2^4 x M3^4`, rational center `Q^9 x Q(sqrt(-3))^3`;
+  - PGSp orbital algebra `dim=49`, center `dim=13`, complex type `C^6 x M2^4 x M3^3`, rational center `Q^13`;
+  - K3,3 incidence Gram is `3A0+A1+A5` and is noncentral.
+- Pass4851: `data/PART_W33_PASS4851_CODE399_FULL_AUTOMORPHISM.json`
+  - the residual `S3^45` sheet action is a genuine full-code symmetry, not a low-shell ambiguity;
+  - full coordinate automorphism structure `(S4^405 x S3^135) : (S3^45 : PGSp(4,3))`.
+- Pass4853: `data/PART_W33_PASS4853_TERNARY_INCIDENCE_GOLAY_TWISTED_LIFT.json`
+  - 1080 Levi cycle lines span all 64 ternary Levi-homology dimensions;
+  - 360 projective K3,3 witnesses span 54, leaving codimension 10;
+  - no untwisted sign gauge factors the unweighted incidence to homology;
+  - the correct PGSp-equivariant lift uses the oriented K3,3 double cover, rank54/kernel306.
 
-- 4854: characteristic-two extension probe. Treat the rank-35 minimum-shell span inside the 36-dimensional kernel as a PSp/PGSp submodule and determine whether the 1-dimensional quotient is a nonsplit trivial extension, a split trivial summand, or something subtler. Compare explicitly to earlier characteristic-two deck/head/socle nonsplitting phenomena without identifying them from dimension one.
-- 4855: carrier geometry probe. Build the 36-object geometry of the minimum `K6,6-M6` carriers themselves: pairwise K3,3-support intersections, carrier-intersection graph(s), spectra, orbitals, automorphism group, and test explicit equivariant maps to any pre-existing 36-object W33/H27/triangle geometry found in the repo.
-- 4856: incidence-square probe. Form the `36 x 360` carrier-vs-K3,3 incidence matrix (each carrier degree20, each K3,3 degree2), analyze its binary/ternary/real ranks and singular spectrum, and determine whether it explains the missing 36th kernel direction or creates a new exact code/design.
+## Reproducibility / integration
 
-Evidence discipline: exact finite computations and explicit maps only. Preserve characteristic boundaries. No identity from equal counts, dimensions, stabilizer orders, or spectra alone. Negative results/falsifiers are first-class outcomes.
+- Producers:
+  - `analysis/w33_pass4849_4852_4854_4855_4856_e6_kernel_code.py`
+  - `analysis/w33_pass4850_levi_minimum_orbital_wedderburn.py`
+  - `analysis/w33_pass4851_code399_full_automorphism.py`
+  - `analysis/w33_pass4853_ternary_incidence_golay_twisted_lift.py`
+- Cross-certificate regression: `tests/test_w33_pass4849_4856_e6_kernel_orbital_twisted.py`.
+- Exact-evidence workflow: `.github/workflows/w33_pass4849_4856_e6_kernel_orbital_twisted.yml`.
+- Synthesis: `analysis/PASS4849_4856_EXECUTED_OUTCOMES.md`.
+- Manuscript insert: `analysis/PASS4849_4856_e6_kernel_orbital_twisted_insert.tex`.
+- Shared frontier manifest includes the new insert.
+- Standalone public page: `docs/e6-kernel-double-six-incidence.html`.
+- Root-index card/materializer sources: `analysis/PASS4849_4856_e6_kernel_index_insert.html` and `tools/integrate_pass4849_4856_public.py`.
+
+Evidence boundary: all promoted statements are exact finite graph/root/group/code/homology results. Rational split-versus-division status of every noncommutative Pass4850 simple block remains open. The ten-dimensional ternary homology quotient outside the canonical K3,3 span remains unidentified. No physical E6 field or hardware claim is inferred.
