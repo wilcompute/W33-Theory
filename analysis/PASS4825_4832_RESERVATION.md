@@ -1,0 +1,16 @@
+# Passes 4825–4832 reservation
+
+Collision-free continuation after completed frontier through Pass4824; Passes 4825–4832 were checked absent before this reservation.
+
+Five queued fronts plus three outside-box probes:
+
+- 4825: finish the characteristic-two modular structure of the 5671-dimensional invariant-flag H^1. Materialize the U4(2)~=PSp(4,3) mod-2 Brauer semisimplification through GAP/CTblLib where available; then use explicit module actions/MeatAxe-style submodule computations, subgroup restrictions, radical/socle tests, and the existing 4-dimensional trivial socle / 1-dimensional trivial head to determine as much of the Loewy extension graph as exact computation permits. Do not confuse a decomposition matrix with a Loewy series.
+- 4826: build an exact bounded-distance decoder and sparse check/syndrome schedule for the [2025,399,14]_2 maximal PGSp-invariant line-parity preimage code. Reuse the local K6-cell coset decoder and incorporate the 21-dimensional outer code W20+<1>=[27,21,3]. Prove arbitrary-error correction radius six under the stated syndrome model.
+- 4827: reduce the full S3-connection moduli under PSp/PGSp without enumerating 2^64 states or PG(224,3). Compute conjugacy-class fixed-space dimensions on the 64-dimensional binary sign module and the 225-dimensional twisted F3 module, Burnside orbit counts where finite exact arithmetic permits, and the selected connection's exact stabilizer/projective invariant.
+- 4828: extend all six exact Pass4820 symmetry-broken fractional multicommodity optima from rho=1 to arbitrary positive hot/cold capacity ratio rho. Produce exact piecewise-rational throughput phase diagrams and compare breakpoints against the intact 63/155,111/137,239/105 phases.
+- 4829: develop the [2025,64,96]_2 Levi-homology code as a standalone exact code: sparse parity checks/generator, dual parameters and minimum shells where tractable, automorphism lower/upper bounds, decoding radius/schedule, and integral/Smith comparison to the ternary Levi homology. Preserve characteristic boundaries.
+- 4830: OUTSIDE BOX — test whether the two independent 64-dimensional binary objects, the Pass4770 sign-cohomology module and Pass4822 Levi H1(F2), are actually isomorphic PSp/PGSp modules. Require explicit generator matrices and a nonzero invertible intertwiner (or a fixed-space/character obstruction); equal dimension is not evidence.
+- 4831: OUTSIDE BOX — test the new Pass4812 census of 12 PSp H10 deep-hole orbits against the 12 orbitals of the 270-residue action. Compare stabilizer orders/types, outer action, incidence statistics and any equivariant map. Treat 12=12 as a suspicious coincidence until an explicit G-set/intertwiner exists.
+- 4832: OUTSIDE BOX — compute the dual/minimum-shell geometry of the [2025,399,14]_2 code and determine whether its sparse dual supports intrinsically recover the 135 K6 cells, 27 Petersen fibers, 27 Levi line-stars, or another new design. Require support-level reconstruction and automorphism checks.
+
+Evidence discipline: promote only exact finite graph/group/module/code/homology/flow/decoder results or explicit falsifiers. No object identification from equal dimensions/counts/group orders. Preserve characteristic and physical-model boundaries; no particle/generation/gauge-field/measured-hardware/fault-tolerance-threshold inference.
