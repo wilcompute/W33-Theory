@@ -1,0 +1,16 @@
+# Passes 4833–4840 reservation
+
+Collision-free continuation after canonical Passes 4825–4832. Search confirmed no canonical W33 Pass4833/4840 commits at reservation time.
+
+Five queued fronts plus three outside-box probes:
+
+- 4833: puncture/compare the cold-only Levi cycle code C_Levi=[1620,64,96]_2 against the cold puncture/projection of the full [2025,399,14]_2 router code. Compute intersection, sum, quotient dimensions, minimum-distance bounds/exact values where tractable, generalized support relations, and whether C_Levi is a protected invariant submodule/subcode of code399. Require explicit inclusion/intertwiner, not shared carrier.
+- 4834: optimize the [2025,399,14]_2 syndrome schedule over all bases of the six-dimensional outer dual W6 and compatible local/global check replacements. Compute exact conflict/Tanner coloring for the global sector and search whether local/global mixing can beat the certified 8-layer construction while preserving sparse rank 1626 and radius-six decoding.
+- 4835: compute the full automorphism group of the intrinsic code399 dual-shell design consisting only of 405 size-4 repetition classes, 135 size-3 classes, and 135 (4,4,4,3) minimum quotient relations. Determine whether this design alone reconstructs PGSp(4,3), the 27 Petersen fibers, 45 packets/GQ(4,2), or admits extra symmetry.
+- 4836: classify the 1080 minimum words of the [1620,64,96]_2 Levi cycle code under PSp/PGSp. Compute orbit decomposition, stabilizers, pairwise intersection scheme, incidence with Levi points/lines and compare explicitly to the 360 ternary K3,3 homology witnesses from Pass4807 without using 1080=3*360 as evidence.
+- 4837: finish/materialize the four evidence-gated Pass4825/4827/4828/4830 computations. Run GAP/CTblLib Brauer extraction; exact PGSp Burnside on the 64-bit sign module; all six arbitrary-rho outage phase diagrams; and exact sign-H1/Levi-H1 intertwiner. Freeze only outputs actually produced and cross-checked.
+- 4838: OUTSIDE BOX — test whether the cold-only Levi code embeds as a direct summand, subcode, quotient, or nontrivial intersection inside code399 after puncturing the 405 hot coordinates. Compute explicit maps and module stabilizers; fail closed if the two 64-dimensional appearances are unrelated.
+- 4839: OUTSIDE BOX — reconstruct the 45-packet/27-line GQ(4,2) quotient and full PGSp symmetry using only the intrinsic code399 dual-shell design, with no imported packet, residue, or selected270 labels. Require a support-level reconstruction and direct automorphism computation.
+- 4840: OUTSIDE BOX — build the intersection/association structure on the 1080 Levi 8-cycles; test for SRG/association-scheme fibers and explicit incidence maps to the 135 K6 cells, 405 hot triples, or 27 quotient lines. Promote only objectwise maps or exact algebraic relations.
+
+Evidence discipline: promote only exact finite graph/group/module/code/homology/flow/decoder results or explicit falsifiers. Preserve characteristic boundaries. No object identification from equal dimensions/counts/group orders, and no particle/gauge-field/measured-hardware/fault-tolerance-threshold inference.
