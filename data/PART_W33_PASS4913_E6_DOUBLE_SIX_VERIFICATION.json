@@ -1,0 +1,49 @@
+{
+  "all_agree": true,
+  "boundary": "the E6 root system is constructed here from the standard 8-dimensional realisation and shares nothing with Track B's code. This verifies the TARGET of their identification -- 36 projective roots whose nonorthogonality graph is SRG(36,20,10,12) with 360 edges, and the norm identity forcing N_- = 120. It does NOT verify that their 36 minimum words map to these roots, which needs their generator matrix",
+  "comparison": [
+    {
+      "agree": true,
+      "quantity": "roots",
+      "this_lane": "72",
+      "track_b": "72"
+    },
+    {
+      "agree": true,
+      "quantity": "projective pairs",
+      "this_lane": "36",
+      "track_b": "36"
+    },
+    {
+      "agree": true,
+      "quantity": "SRG",
+      "this_lane": "(36, 20, 10, 12)",
+      "track_b": "(36, 20, 10, 12)"
+    },
+    {
+      "agree": true,
+      "quantity": "nonorthogonal pairs",
+      "this_lane": "360",
+      "track_b": "360"
+    },
+    {
+      "agree": true,
+      "quantity": "all-positive norm",
+      "this_lane": "792",
+      "track_b": "792"
+    },
+    {
+      "agree": true,
+      "quantity": "||2rho||^2",
+      "this_lane": "312",
+      "track_b": "312"
+    },
+    {
+      "agree": true,
+      "quantity": "N_-",
+      "this_lane": "120",
+      "track_b": "120"
+    }
+  ],
+  "flag_back": "|W(E6)| = |PGSp(4,3)| = 51,840 is the multi-source coincidence Pass 4735 measured; Track B handled it correctly by deriving Aut(K) from the minimum shell and Weyl action rather than the order, and that qualifier belongs in the theorem statement"
+}
