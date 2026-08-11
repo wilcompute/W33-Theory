@@ -1,0 +1,47 @@
+{
+  "arithmetic_closes": true,
+  "boundary": "this checks INTERNAL CONSISTENCY of Track B's reported figures against the two class counts they report. It does NOT reconstruct their code or verify the classification into 405 four-classes and 135 three-classes, which is the load-bearing claim. The only independently anchored figure is 135 = Levi edges of GQ(4,2), computed at Pass 4824",
+  "comparison": [
+    {
+      "agree": true,
+      "derived": 2025,
+      "quantity": "columns",
+      "track_b": 2025
+    },
+    {
+      "agree": true,
+      "derived": 2835,
+      "quantity": "weight_two_dual_words",
+      "track_b": 2835
+    },
+    {
+      "agree": true,
+      "derived": 1485,
+      "quantity": "repetition_span_dim",
+      "track_b": 1485
+    },
+    {
+      "agree": true,
+      "derived": 540,
+      "quantity": "quotient_length",
+      "track_b": 540
+    },
+    {
+      "agree": true,
+      "derived": 135,
+      "quantity": "min_words",
+      "track_b": 135
+    },
+    {
+      "agree": true,
+      "derived": 135,
+      "quantity": "levi_edges_of_gq42",
+      "track_b": 135
+    }
+  ],
+  "independently_anchored": [
+    "135 = Levi edges of GQ(4,2), Pass 4824"
+  ],
+  "profile_partitions": true,
+  "warning_on_item_3": "|Aut(H(3,4))| = 51,840 already, by the exceptional isomorphism PSU(4,2) = PSp(4,3). A design built on GQ(4,2) landing on that order shows it retains the geometry's symmetry, not that it reconstructs W(3,3)'s"
+}
