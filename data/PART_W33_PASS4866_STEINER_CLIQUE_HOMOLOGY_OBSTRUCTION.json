@@ -1,0 +1,12 @@
+{
+  "Steiner_graph_only_characterization": {"Steiner_triangle_common_neighbor_count": 0,"Steiner_triangles": 120,"Steiner_triangles_equal_maximal_K3": true,"even_triangle_K5_containment_count": 2,"even_triangle_common_neighbor_count": 4,"even_triangles": 1080,"every_K4_has_only_even_triangle_faces": true},
+  "adjoint_linear_bridge_obstruction": {"H2_F3_identified_with": "120-dimensional permutation module on maximal/Steiner triangles","Hom_PSp_H2_to_Q10_dimension": 0,"Hom_PSp_Q10_to_H2_dimension": 0,"nonzero_equivariant_linear_bridge_exists": false,"target": "Pass4864 adjoint Q10 ~= sp4(F3)"},
+  "boundary": "Finite graph/clique-homology and modular-representation theorem. No physical phase or gauge field follows from the obstruction.",
+  "boundary_ranks": {"F2": {"d1": 35,"d2": 325,"d3": 755,"d4": 216},"F3": {"d1": 35,"d2": 325,"d3": 755,"d4": 216}},
+  "clique_complex": {"f_vector": [36,360,1200,1080,216],"maximal_cliques": {"K3": 120,"K5": 216},"maximum_clique_size": 5},
+  "clique_homology": {"F2_betti": [1,0,120,109,0],"F3_betti": [1,0,120,109,0]},
+  "double_six_graph": "SRG(36,20,10,12)",
+  "even_triangle_boundary_span": {"F2_even_supported_H2_dimension": 1,"F2_rank": 324,"F2_restriction_H2_to_120_Steiner_coordinates_rank": 119,"F3_even_supported_H2_dimension": 0,"F3_rank": 325,"F3_restriction_H2_to_120_Steiner_coordinates": "isomorphism","odd_Steiner_triangle_boundary_rank_F2": 120,"odd_Steiner_triangle_boundary_rank_F3": 120},
+  "pass": 4866,
+  "theorem": "The 120 Steiner triangles are intrinsically the maximal triangles of the 36-double-six graph: every other triangle extends through exactly four common neighbors and lies in two K5 cliques. The clique complex has f=(36,360,1200,1080,216) and Betti numbers (1,0,120,109,0) over both F2 and F3. The 1080 non-Steiner triangles span only 324 boundary dimensions over F2 but all 325 over F3; equivalently the even-supported H2 defect is one-dimensional only in characteristic 2. Over F3, H2 is canonically the 120-dimensional permutation module on Steiner triangles, and exact common-generator Hom calculations give Hom_PSp(H2,Q10)=Hom_PSp(Q10,H2)=0. Thus there is no linear PSp-equivariant Steiner-H2/adjoint bridge; any bridge must be nonlinear, characteristic-changing, or use extra structure."
+}
