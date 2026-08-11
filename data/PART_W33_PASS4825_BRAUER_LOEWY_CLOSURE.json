@@ -1,0 +1,34 @@
+{
+  "pass": 4825,
+  "group": "PSp(4,3) ~= U4(2)",
+  "field": "characteristic 2 over a splitting field",
+  "module_dimension": 5671,
+  "Brauer_simple_degrees": [1,4,4,6,14,20,20,64],
+  "Brauer_composition_factors": [
+    {"label":"phi1","degree":1,"composition_multiplicity":71},
+    {"label":"phi2","degree":4,"composition_multiplicity":70},
+    {"label":"phi3","degree":4,"composition_multiplicity":70},
+    {"label":"phi4","degree":6,"composition_multiplicity":154},
+    {"label":"phi5","degree":14,"composition_multiplicity":70},
+    {"label":"phi6","degree":20,"composition_multiplicity":56},
+    {"label":"phi7","degree":20,"composition_multiplicity":56},
+    {"label":"phi8","degree":64,"composition_multiplicity":14}
+  ],
+  "dimension_check": 5671,
+  "source_decomposition_rows": "official GAP Character Table Library U4(2) mod-2 decomposition matrix; ordinary rows chi1..chi20 matched to the frozen Atlas-labelled PSp ordinary character from Pass4745",
+  "trivial_composition_multiplicity": 71,
+  "module_level": {
+    "trivial_socle_dimension": 4,
+    "trivial_head_dimension": 1,
+    "all_four_fixed_vectors_in_augmentation": true,
+    "deck_line_nonsplit": true,
+    "no_trivial_direct_summand": true
+  },
+  "Loewy_consequences": {
+    "trivial_factors_forced_strictly_between_trivial_socle_and_head_at_least": 66,
+    "Loewy_length_lower_bound": 3,
+    "full_nontrivial_Loewy_ordering_known": false
+  },
+  "theorem": "The exact characteristic-two Brauer semisimplification of the 5671-dimensional invariant-flag H1 is 71*1 + 70*4a + 70*4b + 154*6 + 70*14 + 56*20a + 56*20b + 14*64. Combined with the exact four-dimensional trivial socle and one-dimensional trivial head, at least 66 trivial composition factors are forced into internal nonsplit layers, proving Loewy length at least three.",
+  "boundary": "The composition-factor census and trivial-layer constraints are exact. A decomposition matrix does not determine the complete radical/socle ordering of the nontrivial simple factors; that remains a genuine 5671-dimensional MeatAxe problem."
+}
