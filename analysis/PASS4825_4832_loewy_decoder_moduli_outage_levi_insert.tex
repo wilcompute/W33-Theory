@@ -1,0 +1,28 @@
+\subsection{Passes 4825--4832: maximal distance-14 decoding, intrinsic dual shells, and Levi-cycle coding}
+\label{subsec:pass4825-4832}
+
+The maximal member of the $PGSp(4,3)$-invariant line-parity preimage family from Pass~4819 is
+\[
+[2025,399,14]_2.
+\]
+Its outer code is $W_{20}+\langle\mathbf1\rangle=[27,21,3]_2$, whose dual is the six-dimensional $W_6=[27,6,12]_2$.  Consequently the physical parity-check rank is
+\[
+1620+6=1626:
+\]
+the $1620$ local $K_6$-cell checks of Pass~4821 plus six global $W_6$ checks.  The local syndrome cosets are unchanged: there are $4096$ local syndromes with eight representatives each, and no nonzero zero-local-syndrome word has weight below seven.  Hence the same local-coset search, now filtered by six outer syndrome bits, uniquely corrects every arbitrary physical error of weight at most six.  Any two distinct nonzero $W_6$ words intersect, so six separate global check layers are necessary; together with the two local layers this gives a certified eight-layer schedule upper bound.  Global optimality of the combined eight layers is not asserted.
+
+The dual shells of this $[2025,399,14]_2$ code recover the router geometry without importing the router labels.  The $2025$ generator columns form exactly $540$ equivalence classes:
+\[
+405\times4\; +\;135\times3.
+\]
+The size-four classes are the cold $K_{2,2}$ blocks and the size-three classes are the Petersen-hot triples.  The complete weight-two dual shell has $2835$ words and spans dimension $1485$.  After quotienting this span, the residual dual has length $540$, dimension $141$, and minimum weight four.  Its minimum shell consists of exactly $135$ disjoint relations of class-size profile $(4,4,4,3)$; these partition all $540$ quotient coordinates and reconstruct the $135$ physical $K_6$ cells.  The six outer $W_6$ dual directions have quotient weights $180$ or $240$, so they cannot create additional weight-four relations.
+
+The binary Levi-homology code of Pass~4822 also admits a sharper exact description.  It is
+\[
+0^{405}\oplus \operatorname{Rep}_{12}\!\left(H_1(\mathrm{Levi}(GQ(4,2));\mathbb F_2)\right),
+\]
+so puncturing the forced-zero hot coordinates gives $[1620,64,96]_2$.  The Levi graph has $72$ vertices, $135$ edges, cycle dimension $64$, girth eight and $1080$ eight-cycles; these $1080$ cycles give exactly the minimum weight-$96$ physical words.  A sparse dual basis has $405$ hot singleton rows, $1485$ repetition rows and $71$ Levi-star rows, for rank $1961$.  Maximum-likelihood decoding reduces exactly to a minimum-weight $T$-join problem on the Levi graph after compressing each twelvefold repetition block, and $d=96$ guarantees correction of every error of weight at most $47$.
+
+A tempting count coincidence is explicitly rejected.  Pass~4812 has twelve $PSp(4,3)$ orbits of $H_{10}$ deep holes, while the $270$-residue action has rank twelve.  Their homogeneous orbit-size and stabilizer multisets differ, so there is no componentwise $PSp$-equivariant identification of the two twelve-part decompositions.
+
+Four heavier exact computations are installed but are not promoted here until their generated certificates materialize: the characteristic-two Brauer/Loewy closure of the $5671$-dimensional flag $H^1$; the Burnside quotient of the $64$-dimensional sign-cohomology module; arbitrary-$\rho$ outage-flow phase diagrams; and the common-generator intertwiner test between the two independent $64$-dimensional binary cohomology modules.  This boundary is deliberate: installed producers are not theorem evidence until their outputs are frozen.
