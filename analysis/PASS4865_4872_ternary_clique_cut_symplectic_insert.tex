@@ -1,4 +1,12 @@
 % Passes 4865--4872: exact continuation after the rational/Steiner/O5/adjoint packet.
+% Idempotent because all three root manuscripts consume W33_CURRENT_FRONTIER_MANIFEST,
+% while w33_paper.tex also carries the packet explicitly at the historical frontier.
+\ifdefined\WDDPassFourEightSixFivePacketLoaded
+  \expandafter\endinput
+\else
+  \gdef\WDDPassFourEightSixFivePacketLoaded{1}%
+\fi
+
 \section{Intrinsic ternary filtration, Steiner clique homology, and the closed cut enumerator}
 \label{sec:pass4865-4872}
 
