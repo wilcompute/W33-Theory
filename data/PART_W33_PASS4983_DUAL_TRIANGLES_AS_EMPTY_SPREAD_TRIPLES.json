@@ -1,0 +1,10 @@
+{
+  "H36_one_overlap_triangles": 1200,
+  "Steiner_characterization": "the 120 Steiner triangles are exactly the one-overlap spread triples with one common W33 line",
+  "boundary": "This identifies the weight-three dual shell. It does not imply analogous single-predicate descriptions for all higher dual shells.",
+  "consequence": "The code-theoretic number A3(K^perp)=1080 is no longer merely an enumerator coefficient: it is the complement of the 120 local Steiner/one-common-line triangles inside the 1200 triangles of the 36-spread one-overlap graph.",
+  "dual_A3_characterization": "the 1080 weight-three checks of K^perp are exactly the one-overlap spread triples with empty triple intersection (Pass4976 sigma-even class)",
+  "pass": 4983,
+  "spread_triple_intersection_census": {"empty_common_W33_line": 1080, "one_common_W33_line": 120},
+  "theorem": "Under the unique Pass4964 double-six/spread bridge, the 1200 triangles of the H36 one-overlap graph split canonically by triple intersection: 120 Steiner triangles share exactly one W33 line, while the other 1080 share none. Combining this with Pass4976 identifies the complete dual weight-three shell of K with the empty-common-line spread triples."
+}
