@@ -1,0 +1,23 @@
+{
+  "boundary": "This is a tensor-product character theorem, not yet a concrete local polynomial coupling between the Witting-ray triple carrier and the 120-Steiner carrier, and not a spacetime CP claim.",
+  "comparison_with_Pass4941": {
+    "Pass4941": "uses two quadratic channels internally and the Q10 bracket to obtain a canonical projective quartic [q1,q2]",
+    "Pass4978": "uses an external one-dimensional Witting phase-orientation sign to make each quadratic channel outer-even, but leaves the original two-dimensional channel ambiguity intact",
+    "same_sign_cancellation_mechanism": true
+  },
+  "compensated_module": {
+    "PGSp_even_dimension": 2,
+    "construction": "H_comp = H tensor epsilon_W over F3, identifying -1 with 2",
+    "dimension": 2,
+    "outer_action": "(-I_2)*(-1)=+I_2",
+    "preferred_projective_channel_selected": false
+  },
+  "consequence": "Witting phase orientation can serve as a finite auxiliary chirality compensator for the quadratic Steiner->Q10 channels. Unlike the intrinsic Pass4941 quartic bracket, the compensation does not select a unique channel.",
+  "inputs": {
+    "Witting_phase_orientation_character": "epsilon_W: PSp -> +1, outer PGSp coset -> -1 (Pass4966)",
+    "outer_action_on_H": "-I_2 (Pass4875)",
+    "quadratic_Hom_space": "H = Hom_PSp(Sym^2 H2,Q10), dimension 2 over F3"
+  },
+  "pass": 4978,
+  "theorem": "The Pass4875 quadratic Hom plane and the Pass4966 Witting oriented-phase line carry the same nontrivial PGSp/PSp sign character. Tensoring them cancels the two minus signs, so the compensated two-dimensional quadratic multiplicity space is PGSp-even. This is an exact representation-level outer-sign cancellation at quadratic degree."
+}
