@@ -1,0 +1,134 @@
+name: Passes 5000-5007 kernel-cocircuit-torsor exact packet
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4992_4999_common.py'
+      - 'analysis/w33_pass5000_5001_5005_radius_kernel_extension.py'
+      - 'analysis/w33_pass5002_5004_reader_oct_origin.py'
+      - 'analysis/w33_pass5006_5007_oct_binary_and_cocircuit_frame.py'
+      - 'tools/apply_pass5002_erasure_correction.py'
+      - 'tools/w33_stale_claim_firewall.py'
+      - 'data/PART_W33_PASS500[0-7]*.json'
+      - 'data/PART_W33_PASS4993_EXACT_85_READER_ERASURE_DISTANCE.json'
+      - 'data/PART_W33_PASS4996_STALE_CLAIM_FIREWALL.json'
+      - 'analysis/PASS5000_5007_EXECUTED_OUTCOMES.md'
+      - 'analysis/PASS5000_5007_kernel_cocircuit_torsor_insert.tex'
+      - 'analysis/PASS5000_5007_index_insert.html'
+      - 'analysis/PASS4992_4999_oct_cocircuit_chain_insert.tex'
+      - 'analysis/PASS4992_4999_index_insert.html'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'docs/pass5000-5007-kernel-cocircuit-torsor.html'
+      - 'docs/pass4992-4999-oct-cocircuit-chain.html'
+      - 'tools/integrate_pass5000_5007_public.py'
+      - 'tools/integrate_pass4992_4999_public.py'
+      - 'tests/test_w33_pass5000_5007_exact_packet.py'
+      - 'tests/test_w33_pass4992_4999_exact_packet.py'
+      - '.github/workflows/w33_pass5000_5007_exact_packet.yml'
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pass5000-5007-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  exact-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      PYTHONPATH: .
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install finite-analysis dependencies
+        run: python -m pip install --disable-pip-version-check numpy networkx pytest
+      - name: Freeze committed certificates
+        run: |
+          mkdir -p /tmp/pass5000-frozen
+          for n in \
+            PART_W33_PASS5000_OCTAHEDRAL_RADIUS_ILP_BARRIER.json \
+            PART_W33_PASS5001_KERNEL20_TRITANGENT_V20_INTERTWINER.json \
+            PART_W33_PASS5002_CORRECTED_85_READER_ERASURE_DISTANCE.json \
+            PART_W33_PASS5003_OCTAHEDRON_REAL_MODULE_DECOMPOSITION.json \
+            PART_W33_PASS5004_C3_TORSOR_ORIGIN_NOGO.json \
+            PART_W33_PASS5005_NONSPLIT_20_30_10_EXTENSION.json \
+            PART_W33_PASS5006_OCTAHEDRON_BINARY_60_90_30_EXTENSION.json \
+            PART_W33_PASS5007_MINIMUM_COCIRCUIT_24_TIGHT_FRAME.json \
+            PART_W33_PASS4993_EXACT_85_READER_ERASURE_DISTANCE.json \
+            PART_W33_PASS4996_STALE_CLAIM_FIREWALL.json; do
+              cp data/$n /tmp/pass5000-frozen/$n
+          done
+      - name: Syntax check exact producers
+        run: |
+          python -m py_compile \
+            analysis/w33_pass4992_4999_common.py \
+            analysis/w33_pass5000_5001_5005_radius_kernel_extension.py \
+            analysis/w33_pass5002_5004_reader_oct_origin.py \
+            analysis/w33_pass5006_5007_oct_binary_and_cocircuit_frame.py \
+            tools/apply_pass5002_erasure_correction.py \
+            tools/w33_stale_claim_firewall.py \
+            tools/integrate_pass5000_5007_public.py
+      - name: Replay Passes 5000, 5001 and 5005
+        run: python analysis/w33_pass5000_5001_5005_radius_kernel_extension.py
+      - name: Replay Passes 5002 through 5004
+        run: python analysis/w33_pass5002_5004_reader_oct_origin.py
+      - name: Replay Passes 5006 and 5007
+        run: python analysis/w33_pass5006_5007_oct_binary_and_cocircuit_frame.py
+      - name: Reapply historical Pass4993 correction
+        run: python tools/apply_pass5002_erasure_correction.py
+      - name: Run stale-claim firewall
+        run: python tools/w33_stale_claim_firewall.py
+      - name: Semantic frozen-certificate equality
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('data'); frozen=Path('/tmp/pass5000-frozen')
+          names=[
+            'PART_W33_PASS5000_OCTAHEDRAL_RADIUS_ILP_BARRIER.json',
+            'PART_W33_PASS5001_KERNEL20_TRITANGENT_V20_INTERTWINER.json',
+            'PART_W33_PASS5002_CORRECTED_85_READER_ERASURE_DISTANCE.json',
+            'PART_W33_PASS5003_OCTAHEDRON_REAL_MODULE_DECOMPOSITION.json',
+            'PART_W33_PASS5004_C3_TORSOR_ORIGIN_NOGO.json',
+            'PART_W33_PASS5005_NONSPLIT_20_30_10_EXTENSION.json',
+            'PART_W33_PASS5006_OCTAHEDRON_BINARY_60_90_30_EXTENSION.json',
+            'PART_W33_PASS5007_MINIMUM_COCIRCUIT_24_TIGHT_FRAME.json',
+            'PART_W33_PASS4993_EXACT_85_READER_ERASURE_DISTANCE.json',
+            'PART_W33_PASS4996_STALE_CLAIM_FIREWALL.json']
+          for n in names:
+              a=json.loads((root/n).read_text());b=json.loads((frozen/n).read_text())
+              assert a==b,n
+          print('Pass5000-5007 and correction/firewall certificates reproduce exactly')
+          PY
+      - name: Focused regressions
+        run: |
+          python -m pytest -q tests/test_w33_pass5000_5007_exact_packet.py
+          python -m pytest -q tests/test_w33_pass4992_4999_exact_packet.py
+      - name: Materialize corrected public theorem cards
+        if: github.event_name != 'pull_request'
+        run: |
+          python tools/integrate_pass4992_4999_public.py
+          python tools/integrate_pass5000_5007_public.py
+      - name: Commit refreshed public roots
+        if: github.event_name != 'pull_request'
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- docs/index.html index.html; then
+            echo 'Public roots already current'
+            exit 0
+          fi
+          git config user.name 'w33-evidence-bot'
+          git config user.email 'w33-evidence-bot@users.noreply.github.com'
+          git add docs/index.html index.html
+          git commit -m 'Materialize corrected Pass4992-4999 and Pass5000-5007 theorem cards'
+          git pull --rebase origin master
+          git push origin HEAD:master
