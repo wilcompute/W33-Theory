@@ -1,0 +1,25 @@
+{
+  "PSp": {
+    "all_generators_preserve_oriented_phase": true,
+    "generator_count": 5,
+    "order": 25920
+  },
+  "boundary": "The sign refers to oriented triple phase. Reversing triangle orientation also conjugates the Bargmann product. This finite sign character is not automatically a spacetime parity or CP transformation.",
+  "carrier": "40 Witting rays = standard W(3,3) point action from Pass4963",
+  "interpretation": "Complex conjugation of the finite Bargmann phase is the ray-level shadow of the outer symplectic-similitude coset.",
+  "oriented_nonorthogonal_triples": 3240,
+  "outer_similitude": {
+    "all_triples_phase_negated": true,
+    "extended_group_order": 51840,
+    "matrix_mod3": "diag(1,2,1,2)",
+    "multiplier": -1,
+    "phase_cross_counts": {
+      "+pi/2 -> -pi/2": 180,
+      "+pi/6 -> -pi/6": 1440,
+      "-pi/2 -> +pi/2": 180,
+      "-pi/6 -> +pi/6": 1440
+    }
+  },
+  "pass": 4966,
+  "theorem": "On the 40-ray Witting/W33 point carrier, the oriented Pancharatnam phase is invariant under PSp(4,3) and changes sign under an explicit multiplier-minus-one symplectic similitude extending the action to PGSp(4,3) of order 51840. Hence phase orientation realizes the PGSp/PSp index-two character on every one of the 3240 nonorthogonal oriented triples."
+}
