@@ -1,66 +1,27 @@
-% Pass 4972 — Critical Group of W(3,3) on 40 Vertices (Corrected)
+% Pass 4972 — Critical group of W(3,3), hardened by Pass4985
 % Date: 2026-08-12
-% Status: EXECUTED — corrected from erroneous 33-vertex computation
+% Status: SUPERSEDED/HARDENED
 
-\section*{Pass 4972: Critical Group of $W(3,3)$ (Corrected, $v=40$)}
-
-\subsection*{Setup}
-
-The Laplacian of $W(3,3)$ is $L = 12I - A$ where $A$ is the adjacency matrix of
-$\mathrm{srg}(40,12,2,4)$. The spectrum of $L$ follows directly from the spectrum of $A$:
+\section*{Pass 4972: critical group of $W(3,3)$}
+The Laplacian spectrum is
 \[
-\mathrm{Spec}(L) = \{0^{(1)},\; 10^{(24)},\; 16^{(15)}\}
+\operatorname{Spec}(L)=\{0^{(1)},10^{(24)},16^{(15)}\}.
 \]
-since $L$ has eigenvalues $k - \lambda_i$: $12 - 12 = 0$, $12 - 2 = 10$, $12 - (-4) = 16$.
-
-\subsection*{Order of the Critical Group}
-
-By the Matrix-Tree Theorem, the number of spanning trees equals:
+Hence the Matrix--Tree theorem gives
 \[
-|\mathrm{crit}(W(3,3))| = \frac{1}{v}\prod_{\lambda_i \neq 0} \lambda_i
-= \frac{10^{24} \times 16^{15}}{40}
+|K(W(3,3))|=\frac{10^{24}16^{15}}{40}=2^{81}5^{23}.
 \]
 
-Computing:
-\begin{align}
-10^{24} &= 2^{24} \times 5^{24} \\
-16^{15} &= 2^{60} \\
-\frac{10^{24} \times 16^{15}}{40} &= \frac{2^{84} \times 5^{24}}{2^3 \times 5}
-= 2^{81} \times 5^{23}
-\end{align}
-
-Note: $81 = q^4 = k_{\mathrm{bulk}}$ (the number of logical qutrits in the bulk CSS code
-$[[240,81,3]]_3$). This is not a coincidence: the spanning tree count encodes the
-bulk code dimension as the 2-adic valuation.
-
-\subsection*{Smith Normal Form and Invariant Factors}
-
-The Smith normal form of $L$ over $\mathbb{Z}$ has invariant factors whose product
-gives $|\mathrm{crit}|$ and whose structure encodes the torsion of the critical group.
-For $\mathrm{srg}(40,12,2,4)$, the invariant factors include denominators:
+The exact Smith-form certificate already frozen in `w33_pass88_smith_group.json` gives
 \[
-1,\; 2,\; 4,\; 8,\; 10,\; 16
+K(W(3,3))\cong (\mathbb Z/10\mathbb Z)^8\oplus \mathbb Z/40\mathbb Z\oplus(\mathbb Z/160\mathbb Z)^{14}.
 \]
-matching the Standard Model U(1) hypercharge fractions:
+Its order is indeed $2^{81}5^{23}$.
+
+The previous ad-hoc list of invariant factors `1,2,4,8,10,16` and the hypercharge-denominator interpretation attached to it are withdrawn. The equality
 \[
-\pm\tfrac{1}{6},\; \pm\tfrac{1}{3},\; \pm\tfrac{1}{2},\; \pm\tfrac{2}{3},\; \pm 1
+v_2(|K(W(3,3))|)=81
 \]
-where the denominators $\{1, 2, 3, 6\}$ divide $6 = |\mathrm{center}(\mathrm{SU}(3) \times \mathrm{SU}(2) \times U(1))|$.
+is exact arithmetic; identifying that 81 with a physical logical-sector dimension is an interpretation requiring an independent mechanism, not a consequence of Smith normal form alone.
 
-\subsection*{Connection to Bulk CSS Code}
-
-From BREAKTHROUGH\_DCCXCIII:
-\begin{itemize}
-  \item $n_B = q^5 - q = 240$ (bulk code length = number of edges of $W(3,3)$)
-  \item $k_B = q^4 = 81$ (bulk logical dimension)
-  \item $d = q = 3$ (minimum distance = substrate prime)
-\end{itemize}
-The 2-adic valuation $v_2(|\mathrm{crit}|) = 81 = k_B$ directly links the
-critical group order to the bulk code's logical dimension.
-
-\subsection*{Cross-References}
-\begin{itemize}
-  \item BREAKTHROUGH\_DCCXCIII C524: $n_B = q(q-1)(q+1)(q^2+1) = 240$
-  \item pass\_992\_srg\_uniqueness\_certificate.md: $\mathrm{Spec}(W(3,3))$ verified
-  \item BT1051\_fermion\_charge\_ledger.md: SM hypercharge assignments
-\end{itemize}
+See `w33_pass88_smith_group.json` and `data/PART_W33_PASS4985_COLLISION_PACKET_AUDIT.json`.
