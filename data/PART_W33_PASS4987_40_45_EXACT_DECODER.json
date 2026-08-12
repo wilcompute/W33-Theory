@@ -1,0 +1,14 @@
+{
+  "pass": 4987,
+  "reader": {"shape": [85,36], "line_rows": 40, "tritangent_rows": 45, "rank": 36},
+  "frame_operator": "R^T R = 18 I_36 + 22 J_36",
+  "squared_singular_values": {"810": 1, "18": 35},
+  "condition_number_2": "sqrt(45)=3 sqrt(5)",
+  "pseudoinverse": "R^dagger = ((1/18)I-(11/7290)J) R^T",
+  "measurement_decoder": "For y_L=C^T x and y_T=Mx: x=(C y_L+M^T y_T)/18-(11/90)(sum y_L)1.",
+  "minimal_sensor_count": 36,
+  "minimal_compositions_only": ["15 lines + 21 tritangents", "16 lines + 20 tritangents"],
+  "basis_determinants": {"15+21": "4016775629952 = 2^7*3^22", "16+20": "-2677850419968 = -2^8*3^21"},
+  "erasure": {"all_subsets_up_to_size4_verified_full_rank": true, "guaranteed_erasure_tolerance_at_least": 4, "explicit_rank_killing_line_erasure_size": 12, "exact_failure_size_interval": [5,12]},
+  "theorem": "The complementary 40-line and 45-tritangent readers form an 85x36 full-rank frame with R^T R=18I+22J, hence an exact closed-form decoder. Thirty-six sensors are minimal; both possible rank-compatible compositions 15+21 and 16+20 occur."
+}
