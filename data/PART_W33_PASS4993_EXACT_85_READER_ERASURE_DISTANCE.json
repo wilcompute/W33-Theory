@@ -1,0 +1,19 @@
+{
+  "exact_erasure_distance": 8,
+  "guaranteed_erasure_tolerance": 7,
+  "lower_bound_proof": {
+    "mean_zero_V15": "no connected simple graph on <=7 vertices has eigenvalue -4, so a nonzero line-side dark eigenvector cannot have support <=7",
+    "mean_zero_V20": "a support <=7 would have one connected induced support component with eigenvalue3; exhaustive graph-atlas classification through seven vertices shows 3 is always its Perron root, so the necessary outside-neighbor cancellation is impossible",
+    "nonzero_mean": "both raw blocks are nonzero. Their supports must dominate their degree-12 graphs because the affine eigen-equation has nonzero constant right-hand side. Three closed neighborhoods cover at most39 vertices, so each block needs at least4 support coordinates and the total is at least8."
+  },
+  "minimum_failure_witnesses": {
+    "construction": "difference of the two 5-tritangent stars of an intersecting pair of cubic lines",
+    "distinct_support8_witnesses": 135,
+    "intersecting_cubic_line_pairs": 135,
+    "tritangent_graph_eigenvalue": 3
+  },
+  "pass": 4993,
+  "reader": "R=[C^T;M], 85x36, rank36",
+  "theorem": "The 85-sensor line+tritangent reader has exact cocircuit/erasure distance 8. Every deletion of at most seven sensors retains rank36, while 135 explicit eight-tritangent deletions obtained from intersecting cubic-line star differences kill rank.",
+  "boundary": "The 135 canonical witnesses are one explicit minimum family; this pass does not claim they exhaust every support-eight cocircuit orbit."
+}
