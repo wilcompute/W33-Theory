@@ -2,10 +2,25 @@
   "schema": "w33.pass_namespace_registry.v2.entry",
   "range": [4984, 4991],
   "slug": "residual_a4_collision_audit_dark15_decoder_affine_gauge_bonkers",
-  "title": "Residual A4 shell, collision audit, non-PGSp dark15 carrier, 40+45 decoder, affine gauge breaking, and three outside-box probes",
-  "status": "RESERVED",
+  "title": "Residual A4 orbit, collision audit, twin dark15, exact 40+45 decoder, affine gauge, octahedral bundle, tight frame, and point-indexed completion packets",
+  "status": "EXECUTED",
   "owner": "openai-gpt56-sol",
   "reserved_at": "2026-08-11",
-  "purpose": "Execute the five queued post-Pass4983 attacks plus three outside-box probes: 4984 classify the residual 810 A4 dual shell and correlated character constraints; 4985 audit the collided Pass4968-4972 packet against corrected W33/Q43/Witting facts; 4986 search for the true dark15 carrier beyond ordinary PGSp point-line permutation twists; 4987 derive an exact decoder/minimal-reader analysis for the complementary 40-line plus 45-tritangent spread transceiver; 4988 test whether Witting phase, tritangent chirality, S3 connection, or compiler orientation break the exact 12-fold AG(2,3) local gauge; 4989-4991 three independent outside-box probes chosen after the first five results.",
-  "boundary": "Pass4959 remains independently owned. Pass4968-4972 is audited but not overwritten. No remote CI or publication materialization is claimed without observation."
+  "executed_at": "2026-08-11",
+  "purpose": "Executed the five queued post-Pass4983 attacks plus three outside-box probes: 4984 residual 810 A4 chordless W(E6) orbit; 4985 cascade audit and hardening of collided Pass4968-4972; 4986 twin 15_p+15_l Levi-null obstruction; 4987 closed-form 40+45 spread decoder and minimal readers; 4988 proof that intrinsic/Witting structures leave the 12-fold AG(2,3) gauge intact; 4989 octahedral 810=270x3 tritangent bundle; 4990 centered equal-bound tight frame; 4991 canonical 12-to-4x3 completion packets uniquely indexed by the four points of the base W33 line.",
+  "evidence": {
+    "outcomes": "analysis/PASS4984_4991_EXECUTED_OUTCOMES.md",
+    "producers": [
+      "analysis/w33_pass4984_residual_a4_orbit.py",
+      "analysis/w33_pass4985_collision_packet_audit.py",
+      "analysis/w33_pass4986_twin_dark15_levi_obstruction.py",
+      "analysis/w33_pass4987_4989_4990_decoder_oct_bundle_frame.py",
+      "analysis/w33_pass4988_4991_affine_gauge_packets.py"
+    ],
+    "manuscript_insert": "analysis/PASS4984_4991_shell_decoder_gauge_insert.tex",
+    "public_page": "docs/pass4984-4991-shell-decoder-gauge.html",
+    "regression": "tests/test_w33_pass4984_4991_exact_packet.py",
+    "workflow": ".github/workflows/w33_pass4984_4991_exact_packet.yml"
+  },
+  "boundary": "Pass4959 remains independently owned and untouched. Covering radius remains 134<=rho(K)<=173. Finite outer sign is not identified with physical CPT. The 12-fold local affine gauge is not claimed physically fixed. Remote CI and public-root materialization are not reported green/current unless separately observed."
 }
