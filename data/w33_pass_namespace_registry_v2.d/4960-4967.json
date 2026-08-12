@@ -1,0 +1,11 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [4960, 4967],
+  "slug": "higher_moments_dark15_q43_cohomology_witting_36x36_bonkers",
+  "title": "Higher coset moments, dark-15 point-line bridge, Q43 matching cohomology, Witting re-audit, 36x36 carrier comparison, and three outside-box probes",
+  "status": "RESERVED",
+  "owner": "openai-gpt56-sol",
+  "reserved_at": "2026-08-11",
+  "purpose": "Execute the five queued post-Pass4958 attacks plus three independent outside-box finite probes. Planned fronts: 4960 higher Krawtchouk/coset moment covering-radius bounds; 4961 signed/oriented point-line operator on the two dark 15-dimensional sectors; 4962 abelian and nonabelian cohomology of the Q(4,3) S3 matching connection; 4963 Witting/Pancharatnam carrier re-audit under the W33/Q43 correction; 4964 exact comparison of the 36 W33 spreads and 36 cubic-surface double-sixes; 4965-4967 independent probes chosen after repo cross-checks.",
+  "boundary": "Reservation only. Pass4959 is independently reserved and is not modified. No theorem is promoted until executable or symbolic proof artifacts and focused regressions are frozen."
+}
