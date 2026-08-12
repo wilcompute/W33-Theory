@@ -1,0 +1,39 @@
+{
+  "Q43_binary_adjacency_code": {
+    "dimension": 10,
+    "length": 40,
+    "square_image_equals_orthogonal_complement": true
+  },
+  "boundary": "The 20-dimensional kernel and 10-dimensional quotient are exact binary carriers; no identification with unrelated real irreducibles is made here.",
+  "induced_quotient": {
+    "kernel_dimension": 20,
+    "source": "triangle boundary span / square boundary span",
+    "source_dimension": 30,
+    "surjective": true,
+    "target": "F2^40 / square-image span = dual functional space of the [40,10,12] Q43 adjacency code",
+    "target_dimension": 10
+  },
+  "map": "each H36 edge -> the unique W33 line shared by its two one-overlap spreads",
+  "pass": 4997,
+  "residual_square_image": {
+    "Q43_independent": true,
+    "distinct_images": 270,
+    "identification": "exactly the 270 size-four intersections of W33 spread pairs with overlap four",
+    "multiplicity_per_image": 3,
+    "source_residual_A4": 810,
+    "span_rank_F2": 30,
+    "weight": 4
+  },
+  "theorem": "The shared-line projection sends the 1080 sigma-even H36 triangle checks bijectively to the zero-center independent triads of Q(4,3), and sends the 810 residual squares three-to-one onto the 270 four-line intersections of overlap-4 W33 spread pairs. The residual-square image is exactly the 30-dimensional orthogonal complement of the Q43 binary adjacency code, inducing a canonical 30 -> 10 quotient with 20-dimensional kernel.",
+  "triangle_image": {
+    "Q43_independent": true,
+    "common_center_census": {
+      "0": 1080
+    },
+    "distinct_images": 1080,
+    "identification": "exactly the 1080 zero-center independent Q(4,3) triads",
+    "source_sigma_even_A3": 1080,
+    "span_rank_F2": 40,
+    "weight": 3
+  }
+}
