@@ -1,0 +1,18 @@
+{
+  "pass": 5001,
+  "source_quotient": "triangle span / residual-square span over F2",
+  "source_dimension": 30,
+  "target_quotient_dimension": 10,
+  "kernel_dimension": 20,
+  "tritangent_selector_code": {"matrix":"45x36 M mod2","rank":20},
+  "intertwiner": {
+    "group_generators_tested_PSp": 5,
+    "Hom_dimension": 1,
+    "unique_nonzero_intertwiner_rank": 20,
+    "outer_PGSp_generator_also_intertwined": true,
+    "full_group_equivariant_isomorphism": true
+  },
+  "exact_sequence": "0 -> V20_trit -> Q30 -> Q10 -> 0 over F2",
+  "theorem": "The 20-dimensional kernel discovered in Pass4997 is exactly the binary tritangent selector V20, not a numerical coincidence. The PSp intertwiner space is one-dimensional and its unique nonzero map is invertible; the same map commutes with the outer PGSp generator, giving a full W(E6)/PGSp-equivariant identification.",
+  "boundary": "This is a binary-module theorem. It does not identify the carrier with an unrelated real 20-dimensional representation without reduction data."
+}
