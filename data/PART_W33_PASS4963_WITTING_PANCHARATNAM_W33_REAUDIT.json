@@ -1,0 +1,24 @@
+{
+  "boundary": "This establishes the finite ray/graph/phase correspondence. It does not identify Pancharatnam phase with the old E6 Steiner signing, which lived on a different 40-set.",
+  "correction_to_Pass4882": "The 40 Witting rays belong to the W33 point action, whereas the 40 Steiner fibers belong to the nonisomorphic Q(4,3)=W33-line action. The old parameter-only identification of those two 40-sets is withdrawn.",
+  "exact_pancharatnam_center_table": {
+    "four_W33_common_centers": {"+pi/2":180,"-pi/2":180,"total":360},
+    "one_W33_common_center": {"+pi/6":1440,"-pi/6":1440,"total":2880}
+  },
+  "legacy_encoder_failure": {"distinct_F3_tuples_from_40_rays":19,"projective_bijection":false,"zero_tuple_multiplicity":8},
+  "nonorthogonal_triples": 3240,
+  "pass": 4963,
+  "prior_art": {
+    "Waegell_Aravind_arXiv_1701.06512": "40 Witting/Penrose rays live in CP(3), arising from a regular complex polytope in C^4; each ray is orthogonal to 12 others",
+    "scope": "prior art supplies the ray realization; the W33/Q43 graph discrimination and phase-center cross-tab are repo computations"
+  },
+  "theorem": "The exact Witting orthogonality graph is the standard W(3,3) point graph and not the Q(4,3) Steiner quotient. On its 3240 nonorthogonal triples, the exact Eisenstein Bargmann product has phase +/-pi/6 precisely for the 2880 one-center W33 triads and +/-pi/2 precisely for the 360 four-center triads.",
+  "witting_carrier": {
+    "ambient": "C^4 / CP^3",
+    "isomorphic_to_Q43_Steiner_line_graph": false,
+    "orthogonality_degree": 12,
+    "orthogonality_edges": 240,
+    "orthogonality_graph": "isomorphic to standard W(3,3) point graph",
+    "rays": 40
+  }
+}
