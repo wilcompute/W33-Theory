@@ -1,0 +1,15 @@
+{
+  "pass": 5007,
+  "indexing": "240 W33 point-graph edges / collinear point pairs",
+  "signed_cocircuit_matrix": "D_(p,q)=point-pencil(p)-point-pencil(q), shape240x40",
+  "support_size": 6,
+  "distinct_supports": 240,
+  "rank": 24,
+  "annihilates_raw_line_reader": true,
+  "line_reader_left_nullity": 24,
+  "spans_entire_left_nullspace": true,
+  "frame_operator_spectrum": {"60":24,"0":16},
+  "parseval_scaling": "1/sqrt(60)",
+  "theorem": "The 240 global minimum six-line cocircuits are canonically indexed by the 240 edges of the W33 point graph. With the natural pencil-difference signs they span the entire 24-dimensional left nullspace of the 40-line reader and form an equal-norm tight frame with D^T D eigenvalues 60^24 and 0^16. Thus the minimum line-sensor failure modes are themselves a W33 edge-gradient realization of the full 24-dimensional reader-null sector.",
+  "boundary": "The 24-dimensional nullspace statement concerns sensor-coefficient relations of the line reader; it is not automatically a physical gauge-field identification."
+}
