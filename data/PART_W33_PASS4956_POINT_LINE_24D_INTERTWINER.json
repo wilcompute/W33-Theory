@@ -1,0 +1,23 @@
+{
+  "boundary": "The 24D bridge is canonical from incidence. No analogous unsigned incidence bridge exists on the 15D blind sectors.",
+  "incidence_shape": [40, 40],
+  "identities": [
+    "A_W Z = Z A_Q",
+    "ZZ^T = 4I + A_W",
+    "Z^T Z = 4I + A_Q"
+  ],
+  "pass": 4956,
+  "projector_numerators": {
+    "E2": "-(A-12I)(A+4I)=60E2",
+    "Eminus4": "(A-12I)(A-2I)=96Eminus4"
+  },
+  "rank_Z": 25,
+  "row_graph": "W(3,3) point graph",
+  "column_graph": "Q(4,3) point graph = W(3,3) line-intersection graph",
+  "sector_action": {
+    "dimension_1_eigenvalue_12": "Z scales all-ones by 4",
+    "dimension_15_eigenvalue_minus4": "Z annihilates both sides exactly",
+    "dimension_24_eigenvalue_2": "Z is an isomorphism; Z^T Z=ZZ^T=6I on the sector; inverse is Z^T/6"
+  },
+  "theorem": "Point-line incidence is the canonical rational intertwiner between the 24-dimensional +2 modules of W(3,3) and its odd-q dual Q(4,3). Its inverse on that sector is Z^T/6. The same unsigned incidence kills both 15-dimensional -4 modules."
+}
