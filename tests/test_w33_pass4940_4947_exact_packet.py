@@ -12,7 +12,12 @@ def test_4940_radius_hardword():
     assert s['objective_distance']==134
     assert s['search_nodes']>=8_000_000
     assert d['twist_cross_certificate']['g_x_equals_x_plus_sigma']
-    assert d['covering_radius_update']=={'certified_lower_bound':134,'exact_radius_closed':False,'previous_lower_bound':124,'upper_bound':179}
+    # Pass4940 itself owns only the exact hard word and its then-current 179 ceiling.
+    assert d['covering_radius_update']['certified_lower_bound']==134
+    assert d['covering_radius_update']['upper_bound']==179
+    # Pass4951 is the authoritative current universal ceiling.
+    p=load('PART_W33_PASS4951_THIRD_MOMENT_RADIUS_BOUND.json')
+    assert p['covering_radius']['interval']==[134,173]
 
 def test_4941_quartic():
     d=load('PART_W33_PASS4941_QUARTIC_AMBIGUITY_CANCELLATION.json')
@@ -57,33 +62,49 @@ def test_4945_holonomy():
     assert d['fundamental_cycle_holonomy']['group_order']==6
     assert d['fundamental_cycle_holonomy']['all_six_permutations_seen']
 
-def test_4946_dual_w33():
+def test_4946_corrected_point_line_incidence():
     d=load('PART_W33_PASS4946_MAXCUT_STEINER_DUAL_W33_INCIDENCE.json')
     assert d['shells']['maximum_cuts']==d['shells']['Steiner_triangles']==120
     assert d['cross_incidence']['identical_row_classes']==[40,3]
     assert d['cross_incidence']['identical_column_classes']==[40,3]
-    assert d['quotient']['zero_matrix_row_weight']==d['quotient']['zero_matrix_column_weight']==4
-    assert d['quotient']['point_collinearity']=='SRG(40,12,2,4)'
-    assert d['quotient']['explicit_isomorphism_to_Pass4870_W33']
+    q=d['quotient']
+    assert q['zero_matrix_row_weight']==q['zero_matrix_column_weight']==4
+    assert q['maximum_cut_triples']=='40 W(3,3) points'
+    assert q['Steiner_triples'].startswith('40 W(3,3) lines')
+    assert q['row_collinearity']=='standard W(3,3) point graph'
+    assert q['column_collinearity'].startswith('Q(4,3)')
+    assert q['rank']==25
+    assert q['gram_spectrum']=={'0':15,'16':1,'6':24}
 
-def test_4947_curvature():
+def test_4947_corrected_q43_curvature():
     d=load('PART_W33_PASS4947_W33_TRIAD_CURVATURE.json')
-    assert d['W33_independent_triads']==3240
+    assert d['Q43_independent_triads']==3240
     assert d['curvature']=={'flat_identity':1080,'order3':0,'reflection_transposition':2160}
-    assert d['geometric_classification']['acentric_common_neighbors_0']==1080
-    assert d['geometric_classification']['centric_common_neighbors_2']==2160
+    assert d['geometric_classification']['zero_common_neighbors']==1080
+    assert d['geometric_classification']['two_common_neighbors']==2160
+    base=d['standard_W33_point_graph_baseline']
+    assert base['one_common_neighbor']==2880 and base['four_common_neighbors']==360
 
 def test_shared_manuscripts_and_public_sources():
     manifest=(ROOT/'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex').read_text()
     assert manifest.count('PASS4940_4947_radius_quartic_holonomy_duality_insert')==1
+    assert manifest.count('PASS4951_4958_radius_q43_transceiver_insert')==1
     insert=(ROOT/'analysis/PASS4940_4947_radius_quartic_holonomy_duality_insert.tex').read_text()
     assert 'WDDPassFourNineFourZeroPacketLoaded' in insert
-    assert '134\\le\\rho(K)\\le179' in insert
+    assert '134\\le\\rho(K)\\le173' in insert
+    assert 'Q(4,3)' in insert
     for wrapper in ('w33_paper.tex','photonic_holonet.tex','holonet_machine_blueprint.tex'):
         assert 'W33_CURRENT_FRONTIER_MANIFEST' in (ROOT/wrapper).read_text()
     card=(ROOT/'analysis/PASS4940_4947_radius_quartic_holonomy_index_insert.html').read_text()
     assert 'W33_PASS4940_4947_RADIUS_QUARTIC_HOLONOMY_CARD' in card
+    assert '134 ≤ ρ(K) ≤ 173' in card and 'Q(4,3)' in card
     page=(ROOT/'docs/pass4940-4947-radius-quartic-holonomy.html').read_text()
-    assert '134 ≤ ρ(K) ≤ 179' in page and 'Hol = S₃' in page
+    assert '134 ≤ ρ(K) ≤ 173' in page and 'Hol = S₃' in page and 'Q(4,3)' in page
     materializer=(ROOT/'tools/integrate_pass4940_4947_public.py').read_text()
     assert "INDEXES=(ROOT/'docs/index.html',ROOT/'index.html')" in materializer
+    assert 'replace_or_insert' in materializer and "'refreshed'" in materializer
+
+def test_legacy_generation_has_duality_postprocessor():
+    guard=(ROOT/'tools/apply_pass4954_duality_corrections_to_4946_4947.py').read_text()
+    assert 'maximum-cut triples are W33 points' in guard
+    assert 'Q(4,3)' in guard
