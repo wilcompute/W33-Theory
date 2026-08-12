@@ -1,0 +1,21 @@
+{
+  "boundary": "This is a linear equivariant obstruction. It does not exclude nonlinear, symmetry-broken, or representation-twisted constructions.",
+  "consequence": "A nonzero dark-15 bridge must add extra structure: symmetry breaking, a twisted target representation, or data outside the ordinary point/line permutation carriers.",
+  "dark15_obstruction": {
+    "Hom_PSp_V15line_to_V15point_dimension": 0,
+    "Hom_PSp_V15point_to_V15line_dimension": 0,
+    "J_on_nonconstant_sectors": "zero",
+    "Z_on_line_minus4_sector": "zero because Z^T Z=4I+A_line",
+    "signed_or_oriented_equivariant_incidence_can_evade": false
+  },
+  "equivariant_matrix_space": {
+    "basis": ["Z = incidence","J-Z = nonincidence"],
+    "dimension": 2,
+    "general_form": "M=a Z + b (J-Z)"
+  },
+  "group": {"PSp_order":25920,"line_action_degree":40,"point_action_degree":40},
+  "line_graph_spectrum": {"-4":15,"12":1,"2":24},
+  "pass": 4961,
+  "point_times_line_orbits": {"count":2,"incident":160,"nonincident":1440},
+  "theorem": "Every PSp-equivariant point-to-line matrix is a linear combination of incidence and nonincidence. Consequently every equivariant matrix annihilates the line 15-dimensional -4 constituent when mapping to the point module, and likewise in reverse. The missing 15<->15 bridge cannot be obtained by changing signs or orientations while retaining the same group equivariance."
+}
