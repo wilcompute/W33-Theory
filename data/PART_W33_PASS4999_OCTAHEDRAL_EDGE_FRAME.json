@@ -1,0 +1,34 @@
+{
+  "GF2_rank": 90,
+  "boundary": "The ranks120 and90 coincide with other project carrier dimensions, but no cross-carrier intertwiner is inferred from dimension alone.",
+  "column_weight": 9,
+  "incidence": "270 tritangent-pair octahedra x 360 H36 edges",
+  "pair_intersections": {
+    "share_0_edges": 31995,
+    "share_3_edges": 4320
+  },
+  "pass": 4999,
+  "real_rank": 120,
+  "row_weight": 12,
+  "shape": [270, 360],
+  "share3_graph": {
+    "common_neighbor_profile": {
+      "adjacent_10": 4320,
+      "nonadjacent_0": 10125,
+      "nonadjacent_4": 21060,
+      "nonadjacent_8": 810
+    },
+    "degree": 32,
+    "edges": 4320,
+    "strongly_regular": false,
+    "vertices": 270
+  },
+  "squared_singular_spectrum": {
+    "0": 150,
+    "18": 84,
+    "36": 15,
+    "54": 20,
+    "108": 1
+  },
+  "theorem": "The 270 octahedra form a highly structured edge-measurement frame on the 360 H36 coordinates: every octahedron uses12 edges, every edge lies in9 octahedra, the real incidence rank is120 and binary rank90, and the nonzero squared singular values are 108^1,54^20,36^15,18^84. Two octahedra share either zero or three H36 edges."
+}
