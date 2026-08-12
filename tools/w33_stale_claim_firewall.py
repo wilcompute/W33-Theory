@@ -14,6 +14,7 @@ OUT=ROOT/'data/PART_W33_PASS4996_STALE_CLAIM_FIREWALL.json'
 EXT={'.md','.tex','.html','.py','.json','.g','.txt'}
 SKIP_PREFIX=('archive/','.git/','build/','dist/')
 SELF='tools/w33_stale_claim_firewall.py'
+OUT_REL=OUT.relative_to(ROOT).as_posix()
 
 RULES={
  'srg33_fake': re.compile(r'srg\(\s*33\s*,\s*8\s*,\s*2\s*,\s*2\s*\)',re.I),
@@ -42,7 +43,7 @@ def live_files():
  for p in ROOT.rglob('*'):
   if not p.is_file() or p.suffix.lower() not in EXT:continue
   rel=p.relative_to(ROOT).as_posix()
-  if rel==SELF or rel.startswith(SKIP_PREFIX):continue
+  if rel in (SELF,OUT_REL) or rel.startswith(SKIP_PREFIX):continue
   yield rel,p
 
 def main()->int:
