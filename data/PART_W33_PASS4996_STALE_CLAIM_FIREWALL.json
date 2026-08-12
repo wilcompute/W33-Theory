@@ -10,6 +10,9 @@
     "point_line_correlation_claim": [
       "analysis/w33_pass1877_1881_the_involution_the_third_class_and_a_parity_correction.md"
     ],
+    "reader_global_distance8": [
+      "analysis/w33_pass4992_4995_oct_radius_decoder_gauge_chain.py"
+    ],
     "srg33_fake": [
       "PASS4801_4812_SRG_CONSTELLATION_BREAKTHROUGH.md",
       "PASS4801_gap_verification.g",
@@ -37,6 +40,12 @@
     "data/PART_W33_PASS4986_TWIN_DARK15_LEVI_OBSTRUCTION.json": {
       "false": true,
       "incidence_preserving_side_swap_exists": true
+    },
+    "data/PART_W33_PASS5002_CORRECTED_85_READER_ERASURE_DISTANCE.json": {
+      "5": true,
+      "6": true,
+      "exact_global_erasure_distance": true,
+      "guaranteed_erasure_tolerance": true
     }
   },
   "boundary": "This is a targeted stale-claim firewall, not a proof that every sentence in the repository is current.",
@@ -45,11 +54,12 @@
     "ihara_bad_discriminants",
     "outer_eigenspace_swap",
     "point_line_correlation_claim",
+    "reader_global_distance8",
     "srg33_fake",
     "witting_cp2",
     "witting_q43_identity"
   ],
   "status": "PASS",
-  "theorem": "Known retracted W33/Q43/Witting claims are now fail-closed on live text surfaces; only explicit historical, erratum, or audit/outcomes paths may quote them. The firewall also asserts the corrected Ihara, critical-group, and no-point-line-correlation replacements remain present.",
+  "theorem": "Known retracted W33/Q43/Witting/readout claims are fail-closed on live text surfaces; only explicit historical, erratum, or audit/outcomes paths may quote them. The firewall positively asserts the corrected Ihara, critical-group, no-point-line-correlation, and Pass5002 global reader-distance replacements remain present.",
   "violations": []
 }
