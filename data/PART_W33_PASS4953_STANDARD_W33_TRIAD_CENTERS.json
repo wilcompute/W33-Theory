@@ -1,0 +1,24 @@
+{
+  "boundary": "This pass classifies the standard W(3,3) point graph only. Pass4954 separately identifies the Steiner quotient with the dual Q(4,3) line-intersection graph.",
+  "common_neighbor_distribution": {"four_centers": 360, "one_center": 2880},
+  "duality_context": {
+    "Pass4870_error": "the Steiner quotient was incorrectly promoted to the standard W(3,3) point graph",
+    "Pass4947_counts_0_2": "belong to the Steiner quotient identified in Pass4954 as the dual Q(4,3) point graph"
+  },
+  "pairwise_noncollinear_triads": 3240,
+  "pass": 4953,
+  "projective_line_explanation": {
+    "all_PG3_3_lines": 130,
+    "four_center_triads": 360,
+    "isotropic_W33_lines": 40,
+    "nonisotropic_lines": 90,
+    "three_subsets_per_nonisotropic_line": 4
+  },
+  "role": "standard W(3,3) point-graph baseline for duality correction",
+  "span_classification": {"rank_2_span__four_centers": 360, "rank_3_span__one_center": 2880},
+  "standard_W33": {
+    "model": "projective points of F3^4 with symplectic collinearity",
+    "parameters": [40, 12, 2, 4]
+  },
+  "theorem": "In standard W(3,3), every pairwise noncollinear triple has exactly one or four common neighbors. The distribution is 2880 one-center and 360 four-center triples. The four-center triples are exactly the 3-subsets of the 90 non-isotropic projective lines."
+}
