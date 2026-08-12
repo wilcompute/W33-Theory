@@ -1,0 +1,33 @@
+{
+  "boundary": "The individual channel spectra and spread Gram law are prior repo results. The new theorem is their exact complementary reconstruction after the corrected W33/Q43 dual identification.",
+  "centered_projectors": {
+    "E0": "J/40",
+    "E15": "(4 B B^T - 9J)/72",
+    "E24": "(5 Z^T Z - 2J)/30",
+    "fraction_free_completeness": "9J + 12(5Z^TZ-2J) + 5(4BB^T-9J) = 360I"
+  },
+  "exact_reconstruction_identity": "18 I_40 = 3 Z^T Z + B B^T - 3 J_40",
+  "gram_laws": {
+    "point_channel": "Z^T Z = 4I + A_Q43; spectrum 16^1,6^24,0^15",
+    "spread_channel": "BB^T = 9I + 3 A_disjoint; spectrum 90^1,18^15,0^24"
+  },
+  "matrices": {
+    "B_line_by_spread": [40, 36],
+    "Z_point_by_line": [40, 40],
+    "stacked_readout": [76, 40]
+  },
+  "new_duality_context": "Pass4954-Pass4957 identify the Steiner quotient as Q(4,3), its 40 vertices as W33 lines, and its 36 maximum ovoids as W33 spreads.",
+  "pass": 4958,
+  "prior_art_credit": {
+    "Part_CXXVI": "spread-line Morita bridge; spectrum 90^1,18^15,0^24 and rank16",
+    "Pass173": "point-line transceiver; common 1+24 sector and 15D route-dark lattice"
+  },
+  "ranks": {"B": 16, "Z": 25, "stack_Z_and_Btranspose": 40},
+  "reconstruction_formula": "for line vector x: x=(1/6)Z^T(Zx)+(1/18)B(B^T x)-(1/6)Jx; sum(x) is recoverable from either readout",
+  "sector_complementarity": {
+    "common_overlap": "constant 1 only",
+    "point_channel": "transmits 1+24, kills 15",
+    "spread_channel": "transmits 1+15, kills 24"
+  },
+  "theorem": "The point-line and spread-line incidence channels are complementary exact transceivers on the forty-line W33/Q43 coordinate. Point incidence carries 1+24 and is blind to 15; spread incidence carries 1+15 and is blind to 24. Their stacked map has full rank 40 and satisfies 18I=3Z^TZ+BB^T-3J, yielding an exact reconstruction formula for every line-coordinate vector."
+}
