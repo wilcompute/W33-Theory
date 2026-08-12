@@ -17,8 +17,12 @@
       "analysis/PASS4971_fano_deletion_retraction.md",
       "data/w33_pass_namespace_registry_v2.d/4950.json"
     ],
-    "witting_cp2": [],
-    "witting_q43_identity": []
+    "witting_cp2": [
+      "analysis/PASS4992_4999_EXECUTED_OUTCOMES.md"
+    ],
+    "witting_q43_identity": [
+      "analysis/PASS4992_4999_EXECUTED_OUTCOMES.md"
+    ]
   },
   "authoritative_replacements": {
     "analysis/PASS4970_ihara_zeta_rational_corrected.tex": {
@@ -46,6 +50,6 @@
     "witting_q43_identity"
   ],
   "status": "PASS",
-  "theorem": "Known retracted W33/Q43/Witting claims are now fail-closed on live text surfaces; only explicit historical/erratum paths may quote them. The firewall also asserts the corrected Ihara, critical-group, and no-point-line-correlation replacements remain present.",
+  "theorem": "Known retracted W33/Q43/Witting claims are now fail-closed on live text surfaces; only explicit historical, erratum, or audit/outcomes paths may quote them. The firewall also asserts the corrected Ihara, critical-group, and no-point-line-correlation replacements remain present.",
   "violations": []
 }
