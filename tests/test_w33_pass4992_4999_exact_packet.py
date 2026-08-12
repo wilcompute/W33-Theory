@@ -17,11 +17,17 @@ def test_pass4992_octahedral_shell():
     assert x['covering_radius']['proved_interval']==[134,173]
     assert not x['covering_radius']['improved_here']
 
-def test_pass4993_exact_erasure_distance():
-    x=load('PART_W33_PASS4993_EXACT_85_READER_ERASURE_DISTANCE.json')
-    assert x['exact_erasure_distance']==8
-    assert x['guaranteed_erasure_tolerance']==7
-    assert x['minimum_failure_witnesses']['distinct_support8_witnesses']==135
+def test_pass4993_is_explicitly_corrected_by_pass5002():
+    old=load('PART_W33_PASS4993_EXACT_85_READER_ERASURE_DISTANCE.json')
+    assert old['status']=='CORRECTED_SUPERSEDED_BY_PASS5002'
+    assert old['correction']['exact_global_erasure_distance']==6
+    assert old['correction']['guaranteed_erasure_tolerance']==5
+    x=load('PART_W33_PASS5002_CORRECTED_85_READER_ERASURE_DISTANCE.json')
+    assert x['exact_global_erasure_distance']==6
+    assert x['guaranteed_erasure_tolerance']==5
+    assert x['minimum_raw_dependencies']['count']==240
+    assert not x['mixed_support8']['exist']
+    assert x['pure_tritangent_support8']['count']==135
 
 def test_pass4994_residual_c3():
     x=load('PART_W33_PASS4994_RESIDUAL_C3_AFFINE_GAUGE.json')
@@ -51,13 +57,14 @@ def test_pass4997_shared_line_projection():
     assert x['induced_quotient']['target_dimension']==10
     assert x['induced_quotient']['kernel_dimension']==20
 
-def test_pass4998_support8_2k4():
+def test_pass4998_support8_2k4_is_pure_tritangent_only():
     x=load('PART_W33_PASS4998_CANONICAL_SUPPORT8_COCIRCUITS.json')
     assert x['K4_subgraphs']==135
     assert x['canonical_minimum_family']['size']==135
     assert x['canonical_minimum_family']['support_size']==8
     assert x['exhaustion_inside_mean_zero_V20']['all_disjoint_nonadjacent_K4_pairs']==135
     assert x['exhaustion_inside_mean_zero_V20']['equal_to_star_difference_family']
+    assert load('PART_W33_PASS5002_CORRECTED_85_READER_ERASURE_DISTANCE.json')['exact_global_erasure_distance']==6
 
 def test_pass4999_octahedral_edge_frame():
     x=load('PART_W33_PASS4999_OCTAHEDRAL_EDGE_FRAME.json')
