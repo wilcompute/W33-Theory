@@ -1,0 +1,121 @@
+name: Passes 4960-4967 eight-front exact packet
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4960_degree7_moment_radius_barrier.py'
+      - 'analysis/w33_pass4961_dark15_point_line_hom_obstruction.py'
+      - 'analysis/w33_pass4962_q43_s3_curvature_cohomology.py'
+      - 'analysis/w33_pass4963_witting_pancharatnam_w33_reaudit.py'
+      - 'analysis/w33_pass4964_4965_4967_double_six_spread_transceiver.py'
+      - 'analysis/w33_pass4966_witting_phase_outer_character.py'
+      - 'analysis/w33_pass4882_pancharatnam_steiner_f3_cocycle.py'
+      - 'data/PART_W33_PASS496*.json'
+      - 'data/PART_W33_PASS4882_PANCHARATNAM_STEINER_COCYCLE.json'
+      - 'analysis/PASS4960_4967_moments_dark15_curvature_witting_spread_insert.tex'
+      - 'analysis/PASS4960_4967_index_insert.html'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'docs/pass4960-4967-moments-witting-double-six.html'
+      - 'docs/pancharatnam_symplectic_invariants.md'
+      - 'tools/pancharatnam_symplectic_invariants.py'
+      - 'tools/integrate_pass4960_4967_public.py'
+      - 'tests/test_w33_pass4960_4967_eight_front.py'
+      - '.github/workflows/w33_pass4960_4967_eight_front.yml'
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pass4960-4967-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  exact-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install finite-analysis dependencies
+        run: python -m pip install --disable-pip-version-check numpy networkx pytest
+      - name: Preserve frozen certificates for semantic comparison
+        run: |
+          mkdir -p /tmp/pass4960-frozen
+          cp data/PART_W33_PASS4960_DEGREE7_MOMENT_RADIUS_BARRIER.json /tmp/pass4960-frozen/
+          cp data/PART_W33_PASS4961_DARK15_POINT_LINE_HOM_OBSTRUCTION.json /tmp/pass4960-frozen/
+          cp data/PART_W33_PASS4962_Q43_S3_CURVATURE_COHOMOLOGY.json /tmp/pass4960-frozen/
+          cp data/PART_W33_PASS4963_WITTING_PANCHARATNAM_W33_REAUDIT.json /tmp/pass4960-frozen/
+          cp data/PART_W33_PASS4964_DOUBLE_SIX_SPREAD_EQUIVARIANT_BRIDGE.json /tmp/pass4960-frozen/
+          cp data/PART_W33_PASS4965_STEINER_LOCAL_NINE_SPREAD_CHART.json /tmp/pass4960-frozen/
+          cp data/PART_W33_PASS4966_WITTING_PHASE_OUTER_CHARACTER.json /tmp/pass4960-frozen/
+          cp data/PART_W33_PASS4967_POINT_DOUBLE_SIX_COMPLETE_TRANSCEIVER.json /tmp/pass4960-frozen/
+          cp data/PART_W33_PASS4882_PANCHARATNAM_STEINER_COCYCLE.json /tmp/pass4960-frozen/
+      - name: Syntax check exact producers
+        run: |
+          python -m py_compile \
+            analysis/w33_pass4960_degree7_moment_radius_barrier.py \
+            analysis/w33_pass4961_dark15_point_line_hom_obstruction.py \
+            analysis/w33_pass4962_q43_s3_curvature_cohomology.py \
+            analysis/w33_pass4963_witting_pancharatnam_w33_reaudit.py \
+            analysis/w33_pass4964_4965_4967_double_six_spread_transceiver.py \
+            analysis/w33_pass4966_witting_phase_outer_character.py \
+            analysis/w33_pass4882_pancharatnam_steiner_f3_cocycle.py
+      - name: Replay all eight passes and legacy withdrawal
+        run: |
+          set -euo pipefail
+          python analysis/w33_pass4960_degree7_moment_radius_barrier.py >/dev/null
+          python analysis/w33_pass4961_dark15_point_line_hom_obstruction.py >/dev/null
+          python analysis/w33_pass4962_q43_s3_curvature_cohomology.py >/dev/null
+          python analysis/w33_pass4963_witting_pancharatnam_w33_reaudit.py >/dev/null
+          python analysis/w33_pass4964_4965_4967_double_six_spread_transceiver.py >/dev/null
+          python analysis/w33_pass4966_witting_phase_outer_character.py >/dev/null
+          python analysis/w33_pass4882_pancharatnam_steiner_f3_cocycle.py >/dev/null
+      - name: Semantic frozen-certificate equality
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('.')
+          frozen=Path('/tmp/pass4960-frozen')
+          names=[
+            'PART_W33_PASS4960_DEGREE7_MOMENT_RADIUS_BARRIER.json',
+            'PART_W33_PASS4961_DARK15_POINT_LINE_HOM_OBSTRUCTION.json',
+            'PART_W33_PASS4962_Q43_S3_CURVATURE_COHOMOLOGY.json',
+            'PART_W33_PASS4963_WITTING_PANCHARATNAM_W33_REAUDIT.json',
+            'PART_W33_PASS4964_DOUBLE_SIX_SPREAD_EQUIVARIANT_BRIDGE.json',
+            'PART_W33_PASS4965_STEINER_LOCAL_NINE_SPREAD_CHART.json',
+            'PART_W33_PASS4966_WITTING_PHASE_OUTER_CHARACTER.json',
+            'PART_W33_PASS4967_POINT_DOUBLE_SIX_COMPLETE_TRANSCEIVER.json',
+            'PART_W33_PASS4882_PANCHARATNAM_STEINER_COCYCLE.json']
+          for n in names:
+              a=json.loads((frozen/n).read_text())
+              b=json.loads((root/'data'/n).read_text())
+              assert a==b,n
+          print('semantic certificates reproduce exactly')
+          PY
+      - name: Focused regression
+        run: python -m pytest -q tests/test_w33_pass4960_4967_eight_front.py
+      - name: Materialize or refresh public root card
+        if: github.event_name != 'pull_request'
+        run: python tools/integrate_pass4960_4967_public.py
+      - name: Commit refreshed public roots
+        if: github.event_name != 'pull_request'
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- docs/index.html index.html; then
+            echo 'Public roots already current'
+            exit 0
+          fi
+          git config user.name 'w33-evidence-bot'
+          git config user.email 'w33-evidence-bot@users.noreply.github.com'
+          git add docs/index.html index.html
+          git commit -m 'Materialize Passes 4960-4967 public theorem card'
+          git pull --rebase origin master
+          git push origin HEAD:master
