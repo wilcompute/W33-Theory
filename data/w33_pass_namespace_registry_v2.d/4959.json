@@ -1,0 +1,11 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "pass": 4959,
+  "slug": "point_line_incidence_loewy_compiler",
+  "title": "Point-line incidence Loewy compiler and Levi extension bridge",
+  "status": "RESERVED",
+  "owner": "openai-codex",
+  "reserved_at": "2026-08-11",
+  "purpose": "Use native GAP to factor the characteristic-three W33 and Q(4,3) adjacency radicals through literal point-line incidence, compute the induced maps on every Loewy layer, and determine whether the Q(4,3) fourteen-space is the Levi fourteen-space inside the nonsplit Pass4865 extension.",
+  "boundary": "Reservation only. Shared dimensions do not establish module identity; promotion requires explicit equivariant Hom solves, rank/kernel/image checks, a frozen certificate, and a focused native-GAP regression."
+}
