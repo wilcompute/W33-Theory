@@ -1,55 +1,24 @@
-# Pass 4969 — Outer Character Table: PSp(4,3) Extension (Corrected)
+# Pass 4969 — outer extension on the W33 point module
 
 **Date:** 2026-08-12  
-**Status:** EXECUTED — corrected basis at v=40
+**Status:** SUPERSEDED/HARDENED by Pass4985.
 
-## Automorphism Tower
+For the W33 adjacency matrix
 
-```
-PSp(4,3)  ⊂  PSp(4,3):2  ⊂  G₃₂
-|25920|       |51840|        |155520|
-```
+`Spec(A) = {12^1, 2^24, (-4)^15}`.
 
-The outer automorphism Z₂ of PSp(4,3) acts on the adjacency matrix eigenspaces:
-- r = +2 eigenspace (dimension 24): swapped orientation
-- s = −4 eigenspace (dimension 15): swapped sign
+The 40-point real permutation module therefore splits as `1 + 24 + 15`.
 
-This Z₂ is the **graph automorphism** interchanging the two non-trivial eigenspaces.
+## Exact correction
 
-## Character Staircase (Corrected)
+Every graph automorphism `P` satisfies `PA=AP`. Consequently it preserves each eigenspace belonging to a distinct adjacency eigenvalue. In particular, an outer graph automorphism **cannot interchange the 24- and 15-dimensional eigenspaces**. The earlier wording claiming that the outer involution interchanged them is false.
 
-The irreducible characters of PSp(4,3) at degrees:
+Pass4966 gives an explicit multiplier-minus-one similitude extending the PSp action from order 25,920 to a PGSp action of order 51,840. It acts *within* the 24- and 15-dimensional packets while reversing the oriented Witting/Pancharatnam phase character.
 
-| Degree | Representation | Combinatorial Object |
-|--------|---------------|---------------------|
-| 1 | Trivial | All-ones vector |
-| 12 | Gauge shell | k-neighbors of a vertex |
-| 24 | r-eigenspace | m_r = 2k = 24 = |S₄| |
-| 15 | s-eigenspace | m_s = v - 2k - 1 = 15 |
-| 40 | Permutation rep | 40 vertices |
-| 240 | Edge rep | 240 edges = |E₈ roots| |
-| 2160 | W₂₄₀ face rep | W₂₄₀ polytope faces |
+## Physics boundary
 
-Staircase: **40 → 240 → 2160** at successive symmetry levels.
+The finite quotient character `PGSp/PSp ~= C2` is an exact group-theoretic sign. It is **not automatically spacetime CPT, CP, or parity**. The previous sentence equating the outer involution with CPT is withdrawn.
 
-## Identity: m_r = |S₄|
+The numerical identities `24=2k` and `24-15=9=q^2` remain arithmetic observations; any particle-physics interpretation requires an independent representation/mechanism.
 
-From the July 2026 corrected commit (Perplexity Pass 5):
-> m_r = 2k = 24 = |S₄| (r-eigenspace dim = 4-gluon permutation group order)
-> m_r - m_s = 9 = q²
-
-This is the key physical identity: the r-eigenspace dimension counts the
-permutations of 4 gluon colors, while m_s = 15 = dim(SU(4)) − 1 counts
-the generators of color SU(4) → SU(3) symmetry breaking.
-
-## Outer Automorphism Physical Interpretation
-
-The Z₂ outer automorphism swaps:
-- Matter sector (27-shell, E₆ rep) ↔ Anti-matter sector
-- This is the CPT symmetry at the graph level
-
-## Cross-References
-
-- Perplexity Pass 5 commit: m_r=24, m_s=15 corrected from 26/13
-- BT1057_full_162_slot_table.md: 162 = q² × m_s = 9 × 18? Check.
-- MCCXXXVII: v = 40 = q×p_Ih + Φ₆
+Cross-references: `data/PART_W33_PASS4966_WITTING_PHASE_OUTER_CHARACTER.json`, `data/PART_W33_PASS4985_COLLISION_PACKET_AUDIT.json`.
