@@ -1,0 +1,17 @@
+{
+  "boundary": "This is an exact finite symmetry obstruction to a canonical compiler labeling, not an obstruction to choosing and calibrating a gauge in hardware.",
+  "compiler_consequence": {
+    "canonical_order_inside_blocks": false,
+    "canonical_order_of_blocks": false,
+    "canonical_unlabeled_three_blocks": true,
+    "minimal_statement": "the finite substrate supplies an unlabeled 3x3 imprimitive chart; qutrit labels require gauge fixing",
+    "raw_qutrit_coordinate_system_available_without_gauge_choice": false
+  },
+  "full_group_line_stabilizer_order": 1296,
+  "identified_local_group": "S3 wr S3 (full imprimitive wreath product in degree 9)",
+  "induced_local_permutation_group_order": 1296,
+  "kernel_on_nine_spreads_order": 1,
+  "local_chart": {"base_W33_line": 0, "canonical_Steiner_partition": "3+3+3", "incident_spreads": 9},
+  "pass": 4980,
+  "theorem": "The stabilizer of a W33 line in W(E6) has order 1296 and acts faithfully on the nine spreads through that line as the entire wreath product S3 wr S3. Thus the Pass4965 3+3+3 partition is canonical as an unlabeled block system, but neither the three blocks nor their three members carry canonical labels."
+}
