@@ -1,0 +1,13 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [4976, 4983],
+  "slug": "shell_correlations_twisted15_outer_fusion_e6_ports_holonet_bianchi_affine_spread_parity",
+  "title": "Signed-shell correlations, twisted dark-15 test, outer-odd fusion, E6 spread ports, Holonet local chart, and three outside-box probes",
+  "status": "RESERVED",
+  "owner": "openai-gpt56-sol",
+  "reserved_at": "2026-08-11",
+  "renumbered_from": [4968,4975],
+  "collision_commit": "f9db42c7fe192690b824a307df7fe27abadbd483",
+  "purpose": "Execute the five queued post-Pass4967 attacks plus three independent outside-box probes: 4976 signed-shell correlations for K=[360,36,20]_2; 4977 PGSp-outer twisted dark-15 Hom; 4978 Witting/quadratic outer-sign compensation; 4979 45-tritangent transport through the unique double-six/spread bridge; 4980 exact local nine-spread compiler/stabilizer audit; 4981 Q43 tetrahedral curvature/Bianchi and H2; 4982 intrinsic AG(2,3) completion test; 4983 H36/Steiner parity reinterpretation through the spread bridge.",
+  "boundary": "Renumbering preserves the computed mathematics and avoids overwriting the parallel Pass4968-4972 packet. Pass4959 remains independently owned and untouched."
+}
