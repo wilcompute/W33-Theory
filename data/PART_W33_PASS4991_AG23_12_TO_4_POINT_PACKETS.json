@@ -1,0 +1,13 @@
+{
+  "pass": 4991,
+  "completion_pair_intersections": {"share_3_added_lines": 54, "share_0_added_lines": 12},
+  "disjointness_graph_on_12": "4 K3",
+  "canonical_packets": {"count": 4, "size_each": 3},
+  "packet_action": "S4 of order24",
+  "base_W33_line_points": 4,
+  "unique_full_group_equivariant_packet_to_point_bijection": true,
+  "full_line_stabilizer_kernel_on_four_points": 54,
+  "PSp_line_stabilizer_kernel_on_four_points": 27,
+  "gauge_reading": "The 12-fold ambiguity canonically projects 3-to-1 onto the four points of the base W33 line. Choosing a distinguished point reduces the ambiguity to one triple; the bare geometry does not distinguish a point.",
+  "theorem": "The twelve local affine completions are not featureless: their disjointness graph is four disjoint triangles, and those four 3-packets are uniquely equivariantly indexed by the four points on the underlying W33 line."
+}
