@@ -1,0 +1,14 @@
+{
+  "pass": 5002,
+  "supersedes_global_claim": "Pass4993 exact erasure distance 8",
+  "reader": "R=[C^T;M], 85x36, rank36",
+  "exact_global_erasure_distance": 6,
+  "guaranteed_erasure_tolerance": 5,
+  "line_centered_dependencies": {"minimum_support":4,"count":40,"identification":"the four W33 line sensors through each W33 point"},
+  "minimum_raw_dependencies": {"support":6,"count":240,"pure_line":true,"identification":"difference of the two four-line point pencils for a collinear W33 point pair; equivalently one support for each of the 240 W33 point-graph edges"},
+  "exact_lower_certificate": {"raw_line_no_dependency_support_2_through_5":true,"raw_tritangent_no_dependency_support_2_through_5":true},
+  "mixed_support8": {"exist":false,"reason":"centered line and tritangent row spaces are orthogonal; a mixed dependency projects to a centered dependency in each block. Exact minima are 4 on the line block and at least5 on the tritangent block, so every mixed dependency has support at least9."},
+  "pure_tritangent_support8": {"count":135,"status":"Pass4998 family remains valid as the pure-tritangent minimum, not the global minimum"},
+  "theorem": "The global 85-reader erasure distance is 6, not 8. There are exactly 240 canonical six-line failures obtained by subtracting the four-line pencil relations of collinear W33 points, and no dependency of support at most5. There are no mixed line/tritangent support-eight cocircuits. Pass4998 remains correct only as the pure-tritangent support-eight classification.",
+  "boundary": "This correction changes the global fault-tolerance statement: every five-sensor erasure is safe; some six-line erasures fail."
+}
