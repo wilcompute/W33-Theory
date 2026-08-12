@@ -1,0 +1,81 @@
+name: Passes 4951-4958 radius and W33-Q43 correction
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4951_third_moment_radius_bound.py'
+      - 'analysis/w33_pass4952_dual_gq_incidence_singular_filter.py'
+      - 'analysis/w33_pass4953_correct_w33_triad_centers.py'
+      - 'analysis/w33_pass4954_steiner_quotient_is_q43_dual.py'
+      - 'analysis/w33_pass4955_maxcut_points_steiner_lines_incidence.py'
+      - 'analysis/w33_pass4956_point_line_24d_intertwiner.py'
+      - 'analysis/w33_pass4957_q43_ovoids_are_w33_spreads.py'
+      - 'analysis/w33_pass4958_point_spread_complementary_transceiver.py'
+      - 'data/PART_W33_PASS495*.json'
+      - 'data/PART_W33_PASS4870_STEINER_W33_QUADRATIC_BRIDGE.json'
+      - 'analysis/PASS4870_steiner_w33_quadratic_bridge_insert.tex'
+      - 'analysis/PASS4940_4947_radius_quartic_holonomy_duality_insert.tex'
+      - 'analysis/PASS4951_4958_radius_q43_transceiver_insert.tex'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'docs/pass4870-steiner-w33-quadratic.html'
+      - 'docs/pass4940-4947-radius-quartic-holonomy.html'
+      - 'tests/test_w33_pass4951_4958_radius_q43_transceiver.py'
+      - '.github/workflows/w33_pass4951_4958_radius_q43_correction.yml'
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass495*.py'
+      - 'data/PART_W33_PASS495*.json'
+      - 'tests/test_w33_pass4951_4958_radius_q43_transceiver.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-correction:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install finite-geometry test dependencies
+        run: python -m pip install --disable-pip-version-check numpy networkx pytest
+      - name: Syntax check producers
+        run: |
+          python -m py_compile \
+            analysis/w33_pass4951_third_moment_radius_bound.py \
+            analysis/w33_pass4952_dual_gq_incidence_singular_filter.py \
+            analysis/w33_pass4953_correct_w33_triad_centers.py \
+            analysis/w33_pass4954_steiner_quotient_is_q43_dual.py \
+            analysis/w33_pass4955_maxcut_points_steiner_lines_incidence.py \
+            analysis/w33_pass4956_point_line_24d_intertwiner.py \
+            analysis/w33_pass4957_q43_ovoids_are_w33_spreads.py \
+            analysis/w33_pass4958_point_spread_complementary_transceiver.py
+      - name: Replay exact producers
+        run: |
+          set -euo pipefail
+          python analysis/w33_pass4951_third_moment_radius_bound.py >/dev/null
+          python analysis/w33_pass4952_dual_gq_incidence_singular_filter.py >/dev/null
+          python analysis/w33_pass4953_correct_w33_triad_centers.py >/dev/null
+          python analysis/w33_pass4954_steiner_quotient_is_q43_dual.py >/dev/null
+          python analysis/w33_pass4955_maxcut_points_steiner_lines_incidence.py >/dev/null
+          python analysis/w33_pass4956_point_line_24d_intertwiner.py >/dev/null
+          python analysis/w33_pass4957_q43_ovoids_are_w33_spreads.py >/dev/null
+          python analysis/w33_pass4958_point_spread_complementary_transceiver.py >/dev/null
+      - name: Frozen-certificate byte check
+        run: |
+          git diff --exit-code -- \
+            data/PART_W33_PASS4951_THIRD_MOMENT_RADIUS_BOUND.json \
+            data/PART_W33_PASS4952_DUAL_GQ_INCIDENCE_SINGULAR_FILTER.json \
+            data/PART_W33_PASS4953_STANDARD_W33_TRIAD_CENTERS.json \
+            data/PART_W33_PASS4954_STEINER_QUOTIENT_IS_Q43_DUAL.json \
+            data/PART_W33_PASS4955_MAXCUT_POINTS_STEINER_LINES_INCIDENCE.json \
+            data/PART_W33_PASS4956_POINT_LINE_24D_INTERTWINER.json \
+            data/PART_W33_PASS4957_Q43_OVOIDS_ARE_W33_SPREADS.json \
+            data/PART_W33_PASS4958_POINT_SPREAD_COMPLEMENTARY_TRANSCEIVER.json
+      - name: Focused regression
+        run: python -m pytest -q tests/test_w33_pass4951_4958_radius_q43_transceiver.py
