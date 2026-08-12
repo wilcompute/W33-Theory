@@ -1,0 +1,13 @@
+{
+  "pass": 5004,
+  "residual_triple": "one of the four point-indexed AG(2,3) completion packets after choosing a base-line point",
+  "PSp_action": {"stabilizer_order":162,"image":"C3 regular/transitive","kernel_order":54,"fixed_completion_count":0},
+  "PGSp_action": {"stabilizer_order":324,"image":"S3 transitive","kernel_order":54,"fixed_completion_count":0},
+  "equivariant_origin_selector_exists": false,
+  "proof": "Any intrinsic PSp-equivariant selector must be fixed by the stabilizer of the chosen line and point. Its quotient C3 acts regularly on the three completions, so no completion is fixed. Adding the outer PGSp/Witting C2 enlarges the image to S3 and still creates no fixed point.",
+  "Witting_phase_role": "The finite Witting outer sign supplies the C2 reflection parity S3/C3; it orients the torsor but does not choose a C3 origin.",
+  "external_reference_requirement": {"to_choose_origin_under_PSp":"break the order162 stabilizer to its order54 kernel","to_choose_origin_under_full_PGSp":"one completion has stabilizer order108; choosing both origin and outer orientation leaves order54"},
+  "hardware_reading": "An OAM/time-bin phase convention can choose an origin only as calibration/reference data that breaks the intrinsic C3 symmetry. No reference-free finite-geometric origin exists.",
+  "theorem": "The residual qutrit triple is a genuine torsor: there is no intrinsic PSp- or PGSp-equivariant choice of zero. Witting phase supplies reflection parity but cannot supply the missing C3 origin. A physical compiler must therefore carry an external phase/time-bin/OAM reference (or equivalent symmetry-breaking datum) if it wants named states 0,1,2.",
+  "boundary": "This is a group-action no-go for intrinsic labeling. It does not say which laboratory reference is optimal or identify the finite outer sign with spacetime CP."
+}
