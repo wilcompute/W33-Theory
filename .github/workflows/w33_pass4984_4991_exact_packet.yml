@@ -1,0 +1,109 @@
+name: Passes 4984-4991 shell-decoder-gauge exact packet
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4984_residual_a4_orbit.py'
+      - 'analysis/w33_pass4985_collision_packet_audit.py'
+      - 'analysis/w33_pass4986_twin_dark15_levi_obstruction.py'
+      - 'analysis/w33_pass4987_4989_4990_decoder_oct_bundle_frame.py'
+      - 'analysis/w33_pass4988_4991_affine_gauge_packets.py'
+      - 'data/PART_W33_PASS498[4-9]*.json'
+      - 'data/PART_W33_PASS499[0-1]*.json'
+      - 'analysis/PASS4984_4991_shell_decoder_gauge_insert.tex'
+      - 'analysis/PASS4984_4991_index_insert.html'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'docs/pass4984-4991-shell-decoder-gauge.html'
+      - 'tools/integrate_pass4984_4991_public.py'
+      - 'tests/test_w33_pass4984_4991_exact_packet.py'
+      - '.github/workflows/w33_pass4984_4991_exact_packet.yml'
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pass4984-4991-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  exact-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install exact-analysis dependencies
+        run: python -m pip install --disable-pip-version-check numpy networkx pytest
+      - name: Freeze committed certificates
+        run: |
+          mkdir -p /tmp/pass4984-frozen
+          cp data/PART_W33_PASS4984_RESIDUAL_A4_CHORDLESS_ORBIT.json /tmp/pass4984-frozen/
+          cp data/PART_W33_PASS4985_COLLISION_PACKET_AUDIT.json /tmp/pass4984-frozen/
+          cp data/PART_W33_PASS4986_TWIN_DARK15_LEVI_OBSTRUCTION.json /tmp/pass4984-frozen/
+          cp data/PART_W33_PASS4987_40_45_EXACT_DECODER.json /tmp/pass4984-frozen/
+          cp data/PART_W33_PASS4988_AG23_INTRINSIC_GAUGE_SURVIVES.json /tmp/pass4984-frozen/
+          cp data/PART_W33_PASS4989_A4_TRITANGENT_OCTAHEDRAL_BUNDLE.json /tmp/pass4984-frozen/
+          cp data/PART_W33_PASS4990_CENTERED_85_TIGHT_FRAME.json /tmp/pass4984-frozen/
+          cp data/PART_W33_PASS4991_AG23_12_TO_4_POINT_PACKETS.json /tmp/pass4984-frozen/
+      - name: Syntax check producers
+        run: |
+          python -m py_compile \
+            analysis/w33_pass4984_residual_a4_orbit.py \
+            analysis/w33_pass4985_collision_packet_audit.py \
+            analysis/w33_pass4986_twin_dark15_levi_obstruction.py \
+            analysis/w33_pass4987_4989_4990_decoder_oct_bundle_frame.py \
+            analysis/w33_pass4988_4991_affine_gauge_packets.py \
+            tools/integrate_pass4984_4991_public.py
+      - name: Replay all eight passes
+        run: |
+          set -euo pipefail
+          python analysis/w33_pass4984_residual_a4_orbit.py >/dev/null
+          python analysis/w33_pass4985_collision_packet_audit.py >/dev/null
+          python analysis/w33_pass4986_twin_dark15_levi_obstruction.py >/dev/null
+          python analysis/w33_pass4987_4989_4990_decoder_oct_bundle_frame.py >/dev/null
+          python analysis/w33_pass4988_4991_affine_gauge_packets.py >/dev/null
+      - name: Semantic frozen-certificate equality
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('data'); frozen=Path('/tmp/pass4984-frozen')
+          names=[
+            'PART_W33_PASS4984_RESIDUAL_A4_CHORDLESS_ORBIT.json',
+            'PART_W33_PASS4985_COLLISION_PACKET_AUDIT.json',
+            'PART_W33_PASS4986_TWIN_DARK15_LEVI_OBSTRUCTION.json',
+            'PART_W33_PASS4987_40_45_EXACT_DECODER.json',
+            'PART_W33_PASS4988_AG23_INTRINSIC_GAUGE_SURVIVES.json',
+            'PART_W33_PASS4989_A4_TRITANGENT_OCTAHEDRAL_BUNDLE.json',
+            'PART_W33_PASS4990_CENTERED_85_TIGHT_FRAME.json',
+            'PART_W33_PASS4991_AG23_12_TO_4_POINT_PACKETS.json']
+          for n in names:
+              assert json.loads((root/n).read_text())==json.loads((frozen/n).read_text()), n
+          print('semantic certificates reproduce exactly')
+          PY
+      - name: Focused regression
+        run: python -m pytest -q tests/test_w33_pass4984_4991_exact_packet.py
+      - name: Materialize public theorem card
+        if: github.event_name != 'pull_request'
+        run: python tools/integrate_pass4984_4991_public.py
+      - name: Commit refreshed public roots
+        if: github.event_name != 'pull_request'
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- docs/index.html index.html; then
+            echo 'Public roots already current'
+            exit 0
+          fi
+          git config user.name 'w33-evidence-bot'
+          git config user.email 'w33-evidence-bot@users.noreply.github.com'
+          git add docs/index.html index.html
+          git commit -m 'Materialize Passes 4984-4991 public theorem card'
+          git pull --rebase origin master
+          git push origin HEAD:master
