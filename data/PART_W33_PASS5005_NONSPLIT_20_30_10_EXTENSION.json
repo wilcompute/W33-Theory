@@ -1,0 +1,10 @@
+{
+  "pass": 5005,
+  "sequence": "0 -> V20_trit -> Q30 -> Q10 -> 0 over F2",
+  "PSp_equivariant_section_exists": false,
+  "section_system_variables": 300,
+  "section_system_equations": 1532,
+  "full_PGSp_section_exists": false,
+  "theorem": "The canonical 20->30->10 binary sequence does not split PSp-equivariantly. Solving the complete affine section equations P S=I and gS=Sg for the PSp generators gives no solution. Therefore Q30 is a genuine nonsplit extension of Q10 by the tritangent V20; a fortiori there is no full-PGSp equivariant splitting.",
+  "boundary": "Nonsplit refers to this exact finite-field module extension; it is not a claim about a real or complex extension class."
+}
