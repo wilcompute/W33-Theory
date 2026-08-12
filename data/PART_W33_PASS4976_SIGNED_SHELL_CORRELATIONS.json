@@ -1,0 +1,38 @@
+{
+  "H36_triangle_dual_shell": {
+    "H36_edges_coordinates": 360,
+    "H36_triangles": 1200,
+    "Steiner_triangles_sigma_odd": 120,
+    "dual_dimension": 324,
+    "dual_weight3_words": 1080,
+    "nonSteiner_triangles_sigma_even": 1080,
+    "weight3_shell_spans_full_dual": true,
+    "weight3_span_rank": 324
+  },
+  "Pass4960_relaxation_witness": {
+    "first_contradiction": "T3=-1080 forces T4=+10530, not -1936",
+    "realizable_character": false,
+    "signed_shell_values": {"3": -1080, "4": -1936, "5": 75316, "6": 830590, "7": -37193040}
+  },
+  "boundary": "Rejecting the Pass4960 relaxation witness does not by itself exclude every possible distance-173 coset. The rigorous covering-radius interval remains 134<=rho(K)<=173.",
+  "code": "K=[360,36,20]_2",
+  "consequence": "The Pass4960 moment functional is genuinely non-character-valued. Future radius work can impose shell-product/character relations rather than independent |Tj| bounds.",
+  "covering_radius": {"improved_here": false, "proved_interval": [134,173]},
+  "extremal_character_lock": {
+    "T3_minus_1080_forces": {"3": -1080, "4": 10530, "5": -127656, "6": 2329680, "7": -37193040},
+    "T3_plus_1080_forces": {"3": 1080, "4": 10530, "5": 127656, "6": 2329680, "7": 37193040},
+    "reason": "the 1080 shell-3 words span all 324 dimensions of K^perp; all + signs give the trivial character and all - signs give the weight-parity character"
+  },
+  "pass": 4976,
+  "shell3_pair_convolution": {
+    "distinct_weight4_words_reached": 9720,
+    "distinct_weight6_words_reached": 569700,
+    "frozen_A4": 10530,
+    "unordered_pairs_weight4": 12960,
+    "unordered_pairs_weight6": 569700,
+    "weight4_multiplicity_distribution": {"1": 6480, "2": 3240},
+    "weight4_words_not_reached_by_two_shell3_words": 810,
+    "weight6_multiplicity_distribution": {"1": 569700}
+  },
+  "theorem": "The 1080 non-Steiner H36 triangles are exactly the sigma-even weight-three dual checks and span the full 324-dimensional dual code. Consequently the signed low-shell sums are correlated: in particular T3=+1080 forces Tj=Aj for every shell, while T3=-1080 forces Tj=(-1)^j Aj. This rejects the exact degree-seven relaxation witness used in Pass4960. The shell-3 pair convolution also reaches 9720 of the 10530 weight-four dual words, with multiplicities 1^6480 and 2^3240."
+}
