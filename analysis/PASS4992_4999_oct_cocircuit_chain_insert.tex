@@ -1,5 +1,5 @@
-% Passes 4992--4999: octahedral shell algebra, exact erasure distance, C3 gauge, chain filtration and bonkers.
-\subsection*{Octahedral shell algebra, cocircuits, and the binary 30-layer (Passes 4992--4999)}
+% Passes 4992--4999: octahedral shell algebra, corrected reader boundary, C3 gauge, chain filtration and bonkers.
+\subsection*{Octahedral shell algebra, cocircuits, and the binary 30-layer (Passes 4992--4999; reader boundary corrected by Pass5002)}
 The 270 tritangent-pair octahedra refine the residual $810=270\cdot3$ structure substantially.  In each octahedron, four edge-disjoint $\sigma$-even weight-three checks, four edge-disjoint Steiner-odd faces, and three edge-disjoint residual weight-four equators each cover the same twelve $H_{36}$ edges.  Hence, for character signs $t_i$ on the four even faces and $q_j$ on the three equators,
 \[
 \prod_{i=1}^4 t_i=\prod_{j=1}^3q_j=\chi(\hbox{all twelve octahedral edges}).
@@ -9,11 +9,12 @@ The 1080 even triangle checks are partitioned exactly once by the octahedra, whi
 134\leq\rho(K)\leq173.
 \]
 
-The complementary 40-line plus 45-tritangent reader has exact erasure distance eight.  If $N$ is cubic-line/tritangent incidence and $A_T$ the tritangent intersection graph, then
+\paragraph{Reader correction.}
+The original Pass4993 claim that the complementary 40-line plus 45-tritangent reader had global erasure distance eight is withdrawn.  Pass5002 found the missing line-sector relations.  If $Z$ is W33 point--line incidence, then for each point $p$ the four line sensors through $p$ satisfy one centered four-row relation.  For collinear points $p,q$ their pencils share one line, so subtracting the two pencil relations gives a raw six-line dependency supported on the symmetric difference of the two pencils.  There are exactly 240 such supports, one for each edge of the W33 point graph, and exhaustive exact rank checks show no raw line or tritangent dependency of support at most five.  Thus the corrected global result is
 \[
-N^TN=3I+A_T.
+d_{\rm erasure}(R)=6,
 \]
-For each of the 135 intersecting pairs of cubic lines, the difference of their five-tritangent stars is an eigenvalue-three vector with support eight.  No support of size at most seven is possible in either mean-zero reader sector, and a nonzero-mean dependency needs at least four coordinates in each degree-12 block.  Therefore every seven-sensor erasure is correctable and eight is sharp.  In the pure tritangent $V_{20}$ sector the 135 minimum supports are exactly the induced $2K_4$ configurations.
+so every five-sensor erasure is safe and some six-line erasures fail.  The Pass4998 family of 135 support-eight $2K_4$ tritangent cocircuits remains valid as the \emph{pure tritangent} minimum family, not the global minimum.  Pass5002 also proves there are no mixed line/tritangent support-eight cocircuits.
 
 The local affine gauge also refines.  After the Pass4991 choice of one of the four base-line points, the PSp line-and-point stabilizer has order 162 and acts on the corresponding three completions as $C_3$, with kernel 54.  Adjoining the outer similitude gives order 324 and full $S_3$, with the same kernel.  Thus the residual affine ambiguity is a canonical $C_3$ torsor and the finite outer quotient is precisely the reflection parity $S_3/C_3\cong C_2$.  No preferred element of the torsor, nor a physical CP interpretation, follows from this finite statement.
 
@@ -23,12 +24,12 @@ Over $\mathbb F_2$, the residual-square boundaries, sigma-even triangle boundari
 \]
 The square-only complex has $(\dim H_0,\dim H_1,\dim H_2)=(1,31,516)$; the triangle-filled complex has $(1,1,756)$.  Thus the triangles kill exactly 30 of the 31 square-complex one-cycle classes, leaving the single switching-parity class.
 
-This 30-layer has an explicit geometric projection.  Send each $H_{36}$ edge, viewed as a pair of one-overlap W33 spreads, to their unique common W33 line.  The 1080 even triangle checks map bijectively to the 1080 zero-center independent triads of $Q(4,3)$.  The 810 residual squares map three-to-one onto the 270 four-line intersections of spread pairs with overlap four.  Their image has binary dimension 30 and is exactly the orthogonal complement of the $[40,10,12]$ binary adjacency code of $Q(4,3)$.  Consequently the 30-dimensional triangle/square quotient admits a canonical surjection onto a ten-dimensional target with a 20-dimensional kernel.
+This 30-layer has an explicit geometric projection.  Send each $H_{36}$ edge, viewed as a pair of one-overlap W33 spreads, to their unique common W33 line.  The 1080 even triangle checks map bijectively to the 1080 zero-center independent triads of $Q(4,3)$.  The 810 residual squares map three-to-one onto the 270 four-line intersections of spread pairs with overlap four.  Their image has binary dimension 30 and is exactly the orthogonal complement of the $[40,10,12]$ binary adjacency code of $Q(4,3)$.  Consequently the 30-dimensional triangle/square quotient admits a canonical surjection onto a ten-dimensional target with a 20-dimensional kernel.  Pass5001 identifies that kernel equivariantly with the binary tritangent $V_{20}$, and Pass5005 proves the resulting $0\to20\to30\to10\to0$ sequence is nonsplit.
 
 Finally, the 270 octahedra themselves define a $270\times360$ edge-incidence frame of row weight 12 and column weight 9.  Its real rank is 120, binary rank 90, and squared singular spectrum is
 \[
 108^{(1)},\ 54^{(20)},\ 36^{(15)},\ 18^{(84)},\ 0^{(150)}.
 \]
-Two octahedra share either zero or three $H_{36}$ edges.  The repeated dimensions 120 and 90 are recorded as structural data only; no cross-carrier representation identification is promoted without an explicit intertwiner.
+Two octahedra share either zero or three $H_{36}$ edges.  Pass5003 resolves the real active space as $1+20+15+84$ using explicit 36-spread and 45-tritangent incidence maps, while Pass5006 resolves the binary rank-90 carrier by the exact shared-line sequence $0\to60\to90\to30\to0$.  The real coexact $30+90$ carrier is therefore not identified with the octahedral rank-120 space.
 
-A targeted stale-claim firewall now fails closed on the already-retracted W33/Q43/Witting identifications and simultaneously asserts the corrected Ihara, critical-group, and point/line-obstruction replacements remain live.  Historical and erratum files are explicitly allowlisted rather than silently rewritten.
+A targeted stale-claim firewall fails closed on the already-retracted W33/Q43/Witting identifications and simultaneously asserts the corrected Ihara, critical-group, point/line-obstruction, and reader-distance replacements remain live.  Historical and erratum files are explicitly allowlisted rather than silently rewritten.
