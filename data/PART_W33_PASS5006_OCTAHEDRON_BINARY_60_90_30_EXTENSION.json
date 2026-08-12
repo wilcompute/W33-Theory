@@ -1,0 +1,9 @@
+{
+  "pass": 5006,
+  "binary_oct_frame": {"shape":[270,360],"rank":90},
+  "shared_line_projection": {"distinct_row_images":270,"image_weight":4,"image_rank":30,"image":"exactly the residual-square image = Q43 adjacency-code orthogonal complement"},
+  "kernel_dimension": 60,
+  "exact_sequence": "0 -> K60 -> O90 -> C_Q43^perp(30) -> 0 over F2",
+  "theorem": "Reducing the 270-octahedron edge frame modulo two gives a 90-dimensional code. The canonical shared-line projection maps it onto the 30-dimensional orthogonal complement of the Q(4,3) adjacency code, with exact kernel dimension60. Every octahedron maps to one of the 270 overlap-four spread intersections, so the modular rank90 admits a literal 60->90->30 geometric resolution rather than a dimension-only analogy.",
+  "boundary": "No identification of the 60-kernel with an unrelated real carrier is made here."
+}
