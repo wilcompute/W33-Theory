@@ -1,0 +1,107 @@
+name: Passes 4992-4999 oct-cocircuit-chain exact packet
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4992_4999_common.py'
+      - 'analysis/w33_pass4992_4995_oct_radius_decoder_gauge_chain.py'
+      - 'analysis/w33_pass4997_4999_bonkers.py'
+      - 'tools/w33_stale_claim_firewall.py'
+      - 'data/PART_W33_PASS499[2-9]*.json'
+      - 'analysis/PASS4992_4999_EXECUTED_OUTCOMES.md'
+      - 'analysis/PASS4992_4999_oct_cocircuit_chain_insert.tex'
+      - 'analysis/PASS4992_4999_index_insert.html'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'docs/pass4992-4999-oct-cocircuit-chain.html'
+      - 'tools/integrate_pass4992_4999_public.py'
+      - 'tests/test_w33_pass4992_4999_exact_packet.py'
+      - '.github/workflows/w33_pass4992_4999_exact_packet.yml'
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pass4992-4999-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  exact-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    env:
+      PYTHONPATH: .
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install finite-analysis dependencies
+        run: python -m pip install --disable-pip-version-check numpy networkx pytest
+      - name: Freeze committed certificates
+        run: |
+          mkdir -p /tmp/pass4992-frozen
+          cp data/PART_W33_PASS4992_OCTAHEDRAL_SHELL_RADIUS_CORRELATIONS.json /tmp/pass4992-frozen/
+          cp data/PART_W33_PASS4993_EXACT_85_READER_ERASURE_DISTANCE.json /tmp/pass4992-frozen/
+          cp data/PART_W33_PASS4994_RESIDUAL_C3_AFFINE_GAUGE.json /tmp/pass4992-frozen/
+          cp data/PART_W33_PASS4995_OCTAHEDRAL_EQUATOR_CHAIN_COMPLEX.json /tmp/pass4992-frozen/
+          cp data/PART_W33_PASS4996_STALE_CLAIM_FIREWALL.json /tmp/pass4992-frozen/
+          cp data/PART_W33_PASS4997_SHARED_LINE_HOLOGRAPHY.json /tmp/pass4992-frozen/
+          cp data/PART_W33_PASS4998_CANONICAL_SUPPORT8_COCIRCUITS.json /tmp/pass4992-frozen/
+          cp data/PART_W33_PASS4999_OCTAHEDRAL_EDGE_FRAME.json /tmp/pass4992-frozen/
+      - name: Syntax check producers and publication tools
+        run: |
+          python -m py_compile \
+            analysis/w33_pass4992_4999_common.py \
+            analysis/w33_pass4992_4995_oct_radius_decoder_gauge_chain.py \
+            analysis/w33_pass4997_4999_bonkers.py \
+            tools/w33_stale_claim_firewall.py \
+            tools/integrate_pass4992_4999_public.py
+      - name: Replay Passes 4992-4995
+        run: python analysis/w33_pass4992_4995_oct_radius_decoder_gauge_chain.py
+      - name: Replay Passes 4997-4999
+        run: python analysis/w33_pass4997_4999_bonkers.py
+      - name: Run stale-claim firewall
+        run: python tools/w33_stale_claim_firewall.py
+      - name: Semantic frozen-certificate equality
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('data'); frozen=Path('/tmp/pass4992-frozen')
+          names=[
+            'PART_W33_PASS4992_OCTAHEDRAL_SHELL_RADIUS_CORRELATIONS.json',
+            'PART_W33_PASS4993_EXACT_85_READER_ERASURE_DISTANCE.json',
+            'PART_W33_PASS4994_RESIDUAL_C3_AFFINE_GAUGE.json',
+            'PART_W33_PASS4995_OCTAHEDRAL_EQUATOR_CHAIN_COMPLEX.json',
+            'PART_W33_PASS4996_STALE_CLAIM_FIREWALL.json',
+            'PART_W33_PASS4997_SHARED_LINE_HOLOGRAPHY.json',
+            'PART_W33_PASS4998_CANONICAL_SUPPORT8_COCIRCUITS.json',
+            'PART_W33_PASS4999_OCTAHEDRAL_EDGE_FRAME.json']
+          for n in names:
+              assert json.loads((root/n).read_text())==json.loads((frozen/n).read_text()), n
+          print('semantic certificates reproduce exactly')
+          PY
+      - name: Focused regression
+        run: python -m pytest -q tests/test_w33_pass4992_4999_exact_packet.py
+      - name: Materialize public theorem card
+        if: github.event_name != 'pull_request'
+        run: python tools/integrate_pass4992_4999_public.py
+      - name: Commit refreshed public roots
+        if: github.event_name != 'pull_request'
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- docs/index.html index.html; then
+            echo 'Public roots already current'
+            exit 0
+          fi
+          git config user.name 'w33-evidence-bot'
+          git config user.email 'w33-evidence-bot@users.noreply.github.com'
+          git add docs/index.html index.html
+          git commit -m 'Materialize Passes 4992-4999 public theorem card'
+          git pull --rebase origin master
+          git push origin HEAD:master
