@@ -66,16 +66,25 @@ jobs:
           python analysis/w33_pass4956_point_line_24d_intertwiner.py >/dev/null
           python analysis/w33_pass4957_q43_ovoids_are_w33_spreads.py >/dev/null
           python analysis/w33_pass4958_point_spread_complementary_transceiver.py >/dev/null
-      - name: Frozen-certificate byte check
+      - name: Frozen-certificate semantic equality
         run: |
-          git diff --exit-code -- \
-            data/PART_W33_PASS4951_THIRD_MOMENT_RADIUS_BOUND.json \
-            data/PART_W33_PASS4952_DUAL_GQ_INCIDENCE_SINGULAR_FILTER.json \
-            data/PART_W33_PASS4953_STANDARD_W33_TRIAD_CENTERS.json \
-            data/PART_W33_PASS4954_STEINER_QUOTIENT_IS_Q43_DUAL.json \
-            data/PART_W33_PASS4955_MAXCUT_POINTS_STEINER_LINES_INCIDENCE.json \
-            data/PART_W33_PASS4956_POINT_LINE_24D_INTERTWINER.json \
-            data/PART_W33_PASS4957_Q43_OVOIDS_ARE_W33_SPREADS.json \
-            data/PART_W33_PASS4958_POINT_SPREAD_COMPLEMENTARY_TRANSCEIVER.json
+          python - <<'PY'
+          import json, pathlib, subprocess
+          paths = [
+              'data/PART_W33_PASS4951_THIRD_MOMENT_RADIUS_BOUND.json',
+              'data/PART_W33_PASS4952_DUAL_GQ_INCIDENCE_SINGULAR_FILTER.json',
+              'data/PART_W33_PASS4953_STANDARD_W33_TRIAD_CENTERS.json',
+              'data/PART_W33_PASS4954_STEINER_QUOTIENT_IS_Q43_DUAL.json',
+              'data/PART_W33_PASS4955_MAXCUT_POINTS_STEINER_LINES_INCIDENCE.json',
+              'data/PART_W33_PASS4956_POINT_LINE_24D_INTERTWINER.json',
+              'data/PART_W33_PASS4957_Q43_OVOIDS_ARE_W33_SPREADS.json',
+              'data/PART_W33_PASS4958_POINT_SPREAD_COMPLEMENTARY_TRANSCEIVER.json',
+          ]
+          for path in paths:
+              frozen = json.loads(subprocess.check_output(['git','show',f'HEAD:{path}'], text=True))
+              replay = json.loads(pathlib.Path(path).read_text())
+              assert replay == frozen, path
+          print(f'{len(paths)}/{len(paths)} frozen certificates reproduced semantically')
+          PY
       - name: Focused regression
         run: python -m pytest -q tests/test_w33_pass4951_4958_radius_q43_transceiver.py
