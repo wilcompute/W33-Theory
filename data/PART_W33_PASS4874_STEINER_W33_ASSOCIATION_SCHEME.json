@@ -1,26 +1,33 @@
 {
-  "W33_quotient": {
-    "W33_adjacency_lift_eigenvalues": [36,6,-12],
-    "dividing_by_fiber_size_recovers_W33_eigenvalues": [12,2,-4],
+  "Q43_line_quotient": {
+    "adjacency_lift_eigenvalues": [36,6,-12],
+    "dividing_by_fiber_size_recovers_common_SRG_eigenvalues": [12,2,-4],
     "fiber_constant_primitive_multiplicities": [1,24,15],
     "fiber_size": 3,
     "fibers": 40,
+    "identification": "Q(4,3) point graph = W(3,3) line-intersection graph",
     "parameters": [40,12,2,4]
   },
-  "boundary": "Finite association-scheme theorem. The 3+6 nonedge refinement is canonical as a relation, but choosing labels on individual three-element fibers is additional gauge/coordinate data.",
+  "boundary": "Finite association-scheme theorem corrected by Pass4954. The 3+6 nonedge refinement is canonical as a relation, but choosing labels on individual three-element fibers is additional gauge/coordinate data. The quotient is the W33 line action/Q(4,3), not the W33 point graph.",
+  "correction": {
+    "original_W33_point_quotient_label": false,
+    "source": "Pass4954 explicit graph comparison",
+    "scheme_arithmetic_changed": false
+  },
   "nonedge_refinement": {
-    "R2_is_perfect_matching_for_all_540_W33_nonedges": true,
+    "R2_is_perfect_matching_for_all_540_Q43_nonedges": true,
     "R2_matching_pairs": 3,
     "R4_complement_pairs": 6,
-    "pairs_per_nonadjacent_fiber_pair": 9
+    "pairs_per_nonadjacent_fiber_pair": 9,
+    "W33_interpretation": "Q(4,3) nonedges are pairs of disjoint W(3,3) lines"
   },
   "pass": 4874,
   "relations": {
     "R0": {"meaning":"identity","size":120,"valency":1},
     "R1": {"meaning":"40 disjoint K3 fibers","unordered_pairs":120,"valency":2},
-    "R2": {"meaning":"perfect matching of 3 across every nonadjacent W33 fiber pair","unordered_pairs":1620,"valency":27},
-    "R3": {"meaning":"all 9 pairs across every adjacent W33 fiber pair","unordered_pairs":2160,"valency":36},
-    "R4": {"meaning":"remaining 6 pairs across every nonadjacent W33 fiber pair","unordered_pairs":3240,"valency":54}
+    "R2": {"meaning":"perfect matching of 3 across every nonadjacent Q(4,3) fiber pair","unordered_pairs":1620,"valency":27},
+    "R3": {"meaning":"all 9 pairs across every adjacent Q(4,3) fiber pair","unordered_pairs":2160,"valency":36},
+    "R4": {"meaning":"remaining 6 pairs across every nonadjacent Q(4,3) fiber pair","unordered_pairs":3240,"valency":54}
   },
   "scheme": {
     "classes": 4,
@@ -37,6 +44,6 @@
     "multiplicities": [1,24,15,20,60],
     "valencies": [1,2,27,36,54]
   },
-  "theorem": "The 120 Steiner triangles carry a commutative imprimitive 4-class association scheme. Its 40-dimensional fiber-constant subspace has primitive multiplicities 1,24,15 and the 2160-pair relation acts with eigenvalues 36,6,-12, exactly three times the W33 adjacency spectrum 12,2,-4. The 80-dimensional transverse subspace splits into primitive sectors 20+60 and is annihilated by the W33 adjacency-lift relation. Each W33 edge lifts to K3,3, while each W33 nonedge lifts canonically to a perfect matching of three pairs plus its six-pair complement. Thus the Steiner layer is an exact 3-fiber association-scheme refinement of the W33 Bose-Mesner algebra.",
-  "transverse_sector": {"W33_adjacency_lift_eigenvalue":0,"dimension":80,"fiber_relation_eigenvalue":-1,"primitive_multiplicities":[20,60]}
+  "theorem": "The 120 Steiner triangles carry a commutative imprimitive 4-class association scheme. Its 40-dimensional fiber-constant subspace has primitive multiplicities 1,24,15 and is the Q(4,3) point action, equivalently the W(3,3) line action. The 2160-pair relation acts with eigenvalues 36,6,-12, three times the common SRG eigenvalues 12,2,-4. The 80-dimensional transverse subspace splits into primitive sectors 20+60 over characteristic zero and is annihilated by the adjacency-lift relation. Each Q(4,3) adjacency edge lifts to K3,3, while each Q(4,3) nonedge lifts canonically to a perfect matching of three pairs plus its six-pair complement.",
+  "transverse_sector": {"Q43_adjacency_lift_eigenvalue":0,"dimension":80,"fiber_relation_eigenvalue":-1,"primitive_multiplicities":[20,60]}
 }
