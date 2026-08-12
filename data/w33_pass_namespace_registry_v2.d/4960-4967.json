@@ -3,9 +3,17 @@
   "range": [4960, 4967],
   "slug": "higher_moments_dark15_q43_cohomology_witting_36x36_bonkers",
   "title": "Higher coset moments, dark-15 point-line bridge, Q43 matching cohomology, Witting re-audit, 36x36 carrier comparison, and three outside-box probes",
-  "status": "RESERVED",
+  "status": "EXECUTED",
   "owner": "openai-gpt56-sol",
   "reserved_at": "2026-08-11",
-  "purpose": "Execute the five queued post-Pass4958 attacks plus three independent outside-box finite probes. Planned fronts: 4960 higher Krawtchouk/coset moment covering-radius bounds; 4961 signed/oriented point-line operator on the two dark 15-dimensional sectors; 4962 abelian and nonabelian cohomology of the Q(4,3) S3 matching connection; 4963 Witting/Pancharatnam carrier re-audit under the W33/Q43 correction; 4964 exact comparison of the 36 W33 spreads and 36 cubic-surface double-sixes; 4965-4967 independent probes chosen after repo cross-checks.",
-  "boundary": "Reservation only. Pass4959 is independently reserved and is not modified. No theorem is promoted until executable or symbolic proof artifacts and focused regressions are frozen."
+  "executed_at": "2026-08-11",
+  "purpose": "Executed the five queued post-Pass4958 attacks plus three independent outside-box finite probes: 4960 degree-7 moment barrier at radius 173; 4961 zero ordinary equivariant Hom between the dark point/line 15s; 4962 Q43 triangle-filled H1(F2)=0 and local-curvature generation of S3; 4963 corrected Witting=W33-point carrier and exact Pancharatnam center law; 4964 unique W(E6)-equivariant double-six/spread bridge; 4965 canonical local 9=3+3+3 spread chart; 4966 Witting oriented phase realizes the PGSp/PSp sign; 4967 point+double-six complete W33-line transceiver.",
+  "evidence": {
+    "outcomes": "analysis/PASS4960_4967_EXECUTED_OUTCOMES.md",
+    "manuscript_insert": "analysis/PASS4960_4967_moments_dark15_curvature_witting_spread_insert.tex",
+    "public_page": "docs/pass4960-4967-moments-witting-double-six.html",
+    "regression": "tests/test_w33_pass4960_4967_eight_front.py",
+    "workflow": ".github/workflows/w33_pass4960_4967_eight_front.yml"
+  },
+  "boundary": "All eight pass artifacts and focused regression sources are frozen on master. The dedicated exact replay/publication workflow was queued at namespace close time, so remote CI and homepage materialization are not reported as observed complete. Pass4959 remains independently owned and was not modified."
 }
