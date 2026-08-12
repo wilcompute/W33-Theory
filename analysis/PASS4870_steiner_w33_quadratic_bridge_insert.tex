@@ -1,24 +1,30 @@
-% Pass4870 — Steiner three-cover of W33 and first nonlinear adjoint bridge.
+% Pass4870 — Steiner three-cover of the W33 line action and first nonlinear adjoint bridge.
+% Corrected by Passes 4953--4956: the forty-fiber quotient is Q(4,3), not the
+% standard W(3,3) point graph.  The orbital/Hom calculation survives.
 \ifdefined\WDDPassFourEightSevenZeroLoaded
   \expandafter\endinput
 \else
   \gdef\WDDPassFourEightSevenZeroLoaded{1}%
 \fi
 
-\section{The Steiner-triangle three-cover of \texorpdfstring{$W(3,3)$}{W(3,3)} and the first nonlinear adjoint bridge}
+\section{The Steiner-triangle three-cover of the \texorpdfstring{$W(3,3)$}{W(3,3)} line action and the first nonlinear adjoint bridge}
 \label{sec:pass4870-steiner-w33-quadratic}
 
-\paragraph{Prior-art firewall.}
+\paragraph{Prior-art and correction firewall.}
 The bare partition of the $120$ Steiner trihedral pairs into forty triads is
 classical cubic-surface geometry; it is not claimed here as a discovery of this
 project.  In particular, Frame's finite-geometric treatment of the $27$ lines
-already identifies forty triads of trihedral pairs.  The repo-specific content
-of this section is narrower and executable: recovery of that classical
-$40\times3$ partition as a particular $PSp(4,3)$ pair orbital inside the
-maximal-triangle graph, the exact four pair-orbit refinement, an explicit
-isomorphism of the resulting forty-fiber quotient with the standard
-symplectic $W(3,3)$ graph, and the characteristic-three quadratic Hom
-calculation below.
+already identifies forty triads of trihedral pairs.  Pass~4870 correctly
+recovered that $40\times3$ partition as a particular $PSp(4,3)$ pair orbital
+and correctly computed the four pair-orbit refinement and the quadratic Hom
+space below.  It originally made one additional inference that is now
+withdrawn: the forty-fiber quotient was called the standard symplectic
+$W(3,3)$ point graph merely after an intended graph-isomorphism check.
+Passes~4953--4955 rebuild both degree-$40$ actions independently and prove that
+the quotient is instead the \emph{line-intersection graph} of $W(3,3)$, i.e.
+the point graph of the nonisomorphic odd-$q$ dual generalized quadrangle
+$Q(4,3)$.  The two graphs share $\operatorname{SRG}(40,12,2,4)$ parameters but
+are not isomorphic.
 
 Pass~4866 proved two facts that appeared, at first, to pull in opposite
 directions: the $120$ Steiner/maximal triangles form the full
@@ -50,11 +56,14 @@ graph with
 \[
   v=40,\qquad k=12,\qquad\lambda=2,\qquad\mu=4.
 \]
-An explicit graph isomorphism identifies this quotient with the standard
-symplectic $W(3,3)$ collinearity graph, and the induced projective symplectic
-action has order $25920$.  Thus the executable pair-orbit structure refines
-the classical forty-triad organization by recovering the original
-$W(3,3)$ substrate as an exact quotient.
+Pass~4954 proves by explicit graph isomorphism that this quotient is the
+intersection graph of the forty $W(3,3)$ lines, equivalently the $Q(4,3)$
+point graph.  Its independent-triad common-neighbor census is
+$0^{1080}2^{2160}$ and it has no spread, whereas the standard $W(3,3)$ point
+graph has census $1^{2880}4^{360}$ and does have spreads.  The induced
+projective symplectic action still has order $25920$: this is the second,
+nonisomorphic degree-$40$ $PSp(4,3)$ action, not a second copy of the point
+action.
 
 Because $2$ is invertible in $\mathbb F_3$, equivariant homogeneous quadratic
 maps $H_2\to Q_{10}$ are equivalent to equivariant symmetric bilinear maps, or
@@ -77,20 +86,26 @@ Therefore
   (\operatorname{Sym}^2H_2,Q_{10})=2.}
 \]
 Both dimensions are supported exclusively on the $2160$-pair relation that
-lifts $W(3,3)$ adjacency.  Since $Q_{10}$ is irreducible, every nonzero linear
-map $\operatorname{Sym}^2H_2\to Q_{10}$ in this two-dimensional family is
+lifts $Q(4,3)$ adjacency between the Steiner fibers.  Since $Q_{10}$ is
+irreducible, every nonzero linear map
+$\operatorname{Sym}^2H_2\to Q_{10}$ in this two-dimensional family is
 surjective.
 
 This gives a precise characteristic-three answer to the preceding obstruction:
 the first equivariant Steiner-to-adjoint bridge is quadratic, not linear, and
-the mediator is the recovered $W(3,3)$ quotient itself.
+its orbital mediator is the recovered $Q(4,3)$ line-action quotient.  Pass~4941
+then removes the two-dimensional quadratic-channel ambiguity projectively by
+taking the intrinsic Lie bracket of the two quadratic channels, producing an
+outer-even quartic with full $Q_{10}$ image.
 
 \paragraph{Evidence firewall.}
-The producer is
-\texttt{analysis/w33\_pass4870\_steiner\_w33\_quadratic\_bridge.py}, with
-frozen certificate
-\texttt{data/PART\_W33\_PASS4870\_STEINER\_W33\_QUADRATIC\_BRIDGE.json}.
-The classical forty-triad partition is prior art; the exact orbital quotient
-and quadratic-module calculations are the repo-derived statements being
-certified here.  The two-dimensional Hom space does not select a preferred
-normalization, physical coupling, or continuum field without extra structure.
+The legacy producer is
+\texttt{analysis/w33\_pass4870\_steiner\_w33\_quadratic\_bridge.py}; its old
+``explicit isomorphism to standard W33'' field is superseded by the correction
+producers
+\texttt{analysis/w33\_pass4954\_steiner\_quotient\_is\_q43\_dual.py} and
+\texttt{analysis/w33\_pass4955\_maxcut\_points\_steiner\_lines\_incidence.py}.
+The classical forty-triad partition is prior art; the exact pair-orbit and
+quadratic-module calculations are repo-derived.  The two-dimensional Hom space
+does not select a preferred normalization, physical coupling, or continuum
+field without extra structure.
