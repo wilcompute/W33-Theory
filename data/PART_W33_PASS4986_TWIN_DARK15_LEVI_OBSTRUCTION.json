@@ -1,0 +1,15 @@
+{
+  "pass": 4986,
+  "point_module": "1+24+15_p",
+  "line_module": "1+24+15_l",
+  "projectors": {
+    "P15_point": "(A_p^2-14A_p+24I)/96",
+    "P15_line": "(A_l^2-14A_l+24I)/96"
+  },
+  "exact_zero_channels": ["P15_point Z = 0", "Z P15_line = 0"],
+  "Levi": {"incidence_rank": 25, "adjacency_rank": 50, "nullity": 30, "nullspace": "15_p (+) 15_l"},
+  "nonisomorphism_certificate": {"GF2_adjacency_rank_point": 16, "GF2_adjacency_rank_line": 10, "incidence_preserving_side_swap_exists": false},
+  "outer_twist": "Pass4977 already proves the actual PGSp/PSp outer twist leaves the dark Hom zero.",
+  "theorem": "At q=3 the point-side and line-side dark fifteens are inequivalent twins. Incidence kills both; the Levi graph has exact 30-dimensional nullspace 15_p+15_l. Because the point and line SRGs have different GF(2) adjacency ranks, no incidence-preserving point-line correlation can swap the sides. The minimal honest symmetric dark carrier is the twin 30-space, not a canonical 15-to-15 bridge.",
+  "boundary": "A nonzero off-diagonal bridge would have to break the live incidence/PSp symmetry or use a larger nonpermutation carrier; none is manufactured here."
+}
