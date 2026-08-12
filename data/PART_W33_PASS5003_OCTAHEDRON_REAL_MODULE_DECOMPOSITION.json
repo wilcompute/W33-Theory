@@ -1,0 +1,24 @@
+{
+  "pass": 5003,
+  "octahedron_set": 270,
+  "share3_graph_spectrum": {"32":1,"14":20,"8":15,"2":84,"-4":150},
+  "edge_frame": {"real_rank":120,"GF2_rank":90,"active_real_spectral_space":"1 + 20 + 15 + 84"},
+  "natural_spread_carrier_map": {
+    "matrix": "270 octahedra x 36 double-sixes missed by the tritangent pair",
+    "real_rank": 36,
+    "GF2_rank": 35,
+    "spectral_projection_ranks": {"-4":0,"2":0,"8":15,"14":20,"32":1},
+    "identification": "its real image is exactly the 32,14,8 eigenspaces = 1+20+15"
+  },
+  "natural_tritangent_endpoint_map": {
+    "matrix": "270 intersecting tritangent pairs x 45 tritangents",
+    "real_rank": 45,
+    "spectral_projection_ranks": {"-4":20,"2":24,"8":0,"14":20,"32":1},
+    "V20_to_active20": "projecting endpoint incidence to the eigenvalue14 eigenspace gives an explicit rank20 equivariant map"
+  },
+  "active84": "the remaining eigenvalue2 active space after the canonical 1+20+15 spread image",
+  "Hodge120_test": "NO real equivariant identification with the Pass1487 coexact 30+90 carrier: the octahedral real row space contains a one-dimensional invariant constant vector, while coexact 30+90 has no trivial constituent.",
+  "degree90_test": "The binary rank90 is a modular rank, not a real 90-dimensional spectral constituent; no real degree90 block occurs in the octahedral active decomposition.",
+  "theorem": "The 120-dimensional real octahedral edge-frame image has the canonical invariant decomposition 1+20+15+84. The first 36 dimensions are the explicit image of the 36-spread/double-six permutation carrier, while the tritangent endpoint carrier projects equivariantly and with rank20 onto the active 20. The remaining active sector has dimension84. This rules out identifying real rank120 with the coexact 30+90 module and rules out reading the binary rank90 as the real degree90 constraint irrep.",
+  "boundary": "The 84-dimensional eigenspace may decompose further as a group module; this pass identifies it spectrally and by complement but does not assert irreducibility."
+}
