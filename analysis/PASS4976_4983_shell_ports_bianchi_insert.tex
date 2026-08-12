@@ -1,0 +1,70 @@
+% Passes 4976--4983: signed-shell correlations, outer compensation, 45-port reader, local gauge, and Q43 Bianchi.
+\section*{Passes 4976--4983: shell correlations, the 40+45 spread reader, and local gauge closure}
+
+\paragraph{Pass 4976: shell-three correlations.}
+On the 360 edges of the double-six graph $H_{36}$, the Pass4859 switching cochain is even on exactly the
+1080 non-Steiner triangles and odd on the 120 Steiner triangles.  The 1080 even triangle vectors span
+all $324$ dimensions of $K^\perp$.  Hence the extremal signed-shell values are rigid:
+\[
+T_3=+1080\Rightarrow T_j=A_j,\qquad
+T_3=-1080\Rightarrow T_j=(-1)^jA_j .
+\]
+In particular, the Pass4960 truncated-moment witness with $T_3=-1080$ and $T_4=-1936$ is not a
+character of $K^\perp$: it would have to satisfy $T_4=10530$.  This does not yet lower the rigorous
+covering-radius ceiling $173$.
+
+\paragraph{Pass 4977: the PGSp outer twist does not restore the dark 15.}
+The point and line permutation modules both extend from $\mathrm{PSp}(4,3)$ to
+$\mathrm{PGSp}(4,3)$.  Therefore conjugation by the multiplier-minus-one outer element fixes the
+isomorphism class of the unique $15$-dimensional constituent in each module.  The twisted point-line
+Hom spaces remain zero.  A true point/line correlation, if used, requires structure outside these
+ordinary PGSp permutation extensions.
+
+\paragraph{Pass 4978: Witting phase compensates the quadratic outer sign.}
+The two-dimensional quadratic Hom multiplicity space of Pass4875 carries outer action $-I_2$, while
+the oriented Witting phase line of Pass4966 carries the same nontrivial quotient character.
+Tensoring them gives
+\[
+H_{\rm comp}=H\otimes\varepsilon_W,\qquad (-I_2)(-1)=+I_2,
+\]
+so the compensated quadratic multiplicity space is PGSp-even.  Unlike the intrinsic quartic bracket
+of Pass4941, this cancellation does not select a preferred projective quadratic channel.
+
+\paragraph{Pass 4979: the 45 tritangents read the missing $1+20$ spread sector.}
+Let $M$ be the $45\times36$ matrix with $M_{TD}=1$ when the tritangent $T$ meets the corresponding
+double-six in exactly two of its three cubic lines.  Every row has weight $24$, every column weight
+$30$, and
+\[
+\rank M=21,\qquad M^{\mathsf T}M=18J+12I+3A_{H_{36}}.
+\]
+Thus $M$ transmits the $1+20$ sector and kills the $15$.  The Pass4967 spread-line matrix $C$ obeys
+$CC^{\mathsf T}=4J+6I-3A_{H_{36}}$, hence
+\[
+\boxed{18I_{36}=CC^{\mathsf T}+M^{\mathsf T}M-22J_{36}} .
+\]
+The stacked $40+45$ readout has rank $36$: W33 lines plus cubic tritangents reconstruct the complete
+36-spread/double-six carrier.
+
+\paragraph{Passes 4980 and 4982: the local nine-spread gauge.}
+At every W33 line, the nine incident spreads have the canonical Steiner partition $3+3+3$.  The full
+line stabilizer has order $1296$ and acts faithfully as the complete imprimitive wreath product
+$S_3\wr S_3$.  Therefore the block system is canonical but its labels are not.  If the partition is
+treated as one parallel class of $\mathrm{AG}(2,3)$, there are exactly $12$ affine-plane completions;
+the local wreath product acts transitively on all twelve, with completion stabilizer order $108$.
+Thus a qutrit compiler must fix a finite gauge rather than inherit canonical affine coordinates.
+
+\paragraph{Pass 4981: tetrahedral Bianchi closure.}
+The disjointness graph of the forty Q43/W33-line fibers has $9450$ four-cliques.  Over $\mathbb F_2$,
+the triangle boundary has rank $501$ and kernel dimension $2739$, while the tetrahedron boundary has
+rank exactly $2739$.  Hence the clique $3$-skeleton has $H^1=H^2=0$ over $\mathbb F_2$.
+For the $S_3$ matching connection, the tetrahedra have respectively $0,2,4$ reflection-curvature
+faces in counts $270,6480,2700$, and all $9450$ satisfy the nonabelian Bianchi identity
+\[
+H_{abc}H_{acd}H_{adb}=P_{ab}H_{bcd}P_{ba}.
+\]
+
+\paragraph{Pass 4983: the geometric meaning of $A_3(K^\perp)=1080$.}
+Among the $1200$ triangles of the one-overlap graph on the 36 spreads, exactly $120$ have one common
+W33 line and exactly $1080$ have empty triple intersection.  The former are the Steiner triangles;
+the latter are exactly the complete weight-three shell of $K^\perp$.  Thus a pairwise one-overlap
+spread triple is a weight-three dual check precisely when its common W33-line intersection is empty.
