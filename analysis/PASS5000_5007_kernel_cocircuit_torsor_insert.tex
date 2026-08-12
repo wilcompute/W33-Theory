@@ -1,0 +1,48 @@
+% Passes 5000--5007: radius barrier, exact modular extensions, corrected reader distance, octahedral modules and torsor no-go.
+\subsection*{Global character closure, modular extensions, and corrected readout (Passes 5000--5007)}
+The octahedral shell algebra of Pass4992 was pushed through an exact 270-cell sign ILP together with the degree-seven radial moment and localizing constraints.  The resulting local relaxation remains feasible at the distance-173 frontier: one may assign all four even triangle signs in every octahedron to $-1$ and the three equator signs to $(-1,-1,+1)$, while retaining the Pass4960 radial tuple
+\[
+(T_3,T_4,T_5,T_6,T_7)=(-1080,-1936,75316,830590,-37193040)
+\]
+and positive moment/localizing matrices.  This witness is not a global dual character.  Since the 1080 weight-three checks span $K^\perp$, the condition $T_3=-A_3$ forces $\chi(h)=(-1)^{\mathrm{wt}(h)}$ on all of $K^\perp$, hence $T_4=+A_4=10530$, contradicting the local witness.  Thus octahedron-local cells plus independent shell complements cannot lower the current theorem
+\[
+134\leq\rho(K)\leq173;
+\]
+the next radius model must encode global cross-octahedron character closure.
+
+The binary 30-layer from Pass4997 is now resolved equivariantly.  Let $Q_{30}$ denote the triangle-span modulo residual-square-span carrier and let $Q_{10}$ be its canonical ten-dimensional Q43 target.  The kernel has dimension 20.  Solving the complete PSp generator intertwining equations between this kernel and the binary rank-20 tritangent-selector code gives a one-dimensional Hom space whose unique nonzero map has rank 20; the same map commutes with the outer PGSp generator.  Therefore
+\[
+0\longrightarrow V_{20}^{\rm trit}\longrightarrow Q_{30}\longrightarrow Q_{10}\longrightarrow0
+\]
+is a full-group exact sequence over $\mathbb F_2$.  The complete affine section equations have no solution, so this extension is nonsplit already over PSp.
+
+\paragraph{Corrected readout boundary.}
+The global 85-channel line-plus-tritangent reader has erasure distance six, not eight.  Every W33 point gives a centered relation among its four incident line sensors.  If $p$ and $q$ are collinear points, their pencils share one line, and subtracting the two four-line relations cancels that common coordinate and leaves a raw six-line dependency.  The 240 collinear point pairs give 240 distinct support-six failures, and exact rank checks find no raw line or tritangent dependency of support at most five.  Consequently
+\[
+\boxed{d_{\rm erasure}(R)=6},
+\]
+so arbitrary erasure of at most five sensors is guaranteed safe.  The centered line and tritangent sensor spaces are orthogonal; a mixed dependency must contain a nonzero centered dependency in both blocks, of support at least four and five respectively, hence there is no mixed support-eight cocircuit.  The 135 $2K_4$ tritangent supports of Pass4998 remain the exact pure-tritangent support-eight family.
+
+The 240 minimum line failures have additional structure.  With $Z$ the W33 point--line incidence matrix, define $D_{pq}=Z_p-Z_q$ for each W33 point-graph edge $\{p,q\}$.  Then $D$ is $240\times40$, has rank 24, spans the complete left nullspace of the line reader, and
+\[
+D^TD\sim 60^{(24)}\oplus0^{(16)}.
+\]
+Thus, after scaling by $1/\sqrt{60}$, the minimum six-line failure modes form a Parseval frame for the entire 24-dimensional line-reader null sector.
+
+The real 270-octahedron edge frame is also resolved more precisely.  Its share-three graph has spectrum
+\[
+32^{(1)},\quad14^{(20)},\quad8^{(15)},\quad2^{(84)},\quad(-4)^{(150)},
+\]
+and the rank-120 active space is exactly
+\[
+1\oplus20\oplus15\oplus84.
+\]
+The natural $270\times36$ incidence recording the six double-sixes missed by each tritangent pair has image exactly $1\oplus20\oplus15$, while the natural tritangent-endpoint incidence projects with rank 20 onto the active 20-sector.  Hence the remaining active block is 84-dimensional.  In particular the real rank-120 octahedron carrier is not the coexact $30\oplus90$ module: the former contains a trivial constituent and the latter does not.  Likewise its binary rank 90 is modular rather than a real degree-90 constituent.
+
+Modulo two, the octahedron frame has a second exact geometric resolution.  Shared-line projection maps its 270 rows onto the 270 overlap-four spread-intersection vectors, whose span is the 30-dimensional orthogonal complement of the Q43 adjacency code.  Therefore
+\[
+0\longrightarrow K_{60}\longrightarrow O_{90}\longrightarrow C_{Q43}^{\perp}(30)\longrightarrow0.
+\]
+No identification of $K_{60}$ with an unrelated real carrier is made without an intertwiner.
+
+Finally, the residual affine triple is a genuine torsor rather than a secretly labeled qutrit.  After choosing one of the four base-line points, the PSp line-and-point stabilizer has order 162 and acts regularly through $C_3$ on the three completions, with kernel 54.  The full PGSp stabilizer has order 324 and acts through $S_3$, again with kernel 54.  Therefore no intrinsic PSp- or PGSp-equivariant choice of origin exists.  The Witting outer sign supplies only the reflection parity $S_3/C_3\cong C_2$.  A physical compiler that names the states $0,1,2$ must carry an external phase, time-bin, OAM, or equivalent $C_3$-breaking reference.
