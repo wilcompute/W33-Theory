@@ -14,9 +14,13 @@ def test_pass4874_association_scheme():
     assert s['valencies']==[1,2,27,36,54]
     assert s['multiplicities']==[1,24,15,20,60]
     assert s['first_eigenmatrix']==[[1,2,27,36,54],[1,2,-3,6,-6],[1,2,3,-12,6],[1,-1,9,0,-9],[1,-1,-3,0,3]]
-    assert d['W33_quotient']['parameters']==[40,12,2,4]
-    assert d['W33_quotient']['dividing_by_fiber_size_recovers_W33_eigenvalues']==[12,2,-4]
-    assert d['nonedge_refinement']['R2_is_perfect_matching_for_all_540_W33_nonedges']
+    q=d['Q43_line_quotient']
+    assert q['parameters']==[40,12,2,4]
+    assert q['identification']=='Q(4,3) point graph = W(3,3) line-intersection graph'
+    assert q['dividing_by_fiber_size_recovers_common_SRG_eigenvalues']==[12,2,-4]
+    assert d['correction']['original_W33_point_quotient_label'] is False
+    assert d['correction']['scheme_arithmetic_changed'] is False
+    assert d['nonedge_refinement']['R2_is_perfect_matching_for_all_540_Q43_nonedges']
     assert d['transverse_sector']['primitive_multiplicities']==[20,60]
 
 def test_pass4875_outer_selection_rule():
@@ -42,3 +46,5 @@ def test_shared_frontier_contains_new_refinement_once():
     live=(ROOT/'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex').read_text()
     for token in ('PASS4874_steiner_w33_association_scheme_insert','PASS4875_pgsp_quadratic_selection_insert','PASS4877_maxcut_steiner_nonbijection_insert'):
         assert live.count(token)==1
+    insert=(ROOT/'analysis/PASS4874_steiner_w33_association_scheme_insert.tex').read_text()
+    assert 'Q(4,3)' in insert and 'line action' in insert
