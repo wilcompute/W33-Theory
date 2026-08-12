@@ -2,7 +2,7 @@
 """Pass4996 — fail closed on known retracted W33/Q43/Witting claims.
 
 Historical/erratum files that must quote the bad claim are explicitly allowlisted.
-Everything else is scanned.  This is intentionally narrow: only claims with an
+Everything else is scanned. This is intentionally narrow: only claims with an
 already-established corrected replacement are blocked here.
 """
 from __future__ import annotations
@@ -54,11 +54,11 @@ def main()->int:
    if not rx.search(text):continue
    if rel in ALLOW[name]:allowed_hits[name].append(rel)
    else:violations.append({'rule':name,'path':rel})
- # Positive assertions: authoritative live replacements must contain the corrected facts.
+ # Positive assertions: authoritative live replacements must contain stable corrected tokens.
  auth={
   'analysis/PASS4970_ihara_zeta_rational_corrected.tex':['sqrt{10}','sqrt{7}'],
   'analysis/PASS4972_critical_group_40vertex_corrected.tex':['Z/10','Z/40','Z/160'],
-  'data/PART_W33_PASS4986_TWIN_DARK15_LEVI_OBSTRUCTION.json':['incidence-preserving point-line side swap','false'],
+  'data/PART_W33_PASS4986_TWIN_DARK15_LEVI_OBSTRUCTION.json':['incidence_preserving_side_swap_exists','false'],
  }
  authoritative={}
  for rel,tokens in auth.items():
