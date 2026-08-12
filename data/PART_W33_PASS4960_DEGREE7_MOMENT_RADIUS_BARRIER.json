@@ -1,0 +1,28 @@
+{
+  "boundary": "This is a theorem about the stated truncated relaxation, not an existence proof for an actual distance-173 coset. The exact covering radius remains open.",
+  "centered_moment_identities": {
+    "m3": "-(3/4)T3",
+    "m4": "24255+(3/2)T4",
+    "m5": "-(2685/4)T3-(15/4)T5",
+    "m6": "10874340+2010T4+(45/4)T6",
+    "m7": "-(5037081/8)T3-(56175/8)T5-(315/8)T7"
+  },
+  "code": "K=[360,36,20]_2",
+  "consequence": "Any further moment-based improvement must use correlations among the signed shell sums T_j, additional coset identities, or higher structure; independent bounds |T_j|<=A_j through j=7 are insufficient.",
+  "covering_radius": {
+    "improved_here": false,
+    "proved_interval_from_Pass4951": [134,173]
+  },
+  "distance_173_relaxation_witness": {
+    "a": 7,
+    "both_positive_definite": true,
+    "delta": 173,
+    "moments": {"0":"1","1":"0","2":"90","3":"810","4":"21351","5":"442515","6":"32654235/2","7":"3231244695/2"},
+    "one_sided_localizing_matrix_leading_minors": ["7","1980","79022673","27807585328055790"],
+    "ordinary_moment_matrix_leading_minors": ["1","90","536490","2855774841174"],
+    "signed_shell_values": {"3":-1080,"4":-1936,"5":75316,"6":830590,"7":-37193040}
+  },
+  "frozen_dual_shells": {"3":1080,"4":10530,"5":127656,"6":2329680,"7":37193040},
+  "pass": 4960,
+  "theorem": "The shellwise degree-7 one-sided moment relaxation cannot improve rho(K)<=173. There is an exact feasible truncated moment functional at a=7 satisfying all frozen A3..A7 absolute/parity bounds, with both the ordinary and support-localizing moment matrices positive definite."
+}
