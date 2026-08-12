@@ -1,0 +1,194 @@
+% Passes 4951--4958 — third-moment radius bound and corrected W33/Q43 incidence reconstruction.
+\ifdefined\WDDPassFourNineFiveOnePacketLoaded
+  \expandafter\endinput
+\else
+  \gdef\WDDPassFourNineFiveOnePacketLoaded{1}%
+\fi
+
+\section{Passes 4951--4958: the radius drops to $173$ and the Steiner quotient resolves into the dual \texorpdfstring{$Q(4,3)$}{Q(4,3)}}
+\label{sec:pass4951-4958}
+
+The preceding Steiner packet exposed a tension that could not be dismissed as
+notation.  Its forty-fiber quotient had the same strongly regular parameters
+as $W(3,3)$, but its triad-center census disagreed with the standard
+symplectic model.  The resolution is exact and useful: the quotient is not the
+$W(3,3)$ point graph.  It is the graph on the forty \emph{lines} of
+$W(3,3)$, equivalently the point graph of the nonisomorphic odd-$q$ dual
+$Q(4,3)$.  Once that correction is made, the maximum-cut shell, the Steiner
+shell, point--line incidence, and the old spread carrier assemble into one
+coherent pair of complementary transceivers.
+
+\subsection{Pass 4951: a third-moment theorem gives $\rho(K)\le173$}
+Let $K=[360,36,20]_2$.  Pass~4867 froze
+\[
+ A_1(K^\perp)=A_2(K^\perp)=0,\qquad A_3(K^\perp)=1080,
+\]
+and Pass~4940 exhibited a word at exact distance $134$ from $K$.  For any
+coset, let $W$ be the Hamming weight of a uniformly sampled word and set
+$X=W-180$.  Pairwise independence gives
+\[
+ \mathbb E X=0,\qquad \mathbb E X^2=90.
+\]
+The $1080$ dual weight-three words give the exact character identity
+\[
+ \mu_3:=\mathbb E X^3
+ =-\frac34\sum_{\substack{h\in K^\perp\\|h|=3}}(-1)^{y\cdot h},
+ \qquad |\mu_3|\le810.
+\]
+If a coset leader has weight $\delta$ and $a=180-\delta$, then
+$X\ge-a$.  Positivity of
+$\mathbb E[(X+a)(X-t)^2]$, optimized at $t=90/a$, yields
+\[
+ \mu_3\ge90\left(\frac{90}{a}-a\right).
+\]
+For $\delta\ge175$ the right side is at least $1170$, impossible.  At
+$\delta=174$, equality in the moment bound forces every coset word to have
+weight $174$ or $195$; the zero mean then forces population ratio $5:2$.
+But $|K|=2^{36}$ is not divisible by $7$.  Hence
+\[
+ \boxed{134\le\rho(K)\le173.}
+\]
+The lower endpoint is a certified hard word; the upper endpoint is universal.
+The exact radius remains open.
+
+\subsection{Passes 4953--4955: the two degree-$40$ actions are points and lines, not two copies of points}
+Construct the standard symplectic point graph on projective
+$\mathbb F_3^4$.  Its $3240$ independent triples have common-neighbor census
+\[
+ 1^{2880}\,4^{360}.
+\]
+The $360$ four-center triples are exactly the three-subsets of the $90$
+nonisotropic projective lines of $PG(3,3)$.
+
+Reconstructing the Steiner forty-fiber quotient from the double-six geometry
+gives the same parameter tuple
+$\operatorname{SRG}(40,12,2,4)$ but a different graph.  Exact graph comparison
+proves
+\[
+ \boxed{\text{Steiner quotient}
+ =\text{$W(3,3)$ line-intersection graph}
+ =Q(4,3)_{\rm pt}},
+\]
+while it is not isomorphic to the standard $W(3,3)$ point graph.  Its
+independent-triad center census is
+\[
+ 0^{1080}\,2^{2160},
+\]
+and exhaustive search finds no spread, matching the odd-$q$ duality
+criterion already recorded elsewhere in the repository.
+
+The maximum-cut/Steiner cross-incidence then fixes the orientation of the
+duality.  The $120$ maximum cuts collapse into forty identical profile
+triples, and the $120$ Steiner triangles do the same.  On the quotient,
+\[
+ \boxed{
+  \text{maximum-cut triples}=W(3,3)\text{ points},\qquad
+  \text{Steiner triples}=W(3,3)\text{ lines}.}
+\]
+The non-splitting matrix $Z$ is the literal $40\times40$ point--line incidence
+matrix.
+
+\subsection{Passes 4952 and 4956: incidence transmits $1+24$ and is blind to both $15$-spaces}
+Let $A_W$ be the standard W33 point graph and $A_Q$ the $Q(4,3)$ line graph.
+The corrected incidence matrix satisfies
+\[
+ A_WZ=ZA_Q,
+ \qquad ZZ^T=4I+A_W,
+ \qquad Z^TZ=4I+A_Q.
+\]
+Both degree-$40$ graphs have rational spectrum
+$12^1,2^{24},(-4)^{15}$, hence
+\[
+ \operatorname{Spec}(ZZ^T)
+ =16^1,6^{24},0^{15},
+ \qquad \operatorname{rank}Z=25.
+\]
+Thus the two distinct $15$-dimensional $-4$ constituents are exactly the left
+and right dark spaces of incidence.  Conversely the $24$-dimensional
+$+2$ constituents are canonically isomorphic:
+\[
+ \boxed{Z:\;V_{24}^{\rm line}\xrightarrow{\sim}V_{24}^{\rm point},
+ \qquad Z^{-1}=Z^T/6\ \text{ on }V_{24}.}
+\]
+Equivalently, with $P_2=60E_2$,
+\[
+ Z^TP_{2,W}Z=6P_{2,Q},\qquad
+ ZP_{2,Q}Z^T=6P_{2,W}.
+\]
+This is the exact representation-theoretic content of the point/line
+incidence bridge.
+
+\subsection{Pass 4957: the $36$ ovoids of $Q(4,3)$ are exactly the $36$ W33 spreads}
+Under the corrected line interpretation, a ten-coclique of the $Q(4,3)$
+quotient is a set of ten pairwise disjoint W33 lines, hence a spread.  Exhaustive
+enumeration gives exactly
+\[
+ \boxed{36\text{ maximum cocliques of size }10=36\text{ W33 spreads}.}
+\]
+The full maximal-coclique census is
+\[
+ 5^{432},\qquad8^{135},\qquad10^{36},
+\]
+and the $36$ ovoids reproduce the independently frozen spread intersection
+law
+\[
+ \boxed{1^{360}\,4^{270}}.
+\]
+Each W33 line lies in exactly nine spreads.  This reconnects the corrected
+Steiner/Q43 quotient to the existing spread/MUB carrier without a count-based
+identification: the objects are literally the same line sets.
+
+\subsection{Pass 4958: point incidence and spread incidence are complementary complete readouts}
+This result combines two older exact ingredients with the corrected duality.
+Pass~173 studied the point--line transceiver $Z$.  Part~CXXVI established the
+line--spread incidence matrix $B\in\{0,1\}^{40\times36}$ and its Morita
+spectrum.  The latter obeys
+\[
+ BB^T=9I+3A_{\rm disjoint},
+ \qquad \operatorname{Spec}(BB^T)=90^1,18^{15},0^{24}.
+\]
+Thus $Z$ transmits $1+24$ and kills $15$, while $B$ transmits $1+15$ and
+kills $24$.  Their only common nonzero constituent is the constant line.
+The new combined identity is
+\[
+ \boxed{18I_{40}=3Z^TZ+BB^T-3J_{40}.}
+\]
+Therefore the stacked readout
+\[
+ \begin{bmatrix}Z\\B^T\end{bmatrix}:\mathbb Q^{40}_{\rm lines}
+ \longrightarrow\mathbb Q^{76}
+\]
+has full rank $40$, and every line-coordinate vector is reconstructed exactly:
+\[
+ \boxed{x=\frac16Z^T(Zx)+\frac1{18}B(B^Tx)-\frac16Jx.}
+\]
+The primitive projectors themselves can be read off from the two Gram
+operators,
+\[
+ E_{24}=\frac{5Z^TZ-2J}{30},\qquad
+ E_{15}=\frac{4BB^T-9J}{72},\qquad
+ E_0=\frac{J}{40},
+\]
+with fraction-free completeness certificate
+\[
+ 9J+12(5Z^TZ-2J)+5(4BB^T-9J)=360I.
+\]
+The spectra of the two individual channels are prior repo results; their
+complementary full-line reconstruction is the new consequence of the corrected
+W33/$Q(4,3)$ identification.
+
+\paragraph{Correction and evidence firewall.}
+The old Pass~4870 certificate field
+\texttt{explicit\_isomorphism\_to\_standard\_W33=true} is withdrawn and has
+been replaced by the corrected certificate.  The authoritative producers for
+this packet are
+\texttt{analysis/w33\_pass4951\_third\_moment\_radius\_bound.py},
+\texttt{analysis/w33\_pass4953\_correct\_w33\_triad\_centers.py},
+\texttt{analysis/w33\_pass4954\_steiner\_quotient\_is\_q43\_dual.py},
+\texttt{analysis/w33\_pass4955\_maxcut\_points\_steiner\_lines\_incidence.py},
+\texttt{analysis/w33\_pass4956\_point\_line\_24d\_intertwiner.py},
+\texttt{analysis/w33\_pass4957\_q43\_ovoids\_are\_w33\_spreads.py}, and
+\texttt{analysis/w33\_pass4958\_point\_spread\_complementary\_transceiver.py}.
+The point--spread result explicitly credits Pass~173 and Part~CXXVI for the
+individual incidence spectra.  No finite incidence identity here implies a
+continuum gauge field or physical coupling normalization.
