@@ -2,10 +2,11 @@
   "schema": "w33.pass_namespace_registry.v2.entry",
   "range": [4968, 4975],
   "slug": "shell_correlations_twisted15_outer_fusion_e6_ports_holonet_bianchi_affine_spread_parity",
-  "title": "Signed-shell correlations, twisted dark-15 test, outer-odd fusion, E6 spread ports, Holonet local chart, and three outside-box probes",
-  "status": "RESERVED",
+  "title": "Superseded reservation after parallel Pass4968-4972 collision",
+  "status": "COLLIDED_RENUMBERED",
   "owner": "openai-gpt56-sol",
   "reserved_at": "2026-08-11",
-  "purpose": "Execute the five queued post-Pass4967 attacks plus three independent outside-box probes: 4968 signed-shell correlations for the K=[360,36,20]_2 covering-radius frontier; 4969 outer/correlation-twisted dark-15 point-line Hom; 4970 fusion of the Pass4875 and Pass4966 outer-odd structures; 4971 transport of the unique double-six/spread bridge through the 45 tritangents; 4972 exact stabilizer/compiler audit of the local K3,3,3 nine-spread chart; 4973 Q43 tetrahedral curvature/Bianchi and H2; 4974 intrinsic AG(2,3) completion test on each local nine-spread chart; 4975 reinterpretation of H36/Steiner parity through the spread bridge.",
-  "boundary": "Pass4959 is independently owned and untouched. Pass4960-4967 remains the frozen predecessor packet; its dedicated replay was queued at reservation time and is not assumed green."
+  "closed_at": "2026-08-11",
+  "purpose": "This reservation was made before a parallel lane landed commit f9db42c7fe192690b824a307df7fe27abadbd483 using Pass4968-4972. No theorem artifacts from this lane were written under the collided numbers. The eight computed attacks were renumbered intact to Pass4976-4983.",
+  "boundary": "Pass4959 remains independently owned. This file is retained as collision provenance and must not be treated as ownership of Pass4968-4975."
 }
