@@ -1,0 +1,19 @@
+{
+  "K4_subgraphs": 135,
+  "boundary": "This exhausts the pure V20/tritangent minimum family. Mixed line+tritangent support-eight cocircuits, if any, are not classified here.",
+  "canonical_minimum_family": {
+    "equivalent_description": "symmetric difference of the two five-tritangent stars through an intersecting cubic-line pair",
+    "indexing": "135 intersecting pairs of cubic-surface lines",
+    "size": 135,
+    "support_geometry": "2 K4: two disjoint tritangent K4s with no cross edges",
+    "support_size": 8
+  },
+  "exhaustion_inside_mean_zero_V20": {
+    "all_disjoint_nonadjacent_K4_pairs": 135,
+    "equal_to_star_difference_family": true,
+    "reason": "a support-eight eigenvalue-3 vector at the minimum bound must split as two four-vertex components; the only connected four-vertex graph with eigenvalue3 is K4"
+  },
+  "pass": 4998,
+  "theorem": "The 135 cubic-line star differences are not merely examples of minimum eight-sensor failures: they are exactly the pure-tritangent mean-zero support-eight cocircuits. Each support induces 2K4 in the tritangent SRG, and every pair of nonadjacent disjoint K4s arises this way.",
+  "tritangent_intersection_graph": "srg(45,12,3,3)"
+}
