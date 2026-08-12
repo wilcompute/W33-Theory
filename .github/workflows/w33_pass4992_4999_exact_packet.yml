@@ -8,7 +8,9 @@ on:
       - 'analysis/w33_pass4992_4995_oct_radius_decoder_gauge_chain.py'
       - 'analysis/w33_pass4997_4999_bonkers.py'
       - 'tools/w33_stale_claim_firewall.py'
+      - 'tools/apply_pass5002_erasure_correction.py'
       - 'data/PART_W33_PASS499[2-9]*.json'
+      - 'data/PART_W33_PASS5002_CORRECTED_85_READER_ERASURE_DISTANCE.json'
       - 'analysis/PASS4992_4999_EXECUTED_OUTCOMES.md'
       - 'analysis/PASS4992_4999_oct_cocircuit_chain_insert.tex'
       - 'analysis/PASS4992_4999_index_insert.html'
@@ -59,9 +61,12 @@ jobs:
             analysis/w33_pass4992_4995_oct_radius_decoder_gauge_chain.py \
             analysis/w33_pass4997_4999_bonkers.py \
             tools/w33_stale_claim_firewall.py \
+            tools/apply_pass5002_erasure_correction.py \
             tools/integrate_pass4992_4999_public.py
-      - name: Replay Passes 4992-4995
+      - name: Replay Passes 4992-4995 historical producer
         run: python analysis/w33_pass4992_4995_oct_radius_decoder_gauge_chain.py
+      - name: Reapply authoritative Pass5002 reader correction
+        run: python tools/apply_pass5002_erasure_correction.py
       - name: Replay Passes 4997-4999
         run: python analysis/w33_pass4997_4999_bonkers.py
       - name: Run stale-claim firewall
@@ -83,7 +88,7 @@ jobs:
             'PART_W33_PASS4999_OCTAHEDRAL_EDGE_FRAME.json']
           for n in names:
               assert json.loads((root/n).read_text())==json.loads((frozen/n).read_text()), n
-          print('semantic certificates reproduce exactly')
+          print('semantic certificates reproduce exactly with Pass5002 compatibility hardening')
           PY
       - name: Focused regression
         run: python -m pytest -q tests/test_w33_pass4992_4999_exact_packet.py
@@ -102,6 +107,6 @@ jobs:
           git config user.name 'w33-evidence-bot'
           git config user.email 'w33-evidence-bot@users.noreply.github.com'
           git add docs/index.html index.html
-          git commit -m 'Materialize Passes 4992-4999 public theorem card'
+          git commit -m 'Materialize corrected Passes 4992-4999 public theorem card'
           git pull --rebase origin master
           git push origin HEAD:master
