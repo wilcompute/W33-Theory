@@ -1,0 +1,26 @@
+{
+  "affine_completions": 12,
+  "base_line": 0,
+  "base_line_points": 4,
+  "canonical_packets": "4 packets x 3 completions",
+  "chosen_point_reduces_to_one_packet": true,
+  "full_PGSp_point_line_stabilizer": {
+    "image_on_residual_triple": "S3",
+    "image_order": 6,
+    "kernel_order": 54,
+    "order": 324,
+    "transitive": true
+  },
+  "gauge_reading": "After a base-line point is chosen, the residual affine ambiguity is a canonical C3 torsor. The finite geometry canonically orients the transformation group up to the outer reflection, but does not distinguish one of the three completion states.",
+  "outer_character": "S3/C3=C2. The PGSp/PSp outer coset is exactly permutation parity on the residual triple, matching the finite Witting phase sign of Pass4966.",
+  "PSp_point_line_stabilizer": {
+    "image_on_residual_triple": "C3=A3",
+    "image_order": 3,
+    "kernel_order": 54,
+    "order": 162,
+    "transitive": true
+  },
+  "pass": 4994,
+  "theorem": "Choosing one of the four W33 points attached to a local completion packet reduces the 12-fold affine gauge to a three-state torsor. PSp acts on that triple exactly as C3, while adjoining the multiplier-minus-one outer coset gives S3. Thus the Witting outer sign is the reflection parity C2=S3/C3 of the residual qutrit gauge.",
+  "boundary": "This identifies the finite permutation structure. It does not turn the outer sign into physical CP or supply a canonical choice of one of the three completion states."
+}
