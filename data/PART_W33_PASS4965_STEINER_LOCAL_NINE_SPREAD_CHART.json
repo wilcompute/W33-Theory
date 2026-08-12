@@ -1,0 +1,12 @@
+{
+  "W33_lines": 40,
+  "Steiner_triangles": 120,
+  "Steiner_triangles_per_W33_line": 3,
+  "boundary": "The 3+3+3 partition is canonical under the finite incidence bridge. Calling it a physical qutrit port chart is an interpretation, not part of the theorem.",
+  "canonical_partition_per_line": "9 spreads = 3 + 3 + 3",
+  "local_four_overlap_graph": "K3,3,3",
+  "local_one_overlap_graph": "3 disjoint K3",
+  "pass": 4965,
+  "spreads_through_each_line": 9,
+  "theorem": "Transporting the 120 cubic-surface Steiner triangles through the Pass4964 double-six/spread bijection yields a canonical local nine-spread chart at every W33 line. Each Steiner triangle maps to three spreads whose common intersection is exactly its associated W33 line. The three Steiner triangles in each fiber partition all nine spreads through that line into three disjoint triples; four-overlap occurs exactly across different triples, so the local four-overlap graph is K_{3,3,3}."
+}
