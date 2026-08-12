@@ -2,10 +2,24 @@
   "schema": "w33.pass_namespace_registry.v2.entry",
   "range": [4992, 4999],
   "slug": "octahedral_radius_decoder_cocircuits_affine_triple_chain_firewall_bonkers",
-  "title": "Octahedral radius correlations, exact decoder cocircuits, residual affine triple gauge, octahedral chain complex, stale-claim firewall, and three outside-box probes",
-  "status": "RESERVED",
+  "title": "Octahedral shell constraints, exact erasure distance, residual C3 gauge, binary chain filtration, stale-claim firewall, shared-line holography, 2K4 cocircuits, and octahedral edge frame",
+  "status": "EXECUTED",
   "owner": "openai-gpt56-sol",
   "reserved_at": "2026-08-11",
-  "purpose": "Execute the five queued post-Pass4991 attacks plus three outside-box probes: 4992 use the 810=270x3 octahedral bundle to derive stronger shell-character/radius constraints; 4993 determine the exact erasure/cocircuit distance of the 85x36 line+tritangent reader; 4994 resolve the residual threefold affine gauge after choosing one of the four base-line points; 4995 build the 270-octahedron/equator chain complex and compute its homology/code ranks; 4996 create a repo-wide stale-claim firewall for known corrected W33/Q43/Witting/Ihara/critical-group errors; 4997-4999 independent outside-box probes chosen from the new structures.",
-  "boundary": "Pass4959 remains independently owned and untouched. Covering radius is not claimed improved until exact proof. Remote CI/public-root materialization are reported only if observed."
+  "executed_at": "2026-08-11",
+  "purpose": "Executed the five queued post-Pass4991 attacks plus three outside-box probes: 4992 octahedral non-radial shell algebra and distance-173 consequences; 4993 exact 85-reader erasure distance eight; 4994 residual affine C3 torsor with PGSp reflection to S3; 4995 residual-square/triangle H36 chain filtration 294<324<325; 4996 fail-closed stale-claim firewall; 4997 shared-line H36-to-Q43 projection with canonical 20->30->10 binary extension; 4998 exhaustive pure-tritangent minimum 2K4 cocircuits; 4999 270-octahedron edge frame of real rank120 and binary rank90.",
+  "evidence": {
+    "outcomes": "analysis/PASS4992_4999_EXECUTED_OUTCOMES.md",
+    "producers": [
+      "analysis/w33_pass4992_4999_common.py",
+      "analysis/w33_pass4992_4995_oct_radius_decoder_gauge_chain.py",
+      "tools/w33_stale_claim_firewall.py",
+      "analysis/w33_pass4997_4999_bonkers.py"
+    ],
+    "manuscript_insert": "analysis/PASS4992_4999_oct_cocircuit_chain_insert.tex",
+    "public_page": "docs/pass4992-4999-oct-cocircuit-chain.html",
+    "regression": "tests/test_w33_pass4992_4999_exact_packet.py",
+    "workflow": ".github/workflows/w33_pass4992_4999_exact_packet.yml"
+  },
+  "boundary": "Pass4959 remains independently owned and untouched. Covering radius remains 134<=rho(K)<=173. The finite outer sign is not physical CP/CPT. Equal carrier dimensions are not promoted to representation identifications without explicit intertwiners. Remote CI/public-root materialization are reported only if observed."
 }
