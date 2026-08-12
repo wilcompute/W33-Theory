@@ -1,0 +1,12 @@
+{
+  "pass": 4990,
+  "line_centering": "C^T-(1/4)J_40x36",
+  "tritangent_centering": "M-(2/3)J_45x36",
+  "line_centered_frame_operator": "18 P_15",
+  "tritangent_centered_frame_operator": "18 P_20",
+  "combined_centered_frame_operator": "18(I-J/36)=18 P_{1^perp}",
+  "dimensions": {"mean_zero": 35, "line_sector": 15, "tritangent_sector": 20},
+  "row_leverages_raw_frame": {"40 line rows": "17/45", "45 tritangent rows": "188/405"},
+  "parseval_scaling": "multiply all centered rows by 1/sqrt(18)",
+  "theorem": "After removing the common mean, the 40 line rows and 45 tritangent rows are orthogonal equal-bound tight frames on complementary 15- and 20-dimensional sectors. Their union is a tight frame of bound18 on the full35-dimensional mean-zero spread carrier."
+}
