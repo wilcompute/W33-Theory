@@ -1,0 +1,44 @@
+{
+  "C0_vertices": 36,
+  "C1_edges": 360,
+  "chain": "H36 vertices <- edges <- residual squares / sigma-even triangles",
+  "combined_triangle_square_complex": {
+    "C2": 1890,
+    "H0": 1,
+    "H1": 1,
+    "H2": 1566,
+    "Euler_characteristic": 1566,
+    "d2_rank": 324
+  },
+  "cycle_space_dimension": 325,
+  "edge_boundary_rank": 35,
+  "invariant_filtration": {
+    "cycle_mod_triangle_dimension": 1,
+    "full_cycle_space": 325,
+    "square_span": 294,
+    "triangle_dual_span_Kperp": 324,
+    "triangle_mod_square_dimension": 30
+  },
+  "interpretation": "The residual squares leave 31 binary one-cycle classes. Adding the sigma-even triangle checks kills exactly 30 of them, leaving the single switching-parity class. The 30-dimensional intermediate quotient is an exact new carrier; equality of its dimension with 15_p+15_l is not by itself an isomorphism.",
+  "pass": 4995,
+  "residual_square_complex": {
+    "C2": 810,
+    "H0": 1,
+    "H1": 31,
+    "H2": 516,
+    "Euler_characteristic": 486,
+    "d2_rank": 294,
+    "edge_incidence_per_square": 4,
+    "squares_per_edge": 9
+  },
+  "sigma_even_triangle_complex": {
+    "C2": 1080,
+    "H0": 1,
+    "H1": 1,
+    "H2": 756,
+    "Euler_characteristic": 756,
+    "d2_rank": 324
+  },
+  "theorem": "The 810 residual A4 equators define a square 2-complex on H36 with H1 dimension31 and H2 dimension516 over F2. Their boundary span has rank294 inside the rank324 sigma-even triangle/dual-code span, which itself has codimension one in the 325-dimensional graph cycle space. Hence the exact filtration dimensions are 294 < 324 < 325, with quotients 30 and1.",
+  "boundary": "The 30 quotient is not identified with the real twin dark15 Levi nullspace without an explicit equivariant map."
+}
