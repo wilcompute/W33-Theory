@@ -1,0 +1,33 @@
+{
+  "boundary": "The unsigned incidence matrix does not identify the two 15-dimensional kernels; it annihilates both. Any bridge between those blind sectors requires additional signed/oriented structure.",
+  "gram_spectrum": {"0": 15, "16": 1, "6": 24},
+  "incidence_gram_identities": {
+    "columns": "Z^TZ=4I+A_Q43",
+    "rows": "ZZ^T=4I+A_W"
+  },
+  "input": {
+    "column_weight": 4,
+    "columns": "40 W(3,3) lines recovered from Steiner fibers; their collinearity graph is Q(4,3)",
+    "incidence": "W(3,3) point-line incidence",
+    "row_weight": 4,
+    "rows": "40 W(3,3) points recovered from maximum-cut triples",
+    "source": "Pass4946 quotient, corrected by Pass4954-Pass4955"
+  },
+  "left_kernel_dimension": 15,
+  "pass": 4952,
+  "rank": 25,
+  "right_kernel_dimension": 15,
+  "sector_filter": {
+    "15_dimensional_eigenvalue_-4_sector": "annihilated exactly on both the W(3,3)-point and Q(4,3)-line sides",
+    "24_dimensional_eigenvalue_2_sector": "transmitted with squared singular value 6",
+    "constant_sector": "transmitted with singular value 4"
+  },
+  "singular_spectrum": {"0": 15, "4": 1, "sqrt(6)": 24},
+  "theorem": "The corrected max-cut/Steiner quotient is the W(3,3) point-line incidence matrix. It has rank 25 and singular spectrum 4^1, sqrt(6)^24, 0^15. The left kernel is the 15-dimensional -4 sector of the W(3,3) point graph; the right kernel is the 15-dimensional -4 sector of the nonisomorphic dual Q(4,3) line graph.",
+  "two_nonisomorphic_srg_sides": {
+    "column_graph": "Q(4,3) point graph = W(3,3) line-intersection graph",
+    "row_graph": "W(3,3) point graph",
+    "shared_parameters": [40, 12, 2, 4],
+    "shared_spectrum": {"-4": 15, "12": 1, "2": 24}
+  }
+}
