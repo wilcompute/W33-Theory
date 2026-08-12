@@ -1,0 +1,32 @@
+{
+  "boundary": "The original 120-element G-sets remain inequivalent. The 40x40 incidence bridge appears only after the canonical identical-profile triple collapses.",
+  "column_side": {
+    "collinearity_graph": "line-intersection graph = Q(4,3)",
+    "identified_as": "lines of standard W(3,3)",
+    "source": "Steiner three-fibers"
+  },
+  "correction_to_Pass4946": {
+    "Steiner_fibers": "lines, not a second W33 point copy",
+    "maximum_cut_triples": "points, not line classes"
+  },
+  "incidence": "Z is literal W(3,3) point-line incidence after the two 3-to-1 collapses",
+  "original_shells": {"Steiner_triangles": 120, "maximum_cuts": 120},
+  "pass": 4955,
+  "quotient_non_splitting_matrix": {
+    "column_weight": 4,
+    "gram_spectrum": {"0": 15, "16": 1, "6": 24},
+    "rank_Q": 25,
+    "row_weight": 4,
+    "shape": [40, 40]
+  },
+  "row_side": {
+    "collinearity_graph": "W(3,3)",
+    "identified_as": "points of standard W(3,3)",
+    "source": "maximum-cut triples"
+  },
+  "theorem": "The 120 maximum cuts are a threefold refinement of the forty W(3,3) points, while the 120 Steiner triangles are a threefold refinement of the forty W(3,3) lines. Their quotient non-splitting relation is exactly point-line incidence. The row graph is W(3,3); the column graph is its nonisomorphic odd-q dual Q(4,3).",
+  "triple_collapses": {
+    "Steiner_fibers": [40, 3],
+    "maximum_cut_identical_profile_classes": [40, 3]
+  }
+}
