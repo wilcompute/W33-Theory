@@ -1,0 +1,11 @@
+{
+  "base_double_six_stabilizer_fixed_spreads": 1,
+  "boundary": "The bijection is between the two 36-element finite G-sets; it does not identify the 12 cubic-surface lines inside a double-six with the 10 W33 lines inside its image spread element-by-element.",
+  "carriers": {"W33_spreads":36,"double_sixes":36,"point_stabilizer_order":1440},
+  "equivariant_bijection": {"exists":true,"extends_across_outer_involution":true,"unique":true},
+  "group": {"derived_PSp_order":25920,"name":"W(E6) = PGSp(4,3) on these finite carriers","order":51840},
+  "pair_relation_transport": {"double_six_intersection_4_to_spread_overlap_4":270,"double_six_intersection_6_to_spread_overlap_1":360},
+  "pass": 4964,
+  "permutation_character_fixed_point_census": {"0":23660,"1":16128,"2":7020,"3":1920,"4":1980,"6":780,"8":270,"12":45,"16":36,"36":1},
+  "theorem": "There is a unique W(E6)=PGSp(4,3)-equivariant bijection from the 36 cubic-surface double-sixes to the 36 spreads of W(3,3). It sends the 360 double-six pairs meeting in six cubic lines to the 360 spread pairs meeting in one W33 line, and the 270 four-intersection pairs to the 270 four-overlap spread pairs. Thus the double-six SRG(36,20,10,12) is exactly the one-overlap graph on W33 spreads."
+}
