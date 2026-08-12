@@ -1,0 +1,22 @@
+{
+  "F2_cohomology": {
+    "H1_dimension": 0,
+    "graph_cycle_rank": 501,
+    "interpretation": "triangle boundaries span the entire graph cycle space; every flat C2 connection is gauge-trivial",
+    "rank_d0": 39,
+    "triangle_boundary_rank": 501
+  },
+  "base": "Q(4,3) disjointness graph on the forty Steiner/W33-line fibers",
+  "boundary": "The particular labels of the three transpositions depend on fiber gauges and rooting. Their conjugacy class, the generated subgroup S3, and the F2 rank statements are gauge invariant.",
+  "cell_counts": {"edges":540,"triangles_as_2_cells":3240,"vertices":40},
+  "consequence": "The Pass4945 full S3 holonomy is generated already by local triangle curvature; no additional flat topological C2 sector survives the triangle relations.",
+  "pass": 4962,
+  "rooted_nonabelian_curvature": {
+    "all_three_transpositions_present": true,
+    "conjugacy_types": ["identity","transposition"],
+    "generated_order": 6,
+    "subgroup_generated_by_triangle_curvatures": "S3"
+  },
+  "sign_curvature": {"flat_triangles":1080,"odd_reflection_triangles":2160},
+  "theorem": "After filling all 3240 triangles of the Q(4,3) disjointness graph, H^1 over F2 vanishes because the triangle boundary rank equals the full 501-dimensional cycle space. The sign abelianization of the Steiner matching connection has curvature on exactly 2160 triangles. Rooting the nonabelian triangle holonomies to one fiber yields the identity plus all three transpositions, and those local curvature elements generate the full S3 holonomy group."
+}
