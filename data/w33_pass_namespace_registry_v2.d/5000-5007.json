@@ -1,0 +1,11 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [5000, 5007],
+  "slug": "octahedral_sat_kernel20_mixed_cocircuits_oct_module_c3_origin_bonkers",
+  "title": "Octahedral SAT radius, 20-to-30-to-10 kernel, mixed cocircuits, octahedron modules, C3-torsor origin, and three outside-box probes",
+  "status": "RESERVED",
+  "owner": "openai-gpt56-sol",
+  "reserved_at": "2026-08-12",
+  "purpose": "Execute the five queued post-Pass4999 attacks plus three outside-box probes: 5000 formulate and solve the strongest exact octahedral character feasibility model for a hypothetical distance-173 coset; 5001 resolve the 20-dimensional kernel in the canonical 20->30->10 Q43 projection and test an explicit equivariant identification with the tritangent V20; 5002 classify all support-eight cocircuits of the 85-channel reader, including mixed line/tritangent supports; 5003 decompose the 270-octahedron edge frame under W(E6)/PSp and explain the 1+20+15+84 real spectrum and binary rank90; 5004 test whether calibrated Witting/OAM/time-bin structures can select an origin in the residual C3 torsor or prove an external reference is unavoidable; 5005-5007 independent outside-box probes chosen from the resulting structures.",
+  "boundary": "Pass4959 remains independently owned and untouched. Covering-radius improvement is claimed only if an exact infeasibility proof excludes distance173. Finite outer sign is not identified with physical CP/CPT. Equal dimensions are not representation identifications without an explicit equivariant map. Remote CI/public materialization are reported only if observed."
+}
