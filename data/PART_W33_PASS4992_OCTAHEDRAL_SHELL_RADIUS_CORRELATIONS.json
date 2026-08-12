@@ -1,0 +1,44 @@
+{
+  "covering_radius": {
+    "improved_here": false,
+    "proved_interval": [134, 173]
+  },
+  "delta173_consequence": {
+    "negative_oct_product_count_at_most": 188,
+    "positive_A3_signs_at_most": 188,
+    "residual_A4_equator_sum_U4_at_least": -646,
+    "restricted_weight12_sum_U12_at_least": -106,
+    "third_moment_forces_T3_at_most": -704
+  },
+  "global_incidence": {
+    "A3_even_oct_multiplicity": 1,
+    "A3_even_unique": 1080,
+    "A4_residual_oct_multiplicity": 1,
+    "A4_residual_unique": 810,
+    "Steiner_odd_oct_multiplicity": 9,
+    "Steiner_odd_unique": 120
+  },
+  "local_character_algebra": {
+    "equator": "for s=sum(q_j), p=product(q_j): pair_sum=p*s",
+    "shared_top_character": "p=product(t_1..t_4)=product(q_1..q_3)",
+    "triangle": "for r=sum(t_i), p=product(t_i): e2=(r^2-4)/2 and e3=p*r"
+  },
+  "local_partitions": {
+    "all_three_partitions_cover_same_edges": 12,
+    "character_identity": "product_{4 even A3 faces} chi = product_{3 A4 equators} chi = chi(all12)",
+    "residual_A4_equators": 3,
+    "sigma_even_A3_faces": 4,
+    "sigma_odd_Steiner_faces": 4
+  },
+  "octahedra": 270,
+  "octahedral_subshells": {
+    "all_words_distinct_within_each_reported_subshell": true,
+    "weight12_full_octahedra": 270,
+    "weight6_from_even_face_pairs": 1620,
+    "weight8_from_equator_pairs": 810,
+    "weight9_from_even_face_triples": 1080
+  },
+  "pass": 4992,
+  "theorem": "The 270 tritangent-pair octahedra give a non-radial 4-triangle/3-equator shell algebra. Every octahedron has four edge-disjoint sigma-even A3 faces and three edge-disjoint residual A4 equators covering the same 12 edges, so their character products agree. The 1080 A3 checks are partitioned exactly once by the octahedra. For a hypothetical distance-173 coset the third-moment bound forces at most188 positive A3 signs, which in turn forces the octahedral weight-12 character sum to be at least -106 and the residual-equator A4 sum to be at least -646.",
+  "boundary": "These are exact subshell constraints, but they do not yet control the complementary A4/A6/A8/A9/A12 shells strongly enough to improve the universal covering-radius upper bound 173."
+}
