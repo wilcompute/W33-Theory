@@ -1,0 +1,14 @@
+{
+  "boundary": "This identifies Q43 ovoids with W33 spreads tautologically through point-line duality. It does not identify the 36 spreads with any other 36-element carrier such as the double-sixes without a separate equivariant map.",
+  "corrected_steiner_quotient": "Q(4,3) point graph = W(3,3) line-intersection graph",
+  "incidence": {"lines_per_spread": 10, "spreads_through_each_W33_line": 9},
+  "maximal_coclique_size_census": {"5": 432, "8": 135, "10": 36},
+  "maximum_coclique_number": 10,
+  "maximum_cocliques": 36,
+  "pair_intersection_census": {"1": 360, "4": 270},
+  "pass": 4957,
+  "repo_crosscheck": "Pass2000 independently froze the same 36-spread pair census 1^360,4^270.",
+  "set_equality_of_Q43_ovoids_and_W33_spreads": true,
+  "theorem": "The 36 maximum ten-cocliques of the corrected Steiner quotient Q(4,3) are exactly the 36 spreads of W(3,3), under the identification of Q(4,3) points with W33 lines. Their pair intersections are exactly 360 pairs sharing one line and 270 pairs sharing four lines.",
+  "W33_spreads": 36
+}
