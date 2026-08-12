@@ -1,16 +1,23 @@
 {
   "pass": 4947,
-  "W33_independent_triads": 3240,
+  "correction": "Pass4954 identifies these 3240 complement triangles as independent triples of Q(4,3) points / triples of pairwise disjoint W33 lines, not independent triples of standard W33 points.",
+  "Q43_independent_triads": 3240,
   "curvature": {
     "flat_identity": 1080,
     "reflection_transposition": 2160,
     "order3": 0
   },
   "geometric_classification": {
-    "acentric_common_neighbors_0": 1080,
-    "centric_common_neighbors_2": 2160,
-    "equivalence": "matching holonomy is identity iff the W33 triad is acentric; it is a transposition iff the triad has two centers"
+    "zero_common_neighbors": 1080,
+    "two_common_neighbors": 2160,
+    "equivalence": "matching holonomy is identity iff the Q(4,3) triad has zero common neighbors; it is a transposition iff the Q(4,3) triad has two common neighbors"
   },
-  "theorem": "The S3 matching connection detects the intrinsic triad geometry of W33. Among the 3240 triples of pairwise noncollinear W33 points, exactly 1080 have no common neighbor and carry flat identity holonomy; exactly 2160 have two common neighbors and carry reflection holonomy. No complement triangle has order-three curvature. Hence the connection curvature is an exact finite detector of the acentric/centric triad dichotomy.",
-  "boundary": "Finite holonomy/triad theorem. The terminology centric/acentric is classical. The numerical 1080 also occurs elsewhere in the repo, but no identification with those 1080 objects is claimed without an explicit equivariant map."
+  "standard_W33_point_graph_baseline": {
+    "independent_triads": 3240,
+    "one_common_neighbor": 2880,
+    "four_common_neighbors": 360,
+    "source": "Pass4953"
+  },
+  "theorem": "The S3 matching connection detects the intrinsic triad geometry of the Steiner quotient Q(4,3). Among its 3240 triples of pairwise noncollinear points, exactly 1080 have no common neighbor and carry flat identity holonomy; exactly 2160 have two common neighbors and carry reflection holonomy. No complement triangle has order-three curvature. These counts must not be quoted as the triad census of the standard W(3,3) point graph.",
+  "boundary": "Finite Q(4,3) holonomy/triad theorem corrected by Pass4954. The numerical 1080 also occurs elsewhere in the repo, but no identification with those objects is claimed without an explicit equivariant map."
 }
