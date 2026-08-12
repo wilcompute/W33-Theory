@@ -1,0 +1,17 @@
+{
+  "pass": 4984,
+  "A4_total": 10530,
+  "sigma_even_4cycle_split_by_chords": {"0": 810, "1": 6480, "2": 3240},
+  "shell3_pair_reachable": {"one_chord": 6480, "two_chord": 3240, "residual": 810},
+  "residual_810": {
+    "description": "sigma-even chordless 4-cycles of H36",
+    "single_WE6_orbit": true,
+    "orbit_size": 810,
+    "stabilizer_order": 64,
+    "support_action_order": 8,
+    "support_kernel_order": 8
+  },
+  "character_relation": "If U0,U1,U2 are character sums on the 0/1/2-chord A4 orbits and V6 is the shell3-pair weight6 sum, then T3^2 = 1080 + 2(U1+2U2+V6); U0 is invisible to the second shell3 convolution.",
+  "covering_radius": {"proved_interval": [134,173], "improved_here": false},
+  "theorem": "The 810 A4 words missed by shell3+shell3 are exactly the sigma-even chordless four-cycles of H36. The full A4 shell splits into three single W(E6) orbits of sizes 810,6480,3240 according to chord number 0,1,2; the residual orbit has stabilizer order64."
+}
