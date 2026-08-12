@@ -1,0 +1,17 @@
+{
+  "pass": 4989,
+  "residual_A4": 810,
+  "base_intersecting_tritangent_pairs": 270,
+  "fiber_multiplicity": 3,
+  "identity": "810 = 270 * 3",
+  "per_residual_cycle_tritangent_selection_counts": {"0": 2, "1": 0, "2": 18, "3": 16, "4": 9},
+  "per_intersecting_pair": {
+    "common_cubic_lines": 1,
+    "double_sixes_unselected_by_both": 6,
+    "induced_H36_graph": "K6 minus 3K2 = K_{2,2,2} (octahedral graph)",
+    "residual_equatorial_squares": 3,
+    "omitted_pairs": "the three H36 nonedges / spread-overlap-4 perfect matching"
+  },
+  "cubic_line_counting": "27 cubic lines * C(5 tritangents through a line,2) = 270 intersecting tritangent pairs",
+  "theorem": "The residual 810 chordless A4 checks form a canonical three-fold equator bundle over the 270 intersecting pairs of cubic-surface tritangents. Each base pair misses six double-sixes forming an octahedral K_{2,2,2}, and the three residual checks above it are exactly the three equatorial squares."
+}
