@@ -1,0 +1,28 @@
+{
+  "Gram": {
+    "dark_sector": "15",
+    "nonzero_sector": "1+20",
+    "spread_side": "M^T M = 18J + 12I + 3A_H36",
+    "squared_singular_values": {"18": 20, "720": 1},
+    "tritangent_side_pair_counts": {"disjoint_tritangents_Gram15": 720, "one_common_cubic_line_Gram18": 270}
+  },
+  "boundary": "The 45 rows are exact finite selectors. Calling them physical ports requires a hardware realization of the two-line-in-double-six predicate.",
+  "complementary_40_plus_45_readout": {
+    "identity": "18 I_36 = C C^T + M^T M - 22 J_36",
+    "spread_line_channel": "C C^T = 4J + 6I - 3A_H36, rank 16 = 1+15",
+    "stacked_rank": 36,
+    "stacked_shape": [85,36]
+  },
+  "pass": 4979,
+  "selector_incidence": {
+    "column_weight": 30,
+    "criterion": "a tritangent selects a spread iff the corresponding double-six contains exactly two of its three cubic lines",
+    "per_tritangent_profile": {"meet_1": 0, "meet_3": 0, "selected_meet_2": 24, "unselected_meet_0": 12},
+    "rank": 21,
+    "row_weight": 24,
+    "shape": [45,36]
+  },
+  "spreads_double_sixes": 36,
+  "theorem": "The 45 cubic-surface tritangents canonically define a 45x36 selector matrix on the Pass4964 spread carrier. Every tritangent selects exactly 24 spreads (and every spread is selected by 30 tritangents); the matrix has rank 21 and transmits precisely the 1+20 sector, killing the 15. Its Gram cancels the H36 adjacency term in the rank-16 spread-line channel, giving 18I=CC^T+M^TM-22J and a complete 40-line plus 45-tritangent readout of all 36 spread coordinates.",
+  "tritangents": 45
+}
