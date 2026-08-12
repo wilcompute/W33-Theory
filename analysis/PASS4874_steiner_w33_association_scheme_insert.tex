@@ -1,17 +1,22 @@
-% Pass4874 — exact association-scheme refinement of W33 by Steiner triangles.
+% Pass4874 — exact association-scheme refinement of the W33 line action by Steiner triangles.
+% Corrected by Pass4954: the forty-fiber quotient is Q(4,3), i.e. the W33
+% line-intersection graph, not the standard W33 point graph.
 \ifdefined\WDDPassFourEightSevenFourLoaded
   \expandafter\endinput
 \else
   \gdef\WDDPassFourEightSevenFourLoaded{1}%
 \fi
 
-\section{The Steiner three-cover is a four-class association-scheme refinement of \texorpdfstring{$W(3,3)$}{W(3,3)}}
+\section{The Steiner three-cover is a four-class association-scheme refinement of the \texorpdfstring{$W(3,3)$}{W(3,3)} line action}
 \label{sec:pass4874-steiner-association}
 
 Pass~4870 identified forty intrinsic three-element fibers among the $120$
-Steiner triangles and recovered $W(3,3)$ after quotienting those fibers.
-Pass~4874 closes the full pair algebra.  Besides the identity relation, the
-four symmetric relations have valencies
+Steiner triangles.  Pass~4954 later corrected the degree-$40$ quotient label:
+it is the intersection graph of the forty $W(3,3)$ lines, equivalently the
+point graph of the nonisomorphic odd-$q$ dual $Q(4,3)$, rather than the
+standard $W(3,3)$ point graph.  Pass~4874 closes the full pair algebra on the
+$120$-set.  Besides the identity relation, the four symmetric relations have
+valencies
 \[
   2,\qquad27,\qquad36,\qquad54,
 \]
@@ -23,8 +28,8 @@ They close under matrix multiplication to a commutative imprimitive
 four-class association scheme.
 
 With relation order $(R_0,R_1,R_2,R_3,R_4)$ equal to identity, fiber, first
-nonedge refinement, W33-adjacency lift, and second nonedge refinement, the
-first eigenmatrix is
+nonedge refinement, $Q(4,3)$-adjacency lift, and second nonedge refinement,
+the first eigenmatrix is
 \[
 P=\begin{pmatrix}
 1&2&27&36&54\\
@@ -43,25 +48,28 @@ On it, the $2160$-pair adjacency-lift relation has eigenvalues
 \[
   36,\quad6,\quad-12,
 \]
-which are three times the W33 adjacency eigenvalues $12,2,-4$.  The remaining
-$80$ transverse directions split as $20+60$ and are annihilated by the
+which are three times the common SRG eigenvalues $12,2,-4$ of the
+$Q(4,3)$ line-intersection graph.  The remaining $80$ transverse directions
+split as $20+60$ over characteristic zero and are annihilated by the
 adjacency-lift relation.
 
-The refinement is also exact over W33 nonedges.  Every adjacent pair of
+The refinement is also exact over quotient nonedges.  Every adjacent pair of
 three-element fibers contributes all nine cross pairs, i.e. a $K_{3,3}$.  For
-each of the $540$ W33 nonedges, the nine cross pairs instead split canonically
-as
+each of the $540$ nonedges of $Q(4,3)$---equivalently each pair of disjoint
+$W(3,3)$ lines---the nine cross pairs instead split canonically as
 \[
   3+6,
 \]
 where the three-pair relation is a perfect matching and the other relation is
-its six-edge complement.  Thus the Steiner layer refines both adjacency and
-nonadjacency of W33, not merely its vertex set.
+its six-edge complement.  Thus the Steiner layer refines adjacency and
+disjointness of the W33 \emph{line} carrier, not the W33 point graph.
 
-\paragraph{Evidence firewall.}
-The producer is
+\paragraph{Correction and evidence firewall.}
+The legacy producer is
 \texttt{analysis/w33\_pass4874\_steiner\_w33\_association\_scheme.py}, with
-frozen certificate
+corrected frozen certificate
 \texttt{data/PART\_W33\_PASS4874\_STEINER\_W33\_ASSOCIATION\_SCHEME.json}.
-The $3+6$ matching relation is intrinsic; choosing labels inside an individual
-three-element fiber is still extra coordinate or gauge data.
+Pass~4954 is authoritative for the degree-$40$ identification.  The four-class
+scheme, its eigenmatrix, multiplicities, and $3+6$ matching refinement remain
+unchanged.  The $3+6$ matching relation is intrinsic; choosing labels inside
+an individual three-element fiber is still extra coordinate or gauge data.
