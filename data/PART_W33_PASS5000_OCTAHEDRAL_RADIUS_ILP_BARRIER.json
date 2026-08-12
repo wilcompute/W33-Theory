@@ -1,0 +1,35 @@
+{
+  "pass": 5000,
+  "status": "FEASIBLE_LOCAL_RELAXATION_GLOBAL_CLOSURE_REQUIRED",
+  "octahedral_local_ILP_witness": {
+    "cells": 270,
+    "per_cell_A3_signs": "(-1,-1,-1,-1)",
+    "per_cell_equator_signs": "(-1,-1,+1)",
+    "T3": -1080,
+    "U4_residual": -270,
+    "U6_restricted": 1620,
+    "U8_restricted": -270,
+    "U9_restricted": -1080,
+    "U12_restricted": 270
+  },
+  "degree7_shell_witness": {
+    "T3": -1080,
+    "T4": -1936,
+    "T5": 75316,
+    "T6": 830590,
+    "T7": -37193040,
+    "A4_complement_sum": -1666,
+    "A6_complement_sum": 828970,
+    "moments": ["1","0","90","810","21351","442515","32654235/2","3231244695/2"],
+    "moment_leading_minors": ["1","90","536490","2855774841174"],
+    "localized_X_plus_7_leading_minors": ["7","1980","79022673","27807585328055790"]
+  },
+  "global_character_cut": {
+    "premise": "T3=-A3=-1080 and the 1080 A3 checks span K^perp",
+    "consequence": "chi(h)=(-1)^wt(h) on all of K^perp, hence T4=+A4=10530",
+    "local_witness_violates_global_cut": true
+  },
+  "covering_radius": {"proved_interval":[134,173],"improved_here":false},
+  "theorem": "The exact 270-cell octahedral sign ILP plus independent complementary shell bounds and all degree-7 radial moment/localizing tests is feasible at the distance-173 frontier. An explicit integral witness exists. It is killed only when global character closure across the triangle-generated dual code is imposed. Therefore the octahedral cells and radial moments alone cannot lower 173; the next radius model must encode cross-octahedron character closure rather than independent shell complements.",
+  "boundary": "This is an exact feasibility/obstruction result for the stated local-cell/truncated-moment ILP, not an actual distance-173 coset and not a proof that the full character-constrained ILP is feasible."
+}
