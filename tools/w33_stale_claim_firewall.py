@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pass4996 — fail closed on known retracted W33/Q43/Witting claims.
+"""Pass4996 — fail closed on known retracted W33/Q43/Witting/readout claims.
 
 Historical, erratum, and explicit audit/outcomes files that must quote a bad
 claim are allowlisted. Everything else is scanned. This is intentionally narrow:
@@ -23,6 +23,7 @@ RULES={
  'witting_cp2': re.compile(r'witting.{0,120}(?:CP\s*\^?\s*2|CP2)|(?:CP\s*\^?\s*2|CP2).{0,120}witting',re.I|re.S),
  'witting_q43_identity': re.compile(r'witting.{0,120}(?:is|=|identif\w*).{0,80}(?:Q\s*\(\s*4\s*,\s*3\s*\)|Q43|steiner)',re.I|re.S),
  'outer_eigenspace_swap': re.compile(r'(?:outer|graph automorphism).{0,160}interchang\w*.{0,160}(?:24|15).{0,80}eigenspace',re.I|re.S),
+ 'reader_global_distance8': re.compile(r'85-sensor\s+line\+tritangent\s+reader\s+has\s+exact\s+cocircuit/erasure\s+distance\s+8',re.I),
 }
 
 ALLOW={
@@ -37,6 +38,7 @@ ALLOW={
  'witting_cp2':{'analysis/PASS4992_4999_EXECUTED_OUTCOMES.md'},
  'witting_q43_identity':{'analysis/PASS4992_4999_EXECUTED_OUTCOMES.md'},
  'outer_eigenspace_swap':set(),
+ 'reader_global_distance8':{'analysis/w33_pass4992_4995_oct_radius_decoder_gauge_chain.py'},
 }
 
 def live_files():
@@ -59,6 +61,7 @@ def main()->int:
   'analysis/PASS4970_ihara_zeta_rational_corrected.tex':['sqrt{10}','sqrt{7}'],
   'analysis/PASS4972_critical_group_40vertex_corrected.tex':['Z/10','Z/40','Z/160'],
   'data/PART_W33_PASS4986_TWIN_DARK15_LEVI_OBSTRUCTION.json':['incidence_preserving_side_swap_exists','false'],
+  'data/PART_W33_PASS5002_CORRECTED_85_READER_ERASURE_DISTANCE.json':['exact_global_erasure_distance','6','guaranteed_erasure_tolerance','5'],
  }
  authoritative={}
  for rel,tokens in auth.items():
@@ -68,7 +71,7 @@ def main()->int:
  out={'pass':4996,'status':'PASS' if not violations else 'FAIL','rules':sorted(RULES),
       'allowlisted_historical_hits':{k:sorted(v) for k,v in allowed_hits.items()},
       'violations':violations,'authoritative_replacements':authoritative,
-      'theorem':'Known retracted W33/Q43/Witting claims are now fail-closed on live text surfaces; only explicit historical, erratum, or audit/outcomes paths may quote them. The firewall also asserts the corrected Ihara, critical-group, and no-point-line-correlation replacements remain present.',
+      'theorem':'Known retracted W33/Q43/Witting/readout claims are fail-closed on live text surfaces; only explicit historical, erratum, or audit/outcomes paths may quote them. The firewall positively asserts the corrected Ihara, critical-group, no-point-line-correlation, and Pass5002 global reader-distance replacements remain present.',
       'boundary':'This is a targeted stale-claim firewall, not a proof that every sentence in the repository is current.'}
  OUT.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
  print(json.dumps(out,indent=2,sort_keys=True))
