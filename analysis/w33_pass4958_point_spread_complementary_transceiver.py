@@ -51,7 +51,6 @@ def rank_q(M):
     return r
 
 def main()->int:
-    # Standard W(3,3) points and lines.
     pts=sorted({canon3(v) for v in itertools.product(range(3),repeat=4) if any(v)})
     J4=np.array([[0,1,0,0],[-1,0,0,0],[0,0,0,1],[0,0,-1,0]],dtype=int)%3
     W=nx.Graph();W.add_nodes_from(range(40))
@@ -60,13 +59,11 @@ def main()->int:
     lines=sorted(tuple(sorted(c)) for c in nx.find_cliques(W) if len(c)==4);assert len(lines)==40
     line_sets=[frozenset(L) for L in lines]
 
-    # Point-line incidence Z: 40 points x 40 lines.
     Z=np.zeros((40,40),dtype=int)
     for j,L in enumerate(line_sets):
         for p in L:Z[p,j]=1
     assert set(map(int,Z.sum(0)))=={4} and set(map(int,Z.sum(1)))=={4}
 
-    # Enumerate the 36 spreads exactly.
     point_to={p:[i for i,L in enumerate(line_sets) if p in L] for p in range(40)}
     spreads=[]
     def search(covered,chosen):
@@ -82,37 +79,32 @@ def main()->int:
     search(frozenset(),[])
     spreads=sorted(set(spreads));assert len(spreads)==36
 
-    # Old Part-CXXVI convention B = lines x spreads.
     B=np.zeros((40,36),dtype=int)
     for j,S in enumerate(spreads):B[list(S),j]=1
     assert set(map(int,B.sum(0)))=={10} and set(map(int,B.sum(1)))=={9}
 
-    # Q43 line-intersection graph on the common 40-line coordinate.
     AQ=np.zeros((40,40),dtype=int)
     for i,j in itertools.combinations(range(40),2):
         if line_sets[i]&line_sets[j]:AQ[i,j]=AQ[j,i]=1
     I=np.eye(40,dtype=int);J=np.ones((40,40),dtype=int)
     Abar=J-I-AQ
 
-    # Independently reproduce both old Gram laws.
     assert np.array_equal(Z.T@Z,4*I+AQ)
     assert np.array_equal(B@B.T,9*I+3*Abar)
     assert rank_q(Z)==25 and rank_q(B)==16
 
-    # Spectral-complementarity identity: NEW combination.
     assert np.array_equal(3*(Z.T@Z)+(B@B.T)-3*J,18*I)
     stacked=np.vstack([Z,B.T])
     assert stacked.shape==(76,40) and rank_q(stacked)==40
 
-    # Exact rational projector numerators from the two incidence channels.
-    # E_24 = (5 Z^T Z - 2J)/30 ; E_15 = (4BB^T - 9J)/72 ; E_0=J/40.
+    # Exact rational primitive projectors on the 40-line coordinate:
+    # E24=(5Z^TZ-2J)/30, E15=(4BB^T-9J)/72, E0=J/40.
     E24_num=5*(Z.T@Z)-2*J
     E15_num=4*(B@B.T)-9*J
     assert rank_q(E24_num)==24 and rank_q(E15_num)==15
     assert not np.any(E24_num@E15_num)
-    # 120*(E0+E24+E15-I)=0 without fractions.
-    assert np.array_equal(3*J+4*E24_num+(5*E15_num)//3,120*I) is False
-    # Use the clean Gram identity as the fraction-free completeness certificate.
+    # LCM(40,30,72)=360 gives an entirely integral completeness check.
+    assert np.array_equal(9*J+12*E24_num+5*E15_num,360*I)
 
     out={
       'pass':4958,
@@ -134,7 +126,8 @@ def main()->int:
       'centered_projectors':{
         'E24':'(5 Z^T Z - 2J)/30',
         'E15':'(4 B B^T - 9J)/72',
-        'E0':'J/40'},
+        'E0':'J/40',
+        'fraction_free_completeness':'9J + 12(5Z^TZ-2J) + 5(4BB^T-9J) = 360I'},
       'theorem':'The point-line and spread-line incidence channels are complementary exact transceivers on the forty-line W33/Q43 coordinate. Point incidence carries 1+24 and is blind to 15; spread incidence carries 1+15 and is blind to 24. Their stacked map has full rank 40 and satisfies 18I=3Z^TZ+BB^T-3J, yielding an exact reconstruction formula for every line-coordinate vector.',
       'boundary':'The individual channel spectra and spread Gram law are prior repo results. The new theorem is their exact complementary reconstruction after the corrected W33/Q43 dual identification.'}
     OUT.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n');print(json.dumps(out,indent=2,sort_keys=True));return 0
