@@ -1,0 +1,11 @@
+{
+  "pass": 4988,
+  "AG23_completions": 12,
+  "full_local_group": {"order": 1296, "action": "transitive", "completion_stabilizer": 108},
+  "PSp_local_group": {"order": 648, "action": "transitive", "completion_stabilizer": 54},
+  "Witting_phase_test": "Witting orientation distinguishes the PGSp/PSp outer coset. Restricting to PSp still leaves one orbit on all 12 completions, so this sign cannot select a completion.",
+  "tritangent_test": "The canonical tritangent selector is W(E6)-equivariant while the full local stabilizer is transitive on completions; intrinsic tritangent incidence alone cannot select one.",
+  "S3_connection_test": "The canonical connection data remain equivariant under the same local symmetry; a completion can be selected only after an additional frame/reference choice.",
+  "hardware_boundary": "Chern/OAM or time-bin orientation may be used as an external calibration choice, but no proven equivariant map from those labels to the 12 completions exists in the finite geometry.",
+  "theorem": "All currently intrinsic finite structures tested leave the exact 12-fold AG(2,3) gauge intact. In particular the PSp subgroup selected by Witting phase remains transitive on all 12 completions."
+}
