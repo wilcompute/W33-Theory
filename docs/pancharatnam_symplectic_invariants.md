@@ -1,34 +1,28 @@
-# Pancharatnam Phase vs Symplectic Invariants (F3^4)
+# Pancharatnam phase vs. W(3,3) point-triad geometry — corrected Pass4963 report
 
-Non‑orthogonal triples analyzed: **3240**
+**Status:** exact finite result; supersedes the old phase-exponent/F3 encoder report.
 
-## ω counts (number of ω=1 vs ω=2)
+The 40 Witting rays form an orthogonality graph isomorphic to the standard
+`W(3,3)` **point** graph. They are **not** the 40 Steiner fibers: those fibers
+form the nonisomorphic dual `Q(4,3)` / W33-line graph.
 
-counts (c1,c2) | clusters
---- | ---
-(0, 3) | -1.570796:125, -0.523599:1021, 0.523599:983, 1.570796:132
-(1, 2) | -1.570796:37, -0.523599:322, 0.523599:344, 1.570796:36
-(2, 1) | -1.570796:14, -0.523599:86, 0.523599:101, 1.570796:9
-(3, 0) | -1.570796:4, -0.523599:11, 0.523599:12, 1.570796:3
+The retired direct ray→`F3^4` exponent encoder is not a bijection: it maps the
+40 rays to only **19** tuples and maps **8** rays to the zero tuple.
 
-## ω product sign
+## Exact Bargmann/Pancharatnam phase census
 
-prod_sign | clusters
---- | ---
--1 | -1.570796:139, -0.523599:1107, 0.523599:1084, 1.570796:141
-1 | -1.570796:41, -0.523599:333, 0.523599:356, 1.570796:39
+W33 point-triad centers | phase | count
+--- | --- | ---:
+1 | `+π/6` | 1440
+1 | `−π/6` | 1440
+4 | `+π/2` | 180
+4 | `−π/2` | 180
 
-## ω multiset
+Total nonorthogonal triples: **3240**.
 
-multiset | clusters
---- | ---
-(0, 0, 0) | -1.570796:84, -0.523599:726, 0.523599:654, 1.570796:96
-(0, 0, 1) | -1.570796:26, -0.523599:225, 0.523599:237, 1.570796:28
-(0, 0, 2) | -1.570796:26, -0.523599:219, 0.523599:231, 1.570796:28
-(0, 1, 1) | -1.570796:12, -0.523599:65, 0.523599:86, 1.570796:6
-(0, 1, 2) | -1.570796:8, -0.523599:76, 0.523599:92, 1.570796:4
-(0, 2, 2) | -1.570796:12, -0.523599:64, 0.523599:85, 1.570796:6
-(1, 1, 1) | -1.570796:4, -0.523599:11, 0.523599:12, 1.570796:3
-(1, 1, 2) | -1.570796:2, -0.523599:21, 0.523599:15, 1.570796:3
-(1, 2, 2) | -1.570796:3, -0.523599:21, 0.523599:15, 1.570796:4
-(2, 2, 2) | -1.570796:3, -0.523599:12, 0.523599:13, 1.570796:2
+Thus phase magnitude detects the exact W33 independent-triad center dichotomy:
+`1 center ↔ |phase|=π/6`, `4 centers ↔ |phase|=π/2`.
+
+The old proposed direct equality between the E6 Steiner signing and Witting
+Pancharatnam phase is withdrawn because it conflated the two nonisomorphic
+40-element point/line actions.
