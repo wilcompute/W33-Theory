@@ -9,6 +9,7 @@ on:
       - 'analysis/w33_pass4943_common_s6_carrier_crosswalk.py'
       - 'analysis/w33_pass4944_port_selector_rtl_report.py'
       - 'analysis/w33_pass4945_4947_steiner_connection_maxcut_duality.py'
+      - 'tools/apply_pass4954_duality_corrections_to_4946_4947.py'
       - 'analysis/PASS4940_4947_radius_quartic_holonomy_duality_insert.tex'
       - 'analysis/PASS4940_4947_radius_quartic_holonomy_index_insert.html'
       - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
@@ -45,6 +46,10 @@ jobs:
           python analysis/w33_pass4942_transverse_char3_degeneration.py
           python analysis/w33_pass4943_common_s6_carrier_crosswalk.py
           python analysis/w33_pass4945_4947_steiner_connection_maxcut_duality.py
+          # The legacy producer computes the correct incidence/holonomy counts but
+          # serializes the superseded degree-40 labels.  Re-apply the authoritative
+          # Pass4954/4955 W33-point/Q43-line correction before any regression or commit.
+          python tools/apply_pass4954_duality_corrections_to_4946_4947.py
           python analysis/w33_pass4941_quartic_ambiguity_cancellation.py
       - name: Exhaust the hard covering-distance branch-and-bound
         run: python analysis/w33_pass4940_exact_hardword_cover_distance.py
@@ -63,7 +68,7 @@ jobs:
           python analysis/w33_pass4944_port_selector_rtl_report.py
       - name: Focused frozen-certificate and integration regression
         run: pytest -q tests/test_w33_pass4940_4947_exact_packet.py
-      - name: Materialize public root card
+      - name: Materialize or refresh public root card
         run: python tools/integrate_pass4940_4947_public.py
       - name: Preserve exact generated evidence and public roots on master
         shell: bash
@@ -85,6 +90,6 @@ jobs:
             analysis/PASS4944_45_YOSYS_STAT.json \
             docs/index.html index.html
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m 'Materialize Passes 4940-4947 exact evidence and public root card'
+          git commit -m 'Materialize Passes 4940-4947 exact evidence and corrected public root card'
           git pull --rebase origin master
           git push origin HEAD:master
