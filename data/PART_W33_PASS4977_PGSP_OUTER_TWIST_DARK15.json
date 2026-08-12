@@ -1,0 +1,19 @@
+{
+  "boundary": "This closes the explicit PGSp outer twist. It does not construct or exclude a more general incidence correlation outside PGSp, nor nonlinear/symmetry-broken bridges.",
+  "consequence": "The Pass1879 point/line correlation cannot be replaced by the multiplier-minus-one PGSp outer involution. Any successful 15<->15 correlation carrier must use structure outside these ordinary PGSp permutation extensions.",
+  "module_extensions": {
+    "decompositions": ["point: 1 + 15(#6) + 24(#14)", "line: 1 + 15(#9) + 24(#14)"],
+    "line_40": "extends from PSp to the PGSp line permutation action",
+    "point_40": "extends from PSp to the PGSp point permutation action"
+  },
+  "outer_automorphism": "alpha = conjugation on PSp(4,3) by the explicit multiplier-minus-one PGSp similitude used in Pass4966",
+  "pass": 4977,
+  "theorem": "Twisting by the actual PGSp/PSp outer involution does not resurrect the missing dark-15 point-line channel. Both 40-point permutation modules extend to PGSp, so their unique 15-dimensional PSp constituents are individually fixed by the conjugation twist. The twisted Hom dimensions are therefore the same zero dimensions proved in Pass4961.",
+  "twist_result": {
+    "Hom_PSp_twisted_line15_to_point15_dimension": 0,
+    "Hom_PSp_twisted_point15_to_line15_dimension": 0,
+    "alpha_fixes_line_15_isomorphism_class": true,
+    "alpha_fixes_point_15_isomorphism_class": true,
+    "reason": "for any representation extending to PGSp, rho(alpha(g)) is conjugate to rho(g) by the outer permutation matrix; the unique 15-dimensional constituent is therefore alpha-stable"
+  }
+}
