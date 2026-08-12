@@ -1,0 +1,25 @@
+{
+  "Q43_disjointness_clique_complex": {
+    "H1_dimension_F2": 0,
+    "H2_dimension_F2_after_filling_K4": 0,
+    "edges": 540,
+    "kernel_dimension_triangle_boundary": 2739,
+    "rank_tetrahedron_to_triangle_boundary_F2": 2739,
+    "rank_triangle_to_edge_boundary_F2": 501,
+    "tetrahedra_K4": 9450,
+    "triangles": 3240,
+    "vertices": 40
+  },
+  "boundary": "Vanishing H1/H2 is over F2 for the stated clique 3-skeleton. It does not assert integral or higher-dimensional homology vanishes.",
+  "consequence": "The 2160 local reflection curvatures carry no residual F2 two-cycle charge once tetrahedra are included; both the flat H1 sector and the abelianized H2 curvature sector close locally.",
+  "curvature_Bianchi": {
+    "all_tetrahedra_even_reflection_face_parity": true,
+    "flat_triangle_faces": 1080,
+    "identity": "H_abc H_acd H_adb = P_ab H_bcd P_ba",
+    "nonabelian_S3_Bianchi_identity_verified_tetrahedra": 9450,
+    "reflection_triangle_faces": 2160,
+    "tetrahedra_by_number_of_reflection_faces": {"0": 270, "2": 6480, "4": 2700}
+  },
+  "pass": 4981,
+  "theorem": "The 9450 K4 tetrahedra of the Q43 disjointness graph span the entire 2739-dimensional F2 kernel of the triangle boundary map. Consequently the clique 3-skeleton has H1=H2=0 over F2. The sign curvature obeys exact tetrahedral Bianchi parity (0,2,or4 reflection faces only), and the full S3 edge transports satisfy the nonabelian Bianchi identity on all 9450 tetrahedra."
+}
