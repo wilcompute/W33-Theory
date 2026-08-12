@@ -1,51 +1,21 @@
-# Pass 4968 — PSp(4,3) Orbit Structure on 40 Vertices (Corrected)
+# Pass 4968 — PSp(4,3) orbit structure on 40 vertices
 
 **Date:** 2026-08-12  
-**Status:** EXECUTED — CORRECTED from prior srg(33) error  
-**Replaces:** Erroneous Pass 4968 claim of 33-vertex hyperplane section
+**Status:** SUPERSEDED/HARDENED by Pass4985 after the original srg(33) correction.
 
-## Correction Statement
+The valid finite statement is:
 
-Previous session erroneously claimed W(3,3) has a "33-vertex induced subgraph" corresponding to a
-hyperplane section of the Witting polytope. **This is wrong.** W(3,3) = Sp(4,3) has exactly
-**40 vertices** — the 1-dimensional isotropic subspaces of F₃⁴ under the symplectic form
-ω(x,y) = x₁y₂ − x₂y₁ + x₃y₄ − x₄y₃.
+- `W(3,3) = srg(40,12,2,4)` on 40 projective points of `F_3^4`.
+- The symplectic subgroup `PSp(4,3)` has order 25,920 and is transitive on the 40 points and 240 graph edges.
+- A point stabilizer inside this subgroup has order `25920/40 = 648`.
+- Its two graph-distance shells have sizes 12 neighbors and 27 nonneighbors.
+- Pass4966 exhibits an explicit multiplier-minus-one similitude that doubles this action to a 51,840-element `PGSp(4,3)` extension.
 
-The name "W33" refers to W(3,3): symplectic polar space with parameters (3,3). The "33"
-is the name, NOT the vertex count. This was established in Theorem MCCXXXVII:
+Two claims from the earlier version are withdrawn by Pass4985:
 
-> v = 40 = 33 + 7 = (q × p_Ih) + Φ₆
-> The theory encodes its own vertex count in its name plus Phi_6.
+1. `PSp(4,3)` should not have been presented as the entire index-two-extended symmetry; the explicit PGSp extension is already present in the repo.
+2. The 27 nonneighbors of a fixed W33 point are simply 27 points of the same 40-point carrier. The asserted identification with "the 27 lines of PG(3,3) not through the fixed point" was unsupported and is withdrawn.
 
-## Correct Orbit Structure
+No physical braid/TQC interpretation follows merely from the numerical stabilizer order 648.
 
-- **Vertices:** 40 (isotropic 1-spaces of F₃⁴)
-- **Automorphism group:** PSp(4,3), order 25,920
-- **Vertex orbits:** 1 orbit of size 40 (vertex-transitive)
-- **Edge orbits:** 1 orbit of size 240 (edge-transitive)
-- **Vertex stabilizer:** order 25920/40 = **648** (Hessian group)
-- **12-neighbor shell:** 1 orbit of size 12 under the vertex stabilizer
-- **27-non-neighbor shell:** corresponds to the 27 lines of PG(3,3) not through the fixed point
-  → connects to the 27-dimensional representation of E₆
-
-## Hessian Group Identification
-
-Stabilizer order 648 = 2³ × 3⁴ = the Hessian group (Shephard-Todd complex reflection group G₂₅,
-also written ST(25)). This is the local braid algebra at each W(3,3) vertex, confirming the
-TQC architecture from the May 2026 commits.
-
-## GAP Verification Script
-
-```gap
-# Verify orbit structure of W(3,3)
-LoadPackage("AtlasRep");;
-G := AtlasGroup("PSp(4,3)");;
-OrbitLengths(G, [1..40]);  # Should give [40]
-Size(Stabilizer(G, 1));     # Should give 648
-```
-
-## Cross-References
-
-- pass_992_srg_uniqueness_certificate.md (vertex count = 40 confirmed)
-- BREAKTHROUGH_DCCXCIII C521: n_B = q^5 - q = 240 (edge count)
-- BREAKTHROUGH_DCCXCIII C524: n_B = q(q-1)(q+1)(q²+1) = 3×2×4×10 = 240
+Cross-references: `data/PART_W33_PASS4966_WITTING_PHASE_OUTER_CHARACTER.json`, `data/PART_W33_PASS4985_COLLISION_PACKET_AUDIT.json`.
