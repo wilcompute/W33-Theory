@@ -2,12 +2,21 @@
   "schema": "w33.pass_namespace_registry.v2.entry",
   "range": [4976, 4983],
   "slug": "shell_correlations_twisted15_outer_fusion_e6_ports_holonet_bianchi_affine_spread_parity",
-  "title": "Signed-shell correlations, twisted dark-15 test, outer-odd fusion, E6 spread ports, Holonet local chart, and three outside-box probes",
-  "status": "RESERVED",
+  "title": "Signed-shell correlations, twisted dark-15 test, outer-sign compensation, E6 tritangent ports, local gauge, Q43 Bianchi, affine completion, and spread parity",
+  "status": "EXECUTED",
   "owner": "openai-gpt56-sol",
   "reserved_at": "2026-08-11",
+  "executed_at": "2026-08-11",
   "renumbered_from": [4968,4975],
   "collision_commit": "f9db42c7fe192690b824a307df7fe27abadbd483",
-  "purpose": "Execute the five queued post-Pass4967 attacks plus three independent outside-box probes: 4976 signed-shell correlations for K=[360,36,20]_2; 4977 PGSp-outer twisted dark-15 Hom; 4978 Witting/quadratic outer-sign compensation; 4979 45-tritangent transport through the unique double-six/spread bridge; 4980 exact local nine-spread compiler/stabilizer audit; 4981 Q43 tetrahedral curvature/Bianchi and H2; 4982 intrinsic AG(2,3) completion test; 4983 H36/Steiner parity reinterpretation through the spread bridge.",
-  "boundary": "Renumbering preserves the computed mathematics and avoids overwriting the parallel Pass4968-4972 packet. Pass4959 remains independently owned and untouched."
+  "purpose": "Executed the five queued post-Pass4967 attacks plus three outside-box probes: 4976 shell-three correlations and full-dual span; 4977 zero PGSp-outer-twisted dark15 Hom; 4978 Witting outer-sign compensation of the quadratic Hom plane; 4979 complementary 45-tritangent 1+20 spread reader and complete 40+45 transceiver; 4980 exact S3 wr S3 local gauge; 4981 Q43 tetrahedral H2/Bianchi closure; 4982 exact 12-fold AG(2,3) completion ambiguity; 4983 geometric identification of the 1080 dual weight-three checks as empty-common-line spread triples.",
+  "evidence": {
+    "outcomes": "analysis/PASS4976_4983_EXECUTED_OUTCOMES.md",
+    "producers": ["analysis/w33_pass4976_signed_shell_correlations.py","analysis/w33_pass4977_4978_outer_twist_compensation.py","analysis/w33_pass4979_4983_spread_ports_bianchi_affine.py"],
+    "manuscript_insert": "analysis/PASS4976_4983_shell_ports_bianchi_insert.tex",
+    "public_page": "docs/pass4976-4983-shell-ports-bianchi.html",
+    "regression": "tests/test_w33_pass4976_4983_exact_packet.py",
+    "workflow": ".github/workflows/w33_pass4976_4983_exact_packet.yml"
+  },
+  "boundary": "Exact producers were replayed locally before commit and frozen certificates were committed. The dedicated GitHub replay workflow is not reported green unless separately observed. Covering radius remains 134<=rho(K)<=173. Pass4959 remains independently owned and untouched. The collided Pass4968-4972 parallel packet is neither overwritten nor used as evidence here."
 }
