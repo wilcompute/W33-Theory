@@ -1,0 +1,22 @@
+{
+  "boundary": "This is a finite linear transceiver identity. It supplies no continuum field, coupling, or device normalization.",
+  "double_six_line_channel": {
+    "column_weight": 9,
+    "double_six_gram": "CC^T=4J+6I-3A_DS",
+    "line_side_dark_sector": "24",
+    "nonzero_sector": "1+15",
+    "rank": 16,
+    "row_weight": 10
+  },
+  "exact_reconstruction_identity": "18 I_40 = 3 Z^T Z + C^T C - 3 J_40",
+  "matrices": {
+    "C_double_six_by_line": [36,40],
+    "Z_point_by_line": [40,40],
+    "stacked": [76,40]
+  },
+  "pass": 4967,
+  "point_line_channel": {"line_side_dark_sector":"15","nonzero_sector":"1+24","rank":25},
+  "prior_art_credit": "The spread-line Gram spectrum is Part CXXVI and the point+spread complementarity is Pass4958. The new content is the canonical replacement of anonymous spread rows by cubic-surface double-sixes via Pass4964.",
+  "stacked_rank": 40,
+  "theorem": "After the canonical Pass4964 identification of double-sixes with spreads, line-spread incidence becomes a canonical 36x40 double-six/line matrix C. C transmits exactly the constant plus 15-dimensional W33-line sector while point incidence Z transmits constant plus 24. Together [Z;C] has full rank 40 and satisfies 18I=3Z^TZ+C^TC-3J, giving exact reconstruction of every W33-line coordinate from point and double-six readouts."
+}
