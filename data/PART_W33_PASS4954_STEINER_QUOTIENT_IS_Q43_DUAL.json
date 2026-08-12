@@ -1,0 +1,26 @@
+{
+  "boundary": "Both graphs share SRG(40,12,2,4); parameters alone never identify either graph. The identification here is by explicit graph isomorphism to the standard W33 line-intersection graph, not by SRG parameters.",
+  "corrections": {
+    "Pass4870_explicit_isomorphism_to_standard_W33": false,
+    "Pass4947_0_2_center_counts": "correct for the Q(4,3) dual quotient, but incorrectly labeled as W(3,3) point-triad geometry",
+    "Pass4953_1_4_counts": "correct for the standard W(3,3) point graph; not the Steiner quotient"
+  },
+  "identification": "Steiner 40-fiber quotient = line-intersection graph of W(3,3) = point graph of dual Q(4,3)",
+  "pass": 4954,
+  "repo_crosscheck": "Pass2869 already records that W(3,3) and Q(4,3) are the two GQ(3,3) candidates, nonisomorphic at odd q, and that a spread separates them.",
+  "standard_W33_line_intersection_graph": {
+    "isomorphic_to_steiner_quotient": true,
+    "triad_centers": {"0": 1080, "2": 2160}
+  },
+  "standard_W33_point_graph": {
+    "isomorphic_to_steiner_quotient": false,
+    "triad_centers": {"1": 2880, "4": 360}
+  },
+  "steiner_quotient": {
+    "spread_exists": false,
+    "srg": [40, 12, 2, 4],
+    "triad_centers": {"0": 1080, "2": 2160},
+    "vertices": 40
+  },
+  "theorem": "The Steiner three-fiber quotient is not the standard W(3,3) point graph. It is exactly the intersection graph of the forty W(3,3) lines, hence the point graph of the dual generalized quadrangle Q(4,3). This resolves the apparent 1/4 versus 0/2 triad-center contradiction."
+}
