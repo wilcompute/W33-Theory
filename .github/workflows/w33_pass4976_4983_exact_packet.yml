@@ -1,0 +1,103 @@
+name: Passes 4976-4983 shell-ports-Bianchi exact packet
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass4976_signed_shell_correlations.py'
+      - 'analysis/w33_pass4977_4978_outer_twist_compensation.py'
+      - 'analysis/w33_pass4979_4983_spread_ports_bianchi_affine.py'
+      - 'data/PART_W33_PASS497[6-9]*.json'
+      - 'data/PART_W33_PASS498[0-3]*.json'
+      - 'analysis/PASS4976_4983_shell_ports_bianchi_insert.tex'
+      - 'analysis/PASS4976_4983_index_insert.html'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'docs/pass4976-4983-shell-ports-bianchi.html'
+      - 'tools/integrate_pass4976_4983_public.py'
+      - 'tests/test_w33_pass4976_4983_exact_packet.py'
+      - '.github/workflows/w33_pass4976_4983_exact_packet.yml'
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pass4976-4983-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  exact-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install finite-analysis dependencies
+        run: python -m pip install --disable-pip-version-check numpy networkx pytest
+      - name: Freeze committed certificates
+        run: |
+          mkdir -p /tmp/pass4976-frozen
+          cp data/PART_W33_PASS4976_SIGNED_SHELL_CORRELATIONS.json /tmp/pass4976-frozen/
+          cp data/PART_W33_PASS4977_PGSP_OUTER_TWIST_DARK15.json /tmp/pass4976-frozen/
+          cp data/PART_W33_PASS4978_WITTING_QUADRATIC_OUTER_COMPENSATOR.json /tmp/pass4976-frozen/
+          cp data/PART_W33_PASS4979_TRITANGENT_SPREAD_45_PORT_TRANSCEIVER.json /tmp/pass4976-frozen/
+          cp data/PART_W33_PASS4980_LOCAL_NINE_SPREAD_WREATH_GAUGE.json /tmp/pass4976-frozen/
+          cp data/PART_W33_PASS4981_Q43_TETRAHEDRAL_BIANCHI_H2.json /tmp/pass4976-frozen/
+          cp data/PART_W33_PASS4982_LOCAL_AG23_COMPLETION_OBSTRUCTION.json /tmp/pass4976-frozen/
+          cp data/PART_W33_PASS4983_DUAL_TRIANGLES_AS_EMPTY_SPREAD_TRIPLES.json /tmp/pass4976-frozen/
+      - name: Syntax check producers
+        run: |
+          python -m py_compile \
+            analysis/w33_pass4976_signed_shell_correlations.py \
+            analysis/w33_pass4977_4978_outer_twist_compensation.py \
+            analysis/w33_pass4979_4983_spread_ports_bianchi_affine.py \
+            tools/integrate_pass4976_4983_public.py
+      - name: Replay all eight passes
+        run: |
+          set -euo pipefail
+          python analysis/w33_pass4976_signed_shell_correlations.py >/dev/null
+          python analysis/w33_pass4977_4978_outer_twist_compensation.py >/dev/null
+          python analysis/w33_pass4979_4983_spread_ports_bianchi_affine.py >/dev/null
+      - name: Semantic frozen-certificate equality
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('data'); frozen=Path('/tmp/pass4976-frozen')
+          names=[
+            'PART_W33_PASS4976_SIGNED_SHELL_CORRELATIONS.json',
+            'PART_W33_PASS4977_PGSP_OUTER_TWIST_DARK15.json',
+            'PART_W33_PASS4978_WITTING_QUADRATIC_OUTER_COMPENSATOR.json',
+            'PART_W33_PASS4979_TRITANGENT_SPREAD_45_PORT_TRANSCEIVER.json',
+            'PART_W33_PASS4980_LOCAL_NINE_SPREAD_WREATH_GAUGE.json',
+            'PART_W33_PASS4981_Q43_TETRAHEDRAL_BIANCHI_H2.json',
+            'PART_W33_PASS4982_LOCAL_AG23_COMPLETION_OBSTRUCTION.json',
+            'PART_W33_PASS4983_DUAL_TRIANGLES_AS_EMPTY_SPREAD_TRIPLES.json']
+          for n in names:
+              assert json.loads((root/n).read_text())==json.loads((frozen/n).read_text()), n
+          print('semantic certificates reproduce exactly')
+          PY
+      - name: Focused regression
+        run: python -m pytest -q tests/test_w33_pass4976_4983_exact_packet.py
+      - name: Materialize public theorem card
+        if: github.event_name != 'pull_request'
+        run: python tools/integrate_pass4976_4983_public.py
+      - name: Commit refreshed public roots
+        if: github.event_name != 'pull_request'
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- docs/index.html index.html; then
+            echo 'Public roots already current'
+            exit 0
+          fi
+          git config user.name 'w33-evidence-bot'
+          git config user.email 'w33-evidence-bot@users.noreply.github.com'
+          git add docs/index.html index.html
+          git commit -m 'Materialize Passes 4976-4983 public theorem card'
+          git pull --rebase origin master
+          git push origin HEAD:master
