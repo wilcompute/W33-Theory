@@ -4,7 +4,7 @@
 Builds the cubic-surface 27-line geometry, 36 double-sixes/H36, the 45
 tritangents, the standard W(3,3) point/line model and its 36 spreads, the E6
 switching sign, the 1080 sigma-even triangle checks, and the residual 810
-chordless A4 checks.  Group actions are built only on request.
+chordless A4 checks. Group actions are built only on request.
 """
 from __future__ import annotations
 import itertools
@@ -93,7 +93,8 @@ def build_base():
         if H.number_of_edges()==30 and set(dict(H.degree()).values())=={5} and nx.is_bipartite(H):
             DS.add(frozenset(X|Y))
     DS=sorted(DS,key=lambda s:tuple(sorted(s)));di={D:i for i,D in enumerate(DS)}
-    assert (len(p27),len(tritangents),len(DS))==(27,45,36)
+    # p27 is the 45 triple presentation; l27 is the 27 cubic-line incidence presentation.
+    assert (len(l27),len(p27),len(tritangents),len(DS))==(27,45,45,36)
 
     H36=nx.Graph();H36.add_nodes_from(range(36))
     for i,j in itertools.combinations(range(36),2):
@@ -103,7 +104,7 @@ def build_base():
     M=np.array([[1 if len(set(t)&set(D))==2 else 0 for D in DS] for t in tritangents],dtype=int)
     assert set(map(int,M.sum(1)))=={24} and set(map(int,M.sum(0)))=={30}
 
-    # Standard W(3,3) points/lines and 36 spreads.  Q is the line-intersection graph Q(4,3).
+    # Standard W(3,3) points/lines and 36 spreads. Q is the line-intersection graph Q(4,3).
     P=sorted({canon(v) for v in itertools.product(range(3),repeat=4) if any(v)})
     W=nx.Graph();W.add_nodes_from(range(40))
     for i,j in itertools.combinations(range(40),2):
