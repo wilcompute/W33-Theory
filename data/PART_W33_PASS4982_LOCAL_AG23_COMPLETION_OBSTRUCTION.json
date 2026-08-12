@@ -1,0 +1,15 @@
+{
+  "AG23_completions": {
+    "completion_stabilizer_order": 108,
+    "construction": "the remaining nine affine lines are the triples of one of the 12 Latin squares of order 3",
+    "count": 12,
+    "each_completion_additional_parallel_classes": 3,
+    "local_S3_wr_S3_action_on_completions": "transitive"
+  },
+  "boundary": "All 12 completions are equivalent under the local stabilizer. Extra physical structure could select one, but the bare W33/double-six incidence data does not.",
+  "canonical_completion_exists": false,
+  "fixed_local_partition": "the Pass4965/4980 3+3+3 parallel class on nine spreads",
+  "group_order_obstruction": "S3 wr S3 has order1296, while the stabilizer of one AG(2,3) completion with the distinguished parallel class has order108; the 12 completions form one orbit",
+  "pass": 4982,
+  "theorem": "The canonical local 3+3+3 partition does not intrinsically complete to a unique affine plane AG(2,3). There are exactly 12 labeled AG(2,3) completions containing that parallel class, and the full local S3 wr S3 symmetry acts transitively on all 12. Choosing an affine/qutrit coordinate plane therefore breaks a 12-fold finite gauge ambiguity."
+}
