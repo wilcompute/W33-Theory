@@ -1,5 +1,6 @@
 {
   "pass": 4946,
+  "correction": "Pass4955 fixes the side labels: maximum-cut triples are W33 points; Steiner triples are W33 lines / Q(4,3) points.",
   "shells": {
     "maximum_cuts": 120,
     "Steiner_triangles": 120,
@@ -13,14 +14,16 @@
     "identical_column_classes": [40,3]
   },
   "quotient": {
-    "maximum_cut_triples": "40 line classes",
-    "Steiner_triples": "the same 40 point fibers from Pass4870",
+    "maximum_cut_triples": "40 W(3,3) points",
+    "Steiner_triples": "40 W(3,3) lines, equivalently Q(4,3) points",
     "zero_matrix_row_weight": 4,
     "zero_matrix_column_weight": 4,
-    "meaning": "Z=1-B on the 40x40 quotient is point-line incidence",
-    "point_collinearity": "SRG(40,12,2,4)",
-    "explicit_isomorphism_to_Pass4870_W33": true
+    "meaning": "Z=1-B on the 40x40 quotient is literal W(3,3) point-line incidence",
+    "row_collinearity": "standard W(3,3) point graph",
+    "column_collinearity": "Q(4,3) point graph = W(3,3) line-intersection graph",
+    "rank": 25,
+    "gram_spectrum": {"16":1,"6":24,"0":15}
   },
-  "theorem": "Although the 120 maximum cuts and 120 Steiner triangles are inequivalent PGSp G-sets, their cross-incidence has a canonical 3-to-1 collapse on both sides. The 120 maximum cuts form forty triples with identical Steiner-splitting profiles, while the Steiner columns collapse by exactly the classical forty Steiner triads. On the resulting 40x40 quotient, the NON-splitting relation has row and column weight four and is precisely a generalized-quadrangle point-line incidence matrix: two quotient points are collinear iff they share a zero block, and the resulting graph is W(3,3). Thus the two inequivalent 120-shells recover the dual 40-line and 40-point actions of W33 rather than a false 120-to-120 identification.",
-  "boundary": "Finite incidence theorem. The quotient identifies GQ point/line actions; it does not restore an equivariant bijection between the original 120-element shells."
+  "theorem": "Although the 120 maximum cuts and 120 Steiner triangles are inequivalent PGSp G-sets, their cross-incidence has a canonical 3-to-1 collapse on both sides. The 120 maximum cuts collapse to the forty W(3,3) points; the Steiner columns collapse to the forty W(3,3) lines. On the resulting 40x40 quotient, the non-splitting relation is precisely W33 point-line incidence. Its row collinearity graph is W(3,3), while its column collinearity graph is the nonisomorphic odd-q dual Q(4,3).",
+  "boundary": "Finite incidence theorem corrected by Pass4955. The quotient identifies point and line actions; it does not restore an equivariant bijection between the original 120-element shells."
 }
