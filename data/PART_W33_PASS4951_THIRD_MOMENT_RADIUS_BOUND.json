@@ -1,0 +1,42 @@
+{
+  "boundary": "This is a universal moment/divisibility bound, not an exact covering-radius computation. It uses only the frozen dual A1=A2=0, A3=1080 data and the Pass4940 lower witness.",
+  "code": "K=[360,36,20]_2",
+  "coset_moments": {
+    "identity": "mu3=-(3/4)*sum_{h in K^perp, wt(h)=3} (-1)^(y.h)",
+    "mean_weight": 180,
+    "third_centered_moment_absolute_bound": 810,
+    "variance": 90
+  },
+  "covering_radius": {
+    "exact_closed": false,
+    "interval": [134, 173],
+    "lower_bound": 134,
+    "upper_bound": 173
+  },
+  "delta_174_equality_obstruction": {
+    "a": 6,
+    "coset_size_mod_7": 2,
+    "forced_population_ratio": "N174:N195=5:2",
+    "forced_weights_if_equal": [174, 195],
+    "impossible": true,
+    "nonnegative_polynomial": "(X+6)(X-15)^2",
+    "optimized_t": 15,
+    "required_total_divisor": 7
+  },
+  "frozen_inputs": {
+    "Pass4940_exact_lower_witness": 134,
+    "coset_size": 68719476736,
+    "dimension": 36,
+    "dual_A1": 0,
+    "dual_A2": 0,
+    "dual_A3": 1080,
+    "length": 360
+  },
+  "one_sided_bound": {
+    "delta_175_contradicts_abs_bound": true,
+    "delta_175_lower_mu3": 1170,
+    "inequality": "for X=W-180 >= -a: mu3 >= 90*(90/a-a)"
+  },
+  "pass": 4951,
+  "theorem": "Every coset of K has a representative of weight at most 173. Together with the Pass4940 exact hard word, 134 <= rho(K) <= 173."
+}
