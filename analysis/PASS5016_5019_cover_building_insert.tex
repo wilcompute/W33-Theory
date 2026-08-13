@@ -1,0 +1,10 @@
+\subsection*{Passes 5016--5019: exact-cover Levi bridge}
+The 200-cover/40-line support graph has 240 vertices and 320 edges.  Its 160 one-line cover vertices are pendant, so its 2-core is exactly the 80-vertex, 160-edge W33 point--line Levi graph.  Therefore its cycle rank is $81$ and its cycle space is the Levi cycle space.
+
+A second canonical graph uses the 40 point-covers, 40 W33 lines, and 160 incident-pair covers as edge barycentres.  It is exactly the edge subdivision of the Levi graph, again with $(V,E,\beta_1)=(240,320,81)$; the 1620 Levi 8-cycles become 1620 16-cycles.
+
+For the cover--line incidence matrix $H$, $H^TH=8I+A_{\rm line}$.  Hence the support graph has characteristic polynomial $x^{160}(x^2-20)(x^2-10)^{24}(x^2-4)^{15}$.
+
+\textbf{Correction.}  Pass74 used the stale Levi spectrum $\pm4,\pm2,0$ in its tree count.  With the later certified spectrum $\pm4,\pm\sqrt6,0$, Matrix--Tree gives $\tau=2^{83}5^{23}$.
+
+\textbf{Boundary.} These are finite graph consequences of Pass5014--5015; the repeated dimension $81$ is not a new physical derivation.
