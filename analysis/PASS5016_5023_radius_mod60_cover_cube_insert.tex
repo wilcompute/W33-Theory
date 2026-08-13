@@ -1,0 +1,57 @@
+% Passes 5016--5023: radius closure topology, cross-characteristic 60s, cover coherent configuration, V24 frames and cube/Hodge 81.
+\subsection*{Projective-plane closure, opposite $60$-extensions, and the cover-cube realization of $H_1^{81}$ (Passes 5016--5023)}
+The post-octahedral character-closure deficit admits a sharper exact factorization.  Among the 1080 sigma-even $A_3$ triangle checks, all 1080 $K_4$ subgraphs of $H_{36}$ have four even triangular faces.  Their tetrahedral boundary relations form one $\operatorname{PGSp}(4,3)$ orbit and have binary rank 755.  Since the triangle-check span has rank 324, its full relation space has dimension $1080-324=756$.  The remaining one-dimensional class has an explicit closed 18-triangle representative on 10 vertices and 27 edges, with every edge occurring twice, every vertex link a cycle, and Euler characteristic one.  It is therefore a triangulated $\mathbb{RP}^2$ class mod two and is not a tetrahedral boundary.  Together with the 270 independent octahedral equations, the complete low-shell closure factors as
+\[
+1566=755+1+270+540,
+\]
+so the previous 1296 post-local deficit is precisely $756+540$.  This reorganizes the exact distance-173 decision problem but does not change the rigorous bound
+\[
+134\leq\rho(K)\leq173.
+\]
+
+The real and binary sixty-dimensional octahedron sectors are now related explicitly across characteristic two.  Let
+\[
+L_{60}=\ker(X-2I)\cap\ker(B_{\rm end}^{T})\subset\mathbb Q^{270}.
+\]
+A primitive integral basis of this real sector reduces with rank 60 mod two, even though the full defining equation kernel jumps to dimension 174 in characteristic two.  Comparing the resulting full-PGSp module with the binary $K_{60}$ gives one-dimensional Hom spaces in both directions.  The unique maps have ranks 14 and 46, respectively, their two compositions vanish, and both endomorphism rings are scalar.  The rank-14 image is exactly the Pass5010 $S_{14}$.  Hence the two modules are not isomorphic; instead they are opposite nonsplit extensions,
+\[
+0\to S_{14}\to K_{60}\to Q_{46}\to0,
+\qquad
+0\to Q_{46}\to L_{60}\to S_{14}\to0.
+\]
+
+The 200 nine-tritangent exact covers form a two-fiber Schurian coherent configuration rather than one transitive association scheme.  Its fibers are the 40 W33 point-covers and 160 incident point-line flag-covers, and its ordered orbital rank is
+\[
+3+4+4+8=19.
+\]
+If $U$ is the $200\times45$ cover/tritangent incidence matrix and $A_T$ is the tritangent intersection graph $\operatorname{srg}(45,12,3,3)$, then
+\[
+U^TU=30I-10A_T+10J,
+\]
+so $\operatorname{rank}U=25$ and the nonzero squared singular spectrum is $360^{(1)}+60^{(24)}$.  Thus the cover rows carry exactly $1\oplus V_{24}$.
+
+The corrected 120 signed $K_{3,3}$ minimum circuits give a second canonical realization of the same tritangent sector.  Their signed $120\times45$ matrix $S$ has rank 24 over $\mathbb Q$, $\mathbb F_2$, and $\mathbb F_3$, has Smith invariants $1^{24}$, and obeys
+\[
+S^TS=15I-5A_T+J=30P_{24}.
+\]
+Its binary and ternary row codes are both $[45,24,6]$, with 120 binary minimum words and 240 ternary minimum words, respectively.  Centering the cover rows by $U_c=U-\frac15J$ gives the exact frame identity
+\[
+U_c^TU_c=60P_{24}=2S^TS.
+\]
+Thus exact covers and minimum Steiner circuits are two tight frames for the same $V_{24}$.
+
+Finally, the three Steiner circuits over each W33 line produce an intrinsic eight-cover cube $Q_3$.  The forty line-cubes are edge-disjoint and glue into a connected bipartite graph on 40 point-covers and 160 flag-covers with 480 edges.  The edge
+\[
+(p,q)\;--\;r\qquad(r\in q,\ r\neq p)
+\]
+is canonically the directed W33 edge $p\to r$.  Filling the six square faces of each cube gives a finite cell complex
+\[
+C_2^{240}\longrightarrow C_1^{480}\longrightarrow C_0^{200}
+\]
+with boundary ranks $200$ and $199$, hence
+\[
+(H_0,H_1,H_2)=(1,81,40).
+\]
+Topologically it is a wedge of 81 circles and 40 two-spheres.  The 240 square faces are canonically indexed by the 240 undirected W33 edges.
+
+This $81$ is now connected to the prior Hodge carrier by an explicit chain map.  Map a point-cover $r$ to point $r$, a flag-cover $(p,q)$ to point $p$, and the cube edge $(p,q)--r$ to the W33 edge $\{p,r\}$.  Every cube square maps to a four-cycle in one W33 $K_4$ line and hence to the W33 triangle-boundary span.  The induced map on $H_1$ has rank 81 over both $\mathbb F_2$ and $\mathbb F_3$.  Therefore the cover-cube $H_1$ is canonically isomorphic to the previously audited W33 line-triangle homology sector, rather than merely sharing its dimension.
