@@ -1,0 +1,19 @@
+\ifdefined\WPassFiveZeroFiveEightLoaded\else
+\gdef\WPassFiveZeroFiveEightLoaded{1}
+\subsection*{Passes 5058--5065: minimum-shell rigidity, Jacobian bicycle, and orientation channels}
+The $q=3$ apartment code $[1620,81,81]_2$ now has a complete minimum-shell classification.  After excluding the $160$ chamber-star words, the exact weight-$81$ theta-check feasibility problem is inconsistent.  Hence those chamber stars are all minimum words.  Their pairwise intersections are $27,9,3,1$ at gallery distances $1,2,3,4$, so the code reconstructs the $160$-chamber graph, its $80$ maximal $K_4$ panels, and hence a $40+40$ bipartite $4$-regular girth-$8$ panel graph isomorphic to the original W33 Levi graph.
+
+The first two-adic lift layer of the subdivided-Levi Jacobian is the bicycle module
+\[
+\mathcal B_{29}=\operatorname{im}B^{\mathsf T}\cap\ker B.
+\]
+Its point half has profile $1\mid14$, while its line half has profile $1\mid8\mid6$.  Thus $\mathcal B_{29}$ has a natural codimension-six $23$-space with factors $14,1,8$.  This does not identify it with the older apartment radical $R_{29}$: the exact equivariant Hom-space has dimension one and its unique nonzero map $R_{29}\to\mathcal B_{29}$ has rank $15$, with a $14$-dimensional kernel.  The equality $29=29$ is therefore replaced by an explicit partial bridge and obstruction.
+
+Apartment orientation also sharpens the multiplicity-five Steinberg statement.  If $H$ is the order-$16$ setwise stabilizer of an apartment, an oriented apartment cycle affords a nontrivial sign character $\varepsilon$ of $H$: eight elements preserve orientation and eight reverse it.  Both $\mathrm{St}^{H}$ and $\mathrm{St}^{H,\varepsilon}$ have dimension five.  An integral basis of the twisted space has supports $8,16,8,40,40$; the standard signed apartment is one distinguished support-eight channel, not a unique Steinberg copy in the unsigned apartment carrier.
+
+The point-local $V_{24}$ compiler also has a quantified arithmetic tradeoff.  Among $2672$ rank-preserving one-row substitutions of the frozen $24$-apartment basis, replacing row $7$ by row $53$ lowers the exact inverse denominator from $9360$ to $3120$, while increasing the numerical condition number from about $186.704$ to $302.504$.  The full $162$-row point-star lattice has largest nonzero Smith invariant $780$.  Unrestricted Smith combinations are not promoted as physical channels because their coefficient growth is uncontrolled.
+
+Two outside-box incidence tests remain sharply finite.  At $q=4$ the $13600$ apartment vectors contain $54400$ theta projective lines, twelve through each vector, but no complete contained binary projective plane.  The apartment/theta Tanner graphs have no four-cycles; their girths for $q=2,3,4$ are $8,6,6$, with respectively $0,4320,108800$ six-cycles.
+
+Finally, the minimum-shell reconstruction is rigid enough to determine the coordinate-permutation symmetry.  Each of the $1620$ apartment coordinates has a unique signature of eight minimum chamber-star words.  Hence a code coordinate automorphism acts faithfully on the reconstructed building, while every building automorphism preserves the code.  Using $\operatorname{Aut}W(3,3)=\mathrm{PGSp}(4,3)$ at $q=3$, the apartment code has coordinate-permutation automorphism group exactly $\mathrm{PGSp}(4,3)$ of order $51840$.  This is a finite code-automorphism statement, not an identification of arbitrary linear automorphisms of the message space.
+\fi
