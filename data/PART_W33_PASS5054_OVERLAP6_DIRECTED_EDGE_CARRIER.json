@@ -1,0 +1,11 @@
+{
+  "pass": 5054,
+  "status": "PASS",
+  "extraction_rule": "cross-fiber Gram entry equals 6",
+  "vertices": 200,
+  "edges": 480,
+  "degree_profile": {"point_covers": 12, "flag_covers": 3},
+  "canonical_edge": "A point-cover indexed by p is adjacent to a flag-cover indexed by (r,q) exactly when p lies on q and p differs from r. This is the directed W33 edge from r to p on q.",
+  "spectrum": {"6": 1, "4": 24, "2": 15, "0": 120, "-2": 15, "-4": 24, "-6": 1},
+  "theorem": "The Pass5020 glued-cube directed-edge carrier is recoverable directly as the overlap-six cross-fiber graph of the 200-cover Gram."
+}
