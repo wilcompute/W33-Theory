@@ -1,0 +1,1 @@
+{"pass":5059,"status":"PASS","q2":{"variables":90,"checks":120,"degrees":[4,3],"girth":8,"six_cycles":0},"q3":{"variables":1620,"checks":4320,"degrees":[8,3],"girth":6,"six_cycles":4320},"q4":{"variables":13600,"checks":54400,"degrees":[12,3],"girth":6,"six_cycles":108800},"no_four_cycles":true,"tested_extra_six_cycle_pattern":"T(q)*(q-2) for q=2,3,4 only"}
