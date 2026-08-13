@@ -1,0 +1,22 @@
+{
+  "pass": 5056,
+  "status": "PASS",
+  "field": "GF(4)=F2[a]/(a^2+a+1)",
+  "q": 4,
+  "geometry": {"points":85,"lines":85,"chambers_flags":425,"point_degree":20,"levi_cycle_rank":256,"opposite_point_pairs":2720,"opposite_line_pairs":2720},
+  "apartments": 13600,
+  "apartment_cycle_weight": 8,
+  "apartment_cycle_rank_f2": 256,
+  "theta_checks": 54400,
+  "theta_check_weight": 3,
+  "theta_check_rank_f2": 13344,
+  "dual_dimension": 13344,
+  "theta_checks_per_apartment": 12,
+  "theta_checks_span_full_dual": true,
+  "code_without_distance": [13600,256],
+  "distance_milp": {"objective":256,"mip_gap":0.0,"mip_node_count":1,"status":0,"message":"Optimization terminated successfully. (HiGHS Status 7: Optimal)"},
+  "distance_milp_normalization": "fixed apartment x_0=1; valid by strong/apartment transitivity of the type-C2 building",
+  "code": [13600,256,256],
+  "formula_checks": {"apartments":"q^4(q+1)^2(q^2+1)/8 = 13600","theta_checks":"q^3(q+1)(q^2+1) C(q+1,3) = 54400","checks_per_apartment":"4(q-1) = 12","dimension":"q^4 = 256"},
+  "boundary": "q=4 exact anchor only; arbitrary-q full-dual generation and distance q^4 remain open."
+}
