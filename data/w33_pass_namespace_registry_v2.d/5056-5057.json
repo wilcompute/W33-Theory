@@ -1,0 +1,11 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [5056, 5057],
+  "slug": "q4_theta_apartment_code_local_cutspace",
+  "title": "q=4 apartment-code anchor and local theta cut-space theorem",
+  "status": "RESERVED",
+  "owner": "openai-gpt56-sol",
+  "reserved_at": "2026-08-13",
+  "purpose": "Extend the Pass5051 q-family theta-code frontier to the first non-prime anchor q=4 and isolate the all-q local K_{q+1} cut-space mechanism behind theta relations.",
+  "boundary": "The q=4 code is to be certified exactly. The local cut-space theorem is all-q, but full-dual generation and distance q^4 for arbitrary q remain unpromoted unless separately proved."
+}
