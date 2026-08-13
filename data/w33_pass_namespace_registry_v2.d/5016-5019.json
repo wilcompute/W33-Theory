@@ -1,0 +1,11 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [5016, 5019],
+  "slug": "tritangent_cover_levi_building_spectral_ihara",
+  "title": "Tritangent-cover Levi retraction, building subdivision, spectral lift, and Ihara core",
+  "status": "RESERVED",
+  "owner": "openai-gpt56-sol",
+  "reserved_at": "2026-08-13",
+  "purpose": "Continue directly from the frozen Pass5014/5015 exact-cover carrier. Pass5016 identifies the literal line-cover support graph and its Levi deformation retract; Pass5017 identifies the canonical point-line-cover graph as the edge subdivision of the W33 Levi building; Pass5018 derives the exact spectra and matrix identities; Pass5019 derives the Ihara/core and spanning-tree consequences and records the stale Pass74 tree-complexity correction.",
+  "boundary": "Built only from frozen Pass5014/5015 bijections plus the already-certified BT545/Pass4191 Levi graph. These are exact finite graph consequences. The support graph and the edge-subdivision graph are distinct constructions. No new physical, continuum, or experimental claim is inferred from the shared 81-dimensional cycle rank."
+}
