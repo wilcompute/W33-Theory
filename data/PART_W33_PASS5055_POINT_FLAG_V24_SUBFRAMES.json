@@ -1,0 +1,23 @@
+{
+  "pass": 5055,
+  "status": "PASS",
+  "integer_centering": "W = 5U - J",
+  "point_frame": {
+    "vectors": 40,
+    "rank": 24,
+    "row_norm_squared": 180,
+    "frame_operator": "Wp^T Wp = 10(15I - 5A_trit + J) = 300 P24"
+  },
+  "flag_frame": {
+    "vectors": 160,
+    "rank": 24,
+    "row_norm_squared": 180,
+    "frame_operator": "Wf^T Wf = 40(15I - 5A_trit + J) = 1200 P24"
+  },
+  "cross_transform": {
+    "rank": 24,
+    "nonzero_squared_singular_value": 360000,
+    "multiplicity": 24
+  },
+  "theorem": "The 40 point-covers and 160 flag-covers are separately equal-norm tight frames for the same canonical tritangent V24; their frame bounds differ by exactly 4, matching the fiber-size ratio."
+}
