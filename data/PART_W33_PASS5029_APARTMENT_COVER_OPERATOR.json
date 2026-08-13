@@ -1,0 +1,1 @@
+{"pass":5029,"status":"PASS","shape":[1620,200],"rank":160,"gram_spectrum":{"0":40,"40":81,"72":15,"144":15,"243-9sqrt409":24,"243+9sqrt409":24,"1296":1},"interpretation":"The Steinberg/Hodge 81 is the eigenvalue-40 block of the exact apartment-to-cover Gram operator."}
