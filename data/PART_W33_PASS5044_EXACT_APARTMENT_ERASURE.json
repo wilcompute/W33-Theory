@@ -1,0 +1,1 @@
+{"pass":5044,"status":"PASS","code":[1620,81,81],"dual_dimension":1539,"dual_minimum":3,"weight3_checks":4320,"weight3_check_rank":1539,"check_row_weight":3,"check_column_weight":8,"optimization":{"objective":81,"lower_bound":81,"gap":0,"nodes":1},"frame_erasure_distance":81,"safe_through":80,"failure_removed":81,"failure_remaining_rank":80}
