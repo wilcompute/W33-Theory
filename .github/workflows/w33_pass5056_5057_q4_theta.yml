@@ -1,0 +1,28 @@
+name: Pass5056-5057 q4 theta packet
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5056_q4_theta_apartment_code.py'
+      - 'analysis/w33_pass5057_theta_local_cutspace_decoder.py'
+      - 'data/PART_W33_PASS5056_Q4_THETA_APARTMENT_CODE.json'
+      - 'data/PART_W33_PASS5057_LOCAL_THETA_CUTSPACE.json'
+      - 'tests/test_w33_pass5056_5057_packet.py'
+      - 'analysis/PASS5056_5057_q4_theta_cutspace_insert.tex'
+      - '.github/workflows/w33_pass5056_5057_q4_theta.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    env: {PYTHONPATH: .}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --disable-pip-version-check numpy scipy pytest
+      - run: python -m py_compile analysis/w33_pass5056_q4_theta_apartment_code.py analysis/w33_pass5057_theta_local_cutspace_decoder.py analysis/w33_pass5056_5057_regression.py
+      - run: python analysis/w33_pass5056_5057_regression.py
+      - run: python -m pytest -q tests/test_w33_pass5056_5057_packet.py
