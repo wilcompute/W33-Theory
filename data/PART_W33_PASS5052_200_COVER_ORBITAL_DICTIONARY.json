@@ -1,0 +1,34 @@
+{
+  "pass": 5052,
+  "status": "PASS",
+  "fibers": {"point_covers": 40, "flag_covers": 160},
+  "ordered_orbitals": 19,
+  "PP": [
+    {"relation": "identity", "subdegree": 1, "cover_overlap": 9},
+    {"relation": "distinct collinear points", "subdegree": 12, "cover_overlap": 3},
+    {"relation": "noncollinear points", "subdegree": 27, "cover_overlap": 1}
+  ],
+  "PF_from_point_p_to_flag_rq": [
+    {"relation": "p=r", "subdegree": 4, "cover_overlap": 0},
+    {"relation": "p on q and p!=r", "subdegree": 12, "cover_overlap": 6},
+    {"relation": "p collinear r but p not on q", "subdegree": 36, "cover_overlap": 0},
+    {"relation": "p noncollinear r", "subdegree": 108, "cover_overlap": 2}
+  ],
+  "FP_from_flag_rq_to_point_p": [
+    {"relation": "p=r", "subdegree": 1, "cover_overlap": 0},
+    {"relation": "p on q and p!=r", "subdegree": 3, "cover_overlap": 6},
+    {"relation": "p collinear r but p not on q", "subdegree": 9, "cover_overlap": 0},
+    {"relation": "p noncollinear r", "subdegree": 27, "cover_overlap": 2}
+  ],
+  "FF_from_flag_pq_to_flag_rs": [
+    {"relation": "same flag", "subdegree": 1, "cover_overlap": 9, "weyl_length": 0},
+    {"relation": "same line q=s, p!=r", "subdegree": 3, "cover_overlap": 3, "weyl_length": 1},
+    {"relation": "same point p=r, q!=s", "subdegree": 3, "cover_overlap": 0, "weyl_length": 1},
+    {"relation": "target point r lies on source line q, s!=q", "subdegree": 9, "cover_overlap": 0, "weyl_length": 2},
+    {"relation": "source point p lies on target line s, q!=s", "subdegree": 9, "cover_overlap": 0, "weyl_length": 2},
+    {"relation": "source/target points collinear on a third line; q,s disjoint", "subdegree": 27, "cover_overlap": 3, "weyl_length": 3},
+    {"relation": "source/target lines meet in a third point; p,r noncollinear", "subdegree": 27, "cover_overlap": 4, "weyl_length": 3},
+    {"relation": "opposite flags: p,r noncollinear and q,s disjoint", "subdegree": 81, "cover_overlap": 1, "weyl_length": 4}
+  ],
+  "theorem": "The 19 Pass5018 orbitals are exactly the natural point/flag relative-position relations of W(3,3); cover-tritangent intersection is constant on every orbital."
+}
