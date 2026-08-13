@@ -1,0 +1,1 @@
+{"pass":5028,"status":"PASS","flag_module_dimension":160,"steinberg_dimension":81,"projector":"P(f,g)=(-1)^ell*3^(4-ell)/160","gallery_length_counts":{"0":1,"1":6,"2":18,"3":54,"4":81},"numerators":{"0":81,"1":-27,"2":9,"3":-3,"4":1},"checks":{"R_squared_equals_160R":true,"panel_sums_zero":true,"trace_R":12960}}
