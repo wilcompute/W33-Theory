@@ -1,0 +1,1 @@
+{"pass":5055,"status":"PASS","stabilizer_order":16,"fixed_dimension":5,"orientation_split":[8,8],"epsilon_dimension":5,"epsilon_supports":[8,16,8,40,40],"epsilon_gram":[[8,0,0,0,0],[0,16,0,-16,-16],[0,0,8,0,0],[0,-16,0,64,48],[0,-16,0,48,64]],"epsilon_gram_det":"2^18*5","base_coordinate":[1,0,0,0,0]}
