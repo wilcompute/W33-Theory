@@ -1,0 +1,1 @@
+{"pass":5052,"status":"PASS","q":4,"points":85,"lines":85,"chambers":425,"apartments":13600,"code":[13600,256,256],"dual_dimension":13344,"theta_checks":54400,"theta_rank":13344,"checks_per_apartment":12,"optimization":{"objective":256,"lower_bound":256,"gap":0,"nodes":1},"boundary":"q4 minimum-shell orbit classification remains open"}
