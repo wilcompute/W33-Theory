@@ -1,0 +1,11 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [5008, 5015],
+  "slug": "global_character_sat_oct84_k60_mixed9_v24_bonkers",
+  "title": "Global-character radius SAT, octahedron 84-sector, K60 modular kernel, mixed reader cocircuits, V24 identification, and three outside-box probes",
+  "status": "RESERVED",
+  "owner": "openai-gpt56-sol",
+  "reserved_at": "2026-08-13",
+  "purpose": "Execute the five queued post-Pass5007 attacks plus three outside-box probes: 5008 encode full cross-octahedron/global dual-character closure for the distance-173 frontier; 5009 resolve the real 84-dimensional octahedron sector under PSp/PGSp; 5010 resolve the binary K60 kernel in 0->K60->O90->C_Q43^perp(30)->0; 5011 classify the first mixed line+tritangent reader cocircuits beginning at support9; 5012 explicitly test the Pass5007 24-dimensional failure frame against the canonical shared V24; 5013-5015 outside-box probes chosen from resulting structures.",
+  "boundary": "Pass4959 remains independently owned and untouched. Covering-radius improvement is claimed only from an exact global character infeasibility proof. The corrected global reader erasure distance is6. Finite outer sign is not physical CP/CPT. Binary/real carriers are identified only by explicit equivariant maps. Remote CI/public materialization are reported only if observed."
+}
