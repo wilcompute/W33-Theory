@@ -1,0 +1,28 @@
+\subsection*{Passes 5036--5043: apartment transport, Jacobian, and the $q^4$ building law}
+The exact-cover apartment transform now extends through the labeled cubic-surface tritangent carrier.  If $U$ is the canonical $200\times45$ cover/tritangent matrix, $Y$ the $1620\times200$ apartment/cover matrix, and $Z=YU$, then
+\[
+\operatorname{rank}Z=25,\qquad Z^{\mathsf T}Z=3132I-1044A_{\rm trit}+9540J,
+\]
+with squared singular spectrum $419904^1+6264^{24}+0^{20}$.  Thus the apartment transport again selects $\mathbf1\oplus V_{24}$ and annihilates $V_{20}$.
+
+On the 160 chamber/flag covers, the eight flag--flag orbitals are the eight type-$C_2$ Bruhat cells, with lengths $0,1,1,2,2,3,3,4$ and subdegrees $1,3,3,9,9,27,27,81$.  The Steinberg kernel has coefficients
+\[
+81,-27,-27,9,9,-3,-3,1,
+\qquad R_w=(-1)^{\ell(w)}3^{4-\ell(w)},
+\]
+so $P_{\rm St}=R/160$ is the same protected rank-$81$ projector.
+
+The all-edge subdivision also carries this sector arithmetically.  Modulo two its reduced Laplacian kernel is canonically the Levi binary cycle space:
+\[
+K(\operatorname{SubLevi})/2K(\operatorname{SubLevi})\cong H_1(\operatorname{Levi};\mathbb F_2)\cong\mathbb F_2^{81}.
+\]
+The $1620$ signed apartment cycles generate $H_1(\operatorname{Levi};\mathbb Z)$ integrally: an explicit $81$-apartment minor in fundamental-cycle coordinates has determinant $\pm1$.  Modulo two the Levi cycle space is therefore a $[160,81,8]_2$ code whose complete minimum-weight shell is exactly the apartment orbit.
+
+The apartment frame obeys $XX^{\mathsf T}=160P_{\rm St}$.  Its absolute off-diagonal correlation census from every apartment is $4^{16},3^{32},2^{96},1^{288},0^{1187}$.  This certifies reconstruction after any at most $46$ apartment removals; removing all $81$ apartments through one chamber gives an explicit rank-$80$ failure example.
+
+Finally, the mechanism is the $q=3$ member of the symplectic rank-two family.  For $W(3,q)$ the Levi cycle rank is $q^4$, each chamber lies in $q^4$ apartments, and
+\[
+N_{\rm apt}=\frac{q^4(q+1)^2(q^2+1)}8,
+\qquad R_{fg}=(-1)^{\ell(f,g)}q^{4-\ell(f,g)}.
+\]
+The full matrix identities are reconstructed directly at $q=2$ and $q=3$.  For odd $q$, the subdivided-Levi mod-two Jacobian quotient has dimension $q^4$.  These are finite building/module statements; no continuum dynamics is inferred from them.

@@ -1,0 +1,1 @@
+{"pass":5041,"status":"PASS","fundamental_cycle_coordinates":[81,1620],"rank_Q":81,"unimodular_apartment_basis":{"size":81,"maximal_minor_determinant_abs":1},"index_of_apartment_lattice_in_cycle_lattice":1,"theorem":"A concrete set of 81 apartment cycles is a unimodular basis of H1(Levi;Z). Hence all 1620 apartments generate the entire integral cycle lattice, saturated over Z."}
