@@ -1,35 +1,10 @@
-% Passes 4992--4999: octahedral shell algebra, corrected reader boundary, C3 gauge, chain filtration and bonkers.
-\subsection*{Octahedral shell algebra, cocircuits, and the binary 30-layer (Passes 4992--4999; reader boundary corrected by Pass5002)}
-The 270 tritangent-pair octahedra refine the residual $810=270\cdot3$ structure substantially.  In each octahedron, four edge-disjoint $\sigma$-even weight-three checks, four edge-disjoint Steiner-odd faces, and three edge-disjoint residual weight-four equators each cover the same twelve $H_{36}$ edges.  Hence, for character signs $t_i$ on the four even faces and $q_j$ on the three equators,
-\[
-\prod_{i=1}^4 t_i=\prod_{j=1}^3q_j=\chi(\hbox{all twelve octahedral edges}).
-\]
-The 1080 even triangle checks are partitioned exactly once by the octahedra, while the 120 Steiner-odd triangles occur nine times each.  The same local Boolean algebra produces distinct restricted subshells of sizes $1620,1080,810,270$ at weights $6,9,8,12$, respectively.  For a hypothetical distance-173 coset, the third-moment constraint forces $T_3\leq-704$, giving the further restricted bounds $U_{12}\geq-106$ and $U_4\geq-646$.  These are exact non-radial constraints, but the universal covering-radius interval remains
-\[
-134\leq\rho(K)\leq173.
-\]
+% Passes 4992--4999, hardened through Pass5011.
+\subsection*{Octahedral shell algebra and binary 30-layer (Passes 4992--4999; corrections through Pass5011)}
+The $270$ octahedra organize the $1080$ sigma-even weight-three checks and $810$ residual weight-four equators.  Their exact local product identities strengthen the shell constraints, while the rigorous covering-radius interval remains $134\leq\rho(K)\leq173$.
 
-\paragraph{Reader correction.}
-The original Pass4993 claim that the complementary 40-line plus 45-tritangent reader had global erasure distance eight is withdrawn.  Pass5002 found the missing line-sector relations.  If $Z$ is W33 point--line incidence, then for each point $p$ the four line sensors through $p$ satisfy one centered four-row relation.  For collinear points $p,q$ their pencils share one line, so subtracting the two pencil relations gives a raw six-line dependency supported on the symmetric difference of the two pencils.  There are exactly 240 such supports, one for each edge of the W33 point graph, and exhaustive exact rank checks show no raw line or tritangent dependency of support at most five.  Thus the corrected global result is
-\[
-d_{\rm erasure}(R)=6,
-\]
-so every five-sensor erasure is safe and some six-line erasures fail.  The Pass4998 family of 135 support-eight $2K_4$ tritangent cocircuits remains valid as the \emph{pure tritangent} minimum family, not the global minimum.  Pass5002 also proves there are no mixed line/tritangent support-eight cocircuits.
+\paragraph{Reader corrections.}
+The global complementary line--tritangent reader has erasure distance six.  The line block has $240$ support-six point-pencil-gradient relations.  Pass5011 further supersedes the former pure-tritangent minimum claim: the tritangent block has exactly $120$ support-six signed $K_{3,3}$ relations.  The $135$ support-eight $2K_4$ configurations from Pass4998 remain an exact secondary family, not the minimum.  The first mixed relations occur at support $13$, not at support eight or nine.
 
-The local affine gauge also refines.  After the Pass4991 choice of one of the four base-line points, the PSp line-and-point stabilizer has order 162 and acts on the corresponding three completions as $C_3$, with kernel 54.  Adjoining the outer similitude gives order 324 and full $S_3$, with the same kernel.  Thus the residual affine ambiguity is a canonical $C_3$ torsor and the finite outer quotient is precisely the reflection parity $S_3/C_3\cong C_2$.  No preferred element of the torsor, nor a physical CP interpretation, follows from this finite statement.
+Over $\mathbb F_2$ the residual-square, triangle, and full cycle ranks are $294<324<325$.  Shared-line projection yields the canonical nonsplit sequence $0\to V_{20}\to Q_{30}\to Q_{10}\to0$.
 
-Over $\mathbb F_2$, the residual-square boundaries, sigma-even triangle boundaries, and the full $H_{36}$ cycle space have dimensions
-\[
-294<324<325.
-\]
-The square-only complex has $(\dim H_0,\dim H_1,\dim H_2)=(1,31,516)$; the triangle-filled complex has $(1,1,756)$.  Thus the triangles kill exactly 30 of the 31 square-complex one-cycle classes, leaving the single switching-parity class.
-
-This 30-layer has an explicit geometric projection.  Send each $H_{36}$ edge, viewed as a pair of one-overlap W33 spreads, to their unique common W33 line.  The 1080 even triangle checks map bijectively to the 1080 zero-center independent triads of $Q(4,3)$.  The 810 residual squares map three-to-one onto the 270 four-line intersections of spread pairs with overlap four.  Their image has binary dimension 30 and is exactly the orthogonal complement of the $[40,10,12]$ binary adjacency code of $Q(4,3)$.  Consequently the 30-dimensional triangle/square quotient admits a canonical surjection onto a ten-dimensional target with a 20-dimensional kernel.  Pass5001 identifies that kernel equivariantly with the binary tritangent $V_{20}$, and Pass5005 proves the resulting $0\to20\to30\to10\to0$ sequence is nonsplit.
-
-Finally, the 270 octahedra themselves define a $270\times360$ edge-incidence frame of row weight 12 and column weight 9.  Its real rank is 120, binary rank 90, and squared singular spectrum is
-\[
-108^{(1)},\ 54^{(20)},\ 36^{(15)},\ 18^{(84)},\ 0^{(150)}.
-\]
-Two octahedra share either zero or three $H_{36}$ edges.  Pass5003 resolves the real active space as $1+20+15+84$ using explicit 36-spread and 45-tritangent incidence maps, while Pass5006 resolves the binary rank-90 carrier by the exact shared-line sequence $0\to60\to90\to30\to0$.  The real coexact $30+90$ carrier is therefore not identified with the octahedral rank-120 space.
-
-A targeted stale-claim firewall fails closed on the already-retracted W33/Q43/Witting identifications and simultaneously asserts the corrected Ihara, critical-group, point/line-obstruction, and reader-distance replacements remain live.  Historical and erratum files are explicitly allowlisted rather than silently rewritten.
+The $270\times360$ octahedron/edge frame has real rank $120$ and binary rank $90$.  Pass5009 refines its real active decomposition to $1+20+15+60+24$.  Pass5010 separately resolves the modular $K_{60}$ by a canonical $14$-dimensional submodule and $46$-dimensional quotient; no real/binary $60$-space identification is inferred from dimension alone.
