@@ -1,0 +1,15 @@
+{
+  "pass": 5053,
+  "status": "PASS",
+  "Gram_shape": [200, 200],
+  "entry_values": [0, 1, 2, 3, 4, 6, 9],
+  "row_histogram_point": {"0": 40, "1": 27, "2": 108, "3": 12, "6": 12, "9": 1},
+  "row_histogram_flag": {"0": 31, "1": 81, "2": 27, "3": 30, "4": 27, "6": 3, "9": 1},
+  "reconstruction": [
+    "row histogram separates 40 point-covers from 160 flag-covers",
+    "overlap 3 on the 40-fiber is exactly W33 collinearity",
+    "maximal K4s recover the 40 W33 lines",
+    "for flag F_(p,q), its three overlap-6 point rows are q\\{p}; their unique K4 completion recovers q and p"
+  ],
+  "theorem": "The integer 200-cover Gram matrix reconstructs the full W33 point-line incidence geometry and the canonical labeling of all 160 flag-covers, up to automorphism."
+}
