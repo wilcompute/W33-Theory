@@ -1,0 +1,1 @@
+{"pass":5011,"status":"PASS","global_reader_distance":6,"pure_tritangent_minimum":{"support":6,"count":120,"geometry":"signed K3,3"},"nine_tritangent_exact_covers":200,"mixed_minimum":{"support":13,"composition":"4+9","count":8000},"supports_9_to_12":0,"correction":"Pass4998 support8 family is secondary, not minimum"}
