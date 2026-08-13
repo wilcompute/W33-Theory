@@ -1,0 +1,23 @@
+% Passes 5056--5057 exact q=4 apartment-code continuation.
+\subsection*{Passes 5056--5057: $q=4$ theta code and the local cut-space law}
+A direct construction of $W(3,4)$ gives $85$ points, $85$ lines, $425$ flags and $13{,}600$ apartments.  The binary apartment cycles have rank $256=4^4$.  The point- and line-side theta construction gives $54{,}400$ weight-three relations of rank $13{,}344=13{,}600-256$, so at $q=4$ the theta relations generate the full dual.  The exact minimum support is $256$, hence
+\[
+\boxed{C_4=[13600,256,256]_2}.
+\]
+Together with Pass~5051, the family is therefore exact at $q=2,3,4$.
+
+For arbitrary $q$, fix an opposite same-type pair.  Its $q+1$ geodesics form the vertices of $K_{q+1}$; apartments are edges and theta relations are triangles.  If $x_{ij}$ satisfies every triangle relation, then
+\[
+x_{ij}=x_{0i}+x_{0j}=a_i+a_j.
+\]
+Thus the local theta kernel is exactly the cut space of $K_{q+1}$, has dimension $q$, and every nonzero local word has weight $s(q+1-s)\ge q$.
+
+Every apartment belongs to four opposite-pair charts, so
+\[
+4\,\mathrm{wt}(x)=\sum_O\mathrm{wt}(x|_O)\ge qA(x).
+\]
+Consequently the still-open family distance theorem reduces to one statement:
+\[
+\boxed{A(x)\ge4q^3\Longrightarrow d=q^4}.
+\]
+At $q=4$ the chamber-star witness has $A=128_{\rm point}+128_{\rm line}=256=4q^3$ and saturates the bound.  Arbitrary-$q$ full-dual generation and the active-chart inequality remain open; no stronger claim is promoted here.
