@@ -1,0 +1,25 @@
+\subsection*{Passes 5044--5051: exact apartment erasure, local $V_{24}$ compiler, and theta relations}
+The signed apartment frame now has an exact erasure distance.  Modulo two its apartment-evaluation code has parameters
+\[
+[1620,81,81]_2.
+\]
+Its dual has dimension $1539$ and minimum weight three.  There are exactly $4320$ weight-three checks, each apartment occurring in eight of them, and those checks span the complete dual.  The corresponding exact even-set optimization has optimum $81$; hence every set of at most $80$ apartment erasures preserves the protected rank $81$, while deleting the $81$ apartments through one chamber lowers the rank to $80$.
+
+The all-edge subdivision Jacobian refines this same sector $2$-adically.  Its $2$-primary elementary divisors are
+\[
+2^{52},\qquad 8^6,\qquad 16^{22},\qquad 64,
+\]
+so the successive height dimensions are $81,29,29,23,1,1$.  The first layer is $H_1(\mathrm{Levi};\mathbb F_2)$; the final one-dimensional layer is necessarily trivial in characteristic two.
+
+The labeled cubic-surface transport also admits a sharply local implementation.  If $Z=YU$ and the DC component is removed by $Z_{24}=5Z-12J$, then $\operatorname{rank}Z_{24}=24$.  The $162$ apartments through any fixed W33 point already have rank $24$, as do the corresponding fixed-line stars.  In particular, an explicit basis of only $24$ apartments through one W33 point carries the full nontrivial $V_{24}$ transport.
+
+The $q$-family formulas now follow symbolically from the type-$C_2$ building and its Hecke sign idempotent.  The Weyl lengths occur with multiplicities $1,2,2,2,1$, Bruhat cells have sizes $q^{\ell}$, and
+\[
+R_{fg}=(-1)^{\ell(f,g)}q^{4-\ell(f,g)},\qquad R^2=|\mathrm{Ch}|R,
+\]
+with $|\mathrm{Ch}|=(q+1)^2(q^2+1)$.  Consequently the Levi cycle rank and the number of apartments through a chamber are both $q^4$, while
+\[
+N_{\rm apt}=\frac{q^4(q+1)^2(q^2+1)}8.
+\]
+
+Finally, the unsigned $1620$-apartment permutation action has orbital rank $131$ and contains five copies of the degree-$81$ Steinberg constituent.  The signed apartment-cycle transform therefore selects one canonical Steinberg copy from a five-copy ambient permutation carrier.  The $4320$ minimum dual checks have a geometric description: an opposite same-type Levi pair has four internally disjoint length-four geodesics, and choosing any three gives a theta graph whose three pairwise path-unions are apartments summing to zero over $\mathbb F_2$.  The resulting apartment orbit contains $4320$ projective binary lines but no complete seven-point projective plane.  For general $q$ the theta count is $q^3(q+1)(q^2+1)\binom{q+1}{3}$ and each apartment lies in $4(q-1)$ such triples; full-dual generation and distance $q^4$ beyond the verified $q=2,3$ anchors remain a stated conjectural frontier.

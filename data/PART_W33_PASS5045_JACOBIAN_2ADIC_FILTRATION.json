@@ -1,0 +1,1 @@
+{"pass":5045,"status":"PASS","two_primary":{"2":52,"8":6,"16":22,"64":1},"smith_exponent_multiplicities":{"1":52,"2":0,"3":6,"4":22,"5":0,"6":1},"height_dimensions":[81,29,29,23,1,1],"successive_kill_counts":[52,0,6,22,0,1],"first_layer":"H1(Levi;F2), dimension 81","deepest_layer_dimension":1,"deepest_layer_action":"trivial over F2"}
