@@ -1,0 +1,11 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [5016, 5023],
+  "slug": "radius_rp2_real60_dual_extension_cover200_v24_cube81_bonkers",
+  "title": "Symmetry-reduced radius closure, cross-characteristic 60 dual extensions, 200-cover coherent configuration, Steiner K33 V24 code, glued cover cubes, and three outside-box continuations",
+  "status": "RESERVED",
+  "owner": "openai-gpt56-sol",
+  "reserved_at": "2026-08-13",
+  "purpose": "Execute the five queued attacks: 5016 symmetry-reduce the 324-bit distance-173 closure; 5017 compare the real octahedron V60 integral lattice mod2 against K60; 5018 compute the coherent/orbital algebra on the 200 exact covers; 5019 compute the signed 120x45 Steiner/K3,3 code; 5020 glue the forty local eight-cover cubes. Passes5021-5023 are three outside-box probes chosen from the resulting structures.",
+  "boundary": "Pass4959 remains independently owned and untouched. Covering radius improves only with an exact valid certificate. Real and modular 60s are identified only via explicit equivariant maps. The 200-set has two PGSp orbits, so coherent-configuration language is used unless commutativity/symmetry is proved. Any 81-dimensional coincidence with prior CSS/Holonet sectors is interpreted only after an explicit chain/module map."
+}
