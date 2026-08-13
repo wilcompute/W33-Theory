@@ -10,7 +10,8 @@ def test_5038():
  x=J('PART_W33_PASS5038_SUBDIVISION_JACOBIAN_H1_MOD2.json');assert x['reduced_mod2_laplacian_nullity']==81 and x['binary_cycle_dimension']==81
 def test_5039():
  x=J('PART_W33_PASS5039_APARTMENT_FRAME_ROBUSTNESS.json');assert x['uniform_safe_removal_count']==46 and x['explicit_rank_drop_count']==81
-def test_5040():assert 'outer apartment stabilizer: order 32' in (R/'analysis/PASS5040_LOCAL_GROUP_CERTIFICATE.md').read_text()
+def test_5040():
+ s=(R/'analysis/PASS5040_LOCAL_GROUP_CERTIFICATE.md').read_text().lower();assert 'order 32' in s and 'v4:d8' in s
 def test_5041():
  x=J('PART_W33_PASS5041_INTEGRAL_APARTMENT_GENERATION.json');assert x['unimodular_apartment_basis']['maximal_minor_determinant_abs']==1 and x['index_of_apartment_lattice_in_cycle_lattice']==1
 def test_5042():
