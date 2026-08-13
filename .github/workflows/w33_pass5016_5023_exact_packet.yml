@@ -1,0 +1,62 @@
+name: Passes 5016-5023 RP2-V60-cover-cube packet
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5016_radius_rp2_closure.py'
+      - 'analysis/w33_pass5017_real60_k60_opposite_extensions.py'
+      - 'data/PART_W33_PASS501[6-9]*.json'
+      - 'data/PART_W33_PASS502[0-3]*.json'
+      - 'tests/test_w33_pass5016_5023_packet.py'
+      - 'analysis/PASS5016_5023_*'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'docs/pass5016-5023-rp2-v60-cover-cube81.html'
+      - 'tools/integrate_pass5016_5023_public.py'
+      - '.github/workflows/w33_pass5016_5023_exact_packet.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      PYTHONPATH: .
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check numpy networkx sympy pytest
+      - name: Syntax check producers
+        run: python -m py_compile analysis/w33_pass5016_radius_rp2_closure.py analysis/w33_pass5017_real60_k60_opposite_extensions.py tools/integrate_pass5016_5023_public.py
+      - name: Freeze compact certificates
+        run: |
+          mkdir -p /tmp/pass5016-frozen
+          cp data/PART_W33_PASS5016_RADIUS_RP2_SYMMETRY_CLOSURE.json /tmp/pass5016-frozen/
+          cp data/PART_W33_PASS5017_REAL60_K60_OPPOSITE_EXTENSIONS.json /tmp/pass5016-frozen/
+      - name: Replay Pass5016
+        run: python analysis/w33_pass5016_radius_rp2_closure.py
+      - name: Replay Pass5017
+        run: python analysis/w33_pass5017_real60_k60_opposite_extensions.py
+      - name: Check replay invariants
+        run: |
+          python - <<'PY'
+          import json
+          a=json.load(open('data/PART_W33_PASS5016_RADIUS_RP2_SYMMETRY_CLOSURE.json'))
+          assert (a['all_relations'],a['triangle_internal_relations'],a['missing_beyond_oct_local'])==(1566,756,1296)
+          assert a['K4_tetrahedral_boundaries']=={'count':1080,'PGSp_orbits':1,'rank':755}
+          assert a['global_mod2_class']['closed_surface']=='RP2'
+          b=json.load(open('data/PART_W33_PASS5017_REAL60_K60_OPPOSITE_EXTENSIONS.json'))
+          assert b['equation_kernel_nullities']=={'F2':174,'F3':130,'F5':60}
+          assert b['PGSp_Hom']['L60_to_K60']['rank']==14 and b['PGSp_Hom']['K60_to_L60']['rank']==46
+          assert b['S14_matches_Pass5010_V20_image']
+          print('Pass5016/5017 exact producer invariants replayed')
+          PY
+      - name: Restore compact frozen certificates
+        run: cp /tmp/pass5016-frozen/*.json data/
+      - name: Regression-lock full packet
+        run: python -m pytest -q tests/test_w33_pass5016_5023_packet.py
