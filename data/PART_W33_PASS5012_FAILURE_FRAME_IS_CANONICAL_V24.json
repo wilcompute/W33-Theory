@@ -1,0 +1,1 @@
+{"pass":5012,"status":"PASS","failure_gradient_shape":[240,40],"rank":24,"line_reader_left_nullity":24,"rowspan_equals_kernel_C":true,"tight_frame_spectrum":{"60":24,"0":16},"Gram":"D^T D=-A_Q^2+8A_Q+48I=60P24","point_line_intertwiner":"Z^T Z D^T=6D^T"}
