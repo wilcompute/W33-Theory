@@ -1,0 +1,11 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [5052, 5055],
+  "slug": "cover_orbital_dictionary_gram_reconstruction_v24_subframes",
+  "title": "Geometric resolution of the 200-cover coherent configuration",
+  "status": "RESERVED",
+  "owner": "openai-gpt56-sol",
+  "reserved_at": "2026-08-13",
+  "purpose": "Continue the interrupted Pass5018 thread by naming all 19 point/flag cover orbitals geometrically, reconstructing W33 incidence from the cover Gram alone, identifying the overlap-6 directed-edge carrier, and splitting the centered cover frame into independent point and flag V24 tight frames.",
+  "boundary": "Pass4959 remains independently owned and untouched. Cover overlap is interpreted only through exact finite incidence. No physical identification is promoted from a shared dimension or count."
+}
