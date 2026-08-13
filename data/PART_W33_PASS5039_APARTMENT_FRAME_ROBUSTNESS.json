@@ -1,0 +1,1 @@
+{"pass":5039,"status":"PASS","shape":[160,1620],"rank":81,"identity":"XXT=160P","column_norm_squared":8,"correlation_profile":{"4":16,"3":32,"2":96,"1":288,"0":1187},"uniform_safe_removal_count":46,"spectral_bound_at_46":159,"explicit_rank_drop_count":81,"remaining_rank_after_that_example":80,"basis81_condition_number":12.6491106406735}
