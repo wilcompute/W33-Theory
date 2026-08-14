@@ -1,0 +1,23 @@
+{
+  "pass": 5087,
+  "status": "THEOREM_EXACT_GLOBAL_QUADRATIC_CHANNEL",
+  "q": 3,
+  "apartments": 1620,
+  "theta_checks": 4320,
+  "theta_point_graph_degree": 16,
+  "levi_line_kernel_dimension": 15,
+  "generated_dimension": 30,
+  "annihilating_polynomial": "x^2-2x-16",
+  "discriminant": 68,
+  "generated_charpoly": "(x^2-2x-16)^15",
+  "eigenchannels": [
+    "1+sqrt(17)",
+    "1-sqrt(17)"
+  ],
+  "multiplicity_inside_generated_space": [
+    15,
+    15
+  ],
+  "bridge": "The same quadratic eigenvalues occur in the Pass5069 twisted T6 Hecke channel; this pass supplies an explicit global apartment-function carrier from the Levi line kernel.",
+  "boundary": "The theorem identifies an exact 30-dimensional invariant subspace; it does not claim these are the only occurrences of those eigenvalues in the full 1620-space."
+}

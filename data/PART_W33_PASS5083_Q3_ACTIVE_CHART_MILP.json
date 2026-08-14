@@ -1,0 +1,17 @@
+{
+  "pass": 5083,
+  "status": "OPTIMAL",
+  "q": 3,
+  "apartments": 1620,
+  "theta_checks": 4320,
+  "charts": 1080,
+  "model_variables": 7020,
+  "model_constraints": 6481,
+  "objective_active_charts": 108,
+  "target": 108,
+  "solver_status": 0,
+  "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+  "theorem_closed": true,
+  "implication": "If theorem_closed, A(y)>=108 and wt>=3A/4>=81; chamber stars attain equality.",
+  "boundary": "No all-q active-chart theorem is inferred. Non-optimal solver exits are UNKNOWN."
+}

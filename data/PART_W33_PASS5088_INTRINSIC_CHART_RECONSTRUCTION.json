@@ -1,0 +1,14 @@
+{
+  "pass": 5088,
+  "status": "THEOREM_Q3_CODE_INTRINSIC_CHART_RECOVERY",
+  "dual_minimum_checks": 4320,
+  "check_intersection_degree": 21,
+  "K4_cliques": 114480,
+  "tetrahedral_six_coordinate_K4s": 1080,
+  "recovered_charts": 1080,
+  "actual_opposite_pair_charts": 1080,
+  "exact_match": true,
+  "intrinsic_rule": "Take K4s of weight-3 dual-word intersection graph; retain four triples whose union has six coordinates each appearing exactly twice.",
+  "compiler_consequence": "The 1080 local K4 cut charts, and hence the Pass5078 eight-entry q3 local decoder placement, can be synthesized from the code dual shell without external W33 labels.",
+  "boundary": "Exact q=3 finite-code reconstruction; no all-q uniqueness theorem is claimed."
+}

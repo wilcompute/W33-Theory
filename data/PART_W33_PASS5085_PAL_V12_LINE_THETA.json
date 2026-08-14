@@ -1,0 +1,166 @@
+{
+  "pass": 5085,
+  "status": "EXACT_RANK_TWO_RELATION_DICTIONARY",
+  "source": "Pal arXiv:2605.06499v3, standard V1,2 split boundary (equation 29 in the paper)",
+  "dictionary": {
+    "V1,1": "point-side theta (Pass5075)",
+    "standard_V1,2": "line-side theta (this pass)"
+  },
+  "integral_orientation": "For three ordered geodesic roots R0,R1,R2, Aij=Ri-Rj gives A01+A12-A02=0; mod 2 this is the theta parity A01+A12+A02=0.",
+  "checks": {
+    "q3": {
+      "q": 3,
+      "line_pair": [
+        13,
+        0
+      ],
+      "parameters_checked": 2,
+      "relations": [
+        {
+          "a": 1,
+          "apartments": [
+            0,
+            54,
+            189
+          ],
+          "local_K_edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              3
+            ]
+          ]
+        },
+        {
+          "a": 2,
+          "apartments": [
+            0,
+            27,
+            162
+          ],
+          "local_K_edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        }
+      ]
+    },
+    "q5": {
+      "q": 5,
+      "line_pair": [
+        31,
+        0
+      ],
+      "parameters_checked": 4,
+      "relations": [
+        {
+          "a": 1,
+          "apartments": [
+            0,
+            500,
+            2250
+          ],
+          "local_K_edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              5
+            ]
+          ]
+        },
+        {
+          "a": 2,
+          "apartments": [
+            0,
+            375,
+            2125
+          ],
+          "local_K_edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              4
+            ]
+          ]
+        },
+        {
+          "a": 3,
+          "apartments": [
+            0,
+            250,
+            2000
+          ],
+          "local_K_edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              3
+            ]
+          ]
+        },
+        {
+          "a": 4,
+          "apartments": [
+            0,
+            125,
+            1875
+          ],
+          "local_K_edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "scope": "rank two / genus two specialization; Pal Lemma 4.3 reduces general V1,2 first relations to V1,1 plus standard V1,2 modulo degree-two boundaries",
+  "boundary": "This is a relation-type dictionary, not a claim that Pal provides the finite-GQ Pass5066 proof verbatim."
+}

@@ -1,0 +1,35 @@
+{
+  "pass": 5082,
+  "status": "EXACT_ANCHORS_WITH_ALL_Q_BOUND_OPEN",
+  "identity": "wt(c_y)=N_A*(1-muhat(y))/2",
+  "target": "max_nontrivial muhat <= 1-16/((q+1)^2(q^2+1))",
+  "anchors": {
+    "2": {
+      "length": 90,
+      "distance": 16,
+      "minimum_shell": "45 chamber stars, complete",
+      "max_nontrivial_fourier": "29/45",
+      "spectral_gap": "16/45"
+    },
+    "3": {
+      "length": 1620,
+      "distance": 81,
+      "minimum_shell": "160 chamber stars, complete",
+      "max_nontrivial_fourier": "9/10",
+      "spectral_gap": "1/10"
+    },
+    "4": {
+      "length": 13600,
+      "distance": 256,
+      "minimum_shell": "open; distance exact",
+      "max_nontrivial_fourier": "409/425",
+      "spectral_gap": "16/425"
+    }
+  },
+  "equality_classification": {
+    "q2": "all 45 chamber stars",
+    "q3": "all 160 chamber stars",
+    "q4": "not classified"
+  },
+  "boundary": "This executes the Fourier attack at q=2,3,4 but does not prove the all-q extremizer inequality or q=5 distance."
+}

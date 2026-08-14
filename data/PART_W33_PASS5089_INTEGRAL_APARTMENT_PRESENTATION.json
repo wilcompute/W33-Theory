@@ -1,0 +1,20 @@
+{
+  "pass": 5089,
+  "status": "THEOREM_INTEGRAL_ALL_FINITE_GQ",
+  "statement": "Z[oriented apartments]/oriented theta ~= Z_1(Levi;Z)",
+  "W3q_rank": "q^4",
+  "torsion": "none",
+  "oriented_theta": "A_ij + A_jk - A_ik = 0 for three oriented geodesic roots",
+  "proof": "base-vertex geodesic fan decomposition over Z; girth 8 makes every reduced fan zero or one oriented apartment; path-choice changes are theta relations",
+  "q2_smith_check": {
+    "apartments": 90,
+    "relations": 120,
+    "relation_rank": 74,
+    "nonzero_smith_invariants": {
+      "1": 74
+    },
+    "quotient_rank": 16,
+    "torsion_free": true
+  },
+  "boundary": "Integral graph-cycle theorem. It does not by itself prove the binary minimum-distance conjecture."
+}
