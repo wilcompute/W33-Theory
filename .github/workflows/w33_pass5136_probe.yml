@@ -15,6 +15,6 @@ jobs:
         with:
           python-version: '3.12'
       - name: Run structured radius-six falsifier
-        run: python analysis/w33_pass5136_q3_radius6_structured_falsifier.py
+        run: PYTHONPATH=. python analysis/w33_pass5136_q3_radius6_structured_falsifier.py
       - name: Show certificate
         run: cat data/PART_W33_PASS5136_Q3_RADIUS6_STRUCTURED_FALSIFIER.json
