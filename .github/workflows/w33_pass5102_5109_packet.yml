@@ -1,6 +1,19 @@
 name: Pass5102-5109 root expansion controller packet
 
 on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5102_root_expansion_low_generator.py'
+      - 'analysis/w33_pass5103_q4_heavy_chart_closure.py'
+      - 'analysis/w33_pass5104_sqrt17_global_integral_intertwiner.py'
+      - 'analysis/w33_pass5105_u81_dual_torsor_controller.py'
+      - 'analysis/w33_pass5106_rank2_lie_derivative_curvature.py'
+      - 'analysis/w33_pass5107_root_coset_incidence_smith.py'
+      - 'analysis/w33_pass5108_u81_jennings_memory.py'
+      - 'analysis/w33_pass5109_curvature_kernel_v4.py'
+      - 'tests/test_w33_pass5102_5109_packet.py'
+      - '.github/workflows/w33_pass5102_5109_packet.yml'
   push:
     branches: [master]
     paths:
@@ -51,6 +64,7 @@ jobs:
           python analysis/w33_pass5108_u81_jennings_memory.py
           python analysis/w33_pass5109_curvature_kernel_v4.py
       - name: Commit changed certificates only
+        if: github.event_name == 'push'
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
