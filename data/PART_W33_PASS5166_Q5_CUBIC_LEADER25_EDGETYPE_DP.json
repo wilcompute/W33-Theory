@@ -1,0 +1,21 @@
+{
+  "pass": 5166,
+  "status": "THEOREM_Q5_STRICT_COUNTEREXAMPLE_LEADER_AT_LEAST_25",
+  "q": 5,
+  "leader_size_closed": 24,
+  "target_distance": 625,
+  "adjacent_pair_cap": 40,
+  "critical_branch_N1_40": {
+    "degree_profiles": [[1,7,11],[4,4,12],[7,1,13]],
+    "endpoint_degree_sum_min": 4,
+    "N112_edge_type_lower": 64,
+    "P4_lower": 96,
+    "N123_lower": 192,
+    "triple_mass_lower": 2560,
+    "pair_weight_lower_bound": -1424,
+    "integer_weight_lower_bound": 771
+  },
+  "other_high_branch_lower_bounds": {"34":1405,"35":1224,"36":975,"37":903,"38":830,"39":693},
+  "conclusion": "Every q=5 apartment-code word of weight below 625 has minimum chamber leader at least 25.",
+  "boundary": "This closes leader 24 only; the q=5/all-q minimum-distance theorem remains open for leaders >=25."
+}
