@@ -1,0 +1,18 @@
+{
+  "pass": 5174,
+  "status": "THEOREM_ALL_Q_FULL_THETA_SPECTRAL_GAP",
+  "group_law": "(a,b,c,d)*(A,B,C,D)=(a+A,b+B,c+C-Ab,d+D-2Ac+A^2b)",
+  "linear_sector": "L={f(a,b,c,d)=g(a,b)}; dim L=q^2",
+  "three_translation_projections": "P1,P2,P3 average independently in b,c,d",
+  "nonlinear_bound": "On L^perp, P1+P2+P3<=2I and P0<=I, hence sum_i P_i<=3I",
+  "operator_identity": "A_theta=q(P0+P1+P2+P3)-4I",
+  "global_second_eigenvalue": "3q-4",
+  "global_spectral_gap": "q",
+  "anchors": {
+    "2":{"q":2,"states":16,"linear_sector_dimension":4,"nonlinear_sector_dimension":12,"coordinate_translation_check":true,"second_adjacency_eigenvalue":2,"adjacency_degree":4,"spectral_gap":2},
+    "3":{"q":3,"states":81,"linear_sector_dimension":9,"nonlinear_sector_dimension":72,"coordinate_translation_check":true,"second_adjacency_eigenvalue":5,"adjacency_degree":8,"spectral_gap":3},
+    "4":{"q":4,"states":256,"linear_sector_dimension":16,"nonlinear_sector_dimension":240,"coordinate_translation_check":true,"second_adjacency_eigenvalue":8,"adjacency_degree":12,"spectral_gap":4},
+    "5":{"q":5,"states":625,"linear_sector_dimension":25,"nonlinear_sector_dimension":600,"coordinate_translation_check":true,"second_adjacency_eigenvalue":11,"adjacency_degree":16,"spectral_gap":5}
+  },
+  "boundary": "Finite graph/group theorem for every finite field q; not a physical mixing/noise claim."
+}
