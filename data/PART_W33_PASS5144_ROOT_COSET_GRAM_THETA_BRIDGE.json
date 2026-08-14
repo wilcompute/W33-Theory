@@ -1,0 +1,14 @@
+{
+  "pass": 5144,
+  "status": "THEOREM_ALL_Q_ROOT_COSET_GRAM_THETA_BRIDGE",
+  "identity": "H H^T = 4 I + A_theta over Z",
+  "anchors": {
+    "2": {"shape": [16, 32], "rank_Q": 15, "theta_minus4": 1},
+    "3": {"shape": [81, 108], "rank_Q": 69, "theta_minus4": 12},
+    "4": {"shape": [256, 256], "rank_Q": 184, "theta_minus4": 72},
+    "5": {"shape": [625, 500], "rank_Q": 405, "theta_minus4": 220}
+  },
+  "corollary": "ker_Q(H^T) is exactly the -4 eigenspace of the theta Cayley graph.",
+  "q3_arithmetic_boundary": "The free defect is 12-dimensional; the additional Smith Z/3 is torsion and is not visible in the rational Gram spectrum.",
+  "boundary": "No all-q formula for the -4 multiplicity or integral torsion is asserted."
+}
