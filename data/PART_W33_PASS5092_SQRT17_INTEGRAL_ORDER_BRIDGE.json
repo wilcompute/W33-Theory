@@ -1,0 +1,19 @@
+{
+  "pass": 5092,
+  "status": "PASS",
+  "A": [[1,4],[1,0]],
+  "historical_B2": [[4,2],[2,5]],
+  "shifted_B2": [[0,2],[2,1]],
+  "integral_similarity_P": [[2,-1],[-1,1]],
+  "det_P": 1,
+  "identity": "A P = P (B2-4I)",
+  "A_charpoly": "x^2-x-4",
+  "quadratic_field": "Q(sqrt(17))",
+  "maximal_order_discriminant": 17,
+  "q3_affine_block": [[14,16],[4,10]],
+  "q3_charpoly": "x^2-24x+76",
+  "q3_suborder_index": 4,
+  "q3_suborder_discriminant": 272,
+  "theorem": "The twisted-Hecke quadratic block and shifted historical B2 block are GL(2,Z)-conjugate. The q3 affine block generates the conductor-4 suborder of the same quadratic field.",
+  "boundary": "No geometric carrier intertwiner is claimed by the integral similarity alone."
+}
