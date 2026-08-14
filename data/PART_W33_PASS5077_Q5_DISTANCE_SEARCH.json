@@ -1,0 +1,14 @@
+{
+  "pass": 5077,
+  "status": "PASS_BOUNDED_Q5_SEARCH",
+  "code_from_5066": [73125,625],
+  "candidate_upper_bound": 625,
+  "exact_two_star_minimum": 1000,
+  "exact_two_star_weight_hist": {"1000":4680,"1200":23400,"1240":117000,"1248":292500},
+  "heuristic_starts": 200,
+  "heuristic_steps_per_start": 1200,
+  "best_nonzero_weight_found": 625,
+  "best_generator_count": 1,
+  "falsified_d_q4": false,
+  "boundary": "No q=5 minimum-distance proof: exact over all <=2 chamber-star combinations plus bounded random local descent only."
+}
