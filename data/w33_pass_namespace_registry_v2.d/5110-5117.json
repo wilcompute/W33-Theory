@@ -3,9 +3,11 @@
   "range": [5110, 5117],
   "slug": "cut_gauge_q5_intrinsic_decoder_order_and_bonkers",
   "title": "Cut-gauge kernel, q5 leader barrier, intrinsic charts, radius-3 decoder, quadratic-order ladder, and three outside-box probes",
-  "status": "RESERVED",
+  "status": "EXECUTED",
   "owner": "openai-gpt56-sol",
   "reserved_at": "2026-08-14",
-  "purpose": "Collision-reconciled continuation after Pass5102-5109: prove the all-q chamber-generator kernel/cut-space theorem; sharpen q5 low-weight exclusion; reconstruct roots/charts intrinsically for arbitrary finite GQ; push the q3 decoder beyond radius two; complete the conductor 1->2->4 natural-order lattice chain; execute three independent outside-box probes from the resulting structures.",
-  "boundary": "Do not claim q5/all-q apartment-code distance unless certified. Decoder statements are finite hard-decision code theorems, not hardware/noise thresholds. Root-coset arithmetic rank anomalies are not assigned physical charge or particle interpretations."
+  "executed_at": "2026-08-14",
+  "purpose": "Executed the collision-reconciled continuation after Pass5102-5109 and fully materialized its certificates, shared theorem insert, regressions, public page, and homepage publisher.",
+  "outcomes": "All-q chamber-generator kernel equals Levi cut space; first q5 cut/girth leader barrier >=14 (later strengthened by Pass5118 to >=17); all-q intrinsic root/chart recovery from the dual minimum shell; q3 S4-equivariant two-sweep radius-three decoder; exact sqrt17 conductor 1->2->4 order tower; exact q2/q3/q5 native root-coset ranks with q5 drop 8 (later q7 falsifier recorded); q3 code-intrinsic U81 semidirect V4 controller; perfect duality between cut-gauge apartment code and apartment/theta cycle presentation.",
+  "boundary": "q5/all-q distance and radius-four decoding remain open. Decoder results are finite hard-decision code statements, not hardware/noise thresholds. The q3/q5 native-rank extrapolation was explicitly falsified at q7 by Pass5123 and is not promoted."
 }
