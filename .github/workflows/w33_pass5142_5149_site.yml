@@ -1,0 +1,33 @@
+name: Pass5142-5149 homepage materializer
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/PASS5142_5149_index_insert.html'
+      - 'tools/integrate_pass5142_5149_public.py'
+      - '.github/workflows/w33_pass5142_5149_site.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Materialize homepage card
+        run: python tools/integrate_pass5142_5149_public.py
+      - name: Commit homepage only
+        run: |
+          if git diff --quiet -- index.html docs/index.html; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html docs/index.html
+          git commit -m 'Materialize Pass5142-5149 homepage card'
+          git pull --rebase origin master
+          git push origin HEAD:master
