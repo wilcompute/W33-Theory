@@ -1,0 +1,98 @@
+{
+  "packet": [5074, 5081],
+  "status": "PASS_WITH_OPEN_ALL_Q_DISTANCE_AND_Q4_HEAVY_CHART_SHELL",
+  "5074": {
+    "status": "THEOREM_AND_REDUCTION",
+    "name": "coarea derivative map",
+    "local_chart": "For an opposite-pair chart with q+1 geodesics, a binary cohomology class induces a cut of K_{q+1}; if the smaller side has size s then the local apartment weight is s(q+1-s).",
+    "coarea_identity": "4 wt(x) = sum_O s_O(q+1-s_O)",
+    "active_chart_bound_reduction": "A(x)>=4q^3 for every nonzero class implies wt(x)>=q^4",
+    "chamber_equality": {"apartment_weight": "q^4", "active_charts": "4q^3", "local_weight_each": "q"},
+    "q2_exhaustive": {"code": [90,16,16], "nonzero_classes": 65535, "minimum_active_charts": 32, "minimum_words": 45, "identity_all_words": "A(x)=2 wt(x)"},
+    "boundary": "The all-q inequality A(x)>=4q^3 remains open."
+  },
+  "5075": {
+    "status": "THEOREM",
+    "q": 4,
+    "assumption": "every active chart is a minimum 1|4 cut",
+    "fixed_apartment_seed_count": 16,
+    "satisfiable_seeds": 8,
+    "unsatisfiable_seeds": 8,
+    "satisfiable_supports": "exactly the eight chamber stars through the fixed apartment",
+    "consequence": "Any non-chamber weight-256 word must contain at least one 2|3 chart.",
+    "heavy_chart_parameterization": "If A2=2t is the number of 2|3 charts, then A1=256-3t and A_active=256-t.",
+    "supported_tanner_triangle_count": "1024-8t",
+    "boundary": "Complete q=4 minimum-shell classification remains open only in the heavy-chart sector."
+  },
+  "5076": {
+    "status": "THEOREM",
+    "field": "Q(sqrt(17))",
+    "twisted_block": [[1,4],[1,0]],
+    "historical_B2": [[4,2],[2,5]],
+    "unimodular_conjugator": [[2,-1],[-1,1]],
+    "det_conjugator": 1,
+    "identity": "A P = P (B2-4I)",
+    "maximal_order": "O_K=Z[(1+sqrt(17))/2]",
+    "maximal_order_discriminant": 17,
+    "q3_generator": "mu=10+4 lambda",
+    "q3_order": "Z[mu]=Z+4 O_K",
+    "q3_order_index_conductor": 4,
+    "q3_order_discriminant": 272,
+    "q3_polynomial": "x^2-24x+76",
+    "boundary": "This identifies the common quadratic order/lattice. No geometric PSp intertwiner is claimed because the historical transfer recurrence was not supplied with such an action."
+  },
+  "5077": {
+    "status": "EXACT_LOCAL_OPTIMUM_PLUS_SEARCH_EVIDENCE",
+    "smith_floor": 780,
+    "floor_basis": [118,5,122,37,6,76,129,61,44,26,89,45,87,126,78,124,22,111,15,38,58,96,64,160],
+    "floor_condition_2": 72382.48331056532,
+    "one_swap_nonsingular_unique": 3289,
+    "one_swap_floor_bases": 8,
+    "best_other_floor_one_swap_condition_2": 74483.1939,
+    "strict_one_swap_local_optimum_at_den780": true,
+    "sampled_two_swap_candidates": 24547,
+    "best_conditioned_two_swap_exact_checked": 1200,
+    "den780_among_checked_two_swap": 0,
+    "best_sampled_two_swap_condition_2_any_denominator": 102.57,
+    "control_basis_den3120_condition_2": 105.46218720905891,
+    "boundary": "No global optimum among all denominator-780 raw bases is claimed."
+  },
+  "5078": {
+    "status": "THEOREM",
+    "name": "all-q Tanner six-cycle law",
+    "apartment_point_degree": "8(q-1)",
+    "theta_checks": "T(q)=q^3(q+1)(q^2+1) C(q+1,3)",
+    "root_triangle_classification": "Every apartment-point triangle is either the three apartments from one theta triple, or three apartments sharing one common length-4 root.",
+    "tanner_six_cycles": "T(q)(q-2)",
+    "proof_count": "There are q^3(q+1)^2(q^2+1) roots; for each root choose 3 of the q complementary roots, giving C(q,3).",
+    "finite_anchors": {"q2":0,"q3":4320,"q4":108800,"q5":1170000}
+  },
+  "5079": {
+    "status": "THEOREM_WITH_FINITE_GROUP_ANCHORS",
+    "name": "discrete derivative / root-sheet decomposition",
+    "statement": "For a chamber star of q^4 apartments, the active opposite-pair charts split into four role families of q^3 charts each, hence 4q^3 in total.",
+    "roles": ["point endpoint","point interior","line endpoint","line interior"],
+    "formal_derivative_match": "d(q^4)/dq=4q^3",
+    "interpretation": "This is a discrete coarea/codimension-one derivative, not an infinitesimal derivative in the prime-power parameter q.",
+    "q2_role_counts": [8,8,8,8],
+    "q3_role_counts": [27,27,27,27],
+    "q4_role_counts": [64,64,64,64],
+    "q3_unipotent_anchor": {"order":81,"regular_on_chamber_star":true,"element_orders":{"1":1,"3":44,"9":36},"center_order":3,"derived_order":9,"root_directions":4}
+  },
+  "5080": {
+    "status": "EXACT_FINITE_ROOT_DIRECTION_FINGERPRINT",
+    "name": "noncommutative discrete Hessian",
+    "q3_pair_generated_subgroup_orders": [9,9,9,9,27,81],
+    "q2_pair_generated_subgroup_orders": [4,4,4,4,4,8],
+    "interpretation": "Second-direction composition is anisotropic: root directions do not form a Cartesian F_q^4 grid; commutator growth creates q^3 and q^4 closures.",
+    "boundary": "The Hessian terminology is an analogy for finite differences/root commutators, not differential calculus."
+  },
+  "5081": {
+    "status": "THEOREM_FIREWALL",
+    "name": "chamber-star switch graph is non-Hamming",
+    "q2": {"vertices":16,"degree":4,"charpoly":"(x^2-16)(x^2-4)^2 x^2 (x^2-2)^4","not":"Q4=H(4,2)"},
+    "q3": {"vertices":81,"degree":8,"charpoly":"(x-8)(x-5)^4(x-2)^10(x+1)^18(x+4)^12(x^2-4x+1)^6(x^2+2x-2)^6(x^2-x-8)^6","not":"H(4,3)"},
+    "q4": {"vertices":256,"degree":12,"charpoly":"(x-12)(x-8)^6(x-6)^24(x-4)^9(x-2)^24 x^84(x+4)^72(x^2-8)^18","not":"H(4,4)"},
+    "interpretation": "The derivative has four root directions, but the local carrier is curved/non-Cartesian rather than an ordinary 4-dimensional Hamming cube."
+  }
+}
