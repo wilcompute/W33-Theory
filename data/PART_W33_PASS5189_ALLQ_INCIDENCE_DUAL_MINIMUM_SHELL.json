@@ -1,0 +1,12 @@
+{
+  "pass": 5189,
+  "status": "THEOREM_ALL_Q_BINARY_W_LINE_DUAL_MINIMUM_SHELL",
+  "code": "C(W)^perp = binary W(3,q) point sets meeting every W-line evenly",
+  "minimum_distance": "2(q+1)",
+  "minimum_words": "Exactly the dual grids H union H^perp from hyperbolic/non-isotropic polar line pairs",
+  "minimum_shell_size": "q^2(q^2+1)/2",
+  "P_component_identification": "The minimum words are canonically the P tensor components of Pass5187",
+  "q5": {"length":156,"minimum_distance":12,"minimum_words":325,"minimum_word_graph":"K_6,6","Pass5188_full_span_dimension":65},
+  "even_q_boundary": "For even q>=4 the minimum dual-grid words need not span all of C(W)^perp; this theorem classifies the minimum shell only",
+  "boundary": "Does not classify q5 weight-625 apartment words or close q5 leader 33; L-side gluing remains required."
+}
