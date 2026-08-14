@@ -1,0 +1,25 @@
+{
+  "pass": 5240,
+  "status": "THEOREM_EXACT_CONNECTEDL_MOD2_JORDAN_STRUCTURE_Q3_Q5",
+  "q3": {
+    "vertices": 540,
+    "algebraic_multiplicity_0": 100,
+    "algebraic_multiplicity_1": 440,
+    "nullity_A_powers_1_to_4": [100,100,100,100],
+    "nullity_AplusI_powers_1_to_4": [180,290,378,440],
+    "zero_primary_Jordan_blocks": {"1":100},
+    "one_primary_Jordan_blocks": {"1":70,"2":22,"3":26,"4":62}
+  },
+  "q5": {
+    "vertices": 9750,
+    "algebraic_multiplicity_0": 3716,
+    "algebraic_multiplicity_1": 6034,
+    "nullity_A_powers_1_to_4": [2676,3196,3716,3716],
+    "nullity_AplusI_powers_1_to_4": [2859,4914,5498,6034],
+    "zero_primary_Jordan_blocks": {"1":2156,"3":520},
+    "one_primary_Jordan_blocks": {"1":804,"2":1471,"3":48,"4":536}
+  },
+  "q5_mod2_characteristic_polynomial": "x^3716 (x+1)^6034",
+  "q3_mod2_characteristic_polynomial": "x^100 (x+1)^440",
+  "boundary": "Exact q3/q5 modular theorem only; no all-odd-q block formula or direct distance consequence is claimed."
+}
