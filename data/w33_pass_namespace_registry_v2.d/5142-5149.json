@@ -1,11 +1,25 @@
 {
   "schema": "w33.pass_namespace_registry.v2.entry",
   "range": [5142, 5149],
-  "slug": "q5_embedded_leader18_rootcoset_gram_manuscript_reconciliation",
-  "title": "q5 embedded leader-18 geometry, root-coset Gram bridge, manuscript reconciliation, and independent probes",
-  "status": "RESERVED",
+  "slug": "q5_cubic_leader21_root_projection_metric_release",
+  "title": "q5 cubic leader barrier, root-Cayley metric theorem, root-coset Gram/Dirichlet bridge, and release integration",
+  "status": "EXECUTED_REMOTE_REPLAY_QUEUED",
   "owner": "openai-gpt56-sol",
   "reserved_at": "2026-08-14",
-  "purpose": "Continue beyond the collision-reconciled Pass5134-5141 packet with independent exact finite certificates, emphasizing actual W(3,5) embeddings rather than relaxed leader profiles, and promote only claims that survive repo/web cross-checks.",
-  "boundary": "Do not claim q5/all-q apartment-code minimum distance unless proved. Distinguish actual W(3,5) embeddings from abstract subcubic girth-eight realizations. Keep algebraic/controller results separate from hardware physics."
+  "closed_at": "2026-08-14",
+  "outputs": [
+    "Pass5142: q5 strict-counterexample leader >=20",
+    "Pass5143: symbolic root-Cayley shell theorem in characteristic >3",
+    "Pass5144: all-q root-coset Gram identity HH^T=4I+A_theta",
+    "Pass5145: q5 strict-counterexample leader >=21",
+    "Pass5146: actual W(3,5) sharp leader-18 witness census",
+    "Pass5147: all-q root-direction Dirichlet/conditional-expectation identity",
+    "Pass5148: leader-21 reduced to the sharp n1=33 sector with residual triple mass 42",
+    "Pass5149: shared manuscript/public-site integration and evidence firewall"
+  ],
+  "remote_status": {
+    "exact_replay": "queued",
+    "homepage_materializer": "queued"
+  },
+  "boundary": "Do not claim q5/all-q apartment-code minimum distance. Current strict q5 counterexample barrier is leader >=21; leader 21, n1=33 remains open. Distinguish exact algebraic/controller statements from hardware physics and do not label queued CI as passed."
 }
