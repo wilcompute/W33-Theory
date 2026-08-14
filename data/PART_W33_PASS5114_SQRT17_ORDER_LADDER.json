@@ -1,0 +1,17 @@
+{
+  "pass": 5114,
+  "status": "THEOREM_EXACT_CONDUCTOR_1_2_4_ORDER_LADDER",
+  "field": "Q(sqrt(17))",
+  "lambda": "(1+sqrt(17))/2",
+  "relation": "lambda^2=lambda+4",
+  "orders": [
+    {"conductor":1,"basis":["1","lambda"],"generator":"lambda","matrix":[[0,4],[1,1]],"discriminant":17},
+    {"conductor":2,"basis":["1","2 lambda"],"generator":"alpha=2 lambda","matrix":[[0,16],[1,2]],"discriminant":68,"repo_role":"global theta quadratic companion from Pass5087/5104"},
+    {"conductor":4,"basis":["1","4 lambda"],"generator":"mu=10+4 lambda","matrix":[[10,64],[1,14]],"discriminant":272,"repo_role":"q3 recurrence polynomial x^2-24x+76 from Pass5091"}
+  ],
+  "inclusions": {"O2_into_O1":[[1,0],[0,2]],"index_O1_over_O2":2,"O4_into_O2":[[1,0],[0,2]],"index_O2_over_O4":2,"O4_into_O1":[[1,0],[0,4]],"index_O1_over_O4":4},
+  "intertwining_identities": ["(2 M1) P12 = P12 M2","(2 M2) P24 = P24 B4","Mmu=B4+10 I"],
+  "global_15_lane_indices": {"O1_over_O2":32768,"O2_over_O4":32768,"O1_over_O4":1073741824},
+  "synthesis": "The discriminant ladder 17->68->272 is literally the nested order chain Z+4 O_K subset Z+2 O_K subset O_K. Pass5104 supplies the minimal index-2 integral Hecke-to-theta intertwiner on each lane; this pass adds the natural conductor-four recurrence lattice and both inclusion matrices.",
+  "boundary": "This is an exact quadratic-order/lattice identification. It does not identify the historical transfer construction geometrically with W33 apartments."
+}
