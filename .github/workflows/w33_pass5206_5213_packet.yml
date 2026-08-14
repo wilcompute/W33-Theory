@@ -1,0 +1,45 @@
+name: Pass5206-5213 eight-way frontier packet
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5206_q5_leader36_fullcut_degreeclass_diagnostic.py'
+      - 'analysis/w33_pass5207_q5_pheavy_equality_to_footprint_distance.py'
+      - 'analysis/w33_pass5208_oddq_dualgrid_spanning_rank_reduction.py'
+      - 'analysis/w33_pass5209_q5_footprint_code_hull_mod4.py'
+      - 'analysis/w33_pass5210_root_controller_dualgrid_equivariance.py'
+      - 'analysis/w33_pass5211_oddq_pblock_graph_NO5plus.py'
+      - 'analysis/w33_pass5212_q5_dualgrid_Hoffman_13_cover.py'
+      - 'analysis/w33_pass5213_q5_footprint_dual_325_260_8.py'
+      - 'tests/test_w33_pass5206_5213_packet.py'
+      - '.github/workflows/w33_pass5206_5213_packet.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact-packet:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    env:
+      PYTHONPATH: .
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pytest
+        run: python -m pip install --disable-pip-version-check pytest
+      - name: Frozen regression
+        run: pytest -q tests/test_w33_pass5206_5213_packet.py
+      - name: Replay producers
+        run: |
+          python analysis/w33_pass5206_q5_leader36_fullcut_degreeclass_diagnostic.py
+          python analysis/w33_pass5207_q5_pheavy_equality_to_footprint_distance.py
+          python analysis/w33_pass5208_oddq_dualgrid_spanning_rank_reduction.py
+          python analysis/w33_pass5209_q5_footprint_code_hull_mod4.py
+          python analysis/w33_pass5210_root_controller_dualgrid_equivariance.py
+          python analysis/w33_pass5211_oddq_pblock_graph_NO5plus.py
+          python analysis/w33_pass5212_q5_dualgrid_Hoffman_13_cover.py
+          python analysis/w33_pass5213_q5_footprint_dual_325_260_8.py
+      - name: Recheck regression
+        run: pytest -q tests/test_w33_pass5206_5213_packet.py
