@@ -1,0 +1,14 @@
+{
+  "pass":5109,
+  "status":"THEOREM_CURVATURE_KERNEL_V4_SECTORS",
+  "defect_space":"ker(H^T) over Q",
+  "dimension":12,
+  "canonical_diagonal_V4":{"e":[1,1,1,1],"a":[1,1,2,2],"b":[1,2,1,2],"c":[1,2,2,1]},
+  "character_traces":{"e":12,"a":0,"b":-4,"c":0},
+  "irreducible_multiplicities":{"trivial":2,"kernel_ea":4,"kernel_eb":2,"kernel_ec":4},
+  "sorted_sector_dimensions":[4,4,2,2],
+  "root_parallel_classes":4,
+  "V4_fixes_each_root_family_setwise":true,
+  "interpretation":"The free 12-dimensional incidence defect from Pass5107 is not featureless: the canonical root-normalizing V4 splits it into 4+4+2+2 rational character sectors.",
+  "boundary":"This is a rational representation decomposition of an incidence-kernel defect; no particle-family or physical-channel identification is asserted."
+}
