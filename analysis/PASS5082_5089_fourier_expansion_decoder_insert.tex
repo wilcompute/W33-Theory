@@ -1,0 +1,47 @@
+\ifdefined\WPassFiveZeroEightTwoLoaded\else
+\gdef\WPassFiveZeroEightTwoLoaded{1}
+\subsection*{Passes 5082--5089: sharp $q=3$ expansion, panel dependencies, intrinsic decoding, and the integral theta presentation}
+The apartment-boundary Fourier identity
+\[
+ \operatorname{wt}(c_y)=\frac{N_{\mathcal A}}2(1-\widehat\mu(y))
+\]
+is now exact at the first three nontrivial anchors: the maximum nonconstant coefficients are $29/45$, $9/10$, and $409/425$ for $q=2,3,4$.  The equality shell is completely the chamber stars at $q=2,3$; it remains unclassified at $q=4$.  In the local coarea coordinates an exact $q=3$ mixed-integer model closes the sharper statement
+\[
+ A(y)\ge108=4\cdot3^3
+\]
+for every nonzero apartment-code word.  Since every active $K_4$ chart has cut weight at least three, $\operatorname{wt}(c_y)\ge3A(y)/4\ge81$.  A chamber star attains equality.  This is the sharp tester theorem at $q=3$, not yet an all-$q$ proof.
+
+At $q=4$, an orbit-complete four-star census fixes one chamber and tests all $\binom{424}{3}=12614424$ representatives.  The only weight-$256$ outputs are other chamber stars.  Their induced five-star zero relations are exactly the two panel relations through the fixed chamber.  Transitivity gives the complete minimum shell of the $425$-generator dependency code:
+\[
+ \boxed{K_{\rm chamber}=[425,169,5]_2,\qquad A_5=170=85+85,}
+\]
+where the $170$ minimum dependencies are the point and line panels.  Thus a hypothetical exotic weight-$256$ q=4 word requires at least five distinct chamber-star generators in every literal representation.  Independently, Passes 5090 and 5096 force such an exotic word into the heavy $2|3$ chart sector.
+
+The remaining rank-two sharbly dictionary is also explicit.  For a symplectic basis $e_1,f_1,e_2,f_2$ and $a\ne0$, the standard $V_{1,2}$ split terms
+\[
+ \{e_1,f_1,e_2,f_2\},\quad
+ \{e_2+ae_1,f_2,e_1,f_1-af_2\},\quad
+ \{f_1,e_2+ae_1,e_2,f_1-af_2\}
+\]
+are three apartments through the same opposite lines $\langle e_1,e_2\rangle$ and $\langle f_1,f_2\rangle$.  Exact checks at $q=3$ and $q=5$ put them on one line-side theta triangle for every nonzero $a$.  With ordered geodesic roots $R_i$ and $A_{ij}=R_i-R_j$, the relation is already integral,
+\[
+ A_{01}+A_{12}-A_{02}=0,
+\]
+and reduces to binary theta parity.  Together with the previous $V_{1,1}$ point-theta identification, the two first relation types in the rank-two specialization of Pal's symplectic sharbly presentation match the point/line theta families.
+
+The local eight-entry $q=3$ correction ROM now has a global finite-code guarantee.  Every apartment belongs to four charts and no apartment pair belongs to more than one.  The vote decoder exhaustively corrects all $1620$ single errors and all $1311390$ double errors in one sweep.  Among the $21600$ triples contained in one chart, $17280$ clear in one sweep; the remaining $4320$ are the local weight-three $K_4$ cut words, leave residual weight two, and clear on the second sweep.  This is hard-decision code arithmetic, not an optical threshold.
+
+Three outside-box closures sharpen the architecture.  First, if $A_\Theta$ is the degree-$16$ theta point graph on q=3 apartments and $V$ is the apartment lift of the $15$-dimensional line-side Levi kernel, then exact integer arithmetic gives
+\[
+ (A_\Theta^2-2A_\Theta-16I)V=0,\qquad \operatorname{rank}[V,A_\Theta V]=30.
+\]
+Thus this invariant space has characteristic polynomial $(x^2-2x-16)^{15}$ and exact channels $1\pm\sqrt{17}$.  Writing $\lambda=(1+\sqrt{17})/2$, the theta generator $2\lambda$ realizes the conductor-two order $\mathbb Z+2\mathcal O_{\mathbb Q(\sqrt{17})}$ of discriminant $68$, sitting between the conductor-one and conductor-four orders of Pass5091.
+
+Second, the code synthesizes its own decoder charts.  Pass5081 makes the $4320$ theta triples the intrinsic minimum dual shell.  Their $21$-regular intersection graph has $114480$ $K_4$ cliques; selecting those whose four triples have six-coordinate union with every coordinate occurring twice leaves exactly $1080$ objects, exactly the opposite-pair charts.  Hence the local ROM placement can be reconstructed without external W33 labels.
+
+Third, the apartment presentation lifts from $\mathbb F_2$ to $\mathbb Z$.  For any finite generalized quadrangle incidence graph $\Gamma$,
+\[
+ \boxed{\mathbb Z[\text{oriented apartments}]/\Theta_{\mathbb Z}\cong Z_1(\Gamma;\mathbb Z).}
+\]
+The same base-vertex fan decomposition works integrally: each reduced fan has length at most eight and is therefore zero or one oriented apartment, while geodesic-choice changes are oriented theta relations.  The quotient is consequently torsion-free; for $W(3,q)$ its rank is $q^4$.  At $q=2$ the signed theta matrix has Smith form $1^{74}$ and quotient $\mathbb Z^{16}$.
+\fi
