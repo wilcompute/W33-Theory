@@ -1,0 +1,20 @@
+{
+  "range": [5142,5149],
+  "status": "EXECUTED_RESULTS_FROZEN",
+  "results": {
+    "5142": "Every apartment-code support is induced half-regular in the intrinsic theta graph: D=8(q-1), d_in=d_out=4(q-1).",
+    "5143": "Second theta moment satisfies x^T A^2 x >= k(k+2)|S| with k=4(q-1); defect is in 8 Z_>=0. q2 exhaustive zero-defect shell is exactly 45 weight-16 chamber stars.",
+    "5144": "q7 root-coset ranks: generic 1183, native F7 1173, drop 10; this falsifies the old two-anchor ((q-1)/2)^3 guess, which predicts 27.",
+    "5145": "q4 root-coset Smith form is 1^180 plus 2^4; cokernel Z^72 direct_sum (Z/2)^4.",
+    "5146": "For rank-two split maximal unipotents in the safe p>h range, Jennings Hilbert series is the positive-root-height product. Exact A2/C2/G2 profiles frozen.",
+    "5147": "Column-sum augmentation gives one universal native relation; rank drops 0,1,4,8,10 at q=2,3,4,5,7 show additional hidden modular defect dimensions from q>=4.",
+    "5148": "Two positive-root statistics separate derivative volume and memory depth: N=|Phi+| versus H=sum ht(alpha), giving (N,H)=(3,4),(4,7),(6,16) for A2,C2,G2.",
+    "5149": "Ordinary theta conductance is identically 1/2 on every nonzero codeword support, so first-order Cheeger/Rayleigh arguments alone are provably blind to distance."
+  },
+  "firewalls": [
+    "q5 and all-q minimum distance remain open unless closed by a separate packet.",
+    "q7 kills the prior native-rank interpolation; no replacement all-q formula is claimed.",
+    "Jennings symbolic theorem is restricted to p>h; small/bad characteristic remains separately checked.",
+    "Lie-memory depth is algebraic nilpotence, not physical latency."
+  ]
+}
