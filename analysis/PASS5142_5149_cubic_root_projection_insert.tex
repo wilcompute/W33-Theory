@@ -1,0 +1,70 @@
+\ifdefined\WPassFiveOneFourTwoLoaded\else
+\gdef\WPassFiveOneFourTwoLoaded{1}
+\subsection*{Passes 5142--5149: cubic q=5 leader barrier and root-direction mean-value calculus}
+
+The q=5 minimum-distance search now has a genuinely third-order obstruction rather than only a pairwise relaxation.  If an apartment contains $r$ selected chamber stars, then $0\le r\le8$ and the pointwise inequality
+\[
+  7\,\mathbf 1_{r\ {m odd}}
+  \ge 7r-14\binom r2+6\binom r3
+\]
+holds.  Summing apartment-by-apartment and inserting the all-$q$ triple-star law of Pass~5140 gives a cubic lower bound in terms of selected-chamber gallery data.  In particular, a selected chamber triple with sorted gallery signature $(1,1,2)$ contributes exactly $q^2$ common apartments.
+
+For a cut-minimal selected Levi subgraph, let $m$ be its number of selected chamber edges and let $n_1$ be the number of adjacent selected chamber pairs.  Its selected-chamber line graph satisfies
+\[
+ N_{112}=\sum_v\binom{d_v}{2}-3\tau,
+\]
+where $N_{112}$ counts $(1,1,2)$ triples and $\tau$ is the number of line-graph triangles, equivalently the number of degree-three selected Levi stars.  Combining this identity with exact deletion bounds and the chamber-scheme Delsarte relaxation closes q=5 chamber leaders $18$, $19$, and $20$.  The resulting strict-counterexample barrier is
+\[
+ \boxed{\operatorname{leader}_{\rm chamber}(y)\ge21\quad
+        \text{for every q=5 codeword with }\operatorname{wt}(y)<625.}
+\]
+The leader-20 uniform lower bound is $711$.  At leader $21$, every sector with $n_1\le32$ is also excluded; the sole remaining cubic wall is the sharp $n_1=33$ sector.  There the guaranteed $(1,1,2)$ contribution gives triple mass $1200$, while mass $1242$ would suffice to reach weight $625$.  Thus the present leader-21 frontier is concentrated into an exact residual target of only $42$ common-apartment incidences.  This is not yet a q=5 distance theorem.
+
+The abstract sharp $m=18,n_1=27$ leader is also realized inside the actual $W(3,5)$ Levi graph.  One opposite-line/transversal family has $4^6=4096$ pendant gauges with apartment weights
+\[
+ 5832^{4},\;5848^{180},\;5856^{480},\;5864^{1260},\;5872^{1440},\;5880^{732},
+\]
+and an independent $K_{3,3}$ point-collinearity carrier gives weight $5832$.  These witnesses show that the sharp local adjacency profile is geometric, while also illustrating how far representative sharp leaders can lie above the $625$ target.  They are witnesses, not an orbit-complete classification.
+
+The root-direction controller also admits a complete mean-value formulation.  Let $U(q)$ be the maximal unipotent chamber controller and let $H_0,\dots,H_3$ be its four positive-root subgroups.  If $P_i$ denotes averaging on right $H_i$-cosets, then
+\[
+ \boxed{A_\theta=q(P_0+P_1+P_2+P_3)-4I},
+ \qquad
+ \boxed{L_\theta=q(4I-P_0-P_1-P_2-P_3)}.
+\]
+Consequently
+\[
+ \langle f,L_\theta f\rangle
+ =q\sum_{i=0}^{3}\|(I-P_i)f\|^2,
+\]
+and for an indicator $1_S$ this is the exact theta-edge boundary $|\delta_\theta S|$.  The open uniform spectral-gap-$q$ statement is therefore equivalent, on mean-zero functions, to the single projection inequality
+\[
+ \sum_{i=0}^{3}\|P_i f\|^2\le3\|f\|^2.
+\]
+Pass~5137 proves equality in the linear-character sector; the nonlinear all-$q$ inequality remains open.
+
+If $H$ is the element-versus-root-coset incidence matrix, the same geometry gives the integral Gram identity
+\[
+ \boxed{HH^T=4I+A_\theta}.
+\]
+Thus over characteristic zero the free root-coset defect is precisely the $-4$ theta eigenspace.  At q=3 this recovers rank $69$ and the free $12$-space, while the known $\mathbb Z/3$ Smith defect remains genuinely arithmetic torsion.  At q=5 the exact theta spectrum fixes rational rank $405$ and free defect dimension $220$ before any integral Smith analysis.
+
+Finally, the root-direction word metric is now symbolic rather than merely interpolated.  Over finite fields of characteristic greater than three, after normalizing states with $a,b\ne0$ by
+\[
+ u=\frac{c}{ab},\qquad v=\frac{d}{a^2b},
+\]
+all states reachable in at most three root moves lie on the eight curves
+\[
+ u=0,\quad u=-1,\quad v=0,\quad v=1,\quad v=-u,\quad
+ v=-2u,\quad v=-2u-1,\quad v=u^2.
+\]
+Their complement contains $(q-4)^2$ normalized pairs.  Hence the exact distance shells are
+\[
+ \boxed{1,\quad4(q-1),\quad8(q-1)^2,\quad
+ (q-1)^2(10q-21),\quad(q-1)^2(q-4)^2}
+\]
+for characteristics greater than three.  Characteristics two and three have additional curve collisions and retain their separately certified small-field profiles.
+
+\paragraph{Evidence boundary.}
+The q=5 apartment-code theorem $d=625$ is still open: strict counterexamples are now forced to chamber leader at least $21$, and the leader-21 cubic method has one sharp $n_1=33$ sector left.  The root-coset Gram and Dirichlet identities are exact finite group/graph statements, not hardware-performance claims.  The projection reformulation does not itself prove the all-$q$ nonlinear theta gap.  The embedded sharp-leader census is diagnostic and not a classification theorem.
+\fi
