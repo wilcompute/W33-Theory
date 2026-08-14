@@ -1,0 +1,12 @@
+{
+  "pass":5212,
+  "status":"THEOREM_Q5_DUALGRID_HOFFMAN_13_COVER",
+  "block_graph":"NO_5^+(5)=SRG(325,144,68,60)",
+  "selected_canonical_block_indices":[6,30,73,111,128,140,157,189,193,226,254,277,320],
+  "selected_blocks":13,
+  "dual_grid_size":12,
+  "partition_points":156,
+  "Hoffman_bound":13,
+  "clique_transversal":"Every distinguished point-footprint 25-clique meets the 13-coclique exactly once.",
+  "boundary":"q5 existence/certificate only; uniqueness and all-q existence are open."
+}
