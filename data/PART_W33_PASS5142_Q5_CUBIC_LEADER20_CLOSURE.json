@@ -1,0 +1,25 @@
+{
+  "pass": 5142,
+  "status": "THEOREM_Q5_STRICT_COUNTEREXAMPLE_LEADER_AT_LEAST_20",
+  "q": 5,
+  "target_distance": 625,
+  "parity_minorant": "7*1_{r odd} >= 7r - 14*C(r,2) + 6*C(r,3), 0<=r<=8",
+  "parity_minorant_slack_r0_to_r8": [0, 0, 0, 22, 32, 52, 48, 42, 0],
+  "leader18": {
+    "n1_le_25_pair_bound": 800,
+    "n1_26": {"pair_bound": 520, "N112_lower": 26, "S3_lower": 650, "integer_weight_lower_bound": 1078},
+    "n1_27": {"pair_bound": 320, "N112_lower": 27, "S3_lower": 675, "integer_weight_lower_bound": 899},
+    "uniform_weight_lower_bound": 800
+  },
+  "leader19": {
+    "adjacent_pair_cap": 29,
+    "cap_proof": "Delete each edge and use Pass5134's 18-edge cap 27. Averaging the wedge decrement gives W<=30; W=30 would force no degree-one endpoints, but 3N3+2N2=38 and 3N3+N2=30 have no integer solution.",
+    "n1_le_26_pair_bound": 909,
+    "n1_27": {"pair_bound": 605, "N112_lower": 24, "S3_lower": 600, "integer_weight_lower_bound": 1120},
+    "n1_28": {"pair_bound": 269, "N112_lower": 28, "S3_lower": 700, "integer_weight_lower_bound": 869},
+    "n1_29": {"pair_bound": -35, "N112_lower": 33, "S3_lower": 825, "integer_weight_lower_bound": 673},
+    "uniform_weight_lower_bound": 673
+  },
+  "conclusion": "Every q=5 apartment-code word of weight below 625 has minimum chamber leader at least 20.",
+  "boundary": "This does not prove d=625 at q=5. Leaders >=20 and the complete equality-shell classification remain open."
+}
