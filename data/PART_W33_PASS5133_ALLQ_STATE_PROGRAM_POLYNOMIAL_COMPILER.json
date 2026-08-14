@@ -1,0 +1,17 @@
+{
+  "pass": 5133,
+  "status": "THEOREM_ALL_FINITE_Q_REVERSIBLE_STATE_PROGRAM_COMPILER",
+  "state_coordinates": "(b; a,c,d)",
+  "program_coordinates": "(a; b,C,D) with C=c+ab, D=d+2ac+a^2 b",
+  "inverse": "c=C-ab, d=D-2aC+a^2 b",
+  "factorization_1": "x0(a)x1(b)x2(c)x3(d) = [x0(a)x2(c)x3(d)]x1(b)",
+  "factorization_2": "x0(a)x1(b)x2(c)x3(d) = [x1(b)x2(c+ab)x3(d+2ac+a^2b)]x0(a)",
+  "anchors": {
+    "2": {"states": 16, "programs": 16, "matrix_identity_exact": true, "compiler_bijective": true},
+    "3": {"states": 81, "programs": 81, "matrix_identity_exact": true, "compiler_bijective": true},
+    "4": {"states": 256, "programs": 256, "matrix_identity_exact": true, "compiler_bijective": true},
+    "5": {"states": 625, "programs": 625, "matrix_identity_exact": true, "compiler_bijective": true}
+  },
+  "synthesis": "Combined with Pass5129, ordering the regular U(q) apartment carrier by state cosets or program cosets differs by this explicit polynomial permutation. In characteristic two the 2ac term vanishes automatically.",
+  "boundary": "This is a reversible finite-field coordinate compiler on the exact unipotent controller, not a hardware timing or performance claim."
+}
