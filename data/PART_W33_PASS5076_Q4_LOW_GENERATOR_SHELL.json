@@ -1,0 +1,14 @@
+{
+  "pass": 5076,
+  "status": "PASS_EXACT_LOW_GENERATOR_SHELL",
+  "q": 4,
+  "code": [13600,256,256],
+  "one_generator_weight": 256,
+  "two_generator_min": 384,
+  "two_generator_hist": {"384":1700,"480":6800,"504":27200,"510":54400},
+  "three_generator_min": 384,
+  "three_generator_min_example": [0,1,2],
+  "three_generator_hist": {"384":1700,"544":6800,"576":20400,"616":54400,"624":81600,"634":217600,"636":326400,"696":81600,"706":108800,"724":108800,"726":1305600,"732":979200,"744":435200,"750":1958400,"756":4243200,"762":2774400},
+  "consequence": "Any non-chamber-star weight-256 word, if one exists, has no representation using <=3 distinct chamber-star generators.",
+  "boundary": "This does not classify the full minimum shell because chamber-star generators have a 169-dimensional dependency kernel."
+}
