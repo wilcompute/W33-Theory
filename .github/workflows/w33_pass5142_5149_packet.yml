@@ -1,0 +1,52 @@
+name: Pass5142-5149 exact replay
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5142_q5_cubic_leader20_closure.py'
+      - 'analysis/w33_pass5143_root_cayley_metric_theorem.py'
+      - 'analysis/w33_pass5144_root_coset_gram_theta_bridge.py'
+      - 'analysis/w33_pass5145_q5_cubic_leader21_closure.py'
+      - 'analysis/w33_pass5146_q5_sharp_leader18_embedded_census.py'
+      - 'analysis/w33_pass5147_root_projection_dirichlet_theorem.py'
+      - 'analysis/w33_pass5148_q5_leader21_exact_wall.py'
+      - 'analysis/PASS5142_5149_cubic_root_projection_insert.tex'
+      - 'tests/test_w33_pass5142_5149_packet.py'
+      - '.github/workflows/w33_pass5142_5149_packet.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  exact-replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Syntax check
+        run: |
+          python -m py_compile \
+            analysis/w33_pass5142_q5_cubic_leader20_closure.py \
+            analysis/w33_pass5143_root_cayley_metric_theorem.py \
+            analysis/w33_pass5144_root_coset_gram_theta_bridge.py \
+            analysis/w33_pass5145_q5_cubic_leader21_closure.py \
+            analysis/w33_pass5146_q5_sharp_leader18_embedded_census.py \
+            analysis/w33_pass5147_root_projection_dirichlet_theorem.py \
+            analysis/w33_pass5148_q5_leader21_exact_wall.py
+      - name: Frozen regression
+        run: python -m pytest -q tests/test_w33_pass5142_5149_packet.py
+      - name: Replay exact producers
+        run: |
+          python analysis/w33_pass5142_q5_cubic_leader20_closure.py
+          python analysis/w33_pass5143_root_cayley_metric_theorem.py
+          python analysis/w33_pass5144_root_coset_gram_theta_bridge.py
+          python analysis/w33_pass5145_q5_cubic_leader21_closure.py
+          python analysis/w33_pass5146_q5_sharp_leader18_embedded_census.py
+          python analysis/w33_pass5147_root_projection_dirichlet_theorem.py
+          python analysis/w33_pass5148_q5_leader21_exact_wall.py
+      - name: Verify replay is clean
+        run: git diff --exit-code -- data/PART_W33_PASS5142_Q5_CUBIC_LEADER20_CLOSURE.json data/PART_W33_PASS5143_ROOT_CAYLEY_METRIC_THEOREM.json data/PART_W33_PASS5144_ROOT_COSET_GRAM_THETA_BRIDGE.json data/PART_W33_PASS5145_Q5_CUBIC_LEADER21_CLOSURE.json data/PART_W33_PASS5146_Q5_SHARP_LEADER18_EMBEDDED_CENSUS.json data/PART_W33_PASS5147_ROOT_PROJECTION_DIRICHLET_THEOREM.json data/PART_W33_PASS5148_Q5_LEADER21_EXACT_WALL.json
