@@ -1,0 +1,78 @@
+{
+  "range": [5174, 5181],
+  "status": "EXECUTED_WITH_EVIDENCE_FIREWALL",
+  "5174": {
+    "status": "THEOREM_ALL_Q_FULL_THETA_SPECTRAL_GAP",
+    "operator": "A_theta=q(P0+P1+P2+P3)-4I",
+    "nonlinear_projection_bound": "P0+P1+P2+P3 <= 3I on the orthogonal complement of the q^2-dimensional linear-character sector",
+    "second_adjacency_eigenvalue": "3q-4",
+    "spectral_gap": "q",
+    "field_range": "all finite fields"
+  },
+  "5175": {
+    "status": "THEOREM_ROOT_CAYLEY_METRIC_CHARACTERISTIC_2",
+    "field_range": "q=2^f",
+    "shells": ["1","4(q-1)","7(q-1)^2","4(q-1)^2(2q-3)","(q-1)^2(q-2)(q-4)"],
+    "anchors": {"2":[1,4,7,4],"4":[1,12,63,180],"8":[1,28,343,2548,1176]},
+    "synthesis": "Pass5143 + Pass5165 + Pass5175 classify the root-Cayley word metric over every finite field."
+  },
+  "5176": {
+    "status": "THEOREM_GLOBAL_EQUIVARIANT_RADIUS6_PROVENANCE_REFINED",
+    "hub_only_falsifier": [0,219,492,493,526,527],
+    "hub_only_false_candidates": [216,494,525],
+    "refined_rule": "maximum vote -> maximum singleton-source count -> minimum induced tie-graph degree",
+    "connected_weight6_rooted_sets": 11401011,
+    "false_first_corrections": 0,
+    "global_guaranteed_error_weight": 6,
+    "global_sweep_bound": 4
+  },
+  "5177": {
+    "status": "THEOREM_Q5_P_SIDE_EXOTIC_COAREA_DEFECT_AT_LEAST_10",
+    "P_component_code": "325 copies of Cut(K6) tensor Cut(K6)=[225,25,25]",
+    "component_states_exhausted": 33554432,
+    "distinct_component_profiles": 140,
+    "old_P_candidate_h8_2_h9_1_possible": false,
+    "minimum_positive_P_coarea_cost_at_weight625": 50,
+    "minimum_positive_P_active_chart_defect": 10,
+    "conditional_consequence": "if a weight-625 word is P-heavy then A_P<=240 and total A<=490",
+    "firewall": "L-heavy-only remains open because the odd-q L chart graph is connected, not the same tensor decomposition"
+  },
+  "5178": {
+    "status": "THEOREM_ALL_Q_QUARTIC_CHAMBER_PARITY_FRONTIER",
+    "bound": "wt >= S1-2S2+4S3-8S4+16*N_{occupancy>=5}",
+    "remainders_r0_to_r8": [0,0,0,0,0,16,64,176,384],
+    "exact_sparse_sector": "the quartic formula is exact when every apartment contains at most four selected leader chambers",
+    "purpose": "collision-safe fourth-order tool for the reserved q5 leader frontier"
+  },
+  "5179": {
+    "status": "THEOREM_ALL_Q_P_TENSOR_COMPONENT_MINIMUM_SHELL",
+    "factor": "Cut(K_{q+1})=[C(q+1,2),q,q]",
+    "tensor_parameters": "[C(q+1,2)^2,q^2,q^2]",
+    "minimum_words": "simple tensors of factor vertex-star cuts",
+    "minimum_shell_size": "(q+1)^2",
+    "q5_minimum_shell_size": 36
+  },
+  "5180": {
+    "status": "THEOREM_P_ATOM_LINE_PANEL_RESOLUTION",
+    "atom_weight": "q^2",
+    "atoms_per_chamber_star": "q^2",
+    "atom_owner_multiplicity": 2,
+    "owners": "two distinct chambers sharing one line panel",
+    "atoms_per_same_line_chamber_pair": "q",
+    "q5_reduction": "a P-heavy-free weight-625 candidate is exactly 25 disjoint P atoms; a chamber star is the distinguished pattern containing all five copies over each of five panel edges through one chamber"
+  },
+  "5181": {
+    "status": "THEOREM_EVEN_Q_DUAL_TENSOR_TRANSFER_WITH_ODD_Q_CONNECTED_ANCHORS",
+    "even_q": "self-duality of W_3(q) transfers the P tensor decomposition to L charts",
+    "odd_q": "dual W_3(q)^D=Q_4(q), so no same-geometry P/L transfer is valid",
+    "anchors": {
+      "q2": "P=10 K_3,3 components; L=10 K_3,3 components",
+      "q3": "P=45 K_6,6 components; L connected on 540 charts",
+      "q4": "P=136 K_10,10 components; L=136 K_10,10 components",
+      "q5": "P=325 K_15,15 components; L connected on 9750 charts"
+    },
+    "external_source": "Crnkovic-Hawtin-Svob, arXiv:2105.05833, Sec.2"
+  },
+  "headline": "This packet closes the all-q theta spectral gap, completes the root-Cayley metric over every finite field, proves global q3 radius six for a provenance-refined decoder, and converts the q5 P-heavy-free equality shell into a 25-atom gluing problem against a connected L-side constraint geometry.",
+  "boundary": "The q5/all-q apartment-code minimum-distance theorem is not claimed. Pass5177 is P-side conditional in odd characteristic; L-heavy-only equality remains open. The q5 strict leader frontier is owned by Pass5182-5189 and must be reported from that packet's latest certified state."
+}
