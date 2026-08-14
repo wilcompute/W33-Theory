@@ -7,7 +7,7 @@ the global minimum over literal four-star sums.  It is not a complete code-shell
 classification because the 425 chamber generators have a 169-dimensional kernel.
 """
 from collections import Counter
-import itertools,json
+import itertools,json,math
 from pathlib import Path
 from analysis.w33_pass5074_gauge_active_chart_tester import build_W,chamber_stars
 ROOT=Path(__file__).resolve().parents[1]
@@ -19,7 +19,7 @@ def main():
     for i,j,k in itertools.combinations(range(1,len(stars)),3):
         w=(base^stars[i]^stars[j]^stars[k]).bit_count();h[w]+=1;tested+=1
         if w<mn:mn=w;arg=[0,i,j,k]
-    assert tested==len(list(itertools.combinations(range(424),3)))
+    assert tested==math.comb(424,3)
     out={'pass':5084,'status':'PASS','q':4,'stars':425,'fixed_star':0,'representatives_tested':tested,
          'minimum_four_star_weight':mn,'minimum_witness':arg,'weight_histogram':dict(sorted(h.items())),
          'minimum_256_found':mn==256,
