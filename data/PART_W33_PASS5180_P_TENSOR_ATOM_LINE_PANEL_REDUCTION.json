@@ -1,0 +1,31 @@
+{
+  "pass": 5180,
+  "status": "THEOREM_P_TENSOR_ATOM_LINE_PANEL_COVER_AND_Q5_EQUALITY_REDUCTION",
+  "all_q_atom_geometry": {
+    "P_components": "q^2(q^2+1)/2",
+    "minimum_atoms_per_component": "(q+1)^2",
+    "atom_carrier": "q-fold labelled cover of unordered same-line chamber pairs",
+    "atom_count_identity": "[q^2(q^2+1)/2](q+1)^2 = q * [(q+1)(q^2+1) C(q+1,2)]",
+    "atom_realizers": "Each minimum P atom is the common component restriction of exactly two chamber stars sharing one line.",
+    "star_footprint": "A chamber star uses q^2 P components. Its q line-panel partners each occur in exactly q of those component atoms."
+  },
+  "anchors": {
+    "2": {"q":2,"chambers":45,"P_components":10,"minimum_atoms_per_component":9,"total_P_minimum_atoms":90,"same_line_chamber_pairs":45,"atom_cover_multiplicity_over_line_pair":2,"chamber_active_P_components":4,"apartments_per_active_component_in_star":4,"chamber_partner_count_on_line":2,"components_per_partner":2,"chamber_stars_through_component":18,"atom_realizing_chamber_stars":2},
+    "3": {"q":3,"chambers":160,"P_components":45,"minimum_atoms_per_component":16,"total_P_minimum_atoms":720,"same_line_chamber_pairs":240,"atom_cover_multiplicity_over_line_pair":3,"chamber_active_P_components":9,"apartments_per_active_component_in_star":9,"chamber_partner_count_on_line":3,"components_per_partner":3,"chamber_stars_through_component":32,"atom_realizing_chamber_stars":2},
+    "4": {"q":4,"chambers":425,"P_components":136,"minimum_atoms_per_component":25,"total_P_minimum_atoms":3400,"same_line_chamber_pairs":850,"atom_cover_multiplicity_over_line_pair":4,"chamber_active_P_components":16,"apartments_per_active_component_in_star":16,"chamber_partner_count_on_line":4,"components_per_partner":4,"chamber_stars_through_component":50,"atom_realizing_chamber_stars":2},
+    "5": {"q":5,"chambers":936,"P_components":325,"minimum_atoms_per_component":36,"total_P_minimum_atoms":11700,"same_line_chamber_pairs":2340,"atom_cover_multiplicity_over_line_pair":5,"chamber_active_P_components":25,"apartments_per_active_component_in_star":25,"chamber_partner_count_on_line":5,"components_per_partner":5,"chamber_stars_through_component":72,"atom_realizing_chamber_stars":2}
+  },
+  "q5": {
+    "P_components": 325,
+    "minimum_atoms_per_component": 36,
+    "atom_pool": 11700,
+    "line_panel_pairs": 2340,
+    "labels_per_line_panel_pair": 5,
+    "chamber_stars": 936,
+    "components_per_star": 25,
+    "stars_through_component": 72,
+    "P_heavy_free_weight625_reduction": "exactly 25 distinct P components, one weight-25 minimum atom in each; all connected L-side theta constraints remain to be imposed"
+  },
+  "consequence": "The unresolved L-heavy-only q5 weight-625 sector is a finite 25-atom compatibility problem on a q-labelled line-panel carrier, not an unconstrained apartment-coordinate search.",
+  "boundary": "This is an exact reduction, not an emptiness proof. P-heavy weight-625 candidates and the reduced L-heavy-only compatibility problem remain logically possible until separately excluded."
+}
