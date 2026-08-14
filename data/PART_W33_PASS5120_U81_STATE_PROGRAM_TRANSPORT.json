@@ -1,0 +1,15 @@
+{
+  "pass": 5120,
+  "status": "THEOREM_EXPLICIT_U81_STATE_ROOT_PROGRAM_TRANSPORT",
+  "root_normal_form": "u(a,b,c,d)=x0(a)x1(b)x2(c)x3(d)",
+  "state_factorization": "u=[x0(a)x2(c)x3(d)] x1(b)",
+  "state_coordinates": ["b", "a", "c", "d"],
+  "program_factorization": "u=[x1(b)x2(c+ab)x3(d+2ac+a^2b)] x0(a)",
+  "program_coordinates": ["a", "b", "c+ab", "d+2ac+a^2 b"],
+  "symbolic_matrix_identity": true,
+  "q3_elements": 81,
+  "q3_bijection": true,
+  "regular_basis_transport": "Order the delta_u basis of F3[U81] by either state cosets H27*x1(b) or program cosets F3^3*x0(a). The polynomial coordinate change gives the exact permutation between the two orderings.",
+  "relation_to_Pass5105": "Pass5105 proves protected H1(F3) is one regular F3[U81] module, so this is an explicit coordinate transport on the canonical regular controller model.",
+  "boundary": "The formula is an exact U81/group-algebra compiler. It is not asserted to equal BT865 independently seeded chain-level bases without an additional seed-to-regular-basis comparison."
+}
