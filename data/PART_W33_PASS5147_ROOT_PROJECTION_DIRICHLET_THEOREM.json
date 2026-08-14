@@ -1,0 +1,10 @@
+{
+  "pass": 5147,
+  "status": "THEOREM_ALL_Q_ROOT_PROJECTION_DIRICHLET_MEAN_VALUE",
+  "operator_identity": "A_theta=q(P0+P1+P2+P3)-4I; L_theta=q(4I-P0-P1-P2-P3)",
+  "dirichlet_identity": "<f,L_theta f>=q sum_i ||(I-Pi)f||^2=sum_theta_edges |f(u)-f(v)|^2",
+  "indicator_coarea": "|delta_theta S|=q sum_i ||1_S-Pi1_S||^2; a root coset with k selected states contributes k(q-k)",
+  "spectral_gap_reduction": "On mean-zero f, gap>=q iff sum_i ||Pi f||^2<=3||f||^2",
+  "linear_sector_boundary": "Pass5137 attains equality in the q^2-dimensional linear-character sector; the nonlinear projection inequality is still open all-q.",
+  "boundary": "Exact all-q operator theorem; not by itself an all-q spectral-gap or apartment-distance proof."
+}
