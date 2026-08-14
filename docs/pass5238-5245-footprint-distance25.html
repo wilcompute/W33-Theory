@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pass5238–5245 — Footprint distance 25 and zero-P frontier</title><style>body{font-family:system-ui,sans-serif;max-width:980px;margin:40px auto;padding:0 20px;line-height:1.55}code{background:#f4f4f4;padding:.1em .3em} .box{border:1px solid #bbb;border-radius:12px;padding:18px;margin:18px 0} h1,h2{line-height:1.15}</style></head><body>
+<h1>Pass5238–5245: footprint distance closes</h1>
+<p><strong>Exact q=5 footprint theorem:</strong> <code>C_F=[325,65,25]_2</code>.  The proof uses the complete weight-8 dual shell: 24,375 checks, replication 600, and pair codegrees 25/5/0 in the rank-4 P-component association scheme.  Even primal/check intersections give <code>300w ≤ 25 e1 + 5 e2 ≤ 25 C(w,2)</code>, hence <code>w≥25</code>.</p>
+<div class="box"><strong>Minimum shell.</strong> Equality forces a 25-clique of <code>NO_5^+(5)</code>. Exact clique enumeration gives 156 maximum cliques, precisely the 156 point footprints.</div>
+<h2>Apartment-code consequence</h2>
+<p>Pass5207 reduced every P-heavy exotic word of apartment weight 625 to a nonzero footprint word of weight at most 24.  That branch is now impossible.  Together with Pass5191, every q=5 word of weight 625 is one of the 936 chamber stars.</p>
+<p><strong>Firewall:</strong> this closes the equality shell, not the strict minimum-distance problem.  A lower-weight word has not yet been excluded.</p>
+<h2>The remaining strict sector</h2>
+<p>Any q=5 word of weight below 625 has zero P-component parity.  Otherwise the new footprint distance supplies at least 25 parity-odd P components and each costs at least 25 apartments.  In the zero-parity sector every active P component lies in the even subcode of <code>Cut(K6)⊗Cut(K6)</code>, whose exact minimum is 40.  Therefore any strict counterexample activates at most 15 of the 325 P components.</p>
+<h2>Dual-shell moment principle</h2>
+<p>If a dual-check orbit has coordinate replication <code>r</code> and maximum pair codegree <code>λ</code>, even intersections imply <code>d ≥ 1+r/λ</code>.  Exact footprint anchors are now q=3: <code>[45,15,9]</code>, q=5: <code>[325,65,25]</code>, and q=7: <code>[1225,175,49]</code>.</p>
+<p>At q=7 a weight-12 dual word has a 1,920,800-word symplectic orbit with replication 18,816 and maximum pair codegree 392, so <code>1+18816/392=49</code>.  Fixed-coordinate MILPs exclude dual weights 9, 10 and 11.</p>
+<h2>Next obstruction</h2>
+<p>The q=5 strict front is now: eliminate nonzero global codewords supported on at most 15 P components while satisfying the connected-L constraints.  Leader 36 remains open until that block-sparse sector is closed.</p>
+</body></html>
