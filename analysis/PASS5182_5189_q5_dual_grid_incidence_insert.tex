@@ -1,0 +1,59 @@
+\ifdefined\WPassFiveOneEightTwoLoaded\else
+\gdef\WPassFiveOneEightTwoLoaded{1}
+\subsection*{Passes 5182--5189: q=5 leader 33, full cut geometry, and the dual-grid incidence layer}
+The q=5 strict-counterexample recursion advances two more leader sizes.  The sharpened path law from Pass~5173 closes every $m=31$ layer through the deletion cap $N_1=55$; the weakest layer is $N_1=54$ with apartment-weight lower bound $673$.  Hence a q=5 word below $625$ has chamber leader at least $32$.
+
+For $m=32$, the remaining obstruction is removed by a new gallery-distance-four coupling.  A selected five-edge Levi path has opposite outer chamber edges.  Such a chamber pair lies in one apartment and has exactly two shortest galleries in its $C_8$, so
+\[
+  P_5\le 2N_4.
+\]
+The sole dangerous layer $N_1=56$ has $P_4\ge160$ and $P_5\ge256$, hence $N_3\ge160$ and $N_4\ge128$.  The conditioned distance distribution is $(56,152,160,128)$ and gives
+\[
+  \operatorname{wt}\ge631.
+\]
+Thus every strict q=5 counterexample has chamber leader at least $33$.
+
+Two exact all-q identities now connect the chamber distance scheme back to the Levi and point geometries.  If $x,y$ are the selected point and line degree vectors, then
+\[
+  N_2=x^{\mathsf T}Ny-(m+2N_1),
+\]
+and
+\[
+  {x^{\mathsf T}A_Px+y^{\mathsf T}A_Ly\over2}=N_1+2N_2+N_3.
+\]
+The point and line graphs are
+$\operatorname{SRG}((q+1)(q^2+1),q(q+1),q-1,q+1)$, so the second identity carries an exact quadratic-form spectral bound.  At q=5 and $m=33$ the defect is quantized in $3/2+2\mathbb Z_{\ge0}$, giving the integer cap $N_1+2N_2+N_3\le312+4N_1$.
+
+The full cut-space theorem from Pass~5110 also admits a useful global form.  A minimum chamber representative $Y$ satisfies, for every Levi vertex set $S$,
+\[
+  2|Y\cap\delta(S)|\le|\delta(S)|,
+\]
+or equivalently
+\[
+  2e_\Gamma(S)\le4e_Y(S)+\sum_{v\in S}(q+1-2d_Y(v)).
+\]
+For q=5 this forces every host incidence between selected-degree-three vertices to be selected and every host $3$--$2$--$3$ path to contain a selected edge.  This is strictly stronger than the singleton degree cap used in the earlier recursion.
+
+The P-component tensor decomposition now has a geometric identification.  The chamber-star P-component footprints are indexed by W-points.  Every P component is indexed by an unordered polar pair $\{H,H^\perp\}$ of non-isotropic projective lines; its point carrier
+\[
+  H\sqcup H^\perp
+\]
+is a dual grid inducing $K_{q+1,q+1}$, and its $(q+1)^2$ minimum tensor atoms are exactly the edges of that complete bipartite graph.  For distinct W-points, their component footprints meet in $q$ components when the points are collinear and one component otherwise.
+
+If $B$ is point-by-P-component incidence and $N$ is ordinary point-line incidence, then
+\[
+  BB^{\mathsf T}=(q^2-1)I+(q-1)A+J=(q-1)NN^{\mathsf T}+J.
+\]
+Every W-line meets every dual grid in zero or two points, hence $N^{\mathsf T}B=0$ over $\mathbb F_2$.  At q=5, $\operatorname{rank}_2N=91$ and $\operatorname{rank}_2B=65$, so
+\[
+  \operatorname{im}_{\mathbb F_2}B=\ker_{\mathbb F_2}N^{\mathsf T}
+\]
+and the incidence-dual code is
+\[
+  \boxed{[156,65,12]_2}.
+\]
+Its $325$ minimum words are exactly the $325$ P-component dual grids.  More generally, for every q the binary W-line dual has minimum distance $2(q+1)$ and its complete minimum shell is precisely the $q^2(q^2+1)/2$ dual grids.
+
+\paragraph{Evidence boundary.}
+The q=5 minimum-distance theorem remains open at leaders $\ge33$, and the weight-$625$ equality shell still requires the connected L-side gluing.  The dual-grid minimum-shell theorem does not imply that minimum dual-grid words span the full incidence dual for even q.  All promoted statements are finite geometry/code statements; no physical timing or noise claim is inferred.
+\fi
