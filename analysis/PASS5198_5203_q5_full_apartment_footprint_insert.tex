@@ -1,0 +1,91 @@
+% Pass5198--5203: q=5 full-apartment correction and P-footprint quotient.
+\subsection{Full-apartment cubic correction and the $P$-footprint quotient}
+\label{sec:pass5198_5203_q5_footprint}
+
+The chamber-leader recursion at $q=5$ can be sharpened without assuming a
+fourth-order apartment-intersection classification.  For an apartment containing
+$r\in\{0,\ldots,8\}$ selected chambers one has the pointwise inequality
+\[
+ {\bf 1}_{\{r\ \mathrm{odd}\}}
+ \ge r-2\binom r2+\frac{36}{35}\binom r3-\frac{48}{5}\binom r8.
+\]
+Thus the cubic coefficient may be raised from $6/7$ to $36/35$ provided fully
+selected apartments are charged explicitly.  If $A_8$ denotes their number and
+$P_5$ the number of selected five-edge Levi paths, then every full apartment
+contains eight such windows, whereas a selected five-edge path has a unique
+apartment completion.  Hence
+\[
+ 8A_8\le P_5.
+\]
+A central selected edge of selected endpoint degrees $(i,j)$ supports at most
+$4(i-1)(j-1)$ such paths.  Therefore, writing $e_{ij}$ for the selected
+edge-type counts,
+\[
+ P_5\le\sum_{i,j}4(i-1)(j-1)e_{ij},
+ \qquad
+ A_8\le\left\lfloor\frac{P_5}{8}\right\rfloor.
+\]
+Combined with the existing pairwise Delsarte, $P_4$, $P_5$, $N_3$, and $N_4$
+constraints, this closes chamber leaders $33$, $34$, and $35$.  The respective
+new strict barriers are
+\[
+ \boxed{m_{\min}\ge34},\qquad
+ \boxed{m_{\min}\ge35},\qquad
+ \boxed{m_{\min}\ge36}.
+\]
+At leader $35$ the sharpest surviving relaxed layer is $N_1=57$, with certified
+integer lower bound $627$, only two units above the target $5^4=625$.
+Consequently this method is near its natural limit; no claim for leaders
+$m\ge36$ is made here.
+
+A separate exact quotient emerges from the opposite-point ($P$) tensor
+components.  Let $F$ be the binary incidence matrix between the
+$W(3,5)$ points and the $325$ $P$-component point blocks.  Each point lies in
+$25$ blocks and each component block consists of $12$ points inducing
+$K_{6,6}$.  Direct projective-polarity reconstruction gives
+\[
+ \operatorname{rank}_{\mathbb F_2}F=65,
+ \qquad
+ \dim\ker F^{T}=91.
+\]
+Every $W(3,5)$ line incidence vector lies in $\ker F^T$, and the binary line
+incidence code also has rank $91$.  Hence
+\[
+ \boxed{\ker F^T=\langle\text{$W(3,5)$ line incidences}\rangle_{\mathbb F_2}}.
+\]
+The same rank complement is verified independently at $q=3$ and $q=7$.
+For odd $q$, the parity of each $P$-component restriction is therefore a genuine
+cut-gauge invariant; at $q=5$, a zero component-parity vector admits a
+gauge-equivalent representative with zero point-parity vector.  This normal-form
+statement does \emph{not} assert preservation of minimum chamber-leader size.
+
+The $P$-component blocks themselves carry a strongly regular intersection
+graph.  In general its parameters are
+\[
+ \operatorname{SRG}\!\left(
+ \frac{q^2(q^2+1)}2,
+ (q+1)(q^2-1),
+ 3q^2-q-2,
+ 2q(q+1)
+ \right).
+\]
+At $q=5$ this is
+\[
+ \operatorname{SRG}(325,144,68,60)
+\]
+with nontrivial eigenvalues $14$ and $-6$.  The $25$ components in a fixed
+W-point footprint form a clique, and the Delsarte bound
+$1-144/(-6)=25$ proves that these footprints are maximum cliques.  Every
+block-graph edge lies in exactly two distinguished point-footprint cliques.
+The resulting binary footprint code has parameters $[325,65]$ at the level of
+length and dimension and contains weight-$25$ point-footprint words.
+Its minimum distance is \emph{not} promoted here: the exact exclusion of
+nonzero weights below $25$, and the residual zero-parity apartment sector,
+remain open.
+
+\paragraph{Evidence firewall.}
+Passes 5198--5200 prove only the strict-counterexample barrier
+$m_{\min}\ge36$ at $q=5$; they do not prove $d=625$ or classify the weight-$625$
+equality shell.  Passes 5201--5203 are $P$-side quotient and block-geometry
+theorems and preserve the established odd-$q$ $P/L$ asymmetry.  No $L$-side
+tensor decomposition is inferred from them.
