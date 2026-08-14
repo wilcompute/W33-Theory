@@ -1,0 +1,15 @@
+{
+  "pass": 5175,
+  "status": "THEOREM_ROOT_CAYLEY_METRIC_CHARACTERISTIC_2",
+  "field_range": "q=2^f",
+  "two_move_collision": "The two orderings of root directions (0,2) coincide because -2st=0, so shell2=7(q-1)^2.",
+  "normalized_three_move_locus": "for a,b!=0: u=0 or u=1, or v in {0,1,u,u^2}",
+  "shell_formula": {"d0":"1","d1":"4(q-1)","d2":"7(q-1)^2","d3":"4(q-1)^2(2q-3)","d4":"(q-1)^2(q-2)(q-4)"},
+  "anchors": {
+    "2":{"q":2,"vertices":16,"shells":{"0":1,"1":4,"2":7,"3":4},"normalized_three_move_locus_verified":true},
+    "4":{"q":4,"vertices":256,"shells":{"0":1,"1":12,"2":63,"3":180},"normalized_three_move_locus_verified":true},
+    "8":{"q":8,"vertices":4096,"shells":{"0":1,"1":28,"2":343,"3":2548,"4":1176},"normalized_three_move_locus_verified":true}
+  },
+  "synthesis": "Together with Pass5143 and Pass5165, the four-root U(q) Cayley word metric is symbolically classified over every finite field.",
+  "boundary": "Exact finite-field/group theorem; no physical timing or hardware claim."
+}
