@@ -1,0 +1,23 @@
+{
+  "pass": 5148,
+  "status": "THEOREM_Q5_LEADER21_SINGLE_SHARP_SECTOR_WALL",
+  "q": 5,
+  "leader_size": 21,
+  "adjacent_pair_cap": 33,
+  "branches": {
+    "n1<=29": {"weight_lower_bound": 809},
+    "n1=30": {"N112_lower": 27, "weight_lower_bound": 1052},
+    "n1=31": {"N112_lower": 31, "weight_lower_bound": 834},
+    "n1=32": {"N112_lower": 36, "weight_lower_bound": 637},
+    "n1=33": {
+      "N112_lower": 48,
+      "S3_from_112_lower": 1200,
+      "weight_lower_bound": 590,
+      "S3_needed_for_625": 1242,
+      "remaining_triple_intersection_mass": 42
+    }
+  },
+  "closed_sectors": "All leader-21 sectors with n1<=32 are excluded below weight 625.",
+  "open_sector": "Only n1=33 remains for this cubic method.",
+  "boundary": "Current strict q5 counterexample leader barrier stays >=21; this pass does not raise it to 22."
+}
