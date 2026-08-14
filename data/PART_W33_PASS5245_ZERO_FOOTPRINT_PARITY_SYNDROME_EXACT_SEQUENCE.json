@@ -1,0 +1,18 @@
+{
+  "pass":5245,
+  "status":"THEOREM_Q5_ZERO_FOOTPRINT_PARITY_SYNDROME_EXACT_SEQUENCE",
+  "P_side_space":{"blocks":325,"local_dimension":25,"dimension":8125},
+  "even_block_space":{"local_dimension":24,"dimension":7800},
+  "connected_L_rank_full":7500,
+  "apartment_code_dimension":625,
+  "footprint_code":"C_F=[325,65,25]_2",
+  "footprint_dimension":65,
+  "zero_footprint_residual_dimension":560,
+  "connected_L_rank_on_even_block_space":7240,
+  "syndrome_quotient_dimension":260,
+  "exact_sequence":"0 -> C_F -> F2^325 -> Im(L|V_P)/Im(L|E) -> 0",
+  "dual_identification":"The dual of the 260-dimensional syndrome quotient is naturally C_F^perp, matching the 260 independent sparse footprint parity checks of Pass5231.",
+  "strict_block_reduction":"Pass5244: every q5 apartment-code word of weight<625 belongs to K0 and has at most15 nonzero P blocks.",
+  "new_closure_target":"Prove block-distance d_block(K0)>=16. This eliminates every strict sub625 word; Pass5238 has already classified the weight625 shell as chamber stars.",
+  "boundary":"The block-distance-16 statement is isolated but not proved here. The full q5 apartment-code distance theorem remains open on the strict side."
+}
