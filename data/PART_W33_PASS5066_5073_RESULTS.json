@@ -1,0 +1,140 @@
+{
+  "packet": [5066, 5073],
+  "status": "PASS_WITH_OPEN_Q4_SHELL_AND_ALL_Q_DISTANCE",
+  "5066": {
+    "status": "THEOREM",
+    "scope": "any finite generalized quadrangle; specialization W(3,q)",
+    "statement": "F2[apartments]/theta is canonically isomorphic to the binary Levi cycle space",
+    "W3q": {
+      "levi_cycle_dimension": "q^4",
+      "apartment_count": "q^4(q+1)^2(q^2+1)/8",
+      "theta_generates_full_dual": true
+    },
+    "remaining_boundary": "minimum distance d=q^4 is proved only at q=2,3,4"
+  },
+  "5067": {
+    "status": "UNKNOWN",
+    "target": "classify all q=4 weight-256 apartment-code words",
+    "symmetry_reduction": "fix apartment 0 and exclude only the eight chamber stars through it",
+    "model_425": {
+      "variables": 27625,
+      "equalities": 13601,
+      "equality_nonzeros": 149600,
+      "exclusion_cuts": 8,
+      "time_limit_seconds": 300,
+      "result": "TIME_LIMIT_NO_INCUMBENT"
+    },
+    "generator_kernel_dimension": 169,
+    "model_256": {
+      "independent_chamber_generators": 256,
+      "variables": 27456,
+      "equalities": 13601,
+      "equality_nonzeros": 106336,
+      "exclusion_cuts": 8,
+      "time_limit_seconds": 300,
+      "result": "TIME_LIMIT_NO_INCUMBENT"
+    },
+    "nonclaim": "no SAT/UNSAT or complete-shell verdict"
+  },
+  "5068": {
+    "status": "THEOREM",
+    "subdivision_2_height_dimensions": [81, 29, 29, 23, 1, 1, 0],
+    "spaces": ["H1_81", "Bike29", "Bike29", "W23", "J", "J", "0"],
+    "Bike29": "im(C^T) intersect ker(C)",
+    "W23": "P15 + L9",
+    "point_half": {"dimension": 15, "factors": [1, 14]},
+    "line_half_chain": [1, 9, 15],
+    "line_half_factors": [1, 8, 6],
+    "lift_check": "all 23 W23 basis vectors lift through mod 8",
+    "final_fixed_space": "unique PSp-fixed binary line J"
+  },
+  "5069": {
+    "status": "THEOREM",
+    "twisted_dimension": 5,
+    "outer_split": [2, 3],
+    "outer_charpoly": "(x-1)^2(x+1)^3",
+    "T6": {
+      "orbit_size": 8,
+      "charpoly": "(x-8)^2(x+6)(x^2-2x-16)"
+    },
+    "T10": {
+      "orbit_size": 16,
+      "charpoly": "(x-4)(x+4)(x+3)(x^2-x-4)"
+    },
+    "commute": true,
+    "joint_channels": [
+      ["8", "4"],
+      ["8", "-4"],
+      ["-6", "-3"],
+      ["1+sqrt(17)", "(1+sqrt(17))/2"],
+      ["1-sqrt(17)", "(1-sqrt(17))/2"]
+    ],
+    "irrational_relation": "T6=2*T10 on the quadratic 2-space"
+  },
+  "5070": {
+    "status": "THEOREM",
+    "original": {
+      "basis": [0,1,2,3,6,7,8,9,12,13,14,15,18,19,20,21,22,23,27,28,36,39,42,63],
+      "inverse_denominator": 9360,
+      "condition_2": 186.70365910212973
+    },
+    "balanced_raw_basis": {
+      "basis": [0,1,2,3,6,7,8,9,12,13,14,15,157,19,20,21,22,23,53,28,36,94,42,63],
+      "inverse_denominator": 3120,
+      "condition_2": 105.46218720905891,
+      "cleared_inverse_max_abs": 977
+    },
+    "smith_floor_raw_basis": {
+      "basis": [118,5,122,37,6,76,129,61,44,26,89,45,87,126,78,124,22,111,15,38,58,96,64,160],
+      "inverse_denominator": 780,
+      "point_star_smith_ceiling": 780,
+      "condition_2": 72382.48331056532,
+      "cleared_inverse_max_abs": 158050
+    },
+    "raw_subset_gap": false,
+    "interpretation": "arithmetic denominator and numerical conditioning are distinct optimization objectives"
+  },
+  "5071": {
+    "status": "EXACT_RATIONAL_SIMILARITY_BRIDGE",
+    "twisted_quadratic_block": [[1,4],[1,0]],
+    "twisted_charpoly": "x^2-x-4",
+    "historical_B2": [[4,2],[2,5]],
+    "similarity_S": [["1","1/2"],["0","1/2"]],
+    "identity": "A10*S = S*(B2-4I)",
+    "T6_on_quadratic_sector": "2*A10",
+    "B3_polynomial_from_twisted": "charpoly(4*A10+10I)=x^2-24x+76",
+    "boundary": "no geometric intertwiner with the historical transfer construction is yet built"
+  },
+  "5072": {
+    "status": "THEOREM",
+    "orders": {"H": 16, "N_PSp_H": 32, "N_PGSp_H": 64},
+    "quotient": "N_PGSp(H)/H ~= V4",
+    "H_fixed_apartments": 2,
+    "fixed_pair_relation": "the second H-fixed apartment is disjoint from the base; N_PSp/H swaps the pair",
+    "unordered_pair_stabilizer_order": 64,
+    "order_census": {
+      "H16": {"1":1,"2":7,"4":8},
+      "N32": {"1":1,"2":19,"4":12},
+      "N64": {"1":1,"2":35,"4":28}
+    },
+    "center_orders": [4,4,4],
+    "derived_orders": [2,4,4]
+  },
+  "5073": {
+    "status": "Q5_EXACT_ANCHOR",
+    "q": 5,
+    "points": 156,
+    "lines": 156,
+    "apartments": 73125,
+    "theta_checks": 390000,
+    "tanner_variable_degree": 16,
+    "tanner_check_degree": 3,
+    "apartment_point_graph_degree": 32,
+    "apartment_point_graph_triangles": 1560000,
+    "tanner_6_cycles": 1170000,
+    "formula_check": "1170000 = 390000*(5-2)",
+    "anchors": [2,3,4,5],
+    "symbolic_local_formula": "q^3(q+1)^2(q^2+1) C(q,3)=T(q)(q-2)",
+    "remaining_boundary": "prove there are no cross-chart Tanner 6-cycles for arbitrary q"
+  }
+}
