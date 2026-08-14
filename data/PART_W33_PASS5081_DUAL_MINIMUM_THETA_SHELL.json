@@ -1,0 +1,12 @@
+{
+  "pass":5081,
+  "status":"THEOREM_WITH_Q2_MACWILLIAMS_CHECK",
+  "theorem":"For the apartment code of any finite generalized quadrangle, the weight-3 dual words are exactly local theta triples.",
+  "proof":["A dual weight-3 word is three distinct apartments A,B,C with boundary(A)+boundary(B)+boundary(C)=0 over F2.","Hence C=A symmetric-difference B. Since A,B,C are 8-cycles, A and B share exactly four edges.","In a girth-8 generalized-quadrangle incidence graph, such a four-edge overlap must be one contiguous length-four root; otherwise the symmetric difference splits or creates a shorter circuit.","The complementary roots form C, hence A,B,C are exactly a theta triple. The converse is immediate."],
+  "dual_minimum_distance":3,
+  "dual_minimum_shell":"theta hypergraph",
+  "theta_count_formula":"q^3(q+1)(q^2+1) C(q+1,3)",
+  "q2_macwilliams_dual_coefficients_0_to_8":{"0":1,"1":0,"2":0,"3":120,"4":720,"5":4500,"6":37170,"7":285120,"8":2092185},
+  "q2_theta_checks":120,
+  "boundary":"Finite code/building theorem only."
+}
