@@ -1,0 +1,52 @@
+name: Pass5110-5117 cut-gauge intrinsic decoder packet
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5110_chamber_kernel_cutspace.py'
+      - 'analysis/w33_pass5111_q5_cut_gauge_leader_barrier.py'
+      - 'analysis/w33_pass5112_intrinsic_root_chart_reconstruction.py'
+      - 'analysis/w33_pass5113_q3_equivariant_radius3_decoder.py'
+      - 'analysis/w33_pass5114_sqrt17_order_ladder.py'
+      - 'analysis/w33_pass5115_q5_root_coset_native_rank_defect.py'
+      - 'analysis/w33_pass5116_code_intrinsic_u81_controller.py'
+      - 'analysis/w33_pass5117_perfect_apartment_chamber_duality.py'
+      - 'analysis/w33_pass5110_5117_regression.py'
+      - 'tests/test_w33_pass5110_5117_packet.py'
+      - '.github/workflows/w33_pass5110_5117_packet.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5110_5117_regression.py'
+      - 'tests/test_w33_pass5110_5117_packet.py'
+      - '.github/workflows/w33_pass5110_5117_packet.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  frozen-packet:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      PYTHONPATH: .
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check numpy sympy pytest
+      - name: Syntax check producers
+        run: python -m py_compile analysis/w33_pass5110_chamber_kernel_cutspace.py analysis/w33_pass5111_q5_cut_gauge_leader_barrier.py analysis/w33_pass5112_intrinsic_root_chart_reconstruction.py analysis/w33_pass5113_q3_equivariant_radius3_decoder.py analysis/w33_pass5114_sqrt17_order_ladder.py analysis/w33_pass5115_q5_root_coset_native_rank_defect.py analysis/w33_pass5116_code_intrinsic_u81_controller.py analysis/w33_pass5117_perfect_apartment_chamber_duality.py analysis/w33_pass5110_5117_regression.py
+      - name: Frozen certificate regression
+        run: pytest -q tests/test_w33_pass5110_5117_packet.py
+      - name: Replay light exact producers
+        run: |
+          python analysis/w33_pass5110_chamber_kernel_cutspace.py
+          python analysis/w33_pass5111_q5_cut_gauge_leader_barrier.py
+          python analysis/w33_pass5114_sqrt17_order_ladder.py
+          python analysis/w33_pass5117_perfect_apartment_chamber_duality.py
+      - name: Heavy replay note
+        run: echo 'Pass5112 q4 chart reconstruction and Pass5113 1.3M-triple decoder census are frozen exact certificates; replay manually when full heavy verification is desired.'
