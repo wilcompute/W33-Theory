@@ -19,8 +19,13 @@ def check():
     assert J['5139']['minimum_word_count']=='2(q+1)(q^2+1)'
     assert J['5140']['triple_intersection_law']['(1,1,2)']=='q^2'
     assert J['5140']['triple_intersection_law']['other']=='0'
+    C=J['5140']['q5_m18_cubic_closure']
+    assert C['worst_N1']==27 and C['pair_only_bound']==320
+    assert C['triple_overlap_lower_bound']==900
+    assert C['integer_weight_lower_bound']==638
+    assert C['strict_counterexample_leader_wall']==19
     assert J['5141']['family_status']=='CONJECTURAL_BEYOND_ANCHORS'
-    assert 'distance remains open' in J['boundary']
+    assert 'leaders >=19' in J['boundary']
     return True
 
 if __name__=='__main__':
