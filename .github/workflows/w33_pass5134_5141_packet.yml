@@ -1,0 +1,62 @@
+name: Pass5134-5141 q5 triple decoder spectrum packet
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5134_q5_leader18_second_order_wall.py'
+      - 'analysis/w33_pass5135_q5_heavy_chart_third_moment.py'
+      - 'analysis/w33_pass5136_q3_radius6_structured_falsifier.py'
+      - 'analysis/w33_pass5137_theta_cayley_exact_spectrum.py'
+      - 'analysis/w33_pass5138_compiler_jennings_filtration.py'
+      - 'analysis/w33_pass5139_allq_chamber_dependency_minimum.py'
+      - 'analysis/w33_pass5140_q5_triple_chamber_star_census.py'
+      - 'analysis/w33_pass5141_root_cayley_metric_growth.py'
+      - '.github/workflows/w33_pass5134_5141_packet.yml'
+  workflow_dispatch:
+jobs:
+  exact-replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Syntax check producers
+        run: |
+          python -m py_compile analysis/w33_pass5134_q5_leader18_second_order_wall.py
+          python -m py_compile analysis/w33_pass5135_q5_heavy_chart_third_moment.py
+          python -m py_compile analysis/w33_pass5136_q3_radius6_structured_falsifier.py
+          python -m py_compile analysis/w33_pass5137_theta_cayley_exact_spectrum.py
+          python -m py_compile analysis/w33_pass5138_compiler_jennings_filtration.py
+          python -m py_compile analysis/w33_pass5139_allq_chamber_dependency_minimum.py
+          python -m py_compile analysis/w33_pass5140_q5_triple_chamber_star_census.py
+          python -m py_compile analysis/w33_pass5141_root_cayley_metric_growth.py
+      - name: Replay Pass5134
+        run: PYTHONPATH=. python analysis/w33_pass5134_q5_leader18_second_order_wall.py
+      - name: Replay Pass5135
+        run: PYTHONPATH=. python analysis/w33_pass5135_q5_heavy_chart_third_moment.py
+      - name: Replay Pass5136
+        run: PYTHONPATH=. python analysis/w33_pass5136_q3_radius6_structured_falsifier.py
+      - name: Replay Pass5137
+        run: PYTHONPATH=. python analysis/w33_pass5137_theta_cayley_exact_spectrum.py
+      - name: Replay Pass5138
+        run: PYTHONPATH=. python analysis/w33_pass5138_compiler_jennings_filtration.py
+      - name: Replay Pass5139
+        run: PYTHONPATH=. python analysis/w33_pass5139_allq_chamber_dependency_minimum.py
+      - name: Replay Pass5140
+        run: PYTHONPATH=. python analysis/w33_pass5140_q5_triple_chamber_star_census.py
+      - name: Replay Pass5141
+        run: PYTHONPATH=. python analysis/w33_pass5141_root_cayley_metric_growth.py
+      - name: Show compact statuses
+        run: |
+          python - <<'PY'
+          import json,glob
+          for p in sorted(glob.glob('data/PART_W33_PASS51*.json')):
+              try:
+                  j=json.load(open(p))
+              except Exception:
+                  continue
+              if 5134 <= int(j.get('pass',0)) <= 5141:
+                  print(p,j.get('status'))
+          PY
