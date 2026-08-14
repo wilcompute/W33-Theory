@@ -1,0 +1,16 @@
+{
+  "pass": 5112,
+  "status": "THEOREM_ALL_FINITE_GQ_INTRINSIC_ROOT_CHART_RECOVERY",
+  "root_formula": "q^3 (q+1)^2 (q^2+1)",
+  "chart_formula": "q^3 (q+1)(q^2+1)",
+  "algorithm": "dual weight-3 shell -> pair-labeled theta graph -> genuine Tanner-6 common-root blocks -> opposite-pair chart root families",
+  "theorem_basis": "Pass5081 identifies all dual minima with theta; Pass5079 identifies genuine Tanner 6-cycles with common roots. GQ girth 8 gives uniqueness of the chart extension.",
+  "anchors": {
+    "2":{"q":2,"apartments":90,"theta_checks":120,"theta_adjacency_edges":360,"recovered_roots":360,"root_block_size":2,"recovered_charts":120,"roots_per_chart":3,"apartments_per_chart":3,"exact_support_match":true},
+    "3":{"q":3,"apartments":1620,"theta_checks":4320,"theta_adjacency_edges":12960,"recovered_roots":4320,"root_block_size":3,"recovered_charts":1080,"roots_per_chart":4,"apartments_per_chart":6,"exact_support_match":true},
+    "4":{"q":4,"apartments":13600,"theta_checks":54400,"theta_adjacency_edges":163200,"recovered_roots":27200,"root_block_size":4,"recovered_charts":5440,"roots_per_chart":5,"apartments_per_chart":10,"exact_support_match":true}
+  },
+  "q5_predicted": {"roots":117000,"charts":19500,"theta_checks":390000,"apartments_per_chart":15},
+  "consequence": "The local K_(q+1) cut-test/decoder placement is intrinsic to the apartment code and does not require external point/line labels.",
+  "boundary": "Executable reconstruction is replayed at q=2,3,4; the all-q statement is the graph-theoretic theorem using the already-proved all-q root/Tanner characterization."
+}
