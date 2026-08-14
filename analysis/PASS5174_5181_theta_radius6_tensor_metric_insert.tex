@@ -1,0 +1,99 @@
+\ifdefined\WPassFiveOneSevenFourLoaded\else
+\gdef\WPassFiveOneSevenFourLoaded{1}
+\subsection*{Passes 5174--5181: all-$q$ theta gap, global q=3 radius six, complete finite-field root metric, quartic parity, and point/line tensor asymmetry}
+
+The root-coset theta spectral frontier closes uniformly.  Write the maximal-unipotent chamber controller in canonical coordinates
+\[
+ u(a,b,c,d)=x_0(a)x_1(b)x_2(c)x_3(d),
+\]
+for which direct multiplication gives
+\[
+ (a,b,c,d)(A,B,C,D)=(a+A,\ b+B,\ c+C-Ab,\ d+D-2Ac+A^2b).
+\]
+Right multiplication by $H_1,H_2,H_3$ is therefore literal translation in $b,c,d$, respectively.  Let $P_i$ be the four root-subgroup averaging projections from Pass~5147 and let
+\[
+ \mathcal L=\{f(a,b,c,d)=g(a,b)\},\qquad \dim\mathcal L=q^2,
+\]
+be the linear-character sector.  Fourier transform in $(b,c,d)$ diagonalizes $P_1+P_2+P_3$.  On $\mathcal L^\perp$ at least one of the $c,d$ frequencies is nonzero, so
+\[
+ P_1+P_2+P_3\le2I.
+\]
+Since $0\le P_0\le I$,
+\[
+ \boxed{\sum_{i=0}^{3}P_i\le3I\quad\hbox{on }\mathcal L^\perp.}
+\]
+Together with $A_\theta=q\sum_iP_i-4I$ and the already proved linear-sector eigenvalue $3q-4$, this yields the exact all-finite-field result
+\[
+ \boxed{\lambda_2(A_\theta)=3q-4,\qquad \operatorname{gap}(A_\theta)=q.}
+\]
+No nonlinear irreducible-representation classification is needed.
+
+The four-root Cayley word metric is now classified in every characteristic.  In characteristic two the $(0,2)$ two-root ordering collision removes one two-move family, and for $a,b\ne0$ the normalized three-move locus is
+\[
+ u=0,\quad u=1,\qquad\hbox{or}\qquad v\in\{0,1,u,u^2\}.
+\]
+Thus for $q=2^f$ the exact shells are
+\[
+ \boxed{1,\quad4(q-1),\quad7(q-1)^2,\quad4(q-1)^2(2q-3),\quad(q-1)^2(q-2)(q-4).}
+\]
+Combined with Pass~5143 (characteristic $>3$) and Pass~5165 (characteristic three), this completes the symbolic root-direction metric over all finite fields.
+
+The q=3 hard-decision decoder also advances from radius five to radius six, but only after falsifying the first proposed repair.  Pure max-vote plus minimum tie-graph degree fails on the connected weight-six set
+\[
+ \{0,219,492,493,526,527\},
+\]
+whose nine maximum-vote candidates form a $4$-regular tie graph containing three false candidates.  Vote provenance separates them: false candidates have no singleton local-mask vote source.  The refined deterministic rule is
+\[
+ \text{maximum vote}\ \longrightarrow\ \text{maximum singleton-source count}\ \longrightarrow\ \text{minimum tie-graph degree}.
+\]
+An exact connected census contains $11{,}401{,}011$ weight-six sets through a fixed apartment.  Every one has a nonempty first correction contained in the true error set.  The refined rule also replays all connected weights one through five with no failure and maximum three sweeps.  Component separation then gives the global theorem
+\[
+ \boxed{\text{every q=3 error pattern of weight at most six clears in at most four sweeps}.}
+\]
+This is a theorem for the stated finite hard-decision rule, not an ML decoder or noise-threshold claim.
+
+The q=5 equality-shell analysis acquires a new factorized coordinate system on the $P$/opposite-point side.  The $P$ chart-intersection graph decomposes into
+\[
+ \frac{q^2(q^2+1)}2
+\]
+components, each $K_{m,m}$ with $m=\binom{q+1}{2}$, and the theta restriction code on each component is
+\[
+ C_q\otimes C_q,\qquad C_q=\operatorname{Cut}(K_{q+1}),
+\]
+with parameters $[m^2,q^2,q^2]_2$.  Every minimum component word is a simple tensor of two vertex-star cuts, so the component minimum shell has exactly $(q+1)^2$ words.  At q=5 this is the $[225,25,25]$ code with exactly $36$ minimum words.
+
+Exhausting all $2^{25}=33{,}554{,}432$ states of one q=5 $P$ component gives $140$ distinct $(\operatorname{wt},h_8,h_9,A)$ profiles.  Under $h_8\le2,h_9\le1$, the only states are
+\[
+ (0,0,0,0),\qquad (25,0,0,10),\qquad (48,2,0,18).
+\]
+In particular the old $P$-side candidate $(h_8,h_9)=(2,1)$ is impossible.  A weight-$625$ $P$-side knapsack has minimum positive coarea cost
+\[
+ 3h_8+4h_9=50,
+\]
+so if a weight-$625$ word is $P$-heavy then
+\[
+ \boxed{A_P\le240.}
+\]
+The old conditional deficit $2$ becomes at least $10$ on the $P$ side.
+
+The minimum $P$ atoms themselves have a panel interpretation.  Every chamber star restricts to exactly $q^2$ nonzero $P$ components, each restriction a weight-$q^2$ atom.  Across the exact q=2,3,4,5 anchors these restrictions exhaust the complete tensor minimum shell.  Every $P$ atom lies in exactly two chamber stars sharing a line panel; every such chamber pair owns exactly $q$ atoms.  Thus a chamber star is the disjoint union of $q^2$ atoms, namely all $q$ copies over each of its $q$ same-line panel neighbours.  At q=5 a $P$-heavy-free weight-$625$ candidate is therefore exactly a union of $25$ disjoint $P$ atoms, while a chamber star is one distinguished $25$-atom incidence pattern.
+
+A crucial point/line firewall accompanies this tensorization.  For even $q$, the classical symplectic quadrangle $W_3(q)$ is self-dual, so point-line duality transfers the complete $P$ tensor decomposition to $L$/opposite-line charts.  For odd $q$, the classical dual is $Q_4(q)$ rather than $W_3(q)$; there is no same-geometry duality authorizing that transfer.  The repo anchors show precisely this parity split: at q=2,4 both $P$ and $L$ graphs decompose into the same $K_{m,m}$ components, whereas at q=3,5 the $P$ graph remains factorized and the $L$ chart-intersection graph is connected.  Hence the remaining odd-q equality-shell problem is a factorized-$P$/connected-$L$ gluing problem, not two copies of the same tensor knapsack.
+
+Finally, the fourth-order apartment parity coefficient is now usable directly.  For apartment occupancy $0\le r\le8$,
+\[
+ \mathbf1_{r\ \mathrm{odd}}=r-2\binom r2+4\binom r3-8\binom r4+R_5(r),
+\]
+with
+\[
+ R_5(0),\ldots,R_5(8)=0,0,0,0,0,16,64,176,384.
+\]
+Thus every chamber leader satisfies
+\[
+ \boxed{\operatorname{wt}\ge S_1-2S_2+4S_3-8S_4+16N_{r\ge5},}
+\]
+where $S_3$ is supplied by the triple-star law and $S_4$ by the seven-signature four-chamber law.  If no apartment contains five selected leader chambers, the quartic formula is exact.  This is deliberately packaged as a collision-safe tool for the parallel q=5 leader frontier rather than duplicating its reserved passes.
+
+\paragraph{Evidence boundary.}
+The all-$q$ theta gap and the finite-field root metric are closed mathematical theorems.  The q=3 radius-six result applies only to the explicitly stated deterministic hard-decision decoder.  The tensor and atom theorems are $P$-side statements for odd q; an $L$-heavy-only q=5 equality candidate is not eliminated here.  The q=5/all-q apartment-code minimum-distance theorem remains separate from the strict-leader frontier being advanced in the collision-owned Passes~5182--5189.
+\fi
