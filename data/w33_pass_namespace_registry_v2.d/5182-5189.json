@@ -1,11 +1,15 @@
 {
   "schema": "w33.pass_namespace_registry.v2.entry",
   "range": [5182, 5189],
-  "slug": "q5_leader31_sharp_path_incidence_next_frontier",
-  "title": "q5 leader-31 continuation from sharp path extensions, incidence-shell coupling, and independent structural probes",
-  "status": "RESERVED",
+  "slug": "q5_leader31_to33_dual_grid_incidence_layer",
+  "title": "q5 leader-31/32 closure, full cut geometry, P-component dual grids, and incidence-dual minimum shell",
+  "status": "EXECUTED",
   "owner": "openai-gpt56-sol-continuation",
   "reserved_at": "2026-08-14",
-  "purpose": "Continue beyond the executed Pass5166-5173 namespace without colliding with Pass5174-5181. Push the q5 strict-counterexample barrier using the sharpened P5 endpoint identity, geodesic injections, and the all-q Levi-incidence N2 bridge; separately test higher path/incidence moment identities and at least two orthogonal controller/code connections against the current repo.",
-  "boundary": "Do not claim q5/all-q minimum distance unless every leader sector is closed. Keep weight-625 equality separate from strict-counterexample barriers. Do not overlap Pass5174-5181 decoder/theta/char2 work. Treat spectral and controller identities as finite algebra, not physical performance claims."
+  "executed_at": "2026-08-14",
+  "purpose": "Collision-reconciled continuation beyond Pass5170-5173 and independent of Pass5174-5181. Close q5 chamber leaders 31 and 32; promote all-q N3 quadratic-form and full cut-coset identities; reconstruct the P-component tensor geometry as hyperbolic polar-pair dual grids; identify the q5 binary incidence-dual code; and classify the all-q incidence-dual minimum shell.",
+  "outcome": "Every q5 apartment-code word of weight <625 has chamber leader at least 33. P components are exactly hyperbolic polar-pair dual grids. At q=5 they span C(W(3,5))^perp=[156,65,12]_2 with 325 minimum words. For every q, d(C(W)^perp)=2(q+1) and the complete minimum shell is the q^2(q^2+1)/2 dual grids.",
+  "downstream_reconciliation": "Later non-overlapping Pass5191 uses the 25-atom P reduction to close the P-heavy-free q5 weight-625 sector to chamber stars. Pass5201-5202 use the Pass5186-5188 footprint/dual-grid geometry to construct the P-component parity gauge and identify the q5 footprint kernel with the W-line code. These later results extend rather than contradict this packet.",
+  "replay_status": "The dedicated Pass5182-5189 exact replay workflow is queued on GitHub Actions (run 31840340763) with no conclusion yet. Frozen certificates and pytest assertions are committed on master. The homepage materializer workflow is also queued; do not relabel queued jobs as passed.",
+  "boundary": "This packet itself does not close q5 leaders >=33 or the P-heavy equality sector. Do not claim the q5/all-q apartment-code minimum-distance theorem until every strict leader sector is closed. The all-q incidence-dual minimum-shell theorem does not imply that minimum dual-grid words span the full incidence dual for even q>=4. Finite geometry/code statements are not hardware performance claims."
 }
