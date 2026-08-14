@@ -1,0 +1,11 @@
+{
+  "pass":5206,
+  "status":"EXACT_Q5_LEADER36_FULLCUT_DEGREECLASS_REDUNDANCY",
+  "leader_size":36,
+  "open_N1_window":[54,64],
+  "side_xNy_upper":"16 n1 + 34 n2 + 45 n3",
+  "derived_N2_caps":{"54":405,"55":403,"56":403,"57":396,"58":396,"59":395,"60":390,"61":388,"62":388,"63":381,"64":381},
+  "Pass5205_Delsarte_N2":{"54":164,"55":165,"56":166,"57":167,"58":168,"59":169,"60":171,"61":172,"62":173,"63":174,"64":175},
+  "conclusion":"Degree-class aggregation of the Pass5185 pair/star full-cut rules is redundant on every open leader-36 layer; a successful cut attack must retain correlated larger-shore host incidences or use an independent quotient constraint.",
+  "boundary":"Diagnostic only; leader36 remains open."
+}
