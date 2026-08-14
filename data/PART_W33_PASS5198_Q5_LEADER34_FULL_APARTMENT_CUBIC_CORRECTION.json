@@ -1,0 +1,64 @@
+{
+  "pass": 5198,
+  "status": "THEOREM_Q5_STRICT_COUNTEREXAMPLE_LEADER_AT_LEAST_34",
+  "q": 5,
+  "leader_size_closed": 33,
+  "target_distance": 625,
+  "previous_adjacent_pair_cap": 57,
+  "raw_deletion_cap": 60,
+  "corrected_parity_minorant": "1_{r odd} >= r-2*C(r,2)+(36/35)*C(r,3)-(48/5)*C(r,8), 0<=r<=8",
+  "parity_rhs": ["0", "1", "0", "-69/35", "-136/35", "-33/7", "-24/7", "1", "0"],
+  "full_apartment_bound": {
+    "A8_upper": 66,
+    "proof": "Every fully selected apartment contributes 8 distinct selected P5 windows; a selected P5 has unique apartment completion; each central selected edge supports at most 2*2 extensions on each side, so P5<=16m. Hence 8 A8<=P5<=16m and A8<=2m=66."
+  },
+  "pair_only": {
+    "N1_le_43_integer_lower_bound": 889,
+    "N1_44_integer_lower_bound": 553
+  },
+  "ordinary_coupled_safe_layers": {
+    "44": 1771,
+    "45": 1587,
+    "46": 1437,
+    "47": 1287,
+    "48": 1103,
+    "49": 953,
+    "50": 840,
+    "51": 780,
+    "52": 747,
+    "53": 713,
+    "54": 680,
+    "55": 647,
+    "59": 1475,
+    "60": 2793
+  },
+  "critical_layers": {
+    "56": {
+      "uniform_lower_bound": 697,
+      "profiles": [
+        {"degree_counts": [2,8,16], "N112_lower": 92, "P4_lower": 146, "P5_lower": 212, "conditioned_distance_counts": [56,156,169,147], "pair_weight_lower_bound": -3159, "S3_lower": 4396, "A8_upper": 66, "corrected_integer_weight_lower_bound": 729},
+        {"degree_counts": [5,5,17], "N112_lower": 92, "P4_lower": 144, "P5_lower": 208, "conditioned_distance_counts": [56,156,169,147], "pair_weight_lower_bound": -3159, "S3_lower": 4364, "A8_upper": 66, "corrected_integer_weight_lower_bound": 697},
+        {"degree_counts": [8,2,18], "N112_lower": 92, "P4_lower": 144, "P5_lower": 208, "conditioned_distance_counts": [56,156,169,147], "pair_weight_lower_bound": -3159, "S3_lower": 4364, "A8_upper": 66, "corrected_integer_weight_lower_bound": 697}
+      ]
+    },
+    "57": {
+      "uniform_lower_bound": 718,
+      "profiles": [
+        {"degree_counts": [0,9,16], "N112_lower": 96, "P4_lower": 158, "P5_lower": 244, "conditioned_distance_counts": [57,157,170,144], "pair_weight_lower_bound": -3463, "S3_lower": 4712, "A8_upper": 66, "corrected_integer_weight_lower_bound": 751},
+        {"degree_counts": [3,6,17], "N112_lower": 96, "P4_lower": 156, "P5_lower": 240, "conditioned_distance_counts": [57,157,170,144], "pair_weight_lower_bound": -3463, "S3_lower": 4680, "A8_upper": 66, "corrected_integer_weight_lower_bound": 718},
+        {"degree_counts": [6,3,18], "N112_lower": 96, "P4_lower": 156, "P5_lower": 240, "conditioned_distance_counts": [57,157,170,144], "pair_weight_lower_bound": -3463, "S3_lower": 4680, "A8_upper": 66, "corrected_integer_weight_lower_bound": 718},
+        {"degree_counts": [9,0,19], "N112_lower": 96, "P4_lower": 156, "P5_lower": 240, "conditioned_distance_counts": [57,157,170,144], "pair_weight_lower_bound": -3463, "S3_lower": 4680, "A8_upper": 66, "corrected_integer_weight_lower_bound": 718}
+      ]
+    },
+    "58": {
+      "uniform_lower_bound": 739,
+      "profiles": [
+        {"degree_counts": [1,7,17], "N112_lower": 100, "P4_lower": 168, "P5_lower": 272, "conditioned_distance_counts": [58,158,171,141], "pair_weight_lower_bound": -3767, "S3_lower": 4996, "A8_upper": 66, "corrected_integer_weight_lower_bound": 739},
+        {"degree_counts": [4,4,18], "N112_lower": 100, "P4_lower": 168, "P5_lower": 272, "conditioned_distance_counts": [58,158,171,141], "pair_weight_lower_bound": -3767, "S3_lower": 4996, "A8_upper": 66, "corrected_integer_weight_lower_bound": 739},
+        {"degree_counts": [7,1,19], "N112_lower": 100, "P4_lower": 168, "P5_lower": 272, "conditioned_distance_counts": [58,158,171,141], "pair_weight_lower_bound": -3767, "S3_lower": 4996, "A8_upper": 66, "corrected_integer_weight_lower_bound": 739}
+      ]
+    }
+  },
+  "conclusion": "All m=33 adjacent-pair layers through raw cap 60 have apartment weight >625. Every q5 apartment-code word of weight <625 therefore has minimum chamber leader at least 34.",
+  "boundary": "This closes leader 33 only. Leaders >=34 and the weight-625 equality shell remain open; no q5/all-q minimum-distance theorem is claimed."
+}
