@@ -1,0 +1,13 @@
+{
+  "pass": 5129,
+  "status": "THEOREM_ALL_FINITE_Q_INTRINSIC_C2_UNIPOTENT_CONTROLLER",
+  "statement": "For W(3,q), after choosing a reconstructed chamber, its q^4 apartment carrier is a regular U(q)-torsor for the type-C2 maximal unipotent subgroup, and the 4q^3 active opposite-pair charts are exactly the right cosets of the four positive-root subgroups.",
+  "anchors": {
+    "2": {"q": 2, "U_order": 16, "apartment_carrier": 16, "active_charts": 32, "root_cosets": 32, "chart_size": 2, "exact_hypergraph_match": true},
+    "3": {"q": 3, "U_order": 81, "apartment_carrier": 81, "active_charts": 108, "root_cosets": 108, "chart_size": 3, "exact_hypergraph_match": true},
+    "4": {"q": 4, "U_order": 256, "apartment_carrier": 256, "active_charts": 256, "root_cosets": 256, "chart_size": 4, "exact_hypergraph_match": true},
+    "5": {"q": 5, "U_order": 625, "apartment_carrier": 625, "active_charts": 500, "root_cosets": 500, "chart_size": 5, "exact_hypergraph_match": true}
+  },
+  "intrinsic_upgrade": "Pass5112 reconstructs chambers and charts from the code, so the controller is determined by the apartment code up to code automorphism and the natural point-line orientation swap.",
+  "boundary": "Exact finite code/building/group theorem, not a hardware-performance claim."
+}
