@@ -1,0 +1,14 @@
+{
+  "pass": 5188,
+  "status": "THEOREM_Q5_DUAL_GRID_CODE_EQUALS_BINARY_INCIDENCE_DUAL",
+  "q": 5,
+  "point_line_incidence": {"shape":[156,156],"rank_F2":91,"dual_dimension":65},
+  "P_component_incidence": {"shape":[156,325],"rank_F2":65,"dual_grid_columns":325,"column_weight":12},
+  "orthogonality": "N^T B=0 over F2; every W line meets every P-component dual grid in 0 or 2 points",
+  "equality": "im_F2(B)=ker_F2(N^T)=C(W)^perp",
+  "code_parameters": "[156,65,12]_2",
+  "minimum_shell": "A_12=325; the minimum words are exactly the 325 hyperbolic polar-pair dual grids/P-component point carriers",
+  "line_intersection_histogram": {"0":39000,"2":11700},
+  "bicycle_connection": "Pass5130 gives Bike_2(Levi)=129=2*65-1; the P-component dual-grid code is one canonical 65-dimensional incidence-dual half",
+  "boundary": "Exact q=5 binary code theorem. No all-odd-q spanning claim and no apartment-code equality-shell closure is inferred."
+}
