@@ -1,0 +1,18 @@
+{
+  "range": [5230, 5237],
+  "status": "RESERVED",
+  "owner": "OpenAI-GPT-5.6-Sol",
+  "reserved_at": "2026-08-14T22:39:00Z",
+  "purpose": "Footprint-code minimum/weight-8 dual geometry, leader36 correlated-host attack, odd-q NO5+ module route, controller-atom parity bridge, plus three outside-box probes",
+  "passes": {
+    "5230": "q5 footprint minimum exact optimization / certificate attempt",
+    "5231": "q5 weight-8 dual shell structural classification and orbit invariants",
+    "5232": "leader36 correlated radius-2/3 Levi-shore bound",
+    "5233": "odd-q NO5+ footprint-rank/module theorem route",
+    "5234": "root-controller atom projection to parity/uncertainty inequality",
+    "5235": "bonkers: Hoffman 13-cover Fourier quotient on footprint code",
+    "5236": "bonkers: weight-8 dual checks as K8-minus-matching local Tanner geometry",
+    "5237": "bonkers: puncture/shorten footprint code on a 13-cover transversal"
+  },
+  "boundary": "Reservation only; no theorem status implied. q5 distance625, leader36, and footprint primal d=25 remain open until separately certified."
+}
