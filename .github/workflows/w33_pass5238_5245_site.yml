@@ -1,0 +1,31 @@
+name: W33 Pass5238-5245 homepage materializer
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Materialize theorem card
+        run: python tools/integrate_pass5238_5245_public.py
+      - name: Commit materialized homepage if changed
+        run: |
+          if git diff --quiet -- index.html docs/index.html; then
+            echo 'Homepage already contains Pass5238-5245 card.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html docs/index.html
+          git commit -m 'Materialize Pass5238-5245 footprint distance card'
+          git push origin master
