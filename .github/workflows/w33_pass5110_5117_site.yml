@@ -1,0 +1,35 @@
+name: Pass5110-5117 homepage materializer
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/PASS5110_5117_index_insert.html'
+      - 'tools/integrate_pass5110_5117_public.py'
+      - '.github/workflows/w33_pass5110_5117_site.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Materialize homepage card
+        run: python tools/integrate_pass5110_5117_public.py
+      - name: Commit homepage only
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/index.html index.html
+          if ! git diff --cached --quiet; then
+            git commit -m 'Materialize Pass5110-5117 homepage card'
+            git fetch origin master
+            git rebase origin/master
+            git push origin HEAD:master
+          fi
