@@ -1,0 +1,46 @@
+{
+  "pass": 5170,
+  "status": "THEOREM_Q5_STRICT_COUNTEREXAMPLE_LEADER_AT_LEAST_29",
+  "q": 5,
+  "leader_size_closed": 28,
+  "target_distance": 625,
+  "raw_deletion_cap": 51,
+  "adjacent_pair_cap": 48,
+  "dense_profile_census": {
+    "N1=49": {
+      "ordered_bipartition_degree_profiles": 12,
+      "all_rejected": true,
+      "minimum_rejection_margin": 2
+    },
+    "N1=50": {
+      "ordered_bipartition_degree_profiles": 9,
+      "all_rejected": true,
+      "minimum_rejection_margin": 7
+    }
+  },
+  "distance3_injection": "In a bipartite girth>=8 graph, selected 3-edge paths inject into opposite-part nonedges, so P3 <= |L||R|-m.",
+  "leaf_defect": "A leaf reaches at most four opposite vertices by a selected 3-edge path and therefore forces at least n_other-5 unreached nonedges; leaf endpoint pairs on one side are disjoint.",
+  "cubic_branch_integer_lower_bounds": {
+    "N1<=38": 696,
+    "N1=39": 1644,
+    "N1=40": 1462,
+    "N1=41": 1312,
+    "N1=42": 1128,
+    "N1=43": 1064,
+    "N1=44": 1000,
+    "N1=45": 906,
+    "N1=46": 810,
+    "N1=47": 746,
+    "N1=48": 651
+  },
+  "critical_branch": {
+    "N1": 48,
+    "N112_lower": 80,
+    "P4_lower": 128,
+    "P5_lower": 96,
+    "triple_mass_lower": 3568,
+    "integer_weight_lower_bound": 651
+  },
+  "conclusion": "The raw N1=51 layer is impossible and every bipartition degree profile at N1=49,50 violates the distance-3 injection or leaf-defect bound. Thus N1<=48; the exact cubic lower bound is then 651. Every q5 word of weight <625 has minimum chamber leader at least 29.",
+  "boundary": "This closes leader 28 only. The q5/all-q minimum-distance theorem and the weight-625 equality shell remain open for leaders >=29."
+}
