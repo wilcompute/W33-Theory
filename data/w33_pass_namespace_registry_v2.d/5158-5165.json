@@ -14,7 +14,7 @@
     "decoder": "independently replayed all connected base representatives through weight5 and all 32 centered 2+2+2 weight6 motifs; zero failures in the stated domains",
     "q5_path_dp": "arithmetic/DP and W40 equality-profile rejections independently replayed during development"
   },
-  "actions_replay": {"workflow_run_id":31829153746,"status_at_close":"queued","note":"latest producer-triggered exact replay; do not call green until rechecked"},
+  "actions_replay": {"workflow_run_id":31830024172,"status_at_close":"queued","note":"latest cross-checking exact replay; do not call green until rechecked"},
   "site_materializer": {"workflow_run_id":31829793458,"status_at_close":"queued","note":"race-hardened homepage materializer; do not call materialized until rechecked"},
   "requested_front_audits": {
     "exotic_q5_weight625":"minimal (h8,h9)=(2,1) profile survives; new fourth-local-moment defect is 21 in addition to triangle defect 28",
