@@ -1,0 +1,10 @@
+{
+  "pass":5208,
+  "status":"THEOREM_ODDQ_DUALGRID_SPANNING_EQUIVALENT_TO_BINARY_RANK_FORMULA",
+  "target_rank":"q(q^2+1)/2",
+  "anchors":{"3":15,"5":65,"7":175,"11":671},
+  "q5":"Pass5188 proves equality and [156,65,12]_2",
+  "even_q_firewall":"For even q>=4 the minimum dual grids need not span the full line-code dual; no characteristic-free spanning theorem is possible.",
+  "open_step":"Prove rank_2(F)=q(q^2+1)/2 for every odd prime power q.",
+  "boundary":"All-odd spanning remains open; finite anchors are not promoted."
+}
