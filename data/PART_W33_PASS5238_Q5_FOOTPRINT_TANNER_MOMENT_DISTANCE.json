@@ -1,0 +1,23 @@
+{
+  "pass": 5238,
+  "status": "THEOREM_Q5_FOOTPRINT_CODE_IS_325_65_25_AND_WEIGHT625_SHELL_IS_STARS",
+  "footprint_code": "C_F=[325,65,25]_2",
+  "dual_weight8_shell": {
+    "size": 24375,
+    "check_weight": 8,
+    "coordinate_degree": 600,
+    "maximum_pair_codegree": 25
+  },
+  "moment_proof": [
+    "For every primal support S and every weight-8 dual check H, r_H=|S cap H| is even.",
+    "For even r, C(r,2)>=r/2.",
+    "sum_H r_H=600|S|.",
+    "sum_H C(r_H,2)<=25 C(|S|,2).",
+    "Hence 300|S|<=25 C(|S|,2), so every nonzero word has |S|>=25."
+  ],
+  "upper_bound": "Pass5209 provides 156 point-footprint codewords of weight 25, so d=25.",
+  "equality_shell_chain": "Pass5207: P-heavy weight625 => nonzero footprint wt<=24, impossible. Pass5191: every P-heavy-free weight625 word is a chamber star.",
+  "q5_weight625_shell": "exactly the chamber stars",
+  "strict_boundary": "The apartment-code d=625 theorem is not yet closed: sub-625 words with minimum chamber leader >=36 remain open.",
+  "method_lemma": "An even-check family with coordinate degree R and maximum pair co-degree Lambda gives d>=1+ceil(R/Lambda) by the same two-moment squeeze."
+}
