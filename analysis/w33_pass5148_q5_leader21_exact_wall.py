@@ -24,23 +24,18 @@ OUT=ROOT/'data/PART_W33_PASS5148_Q5_LEADER21_EXACT_WALL.json'
 def girth8_ok(rows,nr):
     pair_seen=set();adj=[set() for _ in range(nr)]
     for C in rows:
-        for a,b in itertools.combinations(sorted(C),2):
+        pairs=list(itertools.combinations(sorted(C),2))
+        for a,b in pairs:
             if (a,b) in pair_seen:return False
             if adj[a]&adj[b]:return False
+        for a,b in pairs:
             pair_seen.add((a,b));adj[a].add(b);adj[b].add(a)
     return True
 
 
 def sharp_cap33():
-    # Deletion of any selected edge leaves m=20, where Pass5145 gives W<=31.
     raw=Fraction(31*21,19);assert raw<35
-    # W=34 would force each deletion decrement >=3, hence every selected edge
-    # has endpoint-degree sum >=5 and there can be no degree-one endpoint.
-    # With N1=0: N2=8 from N1+N2=2m-W=8, but N2+3N3=W gives 8+3N3=34,
-    # impossible integrally.
     assert (34-8)%3 != 0
-    # W=33 is sharp: attach one new leaf to a degree-two left vertex of the
-    # Pass5145 W=31 witness.  The new right vertex has index 8.
     rows=[(0,1,6),(0,2,7),(0,3,8),(1,4),(1,5),(2,4),(2,5),(3,4),(3,5)]
     degL=[len(C) for C in rows];degR=[0]*9
     for C in rows:
@@ -61,13 +56,11 @@ def ceil_frac(x):return (x.numerator+x.denominator-1)//x.denominator
 
 
 def main():
-    cap=sharp_cap33()
-    pair={}
+    cap=sharp_cap33();pair={}
     for c in (29,30,31,32,33):
         ov,dist,feas,lb=optimize(21,c)
         pair[str(c)]={'distance_counts':list(dist),'pair_weight_lower_bound':lb}
     assert [pair[str(c)]['pair_weight_lower_bound'] for c in (29,30,31,32,33)]==[809,473,169,-135,-439]
-
     branches={'n1<=29':{'weight_lower_bound':809}}
     for n1,pb in ((30,473),(31,169),(32,-135)):
         W=centered_wedge_floor(21,n1);N112=W-3*(n1//3)
@@ -77,23 +70,13 @@ def main():
     assert branches['n1=30']['integer_weight_lower_bound']==1052
     assert branches['n1=31']['integer_weight_lower_bound']==834
     assert branches['n1=32']['integer_weight_lower_bound']==637
-
-    # Sharp n1=33 structural refinement. Every deletion must lose at least two
-    # wedges, hence d(u)+d(v)>=4 on every selected Levi edge. Degree-one vertices
-    # therefore attach only to degree-three vertices. If N_i counts selected Levi
-    # vertices of degree i, N1+N2=2m-n1=9 and N1=3N3-24. The line-graph has 21
-    # vertices, total degree 66, and at least N1 forced degree-2 vertices, so
-    # sum C(deg_Y,2)>=72+N1. Its triangles are exactly the N3 degree-three Levi
-    # stars. Hence N112>=72+N1-3N3=48.
     N112=48;pb=-439;S3=25*N112;bound=Fraction(pb,1)+Fraction(6,7)*S3
-    need=math.ceil(Fraction((625-pb)*7,6))
-    deficit=need-S3
+    need=math.ceil(Fraction((625-pb)*7,6));deficit=need-S3
     branches['n1=33']={'pair_bound':pb,'N112_lower':N112,'S3_from_112_lower':S3,
       'integer_weight_lower_bound':ceil_frac(bound),'S3_needed_for_625':need,
       'remaining_triple_intersection_mass':deficit,
       'equivalent_sufficient_repairs':['two additional (1,1,2) triples add 50','nine (1,2,3) triples add 45','any other triple-signature mixture contributing at least 42 common-apartment incidences']}
     assert ceil_frac(bound)==590 and need==1242 and deficit==42
-
     out={'pass':5148,'status':'THEOREM_Q5_LEADER21_SINGLE_SHARP_SECTOR_WALL','q':5,
       'leader_size':21,'adjacent_pair_cap':cap,'pair_relaxations':pair,'branches':branches,
       'closed_sectors':'Every leader-21 configuration with n1<=32 has apartment weight >=637>625.',
