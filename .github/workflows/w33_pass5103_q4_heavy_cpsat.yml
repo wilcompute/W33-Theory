@@ -7,6 +7,12 @@ on:
     paths:
       - 'analysis/w33_pass5103_q4_heavy_chart_cpsat.py'
       - '.github/workflows/w33_pass5103_q4_heavy_cpsat.yml'
+  pull_request:
+    branches:
+      - master
+    paths:
+      - 'analysis/w33_pass5103_q4_heavy_chart_cpsat.py'
+      - '.github/workflows/w33_pass5103_q4_heavy_cpsat.yml'
   workflow_dispatch:
 
 jobs:
