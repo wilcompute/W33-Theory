@@ -1,0 +1,43 @@
+name: Pass5170-5173 q5 geodesic-incidence packet
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5170_q5_leader29_distance3_injection.py'
+      - 'analysis/w33_pass5171_q5_leader30_p4_delsarte_coupling.py'
+      - 'analysis/w33_pass5172_allq_incidence_n2_spectral_bridge.py'
+      - 'analysis/w33_pass5173_q5_leader31_sharp_p5_extension.py'
+      - 'data/PART_W33_PASS5170_Q5_LEADER29_DISTANCE3_INJECTION.json'
+      - 'data/PART_W33_PASS5171_Q5_LEADER30_P4_DELSARTE_COUPLING.json'
+      - 'data/PART_W33_PASS5172_ALLQ_INCIDENCE_N2_SPECTRAL_BRIDGE.json'
+      - 'data/PART_W33_PASS5173_Q5_LEADER31_SHARP_P5_EXTENSION.json'
+      - 'tests/test_w33_pass5170_5173_packet.py'
+      - '.github/workflows/w33_pass5170_5173_packet.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact-packet:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    env:
+      PYTHONPATH: .
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check numpy sympy pytest
+      - name: Syntax check producers
+        run: python -m py_compile analysis/w33_pass5170_q5_leader29_distance3_injection.py analysis/w33_pass5171_q5_leader30_p4_delsarte_coupling.py analysis/w33_pass5172_allq_incidence_n2_spectral_bridge.py analysis/w33_pass5173_q5_leader31_sharp_p5_extension.py
+      - name: Frozen regression
+        run: pytest -q tests/test_w33_pass5170_5173_packet.py
+      - name: Replay exact producers
+        run: |
+          python analysis/w33_pass5170_q5_leader29_distance3_injection.py
+          python analysis/w33_pass5171_q5_leader30_p4_delsarte_coupling.py
+          python analysis/w33_pass5172_allq_incidence_n2_spectral_bridge.py
+          python analysis/w33_pass5173_q5_leader31_sharp_p5_extension.py
+      - name: Recheck frozen regression after replay
+        run: pytest -q tests/test_w33_pass5170_5173_packet.py
