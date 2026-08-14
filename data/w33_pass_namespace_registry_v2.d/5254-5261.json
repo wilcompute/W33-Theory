@@ -3,9 +3,45 @@
   "range":[5254,5261],
   "slug":"radius8_jordan_torus_frame_shortening_zeroP_residual_reconciled",
   "title":"Reconciled continuation: q3 radius-eight echo, connected-L modular Jordan form, root torus family, dual-shell frame, Hoffman residual, and zero-footprint block code",
-  "status":"RESERVED",
+  "status":"EXECUTED_RECONCILED",
   "owner":"openai-gpt56-sol",
   "reserved_at":"2026-08-14",
-  "purpose":"Preserve and renumber the theorem stream developed concurrently with the authoritative Pass5238-5245 packet. Import that packet's q5 footprint-distance/equality closure, then continue with six independent results: q3 radius-eight false-center echo; q3/q5 connected-L GF2 Jordan structure; characteristic>3 two-root torus outer-shell theorem; q5 weight8 real-frame/binary-constant-mode theorem; Hoffman13 doubly-even shortening; q5 zero-footprint local even shell and <=15-block strict reduction; parity-syndrome exact sequence. Use remaining pass for an exact reconciliation/cross-packet theorem or stronger block-residual result.",
-  "boundary":"Do not overwrite authoritative Pass5238-5245 numbering. q5 equality shell is closed. Full q5 distance625 remains open only in strict zero-P-parity residual; no d=625 claim until block-distance/leader36 front closes. Radius8 eventual decoding remains open unless orbit-complete evidence is obtained."
+  "executed_at":"2026-08-14",
+  "reconciliation":"The science for 5254-5260 was developed concurrently under draft source filenames numbered 5239-5245 after the authoritative Pass5238-5245 packet had already claimed those numbers. No authoritative file was overwritten. This registry and PART_W33_PASS5254_5261_RESULTS.json provide the live numbering; the draft-named sources remain as immutable provenance/replay certificates.",
+  "passes":{
+    "5254":"THEOREM: 25,920 q3 weight-eight false-center echo configurations; provenance first correction is false-center-only, yet every one self-heals 8->9->1->0 in three sweeps. Monotone radius is sharply seven; eventual radius eight remains open.",
+    "5255":"THEOREM: exact q3/q5 connected-L GF2 Jordan structure. q5 zero-primary J1^2156+J3^520; one-primary J1^804+J2^1471+J3^48+J4^536.",
+    "5256":"THEOREM: in characteristic>3, U(q)/<H1,H3> is the fixed-(a,c) quotient and the distance-four shell is uniform on the nonzero torus, (q-4)^2 states per nonzero fiber.",
+    "5257":"THEOREM: complete q5 weight-eight dual shell has full real rank325 but binary rank259, with ker_F2(H8)=C_F direct-sum <1>; one odd dual check supplies exactly the missing global-parity mode.",
+    "5258":"THEOREM: Hoffman-13 shortening is a doubly-even [312,52,d_sh]_2 residual with 28<=d_sh<=40 and explicit weight40 words.",
+    "5259":"THEOREM: exhaustive 2^25 q5 local tensor census gives even minimum40 with 180 words, exactly 5x8/8x5 simple tensors; every q5 strict word therefore uses at most15 P blocks.",
+    "5260":"THEOREM: zero-footprint parity/syndrome exact sequence; strict residual dimension560, connected-L rank7240 on the 7800-dimensional even-block space, and 260-dimensional syndrome quotient dual to C_F^perp. Sufficient strict target is block distance>=16.",
+    "5261":"THEOREM: the 156 exact q5 footprint minimum words, after centering, form a two-distance unit-norm tight frame in R^90 with frame bound40 and inner products 2/15 and -1/25."
+  },
+  "development_source_mapping":{
+    "5254":"analysis/w33_pass5239_q3_radius8_false_center_echo.py",
+    "5255":"analysis/w33_pass5240_connectedL_mod2_jordan_structure.py",
+    "5256":"analysis/w33_pass5241_root_outer_shell_two_root_torus_family.py",
+    "5257":"analysis/w33_pass5242_q5_weight8_frame_constant_mode.py",
+    "5258":"analysis/w33_pass5243_hoffman13_shortened_doubly_even_code.py",
+    "5259":"analysis/w33_pass5244_q5_zero_footprint_even_tensor_shell.py",
+    "5260":"analysis/w33_pass5245_zero_footprint_parity_syndrome_exact_sequence.py",
+    "5261":"analysis/w33_pass5261_q5_footprint_minimum_shell_two_distance_frame.py"
+  },
+  "integration":{
+    "results":"data/PART_W33_PASS5254_5261_RESULTS.json",
+    "outcomes":"analysis/PASS5254_5261_EXECUTED_OUTCOMES.md",
+    "manuscript_insert":"analysis/PASS5254_5261_radius8_jordan_zeroP_frame_insert.tex",
+    "frontier_manifest":"analysis/W33_CURRENT_FRONTIER_MANIFEST.tex",
+    "regression":"analysis/w33_pass5254_5261_reconciled_regression.py",
+    "pytest":"tests/test_w33_pass5254_5261_reconciled_packet.py",
+    "replay_workflow":".github/workflows/w33_pass5254_5261_reconciled_packet.yml",
+    "public_page":"docs/pass5254-5261-radius8-jordan-zeroP.html",
+    "homepage_source":"analysis/PASS5254_5261_index_insert.html"
+  },
+  "actions_replay":{"workflow_run_id":31850917004,"status_at_close":"queued","note":"Reruns the q3 echo family, q3/q5 modular Jordan calculation, characteristic>3 torus anchors, complete 2^25 local tensor census, exact-sequence checks, and frame arithmetic. Do not call green until rechecked."},
+  "site_materializer":{"workflow_run_id":31850987652,"status_at_close":"queued","note":"Race-hardened root/docs homepage materializer; do not call materialized until rechecked."},
+  "authoritative_q5_frontier":"The preceding Pass5238-5245 packet proves C_F=[325,65,25]_2 and that every q5 weight625 apartment word is a chamber star. Full q5 d=625 is not yet proved: any strict counterexample lies in the 560-dimensional zero-footprint residual and, by Pass5259, uses at most15 P blocks.",
+  "new_strict_target":"Prove block distance d_block(K0)>=16 for the zero-footprint residual. This would eliminate every strict sub625 word and complete q5 d=625 because the equality shell is already closed.",
+  "boundary":"Do not claim full q5 distance625 yet. Radius8 eventual decoding remains open. Hoffman13 shortened exact minimum remains open. Connected-L Jordan statements are exact q3/q5 only. The geometric P-atom interpretation of the two-root quotient is objectwise certified q5; the characteristic>3 quotient/metric theorem is algebraic."
 }
