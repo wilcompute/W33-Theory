@@ -26,5 +26,10 @@ jobs:
           git add index.html docs/index.html
           git diff --cached --quiet && exit 0
           git commit -m 'Materialize Pass5134-5141 homepage card'
-          git pull --rebase origin master
-          git push origin HEAD:master
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase origin master
+            if git push origin HEAD:master; then exit 0; fi
+            sleep 2
+          done
+          echo 'homepage push failed after retries' >&2
+          exit 1
