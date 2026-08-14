@@ -1,0 +1,98 @@
+{
+  "range": [5214, 5221],
+  "status": "EXECUTED_WITH_DEVELOPMENT_REPLAY_AND_ACTIONS_TRACKED_SEPARATELY",
+  "5214": {
+    "status": "THEOREM_Q5_FIXED_POINT_FOOTPRINT_L_GLUING_IS_SIX_CHAMBER_STARS",
+    "q": 5,
+    "P_footprint_components": 25,
+    "atoms_per_component": 36,
+    "fundamental_L_triangle_checks": 97500,
+    "constraint_arity": {"unary": 17250, "binary": 7500, "higher": 0},
+    "unary_survivors_per_component": 6,
+    "binary_group_pairs": 300,
+    "binary_relation": "equality of the six W-line labels through the fixed point",
+    "global_solutions": 6,
+    "conclusion": "For a fixed q5 point footprint, every P-heavy-free weight-625 union satisfying all L triangle checks is one of the six chamber stars based at that point."
+  },
+  "5215": {
+    "status": "THEOREM_GLOBAL_Q3_PROVENANCE_DECODER_RADIUS7",
+    "projective_base_apartment_stabilizer": 16,
+    "connected_orbit_counts": [1, 5, 57, 1043, 25929, 734414],
+    "weight7_extensions_tested": 64439500,
+    "false_or_empty_after_vote_and_singleton_stage": 0,
+    "global_guaranteed_error_weight": 7,
+    "global_sweep_bound": 5
+  },
+  "5216": {
+    "status": "THEOREM_EXACT_CONNECTED_ODDQ_L_CHART_SPECTRA_Q3_Q5",
+    "q3": {
+      "vertices": 540,
+      "degree": 6,
+      "triangle_free": true,
+      "spectrum": "6^1,3^60,2^84,1^81,(-1)^120,(-3)^116; roots of x^2-2x-9 each mult24; roots of x^2+x-18 each mult15"
+    },
+    "q5": {
+      "vertices": 9750,
+      "degree": 15,
+      "triangle_free": true,
+      "spectrum": "15^1,6^130,5^1235,3^520,1^1899,0^520,(-2)^520,(-3)^625,(-4)^520,(-5)^1534; roots of x^2-3x-50 each mult90; x^2+2x-75 each65; x^2+2x-30 each104; roots of x^3-4x^2-12x+40 each576"
+    }
+  },
+  "5217": {
+    "status": "THEOREM_Q5_ROOT_OUTER_SHELL_IS_NONZERO_P_ATOM_TORUS",
+    "P_atom_projection": "(a,b,c,d)->(a,c)",
+    "atoms_in_chamber_star": 25,
+    "atom_weight": 25,
+    "outer_shell_states": 16,
+    "outer_shell_distinct_atoms": 16,
+    "outer_atom_image": "(a,c) in (F5^*)^2",
+    "complement_atoms": 9,
+    "complement": "a=0 or c=0"
+  },
+  "5218": {
+    "status": "EXACT_Q5_LEADER36_QUARTIC_AGGREGATE_METHOD_WALL",
+    "minorant_family": "odd(r)>=r-2C2+aC3+bC4-cC8, 0<=r<=8, a,b,c>=0",
+    "polytope_vertices": [
+      [0,0,0], ["6/7",0,0], [0,"24/35",0], ["36/35",0,"48/5"], [0,"36/35",24]
+    ],
+    "critical_N1_window": [54,64],
+    "result": "On every Pass5205 critical profile, the optimum has b=0 and reproduces exactly the existing ordinary or full-apartment-corrected cubic bound.",
+    "leader36_closed": false
+  },
+  "5219": {
+    "status": "THEOREM_Q5_ROOT_TORUS_CROSS_CONNECTEDL_SYNDROME_DUALITY",
+    "torus_atoms": 16,
+    "torus_apartments": 400,
+    "cross_atoms": 9,
+    "cross_apartments": 225,
+    "L_restriction_histogram_torus": {"0":9530,"3":80,"4":140},
+    "L_restriction_histogram_cross": {"0":9500,"1":140,"2":80,"5":30},
+    "fundamental_L_triangle_syndrome_weight_each": 664,
+    "syndrome_profile_each": {"1":40,"2":16,"3":64,"4":100},
+    "star_syndrome_weight": 0
+  },
+  "5220": {
+    "status": "THEOREM_ALL_Q_P_ATOM_PRESENTATION_AND_L_SYNDROME_RANK",
+    "atom_variables": "q^2(q^2+1)(q+1)^2/2",
+    "component_relations": "2q+1 per P component",
+    "P_side_dimension": "q^4(q^2+1)/2",
+    "L_syndrome_rank_on_P_side": "q^4(q^2-1)/2",
+    "full_code_dimension": "q^4",
+    "q5": {"atom_variables":11700,"internal_relations":3575,"P_side_dimension":8125,"L_rank":7500,"code_dimension":625}
+  },
+  "5221": {
+    "status": "THEOREM_EXACT_CONNECTEDL_MOD2_RANKS_Q3_Q5",
+    "q3": {"vertices":540,"rank_A":440,"nullity_A":100,"rank_A_plus_I":360,"nullity_A_plus_I":180},
+    "q5": {"vertices":9750,"rank_A":7074,"nullity_A":2676,"rank_A_plus_I":6891,"nullity_A_plus_I":2859},
+    "firewall": "The characteristic-zero L spectrum is not semisimple after reduction mod2; binary equality/residual arguments must use the actual modular modules."
+  },
+  "parallel_frontier_reconciliation": {
+    "Pass5206": "Degree-class aggregation of full cut-coset constraints is redundant at leader36; larger-shore correlated incidences or an independent quotient are required.",
+    "Pass5207": "Any P-heavy q5 weight625 exotic would force nonzero footprint weight <=24.",
+    "Pass5209": "Footprint code C_F is [325,65,d<=25], hull dimension64; primal d=25 remains open.",
+    "Pass5213": "Dual footprint code C_F^perp=[325,260,8]_2.",
+    "strict_q5_frontier": "Every sub-625 word has chamber leader at least 36; leader36 remains open."
+  },
+  "literature_boundary": "Primary arXiv work on flag association schemes of generalized quadrangles provides surrounding association-scheme machinery, but no direct source was found for the specific connected opposite-line chart spectra or fixed-footprint atom-gluing theorem. This is a search boundary, not a novelty claim.",
+  "boundary": "The q5/all-q apartment-code minimum-distance theorem remains open at leader36. Footprint primal distance25 remains open, so the full weight625 equality shell is not yet globally classified; Pass5214 classifies the point-footprint P-heavy-free slice exactly. Radius7 is an exact theorem only for the stated deterministic q3 hard-decision decoder. L-spectrum and mod2-rank results are exact finite q3/q5 statements unless explicitly labeled all-q. Controller/atom statements are finite algebraic geometry, not physical-performance claims."
+}
