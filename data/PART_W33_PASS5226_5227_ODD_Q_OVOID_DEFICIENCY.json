@@ -1,0 +1,101 @@
+{
+  "boundary": "alpha is EXHAUSTIVE only at q=3 (n=40), where it is 7 with both bounds settled. At q=5,7,9 this pass establishes ONLY the weak lower bounds in `rows` -- the searches did NOT reach q^2-q+1 and no upper bound is established at those q. q^2-q+1 is recorded as a comparison target, NOT as a result of this pass, and the literature value for odd q is not reproduced here",
+  "pass_5226": {
+    "hoffman": "q^2+1 for all q, even and odd",
+    "rows": [
+      {
+        "alpha_established": 7,
+        "bound_settled": "both",
+        "hoffman": 10,
+        "method": "exhaustive",
+        "n": 40,
+        "q": 3,
+        "q2_q_1": 7,
+        "reaches_q2_q_1": true,
+        "restart_greedy": 7,
+        "seconds": 0.0,
+        "srg": [
+          40,
+          12,
+          2,
+          4
+        ]
+      },
+      {
+        "alpha_established": 18,
+        "bound_settled": "lower only",
+        "hoffman": 26,
+        "method": "witness",
+        "n": 156,
+        "q": 5,
+        "q2_q_1": 21,
+        "reaches_q2_q_1": false,
+        "restart_greedy": 18,
+        "seconds": 75.0,
+        "srg": [
+          156,
+          30,
+          4,
+          6
+        ]
+      },
+      {
+        "alpha_established": 33,
+        "bound_settled": "lower only",
+        "hoffman": 50,
+        "method": "witness",
+        "n": 400,
+        "q": 7,
+        "q2_q_1": 43,
+        "reaches_q2_q_1": false,
+        "restart_greedy": 32,
+        "seconds": 75.0,
+        "srg": [
+          400,
+          56,
+          6,
+          8
+        ]
+      },
+      {
+        "alpha_established": 50,
+        "bound_settled": "lower only",
+        "hoffman": 82,
+        "method": "witness",
+        "n": 820,
+        "q": 9,
+        "q2_q_1": 73,
+        "reaches_q2_q_1": false,
+        "restart_greedy": 46,
+        "seconds": 75.0,
+        "srg": [
+          820,
+          90,
+          8,
+          10
+        ]
+      }
+    ],
+    "rule": "W(3,q) has an ovoid iff q is even",
+    "settled": {
+      "alpha": 7,
+      "deficiency": 3,
+      "hoffman": 10,
+      "note": "deficiency = q on ONE data point, not a family",
+      "q": 3
+    }
+  },
+  "pass_5227": {
+    "cross_lane": "Track B Pass5212 closed alpha=13 on NO_5^+(5) with the identical shape -- 13 disjoint dual grids as witness, Hoffman 325*6/150=13 as certificate. Two lanes, no contact, same method",
+    "reading": "even q was construct-then-certify, never a search: Pass4897 CONSTRUCTED the polarity, its 65 absolute points were the object, and Hoffman only certified optimality. Odd q has no such object, so subset search is all that remains and it performs worst there",
+    "recalibrates": "Pass 5222 read a fast alpha(H(3,9))=28 as the witness method being powerful. It is not -- the fraction of target reached decays with q here",
+    "settled_both_bounds": [
+      3
+    ],
+    "weak_lower_only": [
+      5,
+      7,
+      9
+    ]
+  }
+}
