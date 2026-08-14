@@ -1,0 +1,14 @@
+{
+  "pass": 5202,
+  "status": "THEOREM_Q5_P_FOOTPRINT_KERNEL_EQUALS_W_LINE_CODE",
+  "construction": "P components are polarity pairs {L,L^perp} of non-isotropic lines in PG(3,q), with point block L union L^perp.",
+  "anchors": {
+    "3": {"PG_points":40,"PG_lines":130,"W_isotropic_lines":40,"nonisotropic_lines":90,"P_components":45,"component_block_size":8,"point_footprint_weight":9,"rank_F_over_F2":15,"kernel_Ft_dimension":25,"W_line_code_rank_over_F2":25,"kernel_equals_line_code":true,"line_block_intersections":{"0":1080,"2":720}},
+    "5": {"PG_points":156,"PG_lines":806,"W_isotropic_lines":156,"nonisotropic_lines":650,"P_components":325,"component_block_size":12,"point_footprint_weight":25,"rank_F_over_F2":65,"kernel_Ft_dimension":91,"W_line_code_rank_over_F2":91,"kernel_equals_line_code":true,"line_block_intersections":{"0":39000,"2":11700}},
+    "7": {"PG_points":400,"PG_lines":2850,"W_isotropic_lines":400,"nonisotropic_lines":2450,"P_components":1225,"component_block_size":16,"point_footprint_weight":49,"rank_F_over_F2":175,"kernel_Ft_dimension":225,"W_line_code_rank_over_F2":225,"kernel_equals_line_code":true,"line_block_intersections":{"0":411600,"2":78400}}
+  },
+  "rank_pattern_verified": "rank(F)=q(q^2+1)/2 and rank(W-line code)=(q+2)(q^2+1)/2 for q=3,5,7",
+  "q5_kernel": "For F in F2^{156 x 325}, rank(F)=65 and dim ker(F^T)=91. The W(3,5) line incidence code has rank 91 and is contained in ker(F^T), hence equality.",
+  "q5_gauge_normal_form": "Zero P-component parity iff the point-parity vector lies in the W-line incidence code. Therefore line-panel cut toggles can gauge the point-parity vector to zero.",
+  "boundary": "The q=3,5,7 equalities are exhaustive finite computations. No all-odd-q rank theorem is claimed. The gauge move need not preserve leader cardinality. The minimum distance of im(F^T) and the zero-parity residual apartment sector remain open."
+}
