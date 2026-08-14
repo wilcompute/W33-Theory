@@ -1,0 +1,14 @@
+{
+  "pass":5243,
+  "status":"THEOREM_Q5_HOFFMAN13_SHORTENING_IS_DOUBLY_EVEN_312_52_RESIDUAL",
+  "parent":"C_F=[325,65,25]_2 (Pass5238)",
+  "systematic_cover_coordinates":13,
+  "shortened_length":312,
+  "shortened_dimension":52,
+  "doubly_even":true,
+  "distance_lower_bound":28,
+  "distance_upper_bound":40,
+  "possible_minimum_weights":[28,32,36,40],
+  "weight40_witness_family":"Two collinear W-points in one cover carrier cancel their unique systematic coordinate and have footprint-row sum weight40.",
+  "boundary":"The exact shortened minimum is not claimed here."
+}
