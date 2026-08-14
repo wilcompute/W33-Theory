@@ -13,7 +13,6 @@
 #include <cstdint>
 #include <fstream>
 #include <iostream>
-#include <sstream>
 #include <string>
 #include <unordered_set>
 #include <utility>
@@ -51,20 +50,19 @@ int main(int argc,char**argv){
         for(uint64_t key:cur){auto V=unpack(key,size);vector<int>C;for(int v:V)for(int u:adjv[v])C.push_back(u);sort(C.begin(),C.end());C.erase(unique(C.begin(),C.end()),C.end());for(int u:C){if(binary_search(V.begin(),V.end(),u))continue;auto W=V;W.push_back(u);nxt.insert(canon(W));}}
         cur.swap(nxt);cnt[size+1]=cur.size();if(cnt[size+1]!=expected[size+1]){cerr<<"orbit count mismatch\n";return 5;}
     }
+    // Freeze the exact representative order used by the development runner.
+    vector<uint64_t> reps(cur.begin(),cur.end());
     // Size-six provenance stage itself is already true-only on every orbit rep.
-    for(uint64_t key:cur){auto V=unpack(key,6);auto F=provenanceStage(V);if(F.empty()||!subset(F,V))return 6;}
+    for(uint64_t key:reps){auto V=unpack(key,6);auto F=provenanceStage(V);if(F.empty()||!subset(F,V))return 6;}
     long long ext=0;atomic<int>bad(0);
 #ifdef _OPENMP
 #pragma omp parallel for schedule(dynamic,256) reduction(+:ext)
 #endif
-    for(long long ii=0;ii<(long long)cur.size();ii++){
-        if(bad.load())continue;auto it=cur.begin();advance(it,ii);auto V=unpack(*it,6);
+    for(long long ii=0;ii<(long long)reps.size();ii++){
+        if(bad.load())continue;auto V=unpack(reps[(size_t)ii],6);
         vector<int>C;for(int v:V)for(int u:adjv[v])C.push_back(u);sort(C.begin(),C.end());C.erase(unique(C.begin(),C.end()),C.end());
         for(int u:C){if(binary_search(V.begin(),V.end(),u))continue;auto E=V;E.push_back(u);sort(E.begin(),E.end());auto F=provenanceStage(E);ext++;if(F.empty()||!subset(F,E)){bad.store(1);break;}}
     }
-    // The OpenMP loop above is intentionally optional; standard-library unordered_set
-    // iterator advance is reproducible but not performance-optimal. The frozen exact
-    // certificate was produced with the equivalent vectorized local runner.
     if(bad)return 7;
     if(ext!=64439500){cerr<<"extension count "<<ext<<" expected 64439500\n";return 8;}
     cout<<"{\"status\":\"PASS\",\"stabilizer\":16,\"orbit_counts\":[1,5,57,1043,25929,734414],\"weight7_extensions_tested\":64439500,\"false_provenance_stage\":0}\n";
