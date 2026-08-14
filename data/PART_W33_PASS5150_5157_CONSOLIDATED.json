@@ -1,0 +1,21 @@
+{
+  "range":[5150,5157],
+  "status":"EXECUTED_RESULTS_FROZEN_COLLISION_RECONCILED",
+  "results":{
+    "5150":"Exterior theta parity: every unselected apartment has even selected-neighbor count; active theta checks equal 2(q-1)|S|.",
+    "5151":"Second theta moment: x^T A^2 x >= k(k+2)|S| with defect in 8 Z_>=0; q2 exhaustive zero-defect shell is exactly 45 weight-16 chamber stars.",
+    "5152":"Centered theta Rayleigh weight inversion: rho=D(1/2-alpha)/(1-alpha) and alpha=(D/2-rho)/(D-rho).",
+    "5153":"q4 root-coset Smith form is 1^180 plus 2^4; cokernel Z^72 direct_sum (Z/2)^4.",
+    "5154":"Theta walk: P1=1/2 universally; P2>=1/4+1/[8(q-1)] with exact excess Delta_2/(D^2|S|).",
+    "5155":"One explicit native augmentation relation versus prior exact rank drops 0,1,4,8,10 forces additional hidden modular defect from q>=4.",
+    "5156":"Positive-root cardinality N controls derivative volume while total height H controls safe Jennings depth; (N,H)=(3,4),(4,7),(6,16) for A2,C2,G2.",
+    "5157":"Ordinary theta conductance/uncentered indicator Rayleigh is identically 1/2/D/2 and therefore cannot prove distance alone."
+  },
+  "collision_reconciliation":"Pass5118-5125 already owned theta half-regularity, q7 rank falsification, and the safe Jennings theorem. A separate live thread then claimed Pass5142-5149. This packet was renumbered to 5150-5157 and retains only nonduplicated refinements/consequences.",
+  "firewalls":[
+    "q5/all-q minimum distance remains open unless a separate packet closes it.",
+    "Pass5155 uses prior certified ranks and does not claim a new all-q rank formula.",
+    "Pass5156 is a synthesis of prior derivative/Jennings theorems; algebraic depth is not physical latency.",
+    "Pass5152 is an exact identity, not a spectral extremal bound."
+  ]
+}
