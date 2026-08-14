@@ -1,0 +1,39 @@
+{
+  "pass": 5171,
+  "status": "THEOREM_Q5_STRICT_COUNTEREXAMPLE_LEADER_AT_LEAST_30",
+  "q": 5,
+  "leader_size_closed": 29,
+  "target_distance": 625,
+  "raw_deletion_cap": 51,
+  "generic_bound_at_N1_49": 663,
+  "N1_50_bipartition_profiles": {
+    "total": 18,
+    "rejected_by_distance3_or_leaf_defect": 7,
+    "surviving_leaf_free": 3,
+    "surviving_three_leaf": 8,
+    "surviving_six_leaf": 0
+  },
+  "four_path_injection": "In a bipartite girth>=8 leader, selected four-edge paths inject into gallery-distance-3 outer chamber pairs, so P4<=N3.",
+  "conditioned_branches": {
+    "leaf_free_(0,8,14)": {
+      "N112_lower": 84,
+      "P4_lower": 138,
+      "P5_lower": 138,
+      "conditioned_distance_counts": [50,134,138,84],
+      "conditioned_pair_weight_lower_bound": -2623,
+      "triple_mass_lower": 3894,
+      "integer_weight_lower_bound": 715
+    },
+    "three_leaf_(3,5,15)": {
+      "N112_lower": 84,
+      "P4_lower": 136,
+      "P5_lower": 124,
+      "conditioned_distance_counts": [50,135,136,85],
+      "conditioned_pair_weight_lower_bound": -2655,
+      "triple_mass_lower": 3832,
+      "integer_weight_lower_bound": 630
+    }
+  },
+  "conclusion": "N1=51 is impossible and the generic relaxation closes N1<=49. At N1=50 the distance-3/leaf test removes every six-leaf profile, while N3>=P4 couples the Delsarte and cubic constraints and gives weight >=715 or >=630 on the remaining profile types. Every q5 word of weight <625 has minimum chamber leader at least 30.",
+  "boundary": "This closes leader 29 only. The q5/all-q minimum-distance theorem and weight-625 equality shell remain open for leaders >=30."
+}
