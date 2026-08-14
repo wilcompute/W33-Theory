@@ -1,0 +1,12 @@
+{
+  "pass":5079,
+  "status":"THEOREM",
+  "theorem":"For every finite generalized quadrangle of order (q,q), the apartment/theta Tanner graph has exactly T(q)(q-2) six-cycles.",
+  "root_lemma":["Two apartments in a theta check share a length-four geodesic root.","Given A=R union R1 and B=R union R2, an apartment adjacent to both either is the theta companion R1 union R2 or also contains R; a different two-root pattern contradicts uniqueness of geodesics below distance four in a girth-eight GQ.","Therefore genuine Tanner six-cycles are exactly triples of apartments through one common root."],
+  "root_count":"q^3(q+1)^2(q^2+1)",
+  "cycles_per_root":"C(q,3)",
+  "theta_count":"T(q)=q^3(q+1)(q^2+1) C(q+1,3)",
+  "identity":"q^3(q+1)^2(q^2+1) C(q,3)=T(q)(q-2)",
+  "anchors":{"q2":0,"q3":4320,"q4":108800,"q5":1170000},
+  "boundary":"Pure Tanner/building combinatorics; no decoder threshold or physical-noise claim follows."
+}
