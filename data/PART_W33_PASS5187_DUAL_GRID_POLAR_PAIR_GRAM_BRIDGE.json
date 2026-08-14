@@ -1,0 +1,18 @@
+{
+  "pass": 5187,
+  "status": "THEOREM_ALL_Q_P_COMPONENT_DUAL_GRID_POLAR_PAIR_AND_GRAM_BRIDGE",
+  "geometric_identification": "Each P component is an unordered polar pair {H,H^perp} of hyperbolic/non-isotropic projective lines; its point carrier H union H^perp is a dual grid inducing K_{q+1,q+1}.",
+  "component_count": "q^2(q^2+1)/2",
+  "incidence_gram": "BB^T=(q^2-1)I+(q-1)A+J=(q-1)NN^T+J",
+  "rational_spectrum": "2q^2(q+1)^1, [2q(q-1)]^{q(q+1)^2/2}, 0^{q(q^2+1)/2}",
+  "binary_orthogonality": "B^T N=0 over F2 because every W line meets a dual grid in 0 or 2 points",
+  "odd_q_binary_rank_anchors": {
+    "q=3": {"rank_F2_B":15,"nullity_F2_N":15},
+    "q=5": {"rank_F2_B":65,"nullity_F2_N":65},
+    "q=7": {"rank_F2_B":175,"nullity_F2_N":175},
+    "q=11":{"rank_F2_B":671,"nullity_F2_N":671}
+  },
+  "odd_q_binary_rank_conjecture": "For odd q, im_F2(B)=ker_F2(N^T). This is verified at q=3,5,7,11 but is not promoted without a cross-characteristic rank proof.",
+  "q5": "325 P components are exactly the 325 dual grids from hyperbolic polar-line pairs; B is 156x325 with rational rank 91 and binary rank 65 in the frozen q=5 anchor.",
+  "boundary": "All-q dual-grid geometry and Gram identity are exact. Odd-q binary spanning remains a finite-anchor conjecture. No q5 distance/equality closure is claimed."
+}
