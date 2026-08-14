@@ -1,0 +1,102 @@
+{
+  "range": [5158, 5165],
+  "status": "EXECUTED_WITH_EXACT_PRIVATE_REPLAY_AND_ACTIONS_TRACKED_SEPARATELY",
+  "5158": {
+    "q": 5,
+    "leader_size_closed": 21,
+    "sharp_sector": {"m": 21, "N1": 33, "pair_bound": -439, "N112_lower": 48},
+    "selected_four_edge_paths_lower": 6,
+    "N123_lower": 12,
+    "triple_mass_lower": 1260,
+    "integer_weight_lower_bound": 641,
+    "strict_counterexample_leader_at_least": 22
+  },
+  "5159": {
+    "status": "THEOREM_ALL_Q_FOUR_CHAMBER_STAR_INTERSECTION_LAW",
+    "law": {
+      "(1,1,1,2,2,3)": "q",
+      "(1,1,2,2,3,4)": "1",
+      "(1,1,2,3,3,4)": "1",
+      "(1,1,3,3,4,4)": "1",
+      "(1,2,2,3,3,3)": "1",
+      "(1,2,2,3,3,4)": "1",
+      "(2,2,2,2,4,4)": "1",
+      "other": "0"
+    },
+    "anchors": [2,3,4,5],
+    "q5_rooted_histogram": {"1":19375,"5":500},
+    "signature_classes": 7,
+    "nonconstant_signature_classes": 0
+  },
+  "5160": {
+    "rule": "Among global max-vote ties, correct only candidates of minimum induced degree in the chart-sharing graph.",
+    "radius5_connected_counts": {"1":1,"2":20,"3":490,"4":13269,"5":381480},
+    "radius5_failures": 0,
+    "radius5_max_sweeps": 3,
+    "centered_weight6_motifs": 32,
+    "centered_weight6_motifs_repaired": 32,
+    "original_witness": [1,2,3,6,27,54],
+    "false_center": 0,
+    "false_center_tie_degree": 6,
+    "true_error_tie_degree": 2,
+    "global_radius6_proved": false
+  },
+  "5161": {
+    "q":5,
+    "leader_size_closed":22,
+    "adjacent_pair_cap":35,
+    "high_sector_P4_lower": {"34":56,"35":68},
+    "sector_weight_lower_bounds": {"31":1168,"32":950,"33":668,"34":972,"35":900},
+    "strict_counterexample_leader_at_least":23
+  },
+  "5162": {
+    "status":"THEOREM_ALL_Q_DEPENDENCY_CODE_SECOND_WEIGHT",
+    "dependency_code_second_weight":"2q",
+    "second_weight_words":"cuts of adjacent Levi point-line vertex pairs",
+    "second_shell_multiplicity":"(q+1)^2(q^2+1)"
+  },
+  "5163": {
+    "q":5,
+    "leader_size_closed":23,
+    "adjacent_pair_cap":38,
+    "P4_lower":{"34":44,"35":54,"36":64,"37":76,"38":94},
+    "sector_weight_lower_bounds":{"33":992,"34":1151,"35":1040,"36":854,"37":781,"38":760},
+    "strict_counterexample_leader_at_least":24
+  },
+  "5164": {
+    "q":5,
+    "leader_size_closed":24,
+    "adjacent_pair_cap":40,
+    "W40_relaxed_P4_profiles":{"(1,7,11)":100,"(4,4,12)":96,"(7,1,13)":96},
+    "P4_96_profiles_rejected_by_girth8":2,
+    "actual_W40_P4_lower":97,
+    "W40_N112_lower":57,
+    "W40_integer_weight_lower_bound":629,
+    "strict_counterexample_leader_at_least":25
+  },
+  "5165": {
+    "status":"THEOREM_ROOT_CAYLEY_METRIC_CHARACTERISTIC_3",
+    "field_range":"q=3^f",
+    "shells":["1","4(q-1)","8(q-1)^2","10(q-2)(q-1)^2","(q-1)^2(q-3)(q-5)"],
+    "q3_anchor":[1,8,32,40],
+    "combined_with_pass5143":"symbolic root-Cayley shell formulas now cover every odd characteristic",
+    "characteristic2_uniform_formula_open":true
+  },
+  "requested_front_audits": {
+    "q5_exotic_625_profile": {
+      "minimal_heavy_profile":{"h8":2,"h9":1,"A_type":248},
+      "triangle_defect":28,
+      "four_clique_moment_formula":"Q4_type=1250-6h8-9h9",
+      "minimal_profile_Q4_type":1229,
+      "four_clique_defect":21,
+      "profile_eliminated":false
+    },
+    "all_q_nonlinear_theta_gap": {
+      "target":"sum_i ||P_i f||^2 <= 3 ||f||^2 on mean-zero nonlinear sector",
+      "status":"OPEN_AND_COLLISION_OWNED_BY_RESERVED_PASS5150_5157_AT_RELEASE_TIME",
+      "duplicated_here":false
+    }
+  },
+  "headline":"At q=5 every apartment-code word of weight below 625 has minimum chamber leader at least 25.",
+  "boundary":"The q=5/all-q apartment-code minimum-distance theorem remains open for leaders >=25 and the weight-625 exotic equality shell remains unclassified. The hub-pruned q3 decoder preserves the exact radius-five guarantee and repairs the full centered minimal weight-six obstruction family, but global radius six is not proved. The all-q nonlinear theta gap is still open in this packet. Characteristic two remains the only odd/even root-metric family without a uniform symbolic shell formula."
+}
