@@ -1,11 +1,16 @@
 {
   "schema": "w33.pass_namespace_registry.v2.entry",
   "range": [5134, 5141],
-  "slug": "q5_leader18_heavy_decoder6_theta_spectrum_jennings_bonkers",
-  "title": "q5 leader-18 frontier, heavy-shell geometry, decoder radius-six, theta spectrum, compiler filtration, and three outside-box probes",
-  "status": "RESERVED",
+  "slug": "q5_cubic_leader19_decoder_radius5_theta_spectrum_jennings_bonkers",
+  "title": "q5 cubic leader-19 frontier, exact decoder radius five, theta spectrum, compiler filtration, and three outside-box closures",
+  "status": "EXECUTED",
   "owner": "openai-gpt56-sol",
   "reserved_at": "2026-08-14",
-  "purpose": "Execute the five live continuations after Pass5126-5133 plus three independent outside-box probes, with exact finite certificates and explicit evidence firewalls.",
-  "boundary": "Do not claim q5/all-q minimum distance unless proved. Decoder claims must be exhaustive/orbit-complete. Spectral/controller/compiler claims are finite algebra, not hardware physics."
+  "executed_at": "2026-08-14",
+  "purpose": "Executed all five live continuations after Pass5126-5133 plus three independent outside-box probes; committed producers, consolidated ledger, regression locks, shared manuscript integration, public theorem page, and race-hardened site/certificate workflows.",
+  "outcomes": "Pass5134 exposes the exact q5 m18 second-order wall; Pass5140 supplies the all-q triple chamber-star law and uses a cubic parity minorant to close m18 at wt>=638, raising the sub-625 counterexample leader wall to >=19. The q3 max-vote decoder has exact guaranteed radius 5 with a structured weight6 falsifier. The root-direction theta Cayley graph has a uniform q^2 linear-character spectrum and full exact q2-q5 anchor spectra. The state/program compiler preserves every Jennings layer. The all-q chamber dependency code has minimum q+1 with only panel-star minima. The root-Cayley metric has diameter <=4 and an odd-prime four-anchor polynomial shell frontier.",
+  "decoder_probe": {"workflow_run_id": 31824429883, "status": "success"},
+  "clean_replay": {"workflow_run_id": 31825968791, "status_at_close": "queued", "note": "latest race-hardened replay; do not call green until rechecked"},
+  "site_materializer": {"workflow_run_id": 31825938835, "status_at_close": "queued", "note": "first run failed only on concurrent master ref race after successful materialization/commit; workflow now retries pull-rebase-push"},
+  "boundary": "q5/all-q apartment-code distance remains open for leaders >=19. Higher shells may require fourth and higher intersection terms. Decoder radius six is false for the specified hard-decision rule only. Full all-q nonlinear theta spectrum/gap remains open. The odd-q Cayley metric shell polynomial remains conjectural beyond exact anchors. Controller/compiler/Jennings statements are finite algebra, not hardware performance."
 }
