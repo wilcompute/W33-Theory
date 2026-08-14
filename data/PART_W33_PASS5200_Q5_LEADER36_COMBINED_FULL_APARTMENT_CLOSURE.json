@@ -1,0 +1,20 @@
+{
+  "pass": 5200,
+  "status": "THEOREM_Q5_STRICT_COUNTEREXAMPLE_LEADER_AT_LEAST_36",
+  "q": 5,
+  "leader_size_closed": 35,
+  "target_distance": 625,
+  "previous_adjacent_pair_cap": 62,
+  "raw_deletion_cap": 65,
+  "method": "For each degree profile take max(ordinary 6/7 cubic lower bound, 36/35 cubic lower bound corrected by -48/5*A8), with A8 bounded by the degree-edge-type P5 upper relaxation.",
+  "uniform_layer_lower_bounds": {
+    "45":1922,"46":1772,"47":1623,"48":1439,"49":1289,"50":1107,
+    "51":923,"52":773,"53":692,"54":632,"55":636,"56":647,"57":627,
+    "58":638,"59":659,"60":651,"61":672,"62":684,"63":786,"64":2159,"65":3532
+  },
+  "critical_layer": {"N1":57,"integer_weight_lower_bound":627},
+  "secondary_wall": {"N1":54,"integer_weight_lower_bound":632},
+  "repaired_layer": {"N1":55,"ordinary_lower_bound":599,"combined_lower_bound":636},
+  "conclusion": "Every m=35 adjacent-pair layer through raw cap 65 has apartment weight >625. Every q5 apartment-code word of weight <625 therefore has minimum chamber leader at least 36.",
+  "boundary": "This closes leader 35 only. Leaders >=36 and the weight-625 equality shell remain open."
+}
