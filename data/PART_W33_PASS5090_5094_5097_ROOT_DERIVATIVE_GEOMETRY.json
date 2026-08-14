@@ -1,0 +1,49 @@
+{
+  "packet": [5090,5094,5095,5096,5097],
+  "status": "PASS",
+  "5090": {
+    "theorem": "C2 root-coset first-derivative theorem",
+    "apartments_through_fixed_chamber": "q^4",
+    "positive_root_directions": 4,
+    "root_subgroup_order": "q",
+    "cosets_per_root_direction": "q^3",
+    "active_charts_for_chamber_star": "4q^3",
+    "formal_identity": "d(q^4)/dq = 4q^3",
+    "boundary": "formal/combinatorial derivative only; q is a prime power, not a continuous physical variable",
+    "q2_anchor": {"support":16,"active_charts":32,"chart_size":2,"root_coset_graph_isomorphic":true},
+    "q3_anchor": {"support":81,"active_charts":108,"chart_size":3,"root_coset_graph_isomorphic":true}
+  },
+  "5094": {
+    "theorem": "q3 derivative graph / unipotent root-coset graph",
+    "vertices": 81,
+    "root_coset_lines": 108,
+    "lines_through_vertex": 4,
+    "line_size": 3,
+    "degree": 8,
+    "diameter": 3,
+    "distance_shells": [1,8,32,40],
+    "charpoly": "(x-8)(x-5)^4(x-2)^10(x+1)^18(x+4)^12(x^2-4x+1)^6(x^2-x-8)^6(x^2+2x-2)^6",
+    "not_Hamming_H43": true
+  },
+  "5095": {
+    "theorem": "root-commutator curvature of the second derivative",
+    "odd_q_pair_closure_orders": "q^2 four times, q^3 once, q^4 once",
+    "q3": [9,9,9,9,27,81],
+    "q5": [25,25,25,25,125,625],
+    "q7": [49,49,49,49,343,2401],
+    "q2_bad_characteristic": [4,4,4,4,4,8],
+    "interpretation": "the first root-direction derivative is exact, while second-direction composition is deformed by Chevalley commutators"
+  },
+  "5096": {
+    "theorem": "split Lie-type Steinberg derivative count",
+    "statement": "If a split finite Chevalley group has N positive roots, its maximal unipotent subgroup has q^N elements and the Steinberg degree is q^N. The N positive-root subgroups each have order q, hence their total coset count is N q^(N-1)=d(q^N)/dq.",
+    "C2": {"N":4,"value":"4q^3"}
+  },
+  "5097": {
+    "theorem": "q3 derivative graph automorphism closure",
+    "graph_automorphism_group_order": 324,
+    "PGSp43_chamber_stabilizer_order": 324,
+    "identity": "324=51840/160",
+    "consequence": "the derivative graph has exactly the full projective chamber-stabilizer symmetry"
+  }
+}
