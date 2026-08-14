@@ -2,10 +2,26 @@
   "schema": "w33.pass_namespace_registry.v2.entry",
   "range": [5198, 5205],
   "slug": "q5_leader33_full_apartment_cubic_correction",
-  "title": "q5 leader-33 closure via full-apartment corrected cubic parity and independent continuations",
-  "status": "RESERVED",
+  "title": "q5 leader-33 through leader-35 closure, P-footprint quotient, and leader-36 wall",
+  "status": "EXECUTED",
   "owner": "openai-gpt56-sol",
   "reserved_at": "2026-08-14",
-  "purpose": "Continue after the live Pass5183 q5 leader-32 closure. Prove a full-apartment occupancy correction for the cubic parity minorant, apply it to the m=33 leader frontier, and keep orthogonal quartic/P-tensor or incidence continuations collision-separated.",
-  "boundary": "Do not claim the q5/all-q minimum-distance theorem unless every remaining leader sector and the weight-625 equality shell are closed. Preserve Pass5179/5180 P-vs-L asymmetry and distinguish exact parity identities from relaxed graph-count bounds."
+  "closed_at": "2026-08-14",
+  "outcomes": [
+    "Pass5198: corrected cubic parity by charging only fully occupied apartments; q5 leader 33 closed and strict-counterexample leader barrier raised to 34.",
+    "Pass5199: degree-edge-type upper bound on five-edge paths/full apartments; q5 leader 34 closed and barrier raised to 35.",
+    "Pass5200: profilewise maximum of ordinary and full-apartment-corrected cubic bounds; q5 leader 35 closed with tight lower bound 627 and barrier raised to 36.",
+    "Pass5201: odd-q P-component parity is a chamber-cut-gauge invariant point-footprint quotient.",
+    "Pass5202: at q=5 ker(F^T) equals the rank-91 W(3,5) binary line-incidence code; the same rank complement is exhaustively verified at q=3 and q=7.",
+    "Pass5203: P-component point blocks form the SRG family with q=5 instance SRG(325,144,68,60); W-point footprints are maximum Delsarte 25-cliques.",
+    "Pass5204: shared manuscript insert, frontier-manifest integration, public theorem page, and idempotent homepage materializer/workflow.",
+    "Pass5205: exact diagnostic wall at leader 36; unresolved adjacent-pair window is N1=54..64 with current best bounds 584,551,531,542,553,574,535,556,567,579,590."
+  ],
+  "next_frontiers": [
+    "Apply Pass5185 full cut-coset inequalities to the eleven leader-36 critical degree profiles.",
+    "Determine the exact minimum distance of the q5 [325,65] P-footprint clique-span; weight 25 exists but no lower-weight exclusion is yet certified.",
+    "Analyze the zero P-component-parity residual after the Pass5202 line-gauge normal form.",
+    "Classify the weight-625 equality shell without importing a false P/L tensor symmetry."
+  ],
+  "boundary": "Pass5200 proves only that every q5 word of weight <625 has minimum chamber leader at least 36. Pass5205 does not close leader 36. The q5/all-q minimum-distance theorem and the weight-625 equality shell remain open. P-side quotient results do not imply an L-side tensor decomposition, and the footprint-code minimum distance is not claimed to be 25."
 }
