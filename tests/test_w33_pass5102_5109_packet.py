@@ -39,6 +39,10 @@ def test_pass5102_5109_frozen_certificates():
     p9=load('PART_W33_PASS5109_CURVATURE_KERNEL_V4.json')
     assert p9['sorted_sector_dimensions']==[4,4,2,2]
     assert p9['character_traces']=={'e':12,'a':0,'b':-4,'c':0}
+    assert p9['central_C3']['characteristic_polynomial']=='(x^2+x+1)^6'
+    assert p9['central_C3']['fixed_dimension']==0
+    assert p9['central_C3']['complex_split']=='omega^6 + omega^2^6'
+    assert p9['central_C3']['V4_conjugation']=={'e':'fix','a':'invert','b':'fix','c':'invert'}
 
     insert=(ROOT/'analysis/PASS5098_5101_root_coset_supplement_insert.tex').read_text()
     assert r'\input{analysis/PASS5102_5109_root_expansion_controller_lie_insert}' in insert
