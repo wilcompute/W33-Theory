@@ -1,11 +1,22 @@
 {
   "schema": "w33.pass_namespace_registry.v2.entry",
   "range": [5238, 5245],
-  "slug": "footprint_radius8_Lmodules_toruscross_post5230_bonkers",
-  "title": "post-5230 footprint/equality continuation, q3 radius eight, odd-q L modules, torus-cross family, and three outside-box probes",
-  "status": "RESERVED",
+  "slug": "footprint_distance25_zeroP_orbitals_post5230",
+  "title": "footprint distance-25 closure, weight-9 dual shell, quotient codes, odd-q orbitals, and zero-P strict reduction",
+  "status": "IN_PROGRESS",
   "owner": "openai-gpt56-sol",
   "reserved_at": "2026-08-14",
-  "purpose": "Execute the five live fronts without colliding with Pass5230-5237: consume the latest footprint/leader36 results then attack the next unresolved shell or equality obstruction; push the provenance decoder to radius eight; identify q5 connected-L characteristic-zero/GF2 module structure; generalize the root-to-P-atom torus/cross map beyond q5; and add three independent probes selected from the new structure.",
-  "boundary": "Do not duplicate reserved Pass5230-5237 work. Preserve exact theorem/diagnostic boundaries. Do not claim q5 d=625 unless strict and equality fronts are both closed. Radius-eight requires orbit-complete or exhaustive evidence. L-module claims must distinguish characteristic zero from mod2."
+  "activated_at": "2026-08-14T18:52:00-04:00",
+  "purpose": "Execute the five live post-5230 fronts plus three independent probes without colliding with Pass5230-5237 or Track A: close q5 footprint distance if the rank-4 shell permits it; classify the weight-9 dual shell; exploit the Hoffman-13 quotient; lift the PSp orbital refinement across odd-q anchors; feed footprint parity back into the leader36 strict frontier; and probe local even tensor distance, shell-moment duality, and higher-q orbital structure.",
+  "passes": {
+    "5238": "rank-4 weight-8 moment proof of q5 footprint d=25 and minimum-shell classification",
+    "5239": "complete q5 weight-9 dual orbit/census and pair statistics",
+    "5240": "Hoffman-13 quotient puncture/shorten parameters and low-weight bounds",
+    "5241": "odd-q PSp4 orbital refinement anchors q=3,5,7",
+    "5242": "strict q5 sub-625 zero-P-parity reduction using d(C_F)=25",
+    "5243": "bonkers: even subcode minimum 40 of Cut(K6) tensor Cut(K6)",
+    "5244": "bonkers: q3/q5 minimum-dual-shell moment principle certifies primal q^2 footprint distance",
+    "5245": "bonkers: combine zero-P parity and local even distance into <=15 active-P-component strict frontier"
+  },
+  "boundary": "Do not claim q5 apartment-code d=625 unless the remaining zero-P strict sector is eliminated. The q5 footprint code d=25 may be promoted only with the exact shell-moment certificate. Weight-9 completeness uses a deterministic fixed-coordinate MILP exclusion and must be labeled computational. Odd-q orbital formulas beyond q=3,5,7 remain conjectural unless separately proved."
 }

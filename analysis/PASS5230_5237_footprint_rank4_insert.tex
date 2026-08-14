@@ -1,0 +1,41 @@
+% Pass5230--5237 shared frontier insert.
+\paragraph{Pass5230--5237: the q=5 footprint dual shell exposes a rank-4 scheme.}
+Let $F$ be the $156\times325$ point--dual-grid incidence matrix from Passes 5201--5203 and let $C_F=\operatorname{im}(F^T)$.  The dual remains $C_F^\perp=[325,260,8]_2$ (Pass 5213), but the complete minimum shell is now rigidly classified.  There are exactly $24375$ weight-$8$ dual words, forming a single orbit under the generated symplectic transvections.  Every support covers exactly $48$ points twice and induces $K_8$ minus a perfect matching in the $NO_5^+(5)$ block graph.  The shell span has dimension $259$.
+
+An explicit odd dual word of weight $9$, on coordinates
+\[
+\{15,20,38,44,139,164,197,278,311\},
+\]
+therefore supplies the missing parity direction.  Consequently $C_F$ has an exact sparse parity-check presentation with $259$ independent weight-$8$ checks and one weight-$9$ check.  Since the dual minimum is $8$, this also gives odd-dual minimum $9$.
+
+The weight-$8$ shell refines the old strongly regular relation.  For two distinct P components, let $R_1$ denote block adjacency, $R_2$ nonadjacency with weight-$8$ pair-codegree $5$, and $R_3$ nonadjacency with pair-codegree $0$.  Their valencies are
+\[
+(k_1,k_2,k_3)=(144,120,60),
+\]
+and they close to a three-class association scheme.  Selected intersection-number rows are
+\[
+\begin{array}{c|cccc}
+ &R_0&R_1&R_2&R_3\\\hline
+R_1R_1&144&68&60&60\\
+R_1R_2&0&50&54&60\\
+R_1R_3&0&25&30&24\\
+R_2R_2&120&45&45&40\\
+R_2R_3&0&25&20&20\\
+R_3R_3&60&10&10&15
+\end{array}
+\]
+with primitive multiplicities $1,90,104,130$ and eigenvalue rows
+\[
+R_1:(144,14,-6,-6),\qquad
+R_2:(120,-10,-5,10),\qquad
+R_3:(60,-5,10,-5).
+\]
+Thus the weight-$8$ Tanner shell sees strictly more geometry than the SRG parameters alone.
+
+The Pass5212 Hoffman $13$-coclique is also a systematic quotient: each W-point lies in exactly one of its $13$ blocks, the restriction of $F$ to those columns has binary rank $13$, and puncturing those columns leaves rank $65$.  Hence
+\[
+0\longrightarrow C_{\rm short}\longrightarrow C_F\longrightarrow\mathbb F_2^{13}\longrightarrow0,
+\qquad \dim C_{\rm short}=52.
+\]
+
+\textbf{Firewall.}  These results do not yet prove $d(C_F)=25$.  A symmetry-broken sparse-check MILP for a nonzero word of weight at most $24$ did not finish with either feasibility or infeasibility in the bounded diagnostic run.  Therefore the q=5 P-heavy equality obstruction remains open, as does chamber leader $36$ and the full q=5 distance-$625$ theorem.  The odd-$q$ $NO_5^+(q)$ rank formula also remains a target rather than a promoted theorem.

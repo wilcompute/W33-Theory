@@ -1,0 +1,93 @@
+{
+  "range": [5230,5237],
+  "status": "EXECUTED_WITH_TWO_OPEN_DIAGNOSTICS",
+  "q": 5,
+  "5230": {
+    "status": "THEOREM_Q5_WEIGHT8_DUAL_SHELL_SINGLE_SYMPLECTIC_ORBIT",
+    "dual_code": "C_F^perp=[325,260,8]_2",
+    "weight8_shell_size": 24375,
+    "fixed_coordinate_shell_count": 600,
+    "support_geometry": "Every weight-8 dual support covers 48 W-points exactly twice; its induced P-block graph is K8 minus a perfect matching.",
+    "point_degree4_or_more_feasibility": "infeasible after fixing one W-point by point transitivity",
+    "orbit_span_rank": 259,
+    "conclusion": "The complete weight-8 shell is one orbit under the generated symplectic transvections and spans the even-weight codimension-one subcode of C_F^perp."
+  },
+  "5231": {
+    "status": "THEOREM_SPARSE_LOCAL_PARITY_PRESENTATION_OF_Q5_FOOTPRINT_CODE",
+    "odd_dual_minimum": 9,
+    "weight9_witness": [15,20,38,44,139,164,197,278,311],
+    "reason_odd_minimum": "Pass5213 gives dual minimum 8; all weight-8 words are even; an explicit weight-9 dual witness exists.",
+    "parity_check_basis": {"weight8_rows":259,"weight9_rows":1,"rank":260},
+    "conclusion": "C_F is exactly the kernel of a sparse 260-row parity-check matrix with 259 checks of weight 8 and one check of weight 9."
+  },
+  "5232": {
+    "status": "THEOREM_Q5_WEIGHT8_SHELL_REFINES_NO5PLUS_TO_3CLASS_ASSOCIATION_SCHEME",
+    "relations": {
+      "R1": {"meaning":"P-block adjacency / carrier intersection 2","valency":144,"weight8_pair_codegree":25},
+      "R2": {"meaning":"nonadjacent pair occurring in a weight-8 dual support","valency":120,"weight8_pair_codegree":5},
+      "R3": {"meaning":"nonadjacent pair never occurring in a weight-8 dual support","valency":60,"weight8_pair_codegree":0}
+    },
+    "intersection_numbers_selected": {
+      "R1R1":[144,68,60,60],
+      "R1R2":[0,50,54,60],
+      "R1R3":[0,25,30,24],
+      "R2R2":[120,45,45,40],
+      "R2R3":[0,25,20,20],
+      "R3R3":[60,10,10,15]
+    },
+    "primitive_multiplicities": [1,90,104,130],
+    "eigenvalue_rows": {
+      "R1":[144,14,-6,-6],
+      "R2":[120,-10,-5,10],
+      "R3":[60,-5,10,-5]
+    },
+    "conclusion": "The weight-8 shell exposes a rank-4 Bose-Mesner algebra strictly refining the SRG relation. This is a new finite q=5 attack surface for primal d=25."
+  },
+  "5233": {
+    "status": "ODDQ_NO5PLUS_MODULE_ROUTE_SHARPENED_NOT_CLOSED",
+    "known_anchors": {"q3_rank_F":15,"q5_rank_F":65},
+    "target_formula":"rank_2 F=q(q^2+1)/2 for odd q",
+    "new_target":"Lift the q5 rank-4 orbital refinement and its modular eigenspaces before attempting an all-odd-q rank proof.",
+    "boundary":"No all-odd-q rank theorem is promoted here."
+  },
+  "5234": {
+    "status": "ROOT_CONTROLLER_ATOM_BRIDGE_RECONCILED_NO_NEW_DISTANCE_INEQUALITY",
+    "atom_projection":"(a,b,c,d)->(a,c)",
+    "torus_atoms":16,
+    "cross_atoms":9,
+    "existing_equal_L_syndrome_weight":664,
+    "result":"The 16+9 controller split remains exactly compatible with the 25 P atoms, but parity alone supplies no new strict leader36 or footprint-distance inequality beyond Pass5219-5220.",
+    "boundary":"Negative diagnostic; no physical interpretation promoted."
+  },
+  "5235": {
+    "status": "THEOREM_HOFFMAN13_COVER_IS_SYSTEMATIC_QUOTIENT_FOR_FOOTPRINT_CODE",
+    "cover_blocks":[6,30,73,111,128,140,157,189,193,226,254,277,320],
+    "cover_size":13,
+    "each_W_point_meets_cover_blocks":1,
+    "points_per_cover_block":12,
+    "projection_rank":13,
+    "complement_puncture_rank":65,
+    "shortened_kernel_dimension":52,
+    "exact_sequence":"0 -> C_F(shortened on the 13 cover coordinates) [dim 52] -> C_F [dim 65] -> F_2^13 -> 0",
+    "conclusion":"The Hoffman coclique supplies 13 systematic quotient coordinates without reducing the punctured code dimension."
+  },
+  "5236": {
+    "status": "THEOREM_WEIGHT8_TANNER_PAIR_REFINEMENT",
+    "checks_per_coordinate":600,
+    "adjacent_pair_codegree":25,
+    "nonadjacent_pair_codegree_histogram":{"5":19500,"0":9750},
+    "per_vertex_nonadjacent_valencies":{"codegree5":120,"codegree0":60},
+    "conclusion":"Weight-8 local checks distinguish two geometrically inequivalent nonadjacent pair types invisible to the SRG parameters."
+  },
+  "5237": {
+    "status": "EXACT_SPARSE_CHECK_OPTIMIZATION_FORMULATION_OPEN",
+    "formulation":"Search nonzero y in F_2^325 satisfying the 259 weight-8 plus one weight-9 parity checks, with one coordinate fixed by block transitivity and wt(y)<=24.",
+    "trial":"A 45-second HiGHS MILP run did not return a feasibility or infeasibility certificate.",
+    "boundary":"No minimum-distance conclusion follows from timeout/noncompletion; primal d(C_F)=25 remains open."
+  },
+  "strict_frontier": {
+    "footprint_primal":"C_F=[325,65,d<=25]_2; d=25 remains open.",
+    "apartment_code":"Every q5 sub-625 word has chamber leader >=36; leader36 remains open.",
+    "equality":"Pass5207 still reduces any P-heavy exotic weight625 word to nonzero footprint weight <=24, so proving d(C_F)=25 would globally close the weight625 equality shell together with Pass5191."
+  }
+}
