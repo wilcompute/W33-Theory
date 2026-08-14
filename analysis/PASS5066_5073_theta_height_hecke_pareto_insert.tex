@@ -1,0 +1,32 @@
+\ifdefined\WPassFiveZeroSixSixLoaded\else
+\gdef\WPassFiveZeroSixSixLoaded{1}
+\subsection*{Passes 5066--5073: apartment presentation, Jacobian heights, twisted Hecke channels, and arithmetic Pareto structure}
+For the incidence graph $\Gamma$ of any finite generalized quadrangle, let $\mathcal A$ be its $8$-cycle apartments and let $\Theta$ be the binary span of the local three-apartment theta relations.  A base-vertex fan decomposition proves the exact presentation
+\[
+ \mathbb F_2^{\mathcal A}/\Theta\;\cong\; Z_1(\Gamma;\mathbb F_2).
+\]
+Indeed, after choosing a geodesic from a base vertex to every graph vertex, each edge closes to either zero or one apartment because the graph has girth eight; summing these fan apartments around a cycle cancels the chosen geodesics.  The only geodesic choices occur at opposite vertices, and changing such a choice changes the fan by a local theta relation.  For $W(3,q)$ this gives apartment-code dimension $q^4$ and proves that theta triples generate the complete dual for every prime power $q$.  The all-$q$ minimum-distance assertion $d=q^4$ remains open; it is exact at $q=2,3,4$.  A strengthened $q=4$ shell search, including a $256$-generator gauge-fixed MILP, reached its bounded solver horizon without an incumbent and therefore supplies no SAT/UNSAT verdict.
+
+For the fully subdivided $W(3,3)$ Levi graph, the characteristic-two height filtration of the critical group is now identified as actual subspaces, not only dimensions:
+\[
+ H_1^{(81)}\supset \mathcal B_{29}=\mathcal B_{29}\supset W_{23}\supset J=J\supset0,
+\]
+with dimensions $81,29,29,23,1,1,0$.  Here $\mathcal B_{29}=\operatorname{im}C^{\mathsf T}\cap\ker C$ is the binary bicycle space, $W_{23}=P_{15}+L_9$, and all $23$ basis vectors of $W_{23}$ lift through modulus eight.  The one-dimensional terminal layer is the unique fixed binary line $J$.
+
+The five orientation-twisted Steinberg channels also split canonically.  The outer involution gives a $2+3$ decomposition.  Two commuting twisted-Hecke operators have characteristic polynomials
+\[
+ (x-8)^2(x+6)(x^2-2x-16),\qquad
+ (x-4)(x+4)(x+3)(x^2-x-4),
+\]
+and joint eigenchannels
+\[
+ (8,4),\ (8,-4),\ (-6,-3),\
+ (1+\sqrt{17},(1+\sqrt{17})/2),\
+ (1-\sqrt{17},(1-\sqrt{17})/2).
+\]
+On the quadratic channel the second operator is represented over $\mathbb Q$ by $A=\begin{psmallmatrix}1&4\\1&0\end{psmallmatrix}$.  The corrected historical transfer block $B_2=\begin{psmallmatrix}4&2\\2&5\end{psmallmatrix}$ satisfies $A\sim B_2-4I$, and $4A+10I$ has characteristic polynomial $x^2-24x+76$, the corrected $B_3$ transfer polynomial.  This is an exact rational operator-polynomial bridge; no geometric intertwiner between the two constructions is claimed yet.
+
+For the point-local cubic-surface $V_{24}$ compiler, $24$ literal apartments attain the full point-star Smith floor: an exact inverse denominator of $780$.  Thus there is no raw-subset denominator gap.  The floor basis is, however, extremely ill-conditioned ($\kappa_2\approx7.24\times10^4$).  A separate three-substitution raw basis has denominator $3120$ and $\kappa_2\approx105.46$, improving both denominator and conditioning over the original $9360$, $\kappa_2\approx186.70$ basis.  Arithmetic exactness and numerical conditioning are therefore distinct optimization objectives.
+
+Three finite probes sharpen the surrounding structure.  The apartment stabilizer normalizer tower has orders $16<32<64$ in $PSp<PGSp$, with full quotient $N_{PGSp}(H)/H\cong V_4$ and exactly two $H$-fixed apartments, exchanged by the inner normalizer.  An independent $q=5$ build gives $73125$ apartments and $390000$ theta checks; its Tanner graph has exactly $1170000=390000(5-2)$ six-cycles, extending the local law to the fourth anchor $q=2,3,4,5$.  A symbolic no-cross-chart lemma remains before that six-cycle formula is promoted for arbitrary $q$.
+\fi
