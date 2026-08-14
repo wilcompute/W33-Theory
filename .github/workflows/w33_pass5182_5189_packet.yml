@@ -1,0 +1,64 @@
+name: Pass5182-5189 q5 dual-grid incidence packet
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5182_q5_leader32_sharp_path_closure.py'
+      - 'analysis/w33_pass5183_q5_leader33_p5_n4_coupling.py'
+      - 'analysis/w33_pass5184_allq_n3_quadratic_form_bridge.py'
+      - 'analysis/w33_pass5185_allq_full_cut_leader_inequality.py'
+      - 'analysis/w33_pass5186_p_component_kqq_point_design.py'
+      - 'analysis/w33_pass5187_dual_grid_polar_pair_gram_bridge.py'
+      - 'analysis/w33_pass5188_q5_dual_grid_code_exact.py'
+      - 'analysis/w33_pass5189_allq_incidence_dual_minimum_shell.py'
+      - 'data/PART_W33_PASS5182_Q5_LEADER32_SHARP_PATH_CLOSURE.json'
+      - 'data/PART_W33_PASS5183_Q5_LEADER33_P5_N4_COUPLING.json'
+      - 'data/PART_W33_PASS5184_ALLQ_N3_QUADRATIC_FORM_BRIDGE.json'
+      - 'data/PART_W33_PASS5185_ALLQ_FULL_CUT_LEADER_INEQUALITY.json'
+      - 'data/PART_W33_PASS5186_P_COMPONENT_KQQ_POINT_DESIGN.json'
+      - 'data/PART_W33_PASS5187_DUAL_GRID_POLAR_PAIR_GRAM_BRIDGE.json'
+      - 'data/PART_W33_PASS5188_Q5_DUAL_GRID_CODE_EXACT.json'
+      - 'data/PART_W33_PASS5189_ALLQ_INCIDENCE_DUAL_MINIMUM_SHELL.json'
+      - 'tests/test_w33_pass5182_5189_packet.py'
+      - '.github/workflows/w33_pass5182_5189_packet.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact-packet:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    env:
+      PYTHONPATH: .
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check numpy sympy pytest
+      - name: Syntax check producers
+        run: >-
+          python -m py_compile
+          analysis/w33_pass5182_q5_leader32_sharp_path_closure.py
+          analysis/w33_pass5183_q5_leader33_p5_n4_coupling.py
+          analysis/w33_pass5184_allq_n3_quadratic_form_bridge.py
+          analysis/w33_pass5185_allq_full_cut_leader_inequality.py
+          analysis/w33_pass5186_p_component_kqq_point_design.py
+          analysis/w33_pass5187_dual_grid_polar_pair_gram_bridge.py
+          analysis/w33_pass5188_q5_dual_grid_code_exact.py
+          analysis/w33_pass5189_allq_incidence_dual_minimum_shell.py
+      - name: Frozen regression
+        run: pytest -q tests/test_w33_pass5182_5189_packet.py
+      - name: Replay exact producers
+        run: |
+          python analysis/w33_pass5182_q5_leader32_sharp_path_closure.py
+          python analysis/w33_pass5183_q5_leader33_p5_n4_coupling.py
+          python analysis/w33_pass5184_allq_n3_quadratic_form_bridge.py
+          python analysis/w33_pass5185_allq_full_cut_leader_inequality.py
+          python analysis/w33_pass5186_p_component_kqq_point_design.py
+          python analysis/w33_pass5187_dual_grid_polar_pair_gram_bridge.py
+          python analysis/w33_pass5188_q5_dual_grid_code_exact.py
+          python analysis/w33_pass5189_allq_incidence_dual_minimum_shell.py
+      - name: Recheck frozen regression after replay
+        run: pytest -q tests/test_w33_pass5182_5189_packet.py
