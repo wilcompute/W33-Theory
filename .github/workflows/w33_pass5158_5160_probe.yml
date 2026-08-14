@@ -1,0 +1,35 @@
+name: Pass5158-5160 probe
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5158_q5_cubic_leader22_path_closure.py'
+      - 'analysis/w33_pass5159_allq_four_chamber_intersection_census.py'
+      - 'analysis/w33_pass5160_q3_decoder_hub_prune_probe.py'
+      - '.github/workflows/w33_pass5158_5160_probe.yml'
+  workflow_dispatch:
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Pass5158
+        run: PYTHONPATH=. python analysis/w33_pass5158_q5_cubic_leader22_path_closure.py
+      - name: Pass5159
+        run: PYTHONPATH=. python analysis/w33_pass5159_allq_four_chamber_intersection_census.py
+      - name: Pass5160
+        run: PYTHONPATH=. python analysis/w33_pass5160_q3_decoder_hub_prune_probe.py
+      - name: Show statuses
+        run: |
+          python - <<'PY'
+          import json
+          for p in range(5158,5161):
+              import glob
+              fs=glob.glob(f'data/PART_W33_PASS{p}_*.json')
+              for f in fs:
+                  j=json.load(open(f)); print(f,j.get('status'))
+          PY
