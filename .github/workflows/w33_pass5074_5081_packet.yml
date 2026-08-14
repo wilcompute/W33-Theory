@@ -41,12 +41,12 @@ jobs:
           python analysis/w33_pass5074_5081_regression.py
       - name: Materialize homepage card
         run: python tools/integrate_pass5074_5081_public.py
-      - name: Commit generated homepage and lightweight certificates
+      - name: Commit generated homepage
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add docs/index.html index.html data/PART_W33_PASS5078_LOCAL_CUT_DECODER.json data/PART_W33_PASS5079_ALL_Q_TANNER_SIX_CYCLES.json data/PART_W33_PASS5081_DUAL_MINIMUM_THETA_SHELL.json
+          git add docs/index.html index.html
           if ! git diff --cached --quiet; then
-            git commit -m 'Materialize Pass5074-5081 public and lightweight certificates'
+            git commit -m 'Materialize Pass5074-5081 homepage card'
             git push
           fi
