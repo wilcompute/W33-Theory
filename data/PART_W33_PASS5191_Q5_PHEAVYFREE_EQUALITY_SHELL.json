@@ -1,0 +1,20 @@
+{
+  "pass": 5191,
+  "status": "THEOREM_Q5_PHEAVYFREE_WEIGHT625_SHELL_IS_CHAMBER_STARS",
+  "atom_L_design": {
+    "atoms": 11700,
+    "L_charts": 9750,
+    "atom_degree": 50,
+    "L_chart_degree": 60,
+    "distinct_P_component_atom_codegrees": [0,1,5,25],
+    "per_atom_profile": {"0":9560,"1":1950,"5":150,"25":4}
+  },
+  "pair_moment_identity": "For a genuine 25-atom word, sum_L C(w_L,2)=2500+12 h8+18 h9.",
+  "pair_moment_upper_bound": "At most 50 atom pairs have codegree25; the other 250 pairs have codegree<=5, so the sum is <=2500.",
+  "heavy_consequence": "h8=h9=0 on the L side; a P-heavy-free weight625 word is heavy-free on both sides.",
+  "equality_structure": "The 25 atoms are five complete 5-label owner-pair groups, all on one line panel.",
+  "panel_exhaustion": {"candidate_five_pair_sets":3003,"valid_L_cut_sets":6,"valid_sets":"exactly the six K6 vertex stars"},
+  "minimum_shell_consequence": "Every q5 weight625 apartment-code word that is P-heavy-free is one of the 936 chamber stars.",
+  "remaining_equality_frontier": "Any exotic q5 weight625 word must be P-heavy; Pass5177 then forces P active-chart defect at least 10.",
+  "boundary": "Closes the P-heavy-free equality sector only; P-heavy equality and sub-625 distance remain open."
+}
