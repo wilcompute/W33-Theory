@@ -1,0 +1,44 @@
+{
+  "pass": 5176,
+  "status": "THEOREM_GLOBAL_EQUIVARIANT_RADIUS6_PROVENANCE_REFINED",
+  "q": 3,
+  "decoder_rule": "Compute the original chart-local ROM votes. Keep candidates of maximum vote; among them keep candidates with the maximum number of singleton local-mask vote sources; among any remaining tie keep candidates of minimum induced degree in the chart-sharing graph.",
+  "hub_only_falsifier": {
+    "errors": [0,219,492,493,526,527],
+    "max_vote": 2,
+    "max_vote_tie_size": 9,
+    "tie_graph_degree": 4,
+    "false_candidates": [216,494,525],
+    "example_false_correction": 494,
+    "structure": "The six true errors induce a C6 and the three false candidates are an independent transversal inside the 9-vertex 4-regular tie graph. Pure hub-degree pruning cannot distinguish them."
+  },
+  "provenance_repair": "A false candidate can never receive a singleton-source vote: a singleton local mask decodes to the occupied coordinate itself. In the hub-only falsifier every true max-vote candidate has two singleton-source votes while every false candidate has zero.",
+  "fixed_base_connected_counts": {
+    "1": 1,
+    "2": 20,
+    "3": 490,
+    "4": 13269,
+    "5": 381480,
+    "6": 11401011
+  },
+  "exact_connected_weight6_scan": {
+    "sets_tested": 11401011,
+    "false_first_corrections": 0,
+    "empty_first_corrections": 0,
+    "claim": "Every connected weight-six error set through a base apartment has a nonempty refined first correction contained in the true error set. Apartment transitivity gives the same statement for every connected weight-six set."
+  },
+  "radius5_refined_replay": {
+    "failures": 0,
+    "max_sweeps": 3,
+    "connected_counts": [1,20,490,13269,381480]
+  },
+  "global_component_argument": "For a false candidate, each vote requires at least two errors in one of its four incident charts; those four five-coordinate neighbor blocks are disjoint, so at total error weight six a false candidate has at most three votes and zero singleton-source votes. If a disconnected error pattern has a singleton component, its true error has four singleton votes. If it has a size-two component, its true errors have at least three singleton votes. The only partition of six with neither a singleton nor a size-two component is 3+3; the exact connected weight-three census has max vote three with singleton score three in every one of the 490 rooted cases. Thus any disconnected pattern either has a true candidate with vote greater than every false candidate or has a max-vote true candidate with positive singleton score, which removes all false candidates before hub pruning. Residual weight is at most five and the refined radius-five replay clears within three sweeps.",
+  "global_guaranteed_error_weight": 6,
+  "global_sweep_bound": 4,
+  "reproducers": [
+    "analysis/w33_pass5176_q3_radius6_graph_export.py",
+    "analysis/w33_pass5176_q3_radius6_provenance.cpp"
+  ],
+  "development_replay": "The exact C++ connected-weight-six scan was run over all 11,401,011 rooted sets; the weaker hub-only rule was falsified before the provenance refinement was introduced.",
+  "boundary": "Finite hard-decision decoding theorem for this exact deterministic rule. It is not a maximum-likelihood theorem, a code-distance statement, or a physical noise-threshold claim. No claim is made for weight seven."
+}
