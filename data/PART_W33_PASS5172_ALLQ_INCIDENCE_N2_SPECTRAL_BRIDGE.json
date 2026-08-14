@@ -1,0 +1,11 @@
+{
+  "pass": 5172,
+  "status": "THEOREM_ALL_Q_LEVI_INCIDENCE_N2_SPECTRAL_BRIDGE",
+  "exact_identity": "N2 = x^T N y - (m+2 N1)",
+  "incidence_spectrum": "NN^T=(q+1)I+A_point has eigenvalues (q+1)^2, 2q, 0; sigma_2(N)=sqrt(2q).",
+  "spectral_upper": "N2 <= m^2/(q^2+1) + sqrt(2q (m+2WP-m^2/v)(m+2WL-m^2/v)) - (m+2N1), v=(q+1)(q^2+1).",
+  "q5_m30_N1_51_split_bounds": [[21,30,138],[23,28,139],[24,27,140],[25,26,140],[26,25,140],[27,24,140],[28,23,139],[30,21,138]],
+  "q5_m30_N1_52_split_bounds": [[22,30,140],[24,28,141],[25,27,141],[26,26,141],[27,25,141],[28,24,141],[30,22,140]],
+  "connection": "This removes N2 as a free association-scheme coordinate once the point/line adjacent-pair split is known and gives an exact matrix bridge from Levi degree data into the chamber Delsarte program.",
+  "boundary": "The identity and spectral inequality are exact for every selected chamber set in W(3,q), but they do not by themselves close q5 leader 30. N1=51,52 still need additional coupled path/fourth-order information."
+}
