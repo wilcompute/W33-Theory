@@ -1,0 +1,19 @@
+{
+  "pass": 5126,
+  "status": "THEOREM_Q5_COUNTEREXAMPLE_LEADER_AT_LEAST_18",
+  "q": 5,
+  "target_distance": 625,
+  "leader_size_closed": 17,
+  "degree_sequences": 33,
+  "ordered_profiles_above_wedge25_rejected": 51,
+  "sharp_wedge_cap": 25,
+  "ordered_degree_profiles_realizing_wedge25": 12,
+  "delsarte": {
+    "max_pair_overlap": 5000,
+    "distance_pair_counts": [25, 66, 45, 0],
+    "integer_points": 106695,
+    "weight_lower_bound": 625
+  },
+  "conclusion": "Any q=5 word of apartment weight below 625 has minimum chamber-generator leader at least 18.",
+  "boundary": "Leaders >=18 remain open; this is not yet the q=5 distance theorem."
+}
