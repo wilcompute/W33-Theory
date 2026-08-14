@@ -1,0 +1,30 @@
+{
+  "pass": 5093,
+  "status": "PASS",
+  "point_star_rows": 162,
+  "tritangent_core_columns": [0,1,2,3,5,6,7,8,10,11,12,13,15,16,17,18,22,23,25,26,27,30,31,35],
+  "original": {"inverse_denominator":9360,"condition_2":186.70365910212973,"cleared_inverse_max_abs":3132},
+  "balanced": {"inverse_denominator":3120,"condition_2":105.46218720905891,"cleared_inverse_max_abs":977},
+  "smith_floor": {
+    "inverse_denominator":780,
+    "condition_2":72382.48331056532,
+    "cleared_inverse_max_abs":158050,
+    "basis":[118,5,122,37,6,76,129,61,44,26,89,45,87,126,78,124,22,111,15,38,58,96,64,160]
+  },
+  "one_row_exchange": {
+    "full_rank_candidates":3289,
+    "D780_neighbors":8,
+    "neighbors":[
+      {"position":15,"incoming_row":40,"condition_2":74483.19387878345},
+      {"position":23,"incoming_row":40,"condition_2":79153.14301228267},
+      {"position":7,"incoming_row":40,"condition_2":81512.39258586355},
+      {"position":15,"incoming_row":14,"condition_2":124988.8214516253},
+      {"position":17,"incoming_row":36,"condition_2":138597.2405442267},
+      {"position":6,"incoming_row":36,"condition_2":140898.96646234408},
+      {"position":9,"incoming_row":36,"condition_2":206272.75176610672},
+      {"position":18,"incoming_row":36,"condition_2":500100.2069924667}
+    ]
+  },
+  "theorem":"The raw D=780 Smith-floor basis is a strict local minimum of numerical condition number among all D=780 raw bases reachable by one row exchange.",
+  "boundary":"One-exchange local optimality only; a globally better-conditioned D=780 basis may still exist farther away."
+}
