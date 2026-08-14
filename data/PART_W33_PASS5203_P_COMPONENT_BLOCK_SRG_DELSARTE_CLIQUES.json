@@ -1,0 +1,15 @@
+{
+  "pass":5203,
+  "status":"THEOREM_P_COMPONENT_BLOCK_SRG_DELSARTE_POINT_CLIQUES",
+  "family_parameters":"SRG(q^2(q^2+1)/2,(q+1)(q^2-1),3q^2-q-2,2q(q+1))",
+  "spectrum":"((q+1)(q^2-1))^1, (q^2-2q-1)^{q(q+1)^2/2}, (-(q+1))^{remaining}",
+  "Delsarte_clique_size":"q^2",
+  "edge_clique_ownership":2,
+  "anchors":{
+    "3":{"srg":[45,32,22,24],"eigenvalues":[32,2,-4],"point_clique_size":9},
+    "5":{"srg":[325,144,68,60],"eigenvalues":[144,14,-6],"point_clique_size":25,"distinguished_point_cliques":156},
+    "7":{"srg":[1225,384,138,112],"eigenvalues":[384,34,-8],"point_clique_size":49}
+  },
+  "q5_code_connection":"The [325,65] P-footprint code is the binary span of the 156 distinguished 25-clique incidence vectors.",
+  "boundary":"Maximum size of the distinguished point cliques is exact by the Delsarte bound. No claim that they exhaust all maximum cliques or that their binary span has minimum distance 25 is made here."
+}
