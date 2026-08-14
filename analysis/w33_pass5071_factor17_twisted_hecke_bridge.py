@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Pass5071: exact rational matrix bridge behind the shared sqrt(17)."""
-from sympy import Matrix, symbols, factor
+from sympy import Matrix, Rational, symbols, factor
 x=symbols('x')
 A=Matrix([[1,4],[1,0]])
 T6=2*A
 B2=Matrix([[4,2],[2,5]])
-S=Matrix([[1,1/2],[0,1/2]])
+S=Matrix([[1,Rational(1,2)],[0,Rational(1,2)]])
 assert A*S == S*(B2-4*Matrix.eye(2))
 assert factor(A.charpoly(x).as_expr())==x**2-x-4
 assert factor(T6.charpoly(x).as_expr())==x**2-2*x-16
