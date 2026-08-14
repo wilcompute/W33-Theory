@@ -1,0 +1,47 @@
+\ifdefined\WPassFiveOneZeroTwoLoaded\else
+\gdef\WPassFiveOneZeroTwoLoaded{1}
+\subsection*{Passes 5102--5109: $q=4$ expansion closure, the $U_{81}$ controller, and rank-two root calculus}
+The active-chart distance attack now closes completely at $q=4$.  Two chamber stars at gallery distance $d$ share exactly $q^{4-d}$ apartments, so any XOR of $1\le m\le q$ distinct chamber stars obeys
+\[
+ \mathrm{wt}\ge q^3m(q+1-m)\ge q^4,
+\]
+with equality realized by panel subsets.  At $q=5$ this forces any counterexample to have chamber-generator leader at least six; the minimum-local-cut propagator independently forces any nonstar candidate to contain a heavier local cut.
+
+For $q=4$, Pass5090 already proved that a word whose active $K_5$ charts are all minimum $1|4$ cuts is a chamber star.  Conditioning a heavy $2|3$ chart in each of the four fixed-apartment chart roles gives exact MILP optimum $384$.  The local $PGL(2,4)$ edge stabilizer is transitive on the six heavy cut patterns.  Hence the complete $[13600,256,256]_2$ minimum shell is exactly the $425$ chamber stars, and every nonzero word activates at least
+\[
+ A(y)\ge256=4q^3.
+\]
+
+The factor-$17$ bridge also becomes integral and global.  On each quadratic lane the theta companion
+\[
+ C=\begin{pmatrix}0&16\\1&2\end{pmatrix}
+\]
+and twisted block $T_6=\bigl(\begin{smallmatrix}2&8\\2&0\end{smallmatrix}\bigr)$ satisfy $CP=PT_6$ for $P=\bigl(\begin{smallmatrix}2&-2\\0&1\end{smallmatrix}\bigr)$ of determinant $2$.  Every nonsingular integral solution has even determinant, so index two is minimal.  Across the fifteen Levi line-kernel lanes this gives an explicit index-$2^{15}$ map into the exact $30$-dimensional global theta carrier.
+
+The type-$C_2$ maximal unipotent controller now literally contains the two BT865 torsors:
+\[
+ U_{81}=H_{27}\,\mathbb F_3^3,\qquad
+ H_{27}\cap\mathbb F_3^3=U'\cong C_3^2,
+\]
+with $Z(U)=Z(H_{27})\cong C_3$.  The canonical $V_4$ complement normalizes both subgroups.  On protected memory,
+\[
+ H_1(\mathbb F_3)\!\downarrow_U\cong\mathbb F_3[U],
+\]
+one regular copy; restricting to either index-three subgroup recovers the previous $3\,\mathrm{Reg}(H_{27})$ and $3\,\mathrm{Reg}(\mathbb F_3^3)$ coordinate systems.
+
+The derivative/curvature calculus extends across rank two.  In good characteristic the pair-generated positive-root counts are encoded by
+\[
+ A_2:2z^2+z^3,\qquad C_2:4z^2+z^3+z^4,\qquad
+ G_2:10z^2+3z^3+z^5+z^6,
+\]
+while the first-root derivatives are $3q^2$, $4q^3$, and $6q^5$.  The $G_2$ bad-prime reductions recorded here are only Lie-bracket shadows, not full bad-characteristic group laws.
+
+Three auxiliary probes sharpen the same structure.  The $81\times108$ $q=3$ root-coset incidence matrix has Smith form $1^{68},3,0^{12}$, so its cokernel is $\mathbb Z^{12}\oplus\mathbb Z/3$.  The regular $U_{81}$ memory has augmentation-layer Hilbert series
+\[
+ (1+t+t^2)^2(1+t^2+t^4)(1+t^3+t^6),
+\]
+which records the $C_2$ root heights $1,1,2,3$ and restricts to the Heisenberg and flat BT865 memory filtrations.  Finally, the canonical diagonal $V_4$ splits the rational $12$-dimensional incidence defect into character sectors $4+4+2+2$.  The same defect is phase-pure for the canonical center $Z(U)=Z(H_{27})\cong C_3$: a central generator has characteristic polynomial $(x^2+x+1)^6$, so over $\mathbb C$ the defect is $6\omega\oplus6\omega^2$ with no center-trivial vectors.  Two $V_4$ involutions invert the center and exchange those conjugate six-spaces, while the third fixes the center.
+
+\paragraph{Boundary.}
+The all-$q$ and $q=5$ minimum-distance theorem remains open.  The $q=4$ minimum shell and active-chart theorem are closed.  The controller, memory, Smith-defect, and center-phase statements are exact finite group/module results, not fabricated-hardware performance claims.
+\fi

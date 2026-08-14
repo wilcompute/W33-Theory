@@ -1,0 +1,8 @@
+{
+  "pass":5107,
+  "status":"THEOREM_ROOT_COSET_SMITH_DEFECT",
+  "q2_control":{"shape":[16,32],"rank_Q":15,"smith":"1^15,0^1","cokernel":"Z"},
+  "q3":{"shape":[81,108],"row_sum":4,"column_sum":3,"rank_Q":69,"rank_F2":69,"rank_F3":68,"smith":"1^68,3^1,0^12","cokernel":"Z^12 + Z/3","column_kernel_rank_Q":39,"column_kernel_rank_F3":40,"gram_identity":"H H^T = 4 I + A_derivative","minus4_adjacency_eigenspace_dimension":12},
+  "interpretation":"The derivative foliation has a 12-dimensional rational incidence defect plus one genuinely ternary torsion class. The extra mod-3 null direction is compatible with every root-coset column having size 3.",
+  "boundary":"This is arithmetic of the q3 root-coset incidence matrix, not a claim about a new physical charge or particle sector."
+}

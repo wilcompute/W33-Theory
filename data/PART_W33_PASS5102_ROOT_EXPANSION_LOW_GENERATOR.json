@@ -1,0 +1,25 @@
+{
+  "pass": 5102,
+  "status": "THEOREM_WITH_Q5_FRONTIER",
+  "theorem": "For 1<=m<=q distinct chamber stars, wt(XOR)>=q^3*m*(q+1-m)>=q^4. Equality is attained by m stars in one point/line panel.",
+  "proof_identity": "1_{n odd} >= n-2*C(n,2), summed over apartments, with pair intersections <=q^3.",
+  "pair_intersection_law": "two chamber stars at gallery distance d meet in q^(4-d) apartments",
+  "anchors": {
+    "3": {"pair_intersection_by_gallery_distance": {"1": 27, "2": 9, "3": 3, "4": 1}, "max_distinct_pair_intersection": 27},
+    "4": {"pair_intersection_by_gallery_distance": {"1": 64, "2": 16, "3": 4, "4": 1}, "max_distinct_pair_intersection": 64},
+    "5": {"pair_intersection_by_gallery_distance": {"1": 125, "2": 25, "3": 5, "4": 1}, "max_distinct_pair_intersection": 125}
+  },
+  "q5": {
+    "three_star_minimum": 1125,
+    "three_star_minimum_fixed_base_representatives": 20,
+    "three_star_histogram": {"1125":20,"1425":75,"1525":300,"1585":750,"1605":1500,"1617":3750,"1621":7500,"1765":1500,"1777":1875,"1809":1875,"1813":30000,"1821":30000,"1845":10000,"1853":60000,"1861":157500,"1869":130000},
+    "minimum_cut_rigidity": [
+      {"seed":"0000","status":"SAT_CHAMBER_STAR","star":0,"weight":625},{"seed":"0001","status":"UNSAT"},{"seed":"0010","status":"SAT_CHAMBER_STAR","star":1,"weight":625},{"seed":"0011","status":"UNSAT"},
+      {"seed":"0100","status":"UNSAT"},{"seed":"0101","status":"UNSAT"},{"seed":"0110","status":"SAT_CHAMBER_STAR","star":36,"weight":625},{"seed":"0111","status":"SAT_CHAMBER_STAR","star":37,"weight":625},
+      {"seed":"1000","status":"SAT_CHAMBER_STAR","star":6,"weight":625},{"seed":"1001","status":"SAT_CHAMBER_STAR","star":7,"weight":625},{"seed":"1010","status":"UNSAT"},{"seed":"1011","status":"UNSAT"},
+      {"seed":"1100","status":"UNSAT"},{"seed":"1101","status":"SAT_CHAMBER_STAR","star":187,"weight":625},{"seed":"1110","status":"UNSAT"},{"seed":"1111","status":"SAT_CHAMBER_STAR","star":186,"weight":625}
+    ],
+    "consequence": "Any q5 word below q^4, if one exists, needs chamber-generator leader >=6 and at least one heavier local K6 cut."
+  },
+  "boundary": "This is an all-q low-generator theorem plus exact q5 rigidity anchor, not the all-q/q5 minimum-distance theorem."
+}
