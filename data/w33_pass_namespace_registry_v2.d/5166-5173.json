@@ -1,0 +1,11 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [5166, 5173],
+  "slug": "q5_leader24_edge_type_cubic_continuation",
+  "title": "q5 leader-24 edge-type cubic closure and independent post-DP continuations",
+  "status": "RESERVED",
+  "owner": "openai-gpt56-sol",
+  "reserved_at": "2026-08-14",
+  "purpose": "Continue after the collision-owned Pass5158-5165 packet. Audit and extend the local-type path-DP q5 barrier using exact degree-edge-type constraints, while keeping orthogonal root-controller and incidence-module probes separate.",
+  "boundary": "Do not claim the q5/all-q minimum-distance theorem unless every leader sector is closed. Treat each recursive leader closure as a strict-counterexample barrier only. Keep algebraic identities separate from physical performance claims."
+}
