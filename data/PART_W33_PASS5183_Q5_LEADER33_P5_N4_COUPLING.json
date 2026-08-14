@@ -1,0 +1,23 @@
+{
+  "pass": 5183,
+  "status": "THEOREM_Q5_STRICT_COUNTEREXAMPLE_LEADER_AT_LEAST_33",
+  "q": 5,
+  "leader_size_closed": 32,
+  "target_distance": 625,
+  "raw_deletion_cap": 58,
+  "adjacent_pair_cap": 57,
+  "five_path_geodesic_coupling": "P5 <= 2 N4",
+  "critical_N1_56": {
+    "degree_profiles": [[0,8,16],[3,5,17],[6,2,18]],
+    "N112_lower": 96,
+    "P4_lower": 160,
+    "P5_lower": 256,
+    "N3_lower": 160,
+    "N4_lower": 128,
+    "conditioned_distance_counts": [56,152,160,128],
+    "integer_weight_lower_bound": 631
+  },
+  "nearby_bounds": {"N1=55":648,"N1=57":742},
+  "conclusion": "The raw N1=58 layer is impossible. P5<=2N4 raises the sole failing N1=56 layer from 615 to 631, so every q5 word of weight <625 has minimum chamber leader at least 33.",
+  "boundary": "This closes leader 32 only. The q5/all-q minimum-distance theorem and weight-625 equality shell remain open for leaders >=33."
+}
