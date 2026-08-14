@@ -1,0 +1,22 @@
+{
+  "pass": 5143,
+  "status": "THEOREM_ROOT_CAYLEY_METRIC_CHAR_GT3",
+  "field_range": "finite fields of characteristic >3",
+  "normalization": "u=c/(ab), v=d/(a^2 b) for a,b nonzero",
+  "three_move_curves": ["u=0", "u=-1", "v=0", "v=1", "v=-u", "v=-2u", "v=-2u-1", "v=u^2"],
+  "normalized_distance4_count": "(q-4)^2",
+  "shell_formula": {
+    "d0": "1",
+    "d1": "4(q-1)",
+    "d2": "8(q-1)^2",
+    "d3": "(q-1)^2(10q-21)",
+    "d4": "(q-1)^2(q-4)^2"
+  },
+  "anchors": {
+    "5": [1, 16, 128, 464, 16],
+    "7": [1, 24, 288, 1782, 324],
+    "11": [1, 40, 800, 11430, 2400],
+    "13": [1, 48, 1152, 20736, 5184]
+  },
+  "boundary": "Characteristic 2 and 3 are excluded because the eight-curve arrangement has extra collisions."
+}
