@@ -1,0 +1,82 @@
+name: Pass5214-5221 connectedL radius7 atom packet
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5214_q5_connectedL_point_footprint_gluing.py'
+      - 'analysis/w33_pass5215_q3_radius7_stabilizer_export.py'
+      - 'analysis/w33_pass5215_q3_radius7_orbit_census.cpp'
+      - 'analysis/w33_pass5216_oddq_connectedL_exact_spectrum.py'
+      - 'analysis/w33_pass5217_q5_root_outer_shell_P_atom_torus.py'
+      - 'analysis/w33_pass5218_q5_leader36_quartic_minorant_wall.py'
+      - 'analysis/w33_pass5219_q5_root_torus_cross_L_syndrome_duality.py'
+      - 'analysis/w33_pass5220_allq_P_atom_L_syndrome_presentation.py'
+      - 'analysis/w33_pass5221_oddq_connectedL_mod2_ranks.py'
+      - 'data/PART_W33_PASS5214_5221_RESULTS.json'
+      - 'analysis/w33_pass5214_5221_regression.py'
+      - '.github/workflows/w33_pass5214_5221_packet.yml'
+  workflow_dispatch:
+jobs:
+  exact-replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Syntax and frozen regression
+        run: |
+          python -m py_compile analysis/w33_pass5214_q5_connectedL_point_footprint_gluing.py
+          python -m py_compile analysis/w33_pass5215_q3_radius7_stabilizer_export.py
+          python -m py_compile analysis/w33_pass5216_oddq_connectedL_exact_spectrum.py
+          python -m py_compile analysis/w33_pass5217_q5_root_outer_shell_P_atom_torus.py
+          python -m py_compile analysis/w33_pass5218_q5_leader36_quartic_minorant_wall.py
+          python -m py_compile analysis/w33_pass5219_q5_root_torus_cross_L_syndrome_duality.py
+          python -m py_compile analysis/w33_pass5220_allq_P_atom_L_syndrome_presentation.py
+          python -m py_compile analysis/w33_pass5221_oddq_connectedL_mod2_ranks.py
+          PYTHONPATH=. python analysis/w33_pass5214_5221_regression.py
+          PYTHONPATH=. python -m pytest -q tests/test_w33_pass5214_5221_packet.py
+      - name: Replay Pass5214 connected-L gluing
+        run: PYTHONPATH=. python analysis/w33_pass5214_q5_connectedL_point_footprint_gluing.py > /tmp/pass5214.log
+      - name: Replay Pass5215 radius-seven orbit census
+        run: |
+          PYTHONPATH=. python analysis/w33_pass5176_q3_radius6_graph_export.py /tmp/q3_graph.txt
+          PYTHONPATH=. python analysis/w33_pass5215_q3_radius7_stabilizer_export.py /tmp/q3_stab.txt
+          g++ -O3 -std=c++17 -fopenmp analysis/w33_pass5215_q3_radius7_orbit_census.cpp -o /tmp/pass5215
+          OMP_NUM_THREADS=2 /tmp/pass5215 /tmp/q3_graph.txt /tmp/q3_stab.txt | tee /tmp/pass5215.json
+          grep -q '"weight7_extensions_tested":64439500' /tmp/pass5215.json
+          grep -q '"false_provenance_stage":0' /tmp/pass5215.json
+      - name: Replay Pass5216 connected-L spectra
+        run: PYTHONPATH=. python analysis/w33_pass5216_oddq_connectedL_exact_spectrum.py > /tmp/pass5216.log
+      - name: Replay Pass5217 root outer-shell atom torus
+        run: PYTHONPATH=. python analysis/w33_pass5217_q5_root_outer_shell_P_atom_torus.py > /tmp/pass5217.log
+      - name: Replay Pass5218 quartic leader wall
+        run: PYTHONPATH=. python analysis/w33_pass5218_q5_leader36_quartic_minorant_wall.py > /tmp/pass5218.log
+      - name: Replay Pass5219 torus-cross L syndrome
+        run: PYTHONPATH=. python analysis/w33_pass5219_q5_root_torus_cross_L_syndrome_duality.py > /tmp/pass5219.log
+      - name: Replay Pass5220 P-atom presentation
+        run: PYTHONPATH=. python analysis/w33_pass5220_allq_P_atom_L_syndrome_presentation.py > /tmp/pass5220.log
+      - name: Replay Pass5221 connected-L mod2 ranks
+        run: PYTHONPATH=. python analysis/w33_pass5221_oddq_connectedL_mod2_ranks.py > /tmp/pass5221.log
+      - name: Cross-check generated certificates
+        run: |
+          python - <<'PY'
+          import json
+          def J(p): return json.load(open(p))
+          a=J('data/PART_W33_PASS5214_Q5_CONNECTEDL_POINT_FOOTPRINT_GLUING.json')
+          b=J('data/PART_W33_PASS5216_ODDQ_CONNECTEDL_EXACT_SPECTRUM.json')
+          c=J('data/PART_W33_PASS5217_Q5_ROOT_OUTER_SHELL_P_ATOM_TORUS.json')
+          d=J('data/PART_W33_PASS5218_Q5_LEADER36_QUARTIC_MINORANT_WALL.json')
+          e=J('data/PART_W33_PASS5219_Q5_ROOT_TORUS_CROSS_L_SYNDROME_DUALITY.json')
+          f=J('data/PART_W33_PASS5220_ALLQ_P_ATOM_L_SYNDROME_PRESENTATION.json')
+          g=J('data/PART_W33_PASS5221_ODDQ_CONNECTEDL_MOD2_RANKS.json')
+          assert a['global_solutions']==6 and a['constraint_arity']=={'unary':17250,'binary':7500,'higher':0}
+          assert b['anchors']['5']['vertices']==9750
+          assert c['outer_shell_distinct_atoms']==16 and c['complement_atoms']==9
+          assert all(d['layers'][str(w)]['best']['vertex'] in ('ordinary_cubic','corrected_cubic') for w in range(54,65))
+          assert e['fundamental_L_triangle_syndrome_weight']['torus']==664
+          assert f['anchors']['5']['independent_L_syndrome_rank_on_P_side']==7500
+          assert g['anchors']['5']['nullity_F2_A']==2676 and g['anchors']['5']['nullity_F2_A_plus_I']==2859
+          print('Pass5214-5221 generated-certificate cross-check: PASS')
+          PY
