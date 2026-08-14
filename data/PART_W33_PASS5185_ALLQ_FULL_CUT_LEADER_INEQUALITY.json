@@ -1,0 +1,14 @@
+{
+  "pass": 5185,
+  "status": "THEOREM_ALL_Q_FULL_CUT_COSET_LEADER_INEQUALITY",
+  "source_bridge": "Pass5110: ker(chamber coefficients -> apartment code)=Cut(Levi;F2)",
+  "cut_leader_criterion": "For every Levi vertex subset S, 2|Y cap delta(S)| <= |delta(S)|",
+  "internal_edge_form": "2 e_Gamma(S) <= 4 e_Y(S) + sum_{v in S}((q+1)-2 d_Y(v))",
+  "singleton_consequence": "d_Y(v) <= floor((q+1)/2)",
+  "q5_form": "e_Gamma(S) <= 2 e_Y(S) + sum_{v in S}(3-d_Y(v))",
+  "q5_degree3_incidence": "Every host Levi incidence between two selected-degree-three vertices is selected",
+  "q5_323_path": "Every host 3-2-3 path contains at least one selected edge",
+  "q5_star_rule": "k <= 2s+3-d",
+  "connection": "This promotes the full cut-coset geometry beyond the singleton degree cap and gives exact host-incidence constraints for dense q5 leader sectors.",
+  "boundary": "Exact coset-leader theorem; does not by itself close q5 leader 33."
+}
