@@ -39,7 +39,7 @@ def test_pass5146_two_step_markov():
 def test_pass5147_augmentation_hidden_defect():
     x=J('PART_W33_PASS5147_NATIVE_AUGMENTATION_DEFECT.json')
     assert [r['rank_drop'] for r in x['rows']]==[0,1,4,8,10]
-    assert [r['minimum_hidden_dimensions_beyond_one_explicit_augmentation_relation'] for r in x['rows']]==[0,0,3,7,9]
+    assert [r['minimum_hidden_beyond_one_explicit_relation'] for r in x['rows']]==[0,0,3,7,9]
 
 def test_pass5148_root_stats():
     x=J('PART_W33_PASS5148_ROOT_VOLUME_DEPTH_CALCULUS.json')
@@ -48,7 +48,7 @@ def test_pass5148_root_stats():
 def test_pass5149_cheeger_blindness():
     x=J('PART_W33_PASS5149_THETA_CHEEGER_BLINDNESS.json')
     assert x['statement'].endswith('independent of its Hamming weight.')
-    assert [(r['theta_degree'],r['inside_degree_on_codeword'],r['outside_degree_on_codeword']) for r in x['anchors']]==[(8,4,4),(16,8,8),(24,12,12),(32,16,16)]
+    assert [(r['theta_degree'],r['inside_degree'],r['outside_degree']) for r in x['anchors']]==[(8,4,4),(16,8,8),(24,12,12),(32,16,16)]
 
 def test_consolidated_collision_firewall():
     x=J('PART_W33_PASS5142_5149_CONSOLIDATED.json')
