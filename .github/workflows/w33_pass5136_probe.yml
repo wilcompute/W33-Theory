@@ -1,0 +1,20 @@
+name: Pass5136 radius-six structured probe
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5136_q3_radius6_structured_falsifier.py'
+      - '.github/workflows/w33_pass5136_probe.yml'
+  workflow_dispatch:
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run structured radius-six falsifier
+        run: python analysis/w33_pass5136_q3_radius6_structured_falsifier.py
+      - name: Show certificate
+        run: cat data/PART_W33_PASS5136_Q3_RADIUS6_STRUCTURED_FALSIFIER.json
