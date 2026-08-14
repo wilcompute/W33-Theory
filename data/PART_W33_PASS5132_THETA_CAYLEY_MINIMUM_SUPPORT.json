@@ -1,0 +1,16 @@
+{
+  "pass": 5132,
+  "status": "THEOREM_ALL_Q_MINIMUM_SUPPORT_THETA_CAYLEY_GRAPH",
+  "statement": "Under the U(q)-torsor identification of a chamber-star support, the induced theta graph is Cay(U(q), union_i(H_i\\{1})) for the four positive-root subgroups H_i.",
+  "degree_formula": "4(q-1)",
+  "edge_formula": "2 q^4 (q-1)",
+  "root_coset_cliques": "4 q^3 cliques of size q",
+  "anchors": {
+    "2": {"vertices": 16, "degree": 4, "edges": 32, "active_root_coset_cliques": 32, "clique_size": 2, "exact_edge_match": true},
+    "3": {"vertices": 81, "degree": 8, "edges": 324, "active_root_coset_cliques": 108, "clique_size": 3, "exact_edge_match": true},
+    "4": {"vertices": 256, "degree": 12, "edges": 1536, "active_root_coset_cliques": 256, "clique_size": 4, "exact_edge_match": true},
+    "5": {"vertices": 625, "degree": 16, "edges": 5000, "active_root_coset_cliques": 500, "clique_size": 5, "exact_edge_match": true}
+  },
+  "synthesis": "Pass5119 half-regularity on a minimum word is exactly the root-direction Cayley degree; Pass5129 active charts are the same root-subgroup cosets viewed as cliques.",
+  "boundary": "The Cayley identification is for the chamber-star minimum family, not arbitrary codeword supports."
+}
