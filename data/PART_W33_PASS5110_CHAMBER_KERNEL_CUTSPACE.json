@@ -1,0 +1,15 @@
+{
+  "pass": 5110,
+  "status": "THEOREM_ALL_Q_CHAMBER_KERNEL_IS_CUT_SPACE",
+  "statement": "ker(chamber coefficients -> apartment code)=Cut(Levi;F2)",
+  "proof": "Panel stars map to zero. They span the connected Levi cut space of dimension |V|-1. Since apartment-code rank=q^4 and |E|-(|V|-1)=q^4, the inclusion is equality.",
+  "dimension_identity": "(q+1)^2(q^2+1)-[2(q+1)(q^2+1)-1]=q^4",
+  "consequence": "Every codeword has chamber-generator representatives forming one Levi cut coset; a minimum-cardinality representative is cut-minimal.",
+  "anchors": {
+    "2": {"q":2,"panels":30,"chambers":45,"apartments":90,"chamber_star_rank":16,"kernel_dimension":29,"cut_space_dimension":29,"all_panel_relations_zero":true},
+    "3": {"q":3,"panels":80,"chambers":160,"apartments":1620,"chamber_star_rank":81,"kernel_dimension":79,"cut_space_dimension":79,"all_panel_relations_zero":true},
+    "4": {"q":4,"panels":170,"chambers":425,"apartments":13600,"chamber_star_rank":256,"kernel_dimension":169,"cut_space_dimension":169,"all_panel_relations_zero":true},
+    "5": {"q":5,"panels":312,"chambers":936,"apartments":73125,"chamber_star_rank":625,"kernel_dimension":311,"cut_space_dimension":311,"all_panel_relations_zero":true}
+  },
+  "boundary": "Uses the all-q rank q^4 theorem from Pass5066. This is a binary generator-gauge theorem, not a new distance proof by itself."
+}
