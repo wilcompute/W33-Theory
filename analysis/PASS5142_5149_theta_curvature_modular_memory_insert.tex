@@ -1,40 +1,52 @@
 \ifdefined\WPassFiveOneFourTwoLoaded\else
 \gdef\WPassFiveOneFourTwoLoaded{1}
-\subsection*{Passes 5142--5149: theta half-regularity, curvature, modular root-coset arithmetic, and root-height memory}
-Let $\Theta_q$ denote the intrinsic theta point graph on apartment variables.  Every apartment lies in $4(q-1)$ theta checks and every theta check is a triple.  Since every apartment-code word is theta-even, each selected apartment has exactly one selected and one unselected partner in every incident theta check.  Hence $\Theta_q$ is $8(q-1)$-regular and every nonzero codeword support $S$ induces
+\subsection*{Passes 5142--5149: exterior theta parity, curvature, centered spectral inversion, and modular root-coset arithmetic}
+Pass~5119 already establishes that every apartment-code support is half-regular in the intrinsic theta graph.  The complementary exterior law is stronger than that selected-vertex statement: every unselected apartment has an even number $t_v$ of selected theta-neighbours, and the number of active theta triples is exactly
 \[
-\deg_S=\deg_{\bar S}=4(q-1),\qquad
- e(S)=2(q-1)|S|,\qquad
- |\partial S|=4(q-1)|S|.
+A_{\rm active}=2(q-1)|S|,
+\qquad
+\sum_{v\notin S}t_v=4(q-1)|S|.
 \]
-In particular ordinary theta conductance is identically $1/2$ on every nonzero codeword support, independent of its weight.  Thus first-order Cheeger expansion alone cannot distinguish a chamber-star minimum from heavier codewords.
+Writing $b_{2r}=\#\{v\notin S:t_v=2r\}$ gives $\sum_r r b_{2r}=2(q-1)|S|$.  A chamber star has only the $b_2$ term, with $b_2=2(q-1)q^4$.
 
-The first nontrivial local discriminator occurs at second order.  Put $k=4(q-1)$ and let $A_\Theta$ be theta adjacency.  For an unselected apartment, the number $t$ of selected theta-neighbors is even, so
+This exterior parity yields a quantized second-moment curvature theorem.  Put $D=8(q-1)$, $k=D/2=4(q-1)$, and let $A_\Theta$ be theta adjacency.  For $x=\mathbf1_S$,
 \[
-\mathbf 1_S^{T}A_\Theta^2\mathbf 1_S\ge k(k+2)|S|,
+x^T A_\Theta^2 x\ge k(k+2)|S|,
 \]
-with quantized defect
+and the exact defect is
 \[
-\Delta_2=\mathbf 1_S^{T}A_\Theta^2\mathbf 1_S-k(k+2)|S|
+\Delta_2=x^T A_\Theta^2x-k(k+2)|S|
        =\sum_{v\notin S}t_v(t_v-2)\in8\mathbb Z_{\ge0}.
 \]
-Chamber stars attain equality for $q=2,3,4,5$.  At $q=2$ an exhaustive census of all $2^{16}-1=65535$ nonzero words finds exactly $45$ zero-defect words, all of weight $16$; these are precisely the chamber stars, and the next curvature defect is $64$.
+Equality holds precisely when every exterior boundary apartment sees two selected theta-neighbours.  Chamber stars attain equality at $q=2,3,4,5$.  At $q=2$, exhaustive enumeration of all $65535$ nonzero words finds exactly $45$ zero-defect words, all of weight $16$, with next positive defect $64$.
 
-The native-characteristic root-coset incidence pattern was also stress-tested beyond the earlier $q=3,5$ anchors.  At $q=7$ the $2401\times1372$ matrix has common non-native rank $1183$ but native $\mathbb F_7$ rank $1173$, so the drop is $10$, not $27=((7-1)/2)^3$.  The former two-anchor cubic interpolation is therefore false.  At $q=4$ the exact Smith form is
+First-order expansion itself is blind: every nonzero codeword support has theta conductance $1/2$.  Equivalently a one-step theta walk stays in the support with probability $1/2$.  At two steps the curvature appears:
+\[
+\Pr[X_2\in S]\ge\frac14+\frac1D,
+\qquad
+\Pr[X_2\in S]-\left(\frac14+\frac1D\right)
+=\frac{\Delta_2}{D^2|S|}.
+\]
+Thus the sharp chamber-star values are $3/8,5/16,7/24,9/32$ for $q=2,3,4,5$.
+
+The apparent first-order spectral blindness disappears after removing the constant mode.  Let $N$ be the apartment count, $\alpha=|S|/N$, and $y=x-\alpha\mathbf1$.  The centered theta Rayleigh quotient satisfies
+\[
+\rho(S)=\frac{y^TA_\Theta y}{y^Ty}
+       =D\frac{1/2-\alpha}{1-\alpha},
+\qquad
+\alpha=\frac{D/2-\rho}{D-\rho}.
+\]
+Hence the centered quotient determines codeword weight exactly; the remaining distance problem is a bound on the attainable centered quotient, not ordinary Cheeger conductance.
+
+On the root-coset arithmetic side, the $q=4$ incidence matrix has exact Smith form
 \[
 1^{180}\oplus2^4\oplus0^{72},
-\]
-so
-\[
+\qquad
 \operatorname{coker}M_4\cong\mathbb Z^{72}\oplus(\mathbb Z/2)^4.
 \]
-The universal column-sum relation explains one native augmentation mode, but total rank drops $0,1,4,8,10$ at $q=2,3,4,5,7$ show additional hidden modular defect from $q\ge4$ onward.
+Thus its characteristic-two rank loss is four genuine integral torsion directions.  More generally every root-coset column has $q$ ones, so the constant left functional supplies one explicit defining-characteristic relation.  Comparing the already certified native rank drops $0,1,4,8,10$ at $q=2,3,4,5,7$ shows that additional hidden modular defect begins at $q=4$; at least $3,7,9$ dimensions remain beyond that one displayed augmentation relation at $q=4,5,7$.
 
-Finally, in the safe split range $p>h$, the maximal-unipotent Jennings series is determined by positive-root heights:
-\[
-H_U(t)=\prod_{\alpha>0}\bigl(1+t^{\mathrm{ht}(\alpha)}+\cdots+t^{(p-1)\mathrm{ht}(\alpha)}\bigr).
-\]
-For $A_2,C_2,G_2$ the height multisets are $[1,1,2]$, $[1,1,2,3]$, and $[1,1,2,3,4,5]$.  Thus two distinct statistics of the same root poset appear: $N=|\Phi^+|$ controls the big-cell volume $q^N$ and formal root derivative $Nq^{N-1}$, whereas $H=\sum_{\alpha>0}\mathrm{ht}(\alpha)$ controls the top Jennings degree $(p-1)H$.  The pairs $(N,H)$ are $(3,4),(4,7),(6,16)$ for $A_2,C_2,G_2$ respectively.  In particular the $C_2$ derivative $q^4\mapsto4q^3$ and the $C_2$ memory depth $7(p-1)$ are related root statistics, not the same invariant.
+Finally, two statistics of the positive-root poset organize the derivative and memory stories.  The root count $N=|\Phi^+|$ controls the big-cell volume $q^N$ and root-direction derivative $Nq^{N-1}$, while the total root height $H=\sum_{\alpha>0}\mathrm{ht}(\alpha)$ controls the top Jennings degree $(p-1)H$ in the previously established safe range.  For $A_2,C_2,G_2$ the pairs $(N,H)$ are $(3,4),(4,7),(6,16)$.  Thus the $C_2$ derivative $q^4\mapsto4q^3$ and the $C_2$ group-ring depth $7(p-1)$ are related through the same root system but are different invariants.
 
-\textbf{Boundary.}  These results do not prove the $q=5$ or all-$q$ minimum-distance theorem.  The $q=7$ computation falsifies the old native-rank interpolation rather than replacing it.  The symbolic Jennings theorem is restricted here to $p>h$, and group-ring depth is algebraic nilpotence, not physical latency.
+\textbf{Boundary.}  These refinements do not prove the $q=5$ or all-$q$ minimum-distance theorem.  The q=7 native-rank falsifier and the safe Jennings theorem remain owned by Passes~5118--5125; they are used here only as prior certified inputs.  Group-ring depth is algebraic nilpotence, not physical latency.
 \fi
