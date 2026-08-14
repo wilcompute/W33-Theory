@@ -1,0 +1,19 @@
+{
+  "pass": 5127,
+  "status": "THEOREM_Q5_MINIMUM_COAREA_DEFECT_QUANTIZATION",
+  "q": 5,
+  "word_weight": 625,
+  "coarea_identity": "For each chart type P or L separately, sum local cut weights = 2 wt = 1250.",
+  "local_K6_cut_weights": [5, 8, 9],
+  "equation": "5 A_type + 3 h8 + 4 h9 = 1250, equivalently 5(250-A_type)=3h8+4h9.",
+  "congruence": "3 h8 + 4 h9 == 0 mod 5.",
+  "smallest_nonzero_defect": {
+    "active_chart_deficit": 2,
+    "h8": 2,
+    "h9": 1,
+    "A_type": 248,
+    "heavy_charts": 3
+  },
+  "consequence": "Any weight-625 nonstar word must contain at least three heavy charts in one point/line type and has total active-chart count at most 498 rather than the star value 500.",
+  "boundary": "This quantizes the exotic equality shell but does not rule it out; q5 d=625 remains open for leader >=18."
+}
