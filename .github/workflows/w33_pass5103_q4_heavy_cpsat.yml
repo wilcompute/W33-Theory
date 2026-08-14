@@ -1,0 +1,31 @@
+name: W33 Pass5103 q4 heavy chart CP-SAT
+
+on:
+  push:
+    branches:
+      - pass5102-5109-root-expansion-controller-lie
+    paths:
+      - 'analysis/w33_pass5103_q4_heavy_chart_cpsat.py'
+      - '.github/workflows/w33_pass5103_q4_heavy_cpsat.yml'
+  workflow_dispatch:
+
+jobs:
+  q4-heavy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install OR-Tools
+        run: python -m pip install --disable-pip-version-check ortools
+      - name: Solve point and line heavy-chart sectors
+        run: python analysis/w33_pass5103_q4_heavy_chart_cpsat.py
+      - name: Upload exact certificate
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pass5103-q4-heavy-cpsat
+          path: data/PART_W33_PASS5103_Q4_HEAVY_CHART_CPSAT.json
+          if-no-files-found: warn
