@@ -1,0 +1,22 @@
+{
+  "pass": 5180,
+  "status": "THEOREM_P_ATOM_LINE_PANEL_RESOLUTION",
+  "statement": "P-component minimum atoms form a q-fold resolution of pairs of distinct chambers on one line panel. Every P atom lies in exactly two chamber stars sharing that line; every such chamber pair owns exactly q atoms; every chamber star is the disjoint union of q^2 atoms.",
+  "counts": {
+    "P_components": "q^2(q^2+1)/2",
+    "atoms_per_component": "(q+1)^2",
+    "total_P_atoms": "q^2(q^2+1)(q+1)^2/2",
+    "same_line_chamber_pairs": "q(q^2+1)(q+1)^2/2",
+    "atoms_per_pair": "q",
+    "atoms_per_chamber_star": "q^2",
+    "atom_weight": "q^2"
+  },
+  "anchors": {
+    "2":{"q":2,"P_components":10,"P_atoms":90,"chambers":45,"atoms_per_chamber_star":4,"atom_weight":4,"atom_owner_multiplicity":2,"same_line_chamber_pairs":45,"atoms_per_same_line_pair":2,"pair_star_intersection_weight":8,"pair_resolution_piece_weight":4,"all_chamber_restrictions_exhausted":true,"all_atom_owners_checked":true},
+    "3":{"q":3,"P_components":45,"P_atoms":720,"chambers":160,"atoms_per_chamber_star":9,"atom_weight":9,"atom_owner_multiplicity":2,"same_line_chamber_pairs":240,"atoms_per_same_line_pair":3,"pair_star_intersection_weight":27,"pair_resolution_piece_weight":9,"all_chamber_restrictions_exhausted":true,"all_atom_owners_checked":true},
+    "4":{"q":4,"P_components":136,"P_atoms":3400,"chambers":425,"atoms_per_chamber_star":16,"atom_weight":16,"atom_owner_multiplicity":2,"same_line_chamber_pairs":850,"atoms_per_same_line_pair":4,"pair_star_intersection_weight":64,"pair_resolution_piece_weight":16,"all_chamber_restrictions_exhausted":true,"all_atom_owners_checked":true},
+    "5":{"q":5,"P_components":325,"P_atoms":11700,"chambers":936,"atoms_per_chamber_star":25,"atom_weight":25,"atom_owner_multiplicity":2,"same_line_chamber_pairs":2340,"atoms_per_same_line_pair":5,"pair_star_intersection_weight":125,"pair_resolution_piece_weight":25,"all_chamber_restrictions_exhausted":true,"all_atom_owners_checked":true}
+  },
+  "q5_use": "A P-heavy-free weight-625 word consists of exactly 25 disjoint P-atoms. A chamber star is the special 25-atom pattern formed by all five atom copies over each of the five line-panel edges incident with one chamber.",
+  "boundary": "P-side structural theorem; connected L-side constraints still decide which 25-atom q5 unions are genuine full-code words."
+}
