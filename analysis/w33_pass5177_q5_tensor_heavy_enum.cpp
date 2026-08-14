@@ -39,38 +39,33 @@ int main(){
     }
     if(dist.size()!=140)return 2;
 
-    // Low-heavy classification: h8<=2,h9<=1.
     map<tuple<int,int,int,int>,long long> low;
     for(auto &kv:dist){auto [w,h8,h9,a]=kv.first;if(h8<=2&&h9<=1)low[kv.first]=kv.second;}
     if(low.size()!=3)return 3;
     if(low[{0,0,0,0}]!=1)return 4;
     if(low[{25,0,0,10}]!=36)return 5;
     if(low[{48,2,0,18}]!=450)return 6;
-    // In particular no component can carry h9=1 while total h8<=2.
 
-    // Unbounded knapsack over nonzero component state TYPES: at total word
-    // weight 625, find the smallest positive coarea cost 3h8+4h9.
     vector<State>S;
     for(auto &kv:dist){auto [w,h8,h9,a]=kv.first;if(w)S.push_back({w,h8,h9,a,kv.second});}
     const int INF=1e9;
     vector<array<int,2>> dp(626,{INF,INF});
-    vector<array<pair<int,int>,2>> par(626); // previous weight,state index
     dp[0][0]=0;
     for(int W=0;W<=625;W++)for(int flag=0;flag<2;flag++)if(dp[W][flag]<INF){
-        for(int i=0;i<(int)S.size();i++){
-            int nw=W+S[i].w;if(nw>625)continue;
-            int c=3*S[i].h8+4*S[i].h9,nf=flag||(c>0);
-            if(dp[W][flag]+c<dp[nw][nf]){
-                dp[nw][nf]=dp[W][flag]+c;par[nw][nf]={W,i};
-            }
+        for(auto &s:S){
+            int nw=W+s.w;if(nw>625)continue;
+            int c=3*s.h8+4*s.h9,nf=flag||(c>0);
+            dp[nw][nf]=min(dp[nw][nf],dp[W][flag]+c);
         }
     }
     if(dp[625][0]!=0)return 7;
     if(dp[625][1]!=50)return 8;
-
-    // Recover one minimum-positive-cost composition.
-    vector<int> mult(S.size());int W=625,flag=1;
-    while(W){auto [PW,i]=par[W][flag];if(i<0)return 9;mult[i]++;int c=3*S[i].h8+4*S[i].h9;flag=(flag && !(c>0 && dp[PW][0]+c==dp[W][1]));W=PW;}
+    // One exact minimizer of the positive-cost DP:
+    // 20*(25,0,0,10) + 1*(48,2,0,18) + 1*(77,8,5,22).
+    if(!dist.count({77,8,5,22}))return 9;
+    if(20*25+48+77!=625)return 10;
+    if(3*(2+8)+4*5!=50)return 11;
+    if(20*10+18+22!=240)return 12;
 
     cout<<"{\n";
     cout<<"  \"component_states\": 33554432,\n";
@@ -84,11 +79,9 @@ int main(){
     cout<<"  \"minimum_positive_global_coarea_cost_at_weight625\": 50,\n";
     cout<<"  \"minimum_positive_active_chart_defect\": 10,\n";
     cout<<"  \"example_minimum_composition\": [\n";
-    bool first=true;
-    for(int i=0;i<(int)S.size();i++)if(mult[i]){
-        if(!first)cout<<",\n";first=false;
-        cout<<"    {\"multiplicity\":"<<mult[i]<<",\"weight\":"<<S[i].w<<",\"h8\":"<<S[i].h8<<",\"h9\":"<<S[i].h9<<",\"active\":"<<S[i].active<<"}";
-    }
-    cout<<"\n  ]\n}\n";
+    cout<<"    {\"multiplicity\":20,\"weight\":25,\"h8\":0,\"h9\":0,\"active\":10},\n";
+    cout<<"    {\"multiplicity\":1,\"weight\":48,\"h8\":2,\"h9\":0,\"active\":18},\n";
+    cout<<"    {\"multiplicity\":1,\"weight\":77,\"h8\":8,\"h9\":5,\"active\":22}\n";
+    cout<<"  ]\n}\n";
     return 0;
 }
