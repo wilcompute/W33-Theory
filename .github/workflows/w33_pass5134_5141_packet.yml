@@ -13,6 +13,8 @@ on:
       - 'analysis/w33_pass5141_root_cayley_metric_growth.py'
       - '.github/workflows/w33_pass5134_5141_packet.yml'
   workflow_dispatch:
+permissions:
+  contents: write
 jobs:
   exact-replay:
     runs-on: ubuntu-latest
@@ -53,10 +55,24 @@ jobs:
           python - <<'PY'
           import json,glob
           for p in sorted(glob.glob('data/PART_W33_PASS51*.json')):
-              try:
-                  j=json.load(open(p))
-              except Exception:
-                  continue
-              if 5134 <= int(j.get('pass',0)) <= 5141:
-                  print(p,j.get('status'))
+              try:j=json.load(open(p))
+              except Exception:continue
+              if 5134 <= int(j.get('pass',0)) <= 5141:print(p,j.get('status'))
           PY
+      - name: Commit clean replay certificates
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            data/PART_W33_PASS5134_Q5_LEADER18_SECOND_ORDER_WALL.json \
+            data/PART_W33_PASS5135_Q5_HEAVY_CHART_THIRD_MOMENT.json \
+            data/PART_W33_PASS5136_Q3_RADIUS6_STRUCTURED_FALSIFIER.json \
+            data/PART_W33_PASS5137_THETA_CAYLEY_EXACT_SPECTRUM.json \
+            data/PART_W33_PASS5138_COMPILER_JENNINGS_FILTRATION.json \
+            data/PART_W33_PASS5139_ALLQ_CHAMBER_DEPENDENCY_MINIMUM.json \
+            data/PART_W33_PASS5140_ALLQ_TRIPLE_CHAMBER_STAR_LAW.json \
+            data/PART_W33_PASS5141_ROOT_CAYLEY_METRIC_GROWTH.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Freeze Pass5134-5141 clean replay certificates'
+          git pull --rebase origin master
+          git push origin HEAD:master
