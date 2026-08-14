@@ -1,0 +1,40 @@
+\ifdefined\WPassFiveOneFourTwoLoaded\else
+\gdef\WPassFiveOneFourTwoLoaded{1}
+\subsection*{Passes 5142--5149: theta half-regularity, curvature, modular root-coset arithmetic, and root-height memory}
+Let $\Theta_q$ denote the intrinsic theta point graph on apartment variables.  Every apartment lies in $4(q-1)$ theta checks and every theta check is a triple.  Since every apartment-code word is theta-even, each selected apartment has exactly one selected and one unselected partner in every incident theta check.  Hence $\Theta_q$ is $8(q-1)$-regular and every nonzero codeword support $S$ induces
+\[
+\deg_S=\deg_{\bar S}=4(q-1),\qquad
+ e(S)=2(q-1)|S|,\qquad
+ |\partial S|=4(q-1)|S|.
+\]
+In particular ordinary theta conductance is identically $1/2$ on every nonzero codeword support, independent of its weight.  Thus first-order Cheeger expansion alone cannot distinguish a chamber-star minimum from heavier codewords.
+
+The first nontrivial local discriminator occurs at second order.  Put $k=4(q-1)$ and let $A_\Theta$ be theta adjacency.  For an unselected apartment, the number $t$ of selected theta-neighbors is even, so
+\[
+\mathbf 1_S^{T}A_\Theta^2\mathbf 1_S\ge k(k+2)|S|,
+\]
+with quantized defect
+\[
+\Delta_2=\mathbf 1_S^{T}A_\Theta^2\mathbf 1_S-k(k+2)|S|
+       =\sum_{v\notin S}t_v(t_v-2)\in8\mathbb Z_{\ge0}.
+\]
+Chamber stars attain equality for $q=2,3,4,5$.  At $q=2$ an exhaustive census of all $2^{16}-1=65535$ nonzero words finds exactly $45$ zero-defect words, all of weight $16$; these are precisely the chamber stars, and the next curvature defect is $64$.
+
+The native-characteristic root-coset incidence pattern was also stress-tested beyond the earlier $q=3,5$ anchors.  At $q=7$ the $2401\times1372$ matrix has common non-native rank $1183$ but native $\mathbb F_7$ rank $1173$, so the drop is $10$, not $27=((7-1)/2)^3$.  The former two-anchor cubic interpolation is therefore false.  At $q=4$ the exact Smith form is
+\[
+1^{180}\oplus2^4\oplus0^{72},
+\]
+so
+\[
+\operatorname{coker}M_4\cong\mathbb Z^{72}\oplus(\mathbb Z/2)^4.
+\]
+The universal column-sum relation explains one native augmentation mode, but total rank drops $0,1,4,8,10$ at $q=2,3,4,5,7$ show additional hidden modular defect from $q\ge4$ onward.
+
+Finally, in the safe split range $p>h$, the maximal-unipotent Jennings series is determined by positive-root heights:
+\[
+H_U(t)=\prod_{\alpha>0}\bigl(1+t^{\mathrm{ht}(\alpha)}+\cdots+t^{(p-1)\mathrm{ht}(\alpha)}\bigr).
+\]
+For $A_2,C_2,G_2$ the height multisets are $[1,1,2]$, $[1,1,2,3]$, and $[1,1,2,3,4,5]$.  Thus two distinct statistics of the same root poset appear: $N=|\Phi^+|$ controls the big-cell volume $q^N$ and formal root derivative $Nq^{N-1}$, whereas $H=\sum_{\alpha>0}\mathrm{ht}(\alpha)$ controls the top Jennings degree $(p-1)H$.  The pairs $(N,H)$ are $(3,4),(4,7),(6,16)$ for $A_2,C_2,G_2$ respectively.  In particular the $C_2$ derivative $q^4\mapsto4q^3$ and the $C_2$ memory depth $7(p-1)$ are related root statistics, not the same invariant.
+
+\textbf{Boundary.}  These results do not prove the $q=5$ or all-$q$ minimum-distance theorem.  The $q=7$ computation falsifies the old native-rank interpolation rather than replacing it.  The symbolic Jennings theorem is restricted here to $p>h$, and group-ring depth is algebraic nilpotence, not physical latency.
+\fi
