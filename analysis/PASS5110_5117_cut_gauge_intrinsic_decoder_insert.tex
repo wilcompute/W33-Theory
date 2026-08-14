@@ -1,0 +1,38 @@
+\ifdefined\WPassFiveOneOneZeroLoaded\else
+\gdef\WPassFiveOneOneZeroLoaded{1}
+\subsection*{Passes 5110--5117: Levi cut gauge, intrinsic chart recovery, radius-three decoding, and perfect apartment duality}
+The chamber-generator gauge is exactly the binary cut space of the Levi graph.  Indeed every panel star maps to zero on apartment coordinates, these stars span the connected Levi cut space, and Pass~5066 gives the complementary rank $q^4$.  Hence
+\[
+ \ker\bigl(\mathbb F_2^{E(\Gamma)}\to C_{\rm apt}\bigr)=\operatorname{Cut}(\Gamma;\mathbb F_2),
+ \qquad \dim C_{\rm apt}=q^4.
+\]
+Thus a minimum chamber-generator representative is a cut-minimal Levi edge set.
+
+At $q=5$ this cut gauge, together with girth eight and the exact pair intersections of chamber stars, first forces every hypothetical word of weight below $625$ to have chamber leader at least $14$.  Pass~5118 subsequently strengthens the barrier to at least $17$; the distance-$625$ theorem itself remains open.
+
+The local tester geometry is intrinsic to the code.  Pass~5081 recovers theta triples as the complete dual minimum shell, and Pass~5079 identifies genuine Tanner six-cycles with apartments through a common length-four geodesic root.  From these data one reconstructs the $q$-apartment root blocks and then the unique $(q+1)$-root opposite-pair charts.  The construction is a finite-generalized-quadrangle theorem and has exact replay anchors at $q=2,3,4$.
+
+For $q=3$ the local decoder can be made chart-equivariant by abstaining on the unique three-way weight-two syndrome tie.  Apartment transitivity reduces the complete weight-three test to
+\[
+ \binom{1619}{2}=1,309,771
+\]
+triples through one fixed apartment.  Every such pattern clears within two sweeps; $47,520$ first leave residual weight two and $450$ first leave residual weight one, with no second-sweep failures.  The certified hard-decision radius is therefore three.
+
+The factor-$17$ arithmetic is now a literal order tower.  If $\lambda=(1+\sqrt{17})/2$, then
+\[
+ \mathbb Z+4\mathcal O_K\subset \mathbb Z+2\mathcal O_K\subset \mathcal O_K,
+\]
+with discriminants $272,68,17$ and per-lane inclusion indices $2,2,4$.  Across the fifteen Levi-kernel lanes these become $2^{15},2^{15},4^{15}$.
+
+Three outside-box probes sharpen the same architecture.  The $C_2$ root-coset incidence matrix has defining-characteristic rank drops $0,1,8$ at $q=2,3,5$; the tempting two-anchor odd-$q$ extrapolation is explicitly retracted because Pass~5123 gives q7 drop $10$, not $27$.  The q3 code reconstructs its own local $U_{81}\rtimes V_4$ controller, with the two index-three torsors identified as the extraspecial $H_{27}$ state shell and flat $\mathbb F_3^3$ program shell, up to the natural point/line swap.  Finally the cut-gauge and theta presentations are perfect duals:
+\[
+ \mathbb F_2^{E(\Gamma)}/\operatorname{Cut}(\Gamma)
+ \cong
+ \operatorname{Hom}_{\mathbb F_2}(Z_1(\Gamma),\mathbb F_2),
+\]
+and the pairing is exactly evaluation of a chamber cochain on an apartment boundary.
+
+\paragraph{Boundary.}
+The q5/all-q minimum-distance theorem and radius-four decoding remain open.  The perfect pairing is quotient-versus-dual, not an orthogonal self-duality statement.  Decoder claims are finite code statements, and the quadratic-order ladder is arithmetic rather than a historical geometric identification.
+\fi
+\input{analysis/PASS5118_5125_q5_cut_fourier_controller_insert}%
