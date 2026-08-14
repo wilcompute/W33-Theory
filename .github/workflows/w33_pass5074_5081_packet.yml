@@ -1,0 +1,52 @@
+name: Pass5074-5081 theta distance decoder packet
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5074_gauge_active_chart_tester.py'
+      - 'analysis/w33_pass5076_q4_low_generator_shell.py'
+      - 'analysis/w33_pass5077_q5_distance_falsifier.py'
+      - 'analysis/w33_pass5078_local_cut_decoder.py'
+      - 'analysis/w33_pass5079_all_q_tanner_six_cycles.py'
+      - 'analysis/w33_pass5080_fourier_gauge_q2.py'
+      - 'analysis/w33_pass5081_dual_minimum_theta_shell.py'
+      - 'analysis/w33_pass5074_5081_regression.py'
+      - 'data/PART_W33_PASS5074_5081_RESULTS.json'
+      - 'analysis/PASS5074_5081_*'
+      - 'tools/integrate_pass5074_5081_public.py'
+      - '.github/workflows/w33_pass5074_5081_packet.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  exact-packet:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      PYTHONPATH: .
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Syntax check
+        run: python -m py_compile analysis/w33_pass5074_gauge_active_chart_tester.py analysis/w33_pass5076_q4_low_generator_shell.py analysis/w33_pass5077_q5_distance_falsifier.py analysis/w33_pass5078_local_cut_decoder.py analysis/w33_pass5079_all_q_tanner_six_cycles.py analysis/w33_pass5080_fourier_gauge_q2.py analysis/w33_pass5081_dual_minimum_theta_shell.py analysis/w33_pass5074_5081_regression.py tools/integrate_pass5074_5081_public.py
+      - name: Replay lightweight exact certificates
+        run: |
+          python analysis/w33_pass5078_local_cut_decoder.py
+          python analysis/w33_pass5079_all_q_tanner_six_cycles.py
+          python analysis/w33_pass5081_dual_minimum_theta_shell.py
+          python analysis/w33_pass5074_5081_regression.py
+      - name: Materialize homepage card
+        run: python tools/integrate_pass5074_5081_public.py
+      - name: Commit generated homepage and lightweight certificates
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/index.html index.html data/PART_W33_PASS5078_LOCAL_CUT_DECODER.json data/PART_W33_PASS5079_ALL_Q_TANNER_SIX_CYCLES.json data/PART_W33_PASS5081_DUAL_MINIMUM_THETA_SHELL.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Materialize Pass5074-5081 public and lightweight certificates'
+            git push
+          fi
