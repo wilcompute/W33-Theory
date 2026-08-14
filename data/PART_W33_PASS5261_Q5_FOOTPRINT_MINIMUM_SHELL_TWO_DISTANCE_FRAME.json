@@ -1,0 +1,14 @@
+{
+  "pass":5261,
+  "status":"THEOREM_Q5_FOOTPRINT_MINIMUM_SHELL_TWO_DISTANCE_TIGHT_FRAME",
+  "minimum_shell":{"code":"C_F=[325,65,25]_2","minimum_words":156,"supports":"exactly the W(3,5) point footprints"},
+  "incidence_Gram":"F F^T=24I+4A_W+J",
+  "uncentered_Gram_spectrum":{"300":1,"40":90,"0":65},
+  "centroid":"(1/13) 1_325",
+  "centered_vector_norm_squared":"300/13",
+  "centered_Gram_spectrum":{"40":90,"0":66},
+  "tight_frame_dimension":90,
+  "tight_frame_bound":40,
+  "unit_inner_products":{"collinear_points":"2/15","noncollinear_points":"-1/25"},
+  "boundary":"Finite code/real-frame theorem only; strict zero-footprint apartment-code sector remains open."
+}
