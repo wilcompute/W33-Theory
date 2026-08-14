@@ -1,0 +1,16 @@
+{
+  "pass": 5181,
+  "status": "THEOREM_EVEN_Q_DUAL_TENSOR_TRANSFER_WITH_ODD_Q_CONNECTED_ANCHORS",
+  "P_side": "Pass5177 gives the P/opposite-point K_m,m tensor decomposition for all q, m=C(q+1,2).",
+  "even_q_transfer": "For even q, W_3(q) is self-dual, so the P tensor decomposition transfers to L/opposite-line charts.",
+  "odd_q_firewall": "For odd q, W_3(q)^D=Q_4(q), so no same-geometry P/L transfer is licensed. Exact q=3 and q=5 anchors show connected L chart-intersection graphs.",
+  "anchors": {
+    "2":{"q":2,"m":3,"P_charts":60,"P_degree_set":[3],"P_components":10,"P_component_size_set":[6],"P_first_component_Kmm":true,"L_charts":60,"L_degree_set":[3],"L_components":10,"L_component_size_set":[6],"L_first_component_Kmm":true},
+    "3":{"q":3,"m":6,"P_charts":540,"P_degree_set":[6],"P_components":45,"P_component_size_set":[12],"P_first_component_Kmm":true,"L_charts":540,"L_degree_set":[6],"L_components":1,"L_component_size_set":[540],"L_first_component_Kmm":false},
+    "4":{"q":4,"m":10,"P_charts":2720,"P_degree_set":[10],"P_components":136,"P_component_size_set":[20],"P_first_component_Kmm":true,"L_charts":2720,"L_degree_set":[10],"L_components":136,"L_component_size_set":[20],"L_first_component_Kmm":true},
+    "5":{"q":5,"m":15,"P_charts":9750,"P_degree_set":[15],"P_components":325,"P_component_size_set":[30],"P_first_component_Kmm":true,"L_charts":9750,"L_degree_set":[15],"L_components":1,"L_component_size_set":[9750],"L_first_component_Kmm":false}
+  },
+  "q5_structure": "P: 325 copies of K_15,15 and [225,25,25] local tensor codes. L: one connected 9750-chart degree-15 graph on the same 73125 apartment coordinates.",
+  "external_boundary": "Classical duality source recorded by the producer: Crnkovic, Hawtin, Svob, arXiv:2105.05833, Sec.2.",
+  "boundary": "Connected-L is certified here at q=3,5; no all-odd-q connectedness theorem is claimed."
+}
