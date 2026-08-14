@@ -1,0 +1,60 @@
+name: Pass5158-5165 q5 path decoder metric packet
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5158_q5_cubic_leader22_path_closure.py'
+      - 'analysis/w33_pass5159_allq_four_chamber_intersection_census.py'
+      - 'analysis/w33_pass5160_q3_decoder_hub_prune_probe.py'
+      - 'analysis/w33_pass5161_q5_cubic_leader23_localtype_dp.py'
+      - 'analysis/w33_pass5162_allq_dependency_second_weight.py'
+      - 'analysis/w33_pass5163_q5_cubic_leader24_localtype_dp.py'
+      - 'analysis/w33_pass5164_q5_cubic_leader25_girth_rejection.py'
+      - 'analysis/w33_pass5165_root_cayley_metric_char3_theorem.py'
+      - '.github/workflows/w33_pass5158_5165_packet.yml'
+  workflow_dispatch:
+jobs:
+  exact-replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Syntax check
+        run: |
+          python -m py_compile analysis/w33_pass5158_q5_cubic_leader22_path_closure.py
+          python -m py_compile analysis/w33_pass5159_allq_four_chamber_intersection_census.py
+          python -m py_compile analysis/w33_pass5160_q3_decoder_hub_prune_probe.py
+          python -m py_compile analysis/w33_pass5161_q5_cubic_leader23_localtype_dp.py
+          python -m py_compile analysis/w33_pass5162_allq_dependency_second_weight.py
+          python -m py_compile analysis/w33_pass5163_q5_cubic_leader24_localtype_dp.py
+          python -m py_compile analysis/w33_pass5164_q5_cubic_leader25_girth_rejection.py
+          python -m py_compile analysis/w33_pass5165_root_cayley_metric_char3_theorem.py
+      - name: Replay 5158
+        run: PYTHONPATH=. python analysis/w33_pass5158_q5_cubic_leader22_path_closure.py
+      - name: Replay 5159
+        run: PYTHONPATH=. python analysis/w33_pass5159_allq_four_chamber_intersection_census.py
+      - name: Replay 5160
+        run: PYTHONPATH=. python analysis/w33_pass5160_q3_decoder_hub_prune_probe.py
+      - name: Replay 5161
+        run: PYTHONPATH=. python analysis/w33_pass5161_q5_cubic_leader23_localtype_dp.py
+      - name: Replay 5162
+        run: PYTHONPATH=. python analysis/w33_pass5162_allq_dependency_second_weight.py
+      - name: Replay 5163
+        run: PYTHONPATH=. python analysis/w33_pass5163_q5_cubic_leader24_localtype_dp.py
+      - name: Replay 5164
+        run: PYTHONPATH=. python analysis/w33_pass5164_q5_cubic_leader25_girth_rejection.py
+      - name: Replay 5165
+        run: PYTHONPATH=. python analysis/w33_pass5165_root_cayley_metric_char3_theorem.py
+      - name: Compact status ledger
+        run: |
+          python - <<'PY'
+          import glob,json
+          for f in sorted(glob.glob('data/PART_W33_PASS51*.json')):
+              try:j=json.load(open(f))
+              except Exception:continue
+              if 5158 <= int(j.get('pass',0)) <= 5165:
+                  print(f, j.get('status'))
+          PY
