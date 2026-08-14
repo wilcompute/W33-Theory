@@ -113,7 +113,44 @@ def audit(path: Path) -> list[str]:
     return findings
 
 
+def selftest() -> int:
+    """Planted-fault recall for the module extractor, which is the part that runs offline.
+
+    The fold check itself needs yosys and cannot run here, so this pins the ONE piece of
+    logic that decides what yosys is ever pointed at: the module scan and the testbench
+    exclusion. A MODULE regex that stopped matching would make this guard silently audit
+    nothing and report a clean zero (Pass 5250).
+    """
+    cases = [("one module", "module fold_a(input x);\nendmodule\n", ["fold_a"]),
+             ("two modules", "module a();endmodule\nmodule b();endmodule\n", ["a", "b"]),
+             ("testbench excluded", "module tb_a();endmodule\nmodule a();endmodule\n",
+              ["a"]),
+             ("indented module", "  module spaced();endmodule\n", ["spaced"]),
+             ("no module", "// just a comment\n", [])]
+    ok = True
+    print("  selftest -- module extraction and testbench exclusion\n")
+    for name, src, want in cases:
+        got = [m for m in MODULE.findall(src) if not m.startswith("tb_")]
+        good = got == want
+        ok &= good
+        print(f"    {name:22s} got={str(got):22s} want={str(want):18s} "
+              f"{'PASS' if good else 'FAIL'}")
+    have_yosys = shutil.which("yosys") is not None
+    print(f"""
+  THE TESTBENCH CASE IS LOAD-BEARING. A tb_ module is stimulus, not hardware; synthesising
+  it produces folds that mean nothing and would bury the real finding. Excluding it is the
+  difference between a guard and a noise generator.
+
+  WHAT IS NOT COVERED HERE. yosys is {'PRESENT' if have_yosys else 'ABSENT'} on this machine, and the actual fold
+  detection -- read_verilog, flatten, opt -full, and the comparison that finds a register
+  synthesised away -- is not exercised by this self-test at all. So a green result here
+  means the guard will look at the right modules, NOT that it can still detect a fold.""")
+    return 0 if ok else 1
+
+
 def main(argv: list[str]) -> int:
+    if "--selftest" in argv:
+        return selftest()
     ap = argparse.ArgumentParser()
     ap.add_argument("files", nargs="*")
     ap.add_argument("--quiet", action="store_true")

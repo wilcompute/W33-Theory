@@ -28,6 +28,41 @@ def parse_range(value: str) -> set[int]:
     return set(range(start, end + 1))
 
 
+def selftest() -> int:
+    """Planted-fault recall for the range parser this guard reserves numbers with.
+
+    parse_range is the whole namespace-collision mechanism: every reservation block is
+    expanded through it, so an off-by-one here silently mis-reserves a pass number, which
+    is the exact fault the guard exists to prevent (Pass 5250).
+    """
+    cases = [("single number", "4801", {4801}),
+             ("inclusive range", "10-13", {10, 11, 12, 13}),
+             ("degenerate range", "7-7", {7}),
+             ("wide block", "5246-5253", set(range(5246, 5254)))]
+    ok = True
+    print("  selftest -- reservation range expansion\n")
+    for name, arg, want in cases:
+        got = parse_range(arg)
+        good = got == want
+        ok &= good
+        print(f"    {name:20s} {arg:>12s} -> {len(got):3d} number(s)  "
+              f"{'PASS' if good else 'FAIL (got %s)' % sorted(got)}")
+    for name, arg in (("reversed range rejected", "13-10"),):
+        try:
+            parse_range(arg)
+            print(f"    {name:20s} {arg:>12s} -> accepted           FAIL")
+            ok = False
+        except AssertionError:
+            print(f"    {name:20s} {arg:>12s} -> rejected           PASS")
+    print("""
+  THE INCLUSIVE-RANGE CASE IS THE ONE THAT MATTERS. "5246-5253" must expand to EIGHT
+  numbers, not seven: a half-open reading leaves the last number of every block unclaimed,
+  and an unclaimed number at a block boundary is precisely where two lanes collide. The
+  reversed-range case checks the guard refuses input it cannot mean rather than silently
+  reserving nothing.""")
+    return 0 if ok else 1
+
+
 def load_result_for_pass(number: int) -> tuple[Path, dict]:
     candidates = sorted((ROOT / "data").glob(f"w33_pass{number}_*.json"))
     if len(candidates) != 1:
@@ -147,5 +182,8 @@ def main() -> dict:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--check-only", action="store_true", help="Retained for pre-commit/CI compatibility; the guard is always fail closed.")
-    parser.parse_args()
+    parser.add_argument("--selftest", action="store_true", help="Planted-fault recall for the reservation range parser.")
+    args = parser.parse_args()
+    if args.selftest:
+        raise SystemExit(selftest())
     main()

@@ -206,6 +206,12 @@ repos:
       # session, all from assuming a key name implies a convention. The sharpest: it
       # defines SELF_DIGEST_KEYS with three canonical names, documents why all three are
       # needed, then hard-codes one of them six lines below. Warns, never blocks.
+      - id: spectral-overreach
+        name: spectral bound must not be said to DETERMINE a combinatorial quantity
+        entry: py -3 scripts/check_spectral_overreach.py
+        language: system
+        files: ^(analysis|scripts)/.*\.(py|md|tex)$
+        pass_filenames: true
       - id: hardcoded-keys
         name: single-key lookups beside a canonical list
         entry: py -3 scripts/check_hardcoded_keys.py

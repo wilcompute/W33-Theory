@@ -1,0 +1,106 @@
+{
+  "boundary": "Pass 5250: rtl-folds' self-test covers the module extractor only -- yosys is absent and fold detection is NOT exercised. Pass 5251 compares FILE COVERAGE, not detection power; 'within my file patterns' means a guard would scan the file if staged, not that it would catch what their rules catch. Pass 5252 counts only comparisons this lane RAN, so it cannot see disagreements neither lane noticed, and a prior built on 2 disagreements is weak. Pass 5253's guard catches restatements of the error, never the error",
+  "pass_5250": {
+    "finding": "check_stale_boundaries had a working self-test all along, spelled --self-test while the runner probes --selftest; both spellings now accepted",
+    "inventory": "19 self-tested, 0 without a self-test, 0 failing",
+    "newly_self_tested": [
+      "stale-boundaries",
+      "shifted-adjacency-descendants",
+      "tag-540-check",
+      "pass-namespace-collision-guard",
+      "topical-aliases",
+      "rtl-folds"
+    ],
+    "untestable_here": "rtl-folds fold detection (needs yosys)"
+  },
+  "pass_5251": {
+    "also": "their firewall has no self-test",
+    "flagged_across_boundary": "their firewall is currently RED with 2 violations of tritangent_support8_minimum on Pass5000-5007 surfaces; their rule, their claim, their call",
+    "my_analysis_py": 3989,
+    "their_exit_code": 1,
+    "their_firewall_reads_my_py": 0,
+    "their_rules": 8,
+    "their_surfaces": 37,
+    "their_surfaces_in_my_patterns": 37,
+    "verdict": "not redundant: theirs is precision tooling on published surfaces, mine is recall tooling on the working corpus; neither subsumes the other"
+  },
+  "pass_5252": {
+    "agreed": 5,
+    "comparisons": [
+      {
+        "agreed": false,
+        "cause": "I divided by 2 twice",
+        "mine": 540,
+        "pass": "4930s",
+        "theirs": 1080,
+        "topic": "eight-cycle count",
+        "who_was_right": "theirs"
+      },
+      {
+        "agreed": false,
+        "cause": "root system not closed under negation in my construction",
+        "mine": 52,
+        "pass": "4930s",
+        "theirs": 36,
+        "topic": "E6 root count as projective pairs",
+        "who_was_right": "theirs"
+      },
+      {
+        "agreed": true,
+        "cause": "",
+        "mine": null,
+        "pass": "4940s",
+        "theirs": null,
+        "topic": "order-1440 firewall",
+        "who_was_right": "both"
+      },
+      {
+        "agreed": true,
+        "cause": "",
+        "mine": null,
+        "pass": "4940s",
+        "theirs": null,
+        "topic": "Steiner quotient carrier",
+        "who_was_right": "both"
+      },
+      {
+        "agreed": true,
+        "cause": "",
+        "mine": 28,
+        "pass": "5222",
+        "theirs": 28,
+        "topic": "H(3,9) independence number = 28",
+        "who_was_right": "both"
+      },
+      {
+        "agreed": true,
+        "cause": "",
+        "mine": 10,
+        "pass": "5228",
+        "theirs": 10,
+        "topic": "Q(4,3) maximum coclique = 10",
+        "who_was_right": "both"
+      },
+      {
+        "agreed": true,
+        "cause": "",
+        "mine": 28,
+        "pass": "5248",
+        "theirs": 28,
+        "topic": "Hoffman bound 28 on H(3,9)",
+        "who_was_right": "both"
+      }
+    ],
+    "disagreed": 2,
+    "mine_right_in_disagreements": 0,
+    "prior": "when a cross-lane number disagrees, re-derive MINE first -- 0 of 2 disagreements went my way",
+    "total": 7
+  },
+  "pass_5253": {
+    "counterexample": "W(3,3) and Q(4,3) are both SRG(40,12,2,4); alpha is 7 and 10",
+    "flags": "determination verbs, never bounding language",
+    "guard": "scripts/check_spectral_overreach.py",
+    "selftest_green": true,
+    "sweep": "0 candidate spectral over-read(s) in 273 file(s)"
+  }
+}

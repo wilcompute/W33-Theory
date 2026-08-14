@@ -13,6 +13,7 @@ import json
 import os
 from pathlib import Path
 import re
+import sys
 from typing import Iterable
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -194,7 +195,53 @@ def audit(root: Path, selected: list[Path] | None = None) -> dict:
     }
 
 
+def selftest() -> int:
+    """Planted-fault recall for the shifted-adjacency patterns.
+
+    Cases carry near-misses on purpose: a pattern that fires on any mention of the
+    descendant numbers would flag the corrections that discuss them, which is the failure
+    this whole guard family keeps producing (Pass 5250).
+    """
+    if not PATTERNS:
+        print("  selftest -- NO PATTERNS REGISTERED; guard cannot detect anything")
+        return 1
+    # Real text in the shape each retracted claim was actually written in, not the regex
+    # source -- feeding a pattern its own source tests nothing, since the metacharacters
+    # are not literals. Every planted string below is prose a pass could have contained.
+    cases = [
+        ("planted: old spectrum -7,-1,+5", "The spectrum is -7, -1, +5 as computed.", True),
+        ("planted: old multiplicities", "with multiplicities 16, 10, 6 respectively.", True),
+        ("planted: old determinant", "(1-5x)(1+x)(1+7x) factors the determinant.", True),
+        ("planted: anomaly Z(-1)=0", "Z(-1) = 0, so the anomaly cancels.", True),
+        ("clean: empty document", "", False),
+        ("clean: unrelated prose", "The ovoid has q^2+1 points.\n", False),
+        ("clean: near-miss numbers", "multiplicities 16 and 11 and 6 appear.", False),
+        ("clean: corrected spectrum", "The spectrum is -5, -1, +7 after Pass 1.", False),
+    ]
+    ok = True
+    print(f"  selftest -- planted-fault recall over {len(PATTERNS)} pattern(s)\n")
+    for name, text, want in cases:
+        try:
+            got = bool(scan_text(text))
+        except Exception as e:                      # a pattern that cannot run is a fault
+            print(f"    {name:34s} ERROR {e}")
+            ok = False
+            continue
+        good = (got == want) if want else (got == want)
+        ok &= good
+        print(f"    {name:34s} flagged={str(got):5s} want={str(want):5s} "
+              f"{'PASS' if good else 'FAIL'}")
+    print("""
+  WHAT THIS DOES AND DOES NOT SHOW. It shows the patterns compile and that an empty or
+  unrelated document does not trip them -- so a zero from this guard is a real zero rather
+  than a dead regex. It does NOT show the patterns match the historical faults they were
+  written for; that is what the ledger is for, and the ledger is data, not a test.""")
+    return 0 if ok else 1
+
+
 def main() -> None:
+    if "--selftest" in sys.argv:
+        raise SystemExit(selftest())
     parser = argparse.ArgumentParser()
     parser.add_argument("files", nargs="*")
     parser.add_argument("--root", default=str(ROOT))

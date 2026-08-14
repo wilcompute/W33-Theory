@@ -15,6 +15,7 @@ import json
 import os
 from pathlib import Path
 import re
+import sys
 from typing import Iterable
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -153,6 +154,42 @@ def signal_hits(window: str, signals: dict[str, str]) -> list[str]:
         for name, pattern in signals.items()
         if re.search(pattern, window, re.I | re.S)
     ]
+
+
+def selftest() -> int:
+    """Planted-fault recall for the 540-species signal matcher.
+
+    540 is the ambiguous number in this corpus: several genuinely different carriers have
+    that size, and a file naming one while meaning another is failure mode 1 with a number
+    attached. signal_hits is the whole disambiguation, so it needs to fire on the species
+    vocabulary and stay silent on a bare mention of 540 (Pass 5250).
+    """
+    pn = SPECIES_SIGNALS["point-nonedge"]
+    cases = [
+        ("planted: noncollinear point", "a noncollinear point pair here", pn, True),
+        ("planted: SRG(40,12,2,4)", "the graph SRG(40,12,2,4) again", pn, True),
+        ("planted: mu = 4", "with mu = 4 throughout", pn, True),
+        ("clean: bare 540", "there are 540 of them", pn, False),
+        ("clean: unrelated srg", "the graph SRG(112,30,2,10)", pn, False),
+    ]
+    ok = True
+    print("  selftest -- 540 species signal recall\n")
+    for name, window, sigs, want in cases:
+        got = bool(signal_hits(window, sigs))
+        good = got == want
+        ok &= good
+        print(f"    {name:32s} hits={str(got):5s} want={str(want):5s} "
+              f"{'PASS' if good else 'FAIL'}")
+    print(f"""
+  THE BARE-540 CASE IS THE POINT OF THE WHOLE GUARD. "there are 540 of them" names the
+  number and identifies nothing, and must NOT be read as any species -- {len(SPECIES_SIGNALS)} distinct carriers
+  in this corpus have size 540, so the integer alone carries no information. What
+  disambiguates is the surrounding vocabulary, which is what signal_hits reads.
+
+  ITS LIMIT: this tests the matcher, not the windowing. Whether the right window reaches the
+  right signals depends on _tag_spans and _bounded_context, which are span arithmetic and
+  are not exercised here.""")
+    return 0 if ok else 1
 
 
 def _span_gap(left: tuple[int, int], right: tuple[int, int]) -> int:
@@ -413,6 +450,8 @@ def audit(root: Path, selected: list[Path] | None = None) -> dict:
 
 
 def main() -> None:
+    if "--selftest" in sys.argv:
+        raise SystemExit(selftest())
     parser = argparse.ArgumentParser()
     parser.add_argument("files", nargs="*")
     parser.add_argument("--root", default=str(ROOT))

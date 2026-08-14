@@ -267,7 +267,11 @@ def self_test() -> int:
 
 
 def main(argv: list[str]) -> int:
-    if "--self-test" in argv:
+    # Both spellings. This guard had a working self-test for weeks while the inventory
+    # runner reported it as untested, because the runner probes for "--selftest" and this
+    # file spelled it "--self-test" (Pass 5250). A hyphen is a silent coverage hole: the
+    # tool was green, the dashboard said unknown, and nothing anywhere disagreed.
+    if "--self-test" in argv or "--selftest" in argv:
         return self_test()
     limit = 40
     for a in argv:

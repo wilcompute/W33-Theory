@@ -84,6 +84,35 @@ def tokens_of(text: str) -> set[str]:
     return out
 
 
+def selftest() -> int:
+    """Planted-fault recall for the token grammar the alias index is built from.
+
+    This index exists because the corpus is named by DATE, not by topic, so the token
+    extractor IS the only route from a result to the file holding it. A class that silently
+    stops matching removes a whole retrieval path and nothing else notices (Pass 5250).
+    """
+    cases = [("group token", "The group Sp(4,3) acts here.", "group", True),
+             ("code token", "the code [325,260,8] is dual.", "code", True),
+             ("stopword is not a token", "The Table shows it.", "named", False),
+             ("bare integer is not a token", "There are 240 roots.", "code", False)]
+    ok = True
+    print("  selftest -- token grammar recall\n")
+    for name, text, cls, want in cases:
+        toks = tokens_of(text)
+        got = any(t.startswith(cls + ":") for t in toks)
+        good = got == want
+        ok &= good
+        print(f"    {name:32s} {cls:10s} got={str(got):5s} want={str(want):5s} "
+              f"{'PASS' if good else 'FAIL'}  {sorted(toks)[:3]}")
+    print("""
+  THE BARE-INTEGER CASE IS THE CALIBRATION. Pass 328 measured every token class before this
+  grammar was chosen: indexing bare integers flags 97 percent of files and is pure noise, so
+  "240" must NOT become a token even though 240 is one of the most load-bearing numbers in
+  the corpus. The index trades that recall away deliberately, and this case pins the trade
+  so a later widening cannot happen silently.""")
+    return 0 if ok else 1
+
+
 def scan():
     idx = defaultdict(set)
     nfiles = 0
@@ -158,6 +187,8 @@ def render(idx, nfiles):
 
 
 def main():
+    if "--selftest" in sys.argv:
+        return selftest()
     idx, nfiles = scan()
     new = render(idx, nfiles)
     if "--check" in sys.argv:
