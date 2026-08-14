@@ -1,0 +1,20 @@
+{
+  "pass": 5182,
+  "status": "THEOREM_Q5_STRICT_COUNTEREXAMPLE_LEADER_AT_LEAST_32",
+  "q": 5,
+  "leader_size_closed": 31,
+  "target_distance": 625,
+  "previous_adjacent_pair_cap": 52,
+  "raw_deletion_cap": 55,
+  "pair_only_N1_le_41_lower": 797,
+  "uniform_layer_bounds": {
+    "N1=42":1711,"N1=43":1561,"N1=44":1411,"N1=45":1227,
+    "N1=46":1077,"N1=47":964,"N1=48":904,"N1=49":871,
+    "N1=50":837,"N1=51":804,"N1=52":771,"N1=53":706,
+    "N1=54":673,"N1=55":832
+  },
+  "critical_layer": {"N1":54,"integer_weight_lower_bound":673},
+  "dense_rebound": {"N1":55,"surviving_degree_profile":[0,7,16],"integer_weight_lower_bound":832},
+  "conclusion": "Every m=31 adjacent-pair layer through the raw cap 55 has apartment weight >625. Every q5 word of weight <625 has minimum chamber leader at least 32.",
+  "boundary": "This closes leader 31 only. The q5/all-q minimum-distance theorem and weight-625 equality shell remain open for leaders >=32."
+}
