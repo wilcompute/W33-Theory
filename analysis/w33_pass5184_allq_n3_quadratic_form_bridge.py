@@ -59,7 +59,9 @@ def main():
     for q in (2,3,4,5,7,9):
         v,k,lam,mu=point_graph_params(q)
         r=q-1;s=-(q+1)
-        assert k+r*s==(q*(q+1))-(q*q-1)==1 # harmless arithmetic anchor
+        # SRG quadratic for the two nontrivial eigenvalues:
+        # x^2-(lambda-mu)x-(k-mu)=(x-r)(x-s).
+        assert r+s==lam-mu and r*s==-(k-mu)
         anchors[str(q)]={'v':v,'k':k,'lambda':lam,'mu':mu,
                          'nontrivial_eigenvalues':[r,s],
                          'upper_quadratic_form':'zAz <= (q-1)||z||^2 + m^2/(q+1)'}
