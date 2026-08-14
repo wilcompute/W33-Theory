@@ -1,0 +1,13 @@
+{
+  "range": [5134, 5141],
+  "status": "EXECUTED_WITH_CLEAN_REPLAY_TRACKED_SEPARATELY",
+  "5134": {"q5_leader_size": 18, "sharp_adjacent_pair_cap": 27, "delsarte_distance_counts": [27,73,53,0], "second_order_weight_lower_bound": 320, "conclusion": "pair-only method insufficient at m=18"},
+  "5135": {"local_weight_to_triangle_moment": {"5":10,"8":8,"9":6}, "third_moment_formula": "2500-8h8-12h9", "minimal_exotic_profile": {"h8":2,"h9":1,"A_type":248,"T_type":2472,"defect":28}},
+  "5136": {"decoder_guaranteed_radius": 5, "weight6_counterexample": [1,2,3,6,27,54], "false_center": 0, "max_vote": 3, "first_correction": [0,1,2,3,6,27,54]},
+  "5137": {"all_q_linear_sector": {"eigenvalues": ["4(q-1)","3q-4","2q-4"], "multiplicities": ["1","2(q-1)","(q-1)^2"]}, "full_exact_spectrum_anchors": [2,3,4,5], "observed_anchor_gap": "q", "uniform_nonlinear_gap_proof": false},
+  "5138": {"compiler_preserves": ["augmentation ideal J","all powers J^r","Jennings layers J^r/J^(r+1)"], "exhaustive_product_anchors": [2,3,4,5]},
+  "5139": {"dependency_code": "[(q+1)^2(q^2+1),2(q+1)(q^2+1)-1,q+1]_2", "minimum_word_count": "2(q+1)(q^2+1)", "minimum_words": "point/line panel stars"},
+  "5140": {"triple_intersection_law": {"(1,1,2)":"q^2","(1,2,3)":"q","(1,3,4)":"1","(2,2,4)":"1","(2,3,3)":"1","other":"0"}, "anchors": [2,3,4,5], "q5_fixed_base_histogram": {"0":428320,"1":7500,"5":750,"25":75}},
+  "5141": {"diameter_upper_bound": 4, "bfs_anchors": [2,3,4,5,7,11,13], "odd_prime_anchor_shell_formula": ["1","4(q-1)","8(q-1)^2","(q-1)^2(10q-21)","(q-1)^2(q-4)^2"], "family_status": "CONJECTURAL_BEYOND_ANCHORS"},
+  "boundary": "q5/all-q apartment-code distance remains open at leaders >=18; fourth and higher intersection terms remain; decoder radius statement is for the specified hard-decision max-vote rule; full all-q nonlinear theta spectrum/gap remains open; root-metric polynomial shell law is conjectural beyond anchors."
+}
