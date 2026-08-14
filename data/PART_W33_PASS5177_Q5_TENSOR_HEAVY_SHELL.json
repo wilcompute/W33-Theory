@@ -1,8 +1,8 @@
 {
   "pass": 5177,
-  "status": "THEOREM_Q5_MINIMUM_EXOTIC_COAREA_DEFECT_AT_LEAST_10",
+  "status": "THEOREM_Q5_P_SIDE_EXOTIC_COAREA_DEFECT_AT_LEAST_10",
   "q": 5,
-  "one_type_geometry": {
+  "P_type_geometry": {
     "components": 325,
     "chart_intersection_component": "K_15,15",
     "apartments_per_component": 225,
@@ -19,25 +19,26 @@
       {"weight":25,"h8":0,"h9":0,"active":10,"count":36},
       {"weight":48,"h8":2,"h9":0,"active":18,"count":450}
     ],
-    "minimal_profile_h8_2_h9_1_exists": false
+    "P_side_profile_h8_2_h9_1_exists": false
   },
-  "global_weight625_knapsack": {
-    "coarea_cost": "3 h8 + 4 h9 = 5(250-A_type)",
-    "minimum_zero_cost_solution": "25 component minimum words of weight 25",
+  "P_side_weight625_knapsack": {
+    "coarea_cost": "3 h8 + 4 h9 = 5(250-A_P)",
+    "minimum_zero_cost_solution": "25 P-component minimum words of weight 25",
     "minimum_positive_cost": 50,
     "minimum_positive_active_chart_defect": 10,
-    "maximum_active_charts_in_a_heavy_type": 240,
+    "maximum_active_P_charts_if_P_heavy": 240,
     "one_minimum_composition": [
       {"multiplicity":20,"weight":25,"h8":0,"h9":0,"active":10},
       {"multiplicity":1,"weight":48,"h8":2,"h9":0,"active":18},
       {"multiplicity":1,"weight":77,"h8":8,"h9":5,"active":22}
     ]
   },
-  "consequence": "For a q=5 apartment-code word of weight 625, each chart type P or L is either heavy-free with A_type=250, or has A_type<=240. Pass5102 minimum-cut rigidity says a nonstar minimum word must have a heavy chart in at least one type. Therefore any nonstar weight-625 word has total active-chart count A<=490. The old candidate (h8,h9)=(2,1), A_type=248 is impossible.",
-  "improvement": "The previous Pass5127 equality-shell bound was A<=498 for a nonstar weight-625 word. This tensor-component theorem improves the forced active-chart deficit from 2 to at least 10 in the heavy type, hence from total A<=498 to total A<=490.",
+  "consequence": "For a q=5 weight-625 apartment-code word, if the P/opposite-point chart type contains any heavy chart then A_P<=240, hence total active charts A<=490 because A_L<=250. The old P-side candidate (h8,h9)=(2,1), A_P=248 is impossible.",
+  "asymmetry_firewall": "The canonical L/opposite-line chart-intersection graph is connected at q=3 and q=5, so this tensor decomposition does not automatically apply to L charts. A nonstar minimum word could in principle be P-heavy, L-heavy, or both; the L-heavy-only case remains open here.",
+  "improvement": "Conditional on P-side heaviness, the active-chart deficit improves from 2 to at least 10 in the P type.",
   "reproducers": [
     "analysis/w33_pass5177_q5_tensor_component_geometry.py",
     "analysis/w33_pass5177_q5_tensor_heavy_enum.cpp"
   ],
-  "boundary": "This eliminates the previously minimal exotic coarea profile and sharply widens the active-chart gap, but it does not yet rule out all nonstar weight-625 words. The full q=5/all-q apartment-code minimum-distance theorem is not claimed here."
+  "boundary": "P-side theorem only. It does not eliminate an L-heavy-only exotic weight-625 word and therefore does not by itself give a universal A<=490 bound for every nonstar minimum word."
 }
