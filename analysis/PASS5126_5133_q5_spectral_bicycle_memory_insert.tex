@@ -1,0 +1,43 @@
+\ifdefined\WPassFiveOneTwoSixLoaded\else
+\gdef\WPassFiveOneTwoSixLoaded{1}
+\subsection*{Passes 5126--5133: q=5 leader barrier, theta curvature, parabolic compiler gauge, and rank-family probes}
+The q=5 cut--Delsarte argument can be pushed one step further without a large apartment MILP.  A cut-minimal 17-chamber representative is a bipartite girth-eight graph of maximum degree three.  Exhaustive prescribed-degree realization rejects every 17-edge degree pair with at least $26$ adjacent edge pairs, while $25$ is attainable.  Feeding $N_1\le25$ into the exact q=5 chamber distance scheme yields the extremal distribution
+\[
+ (N_1,N_2,N_3,N_4)=(25,66,45,0)
+\]
+and the second-order lower bound
+\[
+ 17\cdot625-2\cdot5000=625.
+\]
+Hence any q=5 word of weight strictly below $625$ has minimum chamber-generator leader at least $18$.  Equality at leader $17$ and leaders at least $18$ remain open.
+
+The intrinsic theta graph also exposes why a first-order expansion proof stalls.  Its degree is $D=8(q-1)$, while every nonzero codeword support induces degree $D/2$ and has exactly $D/2$ external neighbors at every selected apartment.  Thus
+\[
+ \Pr(\text{one theta step stays in }S)
+ =\Pr(\text{one theta step exits }S)=\frac12,
+\qquad
+ \frac{1_S^TL1_S}{\|1_S\|^2}=4(q-1).
+\]
+These quantities are independent of the support size.  The first nonconstant statistic appears one order higher: at q=3 the number of fully selected common-root/Tanner-six triangles varies among chamber-star XOR words even though the induced-edge count remains $4|S|$.  A chamber star has $108$ such triangles; two-star XORs at gallery distances $1,2,3,4$ have $108,168,196,208$, respectively.  Fully selected theta-check triangles remain impossible by parity.
+
+The old BT865 state/program asymmetry is now intrinsic at group level.  The point parabolic of order $648$ acts on its four pencil lines through $A_4$; its $54$-element kernel has derived subgroup exactly the aligned extraspecial $H_{27}$, and quotienting the full point parabolic by $H_{27}$ gives $SL(2,3)$.  The line parabolic acts on its four points through the full $S_4$, with kernel exactly the aligned elementary-abelian $\mathbb F_3^3$.  Thus the two torsor groups are canonical parabolic subgroups; only BT865's choice of three free homology seeds remains basis gauge.
+
+For odd q, the binary Levi bicycle conjecture reduces to one cross-characteristic rank statement.  If $N$ is the point--line incidence matrix, then
+\[
+ \operatorname{rank}_{\mathbb Q}N=1+\frac{q(q+1)^2}{2},
+ \qquad
+ \dim \mathrm{Bike}=2\,\operatorname{null}_{\mathbb F_2}(N)-1.
+\]
+Consequently $\dim\mathrm{Bike}=q^3+q-1$ exactly when $N$ suffers no binary rank drop.  Exact no-drop anchors now hold for q=$3,5,7,9,11,13$, including the extension-field anchor q=$9$; the all-odd-q theorem remains open.
+
+The protected-memory/Jennings construction also extends to rank three in the safe characteristic range.  For $A_3,p=5$ the positive-root heights $(1,1,1,2,2,3)$ give a $5^6=15625$-dimensional regular module with $41$ palindromic radical layers and center layer $931$.  For $C_3,p=7$, heights $(1,1,1,2,2,3,3,4,5)$ give dimension $7^9=40353607$, $133$ layers, and center layer $925601$.
+
+Two exact derivative-spectrum probes complete the packet.  Over genuine $\mathbb F_4$, the 256-vertex $C_2$ root-coset derivative graph has spectrum
+\[
+ 12^1,8^6,6^{24},4^9,2^{24},0^{84},(-4)^{72},(\pm2\sqrt2)^{18},
+\]
+and root-coset incidence rank $184$ generically versus $180$ in native characteristic two.  At q=5 the 625-vertex derivative graph has rational eigenvalues $16,11,6,1,-4$ together with the conjugate pairs $6\pm\sqrt5$, $1\pm\sqrt5$, $(7\pm\sqrt{65})/2$, and $1\pm\sqrt{15}$ at the frozen multiplicities; its incidence rank is $405$ generically and $397$ over $\mathbb F_5$.
+
+\paragraph{Boundary.}
+The q=5/all-q minimum-distance theorem is not closed.  The all-odd-q bicycle formula is reduced and heavily anchored but not proved.  Root-coset quadratic fields and native rank defects are finite algebraic invariants, not particle or charge assignments.  Jennings depth is algebraic nilpotence rather than physical latency, and the triangle count is a candidate higher-order curvature statistic rather than a finished distance inequality.
+\fi
