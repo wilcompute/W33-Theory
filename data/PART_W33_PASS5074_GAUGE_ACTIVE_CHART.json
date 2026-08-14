@@ -1,0 +1,12 @@
+{
+  "pass":5074,
+  "status":"PASS",
+  "theorem":"Under Pass5066, apartment-code words are edge-cochain characters modulo cuts; on each opposite-pair chart the restriction is a K_(q+1) cut. Therefore 4 wt(c_y)=sum_O wt(c_y|_O)>=q A(y).",
+  "remaining_target":"A(y)>=4q^3 for every non-cut cochain",
+  "chamber_star_formula":{"weight":"q^4","active_charts":"4q^3","point_active":"2q^3","line_active":"2q^3","local_weight":"q"},
+  "q2":{"points":15,"lines":15,"chambers":45,"apartments":90,"charts":120,"star_weight":16,"star_active_charts":32,"point_active":16,"line_active":16},
+  "q3":{"points":40,"lines":40,"chambers":160,"apartments":1620,"charts":1080,"star_weight":81,"star_active_charts":108,"point_active":54,"line_active":54},
+  "q4":{"points":85,"lines":85,"chambers":425,"apartments":13600,"charts":5440,"star_weight":256,"star_active_charts":256,"point_active":128,"line_active":128},
+  "q5":{"points":156,"lines":156,"chambers":936,"apartments":73125,"charts":19500,"star_weight":625,"star_active_charts":500,"point_active":250,"line_active":250},
+  "boundary":"Exact reformulation and saturation family; the universal active-chart lower bound remains open."
+}
