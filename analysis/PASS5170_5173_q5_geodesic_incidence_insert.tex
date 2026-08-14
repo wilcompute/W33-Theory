@@ -1,0 +1,54 @@
+\ifdefined\WPassFiveOneSevenZeroLoaded\else
+\gdef\WPassFiveOneSevenZeroLoaded{1}
+\subsection*{Passes 5170--5173: q=5 geodesic injections, incidence coupling, and the leader-31 wall}
+The q=5 apartment-code distance program now has two additional intrinsic geodesic constraints.  A cut-minimal chamber leader is a bipartite subcubic Levi subgraph of girth at least eight.  In such a graph, selected three-edge paths inject into opposite-part nonedges: two different paths with the same endpoints would create a $4$- or $6$-cycle.  A leaf reaches at most four vertices of the opposite part by such a path, giving a complementary unreached-nonedge defect.  At leader size $28$ these facts rule out the only dangerous adjacent-pair layers $N_1=49,50$; the surviving layer $N_1\le48$ has cubic lower bound
+\[
+ \operatorname{wt}\ge651.
+\]
+Hence every strict q=5 counterexample has chamber leader at least $29$.
+
+There is a second geodesic injection.  A selected four-edge Levi path is uniquely determined by its two outer chamber edges, so
+\[
+ P_4\le N_3,
+\]
+where $N_3$ is the gallery-distance-three coordinate of the chamber association scheme.  Coupling this inequality directly into the exact Delsarte optimization closes leader size $29$: the two surviving dense degree types have lower bounds $715$ and $630$.  Thus the strict-counterexample wall rises to leader at least $30$.
+
+A separate all-q matrix identity couples the gallery-distance-two coordinate to the point--line incidence geometry.  If $Y$ is any selected chamber set, $x$ and $y$ are its selected point and line degree vectors, $m=|Y|$, $N_1$ is its adjacent-pair count, and $N$ is the point--line incidence matrix, then
+\[
+ \boxed{\;N_2=x^{\mathsf T}Ny-(m+2N_1).\;}
+\]
+For $W(3,q)$,
+\[
+ NN^{\mathsf T}=(q+1)I+A_{\rm point}
+\]
+has eigenvalues $(q+1)^2,2q,0$.  Writing $W_P+W_L=N_1$ and $v=(q+1)(q^2+1)$ therefore gives the exact spectral upper bound
+\[
+ N_2\le {m^2\over q^2+1}
+ +\sqrt{2q\left(m+2W_P-{m^2\over v}\right)
+                \left(m+2W_L-{m^2\over v}\right)}
+ -(m+2N_1).
+\]
+This removes $N_2$ as a free Delsarte coordinate once the point/line wedge split is known.
+
+Finally, the five-edge-path extension admits a sharper universal form.  If $t_d$ is the number of endpoints of selected four-edge paths that lie at selected degree $d$, then
+\[
+ P_5=2P_4-t_1-{t_2\over2}.
+\]
+A degree-one endpoint terminates at most $8$ four-edge paths and a degree-two endpoint at most $16$, so
+\[
+ \boxed{\;P_5\ge \max(0,2P_4-8n_1-8n_2).\;}
+\]
+With the $P_4\le N_3$ coupling, this closes every leader-$30$ sector: pairwise Delsarte already gives $776$ through $N_1=40$, the strengthened cubic bounds give $827$ at $N_1=50$, and the two densest layers satisfy
+\[
+ N_1=51:\ \operatorname{wt}\ge794,
+ \qquad
+ N_1=52:\ \operatorname{wt}\ge760.
+\]
+The raw $N_1=53$ layer is impossible by edge-deletion degree constraints.  Therefore
+\[
+ \boxed{\text{every q=5 word of weight }<625\text{ has chamber leader }\ge31.}
+\]
+
+\paragraph{Evidence boundary.}
+This is a strict-counterexample barrier, not the q=5 minimum-distance theorem.  Leaders $\ge31$ and the weight-$625$ equality shell remain open.  The incidence and geodesic statements are finite generalized-quadrangle/code theorems; no hardware timing, noise threshold, or physical-particle interpretation is inferred.
+\fi
