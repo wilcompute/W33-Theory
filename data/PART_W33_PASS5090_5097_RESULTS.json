@@ -1,0 +1,97 @@
+{
+  "packet": [5090,5097],
+  "status": "PASS_WITH_OPEN_ALL_Q_DISTANCE_AND_Q4_HEAVY_SHELL",
+  "reconciliation": "Pass5074 and Pass5079 of the concurrent master packet independently corroborated the coarea tester reduction and all-q Tanner law. Those results are not republished here.",
+  "5090": {
+    "status": "THEOREM",
+    "q": 4,
+    "name": "local-minimum shell rigidity",
+    "assumption": "all active opposite-pair charts are minimum 1|4 cuts",
+    "fixed_apartment_seeds": 16,
+    "sat": 8,
+    "unsat": 8,
+    "sat_supports": "exactly the eight chamber stars through the fixed apartment",
+    "consequence": "Any non-chamber weight-256 word must contain at least one 2|3 chart."
+  },
+  "5091": {
+    "status": "THEOREM",
+    "name": "integral sqrt17 quadratic-order bridge",
+    "A": [[1,4],[1,0]],
+    "B2": [[4,2],[2,5]],
+    "P": [[2,-1],[-1,1]],
+    "detP": 1,
+    "identity": "A P = P (B2-4I)",
+    "maximal_order": "Z[(1+sqrt(17))/2]",
+    "disc_maximal": 17,
+    "q3_generator": "mu=10+4 lambda",
+    "q3_order": "Z+4 O_K",
+    "q3_conductor_index": 4,
+    "disc_q3_order": 272,
+    "q3_polynomial": "x^2-24x+76",
+    "boundary": "Arithmetic lattice/order bridge only; no geometric PSp intertwiner is claimed."
+  },
+  "5092": {
+    "status": "EXACT_ONE_SWAP_LOCAL_OPTIMUM_PLUS_SEARCH_EVIDENCE",
+    "name": "raw V24 Smith-floor conditioning frontier",
+    "denominator": 780,
+    "floor_basis": [118,5,122,37,6,76,129,61,44,26,89,45,87,126,78,124,22,111,15,38,58,96,64,160],
+    "floor_condition_2": 72382.48331056532,
+    "nonsingular_unique_one_swaps": 3289,
+    "one_swap_den780": 8,
+    "best_other_den780_one_swap_condition_2": 74483.1939,
+    "strict_one_swap_local_optimum": true,
+    "two_swap_sample": 24547,
+    "best_conditioned_exact_checked": 1200,
+    "den780_found_in_checked_two_swap": 0,
+    "best_sampled_condition_any_denominator": 102.57,
+    "balanced_control_den3120_condition": 105.46218720905891,
+    "boundary": "No global optimum over all denominator-780 raw bases is claimed."
+  },
+  "5093": {
+    "status": "THEOREM_WITH_Q3_GROUP_ANCHOR",
+    "name": "four-sheet discrete derivative",
+    "chamber_apartments": "q^4",
+    "active_chart_roles": ["point endpoint","point interior","line endpoint","line interior"],
+    "charts_per_role": "q^3",
+    "total_active_charts": "4q^3",
+    "formal_derivative": "d(q^4)/dq=4q^3",
+    "interpretation": "Exact finite coarea/codimension-one derivative; q remains a discrete prime-power parameter.",
+    "anchors": {"q2":[8,8,8,8],"q3":[27,27,27,27],"q4":[64,64,64,64]},
+    "q3_unipotent": {"order":81,"regular_on_81_star_apartments":true,"orders":{"1":1,"3":44,"9":36},"center":3,"derived":9,"root_directions":4}
+  },
+  "5094": {
+    "status": "EXACT_FINITE_FINGERPRINT",
+    "name": "noncommutative discrete Hessian",
+    "q3_pair_generated_orders": [9,9,9,9,27,81],
+    "q2_pair_generated_orders": [4,4,4,4,4,8],
+    "interpretation": "Pairing root directions is anisotropic: four q3 pairs close at q^2, one grows to q^3 and one to q^4. This is a root-commutator finite-difference analogue, not differential calculus."
+  },
+  "5095": {
+    "status": "THEOREM_FIREWALL",
+    "name": "chamber-star switch graph is not H(4,q)",
+    "q2": {"vertices":16,"degree":4,"charpoly":"(x^2-16)(x^2-4)^2 x^2 (x^2-2)^4","hamming":"H(4,2)","isomorphic":false},
+    "q3": {"vertices":81,"degree":8,"charpoly":"(x-8)(x-5)^4(x-2)^10(x+1)^18(x+4)^12(x^2-4x+1)^6(x^2+2x-2)^6(x^2-x-8)^6","hamming":"H(4,3)","isomorphic":false},
+    "q4": {"vertices":256,"degree":12,"charpoly":"(x-12)(x-8)^6(x-6)^24(x-4)^9(x-2)^24 x^84(x+4)^72(x^2-8)^18","hamming":"H(4,4)","isomorphic":false},
+    "interpretation": "The four derivative directions live on a curved/root-Cayley carrier rather than a Cartesian four-coordinate Hamming graph."
+  },
+  "5096": {
+    "status": "THEOREM",
+    "name": "q4 heavy-chart defect conservation",
+    "weight": 256,
+    "chart_weights": [4,6],
+    "parameter": "A2=2t",
+    "identities": {"A1":"256-3t","active_charts":"256-t","supported_tanner_triangles":"1024-8t"},
+    "chamber_value": "t=0",
+    "exotic_requirement": "t>=1",
+    "interpretation": "Each unit of heavy-chart defect lowers the derivative-support count by one and the supported local Tanner-triangle count by eight while preserving total apartment weight 256."
+  },
+  "5097": {
+    "status": "THEOREM_BRIDGE",
+    "name": "coarea-Fourier identity",
+    "N_A": "q^4(q+1)^2(q^2+1)/8",
+    "identity": "muhat(y)=1-(1/(2N_A)) sum_O s_O(q+1-s_O)",
+    "equivalent_weight_identity": "wt(c_y)=N_A(1-muhat(y))/2=(1/4)sum_O s_O(q+1-s_O)",
+    "chamber_extremal": "muhat_edge=1-16/((q+1)^2(q^2+1))",
+    "synthesis": "The active-chart/coarea attack and the Fourier-extremality attack are two coordinate descriptions of the same energy. The remaining theorem is to show no nontrivial character has larger Fourier bias / smaller chart energy than a chamber edge."
+  }
+}
