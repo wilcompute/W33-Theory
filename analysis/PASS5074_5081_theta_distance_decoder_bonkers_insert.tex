@@ -1,0 +1,34 @@
+\ifdefined\WPassFiveZeroSevenFourLoaded\else
+\gdef\WPassFiveZeroSevenFourLoaded{1}
+\subsection*{Passes 5074--5081: gauge-test distance reduction, sharbly dictionary, local decoder, and three outside-box closures}
+Pass~5066 identifies apartments modulo theta relations with the binary Levi cycle space. Dualizing sharpens the still-open distance problem: a codeword is the evaluation of an edge $1$-cochain modulo cuts on apartment boundaries. On an opposite-pair chart its values form a cut of $K_{q+1}$, and therefore
+\[
+  4\,\mathrm{wt}(c_y)=\sum_O \mathrm{wt}(c_y|_O)
+  \ge q\,A(y).
+\]
+Thus $d=q^4$ would follow from the single local-test inequality $A(y)\ge4q^3$ for every non-cut cochain. A chamber/edge cochain saturates the target for $q=2,3,4,5$: it has weight $q^4$, exactly $4q^3$ active charts, and every active chart is a minimum cut of weight $q$. The inequality itself remains open.
+
+The recent symplectic-sharbly presentation has an exact rank-two overlap with this finite picture. Its $V_0$ terms are symplectic-basis apartment generators, and a $V_{1,1}$ genus-one sharbly boundary reduces mod $2$ to the three apartments through a fixed opposite point pair: the point-theta relation. The $V_{1,2}$ genus-two split differential is structurally the dual relation type, but no literal chain-level identification with every line-theta generator is promoted here; Pass~5066 remains the all-$q$ proof.
+
+The $q=4$ shell search is sharpened exactly. Among all sums of at most three distinct chamber-star generators, only a single star has weight $256$; every pair and every triple has weight at least $384$. Hence any hypothetical non-star minimum word must use at least four stars in every such representation. At $q=5$, all pairs of the $936$ chamber stars have weight at least $1000$ and a bounded multi-star descent never beats the chamber-star weight $625$. These are falsifiers, not complete minimum-distance proofs.
+
+Locally, the cut-space theorem is now an explicit decoder. A complete syndrome has rank $q(q-1)/2$. In the physical $q=3$ case the chart has six raw bits, three potential bits, three syndrome bits, and only eight syndromes, so exact nearest-cut correction is an eight-entry ROM. The corresponding exact ROM sizes for $q=2,4,5$ are $2,64,1024$.
+
+Three outside-box continuations also close. First, the apartment/theta Tanner graph has for every $q$ exactly
+\[
+ N_6=q^3(q+1)^2(q^2+1)\binom q3=T(q)(q-2)
+\]
+six-cycles: a genuine Tanner six-cycle is precisely three apartments through one common length-four root. Second, with $\mu$ uniform on apartment boundaries,
+\[
+ \mathrm{wt}(c_y)=\frac{N_A}{2}\bigl(1-\widehat\mu(y)\bigr),
+\]
+so the family distance theorem is equivalently the sharp nontrivial Fourier bound
+\[
+ \widehat\mu(y)\le 1-\frac{16}{(q+1)^2(q^2+1)}.
+\]
+The complete $q=2$ enumerator has exactly $45$ minimum words, all chamber stars. Third, the dual minimum shell is intrinsic: every weight-three dual word is exactly a local theta triple. Hence $d(C^\perp)=3$ and
+\[
+ A_3(C^\perp)=q^3(q+1)(q^2+1)\binom{q+1}{3}.
+\]
+These are finite code/building statements. No physical threshold or continuum dynamics is inferred.
+\fi
