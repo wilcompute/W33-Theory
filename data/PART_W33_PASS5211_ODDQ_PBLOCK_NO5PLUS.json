@@ -1,0 +1,12 @@
+{
+  "pass":5211,
+  "status":"THEOREM_ODDQ_P_COMPONENT_GRAPH_IS_NO5PLUS",
+  "domain":"odd prime powers q",
+  "orthogonal_module":"Lambda^2(F_q^4)/<omega>, dimension 5",
+  "vertex_map":"P component {H,H^perp} -> projective class of wedge(H)",
+  "graph":"NO_5^+(q)",
+  "parameters":"SRG(q^2(q^2+1)/2,(q+1)(q^2-1),3q^2-q-2,2q(q+1))",
+  "q5":{"vertices":325,"degree":144,"lambda":68,"mu":60,"eigenvalues":[144,14,-6]},
+  "connection":"The q5 footprint code is a code on the classical orthogonal rank-3 graph NO_5^+(5).",
+  "boundary":"Does not by itself prove footprint d=25."
+}
