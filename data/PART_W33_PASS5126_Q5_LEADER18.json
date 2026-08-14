@@ -1,0 +1,24 @@
+{
+  "pass": 5126,
+  "status": "THEOREM_Q5_SUB625_COUNTEREXAMPLE_LEADER_AT_LEAST_18",
+  "q": 5,
+  "selected_edges": 17,
+  "universal_girth8_wedge_cap": 25,
+  "degree_sequence_pairs_rejected_above_cap": 28,
+  "max_backtracking_nodes": 130821,
+  "wedge25_witness": {
+    "left_counts_n1_n2_n3": [5,3,2],
+    "right_counts_n1_n2_n3": [0,1,5],
+    "left_rows_as_right_neighbor_indices": [[0,1,2],[3,4,5],[0,3],[1,4],[2,5],[0],[1],[2],[3],[4]]
+  },
+  "delsarte": {
+    "m": 17,
+    "N1_cap": 25,
+    "max_pair_overlap": 5000,
+    "distance_pair_counts": [25,66,45,0],
+    "delsarte_integer_points": 106695,
+    "bonferroni_weight_lower_bound": 625
+  },
+  "conclusion": "Pass5118 covers chamber leaders <=16. Every cut-minimal 17-edge representative has apartment weight >=625. Therefore any q=5 codeword of weight <625 has minimum chamber-generator leader >=18.",
+  "boundary": "The leader-17 lower bound is exactly 625. Equality-shell feasibility/classification at leader 17 and all leaders >=18 remain open; q=5 distance 625 is not claimed proved."
+}
