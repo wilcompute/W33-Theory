@@ -1,0 +1,85 @@
+{
+  "range":[5254,5261],
+  "status":"EXECUTED_RECONCILED_AFTER_5238_5245_NUMBER_COLLISION",
+  "reconciliation":"These results were developed concurrently under draft filenames 5239-5245 after the authoritative 5238-5245 packet had already claimed those pass numbers. The science is preserved; authoritative numbering for this stream is 5254-5261. Development filenames are listed explicitly below.",
+  "5254":{
+    "status":"THEOREM_Q3_WEIGHT8_FALSE_CENTER_ECHO_FAMILY_SELF_HEALS",
+    "development_source":"analysis/w33_pass5239_q3_radius8_false_center_echo.py",
+    "development_certificate":"data/PART_W33_PASS5239_Q3_RADIUS8_FALSE_CENTER_ECHO.json",
+    "distinct_weight8_configurations":25920,
+    "construction":"For each of 1620 centers choose one of two poison pairs independently in each of four incident charts: 16 configurations per center.",
+    "provenance_stage":"returns the false center alone for every configuration",
+    "full_decoder":"all 25920 clear in three sweeps with residual weights 8 -> 9 -> 1 -> 0",
+    "conclusion":"The true-only/monotone first-correction guarantee is sharp at radius7; this complete obstruction family does not disprove eventual radius8.",
+    "boundary":"Global eventual radius8 remains open; no orbit-complete census of all weight8 errors is claimed."
+  },
+  "5255":{
+    "status":"THEOREM_EXACT_CONNECTEDL_MOD2_JORDAN_STRUCTURE_Q3_Q5",
+    "development_source":"analysis/w33_pass5240_connectedL_mod2_jordan_structure.py",
+    "development_certificate":"data/PART_W33_PASS5240_CONNECTEDL_MOD2_JORDAN_STRUCTURE.json",
+    "q3":{"charpoly_mod2":"x^100(x+1)^440","zero_blocks":{"J1":100},"one_blocks":{"J1":70,"J2":22,"J3":26,"J4":62}},
+    "q5":{"charpoly_mod2":"x^3716(x+1)^6034","zero_blocks":{"J1":2156,"J3":520},"one_blocks":{"J1":804,"J2":1471,"J3":48,"J4":536}},
+    "conclusion":"Pass5221's large modular radicals are fully resolved into exact Jordan chains; the characteristic-zero L spectrum does not reduce semisimply mod2."
+  },
+  "5256":{
+    "status":"THEOREM_CHAR_GT3_ROOT_OUTER_SHELL_UNIFORM_TWO_ROOT_TORUS",
+    "development_source":"analysis/w33_pass5241_root_outer_shell_two_root_torus_family.py",
+    "development_certificate":"data/PART_W33_PASS5241_ROOT_OUTER_SHELL_TWO_ROOT_TORUS_FAMILY.json",
+    "quotient":"V=<H1,H3> has order q^2 and U(q)/V is coordinatized by fixed (a,c) fibers.",
+    "outer_shell":"For characteristic>3, distance4 projects exactly onto (F_q^*)^2 and every nonzero (a,c) fiber contains (q-4)^2 distance4 states.",
+    "shell4":"(q-1)^2(q-4)^2",
+    "q5_connection":"Pass5217 identifies the 25 fixed-(a,c) fibers with the 25 P atoms in a chamber star; q5 has one outer state in each of 16 torus atoms."
+  },
+  "5257":{
+    "status":"THEOREM_Q5_WEIGHT8_SHELL_REAL_FRAME_BINARY_CONSTANT_MODE",
+    "development_source":"analysis/w33_pass5242_q5_weight8_frame_constant_mode.py",
+    "development_certificate":"data/PART_W33_PASS5242_Q5_WEIGHT8_FRAME_CONSTANT_MODE.json",
+    "Gram":"H8^T H8=600I+25R1+5R2",
+    "real_spectrum":{"4800":1,"900":90,"425":104,"500":130},
+    "real_rank":325,"binary_rank":259,"binary_nullity":66,
+    "binary_kernel":"ker_F2(H8)=C_F direct-sum <1>",
+    "odd_check_role":"The independent weight9 dual check removes exactly the global parity mode and raises parity-check rank to260."
+  },
+  "5258":{
+    "status":"THEOREM_Q5_HOFFMAN13_SHORTENING_IS_DOUBLY_EVEN_312_52_RESIDUAL",
+    "development_source":"analysis/w33_pass5243_hoffman13_shortened_doubly_even_code.py",
+    "development_certificate":"data/PART_W33_PASS5243_HOFFMAN13_SHORTENED_DOUBLY_EVEN_CODE.json",
+    "parameters":"[312,52,d_sh]_2",
+    "doubly_even":true,"distance_bounds":[28,40],"possible_minimum_weights":[28,32,36,40],
+    "weight40_witness":"two collinear W-point footprint rows in one Hoffman cover carrier cancel the systematic coordinate",
+    "boundary":"Exact d_sh remains open."
+  },
+  "5259":{
+    "status":"THEOREM_Q5_ZERO_FOOTPRINT_LOCAL_EVEN_SHELL_AND_15_BLOCK_REDUCTION",
+    "development_source":"analysis/w33_pass5244_q5_zero_footprint_even_tensor_shell.py",
+    "development_certificate":"data/PART_W33_PASS5244_Q5_ZERO_FOOTPRINT_EVEN_TENSOR_SHELL.json",
+    "local_code":"Cut(K6) tensor Cut(K6)=[225,25,25]_2",
+    "states_enumerated":33554432,
+    "low_even_shell":{"40":180,"48":450,"64":3825},
+    "weight40_classification":"exactly the 180 simple tensors of factor weights 5x8 or 8x5",
+    "strict_reduction":"Authoritative Pass5242/Pass5238 gives zero P parity for every q5 word below625; every active local block is therefore even and costs at least40, so at most15 P components are active.",
+    "boundary":"Does not prove the zero-footprint residual empty below625."
+  },
+  "5260":{
+    "status":"THEOREM_Q5_ZERO_FOOTPRINT_PARITY_SYNDROME_EXACT_SEQUENCE",
+    "development_source":"analysis/w33_pass5245_zero_footprint_parity_syndrome_exact_sequence.py",
+    "development_certificate":"data/PART_W33_PASS5245_ZERO_FOOTPRINT_PARITY_SYNDROME_EXACT_SEQUENCE.json",
+    "dimensions":{"P_side":8125,"even_block_space":7800,"L_rank_full":7500,"apartment_code":625,"footprint":65,"zero_footprint_residual":560,"L_rank_even":7240,"syndrome_quotient":260},
+    "exact_sequence":"0 -> C_F -> F2^325 -> Im(L|V_P)/Im(L|E) -> 0",
+    "dual":"The dual of the 260-dimensional quotient is C_F^perp, explaining the 260 sparse footprint checks as the parity information absent from the even-block L image.",
+    "strict_target":"Prove block distance of the 560-dimensional zero-footprint residual is at least16; combined with Pass5259 this closes every strict sub625 word."
+  },
+  "5261":{
+    "status":"THEOREM_Q5_FOOTPRINT_MINIMUM_SHELL_TWO_DISTANCE_TIGHT_FRAME",
+    "source":"analysis/w33_pass5261_q5_footprint_minimum_shell_two_distance_frame.py",
+    "certificate":"data/PART_W33_PASS5261_Q5_FOOTPRINT_MINIMUM_SHELL_TWO_DISTANCE_FRAME.json",
+    "minimum_shell":"156 weight25 words, exactly W(3,5) point footprints",
+    "centered_frame":"156 equal-norm vectors spanning R^90 with tight-frame bound40",
+    "centered_norm_squared":"300/13",
+    "unit_inner_products":{"collinear":"2/15","noncollinear":"-1/25"},
+    "interpretation":"The exact binary minimum shell becomes a two-distance unit-norm tight frame whose two inner products recover W(3,5) collinearity."
+  },
+  "authoritative_q5_frontier":"Pass5238-5245 already closes C_F=[325,65,25]_2 and the complete q5 weight625 equality shell. Full q5 apartment-code d=625 remains open only on the strict zero-P-parity side. Pass5259-5260 reduce any strict counterexample to the 560-dimensional residual with at most15 active P blocks.",
+  "new_closure_target":"Prove block distance d_block(K0)>=16 for the zero-footprint residual K0. This bypasses the old scalar leader36 moment wall and would complete q5 d=625 because the equality shell is already chamber stars.",
+  "boundary":"No full q5 d=625 theorem is claimed. Radius8 eventual decoding remains open. Exact Hoffman13 shortened distance remains open. Modular Jordan statements are exact q3/q5 only."
+}
