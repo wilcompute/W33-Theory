@@ -1,0 +1,24 @@
+name: W33 Pass5238-5245 footprint distance packet
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analysis/w33_pass5238_5245_distance25_zeroP_moment_replay.py'
+      - 'data/PART_W33_PASS5238_5245_RESULTS.json'
+      - 'tests/test_w33_pass5238_5245_packet.py'
+      - 'analysis/PASS5238_5245_footprint_distance25_zeroP_insert.tex'
+      - '.github/workflows/w33_pass5238_5245_packet.yml'
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Fast exact algebraic replay
+        run: python analysis/w33_pass5238_5245_distance25_zeroP_moment_replay.py
+      - name: Regression lock
+        run: python -m pytest -q tests/test_w33_pass5238_5245_packet.py
