@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """Pass5148: exact q=5 leader-21 wall after the cubic closure.
 
-Pass5145 closes leader 20.  Deleting an edge from a 21-edge selected Levi graph
-leaves a 20-edge graph with wedge count <=31, giving n1<=34 by averaging.  The
+Pass5145 closes leader 20. Deleting an edge from a 21-edge selected Levi graph
+leaves a 20-edge graph with wedge count <=31, giving n1<=34 by averaging. The
 n1=34 case is arithmetically impossible under the resulting endpoint-degree
 constraint, while n1=33 is attained by an explicit girth-eight leaf extension.
 
-The Pass5142 cubic minorant closes every leader-21 branch through n1=32.  At the
+The Pass5142 cubic minorant closes every leader-21 branch through n1=32. At the
 sharp n1=33 branch, deletion constraints improve the forced (1,1,2) triple count
-to 48, but the cubic lower bound is only 590.  We therefore isolate the exact
+to 48, but the cubic lower bound is only 590. We therefore isolate the exact
 remaining third-moment deficit rather than overclaiming leader 21 closure.
 """
 from __future__ import annotations
@@ -39,9 +39,9 @@ def sharp_cap33():
     # With N1=0: N2=8 from N1+N2=2m-W=8, but N2+3N3=W gives 8+3N3=34,
     # impossible integrally.
     assert (34-8)%3 != 0
-    # W=33 is sharp: add one leaf to the Pass5145 W=31 witness.
-    rows=[(0,1,6),(0,2,7,8),(0,3),(1,4),(1,5),(2,4),(2,5),(3,4),(3,5)]
-    # Sort rows by left degree only for the degree certificate; graph itself is unchanged.
+    # W=33 is sharp: attach one new leaf to a degree-two left vertex of the
+    # Pass5145 W=31 witness.  The new right vertex has index 8.
+    rows=[(0,1,6),(0,2,7),(0,3,8),(1,4),(1,5),(2,4),(2,5),(3,4),(3,5)]
     degL=[len(C) for C in rows];degR=[0]*9
     for C in rows:
         for r in C:degR[r]+=1
