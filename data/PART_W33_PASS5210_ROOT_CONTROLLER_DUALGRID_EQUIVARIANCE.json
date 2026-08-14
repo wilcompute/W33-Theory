@@ -1,0 +1,10 @@
+{
+  "pass":5210,
+  "status":"THEOREM_ROOT_CONTROLLER_DUALGRID_BOREL_EQUIVARIANCE",
+  "root_system":"C2",
+  "positive_roots":["alpha","beta","alpha+beta","2alpha+beta"],
+  "split_torus_characters":["r","s","r*s","r^2*s"],
+  "intertwiner":"P_pts(g) F = F P_grid(g)",
+  "consequence":"U(q) and its split torus act by automorphisms of the footprint code and the P-component block SRG.",
+  "firewall":"Equivariance only; no bijection between q^4 controller states and dual-grid coordinates is asserted."
+}
