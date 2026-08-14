@@ -1,0 +1,27 @@
+{
+  "pass": 5190,
+  "status": "THEOREM_ALL_FINITE_FIELD_ROOT_CAYLEY_DIAMETER_THRESHOLD",
+  "distance4_shells": {
+    "characteristic_gt_3": "(q-1)^2(q-4)^2",
+    "characteristic_3": "(q-1)^2(q-3)(q-5)",
+    "characteristic_2": "(q-1)^2(q-2)(q-4)"
+  },
+  "diameter_phase_diagram": {
+    "diameter_3": "q in {2,3,4}",
+    "diameter_4": "every finite field q>=5"
+  },
+  "q5_first_outer_shell": {
+    "size": 16,
+    "unique_missing_normalized_pair": "(u,v)=(2,2)",
+    "parameterization": "(a,b,c,d)=(a,b,2ab,2a^2 b), a,b in F_5^*",
+    "parameter_space": "(F_5^*)^2, size 16",
+    "closure_firewall": "This is a parameter torus/torsor description of the shell as a set; subgroup closure is not claimed."
+  },
+  "anchor_distance4_counts": {
+    "char2": {"2":0,"4":0,"8":1176,"16":37800},
+    "char3": {"3":0,"9":1536,"27":356928},
+    "char_gt3": {"5":16,"7":324,"11":4900,"13":11664}
+  },
+  "collision_note": "Originally developed concurrently with the official Pass5181 point-line duality firewall; renumbered to Pass5190 before release to preserve namespace uniqueness.",
+  "boundary": "Exact controller Cayley-graph theorem. The q=5 diameter threshold is not used as apartment-code distance evidence."
+}
