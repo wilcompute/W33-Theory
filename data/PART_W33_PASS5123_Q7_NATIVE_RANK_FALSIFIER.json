@@ -1,0 +1,12 @@
+{
+  "pass": 5123,
+  "status": "THEOREM_Q7_EXACT_NATIVE_RANK_FALSIFIER",
+  "anchors": {
+    "q3": {"generic_rank":69,"native_rank":68,"drop":1},
+    "q5": {"generic_rank":405,"native_rank":397,"drop":8},
+    "q7": {"shape":[2401,1372],"generic_rank":1183,"native_rank":1173,"drop":10,"generic_primes_checked":[2,11]}
+  },
+  "killed_conjecture": "native rank drop = ((q-1)/2)^3 for odd q; q7 would predict 27 but exact drop is 10",
+  "q7_kernel_dimensions": {"generic_column":189,"native_column":199,"generic_left":1218,"native_left":1228},
+  "boundary": "Three exact odd-prime anchors are now known, but no replacement all-q drop formula is asserted."
+}
