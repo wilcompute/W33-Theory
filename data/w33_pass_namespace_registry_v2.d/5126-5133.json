@@ -1,0 +1,11 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [5126, 5133],
+  "slug": "q5_theta_decoder_controller_bicycle_bonkers",
+  "title": "q5 theta/cut frontier, radius-four decoder, all-q controller, odd-q bicycle, and three outside-box probes",
+  "status": "RESERVED",
+  "owner": "openai-gpt56-sol",
+  "reserved_at": "2026-08-14",
+  "purpose": "Execute the five live continuations after Pass5118-5125: sharpen the q5 leader>=17 frontier using theta half-regularity, derive a cut/coarea bound, settle the q3 weight-four decoder frontier, generalize the intrinsic controller reconstruction across q, and attack the odd-q bicycle 2-rank formula; plus three independent outside-box probes selected from the resulting exact structures.",
+  "boundary": "Do not claim q5/all-q distance or an all-odd-q bicycle theorem without an exact proof. Decoder claims are finite hard-decision statements only. Controller claims are finite code/building/group reconstructions, not hardware performance. Outside-box probes must preserve explicit evidence firewalls."
+}
