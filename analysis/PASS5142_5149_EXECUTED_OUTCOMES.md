@@ -1,90 +1,113 @@
-# Passes 5142–5149 — theta isoperimetry, modular root-coset arithmetic, and Lie-memory depth
+# Passes 5142–5149 — theta curvature/spectral inversion and modular root-coset arithmetic
 
-**Status:** EXECUTED on collision-clean branch after Pass5126–5133. Pass5134–5141 was already reserved by another live continuation, so this packet deliberately avoids its q=5 leader-18/heavy-shell, decoder-six, theta-spectrum, and compiler-filtration scope.
+**Status:** EXECUTED on a collision-clean branch after Pass5126–5133. A later audit found that Pass5118–5125 had already landed the all-q theta half-regular theorem, the q=7 native-rank falsifier, and the safe-characteristic Jennings theorem. Those duplicated drafts were deleted before release. Pass5134–5141 was separately reserved by another live continuation and is not touched here.
 
-## Pass5142 — all-q theta half-regular support theorem
-Let `Theta_q` be the intrinsic theta point graph on apartment variables. Every apartment lies in `4(q-1)` theta checks, and each theta check is a triple. For any binary apartment-code support `S`, even theta parity implies that each selected apartment has exactly one selected and one unselected partner in every incident theta check. Therefore `Theta_q` has ambient degree `8(q-1)` while the induced support has
+## Pass5142 — exterior theta parity and active-check conservation
+Pass5119 gives the selected-vertex half-regular law. The complementary theorem is that every unselected apartment has an **even** number `t_v` of selected theta-neighbors. A theta triple has codeword parity zero, so it contains either zero or two selected apartments. Therefore
 
-`deg_in = deg_out = 4(q-1)`.
+`A_active = 2(q-1)|S|`,
 
-Hence `e(S)=2(q-1)|S|` and the edge boundary has size `4(q-1)|S|`. The distance problem is now intrinsically a minimum-size theta-even half-regular support problem. Half-regularity is necessary, not asserted sufficient by itself.
+`sum_{v outside S} t_v = 4(q-1)|S|`,
 
-## Pass5143 — second-moment curvature theorem
-Write `k=4(q-1)` and `A` for theta adjacency. For a codeword indicator `x=1_S`, selected vertices have exactly `k` selected neighbors. An unselected vertex sees selected neighbors in pairs, so its selected-neighbor count `t` is even. Therefore
+and, writing `b_{2r}=#{v outside:t_v=2r}`,
+
+`sum_r r b_{2r}=2(q-1)|S|`.
+
+For a chamber star only `b_2` is nonzero, with `b_2=2(q-1)q^4`; the exact values are 32, 324, 1536, 5000 for q=2,3,4,5.
+
+## Pass5143 — second-moment theta curvature
+Let `D=8(q-1)`, `k=D/2=4(q-1)`, and `A` be theta adjacency. For `x=1_S`, selected vertices have `k` selected neighbors. Since every exterior selected-neighbor count `t_v` is even,
 
 `x^T A^2 x >= k(k+2)|S|`.
 
-The exact defect is
+The exact curvature defect is
 
-`Delta = x^T A^2 x-k(k+2)|S| = sum_out t(t-2) in 8 Z_{>=0}`.
+`Delta_2 = x^T A^2 x-k(k+2)|S| = sum_{v outside S} t_v(t_v-2) in 8 Z_{>=0}`.
 
-A chamber star reaches equality at q=2,3,4,5; every exterior boundary apartment then sees exactly two selected neighbors. At q=2 the complete `[90,16,16]_2` code was exhaustively enumerated: all `65535` nonzero codewords were checked, exactly `45` have `Delta=0`, every one has weight 16, and the smallest positive defect is 64. Thus the curvature equality shell exactly reconstructs the 45 chamber stars at q=2.
+Equality holds iff every exterior boundary apartment has exactly two selected neighbors. Chamber stars attain equality at q=2,3,4,5. At q=2 the entire `[90,16,16]_2` code was exhaustively enumerated: all 65,535 nonzero words were tested, exactly 45 have `Delta_2=0`, every one has weight 16, and the smallest positive defect is 64. Thus curvature equality alone reconstructs the complete q=2 minimum shell.
 
-## Pass5144 — q=7 kills the native-rank cube guess
-The q=7 C2 root-coset incidence matrix has shape `2401 x 1372`, row weight 4, column weight 7. Exact ranks are
+## Pass5144 — centered theta Rayleigh weight inversion
+The uncentered indicator Rayleigh quotient is constant by Pass5119, but centering restores the missing weight information. Let `N` be the apartment count, `alpha=|S|/N`, `D=8(q-1)`, `x=1_S`, and `y=x-alpha*1`. Then
 
-- F2: 1183
-- F3: 1183
-- F5: 1183
-- F7: 1173
-- F11: 1183.
+`rho(S)= (y^T A y)/(y^T y) = D(1/2-alpha)/(1-alpha)`.
 
-So the native-characteristic rank drop is `10`. The prior q=3,5 drops `1,8` happened to match `((q-1)/2)^3`; at q=7 that guess predicts 27 and is decisively false. No replacement all-q interpolation is asserted.
+This is exactly invertible:
+
+`alpha=(D/2-rho)/(D-rho)`.
+
+Hence centered theta adjacency determines the Hamming weight of every nonzero proper codeword indicator exactly. Chamber-star anchors are
+
+- q=2: `rho=116/37`, `alpha=8/45`;
+- q=3: `rho=144/19`, `alpha=1/20`;
+- q=4: `rho=1636/139`, `alpha=8/425`;
+- q=5: `rho=460/29`, `alpha=1/117`.
+
+The remaining distance problem can therefore be phrased as a sharp upper bound on the **attainable centered Rayleigh quotient** among nonzero codewords. The identity itself does not supply that bound.
 
 ## Pass5145 — exact q=4 root-coset Smith form
-For the 256-by-256 q=4 root-coset incidence matrix, the exact nonzero Smith factors are
+For the 256-by-256 q=4 C2 root-coset incidence matrix, exact integral Smith reduction gives
 
-`1^180 + 2^4`.
+`1^180 + 2^4 + 0^72`.
 
-Thus the rational rank is 184, the F2 rank is 180, and
+Thus
+
+`rank_Q=184`, `rank_F2=180`, `rank_F3=184`,
+
+and
 
 `coker(M_4) ~= Z^72 direct_sum (Z/2)^4`.
 
-The entire characteristic-two rank loss is therefore accounted for by four genuine integral 2-torsion directions. This complements q=3, where the corresponding exact torsion is one `Z/3` factor.
+The entire characteristic-two rank loss is therefore four genuine integral 2-torsion directions. This complements the already known q=3 cokernel `Z^12 direct_sum Z/3`.
 
-## Pass5146 — rank-two root-height Jennings theorem
-In the safe split range `p>h` (Coxeter number), the maximal-unipotent lower-central/Jennings filtration is the positive-root height filtration. Hence
+## Pass5146 — two-step theta Markov curvature
+Start the simple random walk on the theta graph uniformly on a codeword support. One step is universally blind:
 
-`H_U(t)=product_{alpha>0} (1+t^{ht alpha}+...+t^{(p-1)ht alpha})`.
+`P[X_1 in S]=1/2`.
 
-The rank-two root-height multisets are
+At two steps the curvature appears:
 
-- A2: `[1,1,2]`
-- C2: `[1,1,2,3]`
-- G2: `[1,1,2,3,4,5]`.
+`P[X_2 in S] = (x^T A^2 x)/(D^2|S|) >= 1/4 + 1/D`,
 
-Exact safe-range profiles are frozen for A2 at p=5, C2 at p=5, and G2 at p=7. The previously computed C2,p=3 profile is retained only as an independently verified small-characteristic anchor, not folded into the symbolic proof range.
+with exact excess
+
+`P_2-(1/4+1/D)=Delta_2/(D^2|S|)`.
+
+The sharp chamber-star values are `3/8, 5/16, 7/24, 9/32` at q=2,3,4,5. At q=2 exactly the 45 minimum words attain equality. This is finite graph diffusion only, not a hardware/noise model.
 
 ## Pass5147 — augmentation relation versus hidden native defect
-Every root-coset incidence column has exactly q ones. If `q=p^f`, the all-ones left functional therefore becomes a native relation because `q=0` in characteristic p. But total native rank drops are
+Every root-coset incidence column has q ones, so in defining characteristic `p|q` the all-ones left functional supplies one explicit native relation:
 
-`q=2,3,4,5,7 : 0,1,4,8,10`.
+`1^T M = q 1^T = 0`.
 
-One explicit augmentation relation can account for at most one lost rank dimension. Therefore from q=4 onward there must be additional modular defect dimensions beyond that single displayed mechanism: at least 3, 7, and 9 at q=4,5,7 respectively. Their composition factors remain open.
+Using the already certified ranks at q=2,3,4,5,7, the native rank drops are
+
+`0,1,4,8,10`.
+
+Therefore one displayed augmentation relation cannot account for the full loss once q>=4. At least `3,7,9` additional independent modular defect dimensions remain at q=4,5,7 respectively. Pass5145 identifies the q=4 loss integrally; the q=5/q=7 hidden composition factors remain open.
 
 ## Pass5148 — positive-root volume/depth two-statistic calculus
-Two different statistics of the same positive-root poset govern two different project structures:
+Two different statistics of the same positive-root poset control two distinct project structures:
 
-- `N=|Phi+|` controls maximal-unipotent volume `q^N` and first root-coset derivative `N q^(N-1)`;
-- `H=sum ht(alpha)` controls top Jennings degree `(p-1)H` in the safe range.
+- `N=|Phi+|` controls maximal-unipotent volume `q^N` and the first root-coset derivative `N q^(N-1)`;
+- `H=sum ht(alpha)` controls the top Jennings degree `(p-1)H` in the previously proved safe range.
 
 For A2, C2, G2 the pairs `(N,H)` are
 
 `(3,4), (4,7), (6,16)`.
 
-Thus the user's C2 derivative observation is the `N=4` statistic, `q^4 -> 4q^3`, while the memory filtration is governed independently by `H=7`. They are related through the root system without being the same invariant.
+Thus the user's C2 `q^4 -> 4q^3` derivative is the `N=4` statistic, whereas the C2 augmentation-memory depth is governed by `H=7`. They are two root-system statistics, not one invariant.
 
 ## Pass5149 — first-order theta expansion is provably blind
-Pass5142 implies every nonzero codeword support has ordinary theta conductance exactly
+Every nonzero codeword support has ordinary theta conductance exactly
 
 `Phi(S)=1/2`,
 
-regardless of weight. Equivalently, a one-step theta random walk started uniformly on a selected apartment stays in the support with probability 1/2 and exits with probability 1/2. The adjacency indicator Rayleigh quotient is always `D/2` and the normalized-Laplacian indicator Rayleigh quotient is always `1/2`.
+independent of weight. Equivalently, the one-step stay and exit probabilities are both 1/2, the uncentered adjacency indicator Rayleigh quotient is `D/2`, and the normalized-Laplacian indicator quotient is `1/2`.
 
-Therefore a proof of `d_q=q^4` cannot come from first-order Cheeger conductance of the theta graph alone. The second moment in Pass5143 is the first local statistic in this hierarchy that can distinguish chamber-star geometry.
+Therefore a proof of `d_q=q^4` cannot use first-order Cheeger conductance or the uncentered indicator Rayleigh quotient alone. Pass5143's second moment is the first local statistic in this hierarchy that distinguishes chamber-star curvature, while Pass5144 shows that the **centered** quotient still retains exact weight information.
 
 ## Evidence firewall
-- q=5/all-q distance remains open unless another packet closes it.
-- The q=7 computation falsifies, rather than extends, the old native-rank cubic guess.
-- The Jennings theorem here is restricted to `p>h`; small/bad characteristic must be handled separately.
-- Root-height/Jennings depth is an algebraic group-ring filtration, not a hardware clock or physical latency claim.
+- q=5/all-q minimum distance remains open unless another packet closes it.
+- Pass5142 refines Pass5119; it does not re-own the half-regular theorem.
+- Pass5147 uses previously certified q=7 ranks rather than claiming them anew.
+- Pass5148 is a synthesis of the existing derivative and safe Jennings theorems, and group-ring depth is algebraic nilpotence, not physical latency.
