@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Pass5086: global q=3 decoder built from the Pass5078 eight-entry local ROM.
 
-Each apartment belongs to four opposite-pair charts.  Two distinct apartments
-share at most one chart.  Each affected K4 chart emits the minimum local coset
+Each apartment belongs to four opposite-pair charts. Two distinct apartments
+share at most one chart. Each affected K4 chart emits the minimum local coset
 leader; apartments accumulate votes and the sweep flips every coordinate of
-maximum positive vote.  The script exhausts all weight-1 and weight-2 errors.
+maximum positive vote. The script exhausts all weight-1 and weight-2 errors and
+all weight-3 patterns contained in one chart.
 """
 from __future__ import annotations
 from collections import Counter
@@ -31,8 +32,7 @@ def leader_table():
 def main():
     G=build_W(3);n=len(G['apartments']);assert n==1620;best=leader_table()
     chart_coords=[[loc[p] for p in PAIRS] for _,loc in G['charts']];assert len(chart_coords)==1080
-    apt_charts=[[] for _ in range(n)]
-    pair_seen=set()
+    apt_charts=[[] for _ in range(n)];pair_seen=set()
     for ci,coords in enumerate(chart_coords):
         for a in coords:apt_charts[a].append(ci)
         for a,b in itertools.combinations(sorted(coords),2):
@@ -53,12 +53,23 @@ def main():
         for b in range(a+1,n):
             corr,mv=decode((a,b));bad += corr!={a,b};profiles[(len(ca&set(apt_charts[b])),mv)]+=1
     assert bad==0 and sum(profiles.values())==math.comb(n,2)
-    out={'pass':5086,'status':'THEOREM_EXHAUSTIVE_RADIUS2','code':[1620,81,81],
+    # First local trapping motifs: every 3-subset of a six-coordinate chart.
+    triples={tuple(sorted(t)) for coords in chart_coords for t in itertools.combinations(coords,3)};assert len(triples)==21600
+    triple_profile=Counter();local_cut_failures=0
+    for t in triples:
+        corr,mv=decode(t);res=set(t)^corr;triple_profile[(len(res),mv,len(corr))]+=1
+        if res:
+            local_cut_failures+=1
+            # Every first-sweep failure drops to weight 2 and therefore clears next sweep.
+            corr2,_=decode(tuple(res));assert corr2==res
+    assert triple_profile[(0,3,3)]==17280 and triple_profile[(2,4,1)]==4320 and local_cut_failures==4320
+    out={'pass':5086,'status':'THEOREM_EXHAUSTIVE_RADIUS2_PLUS_LOCAL_TRAPS','code':[1620,81,81],
          'charts':1080,'charts_per_apartment':4,'apartment_pairs_sharing_a_chart':len(pair_seen),'max_shared_charts_per_pair':1,
          'local_rom_entries':8,'single_errors_tested':n,'double_errors_tested':math.comb(n,2),'double_failures':bad,
-         'double_profile_sharedcharts_maxvote':{f'{k[0]},{k[1]}':v for k,v in sorted(profiles.items())},
-         'guaranteed_global_error_weight':2,
+         'double_profile_sharedcharts_maxvote':{f'{k[0]},{k[1]}':v for k,v in sorted(profiles.items())},'guaranteed_global_error_weight':2,
+         'chart_contained_triples_tested':len(triples),'chart_triples_one_sweep_corrected':17280,'chart_triples_first_sweep_failures':4320,
+         'first_failure_motif':'the four weight-3 K4 cut words in each chart','failure_residual_weight':2,'chart_triples_cleared_within_two_sweeps':len(triples),
          'decoder':'minimum local K4 coset leaders -> vote -> flip all maximum-vote coordinates',
-         'boundary':'Finite hard-decision apartment-bit decoder only. This is far below unique radius 40 and is not an optical/noise threshold.'}
+         'boundary':'Finite hard-decision apartment-bit decoder only. The radius-2 theorem is global; the weight-3 census covers chart-contained triples only. No optical/noise threshold.'}
     OUT.write_text(json.dumps(out,indent=2)+'\n');print(json.dumps(out,indent=2))
 if __name__=='__main__':main()
