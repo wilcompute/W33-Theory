@@ -1,0 +1,57 @@
+name: Pass5134-5141 curvature parabolic spectra packet
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5134_theta_first_order_blindness.py'
+      - 'analysis/w33_pass5135_bt865_parabolic_kernel_alignment.py'
+      - 'analysis/w33_pass5136_oddq_bicycle_extra_anchors.py'
+      - 'analysis/w33_pass5137_rank3_jennings_memory.py'
+      - 'analysis/w33_pass5138_q4_root_coset_spectrum.py'
+      - 'analysis/w33_pass5139_q5_root_coset_spectrum.py'
+      - 'analysis/w33_pass5140_q3_theta_triangle_curvature.py'
+      - 'analysis/w33_pass5141_q3_cubic_theta_moment.py'
+      - 'tests/test_w33_pass5134_5141_packet.py'
+      - '.github/workflows/w33_pass5134_5141_packet.yml'
+  push:
+    branches: [master]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact-packet:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    env:
+      PYTHONPATH: .
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check numpy scipy pytest
+      - name: Syntax check
+        run: >-
+          python -m py_compile
+          analysis/w33_pass5134_theta_first_order_blindness.py
+          analysis/w33_pass5135_bt865_parabolic_kernel_alignment.py
+          analysis/w33_pass5136_oddq_bicycle_extra_anchors.py
+          analysis/w33_pass5137_rank3_jennings_memory.py
+          analysis/w33_pass5138_q4_root_coset_spectrum.py
+          analysis/w33_pass5139_q5_root_coset_spectrum.py
+          analysis/w33_pass5140_q3_theta_triangle_curvature.py
+          analysis/w33_pass5141_q3_cubic_theta_moment.py
+      - name: Frozen regression
+        run: pytest -q tests/test_w33_pass5134_5141_packet.py
+      - name: Replay exact producers
+        run: |
+          python analysis/w33_pass5134_theta_first_order_blindness.py
+          python analysis/w33_pass5135_bt865_parabolic_kernel_alignment.py
+          python analysis/w33_pass5136_oddq_bicycle_extra_anchors.py
+          python analysis/w33_pass5137_rank3_jennings_memory.py
+          python analysis/w33_pass5138_q4_root_coset_spectrum.py
+          python analysis/w33_pass5139_q5_root_coset_spectrum.py
+          python analysis/w33_pass5140_q3_theta_triangle_curvature.py
+          python analysis/w33_pass5141_q3_cubic_theta_moment.py
+      - name: Heavy-anchor note
+        run: echo 'Pass5136 q=13 is frozen; use --heavy for a full q13 rebuild.'
