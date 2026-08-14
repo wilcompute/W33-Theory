@@ -1,0 +1,28 @@
+{
+  "pass": 5146,
+  "status": "THEOREM_Q5_SHARP_LEADER18_EMBEDDED_WITNESS_CENSUS",
+  "q": 5,
+  "abstract_sharp_adjacent_pairs": 27,
+  "opposite_line_carrier": {
+    "pendant_gauges": 4096,
+    "selected_levi_degree_histogram": {"3": 8, "2": 3, "1": 6},
+    "weight_histogram": {"5832": 4, "5848": 180, "5856": 480, "5864": 1260, "5872": 1440, "5880": 732},
+    "pair_distance_histogram_family": {
+      "(27, 36, 54, 36)": 4,
+      "(27, 36, 52, 38)": 180,
+      "(27, 36, 51, 39)": 480,
+      "(27, 36, 50, 40)": 1260,
+      "(27, 36, 49, 41)": 1440,
+      "(27, 36, 48, 42)": 732
+    },
+    "minimum_weight_in_family": 5832
+  },
+  "k33_grid_carrier": {
+    "A_points": [0, 6, 7],
+    "B_points": [1, 31, 36],
+    "selected_levi_degree_histogram": {"3": 6, "2": 9},
+    "apartment_word_weight": 5832,
+    "pair_distance_histogram": [27, 36, 54, 36]
+  },
+  "boundary": "Two exact embedded sharp families are exhibited; this is not an orbit-complete classification of every n1=27 leader."
+}
