@@ -90,7 +90,7 @@ def main():
     assert len(Hstate)==len(Hflat)==27
     assert Hflat==Lker
     assert Hstate==derived(Pker)
-    assert Hstate < Pker and len(Pker//Hstate)==2
+    assert Hstate < Pker and len(Pker)//len(Hstate)==2
     assert len(center(Pker))==3 and center(Pker)==center(Hstate)
     assert Counter(order(g) for g in Hstate)==Counter({3:26,1:1})
     assert Counter(order(g) for g in Hflat)==Counter({3:26,1:1})
