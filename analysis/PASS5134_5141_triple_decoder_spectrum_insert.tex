@@ -1,0 +1,69 @@
+\ifdefined\WPassFiveOneThreeFourLoaded\else
+\gdef\WPassFiveOneThreeFourLoaded{1}
+\subsection*{Passes 5134--5141: the q=5 third-order frontier, sharp decoder radius, and root-Cayley spectral geometry}
+The q=5 chamber-leader attack reaches an exact methodological boundary at leader size $18$.  A cut-minimal $18$-edge leader is again bipartite, subcubic, and girth at least eight.  Exhaustive degree-sequence realization gives the sharp adjacent-pair cap $27$.  Exact chamber-scheme Delsarte positivity at that cap has extremal pair-distance distribution
+\[
+ (N_1,N_2,N_3,N_4)=(27,73,53,0),
+\]
+but its second-order Bonferroni lower bound is only $320$.  Thus the pairwise method that closed every leader through $17$ is provably insufficient at $18$; the q=5 minimum-distance problem has become intrinsically third-order.
+
+The equality shell already carries such a third-order defect.  In a q=5 local $K_6$ cut, the three nonzero cut types have weights $5,8,9$ and selected line-graph triangle counts $10,8,6$.  Hence for one point/line chart type,
+\[
+ T_{\rm type}=10A_{\rm type}-2h_8-4h_9
+ =2500-8h_8-12h_9.
+\]
+Together with the coarea congruence $5A_{\rm type}+3h_8+4h_9=1250$, the unique smallest exotic profile $(h_8,h_9)=(2,1)$ has $A_{\rm type}=248$, $T_{\rm type}=2472$, a triangle-moment defect of $28$ from the chamber-star value $2500$.
+
+The missing triple-intersection coefficient is now explicit for every finite $q$.  For three distinct chamber stars, the number of common apartments depends only on the sorted three pairwise gallery distances:
+\[
+\begin{array}{c|ccccc}
+(d_{12},d_{13},d_{23})&(1,1,2)&(1,2,3)&(1,3,4)&(2,2,4)&(2,3,3)\\ \hline
+|S_1\cap S_2\cap S_3|&q^2&q&1&1&1.
+\end{array}
+\]
+Every other distance triangle has zero common apartments.  This is the five dihedral three-edge patterns of an apartment $C_8$, with respectively two, one, or zero remaining generalized-quadrangle projection choices.  Full rooted triple censuses replay the law at $q=2,3,4,5$, including $\mathbb F_4$.  At q=5 the fixed-base histogram is $25^{75},5^{750},1^{7500},0^{428320}$.
+
+The q=3 hard-decision decoder frontier is now sharp.  Pass~5131 proves every error of weight at most five is corrected.  At weight six, the structured error set
+\[
+ \{1,2,3,6,27,54\}
+\]
+uses three charts through the false apartment $0$, with two errors in each.  Each local two-error syndrome votes for the false center; the global maximum vote is $3$, and the first correction set is
+\[
+ \{0,1,2,3,6,27,54\}.
+\]
+Thus a false bit is introduced immediately.  The guaranteed radius of this specific equivariant max-vote decoder is exactly five.
+
+The chamber-star theta graph also admits an exact Fourier/spectral description.  The abelianization $U(q)/[U(q),U(q)]\cong\mathbb F_q^2$ gives a uniform $q^2$-dimensional linear-character sector with eigenvalues
+\[
+ 4(q-1)^{[1]},\qquad (3q-4)^{[2(q-1)]},\qquad (2q-4)^{[(q-1)^2]}.
+\]
+For $q=2,3,4,5$ the full spectra are certified over the integers: a square-free polynomial $P$ is checked on the identity delta vector, so Cayley translation gives $P(A)=0$ on the full regular module; exact closed-walk traces then determine all root multiplicities.  In all four anchors the second eigenvalue is $3q-4$, giving spectral gap $q$.  The uniform nonlinear bound remains open.
+
+The state/program compiler is compatible with the protected-memory filtration, not merely with the underlying set of controller states.  In canonical state coordinates,
+\[
+(a,b,c,d)(A,B,C,D)=(a+A,b+B,c+C-Ab,d+D-2Ac+A^2b),
+\]
+whereas program coordinates obey
+\[
+(a,b,C,D)\circ(A,B,E,H)=(a+A,b+B,C+E+aB,D+H+2aE+a^2B).
+\]
+The Pass~5133 polynomial map intertwines these laws exactly.  Its linear extension to $k[U(q)]$ therefore preserves the augmentation ideal $J$ and every power $J^r$, hence every Jennings layer $J^r/J^{r+1}$.  Exhaustive product checks are supplied at $q=2,3,4,5$.
+
+A separate all-q cut theorem closes the chamber-dependency code.  Since the Pass~5110 kernel is the Levi cut space, girth eight controls cuts supported on at most seven Levi vertices, while the exact nontrivial Levi eigenvalue $\sqrt{2q}$ controls every larger half-cut.  Consequently
+\[
+ C_{\rm dep}=\big[(q+1)^2(q^2+1),\;2(q+1)(q^2+1)-1,\;q+1\big]_2,
+\]
+and its $2(q+1)(q^2+1)$ minimum words are exactly the point- and line-panel stars.
+
+Finally, the four-root Cayley metric has diameter at most four by canonical positive-root factorization.  Exact BFS anchors at odd primes $q=5,7,11,13$ obey
+\[
+ |S_0|=1,\quad |S_1|=4(q-1),\quad |S_2|=8(q-1)^2,
+\]
+\[
+ |S_3|=(q-1)^2(10q-21),\qquad |S_4|=(q-1)^2(q-4)^2,
+\]
+which sum identically to $q^4$.  This polynomial shell law is retained as a four-anchor conjectural family until a symbolic factorization count is supplied; $q=2,3,4$ show the expected small-field compression.
+
+\paragraph{Boundary.}
+The q=5/all-q apartment-code distance theorem remains open for leaders at least $18$.  Pass~5140 supplies the exact cubic intersection coefficient, but fourth and higher parity intersections still remain in a complete distance proof.  Decoder radius five is a theorem for the specified hard-decision max-vote rule and radius six is explicitly false for that rule.  The full all-q nonlinear theta spectrum and uniform gap-$q$ proof remain open.  The odd-q Cayley shell polynomial is conjectural beyond the exact anchors.  None of the controller, spectrum, compiler, or Jennings statements is a hardware-performance claim.
+\fi
