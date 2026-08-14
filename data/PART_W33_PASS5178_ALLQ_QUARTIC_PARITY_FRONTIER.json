@@ -1,0 +1,20 @@
+{
+  "pass": 5178,
+  "status": "THEOREM_ALL_Q_QUARTIC_CHAMBER_PARITY_FRONTIER",
+  "pointwise_identity": "1_{r odd}=r-2*C(r,2)+4*C(r,3)-8*C(r,4)+R5(r), 0<=r<=8",
+  "remainder_table": [
+    {"occupancy":0,"parity":0,"quartic_truncation":0,"remainder":0},
+    {"occupancy":1,"parity":1,"quartic_truncation":1,"remainder":0},
+    {"occupancy":2,"parity":0,"quartic_truncation":0,"remainder":0},
+    {"occupancy":3,"parity":1,"quartic_truncation":1,"remainder":0},
+    {"occupancy":4,"parity":0,"quartic_truncation":0,"remainder":0},
+    {"occupancy":5,"parity":1,"quartic_truncation":-15,"remainder":16},
+    {"occupancy":6,"parity":0,"quartic_truncation":-64,"remainder":64},
+    {"occupancy":7,"parity":1,"quartic_truncation":-175,"remainder":176},
+    {"occupancy":8,"parity":0,"quartic_truncation":-384,"remainder":384}
+  ],
+  "quartic_lower_bound": "wt >= S1-2S2+4S3-8S4",
+  "dense_remainder_bound": "wt >= S1-2S2+4S3-8S4+16*N_{r>=5}",
+  "exact_sparse_sector": "If every apartment contains at most four selected leader chambers, the quartic formula is exact.",
+  "boundary": "Exact parity inequality/remainder theorem; not by itself a q5 distance proof."
+}
