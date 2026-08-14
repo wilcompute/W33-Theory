@@ -1,0 +1,44 @@
+{
+  "pass": 5199,
+  "status": "THEOREM_Q5_STRICT_COUNTEREXAMPLE_LEADER_AT_LEAST_35",
+  "q": 5,
+  "leader_size_closed": 34,
+  "target_distance": 625,
+  "previous_adjacent_pair_cap": 60,
+  "raw_deletion_cap": 63,
+  "adjacent_pair_cap": 62,
+  "raw_cap_obstruction": {
+    "N1": 63,
+    "degree_profiles": [[2,3,20],[5,0,21]],
+    "endpoint_degree_sum_min": 5,
+    "locally_feasible_edge_type_profiles": 0
+  },
+  "edge_type_full_apartment_bound": "P5 <= sum_{ij} 4(i-1)(j-1)e_ij and A8<=floor(P5/8)",
+  "pair_only": {"N1_le_44_lower": 896, "N1_45_lower": 592},
+  "uniform_layer_lower_bounds": {
+    "45":1775,"46":1626,"47":1476,"48":1260,"49":1110,"50":960,
+    "51":776,"52":743,"53":737,"54":697,"55":718,"56":730,
+    "57":741,"58":752,"59":774,"60":734,"61":1342,"62":2715
+  },
+  "critical_repair": {
+    "N1_55": {"ordinary_cubic_lower":612,"combined_corrected_lower":718},
+    "N1_56": {"ordinary_cubic_lower":579,"combined_corrected_lower":730}
+  },
+  "critical_profile_caps": {
+    "N1_55": [
+      {"degree_counts":[0,13,14],"P5_edge_type_upper":388,"A8_upper":48},
+      {"degree_counts":[3,10,15],"P5_edge_type_upper":396,"A8_upper":49},
+      {"degree_counts":[6,7,16],"P5_edge_type_upper":412,"A8_upper":51},
+      {"degree_counts":[9,4,17],"P5_edge_type_upper":420,"A8_upper":52},
+      {"degree_counts":[12,1,18],"P5_edge_type_upper":436,"A8_upper":54}
+    ],
+    "N1_56": [
+      {"degree_counts":[1,11,15],"P5_edge_type_upper":400,"A8_upper":50},
+      {"degree_counts":[4,8,16],"P5_edge_type_upper":416,"A8_upper":52},
+      {"degree_counts":[7,5,17],"P5_edge_type_upper":424,"A8_upper":53},
+      {"degree_counts":[10,2,18],"P5_edge_type_upper":440,"A8_upper":55}
+    ]
+  },
+  "conclusion": "N1=63 is impossible and every N1<=62 layer has apartment weight >625. Every q5 apartment-code word of weight <625 therefore has minimum chamber leader at least 35.",
+  "boundary": "This closes leader 34 only. Leaders >=35 and the weight-625 equality shell remain open."
+}
