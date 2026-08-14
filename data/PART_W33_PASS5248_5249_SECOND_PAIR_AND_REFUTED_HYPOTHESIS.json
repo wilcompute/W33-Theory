@@ -1,0 +1,55 @@
+{
+  "boundary": "Pass 5248 settles alpha(H(3,9)) = 28 both ways; the Q(5,3) entry is a searcher's best with NOTHING settled, and Q(5,q) is known to have no ovoid so the shortfall there is expected and still not a bound. Pass 5249 REFUTES the cut-space reading and does NOT support the q^2-q+1 reading -- one matching data point against three neither confirming nor refuting. The no-ovoid conclusion is proved at q=3 ONLY; the general parity rule is quoted, not reproved",
+  "pass_5248": {
+    "claim": "the ovoid split is not specific to the cospectral pair -- H(3,q^2)/Q(5,q) share the Hoffman bound q^3+1 because st+1 is duality-invariant, with different spectra",
+    "not_settled": "Q(5,3), where the object is known absent",
+    "rows": [
+      {
+        "alpha_found": 28,
+        "attains": true,
+        "gq": "H(3,9)",
+        "hoffman": 28,
+        "ovoid_exists": true,
+        "seconds": 0.1,
+        "srg": [
+          280,
+          36,
+          8,
+          4
+        ]
+      },
+      {
+        "alpha_found": 16,
+        "attains": false,
+        "gq": "Q(5,3)",
+        "hoffman": 28,
+        "ovoid_exists": false,
+        "seconds": 60.0,
+        "srg": [
+          112,
+          30,
+          2,
+          10
+        ]
+      }
+    ],
+    "settled": "alpha(H(3,9)) = 28, both bounds"
+  },
+  "pass_5249": {
+    "alpha_W33": 7,
+    "does_establish": "alpha(W(3,3)) = 7 < 10 exhaustively, hence W(3,3) has no ovoid -- the odd half of the parity rule proved at q=3 by computation",
+    "hypothesis_A_cut_space": {
+      "matches": false,
+      "source": "Track B Pass5220 P-component = Cut(K_{q+1})^{tensor 2}",
+      "value": 9,
+      "verdict": "REFUTED"
+    },
+    "hypothesis_B_q2_q_1": {
+      "confirming_points": 1,
+      "matches_at_q3": true,
+      "value": 7,
+      "verdict": "UNSUPPORTED -- one data point"
+    },
+    "method": "exhaustive"
+  }
+}
