@@ -1,0 +1,14 @@
+{
+  "pass":5239,
+  "status":"THEOREM_Q3_WEIGHT8_FALSE_CENTER_ECHO_FAMILY_SELF_HEALS",
+  "centers":1620,
+  "poison_pairs_per_incident_chart":2,
+  "incident_charts_per_center":4,
+  "configurations_per_center":16,
+  "distinct_weight8_configurations":25920,
+  "provenance_failure":"For every configuration the max-vote/max-singleton stage returns the false center alone.",
+  "full_decoder":"Every configuration clears in exactly three sweeps with residual weights 8 -> 9 -> 1 -> 0.",
+  "example":{"false_center":0,"errors":[1,2,3,6,9,18,27,54],"sweep_weights":[8,9,1],"corrections":[[0],[1,2,3,6,9,18,27,54],[0]]},
+  "consequence":"The true-only/monotone first-correction guarantee is sharp at radius7. Radius8 eventual decoding is not disproved because this complete obstruction family self-heals.",
+  "boundary":"No orbit-complete classification of every weight8 error is claimed; global eventual radius8 remains open."
+}
