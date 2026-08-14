@@ -1,0 +1,79 @@
+% Pass5238--5245: footprint distance closure and zero-P strict frontier.
+\subsection{Footprint distance closure and the residual zero-$P$ strict sector}
+
+The minimum-shell orbit of the $q=5$ footprint dual code now closes the
+previously open primal distance problem.  Let $\mathcal B_8$ be the complete
+orbit of $24{,}375$ dual words of weight eight.  Every footprint coordinate
+occurs in $600$ members of $\mathcal B_8$, while a pair of coordinates occurs
+in $25$, $5$, or $0$ members according to the three nontrivial relations
+$R_1,R_2,R_3$ of the Pass5232 rank-four scheme.  If $S$ is the support of a
+primal word, $w=|S|$, and $t_B=|S\cap B|$, then $t_B$ is even.  Therefore
+\[
+ \sum_{B\in\mathcal B_8}{t_B\choose2}\ge {1\over2}\sum_Bt_B=300w,
+\]
+whereas
+\[
+ \sum_{B\in\mathcal B_8}{t_B\choose2}=25e_1+5e_2
+ \le25{w\choose2}.
+\]
+Hence $w\ge25$.  Since every point footprint has weight $25$,
+\[
+ \boxed{C_F(q=5)=[325,65,25]_2}.
+\]
+Equality forces $e_2=e_3=0$ and all dual-check intersections to have size zero
+or two.  An exact maximum-clique census gives precisely $156$ cliques of size
+$25$, exactly the $156$ point footprints.  Thus the minimum shell is also
+classified.
+
+This settles the formerly open equality branch of the apartment code.  Pass5207
+shows that any $P$-heavy exotic word of apartment weight $625$ would induce a
+nonzero footprint word of weight at most $24$, now impossible.  Pass5191 already
+classifies the $P$-heavy-free equality case.  Consequently every $q=5$
+apartment-code word of weight $625$ is one of the $936$ chamber stars.
+This is an equality-shell theorem, not yet the strict minimum-distance theorem.
+
+The same distance theorem sharply reduces the strict side.  For any apartment
+word of weight below $625$, its $P$-component parity vector $s$ lies in $C_F$.
+If $s\ne0$, then $\mathrm{wt}(s)\ge25$, while every parity-odd $P$ component is
+nonzero in the local $[225,25,25]_2$ tensor code and therefore contributes at
+least $25$ apartments.  This would already cost $625$.  Hence every strict
+counterexample has
+\[
+ \boxed{s=0}.
+\]
+Moreover the even subcode of
+$\mathrm{Cut}(K_6)\otimes\mathrm{Cut}(K_6)$ has minimum distance $40$.
+Indeed $d_1(\mathrm{Cut}(K_6))=5$ and $d_2=9$: a rank-one tensor has smallest
+even product $5\cdot8=40$, while tensor rank at least two has at least nine
+nonzero rows of weight at least five.  Therefore any word below $625$ can
+activate at most $\lfloor624/40\rfloor=15$ of the $325$ $P$ components.
+The remaining strict problem is thus a zero-$P$-parity, block-sparse connected-$L$
+obstruction problem; leader $36$ is not claimed closed here.
+
+A useful general principle emerged.  If an automorphism-invariant family of dual
+checks has coordinate replication $r$ and maximum distinct-pair codegree
+$\lambda$, then even primal/check intersections imply
+\[
+  w\ge1+{r\over\lambda}.
+\]
+The exact anchors are
+\[
+(q,r,\lambda,d)=(3,24,3,9),\quad(5,600,25,25),\quad
+(7,18816,392,49).
+\]
+For $q=7$ an exact finite computation gives
+$\operatorname{rank}_2F=175$, excludes dual weights $9,10,11$, and exhibits a
+weight-$12$ dual word whose symplectic orbit has $1{,}920{,}800$ checks.  Its
+maximum pair codegree is $392$, so the same moment argument proves
+\[
+ \boxed{C_F(q=7)=[1225,175,49]_2}.
+\]
+Thus the footprint distance law $d=q^2$ is now certified by the same mechanism
+at $q=3,5,7$.  An all-odd-$q$ theorem would follow from an appropriate dual-check
+orbit with $r/\lambda=q^2-1$; that family construction remains open.
+
+Finally, the $P$-component action itself refines with $q$: exact generated
+$\mathrm{PSp}_4(q)$ pair orbitals have ranks $3,4,5$ for $q=3,5,7$ respectively.
+At $q=7$ the nonadjacent valencies are $336,336,168$ in addition to adjacency
+valency $384$.  These are finite anchors only; no all-odd-$q$ orbital formula is
+promoted without a separate proof.

@@ -3,20 +3,36 @@
   "range": [5238, 5245],
   "slug": "footprint_distance25_zeroP_orbitals_post5230",
   "title": "footprint distance-25 closure, weight-9 dual shell, quotient codes, odd-q orbitals, and zero-P strict reduction",
-  "status": "IN_PROGRESS",
+  "status": "EXECUTED_WITH_STRICT_Q5_ZERO_P_SECTOR_OPEN",
   "owner": "openai-gpt56-sol",
   "reserved_at": "2026-08-14",
   "activated_at": "2026-08-14T18:52:00-04:00",
-  "purpose": "Execute the five live post-5230 fronts plus three independent probes without colliding with Pass5230-5237 or Track A: close q5 footprint distance if the rank-4 shell permits it; classify the weight-9 dual shell; exploit the Hoffman-13 quotient; lift the PSp orbital refinement across odd-q anchors; feed footprint parity back into the leader36 strict frontier; and probe local even tensor distance, shell-moment duality, and higher-q orbital structure.",
+  "closed_at": "2026-08-14T19:15:00-04:00",
   "passes": {
-    "5238": "rank-4 weight-8 moment proof of q5 footprint d=25 and minimum-shell classification",
-    "5239": "complete q5 weight-9 dual orbit/census and pair statistics",
-    "5240": "Hoffman-13 quotient puncture/shorten parameters and low-weight bounds",
-    "5241": "odd-q PSp4 orbital refinement anchors q=3,5,7",
-    "5242": "strict q5 sub-625 zero-P-parity reduction using d(C_F)=25",
-    "5243": "bonkers: even subcode minimum 40 of Cut(K6) tensor Cut(K6)",
-    "5244": "bonkers: q3/q5 minimum-dual-shell moment principle certifies primal q^2 footprint distance",
-    "5245": "bonkers: combine zero-P parity and local even distance into <=15 active-P-component strict frontier"
+    "5238": "THEOREM: C_F(q=5)=[325,65,25]_2; 156 minimum supports are exactly point footprints; q5 weight-625 apartment shell is exactly the 936 chamber stars.",
+    "5239": "COMPUTATIONAL THEOREM: complete q5 weight-9 dual shell is one 117000-word symplectic orbit, span rank260, with complement C4 disjoint union C5 geometry.",
+    "5240": "THEOREM/BOUNDS: Hoffman-13 quotient gives shortened [312,52] with 28<=d<=40 and punctured [312,65] with 21<=d<=24.",
+    "5241": "FINITE THEOREM: PSp4 pair-orbital scheme ranks are 3,4,5 for q=3,5,7; q7 nonadjacent valencies 336,336,168.",
+    "5242": "THEOREM: every q5 apartment word of weight<625 has zero P-component parity.",
+    "5243": "THEOREM: even subcode of Cut(K6) tensor Cut(K6) has minimum40 with 180 minimum words; hence a q5 sub625 word activates at most15 P components.",
+    "5244": "THEOREM: dual-shell moment lemma w>=1+r/lambda; exact q3/q5/q7 footprint anchors give distances 9,25,49.",
+    "5245": "COMPUTATIONAL/FINITE THEOREM: q7 footprint C_F=[1225,175,49]_2; dual minimum12 via fixed-coordinate MILP exclusions at 9,10,11 plus an explicit weight12 witness; its 1920800-word orbit alone certifies primal d=49."
   },
-  "boundary": "Do not claim q5 apartment-code d=625 unless the remaining zero-P strict sector is eliminated. The q5 footprint code d=25 may be promoted only with the exact shell-moment certificate. Weight-9 completeness uses a deterministic fixed-coordinate MILP exclusion and must be labeled computational. Odd-q orbital formulas beyond q=3,5,7 remain conjectural unless separately proved."
+  "artifacts": [
+    "data/PART_W33_PASS5238_5245_RESULTS.json",
+    "analysis/w33_pass5238_5245_distance25_zeroP_moment_replay.py",
+    "analysis/PASS5238_5245_footprint_distance25_zeroP_insert.tex",
+    "tests/test_w33_pass5238_5245_packet.py",
+    ".github/workflows/w33_pass5238_5245_packet.yml",
+    "docs/pass5238-5245-footprint-distance25.html",
+    "analysis/PASS5238_5245_index_insert.html",
+    "tools/integrate_pass5238_5245_public.py",
+    ".github/workflows/w33_pass5238_5245_site.yml"
+  ],
+  "workflow_status_at_close": {
+    "packet_run_31849508343": "queued",
+    "site_run_31849590219": "queued"
+  },
+  "parallel_reconciliation": "A parallel Pass5238 commit independently records the same weight-8 Tanner moment proof and the same equality-shell firewall. Track A has reserved Pass5246-5253, so no namespace collision remains.",
+  "boundary": "The q5 equality shell is closed, but the q5 apartment-code minimum-distance theorem d=625 is NOT yet proved. The remaining strict sector has zero P parity and at most15 active P components; leader36 remains open. Weight-9 q5 shell completeness and q7 dual minimum12 use finite HiGHS MILP exclusions and are labeled computational. The odd-q orbital formula beyond q=3,5,7 remains conjectural."
 }

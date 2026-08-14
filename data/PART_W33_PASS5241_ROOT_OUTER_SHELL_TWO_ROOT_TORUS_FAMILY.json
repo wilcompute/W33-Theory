@@ -1,0 +1,18 @@
+{
+  "pass": 5241,
+  "status": "THEOREM_CHAR_GT3_ROOT_OUTER_SHELL_UNIFORM_TWO_ROOT_TORUS",
+  "field_range": "finite fields of characteristic >3",
+  "two_root_subgroup": "V=<H1,H3>, |V|=q^2; right cosets are exactly fixed-(a,c) fibers.",
+  "quotient": "U(q)/V is coordinatized by (a,c) in F_q^2.",
+  "q5_P_atom_connection": "Pass5217 identifies the 25 fixed-(a,c) fibers objectwise with the 25 P-minimum atoms in a chamber star.",
+  "outer_shell_projection": "distance four projects exactly onto (F_q^*)^2; the coordinate cross a=0 or c=0 contains no distance-four state.",
+  "uniform_fiber_size": "(q-4)^2 distance-four states in every nonzero (a,c) fiber.",
+  "shell4": "(q-1)^2(q-4)^2",
+  "prime_anchors": {
+    "5": {"shell4":16,"nonzero_ac_fibers":16,"states_per_nonzero_ac_fiber":1},
+    "7": {"shell4":324,"nonzero_ac_fibers":36,"states_per_nonzero_ac_fiber":9},
+    "11": {"shell4":4900,"nonzero_ac_fibers":100,"states_per_nonzero_ac_fiber":49},
+    "13": {"shell4":11664,"nonzero_ac_fibers":144,"states_per_nonzero_ac_fiber":81}
+  },
+  "boundary": "The two-root quotient and characteristic>3 metric statement are algebraic. The literal equality-coordinate/P-atom identification is objectwise certified at q=5 by Pass5217; extending the geometric atom language to every characteristic requires the corresponding residue identification."
+}

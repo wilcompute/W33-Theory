@@ -1,0 +1,83 @@
+{
+  "range": [5238, 5245],
+  "status": "EXECUTED_WITH_STRICT_Q5_ZERO_P_SECTOR_OPEN",
+  "5238": {
+    "status": "THEOREM_Q5_FOOTPRINT_CODE_325_65_25_AND_MINIMUM_SHELL",
+    "code": "C_F=[325,65,25]_2",
+    "dual_weight8_shell_size": 24375,
+    "dual_check_replication": 600,
+    "dual_pair_codegrees": {"R1_adjacent":25,"R2_nonadjacent":5,"R3_nonadjacent":0},
+    "moment_proof": "For a primal support S of weight w, every weight-8 dual check meets S evenly. Hence sum_D C(|S cap D|,2) >= 300w, while the exact pair codegrees give sum_D C(|S cap D|,2)=25e1+5e2 <=25 C(w,2). Thus w>=25.",
+    "weight25_equality": "Equality forces every pair of support coordinates into R1 and every dual-check intersection to have size 0 or 2; therefore every weight-25 support is a 25-clique of NO_5^+(5).",
+    "max_clique_census": {"maximum_clique_size":25,"maximum_cliques":156,"identified_with":"the 156 W-point footprints"},
+    "equality_consequence": "Pass5207's P-heavy exotic weight-625 branch would require a nonzero footprint word of weight <=24 and is therefore impossible. Together with Pass5191, all q5 weight-625 apartment words are the 936 chamber stars.",
+    "firewall": "This closes the q5 equality shell, not the strict sub-625 distance front."
+  },
+  "5239": {
+    "status": "COMPUTATIONAL_THEOREM_COMPLETE_Q5_WEIGHT9_DUAL_SHELL",
+    "weight9_shell_size":117000,
+    "single_symplectic_orbit":true,
+    "fixed_coordinate_words":3240,
+    "span_rank":260,
+    "point_coverage_per_word":{"degree2_points":54,"other_active_degrees":0},
+    "induced_block_graph":"6-regular on 9 vertices; complement C4 disjoint_union C5",
+    "pair_codegrees":{"R1":135,"R2":30,"R3":48},
+    "completeness_certificate":"Fix coordinate 0 by block transitivity. Exclude the 3240 known orbit words through 0 and solve F x=0, x_0=1, wt(x)=9 as a binary/integer parity MILP. HiGHS returns infeasible.",
+    "boundary":"Finite computational census; the weight-8 shell already suffices for the q5 primal distance theorem."
+  },
+  "5240": {
+    "status": "THEOREM_AND_BOUNDS_HOFFMAN13_QUOTIENT_CODES",
+    "cover_size":13,
+    "projection_rank":13,
+    "shortened_dimension":52,
+    "punctured_dimension":65,
+    "shortened_bounds":{"lower":28,"upper":40,"reason_lower":"d(C_F)=25, all weight-25 words are point footprints and each meets the 13-cover once, while C_F weights are 0 or 1 mod 4","upper_witness":"sum of two point rows in the same cover fibre, collinear case, weight 40"},
+    "punctured_bounds":{"lower":21,"upper":24,"reason_lower":"weight-9 dual checks disjoint from the cover have minimum complement-coordinate replication 2208 and maximum complement-pair codegree 116, giving w>=21 by the even-intersection moment bound","upper_witness":"a point footprint loses its unique cover coordinate and has punctured weight 24"},
+    "boundary":"No exact shortened or punctured minimum is claimed beyond these bounds."
+  },
+  "5241": {
+    "status": "THEOREM_FINITE_ODDQ_PSP4_ORBITAL_REFINEMENT_Q3_Q5_Q7",
+    "q3":{"n":45,"rank_F":15,"orbital_rank":3,"adjacency_valency":32,"nonadjacent_valencies":[12],"unordered_pair_orbit_sizes":[720,270]},
+    "q5":{"n":325,"rank_F":65,"orbital_rank":4,"adjacency_valency":144,"nonadjacent_valencies":[120,60],"unordered_pair_orbit_sizes":[23400,19500,9750]},
+    "q7":{"n":1225,"rank_F":175,"orbital_rank":5,"adjacency_valency":384,"nonadjacent_valencies":[336,336,168],"unordered_pair_orbit_sizes":[235200,205800,205800,102900]},
+    "observed_formula":"rank of the PSp4(q) orbital scheme on P-components is (q+3)/2 at q=3,5,7; one special nonadjacent orbital has valency q(q^2-1)/2 and the remaining (q-3)/2 nonadjacent orbitals have valency q(q^2-1).",
+    "boundary":"The displayed formula is an exact finite-anchor pattern, not yet promoted as an all-odd-q theorem."
+  },
+  "5242": {
+    "status": "THEOREM_Q5_STRICT_SUB625_ZERO_P_PARITY_REDUCTION",
+    "statement":"Any q5 apartment-code word of weight <625 has zero P-component parity vector.",
+    "proof":"P parity s lies in C_F. If s is nonzero, Pass5238 gives wt(s)>=25. Each parity-odd P component is nonzero in the local [225,25,25] tensor code and contributes at least 25 apartments, so global weight >=25*25=625.",
+    "consequence":"The remaining q5 strict distance problem is entirely inside the zero-P-parity sector; Pass5202 may then gauge point parity to zero, although that gauge need not preserve chamber-leader cardinality."
+  },
+  "5243": {
+    "status": "THEOREM_Q5_LOCAL_P_COMPONENT_EVEN_DISTANCE40",
+    "local_code":"Cut(K6) tensor Cut(K6)=[225,25,25]_2",
+    "factor_generalized_weights":{"d1":5,"d2":9},
+    "even_subcode_minimum":40,
+    "minimum_even_words":180,
+    "proof":"Tensor rank one gives product weights from {5,8,9}; the smallest even product is 5*8=40. Tensor rank at least two has at least d2=9 nonzero rows, each a nonzero Cut(K6) word of weight at least 5, hence weight at least45.",
+    "strict_consequence":"A q5 word of weight <625 has zero P parity by Pass5242, so every active P component has even local weight >=40; therefore at most 15 P components can be active."
+  },
+  "5244": {
+    "status": "THEOREM_DUAL_SHELL_MOMENT_DISTANCE_PRINCIPLE_WITH_Q3_Q5_Q7_ANCHORS",
+    "lemma":"Let B be an automorphism-invariant family of dual checks for a binary code, with coordinate replication r and maximum distinct-pair codegree lambda. If every primal/check intersection is even, then every nonzero primal word has weight w >= 1+r/lambda.",
+    "proof":"sum_B C(t_B,2)>=1/2 sum_B t_B=rw/2, while sum_B C(t_B,2)<=lambda C(w,2).",
+    "anchors":{"q3":{"check_weight":5,"checks":216,"r":24,"lambda":3,"r_over_lambda":8,"primal_distance":9},"q5":{"check_weight":8,"checks":24375,"r":600,"lambda":25,"r_over_lambda":24,"primal_distance":25},"q7":{"check_weight":12,"orbit_checks":1920800,"r":18816,"lambda":392,"r_over_lambda":48,"primal_distance":49}},
+    "all_q_target":"Construct, for odd q, a dual-check orbit with r/lambda=q^2-1. The moment lemma would immediately prove footprint distance q^2."
+  },
+  "5245": {
+    "status": "COMPUTATIONAL_THEOREM_Q7_FOOTPRINT_1225_175_49_AND_DUAL_DISTANCE12",
+    "primal_code":"C_F(q=7)=[1225,175,49]_2",
+    "dual_minimum":12,
+    "dual_lower_search":"The incidence argument gives d_dual>=9. Fixed-coordinate parity MILPs for weights 9,10,11 are each infeasible; an explicit weight-12 dual word exists.",
+    "weight12_witness":[0,9,51,204,277,342,371,416,471,608,752,876],
+    "weight12_geometry":{"point_degree_histogram":{"0":304,"2":96},"selected_graph":"12 vertices, 8-regular, 48 edges","complement":"disjoint union of a triangular prism and K3,3"},
+    "symplectic_orbit_size":1920800,
+    "orbit_replication":18816,
+    "orbital_pair_codegrees":{"adjacency":392,"nonadjacent_336_A":28,"nonadjacent_336_B":112,"nonadjacent_168":56},
+    "distance_proof":"Every primal word meets each weight-12 orbit check evenly. Since the maximum pair codegree is 392, the shell-moment lemma gives w>=1+18816/392=49; point rows have weight49.",
+    "boundary":"The weight-12 orbit is sufficient for primal d=49; completeness of the entire weight-12 dual shell is not needed and is not claimed."
+  },
+  "strict_frontier":"q5 equality is now closed: every weight-625 word is a chamber star. q5 strict minimum remains open only in the zero-P-parity sector, where any sub-625 word has at most 15 active P components. Leader36 is not yet eliminated.",
+  "literature_boundary":"External literature was used only to corroborate the classical PSp4(q) ~= Omega5(q) orthogonal-module viewpoint. No external source located in this run proves the new finite shell-moment distance statements or the q3/q5/q7 orbital data; those are repo computations/proofs."
+}

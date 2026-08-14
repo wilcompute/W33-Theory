@@ -1,0 +1,17 @@
+{
+  "pass":5244,
+  "status":"THEOREM_Q5_ZERO_FOOTPRINT_LOCAL_EVEN_MIN40_AND_AT_MOST15_P_COMPONENTS",
+  "local_code":"Cut(K6) tensor Cut(K6)=[225,25,25]_2",
+  "states_enumerated":33554432,
+  "low_weight_distribution":{"0":1,"25":36,"40":180,"45":120,"48":450,"57":900,"61":3600,"64":3825},
+  "minimum_odd_weight":25,
+  "minimum_odd_count":36,
+  "minimum_even_weight":40,
+  "minimum_even_count":180,
+  "weight40_classification":"exactly simple tensors weight5 x weight8 or weight8 x weight5; 6*15*2=180",
+  "strict_q5_reduction":"Every apartment-code word of weight <625 has zero P footprint by Pass5238; therefore every active P component is a nonzero even local word and costs at least40 apartments.",
+  "active_P_components_max":15,
+  "fifteen_component_possible_low_shell_compositions":[[40,40,40,40,40,40,40,40,40,40,40,40,40,40,40],[48,40,40,40,40,40,40,40,40,40,40,40,40,40,40],[48,48,40,40,40,40,40,40,40,40,40,40,40,40,40],[48,48,48,40,40,40,40,40,40,40,40,40,40,40,40],[64,40,40,40,40,40,40,40,40,40,40,40,40,40,40]],
+  "leader_connection":"Any surviving chamber-leader-36 counterexample must live in this zero-footprint <=15-component residual sector.",
+  "boundary":"This does not yet prove the zero-footprint residual is empty below625; it reduces the strict problem to a sparse block-support sector."
+}

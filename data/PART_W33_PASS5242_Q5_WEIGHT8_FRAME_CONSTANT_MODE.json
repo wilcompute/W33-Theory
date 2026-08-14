@@ -1,0 +1,14 @@
+{
+  "pass":5242,
+  "status":"THEOREM_Q5_WEIGHT8_SHELL_REAL_FRAME_BINARY_CONSTANT_MODE",
+  "H8_shape":[24375,325],
+  "integer_Gram":"H8^T H8 = 600 I + 25 R1 + 5 R2",
+  "real_Gram_spectrum":{"4800":1,"900":90,"425":104,"500":130},
+  "real_rank":325,
+  "binary_rank":259,
+  "binary_nullity":66,
+  "binary_kernel":"ker_F2(H8)=C_F direct-sum <1>, dimensions 65+1",
+  "constant_mode":"The all-ones vector is killed by every even weight-8 check but is excluded from C_F by the odd weight-9 dual check.",
+  "odd_check_role":"One independent odd dual check removes exactly the constant mode and raises parity-check rank from259 to260.",
+  "boundary":"Finite q5 code/frame theorem; no physical measurement interpretation is asserted."
+}
