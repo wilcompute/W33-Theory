@@ -1,0 +1,13 @@
+{
+  "packet": [5110,5117],
+  "status": "EXECUTED_WITH_Q5_DISTANCE_OPEN_AND_LATER_RECONCILIATION",
+  "5110": {"status":"THEOREM_ALL_Q_CHAMBER_KERNEL_IS_CUT_SPACE","statement":"ker(chamber coefficients -> apartment code)=Cut(Levi;F2)","quotient_dimension":"q^4"},
+  "5111": {"status":"THEOREM_Q5_COUNTEREXAMPLE_LEADER_AT_LEAST_14","later_strengthening":"Pass5118 raises the barrier to >=17","q5_distance":625,"distance_status":"OPEN"},
+  "5112": {"status":"THEOREM_ALL_FINITE_GQ_INTRINSIC_ROOT_CHART_RECOVERY","root_formula":"q^3(q+1)^2(q^2+1)","chart_formula":"q^3(q+1)(q^2+1)","anchors":[2,3,4]},
+  "5113": {"status":"THEOREM_GLOBAL_EQUIVARIANT_RADIUS3_TWO_SWEEPS","q":3,"base_fixed_triples_tested":1309771,"global_guaranteed_error_weight":3,"second_sweep_failures":0},
+  "5114": {"status":"THEOREM_EXACT_CONDUCTOR_1_2_4_ORDER_LADDER","field":"Q(sqrt(17))","conductors":[1,2,4],"discriminants":[17,68,272],"global_lane_indices":[32768,32768,1073741824]},
+  "5115": {"status":"THEOREM_EXACT_FIELD_RANKS_Q2_Q3_Q5","native_drops":{"q2":0,"q3":1,"q5":8},"later_falsifier":"Pass5123 gives q7 native drop 10, disproving the naive ((q-1)/2)^3 extrapolation"},
+  "5116": {"status":"THEOREM_Q3_CODE_INTRINSIC_LOCAL_CONTROLLER","controller":"U81 semidirect V4","order":324,"state":"H27","program":"F3^3","protected_module":"F3[U81]"},
+  "5117": {"status":"THEOREM_ALL_Q_PERFECT_PRESENTATION_DUALITY","statement":"apartment code canonically equals Hom_F2(apartment/theta presentation,F2)"},
+  "boundaries": {"q5_distance_625":"OPEN","all_q_distance":"OPEN","decoder_radius4":"OPEN","physical_noise_threshold":"NOT CLAIMED","historical_transfer_geometric_bijection":"NOT CLAIMED"}
+}
