@@ -1,0 +1,25 @@
+{
+  "pass": 5091,
+  "status": "PASS",
+  "q": 4,
+  "assumption": "every active opposite-pair chart is a minimum 1|4 cut of K5",
+  "fixed_apartment": 0,
+  "seed_count": 16,
+  "sat_chamber_stars": 8,
+  "unsat_seeds": 8,
+  "sat": {
+    "0000":0,
+    "0010":1,
+    "0110":25,
+    "0111":26,
+    "1000":5,
+    "1001":6,
+    "1101":106,
+    "1111":105
+  },
+  "unsat": ["0001","0011","0100","0101","1010","1011","1100","1110"],
+  "theorem": "Under the local-minimum-cut assumption, every nonzero q=4 apartment-code word containing the fixed apartment is one of the eight chamber stars through that apartment.",
+  "consequence": "Any hypothetical non-chamber weight-256 word must contain at least one heavier 2|3 chart.",
+  "weight256_parameterization": "If A2=2t counts 2|3 charts, then A1=256-3t and the total active-chart count is 256-t.",
+  "boundary": "This is a conditional rigidity theorem, not a complete q=4 minimum-shell classification."
+}
