@@ -1,0 +1,169 @@
+{
+  "boundary": "alpha = q^2+1 is settled BOTH ways for every listed even q: the lower bound by an explicitly constructed ovoid whose pairwise non-conjugacy is verified on EVERY pair (not sampled -- the sampling is only in the form-screening step), the upper bound by Hoffman. This covers EVEN q only. Nothing here bears on odd q, where W(3,q) has no ovoid and Passes 5226-5229 established no upper bound. The symplectic form is the reversal pairing (0,3)(1,2), determined by uniqueness among 63 binary alternating forms at q=8, not assumed",
+  "pass_5246": {
+    "form": [
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "method": "scan all 63 binary alternating forms, keep zero-conjugate",
+    "naive_form_conjugate_pairs_at_q8": 256,
+    "question": "which symplectic form does the Tits parametrisation use?",
+    "surviving_forms": 1,
+    "why": "four logged incidents of reasoning about a library's convention and getting it backwards; scanning against a stated invariant removes the reasoning step entirely"
+  },
+  "pass_5247": {
+    "argument": "W(3,q) points = all of PG(3,q), collinear iff B(P,Q)=0; an ovoid is a coclique of size q^2+1 = Hoffman bound",
+    "constructions": {
+      "even powers of 2": "elliptic quadric",
+      "odd powers of 2": "Suzuki-Tits"
+    },
+    "contrast": "Pass 5227's searcher reached 68 pct of target at 820 vertices; this settles 2,113,665 exactly",
+    "largest": {
+      "q": 128,
+      "seconds": 132.2,
+      "vertices": 2113665
+    },
+    "pairs_verified_at_largest": 134225920,
+    "rows": [
+      {
+        "alpha": 17,
+        "conjugate_pairs": 0,
+        "construction": "elliptic quadric, x^2+x+2 irreducible",
+        "form_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "hoffman": 17,
+        "n": 85,
+        "ovoid_size": 17,
+        "pairs_verified": 136,
+        "q": 4,
+        "seconds": 0.0,
+        "settled_both_bounds": true
+      },
+      {
+        "alpha": 65,
+        "conjugate_pairs": 0,
+        "construction": "Suzuki-Tits, sigma = x^4",
+        "form_pairs": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "hoffman": 65,
+        "n": 585,
+        "ovoid_size": 65,
+        "pairs_verified": 2080,
+        "q": 8,
+        "seconds": 0.0,
+        "settled_both_bounds": true
+      },
+      {
+        "alpha": 257,
+        "conjugate_pairs": 0,
+        "construction": "elliptic quadric, x^2+x+8 irreducible",
+        "form_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "hoffman": 257,
+        "n": 4369,
+        "ovoid_size": 257,
+        "pairs_verified": 32896,
+        "q": 16,
+        "seconds": 0.0,
+        "settled_both_bounds": true
+      },
+      {
+        "alpha": 1025,
+        "conjugate_pairs": 0,
+        "construction": "Suzuki-Tits, sigma = x^8",
+        "form_pairs": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "hoffman": 1025,
+        "n": 33825,
+        "ovoid_size": 1025,
+        "pairs_verified": 524800,
+        "q": 32,
+        "seconds": 0.4,
+        "settled_both_bounds": true
+      },
+      {
+        "alpha": 4097,
+        "conjugate_pairs": 0,
+        "construction": "elliptic quadric, x^2+x+32 irreducible",
+        "form_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "hoffman": 4097,
+        "n": 266305,
+        "ovoid_size": 4097,
+        "pairs_verified": 8390656,
+        "q": 64,
+        "seconds": 5.1,
+        "settled_both_bounds": true
+      },
+      {
+        "alpha": 16385,
+        "conjugate_pairs": 0,
+        "construction": "Suzuki-Tits, sigma = x^16",
+        "form_pairs": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "hoffman": 16385,
+        "n": 2113665,
+        "ovoid_size": 16385,
+        "pairs_verified": 134225920,
+        "q": 128,
+        "seconds": 132.2,
+        "settled_both_bounds": true
+      }
+    ],
+    "theorem": "alpha(W(3,q)) = q^2+1 for even q, by construction"
+  }
+}
