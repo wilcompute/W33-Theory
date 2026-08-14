@@ -1,0 +1,95 @@
+{
+  "boundary": "guard findings are counted by parsing each tool's summary line, so a tool whose output format differs may be recorded as 0 rather than unparsed. Silence is not evidence the new work is clean -- these guards look for specific textual signatures and encode one author's failure modes. The coverage figure counts PART_ certificates only",
+  "pass_5224": {
+    "base_commit": "bea345f80",
+    "config_valid": true,
+    "guards_firing": 0,
+    "guards_run": 7,
+    "new_md": 40,
+    "new_py": 175,
+    "rows": [
+      {
+        "files": 173,
+        "findings": 0,
+        "guard": "check_regex_deadends",
+        "seconds": 0.3
+      },
+      {
+        "files": 173,
+        "findings": 0,
+        "guard": "check_heredoc_regex",
+        "seconds": 0.3
+      },
+      {
+        "files": 173,
+        "findings": 0,
+        "guard": "check_hardcoded_keys",
+        "seconds": 0.4
+      },
+      {
+        "files": 213,
+        "findings": 0,
+        "guard": "check_search_power",
+        "seconds": 0.4
+      },
+      {
+        "files": 213,
+        "findings": 0,
+        "guard": "check_retraction_propagation",
+        "seconds": 0.5
+      },
+      {
+        "files": 40,
+        "findings": 0,
+        "guard": "check_novelty_claims",
+        "seconds": 0.3
+      },
+      {
+        "files": 173,
+        "findings": 0,
+        "guard": "check_stdlib_shadow",
+        "seconds": 0.2
+      }
+    ],
+    "selftest_line": "12 self-tested, 6 without a self-test, 0 failing"
+  },
+  "pass_5225": {
+    "actual": "adoption rising 0% -> 1% -> 10%; the guard's reach is small because most certificates never carried a digest, not because any were removed",
+    "coverage_by_range": [
+      {
+        "certs": 15,
+        "pct": 0,
+        "range": "2500-2999",
+        "with_digest": 0
+      },
+      {
+        "certs": 6,
+        "pct": 0,
+        "range": "3000-3499",
+        "with_digest": 0
+      },
+      {
+        "certs": 86,
+        "pct": 0,
+        "range": "4000-4499",
+        "with_digest": 0
+      },
+      {
+        "certs": 393,
+        "pct": 1,
+        "range": "4500-4999",
+        "with_digest": 7
+      },
+      {
+        "certs": 165,
+        "pct": 10,
+        "range": "5000-5499",
+        "with_digest": 18
+      }
+    ],
+    "first_reading": "convention abandoned -- WRONG",
+    "pct": 3,
+    "total_certs": 665,
+    "with_digest": 25
+  }
+}
