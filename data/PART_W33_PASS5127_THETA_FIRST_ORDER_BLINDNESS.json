@@ -1,0 +1,19 @@
+{
+  "pass": 5127,
+  "status": "THEOREM_ALL_Q_THETA_FIRST_ORDER_SPECTRAL_BLINDNESS",
+  "statement": "For every nonzero apartment-code support S, the intrinsic theta graph has degree D=8(q-1), the induced support graph is D/2-regular, and every selected vertex has D/2 external neighbors.",
+  "consequences": {
+    "induced_edges": "|E(S)|=2(q-1)|S|",
+    "edge_boundary": "|delta(S)|=4(q-1)|S|",
+    "one_step_random_walk": "P(stay)=P(exit)=1/2 from the uniform distribution on S",
+    "indicator_rayleigh": "1_S^T L 1_S / ||1_S||^2 = 4(q-1)=D/2"
+  },
+  "anchors": {
+    "2": {"apartments":90,"ambient_degree":8,"support_induced_degree":4,"support_external_degree":4,"indicator_laplacian_rayleigh":4},
+    "3": {"apartments":1620,"ambient_degree":16,"support_induced_degree":8,"support_external_degree":8,"indicator_laplacian_rayleigh":8},
+    "4": {"apartments":13600,"ambient_degree":24,"support_induced_degree":12,"support_external_degree":12,"indicator_laplacian_rayleigh":12},
+    "5": {"apartments":73125,"ambient_degree":32,"support_induced_degree":16,"support_external_degree":16,"indicator_laplacian_rayleigh":16}
+  },
+  "interpretation": "Every codeword support has identical first-order theta escape/Rayleigh data regardless of Hamming weight. The missing distance invariant must retain triangle/chart parity or other higher-order curvature information.",
+  "boundary": "Necessary code-support structure only; no converse and no minimum-distance proof."
+}
