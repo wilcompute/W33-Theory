@@ -1,0 +1,95 @@
+{
+  "all_three_pairs_split": true,
+  "boundary": "alpha(H(3,9)) = 28 rests on a WITNESS meeting a spectral bound: the 28-set is verified pairwise non-collinear over all 378 pairs, and the Hoffman bound is st+1 = 28. No exhaustive search was run at 280 vertices and Pass 4812 showed one does not finish. This method can never establish an alpha BELOW the bound",
+  "pass_5222": {
+    "alpha": 28,
+    "collinear_pairs": 0,
+    "geometry": "H(3,9)",
+    "hoffman": 28,
+    "independent": true,
+    "pairs_checked": 378,
+    "pass_4812_status": "not computed in 300 s",
+    "seconds": 0.1,
+    "srg": [
+      280,
+      36,
+      8,
+      4
+    ],
+    "witness_size": 28
+  },
+  "pass_5223": {
+    "caveat": "a witness settles only the lower bound; an alpha BELOW its spectral bound needs exhaustion and is unreachable at these sizes",
+    "past_200_search": 1,
+    "past_200_witness": 4,
+    "results": [
+      {
+        "how": "exhaustive, instant",
+        "kind": "search",
+        "n": 40,
+        "result": "W(3,3) alpha = 7"
+      },
+      {
+        "how": "exhaustive, 2 s",
+        "kind": "search",
+        "n": 85,
+        "result": "W(3,4) alpha = 17"
+      },
+      {
+        "how": "exhaustive, 2,075 s",
+        "kind": "search",
+        "n": 156,
+        "result": "W(3,5) alpha = 18"
+      },
+      {
+        "how": "exhaustive, 28 s",
+        "kind": "search",
+        "n": 112,
+        "result": "Q(5,3) alpha = 16"
+      },
+      {
+        "how": "FAILED -- no result in 300 s",
+        "kind": "search",
+        "n": 280,
+        "result": "H(3,9) alpha"
+      },
+      {
+        "how": "36,300 candidates, 10 s",
+        "kind": "witness",
+        "n": 585,
+        "result": "W(3,8) polarity"
+      },
+      {
+        "how": "the ovoid, verified",
+        "kind": "witness",
+        "n": 585,
+        "result": "W(3,8) alpha = 65"
+      },
+      {
+        "how": "isomorphism transfer, 3.9 s",
+        "kind": "witness",
+        "n": 585,
+        "result": "Q(4,8) alpha = 65"
+      },
+      {
+        "how": "greedy, 0 s",
+        "kind": "witness",
+        "n": 280,
+        "result": "H(3,9) alpha = 28"
+      }
+    ]
+  },
+  "third_pair": {
+    "H(3,9)": {
+      "alpha": 28,
+      "bound": 28,
+      "meets": true
+    },
+    "Q(5,3)": {
+      "alpha": 16,
+      "bound": 28,
+      "meets": false
+    },
+    "splits": true
+  }
+}
