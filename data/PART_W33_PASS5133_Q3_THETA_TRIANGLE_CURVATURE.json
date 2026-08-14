@@ -1,0 +1,16 @@
+{
+  "pass": 5133,
+  "status": "THEOREM_Q3_HIGHER_ORDER_THETA_CURVATURE",
+  "q": 3,
+  "theta_graph": {"vertices":1620,"degree":16,"theta_checks":4320},
+  "single_chamber_star": {"weight":81,"induced_edges":324,"selected_triangles":108,"fully_selected_theta_checks":0},
+  "two_star_xor_by_gallery_distance": {
+    "1": {"weight":108,"induced_edges":432,"selected_triangles":108,"fully_selected_theta_checks":0},
+    "2": {"weight":144,"induced_edges":576,"selected_triangles":168,"fully_selected_theta_checks":0},
+    "3": {"weight":156,"induced_edges":624,"selected_triangles":196,"fully_selected_theta_checks":0},
+    "4": {"weight":160,"induced_edges":640,"selected_triangles":208,"fully_selected_theta_checks":0}
+  },
+  "first_order_rigidity": "Every row obeys induced_edges=4*weight, exactly the q=3 half-regular/Rayleigh law.",
+  "higher_order_signal": "The selected-triangle count is nonconstant. Parity makes every fully selected theta-check triangle impossible, so the varying triangles are common-root/Tanner-six-cycle triangles.",
+  "boundary": "Higher-order invariant identified; no general triangle-curvature distance inequality is yet proved."
+}
