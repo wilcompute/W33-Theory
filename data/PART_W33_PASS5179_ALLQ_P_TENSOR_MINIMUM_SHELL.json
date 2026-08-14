@@ -1,0 +1,16 @@
+{
+  "pass": 5179,
+  "status": "THEOREM_ALL_Q_P_TENSOR_COMPONENT_MINIMUM_SHELL",
+  "factor": "C=Cut(K_{q+1})=[C(q+1,2),q,q]_2 with exactly q+1 minimum words",
+  "tensor": "C tensor C has parameters [C(q+1,2)^2,q^2,q^2]_2",
+  "minimum_shell": "Every weight-q^2 tensor word is u tensor v for minimum factor words u,v; A_{q^2}=(q+1)^2",
+  "anchors": {
+    "2":{"q":2,"factor_length":3,"factor_dimension":2,"factor_distance":2,"factor_minimum_words":3,"tensor_length":9,"tensor_dimension":4,"tensor_distance":4,"tensor_minimum_words":9},
+    "3":{"q":3,"factor_length":6,"factor_dimension":3,"factor_distance":3,"factor_minimum_words":4,"tensor_length":36,"tensor_dimension":9,"tensor_distance":9,"tensor_minimum_words":16},
+    "4":{"q":4,"factor_length":10,"factor_dimension":4,"factor_distance":4,"factor_minimum_words":5,"tensor_length":100,"tensor_dimension":16,"tensor_distance":16,"tensor_minimum_words":25},
+    "5":{"q":5,"factor_length":15,"factor_dimension":5,"factor_distance":5,"factor_minimum_words":6,"tensor_length":225,"tensor_dimension":25,"tensor_distance":25,"tensor_minimum_words":36},
+    "6":{"q":6,"factor_length":21,"factor_dimension":6,"factor_distance":6,"factor_minimum_words":7,"tensor_length":441,"tensor_dimension":36,"tensor_distance":36,"tensor_minimum_words":49}
+  },
+  "asymmetry_firewall": "Attached only to the P/opposite-point component decomposition of Pass5177; the connected L-side chart code is not identified with this tensor product.",
+  "boundary": "Classifies the P-component minimum shell only; full apartment-code words must also satisfy all L-side theta constraints."
+}
