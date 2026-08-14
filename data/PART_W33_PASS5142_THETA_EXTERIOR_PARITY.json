@@ -1,0 +1,17 @@
+{
+  "pass": 5142,
+  "status": "THEOREM_ALL_Q_THETA_EXTERIOR_PARITY_CONSERVATION",
+  "statement": "Every exterior apartment has an even number of selected theta-neighbors; active theta triples equal 2(q-1)|S|.",
+  "identities": [
+    "A_active=2(q-1)|S|",
+    "sum_out t_v=4(q-1)|S|",
+    "sum_r r b_{2r}=2(q-1)|S|"
+  ],
+  "chamber_star_anchors": [
+    {"q":2,"weight":16,"active_theta_checks":32,"b2":32},
+    {"q":3,"weight":81,"active_theta_checks":324,"b2":324},
+    {"q":4,"weight":256,"active_theta_checks":1536,"b2":1536},
+    {"q":5,"weight":625,"active_theta_checks":5000,"b2":5000}
+  ],
+  "boundary": "This refines Pass5119 but does not classify all supports."
+}
