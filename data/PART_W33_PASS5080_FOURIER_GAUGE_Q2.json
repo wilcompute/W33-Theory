@@ -1,0 +1,11 @@
+{
+  "pass": 5080,
+  "status": "PASS",
+  "q2_code": [90,16,16],
+  "weight_enumerator": {"0":1,"16":45,"24":90,"28":360,"30":360,"34":1440,"36":1740,"38":1440,"40":5634,"42":8520,"44":10440,"46":11520,"48":11580,"50":8280,"52":2520,"54":1080,"56":450,"60":36},
+  "minimum_words": 45,
+  "chamber_stars": 45,
+  "nonstar_minimum_words": 0,
+  "apartment_measure_edge_fourier": "1-16/45=29/45",
+  "distance_fourier_equivalence": "wt(c_y)=N*(1-mu_hat(y))/2; d=q^4 iff max_nontrivial mu_hat <= 1-16/((q+1)^2(q^2+1))"
+}
