@@ -1,0 +1,29 @@
+{
+  "pass":5205,
+  "status":"EXACT_Q5_LEADER36_FULL_APARTMENT_METHOD_WALL",
+  "q":5,
+  "leader_size_diagnostic":36,
+  "target_distance":625,
+  "previous_adjacent_pair_cap":65,
+  "raw_deletion_cap":68,
+  "relaxed_adjacent_pair_cap":67,
+  "N1_68":"locally infeasible under the degree-edge-type endpoint constraint",
+  "safe_layers":{"46":1949,"47":1767,"48":1583,"49":1434,"50":1284,"51":1100,"52":950,"53":768,"65":643,"66":1544,"67":2907},
+  "open_adjacent_pair_window":{"54":584,"55":551,"56":531,"57":542,"58":553,"59":574,"60":535,"61":556,"62":567,"63":579,"64":590},
+  "units_needed_to_reach_strict_626":{"54":42,"55":75,"56":95,"57":84,"58":73,"59":52,"60":91,"61":70,"62":59,"63":47,"64":36},
+  "critical_profiles":{
+    "54":{"degree_counts":[18,0,18],"N112":72,"P4":72,"P5":0,"distance_counts":[54,164,194,218],"pair_lower":-1576,"S3":2520,"P5_upper":432,"A8_upper":54,"ordinary":584,"corrected":498,"combined":584},
+    "55":{"degree_counts":[16,1,18],"N112":76,"P4":84,"P5":32,"distance_counts":[55,165,195,215],"pair_lower":-1880,"S3":2836,"P5_upper":436,"A8_upper":54,"ordinary":551,"corrected":519,"combined":551},
+    "56":{"degree_counts":[14,2,18],"N112":80,"P4":96,"P5":64,"distance_counts":[56,166,196,212],"pair_lower":-2184,"S3":3152,"P5_upper":440,"A8_upper":55,"ordinary":518,"corrected":531,"combined":531},
+    "57":{"degree_counts":[15,0,19],"N112":84,"P4":108,"P5":96,"distance_counts":[57,167,197,209],"pair_lower":-2488,"S3":3468,"P5_upper":448,"A8_upper":56,"ordinary":485,"corrected":542,"combined":542},
+    "58":{"degree_counts":[13,1,19],"N112":88,"P4":120,"P5":128,"distance_counts":[58,168,198,206],"pair_lower":-2792,"S3":3784,"P5_upper":456,"A8_upper":57,"ordinary":452,"corrected":553,"combined":553},
+    "59":{"degree_counts":[11,2,19],"N112":92,"P4":132,"P5":160,"distance_counts":[59,169,199,203],"pair_lower":-3096,"S3":4100,"P5_upper":460,"A8_upper":57,"ordinary":419,"corrected":574,"combined":574},
+    "60":{"degree_counts":[12,0,20],"N112":96,"P4":144,"P5":192,"distance_counts":[60,171,198,201],"pair_lower":-3432,"S3":4416,"P5_upper":480,"A8_upper":60,"ordinary":354,"corrected":535,"combined":535},
+    "61":{"degree_counts":[10,1,20],"N112":100,"P4":156,"P5":224,"distance_counts":[61,172,199,198],"pair_lower":-3736,"S3":4732,"P5_upper":484,"A8_upper":60,"ordinary":320,"corrected":556,"combined":556},
+    "62":{"degree_counts":[8,2,20],"N112":104,"P4":168,"P5":256,"distance_counts":[62,173,200,195],"pair_lower":-4040,"S3":5048,"P5_upper":488,"A8_upper":61,"ordinary":287,"corrected":567,"combined":567},
+    "63":{"degree_counts":[9,0,21],"N112":108,"P4":180,"P5":288,"distance_counts":[63,174,201,192],"pair_lower":-4344,"S3":5364,"P5_upper":496,"A8_upper":62,"ordinary":254,"corrected":579,"combined":579},
+    "64":{"degree_counts":[7,1,21],"N112":112,"P4":192,"P5":320,"distance_counts":[64,175,202,189],"pair_lower":-4648,"S3":5680,"P5_upper":504,"A8_upper":63,"ordinary":221,"corrected":590,"combined":590}
+  },
+  "next_constraints":["Pass5185 full cut-coset inequalities on multi-vertex shores","Pass5201-5203 P-footprint-code minimum-distance / zero-parity residual analysis"],
+  "boundary":"Diagnostic only. Pass5200 proves strict counterexamples need leader >=36; Pass5205 does not close leader36 or prove d=625."
+}
