@@ -1,0 +1,12 @@
+{
+  "pass": 5125,
+  "status": "THEOREM_EQUIVARIANT_Z3_TORSION_TRIALITY_WELD",
+  "arithmetic_module": "Tor coker(H^T) ~= Z/3 from Pass5121",
+  "controller_module": "Z(U81)=Z(H27)=C3 triality axis from Pass5105/5109",
+  "U81_action_on_both": "trivial",
+  "V4_character_on_both": {"e":"+","a":"-","b":"+","c":"-"},
+  "module_isomorphism": "As F3[U81 semidirect V4]-modules, Tor coker(H^T) is isomorphic to Z(U81). Sending the nonzero torsion generator [w] to either nonzero center generator gives the two scalar-related equivariant isomorphisms.",
+  "canonicity": "The one-dimensional module type is canonical; a generator-to-generator map is unique only up to F3^*={1,2}.",
+  "interpretation": "The ternary Smith saturation defect and the Heisenberg triality center are two realizations of the same local controller representation character.",
+  "boundary": "This is an exact finite arithmetic/group-module identification. It does not assign electric charge, generation physics, or a hardware observable to the torsion class."
+}

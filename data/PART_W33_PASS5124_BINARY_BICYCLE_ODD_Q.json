@@ -1,0 +1,15 @@
+{
+  "pass": 5124,
+  "status": "EXACT_Q2_Q3_Q5_Q7_BICYCLE_ANCHORS_WITH_ODD_Q_CONJECTURE",
+  "anchors": {
+    "2": {"points_lines":15,"point_line_rank_F2":14,"nullity_F2":1,"Levi_bicycle_dimension":0},
+    "3": {"points_lines":40,"point_line_rank_F2":25,"nullity_F2":15,"Levi_bicycle_dimension":29},
+    "5": {"points_lines":156,"point_line_rank_F2":91,"nullity_F2":65,"Levi_bicycle_dimension":129},
+    "7": {"points_lines":400,"point_line_rank_F2":225,"nullity_F2":175,"Levi_bicycle_dimension":349}
+  },
+  "odd_anchor_rank_formula": "rank_F2(point-line incidence)=1+q(q+1)^2/2 for q=3,5,7",
+  "odd_anchor_bicycle_formula": "Bike_2(Levi)=q^3+q-1 for q=3,5,7",
+  "mechanism": "For odd q, q+1 is even and BB^T mod2 has block form [[0,N],[N^T,0]], so Bike dimension=2 null_F2(N)-1.",
+  "connection": "q=3 recovers the previously identified Bike29 Jacobian-height layer exactly.",
+  "boundary": "The q3,q5,q7 ranks are exact computations. An all-odd-q proof of the displayed cross-characteristic 2-rank formula is not supplied, so the family formula remains conjectural."
+}

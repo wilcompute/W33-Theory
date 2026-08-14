@@ -1,0 +1,28 @@
+{
+  "pass": 5118,
+  "status": "THEOREM_Q5_COUNTEREXAMPLE_LEADER_AT_LEAST_17",
+  "q": 5,
+  "target_distance": 625,
+  "chamber_scheme": {
+    "shells": [1, 10, 50, 250, 625],
+    "adjacency_eigenvalues": ["10", "4", "-2", "4-sqrt(10)", "4+sqrt(10)"],
+    "distance_polynomial_values": {
+      "-2": [1, -2, 2, -2, 1],
+      "4": [1, 4, -10, -20, 25],
+      "4-sqrt10": ["1", "4-sqrt10", "-4sqrt10", "20+5sqrt10", "-25"],
+      "4+sqrt10": ["1", "4+sqrt10", "4sqrt10", "20-5sqrt10", "-25"]
+    }
+  },
+  "universal_girth8_caps": {
+    "14": {"max_adjacent_pairs": 20, "rejected_ordered_degree_sequence_pairs_above_cap": 33, "equality_witness": "8-cycle plus 6 pendant edges"},
+    "15": {"max_adjacent_pairs": 22, "rejected_ordered_degree_sequence_pairs_above_cap": 42, "equality_witness": "8-cycle plus 7 pendant edges"},
+    "16": {"max_adjacent_pairs": 24, "rejected_ordered_degree_sequence_pairs_above_cap": 33, "equality_witness": "8-cycle plus 8 pendant edges"}
+  },
+  "delsarte_rows": [
+    {"m": 14, "N1_cap": 20, "max_pair_overlap": 3795, "distance_pair_counts": [20, 47, 24, 0], "delsarte_integer_points": 45663, "bonferroni_weight_lower_bound": 1160},
+    {"m": 15, "N1_cap": 22, "max_pair_overlap": 4225, "distance_pair_counts": [22, 53, 30, 0], "delsarte_integer_points": 62997, "bonferroni_weight_lower_bound": 925},
+    {"m": 16, "N1_cap": 24, "max_pair_overlap": 4660, "distance_pair_counts": [24, 59, 37, 0], "delsarte_integer_points": 84451, "bonferroni_weight_lower_bound": 680}
+  ],
+  "conclusion": "Pass5111 covers leaders <=13. Leaders 14,15,16 have weight lower bounds 1160,925,680. Therefore any q5 word of weight <625 has minimum chamber-generator leader >=17.",
+  "boundary": "This is an exact finite distance-scheme/combinatorial certificate. Leaders >=17 remain open, so d=625 is not yet proved."
+}

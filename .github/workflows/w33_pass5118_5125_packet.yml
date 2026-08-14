@@ -1,0 +1,58 @@
+name: Pass5118-5125 q5 cut Fourier controller packet
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5118_q5_delsarte_leader17.py'
+      - 'analysis/w33_pass5119_theta_half_regular_support.py'
+      - 'analysis/w33_pass5120_u81_state_program_transport.py'
+      - 'analysis/w33_pass5121_q3_integral_torsion_module.py'
+      - 'analysis/w33_pass5122_lie_type_jennings_memory.py'
+      - 'analysis/w33_pass5123_q7_native_rank_falsifier.py'
+      - 'analysis/w33_pass5124_binary_bicycle_odd_q.py'
+      - 'analysis/w33_pass5125_torsion_triality_module_weld.py'
+      - 'tests/test_w33_pass5118_5125_packet.py'
+      - '.github/workflows/w33_pass5118_5125_packet.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5118_q5_delsarte_leader17.py'
+      - 'analysis/w33_pass5119_theta_half_regular_support.py'
+      - 'analysis/w33_pass5120_u81_state_program_transport.py'
+      - 'analysis/w33_pass5121_q3_integral_torsion_module.py'
+      - 'analysis/w33_pass5122_lie_type_jennings_memory.py'
+      - 'analysis/w33_pass5125_torsion_triality_module_weld.py'
+      - 'tests/test_w33_pass5118_5125_packet.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-packet:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    env:
+      PYTHONPATH: .
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check numpy sympy numba pytest
+      - name: Syntax check all producers
+        run: python -m py_compile analysis/w33_pass5118_q5_delsarte_leader17.py analysis/w33_pass5119_theta_half_regular_support.py analysis/w33_pass5120_u81_state_program_transport.py analysis/w33_pass5121_q3_integral_torsion_module.py analysis/w33_pass5122_lie_type_jennings_memory.py analysis/w33_pass5123_q7_native_rank_falsifier.py analysis/w33_pass5124_binary_bicycle_odd_q.py analysis/w33_pass5125_torsion_triality_module_weld.py
+      - name: Frozen regression
+        run: pytest -q tests/test_w33_pass5118_5125_packet.py
+      - name: Replay light exact producers
+        run: |
+          python analysis/w33_pass5118_q5_delsarte_leader17.py
+          python analysis/w33_pass5119_theta_half_regular_support.py
+          python analysis/w33_pass5120_u81_state_program_transport.py
+          python analysis/w33_pass5121_q3_integral_torsion_module.py
+          python analysis/w33_pass5122_lie_type_jennings_memory.py
+          python analysis/w33_pass5123_q7_native_rank_falsifier.py
+          python analysis/w33_pass5125_torsion_triality_module_weld.py
+      - name: Heavy-anchor note
+        run: echo 'q7 full modular elimination and q7 bicycle rebuild are frozen exact certificates; invoke Pass5123 --full / Pass5124 producer manually for heavy replay.'
