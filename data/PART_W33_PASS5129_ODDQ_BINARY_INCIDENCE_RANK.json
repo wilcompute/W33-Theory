@@ -1,0 +1,16 @@
+{
+  "pass": 5129,
+  "status": "THEOREM_REDUCTION_PLUS_EXACT_ODDQ_ANCHORS",
+  "equivalence": "For odd q, dim Bike(Levi)=q^3+q-1 iff rank_F2(N)=1+q(q+1)^2/2=rank_Q(N).",
+  "anchors": {
+    "3":  {"points":40,   "rank_F2":25,   "rank_Q":25,   "binary_rank_drop":0, "nullity_F2":15,   "levi_bicycle_dimension":29},
+    "5":  {"points":156,  "rank_F2":91,   "rank_Q":91,   "binary_rank_drop":0, "nullity_F2":65,   "levi_bicycle_dimension":129},
+    "7":  {"points":400,  "rank_F2":225,  "rank_Q":225,  "binary_rank_drop":0, "nullity_F2":175,  "levi_bicycle_dimension":349},
+    "9":  {"points":820,  "rank_F2":451,  "rank_Q":451,  "binary_rank_drop":0, "nullity_F2":369,  "levi_bicycle_dimension":737, "field":"F9 extension anchor"},
+    "11": {"points":1464, "rank_F2":793,  "rank_Q":793,  "binary_rank_drop":0, "nullity_F2":671,  "levi_bicycle_dimension":1341},
+    "13": {"points":2380, "rank_F2":1275, "rank_Q":1275, "binary_rank_drop":0, "nullity_F2":1105, "levi_bicycle_dimension":2209, "replay":"--heavy"}
+  },
+  "rational_rank_proof": "NN^T=(q+1)I+A and the W(3,q) collinearity spectrum is q(q+1)^1,(q-1)^[q(q+1)^2/2],-(q+1)^[q(q^2+1)/2]. Hence rank_Q N=1+q(q+1)^2/2.",
+  "binary_bicycle_proof": "For odd q, q+1 is even and BB^T mod2=[[0,N],[N^T,0]] for the Levi vertex-edge incidence B. Thus ker(BB^T) has dimension 2 null(N); connectedness removes the one-dimensional all-ones kernel under B^T, giving dim Bike=2 null(N)-1.",
+  "boundary": "No binary rank drop is exact at q=3,5,7,9,11,13. A proof for every odd prime power is still missing, so the all-odd-q bicycle formula remains conjectural."
+}
