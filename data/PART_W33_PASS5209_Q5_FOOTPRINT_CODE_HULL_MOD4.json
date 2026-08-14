@@ -1,0 +1,13 @@
+{
+  "pass":5209,
+  "status":"THEOREM_Q5_FOOTPRINT_CODE_HULL_AND_MOD4_WEIGHT_LAW",
+  "parameters_known":"[325,65,d]_2 with d<=25",
+  "Gram_mod2":"F F^T=J",
+  "hull_dimension":64,
+  "weight_congruence":"Hull weights are 0 mod4; the other coset is 1 mod4",
+  "point_rows":{"count":156,"weight":25},
+  "pair_sums":{"collinear_weight":40,"noncollinear_weight":48},
+  "below25_candidates":{"hull":[4,8,12,16,20,24],"odd_coset":[1,5,9,13,17,21]},
+  "target":"Exclude these weights to prove d=25; then Pass5207 closes the q5 weight625 shell.",
+  "boundary":"d=25 is not yet proved."
+}
