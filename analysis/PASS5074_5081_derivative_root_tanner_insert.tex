@@ -1,0 +1,30 @@
+\ifdefined\WPassFiveZeroSevenFourLoaded\else
+\gdef\WPassFiveZeroSevenFourLoaded{1}
+\subsection*{Passes 5074--5081: coarea derivative, $q=4$ shell rigidity, quadratic order, and root-direction geometry}
+For a binary Levi cohomology class, each opposite-pair chart with $q+1$ geodesics carries a cut of $K_{q+1}$.  If its smaller side has size $s_O$, then the local apartment weight is $s_O(q+1-s_O)$, and because every apartment lies in exactly four such charts,
+\[
+ 4\,\mathrm{wt}(x)=\sum_O s_O(q+1-s_O).
+\]
+Thus the remaining all-$q$ distance theorem $d=q^4$ is reduced to the block-support inequality $A(x)\ge4q^3$ for every nonzero class.  A chamber class attains equality: it has $q^4$ apartments and exactly four role-families of $q^3$ active charts.  The identity $\frac{d}{dq}q^4=4q^3$ therefore has a precise discrete coarea shadow, but $q$ is not being promoted to a continuous physical coordinate.
+
+At $q=4$ the minimum code is already $[13600,256,256]_2$.  The entire local-minimum sector is now rigid: after fixing one selected apartment, its four active charts give $16$ singleton-cut seeds; exact propagation leaves eight solutions and eight contradictions, and the eight solutions are exactly the eight chamber stars through that apartment.  Hence any non-chamber weight-$256$ word must contain a heavier $2|3$ chart.  If there are $A_2=2t$ such charts, then $A_1=256-3t$ and the total active-chart count is $256-t$.  The heavy-chart sector remains the only unresolved part of the $q=4$ minimum shell.
+
+The quadratic twisted-Hecke channel also sharpens the old factor-$17$ transfer question integrally.  With
+\[
+ A=\begin{pmatrix}1&4\\1&0\end{pmatrix},\qquad
+ B_2=\begin{pmatrix}4&2\\2&5\end{pmatrix},\qquad
+ P=\begin{pmatrix}2&-1\\-1&1\end{pmatrix},
+\]
+one has $\det P=1$ and $AP=P(B_2-4I)$.  Hence the common lattice is the maximal quadratic order $\mathbb Z[(1+\sqrt{17})/2]$.  The $q=3$ recurrence generator $\mu=10+4\lambda$ spans the conductor-four order $\mathbb Z+4\mathcal O_K$, explaining its discriminant $272=16\cdot17$.  This is an arithmetic lattice bridge, not a new group-equivariant geometric identification.
+
+For the raw point-local $V_{24}$ compiler, the denominator-$780$ Smith-floor basis is an exhaustive strict one-swap local optimum for conditioning among denominator-$780$ bases: $3289$ nonsingular one-swap neighbors were checked, only eight retain denominator $780$, and every other such neighbor is worse than the frozen basis.  A sampled two-swap search provides further Pareto evidence but not a global optimum theorem.
+
+The Tanner six-cycle law is now symbolic for all $q$.  Every triangle in the apartment point graph is either one theta triple or three apartments sharing one length-four root; therefore
+\[
+ N_6(q)=T(q)(q-2),\qquad
+ T(q)=q^3(q+1)(q^2+1)\binom{q+1}{3}.
+\]
+The exact anchors are $0,4320,108800,1170000$ at $q=2,3,4,5$.
+
+Finally, the four derivative directions are not Cartesian.  At $q=3$ their pair-generated subgroup orders are $9,9,9,9,27,81$, while at $q=2$ they are $4,4,4,4,4,8$.  Correspondingly the chamber-star switch graphs have the same $q^4$ vertex count and $4(q-1)$ degree as $H(4,q)$ but different spectra already at $q=2,3,4$.  The finite derivative picture is therefore root-geometric and curved rather than an ordinary four-dimensional Hamming cube.
+\fi
