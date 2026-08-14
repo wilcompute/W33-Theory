@@ -1,0 +1,63 @@
+name: Pass5102-5109 root expansion controller packet
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5102_root_expansion_low_generator.py'
+      - 'analysis/w33_pass5103_q4_heavy_chart_closure.py'
+      - 'analysis/w33_pass5104_sqrt17_global_integral_intertwiner.py'
+      - 'analysis/w33_pass5105_u81_dual_torsor_controller.py'
+      - 'analysis/w33_pass5106_rank2_lie_derivative_curvature.py'
+      - 'analysis/w33_pass5107_root_coset_incidence_smith.py'
+      - 'analysis/w33_pass5108_u81_jennings_memory.py'
+      - 'analysis/w33_pass5109_curvature_kernel_v4.py'
+      - 'tests/test_w33_pass5102_5109_packet.py'
+      - '.github/workflows/w33_pass5102_5109_packet.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  exact-packet:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    env:
+      PYTHONPATH: .
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check numpy scipy sympy networkx pytest
+      - name: Syntax check
+        run: python -m py_compile analysis/w33_pass5102_root_expansion_low_generator.py analysis/w33_pass5103_q4_heavy_chart_closure.py analysis/w33_pass5104_sqrt17_global_integral_intertwiner.py analysis/w33_pass5105_u81_dual_torsor_controller.py analysis/w33_pass5106_rank2_lie_derivative_curvature.py analysis/w33_pass5107_root_coset_incidence_smith.py analysis/w33_pass5108_u81_jennings_memory.py analysis/w33_pass5109_curvature_kernel_v4.py
+      - name: Frozen certificate regression
+        run: pytest -q tests/test_w33_pass5102_5109_packet.py
+      - name: Replay low-generator and q4 closure
+        run: |
+          python analysis/w33_pass5102_root_expansion_low_generator.py
+          python analysis/w33_pass5103_q4_heavy_chart_closure.py
+      - name: Replay integral and controller bridges
+        run: |
+          python analysis/w33_pass5104_sqrt17_global_integral_intertwiner.py
+          python analysis/w33_pass5105_u81_dual_torsor_controller.py
+      - name: Replay root arithmetic probes
+        run: |
+          python analysis/w33_pass5106_rank2_lie_derivative_curvature.py
+          python analysis/w33_pass5107_root_coset_incidence_smith.py
+          python analysis/w33_pass5108_u81_jennings_memory.py
+          python analysis/w33_pass5109_curvature_kernel_v4.py
+      - name: Commit changed certificates only
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f data/PART_W33_PASS5102_ROOT_EXPANSION_LOW_GENERATOR.json data/PART_W33_PASS5103_Q4_HEAVY_CHART_CLOSURE.json data/PART_W33_PASS5104_SQRT17_GLOBAL_INTEGRAL_INTERTWINER.json data/PART_W33_PASS5105_U81_DUAL_TORSOR_CONTROLLER.json data/PART_W33_PASS5106_RANK2_LIE_DERIVATIVE_CURVATURE.json data/PART_W33_PASS5107_ROOT_COSET_INCIDENCE_SMITH.json data/PART_W33_PASS5108_U81_JENNINGS_MEMORY.json data/PART_W33_PASS5109_CURVATURE_KERNEL_V4.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Freeze Pass5102-5109 exact certificates'
+            git fetch origin master
+            git rebase origin/master
+            git push origin HEAD:master
+          fi
