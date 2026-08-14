@@ -1,0 +1,17 @@
+{
+  "pass":5103,
+  "status":"THEOREM_Q4_COMPLETE_MINIMUM_SHELL_AND_ACTIVE_EXPANSION",
+  "q":4,
+  "local_symmetry":{"PGL2_4_order":60,"selected_edge_stabilizer_order":6,"heavy_patterns":6,"heavy_pattern_orbit_size":6},
+  "four_chart_role_milps":[
+    {"chart_index":0,"type":"P","objective":384,"mip_gap":0.0,"mip_nodes":1,"two_star_witness":[26,110],"two_star_flags":[[5,5],[5,22]]},
+    {"chart_index":64,"type":"P","objective":384,"mip_gap":0.0,"mip_nodes":1,"two_star_witness":[6,126],"two_star_flags":[[21,1],[21,25]]},
+    {"chart_index":2720,"type":"L","objective":384,"mip_gap":0.0,"mip_nodes":1,"two_star_witness":[0,2],"two_star_flags":[[0,0],[2,0]]},
+    {"chart_index":2784,"type":"L","objective":384,"mip_gap":0.0,"mip_nodes":1,"two_star_witness":[5,7],"two_star_flags":[[0,1],[22,1]]}
+  ],
+  "heavy_chart_global_minimum":384,
+  "minimum_shell":{"code":"[13600,256,256]_2","minimum_words":425,"identification":"exactly the 425 chamber stars"},
+  "active_chart_theorem":"Every nonzero q4 word has A(y)>=256=4q^3. Chamber stars attain equality.",
+  "proof":"No-heavy words are chamber stars by Pass5090. A heavy 2|3 chart forces wt>=384. Since every q4 local cut has weight <=6, 4wt=sum local weights<=6A, so every heavy word has A>=256.",
+  "boundary":"This closes q4, not q>=5 or arbitrary-q distance."
+}
