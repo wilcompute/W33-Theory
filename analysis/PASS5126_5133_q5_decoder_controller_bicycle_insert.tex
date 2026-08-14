@@ -1,0 +1,43 @@
+\ifdefined\WPassFiveOneTwoSixLoaded\else
+\gdef\WPassFiveOneTwoSixLoaded{1}
+\subsection*{Passes 5126--5133: q=5 leader wall, decoder radius five, and the all-q unipotent controller}
+The q=5 cut--Delsarte attack advances one more exact chamber-leader shell.  A cut-minimal 17-edge leader is a bipartite maximum-degree-three girth-eight subgraph of the Levi graph.  Exhaustive degree-sequence feasibility rejects every profile with more than 25 adjacent selected-edge pairs, while 25 is realizable.  Exact Delsarte positivity at that sharp cap gives the extremal chamber-distance distribution
+\[
+ (N_1,N_2,N_3,N_4)=(25,66,45,0)
+\]
+and the apartment-weight lower bound $625$.  Thus every hypothetical q=5 word of weight below $625$ has minimum chamber leader at least $18$.
+
+The weight-$625$ equality shell also obeys an integral coarea congruence.  For either chart type separately the local-cut sum is $2\cdot625=1250$.  Since a nonzero $K_6$ cut has size $5,8,$ or $9$, if $A$ is the active-chart count and $h_8,h_9$ are the heavy counts then
+\[
+ 5A+3h_8+4h_9=1250.
+\]
+Hence $3h_8+4h_9\equiv0\pmod5$.  The smallest nonzero defect is uniquely $(h_8,h_9)=(2,1)$, so an exotic minimum must contain at least three heavy charts in one point/line type and has at most $498$ active charts in total, versus $500$ for a chamber star.
+
+The q=3 equivariant local-vote decoder now has a larger exact Hamming guarantee.  The apartment chart-sharing graph is 20-regular.  Exhaustive connected-component censuses through one apartment contain $13269$ connected four-sets and $381480$ connected five-sets.  Every max-vote correction through weight five is a subset of the true errors, and connected components of sizes $1,2,3,4,5$ clear within $1,1,2,2,3$ sweeps.  Component separation therefore proves a global hard-decision radius-five guarantee with at most three sweeps.
+
+The controller construction also becomes uniform in $q$.  For the type-$C_2$ maximal unipotent group $U(q)$, a reconstructed chamber determines a regular $q^4$-apartment torsor, and the $4q^3$ active opposite-pair charts are exactly the right cosets of the four positive-root subgroups.  Full hypergraph equality is replayed at $q=2,3,4,5$, including $\mathbb F_4$.  On a chamber-star support the intrinsic theta graph is consequently
+\[
+ \operatorname{Cay}\!\left(U(q),\bigcup_{i=1}^{4}(H_i\setminus\{1\})\right),
+\]
+a $4(q-1)$-regular graph whose root-subgroup cosets are the active $q$-cliques.
+
+The state/program coordinate change is likewise field-uniform.  With state coordinates $(b;a,c,d)$, program coordinates are
+\[
+ (a;b,C,D),\qquad C=c+ab,\qquad D=d+2ac+a^2b,
+\]
+with inverse $c=C-ab$ and $d=D-2aC+a^2b$.  The root-subgroup matrix factorization is exact over the coefficient field; in characteristic two the $2ac$ term vanishes automatically.
+
+Finally, the binary Levi bicycle formula is no longer merely an odd-q conjecture.  The established binary incidence-rank theorem for the symplectic generalized quadrangle gives, for every odd prime power $q$,
+\[
+ \operatorname{rank}_{\mathbb F_2}N=1+\frac{q(q+1)^2}{2},\qquad
+ \operatorname{null}_{\mathbb F_2}N=\frac{q(q^2+1)}2.
+\]
+Because the Levi degree $q+1$ is even,
+\[
+ \dim\operatorname{Bike}_2(\Gamma_{\rm Levi})=2\operatorname{null}_{\mathbb F_2}N-1=q^3+q-1.
+\]
+The repo independently rebuilds the $q=3,5,7,11$ values $29,129,349,1341$.
+
+\paragraph{Boundary.}
+The q=5/all-q apartment-code distance theorem remains open for leaders at least $18$; the coarea congruence constrains but does not eliminate exotic weight-$625$ words.  Decoder radius six is not proved.  The odd-q bicycle theorem does not cover even q.  The controller and compiler are exact finite algebraic objects, not hardware-performance claims.
+\fi
