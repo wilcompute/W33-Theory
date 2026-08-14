@@ -1,0 +1,43 @@
+{
+  "pass": 5177,
+  "status": "THEOREM_Q5_MINIMUM_EXOTIC_COAREA_DEFECT_AT_LEAST_10",
+  "q": 5,
+  "one_type_geometry": {
+    "components": 325,
+    "chart_intersection_component": "K_15,15",
+    "apartments_per_component": 225,
+    "charts_per_component": 30,
+    "restriction_code": "Cut(K6) tensor Cut(K6)",
+    "parameters": "[225,25,25]"
+  },
+  "component_enumeration": {
+    "states": 33554432,
+    "distinct_profiles_weight_h8_h9_active": 140,
+    "low_heavy_constraint": "h8<=2 and h9<=1",
+    "only_profiles": [
+      {"weight":0,"h8":0,"h9":0,"active":0,"count":1},
+      {"weight":25,"h8":0,"h9":0,"active":10,"count":36},
+      {"weight":48,"h8":2,"h9":0,"active":18,"count":450}
+    ],
+    "minimal_profile_h8_2_h9_1_exists": false
+  },
+  "global_weight625_knapsack": {
+    "coarea_cost": "3 h8 + 4 h9 = 5(250-A_type)",
+    "minimum_zero_cost_solution": "25 component minimum words of weight 25",
+    "minimum_positive_cost": 50,
+    "minimum_positive_active_chart_defect": 10,
+    "maximum_active_charts_in_a_heavy_type": 240,
+    "one_minimum_composition": [
+      {"multiplicity":20,"weight":25,"h8":0,"h9":0,"active":10},
+      {"multiplicity":1,"weight":48,"h8":2,"h9":0,"active":18},
+      {"multiplicity":1,"weight":77,"h8":8,"h9":5,"active":22}
+    ]
+  },
+  "consequence": "For a q=5 apartment-code word of weight 625, each chart type P or L is either heavy-free with A_type=250, or has A_type<=240. Pass5102 minimum-cut rigidity says a nonstar minimum word must have a heavy chart in at least one type. Therefore any nonstar weight-625 word has total active-chart count A<=490. The old candidate (h8,h9)=(2,1), A_type=248 is impossible.",
+  "improvement": "The previous Pass5127 equality-shell bound was A<=498 for a nonstar weight-625 word. This tensor-component theorem improves the forced active-chart deficit from 2 to at least 10 in the heavy type, hence from total A<=498 to total A<=490.",
+  "reproducers": [
+    "analysis/w33_pass5177_q5_tensor_component_geometry.py",
+    "analysis/w33_pass5177_q5_tensor_heavy_enum.cpp"
+  ],
+  "boundary": "This eliminates the previously minimal exotic coarea profile and sharply widens the active-chart gap, but it does not yet rule out all nonstar weight-625 words. The full q=5/all-q apartment-code minimum-distance theorem is not claimed here."
+}
