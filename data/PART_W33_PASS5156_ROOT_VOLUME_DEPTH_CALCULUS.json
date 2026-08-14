@@ -1,0 +1,11 @@
+{
+  "pass":5156,
+  "status":"THEOREM_ROOT_VOLUME_DEPTH_TWO_STATISTICS",
+  "rows":[
+    {"type":"A2","positive_root_heights":[1,1,2],"N_positive_roots":3,"height_sum":4,"big_cell_volume":"q^3","formal_root_derivative":"3 q^2","safe_Jennings_top_degree":"4(p-1)"},
+    {"type":"C2","positive_root_heights":[1,1,2,3],"N_positive_roots":4,"height_sum":7,"big_cell_volume":"q^4","formal_root_derivative":"4 q^3","safe_Jennings_top_degree":"7(p-1)"},
+    {"type":"G2","positive_root_heights":[1,1,2,3,4,5],"N_positive_roots":6,"height_sum":16,"big_cell_volume":"q^6","formal_root_derivative":"6 q^5","safe_Jennings_top_degree":"16(p-1)"}
+  ],
+  "synthesis":"Positive-root cardinality controls big-cell derivative volume; total positive-root height controls safe-range Jennings memory depth.",
+  "boundary":"No physical latency or continuous-q interpretation is asserted."
+}
