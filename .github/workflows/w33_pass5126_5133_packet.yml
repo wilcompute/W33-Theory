@@ -1,0 +1,72 @@
+name: Pass5126-5133 q5 spectral bicycle memory packet
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5126_q5_leader18.py'
+      - 'analysis/w33_pass5127_theta_first_order_blindness.py'
+      - 'analysis/w33_pass5128_bt865_parabolic_kernel_alignment.py'
+      - 'analysis/w33_pass5129_oddq_binary_incidence_rank.py'
+      - 'analysis/w33_pass5130_rank3_jennings_memory.py'
+      - 'analysis/w33_pass5131_q4_root_coset_spectrum.py'
+      - 'analysis/w33_pass5132_q5_root_coset_spectrum.py'
+      - 'analysis/w33_pass5133_q3_theta_triangle_curvature.py'
+      - 'tests/test_w33_pass5126_5133_packet.py'
+      - '.github/workflows/w33_pass5126_5133_packet.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5126_q5_leader18.py'
+      - 'analysis/w33_pass5127_theta_first_order_blindness.py'
+      - 'analysis/w33_pass5128_bt865_parabolic_kernel_alignment.py'
+      - 'analysis/w33_pass5129_oddq_binary_incidence_rank.py'
+      - 'analysis/w33_pass5130_rank3_jennings_memory.py'
+      - 'analysis/w33_pass5131_q4_root_coset_spectrum.py'
+      - 'analysis/w33_pass5132_q5_root_coset_spectrum.py'
+      - 'analysis/w33_pass5133_q3_theta_triangle_curvature.py'
+      - 'tests/test_w33_pass5126_5133_packet.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-packet:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    env:
+      PYTHONPATH: .
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check numpy scipy sympy pytest
+      - name: Syntax check producers
+        run: >-
+          python -m py_compile
+          analysis/w33_pass5126_q5_leader18.py
+          analysis/w33_pass5127_theta_first_order_blindness.py
+          analysis/w33_pass5128_bt865_parabolic_kernel_alignment.py
+          analysis/w33_pass5129_oddq_binary_incidence_rank.py
+          analysis/w33_pass5130_rank3_jennings_memory.py
+          analysis/w33_pass5131_q4_root_coset_spectrum.py
+          analysis/w33_pass5132_q5_root_coset_spectrum.py
+          analysis/w33_pass5133_q3_theta_triangle_curvature.py
+      - name: Frozen regression
+        run: pytest -q tests/test_w33_pass5126_5133_packet.py
+      - name: Replay light and medium producers
+        run: |
+          python analysis/w33_pass5126_q5_leader18.py
+          python analysis/w33_pass5127_theta_first_order_blindness.py
+          python analysis/w33_pass5128_bt865_parabolic_kernel_alignment.py
+          python analysis/w33_pass5129_oddq_binary_incidence_rank.py
+          python analysis/w33_pass5130_rank3_jennings_memory.py
+          python analysis/w33_pass5131_q4_root_coset_spectrum.py
+          python analysis/w33_pass5133_q3_theta_triangle_curvature.py
+      - name: Verify q5 spectral certificate producer
+        run: python analysis/w33_pass5132_q5_root_coset_spectrum.py
+      - name: Heavy-anchor note
+        run: echo 'Pass5129 q=13 is frozen in the certificate; use --heavy for a full q13 incidence rebuild.'
