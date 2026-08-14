@@ -2,6 +2,11 @@ name: W33 Pass5238-5245 homepage materializer
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'analysis/PASS5238_5245_index_insert.html'
+      - 'tools/integrate_pass5238_5245_public.py'
+      - '.github/workflows/w33_pass5238_5245_site.yml'
 
 permissions:
   contents: write
