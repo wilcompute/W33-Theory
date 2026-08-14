@@ -1,6 +1,6 @@
 {
   "pass":5109,
-  "status":"THEOREM_CURVATURE_KERNEL_V4_SECTORS",
+  "status":"THEOREM_CURVATURE_KERNEL_V4_AND_CENTER_PHASE_SECTORS",
   "defect_space":"ker(H^T) over Q",
   "dimension":12,
   "canonical_diagonal_V4":{"e":[1,1,1,1],"a":[1,1,2,2],"b":[1,2,1,2],"c":[1,2,2,1]},
@@ -9,6 +9,7 @@
   "sorted_sector_dimensions":[4,4,2,2],
   "root_parallel_classes":4,
   "V4_fixes_each_root_family_setwise":true,
-  "interpretation":"The free 12-dimensional incidence defect from Pass5107 is not featureless: the canonical root-normalizing V4 splits it into 4+4+2+2 rational character sectors.",
-  "boundary":"This is a rational representation decomposition of an incidence-kernel defect; no particle-family or physical-channel identification is asserted."
+  "central_C3":{"order":3,"generator_trace_on_defect":-6,"minimal_polynomial":"x^2+x+1","characteristic_polynomial":"(x^2+x+1)^6","fixed_dimension":0,"complex_split":"omega^6 + omega^2^6","V4_conjugation":{"e":"fix","a":"invert","b":"fix","c":"invert"}},
+  "interpretation":"The free 12-dimensional incidence defect is phase-pure with respect to Z(U81)=Z(H27): it has no center-trivial vectors and splits over C as six omega plus six omega^2 directions. The canonical root-normalizing V4 also splits it rationally as 4+4+2+2; two V4 involutions invert the center and exchange the conjugate phase sectors.",
+  "boundary":"Exact representation data for an incidence-kernel defect. The central C3 is the algebraic H27 triality axis from BT865/Pass5105, but no particle-family or hardware channel is inferred."
 }
