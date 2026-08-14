@@ -74,5 +74,10 @@ jobs:
             data/PART_W33_PASS5141_ROOT_CAYLEY_METRIC_GROWTH.json
           git diff --cached --quiet && exit 0
           git commit -m 'Freeze Pass5134-5141 clean replay certificates'
-          git pull --rebase origin master
-          git push origin HEAD:master
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase origin master
+            if git push origin HEAD:master; then exit 0; fi
+            sleep 2
+          done
+          echo 'certificate push failed after retries' >&2
+          exit 1
