@@ -1,0 +1,26 @@
+{
+  "pass": 5111,
+  "status": "THEOREM_Q5_COUNTEREXAMPLE_LEADER_AT_LEAST_14",
+  "q": 5,
+  "target_distance": 625,
+  "cut_minimal_degree_cap": 3,
+  "levi_girth": 8,
+  "table": {
+    "1":{"max_adjacent_pairs":0,"weight_lower_bound":625},
+    "2":{"max_adjacent_pairs":1,"weight_lower_bound":1000},
+    "3":{"max_adjacent_pairs":3,"weight_lower_bound":1125},
+    "4":{"max_adjacent_pairs":4,"weight_lower_bound":1400},
+    "5":{"max_adjacent_pairs":6,"weight_lower_bound":1425},
+    "6":{"max_adjacent_pairs":7,"weight_lower_bound":1600},
+    "7":{"max_adjacent_pairs":9,"weight_lower_bound":1525},
+    "8":{"max_adjacent_pairs":10,"weight_lower_bound":1600},
+    "9":{"max_adjacent_pairs":12,"weight_lower_bound":1425},
+    "10":{"max_adjacent_pairs":13,"weight_lower_bound":1400},
+    "11":{"max_adjacent_pairs":15,"weight_lower_bound":1125},
+    "12":{"max_adjacent_pairs":16,"weight_lower_bound":1000},
+    "13":{"max_adjacent_pairs":18,"weight_lower_bound":625}
+  },
+  "conclusion": "Every cut-minimal chamber-generator representative of size <=13 produces apartment weight >=625. Therefore any word of weight <625 would have minimum chamber-generator leader >=14.",
+  "with_pass5102": "Pass5102 gave leader>=6 plus a heavy K6 chart; this pass strengthens the leader wall to >=14. The heavy-chart condition remains simultaneously necessary.",
+  "boundary": "This does not exclude leaders >=14, so q=5 distance 625 remains open. At m=13 the lower bound is exactly 625; equality-shell classification is not claimed."
+}
