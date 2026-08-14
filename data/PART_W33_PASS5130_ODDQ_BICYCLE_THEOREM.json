@@ -1,0 +1,17 @@
+{
+  "pass": 5130,
+  "status": "THEOREM_ALL_ODD_PRIME_POWER_LEVI_BICYCLE",
+  "prior_art": "Binary incidence rank of W(3,q) for odd prime powers from the symplectic generalized-quadrangle incidence-rank literature (Sin-Xiang; Chandler-Sin-Xiang).",
+  "incidence_rank_formula": "rank_F2 N = 1 + q(q+1)^2/2",
+  "incidence_nullity_formula": "null_F2 N = q(q^2+1)/2",
+  "Levi_mechanism": "For odd q, q+1 is even and BB^T mod2=[[0,N],[N^T,0]], hence dim Bike_2(Levi)=2 null_F2(N)-1.",
+  "bicycle_formula": "dim Bike_2(Levi)=q^3+q-1",
+  "anchors": {
+    "3": {"points_lines": 40, "rank_F2": 25, "nullity_F2": 15, "Levi_bicycle_dimension": 29},
+    "5": {"points_lines": 156, "rank_F2": 91, "nullity_F2": 65, "Levi_bicycle_dimension": 129},
+    "7": {"points_lines": 400, "rank_F2": 225, "nullity_F2": 175, "Levi_bicycle_dimension": 349},
+    "11": {"points_lines": 1464, "rank_F2": 793, "nullity_F2": 671, "Levi_bicycle_dimension": 1341}
+  },
+  "connection": "q=3 recovers Bike29 exactly.",
+  "boundary": "The theorem is for odd prime powers. Even q follows a different incidence-rank law."
+}
