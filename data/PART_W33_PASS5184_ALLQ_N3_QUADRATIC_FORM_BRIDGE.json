@@ -1,0 +1,13 @@
+{
+  "pass": 5184,
+  "status": "THEOREM_ALL_Q_GALLERY_N3_QUADRATIC_FORM_BRIDGE",
+  "identity": "(x^T A_P x + y^T A_L y)/2 = N1 + 2 N2 + N3",
+  "point_line_graph_parameters": "SRG((q+1)(q^2+1), q(q+1), q-1, q+1)",
+  "nontrivial_eigenvalues": "q-1, -(q+1)",
+  "spectral_upper": "z^T A z <= (q-1)||z||^2 + m^2/(q+1)",
+  "q5_m33_defect_quantization": "D(z)=4||z||^2+33^2/6-zAz lies in 3/2+2 Z_{>=0}",
+  "q5_m33_integer_cap": "N1+2N2+N3 <= 312+4N1",
+  "q5_m33_dense_caps": {"N1=55":532,"N1=56":536,"N1=57":540,"N1=58":544},
+  "connection": "This couples the chamber N3 coordinate to the point/line generalized-quadrangle SRG quadratic forms and exposes a parity/eigenlattice defect at m=33.",
+  "boundary": "The all-q identity and spectral bound are exact. The 3/2 defect is the q=5,m=33 specialization. It improves but does not by itself close leader 33."
+}
