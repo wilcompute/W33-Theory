@@ -1,0 +1,58 @@
+name: Pass5082-5089 Fourier expansion decoder packet
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5082_fourier_extremizer_anchors.py'
+      - 'analysis/w33_pass5083_q3_active_chart_milp.py'
+      - 'analysis/w33_pass5084_q4_four_star_shell.py'
+      - 'analysis/w33_pass5085_pal_v12_line_theta_dictionary.py'
+      - 'analysis/w33_pass5086_q3_global_local_vote_decoder.py'
+      - 'analysis/w33_pass5087_theta_sqrt17_global_channel.py'
+      - 'analysis/w33_pass5088_intrinsic_chart_reconstruction.py'
+      - 'analysis/w33_pass5089_integral_oriented_apartment_presentation.py'
+      - '.github/workflows/w33_pass5082_5089_packet.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  exact-packet:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      PYTHONPATH: .
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install exact packet dependencies
+        run: python -m pip install --disable-pip-version-check numpy scipy sympy
+      - name: Syntax check
+        run: python -m py_compile analysis/w33_pass5082_fourier_extremizer_anchors.py analysis/w33_pass5083_q3_active_chart_milp.py analysis/w33_pass5084_q4_four_star_shell.py analysis/w33_pass5085_pal_v12_line_theta_dictionary.py analysis/w33_pass5086_q3_global_local_vote_decoder.py analysis/w33_pass5087_theta_sqrt17_global_channel.py analysis/w33_pass5088_intrinsic_chart_reconstruction.py analysis/w33_pass5089_integral_oriented_apartment_presentation.py
+      - name: Replay exact and structural certificates
+        run: |
+          python analysis/w33_pass5082_fourier_extremizer_anchors.py
+          python analysis/w33_pass5085_pal_v12_line_theta_dictionary.py
+          python analysis/w33_pass5086_q3_global_local_vote_decoder.py
+          python analysis/w33_pass5087_theta_sqrt17_global_channel.py
+          python analysis/w33_pass5088_intrinsic_chart_reconstruction.py
+          python analysis/w33_pass5089_integral_oriented_apartment_presentation.py
+      - name: q4 four-star orbit-complete census
+        run: python analysis/w33_pass5084_q4_four_star_shell.py
+      - name: q3 active-chart MILP
+        run: python analysis/w33_pass5083_q3_active_chart_milp.py --seconds 600
+      - name: Commit frozen certificates
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f data/PART_W33_PASS5082_FOURIER_EXTREMIZER_ANCHORS.json data/PART_W33_PASS5083_Q3_ACTIVE_CHART_MILP.json data/PART_W33_PASS5084_Q4_FOUR_STAR_SHELL.json data/PART_W33_PASS5085_PAL_V12_LINE_THETA.json data/PART_W33_PASS5086_Q3_GLOBAL_DECODER.json data/PART_W33_PASS5087_THETA_SQRT17_CHANNEL.json data/PART_W33_PASS5088_INTRINSIC_CHART_RECONSTRUCTION.json data/PART_W33_PASS5089_INTEGRAL_APARTMENT_PRESENTATION.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Freeze Pass5082-5089 exact certificates'
+            git fetch origin master
+            git rebase origin/master
+            git push origin HEAD:master
+          fi
