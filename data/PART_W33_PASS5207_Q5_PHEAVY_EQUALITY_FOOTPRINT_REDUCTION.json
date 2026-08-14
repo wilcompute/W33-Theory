@@ -1,0 +1,12 @@
+{
+  "pass":5207,
+  "status":"THEOREM_Q5_PHEAVY_EQUALITY_IMPLIES_FOOTPRINT_WEIGHT_AT_MOST_24",
+  "total_weight":625,
+  "footprint_nonzero":"P-component parities sum to 625 mod2, so s!=0",
+  "component_minimum":25,
+  "Pheavy_component_minimum_cost":26,
+  "inequality":"625 >= 26 + 25(t-1), hence t<=24",
+  "consequence":"Any exotic q5 weight625 word produces a nonzero footprint-code word of weight <=24.",
+  "closure_target":"Prove d(im(F^T))>=25; point footprints already give d<=25. Then Pass5191 finishes the full weight625 shell.",
+  "boundary":"Exact reduction only; footprint d=25 remains open here."
+}
