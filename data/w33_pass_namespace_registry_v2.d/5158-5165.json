@@ -1,11 +1,24 @@
 {
   "schema": "w33.pass_namespace_registry.v2.entry",
   "range": [5158, 5165],
-  "slug": "q5_leader21_fourth_order_decoder_repair_nonlinear_theta_metric_shell_bonkers",
-  "title": "q5 leader-21 fourth-order attack, decoder repair, nonlinear theta bound, root-metric shell proof, and three independent probes",
-  "status": "RESERVED",
+  "slug": "q5_leader25_fourth_order_decoder_repair_char3_metric_bonkers",
+  "title": "q5 leader-25 frontier, all-q four-chamber law, decoder hub repair, dependency second shell, and characteristic-three root metric",
+  "status": "EXECUTED",
   "owner": "openai-gpt56-sol",
   "reserved_at": "2026-08-14",
-  "purpose": "Execute the five highest-value continuations after the collision-owned Pass5142-5157 work: attack the actual q5 leader-21 obstruction with fourth-order geometry; test a symmetry-preserving repair of the exact q3 weight-six decoder falsifier; seek a uniform nonlinear theta spectral bound; prove or sharply constrain the odd-q root-Cayley shell polynomial; and run three orthogonal probes that do not overlap the reserved theta-curvature/Smith/modular-depth packet.",
-  "boundary": "Do not claim q5/all-q apartment-code minimum distance unless proved. Keep decoder claims tied to the exact specified rule and exhaustive certificate. Keep spectral claims split into proved linear sector, exact finite anchors, and any genuinely proved nonlinear bounds. Treat metric-shell formulas as conjectural unless symbolically derived. Avoid topics reserved by Pass5150-5157."
+  "executed_at": "2026-08-14",
+  "purpose": "Executed the five requested continuation fronts where collision-safe plus three independent probes: advanced the q5 strict-counterexample barrier from leader 21 through leader 24; derived the all-q four-chamber star intersection law; repaired and exhaustively replayed the centered minimal q3 decoder obstruction while preserving radius five; completed the root-Cayley metric in characteristic three; proved the all-q dependency-code second shell; and audited the exotic equality and nonlinear-theta targets without overclaiming.",
+  "outcomes": "Pass5158 closes q5 leader21 at weight>=641 using selected four-edge paths. Pass5159 gives the all-q four-chamber law: consecutive-four signature (1,1,1,2,2,3) has q common apartments, six other C8 signatures have one, all others zero. Pass5160 preserves all 395260 connected radius-five representatives and repairs all 32 centered 2+2+2 weight-six motifs, but global radius six remains open. Pass5161 closes leader22, Pass5163 closes leader23, and Pass5164 rejects the final two P4=96 girth-eight equality profiles to close leader24 at weight>=629, so every q5 word below 625 has minimum chamber leader >=25. Pass5162 proves dependency-code second weight 2q with one word per chamber. Pass5165 gives characteristic-three root metric shells 1,4(q-1),8(q-1)^2,10(q-2)(q-1)^2,(q-1)^2(q-3)(q-5).",
+  "development_replay": {
+    "four_chamber_census": "independently replayed q=2,3,4,5; seven constant signature classes, q5 histogram 1^19375,5^500",
+    "decoder": "independently replayed all connected base representatives through weight5 and all 32 centered 2+2+2 weight6 motifs; zero failures in the stated domains",
+    "q5_path_dp": "arithmetic/DP and W40 equality-profile rejections independently replayed during development"
+  },
+  "actions_replay": {"workflow_run_id":31829153746,"status_at_close":"queued","note":"latest producer-triggered exact replay; do not call green until rechecked"},
+  "site_materializer": {"workflow_run_id":31829793458,"status_at_close":"queued","note":"race-hardened homepage materializer; do not call materialized until rechecked"},
+  "requested_front_audits": {
+    "exotic_q5_weight625":"minimal (h8,h9)=(2,1) profile survives; new fourth-local-moment defect is 21 in addition to triangle defect 28",
+    "nonlinear_theta_gap":"not duplicated because Pass5150-5157 was already collision-reserved for centered/theta spectral work; no theorem from that packet had landed at this packet close"
+  },
+  "boundary": "The q5/all-q apartment-code minimum-distance theorem remains open for leaders >=25 and the weight-625 equality shell remains unclassified. Hub pruning is not yet a global radius-six theorem. The all-q nonlinear theta gap remains open in this packet. Characteristic two remains the uniform root-metric exception. Algebraic/controller statements are not hardware-performance claims."
 }
