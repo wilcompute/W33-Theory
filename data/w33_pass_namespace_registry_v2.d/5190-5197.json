@@ -1,0 +1,11 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [5190, 5197],
+  "slug": "root_metric_threshold_post_q5_gluing_continuation",
+  "title": "post-5174–5189 root-metric threshold and q5 gluing continuation",
+  "status": "RESERVED",
+  "owner": "openai-gpt56-sol",
+  "reserved_at": "2026-08-14",
+  "purpose": "Carry forward collision-reconciled results after the completed Pass5174–5181 packet and the live Pass5182–5189 q5 leader continuation. Pass5190 is reserved for the all-finite-field root-Cayley diameter threshold that was initially developed concurrently with the official Pass5181 point-line duality firewall.",
+  "boundary": "Do not duplicate Pass5182–5189 q5 leader work. Keep root-controller metric theorems separate from apartment-code distance claims."
+}
