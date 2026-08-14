@@ -1,0 +1,90 @@
+{
+  "packet": [5082, 5089],
+  "status": "PASS_WITH_ALL_Q_DISTANCE_AND_Q4_HEAVY_SHELL_OPEN",
+  "5082": {
+    "status": "EXACT_ANCHORS",
+    "fourier_max": {"q2": "29/45", "q3": "9/10", "q4": "409/425"},
+    "equality_shell": {"q2": "45 chamber stars", "q3": "160 chamber stars", "q4": "OPEN"},
+    "all_q_target": "1-16/((q+1)^2(q^2+1))"
+  },
+  "5083": {
+    "status": "THEOREM_Q3",
+    "milp_variables": 7020,
+    "apartments": 1620,
+    "theta_checks": 4320,
+    "charts": 1080,
+    "active_chart_minimum": 108,
+    "formula": "4*3^3",
+    "equality_witness_weight": 81,
+    "equality_witness": "chamber star",
+    "consequence": "A(y)>=108 for every nonzero q3 word; wt>=3A/4>=81"
+  },
+  "5084": {
+    "status": "THEOREM_Q4_FOUR_STAR_AND_KERNEL",
+    "representatives_tested": 12614424,
+    "four_star_minimum_weight": 256,
+    "four_star_weight256_representatives_through_fixed_star": 8,
+    "four_star_weight256_nonstar_targets": 0,
+    "five_star_dependencies_through_fixed_chamber": 2,
+    "generator_dependency_code": [425, 169, 5],
+    "A5": 170,
+    "minimum_dependency_shell": "85 point panels + 85 line panels",
+    "exotic_minimum_literal_generator_floor": 5
+  },
+  "5085": {
+    "status": "EXACT_RANK_TWO_RELATION_DICTIONARY",
+    "V11": "point theta",
+    "V12_standard": "line theta",
+    "integral_relation": "A01+A12-A02=0",
+    "finite_checks": [3, 5],
+    "source": "Urshita Pal, arXiv:2605.06499v3"
+  },
+  "5086": {
+    "status": "THEOREM_EXHAUSTIVE_RADIUS2_PLUS_LOCAL_TRAPS",
+    "local_rom_entries": 8,
+    "single_errors": 1620,
+    "double_errors": 1311390,
+    "double_failures": 0,
+    "chart_contained_triples": 21600,
+    "one_sweep_triples": 17280,
+    "two_sweep_local_cut_triples": 4320,
+    "global_guaranteed_error_weight": 2
+  },
+  "5087": {
+    "status": "THEOREM_EXACT_GLOBAL_SQRT17_CHANNEL",
+    "theta_graph_degree": 16,
+    "seed_dimension": 15,
+    "generated_dimension": 30,
+    "polynomial": "x^2-2x-16",
+    "charpoly_on_generated_space": "(x^2-2x-16)^15",
+    "eigenchannels": ["1+sqrt(17)", "1-sqrt(17)"],
+    "quadratic_order": "Z+2 O_Q(sqrt17)",
+    "conductor": 2,
+    "discriminant": 68,
+    "order_ladder_with_pass5091": "conductors 1,2,4; discriminants 17,68,272"
+  },
+  "5088": {
+    "status": "THEOREM_Q3_INTRINSIC_CHART_RECOVERY",
+    "dual_minimum_checks": 4320,
+    "intersection_degree": 21,
+    "K4_cliques": 114480,
+    "selected_tetrahedral_K4s": 1080,
+    "recovered_charts": 1080,
+    "exact_match": true
+  },
+  "5089": {
+    "status": "THEOREM_INTEGRAL_ALL_FINITE_GQ",
+    "statement": "Z[oriented apartments]/Theta_Z ~= Z1(Levi;Z)",
+    "W3q_rank": "q^4",
+    "torsion_free": true,
+    "q2_signed_theta_rank": 74,
+    "q2_smith": "1^74",
+    "q2_quotient": "Z^16"
+  },
+  "boundaries": {
+    "all_q_distance": "OPEN",
+    "q5_distance_625": "OPEN",
+    "q4_complete_minimum_shell": "OPEN in heavy-chart sector",
+    "physical_noise_threshold": "NOT CLAIMED"
+  }
+}
