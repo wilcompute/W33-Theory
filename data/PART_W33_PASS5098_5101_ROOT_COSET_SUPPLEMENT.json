@@ -1,0 +1,35 @@
+{
+  "packet":[5098,5101],
+  "status":"PASS",
+  "5098":{
+    "theorem":"fixed-chamber active-chart hypergraph equals C2 positive-root coset hypergraph",
+    "q2":{"points":16,"charts":32,"chart_size":2,"hypergraph_isomorphic":true},
+    "q3":{"points":81,"charts":108,"chart_size":3,"hypergraph_isomorphic":true},
+    "strengthening":"the isomorphism matches the chart/root-coset hyperedges, not only the point graphs"
+  },
+  "5099":{
+    "q":3,
+    "derivative_graph_automorphism_order":324,
+    "left_regular_U_order":81,
+    "identity_stabilizer_order":4,
+    "identity_stabilizer_element_orders":{"1":1,"2":3},
+    "structure":"U_81 semidirect V4",
+    "left_regular_U_normal":true,
+    "positive_root_parallel_classes":4,
+    "V4_fixes_each_parallel_class_setwise":true,
+    "PGSp43_chamber_stabilizer_order":324
+  },
+  "5100":{
+    "theorem":"split Lie-type positive-root derivative count",
+    "statement":"For N positive roots, |U|=q^N and each positive-root subgroup has q elements, hence the total root-direction coset count is N q^(N-1), the formal derivative of q^N.",
+    "C2":{"N":4,"count":"4q^3"},
+    "boundary":"general root-coset count; apartment-code active-chart identification is separately certified in rank two"
+  },
+  "5101":{
+    "theorem":"C2 odd-characteristic commutator curvature",
+    "root_generators":"X0=E01-E32, X1=E13, X2=E03+E12, X3=E02",
+    "commutators":{"[X0,X1]":"X2","[X0,X2]":"2 X3","all_other_pairs":"0"},
+    "odd_characteristic_pair_closure":"four pairs q^2, one pair q^3, one pair q^4",
+    "characteristic2_boundary":"2X3 vanishes; the second commutator layer collapses"
+  }
+}
