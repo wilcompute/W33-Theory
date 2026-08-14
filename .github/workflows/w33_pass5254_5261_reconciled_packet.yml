@@ -1,0 +1,78 @@
+name: Pass5254-5261 reconciled radius8 Jordan zeroP packet
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5239_q3_radius8_false_center_echo.py'
+      - 'analysis/w33_pass5240_connectedL_mod2_jordan_structure.py'
+      - 'analysis/w33_pass5241_root_outer_shell_two_root_torus_family.py'
+      - 'analysis/w33_pass5242_q5_weight8_frame_constant_mode.py'
+      - 'analysis/w33_pass5243_hoffman13_shortened_doubly_even_code.py'
+      - 'analysis/w33_pass5244_q5_zero_footprint_even_tensor_shell.py'
+      - 'analysis/w33_pass5245_zero_footprint_parity_syndrome_exact_sequence.py'
+      - 'analysis/w33_pass5261_q5_footprint_minimum_shell_two_distance_frame.py'
+      - 'data/PART_W33_PASS5254_5261_RESULTS.json'
+      - 'analysis/w33_pass5254_5261_reconciled_regression.py'
+      - '.github/workflows/w33_pass5254_5261_reconciled_packet.yml'
+  workflow_dispatch:
+jobs:
+  exact-replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Syntax and frozen regression
+        run: |
+          python -m py_compile analysis/w33_pass5239_q3_radius8_false_center_echo.py
+          python -m py_compile analysis/w33_pass5240_connectedL_mod2_jordan_structure.py
+          python -m py_compile analysis/w33_pass5241_root_outer_shell_two_root_torus_family.py
+          python -m py_compile analysis/w33_pass5242_q5_weight8_frame_constant_mode.py
+          python -m py_compile analysis/w33_pass5243_hoffman13_shortened_doubly_even_code.py
+          python -m py_compile analysis/w33_pass5244_q5_zero_footprint_even_tensor_shell.py
+          python -m py_compile analysis/w33_pass5245_zero_footprint_parity_syndrome_exact_sequence.py
+          python -m py_compile analysis/w33_pass5261_q5_footprint_minimum_shell_two_distance_frame.py
+          PYTHONPATH=. python analysis/w33_pass5254_5261_reconciled_regression.py
+          PYTHONPATH=. python -m pytest -q tests/test_w33_pass5254_5261_reconciled_packet.py
+      - name: Replay radius-eight echo family
+        run: PYTHONPATH=. python analysis/w33_pass5239_q3_radius8_false_center_echo.py | tee /tmp/pass5254.log
+      - name: Replay connected-L modular Jordan form
+        run: PYTHONPATH=. python analysis/w33_pass5240_connectedL_mod2_jordan_structure.py | tee /tmp/pass5255.log
+      - name: Replay two-root outer-shell torus
+        run: PYTHONPATH=. python analysis/w33_pass5241_root_outer_shell_two_root_torus_family.py | tee /tmp/pass5256.log
+      - name: Replay weight-eight real frame / binary mode
+        run: PYTHONPATH=. python analysis/w33_pass5242_q5_weight8_frame_constant_mode.py | tee /tmp/pass5257.log
+      - name: Replay Hoffman-13 shortening theorem
+        run: PYTHONPATH=. python analysis/w33_pass5243_hoffman13_shortened_doubly_even_code.py | tee /tmp/pass5258.log
+      - name: Replay complete local even tensor shell
+        run: PYTHONPATH=. python analysis/w33_pass5244_q5_zero_footprint_even_tensor_shell.py | tee /tmp/pass5259.log
+      - name: Replay zero-footprint parity/syndrome sequence
+        run: PYTHONPATH=. python analysis/w33_pass5245_zero_footprint_parity_syndrome_exact_sequence.py | tee /tmp/pass5260.log
+      - name: Replay q5 minimum-shell two-distance frame
+        run: PYTHONPATH=. python analysis/w33_pass5261_q5_footprint_minimum_shell_two_distance_frame.py | tee /tmp/pass5261.log
+      - name: Reconcile regenerated development certificates with authoritative numbering
+        run: |
+          PYTHONPATH=. python analysis/w33_pass5254_5261_reconciled_regression.py
+          python - <<'PY'
+          import json
+          def J(p): return json.load(open(p))
+          a=J('data/PART_W33_PASS5239_Q3_RADIUS8_FALSE_CENTER_ECHO.json')
+          b=J('data/PART_W33_PASS5240_CONNECTEDL_MOD2_JORDAN_STRUCTURE.json')
+          c=J('data/PART_W33_PASS5241_ROOT_OUTER_SHELL_TWO_ROOT_TORUS_FAMILY.json')
+          d=J('data/PART_W33_PASS5242_Q5_WEIGHT8_FRAME_CONSTANT_MODE.json')
+          e=J('data/PART_W33_PASS5243_HOFFMAN13_SHORTENED_DOUBLY_EVEN_CODE.json')
+          f=J('data/PART_W33_PASS5244_Q5_ZERO_FOOTPRINT_EVEN_TENSOR_SHELL.json')
+          g=J('data/PART_W33_PASS5245_ZERO_FOOTPRINT_PARITY_SYNDROME_EXACT_SEQUENCE.json')
+          h=J('data/PART_W33_PASS5261_Q5_FOOTPRINT_MINIMUM_SHELL_TWO_DISTANCE_FRAME.json')
+          assert a['distinct_weight8_configurations']==25920
+          assert b['q5']['zero_primary_Jordan_blocks']=={'1':2156,'3':520}
+          assert c['prime_anchors']['13']['states_per_nonzero_ac_fiber']==81
+          assert d['binary_kernel']=='ker_F2(H8)=C_F direct-sum <1>, dimensions 65+1'
+          assert e['distance_lower_bound']==28 and e['distance_upper_bound']==40
+          assert f['minimum_even_weight']==40 and f['active_P_components_max']==15
+          assert g['zero_footprint_residual_dimension']==560 and g['connected_L_rank_on_even_block_space']==7240
+          assert h['tight_frame_dimension']==90 and h['unit_inner_products']['collinear_points']=='2/15'
+          print('Pass5254-5261 exact regenerated-certificate cross-check: PASS')
+          PY
