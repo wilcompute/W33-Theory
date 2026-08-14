@@ -1,0 +1,50 @@
+\ifdefined\WPassFiveTwoOneFourLoaded\else
+\gdef\WPassFiveTwoOneFourLoaded{1}
+\subsection*{Passes 5214--5221: connected-L atom gluing, radius seven, and the P-atom/L-syndrome presentation}
+
+The q=5 point-footprint equality problem can now be solved exactly on its P-heavy-free slice.  Fix a W-point $p$.  Its footprint consists of 25 P-components, and a P-heavy-free word of weight 625 chooses one weight-25 minimum P-atom in each component.  Restrict the 97,500 fundamental L-chart triangle checks to these 25 atom groups.  Exactly 17,250 nontrivial checks are unary and 7,500 are binary; no higher-arity condition occurs.  The unary conditions leave precisely six atoms per group, naturally labelled by the six W-lines through $p$.  Every one of the $\binom{25}{2}=300$ pairs of groups is constrained, and its binary relation is exactly equality of line labels.  Hence all 25 groups choose one common line and there are exactly six solutions, the six chamber stars based at $p$.
+
+The q=3 provenance-refined hard-decision decoder also advances by one exact radius.  The projective collineation stabilizer of a fixed apartment has order 16.  Connected-set orbit counts through the fixed apartment are
+\[
+1,\ 5,\ 57,\ 1043,\ 25929,\ 734414
+\]
+for weights one through six.  Every connected seven-set has a connected six-set parent, so all weight-seven stabilizer orbits occur among one-vertex extensions of these 734,414 representatives.  An exact 64,439,500-extension census shows that after maximum-vote and maximum-singleton-source filtering, before tie-degree pruning, the candidate set is always nonempty and contained in the true errors.  Component separation then gives a global guaranteed radius seven; the first correction leaves weight at most six, so Pass~5176 yields a global five-sweep bound.
+
+For odd q the L/opposite-line chart graph is connected rather than P-tensor-disconnected.  Exact q=3 and q=5 spectra are now frozen by integer annihilators and closed-walk traces.  At q=3 the graph is 6-regular on 540 vertices, with rational sectors
+\[
+6^1,3^{60},2^{84},1^{81},(-1)^{120},(-3)^{116},
+\]
+plus the roots of $x^2-2x-9$ with multiplicity 24 each and $x^2+x-18$ with multiplicity 15 each.  At q=5 it is 15-regular on 9750 vertices, with rational sectors
+\[
+15^1,6^{130},5^{1235},3^{520},1^{1899},0^{520},(-2)^{520},(-3)^{625},(-4)^{520},(-5)^{1534},
+\]
+plus quadratic factors $x^2-3x-50$, $x^2+2x-75$, $x^2+2x-30$ of multiplicities 90,65,104 per root, and the three roots of $x^3-4x^2-12x+40$ with multiplicity 576 each.  Both graphs are triangle-free.
+
+The q=5 root-controller/equality-coordinate bridge is objectwise.  On the canonical $U(5)$ chamber carrier, state coordinates $(a,b,c,d)$ project to the 25 P-atoms by
+\[
+(a,b,c,d)\longmapsto(a,c).
+\]
+Each atom fixes $(a,c)$ and contains all 25 $(b,d)$ choices.  The 16 distance-four root states $(a,b,2ab,2a^2b)$, $a,b\ne0$, occupy exactly the $4\times4$ torus $(a,c)\in(\mathbb F_5^*)^2$; the remaining nine star atoms form the coordinate cross $a=0$ or $c=0$.  The 400-apartment torus and 225-apartment cross have different L local-weight profiles but exactly the same fundamental L syndrome of weight 664, which cancels in their chamber-star XOR.
+
+The P-atoms in fact give an all-q presentation.  One P component is $C_q=\operatorname{Cut}(K_{q+1})\otimes\operatorname{Cut}(K_{q+1})$, dimension $q^2$, and its $(q+1)^2$ minimum atoms span it, leaving $2q+1$ internal atom relations.  Over all $q^2(q^2+1)/2$ P components, the P-side theta kernel has dimension
+\[
+\frac{q^4(q^2+1)}2.
+\]
+Intersecting with the L-theta kernel leaves the $q^4$-dimensional apartment code, so the independent L compatibility rank on the P-side space is exactly
+\[
+\boxed{\frac{q^4(q^2-1)}2}.
+\]
+At q=5: 11,700 atom coefficients modulo 3,575 internal relations give 8,125 P-side dimensions; 7,500 independent L conditions leave 625 code dimensions.
+
+The characteristic-two shadow of the connected L graph is also nonsemisimple.  Direct binary elimination gives q=3 ranks $\operatorname{rank}A=440$, $\operatorname{rank}(A+I)=360$ and q=5 ranks $7074,6891$, with nullities $100,180$ and $2676,2859$ respectively.  These are modular modules, not parity reductions of the real eigenspaces.
+
+Finally, the exact four-chamber law has been applied to the live q=5 leader-36 wall in the complete scalar quartic family
+\[
+\mathbf 1_{r\text{ odd}}\ge r-2\binom r2+a\binom r3+b\binom r4-c\binom r8,
+\qquad 0\le r\le8,
+\]
+with $a,b,c\ge0$.  Its feasible coefficient polytope has five vertices.  Using all presently certified aggregate data, including $S_4\ge5P_4$, every critical $N_1=54,\ldots,64$ profile is optimized at $b=0$, reproducing exactly the two cubic bounds already used by Pass~5205.  Thus scalar quartic tuning is rigorously redundant: leader 36 requires configuration-resolved fourth-order data, correlated larger-shore cut information, or an independent quotient/residual argument.
+
+\paragraph{Evidence boundary.}
+The q=5 strict sub-625 frontier remains chamber leader at least 36 and leader 36 is open.  The primal footprint-code distance 25 remains open, so the complete weight-625 equality shell is not yet globally classified; the fixed point-footprint P-heavy-free slice is classified exactly.  The radius-seven theorem concerns the stated deterministic q=3 hard-decision decoder only.  The L spectra and modular ranks are exact finite q=3/q=5 statements unless explicitly labelled all-q, and the controller/atom bridge is finite algebraic geometry rather than a physical-performance claim.
+\fi
