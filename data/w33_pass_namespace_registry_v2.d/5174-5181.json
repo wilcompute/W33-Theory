@@ -1,11 +1,26 @@
 {
   "schema": "w33.pass_namespace_registry.v2.entry",
   "range": [5174, 5181],
-  "slug": "leader29_theta_radius6_char2_equality_shell_bonkers",
-  "title": "q5 leader-29 continuation, equality-shell moments, global radius-six decoder, nonlinear theta, characteristic-two root metric, and three independent probes",
-  "status": "RESERVED",
+  "slug": "theta_radius6_allfield_metric_p_tensor_atoms_duality_firewall",
+  "title": "all-q theta gap, global q3 radius six, complete finite-field root metric, q5 P-tensor atoms, quartic parity, and point-line duality firewall",
+  "status": "EXECUTED",
   "owner": "openai-gpt56-sol",
   "reserved_at": "2026-08-14",
-  "purpose": "Execute the five requested continuations plus three independent probes after the live Pass5166-5173 packet: attack q5 leader29 and beyond without colliding with that namespace; combine triangle/fourth-order moments against the q5 weight-625 exotic shell; orbit-complete the hub-pruned q3 weight-six decoder; attack the nonlinear all-q root-projection theta gap; derive the characteristic-two root-Cayley metric; and pursue three independent structural connections selected from the newest repo state.",
-  "boundary": "Do not claim q5/all-q apartment-code minimum distance unless every leader sector is closed. Do not claim global radius six until every connected weight-six type is certified. Keep nonlinear theta statements split into exact identities, finite anchors, and actual all-q proof. Keep characteristic-two formulas conjectural unless symbolically derived. Avoid all work still owned by Pass5166-5173."
+  "executed_at": "2026-08-14",
+  "outcomes": "Pass5174 proves lambda_2(A_theta)=3q-4 and theta spectral gap q for every finite field. Pass5175 closes the characteristic-two root-Cayley metric, completing the metric classification over all finite fields together with Pass5143 and Pass5165. Pass5176 falsifies pure hub pruning and proves global q3 hard-decision radius six for the provenance-refined rule after an exact 11,401,011 connected-set census. Pass5177 gives the q5 P-side tensor-component theorem and exhaustive 2^25 heavy-shell census, eliminating the old P-side (h8,h9)=(2,1) profile and forcing P-heavy active deficit at least 10. Pass5178 gives the exact quartic parity remainder identity. Pass5179 classifies the all-q P-component minimum shell. Pass5180 identifies P atoms as a q-fold resolution of same-line chamber pairs and reduces P-heavy-free q5 weight625 candidates to 25 labeled atoms. Pass5181 records the even-q self-dual tensor transfer and the q3,q5 connected-L odd-q firewall.",
+  "parallel_corroboration_note": "After this namespace was reserved, another session committed same-number auxiliary certificates for several of these results (including theta gap, characteristic-two metric, quartic parity, P-tensor minimum shell, P-atoms, and an all-field metric diameter corollary). They are retained as independent corroborating certificates rather than deleted or force-renumbered. This registry remains the ownership/provenance record for the 5174-5181 research packet.",
+  "exact_replay": {"workflow_run_id": 31838104205, "status_at_close": "queued", "note": "Runs the 11.4-million connected q3 census and 33.5-million q5 tensor-component census; do not call green until rechecked."},
+  "site_materializer": {"workflow_run_id": 31838175003, "status_at_close": "queued", "note": "Race-hardened root/docs homepage materializer; do not call materialized until rechecked."},
+  "external_prior_art": "Crnkovic-Hawtin-Svob, arXiv:2105.05833, Sec.2: W_3(q) self-dual for even q; dual Q_4(q) for odd q. Repo-specific P/L chart consequences are separated in analysis/PASS5181_point_line_duality_prior_art_boundary.md.",
+  "integration": {
+    "consolidated_results": "data/PART_W33_PASS5174_5181_RESULTS.json",
+    "outcomes": "analysis/PASS5174_5181_EXECUTED_OUTCOMES.md",
+    "manuscript_insert": "analysis/PASS5174_5181_theta_radius6_tensor_metric_insert.tex",
+    "frontier_manifest": "analysis/W33_CURRENT_FRONTIER_MANIFEST.tex",
+    "public_page": "docs/pass5174-5181-theta-radius6-tensor-metric.html",
+    "homepage_source": "analysis/PASS5174_5181_index_insert.html",
+    "regression": "analysis/w33_pass5174_5181_regression.py",
+    "pytest": "tests/test_w33_pass5174_5181_packet.py"
+  },
+  "boundary": "The q5/all-q apartment-code minimum-distance theorem remains open. The P-side tensor theorem does not eliminate L-heavy-only equality candidates. Decoder theorem is for the exact provenance-refined finite hard-decision rule and makes no weight-seven or physical-noise-threshold claim. The strict q5 leader frontier is owned by the independent Pass5182-5189 continuation."
 }
