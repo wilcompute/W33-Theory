@@ -1,0 +1,14 @@
+{
+  "pass": 5145,
+  "status": "THEOREM_Q4_ROOT_COSET_SMITH_FORM",
+  "q": 4,
+  "shape": [256,256],
+  "smith_nonzero": {"1":180,"2":4},
+  "rank_Q": 184,
+  "rank_F2": 180,
+  "rank_F3": 184,
+  "cokernel": "Z^72 direct_sum (Z/2)^4",
+  "interpretation": "All four dimensions of characteristic-2 rank loss are exact 2-torsion Smith directions.",
+  "comparison": {"q2":"1^15, no torsion","q3":"1^68 plus 3^1"},
+  "boundary": "No q5 Smith form is claimed."
+}
