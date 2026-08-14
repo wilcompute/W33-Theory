@@ -1,0 +1,15 @@
+{
+  "pass":5104,
+  "status":"THEOREM_GLOBAL_INTEGRAL_INTERTWINER",
+  "field":"Q(sqrt(17))",
+  "theta_companion":[[0,16],[1,2]],
+  "twisted_T6_block":[[2,8],[2,0]],
+  "historical_doubled_shifted_block":[[0,4],[4,2]],
+  "minimal_intertwiner":[[2,-2],[0,1]],
+  "minimal_index":2,
+  "general_integral_solution":"P(c,d)=[[2d,8c-2d],[c,d]], det=-2(4c^2-cd-d^2); every nonsingular integral intertwiner has even determinant.",
+  "historical_index2_intertwiner":[[2,4],[1,1]],
+  "global_theta_carrier":{"apartments":1620,"levi_line_kernel_lanes":15,"rank":30,"annihilator":"x^2-2x-16","integral_lattice_index_for_15_lanes":32768},
+  "interpretation":"The global theta lattice is explicitly linked to 15 copies of the twisted T6/historical doubled transfer lattice, but only through an index-two map on each quadratic lane.",
+  "boundary":"This is a global apartment-function/operator-lattice intertwiner. It does not identify the historical transfer geometry itself with W33 apartments."
+}
