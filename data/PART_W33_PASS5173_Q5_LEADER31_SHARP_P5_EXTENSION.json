@@ -1,0 +1,34 @@
+{
+  "pass": 5173,
+  "status": "THEOREM_Q5_STRICT_COUNTEREXAMPLE_LEADER_AT_LEAST_31",
+  "q": 5,
+  "leader_size_closed": 30,
+  "target_distance": 625,
+  "raw_deletion_cap": 53,
+  "sharp_extension_identity": "P5 = 2 P4 - t1 - t2/2",
+  "endpoint_bounds": "t1<=8 n1 and t2<=16 n2",
+  "sharp_extension_lower": "P5 >= max(0,2 P4-8 n1-8 n2)",
+  "pair_only_N1_le_40_lower": 776,
+  "generic_uniform_bounds": {
+    "N1=41": 1724,
+    "N1=42": 1508,
+    "N1=43": 1358,
+    "N1=44": 1208,
+    "N1=45": 1024,
+    "N1=46": 991,
+    "N1=47": 958,
+    "N1=48": 893,
+    "N1=49": 860,
+    "N1=50": 827
+  },
+  "dense_N1_51": {
+    "uniform_lower_bound": 794,
+    "profiles": [[[0,9,14],200,848],[[3,6,15],192,794],[[6,3,16],192,794],[[9,0,17],192,794]]
+  },
+  "dense_N1_52": {
+    "uniform_lower_bound": 760,
+    "profiles": [[[1,7,15],224,760],[[4,4,16],224,760],[[7,1,17],224,760]]
+  },
+  "conclusion": "N1=53 is impossible. Pairwise Delsarte closes N1<=40; the sharp P5 extension closes N1=41..50; P4<=N3 coupling closes N1=51,52 with uniform bounds 794 and 760. Every q5 word of weight <625 has minimum chamber leader at least 31.",
+  "boundary": "This closes leader 30 only. The q5/all-q minimum-distance theorem and the weight-625 equality shell remain open for leaders >=31."
+}
