@@ -2,10 +2,14 @@
   "schema": "w33.pass_namespace_registry.v2.entry",
   "range": [5126, 5133],
   "slug": "q5_theta_decoder_controller_bicycle_bonkers",
-  "title": "q5 theta/cut frontier, radius-four decoder, all-q controller, odd-q bicycle, and three outside-box probes",
-  "status": "RESERVED",
+  "title": "q5 leader-18/coarea frontier, radius-five decoder, all-q controller, odd-q bicycle theorem, and three outside-box closures",
+  "status": "EXECUTED",
   "owner": "openai-gpt56-sol",
   "reserved_at": "2026-08-14",
-  "purpose": "Execute the five live continuations after Pass5118-5125: sharpen the q5 leader>=17 frontier using theta half-regularity, derive a cut/coarea bound, settle the q3 weight-four decoder frontier, generalize the intrinsic controller reconstruction across q, and attack the odd-q bicycle 2-rank formula; plus three independent outside-box probes selected from the resulting exact structures.",
-  "boundary": "Do not claim q5/all-q distance or an all-odd-q bicycle theorem without an exact proof. Decoder claims are finite hard-decision statements only. Controller claims are finite code/building/group reconstructions, not hardware performance. Outside-box probes must preserve explicit evidence firewalls."
+  "executed_at": "2026-08-14",
+  "purpose": "Executed all five live continuations after Pass5118-5125 plus three independent outside-box probes; committed producers, frozen certificates, consolidated results, tests, manuscript integration, public theorem page, and site materializer.",
+  "outcomes": "q5 sub-625 counterexamples require chamber leader >=18; weight-625 exotic heavy-chart defect begins uniquely with h8=2,h9=1; q3 equivariant decoder is globally guaranteed through weight5 in <=3 sweeps; chamber-local controller is the all-q type-C2 maximal-unipotent U(q) torsor with root-coset charts; odd-prime-power Levi bicycle dimension is q^3+q-1 using the established W(3,q) binary incidence rank; chamber-star theta support is the root-direction Cayley graph; state/program coordinates admit an all-field reversible polynomial compiler.",
+  "remote_replay": {"workflow_run_id": 31820302846, "status_at_close": "queued"},
+  "site_materializer": {"workflow_run_id": 31820382514, "status_at_close": "queued"},
+  "boundary": "q5/all-q distance remains open for leaders >=18; radius-six decoding is not certified; even-q bicycle dimensions are outside the odd-q theorem; controller/compiler statements are finite algebra, not hardware performance. Remote clean-checkout replay was queued at namespace close and must not be described as green until rechecked."
 }
