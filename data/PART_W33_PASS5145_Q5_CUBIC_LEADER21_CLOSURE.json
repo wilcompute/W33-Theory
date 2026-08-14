@@ -1,0 +1,23 @@
+{
+  "pass": 5145,
+  "status": "THEOREM_Q5_STRICT_COUNTEREXAMPLE_LEADER_AT_LEAST_21",
+  "q": 5,
+  "target_distance": 625,
+  "leader_size_closed": 20,
+  "adjacent_pair_cap": 31,
+  "cap_certificate": {
+    "wedge32_candidate_profiles_after_deletion_constraints": 3,
+    "wedge32_exact_girth8_rejections": 3,
+    "sharp31_witness_left_degrees": [3,3,2,2,2,2,2,2,2],
+    "sharp31_witness_right_degrees": [3,3,3,3,3,3,1,1]
+  },
+  "branches": {
+    "n1<=28": {"weight_lower_bound": 712},
+    "n1=29": {"N112_lower": 29, "S3_lower": 725, "weight_lower_bound": 998},
+    "n1=30": {"N112_lower": 30, "S3_lower": 750, "weight_lower_bound": 715},
+    "n1=31": {"N112_lower": 44, "S3_lower": 1100, "weight_lower_bound": 711}
+  },
+  "uniform_leader20_weight_lower_bound": 711,
+  "conclusion": "Every q=5 word of weight below 625 has minimum chamber leader at least 21.",
+  "boundary": "This is not the q=5 distance theorem; leaders >=21 and equality at weight 625 remain open."
+}
