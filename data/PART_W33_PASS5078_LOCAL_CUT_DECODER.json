@@ -1,0 +1,13 @@
+{
+  "pass":5078,
+  "status":"PASS",
+  "decoder":"nearest K_(q+1) cut / switching decoder",
+  "theorem":"The local theta constraints are the K_(q+1) cut code. A complete syndrome is the independent triangle set (0,i,j), of rank q(q-1)/2; exact nearest-cut correction is therefore a finite syndrome ROM.",
+  "q":{
+    "2":{"q":2,"n_geodesics":3,"local_bits":3,"code_dimension":2,"codewords":4,"syndrome_rank":1,"distinct_syndromes":2,"covering_radius":1,"syndrome_coset_leader_weight_hist":{"0":1,"1":1},"ambient_nearest_cut_distance_hist":{"0":4,"1":4},"rom_entries":2,"rom_address_bits":1,"exact_reconstruction_bits":2},
+    "3":{"q":3,"n_geodesics":4,"local_bits":6,"code_dimension":3,"codewords":8,"syndrome_rank":3,"distinct_syndromes":8,"covering_radius":2,"syndrome_coset_leader_weight_hist":{"0":1,"1":6,"2":1},"ambient_nearest_cut_distance_hist":{"0":8,"1":48,"2":8},"rom_entries":8,"rom_address_bits":3,"exact_reconstruction_bits":3},
+    "4":{"q":4,"n_geodesics":5,"local_bits":10,"code_dimension":4,"codewords":16,"syndrome_rank":6,"distinct_syndromes":64,"covering_radius":4,"syndrome_coset_leader_weight_hist":{"0":1,"1":10,"2":30,"3":22,"4":1},"ambient_nearest_cut_distance_hist":{"0":16,"1":160,"2":480,"3":352,"4":16},"rom_entries":64,"rom_address_bits":6,"exact_reconstruction_bits":4},
+    "5":{"q":5,"n_geodesics":6,"local_bits":15,"code_dimension":5,"codewords":32,"syndrome_rank":10,"distinct_syndromes":1024,"covering_radius":6,"syndrome_coset_leader_weight_hist":{"0":1,"1":15,"2":105,"3":395,"4":480,"5":27,"6":1},"ambient_nearest_cut_distance_hist":{"0":32,"1":480,"2":3360,"3":12640,"4":15360,"5":864,"6":32},"rom_entries":1024,"rom_address_bits":10,"exact_reconstruction_bits":5}
+  },
+  "hardware_boundary":"Exact local lookup counts only; no detector/noise threshold or full global decoder is claimed."
+}
