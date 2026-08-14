@@ -11,6 +11,8 @@ on:
       - 'analysis/w33_pass5163_q5_cubic_leader24_localtype_dp.py'
       - 'analysis/w33_pass5164_q5_cubic_leader25_girth_rejection.py'
       - 'analysis/w33_pass5165_root_cayley_metric_char3_theorem.py'
+      - 'data/PART_W33_PASS5158_5165_RESULTS.json'
+      - 'analysis/w33_pass5158_5165_regression.py'
       - '.github/workflows/w33_pass5158_5165_packet.yml'
   workflow_dispatch:
 jobs:
@@ -48,6 +50,31 @@ jobs:
         run: PYTHONPATH=. python analysis/w33_pass5164_q5_cubic_leader25_girth_rejection.py
       - name: Replay 5165
         run: PYTHONPATH=. python analysis/w33_pass5165_root_cayley_metric_char3_theorem.py
+      - name: Cross-check replay against frozen ledger
+        run: |
+          PYTHONPATH=. python analysis/w33_pass5158_5165_regression.py
+          python - <<'PY'
+          import json
+          def J(p): return json.load(open(p))
+          a=J('data/PART_W33_PASS5158_Q5_CUBIC_LEADER22_PATH_CLOSURE.json')
+          b=J('data/PART_W33_PASS5159_ALLQ_FOUR_CHAMBER_INTERSECTION_CENSUS.json')
+          c=J('data/PART_W33_PASS5160_Q3_DECODER_HUB_PRUNE_PROBE.json')
+          d=J('data/PART_W33_PASS5161_Q5_CUBIC_LEADER23_LOCALTYPE_DP.json')
+          e=J('data/PART_W33_PASS5162_ALLQ_DEPENDENCY_SECOND_WEIGHT.json')
+          f=J('data/PART_W33_PASS5163_Q5_CUBIC_LEADER24_LOCALTYPE_DP.json')
+          g=J('data/PART_W33_PASS5164_Q5_CUBIC_LEADER25_GIRTH_REJECTION.json')
+          h=J('data/PART_W33_PASS5165_ROOT_CAYLEY_METRIC_CHAR3_THEOREM.json')
+          assert a['integer_weight_lower_bound']==641 and a['status'].endswith('AT_LEAST_22')
+          assert b['status']=='THEOREM_ALL_Q_FOUR_CHAMBER_STAR_INTERSECTION_LAW'
+          assert b['anchors']['5']['common_apartment_histogram']=={'1':19375,'5':500}
+          assert c['radius5_replay']['failures']==[] and c['centered_2plus2plus2']['fully_cleared']==32
+          assert d['status'].endswith('AT_LEAST_23') and d['branches']['N1=33']['integer_weight_lower_bound']==668
+          assert e['status']=='THEOREM_ALL_Q_DEPENDENCY_CODE_SECOND_WEIGHT'
+          assert f['status'].endswith('AT_LEAST_24') and f['branches']['N1=38']['integer_weight_lower_bound']==760
+          assert g['status'].endswith('AT_LEAST_25') and g['W40_integer_weight_lower_bound']==629
+          assert h['status']=='THEOREM_ROOT_CAYLEY_METRIC_CHARACTERISTIC_3'
+          print('Pass5158-5165 producer/ledger cross-check: PASS')
+          PY
       - name: Compact status ledger
         run: |
           python - <<'PY'
