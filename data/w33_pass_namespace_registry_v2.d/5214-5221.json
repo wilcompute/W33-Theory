@@ -2,10 +2,34 @@
   "schema": "w33.pass_namespace_registry.v2.entry",
   "range": [5214, 5221],
   "slug": "connectedL_radius7_Lspectrum_outer_shell_post5206_bonkers",
-  "title": "connected-L equality gluing, q3 radius-seven provenance, odd-q L spectrum, outer-shell atom map, post-5206 leader continuation, and three orthogonal probes",
-  "status": "RESERVED",
+  "title": "connected-L equality gluing, q3 radius-seven provenance, odd-q L spectrum, outer-shell atom map, leader36 quartic firewall, and three orthogonal probes",
+  "status": "EXECUTED",
   "owner": "openai-gpt56-sol",
   "reserved_at": "2026-08-14",
-  "purpose": "Execute the five user-requested continuations without colliding with live Pass5206-5213: connected-L gluing of q5 P-heavy-free 25-atom candidates; provenance-refined q3 radius-seven search/certification; spectral/module analysis of the connected odd-q L chart graph; explicit q5 root-Cayley outer-shell to P-atom/equality coordinate map test; and consume the live leader36 result then attack the next unresolved strict q5 leader shell. Three additional outside-box probes will target the connected-L code's local/global rank structure, an atom-level matroid/graph invariant, and a code/controller no-go or intertwiner depending on exact evidence.",
-  "boundary": "Do not duplicate Pass5206-5213 leader36/P-heavy/footprint/root-intertwiner work. Do not claim q5/all-q minimum distance unless every strict leader shell is closed. Do not claim q3 radius seven without an exhaustive or provably orbit-complete certificate. Preserve odd-q P/L asymmetry and separate explicit maps from numerical coincidences."
+  "executed_at": "2026-08-14",
+  "outcomes": "Pass5214 proves that a fixed q5 point footprint has exactly six P-heavy-free L-compatible weight625 atom unions, the six chamber stars based at that point. Pass5215 proves global q3 radius seven for the provenance-refined hard-decision decoder via a 16-element apartment stabilizer, 734414 connected size-six orbit representatives, and 64439500 exact weight-seven extensions. Pass5216 gives exact connected L-chart spectra at q3 and q5. Pass5217 identifies the q5 root distance-four shell with the 4x4 nonzero torus in the 5x5 P-atom coordinate grid. Pass5218 proves the complete scalar quartic minorant family is redundant on every leader36 critical profile, so leader36 remains open. Pass5219 shows the 16-atom torus and 9-atom cross have identical connected-L syndrome weight664. Pass5220 gives an all-q P-atom presentation with L compatibility rank q^4(q^2-1)/2. Pass5221 gives exact q3/q5 GF2 ranks of A_L and A_L+I.",
+  "development_replay": {
+    "5214": "exact q5 fixed-footprint CSP: 17250 unary + 7500 binary constraints, six star solutions",
+    "5215": "Sp(4,3) stabilizer generation and vectorized 64,439,500-extension connected weight-seven census; zero false/empty provenance-stage sets",
+    "5216": "integer annihilator plus exact closed-walk trace spectra at q3,q5",
+    "5217_5219": "objectwise q5 U(5)-carrier / P-atom / connected-L syndrome computations",
+    "5218": "exact rational coefficient-polytope optimization on all N1=54..64 leader36 critical profiles",
+    "5220": "rank-nullity theorem from P tensor components and full apartment-code dimension",
+    "5221": "direct GF2 elimination at q3,q5"
+  },
+  "actions_replay": {"workflow_run_id":31843928943,"status_at_close":"queued","note":"Includes the vectorized 64.4-million radius-seven extension census plus q5 connected-L and modular-rank producers; do not call green until rechecked."},
+  "site_materializer": {"workflow_run_id":31844001224,"status_at_close":"queued","note":"Race-hardened root/docs homepage materializer; do not call materialized until rechecked."},
+  "parallel_frontier": "Pass5206-5213 remains authoritative for the q5 strict/footprint front: leader36 is open; footprint primal code is [325,65,d<=25] with d25 open; dual footprint code is [325,260,8].",
+  "integration": {
+    "consolidated_results": "data/PART_W33_PASS5214_5221_RESULTS.json",
+    "outcomes": "analysis/PASS5214_5221_EXECUTED_OUTCOMES.md",
+    "manuscript_insert": "analysis/PASS5214_5221_connectedL_radius7_atom_presentation_insert.tex",
+    "frontier_manifest": "analysis/W33_CURRENT_FRONTIER_MANIFEST.tex",
+    "regression": "analysis/w33_pass5214_5221_regression.py",
+    "pytest": "tests/test_w33_pass5214_5221_packet.py",
+    "replay_workflow": ".github/workflows/w33_pass5214_5221_packet.yml",
+    "public_page": "docs/pass5214-5221-connectedL-radius7-atom-presentation.html",
+    "homepage_source": "analysis/PASS5214_5221_index_insert.html"
+  },
+  "boundary": "The q5/all-q apartment-code minimum-distance theorem remains open at leader36. Footprint primal distance25 remains open, so the complete weight625 equality shell is not yet globally classified. Pass5214 classifies the point-footprint P-heavy-free slice exactly. Radius7 is only for the deterministic q3 hard-decision decoder. L spectra/modular ranks are exact q3/q5 statements unless explicitly labeled all-q. Controller/atom results are finite algebraic geometry, not hardware or physical-performance claims."
 }
