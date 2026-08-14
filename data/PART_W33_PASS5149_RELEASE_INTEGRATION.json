@@ -1,0 +1,16 @@
+{
+  "pass": 5149,
+  "status": "RELEASE_INTEGRATION_WITH_EVIDENCE_FIREWALL",
+  "range": [5142, 5149],
+  "shared_manuscript_insert": "analysis/PASS5142_5149_cubic_root_projection_insert.tex",
+  "shared_manifest": "analysis/W33_CURRENT_FRONTIER_MANIFEST.tex",
+  "manuscripts_reached_via_manifest": ["w33_paper.tex", "photonic_holonet.tex", "holonet_machine_blueprint.tex"],
+  "public_detail_page": "docs/pass5142-5149-cubic-root-projection.html",
+  "homepage_card_source": "analysis/PASS5142_5149_index_insert.html",
+  "homepage_materializer": "tools/integrate_pass5142_5149_public.py",
+  "frozen_regression": "tests/test_w33_pass5142_5149_packet.py",
+  "exact_replay_workflow": ".github/workflows/w33_pass5142_5149_packet.yml",
+  "headline": "At q=5 every word of weight below 625 requires minimum chamber leader at least 21.",
+  "open_q5_wall": "leader 21, n1=33; 42 further triple-intersection incidences suffice for the cubic method",
+  "evidence_boundary": "No q=5/all-q distance theorem is claimed; no root-controller algebraic identity is promoted as a hardware-performance statement; the all-q nonlinear theta gap remains open."
+}
