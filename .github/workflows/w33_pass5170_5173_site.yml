@@ -1,0 +1,34 @@
+name: Pass5170-5173 homepage materializer
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/PASS5170_5173_index_insert.html'
+      - 'tools/integrate_pass5170_5173_public.py'
+      - '.github/workflows/w33_pass5170_5173_site.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Materialize homepage card
+        run: python tools/integrate_pass5170_5173_public.py
+      - name: Commit homepage only with race retry
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html docs/index.html
+          git diff --cached --quiet && exit 0
+          git commit -m 'Materialize Pass5170-5173 homepage card'
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin master
+            if git push origin HEAD:master; then exit 0; fi
+            sleep $((2*i))
+          done
+          exit 1
