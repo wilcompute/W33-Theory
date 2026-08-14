@@ -1,0 +1,54 @@
+\ifdefined\WPassFiveTwoZeroSixLoaded\else
+\gdef\WPassFiveTwoZeroSixLoaded{1}
+\subsection*{Passes 5206--5213: leader-36 obstruction, footprint hull, orthogonal graph, and dual code}
+The current strict q=5 distance barrier is leader at least $36$.  Applying the first global-cut consequences of Pass~5185 to the Pass~5205 leader-$36$ wall gives an exact negative diagnostic: the degree-class aggregation bounds
+\[
+ x^{\mathsf T}Ny\le16n_1+34n_2+45n_3.
+\]
+Across the open $N_1=54,\ldots,64$ sectors this only gives $N_2\le381,\ldots,405$, while the dangerous Delsarte extremizers use $N_2=164,\ldots,175$.  Hence the two-vertex/$3$--$2$--$3$ consequences are redundant; any successful cut proof must retain correlated larger-shore host incidences or an independent quotient constraint.
+
+The remaining q=5 weight-$625$ equality problem reduces sharply to the P-footprint code $C_F=\operatorname{im}_{\mathbb F_2}F^{\mathsf T}\subseteq\mathbb F_2^{325}$.  The P-component parity vector of every weight-$625$ apartment word is nonzero.  If such a word is P-heavy, one component costs more than the minimum $25$, so if $t$ is the footprint weight,
+\[
+ 625\ge26+25(t-1),\qquad t\le24.
+\]
+Thus any exotic P-heavy equality word would produce a nonzero footprint-code word of weight at most $24$.  Since point footprints have weight $25$, proving $d(C_F)=25$ would, together with Pass~5191, classify the complete q=5 weight-$625$ shell as chamber stars.
+
+The footprint code has additional exact structure.  Pass~5202 gives $\dim C_F=65$, and for q=5 the Gram relation is $FF^{\mathsf T}=J$ over $\mathbb F_2$.  Its hull has dimension $64$.  Every hull word has weight $0\pmod4$ and every word in the other coset has weight $1\pmod4$.  The $156$ point rows have weight $25$; sums of two point rows have weight $40$ for collinear points and $48$ otherwise.  Hence a hypothetical word below $25$ is restricted to
+\[
+ \{4,8,12,16,20,24\}\quad\text{or}\quad\{1,5,9,13,17,21\}.
+\]
+For odd q, the conjecture that dual grids span the complete W-line incidence dual is exactly the binary rank statement
+\[
+ \operatorname{rank}_2F={q(q^2+1)\over2}.
+\]
+This holds at q=$3,5,7,11$ and is a theorem at q=5, but no all-odd-q proof is promoted here; even characteristic is genuinely different.
+
+The controller and footprint geometries are representations of the same Borel symmetry.  The four U(q) coordinates have C2 positive-root weights $\alpha,\beta,\alpha+\beta,2\alpha+\beta$, giving the Pass~5192 torus action
+\[
+ (a,b,c,d)\mapsto(ra,sb,rsc,r^2sd).
+\]
+Since W-points and hyperbolic polar-pair dual grids are canonical $PSp_4(q)$ sets,
+\[
+ P_{\rm pts}(g)F=F P_{\rm grid}(g),
+\]
+so the root controller acts by automorphisms of the footprint code and P-component block graph.
+
+For odd q, the latter graph has a classical orthogonal identification.  On
+$\Lambda^2(\mathbb F_q^4)/\langle\omega\rangle$, the exceptional action
+$PSp_4(q)\cong P\Omega_5(q)$ sends a polar hyperbolic-line pair
+$\{H,H^\perp\}$ to one plus-type nonisotropic projective point.  Therefore the
+P-component graph is
+\[
+ \boxed{NO_5^+(q)}.
+\]
+At q=5 this is $\operatorname{SRG}(325,144,68,60)$.
+
+Two additional q=5 structures occur.  First, there is an explicit set of $13$ pairwise disjoint dual grids partitioning all $156$ W-points.  They form a Hoffman-optimal coclique in $NO_5^+(5)$ and meet every distinguished point-footprint $25$-clique exactly once.  Second, the dual footprint code is exactly
+\[
+ \boxed{C_F^\perp=[325,260,8]_2}.
+\]
+The lower bound follows from even point degrees: for a $t$-block dual word the induced block-graph edge count satisfies $E\ge3t$, hence $t\ge7$.  The weight-seven equality configuration is excluded by an exact 265-node canonical backtrack, and an explicit weight-eight support exists; its eight grids cover $48$ W-points twice and induce $K_8$ minus a perfect matching.
+
+\paragraph{Evidence boundary.}
+Leader $36$ remains open.  The primal footprint distance $25$ remains open, so the P-heavy equality shell is not yet closed by this packet.  The odd-q spanning theorem is reduced to a rank formula but remains unproved in general.  The orthogonal-graph and dual-code statements are finite geometry/code theorems, not physical performance claims.
+\fi
