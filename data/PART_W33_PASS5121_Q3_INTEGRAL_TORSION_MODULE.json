@@ -1,0 +1,22 @@
+{
+  "pass": 5121,
+  "status": "THEOREM_EXPLICIT_Q3_Z3_SATURATION_MODULE",
+  "incidence_shape": [81, 108],
+  "rational_left_kernel_dimension": 12,
+  "mod3_left_kernel_dimension": 13,
+  "extra_mod3_vector": {
+    "support": [0,3,4,5,6,8,9,10,13,15,17,18,20,21,22,23,26,27,28,30,31,32,37,38,40,46,49,50,51,52,53,55,56,59,63,64,66,69,72],
+    "values": [2,1,1,1,2,2,1,1,1,2,2,2,1,1,2,1,1,2,2,1,2,2,1,1,2,1,2,2,2,2,1,1,2,1,1,1,1,2,1]
+  },
+  "torsion_generator_w": {
+    "definition": "w=(H^T a)/3",
+    "support": [0,1,2,3,4,6,10,11,12,13,14,15,17,18,19,20,24,26,27,28,29,30,31,32,33,34,35,37,39,41,42,43,44,46,47,51,52,54,57,58,59,60,61,62,65,67,68,69,70,72,73,75,77,78,79,81,82,84,85,86,87,88,89,92,93,94,95,96,98,99,100,101,105,106],
+    "values_on_support": [1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    "support_size": 74,
+    "l1_norm": 76
+  },
+  "nontriviality": "a adds one dimension modulo 3 beyond the reduction of the primitive integral rational kernel; hence [w] is nonzero and generates the unique Z/3 saturation quotient.",
+  "U81_action": "trivial, because Aut(Z/3)=C2 and every homomorphism from the 3-group U81 to C2 is trivial",
+  "V4_character": {"e":"+","a":"-","b":"+","c":"-"},
+  "boundary": "This resolves the integral arithmetic torsion module. The character match to the H27 central triality axis is recorded separately in Pass5125; no physical charge is inferred."
+}
