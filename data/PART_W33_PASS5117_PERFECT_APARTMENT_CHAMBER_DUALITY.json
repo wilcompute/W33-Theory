@@ -1,0 +1,15 @@
+{
+  "pass": 5117,
+  "status": "THEOREM_ALL_Q_PERFECT_PRESENTATION_DUALITY",
+  "linear_algebra": "For the Levi incidence matrix B over F2, Cut=im(B^T)=(ker B)^perp=Z1^perp. Hence F2^E/Cut is canonically Z1^*.",
+  "repo_identifications": ["Pass5110: apartment code = chamber edge coefficients modulo Cut","Pass5066: apartment generators modulo theta = Z1(Levi;F2)"],
+  "perfect_pairing": "<[g],[A]> = g dot boundary(A) mod 2; this is exactly the apartment coordinate of the chamber-generated codeword.",
+  "conclusion": "Apartment code ~= Hom_F2(apartment/theta presentation,F2) canonically. The gauge/cohomology characters used in the Fourier formulation are literally the full character group of the theta presentation.",
+  "anchors": {
+    "2":{"q":2,"edge_space_dimension":45,"cut_dimension":29,"cycle_dimension":16,"quotient_edge_mod_cut_dimension":16,"perfect_dual_dimension":16},
+    "3":{"q":3,"edge_space_dimension":160,"cut_dimension":79,"cycle_dimension":81,"quotient_edge_mod_cut_dimension":81,"perfect_dual_dimension":81},
+    "4":{"q":4,"edge_space_dimension":425,"cut_dimension":169,"cycle_dimension":256,"quotient_edge_mod_cut_dimension":256,"perfect_dual_dimension":256},
+    "5":{"q":5,"edge_space_dimension":936,"cut_dimension":311,"cycle_dimension":625,"quotient_edge_mod_cut_dimension":625,"perfect_dual_dimension":625}
+  },
+  "boundary": "Perfect finite-field duality does not imply that the cycle space is canonically self-dual as a subspace; the bicycle/radical intersection can be nonzero. The theorem is quotient-versus-dual, not an orthogonal direct-sum claim."
+}
