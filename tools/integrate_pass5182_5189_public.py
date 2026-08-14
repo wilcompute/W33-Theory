@@ -1,0 +1,10 @@
+#!/usr/bin/env python3
+from pathlib import Path
+R=Path(__file__).resolve().parents[1]
+card=(R/'analysis/PASS5182_5189_index_insert.html').read_text().strip()
+for p in (R/'index.html',R/'docs/index.html'):
+    s=p.read_text()
+    if 'id="pass5182-5189"' not in s:
+        if '</body>' in s:s=s.replace('</body>',card+'\n</body>')
+        else:s=s+'\n'+card+'\n'
+        p.write_text(s)
