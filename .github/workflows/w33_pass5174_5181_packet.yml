@@ -1,0 +1,66 @@
+name: Pass5174-5181 theta radius6 tensor metric packet
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5174_allq_nonlinear_theta_gap.py'
+      - 'analysis/w33_pass5175_root_cayley_metric_char2_theorem.py'
+      - 'analysis/w33_pass5176_q3_radius6_graph_export.py'
+      - 'analysis/w33_pass5176_q3_radius6_provenance.cpp'
+      - 'analysis/w33_pass5177_q5_tensor_component_geometry.py'
+      - 'analysis/w33_pass5177_q5_tensor_heavy_enum.cpp'
+      - 'analysis/w33_pass5178_allq_quartic_parity_frontier.py'
+      - 'analysis/w33_pass5179_allq_tensor_minimum_shell.py'
+      - 'analysis/w33_pass5180_p_atom_panel_resolution.py'
+      - 'analysis/w33_pass5181_point_line_duality_firewall.py'
+      - 'data/PART_W33_PASS5174_5181_RESULTS.json'
+      - 'analysis/w33_pass5174_5181_regression.py'
+      - '.github/workflows/w33_pass5174_5181_packet.yml'
+  workflow_dispatch:
+jobs:
+  exact-replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Python syntax
+        run: |
+          python -m py_compile analysis/w33_pass5174_allq_nonlinear_theta_gap.py
+          python -m py_compile analysis/w33_pass5175_root_cayley_metric_char2_theorem.py
+          python -m py_compile analysis/w33_pass5176_q3_radius6_graph_export.py
+          python -m py_compile analysis/w33_pass5177_q5_tensor_component_geometry.py
+          python -m py_compile analysis/w33_pass5178_allq_quartic_parity_frontier.py
+          python -m py_compile analysis/w33_pass5179_allq_tensor_minimum_shell.py
+          python -m py_compile analysis/w33_pass5180_p_atom_panel_resolution.py
+          python -m py_compile analysis/w33_pass5181_point_line_duality_firewall.py
+      - name: Replay theta gap and root metric
+        run: |
+          PYTHONPATH=. python analysis/w33_pass5174_allq_nonlinear_theta_gap.py
+          PYTHONPATH=. python analysis/w33_pass5175_root_cayley_metric_char2_theorem.py
+      - name: Replay exact q3 radius-six census
+        run: |
+          PYTHONPATH=. python analysis/w33_pass5176_q3_radius6_graph_export.py /tmp/w33_pass5176_q3_graph.txt
+          g++ -O3 -std=c++17 analysis/w33_pass5176_q3_radius6_provenance.cpp -o /tmp/pass5176
+          /tmp/pass5176 /tmp/w33_pass5176_q3_graph.txt | tee /tmp/pass5176.json
+          grep -q '"status":"PASS"' /tmp/pass5176.json
+          grep -q '"connected_weight6":11401011' /tmp/pass5176.json
+      - name: Replay P tensor decomposition and exhaustive q5 component census
+        run: |
+          PYTHONPATH=. python analysis/w33_pass5177_q5_tensor_component_geometry.py
+          g++ -O3 -std=c++17 analysis/w33_pass5177_q5_tensor_heavy_enum.cpp -o /tmp/pass5177
+          /tmp/pass5177 | tee /tmp/pass5177.json
+          grep -q '"component_states": 33554432' /tmp/pass5177.json
+          grep -q '"minimum_positive_global_coarea_cost_at_weight625": 50' /tmp/pass5177.json
+      - name: Replay quartic, tensor shell, atom resolution, and duality firewall
+        run: |
+          PYTHONPATH=. python analysis/w33_pass5178_allq_quartic_parity_frontier.py
+          PYTHONPATH=. python analysis/w33_pass5179_allq_tensor_minimum_shell.py
+          PYTHONPATH=. python analysis/w33_pass5180_p_atom_panel_resolution.py
+          PYTHONPATH=. python analysis/w33_pass5181_point_line_duality_firewall.py
+      - name: Frozen ledger regression
+        run: |
+          PYTHONPATH=. python analysis/w33_pass5174_5181_regression.py
+          python -m pytest -q tests/test_w33_pass5174_5181_packet.py
