@@ -1,0 +1,99 @@
+#!/usr/bin/env python3
+"""Pass5132 (bonkers): exact q=5 C2 root-coset derivative spectrum.
+
+Build U from the four positive-root generators, form the 625x500 root-coset
+incidence H, and A=HH^T-4I.  A degree-13 square-free integer annihilator is
+verified exactly.  Exact trace moments 0..8 then force the multiplicities of
+all rational and quadratic factors.  Field elimination recovers the q=5
+native F5 rank defect from Pass5115 inside the spectral picture.
+"""
+from __future__ import annotations
+import collections,itertools,json
+from pathlib import Path
+import numpy as np
+import scipy.sparse as sp
+ROOT=Path(__file__).resolve().parents[1]
+OUT=ROOT/'data/PART_W33_PASS5132_Q5_ROOT_COSET_SPECTRUM.json'
+Q=5
+
+def E(i,j):
+    M=np.zeros((4,4),dtype=np.int64);M[i,j]=1;return M
+def key(A):return tuple(map(int,(A%Q).flat))
+def mm(A,B):return (A@B)%Q
+
+def rank_mod(M,p):
+    A=np.array(M,dtype=np.int64)%p;m,n=A.shape;r=0
+    for c in range(n):
+        nz=np.flatnonzero(A[r:,c])
+        if not len(nz):continue
+        i=r+int(nz[0])
+        if i!=r:A[[r,i]]=A[[i,r]]
+        A[r]=(A[r]*pow(int(A[r,c]),-1,p))%p
+        for j in np.flatnonzero(A[:,c]):
+            if j!=r:A[j]=(A[j]-A[j,c]*A[r])%p
+        r+=1
+        if r==m:break
+    return r
+
+def main():
+    I=np.eye(4,dtype=np.int64)%Q
+    X=[E(0,1)-E(3,2),E(1,3),E(0,3)+E(1,2),E(0,2)]
+    roots=[[(I+t*Z)%Q for t in range(Q)] for Z in X]
+    U={key(I):I};D=collections.deque([I]);gens=[R[1] for R in roots]
+    while D:
+        a=D.popleft()
+        for g in gens:
+            b=mm(a,g);k=key(b)
+            if k not in U:U[k]=b;D.append(b)
+    assert len(U)==625
+    els=list(U.values());idx={key(a):i for i,a in enumerate(els)};cosets=[]
+    for R in roots:
+        seen=set()
+        for g in els:
+            C=tuple(sorted(idx[key(mm(g,h))] for h in R))
+            if C not in seen:seen.add(C);cosets.append(C)
+        assert len(seen)==125
+    assert len(cosets)==500
+    rr=[];cc=[]
+    for j,C in enumerate(cosets):rr.extend(C);cc.extend([j]*5)
+    H=sp.csr_matrix((np.ones(len(rr),dtype=np.int64),(rr,cc)),shape=(625,500))
+    assert set(H.sum(0).A1)=={5} and set(H.sum(1).A1)=={4}
+    A=(H@H.T-4*sp.eye(625,dtype=np.int64,format='csr')).tocsr();assert set(A.sum(1).A1)=={16}
+    # (x-16)(x-11)(x-6)(x-1)(x+4)(x^2-12x+31)
+    # (x^2-2x-4)(x^2-7x-4)(x^2-2x-14)
+    coeff=[1,-53,1098,-10816,41765,105363,-1462104,3281394,7425272,-35970640,13145136,70220032,-27444992,-29331456]
+    Y=sp.eye(625,dtype=np.int64,format='csr')
+    for c in coeff[1:]:Y=A@Y+c*sp.eye(625,dtype=np.int64,format='csr')
+    assert Y.nnz==0
+    traces=[625];P=sp.eye(625,dtype=np.int64,format='csr')
+    for k in range(1,9):P=P@A;traces.append(int(P.diagonal().sum()))
+    assert traces==[625,0,10000,30000,450000,3610000,43150000,507010000,6695730000]
+    # Pair power sums for x^2-sx+p via recurrence u_k=s u_{k-1}-p u_{k-2}, u_0=2,u_1=s.
+    def pair_sum(s,p,k):
+        if k==0:return 2
+        if k==1:return s
+        a,b=2,s
+        for _ in range(2,k+1):a,b=b,s*b-p*a
+        return b
+    mult={'16':1,'11':8,'6':16,'1':140,'-4':220,
+          '6+sqrt5':20,'6-sqrt5':20,'1+sqrt5':40,'1-sqrt5':40,
+          '(7+sqrt65)/2':20,'(7-sqrt65)/2':20,'1+sqrt15':40,'1-sqrt15':40}
+    def predicted(k):
+        z=16**k+8*11**k+16*6**k+140+220*((-4)**k)
+        z+=20*pair_sum(12,31,k) # 6 +/- sqrt5
+        z+=40*pair_sum(2,-4,k)  # 1 +/- sqrt5
+        z+=20*pair_sum(7,-4,k)  # (7 +/- sqrt65)/2
+        z+=40*pair_sum(2,-14,k) # 1 +/- sqrt15
+        return z
+    assert [predicted(k) for k in range(9)]==traces
+    Hd=H.toarray();ranks={str(p):rank_mod(Hd,p) for p in (2,3,5,7)}
+    assert ranks=={'2':405,'3':405,'5':397,'7':405}
+    out={'pass':5132,'status':'THEOREM_Q5_ROOT_COSET_EXACT_SPECTRUM','q':5,'U_order':625,
+      'incidence_shape':[625,500],'root_cosets':500,'root_coset_size':5,'derivative_degree':16,
+      'annihilator_factors':['x-16','x-11','x-6','x-1','x+4','x^2-12x+31','x^2-2x-4','x^2-7x-4','x^2-2x-14'],
+      'trace_moments_0_to_8':traces,'spectrum':mult,'incidence_ranks':ranks,
+      'generic_rank':405,'native_F5_rank':397,'native_rank_drop':8,'minus4_multiplicity':220,
+      'factor_note':'generic rank=625-mult_A(-4)=405=5*(2*5-1)^2. q=7 shares q(2q-1)^2=1183, but q=3 is exceptional, so no all-q formula is asserted.',
+      'boundary':'Exact finite spectral/incidence theorem. Quadratic fields and rank defects are not assigned physical meanings.'}
+    OUT.write_text(json.dumps(out,indent=2)+'\n');print(json.dumps(out,indent=2))
+if __name__=='__main__':main()
