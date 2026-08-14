@@ -1,0 +1,15 @@
+{
+  "pass": 5186,
+  "status": "THEOREM_ALL_Q_P_COMPONENT_KQQ_POINT_DESIGN",
+  "statement": "The P-component footprints of chamber stars are canonically indexed by W(3,q) points. Each P component is supported on 2(q+1) points inducing K_{q+1,q+1}; its (q+1)^2 minimum tensor atoms are exactly the edges of that K_{q+1,q+1}.",
+  "two_intersection_law": "For distinct W-points p,r, their P-component footprints intersect in q components if p and r are collinear and in exactly one component if they are noncollinear.",
+  "anchors": {
+    "2": {"W_points":15,"chambers":45,"P_components":10,"components_per_point_footprint":4,"chambers_per_point_footprint":3,"component_point_block_size":6,"component_point_graph":"K_3,3","component_minimum_atoms":9,"pair_intersection_histogram":{"1":60,"2":45}},
+    "3": {"W_points":40,"chambers":160,"P_components":45,"components_per_point_footprint":9,"chambers_per_point_footprint":4,"component_point_block_size":8,"component_point_graph":"K_4,4","component_minimum_atoms":16,"pair_intersection_histogram":{"1":540,"3":240}},
+    "4": {"W_points":85,"chambers":425,"P_components":136,"components_per_point_footprint":16,"chambers_per_point_footprint":5,"component_point_block_size":10,"component_point_graph":"K_5,5","component_minimum_atoms":25,"pair_intersection_histogram":{"1":2720,"4":850}},
+    "5": {"W_points":156,"chambers":936,"P_components":325,"components_per_point_footprint":25,"chambers_per_point_footprint":6,"component_point_block_size":12,"component_point_graph":"K_6,6","component_minimum_atoms":36,"pair_intersection_histogram":{"1":9750,"5":2340}}
+  },
+  "q5": "156 point footprints of size 25; 325 K_6,6 component blocks on 12 points; 36 minimum atoms/edges per block. Collinear point pairs share 5 components and noncollinear pairs share 1.",
+  "connection": "The Pass5180 P-heavy-free weight-625 reduction is now a 25-edge atom gluing problem inside 325 canonical K_6,6 blocks over the original W(3,5) point graph.",
+  "boundary": "P-side theorem only. It does not prove the L-heavy-only equality sector empty, close q5 leader 33, or prove q5 minimum distance."
+}
