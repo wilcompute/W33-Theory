@@ -1,0 +1,18 @@
+{
+  "pass": 5113,
+  "status": "THEOREM_GLOBAL_EQUIVARIANT_RADIUS3_TWO_SWEEPS",
+  "q": 3,
+  "apartments": 1620,
+  "charts": 1080,
+  "local_syndrome_minima": [[0,1],[1,1],[1,1],[1,1],[1,1],[1,1],[1,1],[2,3]],
+  "ambiguous_rule": "abstain on the unique syndrome with three weight-2 leaders",
+  "radius2_reason": "two apartments share at most one chart; true votes are >=3 while any false shared-chart vote is <=1",
+  "base_fixed_triples_tested": 1309771,
+  "one_sweep_success": 1261801,
+  "first_sweep_residual_weight2": 47520,
+  "first_sweep_residual_weight1": 450,
+  "second_sweep_failures": 0,
+  "global_guaranteed_error_weight": 3,
+  "proof_of_globality": "The decoder is S4-equivariant on every chart and building automorphisms are apartment-transitive, so every weight-3 pattern is equivalent to one in the fixed-apartment census.",
+  "boundary": "Guarantee is Hamming weight 3 for this finite hard-decision decoder. No claim is made about radius 4, soft decoding, optical noise, or fault-tolerance thresholds."
+}
