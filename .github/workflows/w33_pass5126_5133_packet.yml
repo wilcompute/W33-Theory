@@ -1,0 +1,56 @@
+name: Pass5126-5133 q5 decoder controller bicycle packet
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5126_q5_leader18_exact.py'
+      - 'analysis/w33_pass5127_q5_coarea_defect_quantization.py'
+      - 'analysis/w33_pass5128_q3_equivariant_radius4_decoder.py'
+      - 'analysis/w33_pass5129_allq_intrinsic_unipotent_controller.py'
+      - 'analysis/w33_pass5130_oddq_bicycle_theorem.py'
+      - 'analysis/w33_pass5131_q3_equivariant_radius5_decoder.py'
+      - 'analysis/w33_pass5132_theta_cayley_minimum_support.py'
+      - 'analysis/w33_pass5133_allq_state_program_polynomial_compiler.py'
+      - 'analysis/w33_pass5126_5133_regression.py'
+      - 'tests/test_w33_pass5126_5133_packet.py'
+      - '.github/workflows/w33_pass5126_5133_packet.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  exact-replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    env:
+      PYTHONPATH: .
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install pytest
+        run: python -m pip install --disable-pip-version-check pytest
+      - name: Syntax check producers
+        run: python -m py_compile analysis/w33_pass5126_q5_leader18_exact.py analysis/w33_pass5127_q5_coarea_defect_quantization.py analysis/w33_pass5128_q3_equivariant_radius4_decoder.py analysis/w33_pass5129_allq_intrinsic_unipotent_controller.py analysis/w33_pass5130_oddq_bicycle_theorem.py analysis/w33_pass5131_q3_equivariant_radius5_decoder.py analysis/w33_pass5132_theta_cayley_minimum_support.py analysis/w33_pass5133_allq_state_program_polynomial_compiler.py
+      - name: Frozen tests
+        run: |
+          python analysis/w33_pass5126_5133_regression.py
+          pytest -q tests/test_w33_pass5126_5133_packet.py
+      - name: Replay Pass5126 q5 leader 18
+        run: python analysis/w33_pass5126_q5_leader18_exact.py
+      - name: Replay Pass5127 q5 coarea
+        run: python analysis/w33_pass5127_q5_coarea_defect_quantization.py
+      - name: Replay Pass5128 radius four
+        run: python analysis/w33_pass5128_q3_equivariant_radius4_decoder.py
+      - name: Replay Pass5129 all-q controller
+        run: python analysis/w33_pass5129_allq_intrinsic_unipotent_controller.py
+      - name: Replay Pass5130 odd-q bicycle anchors
+        run: python analysis/w33_pass5130_oddq_bicycle_theorem.py
+      - name: Replay Pass5131 radius five
+        run: python analysis/w33_pass5131_q3_equivariant_radius5_decoder.py
+      - name: Replay Pass5132 theta Cayley
+        run: python analysis/w33_pass5132_theta_cayley_minimum_support.py
+      - name: Replay Pass5133 polynomial compiler
+        run: python analysis/w33_pass5133_allq_state_program_polynomial_compiler.py
