@@ -1,0 +1,13 @@
+{
+  "range": [5126, 5133],
+  "status": "EXECUTED_PENDING_REMOTE_REPLAY",
+  "5126": {"q5_counterexample_leader_min": 18, "m17_sharp_wedge_cap": 25, "m17_delsarte_weight_lb": 625},
+  "5127": {"q5_weight625_heavy_chart_min": 3, "smallest_heavy_profile": {"h8": 2, "h9": 1}, "active_chart_total_max_exotic": 498},
+  "5128": {"q3_decoder_radius": 4, "global_sweep_bound": 3, "connected4_fixed_base": 13269},
+  "5129": {"all_q_controller": "regular C2 maximal-unipotent U(q) torsor with active charts equal positive-root right cosets", "anchors": [2,3,4,5]},
+  "5130": {"odd_q_bicycle_formula": "q^3+q-1", "scope": "all odd prime powers", "anchors": {"3":29,"5":129,"7":349,"11":1341}},
+  "5131": {"q3_decoder_radius": 5, "global_sweep_bound": 3, "connected5_fixed_base": 381480},
+  "5132": {"minimum_theta_support": "Cay(U(q), union four positive-root directions)", "degree": "4(q-1)", "anchors": [2,3,4,5]},
+  "5133": {"state_program_compiler": "(b;a,c,d) <-> (a;b,c+ab,d+2ac+a^2b)", "anchors": [2,3,4,5]},
+  "boundary": "q5/all-q apartment-code distance remains open at leaders >=18. Weight-six decoding is not certified. Even-q bicycle dimensions are outside the odd-q theorem. Controller/compiler results are finite algebra, not hardware performance."
+}
