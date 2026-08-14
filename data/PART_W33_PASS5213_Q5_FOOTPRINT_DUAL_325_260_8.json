@@ -1,0 +1,12 @@
+{
+  "pass":5213,
+  "status":"THEOREM_Q5_FOOTPRINT_DUAL_CODE_325_260_8",
+  "primal_dimension":65,
+  "dual_dimension":260,
+  "lower_bound":"Even point degrees imply E>=3t, hence t>=7",
+  "weight7_exclusion":{"base_neighbors":144,"intersection_edge_groups":36,"other_blocks_per_edge":4,"backtrack_nodes":265,"solutions":0},
+  "weight8_support":[119,124,183,188,209,302,317,318],
+  "weight8_geometry":"48 W-points covered twice; induced block graph K8 minus a perfect matching",
+  "code_parameters":"[325,260,8]_2",
+  "boundary":"Dual distance theorem only; primal d=25 remains open."
+}
