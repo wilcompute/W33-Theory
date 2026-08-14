@@ -1,0 +1,40 @@
+\ifdefined\WPassFiveOneOneEightLoaded\else
+\gdef\WPassFiveOneOneEightLoaded{1}
+\subsection*{Passes 5118--5125: q=5 cut--Delsarte barrier, theta isoperimetry, and the explicit $U_{81}$ compiler}
+The cut-gauge theorem of Pass~5110 and the q=5 leader bound of Pass~5111 admit a sharper distance-scheme continuation.  The q=5 chamber graph has shells $1,10,50,250,625$ and spectrum $10,4,-2,4\pm\sqrt{10}$.  Universal subcubic girth-eight bounds give at most $20,22,24$ adjacent chamber pairs for cut-minimal leaders of sizes $14,15,16$.  Exact Delsarte enumeration then gives apartment-weight lower bounds
+\[
+ 1160,\qquad 925,\qquad 680,
+\]
+respectively.  Hence a hypothetical q=5 word of weight below $625$ has minimum chamber leader at least $17$.
+
+There is also an all-$q$ support law.  The theta point graph is $8(q-1)$-regular.  Because every apartment lies in $4(q-1)$ theta checks and every codeword has even parity on each theta triple, every selected apartment has exactly $4(q-1)$ selected and $4(q-1)$ unselected theta neighbors.  Thus for every codeword support $S$,
+\[
+ \Gamma_\theta[S]\text{ is }4(q-1)\text{-regular},\qquad
+ |\delta_\theta(S)|=4(q-1)|S|.
+\]
+This is a necessary intrinsic isoperimetric constraint, not a converse to the theta parity equations.
+
+The local controller now has literal polynomial coordinates.  For the standard positive-root ordering,
+\[
+ u(a,b,c,d)=x_0(a)x_1(b)x_2(c)x_3(d)
+ =[x_0(a)x_2(c)x_3(d)]x_1(b)
+\]
+and
+\[
+ u=[x_1(b)x_2(c+ab)x_3(d+2ac+a^2b)]x_0(a).
+\]
+Hence the $H_{27}$ state coordinates and the $\mathbb F_3^3$ program coordinates are related by an explicit polynomial permutation of the regular $U_{81}$ basis.
+
+The q=3 root-coset Smith defect is also explicit.  An extra modular kernel vector $a$ gives an integral torsion generator $w=H^Ta/3$, and the unique $\mathbb Z/3$ quotient has trivial $U_{81}$ action and $V_4$ character $(+,-,+,-)$.  This is exactly the conjugation character of $Z(U_{81})=Z(H_{27})$, so
+\[
+ \operatorname{Tor}\operatorname{coker}(H^T)\cong Z(U_{81})
+\]
+as $\mathbb F_3[U_{81}\rtimes V_4]$-modules, up to the nonzero scalar choice.
+
+Finally, the protected-memory filtration extends through Jennings theory: in the safe prime-field range its Hilbert series is the product of one truncated $p$-string at every positive-root height.  Exact $A_2,p=3$, $C_2,p=5$, and $G_2,p=7$ profiles are frozen, while the separately computed $C_2,p=3$ packet remains a small-prime anchor.
+
+Three outside-box tests sharpen the firewall.  The q=7 root-coset ranks are $1183$ generically and $1173$ in characteristic seven, killing the naive cubic native-drop extrapolation.  Binary Levi bicycle dimensions at q=3,5,7 are $29,129,349$, matching $q^3+q-1$ at three exact anchors but remaining conjectural in general.  The torsion/triality identification above is equivariant, not a count coincidence.
+
+\paragraph{Boundary.}
+The q=5 minimum-distance theorem is still open beyond leader $16$.  No physical charge, particle, hardware-latency, or fault-tolerance interpretation is inferred from the arithmetic and modular modules.
+\fi
