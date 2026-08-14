@@ -2,10 +2,12 @@
   "schema": "w33.pass_namespace_registry.v2.entry",
   "range": [5082, 5089],
   "slug": "fourier_expansion_q4_shell_v12_decoder_and_three_bonkers",
-  "title": "Fourier extremizers, active-chart expansion, q=4 shell, V1,2 dictionary, global decoder, and three outside-box continuations",
-  "status": "RESERVED",
+  "title": "Fourier extremizers, active-chart expansion, q=4 panel kernel, V1,2 line-theta dictionary, global decoder, and three outside-box continuations",
+  "status": "EXECUTED",
   "owner": "openai-gpt56-sol",
   "reserved_at": "2026-08-14",
-  "purpose": "Execute the five queued fronts after Pass5074-5081: Fourier/Hecke extremizer attack; active-chart expansion theorem attack; q=4 equality shell via orbit/symmetry reduction; explicit Pal V1,2 line-theta chain dictionary; global q=3 decoder from the eight-entry local primitive. Passes5087-5089 are three independent outside-box probes chosen from resulting structures.",
-  "boundary": "Do not claim all-q d=q^4, q5 d=625, complete q4 minimum-shell classification, or a Pal V1,2 chain identification unless explicitly certified. Physical decoder claims remain finite-code/compiler statements unless a noise model and hardware evidence are supplied."
+  "executed_at": "2026-08-14",
+  "purpose": "Executed all five queued fronts after Pass5074-5081 plus three independent outside-box probes.",
+  "outcomes": "q2-q4 exact Fourier anchors; sharp q3 active-chart minimum 108; q4 [425,169,5] chamber-generator dependency code with 170 panel minima; standard rank-two Pal V1,2=line-theta dictionary; exhaustive global q3 two-error decoder and local triple traps; global 30D sqrt17 theta channel/conductor-two order; intrinsic recovery of all 1080 decoder charts; integral torsion-free oriented-apartment/theta presentation.",
+  "boundary": "All-q d=q^4, q5 d=625, and the complete q4 heavy-chart minimum shell remain open. The Pal identification is certified for the standard rank-two V1,2 relation type, not asserted as Pal's proof of Pass5066. Decoder results are finite hard-decision code statements, not physical noise thresholds."
 }
