@@ -1,0 +1,11 @@
+{
+  "schema":"w33.pass_namespace_registry.v2.entry",
+  "range":[5420,5427],
+  "slug":"apartment_cut_footprint_dual_conditioning_probes",
+  "title":"Apartment/cut duality, footprint bridge, overlap algebra, conditioning, and three outside-box probes",
+  "status":"RESERVED",
+  "owner":"openai-gpt56-sol-chat",
+  "reserved_at":"2026-08-15",
+  "purpose":"Execute the five queued directions after Pass5404-5411 plus three independent probes: complementary cut tight frame; cycle-to-footprint equivariant bridge; apartment-apartment overlap algebra; unsigned Gram conditioning; CI/publication closure; discrete q^4 derivative/boundary probe; exterior/Plucker probe; reciprocal spherical-kernel probe.",
+  "boundary":"Each pass must preserve theorem/evidence firewalls. No physical, coding-distance, contextuality, novelty, or CI-success claim may be promoted without a direct repo certificate or authoritative prior-art check."
+}
