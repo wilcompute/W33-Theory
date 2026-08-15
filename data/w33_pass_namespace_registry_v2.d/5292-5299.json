@@ -1,0 +1,11 @@
+{
+  "schema":"w33.pass_namespace_registry.v2.entry",
+  "range":[5292,5299],
+  "slug":"q9_orbit_allodd_rank_hoffman_monodromy_post5291",
+  "title":"q9 dual-shell orbit, all-odd footprint rank, Hoffman shortening, shell construction, PG32 monodromy, and three structural probes",
+  "status":"RESERVED",
+  "owner":"openai-gpt56-sol",
+  "reserved_at":"2026-08-14T21:36:00-04:00",
+  "purpose":"Execute the five live post-5291 fronts: close the q9 weight-16 dual orbit/moment distance if possible; prove or sharply reduce all-odd rank_2(F)=q(q^2+1)/2; attack exact Hoffman-13 shortened distance; derive a geometric all-odd dual-shell construction from q5/q7/q9; compute the PG(3,2) fiber monodromy/stabilizer action. Bonkers: q9 support-graph intrinsic geometry, simplex/Naimark coupling, and a recursive shell-lift mechanism across odd q.",
+  "boundary":"Do not claim q9 d=81, all-odd footprint rank equality, all-odd footprint distance q^2, or Hoffman d=40 without a proof/certificate. Keep computational orbit completeness labeled. Controller/monodromy statements are code geometry unless separately tied to physics."
+}
