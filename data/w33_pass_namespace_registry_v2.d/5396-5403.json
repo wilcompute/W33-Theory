@@ -1,0 +1,12 @@
+{
+  "schema":"w33.pass_namespace_registry.v2.entry",
+  "range":[5396,5403],
+  "slug":"cosine_sequence_prior_art_frames_designs_and_overlap_repair",
+  "title":"Whether mu/(k(1+s)) is classical, their seven frames against the simplex test, the equitable design, and repairing the reservation overlaps",
+  "status":"RESERVED",
+  "owner":"anthropic-claude-track-a",
+  "reserved_at":"2026-08-15",
+  "purpose":"Eight fronts. (1) Test the other lane's Pass5353 seven spherical tight frames against the Pass5342 simplex criterion -- their multisets contain -1/4 and -1/5, and a subset at constant -1/(N-1) is a regular simplex. (2) Resolve the 5376-5379 double-claim with the other lane. (3) Check whether any of the 12 historical registry overlaps produced actual duplicate passes. (4) Attempt the 13-cover stabiliser as a genuine group action rather than a generator count. (5) Audit every claim published this week for carrier-specificity, since two died the same way in two days. (6) Test whether the equitable complement (312 blocks each meeting the cover in exactly 6 of 13) is a 2-design. (7) Determine whether mu/(k(1+s)) is a named classical quantity BEFORE citing it as a derivation. (8) Run the simplex test across the corpus certificates to find unrecognised simplices.",
+  "boundary":"Front (7) is a prior-art question and its likely answer is that the quantity is textbook; if so the Pass5374 'derivation' must be recorded as a re-derivation, not a result. Front (4) yields an action only if a real permutation group is computed. Front (1) tests inner-product multisets already published by the other lane and re-derives nothing about their algebra. Front (6) requires the design parameters to be checked, not inferred from a single constant intersection number.",
+  "prior_art_check":"The simplex criterion is Pass1614's mechanism; the -1/(H-1) form was refuted at Pass5374 by Paley and replaced by mu/(k(1+s)), whose classical status is front (7) and is deliberately unasserted here."
+}
