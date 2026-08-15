@@ -120,6 +120,16 @@ GEOM_NOUNS = (
     # have caught the Pass 1098 / BT818 collision) survives the narrowing.
     "ovoid", "heptad", "tritangent", "double-six", "polar pair",
     "partial spread", "hyperbolic line", "totally isotropic", "spread",
+    # ADDED Pass 5280, and the omission cost six passes. Pass 4800 established
+    # alpha(W(3,5)) = 18 and titled itself "the deficit law is false"; Passes
+    # 5226-5275 re-derived both. It was invisible to this index because its
+    # results are 1-2 digit integers (RE_INT needs three digits) AND its nouns
+    # were "alpha" and "deficit", neither of which was in this list. The
+    # noun@n mitigation existed since Pass 1107 and simply did not know the words
+    # this lane uses. These are object nouns, not generic ones -- "alpha" here is
+    # the independence number, and the narrowing rationale above still holds.
+    "alpha", "independence number", "coclique", "deficit", "Hoffman bound",
+    "maximum partial ovoid",
 )
 RE_NOUN = re.compile(r"(?i)\b(" + "|".join(re.escape(n) for n in GEOM_NOUNS) + r")\b")
 RE_SMALL = re.compile(r"(?<![\d.\w])(\d{1,3})(?!\d)(?!\.\d)")

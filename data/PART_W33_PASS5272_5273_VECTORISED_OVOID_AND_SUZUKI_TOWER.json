@@ -1,0 +1,151 @@
+{
+ "boundary": "Pass 5264 settles alpha for EVEN q only, by explicit construction plus Hoffman; every pair is verified and the count is asserted equal to C(|O|,2). Pass 5265 computes group ORDERS and checks the q^2+1 factorisation by assertion -- it does not construct Sz(q), verify its action on the ovoid, or prove simplicity, all of which are classical and cited. Pass 4897's explicit polarity is q=8 only",
+ "pass_5272": {
+  "ceiling": "memory-bound (one block x n int64 array), not time-bound",
+  "largest": {
+   "alpha": 65537,
+   "q": 256,
+   "seconds": 1173.5,
+   "vertices": 16843009
+  },
+  "method": "numpy log/antilog GF(2^k) arithmetic, row-blocked pairwise check of the reversal-pairing form determined in Pass 5246",
+  "rows": [
+   {
+    "alpha": 1025,
+    "bad": 0,
+    "construction": "Suzuki-Tits sigma=x^8",
+    "form_pairs": [
+     [
+      0,
+      3
+     ],
+     [
+      1,
+      2
+     ]
+    ],
+    "n_valid_forms": 1,
+    "ovoid": 1025,
+    "pairs": 524800,
+    "q": 32,
+    "seconds": 2.8,
+    "settled_both_bounds": true,
+    "vertices": 33825
+   },
+   {
+    "alpha": 4097,
+    "bad": 0,
+    "construction": "elliptic quadric d=32",
+    "form_pairs": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ]
+    ],
+    "n_valid_forms": 1,
+    "ovoid": 4097,
+    "pairs": 8390656,
+    "q": 64,
+    "seconds": 23.0,
+    "settled_both_bounds": true,
+    "vertices": 266305
+   },
+   {
+    "alpha": 16385,
+    "bad": 0,
+    "construction": "Suzuki-Tits sigma=x^16",
+    "form_pairs": [
+     [
+      0,
+      3
+     ],
+     [
+      1,
+      2
+     ]
+    ],
+    "n_valid_forms": 1,
+    "ovoid": 16385,
+    "pairs": 134225920,
+    "q": 128,
+    "seconds": 122.2,
+    "settled_both_bounds": true,
+    "vertices": 2113665
+   },
+   {
+    "alpha": 65537,
+    "bad": 0,
+    "construction": "elliptic quadric d=32",
+    "form_pairs": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ]
+    ],
+    "n_valid_forms": 1,
+    "ovoid": 65537,
+    "pairs": 2147516416,
+    "q": 256,
+    "seconds": 1173.5,
+    "settled_both_bounds": true,
+    "vertices": 16843009
+   }
+  ],
+  "total_pairs": 2290657792
+ },
+ "pass_5273": {
+  "reading": "the ovoid is a group orbit, which is why it can be written down rather than searched for",
+  "tower": [
+   {
+    "already_in_corpus": true,
+    "order": 29120,
+    "q": 8,
+    "q2_plus_1": 65,
+    "split": [
+     13,
+     5
+    ]
+   },
+   {
+    "already_in_corpus": false,
+    "order": 32537600,
+    "q": 32,
+    "q2_plus_1": 1025,
+    "split": [
+     41,
+     25
+    ]
+   },
+   {
+    "already_in_corpus": false,
+    "order": 34093383680,
+    "q": 128,
+    "q2_plus_1": 16385,
+    "split": [
+     145,
+     113
+    ]
+   },
+   {
+    "already_in_corpus": false,
+    "order": 35115786567680,
+    "q": 512,
+    "q2_plus_1": 262145,
+    "split": [
+     545,
+     481
+    ]
+   }
+  ],
+  "why_odd_powers_only": "q^2+1 = (q+r+1)(q-r+1) needs r^2 = 2q, so 2q must be a square, so k must be odd -- the same parity that gives W(3,q) its Suzuki-Tits ovoid gives the ovoid its group"
+ },
+ "renumber_note": "computed as Passes 5264-5265 before the 5262-5269 double-reservation was discovered; renumbered to 5272-5273. Numbers unchanged."
+}

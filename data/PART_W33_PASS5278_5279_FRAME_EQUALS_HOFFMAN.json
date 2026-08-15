@@ -1,0 +1,89 @@
+{
+  "boundary": "This IDENTIFIES two known bounds as one number; it derives no new bound and neither route is original. The embedding is the standard eigenspace projection, checked equal-norm and two-distance by assertion at each q. The closing paragraph about two-distance bounds using BOTH inner products is a DIRECTION, not a result -- no such bound is constructed or shown to exist",
+  "pass_5278": {
+    "coincidence": "1 - 1/(-1/q^2) = q^2+1 = the Hoffman bound",
+    "frame_bound": "unit vectors at constant inner product c<0 satisfy N <= 1 - 1/c, from Gram positive-semidefiniteness",
+    "observation": "-1/25 = -1/q^2 at q=5",
+    "source": "Track B Pass5261: 156 minimum footprint words form an equal-norm two-distance tight frame in R^90, inner products 2/15 collinear and -1/25 noncollinear",
+    "why_they_meet": "a coclique uses only the noncollinear value, so a two-distance frame restricted to a coclique is a one-distance set"
+  },
+  "pass_5279": {
+    "all_agree": true,
+    "open_direction": "a bound using BOTH inner products would see the geometry; not constructed here",
+    "reading": "the frame route explains what the bound MEANS -- q^2+1 unit vectors at constant angle is all that fits -- and also why it cannot see existence: Gram PSD constrains how many fit, not whether the geometry realises them",
+    "rows": [
+      {
+        "agrees": true,
+        "collinear_ip": 0.1666666667,
+        "embedding_dim": 9,
+        "frame_bound": 5.0,
+        "hoffman": 5,
+        "minus_one_over_q2": -0.25,
+        "n": 15,
+        "nonc_is_minus_inv_q2": true,
+        "noncollinear_ip": -0.25,
+        "q": 2
+      },
+      {
+        "agrees": true,
+        "collinear_ip": 0.1666666667,
+        "embedding_dim": 24,
+        "frame_bound": 10.0,
+        "hoffman": 10,
+        "minus_one_over_q2": -0.1111111111,
+        "n": 40,
+        "nonc_is_minus_inv_q2": true,
+        "noncollinear_ip": -0.1111111111,
+        "q": 3
+      },
+      {
+        "agrees": true,
+        "collinear_ip": 0.15,
+        "embedding_dim": 50,
+        "frame_bound": 17.0,
+        "hoffman": 17,
+        "minus_one_over_q2": -0.0625,
+        "n": 85,
+        "nonc_is_minus_inv_q2": true,
+        "noncollinear_ip": -0.0625,
+        "q": 4
+      },
+      {
+        "agrees": true,
+        "collinear_ip": 0.1333333333,
+        "embedding_dim": 90,
+        "frame_bound": 26.0,
+        "hoffman": 26,
+        "minus_one_over_q2": -0.04,
+        "n": 156,
+        "nonc_is_minus_inv_q2": true,
+        "noncollinear_ip": -0.04,
+        "q": 5
+      },
+      {
+        "agrees": true,
+        "collinear_ip": 0.1071428571,
+        "embedding_dim": 224,
+        "frame_bound": 50.0,
+        "hoffman": 50,
+        "minus_one_over_q2": -0.0204081633,
+        "n": 400,
+        "nonc_is_minus_inv_q2": true,
+        "noncollinear_ip": -0.0204081633,
+        "q": 7
+      },
+      {
+        "agrees": true,
+        "collinear_ip": 0.0972222222,
+        "embedding_dim": 324,
+        "frame_bound": 65.0,
+        "hoffman": 65,
+        "minus_one_over_q2": -0.015625,
+        "n": 585,
+        "nonc_is_minus_inv_q2": true,
+        "noncollinear_ip": -0.015625,
+        "q": 8
+      }
+    ]
+  }
+}

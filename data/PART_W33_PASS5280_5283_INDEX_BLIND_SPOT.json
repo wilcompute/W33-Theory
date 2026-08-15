@@ -1,0 +1,71 @@
+{
+  "boundary": "Pass 5281's noise figures are measured over analysis/*.py and *.md only. alpha@7 and alpha@137 remain non-distinctive and are still dropped, so this fix makes ONE class of rediscovery catchable, not rediscovery in general. Pass 5283's inventory of the other lane's failure modes is read from their own boundary statements and correction commits -- it is what they DOCUMENT, not an audit of their work, and I have not run their code",
+  "pass_5280": {
+    "chain": [
+      "RE_INT requires 3+ digits, so 7/18/10/26 are invisible",
+      "noun@n mitigation exists since Pass 1107",
+      "GEOM_NOUNS lacked 'alpha' and 'deficit'",
+      "Pass 4800 emitted zero tokens and was absent entirely"
+    ],
+    "coverage": "2380/4014",
+    "pass4800_indexed_now": true,
+    "reading": "every noun in that lexicon is a fossil of one past failure, so it can only cover faults that already happened once"
+  },
+  "pass_5281": {
+    "alpha_18_files": 8,
+    "collision": "alpha means the fine-structure constant in the physics track; one token prefix, two meanings",
+    "distinct_tokens": 217,
+    "files_touched_pct": 7,
+    "new_nouns": [
+      "alpha",
+      "independence number",
+      "coclique",
+      "deficit",
+      "Hoffman bound",
+      "maximum partial ovoid"
+    ],
+    "still_dropped": {
+      "alpha@137": 74,
+      "alpha@7": 51
+    },
+    "surviving_cut": 206,
+    "would_have_caught_this_session": true
+  },
+  "pass_5282": {
+    "already_exists": "scripts/check_rediscovery.py, Pass 328",
+    "note": "third already-built discovery this turn -- Suzuki tower (Pass 4793), noun@n (Pass 1107), this hook (Pass 328)",
+    "planned": "a hook grepping a pass's numbers against RESULTS_INDEX"
+  },
+  "pass_5283": {
+    "explains": "Pass 5224's zero findings over 215 of their files -- the guards look for my faults, not theirs",
+    "their_modes": [
+      {
+        "evidence": "Pass5254-5261 header: 'authoritatively renumbered' to avoid overwriting",
+        "mode": "renumbering a concurrently-developed packet",
+        "my_guard": null
+      },
+      {
+        "evidence": "their boundary: 'Hoffman shortened distance must be certified exactly before promotion'",
+        "mode": "claim promoted before exact certification",
+        "my_guard": "check_search_power (partially -- it reads search claims, not certification status)"
+      },
+      {
+        "evidence": "their boundary: 'All-q formulas require proof beyond q3,q5,q7 anchors'",
+        "mode": "all-q formula from q3/q5/q7 anchors",
+        "my_guard": null
+      },
+      {
+        "evidence": "their Pass4996 firewall, 8 rules, fail-closed, currently red",
+        "mode": "stale claim reaching a published surface",
+        "my_guard": "check_retraction_propagation (generic; theirs is claim-specific)"
+      },
+      {
+        "evidence": "their results JSON maps 'original development filenames' as provenance",
+        "mode": "development filename vs authoritative pass number drift",
+        "my_guard": null
+      }
+    ],
+    "total": 5,
+    "uncovered": 3
+  }
+}
