@@ -1,0 +1,22 @@
+{
+  "pass":5301,
+  "status":"THEOREM_LATIN_TOROIDAL_Q4_HOFFMAN_SHARE_F2_4_SUBSTRATE_BUT_NOT_EDGE_GEOMETRY",
+  "vertices":16,
+  "substrate":"F2^2 x F2^2 = F2^4",
+  "latin_affine_spread":{
+    "row":[1,2,3],
+    "column":[4,8,12],
+    "symbol":[5,10,15],
+    "orthogonal_mate_1":[6,11,13],
+    "orthogonal_mate_2":[7,9,14]
+  },
+  "hoffman_latin_even_direction_orbits":[9,6],
+  "orbit_identification":"9 = three spread lines (row, column, symbol); 6 = the two additional orthogonal-mate spread lines.",
+  "toroidal_knight_Q4":{
+    "direction_set":[1,2,4,8],
+    "automorphism_order":384,
+    "spread_intersection":"two basis directions from the row line and two from the column line"
+  },
+  "not_same_graph":"The order-288 Hoffman/Latin-even affine quotient does not preserve the four Q4 edge directions. The shared object is the 16-point affine F2^4 substrate, not the Q4 edge graph.",
+  "boundary":"Exact finite affine/code bridge; no physical identification."
+}
