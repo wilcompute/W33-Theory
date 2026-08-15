@@ -1,4 +1,4 @@
-% Pass5428--5435: apartment tomography, unsigned inversion, modular defect, and post-minimum gap.
+% Pass5428--5435: apartment tomography, unsigned inversion, modular reconciliation, and post-minimum gap.
 \subsection{Canonical apartment tomography and the orientation Hodge filter}
 
 Let $C$ denote the signed flag--apartment incidence matrix of a generalized
@@ -66,25 +66,36 @@ $P=(q+1)(q^2+1)$,
 \]
 At $q=3$ this is $2^{456}3^{160}5^{105}$.
 
-\subsection{Characteristic-two extra point-kernel defect and the $q=5$ post-minimum gap}
+\subsection{Characteristic-two radical quotient and the $q=5$ post-minimum gap}
 
-For odd $q$, let $M_0$ be the even-weight point module, $K=\ker(F^{\mathsf T})$,
-and $C_W$ the binary $W$-line code.  Pass~5350 gives $C_W\subseteq K\subseteq M_0$
-and identifies $\operatorname{Rad}(\operatorname{im}F^{\mathsf T})$ with
-$F^{\mathsf T}(M_0)$.  To avoid collision with Pass~5421, which already denotes
-by $D_q$ the distinct apartment-to-footprint kernel in
-$0\to D_q\to H_1^*\to C_F\to0$, define instead
+Pass~5376 already closes the all-odd binary footprint theorem:
 \[
- X_q:=K/C_W=\ker(F^{\mathsf T})/C_W.
+ \operatorname{rank}_2F=g=\frac{q(q^2+1)}2,
+ \qquad
+ \ker(F^{\mathsf T})=C_W
 \]
-Then
+for every odd prime power $q$.  Pass~5350 independently identifies, for the
+even-weight point module $M_0$,
 \[
- \boxed{0\longrightarrow X_q\longrightarrow M_0/C_W
- \longrightarrow \operatorname{Rad}(\operatorname{im}F^{\mathsf T})\longrightarrow0.}
+ \operatorname{Rad}(\operatorname{im}F^{\mathsf T})=F^{\mathsf T}(M_0).
 \]
-If $r=\operatorname{rank}_2F$ and $g=q(q^2+1)/2$, then $\dim X_q=g-r$.
-Thus the open all-odd footprint-rank theorem is exactly $X_q=0$.  This uses no
-splitting of $\mathbb F_2[P^1(q)]$ and respects the Pass~5358 nonsplitting firewall.
+The general exact sequence
+\[
+ 0\longrightarrow X_q:=\ker(F^{\mathsf T})/C_W
+ \longrightarrow M_0/C_W
+ \longrightarrow \operatorname{Rad}(\operatorname{im}F^{\mathsf T})
+ \longrightarrow0
+\]
+therefore collapses by Pass~5376 to $X_q=0$, giving the canonical all-odd
+isomorphism
+\[
+ \boxed{M_0/C_W\cong\operatorname{Rad}(\operatorname{im}F^{\mathsf T}),}
+ \qquad \dim=g-1.
+\]
+This $X_q$ is only the transient extra point-kernel quotient and is distinct from
+Pass~5421's nonzero apartment-to-footprint kernel $D_q$ in
+$0\to D_q\to H_1^*\to C_F\to0$, where $\dim D_q=q^4-g$.  No splitting of
+$\mathbb F_2[P^1(q)]$ is used.
 
 At $q=5$, $K_0=[73125,560,1000]_2$.  Pass~5284 classifies every block-minimum
 word: there are $2340$, all of weight $1000$.  Every other word has at least $26$
@@ -99,10 +110,9 @@ so weights $1001,\ldots,1039$ are absent.  No weight-$1040$ witness is asserted.
 
 Pass~5381 closes eventual radius nine.  At weight ten, fix a false candidate by
 apartment transitivity and write $V$ for its vote.  The four incident charts are
-disjoint away from the candidate, so $V\le4$.  The four sectors close as follows.
-For $V=1$, an exact fixed-coordinate stopping-set MILP is infeasible.  For $V=2$,
-an exact MILP enforcing two local false votes and at least three spoiled charts at
-every true error is infeasible.
+disjoint away from the candidate, so $V\le4$.  For $V=1$, an exact fixed-coordinate
+stopping-set MILP is infeasible.  For $V=2$, an exact MILP enforcing two local
+false votes and at least three spoiled charts at every true error is infeasible.
 
 For $V=3$, the local false-center weights $6,7,8,9,10$ occur with counts
 \[
@@ -110,12 +120,9 @@ For $V=3$, the local false-center weights $6,7,8,9,10$ occur with counts
 \]
 A single outsider supplies at most two new local chart directions.  The exact
 local direction deficits are already too large for weights seven through ten, so
-only weight six plus four outsiders can survive the necessary spoiled-chart test.
-Its complete completion census contains
-\[
- \boxed{1296}
-\]
-rooted candidates, and every one clears under the actual deterministic decoder.
+only weight six plus four outsiders survives the necessary spoiled-chart test.
+Its complete completion census contains $\boxed{1296}$ rooted candidates, and
+every one clears under the actual deterministic decoder.
 
 For $V=4$, the raw rooted count is
 \[
@@ -126,10 +133,7 @@ eliminates the false center.  This exact prune leaves
 \[
  341{,}664+7{,}808+96=\boxed{349{,}568}
 \]
-necessary survivors, and all $349{,}568$ clear under the actual decoder.
-Therefore every weight-ten error either makes a nonempty true-only first
-correction and falls into the radius-nine basin, or is one of the exhaustively
-classified false-survivor cases and self-heals.  Hence
+necessary survivors, and all $349{,}568$ clear under the actual decoder.  Hence
 \[
  \boxed{r_{\rm eventual}=10.}
 \]
