@@ -1,0 +1,82 @@
+% Pass5316--5321: Latin/Q4 derivative and D4/tomotope square-face refinement.
+\subsection{Affine Latin colorings, $D_4$ triality, and the tomotope square-face action}
+
+Fix the explicit toroidal-knight--to--$Q_4$ labeling used by the router
+certificate, and encode the four Latin symbols by $\mathbb F_2^2$.  Pulling an
+order-four Latin square back to $\mathbb F_2^4$, define the four first
+differences
+\[
+  \Delta_iL(x)=L(x+e_i)+L(x)\in\mathbb F_2^2.
+\]
+An exhaustive census of all $576$ labeled Latin squares gives a sharp affine
+criterion.  The $144$ Klein-$V_4$ squares are exactly those for which all four
+$\Delta_iL$ are constant, equivalently the symbol map
+$L:\mathbb F_2^4\to\mathbb F_2^2$ is affine.  None of the $432$ cyclic-$C_4$
+squares is affine: $192$ have exactly one constant derivative ($48$ for each
+of the four $Q_4$ directions) and $240$ have none.  This refines the fixed
+knight-edge census of Pass5311; it is a coloring/code statement, not a symmetry
+group identification.
+
+For the Hoffman $13$-cell cover, let $H$ be the order-$576$ stabilizer and let
+$N\cong W(D_4)$ be the canonical order-$192$ normal subgroup of Pass5308, so
+$H/N\cong C_3$.  The ten $H$-orbits on four-cell subsets from Pass5302 refine
+to exactly $22$ $N$-orbits.  Four $H$-orbits remain transitive under $N$ and
+six split into triples of equal $N$-orbits.  Thus the outer $C_3$ acts literally
+as a triality fusion on the first open four-cell shortening layer.  This orbit
+refinement does not determine the shortened minimum distance.
+
+Under the Pass5300 affine isomorphism
+\[
+  H/Z(H)\cong L_+,
+\]
+where $L_+$ is the order-$288$ even-parastrophe group of the Klein Latin
+square, the characteristic order-$96$ subgroup corresponding to $N/Z(N)$
+fixes the row, column, and symbol lines of the five-line $PG(3,2)$ spread
+individually and swaps the two orthogonal-mate lines.  The quotient $C_3$ is
+represented by cyclic parastrophe,
+\[
+  \mathrm{row}\longmapsto\mathrm{column}\longmapsto\mathrm{symbol}
+  \longmapsto\mathrm{row},
+\]
+while fixing both mate lines.  This is the Latin-square realization of the
+outer $D_4$ triality factor; it is distinct from the inner $S_3$ quotient of
+the tomotope group.
+
+There is also a natural tesseract realization of the tomotope action.  The
+$tesseract$ has $24$ square faces, hence $12$ antipodal square-face pairs.
+The even-sign signed-permutation group $W(D_4)$ acts on those $12$ objects,
+and its central antipode is exactly the kernel.  The induced order-$96$ action
+is permutation-conjugate to the published Monson--Pellicer--Williams
+tomotope action; an explicit conjugating relabeling is
+\[
+  (0,1,4,5,8,9,11,10,7,6,3,2).
+\]
+Consequently
+\[
+  W(D_4)/\langle -I\rangle\curvearrowright
+  \{12\ \text{antipodal square-face pairs}\}
+  \cong \Gamma(\mathcal T)
+\]
+as degree-$12$ permutation representations.
+
+The three small non-diagonal orbitals of this action are perfect matchings.
+Their union is $3K_4$.  The three $K_4$ components are exactly the three
+complementary $2+2$ partitions of the four tesseract coordinate axes,
+\[
+  01\mid23,\qquad 02\mid13,\qquad 03\mid12.
+\]
+The kernel of the induced action on these three components is elementary
+abelian of order $16$, while the component action is $S_3$.  Hence the natural
+square-face action realizes the semidirect product directly:
+\[
+  \Gamma(\mathcal T)\cong (C_2)^4:S_3.
+\]
+
+Finally, the orientation-preserving tesseract group $R$ and $W(D_4)$ remain
+distinct order-$192$ double covers.  On the same $12$ antipodal square-face
+pairs, $W(D_4)/Z$ has orbital rank $5$ (three separate perfect-matching
+relations), whereas $R/Z$ has orbital rank $4$: it preserves one matching and
+fuses the other two into a degree-two relation.  Both share the same uncolored
+$3K_4$ skeleton, but the natural degree-$12$ representations are not
+permutation-conjugate.  No physical identification is inferred from these
+finite symmetry correspondences.
