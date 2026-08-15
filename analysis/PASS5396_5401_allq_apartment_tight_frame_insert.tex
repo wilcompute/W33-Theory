@@ -1,0 +1,96 @@
+% Pass5396--5401: all-q Levi apartment cycle tight-frame theorem.
+\subsection{All-\(q\) Levi apartments form the Hodge cycle tight frame}
+
+Continue with a generalized quadrangle \(\mathcal S\) of order \((q,q)\), its Levi graph
+\(\Gamma\), and its flag line graph \(X=L(\Gamma)\).  An apartment of the rank-two
+building is a simple \(8\)-cycle in \(\Gamma\).  Let
+\[
+C\in\{-1,0,1\}^{N\times M},
+\qquad
+N=(q+1)^2(q^2+1),
+\]
+be the signed flag-edge/apartment incidence matrix: every Levi edge is oriented from its
+point endpoint to its line endpoint, and every apartment column is given either cyclic
+orientation.  Reversing an apartment reverses its entire column and therefore leaves
+\(CC^{\mathsf T}\) unchanged.
+
+The apartment counts follow directly from the generalized-quadrangle axiom.  A
+nonbacktracking Levi path of five edges has endpoints consisting of a point and a
+nonincident line.  The unique projection of that point to that line supplies the unique
+three-edge return path, hence
+\[
+\boxed{\text{every nonbacktracking five-edge Levi path lies in a unique apartment}.}
+\]
+For a shorter fixed nonbacktracking path, the terminal vertex has \(q\) legal continuations
+after excluding the edge just traversed.  Each apartment containing the shorter path chooses
+exactly one of them.  Iterating therefore gives
+\[
+\boxed{
+\#\{\text{apartments containing flag edges }e,f\}=q^{4-d_X(e,f)}.
+}
+\]
+In particular every flag edge lies in \(q^4\) apartments.  Since every apartment contains
+eight flag edges,
+\[
+\boxed{
+M=\frac{Nq^4}{8}
+=\frac{(q+1)^2(q^2+1)q^4}{8}.
+}
+\]
+
+The fixed point-to-line orientation alternates signs around an apartment.  Thus two flag
+edges at line-graph distance \(d\) contribute relative sign \((-1)^d\), and the full overlap
+kernel is
+\[
+\boxed{
+CC^{\mathsf T}
+=q^4A_0-q^3A_1+q^2A_2-qA_3+A_4.
+}
+\]
+Passes 5388--5395 identified the right-hand side as \(N E_{-2}\).  Therefore
+\[
+\boxed{
+CC^{\mathsf T}=N E_{-2}=N P_{\rm cyc}.
+}
+\]
+Consequently the complete apartment family spans the entire Levi cycle space,
+\[
+\boxed{\operatorname{rank}C=q^4,}
+\]
+and its nonzero frame-operator eigenvalue is \(N\).
+
+Each apartment column has squared norm \(8\).  After dividing every column by \(\sqrt8\),
+the \(M=Nq^4/8\) apartment vectors form a unit-norm tight frame for the
+\(q^4\)-dimensional cycle space, with frame bound
+\[
+\boxed{N/8.}
+\]
+This is an exact all-\(q\) extension of the W33 cycle-frame theorem, not an analogy.
+
+At \(q=3\),
+\[
+N=160,\qquad q^4=81,\qquad M=\frac{160\cdot81}{8}=1620,
+\]
+and
+\[
+\boxed{
+CC^{\mathsf T}
+=81A_0-27A_1+9A_2-3A_3+A_4
+=160E_{-2}.
+}
+\]
+Thus the former BT545--BT549 identities
+\[
+160\cdot81=1620\cdot8=12960,
+\qquad
+\operatorname{spec}(CC^{\mathsf T})=160^{81}\oplus0^{79},
+\]
+are the \(q=3\) specialization of the general apartment tight-frame law.
+
+\paragraph{Prior-art and evidence boundary.}
+The flag association scheme and its symmetric four-class fusion are existing literature;
+targeted literature search also finds other tight-frame constructions built from generalized
+quadrangles.  No priority claim is made here for generalized-quadrangle tight frames in the
+broad sense.  The theorem asserted here is the explicit full-apartment cycle-incidence identity
+above and its Hodge specialization.  It does not assert tightness for arbitrary apartment
+subsets and does not by itself imply a code distance or physical fault-tolerance threshold.
