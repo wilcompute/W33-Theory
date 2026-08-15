@@ -1,0 +1,20 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [5428, 5435],
+  "slug": "apartment_tomography_radius10_modular_rank_next_frontiers",
+  "title": "All-q apartment tomography, unsigned conditioning, q3 radius-ten attack, odd-q modular footprint reduction, q5 K0 post-minimum gap, and three independent probes",
+  "status": "RESERVED",
+  "owner": "openai-gpt56-sol",
+  "reserved_at": "2026-08-15",
+  "passes": {
+    "5428": "reserved: canonical dual and exact reconstruction theorem for the all-q oriented apartment tight frame",
+    "5429": "reserved: exact unsigned apartment inverse and conditioning theorem from the all-q flag spectrum",
+    "5430": "reserved: q=3 provenance decoder radius-ten obstruction/falsifier attack beyond Pass5381",
+    "5431": "reserved: characteristic-2 all-odd footprint-rank reduction beyond the pair-Hecke characteristic-zero firewall",
+    "5432": "reserved: q=5 K0 post-minimum Hamming gap and second-shell lower bound",
+    "5433": "reserved: orientation sign-loss purifier theorem comparing unsigned visibility with signed Hodge projection",
+    "5434": "reserved: exact all-q unsigned apartment determinant/pseudodeterminant-volume invariant",
+    "5435": "reserved: independent synthesis probe chosen after live frontier reconciliation"
+  },
+  "boundary": "Reservation only. No theorem status is asserted until producer/certificate execution and reconciliation are complete. Passes 5412-5419 and 5420-5427 are owned by parallel sessions and are not touched."
+}
