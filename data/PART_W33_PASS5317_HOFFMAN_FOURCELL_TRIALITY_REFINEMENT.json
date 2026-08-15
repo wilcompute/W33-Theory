@@ -1,0 +1,28 @@
+{
+  "pass":5317,
+  "status":"THEOREM_HOFFMAN_FOURCELL_10_ORBITS_REFINE_TO_22_WD4_ORBITS",
+  "H_order":576,
+  "WD4_order":192,
+  "H_over_WD4":"C3",
+  "four_subsets":715,
+  "H_orbits":10,
+  "WD4_orbits":22,
+  "unsplit_H_orbits":4,
+  "triality_triple_H_orbits":6,
+  "WD4_orbit_size_histogram":{"3":1,"12":4,"16":4,"24":3,"48":9,"96":1},
+  "WD4_orbits_by_span_rank":{"33":2,"35":4,"38":4,"39":3,"40":9},
+  "orbit_refinement":[
+    {"H_orbit_size":3,"rank":33,"representative":[3,6,9,11],"WD4_orbit_size":3,"triality_split_factor":1},
+    {"H_orbit_size":12,"rank":33,"representative":[0,4,5,12],"WD4_orbit_size":12,"triality_split_factor":1},
+    {"H_orbit_size":16,"rank":35,"representative":[0,7,8,11],"WD4_orbit_size":16,"triality_split_factor":1},
+    {"H_orbit_size":144,"rank":35,"representative":[2,5,6,8],"WD4_orbit_size":48,"triality_split_factor":3},
+    {"H_orbit_size":96,"rank":38,"representative":[3,6,7,11],"WD4_orbit_size":96,"triality_split_factor":1},
+    {"H_orbit_size":144,"rank":38,"representative":[0,4,6,11],"WD4_orbit_size":48,"triality_split_factor":3},
+    {"H_orbit_size":36,"rank":39,"representative":[1,2,9,11],"WD4_orbit_size":12,"triality_split_factor":3},
+    {"H_orbit_size":48,"rank":40,"representative":[0,5,7,9],"WD4_orbit_size":16,"triality_split_factor":3},
+    {"H_orbit_size":72,"rank":40,"representative":[6,8,11,12],"WD4_orbit_size":24,"triality_split_factor":3},
+    {"H_orbit_size":144,"rank":40,"representative":[3,5,7,9],"WD4_orbit_size":48,"triality_split_factor":3}
+  ],
+  "conclusion":"Six Hoffman H-orbits are exactly fusions of three equal W(D4) orbits; four H-orbits are already W(D4)-transitive.",
+  "boundary":"Orbit refinement only; shortened [312,52,d]_2 distance remains in {28,32,36,40}."
+}

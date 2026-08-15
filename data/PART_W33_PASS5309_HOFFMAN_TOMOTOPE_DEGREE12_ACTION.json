@@ -1,0 +1,18 @@
+{
+  "pass":5309,
+  "status":"THEOREM_HOFFMAN_WD4_CENTRAL_QUOTIENT_IS_PUBLISHED_TOMOTOPE_ACTION",
+  "N_order":192,
+  "N_structure":"W(D4)",
+  "cover_orbits":[1,12],
+  "distinguished_cover_cell_index":0,
+  "action_kernel_order":2,
+  "action_kernel":"Z(W(D4))",
+  "induced_degree12_order":96,
+  "tomotope_published_group_order":96,
+  "explicit_12point_conjugator":[0,3,9,5,6,10,1,4,11,2,8,7],
+  "group_isomorphism":"W(D4)/Z(W(D4)) ~= Gamma(T)",
+  "tomotope_structure":"(C2)^4:S3",
+  "tomotope_invariants":{"center":1,"derived":48,"abelianization":"C2","element_orders":{"1":1,"2":27,"3":32,"4":36}},
+  "statement":"The induced Hoffman action on the 12 moving cover cells is permutation-conjugate to the published four-generator tomotope action.",
+  "boundary":"The fixed thirteenth Hoffman cell is not identified with a tomotope face by this action theorem."
+}

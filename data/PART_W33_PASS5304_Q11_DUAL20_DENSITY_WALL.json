@@ -1,0 +1,15 @@
+{
+  "pass":5304,
+  "status":"THEOREM_Q11_DUAL20_REQUIRES_AT_LEAST_120_SELECTED_CARRIER_EDGES_WITH_SEARCH_WALL",
+  "q":11,
+  "W_points":1464,
+  "P_components":7381,
+  "carrier_size":24,
+  "fixed_carrier_intersections":{"0":5940,"2":1440},
+  "dual20_double_count":"2e = sum_p binom(d_p,2), with every d_p even and sum d_p=480.",
+  "edge_lower_bound":120,
+  "equality":"e=120 iff every nonzero d_p=2, i.e. 240 W-points are covered exactly twice; then every selected carrier has degree12.",
+  "predicted_shell":"K10,10 plus a 2-factor on each half has 20 vertices, degree12 and exactly120 edges, so it saturates the necessary overlap bound.",
+  "bounded_search":{"unrestricted_fixed_coordinate":"35s HiGHS timeout, no incumbent","double_cover_fixed_adjacent_pair":"35s HiGHS timeout, no incumbent"},
+  "boundary":"Solver timeout is not a lower-bound certificate. No q11 dual20 existence/nonexistence or footprint d=121 theorem is claimed."
+}

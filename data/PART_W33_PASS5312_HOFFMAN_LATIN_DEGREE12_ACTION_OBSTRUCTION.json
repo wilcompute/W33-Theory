@@ -1,0 +1,11 @@
+{
+  "pass":5312,
+  "status":"THEOREM_HOFFMAN_LATIN_AFFINE_ISOMORPHISM_DOES_NOT_IDENTIFY_NATURAL_DEGREE12_ACTIONS",
+  "abstract_order288_bridge":"Pass5300 proves H/Z(H) is isomorphic to the Klein even-parastrophe group on the F2^4 affine module.",
+  "hoffman_degree12":{"transitive":true,"point_stabilizer":{"order":24,"center":2,"derived":4,"abelianization":[2,3],"element_orders":{"1":1,"2":7,"3":8,"6":8}}},
+  "latin_even_degree12":{"objects":"4 row + 4 column + 4 symbol labels","transitive":true,"point_stabilizer":{"order":24,"center":1,"derived":12,"abelianization":[2],"element_orders":{"1":1,"2":9,"3":8,"4":6}}},
+  "obstruction":"The point stabilizers are nonisomorphic, hence the natural transitive degree12 actions are not permutation-equivalent.",
+  "latin_autotopy96":{"center":1,"derived":48,"abelianization":[2],"element_orders":{"1":1,"2":27,"3":32,"4":36},"natural_12label_orbits":[4,4,4]},
+  "tomotope_boundary":"Latin autotopy96 is abstractly the same (C2)^4:S3 type as Gamma(T), but its natural 12-label action is 4+4+4 while the published tomotope action is transitive on12.",
+  "conclusion":"The Latin bridge is a 16-cell affine-module theorem; the tomotope bridge is a 12-moving-cell permutation-action theorem."
+}

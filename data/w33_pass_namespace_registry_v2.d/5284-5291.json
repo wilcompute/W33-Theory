@@ -1,0 +1,40 @@
+{
+  "schema":"w33.pass_namespace_registry.v2.entry",
+  "range":[5284,5291],
+  "slug":"post5262_full_distance_minword_shortening_oddq_q9_bonkers",
+  "title":"Post-distance q5 minimum-word shell, Hoffman shortening, q7/q9 footprint families, odd-q rank route, and three outside-box probes",
+  "status":"EXECUTED_WITH_HOFFMAN_SHORTENING_AND_ALLODD_EQUALITY_OPEN",
+  "owner":"openai-gpt56-sol",
+  "reserved_at":"2026-08-14T21:04:00-04:00",
+  "closed_at":"2026-08-14T21:22:00-04:00",
+  "passes":{
+    "5284":"THEOREM: complete q5 K0 block-minimum word shell has 2340 words; 15 on each of 156 W-point supports, exactly same-point chamber-star differences, all apartment weight1000.",
+    "5285":"THEOREM/DIAGNOSTIC: Hoffman13 complement splits into four exact cover-relative types (6,5,2)^144,(6,6,1)^96,(6,3,4)^48,(6,1,6)^24; shortened d remains in {28,32,36,40}.",
+    "5286":"THEOREM: q5/q7 dual-shell ambient stabilizers have orders192/72; abstract support-graph automorphism groups have orders384/864, giving indices2/12.",
+    "5287":"THEOREM: q9 footprint incidence has rank_2=369 and an explicit weight16 dual dependence; selected graph is 10-regular on16, complement two K8-minus-C8 components.",
+    "5288":"THEOREM: for every odd q the W-line code lies in ker(F^T), hence rank_2(F)<=q(q^2+1)/2; q=3,5,7,9 all attain equality; general equality remains open.",
+    "5289":"THEOREM: q5 K0 minimum shell is a PG(3,2) fiber bundle over the 156 W points, with fiber E6/<111111> ~= F2^4.",
+    "5290":"THEOREM: each fixed-point K0 minimum fiber is a diagonal constant 4D section over the 25-site F5^2 controller sheet; zero-extended restricted code [5625,4,1000]_2.",
+    "5291":"THEOREM: local fixed-point fiber is 5-fold replicated simplex [75,4,40]_2 plus150 zero columns; global 25-block fiber is 125-fold simplex [1875,4,1000]_2 plus3750 zero columns."
+  },
+  "artifacts":[
+    "data/PART_W33_PASS5284_5291_RESULTS.json",
+    "analysis/w33_pass5284_q5_K0_block_minimum_word_shell.py",
+    "analysis/w33_pass5285_hoffman13_fourtype_refinement.py",
+    "analysis/w33_pass5286_q5_q7_dualshell_stabilizer_gap.py",
+    "analysis/w33_pass5287_q9_footprint_rank_dual16_witness.py",
+    "analysis/w33_pass5288_alloddq_footprint_rank_upperbound_quotient.py",
+    "analysis/w33_pass5289_K0_minimum_shell_PG32_bundle.py",
+    "analysis/w33_pass5290_K0_controller_sheet_constant_section.py",
+    "analysis/w33_pass5291_K0_minimum_fiber_replicated_simplex.py",
+    "analysis/PASS5262_5269_q5_full_distance_block_shell_insert.tex",
+    "analysis/PASS5284_5291_postdistance_bundle_q9_insert.tex",
+    "tests/test_w33_pass5284_5291_packet.py",
+    ".github/workflows/w33_pass5284_5291_packet.yml",
+    "docs/pass5284-5291-postdistance.html",
+    "analysis/PASS5284_5291_index_insert.html",
+    "tools/integrate_pass5284_5291_public.py",
+    ".github/workflows/w33_pass5284_5291_site.yml"
+  ],
+  "boundary":"q5 apartment distance625 is closed by Pass5262. Hoffman shortened exact minimum, all-odd rank equality, q9 dual minimum and q9 footprint distance81 remain open. No physical dynamics are inferred from controller-sheet coordinate structures."
+}

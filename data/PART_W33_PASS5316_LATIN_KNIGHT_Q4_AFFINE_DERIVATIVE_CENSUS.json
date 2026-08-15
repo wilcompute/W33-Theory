@@ -1,0 +1,21 @@
+{
+  "pass":5316,
+  "status":"THEOREM_KLEIN144_EXACTLY_AFFINE_Q4_COLORINGS_CYCLIC432_DERIVATIVE_DEFECT",
+  "latin_squares":576,
+  "explicit_q4_labeling":"analysis/w33_self_entangled_qutrit_q4_router.py::KNIGHT_TO_Q4",
+  "symbol_field":"F2^2 via labels 0,1,2,3 and xor",
+  "klein_V4_class":{"count":144,"intercalates":12,"constant_q4_derivatives":4,"mask":15,"characterization":"exactly the Latin squares whose pulled-back symbol map F2^4 -> F2^2 is affine"},
+  "cyclic_C4_class":{"count":432,"intercalates":4,"constant_derivative_split":{"0":240,"1":192},"one_constant_direction_masks":{"1":48,"2":48,"4":48,"8":48},"no_cases_with_2_or_3_constant_directions":true},
+  "joint_refinement":{
+    "(4, 0, 0, 0)":48,
+    "(4, 8, 0, 0)":192,
+    "(4, 16, 1, 1)":48,
+    "(4, 16, 1, 2)":48,
+    "(4, 16, 1, 4)":48,
+    "(4, 16, 1, 8)":48,
+    "(12, 0, 4, 15)":48,
+    "(12, 16, 4, 15)":96
+  },
+  "relation_to_pass5311":"The five Pass5311 common grid/Q4 orbits are refined by affine derivative data: the two V4 orbits are affine; the C4 orbits have derivative defect 3 or 4.",
+  "boundary":"Finite coloring/code theorem for the fixed published knight-to-Q4 labeling. Counts 144,192,240 are not assigned physical meaning."
+}

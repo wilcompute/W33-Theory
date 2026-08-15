@@ -1,0 +1,27 @@
+{
+  "schema":"w33.pass_namespace_registry.v2.entry",
+  "range":[5308,5315],
+  "slug":"hoffman_d4_triality_tomotope_latin_q4_refinement",
+  "title":"Hoffman D4 triality, exact tomotope 12-action quotient, tesseract rotation near-miss, Latin/Q4 orbit census, and post-5300 refinements",
+  "status":"CLOSED_WITH_REPLAY_QUEUED",
+  "owner":"openai-gpt56-sol",
+  "reserved_at":"2026-08-14T22:58:00-04:00",
+  "closed_at":"2026-08-14T23:15:00-04:00",
+  "results":"data/PART_W33_PASS5308_5315_RESULTS.json",
+  "manuscript_insert":"analysis/PASS5308_5313_d4_triality_tomotope_insert.tex",
+  "manifest":"analysis/W33_CURRENT_FRONTIER_MANIFEST.tex",
+  "workflow":".github/workflows/w33_pass5308_5313_packet.yml",
+  "workflow_run_id":31860982458,
+  "workflow_status_at_close":"queued",
+  "passes":{
+    "5308":"H ~= W(D4):C3 triality theorem",
+    "5309":"W(D4)/Z equals the published tomotope degree-12 action",
+    "5310":"tesseract rotations and W(D4) are nonisomorphic order-192 central double covers of tomotope96",
+    "5311":"576 Latin squares split 96+192+288 under the fixed toroidal-knight Q4 statistic",
+    "5312":"natural degree-12 Hoffman/Latin actions are inequivalent despite the affine order-288 isomorphism",
+    "5313":"D4 triality C3 aligns with cyclic Klein-Latin parastrophe quotient C3",
+    "5314":"manuscript insert added",
+    "5315":"shared current-frontier manifest promoted"
+  },
+  "boundary":"Order coincidences are not identifications. The Hoffman order-192 subgroup is W(D4), not the orientation-preserving tesseract group. Their central quotients are isomorphic to tomotope96. The Latin 96+192+288 census is an exact Q4 statistic, not by itself a torsor/group identification. q11 d=121, the all-odd rank theorem, and the exact Hoffman-shortened distance remain open."
+}

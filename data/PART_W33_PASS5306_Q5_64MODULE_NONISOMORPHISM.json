@@ -1,0 +1,13 @@
+{
+  "pass":5306,
+  "status":"THEOREM_Q5_RELATION64_AND_FOOTPRINT_HULL64_ARE_NOT_ISOMORPHIC_PSP4_MODULES",
+  "relation_module":"ker_2(N)/<1>",
+  "relation_dimension":64,
+  "footprint_hull_dimension":64,
+  "test_element":"standard symplectic transvection",
+  "fixed_dimension_relation_module":4,
+  "fixed_dimension_footprint_hull":24,
+  "conclusion":"Fixed-space dimension is an isomorphism invariant, so no PSp4(5)-equivariant invertible 64x64 intertwiner exists.",
+  "consequence_for_frontier":"The all-odd rank/generation theorem cannot be closed by simply identifying the two q5 dimension-64 modules.",
+  "boundary":"Negative module theorem; it does not rule out non-equivariant vector-space bijections or other indirect maps."
+}

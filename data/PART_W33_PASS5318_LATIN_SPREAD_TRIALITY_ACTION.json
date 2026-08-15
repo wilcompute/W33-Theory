@@ -1,0 +1,16 @@
+{
+  "pass":5318,
+  "status":"THEOREM_D4_TRIALITY_IS_ROW_COLUMN_SYMBOL_C3_ON_KLEIN_MOLS_SPREAD",
+  "latin_even_group_order":288,
+  "characteristic_tomotope_kernel_order":96,
+  "kernel_structure":"(C2)^4:S3",
+  "quotient":"C3",
+  "spread_lines":{"row":[1,2,3],"column":[4,8,12],"symbol":[5,10,15],"mate1":[6,11,13],"mate2":[7,9,14]},
+  "kernel_direction_orbits":[[1,2,3],[4,8,12],[5,10,15],[6,7,9,11,13,14]],
+  "kernel_spread_action":["identity","swap(mate1,mate2)"],
+  "outer_triality_representative":{"order":3,"linear_columns":[4,8,5,10],"spread_permutation":[1,2,0,3,4]},
+  "outer_triality_action":"row -> column -> symbol -> row; mate1 and mate2 fixed individually",
+  "full_spread_action":"C3 on {row,column,symbol} times C2 on {mate1,mate2}",
+  "bridge":"Under Pass5300 H/Z ~= L+ and Pass5308 N=W(D4), the quotient H/N=C3 is realized on the Latin side by cyclic parastrophe of row, column, and symbol.",
+  "boundary":"Finite affine-geometry theorem; inner tomotope S3 and outer triality C3 are distinct."
+}

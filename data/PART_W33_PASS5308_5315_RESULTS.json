@@ -1,0 +1,14 @@
+{
+  "range":[5308,5315],
+  "status":"EXECUTED_WITH_REPLAY_WORKFLOW_31860982458_QUEUED",
+  "5308":{"status":"THEOREM_HOFFMAN576_IS_WD4_EXTENDED_BY_TRIALITY_C3","H_order":576,"WD4_order":192,"H_over_WD4":"C3","normal_V8_count":3,"triality_cycle":[1,2,0]},
+  "5309":{"status":"THEOREM_HOFFMAN_WD4_CENTRAL_QUOTIENT_IS_PUBLISHED_TOMOTOPE_ACTION","cover_orbits":[1,12],"kernel_order":2,"quotient_order":96,"explicit_degree12_conjugator":[0,3,9,5,6,10,1,4,11,2,8,7],"isomorphism":"W(D4)/Z ~= Gamma(T)"},
+  "5310":{"status":"THEOREM_TESSERACT_ROTATION_AND_WD4_ARE_DISTINCT_192_DOUBLE_COVERS_OF_TOMOTOPE96","rotation_order":192,"WD4_order":192,"nonisomorphism":"rotation has 48 elements of order8; WD4 has none","both_central_quotients_order":96,"intersection_order":96,"intersection_is_not_tomotope":true},
+  "5311":{"status":"THEOREM_ORDER4_LATIN_TOROIDAL_KNIGHT_Q4_CENSUS_96_192_288","latin_squares":576,"same_symbol_knight_edge_census":{"0":96,"8":192,"16":288},"common_action_orbit_sizes":[48,48,96,192,192]},
+  "5312":{"status":"THEOREM_HOFFMAN_LATIN_AFFINE_ISOMORPHISM_DOES_NOT_IDENTIFY_NATURAL_DEGREE12_ACTIONS","hoffman_point_stabilizer_center":2,"latin_point_stabilizer_center":1,"latin_autotopy_natural_orbits":[4,4,4]},
+  "5313":{"status":"THEOREM_D4_TRIALITY_C3_ALIGNS_WITH_KLEIN_LATIN_CYCLIC_PARASTROPHE_QUOTIENT","hoffman_quotient":"H/WD4=C3","latin_quotient":"L+/Autotopy=C3","order96_kernel_type":"(C2)^4:S3"},
+  "5314":{"status":"MANUSCRIPT_INSERT_ADDED","file":"analysis/PASS5308_5313_d4_triality_tomotope_insert.tex"},
+  "5315":{"status":"SHARED_FRONTIER_MANIFEST_PROMOTED","file":"analysis/W33_CURRENT_FRONTIER_MANIFEST.tex"},
+  "replay":{"workflow":".github/workflows/w33_pass5308_5313_packet.yml","run_id":31860982458,"status_at_freeze":"queued"},
+  "frontier":{"hoffman_shortened_distance":"OPEN: [312,52,d]_2 with d in {28,32,36,40}; Pass5302 reduces the four-cell layer to ten orbits.","q11_footprint_distance":"OPEN: Pass5304 gives a dual20 density wall, not d=121.","all_odd_rank":"OPEN in general despite anchors through q13.","physical_boundary":"All new 576/192/96/Latin/Q4 statements are finite group, code, or permutation-action theorems; no dynamical or physical identification is inferred from the integer coincidences."}
+}

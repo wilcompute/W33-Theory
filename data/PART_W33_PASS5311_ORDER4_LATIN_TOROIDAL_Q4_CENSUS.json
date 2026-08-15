@@ -1,0 +1,19 @@
+{
+  "pass":5311,
+  "status":"THEOREM_ORDER4_LATIN_TOROIDAL_KNIGHT_Q4_CENSUS_96_192_288",
+  "latin_squares":576,
+  "toroidal_knight_graph":{"vertices":16,"edges":32,"graph":"Q4"},
+  "same_symbol_knight_edge_census":{"0":96,"8":192,"16":288},
+  "identity":"576=96+192+288",
+  "intercalate_refinement":{"0,4":48,"0,12":48,"8,4":192,"16,4":192,"16,12":96},
+  "common_grid_Q4_board_group_order":128,
+  "with_symbol_relabeling_order":3072,
+  "common_action_orbits":[
+    {"size":48,"same_symbol_knight_edges":0,"intercalates":4},
+    {"size":48,"same_symbol_knight_edges":0,"intercalates":12},
+    {"size":192,"same_symbol_knight_edges":8,"intercalates":4},
+    {"size":192,"same_symbol_knight_edges":16,"intercalates":4},
+    {"size":96,"same_symbol_knight_edges":16,"intercalates":12}
+  ],
+  "boundary":"The 96+192+288 partition is an exact statistic on the fixed toroidal-knight Q4 substrate. Equal cardinalities with tomotope/D4/Hoffman quotient scales do not by themselves identify those subsets as group torsors."
+}

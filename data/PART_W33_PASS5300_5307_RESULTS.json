@@ -1,0 +1,80 @@
+{
+  "range":[5300,5307],
+  "status":"EXECUTED_WITH_ALLODD_Q11_AND_HOFFMAN_DISTANCE_OPEN",
+  "5300":{
+    "status":"THEOREM_HOFFMAN576_IS_CENTRAL_DOUBLE_LIFT_OF_EVEN_KLEIN_LATIN_AFFINE_SYMMETRY",
+    "hoffman_order":576,
+    "hoffman_structure":"2_+^{1+4} : (S3 x C3)",
+    "hoffman_center":2,
+    "klein_V4_autoparatopy_order":576,
+    "klein_structure":"2^4 : (S3 x S3)",
+    "latin_even_parastrophe_order":288,
+    "exact_bridge":"H/Z(H) ~= L+ ~= 2^4 : (S3 x C3), verified by an explicit GL4(2) conjugacy of the normal F2^4 actions.",
+    "negative":"The two order-576 groups are not isomorphic; 576=576 alone is not the connection."
+  },
+  "5301":{
+    "status":"THEOREM_LATIN_TOROIDAL_Q4_HOFFMAN_SHARE_F2_4_SUBSTRATE_BUT_NOT_EDGE_GEOMETRY",
+    "substrate":"16 cells = F2^4",
+    "latin_spread":"five PG(3,2) direction lines: row, column, symbol, two orthogonal mates",
+    "hoffman_latin_even_direction_orbits":[9,6],
+    "orbit_split":"three spread lines plus two spread lines",
+    "toroidal_knight":"Q4 on the same 16 vertices using only four basis directions",
+    "negative":"The order288 Hoffman/Latin-even affine quotient does not preserve Q4 edges."
+  },
+  "5302":{
+    "status":"THEOREM_HOFFMAN13_FOURCELL_LAYER_HAS_TEN_ORBITS",
+    "four_subsets":715,
+    "orbits":10,
+    "orbit_size_rank":[[3,33],[12,33],[16,35],[144,35],[96,38],[144,38],[36,39],[48,40],[72,40],[144,40]],
+    "boundary":"Exact d remains in {28,32,36,40}; bounded sub40 searches are not certificates."
+  },
+  "5303":{
+    "status":"THEOREM_Q13_FOOTPRINT_RANK_EQUALITY_ANCHOR",
+    "q13":{"W_points":2380,"P_components":14365,"carrier_size":28,"point_footprint_weight":169,"rank_F2":1105,"target_g":1105},
+    "rank_equality_anchors":{"q3":15,"q5":65,"q7":175,"q9":369,"q11":671,"q13":1105},
+    "boundary":"General K0=D_q remains open."
+  },
+  "5304":{
+    "status":"THEOREM_Q11_DUAL20_REQUIRES_AT_LEAST_120_SELECTED_CARRIER_EDGES_WITH_SEARCH_WALL",
+    "carrier_intersections":"0 or 2",
+    "necessary_edge_lower_bound":120,
+    "equality":"exactly 240 W-points covered twice and selected graph degree12",
+    "predicted_skeleton":"K10,10 plus a 2-factor on each half saturates the lower bound",
+    "search":"two symmetry-broken 35s HiGHS searches timed out with no incumbent and no infeasibility certificate",
+    "boundary":"q11 dual20 existence and footprint d=121 remain open."
+  },
+  "5305":{
+    "status":"THEOREM_Q5_K0_MINIMUM_SHELL_HAS_RANK21_PSP4_ORBITAL_CONFIGURATION",
+    "vertices":2340,
+    "group_order":4680000,
+    "point_stabilizer_order":2000,
+    "orbital_rank":21,
+    "subdegree_histogram":{"1":3,"4":3,"50":9,"125":3,"500":3},
+    "boundary":"Full rank21 intersection tensors/eigenmatrices remain open."
+  },
+  "5306":{
+    "status":"THEOREM_Q5_RELATION64_AND_FOOTPRINT_HULL64_ARE_NOT_ISOMORPHIC_PSP4_MODULES",
+    "relation_fixed_dimension_under_transvection":4,
+    "footprint_hull_fixed_dimension_under_transvection":24,
+    "conclusion":"No PSp4(5)-equivariant invertible 64x64 intertwiner exists."
+  },
+  "5307":{
+    "status":"THEOREM_ORDER4_LATIN_576_SPLITS_144_PLUS432_AND_MOLS_COMPLETION_IS_PG32_SPREAD",
+    "latin_total":576,
+    "V4_isotopy_class":144,
+    "C4_isotopy_class":432,
+    "PG3_2_spreads":56,
+    "GL4_2_spread_stabilizer":360,
+    "bridge":"Complete three-MOLS(4) geometry is a five-line PG(3,2) spread; the q5 A5-invariant fiber spread is GL4(2)-conjugate to such a spread.",
+    "boundary":"Conjugacy is exact; a canonical objectwise identification is not yet fixed."
+  },
+  "frontier":{
+    "q5_apartment":"[73125,625,625]_2, 936 chamber-star minima",
+    "q9_footprint":"[3321,369,81]_2",
+    "all_odd_rank":"rank equality verified through q=13 primes/anchors; theorem K0=D_q open",
+    "q11_footprint_distance":"open; weight20 dual shell not found or excluded",
+    "hoffman_shortening":"all <=3-cell spans min40; four-cell layer reduced to10 orbits; exact d open",
+    "latin576":"exact quotient bridge proved; direct order-576 group identity disproved",
+    "toroidal_Q4":"same F2^4 substrate as Latin/Hoffman affine quotient, different preserved edge geometry"
+  }
+}

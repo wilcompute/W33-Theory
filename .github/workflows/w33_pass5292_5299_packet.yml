@@ -1,0 +1,49 @@
+name: W33 Pass5292-5299 q9 and all-odd packet
+
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass5292_q9_orbit_moment_distance.py'
+      - 'analysis/w33_pass5293_allodd_rank_reduction_q11.py'
+      - 'analysis/w33_pass5294_hoffman_triple_orbit_generator.py'
+      - 'analysis/w33_pass5295_dual_shell_twofactor_template.py'
+      - 'analysis/w33_pass5296_pg32_fiber_A5_monodromy.py'
+      - 'analysis/w33_pass5297_q9_support_cayley_graph.py'
+      - 'analysis/w33_pass5298_q5_K0_minimum_shell_distance_distribution.py'
+      - 'analysis/w33_pass5299_allodd_local_fiber_relation_theorem.py'
+      - 'data/PART_W33_PASS5292_5299_RESULTS.json'
+      - 'tests/test_w33_pass5292_5299_packet.py'
+      - '.github/workflows/w33_pass5292_5299_packet.yml'
+  workflow_dispatch:
+
+jobs:
+  exact-replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install exact replay dependencies
+        run: python -m pip install --upgrade pip pytest sympy scipy numpy
+      - name: Fast theorem regression
+        run: pytest -q tests/test_w33_pass5292_5299_packet.py
+      - name: Replay q9 orbit moment closure
+        run: python analysis/w33_pass5292_q9_orbit_moment_distance.py
+      - name: Replay q11 rank anchor and all-odd reduction
+        run: python analysis/w33_pass5293_allodd_rank_reduction_q11.py
+      - name: Replay Hoffman triple-orbit closure
+        run: |
+          python analysis/w33_pass5294_hoffman_triple_orbit_generator.py --emit-cpp /tmp/p5294.cpp
+          g++ -O3 -std=c++17 /tmp/p5294.cpp -o /tmp/p5294
+          /tmp/p5294 > /tmp/p5294.cert
+          cat /tmp/p5294.cert
+          python analysis/w33_pass5294_hoffman_triple_orbit_generator.py --certificate /tmp/p5294.cert
+      - name: Replay finite shell and fiber structure
+        run: |
+          python analysis/w33_pass5295_dual_shell_twofactor_template.py
+          python analysis/w33_pass5296_pg32_fiber_A5_monodromy.py
+          python analysis/w33_pass5297_q9_support_cayley_graph.py
+          python analysis/w33_pass5298_q5_K0_minimum_shell_distance_distribution.py
+          python analysis/w33_pass5299_allodd_local_fiber_relation_theorem.py

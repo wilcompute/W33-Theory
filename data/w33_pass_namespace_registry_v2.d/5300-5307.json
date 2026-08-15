@@ -1,0 +1,27 @@
+{
+  "schema":"w33.pass_namespace_registry.v2.entry",
+  "range":[5300,5307],
+  "slug":"allodd_generation_q11_shell_hoffman4_latin576_hypercube",
+  "title":"All-odd generation, q11 footprint shell, Hoffman four-cell layer, 576 Latin-square bridge, toroidal knight/hypercube bridge, and three structural probes",
+  "status":"EXECUTED_WITH_ALLODD_Q11_AND_HOFFMAN_DISTANCE_OPEN",
+  "owner":"openai-gpt56-sol",
+  "reserved_at":"2026-08-14T22:12:00-04:00",
+  "closed_at":"2026-08-14T23:08:00-04:00",
+  "artifacts":[
+    "data/PART_W33_PASS5300_5307_RESULTS.json",
+    "analysis/w33_pass5300_hoffman576_latin_group_bridge.py",
+    "analysis/w33_pass5301_latin_torus_q4_shared_f2_4_substrate.py",
+    "analysis/w33_pass5302_hoffman_fourcell_orbit_reduction.py",
+    "analysis/w33_pass5303_q13_rank_anchor_allodd_generation.py",
+    "analysis/w33_pass5304_q11_dual20_density_wall.py",
+    "analysis/w33_pass5305_k0_minimum_shell_orbital_configuration.py",
+    "analysis/w33_pass5306_q5_64module_nonisomorphism.py",
+    "analysis/w33_pass5307_order4_latin_mols_pg32_spread.py",
+    "analysis/PASS5300_5307_latin576_q4_hoffman_insert.tex",
+    "tests/test_w33_pass5300_5307_packet.py",
+    ".github/workflows/w33_pass5300_5307_packet.yml",
+    "docs/pass5300-5307-latin576-q4.html"
+  ],
+  "outcomes":"Exact 576 bridge H/Z(H) ~= even Klein-Latin parastrophe affine group; shared F2^4 substrate with toroidal Q4 but different edge geometry; Hoffman four-cell layer reduced to10 orbits; q13 rank equality anchor1105; q11 dual20 requires >=120 selected carrier edges but witness/exclusion open; q5 K0 minimum shell has orbital rank21; the two q5 64-dimensional modules are nonisomorphic; order4 Latin census 144+432 and complete MOLS(4) gives a PG(3,2) five-line spread.",
+  "boundary":"The number 576 alone is not an identification. The direct order-576 group identity is disproved; the exact theorem is the central-quotient/even-parastrophe bridge. All-odd K0=D_q, q11 footprint d=121, and Hoffman shortened d=40 remain open. No physical dynamics are inferred from the Latin/toroidal/Hoffman finite geometry."
+}

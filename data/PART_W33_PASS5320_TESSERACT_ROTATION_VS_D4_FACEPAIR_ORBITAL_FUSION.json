@@ -1,0 +1,12 @@
+{
+  "pass":5320,
+  "status":"THEOREM_ROTATION96_IS_ORBITAL_FUSION_OF_D4_TOMOTOPE_FACEPAIR_SCHEME",
+  "same_12_objects":"antipodal pairs of the 24 tesseract square faces",
+  "abstract_group_orders":{"R_over_center":96,"WD4_over_center":96},
+  "WD4_tomotope_action":{"orbital_rank":5,"orbitals":[{"size":12,"relation":"diagonal","degree":1},{"size":12,"relation":"perfect_matching","degree":1},{"size":12,"relation":"perfect_matching","degree":1},{"size":12,"relation":"perfect_matching","degree":1},{"size":96,"relation":"residual_degree8","degree":8}],"cycle_type_histogram":{"(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)":1,"(1, 1, 1, 1, 2, 2, 2, 2)":21,"(2, 2, 2, 2, 2, 2)":6,"(2, 2, 4, 4)":36,"(3, 3, 3, 3)":32}},
+  "rotation_action":{"orbital_rank":4,"orbitals":[{"size":12,"relation":"diagonal","degree":1},{"size":12,"relation":"perfect_matching","degree":1},{"size":24,"relation":"2_factor","degree":2},{"size":96,"relation":"residual_degree8","degree":8}],"cycle_type_histogram":{"(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)":1,"(1, 1, 1, 1, 2, 2, 2, 2)":9,"(1, 1, 2, 2, 2, 2, 2)":12,"(1, 1, 2, 4, 4)":12,"(2, 2, 2, 2, 2, 2)":6,"(3, 3, 3, 3)":32,"(4, 4, 4)":24}},
+  "common_uncolored_small_relation":{"graph":"3 K4","components":[[0,1,10,11],[2,3,8,9],[4,5,6,7]],"edges":18,"degree":3},
+  "fusion":"The rotational action preserves one of the three tomotope perfect-matching orbitals and fuses the other two into a degree-2 relation (three C4 cycles).",
+  "nonconjugacy_certificate":"Orbital ranks differ: tomotope/D4 rank5 versus rotation rank4.",
+  "boundary":"R/Z and D/Z are abstractly isomorphic order96 groups, but their natural square-face-pair permutation representations are not conjugate."
+}

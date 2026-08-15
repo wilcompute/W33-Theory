@@ -1,0 +1,39 @@
+{
+  "schema":"w33.pass_namespace_registry.v2.entry",
+  "range":[5292,5299],
+  "slug":"q9_orbit_allodd_rank_hoffman_monodromy_post5291",
+  "title":"q9 dual-shell orbit, all-odd footprint rank, Hoffman shortening, shell construction, PG32 monodromy, and three structural probes",
+  "status":"EXECUTED_WITH_ALLODD_GENERATION_AND_HOFFMAN_FOURCELL_OPEN",
+  "owner":"openai-gpt56-sol",
+  "reserved_at":"2026-08-14T21:36:00-04:00",
+  "closed_at":"2026-08-14T21:58:00-04:00",
+  "passes":{
+    "5292":"THEOREM: q9 footprint code C_F=[3321,369,81]_2 from a 13,450,050-word dual-16 orbit with r=64800 and lambda_max=810.",
+    "5293":"THEOREM/REDUCTION: all-odd rank equality rank_2(F)=g is equivalent to K0=D_q, generation by same-point chamber-star differences; q11 rank anchor is 671.",
+    "5294":"THEOREM: the Hoffman-13 cover has six triple orbits and every three-cell shortened span has minimum40; sub40 words require at least four cells.",
+    "5295":"FINITE THEOREM: q5,q7,q9 dual supports share K_{q-1,q-1} plus a 2-factor on each half.",
+    "5296":"THEOREM: q5 PG(3,2) fiber monodromy image is PSL2(5)~=A5; line orbits 5,10,10,10 with a distinguished five-line spread.",
+    "5297":"THEOREM: q9 dual-16 support is the Cayley graph on Z8xZ2, K8,8+C8+C8; graph automorphism order512 versus ambient stabilizer128.",
+    "5298":"THEOREM: the 2340 q5 K0 minimum words span the full 560-dimensional residual and have a uniform six-distance distribution.",
+    "5299":"THEOREM: for odd q, local same-point fiber relations are ker_2(N)/<1> of dimension g-1, giving dim D_q=q^4-g and the rank-equivalence K0=D_q."
+  },
+  "artifacts":[
+    "analysis/w33_pass5292_q9_orbit_moment_distance.py",
+    "analysis/w33_pass5293_allodd_rank_reduction_q11.py",
+    "analysis/w33_pass5294_hoffman_triple_orbit_generator.py",
+    "analysis/w33_pass5295_dual_shell_twofactor_template.py",
+    "analysis/w33_pass5296_pg32_fiber_A5_monodromy.py",
+    "analysis/w33_pass5297_q9_support_cayley_graph.py",
+    "analysis/w33_pass5298_q5_K0_minimum_shell_distance_distribution.py",
+    "analysis/w33_pass5299_allodd_local_fiber_relation_theorem.py",
+    "data/PART_W33_PASS5292_5299_RESULTS.json",
+    "analysis/PASS5292_5299_q9_rank_fiber_insert.tex",
+    "tests/test_w33_pass5292_5299_packet.py",
+    ".github/workflows/w33_pass5292_5299_packet.yml",
+    "docs/pass5292-5299-q9-allodd.html",
+    "analysis/PASS5292_5299_index_insert.html",
+    "tools/integrate_pass5292_5299_public.py",
+    ".github/workflows/w33_pass5292_5299_site.yml"
+  ],
+  "boundary":"q9 footprint distance81 is closed. The all-odd footprint-rank equality and all-odd footprint-distance law remain open and are reduced to K0=D_q plus a general dual-shell construction. The Hoffman shortened exact distance remains open; any sub40 word must now use at least four cells. No physical monodromy/controller dynamics are asserted."
+}

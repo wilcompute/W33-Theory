@@ -1,0 +1,44 @@
+name: W33 Pass5284-5291 post-distance packet
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analysis/w33_pass5284_q5_K0_block_minimum_word_shell.py'
+      - 'analysis/w33_pass5285_hoffman13_fourtype_refinement.py'
+      - 'analysis/w33_pass5286_q5_q7_dualshell_stabilizer_gap.py'
+      - 'analysis/w33_pass5287_q9_footprint_rank_dual16_witness.py'
+      - 'analysis/w33_pass5288_alloddq_footprint_rank_upperbound_quotient.py'
+      - 'analysis/w33_pass5289_K0_minimum_shell_PG32_bundle.py'
+      - 'analysis/w33_pass5290_K0_controller_sheet_constant_section.py'
+      - 'analysis/w33_pass5291_K0_minimum_fiber_replicated_simplex.py'
+      - 'data/PART_W33_PASS5284_5291_RESULTS.json'
+      - 'tests/test_w33_pass5284_5291_packet.py'
+      - '.github/workflows/w33_pass5284_5291_packet.yml'
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install numeric test dependencies
+        run: python -m pip install --upgrade numpy scipy pytest
+      - name: Fast algebraic replays
+        run: |
+          python analysis/w33_pass5286_q5_q7_dualshell_stabilizer_gap.py
+          python analysis/w33_pass5288_alloddq_footprint_rank_upperbound_quotient.py
+          python analysis/w33_pass5289_K0_minimum_shell_PG32_bundle.py
+          python analysis/w33_pass5290_K0_controller_sheet_constant_section.py
+          python analysis/w33_pass5291_K0_minimum_fiber_replicated_simplex.py
+      - name: Exact q5 K0 minimum-word replay
+        run: python analysis/w33_pass5284_q5_K0_block_minimum_word_shell.py
+      - name: Exact q5 Hoffman four-type replay
+        run: python analysis/w33_pass5285_hoffman13_fourtype_refinement.py
+      - name: Exact q9 rank and dual witness replay
+        run: python analysis/w33_pass5287_q9_footprint_rank_dual16_witness.py
+      - name: Regression lock
+        run: pytest -q tests/test_w33_pass5284_5291_packet.py

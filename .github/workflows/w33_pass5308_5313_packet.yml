@@ -1,0 +1,37 @@
+name: W33 Pass5308-5313 D4 triality tomotope packet
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass5308_hoffman_d4_triality.py'
+      - 'analysis/w33_pass5309_hoffman_tomotope_degree12_action.py'
+      - 'analysis/w33_pass5310_tesseract_rotation_d4_tomotope_doublecovers.py'
+      - 'analysis/w33_pass5311_order4_latin_toroidal_q4_census.py'
+      - 'analysis/w33_pass5312_hoffman_latin_degree12_action_obstruction.py'
+      - 'analysis/w33_pass5313_d4_triality_latin_parastrophe_quotient.py'
+      - 'tests/test_w33_pass5308_5313_packet.py'
+      - '.github/workflows/w33_pass5308_5313_packet.yml'
+  workflow_dispatch:
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --upgrade pip
+      - run: pip install sympy scipy numpy pytest
+      - name: Hoffman W(D4) triality
+        run: python analysis/w33_pass5308_hoffman_d4_triality.py
+      - name: Hoffman central quotient to published tomotope action
+        run: python analysis/w33_pass5309_hoffman_tomotope_degree12_action.py
+      - name: Tesseract rotation vs W(D4) double covers
+        run: python analysis/w33_pass5310_tesseract_rotation_d4_tomotope_doublecovers.py
+      - name: All 576 Latin squares against toroidal knight Q4
+        run: python analysis/w33_pass5311_order4_latin_toroidal_q4_census.py
+      - name: Degree-12 action obstruction
+        run: python analysis/w33_pass5312_hoffman_latin_degree12_action_obstruction.py
+      - name: Triality/parastrophe quotient alignment
+        run: python analysis/w33_pass5313_d4_triality_latin_parastrophe_quotient.py
+      - run: pytest -q tests/test_w33_pass5308_5313_packet.py
