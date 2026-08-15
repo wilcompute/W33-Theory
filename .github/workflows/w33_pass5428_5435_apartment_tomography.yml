@@ -7,6 +7,7 @@ on:
       - 'analysis/w33_pass5428_allq_oriented_apartment_tomography.py'
       - 'analysis/w33_pass5429_allq_unsigned_apartment_inverse_conditioning.py'
       - 'analysis/w33_pass5430_q3_radius10_false_vote4_frontier.py'
+      - 'analysis/w33_pass5430_q3_v3_direction_cap_certificate.py'
       - 'analysis/w33_pass5431_allodd_modular_footprint_defect_exact_sequence.py'
       - 'analysis/w33_pass5432_q5_K0_postminimum_hamming_gap.py'
       - 'analysis/w33_pass5433_allq_orientation_spectral_purifier.py'
@@ -25,7 +26,7 @@ permissions:
 jobs:
   replay-publish-compile:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
         with:
@@ -39,6 +40,7 @@ jobs:
         run: |
           python analysis/w33_pass5428_allq_oriented_apartment_tomography.py
           python analysis/w33_pass5429_allq_unsigned_apartment_inverse_conditioning.py
+          python analysis/w33_pass5430_q3_v3_direction_cap_certificate.py
           python analysis/w33_pass5430_q3_radius10_false_vote4_frontier.py
           python analysis/w33_pass5431_allodd_modular_footprint_defect_exact_sequence.py
           python analysis/w33_pass5432_q5_K0_postminimum_hamming_gap.py
@@ -71,7 +73,8 @@ jobs:
           git add \
             data/PART_W33_PASS5428_ALLQ_ORIENTED_APARTMENT_TOMOGRAPHY.json \
             data/PART_W33_PASS5429_ALLQ_UNSIGNED_APARTMENT_INVERSE_CONDITIONING.json \
-            data/PART_W33_PASS5430_Q3_RADIUS10_FALSE_VOTE4_FRONTIER.json \
+            data/PART_W33_PASS5430_Q3_V3_DIRECTION_CAP.json \
+            data/PART_W33_PASS5430_Q3_GLOBAL_EVENTUAL_RADIUS10.json \
             data/PART_W33_PASS5431_ALLODD_MODULAR_FOOTPRINT_DEFECT_EXACT_SEQUENCE.json \
             data/PART_W33_PASS5432_Q5_K0_POSTMINIMUM_HAMMING_GAP.json \
             data/PART_W33_PASS5433_ALLQ_ORIENTATION_SPECTRAL_PURIFIER.json \
