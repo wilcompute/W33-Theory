@@ -3,9 +3,20 @@
   "range":[5376,5383],
   "slug":"footprint_quotient_mod2_intertwiner",
   "title":"Mod-2 footprint quotient/intertwiner continuation",
-  "status":"RESERVED",
+  "status":"PARTIAL_EXECUTION_WITH_NAMESPACE_COLLISION",
   "owner":"openai-gpt56-sol",
   "reserved_at":"2026-08-15T00:42:00-04:00",
-  "purpose":"Use the exact odd-q point-module filtration, the new PSL2 pair-space structure, and direct finite-field certificates to attack objectwise injectivity of the induced footprint map M/C_W -> carrier space; also search for q-mod-8 or local-stabilizer obstructions without assuming semisimplicity.",
-  "boundary":"Do not infer injectivity from dimensions or ordinary characters alone. Preserve extension-field generators for nonprime q, and keep all distance/minimum-weight firewalls intact."
+  "resolved_at":"2026-08-15T00:59:00-04:00",
+  "executed_by_owner":[
+    "Pass5376: all-odd binary footprint rank/kernel theorem closed.",
+    "Pass5377: all-odd rank-complement and K0=D_q generation triad closed.",
+    "Pass5378: complete footprint minimum shell spans the full code for all odd q.",
+    "Pass5379: exact binary point-code CSS family [[(q+1)(q^2+1),q^2+1,q+1]]_2."
+  ],
+  "concurrent_foreign_use":[
+    "Pass5380 was independently used by a parallel lane for a q=5 code-extension certificate.",
+    "Pass5381 was independently used by a parallel lane for a q=3 radius-9 census."
+  ],
+  "continuation":"Publication and logical-module work moved to clean namespace 5400-5407 rather than overwriting concurrent Pass5380/5381 artifacts.",
+  "boundary":"q=11 dual weight-20 existence/d=121 and Hoffman shortened-code distance remain open; no foreign 5380/5381 claims are absorbed into the Pass5376-5379 theorem packet."
 }
