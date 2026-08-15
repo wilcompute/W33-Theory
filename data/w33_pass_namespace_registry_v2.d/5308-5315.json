@@ -1,0 +1,11 @@
+{
+  "schema":"w33.pass_namespace_registry.v2.entry",
+  "range":[5308,5315],
+  "slug":"hoffman_d4_triality_tomotope_latin_q4_refinement",
+  "title":"Hoffman D4 triality, exact tomotope 12-action quotient, tesseract rotation near-miss, Latin/Q4 orbit census, and post-5300 refinements",
+  "status":"RESERVED",
+  "owner":"openai-gpt56-sol",
+  "reserved_at":"2026-08-14T22:58:00-04:00",
+  "purpose":"Extend the just-landed Pass5300-5307 packet without collision. Prove the canonical order-192 subgroup of the Hoffman-576 stabilizer is W(D4), identify its central quotient degree-12 action with the published tomotope automorphism action, separate this W(D4) subgroup from the non-isomorphic orientation-preserving tesseract group of the same order, classify all 576 order-4 Latin squares by the fixed toroidal-knight/Q4 statistic, and use the D4 triality C3 to refine the Hoffman four-cell and Latin bridges. Preserve all open q11/all-odd/distance firewalls.",
+  "boundary":"Order coincidences are not identifications. Require explicit normal-series, semidirect-product, module-conjugacy, or permutation-action certificates. Do not call the Hoffman order-192 subgroup the tesseract rotational subgroup unless an isomorphism is proved; current evidence distinguishes them. Tomotope identification must use the published four-generator degree-12 action already reconstructed in Pass1376."
+}
