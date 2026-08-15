@@ -1,0 +1,22 @@
+{
+  "schema": "w33.publication_frontier_contract.v2",
+  "frontier_root": "analysis/W33_CURRENT_FRONTIER_MANIFEST.tex",
+  "legacy_contract": "data/w33_current_frontier_manifest_v1.json",
+  "public_extension_contracts": [
+    "data/w33_public_frontier_extension_pass4461_4464.json"
+  ],
+  "front_doors": {
+    "w33_paper.tex": "w33_paper_body.tex",
+    "photonic_holonet.tex": "photonic_holonet_body.tex",
+    "holonet_machine_blueprint.tex": "holonet_machine_blueprint_body.tex"
+  },
+  "public_index": "docs/index.html",
+  "local_public_sections": [
+    {
+      "kind": "id",
+      "token": "pass-5364-5371-publication-dag-integrity",
+      "source": "analysis/PASS5364_5371_publication_integrity_index_insert.html"
+    }
+  ],
+  "boundary": "This contract certifies nested publication reachability, uniqueness, and public materialization only. It does not certify mathematical, hardware, laboratory, empirical, or physical claims."
+}
