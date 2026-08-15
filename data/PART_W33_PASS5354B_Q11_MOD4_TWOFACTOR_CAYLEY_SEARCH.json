@@ -1,0 +1,15 @@
+{
+  "pass":"5354b",
+  "status":"THEOREM_Q11_MOD4_CAYLEY_DUAL20_EQUALITY_WITNESS",
+  "q":11,
+  "order10_generator":{"exponents":[0,1],"diagonal":[1,2,1,6]},
+  "half_C10":[121,165,362,371,628,701,543,518,460,249],
+  "half_2C5":[879,1233,1028,989,920,1254,1043,1274,1145,1012],
+  "selected_carriers":[121,165,362,371,628,701,543,518,460,249,879,1233,1028,989,920,1254,1043,1274,1145,1012],
+  "point_multiplicity_histogram":{"0":1224,"2":240},
+  "carrier_graph":{"vertices":20,"degree":12,"edges":120,"cross_edges":100,"C10_internal_edges":10,"two_C5_internal_edges":10,"half_component_sizes":[[10],[5,5]],"type":"K10,10 + C10 + (C5+C5)"},
+  "dual_parity":"XOR of the 20 carrier point-incidence vectors is exactly zero",
+  "conclusion":"A genuine q11 weight-20 footprint-dual word exists and saturates the exact 120-edge overlap lower bound from Pass5304.",
+  "pattern":"q=5 C4|C4; q=7 C6|(C3+C3); q=9 C8|C8; q=11 C10|(C5+C5), supporting the q mod4 two-factor branch.",
+  "boundary":"This proves dual20 existence, not yet primal footprint distance121. A PSp4(11) pair-orbital moment certificate is still required."
+}

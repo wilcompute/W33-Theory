@@ -1,0 +1,14 @@
+<section id="pass-5376-5379-allodd-footprint-css" class="theorem-card" aria-labelledby="pass-5376-5379-title">
+  <h2 id="pass-5376-5379-title">All-odd footprint rank closed — and a binary CSS family drops out</h2>
+  <p><strong>Exact theorem for every odd prime power q.</strong> The binary P-component footprint image is no longer an experimentally anchored mystery:</p>
+  <p><code>im₂(F) = C<sub>W</sub><sup>⊥</sup></code>, so <code>rank₂(F)=q(q²+1)/2</code> and <code>ker₂(Fᵀ)=C<sub>W</sub></code>, where <code>C<sub>W</sub></code> is the binary W(3,q) line-incidence code.</p>
+  <p>The missing argument is module-theoretic. Lataille–Sin–Tiep prove that <code>C<sub>W</sub><sup>⊥</sup>/&lt;1&gt;</code> is simple in characteristic two. Every footprint block is orthogonal to every W-line, the sum of all footprint columns is the all-one vector, and one block is nonconstant. Therefore the footprint span must be the whole of <code>C<sub>W</sub><sup>⊥</sup>.</p>
+  <p>This closes the former three-way conjecture simultaneously:</p>
+  <p><code>rank₂(F)=g ⇔ ker₂(Fᵀ)=C<sub>W</sub> ⇔ K₀=D<sub>q</sub></code>.</p>
+  <p>The complete minimum shell is now also a spanning shell. Pass 5189 had already classified all minimum words of <code>C<sub>W</sub><sup>⊥</sup></code> as the dual grids <code>H∪H<sup>⊥</sup></code>, of weight <code>2(q+1)</code>. Those words are exactly the footprint columns, hence for odd q they generate the full code:</p>
+  <p><code>[(q+1)(q²+1), q(q²+1)/2, 2(q+1)]₂</code>.</p>
+  <p>Because <code>C<sub>W</sub><sup>⊥</sup> ⊂ C<sub>W</sub></code>, the same footprint code gives a binary point-code CSS family</p>
+  <p><strong><code>[[(q+1)(q²+1), q²+1, q+1]]₂</code></strong>, beginning with <code>[[40,10,4]]₂</code>, <code>[[156,26,6]]₂</code>, and <code>[[400,50,8]]₂</code>.</p>
+  <p class="boundary"><strong>Boundary.</strong> This does not solve the q=11 dual weight-20/d=121 problem, the Hoffman shortened-code distance in {28,32,36,40}, or any fault-tolerance/hardware threshold. The binary point CSS family is distinct from the ternary edge CSS <code>[[240,81,3]]₃</code>.</p>
+  <p class="repo-links">Evidence: <a href="../analysis/PASS5376_5379_allodd_footprint_rank_css_insert.tex">paper insert</a> · <a href="../analysis/w33_pass5376_allodd_footprint_rank_module_closure.py">rank proof certificate</a> · <a href="../data/PART_W33_PASS5379_ALLODD_BINARY_CSS_POINT_CODE.json">CSS certificate</a></p>
+</section>

@@ -1,0 +1,48 @@
+{
+  "schema": "w33.allq_levi_apartment_tight_frame.v1",
+  "pass_range": [5396, 5401],
+  "status": "THEOREM_COMBINATORIAL_HODGE_FRAME",
+  "domain": "Any finite generalized quadrangle of order (q,q), q>1.",
+  "path_completion_lemma": {
+    "length_5": "Every nonbacktracking Levi path of five edges closes uniquely to an 8-cycle by the generalized-quadrangle projection axiom.",
+    "recursion": "For a fixed shorter nonbacktracking path, each removed terminal edge restores exactly q legal extensions; therefore a distance-d flag-edge pair lies in q^(4-d) apartments."
+  },
+  "apartment_census": {
+    "flags": "N=(q+1)^2(q^2+1)",
+    "apartments_per_flag_edge": "q^4",
+    "total_apartments": "N q^4 / 8"
+  },
+  "overlap_kernel": {
+    "unsigned_by_distance_d=0..4": ["q^4", "q^3", "q^2", "q", "1"],
+    "signed_by_distance_d=0..4": ["q^4", "-q^3", "q^2", "-q", "1"],
+    "reason_for_sign": "With every Levi edge oriented point->line, signs alternate around every 8-cycle; the product for two edges is (-1)^d."
+  },
+  "tight_frame": {
+    "matrix": "C = signed flag-edge x apartment incidence matrix",
+    "identity": "C C^T = q^4 A0 - q^3 A1 + q^2 A2 - q A3 + A4 = N E_-2",
+    "rank": "q^4",
+    "column_norm_squared": 8,
+    "normalized_unit_frame_bound": "N/8",
+    "number_of_unit_vectors": "N q^4/8",
+    "ambient_cycle_dimension": "q^4"
+  },
+  "w33_specialization": {
+    "q": 3,
+    "C_shape": [160, 1620],
+    "CCt_kernel": [81, -27, 9, -3, 1],
+    "identity": "C C^T = 160 E_-2",
+    "reading": "Exactly the BT545-BT549 W33 oriented 8-cycle frame and Hodge/Kirchhoff cycle projector."
+  },
+  "anchors": {
+    "2": {"q":2,"flags":45,"cycle_dimension":16,"apartments":90,"apartments_per_flag_edge":16,"pair_apartment_counts_by_distance":[16,8,4,2,1],"signed_overlap_by_distance":[16,-8,4,-2,1],"CCt_nonzero_eigenvalue":45,"CCt_rank":16,"normalized_frame_bound":"45/8"},
+    "3": {"q":3,"flags":160,"cycle_dimension":81,"apartments":1620,"apartments_per_flag_edge":81,"pair_apartment_counts_by_distance":[81,27,9,3,1],"signed_overlap_by_distance":[81,-27,9,-3,1],"CCt_nonzero_eigenvalue":160,"CCt_rank":81,"normalized_frame_bound":"160/8"},
+    "4": {"q":4,"flags":425,"cycle_dimension":256,"apartments":13600,"apartments_per_flag_edge":256,"pair_apartment_counts_by_distance":[256,64,16,4,1],"signed_overlap_by_distance":[256,-64,16,-4,1],"CCt_nonzero_eigenvalue":425,"CCt_rank":256,"normalized_frame_bound":"425/8"},
+    "5": {"q":5,"flags":936,"cycle_dimension":625,"apartments":73125,"apartments_per_flag_edge":625,"pair_apartment_counts_by_distance":[625,125,25,5,1],"signed_overlap_by_distance":[625,-125,25,-5,1],"CCt_nonzero_eigenvalue":936,"CCt_rank":625,"normalized_frame_bound":"936/8"},
+    "7": {"q":7,"flags":3200,"cycle_dimension":2401,"apartments":960400,"apartments_per_flag_edge":2401,"pair_apartment_counts_by_distance":[2401,343,49,7,1],"signed_overlap_by_distance":[2401,-343,49,-7,1],"CCt_nonzero_eigenvalue":3200,"CCt_rank":2401,"normalized_frame_bound":"3200/8"},
+    "8": {"q":8,"flags":5265,"cycle_dimension":4096,"apartments":2695680,"apartments_per_flag_edge":4096,"pair_apartment_counts_by_distance":[4096,512,64,8,1],"signed_overlap_by_distance":[4096,-512,64,-8,1],"CCt_nonzero_eigenvalue":5265,"CCt_rank":4096,"normalized_frame_bound":"5265/8"},
+    "9": {"q":9,"flags":8200,"cycle_dimension":6561,"apartments":6725025,"apartments_per_flag_edge":6561,"pair_apartment_counts_by_distance":[6561,729,81,9,1],"signed_overlap_by_distance":[6561,-729,81,-9,1],"CCt_nonzero_eigenvalue":8200,"CCt_rank":6561,"normalized_frame_bound":"8200/8"},
+    "11": {"q":11,"flags":17568,"cycle_dimension":14641,"apartments":32151636,"apartments_per_flag_edge":14641,"pair_apartment_counts_by_distance":[14641,1331,121,11,1],"signed_overlap_by_distance":[14641,-1331,121,-11,1],"CCt_nonzero_eigenvalue":17568,"CCt_rank":14641,"normalized_frame_bound":"17568/8"},
+    "13": {"q":13,"flags":33320,"cycle_dimension":28561,"apartments":118956565,"apartments_per_flag_edge":28561,"pair_apartment_counts_by_distance":[28561,2197,169,13,1],"signed_overlap_by_distance":[28561,-2197,169,-13,1],"CCt_nonzero_eigenvalue":33320,"CCt_rank":28561,"normalized_frame_bound":"33320/8"}
+  },
+  "boundary": "The theorem uses the full set of apartments. It does not assert that arbitrary apartment subsets are tight frames and does not by itself establish code distance or physical fault tolerance."
+}

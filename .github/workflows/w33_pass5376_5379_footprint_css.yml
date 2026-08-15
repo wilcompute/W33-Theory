@@ -1,0 +1,54 @@
+name: W33 Pass5376-5379 footprint CSS packet
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5376_allodd_footprint_rank_module_closure.py'
+      - 'analysis/w33_pass5377_allodd_rank_complement_generation_closure.py'
+      - 'analysis/w33_pass5378_footprint_code_minimum_orbit.py'
+      - 'analysis/w33_pass5379_allodd_binary_css_point_code.py'
+      - 'analysis/w33_pass5406_css_logical_weil_clock.py'
+      - 'analysis/PASS5376_5379_allodd_footprint_rank_css_insert.tex'
+      - 'analysis/PASS5376_5379_allodd_footprint_rank_css_index_insert.html'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'tools/materialize_pass5376_5379_footprint_css.py'
+      - 'tests/test_w33_pass5376_5379_footprint_css_packet.py'
+      - '.github/workflows/w33_pass5376_5379_footprint_css.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  replay-test-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Replay exact arithmetic certificates
+        run: |
+          python analysis/w33_pass5376_allodd_footprint_rank_module_closure.py
+          python analysis/w33_pass5377_allodd_rank_complement_generation_closure.py
+          python analysis/w33_pass5378_footprint_code_minimum_orbit.py
+          python analysis/w33_pass5379_allodd_binary_css_point_code.py
+          python analysis/w33_pass5406_css_logical_weil_clock.py
+      - name: Run focused regression packet
+        run: python -m unittest tests.test_w33_pass5376_5379_footprint_css_packet
+      - name: Materialize homepage card
+        run: python tools/materialize_pass5376_5379_footprint_css.py
+      - name: Commit deterministic index mirrors if changed
+        run: |
+          if git diff --quiet -- docs/index.html index.html; then
+            echo 'Footprint/CSS card already materialized.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/index.html index.html
+          git commit -m 'Materialize Pass5376-5379 all-odd footprint CSS card'
+          git push

@@ -1,12 +1,21 @@
 {
   "schema":"w33.pass_namespace_registry.v2.entry",
   "range":[5396,5403],
-  "slug":"cosine_sequence_prior_art_frames_designs_and_overlap_repair",
-  "title":"Whether mu/(k(1+s)) is classical, their seven frames against the simplex test, the equitable design, and repairing the reservation overlaps",
-  "status":"RESERVED",
-  "owner":"anthropic-claude-track-a",
+  "slug":"allq_levi_apartment_cycle_tight_frame",
+  "title":"All-q Levi apartment incidence kernel and cycle-space tight frame",
+  "status":"CLOSED_SOURCE_COMPLETE_REMOTE_REPLAY_QUEUED",
+  "owner":"openai-gpt56-sol-chat",
   "reserved_at":"2026-08-15",
-  "purpose":"Eight fronts. (1) Test the other lane's Pass5353 seven spherical tight frames against the Pass5342 simplex criterion -- their multisets contain -1/4 and -1/5, and a subset at constant -1/(N-1) is a regular simplex. (2) Resolve the 5376-5379 double-claim with the other lane. (3) Check whether any of the 12 historical registry overlaps produced actual duplicate passes. (4) Attempt the 13-cover stabiliser as a genuine group action rather than a generator count. (5) Audit every claim published this week for carrier-specificity, since two died the same way in two days. (6) Test whether the equitable complement (312 blocks each meeting the cover in exactly 6 of 13) is a 2-design. (7) Determine whether mu/(k(1+s)) is a named classical quantity BEFORE citing it as a derivation. (8) Run the simplex test across the corpus certificates to find unrecognised simplices.",
-  "boundary":"Front (7) is a prior-art question and its likely answer is that the quantity is textbook; if so the Pass5374 'derivation' must be recorded as a re-derivation, not a result. Front (4) yields an action only if a real permutation group is computed. Front (1) tests inner-product multisets already published by the other lane and re-derives nothing about their algebra. Front (6) requires the design parameters to be checked, not inferred from a single constant intersection number.",
-  "prior_art_check":"The simplex criterion is Pass1614's mechanism; the -1/(H-1) form was refuted at Pass5374 by Paley and replaced by mu/(k(1+s)), whose classical status is front (7) and is deliberately unasserted here."
+  "purpose":"Extend Pass5388-5395 from the abstract Hodge idempotent to the explicit matrix of all oriented Levi 8-cycle apartments. Count apartment completions through pairs of flag edges, prove the signed overlap law (-1)^d q^(4-d), derive C C^T=N E_-2, count all apartments, and recover the q=3 160x1620 cycle-frame theorem as an exact specialization.",
+  "outcomes":[
+    "Proved every nonbacktracking five-edge Levi path has a unique apartment completion and derived q^(4-d) apartments through a distance-d flag-edge pair.",
+    "Counted q^4 apartments through every flag edge and N q^4/8 total apartments, with N=(q+1)^2(q^2+1).",
+    "Derived unsigned pair overlap q^4,q^3,q^2,q,1 and signed overlap q^4,-q^3,q^2,-q,1 by line-graph distance.",
+    "Proved C C^T=q^4A0-q^3A1+q^2A2-qA3+A4=N E_-2, so rank(C)=q^4 and the full apartment family is a tight frame for the Levi cycle space.",
+    "After dividing apartment columns by sqrt(8), obtained a unit-norm tight frame of N q^4/8 vectors in dimension q^4 with frame bound N/8.",
+    "Recovered the q=3 W33 certificate exactly: C is 160x1620, rank 81, signed kernel 81,-27,9,-3,1, and C C^T=160 E_-2.",
+    "Added executable verifier, frozen certificate, cross-regression against BT546, manuscript insert, public card source, publication-contract registration, and replay/compile workflow."
+  ],
+  "boundary":"The theorem concerns the complete apartment family and does not claim that arbitrary selected apartment subsets are tight. Targeted literature search found related generalized-quadrangle ETF constructions, so no broad priority claim is made for GQ-derived tight frames. The packet asserts the explicit full-apartment cycle-incidence/Hodge identity. No code-distance or physical fault-tolerance conclusion follows by itself. GitHub Actions was still queued at closure time, so remote CI success is not claimed.",
+  "status_note":"Source implementation complete on master; workflow run 31865615097 was registered and queued when the namespace was closed."
 }

@@ -1,0 +1,85 @@
+% Pass5404--5409: all-q unsigned apartment visibility spectrum.
+\subsection{Unsigned apartment visibility: the full flag space before Hodge signing}
+
+Let \(B=|C|\) be the unsigned flag-edge/apartment incidence matrix from the preceding
+apartment theorem.  The distance-\(d\) pair count is \(q^{4-d}\), so
+\[
+\boxed{
+BB^{\mathsf T}=q^4A_0+q^3A_1+q^2A_2+qA_3+A_4.
+}
+\]
+This is the unsigned companion to
+\[
+CC^{\mathsf T}=q^4A_0-q^3A_1+q^2A_2-qA_3+A_4.
+\]
+The sign change is not cosmetic: it changes the rank from the protected cycle sector to the
+entire flag space.
+
+Evaluating the unsigned radial kernel on the five adjacency eigenspaces of the flag distance
+scheme gives
+\[
+\boxed{
+\begin{aligned}
+\lambda_0&=8q^4,\\
+\lambda_+&=2q^2(q-1)\bigl(q+1+\sqrt{2q}\bigr),\\
+\lambda_m&=2q^2(q-1)^2,\\
+\lambda_-&=2q^2(q-1)\bigl(q+1-\sqrt{2q}\bigr),\\
+\lambda_c&=(q-1)^2(q^2+1),
+\end{aligned}}
+\]
+with multiplicities
+\[
+\boxed{
+1,\quad \frac{q(q+1)^2}{2},\quad q(q^2+1),\quad
+\frac{q(q+1)^2}{2},\quad q^4.
+}
+\]
+For \(q>1\), every eigenvalue is positive.  In particular,
+\[
+\boxed{\operatorname{rank}B=N=(q+1)^2(q^2+1).}
+\]
+The complete unsigned apartment family therefore spans the full real flag space.
+
+By contrast, the signed matrix satisfies
+\[
+\operatorname{rank}C=q^4.
+\]
+The missing dimensions are exactly
+\[
+\boxed{
+N-q^4
+=2(q+1)(q^2+1)-1
+=\operatorname{rank}D,
+}
+\]
+where \(D\) is the oriented incidence matrix of the connected Levi graph.  Thus the
+alternating point-to-line cycle signs remove precisely the Kirchhoff cut-space sector and
+retain precisely the cycle-space sector:
+\[
+\boxed{
+\text{unsigned visibility}=\text{cycle}\oplus\text{cut},
+\qquad
+\text{signed visibility}=\text{cycle}.
+}
+\]
+This supplies an all-\(q\) explanation of the q=3 rank complement \(160=81+79\).
+
+At \(q=3\), the unsigned spectrum becomes
+\[
+\boxed{
+648^1
+\oplus(144+36\sqrt6)^{24}
+\oplus72^{30}
+\oplus(144-36\sqrt6)^{24}
+\oplus40^{81},
+}
+\]
+exactly the BT546 unsigned Levi edge/apartment spectrum.  The signed matrix has rank \(81\),
+while the removed cut sector has rank \(79\), exactly as in BT549.  Hence the old 3-adic
+visibility kernel and the old cycle/cut tight-frame decomposition are both specializations of
+the same all-\(q\) orientation-sign mechanism.
+
+\paragraph{Evidence boundary.}
+This is a combinatorial spectral theorem about the full unsigned apartment-incidence Gram
+matrix and its relation to the signed Hodge matrix.  It is not a contextuality-degree theorem,
+a quantum-code minimum-distance theorem, or a physical noise-tolerance result.

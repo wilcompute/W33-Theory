@@ -3,10 +3,17 @@
   "range":[5364,5371],
   "slug":"publication_manifest_integrity_and_frontier_reachability",
   "title":"Publication manifest integrity and frontier reachability",
-  "status":"RESERVED",
+  "status":"CLOSED_SOURCE_COMPLETE_REMOTE_REPLAY_QUEUED",
   "owner":"openai-gpt56-sol-chat",
   "reserved_at":"2026-08-15T00:29:00-04:00",
-  "purpose":"Audit and repair the shared TeX/current-frontier publication DAG across w33_paper, photonic_holonet, holonet_machine_blueprint, and docs/index; derive exact reachability/uniqueness certificates and expose any stale manifest/config or public-materialization gaps without colliding with active mathematical lanes.",
-  "boundary":"Do not alter mathematical theorem content merely to satisfy publication checks; preserve historical bodies and evidence tiers; changes are restricted to publication reachability, audit correctness, deterministic materialization, and theorem-safe site summaries.",
-  "status_note":"Reserved after confirming 5340-5347, 5348-5355, and 5356-5363 are owned by parallel lanes."
+  "purpose":"Audit and repair the shared TeX/current-frontier publication DAG across w33_paper, photonic_holonet, holonet_machine_blueprint, and docs/index; derive exact reachability/uniqueness certificates and expose stale manifest/config or public-materialization gaps without colliding with active mathematical lanes.",
+  "outcomes":[
+    "Removed one duplicate live publication edge for BT4137-BT4144 while leaving theorem content unchanged.",
+    "Replaced the obsolete flat frontier audit with a recursive DAG audit and a v2 publication contract.",
+    "Consolidated the identical 28-file post-manifest tail from all three canonical wrappers into analysis/W33_SHARED_FRONTIER_TAIL.tex, reducing 84 manually duplicated wrapper edges to three shared-tail references while preserving order.",
+    "Registered legacy, extension-ledger, and local public-index sections under one collision-checked materialization contract.",
+    "Added focused regressions and three-manuscript replay/compile workflows."
+  ],
+  "boundary":"No mathematical theorem content, code parameter, hardware result, empirical claim, or evidence tier was changed by this packet. GitHub Actions remained queued at closure time, so remote CI success is not claimed.",
+  "status_note":"Source implementation complete on master; remote publication-DAG and site workflows were registered but still queued in the saturated Actions pool at the time this range was closed."
 }

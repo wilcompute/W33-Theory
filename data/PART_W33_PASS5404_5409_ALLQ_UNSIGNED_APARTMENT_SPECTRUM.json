@@ -1,0 +1,36 @@
+{
+  "schema":"w33.allq_unsigned_apartment_spectrum.v1",
+  "pass_range":[5404,5409],
+  "status":"THEOREM_EXACT_UNSIGNED_VISIBILITY_SPECTRUM",
+  "domain":"Any finite generalized quadrangle of order (q,q), q>1.",
+  "gram_kernel":"B B^T=q^4A0+q^3A1+q^2A2+qA3+A4",
+  "spectrum":{
+    "eigenvalues":["8q^4","2q^2(q-1)(q+1+sqrt(2q))","2q^2(q-1)^2","2q^2(q-1)(q+1-sqrt(2q))","(q-1)^2(q^2+1)"],
+    "multiplicities":["1","q(q+1)^2/2","q(q^2+1)","q(q+1)^2/2","q^4"]
+  },
+  "rank_complement":{
+    "unsigned_rank":"N=(q+1)^2(q^2+1)",
+    "signed_rank":"q^4",
+    "gap":"N-q^4=2(q+1)(q^2+1)-1=rank(D_Levi)",
+    "reading":"Unsigned apartment visibility spans the full flag space; alternating orientation signs project exactly onto the Levi cycle sector and remove the cut-space dimensions."
+  },
+  "w33_specialization":{
+    "unsigned_spectrum":"648^1 + (144+36sqrt6)^24 + 72^30 + (144-36sqrt6)^24 + 40^81",
+    "unsigned_rank":160,
+    "signed_rank":81,
+    "cut_rank":79,
+    "reading":"Exactly BT546/BT549."
+  },
+  "anchors":{
+    "2":{"q":2,"flags":45,"unsigned_rank":45,"signed_rank":16,"rank_gap_cut_space":29,"multiplicities":[1,9,10,9,16],"eigenvalues":["128","8*(3+sqrt(4))","8","8*(3-sqrt(4))","5"]},
+    "3":{"q":3,"flags":160,"unsigned_rank":160,"signed_rank":81,"rank_gap_cut_space":79,"multiplicities":[1,24,30,24,81],"eigenvalues":["648","36*(4+sqrt(6))","72","36*(4-sqrt(6))","40"]},
+    "4":{"q":4,"flags":425,"unsigned_rank":425,"signed_rank":256,"rank_gap_cut_space":169,"multiplicities":[1,50,68,50,256],"eigenvalues":["2048","96*(5+sqrt(8))","288","96*(5-sqrt(8))","153"]},
+    "5":{"q":5,"flags":936,"unsigned_rank":936,"signed_rank":625,"rank_gap_cut_space":311,"multiplicities":[1,90,130,90,625],"eigenvalues":["5000","200*(6+sqrt(10))","800","200*(6-sqrt(10))","416"]},
+    "7":{"q":7,"flags":3200,"unsigned_rank":3200,"signed_rank":2401,"rank_gap_cut_space":799,"multiplicities":[1,224,350,224,2401],"eigenvalues":["19208","588*(8+sqrt(14))","3528","588*(8-sqrt(14))","1800"]},
+    "8":{"q":8,"flags":5265,"unsigned_rank":5265,"signed_rank":4096,"rank_gap_cut_space":1169,"multiplicities":[1,324,520,324,4096],"eigenvalues":["32768","896*(9+sqrt(16))","6272","896*(9-sqrt(16))","3185"]},
+    "9":{"q":9,"flags":8200,"unsigned_rank":8200,"signed_rank":6561,"rank_gap_cut_space":1639,"multiplicities":[1,450,738,450,6561],"eigenvalues":["52488","1296*(10+sqrt(18))","10368","1296*(10-sqrt(18))","5248"]},
+    "11":{"q":11,"flags":17568,"unsigned_rank":17568,"signed_rank":14641,"rank_gap_cut_space":2927,"multiplicities":[1,792,1342,792,14641],"eigenvalues":["117128","2420*(12+sqrt(22))","24200","2420*(12-sqrt(22))","12200"]},
+    "13":{"q":13,"flags":33320,"unsigned_rank":33320,"signed_rank":28561,"rank_gap_cut_space":4759,"multiplicities":[1,1274,2210,1274,28561],"eigenvalues":["228488","4056*(14+sqrt(26))","48672","4056*(14-sqrt(26))","24480"]}
+  },
+  "boundary":"This is an unsigned visibility Gram spectrum and rank-complement theorem. It is not a contextuality-degree, code-distance, or physical-noise theorem."
+}

@@ -1,0 +1,47 @@
+{
+  "schema": "w33.allq_levi_flag_hodge.v1",
+  "pass_range": [5388, 5392],
+  "status": "THEOREM_ALGEBRAIC_AND_GRAPH_THEORETIC",
+  "domain": "Any finite generalized quadrangle of order (q,q), q>1; in particular W(3,q) for every prime power q.",
+  "literature_boundary": "Colangelo-Monzillo-Siciliano (Discrete Mathematics 347 (2024), 114054; arXiv:2406.03942) already establish the symmetric primitive 4-class flag fusion and its valencies. This certificate does not claim priority for that association scheme.",
+  "distance_theorem": {
+    "flag_graph": "The first fusion relation is the line graph of the Levi incidence graph.",
+    "intersection_array": "{2q,q,q,q ; 1,1,1,2}",
+    "distance_shells": "1, 2q, 2q^2, 2q^3, q^4",
+    "vertex_count": "(q+1)^2(q^2+1)"
+  },
+  "spectrum": {
+    "eigenvalues": ["2q", "q-1+sqrt(2q)", "q-1", "q-1-sqrt(2q)", "-2"],
+    "multiplicities": ["1", "q(q+1)^2/2", "q(q^2+1)", "q(q+1)^2/2", "q^4"],
+    "characteristic_polynomial": "(x-2q)(x+2)(x-q+1)((x-q+1)^2-2q)"
+  },
+  "hodge_bridge": {
+    "oriented_incidence_identity": "For the Levi graph oriented point->line, D^T D = 2I + A_X.",
+    "cycle_space": "ker(D)=E_{-2}(A_X)",
+    "rank_D": "2(q+1)(q^2+1)-1",
+    "cycle_dimension": "q^4",
+    "projector": "P_cyc=E_{-2}=((q^4)A0-(q^3)A1+(q^2)A2-qA3+A4)/((q+1)^2(q^2+1))",
+    "terminal_first_eigenmatrix_row": ["1", "-2", "2", "-2", "1"],
+    "terminal_second_eigenmatrix_column": ["q^4", "-q^3", "q^2", "-q", "1"]
+  },
+  "w33_specialization": {
+    "q": 3,
+    "flags": 160,
+    "shells": [1, 6, 18, 54, 81],
+    "cycle_dimension": 81,
+    "projector_numerator": [81, -27, 9, -3, 1],
+    "reading": "Exactly BT545-BT551: the W33 H1=81 Hodge/Kirchhoff projector is the q=3 terminal primitive idempotent."
+  },
+  "anchors": {
+    "2": {"flags":45,"shells":[1,4,8,16,16],"cycle_rank":16,"Q_terminal":[16,-8,4,-2,1]},
+    "3": {"flags":160,"shells":[1,6,18,54,81],"cycle_rank":81,"Q_terminal":[81,-27,9,-3,1]},
+    "4": {"flags":425,"shells":[1,8,32,128,256],"cycle_rank":256,"Q_terminal":[256,-64,16,-4,1]},
+    "5": {"flags":936,"shells":[1,10,50,250,625],"cycle_rank":625,"Q_terminal":[625,-125,25,-5,1]},
+    "7": {"flags":3200,"shells":[1,14,98,686,2401],"cycle_rank":2401,"Q_terminal":[2401,-343,49,-7,1]},
+    "8": {"flags":5265,"shells":[1,16,128,1024,4096],"cycle_rank":4096,"Q_terminal":[4096,-512,64,-8,1]},
+    "9": {"flags":8200,"shells":[1,18,162,1458,6561],"cycle_rank":6561,"Q_terminal":[6561,-729,81,-9,1]},
+    "11": {"flags":17568,"shells":[1,22,242,2662,14641],"cycle_rank":14641,"Q_terminal":[14641,-1331,121,-11,1]},
+    "13": {"flags":33320,"shells":[1,26,338,4394,28561],"cycle_rank":28561,"Q_terminal":[28561,-2197,169,-13,1]}
+  },
+  "boundary": "This theorem identifies a graph/Hodge sector. It does not by itself prove a quantum-code distance, a fault-tolerance threshold, or a physical protection mechanism."
+}
