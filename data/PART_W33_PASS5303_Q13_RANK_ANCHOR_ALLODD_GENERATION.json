@@ -1,0 +1,8 @@
+{
+  "pass":5303,
+  "status":"THEOREM_Q13_FOOTPRINT_RANK_EQUALITY_ANCHOR",
+  "q13":{"q":13,"W_points":2380,"P_components":14365,"nonisotropic_lines":28730,"carrier_size":28,"point_footprint_weight":169,"rank_F2":1105,"target_g":1105},
+  "rank_equality_anchors":{"q3":15,"q5":65,"q7":175,"q9":369,"q11":671,"q13":1105},
+  "all_odd_equivalence":"rank_2(F)=g=q(q^2+1)/2 iff K0=D_q, the span of same-point chamber-star differences.",
+  "boundary":"q13 is an exact finite anchor. The all-odd generation theorem K0=D_q remains open."
+}
