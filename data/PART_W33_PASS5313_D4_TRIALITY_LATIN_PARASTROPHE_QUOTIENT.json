@@ -1,0 +1,9 @@
+{
+  "pass":5313,
+  "status":"THEOREM_D4_TRIALITY_C3_ALIGNS_WITH_KLEIN_LATIN_CYCLIC_PARASTROPHE_QUOTIENT",
+  "hoffman_diagram":{"H_order":576,"WD4_order":192,"H_over_WD4":"C3","after_center":{"H_over_Z":288,"WD4_over_Z":96}},
+  "latin_diagram":{"even_parastrophe_order":288,"autotopy_order":96,"quotient":"C3"},
+  "order96_invariants":{"center":1,"derived":48,"abelianization":"C2","element_orders":{"1":1,"2":27,"3":32,"4":36},"structure":"(C2)^4:S3"},
+  "alignment":"Under the Pass5300 affine-module isomorphism H/Z ~= L+, the distinguished normal index-three subgroup W(D4)/Z corresponds to the Klein autotopy subgroup; the quotient C3 is D4 triality on the Hoffman side and cyclic row/column/symbol parastrophe on the Latin side.",
+  "boundary":"This is an affine-module/group quotient correspondence. Pass5312 proves the natural degree12 label actions are inequivalent."
+}
