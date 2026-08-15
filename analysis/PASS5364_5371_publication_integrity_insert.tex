@@ -13,17 +13,33 @@ once through the preserved pre-Pass4865 manifest and a second time through a dir
 the live wrapper.  The redundant edge has been removed; the theorem source itself is
 unchanged.
 
+A second source-level drift surface was then eliminated.  The three canonical wrappers each
+carried the same ordered block of 28 post-manifest theorem inputs.  Those 84 manually repeated
+edges have been replaced by one shared source,
+\texttt{analysis/W33\_SHARED\_FRONTIER\_TAIL.tex}, referenced exactly once after the
+current-frontier root by each manuscript.  This preserves the historical publication order
+while reducing the common post-frontier routing surface from 84 wrapper edges to three.
+Manuscript-specific earlier inserts remain untouched.
+
+The active source contract is now
+\texttt{data/w33\_publication\_frontier\_contract\_v2.json}.  It records the nested
+frontier root, the shared wrapper tail, all three front doors, the public index, and the later
+public-section extension.  The old v1 ordered list is retained as archival must-remain-reachable
+data rather than being mistaken for the current direct-child list.
+
 The publication guard now checks the following fail-closed conditions:
 \begin{enumerate}
 \item the nested manifest graph is acyclic;
 \item every referenced TeX source exists;
 \item every reachable theorem leaf has exactly one incoming publication path;
+\item the 28-leaf shared tail is internally unique and disjoint from the frontier root;
 \item each of \texttt{w33\_paper.tex}, \texttt{photonic\_holonet.tex}, and
-      \texttt{holonet\_machine\_blueprint.tex} enters the shared frontier exactly once;
-\item no front-door wrapper directly re-includes a leaf already reachable through the
-      shared frontier; and
-\item the older Pass-4144 required-input list is retained only as a must-remain-reachable
-      historical subset, rather than being mistaken for the current direct-child list.
+      \texttt{holonet\_machine\_blueprint.tex} enters the shared frontier and shared tail
+      exactly once, in that order;
+\item no front-door wrapper directly re-includes a leaf already reachable through either
+      shared source; and
+\item configured public-index sections, including extension-ledger sections, have unique
+      tokens and source files and materialize exactly once when the public audit is enabled.
 \end{enumerate}
 
 This is a publication-integrity theorem, not a mathematical or physical theorem.  It changes

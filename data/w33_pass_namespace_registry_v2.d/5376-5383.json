@@ -1,0 +1,11 @@
+{
+  "schema":"w33.pass_namespace_registry.v2.entry",
+  "range":[5376,5383],
+  "slug":"footprint_quotient_mod2_intertwiner",
+  "title":"Mod-2 footprint quotient/intertwiner continuation",
+  "status":"RESERVED",
+  "owner":"openai-gpt56-sol",
+  "reserved_at":"2026-08-15T00:42:00-04:00",
+  "purpose":"Use the exact odd-q point-module filtration, the new PSL2 pair-space structure, and direct finite-field certificates to attack objectwise injectivity of the induced footprint map M/C_W -> carrier space; also search for q-mod-8 or local-stabilizer obstructions without assuming semisimplicity.",
+  "boundary":"Do not infer injectivity from dimensions or ordinary characters alone. Preserve extension-field generators for nonprime q, and keep all distance/minimum-weight firewalls intact."
+}

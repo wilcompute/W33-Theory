@@ -7,6 +7,7 @@ on:
     paths:
       - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
       - 'analysis/W33_CURRENT_FRONTIER_MANIFEST_THROUGH_4864.tex'
+      - 'analysis/W33_SHARED_FRONTIER_TAIL.tex'
       - 'analysis/w33_pass5364_publication_dag_audit.py'
       - 'analysis/PASS5364_5371_publication_integrity_insert.tex'
       - 'analysis/PASS5364_5371_publication_integrity_index_insert.html'
@@ -17,6 +18,7 @@ on:
       - 'tools/integrate_bt3376_bt3389.py'
       - 'tools/materialize_pass5364_5371_publication_integrity.py'
       - 'tests/test_bt3376_3389_cohomology_tau_frontier.py'
+      - 'tests/test_w33_pass5364_5371_publication_dag.py'
       - 'w33_paper.tex'
       - 'photonic_holonet.tex'
       - 'holonet_machine_blueprint.tex'
@@ -47,9 +49,7 @@ jobs:
       - name: Focused regression
         run: |
           python -m pip install --disable-pip-version-check pytest
-          pytest -q \
-            tests/test_bt3376_3389_cohomology_tau_frontier.py::test_manifest_is_recursive_unique_and_preserves_legacy_required_reachability \
-            tests/test_bt3376_3389_cohomology_tau_frontier.py::test_live_wrappers_use_one_generated_manifest
+          pytest -q tests/test_w33_pass5364_5371_publication_dag.py
           git diff --check
       - uses: WtfJoke/setup-tectonic@v3
         with:
