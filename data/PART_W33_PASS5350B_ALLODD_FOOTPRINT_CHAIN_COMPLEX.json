@@ -1,0 +1,13 @@
+{
+  "pass":"5350b",
+  "status":"THEOREM_ALLODD_FOOTPRINT_CHAIN_COMPLEX_AND_CSS_LOGICAL_HOMOLOGY",
+  "domain":"all odd prime powers q",
+  "identities":["F^T F=0 over F2","F F^T=J over F2","FF^T vanishes on the even point module V0"],
+  "complex":"U_Pcarriers --F--> V0_even_points --F^T--> U_Pcarriers",
+  "rank_restriction":"Pass5376 gives rank(F)=g=q(q^2+1)/2; FF^T=J implies rank(F^T|V0)=g-1.",
+  "point_homology":"H_V=ker(F^T|V0)/im(F)=C_W/C_W^perp, dimension q^2+1.",
+  "carrier_homology":"H_U=ker(F)/im(F^T|V0), dimension q^2(q^2+1)/2 - 2g + 1.",
+  "css_bridge":"The Pass5379 binary CSS logical quotient is exactly H_V, so k=q^2+1 is a canonical chain-homology dimension.",
+  "geometric_parity_proof":"Carrier intersections are even because H∩K pairs with H^perp∩K^perp and H∩K^perp pairs with H^perp∩K under orthogonal complementation.",
+  "boundary":"Exact binary homological/code theorem; no physical topological-phase or hardware claim."
+}
