@@ -1,0 +1,21 @@
+{
+  "arithmetic_formula_check": {"count": 50, "odd_q_from": 3, "odd_q_through": 101},
+  "boundary": "For general q this is the canonical incident-line pair space, not an all-q minimum-K0-shell assertion. Orbital rank alone does not give an all-q Wedderburn decomposition or the binary footprint rank theorem.",
+  "burnside_proof": "For m=(q-1)/2, H=N(T_split) has order 2m. Identity contributes |Lambda|; nonidentity rotations contribute the base pair, with m extra pairs for the unique rotational involution iff m is even; each of m reflections fixes m+1 pairs.",
+  "consequence": "The q=5 rank-6 local algebra belongs to a growing all-odd Hecke-algebra family, not a uniform rank-6 object.",
+  "domain": "odd prime powers q",
+  "pass": 5357,
+  "prime_anchor_orbit_checks": {
+    "3":{"q":3,"m":1,"H_order":2,"fiber_size":6,"orbital_rank":4,"subdegrees":[1,1,2,2],"fixed_pair_sum":8,"burnside_rank":4,"q_mod_4":3},
+    "5":{"q":5,"m":2,"H_order":4,"fiber_size":15,"orbital_rank":6,"subdegrees":[1,1,1,4,4,4],"fixed_pair_sum":24,"burnside_rank":6,"q_mod_4":1},
+    "7":{"q":7,"m":3,"H_order":6,"fiber_size":28,"orbital_rank":7,"subdegrees":[1,3,3,3,6,6,6],"fixed_pair_sum":42,"burnside_rank":7,"q_mod_4":3},
+    "11":{"q":11,"m":5,"H_order":10,"fiber_size":66,"orbital_rank":10,"subdegrees":[1,5,5,5,5,5,10,10,10,10],"fixed_pair_sum":100,"burnside_rank":10,"q_mod_4":3},
+    "13":{"q":13,"m":6,"H_order":12,"fiber_size":91,"orbital_rank":12,"subdegrees":[1,3,3,6,6,6,6,12,12,12,12,12],"fixed_pair_sum":144,"burnside_rank":12,"q_mod_4":1},
+    "17":{"q":17,"m":8,"H_order":16,"fiber_size":153,"orbital_rank":15,"subdegrees":[1,4,4,8,8,8,8,8,8,16,16,16,16,16,16],"fixed_pair_sum":240,"burnside_rank":15,"q_mod_4":1},
+    "19":{"q":19,"m":9,"H_order":18,"fiber_size":190,"orbital_rank":16,"subdegrees":[1,9,9,9,9,9,9,9,9,9,18,18,18,18,18,18],"fixed_pair_sum":288,"burnside_rank":16,"q_mod_4":3},
+    "23":{"q":23,"m":11,"H_order":22,"fiber_size":276,"orbital_rank":19,"subdegrees":[1,11,11,11,11,11,11,11,11,11,11,11,22,22,22,22,22,22,22],"fixed_pair_sum":418,"burnside_rank":19,"q_mod_4":3}
+  },
+  "q5_recovery": "The formula gives rank 6 at q=5, agreeing with Pass5336.",
+  "rank_formula": {"q=1 mod4": "(3q+9)/4", "q=3 mod4": "(3q+7)/4"},
+  "status": "THEOREM_ALLODD_CANONICAL_PAIR_SPACE_ORBITAL_RANK_FORMULA"
+}

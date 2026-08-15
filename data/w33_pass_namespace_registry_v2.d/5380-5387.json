@@ -1,0 +1,20 @@
+{
+  "range": [5380, 5387],
+  "slug": "zeroK0_block_distance_radius8_modular_hoffman_allodd_parallel_synthesis",
+  "title": "Parallel-synthesis continuation: q5 zero-footprint block distance, q3 radius eight, modular K0/Jordan structure, Hoffman shortening, all-odd footprint theorem, and three independent probes",
+  "status": "RESERVED",
+  "owner": "openai-gpt56-sol",
+  "reserved_at": "2026-08-15",
+  "purpose": "Consume the current parallel frontier through Pass5358/5371 and execute the five outstanding research fronts plus three independent probes without duplicating active Pass5356-5363, publication-integrity Pass5364-5371, or Track-A Pass5372-5379 work.",
+  "targets": {
+    "5380": "q5 K0 block-distance <=15 support obstruction using the Pass5332-5338 orbital/branching algebra",
+    "5381": "q3 radius-eight eventual decoder orbit/falsifier theorem beyond the known 25920 echo family",
+    "5382": "q5 zero-footprint residual versus connected-L characteristic-2 Jordan chains",
+    "5383": "Hoffman-13 shortened [312,52] exact-distance attack",
+    "5384": "all-odd footprint rank/kernel theorem using Pass5350 Gram-radical and Pass5356-5358 pair-fiber structure",
+    "5385": "bonkers: K0 central-idempotent/tight-frame uncertainty bound for block support",
+    "5386": "bonkers: formal-derivative/root-fiber intersection tower cross-check against all-q chamber-star laws",
+    "5387": "bonkers: q5 residual block-support quotient / local-to-global representation certificate and packet integration"
+  },
+  "boundary": "Do not claim q5 d=625 until strict zero-footprint words are eliminated. Do not identify characteristic-zero constituents with binary modules by dimension. Do not promote radius8 unless orbit-complete eventual decoding is certified. Hoffman shortened distance and all-odd rank remain open until proved."
+}

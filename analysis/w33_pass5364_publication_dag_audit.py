@@ -1,20 +1,15 @@
 #!/usr/bin/env python3
-"""Pass5365: recursively audit the live W33 publication-frontier DAG.
+"""Pass5364--5371: recursively audit the live W33 publication frontier.
 
-The original current-frontier auditor was written while
-analysis/W33_CURRENT_FRONTIER_MANIFEST.tex was flat.  The live manifest is now a
-wrapper around W33_CURRENT_FRONTIER_MANIFEST_THROUGH_4864 plus later inserts.
-A flat direct-input comparison therefore became stale and, more importantly,
-could not detect the same theorem insert being reachable through both the
-nested legacy manifest and a new direct edge.
+The original current-frontier auditor assumed a flat manifest.  The live source
+is now nested, and all three canonical papers also share one post-manifest tail.
+This verifier checks those publication objects as an explicit source DAG using
+the v2 publication contract while retaining the old v1 ledger as archival
+must-remain-reachable data.
 
-This verifier treats the publication layer as a directed acyclic graph:
-
-  front-door wrapper -> current frontier root -> nested frontier manifests -> leaves.
-
-It checks exact file reachability, cycle freedom, leaf uniqueness, wrapper
-single-entry semantics, legacy-required reachability, and the configured public
-index tokens.  It deliberately does not certify mathematical or physical claims.
+Scope: source reachability, uniqueness, shared-tail consolidation, and public
+materialization only.  No mathematical, hardware, laboratory, empirical, or
+physical claim is certified.
 """
 from __future__ import annotations
 
@@ -22,18 +17,20 @@ import argparse
 import hashlib
 import json
 import re
-from collections import defaultdict
+from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-CONFIG = ROOT / "data/w33_current_frontier_manifest_v1.json"
+CONTRACT = ROOT / "data/w33_publication_frontier_contract_v2.json"
 INPUT_RE = re.compile(r"\\input\{([^}]+)\}%?")
-ROOT_MANIFEST = "analysis/W33_CURRENT_FRONTIER_MANIFEST"
-ROOT_MARKER = rf"\input{{{ROOT_MANIFEST}}}%"
 
 
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def load_json(path: Path) -> dict:
+    return json.loads(path.read_text(encoding="utf-8"))
 
 
 def tex_path(item: str) -> Path:
@@ -56,7 +53,7 @@ def is_nested_manifest(path: Path) -> bool:
     return path.name.startswith("W33_CURRENT_FRONTIER_MANIFEST")
 
 
-def build_frontier_dag(root_item: str = ROOT_MANIFEST) -> dict:
+def build_frontier_dag(root_item: str) -> dict:
     root = tex_path(root_item)
     assert root.is_file(), root
 
@@ -69,8 +66,11 @@ def build_frontier_dag(root_item: str = ROOT_MANIFEST) -> dict:
         node = rel_tex(path)
         if node in stack:
             raise AssertionError(f"frontier include cycle: {' -> '.join(stack + (node,))}")
+        if node in manifest_nodes:
+            raise AssertionError(f"manifest node reached more than once: {node}")
         manifest_nodes.append(node)
         children = parse_inputs(path)
+        assert len(children) == len(set(children)), (node, "duplicate direct include")
         nodes[node] = list(children)
         next_stack = stack + (node,)
         for child in children:
@@ -92,16 +92,37 @@ def build_frontier_dag(root_item: str = ROOT_MANIFEST) -> dict:
     }
     assert not duplicate_leaves, duplicate_leaves
     assert len(leaves) == len(set(leaves)), "duplicate leaf theorem insert in frontier DAG"
-    assert len(manifest_nodes) == len(set(manifest_nodes)), "manifest node reached more than once"
 
     return {
-        "root": root_item,
+        "root": rel_tex(root),
         "manifest_nodes": manifest_nodes,
         "nodes": nodes,
         "leaves": leaves,
         "leaf_count": len(leaves),
         "manifest_node_count": len(manifest_nodes),
         "incoming": {k: v for k, v in sorted(incoming.items())},
+    }
+
+
+def build_shared_tail(tail_item: str, forbidden: set[str]) -> dict:
+    path = tex_path(tail_item)
+    assert path.is_file(), path
+    leaves = parse_inputs(path)
+    assert leaves, "shared frontier tail is empty"
+    assert len(leaves) == len(set(leaves)), "duplicate theorem insert in shared frontier tail"
+    normalized = []
+    for item in leaves:
+        child = tex_path(item)
+        assert child.is_file(), child
+        normalized.append(rel_tex(child))
+    overlap = sorted(set(normalized) & forbidden)
+    assert not overlap, ("shared tail overlaps current-frontier root", overlap)
+    return {
+        "root": rel_tex(path),
+        "sha256": sha256(path),
+        "leaf_count": len(normalized),
+        "leaves": normalized,
+        "overlap_with_frontier": overlap,
     }
 
 
@@ -114,69 +135,131 @@ def section_count(index_text: str, section: dict) -> int:
     raise ValueError(f"unsupported public section kind: {section['kind']}")
 
 
-def audit(require_index: bool = True) -> dict:
-    config = json.loads(CONFIG.read_text(encoding="utf-8"))
-    dag = build_frontier_dag(config["tex_manifest"].removesuffix(".tex"))
-    reachable = set(dag["leaves"]) | set(dag["manifest_nodes"])
+def configured_public_sections(contract: dict, legacy: dict) -> tuple[list[dict], dict]:
+    sections = list(legacy.get("public_sections", []))
+    extension_meta = {}
+    for rel in contract.get("public_extension_contracts", []):
+        path = ROOT / rel
+        assert path.is_file(), path
+        extension = load_json(path)
+        assert extension.get("schema") == "w33.public_frontier_extension.v1", rel
+        added = list(extension.get("public_sections", []))
+        sections.extend(added)
+        extension_meta[rel] = len(added)
+    local = list(contract.get("local_public_sections", []))
+    sections.extend(local)
 
-    # The v1 list predates nesting.  It remains valuable as a historical
-    # must-remain-reachable subset, but it is no longer the direct child list.
-    legacy_required = list(config.get("required_ordered_inputs", []))
-    assert len(legacy_required) == len(set(legacy_required))
-    missing_legacy = [item for item in legacy_required if item not in reachable]
+    seen: set[tuple[str, str]] = set()
+    for section in sections:
+        key = (section["kind"], section["token"])
+        assert key not in seen, ("duplicate public token", key)
+        seen.add(key)
+        source = ROOT / section["source"]
+        assert source.is_file(), source
+    return sections, {
+        "legacy_count": len(legacy.get("public_sections", [])),
+        "extensions": extension_meta,
+        "local_count": len(local),
+        "total_count": len(sections),
+    }
+
+
+def audit(require_index: bool = True) -> dict:
+    contract = load_json(CONTRACT)
+    assert contract.get("schema") == "w33.publication_frontier_contract.v2"
+    legacy_path = ROOT / contract["legacy_contract"]
+    legacy = load_json(legacy_path)
+
+    root_item = contract["frontier_root"].removesuffix(".tex")
+    tail_item = contract["shared_wrapper_tail"].removesuffix(".tex")
+    root_marker = rf"\input{{{root_item}}}%"
+    tail_marker = rf"\input{{{tail_item}}}%"
+    dag = build_frontier_dag(root_item)
+    leaf_set = set(dag["leaves"])
+    tail = build_shared_tail(tail_item, leaf_set)
+    tail_set = set(tail["leaves"])
+    reachable = leaf_set | set(dag["manifest_nodes"])
+
+    # Historical v1 was a flat manifest contract.  Once the source became
+    # nested it ceased to be a direct-child list, but its entries remain a
+    # useful must-remain-reachable archival subset.  Record rather than hide
+    # any duplicate entries that accumulated in that historical ledger.
+    legacy_required = list(legacy.get("required_ordered_inputs", []))
+    counts = Counter(legacy_required)
+    legacy_duplicates = {k: v for k, v in sorted(counts.items()) if v > 1}
+    legacy_unique = list(dict.fromkeys(legacy_required))
+    missing_legacy = [item for item in legacy_unique if item not in reachable]
     assert not missing_legacy, missing_legacy
 
     wrappers = {}
-    leaf_set = set(dag["leaves"])
-    for wrapper_name, body_name in config["front_doors"].items():
+    for wrapper_name, body_name in contract["front_doors"].items():
         wrapper = ROOT / wrapper_name
         body = ROOT / body_name
         assert wrapper.is_file() and body.is_file()
         text = wrapper.read_text(encoding="utf-8")
         direct = parse_inputs(wrapper)
-        assert text.count(ROOT_MARKER) == 1, wrapper_name
+        assert len(direct) == len(set(direct)), (wrapper_name, "duplicate direct include")
+        assert text.count(root_marker) == 1, wrapper_name
+        assert text.count(tail_marker) == 1, wrapper_name
+        assert direct.index(root_item) < direct.index(tail_item), (wrapper_name, "tail must follow frontier root")
         assert direct.count(body_name.removesuffix(".tex")) + direct.count(body_name) == 1, wrapper_name
 
-        explicit_frontier = [
+        explicit = [
             item for item in direct
-            if item != ROOT_MANIFEST and item not in {body_name, body_name.removesuffix(".tex")}
+            if item not in {root_item, tail_item, body_name, body_name.removesuffix(".tex")}
         ]
-        duplicate_frontier = sorted(set(explicit_frontier) & leaf_set)
-        assert not duplicate_frontier, (wrapper_name, duplicate_frontier)
+        duplicate_root = sorted(set(explicit) & leaf_set)
+        duplicate_tail = sorted(set(explicit) & tail_set)
+        assert not duplicate_root, (wrapper_name, duplicate_root)
+        assert not duplicate_tail, (wrapper_name, duplicate_tail)
         wrappers[wrapper_name] = {
             "sha256": sha256(wrapper),
             "body": body_name,
-            "manifest_references": text.count(ROOT_MARKER),
-            "explicit_nonmanifest_inserts": len(explicit_frontier),
-            "duplicate_manifest_leaves": duplicate_frontier,
+            "manifest_references": text.count(root_marker),
+            "shared_tail_references": text.count(tail_marker),
+            "explicit_manuscript_specific_inserts": len(explicit),
+            "duplicate_manifest_leaves": duplicate_root,
+            "duplicate_shared_tail_leaves": duplicate_tail,
         }
 
-    index_path = ROOT / config["public_index"]
-    index_status = {"required": require_index, "path": str(index_path.relative_to(ROOT))}
+    sections, public_contract = configured_public_sections(contract, legacy)
+    index_path = ROOT / contract["public_index"]
+    index_status = {
+        "required": require_index,
+        "path": str(index_path.relative_to(ROOT)),
+        "contract": public_contract,
+    }
     if require_index:
         assert index_path.is_file(), index_path
         index_text = index_path.read_text(encoding="utf-8")
-        observed = {
-            section["token"]: section_count(index_text, section)
-            for section in config["public_sections"]
-        }
-        assert all(count == 1 for count in observed.values()), observed
+        observed = {section["token"]: section_count(index_text, section) for section in sections}
+        bad = {token: count for token, count in observed.items() if count != 1}
+        assert not bad, bad
         index_status.update({"sha256": sha256(index_path), "sections": observed})
 
     return {
-        "schema": "w33.publication_frontier_dag.v1",
-        "pass": 5365,
+        "schema": "w33.publication_frontier_dag.v2",
+        "pass_range": [5364, 5371],
         "status": "PASS",
-        "boundary": "Publication reachability only; no mathematical, hardware, laboratory, or physical claim is certified here.",
+        "boundary": contract["boundary"],
+        "contract": {
+            "path": str(CONTRACT.relative_to(ROOT)),
+            "sha256": sha256(CONTRACT),
+            "legacy_path": str(legacy_path.relative_to(ROOT)),
+            "legacy_sha256": sha256(legacy_path),
+        },
         "frontier": {
             "root": dag["root"],
             "manifest_nodes": dag["manifest_nodes"],
             "manifest_node_count": dag["manifest_node_count"],
             "leaf_count": dag["leaf_count"],
             "leaves": dag["leaves"],
-            "legacy_required_count": len(legacy_required),
+            "legacy_required_original_count": len(legacy_required),
+            "legacy_required_unique_count": len(legacy_unique),
+            "legacy_required_duplicates": legacy_duplicates,
             "legacy_required_missing": missing_legacy,
         },
+        "shared_tail": tail,
         "wrappers": wrappers,
         "index": index_status,
     }
@@ -195,7 +278,9 @@ def main() -> None:
     print(
         "PASS publication DAG "
         f"manifests={report['frontier']['manifest_node_count']} "
-        f"leaves={report['frontier']['leaf_count']}"
+        f"frontier_leaves={report['frontier']['leaf_count']} "
+        f"shared_tail={report['shared_tail']['leaf_count']} "
+        f"public={report['index']['contract']['total_count']}"
     )
     print(payload, end="")
 

@@ -10,7 +10,7 @@
     "7": {"PSL2_order": 168, "Sym2_Steinberg_dimension": 28, "pair_fiber_size": 28, "pair_stabilizer_order": 6, "q": 7},
     "9": {"PSL2_order": 360, "Sym2_Steinberg_dimension": 45, "pair_fiber_size": 45, "pair_stabilizer_order": 8, "q": 9}
   },
-  "boundary": "Characteristic-zero representation theorem only. In characteristic 2 the projective-line permutation module is not split as 1+St in the same way; no binary footprint-rank equality is inferred.",
+  "boundary": "For general odd q this is the canonical pair space of incident lines, not an assertion that every minimum K0 shell has that fiber. Characteristic-zero representation theorem only; no binary footprint-rank equality is inferred.",
   "domain": "odd prime powers q",
   "homogeneous_space": "C(P^1(q),2) ~= PSL2(q)/N(T_split), |N(T_split)|=q-1",
   "module_theorem": "Over C, C[C(P^1(q),2)] ~= Sym^2(St_q).",
@@ -28,6 +28,6 @@
     "The diagonal module is C[P^1(q)] and the off-diagonal module is C[C(P^1(q),2)].",
     "Semisimplicity cancels 1+St_q from Sym^2(1+St_q)=1+St_q+Sym^2(St_q)."
   ],
-  "q5_recovery": "dim Sym^2(St_5)=15 and Pass5336 gives 15=1+4+2*5.",
-  "status": "THEOREM_ALLODD_LOCAL_PAIR_FIBER_IS_SYM2_STEINBERG_IN_CHARACTERISTIC_ZERO"
+  "q5_recovery": "At q=5 the canonical 15-point pair space is exactly the Pass5336 K0 fiber; dim Sym^2(St_5)=15 and 15=1+4+2*5.",
+  "status": "THEOREM_ALLODD_CANONICAL_PAIR_FIBER_IS_SYM2_STEINBERG_IN_CHARACTERISTIC_ZERO"
 }

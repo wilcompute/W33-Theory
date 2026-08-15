@@ -1,0 +1,16 @@
+{
+  "pass":5361,
+  "status":"THEOREM_QMOD8_PAIR_WEIL_KLEIN_FOUR_CLOCK",
+  "table":{
+    "1":{"q_mod_8":1,"chi_2":1,"chi_minus2":1,"chi_minus1":1,"complex_pair_exceptional_sector":"present","binary_Weil_field":"F2"},
+    "3":{"q_mod_8":3,"chi_2":-1,"chi_minus2":1,"chi_minus1":-1,"complex_pair_exceptional_sector":"present","binary_Weil_field":"F4"},
+    "5":{"q_mod_8":5,"chi_2":-1,"chi_minus2":-1,"chi_minus1":1,"complex_pair_exceptional_sector":"absent","binary_Weil_field":"F4"},
+    "7":{"q_mod_8":7,"chi_2":1,"chi_minus2":-1,"chi_minus1":-1,"complex_pair_exceptional_sector":"absent","binary_Weil_field":"F2"}
+  },
+  "group_statement":"The map U(8)->{+/-1}^2, r |-> (chi_-2(r),chi_2(r)), is an isomorphism C2 x C2 -> C2 x C2.",
+  "product_character":"chi_-2 * chi_2 = chi_-1",
+  "pair_input":"Pass5360: exceptional complex pair appears exactly for residues 1,3 mod8.",
+  "weil_input":"Pass223: characteristic-2 Weil factors descend to F2 exactly for residues 1,7 mod8; residues 3,5 require F4.",
+  "interpretation":"The local characteristic-zero pair module and the global characteristic-two rank-3 shadow carry complementary q-mod-8 bits.",
+  "boundary":"Arithmetic/representation-theoretic compatibility only. No isomorphism is claimed between the complex exceptional characters and the characteristic-2 Weil modules; no footprint-rank theorem follows."
+}
