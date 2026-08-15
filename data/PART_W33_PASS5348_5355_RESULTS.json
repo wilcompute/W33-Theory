@@ -1,0 +1,98 @@
+{
+  "range":[5348,5355],
+  "status":"EXECUTED_Q11_DISTANCE_AND_ALLODD_RANK_CLOSED_HOFFMAN_CLEAN_SAT_PENDING",
+  "5348":{
+    "status":"EXACT_HOFFMAN_XORSAT_MODEL_COMMITTED_CLEAN_REPLAY_PENDING",
+    "code":"[312,52,d]_2",
+    "query":"exists nonzero shortened word of weight <=39",
+    "model":"injective 52-bit generator, exact coordinate XOR equations, nonzero message, at-most-39 cardinality",
+    "known_distance_set":[28,32,36,40],
+    "boundary":"The exact solver workflow is queued; do not promote d=40 until an UNSAT replay completes."
+  },
+  "5348b":{
+    "status":"SYMMETRY_BROKEN_Q5_HULL_DISTANCE_XORSAT_MODEL_COMMITTED",
+    "code":"q5 footprint hull [325,64,d_H]_2",
+    "query":"support contains a fixed carrier coordinate and weight <=36",
+    "logic":"PSp4(5) is transitive on 325 carrier coordinates; the hull is doubly even and the parent footprint code has d=25, so only 28,32,36 can occur below40.",
+    "hoffman_implication":"UNSAT would prove d_H=40 and hence every Hoffman-13 shortening has d=40 by Pass5243 containment."
+  },
+  "5348c":{
+    "status":"THEOREM_Q5_FOOTPRINT_HULL_EQUALS_NO5PLUS5_BINARY_ADJACENCY_CODE",
+    "carrier_graph":"NO_5^+(5)=srg(325,144,68,60)",
+    "hull_dimension":64,
+    "adjacency_code_dimension":64,
+    "combined_span_dimension":64,
+    "identity":"Hull(C_F)=Row_F2(A_NO5+5)",
+    "self_orthogonality":"A^2=0 mod2"
+  },
+  "5349":{
+    "status":"EXACT_Q11_DUAL20_EQUALITY_WALL_XORSAT_MODEL_COMMITTED_BUT_SUPERSEDED_BY_CONSTRUCTIVE_WITNESS",
+    "target":"weight20 dual with all W-point multiplicities 0 or2",
+    "note":"Pass5354b gives an explicit constructive equality-wall witness, so the generic SAT search is no longer needed for existence."
+  },
+  "5350":{
+    "status":"THEOREM_ALLODD_BINARY_FOOTPRINT_GRAM_RANK_ONE_RADICAL",
+    "identity":"FF^T=J over F2 for every odd q",
+    "kernel_parity":"ker(F^T) lies in the even point module",
+    "image_radical":"Rad(im F^T)=F^T(M_even), dimension rank(F)-1",
+    "rank_one_quotient":"im(F^T)/Rad is one-dimensional nonsingular"
+  },
+  "5350b":{
+    "status":"THEOREM_ALLODD_FOOTPRINT_CHAIN_COMPLEX_AND_CSS_LOGICAL_HOMOLOGY",
+    "identities":["F^T F=0 mod2","F F^T=J mod2"],
+    "complex":"U_Pcarriers --F--> V0_even_points --F^T--> U_Pcarriers",
+    "dependency":"Pass5376 closes im F=C_W^perp, ker F^T=C_W, rank F=g for every odd prime power q.",
+    "point_homology":"C_W/C_W^perp",
+    "point_homology_dimension":"q^2+1",
+    "css_bridge":"This is exactly the logical quotient of the Pass5379 binary CSS family."
+  },
+  "5351_5352":{
+    "status":"THEOREM_HOFFMAN_EXTRASPECIAL_GROUP_HAS_EXPLICIT_REAL_TWO_QUBIT_PAULI_PRESENTATION_AND_LATIN_3_PLUS_2_SYMPLECTIC_SPLIT",
+    "extraspecial_group":"2_+^{1+4}",
+    "presentation":"32 distinct normal forms z^e X1^a Z1^b X2^c Z2^d; [X1,Z1]=[X2,Z2]=z and all cross commutators trivial",
+    "latin_spread":"row,column,symbol are isotropic/commuting; the two orthogonal-mate lines are nonisotropic/pairwise-anticommuting",
+    "direction_split":"9+6 = 3 PG(3,2) isotropic lines + 2 nonisotropic triples",
+    "boundary":"Finite-group/code geometry only; no physical two-qubit claim."
+  },
+  "5353":{
+    "status":"THEOREM_Q5_K0_CENTRAL_IDEMPOTENTS_GIVE_SEVEN_EXACT_SPHERICAL_TIGHT_FRAMES",
+    "central_blocks":[1,104,65,520,270,130,1250],
+    "notable_65_block":"15 local shell words collapse to one vector per W-point, leaving 156 vectors with off-fiber inner products -1/5 and +1/25, the negative W(3,5) two-distance embedding.",
+    "notable_780_blocks":"104- and 520-dimensional multiplicity-one blocks collapse shell triples to 780 distinct vectors."
+  },
+  "5354":{
+    "status":"NO_Q11_C10_BAR_C10_DUAL20_IN_DIAGONAL_ORDER10_FAMILY",
+    "tested_elements":48,
+    "candidate_C10_halves":9600,
+    "pair_tests":1008448,
+    "lesson":"The q=11 congruence branch was initially targeted incorrectly; q=11=3 mod4 predicts C10|(C5+C5), not C10|C10."
+  },
+  "5354b":{
+    "status":"THEOREM_Q11_MOD4_CAYLEY_DUAL20_EQUALITY_WITNESS",
+    "generator":"diag(1,2,1,6) in Sp4(11)",
+    "support_graph":"K10,10 + C10 + (C5+C5)",
+    "selected_carriers":[121,165,362,371,628,701,543,518,460,249,879,1233,1028,989,920,1254,1043,1274,1145,1012],
+    "point_multiplicities":{"0":1224,"2":240},
+    "edges":120,
+    "degree":12,
+    "parity":"exact carrier-incidence XOR zero"
+  },
+  "5355":{
+    "status":"THEOREM_Q11_FOOTPRINT_CODE_7381_671_121",
+    "carrier_stabilizer_suborbit_sizes":[1,660,1320,1320,1320,1320,1440],
+    "pair_orbit_invariant":"trace(S_A S_B)^2 in F_11",
+    "orbital_valencies":{"0":660,"1":1320,"3":1320,"4":1320,"5":1440,"9":1320},
+    "seed_pair_counts":{"0":10,"1":30,"3":10,"4":5,"5":120,"9":15},
+    "r_over_lambda":{"0":660,"1":440,"3":1320,"4":2640,"5":120,"9":880},
+    "minimum_r_over_lambda":120,
+    "moment_bound":"primal weight >=121",
+    "footprint_code":"[7381,671,121]_2",
+    "distance_anchors":"d=q^2 now exact for q=3,5,7,9,11",
+    "boundary":"No all-odd d=q^2 theorem beyond q11 is claimed."
+  },
+  "parallel_frontier_dependency":{
+    "Pass5376_5379":"all-odd rank/kernel/K0 generation closed via the Lataille-Sin-Tiep characteristic-two point-module lattice; binary CSS family [[(q+1)(q^2+1),q^2+1,q+1]]_2",
+    "Pass5332_5339":"q5 K0 rank-21 noncommutative orbital algebra and Wedderburn decomposition used by Pass5353"
+  },
+  "release_boundary":"q11 d=121 and all-odd rank are closed. Hoffman d=40 remains pending an actual UNSAT replay despite exact SAT models and the new NO_5^+(5) graph-code identity."
+}
