@@ -1,0 +1,277 @@
+{
+  "boundary": "Pass 5396 establishes that mu/(k(1+s)) IS the classical cosine sequence -- Pass 5374 re-derived it and must not be cited as its source. Pass 5397 reads inner-product MULTISETS from the other lane's certificate: a value -1/(N-1) is a NECESSARY arithmetic condition for a regular simplex, never sufficient, and their vectors are not available here. Pass 5399's duplicate check matches on filename pass numbers only",
+  "not_done": {
+    "GAP_stabiliser": "GAP is not on PATH; Pass 5343 stands unimproved",
+    "overlap_5376_5379": "flagged to the other lane; I hold it by the earlier commit and have published, they have not"
+  },
+  "pass_5396": {
+    "correction": "Pass 5374 presented this as a derivation; it is a re-derivation. Pass 5374's refutation of -1/(H-1) by Paley stands",
+    "identity": "mu/(k(1+s)) = w_2, the cosine sequence of the scheme",
+    "recurrence": "theta*w_i = c_i w_(i-1) + a_i w_i + b_i w_(i+1)",
+    "rows": [
+      {
+        "agrees": true,
+        "graph": "Paley(13)",
+        "mu_over_k1s": -0.3837959395,
+        "srg": [
+          13,
+          6,
+          2,
+          3
+        ],
+        "w1_classical": 0.217129273,
+        "w1_measured": 0.2171292729,
+        "w2_classical": -0.3837959396,
+        "w2_measured": -0.3837959395
+      },
+      {
+        "agrees": true,
+        "graph": "Paley(29)",
+        "mu_over_k1s": -0.2280416002,
+        "srg": [
+          29,
+          14,
+          6,
+          7
+        ],
+        "w1_classical": 0.1566130289,
+        "w1_measured": 0.1566130288,
+        "w2_classical": -0.2280416003,
+        "w2_measured": -0.2280416002
+      },
+      {
+        "agrees": true,
+        "graph": "Paley(37)",
+        "mu_over_k1s": -0.1967434036,
+        "srg": [
+          37,
+          18,
+          8,
+          9
+        ],
+        "w1_classical": 0.1411878481,
+        "w1_measured": 0.1411878481,
+        "w2_classical": -0.1967434036,
+        "w2_measured": -0.1967434036
+      },
+      {
+        "agrees": true,
+        "graph": "W(3,3)",
+        "mu_over_k1s": -0.1111111111,
+        "srg": [
+          40,
+          12,
+          2,
+          4
+        ],
+        "w1_classical": 0.1666666667,
+        "w1_measured": 0.1666666667,
+        "w2_classical": -0.1111111111,
+        "w2_measured": -0.1111111111
+      },
+      {
+        "agrees": true,
+        "graph": "W(3,5)",
+        "mu_over_k1s": -0.04,
+        "srg": [
+          156,
+          30,
+          4,
+          6
+        ],
+        "w1_classical": 0.1333333333,
+        "w1_measured": 0.1333333333,
+        "w2_classical": -0.04,
+        "w2_measured": -0.04
+      }
+    ],
+    "status": "CLASSICAL -- Brouwer-Cohen-Neumaier, Godsil",
+    "w1": "theta/k",
+    "weeks_shape": "-1/q^2 a GQ(q,q) artefact; -1/(H-1) a GQ artefact; the general form textbook; the simplex reading the standard Delsarte-tight fact, in-repo at Pass 1614"
+  },
+  "pass_5397": {
+    "frames": [
+      {
+        "central_eigenvalue": 9878,
+        "inner_products": {
+          "1": 2339
+        },
+        "simplex_candidates": [],
+        "vectors": 1
+      },
+      {
+        "central_eigenvalue": 1283,
+        "inner_products": {
+          "-1/4": 12,
+          "-1/5": 375,
+          "0": 450,
+          "1": 2,
+          "1/20": 1500
+        },
+        "simplex_candidates": [
+          [
+            "-1/4",
+            5,
+            12
+          ],
+          [
+            "-1/5",
+            6,
+            375
+          ]
+        ],
+        "vectors": 780
+      },
+      {
+        "central_eigenvalue": 998,
+        "inner_products": {
+          "-1/5": 450,
+          "1": 14,
+          "1/25": 1875
+        },
+        "simplex_candidates": [
+          [
+            "-1/5",
+            6,
+            450
+          ]
+        ],
+        "vectors": 156
+      },
+      {
+        "central_eigenvalue": 443,
+        "inner_products": {
+          "-1/100": 1500,
+          "-1/4": 12,
+          "0": 450,
+          "1": 2,
+          "1/25": 375
+        },
+        "simplex_candidates": [
+          [
+            "-1/4",
+            5,
+            12
+          ],
+          [
+            "-1/100",
+            101,
+            1500
+          ]
+        ],
+        "vectors": 780
+      },
+      {
+        "central_eigenvalue": 128,
+        "inner_products": {
+          "-1/75": 1500,
+          "-2/25": 250,
+          "0": 302,
+          "1/3": 12,
+          "2/15": 150,
+          "3/25": 125
+        },
+        "simplex_candidates": [
+          [
+            "-1/75",
+            76,
+            1500
+          ]
+        ],
+        "vectors": 2340
+      },
+      {
+        "central_eigenvalue": -352,
+        "inner_products": {
+          "-1/10": 300,
+          "-1/2": 2,
+          "-1/5": 125,
+          "0": 1512,
+          "1/10": 250,
+          "1/5": 150
+        },
+        "simplex_candidates": [
+          [
+            "-1/2",
+            3,
+            2
+          ],
+          [
+            "-1/5",
+            6,
+            125
+          ],
+          [
+            "-1/10",
+            11,
+            300
+          ]
+        ],
+        "vectors": 2340
+      },
+      {
+        "central_eigenvalue": -340,
+        "inner_products": {
+          "-1/125": 125,
+          "-1/2": 2,
+          "-1/25": 150,
+          "0": 1512,
+          "1/250": 250,
+          "1/50": 300
+        },
+        "simplex_candidates": [
+          [
+            "-1/2",
+            3,
+            2
+          ],
+          [
+            "-1/25",
+            26,
+            150
+          ],
+          [
+            "-1/125",
+            126,
+            125
+          ]
+        ],
+        "vectors": 2340
+      }
+    ],
+    "source": "their Pass5353 seven spherical tight frames",
+    "status": "CANDIDATES only -- arithmetic permits, vectors unchecked",
+    "with_candidates": 6
+  },
+  "pass_5398": {
+    "block_sizes": {
+      "6": 312
+    },
+    "is_1_design": true,
+    "is_2_design": true,
+    "lambda": 60,
+    "of_possible": 78,
+    "outside_blocks": 312,
+    "pair_multiplicities": {
+      "60": 78
+    },
+    "pairs_covered": 78
+  },
+  "pass_5399": {
+    "doubly_claimed": 70,
+    "duplicates": {
+      "3751": [
+        "w33_pass3751_3758_monster_lattice_multiport_cover.py",
+        "w33_pass3751_3768_gq_veldkamp_axial_lattice_monster.py"
+      ],
+      "3837": [
+        "w33_pass3837_3854_graph_aut_certificate.py",
+        "w33_pass3837_3854_monster_descent_harness.py",
+        "w33_pass3837_3854_ovoid_wedderburn_code_leech_triality.py"
+      ]
+    },
+    "overlaps": 12,
+    "verdict": "risk real, never materialised -- the multi-file numbers are one lane's multi-pass packets",
+    "with_multiple_files": 2
+  }
+}

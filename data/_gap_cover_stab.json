@@ -1,0 +1,8 @@
+{
+  "aut_order": 9360000,
+  "setwise_stabiliser_order": 1152,
+  "image_in_S13_order": 576,
+  "pointwise_kernel_order": 2,
+  "image_is_576": true,
+  "image_transitive": false
+}
