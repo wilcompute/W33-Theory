@@ -1,0 +1,21 @@
+{
+  "schema":"w33.pass_namespace_registry.v2.entry",
+  "range":[5404,5411],
+  "slug":"allq_unsigned_apartment_visibility_spectrum",
+  "title":"All-q unsigned apartment visibility kernel and spectral lift",
+  "status":"RESERVED",
+  "owner":"openai-gpt56-sol-chat",
+  "reserved_at":"2026-08-15",
+  "purpose":"Lift the q=3 BT546 unsigned 3-adic overlap kernel to every GQ(q,q): derive B B^T=q^4A0+q^3A1+q^2A2+qA3+A4 for unsigned flag-edge/apartment incidence, diagonalize it on the all-q flag distance scheme, and recover the exact W33 spectrum 648, 144±36sqrt6, 72, 40 with multiplicities 1,24,24,30,81.",
+  "targets":{
+    "5404":"unsigned apartment overlap kernel by distance",
+    "5405":"all-q radial distance polynomials",
+    "5406":"closed unsigned Gram eigenvalue formulas",
+    "5407":"positivity/rank and condition structure",
+    "5408":"q=3 exact BT546 spectral recovery",
+    "5409":"symbolic verifier and finite-q anchors",
+    "5410":"manuscript/regression workflow",
+    "5411":"frontier/site promotion and closure"
+  },
+  "boundary":"This is the spectrum of the full unsigned apartment-incidence Gram matrix. Do not reinterpret it as the signed Hodge projector, and do not infer contextuality degree, quantum-code distance, or physical noise tolerance without a separate theorem."
+}
