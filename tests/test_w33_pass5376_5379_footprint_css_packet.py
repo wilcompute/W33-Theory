@@ -49,6 +49,16 @@ class FootprintCssPacket(unittest.TestCase):
             self.assertEqual(r['n']-2*r['stabilizer_rank_each'],r['k'])
         self.assertIn('distinct from',x['separation'])
 
+    def test_pass5406_logical_weil_clock(self):
+        x=load('PART_W33_PASS5406_CSS_LOGICAL_WEIL_CLOCK.json')
+        self.assertEqual(x['status'],'THEOREM_ALLODD_CSS_LOGICAL_WEIL_QMOD8_CLOCK')
+        for qs,r in x['samples'].items():
+            q=int(qs);w=(q*q-1)//2
+            self.assertEqual(r['logical_dimension'],q*q+1)
+            self.assertEqual(r['algebraic_closure_composition_dimensions'],[1,1,w,w])
+            self.assertEqual(r['Weil_field_of_definition'],'F2' if q%8 in (1,7) else 'F4')
+        self.assertIn('No direct-sum splitting',x['boundary'])
+
     def test_manifest_and_wrappers(self):
         manifest=(ROOT/'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex').read_text(encoding='utf-8')
         needle='\\input{analysis/PASS5376_5379_allodd_footprint_rank_css_insert}'
@@ -64,6 +74,7 @@ class FootprintCssPacket(unittest.TestCase):
         self.assertIn('formerly open all-odd footprint-rank theorem',new)
         self.assertIn('q=11',new)
         self.assertIn('Hoffman',new)
+        self.assertIn('logical-channel decomposition',new)
 
     def test_site_materializer_contract(self):
         src=(ROOT/'analysis/PASS5376_5379_allodd_footprint_rank_css_index_insert.html').read_text(encoding='utf-8')
