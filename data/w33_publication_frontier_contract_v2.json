@@ -42,6 +42,11 @@
       "kind": "id",
       "token": "pass-5428-5435-apartment-tomography",
       "source": "analysis/PASS5428_5435_apartment_tomography_index_insert.html"
+    },
+    {
+      "kind": "id",
+      "token": "pass-5436-5443-bicycle-apartment-scheme",
+      "source": "analysis/PASS5436_5443_bicycle_apartment_scheme_index_insert.html"
     }
   ],
   "boundary": "This contract certifies nested publication reachability, uniqueness, shared-tail consolidation, and public materialization only. It does not certify mathematical, hardware, laboratory, empirical, or physical claims."
