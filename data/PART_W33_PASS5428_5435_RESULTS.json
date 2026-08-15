@@ -1,0 +1,52 @@
+{
+  "schema": "w33.pass5428_5435.results.v1",
+  "range": [5428, 5435],
+  "status": "EXECUTED_SCIENCE_AWAITING_REPLAY_AT_FREEZE",
+  "passes": {
+    "5428": {
+      "status": "THEOREM_ALLQ_CANONICAL_ORIENTED_APARTMENT_TOMOGRAPHY",
+      "result": "For C signed flag-by-apartment incidence, CC^T=N E_cyc and C^+=(1/N)C^T on the cycle image; every cycle flow has canonical minimum-l2 apartment coefficients C^T z/N."
+    },
+    "5429": {
+      "status": "THEOREM_ALLQ_UNSIGNED_APARTMENT_CANONICAL_INVERSE_AND_CONDITIONING",
+      "result": "B has full row rank and kappa(BB^T)=8q^4/((q-1)^2(q^2+1)); B^+=B^T(BB^T)^-1."
+    },
+    "5430": {
+      "status": "THEOREM_Q3_RADIUS10_V4_ROOTED_FRONTIER_REDUCTION_NOT_RADIUS_CLOSURE",
+      "result": "The rooted weight10 false-vote-four sector has exactly 20,544,048 raw configurations; every outsider in a survivor must share a chart with another error. Radius10 remains open."
+    },
+    "5431": {
+      "status": "THEOREM_ALLODD_MODULAR_FOOTPRINT_DEFECT_EXACT_SEQUENCE",
+      "result": "0 -> D_q=ker(F^T)/C_W -> M0/C_W -> Rad(im F^T) -> 0 with dim D_q=g-rank_2(F). The all-odd rank theorem is exactly D_q=0."
+    },
+    "5432": {
+      "status": "THEOREM_Q5_K0_POSTMINIMUM_HAMMING_GAP",
+      "result": "K0=[73125,560,1000]_2 has exactly 2340 minimum words; every other nonzero word has weight at least1040, so weights1001..1039 are absent."
+    },
+    "5433": {
+      "status": "THEOREM_ALLQ_ORIENTATION_SIGNS_EXACT_HODGE_SPECTRAL_PURIFIER",
+      "result": "Changing only odd flag-distance shell signs converts the full-rank unsigned visibility Gram into N E_cyc, deleting exactly the Levi cut-space primitive sectors while preserving trace."
+    },
+    "5434": {
+      "status": "THEOREM_ALLQ_UNSIGNED_APARTMENT_GRAM_DETERMINANT",
+      "result": "det(BB^T)=2^(2P+1)q^(4P)(q-1)^(2f+4g+2q^4)(q^2+1)^(f+q^4); at q=3 this is 2^456 3^160 5^105."
+    },
+    "5435": {
+      "status": "THEOREM_ALLQ_UNSIGNED_APARTMENT_INTEGRAL_CHARACTERISTIC_POLYNOMIAL",
+      "result": "The sqrt(2q) pair is the root pair of Q_q(x)=x^2-4q^2(q-1)(q+1)x+4q^4(q-1)^2(q^2+1), giving an integral all-q characteristic polynomial."
+    }
+  },
+  "integration": {
+    "tex_insert": "analysis/PASS5428_5435_apartment_tomography_modular_gap_insert.tex",
+    "frontier_manifest": "analysis/W33_CURRENT_FRONTIER_MANIFEST.tex",
+    "tests": "tests/test_w33_pass5428_5435_packet.py",
+    "workflow": ".github/workflows/w33_pass5428_5435_apartment_tomography.yml",
+    "workflow_run": 31888512424
+  },
+  "boundaries": [
+    "Pass5430 is a finite radius-ten reduction, not a global radius-ten decoder theorem.",
+    "Pass5431 reduces but does not close the all-odd characteristic-2 footprint-rank theorem.",
+    "Pass5432 proves the second nonzero K0 weight is at least1040 but does not assert a weight1040 witness.",
+    "All tomography/conditioning/determinant statements are characteristic-zero real-linear statements unless explicitly marked modular."
+  ]
+}
