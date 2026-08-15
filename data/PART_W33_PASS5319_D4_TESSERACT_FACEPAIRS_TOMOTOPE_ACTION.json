@@ -1,0 +1,29 @@
+{
+  "pass":5319,
+  "status":"THEOREM_WD4_ANTIPODAL_SQUARE_FACE_PAIR_ACTION_IS_PUBLISHED_TOMOTOPE96",
+  "tesseract_square_faces":24,
+  "antipodal_square_face_pairs":12,
+  "WD4_order":192,
+  "WD4_center_order":2,
+  "induced_action_order":96,
+  "action_kernel":"central antipode -I",
+  "published_tomotope_order":96,
+  "explicit_degree12_conjugator":[0,1,4,5,8,9,11,10,7,6,3,2],
+  "pair_labels":[
+    {"fixed_coordinates":[0,1],"sign_class":[[-1,-1],[1,1]]},
+    {"fixed_coordinates":[0,1],"sign_class":[[-1,1],[1,-1]]},
+    {"fixed_coordinates":[0,2],"sign_class":[[-1,-1],[1,1]]},
+    {"fixed_coordinates":[0,2],"sign_class":[[-1,1],[1,-1]]},
+    {"fixed_coordinates":[0,3],"sign_class":[[-1,-1],[1,1]]},
+    {"fixed_coordinates":[0,3],"sign_class":[[-1,1],[1,-1]]},
+    {"fixed_coordinates":[1,2],"sign_class":[[-1,-1],[1,1]]},
+    {"fixed_coordinates":[1,2],"sign_class":[[-1,1],[1,-1]]},
+    {"fixed_coordinates":[1,3],"sign_class":[[-1,-1],[1,1]]},
+    {"fixed_coordinates":[1,3],"sign_class":[[-1,1],[1,-1]]},
+    {"fixed_coordinates":[2,3],"sign_class":[[-1,-1],[1,1]]},
+    {"fixed_coordinates":[2,3],"sign_class":[[-1,1],[1,-1]]}
+  ],
+  "statement":"After the displayed relabeling, W(D4)/<-I> acting on the 12 antipodal square-face pairs is exactly the published tomotope degree-12 permutation group.",
+  "bridge":"This geometrizes Pass5309: the Hoffman W(D4) quotient and the natural D4 square-face-pair quotient realize the same tomotope action.",
+  "boundary":"The orientation-preserving tesseract rotation group is a distinct order192 group and its natural 12-object action is not identified here."
+}
