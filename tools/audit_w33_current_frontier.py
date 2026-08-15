@@ -1,97 +1,32 @@
 #!/usr/bin/env python3
-"""Fail-closed audit of the generated W33 current-frontier publication manifest."""
+"""Fail-closed audit of the nested W33 current-frontier publication DAG.
+
+Pass5366 replaces the obsolete flat-manifest comparison with the recursive
+Pass5365 verifier while retaining this historical command-line entry point for
+workflows and downstream tools.
+"""
 from __future__ import annotations
 
 import argparse
-import hashlib
+import importlib.util
 import json
-import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-CONFIG = ROOT / "data/w33_current_frontier_manifest_v1.json"
-INPUT_RE = re.compile(r"\\input\{([^}]+)\}%?")
-MANIFEST_INPUT = r"\input{analysis/W33_CURRENT_FRONTIER_MANIFEST}%"
+AUDITOR = ROOT / "analysis/w33_pass5364_publication_dag_audit.py"
 
 
-def sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
-
-
-def load_config() -> dict:
-    return json.loads(CONFIG.read_text(encoding="utf-8"))
-
-
-def section_count(index_text: str, section: dict) -> int:
-    token = section["token"]
-    if section["kind"] == "id":
-        return index_text.count(f'id="{token}"')
-    if section["kind"] == "marker":
-        return index_text.count(token)
-    raise ValueError(f"unsupported public section kind: {section['kind']}")
+def _load_recursive_auditor():
+    spec = importlib.util.spec_from_file_location("w33_pass5364_publication_dag_audit", AUDITOR)
+    assert spec and spec.loader
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
 
 
 def audit(require_index: bool = True) -> dict:
-    config = load_config()
-    tex_manifest = ROOT / config["tex_manifest"]
-    assert tex_manifest.is_file(), tex_manifest
-    manifest_text = tex_manifest.read_text(encoding="utf-8")
-    observed_inputs = INPUT_RE.findall(manifest_text)
-    required_inputs = config["required_ordered_inputs"]
-    assert observed_inputs == required_inputs, (observed_inputs, required_inputs)
-    assert len(observed_inputs) == len(set(observed_inputs))
-    for item in observed_inputs:
-        path = ROOT / f"{item}.tex"
-        assert path.is_file(), path
-
-    wrappers = {}
-    for wrapper_name, body_name in config["front_doors"].items():
-        wrapper = ROOT / wrapper_name
-        body = ROOT / body_name
-        assert wrapper.is_file() and body.is_file()
-        text = wrapper.read_text(encoding="utf-8")
-        assert text.count(MANIFEST_INPUT) == 1, wrapper_name
-        assert text.count(rf"\input{{{body_name}}}") == 1, wrapper_name
-        direct_current = [item for item in required_inputs if rf"\input{{{item}}}" in text]
-        assert not direct_current, (wrapper_name, direct_current)
-        wrappers[wrapper_name] = {
-            "sha256": sha256(wrapper),
-            "body": body_name,
-            "manifest_references": text.count(MANIFEST_INPUT),
-        }
-
-    index_path = ROOT / config["public_index"]
-    index_status = {"required": require_index, "path": str(index_path.relative_to(ROOT))}
-    source_status = {}
-    for section in config["public_sections"]:
-        source = ROOT / section["source"]
-        assert source.is_file(), source
-        source_status[section["token"]] = {
-            "kind": section["kind"],
-            "source": section["source"],
-            "sha256": sha256(source),
-        }
-    index_status["sources"] = source_status
-
-    if require_index:
-        assert index_path.is_file(), index_path
-        index_text = index_path.read_text(encoding="utf-8")
-        observed = {section["token"]: section_count(index_text, section) for section in config["public_sections"]}
-        assert all(count == 1 for count in observed.values()), observed
-        index_status.update({"sha256": sha256(index_path), "sections": observed})
-
-    return {
-        "schema": "w33.current_frontier_audit.v1",
-        "status": "PASS",
-        "manifest": {
-            "path": config["tex_manifest"],
-            "sha256": sha256(tex_manifest),
-            "ordered_inputs": observed_inputs,
-            "count": len(observed_inputs),
-        },
-        "wrappers": wrappers,
-        "index": index_status,
-    }
+    module = _load_recursive_auditor()
+    return module.audit(require_index=require_index)
 
 
 def main() -> None:
@@ -104,7 +39,11 @@ def main() -> None:
     if args.report:
         args.report.parent.mkdir(parents=True, exist_ok=True)
         args.report.write_text(payload, encoding="utf-8")
-    print(f"PASS current-frontier audit inputs={report['manifest']['count']}")
+    print(
+        "PASS current-frontier DAG audit "
+        f"manifests={report['frontier']['manifest_node_count']} "
+        f"leaves={report['frontier']['leaf_count']}"
+    )
     print(payload, end="")
 
 
