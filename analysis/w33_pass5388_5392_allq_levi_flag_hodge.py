@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """Pass5388--5392: all-q Levi flag distance/Hodge theorem.
 
-Let S be any generalized quadrangle of order (q,q), q>1.  Let Gamma be its
-point-line incidence (Levi) graph and X=L(Gamma) its line graph.  Vertices of
-X are flags of S.
+Let S be any generalized quadrangle of order (q,q), q>1. Let Gamma be its
+point-line incidence (Levi) graph and X=L(Gamma) its line graph. Vertices of X
+are flags of S.
 
 The symmetric 4-class flag fusion is existing literature (Colangelo,
-Monzillo, Siciliano, Discrete Math. 347 (2024), 114054).  The contribution
+Monzillo, Siciliano, Discrete Math. 347 (2024), 114054). The contribution
 certified here is the explicit Hodge/cycle-space bridge and its all-q
 specialization of the W33 BT545--BT551 stack:
 
@@ -17,11 +17,9 @@ specialization of the W33 BT545--BT551 stack:
           = 1/N (q^4 A0 - q^3 A1 + q^2 A2 - q A3 + A4),
   N=(q+1)^2(q^2+1).
 
-In particular the terminal first-eigenmatrix row is q-independent,
-  (1,-2,2,-2,1),
-and the terminal second-eigenmatrix column is
-  (q^4,-q^3,q^2,-q,1).
-At q=3 this is exactly the W33 protected column (81,-27,9,-3,1).
+The terminal first-eigenmatrix row is q-independent, (1,-2,2,-2,1), while
+the terminal second-eigenmatrix column is (q^4,-q^3,q^2,-q,1). At q=3 this
+is exactly the W33 protected column (81,-27,9,-3,1).
 
 No code-distance or physical-protection claim follows from this theorem alone.
 """
@@ -33,6 +31,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data/PART_W33_PASS5388_5392_ALLQ_LEVI_FLAG_HODGE.json"
+ANCHOR_Q = [2, 3, 4, 5, 7, 8, 9, 11, 13]
 
 
 def ptrim(p: list[int]) -> list[int]:
@@ -62,7 +61,7 @@ def pmul(a: list[int], b: list[int]) -> list[int]:
 
 
 def quotient_charpoly(q: int) -> list[int]:
-    """Return det(xI-B) low-degree first for the distance quotient matrix."""
+    """Return det(xI-B), low-degree coefficient first."""
     b = [2 * q, q, q, q]
     c = [1, 1, 1, 2]
     a = [0, q - 1, q - 1, q - 1, 2 * q - 2]
@@ -85,7 +84,7 @@ def expected_charpoly(q: int) -> list[int]:
 
 def theorem_row(q: int) -> dict:
     assert q > 1
-    v = (q + 1) * (q * q + 1)  # points, and also lines
+    v = (q + 1) * (q * q + 1)
     n_levi = 2 * v
     n_flags = (q + 1) * v
     degree = 2 * q
@@ -101,17 +100,13 @@ def theorem_row(q: int) -> dict:
     assert shells == [1, 2 * q, 2 * q * q, 2 * q**3, q**4]
     assert sum(shells) == n_flags
 
-    m_levi = n_flags
-    cycle_rank = m_levi - n_levi + 1
+    cycle_rank = n_flags - n_levi + 1
     assert cycle_rank == q**4
 
     f = q * (q + 1) ** 2 // 2
     g = q * (q * q + 1) // 2
     multiplicities = [1, f, 2 * g, f, q**4]
     assert sum(multiplicities) == n_flags
-
-    # Quotient matrix characteristic polynomial gives the five adjacency
-    # eigenvalues: 2q, q-1 +/- sqrt(2q), q-1, -2.
     assert quotient_charpoly(q) == expected_charpoly(q)
 
     # Exact trace checks without adjoining sqrt(2q).
@@ -134,10 +129,10 @@ def theorem_row(q: int) -> dict:
             rhs += Fraction(bb[i]) * u[i + 1]
         assert lhs == rhs
 
-    terminal_P_row = [shells[d] * u[d] for d in range(5)]
-    terminal_Q_col = [q**4 * u[d] for d in range(5)]
-    assert terminal_P_row == [1, -2, 2, -2, 1]
-    assert terminal_Q_col == [q**4, -q**3, q**2, -q, 1]
+    terminal_p = [shells[d] * u[d] for d in range(5)]
+    terminal_q = [q**4 * u[d] for d in range(5)]
+    assert terminal_p == [1, -2, 2, -2, 1]
+    assert terminal_q == [q**4, -q**3, q**2, -q, 1]
 
     return {
         "q": q,
@@ -157,21 +152,31 @@ def theorem_row(q: int) -> dict:
             "q-1-sqrt(2q)": f,
             "-2": q**4,
         },
-        "terminal_P_row": [str(x) for x in terminal_P_row],
-        "terminal_Q_column": [str(x) for x in terminal_Q_col],
+        "terminal_P_row": [str(x) for x in terminal_p],
+        "terminal_Q_column": [str(x) for x in terminal_q],
     }
 
 
-def main() -> dict:
-    anchors = {str(q): theorem_row(q) for q in [2, 3, 4, 5, 7, 8, 9, 11, 13]}
-    q3 = anchors["3"]
+def compact_anchor(row: dict) -> dict:
+    q = row["q"]
+    return {
+        "flags": row["flags_linegraph_vertices"],
+        "shells": row["distance_shells"],
+        "cycle_rank": row["levi_cycle_rank"],
+        "Q_terminal": [q**4, -q**3, q**2, -q, 1],
+    }
+
+
+def build_certificate() -> dict:
+    rows = {str(q): theorem_row(q) for q in ANCHOR_Q}
+    q3 = rows["3"]
     assert q3["flags_linegraph_vertices"] == 160
     assert q3["distance_shells"] == [1, 6, 18, 54, 81]
     assert q3["levi_cycle_rank"] == 81
     assert q3["terminal_P_row"] == ["1", "-2", "2", "-2", "1"]
     assert q3["terminal_Q_column"] == ["81", "-27", "9", "-3", "1"]
 
-    out = {
+    return {
         "schema": "w33.allq_levi_flag_hodge.v1",
         "pass_range": [5388, 5392],
         "status": "THEOREM_ALGEBRAIC_AND_GRAPH_THEORETIC",
@@ -181,12 +186,12 @@ def main() -> dict:
             "flag_graph": "The first fusion relation is the line graph of the Levi incidence graph.",
             "intersection_array": "{2q,q,q,q ; 1,1,1,2}",
             "distance_shells": "1, 2q, 2q^2, 2q^3, q^4",
-            "vertex_count": "(q+1)^2(q^2+1)",
+            "vertex_count": "(q+1)^2(q^2+1)"
         },
         "spectrum": {
             "eigenvalues": ["2q", "q-1+sqrt(2q)", "q-1", "q-1-sqrt(2q)", "-2"],
             "multiplicities": ["1", "q(q+1)^2/2", "q(q^2+1)", "q(q+1)^2/2", "q^4"],
-            "characteristic_polynomial": "(x-2q)(x+2)(x-q+1)((x-q+1)^2-2q)",
+            "characteristic_polynomial": "(x-2q)(x+2)(x-q+1)((x-q+1)^2-2q)"
         },
         "hodge_bridge": {
             "oriented_incidence_identity": "For the Levi graph oriented point->line, D^T D = 2I + A_X.",
@@ -195,7 +200,7 @@ def main() -> dict:
             "cycle_dimension": "q^4",
             "projector": "P_cyc=E_{-2}=((q^4)A0-(q^3)A1+(q^2)A2-qA3+A4)/((q+1)^2(q^2+1))",
             "terminal_first_eigenmatrix_row": ["1", "-2", "2", "-2", "1"],
-            "terminal_second_eigenmatrix_column": ["q^4", "-q^3", "q^2", "-q", "1"],
+            "terminal_second_eigenmatrix_column": ["q^4", "-q^3", "q^2", "-q", "1"]
         },
         "w33_specialization": {
             "q": 3,
@@ -203,11 +208,15 @@ def main() -> dict:
             "shells": [1, 6, 18, 54, 81],
             "cycle_dimension": 81,
             "projector_numerator": [81, -27, 9, -3, 1],
-            "reading": "Exactly BT545-BT551: the W33 H1=81 Hodge/Kirchhoff projector is the q=3 terminal primitive idempotent.",
+            "reading": "Exactly BT545-BT551: the W33 H1=81 Hodge/Kirchhoff projector is the q=3 terminal primitive idempotent."
         },
-        "anchors": anchors,
-        "boundary": "This theorem identifies a graph/Hodge sector. It does not by itself prove a quantum-code distance, a fault-tolerance threshold, or a physical protection mechanism.",
+        "anchors": {key: compact_anchor(row) for key, row in rows.items()},
+        "boundary": "This theorem identifies a graph/Hodge sector. It does not by itself prove a quantum-code distance, a fault-tolerance threshold, or a physical protection mechanism."
     }
+
+
+def main() -> dict:
+    out = build_certificate()
     OUT.write_text(json.dumps(out, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(json.dumps(out, indent=2, sort_keys=True))
     return out
