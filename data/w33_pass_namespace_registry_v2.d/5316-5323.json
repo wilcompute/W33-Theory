@@ -1,0 +1,11 @@
+{
+  "schema":"w33.pass_namespace_registry.v2.entry",
+  "range":[5316,5323],
+  "slug":"latin_q4_derivatives_hoffman_triality_tesseract_facepairs",
+  "title":"Latin Q4 derivative census, Hoffman four-cell triality refinement, D4/tomotope square-face action, and orbital-fusion geometry",
+  "status":"RESERVED",
+  "owner":"openai-gpt56-sol",
+  "reserved_at":"2026-08-14T23:13:00-04:00",
+  "purpose":"Continue after closed Pass5308-5315. Pass5316: classify all 576 order-4 Latin squares by constant Q4 coordinate derivatives and prove the 144 Klein class is exactly affine on F2^4. Pass5317: refine the ten Hoffman four-cell orbits under canonical W(D4), recording the exact triality triple-splitting. Pass5318: identify the characteristic tomotope96 subgroup inside the Latin-even affine group and compute its five-spread-line action, with outer C3 cycling row/column/symbol. Pass5319: build the natural W(D4)/Z action on the 12 antipodal square-face pairs of the tesseract and compare it explicitly to the published tomotope degree-12 action. Pass5320: contrast the orientation-preserving tesseract quotient on the same 12 objects by orbital fusion. Pass5321-5323: consolidate the 3K4 coordinate-partition geometry, regressions, manuscript/site integration, and theorem firewalls.",
+  "boundary":"Do not infer group identities from equal orders. Keep W(D4) and the tesseract rotation group distinct. The tomotope comparison must use explicit degree-12 conjugacy or orbital certificates. The Latin 144/432 and 96/192/288 partitions are combinatorial statistics unless a group action is explicitly established. Hoffman shortened distance, q11 footprint distance, and all-odd rank theorem remain open."
+}
