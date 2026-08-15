@@ -1,0 +1,21 @@
+{
+  "schema":"w33.pass_namespace_registry.v2.entry",
+  "range":[5388,5395],
+  "slug":"allq_levi_flag_distance_hodge_cycle_projector",
+  "title":"All-q Levi flag distance scheme, cycle rank, and Hodge primitive idempotent",
+  "status":"RESERVED",
+  "owner":"openai-gpt56-sol-chat",
+  "reserved_at":"2026-08-15",
+  "purpose":"Lift the q=3 Levi-flag association/Hodge stack to every generalized quadrangle of order (q,q): identify the flag line graph distance array and shell sizes, derive its spectrum, prove the -2 eigenspace is exactly the Levi cycle space of dimension q^4, derive the radial primitive-idempotent numerator (q^4,-q^3,q^2,-q,1), recover the W33 81-dimensional projector as q=3, and connect this carefully to the published flag association-scheme literature without claiming priority for the underlying symmetric fusion.",
+  "targets":{
+    "5388":"symbolic all-q flag line-graph distance and shell theorem",
+    "5389":"all-q line-graph spectrum and multiplicity theorem",
+    "5390":"oriented-incidence proof that the -2 eigenspace equals Levi cycle space with dimension q^4",
+    "5391":"radial primitive idempotent and second-eigenmatrix terminal column",
+    "5392":"q=3 specialization exactly recovers BT545-BT551 Hodge kernel",
+    "5393":"literature/prior-art boundary and manuscript theorem insert",
+    "5394":"regression certificate and replay workflow",
+    "5395":"frontier/site promotion and packet closure"
+  },
+  "boundary":"The 4-class flag association scheme for generalized quadrangles is existing literature; do not claim novelty for that fusion or its valencies. The repo contribution is the explicit all-q Hodge/cycle-space identification, q^4 multiplicity, radial projector bridge, and exact specialization to the existing W33 Levi stack. Do not infer a general quantum-code distance or physical protection theorem from the cycle projector alone."
+}

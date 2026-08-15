@@ -1,0 +1,24 @@
+{
+  "passes":[5351,5352],
+  "status":"THEOREM_HOFFMAN_EXTRASPECIAL_GROUP_HAS_EXPLICIT_REAL_TWO_QUBIT_PAULI_PRESENTATION_AND_LATIN_SPREAD_SPLITS_3_ISOTROPIC_PLUS_2_NONISOTROPIC",
+  "Q_order":32,
+  "Q_center":2,
+  "Q_type":"2_+^{1+4}",
+  "commutator_form_matrix_H_coordinates":[[0,0,1,0],[0,0,1,1],[1,1,0,1],[0,1,1,0]],
+  "pauli_symplectic_basis_H_coordinates":[1,4,3,9],
+  "presentation":"Xi^2=Zi^2=z^2=1; [X1,Z1]=[X2,Z2]=z; all cross-pair commutators are1; the 32 normal forms z^e X1^a Z1^b X2^c Z2^d are distinct.",
+  "latin_to_H_change_of_basis_columns":[1,8,2,15],
+  "PG3_2_lines":35,
+  "isotropic_lines_W3_2":15,
+  "latin_MOLS_spread_classification":[
+    {"line":"row","points":[1,2,3],"pair_commutator":0,"pauli_type":"commuting/isotropic"},
+    {"line":"column","points":[4,8,12],"pair_commutator":0,"pauli_type":"commuting/isotropic"},
+    {"line":"symbol","points":[5,10,15],"pair_commutator":0,"pauli_type":"commuting/isotropic"},
+    {"line":"orthogonal_mate_1","points":[6,11,13],"pair_commutator":1,"pauli_type":"pairwise-anticommuting/nonisotropic"},
+    {"line":"orthogonal_mate_2","points":[7,9,14],"pair_commutator":1,"pauli_type":"pairwise-anticommuting/nonisotropic"}
+  ],
+  "latin_spread_isotropic_lines":3,
+  "latin_spread_nonisotropic_lines":2,
+  "bridge":"The earlier 9+6 direction orbit is exactly 3 commuting PG(3,2) lines plus 2 nonisotropic triples under the transported Hoffman extraspecial commutator form.",
+  "boundary":"Exact finite-group/symplectic-code theorem only; no physical two-qubit interpretation is asserted."
+}

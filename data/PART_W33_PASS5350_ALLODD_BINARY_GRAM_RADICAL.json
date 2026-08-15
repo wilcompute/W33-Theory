@@ -1,0 +1,13 @@
+{
+  "pass":5350,
+  "status":"THEOREM_ALLODD_BINARY_FOOTPRINT_GRAM_HAS_RANK_ONE_AND_IMAGE_HAS_CODIMENSION_ONE_RADICAL",
+  "domain":"all odd prime powers q",
+  "integer_gram":"FF^T=(q^2-1)I+(q-1)A_W+J",
+  "binary_gram":"FF^T=J",
+  "pairing_formula":"<F^T x,F^T y> = parity(x) parity(y)",
+  "kernel_parity":"ker(F^T) is contained in the even-weight point module",
+  "image_radical":"For C=im(F^T), Rad(C)=C cap C^perp=F^T(M_even), dim Rad(C)=rank(F)-1, and C/Rad(C) is one-dimensional nonsingular.",
+  "allodd_target":"rank_2(F)=g iff ker(F^T)=C_W; the sought kernel is necessarily even and the image is always a rank-one extension of a totally self-orthogonal code.",
+  "verified_rank_anchors":{"3":15,"5":65,"7":175,"9":369,"11":671,"13":1105},
+  "boundary":"The Gram/radical theorem is all odd q. General equality rank_2(F)=g remains open."
+}
