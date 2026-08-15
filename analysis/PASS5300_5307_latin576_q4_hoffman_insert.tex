@@ -1,0 +1,118 @@
+% Pass5300--5307: Hoffman-576 / Latin-576 bridge, Q4 substrate, q13 rank anchor,
+% q11 dual20 density wall, rank-21 K0 shell, and module no-go.
+\subsection{Passes 5300--5307: the exact 576 bridge and the post-$q=9$ frontier}
+
+The numerical coincidence $576=576$ between the Hoffman-cover stabilizer and the
+number of order-four Latin squares admits a precise refinement.  Let $H$ be the
+setwise stabilizer of the thirteen-cell Hoffman cover in $\operatorname{PSp}_4(5)$.
+Then
+\[
+ |H|=576,\qquad Z(H)\cong C_2,
+\]
+and the computation identifies
+\[
+ H\cong 2_{+}^{1+4}:(S_3\times C_3).
+\]
+The full autoparatopy group of the Klein $V_4$ Latin square also has order $576$,
+but it is a different group,
+\[
+ \operatorname{AutPar}(L_{V_4})\cong 2^4:(S_3\times S_3).
+\]
+Their centers, derived subgroup orders, and element-order distributions differ.
+The genuine bridge appears one level down: if $L^+$ denotes the index-two subgroup
+of even parastrophes, then an explicit $\mathrm{GL}_4(2)$ change of basis gives
+\[
+ \boxed{H/Z(H)\cong L^+\cong 2^4:(S_3\times C_3).}
+\]
+Thus the Hoffman order-$576$ group is a central double lift of the same affine
+$\mathbb F_2^4$ symmetry carried by the orientation-even half of the Klein Latin
+chart; equality of the integers alone is not used as evidence.
+
+This exposes an exact connection with the earlier toroidal-knight construction.
+The sixteen cells of the Klein $4\times4$ chart are
+\[
+ \mathbb F_2^2\times\mathbb F_2^2\cong\mathbb F_2^4,
+\]
+the same sixteen-point substrate on which the toroidal knight graph was proved to
+be $Q_4$.  The Latin affine-plane completion partitions the fifteen nonzero
+translation directions into five $PG(3,2)$ lines: row, column, symbol, and two
+additional orthogonal-mate directions.  The Hoffman/Latin-even linear quotient
+has direction orbits $9+6$, exactly three of these spread lines plus two spread
+lines.  In contrast, $Q_4$ uses only four basis directions, two from the row line
+and two from the column line.  The order-$288$ affine quotient does not preserve
+that four-direction set, so the shared theorem is the common $\mathbb F_2^4$
+substrate, not an equality of edge graphs.
+
+The order-four Latin census itself is
+\[
+ 576=144+432,
+\]
+with a $144$-element Klein-$V_4$ isotopy class and a $432$-element cyclic-$C_4$
+class.  The complete three-MOLS$(4)$ geometry of the Klein chart is a five-line
+spread of $PG(3,2)$.  There are exactly $56$ such spreads; $\mathrm{GL}_4(2)$ is
+transitive on them and a spread stabilizer has order $360$.  Hence the
+$A_5$-invariant five-line spread independently found in every $q=5$ $K_0$ fiber is
+$\mathrm{GL}_4(2)$-conjugate to a complete-MOLS$(4)$ spread.  A canonical
+objectwise identification of the particular labels remains open.
+
+The Hoffman shortening frontier also contracts.  The $715$ four-subsets of the
+thirteen cover cells form only ten stabilizer orbits, with orbit-size/rank pairs
+\[
+ (3,33),(12,33),(16,35),(144,35),(96,38),(144,38),
+ (36,39),(48,40),(72,40),(144,40).
+\]
+Pass 5294 already proves every span involving at most three cells has minimum
+forty.  Therefore the first unresolved layer has ten four-cell representatives.
+Bounded exact searches find weight-forty words but do not certify the absence of
+weights $28,32,36$; accordingly the shortened distance remains
+\[
+ d_{\rm sh}\in\{28,32,36,40\}.
+\]
+
+On the all-odd footprint side, the exact rank formula gains a new finite anchor:
+for $q=13$ the point/P-component incidence matrix has $2380$ rows, $14365$
+columns, point-footprint weight $169$, and
+\[
+ \operatorname{rank}_2F=1105=\frac{13(13^2+1)}2.
+\]
+Together with $q=3,5,7,9,11$, this gives six exact anchors.  The general theorem
+remains equivalent to the same-point generation statement $K_0=D_q$.
+
+At $q=11$, every P-carrier has size $24$ and any two distinct carriers intersect
+in zero or two W-points.  Hence a hypothetical dual word supported on twenty
+carriers has, writing $d_p$ for point multiplicities and $e$ for selected
+carrier-graph edges,
+\[
+ 2e=\sum_p\binom{d_p}{2},\qquad \sum_p d_p=480,\qquad d_p\equiv0\pmod2,
+\]
+so
+\[
+ \boxed{e\ge120}.
+\]
+Equality holds precisely when $240$ W-points are covered twice, in which case the
+selected graph is $12$-regular.  The conjectural $K_{10,10}$ plus two-factor
+support saturates this lower bound.  Symmetry-broken bounded MILPs produced no
+incumbent but no infeasibility certificate, so neither a weight-twenty dual shell
+nor $d(C_F)=121$ is promoted here.
+
+Finally, the complete $2340$-word $q=5$ minimum $K_0$ shell has a finer symmetry
+than its six Hamming distances reveal.  The transitive $\operatorname{PSp}_4(5)$
+action has point stabilizer order $2000$ and orbital rank
+\[
+ \boxed{21},
+\]
+with subdegree histogram $1^3,4^3,50^9,125^3,500^3$.  Thus the Hamming-distance
+partition is a fusion of a rank-$21$ coherent configuration.  In a separate
+negative theorem, the two previously noted $64$-dimensional modules are not
+isomorphic: a symplectic transvection fixes dimension $4$ on
+$\ker_2N/\langle\mathbf1\rangle$ but dimension $24$ on the footprint hull.  Hence
+there is no $\operatorname{PSp}_4(5)$-equivariant invertible $64\times64$
+intertwiner between them.
+
+\paragraph{Evidence boundary.}
+The $q=5$ apartment distance $625$ and the $q=9$ footprint distance $81$ remain
+closed theorems.  Passes 5300--5307 do not prove the general odd-$q$ generation
+statement $K_0=D_q$, do not prove a $q=11$ weight-twenty dual shell or footprint
+distance $121$, and do not promote the Hoffman-shortened distance to $40$.
+The Latin/Hoffman/toroidal statements are finite group and affine-geometry
+identifications; no physical dynamics are inferred from them.
