@@ -21,12 +21,13 @@ def test_unsigned_conditioning_extremes():
         assert r['gram_condition_number']>=1
 
 
-def test_modular_extra_point_kernel_defect_dimension_identity():
-    anchors={3:15,5:65,7:175,9:369,11:671,13:1105}
-    for q,rk in anchors.items():
-        r=defect_row(q,rk)
+def test_modular_radical_quotient_isomorphism():
+    for q in (3,5,7,9,11,13,17,19,23,25,27):
+        r=defect_row(q)
+        assert r['rank_F2_by_Pass5376']==r['g']
         assert r['extra_point_kernel_defect_dimension']==0
-        assert r['dim_M0_mod_CW']==r['radical_dimension']
+        assert r['dim_M0_mod_CW']==r['radical_dimension_by_Pass5350']
+        assert r['canonical_radical_quotient_isomorphism']
 
 
 def test_unsigned_determinant_q3_factorization_exponents():
