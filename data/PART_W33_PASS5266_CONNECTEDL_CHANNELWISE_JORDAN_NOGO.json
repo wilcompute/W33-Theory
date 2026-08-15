@@ -1,0 +1,18 @@
+{
+  "pass": 5266,
+  "status": "THEOREM_Q5_NAIVE_CHANNELWISE_CONNECTEDL_JORDAN_LIFT_FAILS",
+  "connected_L_charts": 9750,
+  "local_triangle_channels": 10,
+  "even_P_space_dimension": 7800,
+  "even_syndrome_rank": 7240,
+  "full_P_space_dimension": 8125,
+  "full_syndrome_rank": 7500,
+  "naive_operator": "T=A_L tensor I_10 in the raw local triangle-channel labels",
+  "first_even_column": {"syndrome_weight":336,"T_weight":4488,"remainder_mod_even_image_weight":14541},
+  "first_500_even_columns": "Their T-images contribute 500 new independent directions beyond the rank-7240 even syndrome image.",
+  "full_image_test_indices": [0,24,25,1000,8000],
+  "full_image_T_weight_and_remainder_weight": [[2840,6437],[2144,2653],[2840,2949],[1835,2734],[1835,1835]],
+  "conclusion": "Neither Im(L|E) nor Im(L|V_P) is invariant under the naive channelwise A_L action.",
+  "correct_target": "Construct the twisted 10-dimensional channel transport/local system induced by identifying K6 triangle-cycle coordinates across a shared apartment.",
+  "boundary": "Negative theorem about identity channel transport only; it does not identify the correct twisted transport and does not invalidate the scalar Jordan theorem itself."
+}

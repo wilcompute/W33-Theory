@@ -1,0 +1,18 @@
+{
+  "pass": 5264,
+  "status": "THEOREM_HOFFMAN13_SHORTENED_CELL_DECOMPOSITION",
+  "shortened_code": "[312,52,d]_2 with 28<=d<=40",
+  "cover_cells": 13,
+  "cell_code": {
+    "dimension": 10,
+    "minimum_distance": 40,
+    "weight_enumerator": {"0":1,"40":36,"48":30,"64":225,"72":440,"80":225,"96":30,"104":36,"144":1}
+  },
+  "cell_span_dimension": 52,
+  "pair_intersection_dimension": 0,
+  "all_78_pair_sum_minimum": 40,
+  "consequence": "Any shortened word of weight<40 must genuinely couple at least three Hoffman cover cells.",
+  "triple_span_rank_distribution": {"30":240,"28":30,"25":16},
+  "triple_rank_vs_R2_edges": {"25,3":16,"28,0":30,"30,1":48,"30,2":144,"30,3":48},
+  "boundary": "The exact shortened minimum remains open. Three-or-more-cell cancellation below40 has not been excluded."
+}

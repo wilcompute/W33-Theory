@@ -1,0 +1,28 @@
+{
+  "pass": 5262,
+  "status": "THEOREM_Q5_FULL_APARTMENT_CODE_DISTANCE625_AND_MINIMUM_SHELL",
+  "zero_footprint_residual": {
+    "dimension": 560,
+    "P_blocks": 325,
+    "local_even_dimension": 24,
+    "connected_L_rank_on_even_space": 7240
+  },
+  "weight8_seed": [119,124,183,188,209,302,317,318],
+  "seed_projection_rank": 134,
+  "seed_delete_one_projection_ranks": [134,134,134,134,134,134,134,134],
+  "global_no_singleton_reason": "Pass5230 proves all 24375 weight-8 footprint-dual supports form one symplectic orbit; K0 is automorphism invariant. Thus if a K0 word met any shell check in exactly one active block, transport would give the forbidden seed singleton projection.",
+  "shell_parameters": {"checks":24375,"replication":600,"max_pair_codegree":25},
+  "block_moment_inequality": "300*w <= sum_D binom(t_D,2) <= 25*binom(w,2), because every t_D is 0 or at least 2.",
+  "zero_footprint_block_distance": 25,
+  "sharp_block_witness": {
+    "construction": "symmetric difference of two chamber stars based at the same W point",
+    "active_P_blocks": 25,
+    "local_weight_per_active_block": 40,
+    "apartment_weight": 1000
+  },
+  "strict_reduction": "Pass5259: every hypothetical q5 apartment word of weight<625 belongs to K0 and has at most15 active P blocks.",
+  "strict_conclusion": "No q5 apartment-code word has weight<625.",
+  "apartment_code": "[73125,625,625]_2",
+  "minimum_shell": "Exactly the 936 chamber stars, by combining strict closure with the authoritative Pass5238 equality-shell theorem.",
+  "boundary": "Exact q=5 theorem only; the all-q apartment distance d=q^4 remains open beyond the certified anchors."
+}

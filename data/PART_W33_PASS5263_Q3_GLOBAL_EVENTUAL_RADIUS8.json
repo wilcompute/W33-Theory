@@ -1,0 +1,27 @@
+{
+  "pass": 5263,
+  "status": "COMPUTATIONAL_THEOREM_Q3_GLOBAL_EVENTUAL_RADIUS8",
+  "weight8_stopping_set": "Infeasible after fixing one apartment by transitivity in the exact (4,6)-incidence stopping-set MILP.",
+  "false_vote1": "Impossible: a false vote-1 candidate could survive only if all eight true errors had zero singleton incident charts, i.e. an 8-variable stopping set.",
+  "false_vote2": {
+    "local_pattern_counts": {"4":24,"5":288,"6":1488,"7":4512,"8":9288},
+    "completion_certificate": {
+      "local8": 9288,
+      "seven_plus_one_relevant": 442368,
+      "six_plus_two_pairs": 21064,
+      "five_plus_three_relevant": 287826,
+      "four_plus_four_forced": 12
+    },
+    "survivors": 0
+  },
+  "false_vote3": {
+    "local_pattern_counts": {"6":32,"7":256,"8":832},
+    "completion_certificate": {"local8":832,"seven_plus_one_scanned":409344,"six_plus_two_pairs_scanned":111744},
+    "survivors": 0
+  },
+  "false_vote4": "Exactly 16 poison-pair echoes per false center, hence 25920 globally; Pass5254 certifies every echo self-heals 8->9->1->0.",
+  "decoder_conclusion": "Every weight-8 error either makes a nonempty true-only first correction and falls into the certified radius-7 basin, or is an echo and self-heals.",
+  "guaranteed_eventual_radius": 8,
+  "guaranteed_monotone_true_only_radius": 7,
+  "boundary": "Computational theorem: the stopping-set infeasibility is an exact MILP certificate; V=2 and V=3 use exhaustive finite completion censuses. Radius nine remains open."
+}
