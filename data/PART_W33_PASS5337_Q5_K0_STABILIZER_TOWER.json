@@ -1,0 +1,20 @@
+{
+  "pass":5337,
+  "status":"THEOREM_Q5_K0_SHELL_IS_HOMOGENEOUS_A5_OVER_V4_FIBER_BUNDLE",
+  "G":"PSp4(5)",
+  "G_order":4680000,
+  "point_stabilizer_order":30000,
+  "point_orbit_size":156,
+  "six_line_image":"A5",
+  "six_line_image_order":60,
+  "six_line_kernel_order":500,
+  "pair_stabilizer_image":"V4",
+  "pair_stabilizer_image_order":4,
+  "shell_label_stabilizer_order":2000,
+  "fiber_index":15,
+  "shell_orbit_size":2340,
+  "tower":"H_shell(2000) < P_point(30000) < PSp4(5)(4680000)",
+  "bundle":"G/H -> G/P with fiber P/H ~= A5/V4 of size15",
+  "induction_identity":"C[G/H] = Ind_P^G(C[A5/V4]), with C[A5/V4]=1+4+2*5.",
+  "boundary":"Exact finite homogeneous-space theorem only."
+}
