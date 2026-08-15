@@ -1,0 +1,11 @@
+{
+  "pass":5354,
+  "status":"NO_CYCLIC_Q11_DUAL20_IN_TESTED_DIAGONAL_ORDER10_FAMILY",
+  "family":"T=diag(a,b,a^-1,b^-1) with a,b in F_11^* and lcm(ord(a),ord(b))=10",
+  "order10_symplectic_elements_tested":48,
+  "candidate_C10_halves":9600,
+  "candidate_half_pair_tests":1008448,
+  "target":"two length-10 carrier orbits whose internal intersection-2 graphs are C10, with complete cross adjacency and total carrier XOR zero",
+  "result":"No target support occurred in the entire tested diagonal order-10 family.",
+  "boundary":"This is a family-specific exhaustive no-go. It does not exclude a q11 dual20 with noncyclic halves, another order-10 conjugacy class, C5+C5 internal 2-factors, or support above the 120-edge equality wall."
+}
