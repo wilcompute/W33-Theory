@@ -1,0 +1,31 @@
+{
+  "pass":5300,
+  "status":"THEOREM_HOFFMAN576_IS_CENTRAL_DOUBLE_LIFT_OF_EVEN_KLEIN_LATIN_AFFINE_SYMMETRY",
+  "hoffman":{
+    "order":576,
+    "center":2,
+    "derived":96,
+    "element_orders":{"1":1,"2":43,"3":80,"4":84,"6":272,"12":96},
+    "extraspecial_normal_32":{"order":32,"center":2,"derived":2,"element_orders":{"1":1,"2":19,"4":12},"type":"2_+^{1+4}"},
+    "structure":"2_+^{1+4} : (S3 x C3)"
+  },
+  "klein_latin":{
+    "all_order4_latin_squares":576,
+    "V4_autoparatopy_order":576,
+    "center":1,
+    "derived":144,
+    "element_orders":{"1":1,"2":75,"3":80,"4":180,"6":240},
+    "structure":"2^4 : (S3 x S3)",
+    "even_parastrophe_subgroup_order":288,
+    "even_structure":"2^4 : (S3 x C3)"
+  },
+  "exact_bridge":{
+    "hoffman_central_quotient_order":288,
+    "latin_even_order":288,
+    "affine_normal_module":"F2^4",
+    "explicit_GL4_conjugacy_verified":true,
+    "statement":"H/Z(H) is explicitly conjugate on its normal F2^4 module to the even-parastrophe subgroup of the Klein V4 Latin-square autoparatopy group."
+  },
+  "negative_result":"The two order-576 groups H and AutPar(V4) are not isomorphic: their centers, derived subgroup orders and element-order spectra differ.",
+  "boundary":"The equality 576=576 is not used as evidence by itself. The theorem is the explicit order-288 affine quotient identification; no physical meaning is assigned to the central involution."
+}
