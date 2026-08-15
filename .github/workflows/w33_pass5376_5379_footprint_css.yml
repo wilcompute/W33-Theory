@@ -8,6 +8,7 @@ on:
       - 'analysis/w33_pass5377_allodd_rank_complement_generation_closure.py'
       - 'analysis/w33_pass5378_footprint_code_minimum_orbit.py'
       - 'analysis/w33_pass5379_allodd_binary_css_point_code.py'
+      - 'analysis/w33_pass5406_css_logical_weil_clock.py'
       - 'analysis/PASS5376_5379_allodd_footprint_rank_css_insert.tex'
       - 'analysis/PASS5376_5379_allodd_footprint_rank_css_index_insert.html'
       - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
@@ -35,6 +36,7 @@ jobs:
           python analysis/w33_pass5377_allodd_rank_complement_generation_closure.py
           python analysis/w33_pass5378_footprint_code_minimum_orbit.py
           python analysis/w33_pass5379_allodd_binary_css_point_code.py
+          python analysis/w33_pass5406_css_logical_weil_clock.py
       - name: Run focused regression packet
         run: python -m unittest tests.test_w33_pass5376_5379_footprint_css_packet
       - name: Materialize homepage card
