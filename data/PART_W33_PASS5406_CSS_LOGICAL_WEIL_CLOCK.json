@@ -1,0 +1,18 @@
+{
+  "pass":5406,
+  "status":"THEOREM_ALLODD_CSS_LOGICAL_WEIL_QMOD8_CLOCK",
+  "logical_module":"L_q=C_W/C_W^perp",
+  "dimension":"q^2+1",
+  "composition_factors_over_alg_closure":"1, 1, W1, W2 with dim Wi=(q^2-1)/2",
+  "F2_descent":"W1,W2 split over F2 for q=+-1 mod8; for q=+-3 mod8 they fuse to one irreducible F2 module of dimension q^2-1.",
+  "source":"Lataille--Sin--Tiep, J. Algebra 268 (2003), proof/Theorem 2.13 and Remark 2.15.",
+  "samples":{
+    "3":{"q":3,"q_mod_8":3,"logical_dimension":10,"algebraic_closure_composition_dimensions":[1,1,4,4],"weil_factor_dimension":4,"F2_middle_structure":"one 8-dimensional irreducible Galois fusion","Weil_field_of_definition":"F4"},
+    "5":{"q":5,"q_mod_8":5,"logical_dimension":26,"algebraic_closure_composition_dimensions":[1,1,12,12],"weil_factor_dimension":12,"F2_middle_structure":"one 24-dimensional irreducible Galois fusion","Weil_field_of_definition":"F4"},
+    "7":{"q":7,"q_mod_8":7,"logical_dimension":50,"algebraic_closure_composition_dimensions":[1,1,24,24],"weil_factor_dimension":24,"F2_middle_structure":"two 24-dimensional Weil factors","Weil_field_of_definition":"F2"},
+    "9":{"q":9,"q_mod_8":1,"logical_dimension":82,"algebraic_closure_composition_dimensions":[1,1,40,40],"weil_factor_dimension":40,"F2_middle_structure":"two 40-dimensional Weil factors","Weil_field_of_definition":"F2"},
+    "11":{"q":11,"q_mod_8":3,"logical_dimension":122,"algebraic_closure_composition_dimensions":[1,1,60,60],"weil_factor_dimension":60,"F2_middle_structure":"one 120-dimensional irreducible Galois fusion","Weil_field_of_definition":"F4"},
+    "13":{"q":13,"q_mod_8":5,"logical_dimension":170,"algebraic_closure_composition_dimensions":[1,1,84,84],"weil_factor_dimension":84,"F2_middle_structure":"one 168-dimensional irreducible Galois fusion","Weil_field_of_definition":"F4"}
+  },
+  "boundary":"Composition factors and field-of-definition only. No direct-sum splitting of the two trivial logical factors is asserted."
+}
