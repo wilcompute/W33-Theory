@@ -1,0 +1,53 @@
+name: W33 Pass5356-5361 pair packet
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5356_allodd_psl2_pair_fiber_steinberg.py'
+      - 'analysis/w33_pass5357_allodd_psl2_pair_orbital_rank.py'
+      - 'analysis/w33_pass5358_char2_projective_line_nonsplitting_firewall.py'
+      - 'analysis/w33_pass5359_prime_pair_hecke_wedderburn_census.py'
+      - 'analysis/w33_pass5360_allodd_pair_hecke_wedderburn.py'
+      - 'analysis/w33_pass5361_qmod8_pair_weil_klein_clock.py'
+      - 'analysis/PASS5356_5361_psl2_pair_steinberg_qmod8_index_insert.html'
+      - 'tools/materialize_pass5356_5361_psl2_pair.py'
+      - 'tests/test_w33_pass5356_5361_pair_packet.py'
+      - '.github/workflows/w33_pass5356_5361_pair_packet.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  replay-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Replay lightweight exact certificates
+        run: |
+          python analysis/w33_pass5356_allodd_psl2_pair_fiber_steinberg.py
+          python analysis/w33_pass5357_allodd_psl2_pair_orbital_rank.py
+          python analysis/w33_pass5358_char2_projective_line_nonsplitting_firewall.py
+          python analysis/w33_pass5360_allodd_pair_hecke_wedderburn.py
+          python analysis/w33_pass5361_qmod8_pair_weil_klein_clock.py
+      - name: Regression packet
+        run: python -m unittest tests.test_w33_pass5356_5361_pair_packet
+      - name: Materialize theorem card
+        run: python tools/materialize_pass5356_5361_psl2_pair.py
+      - name: Commit deterministic index mirrors if changed
+        run: |
+          if git diff --quiet -- docs/index.html index.html; then
+            echo 'Index card already materialized.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/index.html index.html
+          git commit -m 'Materialize Pass5356-5361 PSL2 pair theorem card'
+          git push
