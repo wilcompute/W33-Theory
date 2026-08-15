@@ -1,0 +1,11 @@
+{
+  "schema":"w33.pass_namespace_registry.v2.entry",
+  "range":[5332,5339],
+  "slug":"post_d4_tomotope_q11_hoffman_allodd_refinement",
+  "title":"Post-D4/tomotope continuation: q11 dual-shell, Hoffman four-cell distance, all-odd residual generation, and tomotope/Latin exact refinements",
+  "status":"RESERVED",
+  "owner":"openai-gpt56-sol",
+  "reserved_at":"2026-08-14T23:49:00-04:00",
+  "purpose":"Continue from the closed Pass5316-5323 packet without colliding with Track A Pass5324-5331. Prioritize unresolved theorem frontiers: q11 dual20/d=121, Hoffman [312,52] four-cell layer, all-odd K0=D_q, plus exact finite-group/Latin/tomotope refinements only where they yield new certificates.",
+  "boundary":"Do not promote timeouts to proofs. Preserve q11 distance, Hoffman distance, and general all-odd rank as open unless exact certificates close them. Order coincidences are not object identifications."
+}
