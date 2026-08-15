@@ -1,0 +1,34 @@
+{
+  "pass":5360,
+  "status":"THEOREM_ALLODD_COMPLEX_PAIR_HECKE_WEDDERBURN",
+  "domain":"odd prime powers q",
+  "theorem":"A_q = End_{PSL2(q)} C[C(P^1(q),2)] ~= C^{s(q)} + M2(C)^{d(q)}.",
+  "d_formula":"d(q)=floor((q+3)/8)",
+  "s_formula":"s(q)=r(q)-4d(q), with r(q) from Pass5357",
+  "center_formula":"dim Z(A_q)=r(q)-3d(q)",
+  "commutator_formula":"dim [A_q,A_q]=3d(q)",
+  "published_character_input":"Darafsheh--Pournaki, Applicable Algebra in Engineering, Communication and Computing 10 (2000), 237--250, DOI 10.1007/s002000050127, proof of Theorem 4.",
+  "finite_tensor_reconciliation":"Pass5359 q=3,5,7,11,13,17,19,23 intersection tensors match exactly.",
+  "sample_rows":{
+    "3":{"q":3,"q_mod_8":3,"orbital_rank":4,"M2_blocks":0,"scalar_blocks":4,"center_dimension":4,"commutator_dimension":0,"wedderburn":"C^4"},
+    "5":{"q":5,"q_mod_8":5,"orbital_rank":6,"M2_blocks":1,"scalar_blocks":2,"center_dimension":3,"commutator_dimension":3,"wedderburn":"C^2 + M2(C)^1"},
+    "7":{"q":7,"q_mod_8":7,"orbital_rank":7,"M2_blocks":1,"scalar_blocks":3,"center_dimension":4,"commutator_dimension":3,"wedderburn":"C^3 + M2(C)^1"},
+    "9":{"q":9,"q_mod_8":1,"orbital_rank":9,"M2_blocks":1,"scalar_blocks":5,"center_dimension":6,"commutator_dimension":3,"wedderburn":"C^5 + M2(C)^1"},
+    "11":{"q":11,"q_mod_8":3,"orbital_rank":10,"M2_blocks":1,"scalar_blocks":6,"center_dimension":7,"commutator_dimension":3,"wedderburn":"C^6 + M2(C)^1"},
+    "13":{"q":13,"q_mod_8":5,"orbital_rank":12,"M2_blocks":2,"scalar_blocks":4,"center_dimension":6,"commutator_dimension":6,"wedderburn":"C^4 + M2(C)^2"},
+    "17":{"q":17,"q_mod_8":1,"orbital_rank":15,"M2_blocks":2,"scalar_blocks":7,"center_dimension":9,"commutator_dimension":6,"wedderburn":"C^7 + M2(C)^2"},
+    "19":{"q":19,"q_mod_8":3,"orbital_rank":16,"M2_blocks":2,"scalar_blocks":8,"center_dimension":10,"commutator_dimension":6,"wedderburn":"C^8 + M2(C)^2"},
+    "23":{"q":23,"q_mod_8":7,"orbital_rank":19,"M2_blocks":3,"scalar_blocks":7,"center_dimension":10,"commutator_dimension":9,"wedderburn":"C^7 + M2(C)^3"},
+    "25":{"q":25,"q_mod_8":1,"orbital_rank":21,"M2_blocks":3,"scalar_blocks":9,"center_dimension":12,"commutator_dimension":9,"wedderburn":"C^9 + M2(C)^3"},
+    "29":{"q":29,"q_mod_8":5,"orbital_rank":24,"M2_blocks":4,"scalar_blocks":8,"center_dimension":12,"commutator_dimension":12,"wedderburn":"C^8 + M2(C)^4"},
+    "31":{"q":31,"q_mod_8":7,"orbital_rank":25,"M2_blocks":4,"scalar_blocks":9,"center_dimension":13,"commutator_dimension":12,"wedderburn":"C^9 + M2(C)^4"},
+    "49":{"q":49,"q_mod_8":1,"orbital_rank":39,"M2_blocks":6,"scalar_blocks":15,"center_dimension":21,"commutator_dimension":18,"wedderburn":"C^15 + M2(C)^6"}
+  },
+  "q_mod_8_character_rules":{
+    "1":"multiplicity 2: psi and chi_i with i divisible by 4; xi1,xi2 occur with multiplicity 1",
+    "5":"multiplicity 2: psi and chi_i with i divisible by 4; no exceptional pair",
+    "3":"multiplicity 2: theta_j with j congruent 2 mod 4; eta1,eta2 occur with multiplicity 1",
+    "7":"multiplicity 2: theta_j with j congruent 2 mod 4; no exceptional pair"
+  },
+  "boundary":"Complex/characteristic-zero centralizer theorem for the canonical pair space. It does not identify the modular characteristic-2 pair module and does not prove the all-odd footprint-rank theorem."
+}
