@@ -1,0 +1,135 @@
+% Pass5388--5392: all-q Levi flag distance/Hodge theorem.
+\subsection{All-\(q\) Levi flag distance scheme and Hodge cycle projector}
+
+Let \(\mathcal S\) be a finite generalized quadrangle of order \((q,q)\), \(q>1\),
+let \(\Gamma\) be its point--line incidence graph, and let
+\[
+X=L(\Gamma)
+\]
+be the line graph of \(\Gamma\).  Thus the vertices of \(X\) are exactly the flags
+\((p,L)\) of \(\mathcal S\), and two flags are adjacent when they share their point or
+their line.
+
+There is an important prior-art boundary.  Colangelo, Monzillo, and Siciliano,
+\emph{Discrete Mathematics} \textbf{347} (2024), 114054 (arXiv:2406.03942), already
+construct and characterize the symmetric primitive four-class fusion of the flag
+association scheme.  In the equal-parameter case its nontrivial valencies are
+\[
+2q,\qquad 2q^2,\qquad 2q^3,\qquad q^4.
+\]
+The result below does not claim priority for that association scheme.  The new bridge here
+is to the Levi Hodge/cycle projector used throughout the \(W(3,3)\) architecture.
+
+Direct generalized-quadrangle counting identifies the four fusion relations with the four
+distance shells of \(X\), giving the intersection array
+\[
+\boxed{
+\{2q,q,q,q;\;1,1,1,2\}.
+}
+\]
+Hence every flag has distance profile
+\[
+\boxed{
+1,\;2q,\;2q^2,\;2q^3,\;q^4,
+}
+\]
+and
+\[
+|V(X)|=(q+1)^2(q^2+1).
+\]
+The corresponding distance-quotient characteristic polynomial factors exactly as
+\[
+\boxed{
+(x-2q)(x+2)(x-q+1)\bigl((x-q+1)^2-2q\bigr).
+}
+\]
+Thus the adjacency spectrum of \(X\) is
+\[
+2q,\qquad q-1+\sqrt{2q},\qquad q-1,\qquad
+q-1-\sqrt{2q},\qquad -2,
+\]
+with multiplicities
+\[
+\boxed{
+1,\quad \frac{q(q+1)^2}{2},\quad q(q^2+1),\quad
+\frac{q(q+1)^2}{2},\quad q^4.
+}
+\]
+
+The multiplicity \(q^4\) has a direct topological meaning.  The Levi graph has
+\[
+|V(\Gamma)|=2(q+1)(q^2+1),
+\qquad
+|E(\Gamma)|=(q+1)^2(q^2+1),
+\]
+so, because \(\Gamma\) is connected,
+\[
+\boxed{
+\beta_1(\Gamma)=|E|-|V|+1=q^4.
+}
+\]
+Orient every Levi edge from its point endpoint to its line endpoint and let \(D\) be the
+oriented incidence matrix.  Two distinct oriented columns have inner product one precisely
+when the corresponding Levi edges meet, hence
+\[
+\boxed{
+D^{\mathsf T}D=2I+A_X.
+}
+\]
+Consequently
+\[
+\boxed{
+\ker D=E_{-2}(A_X),
+}
+\]
+so the terminal primitive eigenspace of the flag distance scheme is \emph{exactly} the
+Levi cycle space.  Its dimension is \(q^4\).
+
+Let \(A_0,\ldots,A_4\) be the distance matrices of \(X\).  The standard sequence for
+the eigenvalue \(-2\) is
+\[
+1,-\frac1q,\frac1{q^2},-\frac1{q^3},\frac1{q^4}.
+\]
+Multiplying by the distance valencies gives the \(q\)-independent terminal first-eigenmatrix
+row
+\[
+\boxed{(1,-2,2,-2,1),}
+\]
+while multiplying by the multiplicity \(q^4\) gives the terminal second-eigenmatrix column
+\[
+\boxed{(q^4,-q^3,q^2,-q,1).}
+\]
+Therefore the orthogonal Hodge projector onto the Levi cycle space is the radial Bose--Mesner
+idempotent
+\[
+\boxed{
+P_{\rm cyc}=E_{-2}
+=
+\frac{q^4A_0-q^3A_1+q^2A_2-qA_3+A_4}
+{(q+1)^2(q^2+1)}.
+}
+\]
+
+At \(q=3\), this becomes
+\[
+|V(X)|=160,
+\qquad
+(1,6,18,54,81),
+\qquad
+\beta_1(\Gamma)=81,
+\]
+and
+\[
+\boxed{
+E_{-2}
+=
+\frac{81A_0-27A_1+9A_2-3A_3+A_4}{160}.
+}
+\]
+This is exactly the BT545--BT551 W33 Levi Hodge/Kirchhoff projector and explains the
+previously observed coefficient column \((81,-27,9,-3,1)\) as the \(q=3\) specialization
+of the universal \((-1/q)^d\) radial law.
+
+\paragraph{Evidence boundary.}
+This theorem identifies an exact graph-theoretic/Hodge sector.  It does not by itself prove
+a quantum-code distance, a fault-tolerance threshold, or a laboratory protection mechanism.
