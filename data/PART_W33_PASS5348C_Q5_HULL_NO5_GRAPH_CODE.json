@@ -1,0 +1,13 @@
+{
+  "pass":"5348c",
+  "status":"THEOREM_Q5_FOOTPRINT_HULL_EQUALS_NO5PLUS5_BINARY_ADJACENCY_CODE",
+  "carrier_graph":{"vertices":325,"degree":144,"lambda":68,"mu":60,"standard_name":"NO_5^+(5)"},
+  "footprint_code":"C_F=[325,65,25]_2",
+  "hull_dimension":64,
+  "adjacency_code_dimension":64,
+  "combined_span_dimension":64,
+  "identity":"Hull(C_F)=Row_F2(A_NO5+5)",
+  "self_orthogonality":"A^2=0 over F2; all adjacency-row pair dot products are even.",
+  "hoffman_bridge":"Pass5243 embeds every Hoffman-13 shortened word into this 64-dimensional graph code.",
+  "boundary":"Graph-code identity only; minimum distance of the hull and Hoffman shortening still require a certificate."
+}
