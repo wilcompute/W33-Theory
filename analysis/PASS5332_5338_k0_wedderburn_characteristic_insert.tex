@@ -1,0 +1,113 @@
+% Pass5332--5338: q=5 K0 shell orbital algebra and characteristic-rank complement.
+\subsection{The $q=5$ $K_0$ minimum shell: a noncommutative rank-$21$ orbital algebra}
+
+The complete $2340$-word minimum shell of the zero-$P$ residual carries a transitive
+$PSp_4(5)$ action of orbital rank $21$.  Computing the full orbital intersection
+tensor shows that this object is not a commutative association scheme: eleven
+orbitals are symmetric and the remaining ten form five transpose pairs.  Its
+complex adjacency algebra has
+\[
+ \dim Z=7,\qquad \dim[\mathcal A,\mathcal A]=14,
+\]
+and Wedderburn decomposition
+\[
+ \boxed{\mathcal A_{\mathbb C}\cong
+ \mathbb C^4\oplus M_2(\mathbb C)^2\oplus M_3(\mathbb C).}
+\]
+The resulting permutation-module decomposition is
+\[
+ \boxed{
+ 2340=1+104+65_a+520+3\cdot90+2\cdot65_b+2\cdot625.
+ }
+\]
+Here the subscripts on the two equal-dimensional $65$-constituents are labels for
+nonisomorphic central blocks; equality of dimensions is not an identification.
+
+The shell projects $15$-to-$1$ onto the $156$ points of $W(3,5)$.  For the generic
+central element used in the orbital calculation, the induced operator on the
+base-point space is exactly
+\[
+ Q=476I-87A_W+77J,
+\]
+with spectrum
+\[
+ 9878^1\oplus128^{90}\oplus998^{65}.
+\]
+Thus the multiplicity-one block $65_a$ is the characteristic-zero
+$-(q+1)=-6$ point constituent.  This statement is deliberately separated from
+the binary footprint code: the point--carrier incidence matrix has
+characteristic-zero rank $91$ but binary rank $65$, so a dimension match does not
+supply a characteristic-$2$ intertwiner.
+
+\subsection{Characteristic-rank complement and the binary kernel target}
+
+For every odd $q$, the real footprint Gram law
+\[
+ FF^{\mathsf T}=(q^2-1)I+(q-1)A_W+J
+\]
+gives
+\[
+ \operatorname{rank}_{\mathbb Q}F=1+f,\qquad
+ \operatorname{null}_{\mathbb Q}F=g,
+\]
+where
+\[
+ f=\frac{q(q+1)^2}{2},\qquad g=\frac{q(q^2+1)}{2},\qquad
+ v=1+f+g.
+\]
+The binary rank theorem already gives $\operatorname{rank}_2F\le g$, and equality
+is equivalent to $K_0=D_q$.  Hence the all-odd target can be written as the
+characteristic-complement swap
+\[
+ \boxed{
+ \operatorname{rank}_2F=\operatorname{null}_{\mathbb Q}F=g,
+ \qquad
+ \operatorname{null}_2F=\operatorname{rank}_{\mathbb Q}F=1+f.
+ }
+\]
+It is verified at $q=3,5,7,9,11,13$, but remains open for arbitrary odd $q$.
+At those six anchors the already-proved inclusion of the binary $W$-line code in
+the footprint kernel is therefore equality:
+\[
+ \boxed{\ker_2(F^{\mathsf T})=C_W.}
+\]
+
+\subsection{Local $A_5/V_4$ fiber and exact induced branching}
+
+Fixing a base point, the six incident $W$-lines carry the $A_5\cong PSL_2(5)$
+action of the point stabilizer.  A minimum-shell fiber is the set of unordered
+pairs of those six lines, hence the homogeneous $15$-point space $A_5/V_4$.
+Its orbital algebra is itself noncommutative, of rank six, with
+\[
+ \mathbb C^2\oplus M_2(\mathbb C),
+ \qquad
+ \mathbb C[A_5/V_4]\cong 1\oplus4\oplus2\cdot5.
+\]
+In particular the local augmentation module is $14=4+5+5$; no $G_2$ adjoint
+interpretation is inferred from the integer $14$.
+
+The exact stabilizer tower is
+\[
+ H_{\rm shell}(2000)<P_{\rm point}(30000)<PSp_4(5)(4680000),
+\]
+with indices $15$ and $156$.  Thus
+\[
+ G/H\longrightarrow G/P
+\]
+is a homogeneous bundle with fiber $P/H\cong A_5/V_4$.  Induction transitivity,
+together with the global Wedderburn decomposition, forces
+\[
+ \boxed{\operatorname{Ind}_P^G(1)=1+90+65_a,}
+\]
+\[
+ \boxed{\operatorname{Ind}_P^G(4)=104+520,}
+\]
+\[
+ \boxed{\operatorname{Ind}_P^G(5)=90+65_b+625.}
+\]
+Consequently the $2184=156\cdot14$ vertical fiber module is
+\[
+ 104+520+2\cdot90+2\cdot65_b+2\cdot625.
+\]
+This separates the two global $65$-dimensional irreducibles by their local branch
+source while preserving the characteristic-$2$ firewall above.
