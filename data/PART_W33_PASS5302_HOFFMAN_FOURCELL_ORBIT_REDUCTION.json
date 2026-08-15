@@ -1,0 +1,23 @@
+{
+  "pass":5302,
+  "status":"THEOREM_HOFFMAN13_FOURCELL_LAYER_HAS_TEN_ORBITS",
+  "cover_stabilizer_order":576,
+  "four_subsets":715,
+  "orbits":10,
+  "orbit_rank_data":[
+    {"orbit_size":3,"rank":33,"representative":[3,6,9,11]},
+    {"orbit_size":12,"rank":33,"representative":[0,4,5,12]},
+    {"orbit_size":16,"rank":35,"representative":[0,7,8,11]},
+    {"orbit_size":144,"rank":35,"representative":[2,5,6,8]},
+    {"orbit_size":96,"rank":38,"representative":[3,6,7,11]},
+    {"orbit_size":144,"rank":38,"representative":[0,4,6,11]},
+    {"orbit_size":36,"rank":39,"representative":[1,2,9,11]},
+    {"orbit_size":48,"rank":40,"representative":[0,5,7,9]},
+    {"orbit_size":72,"rank":40,"representative":[6,8,11,12]},
+    {"orbit_size":144,"rank":40,"representative":[3,5,7,9]}
+  ],
+  "rank_histogram":{"33":15,"35":160,"38":240,"39":36,"40":264},
+  "consequence":"The first still-open Hoffman shortening layer is reduced from 715 four-cell subsets to ten representatives.",
+  "search_note":"A rank33 representative has a weight40 word. Bounded MILP searches for <=36 timed out without a feasible word and without an infeasibility certificate.",
+  "boundary":"No d=40 claim. The shortened [312,52] distance remains in {28,32,36,40}."
+}
