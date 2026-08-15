@@ -1,0 +1,20 @@
+{
+  "schema":"w33.pass_namespace_registry.v2.entry",
+  "range":[5444,5451],
+  "slug":"frame_basis_volume_modular_bridge_radius11_frontier",
+  "title":"Apartment frame/basis volume budget, conditioning tradeoff, modular kernel reconciliation, q5 second-weight search, radius-eleven reduction, and three independent probes",
+  "status":"RESERVED",
+  "owner":"openai-gpt56-sol",
+  "reserved_at":"2026-08-15",
+  "passes":{
+    "5444":"reserved: all-q Cauchy-Binet apartment-basis volume budget from the tight frame",
+    "5445":"reserved: q3 exact redundancy-versus-conditioning comparison between full apartment frame and minimum BFS basis",
+    "5446":"reserved: notation-safe reconciliation of Pass5421 apartment-footprint D_q with Pass5431 extra point-kernel X_q",
+    "5447":"reserved: q5 K0 weight1040 attainability search or stronger lower bound",
+    "5448":"reserved: q3 radius11 exact false-center frontier reduction beyond Pass5430",
+    "5449":"reserved: all-q fundamental apartment basis determinant normalized by Levi tree number",
+    "5450":"reserved: characteristic-polynomial/critical-group discriminant probe",
+    "5451":"reserved: independent outside-box synthesis selected after packet execution"
+  },
+  "boundary":"Reservation only; theorem status is deferred until exact producers/certificates execute. Earlier Pass5420-5443 ownership is preserved."
+}
