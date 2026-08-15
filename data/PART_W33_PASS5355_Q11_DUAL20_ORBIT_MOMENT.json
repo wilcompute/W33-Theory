@@ -1,0 +1,17 @@
+{
+  "pass":5355,
+  "status":"THEOREM_Q11_FOOTPRINT_CODE_7381_671_121",
+  "seed_source":"Pass5354b C10|(C5+C5) dual20 equality witness",
+  "carrier_stabilizer_suborbit_sizes":[1,660,1320,1320,1320,1320,1440],
+  "pair_orbit_invariant":"trace(S_A S_B)^2 in F_11",
+  "nontrivial_orbital_valencies":{"0":660,"1":1320,"3":1320,"4":1320,"5":1440,"9":1320},
+  "seed_pair_counts":{"0":10,"1":30,"3":10,"4":5,"5":120,"9":15},
+  "r_over_lambda":{"0":660,"1":440,"3":1320,"4":2640,"5":120,"9":880},
+  "minimum_r_over_lambda":120,
+  "moment_bound":"Every dual20 intersection with a primal support is even. The first/second moment inequality gives primal weight >=1+120=121.",
+  "point_footprint_weight":121,
+  "rank_F2":671,
+  "footprint_code":"[7381,671,121]_2",
+  "conclusion":"q11 footprint distance is exactly121; d=q^2 is now exact at q=3,5,7,9,11.",
+  "boundary":"q11 theorem only. An all-odd distance-q^2 theorem beyond these anchors remains open."
+}
