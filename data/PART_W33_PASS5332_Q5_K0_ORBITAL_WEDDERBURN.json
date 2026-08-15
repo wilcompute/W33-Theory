@@ -1,0 +1,27 @@
+{
+  "pass":5332,
+  "status":"THEOREM_Q5_K0_RANK21_ORBITAL_ALGEBRA_NONCOMMUTATIVE_WEDDERBURN",
+  "vertices":2340,
+  "orbital_rank":21,
+  "subdegrees":[1,1,1,4,4,4,50,50,50,50,50,50,50,50,50,125,125,125,500,500,500],
+  "symmetric_orbitals":11,
+  "directed_orbitals":10,
+  "transpose_map":[0,2,1,3,4,5,6,9,12,7,10,13,8,11,14,15,17,16,18,19,20],
+  "intersection_tensor_sha256":"714e5de0aa901c97d6baf142690c68e0b51510f266026cbb5408350eccb48ee9",
+  "intersection_tensor_nonzero_entries":2097,
+  "center_dimension":7,
+  "commutator_subspace_dimension":14,
+  "complex_wedderburn":"C^4 + M2(C)^2 + M3(C)",
+  "primitive_blocks":[
+    {"central_eigenvalue":9878,"algebra_block_dimension":1,"multiplicity":1,"isotypic_rank":1,"irreducible_dimension":1},
+    {"central_eigenvalue":1283,"algebra_block_dimension":1,"multiplicity":1,"isotypic_rank":104,"irreducible_dimension":104},
+    {"central_eigenvalue":998,"algebra_block_dimension":1,"multiplicity":1,"isotypic_rank":65,"irreducible_dimension":65},
+    {"central_eigenvalue":443,"algebra_block_dimension":1,"multiplicity":1,"isotypic_rank":520,"irreducible_dimension":520},
+    {"central_eigenvalue":128,"algebra_block_dimension":9,"multiplicity":3,"isotypic_rank":270,"irreducible_dimension":90},
+    {"central_eigenvalue":-352,"algebra_block_dimension":4,"multiplicity":2,"isotypic_rank":130,"irreducible_dimension":65},
+    {"central_eigenvalue":-340,"algebra_block_dimension":4,"multiplicity":2,"isotypic_rank":1250,"irreducible_dimension":625}
+  ],
+  "permutation_module":"1 + 104 + 65 + 520 + 3*90 + 2*65 + 2*625 = 2340",
+  "conclusion":"The Pass5305 rank-21 object is a genuinely noncommutative coherent configuration, not a commutative association scheme. Its complex adjacency algebra has seven simple blocks with sizes 1,1,1,1,2,2,3.",
+  "boundary":"The two nonisomorphic 65-dimensional central blocks are not identified with the footprint rank-65 module merely from dimension coincidence."
+}
