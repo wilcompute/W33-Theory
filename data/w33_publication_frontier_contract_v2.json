@@ -22,6 +22,11 @@
       "kind": "id",
       "token": "pass-5388-5395-allq-levi-flag-hodge",
       "source": "analysis/PASS5388_5395_allq_levi_flag_hodge_index_insert.html"
+    },
+    {
+      "kind": "id",
+      "token": "pass-5396-5403-allq-apartment-tight-frame",
+      "source": "analysis/PASS5396_5403_allq_apartment_tight_frame_index_insert.html"
     }
   ],
   "boundary": "This contract certifies nested publication reachability, uniqueness, shared-tail consolidation, and public materialization only. It does not certify mathematical, hardware, laboratory, empirical, or physical claims."
