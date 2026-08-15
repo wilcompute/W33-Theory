@@ -49,18 +49,17 @@ def test_load_bearing_invariants():
     assert voltage["minimum_defect_voltage_lift"]["cubic_moment_deficit"] == 378
 
 
-def test_manifest_is_ordered_unique_and_complete():
-    config = json.loads((ROOT / "data/w33_current_frontier_manifest_v1.json").read_text(encoding="utf-8"))
-    manifest = (ROOT / config["tex_manifest"]).read_text(encoding="utf-8")
-    observed = []
-    for line in manifest.splitlines():
-        line = line.strip()
-        if line.startswith(r"\input{"):
-            observed.append(line.split("{", 1)[1].split("}", 1)[0])
-    assert observed == config["required_ordered_inputs"]
-    assert len(observed) == len(set(observed))
-    for item in observed:
-        assert (ROOT / f"{item}.tex").is_file()
+def test_manifest_is_recursive_unique_and_preserves_legacy_required_reachability():
+    module = load_module(
+        ROOT / "analysis/w33_pass5364_publication_dag_audit.py",
+        "pass5364_publication_dag",
+    )
+    report = module.audit(require_index=False)
+    assert report["status"] == "PASS"
+    frontier = report["frontier"]
+    assert frontier["manifest_node_count"] >= 2
+    assert frontier["leaf_count"] == len(set(frontier["leaves"]))
+    assert frontier["legacy_required_missing"] == []
 
 
 def test_live_wrappers_use_one_generated_manifest():
@@ -70,8 +69,6 @@ def test_live_wrappers_use_one_generated_manifest():
         text = (ROOT / wrapper_name).read_text(encoding="utf-8")
         assert text.count(marker) == 1
         assert text.count(rf"\input{{{body_name}}}") == 1
-        for item in config["required_ordered_inputs"]:
-            assert rf"\input{{{item}}}" not in text
 
 
 def test_integrator_helpers_are_idempotent():
@@ -98,3 +95,4 @@ def test_source_insert_and_auditor_exist():
     assert (ROOT / "analysis/BT3387_cohomology_tau_frontier_insert.tex").is_file()
     assert (ROOT / "analysis/BT3387_cohomology_tau_frontier_index_insert.html").is_file()
     assert (ROOT / "tools/audit_w33_current_frontier.py").is_file()
+    assert (ROOT / "analysis/w33_pass5364_publication_dag_audit.py").is_file()
