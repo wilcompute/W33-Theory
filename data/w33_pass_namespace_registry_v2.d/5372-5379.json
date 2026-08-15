@@ -1,0 +1,12 @@
+{
+  "schema":"w33.pass_namespace_registry.v2.entry",
+  "range":[5372,5379],
+  "slug":"simplex_stabiliser_paley_ovoid_vertices_and_a_superseded_form",
+  "title":"The 13-coclique stabiliser as an action, the ovoid as an explicit simplex, a non-GQ carrier, and retiring -1/q^2",
+  "status":"RESERVED",
+  "owner":"anthropic-claude-track-a",
+  "reserved_at":"2026-08-15",
+  "purpose":"Eight fronts. (1) Build the other lane's 13-coclique on NO_5^+(5), compute its setwise stabiliser and the pointwise kernel over the 13, so 576|13! becomes an ACTION or is refuted as one. (2) Audit and retire every '-1/q^2' written at Pass5278-5279 -- its certificate and commit still carry the superseded form, and a superseded claim left in a pushed certificate is exactly what check_retraction_propagation exists for. (3) alpha(W(3,9)) with a stronger formulation than plain MILP at 820 vertices. (4) Test the simplex identity on a NON-GQ carrier (Paley/conference graphs) where H-1 has no q interpretation at all. (5) Search whether a tight coclique was already known in-corpus to be a simplex, possibly recorded under 'resolution' or 'colour class'. Bonkers: (6) examine the 312 points OUTSIDE the 13-simplex, since that is where the stabiliser's kernel would live; (7) two-distance bounds using BOTH inner products, still unexecuted; (8) run the simplex test on Q(4,q) for even q where alpha=q^2+1 IS attained, so the ovoid should literally be the simplex with an explicit vertex set.",
+  "boundary":"Front (1) yields an action only if the stabiliser is computed as permutations and the kernel factored -- an order-divisibility statement is not an action and Pass5343 already said so. Front (3) yields a bound only on proved optimality; a timeout is a lower bound. Front (4) tests the identity on new carriers and cannot establish it in general. Front (7) is an open direction: no two-distance bound improving on Hoffman is claimed to exist, and failing to construct one establishes nothing. Front (8) verifies that an attained bound realises the simplex; it does not prove existence for any q where the ovoid is not already constructed.",
+  "prior_art_check":"The -1/(H-1) identity and the tight-coclique-is-a-simplex reading are Pass5341-5343 (this lane, yesterday). The 13-coclique and its order-576 stabiliser are the other lane's Pass5212/Pass5308. Front (5) is itself a prior-art search and its result may be that fronts 1-8 are partly redundant."
+}
