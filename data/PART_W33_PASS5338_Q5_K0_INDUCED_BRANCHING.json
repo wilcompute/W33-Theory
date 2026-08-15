@@ -1,0 +1,13 @@
+{
+  "pass":5338,
+  "status":"THEOREM_Q5_K0_EXACT_LOCAL_TO_GLOBAL_INDUCED_BRANCHING",
+  "local_fiber_module":"A5/V4: 15 = 1 + 4 + 2*5",
+  "point_induction":"Ind_P^G(1) = 1 + 90 + 65_a",
+  "four_induction":"Ind_P^G(4) = 104 + 520",
+  "five_induction":"Ind_P^G(5) = 90 + 65_b + 625",
+  "shell_reassembly":"1+104+65_a+520+3*90+2*65_b+2*625 = 2340",
+  "vertical_module":"104 + 520 + 2*90 + 2*65_b + 2*625 = 2184 = 156*14",
+  "derivation":"After removing the point module, the only odd-multiplicity vertical constituents are 104 and520. Their dimensions sum to624=156*4, forcing them to be Ind(4); the remaining half gives Ind(5).",
+  "conclusion":"The two global 65-dimensional irreducibles are separated by local branch source: 65_a comes from the point/trivial local sector, while 65_b comes from the local A5 five-dimensional sector.",
+  "boundary":"Complex representation branching theorem only; no characteristic-2 identification follows."
+}
