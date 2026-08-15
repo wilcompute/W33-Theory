@@ -1,0 +1,16 @@
+{
+  "pass": 5269,
+  "status": "THEOREM_Q5_ZEROP_BLOCK_MINIMUM_SUPPORTS_ARE_POINT_FOOTPRINTS",
+  "zero_footprint_block_distance": 25,
+  "moment_equality_value": 7500,
+  "equality_conditions": [
+    "Every weight-8 footprint-dual shell check meets a block-minimum support in 0 or 2 blocks.",
+    "Every pair of support blocks has shell pair-codegree25, hence lies in R1."
+  ],
+  "support_graph": "A 25-clique in NO_5^+(5)",
+  "maximum_clique_census": "Authoritative Pass5238: exactly156 maximum 25-cliques, exactly the W(3,5) point footprints.",
+  "block_minimum_supports": 156,
+  "shared_geometry": "The Hamming-minimum supports of C_F and block-minimum supports of K0 are the same 156 point footprints.",
+  "explicit_realizations": "For each point p, the C(6,2)=15 differences of pairs of chamber stars based at p give weight1000 K0 words on the point footprint, with 25 local blocks of weight40.",
+  "boundary": "Support classification only; the 2340 adjacent-star differences are not claimed to exhaust all K0 words on a minimum block support or all weight1000 K0 words."
+}
