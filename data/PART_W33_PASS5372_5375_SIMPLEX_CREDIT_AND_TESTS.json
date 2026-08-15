@@ -1,0 +1,85 @@
+{
+  "boundary": "Pass 5372 is a CREDIT correction: the simplex mechanism is Pass 1614's and Pass 5342 restated it; only the identification of the constant with the Hoffman bound is incremental. Pass 5374's Paley rows test the EMBEDDING identity, and on Paley graphs H is generally non-integral so no simplex is implied there. Pass 5375 verifies the attained case at q=8 only",
+  "pass_5372": {
+    "count": "fourth already-built discovery in three days",
+    "prior_art": "analysis/w33_pass1612_1614_frame_kernel_and_the_simplex.py",
+    "prior_claim": "9 centred colour-class vectors, equal norm, equal angle, summing to 0 = a regular 8-simplex in E_(-4), with the test ip == -norm^2/(c-1)",
+    "what_5342_added": "the constant is -1/(H-1), tying the simplex to the Hoffman bound rather than to a partition"
+  },
+  "pass_5373": {
+    "certificate_marked": "PART_W33_PASS5278_5279_FRAME_EQUALS_HOFFMAN.json",
+    "correct": "-1/(Hoffman - 1)",
+    "note": "the measured rows were never wrong; the closed form was",
+    "retired": "-1/q^2 (Pass 5279)"
+  },
+  "pass_5374": {
+    "carrier": "Paley graphs -- self-complementary, non-quadrangle",
+    "caveat": "H is generally non-integral on Paley, so these test the embedding identity and imply no simplex",
+    "matches": 0,
+    "rows": [
+      {
+        "graph": "Paley(13)",
+        "hoffman": 4,
+        "matches": false,
+        "minus_1_over_H_minus_1": -0.3333333333,
+        "nonadjacent_ip": -0.3837959395,
+        "srg": [
+          13,
+          6,
+          2,
+          3
+        ]
+      },
+      {
+        "graph": "Paley(17)",
+        "hoffman": 4,
+        "matches": false,
+        "minus_1_over_H_minus_1": -0.3333333333,
+        "nonadjacent_ip": -0.3201941016,
+        "srg": [
+          17,
+          8,
+          3,
+          4
+        ]
+      },
+      {
+        "graph": "Paley(29)",
+        "hoffman": 5,
+        "matches": false,
+        "minus_1_over_H_minus_1": -0.25,
+        "nonadjacent_ip": -0.2280416002,
+        "srg": [
+          29,
+          14,
+          6,
+          7
+        ]
+      },
+      {
+        "graph": "Paley(37)",
+        "hoffman": 6,
+        "matches": false,
+        "minus_1_over_H_minus_1": -0.2,
+        "nonadjacent_ip": -0.1967434036,
+        "srg": [
+          37,
+          18,
+          8,
+          9
+        ]
+      }
+    ]
+  },
+  "pass_5375": {
+    "all_pairs_equal": true,
+    "constant": -0.015625,
+    "construction": "Suzuki-Tits, sigma = x^4",
+    "hoffman": 65.0,
+    "is_regular_simplex": true,
+    "ovoid_size": 65,
+    "predicted": -0.015625,
+    "q": 8,
+    "reading": "the attained bound is realised by explicit points -- 65 vertices of a regular 64-simplex given in closed form"
+  }
+}

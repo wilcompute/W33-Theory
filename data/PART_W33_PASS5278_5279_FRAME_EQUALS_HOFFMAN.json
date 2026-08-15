@@ -1,4 +1,11 @@
 {
+  "SUPERSEDED": {
+    "by": "Pass 5341",
+    "correct_form": "-1/(Hoffman - 1)",
+    "evidence": "H(3,9) has order (9,3) and Hoffman 28; measured -1/27, not -1/9. Q(5,3) is SRG(112,30,2,10) against H(3,9)'s SRG(280,36,8,4) and gives the same -1/27, so the value depends on the bound alone",
+    "still_correct_in_this_certificate": "the identification of the frame bound with the Hoffman bound, and every numeric row -- only the CLOSED FORM attributed to them was wrong",
+    "what": "this certificate states the noncollinear inner product is -1/q^2. That is FALSE in general and true only on GQ(q,q) carriers, where Hoffman = q^2+1 makes -1/q^2 and -1/(H-1) numerically identical"
+  },
   "boundary": "This IDENTIFIES two known bounds as one number; it derives no new bound and neither route is original. The embedding is the standard eigenspace projection, checked equal-norm and two-distance by assertion at each q. The closing paragraph about two-distance bounds using BOTH inner products is a DIRECTION, not a result -- no such bound is constructed or shown to exist",
   "pass_5278": {
     "coincidence": "1 - 1/(-1/q^2) = q^2+1 = the Hoffman bound",
