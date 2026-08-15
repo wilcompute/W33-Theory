@@ -206,6 +206,12 @@ repos:
       # session, all from assuming a key name implies a convention. The sharpest: it
       # defines SELF_DIGEST_KEYS with three canonical names, documents why all three are
       # needed, then hard-codes one of them six lines below. Warns, never blocks.
+      - id: reservation-overlap
+        name: a pass reservation must not overlap an existing one
+        entry: py -3 scripts/check_reservation_overlap.py
+        language: system
+        files: ^data/w33_pass_namespace_registry_v2[.]d/.*[.]json$
+        pass_filenames: false
       - id: cert-prose-vs-data
         name: a certificate must not contradict its own computed fields (warn-only, ~1-in-10 precision)
         entry: py -3 scripts/check_cert_prose_vs_data.py
