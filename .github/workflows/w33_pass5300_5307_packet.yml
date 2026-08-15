@@ -1,0 +1,43 @@
+name: W33 Pass5300-5307 Latin576 and Q4 packet
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass5300_hoffman576_latin_group_bridge.py'
+      - 'analysis/w33_pass5301_latin_torus_q4_shared_f2_4_substrate.py'
+      - 'analysis/w33_pass5302_hoffman_fourcell_orbit_reduction.py'
+      - 'analysis/w33_pass5303_q13_rank_anchor_allodd_generation.py'
+      - 'analysis/w33_pass5304_q11_dual20_density_wall.py'
+      - 'analysis/w33_pass5305_k0_minimum_shell_orbital_configuration.py'
+      - 'analysis/w33_pass5306_q5_64module_nonisomorphism.py'
+      - 'analysis/w33_pass5307_order4_latin_mols_pg32_spread.py'
+      - 'tests/test_w33_pass5300_5307_packet.py'
+      - '.github/workflows/w33_pass5300_5307_packet.yml'
+  workflow_dispatch:
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --upgrade pip
+      - run: pip install sympy scipy numpy pytest
+      - name: Hoffman 576 / Latin affine quotient
+        run: python analysis/w33_pass5300_hoffman576_latin_group_bridge.py
+      - name: Latin / toroidal Q4 substrate
+        run: python analysis/w33_pass5301_latin_torus_q4_shared_f2_4_substrate.py
+      - name: Hoffman four-cell orbit reduction
+        run: python analysis/w33_pass5302_hoffman_fourcell_orbit_reduction.py
+      - name: q13 rank anchor
+        run: python analysis/w33_pass5303_q13_rank_anchor_allodd_generation.py
+      - name: q11 density theorem
+        run: python analysis/w33_pass5304_q11_dual20_density_wall.py
+      - name: q5 K0 rank-21 orbital configuration
+        run: python analysis/w33_pass5305_k0_minimum_shell_orbital_configuration.py
+      - name: 64-module no-go
+        run: python analysis/w33_pass5306_q5_64module_nonisomorphism.py
+      - name: order-4 Latin/MOLS spread
+        run: python analysis/w33_pass5307_order4_latin_mols_pg32_spread.py
+      - run: pytest -q tests/test_w33_pass5300_5307_packet.py
