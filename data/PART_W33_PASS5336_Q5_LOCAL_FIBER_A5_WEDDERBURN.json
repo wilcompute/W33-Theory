@@ -1,0 +1,27 @@
+{
+  "pass":5336,
+  "status":"THEOREM_Q5_LOCAL_K0_FIBER_IS_A5_OVER_V4_WITH_NONCOMMUTATIVE_RANK6_ALGEBRA",
+  "local_fiber_size":15,
+  "group":"PSL2(5) ~= A5",
+  "group_order":60,
+  "pair_stabilizer":"V4",
+  "pair_stabilizer_order":4,
+  "subdegrees":[1,1,1,4,4,4],
+  "orbital_rank":6,
+  "symmetric_orbitals":4,
+  "directed_orbitals":2,
+  "center_dimension":3,
+  "commutator_dimension":3,
+  "complex_wedderburn":"C^2 + M2(C)",
+  "permutation_module":"15 = 1 + 4 + 2*5",
+  "augmentation_module":"14 = 4 + 5 + 5",
+  "class_fixed_pair_profile":[
+    {"class_size":1,"element_order":1,"fixed_pairs":15},
+    {"class_size":15,"element_order":2,"fixed_pairs":3},
+    {"class_size":20,"element_order":3,"fixed_pairs":0},
+    {"class_size":12,"element_order":5,"fixed_pairs":0},
+    {"class_size":12,"element_order":5,"fixed_pairs":0}
+  ],
+  "conclusion":"The 15-word PG(3,2) fiber already carries a local noncommutative multiplicity-two 5-dimensional sector. The global rank21 noncommutativity therefore has a concrete local A5/V4 source.",
+  "boundary":"Finite q5 representation theorem only; the local dimension14 is not identified with a G2 adjoint module."
+}
