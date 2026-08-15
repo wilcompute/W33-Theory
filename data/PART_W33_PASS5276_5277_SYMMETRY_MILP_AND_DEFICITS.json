@@ -1,0 +1,60 @@
+{
+  "boundary": "alpha is settled ONLY for rows with proved_optimal=true; a row that times out carries a lower bound. The symmetry reduction rests on point-transitivity of PSp(4,q), which is classical and CITED -- what is verified here is regularity, its checkable shadow, plus that the forced point appears in the returned set. The polynomial fit in pass_5277 is recorded to be DISMISSED, not used: three points do not determine a law and no q=9 prediction is claimed",
+  "pass_5276": {
+    "prior": "Pass 5271 proved q=3,5 and timed out at q=7 in 900 s",
+    "proved": [
+      3,
+      5
+    ],
+    "reduction": "force one point into the independent set; valid by point-transitivity, which makes some maximum set contain any chosen point",
+    "rows": [
+      {
+        "alpha": 7,
+        "deficit": 3,
+        "hoffman": 10,
+        "independent_verified": true,
+        "method": "MILP with one point forced by transitivity",
+        "n": 40,
+        "proved_optimal": true,
+        "q": 3,
+        "seconds": 0.0
+      },
+      {
+        "alpha": 18,
+        "deficit": 8,
+        "hoffman": 26,
+        "independent_verified": true,
+        "method": "MILP with one point forced by transitivity",
+        "n": 156,
+        "proved_optimal": true,
+        "q": 5,
+        "seconds": 13.9
+      },
+      {
+        "alpha": 33,
+        "deficit": 17,
+        "hoffman": 50,
+        "independent_verified": true,
+        "method": "MILP with one point forced by transitivity",
+        "n": 400,
+        "proved_optimal": false,
+        "q": 7,
+        "seconds": 1500.0
+      }
+    ]
+  },
+  "pass_5277": {
+    "deficits": {
+      "3": 3,
+      "5": 8
+    },
+    "is_not": [
+      "q",
+      "constant",
+      "q^2-q+1 (died at q=5)"
+    ],
+    "unconstrained_fit": {},
+    "verdict": "three points, no law -- recorded as a sequence, not a formula. Pass 4800 declined to fit two and the one formula that did match every computable case at the time was refuted by the next value",
+    "what_would_settle": "q=9 (820 vertices) or q=11 (1,464)"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "boundary": "alpha(W(3,3)) = 7 is CITED to Pass 4795 and Pass 4800, not claimed new; what is established here is an independent from-scratch confirmation and the internal contradiction in BT818. The KS ledger numbers are NOT recomputed -- only the mismatch between BT818's docstring (s<=34, 6 misses) and its own fields (ks_best=36, ks_misses=4) is reported. The guard's precision figure is from a hand-triaged sample of 10 of 442 findings and is not a corpus-wide measurement",
+  "pass_5324": {
+    "data_alpha_exact": 7,
+    "direction": "data right, prose wrong, in both",
+    "file": "data/bt818_ovoid_nogo_theta_gap.json",
+    "prose_correction_says": 9,
+    "second_mismatch": {
+      "docstring": "s<=34, 6 misses",
+      "fields": {
+        "ks_best": 36,
+        "ks_misses": 4
+      }
+    }
+  },
+  "pass_5325": {
+    "alpha": 7,
+    "built": "from scratch, no repo builder",
+    "hoffman": 10,
+    "independent_verified": true,
+    "nine_set_exists": false,
+    "srg": [
+      40,
+      12,
+      2,
+      4
+    ]
+  },
+  "pass_5326": {
+    "carriers": [
+      "analysis/bt818_ovoid_nogo_theta_gap.py",
+      "analysis/w33_MCCCLI_spectral_graph_breakthrough.py",
+      "data/bt818_ovoid_nogo_theta_gap.json",
+      "data/w33_MCCCLI_spectral_graph_breakthrough.json"
+    ],
+    "note": "BT818 is itself a correction file, so its prose is written to be quoted",
+    "public_surface_correct": true
+  },
+  "pass_5327": {
+    "flag_rate_after_relation_requirement": "442/4971 = 9%",
+    "flag_rate_first_calibration": "3756/4971 = 75%",
+    "gap_it_fills": "no existing certificate guard looks INSIDE a certificate for self-consistency -- digests, later files and the index all look outward",
+    "guard": "scripts/check_cert_prose_vs_data.py",
+    "hand_triage": [
+      {
+        "finding": "alpha_exact=7 vs correction 'alpha = 9'",
+        "true_positive": true,
+        "why": "the fault this guard was built from"
+      },
+      {
+        "finding": "family_counts.Szilassi=2 vs boundary 7",
+        "true_positive": false,
+        "why": "the Szilassi polyhedron HAS 7 faces; the 7 is about faces, not the count"
+      },
+      {
+        "finding": "radius_frontier.radius_1=195 vs consequence 4",
+        "true_positive": false,
+        "why": "'radius' is a generic stem; the 4 belongs to a different quantity"
+      },
+      {
+        "finding": "radius_frontier.radius_2=25935 vs consequence 4",
+        "true_positive": false,
+        "why": "same generic stem, same sentence"
+      },
+      {
+        "finding": "radius_frontier.radius_3=1964885 vs consequence 4",
+        "true_positive": false,
+        "why": "same generic stem, same sentence"
+      },
+      {
+        "finding": "j_constant_196884 vs theorem 744",
+        "true_positive": false,
+        "why": "744 is the j-invariant's constant term, legitimately named alongside"
+      },
+      {
+        "finding": "600_cell_V=120 vs theorem 3",
+        "true_positive": false,
+        "why": "unrelated 3 in the same sentence"
+      },
+      {
+        "finding": "pascal_row_4 evaluated=14641 vs theorem 10",
+        "true_positive": false,
+        "why": "row index versus evaluation, both legitimately present"
+      },
+      {
+        "finding": "pascal_row_7 evaluated=19487171 vs theorem 10",
+        "true_positive": false,
+        "why": "as above"
+      },
+      {
+        "finding": "summary.24_count=9 vs theorem 3",
+        "true_positive": false,
+        "why": "generic count key, unrelated 3"
+      }
+    ],
+    "measured_precision": "1/10 on the sample",
+    "selftest_green": true,
+    "verdict": "triage aid, not a gate; registered warn-only"
+  }
+}

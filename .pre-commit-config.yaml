@@ -206,6 +206,12 @@ repos:
       # session, all from assuming a key name implies a convention. The sharpest: it
       # defines SELF_DIGEST_KEYS with three canonical names, documents why all three are
       # needed, then hard-codes one of them six lines below. Warns, never blocks.
+      - id: cert-prose-vs-data
+        name: a certificate must not contradict its own computed fields (warn-only, ~1-in-10 precision)
+        entry: py -3 scripts/check_cert_prose_vs_data.py
+        language: system
+        files: ^data/.*[.]json$
+        pass_filenames: true
       - id: convention-fixed-form
         name: a form/basis/order must be determined, not assumed
         entry: py -3 scripts/check_convention_fixed_form.py
