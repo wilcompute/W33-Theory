@@ -1,0 +1,34 @@
+name: W33 Pass5332-5339 packet
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analysis/w33_pass5332_q5_k0_orbital_wedderburn.py'
+      - 'analysis/w33_pass5333_q5_k0_base_fiber_constituent.py'
+      - 'analysis/w33_pass5334_allodd_characteristic_rank_complement.py'
+      - 'analysis/w33_pass5335_allodd_kernel_equals_linecode_anchors.py'
+      - 'analysis/w33_pass5336_q5_local_fiber_A5_wedderburn.py'
+      - 'analysis/w33_pass5337_q5_k0_stabilizer_tower.py'
+      - 'analysis/w33_pass5338_q5_k0_induced_branching.py'
+      - 'tests/test_w33_pass5332_5339_packet.py'
+      - 'data/PART_W33_PASS5332_5339_RESULTS.json'
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy sympy pytest
+      - run: pytest -q tests/test_w33_pass5332_5339_packet.py
+      - run: python analysis/w33_pass5334_allodd_characteristic_rank_complement.py
+      - run: python analysis/w33_pass5335_allodd_kernel_equals_linecode_anchors.py
+      - run: python analysis/w33_pass5336_q5_local_fiber_A5_wedderburn.py
+      - run: python analysis/w33_pass5337_q5_k0_stabilizer_tower.py
+      - run: python analysis/w33_pass5338_q5_k0_induced_branching.py
+      - run: python analysis/w33_pass5332_q5_k0_orbital_wedderburn.py
+      - run: python analysis/w33_pass5333_q5_k0_base_fiber_constituent.py
