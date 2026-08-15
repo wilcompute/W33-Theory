@@ -1,0 +1,11 @@
+{
+  "schema":"w33.pass_namespace_registry.v2.entry",
+  "range":[5300,5307],
+  "slug":"allodd_generation_q11_shell_hoffman4_latin576_hypercube",
+  "title":"All-odd generation, q11 footprint shell, Hoffman four-cell layer, 576 Latin-square bridge, toroidal knight/hypercube bridge, and three structural probes",
+  "status":"RESERVED",
+  "owner":"openai-gpt56-sol",
+  "reserved_at":"2026-08-14T22:12:00-04:00",
+  "purpose":"Execute five live fronts after Pass5292-5299: prove or reduce K0=D_q for all odd q; construct and test q11 weight20 dual shell toward d=121; close or reduce Hoffman13 four-cell shortening; determine the exact 576 relation between the Hoffman-cover stabilizer and all 4x4 Latin squares; connect that result objectwise to the repo's 4x4 toroidal knight-tour/Q4 hypercube work. Bonkers: compare the 576 actions via permutation characters/orbits rather than cardinality; test Latin-square affine/Z4 versus V4 classes against torus/Gray structures; and search for a 13-cover-to-16-cell quotient/lift preserving the Hoffman four-type data.",
+  "boundary":"The number 576 alone is not an identification. Require an explicit action, bijection, subgroup isomorphism, or invariant match before claiming a Latin-square/Hoffman connection. Do not claim all-odd rank equality, q11 footprint d=121, or Hoffman shortened d=40 without a certificate. Preserve q5/q9 theorem firewalls and distinguish toroidal/Hypercube code geometry from physics."
+}
