@@ -1,0 +1,11 @@
+{
+  "schema":"w33.pass_namespace_registry.v2.entry",
+  "range":[5356,5363],
+  "slug":"psl2_fiber_mod2_footprint_bridge",
+  "title":"PSL2 two-subset fiber and mod-2 footprint bridge",
+  "status":"RESERVED",
+  "owner":"openai-gpt56-sol",
+  "reserved_at":"2026-08-15T00:27:00-04:00",
+  "purpose":"Independently analyze the all-odd local two-line fiber as PSL2(q) on 2-subsets of P1(q), connect its modular permutation structure to the W(3,q) point module and footprint kernel, test exact formulas at new anchors where feasible, and promote only proof-safe consequences into the frontier/manuscripts/site.",
+  "boundary":"No all-odd binary-rank theorem without a complete module-theoretic or combinatorial proof; distinguish PSL2/PGL2 and characteristic-zero/characteristic-two modules; preserve q=11 and Hoffman distance firewalls."
+}
