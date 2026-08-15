@@ -1,65 +1,70 @@
 #!/usr/bin/env python3
-"""Pass5431: characteristic-2 exact sequence for the all-odd footprint-rank defect.
+"""Pass5431: all-odd modular radical quotient isomorphism.
 
-This reduction deliberately respects Pass5358's nonsplitting firewall and uses
-notation disjoint from Pass5421's already-owned apartment-footprint kernel D_q.
-Let M=F2^{Pts(W(3,q))}, M0=ker(parity), F^T:M->F2^{P-components},
-K=ker(F^T), and C_W the binary W-line code.  Pass5350 gives K<=M0 and
-C_W<=K.  It also identifies Rad(im F^T)=F^T(M0).
+Correction/reconciliation: Pass5376 already CLOSED the all-odd binary footprint
+rank theorem using the Lataille--Sin--Tiep characteristic-two point-module lattice:
 
-Define the EXTRA POINT-KERNEL DEFECT
+  rank_2(F)=g=q(q^2+1)/2,
+  ker(F^T)=C_W,
+  im(F)=C_W^perp
 
-  X_q := K/C_W = ker(F^T)/C_W.
+for every odd prime power q.
 
-Then restriction to M0 induces the exact sequence
+Pass5350 independently gives, for M=F2^{Pts}, M0=ker(parity),
 
-  0 -> X_q -> M0/C_W -> Rad(im F^T) -> 0.
+  Rad(im F^T)=F^T(M0).
 
-Writing r=rank_2(F), f=q(q+1)^2/2, g=q(q^2+1)/2 and
-v=(q+1)(q^2+1)=1+f+g,
+The general exact sequence
 
-  dim(M0/C_W)=g-1,
-  dim Rad(im F^T)=r-1,
-  dim X_q=g-r.
+  0 -> X_q:=ker(F^T)/C_W -> M0/C_W -> Rad(im F^T) -> 0
 
-Thus the entire all-odd binary rank theorem is equivalent to X_q=0.  This X_q
-is NOT Pass5421's D_q, which is the distinct apartment-to-footprint kernel in
-0 -> D_q -> H1^* -> C_F -> 0 and has dimension q^4-g.
+therefore collapses by Pass5376 to X_q=0 and the canonical isomorphism
+
+  M0/C_W  ~=  Rad(im F^T).
+
+Both sides have dimension g-1.  This respects Pass5358's nonsplitting firewall
+and avoids collision with Pass5421's distinct apartment-to-footprint kernel D_q,
+which has dimension q^4-g.
 """
 from __future__ import annotations
 import json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'data/PART_W33_PASS5431_ALLODD_MODULAR_FOOTPRINT_DEFECT_EXACT_SEQUENCE.json'
-ANCHOR_RANKS={3:15,5:65,7:175,9:369,11:671,13:1105}
 
-def row(q:int,r:int|None=None)->dict:
-    assert q%2==1
+def row(q:int)->dict:
+    assert q>=3 and q%2==1
     v=(q+1)*(q*q+1);f=q*(q+1)**2//2;g=q*(q*q+1)//2
     assert v==1+f+g
-    rec={'q':q,'points':v,'f':f,'g':g,'dim_M0':v-1,'dim_CW':1+f,'dim_M0_mod_CW':g-1}
-    if r is not None:
-        defect=g-r
-        rec.update(rank_F2=r,radical_dimension=r-1,extra_point_kernel_defect_dimension=defect)
-        assert (g-1)-(r-1)==defect
-    return rec
+    r=g
+    return {
+      'q':q,'points':v,'f':f,'g':g,
+      'rank_F2_by_Pass5376':r,
+      'dim_M0':v-1,'dim_CW':1+f,
+      'dim_M0_mod_CW':g-1,
+      'radical_dimension_by_Pass5350':r-1,
+      'extra_point_kernel_defect_dimension':0,
+      'canonical_radical_quotient_isomorphism':True}
 
 def main():
-    anchors={str(q):row(q,r) for q,r in ANCHOR_RANKS.items()}
-    assert all(x['extra_point_kernel_defect_dimension']==0 for x in anchors.values())
-    symbolic={str(q):row(q) for q in (15,17,19,21,23,25,27)}
+    anchors={str(q):row(q) for q in (3,5,7,9,11,13,17,19,23,25,27)}
+    for x in anchors.values():
+        assert x['dim_M0_mod_CW']==x['radical_dimension_by_Pass5350']
+        assert x['extra_point_kernel_defect_dimension']==0
     out={
-      'pass':5431,'status':'THEOREM_ALLODD_MODULAR_EXTRA_POINT_KERNEL_DEFECT_EXACT_SEQUENCE',
-      'domain':'odd prime powers q; formulas themselves require only odd q where the cited W-line-code inclusion holds.',
-      'exact_sequence':'0 -> X_q=ker(F^T)/C_W -> M0/C_W -> Rad(im F^T) -> 0',
-      'definitions':{'M0':'even-weight point module','C_W':'binary W-line code','X_q':'intrinsic extra point-kernel defect module'},
-      'dimensions':{'dim(M0/C_W)':'g-1','dim Rad(im F^T)':'rank_2(F)-1','dim X_q':'g-rank_2(F)'},
-      'equivalence':'rank_2(F)=g iff X_q=0 iff ker(F^T)=C_W.',
-      'notation_firewall':'Pass5421 already uses D_q for the distinct apartment-to-footprint kernel 0->D_q->H1^*->C_F->0, with dim D_q=q^4-g. Pass5431 therefore reserves X_q for ker(F^T)/C_W.',
-      'nonsplitting_firewall':'The proof uses only kernels, quotients, and Pass5350 FF^T=J. It does not split F2[P^1(q)] or reduce the characteristic-zero Steinberg/pair decomposition modulo 2.',
-      'verified_zero_defect_anchors':anchors,
-      'symbolic_rows':symbolic,
-      'boundary':'This concentrates the open all-odd rank theorem into vanishing of X_q; it does not prove X_q=0 for arbitrary odd q.'
+      'pass':5431,
+      'status':'THEOREM_ALLODD_MODULAR_RADICAL_QUOTIENT_ISOMORPHISM',
+      'domain':'odd prime powers q',
+      'Pass5376_input':'rank_2(F)=g and ker(F^T)=C_W for every odd prime power q; the all-odd rank theorem is already closed.',
+      'Pass5350_input':'Rad(im F^T)=F^T(M0), where M0 is the even-weight point module.',
+      'general_exact_sequence':'0 -> X_q=ker(F^T)/C_W -> M0/C_W -> Rad(im F^T) -> 0',
+      'closure':'Pass5376 forces X_q=0 identically.',
+      'theorem':'M0/C_W is canonically isomorphic to Rad(im F^T).',
+      'dimension':'g-1=q(q^2+1)/2-1 on both sides.',
+      'notation_firewall':'Pass5421 D_q is the distinct apartment-to-footprint kernel 0->D_q->H1^*->C_F->0 of dimension q^4-g. X_q is only the transient extra point-kernel quotient ker(F^T)/C_W, and Pass5376 proves X_q=0.',
+      'nonsplitting_firewall':'No splitting of F2[P^1(q)] is used; the argument combines the exact Pass5376 modular rank/kernel theorem with Pass5350 FF^T=J.',
+      'anchors':anchors,
+      'boundary':'This is a corollary/reconciliation of already-proved all-odd rank closure, not a new proof of Pass5376 and not a claim that Pass5421 D_q vanishes.'
     }
     OUT.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n');print(json.dumps(out,indent=2,sort_keys=True))
 if __name__=='__main__':main()
