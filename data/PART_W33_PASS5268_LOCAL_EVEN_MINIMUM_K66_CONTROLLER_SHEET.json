@@ -1,0 +1,14 @@
+{
+  "pass": 5268,
+  "status": "THEOREM_Q5_LOCAL_EVEN_MINIMUM_IS_K66_ADJACENT_EDGE_PAIR",
+  "factor_code_weight_histogram": {"0":1,"5":6,"8":15,"9":10},
+  "minimum_atoms": 36,
+  "atom_geometry": "edges of K6,6, indexed a_ij=s_i tensor s_j",
+  "even_minimum_weight": 40,
+  "even_minimum_words": 180,
+  "classification": "Every weight40 word is a_ij+a_ik or a_ij+a_kj; equivalently an unordered pair of K6,6 edges sharing one endpoint.",
+  "count": "12*C(6,2)=180",
+  "global_K0_witness": "Difference of two chamber stars based at the same W point: 25 active P blocks, one local adjacent-atom word of weight40 in each, total apartment weight1000.",
+  "controller_sheet": "Under Pass5217, the 25 active blocks of a chosen star are indexed by (a,c) in F5^2. The K0 block-minimum witness is a full 5x5 sheet of adjacent-atom transitions.",
+  "boundary": "Exact code/controller coordinate theorem. No optical dynamics or physical transition mechanism is asserted."
+}
