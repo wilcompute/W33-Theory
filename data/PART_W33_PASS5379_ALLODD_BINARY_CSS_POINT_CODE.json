@@ -1,0 +1,22 @@
+{
+  "pass":5379,
+  "status":"THEOREM_ALLODD_BINARY_CSS_POINT_CODE_FAMILY",
+  "domain":"all odd prime powers q",
+  "css_parameters":"[[(q+1)(q^2+1), q^2+1, q+1]]_2",
+  "construction":"Use C_F=C_W^perp as both X- and Z-check row spaces; LST gives C_W^perp<=C_W=(C_W^perp)^perp.",
+  "distance_argument":"Bagchi--Sastry give d(C_W)=q+1 with minimum words exactly W-lines. Every W-line is outside C_W^perp because it has odd intersection with an intersecting W-line. Thus dX=dZ=q+1.",
+  "samples":{
+    "3":{"q":3,"n":40,"stabilizer_rank_each":15,"k":10,"dX":4,"dZ":4,"d":4},
+    "5":{"q":5,"n":156,"stabilizer_rank_each":65,"k":26,"dX":6,"dZ":6,"d":6},
+    "7":{"q":7,"n":400,"stabilizer_rank_each":175,"k":50,"dX":8,"dZ":8,"d":8},
+    "9":{"q":9,"n":820,"stabilizer_rank_each":369,"k":82,"dX":10,"dZ":10,"d":10},
+    "11":{"q":11,"n":1464,"stabilizer_rank_each":671,"k":122,"dX":12,"dZ":12,"d":12},
+    "13":{"q":13,"n":2380,"stabilizer_rank_each":1105,"k":170,"dX":14,"dZ":14,"d":14}
+  },
+  "separation":"This is a binary point-code CSS family. It is distinct from the project ternary edge CSS [[240,81,3]]_3 and no equivalence between them is asserted.",
+  "primary_sources":[
+    "Lataille--Sin--Tiep, J. Algebra 268 (2003): complete characteristic-2 point-module lattice and C_W^perp<=C_W for m=2.",
+    "Bagchi--Sastry, Geometriae Dedicata 27 (1988), DOI 10.1007/BF00181609: minimum weight q+1 of the regular generalized-polygon line code and minimum words are lines."
+  ],
+  "boundary":"This determines the abstract CSS parameters. It does not supply a fault-tolerant circuit, decoding threshold, or hardware implementation for the binary family."
+}
