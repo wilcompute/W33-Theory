@@ -11,7 +11,7 @@
     "5428": "THEOREM: canonical all-q oriented apartment tomography; C^+=(1/N)C^T on the Levi cycle image and normalized apartments form a unit tight frame of bound N/8.",
     "5429": "THEOREM: unsigned apartment visibility has exact inverse and Gram condition number 8q^4/((q-1)^2(q^2+1)); terminal sector is uniformly the smallest eigenvalue.",
     "5430": "COMPUTATIONAL THEOREM: q3 deterministic provenance decoder has global eventual guaranteed radius10; V1/V2 exact MILPs close, 1296 V3 and 349568 pruned V4 false-survivor cases all clear; monotone true-only radius remains7.",
-    "5431": "THEOREM/REDUCTION: all-odd modular defect exact sequence 0->D_q->M0/C_W->Rad(im F^T)->0 with dim D_q=g-rank_2(F); all-odd rank target iff D_q=0.",
+    "5431": "THEOREM/REDUCTION: all-odd extra point-kernel defect exact sequence 0->X_q=ker(F^T)/C_W->M0/C_W->Rad(im F^T)->0 with dim X_q=g-rank_2(F); all-odd rank target iff X_q=0. X_q is distinct from Pass5421's apartment-to-footprint D_q of dimension q^4-g.",
     "5432": "THEOREM: q5 K0=[73125,560,1000]_2 has no nonzero weights1001..1039; every non-minimum word has weight at least1040.",
     "5433": "THEOREM: odd flag-distance orientation signs convert full-rank unsigned apartment visibility into the exact scaled Hodge cycle projector while preserving trace.",
     "5434": "THEOREM: exact all-q unsigned apartment Gram determinant; at q3 det=2^456*3^160*5^105.",
@@ -26,6 +26,7 @@
     "tests": "tests/test_w33_pass5428_5435_packet.py",
     "workflow": ".github/workflows/w33_pass5428_5435_apartment_tomography.yml"
   },
+  "notation_firewall": "Pass5421 owns D_q for 0->D_q->H1^*->C_F->0, dim D_q=q^4-g. Pass5431 owns X_q=ker(F^T)/C_W, dim X_q=g-rank_2(F). They are distinct modules.",
   "remote_replay": {
     "latest_known_run_id": 31889280026,
     "status_at_close": "QUEUED",
