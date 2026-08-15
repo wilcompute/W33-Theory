@@ -14,12 +14,21 @@
   },
   "integration":{
     "manuscript_insert":"analysis/PASS5444_5451_frame_basis_pell_radius11_insert.tex",
-    "frontier_manifest":"analysis/W33_CURRENT_FRONTIER_MANIFEST.tex"
+    "frontier_manifest":"analysis/W33_CURRENT_FRONTIER_MANIFEST.tex",
+    "outcomes":"analysis/PASS5444_5451_EXECUTED_OUTCOMES.md",
+    "public_page":"docs/pass5444-5451-frame-basis-pell-radius11.html",
+    "public_card":"analysis/PASS5444_5451_index_insert.html",
+    "tests":"tests/test_w33_pass5444_5451_packet.py",
+    "publication_contract":"data/w33_publication_frontier_contract_v2.json",
+    "workflow":".github/workflows/w33_pass5444_5451_frame_basis_pell_radius11.yml",
+    "workflow_run":31891782770,
+    "workflow_status_at_freeze":"queued"
   },
   "boundaries":[
     "Pass5445 does not prove the deterministic BFS basis has optimal condition number among all cardinality-minimal apartment bases.",
     "Pass5447 does not prove that weight1040 is absent; remaining candidates are exotic26 supports subject to local K6,6 minimum-word and connected-L syndrome constraints.",
     "Pass5448 does not prove global eventual radius11; exhaustive V3 and35,218,336-case V4 completion remains.",
-    "Pass5450/5451 are arithmetic corollaries. Pell solutions carry no physical meaning by themselves and only prime-power q are finite-field parameters."
+    "Pass5450/5451 are arithmetic corollaries. Pell solutions carry no physical meaning by themselves and only prime-power q are finite-field parameters.",
+    "Remote GitHub Actions run31891782770 was queued at freeze; no green CI claim is made."
   ]
 }
