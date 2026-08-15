@@ -1,0 +1,33 @@
+{
+  "arithmetic_checks": {
+    "11": {"PSL2_order": 660, "Sym2_Steinberg_dimension": 66, "pair_fiber_size": 66, "pair_stabilizer_order": 10, "q": 11},
+    "13": {"PSL2_order": 1092, "Sym2_Steinberg_dimension": 91, "pair_fiber_size": 91, "pair_stabilizer_order": 12, "q": 13},
+    "17": {"PSL2_order": 2448, "Sym2_Steinberg_dimension": 153, "pair_fiber_size": 153, "pair_stabilizer_order": 16, "q": 17},
+    "19": {"PSL2_order": 3420, "Sym2_Steinberg_dimension": 190, "pair_fiber_size": 190, "pair_stabilizer_order": 18, "q": 19},
+    "25": {"PSL2_order": 7800, "Sym2_Steinberg_dimension": 325, "pair_fiber_size": 325, "pair_stabilizer_order": 24, "q": 25},
+    "3": {"PSL2_order": 12, "Sym2_Steinberg_dimension": 6, "pair_fiber_size": 6, "pair_stabilizer_order": 2, "q": 3},
+    "5": {"PSL2_order": 60, "Sym2_Steinberg_dimension": 15, "pair_fiber_size": 15, "pair_stabilizer_order": 4, "q": 5},
+    "7": {"PSL2_order": 168, "Sym2_Steinberg_dimension": 28, "pair_fiber_size": 28, "pair_stabilizer_order": 6, "q": 7},
+    "9": {"PSL2_order": 360, "Sym2_Steinberg_dimension": 45, "pair_fiber_size": 45, "pair_stabilizer_order": 8, "q": 9}
+  },
+  "boundary": "Characteristic-zero representation theorem only. In characteristic 2 the projective-line permutation module is not split as 1+St in the same way; no binary footprint-rank equality is inferred.",
+  "domain": "odd prime powers q",
+  "homogeneous_space": "C(P^1(q),2) ~= PSL2(q)/N(T_split), |N(T_split)|=q-1",
+  "module_theorem": "Over C, C[C(P^1(q),2)] ~= Sym^2(St_q).",
+  "pass": 5356,
+  "prime_anchor_character_checks": {
+    "11": {"character_identity_checked_on_elements": 660, "dimension_Sym2_Steinberg": 66, "fixed_point_pair_profiles": {"fixP1=0,fixPairs=0": 220, "fixP1=0,fixPairs=6": 55, "fixP1=1,fixPairs=0": 120, "fixP1=12,fixPairs=66": 1, "fixP1=2,fixPairs=1": 264}, "group_order": 660, "pair_fiber_size": 66, "projective_line_size": 12, "q": 11, "split_torus_normalizer_order": 10, "steinberg_dimension": 11},
+    "13": {"character_identity_checked_on_elements": 1092, "dimension_Sym2_Steinberg": 91, "fixed_point_pair_profiles": {"fixP1=0,fixPairs=0": 468, "fixP1=1,fixPairs=0": 168, "fixP1=14,fixPairs=91": 1, "fixP1=2,fixPairs=1": 364, "fixP1=2,fixPairs=7": 91}, "group_order": 1092, "pair_fiber_size": 91, "projective_line_size": 14, "q": 13, "split_torus_normalizer_order": 12, "steinberg_dimension": 13},
+    "3": {"character_identity_checked_on_elements": 12, "dimension_Sym2_Steinberg": 6, "fixed_point_pair_profiles": {"fixP1=0,fixPairs=2": 3, "fixP1=1,fixPairs=0": 8, "fixP1=4,fixPairs=6": 1}, "group_order": 12, "pair_fiber_size": 6, "projective_line_size": 4, "q": 3, "split_torus_normalizer_order": 2, "steinberg_dimension": 3},
+    "5": {"character_identity_checked_on_elements": 60, "dimension_Sym2_Steinberg": 15, "fixed_point_pair_profiles": {"fixP1=0,fixPairs=0": 20, "fixP1=1,fixPairs=0": 24, "fixP1=2,fixPairs=3": 15, "fixP1=6,fixPairs=15": 1}, "group_order": 60, "pair_fiber_size": 15, "projective_line_size": 6, "q": 5, "split_torus_normalizer_order": 4, "steinberg_dimension": 5},
+    "7": {"character_identity_checked_on_elements": 168, "dimension_Sym2_Steinberg": 28, "fixed_point_pair_profiles": {"fixP1=0,fixPairs=0": 42, "fixP1=0,fixPairs=4": 21, "fixP1=1,fixPairs=0": 48, "fixP1=2,fixPairs=1": 56, "fixP1=8,fixPairs=28": 1}, "group_order": 168, "pair_fiber_size": 28, "projective_line_size": 8, "q": 7, "split_torus_normalizer_order": 6, "steinberg_dimension": 7}
+  },
+  "proof_spine": [
+    "C[P^1(q)] = 1 + St_q in characteristic zero.",
+    "Sym^2(C[P^1(q)]) splits into diagonal and off-diagonal monomials.",
+    "The diagonal module is C[P^1(q)] and the off-diagonal module is C[C(P^1(q),2)].",
+    "Semisimplicity cancels 1+St_q from Sym^2(1+St_q)=1+St_q+Sym^2(St_q)."
+  ],
+  "q5_recovery": "dim Sym^2(St_5)=15 and Pass5336 gives 15=1+4+2*5.",
+  "status": "THEOREM_ALLODD_LOCAL_PAIR_FIBER_IS_SYM2_STEINBERG_IN_CHARACTERISTIC_ZERO"
+}
