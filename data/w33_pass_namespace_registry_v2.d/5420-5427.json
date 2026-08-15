@@ -3,9 +3,29 @@
   "range":[5420,5427],
   "slug":"apartment_cut_footprint_dual_conditioning_probes",
   "title":"Apartment/cut duality, footprint bridge, overlap algebra, conditioning, and three outside-box probes",
-  "status":"RESERVED",
+  "status":"CLOSED_SOURCE_COMPLETE_REMOTE_REPLAY_QUEUED",
   "owner":"openai-gpt56-sol-chat",
   "reserved_at":"2026-08-15",
-  "purpose":"Execute the five queued directions after Pass5404-5411 plus three independent probes: complementary cut tight frame; cycle-to-footprint equivariant bridge; apartment-apartment overlap algebra; unsigned Gram conditioning; CI/publication closure; discrete q^4 derivative/boundary probe; exterior/Plucker probe; reciprocal spherical-kernel probe.",
-  "boundary":"Each pass must preserve theorem/evidence firewalls. No physical, coding-distance, contextuality, novelty, or CI-success claim may be promoted without a direct repo certificate or authoritative prior-art check."
+  "purpose":"Execute the five queued directions after Pass5404-5411 plus three independent probes: complementary cut tight frame; H1-to-footprint equivariant exact sequence; apartment-apartment overlap algebra; unsigned Gram conditioning; CI/publication closure; exact finite-difference/gallery derivative identity; concrete footprint/bicycle amalgam; regular-simplex two-design splitting.",
+  "outcomes":[
+    "Pass5420: proved the all-q Naimark-complement cut frame with off-diagonal distance-d inner product (-1)^(d+1)q^(4-d)/(N-q^4), exactly recovering BT549 at q=3.",
+    "Pass5421: dualized the Pass5066 apartment/theta presentation and composed it with Pass5384 to obtain 0 -> D_q -> H1^* -> C_F -> 0 and 0 -> C_F^* -> H1 -> D_q^* -> 0 for odd q.",
+    "Pass5422: proved proper apartment intersections are single paths of length 1..4 and derived n4=8(q-1), n3=8(q-1)^2, n2=8q(q-1)^2, n1=8q^2(q-1)^2; independent q=2,3,5 projective enumerations reproduce the formulas and BT546.",
+    "Pass5423: proved lambda_min(BB^T)=(q-1)^2(q^2+1), lambda_max=8q^4, so Gram condition tends to 8 and operator singular condition tends to sqrt(8).",
+    "Pass5424: integrated the theorem insert into the current frontier, registered the public card, added focused regressions and a replay/publication/three-manuscript compile workflow. GitHub Actions run 31888188174 is surfaced but queued; no remote pass is claimed.",
+    "Pass5425: upgraded the 4q^3 derivative resemblance to the exact gallery finite difference Delta(q^4)=4I2+6I3+4I4+I5.",
+    "Pass5426: proved for odd q that C_F=C_W^perp is the point half of the Levi bicycle space and Bike=P_g+L_g with intersection <J>, hence dim Bike=q(q^2+1)-1; q=3 recovers P15 inside Bike29.",
+    "Pass5427: split the flag regular simplex orthogonally into the q^4-dimensional cycle spherical 2-design and the (N-q^4-1)-dimensional centered-cut spherical 2-design; q=3 gives 81+78=159."
+  ],
+  "artifacts":[
+    "analysis/w33_pass5420_5427_apartment_duality_packet.py",
+    "data/PART_W33_PASS5420_5427_APARTMENT_DUALITY_PACKET.json",
+    "analysis/PASS5420_5427_apartment_duality_insert.tex",
+    "analysis/PASS5420_5427_apartment_duality_index_insert.html",
+    "tests/test_w33_pass5420_5427_apartment_duality_packet.py",
+    ".github/workflows/w33_pass5420_5427_apartment_duality.yml"
+  ],
+  "prior_art_firewall":"Colangelo-Monzillo-Siciliano already provide the generalized-quadrangle flag association scheme; Naimark complements are standard frame theory; other generalized-quadrangle tight-frame constructions exist. The packet claims only the exact Hodge/footprint/intersection specializations proved and cross-regressed in-repo.",
+  "boundary":"No physical, apartment-code-distance, contextuality-degree, optimal-spherical-code, broad novelty, or remote-CI-success claim is made. The line-supported bicycle copy is an incidence-dual kernel copy, not an inferred L-footprint tensor.",
+  "status_note":"Source packet closed on master. Remote workflow 31888188174 is queued as of closure; earlier Pass5396 and Pass5404 workflows also had zero completed runs when checked."
 }
