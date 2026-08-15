@@ -8,7 +8,14 @@ on:
       - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
       - 'analysis/W33_CURRENT_FRONTIER_MANIFEST_THROUGH_4864.tex'
       - 'analysis/w33_pass5364_publication_dag_audit.py'
+      - 'analysis/PASS5364_5371_publication_integrity_insert.tex'
+      - 'analysis/PASS5364_5371_publication_integrity_index_insert.html'
+      - 'data/w33_publication_frontier_contract_v2.json'
+      - 'data/w33_current_frontier_manifest_v1.json'
+      - 'data/w33_public_frontier_extension_pass4461_4464.json'
       - 'tools/audit_w33_current_frontier.py'
+      - 'tools/integrate_bt3376_bt3389.py'
+      - 'tools/materialize_pass5364_5371_publication_integrity.py'
       - 'tests/test_bt3376_3389_cohomology_tau_frontier.py'
       - 'w33_paper.tex'
       - 'photonic_holonet.tex'
@@ -24,6 +31,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Materialize configured public sections
+        run: |
+          python tools/integrate_bt3376_bt3389.py --report /tmp/integration.json
+          python tools/materialize_pass5364_5371_publication_integrity.py
       - name: Recursive frontier audit
         run: |
           mkdir -p evidence/pass5364_5371
