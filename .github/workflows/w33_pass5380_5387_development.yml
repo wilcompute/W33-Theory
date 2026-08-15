@@ -1,0 +1,29 @@
+name: Pass5380-5387 development replay
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass538*.py'
+      - '.github/workflows/w33_pass5380_5387_development.yml'
+  workflow_dispatch:
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Replay current packet producers
+        run: |
+          set -euxo pipefail
+          python analysis/w33_pass5380_q5_distance_filtered_code_extension.py
+          python analysis/w33_pass5381_q3_radius9_false_vote4_census.py
+      - name: Upload current certificates
+        uses: actions/upload-artifact@v4
+        with:
+          name: pass5380-5387-development-certificates
+          path: |
+            data/PART_W33_PASS5380_Q5_DISTANCE_FILTERED_CODE_EXTENSION.json
+            data/PART_W33_PASS5381_Q3_RADIUS9_FALSE_VOTE4_CENSUS.json
