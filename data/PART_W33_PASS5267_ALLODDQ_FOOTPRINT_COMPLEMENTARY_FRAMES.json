@@ -1,0 +1,16 @@
+{
+  "pass": 5267,
+  "status": "THEOREM_ALLODDQ_FOOTPRINT_COMPLEMENTARY_TWO_DISTANCE_FRAMES",
+  "domain": "odd prime powers q",
+  "positive_frame": "dimension f=q(q+1)^2/2; unit inner products (q-1)/(q(q+1)) on collinear pairs and -1/q^2 on noncollinear pairs",
+  "negative_frame": "dimension g=q(q^2+1)/2; unit inner products -1/q on collinear pairs and +1/q^2 on noncollinear pairs",
+  "decomposition": "v=(q+1)(q^2+1)=1+f+g; the centered frames are the r=q-1 and s=-(q+1) eigenspace embeddings of the W(3,q) point graph",
+  "real_Gram_spectrum": "[2q^2(q+1)]^1 + [2q(q-1)]^f + 0^g",
+  "binary_rank_anchors": {"q3":15,"q5":65,"q7":175},
+  "anchor_alignment": "At q=3,5,7, rank_2(F)=g exactly.",
+  "literature_context": [
+    "Bagchi-Brouwer-Wilbrink, Geometriae Dedicata 39 (1991), determine dimensions of binary line/neighborhood codes for Sp(4,q) and dual O(5,q).",
+    "Lataille-Sin-Tiep, J. Algebra 268 (2003), determine complete mod-2 rank-3 permutation-module structure for odd-characteristic symplectic groups, with similar O(5,q) results."
+  ],
+  "boundary": "The complementary real-frame theorem is all odd q. The binary identity rank_2(F)=g remains certified only at q=3,5,7 here, and the literature statements accessible in this run do not by themselves identify the P-component footprint minimum-distance theorem."
+}
