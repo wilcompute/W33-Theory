@@ -1,0 +1,12 @@
+{
+  "schema":"w33.pass_namespace_registry.v2.entry",
+  "range":[5420,5427],
+  "slug":"fixed_vertex_identified_sz8_orbits_design_group_and_lean_cosines",
+  "title":"Which grid is fixed and why, whether Sz(8) fixes an ovoid point, the 2-(13,6,60) automorphism group, and the cosine identity in Lean",
+  "status":"RESERVED",
+  "owner":"anthropic-claude-track-a",
+  "reserved_at":"2026-08-15",
+  "purpose":"Eight fronts. (1) Identify the fixed dual grid geometrically -- the Pass5417 orbit computation names a 1+12 partition but no reason. (2) Resolve ((A4 x A4):C2):C2 versus their W(D4):C3 for the same order 576. (3) Run the same orbit test on W(3,8): does Sz(8) act transitively on the 65-point Suzuki-Tits ovoid, or is there a distinguished point there too -- which decides whether 1+12 is special or generic. (4) alpha(W(3,9)) by MILP at 820 vertices, still the only route to a third deficit point. (5) Audit every downstream citation of the four retired claims (-1/q^2, -1/(H-1), the simplex mechanism, mu/(k(1+s))) and mark them SUPERSEDED. Bonkers: (6) compute Aut of the 2-(13,6,60) design and compare with 576; (7) test whether EVERY Delsarte-tight coclique in reach has a distinguished vertex, which would make 1+12 generic rather than a finding; (8) formalise the cosine-sequence identity in Lean, which is pure arithmetic and exactly what formal/W33 is actually for.",
+  "boundary":"Front (1) requires a geometric invariant separating the fixed grid, not merely its index. Front (3) is decisive for interpretation: if Sz(8) is transitive on the ovoid then 1+12 is a property of the q=5 carrier, and if it also fixes a point then the distinguished vertex is generic and Pass5417 over-read it. Front (4) yields a bound only on proved optimality; at 820 vertices a timeout is the expected outcome and must be labelled a lower bound. Front (8) formalises ARITHMETIC only -- the geometric content stays an external input, exactly as every existing formal/W33 header states.",
+  "prior_art_check":"The cosine sequence is classical (Brouwer-Cohen-Neumaier, Godsil) and was established as such at Pass5412; front (8) formalises a known identity and claims no novelty. The 13-cover and its order-576 stabiliser are the other lane's Pass5212/Pass5308; the faithful action, kernel 2 and orbits 1+12 are Pass5416-5417."
+}
