@@ -3,9 +3,18 @@
   "range":[5356,5363],
   "slug":"psl2_fiber_mod2_footprint_bridge",
   "title":"PSL2 two-subset fiber and mod-2 footprint bridge",
-  "status":"RESERVED",
+  "status":"CLOSED",
   "owner":"openai-gpt56-sol",
   "reserved_at":"2026-08-15T00:27:00-04:00",
-  "purpose":"Independently analyze the all-odd local two-line fiber as PSL2(q) on 2-subsets of P1(q), connect its modular permutation structure to the W(3,q) point module and footprint kernel, test exact formulas at new anchors where feasible, and promote only proof-safe consequences into the frontier/manuscripts/site.",
-  "boundary":"No all-odd binary-rank theorem without a complete module-theoretic or combinatorial proof; distinguish PSL2/PGL2 and characteristic-zero/characteristic-two modules; preserve q=11 and Hoffman distance firewalls."
+  "closed_at":"2026-08-15T00:58:00-04:00",
+  "outcomes":[
+    "Pass5356: canonical pair space C(P1(q),2) is Sym^2(Steinberg) in characteristic zero.",
+    "Pass5357: all-odd orbital rank formula.",
+    "Pass5358: characteristic-2 nonsplitting firewall.",
+    "Pass5359: prime-anchor full intersection-tensor/Wedderburn census.",
+    "Pass5360: all-odd complex pair-Hecke algebra C^s plus M2(C)^d with d=floor((q+3)/8).",
+    "Pass5361: complementary chi_-2 / chi_2 q-mod-8 Klein clock.",
+    "Pass5362-5363: shared-manuscript and deterministic site publication packet."
+  ],
+  "boundary":"This lane intentionally stopped short of claiming the binary footprint-rank theorem; that theorem was subsequently closed in Pass5376 using the Lataille--Sin--Tiep characteristic-2 point-module lattice. q=11 dual weight-20 and Hoffman shortened-code distance remain separate open boundaries."
 }
