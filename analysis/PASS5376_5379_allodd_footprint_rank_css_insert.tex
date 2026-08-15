@@ -1,5 +1,5 @@
-% Passes 5376--5379: all-odd binary footprint closure, complete minimum shell,
-% and the binary point-code CSS corollary.
+% Passes 5376--5379 and 5406: all-odd binary footprint closure, complete
+% minimum shell, binary point-code CSS corollary, and logical Weil clock.
 \subsection{The all-odd binary footprint theorem is closed}
 \label{sec:pass5376-footprint-rank-closed}
 
@@ -163,10 +163,40 @@ This is a binary \emph{point-code} CSS family.  It is distinct from the
 project's ternary edge code $[[240,81,3]]_3$; no equivalence between the two is
 claimed.
 
+\subsection{The logical module carries the same $q\bmod8$ Weil clock}
+\label{sec:pass5406-css-logical-weil}
+
+The logical vector space is not only dimensionally simple:
+\[
+ \mathcal L_q=C_W/C_W^\perp,
+ \qquad
+ \dim\mathcal L_q=q^2+1.
+\]
+The proof of the Lataille--Sin--Tiep point-module theorem gives the composition
+factors of this quotient over an algebraic closure of $\mathbb F_2$ as
+\[
+ \boxed{
+ \mathcal L_q:\quad \mathbf1,\ \mathbf1,\ W_1,\ W_2,
+ \qquad
+ \dim W_1=\dim W_2=\frac{q^2-1}{2}.
+ }
+\]
+Their field-of-definition theorem then makes the arithmetic clock explicit on
+the logical sector itself.  If
+$q\equiv\pm1\pmod8$, the two Weil factors are individually defined over
+$\mathbb F_2$.  If $q\equiv\pm3\pmod8$, their smallest field is
+$\mathbb F_4$, so over $\mathbb F_2$ the middle pair is one irreducible
+Galois-fused module of dimension $q^2-1$.  Thus the same mod-$8$ Weil bit from
+Pass~5361 now controls the binary logical-channel decomposition.
+
+This is a composition-factor and field-of-definition theorem.  In particular,
+we do not infer that the two trivial factors split as direct summands of
+$\mathcal L_q$.
+
 \paragraph{Evidence boundary.}
-Passes~5376--5379 close the all-odd binary footprint rank, kernel, same-point
-$K_0$ generation, complete minimum-shell spanning, and the abstract CSS
-parameters above.  They do \emph{not} close the $q=11$ dual weight-$20$
-existence/$d=121$ problem, the Hoffman shortened-code distance
-$d\in\{28,32,36,40\}$, any fault-tolerant threshold, or a hardware realization
-of the binary CSS family.
+Passes~5376--5379 and 5406 close the all-odd binary footprint rank, kernel,
+same-point $K_0$ generation, complete minimum-shell spanning, the abstract CSS
+parameters, and the logical Weil descent clock above.  They do \emph{not} close
+the $q=11$ dual weight-$20$ existence/$d=121$ problem, the Hoffman
+shortened-code distance $d\in\{28,32,36,40\}$, any fault-tolerant threshold,
+or a hardware realization of the binary CSS family.
