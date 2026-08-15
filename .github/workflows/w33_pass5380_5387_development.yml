@@ -17,14 +17,18 @@ jobs:
           python-version: '3.12'
       - name: Install exact replay dependencies
         run: python -m pip install --upgrade numpy python-sat
-      - name: Replay current packet producers
+      - name: Replay all eight packet producers
         run: |
           set -euxo pipefail
           python analysis/w33_pass5380_q5_distance_filtered_code_extension.py
           python analysis/w33_pass5381_q3_radius9_false_vote4_census.py
           python analysis/w33_pass5382_q5_connectedL_primary_projectors.py
           python analysis/w33_pass5383_hoffman_fullcode_xorsat_replay.py
-      - name: Upload current certificates
+          python analysis/w33_pass5384_allodd_apartment_footprint_gauge_sequence.py
+          python analysis/w33_pass5385_q5_K0_shell_reconstructs_W35.py
+          python analysis/w33_pass5386_allq_consecutive_gallery_intersection_tower.py
+          python analysis/w33_pass5387_q5_local_K0_difference_set.py
+      - name: Upload packet certificates
         uses: actions/upload-artifact@v4
         with:
           name: pass5380-5387-development-certificates
@@ -33,3 +37,7 @@ jobs:
             data/PART_W33_PASS5381_Q3_RADIUS9_FALSE_VOTE4_CENSUS.json
             data/PART_W33_PASS5382_Q5_CONNECTEDL_PRIMARY_PROJECTORS.json
             data/PART_W33_PASS5383_HOFFMAN_FULLCODE_XORSAT_REPLAY.json
+            data/PART_W33_PASS5384_ALLODD_APARTMENT_FOOTPRINT_GAUGE_SEQUENCE.json
+            data/PART_W33_PASS5385_Q5_K0_SHELL_RECONSTRUCTS_W35.json
+            data/PART_W33_PASS5386_ALLQ_CONSECUTIVE_GALLERY_INTERSECTION_TOWER.json
+            data/PART_W33_PASS5387_Q5_LOCAL_K0_DIFFERENCE_SET.json
