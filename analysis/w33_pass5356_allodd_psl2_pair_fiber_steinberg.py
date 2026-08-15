@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
-"""Pass5356: all-odd local two-line fiber = Sym^2(Steinberg).
+"""Pass5356: the all-odd canonical two-line pair fiber is Sym^2(Steinberg).
 
 Let G=PSL_2(q), q odd, acting 2-transitively on Omega=P^1(F_q), |Omega|=q+1.
-The local K0 fiber over a W(3,q) point is the set Lambda=C(Omega,2) of unordered
-pairs of incident lines. The pair stabilizer is the normalizer of a split torus,
-of order q-1, so Lambda ~= G/N_G(T_split) and |Lambda|=q(q+1)/2.
+For any W(3,q) point, its q+1 incident lines carry this canonical G-action, so
+the unordered two-line object is Lambda=C(Omega,2). Its pair stabilizer is the
+normalizer of a split torus, of order q-1, hence
+Lambda ~= G/N_G(T_split) and |Lambda|=q(q+1)/2. At q=5 this is exactly the
+15-word local K0 fiber proved in Pass5336; for general q this pass claims the
+canonical two-line homogeneous space, not an all-q minimum-K0-shell theorem.
 
 Over characteristic zero let V=C[Omega]. Since the projective-line action is
 2-transitive, V=1+St with St the q-dimensional Steinberg representation. In
@@ -74,7 +77,7 @@ def main():
         arithmetic[str(q)]={'q':q,'PSL2_order':go,'pair_fiber_size':fib,
           'pair_stabilizer_order':q-1,'Sym2_Steinberg_dimension':fib}
     anchors={str(p):anchor(p) for p in (3,5,7,11,13)}
-    out={'pass':5356,'status':'THEOREM_ALLODD_LOCAL_PAIR_FIBER_IS_SYM2_STEINBERG_IN_CHARACTERISTIC_ZERO',
+    out={'pass':5356,'status':'THEOREM_ALLODD_CANONICAL_PAIR_FIBER_IS_SYM2_STEINBERG_IN_CHARACTERISTIC_ZERO',
       'domain':'odd prime powers q',
       'homogeneous_space':'C(P^1(q),2) ~= PSL2(q)/N(T_split), |N(T_split)|=q-1',
       'module_theorem':'Over C, C[C(P^1(q),2)] ~= Sym^2(St_q).',
@@ -82,8 +85,8 @@ def main():
         'Sym^2(C[P^1(q)]) splits into diagonal and off-diagonal monomials.',
         'The diagonal module is C[P^1(q)] and the off-diagonal module is C[C(P^1(q),2)].',
         'Semisimplicity cancels 1+St_q from Sym^2(1+St_q)=1+St_q+Sym^2(St_q).'],
-      'q5_recovery':'dim Sym^2(St_5)=15 and Pass5336 gives 15=1+4+2*5.',
+      'q5_recovery':'At q=5 the canonical 15-point pair space is exactly the Pass5336 K0 fiber; dim Sym^2(St_5)=15 and 15=1+4+2*5.',
       'arithmetic_checks':arithmetic,'prime_anchor_character_checks':anchors,
-      'boundary':'Characteristic-zero representation theorem only. In characteristic 2 the projective-line permutation module is not split as 1+St in the same way; no binary footprint-rank equality is inferred.'}
+      'boundary':'For general odd q this is the canonical pair space of incident lines, not an assertion that every minimum K0 shell has that fiber. Characteristic-zero representation theorem only; no binary footprint-rank equality is inferred.'}
     OUT.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n');print(json.dumps(out,indent=2,sort_keys=True))
 if __name__=='__main__':main()
