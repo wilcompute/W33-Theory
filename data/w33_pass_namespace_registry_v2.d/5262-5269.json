@@ -1,11 +1,21 @@
 {
   "schema":"w33.pass_namespace_registry.v2.entry",
   "range":[5262,5269],
-  "slug":"zeroP_block16_radius8_shortening_oddq_jordan_bonkers",
-  "title":"Zero-footprint block distance, q3 eventual radius eight, Hoffman shortening, odd-q footprint shell, modular Jordan support, and three independent probes",
-  "status":"RESERVED",
+  "slug":"zeroP_block_distance_full_q5_radius8_modules_bonkers",
+  "title":"q5 full apartment distance, q3 eventual radius eight, Hoffman cells, K0 polymatroid, modular transport no-go, frames, and block-minimum geometry",
+  "status":"EXECUTED",
   "owner":"openai-gpt56-sol",
   "reserved_at":"2026-08-14",
-  "purpose":"Execute the five live fronts from Pass5254-5261 plus three independent probes after consuming parallel Pass5250-5253. Priority: prove or sharply reduce q5 zero-footprint block distance>=16; attack orbit-complete/eventual q3 radius8; exploit q5 connected-L Jordan chains for support; determine Hoffman13 shortened minimum; extend odd-q footprint dual-shell mechanism. Bonkers probes: support-rank matroid/cocircuit structure of the 560-dimensional residual, minimum-shell frame/Naimark or spherical-design consequences, and a root-torus/controller connection to the residual block geometry.",
-  "boundary":"No full q5 d=625 claim unless strict zero-footprint sector is actually eliminated. Radius8 theorem requires exhaustive/orbit-complete evidence. Hoffman shortened distance must be certified exactly before promotion. All-q formulas require proof beyond q3,q5,q7 anchors. Preserve parallel-lane correction/guard results and re-derive our own conflicting arithmetic first."
+  "closed_at":"2026-08-14T21:12:00-04:00",
+  "passes":{
+    "5262":"THEOREM: q5 zero-footprint residual K0 has P-block distance25; therefore apartment code [73125,625,625]_2 and its 936 minimum words are exactly chamber stars.",
+    "5263":"COMPUTATIONAL THEOREM: q3 provenance decoder has global eventual guaranteed radius8; monotone true-only radius remains7.",
+    "5264":"THEOREM/REDUCTION: Hoffman13 shortened [312,52,d] decomposes into 13 dim10 d40 cells; all pair sums have min40; any sub40 word needs >=3 cells.",
+    "5265":"THEOREM: exact q5 weight8-support K0 block polymatroid; subset projection ranks reconstruct the K8-minus-matching geometry.",
+    "5266":"NEGATIVE THEOREM: naive connected-L channelwise Jordan lift A_L tensor I_10 does not preserve the even/full syndrome images; correct target requires twisted channel transport.",
+    "5267":"THEOREM: all odd q complementary two-distance real footprint frames; binary rank equals negative-frame dimension at q=3,5,7 anchors only.",
+    "5268":"THEOREM: q5 local even minimum words are exactly adjacent-edge pairs in the K6,6 atom graph; 180 words of weight40.",
+    "5269":"THEOREM: every q5 K0 block-minimum support is one of the 156 W-point footprints; complete word multiplicity deferred to Pass5284."
+  },
+  "boundary":"q5 d=625 is an exact finite theorem. No all-q q^4 theorem follows. q3 radius8 is computationally certified for the stated deterministic decoder. Hoffman shortened exact minimum and all-odd binary footprint rank remain open at this range."
 }
