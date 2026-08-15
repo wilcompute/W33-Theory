@@ -1,0 +1,159 @@
+% Passes 5348--5355: q11 distance closure, binary footprint homology,
+% Hoffman/Latin extraspecial structure, q5 K0 spherical embeddings, and the
+% remaining Hoffman-shortening solver frontier.
+\subsection{The $q=11$ footprint distance closes at $121$}
+\label{sec:pass5354-q11-dual20}
+Pass~5304 showed that a weight-$20$ footprint-dual word at $q=11$ must induce at
+least $120$ intersection-two edges among its selected $P$-carriers, with equality
+precisely when $240$ $W$-points are covered twice.  The congruence pattern from
+$q=5,7,9$ singles out the $q\equiv3\pmod4$ two-factor shape
+\[
+ K_{10,10}+C_{10}+(C_5+C_5).
+\]
+Pass~5354 constructs such a support explicitly from the order-$10$ symplectic
+map
+\[
+ T=\operatorname{diag}(1,2,1,6)\in\Sp_4(11).
+\]
+The two ten-carrier orbits have internal two-factors $C_{10}$ and $C_5+C_5$;
+every cross pair meets in two $W$-points, and the XOR of all twenty carrier
+incidence vectors is zero.  Thus a genuine dual word of weight $20$ exists and
+saturates the $120$-edge lower bound.
+
+For the orbit moment closure, attach to each polar-pair carrier $A$ the
+involution $S_A$ acting as $+1$ on one nondegenerate summand and $-1$ on its
+polar mate.  A fixed carrier has stabilizer suborbits
+\[
+ 1,660,1320,1320,1320,1320,1440,
+\]
+separated by $\operatorname{tr}(S_A S_B)^2\in\{0,1,3,4,5,9\}$.  On the dual-$20$
+seed the six nontrivial pair counts are
+\[
+ 10,30,10,5,120,15,
+\]
+so the replication-to-pair-codegree ratios are
+\[
+ 660,440,1320,2640,120,880.
+\]
+The worst ratio is exactly $120$.  Since every dual intersection with a primal
+support is even, the standard first/second-moment inequality gives
+\[
+ w_{\rm primal}\ge 1+120=121.
+\]
+Point footprints attain $121$, while Pass~5376 supplies rank $671$.  Therefore
+\[
+ \boxed{C_F(q=11)=[7381,671,121]_2.}
+\]
+Consequently the exact footprint-distance law $d=q^2$ is now verified at
+$q=3,5,7,9,11$; no all-odd distance theorem beyond these anchors is asserted.
+
+\subsection{The odd-$q$ footprint matrix is a binary two-periodic complex}
+\label{sec:pass5350-footprint-homology}
+The integral Gram identity of Pass~5267 reduces for odd $q$ to
+\[
+ \boxed{FF^{\mathsf T}=J\pmod2}.
+\]
+Hence $\langle F^{\mathsf T}x,F^{\mathsf T}y\rangle$ is simply the product of
+the parities of $x$ and $y$; in particular $\ker F^{\mathsf T}$ is contained in
+the even point module and the induced bilinear form on the footprint image has
+rank one.
+
+There is a complementary identity.  Two carriers are
+$C_H=\PG(H)\cup\PG(H^\perp)$ and $C_K=\PG(K)\cup\PG(K^\perp)$.  Orthogonal
+complementation pairs $H\cap K$ with $H^\perp\cap K^\perp$ and pairs
+$H\cap K^\perp$ with $H^\perp\cap K$; their projective point counts therefore
+occur twice.  Thus every two carrier columns have even intersection and
+\[
+ \boxed{F^{\mathsf T}F=0\pmod2}.
+\]
+Writing $V_0$ for the even point module and $U$ for the carrier module gives the
+binary two-periodic complex
+\[
+ U\xrightarrow{F}V_0\xrightarrow{F^{\mathsf T}}U.
+\]
+Pass~5376 closes $\operatorname{im}F=C_W^\perp$, $\ker F^{\mathsf T}=C_W$, and
+$\operatorname{rank}F=g=q(q^2+1)/2$.  Since the restriction
+$F^{\mathsf T}|_{V_0}$ has rank $g-1$, the point-side homology is canonically
+\[
+ \boxed{H_V=C_W/C_W^\perp,\qquad \dim H_V=q^2+1.}
+\]
+This is exactly the logical quotient of the binary CSS family in Pass~5379, so
+its logical dimension has a canonical chain-homology realization rather than
+being only a rank subtraction.
+
+\subsection{The Hoffman extraspecial lift is a real two-qubit Pauli group}
+\label{sec:pass5351-hoffman-pauli}
+The normal order-$32$ subgroup of the Hoffman-cover stabilizer found in
+Pass~5300 is $2_+^{1+4}$.  Passes~5351--5352 choose explicit involutions
+$X_1,Z_1,X_2,Z_2$ and the central involution $z$ satisfying
+\[
+ X_i^2=Z_i^2=z^2=1,\qquad [X_1,Z_1]=[X_2,Z_2]=z,
+\]
+with all cross-pair commutators trivial; the $32$ normal forms
+$z^eX_1^aZ_1^bX_2^cZ_2^d$ are distinct.  This is an explicit presentation of
+the real two-qubit Pauli extraspecial group.
+
+Transporting its commutator symplectic form through the Pass~5300
+$\mathbb F_2^4$ Latin/Hoffman conjugacy explains the previous $9+6$ direction
+split exactly.  In the five-line $\PG(3,2)$ spread carried by the complete
+order-$4$ MOLS geometry,
+\[
+ \boxed{\text{row, column, symbol are isotropic/commuting}},
+\]
+whereas
+\[
+ \boxed{\text{the two orthogonal-mate triples are nonisotropic and pairwise
+ anticommuting}}.
+\]
+Thus $9+6$ is literally three isotropic projective lines plus two nonisotropic
+triples.  This is finite group/code geometry only; no physical two-qubit
+identification is inferred.
+
+\subsection{Seven spherical shadows of the $2340$-word $K_0$ shell}
+\label{sec:pass5353-k0-spherical}
+Applying the seven primitive central idempotents of the Pass~5332 rank-$21$
+orbital algebra to the $2340$ minimum $K_0$ words gives seven exact unit-norm
+tight-frame embeddings, with isotypic ranks
+\[
+ 1,104,65,520,270,130,1250.
+\]
+The multiplicity-one $65$-block is especially rigid: the fifteen local shell
+words over each $W(3,5)$ point collapse to one vector, leaving exactly $156$
+distinct unit vectors.  Their off-fiber inner products are
+\[
+ -\frac15\quad\text{and}\quad \frac1{25},
+\]
+recovering the negative two-distance spherical embedding of $W(3,5)$.  The
+$104$- and $520$-blocks instead collapse the shell in triples to $780$ distinct
+vectors, while the multiplicity-$2$ and multiplicity-$3$ blocks retain all
+$2340$ vectors and produce new six-distance spherical configurations.
+
+\subsection{The $q=5$ footprint hull is the $NO_5^+(5)$ adjacency code}
+\label{sec:pass5348-no5-code}
+Join two of the $325$ $q=5$ polar-pair carriers when their $W$-supports meet in
+two points.  This is the rank-three graph
+\[
+ \operatorname{srg}(325,144,68,60)=NO_5^+(5).
+\]
+The binary row span of its adjacency matrix has rank $64$.  Independently the
+q5 footprint hull has rank $64$, and the combined span still has rank $64$.
+Hence
+\[
+ \boxed{\operatorname{Hull}(C_F)=\operatorname{Row}_{\mathbb F_2}(A_{NO_5^+(5)}).}
+\]
+Because $144,68,60$ are all even, the SRG identity gives
+$A^2=0$ over $\mathbb F_2$, so this graph code is self-orthogonal.  By Pass~5243
+every Hoffman $13$-cover shortened word lies in this $64$-dimensional graph
+code.  Exact XOR-SAT models have been committed both for the full
+$[312,52,d]$ shortening and, after coordinate-transitivity symmetry breaking,
+for the ambient hull.  Their clean replay remains the final certificate needed
+to promote $d=40$; until that replay completes the established Hoffman status
+remains $d\in\{28,32,36,40\}$.
+
+\paragraph{Evidence boundary.}
+The $q=11$ $[7381,671,121]_2$ theorem, the binary chain complex and CSS logical
+homology, the extraspecial/Pauli presentation, the Latin $3+2$ commutator split,
+the seven $K_0$ tight frames, and the $NO_5^+(5)$ graph-code identity are exact.
+The Hoffman shortening distance is not promoted here without the queued UNSAT
+certificate.  No physical quantum hardware, topological phase, or all-odd
+footprint-distance theorem beyond the stated finite anchors is claimed.
