@@ -1,0 +1,11 @@
+{
+  "pass":5334,
+  "status":"THEOREM_ALLODD_CHARACTERISTIC_ZERO_RANK_COMPLEMENT_AND_BINARY_SWAP_TARGET",
+  "all_odd_exact":"rank_Q(F)=1+f and nullity_Q(F)=g for f=q(q+1)^2/2, g=q(q^2+1)/2.",
+  "binary_upper_bound":"rank_2(F)<=g.",
+  "equivalent_binary_target":"rank_2(F)=g iff nullity_2(F)=1+f iff K0=D_q.",
+  "rank_complement_form":"Conjecturally rank_2(F)=nullity_Q(F)=g and nullity_2(F)=rank_Q(F)=1+f.",
+  "anchors_rank2_equals_g":{"q3":15,"q5":65,"q7":175,"q9":369,"q11":671,"q13":1105},
+  "q5_characteristic_flip":{"rank_Q":91,"nullity_Q":65,"rank_F2":65,"nullity_F2":91},
+  "boundary":"The characteristic-zero rank/nullity formula is all odd q. The characteristic-2 swap is verified only at q=3,5,7,9,11,13; the all-odd statement remains exactly the open K0=D_q theorem."
+}
