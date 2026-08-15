@@ -1,0 +1,14 @@
+{
+  "range":[5316,5323],
+  "status":"EXECUTED_WITH_NEW_REPLAY_WORKFLOW_PENDING",
+  "5316":{"status":"THEOREM_KLEIN144_EXACTLY_AFFINE_Q4_COLORINGS_CYCLIC432_DERIVATIVE_DEFECT","latin_squares":576,"klein_affine":144,"cyclic_nonaffine":432,"cyclic_constant_derivative_split":{"0":240,"1":192},"one_direction_masks":{"1":48,"2":48,"4":48,"8":48}},
+  "5317":{"status":"THEOREM_HOFFMAN_FOURCELL_10_ORBITS_REFINE_TO_22_WD4_ORBITS","H_orbits":10,"WD4_orbits":22,"unsplit":4,"triality_triples":6,"WD4_orbits_by_rank":{"33":2,"35":4,"38":4,"39":3,"40":9}},
+  "5318":{"status":"THEOREM_D4_TRIALITY_IS_ROW_COLUMN_SYMBOL_C3_ON_KLEIN_MOLS_SPREAD","latin_even_order":288,"tomotope_kernel_order":96,"quotient":"C3","triality_action":"row->column->symbol->row","mates":"fixed individually by C3; swapped by kernel C2 image"},
+  "5319":{"status":"THEOREM_WD4_ANTIPODAL_SQUARE_FACE_PAIR_ACTION_IS_PUBLISHED_TOMOTOPE96","square_faces":24,"antipodal_pairs":12,"WD4_order":192,"kernel":2,"quotient_order":96,"explicit_conjugator":[0,1,4,5,8,9,11,10,7,6,3,2]},
+  "5320":{"status":"THEOREM_ROTATION96_IS_ORBITAL_FUSION_OF_D4_TOMOTOPE_FACEPAIR_SCHEME","tomotope_orbital_rank":5,"rotation_orbital_rank":4,"common_uncolored_graph":"3 K4","fusion":"one matching preserved; two tomotope matchings fused to a degree2 relation"},
+  "5321":{"status":"THEOREM_TOMOTOPE96_NATURAL_FACEPAIR_ACTION_REALIZES_C2_4_SEMIDIRECT_S3","components":[[0,1,10,11],[2,3,8,9],[4,5,6,7]],"axis_partitions":["01|23","02|13","03|12"],"kernel":"(C2)^4","component_image":"S3"},
+  "5322":{"status":"MANUSCRIPT_INSERT_ADDED","file":"analysis/PASS5316_5321_latin_q4_d4_facepair_insert.tex"},
+  "5323":{"status":"SHARED_FRONTIER_MANIFEST_PROMOTED","file":"analysis/W33_CURRENT_FRONTIER_MANIFEST.tex"},
+  "prior_replay":{"workflow":".github/workflows/w33_pass5308_5313_packet.yml","run_id":31860982458,"status_last_checked":"queued"},
+  "frontier":{"hoffman_shortened_distance":"OPEN: [312,52,d]_2, d in {28,32,36,40}; triality refines the four-cell orbit layer but does not close d.","q11_footprint_distance":"OPEN: dual20 existence/d=121 unproved.","all_odd_rank":"OPEN in general despite anchors through q13.","group_boundary":"W(D4) and orientation-preserving tesseract rotations are distinct order192 groups; only their central quotients are abstractly isomorphic order96 groups.","physical_boundary":"All statements here are finite group, Latin-square, code, polytope-face, or permutation-action theorems; no physical dynamics follows from cardinality matches."}
+}
