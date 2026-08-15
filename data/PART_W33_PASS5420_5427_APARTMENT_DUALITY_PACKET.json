@@ -1,0 +1,62 @@
+{
+  "schema":"w33.pass5420_5427.apartment_duality.v1",
+  "status":"THEOREM_PACKET_SOURCE_COMPLETE",
+  "pass_range":[5420,5427],
+  "5420_complementary_cut_frame":{
+    "N":"(q+1)^2(q^2+1)",
+    "cycle_rank":"q^4",
+    "cut_rank":"r=N-q^4=2(q+1)(q^2+1)-1",
+    "cycle_gram":"G_cyc=(N/q^4)E_-2; inner product at distance d is (-1/q)^d",
+    "cut_gram":"G_cut=N(I-E_-2)/r; off-diagonal distance-d inner product is (-1)^(d+1)q^(4-d)/r",
+    "weighted_identity":"(q^4/N)G_cyc+(r/N)G_cut=I_N",
+    "q3_cut_inner_products":["1","27/79","-9/79","3/79","-1/79"]
+  },
+  "5421_H1_footprint_dual_sequence":{
+    "apartment_theta":"0 -> Theta -> F2[A] -> H1(Levi;F2) -> 0",
+    "dual_identification":"C_A=Theta^perp is canonically H1(Levi)^*",
+    "odd_footprint":"0 -> D_q -> C_A -> C_F -> 0",
+    "composite":"0 -> D_q -> H1^* -> C_F -> 0",
+    "dual_composite":"0 -> C_F^* -> H1 -> D_q^* -> 0",
+    "dimensions":{"H1":"q^4","C_F":"g=q(q^2+1)/2","D_q":"q^4-g"}
+  },
+  "5422_apartment_intersection_scheme":{
+    "rigidity":"Two distinct apartments are disjoint or intersect in one consecutive flag-edge path of length j=1,2,3,4.",
+    "per_apartment_counts":{"n4":"8(q-1)","n3":"8(q-1)^2","n2":"8q(q-1)^2","n1":"8q^2(q-1)^2","n0":"Nq^4/8-1-n1-n2-n3-n4"},
+    "normalized_signed_absolute_inner_products":["0","1/8","1/4","3/8","1/2"],
+    "coherence":"1/2",
+    "prime_anchor_q2":{"apartments":90,"profile":{"0":25,"1":32,"2":16,"3":8,"4":8}},
+    "prime_anchor_q3":{"apartments":1620,"profile":{"0":1187,"1":288,"2":96,"3":32,"4":16}},
+    "prime_anchor_q5":{"apartments":73125,"profile":{"0":69124,"1":3200,"2":640,"3":128,"4":32}}
+  },
+  "5423_unsigned_conditioning":{
+    "lambda_max":"8q^4",
+    "lambda_min":"(q-1)^2(q^2+1)",
+    "gram_condition":"8q^4/((q-1)^2(q^2+1))",
+    "singular_condition":"sqrt(8)q^2/((q-1)sqrt(q^2+1))",
+    "limits":{"gram":8,"singular":"sqrt(8)"},
+    "q3_gram_condition":"81/5",
+    "positivity_certificate":"(q^2+1)(q^4-2q^3+6q^2-2q+1)>0"
+  },
+  "5425_discrete_derivative_gallery":{
+    "identity":"(q+1)^4-q^4=4q^3+6q^2+4q+1",
+    "gallery_identity":"Delta(q^4)=4I2+6I3+4I4+I5 with I_k=q^(5-k)",
+    "boundary":"This upgrades the derivative resemblance to an exact finite-difference/gallery identity; it is not a differential equation in q."
+  },
+  "5426_footprint_bicycle_amalgam":{
+    "odd_q":"For point-line incidence M over F2, q+1 even gives the Levi mod-2 signless Laplacian [[0,M],[M^T,0]].",
+    "point_half":"C_F=C_W^perp=ker(M^T) embeds by y_(p,L)=x_p into cut cap cycle.",
+    "line_half":"ker(M) embeds by y_(p,L)=z_L into cut cap cycle; this is only an incidence-dual kernel copy.",
+    "amalgam":"Bike=P_g+L_g, P_g cap L_g=<J>, dim Bike=2g-1=q(q^2+1)-1",
+    "q3":{"g":15,"bicycle_dimension":29,"repo_match":"Pass5068 P15/Bike29"},
+    "q5":{"g":65,"bicycle_dimension":129}
+  },
+  "5427_simplex_two_design_split":{
+    "projectors":"P0=J/N, Pcyc=E_-2, Pcut0=I-P0-Pcyc",
+    "ranks":["1","q^4","N-q^4-1"],
+    "theorem":"Normalized row projections onto Pcyc and Pcut0 are centered unit-norm tight frames, hence spherical 2-designs.",
+    "simplex_identity":"q^4/(N-1) G_cyc + (N-q^4-1)/(N-1) G_cut0 = G_simplex",
+    "q3":"The 160-vertex regular simplex splits orthogonally into dimensions 81 and 78."
+  },
+  "cross_regressions":["BT549 cut frame","BT546 apartment intersections","Pass5066 theta/H1 presentation","Pass5068 P15/Bike29","Pass5378 q3 footprint dimension 15"],
+  "prior_art_firewall":"The flag association scheme and general Naimark-complement/tight-frame language are prior art; the promoted claims are the exact GQ(q,q) Hodge/footprint/intersection specializations and repo bridges. No physics, code-distance, contextuality-degree, optimal-spherical-code, or broad novelty claim is made."
+}
