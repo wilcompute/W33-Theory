@@ -1,0 +1,36 @@
+{
+  "schema":"w33.breakthrough.packet.v1",
+  "packet":"Pass5376-5379 plus Pass5400-5406 publication/logical consequences",
+  "status":"THEOREM_PACKET_CLOSED_PENDING_REMOTE_CI_QUEUE",
+  "core_theorems":[
+    "For every odd prime power q, im_2(F)=C_W^perp, rank_2(F)=q(q^2+1)/2, and ker_2(F^T)=C_W.",
+    "The characteristic-zero/characteristic-two rank complement is exact and K0=D_q for every odd q.",
+    "The complete minimum shell of C_W^perp consists of all P-component dual grids H union H^perp and spans the full code for every odd q.",
+    "The footprint code has parameters [(q+1)(q^2+1), q(q^2+1)/2, 2(q+1)]_2.",
+    "The self-orthogonal footprint code gives the binary CSS family [[(q+1)(q^2+1), q^2+1, q+1]]_2.",
+    "The CSS logical module C_W/C_W^perp has algebraic-closure composition factors 1,1,W1,W2 with dim Wi=(q^2-1)/2; the Weil pair splits over F2 for q=+-1 mod8 and Galois-fuses for q=+-3 mod8."
+  ],
+  "proof_inputs":[
+    "Repo Pass5201/5288: every footprint block is even on every W-line; each point lies in q^2 components.",
+    "Lataille--Sin--Tiep (J. Algebra 268, 2003): complete characteristic-2 point-module lattice, C_W^perp/<1> simple, C_W^perp subset C_W, Weil descent clock.",
+    "Repo Pass5299: D_q subset K0 and K0=D_q iff rank_2(F)=g.",
+    "Repo Pass5189: all-q minimum distance 2(q+1) and complete dual-grid minimum-shell classification.",
+    "Bagchi--Sastry (Geometriae Dedicata 27, 1988): minimum line-code weight q+1 with minimum words the W-lines."
+  ],
+  "publication":[
+    "analysis/PASS5376_5379_allodd_footprint_rank_css_insert.tex",
+    "analysis/W33_CURRENT_FRONTIER_MANIFEST.tex",
+    "analysis/PASS5376_5379_allodd_footprint_rank_css_index_insert.html",
+    "tools/materialize_pass5376_5379_footprint_css.py",
+    "tests/test_w33_pass5376_5379_footprint_css_packet.py",
+    ".github/workflows/w33_pass5376_5379_footprint_css.yml"
+  ],
+  "open_boundaries":[
+    "q=11 dual weight-20 existence / d=121 remains open.",
+    "Hoffman shortened-code minimum distance remains in {28,32,36,40}.",
+    "No binary CSS fault-tolerance threshold or hardware implementation is claimed.",
+    "The binary point CSS family is distinct from the ternary edge CSS [[240,81,3]]_3."
+  ],
+  "remote_ci":"Workflow w33_pass5376_5379_footprint_css.yml was queued at last observation; no success claim until GitHub reports a conclusion.",
+  "namespace_note":"Range 5400-5407 was reserved by this lane before a later parallel reservation of 5404-5411. This packet used 5400-5406; Pass5407 is the consolidation/closure marker only."
+}
