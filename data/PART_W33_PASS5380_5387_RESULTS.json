@@ -1,0 +1,62 @@
+{
+  "range": [5380, 5387],
+  "status": "EXECUTED_WITH_HOFFMAN_SOLVER_PENDING",
+  "5380": {
+    "status": "THEOREM_Q5_DISTANCE_FILTERED_APARTMENT_FOOTPRINT_EXTENSION",
+    "exact_sequence": "0 -> K0 -> C_A -> C_F -> 0",
+    "codes": ["C_A=[73125,625,625]_2", "K0=[73125,560,1000]_2", "C_F=[325,65,25]_2"],
+    "minimum_shells": {"C_A": 936, "K0": 2340, "C_F": 156}
+  },
+  "5381": {
+    "status": "COMPUTATIONAL_THEOREM_Q3_GLOBAL_EVENTUAL_RADIUS9",
+    "eventual_radius": 9,
+    "monotone_true_only_radius": 7,
+    "V1": "exact weight9 stopping-set MILP infeasible",
+    "V2": "exact vote2 spoiled>=3 MILP infeasible",
+    "V3": "32 rooted false-survivor candidates per fixed center, all clear 9->10->1->0",
+    "V4": "25648 rooted cases per fixed center, all clear"
+  },
+  "5382": {
+    "status": "THEOREM_Q5_CONNECTEDL_GF2_CANONICAL_PRIMARY_PROJECTORS",
+    "minimal_polynomial": "x^3(x+1)^4",
+    "projectors": ["P1=A_L^4", "P0=I+A_L^4"],
+    "ranks": [6034, 3716]
+  },
+  "5383": {
+    "status": "EXACT_HOFFMAN_XORSAT_REPLAY_COMMITTED_SOLVER_PENDING",
+    "code": "[312,52,d]_2",
+    "known_distance_set": [28,32,36,40],
+    "query": "exists nonzero codeword of weight <=39",
+    "boundary": "Do not claim d=40 until clean PySAT replay returns UNSAT; SAT must be frozen as a verified counterexample."
+  },
+  "5384": {
+    "status": "THEOREM_ALLODD_APARTMENT_FOOTPRINT_GAUGE_EXACT_SEQUENCE",
+    "exact_sequence": "0 -> D_q=K0 -> C_A -> C_F -> 0",
+    "dimensions": ["dim C_A=q^4", "dim C_F=q(q^2+1)/2", "dim D_q=q(q-1)(2q^2+q+1)/2"],
+    "parallel_dependency": "Pass5376 proves im_2(F)=C_W^perp and K0=D_q for every odd prime power q."
+  },
+  "5385": {
+    "status": "THEOREM_Q5_K0_CENTRAL_65_FRAME_RECONSTRUCTS_W35",
+    "quotient": "2340 minimum-shell words / 15-fold duplicate relation = 156 points",
+    "relations": {"-1/5": 30, "+1/25": 125},
+    "reconstructed_graph": "SRG(156,30,4,6)=W(3,5)"
+  },
+  "5386": {
+    "status": "THEOREM_ALLQ_CONSECUTIVE_GALLERY_INTERSECTION_TOWER",
+    "tower": ["q^4", "q^3", "q^2", "q", "1"],
+    "formula": "k consecutive chambers have q^(5-k) common apartments for 1<=k<=5"
+  },
+  "5387": {
+    "status": "THEOREM_Q5_LOCAL_K0_16_6_2_DIFFERENCE_SET",
+    "local_group": "F2^4",
+    "difference_set": "(16,6,2)",
+    "development": "symmetric 2-(16,6,2) design",
+    "fibers": 156
+  },
+  "parallel_frontier_consumed": {
+    "q5_distance": "Pass5262 already proved C_A=[73125,625,625]_2 and exact 936-star minimum shell.",
+    "q3_radius8": "Pass5263 already proved global eventual radius8.",
+    "allodd_footprint": "Pass5376-5379 closed all-odd rank/kernel/footprint/CSS theorem while this packet was in flight."
+  },
+  "boundary": "Seven of eight slots are theorem/computational-theorem level. Pass5383 remains an exact solver job with no result promoted until remote or independent exact SAT execution completes."
+}
