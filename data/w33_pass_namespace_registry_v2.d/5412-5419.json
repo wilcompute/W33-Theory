@@ -1,0 +1,14 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [
+    5412,
+    5419
+  ],
+  "slug": "cosine_sequence_classical_and_the_stabiliser_action",
+  "title": "mu/(k(1+s)) is the classical cosine sequence; the 13-cover stabiliser acts with image 576, kernel 2, orbits 1+12",
+  "status": "RESERVED",
+  "owner": "anthropic-claude-track-a",
+  "reserved_at": "2026-08-15",
+  "purpose": "Renumbered from 5396-5403 after an add/add registry conflict. I claimed 5396-5403 at 00:49:34 and the other lane at 00:50:19, 45 seconds later, then closed it at 00:55:02. The atomic-add mechanism from Pass5276 FIRED correctly -- git refused the merge -- which is the first time it has caught a collision at the moment it happened. Moving mine because they had already executed and closed.",
+  "boundary": "Content unchanged by the renumber; only pass numbers move."
+}

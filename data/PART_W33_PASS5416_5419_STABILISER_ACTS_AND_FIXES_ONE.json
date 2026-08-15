@@ -1,0 +1,37 @@
+{
+  "boundary": "Pass 5416-5417 are GAP computations over the P-block graph built from the other lane's Pass5212 geometry(5); the SELECTED 13-cover is theirs. Pass 5418 REPORTS a structural-description difference and does not resolve it -- the orders agree and the ambient settings differ. Pass 5419 is a scope check of formal/W33 only, by keyword",
+  "pass_5416": {
+    "aut_order": 9360000,
+    "cross_lane": "the order-2 kernel matches the centre their Pass5308 reports, computed from the other side",
+    "image_in_S13_order": 576,
+    "pointwise_kernel_order": 2,
+    "settles": "the group DOES act faithfully on the 13 simplex vertices modulo an order-2 kernel",
+    "setwise_stabiliser_order": 1152,
+    "supersedes": "Pass 5343's divisibility-only statement and Pass 5377's generator counts"
+  },
+  "pass_5417": {
+    "n_orbits": 2,
+    "open": "which grid is fixed, and why",
+    "orbit_sizes": [
+      1,
+      12
+    ],
+    "reading": "the simplex is homogeneous but its embedding is not; the geometry breaks S_13 down to a fixed vertex plus a 12-orbit, and that split is invisible to every spectral or Gram argument used this week",
+    "transitive": false
+  },
+  "pass_5418": {
+    "centre": 1,
+    "derived": 144,
+    "image_order": 576,
+    "image_structure": "((A4 x A4) : C2) : C2",
+    "solvable": true,
+    "status": "orders agree, descriptions differ, NOT resolved",
+    "their_description": "W(D4):C3, order 576"
+  },
+  "pass_5419": {
+    "finding": "the formal layer is an arithmetic consistency checker; every W33 module header explicitly disclaims the geometry, which is cited to Python and GAP",
+    "for_this_week": "no prior art, no conflict, nothing to reuse",
+    "modules": 46,
+    "relevant": []
+  }
+}
