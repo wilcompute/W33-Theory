@@ -50,9 +50,9 @@ def main():
     rows={str(q):row(q) for q in ANCHORS}
     q3=rows['3']
     # N^r/tau = 160^81/(2^83*5^23)=2^322*5^58.
-    assert q3['upper_bound_exponents']=={'q+1':102,'q^2+1':58}
-    # 4^102*10^58 = 2^(204+58)*5^58 = 2^262*5^58 in q+1/q2+1 form;
-    # after including q2+1=10. The direct 160/tau factorization is 2^322*5^58.
+    assert q3['upper_bound_exponents']=={'q+1':132,'q^2+1':58}
+    # 4^132*10^58 = 2^(264+58)*5^58 = 2^322*5^58.
+    assert 2*132+58==322
     out={
       'pass':5444,'status':'THEOREM_ALLQ_APARTMENT_CAUCHY_BINET_VOLUME_BUDGET',
       'domain':'finite generalized quadrangles GQ(q,q), q>1',
