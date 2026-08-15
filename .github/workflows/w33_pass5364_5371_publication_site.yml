@@ -1,0 +1,43 @@
+name: W33 Pass5364-5371 publication site
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/PASS5364_5371_publication_integrity_index_insert.html'
+      - 'tools/materialize_pass5364_5371_publication_integrity.py'
+      - '.github/workflows/w33_pass5364_5371_publication_site.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Materialize twice and verify idempotence
+        run: |
+          python tools/materialize_pass5364_5371_publication_integrity.py
+          sha256sum docs/index.html > /tmp/index-first.sha
+          python tools/materialize_pass5364_5371_publication_integrity.py
+          sha256sum docs/index.html > /tmp/index-second.sha
+          cmp /tmp/index-first.sha /tmp/index-second.sha
+          test "$(grep -c 'id=\"pass-5364-5371-publication-dag-integrity\"' docs/index.html)" -eq 1
+          git diff --check
+      - name: Commit materialized homepage card
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add docs/index.html
+          if ! git diff --cached --quiet; then
+            git commit -m 'Materialize Pass5364-5371 publication integrity card [skip ci]'
+            git push
+          fi
