@@ -1,0 +1,130 @@
+% Pass5428--5435: apartment tomography, unsigned inversion, modular defect, and post-minimum gap.
+\subsection{Canonical apartment tomography and the orientation Hodge filter}
+
+Let $C$ denote the signed flag--apartment incidence matrix of a generalized
+quadrangle $GQ(q,q)$, with every Levi edge oriented from point to line, and put
+\[
+ N=(q+1)^2(q^2+1).
+\]
+Pass~5396 gives $CC^{\mathsf T}=N E_{\rm cyc}$, where $E_{\rm cyc}$ is the
+orthogonal projector onto the $q^4$-dimensional Levi cycle space.  Consequently
+all nonzero singular values of $C$ equal $\sqrt N$, and the Moore--Penrose inverse
+on the cycle image is
+\[
+ \boxed{C^+=\frac1N C^{\mathsf T}.}
+\]
+Thus every real cycle flow $z$ has the canonical minimum-$\ell_2$ apartment
+reconstruction
+\[
+ a_{\min}=\frac1N C^{\mathsf T}z,
+ \qquad
+ z=Ca_{\min},
+ \qquad
+ \|a_{\min}\|^2=\frac{\|z\|^2}{N}.
+\]
+Equivalently, $\sum_A\langle c_A,z\rangle^2=N\|z\|^2$.  Since each apartment
+column has squared norm eight, the normalized apartments form a unit-norm tight
+frame of bound $N/8$.
+
+For the unsigned matrix $B=|C|$, Pass~5404 gives a positive five-sector Gram
+spectrum.  Its largest eigenvalue is $8q^4$ and its smallest is
+$(q-1)^2(q^2+1)$ for every $q>1$, so
+\[
+ \boxed{
+ \kappa(BB^{\mathsf T})=
+ \frac{8q^4}{(q-1)^2(q^2+1)}.
+ }
+\]
+The exact inverse is the primitive-idempotent spectral sum and
+$B^+=B^{\mathsf T}(BB^{\mathsf T})^{-1}$.  Changing only the odd-distance shell
+signs sends the full-rank unsigned kernel
+\[
+ q^4A_0+q^3A_1+q^2A_2+qA_3+A_4
+\]
+to
+\[
+ q^4A_0-q^3A_1+q^2A_2-qA_3+A_4
+ =N E_{\rm cyc}.
+\]
+Hence orientation is an exact algebraic Hodge spectral filter: it removes the
+Levi cut-space dimensions while preserving the diagonal trace.  This terminology
+is purely spectral and carries no thermodynamic claim.
+
+\subsection{Integral unsigned spectrum and exact Gram volume}
+
+The conjugate eigenvalues
+\[
+ \lambda_{\pm}=2q^2(q-1)(q+1\pm\sqrt{2q})
+\]
+are the roots of
+\[
+ Q_q(x)=x^2-4q^2(q-1)(q+1)x
+       +4q^4(q-1)^2(q^2+1).
+\]
+With $f=q(q+1)^2/2$ and $g=q(q^2+1)/2$, the complete characteristic polynomial
+is therefore
+\[
+ \boxed{
+ (x-8q^4)Q_q(x)^f
+ (x-2q^2(q-1)^2)^{2g}
+ (x-(q-1)^2(q^2+1))^{q^4}.
+ }
+\]
+In particular the radicals cancel in the global determinant.  Writing
+$P=(q+1)(q^2+1)$,
+\[
+ \boxed{
+ \det(BB^{\mathsf T})=
+ 2^{2P+1}q^{4P}(q-1)^{2f+4g+2q^4}(q^2+1)^{f+q^4}.
+ }
+\]
+At $q=3$ this is $2^{456}3^{160}5^{105}$.
+
+\subsection{Characteristic-two defect module and the $q=5$ post-minimum gap}
+
+For odd $q$, let $M_0$ be the even-weight point module, $K=\ker(F^{\mathsf T})$,
+and $C_W$ the binary $W$-line code.  Pass~5350 gives $C_W\subseteq K\subseteq
+M_0$ and identifies $\operatorname{Rad}(\operatorname{im}F^{\mathsf T})$ with
+$F^{\mathsf T}(M_0)$.  Hence there is an intrinsic characteristic-two exact
+sequence
+\[
+ \boxed{
+ 0\longrightarrow D_q:=K/C_W
+ \longrightarrow M_0/C_W
+ \longrightarrow \operatorname{Rad}(\operatorname{im}F^{\mathsf T})
+ \longrightarrow0.
+ }
+\]
+If $r=\operatorname{rank}_2F$ and $g=q(q^2+1)/2$, then
+\[
+ \dim D_q=g-r.
+\]
+Thus the open all-odd footprint-rank theorem is exactly the assertion $D_q=0$.
+This reduction uses no splitting of $\mathbb F_2[P^1(q)]$ and therefore respects
+the characteristic-two nonsplitting firewall of Pass~5358.
+
+At $q=5$, the zero-footprint code is $K_0=[73125,560,1000]_2$.  Pass~5284
+classifies every block-minimum word: there are $2340$ of them, all of weight
+$1000$.  Every other word has at least $26$ active P-components, and every
+nonzero local even component has weight at least $40$.  Therefore
+\[
+ \boxed{d_2(K_0)\ge1040,}
+\]
+so no nonzero $K_0$ word has weight in $1001,\ldots,1039$.  No weight-$1040$
+witness is asserted.
+
+\subsection{The next decoder frontier}
+
+Pass~5381 closes the $q=3$ provenance decoder through eventual radius nine.  At
+weight ten, the rooted false-vote-four sector has exactly
+\[
+ 16\binom{1599}{2}+64\cdot1599+96
+ =\boxed{20{,}544{,}048}
+\]
+raw configurations, corresponding respectively to local patterns
+$2+2+2+2$ plus two outsiders, $3+2+2+2$ plus one outsider, and $3+3+2+2$.
+Any outsider in a surviving false-center configuration must share a chart with
+another true error; otherwise its four singleton votes eliminate the false
+center at the provenance stage.  This is an exact finite reduction only:
+radius ten remains open, and the vote-one through vote-three sectors still
+require their own stopping/MILP completion checks.
