@@ -1,0 +1,15 @@
+{
+  "pass":5335,
+  "status":"THEOREM_BINARY_FOOTPRINT_KERNEL_EQUALS_W_LINE_CODE_AT_Q3_TO_Q13_ANCHORS",
+  "general_inclusion":"C_W <= ker(F^T), dim C_W=1+q(q+1)^2/2.",
+  "equivalence":"rank_2(F)=g iff ker(F^T)=C_W, where g=q(q^2+1)/2.",
+  "verified_anchor_equality":{
+    "q3":{"v":40,"rank_F2":15,"kernel_dimension":25,"W_line_code_dimension":25},
+    "q5":{"v":156,"rank_F2":65,"kernel_dimension":91,"W_line_code_dimension":91},
+    "q7":{"v":400,"rank_F2":175,"kernel_dimension":225,"W_line_code_dimension":225},
+    "q9":{"v":820,"rank_F2":369,"kernel_dimension":451,"W_line_code_dimension":451},
+    "q11":{"v":1464,"rank_F2":671,"kernel_dimension":793,"W_line_code_dimension":793},
+    "q13":{"v":2380,"rank_F2":1105,"kernel_dimension":1275,"W_line_code_dimension":1275}
+  },
+  "boundary":"The equality is exact at the six displayed anchors. The all-odd statement remains open and is equivalent to the rank conjecture."
+}
