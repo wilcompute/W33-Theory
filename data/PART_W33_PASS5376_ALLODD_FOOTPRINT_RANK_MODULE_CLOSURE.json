@@ -1,0 +1,34 @@
+{
+  "pass":5376,
+  "status":"THEOREM_ALLODD_BINARY_FOOTPRINT_RANK_CLOSED",
+  "domain":"all odd prime powers q",
+  "theorem":"im_2(F)=C_W^perp; rank_2(F)=q(q^2+1)/2; ker_2(F^T)=C_W.",
+  "module_argument":[
+    "LST define C=Im(eta_{m,1}); at m=2 this is exactly the W(3,q) binary line-incidence code C_W.",
+    "LST prove C^perp=U_prime.",
+    "For m=2 even, U_prime is uniserial U_prime > <1> > 0, so C_W^perp/<1> is simple.",
+    "LST Remark 2.15 transports the lattice to arbitrary characteristic-2 fields; over F2 only the middle Weil quotient changes when q=+-3 mod8.",
+    "Every footprint block has even intersection with every W-line, so im(F)<=C_W^perp.",
+    "Each point belongs to q^2 components, hence the sum of all footprint columns is 1 over F2.",
+    "A footprint block has weight 2(q+1)<v, so im(F) is strictly larger than <1>.",
+    "Simplicity of C_W^perp/<1> forces im(F)=C_W^perp."
+  ],
+  "dimension_input":"LST Theorem 2.13 recalls dim C = 1 + q(q^m-1)(q^(m-1)+1)/(2(q-1)); at m=2 this is 1+q(q+1)^2/2.",
+  "primary_source":{
+    "authors":"J. M. Lataille, Peter Sin, Pham Huu Tiep",
+    "title":"The modulo 2 structure of rank 3 permutation modules for odd characteristic symplectic groups",
+    "journal":"Journal of Algebra 268 (2003)",
+    "author_pdf":"https://people.clas.ufl.edu/sin/files/paper2.pdf",
+    "used_results":"definition of eta_{r,s}; Lemmas 2.5--2.7; C=Im eta_{m,1}; C^perp=U_prime; Theorem 2.13; Remark 2.15"
+  },
+  "finite_anchor_reconciliation":{"3":15,"5":65,"7":175,"9":369,"11":671,"13":1105},
+  "sample_dimensions":{
+    "3":{"q":3,"points_v":40,"line_code_dimension":25,"point_code_dimension_g":15,"footprint_block_weight":8,"P_components":45,"components_through_point":9,"binary_footprint_rank":15,"binary_kernel_dimension":25},
+    "5":{"q":5,"points_v":156,"line_code_dimension":91,"point_code_dimension_g":65,"footprint_block_weight":12,"P_components":325,"components_through_point":25,"binary_footprint_rank":65,"binary_kernel_dimension":91},
+    "7":{"q":7,"points_v":400,"line_code_dimension":225,"point_code_dimension_g":175,"footprint_block_weight":16,"P_components":1225,"components_through_point":49,"binary_footprint_rank":175,"binary_kernel_dimension":225},
+    "9":{"q":9,"points_v":820,"line_code_dimension":451,"point_code_dimension_g":369,"footprint_block_weight":20,"P_components":3321,"components_through_point":81,"binary_footprint_rank":369,"binary_kernel_dimension":451},
+    "11":{"q":11,"points_v":1464,"line_code_dimension":793,"point_code_dimension_g":671,"footprint_block_weight":24,"P_components":7381,"components_through_point":121,"binary_footprint_rank":671,"binary_kernel_dimension":793},
+    "13":{"q":13,"points_v":2380,"line_code_dimension":1275,"point_code_dimension_g":1105,"footprint_block_weight":28,"P_components":14365,"components_through_point":169,"binary_footprint_rank":1105,"binary_kernel_dimension":1275}
+  },
+  "boundary":"This closes the binary rank/kernel equality only. It does not by itself determine the minimum distance of im(F^T), the q=11 dual weight-20 existence question, or the Hoffman shortened-code distance."
+}
