@@ -1,24 +1,29 @@
 {
   "pass":5378,
-  "status":"THEOREM_ALLODD_FOOTPRINT_CODE_PARAMETERS_AND_MINIMUM_ORBIT",
+  "status":"THEOREM_ALLODD_COMPLETE_MINIMUM_SHELL_SPANS_FOOTPRINT_CODE",
   "domain":"all odd prime powers q",
   "code":"C_F=im_2(F)=C_W^perp",
   "parameters":"[(q+1)(q^2+1), q(q^2+1)/2, 2(q+1)]_2",
-  "minimum_orbit":"The q^2(q^2+1)/2 footprint/P-component columns each have weight 2(q+1), hence are minimum codewords; their span is the entire code.",
-  "primary_distance_source":{
+  "complete_minimum_shell":"Exactly the q^2(q^2+1)/2 dual grids H union H^perp / P-component blocks.",
+  "spanning_theorem":"The complete minimum shell is exactly the column set of F, and Pass5376 proves its span equals C_W^perp.",
+  "repo_inputs":[
+    "Pass5189: all-q minimum distance and complete minimum-shell classification.",
+    "Pass5376: all-odd equality im_2(F)=C_W^perp."
+  ],
+  "literature_crosscheck":{
     "authors":"Jon-Lark Kim, Keith E. Mellinger, Leo Storme",
     "title":"Small weight codewords in LDPC codes defined by (dual) classical generalized quadrangles",
     "journal":"Designs, Codes and Cryptography 42 (2007), 73--92",
     "doi":"10.1007/s10623-006-9017-6",
-    "result_used":"The binary LDPC code defined by W(q) has minimum distance 2(q+1)."
+    "result":"The W(q) LDPC code has minimum distance 2(q+1); its minimum words are the hyperbolic-quadric/regulus dual grids."
   },
   "sample_parameters":{
-    "3":{"q":3,"length":40,"dimension":15,"minimum_distance":8,"minimum_generator_orbit_size":45,"minimum_generator_weight":8},
-    "5":{"q":5,"length":156,"dimension":65,"minimum_distance":12,"minimum_generator_orbit_size":325,"minimum_generator_weight":12},
-    "7":{"q":7,"length":400,"dimension":175,"minimum_distance":16,"minimum_generator_orbit_size":1225,"minimum_generator_weight":16},
-    "9":{"q":9,"length":820,"dimension":369,"minimum_distance":20,"minimum_generator_orbit_size":3321,"minimum_generator_weight":20},
-    "11":{"q":11,"length":1464,"dimension":671,"minimum_distance":24,"minimum_generator_orbit_size":7381,"minimum_generator_weight":24},
-    "13":{"q":13,"length":2380,"dimension":1105,"minimum_distance":28,"minimum_generator_orbit_size":14365,"minimum_generator_weight":28}
+    "3":{"q":3,"length":40,"dimension":15,"minimum_distance":8,"complete_minimum_shell_size":45,"minimum_word_weight":8,"minimum_shell_spans_code":true},
+    "5":{"q":5,"length":156,"dimension":65,"minimum_distance":12,"complete_minimum_shell_size":325,"minimum_word_weight":12,"minimum_shell_spans_code":true},
+    "7":{"q":7,"length":400,"dimension":175,"minimum_distance":16,"complete_minimum_shell_size":1225,"minimum_word_weight":16,"minimum_shell_spans_code":true},
+    "9":{"q":9,"length":820,"dimension":369,"minimum_distance":20,"complete_minimum_shell_size":3321,"minimum_word_weight":20,"minimum_shell_spans_code":true},
+    "11":{"q":11,"length":1464,"dimension":671,"minimum_distance":24,"complete_minimum_shell_size":7381,"minimum_word_weight":24,"minimum_shell_spans_code":true},
+    "13":{"q":13,"length":2380,"dimension":1105,"minimum_distance":28,"complete_minimum_shell_size":14365,"minimum_word_weight":28,"minimum_shell_spans_code":true}
   },
-  "boundary":"This proves the exact footprint-image minimum distance and that the P-component orbit is a generating orbit of minimum words. It does not assert that these are all minimum codewords unless a separate classification is invoked."
+  "boundary":"This classifies and spans the minimum shell for the point incidence-dual / footprint image. It does not determine the minimum distance of the distinct footprint-kernel K0 or the q=11 dual weight-20 problem."
 }
