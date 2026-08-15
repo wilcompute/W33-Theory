@@ -69,6 +69,6 @@ def test_cross_regressions_and_q3_filtration():
     assert summary["5436_q3_bicycle_filtration"]["successive_factor_dimensions"] == [1, 14, 8, 6]
 
     assert p5079["status"] == "THEOREM"
-    assert p5079["anchors_from_repo"]["q3"] == 4320
+    assert p5079["anchors"]["q3"] == 4320
     assert p5031["levi"]["tree_order"] == "2^83*5^23"
     assert summary["5441_bonkers_cycle_lattice_critical_determinant"]["q3"] == "tau=2^83*5^23"
