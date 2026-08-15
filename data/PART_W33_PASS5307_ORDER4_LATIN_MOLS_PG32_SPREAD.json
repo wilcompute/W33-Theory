@@ -1,0 +1,13 @@
+{
+  "pass":5307,
+  "status":"THEOREM_ORDER4_LATIN_576_SPLITS_144_PLUS432_AND_MOLS_COMPLETION_IS_PG32_SPREAD",
+  "latin_squares_order4":576,
+  "isotopy_classes":2,
+  "V4_type":{"autotopy_order":96,"isotopy_class_size":144},
+  "C4_type":{"autotopy_order":32,"isotopy_class_size":432},
+  "PG3_2":{"points":15,"lines":35,"line_spreads":56,"GL4_2_order":20160,"spread_stabilizer_order":360},
+  "standard_MOLS_spread":[[1,2,3],[4,8,12],[5,10,15],[6,11,13],[7,9,14]],
+  "spread_meaning":"row, column, and three Latin symbol directions form the five parallel classes of an affine plane of order4 / complete set of three MOLS(4).",
+  "q5_fiber_bridge":"Pass5296 independently finds an A5-invariant five-line spread in each q5 PG(3,2) K0 fiber. Since GL4(2) is transitive on all56 spreads, it is conjugate to a complete-MOLS(4) spread.",
+  "boundary":"Conjugacy of spreads is proved; a canonical objectwise identification between the particular q5 fiber labels and the particular Latin chart is not yet fixed."
+}
