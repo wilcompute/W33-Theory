@@ -9,6 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = ROOT / "data/w33_current_frontier_manifest_v1.json"
 PUBLIC_EXTENSION_PATH = ROOT / "data/w33_public_frontier_extension_pass4461_4464.json"
+PUBLICATION_V2_PATH = ROOT / "data/w33_publication_frontier_contract_v2.json"
 MANIFEST_INPUT = r"\input{analysis/W33_CURRENT_FRONTIER_MANIFEST}%"
 
 
@@ -40,7 +41,9 @@ def consolidate_wrapper(text: str, required_inputs: list[str]) -> tuple[str, str
     result = "\n".join(lines) + ("\n" if text.endswith("\n") else "")
     if result.count(MANIFEST_INPUT) != 1:
         raise ValueError("manifest reference is not unique")
-    for item in required_inputs:
+    # The v1 list is historical and may contain duplicate ledger entries; a
+    # wrapper is consolidated when none of those theorem leaves remains direct.
+    for item in dict.fromkeys(required_inputs):
         if rf"\input{{{item}}}" in result:
             raise ValueError(f"unconsolidated direct input: {item}")
     return result, mode
@@ -80,13 +83,18 @@ def integrate_index(text: str, html: str) -> tuple[str, str]:
 
 
 def configured_public_sections(config: dict, root: Path) -> list[dict]:
-    """Return canonical public sections plus collision-checked frontier extensions."""
+    """Return canonical, extension, and v2-local public sections with collision checks."""
     sections = list(config["public_sections"])
     if PUBLIC_EXTENSION_PATH.is_file():
         extension = json.loads(PUBLIC_EXTENSION_PATH.read_text(encoding="utf-8"))
         if extension.get("schema") != "w33.public_frontier_extension.v1":
             raise ValueError("wrong public frontier extension schema")
         sections.extend(extension.get("public_sections", []))
+    if PUBLICATION_V2_PATH.is_file():
+        v2 = json.loads(PUBLICATION_V2_PATH.read_text(encoding="utf-8"))
+        if v2.get("schema") != "w33.publication_frontier_contract.v2":
+            raise ValueError("wrong publication v2 schema")
+        sections.extend(v2.get("local_public_sections", []))
 
     seen: set[tuple[str, str]] = set()
     for section in sections:
@@ -131,7 +139,7 @@ def integrate(root: Path = ROOT) -> dict:
     index_path.write_text(after_index, encoding="utf-8")
 
     return {
-        "schema": "w33.bt3376_3389.integration.v1",
+        "schema": "w33.bt3376_3389.integration.v2",
         "status": "PASS",
         "wrappers": wrapper_modes,
         "index": {
