@@ -66,18 +66,24 @@ $P=(q+1)(q^2+1)$,
 \]
 At $q=3$ this is $2^{456}3^{160}5^{105}$.
 
-\subsection{Characteristic-two defect module and the $q=5$ post-minimum gap}
+\subsection{Characteristic-two extra point-kernel defect and the $q=5$ post-minimum gap}
 
 For odd $q$, let $M_0$ be the even-weight point module, $K=\ker(F^{\mathsf T})$,
 and $C_W$ the binary $W$-line code.  Pass~5350 gives $C_W\subseteq K\subseteq M_0$
 and identifies $\operatorname{Rad}(\operatorname{im}F^{\mathsf T})$ with
-$F^{\mathsf T}(M_0)$.  Hence
+$F^{\mathsf T}(M_0)$.  To avoid collision with Pass~5421, which already denotes
+by $D_q$ the distinct apartment-to-footprint kernel in
+$0\to D_q\to H_1^*\to C_F\to0$, define instead
 \[
- \boxed{0\longrightarrow D_q:=K/C_W\longrightarrow M_0/C_W
+ X_q:=K/C_W=\ker(F^{\mathsf T})/C_W.
+\]
+Then
+\[
+ \boxed{0\longrightarrow X_q\longrightarrow M_0/C_W
  \longrightarrow \operatorname{Rad}(\operatorname{im}F^{\mathsf T})\longrightarrow0.}
 \]
-If $r=\operatorname{rank}_2F$ and $g=q(q^2+1)/2$, then $\dim D_q=g-r$.
-Thus the open all-odd footprint-rank theorem is exactly $D_q=0$.  This uses no
+If $r=\operatorname{rank}_2F$ and $g=q(q^2+1)/2$, then $\dim X_q=g-r$.
+Thus the open all-odd footprint-rank theorem is exactly $X_q=0$.  This uses no
 splitting of $\mathbb F_2[P^1(q)]$ and respects the Pass~5358 nonsplitting firewall.
 
 At $q=5$, $K_0=[73125,560,1000]_2$.  Pass~5284 classifies every block-minimum
