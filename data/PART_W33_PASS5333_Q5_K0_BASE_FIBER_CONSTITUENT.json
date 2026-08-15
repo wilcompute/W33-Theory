@@ -1,6 +1,6 @@
 {
   "pass":5333,
-  "status":"THEOREM_Q5_K0_BASE_FIBER_QUOTIENT_IDENTIFIES_POINT_65_BLOCK",
+  "status":"THEOREM_Q5_K0_BASE_FIBER_QUOTIENT_IDENTIFIES_COMPLEX_POINT_65_BLOCK",
   "shell_vertices":2340,
   "base_points":156,
   "fiber_size":15,
@@ -8,7 +8,7 @@
   "entry_histogram":{"553_diagonal":156,"-10_collinear":4680,"77_noncollinear":19500},
   "W35_point_spectrum":{"30":1,"4":90,"-6":65},
   "central_spectrum_on_base_fiber_space":{"9878":1,"128":90,"998":65},
-  "conclusion":"The multiplicity-one 65-dimensional Pass5332 block at central eigenvalue 998 is the canonical W(3,5) point -6 constituent pulled back through the 15-to-1 shell projection. The other 65-dimensional block (central eigenvalue -352, multiplicity two) is not this point constituent.",
-  "footprint_bridge":"The q5 footprint map has rank65, so its nonzero point-module quotient lies on this same canonical 65-dimensional point constituent.",
-  "boundary":"Representation-level identification of the base/footprint constituent only; no identification is assigned to the second 65-dimensional irreducible."
+  "conclusion":"The multiplicity-one 65-dimensional Pass5332 block at central eigenvalue 998 is the canonical characteristic-zero W(3,5) point -6 constituent pulled back through the 15-to-1 shell projection. The other 65-dimensional block (central eigenvalue -352, multiplicity two) is not this point constituent.",
+  "modular_firewall":"Do NOT identify this complex 65-space with the binary footprint code from dimension alone. The point-carrier incidence matrix has characteristic-zero rank91 but F2-rank65; Pass5334 records the exact characteristic flip.",
+  "boundary":"Characteristic-zero representation theorem only; no binary footprint-module identification is claimed."
 }
