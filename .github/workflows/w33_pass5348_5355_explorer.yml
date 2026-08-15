@@ -5,8 +5,11 @@ on:
     paths:
       - 'analysis/w33_pass5348_hoffman_fullcode_xorsat.py'
       - 'analysis/w33_pass5349_q11_dual20_doublecover_xorsat.py'
+      - 'analysis/w33_pass5350_allodd_binary_gram_radical.py'
       - 'analysis/w33_pass5351_5352_hoffman_pauli_latin_symplectic_spread.py'
       - 'analysis/w33_pass5353_k0_central_idempotent_tight_frames.py'
+      - 'analysis/w33_pass5354_q11_cyclic_cayley_dual20_search.py'
+      - 'analysis/w33_pass5355_q11_dual20_orbit_moment_closer.py'
       - '.github/workflows/w33_pass5348_5355_explorer.yml'
   workflow_dispatch:
 permissions:
@@ -14,20 +17,22 @@ permissions:
 jobs:
   structure:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
       - run: pip install numpy sympy
+      - name: All-odd binary Gram radical
+        run: python analysis/w33_pass5350_allodd_binary_gram_radical.py
       - name: Hoffman extraspecial / Latin commutator geometry
         run: python analysis/w33_pass5351_5352_hoffman_pauli_latin_symplectic_spread.py
       - name: K0 central-idempotent tight frames
         run: python analysis/w33_pass5353_k0_central_idempotent_tight_frames.py
   hoffman_sat:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -36,9 +41,22 @@ jobs:
       - run: pip install numpy sympy python-sat
       - name: Exact full shortened-code query
         run: python analysis/w33_pass5348_hoffman_fullcode_xorsat.py
+  q11_cyclic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy sympy scipy
+      - name: Cyclic Cayley equality-wall search
+        run: python analysis/w33_pass5354_q11_cyclic_cayley_dual20_search.py
+      - name: Orbit-moment closer if cyclic witness exists
+        run: python analysis/w33_pass5355_q11_dual20_orbit_moment_closer.py
   q11_sat:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -47,3 +65,5 @@ jobs:
       - run: pip install numpy sympy scipy python-sat
       - name: Exact q11 dual20 equality-wall query
         run: python analysis/w33_pass5349_q11_dual20_doublecover_xorsat.py
+      - name: Orbit-moment closer if SAT witness exists
+        run: python analysis/w33_pass5355_q11_dual20_orbit_moment_closer.py
