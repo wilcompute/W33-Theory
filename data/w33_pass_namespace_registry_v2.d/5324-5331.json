@@ -1,0 +1,12 @@
+{
+  "schema":"w33.pass_namespace_registry.v2.entry",
+  "range":[5324,5331],
+  "slug":"cert_prose_contradicts_own_data_bt818_alpha9",
+  "title":"A certificate whose prose contradicts its own computed fields, the guard that finds them, and a corpus sweep",
+  "status":"RESERVED",
+  "owner":"anthropic-claude-track-a",
+  "reserved_at":"2026-08-14",
+  "purpose":"BT818's certificate carries alpha_exact=7 -- correct, and independently confirmed here by a from-scratch build with no repo builder, exhaustive search, and a direct check that no 9-set exists at all -- while its own `correction` string asserts alpha=9, and its docstring asserts a KS ledger of s<=34 with 6 misses against certificate fields ks_best=36 and ks_misses=4. The DATA is right and the PROSE is wrong, in two places, in one file, and the prose is the half that gets read and quoted downstream. Fronts: (1) correct BT818 without touching its correct computation; (2) trace propagation -- w33_MCCCLI_spectral_graph_breakthrough.py repeats alpha=9, the public docs page correctly says alpha=7; (3) build check_cert_prose_vs_data.py, comparing numeric assertions in a certificate's prose fields against its own numeric fields; (4) sweep every PART_/bt certificate with it and report the rate.",
+  "boundary":"alpha(W(3,3))=7 is established here by a construction independent of every repo builder: 40 points of PG(3,3), standard symplectic form, SRG(40,12,2,4) verified, exhaustive maximum independent set, plus a direct enumeration showing no independent 9-set exists. That settles the number. It does NOT by itself settle the downstream Kochen-Specker reading in BT818 -- the KS ledger numbers are a separate computation and only their prose/data mismatch is reported here, not a recomputation of the KS bound. The new guard compares numbers to numbers; a certificate whose prose is wrong in words rather than digits is invisible to it.",
+  "prior_art_check":"Searched before writing: alpha(W(3,3))=7 is Pass4795 and Pass4800 and Pass5226/5270; the value is NOT new here and is cited, not claimed. What is new is that BT818 disagrees with it in prose while agreeing in data, and that no guard compares those two."
+}
