@@ -21,11 +21,11 @@ def test_unsigned_conditioning_extremes():
         assert r['gram_condition_number']>=1
 
 
-def test_modular_defect_dimension_identity():
+def test_modular_extra_point_kernel_defect_dimension_identity():
     anchors={3:15,5:65,7:175,9:369,11:671,13:1105}
     for q,rk in anchors.items():
         r=defect_row(q,rk)
-        assert r['defect_dimension']==0
+        assert r['extra_point_kernel_defect_dimension']==0
         assert r['dim_M0_mod_CW']==r['radical_dimension']
 
 
