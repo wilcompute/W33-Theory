@@ -1,0 +1,18 @@
+{
+  "pass":5359,
+  "status":"THEOREM_PRIME_ANCHOR_PAIR_HECKE_WEDDERBURN_CENSUS",
+  "anchors":{
+    "3":{"q":3,"group_order":12,"fiber_size":6,"pair_stabilizer_order":2,"orbital_rank":4,"subdegrees":[1,1,2,2],"symmetric_orbitals":2,"directed_orbitals":2,"center_dimension":4,"commutator_dimension":0,"complex_block_sizes":[1,1,1,1],"M2_block_count":0},
+    "5":{"q":5,"group_order":60,"fiber_size":15,"pair_stabilizer_order":4,"orbital_rank":6,"subdegrees":[1,1,1,4,4,4],"symmetric_orbitals":4,"directed_orbitals":2,"center_dimension":3,"commutator_dimension":3,"complex_block_sizes":[1,1,2],"M2_block_count":1},
+    "7":{"q":7,"group_order":168,"fiber_size":28,"pair_stabilizer_order":6,"orbital_rank":7,"subdegrees":[1,3,3,3,6,6,6],"symmetric_orbitals":5,"directed_orbitals":2,"center_dimension":4,"commutator_dimension":3,"complex_block_sizes":[1,1,1,2],"M2_block_count":1},
+    "11":{"q":11,"group_order":660,"fiber_size":66,"pair_stabilizer_order":10,"orbital_rank":10,"subdegrees":[1,5,5,5,5,5,10,10,10,10],"symmetric_orbitals":6,"directed_orbitals":4,"center_dimension":7,"commutator_dimension":3,"complex_block_sizes":[1,1,1,1,1,1,2],"M2_block_count":1},
+    "13":{"q":13,"group_order":1092,"fiber_size":91,"pair_stabilizer_order":12,"orbital_rank":12,"subdegrees":[1,3,3,6,6,6,6,12,12,12,12,12],"symmetric_orbitals":8,"directed_orbitals":4,"center_dimension":6,"commutator_dimension":6,"complex_block_sizes":[1,1,1,1,2,2],"M2_block_count":2},
+    "17":{"q":17,"group_order":2448,"fiber_size":153,"pair_stabilizer_order":16,"orbital_rank":15,"subdegrees":[1,4,4,8,8,8,8,8,8,16,16,16,16,16,16],"symmetric_orbitals":11,"directed_orbitals":4,"center_dimension":9,"commutator_dimension":6,"complex_block_sizes":[1,1,1,1,1,1,1,2,2],"M2_block_count":2},
+    "19":{"q":19,"group_order":3420,"fiber_size":190,"pair_stabilizer_order":18,"orbital_rank":16,"subdegrees":[1,9,9,9,9,9,9,9,9,9,18,18,18,18,18,18],"symmetric_orbitals":10,"directed_orbitals":6,"center_dimension":10,"commutator_dimension":6,"complex_block_sizes":[1,1,1,1,1,1,1,1,2,2],"M2_block_count":2},
+    "23":{"q":23,"group_order":6072,"fiber_size":276,"pair_stabilizer_order":22,"orbital_rank":19,"subdegrees":[1,11,11,11,11,11,11,11,11,11,11,11,22,22,22,22,22,22,22],"symmetric_orbitals":13,"directed_orbitals":6,"center_dimension":10,"commutator_dimension":9,"complex_block_sizes":[1,1,1,1,1,1,1,2,2,2],"M2_block_count":3}
+  },
+  "q5_recovery":"q=5 gives block sizes [1,1,2], i.e. C^2 + M2(C), exactly Pass5336.",
+  "observed_pattern":"At all eight prime anchors the algebra contains only scalar and M2 blocks, with M2 count floor((q+3)/8).",
+  "pattern_status":"CONJECTURAL_ALL_Q; exact only at the displayed prime anchors.",
+  "boundary":"Pass5357 proves orbital rank for every odd prime power. This pass does not prove the displayed Wedderburn pattern for arbitrary q and does not identify any characteristic-2 footprint module."
+}
