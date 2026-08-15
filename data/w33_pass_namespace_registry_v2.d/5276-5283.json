@@ -1,0 +1,12 @@
+{
+  "schema":"w33.pass_namespace_registry.v2.entry",
+  "range":[5276,5283],
+  "slug":"reservation_race_fix_symmetry_milp_results_index_guard_crosslane",
+  "title":"Atomic reservation that actually conflicts, symmetry-broken q=7 MILP, results index regeneration, guard sweep repair, and a cross-lane failure-mode audit",
+  "status":"RESERVED",
+  "owner":"anthropic-claude-track-a",
+  "reserved_at":"2026-08-14",
+  "purpose":"Eight fronts. (1) Fix the reservation mechanism itself: THIS FILE is the fix -- an empty commit never conflicts, an add/add on a tracked registry path always does. (2) Symmetry-break the q=7 MILP using point-transitivity of PSp(4,7) so alpha(W(3,7)) proves rather than timing out at 900s. (3) Regenerate RESULTS_INDEX.md, the artifact that would have surfaced Pass4800 on day one instead of 450 passes late. (4) Repair the convention-guard sweep, which reported totals over 5,532 of 7,113 files with chunks dying silently. (5) Grep every number this session produced -- 7, 18, 65, 1025, 16385 -- against the corpus before any is cited downstream. Bonkers: (6) a pre-commit hook that greps a pass's own output numbers against RESULTS_INDEX, mechanising the check whose absence cost six passes; (7) ask what the deficit sequence 3, 8 is once q=7 supplies a third point; (8) audit the 20 guards against the OTHER lane's failure modes rather than mine.",
+  "boundary":"The reservation fix is a mechanism change, not a claim -- it prevents silent double-reservation, it does not resolve one. alpha(W(3,7)) is only settled if the MILP proves optimality; a symmetry-broken run that still times out yields a lower bound and must be labelled one. Any deficit-sequence formula on three points is a curve fit, not a law, and Pass4800 already declined to fit two. Guard silence on another lane's work measures overlap between authors' failure modes, never cleanliness.",
+  "collision_note":"Reserved after a genuine double-reservation of 5262-5269: both lanes pushed reservation commits two minutes apart (19:56:23 Track A, 19:58:31 openai-gpt56-sol) and BOTH pushes succeeded, because each pushed before seeing the other. The fetch-to-push window is the race. Track A owned the block by two minutes under the stated ownership rule and renumbered to 5270-5275 anyway, since the other lane had already pushed six files plus its registry entry."
+}
