@@ -1,0 +1,42 @@
+{
+  "boundary": "Pass 5377 reports GENERATOR counts from igraph, not group orders -- it does NOT settle whether the stabiliser acts faithfully on the 13, and Pass 5343's divisibility-only statement stands. Pass 5379 is a NEGATIVE: no two-distance bound is constructed and the reason given is an argument, not a proof of impossibility",
+  "pass_5376": {
+    "carrier": "their P-block graph from Pass5212 geometry(5)",
+    "constant_inner_product": true,
+    "cover_is_coclique": true,
+    "credit": "mechanism is Pass 1614's; tightness is their Pass5212's",
+    "general_form_mu_over_k1s": -0.083333333333,
+    "hoffman": 13,
+    "is_regular_simplex": true,
+    "meets_bound": true,
+    "srg": [
+      325,
+      144,
+      68,
+      60
+    ],
+    "sum_squared": 0.0,
+    "value": -0.083333333333
+  },
+  "pass_5377": {
+    "aut_generators": 6,
+    "pointwise_generators": 0,
+    "settles": "nothing beyond Pass 5343",
+    "setwise_generators": 0,
+    "why": "igraph returns generators, not the group; needs GAP"
+  },
+  "pass_5378": {
+    "induced_regular": true,
+    "meets_cover_in": [
+      6
+    ],
+    "outside_blocks": 312,
+    "reading": "tightness makes the complement equitable -- the combinatorial shadow of the vectors summing to zero"
+  },
+  "pass_5379": {
+    "adjacent_ip": 0.097222222222,
+    "nonadjacent_ip": -0.083333333333,
+    "reason": "a coclique's vectors sit at one inner product, so Gram-PSD bounds see only that value; the adjacent value carries no information about an object defined by the absence of edges. Two-distance bounds constrain the 325, not the 13",
+    "result": "NEGATIVE -- no improved bound constructed"
+  }
+}
