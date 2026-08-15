@@ -1,0 +1,21 @@
+{
+  "schema":"w33.pass_namespace_registry.v2.entry",
+  "range":[5396,5403],
+  "slug":"allq_levi_apartment_cycle_tight_frame",
+  "title":"All-q Levi apartment incidence kernel and cycle-space tight frame",
+  "status":"RESERVED",
+  "owner":"openai-gpt56-sol-chat",
+  "reserved_at":"2026-08-15",
+  "purpose":"Extend Pass5388-5395 from the abstract Hodge idempotent to the explicit matrix of all oriented Levi 8-cycle apartments. Count apartment completions through pairs of flag edges, prove the signed overlap law (-1)^d q^(4-d), derive C C^T=N E_-2, count all apartments, and recover the q=3 160x1620 cycle-frame theorem as an exact specialization.",
+  "targets":{
+    "5396":"apartment count through one flag edge and total apartment census",
+    "5397":"pair completion count q^(4-d) by flag-linegraph distance",
+    "5398":"signed oriented overlap kernel (-1)^d q^(4-d)",
+    "5399":"matrix identity C C^T=N E_-2 and tight-frame theorem",
+    "5400":"normalized apartment frame parameters and q=3 BT545-BT549 recovery",
+    "5401":"independent symbolic/combinatorial verifier and finite-q anchors",
+    "5402":"manuscript/prior-art boundary and regression workflow",
+    "5403":"frontier/site promotion and packet closure"
+  },
+  "boundary":"Do not claim that arbitrary selected apartment subsets form tight frames; the theorem concerns the full set of simple Levi 8-cycles with consistent edge orientation. Do not infer quantum-code distance or physical fault tolerance from the frame identity alone. Check prior art before claiming novelty beyond the repo bridge."
+}
