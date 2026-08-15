@@ -1,0 +1,14 @@
+{
+  "range":[5332,5339],
+  "status":"EXECUTED_WITH_ALLODD_Q11_AND_HOFFMAN_DISTANCE_OPEN",
+  "5332":{"status":"THEOREM_Q5_K0_RANK21_ORBITAL_ALGEBRA_NONCOMMUTATIVE_WEDDERBURN","orbital_rank":21,"symmetric_orbitals":11,"directed_orbitals":10,"center_dimension":7,"commutator_dimension":14,"complex_wedderburn":"C^4 + M2(C)^2 + M3(C)","permutation_module":"1+104+65_a+520+3*90+2*65_b+2*625"},
+  "5333":{"status":"THEOREM_Q5_K0_BASE_FIBER_QUOTIENT_IDENTIFIES_COMPLEX_POINT_65_BLOCK","quotient":"Q=476I-87A_W+77J","spectrum":{"9878":1,"128":90,"998":65},"boundary":"characteristic-zero only; no binary 65 identification"},
+  "5334":{"status":"THEOREM_ALLODD_CHARACTERISTIC_ZERO_RANK_COMPLEMENT_AND_BINARY_SWAP_TARGET","exact_Q":"rank=1+f, nullity=g","binary_target":"rank_2=g, nullity_2=1+f","anchors":[3,5,7,9,11,13]},
+  "5335":{"status":"THEOREM_BINARY_FOOTPRINT_KERNEL_EQUALS_W_LINE_CODE_AT_Q3_TO_Q13_ANCHORS","statement":"ker_2(F^T)=C_W at q=3,5,7,9,11,13","general_equivalence":"rank_2(F)=g iff ker_2(F^T)=C_W"},
+  "5336":{"status":"THEOREM_Q5_LOCAL_K0_FIBER_IS_A5_OVER_V4_WITH_NONCOMMUTATIVE_RANK6_ALGEBRA","fiber":15,"local_module":"1+4+2*5","augmentation":"4+5+5","complex_wedderburn":"C^2+M2(C)"},
+  "5337":{"status":"THEOREM_Q5_K0_SHELL_IS_HOMOGENEOUS_A5_OVER_V4_FIBER_BUNDLE","tower":"H_shell(2000)<P_point(30000)<PSp4(5)(4680000)","indices":[15,156],"bundle":"G/H -> G/P with fiber A5/V4"},
+  "5338":{"status":"THEOREM_Q5_K0_EXACT_LOCAL_TO_GLOBAL_INDUCED_BRANCHING","Ind1":"1+90+65_a","Ind4":"104+520","Ind5":"90+65_b+625","vertical":"104+520+2*90+2*65_b+2*625"},
+  "5339":{"status":"MANUSCRIPT_FRONTIER_PROMOTED","insert":"analysis/PASS5332_5338_k0_wedderburn_characteristic_insert.tex","manifest":"analysis/W33_CURRENT_FRONTIER_MANIFEST.tex"},
+  "frontier":{"q11_footprint_distance":"OPEN: weight20 dual support/d=121 remains unproved.","hoffman_shortening":"OPEN: [312,52,d]_2 with d in {28,32,36,40}.","all_odd_rank":"OPEN in general; now equivalently ker_2(F^T)=C_W or K0=D_q; verified through q13 anchors.","q5_K0_shell":"rank21 coherent configuration now has exact complex Wedderburn and local-to-global branching."},
+  "firewall":"Characteristic-zero 65-dimensional constituents are not binary footprint modules by dimension alone. The q5 point-carrier incidence has Q-rank91 and F2-rank65, so modular identification requires separate proof."
+}
