@@ -35,7 +35,7 @@ OUT=ROOT/'data/PART_W33_PASS5300_HOFFMAN576_LATIN_GROUP_BRIDGE.json'
 COVER=(6,30,73,111,128,140,157,189,193,226,254,277,320)
 
 def elem_hist(G):
-    return dict(sorted(Counter(g.order() for g in G.generate_schreier_sims()).items()))
+    return dict(sorted(Counter(int(g.order()) for g in G.generate_schreier_sims()).items()))
 
 def rank4(cols):
     piv={}
@@ -89,7 +89,6 @@ def q5_hoffman():
     assert H13.order()==288 and H13.center().order()==1
     V=H13.derived_subgroup().derived_subgroup();assert V.order()==16 and V.is_abelian
     assert elem_hist(V)=={1:1,2:15}
-    # Coordinate V as F2^4.
     els=list(V.generate_schreier_sims());ident=V.identity
     coord={ident:0};bas=[]
     for v in els:
@@ -102,7 +101,6 @@ def q5_hoffman():
     for h in H13.generate_schreier_sims():
         hi=~h;A=tuple(coord[h*b*hi] for b in bas);assert rank4(A)==4;Hact.add(A)
     assert len(Hact)==18
-    # Extraspecial preimage of V in the full 576-group.
     def restrict13(h):return Permutation([ci[h(c)] for c in COVER])
     Qels=[h for h in H.generate_schreier_sims() if V.contains(restrict13(h))]
     Q=PermutationGroup(Qels);assert Q.order()==32
@@ -146,7 +144,6 @@ def main():
         if {mcomp(mcomp(Pi,A),P) for A in Hact}==Lact:
             witness=P;break
     assert witness is not None
-    # Full groups are not isomorphic already by center/derived/order spectra.
     assert H.center().order()==2 and H.derived_subgroup().order()==96
     assert L.center().order()==1 and L.derived_subgroup().order()==144
     assert elem_hist(H)!=(elem_hist(L))
@@ -157,7 +154,7 @@ def main():
       'klein_latin':{'all_order4_latin_squares':576,'V4_autoparatopy_order':576,'center':1,'derived':144,
         'element_orders':elem_hist(L),'structure':'2^4 : (S3 x S3)',
         'even_parastrophe_subgroup_order':288,'even_structure':'2^4 : (S3 x C3)'},
-      'exact_bridge':{'hoffman_central_quotient_order':Hq.order(),'latin_even_order':Lp.order(),
+      'exact_bridge':{'hoffman_central_quotient_order':int(Hq.order()),'latin_even_order':int(Lp.order()),
         'GL4_conjugacy_change_of_basis_columns':list(witness),
         'statement':'H/Z(H) is explicitly conjugate, on its normal F2^4 module, to the even-parastrophe subgroup of the Klein V4 Latin-square autoparatopy group.'},
       'negative_result':'H itself is NOT the order-576 Klein Latin autoparatopy group; equal order alone is not an identification.',
