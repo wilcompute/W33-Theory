@@ -1,0 +1,102 @@
+{
+  "boundary": "Pass 5341 establishes the inner-product identity on the four graphs listed; NO_5^+(5) is NOT among them -- their builder was not directly callable here, so the 13-coclique statement is a PREDICTION from the identity, not a measurement on their carrier. Pass 5343 establishes only that 576 divides 13!, which is divisibility and not an action; no embedding of W(D4):C3 into S_13 is exhibited and the pointwise kernel is not computed",
+  "pass_5341": {
+    "all_match": true,
+    "correction_to_5279": "Pass 5279 wrote -1/q^2; on a GQ(q,q) the Hoffman bound is q^2+1 so the two coincide and that carrier cannot distinguish them. -1/(H-1) is the general form; q was a coincidence of the carrier",
+    "identity": "noncollinear inner product = -1/(Hoffman - 1)",
+    "rows": [
+      {
+        "graph": "W(3,3)",
+        "hoffman": 10,
+        "matches": true,
+        "minus_1_over_H_minus_1": -0.1111111111,
+        "noncollinear_ip": -0.1111111111,
+        "srg": [
+          40,
+          12,
+          2,
+          4
+        ]
+      },
+      {
+        "graph": "Q(4,3)",
+        "hoffman": 10,
+        "matches": true,
+        "minus_1_over_H_minus_1": -0.1111111111,
+        "noncollinear_ip": -0.1111111111,
+        "srg": [
+          40,
+          12,
+          2,
+          4
+        ]
+      },
+      {
+        "graph": "W(3,5)",
+        "hoffman": 26,
+        "matches": true,
+        "minus_1_over_H_minus_1": -0.04,
+        "noncollinear_ip": -0.04,
+        "srg": [
+          156,
+          30,
+          4,
+          6
+        ]
+      },
+      {
+        "graph": "Q(4,5)",
+        "hoffman": 26,
+        "matches": true,
+        "minus_1_over_H_minus_1": -0.04,
+        "noncollinear_ip": -0.04,
+        "srg": [
+          156,
+          30,
+          4,
+          6
+        ]
+      },
+      {
+        "graph": "H(3,9)",
+        "hoffman": 28,
+        "matches": true,
+        "minus_1_over_H_minus_1": -0.037037037,
+        "noncollinear_ip": -0.037037037,
+        "srg": [
+          280,
+          36,
+          8,
+          4
+        ]
+      },
+      {
+        "graph": "Q(5,3)",
+        "hoffman": 28,
+        "matches": true,
+        "minus_1_over_H_minus_1": -0.037037037,
+        "noncollinear_ip": -0.037037037,
+        "srg": [
+          112,
+          30,
+          2,
+          10
+        ]
+      }
+    ]
+  },
+  "pass_5342": {
+    "equality_case": "|sum of unit vectors|^2 = 0, so they sum to zero",
+    "their_carrier": "Hoffman 13 on NO_5^+(5) forces their 13-coclique to be a regular 12-simplex -- predicted, not measured here",
+    "theorem": "a coclique meeting the Hoffman bound is a regular (H-1)-simplex in the eigenspace, rigid up to rotation",
+    "why_blind_to_existence": "the simplex always fits in R^(H-1); the bound never asks whether the geometry realises H points"
+  },
+  "pass_5343": {
+    "divides": true,
+    "established": "divisibility only",
+    "next": "build the 13-coclique, take its setwise stabiliser in Aut(NO_5^+(5)), factor out the pointwise kernel",
+    "not_established": "that the stabiliser acts faithfully on the 13 vertices; the pointwise kernel over the other 312 points is not computed",
+    "simplex_symmetry": "S_13, order 6227020800",
+    "stabiliser": "W(D4):C3, order 576 (their Pass5308)"
+  }
+}

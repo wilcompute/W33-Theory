@@ -18,13 +18,26 @@ GQ(3,3)" with Lovasz theta tight.  These cannot both be right:
 BT818 settles it exactly:
 
   T1. Exact maximum independent set of the W(3,3) collinearity graph by
-      branch-and-bound: alpha = 9 < 10 = theta (ratio bound).  The
+      branch-and-bound: alpha = 7 < 10 = theta (ratio bound).  The
       GraphTheory table's "alpha = 10" is CORRECTED; the Shannon/Lovasz
       number 10 is an upper bound NOT attained - the theta-alpha gap
-      (10 vs 9) is the combinatorial face of Kochen-Specker.
+      (10 vs 7) is the combinatorial face of Kochen-Specker.
   T2. KS ledger: every marking satisfying s contexts exactly-once obeys
-      s <= 34; exhibit an optimal 34-marking (search) and report the
-      structure of misses (6 = q! unsatisfied contexts).
+      s <= 36; exhibit an optimal 36-marking (search) and report the
+      structure of misses (4 unsatisfied contexts).
+
+  PROSE CORRECTED, COMPUTATION UNTOUCHED (Pass 5340).  This docstring said
+  alpha = 9 and "s <= 34 ... 6 = q! unsatisfied", while the code below computed
+  and the certificate recorded alpha_exact = 7, ks_best = 36, ks_misses = 4.
+  The DATA was right in every case and only the prose was wrong -- the fields are
+  written by the code, the sentences were typed afterwards.  Nothing executable
+  has been changed here.
+
+  The value is confirmed independently of this file and of every repo builder:
+  40 points of PG(3,3), standard symplectic form, SRG(40,12,2,4), exhaustive
+  maximum independent set 7, and a direct enumeration showing NO independent
+  9-set exists at all.  It also agrees with Pass 4795 and Pass 4800, which own
+  the result; 6 = q! was the tell, since 4 is not 3!.
   T3. Bell-line strata (BT817 link): the unique all-product context of
       the photon's qubit split is a line L0; the 12 one-product contexts
       are EXACTLY the lines meeting L0, the 27 fully-entangled ones are
@@ -175,8 +188,12 @@ def main():
         "theorem": "BT818 ovoid no-go + theta gap + KS ledger",
         "alpha_exact": alpha,
         "theta_bound": 10,
+        # The literal 9 here was the fault: this string is the human-readable half
+        # and is what gets quoted, while `alpha_exact` beside it carried the correct
+        # value all along. Interpolated from the computation now, so the two halves
+        # cannot drift again (Pass 5340).
         "correction": "GraphTheory 'alpha = 10 = ovoids' is wrong for q=3;"
-                      " W(q) has ovoids iff q even (Thas); alpha = 9",
+                      f" W(q) has ovoids iff q even (Thas); alpha = {alpha}",
         "ks_best": best_s,
         "ks_misses": len(misses),
         "bell_line_strata_identified": bool(ok),

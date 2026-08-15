@@ -1,0 +1,67 @@
+{
+  "boundary": "Three of these four passes are NEGATIVE results about detectability. The 388-finding triage is by STEM FREQUENCY, a proxy for genericity, not a per-finding classification -- 388 findings were not individually read and no claim is made about the 76 driven by rare stems. The docstring recall figure is measured on BT818's original text only, which is one case. alpha(W(3,3))=7 remains Pass4795/Pass4800's",
+  "pass_5344": {
+    "computation_changed": false,
+    "fix": "the `correction` string now interpolates the computed value instead of restating it, so the halves cannot drift again",
+    "prose_agrees_with_data": true,
+    "repaired": "analysis/bt818_ovoid_nogo_theta_gap.py"
+  },
+  "pass_5345": {
+    "alpha_Q43_points": 10,
+    "alpha_W33_points": 7,
+    "nine_matches_either": false,
+    "verdict": "typo, not a coordinate artefact -- 9 sits strictly between the two real values and matches neither"
+  },
+  "pass_5346": {
+    "agrees_with": "the independent 1-in-10 hand triage at Pass 5327",
+    "findings": 388,
+    "from_frequent_stems": 173,
+    "not_done": "the 388 findings were not individually read",
+    "pct_from_frequent_stems": 44,
+    "top_stems": {
+      "capacity": 9,
+      "cost": 10,
+      "count": 7,
+      "exhaustive": 19,
+      "formula": 15,
+      "kappa": 10,
+      "lambda": 21,
+      "leader": 10,
+      "numerator": 13,
+      "rank": 26,
+      "sections": 21,
+      "supply": 12
+    }
+  },
+  "pass_5347": {
+    "detail": [
+      {
+        "caught": true,
+        "data": 7,
+        "found": [
+          9
+        ],
+        "key": "alpha_exact",
+        "stem": "alpha"
+      },
+      {
+        "caught": false,
+        "data": 36,
+        "found": [],
+        "key": "ks_best",
+        "stem": "best"
+      },
+      {
+        "caught": false,
+        "data": 4,
+        "found": [],
+        "key": "ks_misses",
+        "stem": "misses"
+      }
+    ],
+    "docstring_recall_on_founding_case": "1/3",
+    "flag_rate": "774 of 1646 py/certificate pairs = 47%",
+    "registered": false,
+    "why_not": "47% is past the noise threshold; and tightening the match to fix that also drops BT818, because prose does not use field names. Signal and noise share a shape"
+  }
+}

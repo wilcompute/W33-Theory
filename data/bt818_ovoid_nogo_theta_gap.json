@@ -2,7 +2,7 @@
   "theorem": "BT818 ovoid no-go + theta gap + KS ledger",
   "alpha_exact": 7,
   "theta_bound": 10,
-  "correction": "GraphTheory 'alpha = 10 = ovoids' is wrong for q=3; W(q) has ovoids iff q even (Thas); alpha = 9",
+  "correction": "GraphTheory 'alpha = 10 = ovoids' is wrong for q=3; W(q) has ovoids iff q even (Thas); alpha = 7",
   "ks_best": 36,
   "ks_misses": 4,
   "bell_line_strata_identified": true
