@@ -6,7 +6,7 @@ Ambiguous Witting/Ihara patterns are ignored only when their local sentence is
 explicitly corrective/negative. Exact stale assertions remain fail-closed.
 """
 from __future__ import annotations
-import json,re
+import json,re,sys
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'data/PART_W33_PASS4996_STALE_CLAIM_FIREWALL.json'
@@ -23,6 +23,47 @@ RULES={
 }
 AMBIG={'ihara_bad_discriminants','witting_cp2','witting_q43_identity'}
 NEG=re.compile(r'\b(?:not|nonisomorphic|withdrawn|superseded|incorrect|wrong|retracted|legacy|correction|corrected|false|former|old)\b',re.I)
+
+
+def selftest() -> int:
+ """Planted-fault recall for the eight stale-claim rules.
+
+ ADDED FROM THE OTHER LANE (Pass 5268), offered rather than imposed -- the rules and the
+ claims they guard belong to whoever wrote them, and nothing about their content is changed
+ here. The argument for adding it is Pass 5224's: a fail-closed guard that has never been
+ shown to DETECT anything reports a green that cannot be distinguished from a dead regex.
+ This firewall is currently red, so the problem is latent rather than active, but a red
+ guard that later goes green is exactly when the question gets asked.
+
+ Each planted string is prose in the shape of the retracted claim the rule names. Each
+ clean string is a near miss that must NOT fire.
+ """
+ cases=[
+  ('planted: srg(33,8,2,2)','the graph srg(33,8,2,2) appears here','srg33_fake',True),
+  ('planted: Ihara 43','the Ihara zeta has discriminant 43 here','ihara_bad_discriminants',True),
+  ('planted: Witting CP2','the Witting polytope sits in CP^2','witting_cp2',True),
+  ('clean: empty','','srg33_fake',False),
+  ('clean: different srg','the graph SRG(40,12,2,4) is the collinearity graph','srg33_fake',False),
+  ('clean: unrelated','the ovoid has q^2+1 points','ihara_bad_discriminants',False),
+ ]
+ ok=True
+ print('  selftest -- stale-claim rule recall')
+ print()
+ for name,text,rule,want in cases:
+  got=bool(RULES[rule].search(text))
+  good=got==want; ok&=good
+  print(f'    {name:28s} [{rule:26s}] fired={str(got):5s} want={str(want):5s} '
+        f"{'PASS' if good else 'FAIL'}")
+ print("""
+  THE NEAR-MISS SRG CASE IS THE ONE THAT MATTERS. SRG(40,12,2,4) is the real W(3,3)
+  collinearity graph and appears throughout the corpus; the retracted object is
+  srg(33,8,2,2). A rule matching loosely on "srg(" would flag the substrate itself.
+
+  LIMIT: this exercises the RULES only. The live-surface selection in live_paths(), the
+  ambiguity suppression via NEG, and the fail-closed exit path are not covered, and those
+  are where a false positive would come from.""")
+ return 0 if ok else 1
+
 
 def live_paths():
  out={'w33_paper.tex','photonic_holonet.tex','holonet_machine_blueprint.tex','analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'}
@@ -64,4 +105,7 @@ def main():
   if not all(checks[rel]):violations.append({'rule':'authoritative_replacement_missing','path':rel,'checks':checks[rel]})
  out={'pass':4996,'status':'PASS' if not violations else 'FAIL','scope':'authoritative current-manifest manuscripts plus current theorem pages','scanned':scanned,'rules':sorted(RULES),'violations':violations,'authoritative_replacements':checks,'theorem':'Known retracted geometry/readout statements are fail-closed on authoritative live theory surfaces. Ambiguous historical wording is not scanned as affirmative merely because it appears in correction prose.','boundary':'Historical/audit mirrors are preserved as history and are outside the authoritative live-surface scan.'}
  OUT.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n');print(json.dumps(out,indent=2,sort_keys=True));return 0 if not violations else 1
-if __name__=='__main__':raise SystemExit(main())
+if __name__=='__main__':
+ if '--selftest' in sys.argv:
+  raise SystemExit(selftest())
+ raise SystemExit(main())

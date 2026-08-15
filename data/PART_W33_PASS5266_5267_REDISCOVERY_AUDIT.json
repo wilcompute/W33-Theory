@@ -1,0 +1,119 @@
+{
+  "boundary": "This is a self-audit of THIS session's passes against prior in-repo work. The triage of the six sweep candidates is by hand -- 2 are the guard's own fixtures and 1 is a false positive on unrelated prose, so the guard's precision here is 3 of 6 and that number is from one sweep. 'NEW' means not found in the corpus by the searches described, which is not proof of novelty -- Pass 328 measured a 21 pct uncited collision rate and nothing here lowers it",
+  "pass_5266": {
+    "prior_art": {
+      "pass_4795": [
+        "alpha(W(3,3)) = 7",
+        "noticed 7 = q^2-q+1",
+        "predicted alpha(W(3,5)) = 21, explicitly"
+      ],
+      "pass_4800": [
+        "alpha(W(3,5)) = 18 exhaustive in 2075 s",
+        "deficit-q law FALSE, in the title",
+        "rows for q = 2,3,4,5 with alpha 5,7,17,18"
+      ]
+    },
+    "sweep": {
+      "candidates": 6,
+      "files": 7113
+    },
+    "triage": {
+      "false_positive": 1,
+      "genuine_prior_art": 3,
+      "own_fixtures": 2
+    }
+  },
+  "pass_5267": {
+    "correction": "Pass 5228's 'the gap is exactly q' is true at q=3 and is NOT a general law -- Pass 4800 refuted the general form with the q=5 deficit of 8, before this session began. Cite 4800 wherever the deficit is discussed",
+    "ledger": [
+      {
+        "claim": "alpha(W(3,3)) = 7",
+        "note": "Pass 4795 computed it and named q^2-q+1",
+        "prior": 4795,
+        "session_pass": 5226,
+        "verdict": "REDISCOVERED"
+      },
+      {
+        "claim": "alpha(W(3,5)) = 18",
+        "note": "Pass 4800 had it exhaustively in 2,075 s",
+        "prior": 4800,
+        "session_pass": 5262,
+        "verdict": "REDISCOVERED"
+      },
+      {
+        "claim": "q^2-q+1 is refuted as an equality",
+        "note": "Pass 4800's title IS this refutation",
+        "prior": 4800,
+        "session_pass": 5263,
+        "verdict": "REDISCOVERED"
+      },
+      {
+        "claim": "Hoffman deficit is exactly q at odd q",
+        "note": "true at q=3 only; Pass 4800 killed the general law with the q=5 deficit 8",
+        "prior": 4800,
+        "session_pass": 5228,
+        "verdict": "REFUTED IN REPO ALREADY"
+      },
+      {
+        "claim": "alpha(W(3,q)) = q^2+1 for q = 2, 4",
+        "note": "Pass 4800's rows carry alpha=5 and alpha=17",
+        "prior": 4800,
+        "session_pass": 5247,
+        "verdict": "REDISCOVERED"
+      },
+      {
+        "claim": "polarity <=> q an odd power of 2; Sz(q) stabiliser",
+        "note": "caught BEFORE publishing, by corpus search",
+        "prior": 4793,
+        "session_pass": 5265,
+        "verdict": "REDISCOVERED"
+      },
+      {
+        "claim": "alpha(W(3,q)) = q^2+1 constructed at q = 8,16,32,64,128,256",
+        "note": "Pass 4800 reached q=4; these are 2.1 billion verified pairs at q=256",
+        "prior": null,
+        "session_pass": 5247,
+        "verdict": "NEW"
+      },
+      {
+        "claim": "W(3,3) and Q(4,3) are cospectral with alpha 7 and 10",
+        "note": "Pass 4800 has the W side only; the Q side makes it a counterexample to alpha being spectrally determined",
+        "prior": null,
+        "session_pass": 5228,
+        "verdict": "NEW"
+      },
+      {
+        "claim": "H(3,9)/Q(5,3) share Hoffman 28 by duality-invariance of st+1",
+        "note": "a second, non-cospectral mechanism for the same split",
+        "prior": null,
+        "session_pass": 5248,
+        "verdict": "NEW"
+      },
+      {
+        "claim": "MILP settles alpha(W(3,5)) in 75 s where exhaustive took 2,075 s",
+        "note": "27x faster and it scales; the number itself is Pass 4800's",
+        "prior": 4800,
+        "session_pass": 5262,
+        "verdict": "NEW METHOD, OLD RESULT"
+      },
+      {
+        "claim": "the symplectic form is determined by scanning all 63 alternating forms",
+        "note": "removes a convention-assumption step that has failed five times",
+        "prior": null,
+        "session_pass": 5246,
+        "verdict": "NEW"
+      },
+      {
+        "claim": "19 guards self-tested; two new guards; cross-lane reconciliation",
+        "note": "",
+        "prior": null,
+        "session_pass": 5250,
+        "verdict": "NEW"
+      }
+    ],
+    "new": 5,
+    "new_method_old_result": 1,
+    "rediscovered": 6,
+    "why_missed": "searched for the topic -- ovoid, Hoffman, group orders -- and not for the RESULT, the number 18. The Suzuki check at Pass 5265 searched for 29120 and succeeded, which is the same lesson in the affirmative"
+  }
+}

@@ -7,9 +7,15 @@ collinearity graphs are both SRG(40,12,2,4) -- literally the same spectrum, henc
 literally the same Hoffman bound of 10.  And
 
     alpha(Q(4,3)) = 10        the bound is attained
-    alpha(W(3,3)) =  7        the bound is slack by exactly q
+    alpha(W(3,3)) =  7        the bound is slack
 
-Two graphs, one spectrum, two independence numbers.  So "the Hoffman bound gives
+Two graphs, one spectrum, two independence numbers.
+
+THE SLACK IS NOT "EXACTLY q" AND THIS FILE SAID SO IN ITS FIRST VERSION.  Pass 4800
+refuted that law ~450 passes ago with alpha(W(3,5)) = 18, a deficit of 8 rather than
+5.  The deficit is 3 at q=3 and 8 at q=5; it is neither q nor constant, and Pass 4800
+owns the refutation.  This guard found that file during the Pass 5266 corpus sweep,
+which is how its own docstring got corrected.  So "the Hoffman bound gives
 alpha" is false as stated, and it is false in this corpus, on the substrate this
 corpus is about, at the smallest interesting q.  A second instance follows from
 H(3,9)/Q(5,3), which are NOT cospectral yet share the bound 28 because st+1 is
@@ -121,6 +127,11 @@ def main(argv: list[str]) -> int:
     total = 0
     for f in files:
         if not f.is_file():
+            continue
+        # Do not scan self: this file contains planted fixtures by construction, and a
+        # checker flagging its own test data is noise that trains people to ignore it
+        # (2 of 6 candidates in the Pass 5266 full-corpus sweep were exactly this).
+        if f.resolve() == Path(__file__).resolve():
             continue
         try:
             hits = scan_text(f.read_text(encoding="utf-8", errors="replace"))

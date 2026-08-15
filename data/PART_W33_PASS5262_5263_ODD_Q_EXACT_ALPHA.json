@@ -1,0 +1,81 @@
+{
+  "boundary": "Only rows with proved_optimal=true carry an upper bound; a time-limited row returns an incumbent, which is a LOWER bound only. Every reported set was re-verified pairwise non-adjacent from the graph rather than trusted from the solver. This tests specific values of q and contains no argument for general odd q. The literature theorem for all odd q is not reproved",
+  "pass_5262": {
+    "method": "maximum independent set as a binary integer program, one variable per point, one constraint per edge, plus Hoffman as an explicit cut; solved by HiGHS via scipy",
+    "proved": [
+      3,
+      5
+    ],
+    "rows": [
+      {
+        "alpha": 7,
+        "hoffman": 10,
+        "independent_verified": true,
+        "n": 40,
+        "proved_optimal": true,
+        "q": 3,
+        "q2_q_1": 7,
+        "seconds": 0.1,
+        "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optim",
+        "srg": [
+          40,
+          12,
+          2,
+          4
+        ]
+      },
+      {
+        "alpha": 18,
+        "hoffman": 26,
+        "independent_verified": true,
+        "n": 156,
+        "proved_optimal": true,
+        "q": 5,
+        "q2_q_1": 21,
+        "seconds": 75.4,
+        "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optim",
+        "srg": [
+          156,
+          30,
+          4,
+          6
+        ]
+      },
+      {
+        "alpha": 33,
+        "hoffman": 50,
+        "independent_verified": true,
+        "n": 400,
+        "proved_optimal": false,
+        "q": 7,
+        "q2_q_1": 43,
+        "seconds": 900.1,
+        "solver_message": "Time limit reached. (HiGHS Status 13: Time limit reached)",
+        "srg": [
+          400,
+          56,
+          6,
+          8
+        ]
+      }
+    ],
+    "why_it_works_where_search_failed": "branch-and-bound returns a dual bound as well as an incumbent; when the gap closes the upper bound is proved. A heuristic returns no information about what it did not find"
+  },
+  "pass_5263": {
+    "deficiencies": {
+      "3": 3,
+      "5": 8
+    },
+    "matches": [
+      3
+    ],
+    "no_ovoid_proved_at": [
+      3,
+      5
+    ],
+    "q2_q_1_verdict": "REFUTED -- alpha differs from q^2-q+1 at q=5",
+    "refutes": [
+      5
+    ]
+  }
+}
