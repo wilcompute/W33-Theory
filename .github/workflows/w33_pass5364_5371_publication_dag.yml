@@ -1,0 +1,57 @@
+name: W33 Pass5364-5371 publication DAG
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST_THROUGH_4864.tex'
+      - 'analysis/w33_pass5364_publication_dag_audit.py'
+      - 'tools/audit_w33_current_frontier.py'
+      - 'tests/test_bt3376_3389_cohomology_tau_frontier.py'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - 'holonet_machine_blueprint.tex'
+      - '.github/workflows/w33_pass5364_5371_publication_dag.yml'
+
+jobs:
+  publication-dag:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Recursive frontier audit
+        run: |
+          mkdir -p evidence/pass5364_5371
+          python analysis/w33_pass5364_publication_dag_audit.py \
+            --report evidence/pass5364_5371/publication_dag.json
+          python tools/audit_w33_current_frontier.py \
+            --report evidence/pass5364_5371/legacy_entrypoint.json
+          cmp evidence/pass5364_5371/publication_dag.json \
+              evidence/pass5364_5371/legacy_entrypoint.json
+      - name: Focused regression
+        run: |
+          python -m pip install --disable-pip-version-check pytest
+          pytest -q \
+            tests/test_bt3376_3389_cohomology_tau_frontier.py::test_manifest_is_recursive_unique_and_preserves_legacy_required_reachability \
+            tests/test_bt3376_3389_cohomology_tau_frontier.py::test_live_wrappers_use_one_generated_manifest
+          git diff --check
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+      - name: Compile all three canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass5364_5371/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
+            > evidence/pass5364_5371/pdf_sha256.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass5364-5371-publication-dag
+          path: evidence/pass5364_5371/**
