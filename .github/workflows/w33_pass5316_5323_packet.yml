@@ -1,0 +1,41 @@
+name: W33 Pass5316-5323 Latin-Q4 D4 face-pair packet
+
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass5316_latin_knight_q4_affine_derivative_census.py'
+      - 'analysis/w33_pass5317_hoffman_fourcell_triality_refinement.py'
+      - 'analysis/w33_pass5318_latin_spread_triality_action.py'
+      - 'analysis/w33_pass5319_d4_tesseract_facepairs_tomotope_action.py'
+      - 'analysis/w33_pass5320_tesseract_rotation_vs_d4_facepair_orbital_fusion.py'
+      - 'analysis/w33_pass5321_tomotope_3k4_coordinate_partition_semidirect.py'
+      - 'analysis/PASS5316_5321_latin_q4_d4_facepair_insert.tex'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'tests/test_w33_pass5316_5323_packet.py'
+      - '.github/workflows/w33_pass5316_5323_packet.yml'
+  workflow_dispatch:
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install exact packet dependencies
+        run: python -m pip install --upgrade pip sympy pytest
+      - name: Replay Pass5316
+        run: python analysis/w33_pass5316_latin_knight_q4_affine_derivative_census.py
+      - name: Replay Pass5317
+        run: python analysis/w33_pass5317_hoffman_fourcell_triality_refinement.py
+      - name: Replay Pass5318
+        run: python analysis/w33_pass5318_latin_spread_triality_action.py
+      - name: Replay Pass5319
+        run: python analysis/w33_pass5319_d4_tesseract_facepairs_tomotope_action.py
+      - name: Replay Pass5320
+        run: python analysis/w33_pass5320_tesseract_rotation_vs_d4_facepair_orbital_fusion.py
+      - name: Replay Pass5321
+        run: python analysis/w33_pass5321_tomotope_3k4_coordinate_partition_semidirect.py
+      - name: Regression lock
+        run: pytest -q tests/test_w33_pass5316_5323_packet.py

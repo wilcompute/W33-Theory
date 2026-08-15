@@ -1,0 +1,14 @@
+{
+  "pass":5321,
+  "status":"THEOREM_TOMOTOPE96_NATURAL_FACEPAIR_ACTION_REALIZES_C2_4_SEMIDIRECT_S3",
+  "objects":12,
+  "small_relation_graph":"3 K4",
+  "components":[[0,1,10,11],[2,3,8,9],[4,5,6,7]],
+  "coordinate_partition_labels":[[[0,1],[2,3]],[[0,2],[1,3]],[[0,3],[1,2]]],
+  "interpretation":"Each K4 component is the four antipodal face-pairs attached to one complementary 2+2 partition of the four tesseract coordinate axes.",
+  "component_action":{"image_order":6,"image":"S3","permuted_objects":"three complementary 2+2 axis partitions"},
+  "kernel":{"order":16,"structure":"(C2)^4","element_orders":{"1":1,"2":15},"orbits_on_12":[4,4,4]},
+  "semidirect_product":"Gamma(T) = (C2)^4 : S3 is realized directly by this natural tesseract face-pair action.",
+  "bridge":"The normal 16-module from Pass5309/5310 is visible as the kernel fixing the three 2+2 coordinate partitions; the S3 quotient permutes those partitions.",
+  "boundary":"Natural D4/tomotope action theorem; the distinct orientation-preserving order192 tesseract group remains separate."
+}
