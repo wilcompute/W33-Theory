@@ -1,0 +1,13 @@
+{
+  "pass":5310,
+  "status":"THEOREM_TESSERACT_ROTATION_AND_WD4_ARE_DISTINCT_192_DOUBLE_COVERS_OF_TOMOTOPE96",
+  "full_tesseract_symmetry_order":384,
+  "rotation_group":{"order":192,"center":2,"derived":96,"abelianization":"C2","element_orders":{"1":1,"2":43,"3":32,"4":36,"6":32,"8":48}},
+  "WD4":{"order":192,"center":2,"derived":96,"abelianization":"C2","element_orders":{"1":1,"2":43,"3":32,"4":84,"6":32}},
+  "nonisomorphism_certificate":"The orientation-preserving tesseract group has 48 elements of order8; W(D4) has none.",
+  "intersection":{"order":96,"center":2,"derived":32,"abelianization":"C3","element_orders":{"1":1,"2":19,"3":32,"4":12,"6":32}},
+  "central_quotients":{"rotation_over_center":96,"WD4_over_center":96,"element_orders":{"1":1,"2":27,"3":32,"4":36},"normal_module":"(C2)^4","quotient_action":"S3","nonzero_module_orbits":[3,3,3,6]},
+  "tomotope_group":"(C2)^4:S3 of order96",
+  "conclusion":"The two order192 groups are nonisomorphic central double covers whose central quotients are isomorphic to the tomotope automorphism group. Pass5309 gives the explicit W(D4)/Z degree-12 tomotope action.",
+  "boundary":"Do not call the Hoffman W(D4) subgroup the tesseract rotational subgroup. Their equality is false even though both have order192."
+}
