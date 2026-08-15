@@ -2,10 +2,12 @@
   "schema":"w33.pass_namespace_registry.v2.entry",
   "range":[5332,5339],
   "slug":"post_d4_tomotope_q11_hoffman_allodd_refinement",
-  "title":"Post-D4/tomotope continuation: q11 dual-shell, Hoffman four-cell distance, all-odd residual generation, and tomotope/Latin exact refinements",
-  "status":"RESERVED",
+  "title":"q5 K0 orbital Wedderburn, characteristic-rank complement, and local-to-global A5 branching",
+  "status":"CLOSED_EXECUTED",
   "owner":"openai-gpt56-sol",
   "reserved_at":"2026-08-14T23:49:00-04:00",
-  "purpose":"Continue from the closed Pass5316-5323 packet without colliding with Track A Pass5324-5331. Prioritize unresolved theorem frontiers: q11 dual20/d=121, Hoffman [312,52] four-cell layer, all-odd K0=D_q, plus exact finite-group/Latin/tomotope refinements only where they yield new certificates.",
-  "boundary":"Do not promote timeouts to proofs. Preserve q11 distance, Hoffman distance, and general all-odd rank as open unless exact certificates close them. Order coincidences are not object identifications."
+  "closed_at":"2026-08-15T00:08:00-04:00",
+  "result":"Pass5332-5339 executed and promoted. Main closure: the 2340-word q5 K0 minimum shell is a noncommutative rank21 coherent configuration with complex adjacency algebra C^4 + M2(C)^2 + M3(C); its homogeneous A5/V4 fiber bundle yields exact induced branching. The all-odd rank problem is sharpened to the characteristic-complement/kernel equality target.",
+  "frontier":"q11 dual20/d=121 remains open; Hoffman [312,52,d] remains d in {28,32,36,40}; all-odd rank equality remains open in general despite q3..q13 anchors.",
+  "boundary":"Characteristic-zero 65-dimensional blocks are not binary footprint modules by dimension alone. No timeout/noncompletion has been promoted to a theorem."
 }
