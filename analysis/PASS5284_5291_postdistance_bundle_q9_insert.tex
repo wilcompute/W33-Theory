@@ -1,0 +1,62 @@
+% Pass5284--5291 post-distance insert.
+\subsection{Post-distance shell geometry and the odd-$q$ footprint quotient}
+Pass~5284 completes the minimum-word shell of the $q=5$ zero-P residual $K_0$.
+On any one of the $156$ W-point block-minimum supports, the $25\times24=600$
+local even variables have connected-L syndrome rank $596$, leaving a
+four-dimensional restricted kernel.  Its $15$ nonzero words are exactly the
+$\binom62=15$ differences of the six chamber stars based at that point.
+Consequently the complete $K_0$ block-minimum shell has
+\[
+  156\cdot15=2340
+\]
+words, all of apartment weight $25\cdot40=1000$.
+
+The six chamber-star coefficients at a fixed point give a canonical fiber
+\[
+  U_p=E_6/\langle111111\rangle\cong\mathbb F_2^4,
+\]
+where $E_6$ is the even-weight subspace of $\mathbb F_2^6$.  Thus the $15$
+nonzero minimum words over a point are naturally the $15$ points of
+$PG(3,2)$, equivalently the unordered pairs of the six W-lines through the
+point (Pass~5289).  Under the Pass~5217 controller chart, the common $25$ P
+blocks are indexed by $(a,c)\in\mathbb F_5^2$, and this four-dimensional fiber
+embeds diagonally as a constant section over the full $5\times5$ sheet
+(Pass~5290).  Every local fiber code is a five-fold replicated binary simplex
+$[75,4,40]_2$ plus $150$ zero coordinates; globally the effective code is the
+$125$-fold simplex $[1875,4,1000]_2$ plus $3750$ zero coordinates in the
+$5625$-coordinate footprint region (Pass~5291).  These are finite code-coordinate
+statements, not physical dynamics claims.
+
+\paragraph{Hoffman shortening.}
+For the fixed Hoffman $13$-cover, the $312$ non-cover coordinates split by their
+$(R_1,R_2,R_3)$ relation counts to the cover as
+\[
+ (6,5,2)^{144},\quad(6,6,1)^{96},\quad(6,3,4)^{48},\quad(6,1,6)^{24}.
+\]
+The complete weight-eight dual shell meets the cover in $0,1,2$ coordinates with
+counts $16815,7320,240$.  These exact four types sharpen the shortening problem,
+but the minimum of the $[312,52]$ shortened code remains one of
+$28,32,36,40$; no $d=40$ theorem is promoted.
+
+\paragraph{$q=9$ anchor and all-odd rank reduction.}
+Over $GF(9)=\mathbb F_3[t]/(t^2+1)$ the point/P-component incidence matrix has
+$820$ rows and $3321$ columns, point-row weight $81$, and exact binary rank
+\[
+  \operatorname{rank}_2 F=369=\frac{9(9^2+1)}2.
+\]
+An explicit weight-$16$ dual dependence has carrier degree profile
+$2^{160}0^{660}$; its selected block graph is $10$-regular on $16$ vertices,
+and its complement has two $8$-vertex components, each $K_8\setminus C_8$.
+This does not yet prove the $q=9$ primal distance $81$.
+
+For every odd $q$, every totally isotropic W-line $L$ meets a P-carrier
+$H\cup H^\perp$ in $0$ or $2$ points, because $L=L^\perp$ implies
+$\dim(L\cap H)=\dim(L\cap H^\perp)$.  Hence the binary W-line code lies in
+$\ker F^T$.  Using the odd-$q$ W-line-code dimension gives the universal upper
+bound
+\[
+  \operatorname{rank}_2F\le g=\frac{q(q^2+1)}2.
+\]
+The exact anchors $q=3,5,7,9$ all saturate this bound.  The remaining all-odd
+rank theorem is therefore precisely injectivity of the induced footprint map on
+the $g$-dimensional quotient of the point module by the W-line code.
