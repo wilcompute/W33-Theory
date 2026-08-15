@@ -1,0 +1,81 @@
+name: W33 Pass5404-5411 unsigned apartment spectrum
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5404_5409_allq_unsigned_apartment_spectrum.py'
+      - 'data/PART_W33_PASS5404_5409_ALLQ_UNSIGNED_APARTMENT_SPECTRUM.json'
+      - 'analysis/PASS5404_5409_allq_unsigned_apartment_spectrum_insert.tex'
+      - 'analysis/PASS5404_5411_allq_unsigned_apartment_spectrum_index_insert.html'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/w33_publication_frontier_contract_v2.json'
+      - 'tests/test_w33_pass5404_5409_allq_unsigned_apartment_spectrum.py'
+      - '.github/workflows/w33_pass5404_5411_unsigned_apartment_spectrum.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  replay-publish-compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Replay exact unsigned spectrum certificate
+        run: |
+          cp data/PART_W33_PASS5404_5409_ALLQ_UNSIGNED_APARTMENT_SPECTRUM.json /tmp/frozen.json
+          python analysis/w33_pass5404_5409_allq_unsigned_apartment_spectrum.py > /tmp/pass5404.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          assert json.loads(Path('/tmp/frozen.json').read_text()) == json.loads(Path('data/PART_W33_PASS5404_5409_ALLQ_UNSIGNED_APARTMENT_SPECTRUM.json').read_text())
+          print('PASS frozen unsigned spectrum replay')
+          PY
+      - name: Focused regressions
+        run: |
+          python -m pip install --disable-pip-version-check pytest
+          pytest -q \
+            tests/test_w33_pass5404_5409_allq_unsigned_apartment_spectrum.py \
+            tests/test_w33_pass5396_5401_allq_apartment_tight_frame.py \
+            tests/test_w33_pass5388_5392_allq_levi_flag_hodge.py \
+            tests/test_w33_pass5364_5371_publication_dag.py
+      - name: Materialize public cards and audit publication DAG
+        run: |
+          python tools/integrate_bt3376_bt3389.py --report /tmp/public-integration.json
+          python analysis/w33_pass5364_publication_dag_audit.py --report /tmp/publication-dag.json
+          test "$(grep -c 'id=\"pass-5404-5411-allq-unsigned-apartment-spectrum\"' docs/index.html)" -eq 1
+          git diff --check
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+      - name: Compile all three canonical manuscripts
+        run: |
+          mkdir -p evidence/pass5404_5411
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass5404_5411/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
+            > evidence/pass5404_5411/pdf_sha256.txt
+      - name: Commit deterministic homepage materialization if changed
+        run: |
+          if git diff --quiet -- docs/index.html; then
+            echo 'Homepage cards already materialized.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/index.html
+          git commit -m 'Materialize Pass5404-5411 unsigned apartment spectrum card [skip ci]'
+          git push
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass5404-5411-unsigned-apartment-spectrum
+          path: evidence/pass5404_5411/**
