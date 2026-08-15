@@ -1,0 +1,94 @@
+{
+  "range":[5284,5291],
+  "status":"EXECUTED_WITH_HOFFMAN_SHORTENING_AND_ALLODD_EQUALITY_OPEN",
+  "5284":{
+    "status":"THEOREM_Q5_COMPLETE_K0_BLOCK_MINIMUM_WORD_SHELL",
+    "K0_dimension":560,
+    "block_distance":25,
+    "minimum_supports":156,
+    "fixed_support_restricted_even_variables":600,
+    "fixed_support_connected_L_rank":596,
+    "fixed_support_kernel_dimension":4,
+    "nonzero_words_per_support":15,
+    "complete_block_minimum_words":2340,
+    "identification":"Exactly the 15 pairwise differences of the six chamber stars based at the support point.",
+    "apartment_weight":1000
+  },
+  "5285":{
+    "status":"THEOREM_HOFFMAN13_COMPLEMENT_FOURTYPE_REFINEMENT_WITH_DISTANCE_WALL",
+    "shortened_code":"[312,52,d]_2 with d in {28,32,36,40}",
+    "coordinate_types":{"(6,5,2)":144,"(6,6,1)":96,"(6,3,4)":48,"(6,1,6)":24},
+    "type_meaning":"counts of R1,R2,R3 relations to the 13 Hoffman-cover coordinates",
+    "weight8_shell_cover_intersections":{"0":16815,"1":7320,"2":240},
+    "restricted_max_pair_codegrees":{"cover0":23,"cover1":17,"cover2":4},
+    "boundary":"No d=40 claim; exact shortened minimum remains open."
+  },
+  "5286":{
+    "status":"THEOREM_Q5_Q7_DUALSHELL_AMBIENT_SUPPORT_SYMMETRY_GAP",
+    "q5":{"PSp4_order":4680000,"orbit_size":24375,"ambient_stabilizer":192,"support_graph_aut":384,"index":2},
+    "q7":{"PSp4_order":138297600,"orbit_size":1920800,"ambient_stabilizer":72,"support_graph_aut":864,"index":12},
+    "boundary":"Finite q5/q7 stabilizer theorem; no general formula."
+  },
+  "5287":{
+    "status":"THEOREM_Q9_FOOTPRINT_BINARY_RANK_AND_EXPLICIT_DUAL16_WITNESS",
+    "field":"GF(9)=F3[t]/(t^2+1)",
+    "W_points":820,
+    "P_components":3321,
+    "carrier_size":20,
+    "point_footprint_weight":81,
+    "rank_F2":369,
+    "target_rank_value":369,
+    "dual16_witness":[97,102,223,528,543,657,789,804,963,1656,2070,2292,2621,2670,2801,2910],
+    "witness_point_degrees":{"0":660,"2":160},
+    "selected_graph":"16 vertices, 10-regular, 80 edges",
+    "selected_graph_complement":"two 8-vertex components, each K8 minus C8",
+    "boundary":"No q9 dual minimum, shell orbit, or primal d=81 theorem."
+  },
+  "5288":{
+    "status":"THEOREM_ALLODDQ_FOOTPRINT_RANK_UPPERBOUND_AND_QUOTIENT_REDUCTION",
+    "carrier_line_parity":"Every W-line meets every H union H^perp P-carrier in 0 or 2 points.",
+    "kernel_inclusion":"W-line binary code <= ker(F^T)",
+    "line_code_dimension":"1+q(q+1)^2/2",
+    "rank_upper_bound":"rank_2(F)<=q(q^2+1)/2",
+    "equality_anchors":{"q3":15,"q5":65,"q7":175,"q9":369},
+    "remaining_target":"injectivity of induced footprint map on the g=q(q^2+1)/2 dimensional quotient module",
+    "boundary":"All-odd upper bound proved; all-odd equality remains open."
+  },
+  "5289":{
+    "status":"THEOREM_Q5_K0_BLOCK_MINIMUM_SHELL_IS_PG32_BUNDLE_OVER_W_POINTS",
+    "base_points":156,
+    "fiber":"E6/<111111> ~= F2^4",
+    "fiber_nonzero_vectors":15,
+    "projective_fiber":"PG(3,2)",
+    "pair_label":"unordered pair of the six W-lines through the base point",
+    "total_words":2340
+  },
+  "5290":{
+    "status":"THEOREM_Q5_K0_MINIMUM_FIBER_IS_DIAGONAL_CONSTANT_SECTION_ON_CONTROLLER_SHEET",
+    "controller_sites":25,
+    "controller_coordinates":"(a,c) in F5^2 under (a,b,c,d)->(a,c)",
+    "fiber_dimension":4,
+    "local_nonzero_weight":40,
+    "zero_extended_restricted_code":"[5625,4,1000]_2",
+    "interpretation":"constant U_p-valued section over the 5x5 block sheet",
+    "boundary":"Coordinate/code local-system statement only; no physical dynamics."
+  },
+  "5291":{
+    "status":"THEOREM_Q5_K0_MINIMUM_FIBER_IS_REPLICATED_SIMPLEX",
+    "local":"[75,4,40]_2 = 5-fold replication of [15,4,8] simplex, plus 150 zero columns in length225",
+    "global":"[1875,4,1000]_2 = 125-fold replication of [15,4,8] simplex, plus 3750 zero columns in length5625",
+    "nonzero_words":15,
+    "pairwise_distance":1000,
+    "pairwise_support_intersection":500,
+    "proof":"Walsh inversion from constant weight of all 15 nonzero F2^4 messages."
+  },
+  "strict_frontier":{
+    "q5_apartment_code":"[73125,625,625]_2",
+    "q5_minimum_words":"exactly 936 chamber stars",
+    "q5_K0_block_minimum":"2340 words, exactly same-point chamber-star differences, apartment weight1000",
+    "hoffman_shortening":"d in {28,32,36,40} remains open",
+    "all_odd_rank":"upper bound proved and q3,q5,q7,q9 saturate; general equality open",
+    "q9_distance":"not proved"
+  },
+  "literature_boundary":"Lataille-Sin-Tiep give the complete modulo-2 rank-3 symplectic/O(5) permutation-module framework and Bagchi-Brouwer-Wilbrink determine dimensions of related binary Sp(4,q)/O(5,q) line/neighborhood codes. This packet does not claim those papers identify the footprint quotient map without an objectwise match."
+}
