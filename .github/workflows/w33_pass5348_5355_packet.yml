@@ -1,0 +1,54 @@
+name: W33 Pass5348-5355 theorem packet
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5348c_q5_hull_no5_graph_code.py'
+      - 'analysis/w33_pass5350_allodd_binary_gram_radical.py'
+      - 'analysis/w33_pass5350b_allodd_footprint_chain_complex.py'
+      - 'analysis/w33_pass5351_5352_hoffman_pauli_latin_symplectic_spread.py'
+      - 'analysis/w33_pass5353_k0_central_idempotent_tight_frames.py'
+      - 'analysis/w33_pass5354b_q11_mod4_twofactor_cayley_search.py'
+      - 'analysis/w33_pass5355_q11_dual20_orbit_moment_closer.py'
+      - 'tests/test_w33_pass5348_5355_packet.py'
+      - '.github/workflows/w33_pass5348_5355_packet.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy sympy scipy pytest
+      - name: Regression lock
+        run: pytest -q tests/test_w33_pass5348_5355_packet.py
+      - name: All-odd Gram and chain complex
+        run: |
+          python analysis/w33_pass5350_allodd_binary_gram_radical.py
+          python analysis/w33_pass5350b_allodd_footprint_chain_complex.py
+      - name: Hoffman/Latin extraspecial bridge
+        run: python analysis/w33_pass5351_5352_hoffman_pauli_latin_symplectic_spread.py
+      - name: q5 K0 spherical atlas
+        run: python analysis/w33_pass5353_k0_central_idempotent_tight_frames.py
+      - name: q5 NO5 graph-code identity
+        run: python analysis/w33_pass5348c_q5_hull_no5_graph_code.py
+      - name: q11 constructive dual20 and moment closure
+        run: |
+          python analysis/w33_pass5354b_q11_mod4_twofactor_cayley_search.py
+          python analysis/w33_pass5355_q11_dual20_orbit_moment_closer.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass5348-5355-certificates
+          path: |
+            data/PART_W33_PASS5348C_Q5_HULL_NO5_GRAPH_CODE.json
+            data/PART_W33_PASS5350_ALLODD_BINARY_GRAM_RADICAL.json
+            data/PART_W33_PASS5350B_ALLODD_FOOTPRINT_CHAIN_COMPLEX.json
+            data/PART_W33_PASS5351_5352_HOFFMAN_PAULI_LATIN_SYMPLECTIC_SPREAD.json
+            data/PART_W33_PASS5353_K0_CENTRAL_IDEMPOTENT_TIGHT_FRAMES.json
+            data/PART_W33_PASS5354B_Q11_MOD4_TWOFACTOR_CAYLEY_SEARCH.json
+            data/PART_W33_PASS5355_Q11_DUAL20_ORBIT_MOMENT.json
