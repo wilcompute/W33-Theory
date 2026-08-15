@@ -1,0 +1,19 @@
+{
+  "pass": 5265,
+  "status": "THEOREM_Q5_WEIGHT8_K0_BLOCK_POLYMATROID",
+  "seed_support": [119,124,183,188,209,302,317,318],
+  "opposite_matching": [[119,188],[124,317],[183,209],[302,318]],
+  "subset_projection_rank_profile": {
+    "1": {"m0_r24":8},
+    "2": {"m0_r48":24,"m1_r48":4},
+    "3": {"m0_r71":32,"m1_r72":24},
+    "4": {"m0_r91":16,"m1_r94":48,"m2_r95":6},
+    "5": {"m1_r111":32,"m2_r114":24},
+    "6": {"m2_r126":24,"m3_r129":4},
+    "7": {"m3_r134":8},
+    "8": {"m4_r134":1}
+  },
+  "reconstruction": "At size3, projection rank71 occurs exactly on the 32 triangles of K8 minus the four opposite edges; rank72 occurs exactly on the 24 triples containing an opposite pair.",
+  "connection": "The Pass5262 no-singleton equality r(D)=r(D\\{j})=134 is the top layer of this local polymatroid.",
+  "boundary": "Exact q5 local rank theorem only; no all-q polymatroid formula is asserted."
+}
