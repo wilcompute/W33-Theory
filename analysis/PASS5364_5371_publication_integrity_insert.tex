@@ -1,0 +1,31 @@
+% Pass5364--5371: publication-DAG integrity and current-frontier reachability.
+\subsection{Publication-DAG integrity: recursive frontier reachability}
+
+The shared live theorem frontier is now audited as a directed acyclic include graph rather
+than as a flat list.  This matters because
+\texttt{analysis/W33\_CURRENT\_FRONTIER\_MANIFEST.tex} is a wrapper around the
+preserved pre-Pass4865 manifest together with later theorem inserts.  The older flat-list
+auditor therefore no longer described the object it was checking.
+
+The recursive audit exposed one concrete publication defect: the insert
+\texttt{BT4137\_BT4144\_matrix\_horizon\_rg\_scar\_curvature\_insert} was reachable
+once through the preserved pre-Pass4865 manifest and a second time through a direct edge in
+the live wrapper.  The redundant edge has been removed; the theorem source itself is
+unchanged.
+
+The publication guard now checks the following fail-closed conditions:
+\begin{enumerate}
+\item the nested manifest graph is acyclic;
+\item every referenced TeX source exists;
+\item every reachable theorem leaf has exactly one incoming publication path;
+\item each of \texttt{w33\_paper.tex}, \texttt{photonic\_holonet.tex}, and
+      \texttt{holonet\_machine\_blueprint.tex} enters the shared frontier exactly once;
+\item no front-door wrapper directly re-includes a leaf already reachable through the
+      shared frontier; and
+\item the older Pass-4144 required-input list is retained only as a must-remain-reachable
+      historical subset, rather than being mistaken for the current direct-child list.
+\end{enumerate}
+
+This is a publication-integrity theorem, not a mathematical or physical theorem.  It changes
+no finite-geometry result, code parameter, hardware claim, or evidence tier; it only makes the
+source reachability of the three canonical manuscripts explicit and machine-checkable.
