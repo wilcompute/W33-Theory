@@ -1,0 +1,158 @@
+% Pass5444--5451: frame/basis volume, lattice indices, q5 support reduction,
+% radius-eleven frontier, and the Pell--Weil arithmetic clock.
+\subsection{The apartment tight frame carries an exact basis-volume budget}
+
+Put $r=q^4$ and $N=(q+1)^2(q^2+1)$.  For the signed flag--apartment matrix
+$C$, Pass~5396 gives $CC^{\mathsf T}=N E_{\rm cyc}$.  If $Q$ is any
+orthonormal basis of the Levi cycle space and $D=Q^{\mathsf T}C$, then
+$DD^{\mathsf T}=NI_r$.  Cauchy--Binet therefore yields
+\[
+ \boxed{
+ \sum_{|S|=r}\det(C_S^{\mathsf T}C_S)=N^r,
+ }
+\]
+where dependent $r$-subsets contribute zero.  Thus the full apartment family has
+an exact coordinate-free squared-volume budget.
+
+Passes~5439 and 5441 give a cardinality-minimal fundamental apartment basis and
+the Levi tree number
+\[
+ \tau(L)=(q^2+1)^{f-1}(q+1)^{2g},
+ \quad
+ f=\frac{q(q+1)^2}{2},\quad
+ g=\frac{q(q^2+1)}2.
+\]
+Let $\Lambda=Z_1(L;\mathbb Z)$.  For any independent $r$-apartment set $S$,
+its columns generate a finite-index sublattice $\Lambda_S\le\Lambda$, so
+\[
+ \boxed{
+ \det(C_S^{\mathsf T}C_S)=\tau(L)\,[\Lambda:\Lambda_S]^2.
+ }
+\]
+Consequently the real Cauchy--Binet identity refines to the integral sum-of-squares
+law
+\[
+ \boxed{
+ \sum_{|S|=r}m_S^2=\frac{N^r}{\tau(L)},
+ \qquad
+ m_S=[\Lambda:\Lambda_S],
+ }
+\]
+with $m_S=0$ for dependent sets.  At $q=3$ the right side is
+$2^{322}5^{58}$.
+
+At $q=3$, the full $1620$-apartment signed frame has redundancy $20$ and
+condition number one on its $81$-dimensional image.  The deterministic
+$81$-apartment BFS basis of Pass~5443 has Gram minimum/maximum eigenvalues
+$1$ and $160$, hence singular condition number $\sqrt{160}$.  Its inverse norm
+is therefore worse than the full-frame Moore--Penrose inverse norm by exactly
+$\sqrt{160}$.  This compares that specific BFS basis with the full frame; no
+optimal-conditioning claim over all $81$-apartment bases is made.
+
+\subsection{The two binary footprint kernels live at different stages}
+
+For odd prime powers, Pass~5376 gives
+\[
+ \ker(F^{\mathsf T})=C_W,
+ \qquad
+ \operatorname{rank}_2F=g,
+ \qquad
+ C_F=\operatorname{im}F=C_W^\perp.
+\]
+Hence $F^{\mathsf T}$ induces
+\[
+ M/C_W\cong\operatorname{im}F^{\mathsf T}.
+\]
+Pass~5350 identifies the radical, giving
+\[
+ \boxed{
+ 0\to M_0/C_W\to\operatorname{im}F^{\mathsf T}\to\langle\mathbf1\rangle\to0,
+ }
+\]
+with dimensions $0\to(g-1)\to g\to1\to0$.  This is the point/transposed
+stage.  By contrast, Passes~5421 and 5377 give the apartment stage
+\[
+ \boxed{
+ 0\to D_{\rm ap}=K_0\to H_1(L)^*\to C_F\to0,
+ }
+\]
+with dimensions $0\to(q^4-g)\to q^4\to g\to0$.  Thus the all-odd point-kernel
+closure does not kill the nonzero apartment residual.
+
+\subsection{The $q=5$ weight-$1040$ support is forced into an exotic corner}
+
+A weight-$1040$ word of $K_0$ would have exactly $26$ active P-components, each
+a local even minimum of weight $40$.  Let $(a,b,c)$ count its internal block
+pairs in the three Pass~5232 relations $R_1,R_2,R_3$, whose weight-eight-shell
+pair codegrees are $25,5,0$.  The no-singleton shell law gives
+\[
+ 4a-c\ge1235.
+\]
+Delsarte positivity in the rank-four block association scheme gives
+\[
+ \frac a{10}-\frac{39}{5}\ge0,
+ \quad
+ \frac{2c}{15}-\frac{26}{75}\ge0,
+ \quad
+ \frac{481}{15}-\frac a{10}-\frac{2c}{15}\ge0.
+\]
+Together with $a+b+c=325$, only $21$ integer pair profiles remain; all satisfy
+$310\le a\le316$, so only $9$--$15$ of the $325$ block pairs lie outside $R_1$.
+Moreover, exhaustive extension of every one of the $156$ known $25$-block point
+footprints by every one of its $300$ outside blocks gives zero no-singleton
+survivors.  Hence any weight-$1040$ word, if it exists, has an exotic $26$-block
+support.  Nonexistence is not claimed.
+
+\subsection{The $q=3$ radius-eleven decoder frontier}
+
+Pass~5430 proves global eventual radius ten.  At weight eleven, exact MILPs rule
+out false-center sectors $V=1$ and $V=2$.  For $V=3$, local weights $6$ through
+$11$ occur with counts
+\[
+ 32,\ 256,\ 832,\ 1536,\ 1856,\ 1536.
+\]
+The two-new-direction cap per outsider eliminates all local weights at least
+$8$.  Only weight six plus five outsiders and weight seven plus four outsiders
+remain; exact MILPs exhibit necessary survivors in both branches, and the sampled
+witnesses self-heal.
+
+For $V=4$, the raw rooted space has
+\[
+ \boxed{10{,}963{,}673{,}616}
+\]
+cases.  Requiring every outsider to share a chart with the local core or another
+outsider leaves exactly
+\[
+ \boxed{35{,}218{,}336}
+\]
+necessary cases.  A necessary-survivor witness again self-heals, but the remaining
+census has not been exhaustively decoded.  Thus radius eleven remains open.
+
+\subsection{A negative-Pell square clock for the unsigned Gram determinant}
+
+Pass~5434 implies that for odd $q$ the square class of
+$\det(BB^{\mathsf T})$ is
+\[
+ \boxed{\frac{q^2+1}{2}}.
+\]
+Therefore the determinant is a perfect integer square exactly when
+\[
+ \boxed{q^2-2m^2=-1.}
+\]
+The first nontrivial Pell $q$-coordinates are $7,41,239,1393,8119,\ldots$;
+only prime-power coordinates are admissible generalized-quadrangle parameters.
+For even $q$, the square class is $10$ at $q=2$ and $2$ for $q\ge4$, so the
+unsigned Gram determinant is never square.
+
+Reducing the negative-Pell equation modulo $16$ forces $q\equiv\pm1\pmod8$.
+Passes~5361 and 5406 independently identify exactly this congruence class as the
+branch where the two binary logical Weil factors are individually defined over
+$\mathbb F_2$.  Hence
+\[
+ \boxed{
+ \det(BB^{\mathsf T})\text{ square at odd }q
+ \Longrightarrow q\equiv\pm1\pmod8
+ \Longrightarrow \text{split }\mathbb F_2\text{ Weil branch}.
+ }
+\]
+The converse fails, e.g. $q=9$.
