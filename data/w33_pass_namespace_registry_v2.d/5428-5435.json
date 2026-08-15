@@ -2,19 +2,34 @@
   "schema": "w33.pass_namespace_registry.v2.entry",
   "range": [5428, 5435],
   "slug": "apartment_tomography_radius10_modular_rank_next_frontiers",
-  "title": "All-q apartment tomography, unsigned conditioning, q3 radius-ten attack, odd-q modular footprint reduction, q5 K0 post-minimum gap, and three independent probes",
-  "status": "RESERVED",
+  "title": "All-q apartment tomography, unsigned conditioning, q3 radius-ten closure, odd-q modular footprint reduction, q5 K0 post-minimum gap, and spectral invariants",
+  "status": "EXECUTED",
   "owner": "openai-gpt56-sol",
   "reserved_at": "2026-08-15",
+  "closed_at": "2026-08-15T10:15:00-04:00",
   "passes": {
-    "5428": "reserved: canonical dual and exact reconstruction theorem for the all-q oriented apartment tight frame",
-    "5429": "reserved: exact unsigned apartment inverse and conditioning theorem from the all-q flag spectrum",
-    "5430": "reserved: q=3 provenance decoder radius-ten obstruction/falsifier attack beyond Pass5381",
-    "5431": "reserved: characteristic-2 all-odd footprint-rank reduction beyond the pair-Hecke characteristic-zero firewall",
-    "5432": "reserved: q=5 K0 post-minimum Hamming gap and second-shell lower bound",
-    "5433": "reserved: orientation sign-loss purifier theorem comparing unsigned visibility with signed Hodge projection",
-    "5434": "reserved: exact all-q unsigned apartment determinant/pseudodeterminant-volume invariant",
-    "5435": "reserved: independent synthesis probe chosen after live frontier reconciliation"
+    "5428": "THEOREM: canonical all-q oriented apartment tomography; C^+=(1/N)C^T on the Levi cycle image and normalized apartments form a unit tight frame of bound N/8.",
+    "5429": "THEOREM: unsigned apartment visibility has exact inverse and Gram condition number 8q^4/((q-1)^2(q^2+1)); terminal sector is uniformly the smallest eigenvalue.",
+    "5430": "COMPUTATIONAL THEOREM: q3 deterministic provenance decoder has global eventual guaranteed radius10; V1/V2 exact MILPs close, 1296 V3 and 349568 pruned V4 false-survivor cases all clear; monotone true-only radius remains7.",
+    "5431": "THEOREM/REDUCTION: all-odd modular defect exact sequence 0->D_q->M0/C_W->Rad(im F^T)->0 with dim D_q=g-rank_2(F); all-odd rank target iff D_q=0.",
+    "5432": "THEOREM: q5 K0=[73125,560,1000]_2 has no nonzero weights1001..1039; every non-minimum word has weight at least1040.",
+    "5433": "THEOREM: odd flag-distance orientation signs convert full-rank unsigned apartment visibility into the exact scaled Hodge cycle projector while preserving trace.",
+    "5434": "THEOREM: exact all-q unsigned apartment Gram determinant; at q3 det=2^456*3^160*5^105.",
+    "5435": "THEOREM: exact integral characteristic polynomial; the sqrt(2q) conjugate pair is packaged by a quadratic over Z[q]."
   },
-  "boundary": "Reservation only. No theorem status is asserted until producer/certificate execution and reconciliation are complete. Passes 5412-5419 and 5420-5427 are owned by parallel sessions and are not touched."
+  "artifacts": {
+    "consolidated_results": "data/PART_W33_PASS5428_5435_RESULTS.json",
+    "manuscript_insert": "analysis/PASS5428_5435_apartment_tomography_modular_gap_insert.tex",
+    "frontier_manifest": "analysis/W33_CURRENT_FRONTIER_MANIFEST.tex",
+    "public_page": "docs/pass5428-5435-apartment-tomography.html",
+    "public_card_source": "analysis/PASS5428_5435_apartment_tomography_index_insert.html",
+    "tests": "tests/test_w33_pass5428_5435_packet.py",
+    "workflow": ".github/workflows/w33_pass5428_5435_apartment_tomography.yml"
+  },
+  "remote_replay": {
+    "latest_known_run_id": 31889280026,
+    "status_at_close": "QUEUED",
+    "note": "GitHub-hosted Actions runners had not started even the oldest packet run at close. Do not call the replay green until a later session rechecks the run. The q3 radius-ten census itself was executed independently in-session against the exact repo builder before promotion."
+  },
+  "boundary": "Pass5430 is q3/decoder-specific and radius11 remains open. Pass5431 does not prove the all-odd binary rank theorem. Pass5432 does not assert a weight1040 witness. Real tomography/spectrum statements are characteristic-zero unless explicitly marked modular. Passes5412-5419 and5420-5427 remain owned by parallel sessions and were not modified."
 }
