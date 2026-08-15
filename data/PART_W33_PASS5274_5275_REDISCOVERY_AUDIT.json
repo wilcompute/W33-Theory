@@ -1,6 +1,6 @@
 {
   "boundary": "This is a self-audit of THIS session's passes against prior in-repo work. The triage of the six sweep candidates is by hand -- 2 are the guard's own fixtures and 1 is a false positive on unrelated prose, so the guard's precision here is 3 of 6 and that number is from one sweep. 'NEW' means not found in the corpus by the searches described, which is not proof of novelty -- Pass 328 measured a 21 pct uncited collision rate and nothing here lowers it",
-  "pass_5266": {
+  "pass_5274": {
     "prior_art": {
       "pass_4795": [
         "alpha(W(3,3)) = 7",
@@ -23,7 +23,7 @@
       "own_fixtures": 2
     }
   },
-  "pass_5267": {
+  "pass_5275": {
     "correction": "Pass 5228's 'the gap is exactly q' is true at q=3 and is NOT a general law -- Pass 4800 refuted the general form with the q=5 deficit of 8, before this session began. Cite 4800 wherever the deficit is discussed",
     "ledger": [
       {
@@ -37,14 +37,14 @@
         "claim": "alpha(W(3,5)) = 18",
         "note": "Pass 4800 had it exhaustively in 2,075 s",
         "prior": 4800,
-        "session_pass": 5262,
+        "session_pass": 5270,
         "verdict": "REDISCOVERED"
       },
       {
         "claim": "q^2-q+1 is refuted as an equality",
         "note": "Pass 4800's title IS this refutation",
         "prior": 4800,
-        "session_pass": 5263,
+        "session_pass": 5271,
         "verdict": "REDISCOVERED"
       },
       {
@@ -65,7 +65,7 @@
         "claim": "polarity <=> q an odd power of 2; Sz(q) stabiliser",
         "note": "caught BEFORE publishing, by corpus search",
         "prior": 4793,
-        "session_pass": 5265,
+        "session_pass": 5273,
         "verdict": "REDISCOVERED"
       },
       {
@@ -93,7 +93,7 @@
         "claim": "MILP settles alpha(W(3,5)) in 75 s where exhaustive took 2,075 s",
         "note": "27x faster and it scales; the number itself is Pass 4800's",
         "prior": 4800,
-        "session_pass": 5262,
+        "session_pass": 5270,
         "verdict": "NEW METHOD, OLD RESULT"
       },
       {
@@ -114,6 +114,6 @@
     "new": 5,
     "new_method_old_result": 1,
     "rediscovered": 6,
-    "why_missed": "searched for the topic -- ovoid, Hoffman, group orders -- and not for the RESULT, the number 18. The Suzuki check at Pass 5265 searched for 29120 and succeeded, which is the same lesson in the affirmative"
+    "why_missed": "searched for the topic -- ovoid, Hoffman, group orders -- and not for the RESULT, the number 18. The Suzuki check at Pass 5273 searched for 29120 and succeeded, which is the same lesson in the affirmative"
   }
 }

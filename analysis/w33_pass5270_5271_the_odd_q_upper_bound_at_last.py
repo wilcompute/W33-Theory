@@ -1,6 +1,6 @@
-"""Passes 5262-5263 -- the odd-q upper bound, which five passes failed to get.
+"""Passes 5270-5271 -- the odd-q upper bound, which five passes failed to get.
 
-  5262  Passes 5226 through 5249 established alpha(W(3,q)) for EVEN q completely and, for
+  5270  Passes 5226 through 5249 established alpha(W(3,q)) for EVEN q completely and, for
         odd q, nothing but weak lower bounds.  The obstruction was never the mathematics:
         it was that a randomised search reports "not found" identically whether the object
         is absent or merely missed (Pass 5229).  An exact solver does not have that defect.
@@ -8,11 +8,11 @@
         program with one binary per point and one constraint per edge, and its optimum is a
         PROOF of the upper bound rather than a failure to beat it.
 
-  5263  With q=5 settled, q^2-q+1 has either two confirming points or a refutation.  Pass
+  5271  With q=5 settled, q^2-q+1 has either two confirming points or a refutation.  Pass
         5249 recorded it as UNSUPPORTED on one data point and said so; this pass is the
         one that gets to decide, and it was written before the answer was known.
 
-    py -3 analysis/w33_pass5262_5263_the_odd_q_upper_bound_at_last.py
+    py -3 analysis/w33_pass5270_5271_the_odd_q_upper_bound_at_last.py
 """
 
 from __future__ import annotations
@@ -92,10 +92,10 @@ def exact_alpha(g, ub, seconds):
 
 def main() -> int:
     print("=" * 78)
-    print("Passes 5262-5263 -- the odd-q upper bound")
+    print("Passes 5270-5271 -- the odd-q upper bound")
     print("=" * 78)
 
-    print("\n  PASS 5262 -- exact alpha(W(3,q)) for odd q, by integer program\n")
+    print("\n  PASS 5270 -- exact alpha(W(3,q)) for odd q, by integer program\n")
     print(f"    {'q':>3s} {'n':>5s} {'Hoffman':>8s} {'q^2-q+1':>8s} {'alpha':>6s} "
           f"{'proved':>7s} {'sec':>8s}")
 
@@ -132,7 +132,7 @@ def main() -> int:
     EVERY SET WAS RE-VERIFIED INDEPENDENT FROM THE GRAPH, not taken from the solver. A
     solver reporting its own success is failure mode 7 with a licence.""")
 
-    print("\n  PASS 5263 -- what happens to q^2-q+1\n")
+    print("\n  PASS 5271 -- what happens to q^2-q+1\n")
     hits = [r for r in done if r["alpha"] == r["q2_q_1"]]
     miss = [r for r in done if r["alpha"] != r["q2_q_1"]]
     for r in done:
@@ -188,7 +188,7 @@ def main() -> int:
                      "graph rather than trusted from the solver. This tests specific "
                      "values of q and contains no argument for general odd q. The "
                      "literature theorem for all odd q is not reproved"),
-        "pass_5262": {"method": ("maximum independent set as a binary integer program, "
+        "pass_5270": {"method": ("maximum independent set as a binary integer program, "
                                  "one variable per point, one constraint per edge, plus "
                                  "Hoffman as an explicit cut; solved by HiGHS via scipy"),
                       "why_it_works_where_search_failed": (
@@ -196,13 +196,13 @@ def main() -> int:
                           "when the gap closes the upper bound is proved. A heuristic "
                           "returns no information about what it did not find"),
                       "rows": rows, "proved": [r["q"] for r in done]},
-        "pass_5263": {"q2_q_1_verdict": verdict,
+        "pass_5271": {"q2_q_1_verdict": verdict,
                       "matches": [r["q"] for r in hits],
                       "refutes": [r["q"] for r in miss],
                       "deficiencies": {r["q"]: r["hoffman"] - r["alpha"] for r in done},
                       "no_ovoid_proved_at": [r["q"] for r in done]},
     }
-    fp = ROOT / "data" / "PART_W33_PASS5262_5263_ODD_Q_EXACT_ALPHA.json"
+    fp = ROOT / "data" / "PART_W33_PASS5270_5271_ODD_Q_EXACT_ALPHA.json"
     fp.write_text(cert_util.dumps(out), encoding="utf-8")
     print(f"\nwrote {fp.relative_to(ROOT).as_posix()}")
     return 0

@@ -10,7 +10,7 @@ WHY THIS EXISTS, and it is the most-repeated fault in this lane's record.
   * Symplectic form -- Pass 5246. The Tits parametrisation is written against the
     reversal pairing (0,3)(1,2); my builder uses (0,1)(2,3). Assuming produced 256
     conjugate pairs at q=8.
-  * AND THEN AGAIN IN PASS 5264, one pass after the guard family was built. The
+  * AND THEN AGAIN IN PASS 5272, one pass after the guard family was built. The
     vectorised rewrite hardcoded the form Pass 5246 had DETERMINED for Suzuki-Tits
     and applied it to the elliptic quadric, where it is wrong. q=64 caught it.
 
@@ -108,7 +108,7 @@ def selftest() -> int:
 
   ITS LIMIT: it reads how a choice is DESCRIBED, not whether the choice is right. Code that
   silently hardcodes a form with no comment at all is invisible to it -- and that is
-  precisely how Pass 5264 reintroduced the fault, in a rewrite that carried no prose. The
+  precisely how Pass 5272 reintroduced the fault, in a rewrite that carried no prose. The
   honest reading is that this catches the documented half of the failure mode.""")
     return 0 if ok else 1
 

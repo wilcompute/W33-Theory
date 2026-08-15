@@ -11,15 +11,17 @@ literally the same Hoffman bound of 10.  And
 
 Two graphs, one spectrum, two independence numbers.
 
-THE SLACK IS NOT "EXACTLY q" AND THIS FILE SAID SO IN ITS FIRST VERSION.  Pass 4800
-refuted that law ~450 passes ago with alpha(W(3,5)) = 18, a deficit of 8 rather than
-5.  The deficit is 3 at q=3 and 8 at q=5; it is neither q nor constant, and Pass 4800
-owns the refutation.  This guard found that file during the Pass 5266 corpus sweep,
-which is how its own docstring got corrected.  So "the Hoffman bound gives
-alpha" is false as stated, and it is false in this corpus, on the substrate this
-corpus is about, at the smallest interesting q.  A second instance follows from
-H(3,9)/Q(5,3), which are NOT cospectral yet share the bound 28 because st+1 is
-invariant under the duality that swaps s and t -- one attains it, one cannot.
+So "the Hoffman bound gives alpha" is false as stated, and it is false in this corpus,
+on the substrate this corpus is about, at the smallest interesting q.  A second
+instance follows from H(3,9)/Q(5,3), which are NOT cospectral yet share the bound 28
+because st+1 is invariant under the duality that swaps s and t -- one attains it, one
+cannot.
+
+THE SLACK IS NOT "EXACTLY q", AND THIS FILE SAID THAT IT WAS IN ITS FIRST VERSION.
+Pass 4800 refuted that law ~450 passes ago with alpha(W(3,5)) = 18, a deficit of 8
+rather than 5.  The deficit is 3 at q=3 and 8 at q=5; it is neither q nor constant,
+and Pass 4800 owns the refutation.  This guard found that file during the Pass 5274
+corpus sweep -- which is how its own docstring came to be corrected by it.
 
 WHAT THIS ACTUALLY CATCHES, and it is narrow on purpose.  Language asserting that a
 spectral quantity DETERMINES, EQUALS, or GIVES a combinatorial one.  Not language
@@ -130,7 +132,7 @@ def main(argv: list[str]) -> int:
             continue
         # Do not scan self: this file contains planted fixtures by construction, and a
         # checker flagging its own test data is noise that trains people to ignore it
-        # (2 of 6 candidates in the Pass 5266 full-corpus sweep were exactly this).
+        # (2 of 6 candidates in the Pass 5274 full-corpus sweep were exactly this).
         if f.resolve() == Path(__file__).resolve():
             continue
         try:
