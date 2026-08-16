@@ -1,0 +1,62 @@
+{
+  "boundary": "The exchanging map is exhibited explicitly and verified to fix the quadric and swap the classes; it is a form similarity. Pass 5498 states a structural PARALLEL with the Csaszar/Szilassi duality and exhibits no map between them -- the flags there are tetrahedron rank-3 flags, the points here projective points. No physical claim",
+  "pass_5496": {
+    "nonsquare_class": 12,
+    "quadric": 16,
+    "square_class": 12
+  },
+  "pass_5497": {
+    "bijection": true,
+    "fixes_quadric": true,
+    "reading": "a similarity of the quadratic form; the two copies are one object and its image",
+    "swaps_twelves": true,
+    "witness": [
+      [
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        2,
+        1,
+        1,
+        1
+      ],
+      [
+        2,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0
+      ]
+    ]
+  },
+  "pass_5498": {
+    "parallel": "BT1527's two 12-flag packets over K4's 24 flags, exchanged by Csaszar/Szilassi duality",
+    "status": "PARALLEL only, no map exhibited"
+  },
+  "pass_5499": {
+    "established": [
+      "W(F4) in GL(4,3) not Sp(4,3), acting on W(3,q) points",
+      "orbits partition as (q+1)^2 + (q^3-q)/2 + (q^3-q)/2",
+      "each 12-orbit with the 16 is the tomotope medial layer at q=3",
+      "isomorphic to Q4 face-edge/<1111>, both |Aut| = 576",
+      "uniform family; tomotope is the q=3 case",
+      "the two copies are exchanged by a form similarity"
+    ],
+    "method": "positives came from reading repository files; negatives from running at another q or testing isomorphism instead of order",
+    "refuted": [
+      "16-orbit is not Q4, rook, Shrikhande or Clebsch",
+      "generators are 8, not 32",
+      "16 = (q+1)^2, equals 2^4 only at q=3",
+      "48 flags = 48 F4 roots only at q=3",
+      "BT159's order-1152 pocket is not W(F4)"
+    ]
+  }
+}
