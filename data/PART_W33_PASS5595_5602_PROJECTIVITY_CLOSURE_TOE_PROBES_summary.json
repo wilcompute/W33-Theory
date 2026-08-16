@@ -1,0 +1,57 @@
+{
+  "schema": "w33.pass5595_5602.summary.v1",
+  "pass_range": [5595, 5602],
+  "status": "STRUCTURAL_RESULTS_FROZEN__FULL_REPLAY_PENDING_CI",
+  "5595": {
+    "aut_formula": "4*f*|PSL2(q)|^2 for q=p^f odd",
+    "anchors": {"q3": 576, "q5": 14400, "q7": 112896, "q9": 1036800, "q25": 486720000}
+  },
+  "5596": {
+    "reye_latin_action": "permutation-isomorphic on degree 12",
+    "explicit_map": "Phi(v r^k)=(k,r^k(v(0))) for A4=V4:<r>",
+    "orbital_sizes": [12, 36, 96],
+    "small_orbital": "3K4",
+    "F4_short_rootpair_action_order": 576,
+    "F4_short_rootpair_action_conjugate_to_latin": true,
+    "cover12_action_test": "separate GAP replay committed; result not predeclared in this summary"
+  },
+  "5597": {
+    "q9": {"PSL2_order": 360, "grid": 100, "binary_rank": 50, "incidence_checks": 36000},
+    "q25": {"PSL2_order": 7800, "grid": 676, "binary_rank": 338, "incidence_checks": 5272800}
+  },
+  "5598": {
+    "theorem": "row(M) is the Segre-coordinate projection of a subcode of C_W=ker(F^T)",
+    "anchors": {
+      "q3": {"restricted_line_rank": 15, "projectivity_rank": 8},
+      "q5": {"restricted_line_rank": 34, "projectivity_rank": 18},
+      "q7": {"restricted_line_rank": 61, "projectivity_rank": 32}
+    },
+    "not_equal_to_footprint_image": true
+  },
+  "5599": {
+    "relations": "relative projectivity has 0,1,2 fixed points plus diagonal",
+    "valencies": ["q(q-1)^2/4", "q^2-1", "q(q+1)(q-3)/4"],
+    "full_constancy_anchors": [3, 5, 7, 9],
+    "polynomial_formula_replay_anchors": [5, 7, 9, 11, 13, 25],
+    "q3_collapse": {"R0": "3K4", "R1": "K4,4,4", "R2_valency": 0},
+    "all_q_symbolic_proof": "OPEN"
+  },
+  "5600": {
+    "exact": "Q+(3,q)=P1(q)xP1(q); projectivity graphs are transversals of both rulings",
+    "interpretation": "finite two-null-coordinate kinematic primitive",
+    "physics_firewall": "no Lorentz metric, causal order, continuum limit, 3+1 dimension or physical c derived"
+  },
+  "5601": {
+    "theorem": "opposite determinant coset code C- equals C+^perp",
+    "parameters": "[(q+1)^2,(q+1)^2/2] binary isodual for every odd prime power q",
+    "q3_weight_enumerator": {"0":1,"4":12,"6":64,"8":102,"10":64,"12":12,"16":1},
+    "q3_min_distance": 4,
+    "q5_min_distance": 6,
+    "all_q_min_distance": "OPEN"
+  },
+  "5602": {
+    "centered_nonzero_eigenvalue": "(q^2-1)/2 with multiplicity q^2",
+    "result": "projectivity-frame Gram is a tight-frame projector, not a credible standalone spacetime Laplacian"
+  },
+  "boundary": "This summary freezes derived formulas and finite checks performed in this research pass. The committed producers/tests and CI are the replay authority. Physical interpretations are candidate semantics only."
+}
