@@ -7,6 +7,7 @@ on:
       - 'analysis/w33_pass5595_5602_projectivity_closure_toe_probes.py'
       - 'analysis/w33_pass5595_5602_runner.py'
       - 'analysis/w33_pass5596_cover12_latin_action.g'
+      - 'analysis/w33_pass5596_f4_rootpair_latin_action.py'
       - 'analysis/PASS5595_5602_projectivity_closure_toe_probes.md'
       - 'analysis/PASS5595_5602_projectivity_closure_toe_probes_insert.tex'
       - 'analysis/PASS5595_5602_index_insert.html'
@@ -38,6 +39,8 @@ jobs:
           sudo apt-get install -y gap gap-grape
       - name: Replay Pass5595-5602 producer
         run: python analysis/w33_pass5595_5602_runner.py
+      - name: Replay Pass5596 F4 root-pair action
+        run: python analysis/w33_pass5596_f4_rootpair_latin_action.py
       - name: Replay decisive Pass5596 13-cover action test
         env:
           W33_REPO: ${{ github.workspace }}
@@ -73,6 +76,7 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add \
             data/PART_W33_PASS5595_5602_PROJECTIVITY_CLOSURE_TOE_PROBES.json \
+            data/PART_W33_PASS5596_F4_ROOTPAIR_LATIN_ACTION.json \
             data/PART_W33_PASS5596_COVER12_LATIN_ACTION.json \
             docs/index.html
           if git diff --cached --quiet; then
