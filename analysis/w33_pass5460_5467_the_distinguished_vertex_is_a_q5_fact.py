@@ -1,22 +1,22 @@
-"""Passes 5420-5427 -- the q=8 ovoid decides what the 1+12 split meant, q=9 refuses to
+"""Passes 5460-5467 -- the q=8 ovoid decides what the 1+12 split meant, q=9 refuses to
 close, and the identity I published 18 minutes after the other lane already had it.
 
-  5420  Pass 5417 found the q=5 13-cover stabiliser acting with orbits [1, 12] -- one
+  5460  Pass 5417 found the q=5 13-cover stabiliser acting with orbits [1, 12] -- one
         distinguished vertex on a simplex whose own symmetry group is 13-transitive.  That
         is either a real geometric fact or a generic property of tight cocliques, and one
         run decides which: the same test on W(3,8)'s 65-point Suzuki-Tits ovoid.
 
-  5421  The 2-(13,6,60) design's automorphism group, computed as the automorphism group of
+  5461  The 2-(13,6,60) design's automorphism group, computed as the automorphism group of
         its incidence graph rather than as a stabiliser inside S_13 -- the latter ran GAP
         out of memory, which is what asking a 6.2-billion-element group to hold still looks
         like.
 
-  5422  alpha(W(3,9)) after 19.6 hours of branch and bound.
+  5462  alpha(W(3,9)) after 19.6 hours of branch and bound.
 
-  5423  And the audit that should have run first: who published the frame inner products,
+  5463  And the audit that should have run first: who published the frame inner products,
         and when.
 
-    py -3 analysis/w33_pass5420_5427_the_distinguished_vertex_is_a_q5_fact.py
+    py -3 analysis/w33_pass5460_5467_the_distinguished_vertex_is_a_q5_fact.py
 """
 
 from __future__ import annotations
@@ -53,13 +53,13 @@ LEDGER = [
 
 def main() -> int:
     print("=" * 78)
-    print("Passes 5420-5427 -- one run decides it")
+    print("Passes 5460-5467 -- one run decides it")
     print("=" * 78)
 
-    g = json.loads((ROOT / "data" / "_gap_5420.json").read_text(encoding="utf-8"))
+    g = json.loads((ROOT / "data" / "_gap_5460.json").read_text(encoding="utf-8"))
     q5 = json.loads((ROOT / "data" / "_gap_cover_orbits.json").read_text(encoding="utf-8"))
 
-    print("\n  PASS 5420 -- W(3,8): transitive, so 1+12 was never generic\n")
+    print("\n  PASS 5460 -- W(3,8): transitive, so 1+12 was never generic\n")
     print(f"    |Aut(W(3,8) collinearity graph)| : {g['q8_aut_order']:,}")
     print(f"    ovoid setwise stabiliser         : {g['q8_ovoid_stabiliser']:,}")
     print(f"    image in S_65                    : {g['q8_image_order']:,}")
@@ -89,7 +89,7 @@ def main() -> int:
     involution acting trivially on all thirteen. That was the one thing the two cases were
     expected to share and they do not.""")
 
-    print("\n  PASS 5421 -- the design carries no extra symmetry\n")
+    print("\n  PASS 5461 -- the design carries no extra symmetry\n")
     print(f"    design blocks (distinct)         : {g['design_blocks']}")
     print(f"    |Aut(incidence graph)|           : {g['design_incidence_aut']:,}")
     print(f"    induced action on the 13         : {g['design_action_on_13']:,}")
@@ -108,7 +108,7 @@ def main() -> int:
     The direct route, Stabilizer(SymmetricGroup(13), blocks, OnSetsSets), exhausted GAP's
     memory -- S_13 has 6,227,020,800 elements and that call asks for all of them.""")
 
-    print("\n  PASS 5422 -- q=9 after 19.6 hours\n")
+    print("\n  PASS 5462 -- q=9 after 19.6 hours\n")
     raw = ROOT / "data" / "_q9_milp_raw.json"
     q9 = json.loads(raw.read_text(encoding="utf-8")) if raw.is_file() else {}
     print(f"    SRG                  : {q9.get('srg')}")
@@ -127,7 +127,7 @@ def main() -> int:
     heuristic. That is the honest scaling statement: MILP settled q=3 and q=5 and buys
     nothing at all at q=9.""")
 
-    print("\n  PASS 5423 -- who had the frame inner products first\n")
+    print("\n  PASS 5463 -- who had the frame inner products first\n")
     print(f"    {'claim':46s} {'pass':>5s}  fate")
     for r in LEDGER:
         print(f"    {r['claim'][:46]:46s} {r['pass']:5d}  {r['fate']}")
@@ -154,7 +154,7 @@ def main() -> int:
     you ran before starting, and the only thing that catches it is reading the other lane's
     commits before publishing rather than after.""")
 
-    print("\n  PASS 5424 -- the cosine identity, formalised\n")
+    print("\n  PASS 5464 -- the cosine identity, formalised\n")
     r = subprocess.run(["lake", "build", "W33.CosineSequence"],
                        cwd=ROOT / "formal", capture_output=True, text=True, timeout=900)
     ok = r.returncode == 0
@@ -175,13 +175,13 @@ def main() -> int:
     theta + s = 0 -- which is exactly the GQ case I had been testing all week.""")
 
     out = {
-        "boundary": ("Pass 5420-5421 are GAP computations. Pass 5422 reports an UNPROVED "
+        "boundary": ("Pass 5460-5461 are GAP computations. Pass 5462 reports an UNPROVED "
                      "incumbent: alpha(W(3,9)) >= 49 is a lower bound and the deficit "
-                     "sequence remains two points. Pass 5424 formalises ARITHMETIC only; "
+                     "sequence remains two points. Pass 5464 formalises ARITHMETIC only; "
                      "the geometric content stays an external input, as every formal/W33 "
-                     "header states. The precedence claim in Pass 5423 is from commit "
+                     "header states. The precedence claim in Pass 5463 is from commit "
                      "timestamps on this machine"),
-        "pass_5420": {"q8_aut_order": g["q8_aut_order"],
+        "pass_5460": {"q8_aut_order": g["q8_aut_order"],
                       "q8_ovoid_stabiliser": g["q8_ovoid_stabiliser"],
                       "q8_image_order": g["q8_image_order"],
                       "q8_kernel_order": g["q8_kernel_order"],
@@ -194,18 +194,18 @@ def main() -> int:
                                      "the embedding; the q=5 distinguished vertex is a "
                                      "real geometric fact and survives the test that "
                                      "could have killed it")},
-        "pass_5421": {"design_blocks": g["design_blocks"],
+        "pass_5461": {"design_blocks": g["design_blocks"],
                       "incidence_aut": g["design_incidence_aut"],
                       "action_on_13": g["design_action_on_13"],
                       "structure": g["design_structure"],
                       "same_as_embedding": same,
                       "method": ("Aut of the bipartite incidence graph; the direct "
                                  "Stabilizer in S_13 exhausted GAP's memory")},
-        "pass_5422": {**q9,
+        "pass_5462": {**q9,
                       "verdict": "lower bound only; deficit sequence still 2 points",
                       "scaling": ("MILP settled q=3 and q=5 and at q=9 loses to Pass "
                                   "5227's 75-second heuristic, which reached 50")},
-        "pass_5423": {"ledger": LEDGER,
+        "pass_5463": {"ledger": LEDGER,
                       "precedence": {"their_pass5267": "2026-08-14 20:54:30",
                                      "my_pass5278": "2026-08-14 21:12:27",
                                      "gap_minutes": 18},
@@ -214,7 +214,7 @@ def main() -> int:
                                           "CORRECT as written"),
                       "my_error": ("dropped the scope, then spent Passes 5341/5374/5412 "
                                    "repairing the unscoped version")},
-        "pass_5424": {"module": "formal/W33/CosineSequence.lean", "builds": ok,
+        "pass_5464": {"module": "formal/W33/CosineSequence.lean", "builds": ok,
                       "theorems": ["recurrence", "mu_form", "w2_eq_mu_form",
                                    "gq_collapse", "w3q_collapse"],
                       "scope": "arithmetic only, geometry external",
@@ -223,7 +223,7 @@ def main() -> int:
                                          "two coincide when theta + s = 0, which is the GQ "
                                          "case I had been testing all week")},
     }
-    fp = ROOT / "data" / "PART_W33_PASS5420_5427_Q8_TRANSITIVE_Q5_IS_SPECIAL.json"
+    fp = ROOT / "data" / "PART_W33_PASS5460_5467_Q8_TRANSITIVE_Q5_IS_SPECIAL.json"
     fp.write_text(cert_util.dumps(out), encoding="utf-8")
     print(f"\nwrote {fp.relative_to(ROOT).as_posix()}")
     return 0

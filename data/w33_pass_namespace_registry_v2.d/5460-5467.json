@@ -1,0 +1,15 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.entry",
+  "range": [
+    5460,
+    5467
+  ],
+  "slug": "q8_ovoid_transitive_q5_distinguished_vertex_real",
+  "title": "Sz(8):3 is transitive on the 65-ovoid, so the q=5 1+12 split is a genuine geometric fact; design group 576; q=9 unproved; the cosine identity in Lean",
+  "status": "RESERVED",
+  "owner": "anthropic-claude-track-a",
+  "reserved_at": "2026-08-15",
+  "purpose": "Renumbered from 5420-5427 after a SECOND add/add registry collision -- the other lane claimed and closed 5420-5427 with an apartment-duality packet. The atomic-add mechanism from Pass5276 fired correctly again, which is now twice in two days that it has caught a collision git would otherwise have merged silently. Content unchanged by the renumber.",
+  "boundary": "alpha(W(3,9)) >= 49 is a LOWER bound: the MILP gap stayed open after 70,483 s, so the deficit sequence is still two points. The Lean module formalises arithmetic only. The q=8 orbit result is a GAP computation on the reversal-form W(3,8) graph.",
+  "convergence_note": "Their closed Pass5427 splits a flag regular simplex into spherical 2-designs and their Pass5420 builds an all-q Naimark-complement cut frame -- the same simplex/frame/design territory this packet works in, reached independently. Worth reading before either lane continues."
+}

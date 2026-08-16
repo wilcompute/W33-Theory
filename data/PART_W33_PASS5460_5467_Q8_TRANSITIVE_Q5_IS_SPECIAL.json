@@ -1,6 +1,6 @@
 {
-  "boundary": "Pass 5420-5421 are GAP computations. Pass 5422 reports an UNPROVED incumbent: alpha(W(3,9)) >= 49 is a lower bound and the deficit sequence remains two points. Pass 5424 formalises ARITHMETIC only; the geometric content stays an external input, as every formal/W33 header states. The precedence claim in Pass 5423 is from commit timestamps on this machine",
-  "pass_5420": {
+  "boundary": "Pass 5460-5461 are GAP computations. Pass 5462 reports an UNPROVED incumbent: alpha(W(3,9)) >= 49 is a lower bound and the deficit sequence remains two points. Pass 5464 formalises ARITHMETIC only; the geometric content stays an external input, as every formal/W33 header states. The precedence claim in Pass 5463 is from commit timestamps on this machine",
+  "pass_5460": {
     "conclusion": "tightness forces the simplex but NOT homogeneity of the embedding; the q=5 distinguished vertex is a real geometric fact and survives the test that could have killed it",
     "identification": "Sz(8):3, since 87360 = 3 * |Sz(8)| = 3 * 29120",
     "q5_comparison": {
@@ -20,7 +20,7 @@
     "q8_ovoid_stabiliser": 87360,
     "q8_transitive": true
   },
-  "pass_5421": {
+  "pass_5461": {
     "action_on_13": 576,
     "design_blocks": 132,
     "incidence_aut": 576,
@@ -28,7 +28,7 @@
     "same_as_embedding": true,
     "structure": "((A4 x A4) : C2) : C2"
   },
-  "pass_5422": {
+  "pass_5462": {
     "alpha_found": 49,
     "deficit": 33,
     "hoffman": 82,
@@ -46,7 +46,7 @@
     ],
     "verdict": "lower bound only; deficit sequence still 2 points"
   },
-  "pass_5423": {
+  "pass_5463": {
     "ledger": [
       {
         "claim": "-1/q^2 is the noncollinear inner product",
@@ -85,7 +85,7 @@
     },
     "their_statement": "collinear (q-1)/(q(q+1)), noncollinear -1/q^2, scoped to odd prime powers q on W(3,q) -- CORRECT as written"
   },
-  "pass_5424": {
+  "pass_5464": {
     "builds": true,
     "caught_by_lean": "my first hypothesis mu = k + theta*s + theta + s is wrong; the identity is mu = k + theta*s. The two coincide when theta + s = 0, which is the GQ case I had been testing all week",
     "module": "formal/W33/CosineSequence.lean",
