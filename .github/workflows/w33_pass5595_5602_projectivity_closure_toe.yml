@@ -1,0 +1,70 @@
+name: W33 Pass5595-5602 projectivity closure and TOE probes
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5595_5602_projectivity_closure_toe_probes.py'
+      - 'analysis/w33_pass5595_5602_runner.py'
+      - 'analysis/PASS5595_5602_projectivity_closure_toe_probes.md'
+      - 'analysis/PASS5595_5602_projectivity_closure_toe_probes_insert.tex'
+      - 'analysis/PASS5595_5602_index_insert.html'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'tests/test_w33_pass5595_5602_projectivity_closure_toe_probes.py'
+      - 'data/w33_pass_namespace_registry_v2.d/5595-5602.json'
+      - 'data/w33_publication_frontier_contract_v2.json'
+      - '.github/workflows/w33_pass5595_5602_projectivity_closure_toe.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  replay-publish-compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install test dependency
+        run: python -m pip install --upgrade pip pytest
+      - name: Replay Pass5595-5602 producer
+        run: python analysis/w33_pass5595_5602_runner.py
+      - name: Focused regression
+        run: python -m pytest -q tests/test_w33_pass5595_5602_projectivity_closure_toe_probes.py
+      - name: Materialize homepage and audit publication DAG
+        run: |
+          python tools/integrate_bt3376_bt3389.py --report /tmp/public-integration.json
+          python analysis/w33_pass5364_publication_dag_audit.py --report /tmp/publication-dag.json
+          test "$(grep -c 'id=\"pass-5595-5602-projectivity-closure-toe\"' docs/index.html)" -eq 1
+          git diff --check
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+      - name: Compile canonical manuscripts
+        run: |
+          mkdir -p evidence/pass5595_5602
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass5595_5602/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass5595_5602/pdf_sha256.txt
+      - name: Freeze regenerated certificate and homepage materialization
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/PART_W33_PASS5595_5602_PROJECTIVITY_CLOSURE_TOE_PROBES.json docs/index.html
+          if git diff --cached --quiet; then
+            echo 'Certificate and homepage already materialized.'
+          else
+            git commit -m 'Freeze Pass5595-5602 certificate and homepage card [skip ci]'
+            git push
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass5595-5602-projectivity-closure-toe
+          path: evidence/pass5595_5602/**
