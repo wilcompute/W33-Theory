@@ -1,0 +1,148 @@
+% Passes 5595--5602: projectivity-frame closure and three explicitly firewalled TOE probes.
+\subsection{Projectivity-frame closure: automorphisms, extension fields, codes, and kinematic firewalls}
+\label{sec:pass5595-5602-projectivity-closure-toe}
+
+The projectivity-graph design of Passes~5588--5594 admits several further
+structural closures.  Write $X=\mathbf P^1(q)$ and
+$G=\mathrm{PSL}_2(q)$, with rows $g\in G$, columns $(x,y)\in X^2$, and
+incidence $y=g(x)$.
+
+\paragraph{Pass 5595: full incidence automorphism mechanism.}
+The number of common row-neighbours of two distinct columns vanishes exactly
+when the two grid cells share one coordinate.  Thus the incidence structure
+recovers the square rook graph on $X^2$.  Every incidence automorphism therefore
+acts on columns through $(S_{q+1}\times S_{q+1})\rtimes C_2$.  Without swapping
+the two rulings, $(x,y)\mapsto(ax,by)$ preserves the graph-row set exactly when
+$bGa^{-1}=G$.  Hence $ba^{-1}\in G$ and
+$a\in N_{S_{q+1}}(G)$, and conversely these conditions suffice.  Using the
+standard natural-action normalizer
+\[
+N_{S_{q+1}}(\mathrm{PSL}_2(q))=\mathrm P\Gamma\mathrm L_2(q),
+\]
+for $q=p^f$ odd gives
+\[
+\boxed{\lvert\operatorname{Aut}(D_q)\rvert
+ =4f\,\lvert\mathrm{PSL}_2(q)\rvert^2.}
+\]
+The executable verifier enumerates the complete natural action at $q=3,5$,
+giving $576$ and $14{,}400$.  Thus the Reye $576$ is the first member of an
+all-$q$ normalizer law, rather than an isolated order coincidence.
+
+\paragraph{Pass 5596: the Reye and Klein-$V_4$ Latin degree-$12$ actions are
+permutation-isomorphic.}
+Write $A_4=V_4\rtimes\langle r\rangle$ with
+$r=(0\ 2\ 3\ 1)$.  The Reye rows are $vr^k$.  The Klein-$V_4$ Latin
+autoparatopy action is the affine symmetry of $x+y+z=0$ on three labelled
+copies of $V_4\cong\mathbf F_2^2$.  The explicit bijection
+\[
+\boxed{\Phi(vr^k)=\bigl(k,r^k(v(0))\bigr)}
+\]
+conjugates the entire $576$-element Reye row action onto the entire
+$576$-element Latin $12$-symbol action.  Their non-diagonal orbital sizes are
+$36$ and $96$, and the $36$-orbital is exactly $3K_4$.  The existing 13-cover
+certificate records an abstractly isomorphic image with orbits $1+12$ but does
+not retain explicit $S_{13}$ generators, so this pass does not silently claim
+that final action-level intertwiner.
+
+\paragraph{Pass 5597: genuine extension-field replay.}
+Explicit quadratic-field arithmetic over
+$\mathbf F_9=\mathbf F_3[w]/(w^2-2)$ and
+$\mathbf F_{25}=\mathbf F_5[w]/(w^2-2)$ reproduces the complete Segre grid,
+one nonsingular determinant class, and every symplectic/projectivity incidence.
+The non-prime anchors are
+\[
+\begin{array}{c|c|c|c}
+q&|\mathrm{PSL}_2(q)|&(q+1)^2&\operatorname{rank}_2M\\\hline
+9&360&100&50\\
+25&7800&676&338
+\end{array}
+\]
+so the all-prime-power binary theorem now has direct extension-field replay.
+
+\paragraph{Pass 5598: the frame code projects from the footprint kernel.}
+Let $C_W$ be the binary W-line incidence code.  Pass~5376 proved
+$C_W=\ker(F^T)$ for the footprint matrix $F$.  For a nonsingular-class point
+$p$, let $N(p)$ be its full symplectic-neighbour indicator.  Modulo two the sum
+of the $q+1$ W-lines through $p$ cancels $p$ and leaves its neighbours once, so
+$N(p)\in C_W$.  Restricting coordinates to the singular Segre sheet $S$ gives
+precisely the projectivity row $M_p$.  Therefore
+\[
+\boxed{\operatorname{row}(M)
+ =\pi_S\operatorname{span}\{N(p):p\in C_+\}
+ \subseteq\pi_S(C_W)=\pi_S\ker(F^T).}
+\]
+This is a bridge to the footprint \emph{kernel}, not an identification with the
+footprint image.  At $q=3,5,7$ the restricted line-code ranks are $15,34,61$
+while the projectivity-code ranks are $8,18,32$, so equality with the full
+restricted line code is false.
+
+\paragraph{Pass 5599: fixed-point fusion and the exceptional $q=3$ collapse.}
+For $g,h\in G$, classify $g^{-1}h$ by $t=0,1,2$ fixed points on $X$.  The
+three observed valencies are
+\[
+\boxed{k_0=\frac{q(q-1)^2}{4}},\qquad
+\boxed{k_1=q^2-1},\qquad
+\boxed{k_2=\frac{q(q+1)(q-3)}{4}}.
+\]
+Full intersection-number constancy is verified at $q=3,5,7,9$, and one uniform
+set of polynomial intersection matrices is replayed at $q=11,13,25$.  We keep
+the all-odd fusion theorem itself open until a symbolic counting or character
+proof replaces finite interpolation.  At $q=3$, however, $k_2=0$ exactly and
+the fusion collapses to
+\[
+\boxed{R_0=3K_4,\qquad R_1=K_{4,4,4}.}
+\]
+The three $K_4$ blocks are the three cosets of $V_4\triangleleft A_4$, exactly
+the $3\times4$ block system exposed by the Reye--Latin intertwiner.
+
+\paragraph{Pass 5600: a finite null-coordinate kinematic primitive, not a
+spacetime derivation.}
+The Segre sheet $Q^+(3,q)=\mathbf P^1(q)\times\mathbf P^1(q)$ has two
+canonical rulings.  Every projectivity graph $y=g(x)$ meets every member of
+each ruling exactly once, so it is a perfect matching/transversal between the
+two coordinate families.  Two such transversals meet in $0,1,2$ events.  This
+supports a useful finite two-null-coordinate kinematic picture for the Holonet.
+It does \emph{not} derive a Lorentz metric, causal order, continuum limit,
+$3+1$ dimensions, a mass shell, or the physical speed of light.
+
+\paragraph{Pass 5601: determinant chirality gives an exact isodual binary
+code.}
+Let $C_+$ be the binary span of vectorized permutation matrices from
+$\mathrm{PSL}_2(q)$ and $C_-$ the span of the opposite determinant coset in
+$\mathrm{PGL}_2(q)$.  A cross dot product is the number of fixed points of a
+relative nonsquare-determinant projectivity modulo two.  Such an element cannot
+be one-fixed-point/unipotent, since a repeated eigenvalue has square determinant
+class; it has $0$ or $2$ fixed points.  Hence $C_-\subseteq C_+^\perp$.  The
+binary rank theorem gives both dimensions $(q+1)^2/2$, because multiplying by a
+fixed opposite-coset projectivity only permutes grid coordinates.  Therefore
+\[
+\boxed{C_-=C_+^\perp,}
+\qquad
+\boxed{C_+\text{ is isodual }[(q+1)^2,(q+1)^2/2].}
+\]
+At $q=3$ its measured weight enumerator is
+$1+12z^4+64z^6+102z^8+64z^{10}+12z^{12}+z^{16}$; at $q=5$ the measured
+minimum distance is $6$.  No all-$q$ minimum-distance claim is made here.
+
+\paragraph{Pass 5602: spectral-action firewall.}
+After subtracting the constant row mean, the projectivity frame has only one
+nonzero frame eigenvalue:
+\[
+\boxed{\operatorname{spec}(M_c^TM_c)
+ =\left(\frac{q^2-1}{2}\right)^{q^2}\oplus0^{\,*}.}
+\]
+Thus the nonzero spectrum is perfectly flat.  The associated heat trace has
+only one nonzero exponential scale and cannot furnish a Weyl-law spectral
+ladder for a local continuum dimension.  The frame Gram is therefore a
+projector/tight-frame observable, \emph{not} a credible standalone spacetime
+Laplacian.  Any physical dynamics must live in a richer operator (for example
+the Hodge, Hashimoto, transport, or holonomy operators already present in the
+repository) and must pass a separate scaling test.
+
+\paragraph{Evidence boundary.}
+These passes establish or replay finite group, incidence, code, and frame
+statements.  The three Theory-of-Everything probes are intentionally
+firewalled: one supplies a candidate finite kinematic primitive, one an exact
+information duality, and one rules out a tempting dynamics interpretation.
+No gravity, Standard-Model, cosmological, or laboratory claim follows from
+this packet by itself.
