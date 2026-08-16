@@ -1,0 +1,99 @@
+% Passes 5627--5634: signed stabilizer, E6 gauge action, cover/RG boundaries.
+\subsection{Carrier-spinorial symmetry, gauge-action obstruction, and finite sheet dressing}
+
+The intrinsic deck-odd $16$ is a genuine central-sign representation, but only
+of the vector stabilizer of the Segre carrier.  Direct generation gives
+\[
+ |\PSp(4,3)|=25920,\qquad |G_{\rm Segre}^{\rm proj}|=48,
+ \qquad |\Sp(4,3)|=51840,\qquad |\widetilde G_{\rm Segre}|=96,
+\]
+and the central $-I\in\Sp(4,3)$ acts on the signed space as $-I_{16}$.
+Consequently this representation cannot descend to an ordinary $\PSp(4,3)$
+module and is not either of the previously constructed $D_5$ half-spin
+$16$-modules.  Under $\widetilde G_{\rm Segre}$ it decomposes over $\mathbb C$ as
+\[
+ V_{16}\cong2A\oplus2\overline A,\qquad \dim A=4,
+\]
+with magnetic eigenspace pattern
+\[
+ -6:A,\qquad -3:\overline A,\qquad 3:A,\qquad 6:\overline A.
+\]
+
+The equivariant complex commutant has dimension eight.  Its real symmetric and
+skew parts both have dimension four, so the $K$-odd Hermitian Hamiltonians
+compatible with the full carrier stabilizer form a four-real-dimensional space.
+An explicit equivariant particle-hole-compatible perturbation moves the
+unperturbed $6/3=2$ level ratio.  Thus that ratio is an exact feature of the
+chosen magnetic operator, not a symmetry-protected mass prediction.
+
+The $E_6$ bundle selector also sharpens negatively.  Local $\mathbb Z_3$ gauge
+covariance preserves both the horizontal thirty-six-term cubic sum and the nine
+vertical full-fiber cubics, hence gauge symmetry permits
+\[
+ S_{\rm cubic}=g_H\sum_{T\in H_{36}}C_T+g_V\sum_{b=1}^{9}V_b.
+\]
+Therefore gauge invariance and total $\mathbb Z_3$ neutrality do not force
+$g_V=0$.  Suppression of the vertical nine requires an additional
+horizontality/locality, $L_\infty$/Jacobi, representation-theoretic, or dynamical
+principle.  Moreover the affine base has nine sites and complete one-skeleton
+$K_9$ with thirty-six links; its incidence rank is eight and cycle-space
+dimension twenty-eight.  The bad nine naturally occupy site/$C^0$ degree rather
+than link/$C^1$ connection degree, obstructing their identification with
+propagating gauge bosons by count alone.
+
+The simplest cover-based continuum iteration fails exactly.  The connected
+$270$-vertex Pass4719 carrier is already the bipartite double cover
+$G\times K_2$, and
+\[
+ (G\times K_2)\times K_2
+ =G\times(K_2\times K_2)
+ =2(G\times K_2).
+\]
+Hence the next naive $C_2$ lift has two connected components and duplicates the
+existing spectral support rather than generating a new scale.  A connected
+refinement tower must use a new nontrivial voltage/cohomology class at each
+level.
+
+The signed block has the Majorana/BdG algebraic form $H=iS$ with $S$ real skew
+and $KHK^{-1}=-H$, $K^2=1$.  Searching for a second carrier-equivariant
+antiunitary $T=UK$ commuting with $H$ gives the simultaneous linear equations
+$UR_g=R_gU$ and $UH+HU=0$, whose solution space has dimension zero.  Thus the
+carrier supplies no equivariant Kramers $T^2=-1$ symmetry; in tenfold-way
+vocabulary its finite algebraic pattern is class-D-like rather than DIII-like.
+This does not constitute a relativistic spin-statistics theorem.
+
+For the $q=5$ selected cover, every $1+12$ permutation action satisfies the
+module identity
+\[
+ \operatorname{centered}(1\oplus\operatorname{Perm}_{12})
+ \cong \operatorname{Perm}_{12}.
+\]
+Under such an intertwiner the invariant direction
+$12e_{\rm fixed}-\sum e_i$ maps to the constant vector $\sum e_i$ on the moving
+orbit.  Therefore, even if the still-pending direct moving-$12$ GAP conjugator
+closes the Latin/$F_4$ action gate, the $q=5$ distinguished direction can map
+only to a collective $q=3$ orbit-average singlet, not to a distinguished $q=3$
+point; the two isomorphic $q=3$ twelve-orbits also leave the target nonunique.
+
+Finally, ordering the intrinsic vector lift by its two sheets gives
+\[
+ H_{32}=\begin{pmatrix}A&B\\ B&A\end{pmatrix},\qquad
+ H_+=A+B,\qquad H_-=A-B.
+\]
+Up to the $\omega\leftrightarrow\omega^2$ convention, $A$ is precisely the old
+section-dependent sixteen-state magnetic operator.  It therefore has a precise
+new role as a bare one-sheet block rather than an intrinsic projective
+observable.  Eliminating the opposite sheet gives the exact Feshbach operator
+\[
+ \boxed{H_{\rm eff}(E)=A+B(E-A)^{-1}B}.
+\]
+Since $[A,B]\ne0$, the self-energy is not a scalar renormalization of $A$ and
+has poles at its fifteen distinct one-sheet energies.  This is an exact finite
+energy-dependent dressing/decimation flow, not yet a Wilsonian spacetime RG.
+
+\paragraph{Evidence boundary.}
+These statements are finite group-action, representation, bundle-gauge,
+graph-cover, cochain, BdG-algebra, and resolvent results.  They do not prove
+physical spin-statistics, a Standard-Model mass prediction, physical gauge
+bosons, a continuum Weyl law, a Wilsonian fixed point, or a $q=5$ physical
+vacuum identification.
