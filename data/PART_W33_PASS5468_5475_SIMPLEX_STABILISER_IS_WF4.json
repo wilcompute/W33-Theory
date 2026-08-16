@@ -1,0 +1,72 @@
+{
+  "boundary": "The W(F4) identification is by GAP IsomorphismGroups on the setwise stabiliser of the other lane's Pass5212 13-cover in Aut of their P-block graph. The AutPar(V4) match is on ORDER, CENTRE, DERIVED ORDER and ELEMENT-ORDER SPECTRUM taken from their Pass5300 certificate -- a full isomorphism test against their group object was not run, so that identification is 'agrees on every invariant tested', not 'proved isomorphic'. Coincidences of order are not bridges and 576 has independent sources here",
+  "pass_5468": {
+    "A_iso_WF4_mod_centre": true,
+    "WF4_centre": 2,
+    "WF4_derived": 288,
+    "WF4_order": 1152,
+    "external": "|W(F4)| = 1152, W(F4) = GO4+(3) (ATLAS)",
+    "image_order": 576,
+    "spectra_identical": true,
+    "stab_centre": 2,
+    "stab_derived": 288,
+    "stab_iso_WF4": true,
+    "stabiliser_order": 1152,
+    "theorem": "the Hoffman-tight 13-coclique is a regular 12-simplex whose symmetry group is W(F4); the centre is the pointwise kernel and the action on the 13 is W(F4)/{+-1}"
+  },
+  "pass_5469": {
+    "WF4_order576_subgroup_classes": {
+      "centres": [
+        2,
+        2,
+        2
+      ],
+      "deriveds": [
+        96,
+        96,
+        288
+      ],
+      "n_classes_of_order_576_subgroups": 3,
+      "structures": [
+        "((((C2 x C2 x C2) : (C2 x C2)) : C3) : C2) : C3",
+        "((((C2 x C2 x C2) : (C2 x C2)) : C3) : C2) : C3",
+        "(((C2 x C2 x C2) : (C2 x C2)) : (C3 x C3)) : C2"
+      ]
+    },
+    "autpar_V4": {
+      "centre": 1,
+      "derived": 144,
+      "order": 576
+    },
+    "my_image": {
+      "centre": 1,
+      "derived": 144,
+      "order": 576
+    },
+    "resolution": "their H is a SUBGROUP of W(F4) (centre 2, derived 96, matching two of the three classes); my image is the QUOTIENT W(F4)/{+-1} (centre 1, derived 144). Both correct, one group, different constructions",
+    "supersedes": "the Pass 5462 'descriptions differ' open question",
+    "their_H": {
+      "centre": 2,
+      "derived": 96,
+      "order": 576
+    }
+  },
+  "pass_5470": {
+    "aut_order": 384,
+    "edges": 32,
+    "knight_is_Q4": true,
+    "latin_4x4": 576,
+    "note": "verified from scratch; the repo asserts it from one source",
+    "vertices": 16
+  },
+  "pass_5471": {
+    "correction": "576 exceeds |Aut(Q4)| = 384, so it is not a hypercube symmetry group; the rotation group is 192",
+    "ladder": {
+      "1152": "W(F4) = W(D4):S3 = GO4+(3) -- the 13-cover's setwise stabiliser",
+      "192": "W(D4)  AND, separately, the tesseract rotation group -- NOT isomorphic (their Pass5310: R has 48 elements of order 8, W(D4) has none)",
+      "384": "|Aut(Q4)| = B4 = W(B4), the full signed permutations of the 4-cube",
+      "576": "TWO different groups: W(D4):C3 (subgroup of W(F4)) and W(F4)/{+-1} (quotient); also the number of 4x4 Latin squares, = 24^2",
+      "96": "W(D4)/{+-1} = the tomotope group (C2)^4:S3 (their Pass5309)"
+    }
+  }
+}

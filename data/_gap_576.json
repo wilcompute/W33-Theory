@@ -1,0 +1,14 @@
+{
+  "A_order": 576,
+  "A_structure": "((A4 x A4) : C2) : C2",
+  "B_order": 192,
+  "B_structure": "(((C4 x C4) : C3) : C2) : C2",
+  "hyperoctahedral_order": 384,
+  "A_iso_B": false,
+  "A_order_spectrum": [ [ 1, 1 ], [ 2, 75 ], [ 3, 80 ], [ 4, 180 ], [ 6, 240 ] ],
+  "B_order_spectrum": [ [ 1, 1 ], [ 2, 43 ], [ 3, 32 ], [ 4, 36 ], [ 6, 32 ], [ 8, 48 ] ],
+  "A_centre": 1,
+  "B_centre": 1,
+  "A_derived": 144,
+  "B_derived": 48
+}

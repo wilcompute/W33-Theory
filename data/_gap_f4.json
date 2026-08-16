@@ -1,0 +1,15 @@
+{
+  "stabiliser_order": 1152,
+  "image_order": 576,
+  "WF4_order": 1152,
+  "B4_order": 384,
+  "stab_iso_WF4": true,
+  "stab_centre": 2,
+  "WF4_centre": 2,
+  "stab_derived": 288,
+  "WF4_derived": 288,
+  "stab_spectrum": [ [ 1, 1 ], [ 2, 139 ], [ 3, 80 ], [ 4, 228 ], [ 6, 464 ], [ 8, 144 ], [ 12, 96 ] ],
+  "WF4_spectrum": [ [ 1, 1 ], [ 2, 139 ], [ 3, 80 ], [ 4, 228 ], [ 6, 464 ], [ 8, 144 ], [ 12, 96 ] ],
+  "WF4_mod_centre": 576,
+  "A_iso_WF4_mod_centre": true
+}
