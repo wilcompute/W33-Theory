@@ -1,0 +1,102 @@
+{
+  "boundary": "Pass 5580's stem counts are over tokens the index kept; a stem blocklist is NOT applied and the firing rate is NOT re-measured. Pass 5583 corrects Pass 5575's own figure downward. Pass 5584 samples ten certificates. Pass 5585 APPENDS errata to another lane's file rather than editing its claims. Pass 5586 proposes and does not adopt",
+  "pass_5580": {
+    "explains": "Pass 5573's density exclusion raised the rate because dense files are dense with UNIQUE integers; sharing lives on a different axis",
+    "finding": "the firing rate is driven by routing infrastructure -- chart, target_chart, route_index -- not by results",
+    "fix_not_applied": "a stem blocklist, needing re-measurement",
+    "top_stems": [
+      [
+        "depth",
+        538
+      ],
+      [
+        "source_chart",
+        538
+      ],
+      [
+        "chart",
+        538
+      ],
+      [
+        "target_chart",
+        538
+      ],
+      [
+        "route_index",
+        538
+      ],
+      [
+        "line",
+        272
+      ],
+      [
+        "rows",
+        245
+      ],
+      [
+        "support",
+        238
+      ]
+    ]
+  },
+  "pass_5581": {
+    "reading": "where two lanes independently chose the same word, the word names a real object; 13% is roughly the size of the shared subject matter, not a failure figure",
+    "sample": [
+      "-1/4",
+      "139",
+      "500",
+      "component_sizes",
+      "constant",
+      "d_z",
+      "involution_count",
+      "phi_12",
+      "point_count",
+      "serviced",
+      "singular",
+      "szilassi",
+      "time_bin_envelope",
+      "total_words",
+      "transpositions",
+      "w(e6)"
+    ]
+  },
+  "pass_5582": {
+    "newer": {
+      "a": 11431,
+      "b": 3298,
+      "pct": 16,
+      "shared": 538
+    },
+    "older": {
+      "a": 6477,
+      "b": 3950,
+      "pct": 14,
+      "shared": 574
+    },
+    "verdict": "not growing -- 14% to 16%; a stable shared core with one lane expanding, which is milder than divergence"
+  },
+  "pass_5583": {
+    "correction": "Pass 5575's pattern matched prose mentioning q; the real evaluable count is about a third of that",
+    "pass5575_figure": 312,
+    "q3_only": 536,
+    "substitutable": 72
+  },
+  "pass_5584": {
+    "design_fault": "firing is near-universal; the signal is WHICH token fired. Rank by stem rarity, do not suppress files",
+    "sampled": 10,
+    "with_non_size_shared_token": 7
+  },
+  "pass_5585": {
+    "corrections": [
+      "|Roots(F4)| = 48, not 96",
+      "|Aut| 96 is the polytope; the configuration is 576"
+    ],
+    "errata_appended": true,
+    "method": "appended, not rewritten -- preserves the record"
+  },
+  "pass_5586": {
+    "file": "CERTIFICATE_KEY_CONVENTION.md",
+    "reason": "adopting it would legislate for the other lane; that is the user's call",
+    "status": "PROPOSED"
+  }
+}

@@ -102,3 +102,27 @@ The boundary code is **220/81 ≈ 2.72× more efficient** than the bulk code. In
 ---
 
 *Co-Authored-By: Perplexity AI (Sonnet 4.6) <noreply@perplexity.ai>*
+
+---
+
+## ERRATA (Pass 5580)
+
+Two labels in the tower above are corrected here. The **arithmetic of every rung was
+re-verified and holds** (24x4=96, 96x12=1152, 1152x3=3456, and all four expressions
+for 3456); what needed fixing is what two of the numbers were said to *be*.
+
+1. **`|Roots(F4)| = 96` is wrong. F4 has 48 roots** -- 24 long and 24 short. 96 is the
+   **24-cell edge count**, which this file's own next line supplies. The downstream
+   arithmetic still works because 1152 = 96 x 12 is true regardless, which is exactly
+   how the error survived: the number is right for something adjacent.
+
+2. **`|Aut(tomotope/Reye)| = 96` is ambiguous rather than wrong.** 96 is the automorphism
+   group of the **tomotope as a polytope**. The **Reye configuration 12_4 16_3 as an
+   abstract incidence structure** has automorphism group of order **576**, measured at
+   Pass 5491, and 576 = 6 x 96 is the rigidity index -- a geometric realisation keeps
+   only a sixth of the combinatorial symmetry.
+
+**The rest of the file stands, including its central identity.** `|W(F4)|/2 = f^2 = 576`
+is correct, and Pass 5516 proved by `IsomorphismGroups` that this group is the
+autoparatopy group of the Klein order-4 Latin square and the image of the 13-cover
+stabiliser in S_13. Six of the eight identifications checked are correct.
