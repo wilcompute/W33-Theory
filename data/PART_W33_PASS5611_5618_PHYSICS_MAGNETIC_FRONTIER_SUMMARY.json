@@ -1,0 +1,63 @@
+{
+  "schema": "w33.pass5611_5618.summary.v1",
+  "pass_range": [5611, 5618],
+  "status": "SEVEN_RESULTS_FROZEN__PASS5615_OBJECT_MAP_PENDING_QUEUED_GAP",
+  "5611": {
+    "status": "THEOREM_EXACT_AFFINE_MAGNETIC_SPECTRUM_ATOMIC_LIMIT",
+    "spectrum": [
+      ["-(q-1)", "q(q-1)/2"],
+      ["q+1", "q(q-3)/2"],
+      ["1-sqrt(q)", "q"],
+      ["1+sqrt(q)", "q"]
+    ],
+    "normalized_esd_limit": "1/2 delta_-1 + 1/2 delta_+1",
+    "verdict": "Heisenberg phase splits finite spectra but maximal all-q bulk remains atomic, not Weyl-continuum"
+  },
+  "5612": {
+    "status": "MINIMUM_SUPPORTS_SEMILINEAR_PROJECTIVE_HISTORIES",
+    "counting_theorem": "every weight q+1 support is one cell in every row and column and every opposite determinant projectivity meets it in 0 or 2 cells",
+    "classification": "minimum C+ histories preserve PSL ordered-triple colour; standard projective switching automorphisms give P-Sigma-L2(q)",
+    "anchors": {"q3": 12, "q5": 60, "q7": 168, "q9_PSigmaL_constructed": 720},
+    "extension_field_correction": "Frobenius is a q9 minimum word although it is not a PGL projectivity"
+  },
+  "5613": {
+    "status": "CORRECTION_PLUS_INTRINSIC_VECTOR_HEISENBERG_LIFT",
+    "correction": "Pass5609 16-point spectrum is section-dependent; one representative sign flip changes tr(A^4) from 2256 to 2400",
+    "no_equivariant_section": "central -I fixes projective points and swaps +/- vector lifts",
+    "q3_lift_spectrum": {"-6": 6, "-3": 7, "-1": 3, "2": 6, "3": 5, "6": 4, "9": 1},
+    "q3_selector": "projective nonzero-vector fiber has q-1 sheets; it is a literal double cover iff q=3"
+  },
+  "5614": {
+    "status": "Q3_SELECTOR_STACK_WITH_EVIDENCE_FIREWALLS",
+    "exact_structural": ["k2=q(q+1)(q-3)/4", "m1=(q-3)(q+1)^2/4", "q-1=2 iff q=3"],
+    "model_support": "repo mixing defect q(q-3)/(q^2+q+1)",
+    "curvature_boundary": "q3 Ollivier kappa=1/6 is exhaustive; older all-q extrapolation is not promoted"
+  },
+  "5615": {
+    "status": "FAIL_CLOSED_PENDING_DIRECT_GAP_OBJECT_MAP",
+    "selected_cover": [7,31,74,112,129,141,158,190,194,227,255,278,321],
+    "known": {"setwise_stabilizer": 1152, "S13_image": 576, "kernel": 2, "orbits": [1,12]},
+    "dependency": "Pass5606 explicit S12 conjugator workflow remains queued"
+  },
+  "5616": {
+    "status": "EXACT_DIRAC_DISPERSION_WITH_MAGNETIC_INTERNAL_OPERATOR",
+    "identity": "H(p)^2=|p|^2 I + (m0 I + g Hmag)^2",
+    "dispersion": "E_h,+/-=+/-sqrt(|p|^2+(m0+g h)^2)",
+    "boundary": "relativistic form exact in lattice units; c, m0, g and particle assignments remain free"
+  },
+  "5617": {
+    "status": "E6_Z3_CURVATURE_TO_MAGNETIC_TRANSLATIONS_AND_HARPER_BANDS",
+    "curvature": "F(d1,d2)=-det(d1,d2) mod 3",
+    "plaquettes": {"flux1": 27, "flux2": 27},
+    "wilson_action_declared_normalization": 81,
+    "harper_spectrum": ["-2", "1-sqrt(3)", "1+sqrt(3)"],
+    "boundary": "finite gauge sector, not continuum Yang-Mills"
+  },
+  "5618": {
+    "status": "MATTER_SELECTION_FALSIFIER",
+    "result": "all 36 allowed line-lift cubics and all 9 forbidden fiber cubics are Z3-neutral",
+    "conclusion": "total Z3 charge cannot be the 36/9 E6 firewall selector",
+    "remaining_candidates": ["holonomy", "affine incidence", "L-infinity bad9 support", "CE2/metaplectic phase", "q3 lift chirality"]
+  },
+  "boundary": "Finite algebra, coding, spectral, gauge and Dirac identities are separated from physical interpretation. No Standard-Model spectrum, physical mass, c, gauge coupling, gravity, or continuum spacetime is claimed. Pass5615 stays pending until direct GAP replay emits the object-level conjugator."
+}
