@@ -1,0 +1,12 @@
+{
+  "schema":"w33.pass_namespace_registry.v2.entry",
+  "range":[5580,5587],
+  "slug":"reye_psl2_permutation_frame",
+  "title":"Reye/tomotope family as a PSL(2,q) permutation-graph incidence frame",
+  "status":"RESERVED",
+  "owner":"openai-gpt5.6-sol",
+  "reserved_at":"2026-08-15",
+  "purpose":"Start from the surviving Pass5492-5495 odd-q Reye/tomotope tactical family and test a structural rather than numerical identification: Q+(3,q) is the Segre grid P1(q)xP1(q), each nonsingular symplectic-perp section is a graph of a projectivity, and one quadratic-value class has |PSL(2,q)| rows. Verify whether the incidence is the permutation-graph design of PSL(2,q), derive the exact Gram/rook-complement spectrum and centered tight frame, and probe characteristic-2 rank only as a separately labeled experimental law.",
+  "boundary":"The q=3 member is already identified with the Reye/tomotope medial layer by Pass5490/BT1363. This packet may identify the incidence mechanism and spectra, but must not infer physics, a q>3 polytope, or a new literature result from matching parameters. The PSL(2,q) identification must be checked by an explicit incidence isomorphism or a coordinate proof; binary rank beyond tested q remains conjectural unless proved.",
+  "prior_art_check":"Pass5488-5495 proves the q=3 Reye incidence isomorphism and verifies the q=3,5,7 tactical family. Pass5500-5504 records the two-form construction and explicitly leaves literature identification unresolved. Current literature search found standard Reye descriptions, Q+(3,q) complement geometries, rook-complement graph facts, and PSL(2,q) permutation-intersection work, but no source in the search results stating this exact Reye-family permutation-graph incidence identification."
+}
