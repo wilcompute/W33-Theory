@@ -1,0 +1,18 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.fragment",
+  "range": [5627, 5634],
+  "owner": "openai_gpt5_6_sol",
+  "status": "RESERVED_ACTIVE",
+  "created_utc": "2026-08-16T05:39:00Z",
+  "tasks": {
+    "5627": "compute deck-odd 16 representation diagnostics against old D5 half-spin structure",
+    "5628": "construct gauge-cohomological action for horizontal 36 versus vertical 9 E6 cubics",
+    "5629": "build connected local refinement tower and measure eigenvalue-counting/spectral-dimension flow",
+    "5630": "classify symmetry-allowed BdG/spectral-triple perturbations of deck-odd mass sector",
+    "5631": "close q5 fixed-line cross-q3 functoriality test after direct GAP/F4 gate",
+    "5632": "bonkers: Pin/BdG spin-statistics compatibility test for deck-odd 16",
+    "5633": "bonkers: test vertical bad9 fibers as gauge-boson/connection degrees rather than matter couplings",
+    "5634": "bonkers: real-space decimation/RG on magnetic cover hierarchy and emergent causal/spectral flow"
+  },
+  "boundary": "Reservation only. Physical identifications require explicit action/module/cohomology or continuum evidence; count coincidences are non-evidence."
+}
