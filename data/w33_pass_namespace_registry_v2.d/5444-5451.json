@@ -1,0 +1,37 @@
+{
+  "schema":"w33.pass_namespace_registry.v2.entry",
+  "range":[5444,5451],
+  "slug":"frame_basis_volume_modular_bridge_radius11_frontier",
+  "title":"Apartment frame/basis volume budget, conditioning tradeoff, modular kernel reconciliation, q5 second-weight reduction, radius-eleven frontier, lattice index law, and Pell/Weil clock",
+  "status":"EXECUTED",
+  "owner":"openai-gpt56-sol",
+  "reserved_at":"2026-08-15",
+  "closed_at":"2026-08-15T11:08:00-04:00",
+  "passes":{
+    "5444":"THEOREM: all-q apartment Cauchy-Binet volume budget sum_{|S|=q^4}det(C_S^T C_S)=N^(q^4), dependent subsets contributing zero.",
+    "5445":"THEOREM: q3 full 1620-apartment frame has condition1 on H1 while the deterministic 81-apartment BFS basis has condition sqrt(160), an exact comparison without basis-optimality claim.",
+    "5446":"THEOREM: all-odd double-quotient ladder separates point-side M0/C_W ~= Rad(im F^T) from apartment-side 0->D_ap=K0->H1^*->C_F->0, dim D_ap=q^4-g.",
+    "5447":"THEOREM/REDUCTION: any q5 K0 weight1040 witness must use an exotic26 support in one of21 association-scheme pair profiles; all46,800 point-footprint-plus-one extensions fail. Weight1040 nonexistence remains open.",
+    "5448":"THEOREM/REDUCTION: q3 radius11 V1/V2 sectors infeasible; V3 reduces to two local branches; V4 shrinks from10,963,673,616 raw rooted cases to35,218,336 necessary cases. Radius11 remains open.",
+    "5449":"THEOREM: det(C_S^T C_S)=tau(Levi)[Lambda:Lambda_S]^2 and sum m_S^2=N^(q^4)/tau(Levi); q3 sum=2^322*5^58.",
+    "5450":"THEOREM: odd-q unsigned Gram square class is (q^2+1)/2, so determinant square iff q^2-2m^2=-1; no even finite-field q gives a square determinant.",
+    "5451":"THEOREM: negative-Pell square determinant implies q=+/-1 mod8 and therefore the split F2 logical Weil branch; converse false."
+  },
+  "artifacts":{
+    "consolidated_results":"data/PART_W33_PASS5444_5451_RESULTS.json",
+    "outcomes":"analysis/PASS5444_5451_EXECUTED_OUTCOMES.md",
+    "manuscript_insert":"analysis/PASS5444_5451_frame_basis_pell_radius11_insert.tex",
+    "frontier_manifest":"analysis/W33_CURRENT_FRONTIER_MANIFEST.tex",
+    "public_page":"docs/pass5444-5451-frame-basis-pell-radius11.html",
+    "public_card_source":"analysis/PASS5444_5451_index_insert.html",
+    "tests":"tests/test_w33_pass5444_5451_packet.py",
+    "publication_contract":"data/w33_publication_frontier_contract_v2.json",
+    "workflow":".github/workflows/w33_pass5444_5451_frame_basis_pell_radius11.yml"
+  },
+  "remote_replay":{
+    "run_id":31891782770,
+    "status_at_close":"QUEUED",
+    "note":"Do not call this replay green until a later session observes completion."
+  },
+  "boundary":"Pass5445 is not a global optimal-conditioning theorem; Pass5447 does not exclude q5 weight1040; Pass5448 does not close q3 radius11; Pell/Weil results are arithmetic/module statements with no physical interpretation inferred."
+}

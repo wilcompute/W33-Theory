@@ -1,0 +1,88 @@
+name: W33 Pass5420-5427 apartment duality packet
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5420_5427_apartment_duality_packet.py'
+      - 'data/PART_W33_PASS5420_5427_APARTMENT_DUALITY_PACKET.json'
+      - 'analysis/PASS5420_5427_apartment_duality_insert.tex'
+      - 'analysis/PASS5420_5427_apartment_duality_index_insert.html'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/w33_publication_frontier_contract_v2.json'
+      - 'data/w33_pass_namespace_registry_v2.d/5420-5427.json'
+      - 'tests/test_w33_pass5420_5427_apartment_duality_packet.py'
+      - '.github/workflows/w33_pass5420_5427_apartment_duality.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  replay-publish-compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Replay exact theorem producer and prime-q apartment anchors
+        run: |
+          cp data/PART_W33_PASS5420_5427_APARTMENT_DUALITY_PACKET.json /tmp/pass5420_frozen.json
+          python analysis/w33_pass5420_5427_apartment_duality_packet.py > /tmp/pass5420_replay.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          j=json.loads(Path('data/PART_W33_PASS5420_5427_APARTMENT_DUALITY_PACKET.json').read_text())
+          assert j['status']=='THEOREM_PACKET_SOURCE_COMPLETE'
+          assert j['5422_apartment_intersection_scheme']['independent_prime_anchors']['3']['intersection_profile']=={'0':1187,'1':288,'2':96,'3':32,'4':16}
+          assert j['5422_apartment_intersection_scheme']['independent_prime_anchors']['5']['intersection_profile']=={'0':69124,'1':3200,'2':640,'3':128,'4':32}
+          assert j['5426_footprint_bicycle_amalgam']['anchors']['3']['bicycle_dimension']==29
+          print('PASS theorem replay and q=2,3,5 independent apartment census')
+          PY
+          mv /tmp/pass5420_frozen.json data/PART_W33_PASS5420_5427_APARTMENT_DUALITY_PACKET.json
+      - name: Focused regressions
+        run: |
+          python -m pip install --disable-pip-version-check pytest
+          pytest -q \
+            tests/test_w33_pass5420_5427_apartment_duality_packet.py \
+            tests/test_w33_pass5404_5409_allq_unsigned_apartment_spectrum.py \
+            tests/test_w33_pass5396_5401_allq_apartment_tight_frame.py \
+            tests/test_w33_pass5388_5392_allq_levi_flag_hodge.py \
+            tests/test_w33_pass5364_5371_publication_dag.py
+      - name: Materialize public cards and audit publication DAG
+        run: |
+          python tools/integrate_bt3376_bt3389.py --report /tmp/public-integration.json
+          python analysis/w33_pass5364_publication_dag_audit.py --report /tmp/publication-dag.json
+          test "$(grep -c 'id=\"pass-5420-5427-apartment-duality\"' docs/index.html)" -eq 1
+          git diff --check
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+      - name: Compile all three canonical manuscripts
+        run: |
+          mkdir -p evidence/pass5420_5427
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass5420_5427/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
+            > evidence/pass5420_5427/pdf_sha256.txt
+      - name: Commit deterministic homepage materialization if changed
+        run: |
+          if git diff --quiet -- docs/index.html; then
+            echo 'Homepage card already materialized.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/index.html
+          git commit -m 'Materialize Pass5420-5427 apartment duality card [skip ci]'
+          git push
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass5420-5427-apartment-duality
+          path: evidence/pass5420_5427/**

@@ -1,0 +1,35 @@
+name: W33 Pass5380-5387 site materializer
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/PASS5380_5387_index_insert.html'
+      - 'tools/materialize_pass5380_5387_distance_radius9.py'
+      - 'docs/pass5380-5387-distance-radius9-projectors.html'
+      - '.github/workflows/w33_pass5380_5387_site.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Materialize homepage card
+        run: python tools/materialize_pass5380_5387_distance_radius9.py
+      - name: Commit deterministic homepage mirrors if changed
+        run: |
+          if git diff --quiet -- docs/index.html index.html; then
+            echo 'Pass5380-5387 card already materialized.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/index.html index.html
+          git commit -m 'Materialize Pass5380-5387 distance/radius9 card'
+          git push

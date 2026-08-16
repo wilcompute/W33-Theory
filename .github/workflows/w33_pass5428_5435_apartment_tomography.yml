@@ -1,0 +1,93 @@
+name: W33 Pass5428-5435 apartment tomography packet
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5428_allq_oriented_apartment_tomography.py'
+      - 'analysis/w33_pass5429_allq_unsigned_apartment_inverse_conditioning.py'
+      - 'analysis/w33_pass5430_q3_radius10_false_vote4_frontier.py'
+      - 'analysis/w33_pass5430_q3_v3_direction_cap_certificate.py'
+      - 'analysis/w33_pass5431_allodd_modular_footprint_defect_exact_sequence.py'
+      - 'analysis/w33_pass5432_q5_K0_postminimum_hamming_gap.py'
+      - 'analysis/w33_pass5433_allq_orientation_spectral_purifier.py'
+      - 'analysis/w33_pass5434_allq_unsigned_apartment_determinant.py'
+      - 'analysis/w33_pass5435_allq_unsigned_apartment_characteristic_polynomial.py'
+      - 'analysis/PASS5428_5435_apartment_tomography_modular_gap_insert.tex'
+      - 'analysis/PASS5428_5435_apartment_tomography_index_insert.html'
+      - 'data/w33_publication_frontier_contract_v2.json'
+      - 'tests/test_w33_pass5428_5435_packet.py'
+      - '.github/workflows/w33_pass5428_5435_apartment_tomography.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  replay-publish-compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install test dependencies
+        run: python -m pip install --upgrade pip pytest numpy scipy networkx
+      - name: Replay theorem producers
+        run: |
+          python analysis/w33_pass5428_allq_oriented_apartment_tomography.py
+          python analysis/w33_pass5429_allq_unsigned_apartment_inverse_conditioning.py
+          python analysis/w33_pass5430_q3_v3_direction_cap_certificate.py
+          python analysis/w33_pass5430_q3_radius10_false_vote4_frontier.py
+          python analysis/w33_pass5431_allodd_modular_footprint_defect_exact_sequence.py
+          python analysis/w33_pass5432_q5_K0_postminimum_hamming_gap.py
+          python analysis/w33_pass5433_allq_orientation_spectral_purifier.py
+          python analysis/w33_pass5434_allq_unsigned_apartment_determinant.py
+          python analysis/w33_pass5435_allq_unsigned_apartment_characteristic_polynomial.py
+      - name: Focused regression
+        run: python -m pytest -q tests/test_w33_pass5428_5435_packet.py
+      - name: Materialize homepage card and audit publication DAG
+        run: |
+          python tools/integrate_bt3376_bt3389.py --report /tmp/public-integration.json
+          python analysis/w33_pass5364_publication_dag_audit.py --report /tmp/publication-dag.json
+          test "$(grep -c 'id=\"pass-5428-5435-apartment-tomography\"' docs/index.html)" -eq 1
+          git diff --check
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+      - name: Compile canonical manuscripts
+        run: |
+          mkdir -p evidence/pass5428_5435
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass5428_5435/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass5428_5435/pdf_sha256.txt
+      - name: Freeze generated certificates and homepage materialization
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            data/PART_W33_PASS5428_ALLQ_ORIENTED_APARTMENT_TOMOGRAPHY.json \
+            data/PART_W33_PASS5429_ALLQ_UNSIGNED_APARTMENT_INVERSE_CONDITIONING.json \
+            data/PART_W33_PASS5430_Q3_V3_DIRECTION_CAP.json \
+            data/PART_W33_PASS5430_Q3_GLOBAL_EVENTUAL_RADIUS10.json \
+            data/PART_W33_PASS5431_ALLODD_MODULAR_FOOTPRINT_DEFECT_EXACT_SEQUENCE.json \
+            data/PART_W33_PASS5432_Q5_K0_POSTMINIMUM_HAMMING_GAP.json \
+            data/PART_W33_PASS5433_ALLQ_ORIENTATION_SPECTRAL_PURIFIER.json \
+            data/PART_W33_PASS5434_ALLQ_UNSIGNED_APARTMENT_DETERMINANT.json \
+            data/PART_W33_PASS5435_ALLQ_UNSIGNED_APARTMENT_CHARACTERISTIC_POLYNOMIAL.json \
+            docs/index.html
+          if git diff --cached --quiet; then
+            echo 'Generated certificates and homepage already materialized.'
+          else
+            git commit -m 'Freeze Pass5428-5435 certificates and homepage card [skip ci]'
+            git push
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass5428-5435-apartment-tomography
+          path: evidence/pass5428_5435/**

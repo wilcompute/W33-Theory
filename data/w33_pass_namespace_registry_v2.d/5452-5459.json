@@ -1,0 +1,20 @@
+{
+  "schema":"w33.pass_namespace_registry.v2.entry",
+  "range":[5452,5459],
+  "slug":"q5_exotic26_radius11_closure_frame_lattice_next",
+  "title":"q5 exotic26 near-clique classification, radius11 exhaustive closure attempt, apartment basis index geometry, and independent probes",
+  "status":"RESERVED",
+  "owner":"openai-gpt56-sol",
+  "reserved_at":"2026-08-15",
+  "passes":{
+    "5452":"reserved: q5 R1 near-clique structural bound for 26-block weight1040 supports",
+    "5453":"reserved: q5 exact exotic26 support MILP/orbit classification",
+    "5454":"reserved: q5 local weight40 syndrome feasibility on surviving exotic26 supports",
+    "5455":"reserved: q3 radius11 V3 exhaustive completion/census",
+    "5456":"reserved: q3 radius11 V4 exact pruned decoder census or orbit reduction",
+    "5457":"reserved: apartment basis lattice-index one census/structural criterion",
+    "5458":"reserved: full-frame determinant/Pell critical-group bridge probe",
+    "5459":"reserved: independent outside-box synthesis after live results"
+  },
+  "boundary":"Reservation only. No weight1040/radius11 closure is asserted until exact computation completes."
+}

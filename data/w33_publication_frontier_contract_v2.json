@@ -13,26 +13,14 @@
   },
   "public_index": "docs/index.html",
   "local_public_sections": [
-    {
-      "kind": "id",
-      "token": "pass-5364-5371-publication-dag-integrity",
-      "source": "analysis/PASS5364_5371_publication_integrity_index_insert.html"
-    },
-    {
-      "kind": "id",
-      "token": "pass-5388-5395-allq-levi-flag-hodge",
-      "source": "analysis/PASS5388_5395_allq_levi_flag_hodge_index_insert.html"
-    },
-    {
-      "kind": "id",
-      "token": "pass-5396-5403-allq-apartment-tight-frame",
-      "source": "analysis/PASS5396_5403_allq_apartment_tight_frame_index_insert.html"
-    },
-    {
-      "kind": "id",
-      "token": "pass-5404-5411-allq-unsigned-apartment-spectrum",
-      "source": "analysis/PASS5404_5411_allq_unsigned_apartment_spectrum_index_insert.html"
-    }
+    {"kind":"id","token":"pass-5364-5371-publication-dag-integrity","source":"analysis/PASS5364_5371_publication_integrity_index_insert.html"},
+    {"kind":"id","token":"pass-5388-5395-allq-levi-flag-hodge","source":"analysis/PASS5388_5395_allq_levi_flag_hodge_index_insert.html"},
+    {"kind":"id","token":"pass-5396-5403-allq-apartment-tight-frame","source":"analysis/PASS5396_5403_allq_apartment_tight_frame_index_insert.html"},
+    {"kind":"id","token":"pass-5404-5411-allq-unsigned-apartment-spectrum","source":"analysis/PASS5404_5411_allq_unsigned_apartment_spectrum_index_insert.html"},
+    {"kind":"id","token":"pass-5420-5427-apartment-duality","source":"analysis/PASS5420_5427_apartment_duality_index_insert.html"},
+    {"kind":"id","token":"pass-5428-5435-apartment-tomography","source":"analysis/PASS5428_5435_apartment_tomography_index_insert.html"},
+    {"kind":"id","token":"pass-5436-5443-bicycle-apartment-scheme","source":"analysis/PASS5436_5443_bicycle_apartment_scheme_index_insert.html"},
+    {"kind":"id","token":"pass-5444-5451-frame-basis-pell-radius11","source":"analysis/PASS5444_5451_index_insert.html"}
   ],
   "boundary": "This contract certifies nested publication reachability, uniqueness, shared-tail consolidation, and public materialization only. It does not certify mathematical, hardware, laboratory, empirical, or physical claims."
 }

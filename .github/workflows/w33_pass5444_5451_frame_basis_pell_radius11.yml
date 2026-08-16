@@ -1,0 +1,90 @@
+name: W33 Pass5444-5451 frame basis Pell radius11
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5444_allq_apartment_basis_volume_budget.py'
+      - 'analysis/w33_pass5445_q3_redundancy_conditioning_tradeoff.py'
+      - 'analysis/w33_pass5446_allodd_footprint_double_quotient_ladder.py'
+      - 'analysis/w33_pass5447_q5_K0_weight1040_support_reduction.py'
+      - 'analysis/w33_pass5448_q3_radius11_frontier_reduction.py'
+      - 'analysis/w33_pass5449_allq_apartment_lattice_index_sum_squares.py'
+      - 'analysis/w33_pass5450_unsigned_gram_pell_square_class.py'
+      - 'analysis/w33_pass5451_pell_weil_clock_compatibility.py'
+      - 'analysis/PASS5444_5451_frame_basis_pell_radius11_insert.tex'
+      - 'analysis/PASS5444_5451_index_insert.html'
+      - 'tests/test_w33_pass5444_5451_packet.py'
+      - 'data/w33_publication_frontier_contract_v2.json'
+      - '.github/workflows/w33_pass5444_5451_frame_basis_pell_radius11.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  replay-publish-compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip pytest numpy scipy networkx
+      - name: Replay theorem producers
+        run: |
+          python analysis/w33_pass5444_allq_apartment_basis_volume_budget.py
+          python analysis/w33_pass5445_q3_redundancy_conditioning_tradeoff.py
+          python analysis/w33_pass5446_allodd_footprint_double_quotient_ladder.py
+          python analysis/w33_pass5447_q5_K0_weight1040_support_reduction.py
+          python analysis/w33_pass5448_q3_radius11_frontier_reduction.py
+          python analysis/w33_pass5449_allq_apartment_lattice_index_sum_squares.py
+          python analysis/w33_pass5450_unsigned_gram_pell_square_class.py
+          python analysis/w33_pass5451_pell_weil_clock_compatibility.py
+      - name: Focused regression
+        run: python -m pytest -q tests/test_w33_pass5444_5451_packet.py
+      - name: Materialize homepage card and audit publication DAG
+        run: |
+          python tools/integrate_bt3376_bt3389.py --report /tmp/public-integration.json
+          python analysis/w33_pass5364_publication_dag_audit.py --report /tmp/publication-dag.json
+          test "$(grep -c 'id=\"pass-5444-5451-frame-basis-pell-radius11\"' docs/index.html)" -eq 1
+          git diff --check
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+      - name: Compile canonical manuscripts
+        run: |
+          mkdir -p evidence/pass5444_5451
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass5444_5451/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass5444_5451/pdf_sha256.txt
+      - name: Freeze generated certificates and homepage materialization
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            data/PART_W33_PASS5444_ALLQ_APARTMENT_BASIS_VOLUME_BUDGET.json \
+            data/PART_W33_PASS5445_Q3_REDUNDANCY_CONDITIONING_TRADEOFF.json \
+            data/PART_W33_PASS5446_ALLODD_FOOTPRINT_DOUBLE_QUOTIENT_LADDER.json \
+            data/PART_W33_PASS5447_Q5_K0_WEIGHT1040_SUPPORT_REDUCTION.json \
+            data/PART_W33_PASS5448_Q3_RADIUS11_FRONTIER_REDUCTION.json \
+            data/PART_W33_PASS5449_ALLQ_APARTMENT_LATTICE_INDEX_SUM_SQUARES.json \
+            data/PART_W33_PASS5450_UNSIGNED_GRAM_PELL_SQUARE_CLASS.json \
+            data/PART_W33_PASS5451_PELL_WEIL_CLOCK_COMPATIBILITY.json \
+            docs/index.html
+          if git diff --cached --quiet; then
+            echo 'Generated certificates and homepage already materialized.'
+          else
+            git commit -m 'Freeze Pass5444-5451 certificates and homepage card [skip ci]'
+            git push
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass5444-5451-frame-basis-pell-radius11
+          path: evidence/pass5444_5451/**

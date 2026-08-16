@@ -3,9 +3,29 @@
   "range":[5348,5355],
   "slug":"post5339_code_geometry_frontier",
   "title":"Post-5339 code-geometry continuation",
-  "status":"RESERVED",
+  "status":"EXECUTED_Q11_DISTANCE_AND_ALLODD_RANK_CLOSED_HOFFMAN_CLEAN_SAT_PENDING",
   "owner":"openai-gpt56-sol",
   "reserved_at":"2026-08-15T00:25:00-04:00",
-  "purpose":"Continue the unresolved Hoffman shortening, q11 dual-shell, all-odd footprint-rank, extraspecial-group, and K0 orbital-algebra fronts, plus three finite-geometry probes.",
-  "boundary":"Do not promote open distance or all-odd statements without certificates; preserve characteristic-zero versus characteristic-two distinctions."
+  "closed_at":"2026-08-15T01:02:00-04:00",
+  "artifacts":[
+    "data/PART_W33_PASS5348_5355_RESULTS.json",
+    "analysis/w33_pass5348_hoffman_fullcode_xorsat.py",
+    "analysis/w33_pass5348b_q5_hull_distance_xorsat.py",
+    "analysis/w33_pass5348c_q5_hull_no5_graph_code.py",
+    "analysis/w33_pass5349_q11_dual20_doublecover_xorsat.py",
+    "analysis/w33_pass5350_allodd_binary_gram_radical.py",
+    "analysis/w33_pass5350b_allodd_footprint_chain_complex.py",
+    "analysis/w33_pass5351_5352_hoffman_pauli_latin_symplectic_spread.py",
+    "analysis/w33_pass5353_k0_central_idempotent_tight_frames.py",
+    "analysis/w33_pass5354_q11_cyclic_cayley_dual20_search.py",
+    "analysis/w33_pass5354b_q11_mod4_twofactor_cayley_search.py",
+    "analysis/w33_pass5355_q11_dual20_orbit_moment_closer.py",
+    "analysis/PASS5348_5355_q11_homology_pauli_tightframe_hoffman_insert.tex",
+    "tests/test_w33_pass5348_5355_packet.py",
+    ".github/workflows/w33_pass5348_5355_packet.yml",
+    ".github/workflows/w33_pass5348_5355_explorer.yml",
+    "docs/pass5348-5355-q11-homology-pauli.html"
+  ],
+  "outcomes":"Constructive q11 dual20 shell K10,10+C10+(C5+C5) and exact pair-orbital moment closure C_F(q11)=[7381,671,121]_2; all-odd footprint rank/kernel/K0 generation closed by parallel Pass5376 and reinterpreted as a two-periodic binary chain complex whose point homology C_W/C_W^perp has dimension q^2+1; explicit Hoffman extraspecial real-Pauli presentation and Latin 3-isotropic+2-nonisotropic spread split; seven q5 K0 central-idempotent tight frames; q5 footprint hull identified with the binary adjacency code of NO_5^+(5)=srg(325,144,68,60); exact Hoffman and hull SAT models committed but clean UNSAT replay still queued.",
+  "boundary":"q11 distance121 and all-odd rank are theorems. Hoffman shortened d remains in {28,32,36,40} until an actual UNSAT replay completes; the NO_5^+(5) graph-code identity does not alone determine its minimum distance. No physical qubit/topological/hardware interpretation is claimed from the finite-group and homological structures."
 }

@@ -1,0 +1,28 @@
+{
+  "pass": 5381,
+  "status": "COMPUTATIONAL_THEOREM_Q3_RADIUS9_FALSE_VOTE4_SECTOR_CLEARS",
+  "fixed_false_center": 0,
+  "local_3+2+2+2_cases": 64,
+  "echo_plus_outsider_cases": 25584,
+  "total_cases": 25648,
+  "decoder_status_counts": {"clear": 25648},
+  "status_by_kind": {
+    "local_3+2+2+2": {"clear": 64},
+    "echo_plus_outsider": {"clear": 25584}
+  },
+  "max_sweeps": 5,
+  "trace_histogram": {
+    "9/8/9/1/0": 23856,
+    "9/10/8/7/1/0": 1536,
+    "9/10/8/4/0": 192,
+    "9/10/4/0": 64
+  },
+  "first_nonclear_witness": null,
+  "globality": "Apartment transitivity maps any false center to z=0, so this is the exact global classification of the weight-nine false-vote V=4 sector.",
+  "local_rom": {
+    "weight2_masks_voting_false_center": [[1,2],[3,4]],
+    "weight3_masks_voting_false_center": [[1,4,5],[2,3,5]]
+  },
+  "conclusion": "Every weight-nine error admitting a false candidate with maximal possible vote V=4 still clears under the deterministic provenance decoder. The dominant continuation of the radius-eight echo is 9->8->9->1->0.",
+  "boundary": "V=1,2,3 false-candidate sectors at weight9 remain open; no global guaranteed radius9 claim is made."
+}

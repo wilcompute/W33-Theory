@@ -1,0 +1,133 @@
+\ifdefined\WPassFiveFourThreeSixLoaded\else
+\gdef\WPassFiveFourThreeSixLoaded{1}
+\subsection*{Passes 5436--5443: bicycle filtration, apartment orbitals, Tanner fusion, and minimum apartment bases}
+
+For odd $q$, Pass5426 identifies the Levi bicycle space as the amalgam
+\[
+ \mathrm{Bike}=P_g+L_g,\qquad P_g\cap L_g=\langle J\rangle,
+ \qquad \dim\mathrm{Bike}=2g-1=q(q^2+1)-1.
+\]
+At $q=3$, combine this with the characteristic-two filtration from Pass5068:
+$\dim P_{15}=15$, $J<L_9<L_{15}$ with dimensions $1<9<15$, and
+$W_{23}=P_{15}+L_9$.  Since $P_{15}\cap L_{15}=J$, also
+$P_{15}\cap L_9=J$, and therefore the previously separate pieces lock into the
+exact filtration
+\[
+ \boxed{0<J<P_{15}<W_{23}<\mathrm{Bike}_{29}}
+\]
+with dimensions $0,1,15,23,29$.  Its successive quotient dimensions are
+\[
+ \boxed{1,\ 14,\ 8,\ 6},
+\]
+namely $P_{15}/J$ has dimension $14$,
+$W_{23}/P_{15}\cong L_9/J$ has dimension $8$, and
+$\mathrm{Bike}_{29}/W_{23}\cong L_{15}/L_9$ has dimension $6$.  These are
+quotient-dimension statements; no new irreducibility assertion is made.
+
+The apartment-overlap fusion from Pass5422 is not itself an association scheme.
+A direct construction of $PSp(4,3)$ from symplectic transvections gives order
+$25920$, acting transitively on the $1620$ apartments with stabilizer $H$ of
+order $16$.  The $H$-orbits on apartments give the exact Schurian orbital
+coherent configuration.  Its rank is
+\[
+ \boxed{131},
+\]
+with orbital-size census
+\[
+ 1^2,\qquad 2^3,\qquad 4^{17},\qquad 8^{25},\qquad 16^{84}.
+\]
+There are $25$ self-transpose orbitals and $53$ directed transpose pairs.  The
+five proper overlap sizes split as follows: overlap $4$ refines into three
+orbitals of sizes $4,4,8$; overlap $3$ into two size-$16$ orbitals; overlap $2$
+into nine orbitals with sizes $4^2,8^3,16^4$; overlap $1$ into eighteen
+size-$16$ orbitals; and the disjoint relation into ninety-eight orbitals with
+sizes $1,2^3,4^{13},8^{21},16^{60}$.  The complete intersection tensor has
+$159065$ nonzero structure constants; its canonical sparse encoding has SHA-256
+\texttt{868ffd6ea89ab41b95557cdd97b4ffca6198771238a0bb0f8c006974c7885b19}.
+The resulting $131$-dimensional orbital algebra has exact center dimension
+\[
+ \boxed{17}
+\]
+and center codimension $114$.  Thus a five-class Bose--Mesner eigenmatrix is not
+the correct object here; the exact refinement is noncommutative and rank $131$.
+
+The overlap-$4$ fusion nevertheless has a clean all-$q$ graph theorem.  Let
+$\mathcal G_4$ have the apartments of a finite $GQ(q,q)$ as vertices, joining
+two apartments when their intersection is a four-edge geodesic.  Pass5422 gives
+regular degree $8(q-1)$.  Pass5079 already proves that the apartment/theta
+Tanner graph has $T(q)(q-2)$ six-cycles.  Combining the two statements yields
+an edge-regular decomposition: every edge of $\mathcal G_4$ lies in exactly
+\[
+ \boxed{q-1}
+\]
+triangles, consisting of one theta-check triangle and $q-2$ common-root/Tanner
+triangles.  Hence
+\[
+ \#\triangle(\mathcal G_4)=T(q)(q-1).
+\]
+At $q=3$ this gives a $16$-regular graph on $1620$ apartments, two triangles
+through every edge, $4320$ theta triangles, $4320$ root/Tanner triangles, and
+$8640$ triangles total.  The 131-orbital refinement above shows why this
+edge-regular graph must not be promoted to a strongly regular graph.
+
+There is also an exact cardinality-optimal sparse apartment basis for every
+$GQ(q,q)$.  Root the Levi graph and choose a BFS geodesic spanning tree.  Its
+diameter is four and its girth is eight.  For every cotree edge, the fundamental
+cycle has length at most eight; since it is nonzero, girth forces its length to
+be exactly eight.  Thus every cotree fundamental cycle is an apartment.  The
+number of cotree edges is the Levi cycle rank
+\[
+ E-(V-1)=q^4,
+\]
+so these apartments form a basis of $H_1$:
+\[
+ \boxed{\text{a minimum apartment basis has exactly }q^4\text{ apartments}.}
+\]
+At $q=3$ this compresses the full $1620$-apartment frame to an exact
+$81$-apartment basis.
+
+The same basis exposes the critical group.  If $F$ is any integral fundamental
+cycle matrix, Cauchy--Binet gives
+\[
+ \det(F^{\mathsf T}F)=\tau(\Gamma),
+\]
+because its nonzero maximal minors are $\pm1$ and are indexed by complements of
+spanning trees.  For the Levi graph of $GQ(q,q)$, writing
+\[
+ f=\frac{q(q+1)^2}{2},\qquad g=\frac{q(q^2+1)}2,
+\]
+the Levi Laplacian spectrum gives
+\[
+ \boxed{\tau(\Gamma)=(q^2+1)^{f-1}(q+1)^{2g}}.
+\]
+At $q=3$ this is $2^{83}5^{23}$, exactly the tree order already frozen in
+Pass5031.  For the deterministic root-$0$ BFS basis used in the exact replay,
+the $81\times81$ Gram characteristic polynomial factors as
+\[
+\boxed{
+ (x-160)(x-40)^4(x-4)^{12}(x-1)^{28}
+ (x^2-17x+40)^{12}(x^2-8x+10)^6 }.
+\]
+Thus that literal basis has smallest Gram eigenvalue $1$, largest $160$, and
+singular condition number $\sqrt{160}$, while its Gram determinant again equals
+$2^{83}5^{23}$.
+
+Finally, the order-$16$ apartment stabilizer has a sharp fixed-apartment
+fingerprint.  Besides the identity fixing all $1620$ apartments, three
+involutions fix $108$ apartments each, four involutions fix $24$ each, four
+order-$4$ elements fix $12$ each, and four order-$4$ elements fix only two each.
+Burnside therefore gives
+\[
+ 1620+3(108)+4(24)+4(12)+4(2)=2096=16\cdot131,
+\]
+independently recovering the $131$ stabilizer orbits.
+
+\paragraph{Evidence firewall.}
+Pass5079, not this packet, owns the all-$q$ Tanner-six-cycle theorem.  This
+packet supplies the overlap-$4$ edge-regular corollary and an independent
+geometric reconciliation.  The five overlap sizes are explicitly not claimed
+to form an association scheme.  No physical threshold, code-distance,
+strong-regularity, irreducibility, optimal conditioning, or broad priority
+claim follows from these finite calculations.  Remote workflow success is
+reported only when a completed GitHub Actions run is actually observed.
+\fi

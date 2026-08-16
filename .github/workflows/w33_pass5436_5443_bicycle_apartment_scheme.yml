@@ -1,0 +1,76 @@
+name: W33 Pass5436-5443 bicycle apartment scheme
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5436_5443_bicycle_apartment_scheme_packet.py'
+      - 'data/PART_W33_PASS5436_5443_BICYCLE_APARTMENT_SCHEME.json'
+      - 'analysis/PASS5436_5443_bicycle_apartment_scheme_insert.tex'
+      - 'analysis/PASS5436_5443_bicycle_apartment_scheme_index_insert.html'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/w33_publication_frontier_contract_v2.json'
+      - 'tests/test_w33_pass5436_5443_bicycle_apartment_scheme.py'
+      - '.github/workflows/w33_pass5436_5443_bicycle_apartment_scheme.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  replay-publish-compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      PYTHONINTMAXSTRDIGITS: '20000'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact replay dependencies
+        run: python -m pip install --disable-pip-version-check numpy sympy pytest
+      - name: Rebuild exact Pass5436-5443 certificate
+        run: |
+          mkdir -p evidence/pass5436_5443
+          python analysis/w33_pass5436_5443_bicycle_apartment_scheme_packet.py \
+            | tee evidence/pass5436_5443/replay.json
+      - name: Focused exact regressions
+        run: |
+          pytest -q tests/test_w33_pass5436_5443_bicycle_apartment_scheme.py \
+            tests/test_w33_pass5420_5427_apartment_duality_packet.py \
+            tests/test_w33_pass5364_5371_publication_dag.py
+      - name: Materialize public frontier and audit recursive publication DAG
+        run: |
+          python tools/integrate_bt3376_bt3389.py --report evidence/pass5436_5443/public-integration.json
+          python analysis/w33_pass5364_publication_dag_audit.py --report evidence/pass5436_5443/publication-dag.json
+          test "$(grep -c 'id=\"pass-5436-5443-bicycle-apartment-scheme\"' docs/index.html)" -eq 1
+          git diff --check
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+      - name: Compile all three canonical manuscripts
+        run: |
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass5436_5443/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
+            > evidence/pass5436_5443/pdf_sha256.txt
+      - name: Commit deterministic homepage materialization if changed
+        run: |
+          if git diff --quiet -- docs/index.html; then
+            echo 'Homepage card already materialized.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/index.html
+          git commit -m 'Materialize Pass5436-5443 bicycle apartment scheme card [skip ci]'
+          git push
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass5436-5443-bicycle-apartment-scheme
+          path: evidence/pass5436_5443/**

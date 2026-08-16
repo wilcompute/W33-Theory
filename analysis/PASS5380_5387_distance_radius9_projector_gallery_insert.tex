@@ -1,0 +1,62 @@
+% Pass5380--5387: distance-filtered q5 code tower, q3 radius nine,
+% characteristic-two connected-L projectors, all-odd gauge sequence,
+% and three structural consequences.
+
+\subsection*{Pass5380--5387 frontier: filtered code tower, radius nine, and modular projectors}
+
+At $q=5$ the apartment code, its zero-footprint kernel, and the point-footprint quotient form the exact sequence
+\[
+0\longrightarrow K_0\longrightarrow C_A\longrightarrow C_F\longrightarrow0
+\]
+with
+\[
+C_A=[73125,625,625]_2,\qquad
+K_0=[73125,560,1000]_2,\qquad
+C_F=[325,65,25]_2.
+\]
+Their complete minimum shells have $936$, $2340$, and $156$ words, respectively.  Thus every apartment-code word of weight below $1000$ has nonzero point footprint.  This statement synthesizes the previously proved q5 distance, zero-footprint block-distance, and minimum-shell certificates; it is not a new all-$q$ distance claim.
+
+For the deterministic qutrit-building hard-decision decoder at $q=3$, the eventual guaranteed radius is now nine.  Fixing a false candidate by apartment transitivity, the false-vote sectors satisfy: $V=1$ and $V=2$ are excluded by exact mixed-integer feasibility tests; the $V=3$ sector leaves exactly $32$ rooted candidates, all clearing as
+\[
+9\to10\to1\to0;
+\]
+and all $25648$ rooted $V=4$ configurations clear as well.  Therefore every weight-nine error either makes a nonempty true-only first correction and enters the certified radius-eight basin, or lies in one of these finite false-survivor families and self-heals.  The monotone true-only guarantee remains radius seven, because the known weight-eight echo family intentionally makes a false first correction.
+
+The connected opposite-line chart graph at $q=5$ also admits exact characteristic-two primary projectors.  Its binary adjacency operator $A_L$ has minimal polynomial
+\[
+x^3(x+1)^4.
+\]
+Since $(x+1)^4=x^4+1$ over $\mathbb F_2$, the generalized one- and zero-primary projectors are simply
+\[
+P_1=A_L^4,\qquad P_0=I+A_L^4,
+\]
+with ranks $6034$ and $3716$.  These scalar projectors do not undo the previously certified failure of the naive ten-channel lift $A_L\otimes I_{10}$; rather, any correct twisted channel transport must be compatible with this primary decomposition after channel coordinates are forgotten.
+
+The parallel all-odd footprint theorem now upgrades the parity bridge to the exact sequence
+\[
+0\longrightarrow D_q=K_0\longrightarrow C_A\longrightarrow C_F\longrightarrow0
+\]
+for every odd prime power $q$, with
+\[
+\dim C_A=q^4,\qquad
+\dim C_F=\frac{q(q^2+1)}2,\qquad
+\dim D_q=\frac{q(q-1)(2q^2+q+1)}2.
+\]
+Consequently the remaining all-odd apartment-distance problem is no longer a footprint-rank problem: it is a Hamming-weight problem inside $D_q$ and its nonzero footprint cosets.
+
+Three further structural consequences emerge.  First, the multiplicity-one $65_a$ central idempotent of the q5 $K_0$ minimum-shell orbital algebra reconstructs the base geometry internally: quotienting the $2340$ shell words by their $15$-fold duplicate relation leaves $156$ vectors, with $30$ vectors at inner product $-1/5$ and $125$ at $+1/25$ from each vector.  Declaring the $-1/5$ relation adjacent recovers exactly $\operatorname{SRG}(156,30,4,6)=W(3,5)$.
+
+Second, if $c_1,\ldots,c_k$ are $k$ consecutive chambers of an apartment, then for $1\le k\le5$
+\[
+\left|\bigcap_{i=1}^k \operatorname{Star}(c_i)\right|=q^{5-k},
+\]
+so the exact consecutive-gallery tower is
+\[
+q^4,\ q^3,\ q^2,\ q,\ 1.
+\]
+The $k=5$ step follows directly from the generalized-quadrangle projection axiom, which uniquely closes the remaining two apartment edges.  This is the rigorous power-drop structure behind the earlier derivative analogy; the calculus coefficients themselves are not part of the theorem.
+
+Third, on each q5 point footprint the restricted zero-footprint kernel is $\mathbb F_2^4$.  Translating the six chamber-star restrictions by one chosen star gives a six-element set whose fifteen unordered pair differences are all fifteen nonzero vectors.  Hence every point fiber carries a $(16,6,2)$ difference set and therefore a symmetric $2$-$(16,6,2)$ development.
+
+\paragraph{Open solver boundary.}
+The Hoffman-13 shortened code remains $[312,52,d]_2$ with $d\in\{28,32,36,40\}$ until the exact full-code XOR--SAT replay terminates.  Pass5383 encodes an injective $52$-bit generator, all $312$ coordinate XOR equations, a nonzero-message condition, and Hamming weight at most $39$.  UNSAT would prove $d=40$; SAT must instead be frozen as an explicit verified sub-$40$ witness.  No $d=40$ claim is made before that solver evidence exists.

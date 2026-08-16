@@ -1,0 +1,176 @@
+\ifdefined\WPassFiveFourTwoZeroLoaded\else
+\gdef\WPassFiveFourTwoZeroLoaded{1}
+\subsection*{Passes 5420--5427: complementary Hodge frames, apartment intersections, footprint bicycles, and the discrete $q^4$ derivative}
+
+Let $\Gamma$ be the Levi graph of a generalized quadrangle $\operatorname{GQ}(q,q)$, let $X=L(\Gamma)$ be its flag line graph, and write
+\[
+ N=(q+1)^2(q^2+1),\qquad h=q^4,\qquad r=N-q^4=2(q+1)(q^2+1)-1.
+\]
+Passes 5388--5409 identified the terminal flag idempotent
+\[
+ E=\frac{q^4A_0-q^3A_1+q^2A_2-qA_3+A_4}{N}
+\]
+as the orthogonal projector onto the $h$-dimensional Levi cycle space.
+
+\paragraph{Pass 5420: the all-$q$ complementary cut frame.}
+The normalized rows of $E$ form a unit-norm tight frame with Gram matrix
+\[
+ G_{\rm cyc}=\frac{N}{q^4}E,
+ \qquad
+ \langle x_e,x_f\rangle=\left(-\frac1q\right)^{d_X(e,f)}.
+\]
+The Naimark-complement projector $I-E$ has constant diagonal $r/N$, so its normalized rows form a second unit-norm tight frame,
+\[
+ G_{\rm cut}=\frac{N}{r}(I-E).
+\]
+For distinct flags at distance $d=1,2,3,4$,
+\[
+ \boxed{\langle y_e,y_f\rangle=\frac{(-1)^{d+1}q^{4-d}}{r}}.
+\]
+The pair satisfies the exact weighted complement identity
+\[
+ \boxed{\frac{q^4}{N}G_{\rm cyc}+\frac{r}{N}G_{\rm cut}=I_N}.
+\]
+At $q=3$ this recovers the frozen BT549 cut-frame inner products
+\[
+ 1,\quad \frac{27}{79},\quad-\frac9{79},\quad\frac3{79},\quad-\frac1{79}.
+\]
+The Naimark-complement language is standard frame theory; the statement here is the exact generalized-quadrangle Hodge specialization.
+
+\paragraph{Pass 5421: the canonical $H_1$--footprint exact sequence.}
+Pass5066 gives the apartment/theta presentation
+\[
+ 0\longrightarrow\Theta\longrightarrow\mathbb F_2^{\mathcal A}
+ \stackrel{\partial}{\longrightarrow}H_1(\Gamma;\mathbb F_2)\longrightarrow0.
+\]
+Since the binary apartment code is $C_A=\Theta^\perp$, dualizing identifies it canonically and equivariantly with $H_1(\Gamma;\mathbb F_2)^*$.  For odd prime powers, Pass5384 gives
+\[
+ 0\longrightarrow D_q\longrightarrow C_A\longrightarrow C_F\longrightarrow0,
+\]
+where $\dim C_F=g=q(q^2+1)/2$.  Hence
+\[
+ \boxed{0\longrightarrow D_q\longrightarrow H_1^*\longrightarrow C_F\longrightarrow0},
+\]
+and dualizing once more gives
+\[
+ \boxed{0\longrightarrow C_F^*\longrightarrow H_1\longrightarrow D_q^*\longrightarrow0}.
+\]
+Thus the all-odd footprint quotient is a canonical quotient of the dual Levi cycle module, and its dual is a canonical submodule of Levi $H_1$.  No unproved self-duality identification of $C_F$ with $C_F^*$ is used here.
+
+\paragraph{Pass 5422: the all-$q$ apartment-intersection profile.}
+Two distinct apartments cannot meet in two disconnected edge intervals: otherwise their symmetric difference would contain at least two cycles whose total length is $<16$, contradicting Levi girth eight.  Thus every nonempty proper intersection is one path.  If the common path had at least five edges, the two complementary paths would form a cycle of length at most six.  Therefore a proper nonempty apartment intersection is exactly one consecutive flag-edge path of length $j\in\{1,2,3,4\}$.
+
+Let $T_j=q^{5-j}$ be the Pass5386 number of apartments through a fixed consecutive $j$-edge path, and let $a_j$ be the number of other apartments whose exact intersection with a fixed apartment is a specified $j$-edge path.  Since a fixed $j$-path is contained in exactly $k-j+1$ of the $k$-paths of the base apartment,
+\[
+ T_j=1+\sum_{k=j}^4(k-j+1)a_k.
+\]
+Back-substitution yields
+\[
+ a_4=q-1,\qquad
+ a_3=(q-1)^2,\qquad
+ a_2=q(q-1)^2,\qquad
+ a_1=q^2(q-1)^2.
+\]
+There are eight cyclic paths of each length, so for a fixed apartment the numbers of distinct partners meeting it in $j$ edges are
+\[
+ \boxed{n_4=8(q-1),\quad n_3=8(q-1)^2,\quad n_2=8q(q-1)^2,\quad n_1=8q^2(q-1)^2},
+\]
+with $n_0=Nq^4/8-1-n_1-n_2-n_3-n_4$.  Independent projective-polarity enumerations at $q=2,3,5$ give respectively
+\[
+ (n_0,n_1,n_2,n_3,n_4)=(25,32,16,8,8),
+\]
+\[
+ (1187,288,96,32,16),
+\]
+and
+\[
+ (69124,3200,640,128,32).
+\]
+The middle line is exactly the frozen BT546 W33 census.
+
+For oriented apartment columns $c_A$, the sign products are constant along a common path, hence
+\[
+ |\langle c_A,c_B\rangle|=|A\cap B|.
+\]
+After unit normalization by $\|c_A\|=\sqrt8$, the full apartment frame has absolute inner products
+\[
+ 0,\ \frac18,\ \frac14,\ \frac38,\ \frac12,
+\]
+so its coherence is exactly $1/2$, independently of $q$.
+
+\paragraph{Pass 5423: exact unsigned visibility conditioning.}
+For the unsigned apartment-incidence matrix $B$, Pass5404 gives five positive eigenvalues of $BB^T$.  The maximum is
+\[
+ \lambda_{\max}=8q^4,
+\]
+and the minimum is the terminal value
+\[
+ \boxed{\lambda_{\min}=(q-1)^2(q^2+1)}.
+\]
+The only nontrivial comparison is against
+$2q^2(q-1)(q+1-\sqrt{2q})$.  After isolating the radical, squaring leaves
+\[
+ (q^2+1)(q^4-2q^3+6q^2-2q+1)>0,
+\]
+whose quartic equals $q^2(q-1)^2+5q^2-2q+1>0$ for $q>1$.  Consequently
+\[
+ \boxed{\kappa(BB^T)=\frac{8q^4}{(q-1)^2(q^2+1)}\longrightarrow8},
+\]
+while the singular-value condition number is
+\[
+ \boxed{\kappa_2(B)=\frac{\sqrt8\,q^2}{(q-1)\sqrt{q^2+1}}\longrightarrow\sqrt8}.
+\]
+At $q=3$, $\kappa(BB^T)=81/5$.  This statement concerns the full incidence operator, not arbitrary sparse hardware submatrices.
+
+\paragraph{Pass 5425, outside box: the derivative resemblance becomes an exact finite difference.}
+The gallery tower from Pass5386 is
+\[
+ I_1=q^4,\quad I_2=q^3,\quad I_3=q^2,\quad I_4=q,\quad I_5=1.
+\]
+Therefore the user's observation that $4q^3$ resembles $d(q^4)/dq$ is the leading term of the exact identity
+\[
+ \boxed{(q+1)^4-q^4=4I_2+6I_3+4I_4+I_5}
+ =4q^3+6q^2+4q+1.
+\]
+The binomial coefficients $(4,6,4,1)$ weight successive gallery-intersection levels.  This is a discrete-combinatorial identity, not a differential equation in the field-size parameter.
+
+\paragraph{Pass 5426, outside box: the footprint code is the point half of the Levi bicycle space.}
+Now assume $q$ odd and let $M$ be the binary point--line incidence matrix.  Write $D$ for the binary vertex--flag incidence matrix of the Levi graph.  Since every Levi vertex has even degree $q+1$,
+\[
+ DD^T=\begin{pmatrix}0&M\\M^T&0\end{pmatrix}\pmod2.
+\]
+For $x\in\ker M^T=C_W^\perp=C_F$, define the flag vector
+\[
+ (\iota_Px)_{(p,L)}=x_p.
+\]
+It is a cut because it is the coboundary of the point-supported vertex function $x$, and it is a cycle because $M^Tx=0$ while $(q+1)x_p=0$ in characteristic two.  Thus
+\[
+ \boxed{C_F\hookrightarrow \operatorname{im}D^T\cap\ker D}
+\]
+is the canonical point-half bicycle embedding.  Dually, $\ker M$ gives a line-supported kernel copy; this is only an incidence-dual copy and is not promoted as an $L$-footprint tensor.
+
+Both kernels have dimension $g=q(q^2+1)/2$.  Their flag images meet in the all-ones flag vector $J$, because the only kernel of $D^T$ on the connected Levi vertex space is the global all-ones vertex vector.  Hence
+\[
+ \boxed{\mathrm{Bike}=P_g+L_g,\qquad P_g\cap L_g=\langle J\rangle,\qquad
+ \dim\mathrm{Bike}=2g-1=q(q^2+1)-1}.
+\]
+At $q=3$ this gives $P_{15}$ and $\mathrm{Bike}_{29}$ exactly, identifying the Pass5068 point half with the already-proved $[40,15,8]_2$ footprint code.  At $q=5$ it predicts the exact bicycle dimension $129$ from two $65$-dimensional halves meeting in $J$.
+
+\paragraph{Pass 5427, outside box: an orthogonal two-design decomposition of the regular simplex.}
+Let $P_0=J/N$, $P_{\rm cyc}=E$, and
+\[
+ P_{\rm cut,0}=I-P_0-P_{\rm cyc}.
+\]
+These are mutually orthogonal projectors of ranks
+\[
+ 1,\qquad q^4,\qquad r-1,
+\]
+and $q^4+(r-1)=N-1$.  Both nonconstant projectors have constant diagonal.  Their normalized row projections are centered unit-norm tight frames, hence spherical $2$-designs.  If $G_{\rm cut,0}$ is the centered-cut unit Gram and $G_{\rm simplex}=\frac{N}{N-1}(I-J/N)$ is the unit regular-simplex Gram, then
+\[
+ \boxed{\frac{q^4}{N-1}G_{\rm cyc}+\frac{r-1}{N-1}G_{\rm cut,0}=G_{\rm simplex}}.
+\]
+Thus the flag regular simplex splits orthogonally into its Hodge-cycle design and its nonconstant cut design.  At $q=3$, the $160$ simplex vertices decompose into dimensions $81$ and $78$.
+
+\paragraph{Evidence and prior-art firewall.}
+The flag association scheme itself is prior art, and Naimark complements and spherical-design consequences of centered tight frames are standard frame theory.  Generalized-quadrangle tight-frame constructions also exist in the literature.  The claims promoted here are the exact all-$q$ Hodge-complement formulas, the apartment-intersection census, the conditioning theorem, the all-odd footprint/bicycle identification, and their exact W33 regressions.  No new optimal spherical-code, contextuality-degree, apartment-code-distance, or physical-noise theorem is inferred.
+\fi
