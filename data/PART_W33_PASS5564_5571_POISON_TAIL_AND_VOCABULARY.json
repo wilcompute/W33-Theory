@@ -1,0 +1,83 @@
+{
+  "boundary": "Pass 5566's triage is a 20-file hand-read extrapolated to 536; the estimate carries that sample's error. Pass 5567 verifies ARITHMETIC only -- two identifications in the same chain have already needed correction. Pass 5565 measures the poison tail and does NOT choose a threshold. alpha(W(3,9)) with the clique formulation was still running when this pass was written",
+  "pass_5564": {
+    "direction": "flags a NEW key one edit from an existing one at write time, rather than translating old names together after a collision has cost something",
+    "floor": "stems of four characters; q, mu, k invisible",
+    "selftest_green": true,
+    "tool": "scripts/check_key_nearmiss.py"
+  },
+  "pass_5565": {
+    "above_p95": 252,
+    "actionable": "yes, by density; threshold NOT chosen here",
+    "max": 511239,
+    "median_ints": 40,
+    "of": 5047,
+    "p95": 377,
+    "token_share_pct": 56
+  },
+  "pass_5566": {
+    "correction": "Pass 5562's 536 was a population bound; the triage it was owed puts the real figure nearer 187",
+    "estimated_gate_population": 187,
+    "q3_only_tested": 7,
+    "q3_only_total": 536,
+    "q3_specific": 13,
+    "sample": 20
+  },
+  "pass_5567": {
+    "3456_expressions": [
+      "96*36",
+      "576*6",
+      "8*432",
+      "24^2*6"
+    ],
+    "all_arithmetic_ok": true,
+    "caveat": "arithmetic holds; identifications are separate claims and two needed correction -- F4 roots 48 not 96 (Pass 5509), and 96 vs 576 polytope-vs-configuration (Pass 5510)",
+    "chain": [
+      [
+        "Q4 faces",
+        24,
+        null,
+        null
+      ],
+      [
+        "tomotope/Reye |Aut|",
+        96,
+        "x4",
+        96
+      ],
+      [
+        "|W(F4)|",
+        1152,
+        "x12",
+        1152
+      ],
+      [
+        "24-cell |Aut|",
+        1152,
+        "same",
+        1152
+      ],
+      [
+        "K12 constant 3456",
+        3456,
+        "x3 = q",
+        3456
+      ]
+    ]
+  },
+  "pass_5568": {
+    "certificate_guard_pct": 60,
+    "prose_guard_pct": 44,
+    "reading": "the twice-calibrated grammar fires 16 points less often; that gap is what calibration buys"
+  },
+  "pass_5569": {
+    "alias_entries": 13,
+    "status": "kept, documented as a known-collision patch and not a mechanism"
+  },
+  "pass_5570": {
+    "certificates": 5047,
+    "distinct_int_keys": 26693,
+    "implication": "a result is searchable only if two authors spell it the same way; here they systematically do not. No key-name index closes this -- the names are the problem",
+    "new_keys_per_certificate": 5.3
+  }
+}

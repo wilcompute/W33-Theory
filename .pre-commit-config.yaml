@@ -224,6 +224,12 @@ repos:
         language: system
         files: ^(analysis|scripts)/.*[.](py|md|tex)$
         pass_filenames: true
+      - id: key-nearmiss
+        name: a new certificate key must not near-miss an existing one
+        entry: py -3 scripts/check_key_nearmiss.py
+        language: system
+        files: ^data/.*[.]json$
+        pass_filenames: true
       - id: certificate-rediscovery
         name: a certificate result must be looked up before it is claimed new
         entry: py -3 scripts/check_certificate_rediscovery.py
