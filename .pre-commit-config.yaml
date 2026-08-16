@@ -224,6 +224,12 @@ repos:
         language: system
         files: ^(analysis|scripts)/.*[.](py|md|tex)$
         pass_filenames: true
+      - id: order-coincidence
+        name: an order match is not an identification (check the element-order spectrum)
+        entry: py -3 scripts/check_order_coincidence.py
+        language: system
+        files: ^(analysis|scripts)/.*[.](py|md|tex)$
+        pass_filenames: true
       - id: spectral-overreach
         name: spectral bound must not be said to DETERMINE a combinatorial quantity
         entry: py -3 scripts/check_spectral_overreach.py

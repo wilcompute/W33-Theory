@@ -1,0 +1,18 @@
+WF4 := GO(1,4,3);;
+pts := NormedRowVectors(GF(3)^4);;
+orbs := Orbits(WF4, pts, OnLines);;
+Sp43 := Sp(4,3);;
+sorb := Orbits(Sp43, pts, OnLines);;
+q := InvariantQuadraticForm(WF4).matrix;;
+sing := Filtered(pts, v -> IsZero(v * q * v));;
+repo := GAPInfo.SystemEnvironment.W33_REPO;;
+f := OutputTextFile(Concatenation(repo, "/data/_gap_wf4orb.json"), false);;
+SetPrintFormattingStatus(f, false);;
+AppendTo(f, "{");
+AppendTo(f, " \"n_projective_points\": ", Length(pts), ",");
+AppendTo(f, " \"WF4_orbit_sizes\": ", List(orbs, Length), ",");
+AppendTo(f, " \"Sp43_orbit_sizes\": ", List(sorb, Length), ",");
+AppendTo(f, " \"singular_points_of_quadric\": ", Length(sing), ",");
+AppendTo(f, " \"nonsingular\": ", Length(pts) - Length(sing));
+AppendTo(f, "}");
+CloseStream(f);;

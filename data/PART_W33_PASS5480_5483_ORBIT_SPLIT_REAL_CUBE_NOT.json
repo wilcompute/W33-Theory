@@ -1,0 +1,59 @@
+{
+  "boundary": "Pass 5480 refutes BT159's identification using BT159's OWN published element-order distribution; that pass is flagged to its lane, not edited. Pass 5482's orbit split is a GAP computation. Pass 5483 rejects Q4 for the 16-orbit under the INDUCED W(3,3) collinearity -- some other structure on those points is not ruled out. The |Aut| = 96 coincidence with the tomotope order is explicitly NOT claimed",
+  "pass_5480": {
+    "bt159_spectrum": {
+      "1": 1,
+      "12": 384,
+      "2": 27,
+      "3": 80,
+      "4": 84,
+      "6": 432,
+      "8": 144
+    },
+    "identical": false,
+    "source": "BT159's own generated_order_distribution field",
+    "verdict": "BT159's pocket is NOT W(F4); same order, different group",
+    "wf4_spectrum": {
+      "1": 1,
+      "12": 96,
+      "2": 139,
+      "3": 80,
+      "4": 228,
+      "6": 464,
+      "8": 144
+    }
+  },
+  "pass_5481": {
+    "GL43_order": 24261120,
+    "GO4plus3_inside_Sp43": false,
+    "GO4plus3_is_subgroup_of_GL43": true,
+    "WF4_in_GL43": true,
+    "classes_iso_WF4_in_GL43": 1,
+    "classes_order_1152_in_GL43": 7
+  },
+  "pass_5482": {
+    "Sp43_orbit_sizes": [
+      40
+    ],
+    "WF4_orbit_sizes": [
+      12,
+      12,
+      16
+    ],
+    "n_projective_points": 40,
+    "nonsingular": 24,
+    "reading": "W(F4) decomposes the 40 points 16+12+12 while Sp(4,3) is transitive; a map, not a number. 16 = |V(Q4)|, 24 = faces(Q4) = vertices of the 24-cell",
+    "singular_points_of_quadric": 16
+  },
+  "pass_5483": {
+    "aut_order": 96,
+    "complement_isomorphic_to_Q4": false,
+    "induced_edges": 48,
+    "induced_regular": [
+      6
+    ],
+    "isomorphic_to_Q4": false,
+    "not_claimed": "the |Aut| = 96 match with the tomotope group order",
+    "verdict": "right size, wrong structure -- the hypercube reading of the 16-orbit fails"
+  }
+}
