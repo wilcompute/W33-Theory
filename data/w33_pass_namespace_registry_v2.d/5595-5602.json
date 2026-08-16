@@ -1,0 +1,20 @@
+{
+  "schema":"w33.pass_namespace_registry.v2.entry",
+  "range":[5595,5602],
+  "slug":"projectivity_frame_closure_and_toe_probes",
+  "title":"Projectivity-frame closure plus three falsifiable TOE probes",
+  "status":"RESERVED_AND_ACTIVE",
+  "owner":"openai-gpt5.6-sol",
+  "reserved_at":"2026-08-15",
+  "passes":{
+    "5595":"general-q automorphism group candidate and exact small-q checks",
+    "5596":"q=3 Reye versus Klein-V4/13-cover action intertwiner test",
+    "5597":"extension-field q=9 and q=25 projectivity-frame replay",
+    "5598":"projectivity-frame versus W(3,q) footprint module map/separation",
+    "5599":"centered-frame coherent configuration and q=3 collapse",
+    "5600":"TOE probe: causal/light-cone dynamics from permutation-frame channels",
+    "5601":"TOE probe: information/entropy invariant from frame and code ranks",
+    "5602":"TOE probe: spectral-action style observable test against all-q invariants"
+  },
+  "boundary":"Reservation only. Each pass must retain a theorem/evidence firewall and may end negative. No physical claim is certified by finite-geometry coincidence alone."
+}
