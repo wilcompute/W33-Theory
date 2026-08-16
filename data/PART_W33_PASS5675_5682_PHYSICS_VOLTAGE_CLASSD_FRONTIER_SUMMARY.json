@@ -1,0 +1,62 @@
+{
+  "schema": "w33.pass5675_5682.physics_voltage_classd_frontier.v1",
+  "pass_range": [5675, 5682],
+  "status": "EIGHT_RESULTS_FROZEN__CONNECTED_REFINEMENT_EXISTS_BUT_BALANCED_SIGNATURE_AND_PHYSICAL_METRIC_REMAIN_OPEN",
+  "5675": {
+    "status": "FULL_EQUIVARIANT_CLASS_D_CONE_IS_HERM2_WITH_ONE_CONTINUOUS_RATIO_AFTER_SCALE",
+    "normal_form": "H_X = I_A tensor X direct-sum I_Abar tensor (-conj X), X Hermitian 2x2",
+    "spectrum": "lambda1^4 + lambda2^4 + (-lambda1)^4 + (-lambda2)^4",
+    "annihilator": "H^4-(lambda1^2+lambda2^2)H^2+(lambda1^2 lambda2^2)I=0",
+    "conclusion": "Carrier symmetry fixes fourfold degeneracy but leaves one continuous dimensionless two-level ratio after removing overall scale."
+  },
+  "5676": {
+    "status": "EXACT_GAUGE_INVARIANT_FIBER_COLLISION_PROJECTOR_SEPARATES_36_PLUS_9",
+    "collision": "C(T)=sum_b binom(n_b,2)=(||n||^2-3)/2",
+    "horizontal36": 0,
+    "vertical9": 3,
+    "projectors": "P_H=I-C/3, P_V=C/3",
+    "conclusion": "A hard-core/fiber-locality rule removes the bad9 exactly, but it is additional physics rather than a consequence of gauge symmetry."
+  },
+  "5677": {
+    "status": "INFINITE_CONNECTED_BINARY_VOLTAGE_TOWER_EXISTS_FROM_FRESH_LEVI_H1_CLASSES",
+    "base": "Levi V=80 E=160 beta1=81 degree4",
+    "closed_forms": "V_n=80*2^n, E_n=160*2^n, beta1_n=1+80*2^n",
+    "conclusion": "The Pass5629 disconnection came from reusing one pulled-back class; a fresh nonzero H1 class at every level gives an indefinitely connected tower."
+  },
+  "5678": {
+    "status": "CONNECTED_SINGLE_CHORD_TOWER_HAS_EXACT_2LIFT_SPECTRAL_SPLIT_BUT_A_VANISHING_BOTTLENECK",
+    "spectrum_identity": "spec(A_lift)=spec(A_base) union spec(A_signed)",
+    "distinct_counts_depth0_to4": [5, 13, 29, 61, 125],
+    "bottleneck": "single negative chord gives two cross-sheet edges; next combinatorial gap <=4/N_base",
+    "conclusion": "Connectivity is insufficient for a continuum; viable refinement needs balanced voltage signatures with controlled new spectrum."
+  },
+  "5679": {
+    "status": "ONE_SECTION_COMPLEX_PARENT_SPLITS_EXACTLY_INTO_REAL_EVEN_AND_IMAGINARY_CLASSD_ODD_SECTORS",
+    "reconstruction": "H32=[[A,conj A],[conj A,A]]",
+    "even": "H_+=2 Re A",
+    "odd": "H_-=2 i Im A",
+    "feshbach": "H_eff(E)=A+conj(A)(E-A)^(-1)conj(A)",
+    "conclusion": "The old section matrix is a complex parent coordinate containing both intrinsic parity sectors once its conjugate sheet is restored."
+  },
+  "5680": {
+    "status": "EQUIVARIANT_DECK16_CLASSD_PFAFFIAN_INDEX_IS_TRIVIAL_ACROSS_ALL_GAPPED_SIGNATURE_COMPONENTS",
+    "general": "|Pf(S)|=|lambda1 lambda2|^4",
+    "magnetic": "Pf(S_mag)=-(3*6)^4=-104976 in the canonical deck ordering",
+    "conclusion": "Fourfold carrier degeneracy makes the 0D class-D Z2 bit identical on positive-definite, indefinite and negative-definite multiplicity components."
+  },
+  "5681": {
+    "status": "VERTICAL_BAD9_IS_1_PLUS_IRREDUCIBLE8_BUT_FULL_AFFINE_SYMMETRY_FORBIDS_AN_SU3_LIE_BRACKET",
+    "group": "AGL(2,3), order432",
+    "site_module": "C^9=1+V8 with V8 irreducible",
+    "cycle_module": "Z1(K9) ~= Lambda^2 V8, dimension28",
+    "bracket": "dim Hom_G(Lambda^2 V8,V8)=0",
+    "conclusion": "The structural 1+8+28 gauge-complex pattern is real, but the dimension-eight match does not support an SU(3)-adjoint/eight-gluon identification under full affine symmetry."
+  },
+  "5682": {
+    "status": "COVER_TOWER_PRESERVES_GRAPH_CAUSAL_CONE_BUT_LEAVES_PHYSICAL_SPEED_CALIBRATION_FREE",
+    "graph_speed": "at most one edge per nearest-neighbor tick on every cover level",
+    "physical_speed": "c_n=ell_n/tau_n",
+    "conclusion": "Cover topology fixes neither physical edge length nor tick duration; node count enlarges state space but does not determine the SI speed of light."
+  },
+  "boundary": "All promoted claims are finite representation, bundle-projection, graph-cover, spectral, Pfaffian, cochain, or causal-scaling identities. No Standard Model mass assignment, SU(3) gauge derivation, interacting topological phase, continuum Weyl law, Lorentz invariance theorem, physical value of c, or unique balanced refinement tower is claimed."
+}
