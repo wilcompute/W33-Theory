@@ -1,3 +1,6 @@
+import os
+from pathlib import Path
+os.chdir(Path(__file__).resolve().parent)  # Pass 5548: JSONs opened by bare filename
 \
 import json, numpy as np, itertools, random
 from collections import deque, defaultdict

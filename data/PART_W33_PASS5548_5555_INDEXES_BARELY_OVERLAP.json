@@ -1,0 +1,61 @@
+{
+  "boundary": "Pass 5548 compares token SETS between two indexes with deliberately different grammars; disjointness measures the grammars as much as the corpora. Pass 5550's collision rate is over 12 hand-chosen closed forms from this thread, not a corpus census. Pass 5551 patches three ARCHIVED verifiers and does NOT wire the certificate index into check_rediscovery",
+  "pass_5548": {
+    "certificate_only": 132239,
+    "certificate_tokens": 132276,
+    "reading": "the certificates were an unindexed half of the corpus, not a duplicate view; but disjointness at this scale means different grammars, not 132,239 new results",
+    "results_index_tokens": 11762,
+    "shared": 37
+  },
+  "pass_5549": {
+    "alpha_18_indexed": true,
+    "alpha_exact_7_indexed": true,
+    "limit": "the index cannot know that two passes calling one quantity by two key names mean the same thing",
+    "my_error": "queried alpha_exact@18; the token is alpha@18"
+  },
+  "pass_5550": {
+    "conclusion": "internal collisions are rare even at q=3; the eight coincidences chased were substrate quantities against OUTSIDE objects, which no internal measurement bounds",
+    "pairs": 66,
+    "quantities": [
+      "AB_class",
+      "affine",
+      "flags",
+      "hoffman",
+      "hyperplane",
+      "linedeg",
+      "lines",
+      "nonsing_half",
+      "points",
+      "ptdeg",
+      "q_squared",
+      "quadric"
+    ],
+    "ratio_q3_to_q5": 2.0,
+    "rows": [
+      {
+        "collisions": 2,
+        "pairs": 66,
+        "q": 3
+      },
+      {
+        "collisions": 1,
+        "pairs": 66,
+        "q": 5
+      },
+      {
+        "collisions": 1,
+        "pairs": 66,
+        "q": 7
+      }
+    ]
+  },
+  "pass_5551": {
+    "all_archived": true,
+    "guard_wiring": "NOT done -- needs a second lookup table and a grammar-precedence decision; recorded as open",
+    "patched": [
+      "CE2_OUTER_TWIST_TO_WEIL_BRIDGE_BUNDLE_v01/verify_bridge.py",
+      "SP43_TO_WE6_TRUE_FIXED_BUNDLE_v01_2026-02-25/verify_bundle.py",
+      "WE6_to_PSp43_WORD_LIFT_BUNDLE_v01 (1)/verify_word_lift.py"
+    ]
+  }
+}

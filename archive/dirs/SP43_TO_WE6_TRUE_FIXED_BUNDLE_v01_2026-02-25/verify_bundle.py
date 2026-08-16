@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+import os
+from pathlib import Path
+os.chdir(Path(__file__).resolve().parent)  # Pass 5548: JSONs opened by bare filename
 import json, math
 import numpy as np
 from collections import Counter, deque
