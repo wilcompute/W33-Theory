@@ -1,0 +1,84 @@
+% Passes 5683--5690: Ramanujan refinement, affine orientation and the vertical su(3).
+\subsection{Ramanujan refinement, affine orientation, and the vertical eight}
+
+The W33 point--line Levi graph is four-regular and bipartite with exact spectrum
+\[
+ \pm4^1\oplus\pm\sqrt6^{24}\oplus0^{30}.
+\]
+Since $\sqrt6<2\sqrt3$, it is Ramanujan.  The bipartite Ramanujan $2$-lift theorem of Marcus--Spielman--Srivastava therefore yields an existential infinite four-regular Ramanujan $2$-lift tower rooted at this Levi graph, with all nontrivial adjacency eigenvalues bounded by $2\sqrt3$ and hence Laplacian gap at least $4-2\sqrt3$.  An explicit first signing with eighty negative incidences and negative degree two at every Levi vertex has signed spectral radius $3.283768875\ldots<2\sqrt3$, so its $160$-vertex lift is connected and Ramanujan.  This replaces the sparse single-chord bottleneck by a genuine uniform-gap refinement theorem, while leaving the subsequent signings noncanonical.
+
+For the $E_6$ cubic split, the same-fiber collision observable
+\[
+ C(T)=\sum_b\binom{n_b(T)}2
+\]
+satisfies $C=0$ on all thirty-six horizontal affine lifts and $C=3$ on all nine vertical full fibers.  Thus the normalized observable is exactly the old firewall deletion mask,
+\[
+ \delta_{\rm fw}(T)=C(T)/3,
+ \qquad
+ l_{2,\rm fw}=l_{2,\rm other}+(I-C/3)l_{2,\rm cubic}.
+\]
+The support projector is therefore identical to the support shadow of the $L_\infty$ firewall deformation.  The full Jacobiator is not simply $C$, because nested $l_2$ compositions generate retained/deleted cross terms.
+
+The stabilizer-equivariant deck-odd Hamiltonian cone remains four-real-dimensional before geometric constraints.  Requiring the exact intrinsic magnetic zero pattern reduces it to dimension two; additionally requiring equal absolute magnitude on all sixty surviving bonds leaves exactly two real projective rays.  Both have fourfold spectrum
+\[
+ -2a,\ -a,\ a,\ 2a,
+\]
+and therefore
+\[
+ \boxed{|\lambda_{\rm high}/\lambda_{\rm low}|=2}.
+\]
+Thus the ratio two is not fixed by carrier symmetry alone, but it is fixed by carrier symmetry together with magnetic locality and flat bond magnitude.  A discrete two-ray sign/chirality ambiguity remains, and no physical particle assignment or energy scale is inferred.
+
+The nine vertical fibers carry the affine site permutation module
+\[
+ \mathbb C^9=\mathbf1\oplus V_8.
+\]
+For the full affine group $AGL(2,3)$ one has
+\[
+ \operatorname{Hom}_{AGL(2,3)}(\Lambda^2V_8,V_8)=0.
+\]
+However, the unique index-two orientation-preserving affine subgroup
+\[
+ ASL(2,3)=\mathbb F_3^2\!:\!SL(2,3),\qquad |ASL(2,3)|=216,
+\]
+has
+\[
+ \dim\operatorname{Hom}_{ASL(2,3)}(\Lambda^2V_8,V_8)=1.
+\]
+Writing
+\[
+ \phi(x,y,z)=\operatorname{sgn}_3\det(y-x,z-x),
+\]
+the bracket defined on the zero-sum site module by
+\[
+ \langle[f,g],h\rangle
+ =\sum_{x,y,z}\phi(x,y,z)f(x)g(y)h(z)
+\]
+is $ASL(2,3)$-equivariant.  Integer verification gives exact Jacobi identity and Killing form
+\[
+ \boxed{K=-54I_8}.
+\]
+Hence, up to overall bracket scale, this is the compact $A_2$ algebra
+\[
+ \boxed{V_8\cong\mathfrak{su}(3)}.
+\]
+Determinant-reversing affine transformations reverse the bracket sign.  The statement is therefore conditional on choosing affine orientation/chirality; it does not by itself derive QCD, a Yang--Mills action, or a gauge coupling.
+
+The Ramanujan tower also sharpens the spacetime boundary.  If $N_n=N_0 2^n$ cells are assumed to refine a fixed $d$-dimensional physical volume, preserving one causal conversion $c=\ell/\tau$ requires
+\[
+ \ell_{n+1}/\ell_n=\tau_{n+1}/\tau_n=2^{-1/d}.
+\]
+But a Ramanujan tower is a uniform expander, so its raw graph metric has nonvanishing macroscopic conductance rather than the shrinking boundary/volume behavior of a local fixed-dimensional manifold refinement.  The cover tower is therefore naturally an internal routing/state refinement unless an additional local embedding metric is supplied.
+
+Two further boundaries are exact.  Ordinary fermionic antisymmetry on the full twenty-seven resolved fiber modes does not kill a vertical support, since
+\[
+ e_{b,0}\wedge e_{b,1}\wedge e_{b,2}\ne0;
+\]
+only the additional one-occupancy-per-fiber hard-core quotient makes it vanish.  Finally, normalized traceless multiplicity Hamiltonians form a synthetic Bloch sphere.  The full negative-energy rank-eight deck bundle has
+\[
+ \boxed{|c_1|=8},
+\]
+a Berry invariant of the Hamiltonian-parameter sphere rather than a momentum-space Chern phase or particle-count statement.
+
+\paragraph{Evidence boundary.}
+The promoted statements are finite graph-spectrum, representation, Lie-bracket, support-projector, exterior-algebra, Berry-bundle, and conditional metric/clock-scaling results.  General Ramanujan $2$-lift theory, expander theory, compact Lie-algebra classification, and historical Hessian/$SU(3)$ finite-group structure are prior art.  No Standard-Model mass assignment, physical gluon identification, Yang--Mills coupling, absolute energy scale, Lorentz-invariant spacetime limit, physical value of $c$, dynamical orientation selector, or canonical explicit infinite signing sequence is claimed.
