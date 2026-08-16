@@ -1,0 +1,91 @@
+name: W33 Pass5683-5690 physics Ramanujan SU3 frontier
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5683_*'
+      - 'analysis/w33_pass5684_*'
+      - 'analysis/w33_pass5685_*'
+      - 'analysis/w33_pass5686_*'
+      - 'analysis/w33_pass5687_*'
+      - 'analysis/w33_pass5688_*'
+      - 'analysis/w33_pass5689_*'
+      - 'analysis/w33_pass5690_*'
+      - 'analysis/PASS5683_5690_*'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'tests/test_w33_pass5683_5690_physics_ramanujan_su3.py'
+      - 'data/w33_pass_namespace_registry_v2.d/5683-5690.json'
+      - 'data/w33_publication_frontier_contract_v2.json'
+      - '.github/workflows/w33_pass5683_5690_physics_ramanujan_su3.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  replay-publish-compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 80
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip numpy pytest
+
+      - name: Replay Pass5683-5690
+        run: python analysis/w33_pass5683_5690_runner.py
+
+      - name: Focused regression
+        run: python -m pytest -q tests/test_w33_pass5683_5690_physics_ramanujan_su3.py
+
+      - name: Materialize homepage and audit publication DAG
+        run: |
+          python tools/integrate_bt3376_bt3389.py --report /tmp/public-integration.json
+          python analysis/w33_pass5364_publication_dag_audit.py --report /tmp/publication-dag.json
+          test "$(grep -c 'id=\"pass-5683-5690-physics-ramanujan-su3-frontier\"' docs/index.html)" -eq 1
+          git diff --check
+
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+
+      - name: Compile canonical manuscripts
+        run: |
+          mkdir -p evidence/pass5683_5690
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass5683_5690/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass5683_5690/pdf_sha256.txt
+
+      - name: Freeze regenerated certificates and homepage
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            data/PART_W33_PASS5683_BALANCED_RAMANUJAN_LEVI_LIFTS.json \
+            data/PART_W33_PASS5684_COLLISION_LINFINITY_SUPPORT_WELD.json \
+            data/PART_W33_PASS5685_DECK16_LOCAL_FLATBOND_RATIO2.json \
+            data/PART_W33_PASS5686_ASL23_SU3_BRACKET.json \
+            data/PART_W33_PASS5687_METRIC_CLOCK_EXPANDER_NO_SPACETIME.json \
+            data/PART_W33_PASS5688_BALANCED_SIGNING_SEARCH_VS_RANDOM.json \
+            data/PART_W33_PASS5689_FERMIONIC_EXTERIOR_COLLISION_BOUNDARY.json \
+            data/PART_W33_PASS5690_DECK16_SYNTHETIC_BERRY_CHERN8.json \
+            docs/index.html
+          if git diff --cached --quiet; then
+            echo 'Certificates and homepage already materialized.'
+          else
+            git commit -m 'Freeze Pass5683-5690 certificates and homepage [skip ci]'
+            git push
+          fi
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass5683-5690-physics-ramanujan-su3
+          path: evidence/pass5683_5690/**
