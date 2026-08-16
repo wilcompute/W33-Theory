@@ -87,12 +87,11 @@ def main():
         u=((y[0]-x[0])%3,(y[1]-x[1])%3);v=((z[0]-x[0])%3,(z[1]-x[1])%3)
         phi[i,j,k]=sgn(u[0]*v[1]-u[1]*v[0])
     assert np.max(abs(phi+phi.swapaxes(0,1)))==0
-    assert set(phi.sum(axis=2))=={0}
+    assert np.max(abs(phi.sum(axis=2)))==0
 
     GASL=perms(SL);assert len(GASL)==216
     for g in GASL:
         assert np.array_equal(phi,phi[np.ix_(g,g,g)])
-    # any determinant-two linear map reverses the orientation tensor
     A2=next(A for A in GL if det(A)==2);g=perms([A2])[0]
     assert np.array_equal(phi,-phi[np.ix_(g,g,g)])
 
