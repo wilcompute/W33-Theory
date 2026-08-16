@@ -1,0 +1,92 @@
+{
+  "boundary": "Pass 5540's index covers data/*.json integer leaves under named keys; string, ratio and structural results are invisible to it. Pass 5541 patches one verifier and reports two archived ones unpatched. Pass 5542's count is of coincidences THIS THREAD tested, not of the corpus",
+  "pass_5540": {
+    "effect": "alpha_exact@18 -- Pass 4800's value -- is now searchable",
+    "grammar": "key@value for integer leaves under a nameable key",
+    "index": "CERTIFICATE_RESULTS_INDEX.md",
+    "stdout": [
+      "certificates read : 5,044",
+      "  distinct tokens   : 132,276",
+      "  unique to one     : 117,156",
+      "  wrote CERTIFICATE_RESULTS_INDEX.md"
+    ],
+    "why_separate": "RESULTS_INDEX's grammar was calibrated on prose and code at Pass 328 and re-measured at Pass 1073; numeric certificates would repeat that mistake"
+  },
+  "pass_5541": {
+    "lesson": "a bundle that looks broken from the repo root is a bundle nobody re-runs; SP43 was correct and unrunnable for months",
+    "remaining_traps": [
+      "archive/dirs/CE2_OUTER_TWIST_TO_WEIL_BRIDGE_BUNDLE_v01/verify_bridge.py",
+      "archive/dirs/SP43_TO_WE6_TRUE_FIXED_BUNDLE_v01_2026-02-25/verify_bundle.py",
+      "archive/dirs/WE6_to_PSp43_WORD_LIFT_BUNDLE_v01 (1)/verify_word_lift.py"
+    ],
+    "sp43_patched": true
+  },
+  "pass_5542": {
+    "coincidences": [
+      {
+        "claim": "-1/q^2 is the noncollinear inner product",
+        "killed_by": "H(3,9), another carrier",
+        "pass": 5341
+      },
+      {
+        "claim": "-1/(H-1) is the general form",
+        "killed_by": "Paley graphs",
+        "pass": 5374
+      },
+      {
+        "claim": "16 = |V(Q4)| in the orbit split",
+        "killed_by": "q=5,7 give 36,64",
+        "pass": 5484
+      },
+      {
+        "claim": "48 flags = W(F4)'s 48 roots",
+        "killed_by": "q=5 gives 360 flags",
+        "pass": 5495
+      },
+      {
+        "claim": "21 line-degree = Csaszar/Szilassi E=21",
+        "killed_by": "sequence 3,10,21",
+        "pass": 5502
+      },
+      {
+        "claim": "the 27 = the cubic surface's 27 lines",
+        "killed_by": "not Schlafli; |Aut| 1296 vs 51840",
+        "pass": 5526
+      },
+      {
+        "claim": "affine 9+9+9 is a pattern",
+        "killed_by": "q^2 vs q^2(q-1)/2, equal only at q=3",
+        "pass": 5532
+      },
+      {
+        "claim": "the 9s are the tetracode",
+        "killed_by": "not closed under span",
+        "pass": 5535
+      }
+    ],
+    "killed_by_another_q_or_carrier": 6,
+    "killed_by_structure": 2,
+    "reading": "the dominant failure mode is that q=3 is small enough for unrelated quantities to collide",
+    "total": 8
+  },
+  "pass_5543": {
+    "a": 1296,
+    "b": 1152,
+    "equal": false,
+    "gcd": 144,
+    "verdict": "not the same number; no test needed"
+  },
+  "pass_5544": {
+    "method": "survivors were established by isomorphism or by another q; casualties were integers matching at q=3",
+    "n_coincidences": 8,
+    "n_survived": 6,
+    "survived": [
+      "W(F4) acts on W(3,q)'s points, orbits partition as (q+1)^2 + (q^3-q)/2 twice",
+      "the tomotope's medial layer embeds in W(3,3), verified by isomorphism",
+      "that construction is a uniform family at q = 3,5,7",
+      "the 13-cover stabiliser IS W(F4), by IsomorphismGroups",
+      "its S_13 image IS AutPar(Klein V4), by IsomorphismGroups",
+      "alpha(W(3,q)) = q^2+1 for even q, constructed to q=256"
+    ]
+  }
+}
