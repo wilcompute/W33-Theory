@@ -1,18 +1,18 @@
 # CERTIFICATE RESULTS INDEX
 
-Built from 5,044 certificates in `data/` by `scripts/build_certificate_index.py`.
+Built from 5,046 certificates in `data/` by `scripts/build_certificate_index.py`.
 
 Tokens are `key@value` for integer leaves under a nameable key. Bare integers, schema fields and tokens appearing in more than 25 certificates are dropped -- a token in half the corpus is a schema field, not a finding. See the script's header for why this is separate from `RESULTS_INDEX.md`.
 
-- distinct result tokens: **132,276**
-- appearing in exactly one certificate: **117,156**
+- distinct result tokens: **132,253**
+- appearing in exactly one certificate: **117,136**
 
 | token | certificates |
 | --- | --- |
+| `aut@4` | `PART_3989_3990_3994_3996_PHOTON_INCIDENCE_ECHO_CLOCK.json`, `PART_4057_4064_ADVANCED_PHYSICS.json`, `PART_W33_PASS4714_DUALSHELL_GQ42_DESIGN.json`, `PART_W33_PASS5105_U81_DUAL_TORSOR_CONTROLLER.json`, `bt1363_q4_clock_tomotope_medial_descent.json`, `bt1487_v4_triangle_stabilizer_classifier.json` *(+19)* |
 | `degree@15` | `PART_4081_4088_DEEP_PHYSICS.json`, `PART_BT1173_S6_SP42_NATURALITY_results.json`, `PART_BT3528_BT3534_BOREL_STAR_MOORE_FUNCTOR_TRANSPLANT_results.json`, `PART_W33_PASS4554_LOCAL_BASIS_EXCHANGE_ENSEMBLE.json`, `PART_W33_PASS4589_APARTMENT_SELECTED_SINGULAR_GRAPH.json`, `PART_W33_PASS4596_HOLONET_ROUTING_FALSIFIER.json` *(+19)* |
 | `denominator@2` | `dcclxxiv_closure_transfer_resolvent_equivalence_bridge.json`, `dcclxxv_photonic_retry_closure_kernel_bridge.json`, `dccxl_closure_jordan_resolvent_bridge.json`, `dccxl_closure_transfer_generator_bridge.json`, `dccxli_closure_resolvent_kernel_bridge.json`, `dccxlii_closure_jordan_residue_bridge.json` *(+19)* |
 | `level@6` | `bt1034_higher_derivative_residual_resolution.json`, `bt1299_harmonic_microframe_runtime.json`, `bt1300_oscillator_instruction_isa.json`, `bt1303_holonet_stack_contract.json`, `bt1305_mirror_bus_queueing_law.json`, `bt1312_recursive_pulse_energy_scaling.json` *(+19)* |
-| `order@4` | `PART_3989_3990_3994_3996_PHOTON_INCIDENCE_ECHO_CLOCK.json`, `PART_4057_4064_ADVANCED_PHYSICS.json`, `PART_W33_PASS4714_DUALSHELL_GQ42_DESIGN.json`, `PART_W33_PASS5105_U81_DUAL_TORSOR_CONTROLLER.json`, `bt1363_q4_clock_tomotope_medial_descent.json`, `bt1487_v4_triangle_stabilizer_classifier.json` *(+19)* |
 | `prime_limit@100000` | `w33_completed_defect_spectral_l_package.json`, `w33_completed_defect_spectral_taylor_tower.json`, `w33_completed_spectral_action_package.json`, `w33_completed_spectral_dual_stiffness.json`, `w33_completed_spectral_equation_of_state.json`, `w33_completed_spectral_global_limit_object.json` *(+19)* |
 | `step@2` | `PART_W33_PASS2866_2867_ISA_DIAMETER_AND_SCRAMBLING.json`, `dccliv_frobenius_selection_and_ouroboros.json`, `dccxix_self_closure_theorem.json`, `dccxxi_biological_allometry_from_q3.json`, `dccxxiv_loop_closure_origin.json`, `dccxxv_tetrahedron_hinge_oscillator.json` *(+19)* |
 | `denominator@4` | `dcclxxiv_closure_transfer_resolvent_equivalence_bridge.json`, `dcclxxv_photonic_retry_closure_kernel_bridge.json`, `dccxl_closure_jordan_resolvent_bridge.json`, `dccxl_closure_transfer_generator_bridge.json`, `dccxli_closure_resolvent_kernel_bridge.json`, `dccxlii_closure_jordan_residue_bridge.json` *(+18)* |
@@ -42,8 +42,8 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `value@4` | `dcclxix_octahedral_laplacian_w33_spectrum.json`, `dcclxxvii_convergent_attractor_theorem.json`, `dccxxxviii_closure_bellman_principle_bridge.json`, `mcclv_fano_plane_isomorphism.json`, `mcclviii_mcclix_mcclx_master_cyclotomic.json`, `w33_BREAKTHROUGH_293_cayley_plane_F4_substrate.json` *(+15)* |
 | `value@6` | `dcclxix_octahedral_laplacian_w33_spectrum.json`, `dcclxxvii_convergent_attractor_theorem.json`, `dccxxiv_loop_closure_origin.json`, `mcclv_fano_plane_isomorphism.json`, `w33_BREAKTHROUGH_287_octonion_G2_substrate_spine.json`, `w33_BREAKTHROUGH_315_continued_fractions_substrate.json` *(+15)* |
 | `vertices@14` | `PART_BT1654_HEAWOOD_CLOCK_HOMOLOGY_results.json`, `PART_BT1656_RUNTIME_WORD_CYCLE_BASIS_results.json`, `PART_BT1659_CLOCK_LEVI_HODGE_COUPLING_results.json`, `PART_BT491_DUAL_SZILASSI_FROM_CYCLIC_CSASZAR_results.json`, `PART_BT492_HEAWOOD_SZILASSI_DUAL_CARRIER_results.json`, `PART_BT493_HEAWOOD_SZILASSI_SPECTRUM_results.json` *(+15)* |
+| `aut@25920` | `PART_BT3408_EDGE_COMMUTANT_DECOMPOSITION_results.json`, `PART_W33_PASS4493_SYMMETRY_BREAKING_SECTION_THRESHOLD.json`, `PART_W33_PASS4496_H10_EXTENSION_COHOMOLOGY.json`, `PART_W33_PASS4503_MAXIMAL_SUBGROUP_SPLITTING_ERRATUM.json`, `PART_W33_PASS4650_GLOBAL_D12_COVER_FACTORIZATION.json`, `PART_W33_PASS4858_TERNARY_TEN_MODULE.json` *(+14)* |
 | `diameter@4` | `PART_3965_3972_TOPOLOGY_CONTROL_CAUSAL_DENSITY_results.json`, `PART_4161_4168_BROADER_ANOMALY_HARDWARE_NOISY_STORAGE_LANDSCAPE_BONKERS.json`, `PART_BT3715_BT3721_CARRIER_TOURNAMENT_PROCESS_BUDGET_IDENTIFICATION_SCHEDULER_TWIRL_results.json`, `PART_BT550_W33_LEVI_FLAG_ASSOCIATION_SCHEME_summary.json`, `PART_BT697_CHART_INTERSECTION_GRAPH_summary.json`, `PART_W33_PASS3120_3122_BASS_COLLISIONS.json` *(+14)* |
-| `order@25920` | `PART_BT3408_EDGE_COMMUTANT_DECOMPOSITION_results.json`, `PART_W33_PASS4493_SYMMETRY_BREAKING_SECTION_THRESHOLD.json`, `PART_W33_PASS4496_H10_EXTENSION_COHOMOLOGY.json`, `PART_W33_PASS4503_MAXIMAL_SUBGROUP_SPLITTING_ERRATUM.json`, `PART_W33_PASS4650_GLOBAL_D12_COVER_FACTORIZATION.json`, `PART_W33_PASS4858_TERNARY_TEN_MODULE.json` *(+14)* |
 | `phi4@10` | `PART_BT897_PROFILE_EIGEN_SCAN_results.json`, `PART_BT907_PROFILE_PARAMETER_SEARCH_results.json`, `dccclxxii_w33_for_everyone_qec_ouroboros_bridge.json`, `dcmii_projective_screen_bulk_qec_bridge.json`, `w33_affine_nonaffine_common_grammar_bridge_summary.json`, `w33_breakthrough.json` *(+14)* |
 | `prime@5` | `PART_3670_3686_MONSTER_TOMOTOPE_AMALGAMATION_results.json`, `bt834_desync_guard_band_arithmetic.json`, `dccliii_monster_moonshine_w33_bridge.json`, `mccl_moonshine_prime_index_closure.json`, `w33_BREAKTHROUGH_63_monster_E8_H4_chain.json`, `w33_all_prime_frobenius_census_certificate.json` *(+14)* |
 | `prime_limit@1000` | `w33_completed_defect_spectral_l_package.json`, `w33_completed_defect_spectral_taylor_tower.json`, `w33_completed_spectral_action_package.json`, `w33_completed_spectral_dual_stiffness.json`, `w33_completed_spectral_equation_of_state.json`, `w33_completed_spectral_global_limit_object.json` *(+14)* |
@@ -51,8 +51,8 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `rank@2` | `PART_CCCCCLXXVI_effective_y_mass_spectrum_results.json`, `PART_CCCCCLXXV_effective_y_reconstruction_results.json`, `PART_CCCCCLXX_marked_vertex_y_bridge_results.json`, `PART_W33_PASS4938_ADJOINT_ROOT_COMPILER.json`, `m12_permutation_degrees.json`, `w33_BREAKTHROUGH_293_cayley_plane_F4_substrate.json` *(+14)* |
 | `spreads@36` | `PART_3663_3669_MONSTER_CHAMBER_SPREAD_BRIDGE_results.json`, `PART_3795_3812_PLANE_OVOID_SCHEME_LEECH_AXIAL_results.json`, `PART_W33_PASS4503_MAXIMAL_SUBGROUP_SPLITTING_ERRATUM.json`, `PART_W33_PASS4766_GRID_CODE_POINT_EDGE_BRIDGE.json`, `PART_W33_PASS4790_GRID_CODE_POINT_EDGE_BRIDGE.json`, `w33_component_browser_demo.json` *(+14)* |
 | `vertices@4` | `PART_BT1656_RUNTIME_WORD_CYCLE_BASIS_results.json`, `bt1708_hexagon_tomotope_contextual_bus.json`, `bt784_rank32_strata_map.json`, `bt784_rank32_tomotope_strata_map.json`, `bt798_residual_tetrahedral_carrier.json`, `bt800_diagonal_quotient_shadow_plane.json` *(+14)* |
+| `aut@5` | `PART_3751_3758_MONSTER_LATTICE_MULTIPORT_COVER_results.json`, `PART_3821_3828_COMPONENT_MONSTER.json`, `PART_3821_3828_MAXCODE_MESH_SCHEME_OVOID_results.json`, `PART_4057_4064_ADVANCED_PHYSICS.json`, `bt1488_paper_splice_v2_manifest.json`, `dccxlii_closure_jordan_residue_bridge.json` *(+13)* |
 | `degree@2` | `PART_4081_4088_DEEP_PHYSICS.json`, `PART_BT1676_CHEBYSHEV_QSVT_PROJECTOR_COMPILER_results.json`, `PART_BT1685_QSP_PHASE_ANGLE_SYNTHESIS_results.json`, `PART_BT3528_BT3534_BOREL_STAR_MOORE_FUNCTOR_TRANSPLANT_results.json`, `PART_BT504_TETRAHELIX_AXIS_ENDPOINT_HODGE_SQUARES_results.json`, `PART_W33_PASS4721_4724_SUPPORT12_INVOLUTION_SQUARE_ROOT_COVER.json` *(+13)* |
-| `order@5` | `PART_3751_3758_MONSTER_LATTICE_MULTIPORT_COVER_results.json`, `PART_3821_3828_COMPONENT_MONSTER.json`, `PART_3821_3828_MAXCODE_MESH_SCHEME_OVOID_results.json`, `PART_4057_4064_ADVANCED_PHYSICS.json`, `bt1488_paper_splice_v2_manifest.json`, `dccxlii_closure_jordan_residue_bridge.json` *(+13)* |
 | `rank@6` | `PART_W33_PASS4606_PAIRED_AXIS_PERIODIC_COMPLEX_QUANTUM_HAMMING.json`, `PART_W33_PASS4639_SIMPLEX_DOUBLE_DIFFERENTIAL_CANCELLATION.json`, `bt1856_code_distance_falsifier.json`, `bt889_fermion_content_of_27.json`, `combined_landscape.json`, `dcclxvii_axis_syndrome_nilpotent_octahedral_bridge.json` *(+13)* |
 | `tick@3` | `bt1300_oscillator_instruction_isa.json`, `bt1306_physical_timing_model.json`, `bt1404_holonet_scope_microframe.json`, `bt1412_toroidal_q4_oscillator_boundary.json`, `bt1698_holonet_packet_state_machine.json`, `bt1699_holonet_abi_to_hardware_lowering.json` *(+13)* |
 | `check_count@12` | `PART_BT2809_BT2815_SEVEN_FRONTIERS_results.json`, `PART_BT2811_SUPPORT_FIRST_CODEC_results.json`, `PART_BT2813_ALL_Q_SUPPORT_LIFT_results.json`, `PART_BT2815_TOMOTOPE_PARITY_CODE_results.json`, `PART_BT2937_BT2945_GLOBAL_CODE_LANDAUER_OAM_results.json`, `w33_pass1036_six_response_photonic_falsifier.json` *(+12)* |
@@ -62,6 +62,8 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `rank@15` | `PART_2026_07_10_LEVI_NEXT5_V3_results.json`, `PART_BT1152_W33_NEGATIVE_PG32_PROJECTOR_results.json`, `w33_bose_mesner_chain_calculus.json`, `w33_ckm_projector_branch_bridge_summary.json`, `w33_motivic_24_15_packet_certificate.json`, `w33_pass1147_schlaefli_steinberg_fourier_bridge.json` *(+12)* |
 | `tick@2` | `bt1300_oscillator_instruction_isa.json`, `bt1306_physical_timing_model.json`, `bt1404_holonet_scope_microframe.json`, `bt1412_toroidal_q4_oscillator_boundary.json`, `bt1698_holonet_packet_state_machine.json`, `bt1699_holonet_abi_to_hardware_lowering.json` *(+12)* |
 | `vertices@7` | `PART_BT1656_RUNTIME_WORD_CYCLE_BASIS_results.json`, `PART_BT491_DUAL_SZILASSI_FROM_CYCLIC_CSASZAR_results.json`, `PART_BT492_HEAWOOD_SZILASSI_DUAL_CARRIER_results.json`, `bt1316_toroidal_authoritative_data_lock.json`, `bt1412_toroidal_q4_oscillator_boundary.json`, `bt1513_toroidal_7_21_3_bridge.json` *(+12)* |
+| `aut@6` | `PART_2026_07_10_LEVI_FIVE_FRONTIERS_results.json`, `PART_4057_4064_ADVANCED_PHYSICS.json`, `PART_W33_PASS4591_RANK120_ANISOTROPIC_MODULE_NO_GO.json`, `bt1488_paper_splice_v2_manifest.json`, `dccxlvi_nilpotent_action_jet_tower_bridge.json`, `monster_atlas_ccls.json` *(+11)* |
+| `aut@648` | `PART_3635_3648_MONSTER_U42_COMPLETION_results.json`, `PART_W33_PASS4493_SYMMETRY_BREAKING_SECTION_THRESHOLD.json`, `PART_W33_PASS4503_MAXIMAL_SUBGROUP_SPLITTING_ERRATUM.json`, `PART_W33_PASS4504_MINIMAL_FLAG_SECTION.json`, `PART_W33_PASS4509_COHOMOLOGY_RESTRICTION_BARCODE.json`, `PART_W33_PASS4657_TRIALITY_INTERSECTION_GROUP.json` *(+11)* |
 | `check_count@9` | `PART_BT2809_BT2815_SEVEN_FRONTIERS_results.json`, `PART_BT2814_SUPPORT_LUMPED_MARKOV_CLOCK_results.json`, `PART_BT2854_BT2860_SEVEN_FRONTIERS_results.json`, `PART_BT2901_BT2907_SEVEN_FRONTIERS_results.json`, `w33_pass1021_e8_fibration_over_forty.json`, `w33_pass1033_base_chirality_character.json` *(+11)* |
 | `degree@20` | `PART_4049_4056_FIVE_FRONT_OUTSIDE_BOX.json`, `PART_4081_4088_DEEP_PHYSICS.json`, `PART_W33_PASS4441_4443_RESCORE_COARSENESS_COVER.json`, `PART_W33_PASS4745_INVARIANT_H1_CHARACTER.json`, `PART_W33_PASS4747_ROUTER_SPECTRAL_REPRESENTATION.json`, `PART_W33_PASS4818_MODULAR_H1_BRAUER_LOEWY.json` *(+11)* |
 | `denominator@16` | `dcclxxiv_closure_transfer_resolvent_equivalence_bridge.json`, `dcclxxv_photonic_retry_closure_kernel_bridge.json`, `dccxl_closure_jordan_resolvent_bridge.json`, `dccxl_closure_transfer_generator_bridge.json`, `dccxli_closure_resolvent_kernel_bridge.json`, `dccxlii_closure_jordan_residue_bridge.json` *(+11)* |
@@ -70,8 +72,6 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `lines@7` | `PART_BT3458_BT3471_FACE_TOWER_BRAUER_TOMOTOPE_results.json`, `bt1376_s3_gauge_radius3_local_optimum_certificate.json`, `bt360_120sheet_design_for_gap.json`, `bt806_a7_ladder_antiflag.json`, `dccxxii_mod12_toroidal_synthesis.json`, `w33_BREAKTHROUGH_168_f4_e6_gq42_line_geometry.json` *(+11)* |
 | `multiplicities@15` | `PART_3813_3820_QUADRATIC_DISCRIMINANT_MULTIPORT_HOLONOMY_results.json`, `PART_3821_3828_COMPONENT_SCHEME.json`, `PART_3821_3828_MAXCODE_MESH_SCHEME_OVOID_results.json`, `PART_3990_PHYSICAL_W33_COUPLER.json`, `PART_BT3500_BT3505_TRIANGLE_FREE_SRG_M57_BRIDGE_results.json`, `PART_BT3506_BT3512_SEVEN_GRAPH_CSP_SCHEME_SYMMETRY_results.json` *(+11)* |
 | `multiplicity@3` | `PART_3957_3964_EXACT_ALGEBRA_MESH_CODE_PHOTON_results.json`, `PART_4081_4088_DEEP_PHYSICS.json`, `PART_BT2854_BT2860_SEVEN_FRONTIERS_results.json`, `PART_W33_PASS4745_INVARIANT_H1_CHARACTER.json`, `PART_W33_PASS5332_Q5_K0_ORBITAL_WEDDERBURN.json`, `PART_W33_PASS5353_K0_CENTRAL_IDEMPOTENT_TIGHT_FRAMES.json` *(+11)* |
-| `order@6` | `PART_2026_07_10_LEVI_FIVE_FRONTIERS_results.json`, `PART_4057_4064_ADVANCED_PHYSICS.json`, `PART_W33_PASS4591_RANK120_ANISOTROPIC_MODULE_NO_GO.json`, `bt1488_paper_splice_v2_manifest.json`, `dccxlvi_nilpotent_action_jet_tower_bridge.json`, `monster_atlas_ccls.json` *(+11)* |
-| `order@648` | `PART_3635_3648_MONSTER_U42_COMPLETION_results.json`, `PART_W33_PASS4493_SYMMETRY_BREAKING_SECTION_THRESHOLD.json`, `PART_W33_PASS4503_MAXIMAL_SUBGROUP_SPLITTING_ERRATUM.json`, `PART_W33_PASS4504_MINIMAL_FLAG_SECTION.json`, `PART_W33_PASS4509_COHOMOLOGY_RESTRICTION_BARCODE.json`, `PART_W33_PASS4657_TRIALITY_INTERSECTION_GROUP.json` *(+11)* |
 | `point_count@40` | `dclxix_holonomy_markov_power_bridge.json`, `dclxvi_holonomy_screen_operator_bridge.json`, `dclxvii_holonomy_screen_tripotent_bridge.json`, `dclxviii_holonomy_transvection_markov_bridge.json`, `dclxx_holonomy_markov_tomography_bridge.json`, `dclxxi_holonomy_markov_recurrence_bridge.json` *(+11)* |
 | `step@3` | `PART_W33_PASS2866_2867_ISA_DIAMETER_AND_SCRAMBLING.json`, `dccliv_frobenius_selection_and_ouroboros.json`, `dccxix_self_closure_theorem.json`, `dccxxi_biological_allometry_from_q3.json`, `dccxxiv_loop_closure_origin.json`, `dccxxv_tetrahedron_hinge_oscillator.json` *(+11)* |
 | `step@4` | `PART_W33_PASS2866_2867_ISA_DIAMETER_AND_SCRAMBLING.json`, `dccliv_frobenius_selection_and_ouroboros.json`, `dccxix_self_closure_theorem.json`, `dccxxi_biological_allometry_from_q3.json`, `dccxxiv_loop_closure_origin.json`, `dccxxv_tetrahedron_hinge_oscillator.json` *(+11)* |
@@ -83,6 +83,7 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `degree@24` | `PART_3965_3972_TOPOLOGY_CONTROL_CAUSAL_DENSITY_results.json`, `PART_4081_4088_DEEP_PHYSICS.json`, `PART_W33_PASS4745_INVARIANT_H1_CHARACTER.json`, `PART_W33_PASS4840_LEVI_CYCLE_K33_INCIDENCE.json`, `w33_pass1077_g32_g25_invariant_restriction.json`, `w33_pass1092_u42dot2_character_identification.json` *(+10)* |
 | `degree@8` | `PART_W33_PASS3100_3102_BASS_REGULAR_TAU.json`, `PART_W33_PASS3120_3122_BASS_COLLISIONS.json`, `PART_W33_PASS4201_REGULAR_COMPUTING_ZETA.json`, `PART_W33_PASS4203_TRANSVECTIONS_GENERAL_LAW.json`, `PART_W33_PASS4558_APARTMENT_SINGULAR_FIBERS.json`, `PART_W33_PASS5090_5097_RESULTS.json` *(+10)* |
 | `edges@12` | `PART_3957_3964_EXACT_ALGEBRA_MESH_CODE_PHOTON_results.json`, `PART_BT1656_RUNTIME_WORD_CYCLE_BASIS_results.json`, `PART_BT504_TETRAHELIX_AXIS_ENDPOINT_HODGE_SQUARES_results.json`, `PART_BT509_RICHTER_SIGNED_XMIN_FACE_CODEC_results.json`, `bt1708_hexagon_tomotope_contextual_bus.json`, `bt1815_quartet_slice_geometry.json` *(+10)* |
+| `hoffman@10` | `PART_W33_PASS4795_OVOID_GAP_AND_COSET.json`, `PART_W33_PASS4797_ALPHA_SEPARATES_DUAL_PAIR.json`, `PART_W33_PASS4799_ALPHA_ACROSS_THE_ZOO.json`, `PART_W33_PASS4800_DEFICIT_LAW_FALSE.json`, `PART_W33_PASS5226_5227_ODD_Q_OVOID_DEFICIENCY.json`, `PART_W33_PASS5228_5229_COSPECTRAL_OVOID_GAP.json` *(+10)* |
 | `parameters@4` | `PART_2026_07_27_W33_SHIFTED_ADJACENCY_SPECTRAL_AUDIT.json`, `PART_BT3444_BT3457_RADIUS_MODULAR_FIVECHANNEL_results.json`, `PART_BT3458_BT3471_FACE_TOWER_BRAUER_TOMOTOPE_results.json`, `PART_BT3500_BT3505_TRIANGLE_FREE_SRG_M57_BRIDGE_results.json`, `PART_BT3506_BT3512_SEVEN_GRAPH_CSP_SCHEME_SYMMETRY_results.json`, `PART_W33_PASS4286_4293_SCOPE_AND_BONKERS.json` *(+10)* |
 | `points@156` | `PART_2026_07_10_LEVI_FIVE_FRONTIERS_results.json`, `PART_W33_PASS4374_COMPARATOR_GENERALISES.json`, `PART_W33_PASS4441_4443_RESCORE_COARSENESS_COVER.json`, `PART_W33_PASS4754_4755_PRIME_POWER_QUADRANGLES.json`, `PART_W33_PASS5066_5073_RESULTS.json`, `PART_W33_PASS5074_GAUGE_ACTIVE_CHART.json` *(+10)* |
 | `rank@8` | `PART_CCCCCLXXVI_effective_y_mass_spectrum_results.json`, `PART_CCCCCLXXV_effective_y_reconstruction_results.json`, `PART_CCCCCLXX_marked_vertex_y_bridge_results.json`, `PART_W33_PASS4543_LOCAL_CELL_BASIS_MATROID.json`, `dccxxvii_e8_cartan_as_tomotope.json`, `mcc_mccv_completeness_strings_e8_monster.json` *(+10)* |
@@ -93,6 +94,9 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `tick@7` | `bt1300_oscillator_instruction_isa.json`, `bt1306_physical_timing_model.json`, `bt1404_holonet_scope_microframe.json`, `bt1412_toroidal_q4_oscillator_boundary.json`, `bt1698_holonet_packet_state_machine.json`, `bt1699_holonet_abi_to_hardware_lowering.json` *(+10)* |
 | `value@13` | `dcclxxvii_convergent_attractor_theorem.json`, `mcclv_fano_plane_isomorphism.json`, `mcclviii_mcclix_mcclx_master_cyclotomic.json`, `w33_BREAKTHROUGH_294_q_analogs_substrate.json`, `w33_BREAKTHROUGH_37_pillar_substrate_coverage.json`, `w33_BREAKTHROUGH_65_codes_spin_twistor_cosmo_quarks.json` *(+10)* |
 | `value@8` | `dcclxxvii_convergent_attractor_theorem.json`, `w33_BREAKTHROUGH_291_bott_periodicity_substrate.json`, `w33_BREAKTHROUGH_315_continued_fractions_substrate.json`, `w33_BREAKTHROUGH_334_color_vision_substrate.json`, `w33_BREAKTHROUGH_37_pillar_substrate_coverage.json`, `w33_BREAKTHROUGH_48_substrate_addition_table.json` *(+10)* |
+| `alpha@7` | `PART_W33_PASS4795_OVOID_GAP_AND_COSET.json`, `PART_W33_PASS4797_ALPHA_SEPARATES_DUAL_PAIR.json`, `PART_W33_PASS4799_ALPHA_ACROSS_THE_ZOO.json`, `PART_W33_PASS4800_DEFICIT_LAW_FALSE.json`, `PART_W33_PASS5226_5227_ODD_Q_OVOID_DEFICIENCY.json`, `PART_W33_PASS5228_5229_COSPECTRAL_OVOID_GAP.json` *(+9)* |
+| `aut@24` | `PART_W33_PASS4657_TRIALITY_INTERSECTION_GROUP.json`, `PART_W33_PASS5312_HOFFMAN_LATIN_DEGREE12_ACTION_OBSTRUCTION.json`, `bt1219_exact_sl23_closure_summary.json`, `bt1224_exact_clifford_fingerprint_dashboard_summary.json`, `bt1487_v4_triangle_stabilizer_classifier.json`, `bt1492_canonical_fano_s4_d4_fiber.json` *(+9)* |
+| `aut@8` | `PART_W33_PASS4650_GLOBAL_D12_COVER_FACTORIZATION.json`, `PART_W33_PASS4657_TRIALITY_INTERSECTION_GROUP.json`, `bt1487_v4_triangle_stabilizer_classifier.json`, `bt1488_paper_splice_v2_manifest.json`, `bt1492_canonical_fano_s4_d4_fiber.json`, `bt867_cache_split_transport_nonsplit_boundary.json` *(+9)* |
 | `check_count@10` | `PART_BT2809_BT2815_SEVEN_FRONTIERS_results.json`, `PART_BT2809_SELECTOR_FACE_PAIRING_INTERTWINER_results.json`, `PART_BT2854_BT2860_SEVEN_FRONTIERS_results.json`, `PART_BT2901_BT2907_SEVEN_FRONTIERS_results.json`, `w33_pass1029_no_orientation_switch_inside.json`, `w33_pass1031_complex_determinant_phase_detector.json` *(+9)* |
 | `depth@2` | `PART_W33_PASS2861_2865_QUADRATIC_LINE_POWER.json`, `PART_W33_PASS2866_2867_ISA_DIAMETER_AND_SCRAMBLING.json`, `PART_W33_PASS4821_GLOBAL_ROUTER_DECODER_SCHEDULE.json`, `bt1300_oscillator_instruction_isa.json`, `bt1301_full_chart_atlas_isa_compiler.json`, `bt1302_parity_epilogue_reroute_protocol.json` *(+9)* |
 | `depth@3` | `PART_W33_PASS2861_2865_QUADRATIC_LINE_POWER.json`, `PART_W33_PASS2866_2867_ISA_DIAMETER_AND_SCRAMBLING.json`, `bt1300_oscillator_instruction_isa.json`, `bt1301_full_chart_atlas_isa_compiler.json`, `bt1302_parity_epilogue_reroute_protocol.json`, `bt1374_q6_tomotope_packet_route_compiler.json` *(+9)* |
@@ -100,8 +104,6 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `dimension@8` | `PART_2026_07_10_LEVI_CLOSURE_results.json`, `PART_W33_PASS4485_APARTMENT_CORE_SELF_GLUING.json`, `PART_W33_PASS4486_REPEATED_CORE_FORM_RESURRECTION.json`, `PART_W33_PASS4487_PARALLEL_PAULI_CORE_COORDINATE_WELD.json`, `PART_W33_PASS4553_CANONICAL_H10_WEIGHT_QUADRATIC.json`, `w33_frame_hoffman_resolution_theorem.json` *(+9)* |
 | `f_vector@16` | `PART_BT2810_SIGNED_SUPPORT_TOMOTOPE_results.json`, `PART_BT3729_BT3742_FIVE_FRONT_WEBSITE_RESTORE_results.json`, `bt987_cp2_k3_edgewise_conversion.json`, `bt988_explicit_cp2_k3_edgewise_facets.json`, `bt989_edgewise_density_constants.json`, `bt991_local_4simplex_edgewise_template.json` *(+9)* |
 | `multiplicity@24` | `PART_3989_3990_3994_3996_PHOTON_INCIDENCE_ECHO_CLOCK.json`, `PART_4041_4048_EIGHT_PHYSICS_EXPANSION.json`, `PART_BT514_XMIN_EVEN_ODD_COUPLING_BRIDGE_results.json`, `PART_W33_PASS4334_POINT_LINE_CHIRAL_CARRIER.json`, `PART_W33_PASS5055_POINT_FLAG_V24_SUBFRAMES.json`, `bt1696_dscft_time_arrow_modes.json` *(+9)* |
-| `order@24` | `PART_W33_PASS4657_TRIALITY_INTERSECTION_GROUP.json`, `PART_W33_PASS5312_HOFFMAN_LATIN_DEGREE12_ACTION_OBSTRUCTION.json`, `bt1219_exact_sl23_closure_summary.json`, `bt1224_exact_clifford_fingerprint_dashboard_summary.json`, `bt1487_v4_triangle_stabilizer_classifier.json`, `bt1492_canonical_fano_s4_d4_fiber.json` *(+9)* |
-| `order@8` | `PART_W33_PASS4650_GLOBAL_D12_COVER_FACTORIZATION.json`, `PART_W33_PASS4657_TRIALITY_INTERSECTION_GROUP.json`, `bt1487_v4_triangle_stabilizer_classifier.json`, `bt1488_paper_splice_v2_manifest.json`, `bt1492_canonical_fano_s4_d4_fiber.json`, `bt867_cache_split_transport_nonsplit_boundary.json` *(+9)* |
 | `parameters@12` | `PART_2026_07_27_W33_SHIFTED_ADJACENCY_SPECTRAL_AUDIT.json`, `PART_3670_3686_MONSTER_TOMOTOPE_AMALGAMATION_results.json`, `PART_BT3444_BT3457_RADIUS_MODULAR_FIVECHANNEL_results.json`, `PART_BT3458_BT3471_FACE_TOWER_BRAUER_TOMOTOPE_results.json`, `PART_BT3500_BT3505_TRIANGLE_FREE_SRG_M57_BRIDGE_results.json`, `PART_BT3506_BT3512_SEVEN_GRAPH_CSP_SCHEME_SYMMETRY_results.json` *(+9)* |
 | `points@112` | `PART_W33_PASS4381_OTHER_QUADRANGLES.json`, `PART_W33_PASS4441_4443_RESCORE_COARSENESS_COVER.json`, `PART_W33_PASS4448_4450_Q53_FLOQUET_TANNER.json`, `PART_W33_PASS4456_4457_BASS_AND_FAMILY.json`, `PART_W33_PASS4465_GENERAL_GQ_LINE_SIGNING_TRACE.json`, `PART_W33_PASS4506_Q53_APARTMENT_PROTECTED_BRIDGE.json` *(+9)* |
 | `points@7` | `PART_W33_PASS5351_5352_HOFFMAN_PAULI_LATIN_SYMPLECTIC_SPREAD.json`, `bt1710_heptadic_k77_torus_scheduler.json`, `bt798_residual_tetrahedral_carrier.json`, `bt799_transversal_incidence_grammar.json`, `bt806_a7_ladder_antiflag.json`, `bt814_tomotope_middle_layer_from_residual_tetrahedra.json` *(+9)* |
@@ -112,13 +114,13 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `spectrum@2` | `w33_BREAKTHROUGH_338_SQNA_architecture.json`, `w33_BREAKTHROUGH_347_W33_explicit_construction.json`, `w33_BT256_262_novel_frontier.json`, `w33_contextuality_simulation.json`, `w33_pass1007_kbranch_beyond_three_and_prank_table.json`, `w33_pass1009_composite_base_and_collision_cancellation.json` *(+9)* |
 | `tomotope_flag@13` | `bt1371_q6_tomotope_explicit_orbit_address_table.json`, `bt1374_q6_tomotope_packet_route_compiler.json`, `bt1405_continuous_q6_path_router.json`, `bt1406_tomotope_body_edge_pulse_scheduler.json`, `bt1407_microframe_transaction_composer.json`, `bt1413_q4_plaquette_tomotope_face_compiler.json` *(+9)* |
 | `vertices@9` | `PART_BT1656_RUNTIME_WORD_CYCLE_BASIS_results.json`, `bt1517_concrete_szilassi_realization_map.json`, `bt1521_fixed_hexagon_sector_fiber_test.json`, `bt987_cp2_k3_edgewise_conversion.json`, `w33_curved_a2_heat_density_asymptotics_summary.json`, `w33_curved_barycentric_density_bridge_summary.json` *(+9)* |
+| `aut@9` | `PART_3751_3758_MONSTER_LATTICE_MULTIPORT_COVER_results.json`, `PART_3821_3828_COMPONENT_MONSTER.json`, `PART_3821_3828_MAXCODE_MESH_SCHEME_OVOID_results.json`, `PART_4057_4064_ADVANCED_PHYSICS.json`, `PART_W33_PASS4530_Q5Q_SYMBOLIC_PROTECTED_LAW.json`, `bt882_gauge_connection.json` *(+8)* |
+| `aut@96` | `PART_2026_07_10_LEVI_CLOSURE_results.json`, `PART_BT2901_BT2907_SEVEN_FRONTIERS_results.json`, `PART_W33_PASS4650_GLOBAL_D12_COVER_FACTORIZATION.json`, `PART_W33_PASS5310_TESSERACT_D4_TOMOTOPE_DOUBLECOVERS.json`, `PART_W33_PASS5476_5479_WF4_DOES_NOT_EMBED.json`, `PART_W33_PASS5480_5483_ORBIT_SPLIT_REAL_CUBE_NOT.json` *(+8)* |
 | `check_count@8` | `PART_BT2847_BT2853_PROTECTED_OBSERVER_NOISY_M36_results.json`, `PART_BT2854_BT2860_SEVEN_FRONTIERS_results.json`, `PART_BT2901_BT2907_SEVEN_FRONTIERS_results.json`, `PART_BT2946_BT2952_SEVEN_FRONT_CLOSURE_summary.json`, `w33_pass1038_base_character_is_conjugation.json`, `w33_pass1054_1059_release.json` *(+8)* |
 | `dimension@10` | `PART_3887_3904_UNMARKED_WEDDERBURN_MONSTER_FOURAXIS_ORDER192_results.json`, `PART_W33_PASS4496_H10_EXTENSION_COHOMOLOGY.json`, `PART_W33_PASS4556_H10_O6MINUS_NO_LINEAR_TRANSPORT.json`, `PART_W33_PASS4740_4744_GOLAY_INTERTWINER_MINOR_NO_GO.json`, `PART_W33_PASS4863_4864_O5_ADJOINT_HOMOLOGY.json`, `PART_W33_PASS4938_ADJOINT_ROOT_COMPILER.json` *(+8)* |
 | `flags@160` | `PART_2026_07_10_LEVI_DUALITY_DEFECT_results.json`, `PART_2026_07_10_LEVI_FIVE_FRONTIERS_results.json`, `PART_BT2757_QUTRIT_CX_W33_LAGRANGIAN_UNIPOTENT_results.json`, `PART_W33_PASS4308_4314_ONE_OPCODE_LEVI.json`, `PART_W33_PASS4321_4323_DESIGN_SPACE_FLAGS.json`, `PART_W33_PASS4367_FLAG_INCIDENCE_COMPARATOR.json` *(+8)* |
-| `hoffman@10` | `PART_W33_PASS4795_OVOID_GAP_AND_COSET.json`, `PART_W33_PASS4797_ALPHA_SEPARATES_DUAL_PAIR.json`, `PART_W33_PASS4799_ALPHA_ACROSS_THE_ZOO.json`, `PART_W33_PASS4800_DEFICIT_LAW_FALSE.json`, `PART_W33_PASS5226_5227_ODD_Q_OVOID_DEFICIENCY.json`, `PART_W33_PASS5228_5229_COSPECTRAL_OVOID_GAP.json` *(+8)* |
 | `numerator@3` | `dccxlii_closure_jordan_residue_bridge.json`, `dccxlv_nilpotent_hessian_convexity_bridge.json`, `dccxlvi_nilpotent_action_jet_tower_bridge.json`, `dccxlvii_nilpotent_ward_recursion_bridge.json`, `dccxlviii_retarded_green_uniqueness_bridge.json`, `dcmii_projective_screen_bulk_qec_bridge.json` *(+8)* |
 | `orbit_count@26` | `w33_pass1260_a5_fixed_point_counts.json`, `w33_pass1261_exact_hecke_constants.json`, `w33_pass1263_k9_coset_verification.json`, `w33_pass1264_psp43_restriction_table.json`, `w33_pass1265_species20_gap_execution.json`, `w33_pass1266_theorem_ledger_v5.json` *(+8)* |
-| `order@9` | `PART_3751_3758_MONSTER_LATTICE_MULTIPORT_COVER_results.json`, `PART_3821_3828_COMPONENT_MONSTER.json`, `PART_3821_3828_MAXCODE_MESH_SCHEME_OVOID_results.json`, `PART_4057_4064_ADVANCED_PHYSICS.json`, `PART_W33_PASS4530_Q5Q_SYMBOLIC_PROTECTED_LAW.json`, `bt882_gauge_connection.json` *(+8)* |
 | `points@27` | `PART_3769_3786_GQ_VELDKAMP_AXIAL_LATTICE_MONSTER_results.json`, `PART_W33_PASS4456_4457_BASS_AND_FAMILY.json`, `PART_W33_PASS4562_SECOND_DUAL_PAIR.json`, `PART_W33_PASS4573_GENERAL_GQ_C8_SELECTOR_OBSTRUCTION.json`, `PART_W33_PASS4709_TRACK_B_DUAL_PAIR.json`, `PART_W33_PASS4815_K33_MULTIDESIGN.json` *(+8)* |
 | `prime@2` | `PART_3670_3686_MONSTER_TOMOTOPE_AMALGAMATION_results.json`, `dccliii_monster_moonshine_w33_bridge.json`, `mccl_moonshine_prime_index_closure.json`, `w33_BREAKTHROUGH_63_monster_E8_H4_chain.json`, `w33_monster_ogg_substrate_identity.json`, `w33_pass1013_symmetric_deep_verification.json` *(+8)* |
 | `rank@5` | `HeG1-p2058B0.assoc.json`, `PART_BT3458_BT3471_FACE_TOWER_BRAUER_TOMOTOPE_results.json`, `bt1865_css_commutation_matrix.json`, `he_permutation_degrees.json`, `m12_permutation_degrees.json`, `rp_index.json` *(+8)* |
@@ -126,7 +128,6 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `tomotope_flag@180` | `bt1371_q6_tomotope_explicit_orbit_address_table.json`, `bt1374_q6_tomotope_packet_route_compiler.json`, `bt1405_continuous_q6_path_router.json`, `bt1406_tomotope_body_edge_pulse_scheduler.json`, `bt1407_microframe_transaction_composer.json`, `bt1413_q4_plaquette_tomotope_face_compiler.json` *(+8)* |
 | `value@40` | `dcclii_hyperbolic_pascal_600cell_e8.json`, `dcclxxvii_convergent_attractor_theorem.json`, `mcclviii_mcclix_mcclx_master_cyclotomic.json`, `w33_BREAKTHROUGH_294_q_analogs_substrate.json`, `w33_BREAKTHROUGH_33_packet_hamiltonian_substrate_bridge.json`, `w33_BREAKTHROUGH_48_substrate_addition_table.json` *(+8)* |
 | `vertices@80` | `PART_4161_4168_BROADER_ANOMALY_HARDWARE_NOISY_STORAGE_LANDSCAPE_BONKERS.json`, `PART_4185_4192_ADAPTIVE_C2_HAWKING_HYSTERESIS_3LOCAL_COVER_HOLONOMY_IHARA_HEAT.json`, `PART_BT1654_HEAWOOD_CLOCK_HOMOLOGY_results.json`, `PART_BT1659_CLOCK_LEVI_HODGE_COUPLING_results.json`, `PART_BT1675_BOSE_MESNER_HODGE_BRIDGE_results.json`, `PART_BT545_W33_LEVI_MINIMAL_LOGICAL_CYCLE_results.json` *(+8)* |
-| `alpha@7` | `PART_W33_PASS4795_OVOID_GAP_AND_COSET.json`, `PART_W33_PASS4797_ALPHA_SEPARATES_DUAL_PAIR.json`, `PART_W33_PASS4799_ALPHA_ACROSS_THE_ZOO.json`, `PART_W33_PASS4800_DEFICIT_LAW_FALSE.json`, `PART_W33_PASS5226_5227_ODD_Q_OVOID_DEFICIENCY.json`, `PART_W33_PASS5270_5271_ODD_Q_EXACT_ALPHA.json` *(+7)* |
 | `check_count@11` | `PART_BT2809_BT2815_SEVEN_FRONTIERS_results.json`, `PART_BT2825_BT2827_SUPPORT_OBSERVER_summary.json`, `PART_BT2854_BT2860_SEVEN_FRONTIERS_results.json`, `PART_BT2901_BT2907_SEVEN_FRONTIERS_results.json`, `w33_pass1023_chirality_and_phase_halves.json`, `w33_pass1075_gsp43_character_fingerprint.json` *(+7)* |
 | `check_count@14` | `w33_pass1030_eighty_carrier_orientation_obstruction.json`, `w33_pass1034_selector_orbital_algebra.json`, `w33_pass1054_1059_release.json`, `w33_pass1066_outer_lift.json`, `w33_pass1082_frame_coherent_configuration.json`, `w33_pass1083_levi_frame_steinberg_intertwiner.json` *(+7)* |
 | `depth@4` | `PART_W33_PASS2861_2865_QUADRATIC_LINE_POWER.json`, `PART_W33_PASS2866_2867_ISA_DIAMETER_AND_SCRAMBLING.json`, `bt1300_oscillator_instruction_isa.json`, `bt1301_full_chart_atlas_isa_compiler.json`, `bt1302_parity_epilogue_reroute_protocol.json`, `bt1374_q6_tomotope_packet_route_compiler.json` *(+7)* |
@@ -147,6 +148,8 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `subdegrees@12` | `PART_BT3408_EDGE_COMMUTANT_DECOMPOSITION_results.json`, `PART_BT3458_BT3471_FACE_TOWER_BRAUER_TOMOTOPE_results.json`, `PART_W33_PASS4594_SELECTED_LINE_ARITHMETIC.json`, `PART_W33_PASS4642_SELECTED_LINE_SMITH_COHERENT.json`, `PART_W33_PASS4737_4738_4741_4742_RESIDUE_ROUTER.json`, `PART_W33_PASS4753_ORBITAL_WEDDERBURN.json` *(+7)* |
 | `triangles@160` | `PART_BT3715_BT3721_CARRIER_TOURNAMENT_PROCESS_BUDGET_IDENTIFICATION_SCHEDULER_TWIRL_results.json`, `PART_CCCCCXLV_discrete_continuum_bridge_results.json`, `PART_W33_PASS2882_2885_DIAMETERS_HARDEST_BUDGET.json`, `PART_W33_PASS4296_SEPARATE_FINAL_PAIR.json`, `PART_W33_PASS4421_4423_GAUGE_GLASS_LOCALISATION.json`, `bt1081_incidence_ladder_rank_script.json` *(+7)* |
 | `value@11` | `dcclxxvii_convergent_attractor_theorem.json`, `mcclv_fano_plane_isomorphism.json`, `mcclviii_mcclix_mcclx_master_cyclotomic.json`, `mcclxxvi_mcclxxx_phi12_tower_hubble_hecke_poincare.json`, `w33_BREAKTHROUGH_297_elliptic_curves_F_q_substrate.json`, `w33_BREAKTHROUGH_48_substrate_addition_table.json` *(+7)* |
+| `aut@120` | `ALIAS_REGISTRY.json`, `PART_MMCCCLXXXVIII_DOILY_K5_QUOTIENT_GAUGE_results.json`, `mccxlvii_binary_polyhedral_e_type_tower.json`, `w33_BREAKTHROUGH_318_platonic_point_groups_substrate.json`, `w33_mckay_e_group_bridge_audit_summary.json`, `w33_pass1134_we6_432_stabilizers.json` *(+6)* |
+| `aut@192` | `PART_3887_3904_UNMARKED_WEDDERBURN_MONSTER_FOURAXIS_ORDER192_results.json`, `PART_BT3871_BT3886_EIGHT_FRONT_CLOSURE_results.json`, `PART_W33_PASS4538_GLOBAL_LARGE_SPLITTING_CENSUS.json`, `PART_W33_PASS4581_APARTMENT_FIBER_EQUIVARIANCE.json`, `PART_W33_PASS4780_D4_CUBE_TRIALITY.json`, `PART_W33_PASS5310_TESSERACT_D4_TOMOTOPE_DOUBLECOVERS.json` *(+6)* |
 | `canonical_selector@144` | `PART_BT1851_HOLONET_MACHINE_SELECTOR_MERGE_PATCH_summary.json`, `PART_BT1854_QUOTIENT_STATUS_DASHBOARD_summary.json`, `PART_BT1857_SELECTOR_API_REFACTOR_AUDIT_summary.json`, `PART_BT1858_HOLONET_MACHINE_PATCH_MATERIALIZATION_PLAN_summary.json`, `PART_BT1862_QUOTIENT_DASHBOARD_REFINEMENT_summary.json`, `PART_BT1869_SELECTOR_GLUE_MERGED_SUBSECTION_summary.json` *(+6)* |
 | `canonical_selector@3` | `PART_BT1851_HOLONET_MACHINE_SELECTOR_MERGE_PATCH_summary.json`, `PART_BT1854_QUOTIENT_STATUS_DASHBOARD_summary.json`, `PART_BT1857_SELECTOR_API_REFACTOR_AUDIT_summary.json`, `PART_BT1858_HOLONET_MACHINE_PATCH_MATERIALIZATION_PLAN_summary.json`, `PART_BT1862_QUOTIENT_DASHBOARD_REFINEMENT_summary.json`, `PART_BT1869_SELECTOR_GLUE_MERGED_SUBSECTION_summary.json` *(+6)* |
 | `canonical_selector@38` | `PART_BT1851_HOLONET_MACHINE_SELECTOR_MERGE_PATCH_summary.json`, `PART_BT1854_QUOTIENT_STATUS_DASHBOARD_summary.json`, `PART_BT1857_SELECTOR_API_REFACTOR_AUDIT_summary.json`, `PART_BT1858_HOLONET_MACHINE_PATCH_MATERIALIZATION_PLAN_summary.json`, `PART_BT1862_QUOTIENT_DASHBOARD_REFINEMENT_summary.json`, `PART_BT1869_SELECTOR_GLUE_MERGED_SUBSECTION_summary.json` *(+6)* |
@@ -171,8 +174,6 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `lines@156` | `PART_2026_07_10_LEVI_FIVE_FRONTIERS_results.json`, `PART_W33_PASS4374_COMPARATOR_GENERALISES.json`, `PART_W33_PASS4441_4443_RESCORE_COARSENESS_COVER.json`, `PART_W33_PASS4739_W3Q_INVOLUTION_MINIMUM_SHELL.json`, `PART_W33_PASS4754_4755_PRIME_POWER_QUADRANGLES.json`, `PART_W33_PASS4754_ODDQ_KERNEL_DISTANCE.json` *(+6)* |
 | `max_hops@2` | `holonet_bench_compare.json`, `holonet_uor_certificate.json`, `holonet_uor_rule110_certificate.json`, `holonet_vm_interface_demo.json`, `holonet_wrap_demo_factorial.json`, `holonet_wrap_rule110_demo.json` *(+6)* |
 | `orbit_size@25920` | `PART_3887_3904_UNMARKED_WEDDERBURN_MONSTER_FOURAXIS_ORDER192_results.json`, `PART_BT3729_BT3742_FIVE_FRONT_WEBSITE_RESTORE_results.json`, `PART_W33_PASS4511_4518_DUAL_EVEN_PRISM_IHARA.json`, `w33_pass1340_1344_cartan_atlas_selector_padic.json`, `w33_pass1801_1805_five_frontiers.json`, `w33_pass1804_component.json` *(+6)* |
-| `order@120` | `ALIAS_REGISTRY.json`, `PART_MMCCCLXXXVIII_DOILY_K5_QUOTIENT_GAUGE_results.json`, `mccxlvii_binary_polyhedral_e_type_tower.json`, `w33_BREAKTHROUGH_318_platonic_point_groups_substrate.json`, `w33_mckay_e_group_bridge_audit_summary.json`, `w33_pass1134_we6_432_stabilizers.json` *(+6)* |
-| `order@192` | `PART_3887_3904_UNMARKED_WEDDERBURN_MONSTER_FOURAXIS_ORDER192_results.json`, `PART_BT3871_BT3886_EIGHT_FRONT_CLOSURE_results.json`, `PART_W33_PASS4538_GLOBAL_LARGE_SPLITTING_CENSUS.json`, `PART_W33_PASS4581_APARTMENT_FIBER_EQUIVARIANCE.json`, `PART_W33_PASS4780_D4_CUBE_TRIALITY.json`, `PART_W33_PASS5310_TESSERACT_D4_TOMOTOPE_DOUBLECOVERS.json` *(+6)* |
 | `parameters@6` | `PART_3670_3686_MONSTER_TOMOTOPE_AMALGAMATION_results.json`, `PART_3694_3700_SPREAD_ETF_AXIAL_CLOSURE_results.json`, `PART_3751_3758_MONSTER_LATTICE_MULTIPORT_COVER_results.json`, `PART_3821_3828_COMPONENT_MAXCODE.json`, `PART_3821_3828_MAXCODE_MESH_SCHEME_OVOID_results.json`, `PART_BT3444_BT3457_RADIUS_MODULAR_FIVECHANNEL_results.json` *(+6)* |
 | `points@45` | `PART_3769_3786_GQ_VELDKAMP_AXIAL_LATTICE_MONSTER_results.json`, `PART_BT1191_SUPPORT_PAIR_BT748_MATCHING_OBSTRUCTION_results.json`, `PART_W33_PASS4441_4443_RESCORE_COARSENESS_COVER.json`, `PART_W33_PASS4562_SECOND_DUAL_PAIR.json`, `PART_W33_PASS4709_TRACK_B_DUAL_PAIR.json`, `PART_W33_PASS4714_DUALSHELL_GQ42_DESIGN.json` *(+6)* |
 | `prime@13` | `bt834_desync_guard_band_arithmetic.json`, `dccliii_monster_moonshine_w33_bridge.json`, `mccl_moonshine_prime_index_closure.json`, `mcclvi_psl27_z_zeta12_bridge.json`, `w33_BREAKTHROUGH_63_monster_E8_H4_chain.json`, `w33_cyclotomic_defect_residue_classifier.json` *(+6)* |
@@ -198,6 +199,8 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `vertices@12` | `PART_BT1656_RUNTIME_WORD_CYCLE_BASIS_results.json`, `PART_BT504_TETRAHELIX_AXIS_ENDPOINT_HODGE_SQUARES_results.json`, `PART_W33_PASS4558_APARTMENT_SINGULAR_FIBERS.json`, `bt1517_concrete_szilassi_realization_map.json`, `bt1521_fixed_hexagon_sector_fiber_test.json`, `bt1850_face_word_extractor.json` *(+6)* |
 | `vertices@27` | `PART_W33_PASS5524_5531_REFINEMENT_AND_CREDIT.json`, `PART_W33_PASS5532_5539_NINE_NINE_NINE_IS_Q3.json`, `bt1789_h27_payne_tuple_extractor.json`, `bt1792_true_tuple_recovery_audit.json`, `bt1794_schlafli_e6_lift.json`, `bt1806_schlafli_orbit_export.json` *(+6)* |
 | `vertices@45` | `PART_BT1192_S3_TRANSPORT_DISTRIBUTION_VS_Z2_results.json`, `PART_BT3363_MINIMUM_GAUGE_DEFECT_GENERATION_results.json`, `PART_W33_PASS4727_4728_FALSIFIER_AND_CERT_BIRTH.json`, `PART_W33_PASS4746_S3_CONNECTION_CLASSIFICATION.json`, `PART_W33_PASS4770_S3_GAUGE_MODULI.json`, `bt992_cp2_k3_edgewise_level1_incidence.json` *(+6)* |
+| `aut@27` | `PART_W33_PASS4657_TRIALITY_INTERSECTION_GROUP.json`, `PART_W33_PASS5105_U81_DUAL_TORSOR_CONTROLLER.json`, `bt865_dual_torsor_steinberg_compiler.json`, `mccxlvii_binary_polyhedral_e_type_tower.json`, `monster_atlas_ccls.json`, `w33_MMXXI_MMXXX_photon_triangle_hypercube_network.json` *(+5)* |
+| `aut@48` | `bt781_cube_tomotope_48_split.json`, `bt783_cube_tomotope_obstruction.json`, `bt789_toroidal_genus_phase_bridge.json`, `mccxlvii_binary_polyhedral_e_type_tower.json`, `monster_atlas_ccls.json`, `w33_BREAKTHROUGH_318_platonic_point_groups_substrate.json` *(+5)* |
 | `classes@4` | `PART_BT3580_STAR_PROOF_CANARY.json`, `PART_BT550_W33_LEVI_FLAG_ASSOCIATION_SCHEME_summary.json`, `PART_BT551_W33_LEVI_FLAG_DUAL_IDEMPOTENT_CLOSURE_summary.json`, `PART_BT552_W33_LEVI_FLAG_KREIN_SCHUR_CLOSURE_results.json`, `PART_W33_PASS4874_STEINER_W33_ASSOCIATION_SCHEME.json`, `w33_pass172_ninety_trade_scheme.json` *(+5)* |
 | `degree@32` | `PART_BT3187_BT3192_CHROMATIC_DEFECT_BLOCK_FILTER_results.json`, `PART_BT3376_BT3389_COHOMOLOGY_TAU_results.json`, `PART_W33_PASS4999_OCTAHEDRAL_EDGE_FRAME.json`, `w33_center_quad_transport_complement_bridge_summary.json`, `w33_frame_hoffman_resolution_theorem.json`, `w33_pass2402_duad_first_coloring_base.json` *(+5)* |
 | `degree@81` | `PART_3614_3627_MONSTER_STRUCTURAL_PROGRAM_results.json`, `PART_4081_4088_DEEP_PHYSICS.json`, `PART_W33_PASS4745_INVARIANT_H1_CHARACTER.json`, `w33_pass1092_u42dot2_character_identification.json`, `w33_pass1102_ctbllib_clifford_naming.json`, `w33_pass1135_cubic_kernel_decomposition.json` *(+5)* |
@@ -208,8 +211,6 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `from@4` | `dcclxxiv_closure_transfer_resolvent_equivalence_bridge.json`, `dccxli_closure_resolvent_kernel_bridge.json`, `dccxliii_nilpotent_logarithm_action_bridge.json`, `dccxliv_nilpotent_action_variation_bridge.json`, `dccxlv_nilpotent_hessian_convexity_bridge.json`, `dccxlvi_nilpotent_action_jet_tower_bridge.json` *(+5)* |
 | `metric_winner@2` | `PART_BT1836_E8_SELECTOR_APERTURE_TABLE_summary.json`, `PART_BT1837_TETRACODE_QUOTIENT_HUNT_summary.json`, `PART_BT1840_BT930_MATRIX_RECOVERY_AUDIT_summary.json`, `PART_BT1850_LOCAL_A2_WEYL_GLUE_REFINEMENT_AUDIT_summary.json`, `PART_BT1853_RUNTIME_SELECTOR_API_summary.json`, `PART_BT1854_QUOTIENT_STATUS_DASHBOARD_summary.json` *(+5)* |
 | `orbit_size@12960` | `PART_3887_3904_UNMARKED_WEDDERBURN_MONSTER_FOURAXIS_ORDER192_results.json`, `PART_W33_PASS4511_4518_DUAL_EVEN_PRISM_IHARA.json`, `w33_pass1340_1344_cartan_atlas_selector_padic.json`, `w33_pass1417_exact_cover_orbit_frontier.json`, `w33_pass1421_1424_outer_integral_cover_extension.json`, `w33_pass1505_exact_cover_census_frontier.json` *(+5)* |
-| `order@27` | `PART_W33_PASS4657_TRIALITY_INTERSECTION_GROUP.json`, `PART_W33_PASS5105_U81_DUAL_TORSOR_CONTROLLER.json`, `bt865_dual_torsor_steinberg_compiler.json`, `mccxlvii_binary_polyhedral_e_type_tower.json`, `monster_atlas_ccls.json`, `w33_MMXXI_MMXXX_photon_triangle_hypercube_network.json` *(+5)* |
-| `order@48` | `bt781_cube_tomotope_48_split.json`, `bt783_cube_tomotope_obstruction.json`, `bt789_toroidal_genus_phase_bridge.json`, `mccxlvii_binary_polyhedral_e_type_tower.json`, `monster_atlas_ccls.json`, `w33_BREAKTHROUGH_318_platonic_point_groups_substrate.json` *(+5)* |
 | `prime_limit@1000000` | `w33_completed_spectral_global_limit_object.json`, `w33_completed_spectral_infinite_cutoff_limit.json`, `w33_completed_spectral_phase_geometry.json`, `w33_cyclotomic_adelic_spectral_package.json`, `w33_cyclotomic_artanh_log_expansion.json`, `w33_cyclotomic_completed_dirichlet_series.json` *(+5)* |
 | `q_squared@9` | `PART_BT895_S3_REFLECTION_FERMION_MULTIPLET_MAP_results.json`, `w33_affine_e8_eighth_mode_bridge_summary.json`, `w33_fano_toroidal_complement_bridge_summary.json`, `w33_natural_units_electroweak_split_bridge_summary.json`, `w33_natural_units_neutral_shell_bridge_summary.json`, `w33_natural_units_projective_denominator_bridge_summary.json` *(+5)* |
 | `rank_d1@39` | `PART_CCCCCLXIX_y_symmetry_breaking_classifier_results.json`, `PART_CCCCCLXVIII_minimal_kb_seesaw_singular_values_results.json`, `PART_CCCCCXLV_discrete_continuum_bridge_results.json`, `dcclxviii_nilpotent_chain_lift_qec_bridge.json`, `w33_adjacency_dirac_closure_bridge_summary.json`, `w33_curved_finite_spectral_reconstruction_bridge_summary.json` *(+5)* |
@@ -286,6 +287,9 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `vertices@6` | `PART_BT1656_RUNTIME_WORD_CYCLE_BASIS_results.json`, `PART_BT663_SIX_CARRIER_K33_G2_RELATION_summary.json`, `PART_BT675_K33_METRIC_AUTOMORPHISM_summary.json`, `PART_BT691_K33_CODE_BOUNDARY_summary.json`, `PART_BT701_LOCAL_BRAID_WORD_FUNCTOR_BOUNDARY_summary.json`, `bt1815_quartet_slice_geometry.json` *(+4)* |
 | `alpha@5` | `PART_W33_PASS4795_OVOID_GAP_AND_COSET.json`, `PART_W33_PASS4797_ALPHA_SEPARATES_DUAL_PAIR.json`, `PART_W33_PASS4799_ALPHA_ACROSS_THE_ZOO.json`, `PART_W33_PASS4800_DEFICIT_LAW_FALSE.json`, `w33_BREAKTHROUGH_alpha_q3_anomaly.json`, `w33_BREAKTHROUGH_chi_uniqueness_at_q3.json` *(+3)* |
 | `apartments@90` | `PART_W33_PASS4573_GENERAL_GQ_C8_SELECTOR_OBSTRUCTION.json`, `PART_W33_PASS5043_Q_GENERAL_BUILDING_FAMILY.json`, `PART_W33_PASS5051_Q_FAMILY_THETA_CODE.json`, `PART_W33_PASS5074_GAUGE_ACTIVE_CHART.json`, `PART_W33_PASS5089_INTEGRAL_APARTMENT_PRESENTATION.json`, `PART_W33_PASS5110_CHAMBER_KERNEL_CUTSPACE.json` *(+3)* |
+| `aut@12` | `PART_4057_4064_ADVANCED_PHYSICS.json`, `bt815_global_2160_transversal_gset.json`, `monster_atlas_ccls.json`, `w33_BREAKTHROUGH_158_macro_tail_sieve.json`, `w33_BREAKTHROUGH_165_macro_tail_e6_phi12_boundary.json`, `w33_BREAKTHROUGH_318_platonic_point_groups_substrate.json` *(+3)* |
+| `aut@576` | `PART_W33_PASS4503_MAXIMAL_SUBGROUP_SPLITTING_ERRATUM.json`, `PART_W33_PASS4509_COHOMOLOGY_RESTRICTION_BARCODE.json`, `PART_W33_PASS5300_HOFFMAN576_LATIN_GROUP_BRIDGE.json`, `PART_W33_PASS5468_5475_SIMPLEX_STABILISER_IS_WF4.json`, `PART_W33_PASS5476_5479_WF4_DOES_NOT_EMBED.json`, `bt812_five_vacua.json` *(+3)* |
+| `aut@720` | `PART_W33_PASS4503_MAXIMAL_SUBGROUP_SPLITTING_ERRATUM.json`, `PART_W33_PASS4509_COHOMOLOGY_RESTRICTION_BARCODE.json`, `PART_W33_PASS4943_COMMON_S6_CARRIER_CROSSWALK.json`, `bt812_five_vacua.json`, `w33_atlas_verification.json`, `w33_pass1909_complete_s6_subgroup_phase_poset_certificate.json` *(+3)* |
 | `chambers@160` | `PART_W33_PASS4324_4327_CHAMBER_HECKE_HASHIMOTO.json`, `PART_W33_PASS4334_POINT_LINE_CHIRAL_CARRIER.json`, `PART_W33_PASS4936_CHAMBER_PACKET_MATRIX_UNITS.json`, `PART_W33_PASS4939_CHAMBER_STEINER_INTERTWINER.json`, `PART_W33_PASS5043_Q_GENERAL_BUILDING_FAMILY.json`, `PART_W33_PASS5074_GAUGE_ACTIVE_CHART.json` *(+3)* |
 | `check_count@19` | `PART_BT2820_BT2824_BLUEPRINT_HARDENING_results.json`, `w33_pass1032_selector_orbital_fusion_shadow.json`, `w33_pass1079_frame_action_rank32.json`, `w33_pass1091_formal_orbital_intertwiner_lock.json`, `w33_pass1092_u42dot2_character_identification.json`, `w33_pass2308_ternary_dual_q43_bridge.json` *(+3)* |
 | `decisive falsifiers@16` | `w33_BREAKTHROUGH_103_master_synthesis_v9.json`, `w33_BREAKTHROUGH_119_master_synthesis_v12.json`, `w33_BREAKTHROUGH_123_master_synthesis_v13.json`, `w33_BREAKTHROUGH_129_master_synthesis_v15.json`, `w33_BREAKTHROUGH_132_chain_companion_narrative.json`, `w33_BREAKTHROUGH_135_master_synthesis_v16.json` *(+3)* |
@@ -316,9 +320,6 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `orbit_size@2160` | `PART_3887_3904_UNMARKED_WEDDERBURN_MONSTER_FOURAXIS_ORDER192_results.json`, `PART_W33_PASS4548_C7_C8_HIGHER_BODY_TOMOGRAPHY.json`, `PART_W33_PASS4870_STEINER_W33_QUADRATIC_BRIDGE.json`, `w33_pass1340_1344_cartan_atlas_selector_padic.json`, `w33_pass1801_1805_five_frontiers.json`, `w33_pass1804_component.json` *(+3)* |
 | `orbit_size@4320` | `PART_3887_3904_UNMARKED_WEDDERBURN_MONSTER_FOURAXIS_ORDER192_results.json`, `PART_W33_PASS4548_C7_C8_HIGHER_BODY_TOMOGRAPHY.json`, `w33_pass1801_1805_five_frontiers.json`, `w33_pass1804_component.json`, `w33_pass1857_lower_syndrome_orbit_atlas.json`, `w33_pass2301_complete_quadratic_hom_bases.json` *(+3)* |
 | `orbit_sizes@27` | `PART_2026_07_10_LEVI_CLOSURE_results.json`, `PART_2026_07_10_LEVI_NEXT5_V4_functor.json`, `PART_2026_07_10_LEVI_NEXT5_V4_results.json`, `PART_2026_07_11_LEVI_NEXT5_V5_lanes.json`, `PART_W33_PASS4533_BOREL_POWER_THREE_STAIRCASE.json`, `PART_W33_PASS4539_EXACT_LOCAL_H10_DECODER.json` *(+3)* |
-| `order@12` | `PART_4057_4064_ADVANCED_PHYSICS.json`, `bt815_global_2160_transversal_gset.json`, `monster_atlas_ccls.json`, `w33_BREAKTHROUGH_158_macro_tail_sieve.json`, `w33_BREAKTHROUGH_165_macro_tail_e6_phi12_boundary.json`, `w33_BREAKTHROUGH_318_platonic_point_groups_substrate.json` *(+3)* |
-| `order@576` | `PART_W33_PASS4503_MAXIMAL_SUBGROUP_SPLITTING_ERRATUM.json`, `PART_W33_PASS4509_COHOMOLOGY_RESTRICTION_BARCODE.json`, `PART_W33_PASS5300_HOFFMAN576_LATIN_GROUP_BRIDGE.json`, `PART_W33_PASS5468_5475_SIMPLEX_STABILISER_IS_WF4.json`, `PART_W33_PASS5476_5479_WF4_DOES_NOT_EMBED.json`, `bt812_five_vacua.json` *(+3)* |
-| `order@720` | `PART_W33_PASS4503_MAXIMAL_SUBGROUP_SPLITTING_ERRATUM.json`, `PART_W33_PASS4509_COHOMOLOGY_RESTRICTION_BARCODE.json`, `PART_W33_PASS4943_COMMON_S6_CARRIER_CROSSWALK.json`, `bt812_five_vacua.json`, `w33_atlas_verification.json`, `w33_pass1909_complete_s6_subgroup_phase_poset_certificate.json` *(+3)* |
 | `pair@2` | `bt928_symplectic_basis_extractor.json`, `ckm_sample_stats.json`, `dcclviii_octahedral_dobrushin_contraction_bridge.json`, `mixing_from_grams.json`, `w33_l6_a2_v4_mode_bridge_summary.json`, `w33_pass1134_we6_432_stabilizers.json` *(+3)* |
 | `pair@3` | `bt928_symplectic_basis_extractor.json`, `bt961_final_selector_physics_packet_map.json`, `bt963_selector_phase_slot_scoring.json`, `bt964_holonet_packet_abi_rail_attachment.json`, `bt966_light_rail_degeneracy_breaker.json`, `ckm_sample_stats.json` *(+3)* |
 | `parameters@10` | `PART_3670_3686_MONSTER_TOMOTOPE_AMALGAMATION_results.json`, `PART_BT3500_BT3505_TRIANGLE_FREE_SRG_M57_BRIDGE_results.json`, `PART_BT3506_BT3512_SEVEN_GRAPH_CSP_SCHEME_SYMMETRY_results.json`, `PART_BT3535_BT3541_CLIQUE_BOREL_FOURIER_FACTORIZATION_PORTS_results.json`, `bt1792_true_tuple_recovery_audit.json`, `bt1794_schlafli_e6_lift.json` *(+3)* |
@@ -351,6 +352,10 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `value@15` | `dcclii_hyperbolic_pascal_600cell_e8.json`, `dccliii_monster_moonshine_w33_bridge.json`, `dcclxxvii_convergent_attractor_theorem.json`, `holonet_uor_mock_runtime_report.json`, `w33_BREAKTHROUGH_37_pillar_substrate_coverage.json`, `w33_BREAKTHROUGH_48_substrate_addition_table.json` *(+3)* |
 | `value@27` | `dcclxxvii_convergent_attractor_theorem.json`, `w33_BREAKTHROUGH_108_norm3_lattice_g2_anomaly.json`, `w33_BREAKTHROUGH_37_pillar_substrate_coverage.json`, `w33_BREAKTHROUGH_48_substrate_addition_table.json`, `w33_MMI_MMX_music_fibonacci_cosmology_substrate.json`, `w33_pass487_scope_and_det_hunt.json` *(+3)* |
 | `vertices@8` | `PART_BT1656_RUNTIME_WORD_CYCLE_BASIS_results.json`, `PART_BT509_RICHTER_SIGNED_XMIN_FACE_CODEC_results.json`, `bt1517_concrete_szilassi_realization_map.json`, `bt1521_fixed_hexagon_sector_fiber_test.json`, `w33_gauge_sixth_face.json`, `w33_pass1018_pencil_rigidity_and_the_wqq_family.json` *(+3)* |
+| `aut@16` | `PART_W33_PASS4493_SYMMETRY_BREAKING_SECTION_THRESHOLD.json`, `PART_W33_PASS4650_GLOBAL_D12_COVER_FACTORIZATION.json`, `PART_W33_PASS4663_DUO_SPREAD_COUPLING_OBSTRUCTION.json`, `PART_W33_PASS5321_TOMOTOPE_3K4_COORDINATE_PARTITION_SEMIDIRECT.json`, `bt1709_binary_to_hesse_qutrit_crossover.json`, `monster_atlas_ccls.json` *(+2)* |
+| `aut@162` | `PART_W33_PASS4493_SYMMETRY_BREAKING_SECTION_THRESHOLD.json`, `PART_W33_PASS4503_MAXIMAL_SUBGROUP_SPLITTING_ERRATUM.json`, `PART_W33_PASS4504_MINIMAL_FLAG_SECTION.json`, `PART_W33_PASS4509_COHOMOLOGY_RESTRICTION_BARCODE.json`, `PART_W33_PASS4519_FLAG_BOREL_SYLOW3_NORMALIZER.json`, `PART_W33_PASS4528_BOREL_OVERGROUP_SPLITTING.json` *(+2)* |
+| `aut@216` | `PART_W33_PASS4538_GLOBAL_LARGE_SPLITTING_CENSUS.json`, `PART_W33_PASS4657_TRIALITY_INTERSECTION_GROUP.json`, `PART_W33_PASS4671_LOCAL_F4_TRIALITY_S3_STABILIZER.json`, `mccxlvii_binary_polyhedral_e_type_tower.json`, `w33_pass1023_chirality_and_phase_halves.json`, `w33_pass1028_primary_obstruction_syndrome.json` *(+2)* |
+| `aut@60` | `PART_BT486_BC_RING_BOUNDARY_TORUS_results.json`, `monster_atlas_ccls.json`, `w33_BREAKTHROUGH_298_ramanujan_expanders_substrate.json`, `w33_BREAKTHROUGH_318_platonic_point_groups_substrate.json`, `w33_pass1139_complete_degree540_species.json`, `w33_pass1193_s5_a5_coset_bridge.json` *(+2)* |
 | `charts@540` | `bt1310_entropy_preserving_router.json`, `bt1313_entropy_router_optimality_certificate.json`, `bt1328_epoch_repair.json`, `bt1335_foundry_layout_feasibility_gate.json`, `bt794_klein_regulus_transversal_lift.json`, `bt796_global_2160_tomotope_vertex_fibration.json` *(+2)* |
 | `check_count@13` | `w33_pass1064_dual_falsifier_preregistration.json`, `w33_pass1067_outer_class_geometry.json`, `w33_pass1069_photonic_pipeline.json`, `w33_pass1100_name_the_135.json`, `w33_pass377_binary_q3_switch_header.json`, `w33_pass378_header_scheduler_c3_obstruction.json` *(+2)* |
 | `coefficients@2` | `PART_BT2847_BT2853_PROTECTED_OBSERVER_NOISY_M36_results.json`, `bt865_dual_torsor_steinberg_compiler.json`, `dcmlxxx_z12_709_ihara_genus_bridge.json`, `dcmlxxxii_ihara_z12_cross_branch_resonance_audit.json`, `w33_minimal_logical_e6_pairing.json`, `w33_minimal_logical_witness_census.json` *(+2)* |
@@ -410,10 +415,6 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `multiplicity@15` | `PART_W33_PASS4747_ROUTER_SPECTRAL_REPRESENTATION.json`, `bt1696_dscft_time_arrow_modes.json`, `dclxiii_arxiv_claim_ledger.json`, `w33_motivic_24_15_packet_certificate.json`, `w33_norm11_local_global_certificate.json`, `w33_pass4161_broader_rep_anomaly_optimization.json` *(+2)* |
 | `numerator@5` | `w33_cross_branch_gap_normalization_spine.json`, `w33_green_kernel_floor_reciprocity.json`, `w33_green_moment_condition_ladder.json`, `w33_horizon_parity_floor_duality.json`, `w33_pass402_quantum_classical_frontier.json`, `w33_spectral_gap_mixing.json` *(+2)* |
 | `orbital_rank@21` | `PART_BT3542_BT3548_BOREL_COMMUTANT_OUTER_S6_ANALYTIC_results.json`, `PART_BT3549_BT3555_BOREL_PENTAD_QUANTUM_WALK_results.json`, `PART_BT3577_BT3583_PETERSEN_MATRIX_OCTAD_MARKED_WALK_results.json`, `PART_W33_PASS5300_5307_RESULTS.json`, `PART_W33_PASS5305_K0_MINIMUM_SHELL_ORBITALS.json`, `PART_W33_PASS5332_5339_RESULTS.json` *(+2)* |
-| `order@16` | `PART_W33_PASS4493_SYMMETRY_BREAKING_SECTION_THRESHOLD.json`, `PART_W33_PASS4650_GLOBAL_D12_COVER_FACTORIZATION.json`, `PART_W33_PASS4663_DUO_SPREAD_COUPLING_OBSTRUCTION.json`, `PART_W33_PASS5321_TOMOTOPE_3K4_COORDINATE_PARTITION_SEMIDIRECT.json`, `bt1709_binary_to_hesse_qutrit_crossover.json`, `monster_atlas_ccls.json` *(+2)* |
-| `order@162` | `PART_W33_PASS4493_SYMMETRY_BREAKING_SECTION_THRESHOLD.json`, `PART_W33_PASS4503_MAXIMAL_SUBGROUP_SPLITTING_ERRATUM.json`, `PART_W33_PASS4504_MINIMAL_FLAG_SECTION.json`, `PART_W33_PASS4509_COHOMOLOGY_RESTRICTION_BARCODE.json`, `PART_W33_PASS4519_FLAG_BOREL_SYLOW3_NORMALIZER.json`, `PART_W33_PASS4528_BOREL_OVERGROUP_SPLITTING.json` *(+2)* |
-| `order@216` | `PART_W33_PASS4538_GLOBAL_LARGE_SPLITTING_CENSUS.json`, `PART_W33_PASS4657_TRIALITY_INTERSECTION_GROUP.json`, `PART_W33_PASS4671_LOCAL_F4_TRIALITY_S3_STABILIZER.json`, `mccxlvii_binary_polyhedral_e_type_tower.json`, `w33_pass1023_chirality_and_phase_halves.json`, `w33_pass1028_primary_obstruction_syndrome.json` *(+2)* |
-| `order@96` | `PART_2026_07_10_LEVI_CLOSURE_results.json`, `PART_BT2901_BT2907_SEVEN_FRONTIERS_results.json`, `PART_W33_PASS4650_GLOBAL_D12_COVER_FACTORIZATION.json`, `PART_W33_PASS5310_TESSERACT_D4_TOMOTOPE_DOUBLECOVERS.json`, `PART_W33_PASS5476_5479_WF4_DOES_NOT_EMBED.json`, `w33_pass1968_internal_mu6_structural_role.json` *(+2)* |
 | `parameters@5` | `PART_BT3500_BT3505_TRIANGLE_FREE_SRG_M57_BRIDGE_results.json`, `bt1792_true_tuple_recovery_audit.json`, `bt1794_schlafli_e6_lift.json`, `w33_pass1007_kbranch_beyond_three_and_prank_table.json`, `w33_pass2565_abstract_schlaefli_incidence.json`, `w33_pass548_552_nonlinear_semilinear_transfer.json` *(+2)* |
 | `perm@2` | `bt1344_q4_quotient_canonicalization.json`, `bt1362_symmetric_q4_gauge_quotient.json`, `bt1363_q4_clock_tomotope_medial_descent.json`, `bt1487_v4_triangle_stabilizer_classifier.json`, `bt1493_row_action_physical_pulse_compiler.json`, `bt1593_lg_mode_alphabet_selector.json` *(+2)* |
 | `points@13` | `PART_W33_PASS5351_5352_HOFFMAN_PAULI_LATIN_SYMPLECTIC_SPREAD.json`, `bt1712_m2f2_hesse_crossover.json`, `bt798_residual_tetrahedral_carrier.json`, `bt799_transversal_incidence_grammar.json`, `bt814_tomotope_middle_layer_from_residual_tetrahedra.json`, `dcmi_sub_distinction_boundary_audit.json` *(+2)* |
@@ -469,6 +470,9 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `a2_f@2240` | `w33_adjacency_dirac_closure_bridge_summary.json`, `w33_curved_finite_spectral_reconstruction_bridge_summary.json`, `w33_curved_roundtrip_closure_bridge_summary.json`, `w33_eh_continuum_lock_bridge_summary.json`, `w33_refinement_bridge_synthesis_summary.json`, `w33_spectral_action_cyclotomic_bridge_summary.json` *(+1)* |
 | `alpha@17` | `PART_W33_PASS4795_OVOID_GAP_AND_COSET.json`, `PART_W33_PASS4799_ALPHA_ACROSS_THE_ZOO.json`, `PART_W33_PASS4800_DEFICIT_LAW_FALSE.json`, `PART_W33_PASS5246_5247_EVEN_Q_ALPHA_BY_CONSTRUCTION.json`, `w33_BREAKTHROUGH_alpha_q3_anomaly.json`, `w33_audit_qscan.json` *(+1)* |
 | `anchors@3` | `PART_W33_PASS5066_5073_RESULTS.json`, `PART_W33_PASS5110_5117_RESULTS.json`, `PART_W33_PASS5126_5133_RESULTS.json`, `PART_W33_PASS5134_5141_RESULTS.json`, `PART_W33_PASS5158_5165_RESULTS.json`, `PART_W33_PASS5332_5339_RESULTS.json` *(+1)* |
+| `aut@1152` | `PART_W33_PASS5476_5479_WF4_DOES_NOT_EMBED.json`, `dccliv_frobenius_selection_and_ouroboros.json`, `w33_BREAKTHROUGH_280_spacetime_uniqueness_Coxeter.json`, `w33_BREAKTHROUGH_35_complete_graph_horizon.json`, `w33_gkp_clifford_coherence.json`, `w33_pass1023_chirality_and_phase_halves.json` *(+1)* |
+| `aut@168` | `w33_BREAKTHROUGH_298_ramanujan_expanders_substrate.json`, `w33_BREAKTHROUGH_42_grassmann_ag_codes_substrate.json`, `w33_BREAKTHROUGH_457_radix_hermitian_klein_pascal_unification.json`, `w33_BREAKTHROUGH_45_klein_quartic_ag_codes.json`, `w33_clock_gauge_two_layer.json`, `w33_fano_hamming_bridge.json` *(+1)* |
+| `aut@42` | `PART_BT491_DUAL_SZILASSI_FROM_CYCLIC_CSASZAR_results.json`, `bt1318_toroidal_c2_axis_assignment.json`, `bt803_seven_realizations_census.json`, `monster_atlas_ccls.json`, `w33_MDCCCXCIII_MDCCCCII_toroidal_polyhedra_deep_dive.json`, `w33_pass305_aut_csaszar_is_AGL_1_7.json` *(+1)* |
 | `blocks@12` | `bt1837_covariance_budget.json`, `bt1843_multivariate_covariance_sprt.json`, `w33_BREAKTHROUGH_304_witt_designs_substrate.json`, `w33_pass1400_1404_five_frontiers.json`, `w33_pass2433_exact_commutative_fusion_lattice.json`, `w33_pass2472_rank9_scheme_decode.json` *(+1)* |
 | `bosonic_octet_8@8` | `w33_affine_e8_fifth_mode_bridge_summary.json`, `w33_affine_e8_first_mode_bridge_summary.json`, `w33_affine_e8_fourth_mode_bridge_summary.json`, `w33_affine_e8_second_mode_bridge_summary.json`, `w33_affine_e8_seventh_mode_bridge_summary.json`, `w33_affine_e8_sixth_mode_bridge_summary.json` *(+1)* |
 | `center@3` | `PART_W33_PASS5090_5097_RESULTS.json`, `PART_W33_PASS5105_U81_DUAL_TORSOR_CONTROLLER.json`, `w33_contextuality_tax_holonomy_queue.json`, `w33_contextuality_tax_queue_simulator.json`, `w33_contextuality_tax_scheduler.json`, `w33_pass1054_1059_release.json` *(+1)* |
@@ -544,8 +548,6 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `numerator@6` | `tomotope_toroidal_markov_cubic_recurrence_bridge.json`, `tomotope_toroidal_markov_generating_function_bridge.json`, `w33_green_moment_condition_ladder.json`, `w33_pass402_quantum_classical_frontier.json`, `w33_poisson_kemeny_green_kernel.json`, `w33_spectral_gap_mixing.json` *(+1)* |
 | `orbit_size@40` | `PART_3743_3750_SYMMETRY_OS_SPACETIME_FACTORY_TOURNAMENT_results.json`, `PART_W33_PASS4654_TRIALITY_PLANE_W33_POINT_INTERTWINER.json`, `w33_BREAKTHROUGH_73_single_photon_bell_qutrit.json`, `w33_pass1801_1805_five_frontiers.json`, `w33_pass1804_component.json`, `w33_pass1857_lower_syndrome_orbit_atlas.json` *(+1)* |
 | `orbit_sizes@12` | `PART_W33_PASS5416_5419_STABILISER_ACTS_AND_FIXES_ONE.json`, `PART_W33_PASS5484_5487_SIXTEEN_IS_Q_PLUS_ONE_SQUARED.json`, `_gap_cover_orbits.json`, `bt784_rank32_strata_map.json`, `w33_pass4181_symmetry_stratified_interval_mixed_push.json`, `w33_pass4252_exact_quotient_rg_chain.json` *(+1)* |
-| `order@1152` | `PART_W33_PASS5476_5479_WF4_DOES_NOT_EMBED.json`, `dccliv_frobenius_selection_and_ouroboros.json`, `w33_BREAKTHROUGH_280_spacetime_uniqueness_Coxeter.json`, `w33_BREAKTHROUGH_35_complete_graph_horizon.json`, `w33_gkp_clifford_coherence.json`, `w33_pass1023_chirality_and_phase_halves.json` *(+1)* |
-| `order@60` | `monster_atlas_ccls.json`, `w33_BREAKTHROUGH_298_ramanujan_expanders_substrate.json`, `w33_BREAKTHROUGH_318_platonic_point_groups_substrate.json`, `w33_pass1139_complete_degree540_species.json`, `w33_pass1193_s5_a5_coset_bridge.json`, `w33_pass1509_qutrit_hamming_m20_chart.json` *(+1)* |
 | `pair@4` | `bt961_final_selector_physics_packet_map.json`, `bt963_selector_phase_slot_scoring.json`, `bt964_holonet_packet_abi_rail_attachment.json`, `bt966_light_rail_degeneracy_breaker.json`, `w33_pass623_hecke_generators_observables.json`, `w33_pass643_multiplexed_guard_fibre.json` *(+1)* |
 | `parameters@3` | `PART_BT3500_BT3505_TRIANGLE_FREE_SRG_M57_BRIDGE_results.json`, `PART_BT3506_BT3512_SEVEN_GRAPH_CSP_SCHEME_SYMMETRY_results.json`, `PART_W33_PASS4714_DUALSHELL_GQ42_DESIGN.json`, `w33_BREAKTHROUGH_299_hamming_code_substrate.json`, `w33_pass1007_kbranch_beyond_three_and_prank_table.json`, `w33_pass2565_abstract_schlaefli_incidence.json` *(+1)* |
 | `params@4` | `PART_W33_PASS4693_4695_VACUOUS_TEST_RETRACTED.json`, `PART_W33_PASS4767_QUADRANGLE_ZOO_CANONICAL.json`, `w33_BREAKTHROUGH_29_sporadic_cascade_supersingular.json`, `w33_BREAKTHROUGH_42_grassmann_ag_codes_substrate.json`, `w33_BREAKTHROUGH_43_full_grassmann_family.json`, `w33_BREAKTHROUGH_73_single_photon_bell_qutrit.json` *(+1)* |
@@ -671,7 +673,9 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `anchors@5` | `PART_W33_PASS5066_5073_RESULTS.json`, `PART_W33_PASS5126_5133_RESULTS.json`, `PART_W33_PASS5134_5141_RESULTS.json`, `PART_W33_PASS5158_5165_RESULTS.json`, `PART_W33_PASS5332_5339_RESULTS.json`, `w33_pass1854_intrinsic_anchor_c3xs3.json` |
 | `antipodal_pairs@4` | `bt1849_antipodal_gauge_resolver.json`, `dccliii_octahedral_effective_resistance_dirichlet_bridge.json`, `dccliv_octahedral_commute_hitting_time_bridge.json`, `dccxlix_octahedron_closure_phase_space.json`, `w33_pass661_ring_burnside_closed_form.json`, `w33_pass807_deformation_burnside_tower_scope.json` |
 | `apartments@13600` | `PART_W33_PASS5056_Q4_THETA_APARTMENT_CODE.json`, `PART_W33_PASS5061_5065_AUXILIARY.json`, `PART_W33_PASS5074_GAUGE_ACTIVE_CHART.json`, `PART_W33_PASS5110_CHAMBER_KERNEL_CUTSPACE.json`, `PART_W33_PASS5112_INTRINSIC_ROOT_CHART_RECONSTRUCTION.json`, `PART_W33_PASS5396_5401_ALLQ_APARTMENT_TIGHT_FRAME.json` |
-| `aut_order@51840` | `bt1350_cross_quadrant_claims.json`, `bt859_bell_compass_parabolic_router.json`, `dcmii_projective_screen_bulk_qec_bridge.json`, `mccxli_substrate_self_similarity_fixed_point.json`, `w33_BREAKTHROUGH_338_SQNA_architecture.json`, `w33_pass1615_1616_chirality.json` |
+| `aut@1296` | `PART_W33_PASS4671_LOCAL_F4_TRIALITY_S3_STABILIZER.json`, `PART_W33_PASS4988_AG23_INTRINSIC_GAUGE_SURVIVES.json`, `w33_pass1023_chirality_and_phase_halves.json`, `w33_pass1028_primary_obstruction_syndrome.json`, `w33_pass1045_e8_is_the_only_two_tower_type.json`, `w33_pass413_automorphism_twirl.json` |
+| `aut@1440` | `PART_W33_PASS4793_POLARITY_AND_SUZUKI.json`, `PART_W33_PASS4869_MARKED_DOUBLE_SIX_K6_SYMPLECTIC_RESIDUE.json`, `PART_W33_PASS4873_TWO_ORDER1440_EXTENSIONS.json`, `PART_W33_PASS4943_COMMON_S6_CARRIER_CROSSWALK.json`, `w33_pass1023_chirality_and_phase_halves.json`, `w33_pass1028_primary_obstruction_syndrome.json` |
+| `aut@81` | `PART_W33_PASS4519_FLAG_BOREL_SYLOW3_NORMALIZER.json`, `PART_W33_PASS5090_5097_RESULTS.json`, `PART_W33_PASS5105_U81_DUAL_TORSOR_CONTROLLER.json`, `w33_pass1023_chirality_and_phase_halves.json`, `w33_pass1028_primary_obstruction_syndrome.json`, `w33_pass425_exact_extension_smith.json` |
 | `automorphism_group_order@51840` | `PART_3821_3828_COMPONENT_SCHEME.json`, `PART_3821_3828_MAXCODE_MESH_SCHEME_OVOID_results.json`, `PART_W33_PASS4686_DUAL132_HYPERGRAPH_SYMMETRY_BREAKING.json`, `PART_W33_PASS4714_DUALSHELL_GQ42_DESIGN.json`, `PART_W33_PASS4746_S3_CONNECTION_CLASSIFICATION.json`, `PART_W33_PASS4849_4852_4854_4855_4856_E6_KERNEL_CODE.json` |
 | `base_skew_pair@13` | `bt780_rank32_suborbit_atlas_summary.json`, `bt781_cube_tomotope_48_split.json`, `bt798_residual_tetrahedral_carrier.json`, `bt799_transversal_incidence_grammar.json`, `bt800_diagonal_quotient_shadow_plane.json`, `bt814_tomotope_middle_layer_from_residual_tetrahedra.json` |
 | `blocks@2` | `w33_pass1400_1404_five_frontiers.json`, `w33_pass2433_exact_commutative_fusion_lattice.json`, `w33_pass2472_rank9_scheme_decode.json`, `w33_pass580_singer_johnson_fusion.json`, `w33_tomotope_semidirect_triality_bridge_summary.json`, `w33_yukawa_blocks.json` |
@@ -753,6 +757,7 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `guard_slot@8` | `bt1414_csaszar_szilassi_dual_physical_port.json`, `bt1417_linear_optical_dual_port_primitives.json`, `bt1649_time_bin_qudit_envelope.json`, `bt1650_guard_page_calibration_closure.json`, `bt1699_holonet_abi_to_hardware_lowering.json`, `bt1703_holonet_fault_propagation_simulator.json` |
 | `guard_slot@9` | `bt1414_csaszar_szilassi_dual_physical_port.json`, `bt1417_linear_optical_dual_port_primitives.json`, `bt1649_time_bin_qudit_envelope.json`, `bt1650_guard_page_calibration_closure.json`, `bt1699_holonet_abi_to_hardware_lowering.json`, `bt1703_holonet_fault_propagation_simulator.json` |
 | `hemioctahedra@4` | `PART_BT2810_SIGNED_SUPPORT_TOMOTOPE_results.json`, `bt784_rank32_tomotope_strata_map.json`, `bt831_tomotope_minimal_cover_architecture.json`, `w33_phi6_cyclic_tomotope_bridge_summary.json`, `w33_tomotope_local_incidence_clifford_bridge_summary.json`, `w33_tomotope_order_bridge_summary.json` |
+| `image@576` | `PART_W33_PASS5416_5419_STABILISER_ACTS_AND_FIXES_ONE.json`, `PART_W33_PASS5460_5467_Q8_TRANSITIVE_Q5_IS_SPECIAL.json`, `PART_W33_PASS5468_5475_SIMPLEX_STABILISER_IS_WF4.json`, `_gap_cover_orbits.json`, `_gap_cover_stab.json`, `_gap_f4.json` |
 | `incidence_rank@25` | `PART_2026_07_10_LEVI_DUALITY_DEFECT_results.json`, `PART_2026_07_10_LEVI_FIVE_FRONTIERS_results.json`, `PART_2026_07_11_LEVI_NEXT5_V5_fourier.json`, `PART_W33_PASS4986_TWIN_DARK15_LEVI_OBSTRUCTION.json`, `PART_W33_PASS5014_40_TRITANGENT_COVERS_ARE_W33_POINTS.json`, `w33_pass202_shadow_dichotomy_arithmetic.json` |
 | `job_count@56` | `test_compiler.json`, `w33_clock_policy_stress.json`, `w33_line_context_compiler.json`, `w33_line_context_compiler_exact.json`, `w33_packet_latency_benchmark.json`, `w33_spread_contextual_microkernel_bridge.json` |
 | `legal_gap_over_omega@2` | `PART_4169_4176_DISCRETE_C2_HAWKING_BACKREACTION_GRAY_LEVI_CASIMIR_AXION.json`, `PART_4185_4192_ADAPTIVE_C2_HAWKING_HYSTERESIS_3LOCAL_COVER_HOLONOMY_IHARA_HEAT.json`, `PART_4213_4220_SMALL_COVER_SU4_QUANTUM_HYSTERESIS_CLOCK_HAWKING_PELL_VACUUM_VELOCITY.json`, `PART_4214_4221_SMALL_COVER_SU4_QUANTUM_HYSTERESIS_CLOCK_HAWKING_PELL_VACUUM_VELOCITY.json`, `PART_4253_4260_GIRTH16_FAULTAWARE_SU4_HYSTERESIS_CLOCK_CHANNEL_SCRAMBLING_MODULAR_CAPACITY.json`, `PART_4261_4268_GIRTH18_CD_HYSTERESIS_CLOCK37_NONGAUSSIAN_SEARCH_DEFECT_THERMAL.json` |
@@ -821,8 +826,6 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `orbit_size@8640` | `w33_pass1801_1805_five_frontiers.json`, `w33_pass1804_component.json`, `w33_pass1857_lower_syndrome_orbit_atlas.json`, `w33_pass2301_complete_quadratic_hom_bases.json`, `w33_pass2310_quadratic_hom_orbit_seed_compression.json`, `w33_pass4273_triple_strata_and_rank4_boundary.json` |
 | `orbit_sizes@9` | `PART_W33_PASS4533_BOREL_POWER_THREE_STAIRCASE.json`, `PART_W33_PASS4539_EXACT_LOCAL_H10_DECODER.json`, `w33_pass1887b_prescribed_automorphism.json`, `w33_pass394_398_execution_summary.json`, `w33_pass4252_exact_quotient_rg_chain.json`, `w33_pass4273_triple_strata_and_rank4_boundary.json` |
 | `orbital_rank@4` | `PART_W33_PASS5238_5245_RESULTS.json`, `PART_W33_PASS5320_TESSERACT_ROTATION_VS_D4_FACEPAIR_ORBITAL_FUSION.json`, `PART_W33_PASS5357_ALLODD_PSL2_PAIR_ORBITAL_RANK.json`, `PART_W33_PASS5359_PRIME_PAIR_HECKE_WEDDERBURN_CENSUS.json`, `PART_W33_PASS5360_ALLODD_PAIR_HECKE_WEDDERBURN.json`, `w33_pass1365_1369_rational_schur_completion.json` |
-| `order@1296` | `PART_W33_PASS4671_LOCAL_F4_TRIALITY_S3_STABILIZER.json`, `PART_W33_PASS4988_AG23_INTRINSIC_GAUGE_SURVIVES.json`, `w33_pass1023_chirality_and_phase_halves.json`, `w33_pass1028_primary_obstruction_syndrome.json`, `w33_pass1045_e8_is_the_only_two_tower_type.json`, `w33_pass413_automorphism_twirl.json` |
-| `order@81` | `PART_W33_PASS4519_FLAG_BOREL_SYLOW3_NORMALIZER.json`, `PART_W33_PASS5090_5097_RESULTS.json`, `PART_W33_PASS5105_U81_DUAL_TORSOR_CONTROLLER.json`, `w33_pass1023_chirality_and_phase_halves.json`, `w33_pass1028_primary_obstruction_syndrome.json`, `w33_pass425_exact_extension_smith.json` |
 | `parameters@45` | `PART_W33_PASS4714_DUALSHELL_GQ42_DESIGN.json`, `w33_pass1007_kbranch_beyond_three_and_prank_table.json`, `w33_pass1135_cubic_kernel_decomposition.json`, `w33_pass1833_anchor_s3_derivation.json`, `w33_pass2555_syndrome_triangle_geometry.json`, `w33_pass2565_abstract_schlaefli_incidence.json` |
 | `parameters@7` | `PART_BT3500_BT3505_TRIANGLE_FREE_SRG_M57_BRIDGE_results.json`, `w33_BREAKTHROUGH_299_hamming_code_substrate.json`, `w33_pass1007_kbranch_beyond_three_and_prank_table.json`, `w33_pass548_552_nonlinear_semilinear_transfer.json`, `w33_pass551_z9_fourier_transfer.json`, `w33_pass559_z9_radial_quadratic_automaton.json` |
 | `params@3` | `PART_W33_PASS4693_4695_VACUOUS_TEST_RETRACTED.json`, `PART_W33_PASS4767_QUADRANGLE_ZOO_CANONICAL.json`, `w33_BREAKTHROUGH_29_sporadic_cascade_supersingular.json`, `w33_BREAKTHROUGH_42_grassmann_ag_codes_substrate.json`, `w33_BREAKTHROUGH_43_full_grassmann_family.json`, `w33_BREAKTHROUGH_73_single_photon_bell_qutrit.json` |
@@ -1003,12 +1006,17 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `active_packets@2` | `w33_pass548_552_nonlinear_semilinear_transfer.json`, `w33_pass551_z9_fourier_transfer.json`, `w33_pass553_557_intrinsic_automaton_formal_control_release.json`, `w33_pass554_z9_minimal_memory_automaton.json`, `w33_pass559_z9_radial_quadratic_automaton.json` |
 | `active_packets@3` | `w33_pass548_552_nonlinear_semilinear_transfer.json`, `w33_pass551_z9_fourier_transfer.json`, `w33_pass553_557_intrinsic_automaton_formal_control_release.json`, `w33_pass554_z9_minimal_memory_automaton.json`, `w33_pass559_z9_radial_quadratic_automaton.json` |
 | `ag21_length@21` | `w33_affine_middle_shell_bridge_summary.json`, `w33_heawood_shell_ladder_bridge_summary.json`, `w33_klein_harmonic_vogel_bridge_summary.json`, `w33_natural_units_neutral_shell_bridge_summary.json`, `w33_refinement_bridge_synthesis_summary.json` |
+| `alpha@10` | `PART_W33_PASS4797_ALPHA_SEPARATES_DUAL_PAIR.json`, `PART_W33_PASS4799_ALPHA_ACROSS_THE_ZOO.json`, `PART_W33_PASS5228_5229_COSPECTRAL_OVOID_GAP.json`, `w33_BREAKTHROUGH_clique_ovoid_lovasz_tight.json`, `w33_lovasz_independence_clique.json` |
+| `alpha@18` | `PART_W33_PASS4800_DEFICIT_LAW_FALSE.json`, `PART_W33_PASS5226_5227_ODD_Q_OVOID_DEFICIENCY.json`, `PART_W33_PASS5228_5229_COSPECTRAL_OVOID_GAP.json`, `PART_W33_PASS5270_5271_ODD_Q_EXACT_ALPHA.json`, `PART_W33_PASS5276_5277_SYMMETRY_MILP_AND_DEFICITS.json` |
 | `ambient_pg53_points@364` | `w33_klein_bitangent_shell_bridge_summary.json`, `w33_klein_clifford_topological_bridge_summary.json`, `w33_klein_harmonic_vogel_bridge_summary.json`, `w33_refinement_bridge_synthesis_summary.json`, `w33_s12_klein_projective_bridge_summary.json` |
 | `ambiguous_parent_spectra@3` | `w33_pass548_552_nonlinear_semilinear_transfer.json`, `w33_pass551_z9_fourier_transfer.json`, `w33_pass553_557_intrinsic_automaton_formal_control_release.json`, `w33_pass554_z9_minimal_memory_automaton.json`, `w33_pass559_z9_radial_quadratic_automaton.json` |
 | `anisotropic@120` | `PART_W33_PASS4486_REPEATED_CORE_FORM_RESURRECTION.json`, `PART_W33_PASS4487_PARALLEL_PAULI_CORE_COORDINATE_WELD.json`, `PART_W33_PASS4553_CANONICAL_H10_WEIGHT_QUADRATIC.json`, `w33_pass1061_springer_embedding_decision.json`, `w33_pass174_dual_discriminant_fixed_rail.json` |
 | `antipodal_pairs@2` | `bt1093_odd_even_matter_cube_verifier.json`, `bt1849_antipodal_gauge_resolver.json`, `dccliii_octahedral_effective_resistance_dirichlet_bridge.json`, `dccliv_octahedral_commute_hitting_time_bridge.json`, `dccxlix_octahedron_closure_phase_space.json` |
 | `apartments@73125` | `PART_W33_PASS5066_5073_RESULTS.json`, `PART_W33_PASS5074_GAUGE_ACTIVE_CHART.json`, `PART_W33_PASS5110_CHAMBER_KERNEL_CUTSPACE.json`, `PART_W33_PASS5396_5401_ALLQ_APARTMENT_TIGHT_FRAME.json`, `PART_W33_PASS5420_5427_APARTMENT_DUALITY_PACKET.json` |
-| `aut_order@96` | `PART_W33_PASS5480_5483_ORBIT_SPLIT_REAL_CUBE_NOT.json`, `PART_W33_PASS5484_5487_SIXTEEN_IS_Q_PLUS_ONE_SQUARED.json`, `bt1368_q6_tomotope_equivariant_flag_lift.json`, `bt1371_q6_tomotope_explicit_orbit_address_table.json`, `bt850_tomotope_two_orbit_class.json` |
+| `aut@10` | `PART_3751_3758_MONSTER_LATTICE_MULTIPORT_COVER_results.json`, `monster_atlas_ccls.json`, `w33_BREAKTHROUGH_165_macro_tail_e6_phi12_boundary.json`, `w33_composite_moonshine_power_spine_bridge_summary.json`, `w33_pass999_a5_double_class_census.json` |
+| `aut@155520` | `PART_W33_PASS4641_SPLIT_OCTONION_TRIALITY_NORMALIZER.json`, `w33_pass1045_e8_is_the_only_two_tower_type.json`, `w33_pass1046_e6_tower_is_the_e8_stabiliser.json`, `w33_pass1068_chevie_g25_g32_matrices.json`, `w33_witting_polytope_substrate.json` |
+| `aut@18` | `bt1453_order18_closure_group_classifier.json`, `bt1456_s3_c3_representation_lift.json`, `monster_atlas_ccls.json`, `w33_BREAKTHROUGH_165_macro_tail_e6_phi12_boundary.json`, `w33_pass437_full_smith_weld.json` |
+| `aut@960` | `PART_W33_PASS4503_MAXIMAL_SUBGROUP_SPLITTING_ERRATUM.json`, `PART_W33_PASS4509_COHOMOLOGY_RESTRICTION_BARCODE.json`, `bt812_five_vacua.json`, `w33_atlas_verification.json`, `w33_pass1509_qutrit_hamming_m20_chart.json` |
 | `axes@9` | `bt842_tomotope_24cell_half_flag_edge_lift.json`, `w33_BREAKTHROUGH_321_q4_reye_complement_lift_duality.json`, `w33_BREAKTHROUGH_325_selector_reye_axis_quotient_lock.json`, `w33_pass1325_1329_triality_integral_gauge.json`, `w33_pass1327_species20_gauge_normalizer.json` |
 | `base_direction@14` | `w33_BREAKTHROUGH_273_selector_phase_clock_atlas.json`, `w33_BREAKTHROUGH_274_gray_projection_selector_phase_lock.json`, `w33_BREAKTHROUGH_275_folded_gray_selector_transport.json`, `w33_BREAKTHROUGH_285_ecube_pivot_selector_lift.json`, `w33_BREAKTHROUGH_286_ecube_coordinate_selector_atlas.json` |
 | `blocks@4` | `w33_pass1400_1404_five_frontiers.json`, `w33_pass2433_exact_commutative_fusion_lattice.json`, `w33_pass2472_rank9_scheme_decode.json`, `w33_pass580_singer_johnson_fusion.json`, `w33_tomotope_semidirect_triality_bridge_summary.json` |
@@ -1121,6 +1129,7 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `heegner_43@43` | `w33_MCCLXXI_alpha_third_term.json`, `w33_MCCXLIII_breakthrough_synthesis.json`, `w33_MCCXXXVII_substrate_bridges.json`, `w33_heavy_quark_meson_substrate.json`, `w33_live_scalar_selector_bridge_summary.json` |
 | `hoffman@50` | `PART_W33_PASS5226_5227_ODD_Q_OVOID_DEFICIENCY.json`, `PART_W33_PASS5228_5229_COSPECTRAL_OVOID_GAP.json`, `PART_W33_PASS5270_5271_ODD_Q_EXACT_ALPHA.json`, `PART_W33_PASS5276_5277_SYMMETRY_MILP_AND_DEFICITS.json`, `PART_W33_PASS5278_5279_FRAME_EQUALS_HOFFMAN.json` |
 | `identity@40` | `w33_balanced_selector_runtime_adapter.json`, `w33_instance_architecture_map.json`, `w33_perfect_route_selector_runtime.json`, `w33_reversal_symmetric_route_selector.json`, `w33_uor_runtime_integration_model.json` |
+| `image@6` | `PART_BT1165_GRADE_TYPE_COUNTS_results.json`, `PART_W33_PASS4994_RESIDUAL_C3_AFFINE_GAUGE.json`, `PART_W33_PASS5321_TOMOTOPE_3K4_COORDINATE_PARTITION_SEMIDIRECT.json`, `w33_operator_semigroup_paths.json`, `w33_shift_arithmetic_commutation.json` |
 | `incidence_edges@160` | `PART_3989_3990_3994_3996_PHOTON_INCIDENCE_ECHO_CLOCK.json`, `PART_4073_4080_ENGINEERING_OUTSIDE_BOX.json`, `PART_BT1671_AUTOMORPHISM_TWIRL_BRIDGE_results.json`, `PART_BT3715_BT3721_CARRIER_TOURNAMENT_PROCESS_BUDGET_IDENTIFICATION_SCHEDULER_TWIRL_results.json`, `w33_pass4089_four_router_layout.json` |
 | `incidence_rank@79` | `PART_BT1659_CLOCK_LEVI_HODGE_COUPLING_results.json`, `PART_BT1675_BOSE_MESNER_HODGE_BRIDGE_results.json`, `PART_BT1681_ORIENTED_BRIDGE_PROJECTOR_TWIRL_results.json`, `w33_pass4207_compressed_hodge_sensor.json`, `w33_pass4212_levi_harmonic_battery.json` |
 | `induced_edges@2` | `PART_3795_3812_PLANE_OVOID_SCHEME_LEECH_AXIAL_results.json`, `PART_3837_3854_OVOID_WEDDERBURN_CODE_LEECH_TRIALITY_results.json`, `PART_3887_3904_UNMARKED_WEDDERBURN_MONSTER_FOURAXIS_ORDER192_results.json`, `PART_W33_PASS4548_C7_C8_HIGHER_BODY_TOMOGRAPHY.json`, `w33_pass4273_triple_strata_and_rank4_boundary.json` |
@@ -1225,12 +1234,6 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `orbit_sizes@4` | `bt784_rank32_strata_map.json`, `w33_pass1886_geometric_c4_clock_model.json`, `w33_pass4181_symmetry_stratified_interval_mixed_push.json`, `w33_pass4209_edge_nonedge_interval_completion.json`, `w33_pass4273_triple_strata_and_rank4_boundary.json` |
 | `orbits@10` | `PART_W33_PASS5300_5307_RESULTS.json`, `PART_W33_PASS5302_HOFFMAN_FOURCELL_ORBIT_REDUCTION.json`, `bt784_rank32_tomotope_strata_map.json`, `bt787_rank4_incidence_r11_handle.json`, `w33_BREAKTHROUGH_321_q4_reye_complement_lift_duality.json` |
 | `ord_t@28` | `w33_MDCCCCIII_MDCCCCXII_oscillator_time_crystal_origami.json`, `w33_MDCCCLXXIII_MDCCCLXXXII_chain_of_insights.json`, `w33_MDCCCLXXXIII_MDCCCXCII_galois_heegner_fano_chain.json`, `w33_MDCCXCIII_MDCCCII_universal_computer_uniqueness.json`, `w33_MMXXXI_MMXL_ultimate_unification_take_all_the_way.json` |
-| `order@10` | `PART_3751_3758_MONSTER_LATTICE_MULTIPORT_COVER_results.json`, `monster_atlas_ccls.json`, `w33_BREAKTHROUGH_165_macro_tail_e6_phi12_boundary.json`, `w33_composite_moonshine_power_spine_bridge_summary.json`, `w33_pass999_a5_double_class_census.json` |
-| `order@1440` | `PART_W33_PASS4869_MARKED_DOUBLE_SIX_K6_SYMPLECTIC_RESIDUE.json`, `PART_W33_PASS4873_TWO_ORDER1440_EXTENSIONS.json`, `PART_W33_PASS4943_COMMON_S6_CARRIER_CROSSWALK.json`, `w33_pass1023_chirality_and_phase_halves.json`, `w33_pass1028_primary_obstruction_syndrome.json` |
-| `order@155520` | `PART_W33_PASS4641_SPLIT_OCTONION_TRIALITY_NORMALIZER.json`, `w33_pass1045_e8_is_the_only_two_tower_type.json`, `w33_pass1046_e6_tower_is_the_e8_stabiliser.json`, `w33_pass1068_chevie_g25_g32_matrices.json`, `w33_witting_polytope_substrate.json` |
-| `order@18` | `bt1453_order18_closure_group_classifier.json`, `bt1456_s3_c3_representation_lift.json`, `monster_atlas_ccls.json`, `w33_BREAKTHROUGH_165_macro_tail_e6_phi12_boundary.json`, `w33_pass437_full_smith_weld.json` |
-| `order@42` | `bt1318_toroidal_c2_axis_assignment.json`, `monster_atlas_ccls.json`, `w33_MDCCCXCIII_MDCCCCII_toroidal_polyhedra_deep_dive.json`, `w33_pass305_aut_csaszar_is_AGL_1_7.json`, `w33_pass309_agl17_does_not_embed.json` |
-| `order@960` | `PART_W33_PASS4503_MAXIMAL_SUBGROUP_SPLITTING_ERRATUM.json`, `PART_W33_PASS4509_COHOMOLOGY_RESTRICTION_BARCODE.json`, `bt812_five_vacua.json`, `w33_atlas_verification.json`, `w33_pass1509_qutrit_hamming_m20_chart.json` |
 | `ordinary_quadrangles@1620` | `PART_BT511_SIGNED_XMIN_QUADRANGLE_CORNER_LIFT_results.json`, `PART_BT512_SIGNED_PROJECTIVE_XMIN_LIFT_SPECTRUM_results.json`, `w33_octahedron_axes_120_e8_longshot.json`, `w33_octahedron_corner_hypergraph_spectrum.json`, `w33_octahedron_quadrangle_corner_codec.json` |
 | `p_components@325` | `PART_W33_PASS5180_P_ATOM_PANEL_RESOLUTION.json`, `PART_W33_PASS5181_POINT_LINE_DUALITY_FIREWALL.json`, `PART_W33_PASS5186_P_COMPONENT_KQQ_POINT_DESIGN.json`, `PART_W33_PASS5202_P_FOOTPRINT_KERNEL_LINE_CODE.json`, `PART_W33_PASS5376_ALLODD_FOOTPRINT_RANK_MODULE_CLOSURE.json` |
 | `p_components@45` | `PART_W33_PASS5180_P_ATOM_PANEL_RESOLUTION.json`, `PART_W33_PASS5181_POINT_LINE_DUALITY_FIREWALL.json`, `PART_W33_PASS5186_P_COMPONENT_KQQ_POINT_DESIGN.json`, `PART_W33_PASS5202_P_FOOTPRINT_KERNEL_LINE_CODE.json`, `PART_W33_PASS5376_ALLODD_FOOTPRINT_RANK_MODULE_CLOSURE.json` |
@@ -1419,6 +1422,7 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `topological_1_mode_coefficient@2240` | `w33_curvature_cyclotomic_lock_bridge_summary.json`, `w33_exceptional_channel_continuum_bridge_summary.json`, `w33_klein_bitangent_shell_bridge_summary.json`, `w33_klein_clifford_topological_bridge_summary.json`, `w33_refinement_bridge_synthesis_summary.json` |
 | `toroidal_genus_numerator@12` | `w33_modular_generator_packet_bridge_summary.json`, `w33_modular_weight_packet_ladder_bridge_summary.json`, `w33_phi6_cyclic_tomotope_bridge_summary.json`, `w33_toroidal_elkies_theta_heat_bridge_summary.json`, `w33_toroidal_heptad_projector_bridge_summary.json` |
 | `total@14` | `PART_BT3364_BT3375_CLEBSCH_PETERSEN_RESILIENT_results.json`, `PART_BT517_CL8_LOCAL_OCTA_CUBE_FOLD_results.json`, `PART_W33_PASS4480_LINE_LOGICAL_APARTMENT_TWINS.json`, `dccl_pascal_synergetics_clifford_hierarchy.json`, `w33_pass511_constant_orbit_theorem.json` |
+| `total@8` | `PART_W33_PASS4471_GENERAL_GQ_APARTMENT_INCIDENCE_BRIDGE.json`, `PART_W33_PASS4492_COCYCLE_SUPPORT_ROUTE_SENTINEL_EXTENSION.json`, `PART_W33_PASS5540_5547_CERTIFICATES_SEARCHABLE.json`, `w33_BREAKTHROUGH_271_k88_q4_mobius_kantor_decomposition.json`, `w33_gamma16_chirality_bridge_summary.json` |
 | `triangles@16` | `bt1416_css_sparse_intertwiner_matrices.json`, `bt831_tomotope_minimal_cover_architecture.json`, `w33_phi6_cyclic_tomotope_bridge_summary.json`, `w33_tomotope_local_incidence_clifford_bridge_summary.json`, `w33_tomotope_order_bridge_summary.json` |
 | `two_q@6` | `dccxvii_master_equation_codec_bridge.json`, `dccxviii_pincer_bound_theorem.json`, `w33_BREAKTHROUGH_chi_uniqueness_at_q3.json`, `w33_pass485_top_term_large_prime_powers.json`, `w33_pass486_eigenvalue_bound_q49_q81.json` |
 | `used_site_count@12` | `holonet_os_scheduler_trace.json`, `test_compiler.json`, `w33_line_context_compiler.json`, `w33_line_context_compiler_exact.json`, `w33_spread_contextual_microkernel_bridge.json` |
@@ -1466,7 +1470,7 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `active_tick_count@8` | `bt1300_oscillator_instruction_isa.json`, `bt1301_full_chart_atlas_isa_compiler.json`, `bt1302_parity_epilogue_reroute_protocol.json`, `w33_spread_clock_graph.json` |
 | `active_ticks@4` | `bt1300_oscillator_instruction_isa.json`, `bt1301_full_chart_atlas_isa_compiler.json`, `bt1302_parity_epilogue_reroute_protocol.json`, `w33_wrapped_program_control_comparison.json` |
 | `active_ticks@7` | `bt1300_oscillator_instruction_isa.json`, `bt1301_full_chart_atlas_isa_compiler.json`, `bt1302_parity_epilogue_reroute_protocol.json`, `w33_wrapped_program_control_comparison.json` |
-| `alpha@10` | `PART_W33_PASS4797_ALPHA_SEPARATES_DUAL_PAIR.json`, `PART_W33_PASS4799_ALPHA_ACROSS_THE_ZOO.json`, `w33_BREAKTHROUGH_clique_ovoid_lovasz_tight.json`, `w33_lovasz_independence_clique.json` |
+| `alpha@33` | `PART_W33_PASS5226_5227_ODD_Q_OVOID_DEFICIENCY.json`, `PART_W33_PASS5228_5229_COSPECTRAL_OVOID_GAP.json`, `PART_W33_PASS5270_5271_ODD_Q_EXACT_ALPHA.json`, `PART_W33_PASS5276_5277_SYMMETRY_MILP_AND_DEFICITS.json` |
 | `alpha^-1_int@137` | `w33_MCCLV_substrate_breakthrough_extended.json`, `w33_MCCLXXVII_six_frontiers.json`, `w33_MCCXLIII_breakthrough_synthesis.json`, `w33_MCCXXXVII_substrate_bridges.json` |
 | `anchor@2` | `bt1492_canonical_fano_s4_d4_fiber.json`, `dclxv_holonomy_screen_universality_bridge.json`, `w33_BREAKTHROUGH_276_now_fan_cap_pullback.json`, `w33_pass1836_signature_resolution_witness.json` |
 | `antipodal_pairs@12` | `PART_W33_PASS5316_5323_RESULTS.json`, `w33_pass542_q5_full_support_atlas.json`, `w33_pass661_ring_burnside_closed_form.json`, `w33_pass807_deformation_burnside_tower_scope.json` |
@@ -1475,8 +1479,14 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `apartment_coefficient@712` | `PART_W33_PASS4551_ZETA_TO_APARTMENT_CODE.json`, `PART_W33_PASS4573_GENERAL_GQ_C8_SELECTOR_OBSTRUCTION.json`, `PART_W33_PASS4602_C8_SELECTOR_PHASE_BOUNDARY.json`, `PART_W33_PASS4635_C8_SIX_SIGNATURE_COLLISION_CRITERION.json` |
 | `apartment_hops@4` | `bt1301_full_chart_atlas_isa_compiler.json`, `bt1302_parity_epilogue_reroute_protocol.json`, `bt1374_q6_tomotope_packet_route_compiler.json`, `bt828_holonet_packet_compiler.json` |
 | `apartment_hops@5` | `bt1301_full_chart_atlas_isa_compiler.json`, `bt1302_parity_epilogue_reroute_protocol.json`, `bt1374_q6_tomotope_packet_route_compiler.json`, `bt828_holonet_packet_compiler.json` |
+| `aut@103680` | `w33_pass1075_gsp43_character_fingerprint.json`, `w33_pass221_signed_e8_gram_obstruction.json`, `w33_pass337_epsilon_e8_baer_separation.json`, `w33_pass338_selector_frame_240.json` |
+| `aut@244823040` | `dcclxxvi_sporadic_simple_groups_w33.json`, `mccxl_golay_code_w33_triality.json`, `w33_BREAKTHROUGH_29_sporadic_cascade_supersingular.json`, `w33_BREAKTHROUGH_305_mathieu_group_substrate.json` |
+| `aut@32` | `PART_BT2847_BT2853_PROTECTED_OBSERVER_NOISY_M36_results.json`, `PART_W33_PASS4650_GLOBAL_D12_COVER_FACTORIZATION.json`, `PART_W33_PASS5300_HOFFMAN576_LATIN_GROUP_BRIDGE.json`, `monster_atlas_ccls.json` |
+| `aut@384` | `PART_W33_PASS5301_LATIN_TORUS_Q4_F2_4_SUBSTRATE.json`, `PART_W33_PASS5468_5475_SIMPLEX_STABILISER_IS_WF4.json`, `PART_W33_PASS5476_5479_WF4_DOES_NOT_EMBED.json`, `dccliv_frobenius_selection_and_ouroboros.json` |
+| `aut@40` | `monster_atlas_ccls.json`, `w33_pass2474_f20_lifted_normalizer_hom.json`, `w33_pass2563_full_group_nonlinear_covariants.json`, `w33_pass571_twisted_walsh_representation.json` |
+| `aut@7` | `PART_W33_PASS4530_Q5Q_SYMBOLIC_PROTECTED_LAW.json`, `bt1488_paper_splice_v2_manifest.json`, `monster_atlas_ccls.json`, `w33_BREAKTHROUGH_297_elliptic_curves_F_q_substrate.json` |
+| `aut@95040` | `dcclxxvi_sporadic_simple_groups_w33.json`, `m12_irrep_degrees.json`, `w33_BREAKTHROUGH_29_sporadic_cascade_supersingular.json`, `w33_BREAKTHROUGH_305_mathieu_group_substrate.json` |
 | `aut_k44@1152` | `PART_MMCCCLXXV_DENSITY_DUAL_GENERATOR_results.json`, `PART_MMCD_FRAME_ACTION_G2_WEYL_QUOTIENT_results.json`, `w33_BREAKTHROUGH_33_packet_hamiltonian_substrate_bridge.json`, `w33_BREAKTHROUGH_34_K33_G2_tmf_bridge.json` |
-| `aut_order@168` | `w33_BREAKTHROUGH_42_grassmann_ag_codes_substrate.json`, `w33_BREAKTHROUGH_457_radix_hermitian_klein_pascal_unification.json`, `w33_BREAKTHROUGH_45_klein_quartic_ag_codes.json`, `w33_fano_hamming_bridge.json` |
 | `automorphism_group_order@96` | `PART_BT2810_SIGNED_SUPPORT_TOMOTOPE_results.json`, `w33_phi6_cyclic_tomotope_bridge_summary.json`, `w33_tomotope_local_incidence_clifford_bridge_summary.json`, `w33_tomotope_order_bridge_summary.json` |
 | `axes@3` | `bt842_tomotope_24cell_half_flag_edge_lift.json`, `dccxvii_master_equation_codec_bridge.json`, `w33_BREAKTHROUGH_321_q4_reye_complement_lift_duality.json`, `w33_BREAKTHROUGH_325_selector_reye_axis_quotient_lock.json` |
 | `axes@8` | `PART_MMCCCLXXIV_Q4_RM13_BRIDGE_results.json`, `bt842_tomotope_24cell_half_flag_edge_lift.json`, `w33_BREAKTHROUGH_321_q4_reye_complement_lift_duality.json`, `w33_BREAKTHROUGH_325_selector_reye_axis_quotient_lock.json` |
@@ -1780,7 +1790,7 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `horizon@6` | `PART_3913_3920_MULTIDEFECT_LINDBLADIAN_PROCESS_FUSION_PHASE_results.json`, `test_compiler.json`, `w33_line_context_compiler.json`, `w33_line_context_compiler_exact.json` |
 | `identity@240` | `w33_center_quad_transport_a2_bridge_summary.json`, `w33_center_quad_transport_holonomy_bridge_summary.json`, `w33_refinement_bridge_synthesis_summary.json`, `w33_uor_transport_shadow_bridge_summary.json` |
 | `idle_slot_count@20` | `test_compiler.json`, `w33_line_context_compiler.json`, `w33_line_context_compiler_exact.json`, `w33_spread_contextual_microkernel_bridge.json` |
-| `image_order@576` | `PART_W33_PASS5416_5419_STABILISER_ACTS_AND_FIXES_ONE.json`, `PART_W33_PASS5468_5475_SIMPLEX_STABILISER_IS_WF4.json`, `_gap_cover_orbits.json`, `_gap_f4.json` |
+| `image@12` | `PART_W33_PASS4599_APARTMENT_COVER_HOLONOMY.json`, `PART_W33_PASS4647_APARTMENT_D12_HOLONOMY.json`, `w33_operator_semigroup_paths.json`, `w33_shift_arithmetic_commutation.json` |
 | `incidences@48` | `PART_BT544_WITTING_REYE_TOROIDAL_TOMOTOPE_COLLAPSE_results.json`, `PART_W33_PASS5488_5491_TOMOTOPE_INSIDE_W33_TWICE.json`, `bt1708_hexagon_tomotope_contextual_bus.json`, `bt1711_hexagon_layer_tomotope_bus.json` |
 | `induced_edges@6` | `PART_3837_3854_OVOID_WEDDERBURN_CODE_LEECH_TRIALITY_results.json`, `PART_3887_3904_UNMARKED_WEDDERBURN_MONSTER_FOURAXIS_ORDER192_results.json`, `PART_BT3577_BT3583_PETERSEN_MATRIX_OCTAD_MARKED_WALK_results.json`, `w33_pass4273_triple_strata_and_rank4_boundary.json` |
 | `inner_orbit_size@25920` | `w33_pass1841_signature_solution_orbit_frontier.json`, `w33_pass1842_higher_packing_orbits.json`, `w33_pass1843_second_orbit_no_lift.json`, `w33_pass1845_outer_resolution_quotient.json` |
@@ -1967,10 +1977,6 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `orbits@28` | `bt784_rank32_tomotope_strata_map.json`, `w33_pass510_orbit_size_decomposition.json`, `w33_pass511_constant_orbit_theorem.json`, `w33_pass518_phase_obstruction.json` |
 | `orbits@7` | `bt784_rank32_tomotope_strata_map.json`, `w33_BREAKTHROUGH_321_q4_reye_complement_lift_duality.json`, `w33_pass536_symplectic_invariance.json`, `w33_pass538_merge_rarity.json` |
 | `orbits@8` | `bt784_rank32_tomotope_strata_map.json`, `w33_BREAKTHROUGH_321_q4_reye_complement_lift_duality.json`, `w33_pass510_orbit_size_decomposition.json`, `w33_pass511_constant_orbit_theorem.json` |
-| `order@103680` | `w33_pass1075_gsp43_character_fingerprint.json`, `w33_pass221_signed_e8_gram_obstruction.json`, `w33_pass337_epsilon_e8_baer_separation.json`, `w33_pass338_selector_frame_240.json` |
-| `order@40` | `monster_atlas_ccls.json`, `w33_pass2474_f20_lifted_normalizer_hom.json`, `w33_pass2563_full_group_nonlinear_covariants.json`, `w33_pass571_twisted_walsh_representation.json` |
-| `order@7` | `PART_W33_PASS4530_Q5Q_SYMBOLIC_PROTECTED_LAW.json`, `bt1488_paper_splice_v2_manifest.json`, `monster_atlas_ccls.json`, `w33_BREAKTHROUGH_297_elliptic_curves_F_q_substrate.json` |
-| `order@95040` | `dcclxxvi_sporadic_simple_groups_w33.json`, `m12_irrep_degrees.json`, `w33_BREAKTHROUGH_29_sporadic_cascade_supersingular.json`, `w33_BREAKTHROUGH_305_mathieu_group_substrate.json` |
 | `ordered_paths@4320` | `w33_contextuality_tax_runtime_bridge.json`, `w33_pass185_octahedron_clock.json`, `w33_pass191_supercycle_pullback.json`, `w33_s3_completion_admission_controller.json` |
 | `orders@2` | `PART_3635_3648_MONSTER_U42_COMPLETION_results.json`, `PART_W33_PASS4746_S3_CONNECTION_CLASSIFICATION.json`, `w33_completed_spectral_action_package.json`, `w33_pass1509_qutrit_hamming_m20_chart.json` |
 | `orders@5` | `PART_3635_3648_MONSTER_U42_COMPLETION_results.json`, `PART_4129_4136_ANOMALY_GATES_DECODER_HYBRID_ORBITS_BONKERS.json`, `w33_completed_spectral_action_package.json`, `w33_pass1509_qutrit_hamming_m20_chart.json` |
@@ -2337,7 +2343,6 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `total@6` | `PART_W33_PASS4490_FIXED_POINT_NONSPLITTING_OBSTRUCTION.json`, `w33_golden_tetra_clifford_refinement_bridge_summary.json`, `w33_k3_convergence_checklist.json`, `w33_pass981_arxiv_batch_intake_audit.json` |
 | `total@64` | `PART_W33_PASS4605_PAIRED_AXIS_SP6_QUADRATIC_REFINEMENTS.json`, `w33_BREAKTHROUGH_322_kappa_k88_four_layer_decomposition.json`, `w33_e7_theta_bitangents.json`, `w33_pass1911_stabilizer_weighted_primitive_holonomy.json` |
 | `total@72` | `bt1850_face_word_extractor.json`, `w33_horizon_f3_parity_matrix.json`, `w33_horizon_parity_floor_duality.json`, `w33_pass2565_abstract_schlaefli_incidence.json` |
-| `total@8` | `PART_W33_PASS4471_GENERAL_GQ_APARTMENT_INCIDENCE_BRIDGE.json`, `PART_W33_PASS4492_COCYCLE_SUPPORT_ROUTE_SENTINEL_EXTENSION.json`, `w33_BREAKTHROUGH_271_k88_q4_mobius_kantor_decomposition.json`, `w33_gamma16_chirality_bridge_summary.json` |
 | `total@9` | `PART_W33_PASS4487_PARALLEL_PAULI_CORE_COORDINATE_WELD.json`, `bt919_mixing_cp_scorecard.json`, `w33_BREAKTHROUGH_101_BT99_predictions_lattice_test.json`, `w33_BREAKTHROUGH_344_TQC_on_SQNA.json` |
 | `total@9980` | `bt1799_count_lift_reconstruction.json`, `bt1802_fibre_rule_search.json`, `bt1805_nonuniform_fibre_ansatz.json`, `bt1822_tuple_harness_synthetic_tests.json` |
 | `trace@56` | `PART_BT1840_BT930_MATRIX_RECOVERY_AUDIT_summary.json`, `bt956_tetracode_metric_selector_matrix.json`, `bt956_tetracode_metric_selector_summary.json`, `w33_pass502_formal_support.json` |
@@ -2486,7 +2491,7 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `affine_fiber_count@9` | `dclxiv_holonomy_qutrit_transvection_bridge.json`, `dclxxxvi_holonomy_single_photon_selector_bridge.json`, `dclxxxvii_holonomy_selector_bundle_bridge.json` |
 | `affine_order@4199040` | `PART_BT2820_BT2824_BLUEPRINT_HARDENING_results.json`, `PART_W33_PASS4718_4687_CONFORMANCE_WASM.json`, `PART_W33_PASS4718_4719_CONFORMANCE_WASM.json` |
 | `affine_shift@2` | `bt1589_lg_oam_radial_covariance_simulator.json`, `bt1590_full_witness_lane_sheet_compiler.json`, `bt1593_lg_mode_alphabet_selector.json` |
-| `alpha@18` | `PART_W33_PASS4800_DEFICIT_LAW_FALSE.json`, `PART_W33_PASS5270_5271_ODD_Q_EXACT_ALPHA.json`, `PART_W33_PASS5276_5277_SYMMETRY_MILP_AND_DEFICITS.json` |
+| `alpha@16` | `PART_W33_PASS4812_4813_THIRD_PAIR_AND_STARS.json`, `PART_W33_PASS5222_5223_THIRD_PAIR_BY_WITNESS.json`, `PART_W33_PASS5248_5249_SECOND_PAIR_AND_REFUTED_HYPOTHESIS.json` |
 | `alpha_inv_int@137` | `w33_MCCLXXIV_substrate_complete_extended.json`, `w33_baryon_octet_substrate.json`, `w33_quark_meson_mass_substrate.json` |
 | `alpha_w33@7` | `PART_W33_PASS5228_5229_COSPECTRAL_OVOID_GAP.json`, `PART_W33_PASS5248_5249_SECOND_PAIR_AND_REFUTED_HYPOTHESIS.json`, `w33_BREAKTHROUGH_alpha_chi_corrected.json` |
 | `anchor@4` | `bt1492_canonical_fano_s4_d4_fiber.json`, `w33_BREAKTHROUGH_276_now_fan_cap_pullback.json`, `w33_pass1836_signature_resolution_witness.json` |
@@ -2494,8 +2499,14 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `apartment_stabilizer_order@16` | `PART_W33_PASS4599_APARTMENT_COVER_HOLONOMY.json`, `PART_W33_PASS4647_APARTMENT_D12_HOLONOMY.json`, `PART_W33_PASS5436_5443_BICYCLE_APARTMENT_SCHEME.json` |
 | `apartments@102060` | `PART_W33_PASS4506_Q53_APARTMENT_PROTECTED_BRIDGE.json`, `PART_W33_PASS4515_Q53_APARTMENT_CODE_FRONTIER.json`, `PART_W33_PASS4530_Q5Q_SYMBOLIC_PROTECTED_LAW.json` |
 | `apex@2` | `bt841_eleven_cell_a5_boundary_carrier.json`, `w33_pass573_hjelmslev_c3_600cell_apex.json`, `w33_pass609_tetrahedral_hardware_gauge.json` |
+| `aut@171` | `PART_BT3528_BT3534_BOREL_STAR_MOORE_FUNCTOR_TRANSPLANT_results.json`, `PART_BT3542_BT3548_BOREL_COMMUTANT_OUTER_S6_ANALYTIC_results.json`, `PART_BT3570_BT3576_CYCLOTOMIC_CORE_QUADRATIC_LOCATOR_results.json` |
+| `aut@1920` | `dccliv_frobenius_selection_and_ouroboros.json`, `w33_pass1023_chirality_and_phase_halves.json`, `w33_pass1028_primary_obstruction_syndrome.json` |
+| `aut@2160` | `PART_W33_PASS4633_M24_SEXTET_SECTION_STABILIZER.json`, `PART_W33_PASS4690_FULL_SEXTET_AFFINE_GROUP.json`, `w33_pass437_full_smith_weld.json` |
+| `aut@25` | `monster_atlas_ccls.json`, `w33_pass425_exact_extension_smith.json`, `w33_pass437_full_smith_weld.json` |
+| `aut@30` | `PART_W33_PASS4782_DUALITY_MAP_EXHIBITED.json`, `monster_atlas_ccls.json`, `w33_pass1021_e8_fibration_over_forty.json` |
+| `aut@324` | `PART_W33_PASS4538_GLOBAL_LARGE_SPLITTING_CENSUS.json`, `PART_W33_PASS4994_RESIDUAL_C3_AFFINE_GAUGE.json`, `PART_W33_PASS5110_5117_RESULTS.json` |
+| `aut@54` | `monster_atlas_ccls.json`, `w33_pass437_full_smith_weld.json`, `w33_pass809_kbranch_gluing.json` |
 | `aut_gq_order@51840` | `PART_W33_PASS4770_S3_GAUGE_MODULI.json`, `PART_W33_PASS4843_4845_CROSSCELL_RECONSTRUCTION_AUT.json`, `PART_W33_PASS4851_CODE399_FULL_AUTOMORPHISM.json` |
-| `automorphism_order@51840` | `PART_W33_PASS4727_4728_FALSIFIER_AND_CERT_BIRTH.json`, `w33_monster_triangle_landauer_bridge_summary.json`, `w33_refinement_bridge_synthesis_summary.json` |
 | `axes@10` | `bt842_tomotope_24cell_half_flag_edge_lift.json`, `w33_BREAKTHROUGH_321_q4_reye_complement_lift_duality.json`, `w33_BREAKTHROUGH_325_selector_reye_axis_quotient_lock.json` |
 | `axes@11` | `bt842_tomotope_24cell_half_flag_edge_lift.json`, `w33_BREAKTHROUGH_321_q4_reye_complement_lift_duality.json`, `w33_BREAKTHROUGH_325_selector_reye_axis_quotient_lock.json` |
 | `axes@2` | `bt842_tomotope_24cell_half_flag_edge_lift.json`, `w33_BREAKTHROUGH_321_q4_reye_complement_lift_duality.json`, `w33_BREAKTHROUGH_325_selector_reye_axis_quotient_lock.json` |
@@ -3204,11 +3215,11 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `hz_shape@240` | `bt1416_css_sparse_intertwiner_matrices.json`, `bt1424_d4_shear_css_logical_action.json`, `w33_css_exact_audit.json` |
 | `identity@1080` | `PART_3813_3820_QUADRATIC_DISCRIMINANT_MULTIPORT_HOLONOMY_results.json`, `PART_BT3458_BT3471_FACE_TOWER_BRAUER_TOMOTOPE_results.json`, `PART_BT3458_BT3471_FACE_TOWER_RELEASE_results.json` |
 | `idle_windows@1080` | `bt1309_photonic_pulse_budget.json`, `bt1312_recursive_pulse_energy_scaling.json`, `bt1315_parametric_photonic_loss_budget.json` |
+| `image@120` | `PART_W33_PASS4687_PETERSEN_INDUCED_A5_S5.json`, `w33_pass585_singer_pentagon_triples.json`, `w33_pass590_oriented_singer_cover.json` |
+| `image@25920` | `PART_2026_07_10_LEVI_NEXT5_results.json`, `w33_pass201_sentinel_css_logical_shadow.json`, `w33_pass204_transversal_clifford.json` |
+| `image@3` | `PART_W33_PASS4994_RESIDUAL_C3_AFFINE_GAUGE.json`, `w33_operator_semigroup_paths.json`, `w33_shift_arithmetic_commutation.json` |
 | `image@4` | `PART_BT1165_GRADE_TYPE_COUNTS_results.json`, `w33_operator_semigroup_paths.json`, `w33_shift_arithmetic_commutation.json` |
-| `image@6` | `PART_BT1165_GRADE_TYPE_COUNTS_results.json`, `w33_operator_semigroup_paths.json`, `w33_shift_arithmetic_commutation.json` |
 | `image_dimension@81` | `dcclxvii_axis_syndrome_nilpotent_octahedral_bridge.json`, `dcclxviii_nilpotent_chain_lift_qec_bridge.json`, `w33_transport_ternary_cocycle_bridge_summary.json` |
-| `image_order@120` | `PART_W33_PASS4687_PETERSEN_INDUCED_A5_S5.json`, `w33_pass585_singer_pentagon_triples.json`, `w33_pass590_oriented_singer_cover.json` |
-| `image_order@25920` | `PART_2026_07_10_LEVI_NEXT5_results.json`, `w33_pass201_sentinel_css_logical_shadow.json`, `w33_pass204_transversal_clifford.json` |
 | `images@2` | `w33_pass1064_dual_falsifier_preregistration.json`, `w33_pass1330_modular_quotient_maps.json`, `w33_pass583_collision_groupoid_polynomial.json` |
 | `incidences@21` | `w33_MCCXI_MCCXX_fano_PGL_S4_qutrit_bridge.json`, `w33_MDCCCLXXXIII_MDCCCXCII_galois_heegner_fano_chain.json`, `w33_fano_hamming_bridge.json` |
 | `indices@8` | `mccl_moonshine_prime_index_closure.json`, `mccxlix_prime_index_closure_theorem.json`, `w33_pass2405_tomotope_192_curved_duad_atlas.json` |
@@ -3536,16 +3547,6 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `orbits@5` | `bt784_rank32_tomotope_strata_map.json`, `w33_BREAKTHROUGH_321_q4_reye_complement_lift_duality.json`, `w33_pass384_q6_q3_fold_obstruction.json` |
 | `orbits@6` | `bt784_rank32_tomotope_strata_map.json`, `w33_BREAKTHROUGH_321_q4_reye_complement_lift_duality.json`, `w33_pass384_q6_q3_fold_obstruction.json` |
 | `orbits@9` | `bt784_rank32_tomotope_strata_map.json`, `bt787_rank4_incidence_r11_handle.json`, `w33_BREAKTHROUGH_321_q4_reye_complement_lift_duality.json` |
-| `order@168` | `w33_BREAKTHROUGH_298_ramanujan_expanders_substrate.json`, `w33_clock_gauge_two_layer.json`, `w33_pass2403_sl3_shell_parabolic_bridge.json` |
-| `order@171` | `PART_BT3528_BT3534_BOREL_STAR_MOORE_FUNCTOR_TRANSPLANT_results.json`, `PART_BT3542_BT3548_BOREL_COMMUTANT_OUTER_S6_ANALYTIC_results.json`, `PART_BT3570_BT3576_CYCLOTOMIC_CORE_QUADRATIC_LOCATOR_results.json` |
-| `order@1920` | `dccliv_frobenius_selection_and_ouroboros.json`, `w33_pass1023_chirality_and_phase_halves.json`, `w33_pass1028_primary_obstruction_syndrome.json` |
-| `order@2160` | `PART_W33_PASS4633_M24_SEXTET_SECTION_STABILIZER.json`, `PART_W33_PASS4690_FULL_SEXTET_AFFINE_GROUP.json`, `w33_pass437_full_smith_weld.json` |
-| `order@244823040` | `dcclxxvi_sporadic_simple_groups_w33.json`, `w33_BREAKTHROUGH_29_sporadic_cascade_supersingular.json`, `w33_BREAKTHROUGH_305_mathieu_group_substrate.json` |
-| `order@25` | `monster_atlas_ccls.json`, `w33_pass425_exact_extension_smith.json`, `w33_pass437_full_smith_weld.json` |
-| `order@30` | `PART_W33_PASS4782_DUALITY_MAP_EXHIBITED.json`, `monster_atlas_ccls.json`, `w33_pass1021_e8_fibration_over_forty.json` |
-| `order@32` | `PART_W33_PASS4650_GLOBAL_D12_COVER_FACTORIZATION.json`, `PART_W33_PASS5300_HOFFMAN576_LATIN_GROUP_BRIDGE.json`, `monster_atlas_ccls.json` |
-| `order@324` | `PART_W33_PASS4538_GLOBAL_LARGE_SPLITTING_CENSUS.json`, `PART_W33_PASS4994_RESIDUAL_C3_AFFINE_GAUGE.json`, `PART_W33_PASS5110_5117_RESULTS.json` |
-| `order@54` | `monster_atlas_ccls.json`, `w33_pass437_full_smith_weld.json`, `w33_pass809_kbranch_gluing.json` |
 | `order_to_hessian_gap_rank_sequence@3` | `w33_zero_sheet_barycentric_gap_handoff_cascade.json`, `w33_zero_sheet_barycentric_gap_handoff_convergence_signature.json`, `w33_zero_sheet_barycentric_gap_handoff_cutoff_profile.json` |
 | `order_to_hessian_gap_rank_sequence@4` | `w33_zero_sheet_barycentric_gap_handoff_cascade.json`, `w33_zero_sheet_barycentric_gap_handoff_convergence_signature.json`, `w33_zero_sheet_barycentric_gap_handoff_cutoff_profile.json` |
 | `order_to_hessian_gap_rank_sequence@5` | `w33_zero_sheet_barycentric_gap_handoff_cascade.json`, `w33_zero_sheet_barycentric_gap_handoff_convergence_signature.json`, `w33_zero_sheet_barycentric_gap_handoff_cutoff_profile.json` |
@@ -5377,17 +5378,17 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `all_triples@816` | `bt1823_quartet_we6_diagram_spec.json`, `bt1824_quartet_we6_panel.json` |
 | `allowed_live_slot_values@2` | `dccv_holonomy_slot_channel_selector_bridge.json`, `dcxc_holonomy_one_slot_frontier_bridge.json` |
 | `alpha@1025` | `PART_W33_PASS5246_5247_EVEN_Q_ALPHA_BY_CONSTRUCTION.json`, `PART_W33_PASS5272_5273_VECTORISED_OVOID_AND_SUZUKI_TOWER.json` |
-| `alpha@16` | `PART_W33_PASS4812_4813_THIRD_PAIR_AND_STARS.json`, `PART_W33_PASS5222_5223_THIRD_PAIR_BY_WITNESS.json` |
 | `alpha@16385` | `PART_W33_PASS5246_5247_EVEN_Q_ALPHA_BY_CONSTRUCTION.json`, `PART_W33_PASS5272_5273_VECTORISED_OVOID_AND_SUZUKI_TOWER.json` |
-| `alpha@33` | `PART_W33_PASS5270_5271_ODD_Q_EXACT_ALPHA.json`, `PART_W33_PASS5276_5277_SYMMETRY_MILP_AND_DEFICITS.json` |
+| `alpha@28` | `PART_W33_PASS5222_5223_THIRD_PAIR_BY_WITNESS.json`, `PART_W33_PASS5248_5249_SECOND_PAIR_AND_REFUTED_HYPOTHESIS.json` |
 | `alpha@4` | `w33_BREAKTHROUGH_lovasz_theta.json`, `w33_pass402_quantum_classical_frontier.json` |
 | `alpha@4097` | `PART_W33_PASS5246_5247_EVEN_Q_ALPHA_BY_CONSTRUCTION.json`, `PART_W33_PASS5272_5273_VECTORISED_OVOID_AND_SUZUKI_TOWER.json` |
+| `alpha@49` | `PART_W33_PASS5460_5467_Q8_TRANSITIVE_Q5_IS_SPECIAL.json`, `_q9_milp_raw.json` |
+| `alpha@50` | `PART_W33_PASS5226_5227_ODD_Q_OVOID_DEFICIENCY.json`, `PART_W33_PASS5228_5229_COSPECTRAL_OVOID_GAP.json` |
 | `alpha@6` | `PART_W33_PASS4799_ALPHA_ACROSS_THE_ZOO.json`, `w33_pass402_quantum_classical_frontier.json` |
 | `alpha@65` | `PART_W33_PASS4905_4906_ALPHA_FROM_THE_OVOID.json`, `PART_W33_PASS5246_5247_EVEN_Q_ALPHA_BY_CONSTRUCTION.json` |
 | `alpha_delta_den@5431679` | `dccclxxii_w33_for_everyone_qec_ouroboros_bridge.json`, `dcclxxii_formula_regime_registry_bridge.json` |
 | `alpha_delta_num@24` | `dccclxxii_w33_for_everyone_qec_ouroboros_bridge.json`, `dcclxxii_formula_regime_registry_bridge.json` |
 | `alpha_em_inv_0@137` | `w33_master_derivation.json`, `w33_predictions.json` |
-| `alpha_found@49` | `PART_W33_PASS5460_5467_Q8_TRANSITIVE_Q5_IS_SPECIAL.json`, `_q9_milp_raw.json` |
 | `alpha_gut_inv@24` | `w33_MCXXI_MCXXX_six_headlines_lloyd_exceptional.json`, `w33_proton_decay_test.json` |
 | `alpha_inverse@137` | `dcmlxxxii_ihara_z12_cross_branch_resonance_audit.json`, `w33_complete_theory.json` |
 | `alpha_inverse_gaussian_norm@137` | `dcmlxxxii_ihara_z12_cross_branch_resonance_audit.json`, `dcmlxxxiii_bass_cnub_entropy_branch_selector.json` |
@@ -5462,10 +5463,26 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `augmentation_wilson_sum@56` | `w33_pass596_connection_universality.json`, `w33_pass609_tetrahedral_hardware_gauge.json` |
 | `augmented_rank@10` | `w33_l6_a2_mixed_seed_bridge_summary.json`, `w33_yukawa_nonlinear_frontier_bridge_summary.json` |
 | `augmented_rank@28` | `w33_refinement_bridge_synthesis_summary.json`, `w33_yukawa_scaffold_bridge_summary.json` |
+| `aut@10200960` | `w33_BREAKTHROUGH_29_sporadic_cascade_supersingular.json`, `w33_BREAKTHROUGH_305_mathieu_group_substrate.json` |
+| `aut@108` | `PART_W33_PASS4765_DUAL_EDGE_CODE_CSS_CARRIER_SEPARATION.json`, `PART_W33_PASS4789_DUAL_EDGE_CODE_CSS_CARRIER_SEPARATION.json` |
+| `aut@11` | `PART_W33_PASS4530_Q5Q_SYMBOLIC_PROTECTED_LAW.json`, `monster_atlas_ccls.json` |
+| `aut@12096` | `bt1708_hexagon_tomotope_contextual_bus.json`, `w33_complex_leech_suzuki_chain.json` |
+| `aut@128` | `w33_pass1023_chirality_and_phase_halves.json`, `w33_pass1028_primary_obstruction_syndrome.json` |
+| `aut@15` | `monster_atlas_ccls.json`, `w33_ihara_principal_parts_exact.json` |
+| `aut@19` | `PART_W33_PASS4530_Q5Q_SYMBOLIC_PROTECTED_LAW.json`, `monster_atlas_ccls.json` |
+| `aut@20` | `monster_atlas_ccls.json`, `w33_pass437_full_smith_weld.json` |
+| `aut@336` | `w33_pass574_singer_coherent_configuration.json`, `w33_pass580_singer_johnson_fusion.json` |
+| `aut@360` | `PART_W33_PASS4538_GLOBAL_LARGE_SPLITTING_CENSUS.json`, `w33_pass1909_complete_s6_subgroup_phase_poset_certificate.json` |
+| `aut@443520` | `w33_BREAKTHROUGH_29_sporadic_cascade_supersingular.json`, `w33_BREAKTHROUGH_305_mathieu_group_substrate.json` |
+| `aut@495766656000` | `w33_BREAKTHROUGH_316_conway_sporadic_substrate.json`, `w33_MDCCCCXLIII_MDCCCCLII_crystallography_packing_Conway.json` |
+| `aut@56` | `PART_BT3649_BT3662_SEVEN_FRONT_CLOSURE_results.json`, `monster_atlas_ccls.json` |
+| `aut@72` | `w33_pass362_alpha_code_real_clifford_k44.json`, `w33_pass437_full_smith_weld.json` |
+| `aut@729` | `PART_W33_PASS4203_TRANSVECTIONS_GENERAL_LAW.json`, `w33_pass425_exact_extension_smith.json` |
+| `aut@7920` | `w33_BREAKTHROUGH_29_sporadic_cascade_supersingular.json`, `w33_BREAKTHROUGH_305_mathieu_group_substrate.json` |
+| `aut@9360000` | `PART_W33_PASS5416_5419_STABILISER_ACTS_AND_FIXES_ONE.json`, `_gap_cover_stab.json` |
 | `aut_fano@168` | `w33_BREAKTHROUGH_79_heawood_szilassi_fano_singer.json`, `w33_MCCXI_MCCXX_fano_PGL_S4_qutrit_bridge.json` |
 | `aut_k33@72` | `PART_MMCCCLXXIV_GOLDEN_D4_WEYL_BRIDGE_results.json`, `w33_BREAKTHROUGH_34_K33_G2_tmf_bridge.json` |
 | `aut_k44_order@1152` | `PART_MMCCCXCIX_K44_FACTORIZATION_G2_ROOT_SELECTOR_results.json`, `PART_MMCD_FRAME_ACTION_G2_WEYL_QUOTIENT_results.json` |
-| `aut_order@9360000` | `PART_W33_PASS5416_5419_STABILISER_ACTS_AND_FIXES_ONE.json`, `_gap_cover_stab.json` |
 | `aut_q8_order@24` | `w33_d4_f4_tomotope_reye_bridge_summary.json`, `w33_refinement_bridge_synthesis_summary.json` |
 | `autotopy_order@96` | `PART_W33_PASS5307_ORDER4_LATIN_MOLS_PG32_SPREAD.json`, `PART_W33_PASS5313_D4_TRIALITY_LATIN_PARASTROPHE_QUOTIENT.json` |
 | `autpar_full_order@576` | `PART_W33_PASS5516_5523_576_PROVED_AND_THE_BUG.json`, `_gap_576iso.json` |
@@ -8695,6 +8712,7 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `heuristic_steps_per_start@1200` | `PART_W33_PASS5074_5081_RESULTS.json`, `PART_W33_PASS5077_Q5_DISTANCE_SEARCH.json` |
 | `higgs_quartet@4` | `w33_golden_tetra_clifford_refinement_bridge_summary.json`, `w33_higgs_ew_octet_bridge_summary.json` |
 | `hits@36` | `PART_W33_PASS2930_2935_VM_HODGE24_HAMILTONIAN.json`, `w33_pass1010_constant_rederivation_and_rank_bound.json` |
+| `hoffman@13` | `PART_W33_PASS5212_Q5_DUALGRID_HOFFMAN_13_COVER.json`, `PART_W33_PASS5376_5379_STABILISER_AND_COMPLEMENT.json` |
 | `hoffman_latin_even_direction_orbits@6` | `PART_W33_PASS5300_5307_RESULTS.json`, `PART_W33_PASS5301_LATIN_TORUS_Q4_F2_4_SUBSTRATE.json` |
 | `hoffman_latin_even_direction_orbits@9` | `PART_W33_PASS5300_5307_RESULTS.json`, `PART_W33_PASS5301_LATIN_TORUS_Q4_F2_4_SUBSTRATE.json` |
 | `holonet_body_ticks@48` | `bt1708_hexagon_tomotope_contextual_bus.json`, `bt1711_hexagon_layer_tomotope_bus.json` |
@@ -8725,15 +8743,14 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `idle_windows@70892280` | `bt1312_recursive_pulse_energy_scaling.json`, `bt1315_parametric_photonic_loss_budget.json` |
 | `ihara_prime@11` | `w33_pass161_gq42_ihara_inheritance.json`, `w33_pass166_ihara_discriminant_law.json` |
 | `image@10` | `w33_operator_semigroup_paths.json`, `w33_shift_arithmetic_commutation.json` |
-| `image@12` | `w33_operator_semigroup_paths.json`, `w33_shift_arithmetic_commutation.json` |
 | `image@13` | `w33_operator_semigroup_paths.json`, `w33_shift_arithmetic_commutation.json` |
 | `image@17` | `w33_operator_semigroup_paths.json`, `w33_shift_arithmetic_commutation.json` |
 | `image@2` | `w33_operator_semigroup_paths.json`, `w33_shift_arithmetic_commutation.json` |
 | `image@20` | `w33_operator_semigroup_paths.json`, `w33_shift_arithmetic_commutation.json` |
 | `image@21` | `w33_operator_semigroup_paths.json`, `w33_shift_arithmetic_commutation.json` |
+| `image@24` | `PART_W33_PASS4780_D4_CUBE_TRIALITY.json`, `w33_pass2306_controller_representation_trichotomy.json` |
 | `image@259` | `w33_operator_semigroup_paths.json`, `w33_shift_arithmetic_commutation.json` |
 | `image@26` | `w33_operator_semigroup_paths.json`, `w33_shift_arithmetic_commutation.json` |
-| `image@3` | `w33_operator_semigroup_paths.json`, `w33_shift_arithmetic_commutation.json` |
 | `image@30` | `w33_operator_semigroup_paths.json`, `w33_shift_arithmetic_commutation.json` |
 | `image@31` | `w33_operator_semigroup_paths.json`, `w33_shift_arithmetic_commutation.json` |
 | `image@37` | `w33_operator_semigroup_paths.json`, `w33_shift_arithmetic_commutation.json` |
@@ -8741,16 +8758,12 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `image@43` | `w33_operator_semigroup_paths.json`, `w33_shift_arithmetic_commutation.json` |
 | `image@5` | `w33_operator_semigroup_paths.json`, `w33_shift_arithmetic_commutation.json` |
 | `image@57` | `w33_operator_semigroup_paths.json`, `w33_shift_arithmetic_commutation.json` |
+| `image@60` | `PART_W33_PASS4687_PETERSEN_INDUCED_A5_S5.json`, `PART_W33_PASS5292_5299_RESULTS.json` |
 | `image@7` | `w33_operator_semigroup_paths.json`, `w33_shift_arithmetic_commutation.json` |
 | `image@8` | `w33_operator_semigroup_paths.json`, `w33_shift_arithmetic_commutation.json` |
 | `image@85` | `w33_operator_semigroup_paths.json`, `w33_shift_arithmetic_commutation.json` |
 | `image_dimension@40` | `PART_W33_PASS4942_TRANSVERSE_CHAR3_DEGENERATION.json`, `dcclxviii_nilpotent_chain_lift_qec_bridge.json` |
 | `image_dimension@6` | `dcclxvii_axis_syndrome_nilpotent_octahedral_bridge.json`, `w33_pass174_dual_discriminant_fixed_rail.json` |
-| `image_in_s13_order@576` | `PART_W33_PASS5416_5419_STABILISER_ACTS_AND_FIXES_ONE.json`, `_gap_cover_stab.json` |
-| `image_order@12` | `PART_W33_PASS4599_APARTMENT_COVER_HOLONOMY.json`, `PART_W33_PASS4647_APARTMENT_D12_HOLONOMY.json` |
-| `image_order@24` | `PART_W33_PASS4780_D4_CUBE_TRIALITY.json`, `w33_pass2306_controller_representation_trichotomy.json` |
-| `image_order@6` | `PART_W33_PASS4994_RESIDUAL_C3_AFFINE_GAUGE.json`, `PART_W33_PASS5321_TOMOTOPE_3K4_COORDINATE_PARTITION_SEMIDIRECT.json` |
-| `image_order@60` | `PART_W33_PASS4687_PETERSEN_INDUCED_A5_S5.json`, `PART_W33_PASS5292_5299_RESULTS.json` |
 | `image_rank@15` | `PART_BT1162_QUOTIENT_EQUIVARIANCE_results.json`, `PART_BT1164_RELATION_COUNT_results.json` |
 | `image_size@48` | `w33_pass377_binary_q3_switch_header.json`, `w33_pass380_minimal_scheduler_phase_lift.json` |
 | `images@3` | `w33_pass1064_dual_falsifier_preregistration.json`, `w33_pass1330_modular_quotient_maps.json` |
@@ -10230,22 +10243,6 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `orbits_on_40@4` | `PART_W33_PASS5476_5479_WF4_DOES_NOT_EMBED.json`, `_gap_sp43layers.json` |
 | `orbits_on_40@8` | `PART_W33_PASS5476_5479_WF4_DOES_NOT_EMBED.json`, `_gap_sp43layers.json` |
 | `ord_7_10@6` | `bt774_decimal_shadow_clock.json`, `w33_BREAKTHROUGH_264_seven_unification_csaszar_szilassi.json` |
-| `order@10200960` | `w33_BREAKTHROUGH_29_sporadic_cascade_supersingular.json`, `w33_BREAKTHROUGH_305_mathieu_group_substrate.json` |
-| `order@108` | `PART_W33_PASS4765_DUAL_EDGE_CODE_CSS_CARRIER_SEPARATION.json`, `PART_W33_PASS4789_DUAL_EDGE_CODE_CSS_CARRIER_SEPARATION.json` |
-| `order@11` | `PART_W33_PASS4530_Q5Q_SYMBOLIC_PROTECTED_LAW.json`, `monster_atlas_ccls.json` |
-| `order@128` | `w33_pass1023_chirality_and_phase_halves.json`, `w33_pass1028_primary_obstruction_syndrome.json` |
-| `order@15` | `monster_atlas_ccls.json`, `w33_ihara_principal_parts_exact.json` |
-| `order@19` | `PART_W33_PASS4530_Q5Q_SYMBOLIC_PROTECTED_LAW.json`, `monster_atlas_ccls.json` |
-| `order@20` | `monster_atlas_ccls.json`, `w33_pass437_full_smith_weld.json` |
-| `order@336` | `w33_pass574_singer_coherent_configuration.json`, `w33_pass580_singer_johnson_fusion.json` |
-| `order@360` | `PART_W33_PASS4538_GLOBAL_LARGE_SPLITTING_CENSUS.json`, `w33_pass1909_complete_s6_subgroup_phase_poset_certificate.json` |
-| `order@384` | `PART_W33_PASS5476_5479_WF4_DOES_NOT_EMBED.json`, `dccliv_frobenius_selection_and_ouroboros.json` |
-| `order@443520` | `w33_BREAKTHROUGH_29_sporadic_cascade_supersingular.json`, `w33_BREAKTHROUGH_305_mathieu_group_substrate.json` |
-| `order@495766656000` | `w33_BREAKTHROUGH_316_conway_sporadic_substrate.json`, `w33_MDCCCCXLIII_MDCCCCLII_crystallography_packing_Conway.json` |
-| `order@56` | `PART_BT3649_BT3662_SEVEN_FRONT_CLOSURE_results.json`, `monster_atlas_ccls.json` |
-| `order@72` | `w33_pass362_alpha_code_real_clifford_k44.json`, `w33_pass437_full_smith_weld.json` |
-| `order@729` | `PART_W33_PASS4203_TRANSVECTIONS_GENERAL_LAW.json`, `w33_pass425_exact_extension_smith.json` |
-| `order@7920` | `w33_BREAKTHROUGH_29_sporadic_cascade_supersingular.json`, `w33_BREAKTHROUGH_305_mathieu_group_substrate.json` |
 | `order_12_size_2160@2` | `PART_3821_3828_COMPONENT_MONSTER.json`, `PART_3821_3828_MAXCODE_MESH_SCHEME_OVOID_results.json` |
 | `order_3_size_40@2` | `PART_3821_3828_COMPONENT_MONSTER.json`, `PART_3821_3828_MAXCODE_MESH_SCHEME_OVOID_results.json` |
 | `order_6_size_360@2` | `PART_3821_3828_COMPONENT_MONSTER.json`, `PART_3821_3828_MAXCODE_MESH_SCHEME_OVOID_results.json` |
@@ -18541,11 +18538,13 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `alpha@21` | `PART_W33_PASS4795_OVOID_GAP_AND_COSET.json` |
 | `alpha@2401` | `PART_W33_PASS4530_Q5Q_SYMBOLIC_PROTECTED_LAW.json` |
 | `alpha@257` | `PART_W33_PASS5246_5247_EVEN_Q_ALPHA_BY_CONSTRUCTION.json` |
-| `alpha@28` | `PART_W33_PASS5222_5223_THIRD_PAIR_BY_WITNESS.json` |
+| `alpha@26` | `PART_W33_PASS5228_5229_COSPECTRAL_OVOID_GAP.json` |
 | `alpha@3` | `w33_pass402_quantum_classical_frontier.json` |
+| `alpha@48` | `PART_W33_PASS5228_5229_COSPECTRAL_OVOID_GAP.json` |
 | `alpha@65537` | `PART_W33_PASS5272_5273_VECTORISED_OVOID_AND_SUZUKI_TOWER.json` |
 | `alpha@7@51` | `PART_W33_PASS5280_5283_INDEX_BLIND_SPOT.json` |
 | `alpha@81` | `PART_W33_PASS4530_Q5Q_SYMBOLIC_PROTECTED_LAW.json` |
+| `alpha@82` | `PART_W33_PASS5228_5229_COSPECTRAL_OVOID_GAP.json` |
 | `alpha@9` | `PART_W33_PASS4799_ALPHA_ACROSS_THE_ZOO.json` |
 | `alpha_137@137` | `w33_exact_shadow_spine_bridge_summary.json` |
 | `alpha_18_files@8` | `PART_W33_PASS5280_5283_INDEX_BLIND_SPOT.json` |
@@ -18553,21 +18552,6 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `alpha_em_inv_ir@137` | `w33_BREAKTHROUGH_71_DM_page_RG_EWSB_walk_irreps.json` |
 | `alpha_em_inv_mx@24` | `w33_BREAKTHROUGH_71_DM_page_RG_EWSB_walk_irreps.json` |
 | `alpha_em_inv_mz@128` | `w33_BREAKTHROUGH_71_DM_page_RG_EWSB_walk_irreps.json` |
-| `alpha_established@18` | `PART_W33_PASS5226_5227_ODD_Q_OVOID_DEFICIENCY.json` |
-| `alpha_established@33` | `PART_W33_PASS5226_5227_ODD_Q_OVOID_DEFICIENCY.json` |
-| `alpha_established@50` | `PART_W33_PASS5226_5227_ODD_Q_OVOID_DEFICIENCY.json` |
-| `alpha_established@7` | `PART_W33_PASS5226_5227_ODD_Q_OVOID_DEFICIENCY.json` |
-| `alpha_exact@7` | `bt818_ovoid_nogo_theta_gap.json` |
-| `alpha_found@10` | `PART_W33_PASS5228_5229_COSPECTRAL_OVOID_GAP.json` |
-| `alpha_found@16` | `PART_W33_PASS5248_5249_SECOND_PAIR_AND_REFUTED_HYPOTHESIS.json` |
-| `alpha_found@18` | `PART_W33_PASS5228_5229_COSPECTRAL_OVOID_GAP.json` |
-| `alpha_found@26` | `PART_W33_PASS5228_5229_COSPECTRAL_OVOID_GAP.json` |
-| `alpha_found@28` | `PART_W33_PASS5248_5249_SECOND_PAIR_AND_REFUTED_HYPOTHESIS.json` |
-| `alpha_found@33` | `PART_W33_PASS5228_5229_COSPECTRAL_OVOID_GAP.json` |
-| `alpha_found@48` | `PART_W33_PASS5228_5229_COSPECTRAL_OVOID_GAP.json` |
-| `alpha_found@50` | `PART_W33_PASS5228_5229_COSPECTRAL_OVOID_GAP.json` |
-| `alpha_found@7` | `PART_W33_PASS5228_5229_COSPECTRAL_OVOID_GAP.json` |
-| `alpha_found@82` | `PART_W33_PASS5228_5229_COSPECTRAL_OVOID_GAP.json` |
 | `alpha_inv@137` | `w33_explicit_dirac.json` |
 | `alpha_inv_tree@137` | `w33_breakthrough.json` |
 | `alpha_line_graph@10` | `PART_2026_07_10_LEVI_DUALITY_DEFECT_results.json` |
@@ -19450,6 +19434,107 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `augmented_rank@12` | `w33_l6_a2_mixed_seed_bridge_summary.json` |
 | `augmented_rank@541` | `PART_W33_PASS4865_TERNARY_LEVI_RADICAL_FILTRATION.json` |
 | `augmented_rank@726` | `PART_W33_PASS4865_TERNARY_LEVI_RADICAL_FILTRATION.json` |
+| `aut@1008` | `PART_W33_PASS4782_DUALITY_MAP_EXHIBITED.json` |
+| `aut@104` | `monster_atlas_ccls.json` |
+| `aut@105` | `monster_atlas_ccls.json` |
+| `aut@1092` | `w33_BREAKTHROUGH_298_ramanujan_expanders_substrate.json` |
+| `aut@110` | `monster_atlas_ccls.json` |
+| `aut@119` | `monster_atlas_ccls.json` |
+| `aut@1209600` | `w33_complex_leech_suzuki_chain.json` |
+| `aut@121` | `PART_W33_PASS4530_Q5Q_SYMBOLIC_PROTECTED_LAW.json` |
+| `aut@125` | `w33_pass425_exact_extension_smith.json` |
+| `aut@1285608` | `w33_pass360_alpha_code_logical_hadamard.json` |
+| `aut@13` | `monster_atlas_ccls.json` |
+| `aut@13063680` | `PART_W33_PASS4547_Q53_GLOBAL_PRISM_ACTION.json` |
+| `aut@138240` | `PART_W33_PASS4690_FULL_SEXTET_AFFINE_GROUP.json` |
+| `aut@14` | `monster_atlas_ccls.json` |
+| `aut@14329224` | `w33_pass437_full_smith_weld.json` |
+| `aut@14400` | `w33_BREAKTHROUGH_280_spacetime_uniqueness_Coxeter.json` |
+| `aut@15600` | `w33_pass437_full_smith_weld.json` |
+| `aut@15625` | `w33_pass425_exact_extension_smith.json` |
+| `aut@160` | `w33_pass809_kbranch_gluing.json` |
+| `aut@17` | `monster_atlas_ccls.json` |
+| `aut@176904` | `w33_pass437_full_smith_weld.json` |
+| `aut@18632` | `w33_pass360_alpha_code_logical_hadamard.json` |
+| `aut@1951320` | `PART_W33_PASS4782_DUALITY_MAP_EXHIBITED.json` |
+| `aut@19656` | `w33_pass437_full_smith_weld.json` |
+| `aut@19683` | `w33_pass425_exact_extension_smith.json` |
+| `aut@20160` | `w33_pass590_oriented_singer_cover.json` |
+| `aut@2048` | `w33_pass339_extraspecial_clifford_spin_bridge.json` |
+| `aut@21` | `monster_atlas_ccls.json` |
+| `aut@22` | `monster_atlas_ccls.json` |
+| `aut@23` | `monster_atlas_ccls.json` |
+| `aut@24261120` | `PART_W33_PASS4938_ADJOINT_ROOT_COMPILER.json` |
+| `aut@243` | `w33_pass425_exact_extension_smith.json` |
+| `aut@2571216` | `w33_pass360_alpha_code_logical_hadamard.json` |
+| `aut@26` | `monster_atlas_ccls.json` |
+| `aut@28` | `monster_atlas_ccls.json` |
+| `aut@288` | `PART_W33_PASS4538_GLOBAL_LARGE_SPLITTING_CENSUS.json` |
+| `aut@28800` | `w33_BREAKTHROUGH_35_complete_graph_horizon.json` |
+| `aut@29` | `monster_atlas_ccls.json` |
+| `aut@2903040` | `mccxlvii_binary_polyhedral_e_type_tower.json` |
+| `aut@29120` | `PART_W33_PASS5272_5273_VECTORISED_OVOID_AND_SUZUKI_TOWER.json` |
+| `aut@3000` | `w33_pass437_full_smith_weld.json` |
+| `aut@31` | `monster_atlas_ccls.json` |
+| `aut@311040` | `w33_pass1304_a2_normalizer_triality.json` |
+| `aut@32537600` | `PART_W33_PASS5272_5273_VECTORISED_OVOID_AND_SUZUKI_TOWER.json` |
+| `aut@33` | `monster_atlas_ccls.json` |
+| `aut@34` | `monster_atlas_ccls.json` |
+| `aut@34093383680` | `PART_W33_PASS5272_5273_VECTORISED_OVOID_AND_SUZUKI_TOWER.json` |
+| `aut@348364800` | `w33_pass364_qr548_e8_phase_space.json` |
+| `aut@35` | `monster_atlas_ccls.json` |
+| `aut@36` | `monster_atlas_ccls.json` |
+| `aut@361` | `PART_W33_PASS4530_Q5Q_SYMBOLIC_PROTECTED_LAW.json` |
+| `aut@38` | `monster_atlas_ccls.json` |
+| `aut@39` | `monster_atlas_ccls.json` |
+| `aut@390000` | `w33_pass437_full_smith_weld.json` |
+| `aut@3916800` | `PART_W33_PASS4793_POLARITY_AND_SUZUKI.json` |
+| `aut@4030387200` | `he_irrep_degrees.json` |
+| `aut@41` | `monster_atlas_ccls.json` |
+| `aut@432` | `w33_pass1370_1374_five_frontiers.json` |
+| `aut@44` | `monster_atlas_ccls.json` |
+| `aut@45` | `monster_atlas_ccls.json` |
+| `aut@46` | `monster_atlas_ccls.json` |
+| `aut@46080` | `w33_pass1045_e8_is_the_only_two_tower_type.json` |
+| `aut@47` | `monster_atlas_ccls.json` |
+| `aut@49` | `PART_W33_PASS4530_Q5Q_SYMBOLIC_PROTECTED_LAW.json` |
+| `aut@50` | `monster_atlas_ccls.json` |
+| `aut@503193600` | `w33_complex_leech_suzuki_chain.json` |
+| `aut@51` | `monster_atlas_ccls.json` |
+| `aut@52` | `monster_atlas_ccls.json` |
+| `aut@530712` | `w33_pass437_full_smith_weld.json` |
+| `aut@55` | `monster_atlas_ccls.json` |
+| `aut@5616` | `w33_pass2403_sl3_shell_parabolic_bridge.json` |
+| `aut@57` | `monster_atlas_ccls.json` |
+| `aut@58320` | `w33_pass437_full_smith_weld.json` |
+| `aut@58968` | `w33_pass437_full_smith_weld.json` |
+| `aut@59` | `monster_atlas_ccls.json` |
+| `aut@600` | `w33_pass437_full_smith_weld.json` |
+| `aut@62` | `monster_atlas_ccls.json` |
+| `aut@622080` | `w33_pass1304_a2_normalizer_triality.json` |
+| `aut@625` | `w33_pass425_exact_extension_smith.json` |
+| `aut@64` | `PART_W33_PASS4690_FULL_SEXTET_AFFINE_GROUP.json` |
+| `aut@6480` | `w33_pass437_full_smith_weld.json` |
+| `aut@66` | `monster_atlas_ccls.json` |
+| `aut@660` | `w33_BREAKTHROUGH_298_ramanujan_expanders_substrate.json` |
+| `aut@68` | `monster_atlas_ccls.json` |
+| `aut@69` | `monster_atlas_ccls.json` |
+| `aut@6912` | `PART_BT2847_BT2853_PROTECTED_OBSERVER_NOISY_M36_results.json` |
+| `aut@696729600` | `mccxlvii_binary_polyhedral_e_type_tower.json` |
+| `aut@70` | `monster_atlas_ccls.json` |
+| `aut@702` | `w33_pass437_full_smith_weld.json` |
+| `aut@71` | `monster_atlas_ccls.json` |
+| `aut@78` | `monster_atlas_ccls.json` |
+| `aut@78000` | `w33_pass437_full_smith_weld.json` |
+| `aut@84` | `monster_atlas_ccls.json` |
+| `aut@87` | `monster_atlas_ccls.json` |
+| `aut@88` | `monster_atlas_ccls.json` |
+| `aut@896690995200` | `w33_complex_leech_suzuki_chain.json` |
+| `aut@92` | `monster_atlas_ccls.json` |
+| `aut@93` | `monster_atlas_ccls.json` |
+| `aut@94` | `monster_atlas_ccls.json` |
+| `aut@95` | `monster_atlas_ccls.json` |
+| `aut@9750000` | `w33_pass437_full_smith_weld.json` |
 | `aut_b@25920` | `w33_BREAKTHROUGH_72_sylow_omega_burkhardt_delpezzo_leech.json` |
 | `aut_c2_times_q8_order@192` | `w33_d4_f4_tomotope_reye_bridge_summary.json` |
 | `aut_csaszar_order@42` | `w33_pass301_is_the_4cycle_canonical.json` |
@@ -19467,11 +19552,6 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `aut_k4_order@24` | `bt1815_quartet_slice_geometry.json` |
 | `aut_klein@168` | `w33_MDCCXXI_MDCCXXX_hurwitz_regular_maps.json` |
 | `aut_medial@576` | `PART_W33_PASS5500_5507_LINE_ACTION_AND_ODD_Q.json` |
-| `aut_order@1440` | `PART_W33_PASS4793_POLARITY_AND_SUZUKI.json` |
-| `aut_order@244823040` | `mccxl_golay_code_w33_triality.json` |
-| `aut_order@384` | `PART_W33_PASS5468_5475_SIMPLEX_STABILISER_IS_WF4.json` |
-| `aut_order@3916800` | `PART_W33_PASS4793_POLARITY_AND_SUZUKI.json` |
-| `aut_order@42` | `bt803_seven_realizations_census.json` |
 | `aut_order_f1@8` | `w33_f1_absolute_shadow.json` |
 | `aut_order_via_signed_permutations@8` | `w33_f1_absolute_shadow.json` |
 | `aut_orders@12` | `PART_W33_PASS4286_4293_SCOPE_AND_BONKERS.json` |
@@ -19518,13 +19598,6 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `automorphism_matrices@2` | `w33_pass589_full_linear_symmetry_centralizer.json` |
 | `automorphism_orbits@160` | `PART_3769_3786_GQ_VELDKAMP_AXIAL_LATTICE_MONSTER_results.json` |
 | `automorphism_orbits@40` | `PART_3769_3786_GQ_VELDKAMP_AXIAL_LATTICE_MONSTER_results.json` |
-| `automorphism_order@12096` | `bt1708_hexagon_tomotope_contextual_bus.json` |
-| `automorphism_order@32` | `PART_BT2847_BT2853_PROTECTED_OBSERVER_NOISY_M36_results.json` |
-| `automorphism_order@384` | `PART_W33_PASS5301_LATIN_TORUS_Q4_F2_4_SUBSTRATE.json` |
-| `automorphism_order@42` | `PART_BT491_DUAL_SZILASSI_FROM_CYCLIC_CSASZAR_results.json` |
-| `automorphism_order@60` | `PART_BT486_BC_RING_BOUNDARY_TORUS_results.json` |
-| `automorphism_order@6912` | `PART_BT2847_BT2853_PROTECTED_OBSERVER_NOISY_M36_results.json` |
-| `automorphism_order@96` | `tomotope_cover_bridge_summary.json` |
 | `automorphism_order_digits@92` | `PART_W33_PASS4686_DUAL132_HYPERGRAPH_SYMMETRY_BREAKING.json` |
 | `automorphism_ratio_universal_to_tomotope@2` | `w33_tomotope_order_bridge_summary.json` |
 | `automorphism_subgroup_order@51840` | `PART_3751_3758_MONSTER_LATTICE_MULTIPORT_COVER_results.json` |
@@ -23171,7 +23244,9 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `certificate_graph_orbits@4` | `PART_BT1837_TETRACODE_QUOTIENT_HUNT_summary.json` |
 | `certificate_graph_orbits@5` | `PART_BT1837_TETRACODE_QUOTIENT_HUNT_summary.json` |
 | `certificate_nonzero_degrees@338` | `dcmlxxx_z12_709_ihara_genus_bridge.json` |
+| `certificate_only@132239` | `PART_W33_PASS5548_5555_INDEXES_BARELY_OVERLAP.json` |
 | `certificate_size@6` | `w33_doily_mermin.json` |
+| `certificate_tokens@132276` | `PART_W33_PASS5548_5555_INDEXES_BARELY_OVERLAP.json` |
 | `certificates_corrected@878` | `PART_W33_PASS4461_4462_REGEX_RETRACTION.json` |
 | `certificates_old_detector@132` | `PART_W33_PASS4461_4462_REGEX_RETRACTION.json` |
 | `certificates_scanned@3288` | `w33_pass512_converse_and_legendre_tower.json` |
@@ -25181,6 +25256,7 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `collisions@18` | `rediscovery_sweep.json` |
 | `collisions@19` | `rediscovery_sweep.json` |
 | `collisions@196` | `rediscovery_sweep.json` |
+| `collisions@2` | `PART_W33_PASS5548_5555_INDEXES_BARELY_OVERLAP.json` |
 | `collisions@20` | `rediscovery_sweep.json` |
 | `collisions@21` | `rediscovery_sweep.json` |
 | `collisions@22` | `rediscovery_sweep.json` |
@@ -44833,15 +44909,12 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `hodge_eigenvalues@24` | `w33_algebra_qca.json` |
 | `hodge_eigenvalues@81` | `w33_algebra_qca.json` |
 | `hoffman@1025` | `PART_W33_PASS5246_5247_EVEN_Q_ALPHA_BY_CONSTRUCTION.json` |
-| `hoffman@13` | `PART_W33_PASS5376_5379_STABILISER_AND_COMPLEMENT.json` |
 | `hoffman@16385` | `PART_W33_PASS5246_5247_EVEN_Q_ALPHA_BY_CONSTRUCTION.json` |
 | `hoffman@257` | `PART_W33_PASS5246_5247_EVEN_Q_ALPHA_BY_CONSTRUCTION.json` |
 | `hoffman@4` | `PART_W33_PASS5372_5375_SIMPLEX_CREDIT_AND_TESTS.json` |
 | `hoffman@4097` | `PART_W33_PASS5246_5247_EVEN_Q_ALPHA_BY_CONSTRUCTION.json` |
 | `hoffman@6` | `PART_W33_PASS5372_5375_SIMPLEX_CREDIT_AND_TESTS.json` |
 | `hoffman@9` | `PART_W33_PASS4799_ALPHA_ACROSS_THE_ZOO.json` |
-| `hoffman_bound@10` | `w33_contextual_fraction.json` |
-| `hoffman_bound@13` | `PART_W33_PASS5212_Q5_DUALGRID_HOFFMAN_13_COVER.json` |
 | `hoffman_center@2` | `PART_W33_PASS5300_5307_RESULTS.json` |
 | `hoffman_central_quotient_order@288` | `PART_W33_PASS5300_HOFFMAN576_LATIN_GROUP_BRIDGE.json` |
 | `hoffman_gap_at_q3@3` | `PART_W33_PASS4795_OVOID_GAP_AND_COSET.json` |
@@ -45279,6 +45352,7 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `image@122` | `w33_operator_semigroup_paths.json` |
 | `image@132` | `w33_operator_semigroup_paths.json` |
 | `image@133` | `w33_operator_semigroup_paths.json` |
+| `image@138297600` | `w33_pass218_weil_shadow_split.json` |
 | `image@14` | `w33_operator_semigroup_paths.json` |
 | `image@145` | `w33_operator_semigroup_paths.json` |
 | `image@15` | `w33_operator_semigroup_paths.json` |
@@ -45316,11 +45390,13 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `image@420` | `w33_operator_semigroup_paths.json` |
 | `image@421` | `w33_operator_semigroup_paths.json` |
 | `image@4369` | `w33_operator_semigroup_paths.json` |
+| `image@4680000` | `w33_pass218_weil_shadow_split.json` |
 | `image@50` | `w33_operator_semigroup_paths.json` |
+| `image@51840` | `w33_pass340_halfspin_discriminant_module.json` |
 | `image@56` | `w33_operator_semigroup_paths.json` |
-| `image@576` | `PART_W33_PASS5460_5467_Q8_TRANSITIVE_Q5_IS_SPECIAL.json` |
 | `image@65` | `w33_operator_semigroup_paths.json` |
 | `image@72` | `w33_operator_semigroup_paths.json` |
+| `image@720` | `w33_pass598_s6_outer_automorphism.json` |
 | `image@73` | `w33_operator_semigroup_paths.json` |
 | `image@82` | `w33_operator_semigroup_paths.json` |
 | `image@8421` | `w33_operator_semigroup_paths.json` |
@@ -45342,11 +45418,6 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `image_of_weld_axis@1062882` | `dccx_holonomy_selector_carrier_weld_bridge.json` |
 | `image_on_one_six_order@720` | `w33_pass188_icosahedron_test.json` |
 | `image_on_pentads@720` | `PART_MMCCCLXXXIV_S6_OUTER_AUTOMORPHISM_CLASS_SWAP_results.json` |
-| `image_order@138297600` | `w33_pass218_weil_shadow_split.json` |
-| `image_order@3` | `PART_W33_PASS4994_RESIDUAL_C3_AFFINE_GAUGE.json` |
-| `image_order@4680000` | `w33_pass218_weil_shadow_split.json` |
-| `image_order@51840` | `w33_pass340_halfspin_discriminant_module.json` |
-| `image_order@720` | `w33_pass598_s6_outer_automorphism.json` |
 | `image_order_on_h@25920` | `bt980_aut_action_on_homology.json` |
 | `image_rank@30` | `PART_W33_PASS5006_OCTAHEDRON_BINARY_60_90_30_EXTENSION.json` |
 | `image_size@36` | `PART_3663_3669_MONSTER_CHAMBER_SPREAD_BRIDGE_results.json` |
@@ -47534,6 +47605,8 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `kf_numerator@267` | `w33_kirchhoff_spanning_tree.json` |
 | `killed_432_basis_columns@1296` | `w33_pass1148_1152_exact_crossed_bridge.json` |
 | `killed_432_columns@1296` | `w33_pass1138_explicit_cubic_incidence_bridge.json` |
+| `killed_by_another_q_or_carrier@6` | `PART_W33_PASS5540_5547_CERTIFICATES_SEARCHABLE.json` |
+| `killed_by_structure@2` | `PART_W33_PASS5540_5547_CERTIFICATES_SEARCHABLE.json` |
 | `killed_or_retracted@2` | `w33_formula_search_universe_v1.json` |
 | `killed_or_retracted@3` | `w33_formula_search_universe_v1.json` |
 | `killed_or_retracted@5` | `w33_formula_search_universe_v1.json` |
@@ -59365,6 +59438,7 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `n_classes_order_384@2` | `_gap_w33f4.json` |
 | `n_classes_order_96@5` | `_gap_w33f4.json` |
 | `n_classes_with_perm_hit@11` | `rp_index.json` |
+| `n_coincidences@8` | `PART_W33_PASS5540_5547_CERTIFICATES_SEARCHABLE.json` |
 | `n_complex@78` | `bt872_ihara_zeta_spanning_bridge.json` |
 | `n_conjugacy_classes@15` | `m12_irrep_degrees.json` |
 | `n_conjugacy_classes@33` | `he_irrep_degrees.json` |
@@ -59503,6 +59577,7 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `n_solutions@30` | `w33_pass273_texture_zeros.json` |
 | `n_spreads@36` | `w33_spread_star_anatomy.json` |
 | `n_star_max_depth@8` | `w33_BREAKTHROUGH_439_finite_fractal_depth.json` |
+| `n_survived@6` | `PART_W33_PASS5540_5547_CERTIFICATES_SEARCHABLE.json` |
 | `n_system_modes@31` | `PART_4129_4136_ANOMALY_GATES_DECODER_HYBRID_ORBITS_BONKERS.json` |
 | `n_tested@12` | `w33_hecke_tau_multiplicativity_summary.json` |
 | `n_tested@24` | `w33_niemeier_lattices_summary.json` |
@@ -62590,106 +62665,6 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `order8_lifts_tested@20` | `w33_pass2474_f20_lifted_normalizer_hom.json` |
 | `order9_count@5760` | `bt863_generations_steinberg_vanishing.json` |
 | `order9_fixed@10` | `PART_BT3542_BT3548_BOREL_COMMUTANT_OUTER_S6_ANALYTIC_results.json` |
-| `order@1008` | `PART_W33_PASS4782_DUALITY_MAP_EXHIBITED.json` |
-| `order@104` | `monster_atlas_ccls.json` |
-| `order@105` | `monster_atlas_ccls.json` |
-| `order@1092` | `w33_BREAKTHROUGH_298_ramanujan_expanders_substrate.json` |
-| `order@110` | `monster_atlas_ccls.json` |
-| `order@119` | `monster_atlas_ccls.json` |
-| `order@12096` | `w33_complex_leech_suzuki_chain.json` |
-| `order@1209600` | `w33_complex_leech_suzuki_chain.json` |
-| `order@121` | `PART_W33_PASS4530_Q5Q_SYMBOLIC_PROTECTED_LAW.json` |
-| `order@125` | `w33_pass425_exact_extension_smith.json` |
-| `order@1285608` | `w33_pass360_alpha_code_logical_hadamard.json` |
-| `order@13` | `monster_atlas_ccls.json` |
-| `order@13063680` | `PART_W33_PASS4547_Q53_GLOBAL_PRISM_ACTION.json` |
-| `order@138240` | `PART_W33_PASS4690_FULL_SEXTET_AFFINE_GROUP.json` |
-| `order@14` | `monster_atlas_ccls.json` |
-| `order@14329224` | `w33_pass437_full_smith_weld.json` |
-| `order@14400` | `w33_BREAKTHROUGH_280_spacetime_uniqueness_Coxeter.json` |
-| `order@15600` | `w33_pass437_full_smith_weld.json` |
-| `order@15625` | `w33_pass425_exact_extension_smith.json` |
-| `order@160` | `w33_pass809_kbranch_gluing.json` |
-| `order@17` | `monster_atlas_ccls.json` |
-| `order@176904` | `w33_pass437_full_smith_weld.json` |
-| `order@18632` | `w33_pass360_alpha_code_logical_hadamard.json` |
-| `order@1951320` | `PART_W33_PASS4782_DUALITY_MAP_EXHIBITED.json` |
-| `order@19656` | `w33_pass437_full_smith_weld.json` |
-| `order@19683` | `w33_pass425_exact_extension_smith.json` |
-| `order@20160` | `w33_pass590_oriented_singer_cover.json` |
-| `order@2048` | `w33_pass339_extraspecial_clifford_spin_bridge.json` |
-| `order@21` | `monster_atlas_ccls.json` |
-| `order@22` | `monster_atlas_ccls.json` |
-| `order@23` | `monster_atlas_ccls.json` |
-| `order@24261120` | `PART_W33_PASS4938_ADJOINT_ROOT_COMPILER.json` |
-| `order@243` | `w33_pass425_exact_extension_smith.json` |
-| `order@2571216` | `w33_pass360_alpha_code_logical_hadamard.json` |
-| `order@26` | `monster_atlas_ccls.json` |
-| `order@28` | `monster_atlas_ccls.json` |
-| `order@288` | `PART_W33_PASS4538_GLOBAL_LARGE_SPLITTING_CENSUS.json` |
-| `order@28800` | `w33_BREAKTHROUGH_35_complete_graph_horizon.json` |
-| `order@29` | `monster_atlas_ccls.json` |
-| `order@2903040` | `mccxlvii_binary_polyhedral_e_type_tower.json` |
-| `order@29120` | `PART_W33_PASS5272_5273_VECTORISED_OVOID_AND_SUZUKI_TOWER.json` |
-| `order@3000` | `w33_pass437_full_smith_weld.json` |
-| `order@31` | `monster_atlas_ccls.json` |
-| `order@311040` | `w33_pass1304_a2_normalizer_triality.json` |
-| `order@32537600` | `PART_W33_PASS5272_5273_VECTORISED_OVOID_AND_SUZUKI_TOWER.json` |
-| `order@33` | `monster_atlas_ccls.json` |
-| `order@34` | `monster_atlas_ccls.json` |
-| `order@34093383680` | `PART_W33_PASS5272_5273_VECTORISED_OVOID_AND_SUZUKI_TOWER.json` |
-| `order@348364800` | `w33_pass364_qr548_e8_phase_space.json` |
-| `order@35` | `monster_atlas_ccls.json` |
-| `order@36` | `monster_atlas_ccls.json` |
-| `order@361` | `PART_W33_PASS4530_Q5Q_SYMBOLIC_PROTECTED_LAW.json` |
-| `order@38` | `monster_atlas_ccls.json` |
-| `order@39` | `monster_atlas_ccls.json` |
-| `order@390000` | `w33_pass437_full_smith_weld.json` |
-| `order@4030387200` | `he_irrep_degrees.json` |
-| `order@41` | `monster_atlas_ccls.json` |
-| `order@432` | `w33_pass1370_1374_five_frontiers.json` |
-| `order@44` | `monster_atlas_ccls.json` |
-| `order@45` | `monster_atlas_ccls.json` |
-| `order@46` | `monster_atlas_ccls.json` |
-| `order@46080` | `w33_pass1045_e8_is_the_only_two_tower_type.json` |
-| `order@47` | `monster_atlas_ccls.json` |
-| `order@49` | `PART_W33_PASS4530_Q5Q_SYMBOLIC_PROTECTED_LAW.json` |
-| `order@50` | `monster_atlas_ccls.json` |
-| `order@503193600` | `w33_complex_leech_suzuki_chain.json` |
-| `order@51` | `monster_atlas_ccls.json` |
-| `order@52` | `monster_atlas_ccls.json` |
-| `order@530712` | `w33_pass437_full_smith_weld.json` |
-| `order@55` | `monster_atlas_ccls.json` |
-| `order@5616` | `w33_pass2403_sl3_shell_parabolic_bridge.json` |
-| `order@57` | `monster_atlas_ccls.json` |
-| `order@58320` | `w33_pass437_full_smith_weld.json` |
-| `order@58968` | `w33_pass437_full_smith_weld.json` |
-| `order@59` | `monster_atlas_ccls.json` |
-| `order@600` | `w33_pass437_full_smith_weld.json` |
-| `order@62` | `monster_atlas_ccls.json` |
-| `order@622080` | `w33_pass1304_a2_normalizer_triality.json` |
-| `order@625` | `w33_pass425_exact_extension_smith.json` |
-| `order@64` | `PART_W33_PASS4690_FULL_SEXTET_AFFINE_GROUP.json` |
-| `order@6480` | `w33_pass437_full_smith_weld.json` |
-| `order@66` | `monster_atlas_ccls.json` |
-| `order@660` | `w33_BREAKTHROUGH_298_ramanujan_expanders_substrate.json` |
-| `order@68` | `monster_atlas_ccls.json` |
-| `order@69` | `monster_atlas_ccls.json` |
-| `order@696729600` | `mccxlvii_binary_polyhedral_e_type_tower.json` |
-| `order@70` | `monster_atlas_ccls.json` |
-| `order@702` | `w33_pass437_full_smith_weld.json` |
-| `order@71` | `monster_atlas_ccls.json` |
-| `order@78` | `monster_atlas_ccls.json` |
-| `order@78000` | `w33_pass437_full_smith_weld.json` |
-| `order@84` | `monster_atlas_ccls.json` |
-| `order@87` | `monster_atlas_ccls.json` |
-| `order@88` | `monster_atlas_ccls.json` |
-| `order@896690995200` | `w33_complex_leech_suzuki_chain.json` |
-| `order@92` | `monster_atlas_ccls.json` |
-| `order@93` | `monster_atlas_ccls.json` |
-| `order@94` | `monster_atlas_ccls.json` |
-| `order@95` | `monster_atlas_ccls.json` |
-| `order@9750000` | `w33_pass437_full_smith_weld.json` |
 | `order_1152_stabilizers@45` | `PART_3769_3786_FINITE_GROUP_DESCENT_candidate.json` |
 | `order_192_frames@135` | `PART_3769_3786_FINITE_GROUP_DESCENT_candidate.json` |
 | `order_2t@24` | `w33_clock_is_dark_braiding.json` |
@@ -66562,6 +66537,7 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `pairs@552` | `w33_pass518_phase_obstruction.json` |
 | `pairs@56` | `w33_pass518_phase_obstruction.json` |
 | `pairs@61` | `PART_W33_PASS3060_3062_IHARA_FRAME_RH.json` |
+| `pairs@66` | `PART_W33_PASS5548_5555_INDEXES_BARELY_OVERLAP.json` |
 | `pairs@7` | `w33_pass4089_four_router_layout.json` |
 | `pairs@8` | `w33_pass4089_four_router_layout.json` |
 | `pairs@8390656` | `PART_W33_PASS5272_5273_VECTORISED_OVOID_AND_SUZUKI_TOWER.json` |
@@ -104473,6 +104449,7 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `result_accumulator@7` | `w33_fractal_microvm_runtime.json` |
 | `result_file_count@30` | `dcccxiv_phenomenology_claim_ledger_audit.json` |
 | `result_json_count@28` | `dcmi_sub_distinction_boundary_audit.json` |
+| `results_index_tokens@11762` | `PART_W33_PASS5548_5555_INDEXES_BARELY_OVERLAP.json` |
 | `retained_affine_pieces@200` | `w33_pass825_facet_pruned_polyhedral_runtime.json` |
 | `retained_attainer_sections@2` | `w33_pass542_q5_full_support_atlas.json` |
 | `retained_attainer_sections@3` | `w33_pass542_q5_full_support_atlas.json` |
@@ -110389,6 +110366,7 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `share_0_edges@31995` | `PART_W33_PASS4999_OCTAHEDRAL_EDGE_FRAME.json` |
 | `share_3_added_lines@54` | `PART_W33_PASS4991_AG23_12_TO_4_POINT_PACKETS.json` |
 | `share_3_edges@4320` | `PART_W33_PASS4999_OCTAHEDRAL_EDGE_FRAME.json` |
+| `shared@37` | `PART_W33_PASS5548_5555_INDEXES_BARELY_OVERLAP.json` |
 | `shared_11@11` | `w33_machine_world_bridge.json` |
 | `shared_1_edge@192` | `PART_W33_PASS4836_LEVI_MINIMUM_ORBITS.json` |
 | `shared_23_58_vertex@5` | `w33_pass1335_brauer_tree_hecke_corner.json` |
@@ -125862,7 +125840,6 @@ Tokens are `key@value` for integer leaves under a nameable key. Bare integers, s
 | `theta_adjacency_edges@163200` | `PART_W33_PASS5112_INTRINSIC_ROOT_CHART_RECONSTRUCTION.json` |
 | `theta_adjacency_edges@360` | `PART_W33_PASS5112_INTRINSIC_ROOT_CHART_RECONSTRUCTION.json` |
 | `theta_audit@133920` | `w33_pass4247_exact_minimum_hodge_channels.json` |
-| `theta_bound@10` | `bt818_ovoid_nogo_theta_gap.json` |
 | `theta_check_rank_f2@13344` | `PART_W33_PASS5056_Q4_THETA_APARTMENT_CODE.json` |
 | `theta_check_weight@3` | `PART_W33_PASS5056_Q4_THETA_APARTMENT_CODE.json` |
 | `theta_checks_per_apartment@12` | `PART_W33_PASS5056_Q4_THETA_APARTMENT_CODE.json` |

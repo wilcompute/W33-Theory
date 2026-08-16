@@ -224,6 +224,12 @@ repos:
         language: system
         files: ^(analysis|scripts)/.*[.](py|md|tex)$
         pass_filenames: true
+      - id: certificate-rediscovery
+        name: a certificate result must be looked up before it is claimed new
+        entry: py -3 scripts/check_certificate_rediscovery.py
+        language: system
+        files: ^data/.*[.]json$
+        pass_filenames: true
       - id: order-coincidence
         name: an order match is not an identification (check the element-order spectrum)
         entry: py -3 scripts/check_order_coincidence.py

@@ -30,6 +30,19 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "CERTIFICATE_RESULTS_INDEX.md"
 MAX_FILES = 25          # above this a token is a schema field, not a result
+
+# KEY ALIASES (Pass 5556).  Two passes calling one quantity by two names produce two
+# tokens that never collide, which is exactly how Pass 4800's `alpha` and BT818's
+# `alpha_exact` stayed apart while both were indexed.  Canonicalising the key is the
+# only fix; the index cannot infer it.
+ALIASES = {
+    "alpha_exact": "alpha", "independence_number": "alpha", "alpha_found": "alpha",
+    "coclique": "alpha", "alpha_established": "alpha",
+    "hoffman_bound": "hoffman", "theta_bound": "hoffman", "ratio_bound": "hoffman",
+    "aut_order": "aut", "automorphism_order": "aut", "order": "aut",
+    "image_order": "image", "image_in_s13_order": "image",
+}
+
 SKIP_KEYS = {"pass", "passes", "schema", "status", "date", "version", "seed",
              "seconds", "runtime", "timestamp", "n", "id", "index", "count"}
 
@@ -56,18 +69,20 @@ def tokens(doc) -> set[str]:
             continue
         if not (2 <= abs(v) < 10 ** 12):
             continue
-        out.add(f"{leaf}@{v}")
+        out.add(f"{ALIASES.get(leaf, leaf)}@{v}")
     return out
 
 
 def selftest() -> int:
     cases = [
-        ("named key with value", {"alpha_exact": 18}, "alpha_exact@18", True),
+        # ALIASED: alpha_exact canonicalises to alpha, so the token is alpha@18.
+        ("alias canonicalises the key", {"alpha_exact": 18}, "alpha@18", True),
+        ("un-aliased key kept as-is", {"deficit": 8}, "deficit@8", True),
         ("skips schema fields", {"pass": 5540}, "pass@5540", False),
         ("skips short keys", {"n": 40}, "n@40", False),
         ("skips booleans", {"verified": True}, "verified@1", False),
         ("nested keys reach leaves", {"a": {"hoffman_bound": 26}},
-         "hoffman_bound@26", True),
+         "hoffman@26", True),
     ]
     ok = True
     print("  selftest -- certificate token grammar\n")
