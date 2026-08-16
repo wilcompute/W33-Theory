@@ -21,7 +21,8 @@
     {"kind":"id","token":"pass-5428-5435-apartment-tomography","source":"analysis/PASS5428_5435_apartment_tomography_index_insert.html"},
     {"kind":"id","token":"pass-5436-5443-bicycle-apartment-scheme","source":"analysis/PASS5436_5443_bicycle_apartment_scheme_index_insert.html"},
     {"kind":"id","token":"pass-5444-5451-frame-basis-pell-radius11","source":"analysis/PASS5444_5451_index_insert.html"},
-    {"kind":"id","token":"pass-5588-5594-reye-psl2-permutation-frame","source":"analysis/PASS5588_5594_index_insert.html"}
+    {"kind":"id","token":"pass-5588-5594-reye-psl2-permutation-frame","source":"analysis/PASS5588_5594_index_insert.html"},
+    {"kind":"id","token":"pass-5595-5602-projectivity-closure-toe","source":"analysis/PASS5595_5602_index_insert.html"}
   ],
   "boundary": "This contract certifies nested publication reachability, uniqueness, shared-tail consolidation, and public materialization only. It does not certify mathematical, hardware, laboratory, empirical, or physical claims."
 }
