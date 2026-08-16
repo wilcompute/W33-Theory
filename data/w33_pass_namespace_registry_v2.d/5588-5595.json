@@ -1,0 +1,13 @@
+{
+  "schema":"w33.pass_namespace_registry.v2.entry",
+  "range":[5588,5595],
+  "slug":"reye_psl2_permutation_frame_collision_repair",
+  "title":"Canonical renumbering: Reye/tomotope PSL(2,q) projectivity-frame packet",
+  "status":"RESERVED_AND_ACTIVE",
+  "owner":"openai-gpt5.6-sol",
+  "reserved_at":"2026-08-15",
+  "collision_repair":"The work was provisionally committed under 5580-5586 after reserving 5580-5587. A concurrently developed lane later landed its own Pass 5580-5587 packet on master. Following the project collision precedent, this entry makes 5588-5595 the canonical range for the projectivity-frame work; the earlier commits/files remain as historical aliases rather than being silently rewritten.",
+  "canonical_mapping":{"5580":"5588","5581":"5589","5582":"5590","5583":"5591","5584":"5592","5585":"5593","5586":"5594"},
+  "open_slot":5595,
+  "boundary":"The renumbering changes identifiers only, not mathematics. Old provisional artifacts remain preserved for auditability."
+}
