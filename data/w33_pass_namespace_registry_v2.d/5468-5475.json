@@ -1,0 +1,12 @@
+{
+  "schema":"w33.pass_namespace_registry.v2.entry",
+  "range":[5468,5475],
+  "slug":"three_groups_of_order_576_knight_hypercube_and_the_192_correction",
+  "title":"Are the three order-576 groups isomorphic, is the toroidal knight graph really Q4, and what 96/192/384/576 actually are",
+  "status":"RESERVED",
+  "owner":"anthropic-claude-track-a",
+  "reserved_at":"2026-08-15",
+  "purpose":"The corpus now carries THREE structure descriptions for order 576: ((A4 x A4):C2):C2 (my Pass5416 image of the 13-cover stabiliser in S_13), 2^4:(S3 x S3) (the other lane's Pass5300 autoparatopy group of the Klein V4 Latin square), and W(D4):C3 (their Pass5308). Whether any two are isomorphic is decidable in GAP and settles the Pass5462 open question. Also: verify independently that the 4x4 toroidal knight graph is Q4; pin down which order the tesseract ROTATION group actually has (their Pass5310 says 192, not 576); and search for external instances of 96/192/288/384/576 before any of these coincidences is called a bridge.",
+  "boundary":"An isomorphism test settles isomorphism, not meaning: two groups of order 576 being isomorphic does not identify the objects they act on, and a coincidence of orders is not a bridge. The number 576 has at least three independent sources here (Latin squares of order 4, W(D4):C3, and a stabiliser image) and the null hypothesis is that small highly-divisible orders recur.",
+  "prior_art_check":"Their Pass5310 (Q4 signed permutations 384, two non-isomorphic order-192 subgroups R and D=W(D4), common central quotient 96 = tomotope), Pass5311 (toroidal knight graph = Q4, Latin census 576=96+192+288), Pass5316 (V4 class = affine F2^4->F2^2), Pass5300 (H/Z(H) order 288 conjugate to the even-parastrophe subgroup). This packet must cite all four and claim only the isomorphism verdicts and the external search."
+}
