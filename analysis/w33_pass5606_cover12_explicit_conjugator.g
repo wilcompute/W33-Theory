@@ -6,7 +6,7 @@
 # cover12->Latin permutation in addition to the legacy one-based witness.
 Read("analysis/w33_pass5417_cover_orbits.g");;
 mov := First(orbs, o -> Length(o)=12);;
-fixedPos := First([1..13], i -> not i in mov);;
+fixedPos := First([1..13], i -> not (i in mov));;
 movingVertices := List(mov, i -> cover[i]);;
 fixedVertex := cover[fixedPos];;
 h12 := ActionHomomorphism(act,mov,OnPoints);;
