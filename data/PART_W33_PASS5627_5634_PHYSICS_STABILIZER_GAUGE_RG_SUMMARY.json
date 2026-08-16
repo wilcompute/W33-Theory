@@ -1,0 +1,71 @@
+{
+  "schema": "w33.pass5627_5634.physics_stabilizer_gauge_rg.v1",
+  "pass_range": [5627, 5634],
+  "status": "EIGHT_RESULTS_FROZEN__PASS5631_DIRECT_Q5_MOVING12_ACTION_GATE_STILL_PENDING",
+  "5627": {
+    "status": "SIGNED_DECK16_IS_STABILIZER_SPINORIAL_NOT_PSP_HALFSPIN",
+    "PSp43_order": 25920,
+    "PSp_Segre_stabilizer_order": 48,
+    "Sp43_order": 51840,
+    "vector_Segre_stabilizer_order": 96,
+    "central_minus_I_action_on_deck_odd16": "-I16",
+    "signed_character_self_inner_product": 8,
+    "conclusion": "The deck-odd16 is a central-sign representation of the 96-element vector carrier stabilizer and cannot descend to PSp(4,3), hence cannot be either ordinary PSp D5 half-spin16."
+  },
+  "5628": {
+    "status": "GAUGE_INVARIANT_CUBIC_ACTION_HAS_INDEPENDENT_HORIZONTAL_AND_VERTICAL_COUPLINGS",
+    "horizontal": 36,
+    "vertical": 9,
+    "action": "S_cubic = g_H sum_horizontal C_T + g_V sum_vertical V_b",
+    "conclusion": "Local Z3 bundle gauge symmetry preserves the vertical full-fiber cubic as well as the horizontal connection-covariant sum, so gauge invariance alone does not force g_V=0."
+  },
+  "5629": {
+    "status": "NAIVE_C2_REFINEMENT_TOWER_DISCONNECTS_AFTER_FIRST_BIPARTITE_LIFT",
+    "first_cover_vertices": 270,
+    "first_cover_degree": 12,
+    "second_naive_cover_vertices": 540,
+    "second_naive_cover_components": 2,
+    "identity": "(G x K2) x K2 = G x (K2 x K2) = two copies of (G x K2)",
+    "conclusion": "The existing parity/Kronecker C2 class cannot be iterated into a connected Weyl refinement tower."
+  },
+  "5630": {
+    "status": "DECK16_COMMUTANT_IS_2A_PLUS_2ABAR_AND_MASS_RATIO_TWO_IS_UNPROTECTED",
+    "module": "2A + 2Abar with dim A=4 and A non-real irreducible",
+    "magnetic_eigenspace_pattern": {"-6": "A", "-3": "Abar", "3": "A", "6": "Abar"},
+    "complex_commutant_dimension": 8,
+    "K_odd_equivariant_real_dimension": 4,
+    "explicit_perturbation_ratio_at_epsilon_0p1": 1.9742469962727762,
+    "conclusion": "The unperturbed 6/3=2 level ratio is not protected by deck parity, K particle-hole symmetry, and the full vector carrier stabilizer."
+  },
+  "5631": {
+    "status": "CROSSQ_CENTERED_MODULE_THEOREM__PENDING_DIRECT_Q5_MOVING12_CONJUGATOR",
+    "identity": "centered(1+12 permutation module) ~= 12-point permutation module",
+    "q5_fixed_direction": "12 e_fixed - sum e_moving",
+    "q3_image_if_gate_succeeds": "sum of the 12 q3 orbit basis vectors",
+    "conclusion": "Even under a successful moving12 F4 conjugator, the q5 distinguished direction maps to a collective q3 orbit-average singlet, not a distinguished q3 point; q3 also has two isomorphic 12-orbit targets."
+  },
+  "5632": {
+    "status": "NO_STABILIZER_EQUIVARIANT_TIME_REVERSAL__CLASS_D_LIKE_FINITE_BDG",
+    "PHS": "K H K^-1=-H, K^2=+1",
+    "equivariant_TR_linear_system_nullity": 0,
+    "conclusion": "No stabilizer-equivariant T=UK commuting with H exists, so there is no carrier-derived T^2=-1 Kramers/DIII shortcut."
+  },
+  "5633": {
+    "status": "BAD9_LIVE_IN_GAUGE_C0_SITE_DEGREE_NOT_CONNECTION_C1",
+    "AG23_sites": 9,
+    "AG23_links": 36,
+    "incidence_rank": 8,
+    "cycle_space_dimension": 28,
+    "conclusion": "The vertical nine naturally index local gauge sites/parameters or constraints, not propagating link-connection gauge bosons."
+  },
+  "5634": {
+    "status": "EXACT_TWO_SHEET_FESHBACH_FLOW__NOT_YET_SPACETIME_RG",
+    "block_identity": "H32=[[A,B],[B,A]], H_even=A+B, H_odd=A-B",
+    "old_section_operator": "A is the old Pass5609 one-sheet Hamiltonian up to complex conjugation convention",
+    "effective_operator": "H_eff(E)=A+B(E-A)^(-1)B",
+    "A_B_noncommuting": true,
+    "one_sheet_distinct_poles": 15,
+    "conclusion": "The old section-dependent operator is reinterpreted as a bare sheet block, while exact sheet elimination produces a nontrivial energy-dependent self-energy rather than a one-parameter RG fixed point."
+  },
+  "boundary": "All claims are finite group-action, representation, bundle-gauge, graph-cover, cochain, BdG-algebra, or resolvent identities. No physical spin-statistics theorem, Standard Model mass prediction, gauge-boson identification, continuum spacetime dimension, Wilsonian RG fixed point, or q5-vacuum identification is claimed."
+}
