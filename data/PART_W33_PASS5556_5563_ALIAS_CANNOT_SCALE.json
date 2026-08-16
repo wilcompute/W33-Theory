@@ -1,0 +1,80 @@
+{
+  "boundary": "Pass 5559's classification is a key-suffix pattern match and gives an UPPER bound on 'result', not a count. Pass 5562 counts certificates mentioning q=3 without q=5 by regex; it is a population bound, NOT a defect count. Pass 5561 verifies DCCLXXXIV's level-4 arithmetic and not the multiplier chain that reaches it",
+  "pass_5556": {
+    "certificates": 5046,
+    "flagged": 3570,
+    "pct": 70,
+    "worst": [
+      [
+        "bt1302_parity_epilogue_reroute_protocol.json",
+        2239
+      ],
+      [
+        "bt1301_full_chart_atlas_isa_compiler.json",
+        2231
+      ],
+      [
+        "w33_reversal_symmetric_route_selector.json",
+        729
+      ]
+    ]
+  },
+  "pass_5557": {
+    "distinct_integer_keys": 26693,
+    "family_sizes": {
+      "alpha": 73,
+      "aut": 160,
+      "degree": 379,
+      "dim": 1238,
+      "distance": 126,
+      "genus": 32,
+      "hoffman": 13,
+      "image": 160,
+      "kernel": 200,
+      "orbit": 729,
+      "order": 1391,
+      "rank": 1011,
+      "weight": 467
+    }
+  },
+  "pass_5558": {
+    "alias_entries": 13,
+    "family_total": 5979,
+    "verdict": "key-name canonicalisation is not the fix; aliases repair known collisions and do not find unknown ones",
+    "what_would_work": "a naming convention forward plus near-miss reporting on new keys -- a different tool, not built here"
+  },
+  "pass_5559": {
+    "classes": {
+      "candidate result": 106292,
+      "identifier/position": 8478,
+      "size/count field": 2366
+    },
+    "note": "upper bound on 'result'; the classifier misses semantic fields",
+    "one_off_tokens": 117136
+  },
+  "pass_5560": {
+    "but": "Pass 4800's alpha@18 is in the stream and would have surfaced",
+    "rate_pct": 60,
+    "replayed": 4375,
+    "verdict": "warn-only is correct; a gate firing at this rate trains --no-verify",
+    "would_fire": 2666
+  },
+  "pass_5561": {
+    "E": 66,
+    "F": 44,
+    "V": 12,
+    "chi": -10,
+    "genus": 6,
+    "identification": "Ringel-Youngs triangular embedding of K12",
+    "matches_DCCLXXXIV": true,
+    "not_established": "any link from that surface to W(3,3)",
+    "triangles": 220
+  },
+  "pass_5562": {
+    "certificates": 5047,
+    "mention_q3": 690,
+    "pct_of_q3": 77,
+    "q3_only": 536,
+    "reading": "a population bound on what the never-publish-before-q=5 rule would gate, not a defect count"
+  }
+}
