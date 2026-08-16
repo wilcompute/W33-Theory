@@ -10,33 +10,54 @@
 This file contains project context and decisions. AI assistants should read this file for context. MCP tools are an optional enhancement for richer interaction when connected.
 
 ## Project Context
-- **Total Decisions:** 34
-- **Known Topics:** auto-draft, needs-review, architectural
+- **Total Decisions:** 4817
+- **Known Topics:** needs-review, auto-draft, why, w33, testing, toe, architecture, docs, holonet, photonic, audit, qec, github, selector, gap
 
 ## Current State
 **Repository:** Theory of Everything
 **Project Type:** Python Project | Python
 **Branch:** master
-**Tracking:** ahead 0, behind 114
 
 **Recent Commits:**
-- `eb0276c Pass 1840 reserved: ATLAS standard-word outer-class certificate`
-- `5242ff0 Pass 1839 reserved: geometric four-bit chirality observables`
-- `7990d0c Pass 1838 reserved: weight-five syndrome decoder geometry`
-- `0e5a332 Pass 1837 reserved: middle-layer weight-enumerator compression`
-- `8e047e1 Pass 1836 reserved: global 720-signature nine-resolution solver`
+- `da8f015 Reserve Pass5635-5642 (Track A): per-file firing, rarity ranking, tomotope_flag hub`
+- `4b5907b Reserve Pass5627-5634 physics continuation`
+- `a02addd Harden Pass5606 fixed-position GAP syntax`
+- `7ab6225 Pass5619-5626: add replay GAP publication and compile workflow`
+- `9ff2afc Repair Pass5606 conjugator JSON contract for object dictionary`
 
 **Working Tree:**
-- M .continuity/SESSION_NOTES.md
-- M .cursorrules
-- M .github/copilot-instructions.md
-- M AGENTS.md
-- M CLAUDE.md
-- M GEMINI.md
-- ?? .continuity/.gitattributes
-- ?? .continuity/decisions.json
-- ?? .continuity/decisions.jsonl
+- M .continuity/decisions.json
+- M .continuity/decisions.jsonl
 - ?? .mcp.json
+- ?? analysis/PASS4938_ADJOINT_ROOT_COMPILER_AND_SYMMETRY_FIREWALL.md
+- ?? analysis/PASS4939_CHAMBER_STEINER_INTERTWINER.md
+- ?? analysis/PASS4948_MODULAR_BOSE_MESNER_CORRECTION.md
+- ?? analysis/PASS4949_W33_Q43_LEVI_MIDDLE_MODULES.md
+- ?? analysis/PASS4950_FALSE_SRG33_W33_QUARANTINE.md
+- ?? analysis/PASS4959_POINT_LINE_INCIDENCE_LOEWY_COMPILER.md
+- ?? analysis/w33_pass4938_adjoint_root_compiler.g
+- ?? analysis/w33_pass4939_chamber_steiner_intertwiner.g
+- ?? analysis/w33_pass4946_row_point_dual.g
+- ?? analysis/w33_pass4948_modular_bose_mesner_correction.g
+- ?? analysis/w33_pass4949_w33_levi_middle19_intertwiner.g
+- ?? analysis/w33_pass4950_false_srg33_w33_quarantine.g
+
+## Session Context
+**Goals:**
+- 2026-08-08 current goal: finish and validate the Passes 4324-4334 chamber Hecke and audited-corrections packet while preserving exact theorem, retraction, and open-boundary language.
+
+
+## Decision Freshness
+**0 stale decisions** · 3 need review · 1128 superseded ready to archive · Oldest unreviewed: 2026-05-16
+
+Stale decisions requiring attention:
+1. **d1a5364d-fc0b-4955-8076-561b9b9acb5b** (score 41) — "Why leave the local DCCLIX 24-cell/D4 triality draft unpromoted?" — 13 weeks old, never reviewed
+2. **f1d87c79-8ec0-45bc-8fa6-738cec22154c** (score 35) — "Why revise inherited Pass 446 and Passes 522-539 language?"
+3. **00cab282-2e5b-4d3b-81bf-592766c35864** (score 35) — "Why revise papers/agreement_locus.tex in Pass 541?"
+
+When referencing these decisions, note their staleness. Verify they still reflect current project state before recommending based on them.
+
+1128 decisions are eligible for Dream consolidation. Suggest running the Dream tool to archive stale decisions, merge duplicates, and resolve contradictions.
 
 ## Operating Contract
 1. **Load context, then search before you change.** MCP-capable agents: call `get_quick_context` at session start, then `search_decisions` before proposing changes. Shell/CLI-only agents (e.g. Copilot): run `continuity context`, then `continuity search "<topic>"` (`grep -i "<topic>" .continuity/decisions.jsonl` if the CLI is unavailable). Name any conflict with a prior decision and let the user choose. **When a prior decision informs your answer, cite it inline — "per decision-abc123, we chose X because Y" — so the user can see the memory being used, not just trust that it was.** `search_decisions` returns a `sourceTag` per result; use it.
@@ -115,28 +136,6 @@ Ordered by how hard they are to catch. Each was found the expensive way.
    start. See `analysis/w33_pass322_the_rank_law_was_already_ours.py`: ~15 passes
    re-derived a rank law the repo had already proved and formalized in Lean, and
    whose two halves are published (Sastry–Sin; Chandler–Sin–Xiang) and cited here.
-6. **The untested premise** — *added Pass 4372, after it produced three errors in one
-   session.* A comparison, ratio or price computed before checking the comparison was
-   licensed. "Translations exist only on the point side, so that side was forced" — a
-   translation acts on **neither** projective carrier. "Reversibility costs 2× the cells" —
-   every machine was already reversible in the sense implied. "Dual-rail fault detection" —
-   it compared each faulty run against the correct run, which you do not have at runtime.
-   Each was arithmetically fine and answered a question that did not apply.
-   **Guard:** before writing *X costs N* or *A beats B*, state what would make the
-   comparison invalid, and check that first. `scripts/check_ratio_claims.py` catches the
-   sub-case where a ratio names no baseline; the general case needs the sentence.
-7. **The vacuous check** — *added Pass 4372; the most dangerous of the seven, because a
-   clean report from a broken checker is indistinguishable from a clean corpus.* Not an
-   unbuilt object: the checker exists, runs, and reports. `check_tex_insert_pitfalls.py`
-   scanned 287 files, reported zero, while two of them failed to compile — the fault family
-   did not exist yet. A duplicate-detector reported 27 hits, every one its own repair from
-   the same session. A ratio checker reported zero with the offending sentence three lines
-   from where it was written.
-   **Guard:** every check ships with a planted fault it must detect.
-   `scripts/test_checker_recall.py` is the pattern — fresh instances sharing no bytes with
-   the originals, plus a clean file the checker must stay silent on. Note its own limit,
-   stated in the file: planted-fault recall measures the families you have, never the ones
-   you lack.
 
 ### The operational prior
 
@@ -179,52 +178,6 @@ commit. That is the whole protocol.
 commit owns it and the later one cites it. Check with
 `git log --diff-filter=A --format='%ad %h' --date=short -1 -- <file>`, not memory.
 
-**Renumber cost beats commit order (added Pass 4713, after two collisions in one day
-resolved in opposite directions).** Timestamps decide ownership, but the lane with
-FEWER bound identifiers should yield regardless of who was first: renumber cost scales
-with how much is published under the number, not with commit order. An eight-pass
-theorem ledger already renumbered once beats two loosely-coupled passes even when the
-two won on the clock.
-
-## Two mechanical failure modes that cost eight incidents in one session
-
-Neither is a reasoning error, and neither is visible to running the code.
-
-**Composition direction — four incidents.** `canonical_permutation`, `permute_vertices`,
-`get_isomorphisms_vf2`: every one of these has a convention, and reasoning about which
-way it points has now been wrong four times out of four. Of the five ways to compose two
-canonical labellings and their inverses, ALL FIVE are valid permutations, all five
-survive a canonical-form comparison, and exactly one is an isomorphism (Pass 4782). The
-fix is four lines: **build both candidates, keep the one that satisfies an invariant you
-can state.** Never reason about the library's convention.
-
-**Heredoc-collapsed escapes — six incidents.** A shell heredoc turns the two characters
-`\b` into a single 0x08 BACKSPACE byte. The regex still compiles and can never match. It
-silently disabled `W(3,3)` and `Sp(4,3)` in `check_layer_conformance.py` and the
-"is the first" phrasing in `check_novelty_claims.py` — in the same edit that added it.
-**Edit regex-bearing source with a file write, never a heredoc.**
-`scripts/check_heredoc_regex.py` catches the damage; nothing catches the habit.
-
-Related: Python's `splitlines()` treats FORMFEED and vertical tab as line breaks. A
-scanner looking for formfeeds, written with `splitlines()`, cannot find them — and 13
-tracked files carry such bytes, so any guard reporting line numbers from `splitlines()`
-over file content reports them wrong past the first one. Use `split("\n")`.
-
-**Cross-lane comparison — three incidents, all mine (added Pass 4923).** Three times in one
-session a check against the other lane's number reported a disagreement that came from MY
-comparison object, never from their result:
-
-| pass | I reported | cause | invariant that would have caught it |
-|---|---|---|---|
-| 4824 | 540 eight-cycles vs their 1,080 | divided by 2 twice | a cycle found from its least vertex is found **twice** |
-| 4934 | 5 registry digests unverifiable | looked up `sha256` when the file declared `sha256_without_hash_field` | the canonical list has **three** names |
-| 4913 | 52 projective E₆ roots vs their 36 | root set not closed under negation | 72 roots give **36** pairs |
-
-**Before comparing against another lane's number, state one invariant your own object must
-satisfy and check it** — not the quantity under test, a structural fact you already know.
-A cross-lane check that reports a spurious disagreement is worse than not running one: the
-natural next move is to doubt the other lane, and they were right all three times.
-
 **Pass-number reservation (added after three renumbers in one day — 387→391→392).**
 Claim the number BEFORE computing, not after: push an empty commit
 `git commit --allow-empty -m "Pass NNN reserved: <topic> (<track>)"` as your
@@ -235,28 +188,6 @@ The reservation costs one empty commit; a collision costs a renumber, a
 force-of-habit rebase race, and (measured once) a silently wrong ledger row.
 Work may follow in the same session or later; an unused reservation is released
 by a follow-up empty commit "Pass NNN released".
-
-## Certificates: hash the ROUND-TRIPPED object, never the live dict
-
-Added Pass 2482 after a certificate was found that could **never** reproduce its own
-digest — not stale, unverifiable from birth, and it passed every `checks` block while
-doing so.
-
-```python
-# WRONG -- hashes the live Python dict
-canonical = json.dumps(result, indent=2, sort_keys=True) + "\n"
-
-# RIGHT -- hashes what will actually be on disk
-canonical = json.dumps(json.loads(json.dumps(result)), indent=2, sort_keys=True) + "\n"
-```
-
-The trap: a nested dict with **integer keys**. `sort_keys=True` orders ints numerically
-(`1, 2, …, 10`); after a JSON round-trip those keys are strings and order
-lexicographically (`1, 10, 11, …, 2`). Different bytes, permanently.
-
-Two serialisations are both in use here and both are fine — compact separators, and
-`indent=2` plus a trailing newline. `py -3 scripts/check_certificates.py` tries both and
-warns (never blocks). Run it after writing any certificate.
 
 ## Batch intake (remote/GitHub batches — run the guard BEFORE accepting claims)
 
@@ -284,33 +215,34 @@ after commit:
    have regressed master and one certified-value contradiction — before merge,
    not after.
 
-## Three tools, each built from a failure that cost multiple passes
-
-Reach for these **before** claiming, not after. Each exists because the same
-mistake was made three or more times.
-
-| before you claim… | run | it exists because |
-|---|---|---|
-| "this is new" | `py -3 scripts/build_topical_aliases.py` then grep `TOPICAL_ALIASES.md` | Passes 1912/1917 rediscovered results already in-repo under **date-named files** no topic search reaches. 160 result tokens are visible only in such files. |
-| "this constraint helps" | `from constraint_audit import assert_cuts, assert_added` | Six constraints in one arc restricted nothing (vacuous inequalities, an average used as a bound, a symmetry break reused outside its regime, and one *verified* cut never added to the model). |
-| "these two objects correspond" | `py -3 scripts/gset_audit.py --emit` | Three claims matched **counts** and were called correspondences. Two were false. Two transitive `G`-sets of equal size are isomorphic iff their **permutation characters** agree — compare characters, never sizes. |
-
-**The generalisation, which is the part worth remembering:** every one of these
-failures was a claim verified in the direction that would confirm it and never in
-the direction that would break it. Before recording a result, ask what single
-computation would falsify it, and run *that* one. `maximal`, `unique`, `only`,
-`exactly`, `is` — each of those words has a cheap negation.
-
 
 ---
 
 ## Recent Decisions
-*No decisions logged yet. Start logging architectural decisions!*
+1. **decision-17868595** (8/16/2026)
+   - Q: Does Q4 supply the adjacency layout for the tomotope's 16 codecs, as the 2026-05-29 flag-codec file claimed?
+   - A: No -- the VERTEX-level route is closed, while the FACE-level route was already built and verified. Two different maps that the corpus had been conflating.  analysis/2026-05-29_flag_codec_toroidal_hypercube_boundary.md closes by naming its own next test: "build the explicit 16-codec adjacency graph and compare it to Q4 / toroidal-knight adjacency." That sat open for 2.5 months. Built at Pass 5638: Csaszar's vertex-adjacency is K7 and Szilassi's face-adjacency is K7, so the 16-codec graph is 6-regular with 70 triangles, while Q4 is 4-regular, bipartite, triangle-free. NOT isomorphic. And the ...
 
-*34 unreviewed drafts from auto-capture pending review — `continuity log` the real rationale or update_decision to expand them.*
+2. **decision-f63a5076** (8/11/2026) [adjoint, controller]
+   - Q: Why extend the reconciliation reservation through Pass 4937?
+   - A: After a fresh GitKraken fetch/pull showed remote work only through reserved Pass4869, Pass4937 was free. It is reserved to test the Pass4864 adjoint ten-space as the 3^10 square-zero symplectic tangent kernel and to construct its finite PGSp affine controller, with explicit separation between additive kernel, Lie bracket, and any unbuilt runtime or continuum interpretation.
+
+3. **decision-44ee3e15** (8/11/2026) [gap, holobox]
+   - Q: Why add the Pass 4936 native GAP owner?
+   - A: The new witness reconstructs the 160 W33 chambers exactly, splits the Pass 4324 four-dimensional packet algebra with Pass 4334 point and line idempotents into literal M2(Q) matrix units, and checks the HoloBox HP/HL family aggregates as packet reflections. It keeps individual selector labels, guest execution, recursive composition, security, and physics outside the proved scope.
+
+4. **decision-57cb621d** (8/11/2026) [3c2282097, commit]
+   - Q: What does reservation commit 3c2282097 protect?
+   - A: Commit 3c2282097 reserves the collision-free Pass4924-4936 block after the canonical remote merge, preserves Pass4926-4927 for the parallel witness, records the exact old-to-new mapping through 4935, and reserves Pass4936 for the native-GAP chamber matrix-unit theorem.
+
+5. **decision-9de26cd4** (8/11/2026) [git-race, namespace]
+   - Q: Why reserve Passes 4924-4936 as a reconciliation block?
+   - A: After merging canonical remote Passes4833-4872, local result artifacts carrying 4826/4827, 4838-4841, 4855/4857, and 4866/4867 became semantic namespace collisions despite clean file merges. The reservation maps them to 4924/4925, 4928-4935, preserves parallel 4926-4927, and reserves 4936 for the new exact chamber matrix-unit theorem.
+
+*1724 unreviewed drafts from auto-capture pending review — `continuity log` the real rationale or update_decision to expand them.*
 
 ---
 
-*Auto-generated by Continuity | Updated: 2026-08-01*
+*Auto-generated by Continuity | Updated: 2026-08-16*
 
 <!-- END CONTINUITY AUTO-GENERATED CONTENT -->

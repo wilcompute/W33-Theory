@@ -10,61 +10,54 @@
 This file contains project context and decisions. AI assistants should read this file for context. MCP tools are an optional enhancement for richer interaction when connected.
 
 ## Project Context
-- **Total Decisions:** 4481
-- **Known Topics:** needs-review, auto-draft, why, w33, testing, toe, architecture, holonet, docs, photonic, audit, qec, github, selector, tomotope
+- **Total Decisions:** 4817
+- **Known Topics:** needs-review, auto-draft, why, w33, testing, toe, architecture, docs, holonet, photonic, audit, qec, github, selector, gap
 
 ## Current State
 **Repository:** Theory of Everything
 **Project Type:** Python Project | Python
 **Branch:** master
-**Tracking:** ahead 0, behind 1
 
 **Recent Commits:**
-- `9114f66 Pass 1147 reserved: transparent runtime and bridge synthesis (Codex track)`
-- `36b2f63 Merge branch 'master' of https://github.com/wilcompute/W33-Theory`
-- `af56315 Merge origin/master and reconcile Passes 1137-1146`
-- `926bb79 Pass 1144: add transactional migration diagnostics`
-- `3efbd4a Passes 1137-1140: exact cubic carriers and publication repair`
+- `da8f015 Reserve Pass5635-5642 (Track A): per-file firing, rarity ranking, tomotope_flag hub`
+- `4b5907b Reserve Pass5627-5634 physics continuation`
+- `a02addd Harden Pass5606 fixed-position GAP syntax`
+- `7ab6225 Pass5619-5626: add replay GAP publication and compile workflow`
+- `9ff2afc Repair Pass5606 conjugator JSON contract for object dictionary`
 
 **Working Tree:**
-- M .continuity/SESSION_NOTES.md
-- M .cursorrules
-- M .github/copilot-instructions.md
-- M .github/workflows/bootstrap_pass1137_1141.yml
-- M .github/workflows/pass1142_1146_exact_release.yml
-- M .github/workflows/pass1142_1146_pr_materialize.yml
-- M AGENTS.md
-- M CLAUDE.md
-- M GEMINI.md
-- M PASS1142_1146_EXACT_RELEASE.md
-- M README.md
-- M RESULTS_VOCABULARY.md
-- M W33_FOR_EVERYONE.tex
-- M analysis/2026-07-27_cubic_map_kernel_decomposition.md
-- M analysis/w33_pass1142_1146_exact.py
+- M .continuity/decisions.json
+- M .continuity/decisions.jsonl
+- ?? .mcp.json
+- ?? analysis/PASS4938_ADJOINT_ROOT_COMPILER_AND_SYMMETRY_FIREWALL.md
+- ?? analysis/PASS4939_CHAMBER_STEINER_INTERTWINER.md
+- ?? analysis/PASS4948_MODULAR_BOSE_MESNER_CORRECTION.md
+- ?? analysis/PASS4949_W33_Q43_LEVI_MIDDLE_MODULES.md
+- ?? analysis/PASS4950_FALSE_SRG33_W33_QUARANTINE.md
+- ?? analysis/PASS4959_POINT_LINE_INCIDENCE_LOEWY_COMPILER.md
+- ?? analysis/w33_pass4938_adjoint_root_compiler.g
+- ?? analysis/w33_pass4939_chamber_steiner_intertwiner.g
+- ?? analysis/w33_pass4946_row_point_dual.g
+- ?? analysis/w33_pass4948_modular_bose_mesner_correction.g
+- ?? analysis/w33_pass4949_w33_levi_middle19_intertwiner.g
+- ?? analysis/w33_pass4950_false_srg33_w33_quarantine.g
 
 ## Session Context
 **Goals:**
-- 2026-06-05 current goal: refresh origin/master, absorb the BT285-BT317 remote batch, and continue the selector/hypercube theory with a scoped verified packet.
-- 2026-06-30 current work: read `w33_paper.tex`, `holonet_practical_implications.tex` (the repo file corresponding to the requested `practical_holonet.tex`), and `photonic_holonet.tex` top-to-bottom; promote a scoped Holonet/W33 packet breakthrough into runnable code, JSON, CI, and `docs/index.html`.
-- 2026-06-30 current work extension: searched the repo and external primary-source surfaces for loosely related quantum-walk/frequency-bin ideas, then promoted the most promising new physical/compiler interface: a frequency-bin lowering of the Hashimoto packet phase bridge.
-- 2026-07-01 current work: update the existing Holonet practical presentation package for an investor-facing talk by folding in the practical paper, machine paper, photonic Pass 48-55 chain, W33 Hashimoto/frequency-bin bridge, current origin/master state, and current market-context sources.
-- 2026-07-02 current work: absorb the latest BT367/BT982 commits and continue the Holonet practical investor presentation by adding an executable selector E6/E8 runtime bridge that ties the 120-sheet selector, 240 signed-sheet/E8 budget, frequency-bin probes, and 51,840-tick runtime into one certificate.
+- 2026-08-08 current goal: finish and validate the Passes 4324-4334 chamber Hecke and audited-corrections packet while preserving exact theorem, retraction, and open-boundary language.
 
 
 ## Decision Freshness
-**0 stale decisions** · 61 need review · 1125 superseded ready to archive · Oldest unreviewed: 2026-04-20
+**0 stale decisions** · 3 need review · 1128 superseded ready to archive · Oldest unreviewed: 2026-05-16
 
 Stale decisions requiring attention:
-1. **1777318403162-biaewx** (score 50) — "Why: Add remaining arithmetic and trace-structure material?" — 14 weeks old, status: outdated, never reviewed
-2. **1777318403161-e7wo55** (score 49) — "Why: Integrate Cycle Clock Theory crosswalk?" — 14 weeks old, status: outdated, never reviewed
-3. **1777318403161-ga2u8l** (score 49) — "Why: Add W33 internal H4 matching shadow?" — 14 weeks old, status: outdated, never reviewed
-4. **1777318403161-xbitkl** (score 49) — "Why: Add QGR E8 H4 emergence supplements?" — 14 weeks old, status: outdated, never reviewed
-5. **1777318403161-s5j46a** (score 49) — "Why: theory: add Witting packet ternary extension bridge?" — 14 weeks old, status: outdated, never reviewed
+1. **d1a5364d-fc0b-4955-8076-561b9b9acb5b** (score 41) — "Why leave the local DCCLIX 24-cell/D4 triality draft unpromoted?" — 13 weeks old, never reviewed
+2. **f1d87c79-8ec0-45bc-8fa6-738cec22154c** (score 35) — "Why revise inherited Pass 446 and Passes 522-539 language?"
+3. **00cab282-2e5b-4d3b-81bf-592766c35864** (score 35) — "Why revise papers/agreement_locus.tex in Pass 541?"
 
 When referencing these decisions, note their staleness. Verify they still reflect current project state before recommending based on them.
 
-1126 decisions are eligible for Dream consolidation. Suggest running the Dream tool to archive stale decisions, merge duplicates, and resolve contradictions.
+1128 decisions are eligible for Dream consolidation. Suggest running the Dream tool to archive stale decisions, merge duplicates, and resolve contradictions.
 
 ## ON EVERY SESSION START — DO THIS FIRST
 Run this exact command in the terminal before anything else — before reading files, before answering, before proposing changes:
@@ -234,30 +227,30 @@ after commit:
 ---
 
 ## Recent Decisions
-1. **decision-17848982** (7/23/2026) [auto-draft, needs-review]
-   - Q: Why: Add RH correspondence analytic operator certificate?
-   - A: (Auto-drafted from commit a481e8b on 2026-07-23.) Please review and expand with actual reasoning.
+1. **decision-17868595** (8/16/2026)
+   - Q: Does Q4 supply the adjacency layout for the tomotope's 16 codecs, as the 2026-05-29 flag-codec file claimed?
+   - A: No -- the VERTEX-level route is closed, while the FACE-level route was already built and verified. Two different maps that the corpus had been conflating.  analysis/2026-05-29_flag_codec_toroidal_hypercube_boundary.md closes by naming its own next test: "build the explicit 16-codec adjacency graph and compare it to Q4 / toroidal-knight adjacency." That sat open for 2.5 months. Built at Pass 5638: Csaszar's vertex-adjacency is K7 and Szilassi's face-adjacency is K7, so the 16-codec graph is 6-regular with 70 triangles, while Q4 is 4-regular, bipartite, triangle-free. NOT isomorphic. And the ...
 
-2. **decision-17848982** (7/23/2026) [auto-draft, needs-review]
-   - Q: Why: BT796: add global 2160 fibration data?
-   - A: (Auto-drafted from commit 9d8491c on 2026-07-23.) Please review and expand with actual reasoning.
+2. **decision-f63a5076** (8/11/2026) [adjoint, controller]
+   - Q: Why extend the reconciliation reservation through Pass 4937?
+   - A: After a fresh GitKraken fetch/pull showed remote work only through reserved Pass4869, Pass4937 was free. It is reserved to test the Pass4864 adjoint ten-space as the 3^10 square-zero symplectic tangent kernel and to construct its finite PGSp affine controller, with explicit separation between additive kernel, Lie bracket, and any unbuilt runtime or continuum interpretation.
 
-3. **decision-17848982** (7/23/2026) [auto-draft, needs-review]
-   - Q: Why: Add all-prime Frobenius census certificate?
-   - A: (Auto-drafted from commit 98fdd02 on 2026-07-23.) Please review and expand with actual reasoning.
+3. **decision-44ee3e15** (8/11/2026) [gap, holobox]
+   - Q: Why add the Pass 4936 native GAP owner?
+   - A: The new witness reconstructs the 160 W33 chambers exactly, splits the Pass 4324 four-dimensional packet algebra with Pass 4334 point and line idempotents into literal M2(Q) matrix units, and checks the HoloBox HP/HL family aggregates as packet reflections. It keeps individual selector labels, guest execution, recursive composition, security, and physics outside the proved scope.
 
-4. **decision-17848982** (7/23/2026) [auto-draft, needs-review]
-   - Q: Why: Add all-prime elliptic Frobenius census?
-   - A: (Auto-drafted from commit 7491866 on 2026-07-23.) Please review and expand with actual reasoning.
+4. **decision-57cb621d** (8/11/2026) [3c2282097, commit]
+   - Q: What does reservation commit 3c2282097 protect?
+   - A: Commit 3c2282097 reserves the collision-free Pass4924-4936 block after the canonical remote merge, preserves Pass4926-4927 for the parallel witness, records the exact old-to-new mapping through 4935, and reserves Pass4936 for the native-GAP chamber matrix-unit theorem.
 
-5. **decision-17848982** (7/23/2026) [auto-draft, needs-review]
-   - Q: Why: Add Casey W33 Weil-elliptic theorem insertion?
-   - A: (Auto-drafted from commit cb55f9a on 2026-07-23.) Please review and expand with actual reasoning.
+5. **decision-9de26cd4** (8/11/2026) [git-race, namespace]
+   - Q: Why reserve Passes 4924-4936 as a reconciliation block?
+   - A: After merging canonical remote Passes4833-4872, local result artifacts carrying 4826/4827, 4838-4841, 4855/4857, and 4866/4867 became semantic namespace collisions despite clean file merges. The reservation maps them to 4924/4925, 4928-4935, preserves parallel 4926-4927, and reserves 4936 for the new exact chamber matrix-unit theorem.
 
-*1664 unreviewed drafts from auto-capture pending review — `continuity log` the real rationale or update_decision to expand them.*
+*1724 unreviewed drafts from auto-capture pending review — `continuity log` the real rationale or update_decision to expand them.*
 
 ---
 
-*Auto-generated by Continuity | Updated: 2026-07-30*
+*Auto-generated by Continuity | Updated: 2026-08-16*
 
 <!-- END CONTINUITY AUTO-GENERATED CONTENT -->
