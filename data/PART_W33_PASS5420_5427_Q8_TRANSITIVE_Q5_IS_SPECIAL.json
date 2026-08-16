@@ -1,0 +1,101 @@
+{
+  "boundary": "Pass 5420-5421 are GAP computations. Pass 5422 reports an UNPROVED incumbent: alpha(W(3,9)) >= 49 is a lower bound and the deficit sequence remains two points. Pass 5424 formalises ARITHMETIC only; the geometric content stays an external input, as every formal/W33 header states. The precedence claim in Pass 5423 is from commit timestamps on this machine",
+  "pass_5420": {
+    "conclusion": "tightness forces the simplex but NOT homogeneity of the embedding; the q=5 distinguished vertex is a real geometric fact and survives the test that could have killed it",
+    "identification": "Sz(8):3, since 87360 = 3 * |Sz(8)| = 3 * 29120",
+    "q5_comparison": {
+      "image": 576,
+      "kernel": 2,
+      "orbits": [
+        1,
+        12
+      ]
+    },
+    "q8_aut_order": 3170119680,
+    "q8_image_order": 87360,
+    "q8_kernel_order": 1,
+    "q8_orbits": [
+      65
+    ],
+    "q8_ovoid_stabiliser": 87360,
+    "q8_transitive": true
+  },
+  "pass_5421": {
+    "action_on_13": 576,
+    "design_blocks": 132,
+    "incidence_aut": 576,
+    "method": "Aut of the bipartite incidence graph; the direct Stabilizer in S_13 exhausted GAP's memory",
+    "same_as_embedding": true,
+    "structure": "((A4 x A4) : C2) : C2"
+  },
+  "pass_5422": {
+    "alpha_found": 49,
+    "deficit": 33,
+    "hoffman": 82,
+    "independent_verified": true,
+    "n": 820,
+    "proved_optimal": false,
+    "q": 9,
+    "scaling": "MILP settled q=3 and q=5 and at q=9 loses to Pass 5227's 75-second heuristic, which reached 50",
+    "seconds": 70483.4,
+    "srg": [
+      820,
+      90,
+      8,
+      10
+    ],
+    "verdict": "lower bound only; deficit sequence still 2 points"
+  },
+  "pass_5423": {
+    "ledger": [
+      {
+        "claim": "-1/q^2 is the noncollinear inner product",
+        "fate": "OVER-GENERALISED",
+        "note": "their statement is scoped to odd q on W(3,q) and is CORRECT there",
+        "owner": "other lane Pass5267, 18 minutes earlier",
+        "pass": 5279
+      },
+      {
+        "claim": "-1/(H-1) is the general form",
+        "fate": "REFUTED by Paley at Pass 5374",
+        "note": "",
+        "owner": "-",
+        "pass": 5341
+      },
+      {
+        "claim": "mu/(k(1+s)) derived",
+        "fate": "RE-DERIVATION",
+        "note": "Brouwer-Cohen-Neumaier, Godsil; established at Pass 5412",
+        "owner": "classical cosine sequence",
+        "pass": 5374
+      },
+      {
+        "claim": "a tight coclique is a regular simplex",
+        "fate": "MECHANISM ALREADY IN REPO",
+        "note": "equal norm + equal angle + sum zero, test ip = -norm^2/(N-1)",
+        "owner": "Pass 1614",
+        "pass": 5342
+      }
+    ],
+    "my_error": "dropped the scope, then spent Passes 5341/5374/5412 repairing the unscoped version",
+    "precedence": {
+      "gap_minutes": 18,
+      "my_pass5278": "2026-08-14 21:12:27",
+      "their_pass5267": "2026-08-14 20:54:30"
+    },
+    "their_statement": "collinear (q-1)/(q(q+1)), noncollinear -1/q^2, scoped to odd prime powers q on W(3,q) -- CORRECT as written"
+  },
+  "pass_5424": {
+    "builds": true,
+    "caught_by_lean": "my first hypothesis mu = k + theta*s + theta + s is wrong; the identity is mu = k + theta*s. The two coincide when theta + s = 0, which is the GQ case I had been testing all week",
+    "module": "formal/W33/CosineSequence.lean",
+    "scope": "arithmetic only, geometry external",
+    "theorems": [
+      "recurrence",
+      "mu_form",
+      "w2_eq_mu_form",
+      "gq_collapse",
+      "w3q_collapse"
+    ]
+  }
+}

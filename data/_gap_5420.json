@@ -1,0 +1,13 @@
+{
+  "q8_aut_order": 3170119680,
+  "q8_ovoid_stabiliser": 87360,
+  "q8_image_order": 87360,
+  "q8_kernel_order": 1,
+  "q8_orbit_sizes": [ 65 ],
+  "q8_n_orbits": 1,
+  "q8_transitive": true,
+  "design_blocks": 132,
+  "design_incidence_aut": 576,
+  "design_action_on_13": 576,
+  "design_structure": "((A4 x A4) : C2) : C2"
+}

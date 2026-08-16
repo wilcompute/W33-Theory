@@ -1,0 +1,16 @@
+{
+ "q": 9,
+ "n": 820,
+ "srg": [
+  820,
+  90,
+  8,
+  10
+ ],
+ "hoffman": 82,
+ "alpha_found": 49,
+ "proved_optimal": false,
+ "independent_verified": true,
+ "seconds": 70483.4,
+ "deficit": 33
+}
