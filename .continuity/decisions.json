@@ -172,7 +172,8 @@
         "1786859568721-fahph6"
       ],
       "causes": [
-        "1786859568721-fahph6"
+        "1786859568721-fahph6",
+        "1786860401883-i52nl0"
       ],
       "causedBy": []
     },
@@ -202,7 +203,8 @@
         "1786859568721-fahph6"
       ],
       "causes": [
-        "1786859568721-fahph6"
+        "1786859568721-fahph6",
+        "1786860401883-i52nl0"
       ],
       "causedBy": []
     },
@@ -232,7 +234,8 @@
         "1786859568721-fahph6"
       ],
       "causes": [
-        "1786859568721-fahph6"
+        "1786859568721-fahph6",
+        "1786860401883-i52nl0"
       ],
       "causedBy": []
     },
@@ -262,7 +265,8 @@
         "1786859568721-fahph6"
       ],
       "causes": [
-        "1786859568721-fahph6"
+        "1786859568721-fahph6",
+        "1786860401883-i52nl0"
       ],
       "causedBy": []
     },
@@ -423,7 +427,8 @@
         "1786859568721-fahph6"
       ],
       "causes": [
-        "1786859568721-fahph6"
+        "1786859568721-fahph6",
+        "1786860401883-i52nl0"
       ],
       "causedBy": []
     },
@@ -806,7 +811,9 @@
       "supersedes": [],
       "supersededBy": [],
       "relatedTo": [],
-      "causes": [],
+      "causes": [
+        "1786860401883-i52nl0"
+      ],
       "causedBy": []
     },
     "metadata": {
@@ -904,6 +911,11 @@
     "status": "active",
     "metadata": {
       "status": "active"
+    },
+    "relationships": {
+      "causes": [
+        "1786860401883-i52nl0"
+      ]
     }
   },
   {
@@ -934,6 +946,9 @@
         "manual-20260507-fix-e8-orchestrator-dataclass-loader",
         "manual-20260507-docs-index-photonic-runtime-link",
         "manual-20260507-test-docs-index-photonic-runtime-link"
+      ],
+      "causes": [
+        "1786860401883-i52nl0"
       ]
     },
     "metadata": {
@@ -1173,6 +1188,9 @@
         "manual-20260507-test-e8-orchestrator-z3-output-contract",
         "manual-20260507-docs-index-photonic-runtime-link",
         "manual-20260507-test-docs-index-photonic-runtime-link"
+      ],
+      "causes": [
+        "1786860401883-i52nl0"
       ]
     },
     "metadata": {
@@ -1198,7 +1216,9 @@
       "supersedes": [],
       "supersededBy": [],
       "relatedTo": [],
-      "causes": [],
+      "causes": [
+        "1786860401883-i52nl0"
+      ],
       "causedBy": []
     },
     "metadata": {
@@ -109711,7 +109731,8 @@
     "relationships": {
       "supersedes": [],
       "supersededBy": [
-        "1786859568721-fahph6"
+        "1786859568721-fahph6",
+        "1786860401883-i52nl0"
       ],
       "relatedTo": [],
       "causes": [],
@@ -109740,7 +109761,8 @@
       "supersedes": [],
       "supersededBy": [
         "1784322240668-1bsjzj",
-        "1786859568721-fahph6"
+        "1786859568721-fahph6",
+        "1786860401883-i52nl0"
       ],
       "relatedTo": [],
       "causes": [],
@@ -109772,7 +109794,8 @@
       ],
       "supersededBy": [
         "1784322240796-ff44ii",
-        "1786859568721-fahph6"
+        "1786859568721-fahph6",
+        "1786860401883-i52nl0"
       ],
       "relatedTo": [],
       "causes": [],
@@ -109804,7 +109827,8 @@
       ],
       "supersededBy": [
         "1784322240788-ndxfsp",
-        "1786859568721-fahph6"
+        "1786859568721-fahph6",
+        "1786860401883-i52nl0"
       ],
       "relatedTo": [],
       "causes": [],
@@ -109836,7 +109860,8 @@
       ],
       "supersededBy": [
         "1784322240733-laxqu3",
-        "1786859568721-fahph6"
+        "1786859568721-fahph6",
+        "1786860401883-i52nl0"
       ],
       "relatedTo": [],
       "causes": [],
@@ -109868,7 +109893,8 @@
       ],
       "supersededBy": [
         "1784322240762-in72qt",
-        "1786859568721-fahph6"
+        "1786859568721-fahph6",
+        "1786860401883-i52nl0"
       ],
       "relatedTo": [],
       "causes": [],
@@ -109900,7 +109926,8 @@
       ],
       "supersededBy": [
         "1784322240858-8r4ujo",
-        "1786859568721-fahph6"
+        "1786859568721-fahph6",
+        "1786860401883-i52nl0"
       ],
       "relatedTo": [],
       "causes": [],
@@ -109932,7 +109959,8 @@
       ],
       "supersededBy": [
         "1784322241138-d63l8k",
-        "1786859568721-fahph6"
+        "1786859568721-fahph6",
+        "1786860401883-i52nl0"
       ],
       "relatedTo": [],
       "causes": [],
@@ -109963,7 +109991,8 @@
         "1784322240858-8r4ujo"
       ],
       "supersededBy": [
-        "1786859568721-fahph6"
+        "1786859568721-fahph6",
+        "1786860401883-i52nl0"
       ],
       "relatedTo": [],
       "causes": [],
@@ -109992,7 +110021,8 @@
     "relationships": {
       "supersedes": [],
       "supersededBy": [
-        "1786859568721-fahph6"
+        "1786859568721-fahph6",
+        "1786860401883-i52nl0"
       ],
       "relatedTo": [
         "1784938579774-o0xebs",
@@ -110165,13 +110195,13 @@
     ],
     "files": [],
     "status": "active",
-    "metadata": {
-      "status": "active"
-    },
     "relationships": {
       "supersededBy": [
         "1786859568721-fahph6"
       ]
+    },
+    "metadata": {
+      "status": "active"
     }
   },
   {
@@ -110193,13 +110223,13 @@
     ],
     "files": [],
     "status": "active",
-    "metadata": {
-      "status": "active"
-    },
     "relationships": {
       "supersededBy": [
         "1786859568721-fahph6"
       ]
+    },
+    "metadata": {
+      "status": "active"
     }
   },
   {
@@ -110220,13 +110250,13 @@
     ],
     "files": [],
     "status": "active",
-    "metadata": {
-      "status": "active"
-    },
     "relationships": {
       "supersededBy": [
         "1786859568721-fahph6"
       ]
+    },
+    "metadata": {
+      "status": "active"
     }
   },
   {
@@ -110248,13 +110278,13 @@
     ],
     "files": [],
     "status": "active",
-    "metadata": {
-      "status": "active"
-    },
     "relationships": {
       "supersededBy": [
         "1786859568721-fahph6"
       ]
+    },
+    "metadata": {
+      "status": "active"
     }
   },
   {
@@ -118458,6 +118488,60 @@
       "24f51838e98d21db2d1162d40901ddc965ba6b9a",
       "0b553b8c4ab215f013899adb4eb3e9ef40593e06",
       "7b9804704dd06e6fc0caf3fe71790a27dcf64f35"
+    ]
+  },
+  {
+    "id": "1786860401883-i52nl0",
+    "question": "Is there a real group-theoretic bridge between the tomotope and W(3,3), and which of the two 1152s carries it?",
+    "answer": "YES, and it is the Levi/configuration level, not the face-adjacency level. Both candidates have order 1152 and only IsomorphismGroups separates them.\n\nTHE CORPUS HAD THE WRONG 16. analysis/2026-05-29_flag_codec_toroidal_hypercube_boundary.md wrote \"16 = Q4 vertices = codec slots\". But BT1413's working compiler (decision-0e5a851b) labels its 16 tomotope faces by Q4 EDGE PAIRS, and Q4 has 32 edges, so 32/2 = 16 edge classes mod antipodal -- alongside its 16 vertices. Two different 16s. Likewise 24 faces / 2 = 12 edge labels. Verified directly from BT1413's 192 flag_rows: 16 faces of degree 3, 12 edges of degree 4, i.e. exactly the Reye 12_4 16_3 configuration, matching Pass 5488-5491's Reye = Q4 face-edge / <1111>.\n\nCOINCIDENCE TEN KILLED. The 16-face adjacency graph (two faces adjacent iff they share a tomotope edge) is 9-regular with 96 triangles and |Aut| = 1152. Tempting: Pass 5468-5475 PROVED the W(3,3) simplex stabiliser is W(F4), also order 1152. But GAP says Aut is NOT isomorphic to W(F4) -- it is S4 wr S2, because the graph's complement is the 4x4 rook's graph. W(F4) and S4 wr S2 are non-isomorphic groups of the same order 1152. Prior art the reranked guard surfaced: PART_MMCCCLXXV_DENSITY_DUAL_GENERATOR_results.json already records Aut_K44 = 1152, which is this same S4 wr S2.\n\nTHE BRIDGE IS THE LEVI GRAPH. Aut of the 12_4 16_3 Levi graph has order 576 and structure ((A4 x A4) : C2) : C2, and IsomorphismGroups proves it IS W(F4)/Z(W(F4)). That is character-for-character the group Pass 5416-5419 computed as the W(3,3) simplex setwise stabiliser's image in S_13, and Pass 5468-5475 identified the stabiliser itself as W(F4) with the two-576 puzzle resolved as subgroup-versus-quotient. So the tomotope's Reye configuration and the W(3,3) simplex stabiliser carry THE SAME GROUP.\n\nBOUNDARY: this is an isomorphism of ABSTRACT groups. No equivariant map between the tomotope configuration and the W(3,3) simplex is constructed, and the two actions are not claimed equivalent as permutation groups. That is the next test.\n\nCROSS-LANE FINDING: analysis/w33_pass5623_cover_f4_fixed_vertex_physics_gate.py line 5 says \"the same order-576 automorphism action\" of the q=5 2-(13,6,60) design. Since 576 now has at least two non-isomorphic realizations in this corpus (W(F4)/Z and the index-2 subgroup of S4 wr S2, proved non-isomorphic), an order match does not establish the same group. Settling test: IsomorphismGroups on that design's automorphism group against W(F4)/Z. Flagged, not run.\n\nALSO: 84+84 = 168 = |PSL(2,7)| left OPEN rather than killed -- Csaszar and Szilassi are duals so an exchange of the two 84s exists and the invariant-split argument that killed coincidence nine does not apply, but duality generates C2, not an order-168 regular action. Neither killed nor established.</answer>\n<parameter name=\"tags\">w33, tomotope, wf4, reye, coincidence-killed, bridge, gap, pass5645",
+    "timestamp": "2026-08-16T06:06:41.883Z",
+    "tags": [],
+    "files": [],
+    "status": "active",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [
+        "1784319283792-g6owwo",
+        "1784322240627-zkjiv7",
+        "1784322240668-1bsjzj",
+        "1784322240796-ff44ii",
+        "1784322240788-ndxfsp",
+        "1784322240733-laxqu3",
+        "1784322240762-in72qt",
+        "1784322240858-8r4ujo",
+        "1784322241138-d63l8k",
+        "1784409410004-2ofkhg"
+      ],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": [
+        "1777318403161-ai9frf",
+        "1777318403161-qze7ej",
+        "1777318403161-t7tcbd",
+        "1777318403161-06lp3s",
+        "1777318403161-ga2u8l",
+        "mohlhmfy-yu0ang",
+        "0b68ec48-f481-492f-a192-e579780845fe",
+        "beaa04ed-f130-4ef8-a424-792aced0dd1b",
+        "27162744-0efe-400e-8af6-d7dae43ba20b",
+        "1777410353070-izxac1"
+      ]
+    },
+    "metadata": {
+      "status": "active",
+      "source": "mcp",
+      "entities": {
+        "technologies": [],
+        "patterns": [],
+        "concepts": [],
+        "tools": []
+      },
+      "domain": "software"
+    },
+    "commitHashes": [
+      "feb9735da6f0c9a9d9579435854144a6c20fb6a1",
+      "10993e1ac498bf81bb5ac7d0a5ad4a05bff906b8"
     ]
   }
 ]

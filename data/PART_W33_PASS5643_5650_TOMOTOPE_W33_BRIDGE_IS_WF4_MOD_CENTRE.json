@@ -27,6 +27,7 @@
     "wf4_iso_s4wrs2": false
   },
   "pass_5645": {
+    "CORRECTED_BY_PASS_5652": "wf4modZ_iso_s4wrs2_index2 was reported False; it is TRUE against SmallGroup(576,8654), one of three index-2 normal subgroups of S4 wr S2. GAP First() returned S4 x S4. The W(F4) vs S4wrS2 kill at 1152 is unaffected.",
     "bridge": "the tomotope's Reye configuration and the W(3,3) simplex stabiliser carry the SAME group, W(F4)/{+-1}, at the Levi level -- proved by IsomorphismGroups",
     "levi_aut": 576,
     "levi_iso_wf4_mod_centre": true,

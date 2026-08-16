@@ -10,21 +10,21 @@
 This file contains project context and decisions. AI assistants should read this file for context. MCP tools are an optional enhancement for richer interaction when connected.
 
 ## Project Context
-- **Total Decisions:** 4817
+- **Total Decisions:** 4818
 - **Known Topics:** needs-review, auto-draft, why, w33, testing, toe, architecture, docs, holonet, photonic, audit, qec, github, selector, gap
 
 ## Current State
 **Repository:** Theory of Everything
 **Project Type:** Python Project | Python
 **Branch:** master
-**Tracking:** ahead 7, behind 0
+**Tracking:** ahead 2, behind 0
 
 **Recent Commits:**
-- `430addd Continuity autogen refresh`
-- `31b2c91 Pass5638: the obstruction is the vertex stratum, not the Q4-to-flag route`
-- `88a12e9 Pass5635-5642: the 16 codecs are not a hypercube, and the two 192s are distinct`
-- `e8d9dcd Pass5630: classify deck-BdG commutant and falsify protected mass ratio two`
-- `24f5183 Pass5629: prove naive C2 refinement tower disconnects after one lift`
+- `feb9735 Pass5643-5650: the corpus had the wrong 16, and the right one bridges to W(3,3)`
+- `10993e1 Reserve Pass5643-5650 (Track A): the tomotope-W33 bridge via W(F4)/Z`
+- `8d38686 Pass5627-5634: add replay GAP publication and compile workflow`
+- `921bb88 Register Pass5627-5634 homepage materialization`
+- `4ea178b Publish Pass5627-5634 through canonical manuscript frontier`
 
 **Working Tree:**
 - M .continuity/decisions.json
@@ -220,25 +220,25 @@ after commit:
 ---
 
 ## Recent Decisions
-1. **decision-17868595** (8/16/2026)
+1. **decision-17868604** (8/16/2026)
+   - Q: Is there a real group-theoretic bridge between the tomotope and W(3,3), and which of the two 1152s carries it?
+   - A: YES, and it is the Levi/configuration level, not the face-adjacency level. Both candidates have order 1152 and only IsomorphismGroups separates them.  THE CORPUS HAD THE WRONG 16. analysis/2026-05-29_flag_codec_toroidal_hypercube_boundary.md wrote "16 = Q4 vertices = codec slots". But BT1413's working compiler (decision-0e5a851b) labels its 16 tomotope faces by Q4 EDGE PAIRS, and Q4 has 32 edges, so 32/2 = 16 edge classes mod antipodal -- alongside its 16 vertices. Two different 16s. Likewise 24 faces / 2 = 12 edge labels. Verified directly from BT1413's 192 flag_rows: 16 faces of degree 3,...
+
+2. **decision-17868595** (8/16/2026)
    - Q: Does Q4 supply the adjacency layout for the tomotope's 16 codecs, as the 2026-05-29 flag-codec file claimed?
    - A: No -- the VERTEX-level route is closed, while the FACE-level route was already built and verified. Two different maps that the corpus had been conflating.  analysis/2026-05-29_flag_codec_toroidal_hypercube_boundary.md closes by naming its own next test: "build the explicit 16-codec adjacency graph and compare it to Q4 / toroidal-knight adjacency." That sat open for 2.5 months. Built at Pass 5638: Csaszar's vertex-adjacency is K7 and Szilassi's face-adjacency is K7, so the 16-codec graph is 6-regular with 70 triangles, while Q4 is 4-regular, bipartite, triangle-free. NOT isomorphic. And the ...
 
-2. **decision-f63a5076** (8/11/2026) [adjoint, controller]
+3. **decision-f63a5076** (8/11/2026) [adjoint, controller]
    - Q: Why extend the reconciliation reservation through Pass 4937?
    - A: After a fresh GitKraken fetch/pull showed remote work only through reserved Pass4869, Pass4937 was free. It is reserved to test the Pass4864 adjoint ten-space as the 3^10 square-zero symplectic tangent kernel and to construct its finite PGSp affine controller, with explicit separation between additive kernel, Lie bracket, and any unbuilt runtime or continuum interpretation.
 
-3. **decision-44ee3e15** (8/11/2026) [gap, holobox]
+4. **decision-44ee3e15** (8/11/2026) [gap, holobox]
    - Q: Why add the Pass 4936 native GAP owner?
    - A: The new witness reconstructs the 160 W33 chambers exactly, splits the Pass 4324 four-dimensional packet algebra with Pass 4334 point and line idempotents into literal M2(Q) matrix units, and checks the HoloBox HP/HL family aggregates as packet reflections. It keeps individual selector labels, guest execution, recursive composition, security, and physics outside the proved scope.
 
-4. **decision-57cb621d** (8/11/2026) [3c2282097, commit]
+5. **decision-57cb621d** (8/11/2026) [3c2282097, commit]
    - Q: What does reservation commit 3c2282097 protect?
    - A: Commit 3c2282097 reserves the collision-free Pass4924-4936 block after the canonical remote merge, preserves Pass4926-4927 for the parallel witness, records the exact old-to-new mapping through 4935, and reserves Pass4936 for the native-GAP chamber matrix-unit theorem.
-
-5. **decision-9de26cd4** (8/11/2026) [git-race, namespace]
-   - Q: Why reserve Passes 4924-4936 as a reconciliation block?
-   - A: After merging canonical remote Passes4833-4872, local result artifacts carrying 4826/4827, 4838-4841, 4855/4857, and 4866/4867 became semantic namespace collisions despite clean file merges. The reservation maps them to 4924/4925, 4928-4935, preserves parallel 4926-4927, and reserves 4936 for the new exact chamber matrix-unit theorem.
 
 *1724 unreviewed drafts from auto-capture pending review — `continuity log` the real rationale or update_decision to expand them.*
 

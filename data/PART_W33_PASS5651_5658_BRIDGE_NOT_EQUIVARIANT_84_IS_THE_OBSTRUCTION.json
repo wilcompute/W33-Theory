@@ -1,0 +1,126 @@
+{
+  "boundary": "Pass 5651 shows equivariance is NOT implied by the abstract isomorphism; it does NOT construct or refute a specific map. Pass 5652 CORRECTS Pass 5644's wf4modZ_iso_s4wrs2_index2 field from False to True; the 1152 kill is unaffected. Pass 5654 is a divisibility argument, which rules out the codec split as ORBITS of the bridge group and says nothing about other relations. Pass 5657's 547 is an upper bound -- the guard over-pairs. Pass 5658 leaves alpha(W(3,9)) OPEN at 51 <= alpha <= 80",
+  "pass_5651": {
+    "degree12_images": [
+      12,
+      576,
+      36,
+      576,
+      12,
+      576,
+      576
+    ],
+    "faithful_images": [
+      2,
+      4,
+      6,
+      7
+    ],
+    "index12_classes": 7,
+    "inequivalent_faithful_actions": 3,
+    "permutation_isomorphic_pairs": [
+      [
+        1,
+        5
+      ],
+      [
+        4,
+        7
+      ]
+    ],
+    "verdict": "the abstract isomorphism does not determine the 12-point action; the bridge still needs its map"
+  },
+  "pass_5652": {
+    "corrects": "Pass 5644 field wf4modZ_iso_s4wrs2_index2: False -> True; GAP First() returned S4 x S4, one of three index-2 normal subgroups",
+    "new_reading": "the decoy 1152 is an index-2 OVERGROUP of the real 576; face graph and Levi graph are two levels of one tower",
+    "s4wrs2_index2_normal": [
+      {
+        "id": [
+          576,
+          8653
+        ],
+        "structure": "S4 x S4"
+      },
+      {
+        "id": [
+          576,
+          8652
+        ],
+        "structure": "(A4 x A4) : C4"
+      },
+      {
+        "id": [
+          576,
+          8654
+        ],
+        "structure": "((A4 x A4) : C2) : C2"
+      }
+    ],
+    "unaffected": "W(F4) is still not isomorphic to S4 wr S2, so the coincidence-ten kill stands",
+    "wf4_mod_z_smallgroup": [
+      576,
+      8654
+    ]
+  },
+  "pass_5653": {
+    "groups_of_order_576": 8681,
+    "reading": "an order match at 576 carries essentially no information; this corpus matches on 576 repeatedly and has typed exactly one of them"
+  },
+  "pass_5654": {
+    "bridge_group_order": 576,
+    "codec_split": [
+      24,
+      84,
+      84
+    ],
+    "divides": {
+      "168": false,
+      "192": true,
+      "24": true,
+      "84": false
+    },
+    "factorisation": "2^6 * 3^2",
+    "obstruction": 7,
+    "verdict": "W(F4)/Z cannot have the codec split as orbits, by divisibility; the codec layer is on the 7-side and the bridge group on the {2,3}-side"
+  },
+  "pass_5655": {
+    "decidable_from_certificate": 0,
+    "finding": "the certificates asserting an order/size match are precisely those that did not compute orbits; the test must run at write time",
+    "pairs": 35
+  },
+  "pass_5656": {
+    "corpus_mentions": {
+      "K44": 32,
+      "rook": 19,
+      "shrikhande": 7
+    },
+    "q4_regular": 4,
+    "q4_triangles": 0,
+    "rook_regular": 6,
+    "rook_triangles": 32,
+    "verdict": "Q4 is the corpus's recurring 16-vertex object; what recurs is the ORDER 1152 on two graphs, explained by the index-2 relation of Pass 5652"
+  },
+  "pass_5657": {
+    "compare": "check_certificate_rediscovery fires on 70%",
+    "corpus": 5058,
+    "files": 119,
+    "findings": 547,
+    "firing_rate_pct": 2.4,
+    "limitation": "pairs every order key with every partition key in a certificate; 547 is an upper bound, the 119 files are the work list",
+    "script": "scripts/check_transitivity.py",
+    "selftest": "6/6"
+  },
+  "pass_5658": {
+    "bounds": [
+      51,
+      80
+    ],
+    "dual_bound": 80.83841179,
+    "hoffman": 82,
+    "incumbent_before": 47,
+    "incumbent_now": 51,
+    "note": "construction moved 47 -> 51 in 67s of local search, so the MILP incumbent was far from cheap heuristic reach",
+    "proved": false,
+    "status": "OPEN"
+  }
+}
