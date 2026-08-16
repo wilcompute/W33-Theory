@@ -3,7 +3,8 @@
   "range": [5611, 5618],
   "owner": "OpenAI-GPT-5.6-Sol",
   "topic": "general-q Heisenberg magnetic spectrum, projectivity minimum-word classification, intrinsic W33 phase, q=3 physical selector, cover-F4 object dictionary, relativistic dispersion, gauge curvature, and matter-sector phase selection",
-  "status": "reserved",
+  "status": "structural_results_closed__pass5615_object_dictionary_pending_queued_gap_replay",
   "created_utc": "2026-08-16T04:33:00Z",
-  "boundary": "Five carry-forward attacks plus three physics-first probes requested by the user. Reuse and audit deep repo physics/s12/Hodge/Dirac/E6 machinery; preserve q-family and physical-interpretation firewalls."
+  "closed_utc": "2026-08-16T05:03:00Z",
+  "boundary": "Pass5611-5614 and 5616-5618 are frozen with explicit verifiers and physics firewalls. Pass5615 is intentionally fail-closed until the direct S12 GAP conjugator is emitted; the new workflow executes that gate, composes the cover-to-F4 object dictionary, runs regressions, materializes the homepage, and compiles all three canonical manuscripts."
 }
