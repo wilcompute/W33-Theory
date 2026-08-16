@@ -1,0 +1,61 @@
+{
+  "schema": "w33.pass5683_5690.physics_ramanujan_su3_frontier.v1",
+  "pass_range": [5683, 5690],
+  "status": "EIGHT_RESULTS_FROZEN__RAMANUJAN_EXISTENCE_AND_ASL_SU3_EXACT__PHYSICAL_ORIENTATION_METRIC_REMAIN_OPEN",
+  "5683": {
+    "status": "W33_LEVI_IS_RAMANUJAN_AND_HAS_EXPLICIT_LOCALLY_BALANCED_RAMANUJAN_2LIFT",
+    "base_spectrum": "(+/-4)^1 + (+/-sqrt(6))^24 + 0^30",
+    "ramanujan_bound": "2 sqrt(3)",
+    "explicit_first_lift": "80 negative edges, negative degree 2 at every Levi vertex, signed spectral radius < 2 sqrt(3)",
+    "external_theorem": "MSS: every regular bipartite Ramanujan graph has a regular bipartite Ramanujan 2-lift, hence the W33 Levi graph is the root of an existential infinite Ramanujan 2-lift tower.",
+    "conclusion": "The single-chord vanishing-gap tower is not a no-go for good refinement; a uniform-gap existential tower exists."
+  },
+  "5684": {
+    "status": "COLLISION_PROJECTOR_IS_EXACT_FIREWALL_SUPPORT_MASK_NOT_THE_FULL_JACOBIATOR",
+    "identity": "delta_fw(T)=C(T)/3 with C=0 on horizontal36 and C=3 on vertical9",
+    "bracket": "l2_fw = l2_other + (I-C/3) l2_cubic",
+    "conclusion": "The Pass5676 fiber-collision operator and the old E8/L_infinity firewall delete exactly the same nine cubic supports, but the Jacobiator/l3 contains bracket-composition cross terms and is not simply C."
+  },
+  "5685": {
+    "status": "LOCAL_SUPPORT_PLUS_FLAT_BONDS_DISCRETELY_PIN_RATIO_TWO_WITH_TWO_RAYS",
+    "cone": "4 real equivariant K-odd directions",
+    "locality": "preserving the exact Hmag zero pattern cuts the cone to dimension 2",
+    "flatness": "constant magnitude on all 60 nonzero magnetic bonds leaves exactly two real projective rays",
+    "spectrum": "both rays have fourfold levels +/-a and +/-2a",
+    "conclusion": "The absolute level ratio 2 is protected by carrier locality plus flat bond magnitude, while a discrete two-ray sign/chirality ambiguity remains."
+  },
+  "5686": {
+    "status": "ORIENTATION_PRESERVING_AFFINE_SUBGROUP_CARRIES_EXACT_COMPACT_SU3_BRACKET",
+    "groups": "AGL(2,3) order432 -> ASL(2,3) order216",
+    "hom": "dim Hom_AGL(Lambda2 V8,V8)=0; dim Hom_ASL(Lambda2 V8,V8)=1",
+    "bracket": "<[f,g],h> = sum_xyz sgn_3(det(y-x,z-x)) f(x)g(y)h(z)",
+    "checks": "Jacobi exactly zero; Killing form -54 I on V8; determinant-reversing affine maps flip the bracket sign",
+    "conclusion": "Choosing affine orientation breaks AGL to ASL and equips the irreducible eight with the compact eight-dimensional semisimple Lie algebra su(3), up to bracket scale."
+  },
+  "5687": {
+    "status": "FIXED_VOLUME_METRIC_CLOCK_SCALING_IS_CONDITIONAL_AND_RAMANUJAN_GRAPH_METRIC_IS_NOT_MANIFOLDLIKE",
+    "scaling": "for a fixed d-dimensional physical volume, ell_{n+1}/ell_n=tau_{n+1}/tau_n=2^{-1/d} is required to keep c=ell/tau fixed",
+    "obstruction": "a Ramanujan tower has uniform spectral/conductance gap and is an expander, unlike a local fixed-dimensional manifold refinement in graph distance",
+    "conclusion": "The balanced cover tower is better interpreted as internal routing/state refinement than as physical space itself."
+  },
+  "5688": {
+    "status": "SINGLE_CHORD_IS_SPECTRAL_OUTLIER_AND_EXPLICIT_BALANCED_SIGNINGS_ARE_RAMANUJAN",
+    "comparison": "single chord signed radius ~3.973; locally balanced 2-factor ~3.284; edge-balanced spectral witness ~3.198; Ramanujan threshold 2 sqrt(3) ~3.464",
+    "random_baseline": "256 deterministic half-negative signings, 246 below the Ramanujan threshold",
+    "conclusion": "The Pass5678 bottleneck is a sparse-signing pathology rather than a generic H1 obstruction."
+  },
+  "5689": {
+    "status": "ORDINARY_FERMIONIC_STATISTICS_PRESERVES_VERTICAL9__BASE_HARDCORE_QUOTIENT_KILLS_IT",
+    "full_exterior": "e_(b,0) wedge e_(b,1) wedge e_(b,2) is nonzero in Lambda^3 of the 27 resolved one-particle modes",
+    "hardcore_quotient": "after projecting a fiber to one base occupancy mode, e_b wedge e_b wedge e_b=0 while horizontal three-fiber supports survive",
+    "conclusion": "Ordinary Pauli exclusion does not explain the 36/9 selector; exterior exclusion reproduces it only after imposing the same one-occupancy-per-fiber hard-core quotient as Pass5676."
+  },
+  "5690": {
+    "status": "DECK16_TRACELESS_HERM2_MODULI_SPHERE_HAS_SYNTHETIC_OCCUPIED_CHERN_MAGNITUDE8",
+    "parameter_space": "normalized traceless Herm2 = S2",
+    "negative_bundle": "E_- = A tensor L_- direct-sum Abar tensor R^*L_+, dim A=4, deg R=-1",
+    "chern": "c1=+8 in the fixed projector-curvature convention; absolute value 8 is orientation independent",
+    "conclusion": "The allowed Hamiltonian family has a nontrivial synthetic Berry bundle, not a momentum-space topological phase or particle-count theorem."
+  },
+  "boundary": "All promoted claims are finite graph-spectrum, representation, Lie-bracket, support-projector, exterior-algebra, Berry-bundle, or scaling statements. MSS/Bilu-Linial 2-lift theory and finite SU(3)/Hessian-group context are prior art. No QCD/Yang-Mills derivation, physical gluon identification, Standard Model mass assignment, absolute energy scale, Lorentz-invariant spacetime limit, physical value of c, dynamical orientation selector, or unique explicit infinite Ramanujan signing sequence is claimed."
+}
