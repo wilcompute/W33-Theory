@@ -1,0 +1,15 @@
+{
+  "Sp43_order": 51840,
+  "PSp43_order": 25920,
+  "WF4_order": 1152,
+  "index_if_subgroup": 45,
+  "point_orbit_sizes": [ 40 ],
+  "n_classes_order_1152": 1,
+  "n_classes_iso_WF4": 0,
+  "n_classes_order_96": 5,
+  "n_classes_order_192": 4,
+  "n_classes_order_384": 2,
+  "n_classes_order_576": 1,
+  "WF4_in_Sp43": false,
+  "WF4_orbits_on_40_points": []
+}

@@ -1,0 +1,163 @@
+{
+  "boundary": "W(F4)'s non-embedding in Sp(4,3) is a GAP subgroup-class computation and is decisive for Sp(4,3). It says nothing about larger ambients (GL(4,3), ASp, the Cayley compiler's own group). BT159 is FLAGGED, not corrected: I did not run it or determine its pocket's ambient. The Reye test rejects ONE construction -- the induced incidence on the 13-cover -- and does not rule out other maps",
+  "pass_5476": {
+    "Sp43_order": 51840,
+    "WF4_in_Sp43": false,
+    "WF4_order": 1152,
+    "index_if_subgroup": 45,
+    "n_classes_iso_WF4": 0,
+    "n_classes_order_1152": 1,
+    "verdict": "Lagrange holds exactly (index 45) and the embedding fails; divisibility is not embedding"
+  },
+  "pass_5477": {
+    "reading": "Sp(4,3) is built from SL(2,3)s at these orders; W(F4) from a (C2)^3:(C2)^2 core with two C3s. All the orders are smooth 2,3-numbers, so matching them carries almost no information",
+    "subgroups": [
+      {
+        "iso_WF4": false,
+        "orbits_on_40": [
+          16,
+          12,
+          12
+        ],
+        "order": 96,
+        "structure": "SL(2,3) : C4"
+      },
+      {
+        "iso_WF4": false,
+        "orbits_on_40": [
+          24,
+          8,
+          8
+        ],
+        "order": 96,
+        "structure": "((C2 x Q8) : C2) : C3"
+      },
+      {
+        "iso_WF4": false,
+        "orbits_on_40": [
+          24,
+          16
+        ],
+        "order": 96,
+        "structure": "(C2 . S4 = SL(2,3) . C2) : C2"
+      },
+      {
+        "iso_WF4": false,
+        "orbits_on_40": [
+          16,
+          4,
+          2,
+          16,
+          2
+        ],
+        "order": 96,
+        "structure": "C4 x SL(2,3)"
+      },
+      {
+        "iso_WF4": false,
+        "orbits_on_40": [
+          24,
+          8,
+          8
+        ],
+        "order": 96,
+        "structure": "(C2 x SL(2,3)) : C2"
+      },
+      {
+        "iso_WF4": false,
+        "orbits_on_40": [
+          32,
+          4,
+          4
+        ],
+        "order": 192,
+        "structure": "(Q8 x Q8) : C3"
+      },
+      {
+        "iso_WF4": false,
+        "orbits_on_40": [
+          32,
+          4,
+          4
+        ],
+        "order": 192,
+        "structure": "(Q8 x Q8) : C3"
+      },
+      {
+        "iso_WF4": false,
+        "orbits_on_40": [
+          32,
+          4,
+          4
+        ],
+        "order": 192,
+        "structure": "SL(2,3) x Q8"
+      },
+      {
+        "iso_WF4": false,
+        "orbits_on_40": [
+          16,
+          24
+        ],
+        "order": 192,
+        "structure": "((C2 . S4 = SL(2,3) . C2) : C2) : C2"
+      },
+      {
+        "iso_WF4": false,
+        "orbits_on_40": [
+          32,
+          8
+        ],
+        "order": 384,
+        "structure": "((Q8 x Q8) : C3) : C2"
+      },
+      {
+        "iso_WF4": false,
+        "orbits_on_40": [
+          8,
+          32
+        ],
+        "order": 384,
+        "structure": "((C2 . ((C2 x C2 x C2) : C4) = (C4 x C2) . (C4 x C2)) : C2) : C3"
+      },
+      {
+        "iso_WF4": false,
+        "orbits_on_40": [
+          32,
+          4,
+          4
+        ],
+        "order": 576,
+        "structure": "SL(2,3) x SL(2,3)"
+      },
+      {
+        "iso_WF4": false,
+        "orbits_on_40": [
+          32,
+          8
+        ],
+        "order": 1152,
+        "structure": "(SL(2,3) x SL(2,3)) : C2"
+      }
+    ]
+  },
+  "pass_5478": {
+    "check_needed": "one IsomorphismGroups call against GO(1,4,3)",
+    "claim_present": true,
+    "file": "analysis/w33_BREAKTHROUGH_159_forbidden_pocket_f4_normalizer.py",
+    "issue": "'order 1152 = |W(F4)|' is an order match presented as an identification; a subgroup of Sp(4,3) of that order is (SL(2,3) x SL(2,3)):C2",
+    "status": "FLAGGED for the owning lane, not edited"
+  },
+  "pass_5479": {
+    "antipodal_face_pairs": 12,
+    "antipodal_vertex_classes": 8,
+    "found": "uniform blocks of size 6 (the 2-(13,6,60) design)",
+    "outside_meets": {
+      "6": 312
+    },
+    "q4_faces": 24,
+    "reye_needs": "16 lines of size 3",
+    "verdict": "the obvious construction fails structurally",
+    "wf4_orbit": 12
+  }
+}
