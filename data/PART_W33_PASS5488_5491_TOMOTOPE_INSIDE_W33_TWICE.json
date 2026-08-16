@@ -1,0 +1,58 @@
+{
+  "boundary": "The isomorphism is between BIPARTITE INCIDENCE STRUCTURES: the W(3,3) 12-orbit/16-orbit collinearity incidence, and Q4's face-edge incidence modulo <1111>. Both verified by igraph isomorphic() and both |Aut| = 576. The identification of the latter with 'the tomotope medial layer' is BT1363's and is cited, not reproved. No physical claim is made",
+  "pass_5488": {
+    "correction": "Pass 5479 quotiented Q4's VERTICES and got 8; the tomotope comes from faces and edges",
+    "edge_classes": 16,
+    "face_classes": 12,
+    "incidences": 48,
+    "q4_edges": 32,
+    "q4_faces": 24,
+    "source": "analysis/BT1363_q4_clock_tomotope_medial_descent.md",
+    "statement": "Q4 face-edge incidence / <1111> = Reye = tomotope edge-triangle medial layer"
+  },
+  "pass_5489": {
+    "reference": "Pass 5482",
+    "rows": [
+      {
+        "flags": 48,
+        "is_12_4_16_3": true,
+        "line_degrees": [
+          3
+        ],
+        "orbit": "Q(v)=1",
+        "point_degrees": [
+          4
+        ]
+      },
+      {
+        "flags": 48,
+        "is_12_4_16_3": true,
+        "line_degrees": [
+          3
+        ],
+        "orbit": "Q(v)=2",
+        "point_degrees": [
+          4
+        ]
+      }
+    ],
+    "wf4_split": [
+      16,
+      12,
+      12
+    ]
+  },
+  "pass_5490": {
+    "iso_Q1": true,
+    "iso_Q2": true,
+    "note": "this is the step at which the 16-as-Q4, rook, Shrikhande and generator-line readings all failed"
+  },
+  "pass_5491": {
+    "aut_q4_tomotope": 576,
+    "aut_w33_copy": 576,
+    "equal": true,
+    "explains": "576 as Aut(Reye); the same 576 appears as the 13-cover stabiliser image, the Klein Latin autoparatopy group, the 4x4 Latin square count, and W(F4)/{+-1}",
+    "not_claimed": "any physical interpretation",
+    "theorem": "the tomotope's medial layer embeds in W(3,3) twice, on a shared 16-point quadric, cut out by the W(F4) orbit decomposition"
+  }
+}
