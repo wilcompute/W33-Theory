@@ -1,0 +1,156 @@
+% Passes 5580--5585: structural identification of the surviving Reye/tomotope
+% incidence family as a PSL_2(q) permutation-graph design, with exact Gram/frame
+% consequences and a separately firewalled binary-rank conjecture.
+\subsection{The Reye/tomotope family as a projectivity-graph incidence design}
+\label{sec:pass5580-reye-psl2}
+
+The incidence family isolated in Passes~5488--5495 admits a structural
+identification which explains its parameters without an integer coincidence.
+For odd prime $q$, write
+\[
+ X(x)=\begin{pmatrix}x_0&x_2\\-x_3&x_1\end{pmatrix},
+ \qquad
+ Q(x)=x_0x_1+x_2x_3.
+\]
+Then $\det X(x)=Q(x)$, so the hyperbolic quadric $Q^+(3,q)$ is the
+projectivized rank-one locus.  Writing $X=uv^T$ gives the Segre grid
+\[
+ \boxed{Q^+(3,q)\cong\mathbf P^1(q)\times\mathbf P^1(q)}
+\]
+with $(q+1)^2$ points.
+
+For a nonsingular point $p=(a,b,c,d)$ define
+\[
+ T_p=\begin{pmatrix}c&-a\\-b&-d\end{pmatrix}.
+\]
+If
+\[
+ s(u,v)=(u_0v_0,u_1v_1,u_0v_1,-u_1v_0)
+\]
+is the corresponding singular point, direct expansion of the symplectic form
+$B$ gives
+\[
+ \boxed{B(p,s(u,v))=0\iff u\sim T_pv.}
+\]
+Moreover $\det T_p=-Q(p)$.  Hence a fixed nonsingular quadratic-value class is
+one of the two determinant-square cosets of $\PGL_2(q)$, and after translating
+by one fixed projectivity if necessary the incidence structure is exactly the
+permutation-graph design of
+\[
+ G=\PSL_2(q)\curvearrowright\mathbf P^1(q).
+\]
+Its rows are $g\in G$, its columns are grid cells $(x,y)$, and
+\[
+ M_{g,(x,y)}=1\iff y=g(x).
+\]
+Thus
+\[
+ |G|=\frac{q(q^2-1)}2,
+ \qquad
+ |\text{columns}|=(q+1)^2,
+\]
+with row weight $q+1$ and column weight $q(q-1)/2$.  In particular the
+$q=3,5,7$ members are precisely
+\[
+ 12_4\,16_3,\qquad 60_6\,36_{10},\qquad 168_8\,64_{21}.
+\]
+The first is the Reye configuration/tomotope medial layer already identified
+in Pass~5490; the new statement is the projectivity-graph mechanism for the
+whole tested family.
+
+\paragraph{Rook-complement Gram theorem.}
+Let $A$ be the adjacency matrix of the complement of the
+$(q+1)\times(q+1)$ rook graph.  Two distinct cells can lie on one projectivity
+graph precisely when both coordinates differ; $2$-transitivity then leaves a
+two-point stabilizer of size $(q-1)/2$.  Therefore
+\[
+ \boxed{
+ M^TM=\frac{q-1}{2}(qI+A).
+ }
+\]
+Since $A$ is the tensor graph $K_{q+1}\times K_{q+1}$ with spectrum
+\[
+ q^2{}^{\,1}\oplus1^{q^2}\oplus(-q)^{2q},
+\]
+one obtains
+\[
+ \boxed{
+ \operatorname{spec}(M^TM)=
+ \left(\frac{q(q^2-1)}2\right)^1
+ \oplus
+ \left(\frac{q^2-1}{2}\right)^{q^2}
+ \oplus0^{2q},
+ }
+\]
+and hence
+\[
+ \boxed{\operatorname{rank}_{\mathbf Q}M=q^2+1.}
+\]
+The executable certificate independently reaches this rank modulo $1000003$
+for $q=3,5,7,11,13$.
+
+\paragraph{Centered tight frame.}
+Every row has mean $1/(q+1)$ and centered squared norm $q$.  Distinct
+projectivities agree at $t\in\{0,1,2\}$ points, so after unit normalization the
+centered inner products lie in
+\[
+ \boxed{\left\{-\frac1q,0,\frac1q\right\}.}
+\]
+Removing the constant eigenline leaves one nonzero Gram eigenvalue, so the
+$|\PSL_2(q)|$ centered rows form a unit-norm tight frame in $\mathbf R^{q^2}$
+with frame bound
+\[
+ \boxed{\frac{q^2-1}{2q}.}
+\]
+At $q=3$ only $-1/3$ and $0$ occur, giving a two-distance specialization.
+
+\paragraph{The order-$576$ Reye symmetry becomes explicit.}
+At $q=3$, $\PSL_2(3)\cong A_4$ on four letters.  The Reye incidence is
+\[
+ g\sim(x,y)\iff y=g(x),
+ \qquad g\in A_4,\quad(x,y)\in[4]^2.
+\]
+Every pair $(a,b)\in S_4^2$ with equal parity acts by
+\[
+ (x,y)\mapsto(ax,by),
+ \qquad g\mapsto bga^{-1},
+\]
+giving $24^2/2=288$ automorphisms.  Adjoining
+$(x,y)\leftrightarrow(y,x)$ and $g\leftrightarrow g^{-1}$ doubles this to
+\[
+ \boxed{576}
+\]
+with abstract shape
+\[
+ \boxed{
+ \{(a,b)\in S_4^2:\operatorname{sgn}(a)=\operatorname{sgn}(b)\}\rtimes C_2
+ \cong ((A_4\times A_4):C_2):C_2.
+ }
+\]
+This is the same abstract group shape that Pass~5516 obtained by GAP for the
+Klein-$V_4$ Latin-square autoparatopy/13-cover image.  This observation explains
+why the Reye object naturally carries that $576$-group; it does \emph{not}
+identify the underlying acted-on objects.
+
+\paragraph{Characteristic-two firewall.}
+The measured binary ranks are
+\[
+ 8,18,32,72,98
+ \qquad(q=3,5,7,11,13),
+\]
+which equal $(q+1)^2/2$ in every tested case.  We record
+\[
+ \operatorname{rank}_2M\stackrel{?}=\frac{(q+1)^2}{2}
+\]
+as a conjecture, not an all-$q$ theorem.  The characteristic-two nonsplitting
+warning of Passes~5356--5361 applies directly; a proof must analyze the image
+algebra of the modular projective-line permutation representation rather than
+reduce the characteristic-zero Gram decomposition.
+
+\paragraph{Evidence boundary.}
+The coordinate incidence identity, rook-complement Gram factorization, and
+$q=3$ order-$576$ subgroup are exact.  The committed verifier replays the
+construction for the five odd primes $3,5,7,11,13$.  The prime-power extension,
+the binary-rank law beyond these anchors, and any polytope realization for
+$q>3$ remain open.  No physical claim follows from this finite incidence
+identification.
