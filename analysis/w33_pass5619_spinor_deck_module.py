@@ -7,14 +7,14 @@ There are two distinct finite quantum structures in the repo:
   (ii) the 32-state +/- vector lift of the 16 Segre events from Pass5613.
 
 The central symplectic element -I acts in (i) as qutrit parity, with spectrum
-+1^5,-1^4.  It is therefore NOT scalar -1 and the ordinary two-qutrit Weil
++1^5,-1^4. It is therefore NOT scalar -1 and the ordinary two-qutrit Weil
 module is not, merely by this central element, a spin-1/2-like double-valued
 module.
 
 In (ii), the deck involution D swapping +/- lifts commutes with the intrinsic
-magnetic Hamiltonian.  Its D=-1 sector is exactly 16-dimensional, and H_mag
-there has spectrum -6^4,-3^4,3^4,6^4.  This is a genuine signed deck module, but
-no equivariant identification with either D5 half-spin 16 is asserted.  The
+magnetic Hamiltonian. Its D=-1 sector is exactly 16-dimensional, and H_mag
+there has spectrum -6^4,-3^4,3^4,6^4. This is a genuine signed deck module, but
+no equivariant identification with either D5 half-spin 16 is asserted. The
 repo's Pass346 chirality no-go remains in force: the outer PGSp controller swaps
 the two D5 half-spin chiralities.
 """
@@ -54,11 +54,10 @@ def lifted_hamiltonian():
     return H
 
 def main():
-    # Standard 2-qutrit Weil generators used in bt2768_metaplectic_lift_sensor.py.
     w=np.exp(2j*np.pi/3)
     F=np.array([[w**(j*k) for k in range(3)] for j in range(3)],complex)/np.sqrt(3)
     P=np.diag([w**((2*j*j)%3) for j in range(3)]).astype(complex)
-    I3=np.eye(3,complex)
+    I3=np.eye(3,dtype=complex)
     Fp=np.kron(F,I3); Ff=np.kron(I3,F)
     Sp=np.kron(P,I3); Sf=np.kron(I3,P)
     CX=np.zeros((9,9),complex)
@@ -84,7 +83,10 @@ def main():
             v=np.zeros(32); v[2*i]=1/np.sqrt(2); v[2*i+1]=sign/np.sqrt(2); cols.append(v)
     Q=np.column_stack(cols); T=Q.T@H@Q
     off=float(np.max(abs(T[:16,16:]))); assert off<1e-10
-    even=np.linalg.eigvalsh(T[:16,:16]); odd=np.linalg.eigvalsh(T[16:,16:])
+    even_block=T[:16,:16]; odd_block=T[16:,16:]
+    assert np.max(abs(odd_block.conj()+odd_block))<1e-10
+    assert np.max(abs(even_block.conj()-even_block))<1e-10
+    even=np.linalg.eigvalsh(even_block); odd=np.linalg.eigvalsh(odd_block)
     ce=Counter(float(x) for x in np.round(even,8)); co=Counter(float(x) for x in np.round(odd,8))
     assert co==Counter({-6.0:4,-3.0:4,3.0:4,6.0:4})
     assert ce==Counter({-6.0:2,-3.0:3,-1.0:3,2.0:6,3.0:1,9.0:1})
@@ -94,7 +96,8 @@ def main():
       'two_qutrit_Weil_minus_I':{'spectrum':{'+1':5,'-1':4},'trace':1,'is_scalar_minus_one':False,'max_generator_commutator':max(commute.values())},
       'vector_lift':{'dimension':32,'deck_even_dimension':16,'deck_odd_dimension':16,'deck_commutator_residual':deck_comm,'off_block_residual':off,
                      'deck_even_spectrum':dict(sorted((str(k),v) for k,v in ce.items())),
-                     'deck_odd_spectrum':dict(sorted((str(k),v) for k,v in co.items()))},
+                     'deck_odd_spectrum':dict(sorted((str(k),v) for k,v in co.items())),
+                     'deck_even_is_real':True,'deck_odd_is_pure_imaginary':True},
       'theorem':'The q=3 vector lift has a canonical 16-dimensional signed deck sector on which the sheet swap acts as -1, while the standard 9-dimensional two-qutrit Weil representation sends central -I to parity (+1^5,-1^4), not scalar -1.',
       'chirality_firewall':'Dimension 16 and central sign are insufficient to identify the deck-odd module with a D5 half-spin. Pass346 proves the substrate outer PGSp controller exchanges S+ and S-, so no intrinsic substrate invariant can choose one physical chirality.'
     }
