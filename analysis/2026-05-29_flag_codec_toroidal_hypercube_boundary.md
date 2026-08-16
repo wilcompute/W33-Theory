@@ -334,3 +334,9 @@ and the codecs inherit none of its adjacency.
 coincidence: a regular action of an order-192 group is transitive, and `24 + 84 + 84`
 is an Aut-invariant partition into unequal parts. `bt1371` independently records the
 real structure — two regular orbits of 96 under the order-96 tomotope group.
+
+**And this does not close the Q4→flag route, only the vertex-level one.** `BT1413`
+verifies `24 Q4 plaquettes → 96 lifted incidences → 48 antipodal middle blocks → 192
+tomotope flags → 192 Q6 edges` (decision-0e5a851b, decision-65c3f41d). That map is real
+and certificated, and it sources from Q4's **24 square faces**. This file sourced from
+Q4's **16 vertices**. Same target, two strata, and only the face stratum carries a map.

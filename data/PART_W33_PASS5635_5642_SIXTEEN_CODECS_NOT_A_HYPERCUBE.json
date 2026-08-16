@@ -62,6 +62,22 @@
       7,
       7
     ],
+    "does_not_contradict": {
+      "bt1413_chain": [
+        24,
+        96,
+        48,
+        192,
+        192
+      ],
+      "bt1413_source_stratum": "Q4 square faces (plaquettes)",
+      "decisions": [
+        "decision-0e5a851b",
+        "decision-65c3f41d"
+      ],
+      "reading": "a Q4-to-flag map EXISTS at the face level and is certificated; the vertex level is where it is obstructed. Both readings start at Q4 and end at 192 flags, which is why the corpus held both",
+      "refuted_source_stratum": "Q4 vertices"
+    },
     "flags": 192,
     "isomorphic_to_q4": false,
     "open_since": "2026-05-29",

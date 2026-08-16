@@ -128,7 +128,19 @@ def main() -> int:
     WHAT SURVIVES is the arithmetic: 192 = 16 x 12 = (2+7+7) x 12 = 24+84+84 is a correct
     flag count. What does not survive is the architectural sentence "Q4 supplies the
     toroidal boundary layout for all 16 codecs". Q4 supplies sixteen SLOTS -- a set of
-    the right size -- and the codecs inherit none of its adjacency.""")
+    the right size -- and the codecs inherit none of its adjacency.
+
+    AND THIS DOES NOT CONTRADICT BT1413, which is the point worth carrying. Per
+    decision-0e5a851b and decision-65c3f41d, BT1413 verifies the chain
+
+        24 Q4 plaquettes -> 96 lifted incidences -> 48 antipodal middle blocks
+                         -> 192 tomotope flags -> 192 Q6 edges
+
+    and that map is real, committed, and certificated. It sources from Q4's 24 SQUARE
+    FACES. The 2026-05-29 architecture sourced from Q4's 16 VERTICES. Same target, and
+    only one stratum carries the map: A Q4-TO-FLAG MAP EXISTS, AT THE FACE LEVEL, AND
+    THE VERTEX LEVEL IS WHERE IT IS OBSTRUCTED. The corpus held both readings at once
+    because both start at "Q4" and end at "192 flags".""")
 
     print("\n  PASS 5639 -- coincidence nine\n")
     print("    |Rot(Q4)| = 192   and   tomotope flags = 192")
@@ -203,7 +215,16 @@ def main() -> int:
                       "verdict": ("NEGATIVE -- Csaszar and Szilassi adjacencies are each "
                                   "K7; Q4 is bipartite and triangle-free. Invariant "
                                   "under every assignment"),
-                      "survives": "192 = 16 x 12 = 24 + 84 + 84, the flag arithmetic"},
+                      "survives": "192 = 16 x 12 = 24 + 84 + 84, the flag arithmetic",
+                      "does_not_contradict": {
+                          "bt1413_chain": [24, 96, 48, 192, 192],
+                          "bt1413_source_stratum": "Q4 square faces (plaquettes)",
+                          "refuted_source_stratum": "Q4 vertices",
+                          "reading": ("a Q4-to-flag map EXISTS at the face level and is "
+                                      "certificated; the vertex level is where it is "
+                                      "obstructed. Both readings start at Q4 and end at "
+                                      "192 flags, which is why the corpus held both"),
+                          "decisions": ["decision-0e5a851b", "decision-65c3f41d"]}},
         "pass_5639": {"rot_q4": 192, "tomotope_flags": 192,
                       "flag_partition": [24, 84, 84],
                       "verdict": ("distinct -- a regular action of an order-192 group is "
