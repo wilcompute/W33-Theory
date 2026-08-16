@@ -1,0 +1,10 @@
+{
+  "pass": 5586,
+  "status": "THEOREM_ALL_ODD_PRIME_POWERS",
+  "theorem": "For every odd prime power q, rank_F2(M)=(q+1)^2/2 for the Pass5580 projectivity-graph incidence matrix.",
+  "image_algebra_formula": "dim A = (1+2a^2)+(4a+1)=2(a+1)^2, a=(q-1)/2",
+  "published_module_input": "Over Fbar_2 the natural degree-(q+1) PSL2(q) permutation module has Loewy layers 1 | (U_+ direct-sum U_-) | 1 with dim U_+=dim U_-=(q-1)/2.",
+  "verified_prime_anchors": {"3":8,"5":18,"7":32,"11":72,"13":98},
+  "symbolic_prime_power_examples": {"9":50,"25":338,"27":392,"49":1250,"81":3362},
+  "boundary": "This theorem is for the projectivity-graph design. It does not prove the distinct W(3,q) footprint-rank conjecture and implies no q>3 polytope or physics identification."
+}
