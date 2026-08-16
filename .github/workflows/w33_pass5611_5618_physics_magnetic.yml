@@ -52,7 +52,8 @@ jobs:
       - name: Replay Pass5611-5618 producers
         run: python analysis/w33_pass5611_5618_runner.py
       - name: Require closed cover-to-F4 object dictionary
-        run: grep -q '"status": "EXPLICIT_COVER_TO_F4_OBJECT_DICTIONARY"' data/PART_W33_PASS5615_COVER_F4_OBJECT_DICTIONARY.json
+        run: |
+          grep -q '"status": "EXPLICIT_COVER_TO_F4_OBJECT_DICTIONARY"' data/PART_W33_PASS5615_COVER_F4_OBJECT_DICTIONARY.json
       - name: Focused regression
         run: python -m pytest -q tests/test_w33_pass5611_5618_physics_magnetic_frontier.py
       - name: Materialize homepage and audit publication DAG
