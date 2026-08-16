@@ -1,0 +1,124 @@
+{
+  "boundary": "The closed forms are verified at q = 3, 5, 7 only; 'family' means those three cases share one parametrisation, not that it is proved for all odd q. The identification of the q=3 member with the tomotope's medial layer is BT1363's and Pass 5490's isomorphism test; no polytope is claimed for q > 3",
+  "pass_5492": {
+    "note": "run at another q BEFORE claiming, unlike the last three",
+    "rows": [
+      {
+        "classes": [
+          {
+            "class": "square",
+            "flags": 48,
+            "line_degree": [
+              3
+            ],
+            "point_degree": [
+              4
+            ],
+            "points": 12
+          },
+          {
+            "class": "nonsquare",
+            "flags": 48,
+            "line_degree": [
+              3
+            ],
+            "point_degree": [
+              4
+            ],
+            "points": 12
+          }
+        ],
+        "lines": 16,
+        "partition_ok": true,
+        "q": 3,
+        "q_plus_1_sq": 16,
+        "total_points": 40
+      },
+      {
+        "classes": [
+          {
+            "class": "square",
+            "flags": 360,
+            "line_degree": [
+              10
+            ],
+            "point_degree": [
+              6
+            ],
+            "points": 60
+          },
+          {
+            "class": "nonsquare",
+            "flags": 360,
+            "line_degree": [
+              10
+            ],
+            "point_degree": [
+              6
+            ],
+            "points": 60
+          }
+        ],
+        "lines": 36,
+        "partition_ok": true,
+        "q": 5,
+        "q_plus_1_sq": 36,
+        "total_points": 156
+      },
+      {
+        "classes": [
+          {
+            "class": "square",
+            "flags": 1344,
+            "line_degree": [
+              21
+            ],
+            "point_degree": [
+              8
+            ],
+            "points": 168
+          },
+          {
+            "class": "nonsquare",
+            "flags": 1344,
+            "line_degree": [
+              21
+            ],
+            "point_degree": [
+              8
+            ],
+            "points": 168
+          }
+        ],
+        "lines": 64,
+        "partition_ok": true,
+        "q": 7,
+        "q_plus_1_sq": 64,
+        "total_points": 400
+      }
+    ]
+  },
+  "pass_5493": {
+    "closed_forms_hold": true,
+    "line_degree": "q(q-1)/2",
+    "lines": "(q+1)^2",
+    "point_degree": "q+1",
+    "points_per_class": "(q^3-q)/2",
+    "q3_member": "12_4 16_3 = Reye = tomotope medial layer",
+    "q5_member": "60_6 36_10",
+    "q7_member": "168_8 64_21"
+  },
+  "pass_5494": {
+    "partition": "(q+1)^2 + (q^3-q) = q^3+q^2+q+1 = |PG(3,q)|",
+    "verified": true
+  },
+  "pass_5495": {
+    "flags_by_q": {
+      "3": 48,
+      "5": 360,
+      "7": 1344
+    },
+    "verdict": "the 48/48 match is q=3 only; the flag count is q(q^2-1)(q+1)/2 and is not a root count",
+    "wf4_roots": 48
+  }
+}
