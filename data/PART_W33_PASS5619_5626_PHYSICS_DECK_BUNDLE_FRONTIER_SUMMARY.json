@@ -1,0 +1,65 @@
+{
+  "schema": "w33.pass5619_5626.physics_deck_bundle_frontier.v1",
+  "pass_range": [5619, 5626],
+  "status": "SEVEN_RESULTS_FROZEN__PASS5623_MOVING12_F4_DICTIONARY_PENDING_DIRECT_GAP",
+  "5619": {
+    "status": "SIGNED_16_DECK_MODULE_WITH_NAIVE_SPINOR_IDENTIFICATION_FALSIFIED",
+    "weil_9d_minus_I": "+1^5 + (-1)^4, not scalar -1",
+    "deck_split": "32 = 16_even + 16_odd",
+    "odd_spectrum": "(-6)^4 + (-3)^4 + 3^4 + 6^4",
+    "firewall": "No equivariant identification with a D5 half-spin 16; Pass346 chirality no-go remains active."
+  },
+  "5620": {
+    "status": "EXACT_GAUGE_INVARIANT_HORIZONTAL_VERTICAL_36_9_SELECTOR",
+    "allowed36": "three distinct AG(2,3) fibers over an affine line, one point per fiber, covariantly affine lift",
+    "bad9": "complete vertical Z3 fibers over single base points",
+    "selector": "projection/transversality type, invariant under independent fiber gauge translations",
+    "firewall": "Mathematical firewall selector; a physical Yukawa action still must explain why vertical gauge fibers are redundant."
+  },
+  "5621": {
+    "status": "EXACT_MANY_CELL_GAUSSIAN_SPECTRAL_CONTINUUM_NOT_WEYL_SPACETIME",
+    "single_cell_characteristic_function": "1/2(cos(3t)+cos(6t))",
+    "variance": "45/2",
+    "N_cell_excess_kurtosis": "-41/(25N)",
+    "limit": "H_N/sqrt((45/2)N) -> standard Gaussian empirical spectral distribution",
+    "firewall": "Many-body/configuration-space continuum, not a 3+1D Weyl law."
+  },
+  "5622": {
+    "status": "CONDITIONAL_PHS_FIXES_M0_AND_MASS_RATIO_TWO",
+    "symmetry": "K H_- K^{-1}=-H_-, K^2=1",
+    "mass_constraint": "K(m0 I+gH_-)K^{-1}=-(m0 I+gH_-) iff m0=0",
+    "absolute_levels": ["3|g|", "6|g|"],
+    "ratio": 2,
+    "firewall": "Overall dimensionful scale |g| and particle assignments remain open."
+  },
+  "5623": {
+    "status": "Q5_GLOBAL_FIXED_LINE_THEOREM__MOVING12_F4_MAP_PENDING",
+    "q5_cover_action": "1+12 under order-576 image",
+    "design": "2-(13,6,60), 312 blocks, 144 blocks through every point",
+    "centered_simplex_invariant_line": "12 e_fixed - sum e_moving",
+    "firewall": "The fixed point is globally, not locally, distinguished and belongs to a q=5 branch; no q=3 physical vacuum identification is justified."
+  },
+  "5624": {
+    "status": "EXACT_MICROSCOPIC_CUBE_CAUSALITY_WITH_CONTINUUM_DIRAC_CONE_AND_C_SCALE_FIREWALL",
+    "one_step_support": "|Delta x_j|<=ell, hence Euclidean |Delta x|<=sqrt(3) ell",
+    "continuum": "E^2=p^2+m^2 and |v_group|<=1 in natural lattice units",
+    "physical_scale": "c_eff=ell/tau after choosing physical lattice spacing and macrostep time",
+    "firewall": "Node counts do not determine the SI value of c; finite-step quasienergies have lattice artifacts."
+  },
+  "5625": {
+    "status": "EXACT_FINITE_ETA_BALANCED_CHAMBERS_AND_SPECTRAL_FLOW_WALLS",
+    "full32_walls": [-9, -6, -3, -2, 1, 3, 6],
+    "full32_eta_chambers": [-32, -30, -22, -12, 0, 6, 20, 32],
+    "full32_balanced_chamber": "-2<r<1",
+    "deck_odd16_balanced_chamber": "-3<r<3",
+    "firewall": "Finite spectral asymmetry only; the quarantined legacy anomaly-polynomial claims are not revived."
+  },
+  "5626": {
+    "status": "EXACT_Z2_DECK_SUPERSELECTION_AND_ANTIUNITARY_SYMMETRY_SPLIT",
+    "even": "real Hermitian, K-even, spectrum (-6)^2+(-3)^3+(-1)^3+2^6+3+9",
+    "odd": "pure imaginary Hermitian, K-odd, spectrum (-6)^4+(-3)^4+3^4+6^4",
+    "superselection": "Any deck-invariant observable is block diagonal in the 16+16 split.",
+    "firewall": "Exact neutral/frame-sensitive split, not a proved vacuum/matter or boson/fermion assignment."
+  },
+  "boundary": "All promoted claims are finite algebra, spectral, bundle, cover, or quantum-walk identities. No physical spin-statistics theorem, Standard Model mass assignment, SI speed of light, continuum gauge anomaly theorem, physical vacuum identification, or spacetime Weyl law is claimed."
+}
