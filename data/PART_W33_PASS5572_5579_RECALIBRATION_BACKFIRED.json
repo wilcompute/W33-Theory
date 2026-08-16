@@ -1,0 +1,87 @@
+{
+  "boundary": "Pass 5572's threshold was fixed before measurement, deliberately. Pass 5574 attributes certificates by git author of the ADDING commit, which merges may distort. Pass 5575 detects closed forms by regex and does not evaluate them. Pass 5576 PROPOSES a convention and does not adopt one. Pass 5577 checks labels against this thread's own work",
+  "pass_5572": {
+    "excluded": 238,
+    "median": 40,
+    "of": 5048,
+    "rule": "10x the corpus median, stated before looking",
+    "threshold": 400,
+    "tokens_removed_pct": 56
+  },
+  "pass_5573": {
+    "after_pct": 68,
+    "before_pct": 60,
+    "conclusion": "the 60% is not a tail effect and cannot be tuned away",
+    "reason": "the dense files' tokens are overwhelmingly unique, so those certificates were mostly NOT firing; removing them removed non-firing files from the denominator",
+    "result": "WENT UP"
+  },
+  "pass_5574": {
+    "keys_a": 14796,
+    "keys_b": 9399,
+    "lane_a": "wilcompute",
+    "lane_b": "Wil",
+    "pct_of_smaller": 13,
+    "shared": 1309
+  },
+  "pass_5575": {
+    "pct": 58,
+    "q3_only": 536,
+    "reading": "closed forms are mechanically testable at q=5; the rest need a human",
+    "with_closed_form": 312
+  },
+  "pass_5576": {
+    "certificates": 5048,
+    "distinct_keys": 26718,
+    "per_certificate": 5.3,
+    "proposal": "CERTIFICATE_KEY_CONVENTION.md",
+    "reuse_ratio": 0.474,
+    "status": "PROPOSED, not adopted"
+  },
+  "pass_5577": {
+    "correct": 6,
+    "identifications": [
+      {
+        "claim": "faces(Q4) = 24",
+        "verdict": "CORRECT",
+        "where": "Pass 5479 counted 24"
+      },
+      {
+        "claim": "tomotope/Reye incidences = 48",
+        "verdict": "CORRECT",
+        "where": "Pass 5490 measured 48 flags"
+      },
+      {
+        "claim": "|Aut(tomotope/Reye)| = 96",
+        "verdict": "AMBIGUOUS",
+        "where": "96 as a polytope, 576 as a configuration (Pass 5510)"
+      },
+      {
+        "claim": "|Roots(F4)| = 96",
+        "verdict": "WRONG",
+        "where": "F4 has 48 roots; 96 is the 24-cell edge count (Pass 5509)"
+      },
+      {
+        "claim": "|W(F4)| = 1152",
+        "verdict": "CORRECT",
+        "where": "verified by IsomorphismGroups at Pass 5468"
+      },
+      {
+        "claim": "24-cell vertices = 24, |Aut| = 1152",
+        "verdict": "CORRECT",
+        "where": "standard; consistent with Pass 5468"
+      },
+      {
+        "claim": "K12 horizon genus 6, chi -10",
+        "verdict": "CORRECT",
+        "where": "Pass 5561 computed it from Euler characteristic"
+      },
+      {
+        "claim": "|W(F4)|/2 = f^2 = 576",
+        "verdict": "CORRECT",
+        "where": "Pass 5516 proved the group is AutPar(V4) by isomorphism"
+      }
+    ],
+    "reading": "Pass 5567 verified the arithmetic; this checks the labels. The arithmetic was sound and two labels were not",
+    "total": 8
+  }
+}
