@@ -2,7 +2,7 @@
   "schema": "w33.pass_namespace_registry.v2.fragment",
   "range": [5675, 5682],
   "owner": "openai_gpt5_6_sol",
-  "status": "RESERVED_ACTIVE",
+  "status": "CLOSED_STRUCTURAL__CI_REPLAY_PENDING",
   "created_utc": "2026-08-16T06:32:00Z",
   "tasks": {
     "5675": "classify the full stabilizer-equivariant particle-hole deck16 Hamiltonian moduli and the fate of all dimensionless mass ratios",
@@ -14,5 +14,14 @@
     "5681": "bonkers: decompose the vertical bad9 site sector under AGL(2,3), test the canonical 1+8 split, and aggressively falsify the eight-gluon analogy unless a Lie bracket exists",
     "5682": "bonkers: derive the causal-speed scaling law on connected graph-cover refinements and test whether the finite geometry fixes or leaves free the physical light-speed calibration"
   },
-  "boundary": "No q5 work is duplicated from Track A 5667-5674. Physical claims require operator, cochain, representation, or scaling evidence; dimension matches alone are non-evidence."
+  "deliverables": {
+    "summary": "data/PART_W33_PASS5675_5682_PHYSICS_VOLTAGE_CLASSD_FRONTIER_SUMMARY.json",
+    "report": "analysis/PASS5675_5682_physics_voltage_classd_frontier.md",
+    "insert": "analysis/PASS5675_5682_physics_voltage_classd_frontier_insert.tex",
+    "homepage_source": "analysis/PASS5675_5682_index_insert.html",
+    "runner": "analysis/w33_pass5675_5682_runner.py",
+    "tests": "tests/test_w33_pass5675_5682_physics_voltage_classd.py",
+    "workflow": ".github/workflows/w33_pass5675_5682_physics_voltage_classd.yml"
+  },
+  "boundary": "No q5 work is duplicated from Track A 5667-5674. Physical claims require operator, cochain, representation, or scaling evidence; dimension matches alone are non-evidence. CI replay, homepage materialization, and three-manuscript compilation must pass before this status is upgraded beyond structural closure."
 }
