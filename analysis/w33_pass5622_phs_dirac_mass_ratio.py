@@ -12,8 +12,8 @@ For real m0,g,
   K M K^{-1} = m0 I - gH_-.
 Requiring the same particle-hole-type symmetry on M,
   K M K^{-1} = -M,
-forces m0=0 exactly.  Then the Dirac dispersion has only two nonzero absolute
-internal masses, 3|g| and 6|g|, with parameter-free ratio 2.  The overall scale
+forces m0=0 exactly. Then the Dirac dispersion has only two nonzero absolute
+internal masses, 3|g| and 6|g|, with parameter-free ratio 2. The overall scale
 |g| is still not fixed by finite dimensionless incidence data.
 
 This is a conditional symmetry theorem, not a Standard Model mass assignment.
@@ -29,10 +29,8 @@ def main():
     bands={-6:4,-3:4,3:4,6:4}
     assert sum(bands.values())==16
     assert sum(h*m for h,m in bands.items())==0
-    # Spectral symmetry certifies equal +/- multiplicities.  Pass5619 additionally
-    # constructs the matrix and CI checks H_-^*=-H_- entrywise.
     for h,m in list(bands.items()): assert bands.get(-h)==m
-    absolute=CounterLike={3:bands[3]+bands[-3],6:bands[6]+bands[-6]}
+    absolute={3:bands[3]+bands[-3],6:bands[6]+bands[-6]}
     assert absolute=={3:8,6:8}
     ratio=Fraction(6,3); assert ratio==2
 
