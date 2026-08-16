@@ -1,0 +1,165 @@
+% Passes 5675--5682: equivariant BdG moduli, E6 locality, voltage refinement, and topology/scaling boundaries.
+\subsection{Equivariant BdG moduli, fiber locality, and connected voltage refinement}
+
+The signed deck-odd carrier admits a complete stabilizer-equivariant normal form.
+With
+\[
+V_{16}\cong2A\oplus2\overline A,
+\qquad \dim_{\mathbb C}A=4,
+\]
+every Hermitian Hamiltonian compatible with the carrier stabilizer and ordinary
+conjugation particle-hole symmetry is, after choosing multiplicity coordinates,
+\[
+\boxed{
+H_X=(I_A\otimes X)\oplus(I_{\overline A}\otimes-\overline X),
+\qquad X=X^\dagger\in M_2(\mathbb C).
+}
+\]
+If the eigenvalues of $X$ are $\lambda_1,\lambda_2$, then
+\[
+\operatorname{spec}H_X=
+\lambda_1^4\oplus\lambda_2^4\oplus(-\lambda_1)^4\oplus(-\lambda_2)^4,
+\]
+and
+\[
+H^4-(\lambda_1^2+\lambda_2^2)H^2+\lambda_1^2\lambda_2^2I=0.
+\]
+Thus, after quotienting by equivariant basis changes and one nonzero overall
+energy scale, one continuous dimensionless level ratio remains.  The intrinsic
+magnetic operator is the special point with absolute levels $3,6$ and
+$H^4-45H^2+324I=0$; the ratio $2$ is not symmetry protected.
+
+The $E_6$ horizontal/vertical split admits an exact gauge-invariant separator once
+an additional fiber-locality principle is supplied.  For a cubic support $T$, let
+$n_b(T)$ count its vertices over base site $b\in AG(2,3)$ and define
+\[
+\mathcal C(T)=\sum_b\binom{n_b(T)}2
+=\frac{\|n(T)\|^2-3}{2}.
+\]
+Every one of the thirty-six horizontal lifts has occupancy $1+1+1$ and
+$\mathcal C=0$, whereas each of the nine vertical full fibers has occupancy $3$
+and $\mathcal C=3$.  Hence on the forty-five cubic supports,
+\[
+\boxed{
+C_{45}=0^{36}\oplus3^9,
+\qquad P_H=I-C_{45}/3,
+\qquad P_V=C_{45}/3.
+}
+\]
+The operator depends only on the bundle projection and therefore commutes with
+independent $\mathbb Z_3$ translations in every fiber.  A hard-core rule allowing
+at most one field insertion per fiber projects exactly onto the horizontal
+thirty-six.  Gauge covariance alone still does not impose this rule.  Indeed the
+$9\times12$ affine point-line incidence matrix satisfies
+$BB^T=3I_9+J_9$ and has rank nine, so no linear base-site projector can preserve
+all horizontal line occupancies while killing all vertical site vectors.
+
+The failure of the naive repeated $C_2$ cover is also sharpened.  The W33
+point-line Levi graph has
+\[
+|V|=80,\qquad |E|=160,\qquad \beta_1=81,\qquad d=4.
+\]
+A $\mathbb Z_2$ voltage cover is connected when its cycle voltages generate the
+deck group.  Choosing at each level a spanning tree and a fresh non-tree chord,
+with voltage one on that chord and zero elsewhere, gives a connected lift at every
+stage.  Repeating the construction on the newly obtained graph produces
+\[
+\boxed{
+|V(L_n)|=80\,2^n,\qquad
+|E(L_n)|=160\,2^n,\qquad
+\beta_1(L_n)=1+80\,2^n,\qquad d=4.
+}
+\]
+Thus the earlier disconnection obstruction concerned reuse of one pulled-back
+cohomology class, not connected binary refinement in general.
+
+For every such two-lift, sheet parity gives the exact spectral decomposition
+\[
+A_{\rm lift}\simeq A_{\rm base}\oplus A_\sigma.
+\]
+The deterministic single-chord tower has verified distinct-adjacency-eigenvalue
+counts $5,13,29,61,125$ through depth four, so fresh classes do create new
+spectral scales.  However one negative chord produces only two cross-sheet edges.
+For a four-regular $N$-vertex base the sheet cut has conductance at most
+$1/(2N)$, and the next combinatorial Laplacian gap obeys
+\[
+\boxed{\lambda_1\le 4/N.}
+\]
+The tower is therefore connected but increasingly bottlenecked, not an isotropic
+continuum.  A viable continuum search requires balanced voltage signatures with
+controlled new spectrum.
+
+The old one-section magnetic matrix also receives a complete intrinsic reading.
+In sheet coordinates the exact identity is
+\[
+\boxed{
+H_{32}=\begin{pmatrix}A&\overline A\\\overline A&A\end{pmatrix},
+\qquad H_+=2\operatorname{Re}A,
+\qquad H_-=2i\operatorname{Im}A.
+}
+\]
+Thus the section matrix is a complex parent coordinate whose real and imaginary
+parts become the two intrinsic deck-parity sectors after the conjugate sheet is
+restored.  The exact one-sheet Schur operator is
+\[
+H_{\rm eff}(E)=A+\overline A(E-A)^{-1}\overline A,
+\]
+and its fifteen bare section poles cancel in the full determinant
+\[
+\det(E-H_{32})=\det(E-A)\det(E-H_{\rm eff}(E));
+\]
+they are decimation poles rather than physical eigenlevels.
+
+Two especially tempting physical identifications fail further exact tests.  For
+the class-D-like odd block $H=iS$, stabilizer symmetry forces fourfold level
+multiplicities, so
+\[
+|\operatorname{Pf}S|=|\lambda_1\lambda_2|^4.
+\]
+Positive-definite, indefinite, and negative-definite multiplicity representatives
+all have the same Pfaffian sign in the canonical deck ordering; at the magnetic
+point
+\[
+\operatorname{Pf}S_{\rm mag}=-(3\cdot6)^4=-104976.
+\]
+Hence the finite zero-dimensional class-D $\mathbb Z_2$ bit is trivial on the
+whole stabilizer-equivariant gapped cone.
+
+Likewise the nine vertical fibers do give a genuine affine representation
+hierarchy.  Since $AGL(2,3)$ acts doubly transitively on the nine base sites,
+\[
+\mathbb C^9=\mathbf1\oplus V_8
+\]
+with $V_8$ irreducible, and the complete $K_9$ cycle module is
+\[
+Z_1(K_9)\cong\Lambda^2V_8,\qquad \dim Z_1=28.
+\]
+But character theory gives
+\[
+\boxed{
+\dim\operatorname{Hom}_{AGL(2,3)}(\Lambda^2V_8,V_8)=0.
+}
+\]
+There is no affine-equivariant alternating bracket $V_8\times V_8\to V_8$;
+therefore the structural dimension-eight sector cannot be identified with the
+$SU(3)$ adjoint/eight gluons while retaining the full affine symmetry.
+
+Finally, graph covering preserves the local causal statement of a nearest-neighbor
+propagator: at every level, graph distance changes by at most one edge per tick.
+If one edge has physical length $\ell_n$ and one tick duration $\tau_n$, the
+physical conversion is
+\[
+\boxed{c_n=\ell_n/\tau_n.}
+\]
+The cover topology fixes neither quantity.  If a fixed $d$-dimensional physical
+volume is separately assumed, then $N_n=2^nN_0$ implies
+$\ell_n/\ell_0=2^{-n/d}$, and constant nonzero $c$ requires the same scaling for
+$\tau_n$.  Neither $d$ nor the absolute calibration $\ell_0/\tau_0$ follows from
+the cover counts.
+
+\paragraph{Evidence boundary.}
+These are finite representation, bundle-projection, graph-cover, spectral,
+Pfaffian, cochain, and causal-scaling results.  They do not derive Standard Model
+masses, an $SU(3)$ gauge theory, an interacting topological phase, a continuum
+spectral dimension, Lorentz invariance, the SI speed of light, or a unique physical
+voltage-refinement tower.
