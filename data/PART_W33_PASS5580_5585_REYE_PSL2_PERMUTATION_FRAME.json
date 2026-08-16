@@ -1,0 +1,39 @@
+{
+  "binary_rank_conjecture": {
+    "formula": "(q+1)^2/2",
+    "verified_q": [3, 5, 7, 11, 13],
+    "warning": "measured only; no all-q proof is claimed"
+  },
+  "boundaries": [
+    "The q=3 Reye/tomotope identification is prior repo work (Pass5490/BT1363); this packet identifies its permutation-group mechanism.",
+    "No q>3 polytope realization is claimed.",
+    "No physics interpretation follows from this incidence isomorphism.",
+    "Prime-power extension is mathematically natural but is not certified by this prime-field verifier."
+  ],
+  "q3_automorphism_certificate": {
+    "abstract_shape": "{(a,b) in S4 x S4 : sgn(a)=sgn(b)} semidirect C2",
+    "reye_columns": 16,
+    "reye_flags": 48,
+    "reye_rows": 12,
+    "same_parity_S4xS4_order": 288,
+    "with_transpose_inversion_order": 576
+  },
+  "scope": "odd prime q only in this executable verifier",
+  "status": "PASS_WITH_BINARY_RANK_CONJECTURE",
+  "theorem": {
+    "centered_frame": "after subtracting the row mean and unit-normalizing, N=q(q^2-1)/2 vectors form a tight frame in R^(q^2) with inner products from {-1/q,0,1/q}",
+    "char0_rank": "q^2+1",
+    "column_gram": "M^T M = ((q-1)/2) * (q I + A), A=complement of the (q+1)x(q+1) rook graph",
+    "group_design": "one nonsingular determinant class is one PGL2/PSL2 coset, so the design is a PSL2(q) permutation-graph design up to a fixed coset translation",
+    "incidence": "B(p,segre(u,v))=0 iff u=T_p(v), T_p=[[x2,-x0],[-x1,-x3]]",
+    "matrix_dictionary": "X=[[x0,x2],[-x3,x1]], det(X)=Q(x)",
+    "quadric": "Q=0 iff X has rank one, hence Q+(3,q)=P1(q)xP1(q)"
+  },
+  "verified_rows": [
+    {"q":3,"rows_psl2_order":12,"columns_grid":16,"row_weight":4,"column_weight":3,"two_column_stabilizer":1,"projectivity_count":12,"determinant_coset_square":false,"char0_rank":10,"binary_rank_measured":8,"binary_rank_candidate":8,"row_overlap_values":[0,1],"row_overlap_multiplicities":{"0":18,"1":48},"centered_unit_inner_products":["-1/3","0"],"spectrum_MM_t":{"top":{"eigenvalue":12,"multiplicity":1},"frame":{"eigenvalue":4,"multiplicity":9},"zero_multiplicity":2}},
+    {"q":5,"rows_psl2_order":60,"columns_grid":36,"row_weight":6,"column_weight":10,"two_column_stabilizer":2,"projectivity_count":60,"determinant_coset_square":true,"char0_rank":26,"binary_rank_measured":18,"binary_rank_candidate":18,"row_overlap_values":[0,1,2],"row_overlap_multiplicities":{"0":600,"1":720,"2":450},"centered_unit_inner_products":["-1/5","0","1/5"],"spectrum_MM_t":{"top":{"eigenvalue":60,"multiplicity":1},"frame":{"eigenvalue":12,"multiplicity":25},"zero_multiplicity":34}},
+    {"q":7,"rows_psl2_order":168,"columns_grid":64,"row_weight":8,"column_weight":21,"two_column_stabilizer":3,"projectivity_count":168,"determinant_coset_square":false,"char0_rank":50,"binary_rank_measured":32,"binary_rank_candidate":32,"row_overlap_values":[0,1,2],"row_overlap_multiplicities":{"0":5292,"1":4032,"2":4704},"centered_unit_inner_products":["-1/7","0","1/7"],"spectrum_MM_t":{"top":{"eigenvalue":168,"multiplicity":1},"frame":{"eigenvalue":24,"multiplicity":49},"zero_multiplicity":118}},
+    {"q":11,"rows_psl2_order":660,"columns_grid":144,"row_weight":12,"column_weight":55,"two_column_stabilizer":5,"projectivity_count":660,"determinant_coset_square":false,"char0_rank":122,"binary_rank_measured":72,"binary_rank_candidate":72,"row_overlap_values":[0,1,2],"row_overlap_multiplicities":{"0":90750,"1":39600,"2":87120},"centered_unit_inner_products":["-1/11","0","1/11"],"spectrum_MM_t":{"top":{"eigenvalue":660,"multiplicity":1},"frame":{"eigenvalue":60,"multiplicity":121},"zero_multiplicity":538}},
+    {"q":13,"rows_psl2_order":1092,"columns_grid":196,"row_weight":14,"column_weight":78,"two_column_stabilizer":6,"projectivity_count":1092,"determinant_coset_square":true,"char0_rank":170,"binary_rank_measured":98,"binary_rank_candidate":98,"row_overlap_values":[0,1,2],"row_overlap_multiplicities":{"0":255528,"1":91728,"2":248430},"centered_unit_inner_products":["-1/13","0","1/13"],"spectrum_MM_t":{"top":{"eigenvalue":1092,"multiplicity":1},"frame":{"eigenvalue":84,"multiplicity":169},"zero_multiplicity":922}}
+  ]
+}
