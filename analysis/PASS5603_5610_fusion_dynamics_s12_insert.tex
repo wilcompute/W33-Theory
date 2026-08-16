@@ -1,0 +1,150 @@
+% Pass5603--5610: fixed-point fusion closure, code distance, dynamics firewalls, s12 phase.
+\subsection{Projectivity fusion, exact distance, and the phase-sensitive dynamical frontier}
+
+\paragraph{Pass 5603: the fixed-point fusion is an all-odd Bose--Mesner algebra.}
+For odd prime powers $q>3$, fuse pairs $g,h\in\mathrm{PSL}_2(q)$ according to the
+number $0,1,2$ of fixed points of $g^{-1}h$ on $\mathbf P^1(q)$.  With
+\[
+k_0=\frac{q(q-1)^2}{4},\qquad k_1=q^2-1,\qquad
+k_2=\frac{q(q+1)(q-3)}4,
+\]
+the first eigenmatrix and multiplicities are
+\[
+\boxed{P=\begin{pmatrix}
+1&k_0&k_1&k_2\\
+1&0&q-1&-q\\
+1&-(q-1)^2/4&0&(q-3)(q+1)/4\\
+1&q&-(q+1)&0
+\end{pmatrix}},
+\]
+\[
+\boxed{m=\left(1,\frac{(q-3)(q+1)^2}{4},q^2,\frac{(q-1)^3}{4}\right).}
+\]
+The symbolic certificate verifies
+$P^{\mathsf T}\operatorname{diag}(m)P=|\mathrm{PSL}_2(q)|\operatorname{diag}(1,k_0,k_1,k_2)$
+and reconstructs all Pass~5599 intersection polynomials from the standard
+character formula for $p_{ij}^k$.  At $q=3$ both
+\[
+\boxed{k_2=0,\qquad m_1=0,}
+\]
+so the exceptional Reye/Latin member is an actual degeneration of the generic
+Bose--Mesner algebra: one relation and one primitive idempotent disappear.
+The character-table background is the standard projective-line treatment in
+Long--Plaza--Sin--Xiang, arXiv:1608.07304.
+
+\paragraph{Pass 5604: exact all-odd minimum distance.}
+Let $C_+$ and $C_-$ be the square- and nonsquare-determinant binary
+projectivity spans from Pass~5601, so $C_-=C_+^\perp$.  Through a fixed grid
+cell pass $r=q(q-1)/2$ opposite-coset projectivity graphs, while a compatible
+pair lies on $\lambda=(q-1)/2$ of them.  If a nonzero support $S$ of size
+$s\le q$ contained a cell $c$, then at least
+\[
+r-(s-1)\lambda=\frac{q-1}{2}(q-s+1)>0
+\]
+dual generators would meet $S$ exactly once, contradicting orthogonality.
+A generator has weight $q+1$, hence
+\[
+\boxed{d(C_+)=d(C_-)=q+1}
+\]
+for every odd prime power $q$, with parameters
+\[
+\boxed{[(q+1)^2,(q+1)^2/2,q+1]_2.}
+\]
+Independent exact MILPs give $d=8$ at $q=7$ and $d=10$ at $q=9$.
+
+\paragraph{Pass 5605: maximally symmetric Hodge and Hashimoto scaling is atomic.}
+The all-$q$ Levi flag Hodge spectrum is
+\[
+0^{q^4},\quad(q+1-\sqrt{2q})^{q(q+1)^2/2},\quad
+(q+1)^{q(q^2+1)},\quad(q+1+\sqrt{2q})^{q(q+1)^2/2},\quad(2q+2)^1.
+\]
+The full normalized spectral measure tends $\delta_0$; after deleting the
+cycle kernel and scaling by $q+1$, the nonzero measure tends $\delta_1$.
+Likewise, for every $k$-regular graph the nonbacktracking matrix is locally
+permutation-equivalent to $J_k-I_k$, so its singular values are only
+$k-1$ and $1$.  The $W(3,q)$ Ihara--Bass roots also have a finite atomic
+normalized limit.  Thus these maximally symmetric families do not supply a
+Weyl-law continuum spectrum without further phase, refinement, defects, or
+symmetry breaking.
+
+\paragraph{Pass 5606: the selected $13$-cover object map is fail-closed.}
+A new GAP gate rebuilds the exact Pass~5417 $325$-vertex substrate and selected
+$13$-cover, restricts its $1+12$ action to the moving twelve points, and asks
+for an explicit conjugator to the independently constructed Klein-$V_4$ Latin
+$S_{12}$ action.  A companion script composes that witness with the already
+proved $F_4$ short-root-pair--Latin conjugator.  No cover-to-root-pair table is
+published unless the direct GAP conjugacy certificate returns true.
+
+\paragraph{Pass 5607: full projective symmetry forbids a dispersive Segre wave operator.}
+On $X=\mathbf P^1(q)\times\mathbf P^1(q)$, 2-transitivity gives
+$\operatorname{End}_{\mathrm{PSL}_2(q)}\mathbb R[\mathbf P^1(q)]
+=\operatorname{span}\{I,J\}$, hence the product commutant is four-dimensional.
+For $n=q+1$ the canonical indefinite ruling operator
+\[
+\boxed{\square_q=(nI-J)\otimes I-I\otimes(nI-J)}
+\]
+has spectrum
+\[
+\boxed{0^{q^2+1}\oplus(+n)^q\oplus(-n)^q.}
+\]
+Thus exact independent projective symmetry is too restrictive for a dispersive
+continuum d'Alembertian; additional phase/holonomy, directed transport, chart
+order, or symmetry breaking is mathematically necessary.
+
+\paragraph{Pass 5608: the older \texttt{s12} Golay twelve is not the Reye twelve.}
+The old ternary-Golay projectivization has weight split
+$132+220+12$.  Transporting the natural ATLAS $M_{12}$ generators into the
+repo Golay coordinates, including the required monomial sign lifts, shows that
+the twelve projective weight-$12$ lines carry the natural degree-$12$ Mathieu
+action:
+\[
+\boxed{|M_{12}|=95040,\qquad\text{orbitals }12,132.}
+\]
+This is not the rank-$3$ order-$576$ Reye/Latin/$F_4$ action with orbitals
+$12,36,96$.  The distinction is structural.
+
+\paragraph{Pass 5609: the old \texttt{s12} Heisenberg phase breaks the flat event spectrum.}
+For the $q=3$ Segre carrier, let two events be adjacent when both ruling
+coordinates differ.  The untwisted adjacency has only
+$9^1\oplus1^9\oplus(-3)^6$.  Weight an allowed edge $s\to t$ by
+$\omega^{B(s,t)}$, where $\omega^3=1$ and
+\[
+B(x,y)=x_0y_1-x_1y_0+x_2y_3-x_3y_2\pmod3.
+\]
+The matrix is Hermitian.  Exact arithmetic in $\mathbb Z[\omega]$ gives
+\[
+\chi(x)=(x+2)^2\bigl(x^{14}-4x^{13}-60x^{12}+244x^{11}+1292x^{10}
+-5517x^9-12212x^8+58256x^7+46617x^6-296670x^5-16992x^4
++667170x^3-219780x^2-511272x+260496\bigr).
+\]
+It has $15$ distinct real eigenvalues numerically, and $60$ of the $96$
+event triangles carry nonzero $\mathbb Z_3$ Wilson flux.  The phase is therefore
+not gauge-trivial: it supplies genuine holonomy and removes nearly all of the
+untwisted spectral degeneracy.
+
+\paragraph{Pass 5610: explicit but noncanonical embedding into the old \texttt{s12} phase space.}
+The old $728/2=364$ Golay/Klein calculation is an exact cardinality statement,
+but it does not by itself construct a canonical Pluecker isometry or select a
+canonical $40$-point $W(3,3)$ slice.  One compatible phase bridge can be made
+explicit.  Embed $\mathbb F_3^4$ into the old three-qutrit
+$\mathbb F_3^6=(p_1,p_2,p_3,q_1,q_2,q_3)$ phase space by
+\[
+\boxed{E(x_0,x_1,x_2,x_3)=(x_0,x_2,0,-x_1,-x_3,0).}
+\]
+For the old convention $\langle(p,q),(p',q')\rangle=q\cdot p'-p\cdot q'$,
+all $6561$ ordered pairs satisfy
+\[
+\boxed{\langle E(x),E(y)\rangle=B(x,y).}
+\]
+Hence the Pass~5609 magnetic phase is literally the restriction of the old
+\texttt{s12} Weyl--Heisenberg cocycle.  The embedding is, however, a chosen
+gauge/subspace; a physical uniqueness principle remains open.
+
+\paragraph{Physical boundary.}
+The packet closes finite-group, coding, and spectral statements and identifies
+a concrete phase mechanism that defeats the simplest spectral-flatness no-go.
+It does not yet derive a Lorentzian continuum, gravity, Standard-Model
+parameters, a speed of light, or laboratory dynamics.  The next dynamical test
+is whether a phase-twisted transport tower has a controlled multiscale
+heat-kernel/dispersion limit and whether the required phase embedding can be
+selected rather than chosen.
