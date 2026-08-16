@@ -1,0 +1,99 @@
+% Pass5586: close the characteristic-two rank frontier of the Pass5580
+% projectivity-graph incidence design using the published modular structure of
+% the natural PSL_2(q) projective-line permutation module.
+\subsection{Characteristic-two closure: the projectivity-frame rank is $(q+1)^2/2$}
+\label{sec:pass5586-binary-psl2-span}
+
+The binary-rank pattern left explicitly conjectural at the end of
+Pass~5585 can be closed for every odd prime power $q$.  The important point is
+that this is a theorem about the projectivity-graph design of
+Section~\ref{sec:pass5580-reye-psl2}; it is \emph{not} the separate W$(3,q)$
+footprint-rank conjecture firewalled in Passes~5358 and~5376.
+
+Let $V=\mathbf F_2[\mathbf P^1(q)]$ be the natural permutation module for
+$G=\PSL_2(q)$ and let
+\[
+ \mathcal A=\operatorname{span}_{\mathbf F_2}\{\rho(g):g\in G\}
+ \subseteq\operatorname{End}_{\mathbf F_2}(V).
+\]
+Vectorizing matrices identifies the rows of the Pass~5580 incidence matrix
+with the permutation matrices of one $\PGL_2(q)/\PSL_2(q)$ coset.  Left
+multiplication by one fixed coset representative is invertible, so
+\[
+ \operatorname{rank}_2 M=\dim_{\mathbf F_2}\mathcal A.
+\]
+
+The needed modular module structure is classical.  Zavarnitsine's Lemma~7
+(
+\emph{Subextensions for a permutation $\PSL_2(q)$-module}, 2013), refined in
+Revin--Zavarnitsine (2021), gives the Loewy shape after scalar extension to
+$k=\overline{\mathbf F}_2$:
+\[
+ \boxed{
+ \mathbf 1\ \big|\ (U_+\oplus U_-)\ \big|\ \mathbf 1,
+ \qquad
+ \dim U_+=\dim U_-=a:=\frac{q-1}{2}.
+ }
+\]
+The bottom trivial module is the all-one vector, the unique maximal submodule
+is the augmentation kernel, and the quotient is again trivial.  For
+$q\equiv\pm1\pmod8$ the two middle constituents are already absolutely
+irreducible over $\mathbf F_2$; for $q\equiv\pm3\pmod8$ the $(q-1)$-dimensional
+middle constituent splits into $U_+\oplus U_-$ after extending scalars to
+$\mathbf F_4$ (and hence to $k$).
+
+Let $J=\operatorname{rad}(\mathcal A\otimes k)$.  Faithfulness of $V$ for the
+image algebra and the three simple composition types give
+\[
+ \boxed{
+ (\mathcal A\otimes k)/J\cong k\oplus M_a(k)\oplus M_a(k),
+ }
+\]
+so
+\[
+ \dim((\mathcal A\otimes k)/J)=1+2a^2.
+\]
+The Loewy filtration gives an immediate upper bound on the radical.  Every
+element of $J$ kills the one-dimensional socle, maps the $2a$-dimensional
+middle layer into the socle, and maps the one-dimensional top into the
+middle layer plus socle.  Hence
+\[
+ \dim J\le 2a+(2a+1)=4a+1.
+\]
+For the reverse inequality, the two middle simples occur in
+$\operatorname{rad}V/\operatorname{rad}^2V$.  Therefore the two distinct Pierce
+components of $J/J^2$ from the trivial top to $U_+$ and $U_-$ are nonzero and
+contribute at least $a+a$ dimensions.  Transposition preserves the permutation
+matrix algebra and its radical and supplies the two reverse Pierce components,
+contributing another $a+a$.  Finally
+$\operatorname{rad}^2V=\operatorname{soc}V\ne0$, so $J^2\ne0$.  Thus
+\[
+ \dim J\ge4a+1,
+\]
+and equality holds.
+
+Consequently
+\[
+\begin{aligned}
+ \operatorname{rank}_2M
+ &=\dim\mathcal A\\
+ &=1+2a^2+4a+1\\
+ &=2(a+1)^2\\
+ &=\boxed{\frac{(q+1)^2}{2}}.
+\end{aligned}
+\]
+This proves the all-odd prime-power law.  The previously measured anchors
+\[
+ q=3,5,7,11,13
+ \quad\longmapsto\quad
+ 8,18,32,72,98
+\]
+are exact instances rather than evidence for an open formula.
+
+\paragraph{Evidence boundary.}
+The theorem closes only the characteristic-two rank of the
+$\PSL_2(q)$ projectivity-graph incidence family.  It does not prove the
+independent all-odd W$(3,q)$ footprint-rank law, and it supplies no $q>3$
+polytope or physical identification.  The older Pass~5358 warning remains
+essential: the proof uses the nonsplit modular Loewy structure itself, not an
+invalid reduction of the characteristic-zero decomposition.
