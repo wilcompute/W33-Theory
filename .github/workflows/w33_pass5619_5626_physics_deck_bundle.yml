@@ -1,0 +1,118 @@
+name: W33 Pass5619-5626 physics deck bundle frontier
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5619_*'
+      - 'analysis/w33_pass5620_*'
+      - 'analysis/w33_pass5621_*'
+      - 'analysis/w33_pass5622_*'
+      - 'analysis/w33_pass5623_*'
+      - 'analysis/w33_pass5624_*'
+      - 'analysis/w33_pass5625_*'
+      - 'analysis/w33_pass5626_*'
+      - 'analysis/PASS5619_5626_*'
+      - 'analysis/w33_pass5606_cover12_explicit_conjugator.g'
+      - 'analysis/w33_pass5615_cover_f4_object_dictionary_gate.py'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'tests/test_w33_pass5619_5626_physics_deck_bundle.py'
+      - 'data/w33_pass_namespace_registry_v2.d/5619-5626.json'
+      - 'data/w33_publication_frontier_contract_v2.json'
+      - '.github/workflows/w33_pass5619_5626_physics_deck_bundle.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  replay-publish-compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 70
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip numpy pytest
+          sudo apt-get update -qq
+          sudo apt-get install -y gap gap-grape
+      - name: Rebuild F4 short-root-pair action
+        run: python analysis/w33_pass5596_f4_rootpair_latin_action.py
+      - name: Execute direct q5 cover-to-Latin conjugator
+        env:
+          W33_REPO: ${{ github.workspace }}
+        run: |
+          rm -f data/PART_W33_PASS5606_COVER12_EXPLICIT_CONJUGATOR.json
+          gap -q -b --nointeract analysis/w33_pass5606_cover12_explicit_conjugator.g
+          test -s data/PART_W33_PASS5606_COVER12_EXPLICIT_CONJUGATOR.json
+          python - <<'PY'
+          import json
+          p='data/PART_W33_PASS5606_COVER12_EXPLICIT_CONJUGATOR.json'
+          x=json.load(open(p))
+          assert x['conjugate_in_S12'] is True
+          assert len(x['moving_cover_vertices'])==12
+          assert isinstance(x['fixed_cover_vertex'],int)
+          assert sorted(x['cover12_to_latin'])==list(range(12))
+          PY
+      - name: Compose explicit moving12-to-F4 dictionary
+        run: |
+          python analysis/w33_pass5615_cover_f4_object_dictionary_gate.py
+          python - <<'PY'
+          import json
+          x=json.load(open('data/PART_W33_PASS5615_COVER_F4_OBJECT_DICTIONARY.json'))
+          assert x['status']=='EXPLICIT_COVER_TO_F4_OBJECT_DICTIONARY'
+          assert len(x['cover_vertex_to_F4_short_root_pair_index'])==12
+          PY
+      - name: Replay Pass5619-5626
+        run: python analysis/w33_pass5619_5626_runner.py
+      - name: Focused regression
+        run: python -m pytest -q tests/test_w33_pass5619_5626_physics_deck_bundle.py
+      - name: Materialize homepage and audit publication DAG
+        run: |
+          python tools/integrate_bt3376_bt3389.py --report /tmp/public-integration.json
+          python analysis/w33_pass5364_publication_dag_audit.py --report /tmp/publication-dag.json
+          test "$(grep -c 'id=\"pass-5619-5626-physics-deck-bundle-frontier\"' docs/index.html)" -eq 1
+          git diff --check
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+      - name: Compile canonical manuscripts
+        run: |
+          mkdir -p evidence/pass5619_5626
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass5619_5626/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass5619_5626/pdf_sha256.txt
+      - name: Freeze regenerated certificates and homepage
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            data/PART_W33_PASS5596_F4_ROOTPAIR_LATIN_ACTION.json \
+            data/PART_W33_PASS5606_COVER12_EXPLICIT_CONJUGATOR.json \
+            data/PART_W33_PASS5615_COVER_F4_OBJECT_DICTIONARY.json \
+            data/PART_W33_PASS5619_SPINOR_DECK_MODULE.json \
+            data/PART_W33_PASS5620_E6_HORIZONTAL_VERTICAL_SELECTOR.json \
+            data/PART_W33_PASS5621_MANY_CELL_MAGNETIC_CLT.json \
+            data/PART_W33_PASS5622_PHS_DIRAC_MASS_RATIO.json \
+            data/PART_W33_PASS5623_COVER_F4_FIXED_VERTEX_PHYSICS_GATE.json \
+            data/PART_W33_PASS5624_SPLIT_STEP_LIGHTCONE.json \
+            data/PART_W33_PASS5625_FINITE_ETA_SPECTRAL_FLOW.json \
+            data/PART_W33_PASS5626_DECK_SUPERSELECTION.json \
+            docs/index.html
+          if git diff --cached --quiet; then
+            echo 'Certificates and homepage already materialized.'
+          else
+            git commit -m 'Freeze Pass5619-5626 certificates and homepage [skip ci]'
+            git push
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass5619-5626-physics-deck-bundle-frontier
+          path: evidence/pass5619_5626/**
