@@ -1,15 +1,19 @@
-name: W33 Pass5580-5585 Reye PSL2 permutation frame
+name: W33 Pass5580-5586 Reye PSL2 permutation frame
 
 on:
   push:
     branches: [master]
     paths:
       - 'analysis/w33_pass5580_5585_reye_psl2_permutation_frame.py'
+      - 'analysis/w33_pass5586_binary_psl2_permutation_span_rank.py'
       - 'analysis/PASS5580_5585_reye_psl2_permutation_frame.md'
       - 'analysis/PASS5580_5585_reye_psl2_permutation_frame_insert.tex'
+      - 'analysis/PASS5586_binary_psl2_permutation_span_rank_insert.tex'
       - 'analysis/PASS5580_5585_index_insert.html'
       - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
       - 'tests/test_w33_pass5580_5585_reye_psl2_permutation_frame.py'
+      - 'tests/test_w33_pass5586_binary_psl2_permutation_span_rank.py'
+      - 'data/PART_W33_PASS5586_BINARY_PSL2_PERMUTATION_SPAN_RANK_summary.json'
       - 'data/w33_publication_frontier_contract_v2.json'
       - '.github/workflows/w33_pass5580_5585_reye_psl2_permutation_frame.yml'
   workflow_dispatch:
@@ -30,10 +34,14 @@ jobs:
           python-version: '3.12'
       - name: Install test dependency
         run: python -m pip install --upgrade pip pytest
-      - name: Replay Pass5580-5585 producer
-        run: python analysis/w33_pass5580_5585_reye_psl2_permutation_frame.py
+      - name: Replay Pass5580-5586 producers
+        run: |
+          python analysis/w33_pass5580_5585_reye_psl2_permutation_frame.py
+          python analysis/w33_pass5586_binary_psl2_permutation_span_rank.py
       - name: Focused regression
-        run: python -m pytest -q tests/test_w33_pass5580_5585_reye_psl2_permutation_frame.py
+        run: |
+          python -m pytest -q tests/test_w33_pass5580_5585_reye_psl2_permutation_frame.py
+          python -m pytest -q tests/test_w33_pass5586_binary_psl2_permutation_span_rank.py
       - name: Materialize homepage and audit publication DAG
         run: |
           python tools/integrate_bt3376_bt3389.py --report /tmp/public-integration.json
@@ -45,24 +53,27 @@ jobs:
           github-token: '${{ secrets.GITHUB_TOKEN }}'
       - name: Compile canonical manuscripts
         run: |
-          mkdir -p evidence/pass5580_5585
+          mkdir -p evidence/pass5580_5586
           for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
-            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass5580_5585/${source%.tex}.log"
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass5580_5586/${source%.tex}.log"
             test -s "${source%.tex}.pdf"
           done
-          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass5580_5585/pdf_sha256.txt
-      - name: Freeze regenerated certificate and homepage materialization
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass5580_5586/pdf_sha256.txt
+      - name: Freeze regenerated certificates and homepage materialization
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/PART_W33_PASS5580_5585_REYE_PSL2_PERMUTATION_FRAME.json docs/index.html
+          git add \
+            data/PART_W33_PASS5580_5585_REYE_PSL2_PERMUTATION_FRAME.json \
+            data/PART_W33_PASS5586_BINARY_PSL2_PERMUTATION_SPAN_RANK.json \
+            docs/index.html
           if git diff --cached --quiet; then
-            echo 'Certificate and homepage already materialized.'
+            echo 'Certificates and homepage already materialized.'
           else
-            git commit -m 'Freeze Pass5580-5585 certificate and homepage card [skip ci]'
+            git commit -m 'Freeze Pass5580-5586 certificates and homepage card [skip ci]'
             git push
           fi
       - uses: actions/upload-artifact@v4
         with:
-          name: pass5580-5585-reye-psl2-permutation-frame
-          path: evidence/pass5580_5585/**
+          name: pass5580-5586-reye-psl2-permutation-frame
+          path: evidence/pass5580_5586/**
