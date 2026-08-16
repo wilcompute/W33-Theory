@@ -1,0 +1,142 @@
+% Passes 5611--5618: physics-first magnetic frontier.
+\subsection{Heisenberg magnetic bulk, intrinsic vector lift, and finite gauge dynamics}
+
+The projectivity-frame programme now admits a sharper separation between finite kinematics,
+phase data, and candidate dynamics.  On the affine bulk $V=\mathbb F_q^2$, define
+\[
+ A_q((x,y),(u,v))={\bf 1}_{x\ne u,\,y\ne v}\,\chi(xv-uy),
+\]
+where $\chi$ is a nontrivial additive character.  Writing $K$ for the full symplectic
+Fourier kernel and $R,C$ for the same-coordinate kernels gives
+\[
+ A=K-R-C+I,
+\]
+with
+\[
+ K^2=q^2I,\qquad R^2=qR,\qquad C^2=qC,
+\]
+\[
+ KR=RK=qR,\qquad KC=CK=qC,\qquad RCR=qR,\qquad CRC=qC.
+\]
+Hence the exact affine magnetic spectrum is
+\[
+\boxed{
+ -(q-1)^{q(q-1)/2}\oplus
+ (q+1)^{q(q-3)/2}\oplus
+ (1-\sqrt q)^q\oplus
+ (1+\sqrt q)^q .}
+\]
+After division by $q$, its empirical spectral measure converges to
+\[
+\boxed{\tfrac12\delta_{-1}+\tfrac12\delta_{+1}.}
+\]
+Thus the Heisenberg phase removes substantial finite degeneracy but, at maximal all-$q$
+regularity, still does not generate a Weyl-law continuum.
+
+The minimum-word theorem of the determinant-isodual code also sharpens.  If $S$ is a
+weight-$(q+1)$ word, parity against the opposite determinant coset and the counts
+\[
+ a=\frac{q(q-1)}2,
+ \qquad
+ b=\frac{q-1}{2}
+\]
+of opposite projectivities through one cell and through two compatible cells force equality
+in ${m\choose2}\ge m/2$ for every even intersection size $m$.  Consequently $S$ has one
+cell in every row and column, and every opposite projectivity meets it in $0$ or $2$ cells.
+Thus minimum words are permutation graphs preserving the two $\mathrm{PSL}_2(q)$ colours
+of ordered triples.  The standard projective switching automorphism group is
+$\mathrm{P}\Sigma L_2(q)$, so field automorphisms occur as genuine minimum histories over
+extension fields.  Exhaustive prime-field checks give $12,60,168$ minimum histories at
+$q=3,5,7$, while at $q=9$ the Frobenius map $x\mapsto x^3$ is a minimum word although it
+is not a projectivity.
+
+A correction is required for the previous sixteen-event magnetic operator.  The spectrum
+computed there is exact for the chosen normalized projective representatives, but the phase
+$\omega^{B(s,t)}$ is not projectively intrinsic: changing one representative $s\mapsto-s$
+changes $\operatorname{tr}A^4$ from $2256$ to $2400$.  This is structural rather than a
+numerical defect.  The central element $-I\in\mathrm{Sp}(4,3)$ fixes every projective point
+but exchanges its two nonzero vector lifts, so no $\mathrm{Sp}(4,3)$-equivariant section of
+projectivization exists.
+
+The intrinsic $q=3$ replacement is the vector lift of the $16$ Segre events to all $32$
+vectors $\pm v$, carrying the alternating Heisenberg cocycle
+\[
+ \psi(v,w)=\tfrac12 B(v,w)=2B(v,w)\pmod3.
+\]
+Its Hermitian magnetic spectrum is
+\[
+\boxed{
+ -6^6\oplus(-3)^7\oplus(-1)^3\oplus2^6\oplus3^5\oplus6^4\oplus9^1.}
+\]
+The projective-to-vector fiber has $q-1$ nonzero lifts, so it is literally a two-sheeted
+sign cover precisely at $q=3$ among odd $q$.  This supplies a spin/frame-like structural
+selector, not yet a derivation of physical spin statistics.
+
+This selector is independent of the fixed-point Bose--Mesner degeneration
+\[
+ k_2=\frac{q(q+1)(q-3)}4,
+ \qquad
+ m_1=\frac{(q-3)(q+1)^2}{4},
+\]
+where both a relation and a primitive idempotent disappear at $q=3$.  The repo's existing
+mixing dictionary also has defect
+\[
+ \sin^2\theta_{23}-\sin^2\theta_W-\sin^2\theta_{12}
+ =\frac{q(q-3)}{q^2+q+1},
+\]
+but that third statement remains explicitly model-dependent.  The older all-$q$ Ollivier
+curvature extrapolation is not used as a theorem here; only its exhaustive $q=3$ value is
+certified in the older script.
+
+The qutrit/E$_6$ connection gives a concrete finite gauge sector.  The previously derived
+$AG(2,3)$ connection satisfies
+\[
+ F(d_1,d_2)=-\det(d_1,d_2)\pmod3,
+\]
+so magnetic translations obey the qutrit Heisenberg relation $ZX=\omega XZ$.  The minimal
+Harper operator
+\[
+ H_{\rm H}=X+X^\dagger+Z+Z^\dagger
+\]
+has exact spectrum
+\[
+\boxed{-2,\;1-\sqrt3,\;1+\sqrt3.}
+\]
+With the declared finite Wilson normalization $\sum_p(1-\Re\omega^{F_p})$, the $54$
+point/direction-class plaquettes give $81$; this normalization-dependent number is not a
+physical coupling prediction.
+
+Finally, couple the intrinsic magnetic operator $H_{\rm mag}$ to the existing causal
+Clifford Dirac walk by
+\[
+ H(p)=\sum_{j=1}^3p_j\alpha_j\otimes I
+ +\beta\otimes(m_0I+gH_{\rm mag}).
+\]
+Clifford anticommutation yields the exact identity
+\[
+\boxed{H(p)^2=|p|^2I+I\otimes(m_0I+gH_{\rm mag})^2,}
+\]
+and therefore
+\[
+\boxed{E_{h,\pm}(p)=\pm\sqrt{|p|^2+(m_0+gh)^2}.}
+\]
+This is an exact relativistic-form dispersion in lattice units.  The parameters $m_0,g$,
+physical $c$, particle assignments, and curved-spacetime dynamics remain open.
+
+A useful matter-sector falsifier also emerges.  Every allowed E$_6$ cubic lift has
+$(t_0,t_1,t_2)=(k,k+\lambda,k+2\lambda)$ and hence total $\mathbb Z_3$ charge zero, but
+each forbidden firewall fiber $(0,1,2)$ is neutral as well.  Thus simple $\mathbb Z_3$
+charge conservation cannot explain the $36/9$ cubic selection.  The selector must involve
+richer incidence, holonomy, $L_\infty$, CE2/metaplectic, or chirality data.
+
+\paragraph{Cover/F$_4$ boundary.}
+The selected $13$-cover still has exact stabilizer data
+$1152\to576$ with kernel $2$ and orbit split $1+12$.  The direct GAP program now requests
+an explicit moving-$12$ conjugator and the committed consumer will compose it with the
+frozen Latin--F$_4$ short-root-pair map.  No cover-to-root object dictionary is asserted
+until that queued action-level witness is emitted.
+
+\paragraph{Evidence boundary.}
+The finite algebra, code, spectrum, gauge-curvature, and Dirac identities above are kept
+separate from physical semantics.  They do not yet derive the Standard Model spectrum,
+physical masses, the speed of light, a gauge coupling, gravity, or a continuum spacetime.
