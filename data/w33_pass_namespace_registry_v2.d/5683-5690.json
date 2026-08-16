@@ -2,7 +2,7 @@
   "schema": "w33.pass_namespace_registry.v2.fragment",
   "range": [5683, 5690],
   "owner": "openai_gpt5_6_sol",
-  "status": "RESERVED_ACTIVE",
+  "status": "CLOSED_STRUCTURAL__CI_REPLAY_PENDING",
   "created_utc": "2026-08-16T07:09:00Z",
   "tasks": {
     "5683": "search Levi H1 for balanced nontrivial Z2 voltage signatures with improved signed spectral gap",
@@ -14,5 +14,15 @@
     "5689": "outside-box: test whether the 36/9 collision projector is the support shadow of fermionic exterior-algebra exclusion across bundle fibers",
     "5690": "outside-box: identify the topology of the deck16 Herm2 moduli space and compute Berry/Chern data on the normalized two-level multiplicity sphere"
   },
-  "boundary": "No q5 work is duplicated. Balanced-cover, Jacobi, commutant, metric-clock, fermionic and Berry claims must be demonstrated by explicit finite operators or exact identities; dimension coincidences and analogy are non-evidence."
+  "deliverables": {
+    "summary": "data/PART_W33_PASS5683_5690_PHYSICS_RAMANUJAN_SU3_FRONTIER_SUMMARY.json",
+    "report": "analysis/PASS5683_5690_physics_ramanujan_su3_frontier.md",
+    "prior_art": "analysis/PASS5683_5690_external_prior_art.md",
+    "insert": "analysis/PASS5683_5690_physics_ramanujan_su3_frontier_insert.tex",
+    "homepage_source": "analysis/PASS5683_5690_index_insert.html",
+    "runner": "analysis/w33_pass5683_5690_runner.py",
+    "tests": "tests/test_w33_pass5683_5690_physics_ramanujan_su3.py",
+    "workflow": ".github/workflows/w33_pass5683_5690_physics_ramanujan_su3.yml"
+  },
+  "boundary": "No q5 work is duplicated. Balanced-cover, Jacobi, commutant, metric-clock, fermionic and Berry claims require explicit finite operators or exact identities; dimension coincidences and analogy are non-evidence. CI replay, homepage materialization, and three-manuscript compilation must pass before this status is upgraded beyond structural closure."
 }
