@@ -1,0 +1,134 @@
+{
+  "boundary": "Pass 5516's isomorphism is GAP IsomorphismGroups on the Klein V4 tripartite incidence automorphism group against the S_13 image; the V4 table is built as XOR on F2^2. Pass 5519 summarises the SP43 bundle's own REPORT.md and does not re-verify it. Pass 5520's comparison is against the text of DCCLXXXIV, not a rerun of it",
+  "pass_5516": {
+    "AutPar_full_order": 576,
+    "AutPar_on_12_order": 576,
+    "AutPar_spectrum": [
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        75
+      ],
+      [
+        3,
+        80
+      ],
+      [
+        4,
+        180
+      ],
+      [
+        6,
+        240
+      ]
+    ],
+    "AutPar_struct": "((A4 x A4) : C2) : C2",
+    "S13_image_order": 576,
+    "S13_spectrum": [
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        75
+      ],
+      [
+        3,
+        80
+      ],
+      [
+        4,
+        180
+      ],
+      [
+        6,
+        240
+      ]
+    ],
+    "S13_struct": "((A4 x A4) : C2) : C2",
+    "closes": "the gap Pass 5511 flagged in Pass 5491's claim",
+    "iso_full": true
+  },
+  "pass_5517": {
+    "finding": "the two isotopy classes of order-4 Latin squares carry the two sides of this thread: C4 -> 192 = R, V4 -> 576 = W(F4)/{+-1}",
+    "identification": "192 with 48 elements of order 8 is the orientation-preserving tesseract group R, per their Pass5310",
+    "result": {
+      "order": 192,
+      "spectrum": {
+        "1": 1,
+        "2": 43,
+        "3": 32,
+        "4": 36,
+        "6": 32,
+        "8": 48
+      },
+      "structure": "(((C4 x C4) : C3) : C2) : C2"
+    },
+    "wrong_table": "cyclic C4, (r+c) mod 4"
+  },
+  "pass_5518": {
+    "decomposition": "affine/hyperplane 40 = 13 + 27",
+    "orbit_total": 27,
+    "outer_orbit_sizes": [
+      8,
+      8,
+      8,
+      1,
+      2
+    ],
+    "points": 40,
+    "vs_mine": "16 + 12 + 12 by a quadratic form; unrelated structures"
+  },
+  "pass_5519": {
+    "content": "explicit Sp(4,3) -> W(E6)-even isomorphism, degree 120, order 25920, E8 root isometry, trivial sign cocycle",
+    "sharpens": "Pass 5503 -- Sp(4,3) is transitive on the forty points but is W(E6)-even on 120 E8 lines, so 'sees no structure' is true only of that point set"
+  },
+  "pass_5520": {
+    "disagreements_resolved": [
+      "F4 roots 48 not 96",
+      "96 polytope vs 576 configuration"
+    ],
+    "each_adds": {
+      "DCCLXXXIV": "K12 horizon, level 4, never reached here",
+      "this_thread": "W(F4) as an actual stabiliser action"
+    },
+    "levels": [
+      [
+        "0",
+        "Q4 router, faces = 24",
+        "Q4, 24 faces -> 12 antipodal classes"
+      ],
+      [
+        "1",
+        "Tomotope/Reye |Aut| 96, 48 inc",
+        "Reye 12_4 16_3, |Aut| 576, 48 flags"
+      ],
+      [
+        "2",
+        "F4 roots stated as 96",
+        "F4 has 48 roots (verified Pass 5509)"
+      ],
+      [
+        "3",
+        "24-cell, |Aut| = |W(F4)| = 1152",
+        "W(F4) = 13-cover stabiliser (Pass 5468)"
+      ],
+      [
+        "4",
+        "K12 horizon, genus 6, 12 vertices",
+        "not reached"
+      ]
+    ]
+  },
+  "pass_5521": {
+    "correction": "Pass 5512 assumed the index was scoped to analysis/; it is not. Neither find this session was a search problem",
+    "index_files": 4917,
+    "outside_usual_subtrees": 226,
+    "real_gap": "bundle directories hold .json and .zip; the index globs source and prose, so certificate bundles are invisible to it",
+    "top_level_dirs": 170
+  }
+}

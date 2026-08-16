@@ -1,0 +1,10 @@
+{
+  "AutPar_full_order": 576,
+  "AutPar_on_12_order": 576,
+  "S13_image_order": 576,
+  "iso_full": true,
+  "AutPar_struct": "((A4 x A4) : C2) : C2",
+  "S13_struct": "((A4 x A4) : C2) : C2",
+  "AutPar_spectrum": [ [ 1, 1 ], [ 2, 75 ], [ 3, 80 ], [ 4, 180 ], [ 6, 240 ] ],
+  "S13_spectrum": [ [ 1, 1 ], [ 2, 75 ], [ 3, 80 ], [ 4, 180 ], [ 6, 240 ] ]
+}
