@@ -1,0 +1,86 @@
+{
+  "boundary": "Pass 5533 DESCRIBES the 27-graph (8-regular, lambda 1, four line directions) and does not name it in the literature. Pass 5534 runs the bundle's own verifier and inherits whatever that verifier checks. Pass 5536 exhibits no map between the point and line decompositions. Pass 5537 does not reach levels 4 or 5",
+  "pass_5532": {
+    "closed_forms": {
+      "A_and_B": "q^2(q-1)/2",
+      "S": "q^2"
+    },
+    "count": "seventh q=3 coincidence on this thread",
+    "equal_iff": "(q-1)/2 = 1, i.e. q = 3 only",
+    "rows": [
+      {
+        "A": 9,
+        "AB_pred": 9,
+        "B": 9,
+        "S": 9,
+        "S_pred": 9,
+        "affine": 27,
+        "even": true,
+        "q": 3
+      },
+      {
+        "A": 50,
+        "AB_pred": 50,
+        "B": 50,
+        "S": 25,
+        "S_pred": 25,
+        "affine": 125,
+        "even": false,
+        "q": 5
+      },
+      {
+        "A": 147,
+        "AB_pred": 147,
+        "B": 147,
+        "S": 49,
+        "S_pred": 49,
+        "affine": 343,
+        "even": false,
+        "q": 7
+      }
+    ]
+  },
+  "pass_5533": {
+    "aut": 1296,
+    "degree": 8,
+    "description": "collinearity graph of a partial linear space with four line-directions per point and lines of size three -- AG(3,3) cut by symplectic perpendicularity",
+    "diameter": 3,
+    "edges": 108,
+    "girth": 3,
+    "lambda": 1,
+    "not": [
+      "Schlafli",
+      "H(3,3)",
+      "strongly regular"
+    ],
+    "vertices": 27
+  },
+  "pass_5534": {
+    "exit": 0,
+    "note": "verifier opens its JSONs by bare filename and only runs from inside its own directory",
+    "result": "ALL CHECKS PASSED"
+  },
+  "pass_5535": {
+    "classes": "nine points each, not closed under their span",
+    "tetracode": "[4,2,3]_3, nine codewords, LINEAR",
+    "verdict": "NO; eighth coincidence, 9 = 3^2 is the whole resemblance"
+  },
+  "pass_5536": {
+    "line_decomposition": "16+12+6+6",
+    "no_map": "W(3,3) is self-dual only for even q",
+    "point_decompositions": [
+      "quadric 16+12+12",
+      "affine 27+13",
+      "crossed: 9+9+9 and 7+3+3"
+    ]
+  },
+  "pass_5537": {
+    "code_files": 10,
+    "json_indexing": "declined -- ~7,000 certificate JSONs are numeric machine output and the token grammar was calibrated on prose and code; the right fix is a separate certificate index",
+    "k12_files": 12,
+    "not_reached": [
+      "level 4 K12 horizon",
+      "level 5 [72,66,3]_3"
+    ]
+  }
+}
