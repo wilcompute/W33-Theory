@@ -1,0 +1,114 @@
+{
+  "boundary": "Pass 5638 refutes an ARCHITECTURAL claim, not the flag arithmetic: 192 = (2+7+7) x 12 = 24+84+84 stands. The codec adjacencies used are the ones the 2026-05-29 file names (Csaszar vertex-adjacency, Szilassi face-adjacency); both are K7 and that is what obstructs. Pass 5639 kills a numerical coincidence on transitivity, which does not bear on any other 192 in the corpus. Pass 5641 reports alpha(W(3,9)) OPEN -- 49 is an unproved incumbent against a bound of 82",
+  "pass_5635": {
+    "corpus": 5056,
+    "delta_certificates": -2,
+    "finding": "the routing blocklist moved 2 certificates of 5,056; the 60/68/70 sequence was three corpora, not a trend",
+    "off_pct": 70.8,
+    "on_pct": 70.7,
+    "shared_tokens_off": 15127,
+    "shared_tokens_on": 12887
+  },
+  "pass_5636": {
+    "corpus": 5056,
+    "root_cause": "all three recalibrations ranked TOKENS and measured FILES; router stems carry many tokens across 0.2% of files, so suppressing them cannot move a per-file rate",
+    "router_files": 10
+  },
+  "pass_5637": {
+    "stems_by_file_hits": [
+      [
+        "depth",
+        538,
+        1155
+      ],
+      [
+        "tomotope_flag",
+        190,
+        939
+      ],
+      [
+        "line",
+        272,
+        802
+      ],
+      [
+        "support",
+        238,
+        601
+      ],
+      [
+        "value",
+        105,
+        583
+      ],
+      [
+        "tick",
+        70,
+        526
+      ]
+    ],
+    "surfaced": "tomotope_flag is the second-largest hub by file-hits -- 939 across 63 certificates -- and was invisible under token ranking"
+  },
+  "pass_5638": {
+    "codec_graph_bipartite": false,
+    "codec_graph_degrees": [
+      0,
+      6
+    ],
+    "codec_graph_triangles": 70,
+    "codec_size": 12,
+    "codec_split": [
+      2,
+      7,
+      7
+    ],
+    "flags": 192,
+    "isomorphic_to_q4": false,
+    "open_since": "2026-05-29",
+    "source": "analysis/2026-05-29_flag_codec_toroidal_hypercube_boundary.md",
+    "survives": "192 = 16 x 12 = 24 + 84 + 84, the flag arithmetic",
+    "verdict": "NEGATIVE -- Csaszar and Szilassi adjacencies are each K7; Q4 is bipartite and triangle-free. Invariant under every assignment"
+  },
+  "pass_5639": {
+    "coincidence_number": 9,
+    "flag_partition": [
+      24,
+      84,
+      84
+    ],
+    "rot_q4": 192,
+    "tomotope_flags": 192,
+    "verdict": "distinct -- a regular action of an order-192 group is transitive, and 24+84+84 is an Aut-invariant partition into unequal parts"
+  },
+  "pass_5640": {
+    "certificate": "bt1371_q6_tomotope_explicit_orbit_address_table.json",
+    "confirms": "the DCCLXXXIV errata: 96 is the polytope's group",
+    "group_order": 96,
+    "orbits": [
+      96,
+      96
+    ],
+    "reading": "two torsors under an order-96 group, never one torsor under an order-192 group -- an independent refutation already committed",
+    "rows": 192
+  },
+  "pass_5641": {
+    "hoffman": 82,
+    "incumbent": 49,
+    "line_size": 10,
+    "lines": 820,
+    "points": 820,
+    "proved": false,
+    "q": 9,
+    "status": "OPEN",
+    "why": "the clique-constraint run died on a point-index KeyError, not on time; the prior edge run spent 70,483s unproved"
+  },
+  "pass_5642": {
+    "files": 28,
+    "finding": "nine guards built this session, none previously run on my own output; two findings in 28 files",
+    "guards": {
+      "check_convention_fixed_form": 1,
+      "check_order_coincidence": 1,
+      "check_spectral_overreach": 0
+    }
+  }
+}

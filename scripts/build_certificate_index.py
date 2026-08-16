@@ -43,6 +43,21 @@ ALIASES = {
     "image_order": "image", "image_in_s13_order": "image",
 }
 
+
+# ROUTING STEMS (Pass 5588).  Pass 5580 measured what drives the guard's 60% firing
+# rate and it is not mathematics: `chart`, `source_chart`, `target_chart` and
+# `route_index` each carry 538 distinct shared tokens, then `line`, `rows`, `support`.
+# That is the holonet router's per-chart bookkeeping, emitted identically by every pass
+# that touches it, so it collides everywhere and means nothing.
+#
+# Dropped by STEM rather than by file, because Pass 5573 tried excluding whole
+# certificates by integer density and the firing rate went UP -- the dense files are
+# dense with UNIQUE integers and were mostly not firing at all.  The sharing is on the
+# key axis, so the filter has to be too.
+ROUTING_STEMS = {"chart", "source_chart", "target_chart", "route_index", "route",
+                 "serviced", "time_bin", "time_bin_envelope", "slot", "port",
+                 "lane", "queue", "buffer", "packet", "frame_id"}
+
 SKIP_KEYS = {"pass", "passes", "schema", "status", "date", "version", "seed",
              "seconds", "runtime", "timestamp", "n", "id", "index", "count"}
 
@@ -65,7 +80,7 @@ def tokens(doc) -> set[str]:
     out = set()
     for k, v in flat(doc):
         leaf = k.split(".")[-1].lower()
-        if len(leaf) < 4 or leaf in SKIP_KEYS:
+        if len(leaf) < 4 or leaf in SKIP_KEYS or leaf in ROUTING_STEMS:
             continue
         if not (2 <= abs(v) < 10 ** 12):
             continue

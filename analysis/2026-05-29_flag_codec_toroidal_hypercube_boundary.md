@@ -306,3 +306,31 @@ The tomotope packages the resulting 192 flags.
 ## Honest boundary
 
 This proves the finite flag-codec accounting and its compatibility with the Q4 toroidal boundary. It does not yet assign each of the 16 codecs to a unique Q4 vertex with a canonical adjacency-preserving map. That is the next valid test: build the explicit 16-codec adjacency graph and compare it to Q4 / toroidal-knight adjacency.
+
+## ERRATA (Pass 5638, 2026-08-16) — the open test resolves NEGATIVE
+
+This file closes by naming its own next test:
+
+> build the explicit 16-codec adjacency graph and compare it to Q4 / toroidal-knight
+> adjacency.
+
+Built at Pass 5638. **It fails, and the obstruction is invariant.**
+
+Császár's vertex-adjacency is K7 (its skeleton is the complete graph on 7 vertices)
+and Szilassi's face-adjacency is K7 (every pair of its faces shares an edge). So the
+16-codec graph is 6-regular with 70 triangles, while Q4 is 4-regular, bipartite and
+triangle-free. Bipartiteness and triangle-freeness are invariants of the codec graph
+rather than of the assignment, so **no choice of which codec sits at which Q4 vertex
+can repair it.**
+
+**What stands:** the flag arithmetic. `192 = 16 × 12 = (2 + 7 + 7) × 12` and
+`192 = 24 + 84 + 84` are correct counts, and the codec decomposition is sound.
+
+**What does not stand:** the architectural sentence *"Q4 supplies the toroidal boundary
+layout for all 16 codecs."* Q4 supplies sixteen **slots** — a set of the right size —
+and the codecs inherit none of its adjacency.
+
+**Related:** Pass 5639 separately kills `|Rot(Q4)| = 192 = tomotope flags` as a
+coincidence: a regular action of an order-192 group is transitive, and `24 + 84 + 84`
+is an Aut-invariant partition into unequal parts. `bt1371` independently records the
+real structure — two regular orbits of 96 under the order-96 tomotope group.
