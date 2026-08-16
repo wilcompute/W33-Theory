@@ -1,0 +1,80 @@
+{
+  "boundary": "Pass 5500-5503 are exact computations at q=3 (and q=2 for the splitting). Pass 5504 does NOT claim the family is new and does not perform a literature search. Pass 5505 reports divisibility only and explicitly declines the subgroup inference. Pass 5506 reports the Heawood graph as UNCONNECTED to this thread. Pass 5507 is open",
+  "pass_5500": {
+    "by_quadric_points": {
+      "0": 6,
+      "1": 16,
+      "2": 12,
+      "4": 6
+    },
+    "line_orbits": [
+      16,
+      12,
+      6,
+      6
+    ],
+    "lines": 40,
+    "point_orbits": [
+      16,
+      12,
+      12
+    ],
+    "verdict": "the line action is strictly finer; two 6-orbits are new"
+  },
+  "pass_5501": {
+    "q2_points": 15,
+    "q2_singular": 9,
+    "q2_splits": false,
+    "reason": "GF(2) has no non-square; the split is index two in F_q^*",
+    "verdict": "the two-copy duality is an odd-q phenomenon"
+  },
+  "pass_5502": {
+    "heawood_edges": 21,
+    "line_degrees": {
+      "3": 3,
+      "5": 10,
+      "7": 21
+    },
+    "verdict": "match at q=7 only; dismissed like the 48/48 at Pass 5495"
+  },
+  "pass_5503": {
+    "answer": "transitivity is exactly what hides the decomposition; no W(3,3)-invariant sees 16/12/12 or 16/12/6/6",
+    "sp43_transitive_on_points": true
+  },
+  "pass_5504": {
+    "construction": "incidence between a hyperbolic quadric's singular points and one non-degenerate class, under SYMPLECTIC perpendicularity -- two forms on one space",
+    "novelty": "NOT claimed; literature search not performed"
+  },
+  "pass_5505": {
+    "aut_medial": 576,
+    "clock_order": 32,
+    "quotient": 18,
+    "verdict": "divisibility only; subgroup question NOT answered"
+  },
+  "pass_5506": {
+    "connected": false,
+    "heawood": {
+      "aut": 336,
+      "bipartition": [
+        7,
+        7
+      ],
+      "edges": 21,
+      "girth": 6,
+      "vertices": 14
+    },
+    "medial_layer": {
+      "aut": 576,
+      "bipartition": [
+        12,
+        16
+      ],
+      "flags": 48
+    }
+  },
+  "pass_5507": {
+    "open": "whether it has a polytope realisation",
+    "q5_member": "60_6 36_10",
+    "why_it_matters": "a polytope at q=5 would make the tomotope the first of a series rather than the only geometric member"
+  }
+}
