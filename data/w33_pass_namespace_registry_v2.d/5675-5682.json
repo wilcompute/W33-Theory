@@ -1,0 +1,18 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.fragment",
+  "range": [5675, 5682],
+  "owner": "openai_gpt5_6_sol",
+  "status": "RESERVED_ACTIVE",
+  "created_utc": "2026-08-16T06:32:00Z",
+  "tasks": {
+    "5675": "classify the full stabilizer-equivariant particle-hole deck16 Hamiltonian moduli and the fate of all dimensionless mass ratios",
+    "5676": "construct an exact bundle/cochain projector for the E6 horizontal36 versus vertical9 cubic sector and test whether a Hodge/locality principle removes vertical couplings",
+    "5677": "replace the dead repeated C2 lift with connected elementary-abelian voltage covers generated from Levi H1 and prove the connectivity criterion",
+    "5678": "derive the character/spectral decomposition of the Z2^r cover tower and identify what would be required for a genuine continuum spectral dimension",
+    "5679": "analyze the exact two-sheet Feshbach self-energy under particle-hole symmetry and determine which poles/zeros are symmetry protected",
+    "5680": "bonkers: compute the finite class-D Pfaffian/Z2 index of the deck-odd block and test its robustness under the full equivariant perturbation cone",
+    "5681": "bonkers: decompose the vertical bad9 site sector under AGL(2,3), test the canonical 1+8 split, and aggressively falsify the eight-gluon analogy unless a Lie bracket exists",
+    "5682": "bonkers: derive the causal-speed scaling law on connected graph-cover refinements and test whether the finite geometry fixes or leaves free the physical light-speed calibration"
+  },
+  "boundary": "No q5 work is duplicated from Track A 5667-5674. Physical claims require operator, cochain, representation, or scaling evidence; dimension matches alone are non-evidence."
+}
