@@ -1,0 +1,108 @@
+name: W33 Pass5603-5610 fusion dynamics and s12 phase
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5603_psl2_fixedpoint_fusion_symbolic.py'
+      - 'analysis/w33_pass5604_isodual_minimum_distance.py'
+      - 'analysis/w33_pass5605_hodge_hashimoto_scaling_firewall.py'
+      - 'analysis/w33_pass5606_cover12_explicit_conjugator.g'
+      - 'analysis/w33_pass5606_cover_to_f4_rootpair_map.py'
+      - 'analysis/w33_pass5607_segre_dalembertian_no_go.py'
+      - 'analysis/w33_pass5608_s12_golay_weight12_m12_action.py'
+      - 'analysis/w33_pass5609_s12_heisenberg_phase_segre_spectrum.py'
+      - 'analysis/w33_pass5610_s12_w33_symplectic_embedding_firewall.py'
+      - 'analysis/w33_pass5603_5610_runner.py'
+      - 'analysis/PASS5603_5610_fusion_dynamics_s12_report.md'
+      - 'analysis/PASS5603_5610_fusion_dynamics_s12_insert.tex'
+      - 'analysis/PASS5603_5610_index_insert.html'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'tests/test_w33_pass5603_5610_fusion_dynamics_s12.py'
+      - 'data/w33_pass_namespace_registry_v2.d/5603-5610.json'
+      - 'data/w33_publication_frontier_contract_v2.json'
+      - '.github/workflows/w33_pass5603_5610_fusion_dynamics_s12.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  replay-publish-compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 70
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install replay dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pytest numpy scipy sympy networkx
+          sudo apt-get update -qq
+          sudo apt-get install -y gap gap-grape
+      - name: Replay Python Pass5603-5610 producers
+        run: python analysis/w33_pass5603_5610_runner.py
+      - name: Replay exact Pass5606 cover12 S12 conjugator
+        env:
+          W33_REPO: ${{ github.workspace }}
+        run: |
+          set -euo pipefail
+          rm -f data/PART_W33_PASS5606_COVER12_EXPLICIT_CONJUGATOR.json
+          gap -q -b --nointeract analysis/w33_pass5606_cover12_explicit_conjugator.g
+          test -s data/PART_W33_PASS5606_COVER12_EXPLICIT_CONJUGATOR.json
+          grep -q '"cover12_order": 576' data/PART_W33_PASS5606_COVER12_EXPLICIT_CONJUGATOR.json
+          grep -q '"latin12_order": 576' data/PART_W33_PASS5606_COVER12_EXPLICIT_CONJUGATOR.json
+          grep -q '"conjugate_in_S12": true' data/PART_W33_PASS5606_COVER12_EXPLICIT_CONJUGATOR.json
+      - name: Materialize explicit cover to F4 root-pair table
+        run: |
+          python analysis/w33_pass5596_f4_rootpair_latin_action.py
+          python analysis/w33_pass5606_cover_to_f4_rootpair_map.py
+          test -s data/PART_W33_PASS5606_COVER_TO_F4_ROOTPAIR_MAP.json
+      - name: Focused regression
+        run: python -m pytest -q tests/test_w33_pass5603_5610_fusion_dynamics_s12.py
+      - name: Materialize homepage and audit publication DAG
+        run: |
+          python tools/integrate_bt3376_bt3389.py --report /tmp/public-integration.json
+          python analysis/w33_pass5364_publication_dag_audit.py --report /tmp/publication-dag.json
+          test "$(grep -c 'id=\"pass-5603-5610-fusion-dynamics-s12\"' docs/index.html)" -eq 1
+          git diff --check
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+      - name: Compile canonical manuscripts
+        run: |
+          mkdir -p evidence/pass5603_5610
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass5603_5610/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass5603_5610/pdf_sha256.txt
+      - name: Freeze replay certificates and homepage materialization
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            data/PART_W33_PASS5603_PSL2_FIXEDPOINT_FUSION_SYMBOLIC.json \
+            data/PART_W33_PASS5604_ISODUAL_MINIMUM_DISTANCE.json \
+            data/PART_W33_PASS5605_HODGE_HASHIMOTO_SCALING_FIREWALL.json \
+            data/PART_W33_PASS5606_COVER12_EXPLICIT_CONJUGATOR.json \
+            data/PART_W33_PASS5606_COVER_TO_F4_ROOTPAIR_MAP.json \
+            data/PART_W33_PASS5607_SEGRE_DALEMBERTIAN_NO_GO.json \
+            data/PART_W33_PASS5608_S12_GOLAY_WEIGHT12_M12_ACTION.json \
+            data/PART_W33_PASS5609_S12_HEISENBERG_PHASE_SEGRE_SPECTRUM.json \
+            data/PART_W33_PASS5610_S12_W33_SYMPLECTIC_EMBEDDING_FIREWALL.json \
+            docs/index.html
+          if git diff --cached --quiet; then
+            echo 'Certificates and homepage already materialized.'
+          else
+            git commit -m 'Freeze Pass5603-5610 certificates and homepage card [skip ci]'
+            git push
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass5603-5610-fusion-dynamics-s12
+          path: evidence/pass5603_5610/**
