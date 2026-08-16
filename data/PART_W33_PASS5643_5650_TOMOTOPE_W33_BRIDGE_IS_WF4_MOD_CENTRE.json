@@ -1,0 +1,119 @@
+{
+  "boundary": "Pass 5645 proves an isomorphism of ABSTRACT GROUPS between Aut(Levi) and W(F4)/Z; it does NOT construct an equivariant map between the tomotope configuration and the W(3,3) simplex, and does not claim the two actions are equivalent as permutation groups. Pass 5647 leaves 168 OPEN, neither killed nor established. Pass 5650 reports alpha(W(3,9)) OPEN with a new upper bound of 80; 47 is an unproved incumbent",
+  "pass_5643": {
+    "configuration": "12_4 16_3 (Reye)",
+    "correction": "2026-05-29 wrote '16 = Q4 vertices'; the working compiler's 16 is Q4 EDGE classes mod antipodal. Two different 16s",
+    "edge_degree": [
+      4
+    ],
+    "edges": 12,
+    "face_degree": [
+      3
+    ],
+    "faces": 16,
+    "q4_edge_classes_mod_antipodal": 16,
+    "q4_face_classes_mod_antipodal": 12
+  },
+  "pass_5644": {
+    "coincidence_number": 10,
+    "complement_is_rook_4x4": true,
+    "face_aut_iso_s4wrs2": true,
+    "face_aut_iso_wf4": false,
+    "face_graph_aut": 1152,
+    "face_graph_degree": 9,
+    "face_graph_triangles": 96,
+    "rook_aut": 1152,
+    "verdict": "1152 = |W(F4)| = |S4 wr S2|, non-isomorphic; the 16-face graph is the rook's-graph complement so its Aut is S4 wr S2",
+    "wf4_iso_s4wrs2": false
+  },
+  "pass_5645": {
+    "bridge": "the tomotope's Reye configuration and the W(3,3) simplex stabiliser carry the SAME group, W(F4)/{+-1}, at the Levi level -- proved by IsomorphismGroups",
+    "levi_aut": 576,
+    "levi_iso_wf4_mod_centre": true,
+    "levi_structure": "((A4 x A4) : C2) : C2",
+    "prior_art": [
+      "Pass 5416-5419 (stabiliser 1152, image 576)",
+      "Pass 5468-5475 (stabiliser IS W(F4))",
+      "Pass 5488-5491 (Reye = Q4 face-edge / <1111>)"
+    ],
+    "wf4_centre": 2,
+    "wf4_mod_centre": 576,
+    "wf4_mod_centre_structure": "((A4 x A4) : C2) : C2"
+  },
+  "pass_5646": {
+    "bt1413_blocks_are_equal": true,
+    "codec_partition": [
+      24,
+      84,
+      84
+    ],
+    "finding": "no common refinement: the plaquette chain never meets the codec stratification"
+  },
+  "pass_5647": {
+    "halves": [
+      84,
+      84
+    ],
+    "psl27": 168,
+    "status": "OPEN",
+    "sum": 168,
+    "why": "duality supplies an exchange of the two 84s so the invariant split does not forbid transitivity; but duality generates C2, not an order-168 regular action"
+  },
+  "pass_5648": {
+    "orbits": [
+      96,
+      96
+    ],
+    "other_lane_carrier": 32,
+    "separator": "q6_direction",
+    "this_carrier": 192,
+    "verdict": "not the same involution, on carrier grounds"
+  },
+  "pass_5649": {
+    "audit": [
+      {
+        "certificates": 11,
+        "group": "S4",
+        "order": 24
+      },
+      {
+        "certificates": 6,
+        "group": "Rot(Q4)",
+        "order": 192
+      },
+      {
+        "certificates": 5,
+        "group": "PSp(4,3)",
+        "order": 25920
+      },
+      {
+        "certificates": 5,
+        "group": "Sp(4,3)/W(E6)",
+        "order": 51840
+      },
+      {
+        "certificates": 4,
+        "group": "Aut(tomotope)",
+        "order": 96
+      },
+      {
+        "certificates": 4,
+        "group": "PSL(2,7)",
+        "order": 168
+      }
+    ],
+    "method": "scan for an order and a set size coinciding in one certificate; the guard flags phrasing, this flags data",
+    "total_pairs": 35
+  },
+  "pass_5650": {
+    "dual_bound": 80.83841179,
+    "hoffman": 82,
+    "improvement": "dual bound 80.84 < Hoffman 82, so alpha <= 80; the clique LP relaxation equals Hoffman exactly",
+    "incumbent": 47,
+    "lines": 820,
+    "lp_relaxation": 82,
+    "points": 820,
+    "proved": false,
+    "status": "OPEN"
+  }
+}

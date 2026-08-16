@@ -81,17 +81,33 @@ def main(argv: list[str]) -> int:
             doc = json.loads(f.read_text(encoding="utf-8", errors="replace"))
         except Exception:
             continue
-        for t in sorted(tokens(doc)):
+        # RANK BY FILE-HITS, not by token count (Pass 5637). Firing is near-universal --
+        # 70% of certificates carry some shared token -- so `whether` one fired is nearly
+        # information-free and only `which` matters. A stem the corpus uses in 1,155
+        # places is bookkeeping; a stem it uses in 5 is a result. Pass 5580 ranked stems
+        # by DISTINCT TOKENS, saw routing keys on top, and prescribed a blocklist that
+        # moved 2 certificates out of 5,056 -- because those tokens live in ten files.
+        hits = []
+        for t in tokens(doc):
             prior = [x for x in idx.get(t, []) if x != f.name]
             if prior:
-                total += 1
-                print(f"  {f.name}\n      {t}  already in: "
-                      f"{', '.join(prior[:4])}{' ...' if len(prior) > 4 else ''}")
+                stem = t.split("@")[0]
+                hits.append((sum(len(v) for k, v in idx.items()
+                                 if k.split("@")[0] == stem), t, prior))
+        hits.sort()
+        total += len(hits)
+        for rank, (reach, t, prior) in enumerate(hits):
+            mark = "RARE  " if rank < 3 else "      "
+            print(f"  {mark}{f.name}\n        {t}  (stem reaches {reach} file-slots)"
+                  f"  already in: "
+                  f"{', '.join(prior[:3])}{' ...' if len(prior) > 3 else ''}")
     print(f"\n  {total} token(s) already present elsewhere, over {len(files)} certificate(s)")
     if total:
         print("""
-  CANDIDATES. Pass 4800's `alpha@18` sat in a committed certificate while six passes
-  re-derived it. Read the prior certificate before claiming the number is new.""")
+  CANDIDATES, RAREST FIRST. Pass 4800's `alpha@18` sat in a committed certificate while
+  six passes re-derived it. Read the RARE ones first: a stem with small reach names a
+  quantity, a stem with large reach names bookkeeping. Ranking is the fix that a stem
+  blocklist was not -- Pass 5635 A/B'd the blocklist and it moved two certificates.""")
     print("  (zero means nothing unless --selftest passes; run it)")
     return 0
 

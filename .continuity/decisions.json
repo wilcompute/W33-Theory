@@ -320,8 +320,12 @@
       "supersededBy": [
         "1777318403161-s5j46a"
       ],
-      "relatedTo": [],
-      "causes": [],
+      "relatedTo": [
+        "1786859568721-fahph6"
+      ],
+      "causes": [
+        "1786859568721-fahph6"
+      ],
       "causedBy": []
     },
     "metadata": {
@@ -349,8 +353,12 @@
         "1777318403161-pu8p9x"
       ],
       "supersededBy": [],
-      "relatedTo": [],
-      "causes": [],
+      "relatedTo": [
+        "1786859568721-fahph6"
+      ],
+      "causes": [
+        "1786859568721-fahph6"
+      ],
       "causedBy": []
     },
     "metadata": {
@@ -375,8 +383,12 @@
     "relationships": {
       "supersedes": [],
       "supersededBy": [],
-      "relatedTo": [],
-      "causes": [],
+      "relatedTo": [
+        "1786859568721-fahph6"
+      ],
+      "causes": [
+        "1786859568721-fahph6"
+      ],
       "causedBy": [
         "manual-20260507-cccxcvi-posix-artifact-path",
         "manual-20260507-fix-e8-runner-z3-output-contract",
@@ -407,8 +419,12 @@
     "relationships": {
       "supersedes": [],
       "supersededBy": [],
-      "relatedTo": [],
-      "causes": [],
+      "relatedTo": [
+        "1786859568721-fahph6"
+      ],
+      "causes": [
+        "1786859568721-fahph6"
+      ],
       "causedBy": []
     },
     "metadata": {
@@ -433,8 +449,12 @@
     "relationships": {
       "supersedes": [],
       "supersededBy": [],
-      "relatedTo": [],
-      "causes": [],
+      "relatedTo": [
+        "1786859568721-fahph6"
+      ],
+      "causes": [
+        "1786859568721-fahph6"
+      ],
       "causedBy": []
     },
     "metadata": {
@@ -459,8 +479,12 @@
     "relationships": {
       "supersedes": [],
       "supersededBy": [],
-      "relatedTo": [],
-      "causes": [],
+      "relatedTo": [
+        "1786859568721-fahph6"
+      ],
+      "causes": [
+        "1786859568721-fahph6"
+      ],
       "causedBy": [
         "manual-20260507-docs-index-photonic-runtime-link"
       ]
@@ -487,7 +511,9 @@
     "relationships": {
       "supersedes": [],
       "supersededBy": [],
-      "relatedTo": [],
+      "relatedTo": [
+        "1786859568721-fahph6"
+      ],
       "causes": [],
       "causedBy": []
     },
@@ -513,7 +539,9 @@
     "relationships": {
       "supersedes": [],
       "supersededBy": [],
-      "relatedTo": [],
+      "relatedTo": [
+        "1786859568721-fahph6"
+      ],
       "causes": [],
       "causedBy": [
         "manual-20260507-pin-e8-orchestrator-z3-output-check",
@@ -543,7 +571,9 @@
     "relationships": {
       "supersedes": [],
       "supersededBy": [],
-      "relatedTo": [],
+      "relatedTo": [
+        "1786859568721-fahph6"
+      ],
       "causes": [],
       "causedBy": []
     },
@@ -569,7 +599,9 @@
     "relationships": {
       "supersedes": [],
       "supersededBy": [],
-      "relatedTo": [],
+      "relatedTo": [
+        "1786859568721-fahph6"
+      ],
       "causes": [],
       "causedBy": []
     },
@@ -622,7 +654,9 @@
       "supersedes": [],
       "supersededBy": [],
       "relatedTo": [],
-      "causes": [],
+      "causes": [
+        "1786859568721-fahph6"
+      ],
       "causedBy": []
     },
     "metadata": {
@@ -648,7 +682,9 @@
       "supersedes": [],
       "supersededBy": [],
       "relatedTo": [],
-      "causes": [],
+      "causes": [
+        "1786859568721-fahph6"
+      ],
       "causedBy": [
         "manual-20260507-test-e8-orchestrator-z3-output-contract",
         "manual-20260507-test-e8-manifest-z3-output-contract",
@@ -678,7 +714,9 @@
       "supersedes": [],
       "supersededBy": [],
       "relatedTo": [],
-      "causes": [],
+      "causes": [
+        "1786859568721-fahph6"
+      ],
       "causedBy": [
         "manual-20260507-cccxcvi-posix-artifact-path",
         "manual-20260507-fix-e8-runner-z3-output-contract",
@@ -710,7 +748,9 @@
       "supersedes": [],
       "supersededBy": [],
       "relatedTo": [],
-      "causes": [],
+      "causes": [
+        "1786859568721-fahph6"
+      ],
       "causedBy": []
     },
     "metadata": {
@@ -109984,7 +110024,9 @@
     "priority": "medium",
     "relationships": {
       "supersedes": [],
-      "supersededBy": [],
+      "supersededBy": [
+        "1786859568721-fahph6"
+      ],
       "relatedTo": [],
       "causes": [],
       "causedBy": []
@@ -110011,7 +110053,9 @@
     "priority": "medium",
     "relationships": {
       "supersedes": [],
-      "supersededBy": [],
+      "supersededBy": [
+        "1786859568721-fahph6"
+      ],
       "relatedTo": [],
       "causes": [],
       "causedBy": []
@@ -110039,6 +110083,11 @@
     ],
     "files": [],
     "status": "active",
+    "relationships": {
+      "supersededBy": [
+        "1786859568721-fahph6"
+      ]
+    },
     "metadata": {
       "status": "active"
     }
@@ -110063,6 +110112,11 @@
     ],
     "files": [],
     "status": "active",
+    "relationships": {
+      "supersededBy": [
+        "1786859568721-fahph6"
+      ]
+    },
     "metadata": {
       "status": "active"
     }
@@ -110085,6 +110139,11 @@
     ],
     "files": [],
     "status": "active",
+    "relationships": {
+      "supersededBy": [
+        "1786859568721-fahph6"
+      ]
+    },
     "metadata": {
       "status": "active"
     }
@@ -110108,6 +110167,11 @@
     "status": "active",
     "metadata": {
       "status": "active"
+    },
+    "relationships": {
+      "supersededBy": [
+        "1786859568721-fahph6"
+      ]
     }
   },
   {
@@ -110131,6 +110195,11 @@
     "status": "active",
     "metadata": {
       "status": "active"
+    },
+    "relationships": {
+      "supersededBy": [
+        "1786859568721-fahph6"
+      ]
     }
   },
   {
@@ -110153,6 +110222,11 @@
     "status": "active",
     "metadata": {
       "status": "active"
+    },
+    "relationships": {
+      "supersededBy": [
+        "1786859568721-fahph6"
+      ]
     }
   },
   {
@@ -110176,6 +110250,11 @@
     "status": "active",
     "metadata": {
       "status": "active"
+    },
+    "relationships": {
+      "supersededBy": [
+        "1786859568721-fahph6"
+      ]
     }
   },
   {
@@ -110193,7 +110272,9 @@
     "priority": "medium",
     "relationships": {
       "supersedes": [],
-      "supersededBy": [],
+      "supersededBy": [
+        "1786859568721-fahph6"
+      ],
       "relatedTo": [],
       "causes": [],
       "causedBy": []
@@ -118301,7 +118382,17 @@
         "1784322240762-in72qt",
         "1784322240858-8r4ujo",
         "1784322241138-d63l8k",
-        "1784409410004-2ofkhg"
+        "1784409410004-2ofkhg",
+        "1784409410004-kzfbyz",
+        "1784409410003-54eefw",
+        "09152407-437d-45ec-8fb8-6b5496138c01",
+        "1fb5332b-7df7-4881-bce0-800d23047ba3",
+        "5223d2c8-8d9a-4bc0-ba9e-040fded850a6",
+        "36a07730-0426-49d9-a088-24e18ef9f969",
+        "644650eb-c88b-4090-83af-c7ac9e9cef48",
+        "238ca080-17b6-438c-92bd-6eebc9c4ed42",
+        "4919a306-e98c-4f08-9830-945bf9d04adf",
+        "1784563511681-tcy2xj"
       ],
       "supersededBy": [],
       "relatedTo": [
@@ -118314,7 +118405,17 @@
         "1777318403161-qze7ej",
         "1777318403161-t7tcbd",
         "1777318403161-06lp3s",
-        "1777318403161-ya0ehy"
+        "1777318403161-ya0ehy",
+        "1777318403161-pu8p9x",
+        "1777318403161-s5j46a",
+        "1777318403161-xbitkl",
+        "1777318403161-ga2u8l",
+        "1777318403161-e7wo55",
+        "1777318403161-ucd66d",
+        "1777318403161-xalutx",
+        "1777318403161-3bj5ra",
+        "1777318403161-1thfcr",
+        "1777318403161-6tpseq"
       ],
       "causes": [],
       "causedBy": [
@@ -118327,7 +118428,17 @@
         "1777318403161-qze7ej",
         "1777318403161-t7tcbd",
         "1777318403161-06lp3s",
-        "1777318403161-ya0ehy"
+        "1777318403161-ya0ehy",
+        "1777318403161-pu8p9x",
+        "1777318403161-s5j46a",
+        "1777318403161-xbitkl",
+        "1777318403161-ga2u8l",
+        "1777318403161-e7wo55",
+        "1777318403161-ucd66d",
+        "1777318403161-2gx4ng",
+        "1777318403161-putaqm",
+        "1777318403161-z23gfu",
+        "1777318403161-yzf17v"
       ]
     },
     "metadata": {

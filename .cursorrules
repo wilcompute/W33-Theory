@@ -12,13 +12,14 @@ This file contains project context and decisions. AI assistants should read this
 **Repository:** Theory of Everything
 **Project Type:** Python Project | Python
 **Branch:** master
+**Tracking:** ahead 7, behind 0
 
 **Recent Commits:**
-- `da8f015 Reserve Pass5635-5642 (Track A): per-file firing, rarity ranking, tomotope_flag hub`
-- `4b5907b Reserve Pass5627-5634 physics continuation`
-- `a02addd Harden Pass5606 fixed-position GAP syntax`
-- `7ab6225 Pass5619-5626: add replay GAP publication and compile workflow`
-- `9ff2afc Repair Pass5606 conjugator JSON contract for object dictionary`
+- `430addd Continuity autogen refresh`
+- `31b2c91 Pass5638: the obstruction is the vertex stratum, not the Q4-to-flag route`
+- `88a12e9 Pass5635-5642: the 16 codecs are not a hypercube, and the two 192s are distinct`
+- `e8d9dcd Pass5630: classify deck-BdG commutant and falsify protected mass ratio two`
+- `24f5183 Pass5629: prove naive C2 refinement tower disconnects after one lift`
 
 **Working Tree:**
 - M .continuity/decisions.json
