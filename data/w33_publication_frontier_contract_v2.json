@@ -26,7 +26,8 @@
     {"kind":"id","token":"pass-5603-5610-fusion-dynamics-s12","source":"analysis/PASS5603_5610_index_insert.html"},
     {"kind":"id","token":"pass-5611-5618-physics-magnetic-frontier","source":"analysis/PASS5611_5618_index_insert.html"},
     {"kind":"id","token":"pass-5619-5626-physics-deck-bundle-frontier","source":"analysis/PASS5619_5626_index_insert.html"},
-    {"kind":"id","token":"pass-5627-5634-physics-stabilizer-gauge-rg","source":"analysis/PASS5627_5634_index_insert.html"}
+    {"kind":"id","token":"pass-5627-5634-physics-stabilizer-gauge-rg","source":"analysis/PASS5627_5634_index_insert.html"},
+    {"kind":"id","token":"pass-5675-5682-physics-voltage-classd-frontier","source":"analysis/PASS5675_5682_index_insert.html"}
   ],
   "boundary": "This contract certifies nested publication reachability, uniqueness, shared-tail consolidation, and public materialization only. It does not certify mathematical, hardware, laboratory, empirical, or physical claims."
 }
