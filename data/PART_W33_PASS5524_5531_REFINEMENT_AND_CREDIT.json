@@ -1,0 +1,57 @@
+{
+  "boundary": "Pass 5524 adds .md globs only and does not index JSON or zip. Pass 5525 reports a refinement and claims nothing beyond the counts. Pass 5526 rejects the Schlafli identification under the SYMPLECTIC adjacency on the affine points; another adjacency is not ruled out. Pass 5527 quotes DCCLXXXIV and does not re-verify its levels 4 and 5",
+  "pass_5524": {
+    "concrete_cost": "SP43_TO_WE6's REPORT.md carries an explicit Sp(4,3) -> W(E6) isomorphism and was unindexed",
+    "files_indexed": 5093,
+    "from_bundles": 28,
+    "outside_usual": 239,
+    "scope": ".md only; JSON would flood the token grammar",
+    "was": 4917
+  },
+  "pass_5525": {
+    "affine_split": [
+      9,
+      9,
+      9
+    ],
+    "cells": 6,
+    "hyperplane_split": [
+      7,
+      3,
+      3
+    ],
+    "note": "not claimed to be more than the standard affine conic count",
+    "refinement": {
+      "aff/A": 9,
+      "aff/B": 9,
+      "aff/S": 9,
+      "inf/A": 3,
+      "inf/B": 3,
+      "inf/S": 7
+    }
+  },
+  "pass_5526": {
+    "aut": 1296,
+    "degrees": [
+      8
+    ],
+    "edges": 108,
+    "is_schlafli": false,
+    "lambda": [
+      1
+    ],
+    "mu": [
+      0,
+      3
+    ],
+    "schlafli_aut": 51840,
+    "verdict": "the 27 is AG(3,3)'s point count 3^3, not the cubic surface's 27 lines",
+    "vertices": 27
+  },
+  "pass_5527": {
+    "C332c": "|W(F4)|/2 = f^2 = 576, f = 24",
+    "credit": "DCCLXXXIV owns 576 = |W(F4)|/2 = f^2 and the tower; this thread owns that the group ACTS on the 13-cover with orbits 1+12 and is isomorphic to AutPar(V4)",
+    "level4": "K12 horizon, genus 6, 12 vertices, 3456 = 576*6 = 96*36",
+    "level5": "[72,66,3]_3 horizon code, rate 11/12"
+  }
+}

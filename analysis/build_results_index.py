@@ -78,6 +78,23 @@ GLOBS = [
     "PART*.md",
     "formal/**/*.lean",
     "manuscripts/**/*.tex",
+    # BUNDLE DIRECTORIES (Pass 5524).  This repository has ~158 top-level bundle
+    # directories -- PG33_OUTER_TWIST_GEOMETRY_BUNDLE_v01, SP43_TO_WE6_TRUE_FIXED_BUNDLE,
+    # the TOE_* deliverables, V22-V26 outputs -- holding .md reports and .json
+    # certificates.  Every glob above reads source or prose in a handful of known
+    # subtrees, so a bundle's REPORT.md was invisible to the result index while being
+    # exactly the kind of file it exists to surface.  SP43_TO_WE6's REPORT.md carries an
+    # explicit Sp(4,3) -> W(E6) isomorphism and was unindexed for months.
+    #
+    # .md only, deliberately.  The bundles also hold thousands of .json certificates and
+    # 250 .zip archives; JSON is machine output whose numbers would flood the token
+    # grammar, and Pass 328 measured what that costs.  Prose reports are the half a human
+    # wrote and the half worth indexing.
+    "*_BUNDLE*/**/*.md",
+    "*_bundle*/**/*.md",
+    "*_deliverable*/**/*.md",
+    "V2*_output*/**/*.md",
+    "NOTES/*.md",
 ]
 
 # Above this a token is a topic, not a result.
