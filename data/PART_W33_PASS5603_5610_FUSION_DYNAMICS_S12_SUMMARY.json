@@ -1,0 +1,75 @@
+{
+  "schema": "w33.pass5603_5610.summary.v1",
+  "pass_range": [5603, 5610],
+  "status": "SEVEN_STRUCTURAL_RESULTS_FROZEN__PASS5606_GAP_OBJECT_MAP_PENDING_REPLAY",
+  "5603": {
+    "status": "THEOREM_SYMBOLIC_BOSE_MESNER_CLOSURE",
+    "first_eigenmatrix": [
+      ["1", "q(q-1)^2/4", "q^2-1", "q(q+1)(q-3)/4"],
+      ["1", "0", "q-1", "-q"],
+      ["1", "-(q-1)^2/4", "0", "(q-3)(q+1)/4"],
+      ["1", "q", "-(q+1)", "0"]
+    ],
+    "multiplicities": ["1", "(q-3)(q+1)^2/4", "q^2", "(q-1)^3/4"],
+    "q3_collapse": "both k_2 and m_1 vanish, so the generic 3-class scheme loses one relation and one primitive idempotent"
+  },
+  "5604": {
+    "status": "THEOREM_ALLODD_MINIMUM_DISTANCE",
+    "parameters": "[(q+1)^2,(q+1)^2/2,q+1]_2",
+    "theorem": "d(C_+)=d(C_-)=q+1 for every odd prime power q",
+    "independent_exact_anchors": {"q7": 8, "q9": 10}
+  },
+  "5605": {
+    "status": "THEOREM_ATOMIC_SCALING_LIMIT_NO_WEYL_CONTINUUM",
+    "hodge": "full normalized spectrum -> delta_0; cycle-removed spectrum divided by q+1 -> delta_1",
+    "hashimoto": "BB^T has exactly two singular-value bands for every regular graph; W(3,q) Bass roots have a finite atomic normalized limit",
+    "verdict": "maximally symmetric Hodge/Hashimoto families do not yield a Weyl continuum spectral dimension"
+  },
+  "5606": {
+    "status": "EXPLICIT_GATE_AND_COMPOSER_COMMITTED_RESULT_PENDING_GAP_REPLAY",
+    "gate": "analysis/w33_pass5606_cover12_explicit_conjugator.g",
+    "composer": "analysis/w33_pass5606_cover_to_f4_rootpair_map.py",
+    "boundary": "no cover-to-root-pair object map is declared until direct S12 conjugacy replay returns true"
+  },
+  "5607": {
+    "status": "THEOREM_FULL_PROJECTIVE_SYMMETRY_NO_DISPERSIVE_DALEMBERTIAN",
+    "commutant_dimension": 4,
+    "box_spectrum": "0^(q^2+1) + (q+1)^q + (-(q+1))^q",
+    "verdict": "full independent projective symmetry is too restrictive; physical dynamics needs phase/transport/refinement/symmetry breaking"
+  },
+  "5608": {
+    "status": "WEIGHT12_SHELL_IS_NATURAL_M12_ACTION_NOT_REYE576",
+    "old_s12_projective_weights": {"6": 132, "9": 220, "12": 12},
+    "weight12_action_order": 95040,
+    "weight12_orbitals": [12, 132],
+    "comparison_576_orbitals": [12, 36, 96],
+    "theorem": "the old Golay projective weight-12 shell carries the natural M12 degree-12 action, not the Reye/Latin/F4 576 action"
+  },
+  "5609": {
+    "status": "EXACT_HEISENBERG_MAGNETIC_SPECTRAL_SPLITTING",
+    "untwisted_distinct_eigenvalues": 3,
+    "magnetic_distinct_eigenvalues": 15,
+    "triangle_count": 96,
+    "nonzero_Z3_flux_triangles": 60,
+    "exact_charpoly_factor": "(x+2)^2 times an irreducible-or-unfactored degree-14 integer factor recorded by the producer",
+    "meaning": "the old s12/Weyl-Heisenberg cocycle supplies non-gauge-trivial holonomy and removes most event-spectrum degeneracy"
+  },
+  "5610": {
+    "status": "EXPLICIT_SYMPLECTIC_EMBEDDING_WITH_CANONICITY_FIREWALL",
+    "embedding": "E(x0,x1,x2,x3)=(x0,x2,0,-x1,-x3,0) in F3^6",
+    "all_pair_form_checks": 6561,
+    "forms_match": true,
+    "audit": "the older 728/2=364 s12/Klein bridge is a valid cardinality/projectivization statement but does not by itself provide a canonical Pluecker/Klein isometry or canonical 40-point W33 slice"
+  },
+  "index_html_audit": {
+    "finding": "docs/index.html contains historical s12 routing cards that exposed the relevant old scripts and corrected the ambiguity between Sym(12) and the 728-dimensional ternary-Golay s12 program",
+    "key_routes": [
+      "scripts/s12_sl27_heisenberg_algebra.py",
+      "scripts/w33_s12_linfty_phase_bridge.py",
+      "exploration/w33_s12_klein_projective_bridge.py",
+      "scripts/w33_monster_11a_m12_golay_bridge.py",
+      "tools/s12_universal_algebra.py"
+    ]
+  },
+  "boundary": "Finite-group, coding, spectral and cocycle statements are separated from physical semantics. Pass5606 is intentionally fail-closed until GAP emits an object-level conjugator. No continuum spacetime, Standard Model, gravity, or measured constant is claimed by this packet."
+}
