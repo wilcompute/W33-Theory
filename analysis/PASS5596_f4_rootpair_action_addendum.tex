@@ -1,0 +1,28 @@
+% Pass5596 addendum: explicit F4 root-pair realization of the 576 action.
+\paragraph{Pass 5596 addendum: the same degree-$12$ action lives on short $F_4$ root pairs.}
+An independent root-system verifier builds all $48$ roots of $F_4$, generates
+$W(F_4)$ of order $1152$ from four simple reflections, and lets it act on the
+$12$ antipodal pairs of its $24$ short roots.  The central antipodal involution
+is the kernel, so the image has order $576$.  Its orbital sizes are
+\[
+\boxed{12,36,96},
+\]
+and the $36$-orbital is again $3K_4$.  A block-respecting search finds an
+explicit conjugating permutation in $S_{12}$ from this short-root-pair action
+to the independently constructed Klein-$V_4$ Latin autoparatopy action.
+Consequently
+\[
+\boxed{
+W(F_4)/\{\pm1\}\curvearrowright
+\{\text{12 antipodal short-root pairs}\}
+\cong
+\operatorname{AutPar}(V_4)\curvearrowright12
+\cong
+\operatorname{Aut}(\text{Reye})\curvearrowright12.
+}
+\]
+This is an action-level bridge, not an order match.  Pass~5468 already
+identifies the selected 13-cover's setwise stabilizer with $W(F_4)$ and its
+13-point image with $W(F_4)/\{\pm1\}$; the separate GAP replay in this packet
+tests whether the cover's particular moving 12-orbit is conjugate to this same
+short-root/Latin/Refye action.
