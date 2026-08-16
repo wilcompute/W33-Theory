@@ -1,0 +1,91 @@
+name: W33 Pass5675-5682 physics voltage class-D frontier
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5675_*'
+      - 'analysis/w33_pass5676_*'
+      - 'analysis/w33_pass5677_*'
+      - 'analysis/w33_pass5678_*'
+      - 'analysis/w33_pass5679_*'
+      - 'analysis/w33_pass5680_*'
+      - 'analysis/w33_pass5681_*'
+      - 'analysis/w33_pass5682_*'
+      - 'analysis/PASS5675_5682_*'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'tests/test_w33_pass5675_5682_physics_voltage_classd.py'
+      - 'data/w33_pass_namespace_registry_v2.d/5675-5682.json'
+      - 'data/w33_publication_frontier_contract_v2.json'
+      - '.github/workflows/w33_pass5675_5682_physics_voltage_classd.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  replay-publish-compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 70
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip numpy pytest
+
+      - name: Replay Pass5675-5682
+        run: python analysis/w33_pass5675_5682_runner.py
+
+      - name: Focused regression
+        run: python -m pytest -q tests/test_w33_pass5675_5682_physics_voltage_classd.py
+
+      - name: Materialize homepage and audit publication DAG
+        run: |
+          python tools/integrate_bt3376_bt3389.py --report /tmp/public-integration.json
+          python analysis/w33_pass5364_publication_dag_audit.py --report /tmp/publication-dag.json
+          test "$(grep -c 'id=\"pass-5675-5682-physics-voltage-classd-frontier\"' docs/index.html)" -eq 1
+          git diff --check
+
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+
+      - name: Compile canonical manuscripts
+        run: |
+          mkdir -p evidence/pass5675_5682
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass5675_5682/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass5675_5682/pdf_sha256.txt
+
+      - name: Freeze regenerated certificates and homepage
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            data/PART_W33_PASS5675_DECK16_EQUIVARIANT_BDG_NORMAL_FORM.json \
+            data/PART_W33_PASS5676_E6_FIBER_COLLISION_PROJECTOR.json \
+            data/PART_W33_PASS5677_CONNECTED_LEVI_VOLTAGE_TOWER.json \
+            data/PART_W33_PASS5678_VOLTAGE_TOWER_SPECTRUM_BOTTLENECK.json \
+            data/PART_W33_PASS5679_SECTION_PARENT_REAL_IMAG_FESHBACH.json \
+            data/PART_W33_PASS5680_DECK16_CLASSD_PFAFFIAN_TRIVIALITY.json \
+            data/PART_W33_PASS5681_AGL23_VERTICAL_1PLUS8_NO_GLUON_BRACKET.json \
+            data/PART_W33_PASS5682_COVER_TOWER_CAUSAL_SPEED_SCALING.json \
+            docs/index.html
+          if git diff --cached --quiet; then
+            echo 'Certificates and homepage already materialized.'
+          else
+            git commit -m 'Freeze Pass5675-5682 certificates and homepage [skip ci]'
+            git push
+          fi
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass5675-5682-physics-voltage-classd-frontier
+          path: evidence/pass5675_5682/**
