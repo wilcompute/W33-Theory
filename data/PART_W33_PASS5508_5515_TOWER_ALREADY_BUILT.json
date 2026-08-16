@@ -1,0 +1,55 @@
+{
+  "boundary": "Pass 5509 flags an error in a top-level file belonging to another lane and does not edit it. Pass 5510's 576 is the automorphism group of the bipartite INCIDENCE GRAPH; 96 is cited from the corpus as the tomotope's polytope automorphism group and is not recomputed here. Pass 5511 NARROWS an earlier claim of this lane rather than extending it",
+  "pass_5508": {
+    "added": "2026-05-22",
+    "contains": [
+      "Q4 router faces 24",
+      "tomotope/Reye |Aut| 96, 48 inc",
+      "F4",
+      "24-cell |Aut| 1152",
+      "K12 horizon genus 6"
+    ],
+    "file": "BREAKTHROUGH_DCCLXXXIV.md",
+    "location": "repository root",
+    "note": "the object this thread spent fifteen passes reaching"
+  },
+  "pass_5509": {
+    "diagnosis": "96 is the 24-cell edge count, in the root slot",
+    "f4_long": 24,
+    "f4_short": 24,
+    "f4_total": 48,
+    "file_states": 96,
+    "status": "FLAGGED, not edited"
+  },
+  "pass_5510": {
+    "configuration_aut": 576,
+    "polytope_aut": 96,
+    "ratio": 6,
+    "reason": "configuration versus polytope; a geometric realisation rigidifies and only 1/6 of the combinatorial symmetry survives"
+  },
+  "pass_5511": {
+    "established": "two specific structures are isomorphic with |Aut| = 576",
+    "narrows": "Pass 5491's '576 is finally explained'",
+    "not_established": "that the Latin autoparatopy group, the Latin square count and W(F4)/{+-1} are the same group -- matched on order and invariants, not by isomorphism"
+  },
+  "pass_5512": {
+    "examples": [
+      "BT1613_arXiv_package",
+      "ChatGPT Files",
+      "H27_CE2_FUSION_BRIDGE_BUNDLE_v01",
+      "H27_OUTER_TWIST_ACTION_BUNDLE_v01",
+      "PG33_OUTER_TWIST_GEOMETRY_BUNDLE_v01",
+      "SP43_TO_WE6_TRUE_FIXED_BUNDLE_v01_2026-02-25",
+      "TOE_7pocket_derivations_v01_20260227_bundle",
+      "TOE_E6pair_SRG_triangle_decomp_v01_20260227_bundle",
+      "TOE_breakthrough_hypothesis_deliverable_v83",
+      "TOE_constitutive_impedance_bridge_deliverable_v80"
+    ],
+    "lesson": "files are named for conclusions, not subjects; neither the tomotope link nor the tower was reachable by keyword search",
+    "obviously_relevant": [
+      "PG33_OUTER_TWIST_GEOMETRY_BUNDLE_v01",
+      "SP43_TO_WE6_TRUE_FIXED_BUNDLE_v01_2026-02-25"
+    ],
+    "unopened_top_level_dirs": 158
+  }
+}
