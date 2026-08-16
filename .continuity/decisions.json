@@ -48,7 +48,8 @@
         "1786859568721-fahph6"
       ],
       "causes": [
-        "1786859568721-fahph6"
+        "1786859568721-fahph6",
+        "1786860945369-ki8azn"
       ],
       "causedBy": [
         "manual-20260507-pin-e8-manifest-z3-output-check"
@@ -173,7 +174,8 @@
       ],
       "causes": [
         "1786859568721-fahph6",
-        "1786860401883-i52nl0"
+        "1786860401883-i52nl0",
+        "1786860945369-ki8azn"
       ],
       "causedBy": []
     },
@@ -204,7 +206,8 @@
       ],
       "causes": [
         "1786859568721-fahph6",
-        "1786860401883-i52nl0"
+        "1786860401883-i52nl0",
+        "1786860945369-ki8azn"
       ],
       "causedBy": []
     },
@@ -296,7 +299,8 @@
         "1786859568721-fahph6"
       ],
       "causes": [
-        "1786859568721-fahph6"
+        "1786859568721-fahph6",
+        "1786860945369-ki8azn"
       ],
       "causedBy": []
     },
@@ -428,7 +432,8 @@
       ],
       "causes": [
         "1786859568721-fahph6",
-        "1786860401883-i52nl0"
+        "1786860401883-i52nl0",
+        "1786860945369-ki8azn"
       ],
       "causedBy": []
     },
@@ -688,7 +693,8 @@
       "supersededBy": [],
       "relatedTo": [],
       "causes": [
-        "1786859568721-fahph6"
+        "1786859568721-fahph6",
+        "1786860945369-ki8azn"
       ],
       "causedBy": [
         "manual-20260507-test-e8-orchestrator-z3-output-contract",
@@ -812,7 +818,8 @@
       "supersededBy": [],
       "relatedTo": [],
       "causes": [
-        "1786860401883-i52nl0"
+        "1786860401883-i52nl0",
+        "1786860945369-ki8azn"
       ],
       "causedBy": []
     },
@@ -909,13 +916,13 @@
     ],
     "files": [],
     "status": "active",
-    "metadata": {
-      "status": "active"
-    },
     "relationships": {
       "causes": [
         "1786860401883-i52nl0"
       ]
+    },
+    "metadata": {
+      "status": "active"
     }
   },
   {
@@ -948,7 +955,8 @@
         "manual-20260507-test-docs-index-photonic-runtime-link"
       ],
       "causes": [
-        "1786860401883-i52nl0"
+        "1786860401883-i52nl0",
+        "1786860945369-ki8azn"
       ]
     },
     "metadata": {
@@ -1127,6 +1135,9 @@
         "manual-20260507-align-cccxcvi-z3-declared-path",
         "manual-20260507-pin-e8-manifest-z3-output-check",
         "manual-20260507-docs-index-photonic-runtime-link"
+      ],
+      "causes": [
+        "1786860945369-ki8azn"
       ]
     },
     "metadata": {
@@ -1190,7 +1201,8 @@
         "manual-20260507-test-docs-index-photonic-runtime-link"
       ],
       "causes": [
-        "1786860401883-i52nl0"
+        "1786860401883-i52nl0",
+        "1786860945369-ki8azn"
       ]
     },
     "metadata": {
@@ -109732,7 +109744,8 @@
       "supersedes": [],
       "supersededBy": [
         "1786859568721-fahph6",
-        "1786860401883-i52nl0"
+        "1786860401883-i52nl0",
+        "1786860945369-ki8azn"
       ],
       "relatedTo": [],
       "causes": [],
@@ -109762,7 +109775,8 @@
       "supersededBy": [
         "1784322240668-1bsjzj",
         "1786859568721-fahph6",
-        "1786860401883-i52nl0"
+        "1786860401883-i52nl0",
+        "1786860945369-ki8azn"
       ],
       "relatedTo": [],
       "causes": [],
@@ -109795,7 +109809,8 @@
       "supersededBy": [
         "1784322240796-ff44ii",
         "1786859568721-fahph6",
-        "1786860401883-i52nl0"
+        "1786860401883-i52nl0",
+        "1786860945369-ki8azn"
       ],
       "relatedTo": [],
       "causes": [],
@@ -109828,7 +109843,8 @@
       "supersededBy": [
         "1784322240788-ndxfsp",
         "1786859568721-fahph6",
-        "1786860401883-i52nl0"
+        "1786860401883-i52nl0",
+        "1786860945369-ki8azn"
       ],
       "relatedTo": [],
       "causes": [],
@@ -109861,7 +109877,8 @@
       "supersededBy": [
         "1784322240733-laxqu3",
         "1786859568721-fahph6",
-        "1786860401883-i52nl0"
+        "1786860401883-i52nl0",
+        "1786860945369-ki8azn"
       ],
       "relatedTo": [],
       "causes": [],
@@ -109894,7 +109911,8 @@
       "supersededBy": [
         "1784322240762-in72qt",
         "1786859568721-fahph6",
-        "1786860401883-i52nl0"
+        "1786860401883-i52nl0",
+        "1786860945369-ki8azn"
       ],
       "relatedTo": [],
       "causes": [],
@@ -109927,7 +109945,8 @@
       "supersededBy": [
         "1784322240858-8r4ujo",
         "1786859568721-fahph6",
-        "1786860401883-i52nl0"
+        "1786860401883-i52nl0",
+        "1786860945369-ki8azn"
       ],
       "relatedTo": [],
       "causes": [],
@@ -109960,7 +109979,8 @@
       "supersededBy": [
         "1784322241138-d63l8k",
         "1786859568721-fahph6",
-        "1786860401883-i52nl0"
+        "1786860401883-i52nl0",
+        "1786860945369-ki8azn"
       ],
       "relatedTo": [],
       "causes": [],
@@ -118424,7 +118444,9 @@
         "4919a306-e98c-4f08-9830-945bf9d04adf",
         "1784563511681-tcy2xj"
       ],
-      "supersededBy": [],
+      "supersededBy": [
+        "1786860945369-ki8azn"
+      ],
       "relatedTo": [
         "1777318403162-biaewx",
         "1777318403161-4mgrce",
@@ -118512,7 +118534,9 @@
         "1784322241138-d63l8k",
         "1784409410004-2ofkhg"
       ],
-      "supersededBy": [],
+      "supersededBy": [
+        "1786860945369-ki8azn"
+      ],
       "relatedTo": [],
       "causes": [],
       "causedBy": [
@@ -118542,6 +118566,63 @@
     "commitHashes": [
       "feb9735da6f0c9a9d9579435854144a6c20fb6a1",
       "10993e1ac498bf81bb5ac7d0a5ad4a05bff906b8"
+    ]
+  },
+  {
+    "id": "1786860945369-ki8azn",
+    "question": "Is the W(F4)/Z tomotope-W33 bridge equivariant, and why can the 24+84+84 codec split never be its orbits?",
+    "answer": "NOT EQUIVARIANT from the isomorphism alone, and the codec split is impossible on divisibility.\n\nEQUIVARIANCE IS NOT FREE. GAP: W(F4)/Z has 7 conjugacy classes of index-12 subgroups, giving 7 degree-12 permutation images. Four are faithful (order 576) and only two of those (images 4 and 7) are permutation isomorphic, so there are THREE inequivalent faithful degree-12 actions. Pass 5645 proved Aut(Reye Levi) is isomorphic to W(F4)/Z as ABSTRACT groups; that does not determine the 12-point action, so the Reye 12 points and the q=5 moving 12 are not forced to be the same G-set. Had the index-12 class been unique, equivariance would have followed for free. It is not. The bridge needs an explicit map.\n\n84 DOES NOT DIVIDE 576, and that is the whole reason the codec layer never attaches. Every orbit length of a group of order 576 = 2^6 * 3^2 divides 576. 84 = 2^2 * 3 * 7 does not, because of the 7. So W(F4)/Z cannot act on the 192 tomotope flags with 24+84+84 as its orbits -- not by any embedding, not for any choice of action. And the 7 is exactly the 7 of Csaszar (7 vertices), Szilassi (7 faces) and PSL(2,7). The codec stratification lives on the 7-side of this object; the bridge group lives on the {2,3}-side. This upgrades Pass 5646's empirical \"no common refinement\" to a structural impossibility.\n\nCORRECTION TO PASS 5644, recorded in the prior certificate rather than silently edited. It reported wf4modZ_iso_s4wrs2_index2 = False. Wrong: GAP's First(NormalSubgroups(S4wrS2), Size=576) returned S4 x S4, one of THREE index-2 normal subgroups. Against the right one, SmallGroup(576,8654), the answer is True -- W(F4)/Z IS an index-2 subgroup of S4 wr S2. The coincidence-ten kill at 1152 is unaffected (W(F4) is still not isomorphic to S4 wr S2), but the reading changes: the decoy 1152 is an index-2 OVERGROUP of the real 576, so the face graph and the Levi graph are two levels of one tower rather than two unrelated coincidences.\n\nAND 8,681 GROUPS SHARE ORDER 576. That prices every 576 match in this corpus -- the simplex stabiliser image, the Reye Levi, the Latin-square V4 autoparatopy, the q=5 design action. Exactly one of them has been typed by SmallGroup id.\n\nNEW GUARD: scripts/check_transitivity.py, selftest 6/6. Tests two impossibilities -- an unequal partition summing to a matching order (no regular action), and an orbit length not dividing an asserted group order. Fires on 119 of 5,058 certificates (2.4%), against check_certificate_rediscovery's 70%. Known limitation stated: it pairs every order key with every partition key in a certificate, so 547 findings is an upper bound and the 119 files are the work list.\n\nalpha(W(3,9)) now 51 <= alpha <= 80, both ends improved this session, still OPEN. Local search reached 51 in 67 seconds, well past the MILP's 47 after 70,000s.</answer>\n<parameter name=\"tags\">w33, wf4, bridge, equivariance, divisibility, guard, correction, pass5651",
+    "timestamp": "2026-08-16T06:15:45.369Z",
+    "tags": [
+      "redis"
+    ],
+    "files": [],
+    "status": "active",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [
+        "1786859568721-fahph6",
+        "1786860401883-i52nl0",
+        "1784319283792-g6owwo",
+        "1784322240627-zkjiv7",
+        "1784322240668-1bsjzj",
+        "1784322240796-ff44ii",
+        "1784322240788-ndxfsp",
+        "1784322240733-laxqu3",
+        "1784322240762-in72qt",
+        "1784322240858-8r4ujo"
+      ],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": [
+        "1777318403161-4mgrce",
+        "1777318403161-ai9frf",
+        "1777318403161-qze7ej",
+        "1777318403161-ya0ehy",
+        "1777318403161-ga2u8l",
+        "1777318403161-putaqm",
+        "mohlhmfy-yu0ang",
+        "beaa04ed-f130-4ef8-a424-792aced0dd1b",
+        "92c1464e-9086-4497-bedc-176c7a857ad1",
+        "27162744-0efe-400e-8af6-d7dae43ba20b"
+      ]
+    },
+    "metadata": {
+      "status": "active",
+      "source": "mcp",
+      "entities": {
+        "technologies": [
+          "redis"
+        ],
+        "patterns": [],
+        "concepts": [],
+        "tools": []
+      },
+      "domain": "software"
+    },
+    "commitHashes": [
+      "2d5147dcaa038ef7fc955b99122f90b4261e623a"
     ]
   }
 ]

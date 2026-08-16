@@ -1,0 +1,212 @@
+{
+  "boundary": "Pass 5659-5661 are GAP computations on constructed objects. Pass 5662 rules out a common home below order 4032 and does NOT prove no such object exists in this corpus -- none is exhibited. Pass 5663 does NOT type the q=5 design; it specifies the computation. Pass 5666 reports zero findings as INAPPLICABILITY of the guard, not as verification of the other lane's work. Pass 5667 reports a NEGATIVE for symmetry seeding: it reached 51 sooner but never past it",
+  "pass_5659": {
+    "action_on_16_faithful": true,
+    "faithful": true,
+    "finding": "the Reye 12 is TransitiveGroup(12,165); Pass 5651 showed the abstract isomorphism does not pick an action, and this picks it",
+    "levi_orbits": [
+      16,
+      12
+    ],
+    "stabiliser": "C2 x S4",
+    "stabiliser_id": [
+      48,
+      48
+    ],
+    "stabiliser_order": 48,
+    "transitive_id": 165
+  },
+  "pass_5660": {
+    "agreement": "the transitive-groups library and the subgroup lattice both give three",
+    "ids": {
+      "158": [
+        576,
+        8656
+      ],
+      "159": [
+        576,
+        8278
+      ],
+      "160": [
+        576,
+        8652
+      ],
+      "161": [
+        576,
+        8654
+      ],
+      "162": [
+        576,
+        8652
+      ],
+      "163": [
+        576,
+        8654
+      ],
+      "164": [
+        576,
+        8664
+      ],
+      "165": [
+        576,
+        8654
+      ],
+      "166": [
+        576,
+        8661
+      ]
+    },
+    "isomorphic_to_wf4z": [
+      161,
+      163,
+      165
+    ],
+    "transitive_degree12_order576": 9
+  },
+  "pass_5661": {
+    "the_576s_are_all": [
+      576,
+      8654
+    ],
+    "the_two_1152s": [
+      [
+        1152,
+        157478
+      ],
+      [
+        1152,
+        157849
+      ]
+    ],
+    "typed": [
+      {
+        "object": "W(F4)",
+        "order": 1152,
+        "smallgroup": [
+          1152,
+          157478
+        ]
+      },
+      {
+        "object": "W(F4)/Z",
+        "order": 576,
+        "smallgroup": [
+          576,
+          8654
+        ]
+      },
+      {
+        "object": "S4 wr S2",
+        "order": 1152,
+        "smallgroup": [
+          1152,
+          157849
+        ]
+      },
+      {
+        "object": "Aut(Reye Levi)",
+        "order": 576,
+        "smallgroup": [
+          576,
+          8654
+        ]
+      },
+      {
+        "object": "Aut(Q4)",
+        "order": 384,
+        "smallgroup": [
+          384,
+          5602
+        ]
+      },
+      {
+        "object": "Reye 12-action",
+        "order": 576,
+        "smallgroup": [
+          576,
+          8654
+        ]
+      },
+      {
+        "object": "Reye 16-action",
+        "order": 576,
+        "smallgroup": [
+          576,
+          8654
+        ]
+      }
+    ]
+  },
+  "pass_5662": {
+    "lcm": 4032,
+    "psl27": [
+      168,
+      42
+    ],
+    "psl27_order": 168,
+    "seven_divides_576": false,
+    "verdict": "no common home below order 4032; nothing of that order is exhibited anywhere in this corpus",
+    "wf4z_order": 576
+  },
+  "pass_5663": {
+    "blocks": 312,
+    "design": "2-(13,6,60)",
+    "outcomes": {
+      "161_or_163": "isomorphic groups, inequivalent actions",
+      "165": "same G-set as the Reye 12; bridge is equivariant",
+      "other": "not W(F4)/Z at all; an order match only"
+    },
+    "reason": "blocks are not stored; rebuilding needs the 325-vertex cover",
+    "settling_test": "TransitiveIdentification of the action on the moving 12",
+    "typed_here": false
+  },
+  "pass_5664_5665": {
+    "corpus": 5060,
+    "final_rate_pct": 0.8,
+    "progression": [
+      {
+        "files": 119,
+        "findings": 547,
+        "version": "Pass 5657, as shipped"
+      },
+      {
+        "files": 43,
+        "findings": 130,
+        "version": "scoped to the enclosing dict"
+      },
+      {
+        "files": 42,
+        "findings": 124,
+        "version": "order keys typed"
+      }
+    ],
+    "scoping": "compare an order and a partition only when one object records both",
+    "selftest": "8/8",
+    "typed_keys": [
+      "digits",
+      "abelianization"
+    ]
+  },
+  "pass_5666": {
+    "certificates": 7,
+    "findings": 0,
+    "outstanding_cross_lane": "w33_pass5623 line 5, an order-based identification; Pass 5663 gives the test",
+    "reading": "INAPPLICABLE, not verified -- their packet is spectral and algebraic and mostly does not assert group actions on partitioned sets",
+    "their_block": "PASS5603 through PASS5658"
+  },
+  "pass_5667_q9": {
+    "bounds": [
+      51,
+      80
+    ],
+    "dual_bound": 80.83841179,
+    "finding": "symmetry seeding did NOT beat uniform restarts -- both plateau at 51, the seeded run reaching it faster (28s vs 67s) but no higher. 51 is a barrier for this local-search class, not an artefact of a bad start",
+    "hoffman": 82,
+    "perp_seeded_best": 51,
+    "proved": false,
+    "seeded_time_to_51_s": 28,
+    "status": "OPEN",
+    "uniform_restarts_best": 51,
+    "uniform_time_to_51_s": 67
+  }
+}
