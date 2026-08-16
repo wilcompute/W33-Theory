@@ -6,6 +6,7 @@ on:
     paths:
       - 'analysis/w33_pass5595_5602_projectivity_closure_toe_probes.py'
       - 'analysis/w33_pass5595_5602_runner.py'
+      - 'analysis/w33_pass5596_cover12_latin_action.g'
       - 'analysis/PASS5595_5602_projectivity_closure_toe_probes.md'
       - 'analysis/PASS5595_5602_projectivity_closure_toe_probes_insert.tex'
       - 'analysis/PASS5595_5602_index_insert.html'
@@ -30,10 +31,23 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Install test dependency
-        run: python -m pip install --upgrade pip pytest
+      - name: Install replay dependencies
+        run: |
+          python -m pip install --upgrade pip pytest
+          sudo apt-get update -qq
+          sudo apt-get install -y gap gap-grape
       - name: Replay Pass5595-5602 producer
         run: python analysis/w33_pass5595_5602_runner.py
+      - name: Replay decisive Pass5596 13-cover action test
+        env:
+          W33_REPO: ${{ github.workspace }}
+        run: |
+          rm -f data/PART_W33_PASS5596_COVER12_LATIN_ACTION.json
+          gap -q -b --nointeract analysis/w33_pass5596_cover12_latin_action.g
+          test -s data/PART_W33_PASS5596_COVER12_LATIN_ACTION.json
+          grep -q '"cover12_order": 576' data/PART_W33_PASS5596_COVER12_LATIN_ACTION.json
+          grep -q '"latin12_order": 576' data/PART_W33_PASS5596_COVER12_LATIN_ACTION.json
+          grep -q '"conjugate_in_S12": true' data/PART_W33_PASS5596_COVER12_LATIN_ACTION.json
       - name: Focused regression
         run: python -m pytest -q tests/test_w33_pass5595_5602_projectivity_closure_toe_probes.py
       - name: Materialize homepage and audit publication DAG
@@ -53,15 +67,18 @@ jobs:
             test -s "${source%.tex}.pdf"
           done
           sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass5595_5602/pdf_sha256.txt
-      - name: Freeze regenerated certificate and homepage materialization
+      - name: Freeze regenerated certificates and homepage materialization
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/PART_W33_PASS5595_5602_PROJECTIVITY_CLOSURE_TOE_PROBES.json docs/index.html
+          git add \
+            data/PART_W33_PASS5595_5602_PROJECTIVITY_CLOSURE_TOE_PROBES.json \
+            data/PART_W33_PASS5596_COVER12_LATIN_ACTION.json \
+            docs/index.html
           if git diff --cached --quiet; then
-            echo 'Certificate and homepage already materialized.'
+            echo 'Certificates and homepage already materialized.'
           else
-            git commit -m 'Freeze Pass5595-5602 certificate and homepage card [skip ci]'
+            git commit -m 'Freeze Pass5595-5602 certificates and homepage card [skip ci]'
             git push
           fi
       - uses: actions/upload-artifact@v4
