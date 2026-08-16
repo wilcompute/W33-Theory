@@ -1,0 +1,84 @@
+{
+  "boundary": "Pass 5484 settles the q-family for the SPLIT SIZES only. Pass 5485 excludes the two classic SRG(16,6,2,2) graphs and Clebsch and reports the graph is not strongly regular; it does not name it. Pass 5487 counts generators and does not rule out some other line set. The |Aut| = 96 / tomotope order coincidence remains unclaimed",
+  "pass_5484": {
+    "nonsingular_formula": "q^3 - q",
+    "pattern": "third carrier-specific claim this session, after -1/q^2 (GQ(q,q)) and -1/(H-1) (GQs)",
+    "rows": [
+      {
+        "nonsingular": 24,
+        "points": 40,
+        "q": 3,
+        "q_cubed_minus_q": 24,
+        "q_plus_1_squared": 16,
+        "singular": 16,
+        "split": [
+          16,
+          12,
+          12
+        ]
+      },
+      {
+        "nonsingular": 120,
+        "points": 156,
+        "q": 5,
+        "q_cubed_minus_q": 120,
+        "q_plus_1_squared": 36,
+        "singular": 36,
+        "split": [
+          36,
+          60,
+          60
+        ]
+      },
+      {
+        "nonsingular": 336,
+        "points": 400,
+        "q": 7,
+        "q_cubed_minus_q": 336,
+        "q_plus_1_squared": 64,
+        "singular": 64,
+        "split": [
+          64,
+          168,
+          168
+        ]
+      }
+    ],
+    "singular_formula": "(q+1)^2",
+    "verdict": "16 = (q+1)^2, equal to |V(Q4)| = 2^4 only at q=3; the hypercube reading is carrier-specific"
+  },
+  "pass_5485": {
+    "aut_order": 96,
+    "edges": 48,
+    "is_rook_4x4": false,
+    "is_shrikhande": false,
+    "lambda_values": [
+      0,
+      2
+    ],
+    "mu_values": [
+      2,
+      4
+    ],
+    "note": "Clebsch excluded by degree (5-regular)",
+    "regular": 6,
+    "strongly_regular": false
+  },
+  "pass_5486": {
+    "edges": [
+      30,
+      30
+    ],
+    "isomorphic": true,
+    "orbit_sizes": [
+      12,
+      12
+    ],
+    "reading": "square vs non-square values of one form, not two objects"
+  },
+  "pass_5487": {
+    "generator_lines": 8,
+    "q4_edges": 32,
+    "verdict": "two reguli of q+1; not the cube's edges"
+  }
+}
