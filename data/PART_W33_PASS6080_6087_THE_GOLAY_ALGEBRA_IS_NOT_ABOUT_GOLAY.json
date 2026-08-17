@@ -1,0 +1,78 @@
+{
+  "boundary": "Pass 6080 REFUTES the subject of an archived theorem, not its mathematics. Jacobi is tested at five (q, rank) pairs with 120000 random triples each. The image dimension of rho is STILL not recomputed and the retraction banners are NOT yet written into the archived files",
+  "pass_6080_the_construction_is_general": {
+    "dimensions": "total q^n - 1, centre q^(n-2k) - 1, quotient q^n - q^(n-2k)",
+    "jacobi_tested": [
+      {
+        "failures": 0,
+        "q": 3,
+        "rank": 1,
+        "space": "W(1,3), the Golay case"
+      },
+      {
+        "failures": 0,
+        "q": 3,
+        "rank": 2,
+        "space": "W(3,3)"
+      },
+      {
+        "failures": 0,
+        "q": 3,
+        "rank": 3,
+        "space": "W(5,3)"
+      },
+      {
+        "failures": 0,
+        "q": 2,
+        "rank": 2,
+        "space": "W(3,2), the doily"
+      },
+      {
+        "failures": 0,
+        "q": 5,
+        "rank": 2,
+        "space": "W(3,5)"
+      }
+    ],
+    "the_construction": "take ANY linear surjection grade: F_q^n -> F_q^(2k) onto a symplectic space and set [E_m, E_n] = omega(grade m, grade n) E_{m+n}",
+    "trials_each": 120000,
+    "why_it_always_works": "the Jacobi proof uses ONLY bilinearity and antisymmetry of omega, and neither is special to F_3^2"
+  },
+  "pass_6081_golay_is_not_the_subject": {
+    "the_648": "q=3, n=6, rank=1 gives 3^6 - 3^4 = 648, the archived theorem's headline number",
+    "the_irony": "this is the failure mode I added to CLAUDE.md earlier in this same session, after the Sym^e tower turned out to be about bilinear forms rather than about W(3,q). The catching test is identical: change the object and see whether the result changes",
+    "the_ternary_golay_code": "enters nowhere in the bracket, the Jacobi verification, the centre, or the dimension count. Its only role is supplying a 6-dimensional message space, which any F_3^6 does",
+    "verdict": "FAILURE MODE SIX -- right result, wrong subject. The algebra is real and the arithmetic is correct; the attribution to Golay is not",
+    "what_the_construction_actually_used": "only n = 6, the DIMENSION of the message space. Any 6-dimensional space over F_3 gives 648"
+  },
+  "pass_6082_the_family_it_belongs_to": {
+    "examples": [
+      {
+        "n": 6,
+        "q": 3,
+        "quotient": 648,
+        "rank": 1
+      },
+      {
+        "n": 6,
+        "q": 3,
+        "quotient": 720,
+        "rank": 2
+      },
+      {
+        "n": 8,
+        "q": 3,
+        "quotient": 6480,
+        "rank": 2
+      },
+      {
+        "n": 6,
+        "q": 2,
+        "quotient": 48,
+        "rank": 1
+      }
+    ],
+    "reading": "what the archived file found is not a Golay object but one member of a two-parameter family indexed by (q, rank) -- and the family is graded by exactly the symplectic ladder W(2k-1,q) this session climbed from the other lane's doily",
+    "so": "the interesting question is not 'what is the Golay Lie algebra' but 'which members of this family are simple, and what are their representations' -- and the archived document answers neither, for one member, inconsistently"
+  }
+}
