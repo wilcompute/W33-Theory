@@ -1,0 +1,61 @@
+name: W33 Pass5725-5732 torsion center higher algebra
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5725_*'
+      - 'analysis/w33_pass5726_*'
+      - 'analysis/w33_pass5727_*'
+      - 'analysis/w33_pass5728_*'
+      - 'analysis/w33_pass5729_*'
+      - 'analysis/w33_pass5731_*'
+      - 'tests/test_w33_pass5725_5732_torsion_center_higheralgebra.py'
+      - 'data/w33_pass_namespace_registry_v2.d/5725-5732.json'
+      - '.github/workflows/w33_pass5725_5732_torsion_center_higheralgebra.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: w33-pass5725-5732-structural
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  exact-replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install numerical dependencies
+        run: python -m pip install --upgrade numpy scipy pytest
+      - name: Replay Pass5725-5732
+        run: python analysis/w33_pass5725_5732_runner.py
+      - name: Focused regression
+        run: python -m pytest -q tests/test_w33_pass5725_5732_torsion_center_higheralgebra.py
+      - name: Freeze generated certificates
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/PART_W33_PASS5725_TORSION_CENTER_PAIRING.json \
+                  data/PART_W33_PASS5726_EXACT_FIREWALL_JACOBIATOR_RANK.json \
+                  data/PART_W33_PASS5727_TORSION_E8_FAMILY_HEISENBERG_INTERTWINER.json \
+                  data/PART_W33_PASS5728_RAMANUJAN_SWITCHING_INVARIANT_SELECTOR.json \
+                  data/PART_W33_PASS5729_FAMILY_SYMMETRY_BREAKING_LATTICE.json \
+                  data/PART_W33_PASS5730_HEISENBERG_QUTRIT_GL23_EXTENDED_CLIFFORD.json \
+                  data/PART_W33_PASS5731_Z3_Z2_MIXED_EXTENSION_TOPOLOGY.json \
+                  data/PART_W33_PASS5732_P2_P3_DETERMINANT_ARITHMETIC_BRIDGE.json \
+                  data/PART_W33_PASS5725_5732_TORSION_CENTER_HIGHERALGEBRA_SUMMARY.json
+          if git diff --cached --quiet; then
+            echo 'Certificates already frozen.'
+          else
+            git commit -m 'Freeze Pass5725-5732 exact certificates [skip ci]'
+            git pull --rebase origin master
+            git push origin HEAD:master
+          fi
