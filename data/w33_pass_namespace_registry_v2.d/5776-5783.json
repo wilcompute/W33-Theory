@@ -1,0 +1,9 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.fragment",
+  "range": [5776, 5783],
+  "owner": "openai_gpt5_6_sol",
+  "status": "RESERVED",
+  "created_utc": "2026-08-17T16:45:00Z",
+  "topic": "q5 Reye/heavy dual-incidence common 9-space projector; rank-3 representation decomposition; carrier outer involution versus sign tensor twist; exact prior-art boundary",
+  "boundary": "Finite permutation-module and incidence-matrix statements only. Reye/tomotope automorphism facts are prior art; promote only the exact q=5 multidesign-to-common-projector bridge and the outer/sign representation separation."
+}
