@@ -1,0 +1,44 @@
+% Passes 6541--6544: full Veldkamp line reconstruction from the doily code.
+\subsubsection{The code reconstructs all $155$ Veldkamp lines}
+\label{sec:doily-code-veldkamp-lines}
+
+The coding realization above extends from Veldkamp points to the full incidence
+space. Since $C$ has dimension five over $\mathbb F_2$, its $31$ nonzero words
+are the points of $PG(4,2)$ and every projective line is
+\[
+ \{u,v,u+v\}.
+\]
+Exact enumeration yields $155$ such triples. Classifying the common zero-set
+core of each triple by the doily incidence geometry reconstructed from
+$C^\perp$ gives the complete five-type census
+\[
+ \boxed{15+15+60+20+45=155}.
+\]
+More explicitly, the core/type and code-weight compositions are
+\[
+\begin{array}{c|c|c}
+\text{core} & \text{hyperplane composition} & \#\\ \hline
+\text{single point} & (8,10,10) & 15\\
+\text{collinear triple} & (8,8,8) & 15\\
+\text{unicentric triad} & (6,8,10) & 60\\
+\text{tricentric triad} & (8,8,8) & 20\\
+\text{pentad} & (6,6,8) & 45
+\end{array}
+\]
+The only ambiguity left by weights alone is the $35$ all-perp
+$(8,8,8)$ lines. Minimum dual supports resolve it canonically:
+\[
+ \boxed{35=15_{\rm collinear}+20_{\rm tricentric}}.
+\]
+Thus the same code that reconstructs the $31$ hyperplanes also reconstructs
+all $155$ Veldkamp lines and all five core types.
+
+The corresponding addition/fusion laws are
+\[
+6+6\to8,\qquad10+10\to8,\qquad6+10\to8,\qquad8+8\to8,
+\]
+with pair counts $45,15,60,105$, respectively. These are finite-code
+statements. The abstract identification $\mathcal V(W(2))\cong PG(4,2)$ and
+its five Veldkamp-line types are prior art (arXiv:0704.0495); the claim here is
+the executable reconstruction from the explicit quadratic-evaluation code and
+its dual, not a literature-priority claim.
