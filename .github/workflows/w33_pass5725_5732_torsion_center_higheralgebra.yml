@@ -75,6 +75,7 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -f data/PART_W33_PASS5725_TORSION_CENTER_PAIRING.json \
                      data/PART_W33_PASS5726_EXACT_FIREWALL_JACOBIATOR_RANK.json \
+                     data/PART_W33_PASS5726_FAMILY_A2_COMPLEMENT_IDENTIFICATION.json \
                      data/PART_W33_PASS5727_TORSION_E8_FAMILY_HEISENBERG_INTERTWINER.json \
                      data/PART_W33_PASS5728_RAMANUJAN_SWITCHING_INVARIANT_SELECTOR.json \
                      data/PART_W33_PASS5729_FAMILY_SYMMETRY_BREAKING_LATTICE.json \
