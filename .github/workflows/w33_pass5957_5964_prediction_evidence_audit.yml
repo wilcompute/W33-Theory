@@ -1,0 +1,48 @@
+name: Pass5957-5964 prediction evidence audit
+
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass5957_5964_prediction_evidence_audit.py'
+      - 'analysis/PASS5957_5964_prediction_evidence_audit.md'
+      - 'analysis/PASS5957_5964_prediction_evidence_audit_insert.tex'
+      - 'data/PART_W33_PASS5957_5964_PREDICTION_EVIDENCE_AUDIT.json'
+      - 'tests/test_w33_pass5957_5964_prediction_evidence_audit.py'
+      - 'PASS5913_5932_LINF_BRACKET_ELECTRON_WEYL.md'
+      - 'PASS5933_5956_HITLIST_PREDICTIONS.md'
+      - 'scripts/w33_linf_bracket_mass_ratios.py'
+      - 'scripts/w33_electron_seed_packet_derivation.py'
+      - 'scripts/w33_weyl_law_4volume.py'
+      - 'scripts/w33_ym_mass_gap_1818.py'
+      - 'scripts/w33_neutrino_mass_leech.py'
+      - 'scripts/w33_inflation_r_1_45.py'
+      - 'scripts/w33_scalar_resonance_3215gev.py'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - '.github/workflows/w33_pass5957_5964_prediction_evidence_audit.yml'
+  pull_request:
+    paths:
+      - 'analysis/w33_pass5957_5964_prediction_evidence_audit.py'
+      - 'data/PART_W33_PASS5957_5964_PREDICTION_EVIDENCE_AUDIT.json'
+      - 'tests/test_w33_pass5957_5964_prediction_evidence_audit.py'
+      - 'PASS5913_5932_LINF_BRACKET_ELECTRON_WEYL.md'
+      - 'PASS5933_5956_HITLIST_PREDICTIONS.md'
+  workflow_dispatch:
+
+jobs:
+  fail-closed-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install focused test dependency
+        run: python -m pip install --upgrade pip pytest
+      - name: Replay evidence audit
+        run: python analysis/w33_pass5957_5964_prediction_evidence_audit.py
+      - name: Compare frozen certificate byte-for-byte
+        run: git diff --exit-code -- data/PART_W33_PASS5957_5964_PREDICTION_EVIDENCE_AUDIT.json
+      - name: Run focused regression
+        run: pytest -q tests/test_w33_pass5957_5964_prediction_evidence_audit.py
+      - name: Check canonical firewall promotion
+        run: grep -F '\input{analysis/PASS5957_5964_prediction_evidence_audit_insert}%' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
