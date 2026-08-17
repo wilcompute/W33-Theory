@@ -1,0 +1,102 @@
+{
+  "boundary": "Exact finite algebra, coding, Fourier analysis, graph theory and publication plumbing. The two-qubit bridge is an isomorphism of the nonzero dual Fourier label geometry to the Pauli-point geometry; it is not a q=5 physical-state embedding. The old Pass5832-5839 labels are superseded solely because of a namespace collision, not because the mathematics changed.",
+  "pass_5848_full_normalizer": {
+    "affine_group_order": 576,
+    "full_S16_normalizer_order": 1152,
+    "linear_centralizer_order": 1,
+    "linear_left_right_order": 36,
+    "linear_normalizer_order": 72,
+    "normalizer_quotient": "C2",
+    "proof_of_S16_exhaustion": "The regular translation subgroup T=C2^4 is O_2(G): the quotient G/T=S3xS3 has trivial O_2. Hence T is characteristic in G. Every S16-normalizer of G normalizes T and therefore lies in N_S16(T)=AGL(4,2). The exhaustive GL4(2) computation gives |N_GL4(H)|=72, so |N_S16(G)|=16*72=1152.",
+    "transpose_in_normalizer_not_group": true
+  },
+  "pass_5849_code_snf_interface": {
+    "firewall": "The local 12-coordinate Reye code is not identified with the global q=5 [[156,26,6]]_2 W(3,5) CSS point code. Their common distance 6 is not by itself an equivalence.",
+    "minimum_weight_words_equal_heavy_six_sets": true,
+    "reye_binary_code": [12, 4, 6],
+    "same_four_dimensional_binary_defect": true,
+    "saturated_H_2adic_cokernel_valuation": 9,
+    "saturated_H_mod2_nullity": 7,
+    "saturated_H_transpose_snf": [1, 1, 2, 2, 2, 2, 2, 4, 4],
+    "saturated_R_2adic_cokernel_valuation": 6,
+    "saturated_R_mod2_nullity": 4,
+    "saturated_R_transpose_snf": [1, 1, 1, 1, 1, 2, 2, 4, 4],
+    "weight8_words": "the three phi=0, psi!=0 fiber-pair words",
+    "weight_enumerator": {"0": 1, "6": 12, "8": 3}
+  },
+  "pass_5850_two_qubit_object_isometry": {
+    "all_105_polar_commutation_pairs_preserved": true,
+    "chosen_isometry_basis_images": ["XI", "IZ", "IY", "ZI"],
+    "chosen_isometry_basis_images_Pauli_ints": [1, 8, 12, 2],
+    "interpretation": "This is an object-level isomorphism between the nonzero dual Fourier labels Y in M2(F2) and the 15 two-qubit Pauli points. It does not identify the q=5 cover points with qubit states or observables.",
+    "matrix_label_to_C_label": {"1": 10, "2": 13, "3": 7, "4": 12, "5": 11, "6": 3, "7": 6, "8": 15, "9": 5, "10": 14, "11": 4, "12": 9, "13": 2, "14": 1, "15": 8},
+    "matrix_quadratic_form": "det([[a,b],[c,d]])=a*d+b*c",
+    "number_of_linear_quadratic_isometries": 72,
+    "published_partition": {"C1_C6": "six-point complement", "C7_C15": "Mermin nine"},
+    "quadratic_form_on_Pauli_bits": "q_SPP=x1*z1+x2*z2+x2",
+    "rank_one_grid_C_labels": [[10, 13, 7], [12, 15, 9], [11, 14, 8]],
+    "rank_one_grid_rows_and_columns_commute": true,
+    "rank_one_maps_exactly_to_C7_C15": true,
+    "units_map_exactly_to_C1_C6": true
+  },
+  "pass_5851_all_field_matrix_fourier_radon": {
+    "D_disjointness_formula": "D[M,(phi,psi)]=1 iff psi=-phi*M",
+    "R_rank_formula": "1+(r-1)(r+1)^2",
+    "field_statement": "For every finite field F_r, additive characters of M2(F_r) split by dual matrix rank 0/1/2. For evaluation incidence R[(w,x),M]=1 iff x=Mw, im(R^T)=1 plus the rank-one Fourier sector and ker(R)=the rank-two sector.",
+    "prime_anchor_exact_replays": {
+      "2": {"RRT_nonzero_singular_values_squared": {"constant": 12, "rank1": 4}, "R_kernel_dimension": 6, "R_rank": 10, "extra_point_rank1_preimage_kernel_dimension": 0, "rank_label_counts": {"0": 1, "1": 9, "2": 6}},
+      "3": {"RRT_nonzero_singular_values_squared": {"constant": 72, "rank1": 18}, "R_kernel_dimension": 48, "R_rank": 33, "extra_point_rank1_preimage_kernel_dimension": 32, "rank_label_counts": {"0": 1, "1": 32, "2": 48}},
+      "5": {"RRT_nonzero_singular_values_squared": {"constant": 600, "rank1": 100}, "R_kernel_dimension": 480, "R_rank": 145, "extra_point_rank1_preimage_kernel_dimension": 432, "rank_label_counts": {"0": 1, "1": 144, "2": 480}},
+      "7": {"RRT_nonzero_singular_values_squared": {"constant": 2352, "rank1": 294}, "R_kernel_dimension": 2016, "R_rank": 385, "extra_point_rank1_preimage_kernel_dimension": 1920, "rank_label_counts": {"0": 1, "1": 384, "2": 2016}}
+    },
+    "prime_power_extension": "The proof uses only finite-field linear algebra and additive characters; for prime powers use a nontrivial character composed with the field trace.",
+    "q2_tightness": "At r=2 every rank-one label has a unique factorization phi^T w^T. For r>2 it has r-1 factorizations, producing an additional (r-2)(r-1)(r+1)^2 point-side kernel.",
+    "rank1_dimension_formula": "(r-1)(r+1)^2",
+    "rank2_dimension_formula": "r(r-1)^2(r+1)=|GL2(r)|",
+    "singular_square_constant": "r^2(r^2-1)",
+    "singular_square_rank1": "r^2(r-1)"
+  },
+  "pass_5852_publication_front_doors": {
+    "canonical_public_index": "docs/index.html",
+    "cards_to_register_and_materialize": [
+      ["pass-5776-5783-reye-latin-common-core", "analysis/PASS5776_5783_index_insert.html"],
+      ["pass-5792-5799-matrix-ring-transpose-outer", "analysis/PASS5792_5799_index_insert.html"],
+      ["pass-5816-5823-matrix-fourier-rank", "analysis/PASS5816_5823_index_insert.html"],
+      ["pass-5824-5831-integral-w9-lattices", "analysis/PASS5824_5831_index_insert.html"],
+      ["pass-5848-5855-normalizer-code-pauli-allq", "analysis/PASS5848_5855_index_insert.html"]
+    ],
+    "manuscript_rule": "The shared frontier must include PASS5848_5855 and must not include the superseded PASS5832_5839 matrix insert.",
+    "materialization_rule": "Remove the stale collision card if it was materialized by a queued legacy run; then insert each corrected card independently into docs/index.html and index.html, rejecting duplicates without requiring the two surfaces to be byte-identical.",
+    "stale_collision_card": "pass-5832-5839-normalizer-code-pauli-allq"
+  },
+  "pass_5853_determinant_bent_chirp": {
+    "boundary": "Boolean/Fourier identity only; no quantum-state claim.",
+    "identity": "Walsh((-1)^det)(Z)=4*(-1)^det(Z)",
+    "is_bent": true,
+    "is_self_dual": true,
+    "walsh_distribution": {"+4": 10, "-4": 6}
+  },
+  "pass_5854_unit_cayley_rook_graph": {
+    "K4_count": 8,
+    "cayley_connection_set": "six invertible 2x2 binary matrices",
+    "equals_affine_normalizer_from_pass5848": true,
+    "full_automorphism_group": "S4 wr C2",
+    "full_automorphism_order": 1152,
+    "identified_graph": "4x4 rook/lattice graph L2(4)",
+    "parallel_K4_partitions": 2,
+    "resolution": "This supplies the previously missing source of the order-1152 S4 wr C2: it is the full automorphism group of the unit-difference Cayley graph, not a Delsarte graph of the [12,4,6] code.",
+    "srg_parameters": [16, 6, 2, 2]
+  },
+  "pass_5855_simplex_line_puncture": {
+    "conceptual_enumerator": "1 + 12 z^6 + 3 z^8",
+    "deleted_coordinates": "projective line {(w,x): w=0, x!=0}, three points",
+    "parent_code": "[15,4,8] binary simplex code on PG(3,2)",
+    "punctured_code": "[12,4,6] Reye kernel",
+    "punctured_code_equal_reye_kernel_objectwise": true,
+    "three_weight8_words": "linear forms with phi=0, psi!=0; the deleted line contains only 0s",
+    "twelve_weight6_words": "linear forms with phi!=0; the deleted line contains exactly two 1s"
+  },
+  "renumbered_from_contaminated_range": [5832, 5839],
+  "schema": "w33.pass5848_5855.normalizer_code_pauli_allq.v1",
+  "status": "PASS"
+}
