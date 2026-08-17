@@ -1,0 +1,92 @@
+name: W33 Pass5840-5847 matrix doily Radon addendum
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5840_5846_matrix_doily_radon.py'
+      - 'analysis/PASS5840_5847_matrix_doily_radon_frontier.md'
+      - 'analysis/PASS5840_5847_matrix_doily_radon_addendum_insert.tex'
+      - 'analysis/PASS5840_5847_index_insert.html'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/PART_W33_PASS5840_5846_MATRIX_DOILY_RADON.json'
+      - 'data/w33_publication_frontier_contract_v2.json'
+      - 'data/w33_pass_namespace_registry_v2.d/5840-5847.json'
+      - 'tests/test_w33_pass5840_5847_matrix_doily_radon.py'
+      - 'tools/materialize_pass5840_5847_matrix_addendum.py'
+      - '.github/workflows/w33_pass5840_5847_matrix_doily_radon.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  replay-publish-compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install test dependency
+        run: python -m pip install --upgrade pip pytest
+
+      - name: Replay Pass5840-5846 exact certificate
+        run: python analysis/w33_pass5840_5846_matrix_doily_radon.py
+
+      - name: Focused regression
+        run: python -m pytest -q tests/test_w33_pass5840_5847_matrix_doily_radon.py
+
+      - name: Materialize addendum card
+        run: |
+          python tools/materialize_pass5840_5847_matrix_addendum.py
+          test "$(grep -c 'id=\"pass-5840-5847-matrix-doily-radon-addendum\"' docs/index.html)" -eq 1
+          test "$(grep -c 'id=\"pass-5840-5847-matrix-doily-radon-addendum\"' index.html)" -eq 1
+          git diff --check
+
+      - name: Audit shared manuscript and publication reachability
+        run: |
+          grep -Fq '\input{analysis/PASS5840_5847_matrix_doily_radon_addendum_insert}' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('data/w33_publication_frontier_contract_v2.json').read_text())
+          token='pass-5840-5847-matrix-doily-radon-addendum'
+          got={x['token'] for x in d['local_public_sections']}
+          assert token in got
+          assert d['public_index']=='docs/index.html'
+          PY
+
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+
+      - name: Compile all three canonical manuscripts
+        run: |
+          mkdir -p evidence/pass5840_5847
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass5840_5847/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass5840_5847/pdf_sha256.txt
+
+      - name: Freeze homepage materialization if changed
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/index.html index.html data/PART_W33_PASS5840_5846_MATRIX_DOILY_RADON.json
+          if git diff --cached --quiet; then
+            echo 'Certificate and homepage card already frozen.'
+          else
+            git commit -m 'Materialize Pass5840-5847 matrix/doily addendum [skip ci]'
+            git push origin master
+          fi
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass5840-5847-matrix-doily-radon
+          path: evidence/pass5840_5847/**
