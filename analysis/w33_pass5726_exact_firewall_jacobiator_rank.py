@@ -23,7 +23,6 @@ from __future__ import annotations
 
 import itertools
 import json
-import time
 from collections import Counter
 from pathlib import Path
 
@@ -171,11 +170,10 @@ def main():
 
     spans = [ModSpan(n, p) for p in PRIMES]
     output_support = set()
-    output_grade_hist = Counter()
+    output_grade_occurrences = Counter()
     input_grade_hist = Counter()
     nonzero_triples = 0
     total = n * (n - 1) * (n - 2) // 6
-    t0 = time.time()
 
     for count, (i, j, k) in enumerate(itertools.combinations(range(n), 3), 1):
         J = jacobi(i, j, k, table, forbidden)
@@ -184,7 +182,7 @@ def main():
             input_grade_hist[str(tuple(sorted((grade_by_idx[i], grade_by_idx[j], grade_by_idx[k]))))] += 1
             for q in J:
                 output_support.add(int(q))
-                output_grade_hist[grade_by_idx[q]] += 1
+                output_grade_occurrences[grade_by_idx[q]] += 1
             for span in spans:
                 span.add(J)
         if count % 500_000 == 0:
@@ -194,14 +192,19 @@ def main():
     modular_ranks = {str(s.p): s.rank for s in spans}
     lower = max(modular_ranks.values())
     upper = len(output_support)
-    exact = lower == upper
-    if not exact:
+    if lower != upper:
         raise AssertionError(
             f"modular rank {lower} did not saturate output support {upper}; exact-Q rank needs an additional gate"
         )
 
     r = upper
-    elapsed = time.time() - t0
+    complement = sorted(set(range(n)) - output_support)
+    support_grade_counts = Counter(grade_by_idx[q] for q in output_support)
+    complement_grade_counts = Counter(grade_by_idx[q] for q in complement)
+    assert len(complement) == n - r
+    assert sum(support_grade_counts.values()) == r
+    assert sum(complement_grade_counts.values()) == n - r
+
     out = {
         "pass": 5726,
         "status": "EXACT_FIREWALL_JACOBIATOR_IMAGE_RANK_CERTIFIED__MINIMAL_ARITY3_2TERM_REPAIR_DIMENSION_FIXED",
@@ -212,11 +215,15 @@ def main():
         "deleted_cubic_triads": 9,
         "output_support_indices": sorted(output_support),
         "output_support_size": upper,
-        "output_grade_histogram": dict(sorted(output_grade_hist.items())),
+        "output_support_grade_counts": dict(sorted(support_grade_counts.items())),
+        "output_grade_occurrence_histogram": dict(sorted(output_grade_occurrences.items())),
+        "untouched_complement_indices": complement,
+        "untouched_complement_dimension": len(complement),
+        "untouched_complement_grade_counts": dict(sorted(complement_grade_counts.items())),
         "input_grade_histogram": dict(sorted(input_grade_hist.items())),
         "modular_ranks": modular_ranks,
         "rank_over_Q": r,
-        "rank_proof": "For the integer Jacobiator matrix, rank mod p <= rank_Q <= number of occupied output coordinates. The modular rank equals the complete output-support size, so both inequalities are equalities.",
+        "rank_proof": "For the integer Jacobiator matrix, rank mod p <= rank_Q <= number of occupied output coordinates. The modular rank equals the complete output-support size, so both inequalities are equalities. Consequently im(J) is the entire coordinate subspace supported on those occupied basis coordinates.",
         "minimal_2term_repair": {
             "arity3_identity": "l1(l3)=-J up to the global sign convention",
             "necessary_condition": "im(J) subset im(l1)",
@@ -226,7 +233,6 @@ def main():
             "larger_Y_freedom": "any two l3 lifts differ by a ker(l1)-valued trilinear map"
         },
         "higher_identity_boundary": "Solving the arity-3 identity does not certify the arity-4 or higher L-infinity identities. Those remain separate equations.",
-        "elapsed_seconds": elapsed,
         "source_inputs": [str(p.relative_to(ROOT)) for p in (IN_SC, IN_META, IN_FW)],
         "physics_boundary": "This is an exact finite higher-algebra obstruction rank. It does not derive confinement, QCD, a mass gap, or any continuum field theory."
     }
