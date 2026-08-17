@@ -131,6 +131,38 @@ Ordered by how hard they are to catch. Each was found the expensive way.
    re-derived a rank law the repo had already proved and formalized in Lean, and
    whose two halves are published (Sastry–Sin; Chandler–Sin–Xiang) and cited here.
 
+### Failure mode six: right result, wrong subject (added 2026-08-17)
+
+The five modes above all assume the claim is *about* the object. A sixth does not.
+
+**Pass 5744–5759 measured a rank law on W(3,q), proved it, verified it at q = 3, 5, 7, 8,
+9, 11, and attributed it to the symplectic form. Then one test killed nine passes of it:
+every nondegenerate bilinear form attains the same bound — symmetric, diagonal, random,
+degenerate alike. The law is `C(e+r−1,e)` in the *rank* of the form. Nothing in it was
+about W(3,q).**
+
+The claim was true, proportionate, well-witnessed, and novel to the corpus. It was simply
+about bilinear forms, computed on a carrier that happened to be a symplectic polar space.
+
+**The test is one line: change the object and see whether the result changes.** If it does
+not, the result was never about the object. Run it *before* writing the framing, not after
+— it costs one perturbed input.
+
+**Two calibrations from the same thread:**
+
+- *Arguments rediscover; computations discover.* Of ten claims audited, every one derived
+  from a short argument turned out classical (four for four); every one that survived came
+  from a construction, a GAP typing, or an explicit search. **A proof that fits in a few
+  lines, about a classical object, is a reason to search the literature before writing.**
+- *An empty search is a hypothesis about your pattern, not a fact about the corpus.* Three
+  of four empty results in that session were bad patterns — one grep matched only `#` and
+  `**` while the banner it sought began with `>`. **Give every negative a positive
+  control**: search for something you know is there, confirm the pattern fires, then trust
+  the negative.
+
+**Pass-number reservations must be pushed AND re-fetched before work begins**, not merely
+written locally — Pass 5744 collided with the other lane and needed a renumber.
+
 ### The operational prior
 
 Trust spectral / algebraic / representation-theoretic claims by default; treat

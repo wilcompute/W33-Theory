@@ -1,0 +1,113 @@
+{
+  "boundary": "Pass 5761 REFUTES this pass's own expectation that the Reye is unique. Pass 5762 changes the SCOPE of Passes 5675 and 5691 and does not touch their verified content. Pass 5766 reports alpha(W(3,9)) OPEN. Whether Pappus's partition is a block system of its own group is NOT tested",
+  "pass_5760_5761": {
+    "configurations": [
+      {
+        "blocks": 16,
+        "kernel_dim": 4,
+        "min_weight": 6,
+        "name": "Reye 12_4 16_3",
+        "points": 12,
+        "shows_phenomenon": true
+      },
+      {
+        "blocks": 7,
+        "kernel_dim": 3,
+        "min_weight": 4,
+        "name": "Fano 7_3",
+        "points": 7,
+        "shows_phenomenon": false
+      },
+      {
+        "blocks": 9,
+        "kernel_dim": 2,
+        "min_weight": 6,
+        "name": "Pappus 9_3",
+        "points": 9,
+        "shows_phenomenon": true
+      },
+      {
+        "blocks": 10,
+        "kernel_dim": 2,
+        "min_weight": 4,
+        "name": "Desargues 10_3",
+        "points": 10,
+        "shows_phenomenon": false
+      },
+      {
+        "blocks": 8,
+        "kernel_dim": 1,
+        "min_weight": 5,
+        "name": "Mobius-Kantor 8_3",
+        "points": 8,
+        "shows_phenomenon": false
+      }
+    ],
+    "result": "2 of 5: ['Reye 12_4 16_3', 'Pappus 9_3']",
+    "self_correction": "prose predicted the Reye alone and the table refuted it; third such catch this session",
+    "test": "change the object and see whether the result changes",
+    "verdict": "NOT generic and NOT unique to the Reye; the right scope is a class containing at least the Reye and Pappus, undefined"
+  },
+  "pass_5762": {
+    "changed": "the framing -- these are facts about a CLASS, not the Reye",
+    "next_test": "is Pappus's partition a block system of its own group?",
+    "unchanged": [
+      "the [12,4,6] partition IS T12_165's unique block system",
+      "Aut([12,4,6]) IS W(F4)/Z acting as T12_165"
+    ]
+  },
+  "pass_5763_5765": {
+    "claude_md": [
+      "failure mode six + one-line test",
+      "arguments rediscover, computations discover",
+      "positive controls for negative searches",
+      "push and re-fetch reservations"
+    ],
+    "durable": [
+      {
+        "location": "CLAUDE.md",
+        "output": "failure mode six + its one-line test"
+      },
+      {
+        "location": "CLAUDE.md",
+        "output": "arguments rediscover, computations discover"
+      },
+      {
+        "location": "CLAUDE.md",
+        "output": "positive controls for every negative search"
+      },
+      {
+        "location": "CLAUDE.md",
+        "output": "push AND re-fetch reservations before working"
+      },
+      {
+        "location": "Pass 5728 certificate",
+        "output": "construction-inheritance method"
+      },
+      {
+        "location": "committed artifact",
+        "output": "DATE_FILE_INTEGER_INDEX.md"
+      },
+      {
+        "location": "guard, selftest 8/8",
+        "output": "scripts/check_transitivity.py"
+      }
+    ]
+  },
+  "pass_5766_5767": {
+    "bounds": [
+      51,
+      80
+    ],
+    "dual": 80.83841179,
+    "hoffman": 82,
+    "not_done": [
+      "Pappus's partition as a block system",
+      "what defines the Reye/Pappus class",
+      "literature searches with positive controls"
+    ],
+    "proved": false,
+    "status": "OPEN",
+    "why_it_qualifies": "alpha(W(3,9)) is a number about W(3,9) and nothing else; it passes the change-the-object test trivially"
+  }
+}
