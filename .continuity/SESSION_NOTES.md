@@ -17,11 +17,11 @@
 
 ## ✅ Next Steps
 <!-- What should we do next? -->
-- Auto-saved at 2026-08-17T15:31:00.451Z (reason: threshold-commits)
+- Auto-saved at 2026-08-17T15:48:40.449Z (reason: threshold-commits)
 - Recent commits:
-  - 4d2e43e0c Reserve Pass5712-5719 Track A: master theorem, module irreducibility, self-audit
-  - 6bed442c6 Pass5704-5711: the Sym^e bound was classical, and three of my own claims fall
-  - 74896811c Reserve Pass5704-5711 Track A: rook module, Frobenius boundary, GF(9), date-file scan
+  - 223c95c4e Pass5728-5735: S4 wr S2 is Aut(K_4,4), and my correction needed correcting
+  - 4f5162ec3 Reserve Pass5728-5735 Track A: digit law extension, Steinberg, F3 collapse
+  - e9877c49e Pass5720-5727: GF(9) breaks the period claim and reveals a base-p digit law
 
 ## 📝 Open Questions
 <!-- What do we still need to figure out? -->
