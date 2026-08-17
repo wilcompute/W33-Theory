@@ -1,0 +1,58 @@
+name: Pass6137-6144 CE2 K3 evidence repair
+
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass6137_6144_ce2_k3_evidence_repair.py'
+      - 'analysis/PASS6137_6144_ce2_k3_evidence_repair.md'
+      - 'analysis/PASS6137_6144_ce2_k3_evidence_repair_insert.tex'
+      - 'data/PART_W33_PASS6137_6144_CE2_K3_EVIDENCE_REPAIR.json'
+      - 'tests/test_w33_pass6137_6144_ce2_k3_evidence_repair.py'
+      - 'scripts/w33_ce2_anchor23_full_orbit.py'
+      - 'scripts/w33_ce2_anchor24_orbit.py'
+      - 'scripts/w33_ce2_anchor25_orbit.py'
+      - 'scripts/w33_ce2_anchor26_31_batch.py'
+      - 'scripts/w33_ce2_anchor32_39_final.py'
+      - 'scripts/w33_ce2_global_closure_verify.py'
+      - 'scripts/w33_k3_curvature_witness_scan.py'
+      - 'docs/pass_6041_6064_summary.md'
+      - 'docs/pass_6065_6136_summary.md'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - '.github/workflows/w33_pass6137_6144_ce2_k3_evidence_repair.yml'
+  pull_request:
+    paths:
+      - 'analysis/w33_pass6137_6144_ce2_k3_evidence_repair.py'
+      - 'data/PART_W33_PASS6137_6144_CE2_K3_EVIDENCE_REPAIR.json'
+      - 'tests/test_w33_pass6137_6144_ce2_k3_evidence_repair.py'
+      - 'scripts/w33_ce2_global_closure_verify.py'
+      - 'scripts/w33_k3_curvature_witness_scan.py'
+  workflow_dispatch:
+
+jobs:
+  fail-closed-replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install focused dependency
+        run: python -m pip install --upgrade pip pytest
+      - name: Replay correction producer
+        run: python analysis/w33_pass6137_6144_ce2_k3_evidence_repair.py
+      - name: Compare frozen certificate byte-for-byte
+        run: git diff --exit-code -- data/PART_W33_PASS6137_6144_CE2_K3_EVIDENCE_REPAIR.json
+      - name: Replay corrected CE2 ledgers
+        run: |
+          python scripts/w33_ce2_anchor23_full_orbit.py
+          python scripts/w33_ce2_anchor24_orbit.py
+          python scripts/w33_ce2_anchor25_orbit.py
+          python scripts/w33_ce2_anchor26_31_batch.py
+          python scripts/w33_ce2_anchor32_39_final.py
+          python scripts/w33_ce2_global_closure_verify.py
+      - name: Replay fail-closed K3 loader contract
+        run: python scripts/w33_k3_curvature_witness_scan.py
+      - name: Run focused regression
+        run: pytest -q tests/test_w33_pass6137_6144_ce2_k3_evidence_repair.py
+      - name: Check manifest promotion
+        run: grep -F '\input{analysis/PASS6137_6144_ce2_k3_evidence_repair_insert}%' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
