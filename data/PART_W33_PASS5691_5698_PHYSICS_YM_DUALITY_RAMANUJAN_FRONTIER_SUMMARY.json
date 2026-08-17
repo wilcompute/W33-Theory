@@ -1,0 +1,68 @@
+{
+  "schema": "w33.pass5691_5698.physics_ym_duality_ramanujan_frontier.v1",
+  "pass_range": [5691, 5698],
+  "status": "EIGHT_RESULTS_FROZEN__FINITE_YM_CANDIDATE_FLATRAY_DUALITY_EXPLICIT_RAMANUJAN_LEVELS__PHYSICAL_COUPLING_CONTINUUM_GENERATIONS_REMAIN_OPEN",
+  "5691": {
+    "status": "AFFINE_SU3_HAS_CANONICAL_KILLING_YM_FORM_AND_PLAQUETTE_H1_FOUR__OLD_VERTICAL_Z3_IS_ADJOINT_TRIVIAL",
+    "complex": "AG(2,3) K9 links: V=9, E=36; 54 translation parallelograms span rank24 over R; cycle space dimension28, hence H1 dimension4. Adding 12 affine-line triangle boundaries raises real face rank to28 and kills H1.",
+    "mod3": "translation faces rank24; translation+line faces rank26 over F3, leaving H1 dimension2",
+    "lie_metric": "the Pass5686 compact su3 Killing form is -54 times the Euclidean metric on V8, fixing the invariant quadratic form up to scale",
+    "candidate": "F=d a + 1/2[a,a], S_YM=(1/(2g^2)) sum_f <F_f,F_f>",
+    "vertical_Z3": "the old fiber translation I9 tensor C3 acts trivially on V8 tensor span(1,1,1), so old Z3 holonomy is adjoint-trivial on the new base su3",
+    "conclusion": "A finite lattice-YM candidate is canonical once a face set and coupling are chosen, but neither the face set nor physical g is derived by the Lie algebra alone."
+  },
+  "5692": {
+    "status": "TWO_FLAT_BOND_RAYS_ARE_EXACT_CENTRALIZER_PARTICLE_HOLE_DUALS",
+    "D": "diag(+,+,+,+,-,-,-,-,-,-,-,-,+,+,+,+)",
+    "group": "D commutes with the full signed stabilizer96, is not in it, and adjoining D gives order192",
+    "identity": "after unit flat-bond normalization H2=-D H1 D; because K H1 K^-1=-H1, the antiunitary D K maps H1 to H2",
+    "conclusion": "Modulo the exact carrier-centralizer/PHS duality, Pass5685's two projective flat-bond rays form one ratio-two class."
+  },
+  "5693": {
+    "status": "EXPLICIT_RAMANUJAN_W33_2LIFT_LEVELS_320_AND_640_CONSTRUCTED",
+    "algorithm": "factor each new 4-regular bipartite graph into four deterministic perfect matchings; test the six unions of two matchings and use the best locally-balanced signing",
+    "level160_signing_radius": 3.4232028038878632,
+    "level320_signing_radius": 3.396072580898317,
+    "ramanujan_bound": 3.4641016151377544,
+    "full_nontrivial_radii_vertices_80_160_320_640": [2.449489742783178, 3.2837688756800314, 3.4232028038878632, 3.4232028038878632],
+    "conclusion": "The W33 Levi root now has explicit connected Ramanujan levels through 640 vertices; a canonical all-level recursive rule remains open."
+  },
+  "5694": {
+    "status": "JACOBIATOR_FULLY_EXPANDS_FROM_B_MINUS_D__COLLISION_PLUS_ORIENTATION_DO_NOT_UNIQUELY_FIX_L3",
+    "identity": "J(b-D)=J(b)-B(b,D)-B(D,b)+J(D); for Lie b, J(b-D)=-B(b,D)-B(D,b)+J(D)",
+    "information_no_go": "C/3 fixes deleted support but not all E8 coefficients/signs/normalizations; affine orientation fixes only the determinant su3 bracket sign",
+    "l3_no_go": "even for known J, d l3=-J determines l3 only modulo ker d when a solution exists",
+    "conclusion": "collision support plus affine orientation do not uniquely determine the full L-infinity repair."
+  },
+  "5695": {
+    "status": "TENSOR_PRODUCT_ROUTING_DOUBLES_INTERNAL_CAPACITY_WITHOUT_RENORMALIZING_DIRAC_CAUSAL_CONE",
+    "Hamiltonian": "Htot(p)=HD(p) tensor I_N + I tensor Hint",
+    "bands": "E_{alpha,+/-}(p)=epsilon_alpha +/- sqrt(|p|^2+m^2)",
+    "velocity": "grad_p E_{alpha,+/-}=+/-p/sqrt(|p|^2+m^2), independent of internal eigenvalue and cover level",
+    "conclusion": "N_n=80*2^n internal state/routing capacity can grow while the physical split-step support and c_eff=ell/tau remain unchanged in the tensor-separated model."
+  },
+  "5696": {
+    "status": "DETERMINANT_LINE_TWIST_RESTORES_FULL_AGL23_AS_SU3_AUTOMORPHISMS",
+    "twist": "R_tilde(g)=chi_det(g) R_site(g) on V8",
+    "equivariance": "[R_tilde(g)f,R_tilde(g)h]=R_tilde(g)[f,h] for all 432 AGL(2,3) elements",
+    "parity": "ASL elements are even permutations of the nine sites; determinant-reversing elements are odd",
+    "correction": "Pass5686's AGL-to-ASL orientation choice is necessary only for the plain site module. Treating the eight as an orientation pseudovector restores full AGL without a forced physical orientation domain wall.",
+    "conclusion": "bracket-sign domains are not automatically distinct physical phases; extra dynamics is required."
+  },
+  "5697": {
+    "status": "RAMANUJAN_INTERNAL_ADJOINT_LAPLACIAN_HAS_UNIFORM_FINITE_GRAPH_GAP_NOT_YANG_MILLS_MASS_GAP",
+    "operator": "L_adj=(4I-A) tensor I8",
+    "universal_gap_lower_bound": 0.5358983848622456,
+    "zero_modes": "eight constant su3 directions before gauge fixing",
+    "conclusion": "all nonconstant adjoint routing modes have a level-independent dimensionless graph gap on a Ramanujan tower, but this is not the interacting Yang-Mills mass gap or confinement."
+  },
+  "5698": {
+    "status": "VERTICAL_Z3_FOURIER_SECTORS_ARE_THREE_GAUGE_CHARGES_NOT_THREE_IDENTICAL_GENERATIONS",
+    "module": "C27=C9 tensor C[Z3]; C9=1+V8 under ASL(2,3)",
+    "ASL_only": "3 copies of 1 and 3 copies of V8; commutant M3(C) direct-sum M3(C), dimension18",
+    "joint_ASL_Z3": "direct sum over k=0,1,2 of (1 tensor chi^k) plus (V8 tensor chi^k), multiplicity-free; joint commutant C^6",
+    "conclusion": "respecting the vertical Z3 gauge action turns the three fiber Fourier sectors into inequivalent charges, so the simplest fiber-phase=three-generations hypothesis fails."
+  },
+  "ci_repair": "The preceding Pass5683-5690 replay failure was traced to floating duplicate roots in Pass5685 under NumPy2.5; Pass5685 now deduplicates projective rays by the invariant 60-bond sign pattern modulo global sign.",
+  "boundary": "All promoted claims are finite graph, cochain, Lie-algebra, centralizer, tensor-product, representation or spectrum statements. No QCD/Yang-Mills derivation, confinement theorem, physical gauge coupling, Standard Model mass assignment, physical mass gap, physical spacetime continuum, value of c, or three-generation derivation is claimed."
+}
