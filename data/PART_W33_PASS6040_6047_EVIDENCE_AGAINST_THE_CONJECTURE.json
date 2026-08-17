@@ -1,0 +1,47 @@
+{
+  "boundary": "Pass 6040 reports EVIDENCE AGAINST the Pass 6032 conjecture, not a refutation -- alpha(W(3,7)) = 33 is still unproved. Pass 6042's quadratic is a THREE-POINT FIT TO A THREE-PARAMETER FAMILY, so it has zero residual by construction and is not evidence of anything. The q=9 run did not execute",
+  "pass_6040_the_q7_verdict": {
+    "conjecture_predicted": 35,
+    "if_33_is_optimal": "the deficit is 50 - 33 = 17, not the predicted 15, and the conjecture is dead",
+    "ils": {
+      "best": 33,
+      "seconds": 240,
+      "verified_independent": true
+    },
+    "milp": {
+      "incumbent": 33,
+      "proved": false,
+      "seconds": 420
+    },
+    "reading": "TWO different search classes both stop at 33 and neither reaches 35. That is meaningful evidence AGAINST the ((q+1)/2)^2 - 1 conjecture, though not a refutation, since neither run proves optimality and both could share a blind spot"
+  },
+  "pass_6041_my_own_bug": {
+    "correct_object": "GF(9) = F_3[x]/(x^2+1), which I have used correctly elsewhere this session",
+    "error": "the q=9 run crashed on pow(c, -1, 9) -- Z/9 is not a field",
+    "note": "this is the same Z/9-versus-GF(9) confusion flagged earlier in the session and then reintroduced in fresh code",
+    "so": "the q=9 search for a 58-set DID NOT RUN and no q=9 result is reported"
+  },
+  "pass_6042_a_fit_with_no_information": {
+    "extrapolation": {
+      "alpha": 52,
+      "deficit": 30,
+      "q": 9
+    },
+    "if_alpha_w37_is_33": {
+      "deficits": {
+        "3": 3,
+        "5": 8,
+        "7": 17
+      }
+    },
+    "my_best_q9_construction": 51,
+    "quadratic_through_them": "(q^2 - 3q + 6)/2, giving 3, 8, 17 exactly",
+    "status": "recorded as arithmetic, explicitly NOT as a prediction",
+    "the_honest_problem": "three points fitted to a three-parameter quadratic has ZERO residual by construction. It cannot be evidence for anything, and the fact that it lands one above my q=9 best of 51 is not confirmation -- it is what any curve through those points would do somewhere"
+  },
+  "pass_6043_what_would_actually_help": {
+    "priority_1": "prove alpha(W(3,7)) -- 400 points is small and it kills or confirms outright",
+    "priority_2": "get a fourth odd-q value independent of any fit",
+    "why": "the session's own record is that numerical patterns from few points die; this thread now has one conjecture with evidence against it and one fit with no degrees of freedom, and neither is worth building on until q=7 is settled"
+  }
+}

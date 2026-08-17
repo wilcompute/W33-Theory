@@ -1,0 +1,8 @@
+{
+  "lo": 6040,
+  "hi": 6047,
+  "lane": "A",
+  "track": "A",
+  "topic": "two search classes both stop at 33 at q=7 against a predicted 35; q=9 run crashed on Z/9 vs GF(9)",
+  "reserved": "2026-08-17"
+}
