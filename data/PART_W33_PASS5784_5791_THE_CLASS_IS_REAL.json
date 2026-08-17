@@ -1,0 +1,99 @@
+{
+  "boundary": "Pass 5785 characterises a class with TWO members and does not prove the implication in general. Pass 5790 reports that three configurations fail the KERNEL condition and does NOT test their block systems. Pass 5789 explicitly declines to read the 51 plateau as evidence that alpha = 51; alpha(W(3,9)) remains OPEN at 51 <= alpha <= 80",
+  "pass_5784_5785": {
+    "evidence": "two instances, Reye and Pappus, both verified in GAP",
+    "members": [
+      {
+        "block_shape": "3 blocks of 4",
+        "block_systems": 1,
+        "group_order": 576,
+        "kernel_dim": 4,
+        "kernel_finds_it": true,
+        "levi_aut": 576,
+        "name": "Reye 12_4 16_3",
+        "points": 12,
+        "self_dual": false,
+        "top_words": 3,
+        "transitive_id": 165
+      },
+      {
+        "block_shape": "3 blocks of 3",
+        "block_systems": 1,
+        "group_order": 108,
+        "kernel_dim": 2,
+        "kernel_finds_it": true,
+        "levi_aut": 216,
+        "name": "Pappus 9_3",
+        "points": 9,
+        "self_dual": true,
+        "top_words": 3,
+        "transitive_id": 18
+      }
+    ],
+    "statement": "for a configuration whose automorphism group has a UNIQUE nontrivial block system, the GF(2) kernel's top-weight words complement to that system",
+    "why_uniqueness_matters": "a kernel cannot choose among several systems; where there is exactly one there is nothing to choose"
+  },
+  "pass_5786": {
+    "pappus": {
+      "blocks": "3 of size 3",
+      "top_words": 3
+    },
+    "prediction": "the three-word shape was flagged at Pass 5768 before the block test; the count of top-weight words equals the number of blocks in both",
+    "reye": {
+      "blocks": "3 of size 4",
+      "top_words": 3
+    }
+  },
+  "pass_5787_5789": {
+    "bounds": [
+      51,
+      80
+    ],
+    "dual": 80.83841179,
+    "explicit_non_claim": "this is NOT evidence that alpha = 51; all three methods share the (1,2)-swap neighbourhood, so they are three variations on one search and would share a blind spot",
+    "hoffman": 82,
+    "next": "change the neighbourhood or the formulation, not the restart policy",
+    "reading": "ILS reached 51 in 1s versus 67s and 28s -- a large speed-up with no quality gain; the difficulty is not finding 51",
+    "searches": [
+      {
+        "best": 51,
+        "method": "plain random restarts",
+        "time": "67s"
+      },
+      {
+        "best": 51,
+        "method": "perp-seeded restarts",
+        "time": "28s"
+      },
+      {
+        "best": 51,
+        "method": "iterated local search, ruin-and-recreate",
+        "time": "1s"
+      }
+    ],
+    "status": "OPEN"
+  },
+  "pass_5790": {
+    "failures": [
+      {
+        "kernel_dim": 3,
+        "name": "Fano 7_3",
+        "points": 7,
+        "reason": "no partition from top words"
+      },
+      {
+        "kernel_dim": 2,
+        "name": "Desargues 10_3",
+        "points": 10,
+        "reason": "no partition from top words"
+      },
+      {
+        "kernel_dim": 1,
+        "name": "Mobius-Kantor 8_3",
+        "points": 8,
+        "reason": "kernel dim 1, only one nonzero word"
+      }
+    ],
+    "note": "they fail the KERNEL condition first; their block systems are not tested"
+  }
+}
