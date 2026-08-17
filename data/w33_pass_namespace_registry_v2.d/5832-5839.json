@@ -2,11 +2,13 @@
   "schema": "w33.pass_namespace_registry.v2.fragment",
   "range": [5832, 5839],
   "owner": "openai_gpt5_6_sol",
-  "status": "PUBLISHED",
+  "status": "SUPERSEDED",
   "created_utc": "2026-08-17T17:30:00Z",
-  "published_utc": "2026-08-17T17:48:00Z",
-  "topic": "eight-probe packet: full affine normalizer; Reye heavy-code/SNF interface; object-level dual-Fourier/two-qubit quadratic isometry; all-field M2 Fourier/Radon theorem; publication closure; determinant bent chirp; unit-difference rook graph; simplex line puncture",
-  "artifacts": [
+  "superseded_utc": "2026-08-17T17:55:00Z",
+  "superseded_by": [5848, 5855],
+  "collision_commit": "64ee98c498bb9faaf9354ac1c4b83a5f498bc61e",
+  "topic": "contaminated staging namespace for the eight-probe matrix packet; do not cite these pass numbers for that mathematics",
+  "legacy_artifacts": [
     "analysis/w33_pass5832_5839_normalizer_code_pauli_allq.py",
     "data/PART_W33_PASS5832_5839_NORMALIZER_CODE_PAULI_ALLQ.json",
     "analysis/BT5832_BT5839_normalizer_code_pauli_allq.md",
@@ -16,7 +18,7 @@
     "tools/materialize_pass5776_5839_matrix_frontier.py",
     ".github/workflows/w33_pass5832_5839_normalizer_code_pauli_allq.yml"
   ],
-  "verification": "Pure-Python exact producer replays all 20,160 GL4(2) maps for the normalizer/isometry searches, all binary Reye words, all unit-Cayley K4/rook automorphisms, the determinant Walsh transform, the PG(3,2) simplex puncture, and complete Fourier character-sum anchors at field sizes 2,3,5,7. Focused pytest semantically freezes the certificate. A dedicated workflow replays the certificate, materializes the five outstanding matrix-frontier homepage cards, audits shared-manifest/publication-contract reachability, and compiles all three canonical manuscripts with Tectonic.",
-  "concurrency_note": "A parallel lane subsequently published its own matrix/doily continuation as Pass5840-5847. It does not overwrite this reserved range; its determinant-polar/doily and all-field factorization results independently corroborate parts of this packet.",
-  "boundary": "Exact finite algebra, coding theory, Fourier analysis, graph theory and publication plumbing. The two-qubit bridge is an isomorphism of nonzero dual Fourier labels to Pauli-point quadratic/symplectic geometry, not a q=5 physical-state embedding. Numerical coincidences and physical analogies remain unpromoted without an independent map."
+  "collision_note": "This lane reserved 5832-5839 first at commit 635f59a050139fe82a8d429c54db5b3ecd3de01f. Before its theorem artifacts landed, an unrelated parallel packet committed under the same pass numbers at 64ee98c498bb9faaf9354ac1c4b83a5f498bc61e. The finite matrix computations remain valid but their active namespace is Pass5848-5855. The old producer/certificate may remain only as a legacy computational core; active manuscript/publication surfaces must not cite this contaminated matrix numbering.",
+  "verification": "Supersession is bibliographic/namespace hygiene, not a mathematical retraction. The corrected Pass5848-5855 runner replays the same exact finite routines and freezes a clean certificate.",
+  "boundary": "Do not use this fragment as evidence that the matrix theorem packet owns Pass5832-5839. Cite Pass5848-5855 instead."
 }
