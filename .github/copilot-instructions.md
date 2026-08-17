@@ -10,42 +10,31 @@
 This file contains project context and decisions. AI assistants should read this file for context. MCP tools are an optional enhancement for richer interaction when connected.
 
 ## Project Context
-- **Total Decisions:** 5176
+- **Total Decisions:** 5177
 - **Known Topics:** needs-review, auto-draft, why, w33, testing, toe, docs, architecture, holonet, photonic, audit, qec, github, selector, gap
 
 ## Current State
 **Repository:** Theory of Everything
 **Project Type:** Python Project | Python
 **Branch:** master
-**Tracking:** ahead 2, behind 0
+**Tracking:** ahead 1, behind 1
 
 **Recent Commits:**
+- `a07e146 Pass5691-5698: the code carries the whole group, plus a symplectic power tower`
+- `0159a6a Reserve Pass5691-5698 Track A: typing Aut(code), the p=2 law, Sym2 generality`
 - `fdd9dcd Pass5683-5690: W(3,3) is NOT rank-rigid, and non-collinearity rank is dim Sym^2`
 - `cbef14f Reserve Pass5683-5690 Track A: rook kernel, W(3,3) adjacency, block-system generality`
 - `bf6b72c Serialize Pass5704-5711 closure runs`
-- `112513c Pass 4144: reconcile matrix horizon RG scar curvature frontier`
-- `79e7761 Pass5675-5682: the characteristic-2 code reconstructs the bridge group's block system`
 
 **Working Tree:**
 - M .continuity/decisions.json
 - M .continuity/decisions.jsonl
 - M .cursorrules
-- M .github/copilot-instructions.md
-- M AGENTS.md
-- M CLAUDE.md
-- M GEMINI.md
-- ?? .mcp.json
-- ?? analysis/PASS4938_ADJOINT_ROOT_COMPILER_AND_SYMMETRY_FIREWALL.md
-- ?? analysis/PASS4939_CHAMBER_STEINER_INTERTWINER.md
-- ?? analysis/PASS4948_MODULAR_BOSE_MESNER_CORRECTION.md
-- ?? analysis/PASS4949_W33_Q43_LEVI_MIDDLE_MODULES.md
-- ?? analysis/PASS4950_FALSE_SRG33_W33_QUARANTINE.md
-- ?? analysis/PASS4959_POINT_LINE_INCIDENCE_LOEWY_COMPILER.md
-- ?? analysis/PASS5699_5703_external_prior_art_and_corrections.md
 
 ## Session Context
 **Goals:**
 - 2026-08-08 current goal: finish and validate the Passes 4324-4334 chamber Hecke and audited-corrections packet while preserving exact theorem, retraction, and open-boundary language.
+
 
 ## Decision Freshness
 **0 stale decisions** · 511 need review · 1138 superseded ready to archive · Oldest unreviewed: 2026-04-20
@@ -229,25 +218,25 @@ after commit:
 ---
 
 ## Recent Decisions
-1. **decision-17869798** (8/17/2026)
+1. **decision-17869802** (8/17/2026) [redis]
+   - Q: What is Aut of the Reye [12,4,6] code, and does the symplectic rank law extend beyond squares?
+   - A: Aut IS W(F4)/Z acting as T12_165 -- typed, not matched. And the rank law is a whole tower.  TYPED AT LAST. Aut([12,4,6]) = SmallGroup(576,8654) = W(F4)/Z, and its degree-12 action is T12_165 -- the same PERMUTATION group the Reye configuration carries, not merely the same abstract group. Pass 5687 reported this as an order match and explicitly refused to identify it (8,681 groups share order 576, and Pass 5644 was wrong about exactly this kind of match at 1152). Typed by SmallGroup id it holds. SO PASS 5675 UNDERSTATED ITS OWN RESULT: the characteristic-2 kernel recovers not just the unique...
+
+2. **decision-17869798** (8/17/2026)
    - Q: Is W(3,3) p-rank rigid, and what is the rank of its non-collinearity matrix?
    - A: NO -- and the rank is exactly dim Sym^2(F_q^4) = 10, for every odd q, with a proof.  CORRECTS PASS 5673, which claimed W(3,3) is p-rank rigid. True only of its INCIDENCE matrix (rank 25 in every characteristic). The ADJACENCY collapses hard: collinearity graph excess 23 at p=2, its complement excess 29 at p=3 -- the substrate's own characteristic -- and the line graph excess 29 at p=2. Same error as Pass 5672 in the opposite direction: there a drop was an artefact, here a non-drop came from examining the wrong matrix. Pass 5678 had already flagged the incidence/adjacency distinction for Csa...
 
-2. **decision-17869788** (8/17/2026) [hashing, owasp]
+3. **decision-17869788** (8/17/2026) [hashing, owasp]
    - Q: Does the Reye configuration's characteristic-2 kernel encode anything about the bridge group, and can logic synthesis...
    - A: YES to the first -- it reconstructs the group's UNIQUE block system. NO to the second -- yosys finds none of it.  THE RESULT. The Reye [12,4,6] binary code (Pass 5670) has exactly three weight-8 words, and their complements are three 4-sets: {0,5,8,11}, {1,4,7,9}, {2,3,6,10}. GAP: T12_165 -- the degree-12 action of W(F4)/Z identified in Pass 5659 -- is imprimitive with EXACTLY ONE nontrivial block system, and it is that partition. So Gaussian elimination on a 16x12 zero-one matrix over GF(2), with no group theory anywhere in the computation, recovers the imprimitivity structure of the bridg...
 
-3. **decision-17869781** (8/17/2026) [rest]
+4. **decision-17869781** (8/17/2026) [rest]
    - Q: Where does linear degeneracy live in the W33/Q4/tomotope object, and what is the Reye configuration's characteristic-...
    - A: IN CHARACTERISTIC 2, not 3 -- and the kernel is a length-optimal code.  THE REYE 12_4 16_3 INCIDENCE COLLAPSES AT p=2 AND NOWHERE ELSE. Rank 10 over Q and over GF(3), GF(5), GF(7), GF(13); rank 8 over GF(2). The GF(2) kernel is a TWO-WEIGHT [12,4,6] binary code, enumerator 1 + 12z^6 + 3z^8, and it MEETS THE GRIESMER BOUND with equality (6+3+2+1 = 12), so no binary [n,4,6] code is shorter. A property of the configuration, not a basis choice, and the first optimal object this thread has produced.  DISTINCT FROM THE PRIOR ART, and worth citing next to it: per decision-b4822355, MCXCII built a ...
 
-4. **decision-08efff0e** (8/17/2026) [correction, how]
+5. **decision-08efff0e** (8/17/2026) [correction, how]
    - Q: How does the newly arrived Pass5706 interact with corrected Pass5699?
    - A: Source inspection resolves the overlap: Pass5706 imports Pass5683/5693, initializes from Pass5683 levi()+NEG, and extends that earlier switching-gauge-fixed tower to 2560. It does not import or continue Pass5699. The correction report, prior-art ledger, TeX/HTML sources, and regression now state that the neighboring phrase 'past Pass5699-5703' is chronological, not a tower identity.
-
-5. **decision-c5354d11** (8/17/2026) [compile, pass5699-5703]
-   - Q: Why reflow the corrected Pass5699-5703 TeX determinant?
-   - A: The standalone compilation was mathematically clean but exposed one overfull display. Reflowed the covering factorization in an aligned environment so the source compiles without layout warnings.
 
 *1471 unreviewed drafts from auto-capture pending review — `continuity log` the real rationale or update_decision to expand them.*
 

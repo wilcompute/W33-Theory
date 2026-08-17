@@ -313,7 +313,8 @@
         "6463a27e-4bc0-4022-85bf-3242450eac40",
         "1786978125686-pe8wl2",
         "1786978825551-4yxjf4",
-        "1786979818704-igg2nn"
+        "1786979818704-igg2nn",
+        "1786980242869-onutez"
       ],
       "causedBy": []
     },
@@ -815,7 +816,8 @@
         "1786859568721-fahph6"
       ],
       "causes": [
-        "34bba2aa-d8d1-415c-904f-54698570f4bf"
+        "34bba2aa-d8d1-415c-904f-54698570f4bf",
+        "1786980242869-onutez"
       ],
       "causedBy": []
     },
@@ -848,7 +850,8 @@
       ],
       "causes": [
         "1786978125686-pe8wl2",
-        "1786979818704-igg2nn"
+        "1786979818704-igg2nn",
+        "1786980242869-onutez"
       ],
       "causedBy": []
     },
@@ -1309,7 +1312,8 @@
         "6d834263-6d6a-4999-820e-80aa72365363",
         "c5354d11-c9e7-4d97-b9a8-e447cd669a02",
         "1786978825551-4yxjf4",
-        "1786979818704-igg2nn"
+        "1786979818704-igg2nn",
+        "1786980242869-onutez"
       ]
     },
     "metadata": {
@@ -1544,7 +1548,8 @@
         "23ea8630-cf32-4d49-9e8c-283e49c88746",
         "a9b40138-5f9d-4b8d-8322-f9f30627b5a5",
         "9c78e141-0750-4c6e-af09-9496721f61a4",
-        "1786979818704-igg2nn"
+        "1786979818704-igg2nn",
+        "1786980242869-onutez"
       ]
     },
     "metadata": {
@@ -2179,7 +2184,8 @@
         "d34b3085-7f08-4647-915d-c70f4dc13cac",
         "ed840f8d-22e2-4239-872e-28c4aaab6737",
         "326590c4-5755-416b-9d9e-7566ac8f6e06",
-        "372d35fb-6272-4f63-8bf7-fea9aace7c46"
+        "372d35fb-6272-4f63-8bf7-fea9aace7c46",
+        "1786980242869-onutez"
       ],
       "causedBy": []
     },
@@ -2337,7 +2343,8 @@
         "63481815-6d45-4635-9c8f-f7418f754242",
         "db2ccd61-dd4f-447a-8f0d-1c3c46e33c8c",
         "08efff0e-d949-4775-bbbb-12eae9afe24d",
-        "1786978825551-4yxjf4"
+        "1786978825551-4yxjf4",
+        "1786980242869-onutez"
       ]
     },
     "metadata": {
@@ -2382,7 +2389,8 @@
         "249a35f5-d0e5-422a-9d65-e9467b8c7309",
         "c5354d11-c9e7-4d97-b9a8-e447cd669a02",
         "08efff0e-d949-4775-bbbb-12eae9afe24d",
-        "1786978825551-4yxjf4"
+        "1786978825551-4yxjf4",
+        "1786980242869-onutez"
       ]
     },
     "metadata": {
@@ -2414,7 +2422,8 @@
         "7f88d257-5c81-48cf-bfa8-030621e8d359",
         "75f940f8-b555-4edb-9478-7109b973aa58",
         "db2ccd61-dd4f-447a-8f0d-1c3c46e33c8c",
-        "1786978825551-4yxjf4"
+        "1786978825551-4yxjf4",
+        "1786980242869-onutez"
       ]
     },
     "metadata": {
@@ -2450,7 +2459,8 @@
         "23ea8630-cf32-4d49-9e8c-283e49c88746",
         "fd699bc2-c7a0-4c80-8b7e-0967012e67d6",
         "c5354d11-c9e7-4d97-b9a8-e447cd669a02",
-        "1786978825551-4yxjf4"
+        "1786978825551-4yxjf4",
+        "1786980242869-onutez"
       ]
     },
     "metadata": {
@@ -114204,7 +114214,8 @@
         "1786860401883-i52nl0",
         "1786978125686-pe8wl2",
         "1786978825551-4yxjf4",
-        "1786979818704-igg2nn"
+        "1786979818704-igg2nn",
+        "1786980242869-onutez"
       ],
       "relatedTo": [
         "1784938579774-o0xebs",
@@ -114242,7 +114253,8 @@
         "1786859568721-fahph6",
         "1786978125686-pe8wl2",
         "1786978825551-4yxjf4",
-        "1786979818704-igg2nn"
+        "1786979818704-igg2nn",
+        "1786980242869-onutez"
       ],
       "relatedTo": [],
       "causes": [],
@@ -114276,7 +114288,8 @@
         "1786859568721-fahph6",
         "1786978125686-pe8wl2",
         "1786978825551-4yxjf4",
-        "1786979818704-igg2nn"
+        "1786979818704-igg2nn",
+        "1786980242869-onutez"
       ],
       "relatedTo": [],
       "causes": [],
@@ -114311,7 +114324,8 @@
       "supersededBy": [
         "1786859568721-fahph6",
         "1786978825551-4yxjf4",
-        "1786979818704-igg2nn"
+        "1786979818704-igg2nn",
+        "1786980242869-onutez"
       ]
     },
     "metadata": {
@@ -114342,7 +114356,8 @@
       "supersededBy": [
         "1786859568721-fahph6",
         "1786978825551-4yxjf4",
-        "1786979818704-igg2nn"
+        "1786979818704-igg2nn",
+        "1786980242869-onutez"
       ]
     },
     "metadata": {
@@ -114371,7 +114386,8 @@
       "supersededBy": [
         "1786859568721-fahph6",
         "1786978825551-4yxjf4",
-        "1786979818704-igg2nn"
+        "1786979818704-igg2nn",
+        "1786980242869-onutez"
       ]
     },
     "metadata": {
@@ -123328,7 +123344,8 @@
         "1786860945369-ki8azn",
         "1786861486612-snafmx",
         "1786978125686-pe8wl2",
-        "1786978825551-4yxjf4"
+        "1786978825551-4yxjf4",
+        "1786980242869-onutez"
       ],
       "relatedTo": [
         "1777318403162-biaewx",
@@ -123421,7 +123438,8 @@
         "1786860945369-ki8azn",
         "1786861486612-snafmx",
         "1786978125686-pe8wl2",
-        "1786978825551-4yxjf4"
+        "1786978825551-4yxjf4",
+        "1786980242869-onutez"
       ],
       "relatedTo": [],
       "causes": [],
@@ -123478,8 +123496,12 @@
         "1784322240762-in72qt",
         "1784322240858-8r4ujo"
       ],
-      "supersededBy": [],
-      "relatedTo": [],
+      "supersededBy": [
+        "1786980242869-onutez"
+      ],
+      "relatedTo": [
+        "1786980242869-onutez"
+      ],
       "causes": [],
       "causedBy": [
         "1777318403161-4mgrce",
@@ -135839,7 +135861,9 @@
         "238ca080-17b6-438c-92bd-6eebc9c4ed42",
         "4919a306-e98c-4f08-9830-945bf9d04adf"
       ],
-      "supersededBy": [],
+      "supersededBy": [
+        "1786980242869-onutez"
+      ],
       "relatedTo": [],
       "causes": [],
       "causedBy": [
@@ -135869,6 +135893,67 @@
     "commitHashes": [
       "fdd9dcd363693ed04e9dcdce28a77a68d4058c19",
       "cbef14f3afdb093bfe95d7ae2267092a28135a7f"
+    ]
+  },
+  {
+    "id": "1786980242869-onutez",
+    "question": "What is Aut of the Reye [12,4,6] code, and does the symplectic rank law extend beyond squares?",
+    "answer": "Aut IS W(F4)/Z acting as T12_165 -- typed, not matched. And the rank law is a whole tower.\n\nTYPED AT LAST. Aut([12,4,6]) = SmallGroup(576,8654) = W(F4)/Z, and its degree-12 action is T12_165 -- the same PERMUTATION group the Reye configuration carries, not merely the same abstract group. Pass 5687 reported this as an order match and explicitly refused to identify it (8,681 groups share order 576, and Pass 5644 was wrong about exactly this kind of match at 1152). Typed by SmallGroup id it holds. SO PASS 5675 UNDERSTATED ITS OWN RESULT: the characteristic-2 kernel recovers not just the unique block system but the entire permutation group, acting identically. The code is a full invariant of the configuration's symmetry.\n\nA TOWER, NOT ONE THEOREM. sf(u,v) = u^T J v is bilinear, so sf^e is a product of e bilinear forms and factors through Sym^e(u) tensor Sym^e(v), giving rank_q(sf^e) <= dim Sym^e(F_q^4) = C(e+3,3). Equality attained at e = 2,3,4 -- ranks 10, 20, 35 -- at both q=5 and q=7. Sym^2 verified at q = 3,5,7,11: rank 10 every time while point counts run 40, 156, 400, 1464. Natural boundary is e < q since sf^q = sf by Frobenius; stated, NOT tested. Non-prime q untested (needs GF(9), not Z/9). And the quadric map v(u) = the ten products u_i u_j is INJECTIVE on the 40 points, so the non-collinearity matrix is a Gram matrix on a 10-dimensional quadric image -- that is what the rank-10 image IS.\n\nRETRACTION OF PASS 5683'S NOVELTY. I reported the p=2 adjacency collapse (excess 23) as a fresh phenomenon. It is not. For a GQ, N N^T = (t+1)I + A, and at W(3,3) t+1 = 4, so mod 2 the adjacency IS N N^T -- and rank_2 of the incidence matrix is exactly what Chandler-Sin-Xiang (arXiv:math/0603100) computes. This repo already runs a transfer-tower programme on it: analysis/2026-07-15_pass351_delta_p2_analytic.md, a DATE-NAMED file that no grep for `rank` finds. The mathematics stands; the novelty does not. CLAUDE.md failure mode five, caught one pass late by searching for the result instead of the topic.\n\nTHE ROOK'S EXCESS 9, EXPLAINED. My Pass 5685 grid hypothesis was right about grids and wrong about where. Mod 2 the rook adjacency is literally rowclass + colclass, each of GF(2)-rank 4, overlapping in the 2-dimensional span of the all-ones vectors: 4 + 4 - 2 = 6. The grid structure is in the IMAGE, not the kernel I searched. Still does not explain S4 wr S2, but it names the 6-dimensional GF(2) module the group acts on -- the row-plus-column space -- which is where to look next.\n\nTHE STANDING LESSON, and what it has cost: TEST INCIDENCE AND ADJACENCY, THEY DIFFER. That one distinction has produced a retraction (Pass 5672, a drop that was an artefact), a correction (Pass 5683, a non-drop from the wrong matrix), and a rediscovery (Pass 5695, a real drop already published).</answer>\n<parameter name=\"tags\">w33, reye, wf4, symplectic, sym-power, retraction, rook, csx, pass5691",
+    "timestamp": "2026-08-17T15:24:02.869Z",
+    "tags": [
+      "redis"
+    ],
+    "files": [],
+    "status": "active",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [
+        "1786860945369-ki8azn",
+        "1786859568721-fahph6",
+        "1786860401883-i52nl0",
+        "1786979818704-igg2nn",
+        "1784409410004-2ofkhg",
+        "1784409410004-kzfbyz",
+        "1784409410003-54eefw",
+        "09152407-437d-45ec-8fb8-6b5496138c01",
+        "1fb5332b-7df7-4881-bce0-800d23047ba3",
+        "5223d2c8-8d9a-4bc0-ba9e-040fded850a6"
+      ],
+      "supersededBy": [],
+      "relatedTo": [
+        "1786860945369-ki8azn"
+      ],
+      "causes": [],
+      "causedBy": [
+        "1777318403161-qze7ej",
+        "1777318403161-1thfcr",
+        "1777318403161-6tpseq",
+        "beaa04ed-f130-4ef8-a424-792aced0dd1b",
+        "92c1464e-9086-4497-bedc-176c7a857ad1",
+        "1777522637223-t8n461",
+        "a3e1b8c7-08c7-47ec-a298-e52d9f4d654c",
+        "2ef298bc-3933-4afc-8622-130e314db6b5",
+        "dfe37c3e-e947-436e-bd86-da04aa3da416",
+        "36e8b8b6-fa2a-4c3b-884d-9ab97a061e30"
+      ]
+    },
+    "metadata": {
+      "status": "active",
+      "source": "mcp",
+      "entities": {
+        "technologies": [
+          "redis"
+        ],
+        "patterns": [],
+        "concepts": [],
+        "tools": []
+      },
+      "domain": "software"
+    },
+    "commitHashes": [
+      "6af86520ce36de84b36dea8d7e9aa9eede4b437d",
+      "c36b2f161d3ad00220fba42dc09a29195b840317",
+      "bcdca0b3ce9274916891f26d47b297202deb3fb1"
     ]
   }
 ]

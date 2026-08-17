@@ -1,0 +1,190 @@
+{
+  "boundary": "Pass 5704 RETRACTS the novelty of Pass 5692's bound; the mathematics stands. Pass 5705 claims attainment and periodicity as measurements, not as proved for all q. Pass 5707 CORRECTS Pass 5696's 'in the image' gloss while leaving its rank mechanism intact. Pass 5708 LIMITS Pass 5691 to the Reye. Pass 5709 records a checked-and-empty idea. Pass 5710 indexes headings, not content",
+  "pass_5704": {
+    "bound": "C(e+3,3)",
+    "general_form": "dim W^(*s) <= C(r_W + s - 1, s) via Sym^s W ->> W^(*s)",
+    "lesson": "a one-line proof about a classical object is usually classical",
+    "pattern": "third attribution correction in three passes, after Pass 5695 gave the p=2 law to Chandler-Sin-Xiang",
+    "reference": "Configuration polynomials under contact equivalence, arXiv:2005.08181",
+    "retracts": "the novelty of Pass 5692's bound"
+  },
+  "pass_5705_5706": {
+    "frobenius": "sf^q = sf, so rank returns to the bilinear 4 at e = q",
+    "mine": [
+      "exact attainment at every e < q for the W(3,q) symplectic form",
+      "periodicity: rank_q(sf^e) depends only on e mod (q-1)"
+    ],
+    "tower": {
+      "3": [
+        {
+          "dim_sym": 4,
+          "e": 1,
+          "rank": 4
+        },
+        {
+          "dim_sym": 10,
+          "e": 2,
+          "rank": 10
+        },
+        {
+          "dim_sym": 20,
+          "e": 3,
+          "rank": 4
+        },
+        {
+          "dim_sym": 35,
+          "e": 4,
+          "rank": 10
+        }
+      ],
+      "5": [
+        {
+          "dim_sym": 4,
+          "e": 1,
+          "rank": 4
+        },
+        {
+          "dim_sym": 10,
+          "e": 2,
+          "rank": 10
+        },
+        {
+          "dim_sym": 20,
+          "e": 3,
+          "rank": 20
+        },
+        {
+          "dim_sym": 35,
+          "e": 4,
+          "rank": 35
+        },
+        {
+          "dim_sym": 56,
+          "e": 5,
+          "rank": 4
+        },
+        {
+          "dim_sym": 84,
+          "e": 6,
+          "rank": 10
+        }
+      ]
+    },
+    "verified_q": [
+      3,
+      5
+    ]
+  },
+  "pass_5707": {
+    "code": [
+      16,
+      6,
+      6
+    ],
+    "corrects": "Pass 5696's claim that the grid structure is in the image; the matrix identity holds, the module does not contain the grid lines",
+    "dim": 6,
+    "grid_cols_among_min_words": 0,
+    "grid_rows_among_min_words": 0,
+    "min_words": 16,
+    "status": "grid lines are in NEITHER the kernel nor the module",
+    "survives": "A = Rrow + Rcol (mod 2), rank 4 + 4 - 2 = 6",
+    "weights": {
+      "0": 1,
+      "10": 16,
+      "16": 1,
+      "6": 16,
+      "8": 30
+    }
+  },
+  "pass_5708": {
+    "configurations": [
+      {
+        "aut": 168,
+        "kernel": 3,
+        "name": "Fano 7_3",
+        "points": 7,
+        "rank_2": 4
+      },
+      {
+        "aut": 108,
+        "kernel": 2,
+        "name": "Pappus 9_3",
+        "points": 9,
+        "rank_2": 7
+      },
+      {
+        "aut": 120,
+        "kernel": 2,
+        "name": "Desargues 10_3",
+        "points": 10,
+        "rank_2": 8
+      }
+    ],
+    "kills": "the code-as-configuration-classifier idea",
+    "verdict": "kernel dimension does not track |Aut|; Pass 5691 is a fact about the Reye, not a theorem"
+  },
+  "pass_5709": {
+    "e6_layer": [
+      27,
+      45,
+      36,
+      9
+    ],
+    "result": "CHECKED AND EMPTY -- different carriers and dimensions",
+    "sym3_dim": 20
+  },
+  "pass_5710": {
+    "liability": "a date-named file carries no topic signal; Pass 5695 lost a pass to exactly this",
+    "top": [
+      {
+        "file": "2026-07-15_pass87_w33_master_theorem.md",
+        "integers": [
+          "137",
+          "36",
+          "90",
+          "40"
+        ],
+        "theorems": 7
+      },
+      {
+        "file": "2026-07-15_pass89_ihara_zeta_ramanujan.md",
+        "integers": [
+          "12",
+          "11",
+          "40",
+          "15"
+        ],
+        "theorems": 2
+      },
+      {
+        "file": "2026-07-15_pass80_artin_137_uniqueness.md",
+        "integers": [
+          "137",
+          "877",
+          "68"
+        ],
+        "theorems": 1
+      },
+      {
+        "file": "2026-07-15_pass353_weil_chirality_theorem.md",
+        "integers": [
+          "1985",
+          "348",
+          "12"
+        ],
+        "theorems": 1
+      },
+      {
+        "file": "2026-07-15_pass356_css_distance_lower_bound.md",
+        "integers": [
+          "229",
+          "15",
+          "40"
+        ],
+        "theorems": 1
+      }
+    ],
+    "total": 185,
+    "with_theorem_headings": 16
+  }
+}
