@@ -1,0 +1,38 @@
+{
+  "pass_6233_status_ledger": {
+    "ce2_global": "OPEN",
+    "generation_flag": "REFUTED_FOR_DISPLAYED_BLOCKS",
+    "k3_object_loaded": false,
+    "k3_scan_run": false,
+    "transport_identification": "OPEN_CONDITIONAL_SCAFFOLD_ONLY"
+  },
+  "pass_6234_transport_scaffold": {
+    "retained": "conditional signature comparison of a chosen positive plane and abstract hyperbolic plane",
+    "verdict": "CONDITIONAL_TOY_NOT_IDENTIFICATION_THEOREM",
+    "withdrawn": "claim that the chosen positive plane is the actual internal generation flag or that rho is a certified external carrier parameter"
+  },
+  "pass_6235_k3_candidate_count": {
+    "admissible_candidate_count": null,
+    "ambient_single_entry_count": 174816,
+    "reason": "actual K3 object, coordinate map, and deformation/cocycle constraints are not loaded",
+    "verdict": "AMBIENT_UPPER_BOUND_ONLY"
+  },
+  "pass_6236_summary_repair": {
+    "historical_complete_flags": [
+      "CE2 global orbit closure",
+      "K3 deformation theory"
+    ],
+    "live_flags": [
+      "OPEN",
+      "OBJECT NOT LOADED"
+    ]
+  },
+  "pass_6237_evidence_rule": {
+    "rule": "A scaffold may parameterize a hypothetical search/comparison space, but cannot promote its inputs to certified geometry without provenance and defining equations."
+  },
+  "pass_6238_next_ce2": "recover actual CE2 evaluator/action and enumerate rows rather than count family labels",
+  "pass_6239_next_k3": "locate actual K3 cochain/curvature artifact and derive admissibility equations before candidate enumeration",
+  "pass_6240_frontier": "scaffolds preserved, theorem tiers fail-closed",
+  "schema": "w33.pass6233_6240.scaffold_claim_tier_repair.v1",
+  "status": "PASS_CORRECTION"
+}
