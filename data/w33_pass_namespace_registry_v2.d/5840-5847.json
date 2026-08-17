@@ -1,0 +1,12 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.fragment",
+  "range": [5840, 5847],
+  "owner": "openai_gpt5_6_sol",
+  "status": "RESERVED",
+  "created_utc": "2026-08-17T17:36:00Z",
+  "topic": "collision-recovered eight-probe packet: affine determinant normalizer; 2-primary lattice/code shadow; object-level M2(F2) two-qubit doily bridge; all-field matrix Fourier/Radon theorem; grid stabilizer; 1152-order falsifier; exact boundaries; publication/CI",
+  "supersedes_reservation": "5832-5839 reservation is contaminated by a parallel theorem packet landed after reservation; do not reuse that range for this work.",
+  "artifacts": [],
+  "verification": "Reservation only; no theorem claims yet.",
+  "boundary": "Promote only exact computations or source-backed statements. The two-qubit bridge is an incidence/symplectic identification of label geometry, not a claim that the q=5 carrier is a physical two-qubit system."
+}
