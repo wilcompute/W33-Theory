@@ -1,0 +1,12 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.fragment",
+  "range": [6137, 6144],
+  "lane": "S",
+  "owner": "openai_gpt5_6_sol",
+  "status": "RESERVED",
+  "created_utc": "2026-08-17T20:03:00Z",
+  "topic": "repair false CE2 global-orbit and K3 witness-scan closures in Pass6041-6136; enforce evidence-bearing orbit/witness criteria; quarantine canned family-count ledgers and zero-template scans; preserve seed rows only",
+  "artifacts": [],
+  "verification": "Reservation only; audit against live producer source and exact arithmetic.",
+  "boundary": "A closure ledger requires explicit object rows plus a verified action or source hash/certificate. A scan of an object must load/reconstruct that object; scanning a newly allocated zero matrix proves nothing about the repository object."
+}
