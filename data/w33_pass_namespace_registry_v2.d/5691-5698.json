@@ -1,32 +1,7 @@
 {
-  "schema": "w33.pass_namespace_registry.v2.fragment",
-  "range": [5691, 5698],
-  "owner": "openai_gpt5_6_sol",
-  "status": "CLOSED_STRUCTURAL__CI_REPLAY_PENDING",
-  "created_utc": "2026-08-17T04:33:00Z",
-  "tasks": {
-    "5691": "derive an ASL(2,3)-equivariant discrete Yang-Mills candidate from the exact affine su(3) bracket, Z3 connection/holonomy, and Killing form; identify exactly what normalization remains free",
-    "5692": "resolve the two-ray magnetic locality-plus-flatness ambiguity by testing deck, affine orientation, Heisenberg, metaplectic and carrier symmetries for an exchanging or selecting operator",
-    "5693": "construct explicit Ramanujan signings for W33 Levi cover levels 2 and 3 and test whether a recursive symmetry-natural signing rule survives",
-    "5694": "expand the collision-deformed E8 Jacobiator analytically into retained/deleted sectors and test whether l3 is determined by the collision projector and affine orientation",
-    "5695": "tensor the internal Ramanujan refinement hierarchy with the causal Dirac/time-bin walk and derive exact separation of routing complexity from physical propagation speed",
-    "5696": "bonkers: build an affine-orientation domain-wall/chirality defect between the two su(3) orientations and test whether it couples to or selects the two magnetic flat-bond rays",
-    "5697": "bonkers: compute the adjoint gauge Laplacian on the Ramanujan internal network and test whether expansion gives a finite nonzero internal gauge-mode gap without calling it a physical mass gap",
-    "5698": "bonkers: test the recurring generation-three hypothesis by decomposing actual orientation/Heisenberg sectors as modules and require a genuine 3-orbit or 3-dimensional multiplicity space rather than count numerology"
-  },
-  "deliverables": {
-    "summary": "data/PART_W33_PASS5691_5698_PHYSICS_YM_DUALITY_RAMANUJAN_FRONTIER_SUMMARY.json",
-    "report": "analysis/PASS5691_5698_physics_ym_duality_ramanujan_frontier.md",
-    "prior_art": "analysis/PASS5691_5698_external_prior_art.md",
-    "insert": "analysis/PASS5691_5698_physics_ym_duality_ramanujan_frontier_insert.tex",
-    "homepage_source": "analysis/PASS5691_5698_index_insert.html",
-    "runner": "analysis/w33_pass5691_5698_runner.py",
-    "tests": "tests/test_w33_pass5691_5698_physics_ym_duality_ramanujan.py",
-    "workflow": ".github/workflows/w33_pass5691_5698_physics_ym_duality_ramanujan.yml"
-  },
-  "resolution_notes": {
-    "5696": "The domain-wall hypothesis was falsified as mandatory: twisting V8 by the determinant character restores full AGL(2,3) as su3 automorphisms, so bracket-sign domains require extra dynamics.",
-    "prior_packet_ci": "Pass5683-5690 replay failure was traced to floating duplicate projective roots in Pass5685 under NumPy2.5; the verifier is repaired by sign-ray canonicalization and is replayed by the new workflow."
-  },
-  "boundary": "No QCD, confinement, three-generation, physical mass-gap, or spacetime claim is permitted from dimension/count coincidence. Promote only exact finite operator, representation, cochain, spectrum, curvature, Jacobi, or module statements. Homepage materialization, prior-packet replay repair and three-manuscript compilation must pass before status is upgraded beyond structural closure."
+  "lo": 5691,
+  "hi": 5698,
+  "track": "A",
+  "topic": "type Aut(code); the p=2 rank law; Sym2 at more q; the quadric map; cubes",
+  "reserved": "2026-08-17"
 }
