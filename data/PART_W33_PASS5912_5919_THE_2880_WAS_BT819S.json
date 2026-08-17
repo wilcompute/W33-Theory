@@ -1,0 +1,48 @@
+{
+  "boundary": "Pass 5912 RETRACTS the novelty of Pass 5904's count and transitivity, which BT819 already holds. What survives is the stabiliser STRUCTURE, which BT819 records only as an order. Novelty of the structure is not claimed either -- it was not searched for before computing",
+  "pass_5912_rediscovery": {
+    "already_in_corpus": {
+      "file": "data/bt819_beacon_heptads.json",
+      "heptad_count": 2880,
+      "orbit_sizes": [
+        2880
+      ],
+      "stabilizer_orders": [
+        9
+      ]
+    },
+    "count_this_session": 5,
+    "how_late": "I ran the grep for 2880 in the SAME command as the commit, so the certificate asserting the classification was written before the check that refutes its novelty. CLAUDE.md's rule -- search for the RESULT, the integer -- would have caught it in one grep run five minutes earlier",
+    "my_claim": "W(3,3) has exactly 2880 maximum partial ovoids, all in one Sp(4,3) orbit",
+    "verdict": "REDISCOVERY -- the count and the single-orbit transitivity are BT819's"
+  },
+  "pass_5913_the_nine_versus_eighteen": {
+    "bt819": 9,
+    "check": "51840 = 2 * 25920 and 18 = 2 * 9, consistent throughout",
+    "mine": 18,
+    "not_a_contradiction": true,
+    "resolution": "orbit-stabiliser in Sp(4,3): 51840 / 2880 = 18. In PSp(4,3): 25920 / 2880 = 9. BT819's stabiliser is the image in PSp(4,3); mine is in Sp(4,3). They differ by the centre {+-I}, so both are correct"
+  },
+  "pass_5914_what_survives": {
+    "beyond_bt819": [
+      "the stabiliser is ABELIAN",
+      "element-order spectrum {1:1, 2:1, 3:8, 6:8}",
+      "identified as C3 x C6, excluding C18 which has no elements of order 18",
+      "orbits on the seven points are 1 + 3 + 3"
+    ],
+    "novelty": "NOT CLAIMED -- not searched for before computing, same error as the count",
+    "why_it_matters": "BT819 records the order only. The 1+3+3 orbit decomposition is what explains why four generator classes failed: 7 does not divide 18, so no subgroup orbit equals the optimum. That explanation does not follow from the order alone"
+  },
+  "pass_5915_the_pattern": {
+    "list": [
+      "the p=2 adjacency rank law (Chandler-Sin-Xiang)",
+      "the Sym^e Hadamard bound (arXiv:2005.08181)",
+      "the circulant rank criterion (cyclic code theory)",
+      "alpha(W(3,q)) odd q is an active research area",
+      "the 2880 heptad classification (BT819, in this corpus)"
+    ],
+    "rediscoveries_this_session": 5,
+    "the_fix": "run the result-grep BEFORE the certificate is written, not alongside the commit. That is a sequencing change, not a new tool",
+    "the_shape": "four were external literature, one was internal. The internal one is the worst: it was one grep away, the rule for finding it is written in CLAUDE.md, and I ran the grep in the same command as the commit rather than before writing the claim"
+  }
+}
