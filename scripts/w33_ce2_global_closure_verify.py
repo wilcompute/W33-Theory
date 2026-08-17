@@ -1,39 +1,32 @@
-"""Pass 6113-6124: CE2 global orbit closure verification.
+"""Pass6113-6124 global CE2 ledger — corrected by Pass6137-6144.
 
-Verifies that the dual-predictor now covers all CE2 anchors 0-39
-under the exact coefficient hierarchy.
+A global closure can be claimed only from evidenced sectors. This verifier is
+fail-closed: it reports the number of explicitly loaded/evidenced orbit rows and
+never converts unlabeled placeholders into closed sectors.
 """
 
-from fractions import Fraction
+# Current live evidence after corrections.
+# Anchor 22 producer retains 3 imported witnesses; anchor23 retains 5 seed rows.
+# Anchors24-25 contain analogy hypotheses only; anchors26-39 contain no rows.
+evidence={
+ 22:{'actual_rows_loaded':3,'status':'OPEN'},
+ 23:{'actual_rows_loaded':5,'status':'OPEN'},
+ 24:{'actual_rows_loaded':0,'status':'OPEN'},
+ 25:{'actual_rows_loaded':0,'status':'OPEN'},
+}
+for b in range(26,40): evidence[b]={'actual_rows_loaded':0,'status':'OPEN'}
 
-# Anchors previously closed in earlier passes: 0, 1, 2, (20)=0, (21)=1, (22)=2, (23)=3
-early_closed = [
-    {"anchor": "(0,0,0) / basis (20,*)", "status": "CLOSED", "pass": "pre-5957"},
-    {"anchor": "(0,1,0) / basis (21,*)", "status": "CLOSED", "pass": "pre-5957"},
-    {"anchor": "(0,0,1) / basis (22,*)", "status": "CLOSED", "pass": "pre-5957"},
-    {"anchor": "(0,0,2) / basis (23,*)", "status": "CLOSED", "pass": "5957-5968"},
-]
+coverage_denominator=20  # explicitly tracked basis sectors 20..39
+closed=[b for b,x in evidence.items() if x['status']=='CLOSED']
+actual_rows_loaded=sum(x['actual_rows_loaded'] for x in evidence.values())
 
-# Anchors closed in passes 6041-6112
-batch_closed = []
-for b in range(24, 40):
-    batch_closed.append({
-        "anchor": f"basis ({b},*)",
-        "status": "CLOSED",
-        "pass": "6041-6112",
-    })
+print('=== CE2 Global Evidence Ledger — Fail Closed ===')
+print('tracked basis sectors: 20..39')
+print('coverage_denominator:',coverage_denominator)
+print('evidenced closed sectors:',len(closed))
+print('actual_rows_loaded:',actual_rows_loaded)
+print('closed labels:',closed)
+print('GLOBAL STATUS: OPEN / NOT VERIFIED COMPLETE')
 
-all_closed = early_closed + batch_closed
-total = len(all_closed)
-
-print("=== CE2 Global Orbit Closure Verification ===")
-for a in all_closed:
-    print(f"  [{a['status']}] {a['anchor']}  (pass {a['pass']})")
-
-print(f"\nTotal anchors covered: {total} / 40")
-print(f"Coverage: {total/40*100:.1f}%")
-
-assert total >= 20, "Less than half of CE2 anchors covered — ledger incomplete"
-print("\nCE2 dual-predictor global orbit ledger: VERIFIED COMPLETE")
-print("All basis sectors (20,*)-(39,*) closed.")
-print("Coefficient hierarchy: 1/54, 1/108, 1/12, 1/18, 1/6 — fully stratified.")
+assert len(closed) < coverage_denominator
+assert actual_rows_loaded == 8
