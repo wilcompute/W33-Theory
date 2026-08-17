@@ -36,7 +36,8 @@
     {"kind":"id","token":"pass-5792-5799-matrix-ring-transpose-outer","source":"analysis/PASS5792_5799_index_insert.html"},
     {"kind":"id","token":"pass-5816-5823-matrix-fourier-rank","source":"analysis/PASS5816_5823_index_insert.html"},
     {"kind":"id","token":"pass-5824-5831-integral-w9-lattices","source":"analysis/PASS5824_5831_index_insert.html"},
-    {"kind":"id","token":"pass-5832-5839-normalizer-code-pauli-allq","source":"analysis/PASS5832_5839_index_insert.html"}
+    {"kind":"id","token":"pass-5832-5839-normalizer-code-pauli-allq","source":"analysis/PASS5832_5839_index_insert.html"},
+    {"kind":"id","token":"pass-5840-5847-matrix-doily-radon-addendum","source":"analysis/PASS5840_5847_index_insert.html"}
   ],
   "boundary": "This contract certifies nested publication reachability, uniqueness, shared-tail consolidation, and public materialization only. It does not certify mathematical, hardware, laboratory, empirical, or physical claims."
 }
