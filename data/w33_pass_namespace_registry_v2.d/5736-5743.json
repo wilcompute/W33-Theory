@@ -1,0 +1,18 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.fragment",
+  "range": [5736, 5743],
+  "owner": "openai_gpt5_6_sol",
+  "status": "RESERVED_ACTIVE",
+  "created_utc": "2026-08-17T15:47:00Z",
+  "tasks": {
+    "5736": "identify the characteristic-3 W33 non-collinearity rowspace with the degree-2 projective quadratic evaluation code on PG(3,3), with exact parameters and weight enumerator",
+    "5737": "construct the explicit 40x10x10 symmetric-square factorization C=V B V^T and certify the sparse involutory core",
+    "5738": "prove the mod-3 square-zero/self-orthogonality identity and derive the exact qutrit CSS dimension",
+    "5739": "prove dual distance 4 and classify all minimum dual supports as the 130 projective lines of PG(3,3)",
+    "5740": "derive the 13-way three-query local repair law per coordinate and separate 4 W33-isotropic repair groups from 9 ambient non-isotropic groups",
+    "5741": "prove the 130 line checks have rank 30 and recover the entire classical dual, giving a sparse local parity-check presentation",
+    "5742": "classify the minimum logical-line commutation graph and its W33-isotropic/non-isotropic split",
+    "5743": "audit overlap with classical PRM/Veronese coding theory and existing binary W33 code claims; publish only the repo-specific identification and exact finite consequences"
+  },
+  "boundary": "Projective Reed-Muller/Veronese evaluation codes and symmetric-power dimension bounds are classical. Claim only exact identifications and consequences verified for this W33/PG(3,3) carrier. No physical mass, coupling, spacetime, Standard-Model, or uniqueness claim follows from the code parameters or graph counts."
+}
