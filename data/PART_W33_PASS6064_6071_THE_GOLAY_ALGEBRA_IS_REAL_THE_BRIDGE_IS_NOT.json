@@ -1,0 +1,42 @@
+{
+  "boundary": "Pass 6064 audits an ARCHIVED document in a worktree, not live corpus code. The Jacobi verification is 200000 random triples plus a proof sketch. The contradiction found is between two adjacent lines of that document and is quoted verbatim; I did not re-derive the 24 or the 27",
+  "pass_6064_the_golay_lie_algebra_is_real": {
+    "construction": "[E_m, E_n] = omega(grade(m), grade(n)) * E_{m+n} on nonzero messages in F_3^6",
+    "dimensions": {
+      "centre": 80,
+      "check": "3^6 - 1 = 728, 3^4 - 1 = 80, 728 - 80 = 648",
+      "quotient": 648,
+      "total": 728
+    },
+    "file": ".claude/worktrees/agent-ab922d7a/docs/archive/GOLAY_LIE_ALGEBRA_COMPLETE_THEOREM.md",
+    "jacobi": {
+      "failures": 0,
+      "holds": true,
+      "tested_triples": 200000
+    },
+    "proof": "expanding by bilinearity the cross terms cancel in pairs and the remainder is omega(x,y) * [omega(x,z) + omega(z,x)], which vanishes by antisymmetry",
+    "verdict": "the construction IS a genuine Lie algebra and the dimension count is correct"
+  },
+  "pass_6065_but_the_headline_claim_is_refuted": {
+    "also_inconsistent": "the summary says the faithful representation is 27-dimensional while Layer 3 reports the image as 24-dimensional",
+    "consequence": "the Lie algebra survives; the E6 / Albert-algebra bridge does not, because it rests entirely on a faithfulness that the document's own next line contradicts",
+    "failure_mode": "prose contradicting adjacent data -- the same mode I hit four times myself this session, here in a document titled COMPLETE THEOREM",
+    "the_contradiction": "those are ADJACENT BULLET POINTS. A 648-dimensional algebra whose image is 24-dimensional has a kernel of dimension 624, so ker(rho) is emphatically not zero and the representation is NOT faithful",
+    "the_executive_summary_claims": "a 648-dimensional simple Lie algebra over F_3 with a FAITHFUL 27-dimensional representation, connecting to E6 via the Albert algebra",
+    "what_layer_3_says_verbatim": [
+      "Faithful: ker(rho) = 0",
+      "Image dim: 24 (linearly independent matrices)"
+    ]
+  },
+  "pass_6066_the_two_eighties": {
+    "are_they_the_same_80": false,
+    "observation": "|Sp(4,3)| / 648 = 51840 / 648 = 80, and 728 - 648 = 80",
+    "why": "the second 80 is the centre, dim 3^4 - 1, an actual subspace of the algebra. The first is a quotient of group orders with no map to it. Recording the arithmetic and explicitly declining the bridge"
+  },
+  "pass_6067_the_vogel_over_read": {
+    "file": ".claude/worktrees/agent-ab922d7a/archive/exploratory/w33_vogel_connection.py",
+    "mitigation": "the file is already marked legacy and redirects to scripts/w33_vogel_universality.py, so the corpus caught it -- but the claim sits unretracted in the archive, which is where a rediscovering agent looks first",
+    "quoted_claim": "Vogel has THREE parameters, W33 is based on GF(3) with three elements, there are three generations of matter -- 'This is EXACTLY what W33 predicts!'",
+    "verdict": "three unrelated threes equated by count. Vogel's are homogeneous coordinates on a projective plane, GF(3)'s is a field cardinality, and generations are physics. No map connects them"
+  }
+}
