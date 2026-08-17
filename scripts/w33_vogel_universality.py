@@ -14,6 +14,8 @@ Key references (open access / arXiv):
   - A. Isaev et al., "Vogel universality and beyond", arXiv:2601.01612 (2026).
   - L. Bishler, A. Mironov, "Refined Vogel universality and Macdonald
     dimensions", arXiv:2504.13831 (2025).
+  - L. Bishler, "Vogel universality and Macdonald dimensions",
+    arXiv:2507.11414 (2025).
   - L. Bishler, A. Mironov, A. Morozov, "Macdonald deformation of the Vogel
     universality and hyperpolynomials", arXiv:2505.16569 (2025).
 
