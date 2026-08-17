@@ -1,23 +1,19 @@
 #!/usr/bin/env python3
 """Pass5726: exact Jacobiator-image rank for the firewall-filtered E8 bracket.
 
-Pass5707 killed the old l1=0/l3-repair interpretation.  The next mathematically
-valid question is the size of im(J) for the actual filtered binary bracket.  An
-older diagnostic only sampled Jacobiators and its generated artifact was never
-committed.  The small E8 structure-constant inputs were subsequently committed
-under extracted_v13/W33-Theory-master/artifacts, so this pass performs the exact
-C(248,3) enumeration.
+Pass5707 killed the old l1=0/l3-repair interpretation.  This pass computes the
+complete Jacobiator image for the actual filtered binary bracket over all
+C(248,3) basis triples.  It also identifies the untouched 14-coordinate
+complement intrinsically inside the Chevalley basis.
 
-For each unordered basis triple we compute the firewall-filtered Jacobiator over
-Z.  We accumulate its output support and its row span modulo two large primes.
-For an integer matrix, rank mod p <= rank over Q <= number of occupied output
-coordinates.  If either modular rank reaches the complete output-support size,
-the rational rank is therefore proved exactly without floating arithmetic.
+For an integer Jacobiator matrix, rank mod p <= rank over Q <= number of occupied
+output coordinates.  Saturation of the output support by two modular ranks gives
+an exact rational rank without floating arithmetic.
 
-The resulting rank r is the sharp vector-space lower bound on a 2-term repair:
-for l1:Y->g and l1(l3)=-J, im(J) subset im(l1), hence dim Y >= r.  Equality is
-attained at the arity-3 level by Y=im(J), l1=inclusion, l3=-J.  This does NOT by
-itself certify the arity-4/higher L-infinity identities.
+For a two-term arity-three repair l1:Y->g, l1(l3)=-J requires
+im(J) subset im(l1), hence dim Y >= rank J.  Equality is attained at arity three
+by Y=im(J), l1=inclusion, l3=-J.  This does NOT certify arity-four/higher
+L-infinity identities.
 """
 from __future__ import annotations
 
@@ -127,6 +123,79 @@ class ModSpan:
         return True
 
 
+def complement_structure(complement, roots, cartan, table, forbidden, grade_by_idx):
+    C = set(complement)
+    cartan_idx = sorted(i for i in C if i < cartan)
+    root_idx = sorted(i for i in C if i >= cartan)
+    root_vecs = {i: tuple(int(x) for x in roots[i - cartan]) for i in root_idx}
+    root_set = set(root_vecs.values())
+    assert cartan_idx == list(range(cartan))
+    assert len(root_idx) == 6 and len(root_set) == 6
+
+    # Three opposite root pairs.
+    pairs = []
+    used = set()
+    for r in sorted(root_set):
+        if r in used:
+            continue
+        nr = tuple(-x for x in r)
+        assert nr in root_set
+        pairs.append((r, nr))
+        used.add(r); used.add(nr)
+    assert len(pairs) == 3
+
+    # The six roots form a closed rank-2 reduced subsystem.  A simply-laced
+    # rank-2 subsystem with six roots is A2.  Check closure under every root sum
+    # that remains an E8 root, not merely the expected one relation.
+    all_roots = {tuple(int(x) for x in r) for r in roots}
+    for a in root_set:
+        for b in root_set:
+            s = tuple(x + y for x, y in zip(a, b))
+            if s in all_roots:
+                assert s in root_set
+    root_rank = int(np.linalg.matrix_rank(np.asarray(list(root_set), dtype=float)))
+    assert root_rank == 2
+
+    # The firewall did not delete any bracket internal to this complement and
+    # the actual Chevalley bracket is closed on it.
+    internal_forbidden = []
+    nonzero_internal = 0
+    for i in complement:
+        for j in complement:
+            if i == j:
+                continue
+            pair = (min(i, j), max(i, j))
+            if pair in forbidden:
+                internal_forbidden.append(pair)
+            _s, terms = get_terms(i, j, table, forbidden)
+            if terms:
+                nonzero_internal += 1
+                assert all(k in C for k, _c in terms)
+    assert not internal_forbidden
+
+    # The selected roots span rank 2 in the rank-8 Cartan, so the annihilator
+    # of their weights in h has dimension 6 and centralizes the A2 root spaces.
+    # Thus h plus this A2 root subsystem is the split reductive algebra
+    # sl3 + t^6 (complexification: sl_3(C) direct-sum C^6).
+    grades = Counter(grade_by_idx[i] for i in root_idx)
+    return {
+        "cartan_indices": cartan_idx,
+        "root_indices": root_idx,
+        "root_vectors": {str(i): list(root_vecs[i]) for i in root_idx},
+        "opposite_root_pairs": [[list(a), list(b)] for a, b in pairs],
+        "root_subsystem_rank": root_rank,
+        "root_subsystem_size": len(root_set),
+        "root_subsystem_type": "A2",
+        "root_grade_counts": dict(sorted(grades.items())),
+        "internal_firewall_deleted_pairs": 0,
+        "ordered_nonzero_internal_brackets": nonzero_internal,
+        "closed_under_filtered_bracket": True,
+        "reductive_type": "A2 + T6 = sl3 plus a six-dimensional Cartan torus",
+        "dimension_check": "8 Cartan + 6 A2 root spaces = 14; A2 contributes rank2 Cartan plus 6 roots, leaving a rank6 central torus inside the full Cartan",
+        "identification_boundary": "This is an exact E8-root-subalgebra statement for the untouched coordinate complement. It is not, by itself, an identification with the affine su3, QCD color, or a physical gauge algebra."
+    }
+
+
 def main():
     sc, meta, fw = load_inputs()
     basis = sc["basis"]
@@ -135,10 +204,7 @@ def main():
     roots = basis["roots"]
     assert (n, cartan, len(roots)) == (248, 8, 240)
 
-    meta_by_root = {
-        tuple(int(x) for x in row["root_orbit"]): row
-        for row in meta["rows"]
-    }
+    meta_by_root = {tuple(int(x) for x in row["root_orbit"]): row for row in meta["rows"]}
     assert len(meta_by_root) == 240
     bad9 = {triad_key(*t) for t in fw["bad_triangles_Schlafli_e6id"]}
     assert len(bad9) == 9
@@ -193,21 +259,18 @@ def main():
     lower = max(modular_ranks.values())
     upper = len(output_support)
     if lower != upper:
-        raise AssertionError(
-            f"modular rank {lower} did not saturate output support {upper}; exact-Q rank needs an additional gate"
-        )
+        raise AssertionError(f"modular rank {lower} did not saturate output support {upper}")
 
     r = upper
     complement = sorted(set(range(n)) - output_support)
     support_grade_counts = Counter(grade_by_idx[q] for q in output_support)
     complement_grade_counts = Counter(grade_by_idx[q] for q in complement)
     assert len(complement) == n - r
-    assert sum(support_grade_counts.values()) == r
-    assert sum(complement_grade_counts.values()) == n - r
+    comp_struct = complement_structure(complement, roots, cartan, table, forbidden, grade_by_idx)
 
     out = {
         "pass": 5726,
-        "status": "EXACT_FIREWALL_JACOBIATOR_IMAGE_RANK_CERTIFIED__MINIMAL_ARITY3_2TERM_REPAIR_DIMENSION_FIXED",
+        "status": "EXACT_FIREWALL_JACOBIATOR_RANK_234__UNTOUCHED_COMPLEMENT_IS_A2_PLUS_T6",
         "basis_dimension": n,
         "triples_enumerated": total,
         "nonzero_jacobiator_triples": nonzero_triples,
@@ -220,10 +283,11 @@ def main():
         "untouched_complement_indices": complement,
         "untouched_complement_dimension": len(complement),
         "untouched_complement_grade_counts": dict(sorted(complement_grade_counts.items())),
+        "untouched_complement_structure": comp_struct,
         "input_grade_histogram": dict(sorted(input_grade_hist.items())),
         "modular_ranks": modular_ranks,
         "rank_over_Q": r,
-        "rank_proof": "For the integer Jacobiator matrix, rank mod p <= rank_Q <= number of occupied output coordinates. The modular rank equals the complete output-support size, so both inequalities are equalities. Consequently im(J) is the entire coordinate subspace supported on those occupied basis coordinates.",
+        "rank_proof": "For the integer Jacobiator matrix, rank mod p <= rank_Q <= number of occupied output coordinates. Both modular ranks equal the complete output-support size 234, so rank_Q=234 and im(J) is the entire coordinate subspace on those coordinates.",
         "minimal_2term_repair": {
             "arity3_identity": "l1(l3)=-J up to the global sign convention",
             "necessary_condition": "im(J) subset im(l1)",
@@ -232,9 +296,9 @@ def main():
             "l3_uniqueness_minimal_model": "unique because l1 is injective",
             "larger_Y_freedom": "any two l3 lifts differ by a ker(l1)-valued trilinear map"
         },
-        "higher_identity_boundary": "Solving the arity-3 identity does not certify the arity-4 or higher L-infinity identities. Those remain separate equations.",
+        "higher_identity_boundary": "Solving the arity-3 identity does not certify the arity-4 or higher L-infinity identities.",
         "source_inputs": [str(p.relative_to(ROOT)) for p in (IN_SC, IN_META, IN_FW)],
-        "physics_boundary": "This is an exact finite higher-algebra obstruction rank. It does not derive confinement, QCD, a mass gap, or any continuum field theory."
+        "physics_boundary": "Exact finite E8/higher-algebra statements only; no confinement, QCD, mass-gap, or continuum-field-theory claim."
     }
     OUT.write_text(json.dumps(out, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(json.dumps(out, indent=2, sort_keys=True))
