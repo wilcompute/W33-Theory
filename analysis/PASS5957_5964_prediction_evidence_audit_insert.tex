@@ -1,0 +1,37 @@
+% Passes 5957--5964: prediction-evidence audit.
+\subsection*{Passes 5957--5964: physical prediction claims downgraded to ansatz tier}
+
+A source-code audit of the Pass~5913--5956 physical producers separates exact
+finite arithmetic from an independently derived observable map.  The following
+items are \emph{not} presently certified as physical predictions.
+
+\begin{itemize}
+\item The claimed $L_\infty$ mass hierarchy is not an evaluated
+Maurer--Cartan solution: the producer records a nonzero residual $k-\lambda=10$
+and imports the quoted mass-denominator formulas instead of computing verified
+higher brackets.
+\item The claimed four-dimensional Weyl law is circular: the refinement
+function is defined with multiplicity factor $n^4$ and the same $n^4$ scaling is
+then used to infer $d=4$.  No physical four-volume follows from that definition.
+\item The electron packet
+$2\cdot49\cdot17\cdot16\cdot13=346528$ is exact arithmetic, but no mass/Yukawa
+operator forces its reciprocal to be $m_e/m_t$; the reported ``sigma'' was not
+obtained from a statistical uncertainty model.
+\item The $1818\,\mathrm{MeV}$ Yang--Mills producer explicitly solves an
+effective QCD scale from the target value, so the target is back-solved rather
+than predicted.
+\item The neutrino producer first obtains a factor four too large, then replaces
+$24$ by $6$ to hit $10{,}221{,}120$; the integer identity survives, not the mass
+prediction.
+\item The 45 tritangent-plane count and the octahedron spanning-tree count
+$\tau(K_{2,2,2})=384$ survive exactly, but the maps
+$r:=1/45$ and $m_{\rm scalar}:=m_H(384/15)$ are assumed rather than derived from
+an inflationary action or a scalar pole equation.
+\end{itemize}
+
+Accordingly the Pass~5913--5956 physical claims are assigned
+\textbf{ANSATZ/COMPARISON-ONLY} status.  Their exact combinatorial subclaims may
+remain in the corpus.  Promotion to prediction status requires an independent
+dynamics theorem that supplies the observable map without inserting the desired
+scaling exponent, solving an input scale from the target, or repairing factors
+after comparison with the target.
