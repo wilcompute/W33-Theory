@@ -166,6 +166,12 @@
         "target": "the [12,4,6] enumerator"
       }
     ],
-    "still_open": "the [12,4,6] weight enumerator, after five patterns"
+    "still_open": "the [12,4,6] weight enumerator, after five patterns",
+    "weight_profile_search": {
+      "pattern": "the weight profile {0:1, 6:12, 8:3}, not the parameters [12,4,6]",
+      "positive_control": "analysis/w33_pass5675_5682_the_code_knows_the_block_system.py",
+      "reading": "the pattern DOES match the profile where it exists -- it found my own file -- so this is a validated pattern with a genuine corpus absence, not an unexplained empty result",
+      "status": "absent from the CORPUS with a positive control; absent from the LITERATURE only on five unvalidated searches, which is weaker"
+    }
   }
 }
