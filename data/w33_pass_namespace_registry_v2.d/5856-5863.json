@@ -2,10 +2,19 @@
   "schema": "w33.pass_namespace_registry.v2.fragment",
   "range": [5856, 5863],
   "owner": "openai_gpt5_6_sol",
-  "status": "RESERVED",
+  "status": "CLOSED_STRUCTURAL__CI_REPLAY_PENDING",
   "created_utc": "2026-08-17T18:00:00Z",
   "topic": "new doily quadratic-orbit packet: mod2 Radon radical image; 16 quadratic refinements and bent signs; six ovoids/ten grids; canonical S6 3+3 partition model; K10 angle geometry; nested L2(4)->L2(3) rook subconstituent; simplex puncture vs unit-line boundary; publication/CI",
-  "artifacts": [],
-  "verification": "Reservation only; no theorem claims yet.",
+  "artifacts": [
+    "analysis/w33_pass5856_5862_doily_quadratic_orbits.py",
+    "data/PART_W33_PASS5856_5862_DOILY_QUADRATIC_ORBITS.json",
+    "tests/test_w33_pass5856_5863_doily_quadratic_orbits.py",
+    "analysis/PASS5856_5863_doily_quadratic_orbit_frontier.md",
+    "analysis/PASS5856_5863_doily_quadratic_orbit_insert.tex",
+    "analysis/PASS5856_5863_index_insert.html",
+    "tools/materialize_pass5856_5863_doily_quadratic_orbit.py",
+    ".github/workflows/w33_pass5856_5863_doily_quadratic_orbit.yml"
+  ],
+  "verification": "Exact computations independently reproduced during construction. CI is queued/pending and remains the authority for clean-checkout byte replay, homepage materialization, and Tectonic compilation of all three manuscripts.",
   "boundary": "Exact finite geometry/coding/Fourier/lattice results only. No physical qubit-state identification beyond the abstract two-qubit doily incidence model."
 }
