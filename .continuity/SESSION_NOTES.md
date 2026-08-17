@@ -17,11 +17,11 @@
 
 ## ✅ Next Steps
 <!-- What should we do next? -->
-- Auto-saved at 2026-08-17T15:56:29.648Z (reason: threshold-commits)
+- Auto-saved at 2026-08-17T16:12:33.725Z (reason: threshold-commits)
 - Recent commits:
-  - 56a79fbda Pass5736-5743: the digit law's bound is proved -- and classical too
-  - a34cda2bc Reserve Pass5736-5743 Track A: digit law proof, GF(8), construction audit
-  - 3e90f7790 Pass5736-5743: freeze quadratic evaluation code certificate
+  - db5d4aaff Pass5757: a positive control for the weight-profile search
+  - 8b0687ef8 Pass5752-5759: the attainment is generic, so nothing in the tower is about W(3,q)
+  - 3a77689af Stop parallel frontier edits from starving Pass5725-5732 verification
 
 ## 📝 Open Questions
 <!-- What do we still need to figure out? -->

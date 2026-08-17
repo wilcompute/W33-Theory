@@ -84,7 +84,8 @@
         "1786980961946-y8g7n8",
         "1786981219540-nmfp90",
         "1786981762503-hib4rs",
-        "1786982189919-8dnfi9"
+        "1786982189919-8dnfi9",
+        "1786983061709-sh4gk9"
       ],
       "causedBy": [
         "manual-20260507-pin-e8-manifest-z3-output-check"
@@ -177,7 +178,8 @@
         "d8ac0082-876f-4935-80c4-de4c705ccec2",
         "e8fa85eb-29ee-4617-a086-aec55b0a8922",
         "6463a27e-4bc0-4022-85bf-3242450eac40",
-        "1786981219540-nmfp90"
+        "1786981219540-nmfp90",
+        "1786983061709-sh4gk9"
       ],
       "causedBy": []
     },
@@ -229,7 +231,8 @@
         "e8fa85eb-29ee-4617-a086-aec55b0a8922",
         "98570fba-3ce7-45aa-84fd-5560b203d593",
         "6463a27e-4bc0-4022-85bf-3242450eac40",
-        "1786981219540-nmfp90"
+        "1786981219540-nmfp90",
+        "1786983061709-sh4gk9"
       ],
       "causedBy": []
     },
@@ -284,7 +287,8 @@
         "e8fa85eb-29ee-4617-a086-aec55b0a8922",
         "6463a27e-4bc0-4022-85bf-3242450eac40",
         "1786980587175-xavuzt",
-        "1786981219540-nmfp90"
+        "1786981219540-nmfp90",
+        "1786983061709-sh4gk9"
       ],
       "causedBy": []
     },
@@ -342,7 +346,8 @@
         "1786980242869-onutez",
         "1786980587175-xavuzt",
         "1786980961946-y8g7n8",
-        "1786981219540-nmfp90"
+        "1786981219540-nmfp90",
+        "1786983061709-sh4gk9"
       ],
       "causedBy": []
     },
@@ -395,7 +400,8 @@
         "1786978825551-4yxjf4",
         "1786981219540-nmfp90",
         "1786981762503-hib4rs",
-        "1786982189919-8dnfi9"
+        "1786982189919-8dnfi9",
+        "1786983061709-sh4gk9"
       ],
       "causedBy": []
     },
@@ -444,7 +450,8 @@
         "1786979818704-igg2nn",
         "1786981219540-nmfp90",
         "1786981762503-hib4rs",
-        "1786982189919-8dnfi9"
+        "1786982189919-8dnfi9",
+        "1786983061709-sh4gk9"
       ],
       "causedBy": []
     },
@@ -494,7 +501,8 @@
         "56038377-4c6b-48f8-8b24-3ff33095de65",
         "98570fba-3ce7-45aa-84fd-5560b203d593",
         "1786978825551-4yxjf4",
-        "1786981219540-nmfp90"
+        "1786981219540-nmfp90",
+        "1786983061709-sh4gk9"
       ],
       "causedBy": []
     },
@@ -542,7 +550,8 @@
         "56038377-4c6b-48f8-8b24-3ff33095de65",
         "98570fba-3ce7-45aa-84fd-5560b203d593",
         "1786978125686-pe8wl2",
-        "1786978825551-4yxjf4"
+        "1786978825551-4yxjf4",
+        "1786983061709-sh4gk9"
       ],
       "causedBy": []
     },
@@ -588,7 +597,8 @@
         "4250c93d-0379-41a5-8ad6-4dd4975297af",
         "56038377-4c6b-48f8-8b24-3ff33095de65",
         "1786978125686-pe8wl2",
-        "1786978825551-4yxjf4"
+        "1786978825551-4yxjf4",
+        "1786983061709-sh4gk9"
       ],
       "causedBy": []
     },
@@ -1382,7 +1392,8 @@
         "1786982189919-8dnfi9"
       ],
       "relatedTo": [
-        "1786980961946-y8g7n8"
+        "1786980961946-y8g7n8",
+        "1786983061709-sh4gk9"
       ]
     },
     "metadata": {
@@ -1424,7 +1435,8 @@
         "249a35f5-d0e5-422a-9d65-e9467b8c7309"
       ],
       "relatedTo": [
-        "1786980961946-y8g7n8"
+        "1786980961946-y8g7n8",
+        "1786983061709-sh4gk9"
       ]
     },
     "metadata": {
@@ -1464,7 +1476,8 @@
       "relatedTo": [
         "manual-20260507-pin-e8-orchestrator-z3-output-check",
         "manual-20260507-test-e8-orchestrator-z3-output-contract",
-        "1786980961946-y8g7n8"
+        "1786980961946-y8g7n8",
+        "1786983061709-sh4gk9"
       ],
       "causes": [
         "34bba2aa-d8d1-415c-904f-54698570f4bf",
@@ -1515,7 +1528,8 @@
       "relatedTo": [
         "manual-20260507-pin-e8-orchestrator-z3-output-check",
         "manual-20260507-test-e8-orchestrator-z3-output-contract",
-        "1786980961946-y8g7n8"
+        "1786980961946-y8g7n8",
+        "1786983061709-sh4gk9"
       ],
       "causes": [
         "34bba2aa-d8d1-415c-904f-54698570f4bf",
@@ -1558,7 +1572,8 @@
       "relatedTo": [
         "manual-20260507-fix-e8-manifest-z3-output-contract",
         "manual-20260507-pin-e8-orchestrator-z3-output-check",
-        "1786980961946-y8g7n8"
+        "1786980961946-y8g7n8",
+        "1786983061709-sh4gk9"
       ],
       "causedBy": [
         "manual-20260507-fix-e8-orchestrator-dataclass-loader"
@@ -1606,7 +1621,8 @@
         "manual-20260507-fix-e8-runner-z3-output-contract",
         "manual-20260507-fix-e8-manifest-z3-output-contract",
         "manual-20260507-pin-e8-orchestrator-z3-output-check",
-        "1786980961946-y8g7n8"
+        "1786980961946-y8g7n8",
+        "1786983061709-sh4gk9"
       ],
       "causedBy": [
         "manual-20260507-fix-e8-manifest-z3-output-contract",
@@ -114803,7 +114819,8 @@
         "5c826c42-f536-494e-945b-db4e404e703e",
         "1786978825551-4yxjf4",
         "1786980961946-y8g7n8",
-        "1786981762503-hib4rs"
+        "1786981762503-hib4rs",
+        "1786983061709-sh4gk9"
       ],
       "relatedTo": [
         "01e8a316-2e07-4420-a356-02b1e3fdd265"
@@ -114830,7 +114847,8 @@
       "supersededBy": [
         "1786978825551-4yxjf4",
         "1786980961946-y8g7n8",
-        "1786981762503-hib4rs"
+        "1786981762503-hib4rs",
+        "1786983061709-sh4gk9"
       ]
     },
     "metadata": {
@@ -114876,7 +114894,8 @@
         "efadc40f-af07-4059-acad-9fc57a4c3b87",
         "5c826c42-f536-494e-945b-db4e404e703e",
         "1786978825551-4yxjf4",
-        "1786980961946-y8g7n8"
+        "1786980961946-y8g7n8",
+        "1786983061709-sh4gk9"
       ]
     },
     "metadata": {
@@ -114898,7 +114917,8 @@
     "status": "active",
     "relationships": {
       "supersededBy": [
-        "1786980961946-y8g7n8"
+        "1786980961946-y8g7n8",
+        "1786983061709-sh4gk9"
       ]
     },
     "metadata": {
@@ -114944,7 +114964,8 @@
         "861f97a2-44aa-43bc-8b3b-4139b2c5c52a",
         "5c826c42-f536-494e-945b-db4e404e703e",
         "9b13304c-c675-455f-95f1-aad4051dfa82",
-        "1786980961946-y8g7n8"
+        "1786980961946-y8g7n8",
+        "1786983061709-sh4gk9"
       ],
       "relatedTo": [
         "2984351a-ff0d-436d-a7f9-26a21ebc54f7",
@@ -114970,7 +114991,8 @@
     "status": "active",
     "relationships": {
       "supersededBy": [
-        "1786980961946-y8g7n8"
+        "1786980961946-y8g7n8",
+        "1786983061709-sh4gk9"
       ]
     },
     "metadata": {
@@ -123680,12 +123702,14 @@
       "supersededBy": [
         "1786980242869-onutez",
         "1786980587175-xavuzt",
-        "1786980961946-y8g7n8"
+        "1786980961946-y8g7n8",
+        "1786983061709-sh4gk9"
       ],
       "relatedTo": [
         "1786980242869-onutez",
         "1786980587175-xavuzt",
-        "1786980961946-y8g7n8"
+        "1786980961946-y8g7n8",
+        "1786983061709-sh4gk9"
       ],
       "causes": [],
       "causedBy": [
@@ -136107,12 +136131,14 @@
       ],
       "supersededBy": [
         "1786980587175-xavuzt",
-        "1786980961946-y8g7n8"
+        "1786980961946-y8g7n8",
+        "1786983061709-sh4gk9"
       ],
       "relatedTo": [
         "1786860945369-ki8azn",
         "1786980587175-xavuzt",
-        "1786980961946-y8g7n8"
+        "1786980961946-y8g7n8",
+        "1786983061709-sh4gk9"
       ],
       "causes": [],
       "causedBy": [
@@ -136172,7 +136198,8 @@
         "1fb5332b-7df7-4881-bce0-800d23047ba3"
       ],
       "supersededBy": [
-        "1786980961946-y8g7n8"
+        "1786980961946-y8g7n8",
+        "1786983061709-sh4gk9"
       ],
       "relatedTo": [
         "1786860945369-ki8azn",
@@ -136185,7 +136212,8 @@
         "cadec8f9-5f6f-4dda-a6e4-0b2761a5b885",
         "d7d530a6-9dd6-450d-9747-b80eadf1463c",
         "4c0d8cc8-0c8c-4387-ba97-5b0591217e28",
-        "1786980961946-y8g7n8"
+        "1786980961946-y8g7n8",
+        "1786983061709-sh4gk9"
       ],
       "causes": [],
       "causedBy": [
@@ -136244,7 +136272,9 @@
         "9d81ac89-f369-492d-892a-7433bf771c04",
         "097ad1a5-863a-47d2-9e35-0c5f3cf2b78a"
       ],
-      "supersededBy": [],
+      "supersededBy": [
+        "1786983061709-sh4gk9"
+      ],
       "relatedTo": [
         "1786860945369-ki8azn",
         "1786980242869-onutez",
@@ -136255,7 +136285,8 @@
         "9a7bc715-9bfd-4e2d-a592-d49a2074ddd7",
         "7a9b034d-4f59-4834-885e-b982c8261a2d",
         "92c1464e-9086-4497-bedc-176c7a857ad1",
-        "5827bb97-882f-4a7a-902c-cf9a43b436de"
+        "5827bb97-882f-4a7a-902c-cf9a43b436de",
+        "1786983061709-sh4gk9"
       ],
       "causes": [],
       "causedBy": [
@@ -136502,6 +136533,84 @@
       "544884d5604be4488f5e1c709d8e721378859d8d",
       "1b660a34c51b39bf9d6f222657e14820787a4719",
       "78e68873e69f018bba46acc1ac15e0937e3919cc"
+    ]
+  },
+  {
+    "id": "1786983061709-sh4gk9",
+    "question": "Is the attainment of the Hadamard rank bound special to the symplectic form, or generic?",
+    "answer": "GENERIC -- which refutes the last claim this thread had and means nothing in the Sym^e/digit-law work is about W(3,q).\n\nTHE TEST, run eight passes late: change the form and see whether the result changes. On the 156 points of PG(3,5), EVERY nondegenerate bilinear form attains C(e+3,3) at e=1..4 -- alternating (the symplectic form), identity, antidiagonal symmetric, diagonal 1234, and three random nondegenerate forms. 7 of 7. Degenerate forms attain the corresponding bound too: a rank-2 form gives [2,3,4,5] = C(e+1,e), a rank-1 form gives [1,1,1,1].\n\nSO THE LAW IS ABOUT THE RANK OF THE FORM, NOT ITS TYPE. A form of rank r gives C(e+r-1,e) at every e. The 4 in C(e+3,3) is rank(J) = 4 -- not the dimension of the space, and nothing symplectic. Pass 5736 had labelled three statements: period law (classical), digit bound (classical), equality (MINE, measured). The third now falls as well. The mathematics of every earlier pass is correct and the SUBJECT is wrong -- it is a fact about bilinear forms over finite fields, computed on a carrier that happens to be a symplectic polar space.\n\nTHIS IS A SIXTH FAILURE MODE, not among CLAUDE.md's five. Not a coordinate artefact, not an over-read of scope, not an unbuilt object, not an unbuilt half, not a rediscovery of a corpus result. The claim was true, proportionate, well-witnessed, and novel to the corpus -- and about the WRONG SUBJECT. THE CATCHING TEST IS ONE LINE: change the object and see whether the result changes; if it does not, the result was never about the object. Worth adding to the failure-mode list.\n\nSESSION AUDIT OF TEN CLAIMS: five mine, one already in the corpus, four classical. Surviving as mine: alpha(W(3,q)) = q^2+1 for even q verified to q=256; Reye 12_4 16_3 = tomotope medial layer; Aut(Reye Levi) = SmallGroup(576,8654) = W(F4)/Z; the [12,4,6] code partition IS T12_165's unique block system; and Aut([12,4,6]) = W(F4)/Z acting as T12_165. EVERY ONE came from a construction, a GAP typing, or an explicit search. EVERY CLAIM THAT CAME FROM AN ARGUMENT TURNED OUT CLASSICAL -- four for four (Sym^e bound, p=2 rank law, digit bound, attainment). In this corpus, arguments rediscover and computations discover.\n\nWHAT ALSO SURVIVES is the construction-inheritance method: for an unexplained automorphism group, check what the object was BUILT FROM before searching inside it. It solved S4 wr S2 in one query after four internal searches failed.\n\nOPERATIONAL NOTE: this packet was renumbered from 5744-5751 to 5752-5759 after a collision -- the other lane had reserved and published 5744-5751 (quadratic-code overlay) while I held the same block locally. Reservation must be pushed AND re-fetched before work, not merely written.</answer>\n<parameter name=\"tags\">w33, refutation, generic, bilinear-form, failure-mode, session-audit, renumber, pass5752",
+    "timestamp": "2026-08-17T16:11:01.709Z",
+    "tags": [
+      "audit",
+      "redis"
+    ],
+    "files": [],
+    "status": "active",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [
+        "1786860945369-ki8azn",
+        "1786980242869-onutez",
+        "1786980587175-xavuzt",
+        "1786980961946-y8g7n8",
+        "5561b95a-5eb2-4ed5-9647-05b6181ca24a",
+        "406ceb79-03f2-43be-bf5d-450f0df0baf2",
+        "e111cba7-aa4b-4809-8db0-6e69be355e8c",
+        "45e94def-5abf-4777-8d93-29bbc3eaecda",
+        "e6af5112-13da-4298-bebd-bdd4cf37baad",
+        "9d81ac89-f369-492d-892a-7433bf771c04"
+      ],
+      "supersededBy": [],
+      "relatedTo": [
+        "1786860945369-ki8azn",
+        "1786980242869-onutez",
+        "1786980587175-xavuzt",
+        "1786980961946-y8g7n8",
+        "beaa04ed-f130-4ef8-a424-792aced0dd1b",
+        "de4c97dd-920d-437b-aae4-fe8efcbc3262",
+        "0b0c4e30-d604-48e1-9555-e86a323a3271",
+        "9a7bc715-9bfd-4e2d-a592-d49a2074ddd7",
+        "7a9b034d-4f59-4834-885e-b982c8261a2d",
+        "92c1464e-9086-4497-bedc-176c7a857ad1"
+      ],
+      "causes": [],
+      "causedBy": [
+        "1777318403161-4mgrce",
+        "1777318403161-wwusgh",
+        "1777318403161-8dkkdk",
+        "1777318403161-ai9frf",
+        "1777318403161-qze7ej",
+        "1777318403161-t7tcbd",
+        "1777318403161-06lp3s",
+        "1777318403161-ya0ehy",
+        "1777318403161-pu8p9x",
+        "1777318403161-s5j46a"
+      ]
+    },
+    "metadata": {
+      "status": "active",
+      "source": "mcp",
+      "entities": {
+        "technologies": [
+          "redis"
+        ],
+        "patterns": [],
+        "concepts": [
+          "audit"
+        ],
+        "tools": []
+      },
+      "domain": "software"
+    },
+    "commitHashes": [
+      "8b0687ef8fa638a2ca535c65b8a02ea00cb5da12",
+      "3a77689af4c82b261067b980b8ab4c0b5df288ee",
+      "41df0c4761dc164700eeca15ad59fb13dca5ac79",
+      "8aa10a7f0b57408ec42ae505251ca66a08e25bf8",
+      "e8bf482193d19d61d6cf819be917f64f923c1523",
+      "b171337888e937a895fd2b8b6139829b87db2b0c",
+      "40fc26b031da3ac87181159b18cf511a0e447cb2",
+      "6689f0656f6eed73715c51ae20f1a42c0c3133d4"
     ]
   }
 ]
