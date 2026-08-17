@@ -1,0 +1,99 @@
+name: W33 Pass5872-5879 coherent CSS rankmetric Clifford discriminant
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5872_5879_coherent_css_rankmetric_clifford_discriminant.py'
+      - 'analysis/BT5872_BT5879_coherent_css_rankmetric_clifford_discriminant.md'
+      - 'analysis/PASS5872_5879_coherent_css_rankmetric_clifford_discriminant_insert.tex'
+      - 'analysis/PASS5872_5879_index_insert.html'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/PART_W33_PASS5872_5879_COHERENT_CSS_RANKMETRIC_CLIFFORD_DISCRIMINANT.json'
+      - 'data/w33_pass_namespace_registry_v2.d/5872-5879.json'
+      - 'data/w33_publication_frontier_contract_v2.json'
+      - 'tests/test_w33_pass5872_5879_coherent_css_rankmetric_clifford_discriminant.py'
+      - 'tools/materialize_pass5872_5879_frontier.py'
+      - '.github/workflows/w33_pass5872_5879_coherent_css_rankmetric_clifford_discriminant.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  replay-publish-compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install exact replay dependencies
+        run: python -m pip install --upgrade pip pytest sympy networkx
+
+      - name: Replay Pass5872-5879 exact certificate
+        run: python analysis/w33_pass5872_5879_coherent_css_rankmetric_clifford_discriminant.py
+
+      - name: Focused regression
+        run: python -m pytest -q tests/test_w33_pass5872_5879_coherent_css_rankmetric_clifford_discriminant.py
+
+      - name: Materialize public frontier cards
+        run: |
+          python tools/materialize_pass5872_5879_frontier.py
+          for token in \
+            pass-5856-5863-doily-quadratic-orbit \
+            pass-5872-5879-coherent-css-rankmetric-clifford-discriminant; do
+            test "$(grep -c "id=\"$token\"" docs/index.html)" -eq 1
+            test "$(grep -c "id=\"$token\"" index.html)" -eq 1
+          done
+          git diff --check
+
+      - name: Audit manuscript and publication reachability
+        run: |
+          grep -Fq '\input{analysis/PASS5872_5879_coherent_css_rankmetric_clifford_discriminant_insert}' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('data/w33_publication_frontier_contract_v2.json').read_text())
+          tokens={x['token'] for x in d['local_public_sections']}
+          assert 'pass-5856-5863-doily-quadratic-orbit' in tokens
+          assert 'pass-5872-5879-coherent-css-rankmetric-clifford-discriminant' in tokens
+          assert d['public_index']=='docs/index.html'
+          PY
+
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+
+      - name: Compile all three canonical manuscripts
+        run: |
+          mkdir -p evidence/pass5872_5879
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass5872_5879/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass5872_5879/pdf_sha256.txt
+
+      - name: Freeze regenerated certificate and public pages if changed
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            data/PART_W33_PASS5872_5879_COHERENT_CSS_RANKMETRIC_CLIFFORD_DISCRIMINANT.json \
+            docs/index.html \
+            index.html
+          if git diff --cached --quiet; then
+            echo 'Certificate and public cards already frozen.'
+          else
+            git commit -m 'Materialize Pass5872-5879 frontier [skip ci]'
+            git push origin master
+          fi
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass5872-5879-coherent-css-rankmetric-clifford-discriminant
+          path: evidence/pass5872_5879/**
