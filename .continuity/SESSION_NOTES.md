@@ -17,11 +17,11 @@
 
 ## ✅ Next Steps
 <!-- What should we do next? -->
-- Auto-saved at 2026-08-17T16:12:33.725Z (reason: threshold-commits)
+- Auto-saved at 2026-08-17T16:21:21.010Z (reason: timer)
 - Recent commits:
-  - db5d4aaff Pass5757: a positive control for the weight-profile search
-  - 8b0687ef8 Pass5752-5759: the attainment is generic, so nothing in the tower is about W(3,q)
-  - 3a77689af Stop parallel frontier edits from starving Pass5725-5732 verification
+  - 8f3bca1f9 Pass5760-5767: perturbing the survivors, and failure mode six into CLAUDE.md
+  - 06014ac21 Reserve Pass5760-5767 Track A: perturbation test, CLAUDE.md failure mode six
+  - 03e13de04 Continuity autogen refresh
 
 ## 📝 Open Questions
 <!-- What do we still need to figure out? -->

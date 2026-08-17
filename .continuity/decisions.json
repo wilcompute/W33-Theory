@@ -85,7 +85,8 @@
         "1786981219540-nmfp90",
         "1786981762503-hib4rs",
         "1786982189919-8dnfi9",
-        "1786983061709-sh4gk9"
+        "1786983061709-sh4gk9",
+        "1786983608222-irjzda"
       ],
       "causedBy": [
         "manual-20260507-pin-e8-manifest-z3-output-check"
@@ -451,7 +452,8 @@
         "1786981219540-nmfp90",
         "1786981762503-hib4rs",
         "1786982189919-8dnfi9",
-        "1786983061709-sh4gk9"
+        "1786983061709-sh4gk9",
+        "1786983608222-irjzda"
       ],
       "causedBy": []
     },
@@ -502,7 +504,8 @@
         "98570fba-3ce7-45aa-84fd-5560b203d593",
         "1786978825551-4yxjf4",
         "1786981219540-nmfp90",
-        "1786983061709-sh4gk9"
+        "1786983061709-sh4gk9",
+        "1786983608222-irjzda"
       ],
       "causedBy": []
     },
@@ -1301,7 +1304,8 @@
         "501f6b6a-a866-4646-882e-2da75b79161a",
         "4882e1b1-e5bd-4038-a888-8aa61f1f90ea",
         "be29e6e8-96f2-4199-a2da-03622121888e",
-        "1786981762503-hib4rs"
+        "1786981762503-hib4rs",
+        "1786983608222-irjzda"
       ]
     },
     "metadata": {
@@ -1332,7 +1336,8 @@
         "501f6b6a-a866-4646-882e-2da75b79161a",
         "4882e1b1-e5bd-4038-a888-8aa61f1f90ea",
         "1786980961946-y8g7n8",
-        "1786981762503-hib4rs"
+        "1786981762503-hib4rs",
+        "1786983608222-irjzda"
       ]
     },
     "metadata": {
@@ -1432,7 +1437,8 @@
         "6deeccb2-551d-4073-8401-bcf5eccb7885",
         "c711bb40-90c7-40e7-ad4a-b75670560361",
         "5c826c42-f536-494e-945b-db4e404e703e",
-        "249a35f5-d0e5-422a-9d65-e9467b8c7309"
+        "249a35f5-d0e5-422a-9d65-e9467b8c7309",
+        "1786983608222-irjzda"
       ],
       "relatedTo": [
         "1786980961946-y8g7n8",
@@ -1488,7 +1494,8 @@
         "9fbf3d6b-ec55-455d-b000-3db3ec22021a",
         "fd699bc2-c7a0-4c80-8b7e-0967012e67d6",
         "c5354d11-c9e7-4d97-b9a8-e447cd669a02",
-        "1786980961946-y8g7n8"
+        "1786980961946-y8g7n8",
+        "1786983608222-irjzda"
       ]
     },
     "metadata": {
@@ -1540,7 +1547,8 @@
         "fd699bc2-c7a0-4c80-8b7e-0967012e67d6",
         "c5354d11-c9e7-4d97-b9a8-e447cd669a02",
         "08efff0e-d949-4775-bbbb-12eae9afe24d",
-        "1786980961946-y8g7n8"
+        "1786980961946-y8g7n8",
+        "1786983608222-irjzda"
       ]
     },
     "metadata": {
@@ -1646,7 +1654,8 @@
         "1786980242869-onutez",
         "1786980961946-y8g7n8",
         "1786981762503-hib4rs",
-        "1786982189919-8dnfi9"
+        "1786982189919-8dnfi9",
+        "1786983608222-irjzda"
       ]
     },
     "metadata": {
@@ -1686,7 +1695,8 @@
         "c9dc0cec-f851-44e3-a57a-3765b7ef07f9",
         "5c826c42-f536-494e-945b-db4e404e703e",
         "f3b4a70c-5aff-4060-aa11-187da241083d",
-        "1786982189919-8dnfi9"
+        "1786982189919-8dnfi9",
+        "1786983608222-irjzda"
       ],
       "relatedTo": [
         "1786980961946-y8g7n8"
@@ -33999,11 +34009,13 @@
     "relationships": {
       "supersededBy": [
         "1c6d856d-8565-47f3-a4a4-1bace0d68641",
-        "5c826c42-f536-494e-945b-db4e404e703e"
+        "5c826c42-f536-494e-945b-db4e404e703e",
+        "1786983608222-irjzda"
       ],
       "relatedTo": [
         "1c6d856d-8565-47f3-a4a4-1bace0d68641",
-        "861f97a2-44aa-43bc-8b3b-4139b2c5c52a"
+        "861f97a2-44aa-43bc-8b3b-4139b2c5c52a",
+        "1786983608222-irjzda"
       ]
     },
     "metadata": {
@@ -34026,11 +34038,13 @@
     "relationships": {
       "supersededBy": [
         "1c6d856d-8565-47f3-a4a4-1bace0d68641",
-        "5c826c42-f536-494e-945b-db4e404e703e"
+        "5c826c42-f536-494e-945b-db4e404e703e",
+        "1786983608222-irjzda"
       ],
       "relatedTo": [
         "1c6d856d-8565-47f3-a4a4-1bace0d68641",
-        "861f97a2-44aa-43bc-8b3b-4139b2c5c52a"
+        "861f97a2-44aa-43bc-8b3b-4139b2c5c52a",
+        "1786983608222-irjzda"
       ]
     },
     "metadata": {
@@ -34377,7 +34391,11 @@
     "status": "outdated",
     "relationships": {
       "supersededBy": [
-        "5c826c42-f536-494e-945b-db4e404e703e"
+        "5c826c42-f536-494e-945b-db4e404e703e",
+        "1786983608222-irjzda"
+      ],
+      "relatedTo": [
+        "1786983608222-irjzda"
       ]
     },
     "metadata": {
@@ -34399,7 +34417,11 @@
     "status": "outdated",
     "relationships": {
       "supersededBy": [
-        "5c826c42-f536-494e-945b-db4e404e703e"
+        "5c826c42-f536-494e-945b-db4e404e703e",
+        "1786983608222-irjzda"
+      ],
+      "relatedTo": [
+        "1786983608222-irjzda"
       ]
     },
     "metadata": {
@@ -114965,11 +114987,13 @@
         "5c826c42-f536-494e-945b-db4e404e703e",
         "9b13304c-c675-455f-95f1-aad4051dfa82",
         "1786980961946-y8g7n8",
-        "1786983061709-sh4gk9"
+        "1786983061709-sh4gk9",
+        "1786983608222-irjzda"
       ],
       "relatedTo": [
         "2984351a-ff0d-436d-a7f9-26a21ebc54f7",
-        "01e8a316-2e07-4420-a356-02b1e3fdd265"
+        "01e8a316-2e07-4420-a356-02b1e3fdd265",
+        "1786983608222-irjzda"
       ]
     },
     "metadata": {
@@ -123703,13 +123727,15 @@
         "1786980242869-onutez",
         "1786980587175-xavuzt",
         "1786980961946-y8g7n8",
-        "1786983061709-sh4gk9"
+        "1786983061709-sh4gk9",
+        "1786983608222-irjzda"
       ],
       "relatedTo": [
         "1786980242869-onutez",
         "1786980587175-xavuzt",
         "1786980961946-y8g7n8",
-        "1786983061709-sh4gk9"
+        "1786983061709-sh4gk9",
+        "1786983608222-irjzda"
       ],
       "causes": [],
       "causedBy": [
@@ -136132,13 +136158,15 @@
       "supersededBy": [
         "1786980587175-xavuzt",
         "1786980961946-y8g7n8",
-        "1786983061709-sh4gk9"
+        "1786983061709-sh4gk9",
+        "1786983608222-irjzda"
       ],
       "relatedTo": [
         "1786860945369-ki8azn",
         "1786980587175-xavuzt",
         "1786980961946-y8g7n8",
-        "1786983061709-sh4gk9"
+        "1786983061709-sh4gk9",
+        "1786983608222-irjzda"
       ],
       "causes": [],
       "causedBy": [
@@ -136199,7 +136227,8 @@
       ],
       "supersededBy": [
         "1786980961946-y8g7n8",
-        "1786983061709-sh4gk9"
+        "1786983061709-sh4gk9",
+        "1786983608222-irjzda"
       ],
       "relatedTo": [
         "1786860945369-ki8azn",
@@ -136213,7 +136242,8 @@
         "d7d530a6-9dd6-450d-9747-b80eadf1463c",
         "4c0d8cc8-0c8c-4387-ba97-5b0591217e28",
         "1786980961946-y8g7n8",
-        "1786983061709-sh4gk9"
+        "1786983061709-sh4gk9",
+        "1786983608222-irjzda"
       ],
       "causes": [],
       "causedBy": [
@@ -136273,7 +136303,8 @@
         "097ad1a5-863a-47d2-9e35-0c5f3cf2b78a"
       ],
       "supersededBy": [
-        "1786983061709-sh4gk9"
+        "1786983061709-sh4gk9",
+        "1786983608222-irjzda"
       ],
       "relatedTo": [
         "1786860945369-ki8azn",
@@ -136286,7 +136317,8 @@
         "7a9b034d-4f59-4834-885e-b982c8261a2d",
         "92c1464e-9086-4497-bedc-176c7a857ad1",
         "5827bb97-882f-4a7a-902c-cf9a43b436de",
-        "1786983061709-sh4gk9"
+        "1786983061709-sh4gk9",
+        "1786983608222-irjzda"
       ],
       "causes": [],
       "causedBy": [
@@ -136560,7 +136592,9 @@
         "e6af5112-13da-4298-bebd-bdd4cf37baad",
         "9d81ac89-f369-492d-892a-7433bf771c04"
       ],
-      "supersededBy": [],
+      "supersededBy": [
+        "1786983608222-irjzda"
+      ],
       "relatedTo": [
         "1786860945369-ki8azn",
         "1786980242869-onutez",
@@ -136571,7 +136605,8 @@
         "0b0c4e30-d604-48e1-9555-e86a323a3271",
         "9a7bc715-9bfd-4e2d-a592-d49a2074ddd7",
         "7a9b034d-4f59-4834-885e-b982c8261a2d",
-        "92c1464e-9086-4497-bedc-176c7a857ad1"
+        "92c1464e-9086-4497-bedc-176c7a857ad1",
+        "1786983608222-irjzda"
       ],
       "causes": [],
       "causedBy": [
@@ -136611,6 +136646,80 @@
       "b171337888e937a895fd2b8b6139829b87db2b0c",
       "40fc26b031da3ac87181159b18cf511a0e447cb2",
       "6689f0656f6eed73715c51ae20f1a42c0c3133d4"
+    ]
+  },
+  {
+    "id": "1786983608222-irjzda",
+    "question": "Do my surviving Reye claims pass the change-the-object test, and what durable guidance came out of this session?",
+    "answer": "PARTIALLY -- not generic, but not unique to the Reye either. And four pieces of guidance now live in CLAUDE.md.\n\nTHE PERTURBATION TEST, run on my own claims after it killed the Sym^e tower. Swapping the configuration: Reye 12_4 16_3 and Pappus 9_3 BOTH show the kernel-complements-partition phenomenon; Fano 7_3, Desargues 10_3 and Mobius-Kantor 8_3 do not. TWO OF FIVE.\n\nSo it is NOT generic -- three of five fail, unlike the Sym^e attainment which every nondegenerate form shared -- and NOT unique to the Reye. I wrote \"only the Reye shows the phenomenon\" before reading the table and the table refuted it: third prose-versus-computed-output catch this session.\n\nWHAT CHANGES AND WHAT DOES NOT. Unchanged, still verified two independent ways and typed by SmallGroup id: the Reye's [12,4,6] kernel partition IS T12_165's unique block system (Pass 5675), and Aut([12,4,6]) IS W(F4)/Z acting as T12_165 (Pass 5691). What changes is the FRAMING -- these are facts about a CLASS of configurations containing at least the Reye and Pappus, not about the Reye specifically, and I do not know what defines that class. Whether Pappus's partition is a block system of its OWN automorphism group is the obvious next test and is not run.\n\nFOUR THINGS NOW IN CLAUDE.md, which are the session's most portable outputs:\n\n1. FAILURE MODE SIX -- right result, wrong subject. The five existing modes all assume the claim is ABOUT the object; this one does not. Pass 5744-5759 measured a rank law on W(3,q), proved it, verified it at six values of q, and attributed it to the symplectic form -- then one test killed nine passes: every nondegenerate bilinear form attains the same bound, and the law is C(e+r-1,e) in the RANK of the form. THE TEST IS ONE LINE: change the object and see whether the result changes; if it does not, the result was never about the object. Run it BEFORE writing the framing.\n\n2. ARGUMENTS REDISCOVER; COMPUTATIONS DISCOVER. Of ten claims audited, every one derived from a short argument turned out classical -- four for four (Sym^e bound, p=2 rank law, digit bound, attainment). Every survivor came from a construction, a GAP typing, or an explicit search. A proof that fits in a few lines, about a classical object, is a reason to search the literature BEFORE writing.\n\n3. POSITIVE CONTROLS FOR NEGATIVE SEARCHES. Three of four empty results this session were bad patterns -- one grep matched only lines starting with # or ** while the retraction banner it sought began with >. Search for something you KNOW is there, confirm the pattern fires, then trust the negative. The [12,4,6] weight-profile search now has such a control and is a validated corpus absence; the literature searches do not and are weaker.\n\n4. RESERVATIONS MUST BE PUSHED AND RE-FETCHED before work begins, not merely written locally -- Pass 5744 collided with the other lane's published block and needed a renumber to 5752-5759.\n\nalpha(W(3,9)) remains the one open computation unambiguously about the substrate: 51 <= alpha <= 80, both ends moved this session, neither tight, and it passes the change-the-object test trivially.</answer>\n<parameter name=\"tags\">w33, perturbation, failure-mode-six, claude-md, reye, pappus, search-discipline, pass5760",
+    "timestamp": "2026-08-17T16:20:08.222Z",
+    "tags": [
+      "audit",
+      "redis",
+      "rust"
+    ],
+    "files": [],
+    "status": "active",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [
+        "1786860945369-ki8azn",
+        "1786980242869-onutez",
+        "1786980587175-xavuzt",
+        "1786980961946-y8g7n8",
+        "1786983061709-sh4gk9",
+        "e6af5112-13da-4298-bebd-bdd4cf37baad",
+        "7ea32c22-f1d3-4cd9-a6cb-53b35044baf2",
+        "cca5ab1c-2188-415d-a9ed-44ad8083f8af",
+        "68d4b99a-62d5-4e31-a92c-7f93b37b6263",
+        "a5126c56-fc1f-4ecd-a11c-e7085be57e7c"
+      ],
+      "supersededBy": [],
+      "relatedTo": [
+        "1786860945369-ki8azn",
+        "1786980242869-onutez",
+        "1786980587175-xavuzt",
+        "1786980961946-y8g7n8",
+        "1786983061709-sh4gk9",
+        "7ea32c22-f1d3-4cd9-a6cb-53b35044baf2",
+        "cca5ab1c-2188-415d-a9ed-44ad8083f8af",
+        "68d4b99a-62d5-4e31-a92c-7f93b37b6263",
+        "a5126c56-fc1f-4ecd-a11c-e7085be57e7c",
+        "e6af5112-13da-4298-bebd-bdd4cf37baad"
+      ],
+      "causes": [],
+      "causedBy": [
+        "1777318403161-4mgrce",
+        "1777318403161-06lp3s",
+        "1777318403161-ya0ehy",
+        "86a16636-a8da-4d13-92ef-61871326cec7",
+        "0b68ec48-f481-492f-a192-e579780845fe",
+        "de4c97dd-920d-437b-aae4-fe8efcbc3262",
+        "0b0c4e30-d604-48e1-9555-e86a323a3271",
+        "9a7bc715-9bfd-4e2d-a592-d49a2074ddd7",
+        "92c1464e-9086-4497-bedc-176c7a857ad1",
+        "5827bb97-882f-4a7a-902c-cf9a43b436de"
+      ]
+    },
+    "metadata": {
+      "status": "active",
+      "source": "mcp",
+      "entities": {
+        "technologies": [
+          "rust",
+          "redis"
+        ],
+        "patterns": [],
+        "concepts": [
+          "audit"
+        ],
+        "tools": []
+      },
+      "domain": "software"
+    },
+    "commitHashes": [
+      "8f3bca1f9728a3621a6a9452527cd0d58770152d",
+      "06014ac2129f04fd97ddcbfcf87efd347c3be43f"
     ]
   }
 ]

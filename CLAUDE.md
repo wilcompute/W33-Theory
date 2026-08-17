@@ -10,30 +10,25 @@
 This file contains project context and decisions. AI assistants should read this file for context. MCP tools are an optional enhancement for richer interaction when connected.
 
 ## Project Context
-- **Total Decisions:** 5183
+- **Total Decisions:** 5184
 - **Known Topics:** needs-review, auto-draft, why, w33, testing, toe, docs, architecture, holonet, photonic, audit, qec, github, selector, gap
 
 ## Current State
 **Repository:** Theory of Everything
 **Project Type:** Python Project | Python
 **Branch:** master
-**Tracking:** ahead 3, behind 0
+**Tracking:** ahead 1, behind 0
 
 **Recent Commits:**
-- `56a79fb Pass5736-5743: the digit law's bound is proved -- and classical too`
-- `a34cda2 Reserve Pass5736-5743 Track A: digit law proof, GF(8), construction audit`
-- `3e90f77 Pass5736-5743: freeze quadratic evaluation code certificate`
-- `3941d57 Pass5743: add 234 symplectic-overlay code invariance census`
-- `544884d Promote Pass5725-5732 into current frontier manifest`
+- `06014ac Reserve Pass5760-5767 Track A: perturbation test, CLAUDE.md failure mode six`
+- `03e13de Continuity autogen refresh`
+- `db5d4aa Pass5757: a positive control for the weight-profile search`
+- `8b0687e Pass5752-5759: the attainment is generic, so nothing in the tower is about W(3,q)`
+- `3a77689 Stop parallel frontier edits from starving Pass5725-5732 verification`
 
 **Working Tree:**
 - M .continuity/decisions.json
 - M .continuity/decisions.jsonl
-- M .cursorrules
-- M .github/copilot-instructions.md
-- M AGENTS.md
-- M CLAUDE.md
-- M GEMINI.md
 
 ## Session Context
 **Goals:**
@@ -131,38 +126,6 @@ Ordered by how hard they are to catch. Each was found the expensive way.
    re-derived a rank law the repo had already proved and formalized in Lean, and
    whose two halves are published (Sastry–Sin; Chandler–Sin–Xiang) and cited here.
 
-### Failure mode six: right result, wrong subject (added 2026-08-17)
-
-The five modes above all assume the claim is *about* the object. A sixth does not.
-
-**Pass 5744–5759 measured a rank law on W(3,q), proved it, verified it at q = 3, 5, 7, 8,
-9, 11, and attributed it to the symplectic form. Then one test killed nine passes of it:
-every nondegenerate bilinear form attains the same bound — symmetric, diagonal, random,
-degenerate alike. The law is `C(e+r−1,e)` in the *rank* of the form. Nothing in it was
-about W(3,q).**
-
-The claim was true, proportionate, well-witnessed, and novel to the corpus. It was simply
-about bilinear forms, computed on a carrier that happened to be a symplectic polar space.
-
-**The test is one line: change the object and see whether the result changes.** If it does
-not, the result was never about the object. Run it *before* writing the framing, not after
-— it costs one perturbed input.
-
-**Two calibrations from the same thread:**
-
-- *Arguments rediscover; computations discover.* Of ten claims audited, every one derived
-  from a short argument turned out classical (four for four); every one that survived came
-  from a construction, a GAP typing, or an explicit search. **A proof that fits in a few
-  lines, about a classical object, is a reason to search the literature before writing.**
-- *An empty search is a hypothesis about your pattern, not a fact about the corpus.* Three
-  of four empty results in that session were bad patterns — one grep matched only `#` and
-  `**` while the banner it sought began with `>`. **Give every negative a positive
-  control**: search for something you know is there, confirm the pattern fires, then trust
-  the negative.
-
-**Pass-number reservations must be pushed AND re-fetched before work begins**, not merely
-written locally — Pass 5744 collided with the other lane and needed a renumber.
-
 ### The operational prior
 
 Trust spectral / algebraic / representation-theoretic claims by default; treat
@@ -245,25 +208,25 @@ after commit:
 ---
 
 ## Recent Decisions
-1. **decision-17869830** (8/17/2026) [audit, redis]
+1. **decision-17869836** (8/17/2026) [audit, redis]
+   - Q: Do my surviving Reye claims pass the change-the-object test, and what durable guidance came out of this session?
+   - A: PARTIALLY -- not generic, but not unique to the Reye either. And four pieces of guidance now live in CLAUDE.md.  THE PERTURBATION TEST, run on my own claims after it killed the Sym^e tower. Swapping the configuration: Reye 12_4 16_3 and Pappus 9_3 BOTH show the kernel-complements-partition phenomenon; Fano 7_3, Desargues 10_3 and Mobius-Kantor 8_3 do not. TWO OF FIVE.  So it is NOT generic -- three of five fail, unlike the Sym^e attainment which every nondegenerate form shared -- and NOT unique to the Reye. I wrote "only the Reye shows the phenomenon" before reading the table and the table ...
+
+2. **decision-17869830** (8/17/2026) [audit, redis]
    - Q: Is the attainment of the Hadamard rank bound special to the symplectic form, or generic?
    - A: GENERIC -- which refutes the last claim this thread had and means nothing in the Sym^e/digit-law work is about W(3,q).  THE TEST, run eight passes late: change the form and see whether the result changes. On the 156 points of PG(3,5), EVERY nondegenerate bilinear form attains C(e+3,3) at e=1..4 -- alternating (the symplectic form), identity, antidiagonal symmetric, diagonal 1234, and three random nondegenerate forms. 7 of 7. Degenerate forms attain the corresponding bound too: a rank-2 form gives [2,3,4,5] = C(e+1,e), a rank-1 form gives [1,1,1,1].  SO THE LAW IS ABOUT THE RANK OF THE FORM,...
 
-2. **decision-17869821** (8/17/2026)
+3. **decision-17869821** (8/17/2026)
    - Q: Can the base-p digit law be proved, and is it classical?
    - A: YES to both -- the bound is provable in four lines from two standard facts, so it is classical. Only the attainment is mine.  THE PROOF. Write e in base p as e = sum d_i p^i. Then entrywise sf^e = product of (Frob^i(sf))^(d_i), since x -> x^(p^i) is the i-th Frobenius. Two classical ingredients finish it: (a) Frobenius is a field automorphism, so Frob^i(sf) is the entrywise image of sf under a ring automorphism and has the SAME rank 4; (b) Hadamard rank is submultiplicative, rank(A o B) <= rank(A) rank(B), together with the Hadamard power bound rank(A^(o d)) <= C(d + rank A - 1, d). Applyin...
 
-3. **decision-17869817** (8/17/2026)
+4. **decision-17869817** (8/17/2026)
    - Q: Where does S4 wr S2 come from in the tomotope, and was the period-(q-1) retraction correct?
    - A: S4 wr S2 = Aut(K_4,4), inherited from the construction. And NO -- the retraction was wrong; the original claim was sound.  THE ANSWER, AND THE CORPUS ALREADY HELD IT. The Q4 antipodal quotient IS K_4,4 -- verified here: 8 vertices, 16 edge-classes, 4-regular, bipartite, isomorphic to K_4,4 -- and |Aut(K_4,4)| = (4!)^2 x 2 = 1152 = |S4 wr S2|. So S4 wr S2 is NOT intrinsic to the tomotope's 16-face graph; it is INHERITED FROM THE CONSTRUCTION, exactly as Pass 5726 guessed before finding it. That is why four internal searches all failed -- Delsarte coset graph (Pass 5671), two-weight structure...
 
-4. **decision-17869812** (8/17/2026)
+5. **decision-17869812** (8/17/2026)
    - Q: Does the symplectic power tower really have period q-1, and what does GF(9) reveal?
    - A: NO -- the wrap is at the CHARACTERISTIC, not q, and the law is a base-p digit product.  CORRECTION TO PASS 5713. It claimed rank_q(sf^e) has period q-1, verified at q = 3, 5, 7, 11. At q=9 that would put the wrap at e=9. It is at e=3. GF(9) has characteristic 3, so Frobenius is x -> x^3 and sf^3 = Frobenius(sf) is again a form of rank 4. For PRIME q the characteristic equals q and the two statements coincide -- which is exactly why every q I had tested was blind to the difference. All four verifications were at primes.  THE COMPLETE LAW IS MULTIPLICATIVE OVER BASE-p DIGITS:      rank(sf^e) ...
-
-5. **decision-17869809** (8/17/2026) [audit, redis]
-   - Q: What is the complete form of the symplectic power rank tower, and how many of this session's theorems were actually c...
-   - A: The tower is periodic, not merely bounded. And 2 of 8 claims were classical -- both the ones with one-line proofs.  THE COMPLETE STATEMENT: rank_q(sf^e) = C(e+3,3) for 1 <= e <= q-1, and rank_q(sf^e) depends only on e mod (q-1). At q=11 that is TEN rungs -- 4, 10, 20, 35, 56, 84, 120, 165, 220, 286 -- every one equal to dim Sym^e(F_11^4), then wrapping at e=11 back to the bilinear rank 4. Verified at q = 3, 5, 7, 11. The BOUND is classical (Pass 5704, the Hadamard-power-of-a-configuration bound, arXiv:2005.08181); the ATTAINMENT at every rung and the period-(q-1) wrap are what this measures...
 
 *1471 unreviewed drafts from auto-capture pending review — `continuity log` the real rationale or update_decision to expand them.*
 

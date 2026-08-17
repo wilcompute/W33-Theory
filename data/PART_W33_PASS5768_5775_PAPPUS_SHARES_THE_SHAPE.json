@@ -1,0 +1,132 @@
+{
+  "boundary": "Pass 5768 compares kernel SHAPES and does NOT establish that Pappus's partition is a block system -- that test failed to run. Five of this batch's eight items are incomplete and listed. Nothing here changes Pass 5675 or Pass 5691",
+  "pass_5768_5769": {
+    "pappus": {
+      "blocks": 9,
+      "complements": [
+        [
+          0,
+          5,
+          7
+        ],
+        [
+          1,
+          3,
+          8
+        ],
+        [
+          2,
+          4,
+          6
+        ]
+      ],
+      "config_aut": 108,
+      "kernel_dim": 2,
+      "levi_aut": 216,
+      "max_weight": 6,
+      "partitions": true,
+      "points": 9,
+      "weights": {
+        "0": 1,
+        "6": 3
+      }
+    },
+    "reye": {
+      "blocks": 16,
+      "complements": [
+        [
+          0,
+          5,
+          8,
+          11
+        ],
+        [
+          1,
+          4,
+          7,
+          9
+        ],
+        [
+          2,
+          3,
+          6,
+          10
+        ]
+      ],
+      "kernel_dim": 4,
+      "max_weight": 8,
+      "partitions": true,
+      "points": 12,
+      "weights": {
+        "0": 1,
+        "6": 12,
+        "8": 3
+      }
+    },
+    "shared_invariant": "exactly THREE maximum-weight words whose complements partition the point set",
+    "sharpens": "a better candidate class than 'two of five': the invariant is the three-word structure, not the point count"
+  },
+  "pass_5770_5771": {
+    "asymmetry": "the Reye's Levi has orbits [16,12] and is not self-dual, which is why the same script worked at Pass 5675",
+    "config_aut": 108,
+    "fix": "act with the index-2 point-preserving subgroup",
+    "levi_aut": 216,
+    "status": "UNRUN -- reported, not guessed",
+    "why_failed": "Pappus is self-dual so its Levi is point-line transitive (one orbit of 18); Action on [1..9] has no method"
+  },
+  "pass_5772": {
+    "applied": false,
+    "common_trigger": "all three are predictions written beside a table just generated and not read; none was a reasoning error",
+    "failures": [
+      {
+        "claim": "the rook's minimum-weight words are grid lines",
+        "data_said": "0 of 60",
+        "pass": "Pass 5685"
+      },
+      {
+        "claim": "the grid lines are in the module",
+        "data_said": "0 of 16",
+        "pass": "Pass 5707"
+      },
+      {
+        "claim": "only the Reye shows the phenomenon",
+        "data_said": "Pappus too",
+        "pass": "Pass 5761"
+      }
+    ],
+    "fix": "derive the sentence FROM the array, not alongside it"
+  },
+  "pass_5773_5775": {
+    "alpha_w39": {
+      "bounds": [
+        51,
+        80
+      ],
+      "unchanged": true
+    },
+    "completed": 3,
+    "not_done": [
+      {
+        "item": "is Pappus's partition a BLOCK SYSTEM of its group?",
+        "reason": "GAP failed: the Levi is point-line transitive (one orbit of 18), so Action on [1..9] has no method; two patch attempts did not apply"
+      },
+      {
+        "item": "literature searches re-run with positive controls",
+        "reason": "not started"
+      },
+      {
+        "item": "alpha(W(3,9)) past 51",
+        "reason": "not attempted this batch"
+      },
+      {
+        "item": "change-the-object test across corpus structural claims",
+        "reason": "not started"
+      },
+      {
+        "item": "does Pappus appear elsewhere in the corpus",
+        "reason": "search still running at cutoff"
+      }
+    ],
+    "total": 8
+  }
+}
