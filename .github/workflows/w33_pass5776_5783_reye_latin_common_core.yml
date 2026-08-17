@@ -1,0 +1,38 @@
+name: W33 Pass5776-5783 Reye Latin common core
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5776_5783_reye_latin_common_core.py'
+      - 'analysis/BT5776_BT5783_reye_latin_common_core.md'
+      - 'analysis/PASS5776_5783_reye_latin_common_core_insert.tex'
+      - 'analysis/PASS5776_5783_index_insert.html'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/PART_W33_PASS5667_5674_Q5_REYE_EQUIVARIANT_ORIENTATION.json'
+      - 'data/PART_W33_PASS5776_5783_REYE_LATIN_COMMON_CORE.json'
+      - 'tests/test_w33_pass5776_5783_reye_latin_common_core.py'
+      - '.github/workflows/w33_pass5776_5783_reye_latin_common_core.yml'
+  pull_request:
+    paths:
+      - 'analysis/w33_pass5776_5783_reye_latin_common_core.py'
+      - 'data/PART_W33_PASS5776_5783_REYE_LATIN_COMMON_CORE.json'
+      - 'tests/test_w33_pass5776_5783_reye_latin_common_core.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pytest
+        run: python -m pip install --upgrade pip pytest
+      - name: Replay exact theorem and frozen certificate
+        run: python -m pytest -q tests/test_w33_pass5776_5783_reye_latin_common_core.py
