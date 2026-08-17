@@ -1,0 +1,41 @@
+name: Pass5913-5920 M2F2 two-qubit doily replay
+
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass5913_5920_m2f2_two_qubit_doily_bridge.py'
+      - 'analysis/PASS5913_5920_m2f2_two_qubit_doily_bridge.md'
+      - 'analysis/PASS5913_5920_m2f2_two_qubit_doily_bridge_insert.tex'
+      - 'data/PART_W33_PASS5913_5920_M2F2_TWO_QUBIT_DOILY_BRIDGE.json'
+      - 'tests/test_w33_pass5913_5920_m2f2_two_qubit_doily_bridge.py'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - '.github/workflows/w33_pass5913_5920_m2f2_two_qubit_doily.yml'
+  pull_request:
+    paths:
+      - 'analysis/w33_pass5913_5920_m2f2_two_qubit_doily_bridge.py'
+      - 'analysis/PASS5913_5920_m2f2_two_qubit_doily_bridge.md'
+      - 'analysis/PASS5913_5920_m2f2_two_qubit_doily_bridge_insert.tex'
+      - 'data/PART_W33_PASS5913_5920_M2F2_TWO_QUBIT_DOILY_BRIDGE.json'
+      - 'tests/test_w33_pass5913_5920_m2f2_two_qubit_doily_bridge.py'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - '.github/workflows/w33_pass5913_5920_m2f2_two_qubit_doily.yml'
+  workflow_dispatch:
+
+jobs:
+  exact-replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact replay dependencies
+        run: python -m pip install --upgrade pip numpy pytest
+      - name: Replay theorem producer
+        run: python analysis/w33_pass5913_5920_m2f2_two_qubit_doily_bridge.py
+      - name: Compare frozen certificate byte-for-byte
+        run: git diff --exit-code -- data/PART_W33_PASS5913_5920_M2F2_TWO_QUBIT_DOILY_BRIDGE.json
+      - name: Run focused regression
+        run: pytest -q tests/test_w33_pass5913_5920_m2f2_two_qubit_doily_bridge.py
+      - name: Check manifest promotion
+        run: grep -F '\input{analysis/PASS5913_5920_m2f2_two_qubit_doily_bridge_insert}%' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
