@@ -2,8 +2,18 @@
   "schema": "w33.pass_namespace_registry.v2.fragment",
   "range": [5744, 5751],
   "owner": "openai_gpt5_6_sol",
-  "status": "RESERVED_ACTIVE",
+  "status": "PUBLISHED",
   "created_utc": "2026-08-17T16:00:00Z",
   "topic": "quadratic Veronese / known [40,10,18]_3 design code bridge, sparse symplectic factorization, local repair, logical-line geometry, 234 reconfigurable W33 overlays",
-  "boundary": "Rodrigues 2008 already gives the self-orthogonal [40,10,18]_3 design code and [40,30,4]_3 dual with 260 weight-4 words; Kaipa-Pradhan 2024 treats the ternary quadratic Veronese 3-fold code. Promote only the exact W33 coordinate bridge and machine-layer synthesis, with finite-geometry boundaries explicit."
+  "boundary": "Rodrigues 2008 already gives the self-orthogonal [40,10,18]_3 design code and [40,30,4]_3 dual with 260 weight-4 words; Kaipa-Pradhan 2024 treats the ternary quadratic Veronese 3-fold code. Promote only the exact W33 coordinate bridge and machine-layer synthesis, with finite-geometry boundaries explicit.",
+  "artifacts": [
+    "analysis/w33_pass5744_5751_quadratic_code_overlays.py",
+    "analysis/BT5744_BT5751_quadratic_code_overlays.md",
+    "analysis/PASS5744_5751_quadratic_code_overlays_insert.tex",
+    "data/PART_W33_PASS5744_5751_QUADRATIC_CODE_OVERLAYS.json",
+    "tests/test_w33_pass5744_5751_quadratic_code_overlays.py",
+    ".github/workflows/w33_pass5744_5751_quadratic_code_overlays.yml",
+    "docs/quadratic-code-symplectic-overlays.html",
+    "analysis/W33_CURRENT_FRONTIER_MANIFEST.tex"
+  ]
 }
