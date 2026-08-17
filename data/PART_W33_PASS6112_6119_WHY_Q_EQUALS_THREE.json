@@ -1,0 +1,59 @@
+{
+  "boundary": "Pass 6112 computes character-table indicators for Sp(4,3) and Sp(4,5) directly; q >= 7 did not complete. It gives a STRUCTURAL reason for q = 3 over q = 5. It does NOT derive the Standard Model, and it does not pick which of U, U* is physical -- Pass 6106's scope limit still stands",
+  "pass_6112_the_computation": {
+    "confirms": "Vinroot 2010 -- all irreducible complex characters are real when q = 1 mod 4",
+    "q3": {
+      "canonical_chirality": true,
+      "indicator_spectrum": {
+        "complex_0": 20,
+        "quaternionic_-1": 4,
+        "real_+1": 10
+      },
+      "irreducibles": 34,
+      "non_self_dual": 20,
+      "order": 51840,
+      "weil_constituent_degrees": [
+        5,
+        4
+      ]
+    },
+    "q5": {
+      "canonical_chirality": false,
+      "indicator_spectrum": {
+        "complex_0": 0,
+        "quaternionic_-1": 26,
+        "real_+1": 34
+      },
+      "irreducibles": 60,
+      "non_self_dual": 0,
+      "order": 9360000,
+      "weil_constituent_degrees": [
+        13,
+        12
+      ]
+    },
+    "q7_and_up": "did not complete -- class matrices for Sp(4,7) exceed the available budget"
+  },
+  "pass_6113_why_q_equals_3": {
+    "and_the_contrast": "at q = 5 there are ZERO non-self-dual characters. The Weil constituents of degrees 13 and 12 are real or quaternionic, the representation is self-dual, and NO canonical chirality exists",
+    "the_chain": [
+      "a canonical chirality requires a complex structure the group cannot undo",
+      "that requires NON-SELF-DUAL characters, i.e. Frobenius-Schur indicator 0",
+      "those exist if and only if q = 3 mod 4 (Gow 1985, Vinroot 2010)",
+      "at q = 3 the Weil constituents have degrees 5 and 4, and BOTH are in the non-self-dual set -- so the chirality sits on the Weil representation itself",
+      "Sp(4,3) is perfect, so no element swaps a non-self-dual pair",
+      "therefore q = 3 supports a canonical chirality"
+    ],
+    "the_significance": "this is a structural reason for the substrate to sit at q = 3 rather than q = 5. It is not a preference or a fit -- q = 5 cannot support the structure at all"
+  },
+  "pass_6114_what_this_closes_and_what_it_does_not": {
+    "closes": "the Pass 346 no-go as stated, and the Pass 352 'named obstruction' that F2 has no complex structure for chirality. The complex structure exists (Pass 353), the group cannot undo it (Pass 6096), it sits on the Weil representation (here), and it exists only at q = 3 mod 4 (here)",
+    "does_not_close": "which of U, U* is physical. Two distinguishable, unswappable options is a canonical PAIR, not a canonical MEMBER",
+    "the_honest_statement": "the substrate at q = 3 has a chirality it cannot reverse, and a substrate at q = 5 would have none. That is a genuine selection principle for q. It is not a derivation of which handedness nature chose"
+  },
+  "pass_6115_cp": {
+    "observation": "the operation swapping U and U* is complex conjugation, which is OUTER -- not realised by any group element",
+    "status": "recorded as a structural resonance, NOT a claim. No map from this outer conjugation to physical CP is built, and this session has killed thirteen coincidences of exactly the shape 'two things have the same description'",
+    "the_resonance": "that is structurally how CP sits in the Standard Model: an operation adjacent to the gauge group rather than inside it"
+  }
+}
