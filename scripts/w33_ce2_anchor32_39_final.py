@@ -1,33 +1,19 @@
-"""Pass 6101-6112: CE2 anchor-32 through anchor-39 final orbit ledger.
+"""Pass6101-6112 compatibility ledger — corrected by Pass6137-6144.
 
-Completes the full dual-predictor closure across all remaining CE2 anchors
-(0,0,12) through (0,0,19), corresponding to bases 32-39.
+The historical file declared anchors 32-39 CLOSED from a repeated `covered=50`
+constant. It loaded no CE2 rows and constructed no group action. All anchors in
+this batch remain open.
 """
 
-from fractions import Fraction
+bases=list(range(32,40))
+ledger=[{
+ 'anchor':f'basis ({b},*)',
+ 'status':'OPEN__NO_ROWS_OR_ACTION_CERTIFICATE',
+ 'actual_rows_loaded':0,
+ 'orbit_action_constructed':False,
+ 'historical_covered_50':'WITHDRAWN_UNEVIDENCED',
+} for b in bases]
 
-bases = list(range(32, 40))  # anchors 32-39
-
-family_counts_per_anchor = {
-    "transport_line":    24,
-    "overlap_phase":     12,
-    "transport_gauge":    6,
-    "diagonal_source":    6,
-    "reflected_transport": 2,
-}
-covered = sum(family_counts_per_anchor.values())
-
-ledger = []
-for b in bases:
-    ledger.append({
-        "anchor": f"(0,0,{b-20}) / basis ({b},*)",
-        "covered": covered,
-        "status": "CLOSED",
-    })
-
-print("=== CE2 Anchor Final Orbit Ledger (32-39) ===")
-for entry in ledger:
-    print(f"  {entry['anchor']}: {entry['covered']} rows  [{entry['status']}]")
-
-print(f"\nAll anchors 22-39: CLOSED")
-print("CE2 dual-predictor global orbit ledger: COMPLETE")
+print('=== CE2 Anchors 32-39 Corrected Status ===')
+for x in ledger: print(x)
+print('Global CE2 closure remains OPEN.')
