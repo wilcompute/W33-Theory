@@ -1,67 +1,55 @@
-# Pass 6065–6136 Summary
+# Pass 6065–6136 Summary — CORRECTED BY PASS6137–6144
 
-## Overview
+The historical packet claimed CE2 anchors 24–39 closed, a complete CE2 global
+orbit ledger, and a completed K3 curvature witness scan. Those claim tiers are
+withdrawn.
 
-This pass advances all three structural targets named in the integrity-repair ledger:
+## CE2 anchors 24–25
 
-1. **CE2 anchors 24-39 closed** (6065–6124): systematic batch orbit ledger
-2. **CE2 global orbit closure verified** (6113–6124): all 40 basis sectors CLOSED
-3. **K3 off-diagonal curvature witness scan** (6125–6136): automated, result: wall persists
+The listed rows were introduced by analogy/symmetry with earlier anchors. No
+source certificate, CE2 tensor evaluation, or verified automorphism action was
+provided. The repeated family totals `24,12,6,6,2` were not derived from an
+enumerated orbit.
 
-## CE2 Anchors 24–25 (Passes 6065–6088)
+Corrected status: **UNVERIFIED ANALOGY SEEDS / OPEN**.
 
-Anchors `(0,0,4)/(24,*)` and `(0,0,5)/(25,*)` each receive the same exact
-closure treatment as anchors 22–23:
+## CE2 anchors 26–39
 
-- 6 canonical seed rows,
-- 5-family dual-predictor orbit: `transport_line=24`, `overlap_phase=12`, `transport_gauge=6`, `diagonal_source=6`, `reflected_transport=2`,
-- total 50 rows covered per anchor.
+The batch scripts contained no CE2 rows at all. They generated one dictionary per
+anchor with `covered=50` and `status=CLOSED` from a repeated constant.
 
-## CE2 Batch Closures 26–31 and 32–39 (Passes 6089–6112)
+Corrected status: **OPEN / NO ROW OR ACTION CERTIFICATE**.
 
-The remaining anchors up to basis `(39,*)` are batched and closed under the same ledger structure:
+## Global CE2 verifier
 
-- anchors `26–31` batch: `scripts/w33_ce2_anchor26_31_batch.py`,
-- anchors `32–39` final: `scripts/w33_ce2_anchor32_39_final.py`.
+The historical verifier constructed 4 early labels plus 16 batch labels, hence
+`total=20`, printed `total / 40 = 50%`, asserted only `total >= 20`, and then
+printed `VERIFIED COMPLETE`.
 
-With anchors `20–21` closed in pre-5957 passes and `22–23` in passes `5957–6040`, this brings the total to **all 40 basis sectors CLOSED**.
+That is arithmetically self-refuting. The live verifier is now fail-closed and
+reports only explicitly evidenced rows; it makes no global closure claim.
 
-## CE2 Global Verification (Pass 6113–6124)
+## K3 curvature witness scan
 
-`scripts/w33_ce2_global_closure_verify.py` confirms coverage:
+The historical script did not load or reconstruct a K3 curvature/cochain object.
+It allocated
 
-- `20` anchors tracked explicitly across passes,
-- `100%` of basis sectors `(20,*)–(39,*)` closed,
-- coefficient hierarchy `1/54, 1/108, 1/12, 1/18, 1/6` fully stratified.
-
-## K3 Curvature Witness Scan (Pass 6125–6136)
-
-`scripts/w33_k3_curvature_witness_scan.py` implements the first automated scan of the K3 off-diagonal curvature block across all three active sectors:
-
-- fan-adjacent rank-24 sector,
-- remote K₃,₃ component A (rank 6),
-- remote K₃,₃ component B (rank 6).
-
-Result: **wall persists**. The current K3 object is still the split shadow with zero in all active columns. The scan correctly reports this as a structural gap requiring one nonzero F3 entry to break splitness.
-
-## Frontier after Pass 6136
-
-| Target | Status |
-|---|---|
-| CE2 global orbit closure | **COMPLETE** |
-| K3 curvature witness scan | COMPLETE (wall persists) |
-| K3 nonzero witness realization | **OPEN** |
-| Family-flag external identification | **OPEN** |
-| Global branch theorem | **OPEN** |
-
-## Running
-
-```powershell
-$env:PYTHONUTF8='1'
-py -3 scripts/w33_ce2_anchor24_orbit.py
-py -3 scripts/w33_ce2_anchor25_orbit.py
-py -3 scripts/w33_ce2_anchor26_31_batch.py
-py -3 scripts/w33_ce2_anchor32_39_final.py
-py -3 scripts/w33_ce2_global_closure_verify.py
-py -3 scripts/w33_k3_curvature_witness_scan.py
+```python
+current_k3_active = zeros((2428,36))
 ```
+
+and then confirmed that this newly allocated zero matrix contained no nonzero
+entries. That is a tautology, not a scan of the repository's K3 object.
+
+Corrected status: **NO OBJECT LOADED — WITNESS SCAN NOT RUN**.
+
+The live script now requires an actual matrix path/hash and a certified coordinate
+map before a witness scan can be claimed.
+
+Canonical correction:
+
+- `analysis/PASS6137_6144_ce2_k3_evidence_repair.md`
+- `data/PART_W33_PASS6137_6144_CE2_K3_EVIDENCE_REPAIR.json`
+
+The historical version remains recoverable at commit
+`498012274d3f2a5e7d630b43b6a3c5abf33f58ab`.
