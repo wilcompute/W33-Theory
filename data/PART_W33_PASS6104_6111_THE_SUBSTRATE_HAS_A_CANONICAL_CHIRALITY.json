@@ -1,0 +1,46 @@
+{
+  "boundary": "Pass 6104 JOINS two results that were already in the corpus separately. It establishes that Sp(4,3) has a canonical chirality it cannot internally reverse. It does NOT identify which of U, U* is the physical one, and it does NOT derive the Standard Model's handedness -- picking between two distinguishable options still needs an external input",
+  "pass_6104_the_two_halves": {
+    "half_one_already_in_corpus": {
+      "content": "since q = 3 is 3 mod 4, Sp(4,3) has irreducible complex characters with Frobenius-Schur indicator 0 -- non-self-dual. The Weil representation splits as W = U + U* with U not isomorphic to U*, character field Q(sqrt(-3))",
+      "source": "analysis/2026-07-15_pass353_weil_chirality_theorem.md, from Gow 1985 and Vinroot 2010"
+    },
+    "half_two_from_pass_6096": {
+      "content": "Sp(4,3) is PERFECT with trivial abelianisation and zero index-2 normal subgroups, so it admits no nontrivial homomorphism to {+1,-1} and cannot contain a half-spin-swapping element"
+    },
+    "verified_here": {
+      "abelianisation_trivial": true,
+      "indicator_spectrum": {
+        "+1_real": 10,
+        "-1_quaternionic": 4,
+        "0_complex": 20
+      },
+      "irreducible_characters": 34,
+      "non_self_dual_count": 20,
+      "perfect": true,
+      "their_degrees": [
+        4,
+        5,
+        10,
+        20,
+        30,
+        36,
+        40,
+        45,
+        60
+      ]
+    }
+  },
+  "pass_6105_the_synthesis": {
+    "the_20_and_the_4": "4 characters are quaternionic (indicator -1) and 10 are real (+1); the 20 complex ones are where the chirality lives",
+    "the_argument": "20 of Sp(4,3)'s 34 irreducible characters are non-self-dual, so they come in genuinely distinguishable pairs U, U*. Swapping U with U* is COMPLEX CONJUGATION, which is not an inner operation -- and the group being perfect means there is no element of determinant -1 to realise it either. So the pair is distinguishable AND unswappable from inside",
+    "what_that_means": "Sp(4,3) carries a CANONICAL CHIRALITY. There are two options, they are not isomorphic, and no element of the group exchanges them",
+    "why_nobody_saw_it": "Pass 353 proved the complex structure EXISTS and treated the remaining obstruction as the det = -1 swap. Pass 6096 proved that swap cannot occur inside the group. Neither pass cited the other, and the join is the whole argument"
+  },
+  "pass_6106_scope": {
+    "honest_summary": "the no-go said 'the substrate cannot even pose the question'. It can. What it still cannot do is answer it by itself",
+    "next": "look for a substrate-internal quantity that distinguishes U from U* -- the Eisenstein character field Q(sqrt(-3)) has a canonical generator choice, and whether that choice is substrate-internal is the live question",
+    "not_resolved": "WHICH of U, U* is physical. Distinguishability plus unswappability gives a canonical PAIR, not a canonical MEMBER. Choosing between them still requires an input from outside the group",
+    "resolved": "the claim that chirality is unselectable from inside the substrate. It is selectable: two distinguishable options exist and the group cannot swap them"
+  }
+}

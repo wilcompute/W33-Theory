@@ -17,11 +17,11 @@
 
 ## ✅ Next Steps
 <!-- What should we do next? -->
-- Auto-saved at 2026-08-17T22:10:07.318Z (reason: threshold-commits)
+- Auto-saved at 2026-08-17T22:54:27.453Z (reason: timer)
 - Recent commits:
-  - ae8627a12 Pass6064-6071: the Golay Lie algebra is real, its E6 bridge is refuted by its own next line
-  - b88684eb4 Pass6056-6063: the Vogel C_2 point explains a rank I had measured without knowing why
-  - 79e5aa438 Merge remote-tracking branch 'origin/master'
+  - bbd4bd10b Merge remote-tracking branch 'origin/master'
+  - 2095bb978 Pass7017-7024: add equivariant no-go manuscript insert
+  - 6f8304bfa Merge remote-tracking branch 'origin/master'
 
 ## 📝 Open Questions
 <!-- What do we still need to figure out? -->
