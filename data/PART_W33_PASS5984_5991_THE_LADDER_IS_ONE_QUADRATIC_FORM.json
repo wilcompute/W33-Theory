@@ -1,0 +1,75 @@
+{
+  "boundary": "Pass 5984 shows the other lane's determinant map is the n=2 case of a standard construction. That is a LOCATION result, not a refutation: their M_2(F_2) identification remains exactly true. Pass 5987 records that det is not the unique invariant with the property",
+  "pass_5984_the_ladder_is_immediate": {
+    "all_three": {
+      "alternating": true,
+      "bilinear": true,
+      "polarization_equals_pauli_commutation_form": true
+    },
+    "conclusion": "the whole BT1707 contextuality ladder -- W(1,2), W(3,2), W(5,2) -- comes from one quadratic form. Their determinant is the n=2 shadow of it, and no 3x3 matrix algebra is needed for the three-qubit rung",
+    "the_observation": "that is not really about matrices. It is the quadratic form Q(x,z) = sum_i x_i z_i on F_2^(2n), and M_2(F_2) is 4-dimensional only because 2n = 4 when n = 2",
+    "their_map": "Phi(M) = (a,d,b,c) with det = x1*z1 + x2*z2",
+    "verified": [
+      {
+        "dim": 2,
+        "n": 1,
+        "points": 3,
+        "space": "W(1,2)"
+      },
+      {
+        "dim": 4,
+        "n": 2,
+        "points": 15,
+        "space": "W(3,2) the doily"
+      },
+      {
+        "dim": 6,
+        "n": 3,
+        "points": 63,
+        "space": "W(5,2)"
+      }
+    ],
+    "what_this_does_to_their_result": "nothing negative. M_2(F_2) with det polarization IS the two-qubit symplectic form, exactly as they proved. What changes is that it is an INSTANCE of a construction that runs up the whole ladder, so the natural generalisation is in n, not in q"
+  },
+  "pass_5986_the_two_directions": {
+    "in_n": "Q(x,z) = sum x_i z_i on F_2^(2n) gives W(2n-1,2) for every n (this pass)",
+    "in_q": "det on M_2(F_q) gives W(3,q) for even q and a quadric for odd q (Passes 5936, 5976)",
+    "so": "the construction generalises cleanly in BOTH directions, and they are independent: q controls whether the ambient is symplectic or orthogonal, n controls the rank"
+  },
+  "pass_5987_det_is_not_unique": {
+    "answer": "NO. Any nondegenerate quadratic form on F_q^4 has an alternating polarization in characteristic 2, so det is one of many",
+    "question": "is det the only degree-2 invariant that works at even q?",
+    "what_singles_it_out": "that it is the natural ALGEBRA invariant of M_2, not that it has a property no other form has"
+  },
+  "pass_5988_the_63": {
+    "answer": "NO -- 63 = 2^6 - 1 is the point count of PG(5,2) and nothing else here",
+    "checked": [
+      {
+        "pgl": 6,
+        "q": 2,
+        "quadric": 9,
+        "w3q": 15
+      },
+      {
+        "pgl": 24,
+        "q": 3,
+        "quadric": 16,
+        "w3q": 40
+      },
+      {
+        "pgl": 60,
+        "q": 4,
+        "quadric": 25,
+        "w3q": 85
+      },
+      {
+        "pgl": 504,
+        "q": 8,
+        "quadric": 81,
+        "w3q": 585
+      }
+    ],
+    "note": "recorded as checked-and-empty rather than left as an open suggestion",
+    "question": "is 63 a |PGL| or a quadric size, connecting the two threads?"
+  }
+}
