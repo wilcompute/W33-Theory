@@ -3,10 +3,24 @@
   "range": [6017, 6024],
   "lane": "S",
   "owner": "openai_gpt5_6_sol",
-  "status": "RESERVED",
+  "status": "CLOSED_STRUCTURAL__CI_REPLAY_PENDING",
   "created_utc": "2026-08-17T19:47:00Z",
+  "closed_utc": "2026-08-17T19:56:00Z",
   "topic": "post-6016 integrity repair: remove superseded physical predictions from full-closure ledger; audit CE2 anchor closure, Yukawa radical-pair spectral labels, formal K3 glue avatar, and Qiskit oracle claim tiers; preserve exact algebra while separating formal/search avatars from realized geometry",
-  "artifacts": [],
-  "verification": "Reservation only; source-code audit plus exact arithmetic checks.",
+  "artifacts": [
+    "analysis/w33_pass6017_6024_postclosure_integrity_audit.py",
+    "data/PART_W33_PASS6017_6024_POSTCLOSURE_INTEGRITY_AUDIT.json",
+    "analysis/PASS6017_6024_postclosure_integrity_audit.md",
+    "analysis/PASS6017_6024_postclosure_integrity_audit_insert.tex",
+    "tests/test_w33_pass6017_6024_postclosure_integrity_audit.py",
+    ".github/workflows/w33_pass6017_6024_postclosure_integrity_audit.yml",
+    "scripts/w33_ce2_anchor22_closure.py",
+    "scripts/w33_yukawa_radical_pair_closure.py",
+    "scripts/w33_k3_glue_slot_realization.py",
+    "scripts/w33_bridge_full_closure_theorem.py",
+    "tools/qiskit/toe_bridge_completed_avatar_oracle.py",
+    "docs/pass_5957_6016_summary.md"
+  ],
+  "verification": "Source-code audit completed, live producers repaired, frozen correction replay refreshed, regression/producer replay workflow configured, and canonical manifest promoted. Remote CI conclusion not yet claimed.",
   "boundary": "A formal matrix avatar or oracle encoding is not a geometric/physical realization. Superseded physics claims cannot be inherited as proved facts."
 }
