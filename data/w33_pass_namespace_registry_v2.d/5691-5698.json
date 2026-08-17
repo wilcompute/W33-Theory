@@ -2,7 +2,7 @@
   "schema": "w33.pass_namespace_registry.v2.fragment",
   "range": [5691, 5698],
   "owner": "openai_gpt5_6_sol",
-  "status": "RESERVED_ACTIVE",
+  "status": "CLOSED_STRUCTURAL__CI_REPLAY_PENDING",
   "created_utc": "2026-08-17T04:33:00Z",
   "tasks": {
     "5691": "derive an ASL(2,3)-equivariant discrete Yang-Mills candidate from the exact affine su(3) bracket, Z3 connection/holonomy, and Killing form; identify exactly what normalization remains free",
@@ -14,5 +14,19 @@
     "5697": "bonkers: compute the adjoint gauge Laplacian on the Ramanujan internal network and test whether expansion gives a finite nonzero internal gauge-mode gap without calling it a physical mass gap",
     "5698": "bonkers: test the recurring generation-three hypothesis by decomposing actual orientation/Heisenberg sectors as modules and require a genuine 3-orbit or 3-dimensional multiplicity space rather than count numerology"
   },
-  "boundary": "No QCD, confinement, three-generation, physical mass-gap, or spacetime claim is permitted from dimension/count coincidence. Promote only exact finite operator, representation, cochain, spectrum, curvature, Jacobi, or module statements, and preserve any no-go results."
+  "deliverables": {
+    "summary": "data/PART_W33_PASS5691_5698_PHYSICS_YM_DUALITY_RAMANUJAN_FRONTIER_SUMMARY.json",
+    "report": "analysis/PASS5691_5698_physics_ym_duality_ramanujan_frontier.md",
+    "prior_art": "analysis/PASS5691_5698_external_prior_art.md",
+    "insert": "analysis/PASS5691_5698_physics_ym_duality_ramanujan_frontier_insert.tex",
+    "homepage_source": "analysis/PASS5691_5698_index_insert.html",
+    "runner": "analysis/w33_pass5691_5698_runner.py",
+    "tests": "tests/test_w33_pass5691_5698_physics_ym_duality_ramanujan.py",
+    "workflow": ".github/workflows/w33_pass5691_5698_physics_ym_duality_ramanujan.yml"
+  },
+  "resolution_notes": {
+    "5696": "The domain-wall hypothesis was falsified as mandatory: twisting V8 by the determinant character restores full AGL(2,3) as su3 automorphisms, so bracket-sign domains require extra dynamics.",
+    "prior_packet_ci": "Pass5683-5690 replay failure was traced to floating duplicate projective roots in Pass5685 under NumPy2.5; the verifier is repaired by sign-ray canonicalization and is replayed by the new workflow."
+  },
+  "boundary": "No QCD, confinement, three-generation, physical mass-gap, or spacetime claim is permitted from dimension/count coincidence. Promote only exact finite operator, representation, cochain, spectrum, curvature, Jacobi, or module statements. Homepage materialization, prior-packet replay repair and three-manuscript compilation must pass before status is upgraded beyond structural closure."
 }
