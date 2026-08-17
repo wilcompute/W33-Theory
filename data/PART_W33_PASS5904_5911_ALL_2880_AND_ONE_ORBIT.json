@@ -1,0 +1,47 @@
+{
+  "boundary": "Pass 5904 is a COMPLETE classification for q=3 only, verified two ways. W(3,3) is small and well studied, so the count 2880 and the transitivity are very likely CLASSICAL -- I have not found them in the literature and by this session's own record (four rediscoveries) that absence means little",
+  "pass_5904_classification": {
+    "agree": true,
+    "alpha": 7,
+    "consequence": "Sp(4,3) is TRANSITIVE on maximum partial ovoids of W(3,3) -- there is exactly ONE up to symmetry",
+    "method_1": "exhaustive enumeration of all 7-cocliques",
+    "method_2": "orbit-stabiliser: |Sp(4,3)| / |Stab| = 51840 / 18 = 2880",
+    "q": 3,
+    "total_maximum_partial_ovoids": 2880
+  },
+  "pass_5905_stabiliser_structure": {
+    "abelian": true,
+    "element_order_spectrum": {
+      "1": 1,
+      "2": 1,
+      "3": 8,
+      "6": 8
+    },
+    "identification": "C3 x C6, i.e. C3 x C3 x C2 -- the spectrum 1,1,8,8 at orders 1,2,3,6 matches C3 x C6 exactly and excludes C18, which would need six elements of order 18 and has none",
+    "orbits_on_the_seven_points": [
+      1,
+      3,
+      3
+    ],
+    "order": 18
+  },
+  "pass_5906_why_constructions_failed": {
+    "generator_classes_that_failed": 4,
+    "so": "every orbit-construction attempt was structurally doomed, and the right construction seed is not a transitive group but an order-18 abelian group with a fixed point and two triples",
+    "the_obstruction": "the stabiliser acts with orbits 1 + 3 + 3, not transitively. 7 does not divide 18, so no subgroup orbit can equal the optimum"
+  },
+  "pass_5907_index": {
+    "caution": "the q=5 figures are SAMPLED, not exact. The similarity of the indices (2880 vs ~3000) is suggestive and is exactly the kind of numerical agreement this session has repeatedly killed. It needs the exact q=5 computation before anything is read into it",
+    "q3": {
+      "group": 51840,
+      "index": 2880,
+      "stab": 18
+    },
+    "q5": {
+      "estimated_index": 3000,
+      "estimated_stab": 1560,
+      "group": 4680000,
+      "sampled_density": "1 in 3000"
+    }
+  }
+}
