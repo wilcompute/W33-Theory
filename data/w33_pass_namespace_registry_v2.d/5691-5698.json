@@ -1,0 +1,18 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.fragment",
+  "range": [5691, 5698],
+  "owner": "openai_gpt5_6_sol",
+  "status": "RESERVED_ACTIVE",
+  "created_utc": "2026-08-17T04:33:00Z",
+  "tasks": {
+    "5691": "derive an ASL(2,3)-equivariant discrete Yang-Mills candidate from the exact affine su(3) bracket, Z3 connection/holonomy, and Killing form; identify exactly what normalization remains free",
+    "5692": "resolve the two-ray magnetic locality-plus-flatness ambiguity by testing deck, affine orientation, Heisenberg, metaplectic and carrier symmetries for an exchanging or selecting operator",
+    "5693": "construct explicit Ramanujan signings for W33 Levi cover levels 2 and 3 and test whether a recursive symmetry-natural signing rule survives",
+    "5694": "expand the collision-deformed E8 Jacobiator analytically into retained/deleted sectors and test whether l3 is determined by the collision projector and affine orientation",
+    "5695": "tensor the internal Ramanujan refinement hierarchy with the causal Dirac/time-bin walk and derive exact separation of routing complexity from physical propagation speed",
+    "5696": "bonkers: build an affine-orientation domain-wall/chirality defect between the two su(3) orientations and test whether it couples to or selects the two magnetic flat-bond rays",
+    "5697": "bonkers: compute the adjoint gauge Laplacian on the Ramanujan internal network and test whether expansion gives a finite nonzero internal gauge-mode gap without calling it a physical mass gap",
+    "5698": "bonkers: test the recurring generation-three hypothesis by decomposing actual orientation/Heisenberg sectors as modules and require a genuine 3-orbit or 3-dimensional multiplicity space rather than count numerology"
+  },
+  "boundary": "No QCD, confinement, three-generation, physical mass-gap, or spacetime claim is permitted from dimension/count coincidence. Promote only exact finite operator, representation, cochain, spectrum, curvature, Jacobi, or module statements, and preserve any no-go results."
+}
