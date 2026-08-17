@@ -1,0 +1,161 @@
+% Passes 5848--5855: collision-recovered normalizer/code/Pauli/all-field closure.
+\subsection*{Collision-recovered matrix normalizer, Reye code, Pauli quadric, and all-field Fourier law}
+
+Passes~5848--5855 are the clean-namespace publication of an exact packet first
+staged under Passes~5832--5839 after that range had been reserved by this lane.
+An unrelated parallel theorem packet subsequently landed under the same numbers.
+The namespace move changes no finite computation: the corrected producer reuses the
+same exact routines and replays them before freezing a new certificate.
+
+For
+\[
+G=M_2(\mathbb F_2)_+\rtimes\bigl(GL_2(2)\times GL_2(2)\bigr),
+\qquad |G|=576,
+\]
+acting by $M\mapsto AMB^{-1}+X$, exhaustive enumeration of all $20{,}160$
+elements of $GL_4(2)$ gives a linear normalizer of order $72$ and trivial
+linear centralizer.  Matrix transpose is in this normalizer but outside the
+$36$-element left/right subgroup.  The regular translation subgroup
+$T\cong C_2^4$ is $O_2(G)$ because $G/T\cong S_3\times S_3$ has trivial
+$2$-core.  Hence $T$ is characteristic and every $S_{16}$-normalizer of $G$
+lies in $N_{S_{16}}(T)=AGL(4,2)$.  Therefore
+\[
+\boxed{|N_{S_{16}}(G)|=1152},
+\qquad
+\boxed{N_{S_{16}}(G)/G\cong C_2},
+\]
+with transpose representing the nontrivial coset.
+
+For the $12$-point carrier $P=\{(w,x):w\ne0\}$ and the $16$ Reye lines
+$L_M=\{(w,Mw):w\ne0\}$, the binary incidence kernel is
+\[
+C_{\rm Reye}=[12,4,6],
+\qquad W(z)=1+12z^6+3z^8.
+\]
+Its twelve minimum words are exactly the heavy supports
+\[
+c_{\phi,\psi}(w,x)=\phi(x)+\psi(w),\qquad \phi\ne0,
+\]
+and the three weight-$8$ words are the $\phi=0$, $\psi\ne0$ fiber-pair
+words.  On the saturated common-$W_9$ lattices,
+\[
+\operatorname{SNF}(R^T)=1^5\,2^2\,4^2
+\]
+has four even invariant factors and $2$-adic cokernel valuation six, whereas
+the heavy transform has Smith form $1^2\,2^5\,4^2$, seven even invariant
+factors and valuation nine.  Thus the characteristic-two collapses are
+coefficient-ring dependent and distinct.  The local $[12,4,6]$ code is not
+identified with the global $q=5$ binary CSS point-code family merely because
+their minimum distances agree.
+
+The previously cardinality-only comparison with the two-qubit projective-ring
+geometry can now be sharpened.  In binary Pauli coordinates
+$v=(x_1,z_1,x_2,z_2)$, the published Saniga--Planat--Pracna $9+6$ partition is
+the zero/one split of
+\[
+q_{\rm SPP}(v)=x_1z_1+x_2z_2+x_2.
+\]
+For a nonzero dual Fourier label
+$Y=\bigl(\begin{smallmatrix}a&b\\c&d\end{smallmatrix}\bigr)$, the matrix-rank
+split is the zero/one split of
+\[
+q_M(Y)=\det Y=ad+bc.
+\]
+Exactly $72$ elements $L\in GL_4(2)$ satisfy
+$q_{\rm SPP}(L(Y))=\det Y$ for every $Y$.  One explicit isometry sends the
+matrix-coordinate basis $(a,b,c,d)$ to $(XI,IZ,IY,ZI)$, maps the nine
+nonzero rank-one labels exactly to the published Mermin nine, maps the six
+units to its six-point complement, and preserves all $105$ polarized
+symplectic pairings.  The rank-one $3\times3$ grid becomes
+\[
+\begin{pmatrix}
+C_{10}&C_{13}&C_7\\
+C_{12}&C_{15}&C_9\\
+C_{11}&C_{14}&C_8
+\end{pmatrix},
+\]
+with every row and column a commuting triple.  This is an isomorphism of the
+\emph{nonzero dual Fourier-label quadratic/symplectic geometry} with the
+Pauli-point geometry; it is not an identification of the selected $q=5$ cover
+points with physical qubit states or observables.
+
+The binary $1+9+6$ decomposition is the $r=2$ member of an all-finite-field
+theorem.  For
+\[
+R[(w,x),M]=1\iff x=Mw,
+\qquad 0\ne w\in\mathbb F_r^2,\quad M\in M_2(\mathbb F_r),
+\]
+additive Fourier labels split by matrix rank with multiplicities
+\[
+N_0=1,
+\qquad N_1=(r-1)(r+1)^2,
+\qquad N_2=r(r-1)^2(r+1)=|GL_2(r)|.
+\]
+Then
+\[
+\boxed{\operatorname{im}R^T=\mathbf1\oplus\mathcal F_{\rm rank\,1}},
+\qquad
+\boxed{\ker R=\mathcal F_{\rm rank\,2}},
+\]
+and hence
+\[
+\boxed{\operatorname{rank}R=1+(r-1)(r+1)^2}.
+\]
+The nonzero squared singular values are $r^2(r^2-1)$ on the constant mode and
+$r^2(r-1)$ on rank one, while the companion line--hyperplane disjointness
+relation is
+\[
+D[M,(\phi,\psi)]=1\iff \psi=-\phi M.
+\]
+At $r=2$ every rank-one label has a unique nonzero factorization
+$Y=\phi^Tw^T$.  For $r>2$ each has $r-1$ factorizations, yielding an extra
+point-side kernel of dimension $(r-2)(r-1)(r+1)^2$.  Complete Fourier
+character-sum replays at $r=2,3,5,7$ agree exactly; prime powers follow by
+composing a nontrivial additive character with the field trace.
+
+Three outside-box probes expose the same finite structure from different sides.
+First, on additive $M_2(\mathbb F_2)$,
+\[
+f(Y)=(-1)^{\det Y}
+\]
+is a self-dual bent quadratic with
+\[
+\boxed{\widehat f(Z)=4f(Z)}.
+\]
+Second, the Cayley graph
+\[
+M\sim N\iff M-N\text{ is invertible}
+\]
+is $\operatorname{SRG}(16,6,2,2)=L_2(4)$.  Its eight maximal $K_4$'s form
+exactly two parallel classes, recovering intrinsic $4\times4$ rook coordinates.
+Its full automorphism group is
+\[
+\boxed{S_4\wr C_2},\qquad |\operatorname{Aut}|=1152,
+\]
+and these $1{,}152$ permutations are exactly the affine normalizer above.
+Thus the previously unexplained order-$1152$ symmetry comes from the six
+unit-difference directions, not from the Delsarte graph of the Reye two-weight
+code.
+
+Third, the Reye code is exactly a projective-line puncture of the binary simplex
+code.  Starting from the $[15,4,8]$ simplex code on $PG(3,2)$ and deleting
+\[
+\ell_0=\{(0,x):x\ne0\}
+\]
+gives
+\[
+\boxed{C_{\rm Reye}=\operatorname{puncture}_{\ell_0}
+(\mathrm{Simplex}[15,4,8])}.
+\]
+For $\phi\ne0$ the deleted line contains exactly two ones, so weight $8$ drops
+to $6$ and yields the twelve heavy words; for $\phi=0$, $\psi\ne0$ the deleted
+line is zero and the three words remain at weight $8$.  This gives a conceptual
+proof of $1+12z^6+3z^8$.
+
+\paragraph{Boundary.}
+These are exact statements in finite affine geometry, coding theory, integral
+Smith theory, Fourier analysis, graph theory, and two-qubit Pauli incidence.
+The Pauli bridge lives on nonzero dual Fourier labels and does not supply a
+$q=5$ physical-state embedding, dynamics, mass or coupling law, continuum limit,
+or experimental prediction.  The Pass~5832--5839 matrix insert is superseded
+only because of the namespace collision, not because its finite calculations failed.

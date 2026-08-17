@@ -2,10 +2,10 @@
 """Collision-recovered runner for the exact eight-probe M2(F2) packet.
 
 The finite verifier first landed under Pass5832--5839 after this lane had reserved that
-range, but a separate parallel theorem packet had also committed under those numbers.
+range, but a separate parallel theorem packet also committed under those numbers.
 This runner reissues the already-verified mathematics under the clean Pass5848--5855
 namespace. It deliberately imports the original exact finite routines so the rename
-cannot silently change the computation.
+cannot silently change the computation, then normalizes only namespace-bearing keys.
 """
 from __future__ import annotations
 
@@ -50,6 +50,13 @@ def publication_packet() -> dict:
     }
 
 
+def normalized_rook_packet(m, naff) -> dict:
+    packet = m.rook_packet(naff)
+    assert packet.pop("equals_affine_normalizer_from_pass5832") is True
+    packet["equals_affine_normalizer_from_pass5848"] = True
+    return packet
+
+
 def main() -> None:
     m = load_legacy()
     gl4 = m.gl4_perms()
@@ -65,7 +72,7 @@ def main() -> None:
         "pass_5851_all_field_matrix_fourier_radon": m.allq_packet(),
         "pass_5852_publication_front_doors": publication_packet(),
         "pass_5853_determinant_bent_chirp": m.bent_packet(),
-        "pass_5854_unit_cayley_rook_graph": m.rook_packet(naff),
+        "pass_5854_unit_cayley_rook_graph": normalized_rook_packet(m, naff),
         "pass_5855_simplex_line_puncture": m.simplex_packet(),
         "boundary": (
             "Exact finite algebra, coding, Fourier analysis, graph theory and publication "
