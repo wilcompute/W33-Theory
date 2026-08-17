@@ -1,0 +1,186 @@
+% Passes 5776--5783: q=5 Reye/Latin common-core projector and outer/sign split.
+\subsection{The q=5 Reye and heavy shells share one rank-nine Latin core}
+\label{sec:pass5776-5783-reye-latin-common-core}
+
+The Pass~5667--5674 q=5 multidesign certificate contains two apparently
+different incidence systems on the same moving twelve cover cells: the twelve
+multiplicity-six heavy supports and the sixteen zero-containment triples forming
+Reye's $12_4,16_3$ configuration.  Let
+\[
+ H\in\{0,1\}^{12\times12}
+ \qquad\text{and}\qquad
+ R\in\{0,1\}^{12\times16}
+\]
+be their point--block incidence matrices.  Exact arithmetic gives the stronger
+identity
+\[
+ \boxed{
+ HH^{T}-3J_{12}=RR^{T}-J_{12}=:K_9,
+ }
+\]
+with
+\[
+ \boxed{K_9^2=4K_9},
+ \qquad
+ \boxed{\operatorname{rank}_{\mathbb Q}K_9=9}.
+\]
+Thus
+\[
+ \boxed{P_9=\frac14K_9}
+\]
+is a rational orthogonal projector canonically extracted from either shell.
+
+The same matrix reconstructs an intrinsic imprimitivity system.  The matrix
+\[
+ A_{\rm blk}=3I_{12}-K_9
+\]
+is exactly $3K_4$.  In the frozen moving-twelve labels its components are
+\[
+ \{1,3,8,10\},\qquad
+ \{2,5,7,12\},\qquad
+ \{4,6,9,11\},
+\]
+and, after block-ordering,
+\[
+ K_9=I_3\otimes(4I_4-J_4),
+ \qquad
+ P_9=I_3\otimes\left(I_4-\frac14J_4\right).
+\]
+Hence the protected common nine-space is simply the direct sum of the three
+within-block zero-sum spaces.
+
+The sixteen Reye triples meet each of these four-point blocks once, and every
+cross-pair from any two blocks occurs in exactly one triple.  Therefore the
+zero shell is a transversal design
+\[
+ \boxed{TD(3,4)},
+\]
+equivalently a Latin square of order four.  With the deterministic component
+ordering of the verifier its table is
+\[
+\begin{pmatrix}
+2&0&3&1\\
+0&2&1&3\\
+3&1&2&0\\
+1&3&0&2
+\end{pmatrix},
+\]
+and the symbol relabel $(0,1,2,3)\mapsto(1,3,0,2)$ turns it into
+\[
+ \boxed{
+ \begin{pmatrix}
+ 0&1&2&3\\
+ 1&0&3&2\\
+ 2&3&0&1\\
+ 3&2&1&0
+ \end{pmatrix}
+ }
+\]
+---the Cayley table of the Klein group $V_4\cong\mathbb F_2^2$ under XOR.
+In the original thirteen-cover positions one explicit chart is
+\[
+\begin{aligned}
+ r=0,1,2,3&\longleftrightarrow 2,8,11,3,\\
+ c=0,1,2,3&\longleftrightarrow 13,6,5,9,\\
+ s=0,1,2,3&\longleftrightarrow 7,10,12,4,
+\end{aligned}
+\qquad
+\boxed{s=r\oplus c}.
+\]
+The row/column/symbol names remain autoparatopy gauge choices; the recovered
+$TD(3,4)$ object is intrinsic.
+
+The heavy shell is also recoverable from this Latin object alone.  Among all
+\[
+ \binom42^3=216
+\]
+balanced six-subsets choosing two points from each four-block, the number of
+contained Reye triples has exact spectrum
+\[
+ \boxed{0^{12}\oplus2^{192}\oplus4^{12}}.
+\]
+The four-line class is exactly the twelve intercalate supports of the Klein
+square, while the zero-line class is exactly the twelve multiplicity-six heavy
+supports.  Complementation in the moving twelve exchanges the two exceptional
+classes:
+\[
+ \boxed{
+ \text{heavy support}
+ =\text{complement of a Klein intercalate support}.
+ }
+\]
+This reconstructs the heavy shell, but does not select a preferred bijection
+between individual points and individual heavy supports.
+
+The common projector resolves the earlier character overlap.  The three
+transitive carrier actions have rank three and pairwise permutation-character
+inner product two.  Since both incidence matrices have rank ten and their
+centered parts have rank nine, their rational permutation modules decompose by
+dimension as
+\[
+ \boxed{
+ \mathbb Q^{12}_{P}=\mathbf1\oplus W_9\oplus U_{2,P},
+ }
+\]
+\[
+ \boxed{
+ \mathbb Q^{12}_{H}=\mathbf1\oplus W_9\oplus U_{2,H},
+ }
+\]
+and
+\[
+ \boxed{
+ \mathbb Q^{16}_{L}=\mathbf1\oplus W_9\oplus V_6.
+ }
+\]
+Thus every pair shares exactly the trivial line and the same irreducible
+nine-space $W_9$.
+
+This also makes the outer/sign distinction structural.  The order-two carrier
+outer automorphism of Pass~5674 exchanges the point- and heavy-stabilizer
+classes.  Because $W_9$ is their unique common nontrivial constituent, the
+involution fixes $W_9$ and swaps the two-dimensional spokes:
+\[
+ \boxed{W_9\mapsto W_9,
+ \qquad U_{2,P}\leftrightarrow U_{2,H}.}
+\]
+By contrast the point-side sign tensor twist is disjoint from the heavy and line
+modules by Pass~5674.  Its frozen odd-element point fixed-count distribution
+$0^{168},2^{108},6^{12}$ also gives
+\[
+ \langle\varepsilon\pi_P,\pi_P\rangle
+ =\frac{3\cdot576-2(108\cdot2^2+12\cdot6^2)}{576}=0.
+\]
+Hence
+\[
+ \boxed{
+ \varepsilon\otimes\mathbb Q^{12}_P
+ \perp
+ \mathbb Q^{12}_P\oplus\mathbb Q^{12}_H\oplus\mathbb Q^{16}_L.
+ }
+\]
+The source outer involution preserves the common core and exchanges spokes;
+the sign twist moves the whole point packet to a disjoint character sector.
+
+Finally, this resolves a possible order-$576$ ambiguity.  Pass~5300 concerns
+the projective-symplectic Hoffman-cover stabilizer
+$2_+^{1+4}:(S_3\times C_3)$ with centre $C_2$.  Pass~5417 instead defines
+\texttt{act} as the cover-cell permutation image of the full graph-automorphism
+stabilizer; its frozen producer certificate is
+\[
+ \boxed{2^4:(S_3\times S_3),\qquad |\texttt{act}|=576,
+ \qquad Z(\texttt{act})=1.}
+\]
+The present Reye/Latin theorem concerns this latter centreless group.  The two
+order-$576$ groups are not identified.
+
+\paragraph{Prior art and evidence boundary.}
+The classical Reye configuration and its order-$576$ Levi automorphism group
+are prior art.  In particular Monson--Pellicer--Williams, \emph{The tomotope},
+Ars Math. Contemp. \textbf{5} (2012), 355--370,
+DOI~10.26493/1855-3974.189.e64, identify the tomotope medial layer graph with
+the Reye Levi graph.  The new statement here is the exact q=5 multidesign
+bridge: identical centered Gram projector, intrinsic Klein-$V_4$ $TD(3,4)$,
+heavy/intercalate complement class, and the resulting representation split.
+No continuum, particle, gauge-force, mass/coupling, or physical-unification
+claim is inferred.
