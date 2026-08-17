@@ -1,0 +1,53 @@
+\section*{Passes 5704--5711: finite Wilson transport, magnetic group bridge, Ramanujan depth, and generation-symmetry boundary}
+\label{sec:pass5704-5711}
+
+The affine $8$-dimensional compact Lie algebra from the preceding frontier can be exponentiated in its adjoint representation.  On the nine affine sites the complete link space has $36$ edges and real cycle-space dimension $28$.  The twelve affine-line triangles selected by the $36$ allowed $E_6$ cubics have boundary rank $12$, while the $54$ translation parallelograms have rank $24$; together they have rank $28$.  Thus the $E_6$ cubic incidence canonically selects the line faces, translation geometry supplies a second face family, and only the combined $66$-face complex kills the real harmonic one-sector.  Finite transporters $U_e=\exp(\operatorname{ad}_{a_e})$ and nontrivial adjoint Wilson commutators are explicit, but neither the relative face weights nor a physical Yang--Mills coupling is selected.
+
+The signed Segre stabilizer $G_{96}$ has centre $C_2$ and derived subgroup
+\[
+G_{96}'\cong Q_8\!:\!C_3\cong \mathrm{SL}(2,3).
+\]
+Quotienting the central sheet sign gives exactly
+\[
+G_{96}/\langle-1\rangle\cong C_2\times S_4,
+\]
+the cube/frame controller.  The magnetic involution $D$ centralizes $G_{96}$ and is external to it, hence
+\[
+\langle G_{96},D\rangle\cong G_{96}\times C_2
+\]
+has order $192$.  This is a quotient/direct-product bridge and not an order-based identification with the tomotope group or $W(D_4)$.
+
+The W33-rooted Ramanujan two-lift tower was also made reproducible.  Complementary signings are switching-equivalent on a bipartite graph, so the matching choices occur in three classes
+\[
+01\sim23,\qquad 02\sim13,\qquad 03\sim12.
+\]
+Fixing canonical representatives before the next labelled factorization removes a hidden floating-point gauge ambiguity.  The selected signed radii for parents of sizes $160,320,640,1280$ are approximately
+\[
+3.423202804,\quad 3.396072581,\quad 3.453933214,\quad 3.446782416,
+\]
+all below $2\sqrt3$.  Hence an explicit connected Ramanujan chain now reaches
+\[
+80\to160\to320\to640\to1280\to2560.
+\]
+The raw matching-colour sequence is not intrinsic because $S_4$ permutes the three $2+2$ partitions transitively; an automorphism-canonical recursive signing law remains open.
+
+A higher-algebra correction is required.  The existing firewall builder states $l_1=0$ while using a non-Jacobi $l_2$ and presenting $l_3$ as the Jacobi repair.  In an ordinary uncurved $L_\infty$ algebra the arity-three identity contains
+\[
+l_1l_3+\sum_{\rm cyc}l_2l_2+\sum_{\rm cyc}l_3l_1=0.
+\]
+Therefore $l_1=0$ forces strict Jacobi for $l_2$ and removes $l_3$ from this identity.  The finite firewall Jacobiator and collision-support computations survive, but the previous minimal $l_1=0$ $L_\infty$ interpretation does not.  A genuine homotopy repair must introduce a nonzero differential on an extended degree, deform $l_2$ by a Chevalley--Eilenberg coboundary, or specify another higher structure with its identities checked directly.
+
+Finally, the standard $E_8\supset E_6\times SU(3)$ branching
+\[
+248=(78,1)+(1,8)+(27,3)+(\overline{27},\overline3)
+\]
+does contain a real three-dimensional multiplicity space relative to $E_6$ alone:
+\[
+\operatorname{End}_{E_6}(27\otimes\mathbb C^3)\cong M_3(\mathbb C).
+\]
+A central $Z_3$ acting as $\omega I_3$ leaves this commutant unchanged, a generic family torus reduces it to $\mathbb C^3$, and the full irreducible family $SU(3)$ reduces it to scalars.  Consequently exact unbroken family $SU(3)$ permits only a generation operator $mI_3$ and forces degeneracy.  A physical hierarchy therefore requires a family-symmetry reduction/breaking datum.  No explicit intertwiner yet identifies the new affine $\mathfrak{su}(3)$ with the $(1,8)$ factor of this branching.
+
+Two additional finite diagnostics sharpen these boundaries.  The old affine $Z_3$ curvature may be embedded abstractly as centre flux $\omega^hI_3\in Z(SU(3))$, but every such flux is invisible in the adjoint representation, so a nonzero-triality matter representation is required to observe it.  And for the two magnetic flat-bond rays, $S_2=-DS_1D$ with $\det D=1$ gives equal Pfaffian parity; $D$ neither commutes nor anticommutes with one ray, so $DK$ is a duality between the rays rather than a symmetry producing a distinct protected topological sector.
+
+\paragraph{Boundary.}
+These are finite Lie-algebra, graph, group, cochain, representation and Pfaffian statements.  They do not derive QCD, confinement, the Yang--Mills mass gap, a physical coupling, observed fermion masses or mixing, a physical BdG phase, or a spacetime continuum.

@@ -1,7 +1,7 @@
 {
   "schema": "w33.pass5691_5698.physics_ym_duality_ramanujan_frontier.v1",
   "pass_range": [5691, 5698],
-  "status": "EIGHT_RESULTS_FROZEN__FINITE_YM_CANDIDATE_FLATRAY_DUALITY_EXPLICIT_RAMANUJAN_LEVELS__PHYSICAL_COUPLING_CONTINUUM_GENERATIONS_REMAIN_OPEN",
+  "status": "EIGHT_RESULTS_FROZEN__PASS5693_COMPLEMENT_GAUGE_AND_PASS5707_LINFINITY_CORRECTIONS_APPLIED",
   "5691": {
     "status": "AFFINE_SU3_HAS_CANONICAL_KILLING_YM_FORM_AND_PLAQUETTE_H1_FOUR__OLD_VERTICAL_Z3_IS_ADJOINT_TRIVIAL",
     "complex": "AG(2,3) K9 links: V=9, E=36; 54 translation parallelograms span rank24 over R; cycle space dimension28, hence H1 dimension4. Adding 12 affine-line triangle boundaries raises real face rank to28 and kills H1.",
@@ -19,20 +19,22 @@
     "conclusion": "Modulo the exact carrier-centralizer/PHS duality, Pass5685's two projective flat-bond rays form one ratio-two class."
   },
   "5693": {
-    "status": "EXPLICIT_RAMANUJAN_W33_2LIFT_LEVELS_320_AND_640_CONSTRUCTED",
-    "algorithm": "factor each new 4-regular bipartite graph into four deterministic perfect matchings; test the six unions of two matchings and use the best locally-balanced signing",
-    "level160_signing_radius": 3.4232028038878632,
-    "level320_signing_radius": 3.396072580898317,
+    "status": "EXPLICIT_RAMANUJAN_W33_2LIFT_LEVELS_320_AND_640_CONSTRUCTED__COMPLEMENT_GAUGE_FIXED",
+    "algorithm": "factor each new 4-regular bipartite graph into four deterministic perfect matchings; quotient complementary signings 01~23, 02~13, 03~12 by bipartite switching; choose canonical representatives 01,02,03; then choose the smallest-radius class",
+    "producer_order_contract": "Pass5683 NEG indices are applied to levi() in original line-major producer order; only derived lift edges are sorted.",
+    "level160_signing_radius": 3.423202803887871,
+    "level320_signing_radius": 3.396072580898327,
     "ramanujan_bound": 3.4641016151377544,
-    "full_nontrivial_radii_vertices_80_160_320_640": [2.449489742783178, 3.2837688756800314, 3.4232028038878632, 3.4232028038878632],
-    "conclusion": "The W33 Levi root now has explicit connected Ramanujan levels through 640 vertices; a canonical all-level recursive rule remains open."
+    "full_nontrivial_radii_vertices_80_160_320_640": [2.449489742783178, 3.2837688756800314, 3.423202803887871, 3.423202803887871],
+    "correction": "Complementary signings have exactly the same signed spectrum but different labeled child graphs before the next deterministic matching factorization. Floating roundoff previously allowed either representative to win a tie. Pass5693 now fixes this switching gauge canonically before recursion; the 3.3960725809 value is the canonical-gauge result and is not stale.",
+    "conclusion": "The W33 Levi root has explicit connected Ramanujan levels through 640 here and through 2560 in Pass5706 under the same complement-gauge convention; an automorphism-canonical all-level recursive rule remains open."
   },
   "5694": {
-    "status": "JACOBIATOR_FULLY_EXPANDS_FROM_B_MINUS_D__COLLISION_PLUS_ORIENTATION_DO_NOT_UNIQUELY_FIX_L3",
+    "status": "JACOBIATOR_EXPANSION_VALID__OLD_L1_ZERO_L3_REPAIR_READING_SUPERSEDED_BY_PASS5707",
     "identity": "J(b-D)=J(b)-B(b,D)-B(D,b)+J(D); for Lie b, J(b-D)=-B(b,D)-B(D,b)+J(D)",
     "information_no_go": "C/3 fixes deleted support but not all E8 coefficients/signs/normalizations; affine orientation fixes only the determinant su3 bracket sign",
-    "l3_no_go": "even for known J, d l3=-J determines l3 only modulo ker d when a solution exists",
-    "conclusion": "collision support plus affine orientation do not uniquely determine the full L-infinity repair."
+    "correction": "Pass5707 observes that the existing L-infinity builder explicitly sets l1=0. In an ordinary uncurved L-infinity algebra the arity-3 identity then forces l2 Jacobi strictly, so l3 cannot repair a nonzero firewall Jacobiator. A valid homotopy repair needs nonzero l1 on an extended degree or a different/deformed algebraic structure.",
+    "conclusion": "The bracket-deletion Jacobiator expansion stands; the former minimal l1=0 l3-repair interpretation does not."
   },
   "5695": {
     "status": "TENSOR_PRODUCT_ROUTING_DOUBLES_INTERNAL_CAPACITY_WITHOUT_RENORMALIZING_DIRAC_CAUSAL_CONE",
@@ -63,6 +65,6 @@
     "joint_ASL_Z3": "direct sum over k=0,1,2 of (1 tensor chi^k) plus (V8 tensor chi^k), multiplicity-free; joint commutant C^6",
     "conclusion": "respecting the vertical Z3 gauge action turns the three fiber Fourier sectors into inequivalent charges, so the simplest fiber-phase=three-generations hypothesis fails."
   },
-  "ci_repair": "The preceding Pass5683-5690 replay failure was traced to floating duplicate roots in Pass5685 under NumPy2.5; Pass5685 now deduplicates projective rays by the invariant 60-bond sign pattern modulo global sign.",
-  "boundary": "All promoted claims are finite graph, cochain, Lie-algebra, centralizer, tensor-product, representation or spectrum statements. No QCD/Yang-Mills derivation, confinement theorem, physical gauge coupling, Standard Model mass assignment, physical mass gap, physical spacetime continuum, value of c, or three-generation derivation is claimed."
+  "ci_repair": "Pass5685 deduplicates projective flat-bond roots by the invariant 60-bond sign pattern modulo global sign. Pass5693 additionally canonicalizes the complementary-signing switching gauge before recursive lift selection.",
+  "boundary": "All promoted claims are finite graph, cochain, Lie-algebra, centralizer, tensor-product, representation or spectrum statements. Pass5707 supersedes the old l1=0 L-infinity repair reading. No QCD/Yang-Mills derivation, confinement theorem, physical gauge coupling, Standard Model mass assignment, physical mass gap, physical spacetime continuum, value of c, or three-generation derivation is claimed."
 }
