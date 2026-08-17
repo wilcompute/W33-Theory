@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-"""Pass6017-6024: post-6016 integrity audit.
+"""Pass6017-6024: post-6016 integrity replay.
 
-Audits the producer code behind CE2 anchor-22 closure, Yukawa radical pairs,
-K3 glue-slot formal avatar, the full-closure ledger, and the Qiskit avatar.
-Retains exact arithmetic/spectra while fail-closing fabricated closure/realization
-claims and inherited superseded physical predictions.
+The historical audit found false closure/realization claims. The live producer
+files have now been corrected. This replay verifies that the corrections remain
+in place while regenerating the frozen correction certificate.
 """
 from __future__ import annotations
 import json, math
@@ -14,10 +13,9 @@ ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'data'/'PART_W33_PASS6017_6024_POSTCLOSURE_INTEGRITY_AUDIT.json'
 
 def rd(p): return (ROOT/p).read_text()
-
 def gcd_all(xs):
     g=0
-    for x in xs: g=math.gcd(g,x)
+    for x in xs:g=math.gcd(g,x)
     return g
 
 def main():
@@ -26,51 +24,51 @@ def main():
     k3=rd('scripts/w33_k3_glue_slot_realization.py')
     closure=rd('scripts/w33_bridge_full_closure_theorem.py')
     oracle=rd('tools/qiskit/toe_bridge_completed_avatar_oracle.py')
+    summary=rd('docs/pass_5957_6016_summary.md')
 
-    # 6017 CE2: evidence is generated from a hard-coded law, not graph orbit data.
-    assert 'def ce2_triple_weight' in ce2
-    assert 'return Fraction(-1, 54)' in ce2
-    assert 'for j_idx in range(1, 40)' in ce2
-    assert 'scaled.denominator == 1' in ce2
-    assert 'promoted_rows = [' in ce2
+    # Corrected CE2 live contract.
+    assert 'OPEN_BEYOND_THREE_IMPORTED_WITNESSES' in ce2
+    assert "'full_orbit_enumerated':False" in ce2
+    assert 'def ce2_triple_weight' not in ce2
 
-    # 6018 Yukawa: traces/determinants real, generation flag assertion is false.
+    # Exact Yukawa block arithmetic + corrected flag status.
     A=((367,-55),(-55,175)); B=((323,275),(275,659))
     trA=A[0][0]+A[1][1]; detA=A[0][0]*A[1][1]-A[0][1]*A[1][0]
     trB=B[0][0]+B[1][1]; detB=B[0][0]*B[1][1]-B[0][1]*B[1][0]
     discA=trA*trA-4*detA; discB=trB*trB-4*detB
-    assert (trA,detA)==(542,61200) and discA>0
-    assert (trB,detB)==(982,137232) and discB>0
     row_sums_A=(sum(A[0]),sum(A[1])); row_sums_B=(sum(B[0]),sum(B[1]))
-    assert row_sums_A[0]!=row_sums_A[1] and row_sums_B[0]!=row_sums_B[1]
-    assert 'Matches span(1,1,0)?' in yuk
+    assert (trA,detA,discA)==(542,61200,48964)
+    assert (trB,detB,discB)==(982,137232,415396)
+    assert row_sums_A==(312,120) and row_sums_B==(598,934)
+    assert 'equal-coordinate/generation-flag eigenvector alignment' in yuk
+    assert 'assert not results' in yuk
 
-    # 6019-6020 K3: advertised primitive gcd is false and formal glue inserted manually.
-    gen=[780,7944,62600,53979]
-    g=gcd_all(gen); assert g==1
-    assert 'assert g == 217' in k3
-    assert 'glue_slot = np.eye(n' in k3
-    assert 'Remaining wall: genuine K3-side realization' in k3
-    # The displayed C=14105 arithmetic is exact despite the false gcd claim.
+    # Corrected K3 live contract.
+    gen=[780,7944,62600,53979]; g=gcd_all(gen); assert g==1
+    assert 'assert g==1' in k3
+    assert "'status':'FORMAL_AVATAR_ONLY'" in k3
+    assert "'genuine_K3_glue_witness':'OPEN'" in k3
     assert 217*780//12==14105 and (217*780)%12==0
 
-    # 6021 inherited closure ledger still includes claims superseded by 5957-5964.
-    inherited=[
+    # Corrected closure ledger must no longer inherit superseded physics as exact.
+    historical_inherited=[
       'Yang-Mills mass gap: Delta_YM = 1818 MeV',
       'Neutrino mass m_nu3 = 0.0500 eV',
       'Inflationary r = 1/45',
       'Scalar resonance 3.206 TeV',
     ]
-    assert all(x in closure for x in inherited)
+    assert 'ANSATZ/COMPARISON-ONLY per Pass5957-5964' in closure
+    assert 'actual_gcd_of_780_7944_62600_53979' in closure
+    assert 'CE2 anchor-22 is NOT globally closed' in closure
 
-    # 6022 Oracle marks an assigned state and does not implement an oracle phase test.
-    assert 'MARKED_CE2 = "closed_22"' in oracle
-    assert 'MARKED_YUKAWA = "both_real"' in oracle
-    assert 'MARKED_GLUE = "nonzero_formal"' in oracle
-    assert 'qc.h(qr)' in oracle and 'qc.measure(qr, cr)' in oracle
-    # There is no phase flip / multi-controlled marking gate in the supplied circuit.
-    phase_markers=['mcx(', 'mcp(', 'phase_oracle', 'grover_operator']
-    assert not any(tok in oracle.lower() for tok in phase_markers)
+    # Corrected Qiskit file is explicitly a scaffold and implements no phase oracle.
+    assert 'SEARCH SCAFFOLD' in oracle
+    assert 'No phase oracle or computed predicate is implemented.' in oracle
+    assert 'qc.h(qr)' in oracle and 'qc.measure(qr,cr)' in oracle
+    assert 'MARKED_CE2' not in oracle
+
+    assert 'CORRECTED BY PASS6017–6024' in summary
+    assert 'actual gcd **1**, not 217' in summary
 
     out={
       'schema':'w33.pass6017_6024.postclosure_integrity_audit.v1',
@@ -78,14 +76,14 @@ def main():
       'pass_6017_ce2_anchor22':{
         'verdict':'NOT_CLOSED',
         'evidence':['only three pre-promoted witness rows are input',
-                    'the purported full-orbit weights are generated by a hard-coded ce2_triple_weight rule',
-                    'cancellation test checks only denominator integrality after multiplying by 54/108',
-                    'loops over integer labels 1..39 are not a W(3,3) automorphism-orbit enumeration'],
+                    'the original purported full-orbit weights were generated by a hard-coded ce2_triple_weight rule',
+                    'the original cancellation test checked only denominator integrality after multiplying by 54/108',
+                    'loops over integer labels 1..39 were not a W(3,3) automorphism-orbit enumeration'],
         'retained':'three witness rows exactly as prior data; full anchor orbit remains open'},
       'pass_6018_yukawa_pairs':{
         'verdict':'REAL_SPECTRA_RETAINED__GENERATION_FLAG_REFUTED',
-        'pair_A':{'trace':trA,'det':detA,'discriminant':discA,'row_sums':row_sums_A},
-        'pair_B':{'trace':trB,'det':detB,'discriminant':discB,'row_sums':row_sums_B},
+        'pair_A':{'trace':trA,'det':detA,'discriminant':discA,'row_sums':list(row_sums_A)},
+        'pair_B':{'trace':trB,'det':detB,'discriminant':discB,'row_sums':list(row_sums_B)},
         'deduction':'both 2x2 symmetric blocks have real spectra, but (1,1) is not an eigenvector of either block'},
       'pass_6019_k3_glue':{
         'verdict':'SCRIPT_ASSERTION_FAILS__FORMAL_AVATAR_ONLY',
@@ -96,19 +94,19 @@ def main():
         'not_retained':'claim that the primitive generator has gcd 217 or that a genuine K3-side glue witness was realized'},
       'pass_6020_bridge_coefficient':{
         'verdict':'FORMAL_PARAMETERIZATION_ONLY',
-        'deduction':'351/(4*pi^2) and 10530/pi^2 are assigned downstream coefficients; the failed gcd premise means they are not promoted as geometric K3 invariants by this script'},
+        'deduction':'351/(4*pi^2) and 10530/pi^2 were assigned downstream coefficients; the failed gcd premise means they are not promoted as geometric K3 invariants by that producer'},
       'pass_6021_full_closure_ledger':{
-        'verdict':'INTERNALLY_STALE',
-        'superseded_physics_imports':inherited,
-        'deduction':'the closure theorem must inherit Pass5957-5964 ANSATZ/COMPARISON-ONLY statuses, not list these as proved'},
+        'verdict':'INTERNALLY_STALE__NOW_REPAIRED',
+        'superseded_physics_imports':historical_inherited,
+        'deduction':'the live closure ledger now inherits Pass5957-5964 ANSATZ/COMPARISON-ONLY status instead of listing these as proved'},
       'pass_6022_qiskit_avatar':{
         'verdict':'ENCODING_SPEC_NOT_THEOREM_ORACLE',
-        'evidence':['marked shard is assigned from named labels','test circuit only prepares uniform Hadamards and measures','no theorem-derived predicate/phase-marking circuit is implemented'],
+        'evidence':['historical marked shard was assigned from named labels','demonstration circuit only prepares uniform Hadamards and measures','no theorem-derived predicate/phase-marking circuit is implemented'],
         'retained':'state-count bookkeeping and analytic Grover-iteration arithmetic conditional on a supplied marked predicate'},
       'pass_6023_summary_claim_tiers':{
         'ce2_22':'OPEN beyond the three imported witnesses',
         'yukawa':'real 2x2 spectra exact; generation-flag alignment refuted',
-        'k3':'formal avatar only; producer currently fails its gcd assertion',
+        'k3':'formal avatar only; historical producer failed its gcd assertion and live producer records gcd=1',
         'qiskit':'encoding/search scaffold only',
         'physics_5933_5956':'ANSATZ/COMPARISON-ONLY per Pass5957-5964'},
       'pass_6024_release_rule':{
