@@ -1,0 +1,50 @@
+{
+  "boundary": "Pass 5864 reports a FAILED construction and a LITERATURE FINDING, not a value for alpha(W(3,9)). The De Beule theorem cited concerns partial ovoids of Q(4,q), which are partial SPREADS of W(3,q) -- the DUAL of my problem for q odd, since W(3,q) is self-dual only for q even. Whether it bears on alpha(W(3,9)) is NOT established here",
+  "pass_5864_orbit_attempt": {
+    "gap_attempt": {
+      "method": "MaximalSubgroupClassReps(Sp(4,9))",
+      "result": "FAILED -- no method for a matrix group of that size; exited silently"
+    },
+    "idea": "build alpha(W(3,9)) from subgroup orbits instead of local search",
+    "subfield_attempt": {
+      "orbits": [
+        8,
+        12,
+        32,
+        32,
+        64,
+        144,
+        144,
+        192,
+        192
+      ],
+      "partial_ovoid_orbits": 0,
+      "subgroup": "Sp(4,3) < Sp(4,9), the subquadrangle stabiliser",
+      "sum": 820,
+      "why": "the subfield subgroup is too large -- every orbit above size 8 already contains collinear pairs"
+    },
+    "verdict": "the construction idea is sound and these two instantiations both failed"
+  },
+  "pass_5865_literature": {
+    "duality_caveat": "the cited results concern partial ovoids of Q(4,q). For q odd W(3,q) is NOT self-dual -- its dual is Q(4,q) -- so partial ovoids of W(3,q) correspond to partial SPREADS of Q(4,q). The theorem quoted may not apply directly and I am not claiming it does",
+    "found": [
+      "De Beule, Coolsaet, Siciliano -- maximal partial ovoids of size q^2-1 of Q(4,q)",
+      "De Beule: no maximal partial ovoid of size q^2-1 exists for q = p^h, p odd, h > 1",
+      "arXiv:2203.04553 -- large partial ovoids of symplectic and Hermitian polar spaces"
+    ],
+    "must_do_next": "look up the published maximum partial ovoid sizes for W(3,q), q odd, and check them against my computed alpha(W(3,3)) = 7 and alpha(W(3,5)) = 18 before spending another cycle on q=9",
+    "significance": "this is an ACTIVE RESEARCH AREA with published results, and I have attacked alpha(W(3,9)) with five local-search variants across many batches WITHOUT EVER CHECKING THE LITERATURE"
+  },
+  "pass_5866_failure_mode": {
+    "count_this_session": 3,
+    "instances": [
+      "the p=2 adjacency rank law (Chandler-Sin-Xiang)",
+      "the Sym^e / Hadamard bound (arXiv:2005.08181)",
+      "the circulant rank criterion (standard cyclic code theory)",
+      "and now: alpha(W(3,q)) for odd q is an active research problem"
+    ],
+    "mode": "rediscovery (CLAUDE.md mode five)",
+    "pattern": "every one was found only AFTER the work, and this fourth is the most expensive -- five search variants over many batches on a problem with a literature I never opened",
+    "the_rule_i_already_had": "CLAUDE.md says search for the RESULT before claiming. It does not say search the LITERATURE before computing, and that is the gap"
+  }
+}
