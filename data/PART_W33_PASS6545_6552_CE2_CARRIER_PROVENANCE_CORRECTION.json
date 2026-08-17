@@ -1,0 +1,42 @@
+{
+  "passes": "6545-6552",
+  "status": "PASS_PROVENANCE_CORRECTION__GLOBAL_CLOSURE_NOT_REPROVED",
+  "authentic_committed_object": {
+    "path": "committed_artifacts/ce2_sparse_local_solutions.json",
+    "rows": 5832,
+    "carrier_labels": 27,
+    "fiber_labels": 3,
+    "documented_family_split": {
+      "simple_one_term_abs_1_over_54": 5184,
+      "fiber_rankdrop_abs_1_over_108": 648
+    },
+    "source_named_by_compact_artifact": "artifacts/ce2_rational_local_solutions.json"
+  },
+  "carrier_typing": {
+    "graded_E8_sector": "(E6+sl3) + (27x3) + (27*x3*)",
+    "native_ce2_label_set": "27 carrier labels x 3 fibers",
+    "affine_heisenberg_model_points": 27,
+    "schlafli_model_points": 27,
+    "anchor_22_schlafli_label": "L45",
+    "anchor_22_phase": 0,
+    "anchor_22_root_type": "half",
+    "not_native_carrier": "40 W(3,3) projective points"
+  },
+  "synthetic_anchor_lane": {
+    "current_status": "OPEN_BEYOND_THREE_IMPORTED_WITNESSES",
+    "verified_imported_witnesses": 3,
+    "full_orbit_enumerated": false,
+    "automorphism_action_constructed": false,
+    "forty_point_transport_status": "ILL_TYPED_WITHOUT_EXPLICIT_27_TO_40_EQUIVARIANT_MAP"
+  },
+  "provenance_boundary": {
+    "named_source_present_in_current_checkout": false,
+    "named_producer": "tools/solve_sparse_ce2_all_triples.py",
+    "named_producer_present_in_current_checkout": false,
+    "github_exact_path_history_found": false,
+    "global_predictor_uses_committed_artifact_as_authoritative_data": true,
+    "independent_all_5832_formula_replay_certified_in_current_checkout": false
+  },
+  "next_theorem_target": "predict/generate all 5832 U/V rows without reading their answers, then compare exactly",
+  "scope": "CE2 finite algebra/provenance correction; no K3 or physical continuum closure"
+}
