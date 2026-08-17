@@ -1,0 +1,31 @@
+{
+  "passes": [7033,7034,7035,7036,7037,7038,7039,7040],
+  "source": "scripts/ce2_global_cocycle.py",
+  "definitions": {
+    "runtime_blind": "No target answer artifact or answer-derived lookup is read while producing predictions.",
+    "provenance_blind": "No coefficient or rule used by prediction was fitted or selected from the target answers."
+  },
+  "direct_source_facts": {
+    "derive_tables_via_normal_form_calls_simple_family_sign_map": true,
+    "derive_naive_tables_iterates_simple_family_sign_map_keys": true,
+    "constant_line_tables_built_from_actual_sign_map": true,
+    "delta_polynomials_documented_as_fit_to_full_864_entry_dataset": true
+  },
+  "findings": {
+    "derive_tables_via_normal_form_runtime_blind": false,
+    "derive_naive_tables_runtime_blind": false,
+    "current_delta_polynomials_provenance_blind": false,
+    "current_constant_line_tables_provenance_blind": false,
+    "seed_transport_is_structural_compression": true,
+    "independent_no_answer_table_replay_closed": false
+  },
+  "verdict": "The current normal-form machinery is a strong structural compression of the 864 simple-family signs, but it is not an independent no-answer-table derivation.",
+  "required_next_certificate": [
+    "derive seed coefficients from the E6/Heisenberg bracket rather than the target sign table",
+    "derive the delta law algebraically rather than fitting it",
+    "enumerate the simple-family domain structurally without reading target keys",
+    "freeze a prediction hash before opening ce2_sparse_local_solutions.json",
+    "compare only after the prediction is frozen"
+  ],
+  "boundary": "This does not refute correctness of the existing predictor on its dataset; it refutes only the stronger answer-independent-derivation claim."
+}

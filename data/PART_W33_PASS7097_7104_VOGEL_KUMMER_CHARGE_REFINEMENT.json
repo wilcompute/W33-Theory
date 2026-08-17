@@ -1,0 +1,23 @@
+{
+  "passes": [7097,7098,7099,7100,7101,7102,7103,7104],
+  "e6_to_d5_u1": {
+    "charge_vector_in_fundamental_weight_coordinates": [4,5,6,3,4,2],
+    "27_exact_charges": {"-2":10,"1":16,"4":1},
+    "78_exact_charges": {"-3":16,"0":46,"3":16}
+  },
+  "z4_profiles_residues_0_1_2_3": {
+    "27": [1,16,10,0],
+    "78": [46,16,0,16],
+    "27_tensor_78_total": [302,912,716,176],
+    "351_vogel_channel": [45,160,130,16],
+    "1728_vogel_channel": [256,736,576,160]
+  },
+  "vogel_decomposition_check": "27x78=1728+351+27 profile-wise in every Z4 residue",
+  "ce2_triplet_lift": {
+    "V1728_x3": [768,2208,1728,480],
+    "V351_x3": [135,480,390,48],
+    "V27_x3": [3,48,30,0]
+  },
+  "status": "VOGEL_PROJECTOR_CHANNELS_EXACTLY_REFINED_BY_KUMMER_ADJACENT_Z4",
+  "boundary": "This is an E6 branching/projector compatibility theorem. It does not identify Vogel universal-Lie-algebra diagrams with Kummer geometry or with the E8 Z12 grading as a physical phase group."
+}

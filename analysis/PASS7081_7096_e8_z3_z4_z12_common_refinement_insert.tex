@@ -1,0 +1,65 @@
+\subsection{A common $\mathbb Z_{12}$ refinement of the CE2 and Kummer gradings of $E_8$}
+\label{subsec:e8-z12-common-refinement}
+
+The order-three grading used by the native CE2 construction and the order-four grading
+associated with the Kummer/half-spin lane can be realized simultaneously on one explicit
+$E_8$ root system.  In the deterministic simple-root ordering of the verifier, the highest
+root has marks
+\[
+ (4,6,5,4,3,2,2,3).
+\]
+The relevant mark-$4$ and mark-$3$ nodes are adjacent.  Reducing the corresponding
+simple-root coefficients modulo $4$ and $3$ respectively gives
+\[
+ \mathfrak e_8:\qquad 60+64+60+64
+\]
+with neutral root type $D_5+A_3$, and
+\[
+ \mathfrak e_8:\qquad 86+81+81
+\]
+with neutral root type $E_6+A_2$.  These are the standard dimension decompositions
+\[
+ (45,1)+(1,15)\mid(16,4)\mid(10,6)\mid(16^*,4^*)
+\]
+and
+\[
+ (78,1)+(1,8)\mid(27,3)\mid(27^*,3^*)
+\]
+respectively.
+
+Because both gradings are toral, they commute.  Exact enumeration of all $240$ roots,
+with the eight Cartan directions placed in bidegree $(0,0)$, gives the joint dimension
+table
+\[
+ \boxed{
+ \begin{array}{c|ccc}
+  &0&1&2\\\hline
+ 0&54&3&3\\
+ 1&16&48&0\\
+ 2&0&30&30\\
+ 3&16&0&48
+ \end{array}}
+\]
+where rows are indexed by $\mathbb Z_4$ and columns by $\mathbb Z_3$.  Its row sums are
+$60,64,60,64$ and its column sums are $86,81,81$.  The doubly neutral root subsystem has
+$46$ roots of type $D_5+A_2$ and rank seven; retaining the eighth Cartan direction gives
+the reductive fixed algebra
+\[
+ \boxed{\mathfrak{so}_{10}\oplus\mathfrak{sl}_3\oplus\mathfrak u_1},
+ \qquad \dim=45+8+1=54.
+\]
+Since $\gcd(4,3)=1$, the Chinese remainder theorem converts the bidegree into a single
+$\mathbb Z_{12}$ grading with sector dimensions
+\[
+ \boxed{54,48,30,16,3,0,0,0,3,16,30,48}.
+\]
+In particular the CE2 $81$-sector refines dimensionally as $48+30+3$, while the
+Kummer half-spin $64$-sector refines as $48+16$.
+
+The repository independently contains a $\mu_{12}$ scalar-phase theorem for qutrit
+Clifford gates.  The present $\mathbb Z_{12}$ is instead an $E_8$ root-space grading group;
+equality of their orders is not an identification.  A physical or computational bridge
+requires an explicit character/intertwiner relating the grade automorphism to the scalar
+phase action.  Likewise, the common refinement supplies representation-theoretic selection
+rules that may be used to attack CE2 and K3 realization problems, but it does not by itself
+solve either one.

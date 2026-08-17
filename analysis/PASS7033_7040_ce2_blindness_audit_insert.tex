@@ -1,0 +1,24 @@
+\subsection{CE2 normal-form compression versus a blind derivation}
+\label{subsec:ce2-blindness}
+
+A source-level audit distinguishes two notions that had previously been conflated.  A
+\emph{runtime-blind} predictor does not consult the target answer table while producing its
+predictions; a \emph{provenance-blind} predictor additionally uses no coefficient or rule
+that was fitted or selected from those target answers.  A genuine no-answer-table replay
+requires both.
+
+The current CE2 normal-form machinery does not yet meet that standard.  In particular,
+\verb|_derive_tables_via_normal_form()| explicitly reads
+\verb|_simple_family_sign_map()| when constructing its constant-line tables, while
+\verb|_derive_naive_tables()| uses the same map to supply the domain keys.  More decisively,
+the source documents the delta-polynomial coefficients as fits obtained from the full
+$864$-entry simple-family sign dataset.  Hence the current result is accurately described as
+\[
+ \boxed{\text{structural compression verified; independent blind derivation open}.}
+\]
+This correction does not invalidate the native $27\times3$ CE2 sparse rows, the
+Heisenberg/metaplectic support laws, or the empirical correctness of the compressed
+predictor.  It changes only the evidentiary tier of the global closed form.  The missing
+certificate must derive the seed and delta laws from the bracket/cochain structure,
+enumerate the domain without answer keys, freeze all predictions, and only then compare
+against the committed sparse-solution table.

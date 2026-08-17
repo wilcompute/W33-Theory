@@ -1,0 +1,51 @@
+\subsection{A repo-native 2026 Vogel split-Casimir certificate}
+\label{subsec:vogel-e6-split-casimir}
+
+The Vogel connection can be tested at operator level rather than by matching dimensions.
+Starting from the integral Chevalley realization of the minuscule $E_6$ module $V_{27}$,
+commutator closure inside $\operatorname{Mat}_{27}(\mathbb Z)$ gives the full
+$78$-dimensional Lie algebra.  For an integral basis $X_a$ let
+\[
+ G_{ab}=\operatorname{Tr}_{27}(X_aX_b)
+\]
+and use the trace-dual basis to form the split Casimir on
+$V_{27}\otimes\mathfrak e_6$.  In the deterministic basis used by the verifier,
+$18G^{-1}$ is integral, so if
+\[
+ O_{18}=18\sum_a\rho_{27}(X_a)\otimes\operatorname{ad}(X^a),
+\]
+then $O_{18}$ is an integral sparse $2106\times2106$ matrix.  Exact integer
+multiplication gives
+\[
+ \boxed{(O_{18}-3I)(O_{18}+12I)(O_{18}+36I)=0}.
+\]
+With the Vogel normalization $\widehat C=O_{18}/72$, the spectrum is therefore
+\[
+ \boxed{
+ \left(\frac1{24}\right)^{1728}
+ \oplus\left(-\frac16\right)^{351}
+ \oplus\left(-\frac12\right)^{27}},
+\]
+recovering the characteristic identity for the $E_6$ specialization of
+$27\otimes78$ in the 2026 split-Casimir literature.  The corresponding exact
+spectral projectors are
+\[
+ P_{1728}=\frac{(O_{18}+12I)(O_{18}+36I)}{585},\qquad
+ P_{351}=-\frac{(O_{18}-3I)(O_{18}+36I)}{360},
+\]
+\[
+ P_{27}=\frac{(O_{18}-3I)(O_{18}+12I)}{936}.
+\]
+They are pairwise orthogonal, idempotent, sum to the identity, and have traces
+$1728,351,27$.  The exact moments are
+\[
+ \operatorname{Tr}\widehat C=0,\qquad
+ \operatorname{Tr}\widehat C^2=\frac{39}{2},\qquad
+ \operatorname{Tr}\widehat C^3=-\frac{39}{8}
+ =-\frac14\operatorname{Tr}\widehat C^2.
+\]
+This is an $E_6$ operator certificate on a repo-native carrier.  It does not prove
+existence of Vogel's conjectural universal Lie algebra, nor does a dimension match by
+itself define a W33--Vogel morphism.  We therefore distinguish arithmetic observations,
+universal specializations, operator certificates such as the present one, and the still
+open stronger problem of constructing an explicit W33-derived Vogel intertwiner.

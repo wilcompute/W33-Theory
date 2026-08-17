@@ -1,0 +1,26 @@
+\subsection{Finite curvature versus a K3 realization}
+\label{subsec:k3-realization-boundary}
+
+The current repository contains an explicit finite curved precomplex on the $45$-point
+transport quotient,
+\[
+ C^0(\mathbb F_3^2)\xrightarrow{d_0}C^1(\mathbb F_3^2)
+ \xrightarrow{d_1}C^2(\mathbb F_3^2),
+ \qquad K=d_1d_0\pmod3.
+\]
+Its adapted off-diagonal curvature block is a genuine internally constructed object; the
+current source records rank $36$, and its triangle-row localization is supported on $2428$
+transport triangles.  These statements are finite consequences of the W33 transport data.
+
+They must, however, be distinguished from a realization by an actual K3 geometric/cochain
+object.  The historical $2428\times36$ witness scan was corrected because it scanned a newly
+allocated zero matrix, and the later deformation script explicitly inserts a nonzero entry by
+hand while acknowledging that existence ``on the actual K3 side'' remains open.  Accordingly
+we record the evidence boundary
+\[
+ \boxed{\text{finite curved precomplex closed; K3 realization open}.}
+\]
+A K3 promotion requires a named source object and hash, an explicit basis/coordinate map into
+the finite cochain carrier, compatibility of the K3 differential/connection with $d_0,d_1$,
+and an independent comparison of the induced curvature with the finite off-diagonal block.
+No dimension or support-count coincidence substitutes for that map.
