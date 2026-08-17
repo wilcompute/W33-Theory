@@ -1,0 +1,99 @@
+name: W33 Pass5691-5698 physics YM duality Ramanujan frontier
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5685_*'
+      - 'analysis/w33_pass5691_*'
+      - 'analysis/w33_pass5692_*'
+      - 'analysis/w33_pass5693_*'
+      - 'analysis/w33_pass5694_*'
+      - 'analysis/w33_pass5695_*'
+      - 'analysis/w33_pass5696_*'
+      - 'analysis/w33_pass5697_*'
+      - 'analysis/w33_pass5698_*'
+      - 'analysis/PASS5691_5698_*'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'tests/test_w33_pass5691_5698_physics_ym_duality_ramanujan.py'
+      - 'data/w33_pass_namespace_registry_v2.d/5691-5698.json'
+      - 'data/w33_publication_frontier_contract_v2.json'
+      - '.github/workflows/w33_pass5691_5698_physics_ym_duality_ramanujan.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  replay-publish-compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip numpy pytest
+
+      - name: Replay repaired Pass5683-5690
+        run: python analysis/w33_pass5683_5690_runner.py
+
+      - name: Replay Pass5691-5698
+        run: python analysis/w33_pass5691_5698_runner.py
+
+      - name: Focused regression
+        run: |
+          python -m pytest -q tests/test_w33_pass5683_5690_physics_ramanujan_su3.py
+          python -m pytest -q tests/test_w33_pass5691_5698_physics_ym_duality_ramanujan.py
+
+      - name: Materialize homepage and audit publication DAG
+        run: |
+          python tools/integrate_bt3376_bt3389.py --report /tmp/public-integration.json
+          python analysis/w33_pass5364_publication_dag_audit.py --report /tmp/publication-dag.json
+          test "$(grep -c 'id=\"pass-5683-5690-physics-ramanujan-su3-frontier\"' docs/index.html)" -eq 1
+          test "$(grep -c 'id=\"pass-5691-5698-physics-ym-duality-ramanujan\"' docs/index.html)" -eq 1
+          git diff --check
+
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+
+      - name: Compile canonical manuscripts
+        run: |
+          mkdir -p evidence/pass5691_5698
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass5691_5698/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass5691_5698/pdf_sha256.txt
+
+      - name: Freeze regenerated certificates and homepage
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            data/PART_W33_PASS5685_DECK16_LOCAL_FLATBOND_RATIO2.json \
+            data/PART_W33_PASS5691_AFFINE_SU3_DISCRETE_YM_COMPLEX.json \
+            data/PART_W33_PASS5692_DECK16_FLATRAY_DUALITY.json \
+            data/PART_W33_PASS5693_EXPLICIT_RAMANUJAN_LEVELS23.json \
+            data/PART_W33_PASS5694_COLLISION_JACOBI_L3_NO_GO.json \
+            data/PART_W33_PASS5695_RAMANUJAN_DIRAC_TENSOR_SEPARATION.json \
+            data/PART_W33_PASS5696_AGL_ORIENTATION_TWISTED_SU3.json \
+            data/PART_W33_PASS5697_RAMANUJAN_ADJOINT_LAPLACIAN_GAP.json \
+            data/PART_W33_PASS5698_VERTICAL_Z3_GENERATION_FALSIFIER.json \
+            docs/index.html
+          if git diff --cached --quiet; then
+            echo 'Certificates and homepage already materialized.'
+          else
+            git commit -m 'Freeze Pass5691-5698 certificates and homepage [skip ci]'
+            git push
+          fi
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass5691-5698-physics-ym-duality-ramanujan
+          path: evidence/pass5691_5698/**
