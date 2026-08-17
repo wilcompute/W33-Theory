@@ -20,6 +20,7 @@
     <a href="analysis/PASS6533_6540_doily_quadratic_evaluation_code.md">Pass 6533–6540</a>
     <a href="analysis/PASS6541_6544_doily_veldkamp_code_lines.md">Pass 6541–6544</a>
     <a href="analysis/PASS6545_6552_ce2_carrier_provenance_correction.md">Pass 6545–6552</a>
+    <a href="analysis/PASS6553_6560_pg32_hamming_polar_bridge.md">Pass 6553–6560</a>
   </nav>
   <section class="card">
     <div class="status">PASS · Passes 6533–6544</div>
@@ -32,6 +33,15 @@
     <div class="eq">15 single points + 15 collinear triples + 60 unicentric triads<br>+ 20 tricentric triads + 45 pentads = 155</div>
     <p>The only weight-level ambiguity, the 35 all-perp <code>(8,8,8)</code> lines, is resolved by the dual: 15 cores are minimum dual supports (the doily lines) and the remaining 20 are tricentric triads.</p>
     <p class="boundary"><strong>Evidence boundary:</strong> finite binary geometry/coding only. The abstract Veldkamp classification is prior art; the repo contribution is the explicit executable code-and-dual reconstruction.</p>
+  </section>
+  <section class="card">
+    <div class="status">PASS · Passes 6553–6560</div>
+    <h2>PG(3,2) Hamming-polar bridge</h2>
+    <p>The simplex subcode and its Hamming dual make the recurring 35-line projective carrier explicit:</p>
+    <div class="eq">[15,4,8] simplex ⟂ [15,11,3] Hamming<br>[15,5,6] doily code ⟂ [15,10,3] isotropic-line subcode</div>
+    <p>All 35 weight-3 Hamming words are the 35 lines of <code>PG(3,2)</code>. The added quadratic bit tests symplectic isotropy exactly, splitting them as <code>35 = 15 + 20</code>: 15 retained doily lines and 20 excluded nonisotropic lines, which are exactly the tricentric triads.</p>
+    <p>Symplectic polarity pairs those 20 nonisotropic lines into 10 disjoint pairs. The six-point union of each pair is exactly one weight-6 support of the doily code—equivalently, the complement of one of the 10 nine-point grids.</p>
+    <p class="boundary"><strong>Mechanism:</strong> the identity <code>&lt;q₀,1_{x,y,x+y}&gt; = B(x,y)</code> is the one-bit selector linking the Hamming/projective and doily/symplectic layers.</p>
   </section>
   <section class="card">
     <div class="status warn">CORRECTION · Passes 6545–6552</div>
