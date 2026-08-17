@@ -5,20 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>W33 Theory — Verified Frontier</title>
   <style>
-    :root{color-scheme:dark;--bg:#0b0d10;--card:#141820;--line:#293141;--txt:#edf1f7;--muted:#a7b0bf;--accent:#79c7ff;--ok:#8ee3a0}
+    :root{color-scheme:dark;--bg:#0b0d10;--card:#141820;--line:#293141;--txt:#edf1f7;--muted:#a7b0bf;--accent:#79c7ff;--ok:#8ee3a0;--warn:#ffd37a}
     *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}
-    main{max-width:980px;margin:auto;padding:48px 22px 72px} h1{font-size:clamp(2.2rem,6vw,4.5rem);line-height:1;margin:.2em 0}.kicker{color:var(--accent);font-weight:700;letter-spacing:.08em;text-transform:uppercase}.lead{font-size:1.15rem;color:var(--muted);max-width:760px}.card{margin-top:30px;padding:24px;border:1px solid var(--line);border-radius:16px;background:var(--card)}.status{color:var(--ok);font-weight:800}.eq{overflow:auto;padding:12px 14px;border-left:3px solid var(--accent);background:#0f1319;font-family:ui-monospace,SFMono-Regular,Consolas,monospace}a{color:var(--accent)}nav{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}nav a{padding:9px 13px;border:1px solid var(--line);border-radius:999px;text-decoration:none}.boundary{color:var(--muted);font-size:.95rem}</style>
+    main{max-width:980px;margin:auto;padding:48px 22px 72px} h1{font-size:clamp(2.2rem,6vw,4.5rem);line-height:1;margin:.2em 0}.kicker{color:var(--accent);font-weight:700;letter-spacing:.08em;text-transform:uppercase}.lead{font-size:1.15rem;color:var(--muted);max-width:760px}.card{margin-top:30px;padding:24px;border:1px solid var(--line);border-radius:16px;background:var(--card)}.status{color:var(--ok);font-weight:800}.status.warn{color:var(--warn)}.eq{overflow:auto;padding:12px 14px;border-left:3px solid var(--accent);background:#0f1319;font-family:ui-monospace,SFMono-Regular,Consolas,monospace}a{color:var(--accent)}nav{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}nav a{padding:9px 13px;border:1px solid var(--line);border-radius:999px;text-decoration:none}.boundary{color:var(--muted);font-size:.95rem}</style>
 </head>
 <body><main>
   <div class="kicker">W33 Theory · executable finite geometry</div>
   <h1>Verified Frontier</h1>
-  <p class="lead">Repository front door for the machine-checked mathematics. The deployed long-form site remains in <code>docs/index.html</code>; this root page surfaces the newest exact bridge without replacing it.</p>
+  <p class="lead">Repository front door for the machine-checked mathematics. The deployed long-form site remains in <code>docs/index.html</code>; this root page surfaces the newest exact bridges and correction boundaries without replacing it.</p>
   <nav>
     <a href="docs/index.html">Full W33 site</a>
     <a href="docs/atlas.html">Visual atlas</a>
     <a href="docs/falsifiers.html">Falsifier dashboard</a>
     <a href="analysis/PASS6533_6540_doily_quadratic_evaluation_code.md">Pass 6533–6540</a>
     <a href="analysis/PASS6541_6544_doily_veldkamp_code_lines.md">Pass 6541–6544</a>
+    <a href="analysis/PASS6545_6552_ce2_carrier_provenance_correction.md">Pass 6545–6552</a>
   </nav>
   <section class="card">
     <div class="status">PASS · Passes 6533–6544</div>
@@ -30,6 +31,15 @@
     <p>Projectivizing the five-dimensional code gives all 31 points and all 155 lines of <code>PG(4,2)</code>. The common zero-set cores reproduce the complete five-type Veldkamp census:</p>
     <div class="eq">15 single points + 15 collinear triples + 60 unicentric triads<br>+ 20 tricentric triads + 45 pentads = 155</div>
     <p>The only weight-level ambiguity, the 35 all-perp <code>(8,8,8)</code> lines, is resolved by the dual: 15 cores are minimum dual supports (the doily lines) and the remaining 20 are tricentric triads.</p>
-    <p class="boundary"><strong>Evidence boundary:</strong> finite binary geometry/coding only. The abstract Veldkamp classification is prior art; the repo contribution is the explicit executable code-and-dual reconstruction. No automatic identification with W(3,3), CE2, the missing K3 curvature object, or a physical Hilbert-space/continuum model is asserted.</p>
+    <p class="boundary"><strong>Evidence boundary:</strong> finite binary geometry/coding only. The abstract Veldkamp classification is prior art; the repo contribution is the explicit executable code-and-dual reconstruction.</p>
+  </section>
+  <section class="card">
+    <div class="status warn">CORRECTION · Passes 6545–6552</div>
+    <h2>CE2 native carrier is 27×3, not 40</h2>
+    <p>The repository does contain 5,832 authentic sparse CE2 local rows. Their native label set is the graded <code>E₆</code> minuscule carrier times the <code>sl₃</code> fiber:</p>
+    <div class="eq">(e₆ ⊕ sl₃) ⊕ (27×3) ⊕ (27*×3*)<br>5,832 = 5,184 + 648</div>
+    <p>The committed affine-Heisenberg and Schläfli objects are both 27-point carriers; anchor 22 maps to Schläfli line <code>L45</code>. A later synthetic “40-point W33 anchor orbit” therefore uses the wrong native carrier unless an explicit equivariant 27↔40 transport is constructed.</p>
+    <p>The compact 5,832-row artifact survives, but its named source and named from-scratch producer are absent from the current checkout/history path. The global affine-Heisenberg compression is promising, yet an independent theorem still requires predicting all 5,832 answers without consulting the answer table and comparing exactly.</p>
+    <p class="boundary"><strong>Evidence boundary:</strong> authentic local CE2 data certified; independent global formula replay remains open. K3 remains separate and still requires the real curvature/cochain object before any deformation scan can be promoted.</p>
   </section>
 </main></body></html>
