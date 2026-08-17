@@ -1,0 +1,122 @@
+% Passes 5744--5751: W33 overlay on the known ternary quadratic Veronese code.
+% Evidence firewall: Rodrigues (2008) already gives the self-orthogonal [40,10,18]_3
+% code and [40,30,4]_3 dual with 260 weight-4 words; Kaipa--Pradhan (2024) treat
+% the ternary quadratic Veronese 3-fold / second-order projective Reed--Muller code.
+\subsection{A fixed quadratic code with 234 selectable symplectic W33 overlays}
+\label{sec:pass5744-5751-quadratic-overlays}
+
+The characteristic-$3$ non-collinearity matrix of $W(3,3)$ provides an explicit
+coordinate bridge to a classical code rather than a new code family.  Write the forty
+points as the projective points of $PG(3,3)$ and let
+\[
+V(x)=(x_0^2,x_0x_1,x_0x_2,x_0x_3,x_1^2,x_1x_2,x_1x_3,x_2^2,x_2x_3,x_3^2)
+\in\mathbb F_3^{10}
+\]
+be the quadratic Veronese feature map.  If $J$ is a nondegenerate alternating form,
+then
+\[
+C_J(x,y)=(x^{T}Jy)^2
+\]
+is exactly the $0/1$ non-collinearity matrix, because every nonzero element of
+$\mathbb F_3$ has square one.  Exact replay gives
+\[
+\operatorname{rowspan}_{\mathbb F_3} C_J
+ =\operatorname{rowspan}_{\mathbb F_3} V^T,
+\qquad \operatorname{rank}C_J=10.
+\]
+Thus the W33 characteristic-$3$ module is the known quadratic Veronese code
+$[40,10,18]_3$.  Its replayed weight distribution is
+\[
+0^1,\quad18^{1560},\quad24^{21060},\quad27^{18800},\quad30^{16848},\quad36^{780}.
+\]
+The parameters themselves are prior art and are not promoted here as novel.
+
+For the standard polarity the bridge factors exactly as
+\[
+\boxed{C_J=VB_JV^T\pmod3},
+\]
+where $B_J$ is a symmetric involution with only ten nonzero entries.  The direct
+$40\times40$ matrix contains $1080$ nonzero coefficients, whereas the two Veronese
+legs and the core contain $216+10+216=442$.  This is a finite-field structural
+factorization, not a hardware-speedup claim.
+
+The same matrix satisfies
+\[
+\boxed{C_J^2=0\pmod3},
+\]
+so its row space is self-orthogonal.  The dual has distance four.  Its $130$
+projective minimum supports are exactly the $130$ projective lines of $PG(3,3)$,
+with two nonzero scalar multiples per support, giving the known $260$ weight-four
+dual words.  The standard qutrit CSS construction therefore has parameters
+\[
+\boxed{[[40,20,4]]_3},
+\]
+recorded as a standard consequence of the classical code rather than a new coding
+family.
+
+Let $H$ be the $130\times40$ all-one projective-line incidence matrix.  Exact replay
+finds
+\[
+\operatorname{rank}_{\mathbb F_3}H=30,
+\]
+so the line rows span the full classical dual.  Every line gives the local parity law
+\[
+\sum_{p\in L}x_p=0,
+\]
+and hence any coordinate is recovered from the other three points on the line.
+Every point belongs to thirteen such repair groups.  Relative to one selected W33
+polarity the split is
+\[
+\boxed{13=4_{\rm isotropic}+9_{\rm nonisotropic}}.
+\]
+The four isotropic groups are the native W33 lines through that point; the other nine
+belong only to the ambient projective geometry.
+
+The projective minimum-dual rays have dot-product graph equal to the line-intersection
+Grassmann graph
+\[
+\boxed{J_3(4,2)=\operatorname{SRG}(130,48,20,16)}.
+\]
+The forty lines isotropic for the chosen polarity induce
+\[
+\boxed{\operatorname{SRG}(40,12,2,4)},
+\]
+while the ninety non-isotropic lines have induced degree $32$.  Cross-incidence is
+biregular with degrees $36$ and $16$.
+
+The architecture-level result is the polarity census.  A projective alternating form
+on $\mathbb F_3^4$ has six coefficients.  Exhausting the nondegenerate forms modulo
+nonzero scalar gives
+\[
+\boxed{234}
+\]
+distinct symplectic polarity classes.  Equivalently,
+\[
+[PGL(4,3):PGSp(4,3)]
+=\frac{12{,}130{,}560}{51{,}840}=234.
+\]
+For every one of these $234$ forms, the exact matrix $C_J=(x^TJy)^2$ is different,
+but its row space is the same fixed ten-dimensional quadratic code.  Each overlay
+selects forty W33-isotropic lines from the same $130$ ambient projective lines, and
+every ambient line is selected in exactly seventy-two overlays:
+\[
+234\cdot40=130\cdot72=9360.
+\]
+Consequently the finite architecture admits the exact separation
+\[
+\boxed{
+\text{fixed quadratic code space}
+\times
+\text{234-way symplectic selector}
+\longrightarrow
+\text{selectable W33 routing overlay}.
+}
+\]
+The code state therefore need not be re-encoded merely to change which symplectic
+polarity supplies the native W33 incidence fabric.  This is a finite reconfiguration
+theorem only; no physical gauge-field, spacetime, coupling, or laboratory interpretation
+is asserted.
+
+The executable witness is
+\texttt{analysis/w33\_pass5744\_5751\_quadratic\_code\_overlays.py}; its frozen
+certificate and focused regression are stored under \texttt{data/} and \texttt{tests/}.
