@@ -1,0 +1,72 @@
+% Passes 6533--6540: shared manuscript insert.
+\subsection{Doily quadratic-evaluation code and intrinsic exceptional $S_6$ symmetry}
+\label{sec:doily-quadratic-evaluation-code}
+
+\paragraph{Reader entry.}
+The two-qubit doily admits a compact coding-theoretic closure that unifies its
+$10+15+6$ hyperplane census, the determinant $9+6$ split, the duad--syntheme
+dictionary, and the exceptional outer automorphism of $S_6$. This is a finite
+binary theorem only; it is not a new physical identification.
+
+Let $V=\mathbb F_2^4$ carry the standard alternating form $B$, and let
+$q_0(x)=x_1x_2+x_3x_4$, so that the polarization of $q_0$ is $B$. On the
+$15$ nonzero vectors define
+\[
+ C=\left\{\big(B(a,x)+tq_0(x)\big)_{x\ne0}:a\in V,\ t\in\mathbb F_2\right\}.
+\]
+Exact exhaustive verification gives
+\[
+ \boxed{C\cong[15,5,6]_2},\qquad
+ W_C(y)=1+10y^6+15y^8+6y^{10}.
+\]
+The $t=0$ subcode is the canonical $[15,4,8]_2$ symplectic simplex code, hence
+\[
+ \boxed{C=S+\langle q_0\rangle}.
+\]
+The three nonzero weight strata are exactly the complements of the three kinds
+of doily geometric hyperplanes:
+\[
+ 10\times w_6\leftrightarrow10\text{ grids},\qquad
+ 15\times w_8\leftrightarrow15\text{ perps},\qquad
+ 6\times w_{10}\leftrightarrow6\text{ ovoids}.
+\]
+The determinant word $q_0$ is one distinguished weight-six word: its nine zero
+coordinates are the nonzero singular matrices of $M_2(\mathbb F_2)$ and its six
+one-coordinates are the units. Thus the determinant $9+6$ split is one
+particular member of the ten plus-type/grid class.
+
+The dual closes the incidence geometry:
+\[
+ \boxed{C^\perp\cong[15,10,3]_2},
+\]
+and its exactly fifteen minimum-weight words have supports precisely the fifteen
+totally isotropic doily lines $\{x,y,x+y\}$ with $B(x,y)=0$. Consequently the
+point-line doily can be reconstructed from the code as coordinates plus minimum
+dual supports.
+
+The automorphism statement is also intrinsic. All $720$ elements of
+$Sp(4,2)$ preserve $C$. Conversely every coordinate automorphism permutes the
+six weight-ten words. If $O_1,\ldots,O_6$ are their five-point zero sets, then
+$|O_i\cap O_j|=1$ for $i\ne j$ and the fifteen pairwise intersections are all
+fifteen coordinates. Hence this six-point action is faithful and
+\[
+ \boxed{\operatorname{Aut}(C)=Sp(4,2)\cong S_6}.
+\]
+Finally the fifteen minimum dual supports admit exactly six spreads. Comparing
+the action on the six ovoids with the action on these six spreads gives the
+exceptional class swaps
+\[
+ \boxed{2\leftrightarrow2^3,\qquad 3\leftrightarrow3^2,\qquad 3\,2\leftrightarrow6},
+\]
+with all other conjugacy classes mapped as required. Thus the nontrivial
+outer automorphism is reconstructed from two six-sets internal to the same code.
+
+\paragraph{Evidence boundary and prior art.}
+The fact that the $31$ doily geometric hyperplanes form the Veldkamp space
+$PG(4,2)$, with $15$ perps, $10$ grids, and $6$ ovoids, is established prior
+art (Saniga--Planat--Pracna--Havlicek, arXiv:0704.0495). The advance asserted
+here is the executable repo-level synthesis through the explicit evaluation
+code, its dual minimum supports, and its two intrinsic six-actions; no
+literature-priority claim is made for the abstract Veldkamp census. No map to
+$W(3,3)$, CE2, the currently missing K3 curvature object, or a physical Hilbert
+space is inferred without an additional explicit construction.
