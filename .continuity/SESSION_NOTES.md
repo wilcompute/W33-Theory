@@ -17,11 +17,11 @@
 
 ## ✅ Next Steps
 <!-- What should we do next? -->
-- Auto-saved at 2026-08-17T17:21:21.451Z (reason: timer)
+- Auto-saved at 2026-08-17T17:40:35.584Z (reason: threshold-commits)
 - Recent commits:
-  - 32796c37f wip
-  - 51578d39a Reserve Pass5808-5815 Track A: equivalence refuted, one direction survives
-  - e37766fcc Pass5798-5799: add canonical Reye disjointness duality insert
+  - 147d1326b Merge remote-tracking branch 'origin/master'
+  - 87529e6eb Pass5840-5847: when the GF(2) kernel is nonzero, and why kernel dim 0 was so common
+  - 114c9c4e0 Reserve Pass5840-5847 after 5832 collision
 
 ## 📝 Open Questions
 <!-- What do we still need to figure out? -->
