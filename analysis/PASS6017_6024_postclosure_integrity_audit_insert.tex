@@ -1,0 +1,64 @@
+% Passes 6017--6024: post-closure integrity repair.
+\subsection*{Passes 6017--6024: post-6016 closure claims repaired}
+
+A producer-level audit of the Pass~5957--6016 closure packet found four
+claim-tier failures and repaired the live artifacts.
+
+\paragraph{CE2 anchor 22.}
+The historical producer did not enumerate an actual $W(3,3)$ automorphism
+orbit.  It imported three witness rows and generated the remainder from a
+hard-coded coefficient rule on integer labels; its cancellation test checked
+only denominator integrality.  Hence
+\[
+\boxed{\text{anchor }(22,*)\text{ is open beyond the three imported witnesses}.}
+\]
+
+\paragraph{Yukawa radical pairs.}
+For
+\[
+A=\begin{pmatrix}367&-55\\-55&175\end{pmatrix},\qquad
+B=\begin{pmatrix}323&275\\275&659\end{pmatrix},
+\]
+one has
+\[
+(\operatorname{tr}A,\det A,\Delta_A)=(542,61200,48964),
+\]
+\[
+(\operatorname{tr}B,\det B,\Delta_B)=(982,137232,415396),
+\]
+so both displayed blocks have real spectra.  However
+\[
+A(1,1)^T=(312,120)^T,\qquad B(1,1)^T=(598,934)^T,
+\]
+so $(1,1)$ is not an eigenvector of either block.  The proposed generation-flag
+alignment is therefore refuted by the displayed matrices themselves.
+
+\paragraph{K3 glue avatar.}
+The advertised generator
+\[
+(780,7944,62600,53979)
+\]
+has
+\[
+\boxed{\gcd=1},
+\]
+not $217$, so the historical producer's assertion failed.  The identity
+$(217/12)780=14105$ survives as arithmetic.  The nonzero $I_{81}$ tail-to-head
+block was inserted by hand, hence the square-zero $162$-dimensional operator is
+a \emph{formal avatar}, not a realized K3 curvature/glue witness.
+
+\paragraph{Qiskit avatar.}
+The historical 21-qubit file preassigned a marked CE2/Yukawa/glue shard and its
+demonstration circuit only applied Hadamards and measurement.  No reversible
+predicate or phase-marking circuit computed the theorem conditions.  The live
+artifact is therefore classified as an encoding/search scaffold, with any
+Grover iteration count conditional on a future implemented predicate.
+
+\paragraph{Inherited physics.}
+The closure ledger now inherits the Pass~5957--5964 correction: the quoted
+Yang--Mills, neutrino, inflation and scalar-resonance numbers remain
+\textbf{ANSATZ/COMPARISON-ONLY}, not proved physical observables.
+
+The repaired evidence rule is fail-closed: an invented label rule is not a group
+orbit computation, an inserted normal form is not a geometric realization, and
+a preassigned marked state is not a theorem oracle.
