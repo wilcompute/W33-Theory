@@ -5,14 +5,23 @@ on:
     branches: [master]
     paths:
       - 'analysis/w33_pass5792_5799_matrix_ring_transpose_outer.py'
+      - 'analysis/w33_pass5798_5799_reye_disjointness_duality.py'
+      - 'analysis/PASS5792_5799_matrix_ring_transpose_outer_insert.tex'
+      - 'analysis/PASS5798_5799_reye_disjointness_duality_insert.tex'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
       - 'tests/test_w33_pass5792_5799_matrix_ring_transpose_outer.py'
+      - 'tests/test_w33_pass5798_5799_reye_disjointness_duality.py'
       - '.github/workflows/w33_pass5792_5799_matrix_ring_transpose_outer.yml'
       - 'data/PART_W33_PASS5776_5783_REYE_LATIN_COMMON_CORE.json'
       - 'data/PART_W33_PASS5667_5674_Q5_REYE_EQUIVARIANT_ORIENTATION.json'
+      - 'data/PART_W33_PASS5792_5799_MATRIX_RING_TRANSPOSE_OUTER.json'
+      - 'data/PART_W33_PASS5798_5799_REYE_DISJOINTNESS_DUALITY.json'
   pull_request:
     paths:
       - 'analysis/w33_pass5792_5799_matrix_ring_transpose_outer.py'
+      - 'analysis/w33_pass5798_5799_reye_disjointness_duality.py'
       - 'tests/test_w33_pass5792_5799_matrix_ring_transpose_outer.py'
+      - 'tests/test_w33_pass5798_5799_reye_disjointness_duality.py'
   workflow_dispatch:
 
 permissions:
@@ -29,10 +38,15 @@ jobs:
           python-version: '3.12'
       - name: Install pytest
         run: python -m pip install --upgrade pip pytest
-      - name: Run exact matrix-ring carrier verifier
-        run: python -m pytest -q tests/test_w33_pass5792_5799_matrix_ring_transpose_outer.py
-      - name: Upload generated theorem certificate
+      - name: Run exact matrix-ring and Reye-duality verifiers
+        run: >-
+          python -m pytest -q
+          tests/test_w33_pass5792_5799_matrix_ring_transpose_outer.py
+          tests/test_w33_pass5798_5799_reye_disjointness_duality.py
+      - name: Upload generated theorem certificates
         uses: actions/upload-artifact@v4
         with:
-          name: pass5792-5799-certificate
-          path: data/PART_W33_PASS5792_5799_MATRIX_RING_TRANSPOSE_OUTER.json
+          name: pass5792-5799-certificates
+          path: |
+            data/PART_W33_PASS5792_5799_MATRIX_RING_TRANSPOSE_OUTER.json
+            data/PART_W33_PASS5798_5799_REYE_DISJOINTNESS_DUALITY.json

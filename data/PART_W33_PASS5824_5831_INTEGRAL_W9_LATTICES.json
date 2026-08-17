@@ -1,0 +1,57 @@
+{
+  "boundary": "Exact integral lattice and Smith-normal-form theorem. It strengthens the characteristic-two firewall: rational carrier equivalence must not be promoted to integral or binary equivalence.",
+  "pass_5824_saturated_lattices": {
+    "heavy_W9": "A3^3",
+    "line_W9": "A3 tensor A3 after explicit GL4(2) coordinate relabel",
+    "line_discriminant": 4096,
+    "line_discriminant_group": "(Z/4)^4 x Z/16",
+    "line_gram_snf": [1, 1, 1, 1, 4, 4, 4, 4, 16],
+    "point_W9": "A3^3",
+    "point_heavy_discriminant": 64,
+    "point_heavy_discriminant_group": "(Z/4)^3",
+    "point_heavy_gram_snf": [1, 1, 1, 1, 1, 1, 4, 4, 4]
+  },
+  "pass_5825_explicit_GL4_relabel": {
+    "deduction": "the transformed line W9 saturation is exactly the row-and-column-zero 4x4 lattice A3 tensor A3",
+    "dual_label_map_L_rows": [[0, 1, 1, 0], [1, 0, 1, 1], [0, 1, 1, 1], [1, 0, 0, 1]],
+    "identity": "C^{-T}=L",
+    "primal_coordinate_map_C_rows": [[1, 1, 0, 1], [0, 1, 1, 0], [1, 0, 0, 1], [1, 1, 1, 0]],
+    "rank_one_labels_map_to_product_nonzero_3x3_labels": true
+  },
+  "pass_5826_walsh_saturation_indices": {
+    "heavy_Walsh_snf": [1, 1, 1, 2, 2, 2, 2, 2, 2],
+    "line_Walsh_index_in_saturation": 4096,
+    "line_Walsh_snf": [1, 2, 2, 2, 2, 4, 4, 4, 4],
+    "point_Walsh_snf": [1, 1, 1, 2, 2, 2, 2, 2, 2],
+    "point_heavy_Walsh_index_in_saturation": 64
+  },
+  "pass_5827_saturated_radon_snf": {
+    "D_A3cubed_to_A3tensorA3": [1, 1, 1, 1, 1, 2, 2, 4, 4],
+    "H_cokernel": "(Z/2)^5 x (Z/4)^2, order 512",
+    "H_transpose_A3cubed_to_A3cubed": [1, 1, 2, 2, 2, 2, 2, 4, 4],
+    "R_D_cokernel": "(Z/2)^2 x (Z/4)^2, order 64",
+    "R_transpose_A3cubed_to_A3tensorA3": [1, 1, 1, 1, 1, 2, 2, 4, 4]
+  },
+  "pass_5828_ambient_smith_forms": {
+    "Bcross": [1, 4, 4, 4, 4, 4, 4, 8, 8],
+    "CH": [1, 2, 2, 2, 2, 4, 4, 4, 4],
+    "CR": [1, 4, 4, 4, 4, 4, 4, 8, 8],
+    "D": [1, 1, 1, 1, 1, 1, 1, 1, 2, 2],
+    "H": [1, 1, 1, 1, 2, 2, 2, 2, 2, 2],
+    "K9": [1, 1, 1, 4, 4, 4, 4, 4, 4],
+    "R": [1, 1, 1, 1, 1, 1, 1, 1, 2, 2]
+  },
+  "pass_5829_characteristic_two_firewall": {
+    "deduction": "the rational W9 equivalence does not descend to equality of integral or mod-2 carrier lattices; the exact obstruction is 2-primary",
+    "mod2_ranks": {"Bcross": 1, "CH": 1, "CR": 1, "D": 8, "H": 4, "K9": 3, "R": 8},
+    "rational_common_W9_dimension": 9
+  },
+  "pass_5830_structural_summary": {
+    "integral": "P,H use A3^3; L uses A3 tensor A3",
+    "mod2": "ambient ranks split R/D=8, H=4, K9=3, centered cross transforms=1",
+    "radon_gluing": "R^T and D have saturated cokernel order 2^6; H^T has order 2^9",
+    "rational": "P,H,L share one absolutely irreducible W9"
+  },
+  "schema": "w33.pass5824_5831.integral_w9_lattices.v1",
+  "status": "PASS"
+}

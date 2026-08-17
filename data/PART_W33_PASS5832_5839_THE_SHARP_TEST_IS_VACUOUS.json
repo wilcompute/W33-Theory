@@ -1,5 +1,5 @@
 {
-  "boundary": "Pass 5816 runs the sharpest available test of the surviving direction and reports that it passes VACUOUSLY -- both two-system configurations have kernel dimension 0, so the test could not have failed. This is not confirmation. Published |Aut| checked for Reye (576) and Pappus (108) only",
+  "boundary": "Pass 5816 runs the sharpest available test of the surviving direction and reports that it passes VACUOUSLY -- both two-system configurations have kernel dimension 0, so the test could not have failed. This is not confirmation. Published |Aut| checked for Reye (576) and Pappus (108) only. Pass 5819 reports a FINISHED search: the (1,3) neighbourhood reaches 48, worse than 51, refuting Pass 5789's proposed fix",
   "pass_5816": {
     "found": [
       "Z12 {i,i+2,i+6}: systems 2, sizes [2,6]",
@@ -105,11 +105,32 @@
     }
   },
   "pass_5819_q9": {
+    "best": 48,
+    "corrects": "Pass 5789 proposed this as the fix for the 51 plateau; it is not one. The next lever is the FORMULATION -- exact solve on a symmetry-reduced quotient -- not another local move",
+    "finding": "the changed neighbourhood is WORSE -- 48 against 51. The (1,3) move costs far more per step so it explores far less in equal wall-clock",
     "neighbourhood": "(1,3)-swap",
-    "no_claim": "no comparison against the 51 plateau is asserted",
-    "status": "UNFINISHED at cutoff"
+    "prior_12swap_best": 51,
+    "status": "FINISHED",
+    "verified_independent": true
   },
   "pass_5820_claude_md": {
     "added": "the fourth calibration: build the objects the claim predicts on, and check them against published invariants"
+  },
+  "pass_5821_collision": {
+    "blocks": [
+      "5744",
+      "5776",
+      "5792",
+      "5816"
+    ],
+    "collisions_this_session": 4,
+    "renumbered_to": [
+      "5752",
+      "5784",
+      "5800",
+      "5832"
+    ],
+    "root_cause": "reservation-by-file-path cannot work when both lanes write the same path; a lane prefix or an atomic claim is needed, not a convention",
+    "work_lost_and_recovered": "the 5816 certificate was dropped by a rebase and restored from the commit"
   }
 }

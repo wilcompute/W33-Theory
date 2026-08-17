@@ -1,0 +1,20 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.fragment",
+  "range": [5824, 5831],
+  "owner": "openai_gpt5_6_sol",
+  "status": "PUBLISHED",
+  "created_utc": "2026-08-17T17:32:00Z",
+  "published_utc": "2026-08-17T17:38:00Z",
+  "topic": "integral W9 lattice comparison: point/heavy A3^3 versus line A3 tensor A3; exact GL4(2) Fourier relabel; Smith normal forms and 2-primary Radon defects",
+  "artifacts": [
+    "analysis/w33_pass5824_5831_integral_w9_lattices.py",
+    "data/PART_W33_PASS5824_5831_INTEGRAL_W9_LATTICES.json",
+    "analysis/BT5824_BT5831_integral_w9_lattices.md",
+    "analysis/PASS5824_5831_integral_w9_lattices_insert.tex",
+    "analysis/PASS5824_5831_index_insert.html",
+    "tests/test_w33_pass5824_5831_integral_w9_lattices.py",
+    ".github/workflows/w33_pass5824_5831_integral_w9_lattices.yml"
+  ],
+  "verification": "Exact Smith forms, lattice discriminants, GL4(2) relabel, saturated Radon maps and mod-2 ranks independently reproduced in-session; dedicated byte-exact GitHub Actions replay may remain queued in the shared runner backlog.",
+  "boundary": "Integral lattice/code bridge only. Rational representation equality does not imply integral or mod-2 equivalence; preserve the exact 2-primary cokernels."
+}
