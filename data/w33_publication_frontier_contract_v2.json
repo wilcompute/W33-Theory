@@ -31,7 +31,8 @@
     {"kind":"id","token":"pass-5675-5682-physics-voltage-classd-frontier","source":"analysis/PASS5675_5682_index_insert.html"},
     {"kind":"id","token":"pass-5683-5690-physics-ramanujan-su3-frontier","source":"analysis/PASS5683_5690_index_insert.html"},
     {"kind":"id","token":"pass-5691-5698-physics-ym-duality-ramanujan","source":"analysis/PASS5691_5698_index_insert.html"},
-    {"kind":"id","token":"pass-5704-5711-physics-wilson-generation-linfinity-frontier","source":"analysis/PASS5704_5711_index_insert.html"}
+    {"kind":"id","token":"pass-5704-5711-physics-wilson-generation-linfinity-frontier","source":"analysis/PASS5704_5711_index_insert.html"},
+    {"kind":"id","token":"pass-5720-5724-affine-torsion-homology","source":"analysis/PASS5720_5724_index_insert.html"}
   ],
   "boundary": "This contract certifies nested publication reachability, uniqueness, shared-tail consolidation, and public materialization only. It does not certify mathematical, hardware, laboratory, empirical, or physical claims."
 }
