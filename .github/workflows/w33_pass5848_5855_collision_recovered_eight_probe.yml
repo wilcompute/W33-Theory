@@ -1,0 +1,122 @@
+name: W33 Pass5848-5855 collision-recovered matrix frontier
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5832_5839_normalizer_code_pauli_allq.py'
+      - 'analysis/w33_pass5848_5855_collision_recovered_eight_probe.py'
+      - 'analysis/BT5848_BT5855_collision_recovered_eight_probe.md'
+      - 'analysis/PASS5848_5855_collision_recovered_eight_probe_insert.tex'
+      - 'analysis/PASS5848_5855_index_insert.html'
+      - 'analysis/PASS5776_5783_index_insert.html'
+      - 'analysis/PASS5792_5799_index_insert.html'
+      - 'analysis/PASS5816_5823_index_insert.html'
+      - 'analysis/PASS5824_5831_index_insert.html'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/PART_W33_PASS5848_5855_NORMALIZER_CODE_PAULI_ALLQ.json'
+      - 'data/PART_W33_PASS5824_5831_INTEGRAL_W9_LATTICES.json'
+      - 'data/w33_publication_frontier_contract_v2.json'
+      - 'data/w33_pass_namespace_registry_v2.d/5832-5839.json'
+      - 'data/w33_pass_namespace_registry_v2.d/5848-5855.json'
+      - 'tests/test_w33_pass5848_5855_collision_recovered_eight_probe.py'
+      - 'tools/materialize_pass5776_5855_matrix_frontier.py'
+      - '.github/workflows/w33_pass5848_5855_collision_recovered_eight_probe.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  replay-publish-compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install test dependency
+        run: python -m pip install --upgrade pip pytest
+
+      - name: Replay corrected Pass5848-5855 exact certificate
+        run: python analysis/w33_pass5848_5855_collision_recovered_eight_probe.py
+
+      - name: Focused regression
+        run: python -m pytest -q tests/test_w33_pass5848_5855_collision_recovered_eight_probe.py
+
+      - name: Materialize corrected matrix-frontier homepage cards
+        run: |
+          python tools/materialize_pass5776_5855_matrix_frontier.py
+          test "$(grep -c 'id=\"pass-5832-5839-normalizer-code-pauli-allq\"' docs/index.html || true)" -eq 0
+          test "$(grep -c 'id=\"pass-5832-5839-normalizer-code-pauli-allq\"' index.html || true)" -eq 0
+          for token in \
+            pass-5776-5783-reye-latin-common-core \
+            pass-5792-5799-matrix-ring-transpose-outer \
+            pass-5816-5823-matrix-fourier-rank \
+            pass-5824-5831-integral-w9-lattices \
+            pass-5848-5855-normalizer-code-pauli-allq; do
+            test "$(grep -c "id=\"$token\"" docs/index.html)" -eq 1
+            test "$(grep -c "id=\"$token\"" index.html)" -eq 1
+          done
+          git diff --check
+
+      - name: Audit clean namespace publication reachability
+        run: |
+          grep -Fq '\input{analysis/PASS5848_5855_collision_recovered_eight_probe_insert}' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+          test "$(grep -cF '\input{analysis/PASS5832_5839_normalizer_code_pauli_allq_insert}' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex || true)" -eq 0
+          grep -Fq '\input{analysis/PASS5840_5847_matrix_doily_radon_addendum_insert}' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('data/w33_publication_frontier_contract_v2.json').read_text())
+          got={x['token'] for x in d['local_public_sections']}
+          expected={
+            'pass-5776-5783-reye-latin-common-core',
+            'pass-5792-5799-matrix-ring-transpose-outer',
+            'pass-5816-5823-matrix-fourier-rank',
+            'pass-5824-5831-integral-w9-lattices',
+            'pass-5840-5847-matrix-doily-radon-addendum',
+            'pass-5848-5855-normalizer-code-pauli-allq',
+          }
+          assert expected <= got
+          assert 'pass-5832-5839-normalizer-code-pauli-allq' not in got
+          assert d['public_index']=='docs/index.html'
+          old=json.loads(Path('data/w33_pass_namespace_registry_v2.d/5832-5839.json').read_text())
+          new=json.loads(Path('data/w33_pass_namespace_registry_v2.d/5848-5855.json').read_text())
+          assert old['status']=='SUPERSEDED' and old['superseded_by']==[5848,5855]
+          assert new['status']=='PUBLISHED'
+          PY
+
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+
+      - name: Compile all three canonical manuscripts
+        run: |
+          mkdir -p evidence/pass5848_5855
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass5848_5855/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass5848_5855/pdf_sha256.txt
+
+      - name: Freeze corrected homepage materialization if changed
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/index.html index.html data/PART_W33_PASS5848_5855_NORMALIZER_CODE_PAULI_ALLQ.json
+          if git diff --cached --quiet; then
+            echo 'Corrected certificate and homepage cards already frozen.'
+          else
+            git commit -m 'Materialize Pass5776-5855 corrected matrix frontier [skip ci]'
+            git push origin master
+          fi
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass5848-5855-collision-recovered-matrix-frontier
+          path: evidence/pass5848_5855/**
