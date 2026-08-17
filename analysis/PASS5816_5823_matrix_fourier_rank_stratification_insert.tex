@@ -1,0 +1,135 @@
+% Passes 5816--5823: Fourier rank stratification of the q=5 matrix carrier.
+\subsection{The $1+9+6$ line-carrier split is matrix-rank Fourier geometry}
+\label{sec:pass5816-5823-matrix-fourier-rank}
+
+The affine matrix model makes the full rational decomposition of the sixteen
+Reye/Latin lines explicit.  The line set is the additive torsor
+\[
+ T=M_2(\mathbb F_2),
+\]
+and, using the Frobenius pairing
+$\langle Y,M\rangle=\operatorname{tr}(Y^TM)$, define Walsh vectors
+\[
+ \boxed{
+ v_Y=\sum_{M\in M_2(\mathbb F_2)}
+ (-1)^{\langle Y,M\rangle}e_M.
+ }
+\]
+They satisfy $\langle v_Y,v_Z\rangle=16\delta_{YZ}$.  The dual matrix labels
+split by rank as
+\[
+ \boxed{16=1+9+6},
+\]
+namely one zero matrix, nine nonzero rank-one matrices, and six invertible
+rank-two matrices.  This is exactly the carrier decomposition
+\[
+ \boxed{
+ \mathbb Q^{16}_L
+ =\mathbf1\oplus W_9^{\operatorname{rank}1}
+ \oplus V_6^{\operatorname{rank}2}.
+ }
+\]
+
+Indeed every nonzero rank-one label has the unique factorization
+\[
+ Y=\phi^Tw^T,
+ \qquad0\ne\phi\in V^*,\quad0\ne w\in W,
+\]
+so the nine labels form a literal $3\times3$ grid.  Define the point- and
+heavy-fibre Walsh vectors
+\[
+ u_{w,\phi}=\sum_{x\in V}(-1)^{\phi(x)}e_{(w,x)},
+ \qquad
+ h_{w,\phi}=\sum_{\psi\in W^*}(-1)^{\psi(w)}e_{(\phi,\psi)}.
+\]
+For point--line Reye incidence $R$, point--heavy incidence $H$, and
+line--heavy disjointness incidence $D$, exact summation gives
+\[
+ \boxed{R^Tu_{w,\phi}=v_{\phi^Tw^T}},
+ \qquad
+ \boxed{H^Tu_{w,\phi}=-2h_{w,\phi}},
+ \qquad
+ \boxed{Dh_{w,\phi}=v_{\phi^Tw^T}}.
+\]
+Thus the point, heavy and line realizations of the common $W_9$ are exactly the
+same nine rank-one additive characters, transported by finite Radon transforms.
+
+The six invertible labels give the complementary line-only sector.  For every
+$Y\in GL_2(2)$,
+\[
+ \boxed{Rv_Y=0},
+ \qquad
+ \boxed{D^Tv_Y=0},
+\]
+while no nonzero rank-one Walsh vector is killed by either transform.  Hence
+\[
+ \boxed{
+ V_6=\operatorname{span}\{v_Y:\det Y=1\}
+ =\ker R=\ker D^T.
+ }
+\]
+
+The full affine carrier also becomes monomial in this basis.  For
+$g=(X,A,B)$,
+\[
+ \boxed{
+ gv_Y=(-1)^{\langle Y',X\rangle}v_{Y'},
+ \qquad Y'=A^{-T}YB^T.
+ }
+\]
+This identity was checked on all $576\cdot16=9216$ element/label pairs.  The
+rank-one and rank-two sector characters satisfy
+\[
+ \boxed{\langle\chi_9,\chi_9\rangle=1},
+ \qquad
+ \boxed{\langle\chi_6,\chi_6\rangle=1},
+ \qquad
+ \boxed{\langle\chi_9,\chi_6\rangle=0}.
+\]
+Because both sectors are explicitly realized over $\mathbb Q$ by integer
+Walsh vectors, each is absolutely irreducible.
+
+Restriction to the normal translation group $T=M_2(\mathbb F_2)_+$ is
+especially transparent:
+\[
+ \boxed{
+ W_9\downarrow_T
+ =\bigoplus_{\operatorname{rank}Y=1}\chi_Y,
+ }
+ \qquad
+ \boxed{
+ V_6\downarrow_T
+ =\bigoplus_{\det Y=1}\chi_Y.
+ }
+\]
+Thus the normal sixteen-group itself spectrally distinguishes the common-nine
+and line-only-six sectors.
+
+Transpose acts on the Fourier labels by
+\[
+ \boxed{\Theta v_Y=v_{Y^T}}.
+\]
+For $Y=\phi^Tw^T$ this sends $Y$ to $w^T\phi^T$, so the same outer involution
+that exchanges point and heavy carriers swaps the two factors of the
+$3\times3$ rank-one grid and preserves the six invertible labels as a set.
+
+Finally, over $\mathbb F_2$ each nonzero matrix is already a unique projective
+point of $\mathrm{PG}(3,2)$.  The determinant-zero locus consists of precisely
+the nine rank-one points and its complement of the six invertible points:
+\[
+ \boxed{15=9+6}.
+\]
+The nine-point locus has the explicit product parametrization
+$(\phi,w)\in3\times3$, the standard hyperbolic-quadric/grid rank geometry of
+$2\times2$ matrices.
+
+\paragraph{Prior art and evidence boundary.}
+Finite translation/Fourier rank schemes are classical; an explicit modern
+reference for finite bilinear and quadratic-form translation schemes is
+K.-U.~Schmidt, arXiv:1803.04274.  The $M_2(\mathbb F_2)$ two-qubit
+projective-line use is also prior art in Saniga--Planat--Pracna,
+arXiv:quant-ph/0611063.  The new repository statement is the exact
+identification of the already-certified q=5 Reye/heavy carrier modules and
+incidence maps with these rank-stratified Walsh sectors.  The dimensions
+$1+9+6$ are not particle multiplets, qubit states or physical sectors absent a
+separately verified physical map.
