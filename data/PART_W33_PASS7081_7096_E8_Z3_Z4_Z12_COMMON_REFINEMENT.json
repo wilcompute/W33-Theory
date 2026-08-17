@@ -1,0 +1,49 @@
+{
+  "passes": [7081,7082,7083,7084,7085,7086,7087,7088,7089,7090,7091,7092,7093,7094,7095,7096],
+  "e8_root_certificate": {
+    "roots": 240,
+    "rank": 8,
+    "highest_root_marks_in_deterministic_order": [4,6,5,4,3,2,2,3],
+    "z4_node_index": 3,
+    "z3_node_index": 4,
+    "nodes_adjacent": true
+  },
+  "z4_kummer_spinor_grading": {
+    "grade_dimensions": [60,64,60,64],
+    "neutral_root_type": "D5+A3",
+    "neutral_lie_dimension": 60,
+    "standard_branching_dimensions": "(45,1)+(1,15) | (16,4) | (10,6) | (16*,4*)"
+  },
+  "z3_ce2_grading": {
+    "grade_dimensions": [86,81,81],
+    "neutral_root_type": "E6+A2",
+    "neutral_lie_dimension": 86,
+    "standard_branching_dimensions": "(78,1)+(1,8) | (27,3) | (27*,3*)"
+  },
+  "joint_Z4xZ3_dimension_table": [[54,3,3],[16,48,0],[0,30,30],[16,0,48]],
+  "joint_neutral": {
+    "root_count": 46,
+    "semisimple_type": "D5+A2",
+    "semisimple_rank": 7,
+    "extra_cartan_rank": 1,
+    "reductive_type": "so(10)+sl(3)+u(1)",
+    "dimension": 54
+  },
+  "z12_crt_grading_dimensions": [54,48,30,16,3,0,0,0,3,16,30,48],
+  "z12_sector_interpretation": {
+    "0": "54 = so10 + sl3 + u1",
+    "1": "48 = 16 x 3 dimension",
+    "2": "30 = 10 x 3 dimension",
+    "3": "16",
+    "4": "3",
+    "5": "0",
+    "6": "0",
+    "7": "0",
+    "8": "3",
+    "9": "16",
+    "10": "30",
+    "11": "48"
+  },
+  "status": "EXACT_COMMON_REFINEMENT_OF_CE2_Z3_AND_KUMMER_Z4_INSIDE_E8",
+  "boundary": "The Z12 grading is an E8 root-space grading. The repo also has an independent mu_12 scalar phase-group theorem for qutrit Clifford gates; equality of the orders 12 does not identify those structures. An explicit character/intertwiner is required before connecting them."
+}
