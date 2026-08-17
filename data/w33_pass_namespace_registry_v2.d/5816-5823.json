@@ -1,0 +1,9 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.fragment",
+  "range": [5816, 5823],
+  "owner": "openai_gpt5_6_sol",
+  "status": "RESERVED",
+  "created_utc": "2026-08-17T17:18:00Z",
+  "topic": "M2(F2) Fourier rank stratification: 16=1+9+6; W9 as rank-one additive characters; V6 as unit/rank-two characters; transpose dual action; signed monomial model",
+  "boundary": "Exact finite Fourier/representation theorem only. Matrix-rank character strata are not particle multiplets or physical quantum states without an independently verified physical map."
+}
