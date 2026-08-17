@@ -17,11 +17,11 @@
 
 ## ✅ Next Steps
 <!-- What should we do next? -->
-- Auto-saved at 2026-08-17T16:51:21.527Z (reason: timer)
+- Auto-saved at 2026-08-17T16:58:49.259Z (reason: threshold-commits)
 - Recent commits:
-  - a1f7ec5e5 Restore failure mode six in CLAUDE.md after cherry-pick resolution
-  - 2d34d3282 Pass5784-5791: the kernel-finds-the-block-system class is real, with two members
-  - a022ba075 Pass5776-5783: freeze Reye Latin common-core certificate
+  - 33da54f11 Pass5800-5807: the class condition is an equivalence, and two of my inputs were fake
+  - a6c68a910 Pass5792-5799: add exact replay and certificate workflow
+  - 20d6ef285 Pass5792-5799: add exact replay regression test
 
 ## 📝 Open Questions
 <!-- What do we still need to figure out? -->
