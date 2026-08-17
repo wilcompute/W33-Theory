@@ -1,0 +1,9 @@
+{
+  "lo": 5856,
+  "hi": 5863,
+  "lane": "A",
+  "track": "A",
+  "topic": "orbit construction for alpha(W(3,9)); Reye/Pappus shared invariants",
+  "reserved": "2026-08-17",
+  "note": "first reservation using the lane prefix from README_LANE_PREFIX.md"
+}

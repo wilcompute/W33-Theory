@@ -1,0 +1,46 @@
+{
+  "boundary": "Pass 5856 is an ATTEMPT IN PROGRESS -- the Sp(4,9) subgroup-orbit search had not returned at cutoff and no orbit result is claimed. The ILP finished UNPROVED at 48, which is worse than local search's 51 and is an incumbent, not a value. Nothing here improves alpha(W(3,9))",
+  "pass_5856_attempt": {
+    "idea": "search the SUBGROUP LATTICE of Sp(4,9) for orbits that are partial ovoids, instead of searching the 820 points for cocliques",
+    "method": "maximal subgroup class reps of Sp(4,9), orbits on the 820 points, test pairwise non-collinearity",
+    "rationale": "three local-search classes all plateau at 51; a maximum partial ovoid of a classical polar space is far more likely to be a union of subgroup orbits than something a random walk finds",
+    "status": "RUNNING at cutoff -- no result",
+    "what_would_count": "an orbit of size > 51 that is pairwise non-collinear"
+  },
+  "pass_5857_ilp": {
+    "dual_bound": 80.66132155,
+    "formulation": "exact ILP on the symmetry-reduced carrier (point 0 forced in, its 90 neighbours removed)",
+    "proved_optimal": false,
+    "reached": 48,
+    "valid_because": "the collinearity graph is vertex-transitive, so some maximum coclique contains any fixed point",
+    "verdict": "worse than local search's 51 and unproved -- the reduction was sound but the solve did not close. Formulation change did not help either"
+  },
+  "pass_5858_reye_pappus": {
+    "not_shared": [
+      "v (12 vs 9)",
+      "b (16 vs 9)",
+      "kernel dim (4 vs 2)",
+      "self-duality (no vs yes)"
+    ],
+    "reading": "after both directions of the class claim died, what remains is a list of coincidences with no theorem connecting them -- which is the honest description of two objects, not a class",
+    "shared": [
+      "exactly 3 top-weight kernel words",
+      "exactly 3 blocks in the system",
+      "block size 3",
+      "|G| divisible by 108",
+      "v divisible by 3"
+    ]
+  },
+  "pass_5859_corpus": {
+    "cyclic_code_files": 61,
+    "file": "2026-07-08_pass76_QEC_codes_alpha_code.md",
+    "reading": "only one corpus file combines cyclic-code machinery with a 2-rank claim, so the circulant criterion is not silently duplicated across the corpus",
+    "with_a_2_rank_claim": 1
+  },
+  "pass_5860_method": {
+    "conjectures_this_session": 3,
+    "pattern": "every one died within a batch of being stated, and every refutation came from CONSTRUCTING the object the claim forbids",
+    "survived_first_adversarial_test": 0,
+    "the_change": "build the adversarial witness BEFORE stating the conjecture, not after. Three conjectures, three refutations, zero survivors is not bad luck"
+  }
+}

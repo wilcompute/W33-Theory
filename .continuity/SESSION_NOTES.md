@@ -17,11 +17,11 @@
 
 ## ✅ Next Steps
 <!-- What should we do next? -->
-- Auto-saved at 2026-08-17T17:40:35.584Z (reason: threshold-commits)
+- Auto-saved at 2026-08-17T17:55:51.794Z (reason: file save)
 - Recent commits:
-  - 147d1326b Merge remote-tracking branch 'origin/master'
-  - 87529e6eb Pass5840-5847: when the GF(2) kernel is nonzero, and why kernel dim 0 was so common
-  - 114c9c4e0 Reserve Pass5840-5847 after 5832 collision
+  - a887b933a Merge remote-tracking branch 'origin/master'
+  - 15c95fddd Merge remote-tracking branch 'origin/master'
+  - cf0c41e7a Close Pass5840-5847 structural packet pending CI
 
 ## 📝 Open Questions
 <!-- What do we still need to figure out? -->
