@@ -1,0 +1,50 @@
+% Passes 5888--5895: correction-first Ihara identity audit.
+\subsection*{Passes 5888--5895: exact W33 Ihara factorization and graph-identity firewall}
+
+Passes~5880--5887 are superseded because they conflated the canonical
+$W(3,3)$ collinearity graph, a separate signed $4$-regular 40-line mesh, and a
+33-vertex circulant surrogate.  The canonical collinearity graph is
+\[
+  \operatorname{SRG}(40,12,2,4),\qquad |E|=240,
+\]
+with adjacency spectrum
+\[
+  12^1\oplus 2^{24}\oplus(-4)^{15}.
+\]
+Its Hashimoto operator therefore has $480$ directed-edge states, outdegree
+$11$, and exact Ihara--Bass factorization
+\[
+\det(I-uB)=
+(1-u^2)^{200}
+(1-12u+11u^2)
+(1-2u+11u^2)^{24}
+(1+4u+11u^2)^{15}.
+\]
+Equivalently,
+\[
+\operatorname{spec}(B)=
+11^1\oplus 1^{201}\oplus(-1)^{200}
+\oplus(1\pm i\sqrt{10})^{24}
+\oplus(-2\pm i\sqrt7)^{15}.
+\]
+Thus the exact surviving equal-modulus statement is
+\[
+\boxed{\text{the 78 adjacency-induced nontrivial modes have }|\lambda|=\sqrt{11}.}
+\]
+The structural $\pm1$ modes and Perron mode are not part of this shell.
+
+The same finite spectrum contains only four distinct nontrivial phases, with
+multiplicities $24,24,15,15$, so no eigenphase-equidistribution theorem follows.
+In particular Ihara data alone does not determine a physical free spectral
+range, Fabry--Perot finesse, Shannon capacity, or absolute loss/Q.  Those require
+an independent propagation/coupling model specifying delays or lengths,
+dispersion, coupler amplitudes/losses, boundary conditions, and the map from the
+dimensionless spectral parameter to physical frequency.
+
+\paragraph{Graph-identity firewall.}
+The symbols must remain distinct: the canonical $W33$ collinearity graph has
+$(v,k,q_{\rm nb})=(40,12,11)$; the Pass~5706 signed 40-line mesh is a separate
+$4$-regular object with $q_{\rm nb}=3$; and the Pass~5880 surrogate is the
+33-vertex $4$-regular circulant with jumps $\pm1,\pm11$, which is not canonical
+$W(3,3)$ and is not Ramanujan.  No theorem may be transported between these
+objects by the label ``W33'' alone.
