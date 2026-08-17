@@ -1,0 +1,51 @@
+{
+  "boundary": "Pass 5936 is a THEOREM about why the other lane's bridge is characteristic-2 only, proved by a one-line identity and confirmed by counts. Pass 5937 characterises the triple split on a 200/200 sample of each class, not exhaustively. Neither result claims novelty against the literature -- the char-2 symmetric/alternating coincidence is textbook",
+  "pass_5936_the_bridge_is_char_2_only": {
+    "answer": "NO, and provably",
+    "consequence": "the polarization is SYMMETRIC at every q but ALTERNATING only in characteristic 2, where symmetric and alternating coincide. At odd q it defines a QUADRIC, not a symplectic space",
+    "identity": "pol(M,M) = det(2M) - 2det(M) = 4det(M) - 2det(M) = 2det(M), which is nonzero exactly when det(M) is nonzero",
+    "q3_counts": {
+      "check": "the 16 singular classes are exactly Q+(3,3), which has (3+1)^2 = 16 points -- so the odd-q construction lands on the hyperbolic quadric, and their 9+6 becomes 16+24",
+      "invertible": 48,
+      "invertible_classes": 24,
+      "mod_scalars": 40,
+      "nonzero_matrices": 80,
+      "singular": 32,
+      "singular_classes": 16
+    },
+    "significance": "this turns their firewall from a caution into a theorem: the two-qubit doily picture is intrinsically characteristic 2 and there is no q=3 analogue to look for",
+    "the_question": "does it lift to odd q?",
+    "their_result": "det polarization on M_2(F_2) IS the two-qubit symplectic form, giving W(3,2)",
+    "verified": {
+      "q2_alternating": true,
+      "q3_alternating": false,
+      "q3_symmetric": true
+    }
+  },
+  "pass_5937_the_triple_split": {
+    "answer": "the size of the common perp",
+    "check": "360 + 2880 = 3240 = the covered triples",
+    "class_16": {
+      "common_perp_size": 4,
+      "heptads_containing_each": 16,
+      "sampled": 200,
+      "triples": 360,
+      "uniform": true
+    },
+    "class_33": {
+      "common_perp_size": 1,
+      "heptads_containing_each": 33,
+      "sampled": 200,
+      "triples": 2880,
+      "uniform": true
+    },
+    "question": "what separates the 360 triples from the 2880 in the q=3 heptad design?",
+    "reading": "a clean geometric invariant: three pairwise non-collinear points with FOUR common neighbours lie in 16 heptads; with ONE common neighbour, 33. The 2-design regularity fails at the triple level exactly along this perp-size dichotomy"
+  },
+  "pass_5938_joint_picture": {
+    "q2": "3-design, lambda_3 = 1, six ovoids -- their doily census",
+    "q3": "2-design only, lambda_2 = 112, triples split 360/2880 by common-perp size 4 vs 1",
+    "so": "the two-qubit picture and the heptad picture are not two views of one structure that survives all q -- they are the even and odd branches of the same computation, and the even branch has extra rigidity the odd branch lacks",
+    "why_q2_is_special": "at q=2 W(3,q) HAS ovoids and the det polarization is symplectic; both facts are characteristic-2 accidents, and both fail at q=3"
+  }
+}
