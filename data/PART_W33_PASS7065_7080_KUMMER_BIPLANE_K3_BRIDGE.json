@@ -1,0 +1,33 @@
+{
+  "passes": [7065,7066,7067,7068,7069,7070,7071,7072,7073,7074,7075,7076,7077,7078,7079,7080],
+  "quadratic_model": {
+    "q0": "x0*x1+x2*x3",
+    "support_size": 6,
+    "minimum_blocks": "{supp(q0(x+a)): a in F2^4}",
+    "block_count": 16
+  },
+  "explicit_GL4_isomorphism": {
+    "matrix": [[1,1,0,1],[1,1,1,0],[1,0,1,1],[1,1,0,0]],
+    "target_model": "4x4 row/column cross: for each point, the other 3 points in its row plus the other 3 in its column",
+    "verified_all_16_blocks": true
+  },
+  "kummer_configuration": {
+    "abstract_parameters": "16_6 symmetric 2-(16,6,2)",
+    "each_two_blocks_intersect": 2,
+    "each_point_degree": 6,
+    "aut_group_from_Pass7001": "2^4:Sp(4,2) ~= 2^4:S6, order 11520",
+    "status": "EXPLICIT_ABSTRACT_ISOMORPHISM_TO_STANDARD_ROW_COLUMN_KUMMER_MODEL"
+  },
+  "levi_graph": {
+    "model": "folded 6-cube Q6/{x~x+111111}",
+    "vertices": 32,
+    "degree": 6,
+    "edges": 96,
+    "spectrum": {"6":1,"2":15,"-2":15,"-6":1},
+    "frozen_point_representatives": [0,6,10,12,30,24,20,18,17,23,27,29,15,9,5,3],
+    "frozen_block_representatives": [13,11,7,1,19,21,25,31,28,26,22,16,2,4,8,14],
+    "edgewise_isomorphism_verified": true
+  },
+  "k3_boundary": "The executable theorem is an abstract incidence isomorphism. Primary literature identifies this standard 16_6 configuration as the node/trope Kummer configuration whose quartic minimal resolution is a K3 surface. A specific projective embedding/quartic equation and a chain map into the repo 45-point curvature precomplex are not constructed here.",
+  "status": "ABSTRACT_KUMMER_CONFIGURATION_IDENTIFIED__PROJECTIVE_K3_AND_CURVATURE_REALIZATION_OPEN"
+}
