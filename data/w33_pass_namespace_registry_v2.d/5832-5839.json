@@ -1,0 +1,11 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.fragment",
+  "range": [5832, 5839],
+  "owner": "openai_gpt5_6_sol",
+  "status": "RESERVED",
+  "created_utc": "2026-08-17T17:30:00Z",
+  "topic": "eight-probe packet: affine normalizer; 2-primary code interface; object-level M2(F2) two-qubit comparison; all-q matrix Fourier/Radon generalization; publication/CI path; and three outside-the-box structural probes",
+  "artifacts": [],
+  "verification": "Reservation only; no theorem claims yet.",
+  "boundary": "Promote only exact computations or source-backed statements. Numerical coincidences and physics analogies remain explicitly speculative unless independently derived."
+}
