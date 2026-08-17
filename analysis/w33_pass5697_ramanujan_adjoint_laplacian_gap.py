@@ -3,18 +3,12 @@
 
 For a 4-regular Ramanujan graph, every nontrivial adjacency eigenvalue satisfies
 |lambda|<=2 sqrt(3). Thus the combinatorial Laplacian L=4I-A has nonconstant gap
+lambda_1(L) >= 4-2 sqrt(3). For the affine su(3) site field,
+L_adj = L tensor I_8. Eight global constant directions are zero modes; every
+nonconstant graph mode is repeated eight times and inherits the graph gap.
 
-    lambda_1(L) >= 4-2 sqrt(3) ~= 0.535898.
-
-For the affine su(3) site field, the untwisted linearized adjoint Laplacian is
-
-    L_adj = L tensor I_8.
-
-There are exactly eight global constant zero modes; every nonconstant graph mode is
-repeated eight times and inherits the same finite graph gap. This is useful for an
-internal routing/gauge solver, but it is NOT the Yang--Mills mass gap: a physical
-mass needs dimensions, dynamics, gauge constraints and an infinite-volume/continuum
-statement rather than a finite expander spectral gap.
+This is a finite internal routing/gauge-Laplacian statement, not the Yang--Mills
+mass gap or confinement theorem.
 """
 from __future__ import annotations
 import json,math
@@ -27,7 +21,8 @@ OUT=ROOT/'data/PART_W33_PASS5697_RAMANUJAN_ADJOINT_LAPLACIAN_GAP.json'
 RAM=2*math.sqrt(3);LOWER=4-RAM
 
 def main():
-    E0=sorted(p5683.levi());neg0=set(p5683.NEG)
+    # Preserve the Pass5683 producer order because NEG indexes that exact edge list.
+    E0=p5683.levi();neg0=set(p5683.NEG)
     E1=p5693.lift_edges(E0,80,neg0)
     best1,_=p5693.best_two_matching_signing(E1,160);E2=p5693.lift_edges(E1,160,best1[3])
     best2,_=p5693.best_two_matching_signing(E2,320);E3=p5693.lift_edges(E2,320,best2[3])
@@ -37,12 +32,9 @@ def main():
       pos=[float(x) for x in ev if x>1e-7];gap=min(pos)
       assert gap>=LOWER-1e-7
       levels.append({'vertices':n,'scalar_laplacian_gap':gap,'adjoint_zero_modes':8,'first_positive_adjoint_eigenvalue':gap,'first_positive_adjoint_multiplicity_at_least':8})
-
-    # Direct Kronecker verification at the base level.
     L0=4*np.eye(80)-p5693.unsigned_adj(E0,80);Ladj=np.kron(L0,np.eye(8))
     ev=np.linalg.eigvalsh(Ladj);assert np.sum(abs(ev)<1e-7)==8
     first=float(min(x for x in ev if x>1e-7));assert abs(first-levels[0]['scalar_laplacian_gap'])<1e-8
-
     out={
       'pass':5697,'status':'RAMANUJAN_INTERNAL_ADJOINT_LAPLACIAN_HAS_UNIFORM_FINITE_GRAPH_GAP_NOT_YANG_MILLS_MASS_GAP',
       'universal_bound':{'adjacency_nontrivial_radius_max':RAM,'laplacian_gap_min':LOWER},
