@@ -1,0 +1,37 @@
+{
+  "all_perp_line_split": {
+    "collinear_triple": 15,
+    "separator": "minimum dual supports / doily-line incidence",
+    "total_8,8,8": 35,
+    "tricentric_triad": 20
+  },
+  "checks": "PASS",
+  "fusion_laws": {
+    "10+10": "8 (15 unordered pairs)",
+    "6+10": "8 (60 mixed pairs)",
+    "6+6": "8 (45 unordered pairs)",
+    "8+8": "8 (105 unordered pairs)"
+  },
+  "object": "doily Veldkamp space reconstructed from quadratic-evaluation code",
+  "passes": "6541-6544",
+  "projective_code_geometry": {
+    "nonzero_codewords": 31,
+    "projective_space": "PG(4,2)",
+    "vector_dimension": 5,
+    "veldkamp_lines": 155
+  },
+  "scope": "finite binary geometry/coding only",
+  "veldkamp_line_types": {
+    "collinear_triple": 15,
+    "pentad": 45,
+    "single_point": 15,
+    "tricentric_triad": 20,
+    "unicentric_triad": 60
+  },
+  "weight_composition_counts": {
+    "6,6,8": 45,
+    "6,8,10": 60,
+    "8,10,10": 15,
+    "8,8,8": 35
+  }
+}
