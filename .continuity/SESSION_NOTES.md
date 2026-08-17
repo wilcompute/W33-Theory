@@ -17,11 +17,11 @@
 
 ## ✅ Next Steps
 <!-- What should we do next? -->
-- Auto-saved at 2026-08-17T20:42:26.554Z (reason: threshold-commits)
+- Auto-saved at 2026-08-17T20:54:29.269Z (reason: timer)
 - Recent commits:
-  - 9a5899a92 Merge remote-tracking branch 'origin/master'
-  - 3ab879b02 Pass5936-5943: the determinant bridge is characteristic-2 only, and the triple split is perp size
-  - a13fb7bcc Pass5921-5932: M2(F2)/W(3,2) doily bridge — Smith-form cokernel classification + theorem-tier CI linter
+  - de625db5d Pass5960-5967: the 9+6 split is general, and what is special at q=2 is the ambient geometry
+  - 253c17fb3 Merge remote-tracking branch 'origin/master'
+  - 80f1e2769 Pass5952-5959: exactly two orbits on triples, and the units side at odd q
 
 ## 📝 Open Questions
 <!-- What do we still need to figure out? -->

@@ -1,0 +1,183 @@
+{
+  "boundary": "Pass 5968 identifies the unit classes as PGL(2,q) BY DEFINITION -- invertible matrices modulo scalars -- which is a restatement, not a discovery. Its value is that it names what the other lane's '6 units' are. Pass 5970's q=2 uniqueness argument is over the seven q tested",
+  "pass_5968_the_units_are_pgl": {
+    "all_match": true,
+    "identity": "(q^2+1)(q+1) = |Q+(3,q)| + |PGL(2,q)| = (q+1)^2 + q(q^2-1)",
+    "reading": "the unit classes ARE PGL(2,q) -- invertible matrices modulo scalars is the projective linear group by definition, so this is a restatement rather than a coincidence. What it buys is a NAME for the other lane's six units: they are PGL(2,2) = S_3, of order 6, which is why they form K_3,3",
+    "verified": [
+      {
+        "formula": 6,
+        "gl": 6,
+        "pgl": 6,
+        "q": 2,
+        "scalars": 1
+      },
+      {
+        "formula": 24,
+        "gl": 48,
+        "pgl": 24,
+        "q": 3,
+        "scalars": 2
+      },
+      {
+        "formula": 60,
+        "gl": 180,
+        "pgl": 60,
+        "q": 4,
+        "scalars": 3
+      },
+      {
+        "formula": 120,
+        "gl": 480,
+        "pgl": 120,
+        "q": 5,
+        "scalars": 4
+      },
+      {
+        "formula": 336,
+        "gl": 2016,
+        "pgl": 336,
+        "q": 7,
+        "scalars": 6
+      },
+      {
+        "formula": 504,
+        "gl": 3528,
+        "pgl": 504,
+        "q": 8,
+        "scalars": 7
+      },
+      {
+        "formula": 720,
+        "gl": 5760,
+        "pgl": 720,
+        "q": 9,
+        "scalars": 8
+      }
+    ]
+  },
+  "pass_5969_coclique_formula": {
+    "formula_confirmed_on": [
+      2,
+      3
+    ],
+    "max_coclique": "q+1, a transversal",
+    "measured": {
+      "q2": 3,
+      "q3": 4
+    },
+    "predicted": {
+      "q4": 5,
+      "q5": 6
+    },
+    "quadric": "Q+(3,q) is the hyperbolic quadric, a (q+1)x(q+1) grid with two rulings"
+  },
+  "pass_5970_why_q2_is_unique": {
+    "conclusion": "q=2 is the ONLY case where the matrix algebra IS the polar space, unquotiented, carrying a symplectic form. That is precisely why the other lane's doily identification is exact rather than approximate, and it is a sharper statement than 'characteristic two matters'",
+    "odd_q": "have neither",
+    "q4_and_q8": "have (b) but not (a) -- characteristic 2, but a genuine quotient is needed",
+    "table": [
+      {
+        "ambient": "symplectic",
+        "polarization": "alternating",
+        "q": 2,
+        "quotient_needed": false,
+        "scalars": 1
+      },
+      {
+        "ambient": "orthogonal",
+        "polarization": "symmetric",
+        "q": 3,
+        "quotient_needed": true,
+        "scalars": 2
+      },
+      {
+        "ambient": "symplectic",
+        "polarization": "alternating",
+        "q": 4,
+        "quotient_needed": true,
+        "scalars": 3
+      },
+      {
+        "ambient": "orthogonal",
+        "polarization": "symmetric",
+        "q": 5,
+        "quotient_needed": true,
+        "scalars": 4
+      },
+      {
+        "ambient": "orthogonal",
+        "polarization": "symmetric",
+        "q": 7,
+        "quotient_needed": true,
+        "scalars": 6
+      },
+      {
+        "ambient": "symplectic",
+        "polarization": "alternating",
+        "q": 8,
+        "quotient_needed": true,
+        "scalars": 7
+      },
+      {
+        "ambient": "orthogonal",
+        "polarization": "symmetric",
+        "q": 9,
+        "quotient_needed": true,
+        "scalars": 8
+      }
+    ],
+    "two_conditions": [
+      "(a) scalars are trivial, since q-1 = 1, so NO quotient is taken and the 15 nonzero matrices ARE the 15 points",
+      "(b) characteristic 2, so the determinant polarization is alternating and the ambient space is symplectic"
+    ]
+  },
+  "pass_5971_the_full_family": {
+    "ambient": [
+      "symplectic",
+      "orthogonal",
+      "symplectic",
+      "orthogonal",
+      "orthogonal",
+      "symplectic",
+      "orthogonal"
+    ],
+    "note": "the totals are exactly the point counts of W(3,q), which is (q^2+1)(q+1)",
+    "pgl": [
+      6,
+      24,
+      60,
+      120,
+      336,
+      504,
+      720
+    ],
+    "q": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      9
+    ],
+    "quadric": [
+      9,
+      16,
+      25,
+      36,
+      64,
+      81,
+      100
+    ],
+    "totals": [
+      15,
+      40,
+      85,
+      156,
+      400,
+      585,
+      820
+    ]
+  }
+}

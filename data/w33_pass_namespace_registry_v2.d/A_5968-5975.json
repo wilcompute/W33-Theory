@@ -1,0 +1,8 @@
+{
+  "lo": 5968,
+  "hi": 5975,
+  "lane": "A",
+  "track": "A",
+  "topic": "units are PGL(2,q); quadric coclique is q+1; q=2 unique because scalars trivial AND char 2",
+  "reserved": "2026-08-17"
+}
