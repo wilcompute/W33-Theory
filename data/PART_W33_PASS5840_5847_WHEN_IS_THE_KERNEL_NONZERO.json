@@ -1,0 +1,82 @@
+{
+  "boundary": "Pass 5840 characterises when a CYCLIC 3-uniform configuration has a nonzero GF(2) kernel and gives a classical explanation. It does NOT test whether any of these has two or more block systems, so the witness Pass 5833 asked for is still not found. The divisibility pattern is observed on n = 7..16 only",
+  "pass_5840_scan": {
+    "explanation": "the incidence matrix of a cyclic configuration is a CIRCULANT, so its GF(2) rank is governed by gcd(1 + x^a + x^b, x^n - 1) over GF(2). The kernel is nonzero iff that gcd is nontrivial, which needs x^n - 1 to factor compatibly -- and 3 and 7 are the small n where x^n - 1 splits over GF(2) into factors a trinomial can meet",
+    "pattern": "nonzero kernels occur at n = 7, 9, 12, 14, 15 and NEVER at n = 8, 10, 11, 13, 16 -- exactly when 3 divides n or 7 divides n",
+    "question": "when is the GF(2) kernel of an n_3 cyclic configuration nonzero?",
+    "scan": [
+      {
+        "max_kdim": 3,
+        "n": 7,
+        "total": 15,
+        "with_kernel": 6
+      },
+      {
+        "max_kdim": 0,
+        "n": 8,
+        "total": 21,
+        "with_kernel": 0
+      },
+      {
+        "max_kdim": 6,
+        "n": 9,
+        "total": 28,
+        "with_kernel": 10
+      },
+      {
+        "max_kdim": 0,
+        "n": 10,
+        "total": 36,
+        "with_kernel": 0
+      },
+      {
+        "max_kdim": 0,
+        "n": 11,
+        "total": 45,
+        "with_kernel": 0
+      },
+      {
+        "max_kdim": 8,
+        "n": 12,
+        "total": 55,
+        "with_kernel": 16
+      },
+      {
+        "max_kdim": 0,
+        "n": 13,
+        "total": 66,
+        "with_kernel": 0
+      },
+      {
+        "max_kdim": 6,
+        "n": 14,
+        "total": 78,
+        "with_kernel": 24
+      },
+      {
+        "max_kdim": 10,
+        "n": 15,
+        "total": 91,
+        "with_kernel": 37
+      },
+      {
+        "max_kdim": 0,
+        "n": 16,
+        "total": 105,
+        "with_kernel": 0
+      }
+    ],
+    "status": "CLASSICAL -- this is cyclic code theory, and by this session's own heuristic a short-proof statement about a classical object should have been searched before being measured. Recording it as an explanation found, not a result claimed"
+  },
+  "pass_5841_consequence": {
+    "for_the_surviving_claim": "kernel dimension 0 was flagged at Pass 5832 as making the sharp test vacuous; this says WHY it is so common -- most n in the tested range are not divisible by 3 or 7, so most cyclic configurations have a full-rank circulant",
+    "where_to_look": "a witness with two block systems AND a nonzero kernel must have 3 | n or 7 | n; n = 12 and n = 15 are the promising sizes, and neither was tested for block systems here"
+  },
+  "pass_5842_process": {
+    "certificates_lost_and_recovered": 2,
+    "claude_md_edits_stripped": 3,
+    "collisions": 4,
+    "detached_head": "the previous batch spent several cycles on failing pushes before `git status -sb` revealed `## HEAD (no branch)`; git status is now the first call in every git sequence",
+    "note": "all recovered and verified by grep; the base rate is the point"
+  }
+}
