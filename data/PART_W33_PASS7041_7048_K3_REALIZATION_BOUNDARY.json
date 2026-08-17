@@ -1,0 +1,37 @@
+{
+  "passes": [7041,7042,7043,7044,7045,7046,7047,7048],
+  "finite_transport_precomplex": {
+    "source": "exploration/w33_transport_twisted_precomplex_bridge.py",
+    "explicitly_constructed": true,
+    "curvature_block": "curvature_iq=(d1 d0) invariant-row/sign-column block over F3",
+    "claimed_off_diagonal_rank_in_source_summary": 36,
+    "finite_object_status": "REAL INTERNAL FINITE OBJECT"
+  },
+  "triangle_localization": {
+    "source": "exploration/w33_k3_mixed_plane_triangle_row_curvature_witness_bridge.py",
+    "supported_transport_triangles": 2428,
+    "supported_rows": 4046,
+    "status": "DERIVED FROM THE FINITE PRECOMPLEX"
+  },
+  "synthetic_deformation": {
+    "source": "scripts/w33_k3_deformation_theory.py",
+    "allocates_zero_template": true,
+    "sets_one_entry_by_hand": true,
+    "source_admits_actual_k3_existence_open": true,
+    "status": "MODEL PERTURBATION, NOT K3 DATA"
+  },
+  "fail_closed_scanner": {
+    "source": "scripts/w33_k3_curvature_witness_scan.py",
+    "requires_loaded_object_hash_and_coordinate_certificate": true,
+    "status": "NO ACTUAL K3 OBJECT LOADED"
+  },
+  "theorem_boundary": "The finite transport object and its curvature are real. What remains unproved is that an actual K3 geometric/cochain object realizes this finite precomplex or its 2428x36 active block.",
+  "missing_certificate": [
+    "named K3 geometric/cochain source object",
+    "stable source hash",
+    "explicit basis/coordinate map into the finite C0,C1,C2 carrier",
+    "proof or executable check that the K3 differential/connection maps to d0,d1",
+    "independent comparison of induced curvature with curvature_iq"
+  ],
+  "status": "FINITE_CURVED_PRECOMPLEX_CLOSED__K3_REALIZATION_OPEN"
+}
