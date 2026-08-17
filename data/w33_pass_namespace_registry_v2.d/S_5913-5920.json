@@ -1,0 +1,12 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.fragment",
+  "range": [5913, 5920],
+  "lane": "S",
+  "owner": "openai_gpt5_6_sol",
+  "status": "RESERVED",
+  "created_utc": "2026-08-17T19:18:00Z",
+  "topic": "object-level M2(F2) determinant to two-qubit W(3,2) bridge: explicit symplectic isometry, 9+6 grid/complement identification, commutation graph verification, hyperplane interpretation, ring-line prior-art boundary, and publication/replay integration",
+  "artifacts": [],
+  "verification": "Reservation only. Promote only explicit finite-field maps and source-grounded two-qubit geometry statements.",
+  "boundary": "This packet identifies a finite F2 matrix/Pauli geometry. It does not identify the q=5 W33 carrier with physical two-qubit states, entanglement classes, or a continuum theory."
+}
