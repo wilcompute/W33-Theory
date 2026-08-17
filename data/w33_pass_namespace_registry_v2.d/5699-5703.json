@@ -1,0 +1,31 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.fragment",
+  "range": [5699, 5703],
+  "owner": "corrected_remote_batch",
+  "status": "CORRECTED_REPLAYABLE__PUBLICATION_SOURCE_UNINTEGRATED",
+  "created_utc": "2026-08-17T06:09:51Z",
+  "tasks": {
+    "5699": "factor the Ihara determinant across three explicit 2-lifts in a separate deterministic factor-pair tower and state its provenance boundary",
+    "5700": "verify the eighth-trace excess identity and classify the two ordered-cycle orbits by point-rooted versus line-rooted grade",
+    "5701": "certify exact positive definiteness of 12I minus A_signed squared for the three selected parent signings",
+    "5702": "report exact low moments and a fixed-grid numerically quadratured Kesten-McKay CDF discrepancy without asymptotic or random-matrix interpretation",
+    "5703": "reconstruct W(3,9) and record that its independence bounds are a Pass5226-5227 rediscovery, not a new result"
+  },
+  "deliverables": {
+    "report": "analysis/PASS5699_5703_tower_zeta_frontier_report.md",
+    "prior_art": "analysis/PASS5699_5703_external_prior_art_and_corrections.md",
+    "insert": "analysis/PASS5699_5703_tower_zeta_insert.tex",
+    "homepage_source": "analysis/PASS5699_5703_index_insert.html",
+    "runner": "analysis/w33_pass5699_5703_runner.py",
+    "tests": "tests/test_w33_pass5699_5703_tower_zeta_corrections.py"
+  },
+  "corrections": {
+    "tower_identity": "The construction is a separate globally sorted factor-pair tower; it is not Pass5683/5693 and no isomorphism comparison has been computed.",
+    "orientation": "The edge signing is not Pass5696's affine determinant character, so no orientation-twisted partition-function interpretation survives.",
+    "cycle_orbits": "The two 12960-element ordered-cycle orbits are point-rooted and line-rooted; chirality, duality merger, and regular-action claims are withdrawn.",
+    "statistics": "The three finite values are sampled CDF discrepancies with numerical quadrature, not exact KS distances; GOE and chaos language is withdrawn.",
+    "w39": "Pass5226-5227 owns the certified 50 <= alpha(W(3,9)) <= 82 interval and baseline 46; Pass5703 adds no independence-number result.",
+    "q5": "The former q5 identification template is obsolete; Pass5667-5674 is the executable owner."
+  },
+  "boundary": "Finite results only. No identification with either pre-existing Ramanujan tower, no graph-edge/affine-orientation weld, no point-line duality, no asymptotic equidistribution rate, no GOE or chaos inference, no new W(3,9) independence bound, and no physical partition-function or continuum claim. Publication sources remain unintegrated pending cross-packet reconciliation."
+}

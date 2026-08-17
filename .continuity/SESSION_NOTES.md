@@ -17,11 +17,11 @@
 
 ## ✅ Next Steps
 <!-- What should we do next? -->
-- Auto-saved at 2026-08-17T15:21:21.070Z (reason: timer)
+- Auto-saved at 2026-08-17T15:23:09.752Z (reason: threshold-commits)
 - Recent commits:
+  - a07e14671 Pass5691-5698: the code carries the whole group, plus a symplectic power tower
   - 0159a6a5b Reserve Pass5691-5698 Track A: typing Aut(code), the p=2 law, Sym2 generality
   - fdd9dcd36 Pass5683-5690: W(3,3) is NOT rank-rigid, and non-collinearity rank is dim Sym^2
-  - cbef14f3a Reserve Pass5683-5690 Track A: rook kernel, W(3,3) adjacency, block-system generality
 
 ## 📝 Open Questions
 <!-- What do we still need to figure out? -->

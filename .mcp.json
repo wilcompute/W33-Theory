@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "continuity": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "c:\\Users\\wiljd\\.vscode-insiders\\extensions\\hackerware.continuity-ultimate-3.0.130\\packages\\mcp-server\\dist\\index.js"
+      ],
+      "env": {
+        "CONTINUITY_MAX_INJECTIONS_PER_CATEGORY": "3",
+        "CONTINUITY_INJECTION_COOLDOWN_MS": "180000",
+        "CONTINUITY_DECISIONS_JOURNAL": "true",
+        "CONTINUITY_ENV": "prod",
+        "CONTINUITY_POSTHOG_API_KEY": "phc_sfE5o4pLWmoNmCStEFrSTuDxFDLETCz7VXwx5iJVZP5i",
+        "CONTINUITY_POSTHOG_HOST": "https://us.i.posthog.com",
+        "CONTINUITY_MCP_GLOBAL_STORAGE_PATH": "c:\\Users\\wiljd\\AppData\\Roaming\\Code - Insiders\\User\\globalStorage\\hackerware.continuity-ultimate",
+        "CONTINUITY_PROJECT_PATH": "c:\\Repos\\Theory of Everything"
+      }
+    }
+  }
+}
