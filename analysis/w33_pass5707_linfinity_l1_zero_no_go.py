@@ -75,8 +75,11 @@ def main():
       'pass':5707,
       'status':'CORRECTION__NONZERO_FIREWALL_JACOBIATOR_CANNOT_BE_REPAIRED_BY_L3_WHEN_L1_IS_ZERO',
       'repo_evidence':{
-        'builder':'tools/build_linfty_firewall_extension.py',
+        # Compatibility alias retained because the focused regression and any
+        # downstream certificate consumers already use this key.
+        'builder_declares_l1_zero':declares_zero,
         'builder_relevant_differential_zero':declares_zero,
+        'builder':'tools/build_linfty_firewall_extension.py',
         'builder_records_firewall_anomaly':builder_has_anomaly,
         'builder_claims_l3_repair':builder_claims_l3_repair,
         'pass5684_records_bilinear_jacobiator_expansion':weld_has_jacobi_expansion,
@@ -92,7 +95,7 @@ def main():
       ],
       'minimal_extension_statement':'If a new differential l1:Y->g is introduced, existence requires im(J) subset im(l1). Any solution l3 is then affine over ker(l1); therefore the repair-freedom dimension cannot be stated until l1 and the exact Jacobiator image are specified.',
       'CE2_reinterpretation':'The later local CE2 alpha machinery computes coboundaries built from l2 and can be useful as a deformation solver. That CE differential is not the unary L_infinity bracket l1, so it does not cure the stated l1=0 arity-3 contradiction.',
-      'replay_contract':'Checks source-level structural claims rather than prose-sensitive Jacobiator keywords.',
+      'replay_contract':'Checks source-level structural claims rather than prose-sensitive Jacobiator keywords while preserving the established certificate schema.',
       'physics_boundary':'This is an algebraic consistency correction. All confinement/QCD readings attached to the old l1=0 l3 story are unsupported until a valid higher-algebra model is constructed.'
     }
     OUT.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
