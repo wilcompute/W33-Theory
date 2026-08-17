@@ -1,0 +1,69 @@
+\section{Passes 5725--5732: torsion-center pairing, 234-dimensional Jacobi defect, and the finite Heisenberg family bridge}
+\label{sec:pass5725-5732}
+
+Passes 5720--5724 left an exact integral torsion doublet
+\[
+H_1(X;\mathbb Z)\cong(\mathbb Z/3)^2
+\]
+carrying the residual \(GL(2,3)\) action.  The first result of the present packet is a sharp observability boundary.  The eight nonzero covectors of \(H^*\) form one \(GL(2,3)\)-orbit, the only fixed covector is zero, and every nonzero torsion class is detected by exactly six nonzero covectors.  Thus
+\[
+W_{t,\ell}(h)=\omega^{t\ell(h)},\qquad t\in\{1,2\},
+\]
+provides a nontrivial center character after a charge \(\ell\) is chosen, but there is no nonzero full-affine-equivariant scalar map \(H\to Z_3\).  The canonical object is the contragredient evaluation pairing \(H^*\times H\to\mathbb F_3\).
+
+The firewall higher-algebra obstruction is now exact.  All
+\[
+\binom{248}{3}=2{,}511{,}496
+\]
+unordered basis triples were enumerated for the filtered E8 binary bracket; \(32{,}400\) have nonzero Jacobiator.  The integer Jacobiator matrix has modular rank \(234\) over each of \(\mathbb F_{1{,}000{,}003}\) and \(\mathbb F_{1{,}000{,}033}\), while exactly \(234\) output basis coordinates occur.  Therefore
+\[
+\boxed{\operatorname{rank}_{\mathbb Q}J=234}.
+\]
+In fact \(\operatorname{im}J\) is the full coordinate subspace on those \(234\) occupied coordinates, leaving a \(14\)-dimensional untouched coordinate complement.  Any two-term arity-three repair
+\[
+l_1:Y\to\mathfrak g,\qquad l_1(l_3)=-J
+\]
+must have
+\[
+\boxed{\dim Y\ge234}.
+\]
+The lower bound is attained at arity three by \(Y=\operatorname{im}J\), \(l_1\) the inclusion, and \(l_3=-J\); in this minimal model the lift is unique because \(l_1\) is injective.  Arity four and all higher \(L_\infty\) identities remain separate open equations.  Hence the old small \(l_3\)-repair picture is ruled out for the actual firewall defect.
+
+A finite family bridge also closes, with an important correction to Pass5708.  The matrices used there,
+\[
+Z=\operatorname{diag}(1,\omega,\omega^2),\qquad X=(012),
+\]
+do not generate full \(SU(3)\); they generate the order-\(27\) qutrit Heisenberg group \(H_3\).  The old scalar-commutant conclusion nevertheless survives because its three-dimensional Schrödinger representation is irreducible.  Moreover
+\[
+\boxed{H_3/Z(H_3)\cong\mathbb F_3^2\cong H_1(X;\mathbb Z)}.
+\]
+After a torsion-basis choice, \(e_1\mapsto[X]\) and \(e_2\mapsto[Z]\) therefore give an explicit projective torsion action on the same \(\mathbb C^3\) multiplicity factor appearing in the E8 \((27,3)\) branch.  This is an exact finite-module intertwiner, not an identification of the affine Lie \(\mathfrak{su}(3)\) with the E8 family \(SU(3)\) Lie algebra.
+
+The normalizer sharpens the bridge.  Qutrit Fourier and quadratic-phase gates implement determinant-\(+1\) symplectic transformations, while complex conjugation sends \(X\mapsto X\), \(Z\mapsto Z^{-1}\).  Thus the exact determinant character
+\[
+\det:GL(2,3)\longrightarrow\mathbb F_3^\times\cong C_2
+\]
+separates the unitary Clifford \(SL(2,3)\) sector from the determinant-reversing antiunitary extended-Clifford coset.  The same bit records preservation versus reversal of the torsion alternating form.
+
+The family-symmetry breaking lattice on \(\operatorname{Herm}(3)\) is
+\[
+\begin{array}{c|ccccccc}
+G&1&Z_3^{\rm scalar}&\langle X\rangle&\langle Z\rangle&C_2&S_3&H_3\\\hline
+\dim_{\mathbb R}\operatorname{Herm}(3)^G&9&9&3&3&5&2&1.
+\end{array}
+\]
+A single cyclic \(C_3\) can therefore support a generic nondegenerate three-level operator, whereas \(S_3\) forces a doublet and the irreducible Heisenberg action forces exact degeneracy.  The \(X\)- and \(Z\)-cyclic axes are Fourier conjugate with overlap magnitude \(1/\sqrt3\); nontrivial finite mixing is consequently a relative mismatch between independently chosen residual axes, not a property of one cyclic sector alone.  No observed mass or CKM/PMNS value is inferred.
+
+On the Ramanujan tower, complementary 2-of-4 matching signings form three switching classes.  Signed spectral radius is switching- and automorphism-invariant, and at parent sizes \(160,320,640,1280\) the three candidate radii are strictly ordered.  Hence \(\arg\min\rho\) gives a unique label-independent choice on each known transported candidate triple and removes the raw three-colour naming gauge.  The candidate triple itself still depends on the chosen perfect-matching factorization, so an all-level automorphism-canonical recursion is not yet proved.
+
+Two outside-box mixed-sector tests close negatively.  For trivial action,
+\[
+H^2(C_3,C_2)=H^2(C_2,C_3)=0,
+\]
+so adjoining the ternary torsion label to the deck/class-D \(Z_2\) label creates no new mixed central extension; \(C_3\times C_2\cong C_6\) splits.  A noncentral \(C_3:C_2\cong S_3\) route exists only if deck conjugation is independently identified with the qutrit antiunitary inversion.  Likewise
+\[
+\operatorname{Hom}(C_2,C_3)=\operatorname{Hom}(C_3,C_2)=0,
+\]
+so Chinese-remainder packaging alone does not couple the binary and ternary cohomology sectors.  The determinant map above is the exact cross-prime orientation hinge, but no canonical map from the binary Ramanujan switching state into that hinge is presently known.
+
+All claims in this section are finite algebraic or graph-theoretic statements.  They do not derive QCD color, confinement, physical generations, observed masses, a continuum anomaly, spacetime, or laboratory performance.
