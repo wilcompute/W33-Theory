@@ -126,6 +126,41 @@ Ordered by how hard they are to catch. Each was found the expensive way.
    re-derived a rank law the repo had already proved and formalized in Lean, and
    whose two halves are published (Sastry–Sin; Chandler–Sin–Xiang) and cited here.
 
+### Failure mode six: right result, wrong subject (added 2026-08-17)
+
+The five modes above all assume the claim is *about* the object. A sixth does not.
+
+**Pass 5744-5759 measured a rank law on W(3,q), proved it, verified it at six values of q,
+and attributed it to the symplectic form. Then one test killed nine passes: every
+nondegenerate bilinear form attains the same bound - symmetric, diagonal, random,
+degenerate alike. The law is `C(e+r-1,e)` in the *rank* of the form. Nothing in it was
+about W(3,q).**
+
+The claim was true, proportionate, well-witnessed, and novel to the corpus. It was simply
+about bilinear forms, computed on a carrier that happened to be a symplectic polar space.
+
+**The test is one line: change the object and see whether the result changes.** If it does
+not, the result was never about the object. Run it *before* writing the framing.
+
+**Three calibrations from the same thread:**
+
+- *Arguments rediscover; computations discover.* Of ten claims audited, every one derived
+  from a short argument turned out classical (four for four); every survivor came from a
+  construction, a GAP typing, or an explicit search. **A proof that fits in a few lines,
+  about a classical object, is a reason to search the literature before writing.**
+- *An empty search is a hypothesis about your pattern, not a fact about the corpus.* Three
+  of four empty results in that session were bad patterns - one grep matched only `#` and
+  `**` while the banner it sought began with `>`. **Give every negative a positive
+  control**: search for something you know is there, confirm the pattern fires, then trust
+  the negative.
+- *Derive the sentence from the array.* Three claims that session contradicted a table
+  printed directly above them. None was a reasoning error; all three were predictions
+  written beside output that had not been read.
+
+**Pass-number reservations must be pushed AND the push VERIFIED before work begins.**
+Passes 5744 and 5776 both collided with the other lane and needed renumbering; in the
+second case the reservation commit was made but the push was silently rejected.
+
 ### The operational prior
 
 Trust spectral / algebraic / representation-theoretic claims by default; treat
