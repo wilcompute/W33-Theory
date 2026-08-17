@@ -1,0 +1,57 @@
+\subsection{The doily code as a point-derived bent biplane}
+\label{subsec:bent-biplane-klein}
+
+The quadratic-evaluation code of the doily admits a useful one-coordinate completion.  On
+$V=\mathbb F_2^4$ take the standard symplectic form $B$ and
+$q_0(x)=x_0x_1+x_2x_3$.  The previously certified punctured code is
+\[
+ C=\{(B(a,x)+tq_0(x))_{x\ne0}:a\in V,\ t\in\mathbb F_2\}
+   =[15,5,6]_2.
+\]
+Restoring the zero coordinate and the affine constant gives
+\[
+ D=\langle RM(1,4),q_0\rangle=[16,6,6]_2,
+ \qquad
+ W_D=1+16y^6+30y^8+16y^{10}+y^{16}.
+\]
+Both $C$ and $D$ are self-orthogonal.  Their generalized Hamming weights are
+$(6,10,12,14,15)$ and $(6,10,12,14,15,16)$ respectively, and both have
+covering radius six.
+
+The sixteen minimum supports of $D$ form a symmetric $2$-$(16,6,2)$ biplane:
+every two blocks meet in two points.  Fixing the restored zero coordinate recovers the
+entire doily Veldkamp-point taxonomy.  The ten blocks avoiding the distinguished point
+shorten to the ten weight-six grid-complement words of $C$; the six blocks through it,
+after deleting that point, are the six ovoids; and the thirty weight-eight words pair by
+complement, with the fifteen representatives vanishing at the distinguished coordinate
+shortening to the fifteen perp words.  Thus one point of the biplane derives
+\[
+ 10\text{ grids}+15\text{ perps}+6\text{ ovoids}=31.
+\]
+The full biplane automorphism group is
+\[
+ \operatorname{Aut}(\mathcal B)=2^4\!:\operatorname{Sp}(4,2)
+ \cong2^4\!:\!S_6,
+ \qquad |\operatorname{Aut}(\mathcal B)|=11520.
+\]
+
+There is simultaneously a Klein-geometric description of the earlier $15+20$ line split.
+The $35$ lines of $PG(3,2)$ are the $35$ binary points of the Klein quadric
+\[
+ p_{01}p_{23}+p_{02}p_{13}+p_{03}p_{12}=0\subset PG(5,2).
+\]
+For the standard symplectic form, isotropy is exactly the hyperplane condition
+\[
+ p_{01}+p_{23}=0,
+\]
+so its section consists of the $15$ doily lines and the remaining $20$ Klein points are the
+nonisotropic lines.  Symplectic polarity pairs those $20$ lines into ten skew pairs; their
+six-point unions are exactly the ten grid-complement supports above.  If $M$ is their
+$10\times15$ incidence matrix, then
+\[
+ MM^{\mathsf T}=4I_{10}+2J_{10},
+ \qquad
+ \operatorname{Spec}(MM^{\mathsf T})=\{24^1,4^9\}.
+\]
+This is a finite coding/design/projective-geometric theorem only; no physical identification
+is inferred from it.
