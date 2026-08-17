@@ -1,0 +1,42 @@
+{
+  "boundary": "Pass 5896 REFUTES this thread's own trivial-stabiliser conjecture and CORRECTS Pass 5888's reading of its sampling. The q=3 stabiliser is computed EXACTLY over all 51840 group elements; the q=5 figure remains an estimate from 3000 samples and is NOT exact. Pass 5900's 378 findings over 5,124 certificates are CANDIDATES, not verdicts, and the guard was written by the same author whose work it flags at the corpus rate",
+  "pass_5896_exact_q3": {
+    "alpha": 7,
+    "group_order_generated": 51840,
+    "orbit_of_the_set": 2880,
+    "orbit_stabiliser_check": "51840 / 18 = 2880 = the independently computed orbit size",
+    "proved_optimal": true,
+    "q": 3,
+    "stabiliser_order": 18,
+    "trivial": false,
+    "true_order": 51840,
+    "verdict": "the trivial-stabiliser conjecture is REFUTED at the smallest odd q"
+  },
+  "pass_5897_not_an_orbit_still": {
+    "argument": "a transitive action on 7 points needs 7 | |Stab|, and 18 = 2 * 3^2",
+    "question": "is the 7-set a single orbit of its own stabiliser?",
+    "set_size": 7,
+    "stabiliser_order": 18,
+    "verdict": "NO. So the 7-set is not an orbit even of its own stabiliser -- the stabiliser acts with several orbits summing to 7. The orbit-construction route stays closed, but for a sharper reason than 'no symmetry'"
+  },
+  "pass_5898_correcting_5888": {
+    "corrected_reading": "the q=5 stabiliser is NOT trivial; its order is about 4680000/3000 = 1560, which is the number Pass 5888 dismissed. The dismissal was wrong in one direction and the 'trivial' reading wrong in the other",
+    "lesson": "a sampling density is uninterpretable without a calibration point. q=3 was cheap and exact and would have supplied it before q=5 was sampled at all",
+    "what_5888_said": "1 hit in 3000 is consistent with a TRIVIAL stabiliser, and an extrapolated ~1560 is meaningless",
+    "what_q3_shows": "index 2880 gives sampling density 1/2880, essentially exactly the 1/3000 measured at q=5"
+  },
+  "pass_5899_what_survives": {
+    "now_false": "that those stabilisers are trivial",
+    "remarkable": "the index is ~2880 at q=3 and ~3000 at q=5 -- close enough to be worth an exact q=5 computation before anything is read into it",
+    "still_true": "maximum partial ovoids of W(3,q) for odd q have stabilisers that are TINY RELATIVE TO THE GROUP -- index 2880 at q=3, roughly 3000 at q=5 -- and are not single orbits of any large subgroup",
+    "why_constructions_fail": "not an absence of symmetry but an absence of TRANSITIVE symmetry: |Stab| = 18 cannot act transitively on 7 points, so no subgroup orbit equals the optimum"
+  },
+  "pass_5900_corpus_sweep": {
+    "findings": 378,
+    "flagged_files": 156,
+    "my_share": "3 of my own 39 recent certificates were flagged, which is roughly the corpus rate -- my work is not unusually bad here, and not unusually good",
+    "rate_pct": 3.0,
+    "reading": "3% is a usable rate -- comparable to check_transitivity's 0.8% and far below check_certificate_rediscovery's 70%. These are candidates where a certificate's universal language or witness count does not reach its stated scope, not verdicts",
+    "scanned": 5124
+  }
+}
