@@ -1,0 +1,33 @@
+{
+  "boundary": "Pass 6072's inconsistency argument is pure logic and needs no computation. The graded-ideal search is exhaustive over GRADED subspaces only -- a non-graded proper ideal is not excluded, so simplicity is SUPPORTED, not proved. The true image dimension of rho is still not computed",
+  "pass_6072_the_layers_are_inconsistent": {
+    "argument": "ker(rho) is the kernel of a Lie algebra homomorphism, hence ALWAYS an ideal. If g/Z is simple and rho is nonzero then ker(rho) = 0 and the image has dimension 648. If the image has dimension 24 then ker(rho) is a 624-dimensional proper ideal and g/Z is NOT simple",
+    "layer_2_claims": "g/Z is simple, dim 648",
+    "layer_3_claims": "image dim 24, and ker(rho) = 0",
+    "no_computation_needed": true,
+    "verdict": "MUTUALLY INCONSISTENT -- at most one layer can hold"
+  },
+  "pass_6073_which_one_survives": {
+    "caveat": "the search covers graded subspaces only. A non-graded proper ideal would not be found by it, so this supports simplicity without proving it",
+    "graded_ideal_search": {
+      "dim_per_grade": 81,
+      "nonzero_grades": 8,
+      "proper_grade_closed_subsets": 0,
+      "total": 648
+    },
+    "reading": "no proper GRADED ideal exists, which supports Layer 2's simplicity. That makes Layer 3's 24-dimensional image the claim that must be wrong",
+    "so": "the most likely resolution is that the algebra is simple as claimed and the representation rho is either not the map described, or its image was miscounted -- but the E6 / Albert bridge fails either way, since it needs a FAITHFUL 27-dimensional image and 24 is neither 27 nor faithful"
+  },
+  "pass_6074_the_grading_is_the_bottom_rung": {
+    "grade_map": "grade: F_3^6 -> F_3^2, with omega(u,v) = u1 v2 - u2 v1",
+    "status": "an observation about the construction, not a new theorem",
+    "the_connection": "the Golay Lie algebra is built on the BOTTOM RUNG of the same symplectic ladder this session climbed: W(1,q), W(3,q), W(5,q). The bracket is literally the symplectic form on that rung",
+    "what_that_is": "the rank-1 symplectic space over F_3 -- W(1,3) -- with 4 projective points and 8 nonzero vectors, and the 8 nonzero grades index the algebra's grading exactly"
+  },
+  "pass_6075_what_should_happen": {
+    "the_27": "recompute. The document gives V = F_3^6/W with |V| = 27 and 27x27 matrices, so the representation SPACE is 27-dimensional even if the image is 24. Those are different numbers and the summary conflates them",
+    "the_algebra": "keep -- Jacobi verified, dimensions correct, no graded ideal found",
+    "the_e6_bridge": "retract -- it needs faithfulness that the document's own next line denies",
+    "the_simplicity_claim": "keep provisionally -- supported by the graded search, not proved"
+  }
+}
