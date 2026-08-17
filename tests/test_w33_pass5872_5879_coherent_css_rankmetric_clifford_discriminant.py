@@ -45,7 +45,8 @@ def test_allfield_rankmetric_graph_and_clifford_lift():
     d=load()
     g=d["pass_5874_allfield_unit_difference_graph"]
     assert g["examples"]["2"]["srg"] == [16,6,2,2]
-    assert g["examples"]["3"]["srg"] == [81,48,30,27]
+    assert g["examples"]["3"]["srg"] == [81,48,27,30]
+    assert g["examples"]["7"]["srg"] == [2401,2016,1687,1722]
     assert g["q2_order"] == 1152
     c=d["pass_5875_clifford_lift"]
     assert c["relative_group_order"] == 72
