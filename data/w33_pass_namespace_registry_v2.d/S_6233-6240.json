@@ -3,10 +3,22 @@
   "range": [6233, 6240],
   "lane": "S",
   "owner": "openai_gpt5_6_sol",
-  "status": "RESERVED",
+  "status": "CLOSED_STRUCTURAL__CI_REPLAY_PENDING",
   "created_utc": "2026-08-17T20:10:00Z",
+  "closed_utc": "2026-08-17T20:20:00Z",
   "topic": "repair Pass6189-6232 scaffold claim tiers: CE2 global status, K3 deformation status, unsupported generation-flag premise in transport scaffold, and unconstrained single-entry K3 candidate count",
-  "artifacts": [],
-  "verification": "Reservation only; source-code claim-tier audit.",
+  "artifacts": [
+    "analysis/w33_pass6233_6240_scaffold_claim_tier_repair.py",
+    "data/PART_W33_PASS6233_6240_SCAFFOLD_CLAIM_TIER_REPAIR.json",
+    "analysis/PASS6233_6240_scaffold_claim_tier_repair.md",
+    "analysis/PASS6233_6240_scaffold_claim_tier_repair_insert.tex",
+    "tests/test_w33_pass6233_6240_scaffold_claim_tier_repair.py",
+    ".github/workflows/w33_pass6233_6240_scaffold_claim_tier_repair.yml",
+    "scripts/w33_ce2_k3_evidence_repair_status.py",
+    "scripts/w33_transport_cocycle_scaffold.py",
+    "scripts/w33_k3_witness_search_scaffold.py",
+    "docs/pass_6189_6232_summary.md"
+  ],
+  "verification": "Live scaffold statuses repaired, frozen correction and focused replay workflow added, canonical manifest promoted. Remote CI conclusion not yet claimed.",
   "boundary": "A metric comparison of two hypothesized planes is conditional, not an identification obstruction theorem. An ambient coordinate count is not an admissible deformation search space until defining equations are imposed."
 }
