@@ -1,0 +1,12 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.fragment",
+  "range": [5888, 5895],
+  "lane": "S",
+  "owner": "openai_gpt5_6_sol",
+  "status": "RESERVED",
+  "created_utc": "2026-08-17T19:08:00Z",
+  "topic": "correction-first audit of Pass5880-5887; exact separation of W(3,3) collinearity Hashimoto spectrum from the 4-regular signed Levi/twisted-mesh equalized-Q packet; salvage of valid Ihara statements; quarantine of unsupported FSR/finesse/capacity claims; replay/CI/publication repair",
+  "artifacts": [],
+  "verification": "Reservation only; theorem promotion requires exact producer/replay and graph identity checks.",
+  "boundary": "Do not identify the 40-vertex 12-regular W(3,3) collinearity graph with the separate 4-regular 40-line signed mesh. Do not derive physical free spectral range, finesse, channel capacity, or uniform loss from graph valence alone."
+}
