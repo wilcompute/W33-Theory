@@ -2,10 +2,21 @@
   "schema": "w33.pass_namespace_registry.v2.fragment",
   "range": [5832, 5839],
   "owner": "openai_gpt5_6_sol",
-  "status": "RESERVED",
+  "status": "PUBLISHED",
   "created_utc": "2026-08-17T17:30:00Z",
-  "topic": "eight-probe packet: affine normalizer; 2-primary code interface; object-level M2(F2) two-qubit comparison; all-q matrix Fourier/Radon generalization; publication/CI path; and three outside-the-box structural probes",
-  "artifacts": [],
-  "verification": "Reservation only; no theorem claims yet.",
-  "boundary": "Promote only exact computations or source-backed statements. Numerical coincidences and physics analogies remain explicitly speculative unless independently derived."
+  "published_utc": "2026-08-17T17:48:00Z",
+  "topic": "eight-probe packet: full affine normalizer; Reye heavy-code/SNF interface; object-level dual-Fourier/two-qubit quadratic isometry; all-field M2 Fourier/Radon theorem; publication closure; determinant bent chirp; unit-difference rook graph; simplex line puncture",
+  "artifacts": [
+    "analysis/w33_pass5832_5839_normalizer_code_pauli_allq.py",
+    "data/PART_W33_PASS5832_5839_NORMALIZER_CODE_PAULI_ALLQ.json",
+    "analysis/BT5832_BT5839_normalizer_code_pauli_allq.md",
+    "analysis/PASS5832_5839_normalizer_code_pauli_allq_insert.tex",
+    "analysis/PASS5832_5839_index_insert.html",
+    "tests/test_w33_pass5832_5839_normalizer_code_pauli_allq.py",
+    "tools/materialize_pass5776_5839_matrix_frontier.py",
+    ".github/workflows/w33_pass5832_5839_normalizer_code_pauli_allq.yml"
+  ],
+  "verification": "Pure-Python exact producer replays all 20,160 GL4(2) maps for the normalizer/isometry searches, all binary Reye words, all unit-Cayley K4/rook automorphisms, the determinant Walsh transform, the PG(3,2) simplex puncture, and complete Fourier character-sum anchors at field sizes 2,3,5,7. Focused pytest semantically freezes the certificate. A dedicated workflow replays the certificate, materializes the five outstanding matrix-frontier homepage cards, audits shared-manifest/publication-contract reachability, and compiles all three canonical manuscripts with Tectonic.",
+  "concurrency_note": "A parallel lane subsequently published its own matrix/doily continuation as Pass5840-5847. It does not overwrite this reserved range; its determinant-polar/doily and all-field factorization results independently corroborate parts of this packet.",
+  "boundary": "Exact finite algebra, coding theory, Fourier analysis, graph theory and publication plumbing. The two-qubit bridge is an isomorphism of nonzero dual Fourier labels to Pauli-point quadratic/symplectic geometry, not a q=5 physical-state embedding. Numerical coincidences and physical analogies remain unpromoted without an independent map."
 }
