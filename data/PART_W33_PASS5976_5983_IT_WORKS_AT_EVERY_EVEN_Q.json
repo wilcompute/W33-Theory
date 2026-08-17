@@ -1,0 +1,44 @@
+{
+  "boundary": "Pass 5976 CORRECTS Pass 5970, which claimed q=2 was unique for two reasons. The q=4 construction is verified directly over GF(4). Pass 5978 notes prior art in BT1707 for the doily identification itself, which is NOT the same as the other lane's determinant map",
+  "pass_5976_correcting_myself": {
+    "corrected_statement": "only characteristic 2 is load-bearing. The determinant polarization gives W(3,q) for EVERY even q and a quadric for every odd q -- one clause, not two",
+    "result": {
+      "alternating": true,
+      "bilinear_over_gf4": true,
+      "match": true,
+      "nonzero_matrices": 255,
+      "projective_classes": 85,
+      "w34_points": 85
+    },
+    "the_test": "run the construction at q=4 -- characteristic 2 but scalars of order 3",
+    "verdict": "THEIR CONSTRUCTION WORKS AT q=4 TOO. The polarization is alternating at every even q, so it gives W(3,q) for all even q, not just q=2",
+    "what_condition_a_actually_does": "trivial scalars only decide whether the 15 MATRICES are the points (q=2) or whether one passes to 85 CLASSES (q=4). A convenience, not a requirement",
+    "what_i_claimed": "q=2 is unique because BOTH scalars are trivial AND the characteristic is 2"
+  },
+  "pass_5977_the_clean_statement": {
+    "counts_verified": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      9
+    ],
+    "even_q_verified": [
+      2,
+      4
+    ],
+    "odd_q_verified": [
+      3
+    ],
+    "split": "(q^2+1)(q+1) = |Q+(3,q)| + |PGL(2,q)| at every q",
+    "theorem_shape": "det polarization on M_2(F_q), modulo scalars, gives the symplectic polar space W(3,q) when q is even, and the orthogonal geometry with Q+(3,q) inside it when q is odd"
+  },
+  "pass_5978_prior_art": {
+    "already_records": "the binary Pauli contextuality ladder: W(1,2) 3 points, W(3,2) the doily with Mermin square degree 1, W(5,2) with 63 unsatisfied lines as the split Cayley hexagon",
+    "and_the_ladder_suggests": "if det polarization gives W(3,q) for even q, the natural question is what algebra gives W(5,2) -- the three-qubit rung. 3x3 matrices are the obvious guess and are NOT tested here",
+    "file": "analysis/BT1707_BT1709_qubit_contextuality_hesse_bridge.md",
+    "so": "the corpus ALREADY knows W(3,2) is the two-qubit doily. The other lane's contribution is not that identification but the explicit M_2(F_2) determinant map realising it, which BT1707 does not have"
+  }
+}
