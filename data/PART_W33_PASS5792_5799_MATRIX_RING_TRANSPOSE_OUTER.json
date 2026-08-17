@@ -1,0 +1,88 @@
+{
+  "boundary": "Exact finite affine/Latin/group-action theorem. M2(F2) is used here as an additive matrix space with left/right unit action; ring-projective quantum geometry is external prior art and is not imported as a W33 physical identification.",
+  "pass_5792_affine_left_right_group": {
+    "group_model": "M2(F2) : (GL2(2) x GL2(2))",
+    "group_order": 576,
+    "left_GL2_order": 6,
+    "matrix_singular_elements": 10,
+    "matrix_units": 6,
+    "normal_translation_space": "Hom(F2^2,F2^2) = M2(F2) additive",
+    "right_GL2_order": 6,
+    "translation_order": 16
+  },
+  "pass_5793_point_heavy_hyperplane_model": {
+    "carrier_sizes": [
+      12,
+      12
+    ],
+    "heavy_carrier": "H={(phi,psi): 0!=phi in (F2^2)^*, psi in (F2^2)^*}",
+    "heavy_support_equation": "phi(x) + psi(w) = 1",
+    "heavy_supports_match_frozen_q5_blocks": true,
+    "intercalate_complement_equation": "phi(x) + psi(w) = 0",
+    "point_carrier": "P={(w,x): 0!=w in F2^2, x in F2^2}"
+  },
+  "pass_5794_character_replay": {
+    "heavy_action_faithful_order": 576,
+    "heavy_stabilizer_order": 48,
+    "heavy_subdegrees": [
+      1,
+      3,
+      8
+    ],
+    "line_action_faithful_order": 576,
+    "permutation_character_gram_P_H_L": [
+      [
+        3,
+        2,
+        2
+      ],
+      [
+        2,
+        3,
+        2
+      ],
+      [
+        2,
+        2,
+        3
+      ]
+    ],
+    "point_action_faithful_order": 576,
+    "point_stabilizer_order": 48,
+    "point_subdegrees": [
+      1,
+      3,
+      8
+    ],
+    "sign_twisted_point_pairings_with_P_H_L": [
+      0,
+      0,
+      0
+    ]
+  },
+  "pass_5795_transpose_normalizer": {
+    "formula": "tau(X,A,B)=(X^T,B^{-T},A^{-T})",
+    "tau_is_involution": true,
+    "transpose_fixed_matrices": 8,
+    "transpose_is_inside_affine_group": false,
+    "transpose_normalizes_affine_group": true
+  },
+  "pass_5796_outer_carrier_intertwiner": {
+    "deduction": "tau is outer and exchanges the two nonconjugate degree-12 carrier types",
+    "factor_swap_bijection": "F(w,x)=(w^T,x^T)",
+    "heavy_stabilizer_translation_intersection_order": 4,
+    "heavy_type_aggregate_image_span_dimension": 1,
+    "identity": "F(g.p)=tau(g).F(p)",
+    "point_stabilizer_translation_intersection_order": 4,
+    "point_type_aggregate_image_span_dimension": 2,
+    "transpose_exchanges_translation_stabilizer_types": true
+  },
+  "pass_5797_two_qubit_ring_boundary": {
+    "exact_repo_bridge": "the q5 Klein-Latin normal 16-space is the additive M2(F2) space and its 576 group is the affine left/right unit action; transpose realizes the carrier-factor swap",
+    "external_prior_art": "Saniga--Planat--Pracna use the noncommutative ring M2(F2), with 16 elements, six units and ten zero-divisors, in projective-ring models of two-qubit Pauli geometry.",
+    "not_claimed": "No identification of q5 W33 carrier points with two-qubit observables, projective-ring points, entanglement classes, or physical states is made."
+  },
+  "schema": "w33.pass5792_5799.matrix_ring_transpose_outer.v1",
+  "source": "data/PART_W33_PASS5776_5783_REYE_LATIN_COMMON_CORE.json",
+  "status": "PASS"
+}
