@@ -1,0 +1,32 @@
+{
+  "checks": "PASS",
+  "codes": {
+    "hamming_dual": [15, 11, 3],
+    "quadratic_dual": [15, 10, 3],
+    "quadratic_extension": [15, 5, 6],
+    "relation": "C^perp = {h in Hamming(15,11,3) : <q0,h>=0}",
+    "simplex": [15, 4, 8]
+  },
+  "doily_veldkamp_split": {
+    "15_isotropic_lines": "collinear all-perp Veldkamp cores",
+    "20_nonisotropic_lines": "tricentric triads",
+    "all_perp_total": 35
+  },
+  "hamming_minimum_shell": {
+    "equals_all_PG32_lines": true,
+    "isotropic_retained_in_Cdual": 15,
+    "nonisotropic_excluded": 20,
+    "selector_identity": "<q0,1_{x,y,x+y}> = B(x,y)",
+    "weight3_words": 35
+  },
+  "object": "PG(3,2) Hamming-polar bridge",
+  "passes": "6553-6560",
+  "polarity_grid_bridge": {
+    "interpretation": "10 polar-pair unions = 10 grid complements",
+    "nonisotropic_lines": 20,
+    "pair_union_size": 6,
+    "pair_unions_equal_weight6_supports": true,
+    "polar_pairs": 10
+  },
+  "scope": "finite binary geometry/coding only"
+}
