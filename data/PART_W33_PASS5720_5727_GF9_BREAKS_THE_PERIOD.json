@@ -1,0 +1,132 @@
+{
+  "boundary": "Pass 5720 CORRECTS Pass 5713's period-(q-1) claim: the wrap is at the characteristic. Pass 5721's digit law is verified at five exponents at ONE non-prime q and is NOT proved; the Steinberg identification is a named resemblance, not a claim. Pass 5723 leaves the attainment and the digit law as open literature questions. Pass 5725's 44 files are a work list, not findings. Pass 5726 CLOSES S4 wr S2 as open rather than solving it",
+  "pass_5720": {
+    "claim_corrected": "Pass 5713's period q-1",
+    "gf9": [
+      {
+        "dim_sym": 4,
+        "e": 1,
+        "rank": 4
+      },
+      {
+        "dim_sym": 10,
+        "e": 2,
+        "rank": 10
+      },
+      {
+        "dim_sym": 20,
+        "e": 3,
+        "rank": 4
+      },
+      {
+        "dim_sym": 35,
+        "e": 4,
+        "rank": 16
+      },
+      {
+        "dim_sym": 56,
+        "e": 5,
+        "rank": 40
+      }
+    ],
+    "truth": "the tower wraps at e = p, the characteristic",
+    "why_missed": "q = 3,5,7,11 are all prime, where p = q"
+  },
+  "pass_5721": {
+    "all_match": true,
+    "law": "rank(sf^e) = product over base-p digits d of e of C(d+3,3)",
+    "resemblance": "the shape of a Steinberg tensor product; NAMED, not claimed -- five exponents at one composite q",
+    "verified": [
+      {
+        "e": 1,
+        "measured": 4,
+        "predicted": 4
+      },
+      {
+        "e": 2,
+        "measured": 10,
+        "predicted": 10
+      },
+      {
+        "e": 3,
+        "measured": 4,
+        "predicted": 4
+      },
+      {
+        "e": 4,
+        "measured": 16,
+        "predicted": 16
+      },
+      {
+        "e": 5,
+        "measured": 40,
+        "predicted": 40
+      }
+    ]
+  },
+  "pass_5722": {
+    "lesson": "one composite q was worth more than four primes; I ran the primes first because they were easier",
+    "prime_runs": {
+      "11": [
+        4,
+        10,
+        20,
+        35,
+        56,
+        84,
+        120,
+        165,
+        220,
+        286
+      ],
+      "3": [
+        4,
+        10
+      ],
+      "5": [
+        4,
+        10,
+        20,
+        35
+      ],
+      "7": [
+        4,
+        10,
+        20,
+        35,
+        56,
+        84
+      ]
+    }
+  },
+  "pass_5723": {
+    "attainment": "NOT FOUND",
+    "bound": "classical, rank(A^(*p)) <= C(p+d-1,p)",
+    "digit_law": "open literature question, likely classical via Steinberg"
+  },
+  "pass_5724_5725": {
+    "entries": 614,
+    "file": "DATE_FILE_INTEGER_INDEX.md",
+    "integers": 191,
+    "one_line_filter": {
+      "examples": [
+        "2026-05-30_c3_fano_triangle_orientation.md",
+        "2026-07-10_levi_closure.md",
+        "2026-07-08_pass75_uniqueness_constants_synthesis.md"
+      ],
+      "files": 44
+    },
+    "source_files": 185,
+    "status": "work list, not verdicts"
+  },
+  "pass_5726_5727": {
+    "attempts": [
+      "Delsarte coset graph (Pass 5671)",
+      "two-weight structure (Pass 5671)",
+      "the GF(2) kernel (Pass 5685)",
+      "module irreducibility (Pass 5715)"
+    ],
+    "common_shape": "all four asked where INSIDE the object the structure hides; if S4 wr S2 is inherited from the CONSTRUCTION rather than intrinsic, every internal search fails identically",
+    "status": "OPEN, closed to further attempts"
+  }
+}
