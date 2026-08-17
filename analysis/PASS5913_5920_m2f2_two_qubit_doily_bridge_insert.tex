@@ -1,0 +1,73 @@
+% Passes 5913--5920: M2(F2) determinant / two-qubit doily bridge.
+\subsection*{Passes 5913--5920: the binary matrix quotient is exactly a two-qubit doily}
+
+Write
+\[
+M=\begin{pmatrix}a&b\\c&d\end{pmatrix}\in M_2(\mathbb F_2),
+\qquad
+\Phi(M)=(a,d,b,c)=(x_1,z_1,x_2,z_2).
+\]
+Then
+\[
+\det M=ad+bc=x_1z_1+x_2z_2
+\]
+and, after polarization,
+\[
+\det(M+N)+\det M+\det N
+=
+\langle\Phi(M),\Phi(N)\rangle_{\rm sp}.
+\]
+Thus the determinant polarization is exactly the standard two-qubit Pauli
+commutation form.  Removing the zero matrix leaves fifteen points whose
+commutation graph is
+\[
+\boxed{\operatorname{SRG}(15,6,1,3)=W(3,2).}
+\]
+
+The rank stratification is the geometric $9+6$ split:
+\[
+\boxed{
+15=9_{\det=0,\,M\ne0}+6_{\det=1}.
+}
+\]
+The nine rank-one matrices are the outer products $uv^T$ with
+$0\ne u,v\in\mathbb F_2^2$, hence form a literal $3\times3$ grid with induced
+point graph $\operatorname{SRG}(9,4,1,2)$.  The six units induce $K_{3,3}$,
+and the cross-commutation degrees are $2$ from the grid side and $3$ from the
+six-point side.
+
+This agrees objectwise with the classical two-qubit $9+6$ factorization.  In
+the Saniga--Planat--Pracna coordinate chart, the displayed grid
+$\{C_7,\ldots,C_{15}\}$ is the zero set of
+$q_0(x)+x_2$, while the determinant grid is the zero set of $q_0$.  The local
+phase Clifford on the second qubit,
+\[
+S_2:(x_1,z_1,x_2,z_2)\mapsto(x_1,z_1,x_2,z_2+x_2),
+\]
+is symplectic and satisfies $q_0(S_2x)=q_0(x)+x_2$, so it maps the displayed
+source grid exactly onto the determinant/rank-one grid.
+
+The same model recovers the complete doily hyperplane census.  The quadratic
+forms
+\[
+q_v(x)=q_0(x)+\langle v,x\rangle
+\]
+produce ten plus-type nine-point grids and six minus-type five-point ovoids;
+the complement of every ovoid induces the Petersen graph.  The fifteen
+nonzero vectors also give the fifteen symplectic perp hyperplanes.  Hence
+\[
+\boxed{10\text{ grids},\quad6\text{ ovoids},\quad15\text{ perp-sets}.}
+\]
+
+\paragraph{Radon quotient consequence.}
+The four-dimensional mod-$2$ determinant quotient isolated in Pass~5876 is
+therefore no longer anonymous: its fifteen nonzero classes carry $W(3,2)$,
+with the nine $q=0$ classes forming the grid and the six $q=1$ classes its
+complement.
+
+\paragraph{Boundary.}
+The affine nonzero matrices are not literally the fifteen projective-ring-line
+pairs used in the classical $P^1(M_2(\mathbb F_2))$ construction.  What is
+proved is an explicit finite symplectic/local-Clifford isomorphism of the same
+two-qubit doily geometry.  No physical q=5 two-qubit embedding, entanglement
+classification, particle assignment, or continuum claim follows.
