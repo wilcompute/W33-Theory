@@ -74,7 +74,8 @@
         "4882e1b1-e5bd-4038-a888-8aa61f1f90ea",
         "1786978125686-pe8wl2",
         "1786978825551-4yxjf4",
-        "1786979818704-igg2nn"
+        "1786979818704-igg2nn",
+        "1786980587175-xavuzt"
       ],
       "causedBy": [
         "manual-20260507-pin-e8-manifest-z3-output-check"
@@ -261,7 +262,8 @@
         "4250c93d-0379-41a5-8ad6-4dd4975297af",
         "56038377-4c6b-48f8-8b24-3ff33095de65",
         "e8fa85eb-29ee-4617-a086-aec55b0a8922",
-        "6463a27e-4bc0-4022-85bf-3242450eac40"
+        "6463a27e-4bc0-4022-85bf-3242450eac40",
+        "1786980587175-xavuzt"
       ],
       "causedBy": []
     },
@@ -314,7 +316,8 @@
         "1786978125686-pe8wl2",
         "1786978825551-4yxjf4",
         "1786979818704-igg2nn",
-        "1786980242869-onutez"
+        "1786980242869-onutez",
+        "1786980587175-xavuzt"
       ],
       "causedBy": []
     },
@@ -582,7 +585,8 @@
         "1786859568721-fahph6",
         "517dfdee-066c-4ada-a935-af44c07a691c",
         "1a6cba8a-9f83-4479-ae1b-2f942cd9c3c7",
-        "951fc6ac-b3ba-4bc5-91ea-5761985511e6"
+        "951fc6ac-b3ba-4bc5-91ea-5761985511e6",
+        "1786980587175-xavuzt"
       ],
       "causedBy": [
         "manual-20260507-cccxcvi-posix-artifact-path",
@@ -667,7 +671,8 @@
         "501f6b6a-a866-4646-882e-2da75b79161a",
         "4882e1b1-e5bd-4038-a888-8aa61f1f90ea",
         "1786978125686-pe8wl2",
-        "1786978825551-4yxjf4"
+        "1786978825551-4yxjf4",
+        "1786980587175-xavuzt"
       ],
       "causedBy": []
     },
@@ -817,7 +822,8 @@
       ],
       "causes": [
         "34bba2aa-d8d1-415c-904f-54698570f4bf",
-        "1786980242869-onutez"
+        "1786980242869-onutez",
+        "1786980587175-xavuzt"
       ],
       "causedBy": []
     },
@@ -851,7 +857,8 @@
       "causes": [
         "1786978125686-pe8wl2",
         "1786979818704-igg2nn",
-        "1786980242869-onutez"
+        "1786980242869-onutez",
+        "1786980587175-xavuzt"
       ],
       "causedBy": []
     },
@@ -987,7 +994,8 @@
       "causes": [
         "1786859568721-fahph6",
         "517dfdee-066c-4ada-a935-af44c07a691c",
-        "1a6cba8a-9f83-4479-ae1b-2f942cd9c3c7"
+        "1a6cba8a-9f83-4479-ae1b-2f942cd9c3c7",
+        "1786980587175-xavuzt"
       ],
       "causedBy": [
         "manual-20260507-cccxcvi-posix-artifact-path",
@@ -1313,7 +1321,8 @@
         "c5354d11-c9e7-4d97-b9a8-e447cd669a02",
         "1786978825551-4yxjf4",
         "1786979818704-igg2nn",
-        "1786980242869-onutez"
+        "1786980242869-onutez",
+        "1786980587175-xavuzt"
       ]
     },
     "metadata": {
@@ -1640,7 +1649,8 @@
         "be29e6e8-96f2-4199-a2da-03622121888e",
         "c5354d11-c9e7-4d97-b9a8-e447cd669a02",
         "1786978825551-4yxjf4",
-        "1786979818704-igg2nn"
+        "1786979818704-igg2nn",
+        "1786980587175-xavuzt"
       ]
     },
     "metadata": {
@@ -2824,7 +2834,8 @@
     "status": "outdated",
     "relationships": {
       "relatedTo": [
-        "manual-20260507-fix-e8-runner-z3-output-contract"
+        "manual-20260507-fix-e8-runner-z3-output-contract",
+        "1786980587175-xavuzt"
       ],
       "causedBy": [
         "manual-20260507-pin-e8-manifest-z3-output-check",
@@ -22164,7 +22175,8 @@
         "manual-20260507-regenerate-ccclxix-contract-result",
         "manual-20260507-pin-e8-manifest-z3-output-check",
         "manual-20260507-test-e8-orchestrator-z3-output-contract",
-        "manual-20260507-fix-e8-orchestrator-dataclass-loader"
+        "manual-20260507-fix-e8-orchestrator-dataclass-loader",
+        "1786980587175-xavuzt"
       ],
       "causes": [
         "1777318403161-z23gfu",
@@ -29885,6 +29897,11 @@
     ],
     "files": [],
     "status": "outdated",
+    "relationships": {
+      "relatedTo": [
+        "1786980587175-xavuzt"
+      ]
+    },
     "metadata": {
       "status": "active",
       "outdatedReason": "auto-aged",
@@ -31947,6 +31964,11 @@
       "status": "active",
       "outdatedReason": "auto-aged",
       "outdatedAt": "2026-08-17T04:07:27.746Z"
+    },
+    "relationships": {
+      "relatedTo": [
+        "1786980587175-xavuzt"
+      ]
     }
   },
   {
@@ -39650,6 +39672,11 @@
     "status": "active",
     "metadata": {
       "status": "active"
+    },
+    "relationships": {
+      "relatedTo": [
+        "1786980587175-xavuzt"
+      ]
     }
   },
   {
@@ -42354,7 +42381,8 @@
     "status": "active",
     "relationships": {
       "relatedTo": [
-        "517dfdee-066c-4ada-a935-af44c07a691c"
+        "517dfdee-066c-4ada-a935-af44c07a691c",
+        "1786980587175-xavuzt"
       ]
     },
     "metadata": {
@@ -46792,6 +46820,11 @@
     "status": "active",
     "metadata": {
       "status": "active"
+    },
+    "relationships": {
+      "relatedTo": [
+        "1786980587175-xavuzt"
+      ]
     }
   },
   {
@@ -55956,6 +55989,9 @@
     "relationships": {
       "supersededBy": [
         "3d81673a-a42d-4326-ac5f-a146c94f7b24"
+      ],
+      "relatedTo": [
+        "1786980587175-xavuzt"
       ]
     },
     "metadata": {
@@ -114215,7 +114251,8 @@
         "1786978125686-pe8wl2",
         "1786978825551-4yxjf4",
         "1786979818704-igg2nn",
-        "1786980242869-onutez"
+        "1786980242869-onutez",
+        "1786980587175-xavuzt"
       ],
       "relatedTo": [
         "1784938579774-o0xebs",
@@ -114254,7 +114291,8 @@
         "1786978125686-pe8wl2",
         "1786978825551-4yxjf4",
         "1786979818704-igg2nn",
-        "1786980242869-onutez"
+        "1786980242869-onutez",
+        "1786980587175-xavuzt"
       ],
       "relatedTo": [],
       "causes": [],
@@ -114289,7 +114327,8 @@
         "1786978125686-pe8wl2",
         "1786978825551-4yxjf4",
         "1786979818704-igg2nn",
-        "1786980242869-onutez"
+        "1786980242869-onutez",
+        "1786980587175-xavuzt"
       ],
       "relatedTo": [],
       "causes": [],
@@ -114325,7 +114364,8 @@
         "1786859568721-fahph6",
         "1786978825551-4yxjf4",
         "1786979818704-igg2nn",
-        "1786980242869-onutez"
+        "1786980242869-onutez",
+        "1786980587175-xavuzt"
       ]
     },
     "metadata": {
@@ -114357,7 +114397,8 @@
         "1786859568721-fahph6",
         "1786978825551-4yxjf4",
         "1786979818704-igg2nn",
-        "1786980242869-onutez"
+        "1786980242869-onutez",
+        "1786980587175-xavuzt"
       ]
     },
     "metadata": {
@@ -123345,7 +123386,8 @@
         "1786861486612-snafmx",
         "1786978125686-pe8wl2",
         "1786978825551-4yxjf4",
-        "1786980242869-onutez"
+        "1786980242869-onutez",
+        "1786980587175-xavuzt"
       ],
       "relatedTo": [
         "1777318403162-biaewx",
@@ -123439,7 +123481,8 @@
         "1786861486612-snafmx",
         "1786978125686-pe8wl2",
         "1786978825551-4yxjf4",
-        "1786980242869-onutez"
+        "1786980242869-onutez",
+        "1786980587175-xavuzt"
       ],
       "relatedTo": [],
       "causes": [],
@@ -123497,10 +123540,12 @@
         "1784322240858-8r4ujo"
       ],
       "supersededBy": [
-        "1786980242869-onutez"
+        "1786980242869-onutez",
+        "1786980587175-xavuzt"
       ],
       "relatedTo": [
-        "1786980242869-onutez"
+        "1786980242869-onutez",
+        "1786980587175-xavuzt"
       ],
       "causes": [],
       "causedBy": [
@@ -135862,7 +135907,8 @@
         "4919a306-e98c-4f08-9830-945bf9d04adf"
       ],
       "supersededBy": [
-        "1786980242869-onutez"
+        "1786980242869-onutez",
+        "1786980587175-xavuzt"
       ],
       "relatedTo": [],
       "causes": [],
@@ -135919,9 +135965,12 @@
         "1fb5332b-7df7-4881-bce0-800d23047ba3",
         "5223d2c8-8d9a-4bc0-ba9e-040fded850a6"
       ],
-      "supersededBy": [],
+      "supersededBy": [
+        "1786980587175-xavuzt"
+      ],
       "relatedTo": [
-        "1786860945369-ki8azn"
+        "1786860945369-ki8azn",
+        "1786980587175-xavuzt"
       ],
       "causes": [],
       "causedBy": [
@@ -135954,6 +136003,75 @@
       "6af86520ce36de84b36dea8d7e9aa9eede4b437d",
       "c36b2f161d3ad00220fba42dc09a29195b840317",
       "bcdca0b3ce9274916891f26d47b297202deb3fb1"
+    ]
+  },
+  {
+    "id": "1786980587175-xavuzt",
+    "question": "Is the Sym^e rank bound on the symplectic form novel, and does the characteristic-2 kernel result generalise?",
+    "answer": "NO to both. The bound is classical and the kernel result is specific to the Reye. What survives is narrower.\n\nATTRIBUTION. Pass 5692 proved rank_q(sf^e) <= dim Sym^e(F_q^4) = C(e+3,3) and called it a theorem. It is the specialisation of a known general fact: for a configuration W there is a surjection Sym^s W ->> W^(*s) onto the s-fold Hadamard product, giving dim W^(*s) <= C(r_W + s - 1, s), which at r_W = 4 is exactly C(e+3,3). Source: \"Configuration polynomials under contact equivalence\", arXiv:2005.08181. THIRD ATTRIBUTION CORRECTION IN THREE PASSES, after Pass 5695 handed the p=2 rank law back to Chandler-Sin-Xiang (arXiv:math/0603100). THE PATTERN AND THE LESSON: a one-line proof about a classical object is usually classical. Both times I searched only after writing the claim.\n\nWHAT SURVIVES IS NARROWER AND STILL WORTH HAVING. That the bound is ATTAINED WITH EQUALITY for the W(3,q) symplectic form at every e < q is a measurement, not in the general theory. And the tower is PERIODIC, not merely bounded: rank_q(sf^e) depends only on e mod (q-1), since x^(q-1) = 1 for nonzero x in F_q. Tested at q=3 and q=5 -- e=5 gives rank 4 (= e=1) and e=6 gives rank 10 (= e=2). Pass 5692 stated the boundary e < q without testing it and without noticing it is periodic.\n\nCORRECTION TO PASS 5696. I claimed the rook's grid structure is \"in the image, not the kernel\". Half right. The MATRIX identity A = Rrow + Rcol (mod 2) holds and still explains excess 9 via rank 4 + 4 - 2 = 6. But the module does NOT contain the grid lines: it is [16,6,6], its generators are rowclass+colclass vectors of weight 6 (they overlap in exactly one cell), and 0 of its 16 minimum-weight words is a grid row or column. THE GRID LINES ARE IN NEITHER the kernel (Pass 5685) NOR the module. Two attempts to locate the grid inside a GF(2) subspace, both failed; the rank mechanism is unaffected.\n\nPASS 5691 DOES NOT GENERALISE. Fano 7_3 has GF(2) kernel dimension 3 with |Aut| = 168; Pappus 9_3 kernel 2 with 108; Desargues 10_3 kernel 2 with 120. Kernel dimension does not track |Aut|, so \"the characteristic-2 kernel carries the full automorphism group\" is a fact ABOUT THE REYE and not a theorem about configurations. The code-as-configuration-classifier idea dies on the same evidence -- a kernel of dimension 2 for two configurations with different automorphism groups distinguishes nothing.\n\nSym^3 rank 20 versus the E6 cubic layer (27 vertices, 45 cubic triads, 36+9 split): CHECKED AND EMPTY. 20 is not 27, 45, 36 or 9; the symplectic tower lives on F_q^4 while E6 lives on a 27-point set with a Z3 bundle over AG(2,3). Recorded as checked rather than left open, because an untested suggestion in a next-steps list is how coincidences enter this corpus.\n\nAND AN INDEX OF THE DATE-NAMED FILES: 185 files match analysis/20*.md, 16 carry Theorem/Claim/Proposition headings, and one holds SEVEN and is named 2026-07-15_pass87_w33_master_theorem.md. That is the corpus-wide liability CLAUDE.md names and that Pass 5695 lost a pass to -- a date-named file carries no topic signal, so no topic search reaches it. Indexed by theorem-count and distinctive integers, which is the axis a rediscovering agent would actually search on.</answer>\n<parameter name=\"tags\">w33, attribution, retraction, hadamard-power, symplectic, reye, date-named-files, pass5704",
+    "timestamp": "2026-08-17T15:29:47.175Z",
+    "tags": [
+      "redis"
+    ],
+    "files": [],
+    "status": "active",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [
+        "1786860945369-ki8azn",
+        "1786980242869-onutez",
+        "1786859568721-fahph6",
+        "1786860401883-i52nl0",
+        "1786979818704-igg2nn",
+        "1784409410004-2ofkhg",
+        "1784409410004-kzfbyz",
+        "1784409410003-54eefw",
+        "09152407-437d-45ec-8fb8-6b5496138c01",
+        "1fb5332b-7df7-4881-bce0-800d23047ba3"
+      ],
+      "supersededBy": [],
+      "relatedTo": [
+        "1786860945369-ki8azn",
+        "1786980242869-onutez",
+        "ac550d2f-be4b-4f53-b3dc-f74d668cc424",
+        "manual-20260507-fix-e8-runner-z3-output-contract",
+        "2e96a91e-f05a-48bf-be51-a218a2212633",
+        "afeeb35d-ca2c-4f0c-ad04-8c88b4a186a1",
+        "2831ddf5-b3eb-4457-a2e9-18f42c783587",
+        "cadec8f9-5f6f-4dda-a6e4-0b2761a5b885",
+        "d7d530a6-9dd6-450d-9747-b80eadf1463c",
+        "4c0d8cc8-0c8c-4387-ba97-5b0591217e28"
+      ],
+      "causes": [],
+      "causedBy": [
+        "1777318403161-4mgrce",
+        "1777318403161-ai9frf",
+        "1777318403161-qze7ej",
+        "1777318403161-xbitkl",
+        "1777318403161-e7wo55",
+        "1777318403161-1thfcr",
+        "1777318403161-6tpseq",
+        "1777318403161-z23gfu",
+        "beaa04ed-f130-4ef8-a424-792aced0dd1b",
+        "27162744-0efe-400e-8af6-d7dae43ba20b"
+      ]
+    },
+    "metadata": {
+      "status": "active",
+      "source": "mcp",
+      "entities": {
+        "technologies": [
+          "redis"
+        ],
+        "patterns": [],
+        "concepts": [],
+        "tools": []
+      },
+      "domain": "software"
+    },
+    "commitHashes": [
+      "6bed442c628f94c20d980cfb513cf898cd11d5a0",
+      "74896811c4c20fdd0c9a50689b39694520ab0aa5"
     ]
   }
 ]

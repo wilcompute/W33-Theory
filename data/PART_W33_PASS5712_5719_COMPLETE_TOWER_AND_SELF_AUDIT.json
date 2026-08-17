@@ -1,0 +1,153 @@
+{
+  "boundary": "Pass 5712 RETRACTS a false alarm this session raised; the corpus was clean. Pass 5713's bound is classical (Pass 5704) -- only attainment and periodicity are measured, at q = 3,5,7,11 and not proved for all q. Pass 5715 REFUTES a suggestion from this session's own next-steps list. Pass 5717 audits eight claims, not every statement made. Whether the ATTAINMENT is classical is still unchecked",
+  "pass_5712": {
+    "alarm": "reported as the unretracted survivor of a retraction sweep",
+    "corpus_clean": true,
+    "file": "analysis/2026-07-15_pass87_w33_master_theorem.md",
+    "lesson": "a pattern that cannot match returns silence, and silence reads as a finding",
+    "truth": "it carries the banner at line 3; the grep pattern could not match it"
+  },
+  "pass_5713_5714": {
+    "bound_is_classical": "arXiv:2005.08181 via Pass 5704",
+    "measured": {
+      "11": [
+        4,
+        10,
+        20,
+        35,
+        56,
+        84,
+        120,
+        165,
+        220,
+        286,
+        4,
+        10
+      ],
+      "7": [
+        4,
+        10,
+        20,
+        35,
+        56,
+        84,
+        4,
+        10
+      ]
+    },
+    "mine": [
+      "attainment at every rung",
+      "period q-1 wrap"
+    ],
+    "rungs_at_q11": 10,
+    "statement": "rank_q(sf^e) = C(e+3,3) for 1 <= e <= q-1, and depends only on e mod (q-1)",
+    "verified_q": [
+      3,
+      5,
+      7,
+      11
+    ]
+  },
+  "pass_5715": {
+    "dim": 6,
+    "irreducible": false,
+    "refutes": "this session's suggestion that no invariant subset exists",
+    "s4wrs2_status": "unexplained after four attempts: Delsarte coset graph, two-weight structure, kernel, module irreducibility",
+    "submodule_dims": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "pass_5716": {
+    "band": "2 to 6 files",
+    "busiest": [
+      {
+        "files": 6,
+        "integer": "3240"
+      },
+      {
+        "files": 6,
+        "integer": "1620"
+      },
+      {
+        "files": 6,
+        "integer": "840"
+      },
+      {
+        "files": 6,
+        "integer": "128"
+      },
+      {
+        "files": 6,
+        "integer": "51"
+      }
+    ],
+    "compare": "heading search found 16 files; integers give 191 entry points",
+    "distinct_integers": 588,
+    "files": 185,
+    "searchable_band": 191
+  },
+  "pass_5717": {
+    "audited": [
+      {
+        "basis": "constructive",
+        "claim": "alpha(W(3,q)) = q^2+1 for even q, by construction",
+        "verdict": "MINE"
+      },
+      {
+        "basis": "verified by isomorphism",
+        "claim": "Reye 12_4 16_3 is the tomotope medial layer",
+        "verdict": "MINE"
+      },
+      {
+        "basis": "typed by SmallGroup id",
+        "claim": "Aut(Reye Levi) = W(F4)/Z",
+        "verdict": "MINE"
+      },
+      {
+        "basis": "Griesmer itself is classical",
+        "claim": "the [12,4,6] code meets Griesmer",
+        "verdict": "MINE"
+      },
+      {
+        "basis": "two ways",
+        "claim": "the code partition IS T12_165's unique block system",
+        "verdict": "MINE"
+      },
+      {
+        "basis": "typed",
+        "claim": "Aut([12,4,6]) = W(F4)/Z acting as T12_165",
+        "verdict": "MINE"
+      },
+      {
+        "basis": "arXiv:2005.08181, Pass 5704",
+        "claim": "rank_q(sf^e) <= dim Sym^e",
+        "verdict": "CLASSICAL"
+      },
+      {
+        "basis": "Chandler-Sin-Xiang, Pass 5695",
+        "claim": "the p=2 adjacency rank law",
+        "verdict": "CLASSICAL"
+      }
+    ],
+    "classical": 2,
+    "heuristic": "both classical results had one-line proofs; the six that survived needed a computation or a typed identification",
+    "total": 8
+  },
+  "pass_5718_5719": {
+    "fix": "search the literature at claim time for one-line-proof claims",
+    "guards_exist": [
+      "scripts/check_rediscovery.py",
+      "scripts/check_certificate_rediscovery.py"
+    ],
+    "not_done": [
+      "whether the attainment is classical",
+      "non-prime q"
+    ],
+    "why_they_did_not_help": "both misses were to EXTERNAL literature, which no in-repo guard covers"
+  }
+}
