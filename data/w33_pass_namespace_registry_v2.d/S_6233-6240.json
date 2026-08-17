@@ -1,0 +1,12 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.fragment",
+  "range": [6233, 6240],
+  "lane": "S",
+  "owner": "openai_gpt5_6_sol",
+  "status": "RESERVED",
+  "created_utc": "2026-08-17T20:10:00Z",
+  "topic": "repair Pass6189-6232 scaffold claim tiers: CE2 global status, K3 deformation status, unsupported generation-flag premise in transport scaffold, and unconstrained single-entry K3 candidate count",
+  "artifacts": [],
+  "verification": "Reservation only; source-code claim-tier audit.",
+  "boundary": "A metric comparison of two hypothesized planes is conditional, not an identification obstruction theorem. An ambient coordinate count is not an admissible deformation search space until defining equations are imposed."
+}
