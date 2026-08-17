@@ -2,10 +2,27 @@
   "schema": "w33.pass_namespace_registry.v2.fragment",
   "range": [5872, 5879],
   "owner": "openai_gpt5_6_sol",
-  "status": "RESERVED",
+  "status": "PUBLISHED",
   "created_utc": "2026-08-17T18:27:00Z",
-  "topic": "eight-probe packet: joint doily/rook coherent closure; local-to-global CSS embedding test; all-field unit-difference Cayley spectrum/automorphisms; Pauli-isometry-to-Clifford lift; discriminant-form 2-primary bridge; plus three outside-box probes in representation theory, geometry, and arithmetic",
-  "artifacts": [],
-  "verification": "Reservation only. Promote only exact computation, theorem proof, or source-backed prior-art boundary.",
-  "boundary": "No physical identification from finite incidence coincidences. Literature and repo-wide object checks precede promotion."
+  "published_utc": "2026-08-17T18:55:00Z",
+  "topic": "eight-probe packet: 15-orbital determinant coherent closure; q5 CSS-check embedding no-go; all-field invertible-difference SRG; Clifford-conjugate non-entangling lift; exact Reye-Radon-Pauli kernel/image/cokernel sequence; odd-field determinant-character Fourier theorem; q3 nonlinear MRD orbit; primal-dual Reye minimum-shell reconstruction",
+  "artifacts": [
+    "analysis/w33_pass5872_5879_coherent_css_rankmetric_clifford_discriminant.py",
+    "data/PART_W33_PASS5872_5879_COHERENT_CSS_RANKMETRIC_CLIFFORD_DISCRIMINANT.json",
+    "analysis/BT5872_BT5879_coherent_css_rankmetric_clifford_discriminant.md",
+    "analysis/PASS5872_5879_coherent_css_rankmetric_clifford_discriminant_insert.tex",
+    "analysis/PASS5872_5879_index_insert.html",
+    "tests/test_w33_pass5872_5879_coherent_css_rankmetric_clifford_discriminant.py",
+    "tools/materialize_pass5872_5879_frontier.py",
+    ".github/workflows/w33_pass5872_5879_coherent_css_rankmetric_clifford_discriminant.yml"
+  ],
+  "verification": "Exact producer replays all 20,160 GL4(2) maps, 15 coherent orbitals and orbital algebra center, the complete Reye and dual codes, saturated integral Radon matrices and mod-2 quotient quadratic, every additive-character anchor for r=2,3,5,7, every quadratic determinant-character anchor for r=3,5,7, and all maximal cliques of the 81-vertex r=3 rank-metric graph. A replay audit caught and corrected an initial certificate-only SRG transcription before publication. Dedicated pytest freezes the corrected certificate; workflow also materializes cards and compiles all three canonical manuscripts.",
+  "literature_boundaries": [
+    "Skresanov arXiv:2007.14696 for bilinear-forms graph full automorphism context",
+    "Kubischta-Teixeira arXiv:2409.14624 for the projective-order-1152 non-entangling two-qubit Clifford subgroup",
+    "Sheekey arXiv:1904.05813 for MRD terminology/context",
+    "Kazhdan-Polishchuk arXiv:math/9906173 and Cluckers-Herremans arXiv:math/0408139 for prehomogeneous-vector-space Fourier/character-sum context"
+  ],
+  "collision_rescan": "Recent master history was rechecked after theorem publication; no competing Pass5872-5879 packet was observed.",
+  "boundary": "Exact finite algebra, coding, lattice, Fourier and graph statements. The q5 Reye code is explicitly not promoted to a CSS check subcode; the Pauli result is a Clifford-conjugacy statement on label geometry, not a physical q5 qubit embedding."
 }
