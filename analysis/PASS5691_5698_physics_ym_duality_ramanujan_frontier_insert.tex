@@ -1,0 +1,93 @@
+% Passes 5691--5698: finite YM candidate, flat-ray duality, explicit Ramanujan depth.
+\subsection*{Passes 5691--5698: affine gauge complex, flat-ray duality, and explicit Ramanujan depth}
+
+The orientation-selected affine eight of Pass~5686 admits the invariant quadratic
+form supplied by its Killing form, $K=-54\langle\cdot,\cdot\rangle$ on $V_8$.
+On the nine affine sites the $36$ links have cycle-space dimension $28$.  The $54$
+translation parallelograms span a real rank-$24$ boundary space, hence the minimal
+translation-plaquette complex has $\dim H^1=4$; adjoining the twelve affine-line
+triangle boundaries raises the real face rank to $28$ and kills this $H^1$.
+Thus a finite lattice-gauge candidate
+\[
+ F=da+\tfrac12[a,a],\qquad
+ S_{\rm YM}=\frac{1}{2g^2}\sum_f\langle F_f,F_f\rangle
+\]
+is algebraically natural but does not fix either the physical coupling $g$ or the
+dynamical face set.  The pre-existing vertical $\mathbb Z_3$ fiber translation acts
+trivially on $V_8\otimes\operatorname{span}(1,1,1)$, so its old holonomy is not
+already the new nonabelian adjoint connection.
+
+The two flat-bond Hamiltonian rays left by Pass~5685 are exactly dual.  The diagonal
+involution
+\[
+ D=\operatorname{diag}(+,+,+,+,-,-,-,-,-,-,-,-,+,+,+,+)
+\]
+commutes with the full signed stabilizer of order $96$, is not contained in it, and
+extends the kinematic group to order $192$.  After unit flat-bond normalization,
+\[
+ H_2=-D H_1D.
+\]
+Since ordinary conjugation $K$ is particle-hole, the antiunitary $DK$ exchanges the
+two rays.  Modulo this exact carrier-centralizer/PHS duality there is one flat-bond
+ratio-$2$ class; no particle assignment or energy scale follows.
+
+The W33 Levi Ramanujan tower is now explicit through $640$ vertices.  Starting from
+the certified $160$-vertex lift, each new $4$-regular bipartite level is factored
+into four perfect matchings and the six unions of two matchings are tested as
+locally balanced signings.  The selected signed radii at parent sizes $160$ and
+$320$ are approximately
+\[
+ 3.4232028039,\qquad 3.3960725809,
+\]
+both below $2\sqrt3\approx3.4641016151$.  Hence the $80,160,320,640$ graphs are
+explicit connected Ramanujan levels.  This is not yet an automorphism-canonical
+all-level recursion.
+
+For the firewall deformation $b'=b-D_{\rm fw}$, bilinearity gives the exact identity
+\[
+ J(b-D_{\rm fw})=J(b)-B(b,D_{\rm fw})-B(D_{\rm fw},b)+J(D_{\rm fw}).
+\]
+The collision projector $C/3$ fixes the deleted nine supports but not the full E8
+coefficient data.  Moreover, even for a known Jacobiator, an equation
+$d\ell_3=-J$ determines $\ell_3$ only modulo $\ker d$.  Collision support plus
+affine orientation therefore do not uniquely determine the full $L_\infty$ repair.
+
+Internal routing and physical propagation factor exactly in the noninteracting
+Kronecker-sum model
+\[
+ H_{\rm tot}(p)=H_D(p)\otimes I+I\otimes H_{\rm int},
+\]
+for which
+\[
+ E_{\alpha,\pm}(p)=\epsilon_\alpha\pm\sqrt{|p|^2+m^2},\qquad
+ \nabla_pE_{\alpha,\pm}=\pm\frac{p}{\sqrt{|p|^2+m^2}}.
+\]
+Thus $N_n=80\,2^n$ internal routing capacity can grow without changing the split-step
+physical support or the conversion $c_{\rm eff}=\ell/\tau$ in the tensor-separated
+model.
+
+Finally, the apparent need to break $AGL(2,3)$ to $ASL(2,3)$ is representation
+ dependent.  With the determinant character $\chi$ and twisted action
+$\widetilde R(g)=\chi(g)R(g)$, the affine determinant bracket obeys
+\[
+ [\widetilde R(g)f,\widetilde R(g)h]=\widetilde R(g)[f,h]
+\]
+for all $432$ affine transformations.  The eight may therefore be treated as an
+orientation pseudovector; a physical orientation domain wall is not forced by the
+finite algebra alone.  On any $4$-regular Ramanujan internal level,
+$L_{\rm adj}=(4I-A)\otimes I_8$ has eight constant zero modes and nonconstant gap at
+least $4-2\sqrt3$, but this finite expander gap is not the Yang--Mills mass gap.
+Also,
+\[
+ \mathbb C^{27}=\bigoplus_{k=0}^2
+ \left[(\mathbf1\otimes\chi^k)\oplus(V_8\otimes\chi^k)\right]
+\]
+is multiplicity-free under $ASL(2,3)\times\mathbb Z_3$; the three vertical Fourier
+sectors are inequivalent gauge charges, not three identical generations.
+
+\paragraph{Evidence boundary.}
+All statements above are finite graph, cochain, Lie-algebra, centralizer,
+representation, tensor-product, or spectral identities.  They do not derive QCD,
+a physical gauge coupling, confinement, a Standard Model mass assignment, the
+Yang--Mills mass gap, physical spacetime, the numerical value of $c$, or three
+fermion generations.
