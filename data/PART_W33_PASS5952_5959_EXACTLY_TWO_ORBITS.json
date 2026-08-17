@@ -1,0 +1,81 @@
+{
+  "boundary": "Pass 5952 computes the orbit decomposition EXACTLY over the full group of 51840 elements. Pass 5954 characterises the units side at q=3 only. The q=5 span-rank test was NOT run -- enumerating all 18-sets on 156 points is infeasible here and is reported as not done, not as inconclusive",
+  "pass_5952_exactly_two_orbits": {
+    "conclusion": "the heptad design's triple behaviour is now COMPLETELY described: Sp(4,3) has exactly two orbits on occurring triples, they are separated by projective span rank 2 versus 3, and the heptad counts 16 and 33 are constant on each orbit. Nothing further is hiding at the triple level",
+    "group": "Sp(4,3), order 51840, generated exhaustively by BFS on transvections",
+    "matches_span_rank_split": true,
+    "occurring_triples": 3240,
+    "orbit_count": 2,
+    "orbits": [
+      360,
+      2880
+    ]
+  },
+  "pass_5954_the_units_side": {
+    "full_odd_q_picture": "40 classes = 16 singular forming Q+(3,3) (6-regular, max coclique 4) + 24 invertible (9-regular, max coclique 5)",
+    "q2_their_case": {
+      "degree": 3,
+      "graph": "K_3,3",
+      "max_coclique": 3,
+      "units": 6
+    },
+    "q3": {
+      "max_coclique": 5,
+      "orthogonality_degree": 9,
+      "regular": true,
+      "units": 24
+    },
+    "the_pattern": "units count 6 -> 24, degree 3 -> 9, max coclique 3 -> 5. The degree triples with q^2, the count quadruples, and the coclique grows by 2. Two data points only -- no formula is claimed"
+  },
+  "pass_5955_the_complete_q3_picture": {
+    "design": {
+      "b": 2880,
+      "is_3_design": false,
+      "k": 7,
+      "lambda_2": 112,
+      "r": 504,
+      "triple_orbits": {
+        "span_rank_2": {
+          "heptads": 16,
+          "triples": 360
+        },
+        "span_rank_3": {
+          "heptads": 33,
+          "triples": 2880
+        }
+      },
+      "v": 40
+    },
+    "determinant_geometry": {
+      "char_2_only": "the polarization is alternating only in characteristic 2",
+      "classes": 40,
+      "invertible": 24,
+      "singular": 16,
+      "singular_is": "Q+(3,3), the 4x4 grid"
+    },
+    "heptads": {
+      "count": 2880,
+      "one_orbit": true,
+      "stabiliser": "C3 x C6, order 18",
+      "stabiliser_orbits_on_the_7": [
+        1,
+        3,
+        3
+      ]
+    },
+    "still_open": [
+      "identification of the 7-regular swap graph",
+      "the exact q=5 stabiliser",
+      "the span-rank test at q=5"
+    ],
+    "swap_graph": {
+      "bipartite": false,
+      "connected": true,
+      "degree": 7,
+      "girth": 4,
+      "identified": false,
+      "triangles": 0,
+      "vertices": 2880
+    }
+  }
+}
