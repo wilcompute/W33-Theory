@@ -1,0 +1,12 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.fragment",
+  "range": [6017, 6024],
+  "lane": "S",
+  "owner": "openai_gpt5_6_sol",
+  "status": "RESERVED",
+  "created_utc": "2026-08-17T19:47:00Z",
+  "topic": "post-6016 integrity repair: remove superseded physical predictions from full-closure ledger; audit CE2 anchor closure, Yukawa radical-pair spectral labels, formal K3 glue avatar, and Qiskit oracle claim tiers; preserve exact algebra while separating formal/search avatars from realized geometry",
+  "artifacts": [],
+  "verification": "Reservation only; source-code audit plus exact arithmetic checks.",
+  "boundary": "A formal matrix avatar or oracle encoding is not a geometric/physical realization. Superseded physics claims cannot be inherited as proved facts."
+}
