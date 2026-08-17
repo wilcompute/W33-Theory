@@ -1,0 +1,58 @@
+{
+  "boundary": "Exact finite Fourier, incidence, and representation theorem. The 1+9+6 matrix-rank strata are not particle multiplets, qubit states, or physical sectors absent a separately verified physical map.",
+  "pass_5816_line_walsh_decomposition": {
+    "decomposition": "Q^16_L = 1 + W9(rank-one Fourier) + V6(invertible Fourier)",
+    "fourier_label_space": "T^*=M2(F2) under Frobenius pairing",
+    "line_carrier": "T=M2(F2), 16-point affine translation torsor",
+    "rank_stratum_sizes": [1, 9, 6],
+    "walsh_gram": "16 I_16"
+  },
+  "pass_5817_rank_one_common_W9": {
+    "exact_intertwiners": [
+      "R^T u_(w,phi)=v_Y",
+      "H^T u_(w,phi)=-2 h_(w,phi)",
+      "D h_(w,phi)=v_Y"
+    ],
+    "heavy_basis": "h_(w,phi)=sum_psi (-1)^psi(w) e_(phi,psi)",
+    "label_count": 9,
+    "labels": "Y=phi^T w^T with 0!=phi in V*, 0!=w in W",
+    "line_basis": "v_Y=sum_M (-1)^<Y,M> e_M",
+    "point_basis": "u_(w,phi)=sum_x (-1)^phi(x) e_(w,x)"
+  },
+  "pass_5818_line_only_V6": {
+    "dimension": 6,
+    "kernel_identity": "V6 = ker(R) = ker(D^T) inside the 16-line carrier",
+    "labels": "six invertible/rank-two Y in GL2(2)",
+    "rank_one_vectors_survive_both_radon_transforms": true
+  },
+  "pass_5819_affine_monomial_action": {
+    "deduction": "both W9 and V6 Fourier sectors are absolutely irreducible over Q (explicit rational realization, complex character norm 1)",
+    "formula": "g v_Y = (-1)^<Y',X> v_Y', Y'=A^{-T} Y B^T",
+    "rank_one_character_norm": 1,
+    "rank_one_rank_two_character_inner_product": 0,
+    "rank_preserved": true,
+    "rank_two_character_norm": 1,
+    "verified_pairs": 9216
+  },
+  "pass_5820_translation_spectrum": {
+    "V6_restriction": "six distinct invertible/rank-two additive characters",
+    "W9_restriction": "nine distinct nontrivial rank-one additive characters",
+    "full_line_restriction": "all 16 additive characters exactly once",
+    "normal_group": "T=M2(F2)_+"
+  },
+  "pass_5821_transpose_fourier_action": {
+    "deduction": "the point/heavy transpose outer involution swaps the two rulings of the 3x3 rank-one label grid while preserving the 6-unit sector",
+    "line_fourier": "Theta v_Y = v_(Y^T)",
+    "rank_one_factor_swap": "Y=phi^T w^T -> Y^T=w^T phi^T",
+    "rank_strata_preserved": true
+  },
+  "pass_5822_projective_rank_quadric": {
+    "boundary": "This is an algebraic/projective observation from det(Y)=0; no physical meaning is assigned.",
+    "det_one_invertible_points": 6,
+    "det_zero_rank_one_points": 9,
+    "nonzero_projective_points_in_PG3_2": 15,
+    "rank_one_grid": "3 x 3 labels (phi,w)"
+  },
+  "schema": "w33.pass5816_5823.matrix_fourier_rank_stratification.v1",
+  "status": "PASS"
+}
