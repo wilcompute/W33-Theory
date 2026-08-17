@@ -1,0 +1,56 @@
+{
+  "boundary": "Pass 6008 VERIFIES transitivity by explicit orbit computation, so |Stab| = 5040 is now computed rather than inferred. The identification of Stab with S_7 is NOT proved: 233 of 5040 permutations were found by sampling, and the conclusion rests on an order argument plus the presence of odd permutations",
+  "pass_6008_transitivity_verified": {
+    "group_order": 1451520,
+    "method": "orbit of one 7-set under 21 symplectic transvection generators of Sp(6,2)",
+    "orbit_size": 288,
+    "stabiliser_order": 5040,
+    "status": "COMPUTED, not inferred -- last pass this was conditional on transitivity",
+    "total_sets": 288,
+    "transitive": true
+  },
+  "pass_6009_the_induced_action": {
+    "conclusion": "consistent with Stab isomorphic to S_7 acting naturally and faithfully on the 7 points -- every permutation of the set realised by a symplectic map",
+    "contains_odd": true,
+    "distinct_induced_permutations": 233,
+    "fixed_the_set": 4425,
+    "not_proved": "only 233 of 5040 permutations were exhibited; the full image was not enumerated, and the kernel was not shown trivial",
+    "parity": {
+      "even": 110,
+      "odd": 123
+    },
+    "sampled_words": 60000,
+    "so": "the image is NOT contained in A_7",
+    "the_order_argument": "|Stab| = 5040 = 7! exactly, and the image contains odd permutations. A proper subgroup of S_7 containing odd permutations and of order at least 233 is essentially S_7 itself or a point-stabiliser S_6, and S_6 is not transitive on the seven points"
+  },
+  "pass_6010_the_two_sevens_are_opposite_extremes": {
+    "the_finding": "the two 7-sets are at OPPOSITE EXTREMES of the symmetry scale. One carries a rigid 1+3+3 structure; the other carries none at all. That is why the numerical agreement alpha = 7 was meaningless, and it is a much stronger statement than 'different objects'",
+    "w33": {
+      "orbits_on_the_7": [
+        1,
+        3,
+        3
+      ],
+      "points": 40,
+      "reading": "almost no symmetry on the seven points -- a fixed point and two triples, and 7 does not divide 18 so no transitive action",
+      "sets": 2880,
+      "stabiliser": "C3 x C6, abelian",
+      "stabiliser_order": 18
+    },
+    "w52": {
+      "orbits_on_the_7": [
+        7
+      ],
+      "points": 63,
+      "reading": "apparently ALL symmetry -- every permutation of the seven points realised, so nothing intrinsic distinguishes them",
+      "sets": 288,
+      "stabiliser": "consistent with S_7",
+      "stabiliser_order": 5040
+    }
+  },
+  "pass_6011_what_it_suggests": {
+    "not_tested": "W(7,2) at rank 4",
+    "rank_2_vs_rank_3": "at rank 2 the maximum partial ovoid is a structured object with a small stabiliser; at rank 3 it is a generic 7-subset with the full symmetric group. The design strength follows: 2-design at rank 2, 3-design at rank 3",
+    "the_open_question": "whether design strength tracks rank generally -- rank 4 would predict a 4-design -- and whether the stabiliser is always the full symmetric group above rank 2"
+  }
+}
