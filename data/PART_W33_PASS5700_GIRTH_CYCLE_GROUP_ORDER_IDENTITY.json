@@ -1,0 +1,18 @@
+{
+  "pass": 5700,
+  "status": "TR_A8_EXCESS_EQUALS_PSP43_ORDER_AND_CYCLE_SPACE_IS_A_DOUBLE_ORBIT",
+  "master_identity": "Tr(A_levi^8) = 193280 = 80*2092 + 25920 = n*M8_tree + |PSp(4,3)|",
+  "tower_excess": [25920, 25600, 25216, 24928],
+  "tower_cycles8": [1620, 1600, 1576, 1558],
+  "tower_girth": [8, 8, 8, 8],
+  "excess_shrinks_under_lift": true,
+  "cycle_space": {
+    "rooted_oriented_8cycles": 25920,
+    "orbits": [12960, 12960],
+    "stabilizer": "Z/2",
+    "chirality_invariant": "diagonal common-neighbour count 4 (orbit A) vs 0 (orbit B)",
+    "stabilizer_involution": {"fixed_points": 8, "transpositions": 16, "cycle_structure": "1^8 2^16"},
+    "open_merger": "the two orbits are exchanged only by the duality in full Aut = W(E6) of order 51840; regularity of the merged action on the 1620 unrooted cycles is open"
+  },
+  "physics_boundary": "Exact finite combinatorics and group action; the chirality bit is a Z/2 invariant of the symplectic geometry, not yet tied to a physical parity."
+}

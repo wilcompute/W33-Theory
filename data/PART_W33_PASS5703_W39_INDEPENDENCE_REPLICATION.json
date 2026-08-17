@@ -1,0 +1,11 @@
+{
+  "pass": 5703,
+  "status": "INDEPENDENT_W39_CONSTRUCTION_REPLICATES_ALPHA_BARRIER_BELOW_REPO_FRONTIER",
+  "graph": {"field": "F_9 = F_3[a]/(a^2+1)", "points_PG39": 820, "degree": 90},
+  "optimizer": "randomized greedy (55177 restarts) + 1-for-2 swaps",
+  "greedy_trials": 55177,
+  "best_independent_set": 46,
+  "repo_bounds": {"lower": 51, "upper": 80},
+  "verdict": "greedy+swap class plateaus at 46 < 51; barrier replicated, not broken",
+  "physics_boundary": "Pure combinatorial optimization; no physics claim."
+}

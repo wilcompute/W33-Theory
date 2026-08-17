@@ -1,0 +1,24 @@
+{
+  "pass": 5702,
+  "status": "NEW_SPECTRA_EQUIDISTRIBUTE_TO_KESTEN_MCKAY_WITH_2_TO_MINUS_LEVEL_KS_LAW",
+  "km_density": "rho(lambda) = 4 sqrt(12-lambda^2) / (2 pi (16-lambda^2)) on [-2 sqrt(3), 2 sqrt(3)]",
+  "tree_moments_exact": {"2": 4, "4": 28, "6": 232, "8": 2092, "10": 19864, "12": 195352},
+  "moment_matching": [
+    {"level": 1, "parent_n": 80, "M2": 4.0, "M4": 28.0, "M6": 232.0, "M8": 2088.0, "diff8": -4.0, "M10": 19736.0, "diff10": -128.0, "M12": 192745.6, "diff12": -2606.4},
+    {"level": 2, "parent_n": 160, "M2": 4.0, "M4": 28.0, "M6": 232.0, "M8": 2089.6, "diff8": -2.4, "M10": 19786.5, "diff10": -77.5, "M12": 193726.0, "diff12": -1626.0},
+    {"level": 3, "parent_n": 320, "M2": 4.0, "M4": 28.0, "M6": 232.0, "M8": 2091.1, "diff8": -0.9, "M10": 19831.875, "diff10": -32.125, "M12": 194635.75, "diff12": -716.25}
+  ],
+  "ks_distances": [
+    {"level": 1, "n": 80, "KS": 0.02102},
+    {"level": 2, "n": 160, "KS": 0.01079},
+    {"level": 3, "n": 320, "KS": 0.0054}
+  ],
+  "ks_halving_law": "KS halves each level (empirical 2^-level law)",
+  "eigenphase_spacings": [
+    {"level": 1, "n_angles": 76, "spacing_std_norm": 0.635},
+    {"level": 2, "n_angles": 158, "spacing_std_norm": 0.6301},
+    {"level": 3, "n_angles": 318, "spacing_std_norm": 0.7748}
+  ],
+  "spacing_reference": {"GOE": 0.52, "Poisson": 1.0},
+  "physics_boundary": "Empirical convergence on 3 levels; no all-level theorem claimed."
+}

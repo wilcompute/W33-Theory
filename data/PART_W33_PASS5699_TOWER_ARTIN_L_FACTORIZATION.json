@@ -1,0 +1,23 @@
+{
+  "pass": 5699,
+  "status": "W33_RAMANUJAN_TOWER_IS_AN_ARTIN_L_FUNCTION_TOWER_WITH_LEVELWISE_RH",
+  "factorization": "zeta_child^-1 = zeta_parent^-1 * L(u,chi)^-1 with L(u,chi)^-1 = (1-u^2)^(r-1) det(I - u A_signed + 3u^2 I)",
+  "spectrum_split_max_err_per_level": [7.549516567451064e-15, 7.105427357601002e-15, 2.3092638912203256e-14],
+  "base_closed_form": "Delta_levi(u) = (1-u^2)(1-9u^2)(1+9u^4)^24 (1+3u^2)^30",
+  "base_closed_form_verified": true,
+  "unsigned_poles": [
+    {"level": 0, "vertices": 80, "n_poles": 160, "on_critical_circle": 156, "off_circle_moduli": [0.333333, 1.0]},
+    {"level": 1, "vertices": 160, "n_poles": 320, "on_critical_circle": 316, "off_circle_moduli": [0.333333, 1.0]},
+    {"level": 2, "vertices": 320, "n_poles": 640, "on_critical_circle": 636, "off_circle_moduli": [0.333333, 1.0]},
+    {"level": 3, "vertices": 640, "n_poles": 1280, "on_critical_circle": 1276, "off_circle_moduli": [0.333333, 1.0]}
+  ],
+  "signed_L_function_poles": [
+    {"level": 1, "parent": 80, "n_Lpoles": 160, "off_circle": 0},
+    {"level": 2, "parent": 160, "n_Lpoles": 320, "off_circle": 0},
+    {"level": 3, "parent": 320, "n_Lpoles": 640, "off_circle": 0}
+  ],
+  "functional_equation_max_log_residual_per_level": {"0": 1.227e-13, "1": 3.207e-13, "2": 9.625e-13, "3": 6.138e-12},
+  "stark_terras_reference": "Factorization of zeta functions of coverings into Artin L-functions (Stark--Terras); here the Z/2 covering is the balanced 2-lift.",
+  "orientation_weld": "The Z/2 signing local system is the same datum as the Pass5696 determinant-line twist: the tower L-functions are the orientation-twisted sector partition functions.",
+  "physics_boundary": "Finite-graph zeta identities only; no continuum zeta regularization or physical energy spectrum is claimed."
+}
