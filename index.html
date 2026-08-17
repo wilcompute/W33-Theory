@@ -17,39 +17,64 @@
     <a href="docs/index.html">Full W33 site</a>
     <a href="docs/atlas.html">Visual atlas</a>
     <a href="docs/falsifiers.html">Falsifier dashboard</a>
-    <a href="analysis/PASS6533_6540_doily_quadratic_evaluation_code.md">Pass 6533–6540</a>
-    <a href="analysis/PASS6541_6544_doily_veldkamp_code_lines.md">Pass 6541–6544</a>
-    <a href="analysis/PASS6545_6552_ce2_carrier_provenance_correction.md">Pass 6545–6552</a>
-    <a href="analysis/PASS6553_6560_pg32_hamming_polar_bridge.md">Pass 6553–6560</a>
+    <a href="analysis/PASS6533_6540_doily_quadratic_evaluation_code.md">Doily code</a>
+    <a href="analysis/PASS6553_6560_pg32_hamming_polar_bridge.md">PG(3,2)</a>
+    <a href="analysis/PASS7001_7016_bent_biplane_klein.md">Bent biplane</a>
+    <a href="analysis/PASS7017_7024_schlafli_w33_equivariant_no_go.md">27↔40 no-go</a>
+    <a href="analysis/PASS7033_7040_ce2_blindness_audit.md">CE2 audit</a>
+    <a href="analysis/PASS7041_7048_k3_realization_boundary.md">K3 boundary</a>
+    <a href="analysis/PASS7049_7064_vogel_e6_split_casimir.md">Vogel E6 operator</a>
+    <a href="analysis/PASS7065_7080_kummer_biplane_k3_bridge.md">Kummer bridge</a>
   </nav>
+
+  <section class="card">
+    <div class="status">PASS · Passes 7049–7064</div>
+    <h2>Vogel is now an operator test, not a number match</h2>
+    <p>The repo-native integral Chevalley realization of the E₆ minuscule 27 closes to the full 78-dimensional Lie algebra. Using the trace-dual basis, the split Casimir on <code>27 ⊗ 78</code> obeys an exact sparse-integer characteristic identity:</p>
+    <div class="eq">(O₁₈−3I)(O₁₈+12I)(O₁₈+36I)=0<br>Ĉ=O₁₈/72: (1/24)¹⁷²⁸ ⊕ (−1/6)³⁵¹ ⊕ (−1/2)²⁷</div>
+    <p>The exact spectral projectors are idempotent, pairwise orthogonal, sum to the identity, and have ranks <code>1728,351,27</code>. This realizes the 2026 E₆ split-Casimir identity on an actual carrier already used by the E₈/CE2 program.</p>
+    <p class="boundary"><strong>Evidence boundary:</strong> this is a Vogel-specialized E₆ operator certificate. It does not prove existence of Vogel's conjectural universal Lie algebra and does not turn older W33 coefficient/count coincidences into morphisms.</p>
+  </section>
+
+  <section class="card">
+    <div class="status">PASS · Passes 7001–7016, 7065–7080</div>
+    <h2>Bent code → Kummer 16₆ → folded six-cube</h2>
+    <p>Restoring the missing zero coordinate upgrades the doily code to</p>
+    <div class="eq">D=&lt;RM(1,4),q₀&gt; = [16,6,6]₂<br>W(y)=1+16y⁶+30y⁸+16y¹⁰+y¹⁶</div>
+    <p>Its sixteen minimum supports form a symmetric <code>2-(16,6,2)</code> biplane. An explicit <code>GL(4,2)</code> matrix sends every translated quadratic support to the classical 4×4 row/column Kummer block: for each point, the other three points in its row plus the other three in its column.</p>
+    <div class="eq">Aut = 2⁴:Sp(4,2) ≅ 2⁴:S₆, |Aut|=11520<br>Levi graph ≅ folded Q₆, spectrum 6¹ ⊕ 2¹⁵ ⊕ (−2)¹⁵ ⊕ (−6)¹</div>
+    <p>Fixing one point gives the doily split exactly: six incident Kummer blocks shorten to the six ovoids, while ten nonincident blocks are the ten grid-complement supports. The earlier 35-line PG(3,2) split is simultaneously the hyperplane section <code>p₀₁+p₂₃=0</code> of the Klein quadric in <code>PG(5,2)</code>.</p>
+    <p class="boundary"><strong>K3 boundary:</strong> the abstract Kummer incidence is identified exactly. A specific projective Kummer quartic/K3 in the binary labels, and a chain map from its divisor lattice to the repo's 45-point curved precomplex, remain open.</p>
+  </section>
+
+  <section class="card">
+    <div class="status">PASS · Passes 7017–7024</div>
+    <h2>The direct full-group 27↔40 linear bridge is impossible</h2>
+    <p>The same inner group <code>PSp(4,3)</code> acts rank-three on the Schläfli 27 carrier and the W33 40 points, but their characteristic-zero permutation modules have disjoint nontrivial constituents:</p>
+    <div class="eq">C⁴⁰ = 1 ⊕ V₂₄ ⊕ V₁₅<br>C²⁷ = 1 ⊕ V₆ ⊕ V₂₀<br>dim Hom_PSp(4,3)(C²⁷,C⁴⁰)=1</div>
+    <p>Therefore every full-group equivariant linear map is a scalar multiple of the constant all-ones channel. A useful bridge must instead break to a subgroup, be nonlinear, pass through an intermediate carrier, or use a separately analyzed modular characteristic.</p>
+  </section>
+
+  <section class="card">
+    <div class="status warn">EVIDENCE CORRECTION · Passes 7033–7048</div>
+    <h2>CE2 compression is real; blind derivation and K3 realization remain open</h2>
+    <p>The native CE2 carrier and 5,832 sparse rows remain genuine evidence, but the current “normal-form” path is not yet answer-independent: it reads the simple-family sign map when building constant tables, and its delta polynomials are documented as fits to the full 864-entry dataset.</p>
+    <div class="eq">CE2: structural compression VERIFIED<br>independent no-answer-table derivation OPEN</div>
+    <p>Separately, the 45-point transport construction does contain a real finite curved precomplex and a rank-36 off-diagonal curvature block supported on 2,428 transport triangles. What is missing is an actual K3 geometric/cochain source object mapped into that precomplex; the old 2,428×36 scanner had only scanned a newly allocated zero template.</p>
+    <div class="eq">finite curved precomplex CLOSED<br>K3 geometric realization OPEN</div>
+  </section>
+
   <section class="card">
     <div class="status">PASS · Passes 6533–6544</div>
-    <h2>Doily quadratic-evaluation code</h2>
-    <p>The 31 nonzero geometric-hyperplane complements of the two-qubit doily are packaged by one five-dimensional binary evaluation code.</p>
-    <div class="eq">C = [15,5,6]₂, &nbsp; W(y)=1+10y⁶+15y⁸+6y¹⁰<br>C⊥ = [15,10,3]₂</div>
-    <p>The 15 minimum dual supports are exactly the 15 doily lines. The six weight-10 words and the six spreads of those minimum dual words give two intrinsic six-point actions; their cycle-class correspondence reconstructs the exceptional outer automorphism of <code>S₆</code>. The determinant <code>9+6</code> split is one distinguished weight-6 word, not a separate numerology.</p>
-    <h3>Full Veldkamp incidence reconstruction</h3>
-    <p>Projectivizing the five-dimensional code gives all 31 points and all 155 lines of <code>PG(4,2)</code>. The common zero-set cores reproduce the complete five-type Veldkamp census:</p>
-    <div class="eq">15 single points + 15 collinear triples + 60 unicentric triads<br>+ 20 tricentric triads + 45 pentads = 155</div>
-    <p>The only weight-level ambiguity, the 35 all-perp <code>(8,8,8)</code> lines, is resolved by the dual: 15 cores are minimum dual supports (the doily lines) and the remaining 20 are tricentric triads.</p>
-    <p class="boundary"><strong>Evidence boundary:</strong> finite binary geometry/coding only. The abstract Veldkamp classification is prior art; the repo contribution is the explicit executable code-and-dual reconstruction.</p>
+    <h2>Doily quadratic-evaluation code and full Veldkamp incidence</h2>
+    <div class="eq">C = [15,5,6]₂, W(y)=1+10y⁶+15y⁸+6y¹⁰<br>C⊥ = [15,10,3]₂</div>
+    <p>The 15 minimum dual supports are exactly the doily lines. Projectivizing the five-dimensional code gives all 31 points and all 155 lines of <code>PG(4,2)</code>, with the five common-core types recovered exactly. The six ovoids and six spreads also expose the exceptional outer automorphism of <code>S₆</code>.</p>
   </section>
+
   <section class="card">
     <div class="status">PASS · Passes 6553–6560</div>
     <h2>PG(3,2) Hamming-polar bridge</h2>
-    <p>The simplex subcode and its Hamming dual make the recurring 35-line projective carrier explicit:</p>
-    <div class="eq">[15,4,8] simplex ⟂ [15,11,3] Hamming<br>[15,5,6] doily code ⟂ [15,10,3] isotropic-line subcode</div>
-    <p>All 35 weight-3 Hamming words are the 35 lines of <code>PG(3,2)</code>. The added quadratic bit tests symplectic isotropy exactly, splitting them as <code>35 = 15 + 20</code>: 15 retained doily lines and 20 excluded nonisotropic lines, which are exactly the tricentric triads.</p>
-    <p>Symplectic polarity pairs those 20 nonisotropic lines into 10 disjoint pairs. The six-point union of each pair is exactly one weight-6 support of the doily code—equivalently, the complement of one of the 10 nine-point grids.</p>
-    <p class="boundary"><strong>Mechanism:</strong> the identity <code>&lt;q₀,1_{x,y,x+y}&gt; = B(x,y)</code> is the one-bit selector linking the Hamming/projective and doily/symplectic layers.</p>
-  </section>
-  <section class="card">
-    <div class="status warn">CORRECTION · Passes 6545–6552</div>
-    <h2>CE2 native carrier is 27×3, not 40</h2>
-    <p>The repository does contain 5,832 authentic sparse CE2 local rows. Their native label set is the graded <code>E₆</code> minuscule carrier times the <code>sl₃</code> fiber:</p>
-    <div class="eq">(e₆ ⊕ sl₃) ⊕ (27×3) ⊕ (27*×3*)<br>5,832 = 5,184 + 648</div>
-    <p>The committed affine-Heisenberg and Schläfli objects are both 27-point carriers; anchor 22 maps to Schläfli line <code>L45</code>. A later synthetic “40-point W33 anchor orbit” therefore uses the wrong native carrier unless an explicit equivariant 27↔40 transport is constructed.</p>
-    <p>The compact 5,832-row artifact survives, but its named source and named from-scratch producer are absent from the current checkout/history path. The global affine-Heisenberg compression is promising, yet an independent theorem still requires predicting all 5,832 answers without consulting the answer table and comparing exactly.</p>
-    <p class="boundary"><strong>Evidence boundary:</strong> authentic local CE2 data certified; independent global formula replay remains open. K3 remains separate and still requires the real curvature/cochain object before any deformation scan can be promoted.</p>
+    <p>All 35 minimum Hamming supports are the 35 lines of <code>PG(3,2)</code>. The quadratic selector tests symplectic isotropy exactly, splitting them as 15 doily lines plus 20 nonisotropic lines. Polarity pairs the 20 into ten skew pairs whose six-point unions are exactly the ten grid-complement codewords.</p>
+    <p class="boundary"><strong>Mechanism:</strong> <code>&lt;q₀,1_{x,y,x+y}&gt; = B(x,y)</code>.</p>
   </section>
 </main></body></html>
