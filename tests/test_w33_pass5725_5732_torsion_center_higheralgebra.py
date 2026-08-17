@@ -5,9 +5,10 @@ ROOT=Path(__file__).resolve().parents[1]
 def load(n):return json.loads((ROOT/'data'/n).read_text())
 def test_5725_center_pairing():
  d=load('PART_W33_PASS5725_TORSION_CENTER_PAIRING.json');assert d['GL23_invariant_covectors']==[[0,0]];assert d['detecting_nonzero_covectors_per_nonzero_torsion_class']==6
-def test_5726_exact_jacobi_rank_and_complement():
+def test_5726_exact_jacobi_rank_and_canonical_complement():
  d=load('PART_W33_PASS5726_EXACT_FIREWALL_JACOBIATOR_RANK.json');assert d['rank_over_Q']==d['output_support_size']==d['minimal_2term_repair']['minimal_dim_Y']==234;assert d['nonzero_jacobiator_triples']==32400;assert d['untouched_complement_dimension']==14
  s=d['untouched_complement_structure'];assert s['root_subsystem_type']=='A2';assert s['root_subsystem_rank']==2 and s['root_subsystem_size']==6;assert s['internal_firewall_deleted_pairs']==0 and s['closed_under_filtered_bracket'];assert s['reductive_type'].startswith('A2 + T6')
+ a=load('PART_W33_PASS5726_FAMILY_A2_COMPLEMENT_IDENTIFICATION.json');assert a['canonical_A2_match'];assert a['image_root_decomposition']=={'E6_grade0_roots':72,'g1_matter_roots':81,'g2_conjugate_matter_roots':81};assert a['complement_decomposition']=={'Cartan_coordinates':8,'canonical_A2_roots':6}
 def test_5727_heisenberg_intertwiner():
  d=load('PART_W33_PASS5727_TORSION_E8_FAMILY_HEISENBERG_INTERTWINER.json');assert d['correction_to_pass5708']['generated_group_order']==27;assert d['correction_to_pass5708']['commutant_dimension']==1
 def test_5728_switching_selector():
