@@ -1,0 +1,46 @@
+{
+  "boundary": "Pass 6096 proves a GROUP-THEORETIC fact and reduces the Pass 346 no-go to a modelling choice. It does NOT prove which group is physically the controller, and it does NOT derive the Standard Model's handedness. What it removes is the claim that chirality selection is IMPOSSIBLE from inside the substrate",
+  "pass_6096_the_computation": {
+    "go53": {
+      "order": 103680
+    },
+    "index": 2,
+    "note": "|SO(5,3)| = 51840 = |Sp(4,3)|, consistent with Sp(4,q) = Spin(5,q)",
+    "psp43": {
+      "abelianisation": "trivial",
+      "index_2_normal_subgroups": 0,
+      "order": 25920,
+      "perfect": true,
+      "simple": true
+    },
+    "so53": {
+      "order": 51840
+    },
+    "sp43": {
+      "abelianisation": "trivial",
+      "centre": 2,
+      "index_2_normal_subgroups": 0,
+      "order": 51840,
+      "perfect": true,
+      "simple": false
+    }
+  },
+  "pass_6097_the_argument": {
+    "conclusion": "Sp(4,3) CANNOT contain a half-spin-swapping element. In any orthogonal representation every element of Sp(4,3) has determinant +1, so the group lies inside SO and preserves each half-spin separately",
+    "standard_fact": "in O(2n), elements of determinant -1 SWAP the two half-spin representations and elements of determinant +1 PRESERVE them. So a group selects a chirality exactly when the determinant character is trivial on it",
+    "the_key_step": "a homomorphism from a PERFECT group to {+1,-1} is trivial, because {+1,-1} is abelian and a perfect group has trivial abelianisation",
+    "verified": "both Sp(4,3) and PSp(4,3) have trivial abelianisation and ZERO index-2 normal subgroups, so neither admits any nontrivial map to {+1,-1}"
+  },
+  "pass_6098_what_this_does_to_pass_346": {
+    "pass_346_claim": "the substrate's controller T has det = -1 and swaps S+/S-, so chirality is unselectable from inside and the substrate can host the SM's handedness but not explain it",
+    "status": "the no-go is REDUCED from 'impossible' to 'depends which group you call the controller', and the smaller, more natural choice does select",
+    "the_reduction": "the no-go is not a theorem about the substrate. It is a theorem about the FULL similitude/orthogonal group. If the controller is taken to be Sp(4,3) -- the substrate's own automorphism group -- then chirality IS selectable, because a perfect group cannot swap the half-spins",
+    "what_is_still_open": "whether the physically correct controller is Sp(4,3) or the full similitude group. That is a modelling question this pass does NOT answer, and answering it is what would turn a reduction into a derivation",
+    "where_that_T_lives": "NOT in Sp(4,3). |GO(5,3)| = 103680 = 2 x |SO(5,3)| = 2 x 51840, so the det = -1 coset is the OUTER half of GO(5,3) -- strictly larger than the substrate's own group"
+  },
+  "pass_6099_why_this_matters": {
+    "the_cheap_check_nobody_ran": "is the substrate's group perfect? One GAP call. Trivial abelianisation immediately forbids any det = -1 element",
+    "the_obstruction_was_central": "Pass 346 closed the selection layer and the corpus has treated chirality as unexplainable-from-inside ever since, with the other lane repeatedly invoking it as a firewall",
+    "the_precedent": "this is the same shape as several results this session: an obstruction stated for a large ambient object, which dissolves when restricted to the natural smaller one. The determinant polarization was symplectic only in char 2; the Golay algebra was a Block algebra; and here the swap lives only outside the substrate's group"
+  }
+}
