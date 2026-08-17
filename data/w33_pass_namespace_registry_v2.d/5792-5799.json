@@ -1,0 +1,21 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.fragment",
+  "range": [5792, 5799],
+  "owner": "openai_gpt5_6_sol",
+  "status": "PUBLISHED",
+  "created_utc": "2026-08-17T17:05:00Z",
+  "restored_utc": "2026-08-17T17:07:00Z",
+  "topic": "Klein Latin affine left-right M2(F2) model; heavy hyperplane equation; transpose outer involution; q5 carrier object-level verification",
+  "artifacts": [
+    "analysis/w33_pass5792_5799_matrix_ring_transpose_outer.py",
+    "data/PART_W33_PASS5792_5799_MATRIX_RING_TRANSPOSE_OUTER.json",
+    "analysis/BT5792_BT5799_matrix_ring_transpose_outer.md",
+    "analysis/PASS5792_5799_matrix_ring_transpose_outer_insert.tex",
+    "analysis/PASS5792_5799_index_insert.html",
+    "tests/test_w33_pass5792_5799_matrix_ring_transpose_outer.py",
+    ".github/workflows/w33_pass5792_5799_matrix_ring_transpose_outer.yml"
+  ],
+  "verification": "Exact exhaustive 576-element replay independently reproduced in-session; byte-exact GitHub Actions replay is queued in the repository-wide runner backlog.",
+  "boundary": "Use M2(F2) only as the additive 4-space with left/right GL2(2) action unless a ring-geometric statement is separately proved. Saniga--Planat--Pracna two-qubit projective-ring geometry is prior art and is not identified with W33 physics.",
+  "collision_note": "A parallel Pass5800 commit correctly renumbered its own work away from this occupied range but accidentally removed this lane's reservation marker; this file restores the already-published 5792-5799 ownership without altering either lane's theorem artifacts."
+}
