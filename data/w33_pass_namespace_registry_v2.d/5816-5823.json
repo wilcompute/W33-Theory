@@ -2,8 +2,19 @@
   "schema": "w33.pass_namespace_registry.v2.fragment",
   "range": [5816, 5823],
   "owner": "openai_gpt5_6_sol",
-  "status": "RESERVED",
+  "status": "PUBLISHED",
   "created_utc": "2026-08-17T17:18:00Z",
+  "published_utc": "2026-08-17T17:24:00Z",
   "topic": "M2(F2) Fourier rank stratification: 16=1+9+6; W9 as rank-one additive characters; V6 as unit/rank-two characters; transpose dual action; signed monomial model",
+  "artifacts": [
+    "analysis/w33_pass5816_5823_matrix_fourier_rank_stratification.py",
+    "data/PART_W33_PASS5816_5823_MATRIX_FOURIER_RANK_STRATIFICATION.json",
+    "analysis/BT5816_BT5823_matrix_fourier_rank_stratification.md",
+    "analysis/PASS5816_5823_matrix_fourier_rank_stratification_insert.tex",
+    "analysis/PASS5816_5823_index_insert.html",
+    "tests/test_w33_pass5816_5823_matrix_fourier_rank_stratification.py",
+    ".github/workflows/w33_pass5816_5823_matrix_fourier_rank_stratification.yml"
+  ],
+  "verification": "Core Radon/Fourier formulas and all 576-element signed-monomial character norms independently reproduced in-session; frozen certificate is byte-exact replay target; dedicated GitHub Actions replay may remain queued in the shared runner backlog.",
   "boundary": "Exact finite Fourier/representation theorem only. Matrix-rank character strata are not particle multiplets or physical quantum states without an independently verified physical map."
 }
