@@ -1,0 +1,83 @@
+{
+  "pass_5744": {
+    "bridge": "rowspace_F3(W33_noncollinearity)=quadratic_Veronesecode_C3(PG(3,3))",
+    "codewords": 59049,
+    "parameters": [40, 10, 18],
+    "weight_enumerator": {"0":1,"18":1560,"24":21060,"27":18800,"30":16848,"36":780}
+  },
+  "pass_5745": {
+    "B": [
+      [0,0,0,0,1,0,0,0,0,0],
+      [0,1,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,2,0,0,0],
+      [0,0,0,0,0,1,0,0,0,0],
+      [1,0,0,0,0,0,0,0,0,0],
+      [0,0,0,1,0,0,0,0,0,0],
+      [0,0,2,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0,1],
+      [0,0,0,0,0,0,0,0,1,0],
+      [0,0,0,0,0,0,0,1,0,0]
+    ],
+    "B_nnz": 10,
+    "B_squared_is_identity": true,
+    "C_nnz": 1080,
+    "V_nnz": 216,
+    "direct_over_factorized_ratio": 2.4434389140271495,
+    "factorization": "C=V B V^T mod 3",
+    "factorized_term_count": 442
+  },
+  "pass_5746": {
+    "C_squared_zero_mod3": true,
+    "self_orthogonal": true,
+    "standard_css_consequence": "[[40,20,4]]_3",
+    "warning": "standard consequence of known classical code; not coding-theory novelty"
+  },
+  "pass_5747": {
+    "dual_distance": 4,
+    "minimum_projective_supports": 130,
+    "minimum_vector_words": 260,
+    "supports": "all projective lines of PG(3,3)"
+  },
+  "pass_5748": {
+    "ambient_nonisotropic_groups": 9,
+    "law": "x_p=-sum_{q in L\\{p}} x_q mod 3",
+    "queries_per_repair": 3,
+    "repair_groups_per_coordinate": 13,
+    "w33_native_groups": 4
+  },
+  "pass_5749": {
+    "H_rank_F3": 30,
+    "H_shape": [130,40],
+    "column_weight": 13,
+    "containment": "C subset C^perp",
+    "kernel_dimension": 10,
+    "row_weight": 4,
+    "rowspace_is_full_dual": true
+  },
+  "pass_5750": {
+    "cross_degrees": [36,16],
+    "isotropic_lines": 40,
+    "logical_line_graph": "J_3(4,2)",
+    "nonisotropic_induced_degree": 32,
+    "nonisotropic_lines": 90,
+    "srg": [130,48,20,16],
+    "w33_isotropic_induced_srg": [40,12,2,4]
+  },
+  "pass_5751": {
+    "PGL4_order": 12130560,
+    "PGSp4_order": 51840,
+    "all_overlays_same_code": true,
+    "architecture": "one ambient 40-coordinate quadratic code supports 234 selectable W33 symplectic routing overlays without changing code space",
+    "boundary": "finite reconfiguration statement only",
+    "distinct_overlay_matrices": 234,
+    "each_line_native_in_overlays": 72,
+    "native_lines_per_overlay": 40,
+    "symplectic_overlays": 234
+  },
+  "prior_art": {
+    "Kaipa_Pradhan_2024": "known ternary quadratic Veronese 3-fold / second-order projective Reed-Muller code on PG(3,3), including higher weight spectra",
+    "Rodrigues_2008": "known [40,10,18]_3 self-orthogonal design code; dual [40,30,4]_3 with 260 weight-4 words; full code/design automorphism L4(3):2_1",
+    "claim_tier": "code parameters and Veronese family are prior art; exact W33 coordinate bridge and finite machine-layer synthesis are new-to-repo unless separately sourced"
+  },
+  "schema": "w33.pass5744_5751.quadratic_code_overlays.v1"
+}
