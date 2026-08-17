@@ -17,11 +17,11 @@
 
 ## ✅ Next Steps
 <!-- What should we do next? -->
-- Auto-saved at 2026-08-17T20:54:29.269Z (reason: timer)
+- Auto-saved at 2026-08-17T21:07:13.933Z (reason: threshold-commits)
 - Recent commits:
-  - de625db5d Pass5960-5967: the 9+6 split is general, and what is special at q=2 is the ambient geometry
-  - 253c17fb3 Merge remote-tracking branch 'origin/master'
-  - 80f1e2769 Pass5952-5959: exactly two orbits on triples, and the units side at odd q
+  - 4e21bb348 Merge remote-tracking branch 'origin/master'
+  - 8201d578e Pass5984-5991: the whole contextuality ladder is one quadratic form
+  - 67183ce1d Pass5961-5974: det-split = crossing/internal duad split + doily realizes Out(S_6) geometrically
 
 ## 📝 Open Questions
 <!-- What do we still need to figure out? -->

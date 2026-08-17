@@ -1,0 +1,44 @@
+{
+  "boundary": "Pass 5992's combined statement follows from a one-line identity and is almost certainly classical. Pass 5994's alpha(W(5,2)) = 7 is computed exhaustively. Pass 5996 flags a numerical coincidence WITHOUT claiming it, and corrects an error in this pass's own printed output",
+  "pass_5992_both_axes_at_once": {
+    "consequence": "Q(x,z) = sum_i x_i z_i on F_q^(2n) has ALTERNATING polarization exactly when q is even, for EVERY n",
+    "even_q": "gives W(2n-1,q), the symplectic polar space, at every rank",
+    "identity": "pol(v,v) = Q(2v) - 2Q(v) = 4Q(v) - 2Q(v) = 2Q(v)",
+    "odd_q": "symmetric but not alternating at every rank, giving an orthogonal geometry",
+    "status": "one-line proof about a classical object; assume classical until searched",
+    "the_point": "the characteristic-2 dichotomy is UNIFORM IN n -- it does not weaken or change character at higher rank. So the two axes the other lane and I have been exploring separately combine into one statement, and neither direction rescues odd q"
+  },
+  "pass_5994_alpha_up_the_ladder": {
+    "computed": [
+      {
+        "alpha": 1,
+        "points": 3,
+        "space": "W(1,2)"
+      },
+      {
+        "alpha": 5,
+        "points": 15,
+        "space": "W(3,2)"
+      },
+      {
+        "alpha": 7,
+        "points": 63,
+        "space": "W(5,2)"
+      }
+    ],
+    "correction_to_my_own_output": "this pass printed 'ovoid size for W(5,q) would be q^2+1 = 5', which is wrong. Rank 3 needs q^3+1 = 9. The computed alpha of 7 is unaffected",
+    "ovoid_sizes": "W(3,q) rank 2 has ovoids of size q^2+1, and alpha(W(3,2)) = 5 = 2^2+1 attains it. W(5,q) rank 3 would need q^3+1 = 9 at q=2, and alpha = 7 falls short -- consistent with the classical theorem that symplectic polar spaces of rank at least 3 have NO ovoids",
+    "w52_details": {
+      "alpha": 7,
+      "collinearity_degree": 30,
+      "exhaustive": true
+    }
+  },
+  "pass_5996_a_coincidence_not_chased": {
+    "observation": "alpha(W(5,2)) = 7 and alpha(W(3,3)) = 7",
+    "same_number": true,
+    "same_object": false,
+    "what_would_change_it": "an equivariant map between the two carriers, which is not built",
+    "why_i_am_not_pursuing_it": "different spaces -- 63 points at rank 3 over F_2 versus 40 points at rank 2 over F_3 -- different groups, different ovoid deficits. Two appearances of 7 with no map between the carriers is precisely the coincidence pattern this session has killed twelve times"
+  }
+}
