@@ -14,6 +14,7 @@ on:
       - 'analysis/w33_pass5709_*'
       - 'analysis/w33_pass5710_*'
       - 'analysis/w33_pass5711_*'
+      - 'analysis/w33_pass5364_publication_dag_audit.py'
       - 'analysis/PASS5704_5711_*'
       - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
       - 'tests/test_w33_pass5704_5711_physics_frontier.py'
