@@ -17,11 +17,11 @@
 
 ## ✅ Next Steps
 <!-- What should we do next? -->
-- Auto-saved at 2026-08-17T15:51:21.208Z (reason: timer)
+- Auto-saved at 2026-08-17T15:56:29.648Z (reason: threshold-commits)
 - Recent commits:
-  - acc6344d0 Continuity autogen refresh
-  - cf86e03cf Pass5728-5735: S4 wr S2 is Aut(K_4,4), and my correction needed correcting
-  - 08440fba8 Pass5736-5743: add quadratic evaluation code verifier
+  - 56a79fbda Pass5736-5743: the digit law's bound is proved -- and classical too
+  - a34cda2bc Reserve Pass5736-5743 Track A: digit law proof, GF(8), construction audit
+  - 3e90f7790 Pass5736-5743: freeze quadratic evaluation code certificate
 
 ## 📝 Open Questions
 <!-- What do we still need to figure out? -->

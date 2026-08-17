@@ -10,30 +10,36 @@
 This file contains project context and decisions. AI assistants should read this file for context. MCP tools are an optional enhancement for richer interaction when connected.
 
 ## Project Context
-- **Total Decisions:** 5181
+- **Total Decisions:** 5182
 - **Known Topics:** needs-review, auto-draft, why, w33, testing, toe, docs, architecture, holonet, photonic, audit, qec, github, selector, gap
 
 ## Current State
 **Repository:** Theory of Everything
 **Project Type:** Python Project | Python
 **Branch:** master
-**Tracking:** ahead 1, behind 8
+**Tracking:** ahead 3, behind 0
 
 **Recent Commits:**
-- `223c95c Pass5728-5735: S4 wr S2 is Aut(K_4,4), and my correction needed correcting`
-- `4f5162e Reserve Pass5728-5735 Track A: digit law extension, Steinberg, F3 collapse`
-- `e9877c4 Pass5720-5727: GF(9) breaks the period claim and reveals a base-p digit law`
-- `e447d83 Pass5726: add exact firewall Jacobiator rank replay`
-- `6f1cbea Pass5712-5719: the complete symplectic tower, and a self-audit`
+- `56a79fb Pass5736-5743: the digit law's bound is proved -- and classical too`
+- `a34cda2 Reserve Pass5736-5743 Track A: digit law proof, GF(8), construction audit`
+- `3e90f77 Pass5736-5743: freeze quadratic evaluation code certificate`
+- `3941d57 Pass5743: add 234 symplectic-overlay code invariance census`
+- `544884d Promote Pass5725-5732 into current frontier manifest`
 
 **Working Tree:**
+- M .continuity/SESSION_NOTES.md
 - M .continuity/decisions.json
 - M .continuity/decisions.jsonl
 - M .cursorrules
+- M .github/copilot-instructions.md
+- M AGENTS.md
+- M CLAUDE.md
+- M GEMINI.md
 
 ## Session Context
 **Goals:**
 - 2026-08-08 current goal: finish and validate the Passes 4324-4334 chamber Hecke and audited-corrections packet while preserving exact theorem, retraction, and open-boundary language.
+
 
 ## Decision Freshness
 **0 stale decisions** · 511 need review · 1138 superseded ready to archive · Oldest unreviewed: 2026-04-20
@@ -209,25 +215,25 @@ after commit:
 ---
 
 ## Recent Decisions
-1. **decision-17869817** (8/17/2026)
+1. **decision-17869821** (8/17/2026)
+   - Q: Can the base-p digit law be proved, and is it classical?
+   - A: YES to both -- the bound is provable in four lines from two standard facts, so it is classical. Only the attainment is mine.  THE PROOF. Write e in base p as e = sum d_i p^i. Then entrywise sf^e = product of (Frob^i(sf))^(d_i), since x -> x^(p^i) is the i-th Frobenius. Two classical ingredients finish it: (a) Frobenius is a field automorphism, so Frob^i(sf) is the entrywise image of sf under a ring automorphism and has the SAME rank 4; (b) Hadamard rank is submultiplicative, rank(A o B) <= rank(A) rank(B), together with the Hadamard power bound rank(A^(o d)) <= C(d + rank A - 1, d). Applyin...
+
+2. **decision-17869817** (8/17/2026)
    - Q: Where does S4 wr S2 come from in the tomotope, and was the period-(q-1) retraction correct?
    - A: S4 wr S2 = Aut(K_4,4), inherited from the construction. And NO -- the retraction was wrong; the original claim was sound.  THE ANSWER, AND THE CORPUS ALREADY HELD IT. The Q4 antipodal quotient IS K_4,4 -- verified here: 8 vertices, 16 edge-classes, 4-regular, bipartite, isomorphic to K_4,4 -- and |Aut(K_4,4)| = (4!)^2 x 2 = 1152 = |S4 wr S2|. So S4 wr S2 is NOT intrinsic to the tomotope's 16-face graph; it is INHERITED FROM THE CONSTRUCTION, exactly as Pass 5726 guessed before finding it. That is why four internal searches all failed -- Delsarte coset graph (Pass 5671), two-weight structure...
 
-2. **decision-17869812** (8/17/2026)
+3. **decision-17869812** (8/17/2026)
    - Q: Does the symplectic power tower really have period q-1, and what does GF(9) reveal?
    - A: NO -- the wrap is at the CHARACTERISTIC, not q, and the law is a base-p digit product.  CORRECTION TO PASS 5713. It claimed rank_q(sf^e) has period q-1, verified at q = 3, 5, 7, 11. At q=9 that would put the wrap at e=9. It is at e=3. GF(9) has characteristic 3, so Frobenius is x -> x^3 and sf^3 = Frobenius(sf) is again a form of rank 4. For PRIME q the characteristic equals q and the two statements coincide -- which is exactly why every q I had tested was blind to the difference. All four verifications were at primes.  THE COMPLETE LAW IS MULTIPLICATIVE OVER BASE-p DIGITS:      rank(sf^e) ...
 
-3. **decision-17869809** (8/17/2026) [audit, redis]
+4. **decision-17869809** (8/17/2026) [audit, redis]
    - Q: What is the complete form of the symplectic power rank tower, and how many of this session's theorems were actually c...
    - A: The tower is periodic, not merely bounded. And 2 of 8 claims were classical -- both the ones with one-line proofs.  THE COMPLETE STATEMENT: rank_q(sf^e) = C(e+3,3) for 1 <= e <= q-1, and rank_q(sf^e) depends only on e mod (q-1). At q=11 that is TEN rungs -- 4, 10, 20, 35, 56, 84, 120, 165, 220, 286 -- every one equal to dim Sym^e(F_11^4), then wrapping at e=11 back to the bilinear rank 4. Verified at q = 3, 5, 7, 11. The BOUND is classical (Pass 5704, the Hadamard-power-of-a-configuration bound, arXiv:2005.08181); the ATTAINMENT at every rung and the period-(q-1) wrap are what this measures...
 
-4. **decision-17869805** (8/17/2026) [redis]
+5. **decision-17869805** (8/17/2026) [redis]
    - Q: Is the Sym^e rank bound on the symplectic form novel, and does the characteristic-2 kernel result generalise?
    - A: NO to both. The bound is classical and the kernel result is specific to the Reye. What survives is narrower.  ATTRIBUTION. Pass 5692 proved rank_q(sf^e) <= dim Sym^e(F_q^4) = C(e+3,3) and called it a theorem. It is the specialisation of a known general fact: for a configuration W there is a surjection Sym^s W ->> W^(*s) onto the s-fold Hadamard product, giving dim W^(*s) <= C(r_W + s - 1, s), which at r_W = 4 is exactly C(e+3,3). Source: "Configuration polynomials under contact equivalence", arXiv:2005.08181. THIRD ATTRIBUTION CORRECTION IN THREE PASSES, after Pass 5695 handed the p=2 rank ...
-
-5. **decision-17869802** (8/17/2026) [redis]
-   - Q: What is Aut of the Reye [12,4,6] code, and does the symplectic rank law extend beyond squares?
-   - A: Aut IS W(F4)/Z acting as T12_165 -- typed, not matched. And the rank law is a whole tower.  TYPED AT LAST. Aut([12,4,6]) = SmallGroup(576,8654) = W(F4)/Z, and its degree-12 action is T12_165 -- the same PERMUTATION group the Reye configuration carries, not merely the same abstract group. Pass 5687 reported this as an order match and explicitly refused to identify it (8,681 groups share order 576, and Pass 5644 was wrong about exactly this kind of match at 1152). Typed by SmallGroup id it holds. SO PASS 5675 UNDERSTATED ITS OWN RESULT: the characteristic-2 kernel recovers not just the unique...
 
 *1471 unreviewed drafts from auto-capture pending review — `continuity log` the real rationale or update_decision to expand them.*
 

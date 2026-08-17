@@ -1,0 +1,171 @@
+{
+  "boundary": "Pass 5752 REFUTES the last claim this thread had -- attainment is generic. The mathematics of every earlier pass stands; the ATTRIBUTION to W(3,q) does not. Pass 5756 audits ten claims from this session, not every statement. Pass 5757's method is a heuristic with one success, not a theorem",
+  "pass_5752_5753": {
+    "conclusion": "attainment is GENERIC; nothing in the Sym^e or digit-law thread is specific to the symplectic form or to W(3,q)",
+    "forms": [
+      {
+        "attains": true,
+        "form": "symplectic sf (alternating)",
+        "ranks": [
+          4,
+          10,
+          20,
+          35
+        ]
+      },
+      {
+        "attains": true,
+        "form": "identity (symmetric, nondegenerate)",
+        "ranks": [
+          4,
+          10,
+          20,
+          35
+        ]
+      },
+      {
+        "attains": true,
+        "form": "antidiagonal symmetric",
+        "ranks": [
+          4,
+          10,
+          20,
+          35
+        ]
+      },
+      {
+        "attains": true,
+        "form": "diagonal 1,2,3,4",
+        "ranks": [
+          4,
+          10,
+          20,
+          35
+        ]
+      },
+      {
+        "attains": true,
+        "form": "random nondegenerate #0",
+        "ranks": [
+          4,
+          10,
+          20,
+          35
+        ]
+      },
+      {
+        "attains": true,
+        "form": "random nondegenerate #1",
+        "ranks": [
+          4,
+          10,
+          20,
+          35
+        ]
+      },
+      {
+        "attains": true,
+        "form": "random nondegenerate #2",
+        "ranks": [
+          4,
+          10,
+          20,
+          35
+        ]
+      }
+    ],
+    "result": "7 of 7 attain, including 3 random nondegenerate",
+    "retracts": "Pass 5736's 'the only part that is mine'",
+    "test": "does a non-symplectic nondegenerate form attain the same bound?"
+  },
+  "pass_5754_5755": {
+    "actual_subject": "the RANK of the form: a rank-r form gives C(e+r-1,e)",
+    "failure_mode": "a SIXTH mode, not among CLAUDE.md's five: true, proportionate, witnessed, novel to the corpus, and about the WRONG SUBJECT",
+    "the_4": "rank(J) = 4, not the dimension and nothing symplectic",
+    "the_catching_test": "change the object and see whether the result changes; run eight passes late"
+  },
+  "pass_5756": {
+    "audit": [
+      {
+        "basis": "construction",
+        "claim": "alpha(W(3,q)) = q^2+1 for even q, to q=256",
+        "verdict": "MINE"
+      },
+      {
+        "basis": "isomorphism test",
+        "claim": "Reye 12_4 16_3 = tomotope medial layer",
+        "verdict": "MINE"
+      },
+      {
+        "basis": "GAP typing",
+        "claim": "Aut(Reye Levi) = W(F4)/Z = SmallGroup(576,8654)",
+        "verdict": "MINE"
+      },
+      {
+        "basis": "two independent routes",
+        "claim": "the code partition IS T12_165's unique block system",
+        "verdict": "MINE"
+      },
+      {
+        "basis": "GAP typing",
+        "claim": "Aut([12,4,6]) = W(F4)/Z acting as T12_165",
+        "verdict": "MINE"
+      },
+      {
+        "basis": "already in MMCCCLXXIV",
+        "claim": "S4 wr S2 = Aut(K_4,4), the Q4 antipodal quotient",
+        "verdict": "CORPUS"
+      },
+      {
+        "basis": "arXiv:2005.08181",
+        "claim": "the Sym^e bound",
+        "verdict": "CLASSICAL"
+      },
+      {
+        "basis": "Chandler-Sin-Xiang",
+        "claim": "the p=2 adjacency rank law",
+        "verdict": "CLASSICAL"
+      },
+      {
+        "basis": "Frobenius + Hadamard submultiplicativity",
+        "claim": "the base-p digit bound",
+        "verdict": "CLASSICAL"
+      },
+      {
+        "basis": "generic over all nondegenerate forms",
+        "claim": "attainment of the bound",
+        "verdict": "CLASSICAL"
+      }
+    ],
+    "classical": 4,
+    "mine": 5,
+    "pattern": "everything from an ARGUMENT was classical; everything that survived came from a construction, a GAP typing, or an explicit search"
+  },
+  "pass_5757_5759": {
+    "portable_output": "construction-inheritance: for an unexplained automorphism group, check what the object was built from first",
+    "rule": "an empty result is a hypothesis about the pattern",
+    "searches": [
+      {
+        "actual": "found on the 5th",
+        "first_result": "empty on 4 patterns",
+        "target": "the p=2 rank law"
+      },
+      {
+        "actual": "grep could not match `>`",
+        "first_result": "empty",
+        "target": "the master-theorem banner"
+      },
+      {
+        "actual": "was upstream, 1 file away",
+        "first_result": "4 internal searches",
+        "target": "S4 wr S2's origin"
+      },
+      {
+        "actual": "STILL unlocated",
+        "first_result": "empty on 5 patterns",
+        "target": "the [12,4,6] enumerator"
+      }
+    ],
+    "still_open": "the [12,4,6] weight enumerator, after five patterns"
+  }
+}
