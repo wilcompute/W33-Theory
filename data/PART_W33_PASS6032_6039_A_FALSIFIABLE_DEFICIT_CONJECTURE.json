@@ -1,0 +1,65 @@
+{
+  "boundary": "Pass 6032 states a conjecture FIT FROM TWO DATA POINTS, which is very weak evidence. The q=7 test did NOT settle it: the MILP returned 33 unproved after 420 seconds, and 33 < 35 is consistent with the solver not having found the optimum. This is recorded as an OPEN PREDICTION, not a result and not a refutation",
+  "pass_6032_the_deficit_conjecture": {
+    "epistemic_status": "a two-point fit is nearly worthless as evidence. What makes it worth recording is that it is SHARP and FALSIFIABLE: a 35-set at q=7 confirms it, and a proof that alpha(W(3,7)) < 35 kills it",
+    "even_q": "alpha = q^2+1, the ovoid, since W(3,q) has ovoids for even q",
+    "fit_from": 2,
+    "odd_q_data": [
+      {
+        "alpha": 7,
+        "deficit": 3,
+        "q": 3,
+        "q2plus1": 10
+      },
+      {
+        "alpha": 18,
+        "deficit": 8,
+        "q": 5,
+        "q2plus1": 26
+      }
+    ],
+    "predictions": [
+      {
+        "predicted_alpha": 35,
+        "predicted_deficit": 15,
+        "q": 7,
+        "q2plus1": 50
+      },
+      {
+        "predicted_alpha": 58,
+        "predicted_deficit": 24,
+        "q": 9,
+        "q2plus1": 82
+      }
+    ],
+    "the_pattern": "deficit = ((q+1)/2)^2 - 1, which gives 3 at q=3 and 8 at q=5"
+  },
+  "pass_6033_the_q7_test": {
+    "line_size": 8,
+    "lines": 400,
+    "milp_incumbent": 33,
+    "points": 400,
+    "predicted": 35,
+    "proved_optimal": false,
+    "space": "W(3,7)",
+    "time_limit_s": 420,
+    "verdict": "INCONCLUSIVE. 33 is an unproved incumbent and the prediction is 35, so the solver simply may not have found the optimum. This neither confirms nor refutes the conjecture",
+    "what_would_settle_it": [
+      "finding an explicit 35-set at q=7 (confirms)",
+      "proving alpha(W(3,7)) <= 34 (refutes)"
+    ]
+  },
+  "pass_6034_why_this_matters_for_q9": {
+    "current_q9_state": {
+      "best_construction": 51,
+      "dual_bound": 80,
+      "proved": false
+    },
+    "so": "if the conjecture holds, the q=9 answer is 58 and my five failed local searches were 7 short, not 29 short. That is a very different search problem -- and it says the target is reachable rather than the searches being hopeless",
+    "the_cheap_test": "look for a 58-set at q=9 directly, or a 35-set at q=7 where the space is only 400 points. The q=7 case is the cheaper decisive test",
+    "the_prediction": 58
+  },
+  "pass_6035_honesty_note": {
+    "why_i_am_flagging_the_weakness": "this session has killed thirteen coincidences, most of them numerical patterns fit from few points. A two-point fit predicting two unknowns is exactly that shape, and I am recording it as a prediction to be tested rather than a pattern to be believed"
+  }
+}
