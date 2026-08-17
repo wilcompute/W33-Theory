@@ -1,0 +1,104 @@
+% Passes 5798--5799: heavy-line disjointness Reye copy and W9 partial isometry.
+\subsubsection{Transpose carries point--line Reye incidence to heavy--line disjointness}
+\label{sec:pass5798-5799-reye-disjointness-duality}
+
+The affine matrix coordinates sharpen the point/heavy outer twist to a full
+incidence theorem.  Write the sixteen Reye lines as graphs
+\[
+ L_M=\{(w,Mw):0\ne w\in W\},
+ \qquad M\in\operatorname{Hom}(W,V),
+\]
+and the twelve heavy supports as
+\[
+ H_{\phi,\psi}=\{(w,x):\phi(x)+\psi(w)=1\}.
+\]
+Restricting the heavy equation to $L_M$ gives the linear functional
+$(\phi M+\psi)(w)$.  A nonzero functional on $\mathbb F_2^2$ takes value one
+on exactly two of the three nonzero vectors, while the zero functional never
+does.  Therefore
+\[
+ \boxed{
+ |L_M\cap H_{\phi,\psi}|=
+ \begin{cases}
+ 0,&\psi=\phi M,\\
+ 2,&\psi\ne\phi M.
+ \end{cases}}
+\]
+The complete line--heavy intersection census is
+\[
+ \boxed{0^{48}\oplus2^{144}}.
+\]
+
+Define incidence by disjointness,
+\[
+ D_{M,(\phi,\psi)}=1
+ \iff L_M\cap H_{\phi,\psi}=\varnothing.
+\]
+Every line is incident with three heavy blocks and every heavy block with four
+lines.  Hence $D$ is a $12_4,16_3$ incidence structure.  In fact it is exactly
+a second Reye copy.  Under
+\[
+ F(w,x)=(w^T,x^T),
+ \qquad M\mapsto M^T,
+\]
+the original point--line relation $x=Mw$ becomes
+\[
+ x^T=w^TM^T,
+\]
+which is precisely the heavy-disjointness condition.  Thus
+\[
+ \boxed{D[M,h]=R[F^{-1}(h),M^T].}
+\]
+Transpose therefore carries the original point--line Reye configuration to the
+heavy--line disjointness Reye configuration on the same sixteen-line family.
+The carrier outer involution is an incidence dualization, not only a character
+or stabilizer-class equivalence.
+
+There is also a canonical linear bridge between the two common nine-spaces.
+Let
+\[
+ C_R=4R-J_{12\times16},
+ \qquad
+ C_H=2H-J_{12}
+\]
+be the integer-centered point--line and point--heavy incidence matrices.  Then
+\[
+ \boxed{
+ B=\frac14 C_R^TC_H=J_{16\times12}-4D.
+ }
+\]
+Every entry of $B$ is $1$ or $-3$, its row and column sums vanish, and
+\[
+ \boxed{\operatorname{rank}_{\mathbb Q}B=9}.
+\]
+Moreover
+\[
+ \boxed{BB^T=C_R^TC_R},
+ \qquad
+ \boxed{B^TB=4C_H^TC_H},
+\]
+with
+\[
+ (C_R^TC_R)^2=64(C_R^TC_R),
+ \qquad
+ (C_H^TC_H)^2=16(C_H^TC_H).
+\]
+Consequently
+\[
+ \boxed{U=\frac18B}
+\]
+is a rank-nine partial isometry satisfying
+\[
+ \boxed{
+ UU^T=E_{W_9,L},
+ \qquad
+ U^TU=E_{W_9,H}.
+ }
+\]
+Thus the disjointness Reye matrix is itself the signed cross-transform that
+identifies the heavy and line realizations of the common irreducible $W_9$.
+
+\paragraph{Boundary.}
+This is exact finite incidence geometry and rational linear algebra.  It does
+not supply a quantum, continuum, dynamical, gauge, or particle-physics
+identification.
