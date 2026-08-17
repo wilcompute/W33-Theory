@@ -17,15 +17,27 @@
     <a href="docs/index.html">Full W33 site</a>
     <a href="docs/atlas.html">Visual atlas</a>
     <a href="docs/falsifiers.html">Falsifier dashboard</a>
-    <a href="analysis/PASS6533_6540_doily_quadratic_evaluation_code.md">Doily code</a>
-    <a href="analysis/PASS6553_6560_pg32_hamming_polar_bridge.md">PG(3,2)</a>
+    <a href="analysis/PASS7081_7096_e8_z3_z4_z12_common_refinement.md">E₈ Z₁₂ refinement</a>
+    <a href="analysis/PASS7049_7064_vogel_e6_split_casimir.md">Vogel E₆ operator</a>
+    <a href="analysis/PASS7065_7080_kummer_biplane_k3_bridge.md">Kummer bridge</a>
     <a href="analysis/PASS7001_7016_bent_biplane_klein.md">Bent biplane</a>
     <a href="analysis/PASS7017_7024_schlafli_w33_equivariant_no_go.md">27↔40 no-go</a>
     <a href="analysis/PASS7033_7040_ce2_blindness_audit.md">CE2 audit</a>
     <a href="analysis/PASS7041_7048_k3_realization_boundary.md">K3 boundary</a>
-    <a href="analysis/PASS7049_7064_vogel_e6_split_casimir.md">Vogel E6 operator</a>
-    <a href="analysis/PASS7065_7080_kummer_biplane_k3_bridge.md">Kummer bridge</a>
+    <a href="analysis/PASS6533_6540_doily_quadratic_evaluation_code.md">Doily code</a>
+    <a href="analysis/PASS6553_6560_pg32_hamming_polar_bridge.md">PG(3,2)</a>
   </nav>
+
+  <section class="card">
+    <div class="status">PASS · Passes 7081–7096</div>
+    <h2>CE2 and Kummer are adjacent gradings of one E₈</h2>
+    <p>One explicit 240-root E₈ model now carries both the qutrit/CE2 order-three grading and the Kummer/half-spin order-four grading. Their grading nodes are adjacent, with coprime highest-root marks 3 and 4, so the commuting toral actions refine exactly to <code>Z₄ × Z₃ ≅ Z₁₂</code>.</p>
+    <div class="eq">Z₄ rows × Z₃ columns:<br>54  3  3<br>16 48  0<br> 0 30 30<br>16  0 48</div>
+    <p>Row sums recover <code>60+64+60+64</code> with neutral <code>D₅+A₃</code>. Column sums recover the native CE2 <code>86+81+81</code> with neutral <code>E₆+A₂</code>. The doubly neutral algebra is <code>so(10)+sl(3)+u(1)</code>, dimension 54.</p>
+    <div class="eq">Z₁₂ sector dimensions:<br>54, 48, 30, 16, 3, 0, 0, 0, 3, 16, 30, 48</div>
+    <p>The CE2 81-sector therefore refines as <code>48+30+3</code>, while the Kummer half-spin 64-sector refines as <code>48+16</code>. The shared 48-dimensional channel is fixed by the same E₈ root decomposition, not by a numerical match.</p>
+    <p class="boundary"><strong>Boundary:</strong> this <code>Z₁₂</code> is an E₈ grade group. The repo's independent qutrit Clifford <code>μ₁₂</code> scalar phase group also has order 12, but no identification is claimed without an explicit character/intertwiner.</p>
+  </section>
 
   <section class="card">
     <div class="status">PASS · Passes 7049–7064</div>
