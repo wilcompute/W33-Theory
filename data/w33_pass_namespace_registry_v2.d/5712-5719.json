@@ -1,0 +1,10 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.fragment",
+  "range": [5712, 5719],
+  "owner": "OpenAI-Codex-GPT-5.6-Sol",
+  "track": "A",
+  "topic": "q5 Reye representation ring: source outer involution versus carrier sign twist",
+  "status": "RESERVED_ACTIVE",
+  "created_utc": "2026-08-17T00:00:00Z",
+  "boundary": "Reservation only. No character decomposition, automorphism action, cross-carrier equivalence, runtime, continuum, or physics claim is made until an exact GAP witness and certificate execute."
+}
