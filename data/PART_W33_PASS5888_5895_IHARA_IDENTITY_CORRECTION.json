@@ -1,0 +1,45 @@
+{
+  "pass_5888_canonical_graph_identity": {"edges": 240, "k": 12, "lambda": 2, "mu": 4, "v": 40},
+  "pass_5889_canonical_adjacency_spectrum": {"-4": 15, "12": 1, "2": 24},
+  "pass_5890_hashimoto_exact": {
+    "adjacency_induced_nontrivial_count": 78,
+    "adjacency_induced_nontrivial_modulus": "sqrt(11)",
+    "det_factorization": "(1-u^2)^200 (1-12u+11u^2) (1-2u+11u^2)^24 (1+4u+11u^2)^15",
+    "directed_edges": 480,
+    "ihara_excess_m_minus_n": 200,
+    "outdegree": 11,
+    "spectrum": {"+1": 201, "-1": 200, "-2+i*sqrt(7)": 15, "-2-i*sqrt(7)": 15, "1+i*sqrt(10)": 24, "1-i*sqrt(10)": 24, "11": 1}
+  },
+  "pass_5891_phase_equidistribution_refutation": {
+    "deduction": "Ihara-Bass fixes the finite phase multiset; it does not imply photonic FSR equidistribution.",
+    "distinct_nontrivial_phases": 4,
+    "equidistributed": false,
+    "phase_multiplicities": [24, 24, 15, 15],
+    "theta_from_mu_2": 1.2645189576252271,
+    "theta_from_mu_minus4": 2.2180811748105493
+  },
+  "pass_5892_pass5880_surrogate_audit": {
+    "degree_values": [4], "edges": 66,
+    "largest_nontrivial_adjacency_abs": 3.6825070656623664,
+    "ramanujan": false,
+    "ramanujan_bound_2sqrt3": 3.4641016151377544,
+    "vertices": 33
+  },
+  "pass_5893_graph_separation": {
+    "canonical_W33_collinearity": "40 vertices, 240 edges, degree 12, Hashimoto outdegree 11",
+    "deduction": "The three objects must not share one symbol or one q=d-1 without an explicit graph identifier.",
+    "pass5706_signed_mesh": "separate 4-regular signed 40-line/Levi mesh; q_nb=3 and its own 76-resonance certificate",
+    "pass5880_surrogate": "33-vertex 4-regular circulant with jumps +/-1,+/-11; not canonical W(3,3)"
+  },
+  "pass_5894_physical_firewall": {
+    "certified": "dimensionless Ihara/Hashimoto pole factors and graph spectra",
+    "not_certified": ["free spectral range from graph valence alone", "Fabry-Perot finesse from q=d-1 alone", "Shannon channel capacity from the graph spectrum alone", "uniform physical loss/Q without a propagation and coupling model"]
+  },
+  "pass_5895_correction_verdict": {
+    "pass5880_5887": "SUPERSEDED/QUARANTINED",
+    "reason": "wrong graph identity, omitted structural Hashimoto modes, false finite-phase equidistribution, and unsupported physical conversion",
+    "salvaged_exact_statement": "For canonical W(3,3), the 78 adjacency-induced nontrivial Hashimoto modes all have modulus sqrt(11)."
+  },
+  "schema": "w33.pass5888_5895.ihara_identity_correction.v1",
+  "status": "PASS_CORRECTION"
+}
