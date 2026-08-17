@@ -2,11 +2,22 @@
   "schema": "w33.pass_namespace_registry.v2.fragment",
   "range": [5848, 5855],
   "owner": "openai_gpt5_6_sol",
-  "status": "RESERVED",
+  "status": "PUBLISHED",
   "created_utc": "2026-08-17T17:50:00Z",
+  "published_utc": "2026-08-17T17:56:00Z",
   "topic": "collision-recovered eight-probe packet: full affine normalizer; Reye heavy-code/SNF interface; object-level dual-Fourier/two-qubit quadratic isometry; all-field M2 Fourier/Radon theorem; publication closure; determinant bent chirp; unit-difference rook graph; simplex line puncture",
-  "supersedes_reservation": "5832-5839 was reserved first by this lane but an unrelated parallel theorem packet subsequently landed under the same numbers. This packet is therefore renumbered before final publication.",
-  "artifacts": [],
-  "verification": "Reservation only during rename/replay.",
-  "boundary": "Exact finite algebra, coding theory, Fourier analysis, graph theory and publication plumbing. The two-qubit bridge remains a dual-label geometry isomorphism, not a q=5 physical-state embedding."
+  "supersedes_reservation": "5832-5839 was reserved first by this lane but an unrelated parallel theorem packet subsequently landed under the same numbers. This clean range is the active publication namespace.",
+  "artifacts": [
+    "analysis/w33_pass5848_5855_collision_recovered_eight_probe.py",
+    "data/PART_W33_PASS5848_5855_NORMALIZER_CODE_PAULI_ALLQ.json",
+    "analysis/BT5848_BT5855_collision_recovered_eight_probe.md",
+    "analysis/PASS5848_5855_collision_recovered_eight_probe_insert.tex",
+    "analysis/PASS5848_5855_index_insert.html",
+    "tests/test_w33_pass5848_5855_collision_recovered_eight_probe.py",
+    "tools/materialize_pass5776_5855_matrix_frontier.py",
+    ".github/workflows/w33_pass5848_5855_collision_recovered_eight_probe.yml"
+  ],
+  "verification": "The corrected runner imports and replays the original exact finite routines, which exhaust all 20,160 GL4(2) maps for the normalizer/isometry searches, all binary Reye words, all unit-Cayley K4/rook automorphisms, the determinant Walsh transform, the PG(3,2) simplex puncture, and complete Fourier character-sum anchors at field sizes 2,3,5,7. Focused pytest freezes the corrected certificate. The dedicated workflow also performs collision-card cleanup, publication-contract/manifest audits, and three-manuscript Tectonic compilation.",
+  "concurrency_note": "Parallel Pass5840-5847 independently corroborates the determinant-polar doily, order-72 determinant stabilizer, affine order1152, and all-field factorization-kernel results, while preserving the distinction between matrix labels and literal projective-ring points.",
+  "boundary": "Exact finite algebra, coding theory, Fourier analysis, graph theory and publication plumbing. The two-qubit bridge is an isomorphism of nonzero dual Fourier labels to Pauli-point quadratic/symplectic geometry, not a q=5 physical-state embedding. Numerical coincidences and physical analogies remain unpromoted without an independent map."
 }
