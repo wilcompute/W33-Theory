@@ -17,11 +17,11 @@
 
 ## ✅ Next Steps
 <!-- What should we do next? -->
-- Auto-saved at 2026-08-17T14:59:53.799Z (reason: threshold-commits)
+- Auto-saved at 2026-08-17T15:21:21.070Z (reason: timer)
 - Recent commits:
-  - 79e776118 Pass5675-5682: the characteristic-2 code reconstructs the bridge group's block system
-  - 9c6c40987 Use repo-proven Tectonic installer for Pass5704-5711
-  - 52244849d Watch publication DAG auditor in Pass5704-5711 CI
+  - 0159a6a5b Reserve Pass5691-5698 Track A: typing Aut(code), the p=2 law, Sym2 generality
+  - fdd9dcd36 Pass5683-5690: W(3,3) is NOT rank-rigid, and non-collinearity rank is dim Sym^2
+  - cbef14f3a Reserve Pass5683-5690 Track A: rook kernel, W(3,3) adjacency, block-system generality
 
 ## 📝 Open Questions
 <!-- What do we still need to figure out? -->

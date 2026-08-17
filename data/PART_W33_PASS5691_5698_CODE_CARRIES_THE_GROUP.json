@@ -1,0 +1,101 @@
+{
+  "boundary": "Pass 5691 types a group; it does not claim the code determines the configuration. Pass 5692 proves an upper bound and verifies attainment at e=2,3,4 and q=5,7 only; the e>=q boundary is stated, not tested. Pass 5695 RETRACTS the novelty of Pass 5683's p=2 finding -- the mathematics stands, the novelty does not. Pass 5696 gives a mechanism for the rank and still does NOT explain S4 wr S2. Non-prime q untested",
+  "pass_5691": {
+    "closes": "Pass 5687's order match",
+    "isomorphic": true,
+    "order": 576,
+    "smallgroup": [
+      576,
+      8654
+    ],
+    "structure": "((A4 x A4) : C2) : C2",
+    "transitive_id": 165,
+    "upgrade": "Pass 5675 showed the kernel recovers the block system; this shows it recovers the whole permutation group",
+    "wf4z": [
+      576,
+      8654
+    ]
+  },
+  "pass_5692_5693": {
+    "boundary": "e < q; sf^q = sf by Frobenius. Stated, not tested",
+    "proof": "sf is bilinear so sf^e is a product of e bilinear forms and factors through Sym^e tensor Sym^e",
+    "sym2_across_q": [
+      {
+        "points": 40,
+        "q": 3,
+        "rank": 10
+      },
+      {
+        "points": 156,
+        "q": 5,
+        "rank": 10
+      },
+      {
+        "points": 400,
+        "q": 7,
+        "rank": 10
+      },
+      {
+        "points": 1464,
+        "q": 11,
+        "rank": 10
+      }
+    ],
+    "theorem": "rank_q(sf^e) = dim Sym^e(F_q^4) = C(e+3,3)",
+    "tower": [
+      {
+        "dim_sym": 10,
+        "e": 2,
+        "rank": 10
+      },
+      {
+        "dim_sym": 20,
+        "e": 3,
+        "rank": 20
+      },
+      {
+        "dim_sym": 35,
+        "e": 4,
+        "rank": 35
+      }
+    ]
+  },
+  "pass_5694": {
+    "injective": true,
+    "map": "the ten products u_i u_j with i <= j",
+    "reading": "the 40 points embed in the space of quadratic forms; C is a Gram matrix on that image",
+    "target_dim": 10
+  },
+  "pass_5695": {
+    "failure_mode": "rediscovery (CLAUDE.md mode five); date-named file",
+    "identity": "N N^T = (t+1)I + A = 4I + A, so A == N N^T (mod 2)",
+    "rank2_A": 16,
+    "rank2_N": 25,
+    "reference": "Chandler-Sin-Xiang, arXiv:math/0603100",
+    "repo": "analysis/2026-07-15_pass351_delta_p2_analytic.md",
+    "retracts": "Pass 5683 reported excess 23 at p=2 as a fresh phenomenon; it is downstream of a published theorem this corpus already cites"
+  },
+  "pass_5696": {
+    "colclass_rank": 4,
+    "corrects": "Pass 5685 looked in the kernel; it is in the image",
+    "mechanism": "mod 2, A = rowclass + colclass, 4 + 4 - 2 = 6",
+    "overlap": 2,
+    "rank_2": 6,
+    "rank_Q": 16,
+    "rowclass_rank": 4,
+    "still_open": "S4 wr S2 itself"
+  },
+  "pass_5697_5698": {
+    "cost": [
+      "retraction Pass 5672",
+      "correction Pass 5683",
+      "rediscovery Pass 5695"
+    ],
+    "lesson": "test incidence AND adjacency; they differ",
+    "not_done": [
+      "whether Sym^e is classical",
+      "the e >= q boundary",
+      "non-prime q (needs GF(9), not Z/9)"
+    ]
+  }
+}

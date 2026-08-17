@@ -73,7 +73,8 @@
         "d8ac0082-876f-4935-80c4-de4c705ccec2",
         "4882e1b1-e5bd-4038-a888-8aa61f1f90ea",
         "1786978125686-pe8wl2",
-        "1786978825551-4yxjf4"
+        "1786978825551-4yxjf4",
+        "1786979818704-igg2nn"
       ],
       "causedBy": [
         "manual-20260507-pin-e8-manifest-z3-output-check"
@@ -311,7 +312,8 @@
         "e8fa85eb-29ee-4617-a086-aec55b0a8922",
         "6463a27e-4bc0-4022-85bf-3242450eac40",
         "1786978125686-pe8wl2",
-        "1786978825551-4yxjf4"
+        "1786978825551-4yxjf4",
+        "1786979818704-igg2nn"
       ],
       "causedBy": []
     },
@@ -406,7 +408,8 @@
         "4250c93d-0379-41a5-8ad6-4dd4975297af",
         "56038377-4c6b-48f8-8b24-3ff33095de65",
         "98570fba-3ce7-45aa-84fd-5560b203d593",
-        "1786978825551-4yxjf4"
+        "1786978825551-4yxjf4",
+        "1786979818704-igg2nn"
       ],
       "causedBy": []
     },
@@ -844,7 +847,8 @@
         "1786859568721-fahph6"
       ],
       "causes": [
-        "1786978125686-pe8wl2"
+        "1786978125686-pe8wl2",
+        "1786979818704-igg2nn"
       ],
       "causedBy": []
     },
@@ -1304,7 +1308,8 @@
         "c725c9a2-ac57-4454-bad3-a410500e5f4a",
         "6d834263-6d6a-4999-820e-80aa72365363",
         "c5354d11-c9e7-4d97-b9a8-e447cd669a02",
-        "1786978825551-4yxjf4"
+        "1786978825551-4yxjf4",
+        "1786979818704-igg2nn"
       ]
     },
     "metadata": {
@@ -1538,7 +1543,8 @@
         "5c826c42-f536-494e-945b-db4e404e703e",
         "23ea8630-cf32-4d49-9e8c-283e49c88746",
         "a9b40138-5f9d-4b8d-8322-f9f30627b5a5",
-        "9c78e141-0750-4c6e-af09-9496721f61a4"
+        "9c78e141-0750-4c6e-af09-9496721f61a4",
+        "1786979818704-igg2nn"
       ]
     },
     "metadata": {
@@ -1627,7 +1633,9 @@
         "15d80f5a-2ef7-41f3-9519-2b9c030a8ac7",
         "3e2fa3c5-20d2-4c3a-b716-254f48c97e4a",
         "be29e6e8-96f2-4199-a2da-03622121888e",
-        "c5354d11-c9e7-4d97-b9a8-e447cd669a02"
+        "c5354d11-c9e7-4d97-b9a8-e447cd669a02",
+        "1786978825551-4yxjf4",
+        "1786979818704-igg2nn"
       ]
     },
     "metadata": {
@@ -1664,7 +1672,8 @@
         "6deeccb2-551d-4073-8401-bcf5eccb7885",
         "c9dc0cec-f851-44e3-a57a-3765b7ef07f9",
         "5c826c42-f536-494e-945b-db4e404e703e",
-        "f3b4a70c-5aff-4060-aa11-187da241083d"
+        "f3b4a70c-5aff-4060-aa11-187da241083d",
+        "1786978825551-4yxjf4"
       ],
       "causedBy": []
     },
@@ -1782,7 +1791,8 @@
         "db2ccd61-dd4f-447a-8f0d-1c3c46e33c8c",
         "5ea56cca-9db3-4a82-afc7-8bae561fe946",
         "4882e1b1-e5bd-4038-a888-8aa61f1f90ea",
-        "98570fba-3ce7-45aa-84fd-5560b203d593"
+        "98570fba-3ce7-45aa-84fd-5560b203d593",
+        "1786979818704-igg2nn"
       ]
     },
     "metadata": {
@@ -1816,7 +1826,9 @@
         "c711bb40-90c7-40e7-ad4a-b75670560361",
         "75f940f8-b555-4edb-9478-7109b973aa58",
         "63481815-6d45-4635-9c8f-f7418f754242",
-        "249a35f5-d0e5-422a-9d65-e9467b8c7309"
+        "249a35f5-d0e5-422a-9d65-e9467b8c7309",
+        "1786978825551-4yxjf4",
+        "1786979818704-igg2nn"
       ]
     },
     "metadata": {
@@ -1887,7 +1899,9 @@
         "3e2fa3c5-20d2-4c3a-b716-254f48c97e4a",
         "dfd72208-dd6f-4f9c-b254-0bb0c072af3d",
         "db2ccd61-dd4f-447a-8f0d-1c3c46e33c8c",
-        "249a35f5-d0e5-422a-9d65-e9467b8c7309"
+        "249a35f5-d0e5-422a-9d65-e9467b8c7309",
+        "1786978825551-4yxjf4",
+        "1786979818704-igg2nn"
       ]
     },
     "metadata": {
@@ -1965,7 +1979,8 @@
         "3e2fa3c5-20d2-4c3a-b716-254f48c97e4a",
         "dfd72208-dd6f-4f9c-b254-0bb0c072af3d",
         "db2ccd61-dd4f-447a-8f0d-1c3c46e33c8c",
-        "249a35f5-d0e5-422a-9d65-e9467b8c7309"
+        "249a35f5-d0e5-422a-9d65-e9467b8c7309",
+        "1786978825551-4yxjf4"
       ]
     },
     "metadata": {
@@ -2033,7 +2048,8 @@
         "3e2fa3c5-20d2-4c3a-b716-254f48c97e4a",
         "dfd72208-dd6f-4f9c-b254-0bb0c072af3d",
         "db2ccd61-dd4f-447a-8f0d-1c3c46e33c8c",
-        "249a35f5-d0e5-422a-9d65-e9467b8c7309"
+        "249a35f5-d0e5-422a-9d65-e9467b8c7309",
+        "1786978825551-4yxjf4"
       ]
     },
     "metadata": {
@@ -2320,7 +2336,8 @@
         "75f940f8-b555-4edb-9478-7109b973aa58",
         "63481815-6d45-4635-9c8f-f7418f754242",
         "db2ccd61-dd4f-447a-8f0d-1c3c46e33c8c",
-        "08efff0e-d949-4775-bbbb-12eae9afe24d"
+        "08efff0e-d949-4775-bbbb-12eae9afe24d",
+        "1786978825551-4yxjf4"
       ]
     },
     "metadata": {
@@ -2364,7 +2381,8 @@
         "63481815-6d45-4635-9c8f-f7418f754242",
         "249a35f5-d0e5-422a-9d65-e9467b8c7309",
         "c5354d11-c9e7-4d97-b9a8-e447cd669a02",
-        "08efff0e-d949-4775-bbbb-12eae9afe24d"
+        "08efff0e-d949-4775-bbbb-12eae9afe24d",
+        "1786978825551-4yxjf4"
       ]
     },
     "metadata": {
@@ -2395,7 +2413,8 @@
         "b0641b3b-3516-43ef-8446-64272c90b98d",
         "7f88d257-5c81-48cf-bfa8-030621e8d359",
         "75f940f8-b555-4edb-9478-7109b973aa58",
-        "db2ccd61-dd4f-447a-8f0d-1c3c46e33c8c"
+        "db2ccd61-dd4f-447a-8f0d-1c3c46e33c8c",
+        "1786978825551-4yxjf4"
       ]
     },
     "metadata": {
@@ -2430,7 +2449,8 @@
         "ed840f8d-22e2-4239-872e-28c4aaab6737",
         "23ea8630-cf32-4d49-9e8c-283e49c88746",
         "fd699bc2-c7a0-4c80-8b7e-0967012e67d6",
-        "c5354d11-c9e7-4d97-b9a8-e447cd669a02"
+        "c5354d11-c9e7-4d97-b9a8-e447cd669a02",
+        "1786978825551-4yxjf4"
       ]
     },
     "metadata": {
@@ -114183,7 +114203,8 @@
         "1786859568721-fahph6",
         "1786860401883-i52nl0",
         "1786978125686-pe8wl2",
-        "1786978825551-4yxjf4"
+        "1786978825551-4yxjf4",
+        "1786979818704-igg2nn"
       ],
       "relatedTo": [
         "1784938579774-o0xebs",
@@ -114220,7 +114241,8 @@
       "supersededBy": [
         "1786859568721-fahph6",
         "1786978125686-pe8wl2",
-        "1786978825551-4yxjf4"
+        "1786978825551-4yxjf4",
+        "1786979818704-igg2nn"
       ],
       "relatedTo": [],
       "causes": [],
@@ -114253,7 +114275,8 @@
       "supersededBy": [
         "1786859568721-fahph6",
         "1786978125686-pe8wl2",
-        "1786978825551-4yxjf4"
+        "1786978825551-4yxjf4",
+        "1786979818704-igg2nn"
       ],
       "relatedTo": [],
       "causes": [],
@@ -114287,7 +114310,8 @@
     "relationships": {
       "supersededBy": [
         "1786859568721-fahph6",
-        "1786978825551-4yxjf4"
+        "1786978825551-4yxjf4",
+        "1786979818704-igg2nn"
       ]
     },
     "metadata": {
@@ -114317,7 +114341,8 @@
     "relationships": {
       "supersededBy": [
         "1786859568721-fahph6",
-        "1786978825551-4yxjf4"
+        "1786978825551-4yxjf4",
+        "1786979818704-igg2nn"
       ]
     },
     "metadata": {
@@ -114345,7 +114370,8 @@
     "relationships": {
       "supersededBy": [
         "1786859568721-fahph6",
-        "1786978825551-4yxjf4"
+        "1786978825551-4yxjf4",
+        "1786979818704-igg2nn"
       ]
     },
     "metadata": {
@@ -114372,7 +114398,8 @@
     "relationships": {
       "supersededBy": [
         "1786859568721-fahph6",
-        "1786978825551-4yxjf4"
+        "1786978825551-4yxjf4",
+        "1786979818704-igg2nn"
       ]
     },
     "metadata": {
@@ -114401,7 +114428,8 @@
     "relationships": {
       "supersededBy": [
         "1786859568721-fahph6",
-        "1786978825551-4yxjf4"
+        "1786978825551-4yxjf4",
+        "1786979818704-igg2nn"
       ]
     },
     "metadata": {
@@ -114428,7 +114456,9 @@
     "status": "active",
     "relationships": {
       "supersededBy": [
-        "1786859568721-fahph6"
+        "1786859568721-fahph6",
+        "1786978825551-4yxjf4",
+        "1786979818704-igg2nn"
       ]
     },
     "metadata": {
@@ -114456,7 +114486,9 @@
     "status": "active",
     "relationships": {
       "supersededBy": [
-        "1786859568721-fahph6"
+        "1786859568721-fahph6",
+        "1786978825551-4yxjf4",
+        "1786979818704-igg2nn"
       ]
     },
     "metadata": {
@@ -114479,7 +114511,8 @@
     "relationships": {
       "supersedes": [],
       "supersededBy": [
-        "1786859568721-fahph6"
+        "1786859568721-fahph6",
+        "1786978825551-4yxjf4"
       ],
       "relatedTo": [],
       "causes": [],
@@ -114509,7 +114542,9 @@
     "priority": "medium",
     "relationships": {
       "supersedes": [],
-      "supersededBy": [],
+      "supersededBy": [
+        "1786978825551-4yxjf4"
+      ],
       "relatedTo": [],
       "causes": [],
       "causedBy": []
@@ -114536,7 +114571,9 @@
     "priority": "medium",
     "relationships": {
       "supersedes": [],
-      "supersededBy": [],
+      "supersededBy": [
+        "1786978825551-4yxjf4"
+      ],
       "relatedTo": [
         "1784938579774-o0xebs",
         "1784941281016-pornns",
@@ -114564,6 +114601,11 @@
     ],
     "files": [],
     "status": "active",
+    "relationships": {
+      "supersededBy": [
+        "1786978825551-4yxjf4"
+      ]
+    },
     "metadata": {
       "status": "active"
     }
@@ -114584,7 +114626,8 @@
       "supersededBy": [
         "01e8a316-2e07-4420-a356-02b1e3fdd265",
         "efadc40f-af07-4059-acad-9fc57a4c3b87",
-        "5c826c42-f536-494e-945b-db4e404e703e"
+        "5c826c42-f536-494e-945b-db4e404e703e",
+        "1786978825551-4yxjf4"
       ],
       "relatedTo": [
         "01e8a316-2e07-4420-a356-02b1e3fdd265"
@@ -114607,6 +114650,11 @@
     ],
     "files": [],
     "status": "active",
+    "relationships": {
+      "supersededBy": [
+        "1786978825551-4yxjf4"
+      ]
+    },
     "metadata": {
       "status": "active"
     }
@@ -114623,6 +114671,11 @@
     ],
     "files": [],
     "status": "active",
+    "relationships": {
+      "supersededBy": [
+        "1786978825551-4yxjf4"
+      ]
+    },
     "metadata": {
       "status": "active"
     }
@@ -114643,7 +114696,8 @@
       "supersededBy": [
         "01e8a316-2e07-4420-a356-02b1e3fdd265",
         "efadc40f-af07-4059-acad-9fc57a4c3b87",
-        "5c826c42-f536-494e-945b-db4e404e703e"
+        "5c826c42-f536-494e-945b-db4e404e703e",
+        "1786978825551-4yxjf4"
       ]
     },
     "metadata": {
@@ -135703,7 +135757,17 @@
         "1fb5332b-7df7-4881-bce0-800d23047ba3",
         "5223d2c8-8d9a-4bc0-ba9e-040fded850a6",
         "36a07730-0426-49d9-a088-24e18ef9f969",
-        "644650eb-c88b-4090-83af-c7ac9e9cef48"
+        "644650eb-c88b-4090-83af-c7ac9e9cef48",
+        "238ca080-17b6-438c-92bd-6eebc9c4ed42",
+        "4919a306-e98c-4f08-9830-945bf9d04adf",
+        "1784563511681-tcy2xj",
+        "1784563511681-h7bul3",
+        "1784589935560-snsvd3",
+        "1c71ad2f-8c31-4b48-bab0-4c97fbb72b11",
+        "5561b95a-5eb2-4ed5-9647-05b6181ca24a",
+        "406ceb79-03f2-43be-bf5d-450f0df0baf2",
+        "aa0e1b49-b67c-4fb7-bdaa-e63ba208178e",
+        "e111cba7-aa4b-4809-8db0-6e69be355e8c"
       ],
       "supersededBy": [],
       "relatedTo": [
@@ -135721,7 +135785,17 @@
         "1777318403161-s5j46a",
         "1777318403161-e7wo55",
         "1777318403161-xalutx",
-        "beaa04ed-f130-4ef8-a424-792aced0dd1b"
+        "beaa04ed-f130-4ef8-a424-792aced0dd1b",
+        "27162744-0efe-400e-8af6-d7dae43ba20b",
+        "1777410353070-izxac1",
+        "4bd583d3-e161-44e6-b4da-8d27a583c396",
+        "87cdc04e-a688-4d3d-ac93-0fd8348f11e2",
+        "22d114af-2853-414b-aba7-1162b32af8c0",
+        "b9962803-45b6-407e-bfe8-c6b8ce5b5952",
+        "a3e1b8c7-08c7-47ec-a298-e52d9f4d654c",
+        "2ef298bc-3933-4afc-8622-130e314db6b5",
+        "dfe37c3e-e947-436e-bd86-da04aa3da416",
+        "36e8b8b6-fa2a-4c3b-884d-9ab97a061e30"
       ]
     },
     "metadata": {
@@ -135741,6 +135815,60 @@
     "commitHashes": [
       "79e77611851602c302ecaa6b7dda25180a13b547",
       "9c6c409876490ae4c944fddefe11023393572c72"
+    ]
+  },
+  {
+    "id": "1786979818704-igg2nn",
+    "question": "Is W(3,3) p-rank rigid, and what is the rank of its non-collinearity matrix?",
+    "answer": "NO -- and the rank is exactly dim Sym^2(F_q^4) = 10, for every odd q, with a proof.\n\nCORRECTS PASS 5673, which claimed W(3,3) is p-rank rigid. True only of its INCIDENCE matrix (rank 25 in every characteristic). The ADJACENCY collapses hard: collinearity graph excess 23 at p=2, its complement excess 29 at p=3 -- the substrate's own characteristic -- and the line graph excess 29 at p=2. Same error as Pass 5672 in the opposite direction: there a drop was an artefact, here a non-drop came from examining the wrong matrix. Pass 5678 had already flagged the incidence/adjacency distinction for Csaszar and I failed to apply it to W(3,3) until now. THE STANDING LESSON: test both the incidence AND the adjacency; they behave completely differently.\n\nTHE THEOREM. The non-collinearity matrix of W(3,q) IS the elementwise square of the symplectic form: C_ij = sf(P_i,P_j)^2, verified exactly at q=3 and q=5. Since sf(u,v) = u^T J v is BILINEAR, sf^2 is a product of two bilinear forms and factors through Sym^2(u) tensor Sym^2(v), so rank_q(C) <= dim Sym^2(F_q^4) = C(5,2) = 10. The measurement attains it at both q, so the rank is EXACTLY 10 and INDEPENDENT of q -- 40 points at q=3 and 156 at q=5 give the same rank. This is the only result in this thread with a proof rather than a computation behind it.\n\nPRIOR ART TO CHECK IT AGAINST: per decision-71f67e0f the complement is already known here as SRG(40,27,18,18) with a full Hashimoto/zeta treatment, and per decision-e688e817 F3 ranks are an established quantity in this corpus (15 and 11 distinguish two carriers). So the OBJECT and the METHOD are both familiar ground; what I did not find is the Sym^2 identification of the rank. Treat novelty as unestablished until someone greps the result rather than the topic.\n\nTHREE REFUTATIONS, TWO OF THEM MINE.\n\nMy grid-line hypothesis for the rook's [16,10,4] kernel: 0 of the 60 minimum-weight words is a grid row or column. A row indicator r gives A r = all-ones, so rows were never in the kernel -- refuted by its own output before it reached prose. The rook's S4 wr S2 is now unexplained after THREE attempts: Delsarte coset graph (Pass 5671), two-weight structure, and this kernel.\n\nThe general reading of Pass 5675: a GF(2) kernel is NOT a block-system detector. Petersen and C5 are PRIMITIVE -- no block system exists -- and both have nonzero GF(2) kernels. Pass 5675's Reye result is not an instance of a general theorem. The narrower statement survives: there, the minimum-weight structure coincided with the unique block system. Untested elsewhere, and the rook is already a case where the analogous guess failed.\n\nAnd |Aut([12,4,6])| = 576 = |W(F4)/Z| is recorded as an ORDER MATCH ONLY. 8,681 groups share order 576 and Pass 5644 was wrong about exactly this kind of match at 1152. Typing it by SmallGroup id is one GAP call and is NOT done.\n\nAlso: a GF(2) linear-redundancy pass exhibits what Pass 5680 showed yosys misses -- 8 of the 16 Reye syndrome outputs are derivable, e.g. s[8] = s[0]^s[1]^s[2]^s[3] -- turning an observation into a constructed object.</answer>\n<parameter name=\"tags\">w33, p-rank, symplectic, sym2, correction, rook, refutation, pass5683",
+    "timestamp": "2026-08-17T15:16:58.704Z",
+    "tags": [],
+    "files": [],
+    "status": "active",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [
+        "1784409410004-2ofkhg",
+        "1784409410004-kzfbyz",
+        "1784409410003-54eefw",
+        "09152407-437d-45ec-8fb8-6b5496138c01",
+        "1fb5332b-7df7-4881-bce0-800d23047ba3",
+        "5223d2c8-8d9a-4bc0-ba9e-040fded850a6",
+        "36a07730-0426-49d9-a088-24e18ef9f969",
+        "644650eb-c88b-4090-83af-c7ac9e9cef48",
+        "238ca080-17b6-438c-92bd-6eebc9c4ed42",
+        "4919a306-e98c-4f08-9830-945bf9d04adf"
+      ],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": [
+        "1777318403161-4mgrce",
+        "1777318403161-qze7ej",
+        "1777318403161-06lp3s",
+        "1777318403161-6tpseq",
+        "beaa04ed-f130-4ef8-a424-792aced0dd1b",
+        "92c1464e-9086-4497-bedc-176c7a857ad1",
+        "27162744-0efe-400e-8af6-d7dae43ba20b",
+        "5d8b4de3-598f-44c5-be88-0173201018e7",
+        "4bd583d3-e161-44e6-b4da-8d27a583c396",
+        "87cdc04e-a688-4d3d-ac93-0fd8348f11e2"
+      ]
+    },
+    "metadata": {
+      "status": "active",
+      "source": "mcp",
+      "entities": {
+        "technologies": [],
+        "patterns": [],
+        "concepts": [],
+        "tools": []
+      },
+      "domain": "software"
+    },
+    "commitHashes": [
+      "fdd9dcd363693ed04e9dcdce28a77a68d4058c19",
+      "cbef14f3afdb093bfe95d7ae2267092a28135a7f"
     ]
   }
 ]
