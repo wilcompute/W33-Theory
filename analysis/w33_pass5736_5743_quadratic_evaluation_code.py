@@ -1,12 +1,20 @@
 #!/usr/bin/env python3
 """Passes 5736--5743: characteristic-3 quadratic evaluation code on the W33 point set.
 
-Classical/background boundary: projective Reed--Muller / quadratic Veronese evaluation
-codes and the symmetric-power dimension count are classical.  The repo-specific theorem
-checked here is that the W(3,3) non-collinearity adjacency over F3 is a square-zero,
-rank-10 generator of that classical code, together with the exact finite consequences
-below.  The 130 minimum-dual lines belong to ambient PG(3,3); W33 selects 40 isotropic
-lines among them.  No measured-physics claim is made.
+Prior-art boundary:
+  * the [40,10,18]_3 self-orthogonal design code, dual [40,30,4]_3 and its
+    260 weight-4 dual words were already reported by B. G. Rodrigues (2008);
+  * the degree-2 projective Reed--Muller / quadratic Veronese code on PG(3,3)
+    is classical and its ternary higher-weight spectrum was treated by
+    K. Kaipa and P. Pradhan (2024).
+
+What this verifier contributes to the repository is the exact coordinate bridge:
+  W33 non-collinearity = square of the symplectic form = one symmetric generator
+  matrix for that ambient quadratic code, plus a sparse 40->10->40 factorization,
+  the CSS/logical-line interpretation, and a 234-member census of distinct W33
+  symplectic overlays that all preserve the same ambient code.
+
+No measured-physics, Standard-Model, spacetime, coupling, or uniqueness claim follows.
 """
 from __future__ import annotations
 
@@ -78,12 +86,13 @@ def build_veronese(pts):
                     dtype=np.int64)
 
 
-def sf(a, b):
-    return int(np.asarray(a, dtype=np.int64) @ J @ np.asarray(b, dtype=np.int64)) % Q
+def bilinear(a, form, b):
+    return int(np.asarray(a, dtype=np.int64) @ form @ np.asarray(b, dtype=np.int64)) % Q
 
 
-def build_noncollinearity(pts):
-    return np.array([[pow(sf(a, b), 2, Q) for b in pts] for a in pts], dtype=np.int64)
+def build_noncollinearity(pts, form=J):
+    return np.array([[pow(bilinear(a, form, b), 2, Q) for b in pts] for a in pts],
+                    dtype=np.int64)
 
 
 def build_lines(pts):
@@ -103,8 +112,33 @@ def build_lines(pts):
     return lines
 
 
-def is_isotropic(line, pts):
-    return sf(pts[line[0]], pts[line[1]]) == 0
+def is_isotropic(line, pts, form=J):
+    return bilinear(pts[line[0]], form, pts[line[1]]) == 0
+
+
+def alternating_matrix(coeff):
+    # Projective coordinates are entries 01,02,03,12,13,23.
+    a,b,c,d,e,f = coeff
+    M = np.zeros((4,4), dtype=np.int64)
+    for (i,j), x in {
+        (0,1):a, (0,2):b, (0,3):c, (1,2):d, (1,3):e, (2,3):f
+    }.items():
+        M[i,j] = x % Q
+        M[j,i] = (-x) % Q
+    return M
+
+
+def nondegenerate_alternating_classes():
+    classes = set()
+    for coeff in itertools.product(range(Q), repeat=6):
+        if not any(coeff):
+            continue
+        M = alternating_matrix(coeff)
+        if rank_mod(M) == 4:
+            classes.add(canonical_projective(coeff))
+    classes = sorted(classes)
+    assert len(classes) == 234
+    return classes
 
 
 def weight_enumerator(G):
@@ -134,13 +168,13 @@ def compute_certificate():
     G = V.T % Q                   # 10 x 40
     C = build_noncollinearity(pts)
 
-    # Pass 5736: exact W33 -> classical quadratic-evaluation identification.
+    # 5736: exact coordinate bridge to the known quadratic Veronese / PRM code.
     assert rank_mod(G) == rank_mod(C) == rank_mod(np.vstack([G, C])) == 10
     weights = weight_enumerator(G)
     expected = {0:1, 18:1560, 24:21060, 27:18800, 30:16848, 36:780}
     assert weights == expected and sum(weights.values()) == Q ** 10
 
-    # Pass 5737: a sparse symmetric-square compiler.
+    # 5737: sparse symmetric-square compiler for this W33 polarity.
     assert np.array_equal((V @ B_CORE @ V.T) % Q, C)
     assert np.array_equal(B_CORE, B_CORE.T)
     assert np.array_equal((B_CORE @ B_CORE) % Q, np.eye(10, dtype=np.int64))
@@ -148,22 +182,21 @@ def compute_certificate():
     assert np.count_nonzero(B_CORE) == 10
     assert np.count_nonzero(C) == 1080
 
-    # Pass 5738: characteristic-3 square-zero identity and self-orthogonal CSS seed.
+    # 5738: square-zero and self-orthogonal standard CSS consequence.
     assert np.max((C @ C) % Q) == 0
     assert np.max((G @ G.T) % Q) == 0
 
-    # Ambient projective-line dual geometry.
     lines = build_lines(pts)
     H = np.zeros((130, 40), dtype=np.int64)
     for r, L in enumerate(lines):
         H[r, list(L)] = 1
     assert np.max((H @ V) % Q) == 0
     assert rank_mod(H) == 30
-    assert rank_mod(np.vstack([G, H])) == 30  # self-orthogonality means C is INSIDE C^perp.
+    assert rank_mod(np.vstack([G, H])) == 30  # C is contained in C^perp.
     assert set(map(int, H.sum(axis=1))) == {4}
     assert set(map(int, H.sum(axis=0))) == {13}
 
-    # Pass 5739: d(C^perp)=4 and every projective minimum support is a PG(3,3) line.
+    # 5739: exact dual distance and support classification.
     for r in [1, 2, 3]:
         for support in itertools.combinations(range(40), r):
             assert rank_mod(G[:, support]) == r
@@ -171,7 +204,7 @@ def compute_certificate():
                   if rank_mod(G[:, s]) < 4}
     assert dependent4 == set(lines)
 
-    # Pass 5740: exact local-repair profile.
+    # 5740: local-repair split for the selected W33 symplectic overlay.
     isotropic = [is_isotropic(L, pts) for L in lines]
     assert Counter(isotropic) == Counter({True: 40, False: 90})
     repair_profile = []
@@ -182,10 +215,10 @@ def compute_certificate():
     assert set(repair_profile) == {(13, 4, 9)}
     assert np.max((H @ G.T) % Q) == 0
 
-    # Pass 5741 is already encoded by rank(H)=30: its rowspace is all of C^perp.
+    # 5741: line incidence rows span the entire classical dual.
     assert 40 - rank_mod(H) == 10
 
-    # Pass 5742: minimum-logical commutation = projective-line intersection.
+    # 5742: minimum logical rays inherit the projective line-intersection graph.
     Aline = np.zeros((130, 130), dtype=np.int64)
     for i, Li in enumerate(lines):
         Si = set(Li)
@@ -202,16 +235,45 @@ def compute_certificate():
     assert set(map(int, Across.sum(axis=1))) == {36}
     assert set(map(int, Across.sum(axis=0))) == {16}
     assert set(map(int, Aord.sum(axis=1))) == {32}
-    gram = (H @ H.T) % Q
-    assert np.array_equal(gram, (np.eye(130, dtype=np.int64) + Aline) % Q)
+    assert np.array_equal((H @ H.T) % Q, (np.eye(130, dtype=np.int64) + Aline) % Q)
+
+    # 5743: all projective symplectic polarities give different W33 overlays but the SAME code.
+    forms = nondegenerate_alternating_classes()
+    overlay_bytes = set()
+    line_overlay_multiplicity = np.zeros(130, dtype=np.int64)
+    for coeff in forms:
+        form = alternating_matrix(coeff)
+        Cj = build_noncollinearity(pts, form)
+        assert rank_mod(Cj) == 10
+        assert rank_mod(np.vstack([G, Cj])) == 10
+        assert np.max((Cj @ Cj) % Q) == 0
+        overlay_bytes.add(Cj.tobytes())
+        iso_j = [is_isotropic(L, pts, form) for L in lines]
+        assert sum(iso_j) == 40
+        line_overlay_multiplicity += np.asarray(iso_j, dtype=np.int64)
+    assert len(overlay_bytes) == 234
+    assert set(map(int, line_overlay_multiplicity)) == {72}
+
+    # Order calculation: PGL(4,3) / PGSp(4,3) = 234.
+    gl4_order = (81-1)*(81-3)*(81-9)*(81-27)
+    pgl4_order = gl4_order // 2
+    sp4_order = (3**4) * (3**2 - 1) * (3**4 - 1)
+    pgsp4_order = sp4_order  # |GSp|/(q-1) = |Sp| for q=3.
+    assert pgl4_order == 12130560
+    assert pgsp4_order == 51840
+    assert pgl4_order // pgsp4_order == 234
 
     factor_terms = 2 * np.count_nonzero(V) + np.count_nonzero(B_CORE)
-    result = {
-        "schema": "w33.pass5736_5743.quadratic_evaluation_code.v1",
-        "boundary": "PRM/Veronese coding theory is classical; promoted claims are exact W33/PG(3,3) identifications and finite consequences only.",
+    return {
+        "schema": "w33.pass5736_5743.quadratic_evaluation_code.v2",
+        "prior_art": {
+            "Rodrigues_2008": "[40,10,18]_3 self-orthogonal code; dual [40,30,4]_3 with 260 weight-4 words; full design/code automorphism group L4(3):2_1",
+            "Kaipa_Pradhan_2024": "ternary quadratic Veronese 3-fold / second-order projective Reed-Muller code on PG(3,3), including higher weight spectra",
+            "claim_tier": "parameters and Veronese family are prior art; coordinate bridge and machine-layer synthesis are new-to-repo unless separately sourced",
+        },
         "pass_5736": {
-            "identification": "rowspace_F3(W33_noncollinearity)=degree_2_projective_quadratic_evaluation_code_on_PG(3,3)",
-            "parameters": [40, 10, 18],
+            "identification": "rowspace_F3(W33_noncollinearity)=quadratic_Veronesecode_C3_on_PG(3,3)",
+            "parameters": [40,10,18],
             "weight_enumerator": {str(k): int(v) for k, v in weights.items()},
             "codewords": 59049,
         },
@@ -228,8 +290,8 @@ def compute_certificate():
         "pass_5738": {
             "C_squared_zero_mod3": True,
             "self_orthogonal": True,
-            "css_parameters": [40,20,4],
-            "css_notation": "[[40,20,4]]_3",
+            "standard_css_consequence": "[[40,20,4]]_3",
+            "warning": "CSS parameters are a standard consequence of the known classical code and dual distance, not claimed as coding-theory novelty",
         },
         "pass_5739": {
             "dual_distance": 4,
@@ -264,15 +326,18 @@ def compute_certificate():
             "nonisotropic_induced_degree": 32,
         },
         "pass_5743": {
-            "prior_art_guard": [
-                "projective Reed-Muller / projective quadratic evaluation family is classical",
-                "quadratic Veronese embedding is classical",
-                "symmetric-power dimension bound is classical",
-            ],
-            "repo_specific_claim": "W33 non-collinearity over F3 is a square-zero symmetric rank-10 generator of the classical quadratic evaluation code and selects a 40+90 symplectic split of its minimum-dual line geometry.",
+            "ambient_code_automorphism_order": pgl4_order,
+            "w33_polarity_stabilizer_order": pgsp4_order,
+            "symplectic_overlay_count": 234,
+            "distinct_overlay_matrices": 234,
+            "all_overlays_generate_same_code": True,
+            "native_w33_lines_per_overlay": 40,
+            "ambient_lines": 130,
+            "overlays_in_which_each_line_is_native": 72,
+            "architecture_reading": "one 40-coordinate quadratic code supports 234 selectable W33 symplectic routing overlays without changing the code space",
+            "boundary": "finite reconfiguration statement only; not a physical gauge-field or spacetime claim",
         },
     }
-    return result
 
 
 def main():
@@ -281,11 +346,12 @@ def main():
     OUT.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print("PASS_QUADRATIC_EVALUATION_CODE", json.dumps({
         "code": result["pass_5736"]["parameters"],
-        "css": result["pass_5738"]["css_notation"],
+        "css": result["pass_5738"]["standard_css_consequence"],
         "dual_distance": result["pass_5739"]["dual_distance"],
         "line_supports": result["pass_5739"]["minimum_projective_supports"],
         "repair_profile": [13,4,9],
         "logical_graph": result["pass_5742"]["srg_parameters"],
+        "symplectic_overlays": result["pass_5743"]["symplectic_overlay_count"],
     }, sort_keys=True))
 
 
