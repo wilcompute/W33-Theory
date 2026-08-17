@@ -49,12 +49,17 @@ module w33_d24_action(
 );
     reg [4:0] tmp;
     always @* begin
+<<<<<<< ours
         if(!conjugated_in) begin
             tmp={1'b0,phase_in}+{1'b0,step12};
             phase_out=(tmp>=5'd12)?tmp-5'd12:tmp[3:0];
         end else begin
             phase_out=(phase_in>=step12)?phase_in-step12:phase_in+4'd12-step12;
         end
+=======
+        if(!conjugated_in) begin tmp={1'b0,phase_in}+{1'b0,step12};phase_out=(tmp>=12)?tmp-12:tmp[3:0];end
+        else phase_out=(phase_in>=step12)?phase_in-step12:phase_in+12-step12;
+>>>>>>> theirs
     end
     assign conjugated_out=conjugated_in^reflect;
 endmodule

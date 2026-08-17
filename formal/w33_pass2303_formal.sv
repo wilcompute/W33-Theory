@@ -33,6 +33,7 @@ module w33_phase_formal;
     wire [3:0] pk;wire ek;
     w33_single_j_action24 kernel(.phase_in(phase0),.conjugated_in(conj0),.step4(2'd2),.step6(3'd3),.reflect(1'b0),.phase_out(pk),.conjugated_out(ek));
     always @* begin
+<<<<<<< ours
         assume(phase0<4'd12);assume(u<4'd12);assume(v<4'd12);
         if(!fu) begin
             tmp={1'b0,u}+{1'b0,v};
@@ -40,6 +41,11 @@ module w33_phase_formal;
         end else begin
             uv=(u>=v)?u-v:u+4'd12-v;
         end
+=======
+        assume(phase0<12);assume(u<12);assume(v<12);
+        if(!fu) begin tmp={1'b0,u}+{1'b0,v};uv=(tmp>=12)?tmp-12:tmp[3:0];end
+        else uv=(u>=v)?u-v:u+12-v;
+>>>>>>> theirs
         assert(p2==pc);assert(e2==ec);
         assert(pk==phase0);assert(ek==conj0);
     end

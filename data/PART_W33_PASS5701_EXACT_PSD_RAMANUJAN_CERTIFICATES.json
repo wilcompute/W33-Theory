@@ -1,13 +1,34 @@
 {
-  "pass": 5701,
-  "status": "EXACT_PSD_CERTIFICATES_PROVE_TOWER_RAMANUJAN_THROUGH_LEVEL3",
-  "method": "exact rational LDL of B = 12 I - A_signed^2, all pivots strictly positive Fractions",
   "certificates": [
-    {"level": 1, "signed_parent_n": 80, "B_eq_12I_minus_As2_PSD": true, "n_pivots": 80, "min_pivot_exact": "41558144873578650825008/8625619903431965483505", "min_pivot_float": 4.8174},
-    {"level": 2, "signed_parent_n": 160, "B_eq_12I_minus_As2_PSD": true, "n_pivots": 160, "min_pivot_exact": "270698925001370701869664062132599861520261052107769925/60293962024595738803942472743749951615696073290357401", "min_pivot_float": 4.4894},
-    {"level": 3, "signed_parent_n": 320, "B_eq_12I_minus_As2_PSD": true, "n_pivots": 320, "min_pivot_exact": "137758625426139663360550612490156811316900598833892086371030663409798918562957888962698800143821152507022338492378/30452192151775650573669985787988443569814132197298828245135976053503006661947739032209330795127468371406566451687", "min_pivot_float": 4.5221}
+    {
+      "B_eq_12I_minus_As2_positive_definite": true,
+      "level": 1,
+      "min_pivot_exact": "41558144873578650825008/8625619903431965483505",
+      "min_pivot_float": 4.8179893548339034,
+      "n_pivots": 80,
+      "signed_parent_n": 80
+    },
+    {
+      "B_eq_12I_minus_As2_positive_definite": true,
+      "level": 2,
+      "min_pivot_exact": "270698925001370701869664062132599861520261052107769925/60293962024595738803942472743749951615696073290357401",
+      "min_pivot_float": 4.489652295381491,
+      "n_pivots": 160,
+      "signed_parent_n": 160
+    },
+    {
+      "B_eq_12I_minus_As2_positive_definite": true,
+      "level": 3,
+      "min_pivot_exact": "137758625426139663360550612490156811316900598833892086371030663409798918562957888962698800143821152507022338492378/30452192151775650573669985787988443569814132197298828245135976053503006661947739032209330795127468371406566451687",
+      "min_pivot_float": 4.523767114680676,
+      "n_pivots": 320,
+      "signed_parent_n": 320
+    }
   ],
-  "level4_signing_640_parent": {"method": "60-digit mpmath Cholesky", "psd": true, "min_pivot": 4.52377},
-  "sturm_resolution": "level-1 signed charpoly Sturm count is 77 distinct real roots = 80 with the 4-fold zero eigenvalue counted once; all roots in the band, consistent with the PSD certificate",
-  "physics_boundary": "Exact integer/rational matrix algebra; the Ramanujan bound is a finite graph statement, not the continuum YM mass gap."
+  "method": "exact rational LDL of B = 12 I - A_signed^2, all pivots strictly positive Fractions",
+  "pass": 5701,
+  "physics_boundary": "Exact integer/rational matrix algebra for a finite graph tower; not an all-level theorem or continuum Yang-Mills mass gap.",
+  "scope": "Selected signings on parents 80, 160, and 320 only; no 640-parent signing is produced.",
+  "status": "EXACT_POSITIVITY_FOR_THREE_SEPARATE_FACTOR_PAIR_LIFTS_THROUGH_640_VERTICES",
+  "tower_provenance": "Separate deterministic factor-pair tower, not the frozen Pass5683/5693 tower; no isomorphism comparison has been computed."
 }

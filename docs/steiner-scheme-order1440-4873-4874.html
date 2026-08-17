@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Exact Pass 4873–4874 separation of two order-1440 groups and the four-class Steiner refinement of W(3,3).">
+  <meta name="description" content="Exact Pass 4873–4874 separation of two order-1440 groups and the four-class Steiner refinement of the Q(4,3) line carrier.">
   <title>Passes 4873–4874 — two order-1440 groups and the Steiner scheme</title>
   <style>
     :root{color-scheme:dark;--bg:#08111c;--panel:#101c2a;--line:#2b435c;--ink:#eef5ff;
@@ -32,13 +32,13 @@
   <p class="lede">The marked-double-six residue and the exceptional outer automorphism of
     S<sub>6</sub> both produce order 1440, but not the same group. Separately, the 120 Steiner
     triangles carry a complete imprimitive four-class association scheme whose quotient is
-    exactly W(3,3).</p>
+    Q(4,3), the line-intersection graph of W(3,3), not its point graph.</p>
 
   <div class="grid">
     <div class="card"><div class="metric">1440 ≠ identification</div><p>different centers, involution counts, and element orders</p></div>
     <div class="card"><div class="metric">120 = 40 × 3</div><p>forty intrinsic three-element Steiner fibers</p></div>
     <div class="card"><div class="metric">1, 2, 27, 36, 54</div><p>exact scheme valencies</p></div>
-    <div class="card"><div class="metric">1+24+15 | 20+60</div><p>fiber-constant W33 sector | transverse sector</p></div>
+    <div class="card"><div class="metric">15 ≠ 11 over F₃</div><p>Q43 line carrier separated from W33 points</p></div>
   </div>
 
   <h2>Pass 4873: the two order-1440 extensions are nonisomorphic</h2>
@@ -58,7 +58,7 @@
   <p>The four nonidentity relations on the 120 Steiner triangles have the exact meanings:</p>
   <div class="eq">R₁: 120 pairs, valency 2  = forty K₃ fibers
 R₂: 1620 pairs, valency 27 = a perfect matching across each nonedge fiber pair
-R₃: 2160 pairs, valency 36 = all nine pairs across each W33 edge
+R₃: 2160 pairs, valency 36 = all nine pairs across each Q(4,3) edge
 R₄: 3240 pairs, valency 54 = the complementary six pairs across each nonedge</div>
   <p>The exact first eigenmatrix is</p>
   <div class="eq">[ 1,  2, 27,  36, 54]
@@ -67,10 +67,11 @@ R₄: 3240 pairs, valency 54 = the complementary six pairs across each nonedge</
 [ 1, -1,  9,   0, -9]
 [ 1, -1, -3,   0,  3]</div>
   <p>with primitive multiplicities <code>1,24,15,20,60</code>. The first three sectors
-    are the 40-dimensional fiber-constant W33 Bose–Mesner module: dividing the lifted
+    are the 40-dimensional fiber-constant Q(4,3) line-side Bose–Mesner module: dividing the lifted
     adjacency eigenvalues <code>36,6,−12</code> by the fiber size three recovers
     <code>12,2,−4</code>. The transverse 80-space splits as <code>20+60</code> and is
-    annihilated by the W33 adjacency lift.</p>
+    annihilated by the Q(4,3) adjacency lift. The forty maximal K₄ pencils recover
+    the dual W33 point carrier; rank<sub>F3</sub>(A+I) is 15 on the line side and 11 on the point side.</p>
 
   <h2>Reproduce</h2>
   <pre class="eq"><code>python3 analysis/w33_pass4873_two_order1440_extensions.py
@@ -82,7 +83,7 @@ python3 analysis/w33_pass4874_steiner_w33_association_scheme.py</code></pre>
   </ul>
 
   <div class="boundary"><strong>Evidence boundary.</strong> The association relations,
-    including the 3+6 refinement over every W33 nonedge, are canonical. Naming the three
+    including the 3+6 refinement over every Q(4,3) nonedge (a pair of disjoint W33 lines), are canonical. Naming the three
     elements inside each fiber is additional gauge or coordinate data. The group theorem
     distinguishes two finite actions but selects neither as a physical symmetry. The complete
     <code>[360,36,20]₂</code> weight enumerator is closed, but its covering radius remains open

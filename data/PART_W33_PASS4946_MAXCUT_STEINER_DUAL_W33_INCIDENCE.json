@@ -1,29 +1,47 @@
 {
-  "pass": 4946,
-  "correction": "Pass4955 fixes the side labels: maximum-cut triples are W33 points; Steiner triples are W33 lines / Q(4,3) points.",
-  "shells": {
-    "maximum_cuts": 120,
-    "Steiner_triangles": 120,
-    "Pass4877_equivariant_bijection_exists": false
-  },
+  "boundary": "Finite incidence theorem corrected by Pass4949. The quotient identifies point and line actions; it does not restore an equivariant bijection between the original 120-element shells.",
+  "correction": "Pass4949 fixes the side labels and supplies the 15-versus-11 carrier separator.",
   "cross_incidence": {
-    "definition": "B(C,T)=1 iff the maximum cut splits the three double-sixes of Steiner triangle T; zero iff T lies wholly on one side",
-    "row_weight": 108,
     "column_weight": 108,
-    "identical_row_classes": [40,3],
-    "identical_column_classes": [40,3]
+    "definition": "B(C,T)=1 iff the maximum cut splits the three double-sixes of Steiner triangle T; zero iff T lies wholly on one side",
+    "identical_column_classes": [
+      40,
+      3
+    ],
+    "identical_row_classes": [
+      40,
+      3
+    ],
+    "row_weight": 108
   },
+  "pass": 4946,
   "quotient": {
-    "maximum_cut_triples": "40 W(3,3) points",
+    "F3_rank_A_plus_I": {
+      "columns_Q43_lines": 15,
+      "rows_W33_points": 11
+    },
     "Steiner_triples": "40 W(3,3) lines, equivalently Q(4,3) points",
-    "zero_matrix_row_weight": 4,
-    "zero_matrix_column_weight": 4,
-    "meaning": "Z=1-B on the 40x40 quotient is literal W(3,3) point-line incidence",
-    "row_collinearity": "standard W(3,3) point graph",
     "column_collinearity": "Q(4,3) point graph = W(3,3) line-intersection graph",
+    "gram_identities": [
+      "ZZ^T=4I+A_W",
+      "Z^TZ=4I+A_Q"
+    ],
+    "gram_spectrum": {
+      "0": 15,
+      "16": 1,
+      "6": 24
+    },
+    "maximum_cut_triples": "40 W(3,3) points",
+    "meaning": "Z=1-B on the 40x40 quotient is literal W(3,3) point-line incidence",
     "rank": 25,
-    "gram_spectrum": {"16":1,"6":24,"0":15}
+    "row_collinearity": "standard W(3,3) point graph",
+    "zero_matrix_column_weight": 4,
+    "zero_matrix_row_weight": 4
   },
-  "theorem": "Although the 120 maximum cuts and 120 Steiner triangles are inequivalent PGSp G-sets, their cross-incidence has a canonical 3-to-1 collapse on both sides. The 120 maximum cuts collapse to the forty W(3,3) points; the Steiner columns collapse to the forty W(3,3) lines. On the resulting 40x40 quotient, the non-splitting relation is precisely W33 point-line incidence. Its row collinearity graph is W(3,3), while its column collinearity graph is the nonisomorphic odd-q dual Q(4,3).",
-  "boundary": "Finite incidence theorem corrected by Pass4955. The quotient identifies point and line actions; it does not restore an equivariant bijection between the original 120-element shells."
+  "shells": {
+    "Pass4877_equivariant_bijection_exists": false,
+    "Steiner_triangles": 120,
+    "maximum_cuts": 120
+  },
+  "theorem": "Although the 120 maximum cuts and 120 Steiner triangles are inequivalent PGSp G-sets, their cross-incidence has a canonical 3-to-1 collapse on both sides. The maximum cuts collapse to the forty W(3,3) points and the Steiner columns to the forty W(3,3) lines. The non-splitting matrix is literal point-line incidence: its row graph is the K4-pencil W33 point carrier of Pass4949, its column graph is the nonisomorphic Q(4,3) line carrier, and their F3 ranks are 11 and 15."
 }

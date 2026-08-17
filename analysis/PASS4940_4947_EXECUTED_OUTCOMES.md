@@ -27,6 +27,8 @@ Define `F(x)=[q1(x),q2(x)]`.
 - exact image span: **10**
 - every two-support input: zero
 - each quadratic channel annihilates the whole 40D fiber-constant subspace
+- the annihilated carrier is Q(4,3) line-side, certified by rank `15` versus
+  rank `11` on the recovered W33 point carrier
 
 Thus the quadratic ambiguity cancels at degree four without selecting an arbitrary quadratic channel; only an overall nonzero scalar remains.
 
@@ -40,6 +42,8 @@ The rational 4-class Steiner scheme has a 40D fiber-constant sector and an 80=20
 - `R2` Jordan type: **3^14 2^6 1^66**
 - `R3` rank: 39
 - `R3^2=0`
+- the quotient rank `14` is the Q43 line-augmentation layer in `14|11|14`,
+  not the W33 point-side `10|19|10` filtration
 
 This is a non-semisimple modular filtration. It specifically does **not** justify the separate shorthand claim that the F3 Bose–Mesner algebra becomes “rank two” merely because rational eigenvalues coincide modulo 3. Pass4948 was independently reserved to audit/correct that parallel claim and its dependents.
 
@@ -84,7 +88,7 @@ A globally packed 117-bit arbitrary-table decoder is not implemented. Yosys cell
 
 ## Pass4945 — full S3 matching holonomy
 
-The canonical R2 perfect matching over each of the 540 W33 nonedges defines an S3 transport after local labels are chosen on each Steiner three-fiber.
+The canonical R2 perfect matching over each of the 540 Q(4,3) nonedges—pairs of disjoint W33 lines—defines an S3 transport after local labels are chosen on each Steiner three-fiber.
 
 - complement edges: 540
 - independent fundamental cycles: 501
@@ -104,13 +108,13 @@ Pass4877 proved the 120 maximum cuts and 120 Steiner triangles are not equivaria
 - column classes: 40 classes of 3 identical columns
 - the column classes are exactly the forty Steiner triads/fibers
 
-On the 40x40 quotient, the complementary non-splitting matrix `Z=1-B` has row and column weight 4. Two quotient points are collinear iff they share a zero row; the resulting graph is exactly `SRG(40,12,2,4)` and is explicitly isomorphic to the Pass4870 W33 quotient.
+On the 40x40 quotient, the complementary non-splitting matrix `Z=1-B` has row and column weight 4. Its row graph is the standard W33 point graph; its column graph is the nonisomorphic Q(4,3) line graph. The owner producer now verifies `ZZ^T=4I+A_W`, `Z^TZ=4I+A_Q`, rational rank 25, and the characteristic-three separator `11` versus `15`.
 
 Therefore the two inequivalent 120-shells are threefold refinements of the dual line and point actions of W(3,3), not a false 120-to-120 identification.
 
 ## Pass4947 — connection curvature detects triad centers
 
-There are 3,240 triples of pairwise noncollinear W33 points.
+There are 3,240 triples of pairwise noncollinear Q(4,3) points, equivalently triples of pairwise disjoint W33 lines.
 
 - identity holonomy: **1080**
 - transposition holonomy: **2160**
@@ -121,7 +125,7 @@ Independently:
 - zero common centers: **1080**
 - two common centers: **2160**
 
-The two classifications agree exactly. In classical generalized-quadrangle terminology, matching curvature is flat exactly on acentric triads and reflective exactly on centric triads.
+The two classifications agree exactly on Q(4,3). The producer separately rebuilds the W33 point carrier, where the corresponding census is 2,880 one-center plus 360 four-center triads; the two laws are not interchangeable.
 
 The number 1080 occurs elsewhere in the repository; no identification with another 1080-shell is promoted without an explicit equivariant map.
 

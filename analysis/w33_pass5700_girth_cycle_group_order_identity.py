@@ -1,28 +1,22 @@
 #!/usr/bin/env python3
-"""Pass5700: the 8-cycle excess of the W33 Levi graph is exactly |PSp(4,3)|.
+"""Pass5700: trace-excess identity and the two root-grade cycle orbits.
 
 Exact integer trace arithmetic (no floats): with M8 = 2092 the 8th moment of the
 4-regular infinite tree (Kesten--McKay), the Levi graph of W(3,3) satisfies
 
     Tr(A^8) = 193280 = 80*2092 + 25920 = n*M8 + |PSp(4,3)|,
 
-so the number of girth-8 cycles is 25920/16 = 1620.  Under the balanced 2-lifts
-the excess SHRINKS: 25920 -> 25600 -> 25216 -> 24928 (levels 0..3), i.e. the
-tower is locally converging to the tree while girth stays pinned at exactly 8.
+so the number of girth-8 cycles is 25920/16 = 1620.  BT545 and Pass75 already
+own that 1620-cycle result and the Levi spectrum.  For the separate deterministic
+factor-pair tower used here, the observed excess sequence is
+25920 -> 25600 -> 25216 -> 24928 while girth remains 8 at the four computed
+levels.  No all-level convergence theorem is inferred.
 
-Group action (generated from the 40 symplectic transvections, closure = 25920
-elements = PSp(4,3) acting on the 80 Levi vertices): the 25920 rooted oriented
-8-cycles split into exactly TWO orbits of 12960, each with stabilizer Z/2.  The
-orbits are separated by a symplectic chirality invariant: for a cycle
-(p1,l1,p2,l2,p3,l3,p4,l4) the diagonal point pair (p1,p3) has 4 common
-neighbour points in orbit A and 0 in orbit B.  The cycle stabilizer is an
-involution with cycle structure 1^8 2^16 on the 40 W33 points (8 fixed points).
-
-Since PSp(4,3) preserves the point/line partition of the Levi graph and every
-rooted cycle alternates, the two orbits are exchanged only by the duality in the
-full Aut = W(E6) of order 51840; whether the merged action is regular on the
-1620 unrooted cycles is left as an explicit open computation (needs the
-B2 = C2 duality realized combinatorially).
+The 25920 ordered cycle encodings split into two PSp(4,3) orbits of 12960,
+each with stabilizer C2.  The separator is exactly the root grade: one orbit is
+point-rooted and the other is line-rooted.  It is not a chirality invariant.
+W(3,3) is not self-dual, so no point-line merger under W(E6), no grading-reversing
+Levi automorphism, and no regular-action claim is made.
 """
 from __future__ import annotations
 import itertools, collections, json, math
@@ -188,47 +182,59 @@ def main():
             for v in adj80[u]:
                 if v not in seen: stack.append((v, path+[v], seen | {v}))
     assert len(cycles) == 25920
-    c0 = cycles[0]
-    orbit = {c0}; frontier = [c0]
-    while frontier:
-        nf = []
-        for c in frontier:
-            for g in gens80:
-                x = tuple(g[v] for v in c)
-                if x not in orbit: orbit.add(x); nf.append(x)
-        frontier = nf
-    assert len(orbit) == 12960
-    def diag_overlap(c):
-        p1, p3 = c[0], c[4]
-        Aset = set(); Bset = set()
-        for L in lines:
-            if p1 in L: Aset |= (L-{p1})
-            if p3 in L: Bset |= (L-{p3})
-        return len(Aset & Bset)
-    invA = collections.Counter(diag_overlap(c) for c in list(orbit)[:300])
-    invB = collections.Counter(diag_overlap(c) for c in cycles if c not in orbit)
-    p4 = [c0[0], c0[2], c0[4], c0[6]]
+    def cycle_orbit(seed):
+        orbit = {seed}; frontier = [seed]
+        while frontier:
+            nf = []
+            for c in frontier:
+                for g in gens80:
+                    x = tuple(g[v] for v in c)
+                    if x not in orbit: orbit.add(x); nf.append(x)
+            frontier = nf
+        return orbit
+    cycle_set = set(cycles)
+    point_seed = next(c for c in cycles if c[0] < 40)
+    line_seed = next(c for c in cycles if c[0] >= 40)
+    point_orbit = cycle_orbit(point_seed)
+    line_orbit = cycle_orbit(line_seed)
+    assert len(point_orbit) == len(line_orbit) == 12960
+    assert point_orbit.isdisjoint(line_orbit)
+    assert point_orbit | line_orbit == cycle_set
+    assert all(c[0] < 40 for c in point_orbit)
+    assert all(c[0] >= 40 for c in line_orbit)
+    p4 = [point_seed[0], point_seed[2], point_seed[4], point_seed[6]]
     stab = [g for g in G if all(g[p] == p for p in p4)]
+    assert len(stab) == 2
     g_inv = [g for g in stab if g != tuple(range(40))][0]
+    assert mul(g_inv, g_inv) == tuple(range(40))
     fixed = [i for i in range(40) if g_inv[i] == i]
 
     out = {
       'pass': 5700,
-      'status': 'TR_A8_EXCESS_EQUALS_PSP43_ORDER_AND_CYCLE_SPACE_IS_A_DOUBLE_ORBIT',
+      'status': 'TRACE_EXCESS_IDENTITY_AND_POINT_ROOTED_VERSUS_LINE_ROOTED_CYCLE_ORBITS',
+      'tower_provenance': ('Separate deterministic factor-pair tower, not the frozen Pass5683/5693 tower; '
+                           'no isomorphism comparison has been computed.'),
       'master_identity': 'Tr(A_levi^8) = 193280 = 80*2092 + 25920 = n*M8_tree + |PSp(4,3)|',
       'tower_excess': [r['excess'] for r in rows_out],
       'tower_cycles8': [r['cycles8'] for r in rows_out],
       'tower_girth': [r['girth'] for r in rows_out],
-      'excess_shrinks_under_lift': True,
-      'cycle_space': {'rooted_oriented_8cycles': 25920, 'orbits': [12960, 12960],
-                      'stabilizer': 'Z/2',
-                      'chirality_invariant': 'diagonal common-neighbour count 4 (orbit A) vs 0 (orbit B)',
-                      'orbitA_invariant_sample': dict(invA), 'orbitB_invariant_sample': dict(invB),
-                      'stabilizer_involution': {'fixed_points': len(fixed),
-                                                'transpositions': (40-len(fixed))//2,
-                                                'cycle_structure': '1^8 2^16'},
-                      'open_merger': 'the two orbits are exchanged only by the duality in full Aut = W(E6) of order 51840; regularity of the merged action on the 1620 unrooted cycles is open'},
-      'physics_boundary': 'Exact finite combinatorics and group action; the chirality bit is a Z/2 invariant of the symplectic geometry, not yet tied to a physical parity.'
+      'observed_excess_strictly_decreases_in_four_levels': all(
+          rows_out[i]['excess'] > rows_out[i+1]['excess'] for i in range(3)),
+      'cycle_space': {
+          'prior_corpus_owners': 'BT545 and Pass75 already own the 1620 unrooted Levi 8-cycles',
+          'unrooted_8cycles': 1620,
+          'ordered_cycle_encodings': 25920,
+          'root_grade_orbits': {'point_rooted': len(point_orbit),
+                                'line_rooted': len(line_orbit),
+                                'stabilizer_order_each': 2},
+          'separator': 'initial vertex belongs to the point grade or the line grade; this is not chirality',
+          'point_orbit_stabilizer_involution': {'fixed_points_on_W33_points': len(fixed),
+                                                'transpositions_on_W33_points': (40-len(fixed))//2,
+                                                'cycle_structure_on_W33_points': '1^8 2^16'},
+          'duality_firewall': ('W(3,3) is not self-dual. No W(E6) point-line merger, grading-reversing '
+                               'Levi automorphism, or regular action on the 1620 cycles is claimed.')},
+      'physics_boundary': ('Exact finite trace and group-action statements plus a four-level observed excess trend. '
+                           'No chirality, physical parity, all-level convergence, or continuum claim.')
     }
     OUT.write_text(json.dumps(out, indent=2, sort_keys=True) + '\n')
     print(json.dumps(out, indent=2, sort_keys=True))

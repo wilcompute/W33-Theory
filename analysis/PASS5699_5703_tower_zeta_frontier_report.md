@@ -1,55 +1,193 @@
-# Pass5699-5703 frontier report: the W33 Ramanujan tower is an Artin L-function tower
+# Pass5699--5703 corrected report: a separate finite factor-pair tower
 
-## What is new (not in either lane's recent packets)
+## Corrected outcome
 
-1. **Levelwise zeta factorization (Pass5699).** For every balanced 2-lift in the explicit
-   tower, spec(child) = spec(parent) u spec(signed parent) to machine precision, so by Bass
-   the Ihara zeta factors as zeta_child = zeta_parent * L(u, chi) with
-   L(u, chi)^-1 = (1-u^2)^(r-1) det(I - u A_signed + 3u^2 I).  This is the Stark--Terras
-   Artin L-function of the Z/2 local system defined by the signing.  The signing is the same
-   datum as the Pass5696 determinant-line twist, so the tower L-functions ARE the
-   orientation-twisted sector partition functions.
+This packet now has a reproducible, bounded result: three explicit balanced
+2-lifts of the W(3,3) Levi graph form a **separate deterministic factor-pair
+tower** on \(80,160,320,640\) vertices.  The tower supports standard Artin--Ihara
+covering factorizations, exact finite Ramanujan certificates, an exact
+eighth-trace identity, and finite spectral diagnostics.
 
-2. **Base closed form.**  Delta_levi(u) = (1-u^2)(1-9u^2)(1+9u^4)^24 (1+3u^2)^30, verified
-   against the Bass determinant.  The 24-dimensional +-sqrt(6) eigenspace collapses to the
-   quartic factor (1+9u^4)^24 whose roots lie at 45-degree angles on the critical circle.
+It is not the frozen Pass5683/5693 tower.  Its base edge list is globally sorted
+and its four-matching/six-pair selection starts on the 80-vertex parent, whereas
+the earlier tower preserves a line-major base order and applies Pass5683's
+frozen signing before sorting derived levels.  No isomorphism or signing-gauge
+comparison between the two towers has been computed.
 
-3. **Tower RH, exact (Pass5701).**  All signed-spectrum L-function poles lie on
-   |u| = 1/sqrt(3) (160/160, 320/320, 640/640).  Upgraded from numerics to theorem by exact
-   rational LDL certificates that 12I - A_s^2 is positive definite at levels 1-3 (min pivots
-   4.82, 4.49, 4.52 as exact Fractions), plus a 60-digit Cholesky certificate for the
-   320->640 signing (min pivot 4.52377).  The Sturm 77/80 anomaly is resolved: the zero
-   eigenvalue has multiplicity 4 and Sturm counts distinct roots.
+## Pass5699: standard covering factorization on three explicit lifts
 
-4. **Girth-cycle group identity (Pass5700).**  Exact integer arithmetic:
-   Tr(A_levi^8) = 193280 = 80*2092 + 25920 = n*M8_tree + |PSp(4,3)|.  The tower excess
-   SHRINKS under lifting (25920 -> 25600 -> 25216 -> 24928) while girth stays pinned at 8.
-   The 25920 rooted oriented 8-cycles split into TWO PSp(4,3) orbits of 12960 with Z/2
-   stabilizers, separated by a symplectic chirality invariant (diagonal common-neighbour
-   count 4 vs 0).  The stabilizer involution has cycle structure 1^8 2^16 on the 40 points.
+For a signed parent adjacency matrix \(A_s\), the two-lift adjacency is exactly
+conjugate to the block sum of the unsigned and signed parent matrices.  Hence
 
-5. **Kesten--McKay equidistribution (Pass5702).**  The new (signed) spectra converge to the
-   4-regular tree law with KS distance 0.02102 -> 0.01079 -> 0.00540, an empirical
-   2^{-level} law.  Moments match the tree exactly through M6 (girth-forced).  Eigenphase
-   spacings sit near GOE, not Poisson.
+\[
+ \operatorname{spec}(A_{\rm child})=
+ \operatorname{spec}(A_{\rm parent})\sqcup
+ \operatorname{spec}(A_s).
+\]
 
-6. **alpha(W(3,9)) replication (Pass5703).**  Independent construction over F_9 (820
-   vertices, 90-regular); greedy+swap plateaus at 46, honestly replicating the barrier below
-   the repo's 51 <= alpha <= 80.  Staged GAP TransitiveIdentification script for the Track A
-   q=5 settling test included (analysis/PASS5703_Q5_TRANSITIVE_IDENTIFICATION.g).
+Combining this exact block identity with the Bass determinant gives the
+standard Stark--Terras \(\mathbb Z/2\)-cover factorization
 
-## Evidence boundary
+\[
+ \zeta_{\rm child}(u)^{-1}
+ =\zeta_{\rm parent}(u)^{-1}L(u,\chi)^{-1},\qquad
+ L(u,\chi)^{-1}
+ =(1-u^2)^{r-1}\det(I-uA_s+3u^2I).
+\]
 
-All statements are finite graph, matrix, zeta-function, or group-action facts verified by
-exact integer/rational arithmetic or high-precision numerics with explicit error bounds.
-No continuum limit, no physical energy spectrum, no Yang--Mills mass gap, and no all-level
-equidistribution theorem is claimed.  The 2^{-level} KS law and the excess-shrinkage trend
-are empirical on 3-4 levels.
+This use of covering-graph Artin \(L\)-functions is established theory, already
+cited in `analysis/PASS4475_4478_PRIMARY_LITERATURE.md`.  The finite W33-specific
+calculation here is the application to the three constructed lifts.
 
-## Open threads handed forward
+Using the BT545 Levi spectrum, the base determinant reduces to
 
-- Orbit merger under the full W(E6) duality (Pass5700 open_merger).
-- Level-4 (1280-vertex) exact certificate and whether the KS law persists.
-- Quantum-graph resonance budget for the photonic paper from the signed eigenphases.
-- Weighted/matching-signed independence search on W(3,9) against the 51-barrier.
-- Running the staged GAP settling test in the repo's GAP environment.
+\[
+ \Delta_{\rm Levi}(u)
+ =(1-u^2)(1-9u^2)(1+9u^4)^{24}(1+3u^2)^{30}.
+\]
+
+At all three signed parent sizes \(80,160,320\), every signed determinant root
+lies on \(|u|=1/\sqrt3\).  The unsigned levels have the four familiar trivial
+roots \(\pm1,\pm1/3\); all remaining roots lie on that circle.  The determinant
+functional equation is also factorwise exact because
+
+\[
+ (3u^2)\left(1-\frac{\lambda}{3u}+\frac{1}{3u^2}\right)
+ =1-\lambda u+3u^2.
+\]
+
+The edge-sign local system is **not** Pass5696's determinant character on
+\(\operatorname{AGL}(2,3)\).  No map between those objects is constructed, so no
+orientation-sector or partition-function interpretation is retained.
+
+## Pass5701: exact finite Ramanujan certificates
+
+For each selected signed parent, the integer matrix
+
+\[
+ B=12I-A_s^2
+\]
+
+has an exact rational LDL decomposition with every pivot strictly positive.
+The certified parent sizes and minimum pivots are:
+
+| parent vertices | exact pivots | minimum pivot (decimal display) |
+|---:|---:|---:|
+| 80 | 80 | 4.8179893548 |
+| 160 | 160 | 4.4896522954 |
+| 320 | 320 | 4.5237671147 |
+
+Thus \(\rho(A_s)<2\sqrt3\) for the three selected signings and the corresponding
+children through 640 vertices are Ramanujan.  This is an exact theorem for those
+three matrices, not an all-level recursion theorem.  No signing on a 640-vertex
+parent, and hence no 1,280-vertex child, is produced by this packet.
+
+## Pass5700: trace excess and the actual two cycle orbits
+
+The base Levi graph satisfies the exact identity
+
+\[
+ \operatorname{Tr}(A_{\rm Levi}^8)
+ =193280
+ =80\cdot2092+25920
+ =80M_8^{\rm tree}+|\operatorname{PSp}(4,3)|.
+\]
+
+Dividing the excess by \(16=8\) starting positions times two directions gives
+\(1,620\) unrooted girth-eight cycles.  BT545 and Pass75 already own that cycle
+count; the displayed trace decomposition is the bounded result here.
+
+For the four computed tower levels, the exact excesses are
+
+```text
+25920, 25600, 25216, 24928
+```
+
+and the girth is \(8\) at each level.  The strict decrease is an observation on
+these four graphs only.
+
+The \(25,920\) ordered encodings of the base cycles split into two
+\(\operatorname{PSp}(4,3)\)-orbits:
+
+```text
+point-rooted encodings: 12960, stabilizer order 2
+line-rooted encodings:  12960, stabilizer order 2
+```
+
+This is the bipartite root grade, not chirality.  The nonidentity stabilizer of
+a representative point-rooted encoding is an involution with point-action cycle
+shape \(1^8 2^{16}\).  Since W(3,3) is not self-dual, nothing here supplies a
+point--line merger, a grading-reversing Levi automorphism, or a regular action on
+the 1,620 unrooted cycles.
+
+## Pass5702: exact moments and sampled CDF discrepancies
+
+For signed parent sizes \(80,160,320\), exact integer traces reproduce the
+4-regular-tree moments through degree six:
+
+\[
+ M_2=4,\qquad M_4=28,\qquad M_6=232.
+\]
+
+The per-vertex degree-eight discrepancies from the tree value \(2092\) are
+\(-4,-12/5,-9/10\).  Higher exact trace rows through degree twelve are stored in
+the certificate.
+
+The separate numerical diagnostic compares each empirical signed spectrum to
+the Kesten--McKay CDF on a fixed 241-point grid.  Each reference CDF value uses
+double-precision trapezoidal quadrature with 4,000 panels.  The resulting
+sampled discrepancies are
+
+```text
+0.02102, 0.01079, 0.00540.
+```
+
+They decrease across the three computed sizes.  They are not exact
+Kolmogorov--Smirnov statistics, carry no rigorous quadrature error bound, and do
+not establish a rate or an all-level limit.  No controlled random ensemble or
+hypothesis test was supplied, so the former GOE and chaos interpretation is
+withdrawn.
+
+## Pass5703: W(3,9) reconstruction, not a new independence bound
+
+The deterministic producer independently reconstructs the point graph
+
+\[
+ \operatorname{SRG}(820,90,8,10)
+\]
+
+over \(\mathbb F_9=\mathbb F_3[a]/(a^2+1)\) and exhaustively verifies its degree
+and common-neighbour parameters.  It then checks the actual prior owner,
+`data/PART_W33_PASS5226_5227_ODD_Q_OVOID_DEFICIENCY.json`, which records
+
+\[
+ 50\leq\alpha(W(3,9))\leq82,
+\]
+
+with randomized-greedy baseline \(46\), an explicit witness of size \(50\), and
+the Hoffman upper bound \(82\).  The former Pass5703 interval \(51\) to \(80\)
+was unsupported and is withdrawn.  Pass5703 adds no independence-number result.
+
+The former q=5 candidate-group script is now an executable tombstone.  The live
+owner is the stronger 56-check GAP packet Pass5667--5674.
+
+## Reproducibility and publication status
+
+- `analysis/w33_pass5699_5703_runner.py` replays all five certificate owners.
+- `tests/test_w33_pass5699_5703_tower_zeta_corrections.py` checks the corrected
+  semantics and replays the packet in an isolated tree, requiring byte-identical
+  JSON.
+- `analysis/PASS5699_5703_external_prior_art_and_corrections.md` records the
+  ownership and retraction ledger.
+- `data/w33_pass_namespace_registry_v2.d/5699-5703.json` registers this packet as
+  corrected, replayable, and publication-source-unintegrated.
+
+The TeX and HTML fragments remain source-only until the neighboring
+Pass5704--5711 lane is reconciled.  In particular, the Pass5706 producer imports
+Pass5683 and Pass5693 and starts from Pass5683's frozen base signing; it extends
+that earlier tower to 2,560 vertices and does not continue Pass5699.  The
+neighboring namespace's phrase "past Pass5699--5703" is chronological, not an
+identification of the towers.  All surviving statements are finite graph, exact
+matrix, finite group-action, or explicitly labelled numerical observations.  No
+continuum limit, physical spectrum, physical chirality, partition function,
+quantum chaos, or Yang--Mills mass gap is claimed.

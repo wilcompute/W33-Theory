@@ -17,6 +17,9 @@ def test_pass4874_association_scheme():
     q=d['Q43_line_quotient']
     assert q['parameters']==[40,12,2,4]
     assert q['identification']=='Q(4,3) point graph = W(3,3) line-intersection graph'
+    assert q['F3_rank_A_plus_I']==15
+    assert q['dual_W33_point_F3_rank_A_plus_I']==11
+    assert q['maximal_K4_pencils_recover_W33_points']
     assert q['dividing_by_fiber_size_recovers_common_SRG_eigenvalues']==[12,2,-4]
     assert d['correction']['original_W33_point_quotient_label'] is False
     assert d['correction']['scheme_arithmetic_changed'] is False

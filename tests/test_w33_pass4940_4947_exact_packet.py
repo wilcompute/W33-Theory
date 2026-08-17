@@ -26,6 +26,8 @@ def test_4941_quartic():
     assert d['quartic_operation']['image_span_dimension']==10
     assert d['support_structure']['two_support_inputs_zero']
     assert d['support_structure']['fiber_constant_40_space_annihilated_by_each_quadratic_channel']
+    assert d['support_structure']['carrier'].startswith('Q(4,3)')
+    assert d['support_structure']['F3_rank_A_plus_I']=={'Q43_lines':15,'W33_points':11}
 
 def test_4942_char3_degeneration():
     d=load('PART_W33_PASS4942_TRANSVERSE_CHAR3_DEGENERATION.json')
@@ -34,6 +36,10 @@ def test_4942_char3_degeneration():
     assert c['R2_nilpotent_ranks']==[34,14,0]
     assert c['R2_Jordan_blocks']=={'size1':66,'size2':6,'size3':14}
     assert c['R3_nilpotent_rank']==39 and c['R3_square_zero']
+    carrier=d['carrier_correction']
+    assert carrier['Q43_augmentation_image_rank']==14
+    assert carrier['Q43_full_rank_A_plus_I']==15
+    assert carrier['dual_W33_point_full_rank_A_plus_I']==11
 
 def test_4943_s6_crosswalk():
     d=load('PART_W33_PASS4943_COMMON_S6_CARRIER_CROSSWALK.json')
@@ -61,6 +67,8 @@ def test_4945_holonomy():
     assert d['edges']==540
     assert d['fundamental_cycle_holonomy']['group_order']==6
     assert d['fundamental_cycle_holonomy']['all_six_permutations_seen']
+    assert d['base_graph'].startswith('complement of Q(4,3)')
+    assert 'disjoint W33 lines' in d['carrier']
 
 def test_4946_corrected_point_line_incidence():
     d=load('PART_W33_PASS4946_MAXCUT_STEINER_DUAL_W33_INCIDENCE.json')
@@ -75,6 +83,8 @@ def test_4946_corrected_point_line_incidence():
     assert q['column_collinearity'].startswith('Q(4,3)')
     assert q['rank']==25
     assert q['gram_spectrum']=={'0':15,'16':1,'6':24}
+    assert q['F3_rank_A_plus_I']=={'columns_Q43_lines':15,'rows_W33_points':11}
+    assert q['gram_identities']==['ZZ^T=4I+A_W','Z^TZ=4I+A_Q']
 
 def test_4947_corrected_q43_curvature():
     d=load('PART_W33_PASS4947_W33_TRIAD_CURVATURE.json')
@@ -104,7 +114,16 @@ def test_shared_manuscripts_and_public_sources():
     assert "INDEXES=(ROOT/'docs/index.html',ROOT/'index.html')" in materializer
     assert 'replace_or_insert' in materializer and "'refreshed'" in materializer
 
-def test_legacy_generation_has_duality_postprocessor():
-    guard=(ROOT/'tools/apply_pass4954_duality_corrections_to_4946_4947.py').read_text()
-    assert 'maximum-cut triples are W33 points' in guard
-    assert 'Q(4,3)' in guard
+def test_owner_producers_emit_corrected_carriers_directly():
+    sources=[
+        ROOT/'analysis/w33_pass4870_steiner_w33_quadratic_bridge.py',
+        ROOT/'analysis/w33_pass4874_steiner_w33_association_scheme.py',
+        ROOT/'analysis/w33_pass4941_quartic_ambiguity_cancellation.py',
+        ROOT/'analysis/w33_pass4942_transverse_char3_degeneration.py',
+        ROOT/'analysis/w33_pass4945_4947_steiner_connection_maxcut_duality.py',
+    ]
+    joined='\n'.join(path.read_text() for path in sources)
+    assert 'rank(A+I)=15 versus 11' in joined or "'Q43_lines':15,'W33_points':11" in joined
+    assert "'base_graph':'complement of Q(4,3)" in joined
+    assert "'maximum_cut_triples':'40 W(3,3) points'" in joined
+    assert "'Q43_independent_triads':3240" in joined

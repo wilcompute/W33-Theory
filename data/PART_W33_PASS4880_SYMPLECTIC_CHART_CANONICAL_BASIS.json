@@ -1,12 +1,10 @@
 {
-  "pass": "4880",
-  "theorem": "symplectic_chart_canonical_hom_basis",
-  "code_params": [360, 36, 20],
-  "chart_positions": 36,
-  "chart_form": "B(x,y) = x.y + wt(x)*wt(y) mod 2, alternating nondegenerate on F2^6",
-  "covering_radius_interval": [124, 179],
-  "chart_contribution": "canonical_Hom_basis: splits merged 39D F3-eigenspace into 24+15",
-  "bose_mesner_split": "merged_39D -> 24 + 15 via F2^6 marked-double-six chart",
-  "note": "The chart (Pass4869) restores the rational eigenspace splitting inside the F3-collapsed Bose-Mesner algebra (Pass4878), selecting a canonical ordered basis for the 2D Hom_PSp(Sym^2 H2, Q10) family. Covering radius 124<=rho<=179 remains open.",
-  "cross_references": ["Pass4869_symplectic_chart", "Pass4878_bose_mesner_collapse", "Pass4870_hom_dim2"]
+  "authoritative_certificate": "PART_W33_PASS4948_MODULAR_BOSE_MESNER_CORRECTION.json",
+  "boundary": "No F2-to-F3 splitting or canonical quadratic-Hom basis follows from the chart alone.",
+  "pass": 4880,
+  "reason": "No cross-characteristic map was constructed, and exhaustive enumeration of the F3 scheme algebra finds idempotent ranks only 0,1,39,40.",
+  "schema": "w33.pass4880.withdrawal_tombstone.v1",
+  "status": "WITHDRAWN_BY_PASS4948",
+  "surviving_statement": "The marked double-six F2^6 chart is a useful finite coordinate system on its native binary carrier.",
+  "withdrawn_statement": "The binary chart canonically splits the characteristic-three generalized block into modular rank-24 and rank-15 scheme sectors."
 }

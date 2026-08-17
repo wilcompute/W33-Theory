@@ -1,11 +1,28 @@
 {
+  "graph": {
+    "field": "F_9 = F_3[a]/(a^2+1)",
+    "points_PG39": 820,
+    "srg": [
+      820,
+      90,
+      8,
+      10
+    ]
+  },
+  "legacy_claim_withdrawn": "The former 51 <= alpha <= 80 claim had no cited certificate, and the reported baseline 46 was already present in Pass5226--5227.",
   "pass": 5703,
-  "status": "INDEPENDENT_W39_CONSTRUCTION_REPLICATES_ALPHA_BARRIER_BELOW_REPO_FRONTIER",
-  "graph": {"field": "F_9 = F_3[a]/(a^2+1)", "points_PG39": 820, "degree": 90},
-  "optimizer": "randomized greedy (55177 restarts) + 1-for-2 swaps",
-  "greedy_trials": 55177,
-  "best_independent_set": 46,
-  "repo_bounds": {"lower": 51, "upper": 80},
-  "verdict": "greedy+swap class plateaus at 46 < 51; barrier replicated, not broken",
-  "physics_boundary": "Pure combinatorial optimization; no physics claim."
+  "physics_boundary": "Pure finite combinatorial reconstruction; no optimization or physics claim.",
+  "prior_owner": {
+    "certified_lower_witness": 50,
+    "file": "data/PART_W33_PASS5226_5227_ODD_Q_OVOID_DEFICIENCY.json",
+    "hoffman_upper_bound": 82,
+    "randomized_greedy_baseline": 46
+  },
+  "repo_bounds": {
+    "exact_alpha_settled": false,
+    "lower_witness": 50,
+    "upper_hoffman": 82
+  },
+  "status": "REDISCOVERY_CORRECTED_TO_PASS5226_5227_PRIOR_OWNERSHIP",
+  "verdict": "Independent graph reconstruction only; no new independence-number result."
 }

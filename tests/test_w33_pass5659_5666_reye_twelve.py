@@ -67,10 +67,3 @@ def test_zero_findings_is_recorded_as_inapplicable():
     p = cert()["pass_5666"]
     assert p["findings"] == 0
     assert "INAPPLICABLE" in p["reading"], "must not read zero as verification"
-
-
-def test_q9_seeding_negative():
-    p = cert()["pass_5667_q9"]
-    assert p["perp_seeded_best"] == p["uniform_restarts_best"] == 51
-    assert p["bounds"] == [51, 80]
-    assert p["proved"] is False

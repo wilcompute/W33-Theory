@@ -3,9 +3,18 @@
   "pass": 4949,
   "slug": "w33_augmentation_middle_and_levi_radical_19_space",
   "title": "W33 augmentation middle and Levi radical 19-space",
-  "status": "RESERVED",
+  "status": "EXECUTED",
   "owner": "openai-codex",
   "reserved_at": "2026-08-11",
+  "executed_at": "2026-08-17",
   "purpose": "Determine by explicit native-GAP intertwiners whether ker(A+I)/im(A+I) on the W33 point augmentation module is the distinguished 19-dimensional Levi radical layer from Pass4865, and resolve its 14+5 submodule structure rather than relying on a dimension coincidence.",
-  "boundary": "Reservation only. No module identification is claimed until both carriers and a full-rank equivariant map are constructed over F3 with exact scope and prior-result checks."
+  "evidence": {
+    "gap_owner": "analysis/w33_pass4949_w33_levi_middle19_intertwiner.g",
+    "certificate": "data/PART_W33_PASS4949_W33_Q43_LEVI_MIDDLE_MODULES.json",
+    "regression": "tests/test_w33_pass4949_w33_q43_levi_middle_modules.py",
+    "report": "analysis/PASS4949_W33_Q43_LEVI_MIDDLE_MODULES.md",
+    "native_result": "46/46 checks; status=PASS"
+  },
+  "outcome": "The W33 middle is split 5+14, while the Levi 19-space is the nonsplit extension 14.5. They are not isomorphic. Unique rank-14 and rank-5 maps form a square-zero two-periodic complex, with the reverse map restored under the outer sign twist.",
+  "boundary": "Equal dimension does not identify the two 19-spaces. This finite F3 theorem does not split the Levi extension, equate the point and line carriers, or imply a continuum, hardware, security, or particle claim."
 }

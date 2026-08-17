@@ -78,11 +78,13 @@ def test_pass4958_complementary_full_rank_transceiver():
     assert d["sector_complementarity"]["spread_channel"] == "transmits 1+15, kills 24"
 
 
-def test_legacy_pass4870_certificate_is_corrected():
+def test_pass4870_owner_certificate_is_corrected():
     d = load("PART_W33_PASS4870_STEINER_W33_QUADRATIC_BRIDGE.json")
     cover = d["intrinsic_three_cover"]
     assert cover["explicit_isomorphism_to_standard_W33"] is False
     assert cover["explicit_isomorphism_to_W33_line_intersection_Q43"] is True
+    assert cover["F3_rank_A_plus_I"] == {"Q43_lines": 15, "W33_points": 11}
+    assert cover["maximal_K4_pencils_recover_W33_points"] is True
     assert d["quadratic_bridge"]["Hom_PSp_Sym2H2_to_Q10_dimension"] == 2
 
 
@@ -92,5 +94,5 @@ def test_manuscript_and_public_correction_firewalls_are_live():
     p4870 = (ROOT / "analysis/PASS4870_steiner_w33_quadratic_bridge_insert.tex").read_text()
     assert "line-intersection graph" in p4870 and "Q(4,3)" in p4870
     public = (ROOT / "docs/pass4870-steiner-w33-quadratic.html").read_text()
-    assert "is not the standard W33 point graph" in public
-    assert "Q(4,3)" in public
+    assert "not the standard" in public and "point graph" in public
+    assert "Q(4,3)" in public and "15 versus 11" in public

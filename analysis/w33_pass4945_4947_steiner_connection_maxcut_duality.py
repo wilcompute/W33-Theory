@@ -1,17 +1,18 @@
 #!/usr/bin/env python3
 """Passes 4945--4947 — three outside-box probes of the Steiner three-cover.
 
-4945: treat the canonical R2 perfect matchings over W33 nonedges as an S3
-      connection and compute its gauge-invariant holonomy.
+4945: treat the canonical R2 perfect matchings over Q(4,3) nonedges (pairs of
+      disjoint W33 lines) as an S3 connection and compute its holonomy.
 4946: cross the 120 maximum cuts with the 120 Steiner triangles; although
       Pass4877 forbids a 120<->120 equivariant bijection, their intrinsic
-      triples recover the 40-line x 40-point incidence matrix of W33.
-4947: classify triangle curvature of the S3 connection and identify it with
-      acentric versus centric W33 triads.
+      triples recover the 40-point x 40-line incidence matrix of W33.
+4947: classify triangle curvature on Q(4,3), separately checking the standard
+      W33 point-triad baseline so the dual carriers cannot be conflated.
 """
 from __future__ import annotations
 import itertools,json
 from collections import Counter,deque
+from fractions import Fraction
 from pathlib import Path
 import numpy as np,networkx as nx
 ROOT=Path(__file__).resolve().parents[1]
@@ -37,6 +38,33 @@ def compose_map(p,q):return tuple(q[p[i]] for i in range(len(p)))
 def invperm(p):return tuple(p.index(i) for i in range(len(p)))
 def canon_cut(S,n=36):
     S=frozenset(S);T=frozenset(set(range(n))-set(S));return min((S,T),key=lambda z:tuple(sorted(z)))
+
+def rankp(M,p=3):
+    A=np.array(M,dtype=int)%p;r=0
+    for c in range(A.shape[1]):
+        q=next((i for i in range(r,A.shape[0]) if A[i,c]),None)
+        if q is None:continue
+        A[[r,q]]=A[[q,r]];A[r]=(A[r]*pow(int(A[r,c]),-1,p))%p
+        for i in range(A.shape[0]):
+            if i!=r and A[i,c]:A[i]=(A[i]-A[i,c]*A[r])%p
+        r+=1
+        if r==A.shape[0]:break
+    return r
+
+def rankq(M):
+    A=[[Fraction(int(x)) for x in row] for row in np.asarray(M)]
+    r=0
+    for c in range(len(A[0])):
+        q=next((i for i in range(r,len(A)) if A[i][c]),None)
+        if q is None:continue
+        A[r],A[q]=A[q],A[r];pivot=A[r][c]
+        A[r]=[x/pivot for x in A[r]]
+        for i in range(len(A)):
+            if i!=r and A[i][c]:
+                scale=A[i][c];A[i]=[x-scale*y for x,y in zip(A[i],A[r])]
+        r+=1
+        if r==len(A):break
+    return r
 
 def main()->int:
     # Reconstruct the standard GQ(4,2), 36 double-sixes, 120 Steiner triangles, and PSp generators.
@@ -92,6 +120,15 @@ def main()->int:
     Q=nx.Graph();Q.add_nodes_from(range(40))
     for a,b in R3:Q.add_edge(fi[a],fi[b])
     assert Q.number_of_edges()==240 and set(dict(Q.degree()).values())=={12}
+    pencils=[c for c in itertools.combinations(range(40),4)
+             if all(Q.has_edge(a,b) for a,b in itertools.combinations(c,2))]
+    assert len(pencils)==40 and all(sum(x in c for c in pencils)==4 for x in range(40))
+    W=nx.Graph();W.add_nodes_from(range(40))
+    for a,b in itertools.combinations(range(40),2):
+        if len(set(pencils[a])&set(pencils[b]))==1:W.add_edge(a,b)
+    assert not nx.is_isomorphic(Q,W)
+    assert rankp(nx.to_numpy_array(Q,dtype=int)+np.eye(40,dtype=int))==15
+    assert rankp(nx.to_numpy_array(W,dtype=int)+np.eye(40,dtype=int))==11
     r2=set(R2);Qbar=nx.complement(Q);Qbar.remove_edges_from(nx.selfloop_edges(Qbar));assert Qbar.number_of_edges()==540
     def edgeperm(u,v):
         p=[None]*3
@@ -127,11 +164,12 @@ def main()->int:
                 if cyc4:break
             if cyc4:break
     assert cyc4 is not None
-    out45={'pass':4945,'base_graph':'complement of W33 on the 40 Steiner fibers','edges':540,
-      'connection':'each W33 nonedge carries the intrinsic R2 perfect matching, hence an S3 transport after local fiber labels are chosen',
+    out45={'pass':4945,'base_graph':'complement of Q(4,3) on the 40 Steiner fibers','edges':540,
+      'carrier':'Q(4,3) points = W(3,3) lines; nonedges are pairs of disjoint W33 lines',
+      'connection':'each Q(4,3) nonedge carries the intrinsic R2 perfect matching, hence an S3 transport after local fiber labels are chosen',
       'fundamental_cycle_holonomy':{'group_order':6,'group':'S3','all_six_permutations_seen':True,
         'non_tree_cycle_count':len(hol),'order3_four_cycle_witness':cyc4},
-      'theorem':'The canonical perfect matchings across W33 nonedges define a genuine non-flat S3 connection on the 40 Steiner fibers. After any local labeling of each three-element fiber, the fundamental-cycle transports generate all of S3. Consequently no global relabeling can trivialize all 540 nonedge matchings, and the connection does not reduce globally to C3 or C2.',
+      'theorem':'The canonical perfect matchings across Q(4,3) nonedges, equivalently pairs of disjoint W33 lines, define a genuine non-flat S3 connection on the 40 Steiner fibers. After any local labeling of each three-element fiber, the fundamental-cycle transports generate all of S3. Consequently no global relabeling can trivialize all 540 nonedge matchings, and the connection does not reduce globally to C3 or C2.',
       'boundary':'The edge permutations depend on local labels, but the conjugacy class of the holonomy group and its order are gauge invariant.'}
     OUT45.write_text(json.dumps(out45,indent=2,sort_keys=True)+'\n')
 
@@ -181,16 +219,33 @@ def main()->int:
     assert all(len(set(Pcol[a])&set(Pcol[b]))==2 for a,b in Pcol.edges())
     assert all(len(set(Pcol[a])&set(Pcol[b]))==4 for a,b in itertools.combinations(range(40),2) if not Pcol.has_edge(a,b))
     assert nx.is_isomorphic(Pcol,Q)
+    Prow=nx.Graph();Prow.add_nodes_from(range(40))
+    for a,b in itertools.combinations(range(40),2):
+        if any(Z[a,c] and Z[b,c] for c in range(40)):Prow.add_edge(a,b)
+    assert Prow.number_of_edges()==240 and set(dict(Prow.degree()).values())=={12}
+    assert all(len(set(Prow[a])&set(Prow[b]))==2 for a,b in Prow.edges())
+    assert all(len(set(Prow[a])&set(Prow[b]))==4 for a,b in itertools.combinations(range(40),2) if not Prow.has_edge(a,b))
+    assert nx.is_isomorphic(Prow,W) and not nx.is_isomorphic(Prow,Q)
+    Arow=nx.to_numpy_array(Prow,dtype=int);Acol=nx.to_numpy_array(Pcol,dtype=int)
+    assert np.array_equal(Z@Z.T,4*np.eye(40,dtype=int)+Arow)
+    assert np.array_equal(Z.T@Z,4*np.eye(40,dtype=int)+Acol)
+    assert rankq(Z)==25 and rankp(Z,101)==25
     out46={'pass':4946,
       'shells':{'maximum_cuts':120,'Steiner_triangles':120,'Pass4877_equivariant_bijection_exists':False},
       'cross_incidence':{'definition':'B(C,T)=1 iff the maximum cut splits the three double-sixes of Steiner triangle T; zero iff T lies wholly on one side',
         'row_weight':108,'column_weight':108,'identical_row_classes':[40,3],'identical_column_classes':[40,3]},
-      'quotient':{'maximum_cut_triples':'40 line classes','Steiner_triples':'the same 40 point fibers from Pass4870',
+      'correction':'Pass4949 fixes the side labels and supplies the 15-versus-11 carrier separator.',
+      'quotient':{'maximum_cut_triples':'40 W(3,3) points',
+        'Steiner_triples':'40 W(3,3) lines, equivalently Q(4,3) points',
         'zero_matrix_row_weight':4,'zero_matrix_column_weight':4,
-        'meaning':'Z=1-B on the 40x40 quotient is point-line incidence',
-        'point_collinearity':'SRG(40,12,2,4)','explicit_isomorphism_to_Pass4870_W33':True},
-      'theorem':'Although the 120 maximum cuts and 120 Steiner triangles are inequivalent PGSp G-sets, their cross-incidence has a canonical 3-to-1 collapse on both sides. The 120 maximum cuts form forty triples with identical Steiner-splitting profiles, while the Steiner columns collapse by exactly the classical forty Steiner triads. On the resulting 40x40 quotient, the NON-splitting relation has row and column weight four and is precisely a generalized-quadrangle point-line incidence matrix: two quotient points are collinear iff they share a zero block, and the resulting graph is W(3,3). Thus the two inequivalent 120-shells recover the dual 40-line and 40-point actions of W33 rather than a false 120-to-120 identification.',
-      'boundary':'Finite incidence theorem. The quotient identifies GQ point/line actions; it does not restore an equivariant bijection between the original 120-element shells.'}
+        'meaning':'Z=1-B on the 40x40 quotient is literal W(3,3) point-line incidence',
+        'row_collinearity':'standard W(3,3) point graph',
+        'column_collinearity':'Q(4,3) point graph = W(3,3) line-intersection graph',
+        'F3_rank_A_plus_I':{'rows_W33_points':11,'columns_Q43_lines':15},
+        'gram_identities':['ZZ^T=4I+A_W','Z^TZ=4I+A_Q'],
+        'rank':25,'gram_spectrum':{'16':1,'6':24,'0':15}},
+      'theorem':'Although the 120 maximum cuts and 120 Steiner triangles are inequivalent PGSp G-sets, their cross-incidence has a canonical 3-to-1 collapse on both sides. The maximum cuts collapse to the forty W(3,3) points and the Steiner columns to the forty W(3,3) lines. The non-splitting matrix is literal point-line incidence: its row graph is the K4-pencil W33 point carrier of Pass4949, its column graph is the nonisomorphic Q(4,3) line carrier, and their F3 ranks are 11 and 15.',
+      'boundary':'Finite incidence theorem corrected by Pass4949. The quotient identifies point and line actions; it does not restore an equivariant bijection between the original 120-element shells.'}
     OUT46.write_text(json.dumps(out46,indent=2,sort_keys=True)+'\n')
 
     # 4947: curvature on complement triangles = acentric/centric triad dichotomy.
@@ -204,12 +259,21 @@ def main()->int:
         if typ=='3cycle':threecycles+=1
     assert curv==Counter({'transposition':2160,'identity':1080}) and threecycles==0
     assert by_centers==Counter({('transposition',2):2160,('identity',0):1080})
-    out47={'pass':4947,'W33_independent_triads':3240,
+    wtriads=[t for t in itertools.combinations(range(40),3)
+             if all(not W.has_edge(a,b) for a,b in itertools.combinations(t,2))]
+    wcenters=Counter(len(set(W[a])&set(W[b])&set(W[c])) for a,b,c in wtriads)
+    assert len(wtriads)==3240 and wcenters==Counter({1:2880,4:360})
+    out47={'pass':4947,
+      'correction':'These are Q(4,3) line-side triads, not standard W33 point triads.',
+      'Q43_independent_triads':3240,
       'curvature':{'flat_identity':1080,'reflection_transposition':2160,'order3':0},
-      'geometric_classification':{'acentric_common_neighbors_0':1080,'centric_common_neighbors_2':2160,
-        'equivalence':'matching holonomy is identity iff the W33 triad is acentric; it is a transposition iff the triad has two centers'},
-      'theorem':'The S3 matching connection detects the intrinsic triad geometry of W33. Among the 3240 triples of pairwise noncollinear W33 points, exactly 1080 have no common neighbor and carry flat identity holonomy; exactly 2160 have two common neighbors and carry reflection holonomy. No complement triangle has order-three curvature. Hence the connection curvature is an exact finite detector of the acentric/centric triad dichotomy.',
-      'boundary':'Finite holonomy/triad theorem. The numerical 1080 also occurs elsewhere in the repo (for example the even double-six triangle checks), but no identification with those 1080 objects is claimed here without an explicit equivariant map.'}
+      'geometric_classification':{'zero_common_neighbors':1080,'two_common_neighbors':2160,
+        'equivalence':'matching holonomy is identity iff the Q(4,3) triad has zero common neighbors; it is a transposition iff it has two'},
+      'standard_W33_point_graph_baseline':{'independent_triads':3240,
+        'one_common_neighbor':2880,'four_common_neighbors':360,
+        'source':'rebuilt from the forty K4 pencils in this producer'},
+      'theorem':'The S3 matching connection detects the intrinsic triad geometry of the Steiner quotient Q(4,3). Among its 3240 triples of pairwise noncollinear points, exactly 1080 have no common neighbor and carry flat identity holonomy; exactly 2160 have two common neighbors and carry reflection holonomy. No complement triangle has order-three curvature. The separately rebuilt W33 point carrier instead has 2880 one-center and 360 four-center independent triads.',
+      'boundary':'Finite Q(4,3) holonomy/triad theorem corrected by Pass4949. The numerical 1080 also occurs elsewhere in the repo, but no identification with those objects is claimed without an explicit equivariant map.'}
     OUT47.write_text(json.dumps(out47,indent=2,sort_keys=True)+'\n')
     print(json.dumps({'4945':out45['fundamental_cycle_holonomy'],'4946':out46['quotient'],'4947':out47['curvature']},indent=2,sort_keys=True));return 0
 if __name__=='__main__':raise SystemExit(main())

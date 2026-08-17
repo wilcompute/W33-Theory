@@ -1,0 +1,178 @@
+{
+  "boundary": "Pass 5668 kills a pattern match, it does not test any physics. Pass 5670's Griesmer optimality is a statement about the CODE, not about the tomotope. Pass 5671 records a FAILED hypothesis; the rook's graph in Pass 5644 remains unexplained. Pass 5672 retracts a connection this pass nearly claimed. Pass 5673 compares three incidence matrices and does not survey the corpus. Pass 5674 ran no synthesis",
+  "pass_5667_5668": {
+    "coincidence_number": 11,
+    "patterns_on_12": 15,
+    "patterns_on_16": 19,
+    "sm_pattern": [
+      1,
+      3,
+      8
+    ],
+    "subgroups_giving_it": [
+      {
+        "orbits_on_16": [
+          4,
+          12
+        ],
+        "order": 24,
+        "structure": "S4"
+      },
+      {
+        "orbits_on_16": [
+          4,
+          12
+        ],
+        "order": 24,
+        "structure": "C2 x A4"
+      },
+      {
+        "orbits_on_16": [
+          4,
+          12
+        ],
+        "order": 48,
+        "structure": "C2 x S4"
+      }
+    ],
+    "verdict": "1 of 15 patterns, and none of the subgroups relates to SU(3)xSU(2)xU(1); enumeration was run before the question was asked"
+  },
+  "pass_5669": {
+    "finding": "the Reye incidence collapses at p=2 only; W(3,3)'s point-line incidence collapses nowhere",
+    "ranks": {
+      "Q4 face-edge": {
+        "2": 17,
+        "3": 22,
+        "5": 22,
+        "7": 22,
+        "Q": 22,
+        "shape": [
+          24,
+          32
+        ]
+      },
+      "Reye 12_4 16_3": {
+        "2": 8,
+        "3": 10,
+        "5": 10,
+        "7": 10,
+        "Q": 10,
+        "shape": [
+          16,
+          12
+        ]
+      },
+      "W(3,3) point-line": {
+        "2": 25,
+        "3": 25,
+        "5": 25,
+        "7": 25,
+        "Q": 25,
+        "shape": [
+          40,
+          40
+        ]
+      }
+    }
+  },
+  "pass_5670": {
+    "code": [
+      12,
+      4,
+      6
+    ],
+    "griesmer_bound": 12,
+    "kernel_dim": 4,
+    "meets_griesmer": true,
+    "reading": "the Reye's characteristic-2 kernel is a length-optimal code",
+    "two_weight": [
+      6,
+      8
+    ],
+    "weight_enumerator": {
+      "0": 1,
+      "6": 12,
+      "8": 3
+    }
+  },
+  "pass_5671": {
+    "distance_6_graph": {
+      "is": "K_{4,4,4,4}",
+      "srg": [
+        16,
+        12,
+        8,
+        12
+      ]
+    },
+    "distance_8_graph": {
+      "is": "4 disjoint K4",
+      "srg": [
+        16,
+        3,
+        2,
+        0
+      ]
+    },
+    "hypothesis": "two-weight code -> strongly regular graph (Delsarte)",
+    "leaves_open": "why S4 wr S2 appears in this object (Pass 5644)",
+    "result": "FAILED -- imprimitive code, degenerate coset graph"
+  },
+  "pass_5672": {
+    "retraction": "Csaszar's p=3 drop is NOT a 7-side/3-side meeting; vertex degree 6 is divisible by 3 so the all-ones vector is in the kernel for free",
+    "table": [
+      {
+        "col_weight": 3,
+        "drop": 5,
+        "excess": 4,
+        "forced": 1,
+        "object": "Q4 face-edge",
+        "p": 2,
+        "row_weight": 4
+      },
+      {
+        "col_weight": 4,
+        "drop": 2,
+        "excess": 1,
+        "forced": 1,
+        "object": "Reye 12_4 16_3",
+        "p": 2,
+        "row_weight": 3
+      },
+      {
+        "col_weight": 2,
+        "drop": 1,
+        "excess": 0,
+        "forced": 1,
+        "object": "Csaszar vertex-edge",
+        "p": 2,
+        "row_weight": 6
+      },
+      {
+        "col_weight": 3,
+        "drop": 1,
+        "excess": 0,
+        "forced": 1,
+        "object": "Csaszar vertex-face",
+        "p": 3,
+        "row_weight": 6
+      }
+    ]
+  },
+  "pass_5673": {
+    "char2_excess": {
+      "q4_face_edge": 4,
+      "reye": 1
+    },
+    "char3": "W(3,3) point-line has no drop in any characteristic tested",
+    "reading": "the char-2 layer is degenerate and the char-3 layer is rigid, which is the opposite of where the corpus looks"
+  },
+  "pass_5674": {
+    "prior_track": [
+      "rtl/tb_w33_pass2757_qutrit_cx.sv",
+      "analysis/w33_pass4339_synthesise_all_four_machines.py"
+    ],
+    "status": "no synthesis performed",
+    "yosys_present": false
+  }
+}

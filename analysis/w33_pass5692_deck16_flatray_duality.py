@@ -73,7 +73,15 @@ def main():
     target=-D@S1@D
     if np.linalg.norm(S2-target)>np.linalg.norm(-S2-target):S2=-S2
     assert np.max(abs(S2-target))<1e-7
-    H1=1j*S1;H2=1j*S2
+
+    # The SVD locates the two rays numerically, but flatness puts every retained
+    # entry at 0 or +/-1 after normalization. Quantize that discrete sign data
+    # and certify the carrier identity over the integers.
+    Q1=np.rint(S1).astype(int);Q2=np.rint(S2).astype(int)
+    assert np.max(abs(S1-Q1))<1e-7 and np.max(abs(S2-Q2))<1e-7
+    assert set(Q1.ravel())<=set((-1,0,1)) and set(Q2.ravel())<=set((-1,0,1))
+    assert np.array_equal(Q2,-D@Q1@D)
+    H1=1j*Q1;H2=1j*Q2
     # Antiunitary A=D K acts by A H A^-1 = D conj(H) D.
     assert np.max(abs(H2-D@H1.conj()@D))<1e-7
     ev1=np.linalg.eigvalsh(H1);ev2=np.linalg.eigvalsh(H2)
@@ -98,6 +106,8 @@ def main():
         'P1_row_signs':row_sign
       },
       'ray_identity':'after unit flat-bond normalization, H2 = - D H1 D',
+      'ray_sign_matrices':{'Q1':Q1.tolist(),'Q2':Q2.tolist()},
+      'ray_reconstruction_boundary':'The two candidate rays are located by floating SVD/tolerance, then uniquely quantized to 0,+/-1 flat-bond sign matrices. The displayed Q2=-D Q1 D identity is checked exactly over the integers.',
       'antiunitary_identity':'with K=ordinary conjugation, (D K) H1 (D K)^-1 = H2',
       'bond_sign_disagreements_up_to_global_sign':dis,
       'shared_spectrum':[float(x) for x in ev1],

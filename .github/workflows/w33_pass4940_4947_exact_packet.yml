@@ -46,9 +46,8 @@ jobs:
           python analysis/w33_pass4942_transverse_char3_degeneration.py
           python analysis/w33_pass4943_common_s6_carrier_crosswalk.py
           python analysis/w33_pass4945_4947_steiner_connection_maxcut_duality.py
-          # The legacy producer computes the correct incidence/holonomy counts but
-          # serializes the superseded degree-40 labels.  Re-apply the authoritative
-          # Pass4954/4955 W33-point/Q43-line correction before any regression or commit.
+          # Compatibility entry point is read-only: the owner producer must emit
+          # the corrected W33-point/Q43-line carriers before regression or commit.
           python tools/apply_pass4954_duality_corrections_to_4946_4947.py
           python analysis/w33_pass4941_quartic_ambiguity_cancellation.py
       - name: Exhaust the hard covering-distance branch-and-bound

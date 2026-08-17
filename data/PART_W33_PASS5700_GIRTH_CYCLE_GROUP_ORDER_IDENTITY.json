@@ -1,18 +1,43 @@
 {
-  "pass": 5700,
-  "status": "TR_A8_EXCESS_EQUALS_PSP43_ORDER_AND_CYCLE_SPACE_IS_A_DOUBLE_ORBIT",
-  "master_identity": "Tr(A_levi^8) = 193280 = 80*2092 + 25920 = n*M8_tree + |PSp(4,3)|",
-  "tower_excess": [25920, 25600, 25216, 24928],
-  "tower_cycles8": [1620, 1600, 1576, 1558],
-  "tower_girth": [8, 8, 8, 8],
-  "excess_shrinks_under_lift": true,
   "cycle_space": {
-    "rooted_oriented_8cycles": 25920,
-    "orbits": [12960, 12960],
-    "stabilizer": "Z/2",
-    "chirality_invariant": "diagonal common-neighbour count 4 (orbit A) vs 0 (orbit B)",
-    "stabilizer_involution": {"fixed_points": 8, "transpositions": 16, "cycle_structure": "1^8 2^16"},
-    "open_merger": "the two orbits are exchanged only by the duality in full Aut = W(E6) of order 51840; regularity of the merged action on the 1620 unrooted cycles is open"
+    "duality_firewall": "W(3,3) is not self-dual. No W(E6) point-line merger, grading-reversing Levi automorphism, or regular action on the 1620 cycles is claimed.",
+    "ordered_cycle_encodings": 25920,
+    "point_orbit_stabilizer_involution": {
+      "cycle_structure_on_W33_points": "1^8 2^16",
+      "fixed_points_on_W33_points": 8,
+      "transpositions_on_W33_points": 16
+    },
+    "prior_corpus_owners": "BT545 and Pass75 already own the 1620 unrooted Levi 8-cycles",
+    "root_grade_orbits": {
+      "line_rooted": 12960,
+      "point_rooted": 12960,
+      "stabilizer_order_each": 2
+    },
+    "separator": "initial vertex belongs to the point grade or the line grade; this is not chirality",
+    "unrooted_8cycles": 1620
   },
-  "physics_boundary": "Exact finite combinatorics and group action; the chirality bit is a Z/2 invariant of the symplectic geometry, not yet tied to a physical parity."
+  "master_identity": "Tr(A_levi^8) = 193280 = 80*2092 + 25920 = n*M8_tree + |PSp(4,3)|",
+  "observed_excess_strictly_decreases_in_four_levels": true,
+  "pass": 5700,
+  "physics_boundary": "Exact finite trace and group-action statements plus a four-level observed excess trend. No chirality, physical parity, all-level convergence, or continuum claim.",
+  "status": "TRACE_EXCESS_IDENTITY_AND_POINT_ROOTED_VERSUS_LINE_ROOTED_CYCLE_ORBITS",
+  "tower_cycles8": [
+    1620,
+    1600,
+    1576,
+    1558
+  ],
+  "tower_excess": [
+    25920,
+    25600,
+    25216,
+    24928
+  ],
+  "tower_girth": [
+    8,
+    8,
+    8,
+    8
+  ],
+  "tower_provenance": "Separate deterministic factor-pair tower, not the frozen Pass5683/5693 tower; no isomorphism comparison has been computed."
 }

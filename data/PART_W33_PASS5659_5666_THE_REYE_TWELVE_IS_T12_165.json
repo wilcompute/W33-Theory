@@ -1,5 +1,5 @@
 {
-  "boundary": "Pass 5659-5661 are GAP computations on constructed objects. Pass 5662 rules out a common home below order 4032 and does NOT prove no such object exists in this corpus -- none is exhibited. Pass 5663 does NOT type the q=5 design; it specifies the computation. Pass 5666 reports zero findings as INAPPLICABILITY of the guard, not as verification of the other lane's work. Pass 5667 reports a NEGATIVE for symmetry seeding: it reached 51 sooner but never past it",
+  "boundary": "Pass 5659-5661 are GAP computations on constructed objects. Pass 5662 rules out a common home below order 4032 and does NOT prove no such object exists in this corpus -- none is exhibited. Pass 5663 does NOT type the q=5 design; it specifies the computation. Pass 5666 reports zero findings as INAPPLICABILITY of the guard, not as verification of the other lane's work",
   "pass_5659": {
     "action_on_16_faithful": true,
     "faithful": true,
@@ -193,20 +193,5 @@
     "outstanding_cross_lane": "w33_pass5623 line 5, an order-based identification; Pass 5663 gives the test",
     "reading": "INAPPLICABLE, not verified -- their packet is spectral and algebraic and mostly does not assert group actions on partitioned sets",
     "their_block": "PASS5603 through PASS5658"
-  },
-  "pass_5667_q9": {
-    "bounds": [
-      51,
-      80
-    ],
-    "dual_bound": 80.83841179,
-    "finding": "symmetry seeding did NOT beat uniform restarts -- both plateau at 51, the seeded run reaching it faster (28s vs 67s) but no higher. 51 is a barrier for this local-search class, not an artefact of a bad start",
-    "hoffman": 82,
-    "perp_seeded_best": 51,
-    "proved": false,
-    "seeded_time_to_51_s": 28,
-    "status": "OPEN",
-    "uniform_restarts_best": 51,
-    "uniform_time_to_51_s": 67
   }
 }

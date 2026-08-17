@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""Pass5702: the new spectra of the W33 Ramanujan tower equidistribute to the
-Kesten--McKay law with an empirical 2^{-level} convergence rate.
+"""Pass5702: sampled Kesten--McKay CDF discrepancies for three finite signings.
 
-At each 2-lift the child spectrum is spec(parent) u spec(signed parent); the
-signed part is the NEW spectrum, i.e. the Artin L-function zeros of that level
-(Pass5699).  We measure convergence to the Kesten--McKay spectral measure of the
+This uses the separate deterministic factor-pair tower of Pass5699, not the
+frozen Pass5683/5693 tower.  At each 2-lift the signed adjacency eigenvalues are
+the new spectral parameters in the exact child block decomposition; they are not
+themselves Artin L-function zeros.
+
+We compare the three finite signed spectra with the Kesten--McKay measure of the
 4-regular tree,
 
     rho_KM(lambda) = (4 sqrt(12 - lambda^2)) / (2 pi (16 - lambda^2)),
@@ -12,22 +14,19 @@ signed part is the NEW spectrum, i.e. the Artin L-function zeros of that level
 
 two ways:
 
-(1) Moment matching.  Tree moments by exact DP (M2=4, M4=28, M6=232, M8=2092,
-    M10=19864, M12=195352).  Tower girth is exactly 8 at every level, so signed
-    moments match the tree EXACTLY through M6; first deviation at M8 is -4 at
-    level 1 and shrinks toward 0 (-2.4, -0.9 per-vertex).
+(1) Moment matching.  Tree moments and signed matrix traces are computed with
+    exact integer arithmetic.  The moments match exactly through M6; the finite
+    per-vertex M8 discrepancies are -4, -12/5, and -9/10.
 
-(2) Kolmogorov--Smirnov distance of the empirical CDF to the KM CDF:
-        level 1 (n=80) : KS = 0.02102
-        level 2 (n=160): KS = 0.01079
-        level 3 (n=320): KS = 0.00540
-    i.e. KS halves at each level -- an empirical 2^{-level} law.
-
-Eigenphase spacings (lambda = 2 sqrt(3) cos theta) have normalized std
-0.635, 0.630, 0.775 at levels 1,2,3 -- near GOE (0.52), far from Poisson (1.0).
+(2) A sampled CDF discrepancy on a fixed 241-point grid.  The Kesten--McKay CDF
+    is evaluated by double-precision trapezoidal quadrature with 4000 panels per
+    grid point.  The observed values 0.02102, 0.01079, and 0.00540 decrease across
+    these three levels.  This is not the exact Kolmogorov--Smirnov statistic, no
+    quadrature error bound is supplied, and no convergence-rate theorem follows.
 """
 from __future__ import annotations
 import itertools, collections, json, math
+from fractions import Fraction
 from pathlib import Path
 import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
@@ -116,7 +115,7 @@ def km_cdf(x):
     if x >= RAM: return 1.0
     xs = np.linspace(-RAM, x, 4001)
     fv = 4*np.sqrt(np.clip(12-xs*xs, 0, None))/(2*np.pi*(16-xs*xs))
-    return float(np.trapz(fv, xs))
+    return float(np.trapezoid(fv, xs))
 
 def main():
     tower = [(E0, 80, None)]
@@ -135,39 +134,45 @@ def main():
     grid = np.linspace(-RAM, RAM, 241)
     km_vals = np.array([km_cdf(x) for x in grid]); km_vals /= km_vals[-1]
 
-    moment_rows = []; ks_rows = []; spacing_rows = []
+    moment_rows = []; discrepancy_rows = []
     for li in (1, 2, 3):
         neg = tower[li][2]; Ep, np_ = tower[li-1][0], tower[li-1][1]
-        As = signed_adj(Ep, np_, neg)
-        evs = np.linalg.eigvalsh(As)
-        Ap2 = np.eye(np_); mrow = {'level': li, 'parent_n': np_}
+        As = signed_adj(Ep, np_, neg).astype(np.int64)
+        evs = np.linalg.eigvalsh(As.astype(float))
+        Ap2 = np.eye(np_, dtype=np.int64); mrow = {'level': li, 'parent_n': np_}
         for m in range(1, 7):
             Ap2 = Ap2@As@As
-            tr = float(np.trace(Ap2))/np_
-            mrow[f'M{2*m}'] = round(tr, 4)
+            numerator = int(np.trace(Ap2))
+            moment = Fraction(numerator, np_)
+            diff = moment - KM[2*m]
+            if m <= 3:
+                assert diff == 0
+            mrow[f'M{2*m}_trace_exact'] = numerator
+            mrow[f'M{2*m}_per_vertex_exact'] = str(moment)
             mrow[f'KM{2*m}'] = KM[2*m]
-            mrow[f'diff{2*m}'] = round(tr-KM[2*m], 4)
+            mrow[f'diff{2*m}_exact'] = str(diff)
+            mrow[f'diff{2*m}_float'] = round(float(diff), 6)
         moment_rows.append(mrow)
         emp = np.array([np.mean(evs <= x) for x in grid])
-        ks_rows.append({'level': li, 'n': np_, 'KS': round(float(np.max(np.abs(emp-km_vals))), 5)})
-        nz = sorted(float(x) for x in evs if abs(x) > 1e-9)
-        th = sorted(float(t) for t in np.arccos(np.clip(np.array(nz)/(2*math.sqrt(3)), -1, 1))
-                    if 1e-9 < t < math.pi-1e-9)
-        sp = np.diff(th); spn = sp/np.mean(sp)
-        spacing_rows.append({'level': li, 'n_angles': len(th),
-                             'spacing_std_norm': round(float(np.std(spn)), 4)})
+        discrepancy_rows.append({'level': li, 'n': np_,
+                                 'sampled_cdf_discrepancy': round(float(np.max(np.abs(emp-km_vals))), 5)})
 
     out = {
       'pass': 5702,
-      'status': 'NEW_SPECTRA_EQUIDISTRIBUTE_TO_KESTEN_MCKAY_WITH_2_TO_MINUS_LEVEL_KS_LAW',
+      'status': 'THREE_LEVEL_SAMPLED_KM_CDF_DISCREPANCY_WITH_EXACT_LOW_MOMENTS',
+      'tower_provenance': ('Separate deterministic factor-pair tower, not the frozen Pass5683/5693 tower; '
+                           'no isomorphism comparison has been computed.'),
       'km_density': 'rho(lambda) = 4 sqrt(12-lambda^2) / (2 pi (16-lambda^2)) on [-2 sqrt(3), 2 sqrt(3)]',
-      'tree_moments_exact': {str(2*m): KM[2*m] for m in range(7)},
+      'tree_moments_exact': {str(2*m): KM[2*m] for m in range(1, 7)},
       'moment_matching': moment_rows,
-      'ks_distances': ks_rows,
-      'ks_halving_law': 'KS ~ 0.0210 -> 0.0108 -> 0.0054, halves each level',
-      'eigenphase_spacings': spacing_rows,
-      'spacing_reference': {'GOE': 0.52, 'Poisson': 1.0},
-      'physics_boundary': 'Empirical convergence on 3 levels; no all-level theorem claimed. Spacing statistics suggest but do not prove quantum-chaotic behaviour of the internal expander.'
+      'sampled_cdf_discrepancies': discrepancy_rows,
+      'sampling_contract': {'lambda_grid_points': 241,
+                            'quadrature_panels_per_cdf_value': 4000,
+                            'quadrature': 'double-precision trapezoidal',
+                            'rigorous_quadrature_error_bound': None,
+                            'is_exact_KS_statistic': False},
+      'finite_observation': 'The sampled discrepancies decrease across these three levels; no rate or all-level limit is proved.',
+      'physics_boundary': 'Finite spectral diagnostics only; no GOE, chaos, continuum, or physical-spectrum interpretation is claimed.'
     }
     OUT.write_text(json.dumps(out, indent=2, sort_keys=True) + '\n')
     print(json.dumps(out, indent=2, sort_keys=True))

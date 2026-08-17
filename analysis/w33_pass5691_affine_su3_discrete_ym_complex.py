@@ -131,7 +131,7 @@ def main():
       'finite_YM_candidate':'F_f=(d a)_f + 1/2 [a,a]_f; S_YM=(1/(2 g^2)) sum_f <F_f,F_f>',
       'normalization_boundary':'The Lie bracket/Killing form fixes relative algebraic normalization but does not determine the dimensionless physical gauge coupling g or which admissible face set is dynamical.',
       'vertical_Z3_weld':'The old fiber translation is I_9 tensor C3 and acts trivially on V8 tensor span(1,1,1); its Z3 holonomy is therefore invisible in the adjoint base-su3 sector and is not the new nonabelian connection.',
-      'cohomology_boundary':'The real four-dimensional H1 here belongs to this explicit nine-site plaquette complex. No chain map to any other repo four-logical/cohomology sector is asserted.',
+      'homology_boundary':'The real four-dimensional H1 here is the cycle-space quotient by the computed face-boundary span on this explicit nine-site plaquette complex. Over a field its dual cohomology has the same dimension, but no chain map to any other repo four-logical/cohomology sector is asserted.',
       'physics_boundary':'This is a finite lattice-gauge candidate and cochain census, not a QCD derivation. The action face set, physical coupling, continuum limit, matter representation and confinement mechanism remain open.'
     }
     OUT.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n');print(json.dumps(out,indent=2,sort_keys=True))

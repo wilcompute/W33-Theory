@@ -1,18 +1,21 @@
 {
-  "pass": "4881",
-  "theorem": "compiler_wreath_selects_split_order1440",
-  "AGL13_order": 6,
-  "AGL13_structure": "S3 = Z3 : Z2 (split extension)",
-  "PGSp43_order": 51840,
-  "num_selectors": 45,
-  "stab_pgsp_one_port": 1152,
-  "local_compiler_order": 6912,
-  "K6_chart_compiler_order": 2985984,
-  "order1440_extensions": {
-    "A_split": "S6 x C2, order 1440",
-    "B_nonsplit": "2.S6, Schur cover, order 1440"
+  "authoritative_certificate": "PART_W33_PASS4948_MODULAR_BOSE_MESNER_CORRECTION.json",
+  "boundary": "The two exact compiler orders survive; no order-1440 quotient selection theorem does.",
+  "pass": 4881,
+  "reason": "Pass4873's second group is Aut(S6), and no quotient homomorphism from the compiler was constructed. Group orders alone do not build one.",
+  "schema": "w33.pass4881.withdrawal_tombstone.v1",
+  "status": "WITHDRAWN_BY_PASS4948",
+  "surviving_values": {
+    "S3_wreath_S6_order": 33592320,
+    "local_port_compiler_order": 6912,
+    "order_1440_groups_in_Pass4873": [
+      "S6xC2",
+      "Aut(S6)"
+    ]
   },
-  "compiler_selects": "split_S6_x_C2_only",
-  "reason": "AGL(1,3) = S3 is itself a split extension Z3:Z2. The wreath product AGL(1,3)^45 : PGSp(4,3) cannot produce the nontrivial class in H2(S6,Z)=Z2 required for the non-split 2.S6. The global chirality bit (Pass4861) provides the C2 factor of the split extension.",
-  "cross_references": ["Pass4861_chirality", "Pass4872_AGL13_compiler", "Pass4873_two_order1440"]
+  "withdrawn_statements": [
+    "Pass4873 compares S6xC2 with the Schur cover 2.S6.",
+    "The AGL(1,3) wreath compiler selects or surjects onto S6xC2.",
+    "Split local factors alone exclude a non-split central quotient."
+  ]
 }

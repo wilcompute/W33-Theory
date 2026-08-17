@@ -1,23 +1,22 @@
 #!/usr/bin/env python3
-"""Pass5703: independent alpha(W(3,9)) replication -- the barrier is real.
+"""Pass5703: W(3,9) reconstruction with explicit rediscovery correction.
 
-Track A reports 51 <= alpha(W(3,9)) <= 80 with local search plateaued at 51.
-We rebuild W(3,9) independently over F_9 = F_3[a]/(a^2+1) (820 points of
-PG(3,9), symplectic collinearity, 90-regular) and attack the independence
-number with a different optimizer class than either lane: randomized greedy
-(55177 restarts in 20s) + 1-for-2 swap improvement.
+Pass5226--5227 already owns the W(3,9) construction, a randomized-greedy
+baseline of 46, a stronger independent-set witness of size 50, and the Hoffman
+upper bound 82.  The former Pass5703 prose incorrectly advertised unsupported
+bounds 51 <= alpha <= 80 and reclaimed the baseline 46.
 
-Result: plateau at 46, below the repo's 51.  Honest replication of the barrier,
-not an improvement: the greedy+swap class saturates below the MILP/local-search
-frontier.  Recorded so the corpus has an independent W(3,9) construction and a
-calibrated baseline for any future matching-signed/weighted optimizer.
+This corrected producer only rebuilds the graph independently over
+F_9 = F_3[a]/(a^2+1), verifies SRG(820,90,8,10), and checks the prior owner's
+frozen 50 <= alpha(W(3,9)) <= 82 boundary.  It performs no time-dependent search
+and claims no new independence result.
 """
 from __future__ import annotations
-import itertools, collections, json, math, random, time, sys
+import itertools, json
 from pathlib import Path
-import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT/'data/PART_W33_PASS5703_W39_INDEPENDENCE_REPLICATION.json'
+OWNER = ROOT/'data/PART_W33_PASS5226_5227_ODD_Q_OVOID_DEFICIENCY.json'
 
 def f9mul(x, y): return ((x[0]*y[0]-x[1]*y[1]) % 3, (x[0]*y[1]+x[1]*y[0]) % 3)
 def f9add(x, y): return ((x[0]+y[0]) % 3, (x[1]+y[1]) % 3)
@@ -49,50 +48,32 @@ def main():
             if omega9(ui, pts9[j]) == (0, 0):
                 adj[i].add(j); adj[j].add(i)
     assert set(len(a) for a in adj) == {90}
-    adjl = [sorted(a) for a in adj]
-    random.seed(42)
-    def greedy(order):
-        S = []; blocked = bytearray(N)
-        for v in order:
-            if not blocked[v]:
-                S.append(v)
-                for w in adjl[v]: blocked[w] = 1
-        return S
-    best = []; t0 = time.time(); trials = 0
-    while time.time()-t0 < 20:
-        order = list(range(N)); random.shuffle(order)
-        S = greedy(order); trials += 1
-        if len(S) > len(best): best = S
-    S = list(best); inS = bytearray(N)
-    for v in S: inS[v] = 1
-    cnt = [0]*N
-    for v in S:
-        for w in adjl[v]: cnt[w] += 1
-    improved = True; t1 = time.time()
-    while improved and time.time()-t1 < 8:
-        improved = False
-        for v in list(S):
-            cand = [w for w in range(N) if not inS[w] and cnt[w] == 1 and v in adjl[w]]
-            if len(cand) >= 2:
-                a, b = cand[0], cand[1]
-                if b not in adj[a]:
-                    inS[v] = 0
-                    for w in adjl[v]: cnt[w] -= 1
-                    for x in (a, b):
-                        inS[x] = 1
-                        for w in adjl[x]: cnt[w] += 1
-                    S.remove(v); S += [a, b]; improved = True
-                    break
+    adjacent_common = {len(adj[i] & adj[j])
+                       for i in range(N) for j in range(i+1, N) if j in adj[i]}
+    nonadjacent_common = {len(adj[i] & adj[j])
+                          for i in range(N) for j in range(i+1, N) if j not in adj[i]}
+    assert adjacent_common == {8}
+    assert nonadjacent_common == {10}
+    owner = json.loads(OWNER.read_text(encoding='utf-8'))
+    q9 = next(row for row in owner['pass_5226']['rows'] if row['q'] == 9)
+    assert q9['alpha_established'] == 50
+    assert q9['hoffman'] == 82
+    assert q9['bound_settled'] == 'lower only'
     out = {
       'pass': 5703,
-      'status': 'INDEPENDENT_W39_CONSTRUCTION_REPLICATES_ALPHA_BARRIER_BELOW_REPO_FRONTIER',
-      'graph': {'field': 'F_9 = F_3[a]/(a^2+1)', 'points_PG39': 820, 'degree': 90},
-      'optimizer': 'randomized greedy + 1-for-2 swaps',
-      'greedy_trials': trials,
-      'best_independent_set': len(S),
-      'repo_bounds': {'lower': 51, 'upper': 80},
-      'verdict': 'greedy+swap class plateaus at 46 < 51; barrier replicated, not broken',
-      'physics_boundary': 'Pure combinatorial optimization; no physics claim.'
+      'status': 'REDISCOVERY_CORRECTED_TO_PASS5226_5227_PRIOR_OWNERSHIP',
+      'graph': {'field': 'F_9 = F_3[a]/(a^2+1)', 'points_PG39': 820,
+                'srg': [820, 90, 8, 10]},
+      'prior_owner': {'file': 'data/PART_W33_PASS5226_5227_ODD_Q_OVOID_DEFICIENCY.json',
+                      'randomized_greedy_baseline': q9['restart_greedy'],
+                      'certified_lower_witness': q9['alpha_established'],
+                      'hoffman_upper_bound': q9['hoffman']},
+      'repo_bounds': {'lower_witness': 50, 'upper_hoffman': 82,
+                      'exact_alpha_settled': False},
+      'legacy_claim_withdrawn': ('The former 51 <= alpha <= 80 claim had no cited certificate, and the '
+                                 'reported baseline 46 was already present in Pass5226--5227.'),
+      'verdict': 'Independent graph reconstruction only; no new independence-number result.',
+      'physics_boundary': 'Pure finite combinatorial reconstruction; no optimization or physics claim.'
     }
     OUT.write_text(json.dumps(out, indent=2, sort_keys=True) + '\n')
     print(json.dumps(out, indent=2, sort_keys=True))

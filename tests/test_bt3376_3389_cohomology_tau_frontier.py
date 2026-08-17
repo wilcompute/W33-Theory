@@ -90,6 +90,33 @@ def test_integrator_helpers_are_idempotent():
     assert second_html_mode == "already_materialized"
     assert once_html == twice_html
 
+    stale = '<main><section id="bt3376-3389-cohomology-tau-frontier">old</section></main>'
+    updated, update_mode = module.integrate_index(stale, insert)
+    stable, stable_mode = module.integrate_index(updated, insert)
+    assert update_mode == "updated"
+    assert stable_mode == "already_materialized"
+    assert updated == stable
+    assert ">old<" not in updated
+
+    nested_old = (
+        '<main><section id="bt3376-3389-cohomology-tau-frontier">'
+        '<section>old nested</section></section><p>tail</p></main>'
+    )
+    nested_updated, nested_mode = module.integrate_index(nested_old, insert)
+    assert nested_mode == "updated"
+    assert "old nested" not in nested_updated
+    assert "<p>tail</p>" in nested_updated
+
+    config = json.loads((ROOT / "data/w33_current_frontier_manifest_v1.json").read_text())
+    sections = module.configured_public_sections(config, ROOT)
+    sources = {section["source"] for section in sections}
+    keys = {(section["kind"], section["token"]) for section in sections}
+    assert "analysis/BT3528_BT3534_borel_star_moore_functor_transplant_index_insert.html" in sources
+    assert "analysis/PASS4544_4551_module_cubic_enumerator_zeta_index_insert.html" in sources
+    assert ("marker", "<!-- BT3418-BT3429-CLEBSCH-D5-SUPPLEMENT -->") in keys
+    assert ("id", "pass4579-4586-o8plus-exceptional") in keys
+    assert ("id", "pass4624-4631-packet-incidence-f4") in keys
+
 
 def test_source_insert_and_auditor_exist():
     assert (ROOT / "analysis/BT3387_cohomology_tau_frontier_insert.tex").is_file()

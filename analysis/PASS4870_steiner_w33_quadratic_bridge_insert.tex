@@ -99,10 +99,16 @@ taking the intrinsic Lie bracket of the two quadratic channels, producing an
 outer-even quartic with full $Q_{10}$ image.
 
 \paragraph{Evidence firewall.}
-The legacy producer is
-\texttt{analysis/w33\_pass4870\_steiner\_w33\_quadratic\_bridge.py}; its old
-``explicit isomorphism to standard W33'' field is superseded by the correction
-producers
+The owner producer
+\texttt{analysis/w33\_pass4870\_steiner\_w33\_quadratic\_bridge.py}
+now emits the corrected carrier directly.  It recovers the forty W33 points as
+the maximal $K_4$ pencils of the line graph and verifies the Pass~4949
+separator
+\[
+  \operatorname{rank}_{\mathbb F_3}(A_Q+I)=15\ne11
+  =\operatorname{rank}_{\mathbb F_3}(A_W+I).
+\]
+Independent correction producers are
 \texttt{analysis/w33\_pass4954\_steiner\_quotient\_is\_q43\_dual.py} and
 \texttt{analysis/w33\_pass4955\_maxcut\_points\_steiner\_lines\_incidence.py}.
 The classical forty-triad partition is prior art; the exact pair-orbit and

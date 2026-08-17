@@ -75,7 +75,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add \
+          git add -f \
             data/PART_W33_PASS5685_DECK16_LOCAL_FLATBOND_RATIO2.json \
             data/PART_W33_PASS5691_AFFINE_SU3_DISCRETE_YM_COMPLEX.json \
             data/PART_W33_PASS5692_DECK16_FLATRAY_DUALITY.json \

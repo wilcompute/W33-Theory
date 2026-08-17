@@ -61,8 +61,11 @@ def test_pass4870_steiner_three_cover_and_quadratic_bridge():
     assert c["Steiner_triangles"]==120
     assert c["fibers"]==40 and c["fiber_size"]==3
     assert c["adjacency_lift_pairs"]==2160
-    assert c["quotient"]=="SRG(40,12,2,4)"
-    assert c["explicit_isomorphism_to_standard_W33"]
+    assert c["quotient"]=="Q(4,3) point graph, SRG(40,12,2,4)"
+    assert not c["explicit_isomorphism_to_standard_W33"]
+    assert c["explicit_isomorphism_to_W33_line_intersection_Q43"]
+    assert c["maximal_K4_pencils_recover_W33_points"]
+    assert c["F3_rank_A_plus_I"]=={"Q43_lines":15,"W33_points":11}
     assert c["PSp_action_on_quotient_order"]==25920
     q=d["quadratic_bridge"]
     assert q["Hom_PSp_Sym2H2_to_Q10_dimension"]==2

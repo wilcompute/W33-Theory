@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -11,6 +12,21 @@ CONFIG_PATH = ROOT / "data/w33_current_frontier_manifest_v1.json"
 PUBLIC_EXTENSION_PATH = ROOT / "data/w33_public_frontier_extension_pass4461_4464.json"
 PUBLICATION_V2_PATH = ROOT / "data/w33_publication_frontier_contract_v2.json"
 MANIFEST_INPUT = r"\input{analysis/W33_CURRENT_FRONTIER_MANIFEST}%"
+PUBLIC_SOURCE_ALIASES = {
+    "analysis/BT3528_BT3534_borel_star_moore_transplant_index_insert.html":
+        "analysis/BT3528_BT3534_borel_star_moore_functor_transplant_index_insert.html",
+    "analysis/PASS4544_4551_module_cubic_zeta_index_insert.html":
+        "analysis/PASS4544_4551_module_cubic_enumerator_zeta_index_insert.html",
+}
+PUBLIC_SECTION_ALIASES = {
+    ("id", "bt3418-3429-clebsch-d5-supplement"):
+        ("marker", "<!-- BT3418-BT3429-CLEBSCH-D5-SUPPLEMENT -->"),
+    ("id", "pass4579-4586-o8plus-exceptional-bridge"):
+        ("id", "pass4579-4586-o8plus-exceptional"),
+    ("id", "pass4624-4631-packet-incidence-f4-h10"):
+        ("id", "pass4624-4631-packet-incidence-f4"),
+}
+SECTION_TAG_RE = re.compile(r"<(/?)section\b[^>]*>", re.IGNORECASE)
 
 
 def consolidate_wrapper(text: str, required_inputs: list[str]) -> tuple[str, str]:
@@ -60,6 +76,30 @@ def public_count(text: str, kind: str, token: str) -> int:
 def integrate_public_section(text: str, html: str, kind: str, token: str) -> tuple[str, str]:
     count = public_count(text, kind, token)
     if count == 1:
+        # A canonical card source is a single outer <section id="token">.  Keep
+        # that card byte-current instead of mistaking mere presence for currency.
+        # Full standalone pages and marker fragments intentionally stay on the
+        # legacy presence-only path.
+        source = html.strip()
+        first = SECTION_TAG_RE.match(source)
+        if kind == "id" and first and not first.group(1) and f'id="{token}"' in first.group(0):
+            start = next(
+                match.start()
+                for match in SECTION_TAG_RE.finditer(text)
+                if not match.group(1) and f'id="{token}"' in match.group(0)
+            )
+            depth = 0
+            end = None
+            for match in SECTION_TAG_RE.finditer(text, start):
+                depth += -1 if match.group(1) else 1
+                if depth == 0:
+                    end = match.end()
+                    break
+            if end is None:
+                raise ValueError(f"unterminated public section: {token}")
+            if text[start:end] == source:
+                return text, "already_materialized"
+            return text[:start] + source + text[end:], "updated"
         return text, "already_materialized"
     if count > 1:
         raise ValueError(f"duplicate public section: {token}")
@@ -97,7 +137,14 @@ def configured_public_sections(config: dict, root: Path) -> list[dict]:
         sections.extend(v2.get("local_public_sections", []))
 
     seen: set[tuple[str, str]] = set()
+    resolved_sections: list[dict] = []
     for section in sections:
+        section = dict(section)
+        section["source"] = PUBLIC_SOURCE_ALIASES.get(section["source"], section["source"])
+        section["kind"], section["token"] = PUBLIC_SECTION_ALIASES.get(
+            (section["kind"], section["token"]),
+            (section["kind"], section["token"]),
+        )
         key = (section["kind"], section["token"])
         if key in seen:
             raise ValueError(f"duplicate configured public section: {key}")
@@ -105,7 +152,8 @@ def configured_public_sections(config: dict, root: Path) -> list[dict]:
         source = root / section["source"]
         if not source.is_file():
             raise ValueError(f"missing configured public section source: {section['source']}")
-    return sections
+        resolved_sections.append(section)
+    return resolved_sections
 
 
 def integrate(root: Path = ROOT) -> dict:

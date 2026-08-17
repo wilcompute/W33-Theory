@@ -1,23 +1,23 @@
 {
-  "pass": 4947,
-  "correction": "Pass4954 identifies these 3240 complement triangles as independent triples of Q(4,3) points / triples of pairwise disjoint W33 lines, not independent triples of standard W33 points.",
   "Q43_independent_triads": 3240,
+  "boundary": "Finite Q(4,3) holonomy/triad theorem corrected by Pass4949. The numerical 1080 also occurs elsewhere in the repo, but no identification with those objects is claimed without an explicit equivariant map.",
+  "correction": "These are Q(4,3) line-side triads, not standard W33 point triads.",
   "curvature": {
     "flat_identity": 1080,
-    "reflection_transposition": 2160,
-    "order3": 0
+    "order3": 0,
+    "reflection_transposition": 2160
   },
   "geometric_classification": {
-    "zero_common_neighbors": 1080,
+    "equivalence": "matching holonomy is identity iff the Q(4,3) triad has zero common neighbors; it is a transposition iff it has two",
     "two_common_neighbors": 2160,
-    "equivalence": "matching holonomy is identity iff the Q(4,3) triad has zero common neighbors; it is a transposition iff the Q(4,3) triad has two common neighbors"
+    "zero_common_neighbors": 1080
   },
+  "pass": 4947,
   "standard_W33_point_graph_baseline": {
+    "four_common_neighbors": 360,
     "independent_triads": 3240,
     "one_common_neighbor": 2880,
-    "four_common_neighbors": 360,
-    "source": "Pass4953"
+    "source": "rebuilt from the forty K4 pencils in this producer"
   },
-  "theorem": "The S3 matching connection detects the intrinsic triad geometry of the Steiner quotient Q(4,3). Among its 3240 triples of pairwise noncollinear points, exactly 1080 have no common neighbor and carry flat identity holonomy; exactly 2160 have two common neighbors and carry reflection holonomy. No complement triangle has order-three curvature. These counts must not be quoted as the triad census of the standard W(3,3) point graph.",
-  "boundary": "Finite Q(4,3) holonomy/triad theorem corrected by Pass4954. The numerical 1080 also occurs elsewhere in the repo, but no identification with those objects is claimed without an explicit equivariant map."
+  "theorem": "The S3 matching connection detects the intrinsic triad geometry of the Steiner quotient Q(4,3). Among its 3240 triples of pairwise noncollinear points, exactly 1080 have no common neighbor and carry flat identity holonomy; exactly 2160 have two common neighbors and carry reflection holonomy. No complement triangle has order-three curvature. The separately rebuilt W33 point carrier instead has 2880 one-center and 360 four-center independent triads."
 }

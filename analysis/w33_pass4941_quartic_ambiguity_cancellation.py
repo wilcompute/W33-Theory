@@ -8,6 +8,8 @@ Therefore [q1(x),q2(x)] is a basis-independent (up to determinant) quartic
 candidate whose two outer minus signs cancel.  This producer reconstructs the
 maps, proves the operation is nonzero with full Q10 image, and verifies that
 both quadratic channels vanish on the 40-dimensional fiber-constant subspace.
+The carrier is explicitly guarded by Pass4949's separator: it is the Q(4,3)
+line side (rank_F3(A+I)=15), not the W33 point side (rank 11).
 """
 from __future__ import annotations
 import itertools,json
@@ -126,6 +128,15 @@ def main()->int:
     FG=nx.Graph();FG.add_nodes_from(range(120));FG.add_edges_from(R1);fibers=[sorted(c) for c in nx.connected_components(FG)];assert len(fibers)==40
     fi={x:i for i,F in enumerate(fibers) for x in F};Q=nx.Graph();Q.add_nodes_from(range(40))
     for a,b in R3:Q.add_edge(fi[a],fi[b])
+    pencils=[c for c in itertools.combinations(range(40),4)
+             if all(Q.has_edge(a,b) for a,b in itertools.combinations(c,2))]
+    assert len(pencils)==40
+    W=nx.Graph();W.add_nodes_from(range(40))
+    for a,b in itertools.combinations(range(40),2):
+        if len(set(pencils[a])&set(pencils[b]))==1:W.add_edge(a,b)
+    assert not nx.is_isomorphic(Q,W)
+    assert rank(nx.to_numpy_array(Q,dtype=int)+np.eye(40,dtype=int),3)==15
+    assert rank(nx.to_numpy_array(W,dtype=int)+np.eye(40,dtype=int),3)==11
 
     # Reconstruct the incidence-derived Q10 generator action exactly as Pass4870/4871.
     ledges=sorted((p,L) for L,Ss in enumerate(lines) for p in Ss);lei={e:i for i,e in enumerate(ledges)}
@@ -227,8 +238,10 @@ def main()->int:
         'nonzero':True,'image_span_dimension':10,'three_support_full_rank_witnesses':witness[-10:]},
       'support_structure':{'two_support_inputs_zero':True,
         'fiber_constant_40_space_annihilated_by_each_quadratic_channel':True,
-        'reason':'for every W33 adjacency edge, the sum of each Q10-valued map over its complete 3x3 lift is zero in F3'},
+        'carrier':'Q(4,3) point graph = W(3,3) line-intersection graph',
+        'F3_rank_A_plus_I':{'Q43_lines':15,'W33_points':11},
+        'reason':'for every Q(4,3) adjacency edge, the sum of each Q10-valued map over its complete 3x3 Steiner lift is zero in F3'},
       'theorem':'Let q1,q2 be any basis of the two-dimensional PSp-equivariant quadratic Steiner-to-adjoint Hom plane. The intrinsic Lie bracket defines the quartic F(x)=[q1(x),q2(x)]. Under a GL2 basis change F scales only by the determinant, so it is a canonical projective quartic line. The PGSp outer involution multiplies both qi by -1 and therefore fixes F. Direct exact evaluation finds three-support inputs whose quartic outputs span all ten dimensions of Q10, while every two-support input and the entire 40-dimensional fiber-constant subspace vanish. Thus the quadratic ambiguity cancels at degree four without selecting an arbitrary quadratic channel.',
-      'boundary':'Finite characteristic-three polynomial-module theorem. Projective uniqueness still leaves an overall nonzero scalar and supplies no continuum normalization or physical coupling.'}
+      'boundary':'Finite characteristic-three polynomial-module theorem on the Q(4,3) line-side Steiner carrier. Projective uniqueness still leaves an overall nonzero scalar and supplies no continuum normalization or physical coupling.'}
     OUT.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n');print(json.dumps(out,indent=2,sort_keys=True));return 0
 if __name__=='__main__':raise SystemExit(main())

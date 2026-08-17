@@ -4,6 +4,6 @@
   "n_orbits": 2,
   "derived_order": 144,
   "centre_order": 1,
-  "structure": "((A4 x A4) : C2) : C2",
+  "structure": "(C2 x C2 x C2 x C2) : (S3 x S3)",
   "is_solvable": true
 }

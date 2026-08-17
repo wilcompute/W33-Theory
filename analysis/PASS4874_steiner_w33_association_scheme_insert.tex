@@ -65,11 +65,13 @@ its six-edge complement.  Thus the Steiner layer refines adjacency and
 disjointness of the W33 \emph{line} carrier, not the W33 point graph.
 
 \paragraph{Correction and evidence firewall.}
-The legacy producer is
-\texttt{analysis/w33\_pass4874\_steiner\_w33\_association\_scheme.py}, with
-corrected frozen certificate
+The owner producer
+\texttt{analysis/w33\_pass4874\_steiner\_w33\_association\_scheme.py}
+now emits the corrected carrier itself, reconstructs the forty dual $K_4$
+pencils, and verifies the characteristic-three ranks $15$ on the line carrier
+and $11$ on the point carrier.  Its frozen certificate is
 \texttt{data/PART\_W33\_PASS4874\_STEINER\_W33\_ASSOCIATION\_SCHEME.json}.
-Pass~4954 is authoritative for the degree-$40$ identification.  The four-class
+Pass~4949 is authoritative for the modular carrier separator.  The four-class
 scheme, its eigenmatrix, multiplicities, and $3+6$ matching refinement remain
 unchanged.  The $3+6$ matching relation is intrinsic; choosing labels inside
 an individual three-element fiber is still extra coordinate or gauge data.

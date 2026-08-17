@@ -1,69 +1,62 @@
-# Passes 4878–4882 — historical frontier notes with later corrections
+# Passes 4878–4882 — corrected historical ledger
+
 **Original date:** 2026-08-11  
-**Correction status:** superseded where noted by later exact passes.
+**Current status:** correction ledger; not a theorem frontier.
 
-This file is retained as a historical session record. Several claims were later
-recomputed more exactly and must not be read as the current theorem frontier.
+The original packet mixed valid finite observations with four unsupported
+inferences and one parameter-only graph identification. Pass 4948 rebuilt the
+modular algebra and group arithmetic in native GAP. Passes 4954, 4963, and 4966
+then settled the point/line and Witting-phase questions. The legacy producers
+now emit fail-closed tombstones instead of regenerating the retired claims.
 
-## Pass 4878 — modular Bose–Mesner shorthand — superseded by Pass4942
+| Pass | Current status | Exact disposition |
+|---|---|---|
+| 4878 | **CORRECTED by 4948** | The congruence (2\equiv-4\pmod3) survives. The full modular adjacency algebra has dimension 3, not 2, and the congruence does not cause the unrelated quadratic Hom dimension. |
+| 4879 | **CORRECTED by 4948** | The certified dual-code interval is (6\leq\rho(K^\perp)\leq36). The old lower bound 10 used a nonexistent general duality. |
+| 4880 | **WITHDRAWN by 4948** | The marked (\mathbf F_2^6) chart remains useful on its binary carrier, but no cross-characteristic map or modular (24+15) splitting was built. |
+| 4881 | **WITHDRAWN by 4948** | The exact orders 6,912 and 33,592,320 survive. Pass 4873 compares (S_6\times C_2) with \(\operatorname{Aut}(S_6)\), not (2.S_6), and no compiler quotient was constructed. |
+| 4882 | **WITHDRAWN; superseded by 4963/4966** | Steiner fibers carry the (Q(4,3)) line action, while Witting rays carry the nonisomorphic (W(3,3)) point action. Oriented Witting phase realizes the outer sign on the point carrier. |
 
-The original note inferred a rank-two modular Bose–Mesner algebra from the
-coincidence `2 ≡ -4 (mod 3)`. Pass4942 replaced that shorthand with the direct
-120×120 relation-matrix calculation: the characteristic-three Steiner module is
-non-semisimple, with the fiber-sum and adjacency-lift operators nilpotent. The
-old “rank two” sentence is withdrawn.
+## Exact modular replacement
 
-## Pass 4879 — dual code covering-radius bounds
+For the actual W33 point adjacency matrix over (\mathbf F_3), Pass 4948 proves
 
-The original coarse bounds for `K^perp` are retained as historical context.
-They are separate from the primal-code covering-radius program. The primal
-frontier has since advanced to `134 <= rho(K) <= 173` in Pass4951.
+\[
+\dim\langle I,A,J\rangle=3,
+\qquad (A+I)^2=J,
+\qquad R=A(A+I),
+\qquad R^2=0,
+\qquad \operatorname{rank}R=10.
+\]
 
-## Pass 4880 — marked symplectic chart
+On the 39-dimensional augmentation module the Loewy layers are
+(10\mid19\mid10). Exhaustive enumeration of all 27 scheme-algebra elements
+finds idempotent ranks only (0,1,39,40); there is no modular rank-24 or
+rank-15 scheme idempotent. The radical image is the outer-sign twist of the
+ten-dimensional adjoint module.
 
-The marked-double-six `F2^6` chart remains a useful coordinate system, but the
-original claim that it canonically selects the quadratic Hom basis is not used
-as a current theorem. Pass4875 establishes the invariant statement: the
-quadratic Hom plane is two-dimensional for PSp, zero for PGSp, and the outer
-involution acts as `-I_2`.
+## Exact dual-radius replacement
 
-## Pass 4881 — AGL(1,3) compiler extension
+The syndrome space has size (2^{36}). The number of errors of weight at most
+5 is below (2^{36}), so radius 5 cannot cover every syndrome and
+\(\rho(K^\perp)\geq6\). Conversely, 36 independent parity-check columns form
+a syndrome basis, giving \(\rho(K^\perp)\leq36\). No exact radius is claimed.
+This dual interval is separate from the primal-code covering-radius program.
 
-The split local compiler observation remains a finite group/control statement.
-It should not be conflated with the later distinction between the two order-1440
-six-label extensions in Pass4873/Pass4943.
+## Authoritative evidence
 
-## Pass 4882 — Pancharatnam / Steiner conjecture — WITHDRAWN
+- Pass 4948 GAP certificate:
+  `data/PART_W33_PASS4948_MODULAR_BOSE_MESNER_CORRECTION.json`
+- Pass 4948 owner:
+  `analysis/w33_pass4948_modular_bose_mesner_correction.g`
+- Pass 4963 Witting re-audit:
+  `data/PART_W33_PASS4963_WITTING_PANCHARATNAM_W33_REAUDIT.json`
+- Fail-closed legacy regression:
+  `tests/test_w33_pass4878_4882_correction_tombstones.py`
 
-The original argument matched two `SRG(40,12,2,4)` parameter sets and proposed
-that the 40 Steiner fibers were the 40 Witting rays. That identification is
-false.
+## Boundary
 
-Pass4954 proves:
-
-- the 40 Steiner fibers are the **W33 line action**, equivalently `Q(4,3)`;
-- this graph is not isomorphic to the standard W33 point graph.
-
-Pass4963 independently proves:
-
-- the 40 Witting rays live on the **standard W(3,3) point action**;
-- their orthogonality graph is not the Steiner/Q43 graph;
-- the retired direct ray→`F3^4` exponent encoder mapped 40 rays to only 19
-  tuples and therefore was not a projective identification;
-- exact Bargmann phase gives the W33 point-triad law
-  `1 center <-> |phase|=pi/6`, `4 centers <-> |phase|=pi/2`.
-
-Pass4966 further proves that oriented Witting phase is invariant under PSp and
-negated by the multiplier-minus-one PGSp coset.
-
-Therefore the old direct equality between the E6 Steiner signing and Witting
-Pancharatnam phase is **withdrawn**, not open.
-
-## Current authoritative cross-references
-
-- Pass4942 — direct characteristic-three non-semisimple relation algebra.
-- Pass4951 — primal covering radius `134 <= rho(K) <= 173`.
-- Pass4954–4958 — W33 point / Q43 line correction and complementary incidence
-  transceivers.
-- Pass4963 — corrected Witting carrier and exact phase/center census.
-- Pass4966 — oriented phase realizes the `PGSp/PSp` index-two sign.
+The corrected statements are finite algebra, code, group, graph, and phase
+results. They do not construct a cross-characteristic splitting, an
+order-1440 compiler quotient, a Steiner/Witting identification, a continuum
+field, a particle, a coupling, or a hardware security property.

@@ -10,55 +10,55 @@
 This file contains project context and decisions. AI assistants should read this file for context. MCP tools are an optional enhancement for richer interaction when connected.
 
 ## Project Context
-- **Total Decisions:** 4819
-- **Known Topics:** needs-review, auto-draft, why, w33, testing, toe, architecture, docs, holonet, photonic, audit, qec, github, selector, gap
+- **Total Decisions:** 5173
+- **Known Topics:** needs-review, auto-draft, why, w33, testing, toe, docs, architecture, holonet, photonic, audit, qec, github, selector, gap
 
 ## Current State
 **Repository:** Theory of Everything
 **Project Type:** Python Project | Python
 **Branch:** master
-**Tracking:** ahead 2, behind 0
 
 **Recent Commits:**
-- `feb9735 Pass5643-5650: the corpus had the wrong 16, and the right one bridges to W(3,3)`
-- `10993e1 Reserve Pass5643-5650 (Track A): the tomotope-W33 bridge via W(F4)/Z`
-- `8d38686 Pass5627-5634: add replay GAP publication and compile workflow`
-- `921bb88 Register Pass5627-5634 homepage materialization`
-- `4ea178b Publish Pass5627-5634 through canonical manuscript frontier`
+- `88b41ac Reserve Pass5712-5719: outer versus sign representation twist`
+- `1d1fe2a Merge remote Pass5704-5711 after q5 action closure`
+- `54cec37 Pass5667-5674: close q5 Reye action and sign-twist firewall`
+- `6abd8b0 Optimize Pass5705 direct-product derived-group verification`
+- `788fe45 Restore missing BT3528-3534 public index source`
 
 **Working Tree:**
+- M .continuity/SESSION_NOTES.md
 - M .continuity/decisions.json
 - M .continuity/decisions.jsonl
-- ?? .mcp.json
-- ?? analysis/PASS4938_ADJOINT_ROOT_COMPILER_AND_SYMMETRY_FIREWALL.md
-- ?? analysis/PASS4939_CHAMBER_STEINER_INTERTWINER.md
-- ?? analysis/PASS4948_MODULAR_BOSE_MESNER_CORRECTION.md
-- ?? analysis/PASS4949_W33_Q43_LEVI_MIDDLE_MODULES.md
-- ?? analysis/PASS4950_FALSE_SRG33_W33_QUARANTINE.md
-- ?? analysis/PASS4959_POINT_LINE_INCIDENCE_LOEWY_COMPILER.md
-- ?? analysis/w33_pass4938_adjoint_root_compiler.g
-- ?? analysis/w33_pass4939_chamber_steiner_intertwiner.g
-- ?? analysis/w33_pass4946_row_point_dual.g
-- ?? analysis/w33_pass4948_modular_bose_mesner_correction.g
-- ?? analysis/w33_pass4949_w33_levi_middle19_intertwiner.g
-- ?? analysis/w33_pass4950_false_srg33_w33_quarantine.g
+- M .cursorrules
+- M .github/copilot-instructions.md
+- M .github/workflows/w33_pass4865_4872_release.yml
+- M .github/workflows/w33_pass4940_4947_exact_packet.yml
+- M .github/workflows/w33_pass5691_5698_physics_ym_duality_ramanujan.yml
+- M AGENTS.md
+- M CLAUDE.md
+- M GEMINI.md
+- M HOLONET.md
+- D PASS4801_4812_SRG_CONSTELLATION_BREAKTHROUGH.md
+- D PASS4801_gap_verification.g
+- M README.md
 
 ## Session Context
 **Goals:**
 - 2026-08-08 current goal: finish and validate the Passes 4324-4334 chamber Hecke and audited-corrections packet while preserving exact theorem, retraction, and open-boundary language.
 
-
 ## Decision Freshness
-**0 stale decisions** · 3 need review · 1128 superseded ready to archive · Oldest unreviewed: 2026-05-16
+**0 stale decisions** · 507 need review · 1138 superseded ready to archive · Oldest unreviewed: 2026-04-20
 
 Stale decisions requiring attention:
-1. **d1a5364d-fc0b-4955-8076-561b9b9acb5b** (score 41) — "Why leave the local DCCLIX 24-cell/D4 triality draft unpromoted?" — 13 weeks old, never reviewed
-2. **f1d87c79-8ec0-45bc-8fa6-738cec22154c** (score 35) — "Why revise inherited Pass 446 and Passes 522-539 language?"
-3. **00cab282-2e5b-4d3b-81bf-592766c35864** (score 35) — "Why revise papers/agreement_locus.tex in Pass 541?"
+1. **1777318403162-biaewx** (score 55) — "Why: Add remaining arithmetic and trace-structure material?" — 17 weeks old, status: outdated, never reviewed
+2. **1777318403161-4mgrce** (score 55) — "Why: paper: add main.tex, references.bib, and all three figure scripts (Issue #1" — 17 weeks old, status: outdated, never reviewed
+3. **1777318403161-vfxeky** (score 54) — "Why: theory: add Witting deck-control audit?" — 17 weeks old, status: outdated, never reviewed
+4. **1777318403161-wwusgh** (score 54) — "Why: theory: add Witting packet Heisenberg chart?" — 17 weeks old, status: outdated, never reviewed
+5. **1777318403161-8dkkdk** (score 54) — "Why: theory: add Witting packet tritangent support bridge?" — 17 weeks old, status: outdated, never reviewed
 
 When referencing these decisions, note their staleness. Verify they still reflect current project state before recommending based on them.
 
-1128 decisions are eligible for Dream consolidation. Suggest running the Dream tool to archive stale decisions, merge duplicates, and resolve contradictions.
+1574 decisions are eligible for Dream consolidation. Suggest running the Dream tool to archive stale decisions, merge duplicates, and resolve contradictions.
 
 ## ON EVERY SESSION START — DO THIS FIRST
 Run this exact command in the terminal before anything else — before reading files, before answering, before proposing changes:
@@ -228,30 +228,30 @@ after commit:
 ---
 
 ## Recent Decisions
-1. **decision-17868609** (8/16/2026) [redis]
-   - Q: Is the W(F4)/Z tomotope-W33 bridge equivariant, and why can the 24+84+84 codec split never be its orbits?
-   - A: NOT EQUIVARIANT from the isomorphism alone, and the codec split is impossible on divisibility.  EQUIVARIANCE IS NOT FREE. GAP: W(F4)/Z has 7 conjugacy classes of index-12 subgroups, giving 7 degree-12 permutation images. Four are faithful (order 576) and only two of those (images 4 and 7) are permutation isomorphic, so there are THREE inequivalent faithful degree-12 actions. Pass 5645 proved Aut(Reye Levi) is isomorphic to W(F4)/Z as ABSTRACT groups; that does not determine the 12-point action, so the Reye 12 points and the q=5 moving 12 are not forced to be the same G-set. Had the index-12...
+1. **decision-08efff0e** (8/17/2026) [correction, how]
+   - Q: How does the newly arrived Pass5706 interact with corrected Pass5699?
+   - A: Source inspection resolves the overlap: Pass5706 imports Pass5683/5693, initializes from Pass5683 levi()+NEG, and extends that earlier switching-gauge-fixed tower to 2560. It does not import or continue Pass5699. The correction report, prior-art ledger, TeX/HTML sources, and regression now state that the neighboring phrase 'past Pass5699-5703' is chronological, not a tower identity.
 
-2. **decision-17868604** (8/16/2026)
-   - Q: Is there a real group-theoretic bridge between the tomotope and W(3,3), and which of the two 1152s carries it?
-   - A: YES, and it is the Levi/configuration level, not the face-adjacency level. Both candidates have order 1152 and only IsomorphismGroups separates them.  THE CORPUS HAD THE WRONG 16. analysis/2026-05-29_flag_codec_toroidal_hypercube_boundary.md wrote "16 = Q4 vertices = codec slots". But BT1413's working compiler (decision-0e5a851b) labels its 16 tomotope faces by Q4 EDGE PAIRS, and Q4 has 32 edges, so 32/2 = 16 edge classes mod antipodal -- alongside its 16 vertices. Two different 16s. Likewise 24 faces / 2 = 12 edge labels. Verified directly from BT1413's 192 flag_rows: 16 faces of degree 3,...
+2. **decision-c5354d11** (8/17/2026) [compile, pass5699-5703]
+   - Q: Why reflow the corrected Pass5699-5703 TeX determinant?
+   - A: The standalone compilation was mathematically clean but exposed one overfull display. Reflowed the covering factorization in an aligned environment so the source compiles without layout warnings.
 
-3. **decision-17868595** (8/16/2026)
-   - Q: Does Q4 supply the adjacency layout for the tomotope's 16 codecs, as the 2026-05-29 flag-codec file claimed?
-   - A: No -- the VERTEX-level route is closed, while the FACE-level route was already built and verified. Two different maps that the corpus had been conflating.  analysis/2026-05-29_flag_codec_toroidal_hypercube_boundary.md closes by naming its own next test: "build the explicit 16-codec adjacency graph and compare it to Q4 / toroidal-knight adjacency." That sat open for 2.5 months. Built at Pass 5638: Csaszar's vertex-adjacency is K7 and Szilassi's face-adjacency is K7, so the 16-codec graph is 6-regular with 70 triangles, while Q4 is 4-regular, bipartite, triangle-free. NOT isomorphic. And the ...
+3. **decision-be29e6e8** (8/17/2026) [formatting, pass5703]
+   - Q: Why make the publication-owner assertion format-neutral?
+   - A: Markdown, TeX, and HTML correctly spell the same owner range with different separators and prefixes. The regression now requires both owner numbers 5226 and 5227 without coupling correctness to one presentation syntax.
 
-4. **decision-f63a5076** (8/11/2026) [adjoint, controller]
-   - Q: Why extend the reconciliation reservation through Pass 4937?
-   - A: After a fresh GitKraken fetch/pull showed remote work only through reserved Pass4869, Pass4937 was free. It is reserved to test the Pass4864 adjoint ten-space as the 3^10 square-zero symplectic tangent kernel and to construct its finite PGSp affine controller, with explicit separation between additive kernel, Lie bracket, and any unbuilt runtime or continuum interpretation.
+4. **decision-6463a27e** (8/17/2026) [pass5703, prior-art]
+   - Q: Why normalize the prior-owner assertion in the correction test?
+   - A: The publication sources consistently cite the packet as Pass5226--5227 rather than repeating the word Pass before each number. The regression now matches that canonical citation while still requiring the exact prior-owner range.
 
-5. **decision-44ee3e15** (8/11/2026) [gap, holobox]
-   - Q: Why add the Pass 4936 native GAP owner?
-   - A: The new witness reconstructs the 160 W33 chambers exactly, splits the Pass 4324 four-dimensional packet algebra with Pass 4334 point and line idempotents into literal M2(Q) matrix units, and checks the HoloBox HP/HL family aggregates as packet reflections. It keeps individual selector labels, guest execution, recursive composition, security, and physics outside the proved scope.
+5. **decision-249a35f5** (8/17/2026) [correction, pass5699-5703]
+   - Q: Why adjust the first correction-regression failures?
+   - A: The quarantine deliberately rejected the exact legacy physics slogan even when quoted in the retraction ledger, so the ledger now paraphrases it. The q5 tombstone may truthfully name Pass5667's proven TransitiveIdentification; the test now forbids executable legacy calls rather than the cited term.
 
-*1724 unreviewed drafts from auto-capture pending review — `continuity log` the real rationale or update_decision to expand them.*
+*1475 unreviewed drafts from auto-capture pending review — `continuity log` the real rationale or update_decision to expand them.*
 
 ---
 
-*Auto-generated by Continuity | Updated: 2026-08-16*
+*Auto-generated by Continuity | Updated: 2026-08-17*
 
 <!-- END CONTINUITY AUTO-GENERATED CONTENT -->

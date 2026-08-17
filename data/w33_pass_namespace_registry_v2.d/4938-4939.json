@@ -3,9 +3,32 @@
   "range": [4938, 4939],
   "slug": "adjoint_root_compiler_and_chamber_steiner_intertwiner",
   "title": "Adjoint root compiler and chamber-Steiner intertwiner",
-  "status": "RESERVED",
+  "status": "EXECUTED",
   "owner": "openai-codex",
   "reserved_at": "2026-08-11",
+  "executed_at": "2026-08-17",
   "purpose": "Certify the ten-trit transvection-root compiler with its chirality and symmetry-loss boundaries, then construct the exact rational rank-24 intertwiner between the chamber and Steiner fiber-constant carriers.",
-  "boundary": "Reservation only. No theorem is claimed until the native GAP owners, frozen certificates, regressions, rediscovery audit, and scoped reports pass."
+  "evidence": {
+    "gap_owners": [
+      "analysis/w33_pass4938_adjoint_root_compiler.g",
+      "analysis/w33_pass4939_chamber_steiner_intertwiner.g"
+    ],
+    "certificates": [
+      "data/PART_W33_PASS4938_ADJOINT_ROOT_COMPILER.json",
+      "data/PART_W33_PASS4939_CHAMBER_STEINER_INTERTWINER.json"
+    ],
+    "regressions": [
+      "tests/test_w33_pass4938_adjoint_root_compiler.py",
+      "tests/test_w33_pass4939_chamber_steiner_intertwiner.py"
+    ],
+    "reports": [
+      "analysis/PASS4938_ADJOINT_ROOT_COMPILER_AND_SYMMETRY_FIREWALL.md",
+      "analysis/PASS4939_CHAMBER_STEINER_INTERTWINER.md"
+    ],
+    "native_results": [
+      "Pass4938: 44/44 checks; status=PASS",
+      "Pass4939: 24/24 checks; status=PASS"
+    ]
+  },
+  "boundary": "Pass4938 is an exact finite characteristic-three compiler and symmetry-firewall theorem, not a hardware, security, or continuum theorem. Pass4939 identifies only the rational rank-24 Steiner fiber-constant sector with the chamber line lane; it does not identify the point and line carriers, touch the transverse 20+60 sector, or construct a physical state transfer."
 }

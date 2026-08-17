@@ -3,9 +3,18 @@
   "pass": 4959,
   "slug": "point_line_incidence_loewy_compiler",
   "title": "Point-line incidence Loewy compiler and Levi extension bridge",
-  "status": "RESERVED",
+  "status": "EXECUTED",
   "owner": "openai-codex",
   "reserved_at": "2026-08-11",
+  "executed_at": "2026-08-17",
   "purpose": "Use native GAP to factor the characteristic-three W33 and Q(4,3) adjacency radicals through literal point-line incidence, compute the induced maps on every Loewy layer, and determine whether the Q(4,3) fourteen-space is the Levi fourteen-space inside the nonsplit Pass4865 extension.",
-  "boundary": "Reservation only. Shared dimensions do not establish module identity; promotion requires explicit equivariant Hom solves, rank/kernel/image checks, a frozen certificate, and a focused native-GAP regression."
+  "evidence": {
+    "shared_gap_owner": "analysis/w33_pass4949_w33_levi_middle19_intertwiner.g",
+    "certificate": "data/PART_W33_PASS4959_POINT_LINE_INCIDENCE_LOEWY_COMPILER.json",
+    "regression": "tests/test_w33_pass4959_point_line_incidence_loewy_compiler.py",
+    "report": "analysis/PASS4959_POINT_LINE_INCIDENCE_LOEWY_COMPILER.md",
+    "native_result": "9/9 checks; status=PASS inside the expanded Pass4949 46/46 carrier build"
+  },
+  "outcome": "Literal point-line incidence has rank 25, factors both adjacency radicals, lowers the modular Loewy filtrations, identifies the line-side Q14 with the Levi L14, and factors the unique Pass4949 rank-14 forward map through incidence.",
+  "boundary": "The shared owner is intentional and avoids a second coordinate realization. Incidence is a Loewy-lowering instruction, not a reversible point-line cast; it does not split L19, identify the middle homologies, or imply continuum, security, or hardware behavior."
 }

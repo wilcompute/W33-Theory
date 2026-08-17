@@ -105,14 +105,27 @@ def main()->int:
     n3=ranks['R2'][1];n2=ranks['R2'][0]-2*n3;n1=120-3*n3-2*n2
     assert (n3,n2,n1)==(14,6,66)
     # The fiber-constant image C=im(N) lies inside ker(N), because 3=0.
-    # A3 maps into C: rows are complete K3xK3 lifts of W33 adjacency.
+    # A3 maps into C: rows are complete K3xK3 lifts of Q(4,3) adjacency.
     C=np.zeros((120,40),dtype=int)
     FG=nx.Graph();FG.add_nodes_from(range(120));FG.add_edges_from(R1)
     fibers=[sorted(c) for c in nx.connected_components(FG)];assert len(fibers)==40
+    fi={x:i for i,F in enumerate(fibers) for x in F}
+    Q=nx.Graph();Q.add_nodes_from(range(40))
+    for a,b in R3:Q.add_edge(fi[a],fi[b])
+    pencils=[c for c in itertools.combinations(range(40),4)
+             if all(Q.has_edge(a,b) for a,b in itertools.combinations(c,2))]
+    assert len(pencils)==40
+    W=nx.Graph();W.add_nodes_from(range(40))
+    for a,b in itertools.combinations(range(40),2):
+        if len(set(pencils[a])&set(pencils[b]))==1:W.add_edge(a,b)
+    assert not nx.is_isomorphic(Q,W)
+    assert rankp(nx.to_numpy_array(Q,dtype=int)+np.eye(40,dtype=int))==15
+    assert rankp(nx.to_numpy_array(W,dtype=int)+np.eye(40,dtype=int))==11
     for j,F in enumerate(fibers):
         for x in F:C[x,j]=1
     assert rankp(C)==40 and rankp(np.c_[C,(A3%3)])==40
-    # R2 restricted to C is W33 nonadjacency on the quotient and is square-zero rank14 mod3.
+    # R2 restricted to C is Q(4,3) nonadjacency on the quotient and is
+    # square-zero of rank 14: the line-side augmentation bottom layer.
     M2=np.zeros((40,40),dtype=int)
     for j in range(40):
         y=(A2@C[:,j])%3
@@ -130,8 +143,12 @@ def main()->int:
         'R2_nilpotent_ranks':[34,14,0],'R2_Jordan_blocks':{'size3':14,'size2':6,'size1':66},
         'R3_nilpotent_rank':39,'R3_square_zero':True,
         'R2_on_fiber_constant_rank':14,'R2_on_fiber_constant_square_zero':True},
+      'carrier_correction':{'fiber_constant_carrier':'Q(4,3) point graph = W(3,3) line-intersection graph',
+        'Q43_full_rank_A_plus_I':15,'Q43_augmentation_image_rank':14,
+        'dual_W33_point_full_rank_A_plus_I':11,
+        'Pass4949_filtration':'Q43 lines 14|11|14; W33 points 10|19|10'},
       'interpretation':'The rational 20+60 eigensplitting is not a direct-sum decomposition in defining characteristic. Because 9=-3=0 mod3 and every fiber has size3, the three-fiber layer becomes a nonsemisimple nilpotent filtration: im(N)_40 is contained in ker(N)_80, while R2 has Jordan type 3^14 2^6 1^66.',
       'theorem':'The 20+60 transverse sectors of the Steiner association scheme undergo an exact defining-characteristic collapse over F3. The fiber-sum operator N=I+R1 has rank40 and N^2=0, so the 40-dimensional fiber-constant module lies inside the 80-dimensional fiber-sum-zero module. The R2 operator, whose rational transverse eigenvalues are 9 and -3, becomes nilpotent of index three with ranks 34,14,0 and Jordan type 3^14 2^6 1^66. R3 is square-zero of rank39. Thus the characteristic-three nonlinear bridge lives on a nonsemisimple three-fiber extension, not on the rational 20 and 60 eigenspaces separately.',
-      'boundary':'Exact finite association-module theorem. It identifies the characteristic-three degeneration; it does not assign particle multiplets or continuum fields to the 20- or 60-dimensional rational sectors.'}
+      'boundary':'Exact finite association-module theorem on the Q(4,3) line-side Steiner carrier. It identifies the characteristic-three degeneration; it does not transfer the rank-14 line filtration to the W33 point carrier, whose augmentation filtration is 10|19|10, or assign particle multiplets or continuum fields to the 20- or 60-dimensional rational sectors.'}
     OUT.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n');print(json.dumps(out,indent=2,sort_keys=True));return 0
 if __name__=='__main__':raise SystemExit(main())

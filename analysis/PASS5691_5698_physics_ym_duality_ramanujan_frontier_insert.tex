@@ -5,8 +5,10 @@ The orientation-selected affine eight of Pass~5686 admits the invariant quadrati
 form supplied by its Killing form, $K=-54\langle\cdot,\cdot\rangle$ on $V_8$.
 On the nine affine sites the $36$ links have cycle-space dimension $28$.  The $54$
 translation parallelograms span a real rank-$24$ boundary space, hence the minimal
-translation-plaquette complex has $\dim H^1=4$; adjoining the twelve affine-line
-triangle boundaries raises the real face rank to $28$ and kills this $H^1$.
+translation-plaquette complex has $\dim H_1=4$; adjoining the twelve affine-line
+triangle boundaries raises the real face rank to $28$ and kills this $H_1$.
+These are chain-boundary and cycle-quotient computations; the dual cohomology has
+the same dimension over a field, but was not the object directly constructed.
 Thus a finite lattice-gauge candidate
 \[
  F=da+\tfrac12[a,a],\qquad
@@ -17,7 +19,9 @@ dynamical face set.  The pre-existing vertical $\mathbb Z_3$ fiber translation a
 trivially on $V_8\otimes\operatorname{span}(1,1,1)$, so its old holonomy is not
 already the new nonabelian adjoint connection.
 
-The two flat-bond Hamiltonian rays left by Pass~5685 are exactly dual.  The diagonal
+The two flat-bond Hamiltonian rays left by Pass~5685 are found by its bounded
+SVD/tolerance search, then uniquely quantized to flat $0,\pm1$ sign matrices.
+Those integer carriers are exactly dual.  The diagonal
 involution
 \[
  D=\operatorname{diag}(+,+,+,+,-,-,-,-,-,-,-,-,+,+,+,+)
@@ -40,8 +44,9 @@ $320$ are approximately
  3.4232028039,\qquad 3.3960725809,
 \]
 both below $2\sqrt3\approx3.4641016151$.  Hence the $80,160,320,640$ graphs are
-explicit connected Ramanujan levels.  This is not yet an automorphism-canonical
-all-level recursion.
+explicit connected Ramanujan levels to the recorded eigensolver tolerance;
+Pass~5701 supplies later exact positive-semidefinite certificates for the spectral
+inequalities.  This is not yet an automorphism-canonical all-level recursion.
 
 For the firewall deformation $b'=b-D_{\rm fw}$, bilinearity gives the exact identity
 \[

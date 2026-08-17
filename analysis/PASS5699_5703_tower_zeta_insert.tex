@@ -1,61 +1,114 @@
-% Passes 5699--5703: the Ramanujan tower as an Artin L-function tower.
-\subsection*{Passes 5699--5703: tower zeta factorization, exact Ramanujan certificates, and the girth-cycle group identity}
+% Corrected, source-only insert for Passes 5699--5703.
+% Deliberately unintegrated pending reconciliation with Passes 5704--5711.
+\subsection*{Passes 5699--5703: a separate finite factor-pair tower}
 
-The explicit Ramanujan 2-lift tower of Passes~5683/5693 is an Artin L-function
-tower.  At every level the child spectrum splits exactly as
-$\operatorname{spec}(A_{\rm child})=\operatorname{spec}(A_{\rm parent})\cup\operatorname{spec}(A_{\rm signed})$
-(machine precision, max error $2.3\times10^{-14}$), so by the Bass determinant
-formula the Ihara zeta factors level by level as
+\paragraph{Provenance correction.}
+These passes construct three balanced $2$-lifts of the $W(3,3)$ Levi graph,
+with $80,160,320,640$ vertices.  This is a separate deterministic factor-pair
+tower: its globally sorted base edge list is factored and selected already at
+the $80$-vertex parent.  It is not the frozen Pass~5683/5693 tower, and no
+isomorphism or signing-gauge comparison between the two constructions has been
+computed.
+
+For a selected signed parent adjacency $A_s$, the standard $2$-lift block
+conjugation gives the exact identity
 \[
- \zeta_{\rm child}(u)^{-1}=\zeta_{\rm parent}(u)^{-1}\,L(u,\chi)^{-1},\qquad
- L(u,\chi)^{-1}=(1-u^2)^{r-1}\det\!\bigl(I-uA_{\rm signed}+3u^2I\bigr),
+ \operatorname{spec}(A_{\mathrm{child}})
+ =
+ \operatorname{spec}(A_{\mathrm{parent}})
+ \sqcup
+ \operatorname{spec}(A_s).
 \]
-the Stark--Terras Artin L-function of the $\mathbb Z/2$ local system defined by
-the balanced signing.  The signing is the same datum as the determinant-line
-twist of Pass~5696, so the tower L-functions are the orientation-twisted sector
-partition functions.  The base determinant has the closed form
+The Bass determinant therefore gives the usual Stark--Terras covering
+factorization
 \[
- \Delta_{\rm Levi}(u)=(1-u^2)(1-9u^2)(1+9u^4)^{24}(1+3u^2)^{30},
+ \begin{aligned}
+ \zeta_{\mathrm{child}}(u)^{-1}
+ &=\zeta_{\mathrm{parent}}(u)^{-1}L(u,\chi)^{-1},\\
+ L(u,\chi)^{-1}
+ &=(1-u^2)^{r-1}\det(I-uA_s+3u^2I).
+ \end{aligned}
 \]
-the $24$-dimensional $\pm\sqrt6$ eigenspace collapsing to the quartic factor
-$(1+9u^4)^{24}$ whose roots sit at $45^\circ$ angles on the critical circle.
-
-The tower Riemann hypothesis is now an exact theorem, not numerics.  Every
-signed-spectrum L-function pole lies on $|u|=1/\sqrt3$ (160/160, 320/320,
-640/640), certified by exact rational LDL decompositions of
-$B=12I-A_{\rm signed}^2$ (positive definite, minimum pivots $4.82$, $4.49$,
-$4.52$ as exact rationals) at levels 1--3, with a 60-digit Cholesky certificate
-for the $320\to640$ signing.  The apparent Sturm count $77/80$ at level 1 is
-resolved: the zero eigenvalue has multiplicity $4$ and Sturm counts distinct
-roots.
-
-Exact integer trace arithmetic gives the girth-cycle group identity
+The BT545 base spectrum yields
 \[
- \operatorname{Tr}(A_{\rm Levi}^8)=193280=80\cdot 2092+25920
- =n\,M_8^{\rm tree}+|\mathrm{PSp}(4,3)|,
+ \Delta_{\mathrm{Levi}}(u)
+ =
+ (1-u^2)(1-9u^2)(1+9u^4)^{24}(1+3u^2)^{30}.
 \]
-so the Levi graph has exactly $25920/16=1620$ girth-8 cycles, counted by the
-order of the automorphism simple group.  The excess shrinks under lifting
-($25920\to25600\to25216\to24928$) while girth stays pinned at $8$: the tower
-converges locally to the tree without destroying the defining octagons.  The
-$25920$ rooted oriented 8-cycles split into exactly two $\mathrm{PSp}(4,3)$
-orbits of $12960$ with $\mathbb Z/2$ stabilizers, separated by a symplectic
-chirality invariant (diagonal common-neighbour count $4$ vs $0$); the cycle
-stabilizer is an involution of cycle type $1^8 2^{16}$.  Whether the two orbits
-merge into a regular action under the full $W(E_6)$ duality is open.
+This is a finite graph-cover local system.  It is not Pass~5696's determinant
+character on $\operatorname{AGL}(2,3)$, and no orientation-sector or
+partition-function interpretation is inferred.
 
-The new spectra equidistribute to the Kesten--McKay law of the $4$-regular tree
-at an empirical geometric rate: the Kolmogorov--Smirnov distance halves each
-level, $0.02102\to0.01079\to0.00540$, and signed moments match the tree exactly
-through $M_6$ (girth-forced).  Eigenphase spacings sit near GOE rather than
-Poisson.  Independently, $W(3,9)$ was rebuilt over $\mathbb F_9$ (820 vertices,
-$90$-regular) and the greedy+swap optimizer class plateaus at $\alpha\ge46$,
-replicating --- not breaking --- the $51\le\alpha(W(3,9))\le80$ barrier.
+\paragraph{Exact finite Ramanujan certificates.}
+For the selected signed parents of sizes $80$, $160$, and $320$, exact rational
+LDL decomposition proves
+\[
+ 12I-A_s^2>0.
+\]
+All $80$, $160$, and $320$ pivots, respectively, are strictly positive; the
+minimum pivots are approximately $4.817989$, $4.489652$, and $4.523767$, with
+the exact fractions stored in the certificate.  Hence the three signed spectra
+satisfy $\rho(A_s)<2\sqrt3$ and their determinant roots lie on
+$|u|=1/\sqrt3$.  The theorem applies only to these three selected matrices:
+there is no $640$-parent signing or all-level recursion theorem here.
 
-\paragraph{Evidence boundary.}
-All statements are finite graph, matrix, zeta-function, or group-action facts
-verified by exact integer/rational arithmetic or high-precision numerics with
-explicit error bounds.  No continuum limit, physical energy spectrum,
-Yang--Mills mass gap, or all-level equidistribution theorem is claimed; the
-$2^{-\text{level}}$ KS law and the excess-shrinkage trend are empirical on
-three to four levels.
+\paragraph{Trace excess and cycle grading.}
+Exact integer arithmetic gives
+\[
+ \operatorname{Tr}(A_{\mathrm{Levi}}^8)
+ =
+ 193280
+ =
+ 80\cdot2092+25920
+ =
+ 80M_8^{\mathrm{tree}}+|\operatorname{PSp}(4,3)|.
+\]
+BT545 and Pass~75 already own the resulting $1620$ unrooted Levi octagons.
+The bounded additional calculation is the displayed trace decomposition and
+the group action on all $25920$ ordered encodings.  Those encodings form two
+$\operatorname{PSp}(4,3)$-orbits of size $12960$, each with stabilizer order
+two: one orbit is point-rooted and one is line-rooted.  The separator is the
+bipartite root grade, not chirality.  Since $W(3,3)$ is not self-dual, no
+point--line merger, grading-reversing Levi automorphism, or regular action on
+the $1620$ cycles follows.
+
+At the four computed tower levels the exact eighth-trace excesses are
+\[
+ 25920,\ 25600,\ 25216,\ 24928,
+\]
+and the girth is eight throughout.  This is a four-graph observation, not an
+all-level convergence statement.
+
+\paragraph{Finite spectral diagnostics.}
+The signed-matrix moments agree exactly with the $4$-regular-tree values
+$M_2=4$, $M_4=28$, and $M_6=232$.  A separate numerical comparison uses a
+fixed $241$-point grid and double-precision trapezoidal quadrature with $4000$
+panels per reference-CDF value.  It reports sampled CDF discrepancies
+\[
+ 0.02102,\qquad 0.01079,\qquad 0.00540.
+\]
+These are not exact Kolmogorov--Smirnov statistics; no quadrature error bound,
+rate theorem, all-level limit, GOE law, or chaos inference is claimed.
+
+\paragraph{$W(3,9)$ correction.}
+Pass~5703 independently reconstructs
+$\operatorname{SRG}(820,90,8,10)$ but adds no independence-number result.
+Passes~5226--5227 already own a size-$50$ witness and the Hoffman upper bound,
+so the repository statement is
+\[
+ 50\leq\alpha(W(3,9))\leq82,
+\]
+with exact value open.  The former $51$--$80$ interval is withdrawn.  The
+obsolete q=5 candidate template is a tombstone; Passes~5667--5674 are the live
+GAP owner.
+
+\paragraph{Evidence and publication boundary.}
+The corrected certificates replay byte-for-byte from their five owner sources.
+This fragment remains unintegrated pending reconciliation with the neighboring
+Pass~5704--5711 lane.  The Pass~5706 producer explicitly imports Passes~5683 and
+5693 and starts from Pass~5683's frozen base signing, so it extends that earlier
+tower to $2560$ vertices; it does not continue Pass~5699.  The surviving
+statements are finite graph, exact matrix, finite group-action, or explicitly
+labelled numerical observations.  They do not establish a continuum limit,
+physical spectrum, physical chirality, partition function, quantum chaos, or
+Yang--Mills mass gap.

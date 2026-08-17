@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
-"""Pass4874 — the 120 Steiner triangles form a 4-class association scheme over W33.
+"""Pass4874 — four-class Steiner scheme over the W33 line carrier Q(4,3).
 
 Relations (besides identity):
   R1 size 120: forty K3 fibers;
-  R2 size 1620: a perfect matching of 3 across each nonadjacent W33 fiber pair;
-  R3 size 2160: all 9 pairs across each adjacent W33 fiber pair;
+  R2 size 1620: a perfect matching across each nonadjacent Q(4,3) fiber pair;
+  R3 size 2160: all 9 pairs across each adjacent Q(4,3) fiber pair;
   R4 size 3240: the complementary 6 pairs across each nonadjacent fiber pair.
 
-The exact first eigenmatrix shows the fiber-constant 40-space is precisely the
-W33 Bose-Mesner module (multiplicities 1,24,15), while the transverse 80-space
-splits into primitive sectors 20+60.
+The exact first eigenmatrix shows the fiber-constant 40-space is the Q(4,3)
+line-side Bose--Mesner module (multiplicities 1,24,15), while the transverse
+80-space splits into primitive sectors 20+60.  Pass4949's rank separator is
+verified directly: rank_F3(A+I) is 15 here and 11 on the dual K4-pencil carrier.
 """
 from __future__ import annotations
 import itertools,json
@@ -33,6 +34,18 @@ def closure(gens,n):
             z=comp(g,a)
             if z not in S:S.add(z);D.append(z)
     return S
+
+def rankp(M,p=3):
+    A=np.array(M,dtype=int)%p;r=0
+    for c in range(A.shape[1]):
+        q=next((i for i in range(r,A.shape[0]) if A[i,c]),None)
+        if q is None:continue
+        A[[r,q]]=A[[q,r]];A[r]=(A[r]*pow(int(A[r,c]),-1,p))%p
+        for i in range(A.shape[0]):
+            if i!=r and A[i,c]:A[i]=(A[i]-A[i,c]*A[r])%p
+        r+=1
+        if r==A.shape[0]:break
+    return r
 
 def main()->int:
     vecs=[v for v in itertools.product((0,1),repeat=6) if any(v)]
@@ -112,6 +125,15 @@ def main()->int:
     assert Q.number_of_edges()==240 and set(dict(Q.degree()).values())=={12}
     assert all(len(set(Q[a])&set(Q[b]))==2 for a,b in Q.edges())
     assert all(len(set(Q[a])&set(Q[b]))==4 for a,b in itertools.combinations(range(40),2) if not Q.has_edge(a,b))
+    pencils=[c for c in itertools.combinations(range(40),4)
+             if all(Q.has_edge(a,b) for a,b in itertools.combinations(c,2))]
+    assert len(pencils)==40 and all(sum(x in c for c in pencils)==4 for x in range(40))
+    W=nx.Graph();W.add_nodes_from(range(40))
+    for a,b in itertools.combinations(range(40),2):
+        if len(set(pencils[a])&set(pencils[b]))==1:W.add_edge(a,b)
+    assert not nx.is_isomorphic(Q,W)
+    assert rankp(nx.to_numpy_array(Q,dtype=int)+np.eye(40,dtype=int))==15
+    assert rankp(nx.to_numpy_array(W,dtype=int)+np.eye(40,dtype=int))==11
     r2=set(R2);r3=set(R3);r4=set(R4)
     for a,b in itertools.combinations(range(40),2):
         F,Gf=fibers[a],fibers[b]
@@ -145,22 +167,28 @@ def main()->int:
       'relations':{
         'R0':{'size':120,'valency':1,'meaning':'identity'},
         'R1':{'unordered_pairs':120,'valency':2,'meaning':'40 disjoint K3 fibers'},
-        'R2':{'unordered_pairs':1620,'valency':27,'meaning':'perfect matching of 3 across every nonadjacent W33 fiber pair'},
-        'R3':{'unordered_pairs':2160,'valency':36,'meaning':'all 9 pairs across every adjacent W33 fiber pair'},
-        'R4':{'unordered_pairs':3240,'valency':54,'meaning':'remaining 6 pairs across every nonadjacent W33 fiber pair'}},
+        'R2':{'unordered_pairs':1620,'valency':27,'meaning':'perfect matching of 3 across every nonadjacent Q(4,3) fiber pair'},
+        'R3':{'unordered_pairs':2160,'valency':36,'meaning':'all 9 pairs across every adjacent Q(4,3) fiber pair'},
+        'R4':{'unordered_pairs':3240,'valency':54,'meaning':'remaining 6 pairs across every nonadjacent Q(4,3) fiber pair'}},
       'scheme':{'classes':4,'commutative':True,'imprimitive':True,'valencies':valencies,
         'multiplicities':mult,'first_eigenmatrix':P.tolist(),
         'intersection_matrices':[pijk[i].tolist() for i in range(5)]},
-      'W33_quotient':{'fibers':40,'fiber_size':3,'parameters':[40,12,2,4],
+      'Q43_line_quotient':{'fibers':40,'fiber_size':3,'parameters':[40,12,2,4],
+        'identification':'Q(4,3) point graph = W(3,3) line-intersection graph',
         'fiber_constant_primitive_multiplicities':[1,24,15],
-        'W33_adjacency_lift_eigenvalues':[36,6,-12],
-        'dividing_by_fiber_size_recovers_W33_eigenvalues':[12,2,-4]},
+        'adjacency_lift_eigenvalues':[36,6,-12],
+        'dividing_by_fiber_size_recovers_common_SRG_eigenvalues':[12,2,-4],
+        'F3_rank_A_plus_I':15,'dual_W33_point_F3_rank_A_plus_I':11,
+        'maximal_K4_pencils_recover_W33_points':True},
       'transverse_sector':{'dimension':80,'primitive_multiplicities':[20,60],
-        'fiber_relation_eigenvalue':-1,'W33_adjacency_lift_eigenvalue':0},
+        'fiber_relation_eigenvalue':-1,'Q43_adjacency_lift_eigenvalue':0},
       'nonedge_refinement':{'pairs_per_nonadjacent_fiber_pair':9,'R2_matching_pairs':3,'R4_complement_pairs':6,
-        'R2_is_perfect_matching_for_all_540_W33_nonedges':True},
-      'theorem':'The 120 Steiner triangles carry a commutative imprimitive 4-class association scheme. Its 40-dimensional fiber-constant subspace has primitive multiplicities 1,24,15 and the 2160-pair relation acts with eigenvalues 36,6,-12, exactly three times the W33 adjacency spectrum 12,2,-4. The 80-dimensional transverse subspace splits into primitive sectors 20+60 and is annihilated by the W33 adjacency-lift relation. Each W33 edge lifts to K3,3, while each W33 nonedge lifts canonically to a perfect matching of three pairs plus its six-pair complement. Thus the Steiner layer is an exact 3-fiber association-scheme refinement of the W33 Bose-Mesner algebra.',
-      'boundary':'Finite association-scheme theorem. The 3+6 nonedge refinement is canonical as a relation, but choosing labels on individual three-element fibers is additional gauge/coordinate data.'}
+        'R2_is_perfect_matching_for_all_540_Q43_nonedges':True,
+        'W33_interpretation':'Q(4,3) nonedges are pairs of disjoint W(3,3) lines'},
+      'correction':{'original_W33_point_quotient_label':False,
+        'scheme_arithmetic_changed':False,'source':'Pass4949 F3 rank separator'},
+      'theorem':'The 120 Steiner triangles carry a commutative imprimitive 4-class association scheme. Its 40-dimensional fiber-constant subspace has primitive multiplicities 1,24,15 and is the Q(4,3) point action, equivalently the W(3,3) line action. The 2160-pair relation acts with eigenvalues 36,6,-12, three times the common SRG eigenvalues 12,2,-4. The 80-dimensional transverse subspace splits into primitive sectors 20+60 over characteristic zero and is annihilated by the adjacency-lift relation. Each Q(4,3) adjacency edge lifts to K3,3, while each Q(4,3) nonedge lifts canonically to a perfect matching of three pairs plus its six-pair complement.',
+      'boundary':'Finite association-scheme theorem corrected by Pass4949. The 3+6 nonedge refinement is canonical as a relation, but choosing labels on individual three-element fibers is additional gauge/coordinate data. The quotient is the W33 line action/Q(4,3), not the W33 point graph.'}
     OUT.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
     print(json.dumps(out,indent=2,sort_keys=True));return 0
 if __name__=='__main__':raise SystemExit(main())

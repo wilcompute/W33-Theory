@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pass4870 — Steiner-triangle 3-cover of W33 and the first nonlinear adjoint bridge.
+"""Pass4870 — Steiner three-cover of the W33 line action and quadratic bridge.
 
 Pass4866 proved that H2 of the double-six clique complex over F3 is the
 120-dimensional permutation module on the 120 maximal/Steiner triangles and
@@ -8,13 +8,16 @@ that Hom_G(H2,Q10)=Hom_G(Q10,H2)=0.
 This pass classifies the PSp(4,3)-orbits on unordered pairs of Steiner
 triangles. One relation of size 120 is 40 disjoint K3 fibers; another relation
 of size 2160 is the complete 3-by-3 lift of adjacency between those fibers.
-The quotient is explicitly isomorphic to W(3,3)=SRG(40,12,2,4).
+The quotient is the line-intersection graph of W(3,3), equivalently Q(4,3).
+Pass4949's characteristic-three separator is rebuilt here: ``rank(A+I)`` is
+15 on this line-side quotient and 11 on the W(3,3) point carrier recovered
+from its forty maximal K4 pencils.
 
 Because char(F3)!=2, homogeneous equivariant quadratic maps H2->Q10 are
 identified with Hom_G(Sym^2 H2,Q10). Sym^2 of a permutation module decomposes
 as the diagonal permutation module plus the four unordered-pair orbit modules.
 Stabilizer-fixed-space calculations show that the Hom space has dimension 2,
-and both dimensions occur only on the 2160-pair W33-adjacency relation.
+and both dimensions occur only on the 2160-pair Q(4,3)-adjacency relation.
 """
 from __future__ import annotations
 import itertools,json
@@ -164,7 +167,18 @@ def main()->int:
     # every adjacent quotient pair lifts to all 3x3 pairs
     assert all(sum(1 for x in A for y in B if adjlift.has_edge(x,y))==9 for A,B in ((fibers[a],fibers[b]) for a,b in quotient.edges()))
 
-    # Standard W(3,3) collinearity graph for an explicit isomorphism check.
+    # Pass4949 carrier correction: the quotient is the Q(4,3) line graph.
+    # Its forty maximal K4 pencils recover the dual W(3,3) point carrier.
+    point_cliques=[c for c in itertools.combinations(range(40),4)
+                   if all(quotient.has_edge(a,b) for a,b in itertools.combinations(c,2))]
+    assert len(point_cliques)==40
+    assert all(sum(x in c for c in point_cliques)==4 for x in range(40))
+    point_graph=nx.Graph();point_graph.add_nodes_from(range(40))
+    for a,b in itertools.combinations(range(40),2):
+        if len(set(point_cliques[a])&set(point_cliques[b]))==1:point_graph.add_edge(a,b)
+    assert point_graph.number_of_edges()==240 and set(dict(point_graph.degree()).values())=={12}
+
+    # Standard symplectic W(3,3) point graph for the corrected comparison.
     def canon3(v):
         v=np.array(v,dtype=int)%3
         nz=next(i for i,x in enumerate(v) if x)
@@ -175,7 +189,11 @@ def main()->int:
     W=nx.Graph();W.add_nodes_from(range(40))
     for a,b in itertools.combinations(range(40),2):
         if int(np.array(wpts[a])@J@np.array(wpts[b]))%3==0:W.add_edge(a,b)
-    assert nx.is_isomorphic(quotient,W)
+    assert nx.is_isomorphic(point_graph,W)
+    assert not nx.is_isomorphic(quotient,W)
+    Aq=nx.to_numpy_array(quotient,dtype=int)+np.eye(40,dtype=int)
+    Aw=nx.to_numpy_array(point_graph,dtype=int)+np.eye(40,dtype=int)
+    assert rank(Aq,3)==15 and rank(Aw,3)==11
 
     # Quotient action is faithful PSp of order 25920.
     fiber_sets={frozenset(c):i for i,c in enumerate(fibers)}
@@ -258,21 +276,28 @@ def main()->int:
       "steiner_pair_orbits":[
         {"size":120,"degree":2,"triangle_intersection":0,"cross_edges":0,"role":"fiber relation: 40 disjoint K3s"},
         {"size":1620,"degree":27,"triangle_intersection":1,"cross_edges":6,"role":"nonadjacent-fiber refinement"},
-        {"size":2160,"degree":36,"triangle_intersection":0,"cross_edges":6,"role":"W33 adjacency lift: complete K3,3 between adjacent fibers"},
+        {"size":2160,"degree":36,"triangle_intersection":0,"cross_edges":6,"role":"Q(4,3) adjacency lift: complete K3,3 between adjacent fibers"},
         {"size":3240,"degree":54,"triangle_intersection":0,"cross_edges":4,"role":"nonadjacent-fiber refinement"}],
       "intrinsic_three_cover":{"Steiner_triangles":120,"fibers":40,"fiber_size":3,
         "fiber_relation":"40 disjoint K3s","adjacency_lift_pairs":2160,
-        "quotient":"SRG(40,12,2,4)","explicit_isomorphism_to_standard_W33":True,
+        "quotient":"Q(4,3) point graph, SRG(40,12,2,4)",
+        "explicit_isomorphism_to_standard_W33":False,
+        "explicit_isomorphism_to_W33_line_intersection_Q43":True,
+        "maximal_K4_pencils_recover_W33_points":True,
+        "F3_rank_A_plus_I":{"Q43_lines":15,"W33_points":11},
         "PSp_action_on_quotient_order":25920,
         "between_adjacent_fibers":"all 9 pairs, i.e. K3,3"},
       "quadratic_bridge":{"field":"F3","reason_Sym2_equals_quadratic":"2 is invertible in F3",
         "Hom_PSp_Sym2H2_to_Q10_dimension":homdim,
         "orbit_fixed_space_table":fixed,
-        "support":"both dimensions occur exclusively on the 2160-pair W33-adjacency lift relation",
+        "support":"both dimensions occur exclusively on the 2160-pair Q(4,3)-adjacency lift relation",
         "nonzero_maps_surjective":True,
         "interpretation":"there is a two-dimensional family of PSp-equivariant homogeneous quadratic maps H2(F3)->Q10, even though Pass4866 proved all linear maps vanish"},
-      "theorem":"The 120 Steiner triangles form an intrinsic 3-fiber refinement of W33. A 120-pair relation partitions them into 40 triples; the 2160-pair relation is exactly the complete K3,3 lift of adjacency on the quotient, and the quotient is explicitly isomorphic to W(3,3)=SRG(40,12,2,4) with faithful PSp(4,3) action. This same W33-adjacency relation supports the first nonlinear Steiner-to-adjoint bridge: Hom_PSp(Sym^2 H2,Q10) has dimension 2, while all other diagonal/pair orbit modules contribute zero. Thus the linear obstruction of Pass4866 is sharp: the first equivariant bridge occurs quadratically, mediated by the recovered W33 quotient.",
-      "boundary":"Finite characteristic-three association-module theorem. The two-dimensional quadratic Hom space does not select a preferred physical coupling, normalization, or continuum field without additional structure."
+      "correction":{"original_W33_point_quotient_label":False,
+        "correct_quotient":"Q(4,3) point graph = W(3,3) line-intersection graph",
+        "certificate":"Pass4949 ranks 15 (line side) versus 11 (point side)"},
+      "theorem":"The 120 Steiner triangles form an intrinsic three-fiber refinement of the W(3,3) line action. A 120-pair relation partitions them into 40 triples; the 2160-pair relation is exactly the complete K3,3 lift of Q(4,3) adjacency. The quotient is not the standard W(3,3) point graph: its forty maximal K4 pencils recover that dual point carrier, and their F3 ranks rank(A+I)=15 versus 11 separate the two. This same Q(4,3)-adjacency relation supports the first nonlinear Steiner-to-adjoint bridge: Hom_PSp(Sym^2 H2,Q10) has dimension 2, while all other diagonal/pair orbit modules contribute zero.",
+      "boundary":"Finite characteristic-three association-module theorem. The two-dimensional quadratic Hom space does not select a preferred physical coupling, normalization, or continuum field without additional structure. The original standard-W33 point-carrier identification is withdrawn."
     }
     OUT.write_text(json.dumps(out,indent=2,sort_keys=True)+"\n")
     print(json.dumps(out,indent=2,sort_keys=True));return 0

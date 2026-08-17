@@ -43,7 +43,10 @@ Both dimensions occur exclusively on the 2160-pair relation. Thus the linear obs
 
 Pass4941 then combines any basis `q1,q2` of this quadratic plane with the intrinsic adjoint bracket to form the outer-even projective quartic `F(x)=[q1(x),q2(x)]`, which has full Q10 image.
 
-Legacy producer: `analysis/w33_pass4870_steiner_w33_quadratic_bridge.py`
+Owner producer: `analysis/w33_pass4870_steiner_w33_quadratic_bridge.py`. It now
+rebuilds both carriers itself, recovers W33 points as the forty maximal K4
+pencils, and checks the Pass4949 separator
+`rank_F3(A_Q+I)=15 != 11=rank_F3(A_W+I)` before writing the certificate.
 
 Corrected frozen certificate: `data/PART_W33_PASS4870_STEINER_W33_QUADRATIC_BRIDGE.json`
 
@@ -52,6 +55,7 @@ Authoritative correction producers:
 - `analysis/w33_pass4954_steiner_quotient_is_q43_dual.py`
 - `analysis/w33_pass4955_maxcut_points_steiner_lines_incidence.py`
 - `analysis/w33_pass4956_point_line_24d_intertwiner.py`
+- `analysis/w33_pass4949_w33_levi_middle19_intertwiner.g`
 
 Manuscript insert: `analysis/PASS4870_steiner_w33_quadratic_bridge_insert.tex`
 

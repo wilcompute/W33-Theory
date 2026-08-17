@@ -7,10 +7,10 @@ This packet executes the five carry-forward physics attacks from Pass5683–5690
 The nine affine sites have 36 links.  The 54 translation parallelograms span a 24-dimensional real boundary subspace, while the link cycle space has dimension 28.  Thus the minimal translation-plaquette complex has
 
 \[
-\dim H^1=28-24=4.
+\dim H_1=28-24=4.
 \]
 
-Adding the twelve affine-line triangle boundaries raises the real face rank to 28 and kills this `H^1`.  Over `F_3` the combined face rank is only 26, leaving a two-dimensional modular quotient.  Therefore the choice of finite 2-cells is not innocuous: the exact affine point-line geometry has more than one natural face completion.
+Adding the twelve affine-line triangle boundaries raises the real face rank to 28 and kills this `H_1`.  Over `F_3` the combined face rank is only 26, leaving a two-dimensional modular quotient.  Therefore the choice of finite 2-cells is not innocuous: the exact affine point-line geometry has more than one natural face completion.  Over a field the corresponding cohomology has the same dimension, but the matrices actually computed here are the chain boundary and cycle quotient, so the certified object is homology.
 
 Pass5686's determinant bracket has Killing form `-54` times the Euclidean metric on the zero-sum eight.  Hence a finite gauge candidate can be written
 
@@ -34,13 +34,15 @@ D=\operatorname{diag}(+,+,+,+,-,-,-,-,-,-,-,-,+,+,+,+).
 
 `D^2=I`, it commutes with every signed element of the 96-element vector Segre stabilizer, and it is not itself in that group.  Adjoining it gives an order-192 kinematic extension.
 
-After unit flat-bond normalization,
+The two rays are located by the bounded SVD/tolerance search inherited from Pass5685.
+Flatness then quantizes their retained entries uniquely to \(0,\pm1\), and on those
+stored integer sign matrices the final identity is exact:
 
 \[
 H_2=-D H_1D.
 \]
 
-Ordinary conjugation `K` is particle-hole on these imaginary Hamiltonians, so the antiunitary `DK` maps `H_1` to `H_2`.  The discrete two-ray ambiguity is therefore an exact centralizer/PHS duality, not two unrelated spectra.  Modulo this kinematic equivalence there is one ratio-two flat-bond class.  This still does not assign the two levels to physical particles or set an energy scale.
+Ordinary conjugation `K` is particle-hole on these imaginary Hamiltonians, so the antiunitary `DK` maps `H_1` to `H_2`.  The discrete two-ray ambiguity is therefore an exact identity of the quantized sign carriers, not two unrelated spectra.  The search that found those carriers remains numerical. Modulo this kinematic equivalence there is one ratio-two flat-bond class.  This still does not assign the two levels to physical particles or set an energy scale.
 
 ## Pass5693 — explicit Ramanujan levels 320 and 640
 
@@ -58,7 +60,12 @@ both below
 2\sqrt3\approx3.4641016151.
 \]
 
-The full 80/160/320/640 hierarchy is therefore explicitly Ramanujan.  What remains open is an automorphism-canonical all-level recursion: the preferred matching-color pair may change, and deterministic factorization still depends on the ordered graph presentation.
+The full 80/160/320/640 hierarchy is therefore explicitly Ramanujan to the recorded
+eigensolver tolerance.  The graph lifts and signings are explicit combinatorial objects;
+Pass5701 later supplies exact positive-semidefinite certificates for the spectral bounds.
+What remains open is an automorphism-canonical all-level recursion: the preferred
+matching-color pair may change, and deterministic factorization still depends on the
+ordered graph presentation.
 
 ## Pass5694 — exact Jacobi expansion, but no unique `l_3`
 

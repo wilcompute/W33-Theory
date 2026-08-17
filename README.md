@@ -83,6 +83,7 @@ held to, and it is the reason to trust the rest.
 | Steinberg carrier, named | The three 432-orbits carrying the `3×81` are **conjugate**, stabiliser `S₅`; the later refinement gives `S₅ ∩ PSp(4,3) = A₅` | [Pass 1134 owner](analysis/w33_pass1134_we6_432_stabilizers.py) · [Pass 1375 refinement](analysis/w33_pass1375_1378_s5_tomotope_a4_guard.md) |
 | Frame cross-matching | Every frame has a unique collinearity transversal; independently it is the unique `A₄`-equivariant matching, and all 540 cover the 240 edges 9-to-1 | [Pass 1355 owner](analysis/BT1355_BT1359_selector_matching_scheme.md) · [Pass 1390 refinement](analysis/w33_pass1390_1391_frame_cross_matching.md) |
 | Exact cover frontier | Two disjoint 100,000-cover searches hit the same 327 complete `PSp(4,3)` orbits, containing `3,547,800` covers in total; this is a certified lower bound, not a global completeness claim | [Pass 1510 audit](analysis/BT1510_bidirectional_cover_saturation.md) |
+| q=5/Reye action closure | The selected q=5 cover’s moving twelve is explicitly `T12_165`; the 312-row `2-(13,6,60)` multidesign reconstructs Reye as its 16 zero-containment triples, with line action `T16_1034`; exact character pairings separate carrier parity, the outer point/heavy involution, and the point-side sign twist | [Passes 5667–5674](analysis/PASS5667_5674_Q5_REYE_EQUIVARIANT_ORIENTATION.md) · [GAP witness](analysis/w33_pass5667_5674_q5_reye_equivariant_orientation.g) |
 | Regular-spread family | For every odd prime power, the `q+1` intersection relation is an explicit SRG with eigenvalues `q(q−2),−q`; a `q=27` Ree–Tits slice already has five nonregular intersection sizes | [Passes 2200–2206](PASS2200_2206_ALL_Q_SPREADS_NONREGULAR_CONTROLLER_RTL_RELEASE.md) |
 | Complete `q=27` spread spectra and codes | Ree–Tits has complete spectrum `1⁷³⁰,10⁴⁵⁶³,19⁹⁶¹⁷⁴,28⁴⁰⁸²⁹⁴,37³⁶⁵⁰⁴,46⁴⁹¹⁴,55⁷⁰²` and an exactly 9-divisible `[730,5]₂₇` code; regular/Kantor/Thas–Payne/Ree–Tits spectra are pairwise distinct | [Pass 2300](analysis/w33_pass2300_ree_tits_divisible_code.py) · [Pass 2304](analysis/w33_pass2304_known_q27_spread_spectra.py) |
 | Controller representations | Abstract `(C₄×C₆):C₂` has order 48 and minimal faithful rational degree 4; the single-`J` image has order 24; the overlapping 3D carrier is `SL₃(Z)` and has no common inverter | [Pass 2306](PASS2306_CONTROLLER_REPRESENTATION_TRICHOTOMY.md) |
@@ -90,7 +91,7 @@ held to, and it is the reason to trust the rest.
 | Canonical Weil outer action | At `q=7,11`, complex conjugation realizes the nonsquare outer similitude on both parity constituents and reverses the realified complex structure, giving exact `D₄` relations | [Pass 2302](analysis/w33_pass2302_q7_q11_weil_outer_inversion.py) |
 | Chamber Hecke and chiral carrier | The two 160-chamber panels generate the 8D type-`C₂` Hecke image; `Ω` has a literal, uniformly isoclinic point/line `24+24` carrier with squared coupling `3/8` | [Passes 4324–4334](analysis/BT4324_BT4334_CHAMBER_HECKE_AND_AUDITED_CORRECTIONS.md) |
 | Chamber logic and finite control plane | The rank-48 packet is literally `M₂(Q)` on a two-state multiplicity coordinate repeated over 24 lanes; the separate ten-dimensional ternary residual gives `F₃¹⁰ ⋊ PGSp(4,3)` with 17 exact offset classes | [Passes 4936–4937](docs/chamber-controller-stack-4936-4937.html) |
-| Steiner three-cover and group firewall | The 120 Steiner triangles form a canonical 4-class, `40×3` refinement of W33; the marked-residue `S₆×C₂` and duad–syntheme `Aut(S₆)` both have order 1440 but are nonisomorphic | [Passes 4870, 4873–4874](docs/steiner-scheme-order1440-4873-4874.html) |
+| Steiner three-cover and group firewall | The 120 Steiner triangles form a canonical 4-class, `40×3` refinement of the `Q(4,3)` line-side carrier; the marked-residue `S₆×C₂` and duad–syntheme `Aut(S₆)` both have order 1440 but are nonisomorphic | [Passes 4870, 4873–4874](docs/steiner-scheme-order1440-4873-4874.html) |
 | Executable recursive runtime | HoloBox gives addressed mailbox/run, immutable path-copy checkpoints, one leaf/network loader, `4,201,025,641` level-six stateful VMs represented by seven uniform node blobs, and independent Python/GAP certificates | [runtime guide](docs/W33_FRACTAL_MICROVM_RUNTIME.md) · [evidence card](docs/holobox-fractal-microvm.html) |
 
 Those are the compact front doors. The larger [certified backbone](#certified-finite-backbone)
@@ -230,6 +231,43 @@ orders are 2 and 1 respectively, and the square-zero tangent kernel is abelian e
 its transported Lie algebra is not. See the [public controller card](docs/chamber-controller-stack-4936-4937.html),
 [exact GAP witness](analysis/w33_pass4937_adjoint_dual_number_controller.g), and
 [byte-exact regression](tests/test_w33_pass4937_adjoint_dual_number_controller.py).
+
+### Cross-q action closure: Reye is intrinsic to the q=5 design
+
+The previously pending q=5 action gate has now executed. The selected 13-cover has one
+fixed vertex and a moving twelve on which the stabilizer is exactly `T12_165`, with an
+explicit conjugator to the independently built Klein-Latin action:
+
+```text
+[1,9,4,8,12,7,10,2,5,3,6,11]
+```
+
+That closes the object-level chain from the q=5 cover to the twelve antipodal short-root
+pairs of `F₄`. More importantly, the q=5 object explains the Reye configuration internally.
+The 312 outside vertices give a `2-(13,6,60)` multidesign whose triple-containment spectrum
+is exactly `0^16,16^30,24^240`; the sixteen zero triples avoid the fixed point and form
+`12₄16₃`. Their Levi automorphism group has order 576, acting as `T12_165` on points and
+`T16_1034` on lines.
+
+The same abstract group is odd on the twelve-carrier but wholly even on the sixteen-carrier.
+Its point-side sign kernel is `SmallGroup(288,1025) ≅ 2⁴:(C₃×S₃)`, literally transported
+to the even-Latin group already linked by Pass 5300 to the Hoffman stabilizer quotient.
+And on the natural twelve-symbol carrier, every one of the 23,760 placements of the natural
+degree-seven `PSL(2,7)` (plus five fixed symbols) generates full `S₁₂` together with
+`T12_165`—not a hypothetical order-4032 intermediate.
+
+These are finite permutation-group and multidesign theorems. The `PSL(2,7)` statement is
+scoped to the natural `7+1⁵` action, and the result does not imply continuum dynamics or a
+physical unification. The point and heavy-support twelves are exchanged by an explicit
+outer involution of the source group: a displayed order-eight lift squares to an inner
+automorphism, and exactly 48 inner re-gaugings give order-two outer representatives.
+That involution is not the point-side sign twist. The point, heavy, and line permutation
+characters have self inner products `3` and pairwise inner products `2`, whereas the
+sign-twisted point character has inner product `0` with both heavy and line. Thus sign
+tensoring is neither the source outer involution nor the even line carrier. See
+the [synthesis](analysis/PASS5667_5674_Q5_REYE_EQUIVARIANT_ORIENTATION.md),
+[56-check certificate](data/PART_W33_PASS5667_5674_Q5_REYE_EQUIVARIANT_ORIENTATION.json),
+and [byte-exact regression](tests/test_w33_pass5667_5674_q5_reye_equivariant_orientation.py).
 
 ### HoloBox: a recursive network that executes as one VM
 
@@ -874,6 +912,10 @@ gap -q analysis/w33_pass4936_chamber_packet_matrix_units.g
 py -3 -m pytest -q tests/test_w33_pass4936_chamber_packet_matrix_units.py
 gap -q -b analysis/w33_pass4937_adjoint_dual_number_controller.g
 py -3 -m pytest -q tests/test_w33_pass4937_adjoint_dual_number_controller.py
+
+# q=5 cover -> Reye/Latin/F4, intrinsic zero shell, and the exhaustive 7-side join
+gap -q analysis/w33_pass5667_5674_q5_reye_equivariant_orientation.g
+py -3 -m pytest -q tests/test_w33_pass5667_5674_q5_reye_equivariant_orientation.py
 
 # corpus and claim guards
 py -3 analysis/build_results_index.py

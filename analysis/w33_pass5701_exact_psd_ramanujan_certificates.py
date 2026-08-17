@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Pass5701: exact PSD certificates make the tower Ramanujan property a theorem.
+"""Pass5701: exact positivity certificates for the separate factor-pair tower.
+
+This is the deterministic tower constructed independently in Pass5699, not the
+frozen Pass5683/5693 tower.  The base edge list is globally sorted and the first
+two-matching signing is selected already on the 80-vertex parent.  No
+isomorphism between the two towers has been computed.
 
 For each balanced signing used to form the next 2-lift, the signed adjacency A_s
 is a symmetric integer matrix and the Ramanujan condition rho(A_s) < 2 sqrt(3)
@@ -8,19 +13,18 @@ is equivalent to
     B = 12 I - A_s^2   positive definite.
 
 We certify B > 0 by exact rational LDL decomposition (all pivots strictly
-positive as exact Fraction objects).  No root-finding, no floats.
+positive as exact Fraction objects).  Floating eigensolvers choose among the six
+deterministic matching-pair candidates; the positivity proof for each selected
+integer matrix is exact.
 
-Results (levels as in Pass5693 tower):
-  level 1 (parent n=80 ): B PSD exact, min pivot ~= 4.817
-  level 2 (parent n=160): B PSD exact, min pivot ~= 4.489
-  level 3 (parent n=320): B PSD exact, min pivot ~= 4.522
+Results (local levels in this separate tower):
+  level 1 (parent n=80 ): B positive definite, min pivot ~= 4.817
+  level 2 (parent n=160): B positive definite, min pivot ~= 4.489
+  level 3 (parent n=320): B positive definite, min pivot ~= 4.522
 
 Corollary: the signed-spectrum RH (all L-function poles on |u| = 1/sqrt(3)) is
-an exact theorem at levels 1-3, not a numerical observation.  The Sturm
-real-root count of the level-1 signed characteristic polynomial is 77/80 because
-the zero eigenvalue has multiplicity 4 and Sturm counts distinct roots; with the
-4-fold zero counted once, 77 distinct real roots = 80 with multiplicity, all in
-the band.  The PSD certificate supersedes this subtlety.
+an exact theorem for these three selected signings.  No 640-parent signing or
+1280-vertex child is constructed here.
 """
 from __future__ import annotations
 import itertools, collections, json, math
@@ -144,18 +148,20 @@ def main():
         B = 12*np.eye(np_, dtype=np.int64) - (As@As)
         ok, kk, ds = exact_ldl_psd(B)
         certs.append({'level': li, 'signed_parent_n': np_,
-                      'B_eq_12I_minus_As2_PSD': ok, 'n_pivots': kk,
+                      'B_eq_12I_minus_As2_positive_definite': ok, 'n_pivots': kk,
                       'min_pivot_exact': str(min(ds)) if ok else None,
                       'min_pivot_float': float(min(ds)) if ok else None})
         assert ok
 
     out = {
       'pass': 5701,
-      'status': 'EXACT_PSD_CERTIFICATES_PROVE_TOWER_RAMANUJAN_THROUGH_LEVEL3',
+      'status': 'EXACT_POSITIVITY_FOR_THREE_SEPARATE_FACTOR_PAIR_LIFTS_THROUGH_640_VERTICES',
+      'tower_provenance': ('Separate deterministic factor-pair tower, not the frozen Pass5683/5693 tower; '
+                           'no isomorphism comparison has been computed.'),
       'method': 'exact rational LDL of B = 12 I - A_signed^2, all pivots strictly positive Fractions',
       'certificates': certs,
-      'sturm_resolution': 'level-1 signed charpoly Sturm count is 77 distinct real roots = 80 with the 4-fold zero eigenvalue counted once; all roots in the band, consistent with the PSD certificate',
-      'physics_boundary': 'Exact integer/rational matrix algebra; the Ramanujan bound is a finite graph statement, not the continuum YM mass gap.'
+      'scope': 'Selected signings on parents 80, 160, and 320 only; no 640-parent signing is produced.',
+      'physics_boundary': 'Exact integer/rational matrix algebra for a finite graph tower; not an all-level theorem or continuum Yang-Mills mass gap.'
     }
     OUT.write_text(json.dumps(out, indent=2, sort_keys=True) + '\n')
     print(json.dumps(out, indent=2, sort_keys=True))

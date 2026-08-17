@@ -21,6 +21,9 @@ def test_5692_flatray_duality():
     assert d['centralizer_involution']['commutes_with_all_signed_stabilizer_elements']
     assert d['centralizer_involution']['group_order_after_adjoining_D']==192
     assert d['bond_sign_disagreements_up_to_global_sign']==12
+    assert 'checked exactly over the integers' in d['ray_reconstruction_boundary']
+    assert set(sum(d['ray_sign_matrices']['Q1'],[])) <= {-1,0,1}
+    assert set(sum(d['ray_sign_matrices']['Q2'],[])) <= {-1,0,1}
 
 def test_5693_explicit_ramanujan_depth():
     d=load('PART_W33_PASS5693_EXPLICIT_RAMANUJAN_LEVELS23.json')

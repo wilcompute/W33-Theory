@@ -1,25 +1,29 @@
 #!/usr/bin/env python3
-"""Pass5699: the W33 Ramanujan 2-lift tower is an Artin L-function tower.
+"""Pass5699: Artin factorization for a separate deterministic W33 2-lift tower.
 
-For each balanced 2-lift in the explicit tower (Pass5683/5693 construction,
-recomputed here deterministically from the symplectic form on F_3^4), the child
-spectrum splits exactly as spec(A_child) = spec(A_parent) u spec(A_signed)
-(verified to 2.3e-14 at every level).  By the Bass determinant formula the Ihara
-zeta therefore factors level by level,
+This producer does *not* replay the frozen Pass5683/5693 tower.  It starts from
+the same W(3,3) Levi graph, deterministically factors the edges into four perfect
+matchings at every level (including the 80-vertex parent), selects the best of
+the six two-matching signings, and constructs a separate tower through 640
+vertices.  No isomorphism with the Pass5683/5693 tower is claimed.
+
+For each 2-lift, the exact block decomposition theorem gives
+spec(A_child) = spec(A_parent) union spec(A_signed).  Floating eigenvalues only
+replay that exact identity numerically.  The Bass determinant formula then gives
 
     zeta_child(u)^{-1} = zeta_parent(u)^{-1} * L(u, chi)^{-1},
     L(u, chi)^{-1}     = (1-u^2)^{r-1} det(I - u A_signed + 3 u^2 I),
 
-which is precisely the Artin L-function of the Z/2 local system defined by the
-signing (Stark--Terras factorization for coverings).  The signing IS the
-orientation local system of Pass5696's determinant line, so the tower's
-L-functions are literally the twisted-sector partition functions.
+the standard Stark--Terras Artin factor of the Z/2 edge local system defined by
+the signing.  This graph-edge local system is not identified with Pass5696's
+AGL(2,3) determinant character; the two data live on different objects.
 
-Pole analysis: at every level all Bass poles lie on the critical circle
-|u| = 1/sqrt(3) except the four trivial poles {1/3 (x3), 1} inherited from the
-eigenvalues +-4; the signed (new) spectra contribute poles 100% on the circle.
-The functional equation Delta(u) = (3 u^2)^n Delta(1/(3u)) is verified by
-log-determinant residuals <= 6.2e-12 at all levels.
+Pole analysis: through the three constructed lifts all determinant roots lie on
+|u| = 1/sqrt(3) except the four trivial roots +/-1 and +/-1/3 inherited from the
+eigenvalues +/-4; the signed spectra contribute roots on the circle.
+The functional equation Delta(u) = (3 u^2)^n Delta(1/(3u)) follows exactly,
+factor by factor, from
+(3u^2)(1-lambda/(3u)+1/(3u^2)) = 1-lambda*u+3u^2.
 
 Base closed form discovered and verified:
     Delta_levi(u) = (1-u^2)(1-9u^2)(1+9u^4)^24 (1+3u^2)^30 .
@@ -122,11 +126,6 @@ def components(E, n):
 def bass_det(A, u):
     n = A.shape[0]
     return float(np.linalg.det(np.eye(n)-u*A+3*u*u*np.eye(n)))
-def bass_logdet(A, u):
-    n = A.shape[0]
-    s, l = np.linalg.slogdet(np.eye(n)-u*A+3*u*u*np.eye(n))
-    return l
-
 def pole_moduli(ev):
     out = []
     for lam in ev:
@@ -153,13 +152,14 @@ def main():
         assert components(E, n) == [n]
         tower.append((E, n, neg, rho))
 
-    split_errs = []
+    split_checks = []
     for li in (1, 2, 3):
         neg = tower[li][2]; Ep, np_ = tower[li-1][0], tower[li-1][1]
         both = np.sort(np.concatenate([np.linalg.eigvalsh(unsigned_adj(Ep, np_)),
                                        np.linalg.eigvalsh(signed_adj(Ep, np_, neg))]))
         err = float(np.max(np.abs(both - np.linalg.eigvalsh(unsigned_adj(tower[li][0], np_*2)))))
-        split_errs.append(err)
+        split_checks.append(err < 1e-10)
+    assert all(split_checks)
 
     def closed_levi(u):
         return (1-u*u)*(1-9*u*u)*(1+9*u**4)**24*(1+3*u*u)**30
@@ -183,28 +183,27 @@ def main():
         signed_rows.append({'level': li, 'parent': np_, 'n_Lpoles': len(rr), 'off_circle': len(off)})
         assert not off
 
-    fe = {}
-    for li, (E, n, neg, rho) in enumerate(tower):
-        A = unsigned_adj(E, n)
-        errs = []
-        for u in (0.02, 0.033, 0.041):
-            w = 1/(3*u)
-            errs.append(abs(n*math.log(3*u*u) + bass_logdet(A, w) - bass_logdet(A, u)))
-        fe[li] = max(errs)
-
     out = {
       'pass': 5699,
-      'status': 'W33_RAMANUJAN_TOWER_IS_AN_ARTIN_L_FUNCTION_TOWER_WITH_LEVELWISE_RH',
+      'status': 'SEPARATE_DETERMINISTIC_FACTOR_PAIR_TOWER_ARTIN_FACTORIZATION_THROUGH_640',
+      'tower_provenance': ('Separate deterministic factor-pair tower: the base edge list is globally sorted and the '
+                           'best two-matching signing is selected already at parent size 80. This is not the frozen '
+                           'Pass5683/5693 tower, and no isomorphism between the towers has been computed.'),
       'factorization': 'zeta_child^-1 = zeta_parent^-1 * L(u,chi)^-1 with L(u,chi)^-1 = (1-u^2)^(r-1) det(I - u A_signed + 3u^2 I)',
-      'spectrum_split_max_err_per_level': split_errs,
+      'spectrum_split_exact_by_2lift_block_conjugation': True,
+      'numeric_spectrum_split_error_below_1e_10_each_level': split_checks,
       'base_closed_form': 'Delta_levi(u) = (1-u^2)(1-9u^2)(1+9u^4)^24 (1+3u^2)^30',
       'base_closed_form_verified': closed_ok,
       'unsigned_poles': pole_rows,
       'signed_L_function_poles': signed_rows,
-      'functional_equation_max_log_residual_per_level': fe,
+      'functional_equation_exact_factor_identity': '(3u^2)(1-lambda/(3u)+1/(3u^2)) = 1-lambda*u+3u^2',
       'stark_terras_reference': 'Factorization of zeta functions of coverings into Artin L-functions (Stark--Terras); here the Z/2 covering is the balanced 2-lift.',
-      'orientation_weld': 'The Z/2 signing local system is the same datum as the Pass5696 determinant-line twist: the tower L-functions are the orientation-twisted sector partition functions.',
-      'physics_boundary': 'Finite-graph zeta identities only; no continuum zeta regularization or physical energy spectrum is claimed.'
+      'prior_corpus_owners': ('BT545 and Pass75 already own the Levi spectrum, girth-eight cycle count, and Ihara-prime '
+                              'surface; this pass only applies the standard covering factorization to this separate finite tower.'),
+      'non_identification': ('The graph-edge Z/2 signing is not Pass5696\'s AGL(2,3) determinant character. No map between '
+                             'those local systems or partition-function interpretation is constructed.'),
+      'physics_boundary': ('Finite-graph determinant identities through 640 vertices only; no all-level recursion, continuum '
+                           'zeta regularization, partition function, or physical energy spectrum is claimed.')
     }
     OUT.write_text(json.dumps(out, indent=2, sort_keys=True) + '\n')
     print(json.dumps(out, indent=2, sort_keys=True))

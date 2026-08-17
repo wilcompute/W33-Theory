@@ -1,25 +1,81 @@
 {
-  "pass": 4941,
+  "boundary": "Finite characteristic-three polynomial-module theorem on the Q(4,3) line-side Steiner carrier. Projective uniqueness still leaves an overall nonzero scalar and supplies no continuum normalization or physical coupling.",
   "inputs": {
-    "PSp_quadratic_Hom_dimension": 2,
     "PGSp_quadratic_Hom_dimension": 0,
-    "outer_action_on_quadratic_plane": "-I_2",
-    "intrinsic_bracket_Hom_dimension": 1
+    "PSp_quadratic_Hom_dimension": 2,
+    "intrinsic_bracket_Hom_dimension": 1,
+    "outer_action_on_quadratic_plane": "-I_2"
   },
+  "pass": 4941,
   "quartic_operation": {
+    "PGSp_outer_parity": "even: two outer minus signs cancel",
+    "change_of_quadratic_basis": "F scales by det of the GL2 basis change",
     "formula": "F(x)=[q1(x),q2(x)]",
     "homogeneous_degree": 4,
-    "change_of_quadratic_basis": "F scales by det of the GL2 basis change",
-    "PGSp_outer_parity": "even: two outer minus signs cancel",
-    "nonzero": true,
     "image_span_dimension": 10,
-    "full_rank_witness_class": "three-support Steiner inputs"
+    "nonzero": true,
+    "three_support_full_rank_witnesses": [
+      [
+        1,
+        9,
+        50
+      ],
+      [
+        1,
+        9,
+        51
+      ],
+      [
+        1,
+        9,
+        65
+      ],
+      [
+        1,
+        9,
+        66
+      ],
+      [
+        1,
+        9,
+        102
+      ],
+      [
+        1,
+        9,
+        103
+      ],
+      [
+        1,
+        9,
+        104
+      ],
+      [
+        1,
+        9,
+        105
+      ],
+      [
+        1,
+        10,
+        28
+      ],
+      [
+        1,
+        10,
+        29
+      ]
+    ]
   },
   "support_structure": {
-    "two_support_inputs_zero": true,
+    "F3_rank_A_plus_I": {
+      "Q43_lines": 15,
+      "W33_points": 11
+    },
+    "carrier": "Q(4,3) point graph = W(3,3) line-intersection graph",
     "fiber_constant_40_space_annihilated_by_each_quadratic_channel": true,
-    "reason": "for every W33 adjacency edge, the sum of each Q10-valued quadratic map over its complete 3x3 Steiner lift is zero in F3"
+    "reason": "for every Q(4,3) adjacency edge, the sum of each Q10-valued map over its complete 3x3 Steiner lift is zero in F3",
+    "two_support_inputs_zero": true
   },
-  "theorem": "Let q1,q2 be any basis of the two-dimensional PSp-equivariant quadratic Steiner-to-adjoint Hom plane. The intrinsic Lie bracket defines the quartic F(x)=[q1(x),q2(x)]. Under a GL2 basis change F scales only by the determinant, so it is a canonical projective quartic line. The PGSp outer involution multiplies both qi by -1 and therefore fixes F. Exact evaluation on three-support inputs spans all ten dimensions of Q10, while every two-support input and the entire 40-dimensional fiber-constant subspace vanish. Thus the quadratic ambiguity cancels at degree four without selecting an arbitrary quadratic channel.",
-  "boundary": "Finite characteristic-three polynomial-module theorem. Projective uniqueness still leaves an overall nonzero scalar and supplies no continuum normalization or physical coupling."
+  "theorem": "Let q1,q2 be any basis of the two-dimensional PSp-equivariant quadratic Steiner-to-adjoint Hom plane. The intrinsic Lie bracket defines the quartic F(x)=[q1(x),q2(x)]. Under a GL2 basis change F scales only by the determinant, so it is a canonical projective quartic line. The PGSp outer involution multiplies both qi by -1 and therefore fixes F. Direct exact evaluation finds three-support inputs whose quartic outputs span all ten dimensions of Q10, while every two-support input and the entire 40-dimensional fiber-constant subspace vanish. Thus the quadratic ambiguity cancels at degree four without selecting an arbitrary quadratic channel."
 }

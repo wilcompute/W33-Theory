@@ -23,6 +23,20 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 CONTRACT = ROOT / "data/w33_publication_frontier_contract_v2.json"
 INPUT_RE = re.compile(r"\\input\{([^}]+)\}%?")
+PUBLIC_SOURCE_ALIASES = {
+    "analysis/BT3528_BT3534_borel_star_moore_transplant_index_insert.html":
+        "analysis/BT3528_BT3534_borel_star_moore_functor_transplant_index_insert.html",
+    "analysis/PASS4544_4551_module_cubic_zeta_index_insert.html":
+        "analysis/PASS4544_4551_module_cubic_enumerator_zeta_index_insert.html",
+}
+PUBLIC_SECTION_ALIASES = {
+    ("id", "bt3418-3429-clebsch-d5-supplement"):
+        ("marker", "<!-- BT3418-BT3429-CLEBSCH-D5-SUPPLEMENT -->"),
+    ("id", "pass4579-4586-o8plus-exceptional-bridge"):
+        ("id", "pass4579-4586-o8plus-exceptional"),
+    ("id", "pass4624-4631-packet-incidence-f4-h10"):
+        ("id", "pass4624-4631-packet-incidence-f4"),
+}
 
 
 def sha256(path: Path) -> str:
@@ -150,16 +164,36 @@ def configured_public_sections(contract: dict, legacy: dict) -> tuple[list[dict]
     sections.extend(local)
 
     seen: set[tuple[str, str]] = set()
+    resolved_sections: list[dict] = []
+    source_aliases: dict[str, str] = {}
+    section_aliases: dict[str, str] = {}
     for section in sections:
+        section = dict(section)
+        original_source = section["source"]
+        section["source"] = PUBLIC_SOURCE_ALIASES.get(original_source, original_source)
+        if section["source"] != original_source:
+            source_aliases[original_source] = section["source"]
+        original_key = (section["kind"], section["token"])
+        section["kind"], section["token"] = PUBLIC_SECTION_ALIASES.get(
+            original_key,
+            original_key,
+        )
+        if (section["kind"], section["token"]) != original_key:
+            section_aliases[f"{original_key[0]}:{original_key[1]}"] = (
+                f"{section['kind']}:{section['token']}"
+            )
         key = (section["kind"], section["token"])
         assert key not in seen, ("duplicate public token", key)
         seen.add(key)
         source = ROOT / section["source"]
         assert source.is_file(), source
-    return sections, {
+        resolved_sections.append(section)
+    return resolved_sections, {
         "legacy_count": len(legacy.get("public_sections", [])),
         "extensions": extension_meta,
         "local_count": len(local),
+        "source_aliases": source_aliases,
+        "section_aliases": section_aliases,
         "total_count": len(sections),
     }
 
@@ -188,7 +222,18 @@ def audit(require_index: bool = True) -> dict:
     counts = Counter(legacy_required)
     legacy_duplicates = {k: v for k, v in sorted(counts.items()) if v > 1}
     legacy_unique = list(dict.fromkeys(legacy_required))
-    missing_legacy = [item for item in legacy_unique if item not in reachable]
+    # A current-frontier leaf may be a collision-safe wrapper around an older
+    # theorem insert.  Count the wrapped theorem as reachable without promoting
+    # every ordinary theorem insert into a recursive manifest node.
+    wrapped_legacy: dict[str, str] = {}
+    for parent in dag["leaves"]:
+        for child in parse_inputs(tex_path(parent)):
+            if child in legacy_unique:
+                wrapped_legacy[child] = parent
+    missing_legacy = [
+        item for item in legacy_unique
+        if item not in reachable and item not in wrapped_legacy
+    ]
     assert not missing_legacy, missing_legacy
 
     wrappers = {}
@@ -257,6 +302,7 @@ def audit(require_index: bool = True) -> dict:
             "legacy_required_original_count": len(legacy_required),
             "legacy_required_unique_count": len(legacy_unique),
             "legacy_required_duplicates": legacy_duplicates,
+            "legacy_required_wrapped": wrapped_legacy,
             "legacy_required_missing": missing_legacy,
         },
         "shared_tail": tail,
