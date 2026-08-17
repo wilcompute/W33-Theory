@@ -10,7 +10,7 @@
 This file contains project context and decisions. AI assistants should read this file for context. MCP tools are an optional enhancement for richer interaction when connected.
 
 ## Project Context
-- **Total Decisions:** 5179
+- **Total Decisions:** 5180
 - **Known Topics:** needs-review, auto-draft, why, w33, testing, toe, docs, architecture, holonet, photonic, audit, qec, github, selector, gap
 
 ## Current State
@@ -209,25 +209,25 @@ after commit:
 ---
 
 ## Recent Decisions
-1. **decision-17869809** (8/17/2026) [audit, redis]
+1. **decision-17869812** (8/17/2026)
+   - Q: Does the symplectic power tower really have period q-1, and what does GF(9) reveal?
+   - A: NO -- the wrap is at the CHARACTERISTIC, not q, and the law is a base-p digit product.  CORRECTION TO PASS 5713. It claimed rank_q(sf^e) has period q-1, verified at q = 3, 5, 7, 11. At q=9 that would put the wrap at e=9. It is at e=3. GF(9) has characteristic 3, so Frobenius is x -> x^3 and sf^3 = Frobenius(sf) is again a form of rank 4. For PRIME q the characteristic equals q and the two statements coincide -- which is exactly why every q I had tested was blind to the difference. All four verifications were at primes.  THE COMPLETE LAW IS MULTIPLICATIVE OVER BASE-p DIGITS:      rank(sf^e) ...
+
+2. **decision-17869809** (8/17/2026) [audit, redis]
    - Q: What is the complete form of the symplectic power rank tower, and how many of this session's theorems were actually c...
    - A: The tower is periodic, not merely bounded. And 2 of 8 claims were classical -- both the ones with one-line proofs.  THE COMPLETE STATEMENT: rank_q(sf^e) = C(e+3,3) for 1 <= e <= q-1, and rank_q(sf^e) depends only on e mod (q-1). At q=11 that is TEN rungs -- 4, 10, 20, 35, 56, 84, 120, 165, 220, 286 -- every one equal to dim Sym^e(F_11^4), then wrapping at e=11 back to the bilinear rank 4. Verified at q = 3, 5, 7, 11. The BOUND is classical (Pass 5704, the Hadamard-power-of-a-configuration bound, arXiv:2005.08181); the ATTAINMENT at every rung and the period-(q-1) wrap are what this measures...
 
-2. **decision-17869805** (8/17/2026) [redis]
+3. **decision-17869805** (8/17/2026) [redis]
    - Q: Is the Sym^e rank bound on the symplectic form novel, and does the characteristic-2 kernel result generalise?
    - A: NO to both. The bound is classical and the kernel result is specific to the Reye. What survives is narrower.  ATTRIBUTION. Pass 5692 proved rank_q(sf^e) <= dim Sym^e(F_q^4) = C(e+3,3) and called it a theorem. It is the specialisation of a known general fact: for a configuration W there is a surjection Sym^s W ->> W^(*s) onto the s-fold Hadamard product, giving dim W^(*s) <= C(r_W + s - 1, s), which at r_W = 4 is exactly C(e+3,3). Source: "Configuration polynomials under contact equivalence", arXiv:2005.08181. THIRD ATTRIBUTION CORRECTION IN THREE PASSES, after Pass 5695 handed the p=2 rank ...
 
-3. **decision-17869802** (8/17/2026) [redis]
+4. **decision-17869802** (8/17/2026) [redis]
    - Q: What is Aut of the Reye [12,4,6] code, and does the symplectic rank law extend beyond squares?
    - A: Aut IS W(F4)/Z acting as T12_165 -- typed, not matched. And the rank law is a whole tower.  TYPED AT LAST. Aut([12,4,6]) = SmallGroup(576,8654) = W(F4)/Z, and its degree-12 action is T12_165 -- the same PERMUTATION group the Reye configuration carries, not merely the same abstract group. Pass 5687 reported this as an order match and explicitly refused to identify it (8,681 groups share order 576, and Pass 5644 was wrong about exactly this kind of match at 1152). Typed by SmallGroup id it holds. SO PASS 5675 UNDERSTATED ITS OWN RESULT: the characteristic-2 kernel recovers not just the unique...
 
-4. **decision-17869798** (8/17/2026)
+5. **decision-17869798** (8/17/2026)
    - Q: Is W(3,3) p-rank rigid, and what is the rank of its non-collinearity matrix?
    - A: NO -- and the rank is exactly dim Sym^2(F_q^4) = 10, for every odd q, with a proof.  CORRECTS PASS 5673, which claimed W(3,3) is p-rank rigid. True only of its INCIDENCE matrix (rank 25 in every characteristic). The ADJACENCY collapses hard: collinearity graph excess 23 at p=2, its complement excess 29 at p=3 -- the substrate's own characteristic -- and the line graph excess 29 at p=2. Same error as Pass 5672 in the opposite direction: there a drop was an artefact, here a non-drop came from examining the wrong matrix. Pass 5678 had already flagged the incidence/adjacency distinction for Csa...
-
-5. **decision-17869788** (8/17/2026) [hashing, owasp]
-   - Q: Does the Reye configuration's characteristic-2 kernel encode anything about the bridge group, and can logic synthesis...
-   - A: YES to the first -- it reconstructs the group's UNIQUE block system. NO to the second -- yosys finds none of it.  THE RESULT. The Reye [12,4,6] binary code (Pass 5670) has exactly three weight-8 words, and their complements are three 4-sets: {0,5,8,11}, {1,4,7,9}, {2,3,6,10}. GAP: T12_165 -- the degree-12 action of W(F4)/Z identified in Pass 5659 -- is imprimitive with EXACTLY ONE nontrivial block system, and it is that partition. So Gaussian elimination on a 16x12 zero-one matrix over GF(2), with no group theory anywhere in the computation, recovers the imprimitivity structure of the bridg...
 
 *1471 unreviewed drafts from auto-capture pending review — `continuity log` the real rationale or update_decision to expand them.*
 

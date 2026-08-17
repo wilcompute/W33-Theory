@@ -25,7 +25,8 @@
         "951fc6ac-b3ba-4bc5-91ea-5761985511e6",
         "834f75ed-8832-447d-9ead-3f7fd5b93133",
         "d8ac0082-876f-4935-80c4-de4c705ccec2",
-        "1786978125686-pe8wl2"
+        "1786978125686-pe8wl2",
+        "1786981219540-nmfp90"
       ],
       "causedBy": []
     },
@@ -76,7 +77,8 @@
         "1786978825551-4yxjf4",
         "1786979818704-igg2nn",
         "1786980587175-xavuzt",
-        "1786980961946-y8g7n8"
+        "1786980961946-y8g7n8",
+        "1786981219540-nmfp90"
       ],
       "causedBy": [
         "manual-20260507-pin-e8-manifest-z3-output-check"
@@ -115,7 +117,8 @@
         "7309767e-f209-4dc1-8a5e-717cee54d9eb",
         "01e8a316-2e07-4420-a356-02b1e3fdd265",
         "951fc6ac-b3ba-4bc5-91ea-5761985511e6",
-        "d8ac0082-876f-4935-80c4-de4c705ccec2"
+        "d8ac0082-876f-4935-80c4-de4c705ccec2",
+        "1786981219540-nmfp90"
       ],
       "causedBy": [
         "manual-20260507-fix-e8-orchestrator-dataclass-loader"
@@ -163,7 +166,8 @@
         "56038377-4c6b-48f8-8b24-3ff33095de65",
         "d8ac0082-876f-4935-80c4-de4c705ccec2",
         "e8fa85eb-29ee-4617-a086-aec55b0a8922",
-        "6463a27e-4bc0-4022-85bf-3242450eac40"
+        "6463a27e-4bc0-4022-85bf-3242450eac40",
+        "1786981219540-nmfp90"
       ],
       "causedBy": []
     },
@@ -212,7 +216,8 @@
         "d8ac0082-876f-4935-80c4-de4c705ccec2",
         "e8fa85eb-29ee-4617-a086-aec55b0a8922",
         "98570fba-3ce7-45aa-84fd-5560b203d593",
-        "6463a27e-4bc0-4022-85bf-3242450eac40"
+        "6463a27e-4bc0-4022-85bf-3242450eac40",
+        "1786981219540-nmfp90"
       ],
       "causedBy": []
     },
@@ -264,7 +269,8 @@
         "56038377-4c6b-48f8-8b24-3ff33095de65",
         "e8fa85eb-29ee-4617-a086-aec55b0a8922",
         "6463a27e-4bc0-4022-85bf-3242450eac40",
-        "1786980587175-xavuzt"
+        "1786980587175-xavuzt",
+        "1786981219540-nmfp90"
       ],
       "causedBy": []
     },
@@ -319,7 +325,8 @@
         "1786979818704-igg2nn",
         "1786980242869-onutez",
         "1786980587175-xavuzt",
-        "1786980961946-y8g7n8"
+        "1786980961946-y8g7n8",
+        "1786981219540-nmfp90"
       ],
       "causedBy": []
     },
@@ -369,7 +376,8 @@
         "e8fa85eb-29ee-4617-a086-aec55b0a8922",
         "6463a27e-4bc0-4022-85bf-3242450eac40",
         "1786978125686-pe8wl2",
-        "1786978825551-4yxjf4"
+        "1786978825551-4yxjf4",
+        "1786981219540-nmfp90"
       ],
       "causedBy": []
     },
@@ -415,7 +423,8 @@
         "56038377-4c6b-48f8-8b24-3ff33095de65",
         "98570fba-3ce7-45aa-84fd-5560b203d593",
         "1786978825551-4yxjf4",
-        "1786979818704-igg2nn"
+        "1786979818704-igg2nn",
+        "1786981219540-nmfp90"
       ],
       "causedBy": []
     },
@@ -462,7 +471,8 @@
         "4250c93d-0379-41a5-8ad6-4dd4975297af",
         "56038377-4c6b-48f8-8b24-3ff33095de65",
         "98570fba-3ce7-45aa-84fd-5560b203d593",
-        "1786978825551-4yxjf4"
+        "1786978825551-4yxjf4",
+        "1786981219540-nmfp90"
       ],
       "causedBy": []
     },
@@ -114275,7 +114285,8 @@
         "1786978825551-4yxjf4",
         "1786979818704-igg2nn",
         "1786980242869-onutez",
-        "1786980587175-xavuzt"
+        "1786980587175-xavuzt",
+        "1786981219540-nmfp90"
       ],
       "relatedTo": [
         "1784938579774-o0xebs",
@@ -114315,7 +114326,8 @@
         "1786978825551-4yxjf4",
         "1786979818704-igg2nn",
         "1786980242869-onutez",
-        "1786980587175-xavuzt"
+        "1786980587175-xavuzt",
+        "1786981219540-nmfp90"
       ],
       "relatedTo": [],
       "causes": [],
@@ -114351,7 +114363,8 @@
         "1786978825551-4yxjf4",
         "1786979818704-igg2nn",
         "1786980242869-onutez",
-        "1786980587175-xavuzt"
+        "1786980587175-xavuzt",
+        "1786981219540-nmfp90"
       ],
       "relatedTo": [],
       "causes": [],
@@ -114388,7 +114401,8 @@
         "1786978825551-4yxjf4",
         "1786979818704-igg2nn",
         "1786980242869-onutez",
-        "1786980587175-xavuzt"
+        "1786980587175-xavuzt",
+        "1786981219540-nmfp90"
       ]
     },
     "metadata": {
@@ -114421,7 +114435,8 @@
         "1786978825551-4yxjf4",
         "1786979818704-igg2nn",
         "1786980242869-onutez",
-        "1786980587175-xavuzt"
+        "1786980587175-xavuzt",
+        "1786981219540-nmfp90"
       ]
     },
     "metadata": {
@@ -114451,7 +114466,8 @@
         "1786859568721-fahph6",
         "1786978825551-4yxjf4",
         "1786979818704-igg2nn",
-        "1786980242869-onutez"
+        "1786980242869-onutez",
+        "1786981219540-nmfp90"
       ]
     },
     "metadata": {
@@ -114479,7 +114495,8 @@
       "supersededBy": [
         "1786859568721-fahph6",
         "1786978825551-4yxjf4",
-        "1786979818704-igg2nn"
+        "1786979818704-igg2nn",
+        "1786981219540-nmfp90"
       ]
     },
     "metadata": {
@@ -114509,7 +114526,8 @@
       "supersededBy": [
         "1786859568721-fahph6",
         "1786978825551-4yxjf4",
-        "1786979818704-igg2nn"
+        "1786979818704-igg2nn",
+        "1786981219540-nmfp90"
       ]
     },
     "metadata": {
@@ -114538,7 +114556,8 @@
       "supersededBy": [
         "1786859568721-fahph6",
         "1786978825551-4yxjf4",
-        "1786979818704-igg2nn"
+        "1786979818704-igg2nn",
+        "1786981219540-nmfp90"
       ]
     },
     "metadata": {
@@ -114568,7 +114587,8 @@
       "supersededBy": [
         "1786859568721-fahph6",
         "1786978825551-4yxjf4",
-        "1786979818704-igg2nn"
+        "1786979818704-igg2nn",
+        "1786981219540-nmfp90"
       ]
     },
     "metadata": {
@@ -114800,13 +114820,13 @@
     ],
     "files": [],
     "status": "active",
-    "metadata": {
-      "status": "active"
-    },
     "relationships": {
       "supersededBy": [
         "1786980961946-y8g7n8"
       ]
+    },
+    "metadata": {
+      "status": "active"
     }
   },
   {
@@ -114872,13 +114892,13 @@
     ],
     "files": [],
     "status": "active",
-    "metadata": {
-      "status": "active"
-    },
     "relationships": {
       "supersededBy": [
         "1786980961946-y8g7n8"
       ]
+    },
+    "metadata": {
+      "status": "active"
     }
   },
   {
@@ -114894,13 +114914,13 @@
     ],
     "files": [],
     "status": "active",
-    "metadata": {
-      "status": "active"
-    },
     "relationships": {
       "supersededBy": [
         "1786980961946-y8g7n8"
       ]
+    },
+    "metadata": {
+      "status": "active"
     }
   },
   {
@@ -136191,6 +136211,61 @@
       "domain": "software"
     },
     "commitHashes": [
+      "6f1cbea81d0bd0eb98deef9aa7947bde638b2936"
+    ]
+  },
+  {
+    "id": "1786981219540-nmfp90",
+    "question": "Does the symplectic power tower really have period q-1, and what does GF(9) reveal?",
+    "answer": "NO -- the wrap is at the CHARACTERISTIC, not q, and the law is a base-p digit product.\n\nCORRECTION TO PASS 5713. It claimed rank_q(sf^e) has period q-1, verified at q = 3, 5, 7, 11. At q=9 that would put the wrap at e=9. It is at e=3. GF(9) has characteristic 3, so Frobenius is x -> x^3 and sf^3 = Frobenius(sf) is again a form of rank 4. For PRIME q the characteristic equals q and the two statements coincide -- which is exactly why every q I had tested was blind to the difference. All four verifications were at primes.\n\nTHE COMPLETE LAW IS MULTIPLICATIVE OVER BASE-p DIGITS:\n\n    rank(sf^e) = product over base-p digits d of e of C(d+3,3)\n\nAt GF(9): e=3 is (1,0) giving 4x1 = 4 (the wrap); e=4 is (1,1) giving 4x4 = 16; e=5 is (1,2) giving 4x10 = 40. All five measured exponents match. The prime case is the degenerate one where e < p has a single digit and the product collapses to C(e+3,3), which is why the earlier statement looked complete.\n\nTHIS IS THE SHAPE OF A STEINBERG TENSOR PRODUCT, where a twisted module factors over base-p digits of the highest weight. NAMED AS A RESEMBLANCE, NOT CLAIMED -- five exponents at one composite q, and the identification is unproved. Recording the resemblance because it makes the digit law likely to be classical, which is now a THIRD open literature question alongside the attainment.\n\nMETHODOLOGICAL LESSON: ONE COMPOSITE q WAS WORTH MORE THAN FOUR PRIMES. Ten agreeing rungs at q=11 confirmed attainment and revealed nothing about the digit structure. I ran the primes first because they were easier to construct, and that ordering hid the real law for three passes.\n\nLiterature attribution unchanged from Pass 5704: the bound rank(A^(*p)) <= C(p+d-1,p) is classical (arXiv:2005.08181); the attainment for symplectic forms is not found; the digit law is open.\n\nS4 wr S2 CLOSED AS AN OPEN QUESTION after four negative attempts -- Delsarte coset graph (Pass 5671), two-weight structure, the GF(2) kernel (Pass 5685), module irreducibility (Pass 5715). Their COMMON SHAPE is the finding: each asked where INSIDE the object the structure hides -- in a coset graph, a code, a kernel, a submodule. If S4 wr S2 is inherited from how the object was CONSTRUCTED rather than intrinsic to it, every internal search fails for the same reason, and the next attempt should examine the construction rather than the result. Stopping at four rather than trying a fifth.\n\nTWO ARTIFACTS COMMITTED: DATE_FILE_INTEGER_INDEX.md (191 integers, 614 entries across the 185 date-named analysis files, indexed by distinctive integer -- the axis CLAUDE.md says to search, versus the 16 files heading-search reaches); and a one-line-proof filter finding 44 corpus files carrying both a theorem word and a one-line-proof marker. That filter is this session's own lesson made mechanical (2 of 8 of my claims were classical and both had one-line proofs), and it is a work list, not a verdict.</answer>\n<parameter name=\"tags\">w33, symplectic, gf9, steinberg, correction, characteristic, rook, index, pass5720",
+    "timestamp": "2026-08-17T15:40:19.540Z",
+    "tags": [],
+    "files": [],
+    "status": "active",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [
+        "1784409410004-2ofkhg",
+        "1784409410004-kzfbyz",
+        "1784409410003-54eefw",
+        "09152407-437d-45ec-8fb8-6b5496138c01",
+        "1fb5332b-7df7-4881-bce0-800d23047ba3",
+        "5223d2c8-8d9a-4bc0-ba9e-040fded850a6",
+        "36a07730-0426-49d9-a088-24e18ef9f969",
+        "644650eb-c88b-4090-83af-c7ac9e9cef48",
+        "238ca080-17b6-438c-92bd-6eebc9c4ed42",
+        "4919a306-e98c-4f08-9830-945bf9d04adf"
+      ],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": [
+        "1777318403162-biaewx",
+        "1777318403161-4mgrce",
+        "1777318403161-vfxeky",
+        "1777318403161-wwusgh",
+        "1777318403161-8dkkdk",
+        "1777318403161-ai9frf",
+        "1777318403161-qze7ej",
+        "1777318403161-t7tcbd",
+        "1777318403161-06lp3s",
+        "1777318403161-ya0ehy"
+      ]
+    },
+    "metadata": {
+      "status": "active",
+      "source": "mcp",
+      "entities": {
+        "technologies": [],
+        "patterns": [],
+        "concepts": [],
+        "tools": []
+      },
+      "domain": "software"
+    },
+    "commitHashes": [
+      "e9877c49e0b38243b410d2fdbc89868f47f38d2d",
+      "e447d83803dbf1dc4f22dcd60288fbb936b83340",
       "6f1cbea81d0bd0eb98deef9aa7947bde638b2936"
     ]
   }
