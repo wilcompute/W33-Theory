@@ -1,0 +1,69 @@
+{
+  "schema": "w33.pass5704_5711.physics_wilson_generation_linfinity_frontier.v1",
+  "pass_range": [5704, 5711],
+  "status": "EIGHT_RESULTS_FROZEN__ADJOINT_WILSON_FACE_SPLIT__MAGNETIC_GROUP_BRIDGE__RAMANUJAN_2560__L1_ZERO_LINFINITY_CORRECTION__GENERATION_SYMMETRY_BOUNDARY__CI_PENDING",
+  "5704": {
+    "status": "FINITE_ADJOINT_SU3_WILSON_TRANSPORT_CONSTRUCTED__E6_SELECTS_LINES_BUT_FULL_FACE_SET_REMAINS_UNDERDETERMINED",
+    "face_ranks_R": {"line_triangles": 12, "translation_plaquettes": 24, "combined": 28},
+    "cycle_space_dimension": 28,
+    "harmonic_dimensions": {"line_only": 16, "translation_only": 4, "combined": 0},
+    "nonabelian_test": {"theta": 0.125, "bracket_norm": 4.242640687119285, "finite_commutator_distance_from_I": 0.7212135404560752, "adjoint_commutator_trace": 7.8897310636856774},
+    "conclusion": "The E6 allowed36 cubics select 12 affine-line faces (three lifts each). Translation geometry supplies 54 parallelograms. Their 66-face union kills real H1, but no current theorem fixes the union or relative face weights."
+  },
+  "5705": {
+    "status": "MAGNETIC_192_IS_G96xC2__SIGNED_G96_IS_A_CENTRAL_DOUBLE_COVER_OF_THE_CUBE_FRAME_QUOTIENT",
+    "G96": {"order": 96, "center": 2, "derived": 24, "orders": {"1":1,"2":15,"3":8,"4":24,"6":24,"8":24}},
+    "projective48": {"orders": {"1":1,"2":19,"3":8,"4":12,"6":8}, "repo_match": "C2 x S4 = O_h cube/frame controller fingerprint"},
+    "derived24": {"orders": {"1":1,"2":1,"3":8,"4":6,"6":8}, "structure": "non-split central double cover of A4, hence binary tetrahedral SL(2,3)"},
+    "G192": {"exact_structure": "G96 x C2", "center": 4, "derived": 24, "orders": {"1":1,"2":31,"3":8,"4":48,"6":56,"8":48}},
+    "conclusion": "The new D is a second central sheet bit over the signed carrier group. The structural bridge is quotient G96 -> C2 x S4, not an order-only identification with the tomotope or W(D4)."
+  },
+  "5706": {
+    "status": "SWITCHING_GAUGE_FIXED_W33_RAMANUJAN_TOWER_REACHES_2560__RAW_COLOR_RECURSION_IS_NONCANONICAL",
+    "ramanujan_bound": 3.4641016151377544,
+    "selected_signed_radii": {"160":3.423202803887871,"320":3.396072580898327,"640":3.4539332142210513,"1280":3.4467824162948753},
+    "graph_nontrivial_radii": {"80":2.449489742783178,"160":3.2837688756800314,"320":3.423202803887871,"640":3.423202803887871,"1280":3.4539332142210513,"2560":3.4539332142210513},
+    "gauge_fix": "01~23, 02~13, 03~12 are complementary/switching-equivalent; canonical representatives 01,02,03 are chosen before recursive factorization.",
+    "no_go": "S4 relabels the four matchings transitively on the three 2+2 partitions, so the raw color sequence is not an automorphism-invariant finite-state law."
+  },
+  "5707": {
+    "status": "CORRECTION__NONZERO_FIREWALL_JACOBIATOR_CANNOT_BE_REPAIRED_BY_L3_WHEN_L1_IS_ZERO",
+    "identity": "At arity3, l1(l3)+sum l2(l2)+sum l3(l1,...)=0. If l1=0, Jacobi(l2)=0 strictly.",
+    "repo_conflict": "tools/build_linfty_firewall_extension.py explicitly declares l1=0 while treating firewall l2 as non-Jacobi and l3 as the repair.",
+    "repair_space": "empty in the stated ordinary uncurved l1=0 model for any triple with nonzero Jacobiator",
+    "valid_routes": ["introduce an extended degree with nonzero l1 whose image contains J", "modify l2 by a CE coboundary/deformation", "specify and verify a different curved/higher structure"],
+    "conclusion": "The bracket-deletion Jacobiator calculations survive; the old minimal l1=0 L-infinity/confinement interpretation does not."
+  },
+  "5708": {
+    "status": "E8_27x3_HAS_M3_MULTIPLICITY_RELATIVE_TO_E6_ONLY__FULL_FAMILY_SU3_COLLAPSES_COMMUTANT_TO_C",
+    "branching": "248=(78,1)+(1,8)+(27,3)+(27bar,3bar)",
+    "commutant_dimensions": {"E6_only":9,"E6_x_center_Z3":9,"E6_x_generic_torus":3,"E6_x_full_SU3_family":1},
+    "conclusion": "C3 is a genuine three-dimensional multiplicity space for the E6 27, but unbroken SU3_family rotates it irreducibly; individual generations are not invariant under the maximal product symmetry."
+  },
+  "5709": {
+    "status": "OLD_Z3_CURVATURE_CAN_BE_EMBEDDED_AS_SU3_CENTER_FLUX_BUT_IS_INVISIBLE_TO_AFFINE_ADJOINT_TRANSPORT",
+    "curvature_histogram": {"1":27,"2":27},
+    "embedding": "h -> omega^h I3 in Z(SU3)",
+    "Wilson": {"fundamental_trace":"3 omega^h","adjoint_trace":8,"adjoint_holonomy":"identity for all center h"},
+    "conclusion": "The adjoint-triviality found in Pass5691 is exactly compatible with center flux, but a triality-nonzero/fundamental matter representation is extra structure and no color identification is derived."
+  },
+  "5710": {
+    "status": "DK_DUAL_FLAT_RAYS_HAVE_IDENTICAL_PFAFFIAN_PARITY__NO_D_PROTECTED_TOPOLOGICAL_SPLIT",
+    "unit_bond_levels": ["-2sqrt3 x4","-sqrt3 x4","+sqrt3 x4","+2sqrt3 x4"],
+    "pfaffians_canonical_basis": {"ray1":-1296.0,"ray2":-1296.0,"relative_sign_equal":true},
+    "gap": 1.732050807568864,
+    "D_tests": {"detD":1,"commutator_norm":19.59591794226539,"anticommutator_norm":9.7979589711327,"DK_map_residual":6.1e-14},
+    "conclusion": "D is neither a commuting nor anticommuting symmetry of one ray; DK exchanges the two rays. Their relative Pfaffian parity is identical, so D supplies a duality orbit rather than a Z2 topological separation."
+  },
+  "5711": {
+    "status": "UNBROKEN_SU3_FAMILY_FORCES_DEGENERATE_GENERATION_OPERATOR__HIERARCHY_REQUIRES_SYMMETRY_BREAKING",
+    "Hermitian_commutant_real_dimensions": {"E6_only_or_no_family_action":9,"center_Z3_only":9,"generic_family_torus":3,"full_SU3_family":1},
+    "mass_consequence": "full SU3_family permits only m I3 and therefore an exactly degenerate triplet; a generic torus permits three diagonal masses but no mixing; center Z3 alone leaves an arbitrary Hermitian M3",
+    "conclusion": "The fundamental 3 can encode multiplicity, but it cannot explain a nondegenerate hierarchy while the family SU3 remains exact."
+  },
+  "corrections": [
+    "Pass5693 now fixes complementary-signing switching gauge before recursive lift selection, eliminating floating tie dependence.",
+    "Pass5707 supersedes the ordinary l1=0 L-infinity repair claim while preserving the finite firewall Jacobiator/collision-support calculations."
+  ],
+  "boundary": "All results are finite Lie/group/graph/cochain/representation/Pfaffian statements. No QCD identification, confinement theorem, physical Yang-Mills coupling, physical topological phase, Standard Model mass hierarchy, observed-generation derivation, or spacetime continuum is claimed."
+}
