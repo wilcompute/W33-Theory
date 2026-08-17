@@ -1,0 +1,53 @@
+{
+  "boundary": "Pass 5944 is EXHAUSTIVE over all 3240 covered triples, not sampled. Pass 5946 characterises the odd-q determinant geometry completely at q=3 only. Novelty is not claimed: the line/plane dichotomy in PG(3,3) and the identification of Q+(3,3) with a 4x4 grid are both textbook",
+  "pass_5944_the_split_is_projective_span": {
+    "equivalences": "heptad-count 16 <=> perp-size 4 <=> span-rank 2, and all three agree on every triple",
+    "exhaustive": true,
+    "perfect_separation": true,
+    "so": "the heptad design's 2-regularity fails at the triple level exactly along the line/plane dichotomy of the ambient projective space, not along anything intrinsic to the symplectic structure",
+    "table": [
+      {
+        "heptad_count": 16,
+        "perp_size": 4,
+        "span_rank": 2,
+        "triples": 360
+      },
+      {
+        "heptad_count": 33,
+        "perp_size": 1,
+        "span_rank": 3,
+        "triples": 2880
+      }
+    ],
+    "the_invariant": "whether the three points lie on a PROJECTIVE LINE of PG(3,3). They are pairwise non-collinear in W(3,3) -- no totally isotropic line joins them -- but three of them can still span only a 2-space, a hyperbolic line. Those lie in 16 heptads; triples spanning a plane lie in 33",
+    "triples_checked": 3240
+  },
+  "pass_5946_the_odd_q_analogue": {
+    "classes": 40,
+    "construction": "det polarization on M_2(F_3), modulo scalars {+-1}",
+    "invertible": 24,
+    "odd_q_case": "40 = 16 + 24",
+    "significance": "the odd-q determinant construction is not a failure, it is a DIFFERENT geometry. Where char 2 gives the doily W(3,2) with 9+6, char 3 gives the hyperbolic quadric with 16+24. Their #4 next step should target Q+(3,3) at odd q rather than a symplectic lift that Pass 5936 proved cannot exist",
+    "singular": 16,
+    "the_quadric": {
+      "identity": "Q+(3,3), the hyperbolic quadric",
+      "max_coclique": 4,
+      "orthogonality_degree": 6,
+      "points": 16,
+      "reading": "Q+(3,3) is the 4x4 grid; polarization-orthogonality is 6-regular on its 16 points and its maximum coclique is 4, a transversal -- the quadric's own ovoid",
+      "regular": true
+    },
+    "their_char_2_case": "15 = 9 + 6"
+  },
+  "pass_5947_summary": {
+    "two_exhaustive_facts": [
+      "the q=3 heptad design fails at triples exactly on projective span rank 2 vs 3",
+      "the odd-q determinant geometry is Q+(3,3) = 16 points + 24 units, max coclique 4"
+    ],
+    "what_is_still_open": [
+      "identification of the 7-regular swap graph",
+      "whether Sp(4,3) has exactly two orbits on occurring triples",
+      "the exact q=5 stabiliser"
+    ]
+  }
+}

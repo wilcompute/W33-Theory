@@ -17,11 +17,11 @@
 
 ## ✅ Next Steps
 <!-- What should we do next? -->
-- Auto-saved at 2026-08-17T20:30:58.482Z (reason: threshold-commits)
+- Auto-saved at 2026-08-17T20:42:26.554Z (reason: threshold-commits)
 - Recent commits:
-  - f9207ec10 Pass5920-5927: the 2880 heptads form a 2-design, and their swap graph is 7-regular
-  - 37edb52ce Merge remote-tracking branch 'origin/master'
-  - ec293dbd8 Pass5912-5919: the 2880 classification was already BT819's -- fifth rediscovery
+  - 9a5899a92 Merge remote-tracking branch 'origin/master'
+  - 3ab879b02 Pass5936-5943: the determinant bridge is characteristic-2 only, and the triple split is perp size
+  - a13fb7bcc Pass5921-5932: M2(F2)/W(3,2) doily bridge — Smith-form cokernel classification + theorem-tier CI linter
 
 ## 📝 Open Questions
 <!-- What do we still need to figure out? -->
