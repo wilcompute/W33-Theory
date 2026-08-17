@@ -1,0 +1,36 @@
+% Passes 6137--6144: CE2/K3 evidence repair.
+\subsection*{Passes 6137--6144: CE2 orbit and K3 witness claims fail-closed}
+
+The Pass~6041--6136 continuation did not establish the claimed CE2 global
+closure.  Anchor~23 retained five seed rows but supplied family totals without
+enumerating orbit rows or constructing the automorphism action.  Anchors~24--25
+were introduced by analogy, and the anchor~26--39 batch scripts contained no CE2
+rows at all: they assigned a constant coverage count and the label \texttt{CLOSED}.
+Accordingly,
+\[
+\boxed{\text{CE2 global orbit closure remains open}.}
+\]
+The live producers now retain only evidenced seed/hypothesis status and withdraw
+the canned family counts.
+
+The historical global verifier was internally self-refuting: it constructed
+$20$ ledger entries, printed $20/40=50\%$, asserted only \texttt{total>=20}, and
+then printed \texttt{VERIFIED COMPLETE}.  The live verifier is fail-closed and
+counts only explicitly evidenced rows.
+
+The historical K3 witness scan likewise did not scan the current K3 object.  It
+allocated a fresh zero matrix of shape $2428\times36$ and confirmed that it had
+no nonzero entries.  The corrected status is therefore
+\[
+\boxed{\text{NO OBJECT LOADED --- K3 witness scan not run}.}
+\]
+A future scan must load or reconstruct the target curvature/cochain object,
+freeze its source hash, prove the coordinate map to the active block, and compute
+the zero/nonzero result from that object.
+
+\paragraph{Evidence contract.}
+An orbit closure requires explicit object values, a verified action or complete
+enumerator, coverage derived from enumerated objects, and a stable source
+certificate.  A witness scan requires an actual target object plus a certified
+coordinate map.  Analogy-generated rows, repeated count dictionaries and zero
+templates are not theorem certificates.
