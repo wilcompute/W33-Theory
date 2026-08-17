@@ -11,6 +11,7 @@ RESULT = ROOT / "data" / "PART_W33_PASS5792_5799_MATRIX_RING_TRANSPOSE_OUTER.jso
 
 
 def test_pass5792_5799_exact_replay() -> None:
+    before = RESULT.read_bytes()
     proc = subprocess.run(
         [sys.executable, str(SCRIPT)],
         cwd=ROOT,
@@ -19,6 +20,7 @@ def test_pass5792_5799_exact_replay() -> None:
         text=True,
     )
     assert "PASS5792-5799: PASS" in proc.stdout
+    assert RESULT.read_bytes() == before
     d = json.loads(RESULT.read_text())
     assert d["status"] == "PASS"
     assert d["pass_5792_affine_left_right_group"]["group_order"] == 576
