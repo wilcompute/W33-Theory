@@ -1,0 +1,139 @@
+% Passes 5792--5799: matrix-ring affine model and transpose outer involution.
+\subsection{The q=5 Latin carrier as an affine $M_2(\mathbb F_2)$ left--right geometry}
+\label{sec:pass5792-5799-matrix-ring-transpose}
+
+The Klein-$V_4$ chart reconstructed in Passes~5776--5783 admits a concrete
+matrix-algebra model that resolves the source outer involution.  Choose
+$V=W=\mathbb F_2^2$.  The full centreless order-$576$ Latin carrier is
+\[
+ \boxed{
+ G_{576}=\operatorname{Hom}(W,V)\rtimes
+ \bigl(GL(V)\times GL(W)\bigr).
+ }
+\]
+After choosing bases,
+$\operatorname{Hom}(W,V)\cong M_2(\mathbb F_2)$, so
+\[
+ \boxed{
+ G_{576}\cong
+ M_2(\mathbb F_2)_{+}:\bigl(GL_2(2)\times GL_2(2)\bigr),
+ \qquad16\cdot6\cdot6=576.
+ }
+\]
+Explicitly,
+\[
+ (X,A,B):M\longmapsto AMB^{-1}+X.
+\]
+The verifier enumerates all $576$ such affine maps.  The normal matrix space
+contains six invertible and ten singular matrices, the classical
+$M_2(\mathbb F_2)$ census.
+
+The two degree-$12$ carriers have a particularly simple dual description.  The
+point carrier is
+\[
+ \boxed{P=\{(w,x):0\ne w\in W,\ x\in V\}.}
+\]
+For $0\ne\phi\in V^*$ and $\psi\in W^*$ define
+\[
+ \boxed{
+ H_{\phi,\psi}=\{(w,x)\in P:\phi(x)+\psi(w)=1\}.
+ }
+\]
+There are twelve such six-subsets.  Under the explicit q=5 coordinate chart of
+Pass~5778 they agree \emph{exactly} with the twelve frozen multiplicity-six
+heavy supports.  Replacing the right side by zero gives exactly the twelve
+Klein intercalate supports.  Hence the preceding complement theorem is the
+single affine relation
+\[
+ \boxed{
+ \phi(x)+\psi(w)=0/1
+ \quad\Longleftrightarrow\quad
+ \text{intercalate/heavy}.
+ }
+\]
+
+The induced point action is
+\[
+ (w,x)\longmapsto\bigl(Bw,Ax+X(Bw)\bigr),
+\]
+while the dual heavy action is
+\[
+ (\phi,\psi)\longmapsto
+ \left(\phi A^{-1},\psi B^{-1}+\phi A^{-1}X\right).
+\]
+The sixteen Reye/Latin lines are the graphs of the sixteen linear maps
+$W\to V$ restricted to $W\setminus\{0\}$.  Exhausting all group elements gives
+faithful order-$576$ actions on the point, heavy and line carriers, with the
+two $12$-actions having stabilizer order $48$ and subdegrees $1,3,8$.  The
+permutation-character Gram is
+\[
+ \boxed{
+ \left(\langle\pi_i,\pi_j\rangle\right)_{i,j=P,H,L}
+ =\begin{pmatrix}3&2&2\\2&3&2\\2&2&3\end{pmatrix},
+ }
+\]
+and the point-side sign twist satisfies
+\[
+ \boxed{
+ \bigl(
+ \langle\varepsilon\pi_P,\pi_P\rangle,
+ \langle\varepsilon\pi_P,\pi_H\rangle,
+ \langle\varepsilon\pi_P,\pi_L\rangle
+ \bigr)=(0,0,0).
+ }
+\]
+Thus the independent affine-matrix model exactly replays the Pass~5667--5674
+carrier-character certificate.
+
+Now let $\Theta(M)=M^T$.  Direct conjugation gives
+\[
+ \boxed{
+ \Theta\,(X,A,B)\,\Theta
+ =\tau(X,A,B)
+ =(X^T,B^{-T},A^{-T}),
+ }
+\]
+with $\tau^2=1$.  Transpose normalizes the affine group but is not one of its
+$576$ elements.  It fixes eight of the sixteen matrices.  More importantly,
+with the chosen bases the bijection
+\[
+ \boxed{F:P\to H,\qquad F(w,x)=(w^T,x^T)}
+\]
+satisfies the exact intertwining law
+\[
+ \boxed{F(g\cdot p)=\tau(g)\cdot F(p)}
+\]
+for every group element and every point.  Hence the heavy action is precisely
+the point action twisted by the transpose factor-swap automorphism.
+
+The outerness is visible inside the normal translation subgroup
+$T=M_2(\mathbb F_2)_+$.  A point stabilizer meets $T$ in
+\[
+ T_P=\{X:Xw=0\},
+\]
+a four-element fixed-right-kernel subspace whose aggregate image spans all of
+$V$.  A heavy stabilizer meets $T$ in
+\[
+ T_H=\{X:\phi X=0\},
+\]
+a four-element fixed-left-image subspace whose aggregate image has dimension
+one.  Internal conjugation acts on $T$ by $X\mapsto AXB^{-1}$ and cannot
+exchange these two types, whereas
+\[
+ \boxed{T_P^T=T_H.}
+\]
+This supplies a concrete finite-algebra mechanism for the abstract carrier
+outer involution of Pass~5674.
+
+\paragraph{Prior art and evidence boundary.}
+The ring $M_2(\mathbb F_2)$ and its use in two-qubit projective-ring geometry
+are external prior art; see Saniga--Planat--Pracna,
+\emph{Projective Ring Line Encompassing Two-Qubits}, arXiv:quant-ph/0611063.
+That work uses the projective line over the noncommutative order-$16$ ring to
+model the two-qubit Pauli commutation geometry.  The theorem here is narrower:
+the q=5 Reye/Latin normal $16$-space is the \emph{additive} matrix space, its
+order-$576$ carrier is the affine left/right unit action, and transpose
+realizes the point/heavy factor swap.  No identification of q=5 W33 carrier
+points with two-qubit observables, projective-ring points, entanglement classes,
+or physical states is made.  No dynamics, gauge interaction, mass/coupling, or
+physical-unification conclusion follows.
