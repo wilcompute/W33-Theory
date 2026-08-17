@@ -1,0 +1,79 @@
+{
+  "pass_5957_linf": {
+    "evidence": [
+      "producer sets mc_residual=k-lambda=10, not zero",
+      "producer computes mc_sum_formal=Y1+Y2+Y3 and comments that it is not zero",
+      "l2/l3 mass ratios are assigned from pre-existing denominator formulas rather than evaluated from an explicit transferred L-infinity structure"
+    ],
+    "retained": "exact arithmetic of the stated ratios may remain as an ansatz table",
+    "verdict": "NOT_DERIVED"
+  },
+  "pass_5958_weyl": {
+    "evidence": [
+      "N_n_count is defined to return n^4*N1",
+      "the same imposed n^4 scaling is then used to infer dimension d=4",
+      "finite spectrum has N(4)=362 and N(16)=440 while C_W=480 is inserted separately"
+    ],
+    "retained": "finite D^2 spectrum and any independently proved refinement census",
+    "verdict": "CIRCULAR"
+  },
+  "pass_5959_electron": {
+    "evidence": [
+      "factor product 2*49*17*16*13=346528 is exact",
+      "no mass operator/Yukawa dynamics in the producer forces this product",
+      "the reported sigma is manufactured as deviation_pct/0.87, not propagated from an uncertainty model"
+    ],
+    "exact_denominator": 346528,
+    "retained": "integer factorization and comparison-only status",
+    "verdict": "NUMERICAL_ANSATZ_NOT_PREDICTION"
+  },
+  "pass_5960_yang_mills": {
+    "coefficient_12_sqrt_13_over_40": 6.841052549123626,
+    "evidence": [
+      "producer explicitly says solve for Lambda_QCD_eff that gives exactly 1818 MeV",
+      "producer sets delta_ym_target=1818 then lambda_eff=target/coeff",
+      "an externally supplied QCD scale remains necessary"
+    ],
+    "lambda_eff_MeV_backsolved_for_1818": 265.7485788605909,
+    "retained": "dimensionless coefficient 12*sqrt(13/40) as an ansatz only",
+    "verdict": "TARGET_BACKSOLVED"
+  },
+  "pass_5961_neutrino": {
+    "denominator": 10221120,
+    "evidence": [
+      "initial stated 24*480*13*273 product equals 40,884,480, not target",
+      "producer notices factor-four miss and replaces 24 by 6 to obtain 10,221,120",
+      "electron mass is then used as the external dimensionful seed"
+    ],
+    "retained": "integer identity 6*480*13*273=10,221,120",
+    "verdict": "TARGET_FACTOR_REPAIRED_ANSATZ"
+  },
+  "pass_5962_inflation": {
+    "evidence": [
+      "producer defines r=1/N_tritangent rather than deriving r from an inflationary action/potential",
+      "its own single-field consistency calculation gives an n_s tension and then declares n_s requires a separate mechanism"
+    ],
+    "exact_combinatorics": "45 tritangent planes is retained where independently certified",
+    "retained": "45-count only, not r=1/45 as a prediction",
+    "verdict": "OBSERVABLE_MAP_ASSUMED"
+  },
+  "pass_5963_scalar": {
+    "evidence": [
+      "tau(K_2,2,2)=384 is exact",
+      "producer then defines mass as measured Higgs mass times 384/15 without a Hamiltonian, pole equation, coupling, or self-energy derivation"
+    ],
+    "octahedron_spanning_trees": 384,
+    "retained": "tau=384 and ratio 384/15 as combinatorial data only",
+    "verdict": "OBSERVABLE_MAP_ASSUMED"
+  },
+  "pass_5964_release_policy": {
+    "claim_tier": "ANSATZ/COMPARISON_ONLY unless a later independent dynamics theorem supplies the observable map",
+    "rule": "A producer that inserts n^d to infer d, solves an input scale for a target observable, repairs a factor after seeing the target, or defines an observable as the reciprocal/product of a combinatorial count has not derived a physical prediction.",
+    "superseded_ranges": [
+      "5913-5932 physical-derivation claims",
+      "5933-5956 physical-prediction claims"
+    ]
+  },
+  "schema": "w33.pass5957_5964.prediction_evidence_audit.v1",
+  "status": "PASS_CORRECTION"
+}
