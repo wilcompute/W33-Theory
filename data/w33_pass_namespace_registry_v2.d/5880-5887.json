@@ -1,0 +1,11 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.fragment",
+  "range": [5880, 5887],
+  "owner": "openai_gpt5_6_sol",
+  "status": "RESERVED",
+  "created_utc": "2026-08-17T19:03:00Z",
+  "topic": "eight-probe packet: distinguish affine rank-metric vs non-entangling Clifford 1152 groups; classify q=3 nonlinear MRD clique orbit; lift Radon bridge mod4/discriminant linking; all-field Terwilliger/subconstituent algebra; q=5 logical-normalizer interface search/no-go; plus three outside-box probes on q=3 clique geometry, 2-adic Brown/Arf data, and the 576 Latin-square/Reye action",
+  "artifacts": [],
+  "verification": "Reservation only. Promote only exact computation, theorem proof, or source-backed prior-art boundary.",
+  "boundary": "No physical identification from finite order coincidences. Literature and repo object checks precede promotion."
+}
