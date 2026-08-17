@@ -1,0 +1,91 @@
+{
+  "boundary": "Pass 6056's bridge is a RESTATEMENT of the classical fact sp(2n) = Sym^2(V), not a discovery -- its value is that it explains a rank I had measured without knowing why. Pass 6058 reports a literature gap in the repo. The 2507.11414 PDF would not extract and its contents are NOT summarised here",
+  "pass_6056_the_vogel_bridge": {
+    "c2_case": {
+      "is": "sp(4)",
+      "params": [
+        -2,
+        1,
+        4
+      ],
+      "t": 3,
+      "universal_dim": 10
+    },
+    "status": "classical -- this is the standard identification sp(2n) = Sym^2(V), and its value here is explaining a measured rank rather than being new",
+    "the_bridge": "Sp(4,3) is the group of W(3,3) and its Lie algebra is C_2 = sp(4) of dimension 10. That is EXACTLY the rank I measured at Pass 5684 for the non-collinearity matrix of W(3,q)",
+    "universal_formula": "dim = (a-2t)(b-2t)(g-2t)/(a*b*g) with t = a+b+g",
+    "verified": {
+      "E6": 78,
+      "E7": 133,
+      "E8": 248,
+      "F4": 52,
+      "G2": 14
+    },
+    "why_it_is_not_a_coincidence": "sp(2n) IS Sym^2(V) as a vector space. So the Hadamard SQUARE of the symplectic form has rank equal to the dimension of the symplectic Lie algebra, and the e=2 rung of my tower is the adjoint representation"
+  },
+  "pass_6057_the_tower_touches_once": {
+    "lie_algebra_hits": {
+      "2": [
+        "sp(4)",
+        "so(5)"
+      ]
+    },
+    "note": "sp(4) and so(5) are isomorphic, so the two hits are one algebra",
+    "sym_dims": {
+      "1": 4,
+      "2": 10,
+      "3": 20,
+      "4": 35,
+      "5": 56
+    },
+    "verdict": "ONLY e=2 lands on a Lie algebra dimension. The tower rank_q(sf^e) = C(e+3,3) is NOT a family of adjoint representations -- it touches the Lie side at exactly one rung, and that rung is where the symplectic algebra is"
+  },
+  "pass_6058_the_repo_literature_gap": {
+    "action_needed": "add it to scripts/w33_vogel_universality.py's reference block. Its PDF would not extract via fetch, so its contents are NOT summarised and no claim about it is made here",
+    "existing_repo_results": {
+      "exceptional_hit_dims": [
+        1,
+        3,
+        8,
+        14,
+        28,
+        47,
+        52,
+        78,
+        96,
+        119,
+        133,
+        190,
+        248
+      ],
+      "s12_vogel_spine": "the promoted s12 shell has a clean Vogel placement and does NOT land on the positive non-degenerate exceptional line"
+    },
+    "not_cited": "arXiv:2507.11414, Bishler, Vogel's universality and Macdonald dimensions",
+    "repo_cites": [
+      "Morozov-Sleptsov, EPJC 85 1233 (2025)",
+      "Isaev et al., arXiv:2601.01612 (2026)",
+      "Bishler-Mironov, arXiv:2504.13831 (2025)",
+      "Bishler-Mironov-Morozov, arXiv:2505.16569 (2025)"
+    ]
+  },
+  "pass_6059_a_negative_worth_recording": {
+    "checked": "do my odd-q alpha values 7, 18, 33, 51, 67 appear among Vogel exceptional dimensions?",
+    "exceptional_dims": [
+      1,
+      3,
+      8,
+      14,
+      28,
+      47,
+      52,
+      78,
+      96,
+      119,
+      133,
+      190,
+      248
+    ],
+    "hits": "none",
+    "so": "the alpha sequence has no Vogel-line interpretation, which is a clean negative and closes a bridge I would otherwise have been tempted to look for"
+  }
+}
