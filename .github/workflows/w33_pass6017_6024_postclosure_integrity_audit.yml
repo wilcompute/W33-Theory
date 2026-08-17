@@ -1,0 +1,57 @@
+name: Pass6017-6024 post-closure integrity audit
+
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass6017_6024_postclosure_integrity_audit.py'
+      - 'analysis/PASS6017_6024_postclosure_integrity_audit.md'
+      - 'analysis/PASS6017_6024_postclosure_integrity_audit_insert.tex'
+      - 'data/PART_W33_PASS6017_6024_POSTCLOSURE_INTEGRITY_AUDIT.json'
+      - 'tests/test_w33_pass6017_6024_postclosure_integrity_audit.py'
+      - 'scripts/w33_ce2_anchor22_closure.py'
+      - 'scripts/w33_yukawa_radical_pair_closure.py'
+      - 'scripts/w33_k3_glue_slot_realization.py'
+      - 'scripts/w33_bridge_full_closure_theorem.py'
+      - 'tools/qiskit/toe_bridge_completed_avatar_oracle.py'
+      - 'docs/pass_5957_6016_summary.md'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - '.github/workflows/w33_pass6017_6024_postclosure_integrity_audit.yml'
+  pull_request:
+    paths:
+      - 'analysis/w33_pass6017_6024_postclosure_integrity_audit.py'
+      - 'data/PART_W33_PASS6017_6024_POSTCLOSURE_INTEGRITY_AUDIT.json'
+      - 'tests/test_w33_pass6017_6024_postclosure_integrity_audit.py'
+      - 'scripts/w33_ce2_anchor22_closure.py'
+      - 'scripts/w33_yukawa_radical_pair_closure.py'
+      - 'scripts/w33_k3_glue_slot_realization.py'
+      - 'scripts/w33_bridge_full_closure_theorem.py'
+      - 'tools/qiskit/toe_bridge_completed_avatar_oracle.py'
+      - 'docs/pass_5957_6016_summary.md'
+  workflow_dispatch:
+
+jobs:
+  exact-integrity-replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install focused dependencies
+        run: python -m pip install --upgrade pip numpy pytest
+      - name: Replay correction producer
+        run: python analysis/w33_pass6017_6024_postclosure_integrity_audit.py
+      - name: Compare frozen correction byte-for-byte
+        run: git diff --exit-code -- data/PART_W33_PASS6017_6024_POSTCLOSURE_INTEGRITY_AUDIT.json
+      - name: Run corrected CE2 producer
+        run: python scripts/w33_ce2_anchor22_closure.py
+      - name: Run corrected Yukawa producer
+        run: python scripts/w33_yukawa_radical_pair_closure.py
+      - name: Run corrected K3 formal-avatar producer
+        run: python scripts/w33_k3_glue_slot_realization.py
+      - name: Run corrected bridge ledger
+        run: python scripts/w33_bridge_full_closure_theorem.py
+      - name: Run focused regression
+        run: pytest -q tests/test_w33_pass6017_6024_postclosure_integrity_audit.py
+      - name: Check manifest promotion
+        run: grep -F '\input{analysis/PASS6017_6024_postclosure_integrity_audit_insert}%' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
