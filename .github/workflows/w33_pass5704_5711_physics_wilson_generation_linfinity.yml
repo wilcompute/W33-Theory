@@ -20,6 +20,7 @@ on:
       - 'data/w33_pass_namespace_registry_v2.d/5704-5711.json'
       - 'data/PART_W33_PASS5691_5698_PHYSICS_YM_DUALITY_RAMANUJAN_FRONTIER_SUMMARY.json'
       - 'data/w33_publication_frontier_contract_v2.json'
+      - 'data/w33_public_frontier_extension_pass4461_4464.json'
       - '.github/workflows/w33_pass5704_5711_physics_wilson_generation_linfinity.yml'
   workflow_dispatch:
 
