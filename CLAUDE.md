@@ -163,6 +163,14 @@ not, the result was never about the object. Run it *before* writing the framing.
 - *Derive the sentence from the array.* Three claims that session contradicted a table
   printed directly above them. None was a reasoning error; all three were predictions
   written beside output that had not been read.
+- *Build the objects the claim predicts on.* A conjecture surviving only confirming
+  cases has not been tested. Pass 5800 asserted an equivalence on three configurations;
+  Pass 5808 refuted it in ONE batch by constructing three where the claim forced an
+  answer. **Check each constructed object against a published invariant** — two of that
+  survey's rows were configurations mislabelled from memory (|Aut| 4 and 1 against
+  published 120 and 16), and the fake was actively *concealing* the counterexample.
+  And beware the VACUOUS pass: the surviving direction later passed its sharpest test
+  only because both witnesses had an empty kernel.
 
 **Pass-number reservations must be pushed AND the push VERIFIED before work begins.**
 Passes 5744 and 5776 both collided with the other lane and needed renumbering; in the
