@@ -1,0 +1,72 @@
+{
+  "boundary": "Pass 5960 is an identity verified at seven values of q and constructed directly at q=4 over GF(4). It concerns the COUNTING split only -- the geometry the split sits in is symplectic at even q and orthogonal at odd q, per Pass 5936. Pass 5963 records a NON-relation and asserts nothing",
+  "pass_5960_the_general_split": {
+    "algebra": "q^2+2q+1 + q^3-q = q^3+q^2+q+1 = (q^2+1)(q+1)",
+    "direct_construction_at_q4": {
+      "classes": 85,
+      "field": "GF(4) = F2[w]/(w^2+w+1)",
+      "matches_formula": true,
+      "nonzero_matrices": 255,
+      "singular": 25,
+      "units": 60
+    },
+    "identity": "(q^2+1)(q+1) = (q+1)^2 + q(q^2-1)",
+    "meaning": "the nonzero 2x2 matrices over F_q, modulo scalars, split into SINGULAR classes forming Q+(3,q) with (q+1)^2 points, and UNIT classes numbering q(q^2-1)",
+    "verified": [
+      {
+        "q": 2,
+        "singular": 9,
+        "total": 15,
+        "units": 6
+      },
+      {
+        "q": 3,
+        "singular": 16,
+        "total": 40,
+        "units": 24
+      },
+      {
+        "q": 4,
+        "singular": 25,
+        "total": 85,
+        "units": 60
+      },
+      {
+        "q": 5,
+        "singular": 36,
+        "total": 156,
+        "units": 120
+      },
+      {
+        "q": 7,
+        "singular": 64,
+        "total": 400,
+        "units": 336
+      },
+      {
+        "q": 8,
+        "singular": 81,
+        "total": 585,
+        "units": 504
+      },
+      {
+        "q": 9,
+        "singular": 100,
+        "total": 820,
+        "units": 720
+      }
+    ]
+  },
+  "pass_5961_what_this_says_about_their_result": {
+    "so": "their two-qubit identification survives intact; what does not survive is the reading that 9+6 is itself a two-qubit signature. The signature is the symplectic ambient, not the split",
+    "the_correction_of_emphasis": "the SPLIT is not special to q=2 -- it is the q=2 case of (q^2+1)(q+1) = (q+1)^2 + q(q^2-1), and the singular part is Q+(3,q) at every q. 9+6, 16+24, 25+60, 36+120 are one family",
+    "their_claim": "M_2(F_2) splits 15 = 9 rank-one + 6 units, the two-qubit 9+6",
+    "what_IS_special_at_q_2": "not the counting but the AMBIENT GEOMETRY. Pass 5936 proved the determinant polarization is alternating only in characteristic 2, so only there does the split sit inside a SYMPLECTIC space W(3,2). At odd q the same numbers sit inside an orthogonal geometry"
+  },
+  "pass_5963_a_non_relation": {
+    "answer": "NO relation established",
+    "question": "are the 1+3+3 stabiliser orbits and the 360/2880 triple orbits related?",
+    "the_objects": "C3 x C6 of order 18 acting on the 7 points of ONE heptad, versus Sp(4,3) of order 51840 acting on 3240 triples",
+    "why_i_am_saying_so_explicitly": "both decompositions contain threes, and asserting a connection from that is exactly the coincidence pattern this session has killed eleven times. The threes are the field characteristic appearing twice"
+  }
+}
