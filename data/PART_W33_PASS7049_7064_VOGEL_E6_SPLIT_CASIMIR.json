@@ -1,0 +1,36 @@
+{
+  "passes": [7049,7050,7051,7052,7053,7054,7055,7056,7057,7058,7059,7060,7061,7062,7063,7064],
+  "literature_target": "A.P. Isaev, Vogel universality and beyond, arXiv:2601.01612v2 (2026)",
+  "repo_native_construction": {
+    "E6_minuscule_dimension": 27,
+    "E6_lie_closure_dimension": 78,
+    "tensor_dimension": 2106,
+    "invariant_form": "G_ab=Tr_27(X_a X_b)",
+    "exact_dual_denominator": 18,
+    "integral_split_casimir": "O18=18*Omega",
+    "vogel_normalization": "C_hat=Omega/4=O18/72"
+  },
+  "exact_characteristic_identity": "(O18-3I)(O18+12I)(O18+36I)=0",
+  "trace_form_spectrum": {"1/6":1728,"-2/3":351,"-2":27},
+  "vogel_normalized_spectrum": {"1/24":1728,"-1/6":351,"-1/2":27},
+  "decomposition": "27 tensor 78 = 1728 + 351 + 27",
+  "projectors": {
+    "1728": "(O18+12I)(O18+36I)/585",
+    "351": "-(O18-3I)(O18+36I)/360",
+    "27": "(O18-3I)(O18+12I)/936"
+  },
+  "projector_checks": {
+    "idempotent": true,
+    "pairwise_orthogonal": true,
+    "sum_to_identity": true,
+    "ranks": [1728,351,27]
+  },
+  "trace_moments": {
+    "Tr_C": "0",
+    "Tr_C2": "39/2",
+    "Tr_C3": "-39/8",
+    "Tr_C3_eq_minus_quarter_Tr_C2": true
+  },
+  "status": "EXACT_OPERATOR_LEVEL_VOGEL_E6_MATCH",
+  "boundary": "This verifies the E6 split-Casimir/projector identity on a repo-native E6 carrier. It does not prove Vogel's conjectural universal Lie algebra exists and does not identify W33 itself with a Vogel object."
+}
