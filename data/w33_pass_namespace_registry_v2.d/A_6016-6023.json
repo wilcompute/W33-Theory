@@ -1,0 +1,8 @@
+{
+  "lo": 6016,
+  "hi": 6023,
+  "lane": "A",
+  "track": "A",
+  "topic": "alpha(W(2n-1,2)) = 2n+1 verified at four ranks and proved by Gram rank; corrects a hardcoded value",
+  "reserved": "2026-08-17"
+}

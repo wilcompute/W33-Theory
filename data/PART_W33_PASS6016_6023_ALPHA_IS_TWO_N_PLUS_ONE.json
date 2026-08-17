@@ -1,0 +1,59 @@
+{
+  "boundary": "Pass 6016 CORRECTS a hardcoded value in my own Pass 5994 output. The law is verified at four ranks AND proved by a Gram-rank argument, which by this session's own heuristic -- a short proof about a classical object -- means it is almost certainly classical. Novelty is NOT claimed",
+  "pass_6016_correcting_a_hardcoded_value": {
+    "consequence": "the sequence is 3, 5, 7, not 1, 5, 7 -- and that changes everything",
+    "how_it_slipped": "the same failure mode as the three prose-versus-output slips earlier this session -- a number written by hand next to a computation that would have produced it correctly",
+    "the_error": "Pass 5994 printed alpha(W(1,2)) = 1. That came from a HARDCODED table in the print statement, not from the computation running beside it",
+    "the_truth": "in W(1,2) the symplectic form is nonzero on every pair of distinct nonzero vectors, so no two points are collinear and alpha = 3"
+  },
+  "pass_6017_the_law": {
+    "all_four_match": true,
+    "note": "at n=2 this coincides with the ovoid size q^2+1 = 5; above rank 2 there are no ovoids and yet the linear growth continues",
+    "statement": "alpha(W(2n-1,2)) = 2n+1",
+    "verified": [
+      {
+        "alpha": 3,
+        "degree": 0,
+        "n": 1,
+        "points": 3,
+        "space": "W(1,2)"
+      },
+      {
+        "alpha": 5,
+        "degree": 6,
+        "n": 2,
+        "points": 15,
+        "space": "W(3,2)"
+      },
+      {
+        "alpha": 7,
+        "degree": 30,
+        "n": 3,
+        "points": 63,
+        "space": "W(5,2)"
+      },
+      {
+        "alpha": 9,
+        "degree": 126,
+        "n": 4,
+        "points": 255,
+        "space": "W(7,2)"
+      }
+    ]
+  },
+  "pass_6018_the_proof": {
+    "argument": "a set of pairwise non-collinear points is a set of vectors u_1..u_k in F_2^(2n) with sp(u_i,u_j) = 1 for all i != j. Their Gram matrix under the symplectic form is J_k - I_k over F_2 -- zero diagonal, ones off-diagonal. That matrix has rank k over F_2 when k is even and k-1 when k is odd. The vectors span a subspace of F_2^(2n), so the Gram rank is at most 2n, giving k-1 <= 2n for odd k, hence k <= 2n+1",
+    "attainment": "the bound is attained at all four ranks tested, which the argument does not by itself give",
+    "length": "four lines",
+    "status": "PROVED here, and by this session's repeatedly confirmed heuristic a four-line proof about a classical object means the result is classical. Recorded as proved-and-presumed-classical rather than as a discovery"
+  },
+  "pass_6019_what_it_does_to_the_thread": {
+    "so_the_structure_question_sharpens": "the rigid 1+3+3 stabiliser at W(3,3) and the apparently-full S_7 at W(5,2) are two points on a ladder whose SIZE is now completely known. What varies is not how big the optimum is but how much symmetry it carries",
+    "still_open": [
+      "the stabiliser structure at n = 4",
+      "whether design strength continues to track rank",
+      "the odd-q analogue of the 2n+1 law"
+    ],
+    "the_rank_2_special_case": "alpha = 5 = q^2+1 at n=2 is the ovoid, and it is the ONLY rank where the maximum partial ovoid is a complete ovoid. Above rank 2 the law keeps giving 2n+1 while ovoids cease to exist"
+  }
+}
