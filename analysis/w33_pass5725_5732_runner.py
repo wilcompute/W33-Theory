@@ -6,6 +6,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 SCRIPTS=[
  'analysis/w33_pass5726_exact_firewall_jacobiator_rank.py',
+ 'analysis/w33_pass5726_family_a2_complement_identification.py',
  'analysis/w33_pass5725_torsion_center_pairing.py',
  'analysis/w33_pass5727_5730_torsion_family_heisenberg.py',
  'analysis/w33_pass5728_ramanujan_switching_selector.py',
@@ -25,10 +26,11 @@ def main():
  for s in SCRIPTS:
   print('===',s,'===',flush=True);subprocess.run([sys.executable,str(ROOT/s)],check=True,cwd=ROOT)
  results={k:json.loads((ROOT/'data'/v).read_text()) for k,v in FILES.items()}
- assert [results[str(p)]['pass'] for p in range(5725,5733)]==list(range(5725,5733))
+ a2=json.loads((ROOT/'data/PART_W33_PASS5726_FAMILY_A2_COMPLEMENT_IDENTIFICATION.json').read_text())
+ assert [results[str(p)]['pass'] for p in range(5725,5733)]==list(range(5725,5733));assert a2['canonical_A2_match']
  out={'passes':list(range(5725,5733)),'status':'EIGHT_PASS_TORSION_CENTER_HIGHERALGEBRA_FAMILY_PACKET_REPLAYED',
-  'headline':'Affine (Z/3)^2 torsion has no canonical scalar center character, but its Heisenberg central extension is exactly the qutrit X/Z subgroup already used on the E8 family C^3 factor. The finite family bridge is real; the affine-Lie-SU3 identification remains unproved.',
-  'results':results,
+  'headline':'Affine (Z/3)^2 torsion has no canonical scalar center character, but its Heisenberg central extension is exactly the qutrit X/Z subgroup already used on the E8 family C^3 factor. The firewall Jacobiator image is exactly the 72 E6 + 81 + 81 root-coordinate sector, leaving Cartan8 plus the canonical six A2 roots. The finite family bridge is real; the affine-Lie-SU3 identification remains unproved.',
+  'results':results,'pass5726_canonical_A2_addendum':a2,
   'physics_boundary':'All claims are finite algebra/graph/representation statements. No observed masses, particle identities, confinement, QCD, continuum spacetime, or laboratory result is claimed.'}
  OUT.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n');print(json.dumps(out,indent=2,sort_keys=True))
 if __name__=='__main__':main()
