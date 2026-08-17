@@ -17,11 +17,11 @@
 
 ## ✅ Next Steps
 <!-- What should we do next? -->
-- Auto-saved at 2026-08-17T16:58:49.259Z (reason: threshold-commits)
+- Auto-saved at 2026-08-17T17:21:21.451Z (reason: timer)
 - Recent commits:
-  - 33da54f11 Pass5800-5807: the class condition is an equivalence, and two of my inputs were fake
-  - a6c68a910 Pass5792-5799: add exact replay and certificate workflow
-  - 20d6ef285 Pass5792-5799: add exact replay regression test
+  - 32796c37f wip
+  - 51578d39a Reserve Pass5808-5815 Track A: equivalence refuted, one direction survives
+  - e37766fcc Pass5798-5799: add canonical Reye disjointness duality insert
 
 ## 📝 Open Questions
 <!-- What do we still need to figure out? -->

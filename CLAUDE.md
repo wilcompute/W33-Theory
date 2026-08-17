@@ -142,7 +142,14 @@ about bilinear forms, computed on a carrier that happened to be a symplectic pol
 **The test is one line: change the object and see whether the result changes.** If it does
 not, the result was never about the object. Run it *before* writing the framing.
 
-**Three calibrations from the same thread:**
+**Four calibrations from the same thread:**
+
+- *Build the objects the claim predicts on.* A conjecture that survives only confirming
+  cases has not been tested. Pass 5800 asserted an equivalence on three configurations;
+  Pass 5808 refuted it in ONE batch by constructing three where the claim forced an answer.
+  **And check the constructed object against a published invariant** — two of that survey's
+  rows were configurations mislabelled from memory (|Aut| 4 and 1 against published 120 and
+  16), and the fake one was actively *concealing* the counterexample.
 
 - *Arguments rediscover; computations discover.* Of ten claims audited, every one derived
   from a short argument turned out classical (four for four); every survivor came from a
