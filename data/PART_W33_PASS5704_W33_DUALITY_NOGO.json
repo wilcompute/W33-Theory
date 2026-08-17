@@ -1,0 +1,12 @@
+{
+  "pass": 5704,
+  "status": "W33_NOT_SELF_DUAL_TWO_CYCLE_ORBITS_ARE_INTRINSIC",
+  "skew_line_pairs": 540,
+  "common_transversals_per_skew_pair": {"4": 540},
+  "noncollinear_point_pairs": 540,
+  "common_neighbours_per_noncollinear_pair": {"0": 540},
+  "self_dual": false,
+  "classical_statement": "W(3,q) is self-dual iff q is even; here q=3 is odd, and the dual is Q(4,3)",
+  "consequence": "The two 12960 rooted-oriented-8-cycle orbits of Pass5700 are NOT merged by any incidence-preserving automorphism; the chirality bit is intrinsic.",
+  "physics_boundary": "Finite incidence geometry; no physical duality is claimed or denied."
+}

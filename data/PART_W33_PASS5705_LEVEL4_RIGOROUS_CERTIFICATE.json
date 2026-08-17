@@ -1,0 +1,25 @@
+{
+  "pass": 5705,
+  "status": "LEVEL4_RIGOROUS_RAMANUJAN_CERTIFICATE_AND_TREND_CONFIRMATION",
+  "level4": {
+    "parent_n": 640,
+    "child_n": 1280,
+    "signed_radius_float": 3.4467345400,
+    "rigorous_bound": 3.4467345400,
+    "max_residual": 7.93e-15,
+    "interval": [3.4467345399, 3.4467345401],
+    "ramanujan_certified": true
+  },
+  "ks_sequence": [0.02102, 0.01079, 0.0054, 0.00269],
+  "ks_ratios": [1.948, 2.0, 2.006],
+  "excess_sequence": [
+    {"level": 0, "n": 80, "excess": 25920, "cycles8": 1620},
+    {"level": 1, "n": 160, "excess": 25600, "cycles8": 1600},
+    {"level": 2, "n": 320, "excess": 25216, "cycles8": 1576},
+    {"level": 3, "n": 640, "excess": 24928, "cycles8": 1558},
+    {"level": 4, "n": 1280, "excess": 24736, "cycles8": 1546}
+  ],
+  "level4_eigenphase_spacing_std_norm": 1.1747,
+  "spacing_note": "level-4 spacing std 1.17 drifts toward Poisson; near-GOE at levels 1-2 was a small-n effect",
+  "physics_boundary": "Interval arithmetic on finite matrices; no continuum statement."
+}

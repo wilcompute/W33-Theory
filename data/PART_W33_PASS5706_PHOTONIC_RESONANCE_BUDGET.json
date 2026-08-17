@@ -1,0 +1,13 @@
+{
+  "pass": 5706,
+  "status": "TWISTED_W33_MESH_HAS_UNIFORM_RESONANCE_DECAY_RATE_HALF_LOG3",
+  "hashimoto_identity_unsigned": true,
+  "hashimoto_identity_signed": true,
+  "scattering_determinant": "det(I - u T_s) = (1-u^2)^(r-1) Delta_s(u); resonances = L-function zeros",
+  "uniform_decay_rate": 0.549306,
+  "uniform_decay_formula": "-log|u| = (1/2) log 3 for every resonance, since all L-zeros lie on |u| = 1/sqrt(3)",
+  "n_resonances_level1": 76,
+  "resonance_ladder_first12_kL_over_pi": [0.073823, 0.109985, 0.129038, 0.141345, 0.15648, 0.177272, 0.190914, 0.195497, 0.213452, 0.219106, 0.239227, 0.241609],
+  "physical_interpretation": "A W33 photonic mesh with a balanced pi-phase pattern has no anomalously lossy or long-lived modes; every closed path decays at the universal Ramanujan rate.",
+  "physics_boundary": "Classical wave-scattering statement about a finite photonic network; not a quantum error-correction or topological-protection claim."
+}

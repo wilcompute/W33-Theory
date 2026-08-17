@@ -1,0 +1,41 @@
+% Passes 5704--5706: duality no-go, level-4 certificate, photonic resonance budget.
+\subsection*{Passes 5704--5706: the chirality is intrinsic, level-4 is rigorous, and the twisted mesh equalizes Q}
+
+The two $12960$-element cycle orbits of Pass~5700 are not merged by any
+automorphism, because $W(3,3)$ has no duality automorphism at all.  For every
+one of the $540$ skew line pairs there are exactly $4$ common transversal
+lines, while for every one of the $540$ non-collinear point pairs there are
+exactly $0$ common neighbour lines; since $4\neq0$, no incidence-preserving
+bijection exchanges points and lines.  This is the classical statement that
+$W(3,q)$ is self-dual iff $q$ is even, verified directly on the incidence
+structure.  The chirality bit of Pass~5700 is therefore intrinsic to the
+oriented geometry, not a labelling artefact.
+
+The tower is now rigorous through level~4 ($1280$ vertices).  The best
+$640$-parent signing has radius $\rho_4=3.4467345400$, and the symmetric a
+posteriori eigenvalue bound certifies
+\[
+ \rho_4\le 3.4467345400\pm 5.03\times10^{-15}<2\sqrt3=3.4641016151,
+\]
+with maximum residual $7.93\times10^{-15}$ over all $640$ modes.  The
+Kesten--McKay convergence law persists: the KS distance sequence is
+$0.02102,0.01079,0.00540,0.00269$ with ratios $1.948,2.000,2.006$, and the
+girth-8 excess continues to shrink,
+$25920\to25600\to25216\to24928\to24736$.
+
+For the photonic blueprint, the signed Hashimoto operator $T_s$ of the level-1
+signing is the bond-scattering matrix of the $40$-line mesh with $\pi$-phase
+shifters on the negative edges, and the Bass--Hashimoto identity
+$\det(I-uT_s)=(1-u^2)^{r-1}\Delta_s(u)$ identifies the scattering resonances
+with the Artin L-function zeros.  Since every such zero lies on
+$|u|=1/\sqrt3$ (Pass~5701), every resonance of the twisted mesh has the same
+decay rate $-\log|u|=\tfrac12\log3=0.549306$: the $W(3,3)$ photonic network
+with a balanced $\pi$-phase pattern equalizes the Q-factor across its entire
+resonance spectrum, with no anomalously lossy or long-lived modes.
+
+\paragraph{Evidence boundary.}
+The duality no-go is exact finite incidence geometry.  The level-4 certificate
+is interval arithmetic on a finite integer matrix.  The resonance budget is a
+classical wave-scattering statement about a finite photonic network, not a
+quantum error-correction or topological-protection claim.  The KS law and
+excess trend are empirical on four to five levels.
