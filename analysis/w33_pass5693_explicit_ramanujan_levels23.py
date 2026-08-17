@@ -14,6 +14,9 @@ Every chosen signing has negative degree two at every vertex.  The explicit leve
 320 and 640 both remain below the 4-regular Ramanujan bound 2 sqrt(3).  This is a
 constructive finite continuation of the W33 tower, not yet a proof that this same
 factor-and-pair algorithm works indefinitely or is automorphism-canonical.
+
+Important contract: the Pass5683 NEG indices refer to levi()'s producer order, so
+that base edge order is preserved exactly. Newly generated lift edges are sorted.
 """
 from __future__ import annotations
 import collections,itertools,json,math
@@ -79,8 +82,7 @@ def signed_adj(E,n,neg):
       s=-1 if i in neg else 1;A[u,v]=A[v,u]=s
     return A
 
-def unsigned_adj(E,n):
-    return signed_adj(E,n,[])
+def unsigned_adj(E,n):return signed_adj(E,n,[])
 
 def components(E,n):
     adj=[[] for _ in range(n)]
@@ -106,34 +108,31 @@ def best_two_matching_signing(E,n):
 
 def graph_metrics(E,n):
     ev=np.linalg.eigvalsh(unsigned_adj(E,n));non=[abs(x) for x in ev if abs(abs(x)-4)>1e-7]
-    rho=float(max(non));gap=4-rho
-    distinct=[]
+    rho=float(max(non));gap=4-rho;distinct=[]
     for x in ev:
       if not distinct or abs(x-distinct[-1])>1e-7:distinct.append(float(x))
     return {'vertices':n,'edges':len(E),'nontrivial_radius':rho,'laplacian_gap':gap,'distinct_eigenvalues':len(distinct)}
 
 def main():
-    E0=sorted(p5683.levi());neg0=set(p5683.NEG);assert len(E0)==160 and len(neg0)==80
+    E0=p5683.levi();neg0=set(p5683.NEG);assert len(E0)==160 and len(neg0)==80
     E1=lift_edges(E0,80,neg0);assert components(E1,160)==[160]
-    best1,all1=best_two_matching_signing(E1,160)
-    rho1,a1,b1,neg1=best1;assert len(neg1)==160 and rho1<RAM
+    best1,all1=best_two_matching_signing(E1,160);rho1,a1,b1,neg1=best1
+    assert len(neg1)==160 and rho1<RAM
     E2=lift_edges(E1,160,neg1);assert components(E2,320)==[320]
-    best2,all2=best_two_matching_signing(E2,320)
-    rho2,a2,b2,neg2=best2;assert len(neg2)==320 and rho2<RAM
+    best2,all2=best_two_matching_signing(E2,320);rho2,a2,b2,neg2=best2
+    assert len(neg2)==320 and rho2<RAM
     E3=lift_edges(E2,320,neg2);assert components(E3,640)==[640]
-
-    # local balance: union of two perfect matchings means exactly two negative incidences per vertex.
     for E,n,neg in [(E1,160,neg1),(E2,320,neg2)]:
       d=np.zeros(n,dtype=int)
       for i in neg:
         u,v=E[i];d[u]+=1;d[v]+=1
       assert set(d)=={2}
-
     levels=[graph_metrics(E0,80),graph_metrics(E1,160),graph_metrics(E2,320),graph_metrics(E3,640)]
     assert all(x['nontrivial_radius']<RAM+1e-8 for x in levels)
     out={
       'pass':5693,'status':'EXPLICIT_RAMANUJAN_W33_2LIFT_LEVELS_320_AND_640_CONSTRUCTED',
       'ramanujan_bound':RAM,
+      'producer_order_contract':'Pass5683 NEG is applied to levi() in its original line-major order; only derived lift edge lists are sorted.',
       'construction':'At each new 4-regular bipartite graph, deterministic four-perfect-matching factorization followed by exhaustive choice among the six unions of two matchings.',
       'level1_to_level2_signing':{'parent_vertices':160,'negative_edges':len(neg1),'negative_degree_each_vertex':2,'matching_colors':[a1,b1],'signed_radius':rho1,'all_six_signed_radii':[float(x[0]) for x in all1]},
       'level2_to_level3_signing':{'parent_vertices':320,'negative_edges':len(neg2),'negative_degree_each_vertex':2,'matching_colors':[a2,b2],'signed_radius':rho2,'all_six_signed_radii':[float(x[0]) for x in all2]},
