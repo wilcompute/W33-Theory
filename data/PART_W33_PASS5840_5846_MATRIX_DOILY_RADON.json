@@ -1,0 +1,82 @@
+{
+  "external_boundary": "The external two-qubit literature identifies a 15-point W(3,2) configuration and its 9+6 factorization. This packet supplies an exact determinant-polar coordinatization of that same abstract geometry; it does not identify the q=5 W33 carrier with a physical two-qubit system.",
+  "pass_5840_affine_determinant_normalizer": {
+    "GL4_2_order": 20160,
+    "affine_center_order": 1,
+    "affine_order": 1152,
+    "affine_structure": "F2^4 : O+(4,2)",
+    "left_right_GL2xGL2_order": 36,
+    "linear_det_rank_stabilizer_order": 72,
+    "linear_structure": "(GL2(2) x GL2(2)) : C2, transpose swaps the factors",
+    "transpose_coset_order": 36
+  },
+  "pass_5841_two_primary_lattice_shadow": {
+    "deduction": "the rational W9 equivalence has inequivalent 2-primary quadratic/lattice shadows",
+    "line_Walsh_quotient": "(Z/2)^4 x (Z/4)^4",
+    "line_discriminant_2_torsion_rank": 5,
+    "line_discriminant_group": "(Z/4)^4 x Z/16",
+    "line_lattice": "A3 tensor A3",
+    "line_mod2_gram_rank": 4,
+    "line_mod2_radical_dim": 5,
+    "point_heavy_Walsh_quotient": "(Z/2)^6",
+    "point_heavy_discriminant_2_torsion_rank": 3,
+    "point_heavy_discriminant_group": "(Z/4)^3",
+    "point_heavy_lattice": "A3^3",
+    "point_heavy_mod2_gram_rank": 6,
+    "point_heavy_mod2_radical_dim": 3
+  },
+  "pass_5842_all_field_matrix_fourier_radon": {
+    "checked_q": [
+      {"matrix_total": 16, "point_nontrivial_fourier": 9, "q": 2, "radon_kernel": 0, "radon_rank_one_image": 9, "rank_one": 9, "rank_one_factorizations": 1, "rank_two": 6, "zero": 1},
+      {"matrix_total": 81, "point_nontrivial_fourier": 64, "q": 3, "radon_kernel": 32, "radon_rank_one_image": 32, "rank_one": 32, "rank_one_factorizations": 2, "rank_two": 48, "zero": 1},
+      {"matrix_total": 256, "point_nontrivial_fourier": 225, "q": 4, "radon_kernel": 150, "radon_rank_one_image": 75, "rank_one": 75, "rank_one_factorizations": 3, "rank_two": 180, "zero": 1},
+      {"matrix_total": 625, "point_nontrivial_fourier": 576, "q": 5, "radon_kernel": 432, "radon_rank_one_image": 144, "rank_one": 144, "rank_one_factorizations": 4, "rank_two": 480, "zero": 1},
+      {"matrix_total": 2401, "point_nontrivial_fourier": 2304, "q": 7, "radon_kernel": 1920, "radon_rank_one_image": 384, "rank_one": 384, "rank_one_factorizations": 6, "rank_two": 2016, "zero": 1}
+    ],
+    "exceptional_case": "q=2 is uniquely multiplicity-free: every nonzero pair (w,phi) gives a distinct rank-one matrix label",
+    "formulas": {
+      "factorizations_per_rank_one_label": "q-1",
+      "matrix_space": "1 + rank_one + rank_two = q^4",
+      "point_nontrivial_fourier": "(q^2-1)^2",
+      "radon_kernel": "(q-2)(q-1)(q+1)^2",
+      "rank_one": "(q-1)(q+1)^2",
+      "rank_two": "q(q-1)^2(q+1)=|GL2(q)|"
+    }
+  },
+  "pass_5843_determinant_polar_two_qubit_doily": {
+    "boundary": "Saniga-Planat-Pracna's 15 projective-ring points and these 15 nonzero matrix labels are isomorphic W(3,2) coordinatizations, not literally the same ring-line objects.",
+    "deduction": "the nonzero matrix Fourier labels coordinatize W(3,2); the 9+6 rank split is the grid/complement split",
+    "isotropic_lines": 15,
+    "line_type_by_rank_one_point_count": {"1": 9, "3": 6},
+    "point_space": "M2(F2) minus {0}",
+    "points": 15,
+    "polar_form_matrix": [[0, 0, 0, 1], [0, 0, 1, 0], [0, 1, 0, 0], [1, 0, 0, 0]],
+    "polar_form_rank": 4,
+    "rank_one_geometry": "Q+(3,2) = P1(F2) x P1(F2), the 9-point 3x3 grid",
+    "rank_one_points": 9,
+    "unit_points": 6
+  },
+  "pass_5844_grid_stabilizer_and_ruling_swap": {
+    "Sp4_2_order": 720,
+    "deduction": "transpose is exactly the two-ruling swap completing the 36-element left/right subgroup to the 72-element determinant-grid stabilizer",
+    "grid_orbit_size": 10,
+    "grid_stabilizer_order": 72,
+    "ruling_preserving_subgroup_order": 36,
+    "transpose_extension_index": 2
+  },
+  "pass_5845_order_1152_falsifier": {
+    "WF4_center_order": 2,
+    "affine_determinant_group_center_order": 1,
+    "affine_determinant_group_order": 1152,
+    "deduction": "the shared order 1152 does not imply isomorphism: the affine determinant group is centerless whereas W(F4) has central -I",
+    "independent_WF4_reflection_group_order": 1152
+  },
+  "pass_5846_explicit_radical_geometry": {
+    "interpretation": "the line lattice carries row-plus-column parity gauge directions absent from the A3^3 carrier",
+    "line_radical": "{1 tensor a + b tensor 1 : a,b in F2^3}, dimension 3+3-1=5",
+    "physics_boundary": "These are finite 2-primary lattice defects, not physical gauge bosons or qubit error syndromes without a separate hardware/code map.",
+    "point_heavy_radical": "three independent fibre-constant parity vectors, one per A3 block"
+  },
+  "schema": "w33.pass5840_5846.matrix_doily_radon.v1",
+  "status": "PASS"
+}
