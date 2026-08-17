@@ -10,7 +10,7 @@ system:
         + (16*,4*), dimensions 60 + 64 + 60 + 64.
 
 They are obtained from adjacent simple-root coefficients whose highest-root marks
-are 3 and 4.  The two toral gradings commute, so they refine to Z3 x Z4 ~= Z12.
+are 4 and 3.  The two toral gradings commute, so they refine to Z4 x Z3 ~= Z12.
 The exact joint dimension table is
 
         z3=0  1  2
@@ -87,7 +87,7 @@ def matvec(A,x): return [sum(A[i][j]*x[j] for j in range(len(x))) for i in range
 
 
 def coeff_map(roots, simples):
-    # simples are columns of 8x8 matrix
+    # simples are columns of the 8x8 coordinate matrix
     S=[[simples[j][i] for j in range(8)] for i in range(8)]
     I=inverse_fraction(S)
     out={}
@@ -164,21 +164,27 @@ def main():
     pos=[r for r in roots if dot(r,h)>0]
     highest=max(pos,key=lambda r:sum(cm[r]))
     marks=cm[highest]
-    assert marks==(4,3,6,5,4,3,2,2), marks
+    # Deterministic ordering of the simple roots constructed above.
+    assert marks==(4,6,5,4,3,2,2,3), marks
 
-    # The useful adjacent nodes are index4 (mark4) and index5 (mark3).
-    assert cartan(simp)[4][5]==cartan(simp)[5][4]==-1
+    # The useful adjacent nodes in THIS ordering are index 3 (mark 4) and
+    # index 4 (mark 3).  Do not infer these indices from a textbook numbering.
+    Z4_NODE=3
+    Z3_NODE=4
+    A8=cartan(simp)
+    assert marks[Z4_NODE]==4 and marks[Z3_NODE]==3
+    assert A8[Z4_NODE][Z3_NODE]==A8[Z3_NODE][Z4_NODE]==-1
 
     def grade_dims(node,m):
         cnt=Counter(cm[r][node]%m for r in roots)
         return [cnt[g]+(8 if g==0 else 0) for g in range(m)]
 
-    z4=grade_dims(4,4); z3=grade_dims(5,3)
+    z4=grade_dims(Z4_NODE,4); z3=grade_dims(Z3_NODE,3)
     assert z4==[60,64,60,64]
     assert z3==[86,81,81]
 
-    Rz4=[r for r in roots if cm[r][4]%4==0]
-    Rz3=[r for r in roots if cm[r][5]%3==0]
+    Rz4=[r for r in roots if cm[r][Z4_NODE]%4==0]
+    Rz3=[r for r in roots if cm[r][Z3_NODE]%3==0]
     t4,rank4,_,_=classify_root_subsystem(Rz4,h)
     t3,rank3,_,_=classify_root_subsystem(Rz3,h)
     assert t4=='A3+D5'
@@ -187,16 +193,16 @@ def main():
 
     joint=[[0]*3 for _ in range(4)]
     for r in roots:
-        joint[cm[r][4]%4][cm[r][5]%3]+=1
+        joint[cm[r][Z4_NODE]%4][cm[r][Z3_NODE]%3]+=1
     joint[0][0]+=8 # Cartan
     assert joint==[[54,3,3],[16,48,0],[0,30,30],[16,0,48]]
     assert [sum(row) for row in joint]==z4
     assert [sum(joint[i][j] for i in range(4)) for j in range(3)]==z3
 
-    R00=[r for r in roots if cm[r][4]%4==0 and cm[r][5]%3==0]
+    R00=[r for r in roots if cm[r][Z4_NODE]%4==0 and cm[r][Z3_NODE]%3==0]
     t00,rank00,_,_=classify_root_subsystem(R00,h)
     assert len(R00)==46 and t00=='A2+D5' and rank00==7
-    # full E8 Cartan is 8-dim, so one central toral direction remains
+    # Full E8 Cartan is 8-dimensional, so one central toral direction remains.
     neutral_dim=len(R00)+8
     assert neutral_dim==54
 
@@ -209,8 +215,9 @@ def main():
     report={
       'passes':list(range(7081,7097)),
       'e8_root_certificate':{
-        'roots':240,'rank':8,'highest_root_marks':list(marks),
-        'z4_node_index':4,'z3_node_index':5,'nodes_adjacent':True
+        'roots':240,'rank':8,'simple_roots_doubled':[list(x) for x in simp],
+        'highest_root_marks':list(marks),
+        'z4_node_index':Z4_NODE,'z3_node_index':Z3_NODE,'nodes_adjacent':True
       },
       'z4_kummer_spinor_grading':{
         'grade_dimensions':z4,'neutral_root_type':'D5+A3','neutral_lie_dimension':60,
