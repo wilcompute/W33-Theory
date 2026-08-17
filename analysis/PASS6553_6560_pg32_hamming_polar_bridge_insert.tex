@@ -1,0 +1,62 @@
+% Passes 6553--6560: PG(3,2) Hamming-polar bridge.
+\subsection{$PG(3,2)$ Hamming-polar bridge}
+\label{sec:pg32-hamming-polar-bridge}
+
+The doily quadratic-evaluation code admits a useful one-dimension-up coding
+interpretation. Writing
+\[
+C=S+\langle q_0\rangle,
+\qquad S\cong[15,4,8]_2,
+\]
+we have
+\[
+S^\perp\cong[15,11,3]_2,
+\qquad
+C^\perp=\{h\in S^\perp:\langle q_0,h\rangle=0\}.
+\]
+Thus $C^\perp$ is a codimension-one subcode of the binary length-$15$ Hamming
+code. The $35$ minimum Hamming words are exactly the $35$ projective lines of
+$PG(3,2)$, with supports
+\[
+L=\{x,y,x+y\}.
+\]
+The extra quadratic parity is precisely symplectic isotropy, since
+\[
+\boxed{
+\langle q_0,\mathbf1_L\rangle
+=q_0(x)+q_0(y)+q_0(x+y)
+=B(x,y).
+}
+\]
+Hence
+\[
+\boxed{35=15_{\rm isotropic}+20_{\rm nonisotropic}},
+\]
+where the $15$ retained weight-three words are the doily lines and the $20$
+excluded projective lines are pairwise-noncollinear tricentric triads.
+
+This also explains the $35=15+20$ split of the all-perp Veldkamp lines. For a
+Hamming line $L=\{a,b,a+b\}$, the three simplex/perp words
+$s_a,s_b,s_{a+b}$ have common zero core $L^\perp$. If $L$ is isotropic then
+$L^\perp=L$, giving one of the $15$ collinear cores; if $L$ is nonisotropic,
+$L^\perp$ is another nonisotropic line and gives one of the $20$ tricentric
+cores.
+
+Finally symplectic polarity is a fixed-point-free involution on the $20$
+nonisotropic lines, producing ten unordered pairs
+\[
+L\longleftrightarrow L^\perp.
+\]
+The six-point unions of these ten polar pairs are exactly the ten weight-six
+supports of $C$:
+\[
+\boxed{
+\{L\cup L^\perp\}
+=
+\{\operatorname{supp}(c):c\in C,\ \operatorname{wt}(c)=6\}.
+}
+\]
+Therefore the ten polar pairs are precisely the complements of the ten
+nine-point doily grids. This gives one mechanism linking the repo's recurrent
+$PG(3,2)$, simplex/Hamming, doily, Veldkamp, determinant, and grid layers.
+The statement is finite binary geometry/coding only.
