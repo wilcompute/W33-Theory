@@ -1,0 +1,152 @@
+{
+  "boundary": "Emitted only after the exact GAP S12 conjugacy gate returns true.",
+  "map": [
+    {
+      "F4_scaled_root_representative": [
+        -2,
+        0,
+        0,
+        0
+      ],
+      "F4_short_rootpair_index_zero_based": 0,
+      "cover13_original_position_one_based": 2,
+      "cover_action_position_one_based": 1,
+      "latin_symbol_zero_based": 0
+    },
+    {
+      "F4_scaled_root_representative": [
+        -1,
+        1,
+        1,
+        1
+      ],
+      "F4_short_rootpair_index_zero_based": 8,
+      "cover13_original_position_one_based": 13,
+      "cover_action_position_one_based": 2,
+      "latin_symbol_zero_based": 8
+    },
+    {
+      "F4_scaled_root_representative": [
+        0,
+        0,
+        0,
+        -2
+      ],
+      "F4_short_rootpair_index_zero_based": 11,
+      "cover13_original_position_one_based": 8,
+      "cover_action_position_one_based": 3,
+      "latin_symbol_zero_based": 3
+    },
+    {
+      "F4_scaled_root_representative": [
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "F4_short_rootpair_index_zero_based": 7,
+      "cover13_original_position_one_based": 10,
+      "cover_action_position_one_based": 4,
+      "latin_symbol_zero_based": 7
+    },
+    {
+      "F4_scaled_root_representative": [
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "F4_short_rootpair_index_zero_based": 2,
+      "cover13_original_position_one_based": 6,
+      "cover_action_position_one_based": 5,
+      "latin_symbol_zero_based": 11
+    },
+    {
+      "F4_scaled_root_representative": [
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "F4_short_rootpair_index_zero_based": 6,
+      "cover13_original_position_one_based": 4,
+      "cover_action_position_one_based": 6,
+      "latin_symbol_zero_based": 6
+    },
+    {
+      "F4_scaled_root_representative": [
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "F4_short_rootpair_index_zero_based": 5,
+      "cover13_original_position_one_based": 5,
+      "cover_action_position_one_based": 7,
+      "latin_symbol_zero_based": 9
+    },
+    {
+      "F4_scaled_root_representative": [
+        0,
+        -2,
+        0,
+        0
+      ],
+      "F4_short_rootpair_index_zero_based": 9,
+      "cover13_original_position_one_based": 11,
+      "cover_action_position_one_based": 8,
+      "latin_symbol_zero_based": 1
+    },
+    {
+      "F4_scaled_root_representative": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "F4_short_rootpair_index_zero_based": 1,
+      "cover13_original_position_one_based": 7,
+      "cover_action_position_one_based": 9,
+      "latin_symbol_zero_based": 4
+    },
+    {
+      "F4_scaled_root_representative": [
+        0,
+        0,
+        -2,
+        0
+      ],
+      "F4_short_rootpair_index_zero_based": 10,
+      "cover13_original_position_one_based": 3,
+      "cover_action_position_one_based": 10,
+      "latin_symbol_zero_based": 2
+    },
+    {
+      "F4_scaled_root_representative": [
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "F4_short_rootpair_index_zero_based": 4,
+      "cover13_original_position_one_based": 12,
+      "cover_action_position_one_based": 11,
+      "latin_symbol_zero_based": 5
+    },
+    {
+      "F4_scaled_root_representative": [
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "F4_short_rootpair_index_zero_based": 3,
+      "cover13_original_position_one_based": 9,
+      "cover_action_position_one_based": 12,
+      "latin_symbol_zero_based": 10
+    }
+  ],
+  "pass": 5606,
+  "status": "EXPLICIT_COVER12_TO_F4_SHORT_ROOTPAIR_BIJECTION",
+  "theorem": "The selected 13-cover moving 12-orbit is permutation-isomorphic to the Reye/Klein-V4 Latin/W(F4)/+-1 short-root-pair action, with the displayed object-level bijection."
+}

@@ -119,14 +119,27 @@ Hence `BB^T` is always two-band. For the `W(3,q)` point graph, Ihara–Bass root
 
 So neither maximally symmetric Hodge nor Hashimoto scaling yields a continuum spectral dimension. This does **not** rule out those operators after defects, phase twists, multiscale refinement, disorder, or transport symmetry breaking.
 
-## Pass 5606 — selected 13-cover to F4 object map: fail-closed extraction gate
+## Pass 5606 — selected 13-cover to F4 object map: gate executed
 
-The previous action-level GAP test was still queued, so this packet does not infer an object map from the common abstract group. Instead it commits a stronger exact gate:
+The original packet correctly refused to infer an object map from the common abstract group and committed a fail-closed exact gate:
 
 - `analysis/w33_pass5606_cover12_explicit_conjugator.g` rebuilds the exact 325-vertex Pass5417 graph and selected 13-cover, restricts to the moving twelve points, constructs the Klein-V4 Latin action independently, and asks GAP for an explicit conjugating permutation in `S_12`.
 - `analysis/w33_pass5606_cover_to_f4_rootpair_map.py` composes that witness with the already proved `F4-short-root-pairs -> Latin` conjugator and emits a twelve-row object-level table.
 
-The Python composer deliberately refuses to emit anything unless the GAP certificate says `conjugate_in_S12=true`. Until that replay finishes, the exact cover-to-root-pair bijection remains pending rather than silently promoted.
+That gate has now been executed natively with GAP/GRAPE. It returns
+
+\[
+|G|=576,\qquad \operatorname{TransitiveIdentification}(G)=165,
+\qquad G\sim_{S_{12}}G_{\rm Latin},
+\]
+
+with explicit one-based conjugator
+
+\[
+\boxed{[1,9,4,8,12,7,10,2,5,3,6,11]}.
+\]
+
+The fail-closed Python composer therefore emitted the exact twelve-row cover-to-short-root-pair map. Passes 5667--5674 independently replay this gate, reconstruct the Reye configuration intrinsically as the zero-containment triple shell of the q=5 multidesign, and keep the ownership boundary explicit: Pass 5606 owns the gate; the later packet owns its new design and orientation consequences.
 
 ## Pass 5607 — a canonical finite d'Alembertian exists, but full projective symmetry kills dispersion
 

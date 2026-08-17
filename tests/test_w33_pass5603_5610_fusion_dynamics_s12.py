@@ -62,3 +62,22 @@ def test_5608_m12_shell_after_replay():
         x=json.loads(p.read_text())
         assert x['induced_group_order']==95040
         assert x['orbital_sizes']==[12,132]
+
+
+def test_5606_cover_to_f4_object_bijection_is_frozen():
+    gate = json.loads(
+        (ROOT / 'data/PART_W33_PASS5606_COVER12_EXPLICIT_CONJUGATOR.json').read_text()
+    )
+    bridge = json.loads(
+        (ROOT / 'data/PART_W33_PASS5606_COVER_TO_F4_ROOTPAIR_MAP.json').read_text()
+    )
+    assert gate['conjugate_in_S12'] is True
+    assert gate['cover12_order'] == gate['latin12_order'] == 576
+    assert gate['conjugator_cover12_to_latin12_one_based'] == [
+        1, 9, 4, 8, 12, 7, 10, 2, 5, 3, 6, 11
+    ]
+    rows = bridge['map']
+    assert len(rows) == 12
+    assert sorted(row['cover_action_position_one_based'] for row in rows) == list(range(1, 13))
+    assert sorted(row['latin_symbol_zero_based'] for row in rows) == list(range(12))
+    assert sorted(row['F4_short_rootpair_index_zero_based'] for row in rows) == list(range(12))

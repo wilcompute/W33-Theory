@@ -1,0 +1,73 @@
+{
+  "F4_roots": 48,
+  "F4_short_antipodal_pairs": 12,
+  "F4_short_roots": 24,
+  "WF4_order": 1152,
+  "antipodal_kernel_order": 2,
+  "antipodal_pair_image_order": 576,
+  "block_maps_checked_before_witness": 24,
+  "conjugating_permutation_F4pair_to_Latin": [
+    0,
+    4,
+    11,
+    10,
+    5,
+    9,
+    6,
+    7,
+    8,
+    1,
+    2,
+    3
+  ],
+  "cover_boundary": "Pass5468 identifies the 13-cover setwise stabilizer with W(F4) and its 13-point image with W(F4)/{+-1}. The separate GAP Pass5596 action test decides whether its specific moving 12-orbit is this same conjugacy class.",
+  "latin12_order": 576,
+  "orbital_sizes": [
+    12,
+    36,
+    96
+  ],
+  "pass": 5596,
+  "small_orbital_components_F4_indices": [
+    [
+      0,
+      9,
+      10,
+      11
+    ],
+    [
+      1,
+      4,
+      6,
+      7
+    ],
+    [
+      2,
+      3,
+      5,
+      8
+    ]
+  ],
+  "small_orbital_components_Latin_indices": [
+    [
+      0,
+      1,
+      2,
+      3
+    ],
+    [
+      4,
+      5,
+      6,
+      7
+    ],
+    [
+      8,
+      9,
+      10,
+      11
+    ]
+  ],
+  "status": "F4_SHORT_ROOTPAIR_ACTION_CONJUGATE_TO_LATIN12",
+  "theorem": "W(F4)/{+-1} on the 12 antipodal short-root pairs is permutation-conjugate in S12 to the Klein-V4 Latin autoparatopy action; by Pass5596 the latter is also the Reye row action."
+}

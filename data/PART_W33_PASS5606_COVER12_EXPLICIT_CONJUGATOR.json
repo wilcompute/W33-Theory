@@ -1,0 +1,14 @@
+{
+  "pass": 5606,
+  "cover13_moving_orbit_original_positions": [ 2, 13, 8, 10, 6, 4, 5, 11, 7, 3, 12, 9 ],
+  "moving_cover_vertices": [ 31, 321, 190, 227, 141, 112, 129, 255, 158, 74, 278, 194 ],
+  "fixed_cover_position_one_based": 1,
+  "fixed_cover_vertex": 7,
+  "cover12_order": 576,
+  "latin12_order": 576,
+  "cover12_suborbit_sizes": [ 1, 3, 8 ],
+  "conjugate_in_S12": true,
+  "conjugator_cover12_to_latin12_one_based": [ 1, 9, 4, 8, 12, 7, 10, 2, 5, 3, 6, 11 ],
+  "cover12_to_latin": [ 0, 8, 3, 7, 11, 6, 9, 1, 4, 2, 5, 10 ],
+  "boundary": "This is a direct action-level conjugacy witness from the exact selected 13-cover. No group-order inference is substituted."
+}

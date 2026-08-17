@@ -1,0 +1,50 @@
+name: W33 Pass5667-5674 q5 Reye equivariant orientation
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass5417_cover_orbits.g'
+      - 'analysis/w33_pass5606_cover12_explicit_conjugator.g'
+      - 'analysis/w33_pass5606_cover_to_f4_rootpair_map.py'
+      - 'analysis/w33_pass5667_5674_q5_reye_equivariant_orientation.g'
+      - 'analysis/PASS5667_5674_Q5_REYE_EQUIVARIANT_ORIENTATION.md'
+      - 'analysis/PASS5667_5674_q5_reye_equivariant_orientation_insert.tex'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/PART_W33_PASS5606_COVER12_EXPLICIT_CONJUGATOR.json'
+      - 'data/PART_W33_PASS5606_COVER_TO_F4_ROOTPAIR_MAP.json'
+      - 'data/PART_W33_PASS5667_5674_Q5_REYE_EQUIVARIANT_ORIENTATION.json'
+      - 'data/w33_pass_namespace_registry_v2.d/5603-5610.json'
+      - 'data/w33_pass_namespace_registry_v2.d/5667-5674.json'
+      - 'tests/test_w33_pass5667_5674_q5_reye_equivariant_orientation.py'
+      - '.github/workflows/w33_pass5667_5674_q5_reye_equivariant_orientation.yml'
+  pull_request:
+    paths:
+      - 'analysis/w33_pass5417_cover_orbits.g'
+      - 'analysis/w33_pass5667_5674_q5_reye_equivariant_orientation.g'
+      - 'data/PART_W33_PASS5667_5674_Q5_REYE_EQUIVARIANT_ORIENTATION.json'
+      - 'tests/test_w33_pass5667_5674_q5_reye_equivariant_orientation.py'
+      - '.github/workflows/w33_pass5667_5674_q5_reye_equivariant_orientation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-gap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact replay dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y gap gap-grape nauty
+          python -m pip install --upgrade pip pytest
+      - name: Replay frozen theorem and certificate byte-for-byte
+        run: >-
+          python -m pytest -q
+          tests/test_w33_pass5667_5674_q5_reye_equivariant_orientation.py

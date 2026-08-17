@@ -1,7 +1,19 @@
 {
-  "lo": 5667,
-  "hi": 5674,
+  "schema": "w33.pass_namespace_registry.v2.fragment",
+  "range": [5667, 5674],
+  "owner": "OpenAI-GPT-5.6-Sol",
   "track": "A",
-  "topic": "q5 cover TransitiveIdentification; distinguishing T12_161/163/165; order 4032; the 16-action",
-  "reserved": "2026-08-16"
+  "topic": "q5 cover T12_165 closure, intrinsic Reye zero shell, carrier parity, natural PSL2(7) join, outer-involutive heavy dual, and sign-twist module firewall",
+  "status": "EXECUTED",
+  "created_utc": "2026-08-16T00:00:00Z",
+  "executed_utc": "2026-08-17T00:00:00Z",
+  "evidence": {
+    "gap_witness": "analysis/w33_pass5667_5674_q5_reye_equivariant_orientation.g",
+    "certificate": "data/PART_W33_PASS5667_5674_Q5_REYE_EQUIVARIANT_ORIENTATION.json",
+    "regression": "tests/test_w33_pass5667_5674_q5_reye_equivariant_orientation.py",
+    "report": "analysis/PASS5667_5674_Q5_REYE_EQUIVARIANT_ORIENTATION.md",
+    "insert": "analysis/PASS5667_5674_q5_reye_equivariant_orientation_insert.tex"
+  },
+  "checks": "56/56 PASS; native GAP replay byte-identical",
+  "boundary": "Exact finite permutation-group, character, and multidesign theorem. The point/heavy/line permutation-character self inner products are 3, their pairwise inner products are 2, and the sign-twisted point character has inner product 0 with heavy and line. The PSL2(7) closure is scoped to the natural degree-7 action plus five fixed points; an explicit outer involution exchanges the point/heavy stabilizer classes but supplies no canonical point-to-support labeling; the point-side sign twist is neither that source outer involution nor the line carrier; no continuum or physics claim is made."
 }

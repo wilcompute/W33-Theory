@@ -3,7 +3,15 @@
   "range": [5603, 5610],
   "owner": "OpenAI-GPT-5.6-Sol",
   "topic": "PSL2 fusion proof, isodual distance, Hodge-Hashimoto scaling, 13-cover action bridge, Segre dAlembertian, and s12/Golay/Heisenberg TOE probes",
-  "status": "reserved",
+  "status": "EXECUTED",
   "created_utc": "2026-08-16T03:56:00Z",
-  "boundary": "Eight independent research passes requested by the user. Preserve earlier Pass5595-5602 certificates and do not rewrite historical claims."
+  "evidence": {
+    "summary": "data/PART_W33_PASS5603_5610_FUSION_DYNAMICS_S12_SUMMARY.json",
+    "gap_gate": "data/PART_W33_PASS5606_COVER12_EXPLICIT_CONJUGATOR.json",
+    "object_map": "data/PART_W33_PASS5606_COVER_TO_F4_ROOTPAIR_MAP.json",
+    "report": "analysis/PASS5603_5610_fusion_dynamics_s12_report.md",
+    "insert": "analysis/PASS5603_5610_fusion_dynamics_s12_insert.tex",
+    "regression": "tests/test_w33_pass5603_5610_fusion_dynamics_s12.py"
+  },
+  "boundary": "Pass5606's previously fail-closed native GAP gate is now executed and the object map is emitted. Preserve earlier Pass5595-5602 ownership and the finite/continuum boundaries in the report."
 }

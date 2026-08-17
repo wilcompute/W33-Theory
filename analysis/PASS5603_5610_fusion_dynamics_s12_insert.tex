@@ -67,13 +67,19 @@ normalized limit.  Thus these maximally symmetric families do not supply a
 Weyl-law continuum spectrum without further phase, refinement, defects, or
 symmetry breaking.
 
-\paragraph{Pass 5606: the selected $13$-cover object map is fail-closed.}
-A new GAP gate rebuilds the exact Pass~5417 $325$-vertex substrate and selected
+\paragraph{Pass 5606: the selected $13$-cover object map has passed its gate.}
+The fail-closed GAP gate rebuilds the exact Pass~5417 $325$-vertex substrate and selected
 $13$-cover, restricts its $1+12$ action to the moving twelve points, and asks
 for an explicit conjugator to the independently constructed Klein-$V_4$ Latin
-$S_{12}$ action.  A companion script composes that witness with the already
-proved $F_4$ short-root-pair--Latin conjugator.  No cover-to-root-pair table is
-published unless the direct GAP conjugacy certificate returns true.
+$S_{12}$ action.  It has now returned true: the action is $T_{12,165}$ and
+the one-based conjugator is
+\[
+  [1,9,4,8,12,7,10,2,5,3,6,11].
+\]
+A companion script has composed that witness with the already proved $F_4$
+short-root-pair--Latin conjugator and emitted the twelve-row object map.
+Passes~5667--5674 subsequently reconstruct the Reye configuration intrinsically
+from the zero-containment triples of the same $q=5$ multidesign.
 
 \paragraph{Pass 5607: full projective symmetry forbids a dispersive Segre wave operator.}
 On $X=\mathbf P^1(q)\times\mathbf P^1(q)$, 2-transitivity gives

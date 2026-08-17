@@ -1,0 +1,104 @@
+% Passes 5667--5674: q=5 zero-shell Reye reconstruction and orientation closure.
+\subsection{The q=5 zero shell reconstructs Reye and opens the natural seven-side to $S_{12}$}
+\label{sec:pass5667-5674-q5-reye}
+
+The fail-closed Pass~5606 action gate has now executed.  The setwise stabilizer
+of the selected thirteen-vertex cover in the exact $q=5$ substrate has orbit
+split $1+12$; on the moving twelve its image has order $576$, point stabilizer
+$C_2\times S_4$, subdegrees $1,3,8$, and
+\[
+ \operatorname{TransitiveIdentification}(G)=165.
+\]
+It is explicitly conjugate to the independent Klein-$V_4$ Latin action by the
+one-based permutation
+\[
+ \boxed{[1,9,4,8,12,7,10,2,5,3,6,11]}.
+\]
+Composing with the already certified Latin--$F_4$ map gives a literal table from
+the twelve moving cover vertices to the twelve antipodal short-root pairs of
+$F_4$.  This executes the old gate; it does not reassign its ownership.
+
+The stronger new structure is internal to the $q=5$ design.  For each of the
+$312$ vertices outside the cover, record its six neighbors in the cover.  With
+multiplicity these rows form a $2$-$(13,6,60)$ design with point replication
+$144$.  Its triple-containment spectrum is
+\[
+ \boxed{0^{16}\oplus16^{30}\oplus24^{240}}.
+\]
+The sixteen zero-containment triples avoid the unique fixed cover vertex and,
+on the moving twelve, form a $12_4,16_3$ configuration.  Their Levi graph has
+$48$ edges and automorphism group of order $576$; its two faithful actions are
+\[
+ \boxed{T_{12,165}\quad\hbox{on points},\qquad
+        T_{16,1034}\quad\hbox{on lines}.}
+\]
+Thus the Reye configuration is reconstructed by an intrinsic third-order
+predicate of the $q=5$ multidesign, rather than imported through an order match.
+
+The two carriers also detect different orientation characters.  The twelve-point
+action is not contained in $A_{12}$, and its sign kernel is
+\[
+ \boxed{\operatorname{SmallGroup}(288,1025)
+        \cong2^4:(C_3\times S_3).}
+\]
+The explicit cover-to-Latin conjugator transports this kernel to the even-Latin
+group which Pass~5300 already identifies with the Hoffman stabilizer quotient.
+By contrast, the entire sixteen-line action lies in $A_{16}$.  Orientation is
+therefore a carrier-dependent character, not an invariant of the abstract
+order-$576$ group alone.
+
+The former ``order $4032$'' seven-side frontier sharpens drastically on the
+natural twelve-symbol carrier.  Embed the natural degree-seven action of
+$PSL(2,7)$ in $S_{12}$ with five fixed points.  Exhaustive GAP enumeration of
+all $23{,}760$ conjugate embeddings gives
+\[
+ \boxed{\langle T_{12,165},PSL(2,7)^g\rangle=S_{12}
+        \quad\hbox{for every such }g.}
+\]
+For comparison, every placement with $T_{12,161}$ or $T_{12,163}$ closes only
+to $A_{12}$.  The distinction is exactly parity: classes $161$ and $163$ are
+even, while class $165$ is not.  This is scoped to the natural $7+1^5$
+permutation representation and does not classify arbitrary common overgroups.
+
+Finally, the $312$ rows have only $132$ distinct supports:
+\[
+ 312=120\cdot2+12\cdot6.
+\]
+The twelve multiplicity-six supports carry a second $T_{12,165}$ action.  Their
+stabilizers and the moving-point stabilizers both have type
+$\operatorname{SmallGroup}(48,48)$ but are not conjugate in the source group.
+Hence the two twelve-carriers are permutation-isomorphic only after an outer
+twist; there is no source-equivariant or canonical point--support bijection.
+The twist lifts to a source automorphism whose displayed representative has
+order eight and square inner.  Exactly $48$ inner re-gaugings yield genuine
+outer involutions; the frozen order-two witness exchanges the two nonconjugate
+stabilizer classes.
+
+This outer carrier involution is not the point-side sign twist.  Write
+$\pi_P,\pi_H,\pi_L$ for the point, heavy-support, and line permutation
+characters.  Exact enumeration over all $576$ source elements gives
+\[
+ \langle\pi_P,\pi_P\rangle
+ =\langle\pi_H,\pi_H\rangle
+ =\langle\pi_L,\pi_L\rangle=3,
+ \qquad
+ \langle\pi_P,\pi_H\rangle
+ =\langle\pi_P,\pi_L\rangle
+ =\langle\pi_H,\pi_L\rangle=2.
+\]
+If $\varepsilon_P$ is the sign character of the point action, however, then
+\[
+ \boxed{\langle\varepsilon_P\pi_P,\pi_H\rangle=0,
+        \qquad
+        \langle\varepsilon_P\pi_P,\pi_L\rangle=0.}
+\]
+Hence the sign-twisted point module is disjoint from both the heavy and line
+modules: the sign twist is neither the source outer involution nor the even
+line carrier.
+
+\paragraph{Evidence boundary.}
+All statements above are reproduced by a native GAP/GRAPE witness with $56/56$
+checks and a byte-exact focused regression.  Classical Reye parameters, its
+order-$576$ Levi automorphism group, the GAP transitive-group catalogue, and the
+$W(F_4)$ action are prior art.  No continuum, dynamics, particle, gauge-force,
+or physical-unification statement is inferred.
