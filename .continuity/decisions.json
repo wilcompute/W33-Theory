@@ -72,7 +72,8 @@
         "dfd72208-dd6f-4f9c-b254-0bb0c072af3d",
         "d8ac0082-876f-4935-80c4-de4c705ccec2",
         "4882e1b1-e5bd-4038-a888-8aa61f1f90ea",
-        "1786978125686-pe8wl2"
+        "1786978125686-pe8wl2",
+        "1786978825551-4yxjf4"
       ],
       "causedBy": [
         "manual-20260507-pin-e8-manifest-z3-output-check"
@@ -309,7 +310,8 @@
         "56038377-4c6b-48f8-8b24-3ff33095de65",
         "e8fa85eb-29ee-4617-a086-aec55b0a8922",
         "6463a27e-4bc0-4022-85bf-3242450eac40",
-        "1786978125686-pe8wl2"
+        "1786978125686-pe8wl2",
+        "1786978825551-4yxjf4"
       ],
       "causedBy": []
     },
@@ -358,7 +360,8 @@
         "56038377-4c6b-48f8-8b24-3ff33095de65",
         "e8fa85eb-29ee-4617-a086-aec55b0a8922",
         "6463a27e-4bc0-4022-85bf-3242450eac40",
-        "1786978125686-pe8wl2"
+        "1786978125686-pe8wl2",
+        "1786978825551-4yxjf4"
       ],
       "causedBy": []
     },
@@ -402,7 +405,8 @@
         "951fc6ac-b3ba-4bc5-91ea-5761985511e6",
         "4250c93d-0379-41a5-8ad6-4dd4975297af",
         "56038377-4c6b-48f8-8b24-3ff33095de65",
-        "98570fba-3ce7-45aa-84fd-5560b203d593"
+        "98570fba-3ce7-45aa-84fd-5560b203d593",
+        "1786978825551-4yxjf4"
       ],
       "causedBy": []
     },
@@ -448,7 +452,8 @@
         "63481815-6d45-4635-9c8f-f7418f754242",
         "4250c93d-0379-41a5-8ad6-4dd4975297af",
         "56038377-4c6b-48f8-8b24-3ff33095de65",
-        "98570fba-3ce7-45aa-84fd-5560b203d593"
+        "98570fba-3ce7-45aa-84fd-5560b203d593",
+        "1786978825551-4yxjf4"
       ],
       "causedBy": []
     },
@@ -493,7 +498,8 @@
         "4250c93d-0379-41a5-8ad6-4dd4975297af",
         "56038377-4c6b-48f8-8b24-3ff33095de65",
         "98570fba-3ce7-45aa-84fd-5560b203d593",
-        "1786978125686-pe8wl2"
+        "1786978125686-pe8wl2",
+        "1786978825551-4yxjf4"
       ],
       "causedBy": []
     },
@@ -536,7 +542,8 @@
         "951fc6ac-b3ba-4bc5-91ea-5761985511e6",
         "4250c93d-0379-41a5-8ad6-4dd4975297af",
         "56038377-4c6b-48f8-8b24-3ff33095de65",
-        "1786978125686-pe8wl2"
+        "1786978125686-pe8wl2",
+        "1786978825551-4yxjf4"
       ],
       "causedBy": []
     },
@@ -655,7 +662,8 @@
         "56038377-4c6b-48f8-8b24-3ff33095de65",
         "501f6b6a-a866-4646-882e-2da75b79161a",
         "4882e1b1-e5bd-4038-a888-8aa61f1f90ea",
-        "1786978125686-pe8wl2"
+        "1786978125686-pe8wl2",
+        "1786978825551-4yxjf4"
       ],
       "causedBy": []
     },
@@ -727,7 +735,8 @@
         "2ca8e9ba-1a3f-4303-8c0a-cd13cb47e5b9",
         "7f88d257-5c81-48cf-bfa8-030621e8d359",
         "39efaaa0-931f-4a27-a849-f079696a58b8",
-        "1786978125686-pe8wl2"
+        "1786978125686-pe8wl2",
+        "1786978825551-4yxjf4"
       ],
       "causedBy": []
     },
@@ -1294,7 +1303,8 @@
         "861f97a2-44aa-43bc-8b3b-4139b2c5c52a",
         "c725c9a2-ac57-4454-bad3-a410500e5f4a",
         "6d834263-6d6a-4999-820e-80aa72365363",
-        "c5354d11-c9e7-4d97-b9a8-e447cd669a02"
+        "c5354d11-c9e7-4d97-b9a8-e447cd669a02",
+        "1786978825551-4yxjf4"
       ]
     },
     "metadata": {
@@ -114172,7 +114182,8 @@
       "supersededBy": [
         "1786859568721-fahph6",
         "1786860401883-i52nl0",
-        "1786978125686-pe8wl2"
+        "1786978125686-pe8wl2",
+        "1786978825551-4yxjf4"
       ],
       "relatedTo": [
         "1784938579774-o0xebs",
@@ -114208,7 +114219,8 @@
       "supersedes": [],
       "supersededBy": [
         "1786859568721-fahph6",
-        "1786978125686-pe8wl2"
+        "1786978125686-pe8wl2",
+        "1786978825551-4yxjf4"
       ],
       "relatedTo": [],
       "causes": [],
@@ -114240,7 +114252,8 @@
       "supersedes": [],
       "supersededBy": [
         "1786859568721-fahph6",
-        "1786978125686-pe8wl2"
+        "1786978125686-pe8wl2",
+        "1786978825551-4yxjf4"
       ],
       "relatedTo": [],
       "causes": [],
@@ -114273,7 +114286,8 @@
     "status": "active",
     "relationships": {
       "supersededBy": [
-        "1786859568721-fahph6"
+        "1786859568721-fahph6",
+        "1786978825551-4yxjf4"
       ]
     },
     "metadata": {
@@ -114302,7 +114316,8 @@
     "status": "active",
     "relationships": {
       "supersededBy": [
-        "1786859568721-fahph6"
+        "1786859568721-fahph6",
+        "1786978825551-4yxjf4"
       ]
     },
     "metadata": {
@@ -114329,7 +114344,8 @@
     "status": "active",
     "relationships": {
       "supersededBy": [
-        "1786859568721-fahph6"
+        "1786859568721-fahph6",
+        "1786978825551-4yxjf4"
       ]
     },
     "metadata": {
@@ -114355,7 +114371,8 @@
     "status": "active",
     "relationships": {
       "supersededBy": [
-        "1786859568721-fahph6"
+        "1786859568721-fahph6",
+        "1786978825551-4yxjf4"
       ]
     },
     "metadata": {
@@ -114383,7 +114400,8 @@
     "status": "active",
     "relationships": {
       "supersededBy": [
-        "1786859568721-fahph6"
+        "1786859568721-fahph6",
+        "1786978825551-4yxjf4"
       ]
     },
     "metadata": {
@@ -121240,6 +121258,9 @@
     "relationships": {
       "supersededBy": [
         "9162834d-6ac7-48dc-8a54-7937d19ca779"
+      ],
+      "relatedTo": [
+        "1786978825551-4yxjf4"
       ]
     },
     "metadata": {
@@ -121437,6 +121458,9 @@
     "relationships": {
       "supersededBy": [
         "9162834d-6ac7-48dc-8a54-7937d19ca779"
+      ],
+      "relatedTo": [
+        "1786978825551-4yxjf4"
       ]
     },
     "metadata": {
@@ -123249,7 +123273,8 @@
       "supersededBy": [
         "1786860945369-ki8azn",
         "1786861486612-snafmx",
-        "1786978125686-pe8wl2"
+        "1786978125686-pe8wl2",
+        "1786978825551-4yxjf4"
       ],
       "relatedTo": [
         "1777318403162-biaewx",
@@ -123341,7 +123366,8 @@
       "supersededBy": [
         "1786860945369-ki8azn",
         "1786861486612-snafmx",
-        "1786978125686-pe8wl2"
+        "1786978125686-pe8wl2",
+        "1786978825551-4yxjf4"
       ],
       "relatedTo": [],
       "causes": [],
@@ -135652,6 +135678,69 @@
       "de907627261de1932c3f4af1d3b18617b9fd3c1f",
       "24f119a1dcabd061e0505c43613cde98802457c2",
       "10b28845c68570bc212ee8af7b7b18c41962247f"
+    ]
+  },
+  {
+    "id": "1786978825551-4yxjf4",
+    "question": "Does the Reye configuration's characteristic-2 kernel encode anything about the bridge group, and can logic synthesis see the same structure?",
+    "answer": "YES to the first -- it reconstructs the group's UNIQUE block system. NO to the second -- yosys finds none of it.\n\nTHE RESULT. The Reye [12,4,6] binary code (Pass 5670) has exactly three weight-8 words, and their complements are three 4-sets: {0,5,8,11}, {1,4,7,9}, {2,3,6,10}. GAP: T12_165 -- the degree-12 action of W(F4)/Z identified in Pass 5659 -- is imprimitive with EXACTLY ONE nontrivial block system, and it is that partition. So Gaussian elimination on a 16x12 zero-one matrix over GF(2), with no group theory anywhere in the computation, recovers the imprimitivity structure of the bridge group.\n\nUNIQUENESS IS WHAT MAKES IT A BRIDGE. GAP finds one nontrivial block representative, so the code is not selecting correctly from several candidates -- there is nothing to select from. That is the difference between this and the eleven coincidences killed earlier in the session.\n\nAND IT IS NOT THE OBVIOUS STRUCTURE. Q4's natural grading of the twelve Reye points is by direction-pair: six blocks of two (24 faces in C(4,2)=6 direction-pairs, mod antipodal). The kernel gives three blocks of four instead. The code sees the automorphism group, not the coordinate frame the object was built in. Builds on decision-5b9f785d (MCLXXXII Q4 face-edge -> antipodal quotient -> 12/16/48) and sits alongside decision-b4822355's ternary [72,66]_3 horizon code on the same configuration.\n\nYOSYS CANNOT SEE IT. Installed yowasp-yosys 0.68 (pip; no oss-cad-suite needed) and synthesised the 16 Reye parity checks, each an XOR of 3 of 12 inputs. After proc/opt -full/techmap/opt -full it emitted 32 $_XOR_ cells -- exactly the naive 16x2 -- having found ZERO of the eight independent GF(2) relations among its own outputs. s[0]^s[1]^s[2]^s[3] == 0 identically; 8 checks suffice where 16 were built. The reason is structural rather than a tuning failure: opt does local structural hashing and cone pruning, while this redundancy is linear ALGEBRA ACROSS OUTPUT CONES and every individual output is an irredundant 3-input XOR. Gaussian elimination over GF(2) on the output matrix is not a pass yosys runs. (Note: abc -g XOR crashes in the WASM build.)\n\nTHIS INVERTS THE REPO'S EARLIER RTL FINDING. Pass 2772-2776 established that synthesis sees what simulation cannot -- a frame register with no load port is provably constant and only synthesis proves it. Here the order reverses: the mathematics sees a redundancy synthesis cannot. Neither tool dominates; the boundary is exactly whether the redundancy is structural or linear.\n\nEXCESS p-RANK SWEEP. Largest collapse in the corpus is the 4x4 ROOK ADJACENCY: rank 16 to 6 at p=2, excess 9, with an unexamined dimension-10 GF(2) kernel. That is the graph whose Aut = S4 wr S2 Pass 5644 could not explain and Pass 5671's failed Delsarte attempt could not either -- the kernel is the obvious next place to look.\n\nCSASZAR DOES COLLAPSE, answering the question Pass 5672 left open -- but in its FACE-FACE ADJACENCY (excess 6 at p=2, excess 1 at p=3), not in any incidence matrix. All six incidence matrices are clean once forced drops are removed, so the Pass 5672 retraction stands while the layer is not rank-rigid after all. The right object was the adjacency.\n\nAlso: the Q4 face-edge kernel is a [24,7,6] six-weight code and does NOT meet Griesmer; its three weight-16 words halve to the Reye code's three weight-8 words under the antipodal quotient, which cross-checks both computations. No literature match for the [12,4,6] enumerator across four searches -- recorded as NOT FOUND, explicitly not as novel.</answer>\n<parameter name=\"tags\">w33, reye, block-system, characteristic-2, coding-theory, yosys, synthesis-limits, pass5675",
+    "timestamp": "2026-08-17T15:00:25.551Z",
+    "tags": [
+      "hashing",
+      "owasp"
+    ],
+    "files": [],
+    "status": "active",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [
+        "1786859568721-fahph6",
+        "1786860401883-i52nl0",
+        "1784409410004-2ofkhg",
+        "1784409410004-kzfbyz",
+        "1784409410003-54eefw",
+        "09152407-437d-45ec-8fb8-6b5496138c01",
+        "1fb5332b-7df7-4881-bce0-800d23047ba3",
+        "5223d2c8-8d9a-4bc0-ba9e-040fded850a6",
+        "36a07730-0426-49d9-a088-24e18ef9f969",
+        "644650eb-c88b-4090-83af-c7ac9e9cef48"
+      ],
+      "supersededBy": [],
+      "relatedTo": [
+        "ce16c260-987f-47c0-869a-86d52be31c07",
+        "b61b8ba1-073c-45f3-9479-860a32ec521b"
+      ],
+      "causes": [],
+      "causedBy": [
+        "1777318403161-4mgrce",
+        "1777318403161-qze7ej",
+        "1777318403161-t7tcbd",
+        "1777318403161-06lp3s",
+        "1777318403161-ya0ehy",
+        "1777318403161-pu8p9x",
+        "1777318403161-s5j46a",
+        "1777318403161-e7wo55",
+        "1777318403161-xalutx",
+        "beaa04ed-f130-4ef8-a424-792aced0dd1b"
+      ]
+    },
+    "metadata": {
+      "status": "active",
+      "source": "mcp",
+      "entities": {
+        "technologies": [],
+        "patterns": [],
+        "concepts": [
+          "hashing",
+          "owasp"
+        ],
+        "tools": []
+      },
+      "domain": "software"
+    },
+    "commitHashes": [
+      "79e77611851602c302ecaa6b7dda25180a13b547",
+      "9c6c409876490ae4c944fddefe11023393572c72"
     ]
   }
 ]

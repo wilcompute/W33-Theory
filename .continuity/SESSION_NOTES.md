@@ -17,11 +17,11 @@
 
 ## ✅ Next Steps
 <!-- What should we do next? -->
-- Auto-saved at 2026-08-17T14:51:21.568Z (reason: timer)
+- Auto-saved at 2026-08-17T14:59:53.799Z (reason: threshold-commits)
 - Recent commits:
-  - 329186f93 Pass5667-5674: the object is stratified by characteristic, and the Reye kernel is optimal
-  - 570275b52 Harden Pass5704-5711 freeze against parallel master advances
-  - de9076272 Pass5724: register affine torsion pass namespace
+  - 79e776118 Pass5675-5682: the characteristic-2 code reconstructs the bridge group's block system
+  - 9c6c40987 Use repo-proven Tectonic installer for Pass5704-5711
+  - 52244849d Watch publication DAG auditor in Pass5704-5711 CI
 
 ## 📝 Open Questions
 <!-- What do we still need to figure out? -->
