@@ -1,0 +1,18 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.fragment",
+  "range": [5725, 5732],
+  "owner": "openai_gpt5_6_sol",
+  "status": "RESERVED_ACTIVE",
+  "created_utc": "2026-08-17T15:19:00Z",
+  "tasks": {
+    "5725": "construct the exact pairing from the Pass5720-5724 (Z/3)^2 torsion doublet into Z(SU(3)) Wilson phases on nonzero-triality carriers; determine observability and kernel",
+    "5726": "replace the falsified l1=0 higher-algebra story by computing the Jacobiator image and the minimal degree-plus-one carrier Y with l1:Y->g; determine l3 uniqueness modulo ker(l1)",
+    "5727": "construct or falsify an explicit symmetry intertwiner between the affine torsion/su3 carrier and the E8 27x3 family multiplicity factor, using actual finite-module actions rather than dimension matching",
+    "5728": "quotient Ramanujan signings by switching and graph automorphism, compute invariant fingerprints of the known exact levels, and test for an automorphism-invariant recursive selector",
+    "5729": "classify natural family-symmetry breaking subgroups and their Herm(3) commutants; require nondegenerate spectra, nontrivial mixing allowance, and a residual geometric selection rule",
+    "5730": "bonkers: construct the Heisenberg H_3 central extension of the torsion doublet from its alternating pairing and test whether its 3D qutrit irrep plus GL(2,3) normalizer supplies a genuine projective matter carrier",
+    "5731": "bonkers: couple the order-3 torsion sector to the deck class-D/Pfaffian Z2 sector and test whether any nontrivial mixed Z6 topological invariant or extension survives",
+    "5732": "bonkers: test whether the binary Ramanujan switching hierarchy and ternary affine torsion admit a canonical Chinese-remainder/arithmetic bridge, or prove the p=2 and p=3 selectors remain structurally independent"
+  },
+  "boundary": "Promote only exact finite homology, group, representation, cohomology, switching-class, commutant, spectrum, or higher-algebra statements. No QCD, confinement, physical generations, Standard-Model charge assignment, mass spectrum, continuum anomaly, spacetime dimension, or measured physics may be inferred from counts or abstract isomorphisms alone."
+}
