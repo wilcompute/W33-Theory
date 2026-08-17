@@ -1,0 +1,104 @@
+{
+  "boundary": "Pass 5800 establishes an equivalence on THREE configurations and does not prove it. Pass 5802 CORRECTS Pass 5761 and Pass 5790, whose Desargues and Mobius-Kantor rows used incidence lists that are not those configurations. Pass 5804 reports a search as launched and unfinished, with no result",
+  "pass_5800_5801": {
+    "agreement": "3 of 3 valid cases",
+    "configurations": [
+      {
+        "agrees": true,
+        "block_systems": 1,
+        "kernel_partition": true,
+        "levi_aut": 576,
+        "name": "Reye 12_4 16_3",
+        "point_group": 576,
+        "primitive": false
+      },
+      {
+        "agrees": true,
+        "block_systems": 1,
+        "kernel_partition": true,
+        "levi_aut": 216,
+        "name": "Pappus 9_3",
+        "point_group": 108,
+        "primitive": false
+      },
+      {
+        "agrees": true,
+        "block_systems": 0,
+        "kernel_partition": false,
+        "levi_aut": 336,
+        "name": "Fano 7_3",
+        "point_group": 168,
+        "primitive": true
+      }
+    ],
+    "decisive_case": "Fano is PRIMITIVE -- zero block systems -- and fails the kernel test too; both sides fail together",
+    "equivalence": "kernel top-weight words complement to a partition <=> the point action has a unique nontrivial block system",
+    "why_it_matters": "a primitive counterexample is worth more than another positive: two positives could share a third cause"
+  },
+  "pass_5802_5803": {
+    "bogus_inputs": [
+      {
+        "label": "Desargues 10_3",
+        "measured_aut": 4,
+        "real_aut": 120,
+        "verdict": "not the Desargues configuration"
+      },
+      {
+        "label": "Mobius-Kantor 8_3",
+        "measured_aut": 1,
+        "real_aut": ">1",
+        "verdict": "trivial automorphism group; not that configuration"
+      }
+    ],
+    "corrects": [
+      "Pass 5761's 'two of five'",
+      "Pass 5790's failure table"
+    ],
+    "real_count": "two of THREE valid configurations, with Fano agreeing negatively",
+    "root_cause": "incidence lists written from memory and never sanity-checked",
+    "the_check": "compare |Aut| against the published order for a named configuration; costs one lookup"
+  },
+  "pass_5804": {
+    "motivation": "three (1,2)-searches all plateaued at 51",
+    "neighbourhood": "(1,3)-swap: drop one, add three",
+    "status": "LAUNCHED AND UNFINISHED -- no result at cutoff"
+  },
+  "pass_5805": {
+    "blocks": [
+      {
+        "block": "5744-5751",
+        "first_on_origin": "wilcompute"
+      },
+      {
+        "block": "5752-5759",
+        "first_on_origin": "Wil"
+      },
+      {
+        "block": "5760-5767",
+        "first_on_origin": "Wil"
+      },
+      {
+        "block": "5768-5775",
+        "first_on_origin": "Wil"
+      },
+      {
+        "block": "5776-5783",
+        "first_on_origin": "wilcompute"
+      },
+      {
+        "block": "5784-5791",
+        "first_on_origin": "Wil"
+      }
+    ],
+    "verdict": "no silent loss; two collisions, both renumbered rather than overwritten"
+  },
+  "pass_5806_5807": {
+    "established": "an equivalence between a code property and a group property, on three configurations",
+    "not_done": [
+      "a proof in either direction",
+      "the real Desargues and Mobius-Kantor configurations",
+      "alpha(W(3,9)) under the changed neighbourhood"
+    ],
+    "status": "conjecture with three data points, not a theorem"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "lo": 5800,
+  "hi": 5807,
+  "track": "A",
+  "topic": "kernel-partition <=> unique block system; two bogus inputs corrected",
+  "reserved": "2026-08-17",
+  "note": "renumbered from 5792-5799 after a THIRD collision. My push-verify checked that the registry FILE existed on origin, which it did -- as the other lane's. Verify your own COMMIT is on origin, not the path."
+}

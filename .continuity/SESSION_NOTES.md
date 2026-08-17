@@ -17,11 +17,11 @@
 
 ## ✅ Next Steps
 <!-- What should we do next? -->
-- Auto-saved at 2026-08-17T16:38:01.680Z (reason: threshold-commits)
+- Auto-saved at 2026-08-17T16:51:21.527Z (reason: timer)
 - Recent commits:
-  - cb99bf947 Pass5768-5775: Pappus shares the Reye kernel shape; block-system test unrun
-  - 5d4971ac8 Reserve Pass5768-5775 Track A: Pappus kernel shape
-  - 8f3bca1f9 Pass5760-5767: perturbing the survivors, and failure mode six into CLAUDE.md
+  - a1f7ec5e5 Restore failure mode six in CLAUDE.md after cherry-pick resolution
+  - 2d34d3282 Pass5784-5791: the kernel-finds-the-block-system class is real, with two members
+  - a022ba075 Pass5776-5783: freeze Reye Latin common-core certificate
 
 ## 📝 Open Questions
 <!-- What do we still need to figure out? -->

@@ -1,9 +1,0 @@
-{
-  "schema": "w33.pass_namespace_registry.v2.fragment",
-  "range": [5792, 5799],
-  "owner": "openai_gpt5_6_sol",
-  "status": "RESERVED",
-  "created_utc": "2026-08-17T17:05:00Z",
-  "topic": "Klein Latin affine left-right M2(F2) model; heavy hyperplane equation; transpose outer involution; q5 carrier object-level verification",
-  "boundary": "Use M2(F2) only as the additive 4-space with left/right GL2(2) action unless a ring-geometric statement is separately proved. Saniga--Planat--Pracna two-qubit projective-ring geometry is prior art and is not identified with W33 physics."
-}
