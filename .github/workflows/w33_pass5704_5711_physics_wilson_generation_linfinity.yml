@@ -25,6 +25,10 @@ on:
       - '.github/workflows/w33_pass5704_5711_physics_wilson_generation_linfinity.yml'
   workflow_dispatch:
 
+concurrency:
+  group: w33-pass5704-5711-closure
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
