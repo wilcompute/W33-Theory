@@ -1,0 +1,26 @@
+{
+  "passes": [7017,7018,7019,7020,7021,7022,7023,7024],
+  "group": "PSp(4,3), order 25920",
+  "w33_action": {
+    "degree": 40,
+    "rank": 3,
+    "subdegrees": [1,12,27],
+    "srg": [40,12,2,4],
+    "spectrum": {"12":1,"2":24,"-4":15},
+    "permutation_module_dimensions": [1,24,15]
+  },
+  "schlafli_action": {
+    "degree": 27,
+    "rank": 3,
+    "subdegrees": [1,10,16],
+    "srg": [27,16,10,8],
+    "spectrum": {"16":1,"4":6,"-2":20},
+    "permutation_module_dimensions": [1,6,20]
+  },
+  "common_irreducible_dimensions": [1],
+  "hom_dimension_over_C": 1,
+  "hom_dimension_over_Q": 1,
+  "theorem": "Every full-PSp(4,3)-equivariant characteristic-zero linear map between the 27-point Schlaefli permutation module and the 40-point W33 permutation module is a scalar multiple of the constant all-ones channel.",
+  "escape_routes": ["proper subgroup", "nonlinear map", "larger/intermediate carrier", "separate modular-characteristic analysis"],
+  "boundary": "Characteristic-zero full-group linear statement only."
+}
