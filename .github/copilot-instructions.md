@@ -10,13 +10,14 @@
 This file contains project context and decisions. AI assistants should read this file for context. MCP tools are an optional enhancement for richer interaction when connected.
 
 ## Project Context
-- **Total Decisions:** 5173
+- **Total Decisions:** 5174
 - **Known Topics:** needs-review, auto-draft, why, w33, testing, toe, docs, architecture, holonet, photonic, audit, qec, github, selector, gap
 
 ## Current State
 **Repository:** Theory of Everything
 **Project Type:** Python Project | Python
 **Branch:** master
+**Tracking:** ahead 0, behind 1
 
 **Recent Commits:**
 - `88b41ac Reserve Pass5712-5719: outer versus sign representation twist`
@@ -26,35 +27,35 @@ This file contains project context and decisions. AI assistants should read this
 - `788fe45 Restore missing BT3528-3534 public index source`
 
 **Working Tree:**
-- M .continuity/SESSION_NOTES.md
 - M .continuity/decisions.json
 - M .continuity/decisions.jsonl
 - M .cursorrules
-- M .github/copilot-instructions.md
-- M .github/workflows/w33_pass4865_4872_release.yml
-- M .github/workflows/w33_pass4940_4947_exact_packet.yml
-- M .github/workflows/w33_pass5691_5698_physics_ym_duality_ramanujan.yml
-- M AGENTS.md
-- M CLAUDE.md
-- M GEMINI.md
-- M HOLONET.md
-- D PASS4801_4812_SRG_CONSTELLATION_BREAKTHROUGH.md
-- D PASS4801_gap_verification.g
-- M README.md
+- ?? .mcp.json
+- ?? analysis/PASS4938_ADJOINT_ROOT_COMPILER_AND_SYMMETRY_FIREWALL.md
+- ?? analysis/PASS4939_CHAMBER_STEINER_INTERTWINER.md
+- ?? analysis/PASS4948_MODULAR_BOSE_MESNER_CORRECTION.md
+- ?? analysis/PASS4949_W33_Q43_LEVI_MIDDLE_MODULES.md
+- ?? analysis/PASS4950_FALSE_SRG33_W33_QUARANTINE.md
+- ?? analysis/PASS4959_POINT_LINE_INCIDENCE_LOEWY_COMPILER.md
+- ?? analysis/PASS5699_5703_external_prior_art_and_corrections.md
+- ?? analysis/w33_pass4938_adjoint_root_compiler.g
+- ?? analysis/w33_pass4939_chamber_steiner_intertwiner.g
+- ?? analysis/w33_pass4948_modular_bose_mesner_correction.g
+- ?? analysis/w33_pass4949_w33_levi_middle19_intertwiner.g
 
 ## Session Context
 **Goals:**
 - 2026-08-08 current goal: finish and validate the Passes 4324-4334 chamber Hecke and audited-corrections packet while preserving exact theorem, retraction, and open-boundary language.
 
 ## Decision Freshness
-**0 stale decisions** · 507 need review · 1138 superseded ready to archive · Oldest unreviewed: 2026-04-20
+**0 stale decisions** · 511 need review · 1138 superseded ready to archive · Oldest unreviewed: 2026-04-20
 
 Stale decisions requiring attention:
 1. **1777318403162-biaewx** (score 55) — "Why: Add remaining arithmetic and trace-structure material?" — 17 weeks old, status: outdated, never reviewed
 2. **1777318403161-4mgrce** (score 55) — "Why: paper: add main.tex, references.bib, and all three figure scripts (Issue #1" — 17 weeks old, status: outdated, never reviewed
-3. **1777318403161-vfxeky** (score 54) — "Why: theory: add Witting deck-control audit?" — 17 weeks old, status: outdated, never reviewed
-4. **1777318403161-wwusgh** (score 54) — "Why: theory: add Witting packet Heisenberg chart?" — 17 weeks old, status: outdated, never reviewed
-5. **1777318403161-8dkkdk** (score 54) — "Why: theory: add Witting packet tritangent support bridge?" — 17 weeks old, status: outdated, never reviewed
+3. **1777318403161-vfxeky** (score 55) — "Why: theory: add Witting deck-control audit?" — 17 weeks old, status: outdated, never reviewed
+4. **1777318403161-wwusgh** (score 55) — "Why: theory: add Witting packet Heisenberg chart?" — 17 weeks old, status: outdated, never reviewed
+5. **1777318403161-8dkkdk** (score 55) — "Why: theory: add Witting packet tritangent support bridge?" — 17 weeks old, status: outdated, never reviewed
 
 When referencing these decisions, note their staleness. Verify they still reflect current project state before recommending based on them.
 
@@ -228,27 +229,27 @@ after commit:
 ---
 
 ## Recent Decisions
-1. **decision-08efff0e** (8/17/2026) [correction, how]
+1. **decision-17869781** (8/17/2026) [rest]
+   - Q: Where does linear degeneracy live in the W33/Q4/tomotope object, and what is the Reye configuration's characteristic-...
+   - A: IN CHARACTERISTIC 2, not 3 -- and the kernel is a length-optimal code.  THE REYE 12_4 16_3 INCIDENCE COLLAPSES AT p=2 AND NOWHERE ELSE. Rank 10 over Q and over GF(3), GF(5), GF(7), GF(13); rank 8 over GF(2). The GF(2) kernel is a TWO-WEIGHT [12,4,6] binary code, enumerator 1 + 12z^6 + 3z^8, and it MEETS THE GRIESMER BOUND with equality (6+3+2+1 = 12), so no binary [n,4,6] code is shorter. A property of the configuration, not a basis choice, and the first optimal object this thread has produced.  DISTINCT FROM THE PRIOR ART, and worth citing next to it: per decision-b4822355, MCXCII built a ...
+
+2. **decision-08efff0e** (8/17/2026) [correction, how]
    - Q: How does the newly arrived Pass5706 interact with corrected Pass5699?
    - A: Source inspection resolves the overlap: Pass5706 imports Pass5683/5693, initializes from Pass5683 levi()+NEG, and extends that earlier switching-gauge-fixed tower to 2560. It does not import or continue Pass5699. The correction report, prior-art ledger, TeX/HTML sources, and regression now state that the neighboring phrase 'past Pass5699-5703' is chronological, not a tower identity.
 
-2. **decision-c5354d11** (8/17/2026) [compile, pass5699-5703]
+3. **decision-c5354d11** (8/17/2026) [compile, pass5699-5703]
    - Q: Why reflow the corrected Pass5699-5703 TeX determinant?
    - A: The standalone compilation was mathematically clean but exposed one overfull display. Reflowed the covering factorization in an aligned environment so the source compiles without layout warnings.
 
-3. **decision-be29e6e8** (8/17/2026) [formatting, pass5703]
+4. **decision-be29e6e8** (8/17/2026) [formatting, pass5703]
    - Q: Why make the publication-owner assertion format-neutral?
    - A: Markdown, TeX, and HTML correctly spell the same owner range with different separators and prefixes. The regression now requires both owner numbers 5226 and 5227 without coupling correctness to one presentation syntax.
 
-4. **decision-6463a27e** (8/17/2026) [pass5703, prior-art]
+5. **decision-6463a27e** (8/17/2026) [pass5703, prior-art]
    - Q: Why normalize the prior-owner assertion in the correction test?
    - A: The publication sources consistently cite the packet as Pass5226--5227 rather than repeating the word Pass before each number. The regression now matches that canonical citation while still requiring the exact prior-owner range.
 
-5. **decision-249a35f5** (8/17/2026) [correction, pass5699-5703]
-   - Q: Why adjust the first correction-regression failures?
-   - A: The quarantine deliberately rejected the exact legacy physics slogan even when quoted in the retraction ledger, so the ledger now paraphrases it. The q5 tombstone may truthfully name Pass5667's proven TransitiveIdentification; the test now forbids executable legacy calls rather than the cited term.
-
-*1475 unreviewed drafts from auto-capture pending review — `continuity log` the real rationale or update_decision to expand them.*
+*1471 unreviewed drafts from auto-capture pending review — `continuity log` the real rationale or update_decision to expand them.*
 
 ---
 

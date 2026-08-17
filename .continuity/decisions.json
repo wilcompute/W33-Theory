@@ -24,7 +24,8 @@
         "b0641b3b-3516-43ef-8446-64272c90b98d",
         "951fc6ac-b3ba-4bc5-91ea-5761985511e6",
         "834f75ed-8832-447d-9ead-3f7fd5b93133",
-        "d8ac0082-876f-4935-80c4-de4c705ccec2"
+        "d8ac0082-876f-4935-80c4-de4c705ccec2",
+        "1786978125686-pe8wl2"
       ],
       "causedBy": []
     },
@@ -70,7 +71,8 @@
         "63481815-6d45-4635-9c8f-f7418f754242",
         "dfd72208-dd6f-4f9c-b254-0bb0c072af3d",
         "d8ac0082-876f-4935-80c4-de4c705ccec2",
-        "4882e1b1-e5bd-4038-a888-8aa61f1f90ea"
+        "4882e1b1-e5bd-4038-a888-8aa61f1f90ea",
+        "1786978125686-pe8wl2"
       ],
       "causedBy": [
         "manual-20260507-pin-e8-manifest-z3-output-check"
@@ -306,7 +308,8 @@
         "4250c93d-0379-41a5-8ad6-4dd4975297af",
         "56038377-4c6b-48f8-8b24-3ff33095de65",
         "e8fa85eb-29ee-4617-a086-aec55b0a8922",
-        "6463a27e-4bc0-4022-85bf-3242450eac40"
+        "6463a27e-4bc0-4022-85bf-3242450eac40",
+        "1786978125686-pe8wl2"
       ],
       "causedBy": []
     },
@@ -354,7 +357,8 @@
         "4250c93d-0379-41a5-8ad6-4dd4975297af",
         "56038377-4c6b-48f8-8b24-3ff33095de65",
         "e8fa85eb-29ee-4617-a086-aec55b0a8922",
-        "6463a27e-4bc0-4022-85bf-3242450eac40"
+        "6463a27e-4bc0-4022-85bf-3242450eac40",
+        "1786978125686-pe8wl2"
       ],
       "causedBy": []
     },
@@ -488,7 +492,8 @@
         "951fc6ac-b3ba-4bc5-91ea-5761985511e6",
         "4250c93d-0379-41a5-8ad6-4dd4975297af",
         "56038377-4c6b-48f8-8b24-3ff33095de65",
-        "98570fba-3ce7-45aa-84fd-5560b203d593"
+        "98570fba-3ce7-45aa-84fd-5560b203d593",
+        "1786978125686-pe8wl2"
       ],
       "causedBy": []
     },
@@ -530,7 +535,8 @@
         "861f97a2-44aa-43bc-8b3b-4139b2c5c52a",
         "951fc6ac-b3ba-4bc5-91ea-5761985511e6",
         "4250c93d-0379-41a5-8ad6-4dd4975297af",
-        "56038377-4c6b-48f8-8b24-3ff33095de65"
+        "56038377-4c6b-48f8-8b24-3ff33095de65",
+        "1786978125686-pe8wl2"
       ],
       "causedBy": []
     },
@@ -648,7 +654,8 @@
         "4250c93d-0379-41a5-8ad6-4dd4975297af",
         "56038377-4c6b-48f8-8b24-3ff33095de65",
         "501f6b6a-a866-4646-882e-2da75b79161a",
-        "4882e1b1-e5bd-4038-a888-8aa61f1f90ea"
+        "4882e1b1-e5bd-4038-a888-8aa61f1f90ea",
+        "1786978125686-pe8wl2"
       ],
       "causedBy": []
     },
@@ -719,7 +726,8 @@
       "causes": [
         "2ca8e9ba-1a3f-4303-8c0a-cd13cb47e5b9",
         "7f88d257-5c81-48cf-bfa8-030621e8d359",
-        "39efaaa0-931f-4a27-a849-f079696a58b8"
+        "39efaaa0-931f-4a27-a849-f079696a58b8",
+        "1786978125686-pe8wl2"
       ],
       "causedBy": []
     },
@@ -826,7 +834,9 @@
       "relatedTo": [
         "1786859568721-fahph6"
       ],
-      "causes": [],
+      "causes": [
+        "1786978125686-pe8wl2"
+      ],
       "causedBy": []
     },
     "metadata": {
@@ -924,7 +934,8 @@
         "5c826c42-f536-494e-945b-db4e404e703e",
         "23ea8630-cf32-4d49-9e8c-283e49c88746",
         "dfd72208-dd6f-4f9c-b254-0bb0c072af3d",
-        "5ea56cca-9db3-4a82-afc7-8bae561fe946"
+        "5ea56cca-9db3-4a82-afc7-8bae561fe946",
+        "1786978125686-pe8wl2"
       ],
       "causedBy": [
         "manual-20260507-test-e8-orchestrator-z3-output-contract",
@@ -33019,10 +33030,12 @@
     "status": "outdated",
     "relationships": {
       "supersededBy": [
-        "1786861486612-snafmx"
+        "1786861486612-snafmx",
+        "1786978125686-pe8wl2"
       ],
       "relatedTo": [
-        "1786861486612-snafmx"
+        "1786861486612-snafmx",
+        "1786978125686-pe8wl2"
       ]
     },
     "metadata": {
@@ -80881,10 +80894,12 @@
         "bfdd8d1e-a6c1-4a48-866e-69fb1215fd96",
         "7d05c082-ac5a-4e5f-b205-66418739dd5b",
         "6a650968-e5de-481d-8683-8fa0a4babca5",
-        "1786861486612-snafmx"
+        "1786861486612-snafmx",
+        "1786978125686-pe8wl2"
       ],
       "supersededBy": [
-        "1786861486612-snafmx"
+        "1786861486612-snafmx",
+        "1786978125686-pe8wl2"
       ]
     },
     "metadata": {
@@ -109299,10 +109314,12 @@
     "status": "outdated",
     "relationships": {
       "supersededBy": [
-        "1786861486612-snafmx"
+        "1786861486612-snafmx",
+        "1786978125686-pe8wl2"
       ],
       "relatedTo": [
-        "1786861486612-snafmx"
+        "1786861486612-snafmx",
+        "1786978125686-pe8wl2"
       ]
     },
     "metadata": {
@@ -114154,7 +114171,8 @@
       "supersedes": [],
       "supersededBy": [
         "1786859568721-fahph6",
-        "1786860401883-i52nl0"
+        "1786860401883-i52nl0",
+        "1786978125686-pe8wl2"
       ],
       "relatedTo": [
         "1784938579774-o0xebs",
@@ -114189,7 +114207,8 @@
     "relationships": {
       "supersedes": [],
       "supersededBy": [
-        "1786859568721-fahph6"
+        "1786859568721-fahph6",
+        "1786978125686-pe8wl2"
       ],
       "relatedTo": [],
       "causes": [],
@@ -114220,7 +114239,8 @@
     "relationships": {
       "supersedes": [],
       "supersededBy": [
-        "1786859568721-fahph6"
+        "1786859568721-fahph6",
+        "1786978125686-pe8wl2"
       ],
       "relatedTo": [],
       "causes": [],
@@ -119298,10 +119318,12 @@
     "status": "active",
     "relationships": {
       "supersededBy": [
-        "1786861486612-snafmx"
+        "1786861486612-snafmx",
+        "1786978125686-pe8wl2"
       ],
       "relatedTo": [
-        "1786861486612-snafmx"
+        "1786861486612-snafmx",
+        "1786978125686-pe8wl2"
       ]
     },
     "metadata": {
@@ -121475,9 +121497,6 @@
     ],
     "files": [],
     "status": "active",
-    "metadata": {
-      "status": "active"
-    },
     "relationships": {
       "supersededBy": [
         "08efff0e-d949-4775-bbbb-12eae9afe24d"
@@ -121485,6 +121504,9 @@
       "relatedTo": [
         "08efff0e-d949-4775-bbbb-12eae9afe24d"
       ]
+    },
+    "metadata": {
+      "status": "active"
     }
   },
   {
@@ -121612,9 +121634,6 @@
     ],
     "files": [],
     "status": "active",
-    "metadata": {
-      "status": "active"
-    },
     "relationships": {
       "supersededBy": [
         "08efff0e-d949-4775-bbbb-12eae9afe24d"
@@ -121622,6 +121641,9 @@
       "relatedTo": [
         "08efff0e-d949-4775-bbbb-12eae9afe24d"
       ]
+    },
+    "metadata": {
+      "status": "active"
     }
   },
   {
@@ -123226,7 +123248,8 @@
       ],
       "supersededBy": [
         "1786860945369-ki8azn",
-        "1786861486612-snafmx"
+        "1786861486612-snafmx",
+        "1786978125686-pe8wl2"
       ],
       "relatedTo": [
         "1777318403162-biaewx",
@@ -123317,7 +123340,8 @@
       ],
       "supersededBy": [
         "1786860945369-ki8azn",
-        "1786861486612-snafmx"
+        "1786861486612-snafmx",
+        "1786978125686-pe8wl2"
       ],
       "relatedTo": [],
       "causes": [],
@@ -123431,12 +123455,15 @@
         "1784322240668-1bsjzj",
         "1784322240796-ff44ii"
       ],
-      "supersededBy": [],
+      "supersededBy": [
+        "1786978125686-pe8wl2"
+      ],
       "relatedTo": [
         "f476e3a6-e2fa-4177-96ee-dcc48ed5406b",
         "2dba3bd7-104d-4f11-8e15-c27215c82502",
         "4f67f525-fe41-4597-8cc1-b0140faa07cd",
-        "6338c323-5f7c-4074-ae47-88d9e79dbb58"
+        "6338c323-5f7c-4074-ae47-88d9e79dbb58",
+        "1786978125686-pe8wl2"
       ],
       "causes": [],
       "causedBy": [
@@ -135559,5 +135586,72 @@
       "status": "active"
     },
     "commitHashes": []
+  },
+  {
+    "id": "1786978125686-pe8wl2",
+    "question": "Where does linear degeneracy live in the W33/Q4/tomotope object, and what is the Reye configuration's characteristic-2 kernel?",
+    "answer": "IN CHARACTERISTIC 2, not 3 -- and the kernel is a length-optimal code.\n\nTHE REYE 12_4 16_3 INCIDENCE COLLAPSES AT p=2 AND NOWHERE ELSE. Rank 10 over Q and over GF(3), GF(5), GF(7), GF(13); rank 8 over GF(2). The GF(2) kernel is a TWO-WEIGHT [12,4,6] binary code, enumerator 1 + 12z^6 + 3z^8, and it MEETS THE GRIESMER BOUND with equality (6+3+2+1 = 12), so no binary [n,4,6] code is shorter. A property of the configuration, not a basis choice, and the first optimal object this thread has produced.\n\nDISTINCT FROM THE PRIOR ART, and worth citing next to it: per decision-b4822355, MCXCII built a [72,66]_3 TERNARY horizon code with six parity holes on the Reye-K12 completion, and decision-5b9f785d pins the Q4 face-edge -> antipodal quotient -> 12/16/48 bridge this uses. Same configuration, different code -- theirs is ternary on the K12 horizon, this is binary on the 12-point incidence itself.\n\nAND W(3,3) IS p-RANK RIGID: its point-line incidence has rank 25 in every characteristic tested. Q4 face-edge drops 5 at p=2 where only 1 is forced by weights (excess 4); the Reye drops 2 where 1 is forced (excess 1). So the char-2 stratum -- Q4, Reye, tomotope -- is where linear structure is lost, and therefore where a code, kernel or syndrome can live, while the char-3 stratum this corpus spends nearly all its attention on has no such room.\n\nTWO THINGS KILLED BEFORE PUBLISHING.\n\nCoincidence eleven: the Reye 12 has subgroups with orbit pattern 1+3+8, the SM gauge-boson count, one of them exactly the T12_165 point stabiliser C2 x S4. It dies twice -- 1+3+8 is one of fifteen patterns on the 12, and none of S4, C2 x A4, C2 x S4 relates to SU(3)xSU(2)xU(1); only the adjoint dimensions coincide. The complete orbit landscape was enumerated BEFORE the question was asked, which is the only reason this is a kill and not a claim.\n\nA retraction: Csaszar's vertex-face incidence drops rank at p=3, which looked like the 7-side and 3-side finally meeting after Pass 5662 ruled out any group-level meeting below order 4032. Arithmetic artefact -- every Csaszar vertex has degree 6 and 3 divides 6, so the all-ones vector is in the kernel for free. THE GENERAL RULE: a p-rank drop is only interesting in EXCESS of what row/column weights force. By that measure both Csaszar drops are zero.\n\nA FAILED HYPOTHESIS, recorded because the next person will have it too: two-weight codes are the classical Delsarte source of strongly regular graphs and this object already contains the 4x4 rook's graph, so the coset graph looked like it would explain the Pass 5644 S4 wr S2. It does not -- distance-8 gives SRG(16,3,2,0) = 4 disjoint K4 (three weight-8 words plus zero form a [12,2] subcode whose cosets are the K4s) and distance-6 gives K_{4,4,4,4}. The code is imprimitive so the coset graph degenerates. Why S4 wr S2 appears here remains UNEXPLAINED.\n\nYosys is not installed and no synthesis was run; rtl/ and analysis/w33_pass4339_synthesise_all_four_machines.py show the track already exists.</answer>\n<parameter name=\"tags\">w33, reye, characteristic-2, coding-theory, griesmer, coincidence-killed, retraction, pass5667",
+    "timestamp": "2026-08-17T14:48:45.686Z",
+    "tags": [
+      "rest"
+    ],
+    "files": [],
+    "status": "active",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [
+        "6338c323-5f7c-4074-ae47-88d9e79dbb58",
+        "1786861486612-snafmx",
+        "2dba3bd7-104d-4f11-8e15-c27215c82502",
+        "4f67f525-fe41-4597-8cc1-b0140faa07cd",
+        "f476e3a6-e2fa-4177-96ee-dcc48ed5406b",
+        "1786859568721-fahph6",
+        "1786860401883-i52nl0",
+        "1784409410004-2ofkhg",
+        "1784409410004-kzfbyz",
+        "1784409410003-54eefw"
+      ],
+      "supersededBy": [],
+      "relatedTo": [
+        "f476e3a6-e2fa-4177-96ee-dcc48ed5406b",
+        "2dba3bd7-104d-4f11-8e15-c27215c82502",
+        "4f67f525-fe41-4597-8cc1-b0140faa07cd",
+        "6338c323-5f7c-4074-ae47-88d9e79dbb58",
+        "1786861486612-snafmx"
+      ],
+      "causes": [],
+      "causedBy": [
+        "1777318403162-biaewx",
+        "1777318403161-4mgrce",
+        "1777318403161-qze7ej",
+        "1777318403161-t7tcbd",
+        "1777318403161-pu8p9x",
+        "1777318403161-s5j46a",
+        "1777318403161-e7wo55",
+        "1777318403161-xalutx",
+        "1777318403161-6tpseq",
+        "1777318403161-putaqm"
+      ]
+    },
+    "metadata": {
+      "status": "active",
+      "source": "mcp",
+      "entities": {
+        "technologies": [
+          "rest"
+        ],
+        "patterns": [],
+        "concepts": [],
+        "tools": []
+      },
+      "domain": "software"
+    },
+    "commitHashes": [
+      "329186f93bcbe9d28a7fdf1406f5e46cfe90a56d",
+      "570275b5222bfdd096cd5c94b1e1861936e9d033",
+      "de907627261de1932c3f4af1d3b18617b9fd3c1f",
+      "24f119a1dcabd061e0505c43613cde98802457c2",
+      "10b28845c68570bc212ee8af7b7b18c41962247f"
+    ]
   }
 ]

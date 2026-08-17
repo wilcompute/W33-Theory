@@ -1,0 +1,177 @@
+{
+  "boundary": "Pass 5675 proves an identity of PARTITIONS, computed two independent ways; it does not claim the code determines the group. Pass 5677's sweep covers structures this pass could build, not the whole corpus. Pass 5678 CONFIRMS the Pass 5672 retraction (incidence drops were artefacts) while finding a real collapse in the adjacency. Pass 5680 is one synthesis run with one script; it shows yosys did not find the relations, not that no tool could. Pass 5682 records a literature search as NOT FOUND, never as novel",
+  "pass_5675": {
+    "block_representatives": 1,
+    "block_sizes": [
+      4
+    ],
+    "code_partition": [
+      [
+        0,
+        5,
+        8,
+        11
+      ],
+      [
+        1,
+        4,
+        7,
+        9
+      ],
+      [
+        2,
+        3,
+        6,
+        10
+      ]
+    ],
+    "finding": "the [12,4,6] code's weight-8 complements are exactly T12_165's unique nontrivial block system; GF(2) Gaussian elimination recovers the group's imprimitivity with no group theory in the computation",
+    "is_the_code_partition": true,
+    "primitive": false,
+    "transitive_id": 165,
+    "why_not_a_coincidence": "the block system is UNIQUE, so there is nothing for a coincidence to pick from"
+  },
+  "pass_5676": {
+    "code_partition_shape": "3 blocks of 4",
+    "q4_natural_grading": "6 direction-pairs x 2 = 6 blocks of 2",
+    "reading": "the kernel sees the automorphism group rather than the coordinate frame the object was built in"
+  },
+  "pass_5677_5678": {
+    "clean": [
+      "Q4 vertex-edge",
+      "Q4 vertex-face",
+      "K7 adjacency",
+      "Csaszar vertex-edge",
+      "Csaszar vertex-face",
+      "Csaszar face-edge",
+      "Szilassi vertex-face",
+      "Szilassi face-edge",
+      "W(3,3) point-line"
+    ],
+    "csaszar_answer": "YES -- excess 6 at p=2 and 1 at p=3, in the FACE-FACE ADJACENCY; all six incidence matrices stay clean, so the Pass 5672 retraction stands",
+    "largest": {
+      "excess": 9,
+      "note": "the graph whose Aut = S4 wr S2 remains unexplained; a dimension-10 GF(2) kernel under it is unexamined",
+      "object": "4x4 rook adjacency"
+    },
+    "sweep": [
+      {
+        "drop": 10,
+        "excess": 9,
+        "forced": 1,
+        "object": "4x4 rook adjacency",
+        "p": 2,
+        "rank_Q": 16,
+        "shape": [
+          16,
+          16
+        ]
+      },
+      {
+        "drop": 6,
+        "excess": 6,
+        "forced": 0,
+        "object": "Csaszar face-face adjacency",
+        "p": 2,
+        "rank_Q": 14,
+        "shape": [
+          14,
+          14
+        ]
+      },
+      {
+        "drop": 5,
+        "excess": 4,
+        "forced": 1,
+        "object": "Q4 face-edge",
+        "p": 2,
+        "rank_Q": 22,
+        "shape": [
+          24,
+          32
+        ]
+      },
+      {
+        "drop": 4,
+        "excess": 4,
+        "forced": 0,
+        "object": "Reye Levi adjacency",
+        "p": 2,
+        "rank_Q": 20,
+        "shape": [
+          28,
+          28
+        ]
+      },
+      {
+        "drop": 2,
+        "excess": 1,
+        "forced": 1,
+        "object": "Reye 12_4 16_3",
+        "p": 2,
+        "rank_Q": 10,
+        "shape": [
+          16,
+          12
+        ]
+      },
+      {
+        "drop": 2,
+        "excess": 1,
+        "forced": 1,
+        "object": "Csaszar face-face adjacency",
+        "p": 3,
+        "rank_Q": 14,
+        "shape": [
+          14,
+          14
+        ]
+      }
+    ]
+  },
+  "pass_5679": {
+    "code": [
+      24,
+      7,
+      6
+    ],
+    "griesmer_bound": 15,
+    "meets_griesmer": false,
+    "shared_structure": "its three weight-16 words halve to the Reye code's three weight-8 words under the antipodal quotient",
+    "weights": {
+      "0": 1,
+      "10": 24,
+      "12": 44,
+      "14": 48,
+      "16": 3,
+      "6": 8
+    }
+  },
+  "pass_5680_5681": {
+    "cell_type": "$_XOR_",
+    "cells": 32,
+    "emitted_checks": 16,
+    "example_relation": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "existing_relations": 8,
+    "found_relations": 0,
+    "inverts": "Pass 2772-2776 found synthesis sees what simulation cannot; here mathematics sees what synthesis cannot",
+    "minimal_checks": 8,
+    "naive": 32,
+    "reason": "opt does local structural rewriting; the redundancy is linear across output cones and every individual output is an irredundant 3-input XOR",
+    "version": "0.68 (yowasp-yosys)"
+  },
+  "pass_5682": {
+    "caveat": "absence from four searches is weak evidence; [12,4,6] is small enough to be known under a construction name not hit",
+    "result": "NOT FOUND",
+    "searched": [
+      "two-weight code tables",
+      "Griesmer-optimal literature",
+      "code automorphism literature"
+    ]
+  }
+}
