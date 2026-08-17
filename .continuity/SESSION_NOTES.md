@@ -17,11 +17,11 @@
 
 ## ✅ Next Steps
 <!-- What should we do next? -->
-- Auto-saved at 2026-08-17T21:07:13.933Z (reason: threshold-commits)
+- Auto-saved at 2026-08-17T21:20:07.679Z (reason: threshold-commits)
 - Recent commits:
-  - 4e21bb348 Merge remote-tracking branch 'origin/master'
-  - 8201d578e Pass5984-5991: the whole contextuality ladder is one quadratic form
-  - 67183ce1d Pass5961-5974: det-split = crossing/internal duad split + doily realizes Out(S_6) geometrically
+  - 571825630 Merge remote-tracking branch 'origin/master'
+  - b3f93bba7 Pass6016-6023: alpha(W(2n-1,2)) = 2n+1, verified at four ranks and proved
+  - d54184c23 Pass5975-6000: all five fronts executed — swap-graph fingerprint frozen, syntheme layer closed, O+(4,3) refined to 16+12+12, CE2/K3 provenance mapped
 
 ## 📝 Open Questions
 <!-- What do we still need to figure out? -->

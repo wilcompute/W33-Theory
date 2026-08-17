@@ -1,0 +1,49 @@
+{
+  "boundary": "Pass 6024 reformulates alpha(W(2n-1,q)) as a matrix-rank extremal problem and VERIFIES the reformulation on the actual optima at q=2 and q=3. It does NOT solve the odd-q case. The reformulation is elementary and, like everything else in this thread with a short proof, presumed classical",
+  "pass_6024_the_unification": {
+    "so": "the rank bound is identical at every q. What differs is how much freedom the entries have, and that is the entire reason the even-q answer is a clean formula while the odd-q answers resist one",
+    "statement": "alpha(W(2n-1,q)) = the maximum k for which some k x k ANTISYMMETRIC matrix over F_q, with zero diagonal and ALL off-diagonal entries nonzero, has rank at most 2n",
+    "the_mechanism": "at q=2 there is exactly ONE nonzero field element, so the Gram matrix is FORCED to be J_k - I_k and the parity of its rank caps k at 2n+1. At odd q there are q-1 nonzero values, the matrix is not forced, and k can exceed 2n+1 -- 7 at q=3 and 18 at q=5 against 2n+1 = 5",
+    "verified_on_actual_optima": [
+      {
+        "alpha": 5,
+        "bound_2n": 4,
+        "distinct_off_diagonal_values": [
+          1
+        ],
+        "forced": true,
+        "gram_rank": 4,
+        "q": 2
+      },
+      {
+        "alpha": 7,
+        "bound_2n": 4,
+        "distinct_off_diagonal_values": [
+          1,
+          2
+        ],
+        "forced": false,
+        "gram_rank": 4,
+        "q": 3
+      }
+    ],
+    "why": "a set of pairwise non-collinear points is a set of vectors whose Gram matrix under the symplectic form has zero diagonal and nonzero off-diagonal entries; the vectors span a subspace of F_q^(2n), so the Gram rank is at most 2n"
+  },
+  "pass_6025_the_simplex_connection": {
+    "observation": "k vectors pairwise non-orthogonal with all Gram entries EQUAL is the symplectic analogue of a regular simplex",
+    "status": "an interpretation connecting two known mechanisms, not a new theorem",
+    "the_reading": "at q=2 the optimum is FORCED into simplex shape because there is only one nonzero value to be constant at; at odd q it is not forced, and that is why 7 and 18 fit no formula",
+    "the_repo_owns_this_mechanism": "Pass 1614's Hoffman-tight criterion: a coclique meets the ratio bound iff its characteristic vectors form a regular simplex at constant inner product"
+  },
+  "pass_6026_the_odd_q_question_restated": {
+    "known_values": {
+      "q=2, 2n=4": 5,
+      "q=3, 2n=4": 7,
+      "q=5, 2n=4": 18
+    },
+    "new_form": "what is the maximum k for a rank-at-most-4 antisymmetric F_q matrix with all off-diagonal entries nonzero?",
+    "old_form": "what is alpha(W(3,q)) for odd q? -- 7, 18, and then unknown",
+    "still_open": "q=9 at 2n=4, where the best construction is 51 against a bound of 80",
+    "why_this_is_better": "it is a pure matrix problem with no geometry in it, it makes the q-dependence explicit as the number of available nonzero values, and it explains why q=2 is the only clean case"
+  }
+}
