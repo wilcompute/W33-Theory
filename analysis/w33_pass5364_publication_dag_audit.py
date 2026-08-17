@@ -29,6 +29,14 @@ PUBLIC_SOURCE_ALIASES = {
     "analysis/PASS4544_4551_module_cubic_zeta_index_insert.html":
         "analysis/PASS4544_4551_module_cubic_enumerator_zeta_index_insert.html",
 }
+# Historical v1 theorem names are archival evidence, but a few were explicitly
+# superseded by collision-safe canonical wrappers.  Keep the old spelling in the
+# ledger and resolve it here rather than rewriting history or requiring duplicate
+# live theorem leaves.  Pass3996's own reconciler declared this exact migration.
+MANIFEST_SOURCE_ALIASES = {
+    "analysis/BT3989_BT3996_physical_incidence_photon_breakthrough_insert":
+        "analysis/BT3989_BT3996_physical_photon_causal_memory_insert",
+}
 PUBLIC_SECTION_ALIASES = {
     ("id", "bt3418-3429-clebsch-d5-supplement"):
         ("marker", "<!-- BT3418-BT3429-CLEBSCH-D5-SUPPLEMENT -->"),
@@ -222,16 +230,22 @@ def audit(require_index: bool = True) -> dict:
     counts = Counter(legacy_required)
     legacy_duplicates = {k: v for k, v in sorted(counts.items()) if v > 1}
     legacy_unique = list(dict.fromkeys(legacy_required))
+    legacy_aliases = {
+        item: MANIFEST_SOURCE_ALIASES[item]
+        for item in legacy_unique
+        if item in MANIFEST_SOURCE_ALIASES
+    }
+    resolved_legacy = [MANIFEST_SOURCE_ALIASES.get(item, item) for item in legacy_unique]
     # A current-frontier leaf may be a collision-safe wrapper around an older
     # theorem insert.  Count the wrapped theorem as reachable without promoting
     # every ordinary theorem insert into a recursive manifest node.
     wrapped_legacy: dict[str, str] = {}
     for parent in dag["leaves"]:
         for child in parse_inputs(tex_path(parent)):
-            if child in legacy_unique:
+            if child in resolved_legacy:
                 wrapped_legacy[child] = parent
     missing_legacy = [
-        item for item in legacy_unique
+        item for item in resolved_legacy
         if item not in reachable and item not in wrapped_legacy
     ]
     assert not missing_legacy, missing_legacy
@@ -275,60 +289,59 @@ def audit(require_index: bool = True) -> dict:
         "contract": public_contract,
     }
     if require_index:
-        assert index_path.is_file(), index_path
         index_text = index_path.read_text(encoding="utf-8")
-        observed = {section["token"]: section_count(index_text, section) for section in sections}
-        bad = {token: count for token, count in observed.items() if count != 1}
+        index_counts = {
+            f"{section['kind']}:{section['token']}": section_count(index_text, section)
+            for section in sections
+        }
+        bad = {k: v for k, v in index_counts.items() if v != 1}
         assert not bad, bad
-        index_status.update({"sha256": sha256(index_path), "sections": observed})
+        index_status["section_counts"] = index_counts
+        index_status["section_count"] = len(index_counts)
+        index_status["sha256"] = sha256(index_path)
+    else:
+        index_status["section_count"] = len(sections)
+        index_status["materialization_check"] = "SKIPPED"
 
     return {
-        "schema": "w33.publication_frontier_dag.v2",
-        "pass_range": [5364, 5371],
-        "status": "PASS",
-        "boundary": contract["boundary"],
-        "contract": {
-            "path": str(CONTRACT.relative_to(ROOT)),
-            "sha256": sha256(CONTRACT),
-            "legacy_path": str(legacy_path.relative_to(ROOT)),
-            "legacy_sha256": sha256(legacy_path),
-        },
+        "schema": "w33.pass5364_5371.publication_dag_audit.v2",
+        "status": "PASS_PUBLICATION_DAG_EXACT_ONCE",
+        "contract": str(CONTRACT.relative_to(ROOT)),
+        "legacy_contract": str(legacy_path.relative_to(ROOT)),
         "frontier": {
             "root": dag["root"],
-            "manifest_nodes": dag["manifest_nodes"],
-            "manifest_node_count": dag["manifest_node_count"],
-            "leaf_count": dag["leaf_count"],
-            "leaves": dag["leaves"],
-            "legacy_required_original_count": len(legacy_required),
-            "legacy_required_unique_count": len(legacy_unique),
-            "legacy_required_duplicates": legacy_duplicates,
-            "legacy_required_wrapped": wrapped_legacy,
-            "legacy_required_missing": missing_legacy,
+            "manifest_nodes": dag["manifest_node_count"],
+            "leaf_inserts": dag["leaf_count"],
+            "legacy_required_count": len(legacy_required),
+            "legacy_unique_count": len(legacy_unique),
+            "legacy_duplicate_entries": legacy_duplicates,
+            "legacy_manifest_aliases": legacy_aliases,
+            "legacy_wrapped_inputs": wrapped_legacy,
+            "shared_tail": tail,
         },
-        "shared_tail": tail,
-        "wrappers": wrappers,
-        "index": index_status,
+        "front_doors": wrappers,
+        "public_index": index_status,
+        "boundary": (
+            "This audit certifies source reachability, exact-once manuscript consolidation, "
+            "and public-section materialization only. It does not certify mathematical claims, "
+            "hardware, laboratory evidence, or physical interpretation."
+        ),
     }
 
 
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--report", type=Path)
-    parser.add_argument("--allow-unmaterialized-index", action="store_true")
+    parser.add_argument(
+        "--allow-unmaterialized-index",
+        action="store_true",
+        help="Audit source DAG and contract before docs/index.html is reconciled.",
+    )
     args = parser.parse_args()
     report = audit(require_index=not args.allow_unmaterialized_index)
-    payload = json.dumps(report, indent=2, sort_keys=True) + "\n"
     if args.report:
-        args.report.parent.mkdir(parents=True, exist_ok=True)
-        args.report.write_text(payload, encoding="utf-8")
-    print(
-        "PASS publication DAG "
-        f"manifests={report['frontier']['manifest_node_count']} "
-        f"frontier_leaves={report['frontier']['leaf_count']} "
-        f"shared_tail={report['shared_tail']['leaf_count']} "
-        f"public={report['index']['contract']['total_count']}"
-    )
-    print(payload, end="")
+        args.report.write_text(json.dumps(report, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(json.dumps(report, indent=2, sort_keys=True))
 
 
 if __name__ == "__main__":
