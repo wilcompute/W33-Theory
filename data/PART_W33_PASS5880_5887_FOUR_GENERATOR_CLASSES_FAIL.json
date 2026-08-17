@@ -1,0 +1,84 @@
+{
+  "boundary": "Pass 5880 is a NEGATIVE structural result: four generator classes fail, which constrains where a maximum partial ovoid can live and does NOT compute one. alpha(W(3,9)) stands at 51 <= alpha <= 80, 51 unproved. Item 3's zero findings mean the guard is INAPPLICABLE to their certificates, not that they are verified",
+  "pass_5880_singer": {
+    "class": "elements of order dividing q^2+1 = 82, Singer-type",
+    "partial_ovoid_orbits_ge_41": 0,
+    "sampled": {
+      "elements_with_order_divisible_by_41": 55,
+      "exact_order_41": 29,
+      "order_spectrum_top": [
+        24,
+        8,
+        30,
+        15,
+        5,
+        10,
+        80,
+        40,
+        41,
+        12
+      ]
+    },
+    "verdict": "FAILS -- 820 = 20 * 41, and none of the 20 orbits of an order-41 element is a partial ovoid"
+  },
+  "pass_5881_four_classes": {
+    "classes_tried": [
+      {
+        "class": "maximal subgroups of Sp(4,9)",
+        "outcome": "no GAP method, silent exit"
+      },
+      {
+        "class": "Sp(4,3) subfield subgroup",
+        "orbits": [
+          8,
+          12,
+          32,
+          32,
+          64,
+          144,
+          144,
+          192,
+          192
+        ],
+        "outcome": "no orbit is a partial ovoid"
+      },
+      {
+        "class": "transvections and their products",
+        "orbit_size": 3,
+        "outcome": "orbits far too small; 400 product trials found nothing above 51"
+      },
+      {
+        "class": "Singer-type, order 41 or 82",
+        "orbits": "20 orbits of 41",
+        "outcome": "none is a partial ovoid"
+      }
+    ],
+    "status": "NEGATIVE result with four witnesses; not a theorem",
+    "structural_conclusion": "a maximum partial ovoid of W(3,9) is NOT a single cyclic or subfield subgroup orbit. Whatever achieves alpha has a small or trivial stabiliser, which is exactly why five local-search variants and an exact ILP all behave as they do -- there is no large symmetry for a construction to exploit",
+    "what_this_rules_out": "the standard route by which large partial ovoids of classical polar spaces are usually built"
+  },
+  "pass_5882_k3_check": {
+    "217_divides_any_entry": false,
+    "generator": [
+      780,
+      7944,
+      62600,
+      53979
+    ],
+    "my_independent_gcd": 1,
+    "their_claim": "K3 glue advertised gcd 217, actual gcd 1",
+    "verdict": "THEIR CORRECTION IS RIGHT, verified independently"
+  },
+  "pass_5883_guard_on_ce2": {
+    "findings": 0,
+    "reading": "INAPPLICABLE, not verified -- their CE2 certificates do not assert a group order against a partition of a set in the same object, which is the only thing check_transitivity tests. Their false global-orbit claim was of a different shape: a rule invented on integer labels",
+    "scanned": 3,
+    "so": "my guard would NOT have caught their Pass6017 error, and their integrity audit would not have caught my change-the-object failures. The two failure modes are genuinely different and neither tool covers both"
+  },
+  "pass_5884_shared_mechanism": {
+    "common": "both are claims whose EVIDENCE does not cover their SCOPE -- mine by generalising from a carrier, theirs by generalising from three witness rows",
+    "mine": "argument-derived claims that turned out classical, and results about the wrong subject",
+    "the_one_test_that_covers_both": "state the scope the evidence actually establishes, then check the claim against THAT rather than against the intended reading",
+    "theirs": "script-derived claims that verified a global property from a promoted subset"
+  }
+}
