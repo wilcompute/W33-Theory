@@ -1,0 +1,43 @@
+{
+  "boundary": "Exact finite incidence and rational partial-isometry theorem; no quantum, continuum, dynamical, or particle-physics identification follows.",
+  "pass_5798_heavy_line_reye_copy": {
+    "criterion": "L_M disjoint H_(phi,psi) iff psi = phi M",
+    "deduction": "the same 16 lines with heavy-disjointness form a second Reye 12_4,16_3 copy, transpose-isomorphic to the original point-line copy",
+    "disjointness_column_degree_on_12_heavies": 4,
+    "disjointness_row_degree_on_16_lines": 3,
+    "exact_matrix_identity": "D[M,h] = R[F^{-1}(h), M^T]",
+    "heavy_line_point_gram_equals_original_reye_point_gram": true,
+    "incidence_isomorphism": "(w,x),M -> (w^T,x^T),M^T",
+    "line_heavy_intersection_spectrum": [
+      [
+        0,
+        48
+      ],
+      [
+        2,
+        144
+      ]
+    ]
+  },
+  "pass_5799_signed_partial_isometry": {
+    "B_entries": [
+      -3,
+      1
+    ],
+    "B_rank": 9,
+    "B_row_and_column_sums_zero": true,
+    "cross_matrix": "B=(C_R^T C_H)/4 = J_(16x12)-4D",
+    "deduction": "the disjointness Reye matrix is the signed cross-transform that canonically identifies the two common rank-nine sectors",
+    "integer_centerings": "C_R=4R-J_(12x16), C_H=2H-J_12",
+    "partial_isometry": "U=B/8 has U U^T=E_(W9,line) and U^T U=E_(W9,heavy)",
+    "quadratic_identities": [
+      "B B^T = C_R^T C_R",
+      "B^T B = 4 C_H^T C_H",
+      "(C_R^T C_R)^2 = 64(C_R^T C_R)",
+      "(C_H^T C_H)^2 = 16(C_H^T C_H)"
+    ]
+  },
+  "schema": "w33.pass5798_5799.reye_disjointness_duality.v1",
+  "source": "data/PART_W33_PASS5776_5783_REYE_LATIN_COMMON_CORE.json",
+  "status": "PASS"
+}
