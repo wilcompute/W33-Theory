@@ -1,0 +1,67 @@
+{
+  "boundary": "Pass 6048's positive control is the strongest methodological result here: the ILS plateau equals the PROVED optimum at both q where a proof exists. That makes the plateaus at q=7,9,11 credible but NOT proved. The q=11 value had the least compute and may be under-converged",
+  "pass_6048_the_positive_control": {
+    "question": "does the ILS plateau equal the true optimum?",
+    "result": "2 of 2",
+    "tested_where_proof_exists": [
+      {
+        "equal": true,
+        "plateau": 7,
+        "proved_optimum": 7,
+        "q": 3
+      },
+      {
+        "equal": true,
+        "plateau": 18,
+        "proved_optimum": 18,
+        "q": 5
+      }
+    ],
+    "why_this_matters": "every previous plateau in this thread was reported with the caveat that it might be a search artefact. Running the same method where the answer is known turns the caveat into a calibration -- and it is the positive-control discipline this session wrote into CLAUDE.md and then took many batches to actually apply to itself"
+  },
+  "pass_6049_the_conjecture_is_refuted": {
+    "conjecture": "deficit = ((q+1)/2)^2 - 1, from Pass 6032",
+    "how_long_it_lived": "two batches",
+    "measured_by_the_validated_method": {
+      "q7": 33,
+      "q9": 51
+    },
+    "note": "it was fit from two points and flagged at the time as 'nearly worthless as evidence'. That flag was correct",
+    "predicted": {
+      "q7": 35,
+      "q9": 58
+    },
+    "verdict": "REFUTED. The method that reproduces both proved optima does not reach either prediction"
+  },
+  "pass_6050_the_odd_q_sequence": {
+    "credible_but_unproved": [
+      "q=7",
+      "q=9",
+      "q=11"
+    ],
+    "deficits_from_q2_plus_1": {
+      "11": 55,
+      "3": 3,
+      "5": 8,
+      "7": 17,
+      "9": 31
+    },
+    "no_formula_offered": "the deficits 3, 8, 17, 31, 55 have differences 5, 9, 14, 24 which are not clean, and this session has killed thirteen patterns fit to few points. No formula is proposed",
+    "plateaus": {
+      "11": 67,
+      "3": 7,
+      "5": 18,
+      "7": 33,
+      "9": 51
+    },
+    "proved": [
+      "q=3",
+      "q=5"
+    ],
+    "q11_caveat": "1464 points with the least compute of any run; 67 is close to (q^2+q)/2 = 66 and may be under-converged"
+  },
+  "pass_6051_what_changed": {
+    "after": "the method is calibrated against two proved values, so the plateaus are the best available estimates of alpha at odd q -- and the strongest single outcome of this whole alpha thread is a validated MEASUREMENT PROCEDURE rather than any of the formulas I tried to fit to it",
+    "before": "five plateaus, each reported as possibly a search artefact"
+  }
+}

@@ -17,11 +17,11 @@
 
 ## ✅ Next Steps
 <!-- What should we do next? -->
-- Auto-saved at 2026-08-17T21:24:27.854Z (reason: timer)
+- Auto-saved at 2026-08-17T21:38:06.460Z (reason: threshold-commits)
 - Recent commits:
-  - efe62a788 Merge remote-tracking branch 'origin/master'
-  - 8b93a9fdf Pass6024-6031: the whole alpha question is one Gram-rank extremal problem
-  - a1e1101c9 Pass6533-6540: freeze doily quadratic code certificate
+  - 6a5d82add Pass6040-6047: two search classes both stop at 33, which is evidence against my own conjecture
+  - 3c7726c37 Merge remote-tracking branch 'origin/master'
+  - 55147571f Pass6032-6039: a falsifiable deficit conjecture, and the q=7 test that does not settle it
 
 ## 📝 Open Questions
 <!-- What do we still need to figure out? -->
