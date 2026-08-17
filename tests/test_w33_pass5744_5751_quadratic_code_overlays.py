@@ -29,7 +29,7 @@ def test_known_classical_code_is_not_misclaimed_as_novel():
     c = cert()
     assert c["pass_5744"]["parameters"] == [40, 10, 18]
     assert "prior art" in c["prior_art"]["claim_tier"]
-    assert "Rodrigues" in c["prior_art"]
+    assert "Rodrigues_2008" in c["prior_art"]
     assert "Kaipa_Pradhan_2024" in c["prior_art"]
 
 
