@@ -1,0 +1,80 @@
+% Passes 5840--5847: collision-recovery addendum to the matrix/Fourier frontier.
+\subsection*{Determinant-polar doily and the integral binary shadow}
+
+The Pass~5832--5839 matrix packet survives mathematically, but its pass namespace
+was contaminated by a parallel packet landed after reservation.  We therefore keep
+its exact certificate intact and continue with a collision-recovery addendum.
+
+On $V=M_2(\mathbb F_2)$ put $q(X)=\det X$.  Its polarization
+\[
+B(X,Y)=q(X+Y)+q(X)+q(Y)
+\]
+is nondegenerate alternating.  Hence the fifteen nonzero matrices are a concrete
+$W(3,2)$ point set.  The rank split is
+\[
+15=9+6,
+\]
+where the nine rank-one matrices are the hyperbolic quadric
+\[
+Q^+(3,2)\cong \mathbb P^1(\mathbb F_2)\times\mathbb P^1(\mathbb F_2)
+\]
+(the $3\times3$ grid) and the six units are its complement.  Of the fifteen
+isotropic lines, six lie wholly in the grid and nine meet it in exactly one point.
+This is an incidence-level coordinatization of the standard two-qubit doily $9+6$
+split; the nonzero ring elements here are not literally the projective-ring points
+of the Saniga--Planat--Pracna construction.
+
+The full linear determinant stabilizer has order
+\[
+72=2\cdot36,
+\]
+with the $36$-element left/right group preserving the two rulings and transpose
+exchanging them.  Since $|Sp(4,2)|=720$, the grid orbit has size
+\[
+720/72=10,
+\]
+matching the ten grid hyperplanes of $W(3,2)$.  Affinely this gives
+\[
+|2^4:O^+(4,2)|=1152.
+\]
+The shared order with $W(F_4)$ is not an isomorphism: exact generation gives
+\[
+|Z(2^4:O^+(4,2))|=1,
+\qquad
+|Z(W(F_4))|=2,
+\]
+with central $-I$ in the latter.
+
+The integral $W_9$ firewall also sharpens modulo two.  The point/heavy lattice
+$A_3^3$ has mod-$2$ Gram rank $6$ and radical dimension $3$, while
+$A_3\otimes A_3$ has rank $4$ and radical dimension $5$.  These equal the
+$2$-torsion ranks of their discriminant groups
+\[
+(\mathbb Z/4)^3,
+\qquad
+(\mathbb Z/4)^4\times\mathbb Z/16,
+\]
+respectively.  Explicitly, the line radical is
+\[
+\{\mathbf 1\otimes a+b\otimes\mathbf 1:a,b\in\mathbb F_2^3\},
+\qquad \dim=3+3-1=5,
+\]
+whereas the point/heavy radical has one fibre-constant parity vector in each
+$A_3$ block.
+
+Finally, over a finite field $\mathbb F_q$, rank-one Fourier labels in
+$M_2(\mathbb F_q)$ number $(q-1)(q+1)^2$ and each has $q-1$
+factorizations.  Thus the point-fibre Radon preimage has kernel
+\[
+\boxed{(q-2)(q-1)(q+1)^2},
+\]
+so $q=2$ is the unique multiplicity-free case.  The sharp binary $W_9$
+identification must therefore not be extrapolated to larger fields without
+quotienting this factorization kernel.
+
+\paragraph{Boundary.}
+All statements above concern exact finite incidence geometry, integral lattices,
+finite Fourier/Radon transforms and finite reflection groups.  They do not identify
+the selected $q=5$ W33 carrier with a physical two-qubit system, and the mod-$2$
+radicals are not physical gauge fields or error syndromes without an independent
+hardware/code map.

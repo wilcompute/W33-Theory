@@ -3,9 +3,7 @@
   "frontier_root": "analysis/W33_CURRENT_FRONTIER_MANIFEST.tex",
   "shared_wrapper_tail": "analysis/W33_SHARED_FRONTIER_TAIL.tex",
   "legacy_contract": "data/w33_current_frontier_manifest_v1.json",
-  "public_extension_contracts": [
-    "data/w33_public_frontier_extension_pass4461_4464.json"
-  ],
+  "public_extension_contracts": ["data/w33_public_frontier_extension_pass4461_4464.json"],
   "front_doors": {
     "w33_paper.tex": "w33_paper_body.tex",
     "photonic_holonet.tex": "photonic_holonet_body.tex",
@@ -33,7 +31,13 @@
     {"kind":"id","token":"pass-5691-5698-physics-ym-duality-ramanujan","source":"analysis/PASS5691_5698_index_insert.html"},
     {"kind":"id","token":"pass-5704-5711-physics-wilson-generation-linfinity-frontier","source":"analysis/PASS5704_5711_index_insert.html"},
     {"kind":"id","token":"pass-5720-5724-affine-torsion-homology","source":"analysis/PASS5720_5724_index_insert.html"},
-    {"kind":"id","token":"pass-5725-5732-torsion-center-higheralgebra","source":"analysis/PASS5725_5732_index_insert.html"}
+    {"kind":"id","token":"pass-5725-5732-torsion-center-higheralgebra","source":"analysis/PASS5725_5732_index_insert.html"},
+    {"kind":"id","token":"pass-5776-5783-reye-latin-common-core","source":"analysis/PASS5776_5783_index_insert.html"},
+    {"kind":"id","token":"pass-5792-5799-matrix-ring-transpose-outer","source":"analysis/PASS5792_5799_index_insert.html"},
+    {"kind":"id","token":"pass-5816-5823-matrix-fourier-rank","source":"analysis/PASS5816_5823_index_insert.html"},
+    {"kind":"id","token":"pass-5824-5831-integral-w9-lattices","source":"analysis/PASS5824_5831_index_insert.html"},
+    {"kind":"id","token":"pass-5832-5839-normalizer-code-pauli-allq","source":"analysis/PASS5832_5839_index_insert.html"},
+    {"kind":"id","token":"pass-5840-5847-matrix-doily-radon-addendum","source":"analysis/PASS5840_5847_index_insert.html"}
   ],
   "boundary": "This contract certifies nested publication reachability, uniqueness, shared-tail consolidation, and public materialization only. It does not certify mathematical, hardware, laboratory, empirical, or physical claims."
 }
