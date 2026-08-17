@@ -1,36 +1,26 @@
-"""Pass 6189-6200: CE2/K3 evidence repair status ledger.
+"""Pass6189-6200 status ledger — corrected by Pass6233-6240.
 
-Records the corrected post-6188 reading after the CE2/K3 evidence repair
-certificate, report, tests, and canonical insert landed on master.
+This file records the live fail-closed frontier. It does not infer completion
+from the presence of correction artifacts.
 """
-
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass,asdict
 
 @dataclass
-class EvidenceRepairState:
-    ce2_global_closure_active: bool
-    k3_deformation_theory_active: bool
-    family_flag_identification_partial: bool
-    global_branch_status_conservative: bool
-    ce2_k3_evidence_certificate_frozen: bool
-    ce2_k3_evidence_tests_present: bool
-    next_structural_targets: list
+class State:
+    ce2_global_closure: str
+    k3_curvature_object_loaded: bool
+    k3_witness_scan_run: bool
+    generation_flag_from_yukawa: str
+    transport_cocycle_identification: str
+    global_branch_orientation: str
 
-state = EvidenceRepairState(
-    ce2_global_closure_active=True,
-    k3_deformation_theory_active=True,
-    family_flag_identification_partial=True,
-    global_branch_status_conservative=True,
-    ce2_k3_evidence_certificate_frozen=True,
-    ce2_k3_evidence_tests_present=True,
-    next_structural_targets=[
-        "transport-cocycle map for family-flag identification",
-        "K3 nonzero curvature witness realization",
-        "global branch orientation theorem",
-    ],
+state=State(
+ ce2_global_closure='OPEN',
+ k3_curvature_object_loaded=False,
+ k3_witness_scan_run=False,
+ generation_flag_from_yukawa='REFUTED_FOR_DISPLAYED_BLOCKS',
+ transport_cocycle_identification='OPEN_CONDITIONAL_SCAFFOLD_ONLY',
+ global_branch_orientation='OPEN',
 )
-
-print("=== CE2/K3 Evidence Repair Status Ledger ===")
-for k, v in asdict(state).items():
-    print(f"{k}: {v}")
-print("\nStatus: post-6188 evidence repair recorded.")
+print('=== CE2/K3 Corrected Frontier Status ===')
+for k,v in asdict(state).items(): print(f'{k}: {v}')

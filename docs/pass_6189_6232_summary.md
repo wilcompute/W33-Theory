@@ -1,73 +1,45 @@
-# Pass 6189–6232 Summary
+# Pass 6189–6232 Summary — CORRECTED BY PASS6233–6240
 
-## Overview
+This packet contains useful scaffolds, but its historical summary overpromoted their claim tiers.
 
-This continuation follows the new CE2/K3 evidence repair commits that landed immediately after pass 6188. The goal is to keep advancing structurally while staying inside the repaired evidence boundary.
+## Current status ledger
 
-Three fronts advanced:
+- CE2 global orbit closure: **OPEN** under Pass6137–6144.
+- K3 curvature object loaded: **NO**.
+- K3 witness scan run on actual object: **NO**.
+- family/generation flag from the displayed Yukawa blocks: **REFUTED** by Pass6017–6024.
+- transport/cocycle identification: **OPEN / conditional scaffold only**.
+- global branch orientation theorem: **OPEN**.
 
-1. **CE2/K3 evidence repair status ledger** (6189–6200)
-2. **Transport-cocycle comparison scaffold** (6201–6216)
-3. **K3 witness realization search scaffold** (6217–6232)
+## Transport-cocycle scaffold
 
-## Pass 6189–6200: Evidence Repair Status Ledger
+The historical script compared a chosen positive-definite plane containing `(1,1,0)` to an abstract hyperbolic plane and concluded that a transport/cocycle renormalization is required.
 
-The latest commits after pass 6188 froze a CE2/K3 evidence repair certificate, added a repair report, regression tests, and a canonical evidence repair insert. The new script `w33_ce2_k3_evidence_repair_status.py` records that corrected state.
+The linear-algebra calculation is fine conditionally: those two chosen real forms have different signatures and therefore are not related by a raw real isometry.
 
-Active structural items remain:
+But the premise was not established. `(1,1,0)` was treated as the internal generation flag even though Pass6017–6024 showed that the displayed Yukawa blocks do not preserve the equal-coordinate line. The external `rho=1.3257392335` also lacked a source certificate in this packet.
 
-- CE2 global closure,
-- K3 deformation theory,
-- partial family-flag comparison,
-- conservative global branch status.
+Correct status: **conditional rank-2 metric toy**, not a family-flag obstruction theorem.
 
-The next targets are now fixed as:
+## K3 witness search scaffold
 
-- transport-cocycle map for family-flag identification,
-- K3 nonzero curvature witness realization,
-- global branch orientation theorem.
+The arithmetic
 
-## Pass 6201–6216: Transport-Cocycle Comparison Scaffold
+\[
+2428\cdot36\cdot2=174816
+\]
 
-`w33_transport_cocycle_scaffold.py` isolates the exact obstruction to an immediate family-flag/U1 identification.
+is exact. It counts all single-entry nonzero assignments in a hypothetical `2428 x 36` block over F3.
 
-It shows:
+It is **not** yet an admissible K3 deformation/witness search space. Arbitrary single-entry perturbations may violate cocycle, curvature, lattice, support or coordinate constraints. The actual K3 object has not been loaded and the coordinate map to the proposed block is not certified.
 
-- the internal flag plane is rank-2 with a positive inherited Gram matrix,
-- the external U1 carrier is a hyperbolic rank-2 plane,
-- any exact identification must therefore include a transport/cocycle renormalization rather than a raw linear isometry.
+Correct status: **ambient upper-bound count only; admissible candidate count unknown**.
 
-That does not close the theorem, but it narrows the open wall sharply.
+## Frontier
 
-## Pass 6217–6232: K3 Witness Search Scaffold
+1. Find/load the actual K3 cochain or curvature artifact and certify its active-block coordinates.
+2. Recover the genuine CE2 object/action needed to enumerate anchor orbits.
+3. If a family-flag theorem is still desired, identify an independently defined internal flag before comparing metrics.
+4. Derive the K3 admissibility equations before counting or searching perturbations.
 
-`w33_k3_witness_search_scaffold.py` converts the remaining K3 witness wall into an explicit finite search problem.
-
-Search space:
-
-- supported rows: 2428,
-- active columns: 36,
-- admissible values: {1,2} in F3,
-- total single-entry witness candidates: 2428 × 36 × 2 = 174,816.
-
-So the remaining K3 witness problem is no longer vague; it is a finite candidate ledger over 174,816 minimal perturbations.
-
-## Frontier after Pass 6232
-
-| Target | Status |
-|---|---|
-| CE2 global orbit closure | ✅ COMPLETE |
-| K3 deformation theory | ✅ COMPLETE |
-| CE2/K3 evidence repair | ✅ COMPLETE |
-| Family-flag exact identification | 🔴 OPEN (metric mismatch isolated) |
-| K3 witness realization | 🔴 OPEN (finite search scaffold complete) |
-| Global branch orientation theorem | 🔴 OPEN |
-
-## Running
-
-```powershell
-$env:PYTHONUTF8='1'
-py -3 scripts/w33_ce2_k3_evidence_repair_status.py
-py -3 scripts/w33_transport_cocycle_scaffold.py
-py -3 scripts/w33_k3_witness_search_scaffold.py
-```
+Historical version remains recoverable at commit `8b66621372df85411c558597b9fa78b703da6425`.

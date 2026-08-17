@@ -1,37 +1,25 @@
-"""Pass 6217-6232: K3 witness realization search scaffold.
+"""Pass6217-6232 K3 ambient candidate-count scaffold — corrected by Pass6233-6240.
 
-Converts the K3 witness problem from a raw scan into an explicit search scaffold
-over supported rows and active columns, recording the exact admissibility rules
-for any future constructive witness.
+The arithmetic 2428*36*2=174816 counts all single-entry nonzero assignments in
+a proposed 2428x36 F3 block. It is NOT an admissible K3 deformation space until
+the actual K3 object, coordinate map, cocycle/curvature equations and any lattice
+constraints are loaded and imposed.
 """
 
-import numpy as np
+N_SUPPORTED=2428
+N_ACTIVE_COLS=36
+F3_NONZERO=2
+ambient_single_entry_count=N_SUPPORTED*N_ACTIVE_COLS*F3_NONZERO
 
-N_SUPPORTED = 2428
-N_ACTIVE_COLS = 36
-SECTOR_SPLIT = {
-    "fan_adjacent": (0, 24),
-    "remote_K33_A": (24, 30),
-    "remote_K33_B": (30, 36),
+status={
+ 'status':'AMBIENT_UPPER_BOUND_SCAFFOLD_ONLY',
+ 'actual_K3_object_loaded':False,
+ 'coordinate_map_certified':False,
+ 'deformation_equations_loaded':False,
+ 'ambient_single_entry_assignments':ambient_single_entry_count,
+ 'admissible_candidate_count':None,
+ 'next_required_step':'load/reconstruct actual K3 active block and solve defining linear/nonlinear admissibility equations before enumerating witnesses',
 }
-
-# admissibility: one nonzero F3 value in any active column
-admissible_values = [1, 2]
-
-print("=== K3 Witness Realization Search Scaffold ===")
-print(f"Supported rows: {N_SUPPORTED}")
-print(f"Active columns: {N_ACTIVE_COLS}")
-print(f"Admissible nonzero F3 values: {admissible_values}")
-print()
-
-for name, (a, b) in SECTOR_SPLIT.items():
-    print(f"Sector {name}: columns {a}..{b-1} (count={b-a})")
-
-candidate_count = N_SUPPORTED * N_ACTIVE_COLS * len(admissible_values)
-print(f"\nTotal single-entry witness candidates: {candidate_count}")
-print("Candidate rule:")
-print("  choose any supported row r, any active column c, any value in {1,2}")
-print("  -> this breaks splitness and yields a rank-1 perturbation")
-print()
-print("Current repo state: no candidate instantiated on the actual K3 side.")
-print("Search scaffold: COMPLETE")
+print('=== K3 Ambient Candidate-Count Scaffold ===')
+for k,v in status.items(): print(f'{k}: {v}')
+assert ambient_single_entry_count==174816
