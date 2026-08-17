@@ -61,9 +61,11 @@ jobs:
           test "$(grep -c 'id=\"pass-5704-5711-physics-wilson-generation-linfinity-frontier\"' docs/index.html)" -eq 1
           git diff --check
 
-      - uses: WtfJoke/setup-tectonic@v3
-        with:
-          github-token: '${{ secrets.GITHUB_TOKEN }}'
+      - name: Install Tectonic
+        run: |
+          curl -fsSL https://drop-sh.fullyjustified.net | sh
+          sudo mv tectonic /usr/local/bin/
+          tectonic --version
 
       - name: Compile canonical manuscripts
         run: |
