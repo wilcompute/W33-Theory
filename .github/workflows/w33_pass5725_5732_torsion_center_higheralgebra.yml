@@ -10,36 +10,66 @@ on:
       - 'analysis/w33_pass5728_*'
       - 'analysis/w33_pass5729_*'
       - 'analysis/w33_pass5731_*'
+      - 'analysis/PASS5725_5732_*'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'analysis/w33_pass5364_publication_dag_audit.py'
       - 'tests/test_w33_pass5725_5732_torsion_center_higheralgebra.py'
       - 'data/w33_pass_namespace_registry_v2.d/5725-5732.json'
+      - 'data/w33_publication_frontier_contract_v2.json'
+      - 'data/w33_public_frontier_extension_pass4461_4464.json'
       - '.github/workflows/w33_pass5725_5732_torsion_center_higheralgebra.yml'
   workflow_dispatch:
 
 concurrency:
-  group: w33-pass5725-5732-structural
+  group: w33-pass5725-5732-publication
   cancel-in-progress: true
 
 permissions:
   contents: write
 
 jobs:
-  exact-replay:
+  replay-publish-compile:
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - name: Install numerical dependencies
         run: python -m pip install --upgrade numpy scipy pytest
+
       - name: Replay Pass5725-5732
         run: python analysis/w33_pass5725_5732_runner.py
+
       - name: Focused regression
         run: python -m pytest -q tests/test_w33_pass5725_5732_torsion_center_higheralgebra.py
-      - name: Freeze generated certificates
+
+      - name: Materialize homepage and audit publication DAG
+        run: |
+          python tools/integrate_bt3376_bt3389.py --report /tmp/public-integration.json
+          python analysis/w33_pass5364_publication_dag_audit.py --report /tmp/publication-dag.json
+          test "$(grep -c 'id=\"pass-5725-5732-torsion-center-higheralgebra\"' docs/index.html)" -eq 1
+          git diff --check
+
+      - name: Install Tectonic
+        run: |
+          curl -fsSL https://drop-sh.fullyjustified.net | sh
+          sudo mv tectonic /usr/local/bin/
+          tectonic --version
+
+      - name: Compile canonical manuscripts
+        run: |
+          mkdir -p evidence/pass5725_5732
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass5725_5732/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass5725_5732/pdf_sha256.txt
+
+      - name: Freeze generated certificates and homepage
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
@@ -52,10 +82,17 @@ jobs:
                      data/PART_W33_PASS5731_Z3_Z2_MIXED_EXTENSION_TOPOLOGY.json \
                      data/PART_W33_PASS5732_P2_P3_DETERMINANT_ARITHMETIC_BRIDGE.json \
                      data/PART_W33_PASS5725_5732_TORSION_CENTER_HIGHERALGEBRA_SUMMARY.json
+          git add docs/index.html
           if git diff --cached --quiet; then
-            echo 'Certificates already frozen.'
+            echo 'Certificates and homepage already frozen.'
           else
-            git commit -m 'Freeze Pass5725-5732 exact certificates [skip ci]'
+            git commit -m 'Freeze Pass5725-5732 certificates and homepage [skip ci]'
             git pull --rebase origin master
             git push origin HEAD:master
           fi
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pass5725-5732-torsion-center-higheralgebra
+          path: evidence/pass5725_5732/**
