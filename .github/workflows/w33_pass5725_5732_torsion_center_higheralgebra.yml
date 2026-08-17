@@ -11,7 +11,6 @@ on:
       - 'analysis/w33_pass5729_*'
       - 'analysis/w33_pass5731_*'
       - 'analysis/PASS5725_5732_*'
-      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
       - 'analysis/w33_pass5364_publication_dag_audit.py'
       - 'tests/test_w33_pass5725_5732_torsion_center_higheralgebra.py'
       - 'data/w33_pass_namespace_registry_v2.d/5725-5732.json'
@@ -49,6 +48,8 @@ jobs:
 
       - name: Materialize homepage and audit publication DAG
         run: |
+          # The live manifest is deliberately audited here even though unrelated
+          # parallel manifest edits no longer retrigger/cancel this packet job.
           python tools/integrate_bt3376_bt3389.py --report /tmp/public-integration.json
           python analysis/w33_pass5364_publication_dag_audit.py --report /tmp/publication-dag.json
           test "$(grep -c 'id=\"pass-5725-5732-torsion-center-higheralgebra\"' docs/index.html)" -eq 1
