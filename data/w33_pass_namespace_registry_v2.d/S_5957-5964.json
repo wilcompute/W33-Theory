@@ -1,0 +1,12 @@
+{
+  "schema": "w33.pass_namespace_registry.v2.fragment",
+  "range": [5957, 5964],
+  "lane": "S",
+  "owner": "openai_gpt5_6_sol",
+  "status": "RESERVED",
+  "created_utc": "2026-08-17T19:37:00Z",
+  "topic": "prediction-derivation evidence audit: L-infinity mass ratios, electron packet, Weyl-law 4-volume, Yang-Mills 1818 MeV, Leech neutrino mass, inflation r=1/45, and 3.215 TeV scalar; retain exact combinatorics while quarantining circular/back-solved physical claims",
+  "artifacts": [],
+  "verification": "Reservation only; audit is source-code-grounded and does not depend on experimental agreement.",
+  "boundary": "Arithmetic/combinatorial identities may be retained as ansatz data. Physical prediction status requires a separately derived dynamics/observable map with no target back-solving or assumed scaling exponent."
+}
