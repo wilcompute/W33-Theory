@@ -1,0 +1,136 @@
+{
+  "boundary": "Pass 5816 runs the sharpest available test of the surviving direction and reports that it passes VACUOUSLY -- both two-system configurations have kernel dimension 0, so the test could not have failed. This is not confirmation. Published |Aut| checked for Reye (576) and Pappus (108) only. Pass 5819 reports a FINISHED search: the (1,3) neighbourhood reaches 48, worse than 51, refuting Pass 5789's proposed fix",
+  "pass_5816": {
+    "found": [
+      "Z12 {i,i+2,i+6}: systems 2, sizes [2,6]",
+      "Z8 {i,i+1,i+4}: systems 2, sizes [2,4]"
+    ],
+    "outcome": "CONSISTENT -- but both have kernel dimension 0",
+    "prediction": "the surviving claim forbids a kernel partition on these",
+    "target": "a point group with TWO OR MORE block systems",
+    "verdict": "VACUOUS PASS. The claim is satisfied whenever the kernel is empty, and it is empty in both witnesses, so the sharpest test carries no weight"
+  },
+  "pass_5817_vacuity": {
+    "all_configurations": [
+      {
+        "kdim": 4,
+        "name": "Reye 12_4 16_3",
+        "partition": true,
+        "systems": 1
+      },
+      {
+        "kdim": 2,
+        "name": "Pappus 9_3",
+        "partition": true,
+        "systems": 1
+      },
+      {
+        "kdim": 3,
+        "name": "Fano 7_3",
+        "partition": false,
+        "systems": 0
+      },
+      {
+        "kdim": 4,
+        "name": "Desargues 10_3 (real)",
+        "partition": false,
+        "systems": 0
+      },
+      {
+        "kdim": 0,
+        "name": "Mobius-Kantor 8_3 (real)",
+        "partition": false,
+        "systems": 1
+      },
+      {
+        "kdim": 6,
+        "name": "three parallel triples/9",
+        "partition": false,
+        "systems": 1
+      },
+      {
+        "kdim": 0,
+        "name": "Z8 {i,i+2,i+4}",
+        "partition": false,
+        "systems": 1
+      },
+      {
+        "kdim": 0,
+        "name": "Z12 {i,i+2,i+6}",
+        "partition": false,
+        "systems": 2
+      },
+      {
+        "kdim": 0,
+        "name": "Z8 {i,i+1,i+4}",
+        "partition": false,
+        "systems": 2
+      },
+      {
+        "kdim": 0,
+        "name": "Z12 {i,i+3,i+6}",
+        "partition": false,
+        "systems": 1
+      },
+      {
+        "kdim": 0,
+        "name": "Z10 {i,i+1,i+5}",
+        "partition": false,
+        "systems": 1
+      }
+    ],
+    "count": "6 of 11",
+    "finding": "kernel dimension 0 is COMMON -- every cyclic configuration tested has it -- so 'kernel partition => unique block system' is trivially true across most of the sample and has real content only where the kernel is large: the Reye (4), Pappus (2), Fano (3), Desargues (4), and the nine-point triples (6)",
+    "kernel_dim_zero": [
+      "Mobius-Kantor 8_3 (real)",
+      "Z8 {i,i+2,i+4}",
+      "Z12 {i,i+2,i+6}",
+      "Z8 {i,i+1,i+4}",
+      "Z12 {i,i+3,i+6}",
+      "Z10 {i,i+1,i+5}"
+    ],
+    "real_evidence": "5 configurations with a nonzero kernel; 2 have the partition and a unique system, 3 lack the partition. That is the whole dataset the surviving claim actually rests on"
+  },
+  "pass_5818_audit": {
+    "note": "the two positive instances check out against published values",
+    "pappus_aut": {
+      "agrees": true,
+      "measured": 108,
+      "published": 108
+    },
+    "reye_aut": {
+      "agrees": true,
+      "measured": 576,
+      "published": 576
+    }
+  },
+  "pass_5819_q9": {
+    "best": 48,
+    "corrects": "Pass 5789 proposed this as the fix for the 51 plateau; it is not one. The next lever is the FORMULATION -- exact solve on a symmetry-reduced quotient -- not another local move",
+    "finding": "the changed neighbourhood is WORSE -- 48 against 51. The (1,3) move costs far more per step so it explores far less in equal wall-clock",
+    "neighbourhood": "(1,3)-swap",
+    "prior_12swap_best": 51,
+    "status": "FINISHED",
+    "verified_independent": true
+  },
+  "pass_5820_claude_md": {
+    "added": "the fourth calibration: build the objects the claim predicts on, and check them against published invariants"
+  },
+  "pass_5821_collision": {
+    "blocks": [
+      "5744",
+      "5776",
+      "5792",
+      "5816"
+    ],
+    "collisions_this_session": 4,
+    "renumbered_to": [
+      "5752",
+      "5784",
+      "5800",
+      "5832"
+    ],
+    "root_cause": "reservation-by-file-path cannot work when both lanes write the same path; a lane prefix or an atomic claim is needed, not a convention",
+    "work_lost_and_recovered": "the 5816 certificate was dropped by a rebase and restored from the commit"
+  }
+}
