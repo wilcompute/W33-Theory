@@ -3,10 +3,20 @@
   "range": [5957, 5964],
   "lane": "S",
   "owner": "openai_gpt5_6_sol",
-  "status": "RESERVED",
+  "status": "CLOSED_STRUCTURAL__CI_REPLAY_PENDING",
   "created_utc": "2026-08-17T19:37:00Z",
+  "closed_utc": "2026-08-17T19:44:00Z",
   "topic": "prediction-derivation evidence audit: L-infinity mass ratios, electron packet, Weyl-law 4-volume, Yang-Mills 1818 MeV, Leech neutrino mass, inflation r=1/45, and 3.215 TeV scalar; retain exact combinatorics while quarantining circular/back-solved physical claims",
-  "artifacts": [],
-  "verification": "Reservation only; audit is source-code-grounded and does not depend on experimental agreement.",
+  "artifacts": [
+    "analysis/w33_pass5957_5964_prediction_evidence_audit.py",
+    "data/PART_W33_PASS5957_5964_PREDICTION_EVIDENCE_AUDIT.json",
+    "analysis/PASS5957_5964_prediction_evidence_audit.md",
+    "analysis/PASS5957_5964_prediction_evidence_audit_insert.tex",
+    "tests/test_w33_pass5957_5964_prediction_evidence_audit.py",
+    ".github/workflows/w33_pass5957_5964_prediction_evidence_audit.yml",
+    "PASS5913_5932_LINF_BRACKET_ELECTRON_WEYL.md",
+    "PASS5933_5956_HITLIST_PREDICTIONS.md"
+  ],
+  "verification": "Source-code-grounded audit completed and canonical firewall promoted. GitHub Actions replay is configured; remote CI conclusion not yet claimed.",
   "boundary": "Arithmetic/combinatorial identities may be retained as ansatz data. Physical prediction status requires a separately derived dynamics/observable map with no target back-solving or assumed scaling exponent."
 }
