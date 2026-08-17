@@ -93,7 +93,12 @@ jobs:
             echo 'Certificates and homepage already materialized.'
           else
             git commit -m 'Freeze Pass5704-5711 certificates and homepage [skip ci]'
-            git push
+            # Parallel lanes may advance master while this long verification job is
+            # running. Rebase the generated freeze commit onto the current remote
+            # head before pushing so a valid closure job does not fail solely from
+            # a non-fast-forward race.
+            git pull --rebase origin master
+            git push origin HEAD:master
           fi
 
       - uses: actions/upload-artifact@v4
