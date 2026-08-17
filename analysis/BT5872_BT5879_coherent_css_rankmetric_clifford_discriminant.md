@@ -105,7 +105,7 @@ Hence the graph is strongly regular with
 The producer checks every additive character at prime anchors `r=2,3,5,7` using exact cyclotomic coefficient identities, not floating point. The first two examples are
 
 \[
-(16,6,2,2),\qquad(81,48,30,27).
+(16,6,2,2),\qquad(81,48,27,30).
 \]
 
 Thus Pass5854's `L2(4)` graph is precisely the binary member.
