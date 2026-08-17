@@ -1,0 +1,47 @@
+{
+  "boundary": "Pass 5872 reports a THIRD failed instantiation of the orbit-construction idea, with a structural reason. It does NOT improve alpha(W(3,9)), which stands at 51 <= alpha <= 80 with 51 unproved. The other lane's Pass6017-6024 audit is summarised from its certificate, not re-verified here",
+  "pass_5872_transvections": {
+    "arithmetic_check": "91 + 3*243 = 820, and 91 = |v-perp| -- the construction is correct",
+    "attempts_so_far": [
+      "MaximalSubgroupClassReps(Sp(4,9)) -- no GAP method, silent exit",
+      "Sp(4,3) subfield subgroup -- orbits 8,12,32,32,64,144,144,192,192, none a partial ovoid",
+      "transvection products -- orbits too small"
+    ],
+    "correct_next_generator": "elements of order dividing q^2+1 = 82 (Singer-type, irreducible on the 4-space). Those have no eigenvector aligned to the polar structure, which is exactly what the three failed classes all had",
+    "fix": "rejection-sampling random matrices gets ZERO symplectic elements at q=9; symplectic transvections t_{v,lam}(x) = x + lam*B(x,v)*v are symplectic by construction and generate Sp(4,q)",
+    "orbit_spectrum": {
+      "fixed": 91,
+      "size_3": 243
+    },
+    "why_it_fails": "a transvection fixes v-perp POINTWISE and moves every other point in an orbit of size p = 3. Orbits of size 3 cannot reach 51, and products of two transvections produced no partial-ovoid orbit above 51 in 400 trials"
+  },
+  "pass_5873_literature": {
+    "confirms": "W(3,q) has NO ovoid for q odd",
+    "does_not_give": "exact maximum partial ovoid sizes for individual odd q",
+    "fetched": "arXiv:2203.04553",
+    "so": "alpha(W(3,9)) may genuinely be open; alpha(W(3,3)) = 7 and alpha(W(3,5)) = 18 remain values I computed and have still not matched against published tables"
+  },
+  "pass_5874_sequence": {
+    "tested_formulas": {
+      "3(q+1)": "matches q=5 (18), fails q=3 (12 vs 7)",
+      "q^2-q+1": "matches q=3 (7), fails q=5 (21 vs 18)"
+    },
+    "values": {
+      "3": 7,
+      "5": 18,
+      "9": ">=51"
+    },
+    "verdict": "no simple formula fits both known values; 51 is unproved and may not be optimal"
+  },
+  "pass_5875_other_lane": {
+    "convergence": "both lanes independently spent this period finding FALSE CLOSURES in their own prior work -- theirs by integrity audit, mine by the change-the-object test and literature search. Four rediscoveries on my side, five corrections on theirs",
+    "packet": "Pass6017-6024 post-closure integrity audit",
+    "their_findings": [
+      "K3 glue: claimed_gcd 217, actual_gcd 1",
+      "CE2 anchor22: full-orbit claim rested on three pre-promoted witness rows",
+      "Yukawa: (1,1) is not an eigenvector of either 2x2 block",
+      "Qiskit avatar downgraded to search scaffold"
+    ],
+    "their_release_rule": "a script does not verify a global orbit by inventing a rule on integer labels"
+  }
+}

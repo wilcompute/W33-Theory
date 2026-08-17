@@ -17,7 +17,8 @@
       "relatedTo": [
         "1786859568721-fahph6",
         "1786981762503-hib4rs",
-        "1786982189919-8dnfi9"
+        "1786982189919-8dnfi9",
+        "1786996536961-s44asp"
       ],
       "causes": [
         "1786859568721-fahph6",
@@ -28,7 +29,8 @@
         "834f75ed-8832-447d-9ead-3f7fd5b93133",
         "d8ac0082-876f-4935-80c4-de4c705ccec2",
         "1786978125686-pe8wl2",
-        "1786981219540-nmfp90"
+        "1786981219540-nmfp90",
+        "1786996536961-s44asp"
       ],
       "causedBy": []
     },
@@ -59,7 +61,8 @@
       "relatedTo": [
         "1786859568721-fahph6",
         "1786981762503-hib4rs",
-        "1786982189919-8dnfi9"
+        "1786982189919-8dnfi9",
+        "1786996536961-s44asp"
       ],
       "causes": [
         "1786859568721-fahph6",
@@ -86,7 +89,8 @@
         "1786981762503-hib4rs",
         "1786982189919-8dnfi9",
         "1786983061709-sh4gk9",
-        "1786983608222-irjzda"
+        "1786983608222-irjzda",
+        "1786996536961-s44asp"
       ],
       "causedBy": [
         "manual-20260507-pin-e8-manifest-z3-output-check"
@@ -119,7 +123,8 @@
       "relatedTo": [
         "1786859568721-fahph6",
         "1786981762503-hib4rs",
-        "1786982189919-8dnfi9"
+        "1786982189919-8dnfi9",
+        "1786996536961-s44asp"
       ],
       "causes": [
         "1786859568721-fahph6",
@@ -128,7 +133,8 @@
         "01e8a316-2e07-4420-a356-02b1e3fdd265",
         "951fc6ac-b3ba-4bc5-91ea-5761985511e6",
         "d8ac0082-876f-4935-80c4-de4c705ccec2",
-        "1786981219540-nmfp90"
+        "1786981219540-nmfp90",
+        "1786996536961-s44asp"
       ],
       "causedBy": [
         "manual-20260507-fix-e8-orchestrator-dataclass-loader"
@@ -161,7 +167,8 @@
       "relatedTo": [
         "1786859568721-fahph6",
         "1786981762503-hib4rs",
-        "1786982189919-8dnfi9"
+        "1786982189919-8dnfi9",
+        "1786996536961-s44asp"
       ],
       "causes": [
         "1786859568721-fahph6",
@@ -180,7 +187,8 @@
         "e8fa85eb-29ee-4617-a086-aec55b0a8922",
         "6463a27e-4bc0-4022-85bf-3242450eac40",
         "1786981219540-nmfp90",
-        "1786983061709-sh4gk9"
+        "1786983061709-sh4gk9",
+        "1786996536961-s44asp"
       ],
       "causedBy": []
     },
@@ -211,7 +219,8 @@
       "relatedTo": [
         "1786859568721-fahph6",
         "1786981762503-hib4rs",
-        "1786982189919-8dnfi9"
+        "1786982189919-8dnfi9",
+        "1786996536961-s44asp"
       ],
       "causes": [
         "1786859568721-fahph6",
@@ -233,7 +242,8 @@
         "98570fba-3ce7-45aa-84fd-5560b203d593",
         "6463a27e-4bc0-4022-85bf-3242450eac40",
         "1786981219540-nmfp90",
-        "1786983061709-sh4gk9"
+        "1786983061709-sh4gk9",
+        "1786996536961-s44asp"
       ],
       "causedBy": []
     },
@@ -264,7 +274,8 @@
       "relatedTo": [
         "1786859568721-fahph6",
         "1786981762503-hib4rs",
-        "1786982189919-8dnfi9"
+        "1786982189919-8dnfi9",
+        "1786996536961-s44asp"
       ],
       "causes": [
         "1786859568721-fahph6",
@@ -289,7 +300,8 @@
         "6463a27e-4bc0-4022-85bf-3242450eac40",
         "1786980587175-xavuzt",
         "1786981219540-nmfp90",
-        "1786983061709-sh4gk9"
+        "1786983061709-sh4gk9",
+        "1786996536961-s44asp"
       ],
       "causedBy": []
     },
@@ -320,7 +332,8 @@
       "relatedTo": [
         "1786859568721-fahph6",
         "1786981762503-hib4rs",
-        "1786982189919-8dnfi9"
+        "1786982189919-8dnfi9",
+        "1786996536961-s44asp"
       ],
       "causes": [
         "1786859568721-fahph6",
@@ -348,7 +361,8 @@
         "1786980587175-xavuzt",
         "1786980961946-y8g7n8",
         "1786981219540-nmfp90",
-        "1786983061709-sh4gk9"
+        "1786983061709-sh4gk9",
+        "1786996536961-s44asp"
       ],
       "causedBy": []
     },
@@ -377,7 +391,8 @@
       "supersedes": [],
       "supersededBy": [],
       "relatedTo": [
-        "1786859568721-fahph6"
+        "1786859568721-fahph6",
+        "1786996536961-s44asp"
       ],
       "causes": [
         "1786859568721-fahph6",
@@ -402,7 +417,8 @@
         "1786981219540-nmfp90",
         "1786981762503-hib4rs",
         "1786982189919-8dnfi9",
-        "1786983061709-sh4gk9"
+        "1786983061709-sh4gk9",
+        "1786996536961-s44asp"
       ],
       "causedBy": []
     },
@@ -431,7 +447,8 @@
       "supersedes": [],
       "supersededBy": [],
       "relatedTo": [
-        "1786859568721-fahph6"
+        "1786859568721-fahph6",
+        "1786996536961-s44asp"
       ],
       "causes": [
         "1786859568721-fahph6",
@@ -453,7 +470,8 @@
         "1786981762503-hib4rs",
         "1786982189919-8dnfi9",
         "1786983061709-sh4gk9",
-        "1786983608222-irjzda"
+        "1786983608222-irjzda",
+        "1786996536961-s44asp"
       ],
       "causedBy": []
     },
@@ -484,7 +502,8 @@
       "relatedTo": [
         "1786859568721-fahph6",
         "1786981762503-hib4rs",
-        "1786982189919-8dnfi9"
+        "1786982189919-8dnfi9",
+        "1786996536961-s44asp"
       ],
       "causes": [
         "1786859568721-fahph6",
@@ -505,7 +524,8 @@
         "1786978825551-4yxjf4",
         "1786981219540-nmfp90",
         "1786983061709-sh4gk9",
-        "1786983608222-irjzda"
+        "1786983608222-irjzda",
+        "1786996536961-s44asp"
       ],
       "causedBy": []
     },
@@ -39579,9 +39599,11 @@
       "w36"
     ],
     "files": [],
-    "status": "active",
+    "status": "outdated",
     "metadata": {
-      "status": "active"
+      "status": "active",
+      "outdatedReason": "auto-aged",
+      "outdatedAt": "2026-08-17T19:55:37.587Z"
     }
   },
   {
@@ -39599,9 +39621,11 @@
       "tag"
     ],
     "files": [],
-    "status": "active",
+    "status": "outdated",
     "metadata": {
-      "status": "active"
+      "status": "active",
+      "outdatedReason": "auto-aged",
+      "outdatedAt": "2026-08-17T19:55:37.587Z"
     }
   },
   {
@@ -39617,9 +39641,11 @@
       "analysis"
     ],
     "files": [],
-    "status": "active",
+    "status": "outdated",
     "metadata": {
-      "status": "active"
+      "status": "active",
+      "outdatedReason": "auto-aged",
+      "outdatedAt": "2026-08-17T19:55:37.587Z"
     }
   },
   {
@@ -39638,9 +39664,11 @@
       "tag"
     ],
     "files": [],
-    "status": "active",
+    "status": "outdated",
     "metadata": {
-      "status": "active"
+      "status": "active",
+      "outdatedReason": "auto-aged",
+      "outdatedAt": "2026-08-17T19:55:37.587Z"
     }
   },
   {
@@ -39656,9 +39684,11 @@
       "taylor_tower"
     ],
     "files": [],
-    "status": "active",
+    "status": "outdated",
     "metadata": {
-      "status": "active"
+      "status": "active",
+      "outdatedReason": "auto-aged",
+      "outdatedAt": "2026-08-17T19:55:37.587Z"
     }
   },
   {
@@ -39675,9 +39705,11 @@
       "cumulants"
     ],
     "files": [],
-    "status": "active",
+    "status": "outdated",
     "metadata": {
-      "status": "active"
+      "status": "active",
+      "outdatedReason": "auto-aged",
+      "outdatedAt": "2026-08-17T19:55:37.587Z"
     }
   },
   {
@@ -39694,9 +39726,11 @@
       "error_bounds"
     ],
     "files": [],
-    "status": "active",
+    "status": "outdated",
     "metadata": {
-      "status": "active"
+      "status": "active",
+      "outdatedReason": "auto-aged",
+      "outdatedAt": "2026-08-17T19:55:37.587Z"
     }
   },
   {
@@ -114376,7 +114410,8 @@
         "1786980587175-xavuzt",
         "1786981219540-nmfp90",
         "1786981762503-hib4rs",
-        "1786982189919-8dnfi9"
+        "1786982189919-8dnfi9",
+        "1786996536961-s44asp"
       ],
       "relatedTo": [
         "1784938579774-o0xebs",
@@ -114419,7 +114454,8 @@
         "1786980587175-xavuzt",
         "1786981219540-nmfp90",
         "1786981762503-hib4rs",
-        "1786982189919-8dnfi9"
+        "1786982189919-8dnfi9",
+        "1786996536961-s44asp"
       ],
       "relatedTo": [],
       "causes": [],
@@ -114458,7 +114494,8 @@
         "1786980587175-xavuzt",
         "1786981219540-nmfp90",
         "1786981762503-hib4rs",
-        "1786982189919-8dnfi9"
+        "1786982189919-8dnfi9",
+        "1786996536961-s44asp"
       ],
       "relatedTo": [],
       "causes": [],
@@ -114721,7 +114758,8 @@
       "supersededBy": [
         "1786859568721-fahph6",
         "1786978825551-4yxjf4",
-        "1786981762503-hib4rs"
+        "1786981762503-hib4rs",
+        "1786996536961-s44asp"
       ],
       "relatedTo": [],
       "causes": [],
@@ -114753,7 +114791,8 @@
       "supersedes": [],
       "supersededBy": [
         "1786978825551-4yxjf4",
-        "1786981762503-hib4rs"
+        "1786981762503-hib4rs",
+        "1786996536961-s44asp"
       ],
       "relatedTo": [],
       "causes": [],
@@ -114783,7 +114822,8 @@
       "supersedes": [],
       "supersededBy": [
         "1786978825551-4yxjf4",
-        "1786981762503-hib4rs"
+        "1786981762503-hib4rs",
+        "1786996536961-s44asp"
       ],
       "relatedTo": [
         "1784938579774-o0xebs",
@@ -117799,7 +117839,9 @@
         "1782299038499-yiuj97",
         "1782299038499-i56cp2"
       ],
-      "supersededBy": [],
+      "supersededBy": [
+        "1786996536961-s44asp"
+      ],
       "relatedTo": [
         "1781567582055-ybwqis",
         "1781567582055-0xmhik",
@@ -117838,7 +117880,8 @@
     "relationships": {
       "supersedes": [],
       "supersededBy": [
-        "1784898205160-l5rb37"
+        "1784898205160-l5rb37",
+        "1786996536961-s44asp"
       ],
       "relatedTo": [],
       "causes": [],
@@ -117866,7 +117909,9 @@
     "priority": "medium",
     "relationships": {
       "supersedes": [],
-      "supersededBy": [],
+      "supersededBy": [
+        "1786996536961-s44asp"
+      ],
       "relatedTo": [],
       "causes": [],
       "causedBy": []
@@ -117892,7 +117937,9 @@
     "priority": "medium",
     "relationships": {
       "supersedes": [],
-      "supersededBy": [],
+      "supersededBy": [
+        "1786996536961-s44asp"
+      ],
       "relatedTo": [],
       "causes": [],
       "causedBy": []
@@ -136720,6 +136767,195 @@
     "commitHashes": [
       "8f3bca1f9728a3621a6a9452527cd0d58770152d",
       "06014ac2129f04fd97ddcbfcf87efd347c3be43f"
+    ]
+  },
+  {
+    "id": "1786996536961-x5ctpq",
+    "question": "Why: Replace corrected runner to normalize legacy namespace keys?",
+    "answer": "(Auto-drafted from commit 69ed993 on 2026-08-17.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-08-17T17:56:05.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "metadata": {
+      "status": "draft"
+    },
+    "commitHashes": [
+      "69ed9933a5deaa633b7321a13314749f3caf2499"
+    ]
+  },
+  {
+    "id": "1786996536961-svuqms",
+    "question": "Why: Add collision-safe Pass5776-5855 homepage materializer?",
+    "answer": "(Auto-drafted from commit 5d716c7 on 2026-08-17.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-08-17T17:53:52.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "metadata": {
+      "status": "draft"
+    },
+    "commitHashes": [
+      "5d716c79a903be8f15f200e05db34b0d65f543ef"
+    ]
+  },
+  {
+    "id": "1786996536961-bqfi65",
+    "question": "Why: Add resilient Pass5776-5839 homepage materializer?",
+    "answer": "(Auto-drafted from commit 6fa6221 on 2026-08-17.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-08-17T17:45:32.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "metadata": {
+      "status": "draft"
+    },
+    "commitHashes": [
+      "6fa62218ee1ebcf6acf1f95ddcee669b5de133d7"
+    ]
+  },
+  {
+    "id": "1786996536961-nivjy4",
+    "question": "Why: Pass5728: add intrinsic spectral selector on known switching triples?",
+    "answer": "(Auto-drafted from commit 43ded4a on 2026-08-17.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-08-17T15:43:59.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "metadata": {
+      "status": "draft"
+    },
+    "commitHashes": [
+      "43ded4a0968f2b9eddafbe1d152b991e9c227099"
+    ]
+  },
+  {
+    "id": "1786996536961-n2qsl2",
+    "question": "Why: Pass5724: add affine torsion homepage source?",
+    "answer": "(Auto-drafted from commit b639507 on 2026-08-17.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-08-17T14:43:26.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "metadata": {
+      "status": "draft"
+    },
+    "commitHashes": [
+      "b63950738d1fa960b411ff1a04ed7070d45f3586"
+    ]
+  },
+  {
+    "id": "1786996536961-s44asp",
+    "question": "Why: Pass5723: add affine torsion theorem insert?",
+    "answer": "(Auto-drafted from commit c06abfa on 2026-08-17.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-08-17T14:43:06.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [
+        "1784409410004-2ofkhg",
+        "1784409410004-kzfbyz",
+        "1784409410003-54eefw",
+        "1784563511681-tcy2xj",
+        "1784563511681-h7bul3",
+        "1784589935560-snsvd3",
+        "1784898205160-ryft79",
+        "1784898205160-1vgdpw",
+        "1784898205160-ipme28",
+        "1784898205160-4dyz5m"
+      ],
+      "supersededBy": [],
+      "relatedTo": [
+        "1777318403162-biaewx",
+        "1777318403161-4mgrce",
+        "1777318403161-vfxeky",
+        "1777318403161-wwusgh",
+        "1777318403161-8dkkdk",
+        "1777318403161-ai9frf",
+        "1777318403161-qze7ej",
+        "1777318403161-t7tcbd",
+        "1777318403161-06lp3s",
+        "1777318403161-ya0ehy"
+      ],
+      "causes": [],
+      "causedBy": [
+        "1777318403162-biaewx",
+        "1777318403161-4mgrce",
+        "1777318403161-vfxeky",
+        "1777318403161-wwusgh",
+        "1777318403161-8dkkdk",
+        "1777318403161-ai9frf",
+        "1777318403161-qze7ej",
+        "1777318403161-t7tcbd",
+        "1777318403161-06lp3s",
+        "1777318403161-ya0ehy"
+      ]
+    },
+    "metadata": {
+      "status": "draft"
+    },
+    "commitHashes": [
+      "c06abfa57a35835793a6f4afb695d5ab248c6c3f"
     ]
   }
 ]

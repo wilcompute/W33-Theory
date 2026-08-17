@@ -10,29 +10,30 @@
 This file contains project context and decisions. AI assistants should read this file for context. MCP tools are an optional enhancement for richer interaction when connected.
 
 ## Project Context
-- **Total Decisions:** 5184
+- **Total Decisions:** 5190
 - **Known Topics:** needs-review, auto-draft, why, w33, testing, toe, docs, architecture, holonet, photonic, audit, qec, github, selector, gap
 
 ## Current State
 **Repository:** Theory of Everything
 **Project Type:** Python Project | Python
 **Branch:** master
-**Tracking:** ahead 1, behind 0
 
 **Recent Commits:**
-- `06014ac Reserve Pass5760-5767 Track A: perturbation test, CLAUDE.md failure mode six`
-- `03e13de Continuity autogen refresh`
-- `db5d4aa Pass5757: a positive control for the weight-profile search`
-- `8b0687e Pass5752-5759: the attainment is generic, so nothing in the tower is about W(3,q)`
-- `3a77689 Stop parallel frontier edits from starving Pass5725-5732 verification`
+- `702a8da Pass5864-5871: the orbit construction failed, and alpha(W(3,q)) odd q is published research`
+- `97ea1a9 Merge remote-tracking branch 'origin/master'`
+- `48c2be2 Pass5856-5863: orbit construction for alpha(W(3,9)), attempt in progress`
+- `0857eab Close Pass5856-5863 structural packet pending CI`
+- `6f3502c Pass5856-5863: add exact replay and compile workflow`
 
 **Working Tree:**
+- M .continuity/SESSION_NOTES.md
 - M .continuity/decisions.json
 - M .continuity/decisions.jsonl
 
 ## Session Context
 **Goals:**
 - 2026-08-08 current goal: finish and validate the Passes 4324-4334 chamber Hecke and audited-corrections packet while preserving exact theorem, retraction, and open-boundary language.
+
 
 ## Decision Freshness
 **0 stale decisions** · 511 need review · 1138 superseded ready to archive · Oldest unreviewed: 2026-04-20
@@ -125,56 +126,6 @@ Ordered by how hard they are to catch. Each was found the expensive way.
    start. See `analysis/w33_pass322_the_rank_law_was_already_ours.py`: ~15 passes
    re-derived a rank law the repo had already proved and formalized in Lean, and
    whose two halves are published (Sastry–Sin; Chandler–Sin–Xiang) and cited here.
-
-### Failure mode six: right result, wrong subject (added 2026-08-17)
-
-The five modes above all assume the claim is *about* the object. A sixth does not.
-
-**Pass 5744-5759 measured a rank law on W(3,q), proved it, verified it at six values of q,
-and attributed it to the symplectic form. Then one test killed nine passes: every
-nondegenerate bilinear form attains the same bound - symmetric, diagonal, random,
-degenerate alike. The law is `C(e+r-1,e)` in the *rank* of the form. Nothing in it was
-about W(3,q).**
-
-The claim was true, proportionate, well-witnessed, and novel to the corpus. It was simply
-about bilinear forms, computed on a carrier that happened to be a symplectic polar space.
-
-**The test is one line: change the object and see whether the result changes.** If it does
-not, the result was never about the object. Run it *before* writing the framing.
-
-**Four calibrations from the same thread:**
-
-- *Build the objects the claim predicts on.* A conjecture that survives only confirming
-  cases has not been tested. Pass 5800 asserted an equivalence on three configurations;
-  Pass 5808 refuted it in ONE batch by constructing three where the claim forced an answer.
-  **And check the constructed object against a published invariant** — two of that survey's
-  rows were configurations mislabelled from memory (|Aut| 4 and 1 against published 120 and
-  16), and the fake one was actively *concealing* the counterexample.
-
-- *Arguments rediscover; computations discover.* Of ten claims audited, every one derived
-  from a short argument turned out classical (four for four); every survivor came from a
-  construction, a GAP typing, or an explicit search. **A proof that fits in a few lines,
-  about a classical object, is a reason to search the literature before writing.**
-- *An empty search is a hypothesis about your pattern, not a fact about the corpus.* Three
-  of four empty results in that session were bad patterns - one grep matched only `#` and
-  `**` while the banner it sought began with `>`. **Give every negative a positive
-  control**: search for something you know is there, confirm the pattern fires, then trust
-  the negative.
-- *Derive the sentence from the array.* Three claims that session contradicted a table
-  printed directly above them. None was a reasoning error; all three were predictions
-  written beside output that had not been read.
-- *Build the objects the claim predicts on.* A conjecture surviving only confirming
-  cases has not been tested. Pass 5800 asserted an equivalence on three configurations;
-  Pass 5808 refuted it in ONE batch by constructing three where the claim forced an
-  answer. **Check each constructed object against a published invariant** — two of that
-  survey's rows were configurations mislabelled from memory (|Aut| 4 and 1 against
-  published 120 and 16), and the fake was actively *concealing* the counterexample.
-  And beware the VACUOUS pass: the surviving direction later passed its sharpest test
-  only because both witnesses had an empty kernel.
-
-**Pass-number reservations must be pushed AND the push VERIFIED before work begins.**
-Passes 5744 and 5776 both collided with the other lane and needed renumbering; in the
-second case the reservation commit was made but the push was silently rejected.
 
 ### The operational prior
 
@@ -278,7 +229,7 @@ after commit:
    - Q: Does the symplectic power tower really have period q-1, and what does GF(9) reveal?
    - A: NO -- the wrap is at the CHARACTERISTIC, not q, and the law is a base-p digit product.  CORRECTION TO PASS 5713. It claimed rank_q(sf^e) has period q-1, verified at q = 3, 5, 7, 11. At q=9 that would put the wrap at e=9. It is at e=3. GF(9) has characteristic 3, so Frobenius is x -> x^3 and sf^3 = Frobenius(sf) is again a form of rank 4. For PRIME q the characteristic equals q and the two statements coincide -- which is exactly why every q I had tested was blind to the difference. All four verifications were at primes.  THE COMPLETE LAW IS MULTIPLICATIVE OVER BASE-p DIGITS:      rank(sf^e) ...
 
-*1471 unreviewed drafts from auto-capture pending review — `continuity log` the real rationale or update_decision to expand them.*
+*1477 unreviewed drafts from auto-capture pending review — `continuity log` the real rationale or update_decision to expand them.*
 
 ---
 

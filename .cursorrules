@@ -5,29 +5,30 @@
 This file contains project context and decisions. AI assistants should read this file for context. MCP tools are an optional enhancement for richer interaction when connected.
 
 ## Project Context
-- **Total Decisions:** 5184
+- **Total Decisions:** 5190
 - **Known Topics:** needs-review, auto-draft, why, w33, testing, toe, docs, architecture, holonet, photonic, audit, qec, github, selector, gap
 
 ## Current State
 **Repository:** Theory of Everything
 **Project Type:** Python Project | Python
 **Branch:** master
-**Tracking:** ahead 1, behind 0
 
 **Recent Commits:**
-- `06014ac Reserve Pass5760-5767 Track A: perturbation test, CLAUDE.md failure mode six`
-- `03e13de Continuity autogen refresh`
-- `db5d4aa Pass5757: a positive control for the weight-profile search`
-- `8b0687e Pass5752-5759: the attainment is generic, so nothing in the tower is about W(3,q)`
-- `3a77689 Stop parallel frontier edits from starving Pass5725-5732 verification`
+- `702a8da Pass5864-5871: the orbit construction failed, and alpha(W(3,q)) odd q is published research`
+- `97ea1a9 Merge remote-tracking branch 'origin/master'`
+- `48c2be2 Pass5856-5863: orbit construction for alpha(W(3,9)), attempt in progress`
+- `0857eab Close Pass5856-5863 structural packet pending CI`
+- `6f3502c Pass5856-5863: add exact replay and compile workflow`
 
 **Working Tree:**
+- M .continuity/SESSION_NOTES.md
 - M .continuity/decisions.json
 - M .continuity/decisions.jsonl
 
 ## Session Context
 **Goals:**
 - 2026-08-08 current goal: finish and validate the Passes 4324-4334 chamber Hecke and audited-corrections packet while preserving exact theorem, retraction, and open-boundary language.
+
 
 ## Decision Freshness
 **0 stale decisions** · 511 need review · 1138 superseded ready to archive · Oldest unreviewed: 2026-04-20
@@ -223,7 +224,7 @@ after commit:
    - Q: Does the symplectic power tower really have period q-1, and what does GF(9) reveal?
    - A: NO -- the wrap is at the CHARACTERISTIC, not q, and the law is a base-p digit product.  CORRECTION TO PASS 5713. It claimed rank_q(sf^e) has period q-1, verified at q = 3, 5, 7, 11. At q=9 that would put the wrap at e=9. It is at e=3. GF(9) has characteristic 3, so Frobenius is x -> x^3 and sf^3 = Frobenius(sf) is again a form of rank 4. For PRIME q the characteristic equals q and the two statements coincide -- which is exactly why every q I had tested was blind to the difference. All four verifications were at primes.  THE COMPLETE LAW IS MULTIPLICATIVE OVER BASE-p DIGITS:      rank(sf^e) ...
 
-*1471 unreviewed drafts from auto-capture pending review — `continuity log` the real rationale or update_decision to expand them.*
+*1477 unreviewed drafts from auto-capture pending review — `continuity log` the real rationale or update_decision to expand them.*
 
 ---
 
