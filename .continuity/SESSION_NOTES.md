@@ -17,11 +17,11 @@
 
 ## ✅ Next Steps
 <!-- What should we do next? -->
-- Auto-saved at 2026-08-17T20:24:27.583Z (reason: timer)
+- Auto-saved at 2026-08-17T20:30:58.482Z (reason: threshold-commits)
 - Recent commits:
-  - e983c719d Pass5904-5911: W(3,3) has exactly 2880 maximum partial ovoids, all in one orbit
-  - 462b304f9 Merge remote-tracking branch 'origin/master'
-  - 0c9b7d39d Pass5896-5903: the stabiliser is 18, not 1 -- conjecture refuted and Pass 5888 corrected
+  - f9207ec10 Pass5920-5927: the 2880 heptads form a 2-design, and their swap graph is 7-regular
+  - 37edb52ce Merge remote-tracking branch 'origin/master'
+  - ec293dbd8 Pass5912-5919: the 2880 classification was already BT819's -- fifth rediscovery
 
 ## 📝 Open Questions
 <!-- What do we still need to figure out? -->

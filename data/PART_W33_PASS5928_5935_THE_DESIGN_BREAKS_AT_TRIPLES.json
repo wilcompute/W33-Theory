@@ -1,0 +1,57 @@
+{
+  "boundary": "Pass 5928 is exact at q=2 and q=3. The swap-graph invariants are computed, not identified against a named graph. The 27/E6 question is still NOT decided. Novelty greped before writing; the q=2 count 6 is NOT mine -- it is the other lane's doily census entry, reproduced independently",
+  "pass_5928_across_q": {
+    "q2": {
+      "all_covered": true,
+      "alpha": 5,
+      "count": 6,
+      "is_3_design": true,
+      "lambda_2": 1,
+      "lambda_3": 1,
+      "non_collinear_pairs": 60,
+      "note": "at q=2 the maximum partial ovoids ARE ovoids, since W(3,q) has ovoids for even q. Six of them -- exactly the six ovoids in the other lane's doily hyperplane census (10 grids + 6 ovoids + 15 perp-sets), reproduced here from an independent computation",
+      "points": 15,
+      "r": 2
+    },
+    "q3": {
+      "all_covered": true,
+      "alpha": 7,
+      "count": 2880,
+      "is_3_design": false,
+      "lambda_2": 112,
+      "non_collinear_pairs": 540,
+      "points": 40,
+      "r": 504
+    }
+  },
+  "pass_5929_the_3_design_boundary": {
+    "not_explained": "what distinguishes the 360 from the 2880 is not determined here",
+    "q2": "3-DESIGN: every non-collinear triple lies in exactly 1 ovoid",
+    "q3": "NOT a 3-design",
+    "q3_triple_spectrum": {
+      "16": 360,
+      "33": 2880
+    },
+    "reading": "at q=3 the non-collinear triples split into TWO classes -- 360 lying in 16 heptads each and 2880 lying in 33 each -- so Sp(4,3) has at least two orbits on the triples that occur. The regularity that is exact at the pair level breaks at the triple level, and it breaks into a 360/2880 dichotomy where 2880 is the heptad count itself"
+  },
+  "pass_5930_swap_graph": {
+    "bipartite": false,
+    "check": "2880 * 7 / 2 = 10080",
+    "components": 1,
+    "connected": true,
+    "eccentricity_from_a_vertex": 10,
+    "edges": 10080,
+    "girth": 4,
+    "not_done": "identification against any named graph family",
+    "reading": "a 7-regular, triangle-free, non-bipartite, connected, vertex-transitive graph on 2880 vertices carrying Sp(4,3). Girth 4 with no triangles means its short cycles are all quadrilaterals -- two heptads sharing six points can be swapped back in two ways",
+    "regular": 7,
+    "triangles": 0,
+    "vertices": 2880
+  },
+  "pass_5931_cross_lane": {
+    "my_independent_touch_point": "the six ovoids of W(3,2) fall out of my maximum partial ovoid computation at q=2, matching their census term for term",
+    "not_claimed": "no map between their M_2(F_2) picture and my q=3 heptads is built here",
+    "their_result": "M_2(F_2) with det polarization IS the two-qubit symplectic form; the 15 nonzero matrices are SRG(15,6,1,3) = W(3,2), split 9 rank-one + 6 units",
+    "what_it_suggests": "their 9+6 and my heptad design are computations on the SAME object at different q. The natural joint question is whether the q=3 analogue of their det-polarization map exists -- M_2(F_3) has 80 nonzero matrices, not 40, so it is not immediate"
+  }
+}
