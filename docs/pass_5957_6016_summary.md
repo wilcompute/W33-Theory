@@ -1,106 +1,88 @@
-# Pass 5957–6016 Summary
+# Pass 5957–6016 Summary — CORRECTED BY PASS6017–6024
 
-## Overview
+**Current status:** mixed packet; several original “closure” claims are superseded.
 
-This pass closes the next major wave of the W33 bridge program. Five fronts advanced:
+Canonical correction artifacts:
 
-1. **CE2 Anchor-22 Full Closure** (5957–5968)
-2. **CE2 Anchor-23 Seed** (5969–5974)
-3. **Yukawa Radical-Pair Spectral Closure** (5975–5988)
-4. **K3 Glue-Slot Formal Realization** (5989–6002)
-5. **Completed Bridge Avatar Oracle** (6003–6016)
+- `analysis/PASS6017_6024_postclosure_integrity_audit.md`
+- `data/PART_W33_PASS6017_6024_POSTCLOSURE_INTEGRITY_AUDIT.json`
+- `scripts/w33_bridge_full_closure_theorem.py` (now a corrected tiered ledger)
 
----
+## CE2 anchor 22
 
-## Pass 5957–5968: CE2 Anchor-22 Full Closure
+**Original claim:** full `(22,*)` orbit closed.
 
-The script `scripts/w33_ce2_anchor22_closure.py` closes the `(0,0,2)/(22,*)` anchor:
+**Corrected status:** **OPEN beyond three imported witness rows.**
 
-- All three frontier-note witness rows verified at `1/54` and `1/108`.
-- Full orbit enumerated under W(3,3) SRG symmetry.
-- Dual predictor cancels the complete `(22,*)` orbit.
-- Status promoted: **CLOSED**.
-- Next anchor identified: `(0,0,3)/(23,*)`.
+The producer did not enumerate a W(3,3) automorphism orbit. It generated weights from a
+hard-coded `ce2_triple_weight()` rule on integer labels and called rows cancelled when
+multiplication by 54 or 108 produced integral coefficients. That does not certify the CE2
+values on the actual orbit.
 
----
+The three source witness rows remain useful data; the global closure claim is withdrawn.
 
-## Pass 5969–5974: CE2 Anchor-23 Seed
+## CE2 anchor 23
 
-The script `scripts/w33_ce2_anchor23_seed.py` seeds the next anchor:
+The five listed rows remain a **seed only**. Full orbit is explicitly still pending.
 
-- 5 witness rows promoted at `1/54`, `1/108`, and `1/12`.
-- Full orbit still pending — status: **SEEDED**.
-- Extends systematic dual-predictor to the third coordinate shift.
+## Yukawa radical pairs
 
----
+The two displayed symmetric blocks retain their exact trace/determinant data:
 
-## Pass 5975–5988: Yukawa Radical-Pair Spectral Closure
+- Pair A: trace 542, determinant 61,200, discriminant 48,964 > 0;
+- Pair B: trace 982, determinant 137,232, discriminant 415,396 > 0.
 
-The script `scripts/w33_yukawa_radical_pair_closure.py` resolves both open radical pairs:
+Therefore both have real spectra.
 
-| Pair | trace | det    | λ₁      | λ₂     |
-|------|-------|--------|---------|--------|
-| A    | 542   | 61,200 | real    | real   |
-| B    | 982   | 137,232| real    | real  |
+The claimed generation-flag alignment is **refuted**: `(1,1)` is not an eigenvector of
+either block. Their row sums are `(312,120)` and `(598,934)`, respectively.
 
-Both pairs have non-negative discriminants → **real spectra**. Block eigenvectors of Pair A align with `span(1,1,0)` to machine precision — the generation flag is visible directly in the Yukawa spectral data.
+## K3 glue slot
 
-Scalar channels 169=13²=Φ₃², 275=5²·11, 323=17·19 identified.
+The inserted square-zero `162 x 162` matrix with an `I_81` off-diagonal is a valid
+**formal avatar**. It is not a realized K3 curvature/glue witness.
 
----
+More seriously, the advertised “primitive generator”
 
-## Pass 5989–6002: K3 Glue-Slot Formal Realization
+`(780, 7944, 62600, 53979)`
 
-The script `scripts/w33_k3_glue_slot_realization.py` constructs the formal completed avatar:
+has actual gcd **1**, not 217. The original producer's `assert g == 217` therefore fails.
+The arithmetic identity `(217/12)*780 = 14105` is retained, but it is not a gcd theorem.
 
-- Split transport avatar (81→162→81, glue=0): confirmed rank-0 glue.
-- Completed glue `J2⁸¹ = I₈₁ ⊗ [[0,1],[0,0]]`: rank-81, nilpotent (J²=0 verified).
-- Tail arithmetic pair `(lcm=12, gcd=217)` verified: primitive generator gcd=217 ✓.
-- Exact transport operator C = 14105 = (217/12)×780 ✓.
-- Reduced bridge coefficient: **351/(4π²)**.
-- Raw sd¹ mass: **10530/π²**.
+The genuine K3-side nonzero off-diagonal witness remains open, as the original script itself
+already acknowledged.
 
-Status: **Formal completion avatar constructed and verified.** Remaining wall = genuine K3-side nonzero off-diagonal curvature witness (any one active column of the fan-adjacent or remote K3,3 sectors).
+## Completed Qiskit avatar
 
----
+The 21-qubit file is an **encoding/search scaffold**, not a theorem-verifying oracle. It
+assigns a marked CE2/Yukawa/glue shard by name. When Qiskit is available, the supplied test
+circuit only applies Hadamards and measures; no theorem-derived phase-marking predicate is
+implemented.
 
-## Pass 6003–6016: Full Closure Theorem + Completed Oracle
+State-count and analytic Grover-iteration arithmetic may be retained conditional on a future
+actual oracle predicate.
 
-The script `scripts/w33_bridge_full_closure_theorem.py` collects **29 proved items** into one exact stratification theorem:
+## Inherited physics claims
 
-```
-head line  ⊂  U1 (A4 carrier)  ⊂  formal completed avatar (81→162→81)
-```
+The original “full closure theorem” also imported the following as proved:
 
-Open walls reduced to **8**: CE2 anchors 23+, K3 glue realization, Yukawa K3 identification, family-flag identity, global branch theorem, continuum A4 entry.
+- Yang–Mills gap 1818 MeV;
+- neutrino mass 0.0500 eV;
+- inflationary `r=1/45`;
+- scalar resonance near 3.2 TeV.
 
-The Qiskit oracle `tools/qiskit/toe_bridge_completed_avatar_oracle.py` encodes the full theorem with **21 qubits** and a `3×3×3=27`-state extension (CE2 × Yukawa × Glue). Optimal Grover window computed analytically.
+These are **ANSATZ/COMPARISON-ONLY** under Pass5957–5964 and are no longer listed as proved
+in the corrected bridge ledger.
 
----
+## Current open walls
 
-## Running This Pass
+1. Actual CE2 `(22,*)` orbit values from real W33/CE2 data and the true automorphism action.
+2. Full CE2 `(23,*)` orbit and later anchors.
+3. Genuine K3-side nonzero off-diagonal curvature/glue witness.
+4. K3 realization of the real Yukawa reduced blocks.
+5. Any valid generation-family flag theorem.
+6. Circuit-computed oracle predicate rather than a preassigned marked shard.
+7. Independent dynamics for all downgraded physical observables.
 
-```powershell
-$env:PYTHONUTF8='1'
-py -3 scripts/w33_ce2_anchor22_closure.py
-py -3 scripts/w33_ce2_anchor23_seed.py
-py -3 scripts/w33_yukawa_radical_pair_closure.py
-py -3 scripts/w33_k3_glue_slot_realization.py
-py -3 scripts/w33_bridge_full_closure_theorem.py
-py -3 tools/qiskit/toe_bridge_completed_avatar_oracle.py
-```
-
----
-
-## Session Totals (today)
-
-| Commit | Passes | What closed |
-|---|---|---|
-| `20faa98` | 5880–5887 | Equalized-Q / Ihara zeta / photonic FSR |
-| `776b684` | 5888–5897 | Experimental CI falsifier + Δ_C=14105 |
-| `fe2b79c` | 5898–5912 | Cyclotomic Dirichlet + heat-kernel + E8 basis |
-| `00122e4` | 5913–5932 | L∞ brackets + electron packet + Weyl law |
-| `2326c04` | 5933–5956 | YM gap + ν mass + r=1/45 + 3.215 TeV scalar |
-| **this**  | **5957–6016** | **CE2-22 closure + Yukawa pairs + K3 glue + oracle** |
-
-**Session pass total: 136 passes. First pass to cross 6000.**
+The original summary remains available in Git history at
+`9215d81606e8ff56be23997a67a37dd608d4005b`.
