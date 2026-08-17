@@ -17,14 +17,19 @@
     <a href="docs/index.html">Full W33 site</a>
     <a href="docs/atlas.html">Visual atlas</a>
     <a href="docs/falsifiers.html">Falsifier dashboard</a>
-    <a href="analysis/PASS6533_6540_doily_quadratic_evaluation_code.md">Pass 6533–6540 report</a>
+    <a href="analysis/PASS6533_6540_doily_quadratic_evaluation_code.md">Pass 6533–6540</a>
+    <a href="analysis/PASS6541_6544_doily_veldkamp_code_lines.md">Pass 6541–6544</a>
   </nav>
   <section class="card">
-    <div class="status">PASS · Passes 6533–6540</div>
+    <div class="status">PASS · Passes 6533–6544</div>
     <h2>Doily quadratic-evaluation code</h2>
     <p>The 31 nonzero geometric-hyperplane complements of the two-qubit doily are packaged by one five-dimensional binary evaluation code.</p>
     <div class="eq">C = [15,5,6]₂, &nbsp; W(y)=1+10y⁶+15y⁸+6y¹⁰<br>C⊥ = [15,10,3]₂</div>
     <p>The 15 minimum dual supports are exactly the 15 doily lines. The six weight-10 words and the six spreads of those minimum dual words give two intrinsic six-point actions; their cycle-class correspondence reconstructs the exceptional outer automorphism of <code>S₆</code>. The determinant <code>9+6</code> split is one distinguished weight-6 word, not a separate numerology.</p>
-    <p class="boundary"><strong>Evidence boundary:</strong> finite binary geometry/coding only. No automatic identification with W(3,3), CE2, the missing K3 curvature object, or a physical Hilbert-space/continuum model is asserted.</p>
+    <h3>Full Veldkamp incidence reconstruction</h3>
+    <p>Projectivizing the five-dimensional code gives all 31 points and all 155 lines of <code>PG(4,2)</code>. The common zero-set cores reproduce the complete five-type Veldkamp census:</p>
+    <div class="eq">15 single points + 15 collinear triples + 60 unicentric triads<br>+ 20 tricentric triads + 45 pentads = 155</div>
+    <p>The only weight-level ambiguity, the 35 all-perp <code>(8,8,8)</code> lines, is resolved by the dual: 15 cores are minimum dual supports (the doily lines) and the remaining 20 are tricentric triads.</p>
+    <p class="boundary"><strong>Evidence boundary:</strong> finite binary geometry/coding only. The abstract Veldkamp classification is prior art; the repo contribution is the explicit executable code-and-dual reconstruction. No automatic identification with W(3,3), CE2, the missing K3 curvature object, or a physical Hilbert-space/continuum model is asserted.</p>
   </section>
 </main></body></html>
