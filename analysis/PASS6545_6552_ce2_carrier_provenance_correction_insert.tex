@@ -1,0 +1,67 @@
+% Passes 6545--6552: shared CE2 provenance/type correction.
+\subsection{CE2 carrier/provenance correction: the native object is $27\times3$}
+\label{sec:ce2-carrier-provenance-correction}
+
+\paragraph{Evidence correction.}
+The repository contains a genuine compact CE2 local-solution artifact with
+\[
+\boxed{5832}
+\]
+rows, but its native label set is not the forty projective points of $W(3,3)$.
+The graded bracket machinery realizes
+\[
+(\mathfrak e_6\oplus\mathfrak{sl}_3)
+\oplus(27\otimes3)
+\oplus(27^*\otimes3^*),
+\]
+so a local CE2 label is $(i,f)$ with $0\le i<27$ and $0\le f<3$.
+The committed affine--Heisenberg model identifies the carrier labels with
+$\mathbb F_3^3$, and the committed Schlaefli isomorphism is likewise a
+$27$-point identification; in particular carrier label $22$ maps to the
+Schlaefli line $L_{45}$ (phase $0$, half-root type).
+
+The current compact source has the documented split
+\[
+\boxed{5832=5184+648},
+\]
+corresponding to the dominant one-term $|1/54|$ family and the two-term
+$|1/108|$ fiber/rank-drop family. Thus authentic CE2 local data do exist and
+are naturally organized on the $E_6$ minuscule $27$-carrier.
+
+\paragraph{Forty-point anchor boundary.}
+A later scaffold attempted to turn ``anchor 22'' into a forty-point W33 orbit.
+Its corrected source now explicitly records that the predecessor generated
+synthetic weights from labels $1,\ldots,39$ without constructing the required
+automorphism action or evaluating the CE2 tensor, and it retains only three
+imported witnesses. The stronger type correction is
+\[
+\boxed{
+27\text{-carrier CE2 anchor}
+\not\Rightarrow
+40\text{-point W33 orbit}
+}
+\]
+without an explicit equivariant $27\leftrightarrow40$ transport. The anchor
+lane therefore remains open beyond its imported witnesses.
+
+\paragraph{Reproducibility boundary.}
+The compact $5832$-row artifact names
+\texttt{artifacts/ce2\_rational\_local\_solutions.json} as its source; that
+source is absent from the current checkout. Historical metadata names
+\texttt{tools/solve\_sparse\_ce2\_all\_triples.py} as the producer, but that
+path is also absent and no exact-path Git history was found for it. The current
+\texttt{scripts/ce2\_global\_cocycle.py} implements substantial
+Affine--Heisenberg/metaplectic structure, but it also consumes the committed
+local table as authoritative data for known rows. Consequently the safe theorem
+boundary is
+\[
+\boxed{
+\text{authentic }5832\text{ local rows on }27\times3
+\quad\text{certified;}
+\quad
+\text{independent all-row formula replay still required.}
+}
+\]
+A theorem-tier global compression must predict/generate all $5832$ U/V rows
+without reading their answers and then compare them exactly. The K3 curvature
+object remains a separate provenance obligation.
