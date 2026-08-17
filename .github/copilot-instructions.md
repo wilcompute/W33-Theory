@@ -34,7 +34,6 @@ This file contains project context and decisions. AI assistants should read this
 **Goals:**
 - 2026-08-08 current goal: finish and validate the Passes 4324-4334 chamber Hecke and audited-corrections packet while preserving exact theorem, retraction, and open-boundary language.
 
-
 ## Decision Freshness
 **0 stale decisions** · 511 need review · 1138 superseded ready to archive · Oldest unreviewed: 2026-04-20
 

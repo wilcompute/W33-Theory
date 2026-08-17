@@ -1,0 +1,46 @@
+{
+  "boundary": "Pass 5888 SAMPLES stabilisers rather than computing them; 1 hit in 3000 is consistent with a trivial stabiliser and no order is claimed. Pass 5895's cross-run scanned only 1 of the other lane's certificates, so its 0 findings mean almost nothing",
+  "pass_5888_stabiliser": {
+    "alpha": 18,
+    "fixing_setwise": 1,
+    "proved_optimal": true,
+    "q": 5,
+    "reading": "ONE hit in 3000 is consistent with a trivial stabiliser -- plausibly the identity from a trivial random word. An extrapolated order is meaningless at this count and is NOT reported",
+    "sampled": 3000,
+    "self_correction": "my printed prose said '0 of 3000' where the data said 1, and quoted an extrapolated order of ~1560 from that single hit. Fourth prose-versus-output slip this session; both corrected before commit",
+    "sp45_order": 4680000
+  },
+  "pass_5889_not_an_orbit": {
+    "necessary_condition": "a set that is one orbit has setwise stabiliser of order >= 18",
+    "observed": "at most 1 of 3000 sampled elements stabilises the 18-set",
+    "verdict": "alpha(W(3,5)) = 18 is NOT an orbit of any large subgroup",
+    "why_it_matters": "the small-stabiliser property is not specific to q=9. It holds where alpha is PROVED OPTIMAL, which is stronger than the q=9 case where 51 is only an incumbent -- so the four failed generator classes at q=9 were not an artefact of chasing a non-optimal target"
+  },
+  "pass_5890_guard": {
+    "deliberate": "a certificate with three witnesses against a population of 240 is flagged even when its prose is scrupulous; the flag is about COVERAGE, not wording",
+    "motivation": "neither check_transitivity nor an integrity audit catches both lanes' failures; this tests the join -- claims whose EVIDENCE does not reach their SCOPE",
+    "script": "scripts/check_scope_vs_evidence.py",
+    "selftest": "5/5",
+    "tests": [
+      "quantifier gap: universal language with few recorded witnesses",
+      "promoted subset: witness count an order of magnitude below a recorded total"
+    ]
+  },
+  "pass_5895_crossrun": {
+    "mine": {
+      "flagged": 3,
+      "scanned": 39
+    },
+    "my_flagged": [
+      "PASS5720_5727_GF9_BREAKS_THE_PERIOD",
+      "PASS5808_5815_THE_EQUIVALENCE_IS_HALF_TRUE",
+      "PASS5864_5871_ORBIT_FAILED_LITERATURE_EXISTS"
+    ],
+    "note": "a guard whose first real catch is its author's own work is behaving correctly",
+    "reading": "the guard fires on MY certificates and not theirs, which is the honest outcome: my failures were universal language with few witnesses, and only one of their certificates was scannable. This is not evidence their work is cleaner",
+    "theirs": {
+      "flagged": 0,
+      "scanned": 1
+    }
+  }
+}
