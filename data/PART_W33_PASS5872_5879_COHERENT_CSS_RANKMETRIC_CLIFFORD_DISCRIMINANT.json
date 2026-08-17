@@ -3,7 +3,12 @@
   "pass_5872_joint_coherent_closure": {
     "boundary": "This is a three-fibre coherent configuration, not a homogeneous association scheme.",
     "center_dimension": 4,
-    "central_isotypic_rank_and_commutant_dimension": [[1, 1], [3, 9], [4, 1], [8, 4]],
+    "central_isotypic_rank_and_commutant_dimension": [
+      [1, 1],
+      [3, 9],
+      [4, 1],
+      [8, 4]
+    ],
     "complex_commutant_wedderburn": "M3(C) + M2(C) + C + C",
     "initial_pair_colors": 5,
     "orbital_algebra_dimension": 15,
@@ -31,9 +36,9 @@
     "degree": "r(r-1)^2(r+1)=|GL2(r)|",
     "examples": {
       "2": {"srg": [16, 6, 2, 2]},
-      "3": {"srg": [81, 48, 30, 27]},
+      "3": {"srg": [81, 48, 27, 30]},
       "5": {"srg": [625, 480, 365, 380]},
-      "7": {"srg": [2401, 2016, 1694, 1722]}
+      "7": {"srg": [2401, 2016, 1687, 1722]}
     },
     "full_aut_prior_art": "F_r^4 : ((((GL2(r) o GL2(r)) : Aut(F_r)) : C2)); o denotes central product and C2 is factor transpose.",
     "identification": "complement of the bilinear forms graph H_r(2,2)",
