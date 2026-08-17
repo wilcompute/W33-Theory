@@ -1,0 +1,62 @@
+{
+  "complex": {
+    "affine_line_triangles": 12,
+    "cycle_rank_integral": 28,
+    "edges": 36,
+    "translation_plaquettes": 54,
+    "vertices": 9
+  },
+  "external_context": {
+    "discrete_gauge_theory": "Graph/cell-complex Yang-Mills formalisms and homology-sensitive lattice gauge theories exist in the literature; this theorem is the exact integral homology of the repository's specific AG(2,3) face complex."
+  },
+  "pass5720_integral_homology": {
+    "H0_Z": "Z",
+    "H1_full_Z": "(Z/3)^2",
+    "H1_translation_Z": "Z^4",
+    "H2_full_Z": "Z^38",
+    "H2_translation_Z": "Z^30",
+    "full_snf_nonzero": [
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 3
+    ],
+    "translation_only_snf_nonzero": [
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+    ]
+  },
+  "pass5721_triangle_attachment": {
+    "index_in_H1_translation": 9,
+    "induced_map_snf_nonzero": [1, 1, 3, 3],
+    "induced_map_to_H1_translation_rank": 4,
+    "mechanism": "the 12 line triangles kill all four free real modes, but two attachment directions are 3-divisible in the integral quotient, leaving two order-3 classes"
+  },
+  "pass5722_field_and_bockstein": {
+    "H1_Z_cohomology": "0",
+    "H2_Z_cohomology": "Z^38 + (Z/3)^2",
+    "field_ranks": {
+      "11": {"dim_H1_full": 0, "dim_H1_translation": 4, "dim_H2_full": 38, "rank_full_faces": 28, "rank_translation_faces": 24},
+      "13": {"dim_H1_full": 0, "dim_H1_translation": 4, "dim_H2_full": 38, "rank_full_faces": 28, "rank_translation_faces": 24},
+      "2": {"dim_H1_full": 0, "dim_H1_translation": 4, "dim_H2_full": 38, "rank_full_faces": 28, "rank_translation_faces": 24},
+      "3": {"dim_H1_full": 2, "dim_H1_translation": 4, "dim_H2_full": 40, "rank_full_faces": 26, "rank_translation_faces": 24},
+      "5": {"dim_H1_full": 0, "dim_H1_translation": 4, "dim_H2_full": 38, "rank_full_faces": 28, "rank_translation_faces": 24},
+      "7": {"dim_H1_full": 0, "dim_H1_translation": 4, "dim_H2_full": 38, "rank_full_faces": 28, "rank_translation_faces": 24}
+    },
+    "interpretation": "the F3-only H1/H^1 pair is a torsion/Bockstein effect; it has no R-valued harmonic lift"
+  },
+  "pass5723_affine_symmetry": {
+    "AGL23_order": 432,
+    "action_formula": "Q(M,b)=P^{-1}(det(M) M^T)P over F3, P=[[0,1],[1,1]], independent of translation b",
+    "explicit_basis_nonpivot_chords": [[6, 8], [7, 8]],
+    "homology_action_image_order": 48,
+    "homology_action_kernel_order": 9,
+    "image": "GL(2,3)",
+    "kernel": "translation subgroup F3^2"
+  },
+  "pass5724_firewall": {
+    "no_chain_map_claimed": true,
+    "pass5121_comparison": "distinct carrier: Pass5121 uses an 81x108 incidence matrix and a one-dimensional Z/3 saturation quotient; this complex uses the 9-vertex/36-edge affine face chain complex and has (Z/3)^2",
+    "physics_boundary": "The torsion theorem does not determine the Yang-Mills coupling g, a continuum limit, confinement, matter content, or a physical discrete gauge symmetry. The old vertical Z3 connection remains adjoint-trivial as in Pass5691."
+  },
+  "passes": [5720, 5721, 5722, 5723, 5724],
+  "status": "THEOREM_AFFINE_FACE_COMPLEX_HAS_Z3_SQUARED_H1_AND_GL23_TORSION_ACTION"
+}
