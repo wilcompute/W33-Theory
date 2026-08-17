@@ -1,0 +1,47 @@
+{
+  "boundary": "Pass 5920 is a q=3 computation, complete and exact. Novelty was greped BEFORE writing this time: 504 appears in 8 files and 112 in 22, but the hits are TOROIDAL heptads (Csaszar, 7 vertices), a different object. I did not find the W(3,3) heptad design parameters, and by this session's record that absence is weak evidence",
+  "pass_5920_the_heptad_design": {
+    "collinear_pairs": {
+      "count": 240,
+      "covered": 0,
+      "why": "two collinear points can never both lie in a partial ovoid"
+    },
+    "exact": "every one of the 540 non-collinear pairs lies in EXACTLY 112 heptads; the pair-multiplicity spectrum is a single value",
+    "identity_check": "r(k-1) = 504 * 6 = 3024 = lambda * 27 = 112 * 27, where 27 is the non-collinear degree of a point",
+    "parameters": {
+      "b": 2880,
+      "k": 7,
+      "lambda": 112,
+      "r": 504,
+      "v": 40
+    },
+    "statement": "the 2880 maximum partial ovoids of W(3,3) form a 2-DESIGN on the non-collinear pairs"
+  },
+  "pass_5921_the_27": {
+    "fact": "each point of W(3,3) has exactly 40 - 1 - 12 = 27 non-collinear points",
+    "note": "27 is also the E6 vertex count the other lane builds its Z3-bundle over AG(2,3) on. Whether that is the same 27 is NOT established here and is exactly the kind of numerical bridge this session has killed repeatedly",
+    "so": "the non-collinearity graph is 27-regular -- it is the SRG(40,27,18,18) this corpus already knows -- and the heptad design's replication identity runs through that 27"
+  },
+  "pass_5922_intersection_spectrum": {
+    "consequence": "Sp(4,3) has AT LEAST 8 orbits on ordered heptad pairs",
+    "distribution": {
+      "0": 891,
+      "1": 1023,
+      "2": 576,
+      "3": 254,
+      "4": 98,
+      "5": 30,
+      "6": 7,
+      "7": 1
+    },
+    "identical_from_every_heptad": true,
+    "sums_to": 2880,
+    "the_striking_entry": "EXACTLY 7 heptads meet a given heptad in 6 points. So the swap-one-point graph on the 2880 heptads is 7-REGULAR, and 7 is the heptad size. That is a 2880-vertex 7-regular graph carrying a transitive Sp(4,3) action"
+  },
+  "pass_5923_packing": {
+    "covering": "28 of 40 points",
+    "disjoint_from_a_fixed_heptad": 891,
+    "greedy_max_mutually_disjoint": 4,
+    "no_spread": "40/7 is not an integer, so heptads cannot partition the point set"
+  }
+}
