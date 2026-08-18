@@ -1,0 +1,78 @@
+% Passes 7163--7170: E8 hexagonal lift, D4/center-quad dictionary, q=9 rank boundary.
+\subsection{The $E_8$ root graph as a hexagonal lift of $W(3,3)$}
+\label{sec:pass7163-7170-e8-hexagonal-lift}
+
+We retain the exact six-to-one Eisenstein fibration of Pass~1021,
+\[
+  \Phi:\Phi(E_8)\longrightarrow W(3,3),\qquad 240=40\cdot6,
+\]
+where the fibers are the $\langle c^5\rangle\cong C_6$ orbits of a Coxeter element $c\in W(E_8)$.  The present computation determines the positive-inner-product root graph relative to those fibers.
+
+Each six-root fiber induces a single $C_6$.  For two distinct fibers there are exactly two possibilities.  If their base points are collinear in $W(3,3)$ there is no root-graph edge between the fibers.  If their base points are noncollinear, there are exactly twelve such edges, every root has degree two into the opposite fiber, and the resulting bipartite graph is one $C_{12}$.  Thus the $780$ unordered fiber pairs split as
+\[
+  \boxed{240\text{ zero-coupled pairs}+540\text{ }C_{12}\text{ pairs}},
+\]
+and the full $E_8$ root degree and edge count decompose as
+\[
+  \boxed{56=2+27\cdot2},\qquad
+  \boxed{6720=40\cdot6+540\cdot12}.
+\]
+In Coxeter phase coordinates $\mathbb Z_6$, every noncollinear base pair has cross-fiber difference set exactly $\{s,s+1\}$.  Hence, with
+\[
+  \phi_{xy}=2s+1\pmod{12},
+\]
+reversal gives $\phi_{yx}=-\phi_{xy}$ and a change of fiber origins changes $\phi$ by a coboundary.  On the $3240$ triangles of the complement of $W(3,3)$ the exact holonomy distribution is
+\[
+  \boxed{1440\times1+1440\times(-1)+180\times3+180\times(-3)\pmod{12}}.
+\]
+This is a finite $\mu_{12}$-valued cycle phase; no physical gauge-field interpretation is asserted.
+
+\paragraph{Fiber-constant binary code.}
+Pass~85 already gives the adjacency-row code
+\[
+ C_2(W)=[40,16,8]_2
+\]
+with $45$ minimum words.  Repeating each base coordinate on its six Eisenstein roots gives an injective fiber-constant code
+\[
+  \boxed{C_{E_8,\mathrm{fib}}=[240,16,48]_2},
+\]
+whose weight enumerator is obtained from that of $C_2(W)$ by $z^w\mapsto z^{6w}$.
+
+\paragraph{The $D_4$/center-quad dictionary.}
+Every weight-eight word induces $K_{4,4}$ on its eight base points.  Its two four-point parts give $90$ independent four-sets in total.  Independently reconstructing the center-quads of $W(3,3)$ gives the same $90$ four-sets objectwise.  Lifting a center-quad through $\Phi$ gives $24$ roots.  Exact rational row reduction verifies for all $90$ lifts that their span has rank four, contains no other $E_8$ roots, and that every root has positive-inner-product degree eight within the set.  Therefore
+\[
+  \boxed{90\text{ center-quads}=90\text{ }D_4\text{ root subsystems of }E_8}.
+\]
+The old fixed-point-free center-quad pairing becomes orthogonal complementation of these $D_4$ subsystems.  Consequently
+\[
+  \boxed{45\text{ center-quad pairs}=45\text{ selected }D_4\perp D_4\text{ subsystems}},
+\]
+and their eight-point base supports are exactly the $45$ minimum words/tritangent supports of $C_2(W)$.
+
+The previously certified center-quad quotient
+\[
+  90\longrightarrow45\longrightarrow27
+\]
+therefore admits the root-system translation
+\[
+  \boxed{90\,D_4\longrightarrow45\,(D_4\perp D_4)\longrightarrow27\text{ five-pack partitions of the }240\ E_8\text{ roots}}.
+\]
+Each of the $27$ five-packs contains five disjoint $48$-root supports and partitions all $240$ roots; each of the $45$ selected $D_4\perp D_4$ supports lies on three such five-packs.  The identification of this $45$-point/$27$-line incidence geometry with dual $GQ(4,2)$ and the cubic-surface $27/45$ layer is prior repo work; the $E_8$ $D_4$ interpretation is the new bridge here.
+
+\paragraph{Sixfold symmetry envelope.}
+The internal Eisenstein fiber $C_6$ and the previously certified external controller $S_3=C_3{:}C_2$ fit into
+\[
+  D_{12}=\langle r,s\mid r^6=s^2=1,\ srs=r^{-1}\rangle,
+\]
+with $C_6=\langle r\rangle$ and $D_{12}/\langle r^3\rangle\cong S_3$.  This is the same abstract group that controls the q=9 witness hexad, but no objectwise identification of the two six-state systems is claimed.
+
+\paragraph{The q=9 rank-one boundary.}
+For the eight normalized q=9 Gram-anchor cases, the $512$ residual states split as $64$ rank-one and $448$ invertible $2\times2$ matrices.  The exact independence numbers of the eight rank-one induced conflict graphs are
+\[
+  \boxed{21,25,22,25,23,24,21,26}.
+\]
+The known $51$-point witness lies in anchor type $(1,3,5)$ and its $47$ residual rows split as
+\[
+  \boxed{5\text{ rank-one}+42\text{ invertible}}.
+\]
+This is an exact boundary refinement only.  It does not close the full target-$48$ problem in the $512$-state graphs, so no claim $\alpha(W(3,9))=51$ is made here.
