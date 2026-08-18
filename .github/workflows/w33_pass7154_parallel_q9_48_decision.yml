@@ -1,0 +1,86 @@
+name: W33 Pass7154 parallel q9 48-clique decision
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass7154_parallel_48_case.py'
+      - '.github/workflows/w33_pass7154_parallel_q9_48_decision.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  solve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        case: [0,1,2,3,4,5,6,7]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact SAT dependencies
+        run: python -m pip install --upgrade pip numpy networkx 'python-sat[pblib,aiger]'
+      - name: Solve target 48
+        env:
+          CASE_INDEX: ${{ matrix.case }}
+          CASE_OUTPUT: evidence/pass7154/case_${{ matrix.case }}.json
+        run: |
+          export PYTHONPATH="$PWD/analysis:${PYTHONPATH:-}"
+          python analysis/w33_pass7154_parallel_48_case.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass7154-case-${{ matrix.case }}
+          path: evidence/pass7154/case_${{ matrix.case }}.json
+
+  aggregate:
+    needs: solve
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: pass7154-case-*
+          path: evidence/pass7154
+          merge-multiple: true
+      - name: Aggregate exact decision
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          rows=[]
+          for i in range(8):
+              p=Path(f'evidence/pass7154/case_{i}.json')
+              assert p.exists(), p
+              r=json.loads(p.read_text()); assert r['case_index']==i and r['target']==48
+              rows.append(r)
+          sat=[r for r in rows if r['sat']]
+          conclusion='52_POINT_PARTIAL_OVOID_FOUND' if sat else 'ALL_EIGHT_TARGET48_CASES_UNSAT'
+          out={
+            'schema':'w33.pass7154.parallel48.aggregate.v1','status':'PASS','target':48,
+            'conclusion':conclusion,'cases':rows,
+            'alpha_consequence':('alpha(W(3,9)) >= 52 via the reconstructed SAT model' if sat else 'Together with the exact Pass7139 equivalence and the verified 51-set, alpha(W(3,9)) = 51.'),
+            'boundary':'Computational exact SAT replay using CaDiCaL195 and frozen CNF hashes; SAT models are independently rechecked against the GF(9) pairing law.'
+          }
+          Path('data/PART_W33_PASS7154_Q9_48_CLIQUE_DECISION.json').write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+          print(conclusion)
+          PY
+      - name: Freeze aggregate certificate
+        run: |
+          cp data/PART_W33_PASS7154_Q9_48_CLIQUE_DECISION.json /tmp/pass7154.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin master
+          git rebase origin/master
+          cp /tmp/pass7154.json data/PART_W33_PASS7154_Q9_48_CLIQUE_DECISION.json
+          git add data/PART_W33_PASS7154_Q9_48_CLIQUE_DECISION.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Pass7154: freeze parallel exact q9 48-clique decision [skip ci]'
+          git push origin HEAD:master
