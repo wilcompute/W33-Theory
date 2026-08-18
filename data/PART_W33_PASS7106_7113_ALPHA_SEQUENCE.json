@@ -1,0 +1,98 @@
+{
+  "boundary": "alpha(W(3,3)) = 7 and alpha(W(3,5)) = 18 are EXACT and verified multiple ways; both, and alpha(W(3,7)) = 33, are PUBLISHED (Cimrakova-Fack 2005 Table 1) and are therefore confirmations, not discoveries. The closed form (q+4)(q-1)/2 is an interpolation through three points with zero degrees of freedom and is NOT evidence; its only value is the falsifiable prediction 52 at q=9. No claim is made about alpha(W(3,9))",
+  "pass_7106_7108": {
+    "alpha_w33_verified_three_ways": [
+      "ILP witness of size 7, pairwise non-collinearity checked directly",
+      "ILP forced to size 8 returns INFEASIBLE",
+      "exhaustive branch and bound over all 40 points, in the test suite"
+    ],
+    "table": [
+      {
+        "alpha": 5,
+        "hoffman_q2_plus_1": 5,
+        "points": 15,
+        "provenance": "ovoid exists (q even); alpha = q^2+1",
+        "q": 2,
+        "tallini_q2_minus_q_plus_1": null
+      },
+      {
+        "alpha": 7,
+        "hoffman_q2_plus_1": 10,
+        "points": 40,
+        "provenance": "computed here, exact, three ways",
+        "q": 3,
+        "tallini_q2_minus_q_plus_1": 7
+      },
+      {
+        "alpha": 18,
+        "hoffman_q2_plus_1": 26,
+        "points": 156,
+        "provenance": "computed here; MATCHES Cimrakova-Fack 2005 Table 1",
+        "q": 5,
+        "tallini_q2_minus_q_plus_1": 21
+      },
+      {
+        "alpha": 33,
+        "hoffman_q2_plus_1": 50,
+        "points": 400,
+        "provenance": "Cimrakova-Fack 2005 Table 1, unique up to equivalence",
+        "q": 7,
+        "tallini_q2_minus_q_plus_1": 43
+      }
+    ],
+    "tallini_attained_at": [
+      3
+    ],
+    "tallini_missed_at": [
+      5,
+      7
+    ],
+    "why_hoffman_missed_for_odd_q": "W(3,q) has no ovoid for q odd (Thas)"
+  },
+  "pass_7107_7110": {
+    "citation": "M. Cimrakova and V. Fack, Searching for maximal partial ovoids and spreads in generalized quadrangles, Bull. Belg. Math. Soc. Simon Stevin 12 (2005) 697-705, Table 1",
+    "inequivalent_optima": {
+      "W(5)": 2,
+      "W(7)": 1
+    },
+    "published_values": {
+      "W(5)": 18,
+      "W(7)": 33
+    },
+    "status_of_my_q7_job": "REDISCOVERY, repurposed as a positive control",
+    "why_it_was_caught": "the search for the result preceded the write-up"
+  },
+  "pass_7109": {
+    "degrees_of_freedom": 0,
+    "evidential_status": "NONE -- three coefficients fitted to three points",
+    "interpolation": "(q+4)(q-1)/2",
+    "repo_local_search_plateau_at_q9": 51,
+    "reproduces": {
+      "3": 7,
+      "5": 18,
+      "7": 33
+    },
+    "sole_value": "the falsifiable prediction alpha(W(3,9)) = 52"
+  },
+  "pass_7111_7112": {
+    "corpus_values_found": {
+      "10": "Hoffman bound as value",
+      "4": "greedy result as maximum",
+      "7": "correct"
+    },
+    "the_green_test": {
+      "file": "tests/test_extremal_combinatorics_computation.py",
+      "new_failure_mode": "A TEST'S NAME IS AN UNTESTED ASSERTION -- the name and docstring are the only parts of a test that can be false while the suite is green, and they are the parts that get cited",
+      "now": "test_independence_number_equals_7, exhaustive branch and bound asserting best == 7 and best < 10",
+      "was": "test_independence_number_equals_10, body asserting len(ovoid) >= 7",
+      "why_it_passed": "the false claim lived in the name and docstring, which Python does not execute"
+    },
+    "why_10_is_the_serious_one": "10 = q^2+1 is the ovoid size, so asserting it asserts an ovoid exists, which Thas ruled out for q odd"
+  },
+  "pass_7113": {
+    "not_done": [
+      "alpha(W(3,9)) -- running, prediction 52, plateau 51",
+      "any proof that (q+4)(q-1)/2 is more than a fit"
+    ]
+  }
+}

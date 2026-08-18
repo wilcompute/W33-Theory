@@ -51,8 +51,8 @@ For W(3,3), we have:
 $$\alpha(G) = 4 \leq \theta(G) \leq 10 = \chi(G)$$
 
 where:
-- $\alpha(W(3,3)) = 4$ (the maximum independent set has size 4)
-- $\chi(W(3,3)) \geq V/\alpha = 40/4 = 10$ (chromatic lower bound)
+- $\alpha(W(3,3)) = 7$ (exact; a greedy pass reaching 4 is not the maximum)
+- $\chi(W(3,3)) \geq V/\alpha = 40/7 = 6$ (chromatic lower bound)
 
 The theta function is thus **sandwiched** between the independence number and
 the chromatic bound.

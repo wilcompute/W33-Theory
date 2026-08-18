@@ -10,7 +10,7 @@
 This file contains project context and decisions. AI assistants should read this file for context. MCP tools are an optional enhancement for richer interaction when connected.
 
 ## Project Context
-- **Total Decisions:** 5199
+- **Total Decisions:** 5200
 - **Known Topics:** needs-review, auto-draft, why, w33, testing, toe, docs, architecture, holonet, photonic, audit, qec, github, selector, gap
 
 ## Current State
@@ -26,15 +26,12 @@ This file contains project context and decisions. AI assistants should read this
 - `127f502 Pass 4144: reconcile matrix horizon RG scar curvature frontier`
 
 **Working Tree:**
-- M .continuity/SESSION_NOTES.md
 - M .continuity/decisions.json
 - M .continuity/decisions.jsonl
-- M .mcp.json
 
 ## Session Context
 **Goals:**
 - 2026-08-08 current goal: finish and validate the Passes 4324-4334 chamber Hecke and audited-corrections packet while preserving exact theorem, retraction, and open-boundary language.
-
 
 ## Decision Freshness
 **0 stale decisions** · 512 need review · 1138 superseded ready to archive · Oldest unreviewed: 2026-04-20
@@ -136,6 +133,29 @@ treat any claim whose scope exceeds its proof as an over-read; a claim that name
 no object is not a claim; **and a claim you have not searched the corpus for is
 not new.**
 
+### Failure mode seven: a test's name is an untested assertion
+
+Found at Pass 7112. `tests/test_extremal_combinatorics_computation.py` held:
+
+```python
+def test_independence_number_equals_10(self, basic_counts):
+    """alpha(W(3,3)) = 10 exactly. An ovoid ... provides alpha >= 10."""
+    ...
+    assert len(ovoid) >= 7          # the only executable claim, and it is TRUE
+```
+
+alpha(W(3,3)) is **7**. It passed for as long as it existed, and it is where the
+corpus's false "10" came from -- a test name is what a grep returns and it carries
+the authority of a green suite.
+
+**Every guard in this repo passes this file.** The arithmetic is sound, the scope
+matches the evidence, nothing is rediscovered, the assertion is correct. Only
+reading the name against the assertion catches it.
+
+*Fix:* the name and the docstring are the only parts of a test that can be false
+while the suite is green. Make the name state what the body asserts, or make the
+body assert what the name states.
+
 ## The shared protocol (BOTH agents — this is the part that only works if we both do it)
 
 Two agents work this repo in parallel and neither reads the other's filenames.
@@ -210,25 +230,25 @@ after commit:
 ---
 
 ## Recent Decisions
-1. **decision-17869836** (8/17/2026) [audit, redis]
+1. **decision-17870682** (8/18/2026) [audit, redis]
+   - Q: Did the Perplexity Aug 18 batch's Monster moonshine claim survive intake audit, and why did the harness miss it?
+   - A: NO -- the encoding is forced arithmetic. And the harness missed it because nothing checked derivability.  BT1645 claims W(3,3)'s adjacency multiplicities 1, 24, 15 "encode Monster moonshine": 24 as the Leech lattice rank, 15 as the number of supersingular primes. REFUTED. Those multiplicities are FORCED by the strongly-regular parameters. For SRG(v,k,lambda,mu) they are [(v-1) -+ (2k+(v-1)(lambda-mu))/sqrt((lambda-mu)^2+4(k-mu))]/2, and at (40,12,2,4) that is exactly 24 and 15. Any SRG with those parameters has them. A change-the-object sweep found 32 OTHER feasible SRG parameter sets with ...
+
+2. **decision-17869836** (8/17/2026) [audit, redis]
    - Q: Do my surviving Reye claims pass the change-the-object test, and what durable guidance came out of this session?
    - A: PARTIALLY -- not generic, but not unique to the Reye either. And four pieces of guidance now live in CLAUDE.md.  THE PERTURBATION TEST, run on my own claims after it killed the Sym^e tower. Swapping the configuration: Reye 12_4 16_3 and Pappus 9_3 BOTH show the kernel-complements-partition phenomenon; Fano 7_3, Desargues 10_3 and Mobius-Kantor 8_3 do not. TWO OF FIVE.  So it is NOT generic -- three of five fail, unlike the Sym^e attainment which every nondegenerate form shared -- and NOT unique to the Reye. I wrote "only the Reye shows the phenomenon" before reading the table and the table ...
 
-2. **decision-17869830** (8/17/2026) [audit, redis]
+3. **decision-17869830** (8/17/2026) [audit, redis]
    - Q: Is the attainment of the Hadamard rank bound special to the symplectic form, or generic?
    - A: GENERIC -- which refutes the last claim this thread had and means nothing in the Sym^e/digit-law work is about W(3,q).  THE TEST, run eight passes late: change the form and see whether the result changes. On the 156 points of PG(3,5), EVERY nondegenerate bilinear form attains C(e+3,3) at e=1..4 -- alternating (the symplectic form), identity, antidiagonal symmetric, diagonal 1234, and three random nondegenerate forms. 7 of 7. Degenerate forms attain the corresponding bound too: a rank-2 form gives [2,3,4,5] = C(e+1,e), a rank-1 form gives [1,1,1,1].  SO THE LAW IS ABOUT THE RANK OF THE FORM,...
 
-3. **decision-17869821** (8/17/2026)
+4. **decision-17869821** (8/17/2026)
    - Q: Can the base-p digit law be proved, and is it classical?
    - A: YES to both -- the bound is provable in four lines from two standard facts, so it is classical. Only the attainment is mine.  THE PROOF. Write e in base p as e = sum d_i p^i. Then entrywise sf^e = product of (Frob^i(sf))^(d_i), since x -> x^(p^i) is the i-th Frobenius. Two classical ingredients finish it: (a) Frobenius is a field automorphism, so Frob^i(sf) is the entrywise image of sf under a ring automorphism and has the SAME rank 4; (b) Hadamard rank is submultiplicative, rank(A o B) <= rank(A) rank(B), together with the Hadamard power bound rank(A^(o d)) <= C(d + rank A - 1, d). Applyin...
 
-4. **decision-17869817** (8/17/2026)
+5. **decision-17869817** (8/17/2026)
    - Q: Where does S4 wr S2 come from in the tomotope, and was the period-(q-1) retraction correct?
    - A: S4 wr S2 = Aut(K_4,4), inherited from the construction. And NO -- the retraction was wrong; the original claim was sound.  THE ANSWER, AND THE CORPUS ALREADY HELD IT. The Q4 antipodal quotient IS K_4,4 -- verified here: 8 vertices, 16 edge-classes, 4-regular, bipartite, isomorphic to K_4,4 -- and |Aut(K_4,4)| = (4!)^2 x 2 = 1152 = |S4 wr S2|. So S4 wr S2 is NOT intrinsic to the tomotope's 16-face graph; it is INHERITED FROM THE CONSTRUCTION, exactly as Pass 5726 guessed before finding it. That is why four internal searches all failed -- Delsarte coset graph (Pass 5671), two-weight structure...
-
-5. **decision-17869812** (8/17/2026)
-   - Q: Does the symplectic power tower really have period q-1, and what does GF(9) reveal?
-   - A: NO -- the wrap is at the CHARACTERISTIC, not q, and the law is a base-p digit product.  CORRECTION TO PASS 5713. It claimed rank_q(sf^e) has period q-1, verified at q = 3, 5, 7, 11. At q=9 that would put the wrap at e=9. It is at e=3. GF(9) has characteristic 3, so Frobenius is x -> x^3 and sf^3 = Frobenius(sf) is again a form of rank 4. For PRIME q the characteristic equals q and the two statements coincide -- which is exactly why every q I had tested was blind to the difference. All four verifications were at primes.  THE COMPLETE LAW IS MULTIPLICATIVE OVER BASE-p DIGITS:      rank(sf^e) ...
 
 *1485 unreviewed drafts from auto-capture pending review — `continuity log` the real rationale or update_decision to expand them.*
 

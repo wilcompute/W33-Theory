@@ -274,11 +274,18 @@ class TestT1711IndependentSetStructure:
             if v not in indep:
                 assert len(nbrs[v] & indep) > 0
 
-    def test_independence_number_equals_10(self, basic_counts):
-        """alpha(W(3,3)) = 10 exactly.
-        The Hoffman bound gives alpha <= 10.
-        An ovoid (one point per max isotropic line) provides alpha >= 10.
-        We verify by finding a valid independent set of size 10."""
+    def test_independence_number_equals_7(self, basic_counts):
+        """alpha(W(3,3)) = 7 exactly -- NOT 10.
+
+        The Hoffman ratio bound gives alpha <= 10, and 10 = q^2+1 would require an
+        OVOID.  W(3,q) has no ovoid for q odd (Thas), so the bound is not attained.
+        The exact value is 7, confirmed here by exhaustive branch and bound, and
+        consistent with the published exact values alpha(W(3,5)) = 18 and
+        alpha(W(3,7)) = 33 (Cimrakova-Fack 2005, Table 1), both of which likewise
+        fall strictly below Tallini's bound q^2 - q + 1.
+
+        This test previously asserted 10 in its NAME and docstring while its body
+        only checked `>= 7`, so it passed while certifying a false theorem."""
         A = basic_counts["A"]
         n = 40
         # Build max cliques (totally isotropic 2-spaces = K4 cliques)
@@ -311,13 +318,30 @@ class TestT1711IndependentSetStructure:
                         if v in c2:
                             covered_cliques.add(id_tuple(c2))
                     break
-        # Greedy finds at least 7; Hoffman bound proves alpha <= 10
-        assert len(ovoid) >= 7
-        # Verify independence
+        # Whatever greedy returns must at least BE independent.
         for u in ovoid:
             for v in ovoid:
                 if u != v:
                     assert A[u, v] == 0
+
+        # The real assertion: exact maximum independent set over all 40 points.
+        best = 0
+        order = sorted(range(n), key=lambda v: -len(nbrs[v]))
+
+        def expand(cur, cand):
+            nonlocal best
+            if len(cur) + len(cand) <= best:
+                return
+            if not cand:
+                best = max(best, len(cur))
+                return
+            v = cand[0]
+            expand(cur + [v], [u for u in cand[1:] if u not in nbrs[v]])
+            expand(cur, cand[1:])
+
+        expand([], order)
+        assert best == 7, f"alpha(W(3,3)) must be 7, got {best}"
+        assert best < 10, "10 would mean W(3,3) has an ovoid; it has none (q odd)"
 
 
 def id_tuple(t):

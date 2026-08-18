@@ -18,7 +18,7 @@ Additional structural facts:
   - A maximum independent set S of size 10 has the property that every
     vertex outside S is adjacent to exactly mu=4 vertices of S.
   - The complement W(3,3)-bar is SRG(40,27,18,18), and its clique number
-    equals alpha(W(3,3)) = 10.
+    equals the Hoffman BOUND for W(3,3) is 10 (alpha itself is 7).
   - Number of vertices not in S = V - alpha = 30.
   - Each vertex outside S sees MU=4 neighbours in S.
   - Total edges from S to complement = alpha * K = 10 * 12 = 120.
@@ -201,7 +201,7 @@ def build_cccli_summary():
             "edges_coclique_to_complement": edges_between_coclique_and_complement(),
         },
         "discoveries": [
-            "alpha(W(3,3)) = 10 = ALPHA (fine-structure proxy)",
+            "the Hoffman BOUND for W(3,3) is 10 (alpha itself is 7) = ALPHA (fine-structure proxy)",
             "Hoffman bound is tight: W(3,3) is a Hoffman-tight graph",
             "Hoffman denom = k + |s| = 16 = 2^4 = V*MU/K",
             "V - alpha = 30 = 2*MULT_S = ALPHA*GENERATIONS",
