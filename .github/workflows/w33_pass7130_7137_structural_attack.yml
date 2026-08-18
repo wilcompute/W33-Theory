@@ -71,8 +71,11 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          cp data/PART_W33_PASS7130_7137_STRUCTURAL_ATTACK.json /tmp/PART_W33_PASS7130_7137_STRUCTURAL_ATTACK.json
+          git checkout -- data/PART_W33_PASS7130_7137_STRUCTURAL_ATTACK.json
           git fetch origin master
           git rebase origin/master
+          cp /tmp/PART_W33_PASS7130_7137_STRUCTURAL_ATTACK.json data/PART_W33_PASS7130_7137_STRUCTURAL_ATTACK.json
           python tools/materialize_pass7130_7137_frontier.py
           test "$(grep -c 'id="pass-7130-7137-q9-structural-attack"' docs/index.html)" -eq 1
           test "$(grep -c 'id="pass-7130-7137-q9-structural-attack"' index.html)" -eq 1
