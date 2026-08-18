@@ -39,7 +39,8 @@
     {"kind":"id","token":"pass-5840-5847-matrix-doily-radon-addendum","source":"analysis/PASS5840_5847_index_insert.html"},
     {"kind":"id","token":"pass-5848-5855-normalizer-code-pauli-allq","source":"analysis/PASS5848_5855_index_insert.html"},
     {"kind":"id","token":"pass-5856-5863-doily-quadratic-orbit","source":"analysis/PASS5856_5863_index_insert.html"},
-    {"kind":"id","token":"pass-5872-5879-coherent-css-rankmetric-clifford-discriminant","source":"analysis/PASS5872_5879_index_insert.html"}
+    {"kind":"id","token":"pass-5872-5879-coherent-css-rankmetric-clifford-discriminant","source":"analysis/PASS5872_5879_index_insert.html"},
+    {"kind":"id","token":"pass-7130-7137-q9-structural-attack","source":"analysis/PASS7130_7137_index_insert.html"}
   ],
   "boundary": "This contract certifies nested publication reachability, uniqueness, shared-tail consolidation, and public materialization only. It does not certify mathematical, hardware, laboratory, empirical, or physical claims."
 }
