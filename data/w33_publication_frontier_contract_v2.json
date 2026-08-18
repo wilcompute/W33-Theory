@@ -42,7 +42,8 @@
     {"kind":"id","token":"pass-5872-5879-coherent-css-rankmetric-clifford-discriminant","source":"analysis/PASS5872_5879_index_insert.html"},
     {"kind":"id","token":"pass-7130-7137-q9-structural-attack","source":"analysis/PASS7130_7137_index_insert.html"},
     {"kind":"id","token":"pass-7138-7145-c2-normalform-matrix-quotient","source":"analysis/PASS7138_7145_index_insert.html"},
-    {"kind":"id","token":"pass-7146-7153-q9-pgl2-hexad-code","source":"analysis/PASS7146_7153_index_insert.html"}
+    {"kind":"id","token":"pass-7146-7153-q9-pgl2-hexad-code","source":"analysis/PASS7146_7153_index_insert.html"},
+    {"kind":"id","token":"pass-7154-7162-e8-audit","source":"analysis/PASS7154_7162_index_insert.html"}
   ],
   "boundary": "This contract certifies nested publication reachability, uniqueness, shared-tail consolidation, and public materialization only. It does not certify mathematical, hardware, laboratory, empirical, or physical claims."
 }
