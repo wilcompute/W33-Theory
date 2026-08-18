@@ -29,4 +29,14 @@ Because `Spec A(W33)=12^1 + 2^24 + (-4)^15`, this gives immediately
 
 `Spec M_0 = 56^1 + (-4)^24 + 8^15`.
 
+There is also an exact antipodal interpretation. Since `d^3=c^15=-1` on the E8 roots, Fourier phase `k` has antipodal eigenvalue `(-1)^k`. Therefore the even sectors `k=0,2,4` are exactly the antipodal-even 120-dimensional module and have spectrum
+
+`56^1 + 8^35 + (-4)^84`.
+
+The odd sectors `k=1,3,5` are the antipodal-odd 120-dimensional module and have spectrum
+
+`28^8 + (-2)^112`.
+
+These are precisely the unsigned positive-root-pair versus signed root-representation spectral types known in the E8 signed-graph literature; the new contribution here is that the W33 six-fiber lift derives both as the even and odd halves of one exact C6 Fourier resolution.
+
 The nonzero phase sectors therefore measure exactly the extra spectral information introduced by the cyclic E8 fiber phases beyond the W33 quotient. No physical Fourier-mode interpretation is asserted.
