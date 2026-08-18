@@ -5,5 +5,6 @@
   "track": "A",
   "topic": "q9 coherent algebra closure, 448+64 Gram boundary, all-q cyclic involution fibres, pullback along the E8-to-W33 sixfold fibration, comparison of sixfold fibre geometries, and three outside-box probes",
   "reserved": "2026-08-18",
-  "status": "RESERVED"
+  "status": "PUBLISHED_WITH_Q9_TARGET48_DECISION_OPEN",
+  "boundary": "Pass7163 exact rank-one boundary and Pass7164-7170 E8/code/D4/holonomy bridges are promoted. The full eight-case q9 target-48 decision remains open unless data/PART_W33_PASS7154_Q9_48_CLIQUE_DECISION.json is frozen separately; alpha(W(3,9))=51 is not claimed."
 }
