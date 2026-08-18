@@ -1,0 +1,57 @@
+name: W33 Pass7122-7129 q9 witness rigidity
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass7122_7129_q9_witness_global_lns.py'
+      - 'analysis/w33_pass7128_7129_q9_witness_symmetry_boundary.py'
+      - 'analysis/BT7122_BT7129_q9_witness_global_lns.md'
+      - 'analysis/PASS7122_7129_q9_witness_global_lns_insert.tex'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/PART_W33_Q9_PARTIAL_OVOID_51.json'
+      - 'data/PART_W33_PASS7122_7129_Q9_WITNESS_GLOBAL_LNS.json'
+      - 'data/PART_W33_PASS7128_7129_Q9_WITNESS_SYMMETRY_BOUNDARY.json'
+      - 'tests/test_w33_pass7122_7129_q9_witness_global_lns.py'
+      - 'tests/test_w33_pass7128_7129_q9_witness_symmetry_boundary.py'
+      - '.github/workflows/w33_pass7122_7129_q9_witness.yml'
+  workflow_dispatch:
+
+jobs:
+  replay-test-compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install replay dependencies
+        run: python -m pip install --upgrade pip pytest numpy scipy
+      - name: Replay exact certificates
+        run: |
+          python analysis/w33_pass7122_7129_q9_witness_global_lns.py
+          python analysis/w33_pass7128_7129_q9_witness_symmetry_boundary.py
+      - name: Focused regressions
+        run: |
+          python -m pytest -q tests/test_w33_pass7122_7129_q9_witness_global_lns.py
+          python -m pytest -q tests/test_w33_pass7128_7129_q9_witness_symmetry_boundary.py
+      - name: Audit shared manuscript reachability
+        run: |
+          grep -Fq '\input{analysis/PASS7122_7129_q9_witness_global_lns_insert}' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+          git diff --check
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+      - name: Compile all three canonical manuscripts
+        run: |
+          mkdir -p evidence/pass7122_7129
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass7122_7129/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass7122_7129/pdf_sha256.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass7122-7129-q9-witness-rigidity
+          path: evidence/pass7122_7129/**
