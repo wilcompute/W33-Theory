@@ -1,0 +1,103 @@
+{
+  "boundary": "Exact finite symplectic/matrix/coding statements unless explicitly marked conjectural. No q=9 optimality, physics, particle, coupling, continuum, or hardware claim.",
+  "pass_7138_eigenspace_transversal_normal_form": {
+    "distinct_selected_transversals": 25,
+    "fixed_point": 80,
+    "geometric_statement": "Each nonfixed orbit lies on a unique transversal joining the two fixed generator lines; on a nonisotropic transversal the q-1 internal points split into (q-1)/2 C2 pairs t<->-t.",
+    "left_endpoint_degree_multiset": {"2": 2, "3": 3, "4": 3},
+    "normal_form": "A=diag(I2,-I2), B((u,w),(u_prime,w_prime))=u.w_prime-w.u_prime",
+    "q9_basis_Eminus_dual": [[0,6,6,6],[0,6,8,8]],
+    "q9_basis_Eplus": [[5,4,1,0],[1,5,0,1]],
+    "q9_witness_orbits": "1 fixed + 25 two-cycles",
+    "right_endpoint_degree_multiset": {"1": 2, "2": 2, "3": 5, "4": 1}
+  },
+  "pass_7139_52set_gram_gauge_reduction": {
+    "canonical_nonzero_nondegenerate_anchor_types": [[1,1,2],[1,1,3],[1,1,4],[1,1,5],[1,2,3],[1,2,4],[1,3,4],[1,3,5]],
+    "compatibility_graph_stats": {
+      "(1, 1, 2)": {"degree_max":456,"degree_min":448,"edges":116412,"vertices":512},
+      "(1, 1, 3)": {"degree_max":456,"degree_min":448,"edges":116430,"vertices":512},
+      "(1, 1, 4)": {"degree_max":456,"degree_min":448,"edges":116430,"vertices":512},
+      "(1, 1, 5)": {"degree_max":456,"degree_min":448,"edges":116430,"vertices":512},
+      "(1, 2, 3)": {"degree_max":456,"degree_min":448,"edges":116421,"vertices":512},
+      "(1, 2, 4)": {"degree_max":456,"degree_min":448,"edges":116421,"vertices":512},
+      "(1, 3, 4)": {"degree_max":456,"degree_min":448,"edges":116430,"vertices":512},
+      "(1, 3, 5)": {"degree_max":456,"degree_min":448,"edges":116430,"vertices":512}
+    },
+    "continuous_field_variables_per_anchor_case": 144,
+    "known_51_anchor_type": [1,3,5],
+    "known_witness_remaining_clique": 47,
+    "normalized_row_form": "(1,a,b,c), a,b,c in GF(9)^*",
+    "normalized_row_state_space": 512,
+    "number_anchor_types": 8,
+    "rank4_anchor_variables_before_projective_gauge": 198,
+    "raw_off_diagonal_pairings": 1326,
+    "scope": "This is an exact exhaustive reduction of any hypothetical 52-set to eight finite clique cases. No 48-clique impossibility is claimed.",
+    "target": "48-clique among 512 row states after fixing four anchors"
+  },
+  "pass_7140_allq_involution_theorem": {
+    "eligible_nonfixed_pair_orbits": "q(q^2-1)/2",
+    "fixed_projective_points": "2(q+1)",
+    "labels_per_transversal": "(q-1)/2",
+    "nonfixed_orbits": "(q-1)(q+1)^2/2",
+    "nonisotropic_transversals": "q(q+1)",
+    "self_adjacent_nonfixed_orbits": "(q^2-1)/2",
+    "theorem": "For odd q, a non-scalar projective involutory symplectic similitude with multiplier -1 has two 2D Lagrangian eigenspaces E+ and E-. Its fixed projective locus is two disjoint generator lines. A g-invariant partial ovoid contains at most one point from each fixed line; hence an odd-sized invariant partial ovoid contains exactly one fixed point."
+  },
+  "pass_7141_c2_quotient_graph": {
+    "allq_degrees": {"fixed":"(q^2+q+2)/2","pair":"(2q^2-q+3)/2"},
+    "allq_edge_counts": {"fixed_fixed":"(q+1)^2","fixed_pair":"q(q^2-1)","pair_pair":"q(q^2-1)(2q^2-q-1)/8"},
+    "allq_selectable_nodes": "2(q+1) fixed weight-1 nodes + q(q^2-1)/2 eligible weight-2 nodes",
+    "anchors": {
+      "3": {"ambient_points":40,"quotient_edges":82,"quotient_nodes":20,"spectrum":{"-3.0":6,"-2.0":3,"1.0":5,"2.0":4,"2.6277187":1,"8.3722813":1}},
+      "5": {"ambient_points":156,"quotient_edges":816,"quotient_nodes":72,"spectrum":{"-6.0":10,"-4.0":20,"0.0":5,"2.0":14,"4.0":21,"4.8348486":1,"23.1651514":1}},
+      "7": {"ambient_points":400,"quotient_edges":4180,"quotient_nodes":184,"spectrum":{"-8.0":42,"-6.0":7,"-5.0":28,"0.0":14,"3.0":27,"6.0":64,"6.8977042":1,"46.1022958":1}},
+      "9": {"ambient_points":820,"quotient_edges":14500,"quotient_nodes":380,"spectrum":{"-10.0":108,"-8.0":9,"-6.0":45,"0.0":27,"4.0":44,"8.0":145,"8.9265499":1,"77.0734501":1}}
+    },
+    "candidate_spectrum_multiplicities": {
+      "-(q+1)":"q(q-3)(q-1)/4","-(q+3)/2":"q(q+1)/2","-(q-1)":"q","(q-1)/2":"(q-1)(q+2)/2","0":"q(q-3)/2","q-1":"(q+1)(q^2-3q+4)/4","two_simple_roots":"2x^2-(2q^2+q+1)x+(2q^3-q^2-1)=0"
+    },
+    "q7": {"degree_fixed":29,"degree_pair":47,"edges":4180,"nodes":184},
+    "q9": {"degree_fixed":46,"degree_pair":78,"edges":14500,"nodes":380},
+    "spectrum_formula_status": "CONJECTURE verified computationally at q=3,5,7,9; not promoted to all-q theorem"
+  },
+  "pass_7142_quadratic_character_switching": {
+    "boundary": "The sign flip between q=1 and 3 mod 4 is finite-field quadratic-character algebra, not physical chirality.",
+    "q7": {"absolute_Q2_pair_color_aut_order":2,"conference":false,"extended_plusminus_switching_group":"C2","known_involution_global_sign":-1,"matrix":"skew sign","rank_Q":32,"switch_signs":{"-1":17,"1":16}},
+    "q9": {"conference":false,"extended_switching_group":"C2","known_involution_global_sign":1,"matrix":"symmetric Seidel","rank_Q":51,"switch_signs":{"-1":2,"1":49},"switching_invariant_pair_color_aut_order":2}
+  },
+  "pass_7143_rankone_idempotent_bridge": {
+    "allq_idempotent_count": "q(q+1)",
+    "allq_statement": "A nonisotropic transversal ([u],[w]) has u.w !=0 and canonically determines E=w u^T/(u.w), a rank-one trace-one idempotent. Conversely every rank-one trace-one idempotent gives one such transversal.",
+    "q7_selected_transversals": 16,
+    "q9_all_idempotents": 90,
+    "q9_selected_distinct_idempotents": 25,
+    "repo_interface": "This is a genuine M2(F_q) bridge to the earlier rank stratification, but not the same object as the full rank-one Fourier sector. At q=2 there are 6 trace-one rank-one idempotents versus 9 nonzero rank-one matrices; the 6 idempotents are rank-one and therefore are not the 6 units."
+  },
+  "pass_7144_semilinear_D12_hexad": {
+    "all_15_pair_intersections": 4,
+    "binary_pair_distance": 94,
+    "generators": ["projective A","field Frobenius F"],
+    "group": "dihedral order 12",
+    "group_order": 12,
+    "orbit_of_witness_size": 6,
+    "product_AF_order": 6,
+    "each_set_size": 51,
+    "triple_point_memberships": "50 occurs in 3 sets, 80 occurs in the complementary 3; no hexad set contains both",
+    "triple_points": [50,80],
+    "union_point_multiplicity": {"1":192,"2":54,"3":2},
+    "union_size": 248
+  },
+  "pass_7145_hexad_binary_code": {
+    "dimension": 6,
+    "generator_gram_mod2": "I_6",
+    "generator_integer_gram": "47 I_6 + 4 J_6",
+    "gram_determinant": "71*47^5",
+    "gram_eigenvalues": "71^1 + 47^5",
+    "interpretation": "Six D12-related partial-ovoid incidence words are linearly independent over F2 and pairwise distance 94.",
+    "length_after_puncturing_to_union": 248,
+    "minimum_distance": 51,
+    "weight_enumerator": {"0":1,"51":6,"94":15,"129":18,"133":2,"156":9,"160":6,"179":6,"194":1}
+  },
+  "schema": "w33.pass7138_7145.c2_normalform_matrix_quotient.v1",
+  "status": "PASS"
+}
