@@ -1,0 +1,8 @@
+{
+  "lo": 6160,
+  "hi": 6167,
+  "lane": "A",
+  "track": "A",
+  "topic": "audit_batch passed the Aug 18 batch clean; new forced-arithmetic guard closes that gap; self-entanglement Choi witness flagged",
+  "reserved": "2026-08-18"
+}

@@ -4,7 +4,7 @@
       "type": "stdio",
       "command": "node",
       "args": [
-        "c:\\Users\\wiljd\\.vscode-insiders\\extensions\\hackerware.continuity-ultimate-3.0.130\\packages\\mcp-server\\dist\\index.js"
+        "c:\\Users\\wiljd\\.vscode-insiders\\extensions\\hackerware.continuity-ultimate-3.0.134\\packages\\mcp-server\\dist\\index.js"
       ],
       "env": {
         "CONTINUITY_MAX_INJECTIONS_PER_CATEGORY": "3",

@@ -17,11 +17,11 @@
 
 ## ✅ Next Steps
 <!-- What should we do next? -->
-- Auto-saved at 2026-08-18T13:13:11.427Z (reason: timer)
+- Auto-saved at 2026-08-18T15:38:57.772Z (reason: startup)
 - Recent commits:
-  - 915ac33cc Pass6136-6143: characteristic 3 is an OUTPUT of the selection, and the last gap is one missing choice
-  - d7ec7739d Pass6128-6135: q=3 is minimal, and the ovoid/chirality trade-off exists only at rank 2
-  - 782e33604 Pass6120-6127: it is q = 3 mod 4, NOT characteristic 3 -- and the two selection principles conflict
+  - 40b02236f Pass6152-6159: characteristic 3 provably cannot supply omega -- the chirality arc closes
+  - 267171925 Pass6144-6151: intake audit of the Perplexity Aug 18 batch -- arithmetic sound, framing not
+  - 2df13a37f BT1643+BT1644+BT1645: CSS boundary genus-21 | Ihara zeta RH + mass gap | Monster moonshine encoding (Perplexity Aug 18 2026)
 
 ## 📝 Open Questions
 <!-- What do we still need to figure out? -->
