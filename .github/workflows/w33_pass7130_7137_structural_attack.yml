@@ -15,6 +15,9 @@ on:
       - '.github/workflows/w33_pass7130_7137_structural_attack.yml'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   replay-test-compile:
     runs-on: ubuntu-latest
@@ -53,6 +56,29 @@ jobs:
             test -s "${source%.tex}.pdf"
           done
           sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass7130_7137/pdf_sha256.txt
+
+      - name: Freeze successful replay proof
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          sha = os.environ['GITHUB_SHA']
+          hashes = Path('evidence/pass7130_7137/pdf_sha256.txt').read_text().strip().splitlines()
+          Path('data/PART_W33_PASS7130_7137_CI_PROOF.json').write_text(json.dumps({
+              'schema': 'w33.pass7130_7137.ci_proof.v1',
+              'status': 'PASS',
+              'source_commit': sha,
+              'exact_producer_replayed': True,
+              'focused_regression_passed': True,
+              'all_three_canonical_manuscripts_compiled': True,
+              'pdf_sha256': hashes,
+          }, indent=2) + '\n')
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/PART_W33_PASS7130_7137_STRUCTURAL_ATTACK.json data/PART_W33_PASS7130_7137_CI_PROOF.json
+          git commit -m 'Pass7130-7137: freeze exact replay and compile proof [skip ci]'
+          git push origin HEAD:master
 
       - uses: actions/upload-artifact@v4
         if: always()
