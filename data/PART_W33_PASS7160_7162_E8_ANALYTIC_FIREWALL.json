@@ -1,0 +1,31 @@
+{
+  "schema": "w33.pass7160_7162.e8_analytic_firewall.v1",
+  "status": "THEOREM",
+  "boundary": "Exact finite coding/projective geometry and standard Lie/root-system bookkeeping only. No identification of the [248,6,51]_2 code with the E8 adjoint representation, no particle interpretation, and no claim based on 248 alone.",
+  "pass_7160_no_affine_hamming_puncture": {
+    "distinct_column_types": 23,
+    "column_type_set": "all 6 weight-1 words, all 15 weight-2 words, and two complementary weight-3 words t,t^c in F2^6",
+    "claim": "There is no affine 3-flat v+H (8 points) contained in the 23 distinct column types.",
+    "proof": "Let s be the support size of the 3-dimensional translation space H and f the number of fixed-one coordinates of the coset outside supp(H). Summing Hamming weights over v+H gives 4s+8f. Every allowed point has weight 1 or 2 except at most one of the two complementary weight-3 words (an affine flat cannot contain both, since then 111111 lies in H and complementation would force forbidden weight-4/5 partners). Hence the total weight is at most 17. Since dim H=3, s>=3. If f=1 then 4s+8>=20, impossible; hence f=0 and v+H lies in supp(H). s=3 would force H=F2^3 on its support and v in H, so the coset would contain 0, impossible. Thus s=4. Then H is a hyperplane of F2^4 and v+H is its nonzero coset. For defining normal weight r=1,2,3,4 the coset weight distributions are respectively (w1,w2,w3,w4)=(1,3,3,1),(2,4,2,0),(3,3,1,1),(4,0,4,0). Each either contains a weight-4 word or at least two weight-3 words, whereas the 23-set contains no weight-4 words and at most one of its two complementary weight-3 words on any four-coordinate support. Contradiction.",
+    "consequence": "No puncturing obtained by choosing eight distinct column types as an affine 3-flat yields RM(1,3), equivalently the extended binary Hamming [8,4,4] code."
+  },
+  "pass_7161_full_code_construction_A_firewall": {
+    "code": "[248,6,51]_2",
+    "generator_gram_mod2": "I_6",
+    "self_orthogonal": false,
+    "contains_odd_weight_words": true,
+    "doubly_even": false,
+    "claim": "The full code does not realize the standard Type-II binary-code Construction-A route to the E8 lattice.",
+    "proof": "GG^T=I_6 mod 2, so the code is not self-orthogonal; it also contains weight-51 words. In particular it is neither self-dual nor doubly even."
+  },
+  "pass_7162_no_canonical_240_plus_8_split": {
+    "full_coordinate_automorphism_orbit_sizes": [192,36,18,2],
+    "subset_sums": [0,2,18,20,36,38,54,56,192,194,210,212,228,230,246,248],
+    "no_invariant_8_subset": true,
+    "no_invariant_240_subset": true,
+    "no_invariant_E6xA2_dimension_partition": true,
+    "proof": "Every subset invariant under the full coordinate-permutation automorphism group is a union of the four coordinate orbits, so its cardinality must be one of the listed subset sums. Neither 8 nor 240 occurs. Likewise 78 and 81 do not occur, so the standard 248=78+8+81+81 E6xA2 dimension pattern cannot be realized as a full-code-symmetry invariant coordinate partition.",
+    "E8_bookkeeping": "dim(e8)=248=240 root spaces + 8 Cartan directions; E8 has 240 roots and rank 8.",
+    "verdict": "The equality code length 248 = dim(e8) is not promoted to an object-level identification. The most direct 240+8 coordinate interpretation is obstructed by the code's own full automorphism group."
+  }
+}
