@@ -1,0 +1,42 @@
+name: W33 Pass7162 E8 outer character audit
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass7162_e8_outer_character_audit.py'
+      - '.github/workflows/w33_pass7162_e8_outer_character_audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip numpy networkx
+      - name: Replay E8 outer-character audit
+        run: |
+          export PYTHONPATH="$PWD/analysis:${PYTHONPATH:-}"
+          python analysis/w33_pass7162_e8_outer_character_audit.py
+      - name: Freeze certificate
+        run: |
+          cp data/PART_W33_PASS7162_E8_OUTER_CHARACTER_AUDIT.json /tmp/e8outer.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin master
+          git rebase origin/master
+          cp /tmp/e8outer.json data/PART_W33_PASS7162_E8_OUTER_CHARACTER_AUDIT.json
+          git add data/PART_W33_PASS7162_E8_OUTER_CHARACTER_AUDIT.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Pass7162: freeze E8 outer-character audit [skip ci]'
+          git push origin HEAD:master
