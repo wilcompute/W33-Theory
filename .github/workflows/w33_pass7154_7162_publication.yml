@@ -1,0 +1,90 @@
+name: W33 Pass7154-7162 publication proof
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/PASS7154_7162_nine_front_e8_audit_insert.tex'
+      - 'analysis/PASS7154_7162_index_insert.html'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/PART_W33_PASS7160_7162_E8_ANALYTIC_FIREWALL.json'
+      - 'data/PART_W33_PASS7159_FANO40_FULL_LINEAR_STABILIZER_THEOREM.json'
+      - 'data/w33_publication_frontier_contract_v2.json'
+      - 'tools/materialize_pass7154_7162_frontier.py'
+      - '.github/workflows/w33_pass7154_7162_publication.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit-compile-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit exact theorem certificates
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          e8=json.loads(Path('data/PART_W33_PASS7160_7162_E8_ANALYTIC_FIREWALL.json').read_text())
+          f40=json.loads(Path('data/PART_W33_PASS7159_FANO40_FULL_LINEAR_STABILIZER_THEOREM.json').read_text())
+          assert e8['status']=='THEOREM'
+          assert e8['pass_7162_no_canonical_240_plus_8_split']['full_coordinate_automorphism_orbit_sizes']==[192,36,18,2]
+          assert e8['pass_7160_no_affine_hamming_puncture']['distinct_column_types']==23
+          assert f40['status']=='THEOREM'
+          assert f40['stabilizer_order']==72
+          assert f40['complement_orbit_sizes']==[1,6,6,9,18]
+          assert f40['transitive'] is False
+          PY
+      - name: Audit publication reachability
+        run: |
+          grep -F '\input{analysis/PASS7154_7162_nine_front_e8_audit_insert}%' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+          grep -F 'pass-7154-7162-e8-audit' data/w33_publication_frontier_contract_v2.json
+      - name: Install Tectonic
+        run: |
+          curl --proto '=https' --tlsv1.2 -LsSf https://drop-sh.fullyjustified.net | sh
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+      - name: Compile all three canonical manuscripts
+        run: |
+          mkdir -p evidence/pass7154_7162
+          for f in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$f"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass7154_7162/pdf_sha256.txt
+      - name: Materialize public frontier and freeze proof
+        run: |
+          git fetch origin master
+          git reset --hard origin/master
+          python tools/materialize_pass7154_7162_frontier.py
+          grep -c 'id="pass-7154-7162-e8-audit"' docs/index.html | grep '^1$'
+          grep -c 'id="pass-7154-7162-e8-audit"' index.html | grep '^1$'
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          d={
+            'schema':'w33.pass7154_7162.publication_proof.v1',
+            'status':'PASS',
+            'source_commit':os.environ['GITHUB_SHA'],
+            'analytic_e8_firewall_present':True,
+            'binary40_full_linear_stabilizer_theorem_present':True,
+            'all_three_canonical_manuscripts_compiled':True,
+            'public_card_materialized_both_surfaces':True,
+            'pass7154_q9_48_decision_present':Path('data/PART_W33_PASS7154_Q9_48_CLIQUE_DECISION.json').exists(),
+            'pass7159_gap_full_gl6_certificate_present':Path('data/PART_W33_PASS7159_FANO40_FULL_GL6_STABILIZER.json').exists(),
+            'pdf_sha256':Path('evidence/pass7154_7162/pdf_sha256.txt').read_text().strip().splitlines(),
+          }
+          Path('data/PART_W33_PASS7154_7162_PUBLICATION_PROOF.json').write_text(json.dumps(d,indent=2)+'\n')
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/PART_W33_PASS7154_7162_PUBLICATION_PROOF.json docs/index.html index.html
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Pass7154-7162: freeze compile and public proof [skip ci]'
+          git push origin HEAD:master
