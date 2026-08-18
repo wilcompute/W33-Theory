@@ -1,0 +1,13 @@
+{
+  "schema": "w33.q7.partial_ovoid_witness.v1",
+  "q": 7,
+  "size": 33,
+  "point_indices": [8,76,79,86,89,90,123,132,133,139,148,149,154,165,192,200,209,211,224,257,265,283,286,296,304,336,338,357,360,372,375,387,395],
+  "points": [[0,1,0,0],[1,0,2,5],[1,0,3,1],[1,0,4,1],[1,0,4,4],[1,0,4,5],[1,1,2,3],[1,1,3,5],[1,1,3,6],[1,1,4,5],[1,1,6,0],[1,1,6,1],[1,1,6,6],[1,2,1,3],[1,2,5,2],[1,2,6,3],[1,3,0,5],[1,3,1,0],[1,3,2,6],[1,4,0,4],[1,4,1,5],[1,4,4,2],[1,4,4,5],[1,4,6,1],[1,5,0,2],[1,5,4,6],[1,5,5,1],[1,6,0,6],[1,6,1,2],[1,6,3,0],[1,6,3,3],[1,6,5,1],[1,6,6,2]],
+  "symplectic_form": "x0*y1-x1*y0+x2*y3-x3*y2 mod 7",
+  "verified_pairwise_noncollinear": true,
+  "blocker_histogram": {"2":17,"3":56,"4":77,"5":74,"6":65,"7":46,"8":32},
+  "zero_blockers": 0,
+  "one_blockers": 0,
+  "scope": "Exact stored 33-point witness used as a positive control against the published exhaustive W(7) maximum. The file itself proves only existence; published optimality/equivalence is external literature."
+}
