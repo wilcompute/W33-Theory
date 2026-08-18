@@ -1,0 +1,58 @@
+% Passes 7130--7137: q=9 blocker/stabilizer/Gram closure with q=7 control.
+\subsection{A blocker-deficiency reformulation and an involutory symmetry of the $q=9$ 51-set}
+\label{sec:pass7130-7137-structural-attack}
+
+Let $S$ denote the verified $51$-point partial ovoid of $W(3,9)$ frozen in the computational ledger.  For an independent set $T\subseteq W(3,9)\setminus S$, define its blocker union
+\[
+ B_S(T)=\bigcup_{v\in T}\bigl(N(v)\cap S\bigr).
+\]
+Then $(S\setminus B_S(T))\cup T$ is independent.  Conversely, if $S'$ is any independent set with $|S'|>|S|$, then $T=S'\setminus S$ is independent and every point of $B_S(T)$ belongs to $S\setminus S'$, whence $|B_S(T)|<|T|$.  Therefore
+\begin{equation}
+ \alpha(W(3,9))>51
+ \quad\Longleftrightarrow\quad
+ \exists\,T\text{ independent outside }S:\ |B_S(T)|-|T|<0.
+ \label{eq:blocker-deficiency-global}
+\end{equation}
+This is a global reformulation, not merely a local-search criterion.  The unrestricted integer program remains open; the exact radius certificate of the preceding packet proves nonnegative deficiency for $|T|\leq 8$ only.
+
+A second exact computation identifies the setwise projective-semilinear symplectic stabilizer of $S$.  For four projective points one may form the projective triple of perfect-matching products
+\[
+ [\,\langle v,a\rangle\langle b,c\rangle:
+    \langle v,b\rangle\langle c,a\rangle:
+    \langle v,c\rangle\langle a,b\rangle\,].
+\]
+After quotienting by overall scalar, coordinate permutation, and the nontrivial automorphism of $\mathbb F_9$, these four-point types give an intrinsic fingerprint.  On $S$ the vertex fingerprints split as $1+25\cdot2$, while the induced edge fingerprints force all $25$ possible pair-flips to agree.  The nontrivial flip is realised by
+\[
+ A=\begin{pmatrix}
+ 1&0&0&0\\
+ 1&2&3&6\\
+ 3&0&5&6\\
+ 3&0&4&7
+ \end{pmatrix},
+ \qquad A^2=I,\qquad A^{\mathsf T}JA=2J,
+\]
+with entries in $\mathbb F_9$ and $2=-1$ in characteristic three.  A projective-frame check against both field automorphisms excludes additional semilinear lifts.  Hence
+\[
+ \operatorname{Stab}_{P\Gamma Sp(4,9)}(S)\cong C_2.
+\]
+The involution has two $2$-dimensional eigenspaces, and because its symplectic-similitude multiplier is $-1$, each eigenspace is totally isotropic.  Thus its projective fixed locus consists of two generator lines of $W(3,9)$, ten points on each.  The unique fixed witness point is index $80$; the unique one-blocker outside point, index $40$, is also fixed and lies on the same generator line.  Consequently the previously observed two-state local swap
+\[
+ S\longleftrightarrow S\setminus\{80\}\cup\{40\}
+\]
+has a structural explanation: it changes which fixed point on one invariant generator line is selected.
+
+The blocker histogram refines equivariantly under this $C_2$.  On the $769$-point complement the same intrinsic four-point fingerprints produce exactly $19$ singleton classes and $375$ doubletons, objectwise equal to the fixed points and two-cycles of the involution.  Thus the blocker counts are a coarse quotient of an intrinsic orbit partition rather than isolated search statistics.
+
+There is also an exact rank-four Gram compression.  For the four anchor positions $(0,1,2,5)$ in $S$, the principal Gram block $G$ is nonsingular.  If $r_i$ records the four symplectic pairings of point $i$ with those anchors, then all $51^2$ Gram entries satisfy
+\[
+ A_{ij}=-r_iG^{-1}r_j^{\mathsf T}.
+\]
+For a hypothetical $52$-set this reduces the raw $\binom{52}{2}=1326$ off-diagonal variables to $48\times4+6=198$ field variables before further gauge reduction, with the extremal condition becoming the nonvanishing of every reconstructed off-diagonal entry.
+
+As a positive control, an explicit $33$-point partial ovoid of $W(3,7)$ was frozen and replayed.  The same invariant machinery again recovers a $C_2$ projective-similitude stabilizer and a two-generator-line fixed locus.  This is compared only as a control with the exhaustive small-$q$ computations of Cimr\'akov\'a, De Winter, Fack and Storme; no novelty claim is made for the $q=7$ extremal value.
+
+Two further exact probes sharpen the boundary.  First, the Frobenius conjugate $F(S)$ satisfies $|S\cap F(S)|=4$.  On the remaining $47+47$ points, cross-collinearity is bipartite with a perfect matching of size $47$; K\H{o}nig's theorem therefore gives
+\[
+ \alpha\bigl(W(3,9)[S\cup F(S)]\bigr)=51,
+\]
+so no recombination using only the two Galois-conjugate copies can produce $52$.  Second, applying the quadratic character to the nonzero Gram entries yields a symmetric $51\times51$ sign matrix at $q=9$ (full rational rank $51$) but a skew-symmetric $33\times33$ sign matrix at $q=7$ (rational rank $32$).  This is the elementary distinction $\chi(-1)=+1$ for $q\equiv1\pmod4$ and $\chi(-1)=-1$ for $q\equiv3\pmod4$; it is recorded as a finite-field resonance only, not as a physical chirality derivation.
