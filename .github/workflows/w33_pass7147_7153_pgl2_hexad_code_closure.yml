@@ -1,0 +1,42 @@
+name: W33 Pass7147-7153 PGL2 hexad code closure
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass7147_7153_pgl2_hexad_code_closure.py'
+      - 'tests/test_w33_pass7147_7153_pgl2_hexad_code_closure.py'
+      - '.github/workflows/w33_pass7147_7153_pgl2_hexad_code_closure.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  exact-replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install replay dependencies
+        run: python -m pip install --upgrade pip pytest numpy networkx
+      - name: Replay producer
+        run: python analysis/w33_pass7147_7153_pgl2_hexad_code_closure.py
+      - name: Focused regression
+        run: python -m pytest -q tests/test_w33_pass7147_7153_pgl2_hexad_code_closure.py
+      - name: Freeze regenerated certificate
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          cp data/PART_W33_PASS7147_7153_PGL2_HEXAD_CODE_CLOSURE.json /tmp/cert.json
+          git fetch origin master
+          git reset --hard origin/master
+          cp /tmp/cert.json data/PART_W33_PASS7147_7153_PGL2_HEXAD_CODE_CLOSURE.json
+          git add data/PART_W33_PASS7147_7153_PGL2_HEXAD_CODE_CLOSURE.json
+          git commit -m 'Pass7147-7153: freeze exact PGL2 hexad code certificate [skip ci]'
+          git push origin HEAD:master
