@@ -1,0 +1,86 @@
+name: W33 Pass7163-7170 publication proof
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/PASS7163_7170_e8_hexagonal_lift_insert.tex'
+      - 'analysis/PASS7163_7170_index_insert.html'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/PART_W33_PASS7163_7170_E8_HEXAGONAL_LIFT.json'
+      - 'data/w33_publication_frontier_contract_v2.json'
+      - 'tools/materialize_pass7163_7170_frontier.py'
+      - '.github/workflows/w33_pass7163_7170_publication.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit-compile-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit exact theorem certificate
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('data/PART_W33_PASS7163_7170_E8_HEXAGONAL_LIFT.json').read_text())
+          assert d['status']=='PASS'
+          assert d['pass_7164_e8_hexagonal_root_graph_lift']['cross_graph']=='C12 for all 540 pairs'
+          c=d['pass_7165_e8_fiber_code_and_d4']
+          assert c['d4_equals_center_quads_objectwise']
+          assert (c['d4_halves'],c['orthogonal_d4_pairs'],c['gq42_partition_lines'])==(90,45,27)
+          assert d['pass_7168_z12_holonomy']['z12_holonomy_histogram']=={'1':1440,'3':180,'9':180,'11':1440}
+          PY
+      - name: Audit publication reachability
+        run: |
+          grep -F '\input{analysis/PASS7163_7170_e8_hexagonal_lift_insert}%' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+          grep -F 'pass-7163-7170-e8-hexagonal-lift' data/w33_publication_frontier_contract_v2.json
+      - name: Install Tectonic
+        run: |
+          curl --proto '=https' --tlsv1.2 -LsSf https://drop-sh.fullyjustified.net | sh
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+      - name: Compile all three canonical manuscripts
+        run: |
+          mkdir -p evidence/pass7163_7170
+          for f in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$f"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass7163_7170/pdf_sha256.txt
+      - name: Materialize public frontier and freeze proof
+        run: |
+          cp evidence/pass7163_7170/pdf_sha256.txt /tmp/pass7163_7170_pdf_sha256.txt
+          git fetch origin master
+          git reset --hard origin/master
+          python tools/materialize_pass7163_7170_frontier.py
+          grep -c 'id="pass-7163-7170-e8-hexagonal-lift"' docs/index.html | grep '^1$'
+          grep -c 'id="pass-7163-7170-e8-hexagonal-lift"' index.html | grep '^1$'
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          d={
+            'schema':'w33.pass7163_7170.publication_proof.v1',
+            'status':'PASS',
+            'source_commit':os.environ['GITHUB_SHA'],
+            'e8_hexagonal_lift_certificate_present':True,
+            'all_three_canonical_manuscripts_compiled':True,
+            'public_card_materialized_both_surfaces':True,
+            'q9_target48_aggregate_certificate_present':Path('data/PART_W33_PASS7154_Q9_48_CLIQUE_DECISION.json').exists(),
+            'pdf_sha256':Path('/tmp/pass7163_7170_pdf_sha256.txt').read_text().strip().splitlines(),
+          }
+          Path('data/PART_W33_PASS7163_7170_PUBLICATION_PROOF.json').write_text(json.dumps(d,indent=2)+'\n')
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/PART_W33_PASS7163_7170_PUBLICATION_PROOF.json docs/index.html index.html
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Pass7163-7170: freeze compile and public proof [skip ci]'
+          git push origin HEAD:master
