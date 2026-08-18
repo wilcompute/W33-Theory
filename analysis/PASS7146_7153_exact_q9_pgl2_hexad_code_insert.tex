@@ -1,0 +1,85 @@
+% Passes 7146--7153: exact q=9 closure attack, PGL2 quotient theorem, D12 hexad and code anatomy.
+\subsection{The $C_2$ quotient as a $\mathrm{PGL}_2$ involution scheme and the semilinear hexad}
+\label{sec:pass7146-7153-pgl2-hexad}
+
+Continue with the involution normal form
+\[
+ V=E_+\oplus E_-,\qquad g(u,w)=(u,-w),\qquad
+ B((u,w),(u',w'))=u\cdot w'-w\cdot u'.
+\]
+For an eligible nonfixed orbit $u\cdot w\ne0$, define
+\[
+ M(u,w)=\begin{pmatrix}u_1&u_2\\ w_2&-w_1\end{pmatrix}.
+\]
+Then $\det M=-u\cdot w\ne0$.  Projective rescaling acts by $M\mapsto cM$ and $g$ acts by left multiplication by $D=\operatorname{diag}(1,-1)$.  Consequently the eligible pair vertices are canonically
+\[
+ \boxed{\mathrm{PGL}_2(q)/\langle D\rangle},
+ \qquad \#=\frac{q(q^2-1)}2.
+\]
+If $R=MN^{-1}$, two pair vertices conflict exactly when
+\[
+ R_{11}=\pm R_{22},
+\]
+equivalently when $\operatorname{tr}R=0$ or $\operatorname{tr}(DR)=0$.  Thus $R$ or $DR$ is a projective involution.  In the original symplectic coordinates the same condition factorizes as
+\[
+ (u\cdot w')^2-(w\cdot u')^2
+ =-B(X,Y)B(X,DY)
+\]
+up to the fixed sign convention for $D$.
+
+Let $G=\mathrm{PGL}_2(q)$, $H=\langle D\rangle$, and let $W$ be the Schreier operator obtained by summing the action of the complete projective involution class on $G/H$.  The standard character calculation on $\operatorname{Ind}_H^G(1)$ gives
+\[
+ \operatorname{Spec}W=
+ \{q^2^1,\ q^{\frac{(q+1)(q^2-q-4)}4},\ (-q)^{\frac{q(q-1)^2}4},\ 1^{\frac{q(q+1)}2}\}.
+\]
+The weighted duplicate support is the split-torus normalizer graph
+\[
+ R_0\cong \frac{q(q+1)}2\,K_{h,h},\qquad h=\frac{q-1}2,
+\]
+and the simple pair graph is exactly $A_{\rm pair}=W-I-R_0$.  Decomposing the commuting $W$ and $R_0$ actions yields
+\[
+\begin{array}{c|c}
+\lambda&\text{multiplicity}\\ \hline
+(2q^2-q-1)/2&1\\
+q-1&q(q-3)(q+1)/4\\
+-(q+1)&q(q-3)(q-1)/4\\
+(q-1)/2&(q-1)(q+2)/2\\
+-(q+3)/2&q(q-1)/2\\
+0&q(q-3)/2\\
+-(q-1)/2&q.
+\end{array}
+\]
+Adding the two fixed generator lines and their exact incidence block proves the previously conjectural full quotient spectrum for every odd $q$: besides the two simple roots of
+\[
+ 2x^2-(2q^2+q+1)x+(2q^3-q^2-1)=0,
+\]
+the eigenvalues and multiplicities are
+\[
+\begin{array}{c|c}
+q-1&(q+1)(q^2-3q+4)/4\\
+-(q+1)&q(q-3)(q-1)/4\\
+-(q+3)/2&q(q+1)/2\\
+(q-1)/2&(q-1)(q+2)/2\\
+0&q(q-3)/2\\
+-(q-1)&q.
+\end{array}
+\]
+Hence the Pass~7141 spectral formula is upgraded from computational conjecture to theorem.
+
+For the $q=9$ witness, the involution together with field Frobenius generates a $D_{12}$-orbit of six $51$-point partial ovoids.  Since a single witness has exact $P\Gamma Sp(4,9)$ stabilizer $C_2$, any ambient stabilizer of the six-set has order at most $6\cdot2=12$; the known $D_{12}$ attains this bound.  Therefore
+\[
+ \boxed{\operatorname{Stab}_{P\Gamma Sp(4,9)}(\mathcal H)=D_{12}}.
+\]
+As $|P\Gamma Sp(4,9)|=6{,}886{,}425{,}600$, the hexad orbit has size $573{,}868{,}800$.  Multiplying by six equals the witness-orbit size $3{,}443{,}212{,}800$, so every witness in this orbit belongs to exactly one such $D_{12}$ hexad.
+
+The six binary incidence generators on their $248$-point union have column multiplicities: six singleton columns with multiplicity $32$, six internal pair columns with multiplicity $3$, nine cross-pair columns with multiplicity $4$, and two complementary triple columns with multiplicity $1$.  Their $[248,6,51]_2$ code has dual distance $2$ and exactly
+\[
+ \boxed{3048}
+\]
+weight-two dual words.  Its outer column-pattern group is $S_3\wr C_2$ of order $72$, while the ambient geometric hexad group has order $12$; thus the code has an exact outer/geometric symmetry index $6$.  The full coordinate-permutation group is
+\[
+ \bigl((S_{32})^6\times(S_4)^9\times(S_3)^6\bigr)\rtimes(S_3\wr C_2).
+\]
+Puncturing one of the two complementary triple coordinates gives a $[247,6,50]_2$ code and breaks the outer block swap, reducing the outer group to $S_3\times S_3$ of order $36$; puncturing both gives $[246,6,50]_2$ and restores the $S_3\wr C_2$ outer group of order $72$.
+
+Finally, the eight normalized $q=9$ rank-four Gram cases are handled by a separate exact SAT replay.  No statement $\alpha(W(3,9))=51$ is inferred from this subsection unless the frozen Pass~7146 certificate independently records UNSAT at residual clique size $48$ in all eight anchor cases.
