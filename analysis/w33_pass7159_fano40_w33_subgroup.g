@@ -9,8 +9,7 @@
 repo := GAPInfo.SystemEnvironment.W33_REPO;;
 out := Concatenation(repo,"/data/PART_W33_PASS7159_FANO40_W33_SUBGROUP.json");;
 
-# ----- binary complement C = PG(5,2) \ (all wt1 + all wt2 + two triples)
-T0 := [2,4,5];;  # GAP positions corresponding to zero-based {1,3,4}
+T0 := [2,4,5];;
 T1 := [1,3,6];;
 WeightBits := function(x)
   local n,k; n:=0; k:=x;
@@ -31,29 +30,18 @@ ActMask := function(x,p)
   od;
   return y;
 end;;
-MaskPerm := function(p)
-  return PermList(List(comp,x->pos(ActMask(x,p))));
-end;;
+MaskPerm := p -> PermList(List(comp,x->pos(ActMask(x,p))));;
 
-# S3 x S3 on the two triples, extended by the block swap.
 a := (2,4,5);; b := (2,4);; c := (1,3,6);; d := (1,3);; s := (1,2)(3,4)(6,5);;
 Outer6 := Group(a,b,c,d,s);;
 Outer40 := Group(List(GeneratorsOfGroup(Outer6),MaskPerm));;
 if Size(Outer6)<>72 or Size(Outer40)<>72 then Error("outer group order failed"); fi;
 orbBin := SortedList(List(Orbits(Outer40,[1..40]),Length));;
 
-# ----- exact W33 40-point automorphism action.
 S := Sp(4,3);;
 pts := NormedRowVectors(GF(3)^4);;
 P := Image(ActionHomomorphism(S,pts,OnLines));;
 if Size(P)<>25920 or Length(pts)<>40 then Error("PSp point action failed"); fi;
-
-# Full graph automorphism group is PSp(4,3):2.  Build it as the automorphism
-# group of the exact SRG, which avoids any convention ambiguity about GSp.
-J := InvariantBilinearForm(S).matrix;;
-adj := List([1..40],i->Filtered([1..40],j->j<>i and IsZero(pts[i]*J*pts[j])));;
-# Encode the graph as a GRAPE-free relation and find the full normalizer in S40
-# of the PSp action; the known order is 51840 and the extra coset is point-line outer.
 S40 := SymmetricGroup(40);;
 N := Normalizer(S40,P);;
 if Size(N)<>51840 then Error(Concatenation("unexpected full normalizer order ",String(Size(N)))); fi;
@@ -61,20 +49,16 @@ if Size(N)<>51840 then Error(Concatenation("unexpected full normalizer order ",S
 classes := ConjugacyClassesSubgroups(N);;
 cands := Filtered(classes,C->Size(Representative(C))=72);;
 hits := [];;
-for C in cands do
-  H:=Representative(C);
-  if IsConjugate(S40,Outer40,H) then Add(hits,H); fi;
-od;
-
-# Also record orbit-pattern matches, weaker than permutation conjugacy.
 patternHits := [];;
 for C in cands do
   H:=Representative(C);
+  if IsConjugate(S40,Outer40,H) then Add(hits,H); fi;
   if SortedList(List(Orbits(H,[1..40]),Length))=orbBin then
     Add(patternHits,StructureDescription(H));
   fi;
 od;
 
+if Length(hits)>0 then bridgeJson := "true"; else bridgeJson := "false"; fi;
 stream:=OutputTextFile(out,false);;
 SetPrintFormattingStatus(stream,false);;
 AppendTo(stream,"{\n");
@@ -88,7 +72,7 @@ AppendTo(stream,"  \"w33_full_aut_order\": ",String(Size(N)),",\n");
 AppendTo(stream,"  \"order72_subgroup_classes\": ",String(Length(cands)),",\n");
 AppendTo(stream,"  \"same_orbit_pattern_classes\": ",String(Length(patternHits)),",\n");
 AppendTo(stream,"  \"permutation_conjugacy_hits\": ",String(Length(hits)),",\n");
-AppendTo(stream,"  \"object_level_bridge\": ", (if Length(hits)>0 then "true" else "false" fi),",\n");
+AppendTo(stream,"  \"object_level_bridge\": ",bridgeJson,",\n");
 AppendTo(stream,"  \"boundary\": \"A positive hit identifies the binary-complement S3 wr C2 G-set with a subgroup action on the exact W33 40 points. It does not by itself identify any graph relation or the 248 code coordinates with E8 roots/adjoint basis.\"\n");
 AppendTo(stream,"}\n");
 CloseStream(stream);;
