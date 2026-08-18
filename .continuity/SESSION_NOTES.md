@@ -17,11 +17,11 @@
 
 ## ✅ Next Steps
 <!-- What should we do next? -->
-- Auto-saved at 2026-08-17T22:54:27.453Z (reason: timer)
+- Auto-saved at 2026-08-17T23:54:27.685Z (reason: timer)
 - Recent commits:
-  - bbd4bd10b Merge remote-tracking branch 'origin/master'
-  - 2095bb978 Pass7017-7024: add equivariant no-go manuscript insert
-  - 6f8304bfa Merge remote-tracking branch 'origin/master'
+  - a2cf11f30 Pass6112-6119: q=5 has NO canonical chirality -- a structural selection principle for q=3
+  - 47740c4cc Merge remote-tracking branch 'origin/master'
+  - 6571ece2c Pass6104-6111: the substrate has a canonical chirality -- both halves were already here
 
 ## 📝 Open Questions
 <!-- What do we still need to figure out? -->

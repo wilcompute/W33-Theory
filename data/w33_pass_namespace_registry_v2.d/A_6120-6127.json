@@ -1,0 +1,8 @@
+{
+  "lo": 6120,
+  "hi": 6127,
+  "lane": "A",
+  "track": "A",
+  "topic": "chirality needs q=3 mod 4 not characteristic 3; q=9 has none; chirality and ovoids select opposite q",
+  "reserved": "2026-08-17"
+}

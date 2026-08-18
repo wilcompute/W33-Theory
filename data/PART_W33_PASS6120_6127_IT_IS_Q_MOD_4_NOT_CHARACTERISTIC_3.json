@@ -1,0 +1,63 @@
+{
+  "boundary": "Pass 6120 follows from Vinroot 2010 plus arithmetic; no new computation is needed for q=9 because the theorem settles it. It reframes WHICH condition selects the substrate. It does NOT claim the repo's characteristic-3 results are wrong -- only that chirality is not among the things characteristic 3 supplies",
+  "pass_6120_the_operative_condition": {
+    "answer": "q = 3 mod 4, and the two come apart immediately",
+    "question": "is the chirality condition CHARACTERISTIC 3, or q = 3 mod 4?",
+    "so": "characteristic 3 is neither necessary nor sufficient; q = 3 mod 4 is both",
+    "the_other_direction": "q = 7, 11, 19, 23, 31 have characteristics 7, 11, 19, 23, 31 and all DO have chirality",
+    "the_separating_case": "q = 9 has characteristic 3 and 9 = 1 mod 4, so by Vinroot all its characters are real and it has NO canonical chirality"
+  },
+  "pass_6121_within_characteristic_3": {
+    "reading": "inside characteristic 3 the chirality ALTERNATES with the parity of the exponent: q = 3, 27, 243 have it; q = 9, 81, 729 do not. That is a surprising and sharp statement -- the field's characteristic does not determine it, the field's SIZE mod 4 does",
+    "table": [
+      {
+        "chirality": true,
+        "exponent": 1,
+        "q": 3,
+        "q_mod_4": 3
+      },
+      {
+        "chirality": false,
+        "exponent": 2,
+        "q": 9,
+        "q_mod_4": 1
+      },
+      {
+        "chirality": true,
+        "exponent": 3,
+        "q": 27,
+        "q_mod_4": 3
+      },
+      {
+        "chirality": false,
+        "exponent": 4,
+        "q": 81,
+        "q_mod_4": 1
+      },
+      {
+        "chirality": true,
+        "exponent": 5,
+        "q": 243,
+        "q_mod_4": 3
+      },
+      {
+        "chirality": false,
+        "exponent": 6,
+        "q": 729,
+        "q_mod_4": 1
+      }
+    ],
+    "the_alternation": "3^k mod 4 = 3 for ODD k and 1 for EVEN k, since 3^2 = 9 = 1 mod 4"
+  },
+  "pass_6122_what_it_means_for_this_session": {
+    "but_it_matters_for_framing": "if a future pass reaches for q = 9 as 'the next characteristic-3 case' expecting the same structure, it will not find the chirality there",
+    "not_a_contradiction": "those passes were about maximum partial ovoids, a combinatorial question with no chirality content. Nothing there is retracted",
+    "w39_is_chirality_free": "W(3,9) -- which this session spent many passes on for alpha(W(3,9)) -- has NO canonical chirality, despite being characteristic 3"
+  },
+  "pass_6123_the_two_selection_principles_conflict": {
+    "chirality": "requires q = 3 mod 4, so q = 3, 7, 11, 19, 23, 27, 31",
+    "ovoids": "W(3,q) has ovoids -- and alpha attains q^2+1 -- if and only if q is EVEN (this session, Passes 5928 and 5992)",
+    "the_tension": "the two structural principles this session found point in OPPOSITE directions. Even q gives a complete ovoid and self-dual representations with no chirality; q = 3 mod 4 gives chirality and no ovoid. NO q satisfies both",
+    "why_that_is_interesting": "it means the substrate cannot be chosen to have both the clean combinatorics and the chirality, and q = 3 takes the chirality at the cost of the ovoid. That is a real trade-off rather than a coincidence, and it is the sharpest thing this session has to say about WHY q = 3"
+  }
+}
