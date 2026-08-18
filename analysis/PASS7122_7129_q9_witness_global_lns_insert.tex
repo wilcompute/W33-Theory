@@ -1,0 +1,43 @@
+% Passes 7122--7129: q=9 witness recovery and rigidity boundary.
+\subsection{A frozen 51-point partial ovoid of $W(3,9)$ and its local rigidity}
+
+The previously recorded lower bound $\alpha(W(3,9))\ge 51$ lacked a stored witness.
+Passes~7122--7129 repair that evidence gap.  In the exact model
+$\mathbb F_9=\mathbb F_3[i]/(i^2+1)$, an explicit set $S$ of 51 projective points is
+now frozen and all $\binom{51}{2}=1275$ pairs are verified non-collinear.  Hence
+\[
+\boxed{\alpha(W(3,9))\ge 51}
+\]
+now has a re-verifiable witness rather than only an incumbent size.
+
+For $v\notin S$, put $b(v)=|N(v)\cap S|$.  Its exact blocker distribution is
+\[
+1^1,\;2^{22},\;3^{50},\;4^{102},\;5^{156},\;6^{120},\;7^{142},\;8^{107},\;9^{53},\;10^{16},
+\]
+with the SRG checks
+\[
+\sum b(v)=51\cdot90=4590,
+\qquad
+\sum\binom{b(v)}2=\binom{51}{2}\,10=12750.
+\]
+There is no zero-blocker, so this witness is inclusion-maximal.  There is exactly
+one one-blocker, yielding a unique $1$-for-$1$ move; the resulting second 51-set has
+only the reverse move.  Exhaustive augmenting-set search further proves that neither
+endpoint admits a gain-one exchange removing at most seven incumbent points.
+
+The search neighborhood was also strengthened: after retaining a core $K\subset S$,
+the residual exact MILP is allowed to choose from every point of $W(3,9)$ compatible
+with $K$, rather than only from a previously freed local region.  This
+``global-compatible'' neighborhood independently recovered size 51 from a smaller
+incumbent.  It has not produced a certified 52-set, and no negative search result is
+used as an upper bound.
+
+Finally, the nontrivial Frobenius automorphism $x\mapsto x^3$ sends the frozen witness
+to a distinct 51-set with intersection size four.  Thus this particular witness does
+not descend setwise to the $\mathbb F_3$-fixed structure.
+
+\paragraph{Evidence boundary.}
+These are exact finite-geometric and search-certificate statements.  They do not prove
+$\alpha(W(3,9))=51$, do not rule out 52, do not validate the zero-degree-of-freedom
+quadratic interpolation, and carry no physical interpretation.  The published Tallini
+upper bound remains 73.
