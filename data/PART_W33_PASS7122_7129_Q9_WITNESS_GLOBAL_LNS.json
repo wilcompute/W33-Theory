@@ -1,0 +1,51 @@
+{
+  "boundary": "Finite symplectic geometry/search certificate only. A 51 witness is proved; optimality is open.",
+  "pass_7122_missing_witness_recovered": {
+    "claim": "alpha(W(3,9)) >= 51 now has a stored re-verifiable witness",
+    "degree": 90,
+    "pairwise_collinearity_violations": 0,
+    "point_count": 820,
+    "q": 9,
+    "size": 51,
+    "witness_file": "data/PART_W33_Q9_PARTIAL_OVOID_51.json"
+  },
+  "pass_7123_blocker_moments": {
+    "histogram": {"1":1,"2":22,"3":50,"4":102,"5":156,"6":120,"7":142,"8":107,"9":53,"10":16},
+    "identities": ["sum b = |S| k = 51*90", "sum C(b,2)=C(51,2) mu=1275*10"],
+    "sum_b": 4590,
+    "sum_choose_b_2": 12750
+  },
+  "pass_7124_maximality": {
+    "one_blockers": 1,
+    "therefore_inclusion_maximal": true,
+    "unique_one_for_one_exchange": {"add":40,"remove":80},
+    "zero_blockers": 0
+  },
+  "pass_7125_exchange_rigidity": {
+    "exact_search": {
+      "1":{"augmenting_set":null,"candidate_vertices":0,"dfs_nodes":1},
+      "2":{"augmenting_set":null,"candidate_vertices":1,"dfs_nodes":1},
+      "3":{"augmenting_set":null,"candidate_vertices":23,"dfs_nodes":25},
+      "4":{"augmenting_set":null,"candidate_vertices":73,"dfs_nodes":116},
+      "5":{"augmenting_set":null,"candidate_vertices":175,"dfs_nodes":629},
+      "6":{"augmenting_set":null,"candidate_vertices":331,"dfs_nodes":3083},
+      "7":{"augmenting_set":null,"candidate_vertices":451,"dfs_nodes":14892},
+      "8":{"augmenting_set":null,"candidate_vertices":593,"dfs_nodes":69955}
+    },
+    "meaning": "no gain-one exchange removing <=7 incumbent points",
+    "stable_through_removed_points": 7
+  },
+  "pass_7126_global_compatible_lns": {
+    "difference_from_previous_region_lns": "replacement candidates range over every W(3,9) point compatible with the kept core, not only vertices inside the freed region",
+    "private_recovery": "this neighbourhood independently rediscovered size 51 from a smaller incumbent before the witness was frozen",
+    "search_52_this_run": {"attempted":false,"reached":false,"target":52}
+  },
+  "pass_7127_scope": {
+    "lower_bound": 51,
+    "not_proved": ["alpha(W(3,9)) = 51", "nonexistence of a 52-set", "the quadratic interpolation"],
+    "novelty": "not claimed; literature search found published general bounds, not an exact q=9 classification",
+    "published_upper_bound": 73
+  },
+  "schema": "w33.pass7122_7129.q9_witness_global_lns.v1",
+  "status": "PASS"
+}
