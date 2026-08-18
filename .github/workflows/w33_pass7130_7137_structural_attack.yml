@@ -7,11 +7,14 @@ on:
       - 'analysis/w33_pass7130_7137_structural_attack.py'
       - 'analysis/BT7130_BT7137_structural_attack.md'
       - 'analysis/PASS7130_7137_structural_attack_insert.tex'
+      - 'analysis/PASS7130_7137_index_insert.html'
       - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
       - 'data/PART_W33_Q7_PARTIAL_OVOID_33.json'
       - 'data/PART_W33_PASS7130_7137_STRUCTURAL_ATTACK.json'
+      - 'data/w33_publication_frontier_contract_v2.json'
       - 'data/w33_pass_namespace_registry_v2.d/A_7130-7137.json'
       - 'tests/test_w33_pass7130_7137_structural_attack.py'
+      - 'tools/materialize_pass7130_7137_frontier.py'
       - '.github/workflows/w33_pass7130_7137_structural_attack.yml'
   workflow_dispatch:
 
@@ -19,7 +22,7 @@ permissions:
   contents: write
 
 jobs:
-  replay-test-compile:
+  replay-test-compile-publish:
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
@@ -39,9 +42,16 @@ jobs:
       - name: Focused regression
         run: python -m pytest -q tests/test_w33_pass7130_7137_structural_attack.py
 
-      - name: Audit manuscript reachability and tree hygiene
+      - name: Audit manuscript and publication reachability
         run: |
           test "$(grep -Fc '\input{analysis/PASS7130_7137_structural_attack_insert}%' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex)" -eq 1
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('data/w33_publication_frontier_contract_v2.json').read_text())
+          rows=[x for x in d['local_public_sections'] if x['token']=='pass-7130-7137-q9-structural-attack']
+          assert rows == [{'kind':'id','token':'pass-7130-7137-q9-structural-attack','source':'analysis/PASS7130_7137_index_insert.html'}]
+          PY
           git diff --check
 
       - uses: WtfJoke/setup-tectonic@v3
@@ -57,8 +67,15 @@ jobs:
           done
           sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass7130_7137/pdf_sha256.txt
 
-      - name: Freeze successful replay proof
+      - name: Materialize public card and freeze successful replay proof
         run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin master
+          git rebase origin/master
+          python tools/materialize_pass7130_7137_frontier.py
+          test "$(grep -c 'id="pass-7130-7137-q9-structural-attack"' docs/index.html)" -eq 1
+          test "$(grep -c 'id="pass-7130-7137-q9-structural-attack"' index.html)" -eq 1
           python - <<'PY'
           import json, os
           from pathlib import Path
@@ -71,13 +88,16 @@ jobs:
               'exact_producer_replayed': True,
               'focused_regression_passed': True,
               'all_three_canonical_manuscripts_compiled': True,
+              'public_card_materialized_in_docs_and_root': True,
               'pdf_sha256': hashes,
           }, indent=2) + '\n')
           PY
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/PART_W33_PASS7130_7137_STRUCTURAL_ATTACK.json data/PART_W33_PASS7130_7137_CI_PROOF.json
-          git commit -m 'Pass7130-7137: freeze exact replay and compile proof [skip ci]'
+          git add \
+            data/PART_W33_PASS7130_7137_STRUCTURAL_ATTACK.json \
+            data/PART_W33_PASS7130_7137_CI_PROOF.json \
+            docs/index.html \
+            index.html
+          git diff --cached --quiet || git commit -m 'Pass7130-7137: freeze replay compile and public frontier [skip ci]'
           git push origin HEAD:master
 
       - uses: actions/upload-artifact@v4
