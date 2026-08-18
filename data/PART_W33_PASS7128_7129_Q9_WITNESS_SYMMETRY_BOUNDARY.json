@@ -1,0 +1,23 @@
+{
+  "boundary":"Exact finite-search/symmetry facts only; no optimality or uniqueness claim for size 51.",
+  "pass_7128_local_swap_component":{
+    "alternate_blocker_histogram":{"1":1,"2":24,"3":46,"4":102,"5":158,"6":122,"7":142,"8":103,"9":55,"10":16},
+    "alternate_exchange_stable_through_removed_points":7,
+    "alternate_unique_swap":{"add":80,"remove":40},
+    "meaning":"under one-blocker 1-for-1 moves the recovered witness lies in an isolated two-vertex component; both endpoints have no gain-one exchange removing <=7 points.",
+    "one_swap_component_size":2,
+    "original_unique_swap":{"add":40,"remove":80}
+  },
+  "pass_7129_frobenius_descent_boundary":{
+    "boundary":"This recovered witness does not descend setwise to the GF(3)-fixed structure. That is a property of this witness, not a theorem that every size-51 witness has the same semilinear orbit.",
+    "conjugate_is_partial_ovoid":true,
+    "conjugate_size":51,
+    "field_automorphism":"x -> x^3 on GF(9), order 2",
+    "intersection_with_conjugate":4,
+    "symmetric_difference":94,
+    "unique_swap_maps_to":{"blocked":50,"outside":70},
+    "witness_fixed_setwise":false
+  },
+  "schema":"w33.pass7128_7129.q9_witness_symmetry_boundary.v1",
+  "status":"PASS"
+}
