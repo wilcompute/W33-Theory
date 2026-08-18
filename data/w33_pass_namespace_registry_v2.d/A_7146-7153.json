@@ -4,5 +4,7 @@
   "lane": "A",
   "track": "A",
   "topic": "exact eight-case q9 clique closure, quotient-spectrum proof, M2 compatibility law, D12 hexad classification, [248,6,51] code anatomy, and three outside-box probes",
-  "reserved": "2026-08-18"
+  "reserved": "2026-08-18",
+  "status": "PUBLISHED_WITH_PASS7146_EXACT_CLIQUE_DECISION_OPEN",
+  "boundary": "Passes7147-7153 are promoted. Pass7146 has an exact SAT producer/workflow but no frozen solver certificate yet; alpha(W(3,9))=51 is not claimed."
 }
