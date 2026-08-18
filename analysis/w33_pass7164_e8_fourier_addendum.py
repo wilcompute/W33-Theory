@@ -64,12 +64,24 @@ def main():
     for vals in expected.values():
         for lam,m in vals:full[lam]=full.get(lam,0)+m
     assert full=={-4:84,8:35,56:1,-2:112,28:8}
-    out={'schema':'w33.pass7164.e8_fourier_addendum.v1','status':'PASS',
+    even={};odd={}
+    for k in (0,2,4):
+        for lam,m in expected[k]:even[lam]=even.get(lam,0)+m
+    for k in (1,3,5):
+        for lam,m in expected[k]:odd[lam]=odd.get(lam,0)+m
+    assert even=={56:1,8:35,-4:84}
+    assert odd=={28:8,-2:112}
+    out={'schema':'w33.pass7164.e8_fourier_addendum.v2','status':'PASS',
          'field':'Z[zeta_6], zeta_6^2-zeta_6+1=0','fiber_fourier_dimensions':[40]*6,
          'sectors':sectors,'full_root_graph_spectrum':{str(k):v for k,v in sorted(full.items())},
+         'antipodal_parity':{
+           'reason':'d^3=c^15 is root antipodal negation; phase k has antipodal eigenvalue (-1)^k',
+           'even_sectors':[0,2,4], 'even_spectrum':{str(k):v for k,v in sorted(even.items())},
+           'odd_sectors':[1,3,5], 'odd_spectrum':{str(k):v for k,v in sorted(odd.items())},
+           'interpretation':'even sector is the unsigned antipodal-root-pair graph; odd sector is the signed root-representation sector'},
          'k0_identity':'M_0 = 2J - 2 A_W33',
          'k0_derivation':'W33 spectrum 12^1,2^24,(-4)^15 gives 56^1,(-4)^24,8^15',
          'boundary':'Exact cyclotomic matrix identities for the Pass7164 C6 lift; no physical Fourier-mode claim.'}
     OUT.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
-    print(json.dumps({'status':'PASS','full':out['full_root_graph_spectrum']}))
+    print(json.dumps({'status':'PASS','full':out['full_root_graph_spectrum'],'even':out['antipodal_parity']['even_spectrum'],'odd':out['antipodal_parity']['odd_spectrum']}))
 if __name__=='__main__':main()
