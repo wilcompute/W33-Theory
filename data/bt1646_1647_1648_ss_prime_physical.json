@@ -1,0 +1,57 @@
+{
+  "title": "BT1646/1647/1648: Physical Interpretation of 15 SS-Prime Eigenspaces",
+  "date": "August 2026",
+  "BT1646": {
+    "theorem": "p is supersingular <=> g(X_0+(p))=0 <=> tree-level string worldsheet at Hecke level p",
+    "ogg_theorem": "p SS <=> X_0+(p) has genus 0 <=> j-invariants in F_p",
+    "interpretations": {
+      "string": "g(X_0+(p))=0 = sphere = tree-level worldsheet, no loop corrections",
+      "elliptic": "j(E) in F_p = crystalline/maximally reduced at scale p",
+      "qec": "15 s-eigenspaces = 15 error syndromes of [[240,160,4,3]]_3 CSS code",
+      "ym": "15 s=-4 eigenspaces = 15 gluon-analog flavors with mass mu=4"
+    },
+    "physical_roles": {
+      "2": "Photon (U(1) gauge boson)",
+      "3": "Gluon flavor 1 (strong force, 3-coloring)",
+      "5": "Higgs (EW symmetry breaking, mu+1=5)",
+      "7": "Weak boson (SU(2) tower)",
+      "11": "Gravitino (SUSY, k-1=11)",
+      "13": "Dilaton (string scalar, Phi_3)",
+      "17": "Axion (strong CP, Phi_3+mu)",
+      "19": "Sterile neutrino (f-mu-1=19)",
+      "23": "Dark matter (q^q-mu=23)",
+      "29": "Dark energy/CC (q^q+lambda=29)",
+      "31": "Kaluza-Klein mode (v-q^2=31)",
+      "41": "GUT threshold (v+1=41)",
+      "47": "String excitation level 1 (v+Phi_6=47)",
+      "59": "String excitation level 2 (Phi_6*lam^q+q=59)",
+      "71": "Monster/Moonshine mode (Phi_6*Phi_4+1=71=H_0+1)"
+    },
+    "three_tiers": {
+      "tier1_SM": {"primes": [2,3,5,7,11,13,17,19,23], "genera_sum": 6},
+      "tier2_BSM": {"primes": [29,31,41], "genera_sum": 7},
+      "tier3_String": {"primes": [47,59,71], "genera_sum": 15, "self_ref": "15 = #SS primes"}
+    }
+  },
+  "BT1647": {
+    "theorem": "Z_W33_Ruelle(s) = Z_W33_Ihara(e^{-s}) via Hashimoto 1989",
+    "ruelle_decay_rate": "log(sqrt(11)) = 0.5*log(11)",
+    "ruelle_decay_tau": "2/log(11) approx 0.834",
+    "r_oscillation": "omega_r = arctan(sqrt(40))",
+    "s_oscillation": "omega_s = pi - arctan(sqrt(7))",
+    "key": "ALL 24+15 modes decay at same rate: perfect democratic mixing (Ramanujan property)"
+  },
+  "BT1648": {
+    "theorem": "Genus-21 W33 surface is degree-24 Leech cover of genus-0 Monster modular curve",
+    "riemann_hurwitz": {"chi_cover": -40, "degree": 24, "chi_base": 2, "ramification": 88},
+    "genera_sum": 28,
+    "genera_sum_identity": "28 = genus_21 + Phi_6 = 21 + 7",
+    "conway_self_reference": "g(X0(47))+g(X0(59))+g(X0(71)) = 4+5+6 = 15 = #SS_primes",
+    "modular_tower": {
+      "2": 0, "3": 0, "5": 0, "7": 0,
+      "11": 1, "13": 1, "17": 1, "19": 1,
+      "23": 2, "29": 2, "31": 2,
+      "41": 3, "47": 4, "59": 5, "71": 6
+    }
+  }
+}
