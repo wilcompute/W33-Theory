@@ -11,7 +11,6 @@ out:=Concatenation(repo,"/data/PART_W33_PASS7159_FANO40_FULL_GL6_STABILIZER.json
 F:=GF(2);;
 V:=F^6;;
 vecs:=Filtered(Elements(V),v->v<>Zero(V));;
-# Canonical integer mask for a row vector.
 Mask:=v->Sum([1..6],i->Int(v[i])*2^(i-1));;
 PosByMask:=[];; for i in [1..Length(vecs)] do PosByMask[Mask(vecs[i])+1]:=i; od;
 WeightBits:=x->Number([0..5],i->QuoInt(x,2^i) mod 2=1);;
@@ -23,7 +22,6 @@ compPts:=Set(List(compMasks,x->PosByMask[x+1]));;
 if Length(selPts)<>23 or Length(compPts)<>40 then Error("23+40 split failed"); fi;
 
 GL:=GL(6,2);;
-# Convert matrix generators to permutations of the 63 nonzero row vectors.
 PermOfMat:=function(M)
   return PermList(List(vecs,v->Position(vecs,v*M)));
 end;;
@@ -32,7 +30,6 @@ if Size(G63)<>Size(GL) then Error("GL6 action not faithful"); fi;
 Stab:=Stabilizer(G63,selPts,OnSets);;
 if Set(compPts)<>Difference([1..63],Set(selPts)) then Error("complement mismatch"); fi;
 
-# Induced faithful action on the 40 complement points.
 K40:=Image(ActionHomomorphism(Stab,compPts,OnPoints));;
 orbs:=SortedList(List(Orbits(K40,[1..40]),Length));;
 trans:=Length(orbs)=1;
@@ -42,7 +39,6 @@ if trans then
   rank:=Length(subdegrees);
 fi;
 
-# Build exact W33 point action for permutation-conjugacy testing when possible.
 S:=Sp(4,3);; pts3:=NormedRowVectors(GF(3)^4);;
 P40:=Image(ActionHomomorphism(S,pts3,OnLines));;
 S40:=SymmetricGroup(40);;
@@ -52,7 +48,6 @@ N40:=Normalizer(S40,P40);;
 conjFull:=false;;
 if Size(K40)=Size(N40) then conjFull:=IsConjugate(S40,K40,N40); fi;
 
-# If there is a 12-suborbit, build its orbital graph and certify SRG parameters.
 srgok:=false;; lam:=fail;; mu:=fail;; degree:=fail;;
 if trans and 12 in subdegrees then
   O:=First(Orbits(Stabilizer(K40,1),[1..40]),x->Length(x)=12);
@@ -60,17 +55,22 @@ if trans and 12 in subdegrees then
   degree:=Length(adj[1]);; srgok:=ForAll(adj,x->Length(x)=degree);;
   for i in [1..40] do
     for j in [i+1..40] do
-      c:=Length(Intersection(adj[i],adj[j]));
+      cc:=Length(Intersection(adj[i],adj[j]));
       if j in adj[i] then
-        if lam=fail then lam:=c; elif lam<>c then srgok:=false; fi;
+        if lam=fail then lam:=cc; elif lam<>cc then srgok:=false; fi;
       else
-        if mu=fail then mu:=c; elif mu<>c then srgok:=false; fi;
+        if mu=fail then mu:=cc; elif mu<>cc then srgok:=false; fi;
       fi;
     od;
   od;
 fi;
 
-Bool:=x->if x then return "true"; else return "false"; fi; end;;
+BoolJson:=function(x)
+  if x then return "true"; else return "false"; fi;
+end;;
+NumOrNull:=function(x)
+  if x=fail then return "null"; else return String(x); fi;
+end;;
 stream:=OutputTextFile(out,false);; SetPrintFormattingStatus(stream,false);;
 AppendTo(stream,"{\n");
 AppendTo(stream," \"schema\":\"w33.pass7159.fano40_full_gl6_stabilizer.v1\",\n");
@@ -79,12 +79,12 @@ AppendTo(stream," \"GL6_2_order\":",String(Size(G63)),",\n");
 AppendTo(stream," \"setwise_stabilizer_order\":",String(Size(Stab)),",\n");
 AppendTo(stream," \"induced_order_on_40\":",String(Size(K40)),",\n");
 AppendTo(stream," \"orbit_sizes_on_40\":[",JoinStringsWithSeparator(List(orbs,String),","),"],\n");
-AppendTo(stream," \"transitive\":",Bool(trans),",\n");
+AppendTo(stream," \"transitive\":",BoolJson(trans),",\n");
 AppendTo(stream," \"subdegrees\":[",JoinStringsWithSeparator(List(subdegrees,String),","),"],\n");
 AppendTo(stream," \"rank\":",String(rank),",\n");
-AppendTo(stream," \"conjugate_to_PSp4_3_point_action\":",Bool(conjP),",\n");
-AppendTo(stream," \"conjugate_to_full_W33_aut_action\":",Bool(conjFull),",\n");
-AppendTo(stream," \"valency12_orbital_srg\":{\"exists\":",Bool(degree=12),",\"strongly_regular\":",Bool(srgok),",\"lambda\":",String(lam),",\"mu\":",String(mu),"},\n");
+AppendTo(stream," \"conjugate_to_PSp4_3_point_action\":",BoolJson(conjP),",\n");
+AppendTo(stream," \"conjugate_to_full_W33_aut_action\":",BoolJson(conjFull),",\n");
+AppendTo(stream," \"valency12_orbital_srg\":{\"exists\":",BoolJson(degree=12),",\"strongly_regular\":",BoolJson(srgok),",\"lambda\":",NumOrNull(lam),",\"mu\":",NumOrNull(mu),"},\n");
 AppendTo(stream," \"boundary\":\"This is the full F2-linear stabilizer of the concrete 23/40 projective split. A positive permutation conjugacy is an object-level binary model of the W33 point action; a mere equality of orders or orbit sizes is not promoted without the conjugacy test.\"\n");
 AppendTo(stream,"}\n"); CloseStream(stream);;
 Print("Pass7159 full GL6 stabilizer |Stab|=",Size(Stab)," induced=",Size(K40)," orbits=",orbs," subdegrees=",subdegrees," conjP=",conjP," conjFull=",conjFull,"\n");
