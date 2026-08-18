@@ -17,11 +17,11 @@
 
 ## ✅ Next Steps
 <!-- What should we do next? -->
-- Auto-saved at 2026-08-17T23:54:27.685Z (reason: timer)
+- Auto-saved at 2026-08-18T00:54:27.712Z (reason: timer)
 - Recent commits:
+  - 782e33604 Pass6120-6127: it is q = 3 mod 4, NOT characteristic 3 -- and the two selection principles conflict
   - a2cf11f30 Pass6112-6119: q=5 has NO canonical chirality -- a structural selection principle for q=3
   - 47740c4cc Merge remote-tracking branch 'origin/master'
-  - 6571ece2c Pass6104-6111: the substrate has a canonical chirality -- both halves were already here
 
 ## 📝 Open Questions
 <!-- What do we still need to figure out? -->

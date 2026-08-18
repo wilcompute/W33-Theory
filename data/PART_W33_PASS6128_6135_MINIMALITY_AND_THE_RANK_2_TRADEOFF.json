@@ -1,0 +1,77 @@
+{
+  "boundary": "Pass 6128 argues MINIMALITY, which is a selection principle only if one already wants characteristic 3 -- it does not derive characteristic 3. Pass 6130's rank observation uses the classical non-existence of ovoids at rank >= 3, consistent with my measured alpha(W(5,2)) = 7 < 9",
+  "pass_6128_q27_gains_nothing": {
+    "finding": "q = 3, 27 and 243 all have characteristic 3 AND chirality AND no ovoid -- an identical structural profile. The only difference between them is SIZE",
+    "profile": [
+      {
+        "char": 3,
+        "chirality": true,
+        "ovoid": false,
+        "points": 40,
+        "q": 3,
+        "q_mod_4": 3
+      },
+      {
+        "char": 3,
+        "chirality": false,
+        "ovoid": false,
+        "points": 820,
+        "q": 9,
+        "q_mod_4": 1
+      },
+      {
+        "char": 3,
+        "chirality": true,
+        "ovoid": false,
+        "points": 20440,
+        "q": 27,
+        "q_mod_4": 3
+      },
+      {
+        "char": 3,
+        "chirality": false,
+        "ovoid": false,
+        "points": 538084,
+        "q": 81,
+        "q_mod_4": 1
+      },
+      {
+        "char": 3,
+        "chirality": true,
+        "ovoid": false,
+        "points": 14408200,
+        "q": 243,
+        "q_mod_4": 3
+      }
+    ],
+    "so": "the selection is MINIMALITY: q = 3 is the smallest field with both characteristic 3 and a canonical chirality. 27 and 243 gain nothing structural",
+    "the_27_trap": "|F_27| = 27 is NOT the 27 of E6. One is a field cardinality, the other a representation dimension. Flagged before anyone reaches for it -- this session has killed thirteen coincidences of that exact shape"
+  },
+  "pass_6130_the_tradeoff_is_rank_2_only": {
+    "chirality": "depends only on q mod 4, independent of rank",
+    "consequence": "at rank >= 3 the trade-off DISSOLVES -- there is no ovoid to trade away, so every q = 3 mod 4 has chirality at no cost",
+    "ovoids": "W(2n-1,q) has ovoids at rank 2 iff q is even; at rank >= 3 they NEVER exist, at any q. Consistent with my measured alpha(W(5,2)) = 7 against q^3+1 = 9",
+    "so": "the ovoid/chirality tension found at Pass 6123 is a RANK-2 PHENOMENON, and rank 2 is exactly where W(3,3) lives. The substrate sits at the unique rank where the trade-off is real"
+  },
+  "pass_6131_the_closing_picture": {
+    "honest_summary": "the session moved chirality from 'impossible from inside' to 'canonical pair, unswappable, existing only for q = 3 mod 4, with q = 3 minimal among characteristic-3 options'. That is a real narrowing. It is not a derivation",
+    "what_is_still_not_derived": [
+      "why characteristic 3 rather than 7 or 11",
+      "which of U, U* is physical",
+      "the Standard Model's actual handedness"
+    ],
+    "what_selects_q_equals_3": [
+      "chirality requires q = 3 mod 4 (Gow, Vinroot) -- excludes q = 5, 9, 13",
+      "characteristic 3, if wanted, restricts to q = 3, 27, 243",
+      "those three have identical structural profiles, so minimality picks q = 3",
+      "and at rank 2 the ovoid must be given up, which is a real cost paid only here"
+    ]
+  },
+  "pass_6132_corpus_audit_flag": {
+    "action": "both should be checked against Pass 6120: chirality is q mod 4, not characteristic 3, and q = 9 is the counterexample. NOT edited here",
+    "files_attributing_results_to_characteristic_3": [
+      "analysis/MILESTONES.md",
+      "analysis/W33_HONEST_SYNTHESIS.md"
+    ]
+  }
+}

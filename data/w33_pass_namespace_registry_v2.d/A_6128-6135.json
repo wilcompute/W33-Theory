@@ -1,0 +1,8 @@
+{
+  "lo": 6128,
+  "hi": 6135,
+  "lane": "A",
+  "track": "A",
+  "topic": "q=27 gains nothing so q=3 is minimal; the ovoid/chirality trade-off exists only at rank 2, where W(3,3) lives",
+  "reserved": "2026-08-17"
+}
