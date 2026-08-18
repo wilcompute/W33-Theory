@@ -5,6 +5,7 @@ on:
     branches: [master]
     paths:
       - 'analysis/w33_pass7154_7162_nine_front_e8_audit.py'
+      - 'analysis/w33_pass7154_7162_nine_front_e8_audit_v2.py'
       - '.github/workflows/w33_pass7154_7162_nine_front_e8_audit.yml'
   workflow_dispatch:
 
@@ -27,16 +28,19 @@ jobs:
       - name: Exact nine-front replay
         run: |
           export PYTHONPATH="$PWD/analysis:${PYTHONPATH:-}"
-          python analysis/w33_pass7154_7162_nine_front_e8_audit.py
+          python analysis/w33_pass7154_7162_nine_front_e8_audit_v2.py
       - name: Freeze certificate
         run: |
+          cp data/PART_W33_PASS7154_7162_NINE_FRONT_E8_AUDIT.json /tmp/pass7154_7162.json
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin master
+          git rebase origin/master
+          cp /tmp/pass7154_7162.json data/PART_W33_PASS7154_7162_NINE_FRONT_E8_AUDIT.json
           git add data/PART_W33_PASS7154_7162_NINE_FRONT_E8_AUDIT.json
           if git diff --cached --quiet; then
             echo 'Certificate already canonical.'
           else
             git commit -m 'Pass7154-7162: freeze exact nine-front E8 audit [skip ci]'
-            git pull --rebase origin master
             git push origin HEAD:master
           fi
