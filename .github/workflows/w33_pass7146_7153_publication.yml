@@ -1,0 +1,80 @@
+name: W33 Pass7146-7153 publication proof
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/PASS7146_7153_exact_q9_pgl2_hexad_code_insert.tex'
+      - 'analysis/PASS7146_7153_index_insert.html'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/w33_publication_frontier_contract_v2.json'
+      - 'tools/materialize_pass7146_7153_frontier.py'
+      - '.github/workflows/w33_pass7146_7153_publication.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  replay-compile-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install replay dependencies
+        run: python -m pip install --upgrade pip pytest numpy networkx
+      - name: Replay PGL2 hexad code producer
+        run: python analysis/w33_pass7147_7153_pgl2_hexad_code_closure.py
+      - name: Focused regression
+        run: python -m pytest -q tests/test_w33_pass7147_7153_pgl2_hexad_code_closure.py
+      - name: Audit publication reachability
+        run: |
+          grep -F '\input{analysis/PASS7146_7153_exact_q9_pgl2_hexad_code_insert}%' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+          grep -F 'pass-7146-7153-q9-pgl2-hexad-code' data/w33_publication_frontier_contract_v2.json
+      - name: Install Tectonic
+        run: |
+          curl --proto '=https' --tlsv1.2 -LsSf https://drop-sh.fullyjustified.net | sh
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+      - name: Compile all three canonical manuscripts
+        run: |
+          mkdir -p evidence/pass7146_7153
+          for f in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$f"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass7146_7153/pdf_sha256.txt
+      - name: Materialize public frontier and freeze proof
+        run: |
+          cp data/PART_W33_PASS7147_7153_PGL2_HEXAD_CODE_CLOSURE.json /tmp/pgl2_cert.json
+          git fetch origin master
+          git reset --hard origin/master
+          cp /tmp/pgl2_cert.json data/PART_W33_PASS7147_7153_PGL2_HEXAD_CODE_CLOSURE.json
+          python tools/materialize_pass7146_7153_frontier.py
+          grep -c 'id="pass-7146-7153-q9-pgl2-hexad-code"' docs/index.html | grep '^1$'
+          grep -c 'id="pass-7146-7153-q9-pgl2-hexad-code"' index.html | grep '^1$'
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          clique=Path('data/PART_W33_PASS7146_EXACT_EIGHT_CLIQUES.json')
+          d={
+            'schema':'w33.pass7146_7153.publication_proof.v1',
+            'status':'PASS',
+            'source_commit':os.environ['GITHUB_SHA'],
+            'pgl2_hexad_code_replayed':True,
+            'focused_regression_passed':True,
+            'all_three_canonical_manuscripts_compiled':True,
+            'public_card_materialized_both_surfaces':True,
+            'pass7146_exact_clique_certificate_present':clique.exists(),
+            'pdf_sha256':Path('evidence/pass7146_7153/pdf_sha256.txt').read_text().strip().splitlines(),
+          }
+          Path('data/PART_W33_PASS7146_7153_PUBLICATION_PROOF.json').write_text(json.dumps(d,indent=2)+'\n')
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/PART_W33_PASS7147_7153_PGL2_HEXAD_CODE_CLOSURE.json data/PART_W33_PASS7146_7153_PUBLICATION_PROOF.json docs/index.html index.html
+          git commit -m 'Pass7146-7153: freeze replay compile and public proof [skip ci]'
+          git push origin HEAD:master
