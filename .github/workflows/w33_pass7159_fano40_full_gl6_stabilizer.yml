@@ -1,0 +1,39 @@
+name: W33 Pass7159 full GL6 Fano40 stabilizer
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass7159_fano40_full_gl6_stabilizer.g'
+      - '.github/workflows/w33_pass7159_fano40_full_gl6_stabilizer.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  gap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install GAP
+        run: sudo apt-get update && sudo apt-get install -y gap
+      - name: Run full GL6 stabilizer audit
+        env:
+          W33_REPO: ${{ github.workspace }}
+        run: gap -q analysis/w33_pass7159_fano40_full_gl6_stabilizer.g
+      - name: Freeze certificate
+        run: |
+          cp data/PART_W33_PASS7159_FANO40_FULL_GL6_STABILIZER.json /tmp/fano40full.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin master
+          git rebase origin/master
+          cp /tmp/fano40full.json data/PART_W33_PASS7159_FANO40_FULL_GL6_STABILIZER.json
+          git add data/PART_W33_PASS7159_FANO40_FULL_GL6_STABILIZER.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Pass7159: freeze full GL6 Fano40 stabilizer audit [skip ci]'
+          git push origin HEAD:master
