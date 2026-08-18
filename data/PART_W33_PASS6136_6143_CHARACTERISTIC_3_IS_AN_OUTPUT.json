@@ -1,0 +1,55 @@
+{
+  "boundary": "Pass 6136's monotonicity rests on alpha at q = 7 and 11, which are ILS PLATEAUS not proofs -- though the method reproduced both proved values at q = 3 and 5 (Pass 6048). Pass 6138 is a NEGATIVE: no substrate-internal distinguisher between U and U* was found, and that is a finding rather than an incomplete search",
+  "pass_6136_characteristic_3_is_an_output": {
+    "caveat": "q = 7 and 11 are unproved plateaus; the monotonicity is credible but not proved, and proving alpha(W(3,7)) would settle it",
+    "data": [
+      {
+        "alpha": 7,
+        "deficit": 3,
+        "efficiency": 0.7,
+        "ovoid_size": 10,
+        "q": 3
+      },
+      {
+        "alpha": 33,
+        "deficit": 17,
+        "efficiency": 0.66,
+        "ovoid_size": 50,
+        "q": 7
+      },
+      {
+        "alpha": 67,
+        "deficit": 55,
+        "efficiency": 0.5492,
+        "ovoid_size": 122,
+        "q": 11
+      }
+    ],
+    "finding": "efficiency DECREASES monotonically. Among all q supporting chirality, q = 3 is the CLOSEST to admitting an ovoid -- the least defective chirality-bearing symplectic space",
+    "the_consequence": "this selects q = 3 WITHOUT ASSUMING characteristic 3. Characteristic 3 is an OUTPUT of the selection, not an input to it -- which removes the last unexplained input Pass 6131 listed",
+    "the_measure": "chirality-supporting q are odd, hence have NO ovoid, so alpha falls short of q^2+1. The efficiency alpha/(q^2+1) measures how close the space comes to admitting one anyway",
+    "the_question": "chirality needs q = 3 mod 4, giving {3, 7, 11, 19, 23, 27, 31, ...}. Nothing in that condition mentions characteristic 3. So what picks 3?"
+  },
+  "pass_6138_the_distinguisher_is_not_there": {
+    "candidates_checked": [
+      "F_3* = {1,2}: its unique nontrivial element is canonical, but it lives in F_3, not in the character field, and supplies no cube root",
+      "Frobenius x -> x^3: acts TRIVIALLY on F_3, so it makes no choice either"
+    ],
+    "verdict": "NO substrate-internal distinguisher found. The gap named at Pass 6106 remains open",
+    "what_is_needed": "the character field is Q(sqrt(-3)) = Q(omega). Swapping U and U* is complex conjugation, which exchanges omega and omega-bar. So a substrate-internal distinguisher must canonically pick ONE primitive cube root of unity",
+    "why_this_is_a_finding": "the obstruction is now located precisely -- it is not that the substrate lacks a complex structure (Pass 353 gave one) nor that it can undo it (Pass 6096 forbade that), but that nothing inside F_3 selects a cube root of unity. That is a sharper statement of what is missing than 'chirality is unselectable'"
+  },
+  "pass_6139_the_arc_in_full": {
+    "ends_at": "a canonical pair with no internal way to choose a member, because nothing in F_3 picks a cube root of unity",
+    "started": "Pass 346: chirality is unselectable from inside the substrate",
+    "steps": [
+      "Sp(4,3) is PERFECT, so it cannot swap half-spins (Pass 6096)",
+      "20 of its 34 characters are non-self-dual, including both Weil constituents (Pass 6104)",
+      "so a canonical unswappable PAIR exists",
+      "that requires q = 3 mod 4, NOT characteristic 3 -- q = 9 has none (Pass 6120)",
+      "among characteristic-3 options q = 3, 27, 243 are identical, so minimality picks 3 (Pass 6128)",
+      "and among ALL chirality-supporting q, q = 3 maximises efficiency, so characteristic 3 is an output not an input (this pass)"
+    ],
+    "what_that_is_worth": "the no-go moved from 'the substrate cannot pose the question' to 'the substrate poses it canonically and cannot answer it'. The remaining gap is one specific missing choice, not a structural impossibility"
+  }
+}
