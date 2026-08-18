@@ -1,0 +1,42 @@
+name: W33 Pass7154-7162 nine-front E8 audit
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass7154_7162_nine_front_e8_audit.py'
+      - '.github/workflows/w33_pass7154_7162_nine_front_e8_audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip numpy networkx
+      - name: Exact nine-front replay
+        run: |
+          export PYTHONPATH="$PWD/analysis:${PYTHONPATH:-}"
+          python analysis/w33_pass7154_7162_nine_front_e8_audit.py
+      - name: Freeze certificate
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/PART_W33_PASS7154_7162_NINE_FRONT_E8_AUDIT.json
+          if git diff --cached --quiet; then
+            echo 'Certificate already canonical.'
+          else
+            git commit -m 'Pass7154-7162: freeze exact nine-front E8 audit [skip ci]'
+            git pull --rebase origin master
+            git push origin HEAD:master
+          fi
