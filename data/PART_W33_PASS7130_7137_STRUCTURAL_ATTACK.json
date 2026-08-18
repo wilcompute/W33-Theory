@@ -1,0 +1,102 @@
+{
+  "boundary": "Exact finite symplectic geometry only. q=9 optimality is still open; no physics inference is made.",
+  "pass_7130_blocker_deficiency": {
+    "theorem": "For a fixed independent set S and an outside independent set T, replacing B(T)=union_{v in T}(N(v) cap S) by T gives an independent set. Hence a larger independent set exists anywhere iff some outside independent T has |B(T)|-|T|<0.",
+    "q9_model": {"outside_x":769,"witness_y":51,"binary_variables":820,"outside_edge_constraints":32310,"blocker_implications":4590},
+    "proved_radius": "Pass7125 proves deficiency >=0 for |T|<=8. The unrestricted exact MILP was executed but did not close within the bounded run; no alpha=51 claim is made."
+  },
+  "pass_7131_stabilizer": {
+    "order": 2,
+    "isomorphism": "C2",
+    "generator_matrix_GF9": [[1,0,0,0],[1,2,3,6],[3,0,5,6],[3,0,4,7]],
+    "generator_square": "I",
+    "similitude_multiplier": 2,
+    "inside_orbits": "1 + 25*2",
+    "unique_fixed_witness_point": 80,
+    "semilinear_frame_match_counts": {"id_linear":51,"id_frobenius":6,"pi_linear":51,"pi_frobenius":6},
+    "P_Gamma_Sp_order": 6886425600,
+    "orbit_size": 3443212800
+  },
+  "pass_7132_gram_compression": {
+    "anchor_witness_positions": [0,1,2,5],
+    "anchor_graph_indices": [22,24,78,95],
+    "G": [[0,2,1,3],[1,0,8,3],[2,4,0,1],[6,6,2,0]],
+    "G_inverse": [[0,3,1,7],[6,0,2,6],[2,1,0,6],[5,3,3,0]],
+    "identity": "A_ij = - r_i G^{-1} r_j^T with r_i the four anchor pairings",
+    "verified_entries": 2601,
+    "target_52_variable_reduction": "After choosing a nonsingular four-anchor principal block, 48 four-entry rows plus the six anchor pairings determine all 1326 off-diagonal Gram entries: 198 GF(9) variables before further gauge reduction."
+  },
+  "pass_7133_blocker_orbits": {
+    "intrinsic_fourset_types": 16,
+    "inside_fingerprint_classes": 26,
+    "inside_class_sizes": {"1":1,"2":25},
+    "edge_fingerprint_classes": 650,
+    "edge_class_sizes": {"1":25,"2":625},
+    "outside_fingerprint_classes": 394,
+    "outside_fingerprint_class_sizes": {"1":19,"2":375},
+    "fingerprints_equal_C2_orbits": true,
+    "blocker_orbits": {
+      "1":{"fixed":1,"pairs":0,"vertices":1},
+      "2":{"fixed":2,"pairs":10,"vertices":22},
+      "3":{"fixed":0,"pairs":25,"vertices":50},
+      "4":{"fixed":2,"pairs":50,"vertices":102},
+      "5":{"fixed":2,"pairs":77,"vertices":156},
+      "6":{"fixed":4,"pairs":58,"vertices":120},
+      "7":{"fixed":4,"pairs":69,"vertices":142},
+      "8":{"fixed":1,"pairs":53,"vertices":107},
+      "9":{"fixed":3,"pairs":25,"vertices":53},
+      "10":{"fixed":0,"pairs":8,"vertices":16}
+    }
+  },
+  "pass_7134_q7_control": {
+    "stored_size": 33,
+    "published_status": "Cimrakova et al. (Eur. J. Combin. 28 (2007) 1934-1942) report the exhaustive W(7) maximum; publication provenance is recorded in the report, not proved by this certificate.",
+    "blocker_histogram": {"2":17,"3":56,"4":77,"5":74,"6":65,"7":46,"8":32},
+    "zero_blockers": 0,
+    "one_blockers": 0,
+    "stabilizer_order": 2,
+    "inside_orbits": "1 + 16*2",
+    "unique_fixed_witness_point": 89,
+    "generator_matrix_F7": [[2,2,0,6],[0,5,0,0],[0,6,2,3],[0,0,0,5]],
+    "generator_projective_square": "4I",
+    "similitude_multiplier": 3,
+    "blocker_orbits": {
+      "2":{"fixed":1,"pairs":8,"vertices":17},
+      "3":{"fixed":2,"pairs":27,"vertices":56},
+      "4":{"fixed":5,"pairs":36,"vertices":77},
+      "5":{"fixed":2,"pairs":36,"vertices":74},
+      "6":{"fixed":1,"pairs":32,"vertices":65},
+      "7":{"fixed":4,"pairs":21,"vertices":46},
+      "8":{"fixed":0,"pairs":16,"vertices":32}
+    },
+    "PGSp_order": 276595200,
+    "orbit_size_under_PGSp": 138297600
+  },
+  "pass_7135_frobenius_union": {
+    "intersection": 4,
+    "symmetric_difference": 94,
+    "cross_graph_sides": [47,47],
+    "cross_edges": 301,
+    "perfect_matching": 47,
+    "alpha_of_union": 51,
+    "proof": "The four common points are isolated in the union graph. The remaining graph is bipartite on 47+47 vertices; a perfect matching has size 47, so by Konig alpha=94-47+4=51. Thus no recombination using only S union Frobenius(S) can make 52."
+  },
+  "pass_7136_quadratic_character": {
+    "q9": {"q_mod_4":1,"minus_one_square":true,"matrix_symmetry":"symmetric","size":51,"rank_over_Q":51,"certificate":"rank mod 5 = 51; det mod 5 = 3"},
+    "q7": {"q_mod_4":3,"minus_one_square":false,"matrix_symmetry":"skew-symmetric","size":33,"rank_over_Q":32,"certificate":"rank mod 3 = 32; odd skew size forces rank <=32"},
+    "boundary": "This is an algebraic q mod 4 resonance in quadratic-character switching classes, not a derivation of physical chirality."
+  },
+  "pass_7137_fixed_lines": {
+    "q9_fixed_projective_points": 20,
+    "eigenspace_lines": {
+      "lambda_1": [26,158,246,313,351,436,497,613,710,771],
+      "lambda_minus1": [2,10,20,30,40,50,60,70,80,90]
+    },
+    "each_line_size": 10,
+    "each_line_totally_isotropic": true,
+    "swap_fixed_pair": [80,40],
+    "mechanism": "The C2 generator has multiplier -1 and two 2D eigenspaces. Each eigenspace is totally isotropic, so the projective fixed locus is two generator lines. Both 80 and 40 are fixed and lie on the same fixed line; the two-state local swap chooses which fixed point from that line is used."
+  },
+  "schema": "w33.pass7130_7137.structural_attack.v1",
+  "status": "PASS"
+}
