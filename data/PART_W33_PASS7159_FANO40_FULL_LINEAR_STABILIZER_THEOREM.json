@@ -1,13 +1,13 @@
 {
-  "schema": "w33.pass7159.fano40_full_linear_stabilizer.theorem.v1",
+  "schema": "w33.pass7159.fano40_full_linear_stabilizer.theorem.v2",
   "status": "THEOREM",
   "selected_23_model": "Let F2^6=A direct_sum B with dim A=dim B=3 and choose bases EA,EB. The selected 23 projective points are (A\\{0}) union (B\\{0}) union {e+f:e in EA,f in EB} = 7+7+9.",
   "complement_40_model": "{(u,v):u in A\\{0}, v in B\\{0}} minus (EA x EB), hence 7*7-3*3=40.",
   "full_GL6_2_setwise_stabilizer": "S3 wr C2 = (S3 x S3) semidirect C2",
   "stabilizer_order": 72,
   "proof": [
-    "The only projective planes PG(2,2) wholly contained in the selected 23-set are A\\{0} and B\\{0}. Any mixed 3-space contains a vector with nonzero A- and B-components; closure under addition with two independent points forces either a mixed weight-three/four point outside the selected set or reduces the mixed part below dimension three. Thus every linear setwise stabilizer preserves or swaps the unordered pair {A,B}.",
-    "Within A, a point u has some f in B with u+f among the 9 cross-grid points iff u is one of the three chosen basis points EA; similarly for B. Hence a stabilizer preserving A and B must preserve EA and EB setwise, giving S3 x S3. The block swap A<->B is present, so the full stabilizer is S3 wr C2 of order 72.",
+    "The only projective planes PG(2,2) wholly contained in the selected 23-set are A\\{0} and B\\{0}. To prove this, suppose a 3-space H is mixed. Every mixed nonzero vector in H must be a grid vector (e_i,f_j). If two grid vectors differ in both row and column, their sum has both components of coordinate weight two and is outside the selected set. Hence all mixed vectors of H lie in one grid row or one grid column. Three mixed vectors in one row (e_i,f_1),(e_i,f_2),(e_i,f_3) have sum (e_i,f_1+f_2+f_3), which is not selected; so H has at most two mixed nonzero vectors. But if r_A=dim(H intersect A), r_B=dim(H intersect B), then r_A+r_B<=3 and, for a genuinely mixed H, the number of pure nonzero vectors is at most (2^2-1)+(2^1-1)=4. Thus a 3-space with seven nonzero vectors has at least three mixed vectors, contradiction. Therefore H is A or B.",
+    "Since A and B are the unique full Fano planes in the 23-set, every linear setwise stabilizer preserves or swaps the unordered pair {A,B}. Within A, a point u has some f in B with u+f among the 9 cross-grid points iff u is one of the three chosen basis points EA; similarly for B. Hence a stabilizer preserving A and B must preserve EA and EB setwise, giving S3 x S3. The block swap A<->B is present, so the full stabilizer is S3 wr C2 of order 72.",
     "Under S3 on a Fano plane with a chosen basis, the seven nonzero points have three orbits by coordinate weight: sizes 3,3,1. On the complement, unordered type pairs excluding (1,1) have sizes 18,6,9,6,1."
   ],
   "complement_orbit_sizes": [1,6,6,9,18],
