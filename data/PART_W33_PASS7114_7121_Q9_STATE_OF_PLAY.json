@@ -1,0 +1,69 @@
+{
+  "boundary": "This pass establishes three things that need no search: Tallini's q^2-q+1 = 73 is a PUBLISHED bound that supersedes Pass 5658's 80.84 MILP dual bound at q=9; the repo's alpha >= 51 is stored as an integer with NO witness and cannot be re-verified; and the best published general lower bound at q=9 is 2q+1 = 19 because 9 = 3^2 is excluded from the (q^{3/2}+3q-q^{1/2}+3)/3 construction. alpha(W(3,9)) itself is NOT determined here, and the deficit formula q^2-q+1-C(q-2,2) is an interpolation with zero degrees of freedom",
+  "pass_7114": {
+    "corrected_interval": [
+      51,
+      73
+    ],
+    "hoffman_q2_plus_1": 82,
+    "lesson": "a dual bound from a truncated MILP run is never better than a theorem; the repo computed a bound it could have cited",
+    "previous_interval": [
+      51,
+      80
+    ],
+    "q": 9,
+    "repo_dual_bound_pass5658": 80.84,
+    "tallini_q2_minus_q_plus_1": 73
+  },
+  "pass_7115": {
+    "consequence": "the bound cannot be re-verified, handed on, or extended; the next search must rediscover 51 before trying 52",
+    "repo_lower_bound": 51,
+    "rule": "a lower bound is a witness, not a number",
+    "witness_stored": false
+  },
+  "pass_7116": {
+    "citation": "M. Ceria, J. De Beule, F. Pavese, V. Smaldore, On large partial ovoids of symplectic and Hermitian polar spaces, arXiv:2203.04553, Table 1",
+    "lower_bound_odd_square_p_ne_3": "(q^{3/2}+3q-q^{1/2}+3)/3",
+    "lower_bound_q_eq_3_pow_h": "2q+1 = 19 at q=9",
+    "novelty_status": "NOT a novelty claim -- Cimrakova-Fack settled q=5,7 exhaustively and stopped; heuristic searches by others may exceed 19 at q=9 without appearing in that table",
+    "upper_bound": "q^2-q+1 = 73",
+    "why_q9_excluded": "9 = 3^2 has p = 3, and the stronger row requires p != 3"
+  },
+  "pass_7117": {
+    "degrees_of_freedom": 0,
+    "equivalent_to": "(q+4)(q-1)/2",
+    "evidential_status": "NONE",
+    "fitted_on": {
+      "3": 7,
+      "5": 18,
+      "7": 33
+    },
+    "formula": "alpha(W(3,q)) = q^2 - q + 1 - C(q-2,2), q odd",
+    "predictions": {
+      "11": 75,
+      "13": 102,
+      "9": 52
+    },
+    "why_written_down": "the deficit is a BINOMIAL COEFFICIENT, which is what a counting obstruction over pairs from a (q-2)-set produces -- it says where to look for a proof"
+  },
+  "pass_7118_7120": {
+    "ilp_reduction": "fixes a non-collinear pair -- legitimate, since the automorphism group is transitive on such pairs",
+    "ilp_status_at_writing": "~151,000 nodes, no feasible 52, no infeasibility proof",
+    "method": "large-neighbourhood search: destroy a slice, re-solve it exactly",
+    "outcome_semantics": {
+      "proof_51_optimal": "kills the formula; the more informative outcome",
+      "timeout": "settles neither, and must be reported as neither",
+      "verified_52": "beats the incumbent; weak evidence for the formula"
+    },
+    "why_not_more_local_search": "Pass 5784 reports three local-search classes all plateauing at 51; LNS is a different move set, capable of coordinated k-way exchanges"
+  },
+  "pass_7121": {
+    "not_claimed": [
+      "that 51 is novel",
+      "that the deficit formula is more than a fit"
+    ],
+    "not_established": [
+      "alpha(W(3,9))"
+    ]
+  }
+}
