@@ -4,5 +4,7 @@
   "lane": "A",
   "track": "A",
   "topic": "exact q9 clique coherent-algebra attack, Gram-to-PGL2 bridge, code-to-geometry lifting obstruction, higher-rank involution extension, witness-orbit coherent geometry, three outside-box probes, and E8 248-dimensional bridge audit",
-  "reserved": "2026-08-18"
+  "reserved": "2026-08-18",
+  "status": "PUBLISHED_WITH_PASS7154_Q9_48_DECISION_OPEN",
+  "boundary": "Passes7155-7162 theorem-grade algebraic results are promoted. Pass7154 has eight parallel exact CaDiCaL target-48 jobs but no frozen aggregate certificate yet; alpha(W(3,9))=51 is not claimed. The E8 audit rejects the direct 248-adjoint, Construction-A, affine-Hamming and natural binary40=W33 routes without rejecting the previously certified E8 240-roots -> 40 W33-points fibration."
 }
