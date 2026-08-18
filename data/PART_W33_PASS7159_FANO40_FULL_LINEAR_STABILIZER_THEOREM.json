@@ -1,0 +1,18 @@
+{
+  "schema": "w33.pass7159.fano40_full_linear_stabilizer.theorem.v1",
+  "status": "THEOREM",
+  "selected_23_model": "Let F2^6=A direct_sum B with dim A=dim B=3 and choose bases EA,EB. The selected 23 projective points are (A\\{0}) union (B\\{0}) union {e+f:e in EA,f in EB} = 7+7+9.",
+  "complement_40_model": "{(u,v):u in A\\{0}, v in B\\{0}} minus (EA x EB), hence 7*7-3*3=40.",
+  "full_GL6_2_setwise_stabilizer": "S3 wr C2 = (S3 x S3) semidirect C2",
+  "stabilizer_order": 72,
+  "proof": [
+    "The only projective planes PG(2,2) wholly contained in the selected 23-set are A\\{0} and B\\{0}. Any mixed 3-space contains a vector with nonzero A- and B-components; closure under addition with two independent points forces either a mixed weight-three/four point outside the selected set or reduces the mixed part below dimension three. Thus every linear setwise stabilizer preserves or swaps the unordered pair {A,B}.",
+    "Within A, a point u has some f in B with u+f among the 9 cross-grid points iff u is one of the three chosen basis points EA; similarly for B. Hence a stabilizer preserving A and B must preserve EA and EB setwise, giving S3 x S3. The block swap A<->B is present, so the full stabilizer is S3 wr C2 of order 72.",
+    "Under S3 on a Fano plane with a chosen basis, the seven nonzero points have three orbits by coordinate weight: sizes 3,3,1. On the complement, unordered type pairs excluding (1,1) have sizes 18,6,9,6,1."
+  ],
+  "complement_orbit_sizes": [1,6,6,9,18],
+  "transitive": false,
+  "W33_point_action_comparison": "The certified Pass1021 E8-root base/W33 point action is transitive of rank 3 with subdegrees 1,12,27 and PSp(4,3) order 25920. Therefore the binary complement with its full F2-linear stabilizer is not permutation-isomorphic to that W33 point action.",
+  "E8_consequence": "The new 40=(7x7)-(3x3) object does not supply the missing identification between the 248-code and the certified E8 240->40 W33 root fibration through the natural PG(5,2) linear symmetry route.",
+  "boundary": "This rejects the natural F2-linear/projective identification. It does not forbid defining an unrelated graph or nonlinear bijection on the same 40-element set."
+}
