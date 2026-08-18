@@ -5,7 +5,15 @@ on:
     branches: [master]
     paths:
       - 'analysis/w33_pass7138_7145_c2_normalform_matrix_quotient.py'
+      - 'analysis/BT7138_BT7145_c2_normalform_matrix_quotient.md'
+      - 'analysis/PASS7138_7145_c2_normalform_matrix_quotient_insert.tex'
+      - 'analysis/PASS7138_7145_index_insert.html'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/PART_W33_PASS7138_7145_C2_NORMALFORM_MATRIX_QUOTIENT.json'
+      - 'data/w33_publication_frontier_contract_v2.json'
+      - 'data/w33_pass_namespace_registry_v2.d/A_7138-7145.json'
       - 'tests/test_w33_pass7138_7145_c2_normalform_matrix_quotient.py'
+      - 'tools/materialize_pass7138_7145_frontier.py'
       - '.github/workflows/w33_pass7138_7145_c2_normalform_matrix_quotient.yml'
   workflow_dispatch:
 
@@ -13,9 +21,9 @@ permissions:
   contents: write
 
 jobs:
-  replay:
+  replay-test-compile-publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
         with:
@@ -23,21 +31,81 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+
       - name: Install exact replay dependencies
         run: python -m pip install --upgrade pip pytest numpy networkx
-      - name: Replay exact producer
+
+      - name: Replay exact Pass7138-7145 producer
         run: python analysis/w33_pass7138_7145_c2_normalform_matrix_quotient.py
+
       - name: Focused regression
         run: python -m pytest -q tests/test_w33_pass7138_7145_c2_normalform_matrix_quotient.py
-      - name: Freeze regenerated certificate
+
+      - name: Audit manuscript and publication reachability
+        run: |
+          test "$(grep -Fc '\input{analysis/PASS7138_7145_c2_normalform_matrix_quotient_insert}%' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex)" -eq 1
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('data/w33_publication_frontier_contract_v2.json').read_text())
+          rows=[x for x in d['local_public_sections'] if x['token']=='pass-7138-7145-c2-normalform-matrix-quotient']
+          assert rows == [{'kind':'id','token':'pass-7138-7145-c2-normalform-matrix-quotient','source':'analysis/PASS7138_7145_index_insert.html'}]
+          c=json.loads(Path('data/PART_W33_PASS7138_7145_C2_NORMALFORM_MATRIX_QUOTIENT.json').read_text())
+          assert c['status']=='PASS'
+          assert c['pass_7141_c2_quotient_graph']['spectrum_formula_status'].startswith('CONJECTURE')
+          PY
+          git diff --check
+
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+
+      - name: Compile all three canonical manuscripts
+        run: |
+          mkdir -p evidence/pass7138_7145
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass7138_7145/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass7138_7145/pdf_sha256.txt
+
+      - name: Materialize public card and freeze successful replay proof
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/PART_W33_PASS7138_7145_C2_NORMALFORM_MATRIX_QUOTIENT.json
-          if git diff --cached --quiet; then
-            echo 'Certificate already canonical.'
-          else
-            git commit -m 'Pass7138-7145: freeze regenerated exact certificate [skip ci]'
-            git pull --rebase origin master
-            git push origin HEAD:master
-          fi
+          cp data/PART_W33_PASS7138_7145_C2_NORMALFORM_MATRIX_QUOTIENT.json /tmp/PART_W33_PASS7138_7145_C2_NORMALFORM_MATRIX_QUOTIENT.json
+          git checkout -- data/PART_W33_PASS7138_7145_C2_NORMALFORM_MATRIX_QUOTIENT.json
+          git fetch origin master
+          git rebase origin/master
+          cp /tmp/PART_W33_PASS7138_7145_C2_NORMALFORM_MATRIX_QUOTIENT.json data/PART_W33_PASS7138_7145_C2_NORMALFORM_MATRIX_QUOTIENT.json
+          python tools/materialize_pass7138_7145_frontier.py
+          test "$(grep -c 'id="pass-7138-7145-c2-normalform-matrix-quotient"' docs/index.html)" -eq 1
+          test "$(grep -c 'id="pass-7138-7145-c2-normalform-matrix-quotient"' index.html)" -eq 1
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          hashes=Path('evidence/pass7138_7145/pdf_sha256.txt').read_text().strip().splitlines()
+          Path('data/PART_W33_PASS7138_7145_CI_PROOF.json').write_text(json.dumps({
+              'schema':'w33.pass7138_7145.ci_proof.v1',
+              'status':'PASS',
+              'source_commit':os.environ['GITHUB_SHA'],
+              'exact_producer_replayed':True,
+              'focused_regression_passed':True,
+              'all_three_canonical_manuscripts_compiled':True,
+              'public_card_materialized_in_docs_and_root':True,
+              'pdf_sha256':hashes,
+          },indent=2)+'\n')
+          PY
+          git add \
+            data/PART_W33_PASS7138_7145_C2_NORMALFORM_MATRIX_QUOTIENT.json \
+            data/PART_W33_PASS7138_7145_CI_PROOF.json \
+            docs/index.html \
+            index.html
+          git diff --cached --quiet || git commit -m 'Pass7138-7145: freeze replay compile and public frontier [skip ci]'
+          git push origin HEAD:master
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pass7138-7145-c2-normalform-matrix-quotient
+          path: evidence/pass7138_7145/**
