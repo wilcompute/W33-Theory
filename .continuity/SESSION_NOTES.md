@@ -17,11 +17,11 @@
 
 ## ✅ Next Steps
 <!-- What should we do next? -->
-- Auto-saved at 2026-08-18T01:24:27.485Z (reason: timer)
+- Auto-saved at 2026-08-18T13:13:11.427Z (reason: timer)
 - Recent commits:
+  - 915ac33cc Pass6136-6143: characteristic 3 is an OUTPUT of the selection, and the last gap is one missing choice
   - d7ec7739d Pass6128-6135: q=3 is minimal, and the ovoid/chirality trade-off exists only at rank 2
   - 782e33604 Pass6120-6127: it is q = 3 mod 4, NOT characteristic 3 -- and the two selection principles conflict
-  - a2cf11f30 Pass6112-6119: q=5 has NO canonical chirality -- a structural selection principle for q=3
 
 ## 📝 Open Questions
 <!-- What do we still need to figure out? -->

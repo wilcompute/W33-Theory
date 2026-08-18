@@ -1,0 +1,112 @@
+{
+  "boundary": "Pass 6144 audits the Perplexity Aug 18 batch at INTAKE, per CLAUDE.md's batch protocol. It separates correct mathematics from over-read framing in each certificate. It does not dispute any arithmetic that checks out",
+  "pass_6144_bt1645_monster": {
+    "REFUTED_BECAUSE": "the multiplicities are FORCED by the strongly-regular parameters. For SRG(v,k,lambda,mu) they are [(v-1) -+ (2k+(v-1)(lambda-mu))/sqrt((lambda-mu)^2+4(k-mu))]/2, and at (40,12,2,4) that is [(39) -+ (-54)/6]/2 = 24, 15. Any SRG with those parameters has them",
+    "change_the_object_test": "32 OTHER feasible SRG parameter sets have multiplicity 15 or 24, including SRG(26,13,0,13) and SRG(27,18,9,18). The numbers are common SRG multiplicities",
+    "claim": "the adjacency eigenvalue multiplicities of W(3,3) encode Monster moonshine",
+    "claimed_meanings": {
+      "15": "number of supersingular primes",
+      "24": "rank of the Leech lattice"
+    },
+    "the_multiplicities": [
+      1,
+      24,
+      15
+    ],
+    "verdict": "the multiplicities encode the SRG parameters and nothing else"
+  },
+  "pass_6145_the_v_formula": {
+    "claim": "v = 12q + 4 = 40, the q-arithmetic origin of the W(3,3) point count",
+    "test": [
+      {
+        "actual": 15,
+        "formula": 28,
+        "match": false,
+        "q": 2
+      },
+      {
+        "actual": 40,
+        "formula": 40,
+        "match": true,
+        "q": 3
+      },
+      {
+        "actual": 85,
+        "formula": 52,
+        "match": false,
+        "q": 4
+      },
+      {
+        "actual": 156,
+        "formula": 64,
+        "match": false,
+        "q": 5
+      },
+      {
+        "actual": 400,
+        "formula": 88,
+        "match": false,
+        "q": 7
+      },
+      {
+        "actual": 585,
+        "formula": 100,
+        "match": false,
+        "q": 8
+      },
+      {
+        "actual": 820,
+        "formula": 112,
+        "match": false,
+        "q": 9
+      }
+    ],
+    "verdict": "TRUE AT q=3 ONLY. The real count is (q^2+1)(q+1); 12q+4 agrees at q=3 and nowhere else. It is a coincidence at one value, not an origin"
+  },
+  "pass_6146_the_196883": {
+    "arithmetic": "TRUE",
+    "but": "this is a well-known moonshine curiosity about the three largest supersingular primes. It is a fact about those primes and has NO W(3,3) content -- W(3,3) enters only through the coincidence that one of its multiplicities is 15",
+    "claim": "47 * 59 * 71 = 196883 = dim of the basic Monster representation"
+  },
+  "pass_6147_bt1644_is_correct": {
+    "claims": [
+      "Ihara zeta of W(3,3) satisfies the Ihara Riemann Hypothesis",
+      "the graph is Ramanujan"
+    ],
+    "the_overread": "'mass gap = k - r = 12 - 2 = 10' renames the graph's SPECTRAL GAP as the Yang-Mills mass gap. No gauge theory, no action, no continuum limit appears anywhere in the certificate. It is a naming, not a derivation",
+    "verdict": "THE MATHEMATICS IS CORRECT. The zeta factorisation and the Ihara RH both hold, and they are standard theory for any SRG whose nontrivial eigenvalues meet the Ramanujan bound",
+    "verified": {
+      "both_within_bound": true,
+      "edges": 240,
+      "m_minus_n": 200,
+      "nontrivial_eigenvalues": [
+        2,
+        -4
+      ],
+      "ramanujan_bound": 6.6332,
+      "vertices": 40
+    }
+  },
+  "pass_6148_bt1642": {
+    "arithmetic_correct": {
+      "chi_2skeleton": -40,
+      "genus": 21,
+      "ringel_genus_at_40": 111
+    },
+    "the_overread": "'Csaszar(v=40) and Szilassi(f=40) both yield h=111, so W(3,3) is self-dual under the genus formula'. The Ringel formula depends only on its input; W(3,3) is a GQ(3,3) so v = f = 40 BY DEFINITION of self-duality. Plugging the same number into the same formula twice necessarily agrees. The self-duality is an INPUT, not a result"
+  },
+  "pass_6149_disposition": {
+    "keep": [
+      "BT1644's Ihara zeta factorisation and Ramanujan/Ihara-RH result",
+      "BT1642's clique-complex arithmetic: chi = -40, genus 21",
+      "the arithmetic fact 47*59*71 = 196883"
+    ],
+    "note": "no arithmetic in the batch was found wrong; every problem is framing",
+    "retract_or_downgrade": [
+      "BT1645's moonshine ENCODING claim -- the multiplicities are forced",
+      "the v = 12q+4 origin -- false at every q but 3",
+      "BT1644's Yang-Mills mass gap identification -- a renaming",
+      "BT1642's self-duality RESULT -- it is an input"
+    ]
+  }
+}
