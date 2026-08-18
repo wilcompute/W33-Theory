@@ -1,0 +1,61 @@
+name: W33 Pass7130-7137 structural attack
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass7130_7137_structural_attack.py'
+      - 'analysis/BT7130_BT7137_structural_attack.md'
+      - 'analysis/PASS7130_7137_structural_attack_insert.tex'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/PART_W33_Q7_PARTIAL_OVOID_33.json'
+      - 'data/PART_W33_PASS7130_7137_STRUCTURAL_ATTACK.json'
+      - 'data/w33_pass_namespace_registry_v2.d/A_7130-7137.json'
+      - 'tests/test_w33_pass7130_7137_structural_attack.py'
+      - '.github/workflows/w33_pass7130_7137_structural_attack.yml'
+  workflow_dispatch:
+
+jobs:
+  replay-test-compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install exact replay dependencies
+        run: python -m pip install --upgrade pip pytest numpy
+
+      - name: Replay Pass7130-7137 exact certificate
+        run: python analysis/w33_pass7130_7137_structural_attack.py
+
+      - name: Focused regression
+        run: python -m pytest -q tests/test_w33_pass7130_7137_structural_attack.py
+
+      - name: Audit manuscript reachability and tree hygiene
+        run: |
+          test "$(grep -Fc '\input{analysis/PASS7130_7137_structural_attack_insert}%' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex)" -eq 1
+          git diff --check
+
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+
+      - name: Compile all three canonical manuscripts
+        run: |
+          mkdir -p evidence/pass7130_7137
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass7130_7137/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass7130_7137/pdf_sha256.txt
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pass7130-7137-structural-attack
+          path: evidence/pass7130_7137/**
