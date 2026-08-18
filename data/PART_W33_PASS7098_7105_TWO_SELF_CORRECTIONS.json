@@ -1,0 +1,54 @@
+{
+  "boundary": "Passes 7098-7100 RETRACT two claims of mine: BT820's Choi witnesses are correct under the definition its producer states (V(U)=|Tr U|/q, and X, Z are traceless), and the producer exists -- my report that it did not came from a truncated grep. Pass 7102 DISABLES a guard I wrote after measuring a 13.91% firing rate. No claim is made about BT1645's underlying arithmetic",
+  "pass_7098_7099": {
+    "definition_given_in_producer": "V(U) = |Tr U| / q",
+    "retracted": "Pass 6163's flag on bt820 choi_witnesses",
+    "verdict": "BT820 witness layer is CORRECT",
+    "why_1_3_is_not_1_over_d": "Tr(F3) = i exactly, so |Tr F3|/3 = 1/3; the coincidence with the separable value 1/d is two unrelated normalisations by the same q",
+    "why_the_zeros_are_right": "X and Z are traceless, so |Tr U| = 0 exactly",
+    "witnesses": {
+      "F3": {
+        "V": 0.3333333333,
+        "trace": "+0.000000+1.000000j"
+      },
+      "X": {
+        "V": 0.0,
+        "trace": "+0.000000+0.000000j"
+      },
+      "Z": {
+        "V": 0.0,
+        "trace": "-0.000000+0.000000j"
+      }
+    }
+  },
+  "pass_7100": {
+    "actual": "analysis/bt820_self_entanglement_protocol.py",
+    "cause": "head -6 truncated the grep; alphabetically-earlier argparse choices= matches filled the window",
+    "rule": "never conclude absence from a command whose output was cut",
+    "second_error": "reported no producer exists"
+  },
+  "pass_7101_7103": {
+    "disposition": "retained behind --general, off by default",
+    "firing_rates": {
+      "general_derived": "13.91%",
+      "scope_vs_evidence": "3%",
+      "srg_forced": "0.02%",
+      "transitivity": "0.8%"
+    },
+    "general_test_hits": "719 of 5169 certificates",
+    "lesson": "a selftest establishes that a test does what it says, never that what it says is worth doing; measure the firing rate before shipping a guard",
+    "why_disabled": "cannot distinguish a documented decomposition from an invented encoding -- syntactically identical"
+  },
+  "pass_7104": {
+    "blind_spot_closed": "the harness checked contradiction and rediscovery but never whether a claim carried enough to be checked",
+    "caught": "BT1645_monster_moonshine_encoding.json",
+    "check": "self-containment, audit_batch step 1c",
+    "previously": "passed intake as 'intake clean (3 files)'"
+  },
+  "pass_7105": {
+    "not_done": [
+      "alpha(W(3,7)) exact -- running",
+      "whether BT1645's arithmetic is sound"
+    ]
+  }
+}

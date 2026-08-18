@@ -117,6 +117,37 @@ def main() -> int:
                        + [str(f) for f in files], capture_output=True, text=True)
     print(r.stdout or "[audit] guard: no collisions")
 
+    # 1b. forced arithmetic (Pass 6160). The Aug 18 batch passed this harness clean
+    # while claiming W(3,3)'s SRG multiplicities "encode Monster moonshine"; they are
+    # determined by (v,k,lambda,mu). Rediscovery and vocabulary checks cannot see that.
+    r2 = subprocess.run([sys.executable,
+                         str(ROOT / "scripts" / "check_forced_arithmetic.py")]
+                        + [str(f) for f in files], capture_output=True, text=True)
+    out2 = (r2.stdout or "").strip()
+    if "0 forced-arithmetic finding" in out2:
+        print("[audit] forced arithmetic: none")
+    else:
+        print(out2)
+
+    # 1c. self-containment (Pass 6168). BT1645 evaded 1b by recording multiplicities
+    # while omitting the SRG parameters they follow from -- those sat in a sibling file.
+    # A certificate that INTERPRETS numbers must carry what they are derived from.
+    ENCODE = re.compile(r"encod|means|corresponds? to|is the", re.I)
+    for f in files:
+        if f.suffix != ".json":
+            continue
+        try:
+            txt = f.read_text(encoding="utf-8", errors="replace")
+        except Exception:
+            continue
+        if ENCODE.search(txt):
+            d2 = json.loads(txt)
+            flat = json.dumps(d2).lower()
+            has_params = all(k in flat for k in ('"v"', '"k"')) or "lambda" in flat
+            if not has_params:
+                print(f"[audit] {f.name}: interprets numbers but records no parameters "
+                      f"they follow from -- not self-contained, cannot be audited alone")
+
     # 2. certificate triage
     for f in files:
         if f.suffix != ".json":

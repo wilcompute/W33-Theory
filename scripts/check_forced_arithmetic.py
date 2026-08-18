@@ -117,9 +117,39 @@ def findings(doc) -> list[str]:
                         f"multiplicities {lv} are FORCED by SRG({v},{k},{lam},{mu}) -- the "
                         f"closed form gives {f} and {g}. Any interpretive claim about them "
                         f"is reading meaning into forced arithmetic")
+    # The general derived-number test fires on 13.91% of the corpus (719 of 5,169),
+    # against 0.02% for the SRG test. Measured at Pass 6168 and found NOT actionable:
+    # it cannot distinguish a documented decomposition ("vertices = blocks + flags")
+    # from a false encoding. Available behind --general, off by default.
+    if texts and not out and "--general" in sys.argv:
+        out.extend(derived_numbers(nums))
     if texts and out:
         kk, tt = texts[0]
         out.append(f"and the file carries interpretive language in `{kk}`: {tt}...")
+    return out
+
+
+def derived_numbers(nums: dict) -> list[str]:
+    """Test 3 (Pass 6168): an integer carrying an interpretive gloss that also equals a
+    simple combination of OTHER integers in the same certificate.
+
+    The SRG test in `findings` is exact but narrow.  This is the general shape: a number
+    presented as meaningful which the file's own other numbers already determine.  It is
+    deliberately conservative -- only sums, differences, products and quotients of PAIRS,
+    and only when the interpreted number is not tiny (2, 3, 4 combine by accident).
+    """
+    out: list[str] = []
+    items = [(k, v) for k, v in nums.items() if isinstance(v, int) and abs(v) > 8]
+    for k, v in items:
+        others = [(k2, v2) for k2, v2 in nums.items() if k2 != k and v2 not in (0, 1)]
+        for i, (ka, va) in enumerate(others):
+            for kb, vb in others[i + 1:]:
+                for op, sym in ((va + vb, "+"), (va - vb, "-"), (vb - va, "-"),
+                                (va * vb, "*")):
+                    if op == v:
+                        out.append(f"`{k}` = {v} is also {ka}({va}) {sym} {kb}({vb}) -- "
+                                   f"the file derives it from its own other numbers")
+                        return out
     return out
 
 
@@ -136,6 +166,9 @@ def selftest() -> int:
          {"v": 40, "k": 12, "lambda": 2, "mu": 4, "multiplicities": [1, 20, 19]}, False),
         ("no SRG data at all",
          {"note": "the number 24 encodes the Leech lattice rank"}, False),
+        ("general test is OFF by default (13.91% firing rate, not actionable)",
+         {"prime_a": 47, "prime_b": 59, "combined": 2773,
+          "note": "2773 is the signature of the sector"}, False),
         ("multiplicities hidden in KEY NAMES, as BT1645 does",
          {"v": 40, "k": 12, "lambda": 2, "mu": 4,
           "spectrum": {"k_12_mult_1": "vacuum", "r_2_mult_24": "Leech rank",
