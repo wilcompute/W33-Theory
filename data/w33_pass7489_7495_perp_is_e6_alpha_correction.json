@@ -1,0 +1,24 @@
+{
+  "schema": "w33.pass7489_7495.perp_is_e6_alpha_correction.v1",
+  "perp_is_e6": {
+    "all_40_points": true,
+    "perp_roots": 72,
+    "perp_rank": 6,
+    "equals_12_collinear_A2s": true,
+    "split": "6+72+162=240"
+  },
+  "e6xa2_maximal_subgroup": {
+    "roots": 78,
+    "mixed_roots": 162,
+    "note": "own A2 (6) + perp E6 (72) = E6 x A2 maximal subgroup of E8"
+  },
+  "alpha_correction": {
+    "alpha": 7,
+    "lovasz_theta": 10,
+    "error": "closure pkg T201/T229 and w33_lovasz_independence_clique.py list alpha=10",
+    "load_bearing_claim": "alpha=10 = superstring critical dimension -- built on the conflation"
+  },
+  "cross_check": "independently confirms Pass7253-7260 (perp is E6) with explicit coordinates",
+  "status": "PASS",
+  "passes": "7489-7495"
+}
