@@ -1,0 +1,33 @@
+{
+  "boundary": "exact |Stab| at q=3 by full enumeration of Sp(4,3). CONFIRMS the prior art at Pass 6285-6300. Pass 7192 PROVED a conjecture already stated there; it did not discover it",
+  "prior_art": {
+    "file": "scripts/w33_ovoid_stabiliser_exact.py",
+    "pass": "6285-6300",
+    "q3_stab": 18,
+    "q3_orbit": 2880,
+    "conjecture": "max partial ovoids of W(3,q) for odd q have tiny stabilisers, so group-orbit constructions cannot work"
+  },
+  "recomputed": {
+    "group_order": 51840,
+    "stab_order": 18,
+    "orbit": 2880,
+    "element_orders": {
+      "1": 1,
+      "2": 1,
+      "3": 8,
+      "6": 8
+    }
+  },
+  "confirms_prior_art": true,
+  "pass7199_bound_consistent": true,
+  "what_was_actually_new_this_week": [
+    "the PROOF that no order-3 element stabilises the q=7 optimum (exact ILP)",
+    "the sharpening |Stab| <= 2 at q=7 and q=9",
+    "the certified basin radius 9 at q=9"
+  ],
+  "what_was_already_ours": [
+    "the conjecture that these stabilisers are tiny",
+    "the consequence that group-orbit constructions cannot work",
+    "the exact q=3 stabiliser order 18"
+  ]
+}
