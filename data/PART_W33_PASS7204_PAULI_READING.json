@@ -1,0 +1,46 @@
+{
+  "boundary": "a translation, not a new computation: alpha(W(3,q)) equals the maximum pairwise non-commuting family of Pauli classes on two qudits of dimension q. Controlled at q=2 against the textbook 2n+1 using explicit matrices. NO physical claim; inherits the q=2 prior art's disclaimer",
+  "prior_art": "analysis/w33_pass5351_5352_hoffman_pauli_latin_symplectic_spread.py carries the commuting/anticommuting dictionary at q=2",
+  "control_q2": {
+    "matrix_answer": 5,
+    "geometry_answer": 5,
+    "textbook_2n_plus_1": 5,
+    "agree": true,
+    "family": [
+      "IX",
+      "IY",
+      "XZ",
+      "YZ",
+      "ZZ"
+    ]
+  },
+  "dictionary": {
+    "point": "Pauli class on two qudits, up to scalar",
+    "collinear": "the two Paulis commute",
+    "partial_ovoid": "pairwise non-commuting family",
+    "Sp(4,q)": "Clifford group modulo Paulis"
+  },
+  "values": {
+    "q=2": 5,
+    "q=3": 7,
+    "q=5": 18,
+    "q=7": 33,
+    "q=9": "51 or 52"
+  },
+  "clifford_rigidity": {
+    "q=3": {
+      "stab": 18,
+      "structure": "C3 x C6",
+      "status": "exact"
+    },
+    "q=7": {
+      "stab": "<= 2",
+      "status": "upper bound"
+    },
+    "q=9": {
+      "stab": "<= 2",
+      "status": "upper bound, 51-set"
+    }
+  },
+  "caveat_q9": "GF(9), not Z/9 -- the Galois qudit"
+}
