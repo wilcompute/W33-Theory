@@ -45,7 +45,8 @@
     {"kind":"id","token":"pass-7146-7153-q9-pgl2-hexad-code","source":"analysis/PASS7146_7153_index_insert.html"},
     {"kind":"id","token":"pass-7154-7162-e8-audit","source":"analysis/PASS7154_7162_index_insert.html"},
     {"kind":"id","token":"pass-7163-7170-e8-hexagonal-lift","source":"analysis/PASS7163_7170_index_insert.html"},
-    {"kind":"id","token":"pass-7171-7186-e8-d4-q9","source":"analysis/PASS7171_7186_index_insert.html"}
+    {"kind":"id","token":"pass-7171-7186-e8-d4-q9","source":"analysis/PASS7171_7186_index_insert.html"},
+    {"kind":"id","token":"pass-7425-7432-global-leaf-d4-grid","source":"analysis/PASS7425_7432_index_insert.html"}
   ],
   "boundary": "This contract certifies nested publication reachability, uniqueness, shared-tail consolidation, and public materialization only. It does not certify mathematical, hardware, laboratory, empirical, or physical claims."
 }
