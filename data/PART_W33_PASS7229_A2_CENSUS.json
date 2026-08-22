@@ -1,0 +1,13 @@
+{
+  "boundary": "a census, not a theorem: counts A2 subsystems of E8 and how many each fixed-point-free order-3 element stabilises",
+  "a2_subsystems_of_E8": 1120,
+  "J_stable": 40,
+  "stable_counts_over_many_J": {
+    "40": 8
+  },
+  "count_is_universal": true,
+  "orthogonal_pairs_among_the_40": 240,
+  "closure_of_orthogonal_pair": {
+    "(12, 12, np.int64(4))": 40
+  }
+}

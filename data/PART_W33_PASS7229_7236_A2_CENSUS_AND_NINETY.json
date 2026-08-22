@@ -1,0 +1,55 @@
+{
+  "boundary": "NEW: the other lane's 90 D4s are exactly the J-STABLE D4s, giving their selection criterion a definition; W(3,3) has exactly 36 spreads (exhaustive); and alpha(Q^-(5,q)) is the maximum skew set of lines on a Hermitian surface. REFUTED, both mine: orthogonal A2 pairs are A2+A2 not D4, and A2-orthogonality is 15x slower than the symplectic form",
+  "census": {
+    "a2_J_stable": 40,
+    "a2_in_e8": 1120,
+    "collinear_point_pairs": 240,
+    "d4_J_stable": 90,
+    "d4_in_e8": 3150,
+    "orthogonal_a2_pairs": 240
+  },
+  "cross_lane_bridge": {
+    "consequence": "their 90-D4 association scheme and the 40-A2 quadrangle are the same construction at two ranks",
+    "meaning": "'selected by W(3,3)' = stable under the Eisenstein order-3 element J",
+    "recomputed": {
+      "J_stable": 90,
+      "d4": 3150
+    },
+    "their_claim": "3150 D4 subsystems, 90 selected by W(3,3)"
+  },
+  "identification": {
+    "alpha_Qminus5q": "maximum skew set of lines on a Hermitian surface",
+    "classical_root": "the six skew lines on a smooth cubic surface",
+    "maxima": {
+      "q=2": 6,
+      "q=3": 16,
+      "q=4": 25,
+      "q=5": ">= 48"
+    },
+    "note": "construction is optimal only at q=2, where it IS the classical sixer",
+    "reference": "Brosowsky, Du, Krishna, Nair, Page, Ryan, arXiv:2211.16580",
+    "their_construction": "(3/2)q^2 - (1/2)q + 1 = 6, 13, 23, 36 for q = 2,3,4,5"
+  },
+  "not_done": [
+    "alpha(W(3,9))",
+    "q=11 unconverged at 65",
+    "Q^-(5,5) running against the published 48"
+  ],
+  "refuted": [
+    {
+      "claim": "two orthogonal A2s generate a D4",
+      "fact": "reflection closure is 12 roots of rank 4 = A2 + A2, already closed"
+    },
+    {
+      "claim": "A2-orthogonality gives a cheaper collinearity computation",
+      "fact": "61.9 ms vs 4.1 ms -- 15x slower; 36 inner products cannot beat 1"
+    }
+  ],
+  "spreads": {
+    "count": 36,
+    "meaning": "a complete set of 10 MUBs in dimension 9; a partition of the 240 roots into 10 orthogonal A2 quadruples",
+    "method": "exhaustive exact cover, completed in 284 nodes",
+    "parallel": "36 double sixes also have stabilizer 51840/36 = 1440 in W(E6), and |Sp(4,3)| = |W(E6)| = 51840 -- suggestive; NO correspondence is constructed or claimed"
+  },
+  "the_40_is_not_distinguished": "every fixed-point-free order-3 element stabilises exactly 40 A2s, so E8 carries a family of W(3,3)s indexed by those elements"
+}
