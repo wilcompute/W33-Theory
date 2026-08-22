@@ -7,6 +7,6 @@
   "reserved": "2026-08-21",
   "status": "PUBLISHED_WITH_GLOBAL_Q9_TARGET48_OPEN",
   "frontier_insert": "analysis/PASS7171_7186_e8_d4_q9_insert.tex",
-  "aggregate_certificate": "data/PART_W33_PASS7171_7182_E8_D4_Q9_FRONTIER.json",
-  "focused_test": "tests/test_w33_pass7179_7182_packet.py"
+  "aggregate_certificate": "data/PART_W33_PASS7171_7186_AGGREGATE.json",
+  "focused_test": "tests/test_w33_pass7171_7186_exact_packet.py"
 }
