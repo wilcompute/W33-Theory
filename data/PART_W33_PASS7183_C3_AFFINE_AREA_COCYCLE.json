@@ -1,0 +1,15 @@
+{
+  "schema":"w33.pass7183.c3_affine_area_cocycle.v1",
+  "status":"PASS",
+  "base":"K9 on the nine E6-weight-signature classes",
+  "cover":"regular C3 voltage cover on 27 W33 distance-two fibres",
+  "gauge":"class-0 spanning star fixed to zero voltage",
+  "triangle_holonomy":{"0":12,"1":36,"2":36},
+  "zero_holonomy_triangles":12,
+  "identification":"the 12 zero-holonomy triples are exactly the 12 affine lines of AG(2,3)",
+  "affine_plane_isomorphisms_fixing_origin":48,
+  "determinant_cocycle_matches":48,
+  "match_signs":{"plus":24,"minus":24},
+  "theorem":"Up to switching, affine relabelling of AG(2,3), and global sign, the K9 voltage is psi(u,v)=det(u,v) in F3. Triangle holonomy is the oriented affine area det(v-u,w-u).",
+  "cohomology_firewall":"The voltage is not cohomologous to zero because 72 of the 84 K9 triangles have nonzero holonomy. This is a finite F3 covering cocycle; no physical gauge field is inferred."
+}

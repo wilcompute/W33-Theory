@@ -1,0 +1,69 @@
+{
+  "schema":"w33.pass7171_7186.aggregate.v1",
+  "status":"PASS",
+  "boundary":"Exact finite geometry/root-system/coding/local-q9 statements. The global q9 target-48 problem remains open; no physics claim follows from shared finite groups or phases.",
+  "pass7171_full_E8_root_association_scheme":{
+    "relations":["2","1","0","-1","-2"],
+    "valencies":[1,56,126,56,1],
+    "A_plus_spectrum":{"56":1,"28":8,"8":35,"-2":112,"-4":84},
+    "eigenmatrix_P":[[1,56,126,56,1],[1,28,0,-28,-1],[1,8,-18,8,1],[1,-2,0,2,-1],[1,-4,6,-4,1]],
+    "multiplicities":[1,8,35,112,84],
+    "Bose_Mesner_dimension":5,
+    "A_plus_generates_full_algebra":true
+  },
+  "pass7172_D4_subsystem_geometry":{
+    "selected_D4":90,
+    "all_E8_D4":{"D4_subsystems":3150,"D4_normalizer_order":221184},
+    "selected90_scheme_certificate":"PART_W33_PASS7179_D4_SCHEME_KREIN.json"
+  },
+  "pass7173_q9_local_closure":{
+    "anchor_type":"(1,3,5)",
+    "known_47_split":{"invertible":42,"rank1":5},
+    "exact_maximum_total_after_exact_core_deletions_0_to_5":{"0":47,"1":46,"2":47,"3":46,"4":46,"5":46},
+    "target48_excluded_for_all_core_deletion_radii_0_through_8":true,
+    "global_target48":"OPEN"
+  },
+  "pass7174_Z12_phase_firewall":{
+    "E8_triangle_residues":[1,3,9,11],
+    "Pauli_Weyl_triangle_residues":[0,4,8],
+    "cohomologous":false,
+    "section_independent_obstruction":"Every Pauli/Weyl commutator edge phase is in 4*Z/12, hence every triangle holonomy is 0,4,8 mod12; E8 triangle holonomies are odd."
+  },
+  "pass7175_E6_A2_matter_reconstruction":{
+    "root_branching":"6_A2 + 72_E6 + 81 + 81",
+    "matter_factorization":"81 = 27 E6 minuscule weights x 3 A2 charges",
+    "Schlaefli":"srg(27,16,10,8)",
+    "raw_27_fibres":"regular C3 voltage cover of K9"
+  },
+  "pass7176_D4_micro_triality":{
+    "root_graph_spectrum":{"8":1,"4":4,"0":9,"-2":8,"-4":2},
+    "positive_inner_product_degree":8,
+    "triality_frames_per_D4":3,
+    "each_triality_frame_uses_one_antipodal_pair_from_each_of_four_C6_fibres":true
+  },
+  "pass7177_support_codes":{
+    "90_D4_support_rank":39,
+    "90_D4_support_code":"[40,39,2]_2 full even-weight code",
+    "45_pair_support_rank":15,
+    "45_pair_support_code":"[40,15,8]_2"
+  },
+  "pass7178_ten_D4_spreads":{
+    "spreads":27,
+    "spread_pair_pattern":"5 orthogonal index-4 pairs plus 40 disjoint nonorthogonal index-1 pairs; any cross-pair from different orthogonal pairs generates the full E8 lattice",
+    "spread_code":"[45,21,5]_2"
+  },
+  "pass7183_affine_area":"Up to switching, affine relabelling of AG(2,3), and global sign, the K9 voltage is psi(u,v)=det(u,v) in F3. Triangle holonomy is oriented affine area.",
+  "pass7184_module_dictionary":"[45,21,5] = 1 + V20_trit and [45,24,6] = V24 as binary full-group modules.",
+  "pass7185_chart_atlas":"Every W33 relation-(0,4) selected-D4 pair gives an explicit unimodular E8 root-lattice basis. The 1080 such charts are partitioned by the 27 ten-D4 spreads into 40 charts each; ordinary coordinate-transition holonomy is flat.",
+  "pass7186_H27_bridge":"The 27 W33 distance-two fibres produced by the E8 C6/A2 matter decomposition are exactly Cay(H27,{(u,0):u!=0}), with Aut = H27:GL(2,3) of order 1296 and distance transitivity.",
+  "subcertificates":[
+    "PART_W33_PASS7179_D4_SCHEME_KREIN.json",
+    "PART_W33_PASS7180_Q9_LOCAL_EDIT_RADIUS.json",
+    "PART_W33_PASS7181_E6_MINUSCULE_FIBER_VOLTAGE.json",
+    "PART_W33_PASS7182_D4_GLUE_SPREAD_CODE.json",
+    "PART_W33_PASS7183_C3_AFFINE_AREA_COCYCLE.json",
+    "PART_W33_PASS7184_SPREAD_CODE_V20_V24_MODULE.json",
+    "PART_W33_PASS7185_E8_D4_CHART_ATLAS.json",
+    "PART_W33_PASS7186_E8_MATTER_H27_CAYLEY.json"
+  ]
+}
