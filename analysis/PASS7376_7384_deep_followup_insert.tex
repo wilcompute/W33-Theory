@@ -1,0 +1,124 @@
+% Passes 7376--7384: logical Hodge split, curvature transgression, q=9 quotient,
+% phase pole, corrected E8 local chain, and transversal-gate firewall.
+\subsection{A $7+10$ logical Hodge split and the curved integral $27$--$45$--$36$ prism}
+
+Let $N:\mathbb Z^{36}\to\mathbb Z^{45}$ denote double-six/doily-slice incidence
+and let $R:\mathbb Z^{45}\to\mathbb Z^{27}$ denote tritangent/cubic-line
+incidence.  The exact integral identity
+\[
+ RN=3Q
+\]
+for a binary $27\times36$ incidence matrix $Q$ makes
+\[
+ \mathbb F_3^{36}\xrightarrow{N}\mathbb F_3^{45}\xrightarrow{R}\mathbb F_3^{27}
+\]
+a chain complex with
+\[
+ \boxed{(\dim H_2,\dim H_1,\dim H_0)=(22,10,6)}.
+\]
+For the self-orthogonal ternary code $C_3=\operatorname{im}N=[45,14,15]_3$,
+whose dual gives the abstract qutrit CSS code $[[45,17,5]]_3$, the protected
+logical space decomposes canonically as
+\[
+ \boxed{
+ \frac{C_3^\perp}{C_3}
+ =
+ \frac{\operatorname{im}R^T}{\operatorname{im}N}
+ \;\perp\;
+ \frac{\ker R}{\operatorname{im}N}.}
+\]
+The first summand has dimension seven and pure distance five; its $27$ projective
+minimum supports are the five-tritangent stars of the cubic-surface lines.  It is
+the previously identified uniserial $W(E_6)$ module $\mathbf1\mid5\mid\mathbf1$.
+The second summand is literally $H_1$, has dimension ten, and has pure distance
+six: its $120$ projective minimum supports are precisely the Steiner induced
+$K_{3,3}$ supports.
+
+The integral curvature induces the secondary map
+\[
+ \kappa:H_2\longrightarrow\operatorname{im}(RR^T),\qquad
+ [z]\longmapsto Qz\pmod3,
+\]
+with
+\[
+ \boxed{\operatorname{rank}\kappa=7,\qquad\dim\ker\kappa=15},
+\]
+and
+\[
+ \operatorname{im}(RR^T)\cong\operatorname{im}(R^T)/\operatorname{im}N.
+\]
+Thus the curvature surjects onto the same seven-dimensional star/logical sector.
+We call this a \emph{curvature transgression}; it is not promoted as the standard
+Bockstein homomorphism because $RN$ is nonzero integrally.
+
+\paragraph{The $2$-primary shadow.}
+Reducing $Q^T$ modulo two gives a $[27,7,11]_2$ Schlaefli code.  Its dual has
+exactly $270$ minimum tetrads.  Every tetrad induces $2K_2$ in the cubic-line meet
+graph and is obtained uniquely from a pair of intersecting tritangent planes by
+deleting their common cubic line.  Meeting cubic-line pairs occur in four tetrads,
+whereas skew pairs occur in five.
+
+\subsection{The exact $C_2$ branch of the $q=9$ partial-ovoid problem}
+
+The independently confirmed projective symplectic stabilizer of the frozen
+$51$-point witness is $C_2$.  Its action on $W(3,9)$ has $20$ fixed points and
+$400$ two-cycles.  Forty two-cycles are internally collinear and are forbidden in
+an invariant partial ovoid, leaving
+\[
+ \boxed{380}
+\]
+allowed orbit variables.  With all $820$ isotropic-line clique inequalities, the
+weighted quotient LP has optimum $74$; fixing the number of fixed points to
+$0,1,2$ gives LP optima $72,73,74$, respectively.  An invariant $52$-set can use
+only $0$ or $2$ fixed points.  This is an exact symmetry branch, not a WLOG
+reduction of the unrestricted problem; $\alpha(W(3,9))$ remains open.
+
+\subsection{Coxeter phase selects a local $3K_4$ chart}
+
+In the globally triality-resolved $45$-coordinate $D_4\oplus D_4$ atlas, the $12$
+phase-flat coordinates are exactly the neighborhood of one unique coordinate in
+the fixed Coxeter-phase gauge.  Since every local graph of
+$\operatorname{SRG}(45,12,3,3)$ is $3K_4$, the phase datum selects one distinguished
+local chart rather than a new graph type.  This $12$-coordinate $3K_4$ is not
+identified with the older $16$-flag Levi $4K_4$ codec without an explicit carrier
+map.
+
+\subsection{Corrected E8 local descent: $40$ $A_2$ fibres, Clebsch and Petersen}
+
+The Coxeter/Eisenstein fibration partitions the $240$ E8 roots into
+\[
+ \boxed{40\text{ rank-two }A_2\text{ root hexagons of six roots each}},
+\]
+whose quotient is the W$(3,3)$ point graph $\operatorname{SRG}(40,12,2,4)$.
+The nested positive-inner-product local chain has vertex counts
+\[
+ 240\to56\to27\to16\to10,
+\]
+with the previously computed spectra.  The $16$-vertex member is the complement
+of the Clebsch graph and the $10$-vertex member is the complement of the Petersen
+graph.  At the Schlaefli level a chosen vertex yields the exact partition
+\[
+ \boxed{27=1+16+10}.
+\]
+The numerical resemblance to the standard $E_6\to\mathrm{Spin}(10)$ branching is
+recorded as representation-theoretic context only.  In particular,
+$27+6=33$ is not a W$(3,3)$ vertex count: the objectwise Eisenstein quotient has
+$40$ fibres/points.
+
+\paragraph{Transversal-gate firewall.}
+Although $C_3$ is self-orthogonal and its deterministic basis rows have weights
+divisible by three, the cubic overlap form
+\[
+ T(u,v,w)=\sum_i u_i v_i w_i\pmod3
+\]
+is nonzero on the code: $275$ basis triples have nonzero overlap.  Hence naive
+ternary total-triorthogonality fails, and no transversal non-Clifford gate is
+claimed from the present divisibility data.  Recent homological/Bockstein criteria
+for CSS transversal diagonal gates motivate a separate integral-lift test rather
+than an overlap-based extrapolation.
+
+\paragraph{Evidence boundary.}
+All statements above are exact finite incidence, coding, root-system,
+representation, or LP statements.  They do not decide $\alpha(W(3,9))$, identify
+$\kappa$ with a standard Bockstein, establish a physical E6 particle assignment,
+or prove a transversal non-Clifford gate for the qutrit code.
