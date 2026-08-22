@@ -1,0 +1,15 @@
+{
+  "D4_A2_graph": "L2(4)=SRG(16,6,2,2)",
+  "Klein_V4_cell_graph_rule": "adjacent iff row, column and symbol are all different",
+  "Latin_group_index_in_D4_graph_aut": 2,
+  "Pass5300_input": "Pass5300 already proves the q=5 Hoffman cover stabilizer H has order 576, H is not the full Latin autoparatopy group, but H/Z(H) is explicitly GL(4,2)-conjugate to the even-parastrophe subgroup L+ of order 288.",
+  "V4_autoparatopy_order": 576,
+  "V4_even_parastrophe_order": 288,
+  "composed_bridge": "H/Z(H) ~= L+ < AutPar(V4 Latin) < Aut(D4 A2 disjointness graph), with orders 288 < 576 < 1152.",
+  "eight_K4s": "the eight V4 Latin transversals, transported to the eight D4=A2+A2+A2+A2 root partitions",
+  "firewall": "H itself remains non-isomorphic to the full Latin autoparatopy group as proved in Pass5300. The E8 bridge is through the degree-16 Latin carrier and the central quotient, not equality of the two order-576 groups.",
+  "full_D4_A2_graph_aut_order": 1152,
+  "schema": "w33.pass7428.d4_latin_hoffman_composed_bridge.v1",
+  "status": "PASS",
+  "theorem": "The order-four Latin object in the Hoffman bridge is now realized inside E8: its 16-cell SRG is exactly the root-disjointness graph on the 16 A2 subsystems of any D4. The eight Latin transversals are exactly the eight partitions of the 24 D4 roots into four A2 hexagons."
+}
