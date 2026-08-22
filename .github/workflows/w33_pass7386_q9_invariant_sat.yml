@@ -1,0 +1,28 @@
+name: W33 Pass7386 q9 invariant target52 SAT
+on:
+  push:
+    branches: [research/pass7385-7392-parallel-reconcile]
+    paths:
+      - 'analysis/w33_pass7386_q9_involution_target52_sat.py'
+      - '.github/workflows/w33_pass7386_q9_invariant_sat.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  solve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install python-sat numpy scipy
+      - name: Decide both parity branches with CaDiCaL
+        run: python analysis/w33_pass7386_q9_involution_target52_sat.py
+      - name: Freeze solver certificate
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/PART_W33_PASS7386_Q9_INVOLUTION_TARGET52_SAT.json
+          git commit -m 'Pass7386: freeze q9 invariant target52 SAT certificate [skip ci]' || exit 0
+          git push origin HEAD:research/pass7385-7392-parallel-reconcile
