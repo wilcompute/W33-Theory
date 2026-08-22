@@ -1,0 +1,21 @@
+{
+  "schema":"w33.pass7184.spread_code_v20_v24_module.v1",
+  "status":"PASS",
+  "spread_code":"[45,21,5]_2",
+  "spread_generators":27,
+  "all_ones_in_spread_code":true,
+  "even_subcode_dimension":20,
+  "direct_sum":"C_spread = <1_45> direct_sum C_even over F2",
+  "V20_identification":{
+    "target":"Pass5001 binary tritangent-selector V20",
+    "PSp_Hom_dimension":1,
+    "unique_nonzero_intertwiner_rank":20,
+    "outer_PGSp_generator_intertwined":true,
+    "full_group_equivariant_isomorphism":true
+  },
+  "dual_code":"[45,24,6]_2",
+  "dual_minimum_K3,3_words":120,
+  "spread_times_circuit_transpose_zero":true,
+  "module_dictionary":"[45,21,5] = 1 + V20_trit and [45,24,6] = V24 (binary full-group modules, with the displayed explicit intertwiner for V20).",
+  "repo_bridge":"Pass5001 owns V20_trit; Pass5019 owns the 120-Steiner/K3,3 V24. This pass identifies the 27 E8 ten-D4 spread code as their 1+20 orthogonal complement."
+}
