@@ -1,0 +1,20 @@
+{
+  "boundary": "Exact finite signed-frame statement. A different D4/D4-perp section only performs Seidel switching; no physical state-space interpretation is inferred.",
+  "gram": "G = I + B/4",
+  "gram_identity": "G^2 = 3 G",
+  "nonzero_neighbors_per_vector": 32,
+  "pairwise_inner_products": ["0", "+1/4", "-1/4"],
+  "rank": 15,
+  "relation_histogram_for_chosen_section": {"(0, 4)": 270, "(0, 7)": 306, "(1, 3)": 414},
+  "schema": "w33.pass7213.d4_signed_tritangent_frame.v1",
+  "signed_adjacency_identity": "B^2 = 4 B + 32 I",
+  "signed_relation": "+1 for selected relation (1,3), -1 for (0,7), 0 for (0,4)",
+  "signed_spectrum": {"-4": 30, "8": 15},
+  "source": "90 selected D4 subsystems modulo D4 <-> D4^perp",
+  "status": "PASS",
+  "switching_class_canonical": true,
+  "tight_frame": "45 unit vectors in R^15 with frame bound 3",
+  "unsigned_support": "srg(45,32,22,24) tritangent overlap graph",
+  "vertices": 45,
+  "zero_neighbors_per_vector": 12
+}
