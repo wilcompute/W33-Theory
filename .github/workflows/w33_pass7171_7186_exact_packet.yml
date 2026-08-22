@@ -16,6 +16,20 @@ on:
       - 'analysis/w33_pass7186_e8_matter_h27_cayley.py'
       - 'tests/test_w33_pass7171_7186_exact_packet.py'
       - '.github/workflows/w33_pass7171_7186_exact_packet.yml'
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass7171_7186_aggregate.py'
+      - 'analysis/w33_pass7179_d4_scheme_krein.py'
+      - 'analysis/w33_pass7180_q9_local_edit_radius.py'
+      - 'analysis/w33_pass7181_e6_minuscule_fiber_voltage.py'
+      - 'analysis/w33_pass7182_d4_glue_spread_code.py'
+      - 'analysis/w33_pass7183_c3_affine_area_cocycle.py'
+      - 'analysis/w33_pass7184_spread_code_v20_v24_module.py'
+      - 'analysis/w33_pass7185_e8_d4_chart_atlas.py'
+      - 'analysis/w33_pass7186_e8_matter_h27_cayley.py'
+      - 'tests/test_w33_pass7171_7186_exact_packet.py'
+      - '.github/workflows/w33_pass7171_7186_exact_packet.yml'
   workflow_dispatch:
 
 permissions:
@@ -29,7 +43,6 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          ref: research/pass7171-7186-e8-d4-q9
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -56,6 +69,7 @@ jobs:
       - name: Focused regression
         run: python -m pytest -q tests/test_w33_pass7171_7186_exact_packet.py
       - name: Freeze generated certificates to branch
+        if: github.event_name == 'push'
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
