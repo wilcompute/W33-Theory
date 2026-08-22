@@ -1,0 +1,63 @@
+{
+  "boundary": "NEW: an explicit 6:1 Eisenstein fibration verified by recovering SRG(40,12,2,4), and the characterisation 'collinear in W(3,3) <=> the two 6-root E8 fibres are completely orthogonal', with no exceptions over all 780 point pairs. REFUTED: that the 42 roots over a maximum partial ovoid form an A6 -- they generate all of E8. NOT extended beyond q=3, where no Eisenstein fibration exists",
+  "fibration": {
+    "J": "c^10, c the E8 Coxeter element (order 30)",
+    "class_map": "(I - J^2)v mod 3, exact since (I-J)(I-J^2) = 3I",
+    "classes": {
+      "linear": "80 of exactly 3 roots",
+      "projective": "40 of exactly 6 roots"
+    },
+    "form": "A(x,y) = (Jx,y) - (x,Jy): the E8 form is SYMMETRIC and gives degrees 12..24; the alternating Eisenstein form gives the right graph",
+    "verification": "induced graph has degree 12, spectrum 12^1 2^24 (-4)^15",
+    "why_fixed_point_free": "no E8 exponent 1,7,11,13,17,19,23,29 is divisible by 3, so J has no eigenvalue 1; det(I-J) = 3^4 = 81"
+  },
+  "not_done": [
+    "any extension to q > 3, where no Eisenstein fibration exists"
+  ],
+  "refuted": {
+    "claim": "the 42 roots form an A6 subsystem (42 = |A6|)",
+    "why": "their reflection closure is all 240 roots of E8"
+  },
+  "signature": {
+    "all_maximum_partial_ovoids": 2880,
+    "distinct_signatures": 1,
+    "independent_confirmation": "2880 = 51840/18 matches the Pass 7203 stabilizer computed by enumerating Sp(4,3), by a disjoint route",
+    "random_control": {
+      "distinct": 11,
+      "matching": 0,
+      "orthogonal_pairs_range": "372-420 vs 252 for ovoids",
+      "samples": 400
+    },
+    "signature": {
+      "-1": 294,
+      "-2": 21,
+      "0": 252,
+      "1": 294
+    }
+  },
+  "theorem": {
+    "collinear_pairs": {
+      "count": 240,
+      "inner_products": {
+        "0": 36
+      }
+    },
+    "corollary": "alpha(W(3,3)) = 7 = the maximum number of pairwise NON-orthogonal Eisenstein fibres in E8",
+    "exceptions": 0,
+    "non_collinear_pairs": {
+      "count": 540,
+      "inner_products": {
+        "-1": 12,
+        "0": 12,
+        "1": 12
+      }
+    },
+    "pauli_reading": "via Pass 7204: two Paulis on two qutrits commute exactly when their E8 fibres are completely orthogonal",
+    "statement": "two points of W(3,3) are collinear if and only if their E8 fibres are completely orthogonal",
+    "within_fibre": {
+      "-1": 6,
+      "-2": 3,
+      "1": 6
+    }
+  }
+}

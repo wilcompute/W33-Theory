@@ -1,0 +1,13 @@
+{
+  "boundary": "constructs the 6:1 Eisenstein fibration explicitly and pulls the maximum partial ovoid back. Claims nothing unless the induced graph is verified to be SRG(40,12,2,4)",
+  "roots": 240,
+  "classes": 40,
+  "fibre_sizes": [
+    6
+  ],
+  "induced_degrees": [
+    12
+  ],
+  "is_w33": false,
+  "form": "A(x,y)=(Jx,y)-(x,Jy)"
+}

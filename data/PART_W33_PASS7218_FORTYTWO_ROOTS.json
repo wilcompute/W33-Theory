@@ -1,0 +1,20 @@
+{
+  "boundary": "the fibration is verified by recovering SRG(40,12,2,4); the subsystem question is answered by reflection closure, and a negative answer is reported as a coincidence, not smoothed over",
+  "fibration_verified": true,
+  "preimage_size": 42,
+  "closed_under_reflection": false,
+  "reflection_closure_size": 240,
+  "inner_products": {
+    "-2": 21,
+    "-1": 294,
+    "0": 252,
+    "1": 294
+  },
+  "random_control": {
+    "-2": 5,
+    "-1": 199,
+    "0": 443,
+    "1": 214
+  },
+  "verdict": "NOT a subsystem: the 42 roots generate 240 roots under reflection (all of E8), so 42 = |A6| is a numerical coincidence here"
+}
