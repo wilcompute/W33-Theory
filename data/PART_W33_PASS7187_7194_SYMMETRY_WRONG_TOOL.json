@@ -1,0 +1,127 @@
+{
+  "boundary": "Pass 7192 PROVES that the maximum partial ovoid of W(3,7) is invariant under no element of order 3, and under no element of order 7 in two of its three classes -- caps of 30, 15, 15 against a REPRESENTABLE 33, each a completed exact ILP. Order 5 and one order-7 class carry NO information: 33 is not representable in their orbit profiles at all, so their caps are arithmetic, not evidence. I first stated this as 'no odd prime symmetry' and corrected it before commit. The order-2 case did NOT resolve and no claim is made about it. alpha(W(3,9)) is NOT determined; (q+4)(q-1)/2 is a zero-degrees-of-freedom interpolation through three points, not evidence",
+  "calibration": {
+    "large_subgroups_at_q5": {
+      "best": 11,
+      "known": 18,
+      "lesson": "would have produced a confident number 7 short at q=9 with no signal of the gap",
+      "regime": "|H| >= 9"
+    },
+    "order_3_at_q3_q5": {
+      "best": [
+        7,
+        18
+      ],
+      "known": [
+        7,
+        18
+      ],
+      "reaches": true
+    }
+  },
+  "exact_values": {
+    "alpha_W33": {
+      "method": "ILP witness + infeasibility at 8",
+      "note": "meets Tallini's q^2-q+1 = 7 exactly",
+      "value": 7
+    },
+    "alpha_W35": {
+      "method": "ILP witness + infeasibility at 19",
+      "note": "matches Cimrakova-Fack 2005 Table 1 independently",
+      "value": 18
+    },
+    "alpha_W37": {
+      "note": "unique up to equivalence, #O' = 1",
+      "source": "Cimrakova-Fack 2005, NOT ours",
+      "value": 33
+    }
+  },
+  "interpolation": {
+    "deficits_from_tallini": [
+      0,
+      3,
+      10
+    ],
+    "degrees_of_freedom": 0,
+    "fits": {
+      "q=3": 7,
+      "q=5": 18,
+      "q=7": 33
+    },
+    "formula": "(q+4)(q-1)/2 = (q^2-q+1) - C(q-2,2)",
+    "repo_best_known": 51,
+    "status": "NOT evidence; a falsifiable prediction of 52 at q=9"
+  },
+  "my_bug": {
+    "fix": "key on the orbit profile, the invariant that determines the ILP",
+    "outcome": "the number 30 survived; its warrant did not exist before the fix",
+    "what": "keyed order-3 elements by Jordan type of u-1",
+    "why_wrong": "a class invariant only in characteristic 3; at q=5,7 order-3 elements are semisimple and setdefault tested ONE representative"
+  },
+  "negative_theorem": {
+    "coincidence_dissolved": "orders 3 and 5 both giving 30 needed no explanation -- 30 is the divisibility ceiling for order 5 and an unrelated genuine bound for order 3",
+    "evidence": [
+      {
+        "33_representable": true,
+        "counts_as_evidence": true,
+        "max": 30,
+        "order": 3,
+        "profile": {
+          "1": 10,
+          "3": 130
+        }
+      },
+      {
+        "33_representable": true,
+        "counts_as_evidence": true,
+        "max": 15,
+        "order": 7,
+        "profile": {
+          "1": 8,
+          "7": 56
+        }
+      },
+      {
+        "33_representable": true,
+        "counts_as_evidence": true,
+        "max": 15,
+        "order": 7,
+        "profile": {
+          "1": 57,
+          "7": 49
+        }
+      }
+    ],
+    "group_order": "|Sp(4,7)| = 7^4 * 2^9 * 3^2 * 5^2, odd primes exactly 3,5,7",
+    "my_over_read": "I first stated this as 'no odd prime symmetry reaches the optimum'. Two of the five rows cannot represent 33 at all and carry no information; the claim was corrected before commit",
+    "no_information": [
+      {
+        "33_representable": false,
+        "max": 30,
+        "order": 5,
+        "profile": {
+          "5": 80
+        },
+        "why": "no fixed points, so every invariant set has size divisible by 5, and 5 does not divide 33; 30 = floor(33/5)*5 is the arithmetic ceiling, achieved -- order 5 does as well as it possibly could"
+      },
+      {
+        "33_representable": false,
+        "max": 28,
+        "order": 7,
+        "profile": {
+          "1": 1,
+          "7": 57
+        },
+        "why": "neither 33 nor 32 is a multiple of 7"
+      }
+    ],
+    "not_excluded": "a 2-group stabilizer; the order-2 ILP did not close",
+    "statement": "the maximum partial ovoid of W(3,7) is invariant under no element of order 3, and under no element of order 7 in two of its three classes"
+  },
+  "not_done": [
+    "alpha(W(3,9))",
+    "any upper bound better than Tallini's 73",
+    "the order-2 case at q=7"
+  ],
+  "why_searches_plateau": "extremal partial ovoids here are ASYMMETRIC, so orbit methods search a space that does not contain the optimum, and local search has no structure to exploit"
+}

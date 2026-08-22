@@ -1,0 +1,51 @@
+{
+  "q": 3,
+  "size": 7,
+  "subgroup": "transvection centre (0, 0, 0, 1), lam=1, 22 orbits",
+  "points": [
+    [
+      0,
+      1,
+      0,
+      2
+    ],
+    [
+      1,
+      0,
+      0,
+      2
+    ],
+    [
+      1,
+      0,
+      2,
+      0
+    ],
+    [
+      1,
+      0,
+      2,
+      2
+    ],
+    [
+      1,
+      0,
+      2,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      2,
+      0,
+      1
+    ]
+  ],
+  "encoding": "GF(9) k = (k%3) + (k//3)*i, i^2 = -1",
+  "verified": "pairwise non-collinear under x0y1-x1y0+x2y3-x3y2"
+}
