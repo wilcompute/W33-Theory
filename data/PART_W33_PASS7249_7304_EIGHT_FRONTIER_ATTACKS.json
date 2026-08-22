@@ -1,0 +1,78 @@
+{
+  "schema": "w33.pass7249_7304.eight_frontier_attacks.v1",
+  "status": "PASS_WITH_EXPLICIT_BOUNDARIES",
+  "passes": "7249-7304",
+  "requested_five": {
+    "1_doily_spectral_system": {
+      "N_shape": [45, 36],
+      "N_transpose_N": "12 I36 + 3 J36 + 3 A36",
+      "N_N_transpose": "9 I45 + 3 J45 + 3 A45",
+      "spectrum_NtN": {"180": 1, "18": 20, "0": 15},
+      "centered_rank": 20,
+      "centered_intertwiner": "2 A45 (3N-J) = 3 (3N-J) A36",
+      "centered_frame": "36 vectors in R20, norm^2=10, inner products 1 and -2, tight-frame eigenvalue 18"
+    },
+    "2_one_slice_reconstruction": {
+      "PSp_orbit_of_one_double_six": 36,
+      "binary_orbit_span_dimension": 21,
+      "reconstructs": "C_spread=[45,21,5]_2",
+      "slice_overlaps_reconstruct_H36": true
+    },
+    "3_D4_triality": {
+      "result": "canonical v/s/c assignment is obstructed",
+      "W_D4_order": 192,
+      "diagonal_triality_order": 6,
+      "D4_plus_D4_pair_stabilizer_order": 442368,
+      "unordered_complementary_pairs": 1575,
+      "reason": "simultaneous S3 triality preserves diagonal glue and acts transitively on (v,v),(s,s),(c,c)"
+    },
+    "4_exceptional_S6_extension": {
+      "PSp_double_six_stabilizer": 720,
+      "WE6_double_six_stabilizer": 1440,
+      "both_images_on_15_slice": 720,
+      "extra_kernel": 2,
+      "kernel_action": "central A/B sextet swap fixing the 15 complementary c_ij lines",
+      "exceptional_outer_realized_by_extra_C2": false,
+      "spread_code_minimum_words": 27,
+      "minimum_weight": 5,
+      "minimum_words_equal_cubic_line_stars": true,
+      "consequence": "the code reconstructs the 27-line/45-tritangent cubic-surface geometry"
+    },
+    "5_q9_local_obstruction": {
+      "doily_direct_transfer_canonical": false,
+      "replacement": "embedded W(3,3) section inequalities plus q9-native blocker signatures",
+      "standard_F3_section_intersection": 4,
+      "diagonal_torus_section_histogram": {"0": 1, "1": 1, "2": 2, "3": 3, "4": 1},
+      "deterministic_20000_section_scan": {"0": 276, "1": 2453, "2": 7343, "3": 7291, "4": 2305, "5": 322, "6": 10},
+      "maximum_seen": 6,
+      "absolute_cap_per_embedded_W33": 7,
+      "boundary": "the 20,000-section scan is not exhaustive and is not an upper bound for alpha(W(3,9))"
+    }
+  },
+  "outside_box_three": {
+    "A_ternary_shadow": {
+      "code": "[45,14,15]_3",
+      "self_orthogonal": true,
+      "smith_nonzero": {"1": 14, "3": 7},
+      "minimum_words": 72,
+      "minimum_words_are": "+/- the 36 doily slice columns",
+      "weight_enumerator": {"0": 1, "15": 72, "18": 6420, "21": 19440, "24": 336060, "27": 1109420, "30": 1781136, "33": 1215720, "36": 295170, "39": 18360, "42": 1080, "45": 90}
+    },
+    "B_q9_blocker_simplex": {
+      "blocker_matrix_shape": [769, 51],
+      "gram": "B^T B = 80 I51 + 10 J51",
+      "centered_rank": 50,
+      "centered_integer_gram": "Y^T Y = 208080 I51 - 4080 J51",
+      "interpretation": "the 51 centered blocker columns form a regular simplex in dimension 50"
+    },
+    "C_q9_third_moment_hypergraph": {
+      "triads_with_1_center": 20722,
+      "triads_with_10_centers": 103,
+      "special_hypergraph_edges": 103,
+      "GF2_incidence_rank": 51,
+      "vertex_degree_histogram": {"3": 6, "4": 4, "5": 12, "6": 12, "7": 7, "8": 6, "11": 2, "12": 2},
+      "pair_multiplicity_histogram": {"1": 285, "2": 12}
+    }
+  },
+  "claim_boundary": "All claims are finite combinatorial, coding, or deterministic search statements. The q=9 optimum remains open; no physical interpretation is promoted from the new arithmetic coincidences."
+}
