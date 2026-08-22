@@ -1,0 +1,21 @@
+{
+  "A2_per_leaf": 40,
+  "boundary": "Finite Weyl/association-scheme theorem. No physical ensemble or continuum interpretation.",
+  "centered_frame": "C^T C = 288 P_{V300}",
+  "centered_row_norm_squared": "270/7",
+  "global_A2_relation_valencies": [1,120,648,270,81],
+  "incidence_gram": "B^T B = 80 I + 8(A_120 + A_270)",
+  "incidence_gram_eigenvalues_by_global_A2_constituent": [3200,0,288,0,0],
+  "leaves_W33": 2240,
+  "leaves_per_A2": 80,
+  "nonorthogonal_relation_in_a_leaf": "the unique global valency-270 relation",
+  "pair_replication_by_relation": [80,8,0,8,0],
+  "points_A2": 1120,
+  "proof_of_relation_selection": "Aut(W33) is transitive on leaf noncollinear pairs; fixed-point double counting gives 2160 nonorthogonal leaf incidences, and among global valencies 648,270,81 only 270 divides 2160 integrally, giving replication 8.",
+  "real_column_module": "1 + V_300",
+  "real_rank_B": 301,
+  "schema": "w33.pass7425.global_leaf_incidence_design.v1",
+  "status": "PASS",
+  "theorem": "The 2240 Eisenstein W33 leaves form a two-relation tactical design inside the 1120-point E8 A2 association scheme: two A2s share a leaf iff they are in the orthogonality relation (valency 120) or the valency-270 relation, and then they lie in exactly eight leaves. After centering, the 2240 leaf indicators are a tight frame for the irreducible 300-dimensional A2 constituent.",
+  "unordered_pair_incidence_total": 1747200
+}
