@@ -16,9 +16,11 @@ def test_pass7179_7182_exact_packet():
         subprocess.run([sys.executable,str(ROOT/p)],check=True,cwd=ROOT)
     d=json.loads((ROOT/'data/PART_W33_PASS7179_D4_SCHEME_KREIN.json').read_text())
     assert d['status']=='PASS' and d['full_scheme_automorphism_order']==103680 and d['q_polynomial_orderings']==[]
+    assert d['share_relation_maximal_9_cliques']==80
     q=json.loads((ROOT/'data/PART_W33_PASS7180_Q9_LOCAL_EDIT_RADIUS.json').read_text())
     assert q['status']=='PASS'
-    assert q['exact_maximum_total_after_exact_core_deletions']=={'0':47,'1':46,'2':47,'3':46,'4':46,'5':46}
+    assert q['exact_maximum_total_after_exact_core_deletions_0_to_5']=={'0':47,'1':46,'2':47,'3':46,'4':46,'5':46}
+    assert q['target48_excluded_for_all_core_deletion_radii_0_through_8'] is True
     e=json.loads((ROOT/'data/PART_W33_PASS7181_E6_MINUSCULE_FIBER_VOLTAGE.json').read_text())
     assert e['status']=='PASS' and e['Schlaefli']['v']==27 and e['Schlaefli']['k']==16
     assert e['K9_triangle_voltage_holonomy']=={'0':12,'1':36,'2':36}
