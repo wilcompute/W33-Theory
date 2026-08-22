@@ -5,5 +5,7 @@
   "track": "A",
   "topic": "E8/W33 full colored association algebra, D4 subsystem geometry, q9 boundary-conditioned target48 closure, Z12 cocycle comparison, internal E6xA2 branching, and three outside-box probes",
   "reserved": "2026-08-21",
-  "status": "RESERVED"
+  "status": "PUBLISHED_WITH_GLOBAL_Q9_TARGET48_OPEN_AND_E6_FIBER_CORRECTION",
+  "frontier_insert": "analysis/PASS7171_7186_e8_d4_q9_insert.tex",
+  "aggregate_certificate": "data/PART_W33_PASS7171_7186_AGGREGATE.json"
 }

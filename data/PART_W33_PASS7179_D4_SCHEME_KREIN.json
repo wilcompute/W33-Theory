@@ -1,0 +1,26 @@
+{
+  "schema":"w33.pass7179.d4_scheme_krein.v1",
+  "status":"PASS",
+  "vertices":90,
+  "relation_degrees":{"partner":1,"share_point":32,"disjoint_cross7":32,"disjoint_cross4":24},
+  "pair_counts":{"(0, 16)":45,"(0, 4)":1080,"(0, 7)":1440,"(1, 3)":1440},
+  "multiplicities":[1,15,20,24,30],
+  "P":[[1,1,32,32,24],[1,-1,8,-8,0],[1,1,-4,-4,6],[1,1,2,2,-6],[1,-1,-4,4,0]],
+  "Q":[["1","15","20","24","30"],["1","-15","20","24","-30"],["1","15/4","-5/2","3/2","-15/4"],["1","-15/4","-5/2","3/2","15/4"],["1","0","5","-6","0"]],
+  "krein_upper_triangle":{
+    "0,0":["1","0","0","0","0"],"0,1":["0","1","0","0","0"],"0,2":["0","0","1","0","0"],"0,3":["0","0","0","1","0"],"0,4":["0","0","0","0","1"],
+    "1,1":["15","0","15/4","45/8","0"],"1,2":["0","5","0","0","15/2"],"1,3":["0","9","0","0","15/2"],"1,4":["0","0","45/4","75/8","0"],
+    "2,2":["20","0","10","15/2","0"],"2,3":["0","0","9","25/2","0"],"2,4":["0","15","0","0","25/2"],
+    "3,3":["24","0","15","21/2","0"],"3,4":["0","15","0","0","33/2"],"4,4":["30","0","75/4","165/8","0"]
+  },
+  "q_polynomial_orderings":[],
+  "share_relation_maximal_9_cliques":80,
+  "point_star_cliques":40,
+  "neighborhood_star_cliques":40,
+  "partner_swaps_two_40_clique_families":true,
+  "quotient_by_partner_recovers_W33":true,
+  "Aut_W33_order":51840,
+  "full_scheme_automorphism_order":103680,
+  "full_scheme_automorphism_structure":"Aut(W33) x C2",
+  "automorphism_proof":"The 80 intrinsic maximal 9-cliques are 40 point-stars plus 40 neighborhood-stars; the unique valency-one partner involution swaps them pairwise. Their quotient reconstructs W33, so Aut(scheme)<=2 Aut(W33), while Aut(W33) and the central partner involution attain equality."
+}

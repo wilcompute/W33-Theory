@@ -1,0 +1,96 @@
+name: W33 Pass7171-7186 publication proof
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/PASS7171_7186_e8_d4_q9_insert.tex'
+      - 'analysis/PASS7171_7186_index_insert.html'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/w33_publication_frontier_contract_v2.json'
+      - 'tools/materialize_pass7171_7186_frontier.py'
+      - '.github/workflows/w33_pass7171_7186_packet.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/PASS7171_7186_e8_d4_q9_insert.tex'
+      - 'analysis/PASS7171_7186_index_insert.html'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'data/PART_W33_PASS7171_7186_AGGREGATE.json'
+      - 'data/w33_publication_frontier_contract_v2.json'
+      - 'tools/materialize_pass7171_7186_frontier.py'
+      - '.github/workflows/w33_pass7171_7186_packet.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publication-reachability:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit shared manuscript/public DAG
+        run: |
+          grep -F '\input{analysis/PASS7171_7186_e8_d4_q9_insert}%' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+          grep -F 'pass-7171-7186-e8-d4-q9' data/w33_publication_frontier_contract_v2.json
+          grep -F 'id="pass-7171-7186-e8-d4-q9"' analysis/PASS7171_7186_index_insert.html
+          grep -F 'H_{27}' analysis/PASS7171_7186_e8_d4_q9_insert.tex
+          grep -F 'd\le8' analysis/PASS7171_7186_e8_d4_q9_insert.tex
+
+  compile-and-publish:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    needs: publication-reachability
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Tectonic
+        run: |
+          curl --proto '=https' --tlsv1.2 -LsSf https://drop-sh.fullyjustified.net | sh
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+      - name: Audit exact aggregate boundary
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('data/PART_W33_PASS7171_7186_AGGREGATE.json').read_text())
+          assert d['status']=='PASS'
+          assert 'global q9 target-48 problem remains open' in d['boundary']
+          assert d['pass7173_q9_local_closure']['target48_excluded_for_all_core_deletion_radii_0_through_8']
+          PY
+      - name: Compile three canonical manuscripts
+        run: |
+          mkdir -p evidence/pass7171_7186
+          for f in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do tectonic --keep-logs "$f"; done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass7171_7186/pdf_sha256.txt
+      - name: Materialize public card and freeze publication proof
+        run: |
+          cp evidence/pass7171_7186/pdf_sha256.txt /tmp/pass7171_7186_pdf_sha256.txt
+          git fetch origin master
+          git reset --hard origin/master
+          python tools/materialize_pass7171_7186_frontier.py
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          token='pass-7171-7186-e8-d4-q9'
+          for p in (Path('docs/index.html'),Path('index.html')):
+              assert p.read_text().count(f'id="{token}"')==1
+          out={'schema':'w33.pass7171_7186.publication_proof.v2','status':'PASS','source_commit':os.environ['GITHUB_SHA'],
+               'all_three_canonical_manuscripts_compiled':True,'public_card_materialized_both_surfaces':True,
+               'global_q9_target48':'OPEN','local_q9_target48_excluded_through_core_deletion_radius':8,
+               'h27_matter_cover_in_frontier':True,
+               'pdf_sha256':Path('/tmp/pass7171_7186_pdf_sha256.txt').read_text().strip().splitlines()}
+          Path('data/PART_W33_PASS7171_7186_PUBLICATION_PROOF.json').write_text(json.dumps(out,indent=2)+'\n')
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- data/PART_W33_PASS7171_7186_PUBLICATION_PROOF.json docs/index.html index.html
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Pass7171-7186: freeze compile and public proof [skip ci]'
+          git push origin HEAD:master

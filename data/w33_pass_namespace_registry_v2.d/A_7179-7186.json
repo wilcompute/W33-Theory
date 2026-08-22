@@ -1,0 +1,12 @@
+{
+  "lo": 7179,
+  "hi": 7186,
+  "lane": "A",
+  "track": "A",
+  "topic": "freeze Pass7171-7178, D4 scheme automorphism/Krein closure, q9 local edit radius, coordinate-free E6 minuscule reconstruction, D4-pair E8 glue/transition system, and three outside-box probes",
+  "reserved": "2026-08-21",
+  "status": "PUBLISHED_WITH_GLOBAL_Q9_TARGET48_OPEN",
+  "frontier_insert": "analysis/PASS7171_7186_e8_d4_q9_insert.tex",
+  "aggregate_certificate": "data/PART_W33_PASS7171_7186_AGGREGATE.json",
+  "focused_test": "tests/test_w33_pass7171_7186_exact_packet.py"
+}
