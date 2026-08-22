@@ -1,0 +1,18 @@
+{
+  "A2_subsystems_in_D4": 16,
+  "D4_roots": 24,
+  "complement_degree": 9,
+  "disjoint_root_graph": "L_2(4) = SRG(16,6,2,2)",
+  "firewall": "The two appearances of 576 here (|S4xS4| and the number of labelled Latin squares) are internal consequences of the same 4x4 rook object. No identification with an unrelated order-576 stabilizer is claimed without an explicit action map.",
+  "full_grid_automorphism_group": "S4 wr C2, order 1152 = full D4 root-system automorphism group W(F4)",
+  "global_leaf_factorization": "Using the certified 64 Eisenstein leaves through each global D4 and transitivity of N_E8(D4) on the eight root partitions, each of the eight D4=A2^4 root partitions lies in exactly eight leaves; hence 64=8 x 8.",
+  "labelled_order4_Latin_squares": 576,
+  "maximal_K4_root_partitions": 8,
+  "maximum_coclique_transversals": 24,
+  "root_partition_families": "4+4 with intersection graph K4,4",
+  "row_column_preserving_subgroup": "S4 x S4, order 576",
+  "schema": "w33.pass7426.d4_a2_rook_latin.v1",
+  "status": "PASS",
+  "theorem": "The recurring 4x4 grid is intrinsic to D4: its 16 A2 subsystems are the cells of L2(4). The eight rows/columns are exactly the eight partitions of the 24 D4 roots into four disjoint A2 hexagons, while the 24 transversals and their 24 four-way partitions give the classical 576 labelled Latin squares of order four.",
+  "unlabelled_partitions_into_four_transversals": 24
+}
