@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pass7180: exact q=9 local target-48 exclusion through five invertible-core deletions."""
+"""Pass7180: exact q=9 local target-48 exclusion through eight invertible-core deletions."""
 from __future__ import annotations
 import itertools,json
 from pathlib import Path
@@ -29,6 +29,11 @@ def main():
     assert len(C)==42 and len(B)==5
     r1=[i for i,s in enumerate(b.STATES) if b.rankstate(s)==1];r2=[i for i,s in enumerate(b.STATES) if b.rankstate(s)==2];out2=[x for x in r2 if x not in C]
     c1={x:frozenset(y for y in C if not comp(x,y)) for x in r1};c2={x:frozenset(y for y in C if not comp(x,y)) for x in out2};cp={x:i for i,x in enumerate(C)}
+    mask_hist={}
+    all_out=[x for x in range(512) if x not in C]
+    for x in all_out:mask_hist[x]=c1[x] if x in c1 else c2[x]
+    blocker_hist={str(k):v for k,v in sorted(__import__('collections').Counter(len(z) for z in mask_hist.values()).items())}
+    unique_masks=len(set(mask_hist.values()))
     def exists(d,total):
         need=total-(42-d);pool=sorted([x for x in r1 if len(c1[x])<=d]+[x for x in out2 if len(c2[x])<=d]);n=len(pool)
         adj=[0]*n;cm=[]
@@ -67,13 +72,19 @@ def main():
     exact={0:47,1:46,2:47,3:46,4:46,5:46};cert=[]
     for d,m in exact.items():
         lo=exists(d,m);up=exists(d,m+1);assert lo['exists'] and not up['exists'];cert.append({'d':d,'maximum_total':m,'lower':lo,'upper':up})
+    # Exact target-48 exclusion continues further even though the exact maxima at d=6,7,8 are not needed.
+    radius=[]
+    for d in (6,7,8):
+        z=exists(d,48);assert not z['exists'];radius.append(z)
     # The original core has exactly the known five universally compatible rank-one states.
     universal=[x for x in r1 if not c1[x]];assert set(universal)==set(B)
-    out={'schema':'w33.pass7180.q9_local_edit_radius.v1','status':'PASS','anchor_type':'(1,3,5)',
+    out={'schema':'w33.pass7180.q9_local_edit_radius.v2','status':'PASS','anchor_type':'(1,3,5)',
       'known_47_split':{'invertible':42,'rank1':5},'invertible_core':C,'rank1_completion':B,
       'universally_compatible_rank1_states':universal,
-      'exact_maximum_total_after_exact_core_deletions':{str(k):v for k,v in exact.items()},'certificates':cert,
-      'theorem':'For exactly d=0,1,2,3,4,5 deletions from the known 42-state invertible core, followed by arbitrary compatible additions from every other normalized residual state, the exact maxima are 47,46,47,46,46,46. Thus target 48 is impossible through deletion radius five.',
+      'outside_core_blocker_histogram':blocker_hist,'distinct_core_blocker_masks':unique_masks,
+      'exact_maximum_total_after_exact_core_deletions_0_to_5':{str(k):v for k,v in exact.items()},'maximum_certificates':cert,
+      'target48_exclusion_additional_radii':radius,'target48_excluded_for_all_core_deletion_radii_0_through_8':True,
+      'theorem':'In the canonical (1,3,5) residual graph, a 48-clique cannot have overlap >=34 with the known 42-state invertible core; equivalently any hypothetical target-48 residual clique must delete at least nine core states. Exact maxima for d=0..5 are 47,46,47,46,46,46, and direct exact branch-and-bound excludes target 48 for d=6,7,8.',
       'boundary':'Local theorem in the canonical (1,3,5) anchor graph only. It does not prove the global 48-clique impossibility or alpha(W(3,9))=51.'}
-    OUT.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n');print(json.dumps({'status':'PASS','maxima':out['exact_maximum_total_after_exact_core_deletions']}))
+    OUT.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n');print(json.dumps({'status':'PASS','maxima':out['exact_maximum_total_after_exact_core_deletions_0_to_5'],'target48_radius':8}))
 if __name__=='__main__':main()
