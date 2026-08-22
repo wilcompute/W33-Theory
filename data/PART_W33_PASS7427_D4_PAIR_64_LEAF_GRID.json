@@ -1,0 +1,17 @@
+{
+  "D4_A2_root_partitions": 8,
+  "W_D4_order": 192,
+  "W_D4_partition_action_image_order": 96,
+  "action_firewall": "The 8 D4 root partitions and the 8 A2^4 orientation leaves are not the same W(D4)-set: root partitions factor through W(D4)/{+-I} of order 96, whereas Pass7409 certified a faithful order-192 affine action on the orientation fibre.",
+  "bijection": "For a fixed orthogonal D4 + D4perp pair, the 64 Eisenstein leaves containing it are equivariantly bijective with the 64 ordered pairs (one of 8 A2-root partitions of D4, one of 8 A2-root partitions of D4perp).",
+  "boundary": "The 8x8 grid is a finite incidence coordinatization. It is not identified with a spacetime or hardware lattice.",
+  "leaves_per_fixed_D4_root_partition": 8,
+  "leaves_through_each_global_D4": 64,
+  "orthogonal_D4_pair_partition_pairs": "8 x 8 = 64",
+  "partition_action_kernel_order": 2,
+  "partition_stabilizer_in_W_D4": 24,
+  "same_partition_graph": "L_2(8) = SRG(64,14,6,2)",
+  "schema": "w33.pass7427.d4_pair_64_leaf_grid.v1",
+  "status": "PASS",
+  "theorem": "The certified replication 64 is not opaque: an orthogonal D4 pair resolves it as an exact 8x8 chart of A2-root partitions. Fixing either side gives an 8-leaf row or column, and the induced same-partition relation is the 8x8 rook graph."
+}
