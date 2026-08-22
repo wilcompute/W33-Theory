@@ -1,0 +1,18 @@
+{
+  "binary_shadow": "Each 1120x1120 pair-incidence row code has dimension 300 and is self-orthogonal because BB^T=0 mod2.",
+  "centered_triality": "Writing X_B=B-J/28 gives X_minus X_K^T=12 X_plus and cyclic variants; X_B X_B^T=144 P_300. Thus X_B/12 are coherent partial isometries between three 300-dimensional constituents.",
+  "claim_boundary": "Exact E8 incidence/triality-parameter theorem. The outer triality identification is a tightly constrained next theorem, not silently assumed.",
+  "even_Weyl_transitive_on_each_family": true,
+  "external_group_target": "The effective even Weyl group is the D4(2)=O8+(2) group. ATLAS/GAP lists three nonconjugate maximal-subgroup classes of index 1120 and structure (3 x U4(2)):2. The present three-family geometry is therefore the natural triality target, but this certificate does not claim the outer S3 permutation until explicit subgroup-class/fusion maps are frozen.",
+  "pairwise_distance_regular": "{40,39,36,27;1,4,13,40}",
+  "pairwise_gram_spectrum": "1600^1 144^300 0^819",
+  "pairwise_incidence_degree": 40,
+  "pairwise_matrix_ranks": {"F2":300,"F3":266,"real":301},
+  "passes": "7441-7448",
+  "schema": "w33.pass7441_7448.e8_1120_triality_triad.v1",
+  "status": "PASS",
+  "ternary_shadow": {"code_dimension":266,"gram_rank":36,"hull_dimension":230},
+  "third_family_common_neighbor_law": "Across any two distinct families, incident pairs have 13 common neighbors in the third family and nonincident pairs have exactly 1.",
+  "three_families": {"A2":1120,"leaf_minus":1120,"leaf_plus":1120},
+  "triality_composition": ["F_minus K^T = J + 12 F_plus","F_plus K = J + 12 F_minus","F_plus^T F_minus = J + 12 K"]
+}
