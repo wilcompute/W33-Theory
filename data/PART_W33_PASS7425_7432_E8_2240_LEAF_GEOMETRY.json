@@ -1,0 +1,47 @@
+{
+  "A2": 1120,
+  "A2_replication": 80,
+  "Eisenstein_W33_leaves": 2240,
+  "centered_tight_frame": "F with its constant component removed is a tight frame spanning exactly the 300-dimensional A2 Gelfand-pair constituent.",
+  "claim_boundary": "Exact E8 root/A2/leaf incidence theorem. No particle, coupling, or hardware claim follows.",
+  "external_identification_boundary": "The halved SRG has the parameters of the graph commonly called O_8^+(3), but this pass does not promote an isomorphism without an explicit map.",
+  "global_unordered_leaf_pair_overlaps": {
+    "0": 816480,
+    "1": 1209600,
+    "4": 436800,
+    "13": 44800
+  },
+  "halved_graph": {
+    "spectrum": "390^1 26^300 (-10)^819",
+    "srg": "(1120,390,146,130)",
+    "vertices": 1120
+  },
+  "incidence_identity": "F F^T = 80 I + 8(A_orth + A_mu16)",
+  "incidence_rank": 301,
+  "incidence_rank_F2": 301,
+  "incidence_rank_F3": 301,
+  "incidence_real_spectrum": {
+    "0": 819,
+    "288": 300,
+    "3200": 1
+  },
+  "leaf_graph": {
+    "bipartite": true,
+    "definition": "two leaves adjacent iff their A2 intersection has size 13",
+    "diameter": 4,
+    "distance_distribution": [1,40,390,1080,729],
+    "degree": 40,
+    "intersection_array": "{40,39,36,27;1,4,13,40}",
+    "local_reconstruction": "For a leaf L, its 40 graph-neighbors meet L in exactly the 40 closed W(3,3) neighborhoods {p} union p^perp.",
+    "overlap_by_distance": {"0":40,"1":13,"2":4,"3":1,"4":0},
+    "spectrum": {"-12":300,"-40":1,"0":1638,"12":300,"40":1},
+    "vertices": 2240
+  },
+  "leaf_overlap_from_one": {"0":729,"1":1080,"4":390,"13":40,"40":1},
+  "leaf_size": 40,
+  "pair_replication": {"mu10":0,"mu16":8,"mu40":0,"orthogonal":8},
+  "pair_selection_theorem": "Within every leaf, the 780 A2 pairs are exactly 240 orthogonal pairs plus 540 global mu=16 pairs; mu=10 and mu=40 never occur.",
+  "passes": "7425-7432",
+  "schema": "w33.pass7425_7432.e8_2240_leaf_geometry.v1",
+  "status": "PASS"
+}

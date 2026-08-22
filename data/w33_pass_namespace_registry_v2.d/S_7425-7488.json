@@ -1,0 +1,10 @@
+{
+  "lo": 7425,
+  "hi": 7488,
+  "lane": "Sage",
+  "track": "global_a2_vogel_cross_frontier",
+  "topic": "Spread-double-six equivalence, 2240 Eisenstein-leaf incidence codes/frames, E6 27x78 Vogel split-Casimir test, A2-leaf cross-characteristic structures, q9 quotient refinements, and outside-box global geometry probes",
+  "reserved": "2026-08-22",
+  "status": "RESERVED_ACTIVE",
+  "depends_on": "Pass7376-7424 plus today's parallel A2/Witting/Eisenstein commits"
+}

@@ -1,0 +1,22 @@
+{
+  "648_firewall": "Nothing here identifies the repo characteristic-3 648-dimensional quotient as a new Vogel-plane point. That older hypothesis remains unproved and requires an actual Lie algebra/Casimir comparison.",
+  "E6_fundamental_dimensions_repo_numbering": [27,351,2925,351,27,78],
+  "E8_boundary": "Isaev 2026 explicitly excludes E8 from this beyond-Vogel minimal-fundamental formula; do not force this identity onto E8.",
+  "characteristic_identity": "(C - 1/24)(C + 1/2)(C + 1/6)=0",
+  "claim_boundary": "Exact characteristic-zero E6 representation/Casimir theorem; no gauge-theory or particle assignment is inferred.",
+  "external_match": "Exact n=1 specialization of Isaev, arXiv:2601.01612, E6 equations 3.46-3.51; numbering of fundamental weights differs, dimensions/Casimirs/eigenvalues agree.",
+  "normalized_split_Casimir_eigenvalues": {"1728":"1/24","27":"-1/2","351":"-1/6"},
+  "passes": "7433-7440",
+  "projectors": {
+    "1728": "48*(2*x + 1)*(6*x + 1)/65",
+    "27": "(6*x + 1)*(24*x - 1)/26",
+    "351": "-3*(2*x + 1)*(24*x - 1)/10"
+  },
+  "quadratic_Casimirs": {"1728":"130/3","27":"52/3","351":"100/3","78":"24"},
+  "repo_target": "The theorem applies concretely to the existing E6 minuscule 27 carrier tensored with the E6 adjoint 78.",
+  "schema": "w33.pass7433_7440.e6_vogel_split_casimir.v1",
+  "status": "PASS",
+  "tensor_product": "27 x 78 = 1728 + 27 + 351",
+  "trace_identity": "Tr(C^3) = -1/4 Tr(C^2)",
+  "trace_moments": {"1":"0","2":"39/2","3":"-39/8","4":"377/192"}
+}
