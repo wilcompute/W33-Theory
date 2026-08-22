@@ -1,0 +1,60 @@
+{
+  "boundary": "NEW: every non-collinear pair of W(3,3) lies in exactly one J-stable D4, so the 90 D4s decompose the complement graph into 90 K4s; and the 36 spreads and 36 double sixes carry ISOMORPHIC graphs SRG(36,15,6,6) with |Aut| = 51840. Equal parameters alone would decide nothing (32,548 such graphs exist); the isomorphism test is what decides. Says nothing about the Clifford L/R 36, whose MDCLXXXI boundary stands",
+  "not_done": [
+    "alpha(W(3,9))",
+    "q=11 stalled at 65",
+    "Q^-(5,5) against the published 48",
+    "whether the Clifford L/R 36 joins this picture",
+    "the third 1440"
+  ],
+  "pass_7245": {
+    "blocks": 90,
+    "coverage": "90 x 6 = 540, each exactly once",
+    "equivalently": "the 90 D4s partition the edges of the complement SRG(40,27,18,18) into 90 copies of K4",
+    "non_collinear_pairs": 540,
+    "pairs_per_block": 6,
+    "pauli_reading": "every pair of non-commuting Pauli classes extends uniquely to a four-element non-commuting family",
+    "statement": "every non-collinear pair lies in exactly one J-stable D4"
+  },
+  "pass_7246_7248": {
+    "aut_order": 51840,
+    "double_sixes": {
+      "graph": "SRG(36,15,6,6)",
+      "shared_counts": {
+        "4": 270,
+        "6": 360
+      }
+    },
+    "identification": "51840 = |Sp(4,3)| = |W(E6)|; this is the rank-3 graph of PSp(4,3) = U(4,2) on 36 points, so both 36s are one PSp(4,3)-set",
+    "isomorphic": true,
+    "spectrum": {
+      "-3": 20,
+      "15": 1,
+      "3": 15
+    },
+    "spreads": {
+      "graph": "SRG(36,15,6,6)",
+      "shared_counts": {
+        "1": 360,
+        "4": 270
+      }
+    },
+    "why_parameters_decide_nothing": "32,548 non-isomorphic SRG(36,15,6,6) exist"
+  },
+  "relation_to_MDCLXXXI": {
+    "here": "spreads vs double sixes -- same graph",
+    "note": "a different pair; MDCLXXXI is not contradicted and the Clifford L/R side was not retested",
+    "prior": "Clifford L/R cross-pairs vs spreads -- count-equal, schemes differ"
+  },
+  "the_1440s": {
+    "double_six_stabiliser": 1440,
+    "same_group": true,
+    "spread_stabiliser": 1440,
+    "third": {
+      "source": "Brosowsky et al., 20 x 72",
+      "status": "different context, no group action asserted, LEFT OPEN",
+      "value": 1440
+    },
+    "why": "vertex stabiliser 51840/36 in a rank-3 action"
+  }
+}
