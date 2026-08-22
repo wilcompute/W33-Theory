@@ -1,0 +1,42 @@
+{
+  "boundary": "This theorem identifies the finite E8/A2^4 orientation fibre with the existing Fano-hinge affine chart. It does not assert that the tomotope or a physical hardware implementation is literally an E8 subsystem; the weld is the explicit shared F2^3 affine action.",
+  "fano_hinge_weld": {
+    "K8_edge_partition": "K8 = K4,4 disjoint_union 2K4",
+    "even_cayley_graph": "2 K4",
+    "even_edges": 12,
+    "even_matchings": [{"direction":"011","edge_count":4},{"direction":"101","edge_count":4},{"direction":"110","edge_count":4}],
+    "odd_cayley_graph": "K4,4",
+    "odd_edges": 16,
+    "odd_one_factorization_matchings": [{"direction":"001","edge_count":4},{"direction":"010","edge_count":4},{"direction":"100","edge_count":4},{"direction":"111","edge_count":4}],
+    "reading": "The exact same F2^3, 4+3 direction split, K4,4 one-factorization, and 192-element affine group previously found in the Fano-hinge codec are obtained here from the eight Eisenstein E8 leaves through one A2^4 subsystem."
+  },
+  "fibre": {
+    "description": "Eisenstein W(3,3) leaves through a fixed A2^4 subsystem",
+    "explicit_map_to_F2_3": "(x1,x2,x3,x4) -> (x1+x4,x2+x4,x3+x4)",
+    "fibre_size": 8,
+    "global_inversion_identification": "x ~ x+1111",
+    "nonzero_direction_split": {"even":["110","101","011"],"odd":["100","010","001","111"]},
+    "orientation_bits_before_global_inversion": 16,
+    "vector_space": "F2^4/<1111> ~= F2^3"
+  },
+  "group_action": {
+    "A2_4_count": 11200,
+    "W_A2_4_order": 1296,
+    "W_E8_order": 696729600,
+    "extendable_outer_quotient_order": 48,
+    "full_fibre_image": "2^3:S4 = W(D4)",
+    "full_fibre_image_order": 192,
+    "full_fibre_kernel_order": 324,
+    "internal_kernel": 162,
+    "internal_orientation_translation_image": 8,
+    "normalizer_A2_4_order": 62208,
+    "tetracode_glue_stabilizer_order": 48,
+    "tetracode_projective_block_quotient": "S4",
+    "tetracode_projective_order": 24,
+    "zero_leaf_stabilizer_order_in_image": 24
+  },
+  "incidence_crosscheck": {"W33_lines_per_leaf":40,"global_A2_4":11200,"global_W33_leaves":2240,"leaves_per_A2_4":8},
+  "passes": "7409-7416",
+  "schema": "w33.pass7409_7416.e8_4a2_fano_fibre.v1",
+  "status": "PASS"
+}
