@@ -1,0 +1,93 @@
+{
+  "schema": "w33.pass7385_7392.eisenstein_e8_w33_bridge.v1",
+  "e8_root_graph": {
+    "vertices": 240,
+    "degree": 56,
+    "spectrum": {
+      "56.0": 1,
+      "28.0": 8,
+      "8.0": 35,
+      "-2.0": 112,
+      "-4.0": 84
+    },
+    "intersection_array": "{56,28,1;1,12,56}",
+    "antipodal_diameter": 3
+  },
+  "gosset_elte_chain": {
+    "240_E8": {
+      "56.0": 1,
+      "28.0": 8,
+      "8.0": 35,
+      "-2.0": 112,
+      "-4.0": 84
+    },
+    "56_Gosset": {
+      "27.0": 1,
+      "9.0": 7,
+      "-1.0": 27,
+      "-3.0": 21
+    },
+    "27_Schlafli": {
+      "16.0": 1,
+      "4.0": 6,
+      "-2.0": 20
+    },
+    "16_Clebsch": {
+      "10.0": 1,
+      "2.0": 5,
+      "-2.0": 10
+    },
+    "10_T5": {
+      "6.0": 1,
+      "1.0": 4,
+      "-2.0": 5
+    },
+    "6_prism": {
+      "3.0": 1,
+      "1.0": 1,
+      "-0.0": 2,
+      "-2.0": 2
+    },
+    "note": "vertex counts 240,56,27,16,10,6 -- never 40 or 33"
+  },
+  "eisenstein_rho": {
+    "definition": "rho = (E8 Coxeter element)^10",
+    "order": 3,
+    "relation": "1+rho+rho^2=0",
+    "char_poly": "Phi_3^4=(x^2+x+1)^4",
+    "fixed_point_free": true
+  },
+  "eisenstein_lines": {
+    "count": 40,
+    "fiber_size": 6,
+    "fiber_group": "Z6=<-1,omega>",
+    "line_structure": "each line is an A2 root hexagon (v.rho(v)=-1): 3 antipodal axes x 2 endpoints"
+  },
+  "w33_graph": {
+    "srg": [
+      40,
+      12,
+      2,
+      4
+    ],
+    "spectrum": {
+      "12.0": 1,
+      "2.0": 24,
+      "-4.0": 15
+    },
+    "adjacency_rule": "lines collinear iff their rho-invariant 2-planes are orthogonal"
+  },
+  "gq_3_3": {
+    "lines": 40,
+    "points_per_line": 4,
+    "lines_per_point": 4,
+    "gq_axiom": true
+  },
+  "independence_number": {
+    "alpha": 7,
+    "lovász_theta": 10,
+    "note": "alpha=7 => W(3,3) (no ovoid); Q(4,3) has alpha=10. theta=10 is only the Lovász bound."
+  },
+  "status": "PASS",
+  "passes": "7385-7392"
+}

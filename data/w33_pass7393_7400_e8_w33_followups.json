@@ -1,0 +1,34 @@
+{
+  "schema": "w33.pass7393_7400.e8_w33_followups.v1",
+  "S2_A2_hexagon_reconciliation": {
+    "v_dot_rho_v": -1,
+    "all_lines": true,
+    "statement": "40x6 = 40x(3 antipodal axes)x(2 endpoints); Eisenstein fibration == Pass1041 axis-glue fibration"
+  },
+  "S3_d4_count": {
+    "diagrams_per_root": 2520,
+    "total_D4": 3150,
+    "divisor": "|W(D4)|=192 simple systems per D4"
+  },
+  "S3_rho_invariant_D4": {
+    "count": 90,
+    "matches_pass7353_7360_C6_supported": true,
+    "note": "rho-invariant D4s = unions of 4 Eisenstein lines = the 90 C6-supported D4s"
+  },
+  "S3_gq_lines_are_not_D4": {
+    "gq_lines_through_point": 4,
+    "that_are_D4": 0
+  },
+  "S4_alpha_vs_theta": {
+    "alpha": 7,
+    "lovász_theta": 10.0,
+    "closure_package_error": "T201/T229 list alpha=theta=10; correct alpha=7, theta=10"
+  },
+  "S5_minus4_eigenspace": {
+    "W33": 15,
+    "E8_root_graph": 84,
+    "note": "W33 dim 15 = doily W(2,2) points; E8 dim 84; structural not spectral"
+  },
+  "status": "PASS",
+  "passes": "7393-7400"
+}
