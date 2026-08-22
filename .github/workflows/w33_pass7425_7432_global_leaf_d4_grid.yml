@@ -1,0 +1,84 @@
+name: W33 Pass7425-7432 global leaf D4 grid
+
+on:
+  push:
+    branches: [master, research/pass7425-7432-global-leaf-d4-grid]
+    paths:
+      - 'analysis/w33_pass7425_global_leaf_incidence_design.py'
+      - 'analysis/w33_pass7426_d4_a2_rook_latin.py'
+      - 'analysis/w33_pass7427_d4_pair_64_leaf_grid.py'
+      - 'analysis/w33_pass7428_d4_latin_hoffman_composed_bridge.py'
+      - 'analysis/w33_pass7429_global_double_six_leaf_orbit.py'
+      - 'analysis/w33_pass7430_steiner24_d4_root_refutation.py'
+      - 'analysis/w33_pass7431_q9_radius9.py'
+      - 'analysis/w33_pass7432_leaf_spherical_300_design.py'
+      - 'tests/test_w33_pass7425_7432_global_leaf_d4_grid.py'
+      - 'analysis/PASS7425_7432_global_leaf_d4_grid_insert.tex'
+      - 'analysis/PASS7425_7432_index_insert.html'
+      - 'tools/materialize_pass7425_7432_frontier.py'
+      - '.github/workflows/w33_pass7425_7432_global_leaf_d4_grid.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  exact-replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact-test dependencies
+        run: python -m pip install -q pytest networkx
+      - name: Replay seven lightweight producers
+        run: |
+          python analysis/w33_pass7425_global_leaf_incidence_design.py
+          python analysis/w33_pass7426_d4_a2_rook_latin.py
+          python analysis/w33_pass7427_d4_pair_64_leaf_grid.py
+          python analysis/w33_pass7428_d4_latin_hoffman_composed_bridge.py
+          python analysis/w33_pass7429_global_double_six_leaf_orbit.py
+          python analysis/w33_pass7430_steiner24_d4_root_refutation.py
+          python analysis/w33_pass7432_leaf_spherical_300_design.py
+      - name: Exact q9 radius-nine replay
+        run: python analysis/w33_pass7431_q9_radius9.py
+      - name: Focused regression
+        run: python -m pytest -q tests/test_w33_pass7425_7432_global_leaf_d4_grid.py
+      - name: Frontier reachability checks
+        run: |
+          grep -q 'PASS7425_7432_global_leaf_d4_grid_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
+          grep -q 'pass-7425-7432-global-leaf-d4-grid' analysis/PASS7425_7432_index_insert.html
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          a=json.loads(Path('data/PART_W33_PASS7425_7432_GLOBAL_LEAF_D4_GRID.json').read_text())
+          assert a['status']=='PASS_WITH_Q9_GLOBAL_TARGET48_OPEN'
+          print('aggregate PASS')
+          PY
+      - name: Materialize public card
+        run: python tools/materialize_pass7425_7432_frontier.py
+      - name: Verify unique public token
+        run: |
+          test "$(grep -o 'id="pass-7425-7432-global-leaf-d4-grid"' docs/index.html | wc -l)" -eq 1
+          test "$(grep -o 'id="pass-7425-7432-global-leaf-d4-grid"' index.html | wc -l)" -eq 1
+      - name: Commit replayed certificates and public pages on master only
+        if: github.ref == 'refs/heads/master'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- data/PART_W33_PASS7425_GLOBAL_LEAF_INCIDENCE_DESIGN.json \
+            data/PART_W33_PASS7426_D4_A2_ROOK_LATIN.json \
+            data/PART_W33_PASS7427_D4_PAIR_64_LEAF_GRID.json \
+            data/PART_W33_PASS7428_D4_LATIN_HOFFMAN_COMPOSED_BRIDGE.json \
+            data/PART_W33_PASS7429_GLOBAL_DOUBLE_SIX_LEAF_ORBIT.json \
+            data/PART_W33_PASS7430_STEINER24_D4_ROOT_REFUTATION.json \
+            data/PART_W33_PASS7431_Q9_RADIUS9.json \
+            data/PART_W33_PASS7432_LEAF_SPHERICAL_300_DESIGN.json \
+            docs/index.html index.html
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Pass7425-7432: freeze replayed frontier [skip ci]'
+          git push origin HEAD:master
