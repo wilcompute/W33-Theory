@@ -1,0 +1,57 @@
+{
+  "boundary": "NEW: the 90-block K4-decomposition of W(3,3)'s complement is RESOLVABLE -- 459 parallel classes and 200+ resolutions, search completed. CONFIRMED not new: 45 D4 perp-pairs, Q^-(5,5) = 48. FULLY SUPERSEDED: all of Pass 7245-7252's two-36s work, including the |Aut| = 51840 I had claimed might survive -- MCCCXCV has it",
+  "confirmations": {
+    "d4_perp_pairs": {
+      "note": "every J-stable D4's perp is J-stable, 90/90; matches the other lane",
+      "value": 45
+    },
+    "q11": {
+      "how": "k = 5..14, 6s repair",
+      "progression": [
+        65,
+        66,
+        68
+      ],
+      "verdict": "plateau was tooling; still does not discriminate 71 vs 75"
+    },
+    "q_minus_5_5": {
+      "note": "matches Cimrakova-Fack's heuristic best; maximum still open in [48, 66]",
+      "value": 48
+    }
+  },
+  "not_done": [
+    "alpha(W(3,9))",
+    "q=11 not discriminating at 68",
+    "the third 1440",
+    "the Clifford L/R 36",
+    "whether the 459 parallel classes carry their own scheme"
+  ],
+  "pass_7261": {
+    "prior_art": {
+      "MCCCXCIII": "srg(36,15,6,6) and srg(36,20,10,12)",
+      "MCCCXCIV": "explicit isomorphism witness with mapping list",
+      "MCCCXCV": "automorphism order, contains BOTH 51840 and 1440"
+    },
+    "search_hazard": "the numerals are REUSED: archive/root_docs uses MCCCXCIII/MCCCXCIV for W(3,3)'s own 2-class scheme",
+    "what_i_got_wrong_twice": "first the whole two-36s result, then the claim that |Aut| = 51840 and the 1440-collapse might still be new"
+  },
+  "resolvable_design": {
+    "blocks": 90,
+    "duality": "a spread is 10 disjoint COLLINEAR 4-sets; a parallel class is 10 disjoint NON-collinear 4-sets",
+    "false_start": "searching for exact covers by arbitrary 4-cliques over 9450 candidates timed out and would have printed '0 covers found', a wrong conclusion since the 90 D4s are such a cover",
+    "non_collinear_pairs": 540,
+    "pairs_per_block_multiplicity": 1,
+    "parallel_classes": 459,
+    "resolutions_found": "200+ (search completed, 1900 nodes)",
+    "resolvable": true
+  },
+  "subject_guard": {
+    "blind_spot": "renames -- BT1750 says 'hexagons' where I said 'A2 subsystems'; word matching cannot bridge it, and the selftest lists this case with want=False",
+    "catches": "rediscoveries that reuse the prior art's vocabulary",
+    "file": "scripts/check_subject_rediscovery.py",
+    "its_own_bugs_caught_by_its_selftest": [
+      "shelled out to ripgrep, not on PATH, silently returned zero",
+      "matched its own file, whose selftest contains the search phrases"
+    ]
+  }
+}
