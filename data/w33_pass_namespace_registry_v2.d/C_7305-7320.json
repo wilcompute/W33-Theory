@@ -1,0 +1,10 @@
+{
+  "lo": 7305,
+  "hi": 7320,
+  "lane": "Codex",
+  "track": "cross_frontier",
+  "topic": "Intrinsic Cspread double-six decoding, objectwise Naimark completion, proof-carrying q7 RTL, and exact finite-field/Pauli scope repair",
+  "reserved": "2026-08-22",
+  "status": "RESERVED_ACTIVE",
+  "reconciles": "Earlier reservation 009db9971 was overtaken by the published Pass7249-7304 parallel packet; this is a forward-only renumbering."
+}

@@ -5,5 +5,7 @@
   "track": "cross_frontier",
   "topic": "Objectwise Naimark completion of the 36-spread ETF by centered double-six doily slices, exact integer transform, and hardware realization",
   "reserved": "2026-08-22",
-  "status": "RESERVED_ACTIVE"
+  "status": "OVERTAKEN_REMOTE_COLLISION_RENUMBERED",
+  "renumbered_to": "7305-7320",
+  "note": "The later Pass7249-7304 remote packet landed on top of this earlier reservation. Its published namespace was preserved; this still-uncommitted packet moved forward without rewriting shared history."
 }
