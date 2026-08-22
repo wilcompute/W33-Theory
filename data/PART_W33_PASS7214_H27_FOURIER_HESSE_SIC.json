@@ -1,0 +1,35 @@
+{
+  "H27_central_Fourier": {
+    "each_magnetic_spectrum": "2^6+(-4)^3",
+    "magnetic_block_identity": "M^2+2M-8I=0",
+    "nontrivial_sectors": 2,
+    "trivial_sector": "J_9-I_9, spectrum 8^1+(-1)^8"
+  },
+  "Hesse_SIC": {
+    "dependent_triples": 12,
+    "dependent_triples_exactly": "12 affine lines of AG(2,3)",
+    "gram": "G3=I-M/2",
+    "off_diagonal_modulus": "1/2",
+    "other_72_scaled_2G_determinant": 3,
+    "rank": 3,
+    "spectrum": "3^3+0^6",
+    "standard_Hesse_equivalence": {
+      "cube_root_gauge_exponents": [0,2,1,0,0,0,1,2,0],
+      "exact": true,
+      "permutation": [0,2,1,4,3,5,8,7,6]
+    },
+    "unit_norm": true
+  },
+  "Naimark_ETF": {
+    "Welch_equality": true,
+    "dimension": 6,
+    "frame_bound": "3/2",
+    "gram": "G6=I+M/4",
+    "off_diagonal_modulus": "1/4",
+    "vectors": 9
+  },
+  "boundary": "Exact finite H27/Hesse frame theorem. The Hesse SIC is a known qutrit SIC object; the new repo bridge is its derivation from the E8/W33 matter-fibre determinant cocycle.",
+  "representation_reading": "The two nontrivial central characters give the two conjugate 9D magnetic sectors; each is three copies of a degree-3 Schroedinger irreducible.",
+  "schema": "w33.pass7214.h27_fourier_hesse_sic.v1",
+  "status": "PASS"
+}
