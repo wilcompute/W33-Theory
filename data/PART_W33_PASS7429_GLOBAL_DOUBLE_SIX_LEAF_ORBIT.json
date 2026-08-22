@@ -1,0 +1,21 @@
+{
+  "Pass4964_input": "Within each W33 leaf there is a unique PGSp(4,3)-equivariant bijection between its 36 spreads and the 36 cubic-surface double-sixes; spread overlap 1/4 transports double-six intersection 6/4.",
+  "Pass4965_input": "At each W33 line, the nine incident spreads split canonically into three Steiner triples.",
+  "Steiner_object_stabilizer_order": 2592,
+  "Steiner_objects_per_A2_4_line": 24,
+  "W33_Eisenstein_leaves": 2240,
+  "W_E8_order": 696729600,
+  "boundary": "A chart is a pair (Eisenstein W33 leaf, spread) together with its canonical local double-six label. This does not identify one global cubic surface embedded in E8 or equate cubic lines with E8 roots.",
+  "charts_per_A2_4_line": 72,
+  "charts_per_A2_point": 2880,
+  "global_A2_4_lines": 11200,
+  "global_A2_points": 1120,
+  "global_Steiner_chart_objects": 268800,
+  "global_chart_stabilizer_order": 8640,
+  "global_leaf_spread_charts": 80640,
+  "leaf_normalizer_order": 311040,
+  "schema": "w33.pass7429.global_double_six_leaf_orbit.v1",
+  "spreads_or_double_six_charts_per_leaf": 36,
+  "status": "PASS",
+  "theorem": "The cubic-surface 36-state carrier globalizes over the E8 Eisenstein foliation to one 80640-element Weyl orbit of leaf-spread/double-six charts. Every global A2^4 line lies in exactly 72 charts and supports exactly 24 global Steiner chart objects (8 leaves x 3 local Steiner triples)."
+}
