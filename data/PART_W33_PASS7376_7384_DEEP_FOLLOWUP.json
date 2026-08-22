@@ -1,0 +1,112 @@
+{
+  "schema": "w33.pass7376_7384.deep_followup.v1",
+  "status": "PASS_WITH_EXPLICIT_OPEN_BOUNDARIES",
+  "passes": "7376-7384",
+  "requested_five": {
+    "logical_decoder_hodge_split": {
+      "CSS": "[[45,17,5]]_3",
+      "logical_space": "C3perp/C3",
+      "star_sector": {
+        "model": "im(R^T)/im(N)",
+        "dimension": 7,
+        "pure_distance": 5,
+        "minimum_projective_supports": 27,
+        "minimum_geometry": "five-tritangent stars of cubic-surface lines",
+        "module": "T7 = 1|5|1"
+      },
+      "dark_sector": {
+        "model": "ker(R)/im(N) = H1",
+        "dimension": 10,
+        "pure_distance": 6,
+        "minimum_projective_supports": 120,
+        "minimum_geometry": "Steiner induced K3,3 supports",
+        "module": "absolutely irreducible 10-space"
+      }
+    },
+    "binary_schlaefli_tetrads": {
+      "code": "rowspan_F2(Q^T) = [27,7,11]_2",
+      "dual_minimum_weight": 4,
+      "minimum_tetrads": 270,
+      "tetrad_graph": "2K2 in the 27-line meet graph",
+      "bijection": "270 tetrads are in bijection with the 270 pairs of intersecting tritangents by deleting their unique common cubic line",
+      "pair_design": {
+        "meeting_line_pair_multiplicity": 4,
+        "skew_line_pair_multiplicity": 5
+      }
+    },
+    "q9_involution_branchcuts": {
+      "projective_point_orbits": 420,
+      "fixed_points": 20,
+      "two_cycles": 400,
+      "internally_collinear_two_cycles_forbidden": 40,
+      "allowed_orbit_variables": 380,
+      "line_constraints": 820,
+      "weighted_quotient_LP_bound": 74,
+      "fixed_count_branch_LP": {
+        "0": 72,
+        "1": 73,
+        "2": 74
+      },
+      "target52_invariant_fixed_branches": [0, 2],
+      "boundary": "Exact only for the C2-invariant symmetry class; asymmetric 52-sets remain possible."
+    },
+    "phase_pole_3k4": {
+      "ambient": "SRG(45,12,3,3)",
+      "phase_flat_coordinates": 12,
+      "result": "the 12 phase-flat coordinates are exactly the neighborhood of one unique coordinate in the fixed Coxeter gauge",
+      "local_graph": "3K4",
+      "all_45_local_graphs": "3K4",
+      "boundary": "BT660's 4K4 is a different 16-flag Levi carrier and is not identified with this 12-coordinate chart."
+    },
+    "curvature_transgression": {
+      "integral_identity": "R N = 3 Q",
+      "mod3_homology": {
+        "H2": 22,
+        "H1": 10,
+        "H0": 6
+      },
+      "map": "kappa: H2 -> im(R R^T), z |-> Qz mod 3",
+      "rank": 7,
+      "kernel_dimension": 15,
+      "target": "im(RR^T) ~= im(R^T)/im(N), the seven-dimensional star logical sector",
+      "boundary": "Bockstein-like secondary map, not promoted as a standard Bockstein because R N is nonzero integrally."
+    }
+  },
+  "outside_box_three": {
+    "e8_local_graph_chain_and_firewall": {
+      "eisenstein_fibration": "240 E8 roots = 40 A2 root hexagons x 6 roots, over the 40 W(3,3) points",
+      "local_chain": "240 -> 56 -> 27 -> 16 -> 10",
+      "16_vertex_graph": "complement of Clebsch",
+      "10_vertex_graph": "complement of Petersen",
+      "schlaefli_partition": "27 = 1 + 16 + 10 after choosing a vertex",
+      "parallel_claim_correction": "27+6=33 is not the W33 vertex count; the actual Eisenstein quotient has 40 fibres/points."
+    },
+    "a2_fibre_reinterpretation": {
+      "fibres": 40,
+      "each_fibre": "rank-2 A2 root hexagon with six roots",
+      "meaning": "Pass1021's Eisenstein-unit fibres acquire a literal root-system interpretation; no particle identification is inferred."
+    },
+    "qutrit_transversal_gate_firewall": {
+      "code": "C3=[45,14,15]_3",
+      "pairwise_self_orthogonal": true,
+      "basis_weights_divisible_by_3": true,
+      "cubic_overlap_form": "T(u,v,w)=sum_i u_i v_i w_i mod 3",
+      "nonzero_basis_triples": 275,
+      "conclusion": "naive ternary total-triorthogonality fails; no transversal non-Clifford gate claim follows from the present code data",
+      "forward_target": "test a genuine homological/Bockstein refinement criterion on an appropriate integral lift"
+    }
+  },
+  "parallel_commit_audit": {
+    "q9_stabilizer_lane": "Independent Pass7213-7215 concludes the frozen q=9 51-set has exact projective symplectic stabilizer C2, consistent with the explicit involution used here.",
+    "q9_LNS_lane": "Calibrated LNS and exact local-basin certificates strengthen the 51 lower-bound evidence but keep alpha(W(3,9)) open.",
+    "E8_spectral_lane": "The nested E8 local spectra are retained; its claimed 33=W33 vertex interpretation is rejected and replaced by the already-certified 240->40 Eisenstein/W33 fibration.",
+    "field_constructor_lane": "The earlier general-GF irreducibility scope bug is already separated from the degree-2/3 computations used by q=9 and other verified recent cases."
+  },
+  "literature_targets": {
+    "2026_Bockstein_CSS": "Haruna, arXiv:2602.14499",
+    "2026_triorthogonal_codes": "Baldelli et al., arXiv:2605.24519",
+    "2026_transversal_CSS": "Camps-Moreno et al., arXiv:2601.21514",
+    "scope": "Literature motivates next tests only; no external theorem is claimed to identify the repo curvature transgression with a standard Bockstein."
+  },
+  "claim_boundary": "All promoted results are finite incidence, coding, root-system, representation, or deterministic LP statements. q=9 optimality, physical particle identifications, and transversal non-Clifford gates remain open."
+}
