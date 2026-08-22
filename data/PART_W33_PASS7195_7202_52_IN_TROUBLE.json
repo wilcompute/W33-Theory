@@ -1,0 +1,87 @@
+{
+  "boundary": "NOTHING is proved about alpha(W(3,9)). Certified: no 52-point partial ovoid agrees with one specific 51-set in >= 45 points (ILP infeasibility, d = 0..6; d = 7 did not resolve). Measured: four independent LNS runs plateau at 51 while the same code solves q=7 exactly in five seconds. The prediction alpha = 52, made from a zero-degrees-of-freedom quadratic, is DOWNGRADED -- not refuted",
+  "not_done": [
+    "alpha(W(3,9))",
+    "any improvement on Tallini's 73",
+    "a 52-set",
+    "a proof that 51 is optimal"
+  ],
+  "pass_7195": {
+    "calibration": {
+      "contrast": "orbit methods PROVED to cap at 30; plain ILP timed out without closing",
+      "found_in": "5 seconds, 9 iterations",
+      "q7_optimum": 33
+    },
+    "method": "large-neighbourhood search, destroy k=6..22, exact ILP repair",
+    "validity": "every incumbent is a partial ovoid by construction, not by scoring"
+  },
+  "pass_7196": {
+    "consequence": "the optima have no combinatorial signature to generalise, closing the 'find the pattern, build q=9' route",
+    "line_distribution_is_forced": {
+      "checked": {
+        "q=3": [
+          12,
+          12
+        ],
+        "q=5": [
+          48,
+          48
+        ],
+        "q=7": [
+          136,
+          136
+        ]
+      },
+      "consequence": "carries no information independent of alpha",
+      "identity": "lines missed = (q+1)(q^2+1-alpha)"
+    },
+    "max_tangent": {
+      "equals": "q+1",
+      "observed": {
+        "q=3": 4,
+        "q=5": 6,
+        "q=7": 8
+      },
+      "why_trivial": "a point lies on q+1 lines, each meeting the ovoid at most once -- the ceiling, attained"
+    },
+    "min_tangent": {
+      "meaning": "local optimality (no single-point swap), not structure",
+      "observed": 2
+    }
+  },
+  "pass_7197_7198": {
+    "all_reached": 51,
+    "best_run_iterations": 16624,
+    "certified_basin": {
+      "d7": "did not resolve -- no conclusion",
+      "method": "one ILP per d, infeasibility",
+      "radius": 6,
+      "statement": "every 52-set, if any exists, differs from this 51-set in more than 6 points"
+    },
+    "improvement_after_first_seconds": 0,
+    "lns_runs": 4,
+    "other_lane": {
+      "model": "512-state residual, 42-state core",
+      "note": "independent formulation, same non-closure",
+      "radius": 5
+    }
+  },
+  "pass_7199_7200": {
+    "downgraded": "alpha(W(3,9)) = 52",
+    "evidence_against": [
+      "four independent LNS runs plateau at 51",
+      "three earlier move classes in this repo plateau at 51",
+      "certified radius-6 basin excluding 52"
+    ],
+    "interval": "51 <= alpha(W(3,9)) <= 73 (Tallini), unchanged",
+    "not_refuted": "a 52-set could lie far from every incumbent found",
+    "why_it_was_never_evidence": "three points determine a quadratic; zero DoF"
+  },
+  "pass_7201": {
+    "cheap_next": "push the certified radius past 6, one ILP per d",
+    "would_settle_it": [
+      "exhaustive optimality proof with isomorph rejection at 820 points -- the reason q=9 was left undone in 2005",
+      "an explicit 52-set"
+    ]
+  }
+}

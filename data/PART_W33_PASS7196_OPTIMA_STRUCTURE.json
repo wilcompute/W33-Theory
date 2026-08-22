@@ -1,0 +1,60 @@
+{
+  "boundary": "incidence invariants of the known optimal partial ovoids at q=3,5,7. Any formula fitted to three points is a candidate constraint, not a theorem, and no claim is made about q=9",
+  "per_q": {
+    "3": {
+      "size": 7,
+      "points": 40,
+      "lines": 40,
+      "tangent_distribution": {
+        "1": 7,
+        "2": 9,
+        "3": 9,
+        "4": 8
+      },
+      "line_distribution": {
+        "0": 12,
+        "1": 28
+      },
+      "lines_missed": 12,
+      "max_tangent": 4
+    },
+    "5": {
+      "size": 18,
+      "points": 156,
+      "lines": 156,
+      "tangent_distribution": {
+        "2": 24,
+        "3": 40,
+        "4": 24,
+        "5": 24,
+        "6": 26
+      },
+      "line_distribution": {
+        "0": 48,
+        "1": 108
+      },
+      "lines_missed": 48,
+      "max_tangent": 6
+    },
+    "7": {
+      "size": 33,
+      "points": 400,
+      "lines": 400,
+      "tangent_distribution": {
+        "2": 17,
+        "3": 56,
+        "4": 77,
+        "5": 74,
+        "6": 65,
+        "7": 46,
+        "8": 32
+      },
+      "line_distribution": {
+        "0": 136,
+        "1": 264
+      },
+      "lines_missed": 136,
+      "max_tangent": 8
+    }
+  }
+}
