@@ -1,4 +1,4 @@
-name: W33 Pass7489-7491 open frontier
+name: W33 Pass7489-7492 open frontier
 
 on:
   pull_request:
@@ -6,6 +6,7 @@ on:
     paths:
       - 'analysis/w33_pass7489_third1440_marked_sixer_bundle.py'
       - 'analysis/w33_pass7491_e8_1120_outer_triality.py'
+      - 'analysis/w33_pass7492_marked_triple_w33_point_equivariant.py'
       - '.github/workflows/w33_pass7489_7490_open_frontier.yml'
   workflow_dispatch:
 
@@ -59,3 +60,29 @@ jobs:
         with:
           name: pass7491-outer-triality
           path: data/PART_W33_PASS7491_E8_1120_OUTER_TRIALITY.json
+  marked-triple-w33:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy networkx
+      - name: Build common order-1440 stabilizer action on both 40-point sets
+        run: python analysis/w33_pass7492_marked_triple_w33_point_equivariant.py
+      - name: Check exact equivariant bridge
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open('data/PART_W33_PASS7492_MARKED_TRIPLE_W33_POINT_EQUIVARIANT.json'))
+          assert d['status']=='PASS'
+          assert d['double_six_stabilizer_order']==1440
+          assert d['marked_point_stabilizer_order']==36
+          assert len(set(d['equivariant_bijection_marked_index_to_W33_point']))==40
+          assert d['elementwise_permutation_characters_equal']
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass7492-marked-triple-w33
+          path: data/PART_W33_PASS7492_MARKED_TRIPLE_W33_POINT_EQUIVARIANT.json
