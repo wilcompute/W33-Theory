@@ -1,0 +1,16 @@
+{
+  "schema":"w33.pass7185.e8_d4_chart_atlas.v1",
+  "status":"PASS",
+  "selected_D4":90,
+  "orthogonal_D4_pairs":45,
+  "ten_D4_spreads":27,
+  "cross4_D4_pairs":1080,
+  "cross4_pairs_per_spread":40,
+  "cross4_pair_spread_multiplicity":1,
+  "theorem":"Every W33 relation-(0,4) selected-D4 pair gives an explicit unimodular E8 root-lattice basis. The 1080 such charts are partitioned by the 27 ten-D4 spreads into 40 charts each.",
+  "chart_coordinate_basis":"rows are the two deterministic D4 simple-root bases, expressed relative to the fixed E8 simple-root basis; every 8x8 coordinate matrix lies in GL(8,Z)",
+  "transition_groupoid":"T(j<-i)=X_j X_i^{-1}; exact composition T(k<-j)T(j<-i)=T(k<-i)",
+  "closed_path_holonomy":"identity for ordinary coordinate transitions (flat/telescoping)",
+  "holonomy_firewall":"A nontrivial GL(8,Z) or triality holonomy cannot come from honest basis changes alone; it requires additional quotient/frame identifications.",
+  "index4_charts":"The five orthogonal D4+D4 pairs per spread remain index-4 sublattices with diagonal (Z2)^2 glue from Pass7182; they are not unimodular charts before gluing."
+}
