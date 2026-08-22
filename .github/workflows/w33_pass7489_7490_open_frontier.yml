@@ -1,0 +1,51 @@
+name: W33 Pass7489-7490 open frontier
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass7489_third1440_marked_sixer_bundle.py'
+      - 'analysis/w33_pass7490_q9_radius_target48.py'
+      - '.github/workflows/w33_pass7489_7490_open_frontier.yml'
+  workflow_dispatch:
+
+jobs:
+  third1440:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install networkx numpy
+      - name: Reconstruct 72 sixers and 1440 marked triples
+        run: python analysis/w33_pass7489_third1440_marked_sixer_bundle.py
+      - name: Check frozen invariants
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open('data/PART_W33_PASS7489_THIRD1440_MARKED_SIXER_BUNDLE.json'))
+          assert d['status']=='PASS'
+          assert d['cubic_surface_counts']['marked_sixer_triples']==1440
+          assert d['orbit_stabilizer']['marked_sixer_triple_orbit']['stabilizer_order']==36
+          assert d['orbit_stabilizer']['double_six_stabilizer_on_its_marked_fibre']['fibre_size']==40
+          PY
+  q9-radius:
+    strategy:
+      fail-fast: false
+      matrix:
+        d: [9, 10, 11, 12]
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Exact target-48 decision
+        run: python analysis/w33_pass7490_q9_radius_target48.py --d ${{ matrix.d }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q9-d${{ matrix.d }}
+          path: data/PART_W33_PASS7490_Q9_TARGET48_D${{ matrix.d }}.json
