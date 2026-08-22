@@ -1,0 +1,11 @@
+{
+  "lo": 7497,
+  "hi": 7504,
+  "lane": "A",
+  "track": "A",
+  "topic": "third-1440 marked-sixer bundle, explicit E8 1120-family outer triality, marked-triple/W33 point equivariance, and open-frontier continuation",
+  "reserved": "2026-08-22",
+  "status": "RESERVED",
+  "renumbered_from_transient_branch_labels": [7489, 7491, 7492],
+  "collision_note": "Pass7489-7496 was concurrently published on master after this branch began; this packet was moved before merge."
+}
