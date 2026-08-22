@@ -1,0 +1,19 @@
+{
+  "boundary": "This rules out the tempting 36=36 module identification. It does not yet identify the global36 module with a named indecomposable module for (3 x U4(2)):2.",
+  "central_Eisenstein_J": {
+    "Jordan_type": "1^6 + J3^10",
+    "action_on_local_36_spreads": "identity",
+    "fixed_base_W33_points": 40,
+    "fixed_dimension_global36": 16,
+    "order": 3,
+    "rank_J_minus_I_on_global36": 20,
+    "rank_J_minus_I_squared_on_global36": 10
+  },
+  "decision": "The global characteristic-3 36-space is NOT isomorphic, as a base-leaf stabilizer module, to the 36-spread/double-six permutation module: the central C3 acts nontrivially on the former and trivially on the latter.",
+  "dimension": 36,
+  "global_module": "im_F3(F F^T) on 1120 A2 coordinates",
+  "passes": "7449-7456",
+  "schema": "w33.pass7449_7456.char3_global36_vs_spreads.v1",
+  "status": "PASS",
+  "structural_reading": "The 36-space remembers the central Eisenstein C3 killed by the local W(E6) action; its 30-dimensional nontrivial part consists of ten length-3 unipotent blocks."
+}
