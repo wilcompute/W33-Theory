@@ -1,60 +1,104 @@
-% Passes 7171--7186: E8/D4 association closure, q=9 local basin, E6 charge quotient, spread-code duality.
-\subsection{The colored $E_8$ scheme, selected $D_4$ geometry, and the q=9 local basin}
-\label{sec:pass7171-7186-e8-d4-q9}
+% Passes 7171--7186: E8/D4/H27 association geometry and q=9 local exclusion.
+\subsection{The $E_8/W(3,3)$ fibre scheme, selected $D_4$ geometry, and the $H_{27}$ matter cover}
+\label{sec:pass7171-7186-e8-d4-h27-q9}
 
-The six-to-one $E_8\to W(3,3)$ fibration of the previous frontier extends from the positive-inner-product graph to the complete colored root association scheme.  The five inner-product relations have valencies
+The six-to-one $E_8$-root fibration of Section~\ref{sec:pass7163-7170-e8-hexagonal-lift} extends to the complete five-class root association scheme.  Ordering the relations by normalized inner product $2,1,0,-1,-2$, the valencies are
 \[
- \boxed{1,56,126,56,1},
+  \boxed{1,56,126,56,1},
 \]
-and the positive-root adjacency has spectrum
+and the simultaneous eigenmatrix is
 \[
- \boxed{56^1\oplus 28^8\oplus 8^{35}\oplus(-2)^{112}\oplus(-4)^{84}}.
+P=\begin{pmatrix}
+1&56&126&56&1\\
+1&28&0&-28&-1\\
+1&8&-18&8&1\\
+1&-2&0&2&-1\\
+1&-4&6&-4&1
+\end{pmatrix},
 \]
-Its five distinct eigenspaces generate the full five-dimensional Bose--Mesner algebra; the colored blocks are reconstructed by the W33 base relation, the cyclic $C_6$ shift, and the previously certified fiber-voltage offsets.
+with multiplicities $1,8,35,112,84$.  The positive-inner-product adjacency has five distinct eigenspaces and therefore generates the full Bose--Mesner algebra.
 
-The $90$ center-quad lifts are $90$ selected $D_4\subset E_8$ subsystems.  Their rank-five association scheme has nontrivial valencies
+\paragraph{The selected ninety $D_4$ subsystems.}
+There are $3150$ $D_4$ root subsystems in $E_8$.  The ninety selected by the W33 center-quads form a rank-five association scheme with nontrivial valencies $1,32,32,24$ and eigenmatrix
 \[
- \boxed{1,32,32,24}
+\begin{pmatrix}
+1&1&32&32&24\\
+1&-1&8&-8&0\\
+1&1&-4&-4&6\\
+1&1&2&2&-6\\
+1&-1&-4&4&0
+\end{pmatrix}.
 \]
-and multiplicities $1,15,20,24,30$.  Its complete Krein table is nonnegative but admits no $Q$-polynomial ordering.  The share-one-point relation has exactly $80$ maximal $9$-cliques, consisting of $40$ point-stars and $40$ neighborhood-stars; the unique valency-one orthogonal-complement involution swaps these families.  Their quotient reconstructs W33, so
+Its unique valency-one relation is $D_4\leftrightarrow D_4^\perp$.  The share-one-W33-point relation has exactly eighty maximal $9$-cliques: forty point stars and forty neighborhood stars, interchanged by orthogonal complementation.  Their quotient reconstructs W33, and consequently
 \[
- \boxed{\operatorname{Aut}(\mathcal D_{90})\cong\operatorname{Aut}(W33)\times C_2},
- \qquad |\operatorname{Aut}(\mathcal D_{90})|=103680.
+  \boxed{\operatorname{Aut}(\mathcal D_{90})\cong\operatorname{Aut}(W33)\times C_2},
+  \qquad |\operatorname{Aut}(\mathcal D_{90})|=103680.
+\]
+All Krein parameters are nonnegative, but no primitive-idempotent ordering is $Q$-polynomial.
+
+Each selected $D_4$ has exactly three mutually orthogonal four-frames on its twelve antipodal root lines; each frame uses one antipodal pair from each of the four constituent $C_6$ fibres.  Its positive-inner-product root graph has spectrum
+\[
+  \boxed{8^1\oplus4^4\oplus0^9\oplus(-2)^8\oplus(-4)^2}.
 \]
 
-For q=9, in the canonical anchor type $(1,3,5)$, the known residual $47$-clique has $42$ invertible plus five rank-one states.  If exactly $d$ members of the $42$-state invertible core are deleted and arbitrary compatible additions from every remaining normalized residual state are then permitted, exact branch-and-bound gives
+\paragraph{Integral glue and the twenty-seven ten-$D_4$ spreads.}
+The W33 relation of a selected $D_4$ pair determines its lattice behavior.  Share-one-fibre pairs span rank six.  The two disjoint nonorthogonal relations span rank eight with index one in $E_8$.  Orthogonal complement pairs span $D_4\oplus D_4$ with index four, with diagonal discriminant glue
 \[
- \boxed{47,46,47,46,46,46\qquad(d=0,1,2,3,4,5)}.
+  \boxed{\{(0,0),(v,v),(s,s),(c,c)\}\cong(C_2)^2}.
 \]
-Hence no target-$48$ residual clique lies within deletion radius five of this core.  This is a local theorem only; no claim $\alpha(W(3,9))=51$ is made.
+The twenty-seven ten-$D_4$ spreads contain five such orthogonal pairs each; any pair of $D_4$ subsystems drawn from different orthogonal pairs already generates the full $E_8$ lattice.
 
-Choosing one six-root $E_8$ fiber as an $A_2$ subsystem transforms the W33 shell $1+12+27$ into
+On the forty-five orthogonal-pair coordinates, the twenty-seven spread-incidence words generate
 \[
- \boxed{6_{A_2}+72_{E_6}+81+81}.
+  \boxed{[45,21,5]_2},
 \]
-Each $81$-sector projects modulo the selected $A_2$ plane to $27$ E6 minuscule weights with multiplicity three, and their $1/3$ inner-product graph is
+and its dual is
 \[
- \boxed{\operatorname{srg}(27,16,10,8)}.
+  \boxed{[45,24,6]_2}.
 \]
-The raw $27$ W33 nonneighbor fibers are \emph{not} one-to-one with these weights.  Instead they organize as a regular $C_3$-voltage cover of $K_9$, whose $84$ base triangles have holonomy distribution
+The latter has exactly $120$ minimum words, objectwise the previously certified Steiner/$K_{3,3}$ circuits.  The all-ones word lies in the $21$-space; its even subcode is a twenty-dimensional full-group module.  An explicit intertwiner identifies that module with the previously certified binary tritangent selector $V_{20}$, including the outer PGSp generator.  Therefore
 \[
- \boxed{0^{12},\ 1^{36},\ 2^{36}}.
+  \boxed{C_{\rm spread}=\mathbf 1\oplus V_{20}^{\rm trit}},
+  \qquad
+  \boxed{C_{\rm spread}^{\perp}=V_{24}^{\rm Steiner}}.
 \]
 
-All $E_8$ roots contain exactly $3150$ $D_4$ subsystems.  In the selected W33 family, orthogonal complements span an index-$4$ $D_4\oplus D_4$ sublattice with diagonal discriminant glue
-\[
- \boxed{\{(0,0),(v,v),(s,s),(c,c)\}\cong(\mathbb Z/2)^2}.
-\]
-The $27$ five-packs of orthogonal pairs become $27$ ten-$D_4$ atlases: each contains five orthogonal index-$4$ pairs, while every pair chosen from different orthogonal pairs generates the full $E_8$ lattice with index one.  Thus no direct $D_4^{10}$ decomposition is asserted.
+Every selected pair in the disjoint cross-count-four relation gives an explicit unimodular $E_8$ chart.  There are $1080$ such $GL_8(\mathbb Z)$ charts, partitioned by the twenty-seven spreads into forty each.  Their ordinary coordinate transitions $X_jX_i^{-1}$ form a flat groupoid: closed products telescope to the identity.  Thus any nontrivial triality-valued holonomy would require additional frame identifications and is not produced by basis changes alone.
 
-On the $45$ orthogonal-pair coordinates, the $27$ ten-$D_4$ spreads generate
+\paragraph{$E_6\times A_2$, affine area, and the Heisenberg matter graph.}
+Choose one six-root fibre.  It is an $A_2$ subsystem.  The W33 shell $1+12+27$ becomes
 \[
- \boxed{[45,21,5]_2},
+  \boxed{6_{A_2}+72_{E_6}+81+81}.
 \]
-whose dual is
-\[
- \boxed{[45,24,6]_2}.
-\]
-The $120$ dual minimum words are objectwise the induced $K_{3,3}$ supports of the previously certified Steiner circuit code.  This identifies the ten-$D_4$ spread code as the exact binary dual of that earlier $24$-dimensional module.
+Either $81$-sector projects to twenty-seven $E_6$ minuscule weights with three $A_2$ charges per weight, recovering the Schlaefli graph $\operatorname{srg}(27,16,10,8)$.  The twenty-seven W33 nonneighbor fibres themselves are not the twenty-seven weights: they group into nine triples and form a regular $C_3$ voltage cover of $K_9$.
 
-Finally, the $\mathbb Z_{12}$ phase from the $E_8$ fiber lift is not cohomologous to the canonical W33 Pauli commutator phase: their complement-triangle holonomies are respectively odd modulo $12$ and divisible by four.  The shared coefficient group $\mu_{12}$ therefore does not collapse the two finite phase geometries into one class.
+After switching a spanning star to voltage zero, its twelve zero-holonomy triangles are precisely the twelve affine lines of $AG(2,3)$.  Up to affine relabelling and global sign the voltage is
+\[
+  \boxed{\psi(u,v)=\det(u,v)\in\mathbb F_3},
+\]
+so triangle holonomy is the oriented affine area $\det(v-u,w-u)$.  Choosing the sign convention of the repo's canonical qutrit Heisenberg chart yields
+\[
+ (u,z)(v,w)=(u+v,z+w-\det(u,v)).
+\]
+The resulting twenty-seven-vertex E8 matter-fibre graph is exactly
+\[
+  \boxed{\operatorname{Cay}\!\left(H_{27},\{(u,0):u\ne0\}\right)}.
+\]
+It has intersection array
+\[
+  \boxed{\{8,6,1;1,3,8\}},
+\]
+spectrum $8^1\oplus2^{12}\oplus(-1)^8\oplus(-4)^6$, and full automorphism group
+\[
+  \boxed{H_{27}{:}GL_2(3)},\qquad |\operatorname{Aut}|=1296.
+\]
+The vertex stabilizer is transitive on all three distance spheres, so the graph is distance-transitive.
+
+\paragraph{Two phase structures remain distinct.}
+The $E_8$ fibre cocycle has only odd $\mathbb Z_{12}$ triangle holonomies $1,3,9,11$.  A two-qutrit Weyl commutator cochain has edge phase in $4\mathbb Z/12$ and hence triangle holonomy in $\{0,4,8\}$.  Since triangle holonomy is coboundary invariant, these two cocycles are not cohomologous.  No identification is made merely because both use twelfth roots of unity.
+
+\paragraph{Local q=9 exclusion.}
+In the canonical $(1,3,5)$ anchor graph, the known residual $47$-clique splits as forty-two invertible states plus five rank-one states.  Exact branch-and-bound excludes a target $48$ after deleting any $d\le8$ members of the forty-two-state invertible core and allowing arbitrary compatible additions from all remaining normalized states.  Thus a hypothetical target-$48$ residual clique in this anchor graph must delete at least nine core states.  This is a local basin theorem only:
+\[
+  \boxed{\text{no claim }\alpha(W(3,9))=51\text{ is made.}}
+\]
