@@ -56,5 +56,33 @@
       "value": 1440
     },
     "why": "vertex stabiliser 51840/36 in a rank-3 action"
+  },
+  "REDISCOVERY_CORRECTION_2026_08_22": {
+    "status": "Pass 7245-7252's headline result was ALREADY THIS REPO'S, twice over",
+    "prior_art": [
+      {
+        "id": "decision-8412fe34-46fc-4dde-b1b1-073f79c17824",
+        "tag": "MCCCXCIII",
+        "date": "2026-05-28",
+        "says": "36 W33 spreads and 36 E6 double-sixes share the same two-class overlap parameters, srg(36,15,6,6)"
+      },
+      {
+        "id": "decision-69266cb4-e278-4474-9be7-f170f33862fd",
+        "tag": "MCCCXCIV",
+        "date": "2026-05-28",
+        "says": "explicit finite ISOMORPHISM WITNESS between the 36 W33 spreads and 36 E6 double-sixes, including the mapping list"
+      }
+    ],
+    "what_i_did_that_was_redundant": [
+      "the SRG(36,15,6,6) parameter computation (MCCCXCIII had it)",
+      "the isomorphism verdict (MCCCXCIV had it, WITH an explicit map; mine was abstract and therefore weaker)"
+    ],
+    "what_may_still_be_new": [
+      "|Aut| = 51840, identifying the graph as the rank-3 PSp(4,3) = U(4,2) graph",
+      "the reading of both 36s through the E8 A2-subsystem picture",
+      "the observation that this resolves two of the three 1440s as one stabiliser"
+    ],
+    "note_on_MDCLXXXI": "decision-ab66d64e concerns Clifford L/R cross-pairs vs spreads -- a DIFFERENT pair, where schemes differ. That distinction in Pass 7250 was correct; the error was not knowing MCCCXCIII/MCCCXCIV existed for the pair I did test",
+    "how_it_happened": "I searched the corpus for 'A2 subsystem E8 cubic surface sixer' and for '90 D4 J-stable spreads MUB', but not for 'spread double-six isomorphism' until after committing. Searching by the RESULT I was about to claim would have found it first"
   }
 }
