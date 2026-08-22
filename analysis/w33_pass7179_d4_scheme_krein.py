@@ -59,23 +59,37 @@ def main():
                 x=sp.simplify(sum(D[r,i]*D[r,j]*P[h,r] for r in range(5))/90);assert x>=0;z.append(str(x))
             krein[f'{i},{j}']=z
     def qv(i,j,h):return sp.Rational(krein[f'{min(i,j)},{max(i,j)}'][h])
-    qpoly=[]
+    banded=[];qpoly=[];gap={}
     for perm in itertools.permutations(range(1,5)):
         order=(0,)+perm;e=order[1];ok=True
         for a,j in enumerate(order):
             for c,h in enumerate(order):
                 if abs(a-c)>1 and qv(e,j,h)!=0:ok=False
-        if ok:qpoly.append(order)
+        if not ok:continue
+        banded.append(order)
+        # Q-polynomial requires B_1^* to be irreducible tridiagonal, not merely banded:
+        # every adjacent super/sub-diagonal link between E_i and E_{i+1} is nonzero.
+        missing=[]
+        for a in range(4):
+            if qv(e,order[a],order[a+1])==0 or qv(e,order[a+1],order[a])==0:missing.append(a)
+        gap[str(order)]=missing
+        if not missing:qpoly.append(order)
+    assert banded==[(0,2,3,1,4),(0,2,3,4,1),(0,3,2,1,4),(0,3,2,4,1)]
+    assert all(v==[2] for v in gap.values())
     assert not qpoly
-    out={'schema':'w33.pass7179.d4_scheme_krein.v1','status':'PASS','vertices':90,
+    out={'schema':'w33.pass7179.d4_scheme_krein.v2','status':'PASS','vertices':90,
       'relation_degrees':{'partner':1,'share_point':32,'disjoint_cross7':32,'disjoint_cross4':24},
       'pair_counts':{str(k):v for k,v in hist.items()},'multiplicities':mult,
       'P':[[int(x) for x in P.row(i)] for i in range(5)],'Q':[[str(x) for x in D.row(i)] for i in range(5)],
-      'krein_upper_triangle':krein,'q_polynomial_orderings':[],
+      'krein_upper_triangle':krein,
+      'banded_but_reducible_Krein_orderings':[list(x) for x in banded],
+      'banded_ordering_zero_adjacent_gap_positions':gap,
+      'q_polynomial_orderings':[],
+      'q_polynomial_test':'B_1^* must be irreducible tridiagonal: zero off the band and nonzero on every adjacent off-diagonal link. Four merely banded orderings split 3+2 at the middle link and are rejected.',
       'share_relation_maximal_9_cliques':80,'point_star_cliques':40,'neighborhood_star_cliques':40,
       'partner_swaps_two_40_clique_families':True,'quotient_by_partner_recovers_W33':True,
       'Aut_W33_order':51840,'full_scheme_automorphism_order':103680,
       'full_scheme_automorphism_structure':'Aut(W33) x C2',
       'automorphism_proof':'The 80 intrinsic maximal 9-cliques are 40 point-stars plus 40 neighborhood-stars; the unique valency-one partner involution swaps them pairwise. Their quotient reconstructs W33, so Aut(scheme)<=2 Aut(W33), while Aut(W33) and the central partner involution attain equality.'}
-    OUT.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n');print(json.dumps({'status':'PASS','aut':103680}))
+    OUT.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n');print(json.dumps({'status':'PASS','aut':103680,'Qpoly':False,'banded_reducible':4}))
 if __name__=='__main__':main()
