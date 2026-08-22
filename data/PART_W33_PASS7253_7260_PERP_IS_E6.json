@@ -1,0 +1,56 @@
+{
+  "boundary": "NEW: for all 40 points, the perp of a W(3,3) point in E8 is E6 (72 roots, rank 6) and is exactly the union of the A2s of its 12 collinear points. CORRECTED: I had quoted the loose Thas bound for Q^-(5,q); the sharp bound is (q^3+q+2)/2 and my values MEET it at q=2 and q=3 -- attainment of a published bound, not a new one",
+  "copies": {
+    "intersection_values": [
+      0,
+      1,
+      4,
+      13
+    ],
+    "random_expectation": 1.43,
+    "sampled": 18,
+    "status": "structured; not identified further"
+  },
+  "correction": {
+    "my_values": {
+      "q=2": 6,
+      "q=3": 16
+    },
+    "sharp_bound": "(q^3+q+2)/2 (De Beule-Klein-Metsch-Storme 2008) = 16 at q=3",
+    "status": "MEET the sharp bound -- attainment, not a new bound",
+    "to_read": "Coolsaet, Des. Codes Cryptogr. 72:119-128 (2014)",
+    "what_i_quoted": "Thas q^3+1-q(q-1) = 22 at q=3"
+  },
+  "not_done": [
+    "alpha(W(3,9))",
+    "q=11 not discriminating",
+    "Q^-(5,5) against the published 48",
+    "the third 1440",
+    "the Clifford L/R 36"
+  ],
+  "perp_is_E6": {
+    "collinear_points": 12,
+    "consequence": "the maximal E6 x A2 in E8 is 'a point and its perp', rank 2+6=8",
+    "perp_equals_that_union": true,
+    "rank": 6,
+    "roots_orthogonal_to_a_point": 72,
+    "their_a2s_union_to": 72,
+    "verified_on": "all 40 points"
+  },
+  "q11": {
+    "how": "k = 5..14 with a 6s repair, 117110 iterations",
+    "now": 66,
+    "predictions": {
+      "if_alpha9_51": 71,
+      "if_alpha9_52": 75
+    },
+    "verdict": "still does not discriminate; the plateau was tooling",
+    "was": 65
+  },
+  "the_240_split": {
+    "162": "its 27 non-collinear points (27 x 6)",
+    "6": "the point's own A2",
+    "72": "its 12 collinear points (12 x 6) -- this is E6",
+    "prior_art": "decision-6e1e4c15 records 240 = 72_E6 + 6_A2 + 81 + 81; the 81+81 refines the 162 by A2-charge, and the other lane's '27 nonneighbour fibres' are the same 27"
+  }
+}
