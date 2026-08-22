@@ -1,0 +1,15 @@
+{
+  "D4_roots": 24,
+  "abstract_local_group": "2^3:S4 of order 192, certified in Pass7409",
+  "boundary": "This specifically rejects the equivariant identification; it does not deny that both carriers can participate in larger E8 incidence structures.",
+  "local_Steiner_slots": 24,
+  "negative_theorem": "The 24 local Steiner chart slots and the 24 D4 roots are not isomorphic W(D4)-sets. The characteristic normal 2^3 subgroup has orbit decompositions 8+8+8 versus 4+4+4+4+4+4.",
+  "normal_2^3_orbits_on_D4_roots": [4,4,4,4,4,4],
+  "normal_2^3_orbits_on_slots": [8,8,8],
+  "positive_reading": "The 24-slot carrier is a different degree-24 permutation representation of the same abstract local 192-element symmetry and should be studied on its own terms.",
+  "root_point_stabilizer_intersection_with_normal_2^3": 2,
+  "schema": "w33.pass7430.steiner24_d4_root_refutation.v1",
+  "slot_factorization": "8 Eisenstein leaves x 3 Steiner triples over a fixed A2^4 line",
+  "slot_point_stabilizer_intersection_with_normal_2^3": 1,
+  "status": "PASS"
+}
