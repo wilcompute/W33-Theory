@@ -1,0 +1,55 @@
+% Passes 7249--7304: doily spectral reconstruction, triality/outer boundaries, q9 local obstruction, ternary shadow.
+\subsection{The double-six doily system as a spectral design and ternary shadow}
+Let $N$ be the $45\times36$ incidence matrix whose $D$th column is the set of fifteen tritangents disjoint from a double-six $D$.  If $A_{36}$ is the double-six graph and $A_{45}$ the tritangent-sharing graph, exact replay gives
+\[
+N^TN=12I+3J+3A_{36},\qquad NN^T=9I+3J+3A_{45},
+\]
+with $A_{36}=\operatorname{SRG}(36,20,10,12)$ and $A_{45}=\operatorname{SRG}(45,12,3,3)$.  Hence
+\[
+\operatorname{spec}(N^TN)=180^1\oplus18^{20}\oplus0^{15}.
+\]
+Writing $X=N-J/3$ yields the exact primitive-module intertwiner
+\[
+\boxed{2A_{45}X=3XA_{36}}.
+\]
+The centered columns have squared norm $10$, mutual inner products $1$ or $-2$, and form a tight frame on a $20$-space with frame eigenvalue $18$.
+
+A single double-six is transitive under the $36$-point $PSp(4,3)$ orbit, and the binary span of its orbit columns is the full
+\[
+\boxed{C_{\rm spread}=[45,21,5]_2}.
+\]
+Thus one local doily slice plus the ambient group action reconstructs both the spread code and the double-six overlap graph.
+
+The $D_4\oplus D_4$ diagonal glue has nonzero classes $(v,v),(s,s),(c,c)$.  The complementary-pair stabilizer has order
+\[
+2\cdot192^2\cdot6=442368,
+\]
+where the factor $6$ is simultaneous $D_4$ triality.  It permutes the three nonzero diagonal glue classes transitively, so a bare orthogonal $D_4$ pair carries an $S_3$ torsor rather than a canonical $v/s/c$ label.
+
+For a fixed double-six,
+\[
+|\operatorname{Stab}_{PSp}(D)|=720,\qquad |\operatorname{Stab}_{W(E_6)}(D)|=1440,
+\]
+but both images on the fifteen-tritangent doily slice have order $720$.  The extra kernel $C_2$ swaps the two sixers of the double-six and fixes the fifteen complementary $c_{ij}$ lines; it is central, not the exceptional outer automorphism of $S_6$.  Moreover the $27$ minimum words of $C_{\rm spread}$ have weight five and are exactly the $27$ cubic-line stars.  Thus the code reconstructs the full $27$-line/$45$-tritangent cubic-surface geometry from its minimum words.
+
+Characteristic three exposes a second code.  The Smith form of $N$ has nonzero invariant factors
+\[
+\boxed{1^{14}3^7}.
+\]
+Since $N^TN\equiv0\pmod3$, the ternary column span is self-orthogonal and exhaustive enumeration gives
+\[
+\boxed{[45,14,15]_3}.
+\]
+Its $72$ minimum words are exactly $\pm$ the $36$ doily-slice columns.
+
+\subsection{A q=9 local-section obstruction and blocker-frame fingerprint}
+A direct restriction of the fifteen-coordinate doily code to points of $W(3,9)$ is not canonical: the former is a cubic-surface tritangent carrier, the latter a point carrier.  The q=9-native local test is instead intersection with embedded symplectic $W(3,3)$ sections.  Every such intersection is a partial ovoid of $W(3,3)$ and therefore has size at most seven.  The frozen 51-point witness meets the standard $\mathbb F_3$-fixed section in four points; a deterministic scan of 20,000 embedded sections under non-$\mathbb F_3$ symplectic transvections saw maximum intersection six.  This scan is not exhaustive and is not an upper bound for $\alpha(W(3,9))$.
+
+If $B$ is the $769\times51$ blocker-incidence matrix of the frozen witness, then
+\[
+\boxed{B^TB=80I_{51}+10J_{51}}.
+\]
+After integer centering, the $51$ columns form an exact regular simplex of rank $50$.  The third blocker moment is witness-specific: among the $\binom{51}{3}$ witness triads, exactly $20722$ have one common center and $103$ have ten common centers.  Those $103$ exceptional triads form a binary rank-$51$ three-uniform hypergraph.
+
+\paragraph{Evidence boundary.}
+These statements are finite combinatorial/coding results.  The q=9 optimum remains open; no 52-set is excluded.  No physical interpretation is assigned to the new ternary or Smith-form invariants.
