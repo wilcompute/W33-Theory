@@ -88,6 +88,13 @@ def main() -> int:
     ap.add_argument("--budget", type=float, default=3000.0)
     ap.add_argument("--target", type=int, default=52)
     ap.add_argument("--seed", type=int, default=7195)
+    # Larger q needs SMALLER destroys: the repair ILP is exact, so its cost grows
+    # with the candidate set, and at q=11 (1464 points) a k=22 destroy leaves a
+    # subproblem that does not close in the per-move budget -- the run then spends
+    # all its time on a handful of moves. Small k trades move size for move count.
+    ap.add_argument("--kmin", type=int, default=6)
+    ap.add_argument("--kmax", type=int, default=22)
+    ap.add_argument("--repair", type=float, default=15.0)
     args = ap.parse_args()
     q = args.q
 
@@ -119,7 +126,7 @@ def main() -> int:
     it = improved = 0
     while time.time() - t0 < args.budget:
         it += 1
-        k = rng.randint(6, min(22, max(7, len(cur) - 2)))
+        k = rng.randint(args.kmin, min(args.kmax, max(args.kmin + 1, len(cur) - 2)))
         keep = list(cur)
         rng.shuffle(keep)
         keep = keep[:len(keep) - k]
@@ -127,7 +134,7 @@ def main() -> int:
         for p in keep:
             blocked |= nbr[p] | (1 << p)
         cands = [p for p in range(n) if not (blocked >> p) & 1]
-        add = exact_mis(cands, adj, timelimit=15.0)
+        add = exact_mis(cands, adj, timelimit=args.repair)
         new = keep + add
         if len(new) >= len(cur):
             cur = new

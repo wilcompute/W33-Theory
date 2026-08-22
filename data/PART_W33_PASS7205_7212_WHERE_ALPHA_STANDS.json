@@ -1,0 +1,91 @@
+{
+  "actually_new": [
+    "the proof that no order-3 element stabilises the q=7 optimum",
+    "|Stab| <= 2 at q=7 and q=9",
+    "certified basin radius 9",
+    "the Pauli dictionary at odd q, controlled at q=2 with matrices",
+    "independent confirmation of the other lane's four E8/D4 counts"
+  ],
+  "already_the_repos": [
+    {
+      "my_error": "Pass 7187-7194's commit message presented the consequence as new",
+      "what": "the conjecture that these stabilisers are tiny, so group-orbit constructions cannot work",
+      "where": "scripts/w33_ovoid_stabiliser_exact.py, Pass 6285-6300"
+    },
+    {
+      "what": "the commuting/anticommuting Pauli dictionary at q=2",
+      "where": "w33_pass5351_5352"
+    }
+  ],
+  "basin_is_global": {
+    "method": "ten ILP infeasibility proofs, d = 0..9; d=10 unresolved in 900s",
+    "statement": "every 52-point partial ovoid of W(3,9), if one exists, meets our 51-set in at most 41 points",
+    "still_not_a_bound": "a 52-set far from S remains possible",
+    "why_the_wall_is_structural": "a point outside S can join only if all its S-neighbours are removed, so only points with tangent <= d are candidates; the maximum tangent at q=9 is 10, so at d=10 the restriction is vacuous"
+  },
+  "boundary": "alpha(W(3,9)) is NOT determined; 51 <= alpha <= 73 stands. LNS is measured 6/6 reliable at q=7 where the answer is known, converges with the same signature at q=9, and has NOT converged at q=11 or q=13 -- so 65 and 83 are weak lower bounds that must not be used to fit a formula",
+  "not_done": [
+    "alpha at q = 9, 11, 13",
+    "any improvement on Tallini's 73",
+    "a 52-set",
+    "a proof of 51",
+    "the d=10 basin step"
+  ],
+  "q11_does_not_discriminate": {
+    "if_alpha9_51": {
+      "q11": 71,
+      "q13": 92
+    },
+    "if_alpha9_52": {
+      "q11": 75,
+      "q13": 102
+    },
+    "lns_has": {
+      "q11": 65,
+      "q13": 83
+    },
+    "why": "below both predictions by more than the gap between them"
+  },
+  "reliability": {
+    "q11": {
+      "converged": false,
+      "points": 1464,
+      "regimes_tried": [
+        "k=6..22 exact repair",
+        "k=3..7, 63959 iterations"
+      ],
+      "result": 65
+    },
+    "q13": {
+      "converged": false,
+      "points": 2380,
+      "result": 83
+    },
+    "q7": {
+      "points": 400,
+      "result": 33,
+      "seeds_hitting_optimum": "6/6",
+      "time": "25s each"
+    },
+    "q9": {
+      "improvements_after_3s": 0,
+      "iterations": 16624,
+      "points": 820,
+      "result": 51
+    }
+  },
+  "spectral_dead_end": {
+    "hoffman_eq_delsarte": {
+      "q7": 50,
+      "q9": 82
+    },
+    "ilp_dual_observed": {
+      "q7_after_240s": 46
+    },
+    "tallini": {
+      "q7": 43,
+      "q9": 73
+    },
+    "verdict": "spectral bounds are WORSE than Tallini at both q, because the SRG ratio bound is q^2+1; only the ILP dual bound can beat Tallini"
+  }
+}
