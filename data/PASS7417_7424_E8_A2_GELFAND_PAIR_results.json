@@ -1,0 +1,16 @@
+{
+  "association_scheme": {
+    "first_eigenmatrix_P": [[1,120,648,270,81],[1,20,-12,-30,21],[1,8,-24,18,-3],[1,-4,12,-6,-3],[1,-40,-24,30,33]],
+    "multiplicities": [1,84,300,700,35],
+    "orthogonality": "P^T diag(m) P = 1120 diag(k), and P Q = Q P = 1120 I",
+    "second_eigenmatrix_Q_as_exact_strings": [["1","84","300","700","35"],["1","14","20","-70/3","-35/3"],["1","-14/9","-100/9","350/27","-35/27"],["1","-28/3","20","-140/9","35/9"],["1","196/9","-100/9","-700/27","385/27"]],
+    "valencies": [1,120,648,270,81]
+  },
+  "boundary": "The irreducibility claim is for the complex permutation representation of the effective finite Weyl action. The dimensions agree with classical W(E8) character degrees; no physical particle assignment is implied.",
+  "effective_group": {"degree":1120,"name":"W(E8)/{+-I} on A2 subsystems","order":348364800,"point_stabilizer_order":311040,"rank":5,"subdegrees":[1,81,120,270,648]},
+  "gelfand_pair": {"decomposition":"1 + 84 + 300 + 700 + 35 = 1120","irreducible_dimensions":[1,84,300,700,35],"multiplicity_free":true,"reason":"The group orbital algebra has rank 5 and its five orbitals are exactly the five relations of the commutative rank-5 Bose-Mesner algebra from Pass7401-7408."},
+  "orbital_identification": [{"relation":0,"size":1},{"relation":4,"size":81},{"relation":3,"size":270},{"relation":2,"size":648},{"relation":1,"size":120}],
+  "passes": "7417-7424",
+  "schema": "w33.pass7417_7424.e8_a2_gelfand_pair.v1",
+  "status": "PASS"
+}
