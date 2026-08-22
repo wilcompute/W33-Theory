@@ -8,7 +8,7 @@
   "prior_art_firewall": "The bare 27-vertex distance-transitive antipodal 3-cover of K9 is classical. The repo-specific result is its objectwise appearance as the E8/W33 matter-fibre graph and its compatibility with the determinant/H27/Hesse structures.",
   "schema": "w33.pass7215.h27_ihara_ramanujan.v1",
   "spanning_tree_factorization": "2^24 * 3^31",
-  "spanning_trees": "103079215104436205568",
+  "spanning_trees": "10362839986909376151552",
   "status": "PASS",
   "triangles": 36
 }
