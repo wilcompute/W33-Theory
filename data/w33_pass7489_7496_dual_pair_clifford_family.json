@@ -1,0 +1,31 @@
+{
+  "schema": "w33.pass7489_7496.dual_pair_clifford_family.v1",
+  "S1_dual_pair_alpha": {
+    "alpha_W33": 7,
+    "alpha_Q43": 10,
+    "lovasz_theta_W33": 10,
+    "both_SRG_40_12_2_4": true,
+    "error": "'alpha=10' is true only of the dual Q(4,3); for W(3,3) alpha=7, and 10 is the Lovász bound",
+    "load_bearing_claim": "alpha=10 = superstring critical dimension -- inherits the conflation"
+  },
+  "S3_clifford_lr_boundary": {
+    "clifford_lr_scheme": "rook graph SRG(36,10,4,2)",
+    "clifford_spectrum": {
+      "10.0": 1,
+      "4.0": 10,
+      "-2.0": 25
+    },
+    "spread_scheme": "SRG(36,15,6,6) {15^1,3^15,-3^20}",
+    "boundary": "count-equal (36), scheme-different -- confirms MDCLXXXI"
+  },
+  "S4_w33_family": {
+    "rho_equals_rho2_lines": true,
+    "conjugate_gives_different": true,
+    "shared_A2s_with_conjugate": 0,
+    "note": "family is real; 4480 fpf order-3 -> 2240 copies is the other lane's Springer/G32 count"
+  },
+  "S2_third_1440_note": "Brosowsky 20x72 = C(6,3) x 72 is a count, not an asserted group action; 1440 = |Aut(S6)|",
+  "S5_alpha_w39_note": "open; perp-E6 (point = E6xA2 maximal subgroup) is a structural lever, not a solution",
+  "status": "PASS",
+  "passes": "7489-7496"
+}
