@@ -1,0 +1,31 @@
+{
+  "M": {
+    "column_span": "even subcode of C_spread",
+    "meaning": "M[t,D]=1 iff tritangent t meets double-six D in two lines",
+    "rank": 20,
+    "shape": [45, 36]
+  },
+  "N": {
+    "column_span": "C_spread=[45,21,5]_2",
+    "column_weight": 15,
+    "meaning": "N[t,D]=1 iff tritangent t is disjoint from D, i.e. lies in its doily slice",
+    "rank": 21,
+    "row_weight": 12,
+    "shape": [45, 36]
+  },
+  "boundary": "Exact finite incidence/coding identity only; no physical interpretation is promoted.",
+  "interpretation": "The 27 ten-D4 spreads and the 36 cubic-surface double-sixes are two generating systems for the same 45-coordinate [45,21,5] code. The even 20-space is the column space of the old tritangent/double-six selector M, while adding the complements N=J+M supplies the odd line and yields the full spread code.",
+  "matrix_identity": "N = J + M over F2",
+  "passes": "7241-7248",
+  "schema": "w33.pass7241_7248.double_six_slice_generator.v1",
+  "slice_intersections": {
+    "H36_edge": {"doily_slice_intersection": 6, "double_six_pairs": 360},
+    "H36_nonedge": {"doily_slice_intersection": 3, "double_six_pairs": 270}
+  },
+  "span_equalities": {
+    "Cspread_equals_1_plus_V20": "realized directly by complementing the tritangent/double-six incidence columns",
+    "col_M_equals_even_Cspread": true,
+    "col_N_equals_Cspread": true
+  },
+  "status": "PASS"
+}
