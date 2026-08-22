@@ -1,0 +1,19 @@
+{
+  "GL2_lift": "g:(u,z)->(gu,det(g)z)",
+  "GL2_order": 48,
+  "SL2_order": 24,
+  "boundary": "Finite group/cohomology theorem only; no physical gauge field is inferred.",
+  "bridge": "The affine-area cocycle, the E8-derived 27-fibre cover, and the repo H27 qutrit Heisenberg model are not merely isomorphic graphs: the voltage itself is the central-extension 2-cocycle whose commutator is the symplectic determinant.",
+  "Cayley_connection_size": 8,
+  "center_order": 3,
+  "cohomology": "The Pass7183 edge voltage c(u,v)=-det(u,v) has nondegenerate alternating commutator det. Alt^2(F3^2)^* is one-dimensional, so up to nonzero central rescaling this is the unique nontrivial bilinear Heisenberg extension.",
+  "commutator": "[(u,z),(v,w)]=(0,det(u,v))",
+  "derived_subgroup_order": 3,
+  "exponent": 3,
+  "extraspecial": "Heisenberg H27, nonabelian extraspecial 3-group of exponent 3",
+  "law": "(u,z)(v,w)=(u+v,z+w-det(u,v))",
+  "order": 27,
+  "quotient": "F3^2",
+  "schema": "w33.pass7387.h27_area_central_extension.v1",
+  "status": "PASS"
+}
