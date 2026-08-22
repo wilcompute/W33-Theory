@@ -1,11 +1,11 @@
-name: W33 Pass7489-7490 open frontier
+name: W33 Pass7489-7491 open frontier
 
 on:
   pull_request:
     branches: [master]
     paths:
       - 'analysis/w33_pass7489_third1440_marked_sixer_bundle.py'
-      - 'analysis/w33_pass7490_q9_radius_target48.py'
+      - 'analysis/w33_pass7491_e8_1120_outer_triality.py'
       - '.github/workflows/w33_pass7489_7490_open_frontier.yml'
   workflow_dispatch:
 
@@ -31,11 +31,11 @@ jobs:
           assert d['orbit_stabilizer']['marked_sixer_triple_orbit']['stabilizer_order']==36
           assert d['orbit_stabilizer']['double_six_stabilizer_on_its_marked_fibre']['fibre_size']==40
           PY
-  q9-radius:
-    strategy:
-      fail-fast: false
-      matrix:
-        d: [9, 10, 11, 12]
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass7489-third1440
+          path: data/PART_W33_PASS7489_THIRD1440_MARKED_SIXER_BUNDLE.json
+  outer-triality:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
@@ -43,9 +43,19 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Exact target-48 decision
-        run: python analysis/w33_pass7490_q9_radius_target48.py --d ${{ matrix.d }}
+      - run: pip install numpy networkx pynauty
+      - name: Compute full automorphism group of uncoloured 3x1120 incidence graph
+        run: python analysis/w33_pass7491_e8_1120_outer_triality.py
+      - name: Check D4(2):S3 closure
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open('data/PART_W33_PASS7491_E8_1120_OUTER_TRIALITY.json'))
+          assert d['status']=='PASS'
+          assert d['uncoloured_automorphism_order']==6*d['type_coloured_automorphism_order']
+          assert sorted(d['explicit_type_cycle'])==[0,1,2]
+          PY
       - uses: actions/upload-artifact@v4
         with:
-          name: q9-d${{ matrix.d }}
-          path: data/PART_W33_PASS7490_Q9_TARGET48_D${{ matrix.d }}.json
+          name: pass7491-outer-triality
+          path: data/PART_W33_PASS7491_E8_1120_OUTER_TRIALITY.json
