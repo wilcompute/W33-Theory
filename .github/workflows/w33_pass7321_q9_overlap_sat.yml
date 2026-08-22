@@ -1,0 +1,37 @@
+name: W33 Pass7321 q9 overlap SAT
+
+on:
+  push:
+    branches: ['research/pass7321-7328-deep-unification']
+    paths:
+      - 'analysis/w33_pass7321_q9_overlap_sat.py'
+      - '.github/workflows/w33_pass7321_q9_overlap_sat.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sat:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: research/pass7321-7328-deep-unification
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install SAT dependencies
+        run: python -m pip install --upgrade pip python-sat[pblib,aiger] numpy
+      - name: Execute overlap-constrained exact SAT
+        run: python analysis/w33_pass7321_q9_overlap_sat.py
+      - name: Freeze SAT certificate on branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- data/PART_W33_PASS7321_Q9_OVERLAP_SAT.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Pass7321: freeze q9 overlap SAT certificate [skip ci]'
+          git push origin HEAD:research/pass7321-7328-deep-unification
