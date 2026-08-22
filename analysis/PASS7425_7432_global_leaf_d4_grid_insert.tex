@@ -1,0 +1,58 @@
+% Passes 7425--7432: global leaf design, D4 A2 rook/Latin geometry, and q=9 radius nine.
+\subsection*{Passes 7425--7432: the global Eisenstein leaf design and the intrinsic $D_4$ $4\times4$ grid}
+
+Let $B$ be the $2240\times1120$ incidence matrix of the Eisenstein $W(3,3)$ leaves on the global $E_8$ $A_2$ subsystems.  Using the rank-five $A_2$ association scheme of Passes~7401--7424 and the transitivity of the leaf stabilizer on the collinear and noncollinear pairs of $W(3,3)$, one obtains the exact pair replication law
+\[
+  \boxed{B^{T}B=80I+8(A_{120}+A_{270})}.
+\]
+Thus two global $A_2$ subsystems occur in a common Eisenstein leaf exactly in the valency-$120$ orthogonality relation or the valency-$270$ nonorthogonal relation, and in either case precisely eight leaves contain the pair.  The spectrum is
+\[
+  \boxed{3200^1\oplus288^{300}\oplus0^{819}},
+\]
+so $\operatorname{rank}_{\mathbb R}B=301$ and the real column module is $\mathbf1\oplus V_{300}$.  Centering every leaf indicator by $\frac1{28}\mathbf1$ gives
+\[
+  \boxed{C^TC=288P_{300}}.
+\]
+Consequently the $2240$ normalized centered leaf indicators form a spherical $2$-design, equivalently a finite unit-norm tight frame, in the irreducible $300$-dimensional Weyl constituent.  The integral model
+\[
+  y_L=28\,1_L-\mathbf1
+\]
+has $\|y_L\|^2=30240$, and if two leaves meet in $t$ global $A_2$ subsystems then
+\[
+  \boxed{\langle y_L,y_M\rangle=112(7t-10)}.
+\]
+
+Inside one $D_4$ root subsystem there are exactly sixteen $A_2$ root subsystems.  Joining two when their six-root sets are disjoint gives
+\[
+  \boxed{L_2(4)=\operatorname{SRG}(16,6,2,2)}.
+\]
+Its eight maximal $K_4$'s are exactly the eight partitions of the $24$ $D_4$ roots into four disjoint $A_2$ hexagons.  Its twenty-four maximum cocliques are the twenty-four transversals of the $4\times4$ grid, and there are twenty-four partitions of the sixteen cells into four transversals.  Labeling the four classes yields
+\[
+  \boxed{24\cdot24=576}
+\]
+Latin squares of order four.  The full graph automorphism group is $S_4\wr C_2$ of order $1152$, while the row/column-preserving subgroup $S_4\times S_4$ has order $576$.
+
+For an orthogonal pair $D_4\perp D_4'$, every containing Eisenstein leaf chooses one of the eight $A_2$-root partitions on each side.  The certified replication number $64$ therefore resolves equivariantly as
+\[
+  \boxed{64=8\times8},
+\]
+and the relation ``same partition on one side'' is the rook graph $L_2(8)=\operatorname{SRG}(64,14,6,2)$.  The eight root partitions are not the same $W(D_4)$-set as the eight orientation leaves of Pass~7409: the former action factors through order $96$, whereas the latter is a faithful order-$192$ affine action.
+
+The Klein $V_4$ Latin square provides a second realization of the same sixteen-vertex graph: two cells are adjacent when row, column, and symbol are all distinct.  Under an explicit graph isomorphism, its eight transversals become the eight $D_4=A_2\sqcup A_2\sqcup A_2\sqcup A_2$ root partitions.  Composing with the exact Pass~5300 Hoffman theorem gives
+\[
+  \boxed{H/Z(H)\cong L_+<\operatorname{AutPar}(V_4\text{-Latin})<\operatorname{Aut}(A_2(D_4))}
+\]
+with orders $288<576<1152$.  The firewall of Pass~5300 remains in force: $H$ itself is not the full order-$576$ Latin autoparatopy group.
+
+The already-certified local bijection between the $36$ spreads of a W33 leaf and the $36$ cubic-surface double-sixes globalizes over all $2240$ leaves to
+\[
+  \boxed{80640}
+\]
+leaf-spread/double-six charts, one Weyl orbit with stabilizer order $8640$.  Every global $A_2^4$ line lies in $72$ such charts and supports $24$ global Steiner chart objects.
+
+A tempting degree-$24$ identification fails: the $24=8\times3$ Steiner slots over one $A_2^4$ line are not the $24$ roots of $D_4$.  The characteristic normal $2^3$ subgroup has orbit decomposition $8+8+8$ on the Steiner slots but $4+4+4+4+4+4$ on the $D_4$ roots.
+
+Finally, in the canonical q=9 anchor type $(1,3,5)$ the exact target-$48$ residual search extends one step beyond Pass~7180.  After exactly nine deletions from the known $42$-state invertible core, a target $48$ residual clique would require a compatible $15$-clique among $469$ candidates.  Exact branch-and-bound visits $2{,}535{,}139$ nodes and proves infeasibility.  Thus any hypothetical target-$48$ residual clique in this canonical anchor basin must delete at least ten core states.  Radius ten and the global statement $\alpha(W(3,9))=51$ remain open.
+
+\paragraph{Evidence boundary.}
+The raw subsystem counts $1120\,A_2$, $3150\,D_4$, and $11200\,4A_2$ are classical Weyl/reflection-subgroup data and are not re-claimed here.  The new statements are the incidence compositions above.  No continuum, particle, coupling, spacetime, or hardware interpretation is inferred from these finite structures.
