@@ -1,0 +1,50 @@
+name: W33 Pass7322-7328 deep unification
+
+on:
+  push:
+    branches: ['research/pass7321-7328-deep-unification']
+    paths:
+      - 'analysis/w33_pass7322_heisenberg_area_extension.py'
+      - 'analysis/w33_pass7323_d4_triality_transport.py'
+      - 'analysis/w33_pass7324_integral_spread_lattices.py'
+      - 'analysis/w33_pass7325_h27_schlaefli_distance_fusion.py'
+      - 'analysis/w33_pass7326_exact_cover_h27_orbits.py'
+      - 'analysis/w33_pass7327_q9_triad_hypergraph.py'
+      - 'analysis/w33_pass7328_d4_antipodal_tritangent_fusion.py'
+      - '.github/workflows/w33_pass7322_7328_deep_unification.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: research/pass7321-7328-deep-unification
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact-analysis dependencies
+        run: python -m pip install --upgrade pip numpy sympy networkx
+      - name: Execute Pass7322-7328 structural attacks
+        run: |
+          python analysis/w33_pass7322_heisenberg_area_extension.py
+          python analysis/w33_pass7323_d4_triality_transport.py
+          python analysis/w33_pass7324_integral_spread_lattices.py
+          python analysis/w33_pass7325_h27_schlaefli_distance_fusion.py
+          python analysis/w33_pass7326_exact_cover_h27_orbits.py
+          python analysis/w33_pass7327_q9_triad_hypergraph.py
+          python analysis/w33_pass7328_d4_antipodal_tritangent_fusion.py
+      - name: Freeze generated certificates on branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- data/PART_W33_PASS7322_HEISENBERG_AREA_EXTENSION.json data/PART_W33_PASS7323_D4_TRIALITY_TRANSPORT.json data/PART_W33_PASS7324_INTEGRAL_SPREAD_LATTICES.json data/PART_W33_PASS7325_H27_SCHLAEFLI_DISTANCE_FUSION.json data/PART_W33_PASS7326_EXACT_COVER_H27_ORBITS.json data/PART_W33_PASS7327_Q9_TRIAD_HYPERGRAPH.json data/PART_W33_PASS7328_D4_ANTIPODAL_TRITANGENT_FUSION.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Pass7322-7328: freeze deep-unification replay certificates [skip ci]'
+          git push origin HEAD:research/pass7321-7328-deep-unification
