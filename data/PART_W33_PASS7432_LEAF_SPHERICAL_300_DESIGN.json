@@ -1,0 +1,21 @@
+{
+  "Welch_average_squared_offdiagonal": "97/33585",
+  "ambient_incidence_coordinates": 1120,
+  "boundary": "No claim is made that this is an optimal spherical code or a physical state ensemble; leaf-intersection distances are not classified here.",
+  "centered_frame_operator": "C^T C = 288 P_V300",
+  "centered_norm_squared": "270/7",
+  "centering_mean": "1/28",
+  "integral_entries": "27 on the 40 A2s of L and -1 on the other 1080",
+  "integral_model": "y_L = 28*1_L - 1",
+  "integral_norm_squared": 30240,
+  "intersection_angle_formula": "If |L intersect M|=t then <y_L,y_M>=112(7t-10), and normalized inner product=(7t-10)/270.",
+  "irreducible_dimension": 300,
+  "leaf_vectors": 2240,
+  "leaf_weight": 40,
+  "point_replication": 80,
+  "schema": "w33.pass7432.leaf_spherical_300_design.v1",
+  "spherical_design": "The normalized centered leaf indicators are a spherical 2-design (equivalently a zero-sum finite unit-norm tight frame) in R^300.",
+  "status": "PASS",
+  "theorem": "The global Eisenstein-leaf orbit is not only a tactical design: after centering it is an exact 2240-point spherical 2-design spanning precisely the irreducible 300-dimensional constituent of the E8 A2 permutation module.",
+  "unit_norm_frame_bound": "112/15"
+}
