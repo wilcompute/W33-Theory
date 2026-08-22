@@ -1,0 +1,24 @@
+{
+  "claim_boundary": "The q=4, q=9, q=25 and q=27 finite-field constructions use extension degrees 2 or 3 and survive this audit. The phrase 'general GF(p^k)' in Pass7216 is withdrawn until its caller is switched to the rigorous selector.",
+  "counterexample_rootless_but_reducible": {
+    "field": "F2",
+    "pass7216_rootlessness_test": true,
+    "polynomial": "x^4+x^2+1=(x^2+x+1)^2",
+    "rigorous_irreducibility": false
+  },
+  "finding": "Pass7216's rootlessness selector is a valid irreducibility test in degrees 2 and 3, but not for unrestricted extension degree k>=4.",
+  "legacy_selector_failures": [
+    {"k": 5, "legacy_is_irreducible": false, "legacy_rhs": [1,0,0,0,1], "p": 2, "rigorous_is_irreducible": true, "rigorous_rhs": [1,0,0,1,0]},
+    {"k": 8, "legacy_is_irreducible": false, "legacy_rhs": [1,0,0,0,0,0,0,1], "p": 2, "rigorous_is_irreducible": true, "rigorous_rhs": [1,0,0,0,1,1,0,1]}
+  ],
+  "passes": "7233-7240",
+  "replacement": "Use Frobenius/Rabin irreducibility: x^(p^k)=x mod f and gcd(f,x^(p^(k/r))-x)=1 for every prime divisor r of k.",
+  "safe_recent_lanes": [
+    {"k": 2, "legacy_rhs": [1,1], "p": 2, "q": 4, "rigorously_irreducible": true},
+    {"k": 2, "legacy_rhs": [1,1], "p": 3, "q": 9, "rigorously_irreducible": true},
+    {"k": 2, "legacy_rhs": [1,2], "p": 5, "q": 25, "rigorously_irreducible": true},
+    {"k": 3, "legacy_rhs": [1,0,2], "p": 3, "q": 27, "rigorously_irreducible": true}
+  ],
+  "schema": "w33.pass7233_7240.field_irreducibility_audit.v1",
+  "status": "PASS"
+}
