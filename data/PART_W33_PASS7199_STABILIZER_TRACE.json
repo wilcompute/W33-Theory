@@ -1,0 +1,47 @@
+{
+  "boundary": "upper bounds on Stab(O) by embedding into Aut of the edge-coloured complete graph on O. An UPPER bound: a graph automorphism need not be realised by a symplectic map",
+  "supersedes": "Pass 7198, whose invariant was a perfect matching at q=3 and whose control passed while the bound was vacuous",
+  "invariant": "w(a,b) = sorted multiset of tangent values over trace(a,b)",
+  "controls": {
+    "detection_order3_at_q3_q5": true,
+    "discrimination_bound_small": true
+  },
+  "rows": [
+    {
+      "q": 3,
+      "size": 7,
+      "trace_sizes": {
+        "4": 21
+      },
+      "colours": 3,
+      "aut_bound": 72
+    },
+    {
+      "q": 5,
+      "size": 18,
+      "trace_sizes": {
+        "6": 153
+      },
+      "colours": 9,
+      "aut_bound": 24
+    },
+    {
+      "q": 7,
+      "size": 33,
+      "trace_sizes": {
+        "8": 528
+      },
+      "colours": 71,
+      "aut_bound": 2
+    },
+    {
+      "q": 9,
+      "size": 51,
+      "trace_sizes": {
+        "10": 1275
+      },
+      "colours": 216,
+      "aut_bound": 2
+    }
+  ]
+}

@@ -82,6 +82,10 @@ def main() -> int:
     ap.add_argument("--size", type=int)
     args = ap.parse_args()
     hard_fail = False
+    # Advisory findings never block (blocking trains --no-verify), but they
+    # must not be reported as 'clean' either: BT1645 printed a self-containment
+    # failure and the summary still said 'intake clean (1 files)'.
+    advisory = 0
 
     # 5. archive contract first -- never extract unverified transport
     if args.archive:
@@ -128,6 +132,7 @@ def main() -> int:
         print("[audit] forced arithmetic: none")
     else:
         print(out2)
+        advisory += 1
 
     # 1c. self-containment (Pass 6168). BT1645 evaded 1b by recording multiplicities
     # while omitting the SRG parameters they follow from -- those sat in a sibling file.
@@ -147,6 +152,7 @@ def main() -> int:
             if not has_params:
                 print(f"[audit] {f.name}: interprets numbers but records no parameters "
                       f"they follow from -- not self-contained, cannot be audited alone")
+                advisory += 1
 
     # 2. certificate triage
     for f in files:
@@ -170,6 +176,7 @@ def main() -> int:
         else:
             print(f"[audit] {f.name}: UNKNOWN status vocabulary {st!r} -- "
                   "classify before merge (this has bitten the ledger twice)")
+            advisory += 1
 
     # 3. contradiction scan
     cert = certified_css_params()
@@ -195,8 +202,16 @@ def main() -> int:
         if r.returncode != 0:
             hard_fail = True
 
-    print(f"[audit] {'HARD FAIL' if hard_fail else 'intake clean'} "
-          f"({len(files)} files)")
+    if hard_fail:
+        verdict = "HARD FAIL"
+    elif advisory:
+        verdict = f"NEEDS REVIEW ({advisory} advisory finding(s) above)"
+    else:
+        verdict = "intake clean"
+    print(f"[audit] {verdict} ({len(files)} files)")
+    # advisory findings deliberately do NOT change the exit code -- they warn,
+    # they never block. Only the summary line changes, so the batch is not
+    # described as clean when a guard has spoken.
     return 1 if hard_fail else 0
 
 

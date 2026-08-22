@@ -1,8 +1,8 @@
 {
-  "boundary": "every 52-set, if any exists, differs from this 51-set in more than 6 points. NOT a bound on alpha(W(3,9))",
+  "boundary": "every 52-set, if any exists, differs from this 51-set in more than 9 points. NOT a bound on alpha(W(3,9))",
   "q": 9,
   "seed_size": 51,
   "target": 52,
-  "certified_radius": 6,
+  "certified_radius": 9,
   "seed_file": "PART_W33_Q9_LNS_OVOID_51.json"
 }

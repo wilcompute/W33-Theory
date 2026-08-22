@@ -1,5 +1,50 @@
 #!/usr/bin/env python3
 """
+================================================================================
+INTAKE AUDIT, 2026-08-22 (glue track, Passes 7098-7202) -- READ BEFORE CITING
+================================================================================
+This file's five claims were audited individually. Two survive, two do not, and
+one names no object. Nothing here is a blanket dismissal.
+
+CLAIM 1 -- "multiplicities 1, 24, 15 encode Monster moonshine"       REFUTED.
+    For any SRG(v,k,lam,mu) the multiplicities are
+        f,g = [(v-1) -+ (2k+(v-1)(lam-mu)) / sqrt((lam-mu)^2+4(k-mu))] / 2,
+    and at (40,12,2,4) that is EXACTLY 24 and 15. They are forced by the
+    parameters. Every SRG(40,12,2,4) has them -- 24 is not the Leech rank here
+    and 15 is not the supersingular count; both are outputs of a closed form.
+    A change-the-object sweep found 32 other feasible SRG parameter sets whose
+    multiplicities land on unrelated "meaningful" integers by the same method.
+
+CLAIM 2 -- 47*59*71 = 196883 = dim(smallest nontrivial Monster irrep)   TRUE,
+    and verified here. But it is CLASSICAL and is a fact about the Monster, not
+    about W(3,3): the three primes are Monster data and the identity is a
+    standard remark in the moonshine literature. Cite it as such.
+
+CLAIM 3 -- "genus h = q(v-3) = 3*37 = 111"              NO OBJECT NAMED.
+    The arithmetic is right. No curve, surface or complex is named whose genus
+    this is, so the claim can be neither refuted nor used. See CLAUDE.md
+    failure mode 3.
+
+CLAIM 4 -- |roots(E8)| = 240 = |E(W(3,3))|          TRUE, but REDISCOVERY.
+    The repo CLOSED this at Pass 1020/1021. There is NO edge-to-root bijection
+    (the rank obstruction is 13 vs 10). What does exist is a 6:1 Sp(4,3)-
+    equivariant fibration 240 E8 roots -> 40 W(3,3) points with fibre the
+    Eisenstein units Z_6. Cite Pass 1020/1021 rather than re-deriving it.
+
+CLAIM 5 -- the 23->24->48->240->196560 chain            NOT AUDITED HERE.
+
+WHY THE HARNESS PASSED THIS FILE, and what changed. scripts/audit_batch.py
+checked contradiction against certified values and rediscovery against
+RESULTS_INDEX.md, but never whether a number was DERIVABLE from parameters the
+file already states. Two guards now run at intake and both fire on this file:
+    scripts/check_forced_arithmetic.py   (SRG multiplicities from v,k,lam,mu)
+    audit_batch.py step 1c               (self-containment)
+The second reports: "interprets numbers but records no parameters they follow
+from -- not self-contained, cannot be audited alone."
+================================================================================
+"""
+
+"""
 BT1645: Monster Group x W(3,3) x Genus-111 Embedding
 
 New theorems (Perplexity session Aug 18 2026):

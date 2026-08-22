@@ -1,0 +1,39 @@
+{
+  "boundary": "upper bounds on Stab(O) via embedding into Aut of a canonical bipartite graph. An upper bound, not the stabilizer itself; a graph automorphism need not be realised by a symplectic map",
+  "control_passed": true,
+  "method": "Stab(O) embeds into Aut(bipartite O x smallest tangent level set)",
+  "rows": [
+    {
+      "q": 3,
+      "size": 7,
+      "t_min": 1,
+      "T_min_size": 7,
+      "incidences": 7,
+      "aut_bound": 5040
+    },
+    {
+      "q": 5,
+      "size": 18,
+      "t_min": 2,
+      "T_min_size": 24,
+      "incidences": 48,
+      "aut_bound": 576
+    },
+    {
+      "q": 7,
+      "size": 33,
+      "t_min": 2,
+      "T_min_size": 17,
+      "incidences": 34,
+      "aut_bound": null
+    },
+    {
+      "q": 9,
+      "size": 51,
+      "t_min": 1,
+      "T_min_size": 1,
+      "incidences": 1,
+      "aut_bound": null
+    }
+  ]
+}

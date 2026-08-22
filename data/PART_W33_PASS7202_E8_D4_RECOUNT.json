@@ -1,0 +1,23 @@
+{
+  "boundary": "independent recount of four E8/D4 numbers reported by the other lane, from a fresh construction. Agreement is confirmation; disagreement would be reported as such. Says nothing about their scheme or Krein results, which are not recomputed here",
+  "claimed": {
+    "four_frames": 122850,
+    "d4_frames": 9450,
+    "d4_subsystems": 3150,
+    "normaliser": 221184
+  },
+  "recomputed": {
+    "four_frames": 122850,
+    "d4_frames": 9450,
+    "d4_subsystems": 3150,
+    "normaliser": 221184
+  },
+  "agreement": {
+    "four_frames": true,
+    "d4_frames": true,
+    "d4_subsystems": true,
+    "normaliser": true
+  },
+  "all_agree": true,
+  "my_withdrawn_idea": "that 10 might not be maximal for a ten-D4 spread; 10 is forced by 240/24 and there is nothing to optimise"
+}

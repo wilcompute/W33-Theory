@@ -1,0 +1,16 @@
+{
+  "boundary": "an ILP dual bound is a rigorous upper bound whether or not the solve closes. Reported here: dual 46 does not beat Tallini 43. No lower-bound claim is made",
+  "q": 7,
+  "srg": [
+    400,
+    56,
+    6,
+    8
+  ],
+  "hoffman_delsarte": 50,
+  "tallini": 43,
+  "incumbent": 33,
+  "dual_bound": 46,
+  "verdict": "dual 46 does not beat Tallini 43",
+  "note": "Hoffman and the two-class Delsarte LP both give 50, WORSE than Tallini's 43 -- spectral methods cannot help here"
+}

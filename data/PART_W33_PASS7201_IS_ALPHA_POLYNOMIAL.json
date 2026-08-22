@@ -1,0 +1,65 @@
+{
+  "boundary": "this pass RESOLVES NOTHING. It states the 51-vs-52 tension exactly and records what each hypothesis predicts at q=11 and q=13. The non-polynomial possibility is not ruled out and no formula is asserted",
+  "certain_values": {
+    "3": 7,
+    "5": 18,
+    "7": 33
+  },
+  "hypotheses": {
+    "alpha9_51": {
+      "deficit": [
+        0,
+        3,
+        10,
+        22
+      ],
+      "deficit_form": "none clean",
+      "predicts": {
+        "q=11": "71",
+        "q=13": "92"
+      },
+      "third_difference": -1
+    },
+    "alpha9_52": {
+      "deficit": [
+        0,
+        3,
+        10,
+        21
+      ],
+      "deficit_form": "C(q-2,2)",
+      "predicts": {
+        "q=11": 75,
+        "q=13": 102
+      },
+      "third_difference": 0
+    }
+  },
+  "non_polynomial_possibility": {
+    "arithmetic_condition": "requires q odd square with p != 3",
+    "consequence_for_q9": "q=9=3^2 is EXCLUDED, which is why the published lower bound at q=9 is only 2q+1 = 19",
+    "published_construction": "(q^{3/2}+3q-q^{1/2}+3)/3, carries q^{1/2}",
+    "the_useful_observation": "q = 3,5,7,11,13 are prime and q=9 is not; if alpha is arithmetic-conditional then q=9 is exactly the value one should not fit a formula through -- and it is the only uncertain one"
+  },
+  "not_done": [
+    "alpha(W(3,9))",
+    "alpha(W(3,11))",
+    "alpha(W(3,13))",
+    "any proof that alpha is or is not polynomial"
+  ],
+  "uncertain": {
+    "candidates": [
+      51,
+      52
+    ],
+    "evidence_for_51": [
+      "four independent LNS plateaus",
+      "certified basin radius 9"
+    ],
+    "evidence_for_52": [
+      "makes the sequence exactly quadratic",
+      "makes the Tallini deficit exactly C(q-2,2)"
+    ],
+    "q": 9
+  }
+}
