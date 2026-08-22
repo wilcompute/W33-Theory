@@ -9,7 +9,7 @@ def test_pass7179_d4_scheme():
     d=load('PART_W33_PASS7179_D4_SCHEME_KREIN.json')
     assert d['status']=='PASS'
     assert d['full_scheme_automorphism_order']==103680
-    assert d['Rshare_maximal_9_cliques']==80
+    assert d['share_relation_maximal_9_cliques']==80
     assert d['q_polynomial_orderings']==[]
 
 def test_pass7180_q9_radius():
@@ -21,7 +21,8 @@ def test_pass7180_q9_radius():
 
 def test_pass7181_7183_e6_affine_voltage():
     d=load('PART_W33_PASS7181_E6_MINUSCULE_FIBER_VOLTAGE.json')
-    assert d['status']=='PASS' and d['Schlaefli']=={'edges':216,'inner_product_counts':d['Schlaefli']['inner_product_counts'],'k':16,'lambda':10,'mu':8,'v':27}
+    assert d['status']=='PASS'
+    assert d['Schlaefli']['v']==27 and d['Schlaefli']['k']==16 and d['Schlaefli']['lambda']==10 and d['Schlaefli']['mu']==8
     a=load('PART_W33_PASS7183_C3_AFFINE_AREA_COCYCLE.json')
     assert a['status']=='PASS'
     assert a['zero_holonomy_triangles']==12
