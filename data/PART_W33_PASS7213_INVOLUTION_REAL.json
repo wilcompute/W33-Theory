@@ -1,0 +1,26 @@
+{
+  "boundary": "decides whether the nontrivial automorphism bounding Stab(O) is realised by a symplectic similitude. Valid only if the q=3 control detects symplectic maps, since Pass 7203 proved |Stab|=18 there",
+  "method": "a projectivity is determined by a frame; build the unique map on a frame inside O and test (a) similitude of B, (b) O mapped onto O",
+  "results": {
+    "3": {
+      "aut_bound": 72,
+      "nontrivial": 71,
+      "realised": 0,
+      "stab_order_from_this": 1,
+      "control_passes": false
+    },
+    "7": {
+      "aut_bound": 2,
+      "nontrivial": 1,
+      "realised": 0,
+      "stab_order_from_this": 1
+    },
+    "9": {
+      "aut_bound": 2,
+      "nontrivial": 1,
+      "realised": 0,
+      "stab_order_from_this": 1
+    }
+  },
+  "control_passes": false
+}

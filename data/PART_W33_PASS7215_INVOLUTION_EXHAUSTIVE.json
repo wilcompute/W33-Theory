@@ -1,0 +1,29 @@
+{
+  "boundary": "exhaustive over the scalar freedom, so it cannot miss a projectivity. A verdict is issued ONLY if the q=3 control reproduces |Stab| = 18 exactly",
+  "supersedes": [
+    "Pass 7213 (wrong construction, 0/71)",
+    "Pass 7214 (lossy frame condition, 2/71)"
+  ],
+  "method": "M = Fm . diag(lam) . A^{-1} with lam enumerated over all (q-1)^3 choices up to global scale",
+  "control_exact": true,
+  "results": {
+    "3": {
+      "aut": 72,
+      "nontrivial": 71,
+      "realised": 17,
+      "stab_order": 18
+    },
+    "7": {
+      "aut": 2,
+      "nontrivial": 1,
+      "realised": 1,
+      "stab_order": 2
+    },
+    "9": {
+      "aut": 2,
+      "nontrivial": 1,
+      "realised": 1,
+      "stab_order": 2
+    }
+  }
+}
