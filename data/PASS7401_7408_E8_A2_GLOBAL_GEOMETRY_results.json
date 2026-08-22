@@ -1,0 +1,41 @@
+{
+  "boundary": "The 1120-point A2 geometry and its 11200 A2^4 lines are rebuilt directly from the E8 roots. The count 2240 uses the previously certified regular-C3 normalizer order 311040. D4 replication uses the current certified count 90 J-stable D4s per leaf. This is a finite root-system theorem, not a claim that E8 or W33 by themselves constitute a physical theory.",
+  "e8": {
+    "A2_4_lines": {
+      "count": 11200,
+      "lines_per_A2": 40,
+      "points_per_line": 4,
+      "unique_line_through_each_orthogonal_pair": true
+    },
+    "A2_subsystems": 1120,
+    "orthogonality_graph": {
+      "A_times_relation_coefficients": [[0,1,0,0,0],[120,2,10,16,40],[0,54,70,72,80],[0,36,30,32,0],[0,27,10,0,0]],
+      "adjacent_common_neighbors": [2],
+      "association_scheme_rank": 5,
+      "degree": 120,
+      "edges": 67200,
+      "nonadjacent_common_neighbors": [10,16,40],
+      "pair_class_counts": {"identity":1120,"mu10":362880,"mu16":151200,"mu40":45360,"orthogonal":67200},
+      "relation_valencies": [1,120,648,270,81],
+      "spectrum": {"-4":700,"-40":35,"120":1,"20":84,"8":300},
+      "vertices": 1120
+    },
+    "root_count": 240
+  },
+  "eisenstein_W33_leaf_family": {
+    "WE8_order": 696729600,
+    "cyclic_Eisenstein_structures_or_W33_leaves": 2240,
+    "incidence_replications": {
+      "2A2_orthogonal_pairs": {"global_objects":67200,"per_leaf":240,"replication":8},
+      "4A2_lines": {"global_objects":11200,"per_leaf":40,"replication":8},
+      "A2": {"global_objects":1120,"per_leaf":40,"replication":80},
+      "D4": {"global_objects":3150,"per_leaf":90,"replication":64}
+    },
+    "regular_C3_centralizer_order": 155520,
+    "regular_C3_normalizer_order": 311040,
+    "regular_order3_elements": 4480
+  },
+  "passes": "7401-7408",
+  "schema": "w33.pass7401_7408.e8_a2_global_geometry.v1",
+  "status": "PASS"
+}

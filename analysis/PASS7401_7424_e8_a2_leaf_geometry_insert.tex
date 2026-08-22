@@ -1,0 +1,128 @@
+% Passes 7401--7424: exact E8 A2 leaf geometry, local Fano fibre, and Gelfand pair.
+\subsection*{Passes 7401--7424: the global $E_8$ $A_2$ geometry and its Eisenstein $W(3,3)$ leaves}
+
+The corrected Eisenstein bridge can be globalized without changing its evidence tier.
+Starting from the $240$ roots of $E_8$, the Pass7401 verifier reconstructs all
+\[
+1120
+\]
+root subsystems of type $A_2$.  Orthogonality of their rank-two root planes defines
+a $120$-regular graph on these $1120$ objects with spectrum
+\[
+\boxed{120^1\oplus20^{84}\oplus8^{300}\oplus(-4)^{700}\oplus(-40)^{35}}.
+\]
+Adjacent vertices have exactly two common neighbours, while nonadjacent pairs have
+exactly $10$, $16$, or $40$ common neighbours.  The corresponding five relation
+valencies are
+\[
+\boxed{1,\ 120,\ 648,\ 270,\ 81}.
+\]
+These relations close to a commutative rank-five association scheme.
+
+The adjacent-pair parameter has a direct root-subsystem consequence.  The two common
+$A_2$ neighbours of any orthogonal pair are themselves orthogonal, so every $2A_2$
+extends to a unique $4A_2$.  Hence the global incidence structure has
+\[
+\boxed{1120\ A_2\text{ points},\qquad11200\ A_2^4\text{ lines},}
+\]
+with four points per line and forty lines through each point.  In particular
+\[
+11200\binom42=67200
+\]
+recovers every orthogonal $2A_2$ pair exactly once.
+
+The already-certified regular order-three normalizer has order
+\[
+|N_{W(E_8)}(\langle J\rangle)|=311040.
+\]
+Consequently the full Weyl group contains exactly
+\[
+\boxed{696729600/311040=2240}
+\]
+conjugate cyclic Eisenstein structures, hence $2240$ conjugate $W(3,3)$ leaves.
+Double counting gives the exact replication numbers
+\[
+\boxed{r_{A_2}=80,\qquad r_{2A_2}=8,\qquad r_{4A_2}=8,\qquad r_{D_4}=64.}
+\]
+Thus one $W(3,3)$ is not an isolated $40$-point occurrence in $E_8$; it is one
+forty-point slice in a global $1120$-point $A_2$ geometry.
+
+\paragraph{The eight-leaf fibre over one $A_2^4$.}
+Fix $X=A_2^{(1)}\perp\cdots\perp A_2^{(4)}$.  On each factor a regular order-three
+structure has the two Coxeter orientations $c_i$ and $c_i^{-1}$.  Four orientation
+bits therefore give $\mathbb F_2^4$, while replacing $J$ by $J^{-1}$ flips all four
+bits and does not change the cyclic Eisenstein leaf.  Hence the eight leaves through
+$X$ are canonically
+\[
+\boxed{\mathbb F_2^4/\langle1111\rangle\cong\mathbb F_2^3.}
+\]
+One explicit gauge is
+\[
+[x_1,x_2,x_3,x_4]\longmapsto(x_1+x_4,x_2+x_4,x_3+x_4).
+\]
+The seven nonzero differences split into four odd directions
+\[
+100,\ 010,\ 001,\ 111
+\]
+and three even directions
+\[
+110,\ 101,\ 011.
+\]
+The four odd translations are four disjoint perfect matchings whose union is
+$K_{4,4}$; the three even translations form $2K_4$.  Thus
+\[
+\boxed{K_8=K_{4,4}\sqcup2K_4.}
+\]
+This is an explicit $E_8$ derivation of the previously abstract Fano-hinge chart.
+
+The local $A_2$ reflections supply the translation subgroup $2^3$, while the
+previously certified projective tetracode block action supplies $S_4$.  The induced
+normalizer action on the eight leaves is therefore
+\[
+\boxed{2^3{:}S_4\cong W(D_4),\qquad |W(D_4)|=192.}
+\]
+Since $|N_{W(E_8)}(A_2^4)|=62208$, the action has kernel $324$:
+\[
+\boxed{1\longrightarrow K_{324}\longrightarrow N_{W(E_8)}(A_2^4)
+\longrightarrow W(D_4)\longrightarrow1.}
+\]
+This closes the local $A_2$/Weyl refinement that the earlier tetracode audit had
+left open; it does not re-claim the already-known abstract $192$-element Fano chart.
+
+\paragraph{Weyl orbital closure.}
+The central element $-I$ acts trivially on $A_2$ subsystems, so the effective group
+has order $348364800$.  A point stabilizer has order $311040$ and exactly five
+suborbits of sizes
+\[
+\boxed{1,\ 120,\ 648,\ 270,\ 81,}
+\]
+which are exactly the five relations above.  Therefore the orbital algebra equals
+the commutative Bose--Mesner algebra and the $1120$-point permutation representation
+is multiplicity-free:
+\[
+\boxed{\mathbb C^{1120}\cong\mathbf 1\oplus V_{84}\oplus V_{300}\oplus V_{700}\oplus V_{35}.}
+\]
+Its exact first eigenmatrix is
+\[
+\boxed{
+P=\begin{pmatrix}
+1&120&648&270&81\\
+1&20&-12&-30&21\\
+1&8&-24&18&-3\\
+1&-4&12&-6&-3\\
+1&-40&-24&30&33
+\end{pmatrix}.}
+\]
+With multiplicities $m=(1,84,300,700,35)$ and valencies
+$k=(1,120,648,270,81)$ the verifier checks the exact orthogonality identity
+\[
+P^{T}\operatorname{diag}(m)P=1120\operatorname{diag}(k).
+\]
+
+\paragraph{Evidence boundary.}
+The $1120$-point association scheme, unique $2A_2\to4A_2$ completion, Weyl orbital
+rank, eigenmatrix, and local $\mathbb F_2^3$ fibre are finite root-system theorems
+with executable witnesses.  The number $2240$ uses the independently certified
+regular-$C_3$ normalizer order, and the $D_4$ replication uses the certified count of
+$90$ $J$-stable $D_4$ subsystems per leaf.  No Standard-Model parameter, coupling,
+or photonic-hardware claim follows from these finite-geometric statements alone.
