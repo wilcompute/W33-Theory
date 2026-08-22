@@ -1,0 +1,22 @@
+{
+  "J": "c^10, fixed-point-free elliptic triality",
+  "J_order": 3,
+  "boundary": "The structural identification with Sp4(3) uses the standard elliptic-centralizer theorem; the orbit size, centralizer order, explicit inverter, C6 fibre kernel and quotient orders are independently checked here.",
+  "centralizer_order": 155520,
+  "conjugacy_closure": "The BFS over simple-reflection conjugation has exactly 4480 elements and contains J^-1, so the fixed-point-free triality is one Weyl conjugacy class and <J> has 2240 Weyl conjugates.",
+  "exact_Weyl_conjugacy_orbit_size": 4480,
+  "explicit_inverter_simple_reflection_word_zero_based": [0,1,2,0,3,1,2,0,5,6,5,7,6,5],
+  "fibre_generator": "-J^2=c^5",
+  "fibre_kernel": "C6",
+  "fibres": 40,
+  "group_dictionary": "C_W(J)=<J> x Sp4(3) (standard elliptic-centralizer theorem); quotient by <-J^2>=C6 gives PSp4(3). N_W(<J>)/C6 has order 51840 and is the full W33 automorphism group PSp4(3):2.",
+  "inverter_order": 2,
+  "inverter_word_length": 14,
+  "normalizer_of_<J>_order": 311040,
+  "oriented_base_quotient_order": 25920,
+  "roots_per_fibre": 6,
+  "schema": "w33.pass7385.e8_elliptic_triality_normalizer.v1",
+  "status": "PASS",
+  "unoriented_base_quotient_order": 51840,
+  "W_E8_order": 696729600
+}
