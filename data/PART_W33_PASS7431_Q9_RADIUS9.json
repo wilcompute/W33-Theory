@@ -1,0 +1,15 @@
+{
+  "anchor_type": "(1,3,5)",
+  "boundary": "Local basin theorem only. Radius ten was not closed here; no global 48-clique impossibility and no alpha(W(3,9))=51 claim.",
+  "branch_nodes": 2535139,
+  "candidate_pool": 469,
+  "exact_core_deletions": 9,
+  "exists": false,
+  "known_invertible_core": 42,
+  "needed_added_clique": 15,
+  "remaining_core": 33,
+  "schema": "w33.pass7431.q9_radius9.v1",
+  "status": "PASS",
+  "target_residual_clique_size": 48,
+  "theorem": "In the canonical (1,3,5) residual graph, target 48 is impossible after exactly nine deletions from the known 42-state invertible core. Combined with Pass7180, any hypothetical residual 48-clique must delete at least ten of those 42 core states."
+}
