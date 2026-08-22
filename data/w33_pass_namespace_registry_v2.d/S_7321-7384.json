@@ -1,0 +1,10 @@
+{
+  "lo": 7321,
+  "hi": 7384,
+  "lane": "Sage",
+  "track": "deep_cross_frontier",
+  "topic": "Characteristic-3 W(E6) defect module, q9 line-clique solver, D4 Coxeter-phase triality torsor, exact projector formulas, ternary dual/CSS code, Schlaefli binary code, and q9 hidden involution",
+  "reserved": "2026-08-22",
+  "status": "RESERVED_ACTIVE",
+  "depends_on": "Pass7249-7304; avoids active Codex reservation Pass7305-7320"
+}
