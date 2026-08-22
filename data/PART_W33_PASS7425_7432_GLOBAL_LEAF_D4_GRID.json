@@ -1,0 +1,26 @@
+{
+  "schema": "w33.pass7425_7432.global_leaf_d4_grid.v1",
+  "status": "PASS_WITH_Q9_GLOBAL_TARGET48_OPEN",
+  "passes": {
+    "7425": "2240 Eisenstein leaves on 1120 E8 A2 subsystems form a two-relation tactical design; B^T B=80I+8(A120+A270), rank 301, centered tight frame on V300.",
+    "7426": "The 16 A2 subsystems in D4 form L2(4)=SRG(16,6,2,2); eight K4 root partitions, 24 transversals, 24 transversal resolutions and 576 labelled Latin squares.",
+    "7427": "For D4 perpendicular D4, the 64 containing leaves are an exact 8x8 grid of A2-root partitions; same-partition graph L2(8).",
+    "7428": "The Klein V4 Latin different-row/column/symbol graph is explicitly the D4 16-A2 graph; composed with Pass5300 gives H/Z(H) ~= L+ < AutPar(V4 Latin) < Aut(A2(D4)), orders 288<576<1152.",
+    "7429": "The exact 36 spread/double-six bridge globalizes over all 2240 leaves to 80640 Weyl charts; every global A2^4 line lies in 72 charts and 24 global Steiner objects.",
+    "7430": "Negative result: the 24 Steiner slots over A2^4 are not the 24-root W(D4)-set; normal 2^3 orbit structures are 8+8+8 versus six 4-orbits.",
+    "7431": "q=9 canonical (1,3,5) target-48 exclusion extends to exactly nine deletions from the known 42-state invertible core; 2535139 search nodes. Radius ten remains open.",
+    "7432": "Centered 2240 leaf indicators are a spherical 2-design/unit-norm tight frame in the irreducible 300-dimensional Weyl constituent; integral model y=28*1_L-1."
+  },
+  "canonical_subcertificates": [
+    "data/PART_W33_PASS7425_GLOBAL_LEAF_INCIDENCE_DESIGN.json",
+    "data/PART_W33_PASS7426_D4_A2_ROOK_LATIN.json",
+    "data/PART_W33_PASS7427_D4_PAIR_64_LEAF_GRID.json",
+    "data/PART_W33_PASS7428_D4_LATIN_HOFFMAN_COMPOSED_BRIDGE.json",
+    "data/PART_W33_PASS7429_GLOBAL_DOUBLE_SIX_LEAF_ORBIT.json",
+    "data/PART_W33_PASS7430_STEINER24_D4_ROOT_REFUTATION.json",
+    "data/PART_W33_PASS7431_Q9_RADIUS9.json",
+    "data/PART_W33_PASS7432_LEAF_SPHERICAL_300_DESIGN.json"
+  ],
+  "prior_art_boundary": "Classical/root-system literature already contains the raw E8 reflection-subsystem counts 1120 A2, 3150 D4 and 11200 4A2. Repo Pass4964 already owns the unique 36 spread/double-six equivariant bridge, and Pass5300 owns the Hoffman central-quotient/even-Latin group bridge. This packet supplies the new composed/global incidence identifications and does not reclaim those ingredients.",
+  "hard_boundary": "No claim alpha(W(3,9))=51; no radius-ten exclusion; no physical spacetime, particle, gauge, coupling, or hardware identification is inferred from the finite carriers."
+}
