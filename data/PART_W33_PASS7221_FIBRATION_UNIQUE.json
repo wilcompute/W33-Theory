@@ -1,0 +1,8 @@
+{
+  "boundary": "tests whether the induced geometry depends on the choice of fixed-point-free order-3 J. Says nothing about conjugacy of those elements, which is a separate question",
+  "answers": "the Pass 1039 auto-drafted question 'is the Eisenstein fibration unique?'",
+  "elements_tested": 17,
+  "valid_fibrations": 17,
+  "distinct_outcomes": 1,
+  "all_give_W33_and_the_characterisation": true
+}

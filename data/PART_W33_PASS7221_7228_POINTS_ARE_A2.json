@@ -1,0 +1,77 @@
+{
+  "boundary": "NEW: the fibration is canonical (17 fixed-point-free order-3 elements, one geometry); each fibre is an A2 root subsystem and each line an A2^4; Q^-(5,2) recovers 27/45/72/36 exactly with alpha = 6 the classical sixer; and two independent obstructions rule out a q=9 analogue. REFUTED, both mine: the A6 guess and the signature-as-certificate idea",
+  "not_done": [
+    "alpha(W(3,9))",
+    "q=11 and q=13 unconverged at 65 and 83"
+  ],
+  "pass_7221": {
+    "all_give_same_geometry": true,
+    "caveat": "conjugacy of the elements is not tested, only the induced geometry",
+    "fixed_point_free_tested": 17,
+    "order3_trace_census": {
+      "-1": 80,
+      "-4": 17,
+      "2": 534,
+      "5": 1992
+    },
+    "question_answered": "decision-1785065130681-1xw3d7 (Pass 1039), auto-drafted"
+  },
+  "pass_7222_7223": {
+    "dictionary": {
+      "collinear": "the two A2 subsystems are orthogonal",
+      "line": "A2^4 in E8",
+      "max_partial_ovoid": "7 pairwise non-orthogonal A2s",
+      "point": "an A2 root subsystem of E8"
+    },
+    "fibre_is_A2": {
+      "inner_products": {
+        "-1": 6,
+        "-2": 3,
+        "1": 6
+      },
+      "rank": 2,
+      "reflection_closure": 6,
+      "roots": 6,
+      "verified_on": "all 40 fibres"
+    },
+    "line_is_A2_4": {
+      "inner_products": {
+        "-1": 24,
+        "-2": 12,
+        "0": 216,
+        "1": 24
+      },
+      "rank": 8,
+      "reflection_closure": 24,
+      "roots": 24
+    }
+  },
+  "pass_7224": {
+    "alpha": 6,
+    "connects": "the other lane's 27-45-36 incidence complex IS Q^-(5,2)",
+    "double_sixes": 36,
+    "geometry": "Q^-(5,2) = GQ(2,4)",
+    "identification": "the 27 lines on a cubic surface; collinear = the lines meet; alpha = 6 is a classical SIXER",
+    "lines": 45,
+    "points": 27,
+    "sixers": 72
+  },
+  "pass_7225": {
+    "arithmetic_obstruction": {
+      "Z_i_alternative": "3 inert gives F_9, but E8/3E8 has 6560 classes vs 240 roots (3.7%)",
+      "why": "3 ramifies in Z[omega], residue field is F_3"
+    },
+    "counting_obstruction": {
+      "kissing_number_dim_8": 240,
+      "needed": 820,
+      "status": "proved optimal (Levenshtein; Odlyzko-Sloane)"
+    }
+  },
+  "pass_7226": {
+    "consequence": "carries the same information as the collinear count",
+    "identity": "orthogonal pairs = 252 + 24*(collinear pairs), exactly",
+    "mismatches": 0,
+    "refuted": "the E8 signature as an optimality certificate",
+    "samples": 300
+  }
+}
