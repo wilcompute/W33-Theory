@@ -1,0 +1,16 @@
+{
+  "boundary": "identifies what the 90 J-stable D4s contain in W(3,3) terms; the count of distinct copies is a SAMPLE, not an enumeration",
+  "j_stable_a2": 40,
+  "d4_total": 3150,
+  "d4_j_stable": 90,
+  "a2_per_d4": {
+    "4": 90
+  },
+  "configurations": {
+    "(4, 0, 6)": 90
+  },
+  "class_size_springer": 4480,
+  "max_distinct_copies": 2240,
+  "sampled_elements": 20,
+  "distinct_sets_in_sample": 18
+}

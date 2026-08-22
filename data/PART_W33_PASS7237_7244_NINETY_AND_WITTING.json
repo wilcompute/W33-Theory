@@ -1,0 +1,72 @@
+{
+  "boundary": "NEW: the 90 J-stable D4s are four-point PARTIAL OVOIDS (not lines -- the four A2s are non-orthogonal, rank 4, against a line's orthogonal rank 8); the 36 spreads carry SRG(36,15,6,6). PRIOR ART: the 40 A2s ARE BT1750's 40 Witting hexagons, confirmed by Coxeter cycle type; the 36 spreads and the count-equality warning are decision-ab66d64e. No correspondence between any two 36s is claimed",
+  "how_many_copies": {
+    "centraliser": "G32, order 155520 (Witting symmetry group)",
+    "fixed_point_free_order_3": 4480,
+    "max_distinct_copies": 2240,
+    "sample": "20 elements gave 18 distinct 40-sets"
+  },
+  "not_done": [
+    "alpha(W(3,9))",
+    "q=11 stalled at 65",
+    "Q^-(5,5) against the published 48",
+    "whether the three 36s correspond"
+  ],
+  "prior_art_BT1750": {
+    "claim": "the C^5 hexagons of the E8 weld form 40 Witting rays; the Coxeter element permutes them in eight 5-cycles",
+    "confirmed": {
+      "c5_fixes_each": true,
+      "count": 40,
+      "coxeter_cycle_type": {
+        "5": 8
+      }
+    },
+    "what_is_actually_new": [
+      "they are A2 ROOT SUBSYSTEMS",
+      "collinearity is their orthogonality",
+      "alpha counts pairwise non-orthogonal ones"
+    ],
+    "why_J_stable": "J = c^10 = (c^5)^2, and c^5 fixes every hexagon"
+  },
+  "rank16_for_q9": {
+    "clears_820_bar": true,
+    "kissing_dim16": 4320,
+    "multiple_of_820": false,
+    "verdict": "the counting obstruction lifts at rank 16 but no standard lattice has a matching vector count"
+  },
+  "spread_scheme": {
+    "graph": "share 4 lines",
+    "parameters": "SRG(36,15,6,6)",
+    "shared_lines_distribution": {
+      "1": 360,
+      "4": 270
+    },
+    "spectrum": {
+      "-3": 20,
+      "15": 1,
+      "3": 15
+    },
+    "spreads": 36,
+    "why_it_matters": "decision-ab66d64e warns that 36 Clifford L/R cross-pairs are count-equal to the 36 spreads with different schemes; this is the invariant that can decide it. Not decided here"
+  },
+  "the_ninety": {
+    "a2s_per_d4": 4,
+    "collinear_pairs_among_them": 0,
+    "d4s_per_point": 9,
+    "duality": {
+      "J_stable_D4": {
+        "rank": 4,
+        "relation": "non-collinear/non-commuting",
+        "roots": 24
+      },
+      "line": {
+        "rank": 8,
+        "relation": "collinear/commuting",
+        "roots": 24
+      }
+    },
+    "incidence": "90 x 4 = 360 = 40 x 9",
+    "meaning": "a four-point partial ovoid of W(3,3)",
+    "total_pairs": 6
+  }
+}
