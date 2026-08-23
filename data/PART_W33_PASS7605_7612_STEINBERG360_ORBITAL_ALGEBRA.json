@@ -1,0 +1,21 @@
+{
+  "algebra_commutative": false,
+  "center_dimension": 8,
+  "claim_boundary": "Exact W(E6) permutation/coherent-algebra theorem. No physical particle interpretation is assigned.",
+  "controller": "W(E6)",
+  "controller_order": 51840,
+  "decomposition_formula": "1 + 20 + 30 + 60 + 81 + 90 + 2*24 + 2*15 = 360",
+  "generic_center_coefficients": [1,36,-25,8,14,2,3,3,4,5,5,6,7,8],
+  "generic_center_spectrum": {"-67.0":90,"-49.0":48,"-39.0":81,"-25.0":20,"-13.0":60,"113.0":30,"257.0":30,"2081.0":1},
+  "multiplicity_two_blocks_resolved_by_tetrahedral_relation": {"-49":{"-1.0":24,"3.0":24},"113":{"-1.0":15,"3.0":15}},
+  "orbital_rank": 14,
+  "passes": "7605-7612",
+  "permutation_module_decomposition": {"1":1,"15":2,"20":1,"24":2,"30":1,"60":1,"81":1,"90":1},
+  "raw_Gram_relations_close": false,
+  "schema": "w33.pass7605_7612.steinberg360_orbital_algebra.v1",
+  "status": "PASS",
+  "subdegrees": [1,3,4,8,8,24,24,24,24,24,24,48,72,72],
+  "theorem": "The 360 Steinberg vectors form one transitive W(E6) set of permutation rank 14. Their coherent orbital algebra has center dimension 8 and exact module decomposition 1+20+30+60+81+90+2*24+2*15. The unique 81-dimensional constituent is the W33 Steinberg/H1 sector; the 24- and 15-dimensional sectors are precisely the two multiplicity-two blocks.",
+  "transpose_orbitals": [0,1,2,3,4,5,7,6,8,10,9,11,12,13],
+  "vectors": 360
+}
