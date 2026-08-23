@@ -21,6 +21,23 @@ to length 8 where the classification is a singleton, and once by replacing "weig
 Leech TYPE function, which is intrinsic.
 
     py -3 analysis/w33_pass9601_9624_identifying_the_filtration_codes.py
+
+    CORRECTED BY PASS 9701-9724 -- READ THIS FIRST. Two errors below.
+
+    (1) The random baseline stated as 24 is WRONG; it is 48. V_2 is totally singular so its
+        classes are drawn from the 8390655 SINGULAR classes, not all 16777215. A control
+        over random maximal totally singular subspaces returned 60,48,48,48,48,72 -- the
+        corrected baseline predicts that, the published one does not. The finding is
+        unchanged in direction and the gap DOUBLES.
+
+    (2) Calling V_2 "a Type II code of length 24, one of the nine" is VACUOUS. By Witt's
+        extension theorem O(q) is transitive on maximal totally singular subspaces, so EVERY
+        generator becomes a doubly-even self-dual code under a suitable frame. "Which of the
+        nine" is a property of the pair (V_2, frame), not of V_2.
+
+    WHAT STANDS: the length-8 identification as the extended Hamming [8,4,4], because
+    uniqueness there makes it frame-INDEPENDENT; and the type-4 count of 0, which is
+    Co0-invariant and now controlled against a baseline of 48.
 """
 
 from __future__ import annotations

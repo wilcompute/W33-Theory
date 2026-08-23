@@ -1,0 +1,47 @@
+{
+  "boundary": "TWO CORRECTIONS to Pass 9601-9624. (1) The random baseline for type-4 classes in a totally singular 12-space is 48, not 24: such a subspace draws from the 8390655 SINGULAR classes, not all 16777215. Six random generators returned 60,48,48,48,48,72 -- the corrected baseline predicts the control, the published one does not. (2) 'V_2 is one of the nine Type II codes' is VACUOUS: by Witt, O(q) is transitive on maximal totally singular subspaces, so every generator is, under some frame. WHAT SURVIVES AND IS STRONGER: the type function is Co0-invariant and Co0 has index ~2e64 in O(q), so type is far finer than the form -- and V_2 holds ZERO type-4 classes where a generic generator holds 48. The length-8 identification as [8,4,4] STANDS, because uniqueness there makes it frame-independent",
+  "correction_1_baseline": {
+    "control": [
+      60,
+      48,
+      48,
+      48,
+      48,
+      72
+    ],
+    "control_mode": 48,
+    "correct": 48.0,
+    "effect_on_finding": "unchanged in direction, and the gap doubles",
+    "how_it_surfaced": "the control disagreed with the published baseline; the corrected one predicts it",
+    "published": 24.0,
+    "why": "V_2 is totally singular, so its classes are drawn from the singular locus, where type-4 classes are denser"
+  },
+  "correction_2_vacuous_claim": {
+    "also_corrects": "the hedge that a frame was merely 'missing'. Without one the question is not well-posed at all",
+    "claim": "V_2 is a Type II code of length 24, one of the nine",
+    "so": "'which of the nine' is a property of the pair (V_2, frame), not of V_2",
+    "the_nine_classify": "co-ordinatized codes up to monomial equivalence",
+    "why_vacuous": "Witt's extension theorem makes O(q) transitive on maximal totally singular subspaces, so EVERY generator becomes a doubly-even self-dual code under a suitable frame"
+  },
+  "length_8_stands": {
+    "loop_unaffected": "E8 -> filtration -> [8,4,4] -> Construction A -> E8",
+    "separation": {
+      "length_24": "nine classes -> frame-dependent -> not a property",
+      "length_8": "singleton -> frame-independent -> IDENTIFIED"
+    },
+    "why": "at length 8 there is exactly ONE doubly-even self-dual code, so every frame gives the same answer and the identification is frame-INDEPENDENT"
+  },
+  "well_posed_questions": [
+    "how many maximal totally singular subspaces of Lambda/2Lambda are type-4-free",
+    "whether Co0 is transitive on them, which would make V_2 canonical",
+    "what code V_2 becomes in one of its OWN frames -- every one of its 4095 nonzero classes is type 8, and a type-8 class IS a frame, so V_2 supplies 4095 frames intrinsically"
+  ],
+  "what_survives": {
+    "Co0_order": 8315553613086720000,
+    "O_24_plus_2_order": 167159249769928626078214517263223083898668677507871256767377454680628506132480000000,
+    "index": 2.0101998922460122e+64,
+    "invariant": "the Leech type function, preserved by Co0 and not by O(q)",
+    "result": "V_2 holds 0 type-4 classes; a generic generator holds 48",
+    "status": "Co0-invariant, controlled, and untouched by both corrections"
+  }
+}
