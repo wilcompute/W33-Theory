@@ -1,0 +1,27 @@
+{
+  "schema": "w33.pass9473_9480.suzuki_sign_r_transport_obstruction.v1",
+  "status": "PASS",
+  "passes": "9473-9480",
+  "Suzuki_Qplus_candidate_orbits": {
+    "nondegenerate_total_points": 7371,
+    "controller_orbits": 90,
+    "hyperbolic_orbits": 62,
+    "anisotropic_orbits": 28
+  },
+  "orthogonal_subtype_result": "Within the certified Suzuki Q+(5,3) selector, fixing the two-space subtype is a genuine refinement but not a selector: 62 controller orbits remain in the hyperbolic sector and 28 remain in the anisotropic sector.",
+  "Hall_Janko_416_carrier": {
+    "vertices_or_HJ_copies": 416,
+    "Leech_edges": 20800,
+    "oriented_incidence_flags": 41600,
+    "HJ_endpoints_per_Leech_edge": 2
+  },
+  "R_transport": {
+    "Sp12_3_order": 14395932257291877030764312963579904000,
+    "U6_3_centralizer_order": 182699779456696320,
+    "conjugacy_orbit_of_complex_structures": 78795564505342027200,
+    "status": "NO CANONICAL TRANSPORT CERTIFIED"
+  },
+  "theorem": "Orthogonal subtype improves the marked-line Suzuki weld from 90 candidate orbits to 62 or 28, but does not select uniquely. The F9 complex structure R is stronger data, yet the repo currently has no objectwise symplectic isometry identifying the Niemeier glue phase space (K,R) with the independent Suzuki 12D module. Choosing such an isometry arbitrarily chooses one among 78,795,564,505,342,027,200 conjugate symplectic complex structures, so an R-based collapse of the 90 orbits is not invariant until a transport is constructed.",
+  "cross_track": "The parallel Hall-Janko result supplies a canonical two-sheet incidence cover of the Leech 20,800 edges by their 416 Hall-Janko/G2(4)-graph endpoints. This is promising transport data, but cardinality/incidence alone does not define the missing symplectic isometry.",
+  "boundary": "Exact orbit counts and group-order obstruction. This is not a theorem that no canonical transport can exist; it states that no such transport is present in the currently certified weld and quantifies the choice that must be removed."
+}
