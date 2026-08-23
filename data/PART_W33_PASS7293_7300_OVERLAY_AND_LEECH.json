@@ -1,0 +1,123 @@
+{
+  "boundary": "NEW: the classification det(I-M) = Phi_d(1)^k is rank-general, so the whole lattice tower maps by arithmetic; LEECH at d=9 gives 40 projective points uniformly, the same target as E8 at d=3, UNTESTED; and overlaying E8's two fibrations gives a regular 40x15 1-design whose 15 blocks are each a union of two disjoint W(3,3) lines. CORRECTED: my K12 prediction conflated unit orbits with quotient classes",
+  "k12_correction": {
+    "status": "prediction weaker than stated; the argument for it does not hold",
+    "the_conflation": "756/6 = 126 counts UNIT ORBITS on minimal vectors, not quotient classes",
+    "the_fact": "K12 at d=3 gives F_3^6 with 728 nonzero classes and 756/728 is not an integer, so the quotient is NOT uniform",
+    "what_i_predicted": "126 points carrying SRG(126,45,12,18)"
+  },
+  "leech_d9": {
+    "deg_phi9": 6,
+    "note": "same target as E8 at d=3; 9 = 3^2 makes this the second rung of the 3-power tower",
+    "phi9_of_1": 3,
+    "projective_points": 40,
+    "quotient": "F_3^4",
+    "rank_over_zeta9": 4,
+    "status": "UNTESTED, Leech not built",
+    "uniform": true,
+    "vectors_per_class": 2457
+  },
+  "not_done": [
+    "K12 built (Construction A proved impossible)",
+    "Leech built",
+    "whether Leech d=9 gives W(3,3)",
+    "alpha(W(3,9))",
+    "q=11 at 68",
+    "Coolsaet unread"
+  ],
+  "overlay": {
+    "blocks": {
+      "breakdown": "12 within the two lines, 4 across",
+      "collinear_pairs_inside": 16,
+      "count": 15,
+      "pair_intersections": {
+        "0": 45,
+        "2": 60
+      },
+      "size": 8,
+      "structure": "each is a union of exactly TWO disjoint W(3,3) lines"
+    },
+    "degrees": {
+      "per_W33_point": 3,
+      "per_d4_class": 8
+    },
+    "elements_commute": false,
+    "flags": 120,
+    "grid": "40 W(3,3) points x 15 d=4 classes = 600 cells",
+    "occupied": 120,
+    "roots_per_occupied_cell": 2
+  },
+  "prime_power_observation": {
+    "geometry_side": "PG(n,q) needs q a prime power because F_q does",
+    "lattice_side": "the quotient is nontrivial only when Phi_d(1) != 1, i.e. d = p^m",
+    "verdict": "NOT two independent facts -- both are 'Phi_d has a repeated root mod p iff d is a p-power'. One fact, two hats. It looks like a derivation of 'why prime powers' and is not one"
+  },
+  "tower_map": [
+    {
+      "d": 3,
+      "lattice": "E8",
+      "min_vectors": 240,
+      "nonzero": 80,
+      "projective_points": 40,
+      "quotient": 81,
+      "rank": 8,
+      "status": "W(3,3)  VERIFIED",
+      "vectors_per_class": 3
+    },
+    {
+      "d": 4,
+      "lattice": "E8",
+      "min_vectors": 240,
+      "nonzero": 15,
+      "projective_points": 15,
+      "quotient": 16,
+      "rank": 8,
+      "status": "W(3,2)  VERIFIED",
+      "vectors_per_class": 16
+    },
+    {
+      "d": 5,
+      "lattice": "E8",
+      "min_vectors": 240,
+      "nonzero": 24,
+      "projective_points": 6,
+      "quotient": 25,
+      "rank": 8,
+      "status": "PG(1,5), a line",
+      "vectors_per_class": 10
+    },
+    {
+      "d": 4,
+      "lattice": "K12",
+      "min_vectors": 756,
+      "nonzero": 63,
+      "projective_points": 63,
+      "quotient": 64,
+      "rank": 12,
+      "status": "untested",
+      "vectors_per_class": 12
+    },
+    {
+      "d": 4,
+      "lattice": "Leech",
+      "min_vectors": 196560,
+      "nonzero": 4095,
+      "projective_points": 4095,
+      "quotient": 4096,
+      "rank": 24,
+      "status": "all of PG(11,2), untested",
+      "vectors_per_class": 48
+    },
+    {
+      "d": 9,
+      "lattice": "Leech",
+      "min_vectors": 196560,
+      "nonzero": 80,
+      "projective_points": 40,
+      "quotient": 81,
+      "rank": 24,
+      "status": "SAME TARGET AS E8 d=3, untested",
+      "vectors_per_class": 2457
+    }
+  ]
+}
