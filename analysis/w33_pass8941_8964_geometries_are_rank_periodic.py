@@ -21,6 +21,17 @@ This pass computes the rank-72 case that the truncated list happened to end on, 
 real, and then follows the pattern past where the loop stopped.
 
     py -3 analysis/w33_pass8941_8964_geometries_are_rank_periodic.py
+
+    REFUTED IN PART BY PASS 8965-8988 -- READ THIS FIRST.
+
+    The picture below, "an infinite tower, every rung of which is E8 wearing more copies of
+    itself", is FALSE above the minimal rank. The Niemeier lattice with root system E6^4
+    carries W(3,3) via a DIAGONAL order-9 element of W(E6)^4 -- no factor permutation, so
+    not a lift of anything. Rank 24 has at least TWO carriers.
+
+    THE PERIODICITY THEOREM ITSELF STANDS, and so does E8-nativity at the MINIMAL rank.
+    What was wrong was the EXHAUSTIVENESS implied above the minimum -- which this pass
+    already listed as its first open item.
 """
 
 from __future__ import annotations
@@ -168,7 +179,8 @@ def main() -> int:
     sporadic carriers at 24 and 72, but an infinite tower, every rung of which is E8 wearing
     more copies of itself.
 
-        W(3,3)  lives at ranks 8, 24, 72, 216, 648, ...  and E8 is the bottom of all of it.""")
+        W(3,3)  lives at ranks 8, 24, 72, 216, 648, ...  and E8 is the bottom.
+        But the rungs above the bottom are NOT all lifts -- see the banner.""")
 
     print("\n  PASS 8950-8951 -- open, and scope\n")
     print("""    NEW: W(3,3) verified at rank 72 on explicit 72x72 matrices; the periodicity
