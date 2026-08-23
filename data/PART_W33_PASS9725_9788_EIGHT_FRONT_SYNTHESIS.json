@@ -1,0 +1,20 @@
+{
+  "schema":"w33.pass9725_9788.eight_front_synthesis.v1",
+  "status":"PASS",
+  "passes":"9725-9788",
+  "fronts":{
+    "9725-9732":"Natural O^-(6,3) point association-scheme bridge to the G2(4) 252/126 fixed-edge cells is ruled out: invariant Q^- union degrees cannot realize G2 degrees 66 or 31. Derived schemes are required.",
+    "9733-9740":"Full ordered Golay/E6 transverse-glue stabilizer in U(6,3) is O^-(6,3), order 26,127,360, projective 13,063,680; unordered pair stabilizer has order 52,254,720. Prior +/-I rigidity was signed-monomial only.",
+    "9741-9748":"Golay line parity and G2 edge reversal are both canonical C2 quotients, but their parent stabilizers 648 and 24,192 cannot embed into one another. Orientation is a forced compatibility bit once a bridge exists, not the bridge itself.",
+    "9749-9756":"No symplectic transporter can simultaneously conjugate the glue exchanger R to the Suzuki exchanger x and send the canonical glue Lagrangian to the canonical Suzuki Lagrangian: induced half-forms are Q^- (112 singular points) versus Q+ (130).",
+    "9757-9764":"Coherent 40-port x 3-qutrit-mode seeded Holonet stress model: line+dark classifier is 1500/1500 correct under both moderate and heavy coherent phase/loss/mode-mixing/finite-shot profiles; optional orientation phase tag fails first under heavy disorder.",
+    "9765-9772":"For fixed R there are two U(6,3) orbits of transverse Lagrangians: plus orbit size 7,530,558,336 with stabilizer O+(6,3), minus orbit size 6,992,661,312 with stabilizer O-(6,3). Thus the Witt-sign obstruction can be removed by changing polarization while keeping R.",
+    "9773-9780":"Using corrected/canonical Leech V2 with 4,095 intrinsic type-8 frames, 416 Hall-Janko vertices and 20,800 G2 edges: any common selector with constant fibers on all three sources has size dividing gcd=13, so the only nontrivial possible uniform size is Phi_3(3)=13. Existence remains open.",
+    "9781-9788":"F9^6 glue and the six-step zeta_9 Bruhat-Tits filtration combine as the unramified/totally-ramified factors of L=Q3(i,zeta_9), with (e,f)=(6,2), degree12, residue F9, and six F9 graded pieces mod3."
+  },
+  "parallel_reconciliation":{
+    "Pass9701_9724":"Use corrected baseline 48 and Co0-invariant type-4-free property; do not use frame-independent Golay identity.",
+    "Pass9801_9824":"V2 is canonical from the unique pure order-8 class, but an intrinsic frame has rank1 as a mod-2 coordinate map and cannot settle Lambda/2Lambda coordinates; this strengthens the source while closing the naive frame route to the 13-state selector."
+  },
+  "claim_boundary":"Finite group/graph/form claims are exact within cited certificates or standard classical/local-field theorems. Holonet results are deterministic seeded stress simulations, not measured hardware or probability theorems. The 13-state selector is conditional and the local-field bridge is associated-graded/additive, not an integral lattice identification."
+}
