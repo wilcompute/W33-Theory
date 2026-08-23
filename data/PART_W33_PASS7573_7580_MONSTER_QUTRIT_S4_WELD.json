@@ -1,0 +1,26 @@
+{
+  "affine_plane": "AG(2,3)",
+  "claim_boundary": "Finite qutrit phase-space/controller equivariance only; no physical Monster symmetry is inferred for a device.",
+  "commuting_square": "D12 -> S3 < S4 <- AGL(2,3), where S4 is the same four-direction quotient used by the Monster 9+3360 fiber product",
+  "direction_action": {
+    "identification": "the exact point-stabilizer S3 < S4 of the distinguished qutrit striation",
+    "image": "S3",
+    "image_order": 6,
+    "kernel_order": 2,
+    "orbits": [1,3]
+  },
+  "historical_sign_residual": {
+    "element_orders": {"1":1,"2":7,"3":2,"6":2},
+    "fixed_affine_flag": {"direction":"x=constant / vertical","point":[2,2]},
+    "order": 12,
+    "structure": "D12"
+  },
+  "monster_direction_group": "GL(2,3)/{+-I}=PGL(2,3)=S4",
+  "monster_direction_group_order": 24,
+  "passes": "7573-7580",
+  "prior_art_boundary": "The D12 affine-flag stabilizer and its 1+3 striation action were already in the February E6/F3 sign analysis. New here is the exact identification with the S3 point stabilizer inside the Pass7509 Monster direction S4.",
+  "qutrit_striations": 4,
+  "schema": "w33.pass7573_7580.monster_qutrit_s4_weld.v1",
+  "status": "PASS",
+  "theorem": "The qutrit full-sign residual controller lands exactly in the point stabilizer of the same S4 on four affine directions that couples the Monster 9-sheet to the D4(3) 3360-sheet."
+}
