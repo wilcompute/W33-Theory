@@ -1,0 +1,88 @@
+{
+  "boundary": "VERIFIED: Leech at d=8 gives W(5,2), the three-qubit Pauli geometry; at d=13 a line with no content. RETRACTED: Leech at d=9 does NOT fibre onto PG(5,3) -- its quotient has exponent 9 and is not an F_3 space at all. The governing condition is that the characteristic polynomial be a PURE POWER",
+  "general_form": {
+    "formula": "(p (I-M)^{-1})^T G",
+    "unifies": "d=3 used (I - J^2)^T G and d=4 used (I + M)^T G; both are this, since 3(I-J)^{-1} = I - J^2 and 2(I-M)^{-1} = I + M",
+    "works_when": "the char poly is a pure power, so that p(I-M)^{-1} is integral"
+  },
+  "not_done": [
+    "whether Leech's W(11,2) contains E8's W(3,2)",
+    "a census allowing mixed char polys",
+    "K12 built",
+    "alpha(W(3,9))",
+    "q=11 at 68",
+    "Coolsaet unread"
+  ],
+  "purity_condition": {
+    "evidence": "perfect correlation across all six cases computed",
+    "measurement": "the smallest p^k with p^k(I-M)^{-1} integral is 2,2,2,2,13 for the pure cases and 9 for the mixed one",
+    "statement": "the quotient is an elementary abelian p-group, hence a projective space carrying a form, EXACTLY when the char poly is a pure power Phi_d^k"
+  },
+  "retraction": {
+    "claim": "Leech at d=9 fibres onto all 364 points of PG(5,3)",
+    "what_was_right": "the uniformity arithmetic, 196560/728 = 270 exactly",
+    "why_wrong": "it assumed an elementary abelian quotient; the exponent is 9, so there is no PG(5,3)"
+  },
+  "tower": [
+    {
+      "char_poly": "Phi_3^4",
+      "d": 3,
+      "exponent": 3,
+      "geometry": "W(3,3)",
+      "lattice": "E8",
+      "quotient": "F_3^4",
+      "rank": 8,
+      "reads_as": "two qutrits"
+    },
+    {
+      "char_poly": "Phi_4^4",
+      "d": 4,
+      "exponent": 2,
+      "geometry": "W(3,2)",
+      "lattice": "E8",
+      "quotient": "F_2^4",
+      "rank": 8,
+      "reads_as": "two qubits"
+    },
+    {
+      "char_poly": "Phi_4^12",
+      "d": 4,
+      "exponent": 2,
+      "geometry": "W(11,2)",
+      "lattice": "Leech",
+      "quotient": "F_2^12",
+      "rank": 24,
+      "reads_as": "SIX qubits"
+    },
+    {
+      "char_poly": "Phi_8^6",
+      "d": 8,
+      "exponent": 2,
+      "geometry": "W(5,2)",
+      "lattice": "Leech",
+      "quotient": "F_2^6",
+      "rank": 24,
+      "reads_as": "THREE qubits"
+    },
+    {
+      "char_poly": "Phi_13^2",
+      "d": 13,
+      "exponent": 13,
+      "geometry": "PG(1,13)",
+      "lattice": "Leech",
+      "quotient": "F_13^2",
+      "rank": 24,
+      "reads_as": "a line, no content"
+    },
+    {
+      "char_poly": "Phi_9^3 Phi_3^3",
+      "d": 9,
+      "exponent": 9,
+      "geometry": "NONE",
+      "lattice": "Leech",
+      "quotient": "exponent 9",
+      "rank": 24,
+      "reads_as": "not a field space"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "boundary": "extends the Leech quotient analysis to d = 8, 9 and 13. A geometry is named only when a form both DESCENDS and has rank equal to the quotient dimension; otherwise nothing is claimed",
+  "cases": {
+    "8": {
+      "form": "(2(I-M)^-1)^T G",
+      "rank": 6,
+      "alternating": true,
+      "space": "PG(5,2)",
+      "points": 63,
+      "verdict": "W(5,2) = three qubits"
+    },
+    "9": {
+      "verdict": "no descending form of the right rank found"
+    },
+    "13": {
+      "form": "(13(I-M)^-1)^T G",
+      "rank": 2,
+      "alternating": true,
+      "space": "PG(1,13)",
+      "points": 14,
+      "verdict": "a line, no content expected"
+    }
+  }
+}
