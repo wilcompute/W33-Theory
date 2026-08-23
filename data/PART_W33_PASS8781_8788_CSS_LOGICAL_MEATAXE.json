@@ -1,0 +1,14 @@
+{
+  "claim_boundary": "This is a frozen certificate of the live exact reconstruction; the expensive module build is separate from this lightweight checker.",
+  "composition_chain_dimensions": [0,1,7,47,53,61,67,68,82,83,91,92],
+  "composition_factor_multiset": {"1":4,"6":3,"8":2,"14":1,"40":1},
+  "factor40_certificate": {"charpoly":"(x+1)^40","generated_dimension":40,"kernel_dimension":6,"tested_nonzero_kernel_seeds":63},
+  "logical_half_dimension": 92,
+  "passes": "8781-8788",
+  "replay_dependencies": ["Pass7509-7516 Steinberg global intertwiner","binary puncture C0=[120,14,32]_2","D=C0^perp/C0"],
+  "schema": "w33.pass8781_8788.css_logical_meataxe.v1",
+  "small_factor_certificate": {"counts":{"1":1,"6":63,"8":255,"14":16383},"method":"every nonzero vector is a cyclic seed"},
+  "status": "PASS",
+  "successive_factor_dimensions": [1,6,40,6,8,6,1,14,1,8,1],
+  "theorem": "The 92-dimensional characteristic-two W(E6) logical half has a certified composition series with factors 1^4, 6^3, 8^2, 14, 40. The 40-dimensional factor is irreducible by an exact MeatAxe kernel-seed criterion."
+}
