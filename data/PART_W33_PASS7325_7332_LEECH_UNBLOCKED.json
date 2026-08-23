@@ -1,0 +1,68 @@
+{
+  "boundary": "Co0 generators obtained (ATLAS 24-dim integral rep of 2.Co1). Co0 has NO element with char poly Phi_9^4, so the fibration I predicted does not exist. Its fixed-point-free order-9 elements are Phi_9^3 Phi_3^3, giving 728 classes of 270 and 364 projective points -- ALL of PG(5,3), not 40. The induced form, hence the geometry, is NOT determined here",
+  "co0_access": {
+    "call": "AtlasGenerators(\"2.Co1\", 9)",
+    "generators": 2,
+    "package": "GAP atlasrep",
+    "representation": "24-dimensional over the Integers = Co0 on Leech"
+  },
+  "leech_d9_corrected": {
+    "actual": {
+      "char_poly": "Phi_9^3 Phi_3^3",
+      "classes": 728,
+      "per_class": 270,
+      "projective_points": 364,
+      "quotient": 729
+    },
+    "check": "196560 / 728 = 270 exactly",
+    "covers": "ALL of PG(5,3), since (3^6-1)/2 = 364",
+    "geometry": "NOT determined -- needs the invariant Gram in the ATLAS basis",
+    "predicted": {
+      "char_poly": "Phi_9^4",
+      "classes": 80,
+      "per_class": 2457,
+      "projective_points": 40,
+      "quotient": 81
+    },
+    "uniform": true
+  },
+  "my_false_assumption": {
+    "consequence": "every 'usable d' row I computed covered the pure-power case only; the census was not wrong about those rows but was wrong to present them as the whole picture",
+    "the_actual_element": "Phi_9^3 Phi_3^3, degree 24, det 3^6 = 729, trace -3",
+    "the_truth": "fixed-point-free means only NO EIGENVALUE 1: the char poly is any product of Phi_e over e | d with e > 1, and MIXED polynomials are allowed",
+    "what_i_assumed": "a fixed-point-free element of order d has char poly Phi_d^k, so det(I-M) = Phi_d(1)^k"
+  },
+  "not_done": [
+    "the induced form on PG(5,3)",
+    "K12 built",
+    "alpha(W(3,9))",
+    "q=11 at 68",
+    "Coolsaet unread"
+  ],
+  "order9_census": {
+    "elements_sampled": 15000,
+    "phi9_to_the_4_exists": false,
+    "signatures": [
+      {
+        "det_I_minus_M": 729,
+        "fixed_point_free": true,
+        "trace": -3
+      },
+      {
+        "det_I_minus_M": 0,
+        "fixed_point_free": false,
+        "trace": 0
+      },
+      {
+        "det_I_minus_M": 0,
+        "fixed_point_free": false,
+        "trace": 3
+      }
+    ]
+  },
+  "what_survives": {
+    "diagonal_theorem": "intact -- it never used the pure-power assumption; among Niemeier lattices only Leech can carry a non-diagonal rank-24 geometry",
+    "e8_results": "unaffected -- both E8 fibrations were checked against the geometry directly, not assumed from the char poly",
+    "what_died": "the specific prediction that Leech d=9 gives 40 points"
+  }
+}
