@@ -1,0 +1,31 @@
+{
+  "boundary": "Exact exhaustive enumeration over all 11,011 two-spaces of F3^6 plus Witt extension. This rules out the natural orthogonal-scheme identification; it does not rule out a less symmetric external bijection.",
+  "candidate_totals": {
+    "Qminus": {"anisotropic": 2835, "degenerate": 3640, "hyperbolic": 4536},
+    "Qplus": {"anisotropic": 2106, "degenerate": 3640, "hyperbolic": 5265},
+    "nondegenerate_each": 7371
+  },
+  "classification_proof": "The canonical Gram+relation-kernel fingerprint is invariant under the base 2-space stabilizer. Equality produces an isometry between the two subspace sums carrying U to U and V to V prime; Witt extension promotes it to the ambient orthogonal group. Therefore fingerprint classes are exactly stabilizer suborbits.",
+  "exact_subdegrees": {
+    "Qminus_anisotropic_base": [1,18,24,24,24,24,48,48,64,64,72,144,144,144,192,192,192,192,288,288,384,384,384,576,576,576,1152,1152],
+    "Qminus_hyperbolic_base": [1,15,15,15,15,20,20,30,30,40,45,45,60,60,90,90,120,120,120,120,180,180,180,180,180,180,180,240,240,360,360,360,360,360,360,480,480,720,720],
+    "Qplus_anisotropic_base": [1,30,30,30,30,40,40,45,45,60,60,180,180,240,240,240,240,360,360,360,360,360,480,480,720,720,1440],
+    "Qplus_hyperbolic_base": [1,12,12,12,12,18,24,24,32,32,48,48,64,72,72,72,96,96,96,96,144,144,144,144,192,192,288,288,288,288,288,288,288,384,384,384,576,576,576,576]
+  },
+  "orbital_ranks": {
+    "Qminus_anisotropic_base": 28,
+    "Qminus_hyperbolic_base": 39,
+    "Qplus_anisotropic_base": 27,
+    "Qplus_hyperbolic_base": 40
+  },
+  "passes": "9909-9916",
+  "schema": "w33.pass9909_9916.two_space_orbital_scheme.v1",
+  "stabilizer_orders": {
+    "minus_anisotropic": 9216,
+    "minus_hyperbolic": 5760,
+    "plus_anisotropic": 11520,
+    "plus_hyperbolic": 4608
+  },
+  "status": "PASS",
+  "theorem": "The natural derived coherent configurations on the two 7,371-element candidate sets are different. Q- has orbital ranks 39 and 28 from hyperbolic/anisotropic basepoints, while Q+ has ranks 40 and 27. Thus the common cardinality 7,371 does not extend to an isomorphism of their natural orthogonal two-space schemes."
+}
