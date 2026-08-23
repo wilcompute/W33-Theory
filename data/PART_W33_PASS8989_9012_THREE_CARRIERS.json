@@ -1,0 +1,29 @@
+{
+  "a2_12": {
+    "element": "order 9, minimal polynomial Phi_9, det(I-X) = 81, isometry, F + F^T = 3G, rank 4 mod 3, alternating -> W(3,3)",
+    "lattice": "index 3^6 = 729 in (A2*)^12, Gram integral, det 1, even",
+    "obstacle": "a 3^4 permutation of the twelve A2 components must preserve the ternary Golay glue; an exhaustive search over all 246400 such permutations found NONE as a pure permutation",
+    "resolution": "ternary code automorphisms are MONOMIAL (2.M12). GAP confirms M12 has a 3^4 class of size 2640. Signs are available because -1 is an automorphism of A2 and negates the glue class",
+    "sign_condition": "the sign product around each 3-cycle must be +1, or the cube of the element has order 6. The found automorphism had all four products equal to -1, and the global -1 flips all twelve signs, changing each product by (-1)^3, so they normalise together"
+  },
+  "boundary": "VERIFIED: rank 24 has EXACTLY THREE Niemeier carriers of W(3,3) -- E8^3 (the lift), E6^4 (diagonal, sporadic) and A2^12 (twisted 3-cycles through the ternary Golay glue) -- all three built and checked. The screen is exhaustive because an element with char poly Phi_9^4 has order exactly 9, so permutation orbits have length 1, 3 or 9, and length 9 is impossible",
+  "carriers": {
+    "A2^12": "Pass 8989-9012: twisted 3-cycles through the ternary Golay glue",
+    "E6^4": "Pass 8965-8988: diagonal order-9 element of W(E6)^4, tetracode glue",
+    "E8^3": "Pass 8041-8056: tau_3 . diag(W,I,I), the lift"
+  },
+  "count": 3,
+  "exhaustiveness": {
+    "argument": "char poly Phi_9^4 gives minimal polynomial Phi_9 and order exactly 9, so the component permutation has order dividing 9 and every orbit has length 1, 3 or 9",
+    "correction": "the first screen at Pass 8965-8988 used 'all' and 'any' separately and would have missed MIXED assemblies; redone here per-component, with the same answer",
+    "length_9_impossible": "the element's eigenvalues on such an orbit are the nine 9th roots of the cycle product's eigenvalues, and those always include non-primitive ones",
+    "so": "only routes (a) and (b) exist, and both are screened"
+  },
+  "not_done": [
+    "the same question at rank 72, where even unimodular lattices are unclassified and this method cannot run",
+    "whether the three carriers give W(3,3)s with different symmetry groups",
+    "alpha(W(3,9))",
+    "K12 built"
+  ],
+  "reading": "W(3,3) is not the private property of E8 above the minimal rank -- only AT it. At rank 24 three different Niemeier lattices carry it, two of them by mechanisms having nothing to do with E8"
+}
