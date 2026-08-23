@@ -222,8 +222,11 @@ def main() -> int:
     ev = Counter(np.linalg.eigvalsh(Adj.astype(float)).round(6))
     print(f"\n  induced graph: degrees {deg}")
     print(f"    spectrum: {dict(sorted((float(k), v) for k, v in ev.items()))}")
-    is_srg = deg == [12] and sorted(round(float(x)) for x in ev) == sorted(
-        [12] + [2] * 24 + [-4] * 15)
+    # ev is a Counter: iterating it yields KEYS, not multiplicities, so the old
+    # predicate compared {12,2,-4} against a 40-element multiset and returned False
+    # on a graph that WAS SRG(40,12,2,4). Expand with .items() before comparing.
+    spec = sorted(round(float(k)) for k, n in ev.items() for _ in range(n))
+    is_srg = deg == [12] and spec == sorted([12] + [2] * 24 + [-4] * 15)
     print(f"    SRG(40,12,2,4) with spectrum 12^1 2^24 (-4)^15 ? {is_srg}")
 
     out = {"boundary": ("constructs the 6:1 Eisenstein fibration explicitly and pulls the "

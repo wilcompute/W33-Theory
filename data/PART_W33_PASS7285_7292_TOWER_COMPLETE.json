@@ -1,0 +1,142 @@
+{
+  "boundary": "NEW: a CLASSIFICATION -- d=3 and d=4 are the only fixed-point-free orders giving E8 a nontrivial quadrangle quotient, because det(I-M) = Phi_d(1)^k and Phi_d(1) = 1 unless d is a prime power. Order 12 cannot carry both fibrations for the same reason. Both fibrations PARTITION the 240 roots into subsystems. The K12 rung remains UNBUILT and its geometry UNVERIFIED. No Monster or physics claim",
+  "classification": {
+    "order12": {
+      "possible": false,
+      "reason": "Phi_12(1) = 1, so det(I-M) = 1 and the quotient is trivial"
+    },
+    "rule": "det(I-M) = Phi_d(1)^k with k*deg(Phi_d) = 8; Phi_d(1) = p iff d = p^m",
+    "table": [
+      {
+        "d": 2,
+        "deg": 1,
+        "geometry": "240 < 255, no fibration",
+        "k": 8,
+        "nonzero": 255,
+        "phi_d_1": 2,
+        "quotient": 256
+      },
+      {
+        "d": 3,
+        "deg": 2,
+        "geometry": "W(3,3), 40 points",
+        "k": 4,
+        "nonzero": 80,
+        "phi_d_1": 3,
+        "quotient": 81
+      },
+      {
+        "d": 4,
+        "deg": 2,
+        "geometry": "W(3,2), 15 points",
+        "k": 4,
+        "nonzero": 15,
+        "phi_d_1": 2,
+        "quotient": 16
+      },
+      {
+        "d": 5,
+        "deg": 4,
+        "geometry": "PG(1,5), 6 points -- a line",
+        "k": 2,
+        "nonzero": 24,
+        "phi_d_1": 5,
+        "quotient": 25
+      },
+      {
+        "d": 6,
+        "deg": 2,
+        "geometry": "trivial",
+        "k": 4,
+        "nonzero": 0,
+        "phi_d_1": 1,
+        "quotient": 1
+      },
+      {
+        "d": 8,
+        "deg": 4,
+        "geometry": "3 points -- trivial",
+        "k": 2,
+        "nonzero": 3,
+        "phi_d_1": 2,
+        "quotient": 4
+      },
+      {
+        "d": 12,
+        "deg": 4,
+        "geometry": "trivial",
+        "k": 2,
+        "nonzero": 0,
+        "phi_d_1": 1,
+        "quotient": 1
+      },
+      {
+        "d": 16,
+        "deg": 8,
+        "geometry": "1 point -- trivial",
+        "k": 1,
+        "nonzero": 1,
+        "phi_d_1": 2,
+        "quotient": 2
+      }
+    ],
+    "usable": [
+      3,
+      4
+    ]
+  },
+  "counter_bug": {
+    "fixed": "Pass 7217 line 225; now reports SRG(40,12,2,4) = True",
+    "real_instances_remaining": 0,
+    "scanned": 38
+  },
+  "group_chain": {
+    "E8": {
+      "lattice_group": "G32 = 3 x Sp(4,3)",
+      "order": 155520,
+      "simple": "PSp(4,3) = U(4,2)"
+    },
+    "K12": {
+      "lattice_group": "6.PSU(4,3).2",
+      "simple": "U(4,3)"
+    },
+    "Leech": {
+      "lattice_group": "6.Suz",
+      "simple": "Suz"
+    },
+    "caveat": "a statement about which groups appear, NOT that this reaches the Monster",
+    "chain": "U(4,2) -> U(4,3) -> Suz, with 3.U4(3) maximal in Suz and Suz in Co1"
+  },
+  "k12_obstruction": {
+    "prediction_unchanged": {
+      "classes": 126,
+      "graph": "SRG(126,45,12,18)",
+      "status": "UNTESTED, lattice not built"
+    },
+    "route_blocked": "Construction A over Z[omega] with a length-6 ternary code",
+    "why": "theta * e_i is always in the lattice with Hermitian norm 3, but K12 needs minimum 4 -- no code choice can fix this"
+  },
+  "not_done": [
+    "K12 built",
+    "Leech scale",
+    "alpha(W(3,9))",
+    "q=11 at 68",
+    "Coolsaet (2014) unread"
+  ],
+  "partitions": {
+    "d3": {
+      "fibres": 40,
+      "indexed_by": "W(3,3) points",
+      "roots_each": 6,
+      "subsystem": "A2"
+    },
+    "d4": {
+      "fibres": 15,
+      "indexed_by": "W(3,2) points",
+      "roots_each": 16,
+      "subsystem": "A1^8"
+    },
+    "verified": "15 x 16 = 240 and 40 x 6 = 240, every root covered exactly once"
+  },
+  "rank_observation": "d=3 fibres are rank 2 so orthogonality between them is possible and the collinear<=>orthogonal theorem has content; d=4 fibres are full-rank A1^8 so no two are ever orthogonal and it is vacuous. This is a statement about the geometry, not about nature"
+}
