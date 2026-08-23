@@ -1,0 +1,11 @@
+{
+  "schema":"w33.pass9733_9740.full_glue_pair_unitary_stabilizer.v1",
+  "status":"PASS",
+  "passes":"9733-9740",
+  "ambient":{"group":"U(6,3)=C_Sp(12,3)(R)","order":182699779456696320},
+  "ordered_pair_stabilizer":{"group":"O^-(6,3)","order":26127360,"projective_order":13063680,"index_in_U":6992661312},
+  "unordered_pair_stabilizer":{"description":"<O^-(6,3),R>; R swaps C_G,C_E and R^2=-I lies in the ordered stabilizer","order":52254720,"quotient_over_ordered":"C2"},
+  "proof":"Restriction to C_G sends the ordered-pair stabilizer in C_Sp(R) to O(B|C_G). Conversely every A in O^-(B|C_G) extends uniquely by u(Rg)=R A g; preserving B and commuting with R implies preserving K.",
+  "correction_to_previous_scope":{"signed_coordinate_common_stabilizer_order":2,"projective_signed_coordinate_order":1,"projective_full_order":13063680,"interpretation":"Pass9465 proved coordinate-monomial rigidity only; absolute unitary rigidity is false."},
+  "boundary":"Exact classical-group stabilizer theorem for the finite phase-space package; no claim that every unitary stabilizer element lifts to an integral Niemeier automorphism."
+}
