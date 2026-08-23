@@ -1,0 +1,55 @@
+name: Sage Frontier Exact External Checks
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - '.github/workflows/sage-frontier-exact.yml'
+      - 'analysis/w33_pass7581_7588_sporadic_character_restrictions.g'
+      - 'analysis/w33_pass7589_7596_leech_order9_snf_witness.g'
+      - 'analysis/w33_pass7589_7596_leech_order9_snf_verify.py'
+      - 'analysis/w33_pass7597_7604_explicit_3360_conjugacy.py'
+  workflow_dispatch:
+
+jobs:
+  exact-frontier:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      W33_REPO: ${{ github.workspace }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install GAP and Python dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gap gap-atlasrep gap-character-tables
+          python -m pip install --upgrade pip
+          pip install numpy sympy networkx
+          mkdir -p artifacts
+
+      - name: Restrict Baby Monster and Monster characters
+        run: gap -q analysis/w33_pass7581_7588_sporadic_character_restrictions.g | tee artifacts/pass7581_character_restrictions.log
+
+      - name: Produce Co0 order-9 matrix and audit Smith form
+        run: |
+          gap -q analysis/w33_pass7589_7596_leech_order9_snf_witness.g | tee artifacts/pass7589_leech_gap.log
+          python analysis/w33_pass7589_7596_leech_order9_snf_verify.py | tee artifacts/pass7589_leech_snf.log
+
+      - name: Construct literal ATLAS-to-E8 3360 conjugacy
+        run: python analysis/w33_pass7597_7604_explicit_3360_conjugacy.py --seconds 900 | tee artifacts/pass7597_3360_conjugacy.log
+
+      - name: Upload exact frontier artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sage-frontier-exact-${{ github.sha }}
+          path: |
+            artifacts/pass7581_character_restrictions.log
+            artifacts/pass7589_leech_gap.log
+            artifacts/pass7589_leech_snf.log
+            artifacts/pass7597_3360_conjugacy.log
+            data/PART_W33_PASS7589_7596_LEECH_ORDER9_MATRIX.txt
+            data/PART_W33_PASS7589_7596_LEECH_ORDER9_SNF.json
+            data/PART_W33_PASS7597_7604_EXPLICIT_3360_CONJUGACY.json
+          if-no-files-found: warn
