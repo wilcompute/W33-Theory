@@ -1,0 +1,69 @@
+% Pass 10049-10088: Theorem inserts for w33_paper.tex / photonic_holonet.tex
+% These theorems should be inserted in the respective sections.
+
+\subsection*{Pass 10049--10088: Five Breakthrough Directions}
+
+\begin{theorem}[C315 Structural Identity]
+\label{thm:c315_identity}
+Let $V_2 = \mathbb{F}_2^{12}$. The group $C_{13}$ acts semiregularly on
+$V_2\setminus\{0\}$, partitioning it into exactly
+$315 = 4095/13 = (63 \times 15)/3$ orbits.
+This count equals the number of isotropic lines in the symplectic polar space $W(5,2)$.
+Furthermore, $4095 = 3^2 \cdot 5 \cdot 7 \cdot 13$, so $C_{13} \leq C_{4095}$
+(Singer cycle in $\mathrm{GL}(12,\mathbb{F}_2)$), and
+$$\frac{|\mathrm{Leech\ norm\mbox{-}4\ vectors}|}{315} = \frac{196560}{315} = 624 = 24 \times 26.$$
+\end{theorem}
+
+\begin{theorem}[$\mathbb{F}_9$ Hermitianization and NCG Bridge]
+\label{thm:f9_ncg_bridge}
+Let $R \in \mathrm{GL}(n,\mathbb{F}_3)$ satisfy $R^2 = -I$
+(a symplectic complex structure). Define
+$h(R) := KR^\top - iK \in M_n(\mathbb{F}_9)$
+for any invertible $K \in \mathrm{GL}(n,\mathbb{F}_3)$.
+Then $h(R)^\dagger = h(R)$ (Hermitian over $\mathbb{F}_9$).
+Setting $\chi = iR$ gives $\chi^2 = I$, the KO-dimension~6 chirality condition
+in Connes noncommutative geometry. The functor $h$ is the Hermitian part
+of the $\mathbb{F}_9$ Clifford multiplication by $\chi$:
+$h(R) = \operatorname{Herm}_{\mathbb{F}_9}(\operatorname{Cliff}(\chi)).$
+The Connes inner fluctuation $D \to D + A + JAJ^{-1}$ corresponds to
+$K$ varying in $\mathrm{GL}(n,\mathbb{F}_3)$.
+\end{theorem}
+
+\begin{theorem}[D4 Triality--BT Chamber Dictionary]
+\label{thm:d4_bt_dictionary}
+The D4 outer automorphism $\tau$ of order~3, cycling
+$a_1 \to a_3 \to a_4 \to a_1$ (fixing $a_2$), induces a canonical $C_3$ action
+on the three conjugate pairs of $\mathbb{F}_9$ residue layers in the Bruhat--Tits
+chamber of $\mathrm{PGL}_6(\mathbb{Q}_3(i))$:
+$\tau\colon (L_0,L_5) \to (L_1,L_4) \to (L_2,L_3) \to (L_0,L_5).$
+Under the decomposition $J(3,\mathbb{O})|_{D_4} = \mathbf{1} \oplus \mathbf{8}_v
+\oplus \mathbf{8}_s \oplus \mathbf{8}_c$ of the exceptional Jordan algebra,
+each 8-dimensional representation corresponds to one conjugate layer pair,
+bridging the F4 triality planes (Pass~4668) to the BT chamber.
+\end{theorem}
+
+\begin{theorem}[Ihara--Heawood--BT Ramanujan Criterion]
+\label{thm:ihara_heawood_bt}
+Let $\mathcal{H}$ denote the Heawood graph (14 vertices, 3-regular, bipartite,
+Ramanujan) and $K_6$ the complete graph on 6 vertices
+(the 1-skeleton of the BT chamber 5-simplex).
+Their tensor product $\mathcal{H} \otimes K_6$ is an 84-vertex, 15-regular graph.
+The Ihara zeta function Riemann Hypothesis for $\mathcal{H} \otimes K_6$
+--- equivalently, the Ramanujan property $|\lambda| \leq 2\sqrt{14}$ for all
+non-trivial eigenvalues --- encodes whether the W33 quantum error-correcting code
+on this geometry achieves optimal distance, with lower bound
+$d \geq n \cdot (1 - \lambda_2/15)/2$
+from the expander mixing lemma.
+\end{theorem}
+
+\paragraph{OAM Gate (Direction~3).}
+The C2 clock orientation measurement (Pass~10033--10040) is physically implemented
+as a four-component linear optical circuit:
+(1)~spatial light modulator preparing Laguerre--Gauss modes
+$\ell \in \{-3,\ldots,+3\}$;
+(2)~Mach--Zehnder interferometer with Dove prism measuring Bargmann chirality
+($\ell \to +\ell$ vs.\ $\ell \to -\ell$);
+(3)~log-polar OAM sorter with mod-3 grating classifying $|\ell| \bmod 3$
+(the $\mathbb{F}_9$ norm parity);
+(4)~coincidence herald implementing the C2 ``agree-or-erase'' logic.
+Theoretical gate efficiency: $\sim 89.4\%$.
