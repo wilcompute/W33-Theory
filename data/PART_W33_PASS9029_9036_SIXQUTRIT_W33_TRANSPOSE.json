@@ -1,0 +1,17 @@
+{
+  "Sp4_order": 51840,
+  "claim_boundary": "Exact finite symplectic transpose/inversion computation. A unique nonsymmetric pair does not by itself decide whether the full Hecke algebra is commutative.",
+  "double_cosets": 31,
+  "finite_states": 5250,
+  "passes": "9029-9036",
+  "schema": "w33.pass9029_9036.sixqutrit_w33_transpose.v1",
+  "self_inverse_double_cosets": 29,
+  "status": "PASS",
+  "theorem": "The rank-31 relative-position geometry of W33 slices in W(11,3) has exactly one non-self-inverse double-coset pair; the other 29 double cosets are self-inverse. The unique pair has signatures (0,2,0,4,4,0) and (0,2,2,4,2,0), and both actual orbitals have valency 8,459,973,849,600.",
+  "transpose_formula": "For A:X->U with P=A J A^T, the reversed projection is C=-J A^T J; K_A reverses to ker(C), while K_B=X cap U maps to rowspace(K_B A).",
+  "unique_inverse_pair": {
+    "actual_slice_orbital_sizes": [8459973849600,8459973849600],
+    "finite_orbit_sizes": [90,80],
+    "signatures": [[0,2,0,4,4,0],[0,2,2,4,2,0]]
+  }
+}
