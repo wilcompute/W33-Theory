@@ -1,0 +1,24 @@
+{
+  "schema": "w33.pass9885_9980.collision_reconciled_eight_front_synthesis.v1",
+  "status": "PASS",
+  "canonical_ranges": ["9885-9916", "9949-9980"],
+  "yielded_overlap": "9917-9948",
+  "parallel_owner_retained": "9921-9944",
+  "collision_reconciliation": "Our atomic Pass9885-9948 reservation predated the parallel Pass9921-9944 reservation, but after substantive parallel work landed we voluntarily yielded 9917-9948 and rehomed the remaining four fronts to 9949-9980 to keep canonical pass provenance unique.",
+  "fronts": {
+    "9885-9892": "No faithful full G2(4):2, J2:2, or G2 edge-stabilizer action can select a single plus-type R-transverse Lagrangian; minimum possible orbit sizes are 560, 35, and 7.",
+    "9893-9900": "The 416-point rank-3 G2(4):2 action has subdegrees 1,100,315, so a block containing a point has size 1,101,316,or416; the required size32 for a 13-state quotient is impossible.",
+    "9901-9908": "For the actual Golay/E6 glue, P=[G;GR] has rank12 and satisfies P K P^T=J0 and P R=J0 P. This explicitly identifies the glue phase space with standard F9^6 and the six F9 coefficient layers of O_{Q3(i,zeta9)}/3.",
+    "9909-9916": "The natural Q- and Q+ coherent configurations on their respective 7,371 nondegenerate two-spaces are not isomorphic: orbital ranks are Q- 39/28 and Q+ 40/27 for hyperbolic/anisotropic basepoints.",
+    "9949-9956": "The qutrit Bargmann loop is exactly invariant under independent port U(1) phases and common U(3); its chirality readout is 99.65% accurate in the deterministic moderate stress profile while an absolute-phase control is near chance.",
+    "9957-9964": "Every order-13 subgroup of G2(4):2 acts semiregularly on 416 vertices and 20,800 edges because the corresponding stabilizers are prime to13, giving 32 and1600 C13 cycles (and3200 flag cycles).",
+    "9965-9972": "The finite-field norm N(z)=z^4:F9^x->F3^x=C2 has kernel C4={1,-1,i,-i}; norm parity is invariant under the complete norm-one phase gauge and lifts as mu8/mu4=C2 in Q3(i).",
+    "9973-9980": "V2=(F2)^12 has no additive C13 quotient, and the sampled sum-determined frame relation is false. But ord_13(2)=12 gives a fixed-point-free order-13 companion action on V2\\{0}, splitting 4,095 frame/A1^24-neighbor directions into315 thirteen-cycles."
+  },
+  "parallel_reconciliation": {
+    "Pass9861-9884": "Use only the surviving sampled facts: at least three relation types at 34 classes and six conflicting shared sums; do not use the killed two-type or sum-law claims.",
+    "Pass9921-9944": "Use the exact A1^24 2-neighbor bridge: type-8 frame vectors halved are the neighbor roots and binary Golay is the neighbor glue, not a coordinate code on Lambda/2Lambda. Retain its correction that type-4 classes can also give 2-neighbors."
+  },
+  "frontier": "The common selector is not a fully symmetric point/block identification. The surviving target is a controlled cyclic/fusion weld: actual C13 structure in the canonical V2/Co0 stabilizer, its relation to semiregular G2 C13 clocks, and compatible F9/Bargmann phase observables.",
+  "claim_boundary": "Finite group, finite-field, block, and two-space scheme statements are exact within their stated hypotheses/certificates. The V2 C13 companion is presently an abstract GL(12,2) action, not yet proved to lie in the Co0 stabilizer. Bargmann accuracies are deterministic seeded simulations, not hardware data. The F9/local-field identification is exact after reduction modulo3, not yet an integral Niemeier O_L-lattice theorem."
+}
