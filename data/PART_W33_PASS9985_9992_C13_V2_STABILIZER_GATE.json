@@ -1,0 +1,39 @@
+{
+  "boundary": "Uses exact repository centralizer/frame data plus standard subgroup/normalizer facts. It deliberately does not identify the abstract GL(12,2) companion C13 with a Co0 element.",
+  "canonical_V2": {
+    "all_nonzero_are_type8_frame_directions": true,
+    "centralizer_factorization": {
+      "2": 8,
+      "3": 3,
+      "7": 1
+    },
+    "centralizer_order": 48384,
+    "nonzero_vectors": 4095,
+    "pure_order8_class_unique": true
+  },
+  "existence_status": "OPEN after this pass: the exact gates are proved, but no explicit Co0 word of order 13 stabilizing V2 is certified.",
+  "fixed_point_gate": {
+    "consequence": "Any C13 in Stab(V2) fixes no nonzero V2 vector/frame direction.",
+    "divisible_by_13": false,
+    "forced_cycle_count": 315,
+    "frame_stabilizer": "2^11:M24 in Co1",
+    "frame_stabilizer_order": 501397585920
+  },
+  "maximal_overgroup_gate": {
+    "Co1_maximal_overgroups_with_factor13_relevant_here": [
+      "3.Suz:2",
+      "(A4 x G2(4)):2"
+    ],
+    "consequence": "An actual Co0/Co1 realization of the abstract V2 C13 must be found through one of these 13-bearing branches (or an explicitly verified subgroup thereof)."
+  },
+  "normalizer_gate": {
+    "Aut_C8_order": 4,
+    "C_Co0(M)_order": 48384,
+    "consequence": "No C13 in Stab(V2) can normalize <M>; it must move M through an orbit whose size is divisible by 13.",
+    "reason": "N(<M>)/C(M) embeds in Aut(C8), so an element of order 13 normalizing <M> would centralize M."
+  },
+  "passes": "9985-9992",
+  "schema": "w33.pass9985_9992.c13_v2_stabilizer_gate.v1",
+  "status": "PASS",
+  "theorem": "If C13 <= Stab_Co0(V2), then it is semiregular on V2\\{0} with 315 cycles, it cannot normalize the unique pure-order-8 generator M, and the search for it reduces to the 13-bearing maximal-overgroup branches 3.Suz:2 and (A4 x G2(4)):2."
+}
