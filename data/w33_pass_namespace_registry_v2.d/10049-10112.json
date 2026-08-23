@@ -1,0 +1,17 @@
+{
+  "range": "10049-10112",
+  "status": "RESERVED",
+  "owner": "GPT-5.6-Sol eight-front continuation",
+  "reserved_at": "2026-08-23T19:48:00-04:00",
+  "fronts": {
+    "10049-10056": "Explicitly construct or rule out C13 in the two surviving Co1 maximal-overgroup branches 3.Suz:2 and (A4 x G2(4)):2",
+    "10057-10064": "Test whether the Golay A4<S4, G2 outer, and Singer Frobenius C2 orientation characters can coincide under a compatible transporter",
+    "10065-10072": "Classify arithmetic/controller quotients of the C315 Singer torsor and identify the strongest canonical ambiguity reduction",
+    "10073-10080": "Lift F9[t]/(t^6) unitary residue module toward an integral self-dual O_{Q3(i,zeta9)} lattice and prove the strongest valid finite-level theorem",
+    "10081-10088": "Compute spherical link/residue geometry of the PGL6(Q3(i)) chamber and test for canonical W(3,3)",
+    "10089-10096": "outside-box to be selected after first five fronts",
+    "10097-10104": "outside-box to be selected after first five fronts",
+    "10105-10112": "outside-box to be selected after first five fronts"
+  },
+  "collision_rule": "Earliest atomic registry add owns the range; later collisions rehome."
+}
