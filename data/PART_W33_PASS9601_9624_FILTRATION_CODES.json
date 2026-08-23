@@ -1,0 +1,87 @@
+{
+  "boundary": "E8's middle filtration level is IDENTIFIED as the extended Hamming code [8,4,4] -- Type II codes of length 8 are unique, so the coordinate-free argument settles it -- and Construction A on [8,4,4] returns E8, closing the loop. At length 24, where nine Type II codes exist, a coordinate-free census using the Leech TYPE function shows V_2 contains ZERO type-4 classes out of 4095 against 24 expected at random: it is EXTREMAL, the property that singles out Golay. This is strong evidence, NOT an identification -- the step to 'no weight-4 word' needs a coordinate frame that Leech/2Leech does not canonically have",
+  "e8_length8": {
+    "construction_A_loop": "Construction A on [8,4,4] returns E8, so E8 -> filtration -> [8,4,4] -> Construction A -> E8",
+    "levels": [
+      {
+        "dim": 6,
+        "doubly_even": false,
+        "j": 1,
+        "perp_dim": 2,
+        "perp_equals": "V_3",
+        "perp_ok": true
+      },
+      {
+        "dim": 4,
+        "doubly_even": true,
+        "j": 2,
+        "perp_dim": 4,
+        "perp_equals": "V_2",
+        "perp_ok": true
+      },
+      {
+        "dim": 2,
+        "doubly_even": true,
+        "j": 3,
+        "perp_dim": 6,
+        "perp_equals": "V_1",
+        "perp_ok": true
+      }
+    ],
+    "middle_level": {
+      "classification": "Type II codes of length 8 are UNIQUE: the extended Hamming code e_8 = [8,4,4]",
+      "dim": 4,
+      "doubly_even": true,
+      "identified": true,
+      "self_dual": true
+    },
+    "why_it_works_here": "at length 8 the classification is a singleton, so the same coordinate-free argument that could only LOCATE the code at length 24 IDENTIFIES it at length 8"
+  },
+  "leech_length24": {
+    "headline": "V_2 holds ZERO type-4 classes of 4095, against about 24 at random; since q vanishes on V_2 all 4095 are type 8, so the code avoids the Leech minimum entirely",
+    "minimal_vectors_regenerated": {
+      "classes_mod_2": 98280,
+      "method": "Co0 orbit of a norm-4 basis vector",
+      "note": "reproduces Conway's numbers independently from the ATLAS data",
+      "orbit_size": 196560,
+      "ratio": 2.0
+    },
+    "type4_census": [
+      {
+        "dim": 6,
+        "expected_if_random": 0.4,
+        "level": "V_3",
+        "nonzero_classes": 63,
+        "type4_held": 0
+      },
+      {
+        "dim": 12,
+        "expected_if_random": 24.0,
+        "level": "V_2",
+        "nonzero_classes": 4095,
+        "type4_held": 0
+      },
+      {
+        "dim": 18,
+        "expected_if_random": 1535.6,
+        "level": "V_1",
+        "nonzero_classes": 262143,
+        "type4_held": 1512
+      }
+    ]
+  },
+  "not_done": [
+    "the frame that would turn extremal-in-type into 'is the Golay code'",
+    "the same census at p=3, where doubly-even has no analogue",
+    "whether V_1's 1512 against 1536 expected is structural or noise"
+  ],
+  "sign_discovery": {
+    "affects_earlier_results": false,
+    "generators preserve -G": true,
+    "recovered Gram was negative definite": true,
+    "using -G, diagonal minimum": 4,
+    "why_not": "every earlier result is a rank, symmetry or vanishing statement mod p, invariant under a global sign, and q = -q mod 2. It matters only for 'norm 4'"
+  },
+  "what_it_does_not": "that V_2 IS Golay. The step from 'no type-4 class' to 'no weight-4 word' needs the dictionary between the type function and a coordinate weight -- exactly the frame Leech/2Leech lacks. Strong evidence pointing at one of the nine, not an identification, unlike the length-8 case where uniqueness did the work",
+  "what_this_establishes": "V_2 is a Type II code of length 24 EXTREMAL with respect to the Leech type function"
+}
