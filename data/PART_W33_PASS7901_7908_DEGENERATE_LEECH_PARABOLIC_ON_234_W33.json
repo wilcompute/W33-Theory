@@ -1,0 +1,17 @@
+{
+  "schema": "w33.pass7901_7908.degenerate_leech_parabolic_on_234_w33.v1",
+  "status": "PASS",
+  "passes": "7901-7908",
+  "outside_box": true,
+  "canonical_rank2_form": "multiplication-by-3 form K from Pass7861",
+  "projective_stabilizer_order": 93312,
+  "stabilizer_structure": "3^4 : (GL2(3) x GL2(3)) modulo common scalar center",
+  "action_on_234_polarities": {
+    "orbit_sizes": [72,162],
+    "orbit72": "both M+K and M-K have rank 4; W33/degenerate-form edge overlap 78",
+    "orbit162": "exactly one of M+K,M-K has rank 2; edge overlap 96"
+  },
+  "E8_numerical_echo": "72 and 162=81+81 are exactly the E6-root and charged-root counts in the E8 relative-A2 decomposition. This equality is recorded as a target for an objectwise intertwiner, not as an identification.",
+  "theorem": "The Leech-intrinsic degenerate alternating form reduces the 234 possible W33 polarizations to two canonical parabolic orbits of sizes 72 and 162. Thus the corrected 3-adic filtration supplies substantial selection structure even though it does not choose a unique W33 polarity.",
+  "claim_boundary": "Exact projective-group orbit theorem. The 72/162 equality with E8 shell counts is not promoted beyond a structural numerical echo until an equivariant object map is built."
+}
