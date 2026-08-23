@@ -1,0 +1,32 @@
+{
+  "schema": "w33.pass7917_7924.leech_similitude_234_four_orbits.v1",
+  "status": "PASS",
+  "passes": "7917-7924",
+  "outside_box": true,
+  "linking_similitude_projective_top_group_order": 46656,
+  "lift_condition": "det(A)=det(D) on the two GL2(3) diagonal blocks; this is index two inside the full projective rank-2-form stabilizer used in Pass7901",
+  "polarization_orbits": [
+    {"size": 36, "pfaffian": 1},
+    {"size": 36, "pfaffian": 2},
+    {"size": 81, "pfaffian": 1},
+    {"size": 81, "pfaffian": 2}
+  ],
+  "internal_overlap60_graphs": [
+    {"size": 36, "pfaffian": 1, "graph": "3 K_{3,3,3,3}", "spectrum": "9^3 + (-3)^9 + 0^24"},
+    {"size": 36, "pfaffian": 2, "graph": "3 K_{3,3,3,3}", "spectrum": "9^3 + (-3)^9 + 0^24"},
+    {"size": 81, "pfaffian": 1, "graph": "SRG(81,24,9,6)", "spectrum": "24^1 + 6^24 + (-3)^56"},
+    {"size": 81, "pfaffian": 2, "graph": "SRG(81,24,9,6)", "spectrum": "24^1 + 6^24 + (-3)^56"}
+  ],
+  "cross_degree_order": "entries are degrees for W33 edge-overlap [60,78,96]",
+  "cross_degrees": {
+    "36_1--36_2": [18,0,18],
+    "36_1--81_1": [27,54,0],
+    "36_1--81_2": [54,0,27],
+    "36_2--81_1": [54,0,27],
+    "36_2--81_2": [27,54,0],
+    "81_1--81_2": [48,0,33]
+  },
+  "E8_target": "234=240-6 and the orbit sizes 36+36+81+81 reproduce the cardinality pattern of E8\\A2 = 72 E6 roots + 81 + 81 charged roots after a 36+36 sign split. This is a target for an objectwise intertwiner, not an identification.",
+  "theorem": "The actual projective symmetries that lift as similitudes of the mixed Leech linking module refine the 72+162 parabolic split of the 234 W33 polarities into four Pfaffian-labelled orbits 36,36,81,81 with a rigid coherent overlap quotient.",
+  "claim_boundary": "The orbit-size pattern and cross-degrees are exact. No bijection to E8 roots is claimed until an objectwise map intertwining a common subgroup/action is constructed."
+}
