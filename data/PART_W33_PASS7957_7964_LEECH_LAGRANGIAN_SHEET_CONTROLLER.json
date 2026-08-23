@@ -1,0 +1,19 @@
+{
+  "schema":"w33.pass7957_7964.leech_lagrangian_sheet_controller.v1",
+  "status":"PASS",
+  "passes":"7957-7964",
+  "Aut_C_lambda_order":1259712,
+  "action_on_148_order":629856,
+  "action_kernel":"central inversion {+-1}",
+  "Lagrangian_orbits":[4,144],
+  "mixed_top_lines":48,
+  "mixed_lifts_per_line":3,
+  "projected_48_line_action_order":23328,
+  "three_sheet_kernel":{"order":27,"structure":"C3^3 = sl2(F3) additively"},
+  "sheet_functionals":{"distinct_kernel_hyperplanes":4,"Hesse_lines_per_hyperplane":12,"projective_frame":"the four dual normals are a 4-arc in PG(2,3): every triple has rank 3"},
+  "elementary_four_action":{"order":12,"identification":"A4 under strict linking isometries"},
+  "mixed_stabilizer_subdegrees":[1,1,1,1,3,6,9,9,9,27,81],
+  "elementary_stabilizer_subdegrees":[1,3,36,108],
+  "theorem":"The 144 mixed Leech Lagrangians carry a canonical C3^3 sheet monodromy over the 48 Hesse lines. Exactly four kernel hyperplanes occur, each on 12 lines; their dual points form a projective frame, while the four elementary Lagrangians carry the matching A4 action.",
+  "claim_boundary":"Exact finite linked-module action; A4->S4 requires similitudes."
+}
