@@ -1,0 +1,132 @@
+{
+  "boundary": "VERIFIED: the rank-32 qubit tower has four rungs, 16 -> 8 -> 4 -> 2 qubits, bottoming at W(3,2) via an order-16 element that W(E8) does not contain. THE UNIFIED KERNEL LAW -- dim K = k(p-1)/p, dim K-perp = k/p, rank(F|K) = k(p-2)/p, so the kernel is ALWAYS coisotropic and Lagrangian exactly at p=2 -- was predicted from p=2,3 and confirmed at p=5 on rank 40 with all three numbers exact. THE LIFT THEOREM: tau_p . diag(a,I,..,I) preserves the multiplicity j, hence the geometry, so L^p carries L's geometry at rank pr. Therefore the E8^3-versus-Leech asymmetry is about DECOMPOSABILITY, not rank 24",
+  "lift_theorem": {
+    "checks": [
+      {
+        "base": "E8, order 3, Phi_3^4",
+        "base_k": 4,
+        "lift": "E8^3, order 9, Phi_9^4",
+        "lift_k": 4,
+        "one_factor_rank": 4,
+        "same_geometry": true
+      },
+      {
+        "base": "E8, order 4, Phi_4^4",
+        "base_k": 4,
+        "lift": "E8^4, order 16, Phi_16^4",
+        "lift_k": 4,
+        "one_factor_rank": 4,
+        "same_geometry": true
+      }
+    ],
+    "consequence": "the geometry W(j-1,p) is determined by j and p, so the lifted geometry EQUALS the base geometry: a geometry-preserving rank multiplier",
+    "one_factor_generates": "the class map restricted to a single E8 factor already has full rank on the lifted quotient",
+    "statement": "if a has char poly Phi_{p^m}^j on rank r then g = tau_p . diag(a,I,..,I) on L^p (rank pr) has char poly Phi_{p^{m+1}}^j -- the SAME j -- since deg Phi_{p^{m+1}} = p deg Phi_{p^m}"
+  },
+  "not_done": [
+    "p=7 or a prime-power test",
+    "whether an indecomposable lattice admits a lift by another mechanism",
+    "alpha(W(3,9))",
+    "K12 built"
+  ],
+  "rank32_tower": {
+    "bottom": "W(3,2), the doily, two qubits -- requiring order 16, which W(E8) does not contain; the 4-cycle supplies it",
+    "element": "tau_4 . diag(M,I,I,I) with M the E8 order-4 Phi_4^4 element",
+    "facts": {
+      "det(I-g) = Phi_16(1)^4 = 16": true,
+      "g preserves the E8^4 form": true,
+      "g^8 = -I, so minimal polynomial is Phi_16": true,
+      "order of g": 16
+    },
+    "lattice": "E8^4, even unimodular of rank 32",
+    "rungs": [
+      {
+        "alternating": true,
+        "element": "g^8 = -I",
+        "geometry": "W(31,2)",
+        "order": 2,
+        "qubits": 16,
+        "rank_mod2": 32
+      },
+      {
+        "alternating": true,
+        "element": "g^4",
+        "geometry": "W(15,2)",
+        "order": 4,
+        "qubits": 8,
+        "rank_mod2": 16
+      },
+      {
+        "alternating": true,
+        "element": "g^2",
+        "geometry": "W(7,2)",
+        "order": 8,
+        "qubits": 4,
+        "rank_mod2": 8
+      },
+      {
+        "alternating": true,
+        "element": "g",
+        "geometry": "W(3,2)",
+        "order": 16,
+        "qubits": 2,
+        "rank_mod2": 4
+      }
+    ]
+  },
+  "the_asymmetry_reread": {
+    "consequence": "the presence of W(3,3) at rank 24 is a fact about DECOMPOSABILITY, not about rank; 'Co0 has no Phi_9^4 class' is what indecomposability looks like from the character table",
+    "old_statement": "E8^3 reaches W(3,3) at rank 24 and Leech does not",
+    "prediction": "for any L with a geometry at rank r, L^p carries the same geometry at rank pr, at element order p times higher",
+    "sharper": "E8^3 does not discover a W(3,3); it INHERITS E8's own, carried by the 3-cycle. Leech is INDECOMPOSABLE, has no factors to permute, and so has nothing to inherit"
+  },
+  "unified_kernel_law": {
+    "all_three_exact": true,
+    "coisotropic_at_p5": true,
+    "lagrangian_iff": "dim K = k/2 requires (p-1)/p = 1/2, i.e. p = 2 alone",
+    "measured_at_p5": {
+      "dim K": 8,
+      "dim K-perp": 2,
+      "rank(F|K)": 6
+    },
+    "prediction_at_p5": {
+      "dim K": 8,
+      "dim K-perp": 2,
+      "rank(F|K)": 6
+    },
+    "reading": "Lagrangian is not a separate phenomenon; it is the p=2 case of coisotropic, where K-perp equals K instead of merely sitting in it",
+    "statement": "descending one rung at prime p divides the quotient dimension by p, so dim K = k(p-1)/p, dim K-perp = k/p, and if K is coisotropic rank(F|K) = k(p-2)/p",
+    "table": [
+      {
+        "dim_K": 6,
+        "dim_K_perp": 6,
+        "k": 12,
+        "lattice": "E8^3",
+        "p": 2,
+        "rank": 24,
+        "rank_F_on_K": 0,
+        "type": "LAGRANGIAN"
+      },
+      {
+        "dim_K": 8,
+        "dim_K_perp": 4,
+        "k": 12,
+        "lattice": "E8^3",
+        "p": 3,
+        "rank": 24,
+        "rank_F_on_K": 4,
+        "type": "coisotropic"
+      },
+      {
+        "dim_K": 8,
+        "dim_K_perp": 2,
+        "k": 10,
+        "lattice": "E8^5",
+        "p": 5,
+        "rank": 40,
+        "rank_F_on_K": 6,
+        "type": "coisotropic"
+      }
+    ]
+  }
+}
