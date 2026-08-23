@@ -2,14 +2,20 @@
 """Pass8409-8416: resolve the residue index by an exact D4+D4 / relative-triality calculation.
 
 Pass7949 puts the explicit Q+(3,3) residue in the first four coordinates of
-E8/3E8.  Work directly with the eight E8 simple reflections mod 3.  Orbit the
+E8/3E8. Work directly with the eight E8 simple reflections mod 3. Orbit the
 nondegenerate 4-space W=<e1,...,e4>, use Schreier generators for its stabilizer,
 and project each stabilizer matrix onto W and W^perp.
 
 The result is a Goursat fiber product: both 4x4 projections have order 1152,
 both projection kernels have order 192, and the common quotient has order 6
-with order census 1^1 2^3 3^2, hence S3.  Thus the linear lift is
+with order census 1^1 2^3 3^2, hence S3. Thus the linear lift is
 W(F4) x_{S3} W(F4): the two D4 triality labels are forced to agree.
+
+Pass8801 repair: the original implementation stored matrices as np.int8 and
+occasionally evaluated chained products before reducing mod 3. 8x8 products
+can overflow int8 in such chains. All arithmetic below is now int64 and every
+matrix product goes through mm(), which reduces mod 3 immediately. The repaired
+implementation reproduces the full original certificate exactly.
 """
 from __future__ import annotations
 import collections,itertools,json
@@ -23,8 +29,11 @@ SIMPLES=[
 (0,0,0,0,-2,2,0,0),(0,0,0,0,0,-2,2,0)]
 P=3
 
+def mm(A,B):
+    return (np.asarray(A,dtype=np.int64)@np.asarray(B,dtype=np.int64))%P
+
 def inv(A):
-    A=np.array(A,dtype=np.int8)%P;n=len(A);B=np.concatenate([A,np.eye(n,dtype=np.int8)],1)%P;r=0
+    A=np.array(A,dtype=np.int64)%P;n=len(A);B=np.concatenate([A,np.eye(n,dtype=np.int64)],1)%P;r=0
     for c in range(n):
         z=next(i for i in range(r,n) if B[i,c]);B[[r,z]]=B[[z,r]]
         B[r]=(B[r]*pow(int(B[r,c]),-1,P))%P
@@ -34,7 +43,7 @@ def inv(A):
     return B[:,n:]%P
 
 def rref(B):
-    A=np.array(B,dtype=np.int8)%P;m,n=A.shape;r=0
+    A=np.array(B,dtype=np.int64)%P;m,n=A.shape;r=0
     for c in range(n):
         z=next((i for i in range(r,m) if A[i,c]),None)
         if z is None:continue
@@ -45,16 +54,16 @@ def rref(B):
         if r==m:break
     return tuple(map(tuple,A.tolist()))
 def key(A):return bytes(int(x) for x in np.asarray(A,dtype=np.uint8).ravel())
-def unkey(k):return np.frombuffer(k,dtype=np.uint8).astype(np.int8).reshape(4,4)
-def mul(k,l):return key((unkey(k)@unkey(l))%P)
+def unkey(k):return np.frombuffer(k,dtype=np.uint8).astype(np.int64).reshape(4,4)
+def mul(k,l):return key(mm(unkey(k),unkey(l)))
 def pairkey(A,B):return key(A)+key(B)
 
 def closure(gens):
-    I=np.eye(4,dtype=np.int8);out={pairkey(I,I):(I,I)};q=collections.deque([(I,I)])
+    I=np.eye(4,dtype=np.int64);out={pairkey(I,I):(I,I)};q=collections.deque([(I,I)])
     while q:
         A,B=q.popleft()
         for C,D in gens:
-            X=(A@C)%P;Y=(B@D)%P;k=pairkey(X,Y)
+            X=mm(A,C);Y=mm(B,D);k=pairkey(X,Y)
             if k not in out:out[k]=(X,Y);q.append((X,Y))
     return out
 
@@ -64,37 +73,33 @@ def p1(v):
         if x:return tuple(((1 if x==1 else 2)*y)%3 for y in v)
     raise ValueError
 
-def det2(x):return (x[0]*x[3]-x[1]*x[2])%3
-
 def main():
-    I8=np.eye(8,dtype=np.int8);gens=[]
+    I8=np.eye(8,dtype=np.int64);gens=[]
     for r in SIMPLES:
-        v=np.array(r,dtype=np.int8).reshape(8,1)%3
-        S=(I8-v@v.T)%3       # root norm is 8, so 1/4 = 1 mod 3
-        assert np.array_equal((S@S)%3,I8)
+        v=np.array(r,dtype=np.int64).reshape(8,1)%3
+        S=(I8-mm(v,v.T))%3
+        assert np.array_equal(mm(S,S),I8)
         gens.append(S)
-    W=np.eye(8,dtype=np.int8)[:4,:];k0=rref(W)
+    W=np.eye(8,dtype=np.int64)[:4,:];k0=rref(W)
     orb=[k0];oi={k0:0};reps=[I8.copy()];dq=collections.deque([0]);sch=[]
     while dq:
         i=dq.popleft();t=reps[i]
         for S in gens:
-            nt=(S@t)%3;k=rref(W@nt.T)
+            nt=mm(S,t);k=rref(mm(W,nt.T))
             if k not in oi:oi[k]=len(orb);orb.append(k);reps.append(nt);dq.append(len(orb)-1)
-            j=oi[k];h=(inv(reps[j])@S@t)%3
+            j=oi[k];h=mm(mm(inv(reps[j]),S),t)
             assert not np.any(h[4:,:4]) and not np.any(h[:4,4:])
             sch.append((h[:4,:4].copy(),h[4:,4:].copy()))
     assert len(orb)==3150
-    # Only a small set of distinct block pairs is needed.
     seen=set();pg=[]
     for A,B in sch:
         k=pairkey(A,B)
         if k not in seen:seen.add(k);pg.append((A,B))
     H=closure(pg);assert len(H)==221184
-    I4=key(np.eye(4,dtype=np.int8))
+    I4=key(np.eye(4,dtype=np.int64))
     Aset={k[:16] for k in H};Bset={k[16:] for k in H}
     KA={k[:16] for k in H if k[16:]==I4};KB={k[16:] for k in H if k[:16]==I4}
     assert len(Aset)==len(Bset)==1152 and len(KA)==len(KB)==192
-    # Quotient A/KA: six cosets and S3 order census.
     unseen=set(Aset);cos=[];ci={}
     while unseen:
         a=next(iter(unseen));C={mul(a,k) for k in KA};j=len(cos);cos.append(C)
@@ -110,17 +115,20 @@ def main():
             if x==e:qo.append(n);break
     assert collections.Counter(qo)==collections.Counter({2:3,3:2,1:1})
 
-    # Projective action on the 16 singular points of W.  The linear 1152 group
-    # has scalar kernel {+I,-I}, so its image has order 576.
     pts=sorted({p1(x) for x in itertools.product(range(3),repeat=4) if any(x) and sum(y*y for y in x)%3==0})
     assert len(pts)==16;pi={x:i for i,x in enumerate(pts)}
     perms=set()
     for ak in Aset:
-        A=unkey(ak);perms.add(tuple(pi[p1(tuple(int(z) for z in (A@np.array(x,dtype=np.int8))%3))] for x in pts))
+        A=unkey(ak);perm=[]
+        for x in pts:
+            y=mm(A,np.array(x,dtype=np.int64).reshape(4,1)).reshape(-1)
+            perm.append(pi[p1(tuple(int(z) for z in y))])
+        perms.add(tuple(perm))
     assert len(perms)==576
 
     out={
-      'schema':'w33.pass8409_8416.e8_d4d4_relative_triality.v1','status':'PASS','passes':'8409-8416',
+      'schema':'w33.pass8409_8416.e8_d4d4_relative_triality.v2_safe_arithmetic','status':'PASS','passes':'8409-8416','repair_pass':8801,
+      'arithmetic_repair':'all finite-field matrix arithmetic uses int64 and immediate mod-3 reduction; removes np.int8 chained-product overflow risk',
       'Qplus33_orbit_under_projective_E8':3150,
       'linear_E8_residue_stabilizer_order':221184,
       'two_block_projections':{'orders':[1152,1152],'identification':'O4+(3) ~= W(F4) on each nondegenerate 4-space','projection_kernel_orders':[192,192],'kernel_identification':'W(D4)'},
@@ -130,7 +138,7 @@ def main():
       'projective_E8_stabilizer_order':110592,
       'residue_16_point_action':{'E8_image_order':576,'E8_pointwise_kernel_order':192,'full_rook_graph_automorphism_order':1152,'missing_point_parity_index':2},
       'index12_interpretation':'Pass8309 full-triality-carrier index 12 factors structurally as 6 relative D4 trialities times one extra C2 point/type parity. The intrinsic linear D4+D4 enlargement is index 6.',
-      'theorem':'The E8 stabilizer of the explicit D4+D4 / Q+(3,3) residue is a triality fiber product, not an arbitrary subgroup: its linear lift is W(F4) x_{S3} W(F4). The six inner cosets are relative triality states; the 12-state full carrier enlargement is 6 x 2 after the outer parity/type extension.',
-      'claim_boundary':'Exact mod-3 Weyl-matrix/Goursat calculation. The 6x2 factorization is a finite-group carrier statement, not a generation or particle claim.'}
-    OUT.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n');print(json.dumps({'status':'PASS','Hlin':len(H),'quotient':'S3','inner_index':6,'projective_point_image':len(perms)}))
+      'theorem':'Safe finite-field recomputation confirms the E8 residue stabilizer is W(F4) x_{S3} W(F4); the six inner cosets are relative-triality states and the full-carrier 12-state enlargement is 6 x 2.',
+      'claim_boundary':'Exact mod-3 Weyl-matrix/Goursat calculation. The arithmetic repair changes implementation safety, not the theorem.'}
+    OUT.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n');print(json.dumps({'status':'PASS','Hlin':len(H),'quotient':'S3','inner_index':6,'projective_point_image':len(perms),'safe_arithmetic':True}))
 if __name__=='__main__':main()
