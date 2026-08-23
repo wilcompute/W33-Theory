@@ -1,0 +1,29 @@
+{
+  "Schlaefli": {
+    "parameters": [27, 16, 10, 8],
+    "spectrum": {"-2": 20, "4": 6, "16": 1}
+  },
+  "action_on_27_order": 51840,
+  "action_on_81_order": 311040,
+  "anchor_stabilizer_order": 311040,
+  "anchor_stabilizer_structure": "W(A2) x W(E6) = S3 x W(E6)",
+  "canonical_exceptional_edges": 81,
+  "canonical_fibres": 27,
+  "claim_boundary": "Exact finite E8/E6 association-scheme theorem; it does not identify the 81-dimensional Steinberg representation with this permutation set without an explicit intertwiner.",
+  "E6_projection": "Orthogonal projection of the four nonshared roots is one opposite E6 minuscule weight pair; 27 values each occur three times and exactly equal the K3 fibres.",
+  "fibre_rule": "Relation-4 edges with one common relation-4 neighbour form 27 K3; each K3 uses all three anchor A1 root lines once.",
+  "fibre_size": 3,
+  "kernel": "S3=W(A2)",
+  "kernel_fibre_action": "The same faithful S3 action on every one of the 27 triples.",
+  "kernel_order": 6,
+  "novelty_boundary": "Pass7181 already proved that an 81 A2-charge sector projects 3-to-1 to the 27 E6 minuscule weights. New here is the global 1120-A2-scheme realization: the valency-81 suborbit is that 3-cover, the fibres are recoverable internally as 27 canonical triangles, and the anchor stabilizer realizes S3 x W(E6) objectwise.",
+  "passes": "7621-7628",
+  "quotient_pair_patterns": {"R2^6_R4^3": 216, "R3^6_R4^3": 135},
+  "schema": "w33.pass7621_7628.steinberg81_schlaefli_trifiber.v1",
+  "status": "PASS",
+  "suborbit_characterization": "A2 subsystems sharing exactly one antipodal root pair with the anchor A2.",
+  "suborbit_internal_relation_counts_per_vertex": {"R2": 32, "R3": 20, "R4": 28},
+  "suborbit_size": 81,
+  "theorem": "The q^4=81 suborbit of one E8 A2 point is a canonical S3-fibred lift of the E6 minuscule Schlaefli 27. Thus 81=3*27 is realized by an exact point-stabilizer action, not a numerical factorization.",
+  "three_anchor_root_lines_counts": [27, 27, 27]
+}
