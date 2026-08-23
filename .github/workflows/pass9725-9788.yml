@@ -1,0 +1,37 @@
+name: Pass 9725-9788 Eight-Front Verification
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass9725_9732_qminus_g24_scheme_no_go.py'
+      - 'analysis/w33_pass9733_9740_full_glue_pair_unitary_stabilizer.py'
+      - 'analysis/w33_pass9741_9748_orientation_character_weld.py'
+      - 'analysis/w33_pass9749_9756_r_transporter_orthogonal_sign_obstruction.py'
+      - 'analysis/w33_pass9757_9764_coherent_holonet_qutrit_noise.py'
+      - 'analysis/w33_pass9765_9772_r_transverse_lagrangian_sign_orbits.py'
+      - 'analysis/w33_pass9773_9780_leech_hj_uniform_13_selector.py'
+      - 'analysis/w33_pass9781_9788_unramified_ramified_f9_zeta9_bridge.py'
+      - '.github/workflows/pass9725-9788.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install numpy scipy sympy
+      - run: python analysis/w33_pass9725_9732_qminus_g24_scheme_no_go.py
+      - run: python analysis/w33_pass9733_9740_full_glue_pair_unitary_stabilizer.py
+      - run: python analysis/w33_pass9741_9748_orientation_character_weld.py
+      - run: python analysis/w33_pass9749_9756_r_transporter_orthogonal_sign_obstruction.py
+      - run: python analysis/w33_pass9757_9764_coherent_holonet_qutrit_noise.py
+      - run: python analysis/w33_pass9765_9772_r_transverse_lagrangian_sign_orbits.py
+      - run: python analysis/w33_pass9773_9780_leech_hj_uniform_13_selector.py
+      - run: python analysis/w33_pass9781_9788_unramified_ramified_f9_zeta9_bridge.py
