@@ -1,0 +1,10 @@
+{
+  "lo": 7781,
+  "hi": 7860,
+  "lane": "Sage",
+  "track": "steinberg_e6_h27_operator_frontier",
+  "topic": "Renumbered collision-safe promotion of Steinberg/E6/H27 fixed-space, cocycle, Hoffman-Latin, D4-scheme, 360 nonbijection, V20+V24 operator Fourier, mod2 45-code, and W(5,3) residue results",
+  "reserved": "2026-08-22",
+  "status": "RESERVED_ACTIVE",
+  "depends_on": "Sage 7621-7628 fusion-frame result plus current master; this reservation supersedes only unpushed Sage labels 7629-7684 after parallel collisions"
+}
