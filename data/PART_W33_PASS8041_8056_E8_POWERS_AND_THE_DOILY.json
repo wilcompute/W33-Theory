@@ -1,0 +1,398 @@
+{
+  "boundary": "VERIFIED ON EXPLICIT MATRICES: E8^k realises both branches of the lattice qudit tower at ranks 8, 24 and 32, including FOUR QUBITS at rank 32 (E8^4, W(7,2)); the E8^3 six-qutrit geometry is a perp-sum of THREE COPIES OF W(3,3); and E8^3 REACHES W(3,3) via an order-9 element that permutes the three factors -- the rung Co0 does not supply. EXHAUSTIVE from the character table: exactly one pure class at each of orders 2, 4, 8, so the qubit tower is canonical. The two branch obstructions are proved INDEPENDENT by a same-rank counterexample",
+  "canonicity": {
+    "conclusion": "exactly ONE pure class at each order, so every rung's element is unique up to Co0-conjugacy and the tower is canonical",
+    "impure_counts": {
+      "2": 3,
+      "4": 7,
+      "8": 8
+    },
+    "method": "exhaustive over 2-power classes of 2.Co1 from the character table",
+    "order_match": "the three-qubit rung has centraliser of order 48384 = 4 * 12096 = 4 * |G2(2)|, the split Cayley hexagon group already carried here as the three-qubit contextuality core. An ORDER match; the group is not identified and none is claimed",
+    "pure_classes": [
+      {
+        "a_b_c_d": [
+          0,
+          24,
+          0,
+          0
+        ],
+        "centraliser": 8315553613086720000,
+        "class": 2,
+        "order": 2,
+        "what": "-I, central"
+      },
+      {
+        "a_b_c_d": [
+          0,
+          0,
+          12,
+          0
+        ],
+        "centraliser": 2012774400,
+        "class": 5,
+        "order": 4,
+        "what": "Phi_4^12"
+      },
+      {
+        "a_b_c_d": [
+          0,
+          0,
+          0,
+          6
+        ],
+        "centraliser": 48384,
+        "class": 21,
+        "order": 8,
+        "what": "Phi_8^6"
+      }
+    ]
+  },
+  "e8_cubed_is_not_special_to_leech": "E8^3 carries exactly the Leech qubit tower, 12 -> 6 -> 3, W(23,2) -> W(11,2) -> W(5,2). E8^3 is a Niemeier lattice with roots and Leech has none, so the qubit tower is a RANK phenomenon, not a Leech phenomenon",
+  "e8_cubed_reaches_W33": {
+    "checks": {
+      "P = 3(I-g)^-1 is integral": true,
+      "det(I-g) = 3^4 = 81": true,
+      "form is alternating mod 3": true,
+      "g = tau . diag(W,I,I) has order 9": true,
+      "minimal polynomial Phi_9 (g^6+g^3+I=0)": true,
+      "preserves the E8^3 form": true
+    },
+    "element": "tau . diag(W,I,I), with tau the cyclic permutation of the E8 factors",
+    "geometry": "W(3,3)",
+    "rank_mod3": 4,
+    "reading": "W(3,3), two qutrits, at rank 24 -- the rung Co0 does not supply. The element PERMUTES the three factors; no diagonal element could, since deg Phi_9 = 6 does not divide 8. The three copies of W(3,3) FUSE"
+  },
+  "e8_element_checks": {
+    "M^4 = -I, so char poly is Phi_8^2": true,
+    "W^2 + W + I = 0, so char poly is Phi_3^4": true,
+    "order-3 element preserves the Cartan form": true,
+    "order-8 element preserves the Cartan form": true
+  },
+  "four_qubits_rank32": {
+    "char_poly": "Phi_8^8",
+    "element": "the W(E8) order-8 element with Phi_8^2, acting diagonally",
+    "geometry": "W(7,2)",
+    "lattice": "E8^4, even unimodular of rank 32",
+    "qubits": 4,
+    "quotient": "F_2^8",
+    "status": "BUILT AND VERIFIED on 32x32 matrices, where the design tool had only predicted that rank 32 was where four qubits could live"
+  },
+  "literature": {
+    "already_credited_here": "alpha(W(3,5)) = 18 and alpha(W(3,7)) = 33 were caught at Pass 7106-7113 and BT7130-7137, which cite the 2007 companion and decline to re-claim. Nothing is retracted",
+    "cimrakova_fack_2005": {
+      "cite": "M. Cimrakova and V. Fack, Searching for maximal partial ovoids and spreads in generalized quadrangles, Bull. Belg. Math. Soc. Simon Stevin 12 (2005) 697-705",
+      "ebert_hirschfeld": "a complete cap of Q-(5,q) has |K| >= 2q+2 for q >= 4",
+      "explicit_construction": "a size-96 maximal partial ovoid of Q-(5,7) from (3,+-1,+-1,+-1,+-1,+-1) and cyclic permutations, split by parity of the number of minus signs",
+      "table1_exhaustive_proven_maxima": [
+        {
+          "GQ": "W(5)",
+          "best_bound": 21,
+          "inequivalent": 2,
+          "largest": 18,
+          "points": 156,
+          "s_t": [
+            5,
+            5
+          ],
+          "st_plus_1": 26
+        },
+        {
+          "GQ": "W(7)",
+          "best_bound": 43,
+          "inequivalent": 1,
+          "largest": 33,
+          "points": 400,
+          "s_t": [
+            7,
+            7
+          ],
+          "st_plus_1": 50
+        },
+        {
+          "GQ": "Q-(5,4)",
+          "best_bound": 37,
+          "inequivalent": 3,
+          "largest": 25,
+          "points": 325,
+          "s_t": [
+            4,
+            16
+          ],
+          "st_plus_1": 65
+        },
+        {
+          "GQ": "H(4,4)",
+          "best_bound": 25,
+          "inequivalent": 1,
+          "largest": 21,
+          "points": 165,
+          "s_t": [
+            4,
+            8
+          ],
+          "st_plus_1": 33
+        }
+      ],
+      "table2_Qminus5q_spectrum": [
+        {
+          "lower_bound": 10,
+          "q": 4,
+          "sizes_found": "13, 15..25",
+          "upper_bound": 37
+        },
+        {
+          "lower_bound": 12,
+          "q": 5,
+          "sizes_found": "18, 20..44, 48",
+          "upper_bound": 106
+        },
+        {
+          "lower_bound": 16,
+          "q": 7,
+          "sizes_found": "32..92, 95, 96, 98",
+          "upper_bound": 302
+        },
+        {
+          "lower_bound": 18,
+          "q": 8,
+          "sizes_found": "41..121, 123, 125, 126",
+          "upper_bound": 217
+        },
+        {
+          "lower_bound": 20,
+          "q": 9,
+          "sizes_found": "52..146",
+          "upper_bound": 401
+        },
+        {
+          "lower_bound": 24,
+          "q": 11,
+          "sizes_found": "68..212, 214, 216",
+          "upper_bound": 1222
+        },
+        {
+          "lower_bound": 28,
+          "q": 13,
+          "sizes_found": "89..265, 267, 268, 272, 273",
+          "upper_bound": 2042
+        }
+      ],
+      "thas_bound": "|O'| <= q^3 + 1 - q(q-1) for partial ovoids of Q-(5,q)"
+    },
+    "coincidence_flag": "Table 2 gives the Q-(5,11) spectrum as 68..212,214,216 and this repo's open item reads 'q=11 at 68'. DIFFERENT OBJECTS -- ours is W(3,11), theirs Q-(5,11). Recorded so the next reader does not conflate them",
+    "coolsaet_2014": {
+      "cite": "K. Coolsaet, Some large partial ovoids of Q-(5,q), for odd q, Designs Codes and Cryptography 72 (2014) 119-128",
+      "content": "explicit descriptions of some of the largest known partial ovoids of Q-(5,q) for odd q: two generic constructions plus sporadic examples for q <= 11, using non-standard elliptic quadratic forms",
+      "status": "CONSTRUCTIONS, i.e. lower bounds, not exact values -- which is why they never conflicted with anything here. Item closed"
+    },
+    "still_open": "alpha(Q-(5,3)) is settled by neither source: Table 2 starts at q=4, and their q=3 row is H(3,9), which dualises to partial SPREADS of Q-(5,3), not ovoids"
+  },
+  "not_code_concatenation": {
+    "refutation": "the kernel is LAGRANGIAN, so S-perp = S and S-perp/S = 0 -- no logical qubits. A Lagrangian stabiliser is a stabiliser STATE, not a code. The tower computes V/S, not S-perp/S",
+    "tempting_reading": "12 -> 6 -> 3 as concatenated stabiliser codes",
+    "what_it_is": "a chain of stabiliser-group quotients in which the target carries the TWISTED form F_M = (I+M)^T F_J, since a nondegenerate form cannot descend through a nonzero kernel"
+  },
+  "not_done": [
+    "identify the order-48384 centraliser as a group, not an order",
+    "an explicit omega for LEECH itself (E8^3 is a different Niemeier lattice)",
+    "alpha(W(3,9))",
+    "alpha(Q-(5,3)) against a source covering q=3",
+    "K12 built"
+  ],
+  "obstructions_are_independent": {
+    "answer": "NO",
+    "consequence": "one obstruction is a property of the number 24 and is shared; the other is a property of the automorphism group and separates lattices of equal rank",
+    "question": "are '24 = 8*3 with 3 odd' and 'Co0 always has exactly 3 blocks of Phi_9' the same fact?",
+    "witness": "E8^3 has the same rank as Leech, obeys the same odd-part law and stops at three qubits for the same arithmetic reason -- but it HAS a Phi_9^4 element and Co0 does not. Same rank, different answer"
+  },
+  "odd_part_law": {
+    "makes_instance_of": "24 = 8*3 with 3 odd, previously stated as a coincidence",
+    "second_requirement": "existence of the elements is independent: W(E8) has no order-16 element, so E8^4 stops at four qubits although the arithmetic would allow 2 and 1",
+    "statement": "rung m uses order 2^m with deg Phi = 2^{m-1}, so n = r/2^m qubits, and the rung exists only when k = r/2^{m-1} is even, i.e. 2^m | r. So the tower runs m = 1..v_2(r) and TERMINATES AT THE ODD PART OF THE RANK",
+    "table": [
+      {
+        "qubit_counts": [
+          4,
+          2,
+          1
+        ],
+        "rank": 8,
+        "terminal": 1,
+        "v2": 3
+      },
+      {
+        "qubit_counts": [
+          8,
+          4,
+          2,
+          1
+        ],
+        "rank": 16,
+        "terminal": 1,
+        "v2": 4
+      },
+      {
+        "qubit_counts": [
+          12,
+          6,
+          3
+        ],
+        "rank": 24,
+        "terminal": 3,
+        "v2": 3
+      },
+      {
+        "qubit_counts": [
+          16,
+          8,
+          4,
+          2,
+          1
+        ],
+        "rank": 32,
+        "terminal": 1,
+        "v2": 5
+      },
+      {
+        "qubit_counts": [
+          24,
+          12,
+          6,
+          3
+        ],
+        "rank": 48,
+        "terminal": 3,
+        "v2": 4
+      },
+      {
+        "qubit_counts": [
+          20,
+          10,
+          5
+        ],
+        "rank": 40,
+        "terminal": 5,
+        "v2": 3
+      }
+    ]
+  },
+  "three_branch": [
+    {
+      "alternating": true,
+      "geometry": "W(3,3)",
+      "lattice": "E8",
+      "qutrits": 2,
+      "rank": 8,
+      "rank_mod3": 4
+    },
+    {
+      "alternating": true,
+      "geometry": "W(11,3)",
+      "lattice": "E8^3",
+      "qutrits": 6,
+      "rank": 24,
+      "rank_mod3": 12
+    },
+    {
+      "alternating": true,
+      "geometry": "W(15,3)",
+      "lattice": "E8^4",
+      "qutrits": 8,
+      "rank": 32,
+      "rank_mod3": 16
+    }
+  ],
+  "three_doilies": {
+    "diagonal_block_ranks_mod3": [
+      4,
+      4,
+      4
+    ],
+    "form_block_diagonal": true,
+    "reading": "the E8^3 six-qutrit geometry is W(3,3) PERP W(3,3) PERP W(3,3); the summands are NONDEGENERATE so this is a genuine tensor factorisation into three two-qutrit systems, unlike the degenerate Lagrangian kernel of the qubit reduction"
+  },
+  "two_branch": [
+    {
+      "alternating": true,
+      "element": "K = M^4 = -I",
+      "geometry": "W(7,2)",
+      "lattice": "E8",
+      "qubits": 4,
+      "rank": 8,
+      "rank_mod2": 8
+    },
+    {
+      "alternating": true,
+      "element": "J = M^2",
+      "geometry": "W(3,2)",
+      "lattice": "E8",
+      "qubits": 2,
+      "rank": 8,
+      "rank_mod2": 4
+    },
+    {
+      "alternating": true,
+      "element": "M",
+      "geometry": "W(1,2)",
+      "lattice": "E8",
+      "qubits": 1,
+      "rank": 8,
+      "rank_mod2": 2
+    },
+    {
+      "alternating": true,
+      "element": "K = M^4 = -I",
+      "geometry": "W(23,2)",
+      "lattice": "E8^3",
+      "qubits": 12,
+      "rank": 24,
+      "rank_mod2": 24
+    },
+    {
+      "alternating": true,
+      "element": "J = M^2",
+      "geometry": "W(11,2)",
+      "lattice": "E8^3",
+      "qubits": 6,
+      "rank": 24,
+      "rank_mod2": 12
+    },
+    {
+      "alternating": true,
+      "element": "M",
+      "geometry": "W(5,2)",
+      "lattice": "E8^3",
+      "qubits": 3,
+      "rank": 24,
+      "rank_mod2": 6
+    },
+    {
+      "alternating": true,
+      "element": "K = M^4 = -I",
+      "geometry": "W(31,2)",
+      "lattice": "E8^4",
+      "qubits": 16,
+      "rank": 32,
+      "rank_mod2": 32
+    },
+    {
+      "alternating": true,
+      "element": "J = M^2",
+      "geometry": "W(15,2)",
+      "lattice": "E8^4",
+      "qubits": 8,
+      "rank": 32,
+      "rank_mod2": 16
+    },
+    {
+      "alternating": true,
+      "element": "M",
+      "geometry": "W(7,2)",
+      "lattice": "E8^4",
+      "qubits": 4,
+      "rank": 32,
+      "rank_mod2": 8
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+2-power classes of 2.Co1 in the 24-dimensional representation
+degree-24 characters: 1
+=== order 2 ===
+  class 2 centraliser 8315553613086720000  chi -24 24 24  -> (a,b,c,d) = (0,
+24,0,0)
+  class 3 centraliser 178362777600  chi 8 24 24  -> (a,b,c,d) = (16,8,0,0)
+  class 4 centraliser 178362777600  chi -8 24 24  -> (a,b,c,d) = (8,16,0,0)
+  class 6 centraliser 389283840  chi 0 24 24  -> (a,b,c,d) = (12,12,0,0)
+  pure classes of order 2: 0
+=== order 4 ===
+  class 5 centraliser 2012774400  chi 0 -24 24  -> (a,b,c,d) = (0,0,12,0)   *** PURE ***
+  class 15 centraliser 743178240  chi 8 -8 24  -> (a,b,c,d) = (8,0,8,0)
+  class 16 centraliser 743178240  chi -8 -8 24  -> (a,b,c,d) = (0,8,8,0)
+  class 17 centraliser 1179648  chi 0 -8 24  -> (a,b,c,d) = (4,4,8,0)
+  class 18 centraliser 1474560  chi 4 8 24  -> (a,b,c,d) = (10,6,4,0)
+  class 19 centraliser 1474560  chi -4 8 24  -> (a,b,c,d) = (6,10,4,0)
+  class 20 centraliser 294912  chi 0 8 24  -> (a,b,c,d) = (8,8,4,0)
+  class 22 centraliser 15360  chi 0 0 24  -> (a,b,c,d) = (6,6,6,0)
+  pure classes of order 4: 1
+=== order 8 ===
+  class 21 centraliser 48384  chi 0 0 -24  -> (a,b,c,d) = (0,0,0,6)   *** PURE ***
+  class 47 centraliser 92160  chi 0 -8 -8  -> (a,b,c,d) = (0,0,4,4)
+  class 48 centraliser 6144  chi 0 8 -8  -> (a,b,c,d) = (4,4,0,4)
+  class 49 centraliser 12288  chi 4 0 -8  -> (a,b,c,d) = (4,0,2,4)
+  class 50 centraliser 12288  chi -4 0 -8  -> (a,b,c,d) = (0,4,2,4)
+  class 51 centraliser 2048  chi 0 0 -8  -> (a,b,c,d) = (2,2,2,4)
+  class 52 centraliser 1536  chi 2 4 8  -> (a,b,c,d) = (6,4,3,2)
+  class 53 centraliser 1536  chi -2 4 8  -> (a,b,c,d) = (4,6,3,2)
+  class 54 centraliser 768  chi 0 0 8  -> (a,b,c,d) = (4,4,4,2)
+  pure classes of order 8: 1

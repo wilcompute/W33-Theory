@@ -1,4 +1,4 @@
-"""Passes 8030-8040 -- the qutrit branch of the Leech tower, and the doily it just misses.
+"""Passes 8030-8040 -- the qutrit branch of the Leech tower, and W(3,3) it just misses.
 
   8030  Random search cannot reach the fixed-point-free order-3 class. Measured, not guessed.
   8031  The trace census: only -3 and 0 occur. The class is at density ~1e-13.
@@ -9,11 +9,18 @@
         lattice gives W(k-1,3), with no computation.
   8036  Control: the argument reproduces E8 -> W(3,3), which Pass 7217 found independently.
   8037  LEECH -> W(11,3). Six qutrits.
-  8038  The branch stops ONE RUNG SHORT OF THE DOILY -- and now that is a theorem.
+  8038  The branch stops ONE RUNG SHORT OF W(3,3) -- and now that is a theorem.
   8039  The two branches, and their two different reasons for stopping.
   8040  Scope.
 
     py -3 analysis/w33_pass8030_8040_the_qutrit_branch.py
+
+    NAMING CORRECTION. Earlier drafts of these passes called W(3,3) "the doily". That is
+    wrong: the doily is W(3,2) = GQ(2,2), 15 points, which is also this repo's dominant
+    usage (21 files against 8, and an explicit "doily_points": 15 in BT1707). W(3,3) =
+    GQ(3,3), 40 points, is this repository's CENTRAL OBJECT but is not the doily. The
+    mathematics below is unaffected; only the name was wrong. And the actual doily does
+    appear here: it is E8's own middle qubit rung, W(3,2) at two qubits.
 """
 
 from __future__ import annotations
@@ -59,7 +66,7 @@ def rank_modp(A, p):
 
 def main() -> int:
     print("=" * 78)
-    print("Passes 8030-8040 -- the qutrit branch, and the doily it just misses")
+    print("Passes 8030-8040 -- the qutrit branch, and W(3,3) it just misses")
     print("=" * 78)
 
     print("\n  PASS 8030-8034 -- four ways not to get the matrix, and why that is fine\n")
@@ -150,10 +157,10 @@ def main() -> int:
     same correction: 196560 is not divisible by 3^12 - 1, but that measures whether the
     MINIMAL VECTORS cover the quotient evenly, not whether the geometry exists.""")
 
-    print("\n  PASS 8038 -- and it stops one rung short of the doily\n")
+    print("\n  PASS 8038 -- and it stops one rung short of W(3,3)\n")
     print("""    The next rung down needs a cube root of omega: order 9, pure support Phi_9^k
     with k deg(Phi_9) = 24. Since deg(Phi_9) = 6 that forces k = 4, quotient F_3^4 -- which
-    is W(3,3). THE DOILY. This repository's central object would be the next rung of the
+    is W(3,3). This repository's central object would be the next rung of the
     Leech qutrit branch.
 
     It is not there. Pass 7343 said so from a census; a census is only as exhaustive as its
@@ -171,7 +178,7 @@ def main() -> int:
     print("""
     Every one of them has c = 3. Phi_9^4 would be (a,b,c) = (0,0,4) and it does not occur.
     Co0 has no such element, so the qutrit branch STOPS at six qutrits, one rung above the
-    doily. Note class 55 is fixed-point-free (a = 0) and still fails -- being
+    W(3,3). Note class 55 is fixed-point-free (a = 0) and still fails -- being
     fixed-point-free is not enough, the support must be PURE.""")
 
     print("\n  PASS 8039 -- the two branches stop for two different reasons\n")
@@ -186,14 +193,14 @@ def main() -> int:
     Phi_9^4 -- 24 = 6 * 4, quotient F_3^4, an even dimension, W(3,3) -- and it is Co0 that
     declines to supply the element. Two branches, two genuinely different obstructions.
 
-    And E8 supplies exactly the rung Leech cannot: E8 -> W(3,3) is the doily, verified at
-    Pass 7217 and reproduced above. The doily is reachable from E8 and NOT from Leech.""")
+    And E8 supplies exactly the rung Leech cannot: E8 -> W(3,3) is W(3,3), verified at
+    Pass 7217 and reproduced above. W(3,3) is reachable from E8 and NOT from Leech.""")
 
     print("\n  PASS 8040 -- scope\n")
     print("""    NEW: the general theorem (fixed-point-free order-3 isometry of an even
     unimodular rank-2k lattice gives W(k-1,3)); its E8 control; W(11,3) for Leech; and the
     exhaustive character-table proof that Co0 has no Phi_9^4, which upgrades the Pass 7343
-    census to a theorem and locates the doily one rung below the branch.
+    census to a theorem and locates W(3,3) one rung below the branch.
     REJECTED, NOT PUBLISHED: the maxes-2 candidate W, which had every arithmetic property but
     was not an isometry.
     CITED, NOT CLAIMED: the complex Leech / 6.Suz structure (classical, and already in this
@@ -209,7 +216,7 @@ def main() -> int:
             "F_3^k, i.e. W(k-1,3) -- proved algebraically, controlled against E8 where it "
             "reproduces the independently-found W(3,3). For Leech this gives W(11,3), six "
             "qutrits. EXHAUSTIVE from the 2.Co1 character table: no Phi_9^4 class exists, so "
-            "the qutrit branch stops one rung above W(3,3), the doily"),
+            "the qutrit branch stops one rung above W(3,3), W(3,3)"),
         "why_no_matrix": {
             "random_search": ("4000 words gave 1679 order-3 elements with traces only -3 and "
                               "0; the fixed-point-free class has trace -12 and centraliser "
@@ -247,7 +254,7 @@ def main() -> int:
                                 "ones": a, "phi3_blocks": b, "phi9_blocks": c}
                                for cl, cg, cg3, a, b, c in ORDER9_CLASSES],
             "phi9_fourth_present": False,
-            "consequence": ("the qutrit branch stops at six qutrits; W(3,3), the doily, is "
+            "consequence": ("the qutrit branch stops at six qutrits; W(3,3), W(3,3), is "
                             "the rung below and Co0 does not supply the element"),
             "upgrades": "the Pass 7343 census, from an enumeration to a theorem"},
         "two_branches": {
@@ -259,7 +266,7 @@ def main() -> int:
                        "stops_because": ("GROUP-THEORETIC: the arithmetic admits Phi_9^4 "
                                          "(24 = 6*4, quotient F_3^4 = W(3,3)) and Co0 has no "
                                          "such class")},
-            "the_doily": ("W(3,3) is reachable from E8 (Pass 7217, reproduced here as the "
+            "which_lattice_reaches_W33": ("W(3,3) is reachable from E8 (Pass 7217, reproduced here as the "
                           "control) and NOT from Leech")},
         "rejected": {"object": "the maxes-2 commutant element W",
                      "had": "order 3, minimal polynomial Phi_3, trace -12, det(I-W) = 3^12",

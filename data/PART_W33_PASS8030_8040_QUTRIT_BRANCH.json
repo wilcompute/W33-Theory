@@ -1,5 +1,5 @@
 {
-  "boundary": "THEOREM: a fixed-point-free order-3 isometry with char poly Phi_3^k on an even unimodular lattice of rank 2k yields a nondegenerate ALTERNATING form on F_3^k, i.e. W(k-1,3) -- proved algebraically, controlled against E8 where it reproduces the independently-found W(3,3). For Leech this gives W(11,3), six qutrits. EXHAUSTIVE from the 2.Co1 character table: no Phi_9^4 class exists, so the qutrit branch stops one rung above W(3,3), the doily",
+  "boundary": "THEOREM: a fixed-point-free order-3 isometry with char poly Phi_3^k on an even unimodular lattice of rank 2k yields a nondegenerate ALTERNATING form on F_3^k, i.e. W(k-1,3) -- proved algebraically, controlled against E8 where it reproduces the independently-found W(3,3). For Leech this gives W(11,3), six qutrits. EXHAUSTIVE from the 2.Co1 character table: no Phi_9^4 class exists, so the qutrit branch stops one rung above W(3,3), W(3,3)",
   "e8_control": {
     "F antisymmetric mod 3": true,
     "F diagonal zero mod 3": true,
@@ -21,7 +21,7 @@
     "reads_as": "six qutrits"
   },
   "no_phi9_fourth": {
-    "consequence": "the qutrit branch stops at six qutrits; W(3,3), the doily, is the rung below and Co0 does not supply the element",
+    "consequence": "the qutrit branch stops at six qutrits; W(3,3), W(3,3), is the rung below and Co0 does not supply the element",
     "degree_24_characters": 1,
     "method": "exhaustive over classes from the 2.Co1 character table, decoding (a,b,c) from chi(1)=a+2b+6c=24, chi(g)=a-b, chi(g^3)=a+2b-3c",
     "order9_classes": [
@@ -91,7 +91,7 @@
       ],
       "stops_because": "GROUP-THEORETIC: the arithmetic admits Phi_9^4 (24 = 6*4, quotient F_3^4 = W(3,3)) and Co0 has no such class"
     },
-    "the_doily": "W(3,3) is reachable from E8 (Pass 7217, reproduced here as the control) and NOT from Leech"
+    "which_lattice_reaches_W33": "W(3,3) is reachable from E8 (Pass 7217, reproduced here as the control) and NOT from Leech"
   },
   "why_no_matrix": {
     "atlas": "no 24-dimensional integral representation of 6.Suz exists; only p196560 and 12-dimensional reps over F7, F13, F25",
