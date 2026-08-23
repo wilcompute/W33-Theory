@@ -1,0 +1,84 @@
+% Passes 9465--9528: unitary weld, centralizer fingerprint, all-rung root shadow, and robust readout.
+\subsubsection*{Passes 9465--9528: the glue pair is unitary, oriented, and root-shadow periodic}
+The transverse ternary Golay and quotient-selected $E_6$ glue codes determine the
+alternating form $K$, the exchange $S$, and $R=KS$ with $R^2=-I$.  Setting
+$B=KR^{\mathsf T}$ closes this to a finite Hermitian package:
+\[
+ C_{\operatorname{Sp}(12,3)}(R)\cong U(6,3),\qquad
+ |U(6,3)|=182699779456696320.
+\]
+The symmetric form $B$ has plus type in dimension $12$, whereas the two glue
+halves are mutually $B$-orthogonal minus-type six-spaces and are simultaneously
+Lagrangian for $K$.  The involution $S$ preserves $B$, reverses $K$, and obeys
+$SRS=-R$.  Exhausting signed coordinate monomials gives a further rigidity:
+although the $E_6$-relative glue alone has $62208$ such symmetries, the common
+stabilizer of the ordered pair of concrete glue codes is only $\{\pm I\}$.
+
+The three rank-$24$ carriers now have the exact projective centralizer fingerprint
+\[
+\boxed{
+ PSp(4,3)\;(25920)
+ \supset
+ 3^3{:}S_4\;(648)
+ \supset
+ 3^3{:}A_4\;(324)}.
+\]
+These are respectively the $E_8^3$, $E_6^4$, and $A_2^{12}$ images.  Thus the
+$E_6$ carrier selects an unoriented $W(3,3)$ line, while the Golay/$A_2^{12}$
+carrier retains one additional orientation-parity bit on its four line channels.
+
+The $E_8$ root-shadow recurrence is also exact at every lift depth.  If
+\[
+ L(g)(x_0,x_1,x_2)=(x_2,gx_0,x_1),
+\]
+then block sum induces
+\[
+ \operatorname{coker}(I-L(g))\xrightarrow{\sim}\operatorname{coker}(I-g),
+ \qquad [(x_0,x_1,x_2)]\mapsto[x_0+x_1+x_2].
+\]
+Indeed, if $z_0+z_1+z_2=(I-g)t$, then
+$y=(t,t-z_0-z_2,t-z_0)$ satisfies $(I-L(g))y=z$.  Therefore for every $m\ge0$
+\[
+ \operatorname{rank}=8\,3^m,\qquad
+ \#E_8\text{ factors}=3^m,\qquad
+ \boxed{\text{roots per }W(3,3)\text{ point}=6\,3^m},
+\]
+with all forty quotient points visible.
+
+For a finite readout model with $n$ stages of lazy nearest-neighbour $W(3,3)$
+crosstalk,
+\[
+ T_\eta=(1-\eta)I+\frac{\eta}{12}A_{W33},
+\]
+a signal initially supported on one $W33$ line has exact retained line mass
+\[
+ p_n=\frac1{10}+\frac9{10}\left(1-\frac{5\eta}{6}\right)^n.
+\]
+With arbitrary port gains in $[3/4,5/4]$, line support remains separated from
+the uniform $E_8^3$ shadow whenever
+\[
+ \left(1-\frac{5\eta}{6}\right)^n>\frac8{53}.
+\]
+Under a separate binary dark-monitor confusion rate at most $1/10$, the
+$E_6^4$ dark fraction remains separated from the zero-dark $E_8^3$ and
+$A_2^{12}$ carriers by at least $3/20$.  These are bounded finite-transfer
+statements, not a device-specific optical Hamiltonian.
+
+Two negative results sharpen the remaining Suzuki/Leech weld.  The certified
+$Q^+(5,3)$ controller's $90$ nondegenerate candidate orbits refine only to $62$
+hyperbolic or $28$ anisotropic orbits, so orthogonal subtype is not a unique
+selector.  Moreover no canonical symplectic transport of the glue-derived $R$
+into the independent Suzuki $12$-space is presently certified; the conjugacy
+orbit has
+\[
+ [\operatorname{Sp}(12,3):U(6,3)]=78795564505342027200
+\]
+choices.  Separately, the striking Hall--Janko/$Q^-(5,3)$ cardinality matches
+$252=252$ and $63+63=126$ fail the natural graph test: induced degrees are
+$66$ versus $81$ and $31$ versus $45$.  Any surviving bridge must therefore
+match a richer orbital/association-scheme structure rather than counts alone.
+
+Finally, the stabilizer chain has a finite description-length reading:
+choosing the $E_6$ line reduces symmetry by a factor $40$ ($\log_2 40$ bits),
+and choosing the Golay orientation reduces it by one further factor $2$ (exactly
+one bit).  This is log-cardinality bookkeeping, not thermodynamic entropy.
