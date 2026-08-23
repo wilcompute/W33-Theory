@@ -1,0 +1,114 @@
+% Passes 9725--9788: transporter sign obstruction, full unitary glue symmetry, coherent readout, local-field bridge.
+\subsubsection*{Passes 9725--9788: the transporter obstruction is Witt sign, and the $F_9$ package has a local-field lift}
+The natural point-scheme version of the Hall--Janko/$Q^-(5,3)$ bridge is now
+excluded.  The $252$ nonsingular $Q^-$ points split into two norm fibers of size
+$126$, and the basic $O^-(6,3)$ relation valencies are $45,80,36,90$.  Hence
+all invariant undirected union degrees lie in
+\[
+\{0,36,45,80,81,90,116,125,126,135,161,170,171,206,215,251\},
+\]
+which excludes the $G_2(4)$ fixed-edge $D$-cell degree $66$.  Likewise a
+single $126$-point norm fiber has only degrees $45,80,125$, excluding the
+$G_2(4)$ $B\cup C$ degree $31$.  Any surviving bridge must therefore use a
+derived scheme such as two-spaces or Lagrangians rather than point orthogonality.
+
+The intrinsic symmetry of the transverse Golay/$E_6$ glue pair is much larger
+than its signed-coordinate symmetry.  Inside
+\[
+C_{\operatorname{Sp}(12,3)}(R)\cong U(6,3),
+\]
+the complete ordered-pair stabilizer is
+\[
+\boxed{O^-(6,3)},\qquad |O^-(6,3)|=26,127,360,
+\]
+with projective order $13,063,680$.  Allowing the two glue halves to exchange
+doubles the stabilizer to $52,254,720$.  Thus the earlier $\{\pm I\}$ result
+is correctly interpreted as signed-monomial rigidity, not absolute unitary
+rigidity.
+
+The $A_2$ line-orientation quotient and the $G_2(4)$ edge-orientation quotient
+are both $C_2$: the former is
+$3^3{:}S_4\to C_2$ with kernel $3^3{:}A_4$, while the latter is endpoint
+reversal, exchanging the unique nonsymmetric rank-$14$ pair
+$AD\leftrightarrow BB/CC$.  Once an external bridge matches the underlying
+unoriented objects, the orientation identification is forced because
+$\operatorname{Aut}(C_2)$ is trivial.  However the parent stabilizers of orders
+$648$ and $24,192$ cannot embed into one another, so the bit itself is not the
+transporter.
+
+More strongly, the presently distinguished transporter is impossible.  On the
+glue side the exchanger $R$ satisfies $R^2=-I$ and the canonical Lagrangian
+half carries $Q^-(5,3)$ with $112$ singular projective points.  On the exact
+ATLAS Suzuki side the exchanger $x$ is symplectic with $x^2=-I$, but its
+canonical M12 polarization half carries $Q^+(5,3)$ with $130$ singular points.
+If a symplectic map $T$ both conjugated $R$ to $x$ and mapped one distinguished
+half to the other, then the induced forms
+\[
+K(u,Rv)\quad\text{and}\quad J(Tu,xTv)
+\]
+would be congruent, preserving Witt sign, which would force $112=130$.
+Therefore
+\[
+\boxed{\text{no canonical-half-preserving }R\text{ transporter exists}.}
+\]
+The obstruction is selective rather than fatal.  For fixed $R$, the unitary
+centralizer has two orbits of transverse Lagrangians:
+\[
+\begin{array}{c|c|c}
+\text{half-form}&\text{stabilizer}&\text{orbit size}\\\hline
+Q^+(5,3)&O^+(6,3)&7,530,558,336\\
+Q^-(5,3)&O^-(6,3)&6,992,661,312.
+\end{array}
+\]
+Thus the same glue-derived $R$ admits billions of plus-type alternative
+polarizations capable of clearing the Suzuki Witt-sign obstruction.  The next
+problem is to select one canonically.
+
+A coherent finite readout model was also tested on $40\times3$ complex
+amplitudes: forty $W33$ ports and three internal qutrit/OAM--time-bin modes,
+with unitary propagation $\exp(-i\theta A_{W33}/12)$, bounded phase disorder,
+loss, random internal $3\times3$ unitary mixing, finite detector shots and a
+noisy dark monitor.  A line-plus-dark classifier remained correct in all
+$1,500$ trials under both the moderate and heavier seeded stress profiles.  A
+conditional direct phase tag for the $A_2$ orientation bit survived the
+moderate profile but failed under heavier phase/loss disorder before carrier
+identity failed.  This is a robustness simulation, not a measured hardware
+Hamiltonian.
+
+Two cross-lane consequences are especially suggestive.  First, using the
+corrected Leech result that the canonical $V_2$ generator contains $4,095$
+intrinsic type-$8$ frames, together with the $416$ Hall--Janko vertices and
+$20,800$ $G_2(4)$ edges,
+\[
+\gcd(4095,416,20800)=13.
+\]
+Hence any common selector with constant fiber size on all three canonical sets
+can have only one nontrivial cardinality,
+\[
+\boxed{13=\Phi_3(3)}.
+\]
+Existence is not asserted; the parallel frame reconstruction additionally
+shows that naive mod-$2$ frame coordinates cannot construct it.
+
+Second, the $F_9$ glue phase space and the parallel Bruhat--Tits cyclotomic
+filtration combine naturally in local-field arithmetic.  The relation
+$R^2=-I$ supplies the unramified quadratic residue extension
+$\mathbb F_9/\mathbb F_3$, lifted by $\mathbb Q_3(i)/\mathbb Q_3$, while the
+order-$9$ cyclotomic tower supplies the totally ramified degree-$6$ extension
+$\mathbb Q_3(\zeta_9)$ with uniformizer $\pi=1-\zeta_9$.  Their compositum
+\[
+L=\mathbb Q_3(i,\zeta_9)
+\]
+has
+\[
+(e,f)=(6,2),\qquad [L:\mathbb Q_3]=12,
+\]
+residue field $\mathbb F_9$, and $3=u\pi^6$.  Consequently
+$\mathcal O_L/3\mathcal O_L$ has six successive $\pi$-adic graded pieces, each
+$\mathbb F_9$, so its associated graded additive space is
+\[
+\boxed{\mathbb F_9^6\cong\mathbb F_3^{12}}.
+\]
+This gives an arithmetic lift candidate for the independently discovered glue
+phase space: $R$ is the unramified direction and $I-M$ the ramified uniformizer
+direction.  No integral Niemeier--$\mathcal O_L$ identification is claimed.
