@@ -1,0 +1,32 @@
+{
+  "boundary": "determines the form induced on Leech/(I-M)Leech = F_2^12 by the Phi_4^12 element. The point set is all 4095 of PG(11,2); this pass reports the form's rank and symmetry, and does NOT name a polar space unless the rank is 12",
+  "element": {
+    "order": 4,
+    "trace": 0,
+    "det_I_minus_M": 4096,
+    "M2": "-I"
+  },
+  "invariant_form_space_dim": 1,
+  "gram_symmetric": true,
+  "forms": {
+    "((I+M)x, y)": {
+      "alternating": true,
+      "symmetric_mod2": true,
+      "rank": 12
+    },
+    "(Mx, y)": {
+      "alternating": true,
+      "symmetric_mod2": true,
+      "rank": 24
+    },
+    "(x, y)": {
+      "alternating": true,
+      "symmetric_mod2": true,
+      "rank": 24
+    }
+  },
+  "export_lessons": [
+    "GAP String() line-wraps with a backslash that can split a token, silently dropping a minus sign",
+    "GAP QUIT cannot appear inside an if-block"
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "boundary": "VERIFIED: the Leech lattice modulo (I-M) for the Phi_4^12 element of Co0 is F_2^12, the fibration covers all 4095 points of PG(11,2) uniformly at 48 minimal vectors each, and the form ((I+M)x,y) descends to a NONDEGENERATE ALTERNATING form -- i.e. W(11,2), the six-qubit Pauli commutation geometry. No physical claim; no Monster claim",
+  "element": {
+    "M_squared": "-I",
+    "char_poly": "Phi_4^12",
+    "det_I_minus_M": 4096,
+    "order": 4,
+    "source": "ATLAS AtlasGenerators(\"2.Co1\", 9), 24-dim integral",
+    "trace": 0
+  },
+  "gap_export_traps": [
+    "String() line-wraps with a backslash that can split a token; a minus sign at a line end parses away, silently flipping a sign",
+    "QUIT cannot appear inside an if-block (syntax error, not runtime)"
+  ],
+  "invariant_form": {
+    "method": "solve g^T G g = G via (g^T (x) g^T) vec(G) = vec(G)",
+    "preserved_by": "both generators and M, exactly",
+    "solution_space_dim": 1
+  },
+  "not_done": [
+    "Leech d=8 (Phi_8^6, 63 points) and d=13 (Phi_13^2, 168 points)",
+    "Leech d=9 onto PG(5,3)",
+    "K12 built",
+    "alpha(W(3,9))",
+    "q=11 at 68",
+    "Coolsaet unread"
+  ],
+  "quotient": {
+    "covers": "all of PG(11,2)",
+    "minimal_vectors_per_class": 48,
+    "nonzero_classes": 4095,
+    "space": "F_2^12",
+    "uniform": true
+  },
+  "result": {
+    "disclaimer": "finite geometry of a lattice quotient in QI vocabulary; no physical claim, per the Pass 5351-5352 prior art",
+    "form": "nondegenerate alternating on F_2^12",
+    "geometry": "W(11,2), symplectic polar space of PG(11,2)",
+    "pauli_reading": "the commutation geometry of SIX QUBITS: 4095 nonzero Pauli classes, collinear = commuting"
+  },
+  "tower": [
+    {
+      "d": 3,
+      "geometry": "W(3,3)",
+      "lattice": "E8",
+      "points": 40,
+      "quotient": "F_3^4",
+      "rank": 8,
+      "reads_as": "two qutrits"
+    },
+    {
+      "d": 4,
+      "geometry": "W(3,2)",
+      "lattice": "E8",
+      "points": 15,
+      "quotient": "F_2^4",
+      "rank": 8,
+      "reads_as": "two qubits"
+    },
+    {
+      "d": 4,
+      "geometry": "W(11,2)",
+      "lattice": "Leech",
+      "points": 4095,
+      "quotient": "F_2^12",
+      "rank": 24,
+      "reads_as": "SIX QUBITS"
+    }
+  ],
+  "which_form_descends": {
+    "((I+M)x,y)": {
+      "alternating": true,
+      "descends": true,
+      "descent_check": "0 mismatches over 400 random triples",
+      "equals_image_of_I_minus_M": true,
+      "radical_dim": 12,
+      "rank_mod2": 12
+    },
+    "(Mx,y)": {
+      "descends": false,
+      "rank_mod2": 24
+    },
+    "(x,y)": {
+      "descends": false,
+      "rank_mod2": 24
+    }
+  }
+}
