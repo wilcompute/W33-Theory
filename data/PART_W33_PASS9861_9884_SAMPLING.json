@@ -1,0 +1,54 @@
+{
+  "boundary": "A structure question about V_2's 4095 frames, and TWO FINDINGS THAT DID NOT SURVIVE. At 14 classes the pairwise frame relation took exactly two values and appeared to depend only on the sum class (25 shared sums, 0 disagreements). At 34 classes there are THREE relation types and SIX disagreeing sum classes. Both findings are false and were killed before publication by increasing the sample",
+  "killed": {
+    "depends_only_on_sum_class": "REFUTED -- six sum classes carry two different relations. Zero clashes at n=14, six at n=34",
+    "two_relation_types": "FALSE -- there are at least three; the third accounts for 35% of pairs at n=34 and did not occur in the first 91"
+  },
+  "large_sample": {
+    "classes": 34,
+    "disagreements": 6,
+    "pairs": 561,
+    "relation_types": 3,
+    "shared_sum_classes": 102
+  },
+  "methodological_point": "two clean findings, both wrong, both killed by more data rather than by reasoning. Second time in this line that a control overturned a result -- the first was the type-4 baseline at Pass 9701-9724. Operational rule: when a combinatorial law holds with ZERO exceptions on a sample assembled for convenience, the sample size IS the result until it is varied",
+  "not_known": "how many relation types exist, what they mean, and whether the observed 44/35/21 per cent proportions survive further sampling -- given the record above they should not be trusted",
+  "question": "every nonzero class of V_2 is type 8, hence a frame; V_2 is a group of 4096 frames, and any two are compared by the multiset of |inner products| between their 24 representatives",
+  "relation_types_at_34": [
+    {
+      "count": 247,
+      "profile": {
+        "0": 288,
+        "2": 256,
+        "4": 32
+      }
+    },
+    {
+      "count": 194,
+      "profile": {
+        "0": 264,
+        "2": 288,
+        "4": 24
+      }
+    },
+    {
+      "count": 120,
+      "profile": {
+        "0": 480,
+        "4": 96
+      }
+    }
+  ],
+  "small_sample": {
+    "classes": 14,
+    "disagreements": 0,
+    "pairs": 91,
+    "relation_types": 2,
+    "shared_sum_classes": 25
+  },
+  "survives": [
+    "V_2's 4095 nonzero classes are all frames (rests on the type-4 census and q)",
+    "every observed relation has |ip| in {0,2,4}, across 561 comparisons",
+    "the 24-number profile against a SINGLE representative determines the full 576-pair relation, which makes the relation cheap to evaluate"
+  ]
+}
