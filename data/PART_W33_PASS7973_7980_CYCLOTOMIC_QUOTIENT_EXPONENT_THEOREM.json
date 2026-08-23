@@ -1,0 +1,11 @@
+{
+  "schema":"w33.pass7973_7980.cyclotomic_quotient_exponent_theorem.v1",
+  "status":"PASS",
+  "passes":"7973-7980",
+  "outside_box":true,
+  "single_factor_theorem":"If the minimal polynomial is Phi_{p^r}, then pI=(I-M)Q(M) for an integral polynomial Q; hence p annihilates coker(I-M). If its order is p^n, it is (Z/p)^n.",
+  "multi_factor_bound":"s distinct p-power cyclotomic factors imply cokernel exponent divides p^s",
+  "Leech_d9":"Phi3*Phi9 gives exponent dividing 9; the measured Smith form has exponent 9 and saturates the bound",
+  "correction":"Pure single-factor support => elementary quotient is a theorem. The converse for arbitrary mixed integral modules is not implied by characteristic-polynomial support alone.",
+  "claim_boundary":"The quotient-field statement is arithmetic; a descended nondegenerate alternating form remains an additional theorem."
+}
