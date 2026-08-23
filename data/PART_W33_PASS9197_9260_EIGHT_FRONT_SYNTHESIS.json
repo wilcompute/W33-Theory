@@ -1,0 +1,21 @@
+{
+  "passes": "9197-9260",
+  "schema": "w33.pass9197_9260.eight_front_synthesis.v1",
+  "status": "PASS",
+  "fronts": {
+    "9197-9204": "E6^4 carrier centralizer maps onto the full W33 line stabilizer: order 1296 in Sp(4,3), 648 = 3^3:S4 projectively.",
+    "9205-9212": "The three rank-24 carriers have distinct umbral images: E8^3 -> S3 order-3 factor cycle; E6^4 -> identity; A2^12 -> order-3 2.M12 lift over M12 class 3B.",
+    "9213-9220": "A marked Niemeier W33 line does not select a Suzuki slice: all 7371 candidates already contain a canonical ordered Lagrangian line pair, and 90 controller orbits remain.",
+    "9221-9228": "E8 root shadows are periodic through ranks 8,24,72,216; each E8 factor remains six-to-one over all 40 W33 points, giving fibres 6,18,54,162.",
+    "9229-9236": "Under the equal-root-coupling 40-port model, signatures (best-line visible concentration, dark fraction) are E8^3=(0.1,0), E6^4=(1,0.25), A2^12=(1,0).",
+    "9237-9244": "The transverse Golay and E6-relative [12,6] glues are opposite maximal isotropics of F3^12 and generate a rank-12 alternating form plus an order-4 symplectic R with R^2=-I, hence a 6D F9 structure.",
+    "9245-9252": "The canonical glue exchange maps the E6 root-creating [12,4,3]_3 sector to an 81-word Golay [12,4,6]_3 rootless sector.",
+    "9253-9260": "The glue pair induces Q-(5,3), the orthogonal-sign twin of Suzuki Q+(5,3). Both have 7371 nondegenerate 2-spaces; generally for odd q the common total is q^4(q^2-q+1)(q^2+q+1) and changing sign shifts q^6 cases between hyperbolic and anisotropic type."
+  },
+  "selector_hierarchy": [
+    "root-shadow support / marked line",
+    "orthogonal sign Q+ versus Q-",
+    "transverse-glue F9 complex structure"
+  ],
+  "claim_boundary": "Finite lattice, code, classical-group and finite-geometry statements are exact within the executable witnesses. The optical discriminator is conditional on its explicitly stated equal-root-coupling readout model; no continuum or Standard-Model claim follows from this packet."
+}
