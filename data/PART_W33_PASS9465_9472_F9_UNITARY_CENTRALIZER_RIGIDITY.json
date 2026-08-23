@@ -1,0 +1,29 @@
+{
+  "schema": "w33.pass9465_9472.f9_unitary_centralizer_rigidity.v1",
+  "status": "PASS",
+  "passes": "9465-9472",
+  "compatible_forms": {
+    "K": "alternating rank 12",
+    "R": "R^2=-I, symplectic",
+    "B=K R^T": "symmetric nondegenerate O+(12,3)",
+    "Golay_restriction": "O-(6,3)",
+    "E6_glue_restriction": "O-(6,3)",
+    "B_cross_pairing_G_E": 0,
+    "S": "B-isometry, K-anti-isometry, SRS=-R"
+  },
+  "unitary_centralizer": {
+    "identification": "C_Sp(12,3)(R) = Sp(K) intersection O(B) ~= U(6,3)",
+    "order_factors": [4, 8, 28, 80, 244, 728],
+    "order": 182699779456696320,
+    "SU_order": 45674944864174080,
+    "PSU_order": 22837472432087040
+  },
+  "coordinate_monomial_rigidity": {
+    "E6_relative_glue_signed_monomial_order": 62208,
+    "ordered_pair_common_signed_monomials": 2,
+    "common_group": "{+I,-I}",
+    "projective_common_group_order": 1
+  },
+  "theorem": "The transverse-glue F9 structure is a finite Hermitian package: B=KR^T is plus-type in dimension 12, while the Golay and E6-relative glue halves are mutually B-orthogonal minus-type 6-spaces and simultaneously K-Lagrangians. The symplectic centralizer of R is U(6,3). Despite that enormous ambient unitary symmetry, the ordered pair of concrete glue codes is projectively rigid inside the full signed-coordinate monomial group: its common stabilizer is only +/-I.",
+  "boundary": "The U(6,3) identification uses the standard classical-group equivalence between an F3 symplectic space with R^2=-I and a Hermitian F9-space. The signed-monomial rigidity is exhaustively computed. No canonical identification with the independent Suzuki 12D module is assumed."
+}
