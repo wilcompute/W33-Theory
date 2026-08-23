@@ -1,0 +1,27 @@
+{
+  "schema": "w33.pass7885_7892.leech_lagrangian_3adic_atlas.v1",
+  "status": "PASS",
+  "passes": "7885-7892",
+  "module": "(Z/9)^2 x (Z/3)^2",
+  "maximal_isotropic_order": 27,
+  "Lagrangians_total": 148,
+  "Lagrangian_types": {"Z9xZ3": 144, "Z3^3": 4},
+  "top_projection": {
+    "mixed_images": 48,
+    "mixed_lifts_per_image": 3,
+    "mixed_image_type": "nonradical isotropic projective line",
+    "elementary_images": 4,
+    "elementary_image_type": "radical projective point"
+  },
+  "canonical_rank2_projective_geometry": {
+    "radical_points": 4,
+    "isotropic_lines_total": 49,
+    "nonradical_isotropic_lines": 48,
+    "nonradical_points": 36,
+    "affine_planes": 4,
+    "AG23_lines_each": 12
+  },
+  "three_adic_resolution": "144 = 3 x 48: every Hesse/AG(2,3) line in the four-plane top geometry has exactly three mixed Lagrangian lifts; the four radical points have one exceptional elementary Lagrangian lift each.",
+  "theorem": "The Leech order-9 linking module has exactly 148 Lagrangians. Its mixed Lagrangians form a canonical three-sheet cover of the 48 affine lines in the four AG(2,3) planes singled out by multiplication by 3, while four elementary Lagrangians sit over the four radical points.",
+  "claim_boundary": "Exact finite symplectic-abelian-group geometry. The three sheets are not assigned a physical phase without an additional equivariant identification."
+}
