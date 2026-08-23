@@ -1,0 +1,66 @@
+{
+  "answers": {
+    "Pass8225_8232_other_lane": "the same at q=2: 336 copies of W(3,2) in W(5,2), one Sp6(2) orbit, none canonically selected",
+    "Pass8233_8240_other_lane": "counts 2110666092277743 W(3,3) subgeometries of W(11,3), one Sp12(3) orbit, and asks for the additional datum that would select one",
+    "this_pass": "supplies the datum for E8^3 and names its type: a CUBE ROOT of the order-3 isometry, whose descent kernel is coisotropic"
+  },
+  "boundary": "VERIFIED: for E8^3 the order-9 element cubes EXACTLY to the diagonal order-3 element, so W(11,3) ->> W(3,3) is canonical; its kernel K has dim 8 with the form of rank 4, which forces K-perp inside K -- K is COISOTROPIC -- and the selected W(3,3) is the symplectic reduction K/K-perp. Canonical as a SUBQUOTIENT, not as a subspace. Leech has no such cube root, so the datum the other lane identified as missing is exactly a cube root of the order-3 isometry",
+  "chain": {
+    "det(I-g) = 3^4": true,
+    "det(I-g^3) = 3^12": true,
+    "g cubes to the DIAGONAL order-3 element": true,
+    "g has order 9 with minimal polynomial Phi_9": true,
+    "g preserves the E8^3 form": true,
+    "surjection": "L/(I-g^3)L = F_3^12 ->> L/(I-g)L = F_3^4",
+    "transition_integral": true,
+    "why_canonical": "g^3 IS the diagonal order-3 element exactly, so both carriers come from one element at two powers"
+  },
+  "honest_limit": {
+    "claim_is": "canonical as a SUBQUOTIENT K/K-perp",
+    "claim_is_not": "a selection among the other lane's 2110666092277743 W(3,3) SUBSPACES; realising the subquotient as a subspace needs a complement to the isotropic K-perp, which is not unique",
+    "their_statement_stands": "the bare carrier selects no preferred slice"
+  },
+  "kernel": {
+    "dim K = rank(I-g) - rank(I-g^3)": 8,
+    "dim_K_perp": 4,
+    "forced_by": "rad(K) = dim K - rank(F|K) = 4 equals dim K-perp = 4, so K cap K-perp IS K-perp",
+    "radical_of_K": 4,
+    "rank F (form on the quotient)": 12,
+    "rank of F restricted to K": 4,
+    "rank(I-g)": 20,
+    "rank(I-g^3) = dim radical of F": 12,
+    "reduction": "K/K-perp has dim 4 with a nondegenerate form = W(3,3)",
+    "type": "COISOTROPIC (K-perp is contained in K)"
+  },
+  "leech": {
+    "consequence": "Leech's six-qutrit carrier has no canonical coisotropic K and hence no canonically selected W(3,3)",
+    "missing_datum_named": "a CUBE ROOT of the order-3 isometry. E8^3 has one, supplied by the S3 permuting its three factors; Co0 does not, and cannot",
+    "no_cube_root": "Co0 has no Phi_9^4 class -- Pass 8030-8040, exhaustive from the character table, all three order-9 classes having three Phi_9 blocks and never four"
+  },
+  "method_note": "GF(3) ranks are sympy's. A hand-rolled elimination reported an 8-dimensional totally isotropic subspace of a nondegenerate F_3^12, impossible since the maximum is 6; that impossibility caught the bug",
+  "not_done": [
+    "whether any complement of K-perp in K is distinguished",
+    "the q=2 analogue of this question for the 336",
+    "alpha(W(3,9))",
+    "K12 built"
+  ],
+  "two_branches_differ": {
+    "qubit": {
+      "ambient": "F_2^12",
+      "dim_kernel": 6,
+      "meaning": "quotient by a maximal commuting set, a stabiliser group",
+      "rank_form_on_kernel": 0,
+      "target": "W(5,2)",
+      "type": "LAGRANGIAN"
+    },
+    "qutrit": {
+      "ambient": "F_3^12",
+      "dim_kernel": 8,
+      "meaning": "symplectic reduction",
+      "rank_form_on_kernel": 4,
+      "target": "W(3,3)",
+      "type": "COISOTROPIC"
+    },
+    "why_forced": "the kernel is half the space at p=2 but two thirds of it at p=3; two thirds of 12 is 8, which exceeds the maximal isotropic dimension 6, so a p=3 kernel CANNOT be Lagrangian"
+  }
+}
