@@ -1,0 +1,28 @@
+{
+  "K": {
+    "Golay_and_E6_glues_are_Lagrangian": true,
+    "K_squared": "I",
+    "alternating": true,
+    "rank": 12
+  },
+  "R_equals_KS": {
+    "R_squared": "-I",
+    "field_reading": "x^2+1 is irreducible over F3, so R equips F3^12 with an F9-module structure of dimension 6",
+    "order": 4,
+    "symplectic_for_K": true
+  },
+  "S": {
+    "anti_symplectic_for_K": true,
+    "order": 2,
+    "orthogonal_for_standard_dot": true,
+    "swaps_the_two_glue_Lagrangians": true
+  },
+  "boundary": "The F9 module statement is exact. Identifying the full centralizer of R inside Sp(12,3) with a specific finite unitary group is standard classical-group theory but is not recomputed by enumeration here.",
+  "cross_pairing_rank": 6,
+  "intersection_dimension": 0,
+  "passes": "9237-9244",
+  "schema": "w33.pass9237_9244.transverse_glue_symplectic_complex.v1",
+  "status": "PASS",
+  "sum_dimension": 12,
+  "theorem": "The two distinct Niemeier glue codes are opposite maximal isotropics of F3^12. Their transverse pairing canonically manufactures a nondegenerate 12D alternating form and an order-4 symplectic complex structure. Thus the E6^4/Golay carrier pair itself generates a six-qutrit phase space together with an F9 structure; this structure is not inserted from the original W33 quotient."
+}
