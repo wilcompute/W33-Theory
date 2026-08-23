@@ -1,0 +1,19 @@
+{
+  "schema": "w33.pass8569_8576.leech144_qplus33_ninefold_quotient.v1",
+  "status": "PASS",
+  "passes": "8569-8576",
+  "mixed_Lagrangians": 144,
+  "coarse_blocks": 16,
+  "lifts_per_block": 9,
+  "coarse_coordinates": "(d,e) in PG(1,3) x PG(1,3), equivalently projective rank-one matrix d e^T in M2(F3)",
+  "coarse_graph": "Q+(3,3) = rook SRG(16,6,2,2)",
+  "threshold_graph": {
+    "rule": "distinct L,L' adjacent iff |L intersect L'| >= 3",
+    "degree": 62,
+    "identification": "Q+(3,3)[K9] lexicographic blow-up",
+    "spectrum": "62^1 + 26^6 + (-10)^9 + (-1)^128"
+  },
+  "E8_dependency": "Pass7949-7956 maps these same 16 projective rank-one M2(F3) points by the explicit isometry T into 16 actual E8 A2 radicals in Q+(7,3).",
+  "theorem": "The entire 144-object mixed Leech Lagrangian atlas canonically collapses 9-to-1 onto the same 16-point tensor quadric Q+(3,3) that is already embedded objectwise in the current E8 triality carrier. The collapse is detected purely by Lagrangian intersection: after coarse quotient, sharing one tensor factor is exactly rook collinearity.",
+  "claim_boundary": "Exact finite linking/tensor/E8 coordinate chain. The nine lifts are not assigned physical states."
+}
