@@ -1,0 +1,35 @@
+{
+  "boundary": "The obstruction is conditional on a faithful embedding of the named controller into the fixed-R unitary group. It is pure orbit-stabilizer/divisibility and does not assert that such an embedding exists.",
+  "consequence": "The canonical-plus-polarization program must either break controller symmetry, select a nontrivial orbit/set of plus Lagrangians, or introduce extra structure whose stabilizer is smaller. The Witt-sign repair cannot be a hidden one-point invariant of the full Leech/Hall-Janko/G2 controller.",
+  "controller_bounds": {
+    "G2(4) edge stabilizer": {
+      "gcd_with_Oplus": 3456,
+      "minimum_possible_orbit_size_under_faithful_embedding": 7,
+      "order": 24192,
+      "unique_fixed_plus_lagrangian_possible": false
+    },
+    "G2(4):2": {
+      "gcd_with_Oplus": 898560,
+      "minimum_possible_orbit_size_under_faithful_embedding": 560,
+      "order": 503193600,
+      "unique_fixed_plus_lagrangian_possible": false
+    },
+    "J2:2": {
+      "gcd_with_Oplus": 34560,
+      "minimum_possible_orbit_size_under_faithful_embedding": 35,
+      "order": 1209600,
+      "unique_fixed_plus_lagrangian_possible": false
+    }
+  },
+  "passes": "9885-9892",
+  "plus_orbit": {
+    "ambient": "U(6,3)",
+    "ambient_order": 182699779456696320,
+    "size": 7530558336,
+    "stabilizer": "O+(6,3)",
+    "stabilizer_order": 24261120
+  },
+  "schema": "w33.pass9885_9892.plus_lagrangian_symmetry_no_go.v1",
+  "status": "PASS",
+  "theorem": "A single plus-type R-transverse Lagrangian cannot be selected while retaining a faithful full G2(4):2, J2:2, or G2(4)-edge-stabilizer action. Their possible orbits on U(6,3)/O+(6,3) have size at least 560, 35, and 7 respectively."
+}
