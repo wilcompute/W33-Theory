@@ -1,0 +1,21 @@
+{
+  "schema": "w33.pass7909_7916.leech_parahoric_o4plus_tensor_layer.v1",
+  "status": "PASS",
+  "passes": "7909-7916",
+  "outside_box": true,
+  "Aut_C_lambda_order": 1259712,
+  "top_action_kernel_order": 27,
+  "top_action_order": 46656,
+  "top_action_structure": "3^4 : (SL2(3) x SL2(3)); the 3^4 is Mat2(F3) under left-right tensor action C -> D C A^{-1}",
+  "tensor_quadratic_form": "q(C)=det(C), a nondegenerate plus-type quadratic form on Mat2(F3)",
+  "Levi_action_kernel": "diagonal {(+I,+I),(-I,-I)}",
+  "Levi_image_order": 288,
+  "Levi_image_identification": "Omega_4^+(3)",
+  "Mat2_orbits": {"zero": 1, "nonzero_singular": 32, "det_plus1": 24, "det_minus1": 24},
+  "projective_singular_quadric": "Q+(3,3) with 16 points",
+  "exact_sequence": "1 -> 3^3 -> Aut(C,lambda) -> 3^4:(SL2(3)xSL2(3)) -> 1",
+  "D4_bridge": "The corrected Leech 3-adic controller therefore contains a canonical 4D plus-orthogonal tensor residue. This is structurally compatible with the repo D4/O8+(3) triality program, but no embedding into the 3360 O8+(3) carrier is asserted here.",
+  "external_name_check": "Omega_4^+(3) order 288 agrees with standard finite-group nomenclature.",
+  "theorem": "The Leech mixed-torsion automorphism group is a 3-adic lift of a 4D tensor-parabolic whose Levi quotient is Omega_4^+(3) acting on Mat2(F3) by determinant-preserving left-right transformations.",
+  "claim_boundary": "Exact finite group/module theorem; the D4-triality connection remains a next objectwise embedding problem."
+}
