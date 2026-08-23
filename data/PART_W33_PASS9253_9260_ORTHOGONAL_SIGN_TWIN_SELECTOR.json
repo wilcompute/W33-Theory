@@ -1,0 +1,25 @@
+{
+  "Niemeier_glue_selector": {
+    "nondegenerate_W33_candidates": 7371,
+    "orthogonal_type": "Q-(5,3)",
+    "singular_projective_points": 112,
+    "two_space_census": {"anisotropic": 2835, "degenerate": 3640, "hyperbolic": 4536}
+  },
+  "Suzuki_selector": {
+    "nondegenerate_W33_candidates": 7371,
+    "orthogonal_type": "Q+(5,3)",
+    "singular_projective_points": 130,
+    "two_space_census": {"anisotropic": 2106, "degenerate": 3640, "hyperbolic": 5265}
+  },
+  "boundary": "The general count follows from standard orthogonal-group orders and orbit-stabilizer. At q=3 the q^6 shift equals the 729-word glue-code cardinality; that numerical equality is forced by the common dimension six, not claimed as an independent moonshine or physical law.",
+  "general_odd_q_identity": {
+    "anisotropic_shift_minus_minus_plus": "q^6",
+    "hyperbolic_shift_plus_minus_minus": "q^6",
+    "nondegenerate_2space_total": "q^4 (q^2-q+1)(q^2+q+1), independent of orthogonal sign"
+  },
+  "passes": "9253-9260",
+  "q3_shift": {"equals": "3^6 = size of either ternary [12,6] glue code", "value": 729},
+  "schema": "w33.pass9253_9260.orthogonal_sign_twin_selector.v2",
+  "status": "PASS",
+  "theorem": "The Golay/E6 transverse-glue polarization produces a minus-type Q-(5,3) selector that is an exact orthogonal-sign twin of the Suzuki Q+(5,3) selector. Both select 7,371 nondegenerate 2-spaces/W33 candidates. More generally for every odd q, O+(6,q) and O-(6,q) have the same q^4(q^2-q+1)(q^2+q+1) nondegenerate 2-spaces, while changing sign transfers exactly q^6 cases between hyperbolic and anisotropic type."
+}
