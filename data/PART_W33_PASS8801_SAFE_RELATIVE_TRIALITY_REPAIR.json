@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "schema": "w33.pass8801.safe_relative_triality_repair.v1",
+  "repaired_source": "analysis/w33_pass8409_8416_e8_d4d4_relative_triality.py",
+  "risk_found": "np.int8 chained matrix products could overflow before mod-3 reduction",
+  "repair": "all matrix arithmetic promoted to int64 and routed through immediate mod-3 multiplication",
+  "safe_recomputation": {
+    "Qplus33_orbit": 3150,
+    "linear_E8_residue_stabilizer_order": 221184,
+    "projection_orders": [1152, 1152],
+    "projection_kernel_orders": [192, 192],
+    "common_quotient_order": 6,
+    "common_quotient_element_orders": {"1": 1, "2": 3, "3": 2},
+    "projective_residue_point_image_order": 576
+  },
+  "theorem_survives": true,
+  "theorem": "The safe recomputation confirms W(F4) x_{S3} W(F4) as the linear E8 stabilizer of the explicit Q+(3,3) residue, with six relative-triality cosets inside W(F4) x W(F4).",
+  "claim_boundary": "Implementation repair plus independent exact finite-field recomputation; no physical interpretation."
+}
