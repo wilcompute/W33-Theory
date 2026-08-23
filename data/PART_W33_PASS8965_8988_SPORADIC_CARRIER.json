@@ -1,0 +1,74 @@
+{
+  "boundary": "VERIFIED: the Niemeier lattice with root system E6^4, constructed here from tetracode glue and checked even, unimodular and root-distinct from E8^3, carries W(3,3) via a DIAGONAL order-9 element of W(E6)^4. That is a SPORADIC non-lift carrier at rank 24, refuting the 'every rung is E8' picture of Pass 8941-8964 -- which that pass had flagged as unproven. E8-nativity at the MINIMAL rank and the periodicity theorem are both untouched",
+  "e6_element": {
+    "det(I-w) = 3": true,
+    "minimal polynomial Phi_9": true,
+    "order 9": true,
+    "preserves the E6 form": true
+  },
+  "near_miss": {
+    "precedent": "Pass 8861-8884, where an 8-dimensional totally isotropic subspace of a nondegenerate F_3^12 was impossible and caught a different bug the same way",
+    "the_bug": "X = B A^T B^-1 satisfies the ROW isometry condition X G X^T = G, while F = P^T G needs the COLUMN one, X^T G X = G. Testing only one makes both look like 'X preserves the form'",
+    "what_caught_it": "an identity. For any isometry, adj(P) = -PX with P = 3(I-X)^-1, so F + F^T = G P (I-X) = 3G, antisymmetric mod 3 UNCONDITIONALLY. 'Not alternating' was therefore an impossibility, not a result",
+    "what_happened": "the first run reported the form as neither alternating nor symmetric, one step from recording E6^4 as a negative"
+  },
+  "niemeier_construction": {
+    "Gram is integral": true,
+    "det(Gram) = 1 (unimodular)": true,
+    "even diagonal": true,
+    "glue": "ternary tetracode, 9 codewords, all nonzero of weight 3, self-orthogonal; weight 3 gives 3*(4/3) = 4 == 0 mod 2 so the glue is even, and index 9 in (E6*)^4 makes it unimodular",
+    "index [Z^24 : N] = 9": true,
+    "not_E8_cubed": "a nonzero glue class has minimum norm 4/3, so a weight-3 codeword has norm at least 4 > 2 and the glue adds NO roots. N has exactly 4 x 72 = 288 roots against E8^3's 720"
+  },
+  "not_done": [
+    "A2^12, the third candidate, needing ternary Golay glue",
+    "whether rank 24 has exactly two carriers or more",
+    "whether E6^4's centraliser is a Clifford group",
+    "alpha(W(3,9))",
+    "K12 built"
+  ],
+  "refutation": {
+    "claim": "Pass 8941-8964: 'an infinite tower, every rung of which is E8 wearing more copies of itself'",
+    "status": "REFUTED at rank 24 by E6^4",
+    "was_it_flagged": "yes -- Pass 8941-8964's first open item was 'periodicity produces lifts, it does not exclude sporadic non-lift carriers'. Flagged, not asserted, and now settled against me",
+    "what_survives": [
+      "E8-nativity at the MINIMAL rank (rank 8 even unimodular is unique and is E8)",
+      "the periodicity theorem itself"
+    ]
+  },
+  "result": {
+    "F + F^T = 3G": true,
+    "P = 3(I-X)^-1 integral": true,
+    "action is integral on N": true,
+    "antisymmetric mod 3": true,
+    "det(I-X) = 81": true,
+    "geometry": "W(3,3)",
+    "isometry X^T G X = G": true,
+    "mechanism": "DIAGONAL order-9 element; no factor permutation, not a lift",
+    "minimal polynomial Phi_9": true,
+    "qutrits": 2,
+    "rank mod 3 = 4": true,
+    "rank_mod3": 4,
+    "zero diagonal mod 3": true
+  },
+  "screen": {
+    "candidates": [
+      {
+        "diagonal_route": false,
+        "root_system": "E8^3",
+        "three_cycle_route": true
+      },
+      {
+        "diagonal_route": true,
+        "root_system": "E6^4",
+        "three_cycle_route": false
+      },
+      {
+        "diagonal_route": false,
+        "root_system": "A2^12",
+        "three_cycle_route": true
+      }
+    ],
+    "note": "three of twenty-four survive: E8^3 (the known lift), E6^4 (diagonal route, built here), A2^12 (3-cycle route, NOT built)"
+  }
+}
