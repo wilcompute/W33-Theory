@@ -1,0 +1,46 @@
+{
+  "additive_no_go": {
+    "V2_order": 4096,
+    "gcd": 1,
+    "nontrivial_group_homomorphism_V2_to_C13": false,
+    "target_C13_order": 13
+  },
+  "boundary": "The companion-matrix C13 action is an exact abstract GL(12,2) construction. It is not yet proved to lie in the actual Co0 stabilizer of the canonical V2, so the common-clock comparison is an algebraic target rather than an established Leech-equivariant weld. The frame-relation statements retain the Pass9861 sample boundary.",
+  "common_clock_counts": {
+    "G2_edges": 1600,
+    "G2_vertices": 32,
+    "V2_nonzero_frame_neighbor_cycles": 315,
+    "cycle_length": 13
+  },
+  "information_consequence": {
+    "binary_relation_bit_sufficient": false,
+    "minimum_binary_storage_bits_for_observed_relation": 2,
+    "observed_frame_relation_symbols_at_least": 3
+  },
+  "multiplicative_C13": {
+    "Phi13_irreducible_over_F2": true,
+    "cycle_length": 13,
+    "cycles": 315,
+    "matrix": "companion of x^12+x^11+...+x+1",
+    "matrix_order": 13,
+    "nonzero_V2_directions": 4095,
+    "nonzero_fixed_points_for_nonidentity_powers": 0,
+    "ord_13_of_2": 12,
+    "rank(M^k-I)_for_k_1_to_12": [12,12,12,12,12,12,12,12,12,12,12,12]
+  },
+  "parallel_constraints": {
+    "Pass9861_9884": {
+      "classes": 34,
+      "pairs": 561,
+      "relation_types_at_least": 3,
+      "shared_sum_classes": 102,
+      "sum_relation_disagreements": 6
+    },
+    "Pass9921_9944": "type-8 frame directions bridge Leech to A1^24 2-neighbors; binary Golay is the neighbor glue, not a coordinate code on Lambda/2Lambda",
+    "sum_law": "REFUTED: six sampled sum classes carry different frame-pair relations"
+  },
+  "passes": "9973-9980",
+  "schema": "w33.pass9973_9980.v2_c13_neighbor_clock.v1",
+  "status": "PASS",
+  "theorem": "The 13-state V2 idea is not additive: no nontrivial V2->C13 homomorphism exists and the sampled sum-law is false. Instead F2^12 admits a fixed-point-free order-13 linear automorphism, partitioning its 4,095 nonzero frame/A1^24-neighbor directions into exactly 315 thirteen-cycles. This matches the semiregular C13-clock architecture on the G2 vertices and edges."
+}
