@@ -4,13 +4,25 @@
   8762  And the Leech^2 tower: 24 -> 12 -> 6 -> 3 qubits, odd part of 48.
   8763  The kernel law at a NEW multiplicity: p=3, k=24. Predicted, then measured.
   8764  Four confirmations, three primes, two multiplicities.
-  8765  WHERE CAN W(3,3) LIVE AT ALL? The rank is forced to 8, 24 or 72.
+  8765  WHERE CAN W(3,3) LIVE AT ALL? The rank is forced -- but see the correction above.
   8766  AND RANK 8 EVEN UNIMODULAR IS UNIQUE. W(3,3) is E8-native.
   8767  What that does and does not settle about the other Niemeier lattices.
   8768  Open.
   8769  Scope.
 
     py -3 analysis/w33_pass8761_8776_w33_is_e8_native.py
+
+    CORRECTED IN PART BY PASS 8941-8964 -- READ THIS FIRST.
+
+    Below, "the rank is forced to 8, 24 or 72" is stated as though it were a complete
+    list. It is not. The FORCING is right -- a pure Phi_{3^m}^4 element needs rank
+    4 deg(Phi_{3^m}) -- but the loop that produced the table ran only m = 1, 2, 3. The
+    allowed ranks are 8 * 3^(m-1) for EVERY m: 8, 24, 72, 216, 648, ... infinitely many.
+    Pass 8941-8964 verifies rank 72 explicitly and proves the periodicity.
+
+    THE E8-NATIVITY CONCLUSION IS UNAFFECTED and in fact strengthened: it argues about the
+    MINIMAL rank, which is 8, where the even unimodular lattice is unique and is E8. Every
+    higher rank in the progression is a LIFT of that one.
 """
 
 from __future__ import annotations
@@ -199,7 +211,9 @@ def main() -> int:
             "carries the same W(5,2) via an order-16 element, and its tower 24->12->6->3 "
             "terminates at the odd part of 48. The kernel law is confirmed at a fourth data "
             "point with new numbers (p=3, k=24: predicted and measured 16, 8, 8). And the "
-            "rank of a W(3,3) carrier is FORCED to 8, 24 or 72; since rank-8 even unimodular "
+            "rank of a W(3,3) carrier is FORCED to 4 deg(Phi_{3^m}), i.e. 8, 24, 72, 216, ... "
+            "(CORRECTED by Pass 8941-8964: the original list of three was a truncated loop); "
+            "since rank-8 even unimodular "
             "is unique, E8 is the unique minimal carrier and W(3,3) is E8-native"),
         "lift_on_leech": {
             "base": {"lattice": "Leech", "element": "order-8 Phi_8^6", "k": kbase,
