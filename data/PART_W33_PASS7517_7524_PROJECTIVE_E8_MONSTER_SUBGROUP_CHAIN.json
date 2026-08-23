@@ -1,0 +1,36 @@
+{
+  "claim_boundary": "Finite Weyl/orthogonal/sporadic subgroup geometry only; no moonshine or physics consequence follows automatically.",
+  "group_identification": {
+    "O8plus2_order": 174182400,
+    "projective_even": "W+(E8)/{±I} = O8+(2)",
+    "projective_full": "W(E8)/{±I} = O8+(2):2",
+    "standard_external_fact": "W(E8) = 2.O8+(2).2 and W+(E8)/{±I} = O8+(2)"
+  },
+  "internal_reconstruction": {
+    "A2_subsystems": 1120,
+    "E8_roots": 240,
+    "Eisenstein_W33_leaves": 2240,
+    "leaf_families": [1120, 1120],
+    "projective_A2_action_order": 348364800,
+    "simple_reflections": 8
+  },
+  "nested_carrier_chain": {
+    "Monster_local_order": 2139341679820800,
+    "Monster_local_over_projective_index": 6141096,
+    "ambient_over_projective_index": 341172,
+    "ambient_triality_order": 118852315545600,
+    "chain": "O8+(2):2 < O8+(3):S4 < (3^2:2 x O8+(3)).S4 < Monster",
+    "geometric_meaning": "The projective E8 Weyl action fixes the Q+(7,3) point type and uses the unique C2 that exchanges the two generator families; the ambient D4(3) group enlarges this to the full S4 outer coordinate.",
+    "projective_E8_order": 348364800
+  },
+  "prior_art_boundary": "Pass1301 already discussed O8+(2) and Sp(4,3) abstractly. The new theorem is the explicit action of the current E8 A2/W33 leaf construction on the 3360 Q+(7,3) triality carrier and its placement in the Monster-local carrier chain.",
+  "schema": "w33.pass7517_7524.projective_e8_monster_subgroup_chain.v1",
+  "status": "PASS",
+  "triality_type_action": {
+    "each_simple_reflection_swaps_generator_families": true,
+    "simple_reflection_swap_bits": [1,1,1,1,1,1,1,1],
+    "singular_point_type_fixed": true,
+    "type_image_order": 2,
+    "type_kernel_order": 174182400
+  }
+}
