@@ -1,0 +1,17 @@
+{
+  "boundary": "Exact group-action divisibility. Identifying a chosen 13-cycle with PG(2,3) uses the standard Singer-cycle model and requires a noncanonical choice of C13/orbit/labeling.",
+  "group": {"G2(4):2_order": 503193600, "order13_divides_group": true},
+  "passes": "9957-9964",
+  "projective_plane_reading": {
+    "PG(2,3)_points": 13,
+    "Phi3_at_q3": 13,
+    "Singer_cycle_order": 13,
+    "interpretation": "each chosen C13 orbit is a natural 13-state clock after a Singer labeling"
+  },
+  "proof": "An order-13 element fixing a coset G/H is conjugate into H. Since neither relevant stabilizer order is divisible by 13, no nonidentity element of C13 fixes a vertex or edge; all orbits therefore have length13.",
+  "schema": "w33.pass9957_9964.order13_semiregular_clock.v1",
+  "semiregular_C13": {"cycle_length": 13, "edge_cycles": 1600, "flag_cycles": 3200, "vertex_cycles": 32},
+  "stabilizers": {"both_prime_to_13": true, "edge": 24192, "vertex_J2:2": 1209600},
+  "status": "PASS",
+  "theorem": "Although no full-G2 13-block quotient exists, every order-13 subgroup acts semiregularly on both the 416 Hall-Janko vertices and the 20,800 G2 edges, producing exactly 32 and 1,600 thirteen-cycles. The surviving 13-state object is a chosen cyclic clock, not a global quotient."
+}
