@@ -1,0 +1,11 @@
+{
+  "lo": 7701,
+  "hi": 7780,
+  "lane": "Sage",
+  "track": "h27_fourier_leech_dual40_monster_module_cross_frontier",
+  "topic": "Exact H27 Fourier decomposition of the Steinberg V20; Leech order-9 dual-40 linking-form geometry; Monster/Baby character-output closure; explicit 3360 conjugacy closure; and three outside-box representation/coding probes",
+  "reserved": "2026-08-22",
+  "status": "RESERVED_ACTIVE",
+  "depends_on": "Pass7186, Pass7501-7652, live ATLAS/GAP frontier scripts",
+  "collision_note": "Pass7621-7700 remains active in the parallel Steinberg/E6/H27 lane. This range starts at 7701 and treats all prior certificates as dependencies, including corrections to the Leech order-9 cokernel."
+}
