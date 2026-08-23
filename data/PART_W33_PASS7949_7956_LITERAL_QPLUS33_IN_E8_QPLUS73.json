@@ -1,0 +1,22 @@
+{
+  "schema": "w33.pass7949_7956.literal_qplus33_in_e8_qplus73.v1",
+  "status": "PASS",
+  "passes": "7949-7956",
+  "linear_isometry_matrix": [[0,1,2,0],[1,0,0,1],[1,1,1,2],[1,2,2,2]],
+  "source": "M2(F3), q(X)=det(X)",
+  "target": "first four coordinates of E8/3E8, q=sum x_i^2",
+  "embedded_singular_points": 16,
+  "induced_collinearity": "SRG(16,6,2,2) = 4x4 rook graph",
+  "rank1_factorization": "PG(1,3) x PG(1,3)",
+  "embedded_singular_lines": {"total":8,"reguli":[4,4]},
+  "W33_leaf_intersections": {
+    "all_2240": {"0":1152,"1":1024,"4":64},
+    "each_generator_family": {"0":576,"1":512,"4":32},
+    "leaves_meeting_in_a_line":64,
+    "leaves_per_embedded_line":8,
+    "per_line_generator_family_split":[4,4]
+  },
+  "point_profile": "each embedded point lies on 80 W33 leaves: 16 line-intersection leaves and 64 point-only leaves",
+  "theorem": "The Leech M2(F3) plus-orthogonal tensor residue embeds explicitly as a nondegenerate Q+(3,3) subquadric of the current E8/3E8 Q+(7,3) carrier through 16 actual A2 radicals. Its eight reguli lines lift in a balanced 4+4 fashion to the two 1120-leaf generator families.",
+  "claim_boundary": "Finite polar-space embedding only; no acting-group or physical identification is inferred."
+}
