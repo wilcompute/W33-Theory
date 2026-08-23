@@ -1,0 +1,58 @@
+% Pass7501--7508: exact Monster-local port of the E8/3E8 triality carrier.
+\subsection*{Passes 7501--7508: a Monster-local triality/affine port}
+
+The Pass7465--7472 reduction of $E_8/3E_8$ identified a classical $D_4(3)$
+triality carrier with
+\[
+ \boxed{1120+1120+1120=3360}
+\]
+objects: the $1120$ singular points of $Q^+(7,3)$ together with its two families
+of $1120$ maximal totally singular generators.  On the $E_8$ side, the point
+family is the radical image of the $1120$ $A_2$ root subsystems and the two
+generator families are the $2240$ Eisenstein $W(3,3)$ leaves.
+
+There is now an external sporadic-group port for exactly this ambient carrier.
+ATLAS lists a maximal Monster subgroup
+\[
+ H=(3^2{:}2\times O_8^+(3)).S_4
+\]
+with an intransitive permutation representation of degree $3369$.  The exact
+ATLAS generators are hash-pinned by the Pass7501 verifier.  Their orbit census is
+\[
+ \boxed{3369=9+3360}.
+\]
+The image on the nine-point orbit has order $432$ and contains a normal regular
+$C_3^2$, hence is the natural affine action
+\[
+ \boxed{AGL(2,3)=3^2{:}GL(2,3)}.
+\]
+The image on the $3360$-point orbit has order
+\[
+ \boxed{118852315545600=|O_8^+(3):S_4|}.
+\]
+Using the ATLAS order of $H$, the kernels of the two orbit actions have orders
+$18$ and $|O_8^+(3)|$, respectively.  Both orbit images therefore have one
+common quotient of order $24$:
+\[
+ 432/18=24
+ =|O_8^+(3):S_4|/|O_8^+(3)|.
+\]
+Thus the subgroup is the fibre product
+\[
+ \boxed{
+ H\cong AGL(2,3)\times_{S_4}\bigl(O_8^+(3):S_4\bigr).
+ }
+\]
+In other words, the Monster-local $3369$-point action couples an affine
+$\mathbb F_3^2$ nine-sheet to the $D_4(3)$ triality carrier through one common
+$S_4$ outer coordinate.  This is a genuine subgroup-action bridge, not an
+integer coincidence.  ATLAS also lists $O_8^+(3):S_4$ as a maximal subgroup of
+the Baby Monster, so the same $3360$-object carrier has a second sporadic port.
+
+\paragraph{Evidence boundary.}
+The theorem identifies the ambient triality carrier containing all $2240$
+Eisenstein $W(3,3)$ leaves with a standard $O_8^+(3):S_4$ permutation carrier
+inside a Monster maximal subgroup.  It does not assert that the Monster
+stabilizes one chosen $W(3,3)$ leaf by the leaf's internal incidence action, and
+it does not derive the Moonshine module, the Griess product, a modular function,
+or any physical parameter from $W(3,3)$.

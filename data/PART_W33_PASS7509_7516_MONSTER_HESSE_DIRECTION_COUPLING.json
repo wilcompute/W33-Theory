@@ -1,0 +1,29 @@
+{
+  "affine_plane": {
+    "line_size": 3,
+    "lines": 12,
+    "lines_per_parallel_class": 3,
+    "lines_through_point": 4,
+    "object": "AG(2,3) / Hesse (9_4,12_3) incidence",
+    "parallel_classes": 4,
+    "points": 9
+  },
+  "claim_boundary": "Exact finite permutation geometry; no physical identification follows.",
+  "direction_action": {
+    "element_order_census": {"1": 1, "2": 9, "3": 8, "4": 6},
+    "identification": "S4 = PGL(2,3)",
+    "image_order": 24,
+    "kernel_order": 18,
+    "kernel_structure": "3^2:2",
+    "meaning": "the four S4 letters are the four affine directions / parallel classes"
+  },
+  "input": {
+    "degree": 9,
+    "group_order": 432,
+    "source": "Pass7501-7508 restriction of hash-pinned ATLAS Monster H generators"
+  },
+  "monster_coupling": "The common S4 in (3^2:2 x O8+(3)).S4 couples the four AG(2,3) direction classes to the D4(3) outer/triality coordinate on the 3360-sheet.",
+  "schema": "w33.pass7509_7516.monster_hesse_direction_coupling.v1",
+  "status": "PASS",
+  "translation_socle": {"order": 9, "regular": true, "structure": "C3^2"}
+}
