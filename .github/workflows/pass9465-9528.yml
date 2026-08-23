@@ -1,0 +1,37 @@
+name: Pass 9465-9528 Eight-Front Verification
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass9465_9472_f9_unitary_centralizer_rigidity.py'
+      - 'analysis/w33_pass9473_9480_suzuki_sign_r_transport_obstruction.py'
+      - 'analysis/w33_pass9481_9488_rank24_centralizer_fingerprint.py'
+      - 'analysis/w33_pass9489_9496_all_rung_e8_root_shadow_induction.py'
+      - 'analysis/w33_pass9497_9504_holonet_transfer_noise_discriminator.py'
+      - 'analysis/w33_pass9505_9512_double_minus_orthogonal_polarization.py'
+      - 'analysis/w33_pass9513_9520_hj_qminus_252_bridge_falsifier.py'
+      - 'analysis/w33_pass9521_9528_selector_information_budget.py'
+      - '.github/workflows/pass9465-9528.yml'
+  workflow_dispatch:
+
+jobs:
+  verify-eight-fronts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install numpy scipy sympy
+      - run: python analysis/w33_pass9465_9472_f9_unitary_centralizer_rigidity.py
+      - run: python analysis/w33_pass9473_9480_suzuki_sign_r_transport_obstruction.py
+      - run: python analysis/w33_pass9481_9488_rank24_centralizer_fingerprint.py
+      - run: python analysis/w33_pass9489_9496_all_rung_e8_root_shadow_induction.py
+      - run: python analysis/w33_pass9497_9504_holonet_transfer_noise_discriminator.py
+      - run: python analysis/w33_pass9505_9512_double_minus_orthogonal_polarization.py
+      - run: python analysis/w33_pass9513_9520_hj_qminus_252_bridge_falsifier.py
+      - run: python analysis/w33_pass9521_9528_selector_information_budget.py
