@@ -1,0 +1,37 @@
+{
+  "GAP_CTblLib": {
+    "index_20800_maximal_subgroup": "2 x U3(3).2",
+    "order": 24192
+  },
+  "Leech_action": {
+    "point_stabilizer_order": 24192,
+    "rank": 14,
+    "source": "Pass8789-8796",
+    "subdegrees": [1,63,72,126,252,252,378,1512,1512,1512,2016,3024,4032,6048],
+    "unique_transpose_pair_degrees": [1512,1512]
+  },
+  "claim_boundary": "Exact transitive G-set/coset identification from the internally certified action plus published stabilizer/count and CTblLib maximal-subgroup class. No explicit coordinate bijection between Leech six-spaces and H(4) subhexagons is constructed here.",
+  "classical_action": {
+    "Table2_coarse_counts": [1,72,252,2016,63,126,1512,6048,378,3024,3024,252,4032],
+    "count": 20800,
+    "object": "order-2 subhexagons H(2) inside split Cayley hexagon H(4)",
+    "stabilizer": "G2(2).2 = 2 x U3(3).2",
+    "stabilizer_order": 24192
+  },
+  "coarse_refinement": {
+    "Leech_rank14_fused_counts": [1,63,72,126,252,252,378,1512,2016,3024,3024,4032,6048],
+    "matches_Table2_multiset": true,
+    "unresolved": "which one of the two classical 3024 intersection types splits into the oriented 1512+1512 pair"
+  },
+  "degree": 20800,
+  "external_sources": [
+    "https://cage.ugent.be/geometry/Files/305/Jay2.pdf",
+    "https://www.math.rwth-aachen.de/~Thomas.Breuer/ctbllib/ctbltoc/data/G2%284%29.2.html"
+  ],
+  "group": "G2(4):2",
+  "group_order": 503193600,
+  "passes": "9013-9020",
+  "schema": "w33.pass9013_9020.leech20800_h4_subhexagon_weld.v1",
+  "status": "PASS",
+  "theorem": "The 20,800 bare-Leech six-spaces and the 20,800 order-2 subhexagons of H(4) are the same transitive G2(4):2 coset G-set G/H (up to basepoint/conjugate H), with H of order 24,192 and type 2 x U3(3).2. The Leech rank-14 orbital geometry refines the classical 13 intersection types by splitting exactly one size-3024 type into its unique transpose pair of size 1512+1512."
+}
