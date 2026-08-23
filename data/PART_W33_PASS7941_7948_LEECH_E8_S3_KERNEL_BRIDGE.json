@@ -1,0 +1,16 @@
+{
+  "schema":"w33.pass7941_7948.leech_e8_s3_kernel_bridge.v1",
+  "status":"PASS",
+  "passes":"7941-7948",
+  "Leech_controller_order":46656,
+  "canonical_three_component_quotient":"S3",
+  "Leech_S3_kernel_order":7776,
+  "component_stabilizer_order":15552,
+  "E8_A2_stabilizer":{"order":311040,"structure":"S3 x W(E6)","W_E6_order":51840},
+  "largest_order_dividing_both_full_controllers":15552,
+  "after_aligning_S3":{"kernel_gcd":2592,"Leech_kernel":"3 x 2592","E8_kernel":"20 x 2592"},
+  "normal_C3_no_go":"The normal M2(F3) tensor 3^4 has no invariant projective line under its SL2(3)xSL2(3) Levi action (projective orbits 16+24), so no canonical normal C3 quotient exists there.",
+  "next_exact_target":"construct an actual order-2592 subgroup/action on both kernels",
+  "theorem":"The natural Leech reduction is a canonical S3 quotient from the three K_{3,3,3,3} components. Aligning it with W(A2)=S3 isolates 2592 as the exact common-order kernel target; stabilizing one Leech component gives order 15552, the gcd of the full controller orders.",
+  "claim_boundary":"Exact quotient/order obstruction; no common order-2592 subgroup is claimed yet."
+}
