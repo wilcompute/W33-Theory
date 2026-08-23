@@ -1,0 +1,10 @@
+{
+  "V20_bridge": "The 27 columns are exactly the intrinsic 27 ten-D4/dual-GQ lines used in Pass7184. Over F2 their span is [45,21,5]=<1>+V20 and the even subcode is the canonical tritangent V20. Over R the centered columns and centered Steinberg line operators are the same 20D W(E6) coefficient module, with Gram forms differing by 23/4.",
+  "centered_projector_gram_formula": "K = (91/16) I + (1/48) A_45 - (19/144) J",
+  "centered_projector_spectrum": {"0":1,"23/4":20,"45/8":24},
+  "claim_boundary": "Exact fusion-frame/operator/module theorem. Pass7184 remains the prior source for the binary V20 identification.",
+  "fusion_frame": {"ambient_dimension":81,"classification":"chordally biangular tight fusion frame (two chordal distances), with two principal-angle patterns rather than equi-isoclinic","exact_tight_identity":"sum_i Q_i = 80 P_HodgeNumerator, where projector_i=Q_i/15360 and H1_projector=P_HodgeNumerator/640","index_graph":"the canonical dual-GQ(4,2) point graph SRG(45,12,3,3)","principal_cosines_adjacent":["1/3","1/3","1/3","0","0","0"],"principal_cosines_nonadjacent":["1/4","1/4","1/4","1/4","1/4","0"],"subspace_dimension":6,"subspaces":45,"tight_bound":"10/3"},
+  "line_incidence": {"F2_rank":21,"centered_line_operator_gram":"L^T L = (69/2) E20 = (23/4) Y^T Y","centered_real_incidence_gram":"Y^T Y = 6 E20","even_binary_image_rank":20,"line_graph_spectrum":"10^1 + 1^20 + (-5)^6","matrix":"B in Z^{45x27}","real_rank":21},
+  "literature_boundary": "The standard descriptive term is a chordally biangular tight fusion frame. No external source located an independently named/classified 45xGr(6,81) object with these exact principal-angle patterns; the exact E6/W33 realization is established here rather than inferred from nomenclature.",
+  "passes":"7621-7628","schema":"w33.pass7621_7628.fusionframe_v20_transport.v1","status":"PASS"
+}
