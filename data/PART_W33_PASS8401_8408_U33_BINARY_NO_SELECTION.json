@@ -1,0 +1,27 @@
+{
+  "schema": "w33.pass8401_8408.u33_binary_no_selection.v1",
+  "status": "PASS",
+  "passes": "8401-8408",
+  "ambient": "Leech W(5,2) = six-dimensional symplectic F2 carrier",
+  "Pauli_triangles": 336,
+  "embedded_W32_sectors": 336,
+  "geometric_identification": "closed anticommuting triangles = nonzero vectors of nondegenerate F2^2 = projective non-isotropic lines",
+  "Sp6(2)": {
+    "order": 1451520,
+    "degree336_stabilizer_order": 4320,
+    "stabilizer": "S3 x S6"
+  },
+  "U3(3)": {
+    "order": 6048,
+    "published_action": "transitive on all non-isotropic lines at q=2",
+    "orbit_size": 336,
+    "triangle_stabilizer_order": 18
+  },
+  "external_sources": [
+    "https://brauer.maths.qmul.ac.uk/Atlas/v3/clas/S62/",
+    "https://brauer.maths.qmul.ac.uk/Atlas/v3/clas/U33/",
+    "Some Two-Character Sets: q=2 index-two U ~= PSU(3,3) remains transitive on non-isotropic lines (citing Cooperstein orbit results)"
+  ],
+  "theorem": "The U3(3) controller associated with the pure order-8 Leech rung is transitive on the entire 336-set of closed anticommuting Pauli triangles / embedded W(3,2) sectors. Hence it does not canonically select an E8 two-qubit sector.",
+  "claim_boundary": "Transitivity is a published finite-group action theorem combined with the exact Pass8241 object identification. This is a no-selection result; no physical subsystem claim follows."
+}
