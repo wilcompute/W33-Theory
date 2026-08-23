@@ -1,0 +1,125 @@
+{
+  "blocked_on": "a fixed-point-free order-9 element of Co0 = Aut(Leech). With it the rank-24 rung is decided; without it the tower stops at a theorem about where the answer must live",
+  "boundary": "THEOREM-SHAPED but resting on a standard fact (Aut respects non-isomorphic indecomposable summands): of the seven Niemeier lattices passing the uniformity census, three cannot host the element at all, three can only host it as a block permutation giving a DIAGONAL, and LEECH is the only one that could carry a non-diagonal rank-24 geometry. Leech remains UNTESTED",
+  "conclusion": "Leech is the ONLY Niemeier lattice that can carry a non-diagonal rank-24 geometry; the alternatives are ruled out, not merely harder",
+  "criterion": {
+    "basis": "Aut(L1 (+) L2) preserves non-isomorphic indecomposable summands, so a fixed-point-free element restricts to each summand",
+    "demand": "deg(Phi_d) must divide EACH summand rank, not merely 24",
+    "loophole": "repeated summands may be permuted -- which yields a diagonal"
+  },
+  "m3_tell": {
+    "diagnostic": "if a fibration's form factors through a PROPER POWER of the element, the rung is degenerate",
+    "observation": "on E8^3 the working form factored through M^3 = J(+)J(+)J",
+    "value": "a one-line check that would have flagged E8^3 before building the graph"
+  },
+  "not_done": [
+    "Co0 generators",
+    "K12 built",
+    "alpha(W(3,9))",
+    "q=11 at 68",
+    "Coolsaet unread"
+  ],
+  "spread_surjectivity": {
+    "caveat": "sampling draws random words in the simple reflections, a biased measure on W(E8); an unreached spread may be rare, not excluded. NOT a proof either way",
+    "distinct_reached": 25,
+    "never_reached": 11,
+    "onto": false,
+    "sampled_elements": 400000,
+    "total_spreads": 36
+  },
+  "survivors": [
+    {
+      "d": [
+        9
+      ],
+      "lattice": "D16E8",
+      "summand_ranks": [
+        16,
+        8
+      ],
+      "verdict": "IMPOSSIBLE -- no summand rank divisible by 6"
+    },
+    {
+      "d": [
+        8,
+        13,
+        16
+      ],
+      "lattice": "A17E7",
+      "summand_ranks": [
+        17,
+        7
+      ],
+      "verdict": "IMPOSSIBLE -- no summand can host it"
+    },
+    {
+      "d": [
+        9
+      ],
+      "lattice": "A5^4D4",
+      "summand_ranks": [
+        5,
+        5,
+        5,
+        5,
+        4
+      ],
+      "verdict": "IMPOSSIBLE -- a summand cannot host it"
+    },
+    {
+      "d": [
+        9
+      ],
+      "lattice": "E8^3",
+      "summand_ranks": [
+        8,
+        8,
+        8
+      ],
+      "verdict": "possible but DIAGONAL (block permutation)"
+    },
+    {
+      "d": [
+        8,
+        16
+      ],
+      "lattice": "A6^4",
+      "summand_ranks": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "verdict": "possible but DIAGONAL"
+    },
+    {
+      "d": [
+        9
+      ],
+      "lattice": "A4^6",
+      "summand_ranks": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "verdict": "possible but DIAGONAL"
+    },
+    {
+      "d": [
+        4,
+        8,
+        9,
+        13,
+        16
+      ],
+      "lattice": "Leech",
+      "summand_ranks": [
+        24
+      ],
+      "verdict": "INDECOMPOSABLE -- genuinely rank 24"
+    }
+  ]
+}
