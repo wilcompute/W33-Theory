@@ -1,0 +1,23 @@
+{
+  "schema": "w33.pass7501_7508.b3_reflection_quotient.v1",
+  "status": "PASS",
+  "passes": "7501-7508",
+  "ambient": {
+    "model": "E8/3E8 = Q+(7,3)",
+    "fixed_hyperplane": "r^perp",
+    "singular_points": 364
+  },
+  "object_map": "plus generator X -> U_X=X intersect r^perp, a maximal totally singular 3-space of Q(6,3)",
+  "targets": 1120,
+  "projective_points_per_target": 13,
+  "point_replication": 40,
+  "reflection_pair_law": "X intersect s_r(X)=X intersect r^perp",
+  "adjacency_equivalence": "X meets s_r(Y) in 13 projective points iff U_X meets U_Y in 4 projective points",
+  "dual_polar_graph": "B3(3)",
+  "degree": 39,
+  "distance_distribution": [1,39,351,729],
+  "intersection_array": "{39,36,27;1,4,13}",
+  "transition_rows": [[0,39,0,0],[1,2,36,0],[0,4,8,27],[0,0,13,26]],
+  "correction": "The earlier C3(3) candidate was only an intersection-array match. The explicit reflection-hyperplane construction selects B3(3) objectwise.",
+  "claim_boundary": "Finite E8/orthogonal-polar-space theorem only."
+}
