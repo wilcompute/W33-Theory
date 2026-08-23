@@ -1,0 +1,27 @@
+{
+  "A2_suborbit": 81,
+  "Schlaefli": {
+    "between_two_parts": "K3,3 minus one perfect matching",
+    "nine_tripartition": "9 cocliques of size 3",
+    "parameters": [27, 16, 10, 8]
+  },
+  "H27": {
+    "degree": 8,
+    "distance_spheres": [1, 8, 16, 2],
+    "intersection_array": "{8,6,1;1,3,8}",
+    "spectrum": {"-4": 6, "-1": 8, "2": 12, "8": 1}
+  },
+  "canonical_Schlaefli_fibres": [27, 3],
+  "claim_boundary": "Exact finite graph/intertwiner theorem only; no particle interpretation is assigned.",
+  "edge_partition": "On the same 27 vertices, the complete 9-partite graph K_{3,3,...,3} decomposes edge-disjointly as Schlaefli (degree 16) plus H27 (degree 8).",
+  "nine_packets": 9,
+  "novelty_boundary": "Pass7181/7186 already constructed the Schlaefli 27 and the H27 3-cover of K9 from the E8 A2 shell. New here is their objectwise complementarity produced by the global Steinberg intertwiner: the T-column partition and the scheme-triangle partition meet as 9 K3,3 and force the common 9x3 coordinate system.",
+  "passes": "7629-7636",
+  "points_per_packet": 9,
+  "restricted_T_column_multiplicity": 3,
+  "restricted_T_distinct_columns": 27,
+  "schema": "w33.pass7629_7636.schlaefli_h27_steinberg_complement.v1",
+  "status": "PASS",
+  "theorem": "The E6 minuscule Schlaefli graph and the qutrit H27 Cayley graph are complementary transports on a single canonical nine-triple quotient cut out inside the E8 global A2/Steinberg data.",
+  "two_partition_incidence": "9 disjoint K3,3"
+}
