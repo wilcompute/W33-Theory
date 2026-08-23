@@ -1,0 +1,27 @@
+{
+  "schema": "w33.pass9489_9496.all_rung_e8_root_shadow_induction.v1",
+  "status": "PASS",
+  "passes": "9489-9496",
+  "one_step_action": "L(g)(x0,x1,x2)=(x2,g x0,x1)",
+  "coinvariant_isomorphism": "[(x0,x1,x2)] -> [x0+x1+x2] from coker(I-L(g)) to coker(I-g)",
+  "kernel_proof": "sum((I-L)y)=(I-g)y0. Conversely, if z0+z1+z2=(I-g)t then y=(t,t-z0-z2,t-z0) satisfies (I-L)y=z.",
+  "root_transport": "A root supported in any leaf E8 factor maps under the iterated block-sum isomorphism to exactly its base E8 root class. Therefore every leaf inherits the base six-roots-per-W33-point shadow.",
+  "all_rung_formula": {
+    "rank": "8*3^m",
+    "E8_factors": "3^m",
+    "quotient": "F3^4 = W(3,3)",
+    "visible_points": 40,
+    "roots_per_point": "6*3^m",
+    "total_roots": "240*3^m",
+    "valid_for": "all integers m>=0"
+  },
+  "sample_rows": [
+    {"m":0,"rank":8,"E8_factors":1,"W33_points":40,"roots_per_point":6,"total_roots":240},
+    {"m":1,"rank":24,"E8_factors":3,"W33_points":40,"roots_per_point":18,"total_roots":720},
+    {"m":2,"rank":72,"E8_factors":9,"W33_points":40,"roots_per_point":54,"total_roots":2160},
+    {"m":3,"rank":216,"E8_factors":27,"W33_points":40,"roots_per_point":162,"total_roots":6480},
+    {"m":4,"rank":648,"E8_factors":81,"W33_points":40,"roots_per_point":486,"total_roots":19440}
+  ],
+  "theorem": "For every m>=0, the m-fold cyclotomic 3-cycle lift of the E8 order-three W33 carrier has coinvariant quotient canonically isomorphic to the original F3^4 quotient by total block sum. Every one of its 3^m E8 factors has the same six-to-one root shadow over all 40 W33 points; hence the total fibre is exactly 6*3^m. This is a formal induction, not an extrapolation from four matrices.",
+  "boundary": "This theorem concerns the direct-sum E8^{3^m} cyclotomic lift. At m=2 and beyond these are higher-rank even unimodular root lattices, not rank-24 Niemeier lattices."
+}
