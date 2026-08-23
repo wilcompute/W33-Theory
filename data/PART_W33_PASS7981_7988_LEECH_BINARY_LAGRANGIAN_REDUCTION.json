@@ -1,0 +1,15 @@
+{
+  "schema":"w33.pass7981_7988.leech_binary_lagrangian_reduction.v1",
+  "status":"PASS",
+  "passes":"7981-7988",
+  "outside_box":true,
+  "dependencies":["Pass7333-7340: Leech order4 gives W(11,2)","Pass7341-7348: Leech order8 gives W(5,2)"],
+  "same_operator_relation":"J=M^2 and 1-J=(1-M)(1+M)",
+  "canonical_quotient":"F2^12 -> F2^6",
+  "nilpotent_operator":"N=1+M on Q_J has N^2=0, rank 6, ker N = im N",
+  "lagrangian_kernel":"ker(pi)=im(N) is a 6-dimensional Lagrangian in the 12-dimensional W(11,2) symplectic space",
+  "form_identity":"F_M=N^T F_J",
+  "derived_form":"B_M(pi x,pi y)=B_J(Nx,y)",
+  "theorem":"For the same pure order-8 Leech element, W(5,2) is a canonical Lagrangian reduction of the W(11,2) geometry associated to its square M^2.",
+  "claim_boundary":"Exact algebraic consequence of the verified lattice-quotient forms; no physical claim."
+}
