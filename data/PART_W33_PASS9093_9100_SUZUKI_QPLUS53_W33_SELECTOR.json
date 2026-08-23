@@ -1,0 +1,29 @@
+{
+  "ambient": "vendored ATLAS 2.Suz < Sp(12,3)",
+  "claim_boundary": "Exact finite-module selector theorem. It does not yet show that full 2.Suz has a unique orbit or preferred W33 among the 7,371.",
+  "criterion": "W_A=A direct-sum xA is symplectic-nondegenerate iff C restricted to A is nondegenerate",
+  "passes": "9093-9100",
+  "polarization": {
+    "both_Lagrangian": true,
+    "commutant_dim": 2,
+    "eigenspaces": [6, 6],
+    "outer_x_exchanges_eigenspaces": true
+  },
+  "polarization_compatible_W33": 7371,
+  "schema": "w33.pass9093_9100.suzuki_qplus53_w33_selector.v1",
+  "status": "PASS",
+  "subgroup": "ATLAS-word M12:2",
+  "symmetric_form_C": {
+    "dimension": 6,
+    "identification": "Q+(5,3)",
+    "rank": 6,
+    "singular_projective_points": 130
+  },
+  "theorem": "The exact M12:2 polarization inside the ATLAS 2.Suz six-qutrit module cuts the astronomical W33 subspace census down to 7,371 canonical polarization-compatible candidates, controlled by the orthogonal quadric Q+(5,3).",
+  "two_space_census": {
+    "anisotropic": 2106,
+    "degenerate": 3640,
+    "hyperbolic": 5265,
+    "total": 11011
+  }
+}
