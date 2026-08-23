@@ -1,0 +1,17 @@
+{
+  "schema": "w33.pass8489_8496.e7_pauli_rootpair_bridge.v1",
+  "status": "PASS",
+  "passes": "8489-8496",
+  "E7_roots": 126,
+  "antipodal_root_pairs": 63,
+  "E7_mod2_dimension": 7,
+  "radical_dimension": 1,
+  "symplectic_quotient_dimension": 6,
+  "root_pairs_cover_all_nonzero_quotient_classes": true,
+  "pairing_identity": "(r.s)/4 mod 2 = omega(q(r),q(s))",
+  "closed_nonorthogonal_triangles": 336,
+  "triangles_through_each_point": 16,
+  "reflection_group_on_63_pairs": {"order": 1451520, "identification": "Sp6(2)"},
+  "theorem": "The 63 E7 antipodal root pairs are an explicit coordinatization of the 63 nonzero three-qubit Pauli classes. Their 336 nonorthogonal linear triples are exactly the 336 closed anticommuting Pauli triangles / W(3,2) sectors of the Leech W(5,2) carrier.",
+  "claim_boundary": "Exact lattice-mod-2/finite-symplectic identification; no physical subsystem claim."
+}

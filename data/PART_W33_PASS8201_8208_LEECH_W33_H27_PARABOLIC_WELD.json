@@ -1,0 +1,28 @@
+{
+  "Leech_dependency": "Pass8101-8108: full automorphism group of each 36-Lagrangian component is H27:GL2(3), order 1296",
+  "W33_Aut_order": 51840,
+  "W33_point_stabilizer_order": 1296,
+  "claim_boundary": "Exact finite-group weld. No physical identification follows from the shared controller alone.",
+  "common_controller": "H27:GL2(3)",
+  "common_order": 1296,
+  "old_2592_action": {
+    "O3": "C3^3 (abelian)",
+    "order": 2592,
+    "same_as_H27_parabolic": false,
+    "structure": "AGL2(3) x AGL1(3)"
+  },
+  "passes": "8201-8208",
+  "point_parabolic": {
+    "O3": "H27",
+    "O3_center_order": 3,
+    "O3_derived_order": 3,
+    "O3_element_orders": "1^1+3^26",
+    "O3_order": 27,
+    "four_direction_image": "S4",
+    "quotient": "GL2(3)",
+    "quotient_order": 48
+  },
+  "schema": "w33.pass8201_8208.leech_w33_h27_parabolic_weld.v1",
+  "status": "PASS",
+  "theorem": "The canonical Leech 36-Lagrangian controller is exactly the W33/W(E6) point parabolic H27:GL2(3). The previous order-2592 target was an order-level overreach: the older 2592 E6/F3 action has abelian 3-core and is not this parabolic."
+}

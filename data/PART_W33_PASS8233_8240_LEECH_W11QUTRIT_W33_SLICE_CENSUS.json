@@ -1,0 +1,16 @@
+{
+  "Sp12_3_order": 14395932257291877030764312963579904000,
+  "W33_slices": 2110666092277743,
+  "ambient": "W(11,3) = six-qutrit symplectic geometry on F3^12",
+  "canonicality": "The bare W(11,3) carrier selects no preferred W33 slice; an E8/Leech bridge requires additional lattice or controller data.",
+  "claim_boundary": "Exact classical symplectic orbit count; no physical six-qutrit implementation is inferred.",
+  "dependency": "Parallel Pass8030-8040: Leech fixed-point-free order-3 quotient gives W(11,3); no pure Phi_9^4 class exists in Co0",
+  "outside_box": true,
+  "passes": "8233-8240",
+  "schema": "w33.pass8233_8240.leech_w11qutrit_w33_slice_census.v1",
+  "slice": "W(3,3) on a nondegenerate symplectic F3^4",
+  "stabilizer": "Sp4(3) x Sp8(3)",
+  "stabilizer_order": 6820440513937481728000,
+  "status": "PASS",
+  "theorem": "The Leech six-qutrit carrier contains exactly 2,110,666,092,277,743 W33 subgeometries, forming one Sp12(3) orbit. Co0 failure of a pure Phi9^4 rung is therefore a failure of canonical cyclotomic descent, not absence of W33 subspaces."
+}

@@ -1,0 +1,33 @@
+{
+  "atlas": {
+    "GO4plus3_identification": "W(F4)",
+    "GO4plus3_order": 1152,
+    "O8plus3_S4_order": 118852315545600,
+    "O8plus3_simple_order": 4952179814400,
+    "Out": "S4"
+  },
+  "claim_boundary": "Finite orthogonal/triality carrier theorem. Literal ATLAS vertex numbers are a separate coordinate certificate and are not asserted here.",
+  "orthogonal_orbit": {
+    "Qplus33_residues_per_triality_type": 29852550,
+    "three_type_orbit": 89557650
+  },
+  "passes": "8309-8316",
+  "projective_E8_comparison": {
+    "index_in_effective_point_stabilizer": 6,
+    "index_in_full_3360_residue_stabilizer": 12,
+    "residue_orbit": 3150,
+    "residue_stabilizer_order": 110592
+  },
+  "residue_stabilizer": {
+    "effective_on_16_point_type_vertices": 663552,
+    "full_3360_action_order": 1327104,
+    "geometric_source": "(GO4+(3) x GO4+(3)) on W perp W^perp, with the full triality type-stabilizer retaining one extra kernel involution on point vertices"
+  },
+  "schema": "w33.pass8309_8316.monster_local_qplus33_stabilizer.v1",
+  "sources": [
+    "ATLAS O8+(3): order 4952179814400, Out=S4",
+    "ATLAS W(F4)=GO4+(3): order 1152"
+  ],
+  "status": "PASS",
+  "theorem": "The explicit 16-point Q+(3,3) residue lies in the unique classical orbit of plus nondegenerate 4-spaces. There are 29,852,550 per triality type and 89,557,650 over all three types. Its setwise stabilizer in O8+(3):S4 has order 1,327,104=1152^2; the effective point-type action has order 663,552. The current projective-E8 residue stabilizer is an actual subgroup of index 12 in the full triality-carrier stabilizer."
+}

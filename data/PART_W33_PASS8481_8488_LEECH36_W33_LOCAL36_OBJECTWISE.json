@@ -1,0 +1,11 @@
+{
+  "schema": "w33.pass8481_8488.leech36_w33_local36_objectwise.v1",
+  "status": "PASS",
+  "passes": "8481-8488",
+  "Leech_component": {"vertices": 36, "degree": 11, "fibres": "12 x 3", "adjacency": "mixed Lagrangians intersect in 9 elements"},
+  "W33_target": {"vertices": "36 W33 lines not through fixed point p", "degree": 11, "fibres": "12 neighbours of p x 3 lines"},
+  "spectrum": "11^1 + 2^20 + (-1)^3 + (-4)^12",
+  "explicit_colored_graph_isomorphism": true,
+  "theorem": "One mixed-Leech 36-component is objectwise the local W33 line geometry away from a point, including its canonical 12x3 sheet system. This upgrades the common H27:GL2(3) controller to a literal incidence/fibre weld.",
+  "claim_boundary": "Exact finite combinatorial/controller identification; no physical identification."
+}

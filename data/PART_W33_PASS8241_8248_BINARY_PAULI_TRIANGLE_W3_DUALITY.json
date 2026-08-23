@@ -1,0 +1,16 @@
+{
+  "W3_copies": 336,
+  "ambient": "W(5,2) / three-qubit Pauli classes",
+  "bijection": true,
+  "claim_boundary": "Exact finite symplectic/Pauli-class statement; no physical subsystem factorization is inferred.",
+  "closed_anticommuting_triangles": 336,
+  "closure": "each noncommuting pair {a,b} belongs to the unique linear triangle {a,b,a+b}",
+  "noncommuting_edges": 1008,
+  "orthogonal_complement": "each triangle spans a nondegenerate F2^2; its perp is a nondegenerate F2^4 carrying W(3,2)",
+  "outside_box": true,
+  "passes": "8241-8248",
+  "schema": "w33.pass8241_8248.binary_pauli_triangle_w3_duality.v1",
+  "status": "PASS",
+  "theorem": "The 336 embedded W(3,2) sectors of the Leech W(5,2) carrier are canonically dual to the 336 closed anticommuting Pauli triangles {a,b,a+b}. Selecting a two-qubit symplectic sector is exactly selecting one such closed anticommuting triangle.",
+  "triangles_through_each_point": 16
+}

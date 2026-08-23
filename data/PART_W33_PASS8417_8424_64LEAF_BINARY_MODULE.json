@@ -1,0 +1,22 @@
+{
+  "schema": "w33.pass8417_8424.64leaf_binary_module.v1",
+  "status": "PASS",
+  "passes": "8417-8424",
+  "quotient_order": 216,
+  "quotient_identification": "S3^3",
+  "conjugation_module": "F2^8 = C2^8",
+  "proper_nonzero_submodules": 2,
+  "decomposition_dimensions": [4, 4],
+  "irreducible": true,
+  "frozen_coordinate_blocks": [[0,1,2,5],[3,4,6,7]],
+  "each_4D_module": {
+    "image_order": 36,
+    "image_identification": "S3 x S3",
+    "kernel_order": 6,
+    "kernel_identification": "S3"
+  },
+  "three_factor_recovery": "the two module kernels are disjoint commuting S3 factors; the centralizer of their product is the third S3 factor",
+  "tensor_description": "after labeling the kernel factors S3_1,S3_2 and the common active factor S3_3, M4 ~= V2(S3_2) tensor V2(S3_3) and M4_prime ~= V2(S3_1) tensor V2(S3_3)",
+  "theorem": "The C2^8 residue layer is two irreducible four-dimensional tensor channels sharing one S3 triality factor. It is not a sum of four natural two-dimensional S3 modules.",
+  "claim_boundary": "Exact binary representation theorem for the finite 64-leaf residue controller; the shared S3 is an algebraic coupling channel, not a physical interaction claim."
+}

@@ -1,0 +1,19 @@
+{
+  "schema": "w33.pass8561_8568.e7_binary_selection_nogo.v1",
+  "status": "PASS",
+  "passes": "8561-8568",
+  "E7_root_pairs": 63,
+  "closed_A2_rootpair_triangles": 336,
+  "triangles_through_each_pair": 16,
+  "weyl_projective_action": {
+    "order": 1451520,
+    "identification": "Sp6(2)",
+    "triangle_orbits": [336],
+    "triangle_stabilizer_order": 4320,
+    "triangle_stabilizer_derived_order": 1080,
+    "stabilizer_identification": "Sp4(2) x Sp2(2) ~= S6 x S3"
+  },
+  "generator_order_growth": [2,4,8,48,384,3840,23040,1451520],
+  "theorem": "The full projective E7 Weyl symmetry is transitive on the 336 E7 A2 root-pair triangles, hence on the 336 W(3,2) sectors / closed anticommuting Pauli triangles of Pass8489. Lifting Leech W(5,2) to the exact E7 root model supplies no canonical binary sector selector.",
+  "claim_boundary": "Exact E7 finite-root/symplectic no-selection theorem; no physical subsystem claim."
+}
