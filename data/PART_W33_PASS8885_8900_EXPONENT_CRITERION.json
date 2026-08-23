@@ -180,8 +180,9 @@
       5,
       8
     ],
+    "prior_art_correction": "Pass 8737-8760 called the missing 16 an empirical surprise; Pass 1039 (2026-07-26) had already listed the regular orders of W(E8) without 16. The corpus knew; I had not searched",
     "sixteen_excluded": true,
-    "why_16_fails": "phi(16) = 8 divides the rank, but 16 divides no E8 degree, so no 16-regular element exists -- which is the empirical gap that forced the rank-32 tower to use a 4-cycle"
+    "why_16_fails": "phi(16) = 8 divides the rank, but 16 divides no E8 degree, so no 16-regular element exists"
   },
   "not_done": [
     "the same census for non-root lattices, e.g. Leech",
@@ -189,6 +190,11 @@
     "alpha(W(3,9))",
     "K12 built"
   ],
+  "prior_art": {
+    "new_here": "the EXPONENT-coprimality criterion for PURE Phi_d support; the side conditions turning purity into a geometry; the census over every root system rather than E8 alone; and E8's uniqueness for qutrits",
+    "pass1039_springer_tower": "analysis/w33_pass1039_springer_tower.g (2026-07-26) already states Springer's centraliser law for W(E8), lists the regular orders 2,3,4,5,6,8,10,12 against the degrees, and names the d=3 and d=4 centralisers G32 and G31",
+    "so_not_new": "the regular-element framework itself"
+  },
   "qutrit_uniqueness": {
     "classical_ranks_coprime_to_3": {
       "A": [

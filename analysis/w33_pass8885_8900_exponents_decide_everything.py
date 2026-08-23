@@ -20,6 +20,22 @@ Searching for a reason led to Vogel's universal Lie algebra, whose parameters fo
 all E8 degrees, with t the largest. That is a lead, not a theorem, and it points at the
 degrees; Springer's theory of regular elements does the rest.
 
+
+PRIOR ART, FOUND AT THE LOGGING STEP AND CITED HERE. analysis/w33_pass1039_springer_tower.g
+(2026-07-26) already applies Springer's theorem to W(E8): it states the centraliser law
+|C_W(regular w of order d)| = product of the degrees divisible by d, lists the regular
+orders d = 2,3,4,5,6,8,10,12 against the degrees 2,8,12,14,18,20,24,30, and names the d=3
+and d=4 centralisers as the Shephard-Todd groups G32 and G31. So the regular-element
+framework is NOT new here, and one of my claims must be walked back: Pass 8737-8760 called
+the absence of an order-16 element "an empirical surprise", but Pass 1039's list already
+excluded 16 a month earlier. I did not search for it before running the brute-force passes.
+The surprise was mine, not the corpus's.
+
+WHAT IS NEW HERE, after that correction: the EXPONENT-coprimality criterion (Pass 1039 works
+with regular orders and centraliser orders, not with which d give a PURE Phi_d
+characteristic polynomial); the side conditions that turn purity into a geometry; the census
+across EVERY root system rather than E8 alone; and the resulting uniqueness of E8 for qutrits.
+
     py -3 analysis/w33_pass8885_8900_exponents_decide_everything.py
 """
 
@@ -135,8 +151,11 @@ def main() -> int:
           f"E8 degree)")
     print("""
     The criterion reproduces the brute-force result exactly, INCLUDING the absence of 16 --
-    the gap that forced the rank-32 tower to reach order 16 through a 4-cycle instead. That
-    gap was an empirical surprise at Pass 8737-8760; here it is a consequence.""")
+    the gap that forced the rank-32 tower to reach order 16 through a 4-cycle instead.
+    HONESTY CORRECTION: Pass 8737-8760 called that gap an empirical surprise. It should not
+    have been. Pass 1039 listed the regular orders of W(E8) a month earlier and 16 is not
+    among them, so the corpus already excluded it and I had not searched. The criterion below
+    explains the gap; Pass 1039 had already predicted it.""")
 
     print("\n  PASS 8891 -- THE CENSUS\n")
     print(f"      {'type':>5s} {'rank':>4s} {'det':>4s} | {'d':>3s} {'k':>3s} {'p':>3s} "
@@ -216,6 +235,17 @@ def main() -> int:
             "predicts d = 2,3,4,5,8 and no 16 -- exactly the brute-search result. Censused "
             "over every root system: E8 is the UNIQUE one with a qutrit geometry of content, "
             "a second independent proof that W(3,3) is E8-native"),
+        "prior_art": {
+            "pass1039_springer_tower": ("analysis/w33_pass1039_springer_tower.g "
+                                        "(2026-07-26) already states Springer's centraliser "
+                                        "law for W(E8), lists the regular orders "
+                                        "2,3,4,5,6,8,10,12 against the degrees, and names the "
+                                        "d=3 and d=4 centralisers G32 and G31"),
+            "so_not_new": "the regular-element framework itself",
+            "new_here": ("the EXPONENT-coprimality criterion for PURE Phi_d support; the "
+                         "side conditions turning purity into a geometry; the census over "
+                         "every root system rather than E8 alone; and E8's uniqueness for "
+                         "qutrits")},
         "vogel_lead": {
             "observation": ("for E6, E7, E8 the Vogel parameters (|alpha|, beta, gamma) are "
                             "all degrees and t = alpha+beta+gamma is the largest degree, the "
@@ -236,9 +266,11 @@ def main() -> int:
                        "agree": bool(pred == BRUTE_FOUND),
                        "sixteen_excluded": bool(16 not in pred),
                        "why_16_fails": ("phi(16) = 8 divides the rank, but 16 divides no E8 "
-                                        "degree, so no 16-regular element exists -- which is "
-                                        "the empirical gap that forced the rank-32 tower to "
-                                        "use a 4-cycle")},
+                                        "degree, so no 16-regular element exists"),
+                       "prior_art_correction": ("Pass 8737-8760 called the missing 16 an "
+                                               "empirical surprise; Pass 1039 (2026-07-26) had "
+                                               "already listed the regular orders of W(E8) "
+                                               "without 16. The corpus knew; I had not searched")},
         "census": census,
         "qutrit_uniqueness": {
             "classical_ranks_coprime_to_3": cls,
