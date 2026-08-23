@@ -1,0 +1,22 @@
+{
+  "action": {
+    "degree": 416,
+    "group": "G2(4):2",
+    "point_stabilizer": "J2:2",
+    "rank": 3,
+    "subdegrees": [1, 100, 315]
+  },
+  "boundary": "Exact permutation-action block argument using the repo-certified rank-3 subdegrees 1+100+315=416.",
+  "consequence": "Any genuine 13-state selector must break full G2(4):2 symmetry, live on a different derived object, or use extra structure rather than a block system of the rank-3 vertex action.",
+  "passes": "9893-9900",
+  "proof": "If B is a block containing alpha and h fixes alpha, then hB is another block containing alpha, hence hB=B. Thus B is a union of G_alpha-suborbits. Rank 3 gives only subdegrees 1,100,315, so a basepoint block has size 1,101,316,or416, never32.",
+  "proposed_13_state_quotient": {
+    "allowed_block_sizes_containing_basepoint": [1, 101, 316, 416],
+    "exists_as_G2_equivariant_block_system": false,
+    "number_of_blocks": 13,
+    "required_block_size": 32
+  },
+  "schema": "w33.pass9893_9900.thirteen_state_rank3_block_no_go.v1",
+  "status": "PASS",
+  "theorem": "The numerical gcd=13 from Pass9773-9780 does not lift to a full-G2(4):2-equivariant 13-state quotient of the 416 Hall-Janko/G2 vertices. The rank-3 action has no 32-point block."
+}
