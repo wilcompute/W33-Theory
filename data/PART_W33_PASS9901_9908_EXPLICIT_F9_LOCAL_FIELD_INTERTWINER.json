@@ -1,0 +1,33 @@
+{
+  "F9_model": {
+    "K": "Tr_F9/F3(-i sum_j z_j conjugate(w_j))",
+    "R": "multiplication by i: (a,b)->(-b,a)",
+    "dimension_over_F3": 2,
+    "field": "F3[i]/(i^2+1)",
+    "one_coordinate_K_matrix": [[0, 1], [2, 0]],
+    "six_coordinate_space": "F9^6 = F3^12"
+  },
+  "actual_glue_basis": {
+    "J0": "[[0,I6],[-I6,0]]",
+    "basis_rows": "P=[G; G R]",
+    "identities": ["P K P^T = J0", "P R = J0 P"],
+    "meaning": "The actual glue (K,R) is explicitly transported to the standard F9^6 trace-Hermitian phase space by the row basis P.",
+    "rank": 12
+  },
+  "boundary": "The finite-module intertwiner is explicit and exact. The local-field quotient statement uses the standard unramified/totally-ramified compositum and the Eisenstein polynomial above. This does not yet identify an integral Niemeier lattice with an O_L lattice before reduction mod 3.",
+  "local_field": {
+    "L": "Q3(i,zeta_9)",
+    "associated_graded": "six copies of F9",
+    "degree_over_Q3": 12,
+    "mod_3_relation": "pi^6=0",
+    "ramification_index": 6,
+    "residue_quotient": "O_L/3 O_L ~= F9[pi]/(pi^6)",
+    "uniformizer": "pi=1-zeta_9",
+    "uniformizer_polynomial": "pi^6 - 6 pi^5 + 15 pi^4 - 21 pi^3 + 18 pi^2 - 9 pi + 3",
+    "unramified_degree": 2
+  },
+  "passes": "9901-9908",
+  "schema": "w33.pass9901_9908.explicit_f9_local_field_intertwiner.v1",
+  "status": "PASS",
+  "theorem": "The transverse Niemeier glue phase space is not merely abstractly F9^6: the explicit basis P=[G;GR] simultaneously sends its actual alternating form and complex structure to the standard trace-Hermitian F9 model. The same six F9 coordinates are the coefficient layers of O_{Q3(i,zeta9)}/3 via pi=1-zeta9."
+}
