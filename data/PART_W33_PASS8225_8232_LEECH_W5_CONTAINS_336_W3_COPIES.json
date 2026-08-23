@@ -1,0 +1,18 @@
+{
+  "Sp6_2_order": 1451520,
+  "ambient": "W(5,2) on F2^6 / 63 projective points",
+  "canonicality": "Sp6(2) is transitive on all 336 copies, so the bare Leech W(5,2) carrier selects no distinguished E8 W(3,2). An objectwise E8-in-Leech identification requires extra lattice/controller data.",
+  "claim_boundary": "Exact finite symplectic geometry; no specific E8 sublattice of the Leech lattice is asserted.",
+  "construction": "orthogonal complements of the 336 nondegenerate symplectic 2-planes in F2^6",
+  "copies": 336,
+  "dependency": "Parallel Pass8022-8029: actual Leech W(23,2)->W(11,2)->W(5,2) tower",
+  "orbit_index": 336,
+  "pairwise_point_intersections": {"3": 48720, "7": 7560},
+  "passes": "8225-8232",
+  "schema": "w33.pass8225_8232.leech_w5_contains_336_w3_copies.v1",
+  "stabilizer": "Sp4(2) x Sp2(2)",
+  "stabilizer_order": 4320,
+  "status": "PASS",
+  "subgeometry": "W(3,2) on a nondegenerate F2^4 / 15 points",
+  "theorem": "The three-qubit Leech quotient contains exactly 336 two-qubit W(3,2) subgeometries, one Sp6(2) orbit. Thus E8 W(3,2) is abstractly embeddable but not canonically selected by the Leech symplectic quotient alone."
+}
