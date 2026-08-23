@@ -1,0 +1,10 @@
+{
+  "lo": 7621,
+  "hi": 7700,
+  "lane": "Sage",
+  "track": "steinberg_e6_h27_coherent_frontier",
+  "topic": "Promote verified Steinberg/E6/H27 producers; classify the 45 rank-6 projector geometry; decompose the 360 coherent configuration; algebraize the Sp6(2)->H27 bridge; build the explicit V20 intertwiner; and execute three independent outside-box probes",
+  "reserved": "2026-08-22",
+  "status": "RESERVED_ACTIVE",
+  "depends_on": "Pass7171-7186, Pass7401-7472, Sage Pass7501-7556 file/schema results, and current master through 99d0dce"
+}
