@@ -1,0 +1,31 @@
+{
+  "Fi23_action": {
+    "degree": 137632,
+    "permutation_character": "1 + 30888 + 106743",
+    "point_stabilizer": "O8+(3):S3",
+    "rank": 3,
+    "subdegrees": [1,28431,109200]
+  },
+  "claim_boundary": "ATLAS subgroup/action data plus exact finite arithmetic. No claim that W33 generates Fi23, and no physical interpretation of -81.",
+  "external_source": "https://brauer.maths.qmul.ac.uk/Atlas/v3/permrep/F23G1-p137632B0",
+  "outer_choice": {
+    "S3_point_stabilizers_containing_it": 2,
+    "ambient": "S4",
+    "canonical": false,
+    "fixed_E8_outer_image": "a transposition"
+  },
+  "passes": "7613-7620",
+  "projective_E8_port": {
+    "chain": "O8+(2):2 < O8+(3):S3 < Fi23",
+    "index_factorization": "3^8 * 13",
+    "index_in_O8p3S3": 85293
+  },
+  "rank3_orbital_srg": {
+    "parameters": [137632,28431,6030,5832],
+    "spectrum": {"-81":106743,"279":30888,"28431":1}
+  },
+  "schema": "w33.pass7613_7620.fi23_triality_port.v1",
+  "status": "PASS",
+  "steinberg_spectral_echo": "The negative rank-3 eigenvalue is exactly -81, the negative of the W33 H1/Steinberg dimension. This is an exact equality but no representation identification is inferred from the number alone.",
+  "theorem": "The same D4(3) triality carrier supporting the Monster O8+(3):S4 port has an O8+(3):S3 subport which occurs as the point stabilizer in the ATLAS rank-3 Fi23 action. A fixed projective-E8 outer C2 lies in exactly two such S3 point stabilizers, so the Fi23 port exists but is two-valued rather than canonical."
+}
