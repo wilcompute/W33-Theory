@@ -1,0 +1,15 @@
+{
+  "schema": "w33.pass9085_9092.leech_hj_suzuki_double_cover.v1",
+  "status": "PASS",
+  "passes": "9085-9092",
+  "outside_box": true,
+  "Hall_Janko_copies_in_Leech20800": 416,
+  "HJ_copy_Gset": "G2(4):2 / J2:2, degree 416",
+  "incidence_flags": 41600,
+  "six_spaces_per_HJ": 100,
+  "HJ_copies_through_each_six_space": 2,
+  "double_cover": "The Hall-Janko incidence flag set has size 41,600 and projects 2-to-1 onto the 20,800 Leech six-spaces.",
+  "Suzuki_local_bridge": "G2(4)/J2 also has degree 416, the local 416-neighbor carrier in the Suzuki graph SRG(1782,416,100,96).",
+  "anti_numerology_boundary": "The cyclotomic rooted-square-root carrier also has cardinality 41,600, but no objectwise equivariant identification with this Hall-Janko incidence cover is claimed.",
+  "theorem": "There are exactly 416 Hall-Janko 100-sets in the Leech 20,800 carrier; every six-space lies in exactly two, and the 416 Hall-Janko-copy carrier is the Suzuki-tower local G2(4):2/J2:2 coset geometry."
+}
