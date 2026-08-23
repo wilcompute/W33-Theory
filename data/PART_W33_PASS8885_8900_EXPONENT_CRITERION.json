@@ -1,0 +1,300 @@
+{
+  "boundary": "THE EXPONENT CRITERION: a Weyl group element has pure Phi_d characteristic polynomial exactly when d is coprime to every exponent; then k = rank/phi(d), and a nondegenerate symplectic geometry W(k-1,p) follows when k is even, p = Phi_d(1) is prime, and p does not divide det(L). Controlled on E8, where it predicts d = 2,3,4,5,8 and no 16 -- exactly the brute-search result. Censused over every root system: E8 is the UNIQUE one with a qutrit geometry of content, a second independent proof that W(3,3) is E8-native",
+  "census": {
+    "B10": {
+      "det": 1,
+      "geometries": [
+        {
+          "d": 2,
+          "geometry": "W(9,2)",
+          "k": 10,
+          "p": 2,
+          "qudits": 5
+        }
+      ],
+      "rank": 10
+    },
+    "B2": {
+      "det": 1,
+      "geometries": [
+        {
+          "d": 2,
+          "geometry": "W(1,2)",
+          "k": 2,
+          "p": 2,
+          "qudits": 1
+        }
+      ],
+      "rank": 2
+    },
+    "B4": {
+      "det": 1,
+      "geometries": [
+        {
+          "d": 2,
+          "geometry": "W(3,2)",
+          "k": 4,
+          "p": 2,
+          "qudits": 2
+        },
+        {
+          "d": 4,
+          "geometry": "W(1,2)",
+          "k": 2,
+          "p": 2,
+          "qudits": 1
+        }
+      ],
+      "rank": 4
+    },
+    "B6": {
+      "det": 1,
+      "geometries": [
+        {
+          "d": 2,
+          "geometry": "W(5,2)",
+          "k": 6,
+          "p": 2,
+          "qudits": 3
+        }
+      ],
+      "rank": 6
+    },
+    "B8": {
+      "det": 1,
+      "geometries": [
+        {
+          "d": 2,
+          "geometry": "W(7,2)",
+          "k": 8,
+          "p": 2,
+          "qudits": 4
+        },
+        {
+          "d": 4,
+          "geometry": "W(3,2)",
+          "k": 4,
+          "p": 2,
+          "qudits": 2
+        },
+        {
+          "d": 8,
+          "geometry": "W(1,2)",
+          "k": 2,
+          "p": 2,
+          "qudits": 1
+        }
+      ],
+      "rank": 8
+    },
+    "E8": {
+      "det": 1,
+      "geometries": [
+        {
+          "d": 2,
+          "geometry": "W(7,2)",
+          "k": 8,
+          "p": 2,
+          "qudits": 4
+        },
+        {
+          "d": 3,
+          "geometry": "W(3,3)",
+          "k": 4,
+          "p": 3,
+          "qudits": 2
+        },
+        {
+          "d": 4,
+          "geometry": "W(3,2)",
+          "k": 4,
+          "p": 2,
+          "qudits": 2
+        },
+        {
+          "d": 5,
+          "geometry": "W(1,5)",
+          "k": 2,
+          "p": 5,
+          "qudits": 1
+        },
+        {
+          "d": 8,
+          "geometry": "W(1,2)",
+          "k": 2,
+          "p": 2,
+          "qudits": 1
+        }
+      ],
+      "rank": 8
+    },
+    "F4": {
+      "det": 4,
+      "geometries": [
+        {
+          "d": 3,
+          "geometry": "W(1,3)",
+          "k": 2,
+          "p": 3,
+          "qudits": 1
+        }
+      ],
+      "rank": 4
+    },
+    "G2": {
+      "det": 3,
+      "geometries": [
+        {
+          "d": 2,
+          "geometry": "W(1,2)",
+          "k": 2,
+          "p": 2,
+          "qudits": 1
+        }
+      ],
+      "rank": 2
+    }
+  },
+  "criterion": {
+    "side_conditions": [
+      "k even (a symplectic form needs even dimension)",
+      "p prime, i.e. d a prime power",
+      "p does not divide det(L), or the form degenerates"
+    ],
+    "statement": "a d-regular element has eigenvalues zeta_d^(-m_i) over the exponents, so its char poly is pure Phi_d^k exactly when gcd(d, m_i) = 1 for every exponent m_i",
+    "then": "k = rank/phi(d), geometry W(k-1,p) with p = Phi_d(1)"
+  },
+  "e8_control": {
+    "agree": true,
+    "found_by_brute_search": [
+      2,
+      3,
+      4,
+      5,
+      8
+    ],
+    "predicted": [
+      2,
+      3,
+      4,
+      5,
+      8
+    ],
+    "sixteen_excluded": true,
+    "why_16_fails": "phi(16) = 8 divides the rank, but 16 divides no E8 degree, so no 16-regular element exists -- which is the empirical gap that forced the rank-32 tower to use a 4-cycle"
+  },
+  "not_done": [
+    "the same census for non-root lattices, e.g. Leech",
+    "whether B8's odd-unimodular qubit tower differs from E8's",
+    "alpha(W(3,9))",
+    "K12 built"
+  ],
+  "qutrit_uniqueness": {
+    "classical_ranks_coprime_to_3": {
+      "A": [
+        2
+      ],
+      "B/C": [],
+      "D": [
+        2
+      ]
+    },
+    "conclusion": "E8 is the unique root system whose Weyl group supplies a nondegenerate qutrit geometry with content -- a second proof of E8-nativity, by exponents rather than by rank",
+    "exceptional": {
+      "E6": {
+        "geometry": "-",
+        "k": 3,
+        "k_even": false,
+        "three_coprime": true,
+        "three_divides_det": true
+      },
+      "E7": {
+        "geometry": "-",
+        "k": null,
+        "k_even": false,
+        "three_coprime": false,
+        "three_divides_det": false
+      },
+      "E8": {
+        "geometry": "W(3,3)",
+        "k": 4,
+        "k_even": true,
+        "three_coprime": true,
+        "three_divides_det": false
+      },
+      "F4": {
+        "geometry": "W(1,3)",
+        "k": 2,
+        "k_even": true,
+        "three_coprime": true,
+        "three_divides_det": false
+      },
+      "G2": {
+        "geometry": "-",
+        "k": 1,
+        "k_even": false,
+        "three_coprime": true,
+        "three_divides_det": true
+      }
+    },
+    "obstructions": {
+      "E6": "3-coprime and even rank, but k = 3 is ODD, and 3 divides det",
+      "E7": "the exponent 9 is divisible by 3",
+      "E8": "k = 4, even, det 1 -- W(3,3), two qutrits",
+      "F4": "k = 2, giving W(1,3): four points on a line, no incidence content",
+      "G2": "k = 1 is odd, and 3 divides det",
+      "classical": "the exponent 3 is present, so d=3 is not exponent-coprime"
+    }
+  },
+  "vogel_lead": {
+    "counterexample": "F4 has Vogel beta = 5, which is NOT an F4 degree",
+    "observation": "for E6, E7, E8 the Vogel parameters (|alpha|, beta, gamma) are all degrees and t = alpha+beta+gamma is the largest degree, the Coxeter number",
+    "per_type": {
+      "E6": {
+        "all_degrees": true,
+        "dim": 78,
+        "params": [
+          -2,
+          6,
+          8
+        ],
+        "t": 12,
+        "t_is_largest_degree": true
+      },
+      "E7": {
+        "all_degrees": true,
+        "dim": 133,
+        "params": [
+          -2,
+          8,
+          12
+        ],
+        "t": 18,
+        "t_is_largest_degree": true
+      },
+      "E8": {
+        "all_degrees": true,
+        "dim": 248,
+        "params": [
+          -2,
+          12,
+          20
+        ],
+        "t": 30,
+        "t_is_largest_degree": true
+      },
+      "F4": {
+        "all_degrees": false,
+        "dim": 52,
+        "params": [
+          -2,
+          5,
+          6
+        ],
+        "t": 9,
+        "t_is_largest_degree": false
+      }
+    },
+    "status": "a suggestive partial pattern, NOT a theorem; its only role was to point at the degrees, and no result here depends on it"
+  }
+}
