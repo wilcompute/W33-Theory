@@ -1,0 +1,11 @@
+{
+  "boundary": "Standard Singer/finite-field and G2 torus-normalizer structure. Equality with the earlier Golay A4<S4 orientation bit is a concrete future compatibility test, not claimed here.",
+  "common_character": {"candidate_weld":"identify Frobenius parity on the V2 semilinear clock with the G2 outer-extension parity","codomain":"C2","domain":"Aut(C13)=C12","kernel":"C6"},
+  "G2": {"inside_G2_4":"N(C13)=C13:C6, order 78","inside_G2_4_colon_2":"N(C13)=C13:C12, order 156","orientation_quotient":"(C13:C12)/(C13:C6)=C2","reading":"outer-extension bit G2(4):2 / G2(4)"},
+  "outside_box": true,
+  "passes": "10033-10040",
+  "schema": "w33.pass10033_10040.c13_clock_orientation_character.v1",
+  "status": "PASS",
+  "theorem": "The shared C13 clock has a canonical binary orientation character C12 -> C2 with kernel C6. On G2(4):2 this character is exactly the outer involution quotient; on the abstract V2 Singer normalizer it is Frobenius parity. Thus a C2 orientation bit is intrinsic to the clock normalizer rather than attached ad hoc.",
+  "V2_abstract": {"clock_automorphism":"C12 = <Frob_2>","normalizer":"C4095:C12","ord_13_2":12,"orientation_kernel":"C6=<Frob_2^2>","orientation_quotient":"C12/C6=C2","reading":"Frobenius parity"}
+}
