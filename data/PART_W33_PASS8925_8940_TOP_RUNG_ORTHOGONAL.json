@@ -1,0 +1,76 @@
+{
+  "boundary": "VERIFIED: an even lattice gives L/2L a QUADRATIC form q(x) = (x,x)/2 mod 2 polarising to the symplectic form, so the d=2 rung of every tower in Passes 8022-8924 is ORTHOGONAL, not symplectic. E8/2E8 has 135 singular points = |Q+(7,2)| and 120 non-singular ones which are EXACTLY the root classes; |W(E8)|/2 = |O_8^+(2).2|. Leech/2Leech is PLUS type, with Conway's type-4 and type-8 classes the singular points. Deeper rungs have no such refinement, proven by the full-Sp images of Pass 8909-8924 -- which is exactly why the Clifford identification held at d=4,8 and could not at d=2",
+  "classical_cited": [
+    "E8 mod 2 is a plus-type quadratic space, W(E8)/{+-1} = O_8^+(2).2",
+    "Conway's 98280 + 8386560 + 8292375 type split of Leech/2Leech"
+  ],
+  "dichotomy": {
+    "d2": {
+      "image": "orthogonal",
+      "quotient": "L/2L",
+      "structure": "quadratic"
+    },
+    "d4_d8": {
+      "image": "full symplectic",
+      "quotient": "deeper",
+      "structure": "symplectic only"
+    },
+    "explains": "why the Clifford identification held at d=4 and d=8 and could never hold at d=2: a Clifford group needs the full symplectic group on the quotient",
+    "proof_that_deeper_rungs_have_no_refinement": "Pass 8909-8924 computed the d=4 image as the FULL Sp(4,2) of order 720, against |O_4^+(2)| = 72 and |O_4^-(2)| = 120; a symplectic group preserves no quadratic form, so a full-Sp image rules one out. Same at d=8"
+  },
+  "e8": {
+    "Qplus_7_2": 135,
+    "non_singular": 120,
+    "root_classes": 120,
+    "root_classes_ARE_the_non_singular_points": true,
+    "root_classes_all_non_singular": true,
+    "singular": 135,
+    "singular_matches_Qplus": true,
+    "total_nonzero": 255
+  },
+  "e8_automorphism_cap": {
+    "W(E8) smaller than Sp(8,2)": true,
+    "match": true,
+    "|O_8^+(2).2|": 348364800,
+    "|Sp(8,2)|": 47377612800,
+    "|W(E8)|": 696729600,
+    "|W(E8)|/2": 348364800
+  },
+  "leech": {
+    "Qminus_23_2": 8386559,
+    "Qplus_23_2": 8390655,
+    "conway_split": {
+      "4": 98280,
+      "6": 8386560,
+      "8": 8292375
+    },
+    "non_singular": 8386560,
+    "reading": "Conway's type split IS the singular/non-singular split: type 4 and 8 are singular, type 6 non-singular",
+    "singular": 8390655,
+    "total_nonzero": 16777215,
+    "totals_agree": true,
+    "two24_minus_1": 16777215,
+    "type_is_PLUS": true
+  },
+  "not_done": [
+    "identify the orthogonal geometry at the p=3 top rung (level 6)",
+    "whether the Leech d=2 image is the full orthogonal group",
+    "alpha(W(3,9))",
+    "K12 built"
+  ],
+  "quadratic_refinement": {
+    "checked_on": "120x120 pairs",
+    "form": "q(x) = (x,x)/2 mod 2",
+    "polarises_to_symplectic": true,
+    "well_defined": "(x+2y,x+2y)/2 = (x,x)/2 + 2(x,y) + 2(y,y) == (x,x)/2 mod 2"
+  },
+  "refinement_not_retraction": {
+    "unaffected": [
+      "the tower maps",
+      "the odd-part law",
+      "the kernel classifications"
+    ],
+    "what_is_sharpened": "the reading. The lattice supplies a quadratic refinement the automorphism group respects, so the natural object at d=2 is the quadric, and 'twelve qubits' at the top of the Leech tower is a statement about a form rather than a Pauli geometry with the expected symmetry group",
+    "what_stands": "the symplectic statements: the form is alternating and nondegenerate on F_2^8 and F_2^24, so W(7,2) and W(23,2) are correct descriptions of the FORM"
+  }
+}
