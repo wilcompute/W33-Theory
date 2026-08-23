@@ -1,0 +1,48 @@
+name: Pass10049-10112 eight-front verification
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass10049_10056_co1_c13_v2_exhaustive.py'
+      - 'analysis/w33_pass10057_10064_orientation_character_compatibility.py'
+      - 'analysis/w33_pass10065_10072_c315_controller_quotients.py'
+      - 'analysis/w33_pass10073_10080_integral_hermitian_lift.py'
+      - 'analysis/w33_pass10081_10088_building_link_w33.py'
+      - 'analysis/w33_pass10089_10096_*.py'
+      - 'analysis/w33_pass10097_10104_*.py'
+      - 'analysis/w33_pass10105_10112_*.py'
+      - '.github/workflows/pass10049-10112.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy scipy sympy
+      - name: Front 1 — actual Co1 C13 versus V2
+        run: python analysis/w33_pass10049_10056_co1_c13_v2_exhaustive.py
+      - name: Front 2 — orientation compatibility
+        if: ${{ hashFiles('analysis/w33_pass10057_10064_orientation_character_compatibility.py') != '' }}
+        run: python analysis/w33_pass10057_10064_orientation_character_compatibility.py
+      - name: Front 3 — C315 quotients
+        if: ${{ hashFiles('analysis/w33_pass10065_10072_c315_controller_quotients.py') != '' }}
+        run: python analysis/w33_pass10065_10072_c315_controller_quotients.py
+      - name: Front 4 — integral Hermitian lift
+        if: ${{ hashFiles('analysis/w33_pass10073_10080_integral_hermitian_lift.py') != '' }}
+        run: python analysis/w33_pass10073_10080_integral_hermitian_lift.py
+      - name: Front 5 — building link / W33
+        if: ${{ hashFiles('analysis/w33_pass10081_10088_building_link_w33.py') != '' }}
+        run: python analysis/w33_pass10081_10088_building_link_w33.py
+      - name: Outside fronts
+        shell: bash
+        run: |
+          shopt -s nullglob
+          for f in analysis/w33_pass10089_10096_*.py analysis/w33_pass10097_10104_*.py analysis/w33_pass10105_10112_*.py; do
+            python "$f"
+          done
