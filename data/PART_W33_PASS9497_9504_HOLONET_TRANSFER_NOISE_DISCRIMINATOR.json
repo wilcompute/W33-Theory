@@ -1,0 +1,31 @@
+{
+  "schema": "w33.pass9497_9504.holonet_transfer_noise_discriminator.v1",
+  "status": "PASS",
+  "passes": "9497-9504",
+  "transfer_model": {
+    "kernel": "T_eta=(1-eta)I + eta A_W33/12",
+    "n_stage_line_mass": "p_n=1/10 + (9/10)(1-5 eta/6)^n",
+    "reason": "the partition {fixed W33 line, 36 off-line points} is equitable with random-walk transition probabilities 1/4 and 1/12 into the line"
+  },
+  "gain_model": {
+    "per_port_gain_range": "[1-delta,1+delta]",
+    "stress_delta": "1/4",
+    "E8_best_line_upper": "5/32"
+  },
+  "exact_line_separation": {
+    "condition": "(1-5 eta/6)^n > 8/53",
+    "equivalent_true_line_mass": "p_n > 25/106",
+    "one_stage_eta_le_2_5": {"line_lower":"7/12","E8_upper":"5/32","gap":"41/96"},
+    "stage_budget_examples": {"eta=0.1":21,"eta=0.2":10,"eta=0.3":6,"eta=0.4":4}
+  },
+  "dark_monitor": {
+    "true_dark_fractions": {"E8^3":"0","E6^4":"1/4","A2^12":"0"},
+    "binary_confusion_model": "d_obs=rho+(1-2rho)d",
+    "rho_le": "1/10",
+    "zero_dark_upper": "1/10",
+    "E6_dark_lower": "1/4",
+    "guaranteed_gap": "3/20"
+  },
+  "theorem": "For an n-stage W33 nearest-neighbour transfer channel with +/-25% unknown port gains, line-vs-delocalized support remains provably separated whenever the line-mode retention factor exceeds 8/53. A dark-monitor confusion rate <=10% still leaves an exact 3/20 dark-fraction gap between E6^4 and the zero-dark carriers.",
+  "boundary": "Finite transfer/noise envelope only. eta, delta and rho are stress parameters, not measured Holonet hardware specifications; coherent interference and device-specific scattering remain open."
+}
