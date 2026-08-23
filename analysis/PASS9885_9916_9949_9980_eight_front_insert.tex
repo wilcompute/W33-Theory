@@ -1,0 +1,109 @@
+% Pass9885--9916 + Pass9949--9980: collision-reconciled eight-front continuation.
+% Pass9917--9948 was voluntarily yielded after a later parallel Pass9921--9944
+% packet had already landed substantive A1^24-neighbour work.
+
+\subsection{Selector obstructions, explicit $\mathbf F_9$ coordinates, and cyclic phase clocks}
+\label{sec:pass9885-9980-frontier}
+
+The next selector sweep replaced several count coincidences by exact obstruction
+theorems.  For a fixed glue complex structure $R$, plus-type transverse
+Lagrangians form $U(6,3)/O^+(6,3)$.  Orbit--stabilizer divisibility shows that a
+faithful $G_2(4){:}2$, $J_2{:}2$, or $G_2(4)$ edge-stabilizer action can have no
+single fixed plus polarization: its orbit has size at least $560$, $35$, or $7$,
+respectively.  Thus repairing the previously proved $Q^-/Q^+$ Witt-sign mismatch
+requires controlled symmetry breaking, a nontrivial selected orbit, or extra
+datum rather than a hidden fully symmetric point selector.
+
+The proposed $13$-state global quotient is also obstructed.  The rank-three
+$G_2(4){:}2$ action on $416$ Hall--Janko vertices has point-stabilizer subdegrees
+$1,100,315$.  A block containing a chosen vertex is therefore a union of those
+suborbits and can have size only $1,101,316,$ or $416$; a $13$-block quotient
+would require blocks of size $32$.  Hence the earlier identity
+$\gcd(4095,416,20800)=13$ is a necessary cardinality observation, not an
+imprimitivity system.
+
+On the arithmetic side the transverse-glue $\mathbf F_9$ structure can now be
+made explicit.  Let $G$ be the ternary Golay glue basis and let $K,R$ be the
+alternating form and order-four complex structure manufactured by the transverse
+Golay/$E_6$ glue pair.  With
+\[
+ P=\begin{bmatrix}G\\GR\end{bmatrix},\qquad
+ J_0=\begin{bmatrix}0&I_6\\-I_6&0\end{bmatrix},
+\]
+the exact $C_-=I_6$ identity gives
+\[
+ P K P^{\mathsf T}=J_0,\qquad P R=J_0P.
+\]
+Thus the actual finite phase space is explicitly the standard
+$\mathbf F_9^6$ module, with $R$ acting as multiplication by $i$ and
+\[
+ K(z,w)=\operatorname{Tr}_{\mathbf F_9/\mathbf F_3}
+ \!\left(-i\sum_j z_j\overline{w_j}\right).
+\]
+For $L=\mathbf Q_3(i,\zeta_9)$ and $\pi=1-\zeta_9$, reduction modulo $3$ gives
+$\mathcal O_L/3\mathcal O_L\cong\mathbf F_9[\pi]/(\pi^6)$, so its six graded
+coefficient layers are additively the same $\mathbf F_9^6$.  This is an explicit
+mod-$3$ intertwiner; an integral $\mathcal O_L$--Niemeier lattice lift remains
+open.
+
+The common count $7371$ on the glue $Q^-(5,3)$ and Suzuki $Q^+(5,3)$ sides also
+does not conceal an isomorphism of the natural derived schemes.  Exhaustive
+stabilizer-orbital classification of all nondegenerate two-spaces, using the
+Gram matrix plus relation kernel and Witt extension, gives orbital ranks
+\[
+ (39,28)\quad\hbox{for }Q^- ,\qquad
+ (40,27)\quad\hbox{for }Q^+,
+\]
+for hyperbolic and anisotropic basepoints respectively.  A future weld must
+therefore pass through a coarser fusion, broken symmetry, or external structure.
+
+For the photonic orientation bit, an absolute phase is replaced by the
+three-qutrit Bargmann--Pancharatnam loop
+\[
+ \mathcal B=\langle\psi_0|\psi_1\rangle
+ \langle\psi_1|\psi_2\rangle
+ \langle\psi_2|\psi_0\rangle .
+\]
+Its phase is exactly invariant under independent $U(1)$ port gauges and under a
+common $U(3)$ mode rotation, while complex conjugation reverses
+$\operatorname{Im}\mathcal B$.  In the deterministic seeded stress model the
+chirality classifier is perfect under gauge-only and mild perturbations and is
+$1993/2000=99.65\%$ accurate at the moderate profile; these numbers are
+simulation outputs, not hardware measurements.
+
+The number $13$ survives in a different, cyclic form.  Since neither the
+$J_2{:}2$ vertex stabilizer nor the $G_2(4)$ edge stabilizer has a factor $13$,
+every order-$13$ subgroup acts semiregularly on the corresponding carriers:
+\[
+ 416=32\cdot13,\qquad
+ 20800=1600\cdot13,\qquad
+ 41600=3200\cdot13.
+\]
+Thus a chosen $C_{13}$ supplies length-$13$ vertex, edge, and flag clocks; the
+identification with a $PG(2,3)$ Singer clock requires the noncanonical choice of
+that subgroup and orbit.
+
+There is also an exact finite-field binary phase channel.  The norm
+\[
+ N(z)=z^4:\mathbf F_9^\times\longrightarrow\mathbf F_3^\times\cong C_2
+\]
+is surjective with kernel $\{1,-1,i,-i\}\cong C_4$.  Hence $N(uz)=N(z)$ for
+every norm-one phase $u$, giving a gauge-invariant $C_2$ parity candidate.  In
+the unramified local lift this is the Teichmuller quotient
+$\mu_8/\mu_4\cong C_2$.
+
+Finally, the parallel Leech controls change the $V_2$ interpretation.  The
+larger Pass9861--9884 sample falsifies the claim that the frame-pair relation is
+a function only of the sum class, while Pass9921--9944 identifies each type-$8$
+frame direction as a bridge to an $A_1^{24}$ two-neighbour whose glue is the
+binary Golay code.  Accordingly no additive map
+$V_2\cong\mathbf F_2^{12}\to C_{13}$ can exist, since $4096$ is coprime to
+$13$.  Multiplicatively, however,
+$\operatorname{ord}_{13}(2)=12$, so the companion matrix of $\Phi_{13}$ over
+$\mathbf F_2$ has order $13$ and fixes no nonzero vector.  Abstractly this
+partitions the $4095$ nonzero frame/neighbour directions into
+\[
+ 4095=315\cdot13
+\]
+cycles.  Whether such a $C_{13}$ lies in the actual $Co_0$ stabilizer of the
+canonical $V_2$ is the next exact group-theoretic test; it is not assumed here.
