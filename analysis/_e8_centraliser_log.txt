@@ -1,0 +1,9 @@
+start
+roots found 2160 (expect 240)
+|W(E8)| = 696729600
+found M with M^2 = -I, det(I-M) = 16 (expect 16)
+|C_W(M)| = 46080  (Springer predicts 8*12*20*24 = 46080)
+centraliser generators: 5
+independent orbit points chosen: 8
+all recovered matrices are integral: true
+wrote _e8_cen_gens.txt and _e8_cen_M.txt

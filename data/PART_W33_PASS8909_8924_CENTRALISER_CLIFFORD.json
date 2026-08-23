@@ -1,0 +1,101 @@
+{
+  "boundary": "VERIFIED BY ACTION, not by order arithmetic: for W(E8), the centraliser of the d-regular element surjects onto the FULL symplectic group of the geometry that same element produces, with kernel of exactly the phases-and-Pauli order -- d=4 gives 46080 = 64 . |Sp(4,2)| and d=8 gives 192 = 32 . |Sp(2,2)|. So the Springer centraliser IS the Clifford group of its own geometry. At odd primes it is not: the kernel is far too small to contain a Pauli group",
+  "method_note": "the quotient is modelled as im((I-M)^(e-1) mod 2), which works because that operator is the level-1 class map of the pi-adic filtration (Pass 8861-8884). The row-versus-column convention was caught by testing invariance of the model rather than assuming it",
+  "not_done": [
+    "the d=3 action computed rather than bounded",
+    "whether the kernel is literally extraspecial or only has its order",
+    "the same question for Leech"
+  ],
+  "odd_primes": {
+    "conclusion": "the odd-prime centralisers are scalars times symplectic -- G32 = Z_3 x Sp(4,3) -- with no Pauli part; only p=2 gives a genuine Clifford group",
+    "echo": "p=2 was also the unique prime with a Lagrangian descent kernel at Pass 8737-8776. Two computations, one distinguished prime; stated as an observation, not a claimed common cause",
+    "table": {
+      "3": {
+        "kernel": 3,
+        "pauli_order_needed": 81,
+        "possible": false
+      },
+      "5": {
+        "kernel": 5,
+        "pauli_order_needed": 25,
+        "possible": false
+      }
+    }
+  },
+  "order_arithmetic": {
+    "3": {
+      "centraliser_order": 155520,
+      "degrees": [
+        12,
+        18,
+        24,
+        30
+      ],
+      "geometry": "W(3,3)",
+      "ratio": 3,
+      "sp_order": 51840
+    },
+    "4": {
+      "centraliser_order": 46080,
+      "degrees": [
+        8,
+        12,
+        20,
+        24
+      ],
+      "geometry": "W(3,2)",
+      "ratio": 64,
+      "sp_order": 720
+    },
+    "5": {
+      "centraliser_order": 600,
+      "degrees": [
+        20,
+        30
+      ],
+      "geometry": "W(1,5)",
+      "ratio": 5,
+      "sp_order": 120
+    },
+    "8": {
+      "centraliser_order": 192,
+      "degrees": [
+        8,
+        24
+      ],
+      "geometry": "W(1,2)",
+      "ratio": 32,
+      "sp_order": 6
+    }
+  },
+  "prior_art": {
+    "pass1039": "analysis/w33_pass1039_springer_tower.g (2026-07-26) already states Springer's centraliser law for W(E8) and names G31 and G32",
+    "planat_kibler": "arXiv:0807.3650, Unitary reflection groups for quantum fault tolerance: G31 is a maximal index-2 subgroup of the two-qubit Clifford group; Shephard-Todd G9 (order 192) also appears",
+    "planat_leech": "arXiv:1002.4287, already cited in this repo at BT7154: the two- and four-qubit real Clifford groups are the automorphism groups of D4 and BW16. A DIFFERENT construction from this one -- it reads the 24-dimensional space as a tensor product of Hilbert spaces, where this quotients the lattice",
+    "what_is_new_here": "the ACTION. Matching orders does not show the centraliser acts as the Clifford group of the geometry it builds; an earlier broken coordinate map in this very pass reported the image as order 6"
+  },
+  "verified_action": {
+    "d = 4  (Phi_4^4)": {
+      "centraliser_order": 46080,
+      "generators_used": 5,
+      "geometry": "W(3,2)",
+      "image_is_full_symplectic": true,
+      "image_order": 720,
+      "k": 4,
+      "kernel_order": 64,
+      "qubits": 2,
+      "sp_order": 720
+    },
+    "d = 8  (Phi_8^2)": {
+      "centraliser_order": 192,
+      "generators_used": 3,
+      "geometry": "W(1,2)",
+      "image_is_full_symplectic": true,
+      "image_order": 6,
+      "k": 2,
+      "kernel_order": 32,
+      "qubits": 1,
+      "sp_order": 6
+    }
+  }
+}
