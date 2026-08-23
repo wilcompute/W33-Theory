@@ -1,0 +1,11 @@
+{
+  "schema":"w33.pass9765_9772.r_transverse_lagrangian_sign_orbits.v1",
+  "status":"PASS",
+  "passes":"9765-9772",
+  "outside_box":true,
+  "ambient":{"C_Sp(R)":"U(6,3)","order":182699779456696320,"all_Lagrangians_in_Sp12":16358540800},
+  "R_transverse_orbits":{"plus":{"induced_form":"Q+(5,3)","stabilizer":"O+(6,3)","stabilizer_order":24261120,"orbit_size":7530558336},"minus":{"induced_form":"Q-(5,3)","stabilizer":"O-(6,3)","stabilizer_order":26127360,"orbit_size":6992661312}},
+  "counts":{"R_transverse_total":14523219648,"not_R_transverse":1835321152},
+  "bridge_consequence":"The canonical glue half lies in the minus orbit, but the same R admits 7,530,558,336 plus-type transverse Lagrangians. Changing the glue polarization to a plus-orbit Lagrangian removes the Pass9749 Witt-sign obstruction while retaining K and R.",
+  "boundary":"Standard finite classical-group orbit-stabilizer count; algebraic polarizations only, with no canonical choice or integral lift asserted."
+}
