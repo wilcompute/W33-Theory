@@ -1,0 +1,121 @@
+{
+  "H_3_4": {
+    "carrier": "E8/2E8",
+    "d": 3,
+    "identification": "GQ(4,2) = H(3,4)",
+    "isometry": "Cox^10 where Cox is the E8 Coxeter element of order 30; char poly Phi_3^4 and I+W+W^2 = 0, verified",
+    "l": 2,
+    "measured": {
+      "lines": 27,
+      "lines_per_point": 3,
+      "points": 45,
+      "points_per_line": 5
+    },
+    "why": "2 inert in Z[omega], residue F_4"
+  },
+  "H_3_9": {
+    "carrier": "E8/3E8",
+    "d": 4,
+    "form": "h(x,y) = G(x,y) - i*G(Mx,y), i acting as M",
+    "form_checks": [
+      "additive",
+      "i-linear in slot 1",
+      "i-semilinear in slot 2",
+      "conjugate-symmetric"
+    ],
+    "identification": "GQ(9,3) = H(3,9)",
+    "incidence_closes": "280*4 = 112*10 = 1120",
+    "l": 3,
+    "measured": {
+      "lines": 112,
+      "lines_per_point": 4,
+      "points": 280,
+      "points_per_line": 10
+    },
+    "module": "M^2 = -I makes E8 a Z[i]-module of rank 4",
+    "why": "3 inert in Z[i], residue F_9"
+  },
+  "boundary": "A LIMITATION THEOREM AND THE BRANCH THAT ESCAPES IT. The machine's q is Phi_d(1), which is 1 or a PRIME -- never a proper prime power -- so the symplectic branch cannot produce W(3,9), W(3,4), W(3,8), W(3,25) or W(3,27). The cause is that pi = 1-zeta is the TOTALLY RAMIFIED prime. Using an unramified prime of Z[zeta_d] gives residue field F_(l^f); a form survives on a single prime iff -1 lies in <l> mod d (conjugation is the adjoint), and it is then HERMITIAN, not alternating. VERIFIED: E8/3E8 = H(3,9) (280 points, 112 lines, 10 per line, 4 per point) and E8/2E8 = H(3,4) (45, 27, 5, 3). The latter REFINES Pass 8925-8940's Q+(7,2) EXACTLY: its 45 isotropic F_4-points expand to the 135 q-singular F_2-points, symmetric difference 0",
+  "cited_classical": [
+    "the values of Phi_d(1)",
+    "H(3,q^2) = GQ(q^2,q), dual to Q-(5,q)",
+    "Q-(5,2)'s 27 points are the 27 lines on a cubic surface",
+    "E8/2E8 as a plus-type quadratic space (also Pass 8925-8940)"
+  ],
+  "cited_other_lane": {
+    "Pass9465-9472": "owns the equivalence between an F_3 symplectic space with R^2=-I and a Hermitian F_9-space, and C_Sp(12,3)(R) = U(6,3)",
+    "Pass9781-9788": "the unramified/ramified compositum with (e,f) = (6,2)",
+    "ownership": "those committed first and own the mechanism; this pass applies it to E8 at rank 4 over the residue field rather than the rank-12 Niemeier glue, and adds which primes give which geometry"
+  },
+  "corrections_before_publication": [
+    "G(x,y) + i*G(Mx,y) is NOT sesquilinear -- it makes M act as -i. Corrected to G(x,y) - i*G(Mx,y). The isotropic count is insensitive to the sign, so only the algebraic checks caught it",
+    "I first wrote that H(3,9) has 28 lines. GQ(s,t) has (t+1)(st+1) lines, so 112. The measurement was right and the formula wrong; incidence settled it",
+    "the d=8 form being neither symmetric nor antisymmetric is not a broken construction but the signature of the third branch"
+  ],
+  "limitation_theorem": {
+    "closes": "Pass 7349-7356 lists alpha(W(3,9)) under not_done, which reads as un-attempted; it is un-attemptable by this machine",
+    "not_claimed": "nothing about alpha(W(3,9)) itself, which remains open at 51 <= alpha <= 73 and needs other methods",
+    "phi_at_1": {
+      "10": 1,
+      "11": 11,
+      "12": 1,
+      "16": 2,
+      "2": 2,
+      "25": 5,
+      "27": 3,
+      "3": 3,
+      "32": 2,
+      "4": 2,
+      "5": 5,
+      "6": 1,
+      "7": 7,
+      "8": 2,
+      "9": 3
+    },
+    "statement": "Phi_d(1) = p if d = p^m, else 1; so the symplectic branch produces PRIME q only",
+    "unreachable": [
+      "W(3,4)",
+      "W(3,8)",
+      "W(3,9)",
+      "W(3,25)",
+      "W(3,27)"
+    ]
+  },
+  "not_done": [
+    "the unitary geometries from Leech and the other rank-24 carriers",
+    "whether the Hermitian refinement of a quadratic form happens at every rank or is special to E8"
+  ],
+  "refinement_of_pass8925_8940": {
+    "measured": {
+      "E8_mod_2_classes": 255,
+      "expanded_to_F2": 135,
+      "hermitian_isotropic_F4_points": 45,
+      "q_singular": 135,
+      "symmetric_difference": 0
+    },
+    "reading": "the F_4 Hermitian structure refines the F_2 quadratic one, each isotropic F_4-point being an F_4-line of three singular F_2-points",
+    "statement": "the 45 Hermitian-isotropic F_4-points expand to exactly the 135 q-singular F_2-points of the plus-type form; the sets are EQUAL, symmetric difference 0"
+  },
+  "trichotomy": {
+    "branches": {
+      "ramified (l | d)": "residue F_l, ALTERNATING form -> W(k-1,l), q prime",
+      "unramified, -1 in <l>": "residue F_(l^f), HERMITIAN form -> H(k-1,l^f), q a prime power",
+      "unramified, -1 not in <l>": "conjugation swaps the two primes; the reduction is a hyperbolic pair of totally isotropic residue spaces and NEITHER carries a form"
+    },
+    "criterion": "the adjoint of M is M^-1, i.e. complex conjugation = -1 in (Z/d)*; the decomposition group at a prime above l is <l>",
+    "third_branch_verified_at": {
+      "carrier": "E8^2, rank 16",
+      "d": 8,
+      "l": 3,
+      "measured": {
+        "G_on_V": "identically zero",
+        "G_on_Vprime": "identically zero",
+        "cross_pairing_rank": 8,
+        "dim_ker_h": 8,
+        "dim_ker_hbar": 8,
+        "rank": 16
+      },
+      "polynomial_witness": "Phi_8 mod 3 = (x^2+x-1)(x^2-x-1) and the reciprocal of one factor is the other"
+    }
+  }
+}
