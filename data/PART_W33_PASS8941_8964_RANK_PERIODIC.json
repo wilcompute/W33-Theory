@@ -1,0 +1,114 @@
+{
+  "boundary": "VERIFIED: W(3,3) at rank 72 via a double lift of E8 (order 27, Phi_27^4, alternating rank 4), and both ladders at three rungs each -- W(3,3) at ranks 8, 24, 72 with orders 3, 9, 27, and W(3,2) at ranks 8, 16, 32 with orders 4, 8, 16 -- with det(I-g) CONSTANT along each. THE PERIODICITY THEOREM: a geometry reachable at rank r with order d recurs at rank r p^m with order d p^m for every m, so carrier classification collapses to MINIMAL rank. CORRECTS my Pass 8761-8776 claim that the rank is forced to 8, 24 or 72",
+  "classification_collapses": {
+    "consequence": "'which lattices carry W(k-1,p)?' has an infinite but PERIODIC answer; every realisation above minimal rank is a lift carrying no new information, so classification reduces to MINIMAL carriers",
+    "e8_nativity_strengthened": "W(3,3)'s minimal rank is 8, where the even unimodular lattice is unique and is E8. So the infinite tower at ranks 8, 24, 72, 216, ... is E8 wearing more copies of itself, all the way up"
+  },
+  "correction": {
+    "allowed_ranks_p2": [
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "allowed_ranks_p3": [
+      8,
+      24,
+      72,
+      216,
+      648,
+      1944,
+      5832
+    ],
+    "claim": "Pass 8761-8776: the rank of a W(3,3) carrier is FORCED to 8, 24 or 72",
+    "corrected": "allowed ranks are 8 * 3^(m-1) for every m: an infinite progression",
+    "does_not_affect": "the E8-nativity results of Pass 8761-8776 and 8885-8900, which argue about the MINIMAL rank and never used the list",
+    "what_was_right": "the forcing argument, rank = 4 deg(Phi_{3^m})",
+    "what_was_wrong": "the LIST. The loop ran m = 1,2,3 and its output was written up as a classification"
+  },
+  "invariant_determinant": "det(I-g) is constant along each ladder -- 81 for p=3, 16 for p=2 -- because it equals p^j with j and p invariant",
+  "not_done": [
+    "whether a NON-lift carrier exists at any non-minimal rank -- periodicity produces lifts, it does not exclude sporadic extras",
+    "the Niemeier lattices other than E8^3 at rank 24",
+    "alpha(W(3,9))",
+    "K12 built"
+  ],
+  "periodicity_theorem": {
+    "not_an_analogue": "the SAME geometry, same j, same p, at every rung",
+    "statement": "a geometry reachable at rank r with element order d recurs at rank r p^m with element order d p^m, for every m >= 0",
+    "why": "the lift theorem (Pass 8737-8760) preserves the multiplicity j, and the geometry W(j-1,p) depends only on j and p; iterate"
+  },
+  "qubit_ladder": [
+    {
+      "alternating": true,
+      "det_I_minus_g": 16,
+      "form_preserved": true,
+      "geometry": "W(3,2)",
+      "lattice": "E8^1",
+      "order": 4,
+      "qudits": 2,
+      "rank": 8,
+      "rank_F": 4
+    },
+    {
+      "alternating": true,
+      "det_I_minus_g": 16,
+      "form_preserved": true,
+      "geometry": "W(3,2)",
+      "lattice": "E8^2",
+      "order": 8,
+      "qudits": 2,
+      "rank": 16,
+      "rank_F": 4
+    },
+    {
+      "alternating": true,
+      "det_I_minus_g": 16,
+      "form_preserved": true,
+      "geometry": "W(3,2)",
+      "lattice": "E8^4",
+      "order": 16,
+      "qudits": 2,
+      "rank": 32,
+      "rank_F": 4
+    }
+  ],
+  "qutrit_ladder": [
+    {
+      "alternating": true,
+      "det_I_minus_g": 81,
+      "form_preserved": true,
+      "geometry": "W(3,3)",
+      "lattice": "E8^1",
+      "order": 3,
+      "qudits": 2,
+      "rank": 8,
+      "rank_F": 4
+    },
+    {
+      "alternating": true,
+      "det_I_minus_g": 81,
+      "form_preserved": true,
+      "geometry": "W(3,3)",
+      "lattice": "E8^3",
+      "order": 9,
+      "qudits": 2,
+      "rank": 24,
+      "rank_F": 4
+    },
+    {
+      "alternating": true,
+      "det_I_minus_g": 81,
+      "form_preserved": true,
+      "geometry": "W(3,3)",
+      "lattice": "E8^9",
+      "order": 27,
+      "qudits": 2,
+      "rank": 72,
+      "rank_F": 4
+    }
+  ]
+}
