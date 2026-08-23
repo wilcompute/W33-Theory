@@ -1,0 +1,38 @@
+{
+  "claim_boundary": "Exact finite coding consequence of the Leech dual-40 incidence theorem; no physical decoder threshold is inferred.",
+  "dependency": "Pass7709 dual PG(3,3) top/socle incidence from the Leech order-9 linking pairing",
+  "design": "symmetric 2-(40,13,4)",
+  "dual_code": {
+    "minimum_distance_proved_by": "no weighted column dependency of support <=5; explicit support-6 dependency",
+    "parameters": "[40,29,6]_3",
+    "projective_weight6_words": 3120,
+    "weight6_words": 6240
+  },
+  "incidence_rank_F3": 11,
+  "literature_prior_art": [
+    "Some optimal codes and strongly regular graphs from the linear group L4(3)",
+    "Self-orthogonal designs and codes from the symplectic groups S4(3) and S4(4)"
+  ],
+  "novelty_boundary": "The abstract design/code parameters are published prior art. New here is the exact transport onto the canonical Leech top-to-socle linking-incidence shell established in Pass7645/7709.",
+  "passes": "7717-7724",
+  "row_code": {
+    "parameters": "[40,11,13]_3",
+    "weight_enumerator": {
+      "0": 1,
+      "13": 80,
+      "18": 1560,
+      "22": 20280,
+      "24": 21060,
+      "25": 33696,
+      "27": 18800,
+      "28": 42120,
+      "30": 16848,
+      "31": 21840,
+      "36": 780,
+      "40": 82
+    }
+  },
+  "schema": "w33.pass7717_7724.leech_dual40_ternary_code.v1",
+  "status": "PASS",
+  "theorem": "The Leech dual-40 projective linking incidence canonically carries the ternary [40,11,13]_3 PG(3,3) design code; its orthogonal code is [40,29,6]_3 with exactly 6240 minimum-weight words."
+}
