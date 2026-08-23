@@ -1,0 +1,42 @@
+{
+  "Gram_formula": "11520 I - 3840 A_Z - 1440 A_Schlaefli + 2400 A_H27",
+  "Gram_image": "8 + 6_omega + 6_omega^2",
+  "Gram_kernel": "1 + 3_omega + 3_omega^2",
+  "Gram_rank": 20,
+  "H27": {
+    "center_order": 3,
+    "conjugacy_classes": 11,
+    "derived_order": 3,
+    "irreducible_degrees": "1^9 + 3^2",
+    "order": 27
+  },
+  "cayley_partition": {
+    "H27_horizontal": 8,
+    "Schlaefli": 16,
+    "Z_nonidentity": 2,
+    "identity": 1
+  },
+  "claim_boundary": "Exact finite group/association-scheme theorem. Fourier and Schrodinger are representation-theoretic labels for H27; no physical multiplet claim is made.",
+  "first_eigenmatrix": [
+    [1,2,16,8],
+    [1,-1,4,-4],
+    [1,2,-2,-1],
+    [1,-1,-2,2]
+  ],
+  "graphs": {
+    "H27_horizontal": "degree 8",
+    "Schlaefli": "SRG(27,16,10,8)",
+    "Z_nonidentity": "9 K3"
+  },
+  "joint_sectors": [
+    {"Gram":0,"dimension":1,"eigenvalues":[2,16,8],"representation":"trivial linear"},
+    {"Gram":0,"dimension":6,"eigenvalues":[-1,4,-4],"representation":"nontrivial-center Schrodinger kernel"},
+    {"Gram":4320,"dimension":8,"eigenvalues":[2,-2,-1],"representation":"eight nontrivial linear characters of H27/Z"},
+    {"Gram":23040,"dimension":12,"eigenvalues":[-1,-2,2],"representation":"nontrivial-center Schrodinger image"}
+  ],
+  "multiplicities": [1,6,8,12],
+  "passes": "7701-7708",
+  "schema": "w33.pass7701_7708.h27_fourier_v20.v1",
+  "status": "PASS",
+  "theorem": "The 27-point 9K3/Schlaefli/H27 rank-4 scheme is exactly the Cayley association scheme of H27 defined by {1}, Z\\{1}, S16, S8. The local Steinberg V20 is the image of a group-algebra convolution and decomposes as eight nontrivial linear Fourier modes plus conjugate six-dimensional images in the two nontrivial central-character Schrodinger isotypic sectors."
+}
