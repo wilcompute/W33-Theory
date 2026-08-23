@@ -19,7 +19,7 @@
     "projective_form_stabilizer": "PGSp4(3)=Aut(W33)=W(E6)",
     "stabilizer_order": 51840
   },
-  "literature_prior_art": "The abstract SRG(117,36,15,9) is known from the rank-3 L4(3):2 action with point stabilizer U4(2):2. The new result here is its explicit realization as the moduli graph of symplectic polarities/W33 structures on the fixed PG(3,3) carrier arising at the Leech dual-40 interface.",
+  "literature_prior_art": "The abstract SRG(117,36,15,9) is known from the rank-3 L4(3):2 action with point stabilizer U4(2):2.",
   "nondegenerate_alternating_forms": 468,
   "pairwise_W33_edge_overlap": {
     "global_subdegrees": {"60":108,"78":80,"96":45},
@@ -32,9 +32,10 @@
   },
   "projective_space": "PG(3,3) on 40 labelled points",
   "projective_symplectic_polarities": 234,
+  "repo_prior_art_boundary": "Pass5744-5751 already enumerated the 234 symplectic W33 overlays on PG(3,3) and proved all 234 share one ternary quadratic code. New in Pass7725 is the Pfaffian 117+117 decomposition, the exact pairwise W33 edge-overlap relations 60/78/96, their SRG(117,36,15,9) moduli graph, and the interpretation of this structure as the polarization-choice space at the Leech dual-40 interface.",
   "schema": "w33.pass7725_7732.symplectic_polarity_moduli_117.v1",
   "status": "PASS",
-  "theorem": "The missing Leech top-to-socle polarization is not an unstructured choice: there are exactly 234 W33 polarizations, organized into two 117-point Pfaffian families. Each family carries the known rank-3 SRG(117,36,15,9), and the stabilizer of one polarization is exactly PGSp4(3)=W(E6), order 51840.",
+  "theorem": "The 234 W33 polarizations already known from Pass5751 acquire a canonical moduli geometry: they split into two 117-point Pfaffian families. Each family carries the rank-3 SRG(117,36,15,9), pairwise W33 edge overlaps take exactly 60,78,96, and the stabilizer of one polarization is PGSp4(3)=W(E6), order 51840.",
   "within_each_117": {
     "overlap60_degree": 36,
     "overlap78_graph": "SRG(117,80,52,60)",
