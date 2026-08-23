@@ -41,13 +41,12 @@ def main():
  for supp in supports:
   w=np.array(next(w for w in w3 if tuple(i for i,x in enumerate(w) if x)==supp),dtype=np.int64)%P
   first=next(int(x) for x in w if x);w=w*pow(first,-1,P)%P;U.append(w)
- U=rref(U);assert U.shape==(4,12) and wen(span(U))==Counter({3:8,6:24,9:24,0:1,12:24})
- # The full local subcode contains combinations; its minimum is 3.  Exchange the four-dimensional subspace.
+ U=rref(U);ue=wen(span(U));assert U.shape==(4,12) and ue==Counter({9:32,6:24,12:16,3:8,0:1})
  V=rref(U@S%P);assert V.shape==(4,12)
  VW=span(V);assert all(w in GW for w in VW)
  ve=wen(VW);assert ve==Counter({9:48,6:28,12:4,0:1})
  out={'schema':'w33.pass9245_9252.root_creation_protection_exchange.v1','status':'PASS','passes':'9245-9252',
-      'E6_local_extension_code':{'parameters':'[12,4,3]_3','weight_enumerator':{str(k):int(v) for k,v in sorted(wen(span(U)).items())},'four_projective_weight3_directions':True,'root_role':'the four +/- pairs of weight-3 words create 4*54=216 visible E6 roots'},
+      'E6_local_extension_code':{'parameters':'[12,4,3]_3','weight_enumerator':{str(k):int(v) for k,v in sorted(ue.items())},'four_projective_weight3_directions':True,'root_role':'the four +/- pairs of weight-3 words create 4*54=216 visible E6 roots'},
       'exchange_image_in_Golay':{'parameters':'[12,4,6]_3','size':81,'weight_enumerator':{str(k):int(v) for k,v in sorted(ve.items())},'contained_in_extended_ternary_Golay':True,'weight3_words':0},
       'theorem':'The canonical glue-exchange involution sends the four-dimensional E6 local root-extension sector to an 81-word [12,4,6]_3 subcode of the extended ternary Golay code. The directions that create norm-2 E6 roots on one side become a distance-6 rootless/protected sector on the other.',
       'interpretation_boundary':'“creation/protection duality” is a code/lattice statement: minimum glue weight 3 allows norm-2 extensions, whereas minimum weight 6 forbids them. It is not by itself a dynamical particle-creation or error-correction process.'}
