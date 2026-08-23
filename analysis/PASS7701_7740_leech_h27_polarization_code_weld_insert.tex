@@ -1,0 +1,74 @@
+% Pass7701--7740: H27 Fourier / corrected Leech duality / polarization moduli / common-code weld.
+\subsection{The corrected Leech interface reaches the common W33 code before selecting a polarity}
+
+The order-nine Leech quotient must be kept in its corrected mixed-torsion form
+\[
+ C=\operatorname{coker}(1-g)\cong(\mathbb Z/3)^2\oplus(\mathbb Z/9)^2,
+\]
+not as the retracted elementary $\mathbb F_3^6$ candidate.  The unimodular linking form therefore supplies canonical top and socle spaces
+\[
+ C/3C\cong\mathbb F_3^4,
+ \qquad C[3]\cong\mathbb F_3^4,
+\]
+paired perfectly over $\mathbb F_3$.  Projectivizing gives the symmetric $2$-$(40,13,4)$ point--hyperplane interface of $PG(3,3)$.  This dual $40+40$ object is canonical; identifying the two sides by a nondegenerate alternating polarity is an additional datum.  Under such an identification its incidence matrix is
+\[
+ N=I+A_{W(3,3)},
+\]
+so the off-diagonal relation is the canonical $\operatorname{SRG}(40,12,2,4)$.
+
+The corresponding ternary incidence code has parameters
+\[
+ [40,11,13]_3,
+\]
+and its dual is $[40,29,6]_3$ with $6240$ minimum-weight words.  These abstract code parameters are known; the present point is their transport onto the corrected Leech top--socle linking interface.
+
+There are $468$ nondegenerate alternating forms on $\mathbb F_3^4$, or
+\[
+ \boxed{234}
+\]
+projective symplectic polarities modulo nonzero scalar.  Pass~5744--5751 already found the same $234$ W33 overlays.  The refined computation splits them by Pfaffian into two families of $117$.  Comparing the edge sets of two labelled W33 graphs gives only the overlaps
+\[
+ 60,\qquad 78,\qquad 96.
+\]
+Within either $117$-family, the overlap-$96$ relation is
+\[
+ \operatorname{SRG}(117,36,15,9),
+\]
+and the overlap-$78$ relation is its complement $\operatorname{SRG}(117,80,52,60)$.  The stabilizer of one projective alternating form is
+\[
+ PGSp_4(3)\cong W(E_6),\qquad |PGSp_4(3)|=51840,
+\]
+with $|PGL_4(3):PGSp_4(3)|=234$.  Thus $W(E_6)$ occurs here as the isotropy group of a chosen W33 polarization inside the ambient projective $PG(3,3)$ carrier.
+
+The strongest canonicality result is at the code layer.  For any of the $234$ W33 polarities let
+\[
+ N=I+A,\qquad Q=J-I-A.
+\]
+Reducing the W33 strongly-regular identity modulo three gives
+\[
+ \boxed{N^2=J\pmod 3}.
+\]
+Direct verification over all $234$ polarities shows that both row spaces are independent of the chosen polarity and
+\[
+ \operatorname{row}_{\mathbb F_3}(N)
+ =\langle\mathbf 1\rangle\perp
+ \operatorname{row}_{\mathbb F_3}(Q).
+\]
+The first space is the Leech-interface $[40,11,13]_3$ code, while the sum-zero core is exactly the polarity-independent quadratic/Veronese code from Pass~5744--5751,
+\[
+ \operatorname{row}_{\mathbb F_3}(Q)=[40,10,18]_3.
+\]
+Consequently the corrected Leech construction reaches the common W33 ternary code \emph{before} a particular W33 incidence overlay is selected.  The remaining $234$-fold ambiguity is geometric, not code-theoretic.
+
+A second exact local result concerns the $27$-point Schlaefli/H27 scheme.  Its three nontrivial relations are precisely the Cayley partition of the qutrit Heisenberg group $H_{27}$ into $Z(H_{27})\setminus\{1\}$, a $16$-element Schlaefli connection set, and the $8$ horizontal elements.  The restricted Steinberg image therefore admits the finite Heisenberg decomposition
+\[
+ V_{20}=V_8^{\mathrm{lin}}\oplus V_6^{(\omega)}\oplus V_6^{(\omega^2)},
+\]
+with kernel $\mathbf1\oplus V_3^{(\omega)}\oplus V_3^{(\omega^2)}$.  This is a representation-theoretic Fourier/Schrodinger statement only; no physical multiplet interpretation is inferred.
+
+\paragraph{Evidence boundary.}
+The dual $PG(3,3)$ interface was already established in Pass~7653--7660, and Pass~5744--5751 already owned the $234$ overlays and common $[40,10,18]_3$ code.  The new content is the H27 Fourier realization, the Pfaffian $117+117$ polarization moduli and edge-overlap geometry, the Leech transport to the ternary design code, and the exact weld
+\[
+ C_{\rm Leech}=\langle\mathbf1\rangle\perp C_{\rm quad}.
+\]
+No canonical Leech/Co0-equivariant polarity $C/3C\to C[3]$ has yet been constructed, and no Monster-VOA or physical claim follows from these finite results.
