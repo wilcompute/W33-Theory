@@ -1,0 +1,28 @@
+{
+  "G2_4_colon_2": {
+    "edge_carrier": {"C13_cycles": 1600, "size": 20800, "stabilizer_order": 24192},
+    "flag_carrier": {"C13_cycles": 3200, "size": 41600, "stabilizer_order": 12096},
+    "group_order": 503193600,
+    "order13_torus_normalizer": "C13:C12",
+    "normalizer_order": 156,
+    "vertex_carrier": {"C13_cycles": 32, "size": 416, "stabilizer_order": 1209600}
+  },
+  "V2_abstract_C13": {
+    "C13_cycles": 315,
+    "centralizer_in_GL12_2": "F_{2^12}^x = C4095",
+    "centralizer_order": 4095,
+    "cycle_torsor": "C4095/C13 = C315 acts regularly on the 315 C13 cycles",
+    "module": "F2^12 ~= additive F_{2^12}",
+    "nonzero_directions": 4095,
+    "normalizer_in_GL12_2": "C4095:C12",
+    "normalizer_order": 49140,
+    "ord_13_2": 12
+  },
+  "boundary": "The V2 statement is for the abstract GL(12,2) C13 until Pass9985 existence is resolved. The G2 torus normalizer is standard finite-group structure; semiregularity follows from stabilizer orders prime to 13.",
+  "common_structure": {"clock": "C13", "clock_automorphisms": "C12", "meaning": "Both sides naturally carry a 12-step automorphism clock on a chosen C13."},
+  "mismatch": {"V2_extra_scalar_factor": 315, "explanation": "The abstract GL12 realization has a C315 torsor of C13 cycles coming from F_{2^12}^x/C13; the G2 torus centralizer is only C13.", "weld_target": "An actual Co0/G2 bridge must collapse or geometrically identify this extra C315 scalar ambiguity."},
+  "passes": "9993-10000",
+  "schema": "w33.pass9993_10000.c13_cycle_normalizer_comparison.v1",
+  "status": "PASS",
+  "theorem": "The 315 abstract V2 C13 cycles are not merely a count: they form a regular C315 torsor under the Singer centralizer quotient, while the clock automorphism quotient is C12. G2(4):2 has the same local C13:C12 clock but no C315 scalar centralizer. The exact mismatch is therefore C315."
+}
