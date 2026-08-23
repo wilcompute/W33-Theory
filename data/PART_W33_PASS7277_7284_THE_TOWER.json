@@ -1,0 +1,77 @@
+{
+  "boundary": "NEW: E8 admits a fixed-point-free order-4 automorphism whose quotient is F_2^4 and whose induced geometry is W(3,2), verified isomorphic to SRG(15,6,1,3). So the Eisenstein fibration is the d=3 member of a family. The d=3 collinear<=>orthogonal theorem does NOT generalise, for a structural reason: d=4 fibres are full-rank A1^8. NO Monster claim and NO physics claim is made",
+  "eisenstein_tower": {
+    "E8": {
+      "aut": "G32, order 155520",
+      "classes": 40,
+      "min_vectors": 240,
+      "rank_over_Zomega": 4
+    },
+    "K12": {
+      "aut": "6.PSU(4,3).2",
+      "classes": 126,
+      "min_vectors": 756,
+      "rank_over_Zomega": 6,
+      "status": "UNTESTED"
+    },
+    "Leech": {
+      "aut": "6.Suz",
+      "classes": 32760,
+      "min_vectors": 196560,
+      "rank_over_Zomega": 12,
+      "status": "UNTESTED"
+    }
+  },
+  "monster_position": "the Leech lattice is where the moonshine module is built and Aut(Leech) = Co0 underlies the Monster's construction, so the tower is worth climbing. That is NOT evidence this construction produces the Monster. Nothing here computes a Monster representation, a modular function, or a physical quantity, and no theory-of-everything claim is made",
+  "not_done": [
+    "the K12 rung",
+    "anything at Leech scale",
+    "alpha(W(3,9))",
+    "q=11 at 68",
+    "Coolsaet (2014) unread",
+    "the third 1440",
+    "the Clifford L/R 36"
+  ],
+  "recurring_bug": {
+    "effect": "verdict False on graphs that WERE the target SRG",
+    "occurrences": [
+      "Pass 7217",
+      "Pass 7218",
+      "Pass 7277"
+    ],
+    "what": "sorted(round(x) for x in ev) where ev is a Counter yields KEYS",
+    "why_caught": "the correct spectrum printed directly above the wrong verdict"
+  },
+  "the_tower": {
+    "d3": {
+      "fibre_rank": 2,
+      "fibre_roots": 6,
+      "fibre_type": "A2",
+      "geometry": "W(3,3), 40 points",
+      "orthogonality_theorem": true,
+      "quotient": "F_3^4",
+      "ring": "Z[omega]"
+    },
+    "d4": {
+      "fibre_rank": 8,
+      "fibre_roots": 16,
+      "fibre_type": "A1^8",
+      "geometry": "W(3,2), 15 points",
+      "orthogonality_theorem": false,
+      "quotient": "F_2^4",
+      "ring": "Z[i]",
+      "why_not": "A1^8 is full rank, so no two fibres are ever orthogonal; measured, the inner-product distribution is {-1:64, 0:128, 1:64} for BOTH collinear and non-collinear pairs"
+    },
+    "order4_element": {
+      "M2": "-I",
+      "det_I_minus_M": 16,
+      "not_a_coxeter_power": "4 does not divide h = 30",
+      "trace": 0
+    },
+    "the_form": {
+      "result": "SRG(15,6,1,3), spectrum 6^1 1^9 (-3)^5, |Aut| = 720",
+      "right": "((I+M)x, y) with (I+M) = 2(I-M)^{-1}",
+      "wrong": "(Mx,y) -- antisymmetric but does not descend, degrees 6,7,9,10"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "boundary": "tests whether a fixed-point-free order-4 element of W(E8) yields W(3,2) the way the order-3 one yields W(3,3). Claims nothing unless the induced graph is verified to be SRG(15,6,1,3)",
+  "order4_element": {
+    "M2_is_minus_I": true,
+    "trace": 0,
+    "det_I_minus_M": 16
+  },
+  "classes": 15,
+  "fibre_sizes": [
+    16
+  ],
+  "induced_degrees": [
+    6
+  ],
+  "is_W32": true,
+  "verdict": "the Gaussian order-4 fibration of E8 gives W(3,2), so the Eisenstein case is the d=3 member of a family"
+}
