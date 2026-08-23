@@ -1,0 +1,121 @@
+% Pass9985--10048: C13 gate, fusion no-go, full F9 residue lift, and chamber.
+\subsubsection*{Passes 9985--10048: the selector narrows while the $\mathbf F_9$ arithmetic closes}
+The attempted $C_{13}$ weld into the canonical Leech filtration now has a sharp
+boundary.  If $C_{13}\leq\operatorname{Stab}_{Co_0}(V_2)$, then it is
+fixed-point-free on the $4095$ nonzero frame directions and therefore has
+exactly $315$ thirteen-cycles.  It cannot normalize the unique pure order-eight
+generator $M$: the exact centralizer has order
+\[
+ |C_{Co_0}(M)|=48384=2^8 3^3 7,
+\]
+and $N(\langle M\rangle)/C(M)$ embeds in $\operatorname{Aut}(C_8)$ of order
+four.  The remaining search is consequently forced into the $13$-bearing
+maximal-overgroup branches $3.\mathrm{Suz}{:}2$ and
+$(A_4\times G_2(4)){:}2$.  No explicit $Co_0$ word of order thirteen
+stabilizing $V_2$ is claimed yet.
+
+The abstract irreducible clock on $V_2\cong\mathbf F_2^{12}$ has a stronger
+classification.  Since $\operatorname{ord}_{13}(2)=12$,
+\[
+ C_{GL(12,2)}(C_{13})=\mathbf F_{2^{12}}^\times=C_{4095},\qquad
+ N_{GL(12,2)}(C_{13})=C_{4095}{:}C_{12}.
+\]
+Thus its $315$ cycles form a regular $C_{315}=C_{4095}/C_{13}$ torsor.  By
+contrast an order-thirteen torus in $G_2(4){:}2$ has normalizer
+$C_{13}{:}C_{12}$, while its certified permutation carriers split into $32$
+vertex cycles, $1600$ edge cycles, and $3200$ flag cycles.  The shared local
+clock is therefore $C_{13}{:}C_{12}$ and the exact extra ambiguity on the
+abstract $V_2$ side is $C_{315}$.
+
+A second tempting geometric weld fails.  The coarsest canonical fusion of the
+$7371$ nondegenerate two-space selectors---self, meet in one projective point,
+or disjoint---has identical valencies
+\[
+ \boxed{1,\ 320,\ 7050}
+\]
+for $Q^-(5,3)$ and $Q^+(5,3)$.  Nevertheless their $320$-regular
+point-intersection graphs have different exact spectra:
+\[
+ Q^-:\quad 320^1,86^{112},80^{90},68^{160},(-4)^{7008},
+\]
+\[
+ Q^+:\quad 320^1,86^{142},74^{90},68^{130},(-4)^{7008}.
+\]
+Hence even this natural nontrivial fusion is not an isomorphism.
+
+The arithmetic side closes much further.  Put
+\[
+ K=\mathbf Q_3(i),\qquad L=K(\zeta_9),\qquad t=\zeta_9-1.
+\]
+Because
+\[
+ \Phi_9(1+t)=t^6+6t^5+15t^4+21t^3+18t^2+9t+3,
+\]
+one obtains the exact residue algebra
+\[
+ \boxed{\mathcal O_L/3\mathcal O_L\cong\mathbf F_9[t]/(t^6)}.
+\]
+An explicit regular nilpotent $N$ and $U=I+N$ satisfy $U^9=I$, $U^3\neq I$,
+and preserve a nondegenerate Hermitian Gram $H=iA$.  Thus the earlier six
+$\mathbf F_9$ layers are the complete truncated residue module, not merely an
+associated-graded dimension match.  This is still a mod-$3$ theorem; an
+integral self-dual $\mathcal O_L$ realization of the Niemeier lattice remains
+open.
+
+The parallel $E_8/3E_8=H(3,9)$ result and the rank-six transverse-glue
+construction are also instances of one exact Hermitianization mechanism.  For
+a symplectic form $K$ and symplectic complex structure $R^2=-I$, set
+\[
+ B=KR^{\mathsf T},\qquad h=B-iK.
+\]
+Then
+\[
+ h(xR,y)=i h(x,y),\qquad h(x,yR)=-i h(x,y),\qquad
+ h(y,x)=\overline{h(x,y)}.
+\]
+The actual glue realizes this in $\mathbf F_9^6$; the parallel $E_8$ theorem is
+the rank-four $\mathbf F_9$ instance.
+
+For a finite readout, encode the same orientation bit in the qutrit Bargmann
+chirality and in the $\mathbf F_9$ norm parity, then accept only when the two
+bits agree.  With independent Bargmann flip probability $p_B$ and uniform
+nonzero-symbol corruption probability $\epsilon$,
+\[
+ p_N={4\epsilon\over7},\qquad
+ a=(1-p_B)(1-p_N)+p_Bp_N,\qquad
+ e_{\rm cond}={p_Bp_N\over a}.
+\]
+At the frozen moderate Bargmann error $p_B=0.0035$ and a $5\%$ symbol-corruption
+stress,
+\[
+ a={67769\over70000}\simeq0.96812857,\qquad
+ \boxed{e_{\rm cond}={7\over67769}\simeq1.03292\times10^{-4}}.
+\]
+These are exact decoder consequences of the stated error model, not hardware
+performance data.
+
+Two further structural consequences emerge.  First, the common clock
+automorphism group $C_{12}=\operatorname{Aut}(C_{13})$ has the canonical
+orientation character
+\[
+ C_{12}\twoheadrightarrow C_{12}/C_6\cong C_2.
+\]
+On $G_2(4){:}2$ this is precisely the outer-extension quotient
+$G_2(4){:}2/G_2(4)$; on the abstract Singer side it is Frobenius parity.  Its
+identification with the earlier Golay $A_4<S_4$ orientation bit remains a test,
+not a claim.
+
+Second, since $L/K$ is totally ramified of degree six and
+$3=u t^6$ for a unit $u$, the lattice chain
+\[
+ \mathcal O_L\supset t\mathcal O_L\supset\cdots\supset
+ t^5\mathcal O_L\supset t^6\mathcal O_L=3\mathcal O_L
+\]
+has six one-dimensional $\mathbf F_9$ residue quotients.  Therefore
+\[
+ [\mathcal O_L],[t\mathcal O_L],\ldots,[t^5\mathcal O_L]
+\]
+form a full six-vertex chamber, a maximal $5$-simplex, in the Bruhat--Tits
+building of $PGL_6(\mathbf Q_3(i))$.  Multiplication by $\zeta_9=1+t$ fixes
+this chamber vertex-by-vertex.  This is arithmetic building geometry only; no
+physical spacetime or holographic interpretation is asserted.
