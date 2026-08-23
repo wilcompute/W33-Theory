@@ -1,0 +1,13 @@
+{
+  "boundary": "The Hermitianization identities are exact. This identifies a common algebraic functor; it does not identify the rank-4 E8 and rank-6 glue geometries as the same polar space or lattice.",
+  "construction": {"F9_scalar":"i acts as R","Hermitian_form":"h=B-iK over F9","input":"nondegenerate alternating K over F3 plus symplectic R with R^2=-I","symmetric_form":"B=K R^T"},
+  "exact_identities": ["R B = K","-R K = B","B R^T = -K","-K R^T = -B"],
+  "Hermitian_laws": ["h(xR,y)=i h(x,y)","h(x,yR)=conj(i) h(x,y)=-i h(x,y)","h(y,x)=conj(h(x,y))"],
+  "outside_box": true,
+  "parallel_unitary_branch": {"E8_mod_3":"H(3,9) on an F9^4 Hermitian space","glue":"F9^6 Hermitian space","relation":"same symplectic-complex-to-Hermitian mechanism, with rank 4 versus rank 6 and possibly i <-> -i convention"},
+  "passes": "10025-10032",
+  "schema": "w33.pass10025_10032.universal_f9_hermitianization.v1",
+  "status": "PASS",
+  "theorem": "A symplectic F3 space equipped with a symplectic complex structure R^2=-I canonically Hermitianizes to F9 via h=K R^T-iK. The actual transverse Niemeier glue realizes this in dimension 6, while the parallel E8/3E8 H(3,9) construction is the dimension-4 instance of the same algebraic mechanism.",
+  "verified_actual_glue": {"B_symmetric":true,"F3_dimension":12,"F9_dimension":6,"R_squared":"-I","R_symplectic":true,"rank_B":12,"rank_K":12}
+}
