@@ -1,6 +1,7 @@
 # Pass7581-7588: actual sporadic character restrictions onto the E8/W33 carrier.
 # Uses only stored CTblLib character tables and stored class fusions.
 # Pass7893 rerun marker: force the exact master workflow after the Leech/V20 reconciliation.
+# Pass8217 rerun marker: execute after the H27 parabolic and Q+(3,3) residue welds.
 LoadPackage("ctbllib");;
 
 B:=CharacterTable("B");;
