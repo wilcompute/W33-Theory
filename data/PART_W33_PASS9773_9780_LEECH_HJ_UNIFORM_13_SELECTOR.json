@@ -1,0 +1,11 @@
+{
+  "schema":"w33.pass9773_9780.leech_hj_uniform_13_selector.v1",
+  "status":"PASS",
+  "passes":"9773-9780",
+  "outside_box":true,
+  "corrected_Leech_input":{"type4_in_V2":0,"generic_generator_baseline":48,"intrinsic_type8_frames_in_V2":4095,"warning":"No frame-independent identification of V2 with one of the nine length-24 Type II code classes is used."},
+  "Hall_Janko_G24_input":{"HJ_vertices":416,"Leech_sixspace_edges":20800,"degree":100},
+  "gcd_arithmetic":{"gcd_frames_HJ_vertices":13,"gcd_frames_G24_edges":65,"gcd_all_three":13,"nontrivial_common_uniform_quotient_size":13,"Phi3_at_q3":13},
+  "conditional_theorem":"If the 4,095 intrinsic V2 frames, 416 Hall-Janko copies and 20,800 G2(4) edges all surject onto one common selector set with constant fiber size on each source, its size divides gcd(4095,416,20800)=13. The only nontrivial possible uniform common quotient therefore has exactly 13 states.",
+  "boundary":"Conditional divisibility theorem only; uniformity/equivariance and existence of a 13-state quotient remain open."
+}
