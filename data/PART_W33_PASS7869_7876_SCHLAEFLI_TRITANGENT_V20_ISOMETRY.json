@@ -1,0 +1,17 @@
+{
+  "schema": "w33.pass7869_7876.schlaefli_tritangent_v20_isometry.v1",
+  "status": "PASS",
+  "passes": "7869-7876",
+  "objects": {"cubic_lines": 27, "tritangent_planes": 45, "line_degree_in_planes": 5, "plane_size": 3},
+  "Schlaefli": "SRG(27,16,10,8), spectrum 16^1+4^6+(-2)^20",
+  "exact_operator_identity": "B^T B = 4 I + J - A_Schlaefli",
+  "V20_isometry": "On V20={x: Jx=0, A_Schlaefli x=-2x}, B^T B=6I; hence B/sqrt(6) is an isometric W(E6)-equivariant embedding into R^45.",
+  "centered_incidence_spectrum": "6^20 + 0^7",
+  "real_rank_B": 21,
+  "F2_rank_B": 21,
+  "F2_even_column_difference_rank": 20,
+  "binary_bridge": "The identical integer incidence matrix B generates the 20D even tritangent-selector image over F2 after taking column differences.",
+  "theorem": "The local Schlaefli V20 and the 45-coordinate tritangent V20 are not merely isomorphic by dimension: the classical 45x27 cubic-surface incidence matrix is the explicit intertwiner, with exact scale sqrt(6) over R and the canonical even 20D image over F2.",
+  "prior_art_boundary": "Pass7184 owns the binary V20 identification; Pass7621 owns the real centered 20D coefficient module. This pass isolates and verifies the literal classical incidence operator connecting them.",
+  "claim_boundary": "Exact cubic-surface/W(E6) representation geometry only."
+}
