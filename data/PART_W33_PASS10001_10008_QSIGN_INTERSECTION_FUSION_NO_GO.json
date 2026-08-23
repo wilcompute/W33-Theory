@@ -1,0 +1,20 @@
+{
+  "Qminus": {
+    "BtB_spectrum": {"0": 1, "72": 160, "84": 90, "90": 112, "324": 1},
+    "fusion_valencies": {"disjoint": 7050, "meet_in_point": 320, "self": 1},
+    "intersection_graph_spectrum": {"-4": 7008, "68": 160, "80": 90, "86": 112, "320": 1},
+    "rank_B": 363
+  },
+  "Qplus": {
+    "BtB_spectrum": {"0": 1, "72": 130, "78": 90, "90": 142, "324": 1},
+    "fusion_valencies": {"disjoint": 7050, "meet_in_point": 320, "self": 1},
+    "intersection_graph_spectrum": {"-4": 7008, "68": 130, "74": 90, "86": 142, "320": 1},
+    "rank_B": 363
+  },
+  "boundary": "Exact exhaustive finite enumeration. Spectra are certified by exact integer annihilating polynomials for B^T B and exact trace/multiplicity recovery; no floating-point eigenvalue claim is used.",
+  "consequence": "The only automatic common intersection-only fusion left is the trivial complete-graph fusion self/nonself; any useful weld must use a less symmetric external relation or additional controller data.",
+  "passes": "10001-10008",
+  "schema": "w33.pass10001_10008.qsign_intersection_fusion_no_go.v1",
+  "status": "PASS",
+  "theorem": "The coarsest canonical intersection-dimension fusion has identical valencies (1,320,7050) on the Q- and Q+ 7,371 candidate sets, but the point-intersection graphs are spectrally distinct. Q- has spectrum 320^1,86^112,80^90,68^160,(-4)^7008; Q+ has 320^1,86^142,74^90,68^130,(-4)^7008. Hence even this natural fusion is not an isomorphism."
+}
