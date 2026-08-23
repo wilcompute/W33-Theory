@@ -1,0 +1,26 @@
+{
+  "2M12_image_on_Uplus": 190080,
+  "C_isometry_intersection": {
+    "element_order_census": {"1": 1, "2": 31, "3": 20, "5": 24, "6": 20, "10": 24},
+    "identification": "C2 x A5",
+    "order": 120,
+    "projective_strict_controller": "A5"
+  },
+  "C_similitude_intersection": {
+    "element_order_census": {"1": 1, "2": 31, "3": 20, "4": 32, "5": 24, "6": 20, "10": 24, "12": 40, "20": 48},
+    "identification": "C4 x A5",
+    "order": 240
+  },
+  "claim_boundary": "Exact finite-module no-selection result. A full 2.Suz orbit statement requires data not preserving this chosen M12:2 polarization.",
+  "passes": "9101-9108",
+  "schema": "w33.pass9101_9108.suzuki_qplus53_controller_no_selection.v1",
+  "status": "PASS",
+  "theorem": "The M12:2 polarization-compatible 7,371 W33 candidates are not uniquely selected by the controller preserving that polarization: its exact projective strict controller is A5, and even the full C4xA5 similitude group has 90 orbits on the nondegenerate candidates.",
+  "two_space_orbits_under_similitudes": {
+    "anisotropic_orbits": 28,
+    "degenerate_orbits": 53,
+    "hyperbolic_orbits": 62,
+    "nondegenerate_candidate_orbits": 90,
+    "total_orbits": 143
+  }
+}
