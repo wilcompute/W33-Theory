@@ -1,0 +1,74 @@
+{
+  "boundary": "E8^3 at d=9 DOES give W(3,3), verified SRG(40,12,2,4) -- but it is a DIAGONAL of three copies of the E8 d=3 fibration, not a new geometry. Since Leech is not a direct sum, its d=9 fibration could not be a diagonal, so Leech remains the real test and is UNTESTED",
+  "e8cubed": {
+    "M3": "J (+) J (+) J",
+    "classes": 80,
+    "det_I_minus_M": 81,
+    "element": "M(x,y,z) = (Jz, x, y), forced not searched",
+    "form": "(M^3 x, y) - (x, M^3 y)",
+    "gives_W33": true,
+    "graph": "SRG(40,12,2,4), spectrum 12^1 2^24 (-4)^15",
+    "minimal_vectors": 720,
+    "order": 9,
+    "per_class": 9,
+    "projective_points": 40,
+    "vectors_per_point": 18
+  },
+  "not_done": [
+    "Leech d=9 (needs Co0 generators)",
+    "K12 built",
+    "whether order-4 -> spread is onto",
+    "alpha(W(3,9))",
+    "q=11 at 68",
+    "Coolsaet unread"
+  ],
+  "order_of_bug": {
+    "effect": "returned None for EVERY 24x24 matrix; an order-9 map looked orderless",
+    "fixed": "I = np.eye(M.shape[0])",
+    "how_caught": "two checks passed and the third returned None rather than False, with det(I-M) = 81 and M^3 = J(+)J(+)J already correct on screen",
+    "what": "order_of() hardcoded I = np.eye(8)"
+  },
+  "spreads": {
+    "distinct_found": 5,
+    "surjectivity": "NOT established",
+    "total_in_W33": 36
+  },
+  "the_deflation": {
+    "bijective_per_block": "E8-class determines E8^3-class, 80 of 80, all three blocks",
+    "block_distribution": "every class draws exactly 3 vectors from each of 3 blocks",
+    "verdict": "a DIAGONAL of three copies of the d=3 fibration; a genuine rank-24 realisation of W(3,3) but not a new geometry",
+    "why_leech_still_matters": "Leech is not a direct sum, so its d=9 fibration cannot be a diagonal of anything"
+  },
+  "tower": [
+    {
+      "d": 3,
+      "geometry": "W(3,3)",
+      "independent": true,
+      "lattice": "E8",
+      "rank": 8
+    },
+    {
+      "d": 4,
+      "geometry": "W(3,2)",
+      "independent": true,
+      "lattice": "E8",
+      "rank": 8
+    },
+    {
+      "d": 9,
+      "geometry": "W(3,3)",
+      "independent": false,
+      "lattice": "E8^3",
+      "note": "diagonal",
+      "rank": 24
+    },
+    {
+      "d": 9,
+      "geometry": null,
+      "independent": "would be",
+      "lattice": "Leech",
+      "rank": 24,
+      "status": "UNTESTED, needs Co0"
+    }
+  ]
+}

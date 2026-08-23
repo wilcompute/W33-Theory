@@ -1,0 +1,13 @@
+{
+  "boundary": "tests the rank-24 rung on E8^3, which the Niemeier census says is usable at d=9. Claims nothing unless SRG(40,12,2,4) is verified",
+  "minimal_vectors": 720,
+  "order": 9,
+  "det_I_minus_M": 81,
+  "classes": 80,
+  "fibre_size": [
+    9
+  ],
+  "projective": 40,
+  "gives_W33": true,
+  "form": "(M^3x,y)-(x,M^3y)"
+}

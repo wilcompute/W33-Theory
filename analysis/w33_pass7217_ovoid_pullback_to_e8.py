@@ -93,8 +93,11 @@ def simple_reflection(i):
 
 
 def order_of(M, cap=64):
+    # The identity must match M's own size. This was hardcoded to np.eye(8), which
+    # silently returned None for every 24x24 matrix -- it cannot ever match, so an
+    # element of order 9 on E8^3 looked like it had no finite order at all.
     X = M.copy()
-    I = np.eye(8, dtype=np.int64)
+    I = np.eye(M.shape[0], dtype=np.int64)
     for k in range(1, cap + 1):
         if np.array_equal(X, I):
             return k
