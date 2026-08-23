@@ -1,0 +1,43 @@
+{
+  "claim_boundary": "Exact finite projective/group/graph theorem. It classifies candidate polarities; it does not select one canonically from the Leech operator.",
+  "cross_117x117": {
+    "common_cross_neighbours": {
+      "same_family_overlap_78": 18,
+      "same_family_overlap_96": 15
+    },
+    "overlap96_degree": 45,
+    "singular_spectrum": "45^1 + 6^90 + 0^26"
+  },
+  "distinct_labelled_W33_graphs": 234,
+  "edges_per_W33": 240,
+  "group_action": {
+    "PGL4_3_order": 12130560,
+    "PGL_index": 234,
+    "PSL4_3_order": 6065280,
+    "PSL_orbits": "two Pfaffian families of 117",
+    "PSL_stabilizer_order": 51840,
+    "projective_form_stabilizer": "PGSp4(3)=Aut(W33)=W(E6)",
+    "stabilizer_order": 51840
+  },
+  "literature_prior_art": "The abstract SRG(117,36,15,9) is known from the rank-3 L4(3):2 action with point stabilizer U4(2):2. The new result here is its explicit realization as the moduli graph of symplectic polarities/W33 structures on the fixed PG(3,3) carrier arising at the Leech dual-40 interface.",
+  "nondegenerate_alternating_forms": 468,
+  "pairwise_W33_edge_overlap": {
+    "global_subdegrees": {"60":108,"78":80,"96":45},
+    "values_and_pair_counts": {"60":12636,"78":9360,"96":5265}
+  },
+  "passes": "7725-7732",
+  "pfaffian_families": {
+    "reason": "Pfaffian is unchanged by projective scalar +/-1 in dimension four and is multiplied by det(g) under congruence",
+    "sizes": [117,117]
+  },
+  "projective_space": "PG(3,3) on 40 labelled points",
+  "projective_symplectic_polarities": 234,
+  "schema": "w33.pass7725_7732.symplectic_polarity_moduli_117.v1",
+  "status": "PASS",
+  "theorem": "The missing Leech top-to-socle polarization is not an unstructured choice: there are exactly 234 W33 polarizations, organized into two 117-point Pfaffian families. Each family carries the known rank-3 SRG(117,36,15,9), and the stabilizer of one polarization is exactly PGSp4(3)=W(E6), order 51840.",
+  "within_each_117": {
+    "overlap60_degree": 36,
+    "overlap78_graph": "SRG(117,80,52,60)",
+    "overlap96_graph": "SRG(117,36,15,9)"
+  }
+}
