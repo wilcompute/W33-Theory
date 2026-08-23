@@ -255,7 +255,11 @@ def lns(P, adj, budget, rng, target=None):
                 break
         if it % 50 == 0:
             cur = list(best)
-    return best, it
+    # Report whether the budget ran out. A search that STOPS is not a search that
+    # FINISHED, and reporting a timed-out best as if it were converged is the same
+    # invalid inference as reporting a timed-out exact cover as "0 covers found".
+    exhausted = time.time() - t0 >= budget
+    return best, it, exhausted
 
 
 def main() -> int:
@@ -287,11 +291,12 @@ def main() -> int:
         print(f"    collinearity degree {len(adj[0])}   "
               f"(GQ(q,q^2) expects q(q^2+1) = {q * (q * q + 1)})", flush=True)
         rng = random.Random(7216 + q)
-        best, it = lns(P, adj, args.budget, rng)
+        best, it, exhausted = lns(P, adj, args.budget, rng)
         bad = [(a, b) for a, b in itertools.combinations(best, 2) if Bil(P[a], P[b]) == 0]
         pub = {4: 25}.get(q)
         print(f"    LNS best partial ovoid: {len(best)}  ({it} iterations, "
               f"{len(bad)} violations)")
+        print(f"      budget exhausted (NOT converged): {exhausted}")
         if pub:
             print(f"    published exhaustive maximum (Cimrakova-Fack Table 1): {pub}   "
                   f"-> {'REACHES' if len(best) >= pub else f'falls {pub - len(best)} short'}")

@@ -48,6 +48,34 @@ STOP = {
 }
 
 
+# THE RENAME BLIND SPOT, partially closed. BT1750 calls the objects "hexagons";
+# I called them "A2 subsystems". Word matching cannot bridge a rename on its own,
+# so the repo's own aliases are listed here. Each entry maps a term to other terms
+# this corpus uses for the SAME object. Extend it whenever a rediscovery is found
+# to have turned on vocabulary.
+SYNONYMS = {
+    "a2": ["hexagon", "hexagons", "witting"],
+    "subsystem": ["hexagon", "fibre", "fiber"],
+    "subsystems": ["hexagons", "fibres", "fibers"],
+    "w33": ["doily", "w(3,3)", "gq(3,3)"],
+    "doily": ["w33", "w(3,3)"],
+    "sixer": ["partial ovoid", "skew"],
+    "ovoid": ["skew", "cap"],
+    "spread": ["parallel class", "resolution"],
+    "quadrangle": ["gq", "w33", "doily"],
+}
+
+
+def expand(words: list[str]) -> list[str]:
+    """Add the corpus's own aliases for each content word."""
+    out = list(words)
+    for w in words:
+        for alt in SYNONYMS.get(w, []):
+            if alt not in out:
+                out.append(alt)
+    return out
+
+
 def content_words(subject: str) -> list[str]:
     s = re.sub(r"Pass\s*\d+[-–]?\d*", " ", subject, flags=re.I)
     s = re.sub(r"\(.*?\)", " ", s)
@@ -92,7 +120,7 @@ def search_corpus(words: list[str], exclude: str = "") -> dict[str, int]:
 
 
 def report(subject: str, exclude: str = "", threshold: int = 3) -> list[str]:
-    words = content_words(subject)
+    words = expand(content_words(subject))
     if len(words) < 2:
         return []
     hits = search_corpus(words, exclude)
@@ -116,7 +144,8 @@ def selftest() -> int:
         # rediscoveries that reuse the prior art's words, and provably not those that
         # rename the object. Stating the limit rather than pretending coverage.
         ("the points of W(3,3) ARE the A2 subsystems of E8",
-         "w33_pass7221", False, "BLIND SPOT: BT1750 says 'hexagons', not 'A2 subsystems'"),
+         "w33_pass7221", True,
+         "was a blind spot; the SYNONYMS table now maps a2/subsystem -> hexagon"),
         ("zzzqqq nonexistent widget frobnicator",
          "", False, "nothing in the corpus should match"),
     ]

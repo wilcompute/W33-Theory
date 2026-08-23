@@ -1,0 +1,147 @@
+{
+  "boundary": "NEW: every one of the 90 J-stable D4 blocks is a MAXIMAL partial ovoid of size 4, extendable by no point, so the 90 are disjoint from the 2880 maximum ones (zero incidences over 90 x 2880). REFUTED, my own proposal: resolutions cannot certify alpha. MEASURED: 10.2% citation ambiguity, and a 31%/44%/25% prior/new/partial split on this session's claims",
+  "citation_ambiguity": {
+    "ambiguous": 84,
+    "cost_to_me": "I read archive MCCCXCIII (W(3,3)'s own 2-class scheme) and concluded the prior art was elsewhere",
+    "examples": {
+      "CCCII": [
+        "CENTRALITY_MEASURES",
+        "DELSARTE_LP_BOUND"
+      ],
+      "CCCVII": [
+        "LINE_GRAPH",
+        "OPERATOR_TETRAHEDRON_ENTROPY"
+      ]
+    },
+    "method": "prefix-variants collapsed first, so these are real collisions",
+    "numerals_used": 820,
+    "rate": "10.2%"
+  },
+  "my_rediscovery_rate": {
+    "claims": 16,
+    "ledger": [
+      {
+        "claim": "alpha(W(3,3))=7, alpha(W(3,5))=18 exact",
+        "note": "settled a corpus contradiction",
+        "verdict": "PARTIAL"
+      },
+      {
+        "claim": "q=7 optimum has no order-3 symmetry",
+        "note": "CONJECTURED at Pass 6285-6300",
+        "verdict": "PARTIAL"
+      },
+      {
+        "claim": "|Stab| = 2 exactly at q=7 and q=9",
+        "note": "prior art had q=3 only",
+        "verdict": "NEW"
+      },
+      {
+        "claim": "certified basin radius 9 at q=9",
+        "note": "none found",
+        "verdict": "NEW"
+      },
+      {
+        "claim": "LNS reaches 25 on Q^-(5,4)",
+        "note": "published exhaustive maximum",
+        "verdict": "PRIOR"
+      },
+      {
+        "claim": "Pauli dictionary at odd q",
+        "note": "q=2 was Pass 5351-5352",
+        "verdict": "PARTIAL"
+      },
+      {
+        "claim": "collinear <=> completely orthogonal in E8",
+        "note": "none found",
+        "verdict": "NEW"
+      },
+      {
+        "claim": "points of W(3,3) are A2 subsystems",
+        "note": "BT1750 had the 40 hexagons",
+        "verdict": "PARTIAL"
+      },
+      {
+        "claim": "the 90 D4s are the J-stable D4s",
+        "note": "gave their criterion a definition",
+        "verdict": "NEW"
+      },
+      {
+        "claim": "the two 36s are one graph, |Aut|=51840",
+        "note": "MCCCXCIII/XCIV/XCV had ALL of it",
+        "verdict": "PRIOR"
+      },
+      {
+        "claim": "every non-collinear pair in exactly one D4",
+        "note": "none found",
+        "verdict": "NEW"
+      },
+      {
+        "claim": "perp of a point is E6",
+        "note": "none found",
+        "verdict": "NEW"
+      },
+      {
+        "claim": "the K4-design is resolvable",
+        "note": "none found",
+        "verdict": "NEW"
+      },
+      {
+        "claim": "alpha(Q^-(5,2))=6 with 72 sixers",
+        "note": "Brosowsky et al. state 72",
+        "verdict": "PRIOR"
+      },
+      {
+        "claim": "alpha(Q^-(5,3))=16",
+        "note": "meets the published sharp bound",
+        "verdict": "PRIOR"
+      },
+      {
+        "claim": "Q^-(5,5)=48",
+        "note": "matches Cimrakova-Fack exactly",
+        "verdict": "PRIOR"
+      }
+    ],
+    "new": 7,
+    "partial": 4,
+    "prior": 5,
+    "self_correction": "last turn I said 'three of my last four results were prior art'; it was ONE of four. Overstating my own error rate is still a false claim"
+  },
+  "not_done": [
+    "alpha(W(3,9))",
+    "q=11 at 68",
+    "the third 1440",
+    "the Clifford L/R 36",
+    "Coolsaet (2014) unread"
+  ],
+  "parallel_classes": {
+    "association_scheme": false,
+    "contrast": "the 36 spreads share 1 or 4 only, giving SRG(36,15,6,6)",
+    "count": 459,
+    "shared_block_values": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "the_ninety": {
+    "alpha": 7,
+    "checked_over": "90 blocks x 2880 optima",
+    "extendable_by": 0,
+    "in_any_maximum_partial_ovoid": 0,
+    "maximal_at_size": 4,
+    "meaning": "ninety MINIMUM-SIZE MAXIMAL partial ovoids, disjoint from the optima",
+    "refutes": "my proposal that resolutions could certify alpha"
+  },
+  "timeout_failure_mode": {
+    "audit": "two Pass 72xx scripts could report a timeout as a result",
+    "fixed": "w33_pass7216 lns() now returns and prints whether the budget ran out",
+    "instances": [
+      "grep truncated by head -6 -> 'no producer exists' (there was one)",
+      "exact cover stopped at 200s -> '0 covers found' (90 D4s are one)"
+    ],
+    "name": "a timed-out search is not a negative result"
+  }
+}
