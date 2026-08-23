@@ -1,0 +1,14 @@
+{
+  "ambient_graph": {"edges":20800,"local_graph":"Hall-Janko SRG(100,36,14,12)","name":"G2(4) graph","srg":[416,100,36,20]},
+  "claim_boundary": "Exact finite graph arithmetic and endpoint-pattern transpose theorem; the final classical S^1_1/S^2_1 name remains a separate test.",
+  "coarse_relative_edge_counts": {"AA":252,"AB_or_AC":1512,"AD":1512,"BB_or_CC":1512,"BC":441,"BD_or_CD":7056,"DD":8316,"fixed":1,"share_endpoint_triangle":72,"share_endpoint_wedge":126},
+  "fixed_edge_vertex_partition": {"A_common":36,"B_u_only":63,"C_v_only":63,"D_neither":252},
+  "forced_edge_counts": {"AA":252,"AB":756,"AC":756,"AD":1512,"BB":756,"BC":441,"BD":3528,"CC":756,"CD":3528,"DD":8316},
+  "passes": "9365-9372",
+  "rank14_refinement": {"AA":[252],"AB_or_AC":[1512],"AD":[1512],"BB_or_CC":[1512],"BC":[63,378],"BD_or_CD":[3024,4032],"DD":[252,2016,6048],"fixed":[1],"share_endpoint_triangle":[72],"share_endpoint_wedge":[126]},
+  "schema": "w33.pass9365_9372.g24_edge_orbital_refinement.v1",
+  "self_transpose_1512": "A-B or A-C",
+  "status": "PASS",
+  "theorem": "The entire coarse rank-14 Leech six-space geometry is forced by the G2(4) SRG and its Hall-Janko local graph. The unique nonsymmetric 1512+1512 pair is exactly A-D <-> (B-B or C-C) under ordered-edge reversal.",
+  "unique_oriented_pair": {"degrees":[1512,1512],"forward":"A-D","reverse":"B-B or C-C"}
+}
