@@ -1,0 +1,30 @@
+{
+  "A2^12": {
+    "M12_class": "3B",
+    "ambient_umbral_quotient": "2.M12",
+    "image_order": 3,
+    "image_type": "order-3 signed monomial lift over M12 class 3B",
+    "permutation_projection_cycle_shape": "3^4"
+  },
+  "E6^4": {
+    "ambient_umbral_quotient": "2.S4 (order 48; isomorphic to GL(2,3))",
+    "image_order": 1,
+    "image_type": "identity",
+    "reason": "carrier lies in W(E6)^4"
+  },
+  "E8^3": {
+    "ambient_umbral_quotient": "S3",
+    "image_order": 3,
+    "image_type": "3-cycle of the three E8 factors"
+  },
+  "classical_boundary": "The ambient Niemeier quotient groups are classical input. The carrier images follow from the explicit repository constructions. The M12 name 3B uses the ATLAS convention in which cycle shape 3^4 is class 3B.",
+  "passes": "9205-9212",
+  "root_shadow_types": {
+    "A2^12": "one W33 line",
+    "E6^4": "one W33 line plus A2^12 root kernel",
+    "E8^3": "all 40 W33 points"
+  },
+  "schema": "w33.pass9205_9212.umbral_image_trichotomy.v1",
+  "status": "PASS",
+  "theorem": "The same rank-24 W(3,3) quotient is carried by three sharply different Niemeier automorphism-quotient classes: an S3 3-cycle for E8^3, the identity for the diagonal E6^4 carrier, and an order-3 2.M12 element projecting to M12 class 3B (cycle shape 3^4) for A2^12. Thus the W33 quotient does not determine the umbral image, and root-shadow type plus umbral image gives a strictly finer carrier invariant."
+}
