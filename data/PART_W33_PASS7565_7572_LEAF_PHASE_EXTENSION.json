@@ -1,0 +1,27 @@
+{
+  "Eisenstein_leaves": 2240,
+  "Schreier_generators": 99,
+  "action": "the W(E6)/U4(2)=C2 quotient inverts C3; U4(2) centralizes C3",
+  "chosen_leaf_stabilizer_order": 155520,
+  "claim_boundary": "Exact finite group action only; no physical phase identification follows automatically.",
+  "dependency_weld": {
+    "Pass1031": "full-E8 centralizer is Z3 x Sp(4,3), with Z3 detected by complex determinant",
+    "Pass1037": "full normalizer quotient is S3 and its C2 acts on the phase C3 by inversion",
+    "projectivization": "quotienting the common central {-I} inside Sp(4,3) sends Sp(4,3) to U4(2), leaving the phase C3 intact"
+  },
+  "exact_sequence": "1 -> C3 -> Stab_projective_E8(L) -> W(E6) -> 1",
+  "induced_leaf_group_center_order": 1,
+  "induced_leaf_group_derived_order": 25920,
+  "induced_leaf_group_identification": "W(E6) = U4(2):2 = PSp(4,3):2",
+  "induced_leaf_group_order": 51840,
+  "leaf_A2_points": 40,
+  "novelty_boundary": "Pass1031/1037 already owned the abstract full-E8 controller stack. This pass supplies the direct 2240-leaf/40-A2 projective action and welds that older theorem to the current global triality geometry.",
+  "passes": "7565-7572",
+  "pointwise_kernel": "C3",
+  "pointwise_kernel_order": 3,
+  "projective_E8_order": 348364800,
+  "schema": "w33.pass7565_7572.leaf_phase_extension.v1",
+  "split_structure": "(C3 x U4(2)):2",
+  "status": "PASS",
+  "theorem": "For an actual one of the 2240 E8/3E8 Eisenstein W33 leaves, the projective E8 stabilizer is a split C3 phase extension of the full W(E6) leaf controller. The C3 is pointwise invisible on all 40 A2 points, while the outer W(E6) involution inverts it."
+}
