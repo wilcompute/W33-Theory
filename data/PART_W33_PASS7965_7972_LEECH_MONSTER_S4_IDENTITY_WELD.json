@@ -1,0 +1,12 @@
+{
+  "schema":"w33.pass7965_7972.leech_monster_s4_identity_weld.v1",
+  "status":"PASS",
+  "passes":"7965-7972",
+  "common_direction_set":"PG(1,3) = {(0:1),(1:0),(1:1),(1:2)}",
+  "coordinate_identification":"identity",
+  "Leech_strict_isometries":{"linear_group":"SL2(3)","projective_image":"PSL2(3)=A4","order":12},
+  "Leech_linking_similitudes":{"linear_group":"GL2(3)","scalar_kernel":"{+-I}","projective_image":"PGL2(3)=S4","order":24},
+  "Monster_dependency":"Pass7573-7580 uses the same four DIRS and the same GL2(3)/{+-I}=S4 action.",
+  "theorem":"The four canonical Leech AG(2,3) planes and the four Monster/qutrit affine striations are literally the same PG(1,3) direction controller. Strict Leech isometries give A4 and genuine linking similitudes add the odd coset to recover the Monster S4.",
+  "claim_boundary":"Finite controller weld only."
+}
