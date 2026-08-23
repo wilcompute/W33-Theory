@@ -1,0 +1,86 @@
+{
+  "boundary": "VERIFIED, coordinate-free: the pi-adic filtration of Leech by its order-8 element is a nested binary code chain V_3 < V_2 < V_1 < F_2^24 of dimensions 6, 12, 18, 24 which is SELF-DUAL (V_1-perp = V_3, V_2-perp = V_2); the middle level V_2 is DOUBLY EVEN and self-dual, hence a TYPE II code of length 24, one of the nine; V_3 is doubly even and self-orthogonal; the pair (V_1, V_3) is a CSS pair giving [[24,12,d]]; and the successive quotients are all dimension 6, a uniform four-stage split. The DISTANCE and WHICH Type II code are NOT determined -- both need a coordinate frame that Leech/2Leech does not have",
+  "chain": [
+    {
+      "dim": 24,
+      "j": 0,
+      "nested": true,
+      "perp_dim": null,
+      "perp_equals": null
+    },
+    {
+      "dim": 18,
+      "j": 1,
+      "nested": true,
+      "perp_dim": 6,
+      "perp_equals": "V_3: True"
+    },
+    {
+      "dim": 12,
+      "j": 2,
+      "nested": true,
+      "perp_dim": 12,
+      "perp_equals": "V_2: True"
+    },
+    {
+      "dim": 6,
+      "j": 3,
+      "nested": true,
+      "perp_dim": 18,
+      "perp_equals": "V_1: True"
+    }
+  ],
+  "code_types": {
+    "V_2": {
+      "classification": "a TYPE II code of length 24, one of nine",
+      "dim": 12,
+      "doubly_even": true,
+      "self_dual": true
+    },
+    "V_3": {
+      "dim": 6,
+      "doubly_even": true,
+      "dual": "V_1",
+      "self_orthogonal": true
+    }
+  },
+  "css_pair": {
+    "C_1": "V_3 (dim 6)",
+    "C_1_is_C_2_perp": true,
+    "C_2": "V_1 (dim 18)",
+    "d": "NOT DETERMINED",
+    "k": 12,
+    "n": 24,
+    "self_dual_level": "V_2 gives k = 0: a stabiliser STATE, matching the Lagrangian conclusion of Pass 8022-8029"
+  },
+  "method_note": "the RREF here does forward AND backward elimination. An earlier version omitted the backward half, and the nullspace formula it feeds silently returned the wrong subspace -- the duality checks came out False with the dimensions still correct",
+  "no_physics_claim": "stabiliser and CSS are used as standard names for finite structures -- maximal isotropic subspaces and nested self-orthogonal code pairs. Per Pass 5351-5352",
+  "not_determined": {
+    "distance": "weight needs a coordinate frame; Leech/2Leech has no canonical one",
+    "which_type_II_code": "distinguishing Golay from the other eight needs weights. Coordinate-free, only membership among the nine is established. Claiming 'the filtration produces Golay' would be the plausible-and-unchecked step this session has had to retract twice"
+  },
+  "not_done": [
+    "the distance d",
+    "which of the nine Type II codes V_2 is",
+    "whether this relates to the classical Golay/hexacode Leech decoders",
+    "the p=3 reading, where doubly-even has no analogue"
+  ],
+  "self_dual": {
+    "V_1_perp_is_V_3": true,
+    "V_2_perp_is_V_2": true,
+    "V_3_perp_is_V_1": true
+  },
+  "uniform_stack": {
+    "bits_per_stage": 6,
+    "caveat": "arithmetic about the chain, NOT a claim about any decoder. It says the filtration has the shape multistage decoding wants, and nothing about whether it coincides with the classical Leech decoders, which are built from the Golay code and the hexacode",
+    "cosets_flat": 16777216,
+    "cosets_staged": 256,
+    "stages": 4,
+    "successive_quotient_dims": [
+      6,
+      6,
+      6,
+      6
+    ]
+  }
+}
