@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "schema": "w33.pass8909_8916.e7_e8_d4_reye_latin_selector.v1",
+  "passes": "8909-8916",
+  "E7_A2_total": 336,
+  "orthogonality_profile_to_residue": {"16": 16, "0": 48, "1": 128, "4": 144},
+  "selected_A2": 16,
+  "selected_rule": "orthogonal to all 16 A2s of the explicit ternary Q+(3,3) residue",
+  "selected_radicals": "all 16 singular projective points of the complementary Q+(3,3)",
+  "root_pairs": 12,
+  "signed_roots": 24,
+  "root_subsystem": "D4 in the complementary four coordinates",
+  "incidence": "(12_4,16_3) transversal/Reye-type configuration",
+  "point_graph": "K4,4,4",
+  "block_graph": "SRG(16,9,4,6) = complement of R(4,4)",
+  "colored_automorphism_order": 576,
+  "automorphism_identification": "W(F4)/{+-I}",
+  "latin_square": [[3,2,1,0],[2,3,0,1],[1,0,3,2],[0,1,2,3]],
+  "latin_isotopy": "Klein V4, not cyclic C4",
+  "prior_art_boundary": "Pass5316-5323 already classified all 576 order-4 Latin squares and D4/tomotope actions; new here is the objectwise cross-rung selection of one Klein square from the actual E7 Pauli sectors by the explicit ternary E8 residue.",
+  "theorem": "Adding the explicit ternary Q+(3,3) residue breaks the otherwise transitive 336 E7/Pauli sectors and canonically selects the 16 A2 subsystems of a complementary D4. Their 12-point/16-block incidence is a 576-symmetric Klein-V4 Latin-square configuration.",
+  "claim_boundary": "Exact E8/E7 root, finite-incidence and Latin-square theorem; no physical sector selection is inferred."
+}
