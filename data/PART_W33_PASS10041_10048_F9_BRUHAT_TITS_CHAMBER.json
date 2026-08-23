@@ -1,0 +1,13 @@
+{
+  "boundary": "Standard Bruhat-Tits lattice-chain interpretation plus the exact cyclotomic local-field identities. No p-adic AdS/CFT, fractal boundary, or physical spacetime interpretation is claimed.",
+  "building": {"claim":"[O_L],[t O_L],...,[t^5 O_L] form a full chamber / maximal 5-simplex","dimension":5,"group":"PGL_6(Q3(i))","vertices_in_chamber":6},
+  "cyclotomic_fixed_chamber": {"operator":"multiplication by zeta_9=1+t","residue_action":"regular order-9 unipotent action on O_L/3 from Pass10009-10016","why_fixed":"zeta_9 is a unit and zeta_9 * t^j O_L = t^j O_L for every j"},
+  "fields": {"K":"Q3(i), unramified quadratic","L":"K(zeta_9)","e_L_over_K":6,"f_L_over_K":1,"residue_K":"F9","uniformizer_L":"t=zeta_9-1","uniformizer_relation":"3 = unit * t^6"},
+  "lattice_chain": {"indices_from_O_L":[1,9,81,729,6561,59049,531441],"successive_quotients":"six copies of one-dimensional F9","terms":["O_L","t O_L","t^2 O_L","t^3 O_L","t^4 O_L","t^5 O_L","t^6 O_L ~ 3 O_L"],"vertex_types_mod_6":[0,1,2,3,4,5]},
+  "outside_box": true,
+  "parallel_relation": "The parallel Pass9481-9504 filtration produced a 3-simplex in the PGL_24(Q2) building. Here the mixed unramified/residue-F9 construction gives a maximal chamber in PGL_6(Q3(i)); both are lattice-chain manifestations of cyclotomic ramification.",
+  "passes": "10041-10048",
+  "schema": "w33.pass10041_10048.f9_bruhat_tits_chamber.v1",
+  "status": "PASS",
+  "theorem": "The six F9 layers of the glue/local-field lift are exactly the six one-dimensional residue steps of a complete O_K lattice chain, hence the six homothety classes form a full Bruhat-Tits chamber for PGL_6(Q3(i)). The zeta_9 action fixes the chamber while acting nontrivially and regularly-unipotently on its mod-3 residue module."
+}
