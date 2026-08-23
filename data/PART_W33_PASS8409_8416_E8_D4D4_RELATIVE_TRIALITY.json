@@ -1,0 +1,36 @@
+{
+  "schema": "w33.pass8409_8416.e8_d4d4_relative_triality.v1",
+  "status": "PASS",
+  "passes": "8409-8416",
+  "Qplus33_orbit_under_projective_E8": 3150,
+  "linear_E8_residue_stabilizer_order": 221184,
+  "two_block_projections": {
+    "orders": [1152, 1152],
+    "identification": "O4+(3) ~= W(F4) on each nondegenerate 4-space",
+    "projection_kernel_orders": [192, 192],
+    "kernel_identification": "W(D4)"
+  },
+  "goursat_common_quotient": {
+    "order": 6,
+    "element_order_census": {"1": 1, "2": 3, "3": 2},
+    "identification": "S3 = D4 triality"
+  },
+  "fiber_product": "W(F4) x_{S3} W(F4)",
+  "meaning": "the two independent F4/D4 triality labels of the ambient product are constrained to agree inside E8",
+  "ambient_linear_residue_stabilizer": {
+    "order": 1327104,
+    "structure": "W(F4) x W(F4)",
+    "index_of_linear_E8_stabilizer": 6,
+    "six_cosets": "six relative-triality states; S3 x S3 acts on cosets of diagonal S3"
+  },
+  "projective_E8_stabilizer_order": 110592,
+  "residue_16_point_action": {
+    "E8_image_order": 576,
+    "E8_pointwise_kernel_order": 192,
+    "full_rook_graph_automorphism_order": 1152,
+    "missing_point_parity_index": 2
+  },
+  "index12_interpretation": "Pass8309 full-triality-carrier index 12 factors structurally as 6 relative D4 trialities times one extra C2 point/type parity. The intrinsic linear D4+D4 enlargement is index 6.",
+  "theorem": "The E8 stabilizer of the explicit D4+D4 / Q+(3,3) residue is a triality fiber product, not an arbitrary subgroup: its linear lift is W(F4) x_{S3} W(F4). The six inner cosets are relative triality states; the 12-state full carrier enlargement is 6 x 2 after the outer parity/type extension.",
+  "claim_boundary": "Exact mod-3 Weyl-matrix/Goursat calculation. The 6x2 factorization is a finite-group carrier statement, not a generation or particle claim."
+}
