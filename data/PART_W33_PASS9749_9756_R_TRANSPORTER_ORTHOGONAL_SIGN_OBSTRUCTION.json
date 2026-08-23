@@ -1,0 +1,10 @@
+{
+  "schema":"w33.pass9749_9756.r_transporter_orthogonal_sign_obstruction.v1",
+  "status":"PASS",
+  "passes":"9749-9756",
+  "glue_package":{"exchange":"R","R_squared":"-I","canonical_half_form":"Q^-(5,3)","singular_points":112,"both_halves_Lagrangian":true},
+  "Suzuki_package":{"exchange":"x","x_squared":"-I (rechecked from vendored ATLAS matrices)","canonical_half_form":"Q^+(5,3)","singular_points":130,"both_halves_Lagrangian":true},
+  "obstruction_proof":"If a symplectic T sends C_G to U and conjugates R to x, then K(g,Rh) is carried by congruence to J(Tg,xTh), preserving orthogonal sign and the singular-point count. But 112 != 130.",
+  "consequence":"No polarization-compatible symplectic transporter exists for the currently canonical halves. A successful weld must change the selected Lagrangian on at least one side.",
+  "boundary":"No-go only for transporters preserving both exchanger and distinguished Lagrangian; replacing the polarization is allowed and pursued in Pass9765-9772."
+}
