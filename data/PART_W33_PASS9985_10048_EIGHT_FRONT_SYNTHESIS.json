@@ -1,0 +1,22 @@
+{
+  "schema": "w33.pass9985_10048.eight_front_synthesis.v1",
+  "status": "PASS",
+  "passes": "9985-10048",
+  "fronts": {
+    "9985-9992": "Actual C13 in Stab_Co0(V2) is not yet certified. Exact gate: any such C13 is semiregular on V2\\{0} with 315 cycles, cannot normalize the unique pure-order-8 generator M, and must be sought through the 13-bearing 3.Suz:2 or (A4 x G2(4)):2 branches.",
+    "9993-10000": "The abstract V2 C13 cycles form a regular C315 torsor under C4095/C13; its normalizer is C4095:C12. G2(4):2 has the same local C13:C12 clock but no C315 scalar centralizer, isolating the exact normalizer mismatch.",
+    "10001-10008": "The natural intersection-dimension fusion of the Q-/Q+ 7371 candidate schemes has identical valencies 1,320,7050 but spectrally distinct 320-regular intersection graphs, so even the coarsest canonical nontrivial fusion is not an isomorphism.",
+    "10009-10016": "The glue F9^6 lifts from associated graded to the entire residue algebra O_{Q3(i,zeta9)}/3 ~= F9[t]/(t^6). An explicit regular U=I+N has order9 and preserves a nondegenerate F9-Hermitian Gram H=iA.",
+    "10017-10024": "Bargmann chirality plus F9 norm parity form an exact agree-or-erase C2 detector. Under the moderate independent-error model: acceptance=67769/70000=96.812857%, accepted error=7/67769=0.0103292%, about 34x below Bargmann alone.",
+    "10025-10032": "Outside-box: universal Hermitianization h=K R^T-iK turns any F3 symplectic complex structure R^2=-I into F9 Hermitian geometry. The actual rank6 glue and the parallel rank4 E8/3E8 H(3,9) branch are two instances of the same functor.",
+    "10033-10040": "Outside-box: the shared C13 automorphism clock C12 has a canonical quotient C12/C6=C2. It is Frobenius parity on the abstract V2 Singer side and exactly the outer G2(4):2/G2(4) bit on the G2 side.",
+    "10041-10048": "Outside-box: the six F9 residue layers form a complete lattice chain and hence a full six-vertex chamber (maximal 5-simplex) in the Bruhat-Tits building of PGL6(Q3(i)); multiplication by zeta9 fixes the chamber vertexwise."
+  },
+  "parallel_reconciliation": {
+    "Pass9961-9984": "Uses the new exact trichotomy ramified->symplectic, unramified self-conjugate prime->Hermitian, conjugate-prime pair->no single-side form; specifically E8/3E8=H(3,9) and E8/2E8=H(3,4). The new rank6 glue Hermitianization is compared to, not relabeled as, that lane's rank4 theorem.",
+    "Pass9921-9944": "Retains the exact A1^24 2-neighbor interpretation of type8 frames and the placement of binary Golay as neighbor glue rather than a code on Lambda/2Lambda.",
+    "Pass9861-9884": "Does not use the killed two-relation or sum-determined frame laws."
+  },
+  "frontier": "Natural geometry-only welds keep failing. The strongest surviving structure is arithmetic: F9 Hermitianization, a full F9[t]/t6 residue module/chamber, and a C13:C12 clock with a canonical C2 orientation. The main unresolved selector is whether an actual C13 lies in the canonical V2/Co0 stabilizer and, if so, what collapses the abstract C315 scalar torsor.",
+  "claim_boundary": "Finite-field, finite-group-order, residue-ring, matrix, graph-spectrum and building-chain statements are exact within the scripts or standard structural theorems stated. No explicit Co0 C13 stabilizing V2 is claimed. The joint optical error numbers use an explicit independence/uniform-corruption model and prior deterministic seeded Bargmann errors, not hardware data. The residue-ring lift is mod3 and not yet an integral self-dual Niemeier O_L-lattice theorem."
+}
