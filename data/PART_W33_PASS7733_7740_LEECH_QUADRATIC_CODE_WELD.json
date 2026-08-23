@@ -1,0 +1,26 @@
+{
+  "all_234_closed_neighborhood_rowspaces_equal": true,
+  "all_234_noncollinearity_rowspaces_equal": true,
+  "canonicality_gain": "Although Pass7653 does not canonically choose one of the 234 symplectic polarities, the ternary code layer is independent of that choice. The Leech interface therefore reaches the common W33 quadratic code before a specific W33 graph is selected.",
+  "claim_boundary": "Exact finite coding/projective-geometry theorem; no physical encoding or decoder-performance claim is inferred.",
+  "common_quadratic_core": {
+    "parameters": "[40,10,18]_3",
+    "self_orthogonal": true,
+    "weight_enumerator": {"0":1,"18":1560,"24":21060,"27":18800,"30":16848,"36":780}
+  },
+  "dependencies": [
+    "Pass7653 Leech dual PG(3,3)",
+    "Pass7717 Leech [40,11,13]_3 incidence code",
+    "Pass5744-5751 common [40,10,18]_3 quadratic code and 234 W33 overlays"
+  ],
+  "Leech_incidence_code": {
+    "decomposition": "<1> perp C_quad",
+    "parameters": "[40,11,13]_3"
+  },
+  "novelty_boundary": "Pass5744-5751 already owns the quadratic code, its [40,10,18]_3 parameters, and the 234-overlay invariance. Pass7733 supplies the new objectwise weld from the corrected Leech order-9 linking interface to that existing common code layer.",
+  "passes": "7733-7740",
+  "schema": "w33.pass7733_7740.leech_quadratic_code_weld.v1",
+  "status": "PASS",
+  "theorem": "The canonical Leech dual-PG(3,3) incidence code is exactly the orthogonal one-line augmentation of the polarity-independent ternary quadratic code shared by all 234 W33 symplectic overlays: C_Leech=<1> perp C_quad.",
+  "universal_mod3_identity": "For every W33 polarization, N=I+A and N^2=J over F3; Q=J-N is the noncollinearity matrix."
+}
