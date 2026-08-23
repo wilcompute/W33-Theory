@@ -1,0 +1,29 @@
+{
+  "claim_boundary": "Finite lattice/discriminant-form theorem only.",
+  "dependency": "Pass7645-7652: C=(Z/3)^2 x (Z/9)^2 for the fixed-point-free Leech order-9 element",
+  "filtration": {
+    "3C": {"F3_dimension": 2, "projective_points": 4},
+    "C/3C": {"F3_dimension": 4, "projective_points": 40},
+    "C[3]": {"F3_dimension": 4, "projective_points": 40},
+    "C[3]/3C": {"F3_dimension": 2, "projective_points": 4}
+  },
+  "induced_duality": "(C/3C) x C[3] -> F3 is perfect because (C[3])^perp=3C",
+  "linking_form": "b([x],[y])=< (1-g)^(-1)x, y > mod Z; unimodularity gives perfectness and g-isometry gives b(y,x)=-b(x,y) mod Z, hence alternating on odd 3-primary torsion",
+  "passes": "7653-7660",
+  "projective_interface": {
+    "common_duals_for_two_left_points": 4,
+    "degree_each_side": 13,
+    "design": "symmetric 2-(40,13,4)",
+    "incidence": "linking-orthogonality",
+    "incidence_singular_values": "13^1 + 3^39",
+    "incidences": 520,
+    "left": "P(C/3C)",
+    "right": "P(C[3])",
+    "sizes": [40,40]
+  },
+  "projective_space_identification": "Up to independent projective coordinates the interface is point-hyperplane incidence of PG(3,3).",
+  "schema": "w33.pass7653_7660.leech_linking_dual_pg33.v1",
+  "status": "PASS",
+  "theorem": "The corrected non-elementary Leech order-9 quotient canonically retains two 40-point projective boundary layers, paired by the unimodular linking form as PG(3,3) points and hyperplanes.",
+  "W33_boundary": "W(3,3) also has 40 points in PG(3,3), but requires a nondegenerate alternating polarity identifying point and dual spaces. Pass7653 does not produce such an identification; the exact output is the dual 40+40 PG(3,3) interface."
+}
