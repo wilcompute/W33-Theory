@@ -1,5 +1,20 @@
 """Passes 7349-7356 -- which qudit systems are lattice-realisable, and how Leech's two link.
 
+RETRACTED IN PART BY PASS 8022-8029 AND 8030-8040 -- READ THIS FIRST.
+
+  The claim below that "LEECH GIVES EXACTLY TWO GEOMETRIES: W(11,2) and W(5,2). That list
+  is now complete, not a sample" is WRONG, and so is the filter that produced it. The
+  UNIFORMITY column removed d=2 and d=3 because 196560 is not divisible by 2^24-1 or
+  3^12-1. That test measures whether the MINIMAL VECTORS cover the quotient evenly; it says
+  nothing about whether the geometry exists. The corrected picture is two branches:
+
+      W(23,2) -> W(11,2) -> W(5,2)     12 -> 6 -> 3 qubits   (Pass 8022-8029)
+      W(11,3)                          6 qutrits             (Pass 8030-8040)
+
+  Read the uniformity column below as a property of the minimal-vector fibration ONLY,
+  never as an existence criterion. The reachability formula, the arithmetic, and the
+  projection results in this file all stand.
+
   7349  The reachability formula: n = r / (2 deg(Phi_d)).
   7350  Four and five qubits are UNREACHABLE from rank 24, and the reason is that phi is never 3.
   7351  The complete rank-24 table: arithmetic, uniformity, existence.
@@ -68,8 +83,8 @@ def main() -> int:
     EXISTENCE in Co0 cuts d=9, because its order-9 fixed-point-free elements are
     Phi_9^3 Phi_3^3 and never Phi_9^4. And d=13 survives everything but lands on a line.
 
-    LEECH GIVES EXACTLY TWO GEOMETRIES: W(11,2) and W(5,2). That list is now complete, not
-    a sample.""")
+    [RETRACTED -- see the header. The uniformity filter answers a different question, and
+    the corrected list is W(23,2) -> W(11,2) -> W(5,2) plus W(11,3).]""")
 
     print("\n  PASS 7352-7353 -- and the two are linked by a projection\n")
     print("""    M8 has order 8, so M8^2 has order 4 -- and it is not merely order 4:
@@ -107,6 +122,7 @@ def main() -> int:
     NOT CLAIMED: any Monster result, and no physics.""")
 
     out = {
+        "RETRACTED_IN_PART_BY": "Pass 8022-8029 and Pass 8030-8040: the uniformity filter measures minimal-vector coverage, not existence; the corrected list is W(23,2) -> W(11,2) -> W(5,2) plus W(11,3)",
         "boundary": (
             "The reachable geometries from a lattice of rank r are W(k-1,p) with "
             "k = r/deg(Phi_d) and p = Phi_d(1), reading as n = r/(2 deg(Phi_d)) qudits. For "

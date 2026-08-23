@@ -1,4 +1,5 @@
 {
+  "RETRACTED_IN_PART_BY": "Pass 8022-8029 and Pass 8030-8040: the uniformity filter measures minimal-vector coverage, not existence; the corrected list is W(23,2) -> W(11,2) -> W(5,2) plus W(11,3)",
   "boundary": "The reachable geometries from a lattice of rank r are W(k-1,p) with k = r/deg(Phi_d) and p = Phi_d(1), reading as n = r/(2 deg(Phi_d)) qudits. For Leech the complete list after arithmetic, uniformity AND existence filters is exactly W(11,2) and W(5,2). Four and five qubits are unreachable from rank 24",
   "design_tool": {
     "example": "four qubits needs deg(Phi_d) = r/8: impossible at r=24, but deg 4 at r=32, i.e. d=8 -- a rank-32 lattice is where four qubits could live",
