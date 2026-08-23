@@ -1,0 +1,90 @@
+{
+  "boundary": "VERIFIED ON THE ACTUAL 24x24 MATRICES: the Pass7981-7988 Lagrangian reduction holds, via the exact integer factorisation P_M = (I+M)P_J; M acts mod 2 as an involution whose fixed space IS the Lagrangian kernel; and the reduction extends to a three-rung tower W(23,2) -> W(11,2) -> W(5,2), twelve qubits to six to three, terminating because 24 = 8*3 with 3 odd. RETRACTS the Pass 7351 claim that Leech gives exactly two geometries",
+  "credit": {
+    "Pass7973_7980_other_lane": "proves pure Phi_{p^r} support => elementary quotient, and correctly downgrades my Pass 7344 'pure <=> elementary' to the forward direction",
+    "Pass7981_7988_other_lane": "states and proves the W(11,2) -> W(5,2) Lagrangian reduction; committed first, so it owns the result",
+    "classical": "L/2L and its 98280 + 8386560 + 8292375 nonzero-class type split are Conway's, cited not claimed",
+    "what_this_pass_adds": "their argument is symbolic and executes only polynomial identities; nothing in it touches Leech or Co0. The rank-6, ker(pi)=im(N) and F_M=N^T F_J claims are verified here on the integral matrices"
+  },
+  "exact_identities": {
+    "J = M^2 satisfies J^2 = -I": true,
+    "M^4 = -I": true,
+    "P_J := I+J equals 2(I-J)^-1": true,
+    "P_M := I+M+M^2+M^3 equals 2(I-M)^-1": true,
+    "P_M = (I+M) P_J, as exact integers": true
+  },
+  "form_identity_F_M_equals_N_transpose_F_J": true,
+  "mod2_behaviour": {
+    "J_acts_trivially_on_Q_J": true,
+    "M_is_an_involution_on_Q_J": true,
+    "kernel_equals_image_equals_Fix_M": true,
+    "pauli_reading": "the order-8 Leech element reduces to a Clifford INVOLUTION on six qubits; the Lagrangian quotiented out is exactly the set of Pauli classes it fixes, i.e. a stabiliser group",
+    "rank_I_plus_M_on_Q_J": 6,
+    "why": "P_J(I-M) - P_J(I+M) = -2 P_J M, which vanishes mod 2"
+  },
+  "not_done": [
+    "whether the tower's Lagrangians are Co0-conjugate",
+    "K12 built",
+    "alpha(W(3,9))",
+    "q=11 at 68",
+    "Coolsaet unread"
+  ],
+  "retraction": {
+    "claim": "Pass 7351: 'LEECH GIVES EXACTLY TWO GEOMETRIES: W(11,2) and W(5,2). That list is now complete, not a sample.'",
+    "corrected": "three geometries, W(23,2) -> W(11,2) -> W(5,2)",
+    "what_was_right": "the divisibility arithmetic itself",
+    "why_wrong": "d=2 was removed by a uniformity test -- 196560 not divisible by 2^24 - 1 -- which measures whether the MINIMAL VECTORS cover the quotient evenly, not whether the geometry exists. They meet only 98280 of 16777215 nonzero classes, and the form is unaffected"
+  },
+  "tower": {
+    "chain": "L/2L -> L/(I-J)L -> L/(I-M)L",
+    "geometries": "W(23,2) -> W(11,2) -> W(5,2)",
+    "kernels": [
+      {
+        "dim": 12,
+        "kernel": "Fix(J)",
+        "lagrangian": true,
+        "stage": "24 -> 12",
+        "totally_isotropic": true
+      },
+      {
+        "dim": 6,
+        "kernel": "Fix(M)",
+        "lagrangian": true,
+        "stage": "12 -> 6",
+        "totally_isotropic": true
+      }
+    ],
+    "qubits": [
+      12,
+      6,
+      3
+    ],
+    "rungs": [
+      {
+        "alternating": true,
+        "geometry": "W(23,2)",
+        "operator": "K = M^4",
+        "projector": "P_K = I",
+        "qubits": 12,
+        "rank_mod2": 24
+      },
+      {
+        "alternating": true,
+        "geometry": "W(11,2)",
+        "operator": "J = M^2",
+        "projector": "P_J = (I+J)P_K",
+        "qubits": 6,
+        "rank_mod2": 12
+      },
+      {
+        "alternating": true,
+        "geometry": "W(5,2)",
+        "operator": "M",
+        "projector": "P_M = (I+M)P_J",
+        "qubits": 3,
+        "rank_mod2": 6
+      }
+    ],
+    "termination": "a fourth rung needs order 16, i.e. Phi_16^3, giving F_2^3; every alternating form on an odd-dimensional space is degenerate, so the tower stops at three qubits because 24 = 8*3 with 3 odd"
+  }
+}
