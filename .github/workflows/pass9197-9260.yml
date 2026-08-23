@@ -1,0 +1,45 @@
+name: Pass 9197-9260 Eight-Front Verification
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass9197_9204_e6_centralizer_line_stabilizer.py'
+      - 'analysis/w33_pass9205_9212_umbral_image_trichotomy.py'
+      - 'analysis/w33_pass9213_9220_suzuki_line_weld_no_selection.py'
+      - 'analysis/w33_pass9221_9228_periodic_root_shadow_law.py'
+      - 'analysis/w33_pass9229_9236_optical_root_shadow_discriminator.py'
+      - 'analysis/w33_pass9237_9244_transverse_glue_symplectic_complex.py'
+      - 'analysis/w33_pass9245_9252_root_creation_protection_exchange.py'
+      - 'analysis/w33_pass9253_9260_orthogonal_sign_twin_selector.py'
+      - '.github/workflows/pass9197-9260.yml'
+  workflow_dispatch:
+
+jobs:
+  verify-eight-fronts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install numpy scipy sympy
+      - name: 9197-9204 E6 centralizer line stabilizer
+        run: python analysis/w33_pass9197_9204_e6_centralizer_line_stabilizer.py
+      - name: 9205-9212 umbral image trichotomy
+        run: python analysis/w33_pass9205_9212_umbral_image_trichotomy.py
+      - name: 9213-9220 Suzuki line weld
+        run: python analysis/w33_pass9213_9220_suzuki_line_weld_no_selection.py
+      - name: 9221-9228 periodic root shadow
+        run: python analysis/w33_pass9221_9228_periodic_root_shadow_law.py
+      - name: 9229-9236 optical discriminator
+        run: python analysis/w33_pass9229_9236_optical_root_shadow_discriminator.py
+      - name: 9237-9244 transverse glue symplectic/F9
+        run: python analysis/w33_pass9237_9244_transverse_glue_symplectic_complex.py
+      - name: 9245-9252 root creation/protection exchange
+        run: python analysis/w33_pass9245_9252_root_creation_protection_exchange.py
+      - name: 9253-9260 orthogonal-sign twin selector
+        run: python analysis/w33_pass9253_9260_orthogonal_sign_twin_selector.py
