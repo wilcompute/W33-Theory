@@ -1,0 +1,20 @@
+{
+  "E6_local_extension_code": {
+    "four_projective_weight3_directions": true,
+    "parameters": "[12,4,3]_3",
+    "root_role": "the four +/- pairs of weight-3 words create 4*54=216 visible E6 roots",
+    "weight_enumerator": {"0": 1, "12": 16, "3": 8, "6": 24, "9": 32}
+  },
+  "exchange_image_in_Golay": {
+    "contained_in_extended_ternary_Golay": true,
+    "parameters": "[12,4,6]_3",
+    "size": 81,
+    "weight3_words": 0,
+    "weight_enumerator": {"0": 1, "12": 4, "6": 28, "9": 48}
+  },
+  "interpretation_boundary": "Creation/protection duality is a code/lattice statement: minimum glue weight 3 allows norm-2 extensions, whereas minimum weight 6 forbids them. It is not by itself a dynamical particle-creation or error-correction process.",
+  "passes": "9245-9252",
+  "schema": "w33.pass9245_9252.root_creation_protection_exchange.v1",
+  "status": "PASS",
+  "theorem": "The canonical glue-exchange involution sends the four-dimensional E6 local root-extension sector to an 81-word [12,4,6]_3 subcode of the extended ternary Golay code. The directions that create norm-2 E6 roots on one side become a distance-6 rootless/protected sector on the other."
+}
