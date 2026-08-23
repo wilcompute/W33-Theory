@@ -1,0 +1,33 @@
+{
+  "schema": "w33.pass9481_9488.rank24_centralizer_fingerprint.v1",
+  "status": "PASS",
+  "passes": "9481-9488",
+  "E8^3": {
+    "rank8_Springer_centralizer_order": 155520,
+    "coinvariant_kernel_order": 3,
+    "Sp_image_order": 51840,
+    "projective_image_order": 25920,
+    "projective_structure": "PSp(4,3) (full inner W33 automorphism group)",
+    "rank24_argument": "The diagonal copy of C_W(E8)(j3) in E8^3 commutes with the 3-cycle lift; under the sum-block coinvariant isomorphism it induces the same Sp(4,3) action. Since every quotient isometry lies in Sp(4,3), this is already the full image."
+  },
+  "E6^4": {
+    "Sp_image_order": 1296,
+    "projective_image_order": 648,
+    "projective_structure": "3^3:S4",
+    "line_point_action": "S4"
+  },
+  "A2^12": {
+    "Sp_image_order": 648,
+    "projective_image_order": 324,
+    "projective_structure": "3^3:A4",
+    "line_point_action": "A4",
+    "signed_Golay_carrier_centralizers": 72
+  },
+  "fingerprint": [
+    "E8^3: full PSp(4,3), order 25920",
+    "E6^4: full line stabilizer 3^3:S4, order 648",
+    "A2^12: oriented line stabilizer 3^3:A4, order 324"
+  ],
+  "theorem": "The three rank-24 W33 carriers have three strictly nested projective centralizer images. E8^3 realizes all PSp(4,3); E6^4 realizes the full stabilizer of its root-shadow line; A2^12 realizes the index-two orientation-preserving subgroup of that line stabilizer. Thus the A2/Golay carrier remembers an orientation of the four line channels that the E6/tetracode carrier forgets.",
+  "boundary": "A2^12 is recomputed from the lattice/glue witness. E8 uses the repo-certified Springer G32 centralizer/action theorem from Pass1020/Pass8909 and proves that its full quotient action survives the rank-24 3-cycle lift."
+}
