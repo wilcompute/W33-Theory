@@ -1,0 +1,50 @@
+{
+  "boundary": "V_2 is CANONICAL up to Co0-conjugacy, because Pass 8041 proved the pure order-8 class of 2.Co1 is unique; its orbit has size dividing |Co0|/48384. An explicit Leech FRAME was built from orthogonal minimal pairs and validated: all 196560 minimal vectors have equal-parity coordinates in it, and their shapes reproduce Conway-Sloane exactly, so the 759 Golay octads are extractable. BUT the frame CANNOT coordinatise Lambda/2Lambda -- the map x -> ((x,f_i) mod 2) has rank 1, because all 48 frame vectors are one class -- and the mod-4 layer where the code lives is not a class function. The identification route is closed, provably",
+  "canonicality": {
+    "Co0_order": 8315553613086720000,
+    "caveat": "the stabiliser of V_2 may exceed the centraliser of M, so that is an upper bound",
+    "centraliser_order": 48384,
+    "orbit_size_divides": 171865774080000,
+    "why": "V_2 is built from M, and Pass 8041's exhaustive 2-power class census found exactly ONE pure class at order 8 (class 21)"
+  },
+  "frame_construction": {
+    "antipodal_pairs": 24,
+    "frame_size": 48,
+    "inner_product_distribution": {
+      "-1": 47104,
+      "-2": 4600,
+      "-4": 1,
+      "0": 93150,
+      "1": 47104,
+      "2": 4600,
+      "4": 1
+    },
+    "principle": "for minimal v,w with (v,w)=0, v+w and v-w are orthogonal norm-8 vectors in the same class; the rest of the class satisfies (f,lambda) = -|lambda|^2 with |lambda|^2 <= 8 by Cauchy-Schwarz"
+  },
+  "not_claimed": "that V_2 is Golay, or any identification at all",
+  "still_open": [
+    "whether Co0 is transitive on type-4-free generators",
+    "a dictionary that IS a class function and could identify V_2"
+  ],
+  "the_obstruction": {
+    "attempted_map": "x -> ((x, f_i) mod 2)",
+    "conclusion": "the code is a structure on Lambda RELATIVE to a frame, not a structure on Lambda/2Lambda. The proposed identification route is closed",
+    "proof": "all 48 frame vectors lie in ONE class mod 2L, so f_i - f_j = 2*lambda and (x,f_i) - (x,f_j) = 2(x,lambda) == 0 mod 2 for every x. All 24 functionals coincide",
+    "rank": 1,
+    "why_mod_4_does_not_help": "the Golay code is read off x_i mod 4, which is not a function of the class: x -> x + 2*lambda shifts x_i by 2*lambda_i and flips the mod-4 pattern wherever lambda_i is odd"
+  },
+  "validation": {
+    "equal_parity": "196560 of 196560 minimal vectors, in this frame",
+    "octads": {
+      "count": 759,
+      "from": "(2^8,0^16) vectors, 2^7 signs each"
+    },
+    "shapes": {
+      "(+-3, 1^23)": 98304,
+      "(2^8, 0^16)": 97152,
+      "(4^2, 0^22)": 1104
+    },
+    "significance": "reproduces Conway-Sloane exactly; an INDEPENDENT reconstruction of the standard Leech coordinate system from the ATLAS integral representation, assuming nothing about the standard construction",
+    "total": 196560
+  }
+}
