@@ -1,0 +1,15 @@
+{
+  "schema": "w33.pass7877_7884.h27_rank4_scheme_automorphisms.v1",
+  "status": "PASS",
+  "passes": "7877-7884",
+  "relation_degrees": {"Z_nonidentity": 2, "Schlaefli": 16, "H27_horizontal": 8},
+  "colored_scheme_automorphism_order": 1296,
+  "point_stabilizer_order": 48,
+  "explicit_group": "H27 : GL(2,3)",
+  "translation_order": 27,
+  "linear_order": 48,
+  "four_direction_quotient": "GL(2,3)/{+-I}=PGL(2,3)=S4, order 24",
+  "theorem": "The full simultaneous automorphism group of the 9K3/Schlaefli/H27 rank-4 scheme is exactly H27:GL(2,3), order 1296. No additional Schlaefli symmetry survives once the central-triangle and horizontal-Cayley colors are retained.",
+  "prior_art_boundary": "Pass7186 already computed order 1296 for the horizontal H27 graph alone; Pass7701 identified the rank-4 Cayley scheme. This pass proves the simultaneous colored-scheme automorphism group and gives the explicit semidirect realization.",
+  "claim_boundary": "Exact finite permutation-group theorem; no physical controller interpretation is forced."
+}
