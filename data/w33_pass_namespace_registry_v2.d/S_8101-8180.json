@@ -1,0 +1,11 @@
+{
+  "lo": 8101,
+  "hi": 8180,
+  "lane": "Sage",
+  "track": "steinberg_css_mod23_leech_e8_intertwiner_frontier",
+  "topic": "Promote the Steinberg binary code and rank-5 transpose scheme, prove the mod-23 V20 selector, classify the [[120,92,3]] CSS automorphism/logical action, audit the M8^2 Lagrangian orbit inside W(11,2), test the Leech 36+36+81+81 polarization carrier against E8 beyond counts, and three independent outside-box probes",
+  "reserved": "2026-08-23",
+  "status": "RESERVED_ACTIVE",
+  "depends_on": "Pass7621, 7869-7988, 8022-8040 and current master",
+  "collision_note": "Fresh range after parallel glue-track use of 8022-8056; exact file identity remains authoritative if later numeric collisions occur."
+}
