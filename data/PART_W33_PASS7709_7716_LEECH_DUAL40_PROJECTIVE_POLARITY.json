@@ -3,7 +3,7 @@
     "(3C)^perp": "C[3]",
     "C[3]^perp": "3C"
   },
-  "claim_boundary": "Exact finite-module/projective-geometry consequence of Pass7645 plus perfect pairing. No Monster or physical claim follows.",
+  "claim_boundary": "Exact finite-module/projective-geometry consequence of Pass7645/7653. No Monster or physical claim follows.",
   "cokernel_order": 729,
   "cross_design": {
     "bipartite_vertices": 80,
@@ -12,15 +12,16 @@
     "parameters": "symmetric 2-(40,13,4)",
     "spectrum": "13^1 + 3^39 + (-3)^39 + (-13)^1"
   },
-  "dependency": "Pass7645-7652: C=(Z/3)^2 x (Z/9)^2 with perfect odd-primary alternating lattice linking pairing",
+  "dependency": "Pass7645-7652 fixes C=(Z/3)^2 x (Z/9)^2; Pass7653-7660 already proves the perfect linking duality and dual PG(3,3) 40+40 interface.",
   "induced_pairing": "perfect F3 pairing (C/3C) x C[3] -> F3",
+  "novelty_boundary": "Pass7653-7660 already established the Leech linking dual PG(3,3) interface before this independent verification. Pass7709 adds the explicit symplectic-polarity closure test N=I+A_W33 and isolates the missing canonical top-to-socle identification as the exact obstruction.",
   "passes": "7709-7716",
   "projective_shells": [40,40],
   "remaining_obstruction": "Construct, or prove absent, a canonical Leech/Co0-equivariant identification C/3C -> C[3] whose transported cross-pairing is alternating. Without that datum the result is dual PG(3,3), not yet a canonical W(3,3).",
   "schema": "w33.pass7709_7716.leech_dual40_projective_polarity.v1",
   "socle_order": 81,
   "status": "PASS",
-  "theorem": "The Leech order-9 cokernel canonically supplies two dual PG(3,3) 40-point shells via its linking pairing. Any symplectic polarity identification of top with socle converts the cross-incidence relation into the closed-neighborhood relation of W(3,3).",
+  "theorem": "Given the Pass7653 dual PG(3,3) interface, any symplectic polarity identification of top with socle converts the Leech cross-incidence relation into the closed-neighborhood relation of W(3,3).",
   "threeC_order": 9,
   "top_order": 81,
   "w33_polarity_test": {
