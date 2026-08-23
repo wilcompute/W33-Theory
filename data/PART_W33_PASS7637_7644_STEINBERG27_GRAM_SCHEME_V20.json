@@ -1,0 +1,30 @@
+{
+  "Gram_Bose_Mesner_formula": "G = 11520 I - 3840 A_(9K3) - 1440 A_Schlaefli + 2400 A_H27",
+  "Gram_eigenvalues_by_scheme_idempotent": [0, 0, 4320, 23040],
+  "Gram_off_diagonal_counts": {"-3840": 27, "-1440": 216, "2400": 108},
+  "Gram_spectrum": {"0": 7, "4320": 8, "23040": 12},
+  "V20_statement": "The Gram kernel is exactly the 1+6 Schlaefli permutation sector; its image has dimension 8+12=20. Thus the local image of the global H1 intertwiner is the 20-dimensional Schlaefli constituent, not an 81-dimensional local module.",
+  "association_scheme": {
+    "commutative": true,
+    "first_eigenmatrix": [[1,2,16,8],[1,-1,4,-4],[1,2,-2,-1],[1,-1,-2,2]],
+    "multiplicities": [1,6,8,12],
+    "rank": 4,
+    "valencies": [1,2,16,8]
+  },
+  "claim_boundary": "Exact finite representation/association-scheme theorem; no physical multiplet identification follows.",
+  "distinct_vectors": 27,
+  "multiplicity_each": 3,
+  "negative_boundary": "The numerical appearance of 81 in the global H1/Steinberg sector must not be conflated with this 81-point local permutation suborbit: T has rank only 20 on the latter.",
+  "novelty_boundary": "Pass7181/7186 supplied Schlaefli and H27 separately; Pass7629 supplied their common nine-triple complementarity. This pass identifies all three relations directly as the three Gram levels of the restricted global Steinberg intertwiner and proves the exact 20-dimensional spectral projection.",
+  "passes": "7637-7644",
+  "relations": {
+    "-3840": {"degree": 2, "graph": "9 K3", "spectrum": "2^9 + (-1)^18"},
+    "-1440": {"graph": "Schlaefli", "spectrum": "16^1 + 4^6 + (-2)^20", "srg": [27,16,10,8]},
+    "2400": {"degree": 8, "graph": "H27", "spectrum": "8^1 + 2^12 + (-1)^8 + (-4)^6"}
+  },
+  "restricted_81_rank": 20,
+  "schema": "w33.pass7637_7644.steinberg27_gram_scheme_v20.v1",
+  "source": "global integral A2-to-W33-H1 intertwiner T, restricted to the valency-81 A2 suborbit of one base-leaf A2",
+  "status": "PASS",
+  "vector_norm_squared": 11520
+}
