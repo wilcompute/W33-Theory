@@ -1,17 +1,17 @@
-"""Passes 8777-8800 -- the pi-adic filtration, and a rung the power tower cannot see.
+"""Passes 8861-8884 -- the pi-adic filtration, and a rung the power tower cannot see.
 
-  8777  The right object is not the element-power tower. It is the pi-adic filtration.
-  8778  (I-M)^e L = pL exactly, e the ramification index. So every level is elementary.
-  8779  At p=2 the filtration reproduces the known 3-, 6- and 12-qubit forms EXACTLY.
-  8780  And level 3 carries NO symplectic form -- for any of the 16 unit twists.
-  8781  So the Leech qubit tower is COMPLETE. Proven, not assumed for lack of looking.
-  8782  At p=3 the story is DIFFERENT, and that is the point.
-  8783  LEVEL 5 IS A NEW RUNG: W(19,3), TEN QUTRITS, invisible to the power tower.
-  8784  It needs the unit twist g^4 -- a ring input, not a group one.
-  8785  Why p=2 has no extra rung and p=3 does.
-  8786  A methodology note: two sweeps disagreed, and why.
-  8787  Open.
-  8788  Scope.
+  8861  The right object is not the element-power tower. It is the pi-adic filtration.
+  8862  (I-M)^e L = pL exactly, e the ramification index. So every level is elementary.
+  8863  At p=2 the filtration reproduces the known 3-, 6- and 12-qubit forms EXACTLY.
+  8864  And level 3 carries NO symplectic form -- for any of the 16 unit twists.
+  8865  So the Leech qubit tower is COMPLETE. Proven, not assumed for lack of looking.
+  8866  At p=3 the story is DIFFERENT, and that is the point.
+  8867  LEVEL 5 IS A NEW RUNG: W(19,3), TEN QUTRITS, invisible to the power tower.
+  8868  It needs the unit twist g^4 -- a ring input, not a group one.
+  8869  Why p=2 has no extra rung and p=3 does.
+  8870  A methodology note: two sweeps disagreed, and why.
+  8871  Open.
+  8872  Scope.
 
 WHERE THIS COMES FROM. Every tower in Passes 8022-8776 steps by taking POWERS of an
 isometry. But powers are a coarse instrument: for M of order 8 they reach the sublattices
@@ -24,7 +24,12 @@ The repo already has Hjelmslev geometry as an abstract object (Pass 444 builds t
 Hjelmslev plane over Z/p^2); what it does not have is that geometry attached to a lattice.
 This pass attaches it, and asks at every level whether a symplectic form descends.
 
-    py -3 analysis/w33_pass8777_8800_the_pi_adic_filtration.py
+    py -3 analysis/w33_pass8861_8884_the_pi_adic_filtration.py
+
+    RENUMBERED. This work was first written as Pass 8777-8800, but the other lane had
+    reserved Pass8781-8860 at 13:20:35, five minutes before my 8777-8800 reservation at
+    13:25:19. Their claim is earlier, so it stands and this pass moved to 8861-8884. The
+    mathematics is unchanged; only the numbering moved.
 """
 
 from __future__ import annotations
@@ -84,10 +89,10 @@ def sweep(N, G, g, p, e, n, order):
 
 def main() -> int:
     print("=" * 78)
-    print("Passes 8777-8800 -- the pi-adic filtration")
+    print("Passes 8861-8884 -- the pi-adic filtration")
     print("=" * 78)
 
-    print("\n  PASS 8777-8781 -- p = 2, on Leech\n")
+    print("\n  PASS 8861-8865 -- p = 2, on Leech\n")
     I24 = np.eye(24, dtype=np.int64)
     M = load_flat(ROOT / "analysis" / "_co0_M8.txt")[0]
     GL, _ = invariant_gram(load_flat(ROOT / "analysis" / "_co0_G.txt"))
@@ -128,7 +133,7 @@ def main() -> int:
     left open whether a finer instrument would find more. The finer instrument exists, it
     finds one more LEVEL, and that level carries no Pauli geometry.""")
 
-    print("\n  PASS 8782-8784 -- p = 3, and here the answer changes\n")
+    print("\n  PASS 8866-8868 -- p = 3, and here the answer changes\n")
     I8 = np.eye(8, dtype=np.int64)
     W3 = np.linalg.matrix_power(
         np.linalg.multi_dot([simple_reflection(i) for i in range(8)]), 10)
@@ -164,7 +169,7 @@ def main() -> int:
     a RING input -- pi is well defined only modulo units of Z[zeta_9] -- and no amount of
     group theory would have suggested it.""")
 
-    print("\n  PASS 8785 -- why the two primes differ\n")
+    print("\n  PASS 8869 -- why the two primes differ\n")
     print("""    At p=2 the top level is L/2L carrying the Leech form G itself, and mod 2 a
     symmetric form with even diagonal IS alternating -- Leech is an even lattice, so the
     diagonal is even and the top level is symplectic for free.
@@ -177,7 +182,7 @@ def main() -> int:
     So "symplectic level = element power" is TRUE at p=2 and FALSE at p=3. The filtration
     is strictly richer than the tower at the odd prime, and exactly as rich at 2.""")
 
-    print("\n  PASS 8786 -- a methodology note, because two sweeps disagreed\n")
+    print("\n  PASS 8870 -- a methodology note, because two sweeps disagreed\n")
     print("""    The first p=3 sweep tested rank, antisymmetry and zero diagonal but NOT
     descent, and reported level 5 as symplectic. A second run, using the untwisted
     candidate only, reported it as not symplectic. Both were incomplete in different ways
@@ -188,7 +193,7 @@ def main() -> int:
     A (I-g)^j = g^a (I-g)^6 = 3 g^a U vanishes mod 3, but that is a fact to VERIFY rather
     than assume, and it is verified above.""")
 
-    print("\n  PASS 8787-8788 -- open, and scope\n")
+    print("\n  PASS 8871-8872 -- open, and scope\n")
     print("""    NEW: the pi-adic filtration as the governing object; the exact ramification
     identities (I-M)^4 L = 2L and (I-g)^6 L = 3L; the fact that the filtration reproduces
     the known 3-, 6- and 12-qubit forms as levels 1, 2 and 4; the PROOF that Leech level 3
@@ -258,7 +263,7 @@ def main() -> int:
                      "what the non-symplectic levels 2 and 4 at p=3 actually are",
                      "the orthogonal geometry at level 6", "alpha(W(3,9))", "K12 built"],
     }
-    fp = ROOT / "data" / "PART_W33_PASS8777_8800_PI_ADIC_FILTRATION.json"
+    fp = ROOT / "data" / "PART_W33_PASS8861_8884_PI_ADIC_FILTRATION.json"
     fp.write_text(cert_util.dumps(out), encoding="utf-8")
     print(f"\nwrote {fp.relative_to(ROOT).as_posix()}")
     return 0
