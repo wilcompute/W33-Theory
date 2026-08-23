@@ -1,0 +1,32 @@
+{
+  "schema": "w33.pass7861_7868.leech_equivariant_polarity_nogo.v1",
+  "status": "PASS",
+  "passes": "7861-7868",
+  "module": "C=(Z/9)^2 x (Z/3)^2 with perfect alternating linking form",
+  "Aut_C_lambda_order": 1259712,
+  "Aut_factorization": "2^6 * 3^9",
+  "top": "C/3C = F3^4",
+  "socle": "C[3] = F3^4",
+  "equivariant_Hom_dimension": 1,
+  "unique_equivariant_map": "scalar multiples of multiplication-by-3",
+  "equivariant_map_rank": 2,
+  "canonical_polarity_nogo": "No invertible top-to-socle identification is intrinsic under the full linked-module automorphism group. A smaller Co0 centralizer could still supply extra data, so this is an intrinsic-module no-go rather than a Co0 no-go.",
+  "canonical_rank2_form": {
+    "projective_radical_points": 4,
+    "nonradical_points": 36,
+    "nonradical_orthogonality_graph": "4 K9",
+    "all_isotropic_projective_lines": 49,
+    "nonradical_isotropic_lines": 48
+  },
+  "affine_resolution": {
+    "components": 4,
+    "points_per_component": 9,
+    "lines_per_component": 12,
+    "parallel_classes_per_component": 4,
+    "lines_per_parallel_class": 3,
+    "identification": "four AG(2,3) planes sharing the same four radical-point/parallel-class labels"
+  },
+  "theorem": "The corrected Leech 3-adic linking module does not canonically polarize its two 40-shells. Its unique intrinsic top-to-socle operator is rank-two multiplication by 3, and the resulting degenerate projective symplectic geometry canonically resolves the 36 nonradical points into four AG(2,3) qutrit phase planes.",
+  "prior_art_boundary": "Pass7709/7725 classified dual PG(3,3) and all 234 possible nondegenerate polarities. This pass adds the full linked-module equivariance obstruction and the canonical degenerate four-affine-plane geometry.",
+  "claim_boundary": "Exact finite abelian-group/linear/projective geometry. No physical qutrit or Leech-to-W33 selection is inferred."
+}
