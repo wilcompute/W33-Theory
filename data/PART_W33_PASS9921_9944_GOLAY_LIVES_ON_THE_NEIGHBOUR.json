@@ -1,0 +1,49 @@
+{
+  "boundary": "RESOLVES the Pass 9801-9824 obstruction: the Golay code is not a structure on Lambda/2Lambda but the GLUE of the 2-neighbour. A type-8 class gives a neighbour whose roots are the frame vectors halved -- verified as 48 norm-2 vectors, mutually orthogonal in 24 antipodal pairs, i.e. the root system A1^24 -- and A1^24's glue is the binary Golay code. ALSO CORRECTS, before publication, a false dichotomy: type-4 classes DO give 2-neighbours, via a norm-16 representative",
+  "classical_cited": [
+    "Niemeier's classification of even unimodular rank-24 lattices",
+    "the glue code of the A1^24 Niemeier lattice is the binary Golay code"
+  ],
+  "corrected_before_publication": {
+    "status": "FALSE",
+    "tempting_claim": "a type-4 class holds only norms 4 mod 8, so type-4 classes give NO neighbour and type-8 classes are exactly the neighbour directions",
+    "what_actually_differs": "the neighbour's ROOT SYSTEM, not whether one exists",
+    "why": "norms within a class are constant only MOD 4, which is what q records, not mod 8. A type-4 class contains a norm-16 vector: with lambda minimal and (v,lambda) = -1, |v+2lambda|^2 = 4 - 4 + 16 = 16 == 0 mod 8"
+  },
+  "neighbour_construction": {
+    "conclusion": "48 norm-2 roots, mutually orthogonal in 24 antipodal pairs: the root system A1^24, so by Niemeier the neighbour is the A1^24 Niemeier lattice",
+    "definition": "Lambda_c = {x in Lambda : (x,c) even} + Z.(c/2)",
+    "depends_only_on_class": "replacing c by c+2mu leaves the parity condition and the coset c/2 + Lambda unchanged",
+    "measured": {
+      "frame_size": 48,
+      "halved_norms": [
+        2
+      ],
+      "inner_product_values_minimal_pairs": [
+        -4,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        4
+      ],
+      "non_antipodal_inner_products": [
+        0
+      ],
+      "root_system": "A1^24"
+    },
+    "roots_are_the_halved_frame": "a root is c/2 + y with |y|^2 + (c,y) = 0, and then c+2y is a norm-8 vector in the class of c"
+  },
+  "not_claimed": "that V_2 is Golay -- still open, and untouched here",
+  "not_done": [
+    "the root system of a type-4 class's neighbour, needing the norm-6 and norm-8 contributions",
+    "whether V_2's 4095 neighbours are related to each other as lattices"
+  ],
+  "what_survives_about_type4": {
+    "proof": "a norm-8 vector needs (v,lambda) + |lambda|^2 = 1; Cauchy-Schwarz forces |lambda|^2 = 4 hence (v,lambda) = -3, and the inner products between Leech minimal vectors take only the values -4,-2,-1,0,1,2,4 -- never -3",
+    "significance": "that is what makes the frame construction available for type 8 and unavailable for type 4",
+    "statement": "a type-4 class contains NO vector of norm 8"
+  },
+  "where_the_code_lives": "the glue of A1^24 is the binary Golay code (classical), so the Golay code lives on the NEIGHBOUR, not on Lambda/2Lambda. The frame is the bridge between the two lattices. That is why a frame could never coordinatise Lambda/2Lambda: the target was wrong, not the map"
+}
