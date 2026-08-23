@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "schema": "w33.pass8901_8908.diagonal_triality_leaf_coupling.v1",
+  "passes": "8901-8908",
+  "paired_Schreier_generators": 13,
+  "linear_residue_stabilizer_order": 221184,
+  "W_F4_projection_order": 1152,
+  "W_D4_kernel_order": 192,
+  "triality_quotient": "S3",
+  "leaf_controller_order": 55296,
+  "leaf_binary_normal": "C2^8",
+  "leaf_quotient_order": 216,
+  "leaf_quotient": "S3^3",
+  "binary_module_dimensions": [4, 4],
+  "two_module_kernel_orders": [6, 6],
+  "triality_kernel_in_leaf_quotient_order": 36,
+  "kernel_identity": "ker(triality) = ker(M4) x ker(M4_prime)",
+  "shared_quotient": "The quotient by the two module-kernel S3 factors is the same S3=W(F4)/W(D4) triality quotient and acts nontrivially on both irreducible C2^4 channels.",
+  "theorem": "The algebraic coupling S3 shared by the two irreducible C2^4 channels in the 64-leaf residue is literally the synchronized D4 triality quotient of the E8 D4+D4 residue stabilizer.",
+  "claim_boundary": "Exact generator-level finite-group/representation commuting diagram; no physical coupling is inferred."
+}
