@@ -1,0 +1,12 @@
+{
+  "anisotropic": 2106,
+  "candidates": 7371,
+  "canonical_lines_per_candidate": 2,
+  "hyperbolic": 5265,
+  "interpretation": "The line-supported E6^4/A2^12 carriers provide exactly the kind of datum the Suzuki construction already has internally. A unique Suzuki W33 therefore needs extra information beyond a marked line, such as glue type, orthogonal sign, or an additional complex structure.",
+  "passes": "9213-9220",
+  "schema": "w33.pass9213_9220.suzuki_line_weld_no_selection.v1",
+  "similitude_candidate_orbits_after_line_marking": 90,
+  "status": "PASS",
+  "theorem": "Every one of the 7,371 M12:2-polarization-compatible Suzuki W33 candidates already carries the ordered Lagrangian pair A and xA. Identifying the Niemeier four-point root-shadow line with the first polarization line is therefore structurally natural but nonselecting: it leaves all 7,371 candidates, and the previously computed C4xA5 controller still has 90 nondegenerate candidate orbits."
+}
