@@ -1,0 +1,33 @@
+{
+  "atlas_source": "https://brauer.maths.qmul.ac.uk/Atlas/spor/Co1/gap0/2Co1G1-Zr24B0.g",
+  "candidate_matrix_sha256": "7516b51c4f97a093a65b13dff9c3506375b20d84ac4eee9acbdf91f6343a4374",
+  "canonical_3_adic_filtration": {
+    "3C": {"F3_dimension": 2, "order": 9, "projective_points": 4},
+    "C/3C": {"F3_dimension": 4, "order": 81, "projective_points": 40},
+    "C[3]": {"F3_dimension": 4, "order": 81, "projective_points": 40},
+    "C[3]/3C": {"F3_dimension": 2, "order": 9, "projective_points": 4}
+  },
+  "characteristic_polynomial": "Phi3^3 * Phi9^3",
+  "claim_boundary": "Exact integral lattice/module theorem. The two 40 counts are canonical projective-space counts only, not a physical or W33 identification.",
+  "cokernel": "(Z/3)^2 x (Z/9)^2",
+  "cokernel_exponent": 9,
+  "cokernel_order": 729,
+  "coker_mod3_dimension": 4,
+  "det_I_minus_g": 729,
+  "dual40_observation": "The top C/3C and socle C[3] are canonical four-dimensional F3 spaces, so each has exactly 40 projective 1-spaces. This recovers a 40+40 projective shell count at the two ends of the 3-adic filtration, but no W(3,3) incidence/polarity is claimed without an explicit induced alternating form.",
+  "nontrivial_smith_invariants": {"3": 2, "9": 2},
+  "normalized_generator_sha256": {
+    "A": "a7f0744314646b31b2fb66066cc890049c40822a93257cb4e69279c71c8db965",
+    "B": "f7fd56fe41812a32600cfccaedcc9886457829c72afea9793cf41b5f8b9f5b9a"
+  },
+  "novelty_boundary": "Pass7325 corrected the order-9 characteristic polynomial and found 729 classes by random ATLAS/GAP census. Pass7589 prepared an SNF audit but had no committed witness/output. This pass gives a deterministic official-ATLAS matrix word and proves the non-elementary Smith type, thereby correcting the 364-point interpretation.",
+  "order": 9,
+  "passes": "7645-7652",
+  "rank_mod3_I_minus_g": 20,
+  "refutation": "The order-729 cokernel is not elementary abelian F3^6. Therefore it has no 364-point projectivization PG(5,3), and the proposed Leech W(5,3) identification is false.",
+  "schema": "w33.pass7645_7652.leech_order9_mixed_torsion_dual40.v1",
+  "smith_diagonal": [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,3,3,9,9],
+  "status": "PASS",
+  "trace": -3,
+  "word_length": 210
+}
