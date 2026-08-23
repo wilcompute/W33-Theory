@@ -1,0 +1,32 @@
+{
+  "boundary": "This is an exact finite-level/local reduction. It does not yet construct an integral self-dual O_L lattice or prove that the Niemeier lattice itself is an O_L lattice.",
+  "exact_residue_ring": {
+    "F3_dimension": 12,
+    "F9_dimension": 6,
+    "Phi9_1_plus_t_coefficients_low_to_high": [3, 9, 18, 21, 15, 6, 1],
+    "isomorphism": "O_L / 3 O_L ~= F9[t]/(t^6)",
+    "mod3_relation": "t^6=0"
+  },
+  "local_field": {
+    "K": "Q3(i), unramified quadratic over Q3",
+    "L": "K(zeta_9)",
+    "relative_ramification_index": 6,
+    "residue_field": "F9",
+    "uniformizer": "t=zeta_9-1"
+  },
+  "passes": "10009-10016",
+  "regular_unitary_model": {
+    "A": [[0,0,0,0,0,1],[0,0,0,0,2,2],[0,0,0,1,2,1],[0,0,2,0,0,0],[0,1,1,0,0,0],[2,1,2,0,0,0]],
+    "A_rank": 6,
+    "Hermitian_Gram": "H=i*A over F9, with A over F3",
+    "Hermitian_reason": "A^T=-A and conjugation(i)=-i, hence (iA)^dagger=iA",
+    "N": "6x6 regular nilpotent Jordan shift",
+    "N_nilpotency_index": 6,
+    "U": "I+N, representing multiplication by 1+t up to power-basis reversal",
+    "U_order": 9,
+    "unitary_identity": "U^T A U = A, equivalently U^dagger H U=H"
+  },
+  "schema": "w33.pass10009_10016.f9_residue_ring_unitary_lift.v1",
+  "status": "PASS",
+  "theorem": "The glue F9^6 phase space admits the full mod-3 cyclotomic residue-ring structure O_{Q3(i,zeta9)}/3 ~= F9[t]/(t^6), together with an explicit regular order-9 nondegenerate unitary action U=1+t. This upgrades the previous six-layer associated-graded match to an actual length-six truncated residue algebra."
+}
