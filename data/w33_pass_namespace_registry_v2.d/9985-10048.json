@@ -1,0 +1,18 @@
+{
+  "range": "9985-10048",
+  "status": "RESERVED",
+  "owner": "GPT-5.6-Sol eight-front continuation",
+  "reserved_at": "2026-08-23T19:15:00-04:00",
+  "fronts": {
+    "9985-9992": "Actual C13 inside the canonical V2/Co0 stabilizer: prove or obstruct",
+    "9993-10000": "Classify 315 V2/A1^24-neighbor C13 cycles and compare with 32 Hall-Janko vertex and 1600 G2(4)-edge cycles",
+    "10001-10008": "Common fusion schemes between the Q-(5,3) and Q+(5,3) 7371 two-space coherent configurations",
+    "10009-10016": "Lift the explicit mod-3 F9 intertwiner P=[G;GR] toward an integral self-dual O_{Q3(i,zeta9)} lattice",
+    "10017-10024": "Joint Bargmann-loop plus F9 norm-parity Holonet orientation channel under coherent noise",
+    "10025-10032": "Outside-box: compare rank-12 glue F9 Hermitian structure with the new rank-4 E8/3E8 H(3,9) unitary branch",
+    "10033-10040": "Outside-box: C13 cyclotomic/Singer normalizer and orientation character across V2 and G2 carriers",
+    "10041-10048": "Outside-box: local-field building interpretation of the six F9 layers and whether the glue polarization is a residue simplex/apartment"
+  },
+  "parallel_context": "Pass9961-9984 unramified-prime/unitary lane is already reserved and supplies H(3,4), H(3,9) context. Respect its ownership and begin at 9985.",
+  "collision_rule": "Earliest atomic registry add owns the range; later collisions rehome."
+}
