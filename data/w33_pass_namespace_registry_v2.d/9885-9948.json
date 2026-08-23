@@ -1,17 +1,16 @@
 {
   "range": "9885-9948",
-  "status": "RESERVED",
+  "status": "PARTIALLY_YIELDED_AFTER_LATER_COLLISION",
   "owner": "GPT-5.6-Sol eight-front continuation",
   "reserved_at": "2026-08-23T18:41:00-04:00",
-  "fronts": {
+  "ownership_note": "This reservation predates the parallel Pass9921-9944 reservation by 2m44s and therefore owns the overlap by the repo rule. Nevertheless the later lane had already landed substantive A1^24 2-neighbor work, so this lane voluntarily yielded 9917-9948 to keep pass provenance unique. The fifth + three outside-box fronts were rehomed to 9949-9980.",
+  "retained_fronts": {
     "9885-9892": "Canonical plus-type R-transverse Lagrangian selector from Leech/Hall-Janko/G2(4) invariants",
     "9893-9900": "Construct or falsify a 13-state common quotient across 4095 V2 frames, 416 Hall-Janko vertices, and 20800 G2(4) edges",
     "9901-9908": "Explicit filtered-module lift from glue F9^6 into O_L/3 for L=Q3(i,zeta9)",
-    "9909-9916": "Derived O^-(6,3) association scheme on 7371 nondegenerate two-spaces versus Suzuki 7371 candidates",
-    "9917-9924": "Gauge-invariant Holonet orientation readout under coherent disorder",
-    "9925-9932": "Outside-box: order-13 / PG(2,3) semiregular-action test on G2(4) 416-vertex and 20800-edge carriers",
-    "9933-9940": "Outside-box: finite-field norm-one phase alphabet U(1,F9/F3) as robust orientation character",
-    "9941-9948": "Outside-box: use parallel V2 frame-relation falsification to derive exact selector-information lower bounds and reject unstable frame-local quotients"
+    "9909-9916": "Derived O^-(6,3) association scheme on 7371 nondegenerate two-spaces versus Suzuki 7371 candidates"
   },
-  "collision_rule": "Earliest atomic registry add owns the range; later collisions must rehome."
+  "yielded_range": "9917-9948",
+  "rehomed_to": "9949-9980",
+  "collision_rule": "Earliest atomic registry add owns the range; this yield is voluntary because unique provenance is more valuable than asserting priority."
 }
