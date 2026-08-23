@@ -13,6 +13,8 @@ on:
       - 'analysis/w33_pass9245_9252_root_creation_protection_exchange.py'
       - 'analysis/w33_pass9253_9260_orthogonal_sign_twin_selector.py'
       - '.github/workflows/pass9197-9260.yml'
+  pull_request:
+    branches: [master]
   workflow_dispatch:
 
 jobs:
