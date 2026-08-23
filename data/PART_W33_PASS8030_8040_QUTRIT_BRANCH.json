@@ -1,0 +1,103 @@
+{
+  "boundary": "THEOREM: a fixed-point-free order-3 isometry with char poly Phi_3^k on an even unimodular lattice of rank 2k yields a nondegenerate ALTERNATING form on F_3^k, i.e. W(k-1,3) -- proved algebraically, controlled against E8 where it reproduces the independently-found W(3,3). For Leech this gives W(11,3), six qutrits. EXHAUSTIVE from the 2.Co1 character table: no Phi_9^4 class exists, so the qutrit branch stops one rung above W(3,3), the doily",
+  "e8_control": {
+    "F antisymmetric mod 3": true,
+    "F diagonal zero mod 3": true,
+    "P = 3(I-W)^-1": true,
+    "W^2 + W + I = 0": true,
+    "W^3 = I": true,
+    "agrees_with": "Pass 7217, which built the E8 fibration explicitly",
+    "det(I-W) = 3^4": true,
+    "geometry": "W(3,3)",
+    "preserves the Cartan form": true,
+    "rank_mod3": 4
+  },
+  "leech": {
+    "element": "classical: the complex Leech structure, Aut = 6.Suz, already recorded at analysis/w33_complex_leech_suzuki_chain.py",
+    "geometry": "W(11,3)",
+    "k": 12,
+    "note": "this is a rung the Pass 7351 uniformity filter wrongly deleted",
+    "rank": 24,
+    "reads_as": "six qutrits"
+  },
+  "no_phi9_fourth": {
+    "consequence": "the qutrit branch stops at six qutrits; W(3,3), the doily, is the rung below and Co0 does not supply the element",
+    "degree_24_characters": 1,
+    "method": "exhaustive over classes from the 2.Co1 character table, decoding (a,b,c) from chi(1)=a+2b+6c=24, chi(g)=a-b, chi(g^3)=a+2b-3c",
+    "order9_classes": [
+      {
+        "chi_g": -3,
+        "chi_g3": -3,
+        "class": 55,
+        "ones": 0,
+        "phi3_blocks": 3,
+        "phi9_blocks": 3
+      },
+      {
+        "chi_g": 0,
+        "chi_g3": -3,
+        "class": 57,
+        "ones": 2,
+        "phi3_blocks": 2,
+        "phi9_blocks": 3
+      },
+      {
+        "chi_g": 3,
+        "chi_g3": -3,
+        "class": 59,
+        "ones": 4,
+        "phi3_blocks": 1,
+        "phi9_blocks": 3
+      }
+    ],
+    "phi9_fourth_present": false,
+    "upgrades": "the Pass 7343 census, from an enumeration to a theorem"
+  },
+  "not_done": [
+    "an explicit omega in the Co0 basis",
+    "K12 built",
+    "alpha(W(3,9))",
+    "q=11 at 68",
+    "Coolsaet unread"
+  ],
+  "rejected": {
+    "action": "discarded",
+    "failed": "does not preserve the invariant Gram, so it is not an isometry",
+    "had": "order 3, minimal polynomial Phi_3, trace -12, det(I-W) = 3^12",
+    "object": "the maxes-2 commutant element W"
+  },
+  "theorem": {
+    "conclusion": "nondegenerate alternating on F_3^k, i.e. W(k-1,3)",
+    "hypothesis": "L even unimodular of rank 2k with Gram G; w an isometry of order 3 with char poly Phi_3^k",
+    "step_a": "w^2+w+I=0 gives (I-w)(w+2I)=3I, so P:=w+2I is exactly 3(I-w)^-1",
+    "step_b": "purity (Pass7973-7980) gives L/(I-w)L = F_3^k",
+    "step_c": "F:=P^T G has F+F^T = G(w+w^2)+4G = 3G = 0 mod 3, so F is antisymmetric; 2F_ii=0 with 2 a unit forces zero diagonal",
+    "step_d": "mod 3, F = G(w^2-I) with w^2-I=(w-I)(w+I) and w+I=-w^2 invertible, so rank F = rank(w-I) = k exactly"
+  },
+  "two_branches": {
+    "qubit": {
+      "chain": "W(23,2) -> W(11,2) -> W(5,2)",
+      "counts": [
+        12,
+        6,
+        3
+      ],
+      "stops_because": "ARITHMETIC: a fourth rung needs Phi_16^3, giving odd-dimensional F_2^3 where every alternating form is degenerate; 24 = 8*3 with 3 odd"
+    },
+    "qutrit": {
+      "chain": "W(11,3)",
+      "counts": [
+        6
+      ],
+      "stops_because": "GROUP-THEORETIC: the arithmetic admits Phi_9^4 (24 = 6*4, quotient F_3^4 = W(3,3)) and Co0 has no such class"
+    },
+    "the_doily": "W(3,3) is reachable from E8 (Pass 7217, reproduced here as the control) and NOT from Leech"
+  },
+  "why_no_matrix": {
+    "atlas": "no 24-dimensional integral representation of 6.Suz exists; only p196560 and 12-dimensional reps over F7, F13, F25",
+    "maxes_route": "maxes-2 derived subgroup gave an integral W with W^3=I, W^2+W+I=0, trace -12, det(I-W)=3^12 -- but NOT an isometry of the Gram, so it is not omega and was rejected",
+    "maxes_sweep": "maxes 1-8 yielded no fixed-point-free order-3 isometry",
+    "random_search": "4000 words gave 1679 order-3 elements with traces only -3 and 0; the fixed-point-free class has trace -12 and centraliser 6.Suz, so density ~1/2.7e12 -- unreachable, and reported as unreachable rather than absent",
+    "resolution": "the theorem needs no matrix"
+  }
+}

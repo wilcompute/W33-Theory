@@ -1,0 +1,7 @@
+order-9 classes of 2.Co1 in the 24-dimensional representation
+degree-24 characters: 1
+--- character 102 ---
+  class 55 chi(g) -3 chi(g^3) -3  -> a 0 b 3 c 3
+  class 57 chi(g) 0 chi(g^3) -3  -> a 2 b 2 c 3
+  class 59 chi(g) 3 chi(g^3) -3  -> a 4 b 1 c 3
+  Phi_9^4 present: false

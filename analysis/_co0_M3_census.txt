@@ -1,0 +1,6 @@
+order-3 trace census
+words 4000  order-3 elements 1679
+distinct traces [ -3, 0 ]
+  trace -3 count 798
+  trace 0 count 881
+trace -12 NOT reached by random words

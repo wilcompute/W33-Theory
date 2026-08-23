@@ -1,0 +1,68 @@
+available representations
+=== 6.Suz ===
+  1  [ "6SuzG1-p196560B0.m1", "6SuzG1-p196560B0.m2" ]
+  2  [ "6SuzG1-f7r12aB0.m1", "6SuzG1-f7r12aB0.m2" ]
+  3  [ "6SuzG1-f13r12aB0.m1", "6SuzG1-f13r12aB0.m2" ]
+  4  [ "6SuzG1-f25r12aB0.m1", "6SuzG1-f25r12aB0.m2" ]
+=== 3.Suz ===
+  1  [ "3SuzG1-p5346B0.m1", "3SuzG1-p5346B0.m2" ]
+  2  [ "3SuzG1-p98280B0.m1", "3SuzG1-p98280B0.m2" ]
+  3  [ "3SuzG1-p405405B0.m1", "3SuzG1-p405405B0.m2" ]
+  4  [ [ "mfer", "3SuzG1-p1216215B0.m1" ], [ "mfer", "3SuzG1-p1216215B0.m2" ] 
+ ]
+  5  [ "3SuzG1-f4r12aB0.m1", "3SuzG1-f4r12aB0.m2" ]
+  6  [ "3SuzG1-f4r66aB0.m1", "3SuzG1-f4r66aB0.m2" ]
+  7  [ "3SuzG1-f4r429aB0.m1", "3SuzG1-f4r429aB0.m2" ]
+  8  [ "3SuzG1-f4r825aB0.m1", "3SuzG1-f4r825aB0.m2" ]
+  9  [ "3SuzG1-f4r825bB0.m1", "3SuzG1-f4r825bB0.m2" ]
+  10  [ "3SuzG1-f25r66aB0.m1", "3SuzG1-f25r66aB0.m2" ]
+=== 2.Suz ===
+  1  [ "2SuzG1-p65520B0.m1", "2SuzG1-p65520B0.m2" ]
+  2  [ "2SuzG1-f3r12B0.m1", "2SuzG1-f3r12B0.m2" ]
+  3  [ "2SuzG1-f3r208B0.m1", "2SuzG1-f3r208B0.m2" ]
+  4  [ "2SuzG1-f3r352B0.m1", "2SuzG1-f3r352B0.m2" ]
+=== Suz ===
+  1  [ "SuzG1-p1782B0.m1", "SuzG1-p1782B0.m2" ]
+  2  [ "SuzG1-p22880B0.m1", "SuzG1-p22880B0.m2" ]
+  3  [ "SuzG1-p32760B0.m1", "SuzG1-p32760B0.m2" ]
+  4  [ [ "mfer", "SuzG1-p45760B0.m1" ], [ "mfer", "SuzG1-p45760B0.m2" ] ]
+  5  [ "SuzG1-p135135B0.m1", "SuzG1-p135135B0.m2" ]
+  6  [ "SuzG1-p232960B0.m1", "SuzG1-p232960B0.m2" ]
+  7  [ "SuzG1-p370656B0.m1", "SuzG1-p370656B0.m2" ]
+  8  [ "SuzG1-p405405B0.m1", "SuzG1-p405405B0.m2" ]
+  9  [ "SuzG1-f2r142B0.m1", "SuzG1-f2r142B0.m2" ]
+  10  [ "SuzG1-f2r638B0.m1", "SuzG1-f2r638B0.m2" ]
+  11  [ "SuzG1-f3r64B0.m1", "SuzG1-f3r64B0.m2" ]
+  12  [ "SuzG1-f3r78B0.m1", "SuzG1-f3r78B0.m2" ]
+  13  [ "SuzG1-f3r286B0.m1", "SuzG1-f3r286B0.m2" ]
+  14  [ "SuzG1-f3r429B0.m1", "SuzG1-f3r429B0.m2" ]
+  15  [ "SuzG1-f3r649B0.m1", "SuzG1-f3r649B0.m2" ]
+  16  [ "SuzG1-f4r110aB0.m1", "SuzG1-f4r110aB0.m2" ]
+  17  [ "SuzG1-f4r572aB0.m1", "SuzG1-f4r572aB0.m2" ]
+  18  [ "SuzG1-f4r572bB0.m1", "SuzG1-f4r572bB0.m2" ]
+  19  [ "SuzG1-f5r143B0.m1", "SuzG1-f5r143B0.m2" ]
+  20  [ "SuzG1-f5r363B0.m1", "SuzG1-f5r363B0.m2" ]
+  21  [ "SuzG1-f5r780B0.m1", "SuzG1-f5r780B0.m2" ]
+  22  [ "SuzG1-f7r143B0.m1", "SuzG1-f7r143B0.m2" ]
+  23  [ "SuzG1-f7r364B0.m1", "SuzG1-f7r364B0.m2" ]
+  24  [ "SuzG1-f7r780B0.m1", "SuzG1-f7r780B0.m2" ]
+  25  [ "SuzG1-f11r143B0.m1", "SuzG1-f11r143B0.m2" ]
+  26  [ "SuzG1-f11r364B0.m1", "SuzG1-f11r364B0.m2" ]
+  27  [ "SuzG1-f11r779B0.m1", "SuzG1-f11r779B0.m2" ]
+  28  [ "SuzG1-f13r143B0.m1", "SuzG1-f13r143B0.m2" ]
+  29  [ "SuzG1-f13r364B0.m1", "SuzG1-f13r364B0.m2" ]
+  30  [ "SuzG1-f13r780B0.m1", "SuzG1-f13r780B0.m2" ]
+  31  SuzG1-Zr143B0.g
+=== integral attempts for 6.Suz ===
+  1 permutations degree 196560
+  2 matrices dim 12 entries-are-integers false
+  3 matrices dim 12 entries-are-integers false
+  4 matrices dim 12 entries-are-integers false
+  5 fail
+  6 fail
+  7 fail
+  8 fail
+  9 fail
+  10 fail
+  11 fail
+  12 fail
