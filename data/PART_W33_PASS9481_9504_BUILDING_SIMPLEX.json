@@ -1,0 +1,87 @@
+{
+  "boundary": "The pi-adic filtration used since Pass 8022 is a 3-SIMPLEX in the Bruhat-Tits building of PGL_24(Q_2): the incidence condition pL < L' < L holds because (I-M)^4 L = 2L, and the vertex types are 6, 12, 18, 0. The filtration DEPTH is the RAMIFICATION INDEX e = phi(p^m) of Q_p(zeta_{p^m})/Q_p, verified at (p,d) = (2,8), (3,9), (3,3) giving 4, 6, 2. That identifies (I-M) as the uniformizer 1-zeta and explains the depth law, the operator choice, and the unit twists, all previously measured without reason",
+  "incidence": {
+    "(I-M)^4 = 2U": true,
+    "M_is_elliptic": "M fixes every vertex, since M(N^j L) = N^j(ML) = N^j L",
+    "U unimodular": true,
+    "conclusion": "[L], [NL], [N^2 L], [N^3 L] are pairwise incident and span a 3-simplex; a chamber has 24 vertices so this is a face",
+    "condition": "p L < L' < L, the building's incidence relation"
+  },
+  "not_done": [
+    "comparison with the tree-based holographic codes",
+    "anything fractal about this rank-24 object",
+    "alpha(W(3,9))",
+    "K12 built"
+  ],
+  "physics": {
+    "cited_not_claimed": [
+      "p-adic AdS/CFT on the Bruhat-Tits tree (Gubser, Knaute, Parikh, Samberg, Witaszczyk, Comm. Math. Phys. 2016)",
+      "holographic codes on Bruhat-Tits buildings and Drinfeld symmetric spaces (Heydeman, Marcolli, Saberi, Stoica, arXiv:1801.09623)"
+    ],
+    "fractal_honesty": "the rank-1 building (the TREE) has boundary P^1(Q_p), a Cantor set, and that is what the p-adic holography literature uses. This object is rank 24, whose boundary is a spherical building, NOT a Cantor set. No fractal property is claimed for it; what is shared is the ultrametric setting",
+    "open_comparison": "whether the Pass 9441-9464 code stack is an instance of the building codes in that literature -- those are built on trees, i.e. rank 1"
+  },
+  "ramification": {
+    "all_match": true,
+    "explains": {
+      "depth": "e = phi(p^m) is forced, not measured",
+      "operator": "p(I-M)^{-1} and powers of (I-M) were used since Pass 8022 with no reason beyond integrality; 1-zeta being the uniformizer is the reason",
+      "unit_twists": "a uniformizer is defined only up to units of Z_p[zeta], and those units are the powers of zeta -- so the A = s g^a sweep at Pass 8861-8884 was a search over the unit group, which is why it was needed and why it was finite"
+    },
+    "identification": "the element generates Q_p(zeta_{p^m}), totally ramified of degree phi(p^m), with uniformizer pi = 1 - zeta",
+    "table": [
+      {
+        "d": 8,
+        "match": true,
+        "measured_depth": 4,
+        "p": 2,
+        "phi": 4
+      },
+      {
+        "d": 9,
+        "match": true,
+        "measured_depth": 6,
+        "p": 3,
+        "phi": 6
+      },
+      {
+        "d": 3,
+        "match": true,
+        "measured_depth": 2,
+        "p": 3,
+        "phi": 2
+      }
+    ]
+  },
+  "standard_not_claimed": [
+    "lattice chains are building simplices",
+    "cyclotomic p-power extensions are totally ramified with uniformizer 1 - zeta"
+  ],
+  "type_signature": "6, 12, 18, 0 -- an arithmetic progression of step 24/4, the same uniformity Pass 9441-9464 read as a uniform code stack",
+  "vertex_types": [
+    {
+      "dim_quotient": 6,
+      "j": 1,
+      "rank_mod2": 18,
+      "type": 6
+    },
+    {
+      "dim_quotient": 12,
+      "j": 2,
+      "rank_mod2": 12,
+      "type": 12
+    },
+    {
+      "dim_quotient": 18,
+      "j": 3,
+      "rank_mod2": 6,
+      "type": 18
+    },
+    {
+      "dim_quotient": 24,
+      "j": 4,
+      "rank_mod2": 0,
+      "type": 0
+    }
+  ]
+}
