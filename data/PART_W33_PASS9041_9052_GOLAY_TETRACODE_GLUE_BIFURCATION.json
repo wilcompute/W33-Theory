@@ -1,0 +1,72 @@
+{
+  "N(A2^12)_Golay_glue": {
+    "parameters": "[12,6,6]_3",
+    "root_effect": "no new norm-2 vectors; roots remain A2^12 (72)",
+    "self_dual": true,
+    "size": 729,
+    "weight3_words": 0,
+    "weight_enumerator": {
+      "0": 1,
+      "12": 24,
+      "6": 264,
+      "9": 440
+    }
+  },
+  "N(E6^4)_relative_glue": {
+    "generator_rref": [
+      [1,0,2,0,0,0,0,2,2,0,2,2],
+      [0,1,1,0,0,0,0,2,2,0,2,2],
+      [0,0,0,1,0,2,0,2,2,0,1,1],
+      [0,0,0,0,1,1,0,2,2,0,1,1],
+      [0,0,0,0,0,0,1,2,1,0,0,0],
+      [0,0,0,0,0,0,0,0,0,1,2,1]
+    ],
+    "local_extension_subcode": {
+      "description": "four disjoint isotropic weight-3 glue lines, one A2^3 -> E6 extension per block",
+      "dimension": 4,
+      "size": 81
+    },
+    "parameters": "[12,6,3]_3",
+    "quotient_code": {
+      "generator_rref": [[1,0,2,2],[0,1,2,1]],
+      "identification": "tetracode",
+      "parameters": "[4,2,3]_3",
+      "self_dual": true,
+      "size": 9,
+      "weight_enumerator": {"0":1,"3":8}
+    },
+    "self_dual": true,
+    "size": 729,
+    "weight3_supports": [[0,1,2],[3,4,5],[6,7,8],[9,10,11]],
+    "weight3_words": 8,
+    "weight_enumerator": {
+      "0": 1,
+      "12": 16,
+      "3": 8,
+      "6": 240,
+      "9": 464
+    }
+  },
+  "boundary": "VERIFIED after choosing the quotient-zero A2^12 root subsystem inside N(E6^4). Relative to this common A2^12 root lattice, N(E6^4) is encoded by a self-dual ternary [12,6,3] glue code with exactly eight weight-3 words, while N(A2^12) uses the extended ternary Golay [12,6,6] code and has no weight-3 words. The eight E6-code weight-3 words occur as four +/- pairs on four disjoint triples. Their local span has dimension 4 and the residual quotient is the [4,2,3] tetracode. This explains 72 + 8*27 = 288 E6^4 roots and the 54-root fibre over each of the four W33 line points. No physics claim is made.",
+  "bridge_to_pass9029_9040": {
+    "E6_zero_root_system": "A2^12",
+    "four_disjoint_weight3_supports": "the four visible W33 line channels",
+    "visible_E6_roots": "4 * 54 = 216"
+  },
+  "common_root_lattice": {
+    "determinant": 531441,
+    "index_in_each_unimodular_overlattice": 729,
+    "rank": 24,
+    "type": "A2^12"
+  },
+  "root_count_explanation": {
+    "added_roots": 216,
+    "base_A2^12_roots": 72,
+    "kernel_per_E6_block": "A2^3 has 18 roots",
+    "minimal_vectors_per_weight3_coset": 27,
+    "per_W33_line_point": "two +/- weight-3 words * 27 roots = 54",
+    "total": 288,
+    "weight3_glue_words": 8
+  },
+  "theorem": "A2^12 Glue-Code Bifurcation and E6 Line-Shadow Mechanism"
+}
