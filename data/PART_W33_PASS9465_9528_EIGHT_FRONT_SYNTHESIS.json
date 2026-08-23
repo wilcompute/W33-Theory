@@ -1,0 +1,21 @@
+{
+  "schema": "w33.pass9465_9528.eight_front_synthesis.v1",
+  "status": "PASS",
+  "passes": "9465-9528",
+  "fronts": {
+    "9465-9472": "The glue-derived complex structure has centralizer U(6,3) of order 182699779456696320; B=KR^T is O+(12,3), the two glue halves are B-orthogonal O-(6,3), and the ordered concrete glue pair has common signed-monomial stabilizer only +/-I.",
+    "9473-9480": "Suzuki orthogonal subtype refines 90 controller orbits to 62 hyperbolic or 28 anisotropic orbits but remains nonunique. A canonical R weld is obstructed by the absence of a certified transport; Sp(12,3)/U(6,3) has 78795564505342027200 conjugate complex structures.",
+    "9481-9488": "Rank-24 projective centralizer fingerprint: E8^3=PSp(4,3) order25920; E6^4=3^3:S4 order648; A2^12=3^3:A4 order324. The Golay carrier retains one orientation-parity bit beyond the E6 line.",
+    "9489-9496": "All-rung theorem: the block-sum map gives coker(I-L(g)) ~= coker(I-g) for every 3-cycle lift. At rank 8*3^m, every E8 factor remains six-to-one over all 40 W33 points and total fibre is 6*3^m for all m>=0.",
+    "9497-9504": "Under n-stage lazy W33 crosstalk and +/-25% port gains, line support remains separated from E8 whenever (1-5 eta/6)^n > 8/53; a <=10% dark-monitor confusion rate leaves an exact 3/20 E6-vs-zero-dark gap.",
+    "9505-9512": "Outside-box: the glue phase space is a double-minus orthogonal polarization O-(6,3) orthogonal-sum O-(6,3) inside O+(12,3), while both halves are simultaneously K-Lagrangian and are exchanged by S and R.",
+    "9513-9520": "Outside-box: G2(4) fixed-edge cells match Q-(5,3) counts 252 and 126, but natural graph degrees mismatch (66 vs81; 31 vs45), falsifying the naive Hall-Janko/Qminus identification and promoting a full association-scheme test.",
+    "9521-9528": "Outside-box: exact selector information budget. Choosing a W33 line costs log2(40) bits; Golay/A2 orientation adds exactly one bit; arbitrary R transport would cost about 66.095 bits among Sp-conjugates, whereas the ordered glues derive R algebraically."
+  },
+  "namespace": {
+    "our_reservation_timestamp_utc": "2026-08-23T21:46:58Z",
+    "later_colliding_parallel_reservation": "Pass9481-9504 Bruhat-Tits lane at 2026-08-23T21:55:59Z",
+    "canonical_rule": "earliest reservation wins; parallel mathematics preserved but later pass labels require rehome"
+  },
+  "claim_boundary": "Finite lattice, code, group, graph, and transfer-envelope statements are exact within their stated witnesses or standard classical-group theorems. The optical result is not a fabricated Hamiltonian, and the missing Niemeier-to-Suzuki R transport is explicitly unresolved."
+}
