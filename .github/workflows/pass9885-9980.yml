@@ -1,0 +1,65 @@
+name: Pass9885-9980 collision-reconciled eight-front verification
+
+on:
+  pull_request:
+    paths:
+      - 'analysis/w33_pass9885_9892_plus_lagrangian_symmetry_no_go.py'
+      - 'analysis/w33_pass9893_9900_thirteen_state_rank3_block_no_go.py'
+      - 'analysis/w33_pass9901_9908_explicit_f9_local_field_intertwiner.py'
+      - 'analysis/w33_pass9909_9916_two_space_orbital_scheme.py'
+      - 'analysis/w33_pass9949_9956_bargmann_orientation_readout.py'
+      - 'analysis/w33_pass9957_9964_order13_semiregular_clock.py'
+      - 'analysis/w33_pass9965_9972_f9_norm_phase_character.py'
+      - 'analysis/w33_pass9973_9980_v2_c13_neighbor_clock.py'
+      - 'data/PART_W33_PASS9885_9892_PLUS_LAGRANGIAN_SYMMETRY_NO_GO.json'
+      - 'data/PART_W33_PASS9893_9900_THIRTEEN_STATE_RANK3_BLOCK_NO_GO.json'
+      - 'data/PART_W33_PASS9901_9908_EXPLICIT_F9_LOCAL_FIELD_INTERTWINER.json'
+      - 'data/PART_W33_PASS9909_9916_TWO_SPACE_ORBITAL_SCHEME.json'
+      - 'data/PART_W33_PASS9949_9956_BARGMANN_ORIENTATION_READOUT.json'
+      - 'data/PART_W33_PASS9957_9964_ORDER13_SEMIREGULAR_CLOCK.json'
+      - 'data/PART_W33_PASS9965_9972_F9_NORM_PHASE_CHARACTER.json'
+      - 'data/PART_W33_PASS9973_9980_V2_C13_NEIGHBOR_CLOCK.json'
+      - '.github/workflows/pass9885-9980.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip numpy scipy sympy
+      - name: Preserve frozen certificates
+        run: |
+          mkdir -p /tmp/pass9885-9980-certs
+          cp data/PART_W33_PASS9885_9892_PLUS_LAGRANGIAN_SYMMETRY_NO_GO.json /tmp/pass9885-9980-certs/
+          cp data/PART_W33_PASS9893_9900_THIRTEEN_STATE_RANK3_BLOCK_NO_GO.json /tmp/pass9885-9980-certs/
+          cp data/PART_W33_PASS9901_9908_EXPLICIT_F9_LOCAL_FIELD_INTERTWINER.json /tmp/pass9885-9980-certs/
+          cp data/PART_W33_PASS9909_9916_TWO_SPACE_ORBITAL_SCHEME.json /tmp/pass9885-9980-certs/
+          cp data/PART_W33_PASS9949_9956_BARGMANN_ORIENTATION_READOUT.json /tmp/pass9885-9980-certs/
+          cp data/PART_W33_PASS9957_9964_ORDER13_SEMIREGULAR_CLOCK.json /tmp/pass9885-9980-certs/
+          cp data/PART_W33_PASS9965_9972_F9_NORM_PHASE_CHARACTER.json /tmp/pass9885-9980-certs/
+          cp data/PART_W33_PASS9973_9980_V2_C13_NEIGHBOR_CLOCK.json /tmp/pass9885-9980-certs/
+      - name: Execute eight-front verifier stack
+        run: |
+          python analysis/w33_pass9885_9892_plus_lagrangian_symmetry_no_go.py
+          python analysis/w33_pass9893_9900_thirteen_state_rank3_block_no_go.py
+          python analysis/w33_pass9901_9908_explicit_f9_local_field_intertwiner.py
+          python analysis/w33_pass9909_9916_two_space_orbital_scheme.py
+          python analysis/w33_pass9949_9956_bargmann_orientation_readout.py
+          python analysis/w33_pass9957_9964_order13_semiregular_clock.py
+          python analysis/w33_pass9965_9972_f9_norm_phase_character.py
+          python analysis/w33_pass9973_9980_v2_c13_neighbor_clock.py
+      - name: Compare regenerated certificates byte-for-byte
+        run: |
+          cmp data/PART_W33_PASS9885_9892_PLUS_LAGRANGIAN_SYMMETRY_NO_GO.json /tmp/pass9885-9980-certs/PART_W33_PASS9885_9892_PLUS_LAGRANGIAN_SYMMETRY_NO_GO.json
+          cmp data/PART_W33_PASS9893_9900_THIRTEEN_STATE_RANK3_BLOCK_NO_GO.json /tmp/pass9885-9980-certs/PART_W33_PASS9893_9900_THIRTEEN_STATE_RANK3_BLOCK_NO_GO.json
+          cmp data/PART_W33_PASS9901_9908_EXPLICIT_F9_LOCAL_FIELD_INTERTWINER.json /tmp/pass9885-9980-certs/PART_W33_PASS9901_9908_EXPLICIT_F9_LOCAL_FIELD_INTERTWINER.json
+          cmp data/PART_W33_PASS9909_9916_TWO_SPACE_ORBITAL_SCHEME.json /tmp/pass9885-9980-certs/PART_W33_PASS9909_9916_TWO_SPACE_ORBITAL_SCHEME.json
+          cmp data/PART_W33_PASS9949_9956_BARGMANN_ORIENTATION_READOUT.json /tmp/pass9885-9980-certs/PART_W33_PASS9949_9956_BARGMANN_ORIENTATION_READOUT.json
+          cmp data/PART_W33_PASS9957_9964_ORDER13_SEMIREGULAR_CLOCK.json /tmp/pass9885-9980-certs/PART_W33_PASS9957_9964_ORDER13_SEMIREGULAR_CLOCK.json
+          cmp data/PART_W33_PASS9965_9972_F9_NORM_PHASE_CHARACTER.json /tmp/pass9885-9980-certs/PART_W33_PASS9965_9972_F9_NORM_PHASE_CHARACTER.json
+          cmp data/PART_W33_PASS9973_9980_V2_C13_NEIGHBOR_CLOCK.json /tmp/pass9885-9980-certs/PART_W33_PASS9973_9980_V2_C13_NEIGHBOR_CLOCK.json
