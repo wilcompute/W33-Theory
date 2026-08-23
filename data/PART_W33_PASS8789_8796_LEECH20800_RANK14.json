@@ -1,0 +1,16 @@
+{
+  "carrier": 20800,
+  "claim_boundary": "Exact finite matrix/permutation computation; no physical interpretation of the 20,800 six-spaces is asserted.",
+  "group": "G2(4):2",
+  "group_order": 503193600,
+  "intersection_dimension_refinement": {"0":[72,1512,3024,4032],"1":[1512,1512,6048],"2":[126,252,378,2016],"3":[252],"4":[63],"6":[1]},
+  "orbital_algebra": {"commutative":false,"complex_Wedderburn":"C^10 + M2(C)","center_dimension":11,"dimension":14},
+  "passes": "8789-8796",
+  "point_stabilizer_order": 24192,
+  "rank": 14,
+  "schema": "w33.pass8789_8796.leech20800_rank14.v1",
+  "status": "PASS",
+  "subdegrees": [1,63,72,126,252,252,378,1512,1512,1512,2016,3024,4032,6048],
+  "theorem": "The 20,800 fixed six-spaces of the class-2C G2(4):2 action form a rank-14 coherent configuration. Intersection dimension splits into hidden relations, and the complex orbital algebra has exactly one 2x2 matrix block.",
+  "transpose": {"both_pair_degrees":1512,"symmetric_relations":12,"unique_nonsymmetric_pair":[7,8]}
+}
