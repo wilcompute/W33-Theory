@@ -1,0 +1,14 @@
+{
+  "boundary": "Machine-verified at four successive rungs. The general all-rank recurrence is the evident lift pattern; this pass records the four-rung exact theorem rather than claiming a formal induction beyond the checked matrices.",
+  "passes": "9221-9228",
+  "recurrence": "Each 3-cyclotomic lift triples the number of E8 factors and therefore triples the uniform root fibre while leaving the W33 quotient dimension and 40-point support unchanged.",
+  "schema": "w33.pass9221_9228.periodic_root_shadow_law.v1",
+  "status": "PASS",
+  "theorem": "The E8 cyclotomic W(3,3) lift is root-shadow periodic through ranks 8,24,72,216: every constituent E8 factor still maps six-to-one onto all forty W33 points, so the total fibres are 6,18,54,162 roots per point. The lift preserves not only the abstract W33 quotient but its full-support E8 root decoration up to uniform multiplicity.",
+  "verified_rungs": [
+    {"E8_factors": 1, "each_E8_factor_roots_per_point": 6, "level": 0, "quotient_dimension": 4, "rank": 8, "roots_per_point": 6, "visible_W33_points": 40},
+    {"E8_factors": 3, "each_E8_factor_roots_per_point": 6, "level": 1, "quotient_dimension": 4, "rank": 24, "roots_per_point": 18, "visible_W33_points": 40},
+    {"E8_factors": 9, "each_E8_factor_roots_per_point": 6, "level": 2, "quotient_dimension": 4, "rank": 72, "roots_per_point": 54, "visible_W33_points": 40},
+    {"E8_factors": 27, "each_E8_factor_roots_per_point": 6, "level": 3, "quotient_dimension": 4, "rank": 216, "roots_per_point": 162, "visible_W33_points": 40}
+  ]
+}
