@@ -1,0 +1,23 @@
+{
+  "schema": "w33.pass9521_9528.selector_information_budget.v1",
+  "status": "PASS",
+  "passes": "9521-9528",
+  "outside_box": true,
+  "centralizer_selector_bits": {
+    "choose_W33_line": {"symmetry_reduction":"25920 -> 648","factor":40,"log2_bits":5.321928094887363},
+    "choose_line_orientation_parity": {"symmetry_reduction":"648 -> 324","factor":2,"log2_bits":1.0},
+    "combined_E8_to_A2_fingerprint": {"factor":80,"log2_bits":6.321928094887363}
+  },
+  "Suzuki_subtype_bits": {
+    "candidate_level": {"hyperbolic_given":0.48542682717024166,"anisotropic_given":1.8073549220576042},
+    "controller_orbit_level": {"hyperbolic_given":0.5376567859427995,"anisotropic_given":1.6844981742720706},
+    "interpretation": "orthogonal subtype contributes less than two bits and leaves 62 or 28 controller orbits, hence cannot identify a unique slice"
+  },
+  "F9_transport_information": {
+    "number_of_conjugate_symplectic_complex_structures": 78795564505342027200,
+    "arbitrary_transport_label_bits": 66.0947482238328,
+    "glue_pair_role": "the ordered transverse Niemeier glues construct one R algebraically, so within that carrier description these ~66.095 bits are derived structure rather than an externally chosen label"
+  },
+  "theorem": "The rank-24 centralizer fingerprint has an exact information reading: moving from the full E8 W33 symmetry to an E6 line costs log2(40) bits, and moving from the unoriented E6 line stabilizer to the A2/Golay oriented line stabilizer costs exactly one additional bit. By contrast, Suzuki orthogonal subtype supplies under two bits and is provably nonselecting. An arbitrary F9 complex structure would require about 66.095 bits to specify among its Sp(12,3) conjugates, but the transverse glue pair derives R without such an external label.",
+  "boundary": "Log-cardinality/description-length statements about finite selector sets and stabilizers only; not thermodynamic entropy and not a physical channel-capacity claim."
+}
