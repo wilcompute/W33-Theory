@@ -1,0 +1,11 @@
+{
+  "lo": 7861,
+  "hi": 7940,
+  "lane": "Sage",
+  "track": "leech_polarity_v20_sporadic_module_outside_box",
+  "topic": "Eight-way execution: Leech top/socle polarity obstruction, Steinberg-to-tritangent V20 intertwiner, sporadic character restrictions, 27-scheme automorphism group, 3-adic Leech linking module, plus three outside-box module/building/coding probes",
+  "reserved": "2026-08-22",
+  "status": "RESERVED_ACTIVE",
+  "depends_on": "Pass7581-7788 plus live parallel commits",
+  "collision_note": "Fresh range chosen after reconciling live master through Pass7788; exact file paths and schema IDs are authoritative."
+}
