@@ -1,0 +1,120 @@
+{
+  "boundary": "VERIFIED: the pi-adic filtration L > (I-M)L > ... > (I-M)^e L = pL is the governing object. At p=2 on Leech it REPRODUCES the known 3-, 6- and 12-qubit forms as levels 1, 2, 4, and level 3 carries NO descending alternating form under any of the 16 unit twists -- so the Leech qubit tower is COMPLETE. At p=3 on E8^3 the symplectic levels are 1, 3 and 5, and LEVEL 5 -- W(19,3), ten qutrits -- is NOT an element power, so the element-power tower cannot see it. It appears only under the unit twist g^4",
+  "connects_to": "Pass 444 builds the affine Hjelmslev plane over Z/p^2 as an abstract object; a filtration level is the lattice-attached version of the same idea",
+  "methodology_note": "two sweeps disagreed at p=3 level 5 -- the first omitted the descent check, the second used only the untwisted candidate. The reported table checks all four conditions (two-sided descent, antisymmetry, zero diagonal, full rank) for every twist. Descent is automatic here since A(I-g)^j = 3 g^a U, but that is verified rather than assumed",
+  "not_done": [
+    "whether the p=3 level-5 rung has analogues at other primes",
+    "what the non-symplectic levels 2 and 4 at p=3 actually are",
+    "the orthogonal geometry at level 6",
+    "alpha(W(3,9))",
+    "K12 built"
+  ],
+  "p2_leech": {
+    "consequence": "the Leech qubit tower 12 -> 6 -> 3 is COMPLETE, proven rather than assumed for lack of a finer instrument",
+    "element": "order-8 Phi_8^6, ramification e = 4",
+    "level3_negative": "dimension 18, so W(17,2) would fit, but no descending alternating form of full rank exists under any of the 16 unit twists +-M^a; since pi is defined only up to units that exhausts the freedom",
+    "levels": [
+      {
+        "dim": 6,
+        "level": 1,
+        "qudits": 3,
+        "symplectic": true,
+        "twist": "+g^0"
+      },
+      {
+        "dim": 12,
+        "level": 2,
+        "qudits": 6,
+        "symplectic": true,
+        "twist": "+g^0"
+      },
+      {
+        "dim": 18,
+        "level": 3,
+        "qudits": 9,
+        "symplectic": false,
+        "twist": null
+      },
+      {
+        "dim": 24,
+        "level": 4,
+        "qudits": 12,
+        "symplectic": true,
+        "twist": "+g^0"
+      }
+    ],
+    "ramification": {
+      "(I-M)^4 = 2U with U integral": true,
+      "U unimodular": true
+    },
+    "reproduces_known_forms": {
+      "level 1 form (I-M)^3 = I+M+M^2+M^3 mod 2, the 3-qubit form": true,
+      "level 2 form (I-M)^2 = I+M^2 mod 2, the 6-qubit form": true
+    }
+  },
+  "p3_e8cubed": {
+    "element": "order-9 Phi_9^4 (tau . diag(W,I,I)), ramification e = 6",
+    "levels": [
+      {
+        "dim": 4,
+        "level": 1,
+        "qudits": 2,
+        "symplectic": true,
+        "twist": "+g^0"
+      },
+      {
+        "dim": 8,
+        "level": 2,
+        "qudits": 4,
+        "symplectic": false,
+        "twist": null
+      },
+      {
+        "dim": 12,
+        "level": 3,
+        "qudits": 6,
+        "symplectic": true,
+        "twist": "+g^0"
+      },
+      {
+        "dim": 16,
+        "level": 4,
+        "qudits": 8,
+        "symplectic": false,
+        "twist": null
+      },
+      {
+        "dim": 20,
+        "level": 5,
+        "qudits": 10,
+        "symplectic": true,
+        "twist": "+g^4"
+      },
+      {
+        "dim": 24,
+        "level": 6,
+        "qudits": 12,
+        "symplectic": false,
+        "twist": null
+      }
+    ],
+    "new_rung": {
+      "dim": 20,
+      "geometry": "W(19,3)",
+      "level": 5,
+      "qutrits": 10,
+      "twist_required": "g^4",
+      "why_invisible": "the order-9 element has only the powers g and g^3, giving levels 1 and 3; no element power produces level 5",
+      "why_the_twist_matters": "with the untwisted candidate (I-g)^1 the form is neither antisymmetric nor zero-diagonal and the level looks empty; the twist is a RING input, since pi is defined only modulo units of Z[zeta_9]"
+    },
+    "ramification": {
+      "(I-g)^6 = 3U with U integral": true,
+      "U unimodular": true
+    }
+  },
+  "why_the_primes_differ": {
+    "p2": "the top level is L/2L with the Leech form, and mod 2 symmetric with even diagonal IS alternating -- Leech is even, so the top level is symplectic for free",
+    "p3": "the top level is L/3L with the same form, but mod 3 symmetric and alternating differ; G is symmetric and not antisymmetric, so level 6 is orthogonal and drops out",
+    "rule": "'symplectic level = element power' is TRUE at p=2 and FALSE at p=3; the filtration is strictly richer than the tower at the odd prime"
+  }
+}
