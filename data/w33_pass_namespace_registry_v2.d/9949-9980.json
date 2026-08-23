@@ -1,0 +1,14 @@
+{
+  "range": "9949-9980",
+  "status": "RESERVED",
+  "owner": "GPT-5.6-Sol collision-rehome continuation",
+  "reserved_at": "2026-08-23T18:57:00-04:00",
+  "reason": "Rehomes the fifth queued front and three outside-box fronts away from the later-but-already-landed parallel Pass9921-9944 packet. Earlier ownership was ours, but duplicate numbering is more costly than yielding the overlap.",
+  "fronts": {
+    "9949-9956": "Gauge-invariant Holonet Bargmann orientation readout (renumbered from 9917-9924)",
+    "9957-9964": "Outside-box: order-13 semiregular clock on G2(4) vertices and edges",
+    "9965-9972": "Outside-box: norm-one F9/Teichmuller phase alphabet and exact C2 orientation quotient",
+    "9973-9980": "Outside-box: selector lower bounds from the falsified V2 frame sum law plus the new A1^24 2-neighbor location of Golay"
+  },
+  "collision_rule": "Earliest atomic registry add owns the range; this rehome is voluntary to keep canonical pass names unique."
+}
