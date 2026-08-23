@@ -1,0 +1,10 @@
+{
+  "schema":"w33.pass9741_9748.orientation_character_weld.v1",
+  "status":"PASS",
+  "passes":"9741-9748",
+  "W33_line_orientation":{"unoriented_stabilizer":"3^3:S4","order":648,"orientation_kernel":"3^3:A4","order_kernel":324,"quotient":"C2 = sign(S4)"},
+  "G2_edge_orientation":{"unoriented_edge_stabilizer":"G2(2).2","order":24192,"ordered_edge_stabilizer_order":12096,"quotient":"C2 = endpoint reversal","rank14_oriented_relation_pair":"AD <-> BB_or_CC","paired_valencies":[1512,1512]},
+  "parent_group_obstruction":{"gcd_orders":216,"648_divides_24192":false,"24192_divides_648":false,"reason":"W33 line stabilizer has 3^4 while G2 edge stabilizer has only 3^3; G2 edge stabilizer has factor 7 absent from W33 line stabilizer."},
+  "weld_result":"The two orientation data are the same abstract one-bit C2 quotient. Because Aut(C2) is trivial, once a higher-level bridge identifies the underlying unoriented objects the orientation quotient identification is forced. The parent stabilizers cannot embed into one another, so the bit is a compatibility check rather than a transporter.",
+  "boundary":"Exact quotient and group-order comparison; no objectwise W33-line/Hall-Janko-edge map is asserted."
+}
