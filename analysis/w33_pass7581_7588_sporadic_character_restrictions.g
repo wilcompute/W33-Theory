@@ -2,6 +2,7 @@
 # Uses only stored CTblLib character tables and stored class fusions.
 # Pass7893 rerun marker: force the exact master workflow after the Leech/V20 reconciliation.
 # Pass8217 rerun marker: execute after the H27 parabolic and Q+(3,3) residue welds.
+# Pass8641 rerun marker: execute after the diagonal-triality and ninefold-residue frontier.
 LoadPackage("ctbllib");;
 
 B:=CharacterTable("B");;
