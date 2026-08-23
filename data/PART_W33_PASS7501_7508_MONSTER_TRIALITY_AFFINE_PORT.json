@@ -1,0 +1,42 @@
+{
+  "claim_boundary": "This is a finite-group/permutation-action bridge into a Monster maximal subgroup. It does not derive monstrous moonshine, the Griess algebra, or physical parameters from W(3,3).",
+  "fiber_product": {
+    "common_quotient": "S4",
+    "kernel_pair": [18, 4952179814400],
+    "order_check": 2139341679820800,
+    "statement": "H is the S4-coupled product of AGL(2,3) and O8+(3):S4"
+  },
+  "permutation_certificate": {
+    "common_outer_quotient_order": 24,
+    "full_group_order": 2139341679820800,
+    "kernel_on_3360_order": 18,
+    "kernel_on_9_order": 4952179814400,
+    "orbit_3360_identification": "O8+(3):S4 triality action",
+    "orbit_3360_image_order": 118852315545600,
+    "orbit_9_identification": "AGL(2,3)=3^2:GL(2,3), degree-9 affine action",
+    "orbit_9_image_order": 432,
+    "orbit_9_translation_socle_order": 9,
+    "orbit_9_translation_socle_regular": true,
+    "orbit_sizes": [9, 3360]
+  },
+  "schema": "w33.pass7501_7508.monster_triality_affine_port.v1",
+  "source": {
+    "atlas_group": "(3^2:2 x O8+(3)).S4 < Monster",
+    "atlas_representation_degree": 3369,
+    "sha256": {
+      "g1": "fdc3c35dd0201f727c8849cf0a51cd9876e2f609bdc4c7ff7da31284653c67df",
+      "g2": "fd2cce80dc77f3ade7847990a72f8ddd4dd7ba5b62dbcd4b8fc3d9b94aa72b01"
+    },
+    "urls": {
+      "g1": "https://brauer.maths.qmul.ac.uk/Atlas/spor/M/gap/Mmax13G0-p3369B0.g1",
+      "g2": "https://brauer.maths.qmul.ac.uk/Atlas/spor/M/gap/Mmax13G0-p3369B0.g2"
+    }
+  },
+  "status": "PASS",
+  "w33_e8_bridge": {
+    "internal_source": "Pass7465-7472",
+    "meaning": "the 2240 E8 Eisenstein W33 leaves are the two generator families; the 1120 A2 radicals are the point family",
+    "objects": "1120 singular Q+(7,3) points + 1120 + 1120 maximal-singular generator families",
+    "total": 3360
+  }
+}
