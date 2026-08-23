@@ -1,0 +1,167 @@
+{
+  "boundary": "The p=2 analogue of the rank-24 qutrit classification. Orbit lengths for a Phi_4^12 element are 1, 2 or 4 with 4 impossible, and LENGTH 2 is available for any component type because -1 is an automorphism of every lattice. That gives 18 of 23 root systems arithmetically admissible for six qubits, against exactly 3 of 24 PROVEN for two qutrits. The cause is parity: orbit lengths divide the element order, and 2 divides 4 but not 9. The rarity of W(3,3) at rank 24 is therefore a fact about 9 being odd, not a fact about E8",
+  "counts": {
+    "phi4_admissible_of_23": 18,
+    "phi4_failures": [
+      "A24",
+      "A17E7",
+      "A15D9",
+      "A11D7E6",
+      "A8^3"
+    ],
+    "phi9_carriers_of_24": 3
+  },
+  "d2_rung_universal": "the order-2 element is -I, an automorphism of every lattice, so L/2L exists for all 24 Niemeier lattices with no glue check. Per Pass 8925-8940 that rung is orthogonal rather than symplectic",
+  "honest_limit": "the other sixteen admissible systems are ARITHMETIC ONLY. A pairing element must also preserve the glue code, which is a real condition -- it is what nearly killed A2^12 at p=3, where the pure-permutation search failed and only the monomial lift worked. So 18 is an UPPER BOUND on the count, not the count",
+  "not_done": [
+    "the glue check for the sixteen, turning the bound into a count",
+    "the order-8 (three-qubit) screen",
+    "alpha(W(3,9))",
+    "K12 built"
+  ],
+  "orbit_argument_p2": {
+    "length_1_condition": "even rank, all exponents odd, 4 | a degree (D_even and E8)",
+    "length_2_condition": "the 2-cycle product must be -I, which every lattice admits; so the only condition is even multiplicity",
+    "length_4_impossible": "the eigenvalues are the four 4th roots of the cycle product's eigenvalues and always include a non-primitive one",
+    "orbit_lengths": [
+      1,
+      2,
+      4
+    ],
+    "order": 4
+  },
+  "screen": [
+    {
+      "phi4_admissible": true,
+      "phi9_carrier": false,
+      "root_system": "D24"
+    },
+    {
+      "phi4_admissible": true,
+      "phi9_carrier": false,
+      "root_system": "D16E8"
+    },
+    {
+      "phi4_admissible": true,
+      "phi9_carrier": true,
+      "root_system": "E8^3"
+    },
+    {
+      "phi4_admissible": false,
+      "phi9_carrier": false,
+      "root_system": "A24"
+    },
+    {
+      "phi4_admissible": true,
+      "phi9_carrier": false,
+      "root_system": "D12^2"
+    },
+    {
+      "phi4_admissible": false,
+      "phi9_carrier": false,
+      "root_system": "A17E7"
+    },
+    {
+      "phi4_admissible": true,
+      "phi9_carrier": false,
+      "root_system": "D10E7^2"
+    },
+    {
+      "phi4_admissible": false,
+      "phi9_carrier": false,
+      "root_system": "A15D9"
+    },
+    {
+      "phi4_admissible": true,
+      "phi9_carrier": false,
+      "root_system": "D8^3"
+    },
+    {
+      "phi4_admissible": true,
+      "phi9_carrier": false,
+      "root_system": "A12^2"
+    },
+    {
+      "phi4_admissible": false,
+      "phi9_carrier": false,
+      "root_system": "A11D7E6"
+    },
+    {
+      "phi4_admissible": true,
+      "phi9_carrier": true,
+      "root_system": "E6^4"
+    },
+    {
+      "phi4_admissible": true,
+      "phi9_carrier": false,
+      "root_system": "A9^2D6"
+    },
+    {
+      "phi4_admissible": true,
+      "phi9_carrier": false,
+      "root_system": "D6^4"
+    },
+    {
+      "phi4_admissible": false,
+      "phi9_carrier": false,
+      "root_system": "A8^3"
+    },
+    {
+      "phi4_admissible": true,
+      "phi9_carrier": false,
+      "root_system": "A7^2D5^2"
+    },
+    {
+      "phi4_admissible": true,
+      "phi9_carrier": false,
+      "root_system": "A6^4"
+    },
+    {
+      "phi4_admissible": true,
+      "phi9_carrier": false,
+      "root_system": "A5^4D4"
+    },
+    {
+      "phi4_admissible": true,
+      "phi9_carrier": false,
+      "root_system": "D4^6"
+    },
+    {
+      "phi4_admissible": true,
+      "phi9_carrier": false,
+      "root_system": "A4^6"
+    },
+    {
+      "phi4_admissible": true,
+      "phi9_carrier": false,
+      "root_system": "A3^8"
+    },
+    {
+      "phi4_admissible": true,
+      "phi9_carrier": true,
+      "root_system": "A2^12"
+    },
+    {
+      "phi4_admissible": true,
+      "phi9_carrier": false,
+      "root_system": "A1^24"
+    }
+  ],
+  "the_reason": {
+    "consequence": "the rarity of W(3,3) at rank 24 is a parity fact about 9, and nothing in the argument mentions E8",
+    "sharpens": "E8-nativity is forced at the MINIMAL rank 8, where the even unimodular lattice is unique. At rank 24 E8 has no privilege -- it is one of three carriers and two have nothing to do with it",
+    "statement": "orbit lengths divide the element order. Phi_4 has order 4, which is EVEN, so length 2 is available and needs nothing but -1. Phi_9 has order 9, which is ODD, so length 2 is unavailable"
+  },
+  "verified_qubit_carriers": {
+    "E8^3": {
+      "J^2 = -I": true,
+      "alternating": true,
+      "det(I-J) = 2^12": true,
+      "geometry": "W(11,2)",
+      "preserves the E8^3 form": true,
+      "qubits": 6,
+      "rank(F) mod 2 = 12": true
+    },
+    "Leech": "Pass 7333-7340"
+  }
+}
