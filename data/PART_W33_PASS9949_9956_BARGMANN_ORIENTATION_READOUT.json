@@ -1,0 +1,27 @@
+{
+  "boundary": "Exact invariance; seeded simulation accuracies are not hardware data or statistical guarantees.",
+  "control": "naive absolute overlap phase is near chance under arbitrary local phases",
+  "exact_invariances": [
+    "independent port phases cancel around the loop",
+    "common U(3) preserves all inner products",
+    "complex conjugation reverses Im(B)"
+  ],
+  "observable": {
+    "B": "<psi0|psi1><psi1|psi2><psi2|psi0>",
+    "ideal_B": "(1+i)/6",
+    "ideal_phase": "pi/4",
+    "orientation_bit": "sign(Im B)"
+  },
+  "passes": "9949-9956",
+  "renumbered_from": "9917-9924 due later parallel collision",
+  "schema": "w33.pass9949_9956.bargmann_orientation_readout.v1",
+  "seeded_profiles": {
+    "extreme": {"bargmann_accuracy": 0.5535, "bargmann_correct": 1107, "naive_absolute_phase_correct": 965, "naive_accuracy": 0.4825, "trials": 2000},
+    "gauge_only": {"bargmann_accuracy": 1.0, "bargmann_correct": 2000, "naive_absolute_phase_correct": 1009, "naive_accuracy": 0.5045, "trials": 2000},
+    "mild": {"bargmann_accuracy": 1.0, "bargmann_correct": 2000, "naive_absolute_phase_correct": 978, "naive_accuracy": 0.489, "trials": 2000},
+    "moderate": {"bargmann_accuracy": 0.9965, "bargmann_correct": 1993, "naive_absolute_phase_correct": 962, "naive_accuracy": 0.481, "trials": 2000},
+    "strong": {"bargmann_accuracy": 0.827, "bargmann_correct": 1654, "naive_absolute_phase_correct": 989, "naive_accuracy": 0.4945, "trials": 2000}
+  },
+  "status": "PASS",
+  "theorem": "The Bargmann loop is an exact gauge-invariant qutrit chirality observable and stays 99.65% accurate in the deterministic moderate stress profile while the absolute-phase control is near chance."
+}
