@@ -1,0 +1,102 @@
+{
+  "A2^12": {
+    "carrier": {
+      "det_I_minus_X": 81,
+      "order": 9,
+      "phi9": true,
+      "quotient_rank": 4
+    },
+    "golay": {
+      "dimension": 6,
+      "minimum_weight": 6,
+      "self_dual_check": true,
+      "size": 729,
+      "weight_enumerator": {
+        "0": 1,
+        "12": 24,
+        "6": 264,
+        "9": 440
+      }
+    },
+    "lattice": {
+      "det": 1,
+      "even": true,
+      "root_count": 72
+    },
+    "monomial_witness": {
+      "cycles": [
+        [7,0,5],
+        [4,1,2],
+        [8,9,10],
+        [11,6,3]
+      ],
+      "order_mod3": 3,
+      "perm": [5,2,4,11,1,7,3,0,9,10,8,6],
+      "preserves_golay": true,
+      "signs_mod3": [2,2,2,1,1,2,1,1,1,2,2,1]
+    },
+    "root_shadow": {
+      "component_cycles_are_line_points": true,
+      "is_W33_line": true,
+      "multiplicity_per_point": 18,
+      "visible_projective_points": 4,
+      "zero_roots": 0
+    }
+  },
+  "E6^4": {
+    "carrier": {
+      "det_I_minus_X": 81,
+      "mechanism": "diagonal W(E6)^4",
+      "order": 9,
+      "phi9": true,
+      "quotient_rank": 4
+    },
+    "lattice": {
+      "det": 1,
+      "even": true,
+      "root_count": 288
+    },
+    "root_shadow": {
+      "is_W33_line": true,
+      "multiplicity_per_point": 54,
+      "per_E6_component": "18 zero + 54 on one line point",
+      "total_zero_root_system": "A2^12",
+      "visible_projective_points": 4,
+      "zero_root_subsystem_per_component": "A2^3",
+      "zero_roots": 72
+    }
+  },
+  "E8^3": {
+    "carrier": {
+      "det_I_minus_X": 81,
+      "mechanism": "3-cycle of E8 factors with one order-3 Coxeter twist",
+      "order": 9,
+      "phi9": true,
+      "quotient_rank": 4
+    },
+    "lattice": {
+      "det": 1,
+      "even": true,
+      "root_count": 720
+    },
+    "root_shadow": {
+      "covers_all_W33_points": true,
+      "graph_check": "SRG(40,12,2,4)",
+      "multiplicity_per_point": 18,
+      "per_E8_factor": "all 40 points, 6 roots per point",
+      "visible_projective_points": 40,
+      "zero_roots": 0
+    }
+  },
+  "boundary": "VERIFIED for the three and only three rank-24 Niemeier carriers classified in Pass 8989-9012. E8^3 projects its 720 roots uniformly onto all 40 W33 points (18 roots/point). E6^4 has 72 quotient-zero roots forming A2^12 and projects the remaining 216 roots onto one W33 line (54 roots/point). A2^12 projects all 72 roots onto one W33 line (18 roots/point). No physics inference is made.",
+  "cross_carrier_bridge": {
+    "E6_kernel_root_system_equals_third_carrier_root_system": "A2^12",
+    "caution": "This is an equality of root-system type inside N(E6^4), not an identification of the full Niemeier lattice N(A2^12) with a sublattice of N(E6^4)."
+  },
+  "theorem": "Rank-24 W(3,3) Root-Shadow Trichotomy",
+  "visible_root_pairs_per_point": {
+    "A2^12": 9,
+    "E6^4": 27,
+    "E8^3": 9
+  }
+}
