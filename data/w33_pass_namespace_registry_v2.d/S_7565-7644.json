@@ -1,0 +1,11 @@
+{
+  "lo": 7565,
+  "hi": 7644,
+  "lane": "Sage",
+  "track": "steinberg_360_e6_transport_sp6_hoffman_latin_outside_box",
+  "topic": "Replay and manuscript integration of Pass7501-7556 E8/Steinberg work; 360-vector association algebra; 45 Steinberg tetrahedron-pair transport into E6/GQ(4,2); Sp6(2) 81-suborbit vs Steinberg; explicit Hoffman/24-cell/Klein-Latin commutative diagram; three outside-box global geometry probes",
+  "reserved": "2026-08-22",
+  "status": "RESERVED_ACTIVE",
+  "depends_on": "Pass7401-7556 plus live parallel Pass72xx/75xx commits",
+  "collision_note": "Pass7501-7532 is duplicated across independent Sage and Monster-track files. This fresh range is used to avoid extending the ambiguity; file paths and certificate schema IDs remain authoritative for the older duplicated labels."
+}
