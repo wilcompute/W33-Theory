@@ -53,11 +53,20 @@
     "type_is_PLUS": true
   },
   "not_done": [
-    "identify the orthogonal geometry at the p=3 top rung (level 6)",
     "whether the Leech d=2 image is the full orthogonal group",
     "alpha(W(3,9))",
     "K12 built"
   ],
+  "p3_top_rung": {
+    "levels": {
+      "d=2": "e=1, level 1 is L/2L",
+      "d=3": "e=2, level 2 is L/3L",
+      "d=8": "e=4, level 4 is L/2L",
+      "d=9": "e=6, level 6 is L/3L"
+    },
+    "note": "answers the open item left by Pass 8861-8884",
+    "statement": "the top level of the pi-adic filtration is always L/pL, carrying the symmetric form G mod p, hence ORTHOGONAL at every prime; at p=2 an even lattice makes it alternating too, which is the disguise"
+  },
   "quadratic_refinement": {
     "checked_on": "120x120 pairs",
     "form": "q(x) = (x,x)/2 mod 2",

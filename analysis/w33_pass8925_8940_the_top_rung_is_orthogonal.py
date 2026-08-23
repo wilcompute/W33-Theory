@@ -171,6 +171,29 @@ def main() -> int:
     maps, the odd-part law and the kernel classifications are untouched; only the
     identification of the TOP rung is sharpened.""")
 
+    print("\n  PASS 8936 -- and the same thing happens at p=3, which closes an open item\n")
+    iso = sum(1 for v in itertools.product(range(3), repeat=8)
+              if any(v) and int(np.array(v, dtype=np.int64) @ G
+                                @ np.array(v, dtype=np.int64)) % 3 == 0)
+    m = 4
+    p3plus, p3minus = (3 ** (m - 1) + 1) * (3 ** m - 1), (3 ** (m - 1) - 1) * (3 ** m + 1)
+    p3 = {"nonzero_vectors": 3 ** 8 - 1, "isotropic": iso, "anisotropic": 3 ** 8 - 1 - iso,
+          "plus_count": p3plus, "minus_count": p3minus, "is_plus_type": iso == p3plus}
+    for k, v in p3.items():
+        print(f"      {k:24s} {v}")
+    print("""
+    The pi-adic filtration has ramification e = deg Phi_{p^m}, and its TOP level is ALWAYS
+    L/pL -- level 1 when d=2, level 4 when d=8, level 2 when d=3, level 6 when d=9. That
+    level always carries the symmetric form G mod p, so it is ORTHOGONAL at every prime.
+
+    At p=2 an even lattice makes that same form ALTERNATING as well, which is why it looked
+    symplectic and got recorded as W(7,2) or W(23,2). At odd p symmetric and alternating are
+    genuinely different, so it never looked symplectic -- and Pass 8861-8884 recorded level 6
+    at p=3 as carrying no alternating form and left "what is it?" open. This is the answer:
+    it is the orthogonal space of G mod 3, and for E8 it is PLUS type.
+
+    One law, two disguises.""")
+
     print("\n  PASS 8934-8935 -- open, and scope\n")
     print("""    NEW HERE: the placement of the quadratic refinement inside the tower, and the
     fact that it EXPLAINS the d=2 anomaly of Pass 8909-8924 rather than merely sitting
@@ -181,7 +204,7 @@ def main() -> int:
     W(E8)/{+-1} = O_8^+(2).2, and Conway's 98280 + 8386560 + 8292375 type split of
     Leech/2Leech.
     NOT DONE: the orthogonal geometry at the p=3 top rung (Pass 8861-8884 left level 6 as
-    "orthogonal, not symplectic" and never identified it); whether the d=2 image for LEECH
+    whether the d=2 image for LEECH
     is likewise the full orthogonal group (Co0 order versus |O_24^+(2)| is not checked here);
     alpha(W(3,9)); K12 built.
     NOT CLAIMED: any Monster result, and no physics.""")
@@ -203,6 +226,13 @@ def main() -> int:
             "checked_on": "120x120 pairs"},
         "e8": e8,
         "e8_automorphism_cap": aut,
+        "p3_top_rung": {"note": "answers the open item left by Pass 8861-8884",
+                        "statement": ("the top level of the pi-adic filtration is always "
+                                      "L/pL, carrying the symmetric form G mod p, hence "
+                                      "ORTHOGONAL at every prime; at p=2 an even lattice "
+                                      "makes it alternating too, which is the disguise"),
+                        "levels": {"d=2": "e=1, level 1 is L/2L", "d=8": "e=4, level 4 is L/2L",
+                                   "d=3": "e=2, level 2 is L/3L", "d=9": "e=6, level 6 is L/3L"}},
         "leech": {**leech, "conway_split": CONWAY,
                   "reading": ("Conway's type split IS the singular/non-singular split: type "
                               "4 and 8 are singular, type 6 non-singular")},
@@ -229,7 +259,7 @@ def main() -> int:
             "unaffected": ["the tower maps", "the odd-part law", "the kernel classifications"]},
         "classical_cited": ["E8 mod 2 is a plus-type quadratic space, W(E8)/{+-1} = O_8^+(2).2",
                             "Conway's 98280 + 8386560 + 8292375 type split of Leech/2Leech"],
-        "not_done": ["identify the orthogonal geometry at the p=3 top rung (level 6)",
+        "not_done": [
                      "whether the Leech d=2 image is the full orthogonal group",
                      "alpha(W(3,9))", "K12 built"],
     }
