@@ -1,0 +1,23 @@
+{
+  "schema": "w33.pass9037_9044.pointstar_symplectic_quotient.v1",
+  "status": "PASS",
+  "passes": "9037-9044",
+  "point_star_module_dimension": 25,
+  "point_star_composition_series": [1, 8, 1, 14, 1],
+  "sentinel_kernel_dimension": 15,
+  "w33_adjacency_rank_F2": 16,
+  "w33_adjacency_kernel_dimension": 24,
+  "radical_dimension": 9,
+  "exact_sequences": [
+    "0 -> C_sentinel^15 -> ker(A_W33)^24 -> rad(S25)^9 -> 0",
+    "0 -> rad(S25)^9 -> S25^25 -> im(A_W33)^16 -> 0"
+  ],
+  "quotient": {
+    "dimension": 16,
+    "identification": "S25/rad(S25) ~= F2^40/ker(A_W33) ~= im(A_W33)",
+    "form": "nondegenerate alternating",
+    "composition_factors": [1, 14, 1]
+  },
+  "theorem": "The canonical 25-dimensional logical point-star module has a 9-dimensional radical ker(A_W33)/C_sentinel and a canonical 16-dimensional nondegenerate symplectic quotient im(A_W33).",
+  "claim_boundary": "Exact binary-module statement. No physical symplectic dynamics beyond the logical Pauli commutator is inferred."
+}
