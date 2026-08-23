@@ -1,0 +1,12 @@
+{
+  "schema":"w33.pass9781_9788.unramified_ramified_f9_zeta9_bridge.v1",
+  "status":"PASS",
+  "passes":"9781-9788",
+  "outside_box":true,
+  "finite_glue_side":{"phase_space":"F9^6 = F3^12","R_relation":"R^2=-I","unramified_residue_direction":"x^2+1 irreducible mod 3, so F3[i]=F9"},
+  "parallel_cyclotomic_side":{"field":"Q3(zeta_9)","degree":6,"ramification_index":6,"residue_degree":1,"uniformizer":"pi=1-zeta_9","repo_source":"parallel Bruhat-Tits filtration pass identifies I-M with this uniformizer direction"},
+  "compositum":{"K_unramified":"unramified quadratic Q3(i), residue F9","F_ramified":"Q3(zeta_9), totally ramified degree 6","L":"Q3(i,zeta_9)","degree_over_Q3":12,"ramification_index":6,"residue_degree":2,"residue_field":"F9"},
+  "mod3_filtration":"In O_L, 3 is a unit times pi^6. Thus O_L/3O_L has six successive pi-adic graded pieces, each F9; its associated graded additive space is F9^6 and F3-dimension 12.",
+  "new_synthesis":"R supplies the unramified degree-2 direction while the order-9 cyclotomic operator supplies the totally ramified degree-6 direction. Their natural local-field compositum has (e,f)=(6,2), degree 12, and a mod-3 associated graded of exactly six F9 layers.",
+  "boundary":"Standard local-field facts applied to two independently certified repo structures. No integral Niemeier/O_L isomorphism is proved; the F9^6 identification is associated-graded/additive, not a semisimple ring identity."
+}
