@@ -1,0 +1,32 @@
+{
+  "claim_boundary": "The G-set/indexing uses the published H(4) intersection classification transported through Pass9013. No physical three-qubit interpretation is inferred beyond the finite H(2) geometry.",
+  "controller": {
+    "full_20800_point_stabilizer": "C2 x G2(2)",
+    "full_order": 24192,
+    "image_order": 12096,
+    "induced_63_line_image": "G2(2)=U3(3):2",
+    "kernel": "C2"
+  },
+  "external_source": "https://cage.ugent.be/geometry/Files/305/Jay2.pdf",
+  "local_graph": {
+    "adjacency": "line concurrency in H(2)",
+    "degree": 6,
+    "distance_distribution": [1,6,24,32],
+    "identification": "line graph / dual point graph of split Cayley hexagon H(2)",
+    "intersection_array": "{6,4,4;1,1,3}"
+  },
+  "local_orbit": {
+    "Pass8821_intersection_dimension": 4,
+    "classical_Table2_type": "S^15_7",
+    "classical_description": "lines concurrent to a given line L, together with all incident points",
+    "configurations_in_base": 63,
+    "indexing": "one local object for each of the 63 lines L of the base H(2)",
+    "size": 63,
+    "subhexagons_of_this_type": 63
+  },
+  "passes": "9021-9028",
+  "schema": "w33.pass9021_9028.leech63_h2_line_controller.v1",
+  "source_carrier": "Pass9013-9020 Leech20800 = H(2)-subhexagons of H(4)",
+  "status": "PASS",
+  "theorem": "The 63 closest bare-Leech six-spaces to a fixed one are equivariantly the 63 lines of the associated split Cayley hexagon H(2). Their mutual-intersection graph is line concurrency in H(2), and the induced controller is the full G2(2) of order 12,096; the extra central C2 in the 24,192-point stabilizer lies in the action kernel."
+}
