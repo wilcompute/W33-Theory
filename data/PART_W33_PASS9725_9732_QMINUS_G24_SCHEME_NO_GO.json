@@ -1,0 +1,18 @@
+{
+  "schema": "w33.pass9725_9732.qminus_g24_scheme_no_go.v1",
+  "status": "PASS",
+  "passes": "9725-9732",
+  "qminus_coherent_configuration": {
+    "fibers": {"singular":112,"norm1":126,"norm2":126},
+    "rank_on_nonsingular_ordered_pairs": 10,
+    "source_relation_profiles": {
+      "1": {"1:diag":1,"1:nonorth":80,"1:orth":45,"2:nonorth":90,"2:orth":36},
+      "2": {"1:nonorth":90,"1:orth":36,"2:diag":1,"2:nonorth":80,"2:orth":45}
+    },
+    "undirected_Ominus_invariant_union_degrees_on_252": [0,36,45,80,81,90,116,125,126,135,161,170,171,206,215,251]
+  },
+  "g24_fixed_edge_subconstituents": {"D_size":252,"D_induced_degree":66,"B_union_C_size":126,"B_union_C_induced_average_degree":31},
+  "no_go": "No O^-(6,3)-invariant union of the four natural nonsingular relations has degree 66; on one 126-point norm fiber the only nontrivial invariant degrees are 45,80,125, not 31. The natural Q^-(5,3) point scheme therefore cannot realize either tempting G2(4) subconstituent.",
+  "surviving_target": "Any genuine Hall-Janko/Q^- bridge must use a derived scheme such as two-spaces/Lagrangians or a non-natural orbital twist, not the point orthogonality coherent configuration.",
+  "boundary": "Exact no-go for the natural O^-(6,3) point coherent configuration and all invariant undirected relation unions."
+}
