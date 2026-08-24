@@ -1,0 +1,19 @@
+{
+  "schema": "w33.pass10337_10344.witting_unitary_partition_no_go.v1",
+  "status": "PASS",
+  "passes": "10337-10344",
+  "inputs": {
+    "Witting_plus_axes": "W33 orthogonality graph, atomic sizes 4 axes + Clifford 4|8|12|12",
+    "Hermitian_W33": "norm orbit sizes 16|12|12"
+  },
+  "Witting_coarsenings": {
+    "labelled_16_12_12_assignments": 10,
+    "all_have_same_quotient_matrix": [[6,3,3],[4,5,3],[4,3,5]]
+  },
+  "Hermitian_norm_partition": {
+    "quotient_matrix": [[6,3,3],[4,2,6],[4,6,2]]
+  },
+  "theorem": "No W33 graph automorphism can carry any union-of-natural-Witting/axis 16|12|12 coarsening to the Hermitian norm 16|12|12 partition. In particular the two 12-ray Clifford middle classes are not the two nonzero Hermitian norm orbits. The shared 12+12 cardinality is not an objectwise bridge.",
+  "interpretation": "M36=W33 minus a line remains exact, but Clifford grading and Hermitian norm grading are transverse structures on the same 40-point W33 graph. Any eventual bridge must mix Clifford classes rather than identify them wholesale.",
+  "boundary": "Exact quotient-degree obstruction. It rules out mappings preserving whole Clifford/axis blocks; it does not rule out a finer pointwise intertwiner that cuts across those blocks."
+}
