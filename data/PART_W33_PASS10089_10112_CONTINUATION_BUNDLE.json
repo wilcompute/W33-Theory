@@ -1,0 +1,33 @@
+{
+  "schema": "w33.pass10089_10112.continuation_bundle.v1",
+  "status": "PASS",
+  "base_commit": "030664e6f96056e017a94f86de308c5c8db65fd6",
+  "range": "10089-10112",
+  "items": [
+    {
+      "passes": "10089-10096",
+      "script": "scripts/pass10089_10096_rank6_f9_hermitian_bt.py",
+      "kind": "core-continuation",
+      "summary": "Rank-6 F9 Hermitian BT chamber shadow using J2⊕J2⊕J2 over F3; Hermitian shadow verified."
+    },
+    {
+      "passes": "10097-10100",
+      "script": "scripts/pass10097_10100_bt_music_toy_model.py",
+      "kind": "outside-the-box",
+      "summary": "Triadic harmonic labeling of BT chamber K6 edges."
+    },
+    {
+      "passes": "10101-10104",
+      "script": "scripts/pass10101_10104_bt_archetype_pairs.py",
+      "kind": "outside-the-box",
+      "summary": "Mnemonic archetype classification of the 15 BT layer pairs."
+    },
+    {
+      "passes": "10105-10112",
+      "script": "scripts/pass10105_10112_heawood_bt_story_grid.py",
+      "kind": "outside-the-box",
+      "summary": "84-slot Heawood×BT story grid scaffold."
+    }
+  ],
+  "claim": "Continuation within the reserved Pass10049-10112 window completed with one structural extension and three exploratory outside-the-box constructions."
+}
