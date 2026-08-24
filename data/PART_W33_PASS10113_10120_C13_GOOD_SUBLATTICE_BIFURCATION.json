@@ -1,0 +1,27 @@
+{
+  "Aut_Leech_good_sublattice_orbits": 16,
+  "boundary": "The 65/41/24 census is exact from Pass10049-10056. The Leech/A12^2 naming uses the rank-24 Niemeier classification. The 16-orbit statement is external prior art and warns against claiming transitivity; no canonical-V2 stabilizing C13 is claimed.",
+  "co1_13A_census": {
+    "canonical_V2_is_fixed_by_the_tested_representative": false,
+    "invariant_maximal_totally_singular_12spaces": 65,
+    "type4_distribution": {"0": 41, "156": 24}
+  },
+  "halved_preimage_dictionary": {
+    "construction": "L_E=(1/sqrt(2))*pi^{-1}(E)",
+    "root_counts": {"type4_0": 0, "type4_156": 312},
+    "roots_per_type4_class": 2
+  },
+  "Niemeier_identification": {
+    "0_roots": "Leech lattice",
+    "312_roots": "A12^2",
+    "A12_root_count": 156,
+    "A12^2_root_count": 312,
+    "input": "Niemeier classification of even unimodular rank-24 lattices"
+  },
+  "new_selector_target": "Compute the good-sublattice profile/stabilizer of canonical V2 and of the 41 13A-fixed good generators; equality of profile is the next exact orbit test.",
+  "orbit_correction": "Type-4-free is not a complete Co1 orbit invariant: Aut(Leech)=2.Co1 has 16 orbits on good sublattices.",
+  "passes": "10113-10120",
+  "schema": "w33.pass10113_10120.c13_good_sublattice_bifurcation.v1",
+  "status": "PASS",
+  "theorem": "For a Co1 class-13A element, the 65 invariant maximal totally singular generators bifurcate exactly into 41 Leech-neighbor (rootless/good) generators and 24 A12^2-neighbor generators with 312 roots. Order 13 is compatible with good Leech sublattices, but compatibility with the specific canonical V2 orbit remains open because the good sublattices split into 16 Aut(Leech) orbits."
+}
