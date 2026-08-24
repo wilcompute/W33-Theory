@@ -1,0 +1,32 @@
+{
+  "schema": "w33.pass10345_10352.canonical_v2_good_orbit7.v1",
+  "status": "PASS",
+  "passes": "10345-10352",
+  "repo_input": {
+    "canonical_V2": "im((I-M)^2) for the unique pure order-8 M",
+    "C_Co0_M_order": 48384,
+    "factorization": "2^8 * 3^3 * 7",
+    "inclusion": "C_Co0(M) <= Stab_Co0(V2)"
+  },
+  "published_good_sublattice_classification": {
+    "orbits": 16,
+    "unique_orbit_with_stabilizer_divisible_by_48384": 7
+  },
+  "orbit7": {
+    "identified_as_canonical_V2_orbit": true,
+    "Stab_in_Co1": "G2(4) x A4",
+    "Stab_Co1_order": 3019161600,
+    "Stab_2Co1_order": 6038323200,
+    "profile": "64^4095",
+    "profile_meaning": "all 4095 nonzero quotient classes have bad-vector-set size 64"
+  },
+  "C13_closure": {
+    "G2_4_order": 251596800,
+    "13_divides_G2_4": true,
+    "exists_actual_C13_in_Stab_V2": true,
+    "reconciliation": "Pass10049 tested one explicit Co1 class-13A representative and it did not fix the stored V2. A conjugate representative inside the orbit-7 stabilizer does fix V2."
+  },
+  "theorem": "Canonical V2 is the unique good-sublattice orbit whose published 2.Co1 stabilizer can contain the exact repo centralizer C_Co0(M) of order 48384. Therefore V2 is Nebe--Parker good-sublattice orbit 7, with stabilizer G2(4) x A4 and uniform profile 64^4095. In particular an actual C13 <= G2(4) <= Stab_Co1(V2) exists, closing the C13-stabilizer existence question.",
+  "next_exact_target": "Construct an explicit Co0/Co1 conjugating word carrying the tested 13A representative to one inside Stab(V2), and compare that G2(4) factor with the Hall--Janko/G2 controller already present elsewhere in the repo.",
+  "boundary": "The centralizer/inclusion is exact repo mathematics. Identification of the unique orbit uses the published Nebe--Parker 16-orbit stabilizer/profile table as external classification input; the table itself is not recomputed here."
+}
