@@ -1,0 +1,29 @@
+{
+  "boundary": "Finite permutation/matrix computations are exhaustive. The D4 connection is retained only as an abstract S3-intertwiner target until an explicit D4 root/lattice map is constructed.",
+  "galois_correction": {
+    "consequence": "Galois conjugation does NOT pair j with 5-j and supplies no layer-cycling C3.",
+    "effect": "tau preserves every t^j O_L and its filtration degree",
+    "tau_t": "-t/(1+t)=unit*t"
+  },
+  "order48_no_count_match": {
+    "chamber_pair_group_distribution": {"1":1,"2":19,"3":8,"4":12,"6":8},
+    "isomorphic": false,
+    "projective_U2_3_W33_distribution": {"1":1,"2":7,"3":8,"4":24,"6":8},
+    "reason": "different element-order distributions"
+  },
+  "passes": "10137-10144",
+  "schema": "w33.pass10137_10144.d4_triality_chamber_audit.v1",
+  "self_dual_pair_group": {
+    "centralizer_in_S6_order": 48,
+    "kernel_order": 8,
+    "pair_permutation_image": "S3",
+    "reversal": "(1 6)(2 5)(3 4)",
+    "structure": "C2 wr S3 = C2^3:S3"
+  },
+  "status": "PASS",
+  "theorem": "The three BT layer pairs come from Hermitian self-duality, not Galois conjugation. Their exact chamber-type symmetry is C2 wr S3 of order 48 with an S3 quotient, giving a legitimate abstract D4-triality slot. But this S3 is not canonically identified with D4 triality, and the order-48 pair group is not the projective U2(3) W33 group.",
+  "triality_slot": {
+    "exact_statement": "The quotient S3 permuting the three self-dual layer pairs has the same abstract group as Out(D4)=S3.",
+    "not_yet_proved": "No canonical root-theoretic intertwiner identifies the chamber-pair S3 with D4 triality."
+  }
+}
