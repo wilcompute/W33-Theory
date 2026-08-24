@@ -1,0 +1,28 @@
+{
+  "schema": "w33.pass10169_10176.isotropic16_cayley_graph.v1",
+  "status": "PASS",
+  "passes": "10169-10176",
+  "outside_box": true,
+  "graph": {
+    "vertices": "C4 x C4",
+    "connection_set": [[0,1],[0,2],[0,3],[1,2],[2,2],[3,2]],
+    "order": 16,
+    "degree": 6,
+    "spectrum": {"-4":2,"-2":3,"0":6,"2":4,"6":1}
+  },
+  "fibre_structure": {
+    "K4_count": 4,
+    "description": "fixed first coordinate gives four K4 fibres; between any two distinct fibres the cross edges form the perfect antipodal matching b -> b+2"
+  },
+  "automorphisms": {
+    "full_order": 192,
+    "structure": "S4 x D8",
+    "S4": "permutes the four K4 fibres",
+    "D8": "centralizer in S4 of the antipodal involution tau=(0 2)(1 3), acting simultaneously on the fibre coordinate",
+    "proof": "The four K4s are the only 4-cliques, so every automorphism permutes them. The fibre kernel is at most C_S4(tau)=D8, hence |Aut|<=24*8=192. The script explicitly exhibits all 192 product automorphisms.",
+    "regular_translation_subgroup": "C4 x C4, order 16"
+  },
+  "theorem": "The 16-point Hermitian-isotropic W33 residue graph is Cay(C4xC4,{(0,+/-1),(0,2),(+/-1,2),(2,2)}). It has spectrum 6^1,2^4,0^6,(-2)^3,(-4)^2, exactly four K4 fibres with antipodal perfect matchings between each pair, and full automorphism group S4 x D8 of order 192.",
+  "bridge_target": "The repo independently found an S4 x D8 order-192 stabilizer for the 270 orbit of pairs of W33 spreads sharing four lines. Since four common spread lines contain 16 points, the next pass tests whether their induced W33 graph is this Gamma16 and whether the spread-pair stabilizer maps isomorphically onto Aut(Gamma16).",
+  "boundary": "Exact finite graph calculation and group upper/lower bound. The spread-pair identification is not claimed here."
+}
