@@ -1,0 +1,27 @@
+{
+  "C315_no_go": {
+    "Sp6_2_has_order315_element": false,
+    "commutation": "g commutes with h because h=g^45",
+    "contradiction": "g would lie in the order-7 centralizer of h",
+    "h": "g^45",
+    "h_order": 7,
+    "hypothetical_g_order": 315
+  },
+  "boundary": "This refutes the natural cyclic-Singer equivariant reading, not every possible bijection between the two 315-sets. A different group-mediated bridge would need separate construction.",
+  "exact_count_match": {
+    "C13_orbits_on_F2_12_nonzero": 315,
+    "W5_2_isotropic_lines": 315,
+    "W5_2_line_count_formula": "63 points * 15 lines/point / 3 points/line"
+  },
+  "order7_structure": {
+    "GL6_2_centralizer_order": 49,
+    "Phi7_factorization_over_F2": "(x^3+x+1)(x^3+x^2+1), reciprocal irreducible cubics",
+    "Sp6_2_centralizer_order": 7,
+    "fixed_space_dimension": 0
+  },
+  "outside_box": true,
+  "passes": "10153-10160",
+  "schema": "w33.pass10153_10160.c315_w52_structural_no_go.v1",
+  "status": "PASS",
+  "theorem": "Although both sets have cardinality 315, the abstract C13-orbit set cannot be identified equivariantly with the W(5,2) isotropic-line set under its natural symplectic automorphism group using the regular C315 torsor: Sp6(2) contains no element of order 315. The 315 equality is therefore a count match until extra non-cyclic/non-symplectic structure supplies an objectwise map."
+}
