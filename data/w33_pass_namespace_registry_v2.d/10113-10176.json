@@ -1,0 +1,18 @@
+{
+  "range": "10113-10176",
+  "status": "RESERVED",
+  "owner": "GPT-5.6-Sol continuation / parallel-output audit",
+  "reserved_at": "2026-08-23T20:20:00-04:00",
+  "fronts": {
+    "10113-10120": "Close or sharpen the Co1 13A/type-free-generator orbit question for canonical V2",
+    "10121-10128": "Audit the proposed NCG h=J*chi/Higgs bridge against the actual F9 Hermitianization and repo spectral-triple axioms",
+    "10129-10136": "Audit and repair the proposed OAM/Bargmann/F9 physical orientation measurement",
+    "10137-10144": "Test the proposed D4 triality to Bruhat-Tits chamber-layer dictionary",
+    "10145-10152": "Compute exact Ihara zeta and Ramanujan status of Heawood tensor K6, with no unsupported QEC claim",
+    "10153-10160": "Outside-box: decide whether C315=W(5,2)-line count extends to an automorphism-compatible structural identity",
+    "10161-10168": "Outside-box: determine the exact zeta9 action on chamber vertices, associated graded, and filtered residue module",
+    "10169-10176": "Outside-box: identify the induced graph on the 16-point Hermitian-isotropic orbit inside chamber-selected W33"
+  },
+  "parallel_reconciliation": "Commit 030664e6f96056e017a94f86de308c5c8db65fd6 reused Pass10049-10104 after the canonical 10049-10112 reservation landed. Its useful mathematics will be reverified/re-homed here; its duplicate pass labels are noncanonical by earliest-reservation rule. Commit 913860672ce022c6eeffdb3d70104629f3ed453b also contains speculative overlapping labels and is treated as noncanonical parallel context.",
+  "collision_rule": "Earliest atomic registry reservation owns the range; later duplicate labels are historical/noncanonical and surviving mathematics must be rehomed."
+}
