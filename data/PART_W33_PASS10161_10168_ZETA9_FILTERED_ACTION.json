@@ -1,0 +1,34 @@
+{
+  "associated_graded": {
+    "action_of_U": "identity on every t^j/t^{j+1}",
+    "nontrivial_clock_data": "N=U-I connects higher filtration degree; the order-nine information lives in extensions between layers",
+    "six_F9_layers": 6
+  },
+  "boundary": "Exact local/residue algebra statement. It does not rule out unrelated C3 actions elsewhere in the repo; it rules out deriving one from the vertexwise zeta9 chamber action asserted here.",
+  "field_correction": {
+    "K": "Q3(i)",
+    "L": "K(zeta9)",
+    "meaning": "multiplication by zeta9 is K-linear on L and fixes each lattice t^j O_L setwise",
+    "zeta9_in_K": false,
+    "zeta9_in_L": true,
+    "zeta9_unit_of_O_L": true
+  },
+  "parallel_claim_corrections": [
+    "zeta9 is not in O_{Q3(i)}; it is an O_L unit",
+    "zeta9 fixes the six selected chamber vertices rather than cycling them",
+    "the induced action on each graded F9 layer is identity, not a Singer C3",
+    "there is no derived Fano/Heawood C3 action from this chamber fixation alone"
+  ],
+  "passes": "10161-10168",
+  "residue_action": {
+    "N": "degree-raising regular nilpotent, N^6=0",
+    "U": "I+N",
+    "U3": "I+N^3 != I",
+    "U9": "I",
+    "U_order": 9,
+    "ring": "F9[t]/(t^6)"
+  },
+  "schema": "w33.pass10161_10168.zeta9_filtered_action.v1",
+  "status": "PASS",
+  "theorem": "Multiplication by zeta9 fixes the entire six-step lattice chamber vertexwise and acts trivially on its associated graded, while U=1+N has exact order 9 on the filtered residue module. The cyclotomic clock is therefore unipotent extension data across the filtration, not a permutation clock on the chamber vertices."
+}
