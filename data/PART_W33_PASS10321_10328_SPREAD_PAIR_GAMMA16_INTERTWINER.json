@@ -1,0 +1,35 @@
+{
+  "schema": "w33.pass10321_10328.spread_pair_gamma16_intertwiner.v1",
+  "status": "PASS",
+  "passes": "10321-10328",
+  "W33": {
+    "points": 40,
+    "lines": 40,
+    "spreads": 36,
+    "spread_size": 10,
+    "spread_pair_intersections": {"1": 360, "4": 270}
+  },
+  "groups": {
+    "PSp4_3_order": 25920,
+    "PGSp4_3_order": 51840,
+    "four_intersection_pair_stabilizer_PSp": 96,
+    "four_intersection_pair_stabilizer_PGSp": 192
+  },
+  "objectwise_bridge": {
+    "common_lines": 4,
+    "common_points": 16,
+    "induced_graph": "Gamma16 = Cay(C4 x C4,{(0,1),(0,2),(0,3),(1,2),(2,2),(3,2)})",
+    "common_lines_become_K4_fibres": true,
+    "PGSp_orbit_size": 270,
+    "equals_all_four_intersection_pairs": true
+  },
+  "stabilizer_action": {
+    "common_16_point_restriction_order": 192,
+    "faithful": true,
+    "target_graph_Aut_order": 192,
+    "isomorphism": "Stab_PGSp({S,T}) ~= Aut(Gamma16) ~= S4 x D8"
+  },
+  "theorem": "For every pair of W33 spreads sharing four lines, the 16 points on those common lines induce exactly the Hermitian-isotropic Gamma16 graph from Pass10169. The full PGSp4(3) stabilizer of the unordered spread pair has order 192 and acts faithfully as the entire automorphism group Aut(Gamma16)=S4 x D8. The four shared spread lines are precisely the four K4 fibres. Thus the spread-pair and Hermitian-residue constructions are objectwise the same 16-point permutation geometry.",
+  "consequence": "The earlier S4 x D8 coincidence is upgraded to an explicit transporter. The local Hermitian W33 selector is canonically realized inside the global spread geometry as the common-point geometry of a four-intersection spread pair.",
+  "boundary": "Exact exhaustive finite computation. The isomorphism is at the W33 incidence/permutation level; no claim is made yet that the local-field chamber itself canonically selects a unique global spread pair."
+}
