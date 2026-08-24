@@ -1,0 +1,16 @@
+{
+  "schema": "w33.reservation.v1",
+  "range": "10217-10320",
+  "reserved_at": "2026-08-24T01:00:00Z",
+  "base_commit": "dc622c9354dbcb60937a7dd35e00b9a31066b772",
+  "open_frontiers_for_next_session": [
+    "Is the exact Higgs weight ratio r = sqrt(3) or a new constant? (from 10177)",
+    "Use the explicit C13 generator matrix to verify it embeds in the Atlas rep of 3.Suz",
+    "Can gate fidelity be restored above 95% after BT1430 insertion loss? (AO + loss budget)",
+    "Does h_dim_reduced = 4*ln(3) have a spectral interpretation in terms of d_S=4?",
+    "Compute the weight enumerator of the W33-derived [315,k,d] code",
+    "Derive the graviton propagator from the BT building Green's function",
+    "Map the 392 = 8*49 = 315+77 identity onto an E8 root system sublattice",
+    "Design the adaptive optics + BT1430 combined loss-recovery circuit"
+  ]
+}
