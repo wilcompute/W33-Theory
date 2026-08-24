@@ -3,7 +3,7 @@ name: Pass10049-10112 eight-front verification
 on:
   push:
     branches: [master]
-    paths:
+    paths: &verify_paths
       - 'analysis/w33_pass10049_10056_co1_c13_v2_exhaustive.py'
       - 'analysis/w33_pass10057_10064_orientation_character_compatibility.py'
       - 'analysis/w33_pass10065_10072_c315_controller_quotients.py'
@@ -13,6 +13,9 @@ on:
       - 'analysis/w33_pass10097_10104_*.py'
       - 'analysis/w33_pass10105_10112_*.py'
       - '.github/workflows/pass10049-10112.yml'
+  pull_request:
+    branches: [master]
+    paths: *verify_paths
   workflow_dispatch:
 
 jobs:
