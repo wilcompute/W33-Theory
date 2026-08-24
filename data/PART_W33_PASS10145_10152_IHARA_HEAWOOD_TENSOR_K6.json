@@ -1,0 +1,23 @@
+{
+  "Ihara_RH": "For a finite connected (q+1)-regular graph, the nontrivial Ihara-RH condition is equivalent to the Ramanujan adjacency bound; it holds here because 50<56.",
+  "Ihara_inverse": {
+    "Bass_exponent_m_minus_n": 546,
+    "factorization": "(1-u^2)^546 (1-197u^2+196u^4) (1+19u^2+196u^4)^5 (1-22u^2+196u^4)^6 (1+26u^2+196u^4)^30"
+  },
+  "Ramanujan": {
+    "bound": "2*sqrt(14)",
+    "bound_squared": 56,
+    "is_Ramanujan": true,
+    "largest_nontrivial_abs": "5*sqrt(2)",
+    "largest_nontrivial_squared": 50,
+    "q=d-1": 14
+  },
+  "boundary": "All graph spectrum and Bass factors are exact. No identification with a physical Holonet coupling graph or a specific CSS/check complex is asserted.",
+  "graph": {"bipartite":true,"connected":true,"construction":"categorical/tensor product Heawood x K6","degree":15,"edges":630,"vertices":84},
+  "passes": "10145-10152",
+  "removed_parallel_claim": "This graph-theoretic Ramanujan/Ihara result does NOT by itself certify an optimal W33 quantum-code distance. Expander eigenvalues alone are insufficient for that coding-theoretic conclusion.",
+  "schema": "w33.pass10145_10152.ihara_heawood_tensor_k6.v1",
+  "spectrum": {"-15":1,"-3":5,"-5sqrt2":6,"-sqrt2":30,"15":1,"3":5,"5sqrt2":6,"sqrt2":30},
+  "status": "PASS",
+  "theorem": "Heawood tensor K6 is an 84-vertex connected bipartite 15-regular Ramanujan graph. Its Ihara zeta inverse has the displayed exact Bass factorization, and its nontrivial poles satisfy the regular-graph Ihara Riemann-hypothesis circle condition."
+}
