@@ -1,0 +1,34 @@
+{
+  "Bargmann_channel": {
+    "bit": "sign(Im B)",
+    "not_equal_to": "sign(l) or even/odd parity under l -> -l",
+    "observable": "B=<psi0|psi1><psi1|psi2><psi2|psi0>",
+    "requires": "three rays / three complex overlap factors or an equivalent closed-loop interferometer"
+  },
+  "boundary": "The 1|4|4 finite-field routing is exact. OAM sorting is established optical technology, but this pass gives no measured device loss, crosstalk, fidelity, timing or footprint for the proposed joint detector.",
+  "exact_F9_encoding": {
+    "class_sizes": "1 | 4 | 4",
+    "norm": "N(a+i b)=a^2+b^2 mod 3",
+    "norm_classes": {"0": [[0,0]], "1": [[0,1],[0,2],[1,0],[2,0]], "2": [[1,1],[1,2],[2,1],[2,2]]},
+    "registers": "a = OAM qutrit; b = time-bin qutrit (one possible hardware encoding)",
+    "symbol": "z=a+i b, a,b in F3"
+  },
+  "oam_only_no_go": {
+    "conclusion": "No function of the OAM coordinate alone can implement the F9 norm class in this encoding.",
+    "witness": "(1,0) has norm1 while (1,1) has norm2; both have OAM coordinate a=1"
+  },
+  "passes": "10129-10136",
+  "removed_parallel_claims": [
+    "96.81% abstract acceptance is not optical contrast",
+    "99% SLM, 92% sorter and 89.4% total efficiency are not certified for this detector",
+    "resource/footprint/cycle-time estimates are not derived from the Holonet model"
+  ],
+  "repaired_architecture": [
+    "joint 3x3 OAM x time-bin sorter/projector for F9 norm class",
+    "independent three-state Bargmann-loop interferometric readout",
+    "classical or coherent agree-or-erase fusion of the two decoded C2 bits"
+  ],
+  "schema": "w33.pass10129_10136.oam_f9_orientation_readout_repair.v1",
+  "status": "PASS",
+  "theorem": "The exact finite-mode implementation of the F9 norm channel requires two ternary coordinates, naturally an OAM-qutrit x time-bin-qutrit 3x3 register with norm-class partition 1|4|4. The Bargmann chirality is a separate three-ray loop observable. The earlier OAM-sign/mod-3 identification is invalid, but a corrected dual-channel photonic architecture remains feasible in principle."
+}
