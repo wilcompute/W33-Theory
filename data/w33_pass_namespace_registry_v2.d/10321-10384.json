@@ -1,0 +1,18 @@
+{
+  "range": "10321-10384",
+  "status": "RESERVED",
+  "owner": "GPT-5.6-Sol objectwise-bridge continuation",
+  "reserved_at": "2026-08-23T21:10:00-04:00",
+  "fronts": {
+    "10321-10328": "Explicit spread-pair <-> Gamma16 objectwise intertwiner and stabilizer action",
+    "10329-10336": "Identify the four-K4 Gamma16 structure with the repo's 4x4 toroidal/Latin-square/tesseract cell system",
+    "10337-10344": "Test explicit incidence/symmetry bridge from W33 16|12|12 unitary partition to Witting 12+12 ray families",
+    "10345-10352": "Compute finer intrinsic fingerprints of the 41 class-13A rootless good generators versus canonical V2",
+    "10353-10360": "Outside-box: classify Gamma16 graph transforms/quotients for Clebsch, hypercube, rook/shrikhande relatives",
+    "10361-10368": "Outside-box: compare the embedded S4xD8 spread-pair stabilizer with Gamma16 Aut as a concrete PSp4(3) subgroup",
+    "10369-10376": "Outside-box: derive Latin-square/tesseract actions and orbit structure from the 192-group on 16 cells",
+    "10377-10384": "Outside-box: build a selector/code from the Gamma16 adjacency algebra and test whether it recovers W33 orientation or glue partitions"
+  },
+  "parallel_context": "A later lane reserved 10217-10320. Begin at 10321. Pass10113-10176 remains owned by the earlier reservation; Pass10169-10176 has now been completed.",
+  "collision_rule": "Earliest atomic reservation owns the range; later overlaps rehome."
+}
