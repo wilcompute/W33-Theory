@@ -1,0 +1,33 @@
+{
+  "schema": "w33.pass10353_10360.v2_internal_g24_hall_janko_controller.v1",
+  "status": "PASS",
+  "passes": "10353-10360",
+  "outside_box": true,
+  "canonical_V2_stabilizer": {
+    "Co1": "G2(4) x A4",
+    "order": 3019161600,
+    "controller_quotient": "Stab_Co1(V2)/A4 ~= G2(4)",
+    "G2_4_order": 251596800,
+    "A4_order": 12
+  },
+  "internal_homogeneous_carriers": {
+    "Hall_Janko_vertices": {"cosets":"G2(4)/J2","J2_order":604800,"index":416},
+    "Leech_sixspace_edges": {"cosets":"G2(4)/G2(2)","G2_2_order":12096,"index":20800},
+    "oriented_incidence_flags": {"count":41600,"meaning":"two endpoint orientations per edge"}
+  },
+  "full_graph_controller": {
+    "group": "G2(4):2",
+    "order": 503193600,
+    "vertex_stabilizer": "J2:2",
+    "edge_stabilizer": "G2(2).2",
+    "relation": "adjoining the outer C2 extends the internal simple controller and supplies endpoint reversal"
+  },
+  "A4_factor": {
+    "role": "commuting direct factor in Stab_Co1(V2)",
+    "connection_target": "the same abstract A4 appears as the orientation kernel inside the W33 line stabilizer 3^3:A4",
+    "claim_boundary": "abstract/direct-factor compatibility only; no objectwise identification with the W33 A4 has yet been constructed"
+  },
+  "theorem": "The Hall--Janko/G2(4) graph is an intrinsic homogeneous geometry of the canonical Leech selector V2. After identifying Stab_Co1(V2)=G2(4)xA4, quotienting out the commuting A4 leaves exactly the simple controller whose cosets by J2 and G2(2) are the 416 Hall--Janko vertices and 20,800 Leech six-space edges. The previously external Hall--Janko carrier is therefore internal to the symmetry of canonical V2.",
+  "consequence": "The Leech selector, Hall--Janko controller, and order-13 clock now sit in one stabilizer: C13 < G2(4) < Stab_Co1(V2). The remaining outer C2 is precisely the graph endpoint-orientation extension G2(4):2/G2(4).",
+  "boundary": "Exact group-order/coset synthesis of two independently certified repo results plus the published orbit-7 stabilizer identification from Pass10345. It does not construct a new coordinate action of G2(4) on V2."
+}
