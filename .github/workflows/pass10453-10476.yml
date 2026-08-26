@@ -1,6 +1,11 @@
 name: Pass10453-10476 explicit A4xG24 coordinates
 
 on:
+  pull_request:
+    branches: [ master ]
+    paths:
+      - 'analysis/w33_pass10453_10476_explicit_a4g24_v2_coordinates.py'
+      - '.github/workflows/pass10453-10476.yml'
   push:
     branches: [ master ]
     paths:
@@ -20,5 +25,3 @@ jobs:
       - run: pip install numpy
       - name: Evaluate Wilson A4xG2(4) words on stored Co1 module
         run: python analysis/w33_pass10453_10476_explicit_a4g24_v2_coordinates.py
-
-# Trigger marker: workflow installed and rerun on master.
