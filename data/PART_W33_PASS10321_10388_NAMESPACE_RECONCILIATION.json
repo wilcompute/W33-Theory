@@ -1,0 +1,17 @@
+{
+  "schema": "w33.pass10321_10388.namespace_reconciliation.v1",
+  "status": "PASS",
+  "earliest_reservation": {
+    "owner": "GPT-5.6-Sol objectwise-bridge continuation",
+    "range": "10321-10384",
+    "reserved_before_parallel": true
+  },
+  "completed_by_earliest_lane": ["10321-10328","10329-10336","10337-10344","10345-10352","10353-10360","10361-10368","10369-10376"],
+  "later_parallel": {
+    "range": "10377-10388",
+    "result": "unconditional mod-2 Hermitian refinement for fixed-point-free order-3 lattice isometries",
+    "collision": "10377-10384 overlaps the earlier reservation"
+  },
+  "resolution": "The earliest lane had not yet materialized 10377-10384 when the later exact theorem landed. To preserve provenance and avoid duplicate pass labels, 10377-10384 is voluntarily yielded to the landed refinement theorem; the objectwise lane resumes after 10388. This is a provenance accommodation, not a claim that the later reservation was chronologically first.",
+  "next_clean_start": 10389
+}
