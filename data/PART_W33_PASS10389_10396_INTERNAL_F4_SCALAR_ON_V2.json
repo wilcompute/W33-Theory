@@ -1,0 +1,30 @@
+{
+  "A4_scalar_argument": {
+    "image": "C3",
+    "image_upper_bound": "C3",
+    "kernel": "V4",
+    "nontriviality": "an order-3 element of A4 cannot lie in the 2-group parabolic kernel",
+    "quotient": "A4/V4 = C3 = F4^x",
+    "reason": "A4 commutes with G2(4) in the direct-product stabilizer, so its image centralizes the faithful natural module"
+  },
+  "atlas_module_input": {
+    "G2_4_natural_module": "dimension 6 over F4",
+    "commuting_units": "F4^x = C3",
+    "endomorphism_field": "F4",
+    "restriction_to_F2_dimension": 12
+  },
+  "boundary": "Uses Pass10345-10352 for Stab(V2)=G2(4)xA4, the standard 2-group kernel of the maximal-orthogonal-parabolic action on E, and the ATLAS natural 6-dimensional GF(4) representation. A coordinate-level conjugating basis in the stored 24-dimensional Co1 matrices remains to be constructed.",
+  "intrinsic_field": {"F4_dimension":6,"V2_cardinality":4096,"nonzero_vectors":4095,"projective_F4_points":1365},
+  "parabolic_argument": {
+    "G2_kernel": "normal in simple G2(4); cannot equal all G2(4) because G2(4) is not a 2-group",
+    "ambient": "O^+(24,2)",
+    "conclusion": "G2(4) acts faithfully on V2",
+    "kernel": "unipotent radical, a 2-group",
+    "map": "Stab(E) -> GL(E)"
+  },
+  "passes": "10389-10396",
+  "repo_input": {"Stab_Co1_V2":"G2(4) x A4","V2":"maximal totally singular F2^12 in Lambda/2Lambda","source_pass":"10345-10352"},
+  "schema": "w33.pass10389_10396.internal_f4_scalar_on_v2.v1",
+  "status": "PASS",
+  "theorem": "Canonical V2 is intrinsically the restriction of scalars of the natural F4^6 G2(4)-module. The commuting A4 factor acts on V2 through A4/V4=C3, and this C3 is exactly F4^x. Thus the F4 scalar field is internal to the actual Co1 stabilizer of V2, not imposed from a cardinality match."
+}
