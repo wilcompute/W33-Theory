@@ -1,0 +1,87 @@
+{
+  "schema": "w33.pass10453_10476.explicit_a4g24_coordinate_closure.v1",
+  "status": "PASS",
+  "passes": "10453-10476",
+  "source": {
+    "paper": "R. A. Wilson, Classification of subgroups isomorphic to PSL_2(27) in the Monster, LMS J. Comput. Math. 17 (2014), Sec. 4.1-4.2",
+    "words_used": "c1=(ab)^4(ab^2)^3; i1=c1^13; c2=ab i1 [ab,i1]^5; i2=c2^13; n1=(a i1)^5(ab)^-2 i2(ab)^2 a(ab)^-2; n2=(a i1)^5(i1 i2 a)^5; a1=i1; a2=(n1n2)^13; g1=c1^2; g2=(n1n2)^3",
+    "commutator_convention": "[x,y]=x^-1 y^-1 x y; the opposite convention fails Wilson's centralization identities"
+  },
+  "wilson_subgroup_checks": {
+    "c1_order": 26,
+    "i1_order": 2,
+    "c2_order": 26,
+    "i2_order": 2,
+    "c2_centralizes_i1": true,
+    "i1_i2_commute": true,
+    "a1_order": 2,
+    "a2_order": 3,
+    "a1a2_order": 3,
+    "g1_order": 13,
+    "g2_order": 13,
+    "g1g2_order": 15,
+    "A4_G2_commute": true
+  },
+  "explicit_orbit7_generator": {
+    "definition": "E=Fix(a1)=Fix(V4)",
+    "dimension": 12,
+    "invariant_under": ["a1", "a2", "g1", "g2"],
+    "totally_singular": true,
+    "Leech_type4_count_among_4095_nonzero_classes": 0,
+    "basis_bitstrings": [
+      "101101011001000000000000",
+      "100011100010100000000000",
+      "001010010100001000000000",
+      "001100100110010100000000",
+      "100010100100010010000000",
+      "110110110100000001000000",
+      "101000011000000000100000",
+      "000001010100000000010000",
+      "011001101100000000001000",
+      "111110100100000000000100",
+      "110101110010010000000010",
+      "010101000010010000000001"
+    ]
+  },
+  "relation_to_stored_canonical_V2": {
+    "stored_V2": "im((I-M8)^2)",
+    "dimension": 12,
+    "Wilson_subgroup_generator_invariance": {"a1": false, "a2": false, "g1": false, "g2": false},
+    "intersection_dimension_E_cap_V2": 0,
+    "sum_dimension": 24,
+    "Leech_bilinear_pairing_rank_E_x_V2": 12,
+    "interpretation": "E and stored V2 are complementary maximal totally singular, type-4-free orbit-7 generators with perfect pairing"
+  },
+  "explicit_F4_structure_on_E": {
+    "scalar": "a2|E",
+    "scalar_order": 3,
+    "scalar_minimal_polynomial": "x^2+x+1",
+    "F4_encoding": {"0": 0, "1": 1, "w": 2, "1+w": 3, "relation": "w^2+w+1=0"},
+    "six_F4_basis_ambient_bitstrings": [
+      "101101011001000000000000",
+      "100011100010100000000000",
+      "001010010100001000000000",
+      "001100100110010100000000",
+      "100010100100010010000000",
+      "110110110100000001000000"
+    ],
+    "g1_F4_matrix": [[3,0,0,1,2,0],[3,3,2,0,1,2],[2,0,0,0,0,2],[1,2,2,3,2,3],[2,0,1,2,0,0],[1,2,2,1,3,0]],
+    "g2_F4_matrix": [[3,1,2,2,1,1],[2,1,1,3,0,0],[2,3,1,0,3,0],[3,3,1,1,1,1],[3,2,1,1,2,1],[3,2,2,0,2,3]],
+    "g1_order": 13,
+    "g2_order": 13,
+    "g1g2_order": 15,
+    "g1_minpoly_low_to_high_F4": [1,3,0,2,0,3,1],
+    "g1_minpoly_symbolic": "1+(1+w)x+w x^3+(1+w)x^5+x^6",
+    "frobenius_conjugate_factor_low_to_high": [1,2,0,3,0,2,1],
+    "factor_identity": "p(x) pbar(x) = Phi_13(x) = 1+x+...+x^12"
+  },
+  "stored_V2_dual_scalar": {
+    "construction": "S_V=P^-1 S_E^-T P from the perfect E--V2 pairing",
+    "order": 3,
+    "minimal_polynomial": "x^2+x+1",
+    "pairing_identity": "S_E^T P S_V=P",
+    "Co1_membership": "NOT CLAIMED"
+  },
+  "theorem": "Wilson's explicit A4 x G2(4) subgroup in the stored mod-2 Co1 representation fixes the concrete good generator E=Fix(V4). E is 12-dimensional, totally singular and type-4-free. The A4 order-3 generator is literally F4 scalar multiplication, while the G2(4) generators become explicit 6x6 F4 matrices. The order-13 generator has a degree-6 irreducible F4 factor of Phi13. E and the stored canonical V2 are complementary, perfectly paired orbit-7 generators, which canonically induces an explicit dual F4 scalar on stored V2.",
+  "boundary": "All matrix, singularity, type-4, field-factor and pairing statements are exact computations. An explicit Co1 conjugating word E->stored V2 is not yet constructed, and Co1 membership of the pairing-dual scalar on stored V2 is not asserted."
+}
