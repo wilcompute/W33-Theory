@@ -1,0 +1,12 @@
+{
+  "Suzuki_vertex_G_set": {"carrier":"scalar-compatible conjugates of canonical V2","group":"Suz","point_stabilizer":"G2(4)","size":1782,"source":"Pass10397-10404"},
+  "boundary": "Uses ATLAS rank-3 suborbits for Suz/G2(4), Pass10353 for the 416 Hall-Janko carrier, and Pass10413 for the 1365 H(4) carrier. It identifies the two stabilizer G-sets; a new explicit incidence map between an individual Hall-Janko subhexagon and the corresponding Suzuki neighbor is not separately recomputed here.",
+  "local_dictionary": {"Suzuki_distance_0":"canonical V2","Suzuki_distance_1":"416 H(2)/Hall-Janko subhexagon objects","Suzuki_distance_2":"1365 H(4) projective points"},
+  "passes": "10429-10436",
+  "rank3_suborbits": {"ATLAS":[1,416,1365],"Suzuki_graph_parameters":[1782,416,100,96]},
+  "schema": "w33.pass10429_10436.suzuki_local_416_1365_tower.v1",
+  "status": "PASS",
+  "suborbit_1365": {"H4_point_graph_shells":[1,20,320,1024],"homogeneous_space":"G2(4)/P_H4_point","interpretation":"PG(V2)=PG(5,4) points = split Cayley hexagon H(4) points","size":1365},
+  "suborbit_416": {"homogeneous_space":"G2(4)/J2","internal_graph":"G2(4) SRG(416,100,36,20)","interpretation":"Hall-Janko 100-set vertices / H(2) subhexagons","size":416},
+  "theorem": "The rank-3 Suzuki decomposition 1782=1+416+1365 around canonical V2 has an intrinsic geometric meaning. The 416 neighbors are the Hall-Janko/J2 H(2)-subhexagon carrier inside G2(4), while the 1365 nonneighbors are the projective points of V2, equivalently the H(4) point geometry. Thus the Suzuki graph is a two-shell incidence controller coupling H(2) subhexagons to the ambient H(4) point space around one scalar-compatible Leech selector."
+}
