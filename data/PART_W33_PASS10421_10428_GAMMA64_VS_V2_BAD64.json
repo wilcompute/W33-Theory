@@ -1,0 +1,10 @@
+{
+  "Gamma16_shell": {"affine_hull_dimension":7,"code":"unique singly-even self-dual [16,8,4] code d_8^{2+} (classification input)","is_affine_F2_6":false,"weight6_size":64,"xor_distance_from_base":{"0":1,"4":9,"8":51,"12":3}},
+  "V2_bad_set": {"affine_flat_status":"NOT asserted by Nebe-Parker and not inferred here","ambient":"single affine coset f+V2 because 3f=f mod V2","definition":"B(N,f)={(v_i+v_j+v_k)+2Lambda} from the 24 antipodal minimal-vector pairs in f+N","orbit7_profile":"64^4095","size_for_each_nonzero_f":64},
+  "boundary": "Gamma16 calculations are exhaustive. The d_8^{2+} naming uses the classical classification of binary self-dual length-16 codes. The Nebe-Parker bad-set definition/profile is external prior art; no uncomputed affine property is assigned to B(V2,f).",
+  "next_exact_test": "Construct one orbit-7 B(V2,f) in compatible Leech coordinates and compare affine hull dimension, XOR-distance multiset, stabilizer orbits, and any quadratic/Hermitian invariants to the frozen Gamma16 shell.",
+  "no_go": "The raw equality 64=64 cannot identify the Gamma16 weight-6 shell with B(V2,f). In particular, any proposed bridge that treats both as affine F2^6 flats is false because the Gamma16 shell has affine hull dimension 7.",
+  "passes": "10421-10428",
+  "schema": "w33.pass10421_10428.gamma64_vs_v2_bad64.v1",
+  "status": "PASS"
+}
