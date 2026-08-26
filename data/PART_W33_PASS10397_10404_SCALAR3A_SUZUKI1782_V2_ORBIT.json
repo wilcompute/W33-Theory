@@ -1,0 +1,16 @@
+{
+  "Co1_order3_class_gate": {
+    "ATLAS_centralizer_orders": {"3A":1345036492800,"3B":58786560,"3C":12597120,"3D":544320},
+    "only_possible_class": "3A"
+  },
+  "Suzuki_graph": {"edges":370656,"parameters":[1782,416,100,96]},
+  "V2_orbit": {"central_C3_quotient":"Suz/G2(4)","identified_G_set":"1782 Suzuki-graph vertices","size":1782,"stabilizer_in_3Suz":"G2(4) x C3"},
+  "boundary": "Uses the exact orbit-7 stabilizer from Pass10345/10389 and the ATLAS Co1 order-3 centralizer table plus the standard C_Co1(3A)=3.Suz identification. It identifies the vertex G-set; adjacency is the standard rank-3 Suz/G2(4) orbital relation already used elsewhere in the repo.",
+  "centralizer_inside_V2_stabilizer": {"C_Stab_s":"G2(4) x C3","order":754790400},
+  "complex_Leech_scalar": {"C_Co1_s":"3.Suz","Suz_order":448345497600,"class":"3A","order":1345036492800},
+  "input": {"Stab_Co1_V2":"G2(4) x A4","internal_scalar":"s in A4/V4 = C3 = F4^x","source":"Pass10389-10396"},
+  "passes": "10397-10404",
+  "schema": "w33.pass10397_10404.scalar3a_suzuki1782_v2_orbit.v1",
+  "status": "PASS",
+  "theorem": "Fix a nontrivial internal F4 scalar s on canonical V2. It is necessarily Co1 class 3A, with centralizer 3.Suz. The 3.Suz orbit of V2 has exactly 1782 elements, and after quotienting the central scalar C3 it is the homogeneous space Suz/G2(4), i.e. the canonical Suzuki-graph vertex G-set. Thus Suzuki vertices are objectwise scalar-compatible conjugates of V2."
+}
