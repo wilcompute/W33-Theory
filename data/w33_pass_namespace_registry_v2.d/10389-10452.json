@@ -1,0 +1,18 @@
+{
+  "range": "10389-10452",
+  "status": "RESERVED",
+  "owner": "GPT-5.6-Sol F4-internalization continuation",
+  "reserved_at": "2026-08-26T18:20:00-04:00",
+  "fronts": {
+    "10389-10396": "Prove the A4/V4=C3 factor in Stab(V2)=G2(4)xA4 is the internal F4^x scalar action on canonical V2",
+    "10397-10404": "Identify the scalar C3 as Co1 class 3A and derive the 3.Suz/G2(4) index-1782 orbit of V2",
+    "10405-10412": "Projectivize the C13 clock through the internal F4 scalars: 315 vector cycles -> 105 F4-projective cycles",
+    "10413-10420": "Use the natural F4^6 module to identify the 1365-point G2(4) projective action and its rank-4 subdegrees",
+    "10421-10428": "Test the Gamma16 [16,8,4] 64-word shells against the canonical good-sublattice bad-vector 64-sets at the level of invariants, not counts",
+    "10429-10436": "Outside-box: build the two-level Suzuki/Hall-Janko coset tower 1782 -> 416 -> 20800 from one scalar-stabilized V2",
+    "10437-10444": "Outside-box: compare semisimple F4^6 C13 clock with ramified F9[t]/t^6 C9 clock via common six-step field/local algebra data",
+    "10445-10452": "Outside-box: search for a canonical 105-state/projective selector and its relation to existing W33/PG(3,2)/spread carriers"
+  },
+  "parallel_context": "Pass10377-10388 landed a valid unconditional mod-2 Hermitian refinement but overlapped the earlier 10321-10384 reservation; provenance reconciliation yields 10377-10384 to that landed theorem. Begin new work at 10389.",
+  "collision_rule": "Earliest atomic reservation owns the range; later overlaps rehome."
+}
