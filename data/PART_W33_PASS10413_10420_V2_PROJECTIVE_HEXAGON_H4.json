@@ -1,0 +1,12 @@
+{
+  "atlas_permutation_input": {"degree":1365,"primitive":true,"rank":4,"suborbit_lengths":[1,20,320,1024],"two_outer_conjugate_representations":"1365a and 1365b"},
+  "boundary": "The degree/rank/suborbit data are ATLAS inputs; the shell formulas and generalized-hexagon counts are exact elementary consequences of an order-(4,4) generalized hexagon. The two ATLAS 1365 actions are outer-conjugate variants; this pass does not choose a label a versus b for the stored V2 basis.",
+  "consequence": "The canonical Leech selector V2, the G2(4) controller, and the repo H(4) hexagon are one object: V2 supplies the natural F4^6 coordinates, and projectivization supplies H(4). Hall-Janko H(2) subhexagons can therefore be interpreted internally inside PG(V2).",
+  "module_input": {"V2":"natural F4^6 module of G2(4)","projective_points":1365,"projective_space":"PG(5,4)","source":"Pass10389-10396"},
+  "passes": "10413-10420",
+  "schema": "w33.pass10413_10420.v2_projective_hexagon_h4.v1",
+  "split_Cayley_hexagon_H4": {"flags":6825,"intersection_array":"{20,16,16;1,1,5}","lines":1365,"lines_per_point":5,"order":[4,4],"point_graph_degree":20,"point_graph_diameter":3,"point_graph_shells":[1,20,320,1024],"points":1365,"points_per_line":5,"shell_formula":["1","q(q+1)","q^3(q+1)","q^5"]},
+  "stabilizer": {"G2_4_order":251596800,"point_stabilizer_order":184320},
+  "status": "PASS",
+  "theorem": "The intrinsic projectivization PG(V2)=PG(5,4) of canonical V2 is the standard 1365-point geometry of the split Cayley hexagon H(4). The ATLAS rank-4 suborbits 1,20,320,1024 are exactly the four point-graph distance shells of H(4), whose intersection array is {20,16,16;1,1,5}."
+}
