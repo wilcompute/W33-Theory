@@ -1,0 +1,35 @@
+{
+  "Aut_orbits_on_codewords": {
+    "weight10": "16+48",
+    "weight6": "16+48",
+    "weight_size_pairs": [[0,1],[4,12],[6,16],[6,48],[8,2],[8,6],[8,6],[8,16],[8,24],[8,48],[10,16],[10,48],[12,12],[16,1]]
+  },
+  "Gamma16": {
+    "Aut": "S4 x D8",
+    "Aut_order": 192,
+    "S": [[0,1],[0,2],[0,3],[1,2],[2,2],[3,2]],
+    "degree": 6,
+    "model": "Cay(C4 x C4,S)",
+    "vertices": 16
+  },
+  "64_target": {
+    "Gamma16_weight10_words": 64,
+    "Gamma16_weight6_words": 64,
+    "canonical_V2_good_profile": "64^4095",
+    "status": "count-pattern target only; no map asserted"
+  },
+  "binary_adjacency_code": {
+    "A_squared_mod2_zero": true,
+    "generator": "16 adjacency rows over F2",
+    "parameters": "[16,8,4]",
+    "rank": 8,
+    "self_dual": true,
+    "self_orthogonal": true,
+    "weight_enumerator": {"0":1,"4":12,"6":64,"8":102,"10":64,"12":12,"16":1}
+  },
+  "boundary": "Exact finite computation in the canonical Cayley model. The equality 64 with the V2 good-sublattice profile is deliberately not promoted to an objectwise identification.",
+  "passes": "10369-10376",
+  "schema": "w33.pass10369_10376.gamma16_self_dual_code.v1",
+  "status": "PASS",
+  "theorem": "The adjacency row space of the canonical 16-point Hermitian/spread-intersection graph Gamma16 is a binary self-dual [16,8,4] code with weight enumerator 1+12y^4+64y^6+102y^8+64y^10+12y^12+y^16. Its full S4 x D8 automorphism group preserves the code and splits both 64-word weight shells into 16+48."
+}
