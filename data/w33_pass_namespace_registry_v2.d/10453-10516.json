@@ -1,0 +1,18 @@
+{
+  "range": "10453-10516",
+  "status": "RESERVED",
+  "owner": "GPT-5.6-Sol explicit-F4-coordinate continuation",
+  "reserved_at": "2026-08-26T18:18:00-04:00",
+  "fronts": {
+    "10453-10460": "Evaluate published A4 x G2(4) standard-generator words in the stored 24-dimensional Co1 representation and identify the orbit-7 stabilizer representative",
+    "10461-10468": "Extract the explicit order-3 scalar action on the stored canonical V2 and certify F4^6 coordinates",
+    "10469-10476": "Extract an explicit order-13 element stabilizing the stored canonical V2 and classify its 105 projective cycles",
+    "10477-10484": "Construct the H(4)/C13 quotient incidence object from explicit projective coordinates and test multiplicities/simple-graph shadow",
+    "10485-10492": "Compute an intrinsic relation on Nebe-Parker 64-sets or prove the current repo data is insufficient for objectwise reconstruction",
+    "10493-10500": "Outside-box: compare the explicit F4 scalar/order13 pair with the F9 order4/order9 pair via minimal-polynomial and commutant invariants",
+    "10501-10508": "Outside-box: derive the Suzuki 1|416|1365 shells directly from the explicit orbit-7 module/stabilizer when possible",
+    "10509-10516": "Outside-box: search the 105-state C13 quotient for a canonical 5-regular or voltage-lift code/clock invariant rather than a count match"
+  },
+  "parallel_context": "Pass10377-10388 is a later parallel overlap with the earlier Pass10321-10384 reservation; its mathematics is preserved by reconciliation. Pass10389-10452 is complete. No later reservation was visible at reservation time.",
+  "collision_rule": "Earliest atomic reservation owns the range; later collisions rehome."
+}
