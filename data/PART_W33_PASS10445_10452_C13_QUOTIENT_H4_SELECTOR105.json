@@ -1,0 +1,12 @@
+{
+  "C13_freeness": {"flags":"fixed-point-free because a fixed flag fixes its point","lines":"fixed-point-free because an order-13 permutation of a 5-point line must be trivial, which would fix points","points":"fixed-point-free by irreducible natural-module action"},
+  "H4_Levi_graph": {"biregular_degree":5,"connected":true,"cycle_rank":4096,"flags_edges":6825,"lines":1365,"points":1365,"vertices":2730},
+  "boundary": "The quotient counts/freeness and cycle ranks are exact. Parallel edges in the orbit quotient are not excluded here, so the safe object is an incidence multigraph/graph quotient. The equalities beta1(H4)=4096=|V2| and beta1(quotient)-1=315 are recorded as exact numerical/topological identities; no canonical isomorphism between graph homology and V2 is claimed.",
+  "identities": {"H4_Levi_cycle_rank":4096,"V2_cardinality":4096,"nonzero_vector_C13_cycles":315,"quotient_Levi_cycle_rank_minus_one":315},
+  "normalizer_clock": {"inside_G2_4":"N(C13)=C13:C6 -> C6 on quotient","inside_G2_4_colon_2":"N(C13)=C13:C12 -> C12 on quotient"},
+  "passes": "10445-10452",
+  "quotient_selector": {"bipartite_degree_counting_multiplicity":5,"cover_degree":13,"cycle_rank":316,"flag_orbits":525,"line_states":105,"point_states":105,"total_vertices":210},
+  "schema": "w33.pass10445_10452.c13_quotient_h4_selector105.v1",
+  "status": "PASS",
+  "theorem": "The internal C13 clock canonically produces a 105-state projective selector by quotienting the full H(4) incidence geometry: 105 point-orbits, 105 line-orbits and 525 flag-orbits. The quotient is a connected bipartite 5-regular incidence multigraph and inherits the torus-normalizer C6 (or outer C12) clock."
+}
