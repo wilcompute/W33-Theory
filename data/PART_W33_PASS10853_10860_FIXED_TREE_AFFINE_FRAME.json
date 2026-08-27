@@ -1,0 +1,34 @@
+{
+  "schema": "w33.pass10853_10860.fixed_tree_affine_frame.v1",
+  "status": "PASS",
+  "passes": "10853-10860",
+  "fixed_geometry": {
+    "projective_points": 21,
+    "H4_fixed_lines": 25,
+    "fixed_flags": 45,
+    "incidence": "connected tree",
+    "point_degree_profile": {"1": 15, "5": 6},
+    "line_degree_profile": {"1": 20, "5": 5}
+  },
+  "PG24_affine_frame": {
+    "space": "PG(Fix(k)) = PG(2,4)",
+    "central_origin_c": 1,
+    "line_at_infinity_points": 5,
+    "other_affine_points": 15,
+    "degree5_points": "{c} union L_infty",
+    "five_degree5_H4_lines": "exactly the five PG(2,4) radial lines through c"
+  },
+  "dangling_structure": {
+    "per_infinity_point": 4,
+    "total_dangling_fixed_H4_lines": 20,
+    "affine_leaf_points_each_degree": 1
+  },
+  "C3_action": {
+    "c_fixed": true,
+    "L_infty_orbits": {"1": 2, "3": 1},
+    "other_affine_point_orbits": {"3": 5},
+    "radial_line_orbits": {"1": 2, "3": 1}
+  },
+  "theorem": "The 2B-fixed H(4) tree selects an affine frame in PG(2,4): a distinguished origin c and a distinguished line at infinity L_infty. The five non-leaf H(4) lines are exactly the five projective radial lines through c, while four additional H(4) leaf lines hang from each direction at infinity. Thus the fixed tree is a precise treeification of an affine-plane frame, not an anonymous 21-point fixed set.",
+  "boundary": "Exact F4 coordinate and H(4) incidence computation. The 20 dangling H(4) lines are not identified with the remaining PG(2,4) projective lines; the two incidence structures differ and that distinction is part of the theorem."
+}
