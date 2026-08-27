@@ -1,0 +1,33 @@
+{
+  "schema": "w33.pass10845_10852.normalizer_jordan_pg24.v1",
+  "status": "PASS",
+  "passes": "10845-10852",
+  "normalizer": {
+    "n_order": 6,
+    "semisimple_part": "s=n^4, order3",
+    "unipotent_part": "u=n^3, order2",
+    "commuting": true,
+    "n_equals_su": true
+  },
+  "F4_6_Jordan": {
+    "Fix_u_dimension_F4": 3,
+    "s_eigenspace_dimensions": {"1": 2, "2": 2, "3": 2},
+    "Jordan_form": "J2(1) + J2(w) + J2(w^2)",
+    "minimal_polynomial": "(x-1)^2(x-w)^2(x-w^2)^2 = x^6+1"
+  },
+  "fixed_cone": {
+    "affine_vectors": 64,
+    "s_orbits_on_vectors": {"1": 4, "3": 20},
+    "projective_points": "PG(2,4), 21 points",
+    "s_orbits_on_projective_points": {"1": 3, "3": 6}
+  },
+  "local_pairing_family": {
+    "s_fixed_F4_line_vectors": 4,
+    "nonzero_translation_choices": 3,
+    "each_translation_pairs": 32,
+    "commutes_with_s": true,
+    "interpretation": "a unique pairing orbit up to multiplication by F4^x; candidate local realization of the J2^32 correction"
+  },
+  "theorem": "The Wilson order-six complement has exact F4 Jordan form J2(1)+J2(w)+J2(w^2). Its involution-fixed cone is F4^3 and projectivizes to PG(2,4); the semisimple C3 fixes three projective eigendirections. The unique s-fixed F4 line supplies three scalar-equivalent fixed-point-free translations, each pairing the 64 fixed states into 32 C3-compatible pairs.",
+  "boundary": "Exact F4 matrix calculation. The affine translations are permutations of the fixed 64-state set, not linear Co1 elements and not claimed to extend equivariantly through C13."
+}
