@@ -1,0 +1,100 @@
+% Pass10517--10580: harmonic 27-state selector, chain homology, and polarization duality.
+\subsubsection*{Passes 10517--10580: the 27-state selector becomes a $3$--$5$--$7$ harmonic tensor cube}
+Let $H$ be the repo H27 adjacency and let $R$ be the weighted $27$-state quotient
+obtained from the explicit $H(4)$ geometry by the $13{:}6$ normalizer.  Their
+multiplicity pattern is the same $1|8|12|6$.  The unique cubic sending the H27
+eigenvalues $8,-1,2,-4$ to the quotient eigenvalues $20,7,-1,-5$ is
+\[
+ f(x)={97x^3-429x^2-1590x+3472\over648}.
+\]
+Because H27 is distance regular,
+\[
+ f(H)={34A_0+25A_1+7A_2+97A_3\over27}.
+\]
+After the natural orbit-size symmetrization of $R$, an orthogonal spectral
+intertwiner with $f(H)$ therefore exists.  It cannot be a permutation or a
+local three-point Fourier operation: the quotient has nonconstant diagonal and
+the canonical nine-packet projector does not commute with the transport.
+
+The $C_{13}$-equivariant hexagon-homology match also admits a chain proof.  If
+$\mathcal R=\mathbf F_2[C_{13}]$, the free quotient of the $H(4)$ Levi graph has
+$210$ vertex orbits and $525$ edge orbits, giving
+\[
+ 0\to H_1\to\mathcal R^{525}\to\mathcal R^{210}\to\mathbf F_2\to0.
+\]
+Maschke splitting yields
+\[
+ \boxed{H_1(\operatorname{Levi}H(4);\mathbf F_2)
+ \cong \mathbf F_2\oplus\mathcal R^{315}}.
+\]
+The permutation module on $V_2$ has exactly the same decomposition: one fixed
+zero vector plus $315$ free thirteen-cycles.  Hence the two are isomorphic as
+$\mathbf F_2[C_{13}]$-modules by the covering resolution itself.
+
+The $27$ point-orbits and $27$ line-orbits of the normalizer are not
+$13{:}6$-equivariantly bijective, but the normalized incidence operator has
+rank $21$ and singular values
+\[
+ 5^1,\quad(2\sqrt3)^8,\quad2^{12},\quad0^6.
+\]
+Its polar decomposition therefore supplies a canonical rank-$21$ partial
+isometry between the transmitted point and line sectors, with six-dimensional
+kernels on both sides.
+
+The binary and ternary transverse rank-six packages are also now distinguished
+categorically.  On the Leech side the $\mathbf F_4^\times$ scalar preserves the
+two transverse $\mathbf F_4^6$ halves and a separate involution exchanges them.
+On the ternary glue side the distinguished $\mathbf F_9$ scalar $R$ itself
+exchanges the two $\mathbf F_3^6$ Lagrangians.  Thus the two packages realize a
+split-semilinear versus rotating-complex polarization duality, not a literal
+polarization-preserving equivalence.
+
+The strongest arithmetic refinement comes from the canonical $105$-state
+selector.  With normalizer multiplier $79$,
+\[
+ C_{105}\cong C_3\times C_5\times C_7,
+ \qquad79\equiv(1,-1,2)\pmod{(3,5,7)}.
+\]
+Hence the $C_6$-invariant harmonic space factors exactly as
+\[
+ \boxed{
+ \mathbf C[C_{105}]^{C_6}
+ \cong
+ \mathbf C[C_3]\otimes
+ \mathbf C[C_5]^{\langle-1\rangle}\otimes
+ \mathbf C[C_7]^{\langle2\rangle}}
+\]
+with dimensions
+\[
+ \boxed{27=3\times3\times3}.
+\]
+The three local orbit systems are
+\[
+ C_3:\ \{0\},\{1\},\{2\},
+\]
+\[
+ C_5/\{\pm1\}:\ \{0\},\{1,4\},\{2,3\},
+\]
+\[
+ C_7/\langle2\rangle:\ \{0\},\{1,2,4\},\{3,6,5\}.
+\]
+For the standard $105$-point Fourier kernel the CRT idempotents give local
+character coefficients $(2,1,1)$, so the restricted transform factors as
+\[
+ \boxed{F_{105}^{C_6}=F_3^{(2)}\otimes F_5^{C_2}\otimes F_7^{C_3}}
+\]
+in the CRT orbit bases.  Its eigenvalue multiplicities are
+\[
+ 1^8,\quad(-1)^7,\quad i^6,\quad(-i)^6.
+\]
+This is a canonical $3$--$5$--$7$ harmonic tensor cube.  Only the first factor
+is the ordinary $C_3$ qutrit group algebra; the other two are three-dimensional
+cyclotomic invariant sectors.  In particular the reduced nine-state factor is
+not the ordinary Hesse/two-qutrit Fourier plane: $\operatorname{tr}(F^2)=3$
+there, versus $1$ on $\mathbf F_3^2$.
+
+Finally, the $C_3$ Fourier functor is exactly the one already present in the
+Schlaefli--Steinberg $A_2$ color torsor.  Its integral color basis has Smith
+diagonal $(1,1,3)$; applying it to nine packets gives index $3^9$, while the
+old eighty-one-coordinate color sector gives index $3^{81}$.  Thus the prime
+$3$ Fourier denominator is structural and scales only with multiplicity.
