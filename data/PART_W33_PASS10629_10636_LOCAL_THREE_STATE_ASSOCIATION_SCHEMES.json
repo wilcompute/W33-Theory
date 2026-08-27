@@ -1,0 +1,31 @@
+{
+  "boundary": "Exact finite association-algebra identities. Qutrit-sized means dimension three; no physical qutrit implementation or Pauli equivalence is claimed for the C5/C7 factors.",
+  "C5_even": {
+    "carrier": "Z/5 with relations 0, +/-1, +/-2",
+    "dimension": 3,
+    "generator_minimal_polynomial": "(x-2)(x^2+x-1)",
+    "generator_spectrum": ["2","(sqrt5-1)/2","-(sqrt5+1)/2"],
+    "multiplication": ["A1^2=2I+A2","A2^2=2I+A1","A1A2=A1+A2"],
+    "quadratic_field": "Q(sqrt5)"
+  },
+  "C7_Singer": {
+    "carrier": "Z/7 with relations 0, D={1,2,4}, -D={3,5,6}",
+    "dimension": 3,
+    "generator_minimal_polynomial": "(x-3)(x^2+x+2)",
+    "generator_spectrum": ["3","(-1+sqrt(-7))/2","(-1-sqrt(-7))/2"],
+    "Hermitian_skew_observable": "(A-A^T)/i",
+    "Hermitian_skew_spectrum": ["0","sqrt7","-sqrt7"],
+    "multiplication": ["A^2=A+2A^T","(A^T)^2=2A+A^T","AA^T=3I+A+A^T"],
+    "quadratic_field": "Q(sqrt(-7))"
+  },
+  "passes": "10629-10636",
+  "qutrit_comparison": {
+    "C5_and_C7": "three-dimensional arithmetic relation algebras / three-level observables",
+    "literal_C3_factor": "the third factor from Pass10573 is an actual 3-point Fourier/qutrit carrier",
+    "reason": "their generator spectra are not cube roots of unity and are unitary-conjugacy invariants",
+    "standard_Pauli_equivalence": false
+  },
+  "schema": "w33.pass10629_10636.local_three_state_association_schemes.v1",
+  "status": "PASS",
+  "theorem": "The 3-5-7 harmonic tensor cube contains one literal qutrit Fourier factor and two qutrit-sized rank-3 association schemes. The C5 factor is the pentagon distance algebra over Q(sqrt5); the C7 factor is the Singer/Fano directed scheme over Q(sqrt(-7)), with a canonical Hermitian three-level observable of spectrum 0,+/-sqrt7."
+}
