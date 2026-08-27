@@ -1,0 +1,13 @@
+{
+  "boundary": "The existence and free-module decomposition are canonical at the isomorphism-class level. A specific chain-to-vector matrix depends on noncanonical tree/splitting choices, and no full G2(4)-equivariant isomorphism is claimed.",
+  "chain_resolution": "0 -> H1 -> R^525 -> R^210 -> F2 -> 0",
+  "constructive_upgrade": "Choose a spanning tree of the 210-vertex quotient graph, representatives of the 525 edge orbits, and R-linear splittings of the boundary sequence. These choices produce an explicit 4096x4096 C13-intertwiner.",
+  "cover": {"deck_group":"C13","free_on":"H(4) points, lines and flags","quotient_beta1":316,"quotient_edges":525,"quotient_lines":105,"quotient_points":105,"quotient_vertices":210},
+  "group_algebra": {"R":"F2[C13]","reason":"Maschke: 2 does not divide 13","regular_module_dimension":13,"semisimple":true},
+  "passes": "10525-10532",
+  "schema": "w33.pass10525_10532.hexagon_chain_resolution_v2.v1",
+  "split_result": {"H1":"F2 + R^315","dimension":4096,"free_regular_rank":315},
+  "status": "PASS",
+  "theorem": "The C13-module isomorphism H1(Levi H(4);F2) ~= F2[V2] is a direct consequence of the free-cover cellular chain resolution, not merely a character coincidence: both modules are F2 plus 315 copies of the regular F2[C13] module.",
+  "V2_permutation_module": {"dimension":4096,"free_nonzero_C13_orbits":315,"module":"F2 + R^315","zero_orbit":1}
+}
