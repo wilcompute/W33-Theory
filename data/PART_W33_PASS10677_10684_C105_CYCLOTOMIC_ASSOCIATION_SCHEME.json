@@ -1,0 +1,36 @@
+{
+  "schema": "w33.pass10677_10684.c105_cyclotomic_association_scheme.v1",
+  "status": "PASS",
+  "passes": "10677-10684",
+  "outside_box": true,
+  "global_scheme": {
+    "translation_group": "C105",
+    "multiplier_group": "C6=<79>",
+    "rank": 27,
+    "interpretation": "Schurian cyclotomic translation association scheme / spherical Hecke algebra of C105:C6 relative to C6",
+    "relation_valencies": {"1":3,"2":6,"3":6,"6":12},
+    "commutative_Bose_Mesner_algebra": true
+  },
+  "CRT_tensor_product": {
+    "identity": "C105 ~= C3 x C5 x C7",
+    "multiplier": "79 -> (1,-1,2)",
+    "rank_factorization": "27=3*3*3",
+    "local_orbits": {"C3":[[0],[1],[2]],"C5":[[0],[1,4],[2,3]],"C7":[[0],[1,2,4],[3,6,5]]},
+    "scheme_identity": "A(C105,C6) ~= A(C3,1) tensor A(C5,<-1>) tensor A(C7,<2>)"
+  },
+  "local_C3": {"name":"thin directed C3 / qutrit phase scheme","valencies":[1,1,1]},
+  "local_C5": {"name":"pentagon C5 distance scheme","valencies":[1,2,2],"relation_1":"steps +/-1","relation_2":"steps +/-2"},
+  "local_C7": {
+    "name":"Singer/Fano rank-3 cyclotomic scheme",
+    "valencies":[1,3,3],
+    "difference_set":[1,2,4],
+    "opposite_set":[3,5,6],
+    "difference_multiset_nonzero_counts":{"1":1,"2":1,"3":1,"4":1,"5":1,"6":1},
+    "Fano_points":7,
+    "Fano_lines_count":7,
+    "Fano_incidence_edges":21,
+    "incidence_graph":"Heawood graph (14 vertices, 3-regular, bipartite, girth 6)"
+  },
+  "theorem": "The 27 normalizer states are the relation classes of a canonical rank-27 cyclotomic association scheme on C105. CRT factors this scheme exactly into a thin C3/qutrit factor, the C5 pentagon distance scheme, and the C7 Singer/Fano scheme. The C7 multiplier orbit {1,2,4} is a (7,3,1) difference set, so its translates are literally the Fano plane and its incidence graph is Heawood.",
+  "boundary": "Exact finite-group/association-scheme statement. It locates Fano/Heawood inside the C7 harmonic factor; it does not identify the six Bruhat-Tits chamber vertices with Heawood vertices or claim the H4 weighted quotient equals this Bose-Mesner algebra element."
+}
