@@ -1,0 +1,14 @@
+{
+  "H27_distance_kernel": "f(H)=(34 A0 + 25 A1 + 7 A2 + 97 A3)/27",
+  "H27_spectrum": {"-4":6,"-1":8,"2":12,"8":1},
+  "H4_reversibility": {"Perron_orbit_weights":{"1":3,"2":6,"3":6,"6":12},"sum_weights":105,"identity":"D R = R^T D","consequence":"S=D^(1/2) R D^(-1/2) is real symmetric"},
+  "H4_weighted_quotient_spectrum": {"-5":6,"-1":12,"20":1,"7":8},
+  "boundary": "The orthogonal transport is an existence theorem from the spectral theorem, not a canonical matrix. A canonical U still requires additional common structure beyond adjacency and the nine-triple carrier.",
+  "combinatorial_no_go": {"direct_graph_relabeling":false,"permutation_similarity_after_symmetrization":false,"reason":"diag(S)=diag(R) has values 0,1,2,3,4 whereas diag(f(H)) is constantly 34/27"},
+  "passes": "10517-10524",
+  "schema": "w33.pass10517_10524.h27_radial_fourier_no_go.v1",
+  "spectral_transport": {"block_freedom":"O(1) x O(8) x O(12) x O(6)","exists":true,"statement":"S and f(H) are real symmetric with identical spectra and multiplicities, hence some orthogonal U satisfies S=U f(H) U^T","uniqueness":false},
+  "status": "PASS",
+  "theorem": "The exact 1|8|12|6 spectral match between the H(4)/(13:6) quotient and H27 admits a unique radial polynomial realization on H27 and therefore an abstract orthogonal spectral transport after reversible symmetrization of the H(4) quotient. It is not a permutation/relabeling transport; the required 8<->12 Fourier/Steinberg map must be a genuinely nonlocal basis change inside the equal-dimensional spectral sectors.",
+  "unique_spectral_polynomial": "f(x)=(97 x^3-429 x^2-1590 x+3472)/648"
+}
