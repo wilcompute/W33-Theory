@@ -1,0 +1,47 @@
+{
+  "schema": "w33.pass10485_10492.binary_transverse_f4_polarization.v1",
+  "status": "PASS",
+  "passes": "10485-10492",
+  "ambient": {
+    "space": "Lambda/2Lambda",
+    "F2_dimension": 24,
+    "F4_dimension_after_global_scalar": 12,
+    "quadratic_type": "hyperbolic/plus"
+  },
+  "halves": {
+    "E": "Wilson Fix(V4) orbit-7 generator",
+    "V2": "stored canonical im((I-M8)^2)",
+    "F2_dimensions": [12,12],
+    "F4_dimensions": [6,6],
+    "intersection_dimension": 0,
+    "Leech_pairing_rank": 12,
+    "both_maximal_singular": true
+  },
+  "exchange": {
+    "construction": "choose the V2 basis dual to E under the Leech polar form and swap the two 12-coordinate halves",
+    "order": 2,
+    "preserves_quadratic_form": true,
+    "exchanges_E_and_V2": true,
+    "Co1_membership": "NOT CLAIMED"
+  },
+  "global_F4_scalar": {
+    "E_block": "Wilson a2|E",
+    "V2_block": "pairing-dual P^-1 A^-T P",
+    "order": 3,
+    "fixed_point_free": true,
+    "minimal_polynomial": "x^2+x+1",
+    "preserves_quadratic_form": true,
+    "exchange_relation": "X T X = T^{-T}"
+  },
+  "Hermitian_interpretation": "Using the unconditional Pass10377-10388 order-3 refinement, Lambda/2Lambda becomes an F4-Hermitian 12-space and E,V2 are transverse maximal Hermitian-isotropic F4^6 halves.",
+  "abstract_stabilizers": {
+    "ordered_transverse_pair": "GL(12,2)",
+    "order_GL12_2": 6441762292785762141878919881400879415296000,
+    "ordered_pair_plus_scalar": "GL(6,4)",
+    "order_GL6_4": 3251791214634074112000,
+    "unordered_pair_plus_scalar_normalizer": "GL(6,4):2",
+    "order_unordered": 6503582429268148224000
+  },
+  "theorem": "The explicit Wilson orbit-7 generator E and stored canonical V2 form a hyperbolic transverse polarization of Lambda/2Lambda. Their perfect pairing gives an explicit orthogonal exchange involution, while the Wilson order-3 scalar and its pairing-dual combine into a fixed-point-free global F4 scalar. Therefore the binary Leech carrier admits a transverse F4^6 + F4^6 Hermitian polarization, with scalar-preserving ordered-pair stabilizer GL(6,4) at the abstract orthogonal-group level.",
+  "boundary": "Exact mod-2 orthogonal/Hermitian linear algebra. The exchange and pairing-dual scalar are not asserted to be explicit Co1 words."
+}
