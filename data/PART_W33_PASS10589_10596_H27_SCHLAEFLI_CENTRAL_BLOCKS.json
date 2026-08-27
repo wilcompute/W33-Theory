@@ -1,0 +1,17 @@
+{
+  "boundary": "Exact consequence of the repo H27 Heisenberg Cayley model and the certified H27/Schlaefli complement inside K_{3,...,3}. It does not identify the H(4)/(13:6) weighted quotient with either graph.",
+  "carrier": "nine central C3 triples indexed by u in F3^2",
+  "central_fourier_sectors": {
+    "chi0": {"H27":"K9","H27_spectrum":{"-1":8,"8":1},"P":"3*K9","Schlaefli":"2*K9","Schlaefli_spectrum":{"-2":8,"16":1},"dimension":9},
+    "chi1": {"H27_spectrum":{"-4":3,"2":6},"P":"0","Schlaefli":"-H27","Schlaefli_spectrum":{"-2":6,"4":3},"dimension":9},
+    "chi2": {"H27_spectrum":{"-4":3,"2":6},"P":"0","Schlaefli":"-H27","Schlaefli_spectrum":{"-2":6,"4":3},"dimension":9}
+  },
+  "global_H27_spectrum": {"-4":6,"-1":8,"2":12,"8":1},
+  "global_Schlaefli_spectrum": {"-2":20,"4":6,"16":1},
+  "identity": "K_{3,3,...,3}=H27 dot-union Schlaefli",
+  "passes": "10589-10596",
+  "schema": "w33.pass10589_10596.h27_schlaefli_central_blocks.v1",
+  "simultaneous_diagonalization": true,
+  "status": "PASS",
+  "theorem": "The H27 and Schlaefli transports are simultaneously block diagonal under Fourier transform along the Heisenberg center C3. The trivial sector is K9 versus 2K9; in each nontrivial sector Schlaefli is exactly minus H27. This explains both graph spectra from one central Fourier decomposition."
+}
