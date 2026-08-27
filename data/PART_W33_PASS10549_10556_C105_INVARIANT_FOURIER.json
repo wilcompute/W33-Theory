@@ -1,0 +1,31 @@
+{
+  "boundary": "F^2, F^4, orbit counts and CRT factorization are exact finite-group statements. Eigenvalue multiplicities are checked from the explicit numerical orbit-sum DFT to 1e-10; no identification with H27 adjacency is made.",
+  "fourier": {
+    "F_fourth": "identity",
+    "F_squared": "negation on the 27 orbit states",
+    "ambient": "normalized DFT on C[C105]",
+    "eigenvalue_multiplicities": {"1": 8, "-1": 7, "i": 6, "-i": 6},
+    "negation_fixed_states": 3,
+    "negation_transposed_pairs": 12,
+    "restriction": "C6-invariant subspace",
+    "unitary": true
+  },
+  "orbit_space": {
+    "C35_orbits": 9,
+    "C6_orbit_lengths": {"1": 3, "2": 6, "3": 6, "6": 12},
+    "dimension": 27,
+    "packet_factorization": "3 x 9"
+  },
+  "passes": "10549-10556",
+  "schema": "w33.pass10549_10556.c105_invariant_fourier.v1",
+  "status": "PASS",
+  "tensor_factorization": "After CRT, F_105^C6 is unitarily equivalent to F_3 tensor F_35^C6. The qutrit F3 factor is forced because the normalizer multiplier is identity on the unique C3 factor.",
+  "theorem": "The 27 normalizer states carry a canonical harmonic transform inherited from the C105 selector. Its normalized DFT is a unitary order-four operator with square equal to negation, and the invariant space factors as the qutrit Fourier transform F3 tensored with a nine-dimensional reduced C35 transform.",
+  "torsor": {
+    "factorization": "C105 ~= C3 x C35",
+    "group": "C105",
+    "multiplier_mod3": 1,
+    "multiplier_mod35": 9,
+    "normalizer_multiplier": 79
+  }
+}
