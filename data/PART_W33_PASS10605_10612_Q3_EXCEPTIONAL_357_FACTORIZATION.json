@@ -1,0 +1,12 @@
+{
+  "boundary": "Exact integer polynomial identity. No universal 3-5-7 cyclotomic factorization away from q=3 is claimed.",
+  "difference_identity": "2[(q+2)(q^2+3q+3)] - q Phi4(q) Phi6(q) = -(q-3)(q^4+2q^3+6q^2+7q+4)",
+  "exceptional_identity_at_q3": "105 = q*(Phi4(q)/2)*Phi6(q) at q=3",
+  "general_identity": "((q+1)^6-1)/(q Phi3(q)) = (q+2)(q^2+3q+3)",
+  "interpretation": "Phi3=13 is the removed C13 clock; Phi6=7 survives intact; Phi4=10 contributes its odd half 5; the residual 3 is q itself after one F4^x scalar factor 3 was already projectivized away.",
+  "passes": "10605-10612",
+  "schema": "w33.pass10605_10612.q3_exceptional_357_factorization.v1",
+  "status": "PASS",
+  "theorem": "The residual 105=3*5*7 harmonic factorization is an arithmetic fingerprint of q=3. The general post-scalar/post-Phi3 quotient is (q+2)(q^2+3q+3), and its equality with q*(Phi4/2)*Phi6 has an explicit q-3 factor.",
+  "W33_q3": {"F4^6_nonzero":4095,"Phi3":13,"Phi4":10,"Phi6":7,"after_scalar_and_C13":105,"harmonic":"3*5*7"}
+}
