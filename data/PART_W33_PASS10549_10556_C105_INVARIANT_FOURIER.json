@@ -1,5 +1,11 @@
 {
-  "boundary": "F^2, F^4, orbit counts and CRT factorization are exact finite-group statements. Eigenvalue multiplicities are checked from the explicit numerical orbit-sum DFT to 1e-10; no identification with H27 adjacency is made.",
+  "CRT_fourier": {
+    "exact_factorization": "F_105^C6 = F_3^(2) tensor (F_35^(12))^C6 under CRT orbit bases",
+    "idempotents": {"C3": 70, "C35": 36},
+    "interpretation": "unit coefficients record local character-generator choices; they must not be dropped when comparing Fourier eigenvalue labels",
+    "local_kernel_units": {"C3": 2, "C35": 12}
+  },
+  "boundary": "F^2, F^4, orbit counts and CRT unit coefficients are exact finite-group statements. Eigenvalue multiplicities are checked from explicit numerical orbit-sum matrices to 1e-10; no identification with H27 adjacency is made.",
   "fourier": {
     "F_fourth": "identity",
     "F_squared": "negation on the 27 orbit states",
@@ -17,10 +23,9 @@
     "packet_factorization": "3 x 9"
   },
   "passes": "10549-10556",
-  "schema": "w33.pass10549_10556.c105_invariant_fourier.v1",
+  "schema": "w33.pass10549_10556.c105_invariant_fourier.v2",
   "status": "PASS",
-  "tensor_factorization": "After CRT, F_105^C6 is unitarily equivalent to F_3 tensor F_35^C6. The qutrit F3 factor is forced because the normalizer multiplier is identity on the unique C3 factor.",
-  "theorem": "The 27 normalizer states carry a canonical harmonic transform inherited from the C105 selector. Its normalized DFT is a unitary order-four operator with square equal to negation, and the invariant space factors as the qutrit Fourier transform F3 tensored with a nine-dimensional reduced C35 transform.",
+  "theorem": "The 27 normalizer states carry a canonical harmonic transform inherited from the C105 selector. Its normalized DFT is unitary of order four with square equal to negation. Under CRT the exact kernel factors into a twisted qutrit C3 Fourier factor (unit 2) and a twisted nine-dimensional C35/C6 factor (unit 12).",
   "torsor": {
     "factorization": "C105 ~= C3 x C35",
     "group": "C105",
