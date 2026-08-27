@@ -1,0 +1,16 @@
+{
+  "H2": {"Levi_beta1":64,"flags":189,"identity":"64=2^6","lines":63,"points":63},
+  "H4": {"Levi_beta1":4096,"flags":6825,"identity":"4096=4^6=|V2|","lines":1365,"points":1365},
+  "H4_mod_C13": {"Levi_beta1":316,"flag_orbits":525,"identity":"316=1+315","line_orbits":105,"point_orbits":105},
+  "boundary": "The q^6 Betti identity is exact elementary incidence arithmetic. It does not identify H(2) cycle spaces with every one of the 416 Suzuki-neighbor controller objects, and it does not by itself identify graph homology with V2 as a full G2(4)-module beyond the C13 restriction proved in Pass10501-10508.",
+  "general_hexagon_identity": {"Levi_beta1":"E-2P+1=q^6","flags":"E=(q+1)P","points_and_lines":"P=(q+1)(q^4+q^2+1)"},
+  "passes": "10509-10516",
+  "provenance_correction": {
+    "Hall_Janko_local_H2": "within one Hall-Janko realization, 100 embedded H(2) subhexagons form the HJ(100) vertex set",
+    "Suzuki_416": "G2(4)/J2 Hall-Janko/J2 controller objects; in the Suzuki-tower literature these are Hall-Janko suboctagons, not 416 H(2) subhexagons",
+    "corrected_source": "Pass10429-10436 v2"
+  },
+  "schema": "w33.pass10509_10516.hexagon_homology_hj_erratum.v1",
+  "status": "PASS",
+  "theorem": "For every split Cayley hexagon H(q), the connected Levi graph has first Betti number q^6. Thus H(4) has beta1=4096 and H(2) has beta1=64. Under the free C13 quotient of H(4), beta1 becomes 316=1+315. These homology identities are independent of the corrected Hall-Janko provenance: the 416 Suzuki neighbors are J2/Hall-Janko controller objects, while the local HJ(100) construction uses 100 embedded H(2) subhexagons."
+}
