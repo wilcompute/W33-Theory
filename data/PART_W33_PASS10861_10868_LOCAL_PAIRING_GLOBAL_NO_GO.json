@@ -1,0 +1,22 @@
+{
+  "schema": "w33.pass10861_10868.local_pairing_global_no_go.v1",
+  "status": "PASS",
+  "passes": "10861-10868",
+  "local_C6_pairing": {
+    "fixed_cone": "Fix(k)=F4^3, 64 affine states",
+    "s_fixed_line": "one F4 line, four vectors",
+    "nonzero_translation_involutions": 3,
+    "pairs_per_translation": 32,
+    "commutes_with_semisimple_C3": true,
+    "scalar_gauge": "the three choices form one orbit under internal F4^x"
+  },
+  "C13_no_go": {
+    "conjugation_law": "g tau_v g^-1 = tau_{g v}",
+    "C13_action": "irreducible degree6 over F4",
+    "nonzero_fixed_vectors": 0,
+    "only_C13_invariant_translation": "tau_0 = identity",
+    "translation_type_global_repair": false
+  },
+  "theorem": "The 64 k-fixed states admit a unique scalar-gauge class of C3-compatible perfect matchings, realized by translation along the unique s-fixed F4 line. This realizes locally the 32 missing Jordan extensions. No nontrivial translation pairing can extend C13-equivariantly because the order-13 action is irreducible and fixes no nonzero translation vector.",
+  "boundary": "Exact affine/F4 and irreducibility argument. This no-go concerns translation-type intrinsic repairs on the V2 state set; it does not exclude a more general external stable correction module or a non-translation chain-level extension."
+}
