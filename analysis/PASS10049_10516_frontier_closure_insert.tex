@@ -1,0 +1,122 @@
+% Pass10049--10516 consolidated frontier closure after the first F9/local-field packet.
+\subsubsection*{Passes 10049--10516: canonical $V_2$, internal $F_4^6$, explicit $G_2(4)$ clocks, and the $27$-state transport frontier}
+The canonical type-$4$-free Leech generator $V_2$ belongs to the unique good-sublattice orbit whose stabilizer can contain the exact order-$48384$ centralizer of the pure order-eight generator.  This is orbit $7$, with
+\[
+ \operatorname{Stab}_{Co_1}(V_2)\cong G_2(4)\times A_4,
+ \qquad \text{profile }64^{4095}.
+\]
+Consequently an actual $C_{13}<G_2(4)$ stabilizes canonical $V_2$.  The commuting quotient
+\[
+ A_4/V_4\cong C_3\cong \mathbf F_4^\times
+\]
+acts as the internal scalar field, so
+\[
+ \boxed{V_2\cong\mathbf F_4^6}
+\]
+as the natural characteristic-two $G_2(4)$ module.  Projectivizing gives
+\[
+ PG(V_2)=PG(5,4),
+\]
+and the natural $G_2(4)$ incidence is the split Cayley hexagon $H(4)$ on $1365$ points.
+
+The Suzuki orbit acquires a local dictionary around the canonical $V_2$ vertex:
+\[
+ 1782=1+416+1365.
+\]
+The $1365$ shell is the $H(4)$ point geometry.  The $416$ shell is the Hall--Janko/$J_2$ controller carrier.  A provenance correction is essential: these $416$ objects are Hall--Janko suboctagon/$J_2{:}2$ controller objects in the Suzuki-tower geometry, not $416$ copies of $H(2)$.  Within one Hall--Janko realization there is separately a local family of $100$ embedded $H(2)$ subhexagons forming the $HJ(100)$ vertex set.
+
+Wilson's explicit $A_4\times G_2(4)<Co_1$ words have been evaluated in the stored $24$-dimensional matrices.  With commutator convention $[x,y]=x^{-1}y^{-1}xy$, the exact orders are
+\[
+ |c_1|=26,\quad |a_1|=2,\quad |a_2|=3,\quad
+ |g_1|=|g_2|=13,\quad |g_1g_2|=15,
+\]
+and the two factors commute.  Their common $V_4$ fixed space
+\[
+ E=\operatorname{Fix}(V_4)
+\]
+is a $12$-dimensional totally singular type-$4$-free orbit-$7$ generator.  The order-three element $a_2|_E$ obeys
+\[
+ S^2+S+I=0,
+\]
+thereby giving explicit $\mathbf F_4$ coordinates on $E\cong\mathbf F_4^6$.  The order-thirteen generator has a degree-six irreducible factor $p$ over $\mathbf F_4$ satisfying
+\[
+ p(x)\overline{p(x)}=\Phi_{13}(x),
+\]
+so its commutant is the field $\mathbf F_{4^6}$.
+
+The Wilson generator $E$ and stored canonical $V_2$ are transverse:
+\[
+ E\cap V_2=0,\qquad E\oplus V_2=\mathbf F_2^{24},
+\]
+with perfect Leech pairing.  They therefore form a binary hyperbolic polarization.  Swapping the two halves gives an orthogonal involution, while the $\mathbf F_4$ scalar on $E$ transfers uniquely by pairing duality to an order-three operator on stored $V_2$.  At the abstract orthogonal level the polarization stabilizer drops from $GL(12,2)$ to $GL(6,4)$ after imposing the scalar field.  Membership of the particular exchange and pairing-dual scalar in $Co_1$ is not claimed without explicit words.
+
+For the internal $C_{13}$ clock,
+\[
+ \operatorname{ord}_{13}(4)=6.
+\]
+Thus it is fixed-point-free on $V_2\setminus\{0\}$ and on $PG(V_2)$.  Projectivization by the intrinsic scalar triples reduces the former $315$ vector cycles to
+\[
+ \boxed{105}
+\]
+projective cycles.  An explicit $13{:}6$ normalizer has been constructed in the stored matrices, with complement acting by $g\mapsto g^4$.  On the $105$ projective states the $C_6$ complement has orbit distribution
+\[
+ 1^3,\ 2^6,\ 3^6,\ 6^{12},
+\]
+so the complete normalizer produces exactly $27$ states.  The cyclic torsor is $C_{105}$, and the $C_6$ action fixes the $C_3$ factor of $C_{105}\cong C_3\times C_{35}$, giving a canonical nine-triple carrier.
+
+The natural $H(4)$ transport on these $27$ states is \emph{not} the H27 or Schlaefli adjacency.  Its weighted point quotient has spectrum
+\[
+ 20^1,\ 7^8,\ (-1)^{12},\ (-5)^6.
+\]
+The full Levi quotient is instead a $27\mid27$ point--line incidence transport $M$ of rank $21$ with
+\[
+ M M^\vee=5I+R,
+\]
+and squared singular spectrum
+\[
+ 25^1,\ 12^8,\ 4^{12},\ 0^6.
+\]
+The old cubic-surface $E_6$ incidence transport also has rank $21$ and a six-dimensional kernel, while H27 has eigenspace dimensions $1+12+8+6$.  The exact shared constituent fingerprint is therefore
+\[
+ E_6:1+20+6,
+ \qquad H(4)/(13{:}6):1+8+12+6,
+ \qquad H27:1+12+8+6.
+\]
+This is a spectral-constituent bridge only; an explicit $8\leftrightarrow12$ Fourier/Steinberg intertwiner remains open.
+
+A second objectwise bridge occurs inside W33 itself.  The $16$ Hermitian-isotropic points of the chamber-selected W33 form the graph
+\[
+ \Gamma_{16}=\operatorname{Cay}\!\left(C_4^2,\{(0,\pm1),(0,2),(\pm1,2),(2,2)\}\right),
+\]
+with four $K_4$ fibres and
+\[
+ \operatorname{Aut}(\Gamma_{16})\cong S_4\times D_8,
+ \qquad |\operatorname{Aut}|=192.
+\]
+Exhaustive spread enumeration proves that this is exactly the induced geometry on the $16$ points lying on the four common lines of a four-intersection W33 spread pair; the unordered spread-pair stabilizer acts as the full automorphism group.  The graph is a nontrivial $C_2$-voltage twist of the $4\times4$ rook geometry rather than the tesseract rotation graph.  Its adjacency row space is the self-dual binary $[16,8,4]$ code with weight enumerator
+\[
+ 1+12y^4+64y^6+102y^8+64y^{10}+12y^{12}+y^{16}.
+\]
+
+Finally, the split Cayley hexagon itself supplies a uniform homological identity.  If $P=(q+1)(q^4+q^2+1)$ is the number of points and lines of $H(q)$, then its Levi graph has $(q+1)P$ edges and
+\[
+ \boxed{\beta_1(\operatorname{Levi}H(q))=q^6}.
+\]
+Hence
+\[
+ \beta_1(H(4))=4096=|V_2|,
+ \qquad
+ \beta_1(H(2))=64.
+\]
+For the free $C_{13}$ quotient of $H(4)$,
+\[
+ \beta_1=316=1+315.
+\]
+Moreover, over $\mathbf F_2$ the restrictions to $C_{13}$ of the hexagon cycle space and the permutation module on all vectors of $V_2$ have the same semisimple decomposition
+\[
+ H_1(\operatorname{Levi}H(4);\mathbf F_2)\downarrow C_{13}
+ \cong
+ \mathbf F_2[V_2]\downarrow C_{13}
+ \cong 1^{316}\oplus W_{12}^{315},
+\]
+where $W_{12}$ is the unique nontrivial irreducible $\mathbf F_2[C_{13}]$-module.  This is an exact $C_{13}$-module theorem, not yet a full $G_2(4)$-equivariant chain-level identification.
