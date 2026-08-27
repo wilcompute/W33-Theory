@@ -1,0 +1,17 @@
+{
+  "range": "10581-10644",
+  "status": "RESERVED",
+  "owner": "GPT-5.6-Sol central-Fourier closure packet",
+  "reserved_at": "2026-08-26T21:50:00-04:00",
+  "fronts": {
+    "10581-10588": "H27 central C3 Fourier sector decomposition and explanation of the 1|8|12|6 spectral match",
+    "10589-10596": "Simultaneous H27/Schlaefli central-Fourier block decomposition on the common nine-triple carrier",
+    "10597-10604": "Test extension of H4 homology ~= F2[V2] from C13 to the internal F4 scalar C3/full V2 stabilizer",
+    "10605-10612": "Compare canonical 3-5-7 harmonic factors to W33 cyclotomic 13/10/7 arithmetic without count overclaim",
+    "10613-10620": "Construct explicit block-level target for the nonlocal H27-to-H4 orthogonal transform using central sectors",
+    "10621-10628": "Outside-box: analyze 27-state Fourier square/charge-conjugation involution against E6 27/bar27 duality",
+    "10629-10636": "Outside-box: test whether C5-even and C7-C3 sectors admit finite three-state association schemes matching known repo qutrit observables",
+    "10637-10644": "Outside-box: synthesize semisimple C13 clock, cyclotomic 3-5-7 harmonic transform, and ramified C9 memory clock"
+  },
+  "collision_rule": "Earliest atomic registry add owns the range; later collisions rehome."
+}
