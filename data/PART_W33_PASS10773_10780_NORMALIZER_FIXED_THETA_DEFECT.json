@@ -1,0 +1,32 @@
+{
+  "F2_C3_modules": {
+    "F2_V2_permutation": "1^1376 + W2^1360",
+    "Grothendieck_difference": "[F2[V2]]-[H1] = 8*1 - 4*W2",
+    "H1_H4_Levi": "1^1368 + W2^1364",
+    "generator_Brauer_traces": {"F2[V2]": 16, "H1": 4, "difference": 12},
+    "nontrivial_simple": "W2, dimension 2, minimal polynomial x^2+x+1"
+  },
+  "boundary": "Exact explicit F4/H(4) computation and semisimple F2[C3] representation arithmetic. This pass identifies the C3-local defect geometry; extension to the full C13:C3 is handled separately.",
+  "fixed_Levi_subgraph": {
+    "beta1": 4,
+    "connected": true,
+    "description": "five internally disjoint length-6 paths joining the two degree-5 fixed line hubs",
+    "fixed_flags": 30,
+    "fixed_lines": 12,
+    "fixed_points": 15,
+    "line_degree_profile": {"2": 10, "5": 2},
+    "parallel_paths": 5,
+    "path_edge_lengths": [6,6,6,6,6],
+    "point_degree_profile": {"2": 15},
+    "shape": "theta_5"
+  },
+  "geometric_negative_term": {
+    "H1_fixed_theta_dimension": 4,
+    "tensor_with_W2": "H1(Theta5;F2) tensor W2 = 4*W2, dimension 8"
+  },
+  "order3_complement": {"element": "h=n^2", "fixed_V2_vectors": 16},
+  "passes": "10773-10780",
+  "schema": "w33.pass10773_10780.normalizer_fixed_theta_defect.v1",
+  "status": "PASS",
+  "theorem": "The exact eight-fixed-dimension normalizer defect has a geometric source. The h-fixed H(4) Levi subgraph is a theta_5 graph with five length-6 branches and beta1=4. Over F2[C3], F2[V2]-H1(H4)=8*1-4*W2, and the negative 4*W2 term is realized naturally as H1(Theta5) tensor W2."
+}
