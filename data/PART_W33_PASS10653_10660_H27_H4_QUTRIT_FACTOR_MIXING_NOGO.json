@@ -1,0 +1,11 @@
+{
+  "boundary": "Exact H27 block norms and exact rational summary of the Pass10645 verified H4 block norms. Frobenius mixing is an operator-coordinate statement, not a physical transition probability.",
+  "factor_preserving_transporter": "IMPOSSIBLE: no U=I_3 tensor U_9 can conjugate the H27 radial transport to the H4 harmonic transport",
+  "H27_central_qutrit": {"block_dimensions":[9,9,9],"block_Frobenius_squared_diagonal":[72,72,72],"meaning":"H27 and every polynomial in H27 conserve the central C3 Fourier character exactly","off_diagonal":0,"total_Frobenius_squared":216},
+  "H4_harmonic_C3": {"block_Frobenius_squared":[[504,48,48],[48,57,72],[48,72,57]],"off_diagonal_total":336,"qutrit_changing_fraction":"56/159","total_Frobenius_squared":954},
+  "passes": "10653-10660",
+  "required_transport": "must mix/entangle the C3 qutrit index with the C5xC7 arithmetic nine-state sector",
+  "schema": "w33.pass10653_10660.h27_h4_qutrit_factor_mixing_nogo.v1",
+  "status": "PASS",
+  "theorem": "The canonical C3 factor is a conserved central quantum number for H27 but an interacting coordinate for the H4/(13:6) harmonic transport. Exactly 56/159 of the H4 operator Frobenius power changes the C3 harmonic sector. Hence the missing H27-to-H4 Fourier/Steinberg map is necessarily qutrit-arithmetic entangling, not a local transform on the nine-state multiplicity space."
+}
