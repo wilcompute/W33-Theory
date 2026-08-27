@@ -1,0 +1,13 @@
+{
+  "schema": "w33.pass10693_10700.residual_clock_group_and_spread630_nogo.v1",
+  "status": "PASS",
+  "passes": "10693-10700",
+  "outside_box": true,
+  "clock_group": {"presentation":"C105 :_<79> C6","order":630,"CRT_action":"79 -> (1,-1,2) on C3 x C5 x C7","direct_product_isomorphism":"C3 x D10 x (C7:C3)","factor_orders":[3,10,21]},
+  "regular_product_carrier": {"C3":"3 qutrit/phase states","D10":"10 directed edges of the pentagon, sharp transitive action","C7:C3":"21 Fano flags, sharp Singer-normalizer action","product_size":"3*10*21=630"},
+  "Fano_flag_action": {"difference_set":[1,2,4],"flags":21,"Singer_normalizer_order":21,"regular":true,"ambient_Fano_automorphism_group":"GL(3,2), order 168","Singer_normalizer_index":8},
+  "W33_spread_pair_count": {"unordered_pairs":630,"intersection_1_orbit":360,"intersection_4_orbit":270},
+  "equivariant_no_go": {"PSp4_3_order":25920,"PGSp4_3_order":51840,"factor7_absent":true,"C105_C6_subgroup_of_W33_collineation_group":false,"additional_obstruction":"the 630 spread pairs are not one W33 orbit; they split 360+270"},
+  "theorem": "The residual 105:6 clock controller is exactly C3 x D10 x (C7:C3) and acts regularly on the product of three phase states, ten directed pentagon edges, and twenty-one Fano flags. Although W33 also has 630 unordered spread pairs, there is no W33-collineation-equivariant identification: the collineation groups have no factor 7 and the spread-pair carrier already splits into 360 and 270 orbits.",
+  "boundary": "The 3x10x21 product carrier is exact. The equality 630=630 with W33 spread pairs is explicitly retained only as a count after the equivariant no-go."
+}
