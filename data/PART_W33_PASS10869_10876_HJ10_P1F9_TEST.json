@@ -1,0 +1,36 @@
+{
+  "schema": "w33.pass10869_10876.hj10_p1f9_test.v1",
+  "status": "PASS",
+  "passes": "10869-10876",
+  "ATLAS_input": {
+    "group": "G2(4):2 on 416 cosets of J2:2",
+    "torus_normalizer": "C13:C12",
+    "power_classes": {"t": "12E", "t^2": "6B", "t^3": "4E", "t^4": "3B", "t^6": "2B"},
+    "G2d2_centralizers": {"12E": 12, "6B": 24, "4E": 96, "3B": 360, "2B": 7680},
+    "J2d2_centralizers": {"12BC": 12, "6B": 24, "4C": 24, "3B": 72, "2B": 480},
+    "fixed_points_416": {"t": 1, "t2": 1, "t3": 4, "t4": 5, "t6": 16}
+  },
+  "C12_on_32_C13_cycles": {
+    "cycle_profile": {"1": 1, "3": 1, "4": 1, "6": 2, "12": 1},
+    "full_normalizer_orbits": 6
+  },
+  "C6_quotient": {
+    "states": 10,
+    "orbit_size_profile_on_32": {"1": 1, "2": 2, "3": 5, "6": 2}
+  },
+  "residual_outer_C2_on_10": {
+    "profile": {"1": 2, "2": 4},
+    "fixed_states": 2,
+    "paired_states": 8
+  },
+  "P1F9_comparison": {
+    "carrier_size": 10,
+    "also": "Q^-(3,3) point carrier under the standard PSL2(9) ~= POmega^-(4,3) action",
+    "field_Frobenius_profile": {"1": 4, "2": 3},
+    "field_Frobenius_matches_HJ": false,
+    "split_projective_involution_z_to_minus_z_profile": {"1": 2, "2": 4},
+    "split_involution_matches_HJ": true
+  },
+  "theorem": "The full C13:C12 normalizer acts on the 32 Hall-Janko C13 cycles with profile 1^1 3^1 4^1 6^2 12^1. The ten-state inner-C6 quotient therefore carries a residual involution of type 1^2 2^4. This rules out F9/F3 Frobenius on P1(F9), but exactly matches a split projective involution on the ten-point P1(F9) ~= Q^-(3,3) carrier.",
+  "boundary": "The ATLAS centralizer-ratio computation and P1(F9) involution profiles are exact. Matching the residual C2-set does not yet identify a projective-line cross-ratio, PGL2(9) action, or Q^-(3,3) polarity on the HJ ten states."
+}
