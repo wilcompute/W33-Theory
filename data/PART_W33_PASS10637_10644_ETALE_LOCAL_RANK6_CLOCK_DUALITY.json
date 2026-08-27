@@ -1,0 +1,31 @@
+{
+  "binary_semisimple": {
+    "algebra": "F4[g] ~= F_{4^6}",
+    "base_scalar_order": 3,
+    "clock": "C13",
+    "clock_prime_to_characteristic": true,
+    "dimension_over_F4": 6,
+    "post_scalar_clock_residual": 105,
+    "residual_factorization": "3*5*7",
+    "separability": "x^13-1 has nonzero derivative x^12 in characteristic 2",
+    "unit_group_order": 4095
+  },
+  "boundary": "Exact finite-field/local-ring unit counts and characteristic identities. The residual unit quotients are algebraic ambiguities, not physical state counts unless a separate hardware/controller map is supplied.",
+  "duality": "finite etale field / semisimple global clock versus local nonreduced ring / unipotent filtration-memory clock",
+  "passes": "10637-10644",
+  "schema": "w33.pass10637_10644.etale_local_rank6_clock_duality.v1",
+  "status": "PASS",
+  "ternary_ramified": {
+    "algebra": "F9[U] ~= F9[t]/(t^6), U=1+t",
+    "base_scalar_order": 8,
+    "clock": "C9",
+    "clock_divisible_by_characteristic": true,
+    "dimension_over_F9": 6,
+    "inseparability": "x^9-1=(x-1)^9 in characteristic 3",
+    "nilpotency_index_U_minus_I": 6,
+    "post_scalar_clock_residual": 6561,
+    "residual_factorization": "3^8",
+    "unit_group_order": 472392
+  },
+  "theorem": "The prime-2 and prime-3 rank-six carriers are opposite algebraic realizations of a cyclic clock. The C13 side is separable and field-like, leaving the mixed 105=3*5*7 harmonic quotient after scalars and clock. The C9 side is inseparable and local, leaving the pure 3-power residual 6561=3^8. This makes the global-harmonic versus layered-memory distinction exact at the operator-algebra level."
+}
