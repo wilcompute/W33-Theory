@@ -1,0 +1,32 @@
+{
+  "H4_action": {
+    "H1_invariant_dimension": 2048,
+    "fixed_subgraph": {
+      "beta1": 0,
+      "components": 1,
+      "edges": 45,
+      "line_degrees": {"1": 20, "5": 5},
+      "point_degrees": {"1": 15, "5": 6},
+      "shape": "tree",
+      "vertices": 46
+    },
+    "flag_orbits": {"1": 45, "2": 3390, "total": 3435},
+    "invariant_boundary_rank": 1387,
+    "line_orbits": {"1": 25, "2": 670, "total": 695},
+    "point_orbits": {"1": 21, "2": 672, "total": 693},
+    "quotient_Levi": {"beta1": 2048, "edges": 3435, "vertices": 1388}
+  },
+  "V2_action": {
+    "fixed_F4_dimension": 3,
+    "fixed_vectors": 64,
+    "orbit_lengths": {"1": 64, "2": 2016},
+    "permutation_module_invariant_dimension": 2080
+  },
+  "boundary": "Exact explicit F4 permutation and invariant-chain computation. Because characteristic 2 divides the involution order, this defect is not controlled by semisimple Brauer-character arithmetic and is not repaired by the C13:C3 stable theorem alone.",
+  "defect": {"F2V2_invariants_minus_H1_invariants": 32, "value": 32},
+  "involution": {"action_on_C13": "inversion", "k": "n^3", "order": 2},
+  "passes": "10789-10796",
+  "schema": "w33.pass10789_10796.order2_normalizer_defect.v1",
+  "status": "PASS",
+  "theorem": "The order-2 half of the explicit 13:6 normalizer creates a new characteristic-2 obstruction. Its fixed space on V2 is F4^3 with 64 vectors, giving 2080 permutation-orbit invariants, while the H(4) Levi quotient has beta1=2048 and the invariant cycle space has dimension 2048. The exact defect is 32."
+}
