@@ -1,0 +1,18 @@
+{
+  "range": "10837-10900",
+  "status": "RESERVED",
+  "owner": "GPT-5.6-Sol characteristic-2 defect and ten-state bridge continuation",
+  "reserved_at": "2026-08-27T11:39:00-04:00",
+  "fronts": {
+    "10837-10844": "Resolve the C2 order-two defect as an exact extension/Jordan-block obstruction on the 64 fixed V2 states",
+    "10845-10852": "Classify Wilson normalizer Jordan decomposition on the fixed F4^3 cone and PG(2,4)",
+    "10853-10860": "Classify the 2B-fixed H(4) Levi tree and its relation to the PG(2,4) fixed projective plane",
+    "10861-10868": "Construct or obstruct a canonical pairing of the 64 fixed states that repairs the 32 nonsplit extensions",
+    "10869-10876": "Test the Hall-Janko 10-state C13:6 quotient against P1(F9) and Phi4(3) geometry",
+    "10877-10884": "Extend the ten-state test through the outer C2 and compare with F9/F3 Frobenius on P1(F9)",
+    "10885-10892": "Outside-box: derive a modular/Tate-cohomology interpretation of the 32 extension defect",
+    "10893-10900": "Synthesis, manuscript insertion, namespace reconciliation, and reproducibility packet"
+  },
+  "parallel_context": "Pass10773-10836 is reserved by the parallel post-normalizer-defect lane. Earlier Pass10549-10580 parallel labels landed after our prior 10517-10580 reservation; their mathematics is preserved but those duplicate labels are noncanonical under earliest-reservation precedence.",
+  "collision_rule": "Earliest atomic reservation owns the range; later collisions rehome."
+}
