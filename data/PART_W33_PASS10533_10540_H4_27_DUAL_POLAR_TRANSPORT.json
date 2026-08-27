@@ -1,0 +1,13 @@
+{
+  "E6_motif": "The result provides an exact dual 27|27 incidence architecture with a rank-21 pairing. It is structurally compatible with a 27/dual-27 motif but is not asserted to be the E6 minuscule dual representation without a common group action/intertwiner.",
+  "boundary": "Exact orbit-profile/rank/singular-value consequences of Pass10493-10500 plus standard polar decomposition. No E6 representation equivalence is claimed.",
+  "equivariant_self_duality": {"exists":false,"reason":"point and line orbit-size multisets under the same 13:6 normalizer differ"},
+  "incidence_transport": {"line_kernel_dimension":6,"point_kernel_dimension":6,"rank":21,"singular_values":"5^1, (2 sqrt(3))^8, 2^12, 0^6","squared_singular_values":{"0":6,"4":12,"12":8,"25":1}},
+  "line_orbit_profile": {"13":4,"26":4,"39":7,"78":12},
+  "passes": "10533-10540",
+  "point_orbit_profile": {"13":3,"26":6,"39":6,"78":12},
+  "polar_transport": {"exists_and_unique_on_support":true,"rank":21,"statement":"After canonical orbit-size normalization B, the polar decomposition B=U|B| gives a unique partial isometry U from ker(B)^perp to im(B), with six-dimensional kernels on both sides."},
+  "schema": "w33.pass10533_10540.h4_27_dual_polar_transport.v1",
+  "status": "PASS",
+  "theorem": "The normalizer quotient naturally produces two inequivalent 27-state G-sets, point states and line states, rather than one self-dual carrier. Their rank-21 incidence pairing canonically yields a polar partial isometry whose transmitted constituent dimensions are 1+8+12 and whose kernel has dimension 6."
+}
