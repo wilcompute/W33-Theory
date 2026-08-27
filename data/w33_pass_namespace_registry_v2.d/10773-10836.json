@@ -1,0 +1,18 @@
+{
+  "range": "10773-10836",
+  "status": "RESERVED",
+  "owner": "GPT-5.6-Sol post-normalizer defect packet",
+  "reserved_at": "2026-08-27T10:56:00-04:00",
+  "fronts": {
+    "10773-10780": "Resolve the exact F2[C3] representation-ring defect between H1(H4 Levi) and F2[V2] under the normalizer complement",
+    "10781-10788": "Test whether the eight-dimensional defect is carried by the H27/Schlaefli 8-dimensional constituent under the canonical qutrit C3",
+    "10789-10796": "Construct the minimal stable correction or prove no genuine module augmentation upgrades the C13 bridge to C13:C3",
+    "10797-10804": "Compare the 27-state harmonic normalizer transport with the corrected chain defect using central C3 projectors",
+    "10805-10812": "Outside-box: identify a cohomological/relative-homology source for the eight-dimensional defect",
+    "10813-10820": "Outside-box: test whether the defect is the Fano/Steinberg 8-sector selected by the C7 harmonic factor",
+    "10821-10828": "Outside-box: derive the Grothendieck-group bridge between semisimple C13 and qutrit C3 corrections",
+    "10829-10836": "Synthesis, manuscript insertion, and reproducibility packet"
+  },
+  "parallel_context": "Pass10709-10772 is already reserved by the parallel normalizer-closure lane; this block starts strictly after it.",
+  "collision_rule": "Earliest atomic reservation owns the range; later collisions rehome."
+}
