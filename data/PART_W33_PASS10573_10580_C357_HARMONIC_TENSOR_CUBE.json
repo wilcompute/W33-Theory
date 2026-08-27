@@ -1,0 +1,22 @@
+{
+  "CRT": {
+    "Fourier_kernel_units": {"3": 2, "5": 1, "7": 1},
+    "action": "trivial on C3; inversion C2 on C5; order-3 multiplier <2> on C7",
+    "group": "C105 ~= C3 x C5 x C7",
+    "idempotents": {"3": 70, "5": 21, "7": 15},
+    "normalizer_multiplier_residues": {"3": 1, "5": 4, "7": 2}
+  },
+  "Fourier_identity": "Under CRT orbit bases, standard F105 restricted to C6-invariants factors as F3^(2) tensor F5^C2 tensor F7^C3.",
+  "boundary": "Exact CRT/orbit-space factorization. Numerical matrices only verify the local and total Fourier eigenvalue labels; the tensor decomposition itself is finite-group algebra. The two C5/C7 factors are qutrit-sized harmonic sectors, not asserted to be physical qutrit Hilbert spaces.",
+  "full_fourier_eigenvalue_multiplicities": {"1": 8, "-1": 7, "i": 6, "-i": 6},
+  "passes": "10573-10580",
+  "schema": "w33.pass10573_10580.c357_harmonic_tensor_cube.v1",
+  "status": "PASS",
+  "tensor_identity": "C[C105]^C6 ~= C[C3] tensor C[C5]^C2 tensor C[C7]^C3, dimensions 3 x 3 x 3 = 27",
+  "theorem": "The canonical 27-state normalizer carrier is an exact 3-5-7 harmonic tensor cube: one genuine C3 qutrit sector, one three-dimensional inversion-even C5 sector, and one three-dimensional C3-invariant C7 sector. The standard C105 Fourier transform factors across these three sectors with the exact CRT character coefficients (2,1,1).",
+  "three_factors": {
+    "C3_qutrit": {"dimension": 3, "Fourier_eigs": {"1": 1, "-1": 1, "-i": 1}, "orbits": [[0],[1],[2]]},
+    "C5_even": {"dimension": 3, "Fourier_eigs": {"1": 2, "-1": 1}, "interpretation": "inversion-even functions on C5", "orbits": [[0],[1,4],[2,3]]},
+    "C7_C3_invariant": {"dimension": 3, "Fourier_eigs": {"1": 1, "-1": 1, "i": 1}, "interpretation": "functions invariant under multiplier 2 of order 3", "orbits": [[0],[1,2,4],[3,6,5]]}
+  }
+}
