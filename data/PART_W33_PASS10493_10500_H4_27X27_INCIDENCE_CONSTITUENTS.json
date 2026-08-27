@@ -1,0 +1,42 @@
+{
+  "schema": "w33.pass10493_10500.h4_27x27_incidence_constituents.v1",
+  "status": "PASS",
+  "passes": "10493-10500",
+  "normalizer_orbits": {
+    "point_orbits": 27,
+    "point_orbit_sizes": {"13": 3, "26": 6, "39": 6, "78": 12},
+    "line_orbits": 27,
+    "line_orbit_sizes": {"13": 4, "26": 4, "39": 7, "78": 12},
+    "flag_orbits": 107,
+    "flag_orbit_sizes": {"13": 6, "26": 12, "39": 13, "78": 76}
+  },
+  "incidence_quotient": {
+    "shape": [27,27],
+    "point_row_sum": 5,
+    "line_row_sum": 5,
+    "rank": 21,
+    "kernel_dimension": 6,
+    "identity": "M M^vee = 5 I + R_point",
+    "squared_singular_spectrum": {"25": 1, "12": 8, "4": 12, "0": 6},
+    "bipartite_54_state_spectrum": "(+/-5)^1, (+/-2sqrt(3))^8, (+/-2)^12, 0^12",
+    "quotient_Levi_vertices": 54,
+    "quotient_flag_orbit_edges": 107,
+    "quotient_Levi_beta1": 54
+  },
+  "comparison_with_E6_cubic_incidence": {
+    "Pass4545_4549_shape": [27,36],
+    "Pass4545_4549_rank": 21,
+    "Pass4545_4549_kernel_dimension_on_27_side": 6,
+    "Pass4545_4549_RRt_spectrum": "192^1, 12^20, 0^6",
+    "new_spectrum": "25^1, 12^8, 4^12, 0^6",
+    "exact_refinement_fingerprint": "the old transmitted 20-dimensional sector is dimensionally refined as 8+12 while the trivial 1 and killed 6 dimensions persist"
+  },
+  "comparison_with_H27": {
+    "H27_eigenspace_dimensions": [1,12,8,6],
+    "new_incidence_constituent_dimensions": [1,8,12,6],
+    "claim": "exact equality of the four constituent dimensions as a spectral fingerprint only",
+    "objectwise_intertwiner": "OPEN"
+  },
+  "theorem": "The full H(4) Levi geometry modulo the explicit 13:6 normalizer is naturally a 27-point-state by 27-line-state incidence transport of rank 21. Its six-dimensional kernel exactly matches the kernel dimension of the repo E6 cubic-line/double-six incidence operator, while its transmitted 20-dimensional sector refines as 8+12. H27 independently carries constituent dimensions 1+12+8+6. This is a precise spectral-constituent bridge but not yet an objectwise E6/H27 intertwiner.",
+  "boundary": "Exact finite orbit/incidence/rank/spectrum computation. Matching constituent dimensions are not promoted to representation isomorphism without an explicit intertwiner."
+}
