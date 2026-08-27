@@ -1,0 +1,17 @@
+{
+  "range": "10517-10580",
+  "status": "RESERVED",
+  "owner": "GPT-5.6-Sol 27-state Fourier and hexagon-homology continuation",
+  "reserved_at": "2026-08-26T20:37:00-04:00",
+  "fronts": {
+    "10517-10524": "Explicit 27-state 8<->12 Fourier/Steinberg constituent transport: construct or no-go",
+    "10525-10532": "Upgrade H1(Levi H4;F2) ~ F2[V2] from C13 character equality toward explicit chain/module map",
+    "10533-10540": "27|27 point-line duality versus E6 27/27bar minuscule transport",
+    "10541-10548": "Binary transverse F4 polarization versus ternary transverse F9 glue: exact common algebra/no-go",
+    "10549-10556": "Normalizer 27-state nine-triple carrier: classify all invariant transport algebras",
+    "10557-10564": "Outside-box: H(q) beta1=q^6 and generalized-hexagon code/homology hierarchy",
+    "10565-10572": "Outside-box: explicit 13:6 harmonic analysis on C105 and projection onto 1|8|12|6 sectors",
+    "10573-10580": "Outside-box: search W33/Schlaefli/H27 residue as a functor of the F4^6 clock and its dual polarization"
+  },
+  "collision_rule": "Earliest atomic registry add owns the range; later collisions rehome."
+}
