@@ -1,0 +1,25 @@
+{
+  "Pass1147_schlaefli_steinberg": {
+    "C3_color_multiplicity": 81,
+    "decomposition": "C^81 tensor C[C3]",
+    "index_factorization": "3^81",
+    "integral_fourier_index_decimal": "443426488243037769948249630619149892803"
+  },
+  "boundary": "Exact Smith-normal-form and existing-certificate comparison. No canonical map between the 9-dimensional reduced C35 multiplicity space and the 81-dimensional Steinberg multiplicity space is claimed.",
+  "common_C3_transform": {
+    "complex_reading": "trivial plus the two nontrivial C3 Fourier characters",
+    "determinant_absolute": 3,
+    "integral_basis": [[1,1,0],[1,-1,1],[1,0,-1]],
+    "smith_diagonal": [1,1,3]
+  },
+  "new_27_carrier": {
+    "C3_packets": 9,
+    "decomposition": "C^9 tensor C[C3]",
+    "index_factorization": "3^9",
+    "integral_fourier_index": 19683
+  },
+  "passes": "10557-10564",
+  "schema": "w33.pass10557_10564.c3_fourier_index_bridge.v1",
+  "status": "PASS",
+  "theorem": "The new C105/C6 27-state selector and the old Schlaefli-Steinberg A2-color construction use exactly the same C3/qutrit Fourier functor. Their only difference at this level is multiplicity: nine packets versus eighty-one rank-one color coordinates. The unavoidable integral denominator has prime 3 with exponent equal to the multiplicity, giving index 3^9 versus 3^81."
+}
