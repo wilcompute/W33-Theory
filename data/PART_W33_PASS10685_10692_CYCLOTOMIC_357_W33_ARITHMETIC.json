@@ -1,0 +1,28 @@
+{
+  "schema": "w33.pass10685_10692.cyclotomic_357_w33_arithmetic.v1",
+  "status": "PASS",
+  "passes": "10685-10692",
+  "outside_box": true,
+  "local_spectral_fields": {
+    "C3": {"polynomial":"x^2+x+1","discriminant":-3,"field":"Q(sqrt(-3))"},
+    "C5": {"polynomial":"x^2+x-1","discriminant":5,"field":"Q(sqrt(5))"},
+    "C7": {"polynomial":"x^2+x+2","discriminant":-7,"field":"Q(sqrt(-7))"}
+  },
+  "compositum": {"field":"Q(sqrt(-3),sqrt(5),sqrt(-7))","degree":8,"reason":"three independent quadratic squareclasses"},
+  "W33_q3": {"q":3,"Phi3":13,"Phi4":10,"Phi6":7},
+  "Leech_clock_factorization": {
+    "F4^6_nonzero":"4095 = 3^2 * 5 * 7 * 13",
+    "projectivize_by_F4_units":"4095 / 3 = 1365 = 3 * 5 * 7 * 13",
+    "quotient_by_C13_clock":"1365 / 13 = 105 = 3 * 5 * 7",
+    "W33_reading_at_q3":"105 = q * (Phi4(q)/2) * Phi6(q); removed C13 = Phi3(q)",
+    "first_removed_C3":"F4^x scalar projectivization"
+  },
+  "golden_field_crosscheck": {
+    "current_C5_factor":"pentagon relation has nontrivial eigenvalue polynomial x^2+x-1 and field Q(sqrt5)",
+    "prior_q5_pass543":"icosahedral association image has factor (x^2-5)^3",
+    "claim":"same quadratic spectral field Q(sqrt5), not an objectwise identification of the two schemes"
+  },
+  "Fano_field_reading":"The C7 Singer relation has Gauss periods (-1 +/- sqrt(-7))/2 and is simultaneously the Fano (7,3,1) difference-set factor from Pass10677.",
+  "theorem":"After the intrinsic F4 scalar and C13 clock are removed from F4^6, the 105-state harmonic residue factors at W33 q=3 as q*(Phi4/2)*Phi6 = 3*5*7. Its three rank-3 harmonic factors carry the exact quadratic fields Q(sqrt(-3)), Q(sqrt5), and Q(sqrt(-7)), with the C5 factor supplying the golden field and the C7 factor supplying the Fano/Singer field.",
+  "boundary":"The factor identity is a special arithmetic identity at q=3, not a universal polynomial identity. The Q(sqrt5) match to the repo q=5 icosahedral lane is a shared spectral field only."
+}
