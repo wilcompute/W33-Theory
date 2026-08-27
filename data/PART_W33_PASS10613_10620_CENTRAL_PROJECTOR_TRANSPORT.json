@@ -1,0 +1,23 @@
+{
+  "boundary": "Exact rational spectral-projector statement. It does not produce a canonical full 27x27 orthogonal transporter or a canonical order-3 permutation on the H4 quotient.",
+  "fine_phase_freedom": "Recovering the actual two nontrivial C3 characters inside the real rank-18 complement requires compatible complex structures on the 12- and 6-dimensional sectors; residual gauge U(6) x U(3).",
+  "H27": {
+    "central_class_operator": "C_H=(H^3-5H^2-22H+32I)/24 = Z+Z^-1",
+    "central_trivial_projector": "P0=(C_H+I)/3",
+    "labels": {"-4":-1,"-1":2,"2":-1,"8":2},
+    "nontrivial_real_rank":18,
+    "rank":9
+  },
+  "H4_reversible_quotient": {
+    "complement_rank":18,
+    "label_operator": "C_S=-(11S^3-186S^2-1457S+4340I)/5600",
+    "labels": {"-5":-1,"-1":-1,"7":2,"20":2},
+    "rank":9,
+    "rank9_projector": "Q0=(C_S+I)/3"
+  },
+  "passes": "10613-10620",
+  "schema": "w33.pass10613_10620.central_projector_transport.v1",
+  "status": "PASS",
+  "theorem": "The formerly noncanonical H27-to-H4 spectral transporter contains a canonical block-level core: the rank-9 trivial-center sector of H27 maps to the rank-9 H4 eigensum (20 plus 7), and the rank-18 nontrivial-center sector maps to the (-1 plus -5) eigensum. Only the conjugate phase splitting inside that 18-space remains noncanonical.",
+  "transport_theorem": "For every orthogonal U with S=U f(H) U^T under Pass10517, Q0=U P0 U^T. The coarse central-character 9|18 split is invariant under all allowed block gauges."
+}
