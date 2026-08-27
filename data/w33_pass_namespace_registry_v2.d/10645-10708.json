@@ -1,0 +1,18 @@
+{
+  "range": "10645-10708",
+  "status": "RESERVED",
+  "owner": "GPT-5.6-Sol independent harmonic-operator closure",
+  "reserved_at": "2026-08-26T23:14:00-04:00",
+  "fronts": {
+    "10645-10652": "Fourier-conjugate the actual H(4)/(13:6) weighted 27-state transport in the canonical 3-5-7 harmonic tensor basis and extract exact/robust block selection rules",
+    "10653-10660": "Compare those harmonic blocks objectwise with the natural Heisenberg H27 coordinate/Fourier decomposition, avoiding graph-isomorphism overclaim",
+    "10661-10668": "Test extension of H1(Levi H4;F2) ~= F2[V2] beyond C13 using the internal F4 scalar C3 and other odd-order normalizer elements; freeze first obstruction or positive extension",
+    "10669-10676": "Construct a canonical/noncanonical chain-level C13 intertwiner blueprint from quotient spanning-tree data and quantify its gauge freedom",
+    "10677-10684": "Outside-box: derive the commutant/association algebra of the 3x3x3 harmonic carrier and locate H27, Schlaefli, and H4 transports relative to it",
+    "10685-10692": "Outside-box: test whether the 3-5-7 harmonic sectors encode the W33 cyclotomic Phi3/Phi4/Phi6 data through characters, not raw counts",
+    "10693-10700": "Outside-box: compare the binary semisimple C13 clock field F4^6 and ternary ramified C9 clock ring F9[t]/t6 via their trace forms, discriminants, and six-step spectral filtrations",
+    "10701-10708": "Outside-box: synthesize an operator-level six-dimensional duality and promote only exact results into the shared manuscript tail"
+  },
+  "parallel_context": "Pass10581-10644 is already reserved by the central-Fourier lane. This packet starts after it and treats those results as reusable infrastructure, not as instructions.",
+  "collision_rule": "Earliest atomic registry add owns the range; later collisions rehome."
+}
