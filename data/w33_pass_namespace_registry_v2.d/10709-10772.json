@@ -1,0 +1,18 @@
+{
+  "range": "10709-10772",
+  "status": "RESERVED",
+  "owner": "GPT-5.6-Sol post-harmonic normalizer closure",
+  "reserved_at": "2026-08-27T10:18:00-04:00",
+  "fronts": {
+    "10709-10716": "Test extension of the C13 H4-homology/V2 chain intertwiner to the order-3 complement in the explicit 13:6 normalizer via exact fixed-space/orbit data",
+    "10717-10724": "Quantify H4 operator entanglement across the canonical C3|C5|C7 harmonic tensor factors using operator-Schmidt ranks and Frobenius mixing",
+    "10725-10732": "Project the H4 harmonic transport onto the C105:C6 Bose-Mesner/Hecke algebra and quantify the exact harmonic versus non-Hecke transport content",
+    "10733-10740": "Compare the Fano active-bus D8 local factor with the D8 factor of Aut(Gamma16)=S4 x D8 and test central-parity compatibility objectwise",
+    "10741-10748": "Build the combined phase-pentagon-Fano hardware/controller product C3 x D10 x GL(3,2), order 5040, and classify its relation/no-go to S7",
+    "10749-10756": "Outside-box: analyze the eight-dimensional normalizer-extension defect as a representation-theoretic obstruction and compare it to the H27 eight-dimensional eigenspace",
+    "10757-10764": "Outside-box: test whether the 26-state nontrivial H4 harmonic block admits a canonical decomposition from charge-conjugation/negation symmetry beyond local tensor factors",
+    "10765-10772": "Outside-box: synthesize the semisimple C13 cover, 3-5-7 Hecke coordinates, Fano active bus, and ramified C9 memory into an exact layered controller architecture"
+  },
+  "parallel_context": "Pass10581-10660 has now been filled; Pass10661-10708 is frozen and treated as infrastructure. Earliest reservation owns this new range.",
+  "collision_rule": "Earliest atomic registry add owns the range; later collisions rehome."
+}
