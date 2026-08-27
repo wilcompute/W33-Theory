@@ -1,0 +1,41 @@
+{
+  "schema": "w33.pass10501_10508.hexagon_homology_c13_module.v1",
+  "status": "PASS",
+  "passes": "10501-10508",
+  "general_identity": {
+    "Hq_points": "(q+1)(q^4+q^2+1)",
+    "Hq_lines": "same",
+    "Levi_edges": "(q+1) times points",
+    "Levi_beta1": "q^6"
+  },
+  "q2": {
+    "points": 63,
+    "lines": 63,
+    "flags": 189,
+    "Levi_beta1": 64
+  },
+  "q4": {
+    "points": 1365,
+    "lines": 1365,
+    "flags": 6825,
+    "Levi_beta1": 4096,
+    "equals_cardinality_of_V2": true
+  },
+  "C13": {
+    "ord_13_2": 12,
+    "Phi13_irreducible_over_F2": true,
+    "V2_nonzero_cycles": 315,
+    "V2_permutation_orbits_including_zero": 316,
+    "free_H4_quotient": {"points": 105, "lines": 105, "flags": 525, "beta1": 316}
+  },
+  "module_theorem": {
+    "field": "F2",
+    "group": "C13",
+    "nontrivial_simple_dimension": 12,
+    "H1_Levi_H4_restriction": "1^316 + W12^315",
+    "F2_permutation_module_on_V2_restriction": "1^316 + W12^315",
+    "isomorphic_after_restriction_to_C13": true
+  },
+  "theorem": "For every split Cayley hexagon H(q), the first Betti number of its Levi graph is q^6. Thus beta1(H(4))=4096=|V2| and beta1(H(2))=64. Under the explicit free C13 clock on H(4), the quotient beta1 is 316=1+4095/13, exactly the number of C13 orbits on V2 including zero. Since Phi13 is irreducible over F2 and F2[C13] is semisimple, H1(Levi(H4);F2) and the permutation module F2[V2] restrict isomorphically to C13 as 1^316 + W12^315.",
+  "boundary": "Exact combinatorial and C13-module theorem. No full G2(4)-module identification is claimed."
+}
