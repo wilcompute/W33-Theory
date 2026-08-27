@@ -1,0 +1,13 @@
+{
+  "schema":"w33.pass10701_10708.fano_clock_active_bus_factorization.v1",
+  "status":"PASS",
+  "passes":"10701-10708",
+  "outside_box":true,
+  "Fano":{"points":7,"lines":7,"flags":21,"full_group":"GL(3,2)=PSL(2,7)","full_group_order":168},
+  "clock_factor":{"group":"C7:C3","order":21,"model":"x -> a + 2^k x on C7","difference_set":[1,2,4],"acts_regularly_on_flags":true},
+  "local_factor":{"group":"base-flag stabilizer D8","order":8,"source":"BT1422"},
+  "exact_factorization":{"identity":"GL(3,2) = (C7:C3) * D8","intersection_order":1,"unique_decomposition":true,"type":"exact/Zappa-Szep factorization; not claimed direct or semidirect"},
+  "Holonet_bridge":{"BT1422_active_bins":168,"old_indexing":"21 Fano flags x 8 local D8 flag-stabilizer states","new_indexing":"21 Singer-clock elements x 8 local D8 states","objectwise_reason":"a unique clock element sends the base flag to each of the 21 hardware flag channels; the residual unique factor is the local flag stabilizer state"},
+  "theorem":"The C7:C3 harmonic clock factor is an exact global controller for the already-certified 168-bin Fano active bus. With K=D8 the base-flag stabilizer, GL(3,2) factors exactly as (C7:C3)K with trivial intersection, so every active Fano automorphism has a unique clock-element times local-state decomposition.",
+  "boundary":"Exact finite-group and existing-hardware-index theorem. It does not assert that the full 105:6 arithmetic controller is a hardware symmetry, nor that the 10 BT1421 theta packets already carry D10 without an additional routing design."
+}
