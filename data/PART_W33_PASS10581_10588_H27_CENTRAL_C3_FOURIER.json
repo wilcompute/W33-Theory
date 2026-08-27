@@ -1,0 +1,16 @@
+{
+  "boundary": "Exact finite Heisenberg/Eisenstein-ring computation. No identification with the H(4)/(13:6) weighted transport is asserted here.",
+  "center": "C3 acting by z-translation on H27",
+  "constituent_explanation": "1|8 comes from the trivial central character; 12|6 is the sum of two conjugate nontrivial sectors, each split 6|3.",
+  "global_spectrum": {"-4": 6, "-1": 8, "2": 12, "8": 1},
+  "nontrivial_sectors": [
+    {"character": 1, "dimension": 9, "spectrum": {"-4": 3, "2": 6}},
+    {"character": 2, "dimension": 9, "spectrum": {"-4": 3, "2": 6}}
+  ],
+  "passes": "10581-10588",
+  "schema": "w33.pass10581_10588.h27_central_c3_fourier.v1",
+  "sector_dimensions": [9,9,9],
+  "status": "PASS",
+  "theorem": "The H27 spectral multiplicities 1,8,12,6 are exactly the central-C3 Fourier decomposition of its Heisenberg Cayley adjacency. The trivial central character is K9 with 8^1+(-1)^8; each nontrivial central character is an exact Eisenstein-Hermitian magnetic block satisfying (B-2I)(B+4I)=0 and having spectrum 2^6+(-4)^3.",
+  "trivial_sector": {"annihilator": "(x-8)(x+1)", "graph": "K9 adjacency", "spectrum": {"-1": 8, "8": 1}}
+}
