@@ -1,0 +1,12 @@
+{
+  "boundary": "Exact finite orbit/cycle-type no-go plus standard minuscule-dual interpretation. No physical charge-conjugation operator is asserted.",
+  "canonical_Fourier_square": {"action":"negation on C105/C6 orbit states","cycle_type":"1^3 2^12","fixed_state_origin":"C3 coordinate 0 times the three self-negative C35/<9> orbits","trace_as_permutation_operator":3},
+  "corrected_architecture": "retain two involutions: internal harmonic negation F^2 within a 27-state harmonic carrier, and an external E6 duality exchanging 27 with bar27",
+  "direct_identification": false,
+  "E6_charge_conjugation": {"action":"exchange minuscule 27 and bar27","cycle_type":"2^27","fixed_states":0,"natural_carrier_size":54,"trace_as_permutation_operator":0},
+  "obstruction": "cycle type and trace are conjugacy invariants",
+  "passes": "10621-10628",
+  "schema": "w33.pass10621_10628.fourier_square_e6_charge_conjugation_nogo.v1",
+  "status": "PASS",
+  "theorem": "The canonical C105 Fourier square is not E6 charge conjugation. It is an internal negation involution with three fixed harmonic states, whereas E6 conjugation exchanges disjoint 27 and bar27 carriers without fixed weights. Any E6 bridge must therefore double the carrier and keep these operations distinct."
+}
