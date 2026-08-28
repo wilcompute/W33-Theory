@@ -1,0 +1,23 @@
+{
+  "schema": "w33.20260828.q5-deficiency7-nogo.v1",
+  "status": "PASS",
+  "q": 5,
+  "candidate_deficiency": 7,
+  "input_theorem": "For a q^2+1 point candidate in GQ(q,q), the defect d satisfies A_line d=(q-1)d; at q=5 and delta=7 the shell bound forces d to be plus/minus one valued with seven entries of each sign.",
+  "support_requirement": "Each seven-line sign support would induce minimum intersection degree at least 4.",
+  "gq_lemma": "No seven lines in GQ(5,5) induce minimum intersection degree at least 4.",
+  "case_analysis": {
+    "r=0": "All six lines besides ell meet ell. Every intersection-point part has size at least 4 and totals 6, forcing one part of size 6; with ell this would be a seven-line pencil, but a GQ(5,5) pencil has exactly 6 lines.",
+    "r=1": "The five lines meeting ell must form one part of size 5. Together with ell they form the full six-line pencil; the one line disjoint from ell meets at most one pencil line, so its induced degree is at most 1.",
+    "r=2": "The four lines meeting ell have partition 4 or 2+2. In the first case a disjoint line has degree at most 2; in the second at most 3."
+  },
+  "consequence": {
+    "deficiencySevenPossible": false,
+    "provedLowerBound": 8,
+    "existingFeasibleUpperBound": 12,
+    "certifiedInterval": [8, 12],
+    "exactValue": null
+  },
+  "proofCommit": "67075bc4343d5c2af8d38072d46f5c1f08643584",
+  "boundary": "The argument excludes deficiency seven. It does not prove that deficiency eight is attainable; the upper bound 12 remains the existing explicit feasible witness."
+}
