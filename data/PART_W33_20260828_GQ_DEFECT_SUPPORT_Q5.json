@@ -1,0 +1,52 @@
+{
+  "boundary": "The upper bound 12 is imported from Holotrade's explicit feasible witness and is not re-derived by this script. No claim is made that 6 is attained.",
+  "general_theorem": {
+    "defect_eigen_equation": "A_line d = (q-1)d for Nx=1+d and |x|=q^2+1",
+    "deficiency_lower_bound": "nonzero deficiency delta >= q",
+    "equality_classification": "delta=q iff the defect is a punctured-pencil dipole: q missed arms at a, q doubled arms at collinear b, common hinge omitted from both defect supports",
+    "nonzero_support_lower_bound": "|supp(d)| >= 2q",
+    "proof_key": "At a maximum coordinate M, neighbor sum is (q-1)M and distance-2 sum is -qM; equality forces two q-cliques with no cross adjacency."
+  },
+  "instances": {
+    "q3": {
+      "deficiency_q_dipole_exists": true,
+      "dipole_backtrack_nodes": 67,
+      "dipole_profile": {"0":3,"1":34,"2":3},
+      "dipole_solution_count_capped": 6,
+      "line_graph": {"eigenvalues":[12,2,-4],"k":12,"lambda":2,"mu":4,"v":40},
+      "lines": 40,
+      "ovoid_backtrack_nodes": 65,
+      "ovoid_exists": false,
+      "points": 40,
+      "profile_incidence_sum": 40,
+      "q": 3,
+      "required_incidence_sum": 40,
+      "set_size": 10
+    },
+    "q5": {
+      "deficiency_q_dipole_exists": false,
+      "dipole_backtrack_nodes": 787,
+      "dipole_profile": {"0":5,"1":146,"2":5},
+      "dipole_solution_count_capped": 0,
+      "line_graph": {"eigenvalues":[30,4,-6],"k":30,"lambda":4,"mu":6,"v":156},
+      "lines": 156,
+      "ovoid_backtrack_nodes": 2506,
+      "ovoid_exists": false,
+      "points": 156,
+      "profile_incidence_sum": 156,
+      "q": 5,
+      "required_incidence_sum": 156,
+      "set_size": 26
+    }
+  },
+  "q5_consequence": {
+    "certified_interval": [6,12],
+    "deficiency_5_possible": false,
+    "parallel_Holotrade_feasible_upper_bound": 12,
+    "parallel_commit": "a41a53f5d4e70f30c4ab1e44679bece9a6bedf30",
+    "proved_lower_bound": 6
+  },
+  "schema": "w33.20260828.gq-defect-support-q5.v1",
+  "status": "PASS",
+  "theorem": "For W(3,5), deficiencies 1-4 are excluded by the 2q eigenfunction support bound; deficiency 5 would have to be a punctured-pencil dipole; the representative dipole is exactly infeasible and flag transitivity covers all representatives. Since W(3,5) has no ovoid (also independently verified here), def(W(3,5))>=6."
+}
