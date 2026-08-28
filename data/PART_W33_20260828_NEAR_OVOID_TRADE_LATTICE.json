@@ -1,0 +1,58 @@
+{
+  "base_relative_generators": 2400,
+  "completions_per_dipole": 6,
+  "incidence_matrix": {
+    "kernel_dimension": 15,
+    "rank_mod": {
+      "2": 25,
+      "3": 25,
+      "5": 25,
+      "7": 25
+    },
+    "shape": [
+      40,
+      40
+    ]
+  },
+  "local_unordered_pair_trades": 7200,
+  "optimal_near_ovoids": 2880,
+  "oriented_defect_dipoles": 480,
+  "schema": "w33.20260828.near-ovoid-trade-lattice.v1",
+  "spectral_identification": "ker(N) is the -4 eigenspace of the W33 point graph because N^T N=A+4I",
+  "status": "PASS",
+  "theorem": "Differences of the six optimal near-ovoid completions over all 480 oriented defect dipoles generate exactly ker_Z(N), the primitive rank-15 integral W33 incidence-kernel lattice. Every elementary local trade has six +1 and six -1 coordinates.",
+  "trade_lattice": {
+    "equals_integral_incidence_kernel": true,
+    "primitive": true,
+    "rank_Q": 15,
+    "rank_mod": {
+      "2": 15,
+      "3": 15,
+      "5": 15,
+      "7": 15
+    },
+    "smith_nonzero_diagonal": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "trade_profile": {
+    "minus_ones": 6,
+    "plus_ones": 6,
+    "support": 12
+  },
+  "boundary": "This is an exact finite lattice theorem. It does not identify this 15-dimensional module with a physical Hilbert space or with any unrelated 15-state carrier."
+}
