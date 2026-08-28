@@ -1,0 +1,41 @@
+{
+  "PGL2_9": {
+    "connected_nontrivial_srgs": [
+      [45, 16, 8, 4],
+      [45, 28, 15, 21]
+    ],
+    "degree16_identification": "T(10), pair adjacency iff nonempty intersection",
+    "order": 720,
+    "orbital_fusions_tested": 31,
+    "pair_stabilizer_order": 16,
+    "pair_subdegrees": [1, 16, 8, 8, 8, 4],
+    "undirected_atoms": 5
+  },
+  "PSL2_9": {
+    "order": 360,
+    "orbital_fusions_tested": 127,
+    "pair_stabilizer_order": 8,
+    "pair_subdegrees": [1, 8, 8, 8, 8, 4, 2, 2, 4],
+    "srg_census": {
+      "SRG(45,16,8,4)": 1,
+      "SRG(45,2,1,0)": 2,
+      "SRG(45,28,15,21)": 1,
+      "SRG(45,42,39,42)": 2
+    },
+    "undirected_atoms_after_transpose_closure": 7
+  },
+  "boundary": "This rules out the natural pair-orbital bridge only. It does not rule out a non-orbital, symmetry-breaking, or differently indexed map between a ten-state carrier and a W33 45-state object.",
+  "schema": "w33.20260828.p1f9-pair-orbital-gq42-nogo.v1",
+  "status": "PASS",
+  "target": {
+    "W33_45_state_graph": "GQ(4,2) point graph",
+    "complement_parameters": [45, 32, 22, 24],
+    "parameters": [45, 12, 3, 3]
+  },
+  "ten_state_model": {
+    "points": 10,
+    "set": "P1(F9)",
+    "unordered_pairs": 45
+  },
+  "theorem": "No PGL(2,9)- or PSL(2,9)-invariant orbital fusion on the 45 unordered pairs of P1(F9) realizes GQ(4,2) or its complement. Consequently no PGammaL(2,9)-invariant pair relation does either."
+}
