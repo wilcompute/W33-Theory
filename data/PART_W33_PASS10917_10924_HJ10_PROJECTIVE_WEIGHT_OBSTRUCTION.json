@@ -1,0 +1,19 @@
+{
+  "HJ10": {
+    "canonical_fibre_sizes_to_32": [1,2,2,3,3,3,3,3,6,6],
+    "residual_C2_fixed_state_weights": [1,3],
+    "residual_C2_moving_pair_weights": [2,3,3,6]
+  },
+  "P1F9_split_model": {
+    "C4_moving_classes": 4,
+    "D16_orbits_on_10_points": [2,8],
+    "j_quotient": "2 poles + C4",
+    "weight_preserving_C4_rotation": false,
+    "weight_preserving_D16_extension": false
+  },
+  "boundary": "Exact consequence of the certified C12 cycle profile and the explicit P1(F9) split-involution centralizer. A projective-line structure could still be imposed after forgetting fibre sizes or by adding external geometry; this pass rules out a canonical lift preserving the normalizer quotient data.",
+  "passes": "10917-10924",
+  "schema": "w33.pass10917_10924.hj10_projective_weight_obstruction.v1",
+  "status": "PASS",
+  "theorem": "The HJ10 residual involution is isomorphic to the split involution z->-z on P1(F9) only as a C2-set. The canonical Hall-Janko fibre sizes obstruct every extension to the natural projective centralizer D16 and already obstruct the C4 rotation on the four antipodal moving classes: the two fixed-state weights are 1 and3 and the moving-pair weights are 2,3,3,6. Therefore cross-ratio/C4 structure is not inherited from the torus-normalizer quotient."
+}
