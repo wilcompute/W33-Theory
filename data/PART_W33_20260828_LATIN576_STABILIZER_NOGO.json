@@ -1,0 +1,35 @@
+{
+  "schema": "w33.20260828.latin576-stabilizer-nogo.v1",
+  "status": "PASS",
+  "sourceCommit": "b01a9eb4b53912a5b6e465abe11fb0f0d67e754a",
+  "latinSquares": {
+    "order": 4,
+    "labelledTotal": 576,
+    "reducedTotal": 4,
+    "reducedMainClassSplit": {"144": 1, "432": 3}
+  },
+  "fullStandardParatopy": {
+    "groupOrder": 82944,
+    "mainClassSizes": [144, 432],
+    "consequence": "No subgroup of the standard paratopy group can be transitive on all 576 labelled squares."
+  },
+  "W33StabilizerInput": {
+    "order": 576,
+    "structure": "2^{1+4}_+ semidirect (S3 x C3)",
+    "centralQuotient": "A4 wr C2",
+    "quotientOrder": 288,
+    "sourceCertificate": "PART_W33_20260828_MINIMUM_STABILIZER_576_STRUCTURE.json"
+  },
+  "canonicalTetradQuotientAction": {
+    "orbitSizeDistribution": {"36": 2, "72": 7},
+    "numberOfOrbits": 9,
+    "mainClassRefinement": {
+      "144": {"36": 2, "72": 1},
+      "432": {"72": 6}
+    }
+  },
+  "noGo": "The equality |H|=576=#LatinSquares(4) is not an equivariant G-set bridge under standard Latin-square symmetry.",
+  "residualTarget": {"mainClassSize": 144, "possibleHStabilizerIfTransitive": 4, "status": "OPEN comparison target"},
+  "class432": {"canBeTransitiveHOrbit": false, "reason": "432 does not divide 576"},
+  "boundary": "An externally imposed non-paratopic action on the bare 576-element set is not ruled out, but it would not be the canonical Latin-square symmetry bridge."
+}
