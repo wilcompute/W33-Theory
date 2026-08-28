@@ -1,0 +1,17 @@
+{
+  "schema": "w33.pass10837_10900.characteristic2_tenstate_synthesis.v1",
+  "status": "PASS",
+  "passes": "10837-10900",
+  "fronts": {
+    "10837-10844": "Order-two defect localized to the 316-dimensional C13-fixed sector: F2[V2]=1^64+J2^126, H1=J2^158; exact stable repair adds J2^32 versus 1^64.",
+    "10845-10852": "Wilson C6 complement has Jordan form J2(1)+J2(w)+J2(w^2); Fix(n^3)=F4^3 and PG(2,4), with a scalar-gauge family of 32-pair local translations.",
+    "10853-10860": "The 2B-fixed H(4) Levi incidence is a treeification of an affine PG(2,4) frame with one origin, one line at infinity, five radial directions and dangling H4 leaves.",
+    "10861-10868": "Local 64-state pairings exist, but irreducible C13 kills every nonzero globally invariant translation; translation-type global repair is impossible.",
+    "10869-10876": "The 416 Hall-Janko C13 cycles reduce under inner C6 to 10 states; the residual outer C2 has profile 1^2 2^4.",
+    "10877-10884": "The HJ residual involution matches the split projective involution z->-z on P1(F9), not field Frobenius. The projective quotient is two fixed poles plus C4 and the split-involution centralizer in PGL2(9) is D16.",
+    "10885-10892": "The 32 defect is 32 copies of the unique nonzero class in Ext^1_{F2[C2]}(1,1); the corresponding stable/Tate obstruction has dimension64 in every degree on F2[V2] and zero on H1.",
+    "10893-10900": "Synthesis and reproducibility closure."
+  },
+  "frontier": "The raw 32-count identifications are dead. The surviving positive structures are the PG(2,4) affine fixed frame, the HJ10/P1(F9) split-projective carrier, and the modular extension class itself. Future repairs must be non-translation or external/chain-level.",
+  "claim_boundary": "All finite-field, group-action, Jordan-module, P1(F9), Ext and Tate statements are exact within the stated inputs. No C4 cross-ratio structure is yet transported to HJ10, and no canonical global set of 32 extension generators has been identified."
+}
