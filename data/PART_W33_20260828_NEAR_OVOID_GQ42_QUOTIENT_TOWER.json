@@ -1,0 +1,53 @@
+{
+  "schema": "w33.20260828.near-ovoid-gq42-quotient-tower.v1",
+  "status": "PASS",
+  "minimumVectorCarrier": {
+    "points": 45,
+    "orthogonalityGraph": [45,12,3,3],
+    "nonorthogonalityDegree": 32,
+    "nonorthogonalityEdges": 720
+  },
+  "tradeDirections": {
+    "unorientedDirections": 720,
+    "equalToNonorthogonalityEdges": true,
+    "defectDipoles": 480,
+    "sixCompletionK6s": 480,
+    "edgeMultiplicityAcrossK6s": 10
+  },
+  "blockerQuotient": {
+    "minimumBlockers": 360,
+    "targetPoints": 45,
+    "fibreSize": 8,
+    "centres": 40,
+    "blockersPerCentre": 9,
+    "OcSize": 9
+  },
+  "fortyNineSets": {
+    "count": 40,
+    "sizeEach": 9,
+    "adjacentW33Intersection": 3,
+    "nonadjacentW33Intersection": 1,
+    "recoversW33Adjacency": true
+  },
+  "nearOvoidQuotient": {
+    "optimalNearOvoids": 2880,
+    "viaMinimumBlockers": "2880 -> 360 -> 45",
+    "fibreSizes": [8,8],
+    "nearOvoidsPerGQ42Point": 64,
+    "routesAgree": true
+  },
+  "closedParametrization": {
+    "form": "(a,c,m) with a~c and m in O_c\\O_a",
+    "orientedCollinearPairs": 480,
+    "labelsPerPair": 6,
+    "count": 2880
+  },
+  "noteCommit": "18f688cb107cd05be503fc7f7bf20269d35c7203",
+  "inputPackets": [
+    "747a159dea67c6ffea96beaf2560991a4c9f252d",
+    "f5837a8abfac436bf8ea061e89daf8fcee928a36",
+    "689684b1d1e461642a428b1d8235e06c9545e9b1"
+  ],
+  "theorem": "The 720 local trade directions are exactly the nonorthogonal edges of the 45-point GQ(4,2) minimum-vector carrier. The 360 minimum blockers map 8-to-1 to that carrier and the 2880 optimal near-ovoids map 64-to-1. Forty canonical 9-sets O_c recover W33 adjacency by intersection sizes 3 versus 1, and every optimal near-ovoid is parametrized by (a,c,m) with a~c and m in O_c minus O_a.",
+  "boundary": "Finite incidence/group-action theorem only; no physical-state identification is implied."
+}
