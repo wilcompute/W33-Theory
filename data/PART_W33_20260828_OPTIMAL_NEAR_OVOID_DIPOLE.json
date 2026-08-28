@@ -1,0 +1,61 @@
+{
+  "boundary": "Exact finite-combinatorial theorem. The six local completions are not identified with any other six-state carrier without an explicit intertwiner. No physics claim.",
+  "geometry": {
+    "line_graph": "SRG(40,12,2,4)",
+    "line_size": 4,
+    "lines": 40,
+    "points": 40
+  },
+  "group_action": {
+    "PSp4_3_order": 25920,
+    "local_kernel_order": 3,
+    "local_six_completion_image": "C3 x S3",
+    "local_six_completion_image_order": 18,
+    "optimal_set_orbit": 2880,
+    "optimal_set_stabilizer": "C3 x C3",
+    "optimal_set_stabilizer_order": 9,
+    "oriented_edge_stabilizer_order": 54
+  },
+  "representative": {
+    "double_center": 31,
+    "doubled_lines": [7, 11, 15],
+    "hinge_line": 3,
+    "miss_center": 0,
+    "missed_lines": [0, 1, 2],
+    "six_completions": [
+      [1, 2, 9, 18, 29, 33, 35, 36, 37, 38],
+      [1, 2, 11, 20, 27, 32, 34, 36, 38, 39],
+      [1, 3, 8, 17, 30, 33, 34, 35, 38, 39],
+      [1, 3, 12, 21, 26, 32, 35, 36, 37, 39],
+      [2, 3, 7, 16, 28, 33, 34, 36, 37, 39],
+      [2, 3, 10, 19, 25, 32, 34, 35, 37, 38]
+    ]
+  },
+  "schema": "w33.20260828.optimal-near-ovoid-dipole.v1",
+  "spectral_certificate": {
+    "K_times_incidence_zero": true,
+    "annihilator": "K=(A_line-12I)(A_line-2I)=96 E_{-4}",
+    "deficiency_0_exact_cover_solutions": 0,
+    "deficiency_1_spectral_candidates": 0,
+    "deficiency_2_spectral_candidates": 0,
+    "excess_partition_2plus1_candidates": 0,
+    "excess_partition_3_candidates": 0,
+    "triple_signature_histogram": {
+      "singleton": 9720,
+      "size4": 40
+    }
+  },
+  "status": "PASS",
+  "theorem": {
+    "completions_per_oriented_collinear_pair": 6,
+    "defect_patterns": 480,
+    "defect_shape": "missed and doubled triples are punctured line-pencils at two distinct collinear points; their common line is singly hit",
+    "deficiency": 3,
+    "optimal_10_sets": 2880,
+    "optimal_line_profile": {
+      "0": 3,
+      "1": 34,
+      "2": 3
+    }
+  }
+}
