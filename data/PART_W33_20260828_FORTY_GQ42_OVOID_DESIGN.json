@@ -1,0 +1,38 @@
+{
+  "schema": "w33.20260828.forty-gq42-ovoid-design.v1",
+  "status": "PASS",
+  "sourceCommit": "37b0112fa19e5849588d4b2b6cc139fbe3d38adb",
+  "tacticalConfiguration": {
+    "rows": 40,
+    "columns": 45,
+    "rowSize": 9,
+    "columnReplication": 8,
+    "rowIntersections": {"W33Adjacent": 3, "W33Nonadjacent": 1},
+    "columnPairCooccurrence": {"GQ42Orthogonal": 0, "GQ42Nonorthogonal": 2}
+  },
+  "matrixIdentities": {
+    "BBt": "8 I_40 + 2 A_W33 + J_40",
+    "BtB": "8 I_45 + 2 A_nonorth",
+    "nonzeroSingularSquares": {"72": 1, "12": 24},
+    "rank": 25
+  },
+  "GQ42Ovoids": {
+    "total": 200,
+    "PSpOrbits": [40, 160],
+    "distinguishedOrbit": 40,
+    "distinguishedStabilizerOrder": 648
+  },
+  "dualW33Reading": {
+    "carrierPoints": 45,
+    "centresPerCarrierPoint": 8,
+    "inducedGraphOnCentres": "K4,4"
+  },
+  "tripleIntersectionsByW33InducedEdges": {
+    "0": {"0": 2880, "1": 360},
+    "1": {"0": 4320},
+    "2": {"1": 2160},
+    "3": {"0": 160}
+  },
+  "theorem": "The forty O_c are exactly the 40-element PSp(4,3) orbit among the 200 ovoids of GQ(4,2). Their incidence matrix is a (40_9,45_8) tactical configuration satisfying the two displayed Gram identities. Each GQ carrier point corresponds dually to a canonical K4,4 on eight W33 points.",
+  "boundary": "Exact finite design/group-action statement only."
+}
