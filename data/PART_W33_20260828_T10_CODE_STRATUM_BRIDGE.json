@@ -1,0 +1,31 @@
+{
+  "P1F9_consequence": "The canonical unordered-pair graph on the ten P1(F9) states and this native W33 code-stratum component are both literally T(10). Any bijection of the underlying ten-sets induces a graph isomorphism.",
+  "boundary": "This identifies an exact native T(10) graph and ten-fibre structure. It does not undo the GQ(4,2) orbital no-go and does not identify the ten fibres with HJ10 without an equivariant map.",
+  "component45": {
+    "K9_count": 10,
+    "K9_pair_intersections": {"1":45},
+    "K9s_per_vertex": 2,
+    "T10_isomorphism": true,
+    "coordinatization": "vertex -> unordered pair of the two containing K9 cliques",
+    "maximal_clique_histogram": {"3":120,"9":10},
+    "parameters": [45,16,8,4]
+  },
+  "intersection2_components": [45,6,6],
+  "missing_intertwiner": "No canonical equivariant bijection is yet proved between the HJ10/P1(F9) ten states and the ten singular-translation fibres {x,x+4}; the graph bridge is exact but the ten-set bridge is not.",
+  "schema": "w33.20260828.t10-code-stratum-bridge.v1",
+  "source_stratum": "Pass3957 deterministic maximal [36,17,4] binary code",
+  "status": "PASS",
+  "ten_fibre_coordinate_model": {
+    "all_pairs_are_x_xor_4": true,
+    "core_pairs_F2_6_labels": [[3,7],[16,20],[17,21],[18,22],[32,36],[33,37],[34,38],[48,52],[49,53],[50,54]],
+    "core_pairs_coordinate_indices": [[0,1],[6,9],[7,10],[8,11],[16,19],[17,20],[18,21],[26,29],[27,30],[28,31]],
+    "core_union_size": 20,
+    "degree9_coordinates_equal_core_union": true,
+    "selected_word_coordinate_degree_profile": {"3":16,"9":20},
+    "translation_vector": 4,
+    "translation_vector_binary": "000100",
+    "translation_vector_singular": true
+  },
+  "theorem": "The existing W33 [36,17,4] code stratum contains a canonical 45-state T(10): ten maximal K9s coordinatize its vertices by C(10,2), and the ten K9 fibres are exactly the ten nonsingular coordinate pairs under the singular translation x->x+4.",
+  "weight4_selection": 57
+}
