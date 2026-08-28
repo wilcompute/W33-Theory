@@ -1,0 +1,19 @@
+{
+  "Hall_Janko_32": {
+    "C3_profile": "1^5 3^9",
+    "C6_profile": "1^1 2^2 3^5 6^2",
+    "source": "32 C13 cycles on G2(4)/J2"
+  },
+  "boundary": "Exact finite F4 permutation computation using the certified Wilson normalizer plus exact HJ32 class-fusion profile from Pass10797. This rules out equivariant equality of these two specific 32-carriers; it does not rule out a different external 32-dimensional correction module.",
+  "local_extension_pair_carrier": {
+    "C3_profile": "1^2 3^10",
+    "C6_action_factors_through_C3": true,
+    "full_n_profile": "1^2 3^10",
+    "source": "64 vectors Fix(n^3)=F4^3 paired by one nonzero translation on the s-fixed F4 line",
+    "states": 32
+  },
+  "passes": "10901-10908",
+  "schema": "w33.pass10901_10908.local32_vs_hj32_normalizer_nogo.v1",
+  "status": "PASS",
+  "theorem": "The two natural 32-state carriers are not the same normalizer object. The local extension-pair quotient has order-three profile 1^2 3^10 and its C6 action factors through C3, while the Hall-Janko C13-cycle carrier has C3 profile 1^5 3^9 and genuine 2- and 6-cycles under C6. Thus the persistent number32 does not hide an equivariant identification."
+}
