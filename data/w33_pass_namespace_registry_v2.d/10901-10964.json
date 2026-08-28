@@ -1,0 +1,18 @@
+{
+  "range": "10901-10964",
+  "status": "RESERVED",
+  "owner": "GPT-5.6-Sol post-10900 projective/defect bridge continuation",
+  "reserved_at": "2026-08-28T11:47:00-04:00",
+  "fronts": {
+    "10901-10908": "Compare the local 32 characteristic-2 extension-pair carrier with the Hall-Janko 32 C13-cycle carrier under the C3/C6 normalizer and prove or refute objectwise equivalence",
+    "10909-10916": "Test the HJ10/P1(F9) carrier against genuine W33 Phi4(3)=10 point geometry: ovoid/coclique versus Hoffman-Lovasz spectral shadow",
+    "10917-10924": "Attempt to transport the P1(F9) split involution quotient 2 poles + C4 into the Hall-Janko ten-state carrier with projective/cross-ratio invariants",
+    "10925-10932": "Outside-box: compare the 64 Tate obstruction with the H(2) Levi beta1=64 cycle space at the correct local Hall-Janko level",
+    "10933-10940": "Outside-box: test whether the PG(2,4) affine-frame fixed tree is a residue/link of the H(4) building/controller geometry and identify its exact stabilizer",
+    "10941-10948": "Outside-box: derive a 10-state harmonic/association-scheme operator from P1(F9) and compare with HJ10 orbit weights and W33 theta=10",
+    "10949-10956": "Search for a non-translation external 32-extension carrier using induced/projective modules suggested by the D26 Tate defect",
+    "10957-10964": "Synthesis, shared-tail insertion, and reproducibility closure"
+  },
+  "parallel_context": "Pass10837-10900 is complete and promoted to the shared tail. All later work must begin above 10900.",
+  "collision_rule": "Earliest atomic reservation owns the range; later collisions rehome."
+}
