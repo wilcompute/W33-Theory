@@ -1,0 +1,39 @@
+{
+  "Ext1": {
+    "Ext1_1_1_dimension": 1,
+    "interpretation": "the order-two defect is 32 copies of the unique nonzero class in Ext^1_{F2[C2]}(1,1)",
+    "missing_J2_extensions": 32,
+    "nonzero_extension_classes": 1,
+    "unique_nonsplit_extension": "0 -> 1 -> J2 -> 1 -> 0"
+  },
+  "Tate_cohomology": {
+    "F2V2_dimension_each_degree": 64,
+    "H1_dimension_each_degree": 0,
+    "identity": "64 = 2*32 because each nonsplit projective J2 joins two trivial composition factors and annihilates their stable/Tate obstruction",
+    "regular_projective": "Hhat^n(C2,J2)=0 for every n",
+    "stable_repair_dimension_each_degree": 64,
+    "trivial_module": "Hhat^n(C2,1)=F2 for every n"
+  },
+  "algebra": {
+    "field": "F2",
+    "group": "C2=<k>",
+    "group_algebra": "F2[C2] ~= F2[e]/(e^2), e=k+1",
+    "indecomposables": ["1=A/(e)", "J2=A regular/projective"]
+  },
+  "boundary": "Exact modular representation theory of C2 in characteristic2 applied to the certified Pass10837 decompositions. It does not identify a canonical global set of 32 extension generators inside Co1 or H(4); Pass10861 already rules out the simplest translation-type C13-equivariant realization.",
+  "modules": {
+    "F2V2_fixed_sector": "1^64 + J2^126",
+    "H1_fixed_sector": "J2^158",
+    "dimension_each": 316
+  },
+  "outside_box": true,
+  "passes": "10885-10892",
+  "schema": "w33.pass10885_10892.c2_tate_ext_defect.v1",
+  "stable_category": {
+    "F2V2": "1^64",
+    "H1": "0",
+    "meaning": "after quotienting projectives, the entire defect is the 64 trivial Tate classes"
+  },
+  "status": "PASS",
+  "theorem": "The characteristic-two normalizer defect is exactly extension data. H1 contains 32 more copies of the unique nonsplit self-extension J2 of the trivial C2-module, replacing the 64 split trivial summands present in F2[V2]. Equivalently, the stable/Tate obstruction has dimension 64 in every degree on F2[V2] and vanishes on H1. The relation 64=2*32 is forced by the length-two projective extension, not a numerical coincidence."
+}
