@@ -1,0 +1,26 @@
+{
+  "HJ": {
+    "full_C13_C12_quotient_states": 6,
+    "inner_C6_quotient_states": 10,
+    "residual_C2_profile": "1^2 2^4"
+  },
+  "P1F9": {
+    "centralizer_in_PGL2_9": "C8:C2 ~= D16",
+    "centralizer_order": 16,
+    "field_Frobenius": "z->z^3",
+    "Frobenius_fixed_set": "P1(F3)",
+    "Frobenius_profile": "1^4 2^3",
+    "F9x": "C8",
+    "fixed_poles": ["0", "infinity"],
+    "full_j_quotient": "{0,infinity} disjoint-union C4, six states",
+    "j_profile": "1^2 2^4",
+    "moving_quotient": "F9^x/{+/-1} ~= C4",
+    "points": 10,
+    "split_involution": "j:z->-z"
+  },
+  "boundary": "The P1(F9) classification is exact. Only the C2-set and six-state quotient are identified; no canonical C4 operation, cross-ratio, PGL2(9) action or Q^-(3,3) polarity has yet been transported to the HJ ten states.",
+  "passes": "10877-10884",
+  "schema": "w33.pass10877_10884.hj10_split_p1f9_geometry.v1",
+  "status": "PASS",
+  "theorem": "The HJ ten-state residual outer involution is compatible with the split projective involution z->-z on P1(F9), not with F9/F3 Frobenius. The matching projective model has two fixed poles and four antipodal moving classes F9^x/{+/-1}=C4, so its six-state involution quotient exactly matches the six full C13:C12 Hall-Janko normalizer orbits."
+}
