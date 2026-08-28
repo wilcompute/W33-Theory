@@ -1,0 +1,30 @@
+{
+  "schema": "w33.20260828.hj10-s5-torus-normalizer-nogo.v1",
+  "status": "PASS",
+  "HJ10Construction": "ten states are inner-C6 orbits on the 32 C13 cycles for one fixed C13 torus inside its C13:C12 normalizer",
+  "residualAction": {
+    "group": "C2",
+    "profile": "1^2 2^4"
+  },
+  "torusNormalizer": {
+    "structure": "C13:C12",
+    "order": 156,
+    "divisibleBy5": false,
+    "consequence": "Any symmetry preserving the chosen C13 quotient lies in the normalizer and therefore cannot contain S5."
+  },
+  "weightObstruction": {
+    "canonicalHJ10FibreSizes": [1,2,2,3,3,3,3,3,6,6],
+    "constant": false,
+    "nativeS5OnTenDuadsTransitive": true,
+    "S5InvariantWeightWouldBeConstant": true,
+    "compatible": false
+  },
+  "conclusion": "No provenance-preserving S5 action can extend the certified HJ10 residual C2 to the native W33 S5 duad carrier. The maximal currently certified shared action is C2.",
+  "sourceCommit": "63d62ee62b4e32aba385a10a2ef50031972d90b9",
+  "sourcePackets": [
+    "PART_W33_PASS10869_10876_HJ10_P1F9_TEST",
+    "PART_W33_PASS10917_10924_HJ10_PROJECTIVE_WEIGHT_OBSTRUCTION",
+    "PART_W33_20260828_T10_S5_HJ_INTERTWINER"
+  ],
+  "boundary": "This does not assert that J2:2 contains no S5 subgroup. It rules out an S5 compatible with the fixed-C13 torus quotient and its canonical fibre weights."
+}
