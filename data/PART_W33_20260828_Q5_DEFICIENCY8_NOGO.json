@@ -1,0 +1,24 @@
+{
+  "schema": "w33.20260828.q5-deficiency8-nogo.v1",
+  "status": "PASS",
+  "sourceCommit": "c1025ae22e63309db3a28afbafdf1beb723cdf91",
+  "defectMass": 8,
+  "forcedValues": [-1, 0, 1],
+  "supportClassification": {
+    "minimumInternalDegree": 4,
+    "abstractCandidates": ["K4 square K2", "K4,4"],
+    "fixedLineDisjointTripleCommonTransversalCensus": {"0": 2500, "2": 3750},
+    "K4,4PossibleInW35": false,
+    "onlyW35Type": "K4 square K2"
+  },
+  "orbitCover": {
+    "orderedNoncollinearPairRepresentative": [0, 1],
+    "matchedPencilPairs": [[0, 6], [1, 7], [2, 8], [3, 9], [4, 10], [5, 11]],
+    "fourOfSixCases": 15,
+    "allCasesInfeasible": true,
+    "maximumExactBacktrackingNodes": 223
+  },
+  "theorem": "No deficiency-eight 26-set exists in W(3,5).",
+  "certifiedIntervalUsingExistingUpperBound": [9, 12],
+  "boundary": "Deficiencies 9, 10 and 11 remain open here. The upper bound 12 is the existing Holotrade feasible witness."
+}
