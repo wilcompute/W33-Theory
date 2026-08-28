@@ -1,0 +1,31 @@
+{
+  "schema": "w33.20260828.q5-deficiency6-nogo.v1",
+  "status": "PASS",
+  "classification": {
+    "max_abs_entry": 1,
+    "reason": "distance-two shell sum is -5M while total negative mass is 6, so 5M<=6",
+    "positive_support": 6,
+    "negative_support": 6,
+    "support_geometry": "each sign support is a full six-line pencil; centers are noncollinear",
+    "unique_orbit_target": "0 on one full pencil, 2 on a noncollinear full pencil, 1 elsewhere"
+  },
+  "orbit_check": {
+    "ordered_noncollinear_pairs": 19500,
+    "expected": 19500,
+    "transitive": true
+  },
+  "representative": {
+    "centers": [0, 1],
+    "profile": {"0": 6, "1": 144, "2": 6},
+    "backtrack_nodes": 455,
+    "feasible": false
+  },
+  "q5_consequence": {
+    "deficiency_6_possible": false,
+    "proved_lower_bound": 7,
+    "known_upper_bound": 12,
+    "certified_interval": [7, 12]
+  },
+  "theorem": "Every deficiency-six defect in W(3,5) would be the difference of two full line pencils at noncollinear centers. PSp(4,5) is transitive on the 19,500 ordered noncollinear center pairs, and the representative occupancy target has no 26-point realization. Hence def(W(3,5))>=7.",
+  "boundary": "The upper bound 12 is the existing explicit Holotrade feasible witness. This pass does not claim deficiency 7 is attainable."
+}
