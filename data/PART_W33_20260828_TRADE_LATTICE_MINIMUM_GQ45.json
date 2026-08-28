@@ -1,0 +1,36 @@
+{
+  "schema": "w33.20260828.trade-lattice-minimum-gq45.v1",
+  "status": "PASS",
+  "lattice": {
+    "rank": 15,
+    "minimum_squared_norm": 8,
+    "signed_minima": 90,
+    "projective_minimum_lines": 45,
+    "minimum_generators_smith": "1^15",
+    "determinant": 7739670528,
+    "determinant_factorization": "2^17 * 3^10",
+    "discriminant_group": "(Z/2)^5 x (Z/6)^9 x Z/24",
+    "hnf_basis_sha256": "6cff7e666ee4d56246d1e451332cd86f3825cb4ffa98712bea3e64180cd052be",
+    "gram_sha256": "7a302e6e6b21aaf89675ccbfeeac0bcd34c1406ec86445d083d859585e2111e6"
+  },
+  "minimum_geometry": {
+    "exact_historical_object": "45 dual flat-tetrad pairs",
+    "dot_distribution": {"-2": 306, "0": 270, "2": 414},
+    "orthogonality_graph": [45, 12, 3, 3],
+    "nonorthogonality_graph": [45, 32, 22, 24],
+    "unsigned_PSp_orbit": 45,
+    "unsigned_stabilizer": 576,
+    "signed_PSp_orbit": 90,
+    "signed_stabilizer": 288
+  },
+  "near_ovoid_trade_factorization": {
+    "local_pair_trades": 7200,
+    "distinct_frozen_oriented_vectors": 720,
+    "multiplicity_each": 10,
+    "unique_sum_of_two_minima": true,
+    "inner_product_of_the_two_minima": -2
+  },
+  "E15_identification": "The real span is exactly the historical E15 carrier because 24 P_{-4}=8I+J-4A; this certificate supplies its primitive integral form and minimum-vector geometry.",
+  "theorem": "The W33 near-ovoid trade lattice is the primitive rank-15 E_{-4} lattice of determinant 2^17 3^10 and minimum 8. Its 45 antipodal minimum-vector lines are exactly the old 45 dual flat-tetrad pairs; orthogonality is the GQ(4,2) graph. PSp(4,3) has unsigned stabilizer 576. Every local near-ovoid trade factors uniquely through an edge of the complementary 45-state graph as a sum of two minima.",
+  "boundary": "The GQ(4,2) identification is an exact finite incidence/lattice statement. No physical Hilbert-space interpretation is inferred."
+}
