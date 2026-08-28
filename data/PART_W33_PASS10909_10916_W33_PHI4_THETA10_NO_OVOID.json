@@ -1,0 +1,30 @@
+{
+  "HJ10_consequence": {
+    "literal_W33_point_ovoid": false,
+    "states": 10,
+    "surviving_W33_interpretation": "spectral/Lovasz capacity shadow at Phi4(3)=10 rather than a ten-point incidence subset"
+  },
+  "W33": {
+    "independence_number": 7,
+    "maximum_cocliques": 2880,
+    "parameters": [40,12,2,4],
+    "spectrum": {"-4":15,"12":1,"2":24},
+    "ten_point_ovoid_exists": false
+  },
+  "boundary": "W33 reconstruction and alpha=7 census are exhaustive finite computations. The theta equality uses the standard Lovasz product theorem for vertex-transitive graphs together with exact ratio bounds. No operator intertwiner between HJ10 and the W33 theta SDP is constructed here.",
+  "passes": "10909-10916",
+  "schema": "w33.pass10909_10916.w33_phi4_theta10_no_ovoid.v1",
+  "spectral_capacity": {
+    "Hoffman_ratio_bound": 10,
+    "Phi4_3": 10,
+    "complement_degree": 27,
+    "complement_least_eigenvalue": -3,
+    "complement_theta_bound": 4,
+    "gap": "theta(W33)-alpha(W33)=3",
+    "theta_W33": 10,
+    "theta_complement": 4,
+    "vertex_transitive_theta_product": "theta(G) theta(Gbar)=40"
+  },
+  "status": "PASS",
+  "theorem": "W33 has independence number7, not10, so its Phi4(3)=10 cannot be a ten-point ovoid/coclique. Nevertheless the exact vertex-transitive SRG spectral bounds force Lovasz theta(W33)=10. Therefore the HJ10/P1(F9) carrier matches the natural W33 ten at the spectral-capacity level, not as a literal W33 point subset."
+}
