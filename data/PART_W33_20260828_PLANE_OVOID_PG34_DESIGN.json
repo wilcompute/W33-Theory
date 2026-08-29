@@ -1,0 +1,35 @@
+{
+  "schema": "w33.20260828.plane-ovoid-pg34-design.v1",
+  "status": "PASS",
+  "carrier": {
+    "ambient": "PG(3,4) with Hermitian polarity",
+    "isotropicPoints": 45,
+    "nonisotropicPoints": 40,
+    "totalPoints": 85,
+    "GQ42": "H(3,4) on the 45 isotropic points"
+  },
+  "ovoids": {
+    "total": 200,
+    "planeOvoidOrbit": 40,
+    "tripodOrbit": 160,
+    "distinguishedRepositoryOrbit": "the 40 plane ovoids"
+  },
+  "incidence": {
+    "matrixShape": [40,45],
+    "rowSum": 9,
+    "columnSum": 8,
+    "BBt": "8I + 2 A_W33 + J",
+    "BtB": "8I + 2 A_complement_GQ42",
+    "BBtB": "12J + 12B",
+    "partialGeometricDesign": "(v,b,k,r;alpha,beta)=(40,45,8,9;12,24)"
+  },
+  "interpretation": "B[c,m]=1 iff the isotropic point m lies in the plane ovoid polar to the nonisotropic point c.",
+  "automorphismGroup": {
+    "structure": "PGammaU(4,2) ~= PSp(4,3):2",
+    "order": 51840,
+    "inner": "PSU(4,2) ~= PSp(4,3), order 25920"
+  },
+  "VeldkampReading": "The 45 perps and 40 plane ovoids form the 85 points of the classical PG(3,4) subspace of the Veldkamp space of GQ(4,2).",
+  "theorem": "The repository's 40x45 W33/GQ(4,2) incidence is exactly the isotropic/nonisotropic Hermitian incidence in PG(3,4); the forty O_c are the classical plane ovoids, not an unnamed new 40-orbit.",
+  "boundary": "Finite geometry only; no physical-state interpretation is implied."
+}
