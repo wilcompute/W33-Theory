@@ -1,0 +1,38 @@
+{
+  "boundary": "The count 540 is an exact new dependency shell of this binary matroid; no identification with other project 540-sets is asserted without an equivariant map.",
+  "distinctTripleSumsByWeight": {
+    "12": 720,
+    "16": 6120,
+    "20": 2400,
+    "24": 270
+  },
+  "fiveCircuitRecovery": {
+    "circuits": 216,
+    "decompositionsPerCircuit": 10,
+    "theorem": "each weight-12 triple sum equals the unique complementary noncollinear pair sum; their union is a five-circuit"
+  },
+  "representationMultiplicities": [
+    {"tripleRepresentations": 3, "words": 720, "xorWeight": 12},
+    {"tripleRepresentations": 1, "words": 2880, "xorWeight": 16},
+    {"tripleRepresentations": 2, "words": 3240, "xorWeight": 16},
+    {"tripleRepresentations": 1, "words": 2400, "xorWeight": 20},
+    {"tripleRepresentations": 1, "words": 270, "xorWeight": 24}
+  ],
+  "schema": "w33.20260829.sentinel-triple-shell.v1",
+  "sixCircuitShell": {
+    "GQInducedGraph": "3K2 (a perfect matching)",
+    "circuits": 540,
+    "collisionPartitionsByXorWeight": {"12": 2160, "16": 3240},
+    "threePlusThreePartitionsPerCircuit": 10
+  },
+  "status": "PASS",
+  "strata": [
+    {"GQEdges": 0, "tripleSupportIntersection": 0, "triples": 2160, "xorWeight": 12},
+    {"GQEdges": 0, "tripleSupportIntersection": 1, "triples": 2880, "xorWeight": 16},
+    {"GQEdges": 0, "tripleSupportIntersection": 2, "triples": 240, "xorWeight": 20},
+    {"GQEdges": 1, "tripleSupportIntersection": 0, "triples": 6480, "xorWeight": 16},
+    {"GQEdges": 2, "tripleSupportIntersection": 0, "triples": 2160, "xorWeight": 20},
+    {"GQEdges": 3, "tripleSupportIntersection": 0, "triples": 270, "xorWeight": 24}
+  ],
+  "tripleCount": 14190
+}
