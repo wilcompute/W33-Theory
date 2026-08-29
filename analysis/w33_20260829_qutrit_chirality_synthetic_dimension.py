@@ -9,7 +9,7 @@ from __future__ import annotations
 import itertools,json,math
 from pathlib import Path
 from collections import Counter,deque
-from sympy import Matrix,symbols,factor,eye
+from sympy import Matrix,symbols,factor
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'data/PART_W33_20260829_QUTRIT_CHIRALITY_SYNTHETIC_DIMENSION.json'
 
@@ -46,13 +46,12 @@ def main():
     r=perm(lambda c,t:(c,t+(1 if c==0 else -1)))
     s=perm(lambda c,t:(1-c,t))
     G=closure([z,r,s]);assert len(G)==18
-    assert compose(s,compose(r,s))==tuple(pow_perm:=None for _ in []) if False else True
     e=tuple(range(6)); rinv=next(p for p in G if compose(r,p)==e)
     assert compose(s,compose(r,s))==rinv
     assert all(compose(z,g)==compose(g,z) for g in G)
     center=[g for g in G if all(compose(g,h)==compose(h,g) for h in G)];assert len(center)==3
     assert Counter(map(order,G))==Counter({1:1,2:3,3:8,6:6})
-    blocks=[{0,1,2},{3,4,5}]
+
     # unique nontrivial 3+3 block system.
     systems=[];all6=set(range(6))
     for A0 in itertools.combinations(range(6),3):
@@ -63,10 +62,10 @@ def main():
 
     # Minimal translation+chirality Hamiltonian.  This is an exact synthetic
     # 3-cycle x 2-leg ladder normal form, not a physical energy assignment.
-    g=symbols('g'); x=symbols('x')
-    H=pmat(z)+pmat(z).T+g*pmat(s)
+    coupling=symbols('g'); x=symbols('x')
+    H=pmat(z)+pmat(z).T+coupling*pmat(s)
     char=factor(H.charpoly(x).as_expr())
-    expected=factor(((x-2)**2-g**2)*((x+1)**2-g**2)**2)
+    expected=factor(((x-2)**2-coupling**2)*((x+1)**2-coupling**2)**2)
     assert factor(char-expected)==0
 
     out={
