@@ -1,0 +1,11 @@
+{
+  "schema": "w33.20260829.qplate-radial-recenter-surrogate.v1",
+  "status": "PASS",
+  "model": {"inputCode":"centered OAM qutrit ell=-1,0,+1","radialFamily":"same-waist LG p=0","qPlate":"phase-only ideal azimuthal shift Delta ell = +/-2q","captureFormula":"Gamma((m+n)/2+1)^2/(Gamma(m+1)Gamma(n+1))","recenterScenario":"hard project into shifted p=0 radial mode, then phase-only inverse OAM recenter and p=0 project"},
+  "qHalf": {"q":0.5,"absDeltaEll":1,"pureChiralityModulo3":false,"meanSinglePassP0Capture":0.8181230868723421,"meanSinglePassRadialLeakage":0.18187691312765786,"worstSinglePassP0Capture":0.7853981633974484,"meanHardProjectRecenterSurvival":0.6714672265064051,"worstHardProjectRecenterSurvival":0.616850275068085},
+  "qThreeHalves": {"q":1.5,"absDeltaEll":3,"pureChiralityModulo3":true,"meanSinglePassP0Capture":0.5460971604872884,"meanSinglePassRadialLeakage":0.4539028395127116,"worstSinglePassP0Capture":0.2945243112740432,"meanHardProjectRecenterSurvival":0.35974147816623253,"worstHardProjectRecenterSurvival":0.0867445699314495},
+  "comparison": {"meanCaptureRatioQ3over2ToQ1over2":0.6675,"extraMeanSinglePassLeakage":0.27202592638505374,"meanRoundTripSurvivalRatio":0.535754336124402},
+  "reading": "q=3/2 is algebraically cleaner for the mod-3 chirality interface because +/-3 is invisible modulo 3, but this same-waist phase-only p=0 surrogate assigns it substantially larger radial-mode capture loss than q=1/2. A physical design therefore needs explicit radial-mode engineering or coherent recentering.",
+  "ci": {"workflow":"Frontier Continuation 20260829","runId":33280344174,"jobId":99174340742,"conclusion":"success"},
+  "boundary": "Analytic LG p=0 overlap surrogate only. No calibrated q=3/2 device, finite-aperture propagation, q-plate retardance profile, radial p>0 coherent recovery, aberration, or measured insertion loss is modeled."
+}
