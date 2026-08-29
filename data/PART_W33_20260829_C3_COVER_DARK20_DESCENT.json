@@ -1,0 +1,14 @@
+{
+  "schema": "w33.20260829.c3-cover-dark20-descent.v1",
+  "status": "PASS",
+  "cover": {"circuitStates":216,"deckGroup":"C3","deckFibres":72,"fibreSize":3,"pointStabilizerOrder":648,"quotientOrder":216,"nonsplit":true},
+  "dark20": {"fullMapRank":20,"deckFixedDimension":8,"quotientFibreSumImageRank":8,"deckDifferenceImageRank":12,"ranksAddToFullDark20":true},
+  "quotient36Plus36": [
+    {"supportsThroughDistinguishedPoint":0,"fibres":36,"dark20RankFromFibreSums":8},
+    {"supportsThroughDistinguishedPoint":2,"fibres":36,"dark20RankFromFibreSums":8}
+  ],
+  "descent": {"fullMapDescendsTo72Fibres":false,"statement":"Only the 8-dimensional deck-invariant part of T20 descends to the 72 central fibres; the remaining 12 dark modes require sheet-resolving C3 data."},
+  "theorem": "The exact rank-20 circuit-to-dark-sector intertwiner splits canonically under the central C3 deck action into an 8-dimensional quotient-visible fibre-sum image and a 12-dimensional fibre-difference image. Thus the three-sheeted nonsplit cover is structurally necessary for 12 of the 20 dark modes.",
+  "ci": {"workflow":"Frontier Continuation 20260829","runId":33280344174,"jobId":99174340742,"conclusion":"success"},
+  "boundary": "Exact finite representation theory for the W33 circuit permutation module. This does not identify the 216 circuit states with physical one-qutrit Clifford gates or assert a calibrated optical implementation."
+}
