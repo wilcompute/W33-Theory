@@ -1,0 +1,22 @@
+{
+  "schema": "w33.20260829.pg34-flatband-index.v1",
+  "status": "PASS",
+  "sublattices": [40,45],
+  "incidenceRank": 25,
+  "observedZeroModes": 35,
+  "chiralIndex": -5,
+  "arbitraryChiralPerturbation": {
+    "exampleRank": 40,
+    "zeroModes": 5,
+    "theorem": "For any 40x45 off-diagonal coupling, nullity(left)-nullity(right)=40-45=-5; at least five zero modes survive, but the full 35 need not."
+  },
+  "PSpEquivariantProtection": {
+    "leftModule": "1 + 24 + 15",
+    "rightModule": "1 + 24 + 20",
+    "unmatchedSectors": [15,20],
+    "protectedZeroModes": 35,
+    "naturalIntertwinerFamily": "a B + b J; generic rank 25, with rank 24 when 9a+45b=0"
+  },
+  "reading": "The five-mode residue is index/sublattice-imbalance protected. The full 35-mode flat band is protected only while the PSp(4,3) representation mismatch is respected.",
+  "boundary": "Exact finite linear-algebra/representation statement; no material band structure, fermion species, or measured Hamiltonian is inferred."
+}
