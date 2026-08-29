@@ -1,0 +1,34 @@
+{
+  "binaryMatroid": {
+    "circuitGeometry": "every 5-circuit is a five-coclique in GQ(4,2)",
+    "fiveCircuits": 216,
+    "girth": 5,
+    "rank": 15
+  },
+  "boundary": "The 216-circuit orbit is not identified with the order-216 projective qutrit Clifford group; only the cardinality coincidence is noted. All asserted identifications are finite code/matroid/group-action statements.",
+  "groupAction": {
+    "circuitOrbitSize": 216,
+    "cosetReading": "the 216 circuits realize the transitive PSp(4,3)/S5 action",
+    "group": "PSp(4,3)",
+    "groupOrder": 25920,
+    "stabilizerAction": "S5 faithfully on the five circuit elements",
+    "stabilizerOrder": 120
+  },
+  "minimumWordGeometry": {
+    "GQ42Adjacency": "distance 16 / disjoint supports",
+    "GQ42Nonadjacency": "distance 12 / intersection size 2",
+    "pairCounts": {
+      "distance12": 720,
+      "distance16": 270
+    },
+    "points": 45,
+    "wordWeight": 8
+  },
+  "schema": "w33.20260829.sentinel-shell-matroid.v1",
+  "status": "PASS",
+  "weight12Shell": {
+    "circuitsThroughPair": 3,
+    "theorem": "every weight-12 word is the XOR of a unique GQ-noncollinear pair of minimum words",
+    "words": 720
+  }
+}
