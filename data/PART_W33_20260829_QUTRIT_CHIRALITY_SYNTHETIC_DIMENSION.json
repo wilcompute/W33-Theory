@@ -1,7 +1,7 @@
 {
   "schema": "w33.20260829.qutrit-chirality-synthetic-dimension.v1",
   "status": "PASS",
-  "stateSpace": "F3 x F2",
+  "stateSpace": "C3 torsor x geometric F2 chirality quotient",
   "dimension": 6,
   "group": {
     "order": 18,
@@ -13,17 +13,22 @@
     "z": "(chi,t)->(chi,t+1), central/common qutrit shift",
     "r": "(0,t)->(0,t+1), (1,t)->(1,t-1), anti-diagonal qutrit shift",
     "s": "(chi,t)->(1-chi,t), chirality swap",
-    "relation": "s r s = r^-1; z commutes with r and s"
+    "relation": "s r s = r^-1; z commutes with r and s",
+    "canonicality": "chi is geometric from the residual hinge anchor. Each 3-state half is a C3 torsor; choosing an F3 origin and generator is a gauge choice, not additional geometry."
   },
   "blockSystem": {
     "unique": "3+3",
     "interpretation": "chi is selected by which residual hinge point lies in the high-release tetrad"
   },
+  "holotradeBridge": {
+    "certificate": "data/w33_near_ovoid_chirality_bridge.json in wilcompute/Holotrade",
+    "result": "the two K3 components of the migration-signature graph are exactly the two residual-hinge chirality blocks"
+  },
   "syntheticHamiltonian": {
-    "form": "H = Z + Z^dagger + g X_chi",
+    "form": "H = Z + Z^dagger + g X_chi after choosing a cyclic coordinate gauge inside each C3 torsor",
     "characteristic": "((x-2)^2-g^2) ((x+1)^2-g^2)^2",
     "levels": "2+g, 2-g, (-1+g)^2, (-1-g)^2"
   },
-  "reading": "The six local microstates admit an exact two-leg, three-site synthetic-coordinate normal form. The C3 center is a common qutrit translation and the C2 quotient is the chirality leg swap.",
+  "reading": "The six local microstates admit an exact two-leg, three-site synthetic-coordinate normal form. The C2 leg/chirality label is geometric; the threefold coordinate is a torsor coordinate until an origin/generator gauge is chosen.",
   "boundary": "Finite permutation-group/synthetic-coordinate statement. No laboratory mode assignment, magnetic flux, or particle chirality is inferred."
 }
