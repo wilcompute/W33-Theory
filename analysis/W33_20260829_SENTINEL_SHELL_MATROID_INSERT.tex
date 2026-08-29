@@ -1,0 +1,42 @@
+% 2026-08-29: binary sentinel shell / matroid closure.
+\subsection*{Current frontier: the sentinel minimum shell carries \(GQ(4,2)\) and a 216-circuit \(S_5\) orbit}
+
+The \(45\) weight-eight words supplied by the Hermitian cross-incidence
+\(B\) do more than generate the historical \([40,15,8]_2\) sentinel. Their
+Hamming metric reconstructs the \(45\)-point generalized quadrangle:
+\[
+ m\sim_{GQ(4,2)}n
+ \iff d_H(b_m,b_n)=16
+ \iff \operatorname{supp}(b_m)\cap\operatorname{supp}(b_n)=\varnothing,
+\]
+whereas noncollinear pairs have distance \(12\) and intersection size \(2\).
+
+There are \(45\cdot32/2=720\) noncollinear pairs. Their pairwise XORs are
+all distinct and exhaust the \(720\) weight-twelve words in the sentinel:
+\[
+ \boxed{\;
+ \{w\in\mathcal S:\mathrm{wt}(w)=12\}
+ =
+ \{b_m+b_n:m\not\sim n\}.
+ \;}
+\]
+Thus every weight-twelve word has a unique two-minimum decomposition.
+
+Regarded as a binary matroid, the \(45\) columns have no dependency of size
+less than five. Exact enumeration finds precisely \(216\) five-circuits.
+Each circuit is a five-coclique of \(GQ(4,2)\), and every GQ nonedge belongs
+to exactly three such circuits. Reconstructing the projective transvection
+action shows that all \(216\) circuits form one \(PSp(4,3)\)-orbit. The
+stabilizer of a circuit has order \(120\) and acts faithfully as the complete
+\(S_5\) on its five elements:
+\[
+ \boxed{\;
+ \mathcal C_5\cong PSp(4,3)/S_5,
+ \qquad |\mathcal C_5|=216.
+ \;}
+\]
+
+The equality \(216=|\mathrm{Clifford}_3^{\mathrm{proj}}|\) is only a numerical
+comparison at this stage: the certificate does not identify the 216-element
+coset orbit with the order-216 qutrit Clifford group. The executable witness
+is \texttt{analysis/w33\_20260829\_sentinel\_shell\_matroid.py}.
