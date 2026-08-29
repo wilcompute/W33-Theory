@@ -1,0 +1,66 @@
+% 2026-08-29: exact PG(3,4) polarity / binary-sentinel closure.
+\subsection*{Current frontier: the Hermitian polarity matrix generates the sentinel code}
+
+Let \(B\) be the already-certified \(40\times45\) Hermitian cross-incidence
+between the \(40\) nonisotropic and \(45\) isotropic points of
+\(\PG(3,\FF_4)\). If
+\[
+ P=\begin{pmatrix}A_{W(3,3)}&B\\ B^T&A_{\GQ(4,2)}\end{pmatrix}
+\]
+is the loopless polarity adjacency, then restoring the \(45\) absolute-point
+loops gives
+\[
+ H=P+\operatorname{diag}(0^{40},1^{45}).
+\]
+An exact reconstruction from the native \(W(3,3)\) data verifies
+\[
+ \boxed{H^2=16I_{85}+5J_{85}}.
+\]
+Thus \(H\) is the symmetric \(2\!-\!(85,21,5)\) point--plane design matrix of
+\(\PG(3,4)\). Its spectrum is
+\[
+ 21^1,\qquad 4^{45},\qquad(-4)^{39},
+\]
+so \(\det H=-21\,4^{84}\) and
+\(H^{-1}=H/16-5J/336\).
+
+The same certificate gives a binary closure that is specific to the
+repository's independently constructed coordinates. The \(45\) columns of
+\(B\), each an eight-subset of the \(40\) nonisotropic points, have
+\[
+ \operatorname{rank}_{2}B=15
+\]
+and span a doubly-even self-orthogonal code with weight enumerator
+\[
+ 1+45z^8+720z^{12}+6930z^{16}+17376z^{20}
+ +6930z^{24}+720z^{28}+45z^{32}+z^{40}.
+\]
+This is exactly the historical sentinel \([40,15,8]_2\), and set comparison
+shows that the \(45\) columns of \(B\) are \emph{all} \(45\) weight-eight
+sentinel words. Hence the same \(45\) objects are simultaneously the
+Hermitian nonisotropic neighborhoods of the \(45\) absolute points, the
+trade-lattice/GQ(4,2) eight-supports, and the complete minimum-word orbit of
+the sentinel code.
+
+Over \(\FF_2\), \(H\) has rank \(17\), recovering the classical
+\([85,17,21]_2\) plane code. Restricting the \(45\) absolute-point plane rows
+to the \(40\) nonabsolute coordinates gives exactly the rank-\(15\) sentinel:
+\[
+ \boxed{\;
+ \mathcal S=
+ \left.
+ \langle\text{polar planes of the 45 absolute points}\rangle_{\FF_2}
+ \right|_{\text{40 nonabsolute points}}.
+ \;}
+\]
+
+\paragraph{Evidence and attribution boundary.}
+The \(2\!-\!(85,21,5)\) design, its \([85,17,21]_2\) code, and the existence
+of the \(S_4(3)\)-invariant \([40,15,8]_2\) code are classical/published and
+are not re-claimed here. The certified project contribution is their explicit
+identification through the independently reconstructed \(B\), including the
+equality of its \(45\) columns with the complete minimum-weight sentinel orbit.
+The executable witness is
+\texttt{analysis/w33\_20260829\_pg34\_polarity\_sentinel.py}.
+This is an exact finite-geometric/code statement; no physical Hamiltonian or
+particle interpretation is inferred.
