@@ -1,0 +1,49 @@
+{
+  "attributionBoundary": "The symmetric 2-(85,21,5) PG(3,4) design, its [85,17,21]_2 code, and the S4(3)-invariant [40,15,8]_2 code are classical/published. The certified project result is the explicit identification of those objects through the independently constructed W33/GQ(4,2) Hermitian cross-incidence B, including that its 45 columns are exactly all minimum-weight sentinel words.",
+  "codeDiagram": {
+    "PG34PlaneCode": "[85,17,21]_2",
+    "absolutePlaneRowsRestrictedTo40": "[40,15,8]_2 sentinel",
+    "punctureTo40Rank": 16
+  },
+  "polarityDesign": {
+    "absolutePoints": 45,
+    "binaryRank": 17,
+    "determinant": "-21 * 4^84",
+    "inverse": "H^{-1} = H/16 - 5J/336",
+    "matrixIdentity": "H^2 = 16 I + 5 J",
+    "nonabsolutePoints": 40,
+    "parameters": "2-(85,21,5)",
+    "points": 85,
+    "rowSum": 21,
+    "spectrum": {
+      "-4": 39,
+      "21": 1,
+      "4": 45
+    },
+    "trace": 45
+  },
+  "schema": "w33.20260829.pg34-polarity-sentinel.v1",
+  "sentinelBridge": {
+    "dimension": 15,
+    "doublyEven": true,
+    "generatorMatrix": "the 45 columns of the 40x45 Hermitian cross-incidence B",
+    "geometricReading": "the 45 minimum words are the nonabsolute neighborhoods of the 45 absolute Hermitian points; equivalently the 45 trade-lattice/GQ(4,2) eight-supports",
+    "minimumDistance": 8,
+    "minimumWords": 45,
+    "minimumWordsExactlyBColumns": true,
+    "parameters": "[40,15,8]_2",
+    "selfOrthogonal": true,
+    "weightEnumerator": {
+      "0": 1,
+      "8": 45,
+      "12": 720,
+      "16": 6930,
+      "20": 17376,
+      "24": 6930,
+      "28": 720,
+      "32": 45,
+      "40": 1
+    }
+  },
+  "status": "PASS"
+}
