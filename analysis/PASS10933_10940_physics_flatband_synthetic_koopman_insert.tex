@@ -1,0 +1,73 @@
+% Passes 10933--10940: physics-oriented continuation after the 85-point and recovery packets.
+\subsection{Index-protected residue, qutrit--chirality synthetic coordinate, and Koopman period-two boundary}
+
+The $85$-state Hermitian incidence coupling admits a sharper flat-band statement than the
+bare $15+20$ zero-mode count.  With off-diagonal block $B\in M_{40\times45}$ of rank $25$,
+chiral sublattice imbalance alone gives the Fredholm-style finite index
+\[
+ (40-\operatorname{rank}B)-(45-\operatorname{rank}B)=-5.
+\]
+Hence an arbitrary chiral-symmetric off-diagonal perturbation can raise the rank to $40$
+and leave only five zero modes.  A concrete integer perturbation does so.  The full
+thirty-five zero modes persist only with the established $PSp(4,3)$ representation split
+\[
+ \mathbb C^{40}=\mathbf1\oplus24\oplus15,
+ \qquad
+ \mathbb C^{45}=\mathbf1\oplus24\oplus20,
+\]
+because the unmatched $15$ and $20$ sectors cannot couple equivariantly.  Thus five modes
+are protected by rectangular/chiral index, whereas the larger flat band is protected by
+finite symmetry.  In the natural equivariant family $aB+bJ$, generic rank remains $25$;
+the trivial channel cancels on $9a+45b=0$, giving rank $24$ rather than opening the dark
+sectors.
+
+The exact six-completion action also has a useful internal-coordinate normal form.  After
+labelling the unique $3+3$ block system by $\chi\in\mathbb F_2$ and each block by
+$t\in\mathbb F_3$, the image is
+\[
+ C_3\times S_3\cong(C_3\times C_3)\rtimes C_2.
+\]
+One may choose generators
+\[
+ z:(\chi,t)\mapsto(\chi,t+1),\qquad
+ r:(0,t)\mapsto(0,t+1),\ (1,t)\mapsto(1,t-1),
+\]
+\[
+ s:(\chi,t)\mapsto(1-\chi,t),
+ \qquad srs=r^{-1},
+\]
+with $z$ central.  The $C_2$ coordinate is not arbitrary: it is exactly which residual
+point of the defect hinge lies in the high-release tetrad.  The minimal synthetic
+three-site/two-leg Hamiltonian
+\[
+ H=Z+Z^\dagger+gX_\chi
+\]
+therefore has exact characteristic polynomial
+\[
+ \boxed{((x-2)^2-g^2)((x+1)^2-g^2)^2}.
+\]
+This is a finite synthetic-coordinate normal form analogous to the internal-state synthetic
+dimensions used in photonic and atomic simulators; it is not yet a physical mode assignment
+or a magnetic-flux model.
+
+Finally, the deterministic Holotrade recovery cycles admit a Koopman audit that blocks an
+overstrong time-crystal reading.  On each two-cycle the Koopman operator is the swap
+\[
+ U=\begin{pmatrix}0&1\\1&0\end{pmatrix},
+ \qquad \operatorname{spec}U=\{+1,-1\},
+\]
+so a formal $\pi$ mode exists for observables odd under the swap.  But the actually tracked
+free-line headroom has nonzero overlap with that mode only on the $36$ starts ending in a
+$16/17$ cycle.  The remaining $2844$ starts end in $19/19$, $17/17$, or $16/16$ cycles and
+therefore have no period-doubled headroom observable at all.  Moreover the map is a finite
+deterministic scheduler with lexicographic tie breaking, not a demonstrated periodically
+driven many-body Hamiltonian; there is no thermodynamic limit or perturbation-robust
+spontaneous time-translation breaking.  The exact $-1$ Koopman mode is therefore a useful
+controller-spectrum object, not evidence for a discrete time-crystal phase.
+
+\paragraph{Evidence boundary.}
+These are exact finite linear-algebra, representation, permutation-group, and deterministic
+dynamical-system statements.  Flat-band, synthetic-dimension, chirality, quasienergy, and
+Koopman language is used only at the level justified by those operators.  No material band,
+fermion species, laboratory synthetic dimension, Floquet phase, or physical time crystal is
+claimed.
