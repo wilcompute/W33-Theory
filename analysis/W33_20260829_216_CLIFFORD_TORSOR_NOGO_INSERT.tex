@@ -1,0 +1,44 @@
+% 2026-08-29: exact no-go for identifying the 216 sentinel circuits with an
+% internal projective-qutrit-Clifford torsor.
+\subsection*{Current frontier: the 216 sentinel circuits are not an internal Clifford torsor}
+
+The \(216\) five-circuits of the binary sentinel minimum-word matroid form the
+homogeneous space
+\[
+ \mathcal C_5\cong \PSp(4,3)/S_5.
+\]
+Because the projective single-qutrit Clifford group also has order \(216\), an
+obvious next question is whether \(\mathcal C_5\) is a regular orbit for an
+order-\(216\) subgroup of \(\PSp(4,3)\). Exact native-coordinate computation,
+together with the complete Connor--Leemans subgroup lattice, gives a no-go.
+
+There are exactly two conjugacy classes of order-\(216\) subgroups. A
+representative of the first is the derived subgroup of a point stabilizer; its
+normalizer has order \(648\), hence class length \(40\), and its orbit
+partition on \(\mathcal C_5\) is
+\[
+ 108+36+36+36.
+\]
+A representative of the second is obtained by fixing a perfect matching of
+the four points on a \(W(3,3)\) line; its normalizer has order \(216\), hence
+class length \(120\), and its circuit-orbit partition is
+\[
+ 108+36+27+27+18.
+\]
+Neither class is transitive. Therefore no internal order-\(216\) subgroup of
+\(\PSp(4,3)\) acts regularly, or even transitively, on the \(216\) circuits.
+
+The already-certified projective qutrit Clifford of order \(216\) arises
+instead as the quotient of the order-\(648\) point stabilizer by its central
+\(C_3\). That quotient does not descend to the circuit action: each nontrivial
+central element acts on \(\mathcal C_5\) as \(72\) disjoint three-cycles and
+fixes no circuit. Thus the central \(C_3\) is not contained in the kernel.
+
+Consequently the numerical equality
+\[
+ |\mathcal C_5|=216=|\mathrm{Clifford}_3^{\mathrm{proj}}|
+\]
+is not an internal equivariant identification. Any future bridge must use
+additional structure (for example a cover/quotient correspondence or cocycle)
+rather than a regular subgroup action. The executable witness is
+\texttt{analysis/w33\_20260829\_216\_clifford\_torsor\_nogo.py}.
