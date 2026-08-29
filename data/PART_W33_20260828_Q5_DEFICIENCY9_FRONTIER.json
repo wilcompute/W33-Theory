@@ -1,0 +1,29 @@
+{
+  "schema": "w33.20260828.q5-deficiency9-frontier.v1",
+  "status": "PASS",
+  "forcedProfile": {"missed":9,"single":138,"double":9,"defectValues":"{-1,0,+1}"},
+  "supportEquations": "A_line d=4d; on P, deg_P-deg_N=4; on N, deg_N-deg_P=4; outside support the P and N neighbour counts agree.",
+  "strata": [
+    {
+      "type":"A",
+      "description":"cross-disjoint pair of 9-line 4-regular supports; each induced graph is L2(3)=SRG(9,4,1,2)",
+      "P":[32,33,34,39,42,90,108,121,149],
+      "N":[5,11,17,55,72,77,78,80,112],
+      "crossCount":0,
+      "realizable26Set":false,
+      "backtrackingNodes":118
+    },
+    {
+      "type":"B",
+      "description":"four cross edges forming a matching; each sign support has degree profile 4^5 5^4",
+      "P":[0,36,41,43,44,45,59,103,122],
+      "N":[1,62,81,130,131,136,146,149,151],
+      "crossEdges":[[0,1],[41,151],[43,146],[44,131]],
+      "realizable26Set":false,
+      "backtrackingNodes":158
+    }
+  ],
+  "certifiedInterval":[9,12],
+  "theorem":"Deficiency nine is not eliminated at the eigen-support level: exact nine-mass eigen-defects exist. Two inequivalent support strata have been frozen and their representative occupancy targets are exactly infeasible as 26-point sets.",
+  "boundary":"The two strata are not proved exhaustive; this is not a deficiency-nine no-go."
+}
