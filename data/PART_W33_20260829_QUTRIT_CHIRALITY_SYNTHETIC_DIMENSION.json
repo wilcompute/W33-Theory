@@ -1,0 +1,29 @@
+{
+  "schema": "w33.20260829.qutrit-chirality-synthetic-dimension.v1",
+  "status": "PASS",
+  "stateSpace": "F3 x F2",
+  "dimension": 6,
+  "group": {
+    "order": 18,
+    "structure": "C3 x S3 = (C3 x C3) : C2",
+    "center": "C3 common qutrit translation",
+    "elementOrders": {"1":1,"2":3,"3":8,"6":6}
+  },
+  "coordinates": {
+    "z": "(chi,t)->(chi,t+1), central/common qutrit shift",
+    "r": "(0,t)->(0,t+1), (1,t)->(1,t-1), anti-diagonal qutrit shift",
+    "s": "(chi,t)->(1-chi,t), chirality swap",
+    "relation": "s r s = r^-1; z commutes with r and s"
+  },
+  "blockSystem": {
+    "unique": "3+3",
+    "interpretation": "chi is selected by which residual hinge point lies in the high-release tetrad"
+  },
+  "syntheticHamiltonian": {
+    "form": "H = Z + Z^dagger + g X_chi",
+    "characteristic": "((x-2)^2-g^2) ((x+1)^2-g^2)^2",
+    "levels": "2+g, 2-g, (-1+g)^2, (-1-g)^2"
+  },
+  "reading": "The six local microstates admit an exact two-leg, three-site synthetic-coordinate normal form. The C3 center is a common qutrit translation and the C2 quotient is the chirality leg swap.",
+  "boundary": "Finite permutation-group/synthetic-coordinate statement. No laboratory mode assignment, magnetic flux, or particle chirality is inferred."
+}
