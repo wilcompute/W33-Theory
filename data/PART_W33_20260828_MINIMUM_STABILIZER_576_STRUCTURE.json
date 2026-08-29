@@ -1,5 +1,5 @@
 {
-  "schema": "w33.20260828.minimum-stabilizer-576-structure.v1",
+  "schema": "w33.20260828.minimum-stabilizer-576-structure.v2",
   "status": "PASS",
   "ambientGroup": "PSp(4,3)",
   "ambientOrder": 25920,
@@ -7,6 +7,9 @@
   "unsignedStabilizer": {
     "order": 576,
     "structure": "2^{1+4}_+ semidirect (S3 x C3)",
+    "centerOrder": 2,
+    "derivedOrder": 96,
+    "elementOrderCensus": {"1":1,"2":43,"3":80,"4":84,"6":272,"12":96},
     "normalExtraspecial2Subgroup": {
       "order": 32,
       "type": "extraspecial plus",
@@ -22,17 +25,18 @@
       "derivedOrder": 3,
       "abelianization": "C6"
     },
-    "quotientReading": "Modulo the central involution, the natural dual-tetrad action is (A4 x A4) semidirect C2 = A4 wr C2."
+    "quotientReading": "H/Z(H) has order 288 and the natural dual-tetrad action (A4 x A4) semidirect C2 = A4 wr C2."
   },
   "signedStabilizer": {
     "order": 288,
     "structure": "2^{1+4}_+ semidirect (C3 x C3)"
   },
   "orbitStabilizerCheck": "25920 / 45 = 576 and 25920 / 90 = 288",
+  "correction": "Version 1 incorrectly identified the order-32 normal extraspecial subgroup as H'. Exact recomputation gives |H'|=96; the order-32 subgroup is O_2(H).",
   "sourceMinimumPacket": [
     "747a159dea67c6ffea96beaf2560991a4c9f252d",
     "f5837a8abfac436bf8ea061e89daf8fcee928a36"
   ],
-  "noteCommit": "3f89a1e07f8568ab86439c7f80ba62fccfae5bd4",
-  "boundary": "The equality of the stabilizer order 576 with other 576-count carriers in the repository does not identify those carriers. An explicit G-set map or permutation-character match is still required."
+  "correctionNoteCommit": "04ec231554aa26f0e99f29983289dc26412960f0",
+  "boundary": "Equal group orders do not identify G-sets. Comparisons must match group invariants and an explicit action/intertwiner."
 }
