@@ -1,0 +1,256 @@
+#!/usr/bin/env python3
+"""PG(3,4) polarity closure and the W33 [40,15,8] sentinel bridge.
+
+Starting only from the native W(3,3) incidence geometry, this script rebuilds
+the 45 antipodal trade supports and the 40x45 Hermitian cross-incidence B used
+by the existing 85-state module.  It then proves two exact statements:
+
+1. adding the 45 absolute-point loops to the existing 85x85 polarity adjacency
+   completes it to the symmetric PG(3,4) point-plane design matrix H, with
+
+       H^2 = 16 I + 5 J.
+
+2. over F_2 the 45 columns of B span a [40,15,8] doubly-even code whose 45
+   weight-eight words are exactly those columns.  Its complete weight enumerator
+   is the historical W33 sentinel enumerator, giving a coordinate-level
+   Hermitian realization of that invariant code.
+
+The ambient 2-(85,21,5) design and the existence of the [40,15,8] code are
+classical/published.  The project contribution certified here is their exact
+identification through the repository's independently constructed B matrix.
+"""
+from __future__ import annotations
+
+import itertools
+import json
+from collections import Counter, defaultdict
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / "data/PART_W33_20260829_PG34_POLARITY_SENTINEL.json"
+
+
+def norm(v):
+    i = next(k for k, x in enumerate(v) if x % 3)
+    z = pow(v[i] % 3, -1, 3)
+    return tuple((z * x) % 3 for x in v)
+
+
+def form(u, v):
+    return (u[0] * v[1] - u[1] * v[0] + u[2] * v[3] - u[3] * v[2]) % 3
+
+
+def geometry():
+    pts = sorted({norm(v) for v in itertools.product(range(3), repeat=4) if any(v)})
+    idx = {v: i for i, v in enumerate(pts)}
+    lines = set()
+    for a, b in itertools.combinations(range(40), 2):
+        if form(pts[a], pts[b]):
+            continue
+        S = set()
+        for s, t in itertools.product(range(3), repeat=2):
+            if s == t == 0:
+                continue
+            S.add(idx[norm(tuple((s * pts[a][k] + t * pts[b][k]) % 3 for k in range(4)))])
+        if len(S) == 4:
+            lines.add(tuple(sorted(S)))
+    lines = sorted(lines)
+    assert len(pts) == len(lines) == 40
+
+    N = [[0] * 40 for _ in range(40)]
+    A = [[0] * 40 for _ in range(40)]
+    for li, L in enumerate(lines):
+        for p in L:
+            N[li][p] = 1
+        for a, b in itertools.combinations(L, 2):
+            A[a][b] = A[b][a] = 1
+    return N, A
+
+
+def trade_incidence(N):
+    cols = [tuple(N[l][p] for l in range(40)) for p in range(40)]
+    sig = defaultdict(list)
+    for S in itertools.combinations(range(40), 4):
+        z = tuple(sum(cols[p][l] for p in S) for l in range(40))
+        sig[z].append(S)
+    pairs = sorted(
+        tuple(sorted((tuple(v[0]), tuple(v[1]))))
+        for v in sig.values()
+        if len(v) == 2
+    )
+    assert len(pairs) == 45
+
+    B = [[0] * 45 for _ in range(40)]
+    supports = []
+    for m, (u, v) in enumerate(pairs):
+        C = set(u) | set(v)
+        assert len(C) == 8
+        supports.append(C)
+        for c in C:
+            B[c][m] = 1
+    assert {sum(r) for r in B} == {9}
+    assert {sum(B[c][m] for c in range(40)) for m in range(45)} == {8}
+
+    G = [[0] * 45 for _ in range(45)]
+    for i, j in itertools.combinations(range(45), 2):
+        if not (supports[i] & supports[j]):
+            G[i][j] = G[j][i] = 1
+    return B, G
+
+
+def mm(A, B):
+    m, k, n = len(A), len(B), len(B[0])
+    assert len(A[0]) == k
+    return [[sum(A[i][t] * B[t][j] for t in range(k)) for j in range(n)] for i in range(m)]
+
+
+def gf2_basis(vectors):
+    piv = {}
+    for x in vectors:
+        y = x
+        while y:
+            p = y.bit_length() - 1
+            if p in piv:
+                y ^= piv[p]
+            else:
+                piv[p] = y
+                break
+    return [piv[p] for p in sorted(piv, reverse=True)]
+
+
+def in_span(x, basis):
+    y = x
+    piv = {b.bit_length() - 1: b for b in basis}
+    while y:
+        p = y.bit_length() - 1
+        if p not in piv:
+            return False
+        y ^= piv[p]
+    return True
+
+
+def main():
+    N, A = geometry()
+    B, G = trade_incidence(N)
+
+    # Existing loopless 85-point polarity adjacency P becomes the point-plane
+    # incidence matrix once the 45 absolute Hermitian points receive loops.
+    H = []
+    for i in range(40):
+        H.append(A[i] + B[i])
+    for j in range(45):
+        H.append(
+            [B[i][j] for i in range(40)]
+            + [G[j][k] + (1 if j == k else 0) for k in range(45)]
+        )
+    assert len(H) == 85 and all(len(r) == 85 for r in H)
+    assert all(H[i][j] == H[j][i] for i in range(85) for j in range(85))
+    assert {sum(r) for r in H} == {21}
+    assert sum(H[i][i] for i in range(85)) == 45
+
+    H2 = mm(H, H)
+    for i in range(85):
+        for j in range(85):
+            assert H2[i][j] == (21 if i == j else 5)
+    # Equivalently H^2 = 16 I + 5 J.  Since H 1 = 21 1, the spectrum is
+    # 21^1, 4^45, (-4)^39 (trace H = 45 fixes the signs).
+
+    # Binary sentinel code generated by the 45 Hermitian cross-neighborhoods.
+    words8 = [
+        sum((B[i][j] & 1) << i for i in range(40))
+        for j in range(45)
+    ]
+    assert len(set(words8)) == 45
+    assert {w.bit_count() for w in words8} == {8}
+    basis = gf2_basis(words8)
+    assert len(basis) == 15
+
+    enumerator = Counter()
+    codewords = set()
+    for coeff in range(1 << len(basis)):
+        w = 0
+        for i, b in enumerate(basis):
+            if (coeff >> i) & 1:
+                w ^= b
+        codewords.add(w)
+        enumerator[w.bit_count()] += 1
+    expected = {
+        0: 1,
+        8: 45,
+        12: 720,
+        16: 6930,
+        20: 17376,
+        24: 6930,
+        28: 720,
+        32: 45,
+        40: 1,
+    }
+    assert dict(sorted(enumerator.items())) == expected
+    assert min(w.bit_count() for w in codewords if w) == 8
+    minimum = {w for w in codewords if w.bit_count() == 8}
+    assert minimum == set(words8)
+    assert all((x & y).bit_count() % 2 == 0 for x in basis for y in basis)
+    assert all(w.bit_count() % 4 == 0 for w in codewords)
+
+    # The full classical 85-point plane code has rank 17 over F_2.  Its
+    # restriction to the 40 nonabsolute coordinates has rank 16, while the
+    # 45 absolute-point plane rows restrict to exactly the rank-15 sentinel.
+    h_masks = [sum((x & 1) << j for j, x in enumerate(r)) for r in H]
+    assert len(gf2_basis(h_masks)) == 17
+    punct40 = [r & ((1 << 40) - 1) for r in h_masks]
+    assert len(gf2_basis(punct40)) == 16
+    absolute_rows_40 = [r & ((1 << 40) - 1) for r in h_masks[40:]]
+    abs_basis = gf2_basis(absolute_rows_40)
+    assert len(abs_basis) == 15
+    assert all(in_span(w, abs_basis) for w in words8)
+    assert all(in_span(w, basis) for w in abs_basis)
+
+    out = {
+        "schema": "w33.20260829.pg34-polarity-sentinel.v1",
+        "status": "PASS",
+        "polarityDesign": {
+            "points": 85,
+            "absolutePoints": 45,
+            "nonabsolutePoints": 40,
+            "parameters": "2-(85,21,5)",
+            "matrixIdentity": "H^2 = 16 I + 5 J",
+            "rowSum": 21,
+            "trace": 45,
+            "spectrum": {"21": 1, "4": 45, "-4": 39},
+            "determinant": "-21 * 4^84",
+            "inverse": "H^{-1} = H/16 - 5J/336",
+            "binaryRank": 17,
+        },
+        "sentinelBridge": {
+            "generatorMatrix": "the 45 columns of the 40x45 Hermitian cross-incidence B",
+            "parameters": "[40,15,8]_2",
+            "dimension": 15,
+            "minimumDistance": 8,
+            "doublyEven": True,
+            "selfOrthogonal": True,
+            "weightEnumerator": expected,
+            "minimumWords": 45,
+            "minimumWordsExactlyBColumns": True,
+            "geometricReading": "the 45 minimum words are the nonabsolute neighborhoods of the 45 absolute Hermitian points; equivalently the 45 trade-lattice/GQ(4,2) eight-supports",
+        },
+        "codeDiagram": {
+            "PG34PlaneCode": "[85,17,21]_2",
+            "punctureTo40Rank": 16,
+            "absolutePlaneRowsRestrictedTo40": "[40,15,8]_2 sentinel",
+        },
+        "attributionBoundary": (
+            "The symmetric 2-(85,21,5) PG(3,4) design, its [85,17,21]_2 code, "
+            "and the S4(3)-invariant [40,15,8]_2 code are classical/published. "
+            "The certified project result is the explicit identification of those "
+            "objects through the independently constructed W33/GQ(4,2) Hermitian "
+            "cross-incidence B, including that its 45 columns are exactly all "
+            "minimum-weight sentinel words."
+        ),
+    }
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+    OUT.write_text(json.dumps(out, indent=2, sort_keys=True) + "\n")
+    print(json.dumps({"status": "PASS", "H2": "16I+5J", "rank2H": 17, "sentinel": [40, 15, 8], "minimumWords": 45}))
+
+
+if __name__ == "__main__":
+    main()
