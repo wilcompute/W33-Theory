@@ -1,0 +1,24 @@
+{
+  "adjacencyCode": {
+    "dimension": 16,
+    "length": 40
+  },
+  "generatorTheorem": "C_S = span_F2{N(u)+N(v): u,v in W33}",
+  "geometricCharacter": {
+    "definition": "chi_L(x)=|supp(x) intersect L| mod 2",
+    "independentOfLineOnCA": true,
+    "kernelOnAdjacencyCode": "C_S",
+    "neighborhoodValue": 1,
+    "reason": "a vertex sees 3 points of L when it lies on L and the unique collinear point of L otherwise",
+    "sentinelValue": 0
+  },
+  "inclusion": "C_S is a codimension-one subcode of C_A",
+  "interpretation": "The missing binary dimension is universal W33 line parity, not an unexplained extra generator.",
+  "quotient": "C_A/C_S = C2; every one of the 40 neighborhoods represents its unique nonzero coset",
+  "schema": "w33.20260829.adjacency-sentinel-extension.v1",
+  "sentinelCode": {
+    "dimension": 15,
+    "parameters": "[40,15,8]_2"
+  },
+  "status": "PASS"
+}
