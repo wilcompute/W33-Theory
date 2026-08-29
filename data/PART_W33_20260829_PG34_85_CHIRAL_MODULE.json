@@ -1,0 +1,33 @@
+{
+  "schema": "w33.20260829.pg34-85-chiral-module.v1",
+  "status": "PASS",
+  "pg34Split": {"nonisotropic": 40, "isotropic": 45, "total": 85},
+  "incidence": {
+    "shape": [40,45],
+    "rank": 25,
+    "rowSum": 9,
+    "columnSum": 8,
+    "BBt": "8I + 2 A_W33 + J",
+    "BtB": "8I + 2 A_complement_GQ42"
+  },
+  "chiralKernels": {
+    "leftDimension": 15,
+    "leftIdentification": "E_-4(W33); integrally ker_Z(B^T) is the previously saturated rank-15 near-ovoid trade lattice",
+    "rightDimension": 20,
+    "rightIdentification": "+3 eigenspace of the GQ(4,2) collinearity graph"
+  },
+  "diracOperator": {
+    "form": "[[0,B],[B^T,0]]",
+    "characteristic": "x^35 (x^2-72) (x^2-12)^24",
+    "singularValues": {"sqrt72": 1, "sqrt12": 24},
+    "zeroModes": 35
+  },
+  "polarityAdjacency": {
+    "form": "[[A_W33,B],[B^T,A_GQ42]]",
+    "characteristic": "(x+4)^15 (x-3)^20 (x^2+x-18)^24 (x^2-24x+72)",
+    "spectrum": ["-4^15", "3^20", "((-1+sqrt(73))/2)^24", "((-1-sqrt(73))/2)^24", "(12+6sqrt(2))^1", "(12-6sqrt(2))^1"]
+  },
+  "source": "analysis/w33_20260829_pg34_85_chiral_module.py",
+  "theorem": "The full 85-point PG(3,4) Hermitian permutation module couples the common trivial and 24-dimensional W33/GQ(4,2) sectors through the 40x45 incidence B, while the W33 E15 trade lattice and a 20-dimensional GQ(4,2) module are the two exact zero-mode sectors of the incidence operator.",
+  "boundary": "Finite incidence/representation theorem only; operator terminology is not a physical Hamiltonian claim."
+}
