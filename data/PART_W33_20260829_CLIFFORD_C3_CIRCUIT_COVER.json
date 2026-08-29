@@ -1,0 +1,43 @@
+{
+  "boundary": "The Clifford quotient acts canonically on the 72 central circuit fibres, not on the 216 circuits themselves. The three-sheeted lift is exact; it is not a regular 216-state Clifford torsor.",
+  "centralExtension": {
+    "K": "W33 point stabilizer",
+    "center": "C3",
+    "centerContainedInDerived": true,
+    "derivedSubgroupOrder": 216,
+    "orderK": 648,
+    "orderQuotient": 216,
+    "quotient": "projective one-qutrit Clifford / Hessian ASL(2,3)",
+    "split": false
+  },
+  "cocycleWitness": {
+    "liftOrderPatterns": [
+      {"elements": 1, "liftOrders": [1,3,3], "quotientOrder": 1},
+      {"elements": 9, "liftOrders": [2,6,6], "quotientOrder": 2},
+      {"elements": 32, "liftOrders": [3,3,3], "quotientOrder": 3},
+      {"elements": 48, "liftOrders": [9,9,9], "quotientOrder": 3},
+      {"elements": 54, "liftOrders": [4,12,12], "quotientOrder": 4},
+      {"elements": 72, "liftOrders": [6,6,6], "quotientOrder": 6}
+    ],
+    "order3QuotientElementsWithOnlyOrder9Lifts": 48,
+    "statement": "the nonsplit central extension defines a nonzero C3-valued extension class for every set-theoretic section"
+  },
+  "quotientAction": {
+    "degree": 72,
+    "faithful": true,
+    "orbitSizes": [36,36],
+    "orbits": [
+      {"circuitStates": 108, "circuitSupportsThroughDistinguishedPoint": 0, "fibres": 36, "quotientStabilizer": "S3"},
+      {"circuitStates": 108, "circuitSupportsThroughDistinguishedPoint": 2, "fibres": 36, "quotientStabilizer": "C6"}
+    ]
+  },
+  "schema": "w33.20260829.clifford-c3-circuit-cover.v1",
+  "status": "PASS",
+  "threeSheetedCover": {
+    "centerActsFreely": true,
+    "circuitStates": 216,
+    "deckFibres": 72,
+    "deckGroup": "C3",
+    "fibreSize": 3
+  }
+}
