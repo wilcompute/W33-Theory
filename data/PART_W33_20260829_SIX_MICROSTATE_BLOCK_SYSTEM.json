@@ -1,0 +1,27 @@
+{
+  "schema": "w33.20260829.six-microstate-block-system.v1",
+  "status": "PASS",
+  "localAction": {
+    "orientedEdgeStabilizer": 54,
+    "sixStateImageOrder": 18,
+    "sixStateImage": "C3 x S3",
+    "kernelOrder": 3,
+    "elementOrderCensus": {"1":1,"2":3,"3":8,"6":6}
+  },
+  "blockSystem": {
+    "uniqueNontrivialThreePlusThree": true,
+    "blockFixingImageOrder": 9,
+    "blockFixingImage": "C3 x C3",
+    "fullPreimageOrder": 27,
+    "quotient": "C2"
+  },
+  "migrationGeometry": {
+    "hingeResidualPoints": 2,
+    "highReleasePointsPerState": 4,
+    "highReleaseIntersectionWithResidualHinge": 1,
+    "identification": "the two 3-state blocks are exactly selected by which residual hinge point lies in the state's high-release signature"
+  },
+  "source": "analysis/w33_20260829_six_microstate_block_system.py",
+  "theorem": "The two K3 migration microstate halves are the unique system of imprimitivity of the exact C3xS3 six-completion action. The quotient C2 simultaneously swaps the two blocks and the two residual points on the defect hinge line.",
+  "boundary": "Finite group-action/scheduler-signature theorem only."
+}
