@@ -1,0 +1,20 @@
+{
+  "schema": "w33.20260829.pg34-subgroup-zero-split.v3",
+  "status": "PASS",
+  "witnessMethod": "orbit coefficients are SHA-256(seed,orbit) reduced to nonzero elements of F_1000003",
+  "repair": "The v2 linear-congruential coefficient stream was algebraically correlated and produced rank 3 even for the trivial subgroup. The v3 deterministic SHA-derived specialization removes that artifact.",
+  "chain": [
+    {"subgroup":"PSp(4,3)","order":25920,"crossPairOrbits":2,"rankWitness":25,"provenMaximumRank":25,"minimumChiralZeroModes":35},
+    {"subgroup":"S5","order":120,"crossPairOrbits":26,"rankWitness":30,"provenMaximumRank":30,"minimumChiralZeroModes":25},
+    {"subgroup":"A5","order":60,"crossPairOrbits":34,"rankWitness":34,"provenMaximumRank":null,"minimumChiralZeroModes":null},
+    {"subgroup":"S4","order":24,"crossPairOrbits":105,"rankWitness":36,"provenMaximumRank":null,"minimumChiralZeroModes":null},
+    {"subgroup":"A4","order":12,"crossPairOrbits":158,"rankWitness":40,"provenMaximumRank":40,"minimumChiralZeroModes":5},
+    {"subgroup":"V4","order":4,"crossPairOrbits":450,"rankWitness":40,"provenMaximumRank":40,"minimumChiralZeroModes":5},
+    {"subgroup":"C2","order":2,"crossPairOrbits":900,"rankWitness":40,"provenMaximumRank":40,"minimumChiralZeroModes":5},
+    {"subgroup":"1","order":1,"crossPairOrbits":1800,"rankWitness":40,"provenMaximumRank":40,"minimumChiralZeroModes":5}
+  ],
+  "firstFullRankSubgroup": "A4",
+  "theorem": "PSp(4,3) has exact maximum equivariant rank 25 and S5 has exact maximum 30. In the tested subgroup chain, A4 is the first subgroup with an explicit rank-40 integer-orbital specialization (certified nonzero modulo 1000003), so A4 and every later listed subgroup permit full rectangular rank 40 and leave only the five index-protected zero modes. A5 and S4 remain between the displayed witness ranks and 40 until their exact maxima are classified.",
+  "ci": {"workflow":"Frontier Continuation 20260829","runId":33280344174,"jobId":99174340742,"conclusion":"success"},
+  "boundary": "Exact finite chiral-coupling/intertwiner statement. A symmetry-allowed perturbation is not asserted to be physically local or dynamically generated."
+}
