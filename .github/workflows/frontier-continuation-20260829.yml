@@ -1,0 +1,32 @@
+name: Frontier Continuation 20260829
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20260829_pg34_subgroup_zero_split_v3.py'
+      - 'analysis/w33_20260829_c3_cover_dark20_descent.py'
+      - 'analysis/w33_20260829_qplate_radial_recenter_surrogate.py'
+      - '.github/workflows/frontier-continuation-20260829.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-continuation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install exact-analysis dependencies
+        run: python -m pip install sympy numpy
+      - name: Repair subgroup rank witnesses
+        run: python analysis/w33_20260829_pg34_subgroup_zero_split_v3.py
+      - name: Split dark20 across the nonsplit central C3 cover
+        run: python analysis/w33_20260829_c3_cover_dark20_descent.py
+      - name: Quantify q-plate radial/recenter surrogate
+        run: python analysis/w33_20260829_qplate_radial_recenter_surrogate.py
