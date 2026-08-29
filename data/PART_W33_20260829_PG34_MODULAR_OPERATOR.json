@@ -1,0 +1,41 @@
+{
+  "blockRanks": {
+    "2": {"A": 16, "B": 15, "GplusI": 15},
+    "3": {"A": 39, "B": 25, "GplusI": 45},
+    "7": {"A": 40, "B": 25, "GplusI": 45}
+  },
+  "boundary": "The exceptional primes follow exactly from the integral determinant. Their appearance is an arithmetic degeneration theorem; no additional physical identification is inferred.",
+  "characteristic2": {
+    "absoluteRowsRestricted40": "[40,15,8]_2 sentinel",
+    "absoluteRowsRestricted40Rank": 15,
+    "augmentationJordan": "J2(0)^16 + J1(0)^52",
+    "augmentationRank": 16,
+    "decomposition": "<1> direct-sum Aug(84)",
+    "identity": "H^2=J",
+    "onOnes": "identity",
+    "puncture40": "W33 binary adjacency code",
+    "puncture40Rank": 16,
+    "rank": 17
+  },
+  "characteristic3": {
+    "augmentation": "invertible semisimple",
+    "eigenMultiplicities": {"-1": 39, "1": 45},
+    "kernel": "<1>",
+    "rank": 84
+  },
+  "characteristic7": {
+    "augmentation": "invertible semisimple",
+    "eigenMultiplicities": {"3 (-4)": 39, "4": 45},
+    "kernel": "<1>",
+    "rank": 84
+  },
+  "genericOddCharacteristic": "H is invertible for every prime p not in {2,3,7}",
+  "integral": {
+    "determinant": "-21*4^84",
+    "identity": "H^2=16I+5J",
+    "singularPrimes": [2,3,7],
+    "spectrum": {"-4": 39, "21": 1, "4": 45}
+  },
+  "schema": "w33.20260829.pg34-modular-operator.v1",
+  "status": "PASS"
+}
