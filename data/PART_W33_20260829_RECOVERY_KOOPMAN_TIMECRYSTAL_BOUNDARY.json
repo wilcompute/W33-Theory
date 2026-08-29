@@ -1,0 +1,28 @@
+{
+  "schema": "w33.20260829.recovery-koopman-timecrystal-boundary.v1",
+  "status": "PASS",
+  "provenance": {
+    "repo": "wilcompute/Holotrade",
+    "commit": "d21a08bacf9802da0ba4bb8176b074fbc9ac7722"
+  },
+  "cycleOperator": {
+    "matrix": "[[0,1],[1,0]]",
+    "eigenvalues": {"+1":1,"-1":1},
+    "quasienergyReading": "0 and pi for unit update period"
+  },
+  "headroomObservable": {
+    "cycleHistogram": {"19/19":2255,"17/17":572,"16/17":36,"16/16":17},
+    "nonzeroPiModeStarts": 36,
+    "zeroPiModeStarts": 2844,
+    "fractionWithPeriodDoubledHeadroom": 0.0125
+  },
+  "falsifier": "State period two is universal for the declared deterministic policy, but free-line headroom is period doubled on only 36/2880 starts. The dominant 19/19 attractor has no headroom oscillation at all.",
+  "timeCrystalBoundary": [
+    "the update map is a deterministic scheduler rule, not a demonstrated periodically driven Hamiltonian",
+    "no thermodynamic/infinite-volume limit is present",
+    "no perturbation-robust spontaneous time-translation-symmetry breaking is established",
+    "the policy uses lexicographic tie-breaking and its selected 933 high cycles are not PSp-invariant"
+  ],
+  "reading": "The -1 Koopman eigenmode is an exact finite-state period-two mode. It is useful for controller spectral analysis but is insufficient evidence for a discrete time-crystal phase.",
+  "boundary": "Finite deterministic dynamical-systems statement; explicitly a no-promotion result for physical time-crystal language."
+}
