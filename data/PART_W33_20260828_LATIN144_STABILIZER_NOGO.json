@@ -1,0 +1,22 @@
+{
+  "schema": "w33.20260828.latin144-stabilizer-nogo.v1",
+  "status": "PASS",
+  "paratopyGroup": {"structure":"S4^3 : S3","order":82944},
+  "mainClasses": {"C2xC2_table":144,"C4_table":432},
+  "latin144PointStabilizer": {
+    "order":576,
+    "structure":"2^4 : (S3 x S3)",
+    "centerOrder":1,
+    "derivedOrder":144,
+    "elementOrderCensus":{"1":1,"2":75,"3":80,"4":180,"6":240}
+  },
+  "w33MinimumVectorStabilizer": {
+    "order":576,
+    "structure":"2^{1+4}_+ : (S3 x C3)",
+    "centerOrder":2,
+    "derivedOrder":96,
+    "elementOrderCensus":{"1":1,"2":43,"3":80,"4":84,"6":272,"12":96}
+  },
+  "theorem": "The residual 144-square class has an actual order-576 paratopy point stabilizer, but that group is not the W33 order-576 minimum-vector stabilizer: their centers, derived subgroups and element-order censuses differ. Hence the canonical residual Latin-square bridge is ruled out at group level.",
+  "boundary": "The result concerns the standard row/column/symbol/parastrophe action on labelled 4x4 Latin squares."
+}
