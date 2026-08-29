@@ -1,0 +1,42 @@
+{
+  "boundary": "This rules out the natural internal/torsor identification only. It does not forbid an external non-equivariant bijection or another representation of the qutrit Clifford group.",
+  "circuitOrbit": {
+    "ambientGroup": "PSp(4,3)",
+    "ambientOrder": 25920,
+    "size": 216,
+    "stabilizer": "S5"
+  },
+  "exhaustion": "Connor-Leemans subgroup lattice lists exactly these two conjugacy classes of order 216; therefore no order-216 subgroup of PSp(4,3) is transitive on the 216 circuits.",
+  "order216Subgroups": [
+    {
+      "circuitOrbitSizes": [108,36,36,36],
+      "conjugacyClassLength": 40,
+      "construction": "derived subgroup of a point stabilizer",
+      "normalizerOrder": 648,
+      "order": 216,
+      "publishedClass": "3^(1+2):Q8",
+      "transitive": false
+    },
+    {
+      "circuitOrbitSizes": [108,36,27,27,18],
+      "conjugacyClassLength": 120,
+      "construction": "perfect-matching stabilizer inside a W33-line stabilizer",
+      "normalizerOrder": 216,
+      "order": 216,
+      "publishedClass": "second order-216 class (Connor-Leemans class 11)",
+      "transitive": false
+    }
+  ],
+  "qutritCliffordQuotient": {
+    "center": "C3",
+    "descendsToCircuitAction": false,
+    "fixedCircuitsPerNontrivialCenterElement": 0,
+    "knownQuotient": "projective one-qutrit Clifford / Hessian ASL(2,3)",
+    "nontrivialCenterCycleShapeOnCircuits": {"3":72},
+    "pointStabilizerOrder": 648,
+    "quotientOrder": 216
+  },
+  "schema": "w33.20260829.216-clifford-torsor-nogo.v1",
+  "status": "PASS",
+  "theorem": "The 216 five-circuit set is not a regular orbit for any internal order-216 subgroup of PSp(4,3), and the point-stabilizer Clifford quotient does not act on it because its central C3 is not in the action kernel."
+}
