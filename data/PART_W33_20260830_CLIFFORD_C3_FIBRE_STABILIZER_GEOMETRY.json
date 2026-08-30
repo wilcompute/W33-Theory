@@ -1,0 +1,69 @@
+{
+  "boundary": "Exact in the 72-fibre permutation representation of the projective one-qutrit Clifford quotient. No physical qutrit/OAM coordinate identification is asserted without an explicit intertwiner.",
+  "cover": {
+    "centralC3Fibres": 72,
+    "circuitStates": 216,
+    "quotientOrder": 216
+  },
+  "fibreOrbits": [
+    {
+      "pointStabilizer": "S3",
+      "size": 36,
+      "supportsThroughDistinguishedW33Point": 0
+    },
+    {
+      "pointStabilizer": "C6",
+      "size": 36,
+      "supportsThroughDistinguishedW33Point": 2
+    }
+  ],
+  "order3Species": [
+    {
+      "affineType": "pure-translation",
+      "conjugateC6StabilizersContainingSubgroup": 0,
+      "conjugateS3StabilizersContainingSubgroup": 9,
+      "cycleShape72": {"1": 9, "3": 21},
+      "cycleShapeOnC6Orbit36": {"3": 12},
+      "cycleShapeOnS3Orbit36": {"1": 9, "3": 9},
+      "extensionRestriction": "split C3 x C3",
+      "fixedFibresInC6Orbit": 0,
+      "fixedFibresInS3Orbit": 9,
+      "liftOrdersOfGeneratorCoset": [3, 3, 3],
+      "subgroupConjugacyOrbitSize": 4
+    },
+    {
+      "affineType": "unipotent-with-affine-fixed-line",
+      "conjugateC6StabilizersContainingSubgroup": 3,
+      "conjugateS3StabilizersContainingSubgroup": 0,
+      "cycleShape72": {"1": 3, "3": 23},
+      "cycleShapeOnC6Orbit36": {"1": 3, "3": 11},
+      "cycleShapeOnS3Orbit36": {"3": 12},
+      "extensionRestriction": "split C3 x C3",
+      "fixedFibresInC6Orbit": 3,
+      "fixedFibresInS3Orbit": 0,
+      "liftOrdersOfGeneratorCoset": [3, 3, 3],
+      "subgroupConjugacyOrbitSize": 12
+    },
+    {
+      "affineType": "fixed-point-free-nontranslation-unipotent",
+      "conjugateC6StabilizersContainingSubgroup": 0,
+      "conjugateS3StabilizersContainingSubgroup": 0,
+      "cycleShape72": {"3": 24},
+      "cycleShapeOnC6Orbit36": {"3": 12},
+      "cycleShapeOnS3Orbit36": {"3": 12},
+      "extensionRestriction": "nonsplit C9",
+      "fixedFibresInC6Orbit": 0,
+      "fixedFibresInS3Orbit": 0,
+      "liftOrdersOfGeneratorCoset": [9, 9, 9],
+      "subgroupConjugacyOrbitSize": 24
+    }
+  ],
+  "schema": "w33.20260830.clifford-c3-fibre-stabilizer-geometry.v1",
+  "stabilizerIncidenceTheorem": {
+    "C6Fibres": "each of the 36 C6-stabilized fibres contains the unique C3 from the 12-subgroup fixed-line unipotent class",
+    "C9Obstruction": "the 24 nonsplit order-three directions fix no circuit fibre and lie in neither point-stabilizer species",
+    "S3Fibres": "each of the 36 S3-stabilized fibres contains the unique C3 from the 4-subgroup translation class"
+  },
+  "status": "PASS",
+  "theorem": "The nonsplit 24-class is exactly the order-three Clifford species that is fixed-point-free on both 36-fibre orbits; the two split species are detected separately by the S3 and C6 stabilizer geometries."
+}
