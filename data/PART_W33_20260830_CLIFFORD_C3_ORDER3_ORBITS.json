@@ -1,0 +1,62 @@
+{
+  "boundary": "The affine fixed-point classification is exact in the canonical ASL(2,3) quotient model. Relating these affine directions to optical phase-space coordinates requires an explicit physical coordinate intertwiner.",
+  "cyclicOrder3Subgroups": {
+    "conjugacyOrbitSizes": [
+      4,
+      12,
+      24
+    ],
+    "orbits": [
+      {
+        "affineFixedPointsPerNonidentityGenerator": 0,
+        "affineType": "pure-translation",
+        "extensionRestriction": "split C3 x C3",
+        "linearPartOrder": 1,
+        "nonidentityElements": 8,
+        "pureTranslation": true,
+        "subgroups": 4
+      },
+      {
+        "affineFixedPointsPerNonidentityGenerator": 3,
+        "affineType": "unipotent-with-affine-fixed-line",
+        "extensionRestriction": "split C3 x C3",
+        "linearPartOrder": 3,
+        "nonidentityElements": 24,
+        "pureTranslation": false,
+        "subgroups": 12
+      },
+      {
+        "affineFixedPointsPerNonidentityGenerator": 0,
+        "affineType": "fixed-point-free-nontranslation-unipotent",
+        "extensionRestriction": "nonsplit C9",
+        "linearPartOrder": 3,
+        "nonidentityElements": 48,
+        "pureTranslation": false,
+        "subgroups": 24
+      }
+    ],
+    "total": 40
+  },
+  "inputCertificate": "PART_W33_20260830_CLIFFORD_C3_LIFT_CHARGE.json",
+  "obstructionClassification": {
+    "geometricType": "fixed-point-free nontranslation unipotent affine C3 directions",
+    "nonsplitOrbit": "the unique 24-subgroup orbit",
+    "nonsplitSubgroups": 24,
+    "splitSubgroups": 16,
+    "statement": "Pure translations (4) and fixed-line unipotents (12) lift to C3 x C3; fixed-point-free nontranslation unipotents (24) lift to C9."
+  },
+  "quotientModel": {
+    "group": "ASL(2,3) = F3^2 : SL(2,3)",
+    "order": 216,
+    "orderDistribution": {
+      "1": 1,
+      "2": 9,
+      "3": 80,
+      "4": 54,
+      "6": 72
+    }
+  },
+  "schema": "w33.20260830.clifford-c3-order3-orbits.v1",
+  "status": "PASS",
+  "theorem": "The 3/5 local C3 obstruction is one complete Clifford conjugacy orbit: ASL(2,3) has order-three subgroup orbits 4+12+24, and the unique 24-orbit is exactly the nonsplit C9 restriction locus."
+}
