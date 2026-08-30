@@ -1,0 +1,26 @@
+{
+  "schema": "w33.20260830.sentinel-six-circuit-orbit.v1",
+  "status": "PASS",
+  "ambientGroup": {
+    "name": "PSp(4,3)",
+    "order": 25920
+  },
+  "sixCircuitShell": {
+    "size": 540,
+    "orbitSizes": [540],
+    "transitive": true,
+    "inducedGQGraph": "3K2"
+  },
+  "stabilizer": {
+    "order": 48,
+    "isomorphism": "C2 x S4",
+    "centralKernelOnSixCircuitPoints": "C2",
+    "faithfulSixPointQuotient": "S4",
+    "quotientOrderSpectrum": {"1": 1, "2": 9, "3": 8, "4": 6},
+    "fullOrderSpectrum": {"1": 1, "2": 19, "3": 8, "4": 12, "6": 8},
+    "splitComplementOrder": 24,
+    "geometricReading": "S4 acts on the six edges of a tetrahedron and preserves the three opposite-edge pairs; the extra central C2 fixes all six circuit labels but acts nontrivially on the remaining 45-point shell."
+  },
+  "theorem": "The 540 sentinel six-circuits are the homogeneous space PSp(4,3)/(C2 x S4).",
+  "boundary": "The exact order-48 stabilizer is established internally. No identification with other project order-48 or 540-object constructions is asserted without an explicit equivariant map."
+}
