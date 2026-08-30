@@ -11,6 +11,7 @@ on:
       - 'analysis/w33_20260830_s4_a4_rank_transition.py'
       - 'analysis/w33_20260830_c3_dark20_character_split.py'
       - 'analysis/w33_20260830_s4_six_circuit_conjugacy.py'
+      - 'analysis/w33_20260830_clifford_c3_lift_charge.py'
       - '.github/workflows/frontier-continuation-20260829.yml'
   workflow_dispatch:
 
@@ -40,5 +41,7 @@ jobs:
         run: python analysis/w33_20260830_c3_dark20_character_split.py
       - name: Test exact conjugacy of the two S4 carriers
         run: python analysis/w33_20260830_s4_six_circuit_conjugacy.py
+      - name: Classify local C3 lift charges
+        run: python analysis/w33_20260830_clifford_c3_lift_charge.py
       - name: Quantify q-plate radial/recenter surrogate
         run: python analysis/w33_20260829_qplate_radial_recenter_surrogate.py
