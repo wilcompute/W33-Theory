@@ -1,0 +1,36 @@
+{
+  "boundary": "All statements are exact binary code/finite-geometry identities. No physical error-rate interpretation is implied by code distance alone.",
+  "dual": {
+    "adjacencyDual": {
+      "geometry": "span of all differences of W33 line indicators",
+      "parameters": "[40,24,6]_2",
+      "weightEnumerator": {"0":1,"6":240,"8":2205,"10":23760,"12":182560,"14":664560,"16":2035170,"18":3243600,"20":4473024,"22":3243600,"24":2035170,"26":664560,"28":182560,"30":23760,"32":2205,"34":240,"40":1}
+    },
+    "nonzeroCosetWeightEnumerator": {"4":40,"8":2880,"10":24064,"12":171360,"14":714240,"16":1909440,"18":3456000,"20":4221168,"22":3456000,"24":1909440,"26":714240,"28":171360,"30":24064,"32":2880,"36":40},
+    "quotient": "C_S^perp/C_A^perp = C2",
+    "sentinelDual": {
+      "geometry": "binary span of the 40 W33 line indicators",
+      "parameters": "[40,25,4]_2",
+      "weightEnumerator": {"0":1,"4":40,"6":240,"8":5085,"10":47824,"12":353920,"14":1378800,"16":3944610,"18":6699600,"20":8694192,"22":6699600,"24":3944610,"26":1378800,"28":353920,"30":47824,"32":5085,"34":240,"36":40,"40":1}
+    },
+    "weight4Words": "exactly the 40 W33 lines",
+    "weight6WordsOfAdjacencyDual": "exactly the 240 symmetric differences of intersecting line pairs"
+  },
+  "primal": {
+    "adjacency": {
+      "parameters": "[40,16,8]_2",
+      "selfOrthogonal": true,
+      "weightEnumerator": {"0":1,"8":45,"12":1120,"16":15570,"20":32064,"24":15570,"28":1120,"32":45,"40":1}
+    },
+    "minimumWords": "both codes have the same 45 weight-eight sentinel minima; the added coset starts at weight 12",
+    "nonzeroCosetWeightEnumerator": {"12":400,"16":8640,"20":14688,"24":8640,"28":400},
+    "quotient": "C_A/C_S = C2",
+    "sentinel": {
+      "parameters": "[40,15,8]_2",
+      "weightEnumerator": {"0":1,"8":45,"12":720,"16":6930,"20":17376,"24":6930,"28":720,"32":45,"40":1}
+    }
+  },
+  "schema": "w33.20260830.code-ladder-duals-macwilliams.v1",
+  "status": "PASS",
+  "theorem": "Duality turns the primal line-parity extension into a literal line-code extension: C_S^perp is the rank-25 W33 line code and C_A^perp is its rank-24 line-difference kernel. MacWilliams gives both full dual enumerators and both nontrivial coset enumerators exactly."
+}
