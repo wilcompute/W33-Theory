@@ -10,6 +10,7 @@ on:
       - 'analysis/w33_20260830_a5_s4_exact_ceiling.py'
       - 'analysis/w33_20260830_s4_a4_rank_transition.py'
       - 'analysis/w33_20260830_c3_dark20_character_split.py'
+      - 'analysis/w33_20260830_s4_six_circuit_conjugacy.py'
       - '.github/workflows/frontier-continuation-20260829.yml'
   workflow_dispatch:
 
@@ -37,5 +38,7 @@ jobs:
         run: python analysis/w33_20260829_c3_cover_dark20_descent.py
       - name: Refine dark20 into C3 characters
         run: python analysis/w33_20260830_c3_dark20_character_split.py
+      - name: Test exact conjugacy of the two S4 carriers
+        run: python analysis/w33_20260830_s4_six_circuit_conjugacy.py
       - name: Quantify q-plate radial/recenter surrogate
         run: python analysis/w33_20260829_qplate_radial_recenter_surrogate.py
