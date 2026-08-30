@@ -1,0 +1,24 @@
+{
+  "schema": "w33.20260830.pg34-polarity-smith.v1",
+  "status": "PASS",
+  "matrix": "85x85 symmetric PG(3,4) point-plane polarity design H",
+  "identity": "H^2 = 16 I + 5 J",
+  "determinantAbsolute": "21 * 4^84",
+  "smithNormalForm": [
+    {"invariantFactor": 1, "multiplicity": 17},
+    {"invariantFactor": 2, "multiplicity": 8},
+    {"invariantFactor": 4, "multiplicity": 36},
+    {"invariantFactor": 8, "multiplicity": 8},
+    {"invariantFactor": 16, "multiplicity": 15},
+    {"invariantFactor": 336, "multiplicity": 1}
+  ],
+  "primaryExponents": {
+    "2": {"0": 17, "1": 8, "2": 36, "3": 8, "4": 16},
+    "3": {"0": 84, "1": 1},
+    "7": {"0": 84, "1": 1}
+  },
+  "cokernel": "(Z/2)^8 x (Z/4)^36 x (Z/8)^8 x (Z/16)^15 x Z/336",
+  "theorem": "SNF(H)=diag(1^17,2^8,4^36,8^8,16^15,336).",
+  "reading": "The characteristic-2 rank 17 is the 17 unit invariant factors. The unique mod-3 and mod-7 null directions occupy the final invariant factor 336=16*3*7, while the remaining torsion is purely 2-primary.",
+  "boundary": "This is an exact integral matrix invariant. No physical interpretation of its torsion factors is asserted by the certificate."
+}
