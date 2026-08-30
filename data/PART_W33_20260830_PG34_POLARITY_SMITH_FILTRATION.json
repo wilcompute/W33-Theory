@@ -1,0 +1,32 @@
+{
+  "boundary": "This is an integral finite-design operator theorem. Any interpretation of the p-adic layers as physical scales or couplings requires an independent dynamical map.",
+  "localSmith": {
+    "2": {
+      "atLeastValuationDimensions": {"1":68,"2":60,"3":24,"4":16},
+      "exactValuationMultiplicities": {"0":17,"1":8,"2":36,"3":8,"4":16},
+      "rankMod2": 17
+    },
+    "3": {"exactValuationMultiplicities":{"0":84,"1":1},"rankMod3":84},
+    "7": {"exactValuationMultiplicities":{"0":84,"1":1},"rankMod7":84}
+  },
+  "matrix": {
+    "determinant": "-21 * 4^84",
+    "exceptionalPrimes": [2,3,7],
+    "identity": "H^2 = 16 I + 5 J",
+    "size": 85
+  },
+  "schema": "w33.20260830.pg34-polarity-smith-filtration.v1",
+  "smithNormalForm": {
+    "cokernel": "(Z/2)^8 + (Z/4)^36 + (Z/8)^8 + (Z/16)^15 + Z/336",
+    "exponent": 336,
+    "invariantFactors": "1^17, 2^8, 4^36, 8^8, 16^15, 336",
+    "multiplicities": {"1":17,"2":8,"4":36,"8":8,"16":15,"336":1}
+  },
+  "status": "PASS",
+  "structuralReading": {
+    "characteristic2": "the 68-dimensional mod-2 kernel is the first layer of a four-step 2-adic defect with valuation strata 8,36,8,16 above the 17 unit factors",
+    "characteristic3and7": "each prime occurs only once, in the terminal invariant factor 336; both modular corank-one defects are the same global Smith direction",
+    "inverseDenominator": "the cokernel exponent 336 matches the exact inverse formula H^{-1}=H/16-5J/336 and proves 336 is the minimal global denominator"
+  },
+  "theorem": "The full integral Smith form is diag(1^17,2^8,4^36,8^8,16^15,336). Characteristic two is a deep four-layer degeneration, while the 3- and 7-primary defects cohabit only the final global invariant factor."
+}
