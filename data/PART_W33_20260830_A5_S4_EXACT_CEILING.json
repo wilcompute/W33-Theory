@@ -1,0 +1,33 @@
+{
+  "schema": "w33.20260830.a5-s4-exact-ceiling.v1",
+  "status": "PASS",
+  "inputS5Multiplicities": {
+    "left40": {"5":2,"41":3,"32":2,"311":2,"221":0,"2111":1,"11111":0},
+    "right45": {"5":3,"41":4,"32":3,"311":1,"221":1,"2111":0,"11111":0}
+  },
+  "A5": {
+    "left": {"1":2,"3a":2,"3b":2,"4":4,"5":2},
+    "right": {"1":3,"3a":1,"3b":1,"4":4,"5":4},
+    "irrepDimensions": {"1":1,"3a":3,"3b":3,"4":4,"5":5},
+    "maximumEquivariantRank": 34,
+    "minimumChiralZeroModes": 17,
+    "matchesExistingRankWitness": 34
+  },
+  "S4": {
+    "left": {"4":5,"31":7,"22":2,"211":3,"1111":1},
+    "right": {"4":7,"31":8,"22":4,"211":2,"1111":0},
+    "irrepDimensions": {"4":1,"31":3,"22":2,"211":3,"1111":1},
+    "maximumEquivariantRank": 36,
+    "minimumChiralZeroModes": 13,
+    "matchesExistingRankWitness": 36
+  },
+  "closedChain": [
+    {"subgroup":"PSp(4,3)","maximumRank":25,"minimumZeroModes":35},
+    {"subgroup":"S5","maximumRank":30,"minimumZeroModes":25},
+    {"subgroup":"A5","maximumRank":34,"minimumZeroModes":17},
+    {"subgroup":"S4","maximumRank":36,"minimumZeroModes":13},
+    {"subgroup":"A4","maximumRank":40,"minimumZeroModes":5}
+  ],
+  "theorem": "Along the tested symmetry-breaking branches, A5 has exact equivariant rank ceiling 34 and S4 exact ceiling 36. Their existing v3 witnesses attain those ceilings. Full rectangular rank 40 first appears at A4 in the displayed chain.",
+  "boundary": "Exact finite representation-theoretic coupling statement. Symmetry-allowed couplings are not asserted to be local or physically generated."
+}
