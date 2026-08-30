@@ -1,0 +1,38 @@
+{
+  "boundary": "This is an exact finite-group/cohomology statement derived from the certified lift-order census. The C3 charge is an extension/deck charge; identifying it with a measured optical phase requires an additional physical intertwiner.",
+  "cohomology": {
+    "localGroup": "H^2(C3,C3) ~= C3 for the central/trivial action",
+    "nonsplitRestrictionClass": "nonzero; its full preimage is C9",
+    "splitRestrictionClass": "0",
+    "statement": "The global extension class restricts nontrivially to exactly 24 of the 40 cyclic order-3 subgroups of Q."
+  },
+  "extension": {
+    "globallySplit": false,
+    "kernel": "C3",
+    "orderK": 648,
+    "orderQ": 216,
+    "quotient": "projective one-qutrit Clifford / Hessian ASL(2,3)"
+  },
+  "inputCertificate": "PART_W33_20260829_CLIFFORD_C3_CIRCUIT_COVER.json",
+  "liftCharge": {
+    "afterChoosingCentralGenerator": {
+      "charge_z": 24,
+      "charge_z^2": 24
+    },
+    "definition": "for q of order 3 and any lift g, omega(q)=g^3 in Z=C3",
+    "inversionLaw": "omega(q^-1)=omega(q)^-1",
+    "liftIndependent": true,
+    "nonzeroChargeOrder3Elements": 48,
+    "zeroChargeOrder3Elements": 32
+  },
+  "order3Restrictions": {
+    "cyclicC3Subgroups": 40,
+    "nontrivialRestrictionFraction": "24/40 = 3/5",
+    "nonsplitC9Preimages": 24,
+    "order3Elements": 80,
+    "splitC3xC3Preimages": 16
+  },
+  "schema": "w33.20260830.clifford-c3-lift-charge.v1",
+  "status": "PASS",
+  "theorem": "The nonsplit 648->216 Clifford extension is locally detected on 3/5 of the order-3 cyclic subgroups: 16 lift to C3xC3 and 24 lift to C9. The 48 nonsplit oriented generators carry the two nonzero central cube charges in an exact 24+24 inversion-paired split."
+}
