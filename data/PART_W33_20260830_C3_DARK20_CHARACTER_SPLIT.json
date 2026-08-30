@@ -1,0 +1,12 @@
+{
+  "schema": "w33.20260830.c3-dark20-character-split.v1",
+  "status": "PASS",
+  "inputCertificate": "PART_W33_20260829_C3_COVER_DARK20_DESCENT.json",
+  "deckGroup": "C3",
+  "complexCharacterMultiplicities": {"1":8,"omega":6,"omega^2":6},
+  "dimensions": {"deckInvariant":8,"omegaSector":6,"omega2Sector":6,"total":20},
+  "reason": "The dark20 representation and deck action are defined over Q. Complex conjugation/Galois conjugation exchanges the omega and omega^2 eigenspaces, so they have equal dimension. The existing exact 8-dimensional fixed-space certificate leaves 12 nonfixed dimensions, forcing 6+6.",
+  "intertwinerConsequence": "Because the certified 216-to-dark20 map has full rank 20 and is C3-equivariant, its sheet-resolving image reaches both nontrivial character sectors; six complex dimensions transform by omega and six by omega^2.",
+  "theorem": "After complexification the exact C3 dark20 decomposition is 8*1 + 6*omega + 6*omega^2. The previously certified 12-dimensional sheet-resolving sector is therefore a conjugate 6+6 pair, not an undifferentiated block.",
+  "boundary": "Exact finite representation theory. The character labels are deck-C3 eigencharacters, not measured optical phases."
+}
