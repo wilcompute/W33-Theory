@@ -13,6 +13,10 @@ on:
       - 'analysis/w33_20260830_s4_six_circuit_conjugacy.py'
       - 'analysis/w33_20260830_clifford_c3_lift_charge.py'
       - 'analysis/w33_20260830_clifford_c3_order3_orbits.py'
+      - 'analysis/w33_20260830_clifford_c3_fibre_stabilizer_geometry.py'
+      - 'analysis/w33_20260830_c5_c6_coherent_incidence.py'
+      - 'analysis/w33_20260830_code_ladder_duals_macwilliams.py'
+      - 'analysis/w33_20260830_pg34_polarity_smith_filtration.py'
       - '.github/workflows/frontier-continuation-20260829.yml'
   workflow_dispatch:
 
@@ -22,7 +26,7 @@ permissions:
 jobs:
   exact-continuation:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-python@v6
@@ -46,5 +50,13 @@ jobs:
         run: python analysis/w33_20260830_clifford_c3_lift_charge.py
       - name: Resolve affine order-three C3 obstruction orbits
         run: python analysis/w33_20260830_clifford_c3_order3_orbits.py
+      - name: Resolve C3 species on the 72 Clifford circuit fibres
+        run: python analysis/w33_20260830_clifford_c3_fibre_stabilizer_geometry.py
+      - name: Build the 216 by 540 circuit coherent incidence geometry
+        run: python analysis/w33_20260830_c5_c6_coherent_incidence.py
+      - name: Close the adjacency-sentinel dual code ladder
+        run: python analysis/w33_20260830_code_ladder_duals_macwilliams.py
+      - name: Resolve the PG34 polarity Smith filtration
+        run: python analysis/w33_20260830_pg34_polarity_smith_filtration.py
       - name: Quantify q-plate radial/recenter surrogate
         run: python analysis/w33_20260829_qplate_radial_recenter_surrogate.py
