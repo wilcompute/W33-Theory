@@ -8,6 +8,7 @@ on:
       - 'analysis/w33_20260829_c3_cover_dark20_descent.py'
       - 'analysis/w33_20260829_qplate_radial_recenter_surrogate.py'
       - 'analysis/w33_20260830_a5_s4_exact_ceiling.py'
+      - 'analysis/w33_20260830_s4_a4_rank_transition.py'
       - '.github/workflows/frontier-continuation-20260829.yml'
   workflow_dispatch:
 
@@ -29,6 +30,8 @@ jobs:
         run: python analysis/w33_20260829_pg34_subgroup_zero_split_v3.py
       - name: Close A5 and S4 exact ceilings
         run: python analysis/w33_20260830_a5_s4_exact_ceiling.py
+      - name: Explain the S4 to A4 full-rank transition
+        run: python analysis/w33_20260830_s4_a4_rank_transition.py
       - name: Split dark20 across the nonsplit central C3 cover
         run: python analysis/w33_20260829_c3_cover_dark20_descent.py
       - name: Quantify q-plate radial/recenter surrogate
