@@ -1,0 +1,18 @@
+% CI-verified exact theorem: run 33337524115.
+\subsection{Duality turns the sentinel extension into the W33 line-code extension}
+Write $C_S$ for the sentinel $[40,15,8]_2$ code and $C_A$ for the rank-$16$ W33 adjacency-row code.  The universal line-parity theorem gives $C_S<C_A$ with quotient $C_2$.  Exact enumeration now gives
+\[
+W_{C_A}-W_{C_S}=400z^{12}+8640z^{16}+14688z^{20}+8640z^{24}+400z^{28},
+\]
+so the additional coset introduces no new minimum words: both codes have exactly the same $45$ weight-$8$ sentinel minima.
+
+MacWilliams duality yields
+\[
+\boxed{C_A^\perp=[40,24,6]_2,\qquad C_S^\perp=[40,25,4]_2},
+\qquad C_S^\perp/C_A^\perp\cong C_2.
+\]
+The geometry is explicit.  The $40$ W33 line indicators have rank $25$ and are exactly the $40$ weight-$4$ words of $C_S^\perp$, hence $C_S^\perp$ is the binary W33 line code.  Their pairwise differences span rank $24$ and equal $C_A^\perp$; its $240$ minimum weight-$6$ words are exactly the symmetric differences of intersecting W33 line pairs.  Thus the primal line-parity extension dualizes to the literal inclusion
+\[
+\boxed{\text{line-difference code }[40,24,6]_2<\text{ line code }[40,25,4]_2}.
+\]
+This is an exact finite-code statement and does not by itself assert a physical error threshold.
