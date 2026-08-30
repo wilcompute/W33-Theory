@@ -1,0 +1,51 @@
+{
+  "ambientGroup": {"name": "PSp(4,3)", "order": 25920},
+  "boundary": "This is an intrinsic sentinel-matroid/PSp incidence geometry. Its 4+4 cube parity resembles other project chirality splittings, but no identification with a separate Holotrade or photonic chirality variable is asserted without an equivariant map.",
+  "coherentPairGeometry": {
+    "fiveCircuitSubdegrees": [5,10,10,10,15,20,20,30,30,30,30,30,60,60,60,60,60],
+    "intersectionPairCounts": {"0": 54000, "1": 51840, "2": 6480, "3": 4320},
+    "orbitalCountsByIntersection": {"0": 8, "1": 6, "2": 1, "3": 2},
+    "orbitalSizes": [1080,2160,2160,2160,3240,4320,4320,6480,6480,6480,6480,6480,12960,12960,12960,12960,12960],
+    "orbitals": 17,
+    "orbitalsDetail": [
+      {"fiveCircuitSubdegree":5,"intersection":0,"sixCircuitSubdegree":2,"size":1080},
+      {"fiveCircuitSubdegree":10,"intersection":0,"sixCircuitSubdegree":4,"size":2160},
+      {"fiveCircuitSubdegree":15,"intersection":0,"sixCircuitSubdegree":6,"size":3240},
+      {"fiveCircuitSubdegree":20,"intersection":0,"sixCircuitSubdegree":8,"size":4320},
+      {"fiveCircuitSubdegree":20,"intersection":0,"sixCircuitSubdegree":8,"size":4320},
+      {"fiveCircuitSubdegree":60,"intersection":0,"sixCircuitSubdegree":24,"size":12960},
+      {"fiveCircuitSubdegree":60,"intersection":0,"sixCircuitSubdegree":24,"size":12960},
+      {"fiveCircuitSubdegree":60,"intersection":0,"sixCircuitSubdegree":24,"size":12960},
+      {"fiveCircuitSubdegree":30,"intersection":1,"sixCircuitSubdegree":12,"size":6480},
+      {"fiveCircuitSubdegree":30,"intersection":1,"sixCircuitSubdegree":12,"size":6480},
+      {"fiveCircuitSubdegree":30,"intersection":1,"sixCircuitSubdegree":12,"size":6480},
+      {"fiveCircuitSubdegree":30,"intersection":1,"sixCircuitSubdegree":12,"size":6480},
+      {"fiveCircuitSubdegree":60,"intersection":1,"sixCircuitSubdegree":24,"size":12960},
+      {"fiveCircuitSubdegree":60,"intersection":1,"sixCircuitSubdegree":24,"size":12960},
+      {"fiveCircuitSubdegree":30,"intersection":2,"sixCircuitSubdegree":12,"size":6480},
+      {"fiveCircuitSubdegree":10,"intersection":3,"sixCircuitSubdegree":4,"size":2160},
+      {"fiveCircuitSubdegree":10,"intersection":3,"sixCircuitSubdegree":4,"size":2160}
+    ]
+  },
+  "maximalOverlapIncidence": {
+    "PSpOrbitalSplit": [2160,2160],
+    "degreeAtFiveCircuit": 20,
+    "degreeAtSixCircuit": 8,
+    "degreePerOrbitalAtFiveCircuit": 10,
+    "degreePerOrbitalAtSixCircuit": 4,
+    "faithfulActionOnEightNeighbours": "S4 of order 24",
+    "faithfulOrderSpectrum": {"1":1,"2":9,"3":8,"4":6},
+    "intersection": 3,
+    "kernelOnEightNeighbours": "C2",
+    "localEightNeighbours": "all 2^3 choices of one endpoint from each matching edge",
+    "localOrbitSizes": [4,4],
+    "localSixCircuitGraph": "3K2",
+    "pairs": 4320,
+    "sixCircuitStabilizer": "C2 x S4 of order 48",
+    "cubeReading": "the two local S4 orbits are the even- and odd-parity tetrahedra in the 3-cube; swapping an endpoint convention exchanges the labels but preserves the unordered 4+4 partition"
+  },
+  "objects": {"crossPairs":116640,"fiveCircuits":216,"sixCircuits":540},
+  "schema": "w33.20260830.c5-c6-coherent-incidence.v1",
+  "status": "PASS",
+  "theorem": "The 216x540 circuit cross-action has 17 PSp orbitals. Its maximal-overlap relation is a two-colour (20,8)-biregular incidence geometry whose local eight-neighbour fibre is the cube split by S4 into two parity tetrahedra 4+4."
+}
