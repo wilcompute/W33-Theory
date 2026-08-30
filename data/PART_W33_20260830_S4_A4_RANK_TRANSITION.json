@@ -1,0 +1,27 @@
+{
+  "schema": "w33.20260830.s4-a4-rank-transition.v1",
+  "status": "PASS",
+  "S4": {
+    "left": {"4":5,"31":7,"22":2,"211":3,"1111":1},
+    "right": {"4":7,"31":8,"22":4,"211":2,"1111":0},
+    "irrepDimensions": {"4":1,"31":3,"22":2,"211":3,"1111":1},
+    "exactMaximumRank": 36,
+    "minimumZeroModes": 13,
+    "deficitSectors": {
+      "211": {"leftMultiplicity":3,"rightMultiplicity":2,"missingCopies":1,"missingDimensions":3},
+      "1111": {"leftMultiplicity":1,"rightMultiplicity":0,"missingCopies":1,"missingDimensions":1}
+    }
+  },
+  "restrictionRules": {"[4]":"1","[1111]":"1","[31]":"3","[211]":"3","[22]":"1' + 1''"},
+  "A4": {
+    "left": {"1":6,"1'":2,"1''":2,"3":10},
+    "right": {"1":7,"1'":4,"1''":4,"3":10},
+    "irrepDimensions": {"1":1,"1'":1,"1''":1,"3":3},
+    "exactMaximumRank": 40,
+    "minimumZeroModes": 5,
+    "allLeftMultiplicitiesCoveredByRight": true
+  },
+  "mechanism": "At S4 the left module has one excess [211] copy (3 dimensions) and one excess sign [1111] copy (1 dimension). On restriction to A4, [211] merges with [31] into the same 3-dimensional irrep and sign merges with trivial; the right module then has multiplicities 10 versus 10 in the 3-sector and 7 versus 6 in the trivial sector. The [22] sector splits as the two nontrivial one-dimensional A4 characters, each also with right multiplicity 4 versus left 2.",
+  "theorem": "The S4-to-A4 jump from exact rank 36 to rank 40 is completely explained by irrep fusion under restriction; no generic-orbital accident is needed.",
+  "boundary": "Exact complex representation theory of the finite permutation modules; this does not select a local or physical perturbation Hamiltonian."
+}
