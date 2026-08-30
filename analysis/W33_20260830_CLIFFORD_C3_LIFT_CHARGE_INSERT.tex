@@ -1,0 +1,29 @@
+% Exact local restriction theorem for the central C3 Clifford extension.
+\subsection{The central $C_3$ Clifford cover is locally $C_9$ on three fifths of the order-three directions}
+
+The exact point-stabilizer audit gives a nonsplit central extension
+\[
+1\longrightarrow Z\cong C_3\longrightarrow K\longrightarrow Q\longrightarrow 1,
+\qquad |K|=648,\qquad |Q|=216,
+\]
+where $Q$ is the projective one-qutrit Clifford/Hessian $\operatorname{ASL}(2,3)$ quotient.  Its certified lift-order census contains $32$ order-three elements of $Q$ with lift orders $(3,3,3)$ and $48$ with lift orders $(9,9,9)$.
+
+For $q\in Q$ of order three and any lift $g\in K$, define the central cube charge
+\[
+\omega(q):=g^3\in Z.
+\]
+This is independent of the lift, since $(gz^a)^3=g^3z^{3a}=g^3$ for central $z^3=1$, and it obeys $\omega(q^{-1})=\omega(q)^{-1}$.
+
+The full preimage of $\langle q\rangle$ has order nine.  If $\omega(q)=1$, all lifts have order three and the preimage is $C_3\times C_3$; if $\omega(q)\neq1$, all lifts have order nine and the preimage is $C_9$.  Since the $80$ order-three elements of $Q$ form $40$ cyclic subgroups, the census therefore yields the exact local split
+\[
+\boxed{40=16_{\,C_3\times C_3}+24_{\,C_9}}.
+\]
+Consequently the global extension class restricts nontrivially to
+\[
+\boxed{24/40=3/5}
+\]
+of the cyclic order-three subgroups of $Q$.  After choosing a generator $z$ of $Z$, inversion pairs the two nonzero charges and forces the $48$ nonsplit oriented generators to divide as
+\[
+\boxed{24\text{ with }g^3=z\quad+\quad24\text{ with }g^3=z^2}.
+\]
+Thus the previously global nonsplitting obstruction localizes on concrete order-three Clifford directions: $24$ cyclic $C_3$ directions thicken to $C_9$ in the three-sheeted cover, while $16$ restrict trivially.  This is an exact finite-group/cohomology statement; identifying the deck charge with a measured optical phase requires an additional physical intertwiner.
