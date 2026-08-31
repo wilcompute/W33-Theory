@@ -1,18 +1,21 @@
 #!/usr/bin/env python3
-"""Test whether the 60-dimensional common colour row space is the transported 60-sector.
+"""Resolve the 60-dimensional common colour row space against all seven sectors.
 
-The all-five audit proves dim(row M+ intersect row M-)=60.  The symmetric
-bicolour algebra also has a distinguished joint sector of dimension 60 with
-(A30,A20)=(0,2).  Equality of dimensions is not enough.  This script uses the
-exact integer spectral projector and modular rank tests to measure the actual
-intersection of M+^T(P_60 V) with row(M-), and conversely.
+The previous audit proved dim(row M+ intersect row M-)=60.  A first follow-up
+correctly tested the distinguished left 60-sector, but its final assertion
+incorrectly assumed that diagonal sector intersections had to add to the whole
+common space.  That is precisely what can fail when equivalent irreducibles
+sit in different spectral sectors.
+
+This version keeps the direct containment test, computes every 7x7 transported
+sector intersection, and records the result as either an equality theorem or a
+no-go.  No diagonal-additivity assumption is made.
 """
 from __future__ import annotations
 import itertools, json
 from collections import deque
 from pathlib import Path
 import numpy as np
-import sympy as sp
 import w33_20260829_216_clifford_torsor_nogo as base
 from w33_20260830_sentinel_six_circuit_orbit import six_circuits
 from w33_20260831_all5_frontier_audit import rank_mod, lagrange_projector_numerators
@@ -20,6 +23,7 @@ from w33_20260831_all5_frontier_audit import rank_mod, lagrange_projector_numera
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'data/PART_W33_20260831_COMMON_COLOUR_60_SECTOR_TEST.json'
 P=1000003
+
 
 def main():
     pts,idx,_lines,N=base.geometry(); supports,masks=base.supports_from_N(N)
@@ -64,45 +68,63 @@ def main():
     A20=(Mp@Mm.T+Mm@Mp.T)//4
     Csep=A30+7*A20
     roots=[-58,-22,-18,8,14,62,170]
-    Q60,D60=lagrange_projector_numerators(Csep,roots)[14]
-    assert int(np.trace(Q60))==60*D60
-    assert rank_mod(Q60,P)==60
-
-    Xp=Mp.T@Q60
-    Xm=Mm.T@Q60
-    rp=rank_mod(Xp,P); rm=rank_mod(Xm,P)
-    assert rp==rm==60
-    rMinus=rank_mod(Mm.T,P); rPlus=rank_mod(Mp.T,P)
-    assert rMinus==rPlus==216
-    join_pm=rank_mod(np.column_stack([Mm.T,Xp]),P)
-    join_mp=rank_mod(np.column_stack([Mp.T,Xm]),P)
-    int_pm=60+216-join_pm
-    int_mp=60+216-join_mp
-
-    # Common colour row space W has dimension 60.  Measure how much of W lies
-    # in each transported joint sector image under M+^T.
-    dims=[]
     sector_meta=[(-58,15),(-22,15),(-18,81),(8,20),(14,60),(62,24),(170,1)]
     projectors=lagrange_projector_numerators(Csep,roots)
+
+    images_plus=[]; images_minus=[]
     for lam,d in sector_meta:
         Qs,Ds=projectors[lam]
-        X=Mp.T@Qs
-        rx=rank_mod(X,P); assert rx==d
-        join=rank_mod(np.column_stack([Mm.T,X]),P)
-        inter=d+216-join
-        dims.append({'separatorEigenvalue':lam,'sectorDimension':d,'intersectionWithOtherColourRowSpace':inter})
-    assert sum(x['intersectionWithOtherColourRowSpace'] for x in dims) >= 60
+        assert int(np.trace(Qs))==d*Ds
+        Xp=Mp.T@Qs; Xm=Mm.T@Qs
+        assert rank_mod(Xp,P)==d and rank_mod(Xm,P)==d
+        images_plus.append(Xp); images_minus.append(Xm)
+
+    rMinus=rank_mod(Mm.T,P); rPlus=rank_mod(Mp.T,P)
+    assert rMinus==rPlus==216
+    stack_rank=rank_mod(np.column_stack([Mp.T,Mm.T]),P)
+    common_dim=216+216-stack_rank
+    assert common_dim==60
+
+    # Direct test of the distinguished 60-sector.
+    s60=4
+    Xp60=images_plus[s60]; Xm60=images_minus[s60]
+    int_pm=60+216-rank_mod(np.column_stack([Mm.T,Xp60]),P)
+    int_mp=60+216-rank_mod(np.column_stack([Mp.T,Xm60]),P)
+    equals60=bool(int_pm==60 and int_mp==60)
+
+    # Full transported-sector overlap matrix.  Off-diagonal entries are allowed
+    # and are the expected signature when equivalent irreducibles occupy
+    # different symmetric spectral sectors.
+    cross=[]
+    for i,(li,di) in enumerate(sector_meta):
+        row=[]
+        for j,(lj,dj) in enumerate(sector_meta):
+            join=rank_mod(np.column_stack([images_plus[i],images_minus[j]]),P)
+            inter=di+dj-join
+            row.append(int(inter))
+        cross.append(row)
+
+    diagonal=[cross[i][i] for i in range(7)]
+    offdiag=[
+        {'plusSector':sector_meta[i][0],'minusSector':sector_meta[j][0],'dimension':cross[i][j]}
+        for i in range(7) for j in range(7) if i!=j and cross[i][j]
+    ]
 
     out={
-      'schema':'w33.20260831.common-colour-60-sector-test.v1','status':'PASS',
-      'commonColourRowSpaceDimension':60,
-      'transported60SectorDimensions':[rp,rm],
+      'schema':'w33.20260831.common-colour-60-sector-test.v2','status':'PASS',
+      'commonColourRowSpaceDimension':common_dim,
+      'sectorOrder':[{'separatorEigenvalue':l,'dimension':d} for l,d in sector_meta],
+      'crossSectorIntersectionMatrix':cross,
+      'diagonalSectorIntersectionDimensions':diagonal,
+      'nonzeroOffDiagonalIntersections':offdiag,
       'Mplus60ImageIntersectionWithRowMminus':int_pm,
       'Mminus60ImageIntersectionWithRowMplus':int_mp,
-      'sectorwiseMplusImageIntersectionsWithRowMminus':dims,
-      'equalsTransported60Sector':bool(int_pm==60 and int_mp==60),
-      'boundary':'Equality is asserted only if both containment tests attain dimension 60; otherwise the dimension-60 coincidence is explicitly rejected.'
+      'equalsTransported60Sector':equals60,
+      'reading':('The common colour row space is exactly the transported 60-sector.' if equals60 else
+                 'The dimension-60 coincidence is not an equality; the full 7x7 matrix records the actual cross-sector intertwining pattern.'),
+      'boundary':'This is an exact modular-rank certificate at a generic prime, with all source projectors integral and independently rank-certified.'
     }
     OUT.parent.mkdir(parents=True,exist_ok=True); OUT.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
-    print(json.dumps(out,sort_keys=True))
+    print(json.dumps({'status':'PASS','common':common_dim,'equals60':equals60,'direct':[int_pm,int_mp],
+                      'diag':diagonal,'offdiag':offdiag},sort_keys=True))
 if __name__=='__main__': main()
