@@ -1,0 +1,26 @@
+% CI-verified exact theorem: run 33337524115.
+\subsection{Integral Smith filtration of the $PG(3,4)$ polarity operator}
+Let $H$ be the symmetric $85\times85$ polarity/design matrix satisfying
+\[
+H^2=16I+5J,\qquad \det H=-21\,4^{84}.
+\]
+Exact local Smith elimination at the only exceptional primes gives valuation multiplicities
+\[
+\begin{array}{c|ccccc}
+p=2 & v_2=0&1&2&3&4\\\hline
+\text{multiplicity}&17&8&36&8&16,
+\end{array}
+\]
+while at both $p=3$ and $p=7$ the valuation pattern is $0^{84},1^1$.  The invariant-factor divisibility chain and determinant therefore force the complete Smith normal form
+\[
+\boxed{\operatorname{SNF}(H)=\operatorname{diag}\bigl(1^{17},2^8,4^{36},8^8,16^{15},336\bigr)}.
+\]
+Equivalently,
+\[
+\operatorname{coker}H\cong (\mathbb Z/2)^8\oplus(\mathbb Z/4)^{36}\oplus(\mathbb Z/8)^8\oplus(\mathbb Z/16)^{15}\oplus\mathbb Z/336.
+\]
+Its exponent is $336$, exactly the global denominator appearing in
+\[
+H^{-1}=H/16-5J/336.
+\]
+Thus the characteristic-$3$ and characteristic-$7$ corank-one defects occupy the same terminal Smith direction, whereas characteristic $2$ has a genuinely deep four-stage filtration: $68$ invariant factors are divisible by $2$, $60$ by $4$, $24$ by $8$, and $16$ by $16$.  This is an integral finite-design theorem; a physical $p$-adic scale interpretation requires a separate dynamical map.
