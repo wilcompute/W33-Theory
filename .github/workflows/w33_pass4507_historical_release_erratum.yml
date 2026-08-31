@@ -29,15 +29,19 @@ jobs:
           set -euo pipefail
           python - <<'PY'
           from pathlib import Path
-          p=Path('analysis/PASS4469_4494_APARTMENT_EXTENSION_RELEASE.md')
-          text=p.read_text(encoding='utf-8')
-          marker='PASS4507-ERRATUM-BANNER'
+          p = Path('analysis/PASS4469_4494_APARTMENT_EXTENSION_RELEASE.md')
+          text = p.read_text(encoding='utf-8')
+          marker = 'PASS4507-ERRATUM-BANNER'
           if marker not in text:
-              banner='''<!-- PASS4507-ERRATUM-BANNER -->
-> **CORRECTION — Passes 4503/4507.** The restricted-subgroup section table in this historical release is superseded. The full-group `389/390` nonsplitting result remains valid, but point and line stabilizers are now exactly `386/387` and `387/388` (both nonsplit), while the canonical incident-flag stabilizer is `384/384` with affine section dimension `6`. See [`PASS4503_4510_CORRECTED_APARTMENT_RELEASE.md`](PASS4503_4510_CORRECTED_APARTMENT_RELEASE.md). The old `370/370` point/line and `338/308` finer-gauge values below are retained only as historical text and must not be cited as current results.
-
-'''
-              p.write_text(banner+text,encoding='utf-8')
+              banner = (
+                  '<!-- PASS4507-ERRATUM-BANNER -->\n'
+                  '> **CORRECTION — Passes 4503/4507.** The restricted-subgroup section table in this historical release is superseded. '
+                  'The full-group `389/390` nonsplitting result remains valid, but point and line stabilizers are now exactly `386/387` and '
+                  '`387/388` (both nonsplit), while the canonical incident-flag stabilizer is `384/384` with affine section dimension `6`. '
+                  'See [`PASS4503_4510_CORRECTED_APARTMENT_RELEASE.md`](PASS4503_4510_CORRECTED_APARTMENT_RELEASE.md). '
+                  'The old `370/370` point/line and `338/308` finer-gauge values below are retained only as historical text and must not be cited as current results.\n\n'
+              )
+              p.write_text(banner + text, encoding='utf-8')
           PY
       - name: Commit only the historical report if changed
         shell: bash
