@@ -19,6 +19,7 @@ on:
       - 'analysis/w33_20260830_circuit24_clifford_line_module.py'
       - 'analysis/w33_20260830_code_ladder_duals_macwilliams.py'
       - 'analysis/w33_20260830_pg34_polarity_smith_filtration.py'
+      - 'analysis/w33_20260831_all5_frontier_audit.py'
       - '.github/workflows/frontier-continuation-20260829.yml'
   workflow_dispatch:
 
@@ -60,6 +61,8 @@ jobs:
         run: python analysis/w33_20260830_c5_c6_bicolour_spectral_algebra.py
       - name: Identify the 24-sector Clifford line module
         run: python analysis/w33_20260830_circuit24_clifford_line_module.py
+      - name: Execute all five circuit frontier audits
+        run: python analysis/w33_20260831_all5_frontier_audit.py
       - name: Close the adjacency-sentinel dual code ladder
         run: python analysis/w33_20260830_code_ladder_duals_macwilliams.py
       - name: Resolve the PG34 polarity Smith filtration
