@@ -31,12 +31,14 @@ on:
       - 'analysis/w33_20260831_hemisystem_eigenframe_576.py'
       - 'analysis/w33_20260831_two_s5_permutation_modules.py'
       - 'analysis/w33_20260831_hemisystem_s5_a5_coupling.py'
+      - 'analysis/w33_20260831_hemisystem_five_minima_schlafli_bundle.py'
       - 'data/PART_W33_20260831_ALL5_FRONTIER_KEY_RESULTS.json'
       - 'data/PART_W33_20260831_SECOND_FIVE_FRONTIER_KEY_RESULTS.json'
       - 'data/PART_W33_20260831_HEMISYSTEM_CIRCUIT_BRIDGE.json'
       - 'data/PART_W33_20260831_HEMISYSTEM_EIGENFRAME_576.json'
       - 'data/PART_W33_20260831_TWO_S5_PERMUTATION_MODULES.json'
       - 'data/PART_W33_20260831_HEMISYSTEM_S5_A5_COUPLING.json'
+      - 'data/PART_W33_20260831_HEMISYSTEM_FIVE_MINIMA_SCHLAFLI_BUNDLE.json'
       - '.github/workflows/frontier-continuation-20260829.yml'
   workflow_dispatch:
 
@@ -96,6 +98,8 @@ jobs:
         run: python analysis/w33_20260831_two_s5_permutation_modules.py
       - name: Compare hemisystem S5 A5 coupling ceilings
         run: python analysis/w33_20260831_hemisystem_s5_a5_coupling.py
+      - name: Test the 27x8 Schlaefli hemisystem bundle
+        run: python analysis/w33_20260831_hemisystem_five_minima_schlafli_bundle.py
       - name: Resolve the directed orbital hidden inside A20
         run: python analysis/w33_20260831_a20_directed_orbital_refinement.py
       - name: Freeze all-five frontier invariants
