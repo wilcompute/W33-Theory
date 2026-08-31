@@ -1,0 +1,43 @@
+{
+  "algebra": {
+    "dimensionGeneratedByA30A20": 7,
+    "proofMode": "exact integer annihilating polynomials plus trace multiplicities; no floating-point diagonalization",
+    "separatingOperator": "A30 + 7 A20",
+    "separatingSpectrum": [-58, -22, -18, 8, 14, 62, 170]
+  },
+  "boundary": "The seven joint sectors are exact PSp-invariant spectral sectors of this incidence algebra; irreducibility as complex PSp(4,3) modules is not asserted here.",
+  "exactGramIdentities": {
+    "A20Degree": 20,
+    "A30A20Commute": true,
+    "A30Degree": 30,
+    "crossColour": "M+ M-^T + M- M+^T = 4 A20",
+    "sameColour": "M+ M+^T = M- M-^T = 10 I + A30",
+    "supportsDisjoint": true,
+    "union": "M M^T = 20 I + 2 A30 + 4 A20"
+  },
+  "incidence": {
+    "colourDegrees": [10, 4],
+    "colourOrbitalSizes": [2160, 2160],
+    "shape": [216, 540],
+    "unionDegrees": [20, 8]
+  },
+  "schema": "w33.20260830.c5-c6-bicolour-spectral-algebra.v1",
+  "spectra": {
+    "A20": {"-10": 15, "-4": 15, "-2": 81, "2": 80, "8": 24, "20": 1},
+    "A30": {"-6": 20, "-4": 81, "0": 60, "6": 39, "12": 15, "30": 1},
+    "bipartiteAdjacency": "0^324 plus +/-sqrt(lambda) for lambda in {160^1,64^24,28^60,16^35,4^96}",
+    "jointSectorDimensions": [1, 15, 15, 20, 24, 60, 81],
+    "jointSectors": [
+      {"A20": -2, "A30": -4, "dimension": 81, "unionGramEigenvalue": 4},
+      {"A20": 2, "A30": 0, "dimension": 60, "unionGramEigenvalue": 28},
+      {"A20": 8, "A30": 6, "dimension": 24, "unionGramEigenvalue": 64},
+      {"A20": 2, "A30": -6, "dimension": 20, "unionGramEigenvalue": 16},
+      {"A20": -10, "A30": 12, "dimension": 15, "unionGramEigenvalue": 4},
+      {"A20": -4, "A30": 6, "dimension": 15, "unionGramEigenvalue": 16},
+      {"A20": 20, "A30": 30, "dimension": 1, "unionGramEigenvalue": 160}
+    ],
+    "unionGram": {"4": 96, "16": 35, "28": 60, "64": 24, "160": 1}
+  },
+  "status": "PASS",
+  "theorem": "The two maximal-overlap colours are isospectral (10,4)-biregular incidence systems. Their same-colour and cross-colour Gram operators generate a 7-sector commutative spectral algebra on the 216 five-circuits, and the union incidence has Gram spectrum 160^1+64^24+28^60+16^35+4^96."
+}
