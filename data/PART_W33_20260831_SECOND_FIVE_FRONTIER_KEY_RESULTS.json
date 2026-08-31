@@ -1,0 +1,98 @@
+{
+  "schema": "w33.20260831.second-five-frontier-key-results.v1",
+  "status": "PASS",
+  "sourceWorkflow": {
+    "runId": 33349823610,
+    "jobId": 99360850361,
+    "conclusion": "success",
+    "headSha": "1c38a83d2f832648715201534aefb03c997b9fc1"
+  },
+  "commonColour60": {
+    "dimension": 60,
+    "equalsTransported60Sector": false,
+    "transported60DirectIntersections": [0, 0],
+    "sectorwiseDiagonalIntersections": [0, 0, 0, 20, 0, 24, 1],
+    "nonzeroOffDiagonalPairwiseIntersections": [],
+    "moduleDecomposition": [1, 15, 20, 24],
+    "reading": "The common colour row space is not the symmetric 60-sector. It contains the full 1-, 20-, and 24-dimensional simple sectors plus one diagonal copy of the unique 15-dimensional irrep inside the doubled 15-isotypic component."
+  },
+  "leftC5Wedderburn": {
+    "orbitalAlgebraDimension": 10,
+    "centerDimension": 7,
+    "complexBlockSizes": [2, 1, 1, 1, 1, 1, 1],
+    "algebra": "M_2(C) + C^6",
+    "leftModuleDecompositionByDegree": {
+      "1": 1,
+      "15": 2,
+      "20": 1,
+      "24": 1,
+      "30": 1,
+      "30bar": 1,
+      "81": 1
+    },
+    "doubled15SectorSeparatorEigenvalues": [-58, -22],
+    "symmetric60Sector": {
+      "separatorEigenvalue": 14,
+      "centralMinimalPolynomial": "x^2 - 578*x + 88813",
+      "discriminant": -21168,
+      "discriminantAsEisensteinSquare": "-3*84^2",
+      "roots": "289 +/- 42*sqrt(-3)",
+      "complexSplit": [30, 30],
+      "field": "Q(sqrt(-3))"
+    }
+  },
+  "rightC6AndKernel324": {
+    "orbitalAlgebraDimension": 32,
+    "centerDimension": 9,
+    "complexBlockSizes": [3, 2, 2, 2, 2, 2, 1, 1, 1],
+    "rightModuleDecompositionByDegree": {
+      "1": 1,
+      "15": 3,
+      "20": 2,
+      "24": 2,
+      "30": 2,
+      "30bar": 2,
+      "60": 1,
+      "64": 1,
+      "81": 2
+    },
+    "kernelDimension": 324,
+    "kernelCharacterNorm": 8,
+    "kernelMultiplicityFreeComplexDecomposition": [15, 20, 24, 30, 30, 60, 64, 81],
+    "kernelQuadratic30Pair": {
+      "centralMinimalPolynomial": "x^2 - 136*x + 5596",
+      "discriminant": -3888,
+      "discriminantAsEisensteinSquare": "-3*36^2",
+      "roots": "68 +/- 18*sqrt(-3)",
+      "field": "Q(sqrt(-3))"
+    }
+  },
+  "incidenceSmith": {
+    "M": {
+      "nonzeroSmithForm": "1^156 2^44 4^15 8^1",
+      "twoAdicExponentHistogram": {"0": 156, "1": 44, "2": 15, "3": 1},
+      "twoAdicIndexExponent": 77
+    },
+    "Mplus": {
+      "nonzeroSmithForm": "1^201 2^14 4^1",
+      "twoAdicExponentHistogram": {"0": 201, "1": 14, "2": 1},
+      "twoAdicIndexExponent": 16
+    },
+    "Mminus": {
+      "nonzeroSmithForm": "1^201 2^14 4^1",
+      "twoAdicExponentHistogram": {"0": 201, "1": 14, "2": 1},
+      "twoAdicIndexExponent": 16
+    },
+    "zeroKernelDimension": 324
+  },
+  "eisensteinSixNoGo": {
+    "dark20OmegaNorm": 1,
+    "sector24OmegaNorm": 1,
+    "omegaCrossInnerProduct": 0,
+    "KOrbitalCount": 111,
+    "bestProjectedRationalRank": 0,
+    "conclusion": "NO_GO",
+    "reading": "The two six-dimensional omega modules are irreducible but nonisomorphic K-modules. Central C3 charge and dimension do not determine the K-module."
+  },
+  "boundary": "All representation statements are exact finite-group/module statements. The shared Q(sqrt(-3)) field is an algebraic theorem, not by itself a physical identification of the corresponding sectors."
+}
