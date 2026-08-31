@@ -33,6 +33,10 @@ on:
       - 'analysis/w33_20260831_hemisystem_s5_a5_coupling.py'
       - 'analysis/w33_20260831_hemisystem_five_minima_schlafli_bundle.py'
       - 'analysis/w33_20260831_pg34_line_strata_w33_unification.py'
+      - 'analysis/w33_20260831_pg34_polar_secant_stabilizer216.py'
+      - 'analysis/w33_20260831_hemisystem_schlafli_edge_bijection.py'
+      - 'analysis/w33_20260831_sentinel_weight20_orbit_census.py'
+      - 'analysis/w33_20260831_hemisystem_angle_fission_design.py'
       - 'data/PART_W33_20260831_ALL5_FRONTIER_KEY_RESULTS.json'
       - 'data/PART_W33_20260831_SECOND_FIVE_FRONTIER_KEY_RESULTS.json'
       - 'data/PART_W33_20260831_HEMISYSTEM_CIRCUIT_BRIDGE.json'
@@ -41,6 +45,10 @@ on:
       - 'data/PART_W33_20260831_HEMISYSTEM_S5_A5_COUPLING.json'
       - 'data/PART_W33_20260831_HEMISYSTEM_FIVE_MINIMA_SCHLAFLI_BUNDLE.json'
       - 'data/PART_W33_20260831_PG34_LINE_STRATA_W33_UNIFICATION.json'
+      - 'data/PART_W33_20260831_PG34_POLAR_SECANT_STABILIZER216.json'
+      - 'data/PART_W33_20260831_HEMISYSTEM_SCHLAFLI_EDGE_BIJECTION.json'
+      - 'data/PART_W33_20260831_SENTINEL_WEIGHT20_ORBIT_CENSUS.json'
+      - 'data/PART_W33_20260831_HEMISYSTEM_ANGLE_FISSION_DESIGN.json'
       - '.github/workflows/frontier-continuation-20260829.yml'
   workflow_dispatch:
 
@@ -100,10 +108,18 @@ jobs:
         run: python analysis/w33_20260831_two_s5_permutation_modules.py
       - name: Compare hemisystem S5 A5 coupling ceilings
         run: python analysis/w33_20260831_hemisystem_s5_a5_coupling.py
-      - name: Test the 27x8 Schlaefli hemisystem bundle
+      - name: Test the 27-frame signed-sum construction
         run: python analysis/w33_20260831_hemisystem_five_minima_schlafli_bundle.py
       - name: Unify PG34 line strata with W33 edges and lattice minima
         run: python analysis/w33_20260831_pg34_line_strata_w33_unification.py
+      - name: Identify the polar-secant order-216 stabilizer
+        run: python analysis/w33_20260831_pg34_polar_secant_stabilizer216.py
+      - name: Identify hemisystem lines with Schlaefli edges
+        run: python analysis/w33_20260831_hemisystem_schlafli_edge_bijection.py
+      - name: Classify the full sentinel weight-20 shell
+        run: python analysis/w33_20260831_sentinel_weight20_orbit_census.py
+      - name: Resolve hemisystem angle fissions and spherical design strength
+        run: python analysis/w33_20260831_hemisystem_angle_fission_design.py
       - name: Resolve the directed orbital hidden inside A20
         run: python analysis/w33_20260831_a20_directed_orbital_refinement.py
       - name: Freeze all-five frontier invariants
