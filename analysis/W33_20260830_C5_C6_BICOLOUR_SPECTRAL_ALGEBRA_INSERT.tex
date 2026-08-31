@@ -1,0 +1,41 @@
+% Exact CI-verified theorem; Frontier Continuation run 33345071604.
+\subsection{A seven-sector bicolour algebra on the $216$ five-circuits}
+The maximal-overlap relation between the $216$ sentinel five-circuits and the $540$ sentinel six-circuits,
+\[
+|C_5\cap C_6|=3,
+\]
+is $(20,8)$-biregular and splits into two $PSp(4,3)$ orbitals of size $2160$.  Let their $(216\times540)$ biadjacency matrices be $M_+$ and $M_-$.  Each colour is $(10,4)$-biregular, and exact integer computation gives
+\[
+M_+M_+^T=M_-M_-^T=10I+A_{30},
+\]
+\[
+M_+M_-^T+M_-M_+^T=4A_{20},
+\]
+where $A_{30}$ and $A_{20}$ are simple regular graphs of degrees $30$ and $20$ on the five-circuit set.  Their edge supports are disjoint and
+\[
+[A_{30},A_{20}]=0.
+\]
+Therefore the uncoloured incidence matrix $M=M_++M_-$ satisfies
+\[
+MM^T=20I+2A_{30}+4A_{20}.
+\]
+The exact spectra are
+\[
+\operatorname{Spec}(A_{30})=30^1+12^{15}+6^{39}+0^{60}+(-4)^{81}+(-6)^{20},
+\]
+\[
+\operatorname{Spec}(A_{20})=20^1+8^{24}+2^{80}+(-2)^{81}+(-4)^{15}+(-10)^{15}.
+\]
+The separating operator $A_{30}+7A_{20}$ has seven distinct eigenvalues and forces seven simultaneous sectors, with $(A_{30},A_{20};\dim)$ equal to
+\[
+(-4,-2;81),\ (0,2;60),\ (6,8;24),\ (-6,2;20),\ (12,-10;15),\ (6,-4;15),\ (30,20;1).
+\]
+Hence the joint spectral dimensions are
+\[
+\boxed{1,15,15,20,24,60,81},
+\]
+and the maximal-overlap Gram spectrum is
+\[
+\boxed{\operatorname{Spec}(MM^T)=160^1+64^{24}+28^{60}+16^{35}+4^{96}}.
+\]
+In particular $M$ has full row rank $216$ over characteristic zero.  The proof is exact: integer annihilating polynomials and trace multiplicities replace floating-point diagonalisation.  These seven spaces are certified $PSp(4,3)$-invariant spectral sectors of the incidence algebra; identification with irreducible complex representations is deliberately left to a separate character-theoretic audit.
