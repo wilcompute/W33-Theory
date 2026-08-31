@@ -28,9 +28,11 @@ on:
       - 'analysis/w33_20260831_eisenstein_dark20_intertwiner.py'
       - 'analysis/w33_20260831_second5_frontier_freeze.py'
       - 'analysis/w33_20260831_hemisystem_circuit_bridge.py'
+      - 'analysis/w33_20260831_hemisystem_eigenframe_576.py'
       - 'data/PART_W33_20260831_ALL5_FRONTIER_KEY_RESULTS.json'
       - 'data/PART_W33_20260831_SECOND_FIVE_FRONTIER_KEY_RESULTS.json'
       - 'data/PART_W33_20260831_HEMISYSTEM_CIRCUIT_BRIDGE.json'
+      - 'data/PART_W33_20260831_HEMISYSTEM_EIGENFRAME_576.json'
       - '.github/workflows/frontier-continuation-20260829.yml'
   workflow_dispatch:
 
@@ -82,8 +84,10 @@ jobs:
         run: python analysis/w33_20260831_incidence_2adic_snf.py
       - name: Resolve the Eisenstein dark20 six-sector intertwiner
         run: python analysis/w33_20260831_eisenstein_dark20_intertwiner.py
-      - name: Resolve the two-ovoid hemisystem to circuit bridge
+      - name: Classify the two-ovoid and sentinel-circuit S5 species
         run: python analysis/w33_20260831_hemisystem_circuit_bridge.py
+      - name: Resolve the 216-line hemisystem eigenframe and 576 constant
+        run: python analysis/w33_20260831_hemisystem_eigenframe_576.py
       - name: Resolve the directed orbital hidden inside A20
         run: python analysis/w33_20260831_a20_directed_orbital_refinement.py
       - name: Freeze all-five frontier invariants
