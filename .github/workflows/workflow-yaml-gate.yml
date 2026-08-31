@@ -13,13 +13,17 @@ name: Workflow YAML gate
 #        run: echo 'Disabled: GitHub Pages must remain on master:/docs.'
 #      YAML reads `run: echo 'Disabled` and then chokes on the second colon.
 #
-#   2. `${{ ... }}` inside a FLOW mapping
-#        concurrency: {group: pass4065-4072-${{ github.ref }}, cancel-in-progress: true}
-#      Block style tolerates the braces; inside `{ }` the `{{` opens a nested flow mapping
-#      mid-value.
+#   2. GitHub expression syntax inside a YAML flow mapping
+#        concurrency: {group: pass4065-4072-<github.ref expression>, cancel-in-progress: true}
+#      Block style tolerates the expression braces; inside `{ }` the nested braces can make
+#      the YAML scalar ambiguous unless the value is quoted.
 #
 # Both are one-line fixes (quote the value). This job blocks, because a workflow that
 # cannot be parsed is not a failing test -- it is a test that never ran.
+#
+# IMPORTANT: do not place a literal GitHub expression opener followed by an empty body in
+# this workflow's own `run:` text. GitHub expands expressions before the shell starts, so a
+# diagnostic string can otherwise invalidate the checker itself before it creates a job.
 
 on:
   push:
@@ -36,7 +40,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: workflow-yaml-gate-${{ github.ref }}
+  group: "workflow-yaml-gate-${{ github.ref }}"
   cancel-in-progress: true
 
 jobs:
@@ -47,7 +51,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        with: {python-version: '3.12'}
+        with:
+          python-version: '3.12'
+      - name: Install YAML parser
+        run: python -m pip install --disable-pip-version-check pyyaml
       - name: Parse all workflow YAML
         run: |
           python - <<'PY'
@@ -65,7 +72,7 @@ jobs:
               print(f"  {f}: {e}")
           if bad:
               print()
-              print("Fix: quote the offending scalar. The two classes seen here were an")
-              print("unquoted value containing ': ', and ${{ }} inside a { } flow mapping.")
+              print("Fix: quote the offending scalar. Common failures are an")
+              print("unquoted value containing ': ' and expression braces inside a flow mapping.")
           sys.exit(1 if bad else 0)
           PY
