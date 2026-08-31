@@ -14,10 +14,15 @@ This audit determines *where their permutation characters differ*.
 2. Use the seven exact circuit spectral projectors to evaluate known G-character
    traces on the 120 elements of H_H. Frobenius reciprocity then gives the
    multiplicity of every circuit-visible irrep inside C[H].
-3. Check the cross-Hom dimension against the five H_H-orbits on C.
+3. Check the cross-Hom dimension against the H_H-orbits on C.
 4. Subtract the shared character contribution from the hemisystem module,
-   exposing the dimensions/multiplicities of the genuinely new representation
+   exposing the dimensions/multiplicities of genuinely new representation
    species carried by the second S5 class.
+5. Treat the 40- and 45-point modules only as diagnostics.  Earlier v1 assumed
+   without proof that the circuit degree-15/20/24 labels were the same irrep
+   species appearing in those point modules; the failed CI assertion showed
+   that shortcut was invalid.  We now report those comparisons rather than
+   imposing them.
 """
 from __future__ import annotations
 
@@ -69,7 +74,6 @@ def main():
     g40=[gens40[i] for i in chosen]; g45=[gens45[i] for i in chosen]
     Gpaired=base.closure_paired(g40,g45); assert len(Gpaired)==25920
 
-    # Hemisystem pairs and four-generator action.
     orbit432={frozenset(p40[x] for x in T0) for p40,_ in Gpaired}; assert len(orbit432)==432
     hpairs=sorted({canon_pair(T) for T in orbit432}); assert len(hpairs)==216
     hidx={P:i for i,P in enumerate(hpairs)}
@@ -81,7 +85,6 @@ def main():
         return tuple(out)
     actH=[hact_perm(g) for g in g40]
 
-    # Complete hemisystem orbital algebra.
     relHH,repsHH,sizesHH=orbit_ids(actH,actH,216,216)
     rH=len(repsHH)
     TH=orbital_mult(relHH,repsHH)
@@ -94,7 +97,6 @@ def main():
     assert sum(m*m for m in hblocks)==rH
     hfac_out=[{k:v for k,v in r.items() if not k.startswith('_')} for r in hfac]
 
-    # Sentinel five-circuit action and exact seven spectral projectors.
     c5=[]
     for C in itertools.combinations(range(45),5):
         w=0
@@ -127,97 +129,98 @@ def main():
     sectors=[(-58,'15a',15),(-22,'15b',15),(-18,'81',81),(8,'20',20),(14,'30+30bar',60),(62,'24',24),(170,'1',1)]
     projs=lagrange_projector_numerators(Csep,[lam for lam,_,_ in sectors])
 
-    # Hemisystem-pair stabilizer H_H and circuit permutations of its elements.
     Tbase=frozenset(hpairs[0][0]); Cbase=ALL-Tbase
     HH=[(p40,p45) for p40,p45 in Gpaired if himage(p40,Tbase) in (Tbase,Cbase)]
     assert len(HH)==120
     def cperm(p45): return tuple(i5[tuple(sorted(p45[q] for q in C))] for C in c5)
 
-    avg={}
-    char_rows=[]
+    avg={}; char_rows=[]
     for lam,name,dim in sectors:
         Qn,D=projs[lam]
-        s=sp.Rational(0)
-        vals=Counter()
+        s=sp.Rational(0); vals=Counter()
         for p40,p45 in HH:
             p=cperm(p45)
             num=sum(int(Qn[i,p[i]]) for i in range(216))
-            val=sp.Rational(num,D)
-            assert val.q==1
+            val=sp.Rational(num,D); assert val.q==1
             s+=val; vals[int(val)]+=1
         av=s/120; assert av.q==1
         avg[name]=int(av)
         char_rows.append({'sector':name,'dimension':dim,'separatorEigenvalue':lam,
                           'fixedMultiplicityAverage':int(av),'characterValueHistogramOnHH':dict(sorted(vals.items()))})
 
-    # The two 15 eigenspaces are two copies of the same G-irrep.
+    # The two noncentral 15 projectors are multiplicity-space copies of the
+    # same circuit-visible G-irrep, so their subgroup-fixed traces agree.
     assert avg['15a']==avg['15b']
     m15=avg['15a']; m20=avg['20']; m24=avg['24']; m81=avg['81']; m1=avg['1']
-    assert m1==1
-    # The rational 60-sector is one 30 plus its Galois conjugate.  An induced
-    # rational permutation character contains conjugates with equal multiplicity.
-    assert avg['30+30bar']%2==0
+    assert m1==1 and avg['30+30bar']%2==0
     m30=avg['30+30bar']//2
 
-    # Cross-Hom dimension = number of HH-orbits on circuit points.
     HH45=[p45 for _,p45 in HH]
     cross_orbits=parts(HH45,216,lambda g,i:cperm(g)[i])
     cross_dim=len(cross_orbits)
     predicted_cross=1 + 2*m15 + m20 + m24 + m81 + 2*m30
     assert predicted_cross==cross_dim
 
-    # Independent 40/45 point-action checks:
-    # C^40 = 1 + V15 + V24, and C^45 = 1 + V20 + V24.
+    # Point modules are now diagnostics, not irrep-label assumptions.
     HH40=[p40 for p40,_ in HH]
     orb40=parts(HH40,40,lambda g,i:g[i]); orb45=parts(HH45,45,lambda g,i:g[i])
-    assert len(orb40)==1+m15+m24
-    assert len(orb45)==1+m20+m24
+    predicted40_from_circuit_labels=1+m15+m24
+    predicted45_from_circuit_labels=1+m20+m24
+    point40_label_match=(len(orb40)==predicted40_from_circuit_labels)
+    point45_label_match=(len(orb45)==predicted45_from_circuit_labels)
 
     shared_dim=1+15*m15+20*m20+24*m24+81*m81+60*m30
     shared_norm=1+m15*m15+m20*m20+m24*m24+m81*m81+2*m30*m30
-    residual_dim=216-shared_dim
-    residual_norm=rH-shared_norm
+    residual_dim=216-shared_dim; residual_norm=rH-shared_norm
     assert residual_dim>=0 and residual_norm>=0
 
-    # Compare complete hemisystem Wedderburn degree/multiplicity multiset with
-    # the known shared contribution.  Remove shared factors by degree/multiplicity
-    # only when forced; leave exact raw factor records as the primary certificate.
     complete_complex=[]
     for r in hfac_out:
         for _ in range(r['factorDegree']):
             complete_complex.append((r['complexIrrepDegree'],r['permutationMultiplicity']))
     complete_complex=sorted(complete_complex)
 
-    # Stabilizer subdegrees (the permutation character norm rH).
     base_stab=HH40
     sub=parts(base_stab,216,lambda g,i:hidx[canon_pair(himage(g,frozenset(hpairs[i][0])))])
     assert len(sub)==rH
 
+    mismatch_reading=[]
+    if not point40_label_match:
+        mismatch_reading.append('The W33 40-point 15/24 constituents cannot both be identified with the circuit-labelled 15/24 species using degree alone.')
+    if not point45_label_match:
+        mismatch_reading.append('The 45-point 20/24 constituents cannot both be identified with the circuit-labelled 20/24 species using degree alone.')
+
     out={
-      'schema':'w33.20260831.two-s5-permutation-modules.v1','status':'PASS',
-      'circuit216':{'dimension':216,'orbitalRank':10,'decomposition':'1 + 2*15 + 20 + 24 + 81 + 30 + 30bar'},
+      'schema':'w33.20260831.two-s5-permutation-modules.v2','status':'PASS',
+      'repair':'v1 falsely promoted equal degrees to irrep identities in the 40/45 point modules; v2 turns those equations into diagnostics.',
+      'circuit216':{'dimension':216,'orbitalRank':10,'decomposition':'1 + 2*15_C + 20_C + 24_C + 81_C + 30_C + 30bar_C'},
       'hemisystem216':{'dimension':216,'orbitalRank':rH,'centerDimension':zdimH,
-        'complexWedderburnBlockSizes':sorted(hblocks,reverse=True),
-        'factorRecords':hfac_out,'complexDegreeMultiplicityPairs':complete_complex,
-        'subdegrees':sorted(map(len,sub),reverse=True)},
+        'complexWedderburnBlockSizes':sorted(hblocks,reverse=True),'factorRecords':hfac_out,
+        'complexDegreeMultiplicityPairs':complete_complex,'subdegrees':sorted(map(len,sub),reverse=True)},
       'circuitVisibleMultiplicitiesInHemisystemModule':{
-        '1':m1,'15':m15,'20':m20,'24':m24,'81':m81,'30':m30,'30bar':m30,
+        '1':m1,'15_C':m15,'20_C':m20,'24_C':m24,'81_C':m81,'30_C':m30,'30bar_C':m30,
         'sharedDimension':shared_dim,'sharedCharacterNormContribution':shared_norm,
         'projectorAverages':char_rows},
       'crossHom':{'dimension':cross_dim,'orbitSizes':sorted(map(len,cross_orbits),reverse=True),
         'frobeniusReciprocityPrediction':predicted_cross},
       'residual':{'dimensionNotInCircuitVisibleSpecies':residual_dim,
         'characterNormNotInCircuitVisibleSpecies':residual_norm},
-      'pointActionChecks':{'HHOrbitsOn40':sorted(map(len,orb40),reverse=True),
-        'HHOrbitsOn45':sorted(map(len,orb45),reverse=True),
-        'identities':['#orbits40 = 1 + m15 + m24','#orbits45 = 1 + m20 + m24']},
-      'theorem':'The two nonconjugate index-216 S5 actions have different permutation characters. Exact circuit spectral projectors determine every circuit-visible multiplicity in the hemisystem action by Frobenius reciprocity; the remaining degree and character norm are supplied by genuinely new PSp(4,3) representation species resolved by the hemisystem orbital algebra.',
-      'boundary':'Irrep labels are attached only where the existing circuit spectral algebra proves them. New hemisystem-only factors are reported by exact degree, multiplicity, and rational central factor rather than guessed names.'
+      'pointActionDiagnostics':{
+        'HHOrbitsOn40':sorted(map(len,orb40),reverse=True),'actualOrbitCount40':len(orb40),
+        'predictionIfCircuit15And24WerePointSpecies':predicted40_from_circuit_labels,'labelMatch40':point40_label_match,
+        'HHOrbitsOn45':sorted(map(len,orb45),reverse=True),'actualOrbitCount45':len(orb45),
+        'predictionIfCircuit20And24WerePointSpecies':predicted45_from_circuit_labels,'labelMatch45':point45_label_match,
+        'reading':mismatch_reading},
+      'theorem':'The two nonconjugate index-216 S5 actions have different permutation characters. Exact circuit spectral projectors determine every circuit-visible multiplicity in the hemisystem action by Frobenius reciprocity. Equal irrep degrees across the circuit and point carriers are not silently identified; the point-action orbit counts explicitly test and, where applicable, reject those degree-only identifications.',
+      'boundary':'Irrep labels are attached only where an exact projector or character calculation proves them. Same degree does not imply same PSp(4,3) irrep species.'
     }
     OUT.write_text(json.dumps(out,indent=2,sort_keys=True)+"\n")
-    print(json.dumps({'status':'PASS','rH':rH,'centerH':zdimH,'blocks':sorted(hblocks,reverse=True),
-      'degrees':complete_complex,'known':{'15':m15,'20':m20,'24':m24,'81':m81,'30pairEach':m30},
+    print(json.dumps({'status':'PASS','schema':out['schema'],'rH':rH,'centerH':zdimH,
+      'blocks':sorted(hblocks,reverse=True),'degrees':complete_complex,
+      'known':{'15_C':m15,'20_C':m20,'24_C':m24,'81_C':m81,'30pairEach_C':m30},
       'cross':cross_dim,'sharedDim':shared_dim,'residualDim':residual_dim,'residualNorm':residual_norm,
-      'subdegrees':sorted(map(len,sub),reverse=True),'orb40':sorted(map(len,orb40),reverse=True),'orb45':sorted(map(len,orb45),reverse=True)},sort_keys=True))
+      'subdegrees':sorted(map(len,sub),reverse=True),'orb40':sorted(map(len,orb40),reverse=True),
+      'orb45':sorted(map(len,orb45),reverse=True),'labelMatch40':point40_label_match,
+      'labelMatch45':point45_label_match},sort_keys=True))
 
 if __name__=='__main__':main()
