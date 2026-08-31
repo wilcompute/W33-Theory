@@ -23,6 +23,9 @@ on:
       - 'analysis/w33_20260831_a20_directed_orbital_refinement.py'
       - 'analysis/w33_20260831_all5_frontier_freeze.py'
       - 'analysis/w33_20260831_common_colour_60_sector_test.py'
+      - 'analysis/w33_20260831_c5_wedderburn_kernel.py'
+      - 'analysis/w33_20260831_incidence_2adic_snf.py'
+      - 'analysis/w33_20260831_eisenstein_dark20_intertwiner.py'
       - 'data/PART_W33_20260831_ALL5_FRONTIER_KEY_RESULTS.json'
       - '.github/workflows/frontier-continuation-20260829.yml'
   workflow_dispatch:
@@ -67,8 +70,14 @@ jobs:
         run: python analysis/w33_20260830_circuit24_clifford_line_module.py
       - name: Execute all five circuit frontier audits
         run: python analysis/w33_20260831_all5_frontier_audit.py
-      - name: Test the common colour 60-space against the 60-sector
+      - name: Resolve the common colour 60-space
         run: python analysis/w33_20260831_common_colour_60_sector_test.py
+      - name: Resolve the C5 Wedderburn algebra and 324-kernel
+        run: python analysis/w33_20260831_c5_wedderburn_kernel.py
+      - name: Resolve complete incidence 2-adic Smith forms
+        run: python analysis/w33_20260831_incidence_2adic_snf.py
+      - name: Resolve the Eisenstein dark20 six-sector intertwiner
+        run: python analysis/w33_20260831_eisenstein_dark20_intertwiner.py
       - name: Resolve the directed orbital hidden inside A20
         run: python analysis/w33_20260831_a20_directed_orbital_refinement.py
       - name: Freeze all-five frontier invariants
