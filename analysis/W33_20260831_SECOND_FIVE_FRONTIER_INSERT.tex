@@ -1,0 +1,114 @@
+% Auto-contained frontier insert: second five circuit closures, 2026-08-31.
+\subsection{Second five circuit closure: Wedderburn blocks, kernel, Smith form, and Eisenstein no-go}
+
+Let $M=M_++M_-$ be the $216\times540$ maximal-overlap incidence between the
+five- and six-circuit orbits, with the two colour orbitals $M_\pm$.  The
+previous frontier audit proved
+\[
+ \dim\bigl(\operatorname{row}M_+\cap\operatorname{row}M_-\bigr)=60.
+\]
+An exact transported-projector audit now shows that this common $60$-space is
+\emph{not} the symmetric $60$-dimensional joint spectral sector: the latter
+has zero intersection with the opposite colour row space in both directions.
+In the sector order $15,15,81,20,60,24,1$, the diagonal transported
+intersections are
+\[
+ 0,\ 0,\ 0,\ 20,\ 0,\ 24,\ 1,
+\]
+with no nonzero off-diagonal pairwise intersections.
+
+The $10$-orbital five-circuit commutant has centre dimension $7$ and exact
+complex Wedderburn type
+\[
+ \operatorname{End}_{\mathrm{PSp}(4,3)}(\mathbb C^{216})
+ \cong M_2(\mathbb C)\oplus\mathbb C^6.
+\]
+Consequently
+\[
+ \mathbb C^{216}\cong
+ \mathbf1\oplus 2V_{15}\oplus V_{20}\oplus V_{24}
+ \oplus V_{81}\oplus V_{30}\oplus\overline{V}_{30},
+\]
+where subscripts denote intrinsic complex dimensions.  The two symmetric
+$15$-sectors are the two noncentral rank-one projections inside the unique
+$M_2$ multiplicity block.  It follows that the remaining $15$ dimensions of
+the common colour row space form one diagonal copy of $V_{15}$, and hence
+\[
+ \boxed{\operatorname{row}M_+\cap\operatorname{row}M_-
+ \cong \mathbf1\oplus V_{15}\oplus V_{20}\oplus V_{24}.}
+\]
+
+The symmetric $60$-sector instead splits as a Galois-conjugate pair.  A
+separating central element has polynomial
+\[
+ x^2-578x+88813,
+ \qquad \Delta=-21168=-3\cdot84^2,
+\]
+so its splitting field is $\mathbb Q(\sqrt{-3})$ and
+\[
+ \boxed{V_{60,\mathbb Q}\otimes\mathbb C
+       \cong V_{30}\oplus\overline V_{30}.}
+\]
+Thus the rational $60$-sector carries an exact Eisenstein quadratic structure.
+
+On the $540$ six-circuits the orbital commutant has dimension $32$, centre
+dimension $9$, and complex Wedderburn block sizes
+\[
+ 3,2,2,2,2,2,1,1,1.
+\]
+Transporting a separating right-central element through $M^T$ gives
+\[
+ \mathbb C^{540}\cong
+ \mathbf1\oplus3V_{15}\oplus2V_{20}\oplus2V_{24}
+ \oplus2V_{30}\oplus2\overline V_{30}
+ \oplus V_{60}\oplus V_{64}\oplus2V_{81}.
+\]
+Since $\operatorname{rank}M=216$, the $324$-dimensional right kernel is the
+multiplicity-free complement
+\[
+ \boxed{\ker(M)_\mathbb C\cong
+ V_{15}\oplus V_{20}\oplus V_{24}\oplus V_{30}\oplus\overline V_{30}
+ \oplus V_{60}\oplus V_{64}\oplus V_{81},}
+\]
+with character norm $8$.  The conjugate $30$-pair on the right is again
+Eisenstein: a separating central polynomial is
+\[
+ x^2-136x+5596,
+ \qquad \Delta=-3888=-3\cdot36^2.
+\]
+
+The integral incidence lattices also close exactly.  Previous modular work
+excluded all odd Smith primes; exact local Smith elimination over
+$\mathbb Z/2^{24}\mathbb Z$ yields the complete nonzero Smith forms
+\[
+ \boxed{\operatorname{SNF}_{\ne0}(M)=1^{156}2^{44}4^{15}8,}
+\]
+\[
+ \boxed{\operatorname{SNF}_{\ne0}(M_+)
+       =\operatorname{SNF}_{\ne0}(M_-)=1^{201}2^{14}4.}
+\]
+The corresponding $2$-adic lattice-index exponents are $77$ and $16$.
+
+Finally, the two independently constructed nontrivial central-$C_3$ carriers
+in the dark-$20$ and $24$ sectors do \emph{not} coincide.  Their
+$\omega$-six constituents are each irreducible under the order-$648$ point
+stabilizer $K$, but their exact character inner product is
+\[
+ \boxed{\langle\chi^{(20)}_{6_\omega},
+              \chi^{(24)}_{6_\omega}\rangle_K=0.}
+\]
+All $111$ $K$-orbital commutant maps project to rank zero between the associated
+rational $12$-dimensional nontrivial central carriers.  Hence there is no
+$K$-equivariant intertwiner between these two $6+\bar6$ species.  The common
+Eisenstein field and common central charge therefore encode arithmetic
+structure without erasing representation-theoretic distinctions.
+
+\paragraph{Certificate boundary.}
+These statements are exact finite-group, module, and integral-lattice
+results.  The occurrence of $\mathbb Q(\sqrt{-3})$ does not by itself identify
+any of the corresponding sectors with a calibrated physical degree of
+freedom.  Executable certificates are
+\texttt{w33\_20260831\_common\_colour\_60\_sector\_test.py},
+\texttt{w33\_20260831\_c5\_wedderburn\_kernel.py},
+\texttt{w33\_20260831\_incidence\_2adic\_snf.py}, and
+\texttt{w33\_20260831\_eisenstein\_dark20\_intertwiner.py}.
