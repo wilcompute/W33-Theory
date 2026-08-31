@@ -1,0 +1,103 @@
+\subsection{All-five circuit frontier closure: Clifford restriction, Eisenstein sixes, kernel arithmetic, and rank-76 coherent geometry}
+\label{sec:all5-circuit-frontier-20260831}
+
+Let $M$ be the $216\times540$ maximal-overlap incidence matrix between the sentinel five- and six-circuit shells, and let $M_\pm$ be its two $\mathrm{PSp}(4,3)$ orbital colours.  With
+\[
+M_+M_+^{\mathsf T}=M_-M_-^{\mathsf T}=10I+A_{30},\qquad
+M_+M_-^{\mathsf T}+M_-M_+^{\mathsf T}=4A_{20},
+\]
+the commuting relations $A_{30},A_{20}$ have the previously certified joint-sector dimensions
+\[
+1,15,15,20,24,60,81.
+\]
+The present audit closes five outstanding structural questions simultaneously.
+
+First, let $K$ be the order-$648$ W33 point stabilizer with centre $Z(K)=C_3$.  Exact rational spectral projectors and traces on all elements of $K$ give the central-isotypic dimensions $(1,\omega,\omega^2)$ and restricted-character norms
+\[
+\begin{array}{c|c|c}
+\dim & (d_1,d_\omega,d_{\omega^2}) & \langle\chi,\chi\rangle_K\\ \hline
+15&(3,6,6)&3\\
+15&(3,6,6)&3\\
+81&(27,27,27)&12\\
+20&(8,6,6)&3\\
+60&(18,21,21)&12\\
+24&(12,6,6)&5\\
+1&(1,0,0)&1
+\end{array}
+\]
+without guessing irreducible labels for the reducible restrictions.  In particular the $24$-sector agrees with the sharper decomposition
+\[
+24\downarrow_K=1\oplus3\oplus8\oplus6_\omega\oplus6_{\bar\omega}.
+\]
+On its $12$-dimensional rational nontrivial-central carrier, the canonical deck-orientation operator
+\[
+J=z-z^2
+\]
+satisfies the exact identity
+\[
+\boxed{J^2=-3I}.
+\]
+Thus scalar extension to $\mathbb Q(\sqrt{-3})=\mathbb Q(\omega)$ splits this rational carrier into the conjugate six-dimensional $\omega$ and $\omega^2$ eigenspaces.  Six explicitly certified central deck fibres provide a rational basis witness, giving a concrete Eisenstein realization of the two sixes.
+
+Second, over characteristic zero,
+\[
+\operatorname{rank}M=\operatorname{rank}M_+=\operatorname{rank}M_-=216,
+\]
+so all three right kernels in the $540$-dimensional six-circuit space have dimension $324$.  The stacked colour matrix has rank $372$, hence
+\[
+\boxed{\dim(\operatorname{row}M_+\cap\operatorname{row}M_-)=60},
+\]
+while
+\[
+\boxed{\dim(\ker M\cap\ker M_+\cap\ker M_-)=168},
+\]
+and every pairwise kernel intersection is the same $168$-space because $M=M_++M_-$.  The right Gram spectrum is
+\[
+0^{324}+4^{96}+16^{35}+28^{60}+64^{24}+160^1.
+\]
+The numerical match between the common colour row-space dimension $60$ and the existing $60$-dimensional left spectral sector is recorded as a target, not yet promoted to an equality of modules.
+
+Third, the modular ranks of $(M,M_+,MM^{\mathsf T})$ at $p=2,3,5,7,11,13$ are respectively
+\[
+(156,201,0),\ (216,216,216),\ (216,216,215),\ (216,216,156),\ (216,216,216),\ (216,216,216).
+\]
+The exact Gram determinant has prime valuations
+\[
+v_2=601,\qquad v_5=1,\qquad v_7=60.
+\]
+Cauchy--Binet together with full row rank modulo $5$ and $7$ therefore forces every nonunit Smith invariant of $M$ to be a power of $2$; the mod-$2$ rank fixes their number:
+\[
+\boxed{\operatorname{SNF}_{\mathrm{nonzero}}(M)=1^{156}\oplus(2\text{-power})^{60}.}
+\]
+Likewise the colour incidence has
+\[
+\boxed{\operatorname{SNF}_{\mathrm{nonzero}}(M_\pm)=1^{201}\oplus(2\text{-power})^{15}.}
+\]
+The individual positive $2$-adic exponents are not asserted here.
+
+Finally, the complete two-fibre Schurian coherent configuration has same- and cross-fibre orbital ranks
+\[
+r_{55}=10,\qquad r_{66}=32,\qquad r_{56}=r_{65}=17,
+\]
+and hence exact total rank
+\[
+\boxed{76}.
+\]
+Inside the $10$-orbital five-circuit commutant, $A_{30}$ is a single orbital whereas $A_{20}$ is the fusion of exactly two transpose-paired directed orbitals of valency $10+10$.  For
+\[
+K_c=M_+M_-^{\mathsf T},
+\]
+the two directed orbitals carry constant coefficients $1$ and $3$, so
+\[
+\boxed{K_c+K_c^{\mathsf T}=4A_{20}},
+\]
+but
+\[
+[K_c,A_{20}]\neq0,\qquad [K_c,A_{30}]\neq0.
+\]
+Therefore the seven-sector algebra is a symmetric commutative fusion of a genuinely noncommutative orbital algebra; the directed orientation datum is erased by symmetrization rather than supplied by an additional commuting eigenoperator.
+
+All statements in this subsection are reproduced by
+\texttt{analysis/w33\_20260831\_all5\_frontier\_audit.py},
+\texttt{analysis/w33\_20260831\_a20\_directed\_orbital\_refinement.py}, and the cheap regression freeze
+\texttt{analysis/w33\_20260831\_all5\_frontier\_freeze.py}.  The orientation datum is finite-geometric; no physical chirality identification is made without an explicit equivariant map.
