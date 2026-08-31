@@ -1,0 +1,35 @@
+{
+  "schema": "w33.20260831.qplate-radial-multimode-recenter.v1",
+  "status": "PASS",
+  "model": {
+    "inputCode": "centered OAM qutrit ell=-1,0,+1, radial p=0",
+    "qPlate": "ideal thin phase-only azimuthal shift Delta ell=+/-2q at fixed waist",
+    "targetBasis": "complete same-waist Laguerre-Gaussian radial basis at target |ell|",
+    "probabilityRecurrence": "P0=Gamma((m+n)/2+1)^2/(Gamma(m+1)Gamma(n+1)); P[p+1]/P[p]=(p+(n-m)/2)^2/((p+1)(p+n+1))",
+    "coherentInverse": "unit survival in the ideal model if the full radial superposition is retained; truncation/projection creates the reported loss"
+  },
+  "qHalf": {
+    "pureChiralityModulo3": false,
+    "meanP0Capture": 0.8181230868723421,
+    "meanCaptureThroughP24": 0.9965225260414193
+  },
+  "qThreeHalves": {
+    "pureChiralityModulo3": true,
+    "meanP0Capture": 0.5460971604872884,
+    "meanCaptureThroughP24": 0.969131672466602,
+    "hardChannel": {
+      "transition": "ell=0 to |ell|=3",
+      "pMaxFor99Percent": 222,
+      "pMaxFor99Point9Percent": 2247,
+      "pMaxFor99Point99Percent": 22497
+    }
+  },
+  "theorem": "In the declared ideal same-waist phase-only model, the q=3/2 modulo-3 chirality advantage is not intrinsically absorptive: its apparent p=0 loss is redistribution into a long radial LG tail. Full coherent radial retention makes inverse conversion unitary. The ell=0 to |ell|=3 channel is exceptionally broad and requires p<=222 for 99%, p<=2247 for 99.9%, and p<=22497 for 99.99% capture.",
+  "ci": {
+    "workflow": "Qplate Radial Multimode Audit",
+    "runId": 33357265351,
+    "jobId": 99381696441,
+    "conclusion": "success"
+  },
+  "boundary": "Analytic ideal same-waist LG basis decomposition only. No finite aperture, propagation, q-plate retardance profile, aberration, radial-mode sorter/corrector loss, p-dependent phase-control error, detector coupling, or measured insertion loss is modeled."
+}
