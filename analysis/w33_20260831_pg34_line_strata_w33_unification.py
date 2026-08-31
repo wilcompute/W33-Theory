@@ -53,9 +53,6 @@ def main():
         H.append([B[i][j] for i in range(40)] + [G[j][k]+(1 if j==k else 0) for k in range(45)])
     assert len(H)==85 and all(sum(r)==21 for r in H)
 
-    # For Hermitian polarity, intersection of two polar planes is the polar
-    # projective line.  Across all unordered point pairs these are exactly the
-    # 357 lines of PG(3,4), each with five points.
     lines85=set()
     for i,j in itertools.combinations(range(85),2):
         L=tuple(k for k in range(85) if H[i][k] and H[j][k])
@@ -71,26 +68,20 @@ def main():
     counts={str(k):len(v) for k,v in sorted(strata.items())}
     assert {k:len(v) for k,v in strata.items()}=={(5,0):27,(3,2):240,(1,4):90}
 
-    # The 45-point absolute block G is GQ(4,2) adjacency: generators are its
-    # five-point maximal cliques / lines.  Check directly from the 27 sets.
     gen_abs={tuple(sorted(ab)) for _,ab,_ in strata[(5,0)]}
     assert len(gen_abs)==27
     assert all(all(G[a][b] for a,b in itertools.combinations(L,2)) for L in gen_abs)
     abs_line_degree=Counter(x for L in gen_abs for x in L)
     assert set(abs_line_degree.values())=={3}
 
-    # 240 secants -> exactly all W33 edges.
     secant_edges={tuple(sorted(non)) for _,_,non in strata[(3,2)]}
     w33_edges={tuple((i,j)) for i,j in itertools.combinations(range(40),2) if A[i][j]}
     assert len(secant_edges)==240 and secant_edges==w33_edges
 
-    # 90 tangents -> 4-cocliques.
     tangent_tetrads={tuple(sorted(non)) for _,_,non in strata[(1,4)]}
     assert len(tangent_tetrads)==90
     assert all(not any(A[a][b] for a,b in itertools.combinations(T,2)) for T in tangent_tetrads)
 
-    # Reconstruct the historical 90 flat tetrads independently, using the same
-    # tricentric-center rule as the lattice minimum theorem.
     centers={}
     for t in itertools.combinations(range(40),3):
         if all(not A[a][b] for a,b in itertools.combinations(t,2)):
@@ -99,16 +90,11 @@ def main():
     historical={tuple(sorted(centers[t])) for t in flat}
     assert len(historical)==90 and tangent_tetrads==historical
 
-    # Line polarity: L^perp = intersection of polar planes of any two points
-    # on L.  This is an involution on the 357 lines.
     line_index={L:i for i,L in enumerate(lines85)}
     pol=[]
     for L in lines85:
         i,j=L[:2]
         P=tuple(k for k in range(85) if H[i][k] and H[j][k])
-        # P computed this way is L^perp only if L here is span(i,j); our lines85
-        # themselves arose as polar lines.  In a nondegenerate polarity the same
-        # set construction is involutive, and direct closure below verifies it.
         assert P in line_index
         pol.append(line_index[P])
     assert all(pol[pol[i]]==i for i in range(357))
@@ -123,13 +109,9 @@ def main():
         j=pol[i]; seen.add(i); seen.add(j)
         pair_counts[type_index[i]]+=1
 
-    # WARNING: because lines85 were constructed as intersections of polar
-    # planes, the direct row-intersection operation on two points of L returns
-    # L^perp. This distinguishes fixed generators from paired secants/tangents.
     assert fixed==Counter({(5,0):27})
     assert pair_counts==Counter({(5,0):27,(3,2):120,(1,4):45})
 
-    # Secant polar pairs -> complementary edges of a unique W33 line (4-clique).
     secant_pair_unions=[]
     for i,L in enumerate(lines85):
         if type_index[i]!=(3,2) or i>pol[i]: continue
@@ -140,8 +122,6 @@ def main():
         assert all(A[a][b] for a,b in itertools.combinations(U,2))
         secant_pair_unions.append(U)
     assert len(secant_pair_unions)==120
-    # The maximal 4-cliques of W33 are exactly its 40 GQ lines, each receiving
-    # the three complementary-edge partitions.
     w33_lines=set()
     for U in itertools.combinations(range(40),4):
         if all(A[a][b] for a,b in itertools.combinations(U,2)): w33_lines.add(tuple(U))
@@ -149,7 +129,6 @@ def main():
     assert set(secant_pair_unions)==w33_lines
     assert Counter(secant_pair_unions)==Counter({L:3 for L in w33_lines})
 
-    # Tangent polar pairs -> the 45 disjoint flat-tetrad pairs / sentinel minima.
     tangent_pair_unions=[]; tangent_abs=[]
     for i,L in enumerate(lines85):
         if type_index[i]!=(1,4) or i>pol[i]: continue
@@ -163,12 +142,9 @@ def main():
     assert len(tangent_pair_unions)==45 and len(set(tangent_abs))==45
     supports={tuple(sorted(c for c in range(40) if B[c][m])) for m in range(45)}
     assert set(tangent_pair_unions)==supports
-    # In fact the common absolute point labels the same B-column support.
     for U,m in zip(tangent_pair_unions,tangent_abs):
         assert U==tuple(sorted(c for c in range(40) if B[c][m]))
 
-    # Incidence summary: tangent tetrad through each nonabsolute point and
-    # generator/secant incidences recover the expected projective line counts.
     tangent_point_degree=Counter(x for T in tangent_tetrads for x in T)
     secant_point_degree=Counter(x for e in secant_edges for x in e)
     assert set(tangent_point_degree.values())=={9}
@@ -196,7 +172,9 @@ def main():
     }
     OUT.parent.mkdir(parents=True,exist_ok=True)
     OUT.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
-    print(json.dumps({'status':'PASS','strata':counts,'fixed':dict(fixed),'polarityPairs':dict(pair_counts),
+    print(json.dumps({'status':'PASS','strata':counts,
+                      'fixed':{str(k):v for k,v in sorted(fixed.items())},
+                      'polarityPairs':{str(k):v for k,v in sorted(pair_counts.items())},
                       'edges':len(secant_edges),'tetrads':len(tangent_tetrads),'supports':len(supports)},sort_keys=True))
 
 if __name__=='__main__': main()
