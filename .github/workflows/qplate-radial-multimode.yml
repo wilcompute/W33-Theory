@@ -1,0 +1,24 @@
+name: Qplate Radial Multimode Audit
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20260831_qplate_radial_multimode_recenter.py'
+      - 'analysis/w33_20260829_qplate_radial_recenter_surrogate.py'
+      - '.github/workflows/qplate-radial-multimode.yml'
+  workflow_dispatch:
+
+jobs:
+  radial-multimode:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Re-run p=0 firewall surrogate
+        run: python analysis/w33_20260829_qplate_radial_recenter_surrogate.py
+      - name: Resolve full same-waist LG radial decomposition
+        run: python analysis/w33_20260831_qplate_radial_multimode_recenter.py
