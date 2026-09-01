@@ -1,0 +1,62 @@
+% Generated from frozen PASS certificates.
+\subsection{One $27\times45$ atlas and the $81\oplus81\oplus81$ Steinberg frame}
+The same $27\times45$ matrix is, objectwise, the incidence matrix for
+$GQ(2,4)$ points/lines, cubic lines/tritangents, W33 $K_{4,4}$
+factorizations/octets, and $E_8$ ten-$D_4$ charts/$D_4\oplus D_4$ packets.
+It has row weight $5$, column weight $3$, and rank $21$ over
+$\mathbb Q,\mathbb F_2,\mathbb F_3,\mathbb F_5,\mathbb F_7$, with
+\[
+ II^T=5I_{27}+A_{GQ(2,4)},\qquad I^TI=3I_{45}+A_{GQ(4,2)}.
+\]
+On the three-copy Steinberg block the Schlaefli $K_{3,3}$ Gram satisfies
+$K^2=8K$.  Thus $Q=K/8$ is primitive of rank $81$.  With $P$ the intrinsic
+$20_{\rm chart}\otimes15_{\rm W33}$ copy,
+\[
+ PQP=\tfrac13P,\qquad QPQ=\tfrac13Q.
+\]
+Writing $R=\tfrac32(E-P)Q(E-P)$ and $S=(E-P)-R$ gives
+\[
+ E=P\oplus R\oplus S,\quad \operatorname{rank}(P,R,S)=(81,81,81),
+ \quad RQR=\tfrac23R,\quad SQ=QS=0.
+\]
+
+\subsection{E6 odd-triangle and packet/global-$K_{3,3}$ no-go audits}
+The $1080$ obstruction objects are exactly the E6-sign-even triangles of
+$H_{36}=\operatorname{SRG}(36,20,10,12)$; the complementary $120$ sign-odd
+triangles are the Steiner orbit.  For intersection sizes $0,1,2$, the three
+canonical even/odd incidence Grams have Steinberg actual ranks respectively
+0, 0, 0.  Direct dark-projector hits: \texttt{[]}.
+
+For a fixed packet, its order-$576$ stabilizer has orbit sizes [48, 72, 96, 144] on the
+$360$ global Schlaefli $K_{3,3}$ witnesses.  The classes meeting its three
+incident charts in $0,1,2$ vertices have sizes 192,96,72.  A canonical
+equivariant eight-witness refinement is \texttt{False}; hence the local abstract
+$K_{4,4}\to S_4/V_4\simeq S_3\to K_{3,3}$ quotient is not an eight-element
+subfamily of the distinct global witness shell.
+
+\subsection{Explicit $M_3(\mathbb Q)$ multiplicity algebra}
+The primitive frame $P,R,S$ plus deterministic orbital connectors yields all
+nine rational matrix units $e_{ij}$ and verifies
+\[
+ e_{ij}e_{kl}=\delta_{jk}e_{il}.
+\]
+Thus the complete Steinberg multiplicity commutant is explicit as
+$M_3(\mathbb Q)$.  The geometric $K_{3,3}$ projector has matrix-unit
+coordinates \texttt{[['1/3', '1/2', '0'], ['4/9', '2/3', '0'], ['0', '0', '0']]}.  The older $\{-4,0,+4\}$ orbital spectral frame is
+expressed in the same coordinates.  These are representation multiplicity
+coordinates, not a physical flavor/generation matrix.
+
+\subsection{Binary $48$: MeatAxe comparison without guessing Ext}
+MeatAxe gives $H_{1,48}\cong\Omega_{48}$ = \texttt{False} and
+$A_{24}\cong B_{24}$ = \texttt{False}.  Their factor-dimension multisets are
+$H_1:[1, 1, 1, 1, 8, 8, 14, 14]$ and $\Omega:[1, 1, 1, 1, 8, 8, 14, 14]$; the $576$-dimensional
+$\operatorname{Hom}(B_{24},A_{24})$ has factor dimensions [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 8, 8, 8, 8, 8, 8, 8, 8, 8, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 40, 40, 40, 40, 40, 40].  The independent
+splitting-equation certificate proves $\operatorname{Ext}^1(B_{24},A_{24})\ne0$,
+so its dimension is at least one; the exact value remains open because stock
+Cohomolo hits its MDIM ceiling on the full Hom module.
+
+\paragraph{Boundary.}
+These are exact finite incidence, root-system, representation, modular-module,
+and linear-algebra statements.  The $1/3$ overlap, dark $81$-space, and
+$3\times3$ coordinates are not by themselves particle mixing, masses,
+couplings, fields, spacetime, or dynamics.
