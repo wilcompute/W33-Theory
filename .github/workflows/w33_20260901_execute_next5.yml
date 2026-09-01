@@ -8,6 +8,7 @@ on:
       - 'analysis/w33_20260901_binary48_ext_export.py'
       - 'analysis/w33_20260901_binary48_ext_compare.g'
       - 'analysis/w33_20260901_degree45_compiler_correction.py'
+      - 'analysis/w33_20260901_degree45_action_crosswalk.py'
       - 'analysis/w33_20260901_degree45_tom_uniqueness.g'
       - '.github/workflows/w33_20260901_execute_next5.yml'
   workflow_dispatch:
@@ -50,6 +51,7 @@ jobs:
           python analysis/w33_20260901_eisenstein_schlaefli_obstruction_bridge.py 2>&1 | tee -a analysis/PASS_20260901_NEXT5_RUN.log
           python analysis/w33_20260901_k33_steinberg_router.py 2>&1 | tee -a analysis/PASS_20260901_NEXT5_RUN.log
           python analysis/w33_20260901_binary48_ext_export.py 2>&1 | tee -a analysis/PASS_20260901_NEXT5_RUN.log
+          python analysis/w33_20260901_degree45_action_crosswalk.py 2>&1 | tee -a analysis/PASS_20260901_NEXT5_RUN.log
           python analysis/w33_20260901_degree45_compiler_correction.py 2>&1 | tee -a analysis/PASS_20260901_NEXT5_RUN.log
       - name: Execute exact GAP guards and Ext
         shell: bash
@@ -68,6 +70,7 @@ jobs:
             data/PART_W33_20260901_K33_STEINBERG_ROUTER.json \
             data/PART_W33_20260901_BINARY48_EXPORT.json \
             data/PART_W33_20260901_BINARY48_EXT_COMPARE.json \
+            data/PART_W33_20260901_DEGREE45_ACTION_CROSSWALK.json \
             data/PART_W33_20260901_DEGREE45_COMPILER_CORRECTION.json
           if ! git diff --cached --quiet; then
             git commit -m 'Materialize Eisenstein Schlaefli Ext and compiler correction evidence'
