@@ -111,8 +111,9 @@ def main():
     for p in G40:
         pl=tuple(lidx[frozenset(p[x] for x in L)] for L in wlines)
         pf=tuple(fidx[(p[x],pl[l])] for x,l in flags)
-        C=osolve(act_columns(OB,p))&1;assert C.shape==(48,48)
-        assert np.array_equal((OB@C)&1,act_columns(OB,p))
+        image=act_columns(OB,pf)
+        C=osolve(image)&1;assert C.shape==(48,48)
+        assert np.array_equal((OB@C)&1,image)
         Fgens.append(C)
     assert fixed_dim(Fgens,48)==1
 
