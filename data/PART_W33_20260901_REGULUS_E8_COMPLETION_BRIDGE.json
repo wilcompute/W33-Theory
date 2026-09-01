@@ -1,0 +1,40 @@
+{
+  "boundary": "Exact finite-combinatorial composition of certified objects. It is not a physical obstruction-removal theorem and assigns no dynamics to E8.",
+  "crossRepo": {
+    "holotradeCommit": "4952a3b3b3061af796edb86bce316c2f92475d10",
+    "holotradeObjectwiseFact": "the 270 depth-3 all-isotropic reguli equal the 270 support-disjoint polar-pair pairs",
+    "newComposition": "each depth-3 obstruction regulus determines exactly one of the 27 E8 ten-D4 root partitions"
+  },
+  "e8": {
+    "crossPacketD4PairsRank8Checked": 1080,
+    "d4PerSpread": 10,
+    "eachSpreadPartitionsAllRoots": true,
+    "obstructionPairRoots": 96,
+    "orthogonalD4Pairs": 45,
+    "packetsPerSpread": 5,
+    "roots": 240,
+    "rootsPerD4": 24,
+    "rootsPerPacket": 48,
+    "selectedD4Subsystems": 90,
+    "uniqueCompletionAddsRoots": 144
+  },
+  "schema": "w33.20260901.regulus-e8-completion-bridge.v1",
+  "status": "PASS",
+  "theorem": "The depth-3 regulus obstruction is an E8 completion address: its two disjoint D4+D4 packets expose 96 roots and uniquely complete by 144 roots to one ten-D4 partition of the 240-root shell.",
+  "w33": {
+    "disjointEdges": 270,
+    "disjointEdgesPerFivepack": 10,
+    "disjointnessDegree": 12,
+    "edgeUniqueCompletion": true,
+    "fivepackLines": 27,
+    "fivepacksPerPacket": 3,
+    "packetSupportSize": 8,
+    "packetsPerFivepack": 5,
+    "points": 40,
+    "polarPairPackets": 45,
+    "supportPairIntersections": {
+      "0": 270,
+      "2": 720
+    }
+  }
+}
