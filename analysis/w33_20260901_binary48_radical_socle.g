@@ -20,7 +20,7 @@ Contained:=function(a,b)
 end;;
 
 LatticeLayers:=function(mats)
-  local M,subs,n,maxi,mini,i,j,proper,nonzero,V,W,rb,rows,sb;
+  local M,subs,n,maxi,mini,i,j,proper,nonzero,V,W,rb,rows,sb,pos;
   M:=GModuleByMats(mats,F);;
   subs:=MTX.BasesSubmodules(M);;
   n:=Length(mats[1]);
@@ -43,12 +43,19 @@ LatticeLayers:=function(mats)
       if nonzero then Add(mini,i);fi;
     fi;
   od;
-  if Length(maxi)=0 then rb:=[];
+  if Length(maxi)=0 then
+    rb:=[];
+  elif DimB(subs[maxi[1]])=0 then
+    # Simple modules have the zero submodule as their unique maximal proper
+    # submodule. Avoid constructing VectorSpace(F,[]) at the endpoint.
+    rb:=[];
   else
     V:=VectorSpace(F,subs[maxi[1]]);
-    for i in maxi{[2..Length(maxi)]} do
-      W:=VectorSpace(F,subs[i]); V:=Intersection(V,W);
-    od;
+    if Length(maxi)>1 then
+      for pos in [2..Length(maxi)] do
+        W:=VectorSpace(F,subs[maxi[pos]]); V:=Intersection(V,W);
+      od;
+    fi;
     rb:=BasisVectors(Basis(V));
   fi;
   rows:=[];;
