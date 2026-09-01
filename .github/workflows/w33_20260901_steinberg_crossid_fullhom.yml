@@ -1,0 +1,41 @@
+name: 2026-09-01 Steinberg crossid and full odd120 Hom
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20260901_e6_odd_full_hom_steinberg_nogo.py'
+      - 'analysis/w33_20260901_steinberg_old_new_crossid.py'
+      - '.github/workflows/w33_20260901_steinberg_crossid_fullhom.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: w33-20260901-crossid-fullhom-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --disable-pip-version-check numpy scipy sympy networkx
+      - name: Execute exact follow-through
+        run: |
+          set -o pipefail
+          python analysis/w33_20260901_e6_odd_full_hom_steinberg_nogo.py
+          python analysis/w33_20260901_steinberg_old_new_crossid.py
+      - name: Freeze certificates
+        run: |
+          git config user.name 'w33-evidence-bot'
+          git config user.email 'w33-evidence-bot@users.noreply.github.com'
+          git add -f \
+            data/PART_W33_20260901_E6_ODD_FULL_HOM_STEINBERG_NOGO.json \
+            data/PART_W33_20260901_STEINBERG_OLD_NEW_CROSSID.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Freeze full odd120 Hom no-go and Steinberg frame cross-identification'
+            git pull --rebase origin master
+            git push origin HEAD:master
+          fi
