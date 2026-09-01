@@ -1,0 +1,31 @@
+{
+  "bijection": {
+    "allCoordinatePairsHitExactlyOnce": true,
+    "forward": "bad triple -> (unique completion chart of its regulus, omitted fourth W33 line)",
+    "inverse": "(chart, W33 line ell) -> unique chart-regulus containing ell, with ell deleted",
+    "naturalUnderIncidenceAndPolarity": true
+  },
+  "boundary": "The product factorization is a finite incidence theorem. The number 81 here is a triple-containment multiplicity; it is not by itself an identification with the separate 81-dimensional Steinberg/H1 module.",
+  "carriers": {
+    "completionCharts": 27,
+    "depth3TransversalFreeTriples": 1080,
+    "factorization": "1080 = 27 * 40",
+    "w33Lines": 40
+  },
+  "chartGeometry": {
+    "eachChartPartitionsAll40W33Lines": true,
+    "edgesPerChart": 10,
+    "isotropicLinesPerRegulus": 4,
+    "obstructionEdges": 270,
+    "packets": 45,
+    "reguliPerChart": 10
+  },
+  "multiplicities": {
+    "badTriplesContainingEachW33Line": 81,
+    "badTriplesOmittingEachW33Line": 27,
+    "reguliThroughEachW33Line": 27
+  },
+  "representationReading": "The 1080 obstruction carrier is the natural diagonal product PSp-carrier 27 x 40. This supplies an explicit intermediate/product bridge where the direct characteristic-zero 27-to-40 linear intertwiner is known to be trivial beyond constants.",
+  "schema": "w33.20260901.depth3-product-factorization.v1",
+  "status": "PASS"
+}
