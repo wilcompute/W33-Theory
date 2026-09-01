@@ -1,0 +1,53 @@
+{
+  "boundary": "This is a theorem about the finite PSp(4,3) commutant and its permutation module. The 1/3 overlap and dark 81-space are exact representation-theoretic facts, not by themselves particle mixing angles, physical fields, or dynamical propagation laws.",
+  "k33SteinbergOperator": {
+    "quadraticIdentity_K2_equals_8K": true,
+    "regularCharpoly": "lambda**6*(lambda - 8)**3",
+    "regularRank": 3
+  },
+  "orthogonalSteinbergFrame": {
+    "Q_R_Q_scalar": "2/3",
+    "Q_supportedEntirelyOn_P_plus_R": true,
+    "R_Q_R_scalar": "2/3",
+    "R_definition": "(3/2) (E-P) Q (E-P)",
+    "S_definition": "(E-P)-R",
+    "S_isK33Dark": true,
+    "actualRanks": [
+      "81",
+      "81",
+      "81"
+    ],
+    "darkActualRank": "81",
+    "pairwiseOrthogonal": true,
+    "regularRanks": [
+      3,
+      3,
+      3
+    ],
+    "sumIsCentralSteinbergProjector": true
+  },
+  "relativeToIntrinsic20x15Copy": {
+    "blockRanks": {
+      "15_Q_15": 3,
+      "15_Q_24": 3,
+      "24_Q_15": 3,
+      "24_Q_24": 3
+    },
+    "commutatorRank": 6,
+    "intrinsicProjectorRegularRank": 3,
+    "multiplicitySpaceAngle": "arccos(1/sqrt(3))",
+    "sandwich_M15_Q_M15_scalar": "1/3",
+    "sandwich_Q_M15_Q_scalar": "1/3",
+    "squaredOverlap": "1/3",
+    "trace_M15_Q": "1"
+  },
+  "scaledOperator": {
+    "Q_equals_K_over_8_isIdempotent": true,
+    "actualPermutationSpaceRank": "81",
+    "isPrimitiveSteinberg81Projector": true,
+    "leftRegularRank": 3
+  },
+  "schema": "w33.20260901.k33-steinberg-primitive.v2",
+  "status": "PASS",
+  "theorem": "The Schlaefli K3,3 incidence Gram is exactly 8Q for a primitive rank-81 Steinberg projector Q. Its squared overlap with the intrinsic 20_chart x 15_W33 Steinberg copy P is exactly 1/3. Normalizing Q's component in the intrinsic 162-sector produces a second primitive projector R, and the residual S completes an exact mutually orthogonal 81+81+81 Steinberg frame. Q lives entirely in the P+R plane and annihilates S, so the K3,3 incidence channel has an exact rank-81 Steinberg-dark complement."
+}

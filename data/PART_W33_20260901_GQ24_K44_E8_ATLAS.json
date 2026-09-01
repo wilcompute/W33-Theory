@@ -1,0 +1,59 @@
+{
+  "boundary": "The W33 octet/D4 and cubic incidence ingredients pre-existed; Holotrade 7eef505 supplied the K(4,4)-factor reading. The new result is their objectwise composition into one atlas. No physical dynamics, spacetime identification, or tau_2 improvement follows from this finite incidence theorem.",
+  "chartObjects27": {
+    "count": 27,
+    "cubicMeaning": "cubic-surface line coordinate",
+    "e8Meaning": "ten-D4 chart: the corresponding ten 24-root D4 blocks partition all 240 E8 roots",
+    "gq24Meaning": "point of GQ(2,4)",
+    "packetsPerChart": 5,
+    "w33Meaning": "K(4,4)-factor: five disjoint octets partition all 40 W33 vertices"
+  },
+  "chartPointGraph": {
+    "collinearity": "two charts/GQ(2,4) points are collinear iff they share exactly one K44/D4+D4 packet",
+    "parameters": [
+      27,
+      10,
+      1,
+      5
+    ],
+    "sharedPacketHistogram": {
+      "0": 216,
+      "1": 135
+    }
+  },
+  "commonIncidence": {
+    "IItranspose": "5 I_27 + A_GQ(2,4)",
+    "ItransposeI": "3 I_45 + A_GQ(4,2)",
+    "columnWeight": 3,
+    "equalsCubicLineTritangentIncidenceAfterExplicitCoordinatePermutations": true,
+    "rankMod2": 21,
+    "rankMod3": 21,
+    "rankMod5": 21,
+    "rankMod7": 21,
+    "rankQ": 21,
+    "rowWeight": 5,
+    "shape": [
+      27,
+      45
+    ]
+  },
+  "dependencies": {
+    "Holotrade": "7eef50506498051cdde24363d5e839fd0fa7c493: 27 K(4,4)-factors of W(3,3)",
+    "W33": [
+      "Pass7163-7170 E8 40x6 fibre/D4 dictionary",
+      "2026-09-01 selected 45 D4+D4 packets and 27 ten-D4 charts",
+      "2026-09-01 D4 prism packet<->tritangent/chart<->cubic-line coordinate map"
+    ]
+  },
+  "packetObjects45": {
+    "count": 45,
+    "cubicMeaning": "tritangent plane",
+    "e8Meaning": "48-root orthogonal D4+D4 packet, 24+24 roots",
+    "eachOccursInCharts": 3,
+    "gq24Meaning": "line of GQ(2,4)",
+    "w33Meaning": "induced K(4,4) octet on one weight-8 support"
+  },
+  "schema": "w33.20260901.gq24-k44-e8-atlas.v1",
+  "status": "PASS",
+  "theorem": "One explicit 27x45 incidence atlas simultaneously realizes GQ(2,4), the cubic 27-line/45-tritangent configuration, the 27 K(4,4)-factorizations of W(3,3), and the 27 selected ten-D4 partitions of the same 240-root E8 shell. Each of its 45 line coordinates is literally one W33 K(4,4) weight-8 octet and the corresponding 48-root orthogonal D4+D4 packet."
+}
