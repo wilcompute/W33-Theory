@@ -1,0 +1,39 @@
+name: 2026-09-01 promote all-five follow-up
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'tools/integrate_20260901_all5_followup_v2.py'
+      - '.github/workflows/w33_20260901_promote_all5_followup.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: w33-20260901-promote-all5-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  integrate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Integrate only frozen PASS certificates
+        run: python tools/integrate_20260901_all5_followup_v2.py
+      - name: Commit shared frontier and root index
+        run: |
+          git config user.name 'w33-evidence-bot'
+          git config user.email 'w33-evidence-bot@users.noreply.github.com'
+          git add \
+            analysis/PASS20260901_all5_followup_insert.tex \
+            analysis/2026-09-01_all5_followup.md \
+            analysis/W33_CURRENT_FRONTIER_MANIFEST.tex \
+            data/w33_current_frontier_manifest_v1.json \
+            index.html
+          if ! git diff --cached --quiet; then
+            git commit -m 'Promote GQ24 E8 atlas Steinberg frame packet and binary48 follow-up'
+            git pull --rebase origin master
+            git push origin HEAD:master
+          fi
