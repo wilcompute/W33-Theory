@@ -1,0 +1,43 @@
+{
+  "schema": "w33.20260901.e8-chart-port-holonomy.v1",
+  "status": "PASS",
+  "carrier": {
+    "packets": 45,
+    "completionCharts": 27,
+    "chartOverlapEdges": 135,
+    "incidentChartsPerPacket": 3
+  },
+  "correctionToPriorOrientationRead": {
+    "polarPairPacketActionLocalImage": "S3",
+    "packetStabilizerOrder": 576,
+    "localKernelOrder": 96,
+    "globalPSpCyclicOrientationSheet": false,
+    "olderPass4795Carrier": "residue/cube degree-45 realization has C3 local image",
+    "boundary": "The two degree-45 graph realizations are not silently identified as the same PSp G-set; an outer twist can preserve the graph while changing the inner action."
+  },
+  "portGauge": {
+    "datum": "full ordering of the three incident completion-chart ports at every packet",
+    "localCorrectionGroup": "S3^45",
+    "cocycleChecks": 4665600,
+    "nonabelianCocycleLaw": "sigma_ab(p)=sigma_a(b.p) o sigma_b(p)",
+    "zeroCorrectionElements": 1
+  },
+  "packetTriality": {
+    "order3CandidatesPerPacket": 24,
+    "deterministicGeneratorPacketIds": [0,9,11,33],
+    "generatedGroupGrowth": [3,9,288,25920],
+    "generatedChartGroupOrder": 25920
+  },
+  "holonomy": {
+    "packetTriangles": 45,
+    "packetTriangleHolonomy": "identity",
+    "spanningTreeEdges": 26,
+    "fundamentalCycles": 109,
+    "fundamentalCycleOrderProfile": {"1":15,"2":25,"3":5,"4":14,"5":25,"6":25},
+    "baseChartHolonomyGroupOrder": 960,
+    "baseChartStabilizerOrder": 960,
+    "holonomyEqualsFullChartStabilizer": true
+  },
+  "theorem": "After a full three-port gauge is fixed on the polar-pair packet carrier, local order-three packet rotations give an exact chart compiler: four deterministic rotations generate PSp(4,3), and the 109 fundamental cycle holonomies generate exactly the full order-960 stabilizer of a base completion chart. The correction data form an exact S3^45 nonabelian cocycle.",
+  "boundary": "There is no global C3 orientation sheet on this native 45-action. The compiler is port-gauge dependent, and no optical or dynamical interpretation is asserted."
+}
