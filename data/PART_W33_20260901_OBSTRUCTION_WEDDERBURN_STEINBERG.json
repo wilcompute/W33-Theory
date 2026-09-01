@@ -1,0 +1,42 @@
+{
+  "schema": "w33.20260901.obstruction-wedderburn-steinberg.v1",
+  "status": "PASS",
+  "carrier": {
+    "degree": 1080,
+    "orbitalRank": 59,
+    "centerDimension": 15
+  },
+  "fullRationalCentralFactors": [
+    {"factor":"x - 59687/7","factorDegree":1,"regularExponent":1,"permutationMultiplicity":1,"carrierDimension":1,"complexIrrepDegree":1},
+    {"factor":"x - 10067/7","factorDegree":1,"regularExponent":1,"permutationMultiplicity":1,"carrierDimension":6,"complexIrrepDegree":6},
+    {"factor":"x + 4237/7","factorDegree":1,"regularExponent":1,"permutationMultiplicity":1,"carrierDimension":30,"complexIrrepDegree":30},
+    {"factor":"x - 2759/7","factorDegree":1,"regularExponent":4,"permutationMultiplicity":2,"carrierDimension":30,"complexIrrepDegree":15},
+    {"factor":"x - 1907/7","factorDegree":1,"regularExponent":4,"permutationMultiplicity":2,"carrierDimension":48,"complexIrrepDegree":24},
+    {"factor":"x + 139","factorDegree":1,"regularExponent":9,"permutationMultiplicity":3,"carrierDimension":60,"complexIrrepDegree":20},
+    {"factor":"x - 1355/7","factorDegree":1,"regularExponent":9,"permutationMultiplicity":3,"carrierDimension":180,"complexIrrepDegree":60},
+    {"factor":"x + 433/7","factorDegree":1,"regularExponent":9,"permutationMultiplicity":3,"carrierDimension":192,"complexIrrepDegree":64},
+    {"factor":"x + 1193/7","factorDegree":1,"regularExponent":9,"permutationMultiplicity":3,"carrierDimension":243,"complexIrrepDegree":81},
+    {"factor":"x**2 - 1966*x/7 + 975697/49","factorDegree":2,"regularExponent":1,"permutationMultiplicity":1,"carrierDimension":90,"complexIrrepDegree":45,"discriminant":"-768"},
+    {"factor":"x**2 + 722*x/7 + 143389/49","factorDegree":2,"regularExponent":1,"permutationMultiplicity":1,"carrierDimension":80,"complexIrrepDegree":40,"discriminant":"-52272/49"},
+    {"factor":"x**2 + 530*x/7 + 91393/49","factorDegree":2,"regularExponent":4,"permutationMultiplicity":2,"carrierDimension":120,"complexIrrepDegree":30,"discriminant":"-1728"}
+  ],
+  "complexDecomposition": "1 + 6 + 2*15 + 3*20 + 2*24 + 30 + 2*(30+30bar) + (40+40bar) + (45+45bar) + 3*60 + 3*64 + 3*81",
+  "quadraticField": "Q(sqrt(-3))",
+  "steinberg": {
+    "isotypicRank": 243,
+    "multiplicity": 3,
+    "splittingOrbital": 11,
+    "transposeOrbital": 25,
+    "compressedSpectrum": [4,0,-4],
+    "projectorFormulas": {
+      "+4": "B(B+4E)/32",
+      "0": "E-B^2/16",
+      "-4": "B(B-4E)/32"
+    },
+    "primitiveRanks": [81,81,81],
+    "pairwiseOrthogonal": true,
+    "sumToCentralSteinbergProjector": true
+  },
+  "theorem": "The 1080 obstruction permutation module is completely decomposed by the exact 59-orbital algebra. The three non-rational central factors are Eisenstein conjugate pairs of degrees 30, 40 and 45. The 3*81 Steinberg isotypic block is split by an explicit symmetric orbital operator into three rational rank-81 G-equivariant primitive projectors.",
+  "boundary": "These are exact finite representation-theory projectors; no physical channel interpretation is asserted."
+}
