@@ -1,0 +1,103 @@
+{
+  "boundary": "A failure of these three coarse intersection relations to select S is a no-go only for this natural family, not for every equivariant operator from the 120-triangle permutation module.  No physical dark sector is inferred.",
+  "carrierCrosswalk": {
+    "eachEvenTriangleFromThreeContainingK33Edges": true,
+    "evenTriangles": 1080,
+    "globalK33Edges": 360,
+    "oddTriangles": 120,
+    "oddTrianglesEqualSteiner120": true
+  },
+  "darkProjectorDirectHits": [],
+  "relationsByIntersectionSize": {
+    "0": {
+      "directScalarMultipleOf": {
+        "E": "0",
+        "P": "0",
+        "Q": "0",
+        "R": "0",
+        "S": "0"
+      },
+      "evenRowDegree": 93,
+      "frameDiagonalSandwichScalars": {
+        "P": "0",
+        "R": "0",
+        "S": "0"
+      },
+      "frameOffDiagonalRanks": {
+        "PR": 0,
+        "PS": 0,
+        "RP": 0,
+        "RS": 0,
+        "SP": 0,
+        "SR": 0
+      },
+      "oddColumnDegreeHistogram": {
+        "837": 120
+      },
+      "steinbergActualRank": 0,
+      "steinbergRegularCharpoly": "lambda**9",
+      "steinbergRegularRank": 0
+    },
+    "1": {
+      "directScalarMultipleOf": {
+        "E": "0",
+        "P": "0",
+        "Q": "0",
+        "R": "0",
+        "S": "0"
+      },
+      "evenRowDegree": 24,
+      "frameDiagonalSandwichScalars": {
+        "P": "0",
+        "R": "0",
+        "S": "0"
+      },
+      "frameOffDiagonalRanks": {
+        "PR": 0,
+        "PS": 0,
+        "RP": 0,
+        "RS": 0,
+        "SP": 0,
+        "SR": 0
+      },
+      "oddColumnDegreeHistogram": {
+        "216": 120
+      },
+      "steinbergActualRank": 0,
+      "steinbergRegularCharpoly": "lambda**9",
+      "steinbergRegularRank": 0
+    },
+    "2": {
+      "directScalarMultipleOf": {
+        "E": "0",
+        "P": "0",
+        "Q": "0",
+        "R": "0",
+        "S": "0"
+      },
+      "evenRowDegree": 3,
+      "frameDiagonalSandwichScalars": {
+        "P": "0",
+        "R": "0",
+        "S": "0"
+      },
+      "frameOffDiagonalRanks": {
+        "PR": 0,
+        "PS": 0,
+        "RP": 0,
+        "RS": 0,
+        "SP": 0,
+        "SR": 0
+      },
+      "oddColumnDegreeHistogram": {
+        "27": 120
+      },
+      "steinbergActualRank": 0,
+      "steinbergRegularCharpoly": "lambda**9",
+      "steinbergRegularRank": 0
+    }
+  },
+  "schema": "w33.20260901.e6-odd-triangle-steinberg.v1",
+  "status": "PASS",
+  "theorem": "The 1080 obstruction carrier is explicitly identified with the E6-sign-even triangle orbit of H36. The complementary 120 sign-odd/Steiner triangles define three canonical intersection-incidence operators. Their exact Steinberg-block actions are listed, including whether any Gram is a scalar multiple of the dark rank-81 projector S."
+}

@@ -1,0 +1,25 @@
+{
+  "H1": {
+    "A24Fixed": 1,
+    "B24Fixed": 0,
+    "dimension": 48,
+    "filtration": [
+      24,
+      24
+    ],
+    "fixedDimension": 1
+  },
+  "alignedGenerators": 4,
+  "boundary": "This exports exact aligned modules; isomorphism, composition factors and Ext are decided by the GAP consumer.",
+  "chamberOmega": {
+    "ambientChambers": 160,
+    "definition": "im((LP-PL) mod 2) = im((LP+PL) mod 2)",
+    "fixedDimension": 1,
+    "imageDimension": 48,
+    "rankMod2": 48,
+    "squareZero": true
+  },
+  "gapMatrixFile": "analysis/PART_W33_20260901_BINARY48_MATRICES.g",
+  "schema": "w33.20260901.binary48-export.v1",
+  "status": "PASS"
+}

@@ -1,0 +1,59 @@
+{
+  "boundary": "This classifies the natural global finite-group correspondence.  It does not deny the local abstract K4,4 frame quotient; it tests whether that local K3,3 can be promoted canonically to a small subset of the distinct 360 chart-graph K3,3 witnesses.",
+  "equivariantEightWitnessRefinementPossible": false,
+  "objects": {
+    "charts": 27,
+    "globalK33": 360,
+    "packetIncidentCharts": 3,
+    "packets": 45
+  },
+  "packet0IntersectionClassSizes": {
+    "0": 192,
+    "1": 96,
+    "2": 72
+  },
+  "packetStabilizer": {
+    "orbitCountOnK33": 4,
+    "orbitProfile": [
+      {
+        "intersectionHistogram": {
+          "0": 48
+        },
+        "size": 48
+      },
+      {
+        "intersectionHistogram": {
+          "2": 72
+        },
+        "size": 72
+      },
+      {
+        "intersectionHistogram": {
+          "1": 96
+        },
+        "size": 96
+      },
+      {
+        "intersectionHistogram": {
+          "0": 144
+        },
+        "size": 144
+      }
+    ],
+    "orbitSizes": [
+      48,
+      72,
+      96,
+      144
+    ],
+    "order": 576
+  },
+  "pairIntersectionGlobalHistogram": {
+    "0": 8640,
+    "1": 4320,
+    "2": 3240
+  },
+  "schema": "w33.20260901.packet-k33-globalization.v1",
+  "status": "PASS",
+  "theorem": "The complete PSp(4,3) packet-by-global-K3,3 relation is classified by the packet stabilizer. Any equivariant witness assignment must be a union of the listed stabilizer orbits. Therefore the local K4,4 -> S4/V4 -> K3,3 quotient is not identified with eight selected members of the 360 global Schlaefli K3,3 shell unless cardinality eight is a stabilizer-orbit union."
+}

@@ -1,0 +1,105 @@
+{
+  "K33PrimitiveQCoordinates": [
+    [
+      "1/3",
+      "1/2",
+      "0"
+    ],
+    [
+      "4/9",
+      "2/3",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0"
+    ]
+  ],
+  "K33QCoordinateRank": 1,
+  "allNineRationalMatrixUnitLawsVerified": true,
+  "block": "End_PSp(St_81^3) ~= M3(Q)",
+  "boundary": "These 3x3 coordinates live in multiplicity space for three isomorphic finite-group representations. They are not a physical generation matrix, CKM/PMNS matrix, Hamiltonian, or experimentally measured mixing matrix.",
+  "connectors": {
+    "P_to_R": {
+      "normalizationProduct": "8/9",
+      "orbital": 5,
+      "transposeOrbital": 5
+    },
+    "P_to_S": {
+      "normalizationProduct": "40/3",
+      "orbital": 16,
+      "transposeOrbital": 38
+    }
+  },
+  "olderOrbital11_25PrimitiveFrame": [
+    {
+      "eigenvalue": -4,
+      "matrixUnitCoordinates": [
+        [
+          "2/3",
+          "-1/2",
+          "0"
+        ],
+        [
+          "-4/9",
+          "1/3",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ]
+    },
+    {
+      "eigenvalue": 0,
+      "matrixUnitCoordinates": [
+        [
+          "1/3",
+          "1/2",
+          "0"
+        ],
+        [
+          "4/9",
+          "2/3",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ]
+    },
+    {
+      "eigenvalue": 4,
+      "matrixUnitCoordinates": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1"
+        ]
+      ]
+    }
+  ],
+  "primitiveDiagonalFrame": [
+    "P_intrinsic_20x15",
+    "R_K33_complement_component",
+    "S_K33_dark"
+  ],
+  "schema": "w33.20260901.steinberg-m3-matrix-units.v1",
+  "status": "PASS",
+  "theorem": "The entire rational Steinberg multiplicity commutant is now explicit, not merely its central or primitive idempotents. P,R,S and deterministic symmetric orbital connectors generate nine rational matrix units satisfying the full M3(Q) multiplication table. The K3,3 projector Q and the older orbital spectral frame are expressed in this common coordinate algebra."
+}

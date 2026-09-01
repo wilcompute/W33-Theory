@@ -1,0 +1,12 @@
+{
+  "schema":"w33.20260901.binary48-meataxe-only.v1",
+  "status":"PASS",
+  "groupOrder":25920,
+  "compositionFactorDimensions":{"A24":[1,1,8,14],"B24":[1,1,8,14],"H1_48":[1,1,1,1,8,8,14,14],"Omega48":[1,1,1,1,8,8,14,14]},
+  "moduleIsomorphism":{"H1_equals_Omega48":false,"A24_equals_B24":false},
+  "submoduleDimensions":{"H1_48":[0,1,9,10,14,15,23,24,24,24,25,33,34,38,39,47,48],"Omega48":[0,1,9,10,15,16,23,24,24,24,24,24,24,24,24,24,25,32,33,38,39,47,48]},
+  "homBA":{"dimension":576,"compositionFactorDimensions":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,8,8,8,8,8,8,8,8,8,14,14,14,14,14,14,14,14,14,14,14,40,40,40,40,40,40]},
+  "ext":{"dimensionComputed":false,"lowerBoundFromIndependentNonsplitExtension":1,"reasonFullCohomoloDeferred":"stock Cohomolo MDIM ceiling on the 576-dimensional Hom(B24,A24) module"},
+  "theorem":"MeatAxe decides the exact F2 module comparison of H1_48 and Omega48 and decomposes Hom(B24,A24) without invoking Cohomolo. The independent explicit splitting-equation certificate proves Ext^1(B24,A24) is nonzero, hence dimension at least one; its exact dimension remains open.",
+  "boundary":"Composition-factor dimensions alone do not name modular irreducible species. Whole-module isomorphism is reported separately by MeatAxe. No Ext dimension is guessed from the nonsplit witness."
+}
