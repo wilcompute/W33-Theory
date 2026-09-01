@@ -1,0 +1,51 @@
+{
+  "boundary": "The mod-2 divided curvature is Bockstein-like but is not called a standard Bockstein here because the integral composite is 6Q rather than zero. The 48-dimensional binary H1 is a homology dimension, not automatically a D4 or hardware channel count.",
+  "characteristicZero": {
+    "centeredRank": 20,
+    "chartToD4Rank": 21,
+    "gramSpectrum": {
+      "0": 6,
+      "12": 20,
+      "30": 1
+    },
+    "reading": "unique PSp(4,3) degree-20 / dark sector"
+  },
+  "coordinateIdentifications": {
+    "chartPacketIncidenceEquals": "R P",
+    "completionChartsToCubicLines": 27,
+    "packetsToTritangents": 45
+  },
+  "integral": {
+    "liftedCurvature": "R90 N90 = 6 Q",
+    "matrices": {
+      "J": "90x45",
+      "N90": "90x36",
+      "R90": "27x90"
+    },
+    "oldCurvature": "R N = 3 Q",
+    "pairIdentity": "J^T J = 2 I_45"
+  },
+  "mod2": {
+    "SchlafliCode": "[27,7,11]_2",
+    "dividedCurvature": "(R90 N90)/2 = 3Q = Q mod 2",
+    "dividedCurvatureRank": 7,
+    "flat": true,
+    "homology": {
+      "H0": 6,
+      "H1": 48,
+      "H2": 15
+    }
+  },
+  "mod3": {
+    "H1Split": "45 antisymmetric D4-pair modes + 10 symmetric old logical modes",
+    "flat": true,
+    "homology": {
+      "H0": 6,
+      "H1": 55,
+      "H2": 22
+    }
+  },
+  "schema": "w33.20260901.d4-prism-lift.v1",
+  "status": "PASS",
+  "theorem": "The 90-D4 lift multiplies the integral curvature by two. It simultaneously realizes the characteristic-zero 20-sector, preserves the old ternary logical 10 in the symmetric pair half while adding 45 antisymmetric modes, and makes the prism flat mod 2 with the old Schlaefli 7 reappearing as the first divided curvature."
+}
