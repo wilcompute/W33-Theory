@@ -1,0 +1,103 @@
+{
+  "allOrbitalBasisMapsAnnihilateSteinberg": true,
+  "boundary": "Characteristic-zero finite representation no-go only; it does not rule out nonlinear, subgroup-equivariant, modular, or physically augmented couplings.",
+  "consequence": "Hom_PSp(St_81, Q[Odd120]) = 0; the 120 odd/Steiner triangle permutation module contains no Steinberg constituent",
+  "equivariantHomDimension": 11,
+  "groupOrder": 25920,
+  "schema": "w33.20260901.e6-odd-full-hom-steinberg-nogo.v1",
+  "sourceCarrier": 1080,
+  "sourceStabilizerOrder": 24,
+  "status": "PASS",
+  "targetCarrier": 120,
+  "targetStabilizerOrbits": [
+    {
+      "intersectionHistogram": {
+        "0": 1
+      },
+      "stabilizerOrbit": 0,
+      "steinbergGramZero": true,
+      "targetOrbitSize": 1
+    },
+    {
+      "intersectionHistogram": {
+        "0": 2
+      },
+      "stabilizerOrbit": 1,
+      "steinbergGramZero": true,
+      "targetOrbitSize": 2
+    },
+    {
+      "intersectionHistogram": {
+        "2": 3
+      },
+      "stabilizerOrbit": 2,
+      "steinbergGramZero": true,
+      "targetOrbitSize": 3
+    },
+    {
+      "intersectionHistogram": {
+        "0": 6
+      },
+      "stabilizerOrbit": 3,
+      "steinbergGramZero": true,
+      "targetOrbitSize": 6
+    },
+    {
+      "intersectionHistogram": {
+        "0": 12
+      },
+      "stabilizerOrbit": 4,
+      "steinbergGramZero": true,
+      "targetOrbitSize": 12
+    },
+    {
+      "intersectionHistogram": {
+        "1": 12
+      },
+      "stabilizerOrbit": 5,
+      "steinbergGramZero": true,
+      "targetOrbitSize": 12
+    },
+    {
+      "intersectionHistogram": {
+        "0": 12
+      },
+      "stabilizerOrbit": 6,
+      "steinbergGramZero": true,
+      "targetOrbitSize": 12
+    },
+    {
+      "intersectionHistogram": {
+        "0": 12
+      },
+      "stabilizerOrbit": 7,
+      "steinbergGramZero": true,
+      "targetOrbitSize": 12
+    },
+    {
+      "intersectionHistogram": {
+        "1": 12
+      },
+      "stabilizerOrbit": 8,
+      "steinbergGramZero": true,
+      "targetOrbitSize": 12
+    },
+    {
+      "intersectionHistogram": {
+        "0": 24
+      },
+      "stabilizerOrbit": 9,
+      "steinbergGramZero": true,
+      "targetOrbitSize": 24
+    },
+    {
+      "intersectionHistogram": {
+        "0": 24
+      },
+      "stabilizerOrbit": 10,
+      "steinbergGramZero": true,
+      "targetOrbitSize": 24
+    }
+  ],
+  "theorem": "The full PSp-equivariant Hom space from the 1080 E6-even/obstruction carrier to the 120 E6-odd/Steiner triangle carrier is exhausted by the listed stabilizer-orbit incidence maps. If all listed Steinberg Grams vanish, every equivariant linear map annihilates all three Steinberg copies, proving the odd120 permutation module has no Steinberg constituent."
+}
