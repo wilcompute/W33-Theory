@@ -29,6 +29,23 @@
       "retracted_by": "Pass 4800",
       "settled_by": "exhaustive alpha(W(3,5)) = 18 against a predicted 21",
       "why": "the q=3 agreement 7 = q^2-q+1 was a single data point; at q=5 the value is 18, not 21, so the deficit is 8 rather than q. Two points do not determine a formula and no replacement is proposed."
+    },
+    {
+      "assert_pattern": "Pass\\s*4795[^\\n]{0,180}(?:local\\s+(?:image|action)|cyclic[- ]orientation)[^\\n]{0,80}C3|C3[^\\n]{0,80}(?:local\\s+(?:image|action)|cyclic[- ]orientation)[^\\n]{0,180}Pass\\s*4795",
+      "claim": "the Pass 4795 transitive degree-45 PSp(4,3) action has local image C3 on the three incident K5s and therefore carries a global two-sheet cyclic-orientation torsor",
+      "exempt_files": [
+        "analysis/w33_pass4795_triangle_chirality_orientation_torsor.py",
+        "analysis/w33_20260901_degree45_action_crosswalk.py",
+        "analysis/w33_20260901_degree45_compiler_correction.py",
+        "analysis/w33_20260901_e8_chart_port_holonomy.py",
+        "analysis/2026-09-01_pass4795_orientation_retraction.md",
+        "data/PART_W33_20260901_E8_CHART_PORT_HOLONOMY.json",
+        "data/w33_retractions.json"
+      ],
+      "exempt_pattern": "retract|withdraw|false|wrong|correct|old|older|histor|supersed|not\\s+C3|S3|cannot|no\\s+global|comparison|pre-correction",
+      "retracted_by": "2026-09-01 explicit degree-45 action crosswalk",
+      "settled_by": "w33_20260901_degree45_action_crosswalk.py plus w33_20260901_degree45_tom_uniqueness.g",
+      "why": "The old dependency-cube 45-set and the polar-pair packet 45-set are explicitly PSp-equivariantly isomorphic under the same transvection generators and preserve all 27 maximal K5s. A point stabilizer of order 576 induces the full S3 on its three incident K5s, with order profile 1^1,2^3,3^2. The U4(2) Table of Marks independently shows the transitive index-45 action is unique, so a second C3-local PSp action does not exist."
     }
   ],
   "schema": "w33.retractions.v1"
