@@ -3,7 +3,7 @@ on:
   push:
     branches: [master]
     paths:
-      - 'tools/integrate_20260901_all5_followup_v2.py'
+      - 'tools/integrate_20260901_all5_followup_v3.py'
       - '.github/workflows/w33_20260901_promote_all5_followup.yml'
   workflow_dispatch:
 permissions:
@@ -21,7 +21,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: {python-version: '3.12'}
       - name: Integrate only frozen PASS certificates
-        run: python tools/integrate_20260901_all5_followup_v2.py
+        run: python tools/integrate_20260901_all5_followup_v3.py
       - name: Commit shared frontier and root index
         run: |
           git config user.name 'w33-evidence-bot'
