@@ -1,20 +1,23 @@
 #!/usr/bin/env python3
-"""Resolve the rank-3 K3,3/Steinberg coupling from the router certificate.
+"""Resolve the K3,3-selected primitive Steinberg copy and its exact frame.
 
-The preceding exact router found, on the 9-dimensional left-regular model of
-the M3 Steinberg commutant block,
+The preceding router found, on the 9-dimensional left-regular model of the M3
+Steinberg commutant block,
 
     charpoly(K) = x^6 (x-8)^3
 
 and rank-3 off-diagonal couplings between the intrinsic 81+162 tensor sectors.
-This script decides the stronger possibility objectwise in the orbital algebra:
+This script proves the stronger identity K^2=8K, so Q=K/8 is a primitive
+rank-81 Steinberg projector, and then resolves its exact position relative to
+the intrinsic 20_chart x 15_W33 Steinberg copy P.
 
-    K^2 = 8 K.
-
-If true, K/8 is a genuine primitive idempotent of actual permutation-space
-rank 81, selected geometrically by the Schlaefli K3,3 incidence Gram.  We then
-measure its exact compression against the intrinsic 20_chart x 15_W33
-Steinberg copy instead of treating the noncommutation as a failure.
+The observed sandwich P Q P = Q P Q = P/3,Q/3 is not left as a numerical
+angle coincidence.  We construct the normalized projection R of Q into the
+intrinsic 162-sector and the residual S.  The exact projector frame P,R,S then
+splits the 243-dimensional Steinberg isotypic component into three mutually
+orthogonal 81-dimensional copies; Q lies entirely in the P+R plane and is
+orthogonal to S.  Thus the K3,3 incidence channel has an exact 81-dimensional
+Steinberg-dark complement.
 """
 from __future__ import annotations
 
@@ -99,19 +102,19 @@ def main():
     # Reconstruct the Pass4850 C4 x K3,3 incidence Gram row, then identify its
     # orbital-algebra element exactly as in the router.
     K33 = []
-    for S in itertools.combinations(range(27), 6):
-        H = G27.subgraph(S)
+    for SS in itertools.combinations(range(27), 6):
+        H = G27.subgraph(SS)
         if H.number_of_edges() == 9 and set(dict(H.degree()).values()) == {3} and nx.is_bipartite(H):
             A, C = nx.algorithms.bipartite.sets(H)
             if len(A) == len(C) == 3:
-                K33.append(frozenset(S))
+                K33.append(frozenset(SS))
     assert len(K33) == 360
     kof = [set() for _ in range(1080)]
-    for j, S in enumerate(K33):
+    for j, SS in enumerate(K33):
         for i, C in enumerate(q4):
-            if C <= S:
+            if C <= SS:
                 kof[i].add(j)
-    assert {len(S) for S in kof} == {3}
+    assert {len(SS) for SS in kof} == {3}
     baseK = kof[q0]
     row = [len(baseK & kof[phi[j]]) for j in range(1080)]
     kval = [None] * 59
@@ -157,7 +160,7 @@ def main():
     M15, M24 = left_matrix(S15), left_matrix(S24)
     assert M15.rank() == 3 and M24.rank() == 6
 
-    # The central question: does the K3,3 Gram define a primitive idempotent?
+    # The central question: the K3,3 Gram is eight times a primitive idempotent.
     orbital_quadratic = mulvec(KE, KE, T) == 8 * KE
     regular_quadratic = KM * KM == 8 * KM
     assert orbital_quadratic == regular_quadratic
@@ -168,15 +171,13 @@ def main():
     q_actual_rank = sp.factor(1080 * Qvec[diag]) if q_idempotent else None
 
     # Exact relative position of the geometric K33 copy and intrinsic 20x15
-    # copy.  In an M3 block two primitive idempotents have scalar sandwich
-    # products when their rank-one multiplicity directions are transverse.
+    # copy.  Both are symmetric orthogonal projectors in the permutation model,
+    # so the scalar 1/3 is the squared multiplicity-space overlap.
     c15 = proportional_scalar(M15 * QM * M15, M15) if q_idempotent else None
     cq = proportional_scalar(QM * M15 * QM, QM) if q_idempotent else None
     trace_overlap = sp.factor(sp.trace(M15 * QM)) if q_idempotent else None
     comm_rank = int((M15 * QM - QM * M15).rank()) if q_idempotent else None
 
-    # Also resolve all four block ranks of the primitive projector relative to
-    # the 3+6 intrinsic decomposition.
     block_ranks = {
         "15_Q_15": int((M15 * QM * M15).rank()) if q_idempotent else None,
         "15_Q_24": int((M15 * QM * M24).rank()) if q_idempotent else None,
@@ -185,8 +186,37 @@ def main():
     }
 
     primitive81 = bool(q_idempotent and q_regular_rank == 3 and q_actual_rank == 81)
+    assert primitive81 and c15 == cq == sp.Rational(1, 3)
+
+    # NEW: normalize Q's component inside the intrinsic rank-162 complement.
+    # For a rank-one projector q with |<p,q>|^2=1/3, the complementary norm is
+    # 2/3, hence R=(3/2)(I-P)Q(I-P) is the rank-one projector onto that component.
+    Rvec = sp.Rational(3, 2) * mulvec(S24, mulvec(Qvec, S24, T), T)
+    Svec = S24 - Rvec
+    RM, SM = left_matrix(Rvec), left_matrix(Svec)
+    frame = [M15, RM, SM]
+    frame_vec = [S15, Rvec, Svec]
+    assert [int(M.rank()) for M in frame] == [3, 3, 3]
+    assert all(M * M == M for M in frame)
+    assert all(mulvec(v, v, T) == v for v in frame_vec)
+    assert all(frame[i] * frame[j] == sp.zeros(9) and frame[j] * frame[i] == sp.zeros(9)
+               for i, j in itertools.combinations(range(3), 2))
+    assert M15 + RM + SM == sp.eye(9)
+    assert S15 + Rvec + Svec == E
+    actual_frame_ranks = [sp.factor(1080 * v[diag]) for v in frame_vec]
+    assert actual_frame_ranks == [81, 81, 81]
+
+    # Q is supported entirely on the P+R multiplicity plane; S is exactly dark.
+    assert SM * QM == sp.zeros(9) and QM * SM == sp.zeros(9)
+    rqr = proportional_scalar(RM * QM * RM, RM)
+    qrq = proportional_scalar(QM * RM * QM, QM)
+    assert rqr == qrq == sp.Rational(2, 3)
+    q_on_pr = M15 * QM * M15 + M15 * QM * RM + RM * QM * M15 + RM * QM * RM
+    assert q_on_pr == QM
+    dark_rank_actual = actual_frame_ranks[2]
+
     out = {
-        "schema": "w33.20260901.k33-steinberg-primitive.v1",
+        "schema": "w33.20260901.k33-steinberg-primitive.v2",
         "status": "PASS",
         "k33SteinbergOperator": {
             "regularCharpoly": str(sp.factor(KM.charpoly().as_expr())),
@@ -196,37 +226,54 @@ def main():
         "scaledOperator": {
             "Q_equals_K_over_8_isIdempotent": bool(q_idempotent),
             "leftRegularRank": q_regular_rank,
-            "actualPermutationSpaceRank": str(q_actual_rank) if q_actual_rank is not None else None,
+            "actualPermutationSpaceRank": str(q_actual_rank),
             "isPrimitiveSteinberg81Projector": primitive81,
         },
         "relativeToIntrinsic20x15Copy": {
             "intrinsicProjectorRegularRank": int(M15.rank()),
-            "sandwich_M15_Q_M15_scalar": str(c15) if c15 is not None else None,
-            "sandwich_Q_M15_Q_scalar": str(cq) if cq is not None else None,
-            "trace_M15_Q": str(trace_overlap) if trace_overlap is not None else None,
+            "sandwich_M15_Q_M15_scalar": str(c15),
+            "sandwich_Q_M15_Q_scalar": str(cq),
+            "squaredOverlap": "1/3",
+            "multiplicitySpaceAngle": "arccos(1/sqrt(3))",
+            "trace_M15_Q": str(trace_overlap),
             "commutatorRank": comm_rank,
             "blockRanks": block_ranks,
         },
+        "orthogonalSteinbergFrame": {
+            "regularRanks": [3, 3, 3],
+            "actualRanks": [str(x) for x in actual_frame_ranks],
+            "sumIsCentralSteinbergProjector": True,
+            "pairwiseOrthogonal": True,
+            "R_definition": "(3/2) (E-P) Q (E-P)",
+            "S_definition": "(E-P)-R",
+            "R_Q_R_scalar": str(rqr),
+            "Q_R_Q_scalar": str(qrq),
+            "Q_supportedEntirelyOn_P_plus_R": True,
+            "S_isK33Dark": True,
+            "darkActualRank": str(dark_rank_actual),
+        },
         "theorem": (
-            "The certificate decides whether the Schlaefli K3,3 incidence Gram geometrically selects a primitive Steinberg-81 copy inside the three-copy Steinberg isotypic block. "
-            "If K^2=8K and rank(K/8)=81, the previous rank-3 off-diagonal routing is reinterpreted as exact mixing between this geometric primitive copy and the intrinsic 20_chart x 15_W33 copy, with the sandwich scalar recording their relative position."
+            "The Schlaefli K3,3 incidence Gram is exactly 8Q for a primitive rank-81 Steinberg projector Q. "
+            "Its squared overlap with the intrinsic 20_chart x 15_W33 Steinberg copy P is exactly 1/3. "
+            "Normalizing Q's component in the intrinsic 162-sector produces a second primitive projector R, and the residual S completes an exact mutually orthogonal 81+81+81 Steinberg frame. "
+            "Q lives entirely in the P+R plane and annihilates S, so the K3,3 incidence channel has an exact rank-81 Steinberg-dark complement."
         ),
         "boundary": (
             "This is a theorem about the finite PSp(4,3) commutant and its permutation module. "
-            "A primitive Steinberg projector is not by itself a particle, field, hardware channel, or dynamical propagator."
+            "The 1/3 overlap and dark 81-space are exact representation-theoretic facts, not by themselves particle mixing angles, physical fields, or dynamical propagation laws."
         ),
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(out, indent=2, sort_keys=True) + "\n")
     print(json.dumps({
         "status": "PASS",
-        "K2eq8K": bool(orbital_quadratic),
-        "primitive81": primitive81,
-        "regularRank": q_regular_rank,
-        "actualRank": str(q_actual_rank),
-        "sandwich": [str(c15), str(cq)],
-        "commRank": comm_rank,
-        "blockRanks": block_ranks,
+        "K2eq8K": True,
+        "primitive81": True,
+        "sandwich": ["1/3", "1/3"],
+        "frameActualRanks": [str(x) for x in actual_frame_ranks],
+        "Roverlap": str(rqr),
+        "darkRank": str(dark_rank_actual),
+        "Qdark": True,
     }, sort_keys=True))
 
 
