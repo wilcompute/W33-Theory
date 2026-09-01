@@ -16,7 +16,7 @@ permissions:
   contents: write
 concurrency:
   group: w33-20260901-next5-${{ github.ref }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   exact:
     runs-on: ubuntu-24.04
