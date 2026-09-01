@@ -1,0 +1,14 @@
+{
+  "allFourProjectorsActualRank": 81,
+  "boundary": "This exact cross-identification is in finite representation multiplicity space; the eigenvalues -4,0,+4 are not particle charges, masses, or energies.",
+  "orbitalOperator": "symmetric orbital 11+25 restricted to St^3",
+  "planeIdentity": "P+R = Q+U",
+  "schema": "w33.20260901.steinberg-old-new-crossid.v1",
+  "spectralIdentification": {
+    "eigenvalue_+4": "S_K33_dark",
+    "eigenvalue_-4": "U = P+R-Q",
+    "eigenvalue_0": "Q_K33"
+  },
+  "status": "PASS",
+  "theorem": "The older deterministic {-4,0,+4} primitive Steinberg frame and the new geometric K3,3 frame are not independent discoveries: its zero eigenspace is exactly the K3,3-selected projector Q, its +4 eigenspace is exactly the K3,3-dark projector S, and its -4 eigenspace is the unique orthogonal complement U to Q in the intrinsic P+R plane."
+}
