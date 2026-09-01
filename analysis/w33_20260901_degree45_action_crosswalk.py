@@ -2,14 +2,14 @@
 """Decide the apparent Pass4795 C3-vs-S3 discrepancy objectwise.
 
 Reconstruct the older dependency-cube quotient exactly from the Pass4795
-recipe, but drive it by the *same four PSp transvection generators* used by the
-2026-09-01 polar-pair packet carrier.  Then build an explicit equivariant
-bijection between the two 45-sets and compare the induced action on the 27
-maximal K5 lines.
+recipe on the DUAL W33 LINE graph, driven by the same four PSp transvections
+used by the 2026-09-01 polar-pair packet carrier.  Then build an explicit
+equivariant bijection between the two 45-sets and compare the induced action
+on the 27 maximal K5 lines.
 
+The point/line distinction is explicit here because W(3,3) is not self-dual.
 This is stronger than count/TOM matching: it is a literal paired G-set
-certificate.  The Table-of-Marks uniqueness witness remains an independent
-cross-check.
+certificate.  The Table-of-Marks uniqueness witness is an independent check.
 """
 from __future__ import annotations
 
@@ -43,11 +43,16 @@ def porder(p):return base.porder(p)
 
 
 def old_cube_action():
-    pts,pidx,lines,N=base.geometry()
-    # Pass4795 residues: 270 four-subsets with even incidence against every line.
+    pts,pidx,lines,_N=base.geometry()
+    lidx={frozenset(L):i for i,L in enumerate(lines)}
+
+    # Pass4795 uses the line-intersection graph A_* on the forty isotropic
+    # W33 lines, not the point-collinearity graph.  Keep that boundary literal.
     A=np.zeros((40,40),dtype=np.uint8)
-    for L in lines:
-        for x,y in itertools.combinations(L,2):A[x,y]=A[y,x]=1
+    for i,j in itertools.combinations(range(40),2):
+        if set(lines[i])&set(lines[j]):A[i,j]=A[j,i]=1
+    assert set(map(int,A.sum(axis=1)))=={12}
+
     residues=[]
     for C in itertools.combinations(range(40),4):
         if not np.any(np.sum(A[:,C],axis=1)&1):residues.append(tuple(C))
@@ -87,23 +92,26 @@ def old_cube_action():
         for r in C:u|=rm[r]
         assert u.bit_count()==8;um.append(u)
 
-    # Same transvection generators as polar.build().
-    gens40=[]
+    # Same abstract transvections as polar.build(), first on points and then
+    # transported honestly to line indices by image of each four-point line.
+    gens_point=[];gens_line=[]
     for v in pts:
         for alpha in (1,2):
-            p=[]
+            pp=[]
             for x in pts:
                 z=alpha*base.form(x,v)%3
                 y=base.norm(tuple((x[k]+z*v[k])%3 for k in range(4)))
-                p.append(pidx[y])
-            gens40.append(tuple(p))
-    chosen=(18,62,77,10);g40=[gens40[i] for i in chosen]
+                pp.append(pidx[y])
+            pp=tuple(pp);gens_point.append(pp)
+            gens_line.append(tuple(lidx[frozenset(pp[x] for x in L)] for L in lines))
+    chosen=(18,62,77,10);gline=[gens_line[i] for i in chosen]
+
     def ar(i,g):return ridx[tuple(sorted(g[x] for x in residues[i]))]
     def ac(i,g):return cidx[frozenset(ar(r,g) for r in cubes[i])]
 
     # Generate the 25920 group on cubes and reconstruct Pass4795's 45 blocks as
     # the three cubes fixed by a cube stabilizer, then transport.
-    gc=[tuple(ac(i,g) for i in range(135)) for g in g40]
+    gc=[tuple(ac(i,g) for i in range(135)) for g in gline]
     I=tuple(range(135));G={I};D=deque([I])
     while D:
         a=D.popleft()
@@ -116,8 +124,7 @@ def old_cube_action():
     B0=frozenset(fixed)
     blocks=sorted({frozenset(g[i] for i in B0) for g in G},key=lambda B:tuple(sorted(B)))
     assert len(blocks)==45;bidx={B:i for i,B in enumerate(blocks)}
-    gb=[]
-    for g in gc:gb.append(tuple(bidx[frozenset(g[i] for i in B)] for B in blocks))
+    gb=[tuple(bidx[frozenset(g[i] for i in B)] for B in blocks) for g in gc]
 
     # Graph intrinsic to old quotient, exactly as Pass4795.
     cube_to_block={c:i for i,B in enumerate(blocks) for c in B};mult=Counter()
@@ -125,6 +132,7 @@ def old_cube_action():
         if (um[i]&um[j]).bit_count()==4:
             a,b=cube_to_block[i],cube_to_block[j]
             if a!=b:mult[tuple(sorted((a,b)))]+=1
+    assert len(mult)==270 and set(mult.values())=={3}
     Q45=nx.Graph();Q45.add_nodes_from(range(45));Q45.add_edges_from(mult)
     K5=sorted((frozenset(C) for C in nx.find_cliques(Q45)),key=lambda C:tuple(sorted(C)))
     assert len(K5)==27 and {len(C) for C in K5}=={5}
@@ -132,7 +140,7 @@ def old_cube_action():
 
 
 def main():
-    _supports,pcharts,pincident,genpairs,PG=polar.build();assert len(PG)==25920
+    _supports,pcharts,_pincident,genpairs,PG=polar.build();assert len(PG)==25920
     gp=[a for a,b in genpairs]
     oldg,Qold,Kold=old_cube_action()
     paired=closure_pairs(gp,oldg);assert len(paired)==25920
@@ -154,7 +162,8 @@ def main():
     Qnew=nx.Graph();Qnew.add_nodes_from(range(45))
     for C in pcharts:
         for a,b in itertools.combinations(C,2):Qnew.add_edge(a,b)
-    assert set(frozenset(C) for C in nx.find_cliques(Qnew) if len(C)==5)==set(map(frozenset,pcharts))
+    newK={frozenset(C) for C in nx.find_cliques(Qnew) if len(C)==5}
+    assert newK==set(map(frozenset,pcharts)) and len(newK)==27
     assert all(Qnew.has_edge(i,j)==Qold.has_edge(phi[i],phi[j]) for i,j in itertools.combinations(range(45),2))
     kold={K:i for i,K in enumerate(Kold)}
     linephi=[kold[frozenset(phi[x] for x in C)] for C in pcharts]
@@ -163,9 +172,8 @@ def main():
     # Compute old local image directly at y0 on its three intrinsic K5s.
     incident_old=sorted(i for i,K in enumerate(Kold) if y0 in K);assert len(incident_old)==3
     pos={k:i for i,k in enumerate(incident_old)}
-    # line action for every paired element
     image=set()
-    for a,b in H:
+    for _a,b in H:
         perm=[]
         for k in incident_old:
             target=frozenset(b[x] for x in Kold[k]);perm.append(pos[kold[target]])
@@ -174,14 +182,15 @@ def main():
     order_profile=Counter(porder(p) for p in image)
     assert order_profile==Counter({1:1,2:3,3:2})
 
-    out={'schema':'w33.20260901.degree45-action-crosswalk.v1','status':'PASS',
+    out={'schema':'w33.20260901.degree45-action-crosswalk.v2','status':'PASS',
       'ambient':'PSp(4,3)','groupOrder':25920,
+      'sourceBoundary':'Pass4795 is reconstructed on the dual W33 line-intersection graph; the point graph is never substituted.',
       'polarToPass4795PointMap':phi,'polarToPass4795K5Map':linephi,
       'equivariantBijection':True,'graphAndAll27K5Preserved':True,
       'pointStabilizerOrder':576,'pass4795IntrinsicLocalImage':'S3',
       'pass4795LocalImageOrderProfile':{str(k):v for k,v in sorted(order_profile.items())},
-      'theorem':'The polar-pair packet carrier and the dependency-cube Pass4795 quotient are literally isomorphic PSp(4,3)-sets under an explicit 45-point equivariant bijection preserving the graph and all 27 maximal K5s. On the old carrier itself, the PSp point stabilizer induces the full S3 on the three incident K5s.',
-      'consequence':'The frozen Pass4795 claim PSp-local-image=C3/global two-sheet cyclic orientation is retracted. The later S3 port-gauge theorem is the correct local action.',
+      'theorem':'The polar-pair packet carrier and the dependency-cube Pass4795 quotient are literally isomorphic PSp(4,3)-sets under an explicit 45-point equivariant bijection preserving the graph and all 27 maximal K5s. On the old line-based carrier itself, the PSp point stabilizer induces the full S3 on the three incident K5s.',
+      'consequence':'The frozen Pass4795 claim PSp-local-image=C3/global two-sheet cyclic orientation is retracted if this executable certificate passes; the later S3 port-gauge theorem is the correct local action.',
       'boundary':'This corrects the action theorem only. Other Pass4795 results not depending on the C3 orientation are untouched.'}
     OUT.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
     print(json.dumps({'status':'PASS','bijection':len(set(phi)),'oldLocalImage':'S3','profile':dict(order_profile)},sort_keys=True))
