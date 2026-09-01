@@ -1,0 +1,44 @@
+name: 2026-09-01 GQ24 E8 and K33 Steinberg breakthrough
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20260901_gq24_k44_e8_atlas.py'
+      - 'analysis/w33_20260901_k33_steinberg_primitive.py'
+      - '.github/workflows/w33_20260901_gq24_k33_breakthrough.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: w33-20260901-gq24-k33-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install exact dependencies
+        run: python -m pip install --disable-pip-version-check numpy scipy sympy networkx
+      - name: Execute atlas and primitive projector tests
+        shell: bash
+        run: |
+          set -o pipefail
+          python analysis/w33_20260901_gq24_k44_e8_atlas.py
+          python analysis/w33_20260901_k33_steinberg_primitive.py
+      - name: Commit generated certificates
+        shell: bash
+        run: |
+          git config user.name 'w33-evidence-bot'
+          git config user.email 'w33-evidence-bot@users.noreply.github.com'
+          git add \
+            data/PART_W33_20260901_GQ24_K44_E8_ATLAS.json \
+            data/PART_W33_20260901_K33_STEINBERG_PRIMITIVE.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Materialize GQ24 E8 atlas and K33 Steinberg primitive evidence'
+            git pull --rebase origin master
+            git push origin HEAD:master
+          fi
