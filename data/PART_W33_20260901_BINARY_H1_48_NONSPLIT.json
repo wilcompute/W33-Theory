@@ -1,0 +1,24 @@
+{
+  "schema": "w33.20260901.binary-h1-48-nonsplit.v1",
+  "status": "PASS",
+  "binaryH1": {
+    "dimension": 48,
+    "exactSequence": "0 -> A24 -> H1_48 -> B24 -> 0",
+    "A24": "im(J) / im(N90)",
+    "B24": "ker(R P) via the pair-sum quotient",
+    "extensionSplits": false,
+    "Hom_B_to_A_dimension": 2,
+    "deterministicHomBasisRanks": [1,10],
+    "globalFixedDimensions": {"A24":1,"B24":0,"H1_48":1},
+    "generatorCocycleBlockRanks": [18,6,18,14]
+  },
+  "e8Shared48Test": {
+    "sector": "Z4=1, Z3=1, dimension 48",
+    "PSpInvariant": false,
+    "witnessType": "product of two E6 root reflections (even Weyl element)",
+    "targetJointGrade": [2,1],
+    "consequence": "the E8 grading-48 is not a PSp(4,3) carrier and cannot be identified equivariantly with binary H1_48"
+  },
+  "theorem": "The binary 90-D4 prism homology is a nonsplit 24-by-24 extension. The two 24-dimensional subquotients are not isomorphic through an invertible G-map: Hom_G(B,A) has dimension 2 and its deterministic basis maps have ranks 1 and 10. The independent E8/Kummer shared 48-root sector is not PSp-invariant, permanently separating the two 48s at full-group level.",
+  "boundary": "No characteristic-zero irrep label is assigned to either modular 24-dimensional subquotient from dimension alone."
+}
