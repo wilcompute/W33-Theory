@@ -8,6 +8,16 @@ F := GF(2);;
 G := Group(PermGens40);;
 if Size(G) <> 25920 then Error("binary48: generators do not give PSp(4,3)"); fi;
 
+# The exporter deliberately writes portable integer 0/1 matrices.  MeatAxe
+# requires matrices whose entries actually belong to the declared field, not
+# merely integers congruent to field elements.  Coerce objectwise here so the
+# frozen text format stays human-readable and Cohomolo/MeatAxe see GF(2).
+ToF := m -> ImmutableMatrix(F,List(m,r -> List(r,x -> x * One(F))));;
+Amats := List(Amats,ToF);;
+Bmats := List(Bmats,ToF);;
+Hmats := List(Hmats,ToF);;
+Cmats := List(Cmats,ToF);;
+
 Amod := GModuleByMats(Amats,F);;
 Bmod := GModuleByMats(Bmats,F);;
 Hmod := GModuleByMats(Hmats,F);;
@@ -34,6 +44,7 @@ subC := SortedList(List(MTX.BasesSubmodules(Cmod),Length));;
 # nonzero; that assertion is an orientation sanity check on this construction.
 homMats := List([1..Length(Amats)], i ->
   KroneckerProduct(TransposedMat(Inverse(Bmats[i])),Amats[i]));;
+homMats := List(homMats,ToF);;
 homMod := GModuleByMats(homMats,F);;
 homCF := MTX.CompositionFactors(homMod);;
 homDims := SortedList(List(homCF,MTX.Dimension));;
