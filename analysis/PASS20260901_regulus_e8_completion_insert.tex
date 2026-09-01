@@ -43,3 +43,40 @@ $E_8$ completion removes a physical blocking obstruction, nor does it assign
 dynamics to the root system.  It says that the independently certified
 Holotrade obstruction edge is a canonical address of one selected $E_8$
 ten-$D_4$ completion chart.
+
+\subsection{The Schlaefli scheme on the twenty-seven completion charts}
+\label{sec:20260901-e8-partition-schlafli}
+
+The twenty-seven completion charts themselves recover the cubic-surface
+incidence graph.  Regard each chart as a partition of the same $240$ roots into
+ten selected $D_4$ blocks, and join two charts when they have a common
+$D_4\oplus D_4$ packet block.  Any two charts have either zero or two common
+$D_4$ blocks.  There are $216$ pairs of the first kind and $135$ of the second,
+and the overlap graph is exactly
+\[
+  \boxed{\operatorname{SRG}(27,10,1,5)}.
+\]
+This is the line-intersection graph of the twenty-seven lines on a smooth cubic
+surface; its complement is the usual Schlaefli graph
+$\operatorname{SRG}(27,16,10,8)$.
+
+The packet layer is recovered without extra labels.  Every one of the
+forty-five selected $D_4\oplus D_4$ packets lies in exactly three completion
+charts, those three charts form a triangle, and the overlap graph has exactly
+forty-five triangles.  Conversely every triangle comes from exactly one
+packet.  Thus, inside the selected $E_8$ partition catalogue,
+\[
+  \boxed{27\text{ cubic lines}
+  \longleftrightarrow27\text{ ten-}D_4\text{ partitions}}
+\]
+and
+\[
+  \boxed{45\text{ tritangent planes}
+  \longleftrightarrow45\text{ shared }D_4\oplus D_4\text{ packet blocks}}.
+\]
+Incidence is literal containment of partition blocks.
+
+All twenty-seven charts cover the same $240$ roots, so the phrase ``two charts
+intersect in $48$ roots'' would be misleading.  Their underlying root sets are
+identical; the invariant proved here is the number of common \emph{partition
+blocks}: two for adjacent charts and zero for nonadjacent charts.
