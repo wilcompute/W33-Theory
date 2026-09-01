@@ -54,10 +54,12 @@ def main():
     assert len(odd)==120 and set(odd)==set(map(frozenset,b['steiner']))
     eidx={V:i for i,V in enumerate(even)};oidx={V:i for i,V in enumerate(odd)}
 
-    # build_group supplies deterministic inner PSp generators on the 36
-    # double-six vertices.  Transport them to both triangle orbits.
+    # DPp is the native inner-PSp action on the 36 *double-six* coordinates.
+    # SpP is the conjugate action on the 36 spread coordinates and cannot be
+    # applied directly to DS-index triples; the first CI attempt deliberately
+    # caught that coordinate mismatch.
     GE=[];GO=[]
-    for g in grp['SpP']:
+    for g in grp['DPp']:
         GE.append(tuple(eidx[frozenset(g[x] for x in V)] for V in even))
         GO.append(tuple(oidx[frozenset(g[x] for x in V)] for V in odd))
     G=paired_closure(GE,GO,1080,120);assert len(G)==25920
@@ -81,17 +83,14 @@ def main():
             r=int(rel[0,j])
             if oval[r] is None:oval[r]=v
             else:assert oval[r]==v
+        assert all(v is not None for v in oval)
         Gvec=sp.Matrix(oval);GEvec=mulvec(E,Gvec,T)
         zero=(GEvec==sp.zeros(59,1));all_zero &= zero
-        # Intersection-size content of this genuine PSp pair orbital.
         ih=Counter(len(even[q0]&odd[o]) for o in O)
         records.append({'stabilizerOrbit':hi,'targetOrbitSize':len(O),
                         'intersectionHistogram':{str(k):v for k,v in sorted(ih.items())},
                         'steinbergGramZero':zero})
 
-    # Each orbital incidence matrix is a real 0/1 matrix A.  E A A^T E=0 and
-    # orthogonal projector E imply A^T E=0 by ||A^T Ev||^2=0.  Therefore if all
-    # basis orbitals vanish, every equivariant map vanishes on St^3.
     out={'schema':'w33.20260901.e6-odd-full-hom-steinberg-nogo.v1','status':'PASS',
       'sourceCarrier':1080,'targetCarrier':120,'groupOrder':25920,
       'sourceStabilizerOrder':24,'equivariantHomDimension':len(horbits),
