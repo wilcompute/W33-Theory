@@ -1,0 +1,62 @@
+name: 2026-09-01 execute all five follow-up fronts
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20260901_steinberg_frame_common.py'
+      - 'analysis/w33_20260901_e6_odd_triangle_steinberg.py'
+      - 'analysis/w33_20260901_packet_k33_globalization.py'
+      - 'analysis/w33_20260901_steinberg_m3_matrix_units.py'
+      - 'analysis/w33_20260901_binary48_meataxe_only.g'
+      - '.github/workflows/w33_20260901_execute_all5_followup.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: w33-20260901-all5-followup-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install exact dependencies
+        run: |
+          python -m pip install --disable-pip-version-check numpy scipy sympy networkx
+          sudo apt-get update -qq
+          sudo apt-get install -y gap gap-character-tables
+      - name: Execute geometric and Steinberg fronts
+        shell: bash
+        run: |
+          set -o pipefail
+          python analysis/w33_20260901_e6_odd_triangle_steinberg.py
+          python analysis/w33_20260901_packet_k33_globalization.py
+          python analysis/w33_20260901_steinberg_m3_matrix_units.py
+      - name: Execute binary 48 comparison without Cohomolo
+        shell: bash
+        run: |
+          set -o pipefail
+          python analysis/w33_20260901_binary_h1_48_nonsplit.py
+          python analysis/w33_20260901_binary48_ext_export.py
+          gap -q analysis/w33_20260901_binary48_meataxe_only.g
+      - name: Commit exact certificates
+        shell: bash
+        run: |
+          git config user.name 'w33-evidence-bot'
+          git config user.email 'w33-evidence-bot@users.noreply.github.com'
+          git add -f \
+            data/PART_W33_20260901_E6_ODD_TRIANGLE_STEINBERG.json \
+            data/PART_W33_20260901_PACKET_K33_GLOBALIZATION.json \
+            data/PART_W33_20260901_STEINBERG_M3_MATRIX_UNITS.json \
+            data/PART_W33_20260901_BINARY_H1_48_NONSPLIT.json \
+            data/PART_W33_20260901_BINARY48_EXPORT.json \
+            data/PART_W33_20260901_BINARY48_MEATAXE_ONLY.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Materialize all-five Steinberg packet E6 and binary48 evidence'
+            git pull --rebase origin master
+            git push origin HEAD:master
+          fi
