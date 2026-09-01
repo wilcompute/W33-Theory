@@ -1,0 +1,76 @@
+name: 2026-09-01 execute next five fronts
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20260901_eisenstein_schlaefli_obstruction_bridge.py'
+      - 'analysis/w33_20260901_k33_steinberg_router.py'
+      - 'analysis/w33_20260901_binary48_ext_export.py'
+      - 'analysis/w33_20260901_binary48_ext_compare.g'
+      - 'analysis/w33_20260901_degree45_compiler_correction.py'
+      - 'analysis/w33_20260901_degree45_tom_uniqueness.g'
+      - '.github/workflows/w33_20260901_execute_next5.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: w33-20260901-next5-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Python dependencies
+        run: python -m pip install --disable-pip-version-check numpy scipy sympy networkx
+      - name: GAP and Cohomolo
+        shell: bash
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y gap gap-character-tables build-essential git
+          if ! gap -q -c 'if LoadPackage("cohomolo",false)<>true then QUIT_GAP(1); fi; QUIT_GAP(0);'; then
+            mkdir -p "$HOME/.gap/pkg"
+            rm -rf "$HOME/.gap/pkg/cohomolo"
+            git clone --depth 1 https://github.com/gap-packages/cohomolo.git "$HOME/.gap/pkg/cohomolo"
+            cd "$HOME/.gap/pkg/cohomolo"
+            ./configure --with-gaproot=/usr/share/gap
+            make -j2
+            cd "$GITHUB_WORKSPACE"
+          fi
+          gap -q -c 'if LoadPackage("cohomolo",false)<>true then Error("cohomolo unavailable"); fi; Print("cohomolo live\n"); QUIT;'
+      - name: Execute exact Python bridges
+        shell: bash
+        run: |
+          set -o pipefail
+          : > analysis/PASS_20260901_NEXT5_RUN.log
+          python analysis/w33_20260901_eisenstein_schlaefli_obstruction_bridge.py 2>&1 | tee -a analysis/PASS_20260901_NEXT5_RUN.log
+          python analysis/w33_20260901_k33_steinberg_router.py 2>&1 | tee -a analysis/PASS_20260901_NEXT5_RUN.log
+          python analysis/w33_20260901_binary48_ext_export.py 2>&1 | tee -a analysis/PASS_20260901_NEXT5_RUN.log
+          python analysis/w33_20260901_degree45_compiler_correction.py 2>&1 | tee -a analysis/PASS_20260901_NEXT5_RUN.log
+      - name: Execute exact GAP guards and Ext
+        shell: bash
+        run: |
+          set -o pipefail
+          gap -q analysis/w33_20260901_degree45_tom_uniqueness.g 2>&1 | tee -a analysis/PASS_20260901_NEXT5_RUN.log
+          gap -q analysis/w33_20260901_binary48_ext_compare.g 2>&1 | tee -a analysis/PASS_20260901_NEXT5_RUN.log
+          grep -q '"cohomoloLive":true' data/PART_W33_20260901_BINARY48_EXT_COMPARE.json
+      - name: Commit generated exact evidence
+        shell: bash
+        run: |
+          git config user.name 'w33-evidence-bot'
+          git config user.email 'w33-evidence-bot@users.noreply.github.com'
+          git add analysis/PASS_20260901_NEXT5_RUN.log \
+            data/PART_W33_20260901_EISENSTEIN_SCHLAEFLI_OBSTRUCTION_BRIDGE.json \
+            data/PART_W33_20260901_K33_STEINBERG_ROUTER.json \
+            data/PART_W33_20260901_BINARY48_EXPORT.json \
+            data/PART_W33_20260901_BINARY48_EXT_COMPARE.json \
+            data/PART_W33_20260901_DEGREE45_COMPILER_CORRECTION.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Materialize Eisenstein Schlaefli Ext and compiler correction evidence'
+            git pull --rebase origin master
+            git push origin HEAD:master
+          fi
