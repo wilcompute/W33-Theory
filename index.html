@@ -17,6 +17,8 @@
     <a href="docs/index.html">Full W33 site</a>
     <a href="docs/atlas.html">Visual atlas</a>
     <a href="docs/falsifiers.html">Falsifier dashboard</a>
+    <a href="analysis/2026-09-01_regulus_e8_completion_bridge.md">Regulus → E₈ completion</a>
+    <a href="analysis/2026-09-01_e8_partition_schlafli_scheme.md">27 E₈ partitions</a>
     <a href="analysis/PASS7376_7384_deep_followup.md">Curved 27–45–36 prism</a>
     <a href="analysis/PASS7081_7096_e8_z3_z4_z12_common_refinement.md">E₈ Z₁₂ refinement</a>
     <a href="analysis/PASS7049_7064_vogel_e6_split_casimir.md">Vogel E₆ operator</a>
@@ -28,6 +30,16 @@
     <a href="analysis/PASS6533_6540_doily_quadratic_evaluation_code.md">Doily code</a>
     <a href="analysis/PASS6553_6560_pg32_hamming_polar_bridge.md">PG(3,2)</a>
   </nav>
+
+  <section class="card">
+    <div class="status">PASS · 1 September 2026</div>
+    <h2>Depth-three blockers are unique E₈ completion addresses</h2>
+    <p>Holotrade independently identifies its <code>270</code> depth-three all-isotropic-regulus obstructions with the <code>270</code> disjoint pairs among the same <code>45</code> weight-eight tritangent supports used by the W33 E₈ lift. In that lift each support is one orthogonal <code>D₄⊕D₄</code> packet with <code>48</code> roots.</p>
+    <div class="eq">270 = 27 × C(5,2)<br>one blocker = 2 packets = 96 roots<br>unique completion = +3 packets = +144 roots<br>96 + 144 = 240</div>
+    <p>Every obstruction edge lies in exactly one of the <code>27</code> five-packet charts, and each chart partitions all <code>240</code> E₈ roots into ten selected <code>D₄</code> subsystems. All four cross-packet choices of one <code>D₄</code> half from each packet span rank eight; the verifier performs <code>1080</code> exact rank checks.</p>
+    <p>The <code>27</code> completion partitions then recover the cubic-surface incidence internally. Two partitions share either zero or two selected <code>D₄</code> blocks; joining the latter gives <code>SRG(27,10,1,5)</code>, the 27-line intersection graph. Its exactly <code>45</code> triangles are exactly the <code>45</code> shared <code>D₄⊕D₄</code> packets/tritangent incidences; the complement is the Schläfli graph <code>SRG(27,16,10,8)</code>.</p>
+    <p class="boundary"><strong>Boundary:</strong> these are exact finite-combinatorial routing and partition theorems. They do not assert that an E₈ completion removes a physical blocking obstruction or supplies dynamics. All 27 partitions cover the same 240-root shell; their overlap invariant is shared partition blocks, not root-set intersection.</p>
+  </section>
 
   <section class="card">
     <div class="status">PASS · Passes 7376–7384</div>
