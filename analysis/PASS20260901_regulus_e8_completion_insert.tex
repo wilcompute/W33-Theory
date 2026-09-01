@@ -1,0 +1,45 @@
+% 2026-09-01 exact cross-frontier synthesis: depth-3 regulus -> E8 completion chart.
+\subsection{Depth-three reguli as unique $E_8$ completion addresses}
+\label{sec:20260901-regulus-e8-completion}
+
+The depth-three blocking computation in the Holotrade track and the selected
+$E_8$/$D_4$ geometry in the present repository meet objectwise, not merely
+numerically.  The forty-five minimum weight-eight tritangent supports are the
+forty-five orthogonal $D_4\oplus D_4$ packets selected by the $W(3,3)$
+polarity.  Their disjointness graph is the point graph of $GQ(4,2)$: it has
+$45$ vertices, degree $12$, and $270$ edges.  Independently, the Holotrade
+blocking audit identifies its $270$ all-isotropic depth-three obstruction
+reguli with exactly these $270$ support-disjoint packet pairs.
+
+The twenty-seven maximal five-cliques of this graph give a stronger completion
+law.  Every disjoint packet pair is contained in exactly one five-clique, and
+every five-clique partitions the forty $W(3,3)$ fibres.  Under the certified
+six-roots-per-fibre $E_8$ lift, each packet contains two orthogonal $D_4$
+subsystems and therefore $48$ roots.  Consequently
+\[
+  \boxed{270=27\binom{5}{2}}
+\]
+is an objectwise incidence identity: each depth-three obstruction regulus
+selects two $48$-root packets, hence $96$ roots, and determines a unique
+completion by the other three packets, hence another $144$ roots, to one of
+twenty-seven partitions of the full $240$-root shell into ten selected
+$D_4$ subsystems:
+\[
+  \boxed{
+  \text{obstruction regulus}
+  \longrightarrow
+  96\text{ exposed }E_8\text{ roots}
+  \longrightarrow
+  96+144=240\text{ roots uniquely}.
+  }
+\]
+Each of the forty-five packets lies on exactly three such completion charts,
+and each chart contains ten of the $270$ obstruction edges.  For every
+obstruction edge, all four cross choices of one $D_4$ half from each packet
+span rank eight; the verifier performs $270\cdot4=1080$ exact rank checks.
+
+This theorem is deliberately finite-combinatorial.  It does not assert that an
+$E_8$ completion removes a physical blocking obstruction, nor does it assign
+dynamics to the root system.  It says that the independently certified
+Holotrade obstruction edge is a canonical address of one selected $E_8$
+ten-$D_4$ completion chart.
