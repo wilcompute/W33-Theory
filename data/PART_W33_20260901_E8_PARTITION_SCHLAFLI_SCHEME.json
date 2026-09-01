@@ -1,0 +1,34 @@
+{
+  "allPartitionsCoverSameRootShell": true,
+  "boundary": "All 27 objects partition the same 240 roots. The overlap invariant is common D4 partition blocks, not intersection of their underlying root sets.",
+  "d4BlocksPerPartition": 10,
+  "objectwise": {
+    "adjacentPartitionPairSharesOnePacket": true,
+    "sharedD4BlocksWhenAdjacent": 2,
+    "sharedD4BlocksWhenNonadjacent": 0
+  },
+  "packetTriangles": {
+    "allTrianglesArePackets": true,
+    "chartsPerPacket": 3,
+    "graphTriangles": 45,
+    "packetMeaning": "one shared 48-root orthogonal D4+D4 block",
+    "packets": 45
+  },
+  "pairwiseSharedD4BlockHistogram": {
+    "0": 216,
+    "2": 135
+  },
+  "partitionOverlapGraph": {
+    "complement": "Schlaefli graph SRG(27,16,10,8)",
+    "k": 10,
+    "lambda": 1,
+    "mu": 5,
+    "name": "cubic-surface 27-line intersection graph",
+    "v": 27
+  },
+  "partitions": 27,
+  "rootsPerPartition": 240,
+  "schema": "w33.20260901.e8-partition-schlafli-scheme.v1",
+  "status": "PASS",
+  "theorem": "The 27 selected ten-D4 partitions of the E8 root shell carry the cubic-surface SRG(27,10,1,5); the 45 selected D4+D4 packets are exactly its 45 triangles/tritangent incidences."
+}
