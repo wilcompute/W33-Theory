@@ -34,7 +34,7 @@ jobs:
         run: |
           git config user.name 'w33-evidence-bot'
           git config user.email 'w33-evidence-bot@users.noreply.github.com'
-          git add \
+          git add -f \
             data/PART_W33_20260901_GQ24_K44_E8_ATLAS.json \
             data/PART_W33_20260901_K33_STEINBERG_PRIMITIVE.json
           if ! git diff --cached --quiet; then
