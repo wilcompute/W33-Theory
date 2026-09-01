@@ -1,0 +1,45 @@
+name: 2026-09-01 follow-up Python-only exact fronts
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20260901_steinberg_frame_common.py'
+      - 'analysis/w33_20260901_e6_odd_triangle_steinberg.py'
+      - 'analysis/w33_20260901_packet_k33_globalization.py'
+      - 'analysis/w33_20260901_steinberg_m3_matrix_units.py'
+      - '.github/workflows/w33_20260901_followup_python_only.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: w33-20260901-followup-python-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --disable-pip-version-check numpy scipy sympy networkx
+      - name: Execute three exact fronts
+        run: |
+          set -o pipefail
+          python analysis/w33_20260901_e6_odd_triangle_steinberg.py
+          python analysis/w33_20260901_packet_k33_globalization.py
+          python analysis/w33_20260901_steinberg_m3_matrix_units.py
+      - name: Freeze certificates
+        run: |
+          git config user.name 'w33-evidence-bot'
+          git config user.email 'w33-evidence-bot@users.noreply.github.com'
+          git add -f \
+            data/PART_W33_20260901_E6_ODD_TRIANGLE_STEINBERG.json \
+            data/PART_W33_20260901_PACKET_K33_GLOBALIZATION.json \
+            data/PART_W33_20260901_STEINBERG_M3_MATRIX_UNITS.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Freeze E6 odd-triangle packet K33 and M3 Steinberg evidence'
+            git pull --rebase origin master
+            git push origin HEAD:master
+          fi
