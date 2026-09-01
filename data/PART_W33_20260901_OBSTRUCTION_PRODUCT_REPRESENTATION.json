@@ -1,0 +1,60 @@
+{
+  "boundary": "The three Steinberg copies are representation-theoretic constituents of C[1080]. This does not identify the previously observed incidence multiplicity 81 with a particular copy, and the 692-dimensional residual ordinary character is not silently labelled.",
+  "carrier": {
+    "degree": 1080,
+    "description": "27 completion charts x 40 W33 lines",
+    "transitive": true
+  },
+  "group": "PSp(4,3)",
+  "groupOrder": 25920,
+  "residual": {
+    "characterNormContribution": 31,
+    "dimension": 692,
+    "status": "not fully decomposed in this Python witness; exact GAP character-table decomposition remains a separate refinement"
+  },
+  "schema": "w33.20260901.obstruction-product-representation.v1",
+  "stabilizer": {
+    "elementOrderHistogram": {
+      "1": 1,
+      "2": 9,
+      "3": 2,
+      "4": 6,
+      "6": 6
+    },
+    "orbitalRank": 59,
+    "order": 24,
+    "subdegreeHistogram": {
+      "1": 1,
+      "3": 1,
+      "4": 2,
+      "6": 2,
+      "12": 18,
+      "24": 35
+    }
+  },
+  "status": "PASS",
+  "steinberg": {
+    "dimension": 81,
+    "fixedDimension": 3,
+    "permutationMultiplicityByFrobeniusReciprocity": 3,
+    "traceFormula": "fixedFlags - fixedPoints - fixedLines + 1",
+    "traceHistogramOnStabilizer": {
+      "-3": 7,
+      "-1": 6,
+      "0": 8,
+      "9": 2,
+      "81": 1
+    }
+  },
+  "theorem": "The natural 1080 depth-three obstruction carrier is one transitive PSp(4,3) G-set with stabilizer 24, and its permutation module contains the unique 81-dimensional Steinberg representation with multiplicity exactly three. The same stabilizer fixes 2 copies of the W33 15, 2 copies of the W33 24, 1 Schlaefli 6 and 3 Schlaefli 20s.",
+  "visibleCharacterNormContribution": 28,
+  "visibleDimension": 388,
+  "visibleOrdinaryConstituents": {
+    "1": 1,
+    "15_W33": 2,
+    "20_Schlafli": 3,
+    "24_W33": 2,
+    "6_Schlafli": 1,
+    "81_Steinberg": 3
+  }
+}
