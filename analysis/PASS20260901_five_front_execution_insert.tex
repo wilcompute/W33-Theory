@@ -1,0 +1,99 @@
+% 2026-09-01 five-front continuation after the regulus/E8 completion bridge.
+\subsection{The $1080$ obstruction carrier: full Wedderburn decomposition and three explicit Steinberg copies}
+\label{sec:20260901-obstruction-wedderburn}
+
+The equivariant factorization of the depth-three obstruction carrier as
+$27\times40$ has degree $1080$, orbital rank $59$, and point stabilizer order
+$24$.  Its exact orbital algebra has center dimension $15$ and closes the
+ordinary complex decomposition:
+\[
+\begin{split}
+\mathbb C^{1080}\cong{}&1\oplus6\oplus2(15)\oplus3(20)\oplus2(24)\oplus30\\
+&\oplus2(30\oplus\overline{30})\oplus(40\oplus\overline{40})
+\oplus(45\oplus\overline{45})\\
+&\oplus3(60)\oplus3(64)\oplus3\,\mathrm{St}_{81}.
+\end{split}
+\]
+The three non-rational central factors---of degrees $30$, $40$, and $45$---all
+split over $\mathbb Q(\sqrt{-3})$.  In particular the Eisenstein field appears
+at the full obstruction-module level rather than from a matching count.
+
+The Steinberg isotypic component has rank $243$.  A deterministic symmetric
+orbital operator $B$ has multiplicity-space eigenvalues $4,0,-4$, so with $E$
+the central Steinberg projector the three rational primitive projectors are
+\[
+ P_+=\frac{B(B+4E)}{32},\qquad
+ P_0=E-\frac{B^2}{16},\qquad
+ P_-=\frac{B(B-4E)}{32}.
+\]
+They are pairwise orthogonal, each has rank $81$, and their sum is $E$.
+Thus the three Steinberg copies are represented by explicit equivariant
+projectors, not only by a character multiplicity.
+
+\subsection{The doubled $D_4$ prism has nonsplit binary homology}
+\label{sec:20260901-binary-d4-h1}
+
+For the ninety-$D_4$ lift, $\widetilde R\widetilde N=6Q$, so reduction modulo
+two gives a genuine complex with $\dim H_1=48$.  The pair-injection subspace
+supplies a canonical exact sequence
+\[
+ \boxed{0\longrightarrow A_{24}\longrightarrow H_{1,48}
+ \longrightarrow B_{24}\longrightarrow0}.
+\]
+Solving the full generator-level splitting equations over $\mathbb F_2$ gives
+no solution.  Moreover $\dim\operatorname{Hom}_G(B_{24},A_{24})=2$, and a
+deterministic basis has map ranks $1$ and $10$, so no invertible intertwiner
+identifies the two $24$-dimensional subquotients.  Their global fixed-space
+dimensions are respectively $1$ and $0$.
+
+The separate $48$-root channel in the $E_8$ $\mathbb Z_{12}$ common refinement
+is not this module: an even $W(E_6)$ element sends a root from that joint
+$48$-sector to the neighboring $30$-sector.  Hence that $48$-root subset is
+not invariant under the inner $PSp(4,3)$ action.  Equality of dimensions does
+not define an intertwiner.
+
+\subsection{Port-gauged holonomy on the twenty-seven $E_8$ completion charts}
+\label{sec:20260901-chart-port-holonomy}
+
+A correction is required before compiling the completion charts.  On the
+native polar-pair/sentinel $45$-packet action, a packet stabilizer has order
+$576$ and induces the full $S_3$ on its three incident completion charts.
+Therefore this carrier has no $PSp(4,3)$-invariant global cyclic orientation
+sheet.  It must not be silently identified with the older residue/cube
+$45$-action of Pass~4795, whose local inner image is $C_3$; the two degree-$45$
+realizations are outer-twisted as group actions even when their underlying
+quadrangle graphs are identified.
+
+Fix instead a complete ordering of the three incident chart ports at every
+packet.  Every group element then has a unique correction
+$\sigma_g(p)\in S_3$, and the exact nonabelian cocycle law
+\[
+ \boxed{\sigma_{ab}(p)=\sigma_a(b\cdot p)\circ\sigma_b(p)}
+\]
+holds in all $4\cdot25920\cdot45=4{,}665{,}600$ generator/group/packet checks.
+Only the identity has zero correction at all forty-five packets.
+
+Each packet has exactly twenty-four order-three global elements inducing a
+chosen positive three-cycle in this port gauge.  Deterministic choices at
+packet indices $0,9,11,33$ generate subgroups of orders
+\[
+ 3,\ 9,\ 288,\ 25920,
+\]
+so four local packet rotations generate the full projective symplectic chart
+action.  The chart-overlap graph has $135$ edges; a spanning tree leaves $109$
+fundamental cycles.  Their transported holonomies generate a group of order
+$960$, exactly the stabilizer of a base completion chart.
+
+\paragraph{Optimization boundary.}
+The corresponding Holotrade chart-stabilizer attack is negative for the
+canonical regulus witness family.  Fixing one completion chart gives an
+order-$960$ stabilizer, but its $240$ ordered
+``bad triple plus omitted line twice'' witnesses form one orbit, and all $269$
+relevant stabilizer leaf-orbits meet every witness.  The restricted fractional
+and integer cover optima are therefore both one.  Chart information can affect
+the current depth-five lower bound only after breaking symmetry below the
+chart stabilizer or by using a different nonlinear/integer witness family.
+
+All statements above are finite incidence, representation, modular-homology,
+or permutation-group theorems.  No optical dynamics, mass, coupling, or
+hardware threshold is inferred from these carriers.
