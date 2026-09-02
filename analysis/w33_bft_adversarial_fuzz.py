@@ -15,7 +15,6 @@ safety violation.  It is not a proof of liveness under every asynchronous
 schedule; it is executable adversarial evidence complementary to the TLA+ spec.
 """
 from __future__ import annotations
-from dataclasses import asdict
 import base64, json, random
 
 from w33_bft_epoch_consensus import (
@@ -57,7 +56,6 @@ def same_view_equivocation_trial(seed):
         first=pa if rng.randrange(2)==0 else pb; second=pb if first is pa else pa
         label='A' if first is pa else 'B'
         votes[label].append(nodes[v].prepare(first,None))
-        # Crash/restart after the first durable vote, then try to equivocate.
         nodes[v]=restart(nodes[v],v,priv[v],pubs)
         blocked=False
         try: nodes[v].prepare(second,None)
@@ -83,7 +81,6 @@ def locked_view_change_trial(seed):
         pv.append(byzantine_vote(v,priv[v],'PREPARE',pa) if v==byz else nodes[v].prepare(pa,None))
     q=make_qc('PREPARE',pa,pv)
     if not verify_qc(q,pubs)['ok']: raise AssertionError('reference prepare QC invalid')
-    # Deliver the QC to its three honest signers; restart one after lock persistence.
     for v in honest[:3]: nodes[v].observe_prepare_qc(q)
     victim=honest[0]; nodes[victim]=restart(nodes[victim],victim,priv[victim],pubs)
     b_votes=[byzantine_vote(byz,priv[byz],'PREPARE',pb)]
@@ -92,7 +89,6 @@ def locked_view_change_trial(seed):
         try: b_votes.append(nodes[v].prepare(pb,None))
         except PermissionError: blocked+=1
     conflicting_qc=len(b_votes)>=4 and verify_qc(make_qc('PREPARE',pb,b_votes),pubs)['ok']
-    # Four honest timeout votes always permit view rotation independent of the Byzantine node.
     tv=[nodes[v].timeout(1,1) for v in honest]
     tc=make_timeout_certificate(1,1,tv,pubs)
     return {'seed':seed,'byzantine':byz,'locked_honest':3,'blocked_conflicting_votes':blocked,'conflicting_qc':conflicting_qc,'timeout_certificate':tc.tc_id,'safe':not conflicting_qc}
@@ -100,10 +96,12 @@ def locked_view_change_trial(seed):
 
 def finalize_conflict_trial(seed):
     ids,priv,pubs,nodes,rng=fresh(seed+200000); byz=rng.choice(ids)
+    honest=[v for v in ids if v!=byz]
     r0=digest({'epoch':0}); ra=digest({'epoch':1,'branch':'A'}); rb=digest({'epoch':1,'branch':'B'})
     pa=Proposal('w33.bft-epoch-proposal.v1',1,0,leader_for(0,ids),0,r0,1,ra,None)
     pb=Proposal('w33.bft-epoch-proposal.v1',1,1,leader_for(1,ids),0,r0,1,rb,None)
-    signers=ids[:4]
+    # Hold quorum shape invariant across random Byzantine placement: 3 honest + 1 Byzantine.
+    signers=honest[:3]+[byz]
     prep=[byzantine_vote(v,priv[v],'PREPARE',pa) if v==byz else nodes[v].prepare(pa,None) for v in signers]
     pq=make_qc('PREPARE',pa,prep)
     commits=[]
@@ -113,7 +111,6 @@ def finalize_conflict_trial(seed):
     cq=make_qc('COMMIT',pa,commits)
     for v in signers:
         if v!=byz: nodes[v].finalize(pa,cq)
-    # Any finalized honest replica must reject a different proposal at that height.
     rejected=0
     for v in signers:
         if v==byz: continue
@@ -143,7 +140,7 @@ def verify(trials=256):
         'final_min_conflict_rejections':min(x['conflict_rejections'] for x in final),
       },
       'model':'formal/W33EpochBFT.tla',
-      'boundary':'Randomized/exhaustive finite adversarial evidence and a TLA+ safety model do not prove production network liveness, cryptographic side-channel resistance, or correctness outside the modeled one-Byzantine assumption.'
+      'boundary':'Randomized finite adversarial evidence and a TLA+ safety model do not prove production network liveness, cryptographic side-channel resistance, or correctness outside the modeled one-Byzantine assumption.'
     }
 
 if __name__=='__main__':
