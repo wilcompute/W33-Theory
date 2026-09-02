@@ -1,0 +1,46 @@
+name: packet rotation shortest word compiler
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20260902_packet_rotation_shortest_word_compiler.py'
+      - '.github/workflows/packet_rotation_shortest_word_compiler.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  exact:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Execute exact shortest-word compiler
+        run: |
+          set -o pipefail
+          python analysis/w33_20260902_packet_rotation_shortest_word_compiler.py 2>&1 | tee analysis/PACKET_ROTATION_SHORTEST_WORD_COMPILER.log
+      - name: Freeze evidence
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('data/PART_W33_20260902_PACKET_ROTATION_SHORTEST_WORD_COMPILER.json')
+          d=json.loads(p.read_text())
+          assert d['status']=='PASS'
+          assert d['groupOrder']==25920
+          assert d['packetGeneratorIds']==[0,9,11,33]
+          assert d['baseChartStabilizer']['order']==960
+          assert d['portCorrectionGauge']['zeroCorrectionElements']==1
+          assert sum(d['shortestWord']['lengthHistogram'].values())==25920
+          PY
+          git config user.name w33-evidence-bot
+          git config user.email w33-evidence-bot@users.noreply.github.com
+          git add -f data/PART_W33_20260902_PACKET_ROTATION_SHORTEST_WORD_COMPILER.json analysis/PACKET_ROTATION_SHORTEST_WORD_COMPILER.log
+          if ! git diff --cached --quiet; then
+            git commit -m 'Freeze packet-rotation shortest-word compiler evidence'
+            git pull --rebase origin master
+            git push origin HEAD:master
+          fi
