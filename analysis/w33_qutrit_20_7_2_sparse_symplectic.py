@@ -55,7 +55,6 @@ def rank_preserving_descent(A,h,passes=4):
     null=base.nullspace(h)
     accepted=0
     before=nnz(A)
-    # Independent affine columns; deterministic basis/order, strict improvement only.
     for _ in range(passes):
         changed=False
         for j in range(A.shape[1]):
@@ -78,7 +77,6 @@ def rank_preserving_descent(A,h,passes=4):
 
 
 def right_inverse(A):
-    # Pick pivot columns from row-RREF and solve using the invertible 20x20 minor.
     _,piv=base.rref(A); cols=piv[:20]
     if len(cols)!=20: raise RuntimeError('A lost full row rank')
     q=np.zeros((240,20),dtype=np.int64)
@@ -103,7 +101,6 @@ def footprint(A,hx):
     for i,r in enumerate(A):
         supp=[j for j,x in enumerate(r) if x%3]
         verts=sorted({v for e in supp for v in endpoints[e]})
-        # Connectivity of selected edges in the underlying 40-vertex graph.
         adj={v:set() for v in verts}
         for e in supp:
             u,v=endpoints[e]; adj[u].add(v); adj[v].add(u)
@@ -134,13 +131,14 @@ def verify():
       'H1_remains_parent_logical_X':np.all((hz@image[:7].T)%3==0),
       'H0_remains_parent_X_stabilizer':base.rank(np.vstack([base.row_basis(hx),image[7:9]]))==base.rank(hx),
     }
+    checks={k:bool(v) for k,v in checks.items()}
     return {
       'schema':'w33.qutrit-20-7-2-sparse-symplectic.v1',
       'status':'PASS' if all(checks.values()) else 'FAIL',
       'checks':checks,
       'search':search,
-      'A':{'sha256':hash_matrix(A),'row_weights':row_weights(A),'max_row_weight':max(row_weights(A)),'mean_row_weight':sum(row_weights(A))/20},
-      'B':{'sha256':hash_matrix(B),'row_weights':row_weights(B),'pivot_columns_0_indexed':cols},
+      'A':{'sha256':hash_matrix(A),'row_weights':row_weights(A),'max_row_weight':max(row_weights(A)),'mean_row_weight':float(sum(row_weights(A))/20)},
+      'B':{'sha256':hash_matrix(B),'row_weights':row_weights(B),'pivot_columns_0_indexed':[int(x) for x in cols]},
       'locality':{'rows':fp,'max_vertex_footprint':max(x['vertex_footprint'] for x in fp),'max_components':max(x['components'] for x in fp)},
       'interpretation':'The nonlocal symplectic witness has been moved within its exact affine solution class to a strictly lower-support representative while preserving all code-image and symplectic constraints.',
       'boundary':'Lower algebraic support is not yet a fault-tolerant locality theorem; optical routing depth and noise propagation require a compiled circuit.'
