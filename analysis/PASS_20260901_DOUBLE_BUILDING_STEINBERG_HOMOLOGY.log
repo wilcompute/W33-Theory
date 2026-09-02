@@ -1,0 +1,1 @@
+{"cross": 0, "multiplicities": {"circuit216": {"H1_GQ42_64": 0, "H1_W33_81": 1}, "hemisystem216": {"H1_GQ42_64": 1, "H1_W33_81": 0}, "obstruction1080": {"H1_GQ42_64": 3, "H1_W33_81": 3}, "packet48_BT796_2160": {"H1_GQ42_64": 5, "H1_W33_81": 9}}, "norm64": 1, "norm81": 1, "status": "PASS"}

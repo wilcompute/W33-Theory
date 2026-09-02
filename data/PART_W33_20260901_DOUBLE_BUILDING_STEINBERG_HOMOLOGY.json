@@ -1,0 +1,51 @@
+{
+  "boundary": "This is finite building homology and characteristic-zero representation theory. It gives no particle, field, energy, spacetime, or experimental identification by itself.",
+  "buildings": {
+    "GQ42_factor_geometry": {
+      "chambers": 135,
+      "cycleRank": 64,
+      "leviVertices": 72,
+      "lines_factorCharts": 27,
+      "points_packets": 45
+    },
+    "W33_GQ33": {
+      "chambers": 160,
+      "cycleRank": 81,
+      "leviVertices": 80,
+      "lines": 40,
+      "points": 40
+    }
+  },
+  "characterCertificate": {
+    "H1_GQ42_degree": 64,
+    "H1_GQ42_norm": 1,
+    "H1_W33_degree": 81,
+    "H1_W33_norm": 1,
+    "crossInnerProduct": 0,
+    "irreducibleAndNonisomorphicOverCharacteristicZero": true
+  },
+  "externalReference": "https://encyclopediaofmath.org/wiki/Steinberg_module",
+  "groupOrder": 25920,
+  "permutationCarrierMultiplicities": {
+    "circuit216": {
+      "H1_GQ42_64": 0,
+      "H1_W33_81": 1
+    },
+    "hemisystem216": {
+      "H1_GQ42_64": 1,
+      "H1_W33_81": 0
+    },
+    "obstruction1080": {
+      "H1_GQ42_64": 3,
+      "H1_W33_81": 3
+    },
+    "packet48_BT796_2160": {
+      "H1_GQ42_64": 5,
+      "H1_W33_81": 9
+    }
+  },
+  "schema": "w33.20260901.double-building-steinberg-homology.v1",
+  "solomonTitsInterpretation": "For a finite group with BN-pair, the Steinberg representation is the top homology of its Tits building. Thus the two explicitly computed irreducible H1 characters are the degree-81 PSp4(3) Steinberg and degree-64 U4(2) Steinberg under the exceptional isomorphism.",
+  "status": "PASS",
+  "theorem": "The recurring 81 and 64 sectors have an intrinsic geometric origin: they are exactly the first homology modules of the two rank-two Levi graphs carried by the same order-25920 group. The circuit and hemisystem 216 shells select these two building-homology irreducibles complementarily, while the 1080 obstruction carrier contains three copies of each. The recorded 2160 multiplicities decide whether the BT796/packet48 shell contains enough copies to route both multiplicity-three blocks."
+}
