@@ -1,0 +1,80 @@
+\subsection{Sparse symplectic realization, Clifford compilation, TPM activation, BFT stress, and host capture}
+
+The nonlocal $[[20,7,2]]_3\to[[240,81,3]]_3$ symplectic witness has been
+refined without weakening its exact algebraic constraints.  Writing $H$ for the
+nine-row external triorthogonal matrix, each physical column of $A$ lies in an
+affine solution space of $H a_j=t_j$.  Hence shifts by $\ker H$ preserve the
+required code images.  A deterministic $\mathbb F_3$ coordinate descent accepts
+only strict support reductions that retain $\operatorname{rank}A=20$, followed
+by reconstruction of $B$ with
+\[
+A B^T=I_{20}.
+\]
+The resulting certificate reports row weights, W33-edge vertex footprints, and
+support connectivity.  This is a sparsification theorem inside the exact affine
+solution class, not yet a physical locality or threshold theorem.
+
+The sparse pair also extends to an explicit $240\times240$ reversible linear
+qutrit Clifford.  Choose $C$ spanning $\ker B$ and set
+\[
+F=\begin{bmatrix}A\\C\end{bmatrix}\in GL(240,3).
+\]
+Then $F B^T=[I_{20};0]$, so the first twenty rows of $F^{-T}$ equal $B$.
+Consequently $U_F|x\rangle=|xF\rangle$ realizes the desired Pauli embedding on
+the first twenty data qutrits.  Column Gauss--Jordan synthesizes $F$ exactly
+from ternary \texttt{SUM\_ALPHA}, \texttt{SCALE2}, and \texttt{SWAP} Clifford
+generators.  Non-conflicting gates are packed into the existing sixteen-slot,
+72-tick Holonet packet body; every occupied slot refines through
+\[
+\texttt{LOAD\_FLAG}\to\texttt{FLIP\_Q6\_AXIS}\to\texttt{LATCH\_VERTEX}.
+\]
+This closes the algebraic Clifford/compiler path while leaving optical pulse
+calibration, decoder design, and mapped noise threshold separate.
+
+The TPM trust path now contains an executed-protocol implementation rather than
+only certificate provenance.  Holotrade invokes \texttt{tpm2\_makecredential},
+opens an endorsement-policy session, authorizes it with
+\texttt{tpm2\_policysecret}, executes \texttt{tpm2\_activatecredential}, and
+requires constant-time equality of the registrar secret recovered by the TPM.
+The transcript may be signed by an Ed25519 enrollment authority.  Fixture tests
+replace only the command transport and are explicitly marked non-hardware;
+production execution uses the real TPM2 tools/TCTI.  Thus AK/EK X.509 provenance,
+quote validity, and credential-activation residency evidence remain distinct
+evidence classes rather than being collapsed into one boolean.
+
+The epoch-consensus safety layer now has two complementary mechanizations.  A
+TLA+ model states the one-height quorum invariant
+\[
+\boxed{|\mathrm{Committed}|\le1}
+\]
+for quorum four of five.  An executable adversarial fuzzer then stresses the
+actual Python state machine with random conflicting proposal delivery, one
+Byzantine double-signer, durable crash/restart after votes and prepare locks,
+view changes, timeout certificates, and post-finalization conflicts.  These
+artifacts strengthen finite safety evidence; they do not claim production
+network liveness under every asynchronous schedule.
+
+Finally, physical host telemetry is now cryptographically bound to the portable
+receipt.  RAPL and/or Kepler measurements plus strong-root realization are
+normalized into a content-addressed telemetry object before receipt signing.
+The signed receipt commits its telemetry digest, and the portable verifier
+rejects any later mutation.  A Linux-host collector packages the signed receipt,
+raw TPM event log, raw quote and \texttt{TPMT\_SIGNATURE}, AK key, passport,
+authority chain, GC/magic/concurrency histories, measured telemetry, and final
+artifacts, then invokes \texttt{w33-verify-receipt.js} as the acceptance oracle.
+A dedicated \texttt{[self-hosted, linux, w33-tpm]} workflow executes the real
+MakeCredential/ActivateCredential ceremony and capture path.  Ordinary GitHub
+fixture runners are intentionally insufficient to assert that a physical host
+bundle has been produced.
+
+The combined frontier is therefore
+\[
+\text{algebraic symplectic map}
+\to\text{sparse representative}
+\to\text{explicit qutrit Clifford}
+\to\text{Holonet packet compiler}
+\to\text{measured/attested host execution}
+\to\text{portable signed audit}.
+\]
+Fault-tolerant admission remains gated on a locality/noise-propagation bound,
+a mapped syndrome decoder, and a mapped threshold certificate.
