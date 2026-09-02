@@ -5,6 +5,7 @@ on:
     branches: [master]
     paths:
       - 'analysis/w33_qutrit_20_7_2_sparse_symplectic.py'
+      - 'analysis/w33_qutrit_20_7_2_cpsat_support_optimizer.py'
       - 'analysis/w33_qutrit_20_7_2_clifford_holonet_compiler.py'
       - 'analysis/w33_bft_adversarial_fuzz.py'
       - 'analysis/w33_bft_epoch_consensus.py'
@@ -23,11 +24,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Install finite-math dependencies
-        run: python -m pip install --disable-pip-version-check numpy cryptography
-      - name: Verify sparse symplectic representative
+      - name: Install finite-math and exact-optimization dependencies
+        run: python -m pip install --disable-pip-version-check numpy cryptography ortools
+      - name: Verify heuristic sparse symplectic representative
         run: python analysis/w33_qutrit_20_7_2_sparse_symplectic.py
-      - name: Verify explicit qutrit Clifford and Holonet packet compiler
+      - name: Certify exact fixed-minor A and exact right-dual B support optima
+        run: python analysis/w33_qutrit_20_7_2_cpsat_support_optimizer.py
+      - name: Verify explicit optimized qutrit Clifford and Holonet packet compiler
         run: python analysis/w33_qutrit_20_7_2_clifford_holonet_compiler.py
       - name: Verify BFT protocol reference scenario
         run: python analysis/w33_bft_epoch_consensus.py
