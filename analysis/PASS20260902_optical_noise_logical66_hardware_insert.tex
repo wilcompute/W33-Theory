@@ -1,0 +1,90 @@
+% PASS20260902 optical/noise/logical66/hardware frontier
+\section{Optical primitive, circuit-noise, logical-quotient, and protected-store closure}
+
+The current qutrit fault-tolerance frontier now separates compiler evidence from
+measured-device evidence all the way down the stack.  The selected exact
+$[[20,7,2]]_3$ symplectic embedding is still routed on the $240$ W33-edge line
+graph, but every shared-point local primitive has now been lowered one further
+level to a coherent qutrit optical candidate circuit.  For
+$\mathrm{SUM}_\alpha$, the control is coherently sorted into three mode branches,
+the target receives the conditional cyclic shift $X^{\alpha j}$ on branch $j$,
+and the control branches are recombined.  A local SWAP is replayed exactly over
+$\mathbf F_3$ as three SUMs plus the $j\mapsto-j$ mode permutation.  The finite
+basis-state truth tables close; measured insertion loss, crosstalk, leakage and
+phase RMS do not.  Those quantities may enter only through a hardware-backed
+calibration packet, so the optical compiler gate and the hardware-calibration
+gate are distinct.
+
+The mapped $13$-check extraction circuit is now attacked directly rather than
+through an external-coordinate exposure proxy alone.  Every additive nonzero
+syndrome-trit corruption at every check outcome is injected into the clean state
+and all $160$ nontrivial single-qutrit external Pauli syndromes.  The current
+unique/ambiguous/refuse decoder policy is replayed exactly.  Heralded loss is
+fail-closed, unheralded leakage and arbitrary ambient $240$-edge data faults are
+kept conservative, and the exact independent-location probability of two or
+more faults is retained as an adversarial envelope.  This is a circuit-level
+fault census, not a calibrated photonic threshold.
+
+A separate quotient certificate now constructs seven dual logical pairs
+$X_{L,i},Z_{L,i}$ satisfying
+\[
+  X_L Z_L^{\mathsf T}=I_7\pmod 3.
+\]
+Consequently a zero-syndrome error is no longer reduced to a single block-level
+``logical/nonlogical'' bit.  Every enumerated weight-two Pauli
+($\binom{20}{2}8^2=12160$ cases) and, in the exhaustive lane, every weight-three
+Pauli ($\binom{20}{3}8^3=583680$ cases) is assigned either to the stabilizer
+class or to one exact $14$-trit logical Pauli coordinate.  No division of a
+block failure probability by seven is used.
+
+\subsection{The 66-qutrit store and the K12 correction}
+
+Pass~79 already supplied an explicit finite $[[66,8,3]]_3$ stabilizer witness:
+eight cyclic $[[5,1,3]]_3$ blocks plus $26$ frozen single-site $Z$ ancillas.
+The new bridge derives a symplectic logical pair for the five-qutrit block and
+maps the seven logical qutrits of the $[[20,7,2]]_3$ source into seven independent
+logical blocks of this distance-three store.  This is a logical
+ decode/code-switch/re-encode bridge, not a monomial embedding of twenty
+physical qutrits into sixty-six.  After a successful recode the stored state has
+distance three; source-side operations before that recode remain distance two.
+
+The same calculation exposes an important correction to older architecture
+prose.  The committed orientable $K_{12}$ completion has
+\[
+ V=12,\qquad E=66,\qquad F=44,\qquad g=6.
+\]
+Building its actual boundary matrices over $\mathbf F_3$ gives
+\[
+ \operatorname{rank}\partial_1=11,\qquad
+ \operatorname{rank}\partial_2=43,
+\]
+and therefore the standard closed orientable edge surface code has
+\[
+ k=66-11-43=12=2g,
+\]
+not $8$.  Thus the phrases ``the 66-edge $K_{12}$ compiler surface'' and
+``the explicit $[[66,8,3]]_3$ protected store'' must not be identified with the
+standard homological $K_{12}$ surface code.  A $K_{12}$-native $k=8$ claim would
+need four additional independent commuting stabilizer/gauge-fixing constraints
+specified explicitly.
+
+\subsection{Physical admission boundary}
+
+The executable evidence now closes: external code reconstruction, symplectic
+embedding, W33 topological routing, optical candidate compilation, mapped
+syndrome/decoder, circuit-level single-fault census, exact seven-logical quotient
+resolution, and a logical bridge into an explicit distance-three 66-qutrit
+store.  Fault-tolerant magic admission nevertheless remains fail-closed because
+(1) the optical primitive has no hardware-backed calibration packet,
+(2) no hardware-calibrated physical threshold certificate exists, and
+(3) the distance-three storage bridge does not yet have a fault-tolerant
+physical code-switch certificate.
+
+On the deployment side, Holotrade now admits a real host bundle only after the
+portable host verifier returns \texttt{PORTABLE\_W33\_HOST\_AUDIT\_PASS}.  The
+verified bundle is then content-addressed and its digest is signed into a
+\emph{new} second-stage settlement receipt, avoiding a circular
+receipt--bundle--same-receipt dependency.  A fresh self-hosted
+\texttt{[self-hosted,linux,w33-tpm]} capture request was issued separately; that
+request is not physical evidence by itself and becomes a hardware result only
+if the TPM/measured-boot/energy workflow actually executes and passes.
