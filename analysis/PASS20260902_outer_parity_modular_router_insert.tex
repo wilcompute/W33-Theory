@@ -98,10 +98,31 @@ coordinate-level correspondence
 (\Phi Z)h\ \longleftrightarrow\ Y_{\mathrm{even}}h,
 \qquad h\in\mathbb F_3^{81},
 \]
-where both matrices have rank $81$.  Thus the common outer-even obstruction
-channel and the CSS logical Steinberg are explicitly the same abstract
-$PSp_4(3)$ module in the same building coordinates, while living on different
-finite carriers.
+where both matrices have rank $81$.  Thus the common modular obstruction image
+descending from the two rational outer-even channels and the CSS logical
+Steinberg are explicitly the same abstract $PSp_4(3)$ module in the same
+building coordinates, while living on different finite carriers.
+
+The explicit $PGSp$ transport reveals an additional modular effect that is not
+visible at the restricted $PSp$ level.  Let $S$ be the involution induced by
+$s$ on the shared building-homology coordinates.  Solving the source transport
+matrices rather than assigning them from the characteristic-zero labels gives
+\[
+ sY_{\mathrm{even}}=Y_{\mathrm{even}}(-S),\qquad
+ sY_{\mathrm{odd}}=Y_{\mathrm{odd}}S,
+ \qquad
+ s(\Phi Z)=(\Phi Z)S.
+\]
+All three rank-$81$ images are individually outer-invariant.  Hence the chosen
+integral reduction modulo $3$ \emph{reverses the extension sign} attached to
+the rational parity labels: the image descending from the rational-even pair
+carries the sign-twisted $PGSp$ extension, whereas the image descending from
+the rational-odd channel and the CSS logical Steinberg carry the untwisted
+extension.  Consequently the CSS--obstruction correspondence above is an exact
+$PSp_4(3)$ bridge but not an equality of $PGSp_4(3)$ extensions for the modular
+rational-even image.  This sign inversion is a property of the explicit
+integral injection and characteristic-$3$ reduction; it is not a relabeling of
+the characteristic-zero multiplicity involution $J_{81}$.
 
 For comparison, reducing the chosen integral numerator maps for
 $St_{64}^{\oplus3}$ modulo $2$ gives individual ranks $(64,0,64)$ and combined
@@ -126,7 +147,7 @@ degree-$81$ router after one carrier has been chosen.
 \paragraph{Scope.}
 All statements in this subsection are exact finite incidence,
 representation-theoretic, modular-homological, or CSS-code statements.  The
-words ``even'', ``odd'', ``channel'', ``carrier fork'', and ``outer twist'' refer
-to the explicitly computed finite group actions.  They do not by themselves
-identify particle generations, physical chirality, continuum fields, or
-dynamical propagation.
+words ``even'', ``odd'', ``channel'', ``carrier fork'', ``outer twist'', and
+``sign inversion'' refer to the explicitly computed finite group actions and
+integral modular reductions.  They do not by themselves identify particle
+generations, physical chirality, continuum fields, or dynamical propagation.
