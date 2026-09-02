@@ -1,0 +1,47 @@
+name: PGSp mod3 Hom spaces
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20260902_pgsp_mod3_hom_spaces.py'
+      - '.github/workflows/w33_20260902_pgsp_mod3_hom_spaces.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Dependencies
+        run: python -m pip install --disable-pip-version-check numpy sympy scipy networkx
+      - name: Execute Hom-space audit
+        run: |
+          set -o pipefail
+          cd analysis
+          python w33_20260902_pgsp_mod3_hom_spaces.py 2>&1 | tee PGSP_MOD3_HOM_SPACES.log
+      - name: Freeze evidence
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('data/PART_W33_20260902_PGSP_MOD3_HOM_SPACES.json').read_text())
+          assert d['status']=='PASS'
+          assert d['HomPGSpDimensions']['CSS']['obstructionOdd']==1
+          assert d['HomPGSpDimensions']['CSS']['obstructionEven']==0
+          assert d['HomPGSpDimensions']['obstructionEven']['obstructionOdd']==0
+          PY
+          git config user.name w33-evidence-bot
+          git config user.email w33-evidence-bot@users.noreply.github.com
+          git add -f data/PART_W33_20260902_PGSP_MOD3_HOM_SPACES.json data/PART_W33_PASS7513_7516_STEINBERG_F3_CENTRALIZER.json analysis/PGSP_MOD3_HOM_SPACES.log
+          if ! git diff --cached --quiet; then
+            git commit -m 'Freeze full PGSp modular Hom-space evidence'
+            git pull --rebase origin master
+            git push origin HEAD:master
+          fi
