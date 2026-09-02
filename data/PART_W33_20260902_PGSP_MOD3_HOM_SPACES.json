@@ -1,0 +1,91 @@
+{
+  "HomPGSpDimensions": {
+    "CSS": {
+      "CSS": 1,
+      "obstructionEven": 0,
+      "obstructionOdd": 1
+    },
+    "obstructionEven": {
+      "CSS": 0,
+      "obstructionEven": 1,
+      "obstructionOdd": 0
+    },
+    "obstructionOdd": {
+      "CSS": 1,
+      "obstructionEven": 0,
+      "obstructionOdd": 1
+    }
+  },
+  "HomPGSpGenerators": {
+    "CSS": {
+      "CSS": "common-coordinate scalar maps c*I, c in F3",
+      "obstructionEven": "zero only; the unique PSp line is outer-anti-equivariant",
+      "obstructionOdd": "common-coordinate scalar maps c*I, c in F3"
+    },
+    "obstructionEven": {
+      "CSS": "zero only; the unique PSp line is outer-anti-equivariant",
+      "obstructionEven": "common-coordinate scalar maps c*I, c in F3",
+      "obstructionOdd": "zero only; the unique PSp line is outer-anti-equivariant"
+    },
+    "obstructionOdd": {
+      "CSS": "common-coordinate scalar maps c*I, c in F3",
+      "obstructionEven": "zero only; the unique PSp line is outer-anti-equivariant",
+      "obstructionOdd": "common-coordinate scalar maps c*I, c in F3"
+    }
+  },
+  "HomPSpDimensions": {
+    "CSS": {
+      "CSS": 1,
+      "obstructionEven": 1,
+      "obstructionOdd": 1
+    },
+    "obstructionEven": {
+      "CSS": 1,
+      "obstructionEven": 1,
+      "obstructionOdd": 1
+    },
+    "obstructionOdd": {
+      "CSS": 1,
+      "obstructionEven": 1,
+      "obstructionOdd": 1
+    }
+  },
+  "boundary": "This distinguishes finite PGSp extensions of one modular Steinberg module. It does not identify physical particles, chirality sectors, or continuum fields.",
+  "commonCoordinateSource": "H1(W(3,3);F3) building-cycle basis",
+  "crossCarrierResults": {
+    "CSS_to_obstructionEven": {
+      "PSpHomDimension": 1,
+      "dimension": 0,
+      "interpretation": "the common-coordinate PSp isomorphism is killed by the opposite outer sign"
+    },
+    "CSS_to_obstructionOdd": {
+      "dimension": 1,
+      "generator": "(Phi Z) h -> Y_odd h",
+      "interpretation": "same +S PGSp extension"
+    },
+    "obstructionEven_to_obstructionOdd": {
+      "PSpHomDimension": 1,
+      "dimension": 0,
+      "interpretation": "opposite PGSp extensions of the same restricted Steinberg"
+    }
+  },
+  "extendedGroup": "PGSp4(3)",
+  "field": "F3",
+  "inputCertificates": {
+    "chainInjections": "data/PART_W33_20260901_BUILDING_CHAIN_INJECTIONS.json",
+    "cssBridge": "data/PART_W33_20260902_MOD3_EVEN_GLUING_CSS_BRIDGE.json",
+    "outerTransports": "data/PART_W33_20260902_MOD3_PGSP_EXTENSION_TWIN.json",
+    "scalarSchur": "data/PART_W33_PASS7513_7516_STEINBERG_F3_CENTRALIZER.json"
+  },
+  "moduleDimension": 81,
+  "outerSignsRelativeToBuildingS": {
+    "CSS": 1,
+    "obstructionEven": -1,
+    "obstructionOdd": 1
+  },
+  "restrictedGroup": "PSp4(3)",
+  "schema": "w33.20260902.pgsp-mod3-hom-spaces.v1",
+  "signTwistStatement": "Tensoring either endpoint by the nontrivial PGSp/PSp sign character flips its outer sign and restores the one-dimensional Hom exactly when the displayed untwisted Hom dimension is zero.",
+  "status": "PASS",
+  "theorem": "The full defining-characteristic PGSp Hom table among CSS, the common rational-even obstruction reduction, and the rational-odd obstruction reduction is determined exactly. Every restricted PSp Hom has dimension one by the scalar Schur theorem. After adjoining the explicit outer involution, Hom has dimension one precisely between modules with the same solved outer sign and dimension zero between opposite signs. Consequently CSS is PGSp-isomorphic to the obstructionOdd reduction, not to the common obstructionEven reduction, although all three are PSp-isomorphic."
+}

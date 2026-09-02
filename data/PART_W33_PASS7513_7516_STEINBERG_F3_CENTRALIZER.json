@@ -1,0 +1,24 @@
+{
+  "PSp4_3_generator_count": 5,
+  "Steinberg_dimension": 81,
+  "boundary": "Finite modular representation theorem only.",
+  "centralizer_dimension_F3": 1,
+  "commutant_constraint_shape": [
+    32805,
+    81
+  ],
+  "conclusion": "The explicit characteristic-3 Steinberg image has scalar commutant only. Together with irreducibility/BT861 this is the full defining-characteristic Schur channel; its generated endomorphism algebra is End_F3(V_81).",
+  "constraint_rank_F3": 80,
+  "cyclic_orbit_basis_dimension": 81,
+  "generator_orders": [
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "operator_algebra_dimension": 6561,
+  "passes": "7513-7516",
+  "schema": "w33.pass7513_7516.steinberg_f3_centralizer.v1",
+  "status": "PASS"
+}

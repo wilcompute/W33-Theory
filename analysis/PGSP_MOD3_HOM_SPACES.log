@@ -1,0 +1,2 @@
+{"status": "PASS", "centralizer_dim_F3": 1, "operator_algebra_dim": 6561}
+{"HomPGSp": {"CSS": {"CSS": 1, "obstructionEven": 0, "obstructionOdd": 1}, "obstructionEven": {"CSS": 0, "obstructionEven": 1, "obstructionOdd": 0}, "obstructionOdd": {"CSS": 1, "obstructionEven": 0, "obstructionOdd": 1}}, "signs": {"CSS": 1, "obstructionEven": -1, "obstructionOdd": 1}, "status": "PASS"}
