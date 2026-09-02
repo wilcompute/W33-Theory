@@ -1,0 +1,73 @@
+% 2026-09-02 virtual-machine closure: frontend, reversible memory,
+% packet refinement, deployment typing, and heterogeneous IPC.
+\subsection{Validated guest code, reversible history, and heterogeneous execution}
+
+The typed universal microVM now has a real guest-language front end rather than
+only hand-written counter programs.  The executable witness
+\texttt{analysis/w33\_wasm3\_frontend.py} decodes the standard WebAssembly
+binary envelope and a deliberately bounded Core-3.0 integer/control subset,
+validates the operand/control stack, executes a structured
+\texttt{block/loop/br\_if/br} program, and only after successful validation
+assigns W33 portals and Holonet packet slots.  The regression program computes
+\(1+2+3+4+5=15\).  A type-invalid mutation is rejected both by validation and
+by lowering, so invalid guest code receives no transport identity.  The scope
+is intentionally narrower than the complete WebAssembly 3.0 instruction set;
+unsupported valid constructs are rejected rather than approximated.
+
+The history-as-time construction has also been promoted from an in-memory undo
+stack to persistent carrier-bound storage.  In
+\texttt{analysis/w33\_bennett\_merkle\_reversible\_runtime.py}, each certified
+undo token is mirrored into the 40-ary Merkle memory and authenticated again
+before an inverse step is accepted.  The resulting Bennett cycle is executable:
+\[
+  \mathrm{compute}\;\longrightarrow\;\mathrm{copy\ output}
+  \;\longrightarrow\;\mathrm{uncompute}.
+\]
+For the 24-step sample \((7,11)\mapsto(18,0)\), the copied output survives while
+the work state and journal return to their exact initial values.  An explicit
+\texttt{DISCARD\_HISTORY} operation remains the noninvertible boundary.  The
+software records byte and Merkle-blob counts only; no thermodynamic energy is
+inferred from those counts.
+
+The semantic-to-hardware refinement is now explicit as well.  The witness
+\texttt{analysis/w33\_universal\_to\_holonet\_refinement.py} composes the
+counter-machine certificates with the already verified BT1698 packet machine
+and BT1377 physical-computation contract.  The 24 semantic steps occupy 24 of
+the Q6/tomotope body slots, hence two 72-tick packet microframes.  Each occupied
+slot retains the fixed
+\[
+  \texttt{LOAD\_FLAG}\to\texttt{FLIP\_Q6\_AXIS}\to\texttt{LATCH\_VERTEX}
+\]
+three-phase packet transition.  Separately, the BT1377 optical-word contract
+retains its three tritter/EOM pulses plus five delay-line switch pulses.  These
+\(3\)-phase and \(8\)-tick decompositions are linked as distinct refinement
+objects and are not falsely identified term-by-term.  The deterministic kernel
+remains Clifford/control; the non-Clifford resource port remains explicitly
+required for quantum universality and is not implemented by this software
+lowerer.
+
+The two inequivalent 216-state carriers are now treated as heterogeneous
+processors rather than two views of one processor.  Writing a local state as
+\[
+  s=6b+t,\qquad b\in\{0,\ldots,35\},\quad t\in\{0,\ldots,5\},
+\]
+the executable IPC witness \texttt{analysis/w33\_heterogeneous\_36\_ipc.py}
+exposes only the common base address \(b\) through the neutral syscalls
+\texttt{SEND36}, \texttt{RECV36}, and \texttt{ACK36}.  The private fibre tag
+\(t\) is never translated between circuit/ST81 and paired-hemisystem/ST64.
+Thus the common 36-state quotient is a message/syscall ABI, not a gauge
+transformation; an attempted carrier-state translation is rejected.
+
+On the deployment side, the sibling Holotrade runtime now consumes the same
+construction-time distinction: scheduler placement and launch admission require
+an exact carrier match, GoMicroVM deployment identity commits to the W33
+profile, and the RTL admission predicate refuses invalid profiles, carrier
+mismatches, and aliases between the equal-order Clifford-lift and
+projective/Weyl namespaces.
+
+\paragraph{Scope.}
+These are executable software/RTL architecture statements.  They strengthen the
+path from validated guest code to typed virtual hardware and expose the exact
+remaining physical boundary.  They do not constitute a complete WebAssembly
+implementation, fabricated reversible photonics, a calibrated optical machine,
+or a proof that the explicit non-Clifford port has been physically realised.
