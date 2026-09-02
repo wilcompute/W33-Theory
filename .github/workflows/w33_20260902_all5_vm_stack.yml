@@ -1,0 +1,28 @@
+name: W33 all-five VM stack
+on:
+  push:
+    paths:
+      - 'analysis/w33_wasm3_frontend.py'
+      - 'analysis/w33_bennett_merkle_reversible_runtime.py'
+      - 'analysis/w33_universal_to_holonet_refinement.py'
+      - 'analysis/w33_heterogeneous_36_ipc.py'
+      - 'tests/test_w33_all5_vm_stack.py'
+      - '.github/workflows/w33_20260902_all5_vm_stack.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run focused VM stack tests
+        run: python -m unittest tests/test_w33_all5_vm_stack.py -v
+      - name: Run executable certificates
+        run: |
+          python analysis/w33_wasm3_frontend.py >/tmp/wasm.json
+          python analysis/w33_bennett_merkle_reversible_runtime.py >/tmp/bennett.json
+          python analysis/w33_universal_to_holonet_refinement.py >/tmp/refine.json
+          python analysis/w33_heterogeneous_36_ipc.py >/tmp/ipc.json
