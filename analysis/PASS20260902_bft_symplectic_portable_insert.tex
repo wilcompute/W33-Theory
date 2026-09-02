@@ -6,7 +6,10 @@ log: the initial legacy \texttt{TCG\_PCClientPCREvent} carries the Spec-ID event
 which declares the digest widths used by subsequent crypto-agile
 \texttt{TCG\_PCR\_EVENT2} records.  Informational \texttt{EV\_NO\_ACTION}
 records are excluded from PCR extension, while the remaining digests are replayed
-and compared with the signed TPM quote.  AK/EK X.509 provenance is typed
+and compared with the signed TPM quote.  The raw TPM wire
+\texttt{TPMT\_SIGNATURE} is also parsed directly for RSASSA, RSA-PSS, and ECDSA,
+so the quote hash/signature scheme is derived from the signed TPM object rather
+than supplied as a normalized verifier claim.  AK/EK X.509 provenance is typed
 separately from quote validity and from an AK--EK credential-activation binding.
 
 Second, capability epochs are no longer authorized by a static multisignature
@@ -56,11 +59,12 @@ CI fixtures exercise this controller but are explicitly labeled non-physical.
 
 Finally, one portable audit verifier now accepts a bundle containing the signed
 delivery receipt and its constituent evidence.  It independently re-verifies raw
-TPM or SEV-SNP evidence, verifies each four-of-five epoch certificate against
-trusted authority keys, recomputes the passport content identity, rebuilds the
-flight-recorder root from epoch/GC/magic histories and the final artifact set,
-and only then accepts the COSE/Ed25519 receipt.  The portable acceptance predicate
-is therefore
+TPM (including the PC Client event log and, when supplied, the wire-format
+\texttt{TPMT\_SIGNATURE}) or SEV-SNP evidence, verifies each four-of-five epoch
+certificate against trusted authority keys, recomputes the passport content
+identity, rebuilds the flight-recorder root from epoch/GC/magic histories and the
+final artifact set, and only then accepts the COSE/Ed25519 receipt.  The portable
+acceptance predicate is therefore
 \[
 \boxed{\text{hardware}\land\text{authority}\land\text{passport}\land
 \text{replay}\land\text{artifacts}\land\text{receipt signature}}.
