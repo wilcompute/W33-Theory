@@ -1,0 +1,45 @@
+name: W33 qutrit locality decoder threshold closure
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_qutrit_20_7_2_multiminor_optimizer.py'
+      - 'analysis/w33_qutrit_20_7_2_w33_route_compiler.py'
+      - 'analysis/w33_qutrit_20_7_2_packet_decoder.py'
+      - 'analysis/w33_qutrit_20_7_2_threshold.py'
+      - 'analysis/w33_qutrit_20_7_2_ft_closure.py'
+      - 'analysis/w33_qutrit_20_7_2_adapter_attack.py'
+      - 'analysis/w33_magic_resource_scheduler.py'
+      - '.github/workflows/w33_20260902_ft_locality_decoder_threshold.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact finite optimization dependencies
+        run: python -m pip install --disable-pip-version-check numpy cryptography ortools
+      - name: Syntax-check all new frontier modules
+        run: |
+          python -m py_compile \
+            analysis/w33_qutrit_20_7_2_multiminor_optimizer.py \
+            analysis/w33_qutrit_20_7_2_w33_route_compiler.py \
+            analysis/w33_qutrit_20_7_2_packet_decoder.py \
+            analysis/w33_qutrit_20_7_2_threshold.py \
+            analysis/w33_qutrit_20_7_2_ft_closure.py
+      - name: Execute integrated exact locality decoder threshold closure
+        run: python analysis/w33_qutrit_20_7_2_ft_closure.py > w33_qutrit_ft_closure.json
+      - name: Show compact closure certificate
+        run: cat w33_qutrit_ft_closure.json
+      - name: Upload closure certificate
+        uses: actions/upload-artifact@v4
+        with:
+          name: w33-qutrit-ft-frontier-closure
+          path: w33_qutrit_ft_closure.json
+          if-no-files-found: error
