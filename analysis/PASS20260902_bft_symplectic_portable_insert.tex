@@ -1,0 +1,72 @@
+\subsection{Raw attestation, BFT authority, nonlocal qutrit embedding, measured placement, and portable audit closure}
+
+The execution stack now separates five previously open trust and implementation
+boundaries.  First, the Holotrade verifier consumes the raw PC Client TPM event
+log: the initial legacy \texttt{TCG\_PCClientPCREvent} carries the Spec-ID event,
+which declares the digest widths used by subsequent crypto-agile
+\texttt{TCG\_PCR\_EVENT2} records.  Informational \texttt{EV\_NO\_ACTION}
+records are excluded from PCR extension, while the remaining digests are replayed
+and compared with the signed TPM quote.  AK/EK X.509 provenance is typed
+separately from quote validity and from an AK--EK credential-activation binding.
+
+Second, capability epochs are no longer authorized by a static multisignature
+object alone.  Five Ed25519 validators execute proposal, PREPARE-QC, and COMMIT-QC
+phases with quorum four.  A four-vote timeout certificate rotates the leader;
+anti-equivocation votes, prepare locks, finalization state, and the highest commit
+certificate are durable across restart.  The executable partition witness shows
+that a two-node side cannot finalize, the connected four-node side advances after
+a timeout, and the lagging replica reconciles from the final commit certificate.
+For $n=5,t=4$, two quorums intersect in at least
+\[
+2t-n=3,
+\]
+which exceeds the assumed one-Byzantine budget.  This is an executable BFT
+state-machine certificate, not a claim of a production asynchronous network
+stack.
+
+Third, the qutrit fault-tolerance frontier changes qualitatively.  The previous
+certificate remains valid:
+\[
+\boxed{\text{no monomial/zero-extension 20-edge CSS embedding exists}},
+\]
+because the external $H_0$ span contains weight six whereas every nonzero parent
+$X$-stabilizer in the W33 edge code has weight at least twelve.  However that is
+a locality obstruction, not a general symplectic obstruction.  The new
+construction produces
+\[
+A,B\in \mathbb F_3^{20\times240},\qquad AB^T=I_{20},
+\]
+so
+\[
+(x,z)\longmapsto(xA,zB)
+\]
+is an injective symplectic Pauli embedding.  The seven external $H_1$ rows map
+to independent logical-$X$ classes of the exact $[[240,81,3]]_3$ parent and the
+two $H_0$ rows map into its $X$-stabilizer rowspace.  Thus the broad nonlocal
+algebraic embedding class is \textbf{SAT}.  Fault-tolerant scheduling nevertheless
+remains refused: the verified map has no low-weight/local optical compiler,
+mapped decoder, or mapped threshold/noise certificate.
+
+Fourth, Holotrade placement now closes the prediction loop.  Linux RAPL counter
+deltas and Kepler Prometheus energy counters can be ingested as physically
+measured energy, while strong-root storage ledgers provide realized blob-seconds
+and byte-seconds.  Per-node calibration factors update from prediction error and
+feed back into the next storage/recovery/energy/erasure-aware placement ranking.
+CI fixtures exercise this controller but are explicitly labeled non-physical.
+
+Finally, one portable audit verifier now accepts a bundle containing the signed
+delivery receipt and its constituent evidence.  It independently re-verifies raw
+TPM or SEV-SNP evidence, verifies each four-of-five epoch certificate against
+trusted authority keys, recomputes the passport content identity, rebuilds the
+flight-recorder root from epoch/GC/magic histories and the final artifact set,
+and only then accepts the COSE/Ed25519 receipt.  The portable acceptance predicate
+is therefore
+\[
+\boxed{\text{hardware}\land\text{authority}\land\text{passport}\land
+\text{replay}\land\text{artifacts}\land\text{receipt signature}}.
+\]
+
+These closures do not constitute a fabricated photonic processor, a measured
+fault-tolerance threshold, a locality-optimal symplectic embedding, or a formal
+proof of BFT liveness under every asynchronous schedule.  Those remain separate
+physical and protocol frontiers.
