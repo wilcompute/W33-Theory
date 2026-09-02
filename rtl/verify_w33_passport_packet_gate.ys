@@ -1,0 +1,3 @@
+read_verilog -formal rtl/w33_passport_packet_gate.v
+prep -top w33_passport_packet_gate_formal -flatten
+sat -prove-asserts -verify -show-inputs -show-outputs
