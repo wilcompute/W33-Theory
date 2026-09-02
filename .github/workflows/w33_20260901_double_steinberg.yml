@@ -38,8 +38,8 @@ jobs:
           PY
           git config user.name 'w33-evidence-bot'
           git config user.email 'w33-evidence-bot@users.noreply.github.com'
-          git add data/PART_W33_20260901_DOUBLE_STEINBERG_64_81.json
-          git add -f analysis/PASS_20260901_DOUBLE_STEINBERG.log
+          git add -f data/PART_W33_20260901_DOUBLE_STEINBERG_64_81.json \
+            analysis/PASS_20260901_DOUBLE_STEINBERG.log
           if ! git diff --cached --quiet; then
             git commit -m 'Freeze dual Steinberg 64/81 selector evidence'
             git pull --rebase origin master
