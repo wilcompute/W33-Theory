@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
 """Typed non-Clifford resource scheduler for the W33/Holonet packet machine.
 
-The scheduler now treats fault-tolerance evidence as four independent gates:
-  1. an exact W33 encoding/intertwiner;
-  2. a locality/optical compilation certificate for that encoding;
-  3. a mapped syndrome/decoder implementation;
-  4. a mapped noise/threshold certificate.
+Fault-tolerance admission is split into four independent gates:
+  1. exact W33 encoding/intertwiner;
+  2. calibrated locality/optical compilation for that encoding;
+  3. mapped syndrome/decoder implementation;
+  4. mapped physical noise/threshold certificate.
 
-The general nonlocal [[20,7,2]]_3 -> [[240,81,3]]_3 symplectic embedding now
-closes gate (1), but the scheduler intentionally keeps FAULT_TOLERANT assurance
-refused until the other three gates close.
+The current spine closes (1) and now closes the algebraic/packet form of (3).
+A shared-W33-point route compiler exists, but it is only topological and does
+not close the calibrated optical gate (2).  The routed-exposure threshold
+experiment is explicitly phenomenological, so it does not close (4).
+FAULT_TOLERANT reservations therefore remain refused.
 """
 from __future__ import annotations
 from dataclasses import asdict, dataclass
@@ -133,7 +135,7 @@ def adapter_from_audit(audit: dict[str,Any]) -> FTAdapter:
         external_code_verified=external,
         encoding_map_verified=repo.get("general_nonlocal_symplectic_embedding_verified") is True,
         locality_compiler_verified=repo.get("locality_optical_compiler_verified") is True,
-        decoder_verified=repo.get("mapped_packet_decoder_present") is True,
+        decoder_verified=repo.get("mapped_packet_decoder_verified") is True,
         threshold_certificate_verified=repo.get("mapped_threshold_certificate_present") is True,
         audit_digest=digest(audit),
     )
@@ -147,6 +149,7 @@ def verify() -> dict[str,Any]:
     try: sched.reserve_t(2,"EXACT_LOGICAL")
     except RuntimeError: overbook=True
     candidate=adapter_from_audit(code_audit); sched.register_adapter(candidate)
+    repo=code_audit.get("w33_adapter_audit",{})
     ft_refused=False
     try:
         sched.cancel(r1.reservation_id); sched.reserve_t(2,"FAULT_TOLERANT")
@@ -160,8 +163,10 @@ def verify() -> dict[str,Any]:
       "exact_t_port_certificate_passes":teleport.get("status")=="PASS",
       "external_20_7_2_code_reconstruction_passes":code_audit.get("status")=="PASS" and candidate.external_code_verified,
       "nonlocal_symplectic_encoding_gate_is_closed":candidate.encoding_map_verified,
-      "locality_gate_remains_open":not candidate.locality_compiler_verified,
-      "decoder_gate_remains_open":not candidate.decoder_verified,
+      "topological_w33_route_evidence_is_present":repo.get("topological_w33_route_compiler_verified") is True,
+      "optical_locality_gate_remains_open":not candidate.locality_compiler_verified,
+      "mapped_decoder_gate_is_closed":candidate.decoder_verified,
+      "pseudothreshold_is_not_promoted_to_physical_threshold":repo.get("mapped_pseudothreshold_experiment_verified") is True and not candidate.threshold_certificate_verified,
       "threshold_gate_remains_open":not candidate.threshold_certificate_verified,
       "adapter_status_is_derived_from_executable_audit":candidate.audit_digest==digest(code_audit),
       "raw_tokens_content_addressed":len(tokens)==2 and all(t.token_id.startswith("sha256:") for t in tokens),
@@ -173,12 +178,12 @@ def verify() -> dict[str,Any]:
       "scheduler_keeps_assurance_explicit":all(r["assurance"] in {"EXACT_LOGICAL","FAULT_TOLERANT"} for r in snap["reservations"]),
     }
     return {
-      "schema":"w33.magic-resource-scheduler.v3",
+      "schema":"w33.magic-resource-scheduler.v4",
       "status":"PASS" if all(checks.values()) else "FAIL",
       "checks":checks,
       "candidate_adapter":asdict(candidate)|{"enabled":candidate.enabled},
       "adapter_audit_decision":code_audit.get("decision"),
-      "interpretation":"The exact nonlocal W33 symplectic encoding now closes the encoding gate. FAULT_TOLERANT T scheduling remains refused because locality/optical compilation, the mapped decoder, and the mapped threshold certificate are still absent.",
+      "interpretation":"The encoding and mapped decoder gates now close, and a topological W33 route plus phenomenological pseudothreshold experiment exist. FAULT_TOLERANT T scheduling remains refused because calibrated optical locality and a physical mapped threshold certificate remain absent; the adapter audit also preserves the independent [[66,8,3]]_3 substrate blocker.",
     }
 
 if __name__=="__main__":
