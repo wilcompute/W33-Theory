@@ -1,0 +1,173 @@
+{
+  "boundary": "'Dual Steinberg selectors' is a representation-theoretic description of two BN-pair structures on the same abstract finite group.  It is not a physical duality, particle assignment, or dynamical equivalence.",
+  "exact64ProjectorExpansions": {
+    "U4Steinberg64_0": [
+      {
+        "coefficient": "4/45",
+        "crossOrbitPair": [
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": "1/45",
+        "crossOrbitPair": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": "1/45",
+        "crossOrbitPair": [
+          2,
+          0
+        ]
+      },
+      {
+        "coefficient": "1/180",
+        "crossOrbitPair": [
+          2,
+          2
+        ]
+      }
+    ],
+    "U4Steinberg64_1": [
+      {
+        "coefficient": "1/12",
+        "crossOrbitPair": [
+          2,
+          2
+        ]
+      }
+    ],
+    "U4Steinberg64_2": [
+      {
+        "coefficient": "1/15",
+        "crossOrbitPair": [
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  "exceptionalIsomorphism": "U4(2) ~= PSp4(3)",
+  "externalSteinbergInterpretation": {
+    "PSp4(3)_q3": {
+      "definingCharacteristic": 3,
+      "ordinarySteinbergDegree": 81,
+      "pPartOrder": 81
+    },
+    "U4(2)_q2": {
+      "definingCharacteristic": 2,
+      "ordinarySteinbergDegree": 64,
+      "pPartOrder": 64
+    },
+    "references": [
+      "https://brauer.maths.qmul.ac.uk/Atlas/clas/U42/",
+      "https://www.math.rwth-aachen.de/homes/sam/ctbllib/ctbltoc/data/U4%282%29.html"
+    ]
+  },
+  "obstruction1080": {
+    "PSpSteinberg81CarrierDimension": 243,
+    "PSpSteinberg81Multiplicity": 3,
+    "U4Steinberg64CarrierDimension": 192,
+    "U4Steinberg64Multiplicity": 3,
+    "primitive64Ranks": [
+      64,
+      64,
+      64
+    ],
+    "split64Eigenvalues": [
+      "-2",
+      "2",
+      "4"
+    ],
+    "split64Operator": "orbital:3+3"
+  },
+  "schema": "w33.20260901.double-steinberg-64-81.v1",
+  "sourceSelectors": {
+    "circuit216": {
+      "64SelfGramHits": [],
+      "interpretation": "64 absent"
+    },
+    "hemisystem216": {
+      "64CrossGramSpan": 9,
+      "64HomDimension": 17,
+      "64SelfGramHits": [
+        [
+          0,
+          64
+        ],
+        [
+          1,
+          64
+        ],
+        [
+          2,
+          64
+        ],
+        [
+          3,
+          64
+        ],
+        [
+          4,
+          64
+        ],
+        [
+          5,
+          64
+        ],
+        [
+          6,
+          64
+        ],
+        [
+          7,
+          64
+        ],
+        [
+          8,
+          64
+        ],
+        [
+          9,
+          64
+        ],
+        [
+          10,
+          64
+        ],
+        [
+          11,
+          64
+        ],
+        [
+          12,
+          64
+        ],
+        [
+          13,
+          64
+        ],
+        [
+          14,
+          64
+        ],
+        [
+          15,
+          64
+        ],
+        [
+          16,
+          64
+        ]
+      ],
+      "81SelfGramHits": [],
+      "fullM3_64": true,
+      "interpretation81": "81 absent"
+    }
+  },
+  "status": "PASS",
+  "theorem": "Under the exceptional isomorphism U4(2)~=PSp4(3), the 1080 obstruction module contains three copies of each defining-characteristic Steinberg character, degrees 64 and 81.  The two nonconjugate index-216 S5 carriers select them complementarily: the five-circuit shell has no 64 coupling, while the hemisystem shell has no 81 coupling.  The hemisystem orbital maps route its unique 64-dimensional constituent into the target 64^3 block; if fullM3_64 is true their cross-Grams realize all M3(Q), exactly mirroring the circuit-to-81 router."
+}
