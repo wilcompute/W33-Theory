@@ -1,0 +1,107 @@
+% 2026-09-02 follow-on runtime closure: capability Wasm, RTL refinement,
+% qutrit T injection, heterogeneous kernel, and typed erasure economics.
+\subsection{Capability-backed guests, finite RTL refinement, and typed irreversibility}
+
+The validated guest front end now has an executable multi-function runtime rather
+than only a one-function arithmetic witness.  In
+\texttt{analysis/w33\_wasm3\_capability\_runtime.py}, a deliberately bounded
+WebAssembly Core binary subset supports typed calls and function imports,
+mutable/immutable \texttt{i32} globals, and \texttt{i32.load/store} against one
+linear memory.  A WebAssembly page is not translated into an unchecked host
+pointer.  Instead, each $64$-KiB page is placed below one top-level digit of the
+persistent $40$-ary W33 Merkle trie,
+\[
+   a=(p,d_1,d_2,d_3,d_4),\qquad
+   p\in\{0,\ldots,39\},\quad d_i\in\{0,\ldots,39\},
+\]
+and memory access is mediated by a carrier-bound prefix capability.  The
+current executable mapping therefore supports at most forty WebAssembly pages;
+that ceiling is a software choice of this page-to-prefix construction, not a
+bound implied by WebAssembly or by $W(3,3)$.  The regression module contains two
+defined functions, a mutable global and one memory, computes the value $5$, and
+checks that an invalid call target fails validation before receiving any W33
+transport identity.
+
+The semantic-to-packet refinement now also has a finite RTL realisation.  The
+module \texttt{rtl/w33\_universal\_packet\_microsequencer.v} accepts one lowered
+\texttt{INC}, \texttt{DECJZ}, or \texttt{HALT} macro-instruction and refines it
+into
+\[
+ \texttt{LOAD\_FLAG}\longrightarrow
+ \texttt{FLIP\_Q6\_AXIS}\longrightarrow
+ \texttt{LATCH\_VERTEX}.
+\]
+Architectural state is frozen through the first two phases and the counter,
+program counter and target portal commit only at the latch edge.  The companion
+formal module and \texttt{rtl/verify\_w33\_universal\_packet\_refinement.ys}
+prove those one-step equations over all valid opcodes and all finite 32-bit
+pre-states.  The independent Python witness replays the existing 24-step
+$(7,11)\mapsto(18,0)$ computation and checks the RTL equations macrostep by
+macrostep.  This is a finite-width refinement theorem; it does not replace the
+unbounded-counter theorem used for abstract Turing completeness.
+
+The non-Clifford boundary is now split into its two physically different
+nine-outcome objects instead of giving them one overloaded name.  The
+executable port \texttt{analysis/w33\_qutrit\_t\_teleportation\_port.py} uses
+\[
+ T=\operatorname{diag}(1,\zeta_9,\zeta_9^{-1}),\qquad
+ \zeta_9=e^{2\pi i/9}.
+\]
+A nine-outcome Hesse SIC is used as an ideal factory/admission fingerprint for
+a consumed $T|+\rangle$ sample.  Separately, the injection step uses the nine
+qutrit Bell outcomes $(a,b)\in\mathbb F_3^2$.  For the Choi resource
+$(I\otimes T)|\Phi_3\rangle$, Bell outcome $(a,b)$ produces
+$T X^a Z^{-b}|\psi\rangle$ up to the common postselection amplitude, and the
+feed-forward
+\[
+ C_{ab}=T Z^b X^{-a}T^\dagger
+\]
+is checked to normalize both qutrit Pauli generators for every one of the nine
+outcomes and to restore $T|\psi\rangle$.  The 72-tick packet keeps the existing
+$48+24$ split: the three eight-tick epilogue words are typed as Hesse factory
+audit, Bell-outcome record, and Clifford feed-forward commit.  A magic ledger
+accounts separately for the audit sample and the accepted injected resource.
+No code-level fault-tolerance threshold, finite-shot Hesse calibration,
+detector efficiency, optical loss, or physical magic-state factory follows
+from this state-vector refinement.
+
+The common 36-state carrier quotient has likewise been promoted from a minimal
+mailbox to a small heterogeneous kernel in
+\texttt{analysis/w33\_heterogeneous\_36\_kernel.py}.  Per-channel sequence
+numbers, one-use nonces, replay rejection, bounded queues/backpressure,
+receiver-bound immutable content handles, and one-shot acknowledgements are
+now explicit.  An exhaustive software noninterference check varies the sender's
+private six-state fibre tag over all six values while holding carrier, base
+address, destination, payload and sequence fixed; the public transcript is
+identical in all six runs and contains neither \texttt{state216} nor the
+private fibre tag.  The real WebAssembly import surface is
+\texttt{SEND36}, \texttt{RECV36}, and \texttt{ACK36}; endpoint identity is
+host-bound, so guest code never receives a private-fibre operand.  This proves
+noninterference for the deterministic message transcript of this kernel, not a
+cache/timing side-channel theorem for fabricated hardware.
+
+Finally, irreversible erasure is now a typed economic event rather than an
+implicit side effect.  The sibling Holotrade module
+\texttt{js/reversible-compute-settlement.js} distinguishes
+\texttt{REVERSIBLE\_COMPUTE}, \texttt{HISTORY\_RETAIN},
+\texttt{UNCOMPUTE}, and \texttt{DISCARD\_HISTORY}.  Uncomputation can retire
+live history without creating an erasure charge.  Only explicit discard of
+$b$ bits at temperature $T$ creates the comparison floor
+\[
+ E_{\rm L}=b k_{\rm B}T\ln2.
+\]
+That value is stored as a theoretical lower bound and is never added to or
+substituted for Holotrade's modeled/measured device-joule field.  Supplemental
+prices for reversible operations, retained bit-seconds, and discarded bits are
+explicit market-policy tariffs whose defaults are zero.  A three-objective
+Pareto routine then exposes non-dominated choices in execution latency, peak
+history storage, and irreversible erase count rather than collapsing those
+resources into one invented scalar physics cost.
+
+\paragraph{Scope.}
+This closure strengthens the executable software/RTL path from a standard guest
+binary through capability memory, finite packet hardware, a concrete qutrit
+non-Clifford gate-teleportation model, heterogeneous syscalls and explicit
+erasure accounting.  It does not establish unbounded physical RAM, a
+fault-tolerant magic factory, a fabricated reversible processor, a physical
+side-channel proof, or a measured approach to the Landauer limit.
