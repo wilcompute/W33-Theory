@@ -1,0 +1,72 @@
+{
+  "schema": "w33.typed-universal-microvm.v1",
+  "status": "PASS",
+  "theorem": "An arbitrary finite two-counter program has exact deterministic VM semantics whose every macro-step is wrapped in a W33 route of at most two hops, while carrier type and the two order-51840 symmetry domains remain explicit and nonconflated.",
+  "geometry": {
+    "points": 40,
+    "lines": 40,
+    "degree": 12,
+    "lambda": [2],
+    "mu": [4],
+    "diameter": 2
+  },
+  "machine_types": {
+    "circuit216/steinberg81": {"logical_dimension": 81},
+    "paired-hemisystem216/steinberg64": {"logical_dimension": 64},
+    "runtime_retyping": "FORBIDDEN"
+  },
+  "namespace_contract": {
+    "clifford_lift": {
+      "domain": "Sp(4,3)-clifford-lift",
+      "group": "Sp(4,3)",
+      "order": 51840,
+      "extension": "central double cover of PSp(4,3)"
+    },
+    "projective_weyl": {
+      "domain": "PGSp(4,3)-projective-weyl",
+      "group": "PGSp(4,3) ~= W(E6)",
+      "order": 51840,
+      "extension": "outer projective/similitude extension of PSp(4,3)"
+    },
+    "same_order_not_same_namespace": true
+  },
+  "universal_core": {
+    "model": "two-counter Minsky machine",
+    "instructions": ["INC", "DECJZ", "HALT"],
+    "counters": "unbounded natural numbers in the abstract semantics",
+    "reason": "two-counter machines are a standard universal model of computation"
+  },
+  "sample": {
+    "program": "add-r1-into-r0",
+    "input": [7, 11],
+    "output": [18, 0],
+    "steps": 24,
+    "certificate_count": 24,
+    "max_route_hops": 2,
+    "trace_root": "sha256:fc1b68634d2706e387566ab643e74018e5b03e4d7509401fd39fd2d815445d1d",
+    "snapshot": "sha256:b83cd7942f5cb7b1c93ab84a1856eca4671bee3e6a8d7e2fb424138e9fca9c6f"
+  },
+  "checks": {
+    "w33_points_40": true,
+    "w33_lines_40": true,
+    "w33_degree_12": true,
+    "w33_lambda_2": true,
+    "w33_mu_4": true,
+    "w33_diameter_at_most_2": true,
+    "sample_result": true,
+    "sample_same_on_other_carrier": true,
+    "fork_retype_blocked": true,
+    "wrong_module_dimension_blocked": true,
+    "all_cert_routes_at_most_2": true,
+    "deterministic_replay": true,
+    "distinct_51840_namespaces": true,
+    "snapshot_is_content_addressed": true
+  },
+  "honesty_boundary": [
+    "Turing-complete is a statement about the abstract VM semantics, not one finite physical W33 device.",
+    "Unbounded counters require scalable recursive/external storage in an implementation.",
+    "Sp(4,3) and PGSp(4,3) ~= W(E6) have the same order but are distinct extensions and distinct VM namespaces.",
+    "The 216 carrier is immutable machine type, not a runtime gauge bit.",
+    "Quantum universality still requires a separately validated non-Clifford physical port."
+  ]
+}
