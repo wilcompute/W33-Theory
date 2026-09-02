@@ -1,0 +1,49 @@
+% 2026-09-02 persistent W33 Merkle/capability memory insert.
+
+\subsection{Persistent $40$-ary memory and monotone W33 capabilities}
+
+The abstract counter-machine semantics of the typed microVM does not require us
+to pretend that one finite $40$-point cell stores an infinite tape.  Instead the
+memory family is a sparse persistent $40$-ary Merkle trie.  An address of depth
+$d$ is a tuple
+\[
+ a=(a_1,\ldots,a_d),\qquad a_i\in\{0,\ldots,39\},
+\]
+so the complete depth-$d$ address space has capacity
+\[
+ \boxed{40^d}.
+\]
+Only written paths consume content-addressed nodes.  A write returns a new root
+digest; the previous root remains a valid snapshot and all untouched subtrees
+are shared by SHA-256 identity.  Repeating an identical write is deduplicated
+and returns the same root.
+
+Memory authority is represented by an immutable capability
+\[
+ (\text{carrier},\ \text{address prefix},\ \text{rights}).
+\]
+Derived capabilities may extend the prefix and remove rights, but may not widen
+the rights set, escape the prefix, or change the construction-time carrier.
+Thus a capability for the circuit-$216/\,St_{81}$ machine cannot be applied to a
+paired-hemisystem-$216/\,St_{64}$ memory and vice versa.
+
+The same address digits give a virtual placement geometry.  For equal-depth
+addresses, route one coordinate at a time through $W(3,3)$.  Since the base
+routing diameter is two, the Cartesian execution-address metric satisfies
+\[
+ \boxed{d_{\mathrm{VM}}(a,b)\le 2d}.
+\]
+The executable witness
+\texttt{analysis/w33\_merkle\_capability\_memory.py} reconstructs the W33
+routing geometry and verifies persistent snapshots, subtree sharing,
+deduplication, prefix confinement, rights monotonicity, carrier isolation, and
+the $2d$ route bound.  A depth-$5$ test route uses nine hops against the bound
+ten; a write at depth three creates exactly the four path nodes expected.
+
+\paragraph{Scope.}
+The family has no fixed depth ceiling in the abstract model, but each concrete
+snapshot has finite depth and finitely many blobs.  This is a scalable virtual
+memory architecture, not literal infinite storage in one finite device.  It
+supplies the missing systems interpretation of unbounded universal-machine
+memory: any finite execution consumes only finite content-addressed state, while
+the address family can be extended as the computation grows.
