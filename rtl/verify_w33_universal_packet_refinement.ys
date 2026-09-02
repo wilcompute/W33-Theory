@@ -1,0 +1,4 @@
+read_verilog -formal rtl/w33_universal_packet_microsequencer.v
+prep -top w33_universal_packet_refinement
+chformal -lower
+sat -prove-asserts -verify -show-inputs
