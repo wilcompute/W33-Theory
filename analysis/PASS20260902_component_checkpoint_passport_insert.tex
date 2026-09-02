@@ -1,0 +1,65 @@
+% 2026-09-02 component/checkpoint/passport engineering closure.
+\subsection{Asynchronous components, typed checkpoints, and proof-carrying execution}
+
+The heterogeneous execution stack now has a component boundary rather than only
+raw host calls.  The executable witness
+\texttt{analysis/w33\_component\_async36.py} requires exact import/export type
+agreement and restricts cross-carrier interfaces to neutral values.  Bounded
+\texttt{SEND36} backpressure is represented by a future: a full destination
+queue leaves the future pending, receiving one message frees capacity, and a
+runtime pump resolves the pending send.  Streams and futures therefore compose
+without exposing the private six-state fibre coordinate.  This is a W33-native
+component layer inspired by contemporary typed asynchronous WebAssembly runtime
+patterns; it is not presented as an implementation of the external Component
+Model specification.
+
+The data plane is likewise tightened.  In
+\texttt{analysis/w33\_zero\_copy\_merkle36.py}, a carrier-bound persistent
+memory may publish an immutable Merkle subtree by digest into the common
+36-state fabric.  Publication and delegation allocate no additional content
+blobs: distinct endpoint-bound read handles refer to the same immutable subtree
+root.  A later copy-on-write update of the source memory produces a new subtree
+root while the previously published view remains unchanged.  Here ``zero-copy''
+means content-address reuse in the software model, not a claim about DMA,
+cache coherence, or physical optical copy energy.
+
+Migration is split into two typed operations.  A full checkpoint preserves the
+VM state, carrier-local fibre coordinate, trace root, and memory snapshot and is
+restorable only on the same 216-state carrier.  A cross-carrier handoff uses a
+neutral continuation at an explicit syscall boundary.  It carries classical
+guest state, the common base-36 address, and immutable shared-object roots, but
+not the private fibre tag or an ST81/ST64 quantum state.  Resumption on the
+other carrier creates a new machine instance, a fresh private fibre coordinate,
+and a new trace lineage.  Thus heterogeneous failover does not introduce an
+unproved 81-dimensional to 64-dimensional state isomorphism.
+
+A new execution passport then binds the previously separate proof obligations.
+For a packet, the content-addressed passport commits to the guest validator,
+component link, Merkle memory root and capability, immutable carrier and logical
+dimension, the distinct Clifford-lift and projective/Weyl namespaces, packet
+refinement evidence, non-Clifford resource budget, history root, and erasure
+policy.  Packet admission refuses a carrier relabel, magic-budget overdraft,
+namespace alias, stale passport identity, or missing evidence.  The passport
+hash is an integrity commitment; authorization and remote attestation remain a
+separate signed/hardware-root layer.
+
+Finally, \texttt{analysis/w33\_causal\_time\_ledger.py} makes the project's
+``time as history'' intuition operational at the VM layer.  Events form an
+append-only causal DAG.  Reversible computation can revisit an earlier semantic
+state at a later causal depth because retained history distinguishes the two
+occurrences.  Branches from a common snapshot are causally incomparable, and
+content-equal branches may join without erasing their distinct histories.  An
+explicit \texttt{DISCARD\_HISTORY} event creates a non-reversible authority cut:
+subsequent execution cannot traverse backward across that edge using retained
+undo state.  This is a software causal/recoverability model, not a claim that
+physical time is derived from computation or that a logical discard proves
+thermodynamic erasure.
+
+\paragraph{Magic as a typed accelerator resource.}
+The non-Clifford scheduler now reserves and consumes content-addressed
+\texttt{HESSE\_T\_RAW} tokens at typed packet slots rather than treating
+``magic-capable'' as a Boolean host feature.  Exact logical qutrit-$T$ execution
+and fault-tolerant qutrit-$T$ execution are different assurance classes.  The
+latter remains fail-closed until a W33-specific encoding map and threshold/noise
+certificate are present, even if an external qutrit distillation code is
+registered as a candidate adapter.
