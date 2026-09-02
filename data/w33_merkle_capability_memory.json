@@ -1,0 +1,38 @@
+{
+  "schema": "w33.merkle-capability-memory.v1",
+  "status": "PASS",
+  "theorem": "Sparse 40-ary content-addressed memory has persistent copy-on-write semantics, monotone carrier-bound capabilities, and equal-depth address routing bounded by 2d W33 hops.",
+  "capacity": {
+    "1": 40,
+    "2": 1600,
+    "3": 64000,
+    "4": 2560000,
+    "5": 102400000,
+    "6": 4096000000,
+    "7": 163840000000
+  },
+  "sample": {
+    "depth": 5,
+    "route_hops": 9,
+    "route_bound": 10,
+    "root_before": "sha256:3b93dce12e8d3b00785ec71784e4e81e5352565b8159c4d921e1c1e038fa7bd3",
+    "root_after": "sha256:c05aabb14c75701c795e9871c32b8a20eaea180af9a920e22cdd568bea1e1421",
+    "shared_beta_subtree": "sha256:182ff4f0c0341126cbb25e62f56bdf785e5cb22174cba61a74b5628720a262d7",
+    "snapshot": "sha256:729d2ba2d69dcdbd3bea59f29c49bd8e4fb268a01023b088369c8368b19a2def",
+    "blob_count": 13
+  },
+  "checks": {
+    "old_snapshot_unchanged": true,
+    "new_snapshot_reads_value": true,
+    "path_write_creates_depth_plus_one_nodes": true,
+    "unrelated_subtree_shared": true,
+    "identical_write_is_deduplicated": true,
+    "read_only_write_blocked": true,
+    "rights_escalation_blocked": true,
+    "wrong_carrier_blocked": true,
+    "capacity_depth5": true,
+    "route_bound_2d": true,
+    "snapshot_content_addressed": true
+  },
+  "honesty_boundary": "The family scales without a fixed depth ceiling in the abstract model, but every concrete snapshot uses finite depth and finite blobs. This is not literal infinite storage in one W33 cell."
+}
