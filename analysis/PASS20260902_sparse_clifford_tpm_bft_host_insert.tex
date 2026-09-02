@@ -3,18 +3,27 @@
 The nonlocal $[[20,7,2]]_3\to[[240,81,3]]_3$ symplectic witness has been
 refined without weakening its exact algebraic constraints.  Writing $H$ for the
 nine-row external triorthogonal matrix, each physical column of $A$ lies in an
-affine solution space of $H a_j=t_j$.  Hence shifts by $\ker H$ preserve the
-required code images.  A deterministic $\mathbb F_3$ coordinate descent accepts
-only strict support reductions that retain $\operatorname{rank}A=20$, followed
-by reconstruction of $B$ with
+affine solution space of $H a_j=t_j$.  A first deterministic $\mathbb F_3$
+coordinate descent verifies that support can be reduced while retaining
+$\operatorname{rank}A=20$.  The stronger certificate then fixes one displayed
+invertible twenty-column minor of $A$ and uses CP-SAT to minimize each of the
+remaining 220 columns exactly subject to $H a_j=t_j\pmod3$.  With that minor
+frozen, the column problems separate, so their sum is the global minimum total
+$A$ support in this fixed-minor affine class.  For the optimized $A$, each row
+$b_i$ of $B$ independently solves
 \[
-A B^T=I_{20}.
+A b_i^T=e_i,
 \]
-The resulting certificate reports row weights, W33-edge vertex footprints, and
-support connectivity.  This is a sparsification theorem inside the exact affine
-solution class, not yet a physical locality or threshold theorem.
+and CP-SAT certifies each row's minimum Hamming support.  Thus
+\[
+A B^T=I_{20}
+\]
+with globally minimum total $B$ support for this optimized $A$.  This does
+\emph{not} claim a joint global optimum over every possible rank-preserving
+minor, nor does algebraic Hamming support alone establish physical locality or a
+fault-tolerance threshold.
 
-The sparse pair also extends to an explicit $240\times240$ reversible linear
+The exact CP-SAT pair extends to an explicit $240\times240$ reversible linear
 qutrit Clifford.  Choose $C$ spanning $\ker B$ and set
 \[
 F=\begin{bmatrix}A\\C\end{bmatrix}\in GL(240,3).
@@ -24,12 +33,16 @@ Consequently $U_F|x\rangle=|xF\rangle$ realizes the desired Pauli embedding on
 the first twenty data qutrits.  Column Gauss--Jordan synthesizes $F$ exactly
 from ternary \texttt{SUM\_ALPHA}, \texttt{SCALE2}, and \texttt{SWAP} Clifford
 generators.  Non-conflicting gates are packed into the existing sixteen-slot,
-72-tick Holonet packet body; every occupied slot refines through
+72-tick Holonet packet body with a per-wire dependency frontier: every gate is
+placed strictly after the previous packet frame touching either of its wires,
+so disjoint Clifford macros parallelize without reversing circuit causality.
+Every occupied slot refines through
 \[
 \texttt{LOAD\_FLAG}\to\texttt{FLIP\_Q6\_AXIS}\to\texttt{LATCH\_VERTEX}.
 \]
-This closes the algebraic Clifford/compiler path while leaving optical pulse
-calibration, decoder design, and mapped noise threshold separate.
+This closes the exact algebraic Clifford/compiler path while leaving optical
+pulse calibration, geometric routing/noise spread, decoder design, and mapped
+threshold separate.
 
 The TPM trust path now contains an executed-protocol implementation rather than
 only certificate provenance.  Holotrade invokes \texttt{tpm2\_makecredential},
@@ -38,21 +51,25 @@ opens an endorsement-policy session, authorizes it with
 requires constant-time equality of the registrar secret recovered by the TPM.
 The transcript may be signed by an Ed25519 enrollment authority.  Fixture tests
 replace only the command transport and are explicitly marked non-hardware;
-production execution uses the real TPM2 tools/TCTI.  Thus AK/EK X.509 provenance,
-quote validity, and credential-activation residency evidence remain distinct
-evidence classes rather than being collapsed into one boolean.
+production execution uses the real TPM2 tools/TCTI.  Thus AK/EK X.509
+provenance, quote validity, and credential-activation residency evidence remain
+distinct evidence classes rather than being collapsed into one boolean.
 
 The epoch-consensus safety layer now has two complementary mechanizations.  A
-TLA+ model states the one-height quorum invariant
+finite lock-aware TLA+ model contains five validators, quorum four, two
+competing values, one explicitly Byzantine validator, and bounded view changes.
+Its invariants include
 \[
 \boxed{|\mathrm{Committed}|\le1}
 \]
-for quorum four of five.  An executable adversarial fuzzer then stresses the
-actual Python state machine with random conflicting proposal delivery, one
-Byzantine double-signer, durable crash/restart after votes and prepare locks,
-view changes, timeout certificates, and post-finalization conflicts.  These
-artifacts strengthen finite safety evidence; they do not claim production
-network liveness under every asynchronous schedule.
+and persistence of the prepared lock.  Focused CI downloads the pinned TLA+
+1.8.0 tool release and runs TLC on this model rather than merely checking that a
+\texttt{.tla} file exists.  An executable adversarial fuzzer separately stresses
+the actual Python state machine with randomized conflicting proposal delivery,
+one Byzantine double-signer, durable crash/restart after honest votes and
+prepare locks, timeout/view-change certificates, and post-finalization
+conflicts.  These artifacts strengthen finite safety evidence; they do not claim
+production network liveness under every asynchronous schedule.
 
 Finally, physical host telemetry is now cryptographically bound to the portable
 receipt.  RAPL and/or Kepler measurements plus strong-root realization are
@@ -70,11 +87,11 @@ bundle has been produced.
 The combined frontier is therefore
 \[
 \text{algebraic symplectic map}
-\to\text{sparse representative}
+\to\text{exact support-optimized representative}
 \to\text{explicit qutrit Clifford}
-\to\text{Holonet packet compiler}
+\to\text{causality-preserving Holonet packet compiler}
 \to\text{measured/attested host execution}
 \to\text{portable signed audit}.
 \]
-Fault-tolerant admission remains gated on a locality/noise-propagation bound,
-a mapped syndrome decoder, and a mapped threshold certificate.
+Fault-tolerant admission remains gated on a physical locality/noise-propagation
+bound, a mapped syndrome decoder, and a mapped threshold certificate.
