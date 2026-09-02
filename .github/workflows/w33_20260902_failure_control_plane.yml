@@ -1,0 +1,35 @@
+name: W33 failure control plane
+on:
+  push:
+    paths:
+      - 'analysis/w33_capability_epoch_revocation.py'
+      - 'analysis/w33_async_deadlock_detector.py'
+      - 'tests/test_w33_failure_control_plane.py'
+      - 'rtl/w33_passport_packet_gate.v'
+      - 'rtl/verify_w33_passport_packet_gate.ys'
+      - 'rtl/verify_w33_universal_packet_refinement.ys'
+      - '.github/workflows/w33_20260902_failure_control_plane.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run revocation and deadlock tests
+        run: python -m unittest tests/test_w33_failure_control_plane.py -v
+      - name: Run failure-control certificates
+        run: |
+          python analysis/w33_capability_epoch_revocation.py >/tmp/revocation.json
+          python analysis/w33_async_deadlock_detector.py >/tmp/deadlock.json
+      - name: Install Yosys
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y yosys
+      - name: Prove 256-bit execution-passport packet gate
+        run: yosys -s rtl/verify_w33_passport_packet_gate.ys
+      - name: Re-prove universal packet refinement
+        run: yosys -s rtl/verify_w33_universal_packet_refinement.ys
