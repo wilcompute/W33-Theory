@@ -1,0 +1,60 @@
+{
+  "boundary": "The common-source bridge is an exact PSp-module isomorphism between two finite modular images. It does not identify their physical carriers or attach continuum dynamics.",
+  "cssBridge": {
+    "CSSLogicalBasisSHA256": "fcb5cf52b236c3f83ae3eeff01dde848d1a1d9f0b4efe08d5dceef144321ec54",
+    "CSSLogicalBasisShape": [
+      240,
+      81
+    ],
+    "bothRanks": 81,
+    "buildingCycleCoordinates": "shared 81-column basis Z",
+    "definition": "CSS* h <-> Y_even * h for h in F3^81",
+    "obstructionEvenBasisSHA256": "063aa0f610fd2b114fa777e3249bc44b1131ff5a71bae379713b820a3bfe4c88",
+    "obstructionEvenBasisShape": [
+      1080,
+      81
+    ]
+  },
+  "field": "F3",
+  "integralInjectionMetadata": [
+    {
+      "denominator": 480,
+      "primitive": 0,
+      "sourceOrbit": 4
+    },
+    {
+      "denominator": 960,
+      "primitive": 1,
+      "sourceOrbit": 4
+    },
+    {
+      "denominator": 320,
+      "primitive": 2,
+      "sourceOrbit": 2
+    }
+  ],
+  "mod3": {
+    "FIsScalar": true,
+    "FOrder": 1,
+    "FScalar": 1,
+    "FTraceMod3": 0,
+    "combinedEvenRank": 81,
+    "evenImagesEqual": true,
+    "evenOddCombinedRank": 162,
+    "rankEven0": 81,
+    "rankEven1": 81,
+    "rankOdd": 81,
+    "sourceCoordinateIntertwinerF_SHA256": "ae8e051927d58eeee914e37eeb9034ba0f61f29fef65c101e2ad59ad6445c134"
+  },
+  "outerParityOverQ": {
+    "J": "diag(1,1,-1)",
+    "evenPrimitiveIndices": [
+      0,
+      1
+    ],
+    "oddPrimitiveIndex": 2
+  },
+  "schema": "w33.20260902.mod3-even-gluing-css-bridge.v1",
+  "status": "PASS",
+  "theorem": "The two rational outer-even St81 channels reduce to exactly the same 81-dimensional obstruction submodule over F3, while the rational outer-odd channel reduces to a disjoint 81-dimensional submodule. The exact source-coordinate intertwiner between the two even maps is frozen. The common even submodule and the canonical CSS logical Steinberg are explicitly identified through the same W33 building-cycle coordinates."
+}
