@@ -1,0 +1,84 @@
+% 2026-09-02 typed universal microVM architecture insert.
+% Software-semantics theorem with explicit physical boundaries.
+
+\subsection{A typed universal microVM above the W33 routing fabric}
+
+The existing packet VM and recursive HoloBox runtime can be sharpened into a
+typed virtual-machine contract by incorporating two corrections from the
+current frontier. First, the two order-$51840$ groups used by the architecture
+must occupy different instruction namespaces:
+\[
+ \Sp(4,3)
+ \qquad\hbox{and}\qquad
+ \PGSp(4,3)\cong W(E_6).
+\]
+The former is the symplectic central double cover of $\PSp(4,3)$ used for a
+Clifford lift; the latter is the projective/similitude outer extension. Equal
+orders do not identify the extensions. Second, the two degree-$216$ carriers
+over the common $36$-state spread/double-six base are not gauge-equivalent.
+They are immutable construction-time machine types:
+\[
+ \text{circuit-216}\longrightarrow St_{81},
+ \qquad
+ \text{paired-hemisystem-216}\longrightarrow St_{64}.
+\]
+Accordingly the reference VM rejects a carrier/module mismatch and exposes no
+runtime carrier-conversion opcode.
+
+On top of this typed transport layer, the software-universality core is chosen
+deliberately from standard computability theory rather than inferred from the
+finite counts. A guest program is an arbitrary finite two-counter machine with
+macro instructions
+\[
+ \operatorname{INC}(r,j),\qquad
+ \operatorname{DECJZ}(r,j_{\ne0},j_0),\qquad
+ \operatorname{HALT}.
+\]
+The counters range over $\mathbb N$ in the abstract semantics. Since
+two-counter machines are a universal model of computation, this gives
+Turing-complete \emph{VM semantics}. Each semantic transition is then wrapped
+in a deterministic W33 transport certificate. Reconstructing the symplectic
+geometry gives
+\[
+ \operatorname{SRG}(40,12,2,4),\qquad \operatorname{diam}=2,
+\]
+so consecutive execution portals require at most two W33 hops. A certificate
+contains the pre- and post-state digests, typed instruction, program counters,
+immutable carrier, logical-module dimension, route, line buses, and the next
+hash-chain root.
+
+The executable witness
+\texttt{analysis/w33\_typed\_universal\_microvm.py} verifies the geometry and
+the type discipline, checks deterministic replay, and executes a regression
+guest
+\[
+ (c_0,c_1)=(7,11)\longmapsto(18,0)
+\]
+in $24$ certified steps, with maximum route length two. The companion tests
+exercise both carrier types and deliberately attempt the forbidden retyping.
+
+\paragraph{Architectural interpretation.}
+The resulting separation is
+\[
+ \text{guest meaning}
+ \;\longrightarrow\;
+ \text{typed state transition}
+ \;\longrightarrow\;
+ \text{W33 placement and route}
+ \;\longrightarrow\;
+ \text{physical realization}.
+\]
+Thus routing is proof-carrying realization metadata around a computation, not
+a silent redefinition of the guest semantics. The existing content-addressed
+recursive runtime supplies the natural scalable state mechanism: a network of
+microVMs can be stored as a Merkle-rooted state object and loaded through the
+same interface as one leaf VM.
+
+\paragraph{Scope.}
+This is a theorem about a software virtual machine whose transitions are
+certifiably routed by W33. It does \emph{not} prove that one finite 40-node
+physical device contains unbounded memory; an implementation needs recursive or
+external scalable storage. It also does not make the finite Clifford kernel
+quantum-universal. The photonic quantum architecture still requires the
+separately validated non-Clifford resource port, together with physical
+threshold, loss, and calibration closure.
