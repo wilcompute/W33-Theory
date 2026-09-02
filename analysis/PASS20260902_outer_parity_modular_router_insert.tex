@@ -1,0 +1,128 @@
+% 2026-09-02 exact outer-parity/modular-router synthesis.
+% Finite representation/code statements only; no particle-generation claim.
+
+\subsection{Outer parity, modular gluing, and the ternary logical Steinberg}
+
+The transitive obstruction carrier
+\[
+\Omega_{1080}=\{\text{$27$ completion charts}\}\times\{\text{$40$ W33 lines}\}
+\]
+contains multiplicity-three copies of both building Steinberg modules.  The
+BT796 $2160$-state carrier realizes the corresponding multiplicity endomorphism
+algebra by explicit two-step incidence paths,
+\[
+\operatorname{End}_{G}(St_{81}^{\oplus3}\oplus St_{64}^{\oplus3})
+\supset M_3(\mathbb Q)_{81}\oplus M_3(\mathbb Q)_{64},
+\qquad G=PSp_4(3).
+\]
+The explicit multiplier-$-1$ symplectic similitude
+\[
+s=\operatorname{diag}(1,2,1,2)\pmod3
+\]
+normalizes $G$ and induces the $PGSp_4(3)/PSp_4(3)$ outer involution on all of
+these carriers.  Solving its action on the exact matrix units gives the
+projective multiplicity-space conjugators
+\[
+J_{81}=\operatorname{diag}(1,1,-1),
+\qquad
+J_{64}=I_3.
+\]
+Thus the degree-$81$ multiplicity space has a canonical outer-parity splitting
+\[
+\mathbb Q^3=\mathbb Q^2_{+}\oplus\mathbb Q_{-},
+\]
+whereas the outer involution is trivial on the degree-$64$ multiplicity space.
+All three primitive rank-$81$ diagonal projectors are individually outer-fixed;
+the parity distinction occurs in the inter-copy morphisms.  The independently
+constructed $K_{3,3}$-selected rank-$81$ projector is also outer-fixed.
+
+This parity is visible already in concrete circuit incidence.  The complete
+$17$-orbital $G$-equivariant Hom family from the circuit-$216$ carrier into
+$\Omega_{1080}$ has two zero Steinberg maps and fifteen nonzero rank-$81$
+images.  Relative to $J_{81}$, their projective multiplicity lines split as
+\[
+3\ \text{outer-odd},\qquad 2\ \text{outer-even},\qquad
+10\ \text{mixed}.
+\]
+The three odd incidences all select exactly the line
+\[
+[0:0:1],
+\]
+while the two pure even incidences select exactly
+\[
+[1:-8/3:0].
+\]
+Hence parity-pure degree-$81$ channels occur as primitive incidence relations;
+they need not be manufactured by an outer symmetrization.
+
+The characteristic-$3$ reduction is non-semisimple in precisely the direction
+suggested by this parity splitting.  For the three integral numerator chain
+maps associated with the rational $St_{81}^{\oplus3}$ projectors, all three
+individual reductions have rank $81$, but
+\[
+\operatorname{rank}_{\mathbb F_3}[Y_0\ Y_1\ Y_2]=162,
+\]
+with
+\[
+\operatorname{im}Y_0=\operatorname{im}Y_1,
+\qquad
+\operatorname{im}Y_0\cap\operatorname{im}Y_2=0.
+\]
+The two rational outer-even channels therefore glue to one modular $81$-space,
+while the outer-odd channel survives as a second independent modular
+$81$-space.  More strongly, when the maps are written on the same integral W33
+building-cycle basis $Z$, the exact source-coordinate intertwiner between the
+two even reductions is
+\[
+F=I_{81}\quad\text{over }\mathbb F_3,
+\]
+so
+\[
+Y_0h=Y_1h\qquad (h\in\mathbb F_3^{81}).
+\]
+
+The same building-cycle coordinates give an explicit bridge to the canonical
+ternary clique-chain CSS code.  If
+\[
+\Phi(p,L)=\sum_{q\in L\setminus\{p\}}[p\to q]
+\]
+is the characteristic-$3$ chamber-to-edge map, then the previously proved
+splitting
+\[
+\ker d_1=\operatorname{im}d_2\oplus \Phi(H_1(\text{W33 building};\mathbb F_3))
+\]
+identifies the logical module of the $[[240,81,3]]_3$ code with the modular
+building Steinberg.  On the shared $81$-column basis $Z$ one now has the
+coordinate-level correspondence
+\[
+(\Phi Z)h\ \longleftrightarrow\ Y_{\mathrm{even}}h,
+\qquad h\in\mathbb F_3^{81},
+\]
+where both matrices have rank $81$.  Thus the common outer-even obstruction
+channel and the CSS logical Steinberg are explicitly the same abstract
+$PSp_4(3)$ module in the same building coordinates, while living on different
+finite carriers.
+
+For comparison, reducing the chosen integral numerator maps for
+$St_{64}^{\oplus3}$ modulo $2$ gives individual ranks $(64,0,64)$ and combined
+rank $128$.  This is a statement about the modular images of the integral
+numerators, not a reduction of the characteristic-zero rational idempotents;
+the latter have denominators divisible by the defining primes.
+
+Finally, the two degree-$216$ selector carriers over the common degree-$36$
+spread/double-six base must be kept distinct.  Circuit-$216$ and complementary
+hemisystem-pair-$216$ are the two nonconjugate $S_5$-over-$S_6$ fibrations,
+exchanged locally by the exceptional outer automorphism of $S_6$.  The circuit
+carrier selects $St_{81}$ and not $St_{64}$; the paired-hemisystem carrier
+selects $St_{64}$ and not $St_{81}$.  The actual global $PGSp/PSp$ outer
+involution exchanges neither carrier and neither Steinberg.  The carrier choice
+is therefore a binary finite gauge choice over the canonical $36$-state base,
+whereas the $2+1$ parity structure above is an internal global-outer grading of
+the degree-$81$ router after that carrier has been chosen.
+
+\paragraph{Scope.}
+All statements in this subsection are exact finite incidence,
+representation-theoretic, modular-homological, or CSS-code statements.  The
+words ``even'', ``odd'', ``channel'', and ``gauge'' refer to the explicitly
+computed finite group actions.  They do not by themselves identify particle
+generations, physical chirality, continuum fields, or dynamical propagation.
