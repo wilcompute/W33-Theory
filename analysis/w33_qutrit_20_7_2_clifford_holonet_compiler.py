@@ -1,34 +1,29 @@
 #!/usr/bin/env python3
-"""Compile the sparse [[20,7,2]]_3 symplectic embedding into an explicit
-qutrit linear-Clifford encoder and a Holonet packet-level schedule.
+"""Compile the exact support-optimized [[20,7,2]]_3 symplectic embedding into
+an explicit qutrit linear-Clifford encoder and a Holonet packet-level schedule.
 
-For the sparse A,B witness with A B^T=I_20, choose 220 rows C spanning ker(B).
-Then F=[A;C] lies in GL(240,3), satisfies F B^T=[I_20;0], and therefore the
-first 20 rows of F^{-T} are exactly B.  The reversible qutrit basis map
+The A/B input is supplied by the deterministic CP-SAT optimizer: A is exact
+minimum support within its displayed fixed-minor class and B is exact minimum
+support for that optimized A.  Choose 220 rows C spanning ker(B), so
+F=[A;C] lies in GL(240,3), F B^T=[I_20;0], and the first 20 rows of F^{-T} are
+B. The reversible qutrit basis map U_F|x>=|xF> therefore realizes A/B on the
+first twenty input Pauli generators.
 
-    U_F |x> = |x F>
-
-thus sends the first 20 input Pauli-X/Z generators to A/B.  We synthesize F by
-GF(3) column Gauss-Jordan into SWAP, SCALE2, and SUM_ALPHA Clifford gates.
-
-The Holonet lowering packs non-conflicting Clifford macros into the existing
-16-slot, 72-tick packet body. Each occupied slot is represented by the verified
-controller word LOAD_FLAG -> FLIP_Q6_AXIS -> LATCH_VERTEX. This is packet-level
-microcode/refinement evidence, not calibrated optical pulse timing.
+GF(3) column Gauss-Jordan synthesizes F into SWAP, SCALE2, and SUM_ALPHA
+Cliffords. Non-conflicting macros are packed into the existing 16-slot, 72-tick
+Holonet body with LOAD_FLAG -> FLIP_Q6_AXIS -> LATCH_VERTEX refinement.
 """
 from __future__ import annotations
 import hashlib, json
 import numpy as np
 
 import w33_qutrit_20_7_2_symplectic_embedding as base
-import w33_qutrit_20_7_2_sparse_symplectic as sparse
+import w33_qutrit_20_7_2_cpsat_support_optimizer as cpopt
 
 
-def sparse_witness():
-    hx,hz,h,targets,A0=sparse.build_base()
-    A,_=sparse.rank_preserving_descent(A0,h)
-    B,_=sparse.right_inverse(A)
-    return hx,hz,h,targets,A,B
+def optimized_witness():
+    hx,hz,h,targets,A0,A,B,fixed,arec,brec=cpopt.optimized_witness()
+    return hx,hz,h,targets,A,B,{'fixed_minor':fixed,'A_records':arec,'B_records':brec}
 
 
 def build_full_linear(A,B):
@@ -39,7 +34,7 @@ def build_full_linear(A,B):
     Finv=base.inv(F)
     if not np.array_equal(F[:20],A): raise RuntimeError('A prefix lost')
     if not np.array_equal(Finv.T[:20]%3,B%3): raise RuntimeError('dual Z prefix is not B')
-    return F
+    return F,Finv
 
 
 def reduce_columns_to_identity(F):
@@ -61,7 +56,7 @@ def reduce_columns_to_identity(F):
     for op in reversed(ops):
         if op['gate']=='SUM_ALPHA': build.append({**op,'alpha':(-op['alpha'])%3})
         else: build.append(dict(op))
-    return build,ops
+    return build
 
 
 def apply_right_ops(n,ops):
@@ -105,16 +100,16 @@ def digest_json(v): return 'sha256:'+hashlib.sha256(json.dumps(v,sort_keys=True,
 
 
 def verify():
-    hx,hz,h,targets,A,B=sparse_witness()
-    F=build_full_linear(A,B)
-    gates,_=reduce_columns_to_identity(F)
+    hx,hz,h,targets,A,B,opt=optimized_witness()
+    F,Finv=build_full_linear(A,B)
+    gates=reduce_columns_to_identity(F)
     replay=apply_right_ops(240,gates)
     frames=pack_microframes(gates)
     counts={k:int(sum(g['gate']==k for g in gates)) for k in ('SUM_ALPHA','SCALE2','SWAP')}
     checks={
       'full_linear_map_rank_240':base.rank(F)==240,
       'data_X_prefix_is_A':np.array_equal(F[:20],A),
-      'data_Z_prefix_is_B':np.array_equal(base.inv(F).T[:20]%3,B),
+      'data_Z_prefix_is_B':np.array_equal(Finv.T[:20]%3,B),
       'circuit_replays_exact_F':np.array_equal(replay,F),
       'symplectic_data_embedding':np.array_equal((A@B.T)%3,np.eye(20,dtype=np.int64)),
       'packet_slots_at_most_16':all(len(f['slots'])<=16 for f in frames),
@@ -125,12 +120,12 @@ def verify():
     schedule_digest=digest_json(frames)
     sample=frames[:2]+(frames[-2:] if len(frames)>2 else [])
     return {
-      'schema':'w33.qutrit-20-7-2-clifford-holonet-compiler.v1',
-      'status':'PASS' if all(checks.values()) else 'FAIL',
-      'checks':checks,
+      'schema':'w33.qutrit-20-7-2-clifford-holonet-compiler.v2',
+      'status':'PASS' if all(checks.values()) else 'FAIL','checks':checks,
+      'optimizer':{'class':'CP_SAT_FIXED_MINOR_A_PLUS_EXACT_B','fixed_minor_columns_0_indexed':opt['fixed_minor']},
       'linear_encoder':{'F_sha256':digest_matrix(F),'A_sha256':digest_matrix(A),'B_sha256':digest_matrix(B),'gate_count':int(len(gates)),'gate_counts':counts},
       'packet_schedule':{'sha256':schedule_digest,'microframes':int(len(frames)),'packet_ticks':int(72*len(frames)),'body_capacity_per_frame':16,'sample_frames':sample},
-      'theorem':'The algebraic A/B Pauli embedding extends to an explicit 240-qutrit linear Clifford encoder U_F, synthesized exactly into ternary SUM, SCALE2 and SWAP generators.',
+      'theorem':'The exact support-optimized A/B Pauli embedding extends to an explicit 240-qutrit linear Clifford encoder U_F, synthesized exactly into ternary SUM, SCALE2 and SWAP generators.',
       'boundary':'The packet lowering proves a finite compiler/refinement contract only. It does not assign calibrated optical pulses, physical two-qutrit error rates, decoder latency, or a fault-tolerance threshold.'
     }
 
