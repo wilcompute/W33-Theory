@@ -1,0 +1,44 @@
+name: clique H1 equals building Steinberg
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20260901_clique_h1_equals_building_steinberg.py'
+      - '.github/workflows/w33_20260901_clique_h1_steinberg.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: w33-clique-h1-steinberg-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Execute exact character audit
+        shell: bash
+        run: |
+          set -o pipefail
+          python analysis/w33_20260901_clique_h1_equals_building_steinberg.py 2>&1 | tee analysis/PASS_20260901_CLIQUE_H1_STEINBERG.log
+      - name: Freeze evidence
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('data/PART_W33_20260901_CLIQUE_H1_EQUALS_BUILDING_STEINBERG.json').read_text())
+          assert d.get('status')=='PASS'
+          PY
+          git config user.name 'w33-evidence-bot'
+          git config user.email 'w33-evidence-bot@users.noreply.github.com'
+          git add -f data/PART_W33_20260901_CLIQUE_H1_EQUALS_BUILDING_STEINBERG.json analysis/PASS_20260901_CLIQUE_H1_STEINBERG.log
+          if ! git diff --cached --quiet; then
+            git commit -m 'Freeze clique H1 equals building Steinberg evidence'
+            git pull --rebase origin master
+            git push origin HEAD:master
+          fi
