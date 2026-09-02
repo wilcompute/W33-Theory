@@ -1,0 +1,39 @@
+name: W33 component engineering
+on:
+  push:
+    paths:
+      - 'analysis/w33_component_async36.py'
+      - 'analysis/w33_zero_copy_merkle36.py'
+      - 'analysis/w33_checkpoint_migration.py'
+      - 'analysis/w33_execution_passport.py'
+      - 'analysis/w33_causal_time_ledger.py'
+      - 'analysis/w33_magic_resource_scheduler.py'
+      - 'tests/test_w33_component_checkpoint_passport.py'
+      - 'rtl/verify_w33_universal_packet_refinement.ys'
+      - '.github/workflows/w33_20260902_component_engineering.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run component engineering tests
+        run: python -m unittest tests/test_w33_component_checkpoint_passport.py -v
+      - name: Run executable certificates
+        run: |
+          python analysis/w33_component_async36.py >/tmp/component36.json
+          python analysis/w33_zero_copy_merkle36.py >/tmp/zero-copy.json
+          python analysis/w33_checkpoint_migration.py >/tmp/migration.json
+          python analysis/w33_execution_passport.py >/tmp/passport.json
+          python analysis/w33_causal_time_ledger.py >/tmp/time-ledger.json
+          python analysis/w33_magic_resource_scheduler.py >/tmp/magic-scheduler.json
+      - name: Install Yosys
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y yosys
+      - name: Re-prove packet refinement with runner Yosys
+        run: yosys -s rtl/verify_w33_universal_packet_refinement.ys
