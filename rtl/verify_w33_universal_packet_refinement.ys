@@ -1,4 +1,5 @@
 read_verilog -formal rtl/w33_universal_packet_microsequencer.v
-prep -top w33_universal_packet_refinement
-chformal -lower
-sat -prove-asserts -verify -show-inputs
+prep -top w33_universal_packet_refinement -flatten
+# Yosys 0.33's SAT engine consumes the $assert/$assume cells produced by the
+# formal frontend directly.  Do not use newer-version-only `chformal -lower`.
+sat -prove-asserts -verify -show-inputs -show-outputs
