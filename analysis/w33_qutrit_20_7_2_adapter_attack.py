@@ -6,7 +6,7 @@ Prakash--Saha (Quantum 9, 1768, 2025) define T_m <= F_3^(9m) from
   w = (0,1,2,0,1,2,...)
 
 and v^(a), which is 1 on block a, 2 on the final block, and 0 elsewhere.
-Puncturing coordinate 3j+1 in k blocks gives [[9m-k,k,2]]_3.  For m=3,
+Puncturing coordinate 3j+1 in k blocks gives [[9m-k,k,2]]_3. For m=3,
 k=7 this script reconstructs the resulting 9x20 matrix exactly:
 
   H1 = punctured v^(1),...,v^(7)      (7 logical rows)
@@ -17,8 +17,8 @@ witness while excluding weight-1 logical Z, reproducing d=2 for the Z sector.
 It then audits the repository for the additional artifacts that would be needed
 to call this a W33/Holonet fault-tolerant adapter.
 
-The audit is intentionally fail closed.  Reconstructing the external code is not
-an encoding into W33.  A W33 adapter requires an explicit 20-physical-qutrit
+The audit is intentionally fail closed. Reconstructing the external code is not
+an encoding into W33. A W33 adapter requires an explicit 20-physical-qutrit
 selector/intertwiner, stabilizer map, transversal-T packet schedule, and a noise /
 threshold certificate for that mapped implementation.
 """
@@ -102,8 +102,6 @@ def z_logical_witnesses(h: list[list[int]], h0: list[list[int]]) -> dict[str, An
                 z = [0] * n
                 for q, value in zip(support, values):
                     z[q] = value
-                # Commutes with all X stabilizers H0 but is not in H^perp, hence
-                # acts nontrivially on at least one logical row H1.
                 if all(dot(row, z) == 0 for row in h0) and any(dot(row, z) != 0 for row in h):
                     result[f"weight{weight}"] = {
                         "support_0_indexed": list(support),
@@ -121,7 +119,17 @@ def repo_adapter_audit() -> dict[str, Any]:
         ROOT / "data/w33_qutrit_20_7_2_encoding.json",
         ROOT / "analysis/w33_qutrit_20_7_2_encoding.py",
     ]
+    decoder_paths = [
+        ROOT / "analysis/w33_qutrit_20_7_2_packet_decoder.py",
+        ROOT / "data/w33_qutrit_20_7_2_packet_decoder.json",
+    ]
+    threshold_paths = [
+        ROOT / "analysis/w33_qutrit_20_7_2_threshold.py",
+        ROOT / "data/w33_qutrit_20_7_2_threshold.json",
+    ]
     explicit_map_present = any(p.exists() for p in canonical_map_paths)
+    mapped_decoder_present = any(p.exists() for p in decoder_paths)
+    mapped_threshold_present = any(p.exists() for p in threshold_paths)
 
     pass78 = ROOT / "w33_pass78_equivariant_closure.json"
     pass78_text = pass78.read_text(encoding="utf-8") if pass78.exists() else ""
@@ -141,18 +149,24 @@ def repo_adapter_audit() -> dict[str, Any]:
         blockers.append("no explicit 20-physical-qutrit W33 selector/intertwiner artifact")
     if substrate_66_witness_missing:
         blockers.append("the architecture's cited [[66,8,3]]_3 substrate still lacks a canonical generator/stabilizer witness in the audited spine")
-    blockers.append("no mapped [[20,7,2]]_3 stabilizer-measurement/decoder packet compiler")
-    blockers.append("no mapped distillation noise/threshold certificate for the W33/Holonet implementation")
+    if not mapped_decoder_present:
+        blockers.append("no mapped [[20,7,2]]_3 stabilizer-measurement/decoder packet compiler")
+    if not mapped_threshold_present:
+        blockers.append("no mapped distillation noise/threshold certificate for the W33/Holonet implementation")
 
     return {
         "explicit_encoding_map_present": explicit_map_present,
+        "mapped_packet_decoder_present": mapped_decoder_present,
+        "mapped_threshold_certificate_present": mapped_threshold_present,
         "canonical_map_paths": [str(p.relative_to(ROOT)) for p in canonical_map_paths],
+        "mapped_decoder_paths": [str(p.relative_to(ROOT)) for p in decoder_paths],
+        "mapped_threshold_paths": [str(p.relative_to(ROOT)) for p in threshold_paths],
         "exact_single_qutrit_t_port_present": tport.exists(),
         "magic_scheduler_present": magic_scheduler.exists(),
         "exact_5_qutrit_standin_present": exact_5_qutrit_standin_present,
         "substrate_66_canonical_witness_missing": substrate_66_witness_missing,
         "blockers": blockers,
-        "adapter_enabled": explicit_map_present and not blockers,
+        "adapter_enabled": explicit_map_present and mapped_decoder_present and mapped_threshold_present and not substrate_66_witness_missing,
     }
 
 
@@ -162,7 +176,6 @@ def verify() -> dict[str, Any]:
     n = len(h[0])
     rank_h = mod3_rank(h)
     rank_h0 = mod3_rank(h0)
-    # CSS: Sx=span(H0), Sz=H^perp, so k=n-rank(H0)-(n-rank(H)).
     logical_k = n - rank_h0 - (n - rank_h)
 
     pairwise_offdiag = all(dot(h[i], h[j]) == 0 for i in range(len(h)) for j in range(i + 1, len(h)))
@@ -187,7 +200,7 @@ def verify() -> dict[str, Any]:
     }
 
     return {
-        "schema": "w33.qutrit-20-7-2-adapter-audit.v1",
+        "schema": "w33.qutrit-20-7-2-adapter-audit.v2",
         "status": "PASS" if all(checks.values()) else "FAIL",
         "external_code": {
             "parameters": "[[20,7,2]]_3",
@@ -202,7 +215,7 @@ def verify() -> dict[str, Any]:
         "w33_adapter_audit": audit,
         "checks": checks,
         "decision": "REFUSE_FAULT_TOLERANT_ADAPTER",
-        "interpretation": "The external [[20,7,2]]_3 triorthogonal code is reconstructed and verified exactly, but the repository does not yet contain the W33 physical-coordinate/stabilizer intertwiner and mapped threshold evidence required to call it a Holonet FT magic factory.",
+        "interpretation": "The external [[20,7,2]]_3 triorthogonal code is reconstructed and verified exactly, but the repository does not yet contain the W33 physical-coordinate/stabilizer intertwiner, mapped packet decoder, and mapped threshold evidence required to call it a Holonet FT magic factory.",
         "next_required_witness": "Provide a 20-coordinate W33/Holonet selector plus an explicit map carrying H0/H1 into physical stabilizer/logical operators, compile its syndrome/distillation circuit to packets, and measure/prove a noise threshold for that mapped circuit.",
     }
 
