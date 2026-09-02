@@ -1,0 +1,34 @@
+name: W33 BFT and symplectic FT closure
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_bft_epoch_consensus.py'
+      - 'analysis/w33_qutrit_20_7_2_symplectic_embedding.py'
+      - 'analysis/w33_qutrit_20_7_2_adapter_attack.py'
+      - 'analysis/w33_magic_resource_scheduler.py'
+      - 'matrices/w33_HX_40x240_GF3.mtx'
+      - 'matrices/w33_HZ_160x240_GF3.mtx'
+      - 'data/w33_qutrit_20_7_2_external_code.json'
+      - '.github/workflows/w33_20260902_bft_symplectic_closure.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install focused dependencies
+        run: python -m pip install --disable-pip-version-check numpy cryptography
+      - name: Verify view-based BFT epoch authority
+        run: python analysis/w33_bft_epoch_consensus.py
+      - name: Construct and verify nonlocal symplectic qutrit embedding
+        run: python analysis/w33_qutrit_20_7_2_symplectic_embedding.py
+      - name: Verify integrated FT adapter audit remains fail closed
+        run: |
+          python analysis/w33_qutrit_20_7_2_adapter_attack.py
+          python analysis/w33_magic_resource_scheduler.py
