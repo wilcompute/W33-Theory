@@ -1,0 +1,101 @@
+\subsection{Multi-minor locality tournament, W33 routing, distance-two decoding, and hardware capture request}
+
+The $[[20,7,2]]_3\to[[240,81,3]]_3$ symplectic adapter has been extended from a
+single fixed-minor support optimization to a finite, explicitly scored tournament
+of distinct rank-preserving minors.  For every displayed candidate minor, its
+twenty columns are frozen so that $\operatorname{rank}A=20$ is structural.  Every
+remaining column is then solved by deterministic CP-SAT in two lexicographic
+stages,
+\[
+  \min |\operatorname{supp}(a_j)|,
+  \qquad
+  \min\sum_{r\in\operatorname{supp}(a_j)}d_{L(W33)}(e_r,e_{\mathrm{anchor}(r)}),
+\]
+subject to $Ha_j=t_j$ over $\mathbf F_3$.  For the resulting $A$, each row of
+$B$ is optimized by the same exact support-first/locality-second rule subject to
+$Ab_i^T=e_i$.  Candidate classes are compared by total $A+B$ support, anchor
+locality, maximum row radius, and W33 line-graph spanning-tree cost.  The winner
+is therefore exact inside each displayed fixed-minor class and best among the
+finite candidate family; no claim is made that all $\binom{240}{20}$ possible
+rank minors have been exhausted.
+
+The selected pair $(A,B)$ is lowered all the way to an explicit topological
+nearest-neighbour circuit.  The $240$ physical carrier qutrits are the $240$
+edges of $W(3,3)$, and a primitive two-qutrit interaction is declared local only
+when the two carrier edges share a W33 point.  Remote ternary
+\texttt{SUM\_ALPHA} and \texttt{SWAP} macros are replaced by shortest-path swap
+networks in the $240$-vertex edge line graph.  Each replacement is replayed over
+$\mathbf F_3$ and required to equal the original linear Clifford action.  Route
+supports that overlap are serialized, while disjoint supports remain parallel.
+The certificate reports topological depth, shortest-path lengths, physical-edge
+load, point-coupler load, and a content hash of the resulting local schedule.
+This is a topological locality theorem for the explicit W33 interaction graph,
+not yet a calibrated optical loss/crosstalk or fault-spread theorem.
+
+The mapped CSS syndrome layer is now explicit as well.  The external code uses
+rank-two $X$ checks $H_0$ and rank-eleven $Z$ checks $H^\perp$, hence
+$20-2-11=7$ logical qutrits.  Under $(x,z)\mapsto(xA,zB)$ the mapped checks are
+$H_0A$ and $H^\perp B$.  Thirteen weighted-check ancillas are scheduled into
+72-tick packet microframes with no data-edge or check-ancilla collision inside a
+round.  The distance-two boundary is kept exact: all $20\times8=160$
+nonidentity single-qutrit Pauli errors are required to produce nonzero syndrome,
+but an unknown-location syndrome is corrected only when unique.  Ambiguous
+syndromes are detected and refused.  If the damaged coordinate is known as an
+erasure, all nine Pauli possibilities at that coordinate are distinguished and
+the corresponding correction is emitted as the W33 Pauli frame
+\[
+  X:\;-aA_q,
+  \qquad
+  Z:\;-bB_q.
+\]
+Thus the decoder closes exact detection and one-known-erasure recovery without
+misrepresenting a $d=2$ code as an arbitrary single-error-correcting code.
+
+A parameterized noise experiment is tied to the routed circuit while remaining
+separate from physical fault-tolerance admission.  If $E_i$ is the conservative
+routed-program exposure count of input qutrit $i$, the stated phenomenological
+model uses
+\[
+  p_i=1-(1-p_{\rm gate})^{E_i}
+\]
+and distributes each nonidentity qutrit Pauli uniformly over its eight choices.
+All ${20\choose2}8^2=12160$ weight-two Pauli patterns are exhaustively classified
+as detected, stabilizer-trivial, or zero-syndrome logical.  Weight-zero,
+weight-one, and weight-two probability are evaluated exactly at each grid point;
+all weight-$\ge3$ mass is retained adversarially rather than discarded.  The
+reported interval is a conditional \emph{block} logical-failure interval.  No
+unsupported division by the seven encoded logical coordinates is used, and a
+grid point is called below bare $p$ only if even the adversarial block upper
+bound is below $p_{\rm gate}$.  This is a conservative routed-exposure
+pseudothreshold experiment, not a calibrated photonic threshold.
+
+The admission policy now distinguishes these evidence classes explicitly:
+\[
+\begin{array}{rcl}
+\text{exact symplectic embedding} &:& \text{implemented},\\
+\text{W33 topological route compiler} &:& \text{implemented},\\
+\text{mapped packet decoder} &:& \text{implemented},\\
+\text{routed-exposure block pseudothreshold} &:& \text{implemented},\\
+\text{calibrated optical locality/noise propagation} &:& \text{open},\\
+\text{physical mapped threshold certificate} &:& \text{open},\\
+\text{canonical }[[66,8,3]]_3\text{ substrate witness} &:& \text{open}.
+\end{array}
+\]
+Consequently fault-tolerant magic-resource admission remains fail closed.
+
+Finally, the Holotrade hardware lane was changed from a manual-only workflow to
+an explicit execution-request mechanism.  A request committed on master targets
+\texttt{[self-hosted, linux, w33-tpm]}, requires a real TPM2 device and measured
+boot log, runs \texttt{tpm2\_makecredential}/\texttt{tpm2\_activatecredential},
+requires the enrollment result to state \texttt{hardwareBacked=true}, captures
+configured RAPL and/or Kepler evidence into the signed host bundle, and then
+requires the portable verifier to pass before uploading an audit artifact.  At
+the time of this insert the hardware request had been issued but the self-hosted
+job was still queued.  A queued request is not evidence that a physical bundle
+exists; only a completed hardware job plus its verifier-approved artifact can
+close that claim.
+
+The focused hosted-software closure was likewise queued at publication time.
+Accordingly the repository contains the executable certificates and their
+fail-closed acceptance logic, while hosted-run numerical metrics remain subject
+to the corresponding workflow result rather than being asserted in advance.
