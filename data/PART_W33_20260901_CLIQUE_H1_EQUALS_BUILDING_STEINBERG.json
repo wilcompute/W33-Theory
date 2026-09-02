@@ -1,0 +1,37 @@
+{
+  "buildingLevi": {
+    "H1Degree": 81,
+    "chambers": 160,
+    "lines": 40,
+    "points": 40
+  },
+  "characterNorm": 1,
+  "characterValueProfile": {
+    "-1": 3240,
+    "-3": 810,
+    "0": 16640,
+    "1": 5184,
+    "81": 1,
+    "9": 45
+  },
+  "checkedElements": 25920,
+  "cliqueComplex": {
+    "C0": 40,
+    "C1": 240,
+    "C2": 160,
+    "C3": 40,
+    "rationalBetti": [
+      1,
+      81,
+      0,
+      0
+    ]
+  },
+  "codeBoundary": "The characteristic-zero harmonic/H1 module is now identified. The ternary CSS logical quotient has the same dimension 81 but modular equivalence in characteristic 3 is a separate statement and is not inferred solely from this ordinary-character calculation.",
+  "elementwiseCharacterEquality": true,
+  "groupOrder": 25920,
+  "physicsBoundary": "This corrects/validates a representation-theoretic label only. It does not establish a matter-field, particle-generation, or continuum-physics interpretation of the 81 modes.",
+  "schema": "w33.20260901.clique-h1-equals-building-steinberg.v1",
+  "status": "PASS",
+  "theorem": "The rational 81-dimensional H1 of the W33 clique complex and the 81-dimensional H1 of the W33 rank-two Levi building have identical PSp4(3) characters on all 25,920 elements. Since this character has norm one, the old clique-Hodge harmonic edge sector is exactly the irreducible degree-81 Steinberg representation in characteristic zero, not merely an equal-dimensional space."
+}
