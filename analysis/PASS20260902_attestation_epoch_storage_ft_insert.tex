@@ -1,0 +1,88 @@
+% 2026-09-02: execution-passport trust/storage/epoch/FT closure.
+\subsection{Execution identity beyond the guest image: attestation, concurrency, revocation, retention, and magic}
+\label{sec:pass-20260902-attestation-epoch-storage-ft}
+
+The runtime frontier now makes five previously separate control planes part of the execution contract.  The relevant executable witnesses are
+\begin{center}
+\begin{tabular}{ll}
+\texttt{analysis/w33\_concurrency\_replay\_certificate.py} & deadlock/cancellation plus deterministic wake replay,\\
+\texttt{analysis/w33\_execution\_passport.py} & passport v3 and packet admission,\\
+\texttt{analysis/w33\_signed\_epoch\_bus.py} & signed authority rotation over the common 36-state bus,\\
+\texttt{analysis/w33\_qutrit\_20\_7\_2\_adapter\_attack.py} & exact external-code reconstruction and W33 adapter audit,\\
+\texttt{analysis/w33\_magic\_resource\_scheduler.py} & audit-derived non-Clifford assurance gate.
+\end{tabular}
+\end{center}
+The sibling Holotrade witnesses are \texttt{js/w33-measured-boot-attestation.js},
+\texttt{js/w33-strong-root-storage.js}, \texttt{js/w33-passport-deployment.js}, and
+\texttt{js/w33-failover-orchestrator.js}.
+
+\paragraph{Concurrency is part of execution identity.}
+A deterministic replay certificate now commits the pre-resolution wait-for graph, the detected strongly connected deadlock component, deterministic victim selection, scoped cancellation authority and event, the post-cancellation graph, and the asynchronous wake schedule.  Thus two executions with the same guest and final payload but different deadlock resolution or wake order carry different concurrency roots.  In particular the passport has been strengthened to
+\[
+ P=H( G,M,C,\Gamma,\Pi,\mathcal M,\mathcal H,
+       e,R,W,X,S,Q ),
+\]
+where $G$ is guest identity, $M$ memory state/capability, $C$ component link,
+$\Gamma$ the immutable carrier and the two non-aliased symmetry namespaces,
+$\Pi$ packet refinement, $\mathcal M$ magic budget, $\mathcal H$ reversible-history policy,
+$e$ the capability epoch, $R$ the revocation root, $W$ the wait-for root,
+$X$ the cancellation-event root, $S$ the asynchronous schedule root, and $Q$ the temporal-GC registry root.
+Changing any committed control-plane root changes the passport identity.
+
+\paragraph{Authenticated rolling authority on the neutral 36-state bus.}
+The capability authority can now issue an Ed25519-signed transition
+\[
+  (e,R,T_{i-1})\longrightarrow(e+1,R',T_i),
+\]
+where $T_i$ commits the issuer, old and new epoch/root, and previous transition identity.  A replica accepts the transition only after signature verification, exact chain matching, exact current-state matching, and a one-generation increment; replay, epoch jumps, and body tampering are refused.  The signed transition is transported as an immutable shared object through the existing
+\[
+  \mathrm{ST81}\leftrightarrow 36\leftrightarrow\mathrm{ST64}
+\]
+message fabric without exposing the private six-state fibre coordinate.  This is authenticated issuer propagation, not Byzantine consensus.
+
+A checkpoint is therefore pinned to the authority state under which it was created.  Even an ST81-to-ST81 restore is not a full restore after the authority has rotated.  Recovery must instead cross a verified syscall boundary as a neutral continuation and mint a fresh target passport under the current epoch/root.  The construction-time $81$- and $64$-dimensional carriers remain distinct; no runtime $81\leftrightarrow64$ state isomorphism is introduced.
+
+\paragraph{Measured boot and confidential-VM binding.}
+On the Holotrade side, the deployment passport is now bound to a measured-boot challenge containing the exact passport identity, GoMicroVM deployment digest, runtime-public-key digest, machine type and logical dimension, and current capability epoch/revocation root.  A provider-specific TPM2 or SEV-SNP verifier may reduce raw hardware evidence to a normalized verdict containing launch measurement, reported TCB identity, signer-chain identity, and explicit verification bits for the vendor signature, measurement policy, TCB policy, and runtime-key binding.  Holotrade accepts that verdict only when it is Ed25519-signed by a pinned verifier key and every required verification bit is true; software-only evidence cannot be relabelled as hardware-backed.  The resulting binding is inserted into the signed delivery-receipt metadata.
+
+This is deliberately a two-layer trust statement.  The current Holotrade module verifies the signed normalized verifier verdict; it does \emph{not} itself parse TPM event logs, verify TPM quotes, validate AMD VCEK certificate chains, or establish a hardware root of trust.  Those operations belong to the external provider-specific verifier until a native verifier is added.
+
+\paragraph{Persistent-state economics follows reachability, not Landauer.}
+The temporal Merkle collector distinguishes strong roots---live VM, checkpoint, retained history, and delegated shared objects---from hash-only receipt/audit roots.  Holotrade now mirrors that distinction with
+\[
+  B_s=\int N_{\mathrm{reachable\ blobs}}(t)\,dt,
+\]
+implemented discretely as strong-root blob-seconds, with an optional byte-second companion.  Only strong roots accrue storage-retention tariffs.  A hash-only receipt can preserve content identity after the underlying bytes become unreachable without continuing to pin storage.  The scheduler can therefore optimize a three-axis frontier
+\[
+   (\hbox{latency},\;\hbox{strong blob-seconds},\;\hbox{irreversible erased bits}).
+\]
+These tariffs are explicit market policy and are kept separate from both measured device joules and the Landauer lower bound.
+
+\paragraph{Exact reconstruction of the external $[[20,7,2]]_3$ candidate.}
+The qutrit magic-state-distillation attack now reconstructs the Prakash--Saha ternary triorthogonal family directly rather than storing the candidate as metadata.  For $m=3$ one starts with length $27$ vectors
+\[
+ w=(0,1,2,0,1,2,\ldots),
+\]
+and block vectors $v^{(a)}$ that are $1$ on block $a$, $2$ on the final three coordinates, and zero elsewhere.  Puncturing the coordinates
+\[
+ 1,4,7,10,13,16,19
+\]
+produces the $9\times20$ matrix with seven logical rows
+$H_1=(v^{(1)},\ldots,v^{(7)})$ and two $X$-stabilizer rows
+$H_0=(w,v^{(8)})$.  The executable audit verifies
+\[
+ \operatorname{rank}_{\mathbb F_3}H=9,
+ \qquad \operatorname{rank}_{\mathbb F_3}H_0=2,
+ \qquad k=20-2-(20-9)=7,
+\]
+pairwise/triple triorthogonality, cubic row norms $2^7 0^2$, absence of a weight-one logical $Z$, and existence of a weight-two logical $Z$, reproducing the advertised $[[20,7,2]]_3$ code parameters.
+
+\paragraph{But code validity is not a Holonet FT adapter.}
+The resulting scheduler decision remains
+\[
+  \boxed{\texttt{REFUSE\_FAULT\_TOLERANT\_ADAPTER}}.
+\]
+The repository does not yet contain an explicit twenty-physical-qutrit W33/Holonet selector/intertwiner carrying $H_0,H_1$ into physical stabilizer/logical operators, a mapped syndrome/distillation packet compiler, or a threshold/noise certificate for that mapped circuit.  Moreover the existing Pass-78 audit records that the architecture's cited $[[66,8,3]]_3$ substrate still lacks a canonical generator/stabilizer witness in the audited spine; the exact runnable threshold demonstration remains the $[[5,1,3]]_3$ stand-in.  Accordingly the magic scheduler now derives the $[[20,7,2]]_3$ adapter state from the executable audit: the external code can be verified while fault-tolerant scheduling remains disabled.
+
+\paragraph{Engineering boundary.}
+This closure establishes content-addressed execution identity across concurrency, authority rotation, persistence, deployment attestation, and non-Clifford scheduling.  It does not establish a native TPM/SEV-SNP verifier, distributed consensus on revocation roots, secure physical media erasure, a fabricated photonic processor, or a W33-specific fault-tolerant magic-state-distillation threshold.  Those remain separate witness obligations rather than being inferred from the software architecture.
