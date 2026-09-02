@@ -30,6 +30,7 @@ import numpy as np
 
 import w33_qutrit_20_7_2_packet_decoder as dec
 import w33_qutrit_20_7_2_logical_quotient as logical
+import w33_qutrit_20_7_2_multiminor_optimizer as multi
 
 Q=3
 DEFAULT_RATES={
@@ -90,7 +91,7 @@ def syndrome_fault_census(Hx,Hz,X,Z):
     return total,counts,samples
 
 
-def schedule_ledger(candidate_count=3):
+def schedule_ledger(candidate_count=multi.DEFAULT_CANDIDATES):
     _,Hx,Hz=dec.code_matrices();_,_,A,B,_=dec.selected_embedding(int(candidate_count));mX,mZ=dec.mapped_checks(A,B,Hx,Hz)
     rounds,microframes=dec.check_interactions(mX,mZ);interactions=sum(len(r) for r in rounds)
     return Hx,Hz,rounds,microframes,{"checks":13,"ancilla_preparations":13,"ancilla_measurements":13,"weighted_sum_interactions":int(interactions),"microframes":len(microframes),"packet_ticks":72*len(microframes)}
@@ -125,7 +126,7 @@ def one_fault_model(ledger,census_counts,census_total,rates):
     return {"rates":{k:float(v) for k,v in rates.items()},"location_counts":locs,"no_fault_probability":p0,"exactly_one_fault_probability":p1,"multi_fault_adversarial_envelope":pge2,"any_fault_probability":1.0-p0,"one_round_single_fault_malignant_union_bound":min(1.0,first_order_one_round),"verify_round_single_fault_malignant_union_bound":min(1.0,first_order_verified)}
 
 
-def verify(candidate_count=3):
+def verify(candidate_count=multi.DEFAULT_CANDIDATES):
     Hx,Hz,rounds,microframes,ledger=schedule_ledger(int(candidate_count));_,_,X,Z=logical.logical_basis();total,counts,samples=syndrome_fault_census(Hx,Hz,X,Z)
     sweep=[]
     for scale in SCALE_GRID:
