@@ -1,29 +1,17 @@
 #!/usr/bin/env python3
 """Exact reconstruction and W33-adapter audit for the [[20,7,2]]_3 code.
 
-Prakash--Saha (Quantum 9, 1768, 2025) define T_m <= F_3^(9m) from
+The external Prakash--Saha code is reconstructed exactly. Two embedding results
+are kept distinct:
 
-  w = (0,1,2,0,1,2,...)
+* literal 20-edge monomial/zero-extension CSS embedding: proved impossible;
+* general nonlocal GF(3)-linear symplectic embedding into the canonical
+  [[240,81,3]]_3 W33 edge CSS carrier: now constructed explicitly.
 
-and v^(a), which is 1 on block a, 2 on the final block, and 0 elsewhere.
-Puncturing coordinate 3j+1 in k blocks gives [[9m-k,k,2]]_3. For m=3,
-k=7 this script reconstructs the resulting 9x20 matrix exactly:
-
-  H1 = punctured v^(1),...,v^(7)      (7 logical rows)
-  H0 = punctured w, v^(8)             (2 X-stabilizer rows)
-
-It verifies the GF(3) invariants and independently finds a weight-2 logical-Z
-witness while excluding weight-1 logical Z, reproducing d=2 for the Z sector.
-It then audits the repository for the additional artifacts that would be needed
-to call this a W33/Holonet fault-tolerant adapter.
-
-The audit is intentionally fail closed. Reconstructing the external code is not
-an encoding into W33. The type-correct parent physical-qutrit carrier is the
-240-edge W33 CSS code. The companion executable no-go proves that the entire
-literal CSS-preserving monomial/zero-extension 20->240 adapter class is
-impossible, so the remaining admissible target is a genuinely more general
-symplectic/Clifford intertwiner (possibly X/Z-mixing, ancilla-assisted, or
-nonlocal), followed by a mapped packet decoder and threshold certificate.
+The latter is an algebraic Pauli/Clifford embedding, not yet a fault-tolerant
+Holonet implementation. FT admission remains fail-closed until locality/optical
+compilation, a mapped syndrome decoder, and a mapped threshold/noise witness are
+available.
 """
 from __future__ import annotations
 
@@ -33,6 +21,7 @@ from pathlib import Path
 from typing import Any
 
 import w33_qutrit_20_7_2_edge_css_no_go as edge_nogo
+import w33_qutrit_20_7_2_symplectic_embedding as symembed
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -47,8 +36,8 @@ def mod3_rank(rows: list[list[int]]) -> int:
         if pivot is None:
             continue
         a[r], a[pivot] = a[pivot], a[r]
-        inv = 1 if a[r][c] == 1 else 2
-        a[r] = [(inv * x) % 3 for x in a[r]]
+        if a[r][c] == 2:
+            a[r] = [(2 * x) % 3 for x in a[r]]
         for i in range(len(a)):
             if i != r and a[i][c] % 3:
                 f = a[i][c]
@@ -78,15 +67,11 @@ def build_20_7_2() -> dict[str, Any]:
         for i in range(n0 - 3, n0):
             row[i] = 2
         vs.append(row)
-
-    # Paper uses 1-indexed coordinates 3j+1, 0 <= j < 3m-2.
     punctured = {3 * j for j in range(k)}
     keep = [i for i in range(n0) if i not in punctured]
     restrict = lambda row: [row[i] for i in keep]
-
     h1 = [restrict(v) for v in vs[:k]]
     h0 = [restrict(w), restrict(vs[k])]
-    h = h1 + h0
     return {
         "m": m,
         "k": k,
@@ -94,7 +79,7 @@ def build_20_7_2() -> dict[str, Any]:
         "kept_1_indexed": [i + 1 for i in keep],
         "H1": h1,
         "H0": h0,
-        "H": h,
+        "H": h1 + h0,
     }
 
 
@@ -120,10 +105,6 @@ def z_logical_witnesses(h: list[list[int]], h0: list[list[int]]) -> dict[str, An
 
 
 def repo_adapter_audit() -> dict[str, Any]:
-    canonical_map_paths = [
-        ROOT / "data/w33_qutrit_20_7_2_encoding.json",
-        ROOT / "analysis/w33_qutrit_20_7_2_encoding.py",
-    ]
     decoder_paths = [
         ROOT / "analysis/w33_qutrit_20_7_2_packet_decoder.py",
         ROOT / "data/w33_qutrit_20_7_2_packet_decoder.json",
@@ -132,7 +113,6 @@ def repo_adapter_audit() -> dict[str, Any]:
         ROOT / "analysis/w33_qutrit_20_7_2_threshold.py",
         ROOT / "data/w33_qutrit_20_7_2_threshold.json",
     ]
-    explicit_map_present = any(p.exists() for p in canonical_map_paths)
     mapped_decoder_present = any(p.exists() for p in decoder_paths)
     mapped_threshold_present = any(p.exists() for p in threshold_paths)
 
@@ -141,6 +121,8 @@ def repo_adapter_audit() -> dict[str, Any]:
         literal_no_go.get("status") == "PASS"
         and literal_no_go.get("decision") == "UNSAT_LITERAL_CSS_MONOMIAL_20_TO_240"
     )
+    symplectic = symembed.verify()
+    symplectic_verified = symplectic.get("status") == "PASS" and symplectic.get("checks", {}).get("ABt_identity") is True
 
     pass78 = ROOT / "w33_pass78_equivariant_closure.json"
     pass78_text = pass78.read_text(encoding="utf-8") if pass78.exists() else ""
@@ -150,39 +132,45 @@ def repo_adapter_audit() -> dict[str, Any]:
 
     standin = ROOT / "analysis/holonet_qec_demo.py"
     standin_text = standin.read_text(encoding="utf-8") if standin.exists() else ""
-    exact_5_qutrit_standin_present = "[[5,1,3]]_3" in standin_text
-
     tport = ROOT / "analysis/w33_qutrit_t_teleportation_port.py"
     magic_scheduler = ROOT / "analysis/w33_magic_resource_scheduler.py"
 
     blockers = []
-    if literal_class_impossible:
-        blockers.append("literal CSS-preserving monomial/zero-extension 20-to-240 edge embedding is proved impossible; a more general symplectic/Clifford map is required")
-    if not explicit_map_present:
-        blockers.append("no explicit general symplectic/Clifford [[20,7,2]]_3 -> W33 edge-CSS intertwiner artifact")
+    if not symplectic_verified:
+        blockers.append("general nonlocal symplectic [[20,7,2]]_3 -> W33 edge-CSS embedding did not verify")
+    else:
+        blockers.append("verified symplectic embedding is nonlocal and has no low-weight/optical locality certificate")
     if substrate_66_witness_missing:
         blockers.append("the architecture's cited [[66,8,3]]_3 substrate still lacks a canonical generator/stabilizer witness in the audited spine")
     if not mapped_decoder_present:
-        blockers.append("no mapped [[20,7,2]]_3 stabilizer-measurement/decoder packet compiler")
+        blockers.append("no mapped [[20,7,2]]_3 stabilizer-measurement/decoder packet compiler for the verified nonlocal embedding")
     if not mapped_threshold_present:
-        blockers.append("no mapped distillation noise/threshold certificate for the W33/Holonet implementation")
+        blockers.append("no mapped distillation noise/threshold certificate for the verified W33 embedding")
 
+    adapter_enabled = (
+        symplectic_verified
+        and mapped_decoder_present
+        and mapped_threshold_present
+        and not substrate_66_witness_missing
+    )
     return {
-        "explicit_encoding_map_present": explicit_map_present,
+        "explicit_encoding_map_present": symplectic_verified,
+        "general_nonlocal_symplectic_embedding_verified": symplectic_verified,
+        "general_nonlocal_symplectic_embedding": symplectic,
         "mapped_packet_decoder_present": mapped_decoder_present,
         "mapped_threshold_certificate_present": mapped_threshold_present,
         "literal_edge_css_monomial_no_go": literal_no_go,
         "literal_edge_css_monomial_class_impossible": literal_class_impossible,
-        "open_embedding_class": "general symplectic/Clifford map allowing X/Z mixing, ancillas, or nonlocal encoding",
-        "canonical_map_paths": [str(p.relative_to(ROOT)) for p in canonical_map_paths],
+        "closed_embedding_class": "20-edge monomial/zero-extension CSS X->X",
+        "surviving_ft_frontier": "locality-optimized/optically compilable realization of the verified nonlocal symplectic embedding, or a different symplectic embedding with better support",
         "mapped_decoder_paths": [str(p.relative_to(ROOT)) for p in decoder_paths],
         "mapped_threshold_paths": [str(p.relative_to(ROOT)) for p in threshold_paths],
         "exact_single_qutrit_t_port_present": tport.exists(),
         "magic_scheduler_present": magic_scheduler.exists(),
-        "exact_5_qutrit_standin_present": exact_5_qutrit_standin_present,
+        "exact_5_qutrit_standin_present": "[[5,1,3]]_3" in standin_text,
         "substrate_66_canonical_witness_missing": substrate_66_witness_missing,
         "blockers": blockers,
-        "adapter_enabled": explicit_map_present and mapped_decoder_present and mapped_threshold_present and not substrate_66_witness_missing,
+        "adapter_enabled": adapter_enabled,
     }
 
 
@@ -193,13 +181,11 @@ def verify() -> dict[str, Any]:
     rank_h = mod3_rank(h)
     rank_h0 = mod3_rank(h0)
     logical_k = n - rank_h0 - (n - rank_h)
-
     pairwise_offdiag = all(dot(h[i], h[j]) == 0 for i in range(len(h)) for j in range(i + 1, len(h)))
     distinct_triples = all(triple(h[i], h[j], h[k]) == 0 for i in range(len(h)) for j in range(i + 1, len(h)) for k in range(j + 1, len(h)))
     cubic_norms = [sum(x ** 3 for x in row) % 3 for row in h]
     logical = z_logical_witnesses(h, h0)
     audit = repo_adapter_audit()
-
     checks = {
         "published_puncture_gives_9x20_matrix": len(h) == 9 and n == 20,
         "seven_logical_rows_two_x_stabilizer_rows": len(h1) == 7 and len(h0) == 2,
@@ -213,11 +199,11 @@ def verify() -> dict[str, Any]:
         "no_weight1_Z_logical": logical["weight1"] is None,
         "weight2_Z_logical_exists": logical["weight2"] is not None,
         "literal_edge_css_monomial_class_closed_by_no_go": audit["literal_edge_css_monomial_class_impossible"],
-        "w33_adapter_remains_fail_closed": not audit["adapter_enabled"],
+        "general_nonlocal_symplectic_embedding_exists": audit["general_nonlocal_symplectic_embedding_verified"],
+        "w33_ft_adapter_remains_fail_closed": not audit["adapter_enabled"],
     }
-
     return {
-        "schema": "w33.qutrit-20-7-2-adapter-audit.v3",
+        "schema": "w33.qutrit-20-7-2-adapter-audit.v4",
         "status": "PASS" if all(checks.values()) else "FAIL",
         "external_code": {
             "parameters": "[[20,7,2]]_3",
@@ -231,9 +217,9 @@ def verify() -> dict[str, Any]:
         },
         "w33_adapter_audit": audit,
         "checks": checks,
-        "decision": "REFUSE_FAULT_TOLERANT_ADAPTER",
-        "interpretation": "The external [[20,7,2]]_3 triorthogonal code is exact. The literal CSS-preserving monomial 20-to-240 edge embedding class is now proved impossible, and no general symplectic/Clifford W33 intertwiner, mapped packet decoder, or mapped threshold certificate exists yet.",
-        "next_required_witness": "Search the general GF(3) symplectic/Clifford embedding class into the exact 240-edge parent, allowing X/Z mixing and explicitly bounded ancillas/nonlocal support; if a map exists compile its syndrome/distillation circuit to packets and measure/prove its mapped threshold.",
+        "decision": "REFUSE_FAULT_TOLERANT_ADAPTER_PENDING_LOCALITY_DECODER_THRESHOLD",
+        "interpretation": "The external code and a nonlocal symplectic embedding into the exact W33 240-edge carrier now verify. The old monomial selector class remains impossible. Fault-tolerant Holonet admission is still refused because the verified map has no locality/optical compiler, mapped decoder, or mapped threshold certificate.",
+        "next_required_witness": "Optimize the verified A/B embedding for support/locality (or find an equivalent sparse symplectic map), compile its stabilizer and T-injection operations into Holonet packets, then produce a mapped decoder and threshold/noise certificate.",
     }
 
 
