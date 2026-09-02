@@ -1,0 +1,60 @@
+{
+  "allThreeImagesOuterInvariant": true,
+  "boundary": "The rational multiplicity labels outer-even/outer-odd refer to the characteristic-zero projector algebra. Their reductions mod 3 need not inherit the same source-coordinate sign through a chosen integral injection. The solved matrices here are finite PGSp extensions only, not spacetime parity or particle chirality.",
+  "failedV1Guess": {
+    "claimedEvenRelation": "+S",
+    "claimedOddRelation": "-S",
+    "v1EvenAssertionWasFalse": true
+  },
+  "field": "F3",
+  "outer": {
+    "buildingH1MatrixSHA256": "998da7749a6764a1369898c8a67ca7190ee276b149df72a7a12a755a2c992372",
+    "buildingH1MatrixShape": [
+      81,
+      81
+    ],
+    "involution": true,
+    "matrixMod3": "diag(1,2,1,2)"
+  },
+  "schema": "w33.20260902.mod3-pgsp-extension-twin.v2",
+  "solvedTransports": {
+    "CSSLogicalSteinberg": {
+      "actualSourceOuterSHA256": "998da7749a6764a1369898c8a67ca7190ee276b149df72a7a12a755a2c992372",
+      "imageOuterInvariant": true,
+      "involution": true,
+      "label": "CSSLogicalSteinberg",
+      "minusEigenspaceDimension": 39,
+      "plusEigenspaceDimension": 42,
+      "rankY": 81,
+      "rankYwithOuterY": 81,
+      "relationToBuildingOuterS": "+S",
+      "traceMod3": 0
+    },
+    "obstructionCommonEvenReduction": {
+      "actualSourceOuterSHA256": "e638e2239dd495c7019403799ec6e1ca1eee362f142631e8f9ad650414a2712d",
+      "imageOuterInvariant": true,
+      "involution": true,
+      "label": "obstructionCommonEvenReduction",
+      "minusEigenspaceDimension": 42,
+      "plusEigenspaceDimension": 39,
+      "rankY": 81,
+      "rankYwithOuterY": 81,
+      "relationToBuildingOuterS": "-S",
+      "traceMod3": 0
+    },
+    "obstructionOddReduction": {
+      "actualSourceOuterSHA256": "998da7749a6764a1369898c8a67ca7190ee276b149df72a7a12a755a2c992372",
+      "imageOuterInvariant": true,
+      "involution": true,
+      "label": "obstructionOddReduction",
+      "minusEigenspaceDimension": 39,
+      "plusEigenspaceDimension": 42,
+      "rankY": 81,
+      "rankYwithOuterY": 81,
+      "relationToBuildingOuterS": "+S",
+      "traceMod3": 0
+    }
+  },
+  "status": "PASS",
+  "theorem": "The explicit PGSp outer similitude preserves each modular rank-81 image; the unique induced source-coordinate outer matrices are solved exactly and their relations to the canonical building-H1 outer matrix S are recorded. CSS realizes +S. The obstruction signs are conclusions of the computed relations, not assumed rational-parity labels."
+}
