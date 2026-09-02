@@ -1,0 +1,38 @@
+{
+  "schema": "w33.external-qutrit-code.v1",
+  "status": "EXTERNAL_CODE_ONLY_NOT_W33_ENCODING",
+  "source": {
+    "authors": "Prakash--Saha",
+    "paper": "Low Overhead Qutrit Magic State Distillation",
+    "publication": "Quantum 9, 1768 (2025)",
+    "construction": "T_m punctured family with m=3, k=7"
+  },
+  "parameters": "[[20,7,2]]_3",
+  "field": "GF(3)",
+  "original_length": 27,
+  "punctured_coordinates_1_indexed": [1,4,7,10,13,16,19],
+  "kept_coordinates_1_indexed": [2,3,5,6,8,9,11,12,14,15,17,18,20,21,22,23,24,25,26,27],
+  "H1_logical_rows": [
+    [1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2],
+    [0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2],
+    [0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,2,2,2],
+    [0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,2,2,2],
+    [0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,2,2,2],
+    [0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,2,2,2],
+    [0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,2,2,2]
+  ],
+  "H0_x_stabilizer_rows": [
+    [1,2,1,2,1,2,1,2,1,2,1,2,1,2,0,1,2,0,1,2],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,2,2,2]
+  ],
+  "verified_invariants_expected": {
+    "rank_H": 9,
+    "rank_H0": 2,
+    "logical_qutrits": 7,
+    "cubic_norms_H1": [2,2,2,2,2,2,2],
+    "cubic_norms_H0": [0,0],
+    "distance": 2
+  },
+  "w33_adapter_status": "REFUSED_PENDING_EXPLICIT_INTERTWINER_DECODER_AND_MAPPED_THRESHOLD",
+  "warning": "This file freezes the external code matrix only. It is not a 20-physical-qutrit W33/Holonet selector or encoding map."
+}
