@@ -44,11 +44,11 @@ jobs:
           PY
           git config user.name 'w33-evidence-bot'
           git config user.email 'w33-evidence-bot@users.noreply.github.com'
-          git add data/PART_W33_20260901_PACKET_AXIS_OBSTRUCTION_DOUBLE_COVER.json \
-            data/PART_W33_20260901_CIRCUIT216_STEINBERG_ROUTER.json
-          git add -f analysis/PASS_20260901_PACKET_AXIS_CIRCUIT_ROUTER.log
+          git add -f data/PART_W33_20260901_PACKET_AXIS_OBSTRUCTION_DOUBLE_COVER.json \
+            data/PART_W33_20260901_CIRCUIT216_STEINBERG_ROUTER.json \
+            analysis/PASS_20260901_PACKET_AXIS_CIRCUIT_ROUTER.log
           if ! git diff --cached --quiet; then
-            git commit -m 'Freeze packet-axis cover and circuit Steinberg router'
+            git commit -m 'Freeze packet-axis classification and circuit Steinberg router'
             git pull --rebase origin master
             git push origin HEAD:master
           fi
