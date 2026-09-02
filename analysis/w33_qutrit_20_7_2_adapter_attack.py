@@ -1,17 +1,18 @@
 #!/usr/bin/env python3
 """Exact reconstruction and W33-adapter audit for the [[20,7,2]]_3 code.
 
-The external Prakash--Saha code is reconstructed exactly. Two embedding results
-are kept distinct:
+The external Prakash--Saha code is reconstructed exactly. The W33 spine now
+contains four deliberately separated evidence classes:
 
 * literal 20-edge monomial/zero-extension CSS embedding: proved impossible;
-* general nonlocal GF(3)-linear symplectic embedding into the canonical
-  [[240,81,3]]_3 W33 edge CSS carrier: now constructed explicitly.
+* general GF(3)-linear symplectic embedding: explicit and exact;
+* W33 edge-line-graph routing plus mapped syndrome/decoder: executable;
+* calibrated optical locality and a physical stochastic threshold: still open.
 
-The latter is an algebraic Pauli/Clifford embedding, not yet a fault-tolerant
-Holonet implementation. FT admission remains fail-closed until locality/optical
-compilation, a mapped syndrome decoder, and a mapped threshold/noise witness are
-available.
+A topological route compiler or a phenomenological pseudothreshold experiment is
+not silently promoted into a physical fault-tolerance certificate. FT admission
+also remains blocked by the separately audited missing canonical [[66,8,3]]_3
+substrate witness.
 """
 from __future__ import annotations
 
@@ -105,16 +106,12 @@ def z_logical_witnesses(h: list[list[int]], h0: list[list[int]]) -> dict[str, An
 
 
 def repo_adapter_audit() -> dict[str, Any]:
-    decoder_paths = [
-        ROOT / "analysis/w33_qutrit_20_7_2_packet_decoder.py",
-        ROOT / "data/w33_qutrit_20_7_2_packet_decoder.json",
-    ]
-    threshold_paths = [
-        ROOT / "analysis/w33_qutrit_20_7_2_threshold.py",
-        ROOT / "data/w33_qutrit_20_7_2_threshold.json",
-    ]
-    mapped_decoder_present = any(p.exists() for p in decoder_paths)
-    mapped_threshold_present = any(p.exists() for p in threshold_paths)
+    # Local imports are intentional. packet_decoder imports build_20_7_2 from
+    # this module; by the time this audit executes the module is fully loaded,
+    # avoiding import-time recursion while allowing executable evidence checks.
+    import w33_qutrit_20_7_2_w33_route_compiler as route_compiler
+    import w33_qutrit_20_7_2_packet_decoder as packet_decoder
+    import w33_qutrit_20_7_2_threshold as threshold_experiment
 
     literal_no_go = edge_nogo.verify()
     literal_class_impossible = (
@@ -123,6 +120,22 @@ def repo_adapter_audit() -> dict[str, Any]:
     )
     symplectic = symembed.verify()
     symplectic_verified = symplectic.get("status") == "PASS" and symplectic.get("checks", {}).get("ABt_identity") is True
+
+    route_cert = route_compiler.verify()
+    decoder_cert = packet_decoder.verify()
+    threshold_cert = threshold_experiment.verify()
+    topological_locality_verified = (
+        route_cert.get("status") == "PASS"
+        and route_cert.get("checks", {}).get("every_two_qutrit_primitive_is_line_graph_local") is True
+    )
+    mapped_decoder_verified = decoder_cert.get("status") == "PASS"
+    pseudothreshold_verified = threshold_cert.get("status") == "PASS"
+
+    # These remain deliberately false. The route compiler proves locality on an
+    # abstract shared-W33-point interaction graph; the threshold script itself
+    # says it is phenomenological. Neither is a calibrated optical certificate.
+    locality_optical_compiler_verified = False
+    mapped_threshold_certificate_present = False
 
     pass78 = ROOT / "w33_pass78_equivariant_closure.json"
     pass78_text = pass78.read_text(encoding="utf-8") if pass78.exists() else ""
@@ -138,33 +151,47 @@ def repo_adapter_audit() -> dict[str, Any]:
     blockers = []
     if not symplectic_verified:
         blockers.append("general nonlocal symplectic [[20,7,2]]_3 -> W33 edge-CSS embedding did not verify")
-    else:
-        blockers.append("verified symplectic embedding is nonlocal and has no low-weight/optical locality certificate")
+    if not topological_locality_verified:
+        blockers.append("W33 shared-point nearest-neighbour route compiler did not verify")
+    if not locality_optical_compiler_verified:
+        blockers.append("topological W33 routing is not yet a calibrated optical locality/noise-propagation certificate")
+    if not mapped_decoder_verified:
+        blockers.append("mapped [[20,7,2]]_3 syndrome/decoder certificate did not verify")
+    if pseudothreshold_verified and not mapped_threshold_certificate_present:
+        blockers.append("routed-exposure pseudothreshold experiment exists, but no calibrated physical mapped threshold certificate exists")
+    elif not pseudothreshold_verified:
+        blockers.append("mapped routed-exposure pseudothreshold experiment did not verify")
     if substrate_66_witness_missing:
         blockers.append("the architecture's cited [[66,8,3]]_3 substrate still lacks a canonical generator/stabilizer witness in the audited spine")
-    if not mapped_decoder_present:
-        blockers.append("no mapped [[20,7,2]]_3 stabilizer-measurement/decoder packet compiler for the verified nonlocal embedding")
-    if not mapped_threshold_present:
-        blockers.append("no mapped distillation noise/threshold certificate for the verified W33 embedding")
 
     adapter_enabled = (
         symplectic_verified
-        and mapped_decoder_present
-        and mapped_threshold_present
+        and locality_optical_compiler_verified
+        and mapped_decoder_verified
+        and mapped_threshold_certificate_present
         and not substrate_66_witness_missing
     )
     return {
         "explicit_encoding_map_present": symplectic_verified,
         "general_nonlocal_symplectic_embedding_verified": symplectic_verified,
         "general_nonlocal_symplectic_embedding": symplectic,
-        "mapped_packet_decoder_present": mapped_decoder_present,
-        "mapped_threshold_certificate_present": mapped_threshold_present,
+        "topological_w33_route_compiler_verified": topological_locality_verified,
+        "topological_w33_route_certificate": route_cert,
+        "locality_optical_compiler_verified": locality_optical_compiler_verified,
+        "mapped_packet_decoder_present": (ROOT / "analysis/w33_qutrit_20_7_2_packet_decoder.py").exists(),
+        "mapped_packet_decoder_verified": mapped_decoder_verified,
+        "mapped_packet_decoder_certificate": decoder_cert,
+        "mapped_pseudothreshold_experiment_present": (ROOT / "analysis/w33_qutrit_20_7_2_threshold.py").exists(),
+        "mapped_pseudothreshold_experiment_verified": pseudothreshold_verified,
+        "mapped_pseudothreshold_experiment": threshold_cert,
+        "mapped_threshold_certificate_present": mapped_threshold_certificate_present,
         "literal_edge_css_monomial_no_go": literal_no_go,
         "literal_edge_css_monomial_class_impossible": literal_class_impossible,
         "closed_embedding_class": "20-edge monomial/zero-extension CSS X->X",
-        "surviving_ft_frontier": "locality-optimized/optically compilable realization of the verified nonlocal symplectic embedding, or a different symplectic embedding with better support",
-        "mapped_decoder_paths": [str(p.relative_to(ROOT)) for p in decoder_paths],
-        "mapped_threshold_paths": [str(p.relative_to(ROOT)) for p in threshold_paths],
+        "surviving_ft_frontier": "calibrate the verified shared-W33-point route primitives, add fault-propagating syndrome/readout noise and a physical threshold certificate, and supply the missing canonical [[66,8,3]]_3 substrate witness",
+        "mapped_decoder_paths": ["analysis/w33_qutrit_20_7_2_packet_decoder.py"],
+        "mapped_threshold_experiment_paths": ["analysis/w33_qutrit_20_7_2_threshold.py"],
+        "physical_threshold_certificate_paths": ["data/w33_qutrit_20_7_2_physical_threshold.json"],
         "exact_single_qutrit_t_port_present": tport.exists(),
         "magic_scheduler_present": magic_scheduler.exists(),
         "exact_5_qutrit_standin_present": "[[5,1,3]]_3" in standin_text,
@@ -200,10 +227,13 @@ def verify() -> dict[str, Any]:
         "weight2_Z_logical_exists": logical["weight2"] is not None,
         "literal_edge_css_monomial_class_closed_by_no_go": audit["literal_edge_css_monomial_class_impossible"],
         "general_nonlocal_symplectic_embedding_exists": audit["general_nonlocal_symplectic_embedding_verified"],
+        "topological_w33_routing_exists": audit["topological_w33_route_compiler_verified"],
+        "mapped_decoder_exists_and_verifies": audit["mapped_packet_decoder_verified"],
+        "pseudothreshold_experiment_exists_but_is_not_physical_certificate": audit["mapped_pseudothreshold_experiment_verified"] and not audit["mapped_threshold_certificate_present"],
         "w33_ft_adapter_remains_fail_closed": not audit["adapter_enabled"],
     }
     return {
-        "schema": "w33.qutrit-20-7-2-adapter-audit.v4",
+        "schema": "w33.qutrit-20-7-2-adapter-audit.v5",
         "status": "PASS" if all(checks.values()) else "FAIL",
         "external_code": {
             "parameters": "[[20,7,2]]_3",
@@ -217,9 +247,9 @@ def verify() -> dict[str, Any]:
         },
         "w33_adapter_audit": audit,
         "checks": checks,
-        "decision": "REFUSE_FAULT_TOLERANT_ADAPTER_PENDING_LOCALITY_DECODER_THRESHOLD",
-        "interpretation": "The external code and a nonlocal symplectic embedding into the exact W33 240-edge carrier now verify. The old monomial selector class remains impossible. Fault-tolerant Holonet admission is still refused because the verified map has no locality/optical compiler, mapped decoder, or mapped threshold certificate.",
-        "next_required_witness": "Optimize the verified A/B embedding for support/locality (or find an equivalent sparse symplectic map), compile its stabilizer and T-injection operations into Holonet packets, then produce a mapped decoder and threshold/noise certificate.",
+        "decision": "REFUSE_FAULT_TOLERANT_ADAPTER_PENDING_OPTICAL_LOCALITY_PHYSICAL_THRESHOLD_AND_66_SUBSTRATE",
+        "interpretation": "The code, nonlocal symplectic embedding, topological W33 route compiler, and fail-closed mapped decoder now verify. A routed-exposure pseudothreshold experiment is present but is explicitly not a calibrated physical threshold. Fault-tolerant admission therefore remains refused, additionally preserving the separate [[66,8,3]]_3 substrate blocker.",
+        "next_required_witness": "Calibrate the shared-W33-point primitive interaction and syndrome/readout path, propagate a physical qutrit loss/leakage/depolarizing model through that circuit to a threshold certificate, and close the canonical [[66,8,3]]_3 substrate witness.",
     }
 
 
