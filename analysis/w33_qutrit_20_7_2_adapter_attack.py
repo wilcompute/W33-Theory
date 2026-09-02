@@ -18,9 +18,12 @@ It then audits the repository for the additional artifacts that would be needed
 to call this a W33/Holonet fault-tolerant adapter.
 
 The audit is intentionally fail closed. Reconstructing the external code is not
-an encoding into W33. A W33 adapter requires an explicit 20-physical-qutrit
-selector/intertwiner, stabilizer map, transversal-T packet schedule, and a noise /
-threshold certificate for that mapped implementation.
+an encoding into W33. The type-correct parent physical-qutrit carrier is the
+240-edge W33 CSS code. The companion executable no-go proves that the entire
+literal CSS-preserving monomial/zero-extension 20->240 adapter class is
+impossible, so the remaining admissible target is a genuinely more general
+symplectic/Clifford intertwiner (possibly X/Z-mixing, ancilla-assisted, or
+nonlocal), followed by a mapped packet decoder and threshold certificate.
 """
 from __future__ import annotations
 
@@ -28,6 +31,8 @@ import itertools
 import json
 from pathlib import Path
 from typing import Any
+
+import w33_qutrit_20_7_2_edge_css_no_go as edge_nogo
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -131,6 +136,12 @@ def repo_adapter_audit() -> dict[str, Any]:
     mapped_decoder_present = any(p.exists() for p in decoder_paths)
     mapped_threshold_present = any(p.exists() for p in threshold_paths)
 
+    literal_no_go = edge_nogo.verify()
+    literal_class_impossible = (
+        literal_no_go.get("status") == "PASS"
+        and literal_no_go.get("decision") == "UNSAT_LITERAL_CSS_MONOMIAL_20_TO_240"
+    )
+
     pass78 = ROOT / "w33_pass78_equivariant_closure.json"
     pass78_text = pass78.read_text(encoding="utf-8") if pass78.exists() else ""
     substrate_66_witness_missing = (
@@ -145,8 +156,10 @@ def repo_adapter_audit() -> dict[str, Any]:
     magic_scheduler = ROOT / "analysis/w33_magic_resource_scheduler.py"
 
     blockers = []
+    if literal_class_impossible:
+        blockers.append("literal CSS-preserving monomial/zero-extension 20-to-240 edge embedding is proved impossible; a more general symplectic/Clifford map is required")
     if not explicit_map_present:
-        blockers.append("no explicit 20-physical-qutrit W33 selector/intertwiner artifact")
+        blockers.append("no explicit general symplectic/Clifford [[20,7,2]]_3 -> W33 edge-CSS intertwiner artifact")
     if substrate_66_witness_missing:
         blockers.append("the architecture's cited [[66,8,3]]_3 substrate still lacks a canonical generator/stabilizer witness in the audited spine")
     if not mapped_decoder_present:
@@ -158,6 +171,9 @@ def repo_adapter_audit() -> dict[str, Any]:
         "explicit_encoding_map_present": explicit_map_present,
         "mapped_packet_decoder_present": mapped_decoder_present,
         "mapped_threshold_certificate_present": mapped_threshold_present,
+        "literal_edge_css_monomial_no_go": literal_no_go,
+        "literal_edge_css_monomial_class_impossible": literal_class_impossible,
+        "open_embedding_class": "general symplectic/Clifford map allowing X/Z mixing, ancillas, or nonlocal encoding",
         "canonical_map_paths": [str(p.relative_to(ROOT)) for p in canonical_map_paths],
         "mapped_decoder_paths": [str(p.relative_to(ROOT)) for p in decoder_paths],
         "mapped_threshold_paths": [str(p.relative_to(ROOT)) for p in threshold_paths],
@@ -196,11 +212,12 @@ def verify() -> dict[str, Any]:
         "seven_logical_rows_have_nonzero_cubic_norm": cubic_norms[:7] == [2] * 7 and cubic_norms[7:] == [0, 0],
         "no_weight1_Z_logical": logical["weight1"] is None,
         "weight2_Z_logical_exists": logical["weight2"] is not None,
+        "literal_edge_css_monomial_class_closed_by_no_go": audit["literal_edge_css_monomial_class_impossible"],
         "w33_adapter_remains_fail_closed": not audit["adapter_enabled"],
     }
 
     return {
-        "schema": "w33.qutrit-20-7-2-adapter-audit.v2",
+        "schema": "w33.qutrit-20-7-2-adapter-audit.v3",
         "status": "PASS" if all(checks.values()) else "FAIL",
         "external_code": {
             "parameters": "[[20,7,2]]_3",
@@ -215,8 +232,8 @@ def verify() -> dict[str, Any]:
         "w33_adapter_audit": audit,
         "checks": checks,
         "decision": "REFUSE_FAULT_TOLERANT_ADAPTER",
-        "interpretation": "The external [[20,7,2]]_3 triorthogonal code is reconstructed and verified exactly, but the repository does not yet contain the W33 physical-coordinate/stabilizer intertwiner, mapped packet decoder, and mapped threshold evidence required to call it a Holonet FT magic factory.",
-        "next_required_witness": "Provide a 20-coordinate W33/Holonet selector plus an explicit map carrying H0/H1 into physical stabilizer/logical operators, compile its syndrome/distillation circuit to packets, and measure/prove a noise threshold for that mapped circuit.",
+        "interpretation": "The external [[20,7,2]]_3 triorthogonal code is exact. The literal CSS-preserving monomial 20-to-240 edge embedding class is now proved impossible, and no general symplectic/Clifford W33 intertwiner, mapped packet decoder, or mapped threshold certificate exists yet.",
+        "next_required_witness": "Search the general GF(3) symplectic/Clifford embedding class into the exact 240-edge parent, allowing X/Z mixing and explicitly bounded ancillas/nonlocal support; if a map exists compile its syndrome/distillation circuit to packets and measure/prove its mapped threshold.",
     }
 
 
