@@ -1,0 +1,36 @@
+name: mod3 PGSp extension twin
+on:
+  push:
+    paths:
+      - 'analysis/w33_20260902_mod3_pgsp_extension_twin.py'
+      - '.github/workflows/w33_20260902_mod3_pgsp_extension_twin.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Dependencies
+        run: python -m pip install --disable-pip-version-check numpy sympy scipy
+      - name: Execute PGSp extension audit
+        run: |
+          set -o pipefail
+          cd analysis
+          python w33_20260902_mod3_pgsp_extension_twin.py 2>&1 | tee MOD3_PGSP_EXTENSION_TWIN.log
+      - name: Freeze evidence
+        run: |
+          git config user.name w33-evidence-bot
+          git config user.email w33-evidence-bot@users.noreply.github.com
+          git add data/PART_W33_20260902_MOD3_PGSP_EXTENSION_TWIN.json analysis/MOD3_PGSP_EXTENSION_TWIN.log
+          if ! git diff --cached --quiet; then
+            git commit -m 'Freeze mod3 PGSp extension twin evidence'
+            git push origin HEAD:master
+          fi
