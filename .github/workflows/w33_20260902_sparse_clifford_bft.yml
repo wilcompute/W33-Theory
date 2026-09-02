@@ -1,0 +1,42 @@
+name: W33 sparse Clifford and BFT adversarial closure
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_qutrit_20_7_2_sparse_symplectic.py'
+      - 'analysis/w33_qutrit_20_7_2_clifford_holonet_compiler.py'
+      - 'analysis/w33_bft_adversarial_fuzz.py'
+      - 'analysis/w33_bft_epoch_consensus.py'
+      - 'formal/W33EpochBFT.tla'
+      - 'analysis/w33_qutrit_20_7_2_adapter_attack.py'
+      - 'analysis/w33_magic_resource_scheduler.py'
+      - '.github/workflows/w33_20260902_sparse_clifford_bft.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install finite-math dependencies
+        run: python -m pip install --disable-pip-version-check numpy cryptography
+      - name: Verify sparse symplectic representative
+        run: python analysis/w33_qutrit_20_7_2_sparse_symplectic.py
+      - name: Verify explicit qutrit Clifford and Holonet packet compiler
+        run: python analysis/w33_qutrit_20_7_2_clifford_holonet_compiler.py
+      - name: Verify BFT protocol reference scenario
+        run: python analysis/w33_bft_epoch_consensus.py
+      - name: Adversarially fuzz equivocation crash lock and view-change safety
+        run: python analysis/w33_bft_adversarial_fuzz.py
+      - name: Verify FT evidence gates remain fail closed
+        run: |
+          python analysis/w33_qutrit_20_7_2_adapter_attack.py
+          python analysis/w33_magic_resource_scheduler.py
+      - name: Require TLA+ safety model artifact
+        run: |
+          test -s formal/W33EpochBFT.tla
+          grep -q 'Safety == Cardinality(committed) <= 1' formal/W33EpochBFT.tla
