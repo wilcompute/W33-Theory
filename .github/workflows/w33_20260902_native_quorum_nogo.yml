@@ -1,0 +1,32 @@
+name: W33 native quorum and qutrit no-go closure
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_quorum_epoch_authority.py'
+      - 'analysis/w33_qutrit_20_7_2_edge_css_no_go.py'
+      - 'analysis/w33_signed_epoch_bus.py'
+      - 'analysis/w33_levi_next5_v5_common.py'
+      - 'data/w33_qutrit_20_7_2_external_code.json'
+      - '.github/workflows/w33_20260902_native_quorum_nogo.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install focused dependencies
+        run: python -m pip install --disable-pip-version-check numpy cryptography
+      - name: Verify 4-of-5 quorum epoch authority
+        run: python analysis/w33_quorum_epoch_authority.py
+      - name: Verify literal 20-to-240 CSS no-go certificate
+        run: python analysis/w33_qutrit_20_7_2_edge_css_no_go.py
+      - name: Re-run external code audit and magic fail-closed gate
+        run: |
+          python analysis/w33_qutrit_20_7_2_adapter_attack.py
+          python analysis/w33_magic_resource_scheduler.py
