@@ -1,0 +1,45 @@
+name: mod3 outer fixed endomorphism algebra
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20260902_mod3_outer_fixed_endomorphism_algebra.py'
+      - '.github/workflows/mod3_outer_fixed_endomorphism_algebra.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  exact:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check numpy
+      - name: Execute exact algebra certificate
+        run: |
+          set -o pipefail
+          python analysis/w33_20260902_mod3_outer_fixed_endomorphism_algebra.py 2>&1 | tee analysis/MOD3_OUTER_FIXED_ENDOMORPHISM_ALGEBRA.log
+      - name: Freeze evidence
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('data/PART_W33_20260902_MOD3_OUTER_FIXED_ENDOMORPHISM_ALGEBRA.json').read_text())
+          assert d['status']=='PASS'
+          assert d['PSpEndomorphismAlgebra']['dimension']==4
+          assert d['PGSpEndomorphismAlgebra']['dimension']==2
+          assert d['outerFixedMatrixUnits']==['e00','e11']
+          assert d['outerOddMatrixUnits']==['e01','e10']
+          PY
+          git config user.name w33-evidence-bot
+          git config user.email w33-evidence-bot@users.noreply.github.com
+          git add -f data/PART_W33_20260902_MOD3_OUTER_FIXED_ENDOMORPHISM_ALGEBRA.json analysis/MOD3_OUTER_FIXED_ENDOMORPHISM_ALGEBRA.log
+          if ! git diff --cached --quiet; then
+            git commit -m 'Freeze modular outer-fixed Steinberg algebra evidence'
+            git pull --rebase origin master
+            git push origin HEAD:master
+          fi
