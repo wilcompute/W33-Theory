@@ -1,0 +1,1 @@
+{"64mod2": {"combinedRank": 128, "individualRanks": [64, 0, 64], "pairwiseIntersectionDimensions": {"01": 0, "02": 0, "12": 0}, "reading": "PARTIAL_GLUE"}, "81mod3": {"combinedRank": 162, "individualRanks": [81, 81, 81], "pairwiseIntersectionDimensions": {"01": 81, "02": 0, "12": 0}, "reading": "PARTIAL_GLUE"}, "status": "PASS"}

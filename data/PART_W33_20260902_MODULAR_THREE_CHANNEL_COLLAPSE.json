@@ -1,0 +1,220 @@
+{
+  "St64": {
+    "degree": 64,
+    "maps": [
+      {
+        "primitive": 0,
+        "projectorDenominator": 1620,
+        "sourceOrbit": 3
+      },
+      {
+        "primitive": 1,
+        "projectorDenominator": 1620,
+        "sourceOrbit": 0
+      },
+      {
+        "primitive": 2,
+        "projectorDenominator": 405,
+        "sourceOrbit": 3
+      }
+    ],
+    "primeReductions": {
+      "1000003": {
+        "combinedRank": 192,
+        "individualRanks": [
+          64,
+          64,
+          64
+        ],
+        "pairwiseIntersectionDimensions": {
+          "01": 0,
+          "02": 0,
+          "12": 0
+        },
+        "reading": "FULLY_INDEPENDENT"
+      },
+      "2": {
+        "combinedRank": 128,
+        "individualRanks": [
+          64,
+          0,
+          64
+        ],
+        "pairwiseIntersectionDimensions": {
+          "01": 0,
+          "02": 0,
+          "12": 0
+        },
+        "reading": "PARTIAL_GLUE"
+      },
+      "3": {
+        "combinedRank": 0,
+        "individualRanks": [
+          0,
+          0,
+          0
+        ],
+        "pairwiseIntersectionDimensions": {
+          "01": 0,
+          "02": 0,
+          "12": 0
+        },
+        "reading": "PARTIAL_GLUE"
+      },
+      "5": {
+        "combinedRank": 0,
+        "individualRanks": [
+          0,
+          0,
+          0
+        ],
+        "pairwiseIntersectionDimensions": {
+          "01": 0,
+          "02": 0,
+          "12": 0
+        },
+        "reading": "PARTIAL_GLUE"
+      },
+      "7": {
+        "combinedRank": 192,
+        "individualRanks": [
+          64,
+          64,
+          64
+        ],
+        "pairwiseIntersectionDimensions": {
+          "01": 0,
+          "02": 0,
+          "12": 0
+        },
+        "reading": "FULLY_INDEPENDENT"
+      }
+    }
+  },
+  "St81": {
+    "degree": 81,
+    "maps": [
+      {
+        "primitive": 0,
+        "projectorDenominator": 480,
+        "sourceOrbit": 4
+      },
+      {
+        "primitive": 1,
+        "projectorDenominator": 960,
+        "sourceOrbit": 4
+      },
+      {
+        "primitive": 2,
+        "projectorDenominator": 320,
+        "sourceOrbit": 2
+      }
+    ],
+    "primeReductions": {
+      "1000003": {
+        "combinedRank": 243,
+        "individualRanks": [
+          81,
+          81,
+          81
+        ],
+        "pairwiseIntersectionDimensions": {
+          "01": 0,
+          "02": 0,
+          "12": 0
+        },
+        "reading": "FULLY_INDEPENDENT"
+      },
+      "2": {
+        "combinedRank": 0,
+        "individualRanks": [
+          0,
+          0,
+          0
+        ],
+        "pairwiseIntersectionDimensions": {
+          "01": 0,
+          "02": 0,
+          "12": 0
+        },
+        "reading": "PARTIAL_GLUE"
+      },
+      "3": {
+        "combinedRank": 162,
+        "individualRanks": [
+          81,
+          81,
+          81
+        ],
+        "pairwiseIntersectionDimensions": {
+          "01": 81,
+          "02": 0,
+          "12": 0
+        },
+        "reading": "PARTIAL_GLUE"
+      },
+      "5": {
+        "combinedRank": 0,
+        "individualRanks": [
+          0,
+          0,
+          0
+        ],
+        "pairwiseIntersectionDimensions": {
+          "01": 0,
+          "02": 0,
+          "12": 0
+        },
+        "reading": "PARTIAL_GLUE"
+      },
+      "7": {
+        "combinedRank": 243,
+        "individualRanks": [
+          81,
+          81,
+          81
+        ],
+        "pairwiseIntersectionDimensions": {
+          "01": 0,
+          "02": 0,
+          "12": 0
+        },
+        "reading": "FULLY_INDEPENDENT"
+      }
+    }
+  },
+  "boundary": "Reduction of an integral numerator when the rational projector denominator is divisible by p is a legitimate equivariant modular map, but it is not the reduction of the rational idempotent itself. The certificate therefore describes modular images of the integral chain maps, not a semisimple modular projector decomposition.",
+  "nativeCharacteristicSummary": {
+    "St64_mod2": {
+      "combinedRank": 128,
+      "individualRanks": [
+        64,
+        0,
+        64
+      ],
+      "pairwiseIntersectionDimensions": {
+        "01": 0,
+        "02": 0,
+        "12": 0
+      },
+      "reading": "PARTIAL_GLUE"
+    },
+    "St81_mod3": {
+      "combinedRank": 162,
+      "individualRanks": [
+        81,
+        81,
+        81
+      ],
+      "pairwiseIntersectionDimensions": {
+        "01": 81,
+        "02": 0,
+        "12": 0
+      },
+      "reading": "PARTIAL_GLUE"
+    }
+  },
+  "schema": "w33.20260902.modular-three-channel-collapse.v1",
+  "status": "PASS",
+  "theorem": "The integral numerator forms of all six characteristic-zero building injections have been reduced modulo 2,3,5,7 and a good large prime. Their exact ranks determine whether the three rational multiplicity channels remain independent, partially glue, or collapse in modular characteristic."
+}
