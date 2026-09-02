@@ -1,0 +1,41 @@
+{
+  "boundary": "This is an exact finite chain-complex and modular-representation statement. It does not by itself supply a fault-tolerance threshold, decoder, particle interpretation, or continuum field theory.",
+  "building": {
+    "H1_dimension": 81,
+    "chambers": 160,
+    "cycleBasisRankMod3": 81,
+    "lineVertices": 40,
+    "pointVertices": 40
+  },
+  "chainMap": {
+    "buildingCycleBasisSHA256Int8Mod3": "5b2b5cdfa9c138cf3bbeceab6553746a2347caa856b713f442d2d856db0dd26e",
+    "combinedBoundaryPlusImageRank": 201,
+    "formula": "Phi(p,L)=sum_{q in L\\{p}} [p->q] over F3",
+    "generatorEquivarianceChecks": 640,
+    "generatorEquivarianceVerified": true,
+    "imageOnBuildingH1Rank": 81,
+    "intersectionWithTriangleBoundaries": 0,
+    "logicalBasisSHA256Int8Mod3": "fcb5cf52b236c3f83ae3eeff01dde848d1a1d9f0b4efe08d5dceef144321ec54",
+    "shape": [
+      240,
+      160
+    ],
+    "triangleBoundaryRank": 120
+  },
+  "cliqueComplex": {
+    "C0": 40,
+    "C1": 240,
+    "C2": 160,
+    "C3": 40,
+    "H1_dimension": 81,
+    "ker_d1_dimension": 201,
+    "rank_d1": 39,
+    "rank_d2": 120
+  },
+  "directSum": "ker(d1) = im(d2) direct-sum Phi(H1_building) over F3",
+  "field": "F3",
+  "schema": "w33.20260902.ternary-css-building-steinberg.v1",
+  "status": "PASS",
+  "theorem": "The canonical [[240,81,3]]_3 W33 clique-chain CSS logical quotient is explicitly PSp4(3)-equivariantly isomorphic to the 81-dimensional H1 of the W(3,3) Levi building. The map sends each chamber (p,L) to the oriented three-edge star from p inside L. Thus the CSS logical module is the defining-characteristic modular Steinberg module, not merely an equal-dimensional 81-space.",
+  "whyCharacteristicThreeMatters": "The chain identity uses the vanishing of the coefficient 3 multiplying the chamber contribution at the source point. The same formula is not asserted to identify homology in other characteristics."
+}

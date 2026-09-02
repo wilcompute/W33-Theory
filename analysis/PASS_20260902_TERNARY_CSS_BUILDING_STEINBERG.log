@@ -1,0 +1,3 @@
+/home/runner/work/W33-Theory/W33-Theory/analysis/w33_20260902_ternary_css_building_steinberg.py:19: SyntaxWarning: invalid escape sequence '\{'
+  Phi(p,L) = sum_{q in L\{p}} [p -> q].
+{"combined": 201, "equivarianceChecks": 640, "intersection": 0, "logical": 81, "rank_d2": 120, "status": "PASS"}
