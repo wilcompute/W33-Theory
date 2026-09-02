@@ -1,0 +1,1060 @@
+{
+  "St64": {
+    "building": "H1(GQ(4,2))",
+    "combinedTargetRankModuloGoodPrimes": {
+      "1000003": 192,
+      "1000033": 192
+    },
+    "degree": 64,
+    "matrixUnitConnectors": {
+      "01": [
+        5,
+        5,
+        "15/16"
+      ],
+      "02": [
+        5,
+        5,
+        "3/4"
+      ]
+    },
+    "primitiveTargetRoutes": [
+      {
+        "bt796RelationOrbit": 0,
+        "chainLevelGeneratorEquivarianceVerified": true,
+        "primitiveIndex": 0,
+        "rationalDenominator": 1620,
+        "sourcePrimitiveOrbit": 3,
+        "targetCycleRankModuloGoodPrimes": {
+          "1000003": 64,
+          "1000033": 64
+        },
+        "targetCycleSHA256Int64LE": "86494e547870083ecca752ce612a0bea23067e02f981f2e8cb8b4fe140fe916a",
+        "targetCycleShape": [
+          2160,
+          64
+        ]
+      },
+      {
+        "bt796RelationOrbit": 4,
+        "chainLevelGeneratorEquivarianceVerified": true,
+        "primitiveIndex": 1,
+        "rationalDenominator": 1620,
+        "sourcePrimitiveOrbit": 0,
+        "targetCycleRankModuloGoodPrimes": {
+          "1000003": 64,
+          "1000033": 64
+        },
+        "targetCycleSHA256Int64LE": "b6ba37224387f4218cdba5b222fd086f1794da50dc979a55840ebd6162c063d2",
+        "targetCycleShape": [
+          2160,
+          64
+        ]
+      },
+      {
+        "bt796RelationOrbit": 2,
+        "chainLevelGeneratorEquivarianceVerified": true,
+        "primitiveIndex": 2,
+        "rationalDenominator": 405,
+        "sourcePrimitiveOrbit": 3,
+        "targetCycleRankModuloGoodPrimes": {
+          "1000003": 64,
+          "1000033": 64
+        },
+        "targetCycleSHA256Int64LE": "7264696afe36118ac57bf138dbe676b0e5c37e2973fcdcd6d1c1aa9258a390f7",
+        "targetCycleShape": [
+          2160,
+          64
+        ]
+      }
+    ],
+    "splitEigenvalues": [
+      "-2",
+      "2",
+      "4"
+    ],
+    "splitOperator": "orbital:3+3",
+    "twoStepPathAlgebra": {
+      "basisPairs": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          9
+        ]
+      ],
+      "matrixUnits": {
+        "e00": [
+          {
+            "coefficient": "-1/12",
+            "crossOrbitPair": [
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": "1/12",
+            "crossOrbitPair": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient": "1/12",
+            "crossOrbitPair": [
+              1,
+              0
+            ]
+          },
+          {
+            "coefficient": "1/12",
+            "crossOrbitPair": [
+              1,
+              1
+            ]
+          },
+          {
+            "coefficient": "-1/6",
+            "crossOrbitPair": [
+              1,
+              2
+            ]
+          }
+        ],
+        "e01": [
+          {
+            "coefficient": "7/48",
+            "crossOrbitPair": [
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": "-1/16",
+            "crossOrbitPair": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient": "-1/24",
+            "crossOrbitPair": [
+              0,
+              4
+            ]
+          },
+          {
+            "coefficient": "-7/48",
+            "crossOrbitPair": [
+              1,
+              0
+            ]
+          },
+          {
+            "coefficient": "1/48",
+            "crossOrbitPair": [
+              1,
+              1
+            ]
+          },
+          {
+            "coefficient": "1/8",
+            "crossOrbitPair": [
+              1,
+              2
+            ]
+          },
+          {
+            "coefficient": "-1/6",
+            "crossOrbitPair": [
+              1,
+              5
+            ]
+          },
+          {
+            "coefficient": "1/12",
+            "crossOrbitPair": [
+              1,
+              8
+            ]
+          },
+          {
+            "coefficient": "1/12",
+            "crossOrbitPair": [
+              1,
+              9
+            ]
+          }
+        ],
+        "e02": [
+          {
+            "coefficient": "1/6",
+            "crossOrbitPair": [
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": "-1/8",
+            "crossOrbitPair": [
+              0,
+              4
+            ]
+          },
+          {
+            "coefficient": "-1/6",
+            "crossOrbitPair": [
+              1,
+              0
+            ]
+          },
+          {
+            "coefficient": "-1/12",
+            "crossOrbitPair": [
+              1,
+              1
+            ]
+          },
+          {
+            "coefficient": "-1/6",
+            "crossOrbitPair": [
+              1,
+              5
+            ]
+          },
+          {
+            "coefficient": "-1/12",
+            "crossOrbitPair": [
+              1,
+              8
+            ]
+          },
+          {
+            "coefficient": "-1/12",
+            "crossOrbitPair": [
+              1,
+              9
+            ]
+          }
+        ],
+        "e10": [
+          {
+            "coefficient": "1/135",
+            "crossOrbitPair": [
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": "-1/15",
+            "crossOrbitPair": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient": "2/45",
+            "crossOrbitPair": [
+              0,
+              4
+            ]
+          },
+          {
+            "coefficient": "1/45",
+            "crossOrbitPair": [
+              1,
+              0
+            ]
+          },
+          {
+            "coefficient": "1/5",
+            "crossOrbitPair": [
+              1,
+              1
+            ]
+          },
+          {
+            "coefficient": "-2/15",
+            "crossOrbitPair": [
+              1,
+              2
+            ]
+          },
+          {
+            "coefficient": "-8/45",
+            "crossOrbitPair": [
+              1,
+              5
+            ]
+          },
+          {
+            "coefficient": "-4/45",
+            "crossOrbitPair": [
+              1,
+              8
+            ]
+          },
+          {
+            "coefficient": "4/15",
+            "crossOrbitPair": [
+              1,
+              9
+            ]
+          }
+        ],
+        "e11": [
+          {
+            "coefficient": "1/60",
+            "crossOrbitPair": [
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": "1/20",
+            "crossOrbitPair": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient": "1/20",
+            "crossOrbitPair": [
+              1,
+              0
+            ]
+          },
+          {
+            "coefficient": "1/20",
+            "crossOrbitPair": [
+              1,
+              1
+            ]
+          },
+          {
+            "coefficient": "1/10",
+            "crossOrbitPair": [
+              1,
+              2
+            ]
+          }
+        ],
+        "e12": [
+          {
+            "coefficient": "2/45",
+            "crossOrbitPair": [
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": "-1/30",
+            "crossOrbitPair": [
+              0,
+              4
+            ]
+          },
+          {
+            "coefficient": "2/15",
+            "crossOrbitPair": [
+              1,
+              0
+            ]
+          },
+          {
+            "coefficient": "-1/5",
+            "crossOrbitPair": [
+              1,
+              1
+            ]
+          },
+          {
+            "coefficient": "2/15",
+            "crossOrbitPair": [
+              1,
+              5
+            ]
+          },
+          {
+            "coefficient": "1/15",
+            "crossOrbitPair": [
+              1,
+              8
+            ]
+          },
+          {
+            "coefficient": "-1/5",
+            "crossOrbitPair": [
+              1,
+              9
+            ]
+          }
+        ],
+        "e20": [
+          {
+            "coefficient": "1/9",
+            "crossOrbitPair": [
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": "-1/3",
+            "crossOrbitPair": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient": "1/6",
+            "crossOrbitPair": [
+              0,
+              4
+            ]
+          },
+          {
+            "coefficient": "-1/9",
+            "crossOrbitPair": [
+              1,
+              0
+            ]
+          },
+          {
+            "coefficient": "-1/3",
+            "crossOrbitPair": [
+              1,
+              1
+            ]
+          },
+          {
+            "coefficient": "1/3",
+            "crossOrbitPair": [
+              1,
+              2
+            ]
+          },
+          {
+            "coefficient": "2/9",
+            "crossOrbitPair": [
+              1,
+              5
+            ]
+          },
+          {
+            "coefficient": "1/9",
+            "crossOrbitPair": [
+              1,
+              8
+            ]
+          },
+          {
+            "coefficient": "-1/3",
+            "crossOrbitPair": [
+              1,
+              9
+            ]
+          }
+        ],
+        "e21": [
+          {
+            "coefficient": "-1/12",
+            "crossOrbitPair": [
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": "1/4",
+            "crossOrbitPair": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient": "1/24",
+            "crossOrbitPair": [
+              0,
+              4
+            ]
+          },
+          {
+            "coefficient": "1/12",
+            "crossOrbitPair": [
+              1,
+              0
+            ]
+          },
+          {
+            "coefficient": "-1/12",
+            "crossOrbitPair": [
+              1,
+              1
+            ]
+          },
+          {
+            "coefficient": "-1/4",
+            "crossOrbitPair": [
+              1,
+              2
+            ]
+          },
+          {
+            "coefficient": "1/6",
+            "crossOrbitPair": [
+              1,
+              5
+            ]
+          },
+          {
+            "coefficient": "-1/12",
+            "crossOrbitPair": [
+              1,
+              8
+            ]
+          },
+          {
+            "coefficient": "-1/12",
+            "crossOrbitPair": [
+              1,
+              9
+            ]
+          }
+        ],
+        "e22": [
+          {
+            "coefficient": "1/3",
+            "crossOrbitPair": [
+              1,
+              1
+            ]
+          },
+          {
+            "coefficient": "1/3",
+            "crossOrbitPair": [
+              1,
+              9
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "St81": {
+    "building": "H1(W33)",
+    "combinedTargetRankModuloGoodPrimes": {
+      "1000003": 243,
+      "1000033": 243
+    },
+    "degree": 81,
+    "matrixUnitConnectors": {
+      "01": [
+        5,
+        5,
+        "8/9"
+      ],
+      "02": [
+        16,
+        38,
+        "40/3"
+      ]
+    },
+    "primitiveTargetRoutes": [
+      {
+        "bt796RelationOrbit": 0,
+        "chainLevelGeneratorEquivarianceVerified": true,
+        "primitiveIndex": 0,
+        "rationalDenominator": 480,
+        "sourcePrimitiveOrbit": 4,
+        "targetCycleRankModuloGoodPrimes": {
+          "1000003": 81,
+          "1000033": 81
+        },
+        "targetCycleSHA256Int64LE": "05443b60e7c00f7bdc3d64c470ac298945d1b7e44e65e13a7433fd073bc5871f",
+        "targetCycleShape": [
+          2160,
+          81
+        ]
+      },
+      {
+        "bt796RelationOrbit": 1,
+        "chainLevelGeneratorEquivarianceVerified": true,
+        "primitiveIndex": 1,
+        "rationalDenominator": 960,
+        "sourcePrimitiveOrbit": 4,
+        "targetCycleRankModuloGoodPrimes": {
+          "1000003": 81,
+          "1000033": 81
+        },
+        "targetCycleSHA256Int64LE": "f31e51b6512bbcb892417d7e7d9bab7c8bc1c1729fcb98703e0a6da673c8f33e",
+        "targetCycleShape": [
+          2160,
+          81
+        ]
+      },
+      {
+        "bt796RelationOrbit": 0,
+        "chainLevelGeneratorEquivarianceVerified": true,
+        "primitiveIndex": 2,
+        "rationalDenominator": 320,
+        "sourcePrimitiveOrbit": 2,
+        "targetCycleRankModuloGoodPrimes": {
+          "1000003": 81,
+          "1000033": 81
+        },
+        "targetCycleSHA256Int64LE": "fb917ce824e41863520923e8ee72c9a236ae6db871187781048685b592e07fef",
+        "targetCycleShape": [
+          2160,
+          81
+        ]
+      }
+    ],
+    "twoStepPathAlgebra": {
+      "basisPairs": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          25
+        ],
+        [
+          0,
+          45
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          5
+        ]
+      ],
+      "matrixUnits": {
+        "e00": [
+          {
+            "coefficient": "1/24",
+            "crossOrbitPair": [
+              0,
+              4
+            ]
+          },
+          {
+            "coefficient": "1/24",
+            "crossOrbitPair": [
+              0,
+              5
+            ]
+          },
+          {
+            "coefficient": "7/24",
+            "crossOrbitPair": [
+              0,
+              7
+            ]
+          },
+          {
+            "coefficient": "-1/24",
+            "crossOrbitPair": [
+              0,
+              45
+            ]
+          },
+          {
+            "coefficient": "-1/24",
+            "crossOrbitPair": [
+              1,
+              1
+            ]
+          },
+          {
+            "coefficient": "-1/8",
+            "crossOrbitPair": [
+              1,
+              2
+            ]
+          },
+          {
+            "coefficient": "1/8",
+            "crossOrbitPair": [
+              1,
+              5
+            ]
+          }
+        ],
+        "e01": [
+          {
+            "coefficient": "1/54",
+            "crossOrbitPair": [
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": "1/6",
+            "crossOrbitPair": [
+              0,
+              4
+            ]
+          },
+          {
+            "coefficient": "2/9",
+            "crossOrbitPair": [
+              0,
+              7
+            ]
+          },
+          {
+            "coefficient": "-1/18",
+            "crossOrbitPair": [
+              1,
+              1
+            ]
+          }
+        ],
+        "e02": [
+          {
+            "coefficient": "1/54",
+            "crossOrbitPair": [
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": "-1/18",
+            "crossOrbitPair": [
+              0,
+              4
+            ]
+          },
+          {
+            "coefficient": "-2/9",
+            "crossOrbitPair": [
+              0,
+              5
+            ]
+          },
+          {
+            "coefficient": "-1/3",
+            "crossOrbitPair": [
+              0,
+              25
+            ]
+          },
+          {
+            "coefficient": "2/9",
+            "crossOrbitPair": [
+              0,
+              45
+            ]
+          },
+          {
+            "coefficient": "-1/6",
+            "crossOrbitPair": [
+              1,
+              1
+            ]
+          },
+          {
+            "coefficient": "-1/3",
+            "crossOrbitPair": [
+              1,
+              2
+            ]
+          }
+        ],
+        "e10": [
+          {
+            "coefficient": "1/8",
+            "crossOrbitPair": [
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": "-5/16",
+            "crossOrbitPair": [
+              0,
+              4
+            ]
+          },
+          {
+            "coefficient": "-1/8",
+            "crossOrbitPair": [
+              0,
+              5
+            ]
+          },
+          {
+            "coefficient": "-11/16",
+            "crossOrbitPair": [
+              0,
+              7
+            ]
+          },
+          {
+            "coefficient": "1/8",
+            "crossOrbitPair": [
+              0,
+              45
+            ]
+          },
+          {
+            "coefficient": "1/8",
+            "crossOrbitPair": [
+              1,
+              1
+            ]
+          },
+          {
+            "coefficient": "3/8",
+            "crossOrbitPair": [
+              1,
+              2
+            ]
+          },
+          {
+            "coefficient": "-3/8",
+            "crossOrbitPair": [
+              1,
+              5
+            ]
+          }
+        ],
+        "e11": [
+          {
+            "coefficient": "-5/36",
+            "crossOrbitPair": [
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": "-1/24",
+            "crossOrbitPair": [
+              0,
+              7
+            ]
+          },
+          {
+            "coefficient": "1/6",
+            "crossOrbitPair": [
+              1,
+              1
+            ]
+          }
+        ],
+        "e12": [
+          {
+            "coefficient": "-13/72",
+            "crossOrbitPair": [
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": "1/6",
+            "crossOrbitPair": [
+              0,
+              4
+            ]
+          },
+          {
+            "coefficient": "7/24",
+            "crossOrbitPair": [
+              0,
+              5
+            ]
+          },
+          {
+            "coefficient": "-1/8",
+            "crossOrbitPair": [
+              0,
+              25
+            ]
+          },
+          {
+            "coefficient": "1/12",
+            "crossOrbitPair": [
+              0,
+              45
+            ]
+          },
+          {
+            "coefficient": "1/2",
+            "crossOrbitPair": [
+              1,
+              1
+            ]
+          },
+          {
+            "coefficient": "1",
+            "crossOrbitPair": [
+              1,
+              2
+            ]
+          }
+        ],
+        "e20": [
+          {
+            "coefficient": "-1/90",
+            "crossOrbitPair": [
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": "1/48",
+            "crossOrbitPair": [
+              0,
+              4
+            ]
+          },
+          {
+            "coefficient": "1/120",
+            "crossOrbitPair": [
+              0,
+              5
+            ]
+          },
+          {
+            "coefficient": "3/80",
+            "crossOrbitPair": [
+              0,
+              7
+            ]
+          },
+          {
+            "coefficient": "-1/40",
+            "crossOrbitPair": [
+              0,
+              25
+            ]
+          },
+          {
+            "coefficient": "-1/120",
+            "crossOrbitPair": [
+              0,
+              45
+            ]
+          }
+        ],
+        "e21": [
+          {
+            "coefficient": "-1/1080",
+            "crossOrbitPair": [
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": "1/90",
+            "crossOrbitPair": [
+              0,
+              4
+            ]
+          },
+          {
+            "coefficient": "7/360",
+            "crossOrbitPair": [
+              0,
+              5
+            ]
+          },
+          {
+            "coefficient": "-1/120",
+            "crossOrbitPair": [
+              0,
+              25
+            ]
+          },
+          {
+            "coefficient": "1/180",
+            "crossOrbitPair": [
+              0,
+              45
+            ]
+          }
+        ],
+        "e22": [
+          {
+            "coefficient": "1/12",
+            "crossOrbitPair": [
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": "-1/8",
+            "crossOrbitPair": [
+              0,
+              7
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "allSixCombinedDimension": 435,
+  "allSixTargetImagesCombinedRankModuloGoodPrimes": {
+    "1000003": 435,
+    "1000033": 435
+  },
+  "boundary": "This is a finite equivariant path algebra. The words route/channel are algebraic: no optical transfer efficiency, Hamiltonian, physical time evolution, or particle-generation interpretation is inferred.",
+  "carriers": {
+    "equivariantHomDimension": 113,
+    "routerBT796": 2160,
+    "sourceObstruction": 1080
+  },
+  "groupOrder": 25920,
+  "schema": "w33.20260902.building-bt796-path-algebra.v1",
+  "status": "PASS",
+  "theorem": "The explicit W33 and GQ(4,2) building cycle spaces route through all six primitive obstruction channels into the same 2160 BT796/packet48 carrier with independent target dimensions 243 and 192, total 435. On each multiplicity-three block, all nine rational matrix units are exact linear combinations of two-step 1080->2160->1080 incidence cross-Grams. Hence the BT796 carrier realizes an explicit M3(Q) direct-sum M3(Q) path algebra tied to concrete building cycles."
+}
