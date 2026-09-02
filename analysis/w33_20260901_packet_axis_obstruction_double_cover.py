@@ -1,31 +1,36 @@
 #!/usr/bin/env python3
-"""Exact packet/local-axis realization of the 1080 obstruction G-set.
+"""Classify the packet/local-axis 1080 G-set against the obstruction carrier.
 
-Two independently available carriers have degree 1080:
+There are two independent transitive degree-1080 PSp(4,3) carriers:
 
-  O = 27 completion charts x 40 W33 lines (the obstruction carrier),
+  O = 27 completion charts x 40 W33 lines,
   A = {(P,a): P one of the 45 K4,4/D4+D4 packets and a one of the
-       three local pencil-octahedron axes at one of the eight W33 points of P}.
+       three local pencil-octahedron axes at one of the eight points of P},
+      |A|=45*8*3=1080.
 
-The second count is 45*8*3 = 1080.  This script does not identify them by
-cardinality.  It builds both under the same four deterministic PSp(4,3)
-generators, computes the exact stabilizer of one packet-axis flag, finds an
-obstruction point fixed by that same subgroup, and propagates the base match
-under all 25,920 group elements.
+The first execution of this file falsified the naive direct identification:
+the order-24 stabilizer of a packet-axis flag fixes no point of O.  This version
+keeps that no-go and tests the stronger exceptional-automorphism hypothesis.
+The nonsquare symplectic similitude
 
-It then places the already-proved 2160 packet/K3,3 = BT796 D12 shell over the
-packet-axis carrier.  If its order-12 flag stabilizer fixes a packet-axis flag,
-then the latter has stabilizer order 24 and the subgroup inclusion gives the
-canonical transitive G-map G/H12 -> G/H24.  The script verifies the propagated
-map is 2-to-1 on every fibre.  Since H12 has index two in H24 it is normal in
-H24 and H24/H12=C2 is the deck group of this finite G-set cover.
+    s = diag(1,2,1,2)
 
-Boundary: Pass123 identifies the 120 local W33 axes with the 120 antipodal E8
-root lines, while the 45 packets independently have a D4+D4 E8 reading.  The
-finite G-set theorem below therefore gives packet + intrinsic-E8-axis labels,
-but it does NOT assert without a separate coordinate check that the selected
-axis is literally one of the 24 root axes internal to that packet's particular
-D4+D4 coordinate subsystem.
+normalizes PSp(4,3) inside PGSp(4,3) and induces the nontrivial outer
+automorphism.  We twist A by g -> s g s^{-1} and test objectwise whether O is
+isomorphic to that outer-twisted action.
+
+Independently, the already-proved 2160 packet/K3,3 = BT796 D12 shell has an
+order-12 flag stabilizer.  We test whether it lies in an order-24 packet-axis
+stabilizer on the natural sheet, and separately after the outer twist.  Any
+index-two inclusion is propagated over all 25,920 group elements and checked
+to give a genuine 2-to-1 equivariant cover.
+
+Pass123 independently identifies the 120 local W33 axes with the 120 antipodal
+E8 root lines.  A positive outer-twist result therefore supplies an E8-axis
+address for the OUTER-TWISTED obstruction action, not a silent inner
+identification.  A further coordinate check is still required to prove that a
+selected axis lies inside the corresponding packet's particular D4+D4 root
+subsystem.
 """
 from __future__ import annotations
 
@@ -69,11 +74,19 @@ def matchings4(vals):
     )
 
 
+def norm3(v):
+    i = next(k for k, x in enumerate(v) if x % 3)
+    z = pow(v[i] % 3, -1, 3)
+    return tuple((z * x) % 3 for x in v)
+
+
 def main():
     D = shell.build()
     pts, wlines, supports = D["pts"], D["wlines"], D["supports"]
     g40, g45 = D["g40"], D["g45"]
+    pidx = {v: i for i, v in enumerate(pts)}
     li = {frozenset(L): i for i, L in enumerate(wlines)}
+    sidx = {frozenset(S): i for i, S in enumerate(supports)}
 
     point_lines = [[] for _ in range(40)]
     for ell, L in enumerate(wlines):
@@ -91,6 +104,9 @@ def main():
     def line_perm(p40):
         return tuple(li[frozenset(p40[x] for x in L)] for L in wlines)
 
+    def packet_perm(p40):
+        return tuple(sidx[frozenset(p40[x] for x in S)] for S in supports)
+
     def axis_perm(p40):
         lp = line_perm(p40)
         out = []
@@ -104,40 +120,61 @@ def main():
         for a, (p, _M) in enumerate(axes):
             if p in S:
                 flags.append((packet, a))
-    assert len(flags) == 45 * 8 * 3 == 1080 and len(set(flags)) == 1080
+    assert len(flags) == 1080 and len(set(flags)) == 1080
     fidx = {x: i for i, x in enumerate(flags)}
 
-    flag_gens = []
-    for p40, p45 in zip(g40, g45):
+    def flag_perm(p40):
+        pp = packet_perm(p40)
         pa = axis_perm(p40)
-        flag_gens.append(tuple(fidx[(p45[p], pa[a])] for p, a in flags))
+        return tuple(fidx[(pp[p], pa[a])] for p, a in flags)
+
+    flag_gens = [flag_perm(p40) for p40 in g40]
+    # Cross-check against the packet generators already frozen by the shell.
+    assert all(packet_perm(p40) == p45 for p40, p45 in zip(g40, g45))
 
     src_gens, charts, lines2 = obs.build_action()
     assert lines2 == wlines
-    Gpair = paired_closure(src_gens, flag_gens, 1080, 1080)
 
+    # Natural inner comparison: this is intentionally allowed to fail.
+    Ginner = paired_closure(src_gens, flag_gens, 1080, 1080)
     base_flag = 0
-    flag_orbit = {gf[base_flag] for _gs, gf in Gpair}
-    assert len(flag_orbit) == 1080
-    H24pair = [(gs, gf) for gs, gf in Gpair if gf[base_flag] == base_flag]
-    assert len(H24pair) == 24
+    assert len({gf[base_flag] for _gs, gf in Ginner}) == 1080
+    H24inner = [(gs, gf) for gs, gf in Ginner if gf[base_flag] == base_flag]
+    assert len(H24inner) == 24
+    fixed_inner = [x for x in range(1080)
+                   if all(gs[x] == x for gs, _gf in H24inner)]
 
-    fixed_source = [x for x in range(1080) if all(gs[x] == x for gs, _gf in H24pair)]
-    assert fixed_source
-    source_base = fixed_source[0]
-    Hsrc = [(gs, gf) for gs, gf in Gpair if gs[source_base] == source_base]
-    assert len(Hsrc) == 24
-    assert {gf for _gs, gf in Hsrc} == {gf for _gs, gf in H24pair}
+    # Explicit nonsquare similitude s=diag(1,2,1,2).  Projectively s^2=1.
+    sout = tuple(
+        pidx[norm3((v[0], 2 * v[1], v[2], 2 * v[3]))]
+        for v in pts
+    )
+    assert comp(sout, sout) == tuple(range(40))
+    outer_g40 = [comp(sout, comp(g, sout)) for g in g40]
+    # The conjugates remain in the inner group; closure order below is a check.
+    outer_flag_gens = [flag_perm(g) for g in outer_g40]
+    Gouter = paired_closure(src_gens, outer_flag_gens, 1080, 1080)
+    H24outer = [(gs, gf) for gs, gf in Gouter if gf[base_flag] == base_flag]
+    assert len(H24outer) == 24
+    fixed_outer = [x for x in range(1080)
+                   if all(gs[x] == x for gs, _gf in H24outer)]
 
-    equiv = {}
-    for gs, gf in Gpair:
-        x = gf[base_flag]
-        y = gs[source_base]
-        if x in equiv:
-            assert equiv[x] == y
-        else:
-            equiv[x] = y
-    assert len(equiv) == 1080 and len(set(equiv.values())) == 1080
+    outer_bijection = None
+    if fixed_outer:
+        source_base = fixed_outer[0]
+        phi = {}
+        for gs, gf in Gouter:
+            x = gf[base_flag]
+            y = gs[source_base]
+            if x in phi:
+                assert phi[x] == y
+            else:
+                phi[x] = y
+        assert len(phi) == 1080 and len(set(phi.values())) == 1080
+        outer_bijection = [phi[i] for i in range(1080)]
+        for gs, gf in zip(src_gens, outer_flag_gens):
+            assert all(outer_bijection[gf[x]] == gs[outer_bijection[x]]
+                       for x in range(1080))
 
     # Reconstruct the order-12 stabilizer of the packet/K3,3 base flag used in
     # the already-proved 2160 shell cross-identification.
@@ -150,104 +187,115 @@ def main():
                   if z[1][nbp] == nbp and actK(z[2], K33[nbk]) == nbk]
     assert len(H12triples) == 12
 
-    # Evaluate those same p40 elements on packet-axis flags.
-    def act_flag_triple(z, flag_index):
-        p40, p45, _p27 = z
-        pa = axis_perm(p40)
-        p, a = flags[flag_index]
-        return fidx[(p45[p], pa[a])]
+    def act_flag_p40(p40, flag_index):
+        fp = flag_perm(p40)
+        return fp[flag_index]
 
-    fixed_by_H12 = [i for i in range(1080)
-                    if all(act_flag_triple(z, i) == i for z in H12triples)]
-    assert fixed_by_H12
-    parent_base = fixed_by_H12[0]
-    H24triples = [z for z in D["G"] if act_flag_triple(z, parent_base) == parent_base]
-    assert len(H24triples) == 24
-    H12p40 = {z[0] for z in H12triples}
-    H24p40 = {z[0] for z in H24triples}
-    assert H12p40 <= H24p40 and len(H24p40 - H12p40) == 12
+    fixed_by_H12_natural = [i for i in range(1080)
+                            if all(act_flag_p40(z[0], i) == i
+                                   for z in H12triples)]
+    # Outer-twist the CHILD subgroup by conjugating its PSp elements.
+    H12_outer_p40 = [comp(sout, comp(z[0], sout)) for z in H12triples]
+    fixed_by_H12_outer = [i for i in range(1080)
+                          if all(act_flag_p40(g, i) == i
+                                 for g in H12_outer_p40)]
 
-    # Propagate G/H12 -> G/H24 and prove all 1080 fibres have size two.
     nf = D["nf"]
     nfi = {x: i for i, x in enumerate(nf)}
-    cover = {}
-    for z in D["G"]:
-        p40, p45, p27 = z
-        child = (p45[nbp], actK(p27, K33[nbk]))
-        ci = nfi[child]
-        par = act_flag_triple(z, parent_base)
-        if ci in cover:
-            assert cover[ci] == par
-        else:
-            cover[ci] = par
-    assert len(cover) == 2160
-    fibres = Counter(cover.values())
-    assert len(fibres) == 1080 and set(fibres.values()) == {2}
 
-    # The parent packet coordinate is an exact invariant of this selected
-    # cover only if the subgroup-selected parent has the same packet as child.
-    same_packet = 0
-    for ci, par in cover.items():
-        child_packet = nf[ci][0]
-        parent_packet = flags[par][0]
-        same_packet += (child_packet == parent_packet)
-
-    out = {
-        "schema": "w33.20260901.packet-axis-obstruction-double-cover.v1",
-        "status": "PASS",
-        "groupOrder": 25920,
-        "packetAxisCarrier": {
-            "packets": 45,
-            "pointsPerPacket": 8,
-            "localAxesPerPoint": 3,
-            "degree": 1080,
-            "transitive": True,
-            "stabilizerOrder": 24,
-        },
-        "obstructionCarrier": {
-            "degree": 1080,
-            "stabilizerOrder": 24,
-            "fixedPointsOfPacketAxisBaseStabilizer": fixed_source,
-            "explicitEquivariantBijectionVerified": True,
-        },
-        "bt796Packet48Cover": {
-            "degree": 2160,
-            "childStabilizerOrder": 12,
-            "packetAxisParentsFixedByChildStabilizer": len(fixed_by_H12),
-            "parentStabilizerOrder": 24,
-            "H12ContainedInH24": True,
-            "index": 2,
-            "quotient": "C2",
-            "propagatedMapDefinedOn": 2160,
+    def cover_for_parent(parent_base, twist_child=False):
+        cover = {}
+        for z in D["G"]:
+            p40, p45, p27 = z
+            child = (p45[nbp], actK(p27, K33[nbk]))
+            ci = nfi[child]
+            pg = comp(sout, comp(p40, sout)) if twist_child else p40
+            par = act_flag_p40(pg, parent_base)
+            if ci in cover:
+                if cover[ci] != par:
+                    return None
+            else:
+                cover[ci] = par
+        if len(cover) != 2160:
+            return None
+        fibres = Counter(cover.values())
+        if len(fibres) != 1080 or set(fibres.values()) != {2}:
+            return None
+        same_packet = sum(nf[ci][0] == flags[par][0]
+                          for ci, par in cover.items())
+        return {
+            "mapDefinedOn": 2160,
             "parentImageSize": 1080,
             "fibreSizeHistogram": {"2": 1080},
-            "childParentSamePacketCount": same_packet,
+            "samePacketCount": same_packet,
+        }
+
+    natural_cover = (cover_for_parent(fixed_by_H12_natural[0], False)
+                     if fixed_by_H12_natural else None)
+    outer_cover = (cover_for_parent(fixed_by_H12_outer[0], True)
+                   if fixed_by_H12_outer else None)
+
+    out = {
+        "schema": "w33.20260901.packet-axis-obstruction-outer-classification.v2",
+        "status": "PASS",
+        "groupOrder": 25920,
+        "outerAutomorphism": {
+            "similitude": "diag(1,2,1,2)",
+            "projectivePermutationOrder": 2,
+            "meaning": "nontrivial PGSp(4,3)/PSp(4,3) outer automorphism",
+        },
+        "packetAxisCarrier": {
+            "degree": 1080,
+            "factorization": "45 packets * 8 packet points * 3 local axes",
+            "stabilizerOrder": 24,
+            "pass123AxisReading": "120 local axes = 120 antipodal E8 root lines",
+        },
+        "innerComparisonToObstruction": {
+            "fixedObstructionPointsOfPacketAxisStabilizer": fixed_inner,
+            "isomorphic": bool(fixed_inner),
+        },
+        "outerTwistedComparisonToObstruction": {
+            "fixedObstructionPointsOfTwistedPacketAxisStabilizer": fixed_outer,
+            "isomorphic": bool(fixed_outer),
+            "explicitEquivariantBijectionVerified": outer_bijection is not None,
+            "bijection": outer_bijection,
+        },
+        "bt796D12Shell": {
+            "degree": 2160,
+            "childStabilizerOrder": 12,
+            "naturalPacketAxisParentsFixed": len(fixed_by_H12_natural),
+            "outerTwistedPacketAxisParentsFixed": len(fixed_by_H12_outer),
+            "naturalTwoCover": natural_cover,
+            "outerTwistedTwoCover": outer_cover,
         },
         "theorem": (
-            "The transitive 1080-object packet/local-axis carrier is isomorphic as a "
-            "PSp(4,3)-set to the 27x40 obstruction carrier.  Moreover the already "
-            "identified 2160 packet/K3,3 = BT796 D12 shell admits an explicit "
-            "PSp-equivariant two-to-one map onto this carrier: its order-12 base "
-            "stabilizer is contained with index two in the order-24 packet-axis "
-            "stabilizer.  Hence H12 is normal in H24 and H24/H12 is C2, giving the "
-            "finite cover its deck involution."
+            "The natural packet/local-axis degree-1080 PSp action is NOT silently "
+            "identified with the chartxline obstruction action unless the inner fixed "
+            "set above is nonempty.  Conjugation by the explicit nonsquare similitude "
+            "tests the unique outer sheet objectwise; a nonempty outer fixed set plus "
+            "the verified bijection proves that the two degree-1080 actions differ by "
+            "the nontrivial outer automorphism.  The recorded D12-shell cover fields "
+            "independently decide on which sheet, if either, the 2160 carrier admits an "
+            "index-two packet-axis quotient."
         ),
         "e8Boundary": (
-            "Pass123 independently identifies each of the 120 local W33 axes with an "
-            "antipodal E8 root line.  The present theorem therefore equips each "
-            "obstruction coordinate with packet plus intrinsic-E8-axis data.  It does "
-            "not yet prove that this axis belongs to the packet's particular D4+D4 "
-            "root subsystem in a common signed-root coordinate gauge."
+            "Pass123 makes the local-axis coordinate an intrinsic E8 antipodal-axis "
+            "label.  Even if the outer-twist isomorphism passes, a separate common-root "
+            "coordinate computation is required before saying that the axis lies inside "
+            "the packet's selected D4+D4 subsystem."
         ),
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(out, indent=2, sort_keys=True) + "\n")
     print(json.dumps({
         "status": "PASS",
-        "fixedSource": len(fixed_source),
-        "H12FixedParents": len(fixed_by_H12),
-        "coverFibres": dict(Counter(fibres.values())),
-        "samePacket": same_packet,
+        "innerFixed": len(fixed_inner),
+        "outerFixed": len(fixed_outer),
+        "outerIso": outer_bijection is not None,
+        "naturalH12Parents": len(fixed_by_H12_natural),
+        "outerH12Parents": len(fixed_by_H12_outer),
+        "naturalCover": natural_cover is not None,
+        "outerCover": outer_cover is not None,
     }, sort_keys=True))
 
 
