@@ -1,19 +1,20 @@
 #!/usr/bin/env python3
 """Typed non-Clifford resource scheduler for the W33/Holonet packet machine.
 
-The runtime previously had a scalar magic budget.  This module turns it into a
+The runtime previously had a scalar magic budget. This module turns it into a
 scarce typed resource with reservations, packet-slot allocation, audit status,
 and an explicit fault-tolerance adapter gate.
 
 Two layers are kept separate:
   * HESSE_T_RAW: repository-local exact qutrit T teleportation/ABI witness.
     It is usable for logical simulation/refinement but is NOT fault tolerant.
-  * external qutrit MSD/code candidates: may be registered as prior-art
-    adapters, but the scheduler refuses to label their output fault tolerant
-    until a W33 encoding map AND threshold/noise certificate are supplied.
+  * external qutrit MSD/code candidates: may be reconstructed and verified as
+    codes, but the scheduler refuses FAULT_TOLERANT assurance until the W33
+    encoding/intertwiner and mapped threshold/noise certificate both exist.
 
-This prevents a scheduler from converting "magic-capable" into an unjustified
-physical-universality claim.
+The [[20,7,2]]_3 candidate is no longer represented by hand-set booleans. Its
+status is derived from ``w33_qutrit_20_7_2_adapter_attack.verify()`` so scheduler
+assurance cannot drift away from the executable adapter audit.
 """
 from __future__ import annotations
 
@@ -23,6 +24,7 @@ import json
 from typing import Any
 
 import w33_qutrit_t_teleportation_port as tport
+import w33_qutrit_20_7_2_adapter_attack as adapter2072
 
 
 def canonical(value: Any) -> bytes:
@@ -51,13 +53,19 @@ HESSE_T_RAW = MagicResourceType(
 class FTAdapter:
     name: str
     code_parameters: str
+    external_code_verified: bool
     encoding_map_verified: bool
     threshold_certificate_verified: bool
+    audit_digest: str
     source_class: str = "EXTERNAL_PRIOR_ART_CANDIDATE"
 
     @property
     def enabled(self) -> bool:
-        return self.encoding_map_verified and self.threshold_certificate_verified
+        return (
+            self.external_code_verified
+            and self.encoding_map_verified
+            and self.threshold_certificate_verified
+        )
 
 
 @dataclass(frozen=True)
@@ -117,7 +125,7 @@ class MagicFactoryScheduler:
         token = self._free_raw()
         self.reserved.add(token.token_id)
         # Architecture policy: one typed injection point in the first epilogue
-        # word of each 72-tick microframe.  This is a scheduler slot, not a
+        # word of each 72-tick microframe. This is a scheduler slot, not a
         # measured hardware latency.
         tick = packet_index * 72 + 48
         body = {
@@ -157,8 +165,33 @@ class MagicFactoryScheduler:
         }
 
 
+def adapter_from_audit(audit: dict[str, Any]) -> FTAdapter:
+    external_checks = audit.get("checks", {})
+    repo = audit.get("w33_adapter_audit", {})
+    external_verified = (
+        audit.get("status") == "PASS"
+        and external_checks.get("published_puncture_gives_9x20_matrix") is True
+        and external_checks.get("css_encodes_7_qutrits") is True
+        and external_checks.get("weight2_Z_logical_exists") is True
+    )
+    # The audit intentionally exposes the selector/intertwiner state separately
+    # from code correctness. Threshold evidence must be for the mapped adapter,
+    # not the unrelated [[5,1,3]]_3 stand-in.
+    encoding_verified = repo.get("explicit_encoding_map_present") is True
+    threshold_verified = repo.get("mapped_threshold_certificate_present") is True
+    return FTAdapter(
+        name="QUTRIT_TRIORTHOGONAL_20_7_2",
+        code_parameters="[[20,7,2]]_3",
+        external_code_verified=external_verified,
+        encoding_map_verified=encoding_verified,
+        threshold_certificate_verified=threshold_verified,
+        audit_digest=digest(audit),
+    )
+
+
 def verify() -> dict[str, Any]:
     teleport = tport.verify()
+    code_audit = adapter2072.verify()
     audit_digest = digest({"tport_status": teleport.get("status"), "checks": teleport.get("checks", {})})
     sched = MagicFactoryScheduler()
     tokens = sched.mint_raw(2, "batch-demo", audit_digest)
@@ -171,13 +204,7 @@ def verify() -> dict[str, Any]:
     except RuntimeError:
         overbook_blocked = True
 
-    # Prior-art adapter metadata alone is intentionally insufficient.
-    candidate = FTAdapter(
-        name="QUTRIT_TRIORTHOGONAL_20_7_2",
-        code_parameters="[[20,7,2]]_3",
-        encoding_map_verified=False,
-        threshold_certificate_verified=False,
-    )
+    candidate = adapter_from_audit(code_audit)
     sched.register_adapter(candidate)
     ft_refused = False
     try:
@@ -197,20 +224,23 @@ def verify() -> dict[str, Any]:
     snap = sched.snapshot()
     checks = {
         "exact_t_port_certificate_passes": teleport.get("status") == "PASS",
+        "external_20_7_2_code_reconstruction_passes": code_audit.get("status") == "PASS" and candidate.external_code_verified,
+        "adapter_status_is_derived_from_executable_audit": candidate.audit_digest == digest(code_audit),
         "raw_tokens_content_addressed": len(tokens) == 2 and all(t.token_id.startswith("sha256:") for t in tokens),
         "packet_slots_are_72_tick_aligned": r0.microframe_tick == 48 and r1.microframe_tick == 120,
         "inventory_cannot_be_overbooked": overbook_blocked,
-        "ft_candidate_is_fail_closed_without_w33_adapter": ft_refused and not candidate.enabled,
+        "ft_candidate_is_fail_closed_without_w33_intertwiner_and_mapped_threshold": ft_refused and not candidate.enabled,
         "reservation_consumes_exact_token": consumed.token_id == r0.token_id,
         "token_double_spend_blocked": consume_twice_blocked,
         "scheduler_keeps_assurance_explicit": all(r["assurance"] in {"EXACT_LOGICAL", "FAULT_TOLERANT"} for r in snap["reservations"]),
     }
     return {
-        "schema": "w33.magic-resource-scheduler.v1",
+        "schema": "w33.magic-resource-scheduler.v2",
         "status": "PASS" if all(checks.values()) else "FAIL",
         "checks": checks,
         "candidate_adapter": asdict(candidate) | {"enabled": candidate.enabled},
-        "interpretation": "Non-Clifford resources are reserved/consumed like typed accelerator tokens. Exact logical T and fault-tolerant T are distinct assurance classes; the latter remains refused until W33-specific encoding and threshold evidence exists.",
+        "adapter_audit_decision": code_audit.get("decision"),
+        "interpretation": "The published [[20,7,2]]_3 code is now an executable verified candidate, but FAULT_TOLERANT scheduling is still refused because code validity is not a W33 physical encoding and the mapped threshold certificate is absent.",
     }
 
 
