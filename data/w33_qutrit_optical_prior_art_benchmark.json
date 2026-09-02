@@ -1,0 +1,29 @@
+{
+  "schema": "w33.qutrit-optical-prior-art-benchmark.v1",
+  "evidence_class": "EXTERNAL_PRIOR_ART_MEASUREMENT_NOT_W33_HARDWARE",
+  "hardware_backed_for_w33": false,
+  "sources": [
+    {
+      "citation": "Imany et al., npj Quantum Information 5, 59 (2019)",
+      "doi": "10.1038/s41534-019-0173-8",
+      "platform": "single-photon time-frequency qudits",
+      "measurements": {
+        "3x3_SUM_computational_fidelity_mean": 0.92,
+        "3x3_SUM_computational_fidelity_sigma": 0.01,
+        "16x16_SUM_computational_fidelity_mean": 0.9589,
+        "16x16_SUM_computational_fidelity_sigma": 0.0005,
+        "intensity_modulator_extinction_ratio_db_approx": 25.0
+      }
+    },
+    {
+      "citation": "Meng et al., Physical Review A 109, 022612 (2024)",
+      "doi": "10.1103/PhysRevA.109.022612",
+      "platform": "4D polarization-spatial optical qudits; controlled-X4",
+      "measurements": {
+        "average_gate_fidelity": 0.9973,
+        "efficiency": 0.9947
+      }
+    }
+  ],
+  "admission_boundary": "These are measurements of other optical devices and encodings. They are useful engineering benchmarks only and MUST NOT set hardware_backed=true, populate the W33 device calibration packet, or close the W33 physical-threshold gate."
+}
