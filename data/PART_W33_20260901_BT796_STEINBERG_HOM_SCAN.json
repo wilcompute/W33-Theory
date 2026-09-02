@@ -1,0 +1,1841 @@
+{
+  "boundary": "This is finite characteristic-zero representation theory. A nonzero or exact dark-projector coupling does not identify a physical dark sector, particle species, field, energy, or experimental observable.",
+  "crossGramSteinbergSpanDimension": 9,
+  "equivariantHomDimension": 113,
+  "exactProjectorExpansions": {
+    "E_St3": [
+      {
+        "coefficient": "-1/18",
+        "crossOrbitPair": [
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": "1/24",
+        "crossOrbitPair": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": "1/24",
+        "crossOrbitPair": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": "1/8",
+        "crossOrbitPair": [
+          0,
+          7
+        ]
+      },
+      {
+        "coefficient": "-1/24",
+        "crossOrbitPair": [
+          0,
+          45
+        ]
+      },
+      {
+        "coefficient": "1/8",
+        "crossOrbitPair": [
+          1,
+          1
+        ]
+      },
+      {
+        "coefficient": "-1/8",
+        "crossOrbitPair": [
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": "1/8",
+        "crossOrbitPair": [
+          1,
+          5
+        ]
+      }
+    ],
+    "P": [
+      {
+        "coefficient": "1/24",
+        "crossOrbitPair": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": "1/24",
+        "crossOrbitPair": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": "7/24",
+        "crossOrbitPair": [
+          0,
+          7
+        ]
+      },
+      {
+        "coefficient": "-1/24",
+        "crossOrbitPair": [
+          0,
+          45
+        ]
+      },
+      {
+        "coefficient": "-1/24",
+        "crossOrbitPair": [
+          1,
+          1
+        ]
+      },
+      {
+        "coefficient": "-1/8",
+        "crossOrbitPair": [
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": "1/8",
+        "crossOrbitPair": [
+          1,
+          5
+        ]
+      }
+    ],
+    "Q_K33": [
+      {
+        "coefficient": "-1/36",
+        "crossOrbitPair": [
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": "-1/24",
+        "crossOrbitPair": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": "-1/24",
+        "crossOrbitPair": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": "-1/8",
+        "crossOrbitPair": [
+          0,
+          7
+        ]
+      },
+      {
+        "coefficient": "1/24",
+        "crossOrbitPair": [
+          0,
+          45
+        ]
+      },
+      {
+        "coefficient": "1/8",
+        "crossOrbitPair": [
+          1,
+          1
+        ]
+      },
+      {
+        "coefficient": "1/8",
+        "crossOrbitPair": [
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": "-1/8",
+        "crossOrbitPair": [
+          1,
+          5
+        ]
+      }
+    ],
+    "R": [
+      {
+        "coefficient": "-5/36",
+        "crossOrbitPair": [
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": "-1/24",
+        "crossOrbitPair": [
+          0,
+          7
+        ]
+      },
+      {
+        "coefficient": "1/6",
+        "crossOrbitPair": [
+          1,
+          1
+        ]
+      }
+    ],
+    "S_dark": [
+      {
+        "coefficient": "1/12",
+        "crossOrbitPair": [
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": "-1/8",
+        "crossOrbitPair": [
+          0,
+          7
+        ]
+      }
+    ]
+  },
+  "fullM3RealizedByTargetCrossGrams": true,
+  "groupOrder": 25920,
+  "independentCrossOrbitPairs": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      0,
+      7
+    ],
+    [
+      0,
+      25
+    ],
+    [
+      0,
+      45
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      5
+    ]
+  ],
+  "schema": "w33.20260901.bt796-steinberg-hom-scan.v1",
+  "singleOrbitDarkHits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    23,
+    25,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111
+  ],
+  "singleOrbitalGrams": [
+    {
+      "orbit": 0,
+      "primitiveSandwichScalars": {
+        "P": "8",
+        "Q": "6",
+        "R": "1",
+        "S": "9"
+      },
+      "steinbergActualRank": 162,
+      "steinbergRegularRank": 6,
+      "targetOrbitSize": 6
+    },
+    {
+      "orbit": 1,
+      "primitiveSandwichScalars": {
+        "P": "8",
+        "Q": "10",
+        "R": "7",
+        "S": "7"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 6
+    },
+    {
+      "orbit": 2,
+      "primitiveSandwichScalars": {
+        "P": "8",
+        "Q": "10",
+        "R": "7",
+        "S": "7"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 6
+    },
+    {
+      "orbit": 3,
+      "primitiveSandwichScalars": {
+        "P": "8",
+        "Q": "10",
+        "R": "7",
+        "S": "7"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 6
+    },
+    {
+      "orbit": 4,
+      "primitiveSandwichScalars": {
+        "P": "32/3",
+        "Q": "0",
+        "R": "16/3",
+        "S": "16"
+      },
+      "steinbergActualRank": 162,
+      "steinbergRegularRank": 6,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 5,
+      "primitiveSandwichScalars": {
+        "P": "40/3",
+        "Q": "22",
+        "R": "71/3",
+        "S": "13"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 6,
+      "primitiveSandwichScalars": {
+        "P": "40/3",
+        "Q": "22",
+        "R": "71/3",
+        "S": "13"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 7,
+      "primitiveSandwichScalars": {
+        "P": "32/3",
+        "Q": "12",
+        "R": "22/3",
+        "S": "10"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 8,
+      "primitiveSandwichScalars": {
+        "P": "40/3",
+        "Q": "22",
+        "R": "71/3",
+        "S": "13"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 9,
+      "primitiveSandwichScalars": {
+        "P": "40/3",
+        "Q": "26",
+        "R": "53/3",
+        "S": "7"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 10,
+      "primitiveSandwichScalars": {
+        "P": "40/3",
+        "Q": "22",
+        "R": "71/3",
+        "S": "13"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 11,
+      "primitiveSandwichScalars": {
+        "P": "40/3",
+        "Q": "26",
+        "R": "53/3",
+        "S": "7"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 12,
+      "primitiveSandwichScalars": {
+        "P": "8",
+        "Q": "6",
+        "R": "1",
+        "S": "9"
+      },
+      "steinbergActualRank": 162,
+      "steinbergRegularRank": 6,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 13,
+      "primitiveSandwichScalars": {
+        "P": "40/3",
+        "Q": "6",
+        "R": "11/3",
+        "S": "17"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 14,
+      "primitiveSandwichScalars": {
+        "P": "40/3",
+        "Q": "22",
+        "R": "71/3",
+        "S": "13"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 15,
+      "primitiveSandwichScalars": {
+        "P": "8",
+        "Q": "6",
+        "R": "9",
+        "S": "17"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 16,
+      "primitiveSandwichScalars": {
+        "P": "32/3",
+        "Q": "0",
+        "R": "16/3",
+        "S": "16"
+      },
+      "steinbergActualRank": 162,
+      "steinbergRegularRank": 6,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 17,
+      "primitiveSandwichScalars": {
+        "P": "32/3",
+        "Q": "0",
+        "R": "16/3",
+        "S": "16"
+      },
+      "steinbergActualRank": 162,
+      "steinbergRegularRank": 6,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 18,
+      "primitiveSandwichScalars": {
+        "P": "32/3",
+        "Q": "0",
+        "R": "16/3",
+        "S": "16"
+      },
+      "steinbergActualRank": 162,
+      "steinbergRegularRank": 6,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 19,
+      "primitiveSandwichScalars": {
+        "P": "32/3",
+        "Q": "0",
+        "R": "16/3",
+        "S": "16"
+      },
+      "steinbergActualRank": 162,
+      "steinbergRegularRank": 6,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 20,
+      "primitiveSandwichScalars": {
+        "P": "40/3",
+        "Q": "22",
+        "R": "71/3",
+        "S": "13"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 21,
+      "primitiveSandwichScalars": {
+        "P": "8",
+        "Q": "6",
+        "R": "9",
+        "S": "17"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 22,
+      "primitiveSandwichScalars": {
+        "P": "4",
+        "Q": "12",
+        "R": "32",
+        "S": "0"
+      },
+      "steinbergActualRank": 81,
+      "steinbergRegularRank": 3,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 23,
+      "primitiveSandwichScalars": {
+        "P": "44/3",
+        "Q": "8",
+        "R": "46/3",
+        "S": "18"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 24,
+      "primitiveSandwichScalars": {
+        "P": "4",
+        "Q": "12",
+        "R": "32",
+        "S": "0"
+      },
+      "steinbergActualRank": 81,
+      "steinbergRegularRank": 3,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 25,
+      "primitiveSandwichScalars": {
+        "P": "44/3",
+        "Q": "24",
+        "R": "58/3",
+        "S": "14"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 26,
+      "primitiveSandwichScalars": {
+        "P": "4",
+        "Q": "12",
+        "R": "32",
+        "S": "0"
+      },
+      "steinbergActualRank": 81,
+      "steinbergRegularRank": 3,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 27,
+      "primitiveSandwichScalars": {
+        "P": "44/3",
+        "Q": "24",
+        "R": "58/3",
+        "S": "14"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 28,
+      "primitiveSandwichScalars": {
+        "P": "32/3",
+        "Q": "0",
+        "R": "16/3",
+        "S": "16"
+      },
+      "steinbergActualRank": 162,
+      "steinbergRegularRank": 6,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 29,
+      "primitiveSandwichScalars": {
+        "P": "40/3",
+        "Q": "6",
+        "R": "11/3",
+        "S": "17"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 30,
+      "primitiveSandwichScalars": {
+        "P": "40/3",
+        "Q": "6",
+        "R": "11/3",
+        "S": "17"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 31,
+      "primitiveSandwichScalars": {
+        "P": "32/3",
+        "Q": "12",
+        "R": "22/3",
+        "S": "10"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 32,
+      "primitiveSandwichScalars": {
+        "P": "8",
+        "Q": "6",
+        "R": "9",
+        "S": "17"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 33,
+      "primitiveSandwichScalars": {
+        "P": "40/3",
+        "Q": "26",
+        "R": "53/3",
+        "S": "7"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 34,
+      "primitiveSandwichScalars": {
+        "P": "44/3",
+        "Q": "8",
+        "R": "46/3",
+        "S": "18"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 35,
+      "primitiveSandwichScalars": {
+        "P": "44/3",
+        "Q": "24",
+        "R": "58/3",
+        "S": "14"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 36,
+      "primitiveSandwichScalars": {
+        "P": "44/3",
+        "Q": "8",
+        "R": "46/3",
+        "S": "18"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 37,
+      "primitiveSandwichScalars": {
+        "P": "44/3",
+        "Q": "24",
+        "R": "58/3",
+        "S": "14"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 38,
+      "primitiveSandwichScalars": {
+        "P": "32/3",
+        "Q": "12",
+        "R": "22/3",
+        "S": "10"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 39,
+      "primitiveSandwichScalars": {
+        "P": "32/3",
+        "Q": "12",
+        "R": "22/3",
+        "S": "10"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 40,
+      "primitiveSandwichScalars": {
+        "P": "32/3",
+        "Q": "12",
+        "R": "22/3",
+        "S": "10"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 41,
+      "primitiveSandwichScalars": {
+        "P": "32/3",
+        "Q": "12",
+        "R": "22/3",
+        "S": "10"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 42,
+      "primitiveSandwichScalars": {
+        "P": "44/3",
+        "Q": "24",
+        "R": "58/3",
+        "S": "14"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 43,
+      "primitiveSandwichScalars": {
+        "P": "44/3",
+        "Q": "24",
+        "R": "58/3",
+        "S": "14"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 12
+    },
+    {
+      "orbit": 44,
+      "primitiveSandwichScalars": {
+        "P": "112/3",
+        "Q": "36",
+        "R": "50/3",
+        "S": "30"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 45,
+      "primitiveSandwichScalars": {
+        "P": "80/3",
+        "Q": "20",
+        "R": "58/3",
+        "S": "38"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 46,
+      "primitiveSandwichScalars": {
+        "P": "80/3",
+        "Q": "20",
+        "R": "58/3",
+        "S": "38"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 47,
+      "primitiveSandwichScalars": {
+        "P": "112/3",
+        "Q": "60",
+        "R": "122/3",
+        "S": "14"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 48,
+      "primitiveSandwichScalars": {
+        "P": "112/3",
+        "Q": "60",
+        "R": "122/3",
+        "S": "14"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 49,
+      "primitiveSandwichScalars": {
+        "P": "112/3",
+        "Q": "24",
+        "R": "20/3",
+        "S": "28"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 50,
+      "primitiveSandwichScalars": {
+        "P": "112/3",
+        "Q": "28",
+        "R": "74/3",
+        "S": "30"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 51,
+      "primitiveSandwichScalars": {
+        "P": "0",
+        "Q": "0",
+        "R": "0",
+        "S": "0"
+      },
+      "steinbergActualRank": 0,
+      "steinbergRegularRank": 0,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 52,
+      "primitiveSandwichScalars": {
+        "P": "0",
+        "Q": "0",
+        "R": "0",
+        "S": "0"
+      },
+      "steinbergActualRank": 0,
+      "steinbergRegularRank": 0,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 53,
+      "primitiveSandwichScalars": {
+        "P": "112/3",
+        "Q": "28",
+        "R": "74/3",
+        "S": "30"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 54,
+      "primitiveSandwichScalars": {
+        "P": "16",
+        "Q": "12",
+        "R": "26",
+        "S": "18"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 55,
+      "primitiveSandwichScalars": {
+        "P": "80/3",
+        "Q": "28",
+        "R": "154/3",
+        "S": "14"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 56,
+      "primitiveSandwichScalars": {
+        "P": "80/3",
+        "Q": "28",
+        "R": "154/3",
+        "S": "14"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 57,
+      "primitiveSandwichScalars": {
+        "P": "80/3",
+        "Q": "20",
+        "R": "58/3",
+        "S": "38"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 58,
+      "primitiveSandwichScalars": {
+        "P": "80/3",
+        "Q": "20",
+        "R": "106/3",
+        "S": "22"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 59,
+      "primitiveSandwichScalars": {
+        "P": "16",
+        "Q": "12",
+        "R": "10",
+        "S": "34"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 60,
+      "primitiveSandwichScalars": {
+        "P": "16",
+        "Q": "12",
+        "R": "26",
+        "S": "18"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 61,
+      "primitiveSandwichScalars": {
+        "P": "80/3",
+        "Q": "20",
+        "R": "58/3",
+        "S": "38"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 62,
+      "primitiveSandwichScalars": {
+        "P": "80/3",
+        "Q": "20",
+        "R": "106/3",
+        "S": "22"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 63,
+      "primitiveSandwichScalars": {
+        "P": "16",
+        "Q": "12",
+        "R": "10",
+        "S": "34"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 64,
+      "primitiveSandwichScalars": {
+        "P": "16",
+        "Q": "12",
+        "R": "26",
+        "S": "18"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 65,
+      "primitiveSandwichScalars": {
+        "P": "112/3",
+        "Q": "36",
+        "R": "50/3",
+        "S": "30"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 66,
+      "primitiveSandwichScalars": {
+        "P": "112/3",
+        "Q": "28",
+        "R": "74/3",
+        "S": "30"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 67,
+      "primitiveSandwichScalars": {
+        "P": "112/3",
+        "Q": "36",
+        "R": "50/3",
+        "S": "30"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 68,
+      "primitiveSandwichScalars": {
+        "P": "112/3",
+        "Q": "60",
+        "R": "122/3",
+        "S": "14"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 69,
+      "primitiveSandwichScalars": {
+        "P": "80/3",
+        "Q": "20",
+        "R": "58/3",
+        "S": "38"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 70,
+      "primitiveSandwichScalars": {
+        "P": "16",
+        "Q": "12",
+        "R": "26",
+        "S": "18"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 71,
+      "primitiveSandwichScalars": {
+        "P": "16",
+        "Q": "12",
+        "R": "10",
+        "S": "34"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 72,
+      "primitiveSandwichScalars": {
+        "P": "80/3",
+        "Q": "20",
+        "R": "106/3",
+        "S": "22"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 73,
+      "primitiveSandwichScalars": {
+        "P": "80/3",
+        "Q": "20",
+        "R": "58/3",
+        "S": "38"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 74,
+      "primitiveSandwichScalars": {
+        "P": "16",
+        "Q": "12",
+        "R": "26",
+        "S": "18"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 75,
+      "primitiveSandwichScalars": {
+        "P": "16",
+        "Q": "12",
+        "R": "10",
+        "S": "34"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 76,
+      "primitiveSandwichScalars": {
+        "P": "80/3",
+        "Q": "20",
+        "R": "106/3",
+        "S": "22"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 77,
+      "primitiveSandwichScalars": {
+        "P": "112/3",
+        "Q": "36",
+        "R": "50/3",
+        "S": "30"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 78,
+      "primitiveSandwichScalars": {
+        "P": "112/3",
+        "Q": "28",
+        "R": "74/3",
+        "S": "30"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 79,
+      "primitiveSandwichScalars": {
+        "P": "112/3",
+        "Q": "36",
+        "R": "50/3",
+        "S": "30"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 80,
+      "primitiveSandwichScalars": {
+        "P": "112/3",
+        "Q": "60",
+        "R": "122/3",
+        "S": "14"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 81,
+      "primitiveSandwichScalars": {
+        "P": "112/3",
+        "Q": "24",
+        "R": "20/3",
+        "S": "28"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 82,
+      "primitiveSandwichScalars": {
+        "P": "80/3",
+        "Q": "28",
+        "R": "82/3",
+        "S": "38"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 83,
+      "primitiveSandwichScalars": {
+        "P": "80/3",
+        "Q": "28",
+        "R": "154/3",
+        "S": "14"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 84,
+      "primitiveSandwichScalars": {
+        "P": "80/3",
+        "Q": "28",
+        "R": "82/3",
+        "S": "38"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 85,
+      "primitiveSandwichScalars": {
+        "P": "80/3",
+        "Q": "28",
+        "R": "154/3",
+        "S": "14"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 86,
+      "primitiveSandwichScalars": {
+        "P": "80/3",
+        "Q": "20",
+        "R": "106/3",
+        "S": "22"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 87,
+      "primitiveSandwichScalars": {
+        "P": "80/3",
+        "Q": "20",
+        "R": "106/3",
+        "S": "22"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 88,
+      "primitiveSandwichScalars": {
+        "P": "112/3",
+        "Q": "36",
+        "R": "50/3",
+        "S": "30"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 89,
+      "primitiveSandwichScalars": {
+        "P": "80/3",
+        "Q": "28",
+        "R": "82/3",
+        "S": "38"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 90,
+      "primitiveSandwichScalars": {
+        "P": "80/3",
+        "Q": "28",
+        "R": "82/3",
+        "S": "38"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 91,
+      "primitiveSandwichScalars": {
+        "P": "80/3",
+        "Q": "28",
+        "R": "154/3",
+        "S": "14"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 92,
+      "primitiveSandwichScalars": {
+        "P": "16",
+        "Q": "12",
+        "R": "10",
+        "S": "34"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 93,
+      "primitiveSandwichScalars": {
+        "P": "16",
+        "Q": "12",
+        "R": "26",
+        "S": "18"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 94,
+      "primitiveSandwichScalars": {
+        "P": "112/3",
+        "Q": "24",
+        "R": "20/3",
+        "S": "28"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 95,
+      "primitiveSandwichScalars": {
+        "P": "112/3",
+        "Q": "24",
+        "R": "20/3",
+        "S": "28"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 96,
+      "primitiveSandwichScalars": {
+        "P": "112/3",
+        "Q": "24",
+        "R": "20/3",
+        "S": "28"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 97,
+      "primitiveSandwichScalars": {
+        "P": "112/3",
+        "Q": "24",
+        "R": "20/3",
+        "S": "28"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 98,
+      "primitiveSandwichScalars": {
+        "P": "112/3",
+        "Q": "28",
+        "R": "74/3",
+        "S": "30"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 99,
+      "primitiveSandwichScalars": {
+        "P": "112/3",
+        "Q": "28",
+        "R": "74/3",
+        "S": "30"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 100,
+      "primitiveSandwichScalars": {
+        "P": "112/3",
+        "Q": "60",
+        "R": "122/3",
+        "S": "14"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 101,
+      "primitiveSandwichScalars": {
+        "P": "112/3",
+        "Q": "60",
+        "R": "122/3",
+        "S": "14"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 102,
+      "primitiveSandwichScalars": {
+        "P": "80/3",
+        "Q": "28",
+        "R": "82/3",
+        "S": "38"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 103,
+      "primitiveSandwichScalars": {
+        "P": "16",
+        "Q": "12",
+        "R": "26",
+        "S": "18"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 104,
+      "primitiveSandwichScalars": {
+        "P": "16",
+        "Q": "12",
+        "R": "26",
+        "S": "18"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 105,
+      "primitiveSandwichScalars": {
+        "P": "80/3",
+        "Q": "28",
+        "R": "82/3",
+        "S": "38"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 106,
+      "primitiveSandwichScalars": {
+        "P": "80/3",
+        "Q": "28",
+        "R": "154/3",
+        "S": "14"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 107,
+      "primitiveSandwichScalars": {
+        "P": "16",
+        "Q": "12",
+        "R": "10",
+        "S": "34"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 108,
+      "primitiveSandwichScalars": {
+        "P": "16",
+        "Q": "12",
+        "R": "26",
+        "S": "18"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 109,
+      "primitiveSandwichScalars": {
+        "P": "16",
+        "Q": "12",
+        "R": "10",
+        "S": "34"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 110,
+      "primitiveSandwichScalars": {
+        "P": "16",
+        "Q": "12",
+        "R": "10",
+        "S": "34"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 111,
+      "primitiveSandwichScalars": {
+        "P": "16",
+        "Q": "12",
+        "R": "10",
+        "S": "34"
+      },
+      "steinbergActualRank": 243,
+      "steinbergRegularRank": 9,
+      "targetOrbitSize": 24
+    },
+    {
+      "orbit": 112,
+      "primitiveSandwichScalars": {
+        "P": "0",
+        "Q": "0",
+        "R": "0",
+        "S": "0"
+      },
+      "steinbergActualRank": 0,
+      "steinbergRegularRank": 0,
+      "targetOrbitSize": 24
+    }
+  ],
+  "sourceCarrier": 1080,
+  "sourceStabilizerOrder": 24,
+  "status": "PASS",
+  "targetCarrier": 2160,
+  "targetOrbitSizes": [
+    6,
+    6,
+    6,
+    6,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24
+  ],
+  "theorem": "The complete PSp-equivariant incidence Hom space from the 1080 obstruction carrier to the BT796/packet48 2160 carrier is enumerated by source-stabilizer orbits. Its orbital Grams are tested copy-by-copy against P,R,S. If the cross-Gram Steinberg span has dimension nine, this single 2160 carrier realizes the full M3(Q) multiplicity algebra and the recorded rational expansion gives an explicit linear construction of the dark S projector from target intertwiners."
+}

@@ -1,0 +1,11 @@
+{
+  "schema":"w33.20260901.binary48-radical-socle.v1",
+  "status":"PASS",
+  "H1_48":{"submoduleDims":[0,1,9,10,14,15,23,24,24,24,25,33,34,38,39,47,48],"maximalDims":[34,47],"minimalDims":[1,14],"radicalDim":33,"socleDim":15},
+  "Omega48":{"submoduleDims":[0,1,9,10,15,16,23,24,24,24,24,24,24,24,24,24,25,32,33,38,39,47,48],"maximalDims":[47],"minimalDims":[1],"radicalDim":47,"socleDim":1},
+  "A24":{"submoduleDims":[0,1,9,10,24],"maximalDims":[10],"minimalDims":[1],"radicalDim":10,"socleDim":1},
+  "B24":{"submoduleDims":[0,14,15,23,24],"maximalDims":[23],"minimalDims":[14],"radicalDim":23,"socleDim":14},
+  "radicalSeriesDimensions":{"H1_48":[48,33,25,24,10,9,1,0],"Omega48":[48,47,25,23,1,0],"A24":[24,10,9,1,0],"B24":[24,23,15,14,0]},
+  "theorem":"The exact F2 submodule lattices determine maximal and minimal layers, the Jacobson radical series, and the first socle layer of H1_48, Omega48, A24 and B24. Any difference reported here distinguishes extension geometry even when composition-factor dimension multisets agree.",
+  "boundary":"These are module-lattice invariants over F2. They do not identify physical states or infer an Ext dimension beyond the independently proved nonsplit lower bound."
+}

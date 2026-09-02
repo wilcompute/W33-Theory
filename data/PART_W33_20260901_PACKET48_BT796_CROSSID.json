@@ -1,0 +1,33 @@
+{
+  "boundary": "This is an isomorphism of finite PSp(4,3) G-sets. The transferred transversal label is canonical only after the explicit base-slot match; no optical, spacetime, or dynamical interpretation is asserted.",
+  "bt796MatchedSlotStabilizerOrderProfile": {
+    "1": 1,
+    "2": 7,
+    "3": 2,
+    "6": 2
+  },
+  "bt796SlotCount": 2160,
+  "bt796SlotsFixedByPacket48BaseStabilizer": 3,
+  "explicitEquivariantBijectionVerified": true,
+  "groupOrder": 25920,
+  "k33ChartUnionVsTransferredLineIntersectionHistogram": {
+    "4": 2160
+  },
+  "packet48FlagCount": 2160,
+  "packet48StabilizerOrderProfile": {
+    "1": 1,
+    "2": 7,
+    "3": 2,
+    "6": 2
+  },
+  "packetSupportVsTransferredLineIntersectionHistogram": {
+    "2": 2160
+  },
+  "pairStabilizerOrder": 12,
+  "schema": "w33.20260901.packet48-bt796-crossid.v1",
+  "status": "PASS",
+  "theorem": "The 45x48 smallest packet/K3,3 flag relation and BT796's 540x4 chart-transversal slots are isomorphic as PSp(4,3)-sets. The proof is objectwise: the exact order-12 stabilizer of a packet-48 flag fixes a BT796 slot, and propagating that match under all 25,920 group elements gives a well-defined bijection of all 2,160 objects.",
+  "transversalLineMultiplicityProfile": {
+    "54": 40
+  }
+}
