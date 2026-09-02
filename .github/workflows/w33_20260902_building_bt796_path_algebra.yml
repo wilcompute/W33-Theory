@@ -1,0 +1,51 @@
+name: building BT796 path algebra
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20260902_building_bt796_path_algebra.py'
+      - '.github/workflows/w33_20260902_building_bt796_path_algebra.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: w33-building-bt796-path-algebra-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Dependencies
+        run: python -m pip install --disable-pip-version-check numpy scipy sympy networkx
+      - name: Execute full path algebra composition
+        shell: bash
+        run: |
+          set -o pipefail
+          python analysis/w33_20260902_building_bt796_path_algebra.py 2>&1 | tee analysis/PASS_20260902_BUILDING_BT796_PATH_ALGEBRA.log
+      - name: Freeze evidence
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('data/PART_W33_20260902_BUILDING_BT796_PATH_ALGEBRA.json').read_text())
+          assert d.get('status')=='PASS'
+          assert set(d['St81']['combinedTargetRankModuloGoodPrimes'].values())=={243}
+          assert set(d['St64']['combinedTargetRankModuloGoodPrimes'].values())=={192}
+          assert set(d['allSixTargetImagesCombinedRankModuloGoodPrimes'].values())=={435}
+          assert len(d['St81']['twoStepPathAlgebra']['matrixUnits'])==9
+          assert len(d['St64']['twoStepPathAlgebra']['matrixUnits'])==9
+          PY
+          git config user.name 'w33-evidence-bot'
+          git config user.email 'w33-evidence-bot@users.noreply.github.com'
+          git add -f data/PART_W33_20260902_BUILDING_BT796_PATH_ALGEBRA.json analysis/PASS_20260902_BUILDING_BT796_PATH_ALGEBRA.log
+          if ! git diff --cached --quiet; then
+            git commit -m 'Freeze building BT796 M3 plus M3 path algebra'
+            git pull --rebase origin master
+            git push origin HEAD:master
+          fi
