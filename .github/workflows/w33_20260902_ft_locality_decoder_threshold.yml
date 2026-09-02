@@ -1,70 +1,93 @@
-name: W33 qutrit optical noise logical66 closure
+name: W33 qutrit physical frontier closure
 
 on:
   push:
     branches: [master]
     paths:
-      - 'analysis/w33_qutrit_20_7_2_multiminor_optimizer.py'
-      - 'analysis/w33_qutrit_20_7_2_w33_route_compiler.py'
-      - 'analysis/w33_qutrit_20_7_2_packet_decoder.py'
-      - 'analysis/w33_qutrit_20_7_2_logical_quotient.py'
-      - 'analysis/w33_qutrit_20_7_2_optical_primitive.py'
-      - 'analysis/w33_qutrit_20_7_2_circuit_noise.py'
-      - 'analysis/w33_qutrit_20_7_2_threshold.py'
-      - 'analysis/w33_qutrit_20_7_2_to_66_bridge.py'
-      - 'analysis/w33_qutrit_20_7_2_ft_closure.py'
-      - 'analysis/w33_qutrit_20_7_2_adapter_attack.py'
+      - 'analysis/w33_qutrit_20_7_2_*.py'
+      - 'analysis/w33_qutrit_optical_calibration_ingest.py'
+      - 'analysis/w33_k12_singular_css_closure.py'
       - 'analysis/w33_magic_resource_scheduler.py'
-      - 'w33_pass79_full_closure.py'
       - 'analysis/w33_reye_k12_orientable_horizon_completion.py'
+      - 'analysis/w33_holonet_system.py'
+      - 'data/w33_qutrit_optical_*.json'
+      - 'w33_pass79_full_closure.py'
       - '.github/workflows/w33_20260902_ft_locality_decoder_threshold.yml'
   workflow_dispatch:
 
 jobs:
-  verify-frontier:
+  topology-recode:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
-    env:
-      W33_WEIGHT3_EXHAUSTIVE: '0'
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --disable-pip-version-check numpy
+      - name: Syntax check new exact witnesses
+        run: |
+          python -m py_compile \
+            analysis/w33_k12_singular_css_closure.py \
+            analysis/w33_qutrit_20_7_2_to_66_bridge.py \
+            analysis/w33_qutrit_20_7_2_to_66_recode_circuit.py \
+            analysis/w33_qutrit_optical_calibration_ingest.py
+      - name: Prove singular K12 topology and native gauge-fixed code
+        run: python analysis/w33_k12_singular_css_closure.py > w33_k12_singular_css.json
+      - name: Prove logical 20-to-66 bridge
+        run: python analysis/w33_qutrit_20_7_2_to_66_bridge.py > w33_20_to_66_bridge.json
+      - name: Compile recode tableau and prove naive FT no-go
+        run: python analysis/w33_qutrit_20_7_2_to_66_recode_circuit.py > w33_20_to_66_recode.json
+      - uses: actions/upload-artifact@v4
         with:
-          python-version: '3.12'
-      - name: Install exact finite optimization dependencies
-        run: python -m pip install --disable-pip-version-check numpy cryptography ortools
-      - name: Syntax-check physical frontier modules
+          name: w33-k12-recode-exact-witnesses
+          path: |
+            w33_k12_singular_css.json
+            w33_20_to_66_bridge.json
+            w33_20_to_66_recode.json
+
+  verify-frontier:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env: {W33_WEIGHT3_EXHAUSTIVE: '0'}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --disable-pip-version-check numpy cryptography ortools
+      - name: Syntax-check frontier modules
         run: |
           python -m py_compile \
             analysis/w33_qutrit_20_7_2_logical_quotient.py \
             analysis/w33_qutrit_20_7_2_optical_primitive.py \
+            analysis/w33_qutrit_optical_calibration_ingest.py \
             analysis/w33_qutrit_20_7_2_circuit_noise.py \
+            analysis/w33_qutrit_20_7_2_fault_location_census.py \
+            analysis/w33_k12_singular_css_closure.py \
             analysis/w33_qutrit_20_7_2_to_66_bridge.py \
+            analysis/w33_qutrit_20_7_2_to_66_recode_circuit.py \
             analysis/w33_qutrit_20_7_2_adapter_attack.py \
             analysis/w33_magic_resource_scheduler.py \
             analysis/w33_qutrit_20_7_2_ft_closure.py
-      - name: Execute integrated physical-frontier closure fast lane
+      - name: Verify calibration evidence scoping
+        run: python analysis/w33_qutrit_optical_calibration_ingest.py > w33_optical_calibration_ingest.json
+      - name: Execute integrated frontier closure
         run: python analysis/w33_qutrit_20_7_2_ft_closure.py > w33_qutrit_ft_closure.json
-      - name: Show closure certificate
-        run: cat w33_qutrit_ft_closure.json
       - uses: actions/upload-artifact@v4
         with:
           name: w33-qutrit-physical-frontier-closure
-          path: w33_qutrit_ft_closure.json
-          if-no-files-found: error
+          path: |
+            w33_optical_calibration_ingest.json
+            w33_qutrit_ft_closure.json
 
   exhaustive-logical-weight3:
     runs-on: ubuntu-latest
     timeout-minutes: 45
-    env:
-      W33_WEIGHT3_EXHAUSTIVE: '1'
+    env: {W33_WEIGHT3_EXHAUSTIVE: '1'}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: Install algebra dependency
-        run: python -m pip install --disable-pip-version-check numpy
+        with: {python-version: '3.12'}
+      - run: python -m pip install --disable-pip-version-check numpy
       - name: Exhaustively resolve all weight-2 and weight-3 logical quotient events
         run: python analysis/w33_qutrit_20_7_2_logical_quotient.py > w33_qutrit_logical_quotient_exhaustive.json
       - name: Show compact size and status
@@ -73,4 +96,3 @@ jobs:
         with:
           name: w33-qutrit-logical-quotient-weight3-exhaustive
           path: w33_qutrit_logical_quotient_exhaustive.json
-          if-no-files-found: error
