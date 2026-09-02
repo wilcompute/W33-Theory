@@ -29,9 +29,9 @@ jobs:
         run: |
           git config user.name w33-evidence-bot
           git config user.email w33-evidence-bot@users.noreply.github.com
-          git add data/PART_W33_20260902_MOD3_PGSP_EXTENSION_TWIN.json analysis/MOD3_PGSP_EXTENSION_TWIN.log
+          git add -f data/PART_W33_20260902_MOD3_PGSP_EXTENSION_TWIN.json analysis/MOD3_PGSP_EXTENSION_TWIN.log
           if ! git diff --cached --quiet; then
-            git commit -m 'Freeze mod3 PGSp extension twin evidence'
+            git commit -m 'Freeze corrected mod3 PGSp extension evidence'
             git pull --rebase origin master
             git push origin HEAD:master
           fi
