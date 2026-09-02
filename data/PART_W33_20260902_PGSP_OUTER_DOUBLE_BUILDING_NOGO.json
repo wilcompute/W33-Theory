@@ -1,0 +1,50 @@
+{
+  "boundary": "This is finite character/permutation-group structure. Nonextendability of this local S6 twist does not exclude other correspondences between the two 216 carriers that are not induced by group automorphisms.",
+  "buildingCharacters": {
+    "St64": {
+      "degree": 64,
+      "fixedByExplicitOuter": true,
+      "norm": 1
+    },
+    "St81": {
+      "degree": 81,
+      "fixedByExplicitOuter": true,
+      "norm": 1
+    },
+    "crossInnerProduct": 0,
+    "degreePreservationNoGo": "Any automorphism preserves character degree, so no automorphism of PSp4(3) can exchange degree 81 with degree 64."
+  },
+  "consequence": "If the common-spread S6 fibres are related by the exceptional outer automorphism of S6, that fibre twist does not extend to the global PGSp outer automorphism of PSp4(3). It is a local nonextendable outer twist inside the spread stabilizer.",
+  "groupOrder": 25920,
+  "outerSimilitude": {
+    "involutionOnGroup": true,
+    "matrixMod3": "diag(1,2,1,2)",
+    "multiplier": -1,
+    "nontrivial": true
+  },
+  "schema": "w33.20260902.pgsp-outer-double-building-nogo.v1",
+  "selectors": {
+    "circuit216": {
+      "fixedByExplicitOuter": true,
+      "multiplicity64": 0,
+      "multiplicity81": 1
+    },
+    "hemisystem216": {
+      "fixedByExplicitOuter": true,
+      "multiplicity64": 1,
+      "multiplicity81": 0
+    },
+    "outerTwistedCircuitEqualsHemisystem": false,
+    "outerTwistedHemisystemEqualsCircuit": false,
+    "twistedCircuitMultiplicities": [
+      0,
+      1
+    ],
+    "twistedHemisystemMultiplicities": [
+      1,
+      0
+    ]
+  },
+  "status": "PASS",
+  "theorem": "The actual PGSp(4,3)/PSp(4,3) outer involution does not exchange the two building Steinbergs or the circuit/hemisystem selector characters. Character degree already forbids St81<->St64 under any automorphism; the explicit multiplier-minus-one similitude is checked elementwise on all 25,920 group elements and preserves the 64/81 selector pattern under twisting."
+}
