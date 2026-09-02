@@ -1,22 +1,24 @@
 #!/usr/bin/env python3
 """Proof-carrying execution passport for the W33/Holonet runtime stack.
 
-Version 2 promotes three previously separate runtime control planes into the
-packet identity itself:
-  * capability authority epoch + selective revocation root,
-  * deterministic asynchronous schedule root,
-  * temporal Merkle root-registry identity.
+Version 3 commits the complete runtime control plane that can change an
+execution without changing the guest image:
 
-The passport already binds guest validation, component link, memory capability
-and snapshot, packet refinement, immutable machine carrier, the two distinct
+* capability authority epoch + selective revocation root,
+* wait-for/deadlock graph root,
+* typed cancellation-event root,
+* deterministic asynchronous wake-schedule root,
+* temporal Merkle root-registry identity.
+
+The passport also binds guest validation, component link, memory capability and
+snapshot, packet refinement, immutable machine carrier, the two distinct
 order-51840 symmetry namespaces, magic budget, and reversible-history policy.
 A packet is admitted only against the exact passport, current capability epoch,
 and current revocation root.
 
 The passport digest is an integrity commitment, not a digital signature or a
-remote-attestation certificate. Production authorization remains the signed /
-hardware-root layer (the sibling Holotrade runtime binds passports into signed
-receipt metadata).
+remote-attestation certificate.  Production authorization is a separate
+hardware-root/signed-receipt layer.
 """
 from __future__ import annotations
 
@@ -49,10 +51,6 @@ def is_digest(value: str) -> bool:
     return isinstance(value, str) and value.startswith("sha256:") and len(value) == 71
 
 
-def logical_dim(carrier: Carrier) -> int:
-    return 81 if carrier == Carrier.CIRCUIT_ST81 else 64
-
-
 @dataclass(frozen=True)
 class Evidence:
     name: str
@@ -77,6 +75,8 @@ class ExecutionPassport:
     erasure_policy: str
     capability_epoch: int
     revocation_root: str
+    wait_for_root: str
+    cancellation_root: str
     schedule_root: str
     gc_registry_root: str
     evidence: tuple[Evidence, ...]
@@ -107,6 +107,7 @@ REQUIRED_EVIDENCE = {
     "component-linker",
     "packet-refinement",
     "magic-port-abi",
+    "concurrency-replay",
 }
 
 
@@ -114,7 +115,7 @@ def validate_passport(passport: ExecutionPassport) -> dict[str, Any]:
     expected_dim = 81 if passport.carrier == Carrier.CIRCUIT_ST81.value else 64 if passport.carrier == Carrier.PAIR_ST64.value else None
     evidence_names = {e.name for e in passport.evidence if e.status in {"PASS", "VALIDATED", "VERIFIED"}}
     checks = {
-        "schema_v2": passport.schema == "w33.execution-passport.v2",
+        "schema_v3": passport.schema == "w33.execution-passport.v3",
         "known_carrier": expected_dim is not None,
         "logical_dimension_matches_carrier": expected_dim == passport.logical_dimension,
         "memory_is_content_addressed": is_digest(passport.memory_root),
@@ -126,6 +127,8 @@ def validate_passport(passport: ExecutionPassport) -> dict[str, Any]:
         "erasure_policy_typed": passport.erasure_policy in {"RETAIN_OR_UNCOMPUTE", "EXPLICIT_DISCARD_ONLY"},
         "capability_epoch_nonnegative": isinstance(passport.capability_epoch, int) and passport.capability_epoch >= 0,
         "revocation_root_committed": is_digest(passport.revocation_root),
+        "wait_for_graph_committed": is_digest(passport.wait_for_root),
+        "cancellation_event_committed": is_digest(passport.cancellation_root),
         "async_schedule_committed": is_digest(passport.schedule_root),
         "gc_registry_committed": is_digest(passport.gc_registry_root),
         "runtime_retype_forbidden": passport.runtime_retype == "FORBIDDEN",
@@ -152,6 +155,7 @@ def admit_packet(packet: PacketRequest, passport: ExecutionPassport) -> dict[str
 def verify() -> dict[str, Any]:
     from w33_capability_epoch_revocation import RevocationAuthority
     from w33_temporal_merkle_gc import RootRegistry
+    from w33_concurrency_replay_certificate import run_concurrency
 
     interface = Interface("w33:ipc36", (("send", FuncSig(("u32", "u32", "handle36"), ("future<u32>",), True)),))
     link = ComponentLinker().link(
@@ -167,19 +171,20 @@ def verify() -> dict[str, Any]:
     authority = RevocationAuthority("passport-demo-authority")
     registry = RootRegistry()
     registry.pin("LIVE_VM", "passport-demo", memory.root, "STRONG")
-    schedule_root = digest({
-        "scheduler": "record-replay",
-        "operations": ["send:first", "recv:first", "pump"],
-    })
+    concurrency = run_concurrency(
+        {"component-A": 10, "component-B": 1, "component-C": 5},
+        ["send:first", "send:second", "recv:first", "pump", "recv:second"],
+    )
 
     evidence = (
         Evidence("guest-validator", "VALIDATED", file_digest("analysis/w33_wasm3_capability_runtime.py")),
         Evidence("component-linker", "PASS", file_digest("analysis/w33_component_async36.py")),
         Evidence("packet-refinement", "PASS", file_digest("rtl/w33_universal_packet_microsequencer.v")),
         Evidence("magic-port-abi", "VERIFIED", file_digest("data/bt1385_hesse_sic_t_port_abi.json")),
+        Evidence("concurrency-replay", "PASS", file_digest("analysis/w33_concurrency_replay_certificate.py")),
     )
     passport = ExecutionPassport(
-        schema="w33.execution-passport.v2",
+        schema="w33.execution-passport.v3",
         guest_image=digest({"guest": "demo-component"}),
         carrier=Carrier.CIRCUIT_ST81.value,
         logical_dimension=81,
@@ -194,7 +199,9 @@ def verify() -> dict[str, Any]:
         erasure_policy="EXPLICIT_DISCARD_ONLY",
         capability_epoch=authority.epoch,
         revocation_root=authority.root,
-        schedule_root=schedule_root,
+        wait_for_root=concurrency["wait_for_root"],
+        cancellation_root=concurrency["cancellation_root"],
+        schedule_root=concurrency["async_schedule_root"],
         gc_registry_root=registry.registry_root,
         evidence=evidence,
     )
@@ -212,8 +219,8 @@ def verify() -> dict[str, Any]:
     wrong_carrier = admit_packet(replace(packet, carrier=Carrier.PAIR_ST64.value), passport)
     stale_epoch = admit_packet(replace(packet, capability_epoch=passport.capability_epoch + 1), passport)
     wrong_revocation = admit_packet(replace(packet, revocation_root=digest({"revoked": True})), passport)
-    tampered_passport = replace(passport, schedule_root=digest({"schedule": "tampered"}))
-    stale_id = admit_packet(packet, tampered_passport)
+    altered_cancel = replace(passport, cancellation_root=digest({"victim": "component-C"}))
+    stale_id = admit_packet(packet, altered_cancel)
     aliased = validate_passport(replace(passport, projective_weyl_namespace=passport.clifford_namespace))
 
     checks = {
@@ -222,23 +229,31 @@ def verify() -> dict[str, Any]:
         "carrier_relabel_refused": not wrong_carrier["ok"],
         "stale_capability_epoch_refused": not stale_epoch["ok"],
         "wrong_revocation_root_refused": not wrong_revocation["ok"],
-        "schedule_mutation_changes_identity": tampered_passport.passport_id != passport.passport_id and not stale_id["ok"],
+        "cancellation_mutation_changes_identity": altered_cancel.passport_id != passport.passport_id and not stale_id["ok"],
         "equal_order_namespace_alias_refused": not aliased["ok"],
-        "control_planes_are_content_addressed": all(is_digest(x) for x in (passport.revocation_root, passport.schedule_root, passport.gc_registry_root)),
-        "evidence_spans_guest_component_packet_magic": REQUIRED_EVIDENCE == {e.name for e in evidence},
+        "control_planes_are_content_addressed": all(is_digest(x) for x in (
+            passport.revocation_root,
+            passport.wait_for_root,
+            passport.cancellation_root,
+            passport.schedule_root,
+            passport.gc_registry_root,
+        )),
+        "evidence_spans_guest_component_packet_magic_concurrency": REQUIRED_EVIDENCE == {e.name for e in evidence},
     }
     return {
-        "schema": "w33.execution-passport-certificate.v2",
+        "schema": "w33.execution-passport-certificate.v3",
         "status": "PASS" if all(checks.values()) else "FAIL",
         "passport_id": passport.passport_id,
         "control_plane": {
             "capability_epoch": passport.capability_epoch,
             "revocation_root": passport.revocation_root,
+            "wait_for_root": passport.wait_for_root,
+            "cancellation_root": passport.cancellation_root,
             "schedule_root": passport.schedule_root,
             "gc_registry_root": passport.gc_registry_root,
         },
         "checks": checks,
-        "interpretation": "Packet identity now commits authority epoch/revocation, asynchronous wake schedule, and retained-state reachability in addition to guest, memory, carrier, packet, magic, and history semantics.",
+        "interpretation": "Packet identity now commits the wait graph, authorized deadlock resolution, wake schedule, authority epoch/revocation, and retained-state reachability in addition to guest, memory, carrier, packet, magic, and history semantics.",
         "honesty_boundary": "The SHA-256 passport is an integrity commitment, not cryptographic authorization, distributed revocation consensus, or remote attestation.",
     }
 
