@@ -2,9 +2,9 @@
 """Numerical routed-exposure noise experiment for the W33 [[20,7,2]]_3 adapter.
 
 This is deliberately a pseudothreshold experiment, not a physical FT threshold.
-The topological route compiler supplies an exact local-operation exposure count
-E_i for each of the first twenty input qutrits.  A stated phenomenological model
-then assigns independent nontrivial qutrit-Pauli probability
+The topological route compiler supplies a conservative routed-program exposure
+count E_i for each of the first twenty input qutrits. A stated phenomenological
+model then assigns independent nontrivial qutrit-Pauli probability
 
     p_i = 1 - (1-p_gate)^E_i
 
@@ -12,15 +12,19 @@ to external coordinate i, uniformly over the eight nonidentity X^a Z^b Paulis.
 
 For every p_gate on a deterministic grid we evaluate weight 0 and 1 exactly,
 and exhaustively classify all C(20,2)*8^2 = 12160 weight-2 Pauli patterns by the
-mapped [[20,7,2]]_3 syndrome and logical quotient.  The entire probability mass
-of weight >=3 is retained as an adversarial uncertainty envelope.  Therefore,
+mapped [[20,7,2]]_3 syndrome and logical quotient. The entire probability mass
+of weight >=3 is retained as an adversarial uncertainty envelope. Therefore,
 inside this explicit independent-exposure model, the reported lower/upper
-logical-error interval does not hide unenumerated higher-weight faults.
+BLOCK logical-error interval does not hide unenumerated higher-weight faults.
 
-The experiment can demonstrate whether the CURRENT non-FT routed encoder has a
-pseudothreshold under this model.  It cannot establish a hardware threshold:
-correlated optical faults, loss, ancilla/readout noise, leakage, decoder timing,
-and fault spread are not calibrated here.
+No division by the seven encoded logical qutrits is made: block failure is the
+quantity proved by the present quotient classifier. A grid point is called
+certified below bare p only when the worst-case conditional BLOCK logical-failure
+upper bound is itself less than p_gate, which is deliberately conservative.
+
+The experiment cannot establish a hardware threshold: correlated optical faults,
+loss, ancilla/readout noise, leakage, decoder timing, and fault spread are not
+calibrated here.
 """
 from __future__ import annotations
 
@@ -75,7 +79,7 @@ def pair_classification(Hx, Hz):
 
 
 def exact_weight012_bounds(p_gate, exposures, pairs):
-    p = [1.0 - (1.0 - float(p_gate)) ** int(max(1, e)) for e in exposures]
+    p = [1.0 - (1.0 - float(p_gate)) ** int(e) for e in exposures]
     q = [1.0 - x for x in p]
     P0 = math.prod(q)
     P1 = 0.0
@@ -100,9 +104,8 @@ def exact_weight012_bounds(p_gate, exposures, pairs):
     acceptance_lower = accepted_known
     acceptance_upper = min(1.0, accepted_known + Pge3)
     cond_lower = logical_lower / acceptance_upper if acceptance_upper > 0 else 1.0
-    cond_upper = logical_upper / acceptance_lower if acceptance_lower > 0 else 1.0
-    per_logical_lower = cond_lower / 7.0
-    per_logical_upper = min(1.0, cond_upper / 7.0)
+    raw_upper = logical_upper / acceptance_lower if acceptance_lower > 0 else 1.0
+    cond_upper = min(1.0, raw_upper)
     return {
         "p_gate": float(p_gate),
         "max_effective_coordinate_p": float(max(p)),
@@ -110,33 +113,31 @@ def exact_weight012_bounds(p_gate, exposures, pairs):
         "weight0": float(P0), "weight1": float(P1), "weight2": float(P2), "weight_ge3": float(Pge3),
         "weight2_detected": float(detected2), "weight2_benign_zero": float(benign2), "weight2_logical": float(malignant2),
         "acceptance_lower": float(acceptance_lower), "acceptance_upper": float(acceptance_upper),
-        "conditional_logical_lower": float(cond_lower), "conditional_logical_upper": float(cond_upper),
-        "per_logical_qutrit_lower": float(per_logical_lower), "per_logical_qutrit_upper": float(per_logical_upper),
-        "certified_below_bare_p": bool(per_logical_upper < float(p_gate)),
+        "conditional_block_logical_lower": float(cond_lower), "conditional_block_logical_upper": float(cond_upper),
+        "certified_block_below_bare_p": bool(cond_upper < float(p_gate)),
     }
 
 
 def asymptotic_coefficient(exposures, pairs):
-    # p_i = E_i p + O(p^2).  Weight-2 malignant mass therefore has coefficient
-    # sum E_i E_j malignant_ij/64 at order p^2.
+    # p_i = E_i p + O(p^2). Weight-2 malignant block mass therefore has
+    # coefficient sum E_i E_j malignant_ij/64 at order p^2.
     C = 0.0
     for (i, j), cls in pairs.items():
-        C += max(1, exposures[i]) * max(1, exposures[j]) * cls["malignant"] / 64.0
-    per_logical_C = C / 7.0
-    pstar = (1.0 / per_logical_C) if per_logical_C > 0 else None
-    return float(C), float(per_logical_C), (float(pstar) if pstar is not None else None)
+        C += exposures[i] * exposures[j] * cls["malignant"] / 64.0
+    pstar = (1.0 / C) if C > 0 else None
+    return float(C), (float(pstar) if pstar is not None else None)
 
 
 def verify(candidate_count=route.multi.DEFAULT_CANDIDATES):
     H, Hx, Hz = dec.code_matrices()
     routed = route.compile_routes(int(candidate_count))
-    exposures = [max(1, int(x)) for x in routed["metrics"]["logical_input_exposure_first20"]]
+    exposures = [int(x) for x in routed["metrics"]["logical_input_exposure_first20"]]
     pairs, malignant_patterns, benign_patterns = pair_classification(Hx, Hz)
     grid = [exact_weight012_bounds(p, exposures, pairs) for p in P_GRID]
-    C, C7, pstar = asymptotic_coefficient(exposures, pairs)
+    C, pstar = asymptotic_coefficient(exposures, pairs)
 
-    certified = [x["p_gate"] for x in grid if x["certified_below_bare_p"]]
-    uncertified = [x["p_gate"] for x in grid if not x["certified_below_bare_p"]]
+    certified = [x["p_gate"] for x in grid if x["certified_block_below_bare_p"]]
+    uncertified = [x["p_gate"] for x in grid if not x["certified_block_below_bare_p"]]
     bracket = None
     if certified and uncertified:
         low_candidates = [x for x in certified if x < min(uncertified)]
@@ -150,20 +151,21 @@ def verify(candidate_count=route.multi.DEFAULT_CANDIDATES):
         bracket = [None, float(min(uncertified))] if uncertified else None
 
     checks = {
-        "route_exposure_has_20_inputs": len(exposures) == 20 and all(x >= 1 for x in exposures),
+        "route_exposure_has_20_nonnegative_inputs": len(exposures) == 20 and all(x >= 0 for x in exposures),
+        "at_least_one_logical_input_is_exposed": any(x > 0 for x in exposures),
         "all_12160_weight2_paulis_enumerated": sum(sum(v.values()) for v in pairs.values()) == math.comb(20, 2) * 64,
         "distance2_has_malignant_weight2_patterns": malignant_patterns > 0,
         "weight1_is_detected_by_decoder_certificate": dec.verify(int(candidate_count))["checks"]["all_160_nontrivial_single_paulis_detected"],
-        "probability_bounds_are_ordered": all(0 <= x["conditional_logical_lower"] <= x["conditional_logical_upper"] <= 1 for x in grid),
+        "probability_bounds_are_ordered": all(0 <= x["conditional_block_logical_lower"] <= x["conditional_block_logical_upper"] <= 1 for x in grid),
         "higher_weight_mass_is_never_dropped": all(x["weight0"] + x["weight1"] + x["weight2"] + x["weight_ge3"] >= 1 - 1e-12 for x in grid),
     }
     checks = {k: bool(v) for k, v in checks.items()}
     return {
-        "schema": "w33.qutrit-20-7-2-routed-exposure-pseudothreshold.v1",
+        "schema": "w33.qutrit-20-7-2-routed-exposure-pseudothreshold.v2",
         "status": "PASS" if all(checks.values()) else "FAIL",
         "checks": checks,
         "noise_model": {
-            "type": "independent external qutrit depolarizing exposure derived from routed local-op counts",
+            "type": "independent external qutrit depolarizing exposure derived conservatively from routed macro-program counts",
             "coordinate_rule": "p_i=1-(1-p_gate)^E_i; nonidentity X^a Z^b uniform over 8 choices",
             "logical_input_exposure_first20": exposures,
             "measurement_noise": "not included",
@@ -176,14 +178,13 @@ def verify(candidate_count=route.multi.DEFAULT_CANDIDATES):
             "malignant_fraction": float(malignant_patterns / (math.comb(20, 2) * 64)),
         },
         "asymptotic": {
-            "block_logical_p2_coefficient": C,
-            "per_logical_qutrit_p2_coefficient": C7,
-            "leading_order_pseudothreshold_estimate": pstar,
+            "conditional_block_logical_p2_coefficient": C,
+            "leading_order_block_pseudothreshold_estimate": pstar,
         },
         "grid": grid,
-        "certified_grid_crossing_bracket": bracket,
-        "interpretation": "Within the stated independent exposure model, weight-0/1/2 behavior is exact and all weight>=3 probability is adversarially retained. A grid point is called certified-below-bare-p only when even the worst-case higher-weight upper bound lies below p_gate per logical qutrit.",
-        "boundary": "This is a numerical pseudothreshold experiment tied to the topological routed circuit, not a physical fault-tolerance threshold. It omits correlated optical errors, loss/leakage, syndrome measurement faults, calibrated gate infidelity, and decoder latency; those omissions prevent FT admission.",
+        "certified_block_grid_crossing_bracket": bracket,
+        "interpretation": "Within the stated independent exposure model, weight-0/1/2 behavior is exact and all weight>=3 probability is adversarially retained. A grid point is certified only when the worst-case conditional BLOCK logical-failure upper bound lies below the bare p_gate; no unsupported division by seven logical coordinates is used.",
+        "boundary": "This is a numerical block pseudothreshold experiment tied to the topological routed circuit, not a physical fault-tolerance threshold. It omits correlated optical errors, loss/leakage, syndrome measurement faults, calibrated gate infidelity, and decoder latency; those omissions prevent FT admission.",
     }
 
 
