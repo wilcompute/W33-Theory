@@ -6,6 +6,8 @@ on:
     paths:
       - 'analysis/w33_quorum_epoch_authority.py'
       - 'analysis/w33_qutrit_20_7_2_edge_css_no_go.py'
+      - 'analysis/w33_qutrit_20_7_2_adapter_attack.py'
+      - 'analysis/w33_magic_resource_scheduler.py'
       - 'analysis/w33_signed_epoch_bus.py'
       - 'analysis/w33_levi_next5_v5_common.py'
       - 'data/w33_qutrit_20_7_2_external_code.json'
