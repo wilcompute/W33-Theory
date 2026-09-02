@@ -4,7 +4,7 @@
 Running the stages in one interpreter is intentional: the deterministic
 multi-minor CP-SAT result is memoized and consumed unchanged by the route
 compiler, packet decoder, routed-exposure experiment, adapter audit and magic
-scheduler.  The output is a compact certificate summary; detailed modules remain
+scheduler. The output is a compact certificate summary; detailed modules remain
 independently executable.
 """
 from __future__ import annotations
@@ -25,17 +25,17 @@ def verify():
     c4 = threshold.verify()
     c5 = adapter.verify()
     c6 = magic.verify()
-    certs = [c1, c2, c3, c4, c5, c6]
     checks = {
         "multiminor_optimizer_passes": c1.get("status") == "PASS",
         "w33_route_compiler_passes": c2.get("status") == "PASS",
         "mapped_decoder_passes": c3.get("status") == "PASS",
-        "pseudothreshold_experiment_passes": c4.get("status") == "PASS",
+        "block_pseudothreshold_experiment_passes": c4.get("status") == "PASS",
+        "pseudothreshold_not_promoted_to_physical_ft": c5.get("w33_adapter_audit", {}).get("mapped_pseudothreshold_experiment_verified") is True and c5.get("w33_adapter_audit", {}).get("mapped_threshold_certificate_present") is False,
         "adapter_audit_passes_and_refuses_ft": c5.get("status") == "PASS" and not c5.get("w33_adapter_audit", {}).get("adapter_enabled", True),
         "magic_scheduler_passes_and_refuses_ft": c6.get("status") == "PASS" and not c6.get("candidate_adapter", {}).get("enabled", True),
     }
     return {
-        "schema": "w33.qutrit-20-7-2-ft-frontier-closure.v1",
+        "schema": "w33.qutrit-20-7-2-ft-frontier-closure.v2",
         "status": "PASS" if all(checks.values()) else "FAIL",
         "checks": checks,
         "optimizer": {
@@ -49,12 +49,12 @@ def verify():
         "noise_experiment": {
             "weight2_exact": c4.get("weight2_exact"),
             "asymptotic": c4.get("asymptotic"),
-            "certified_grid_crossing_bracket": c4.get("certified_grid_crossing_bracket"),
+            "certified_block_grid_crossing_bracket": c4.get("certified_block_grid_crossing_bracket"),
         },
         "ft_decision": c5.get("decision"),
         "remaining_blockers": c5.get("w33_adapter_audit", {}).get("blockers", []),
         "magic_candidate": c6.get("candidate_adapter"),
-        "boundary": "This closure proves exact finite algebraic/topological/decoder properties and a conservative pseudothreshold envelope under the stated phenomenological exposure model. It intentionally does not turn those results into calibrated photonic fault tolerance.",
+        "boundary": "This closure proves exact finite algebraic/topological/decoder properties and a conservative BLOCK pseudothreshold envelope under the stated phenomenological exposure model. It intentionally does not turn those results into calibrated photonic fault tolerance.",
     }
 
 
