@@ -1,0 +1,32 @@
+name: W33 all-five attestation epoch FT closure
+on:
+  push:
+    paths:
+      - 'analysis/w33_concurrency_replay_certificate.py'
+      - 'analysis/w33_execution_passport.py'
+      - 'analysis/w33_signed_epoch_bus.py'
+      - 'analysis/w33_qutrit_20_7_2_adapter_attack.py'
+      - 'analysis/w33_magic_resource_scheduler.py'
+      - '.github/workflows/w33_20260902_all5_attestation_epoch_ft.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Ed25519 verifier dependency
+        run: python -m pip install --disable-pip-version-check cryptography
+      - name: Deterministic deadlock cancellation replay
+        run: python analysis/w33_concurrency_replay_certificate.py
+      - name: Concurrency-aware execution passport
+        run: python analysis/w33_execution_passport.py
+      - name: Signed epoch transition over common 36 bus
+        run: python analysis/w33_signed_epoch_bus.py
+      - name: Exact qutrit 20-7-2 reconstruction and W33 adapter audit
+        run: python analysis/w33_qutrit_20_7_2_adapter_attack.py
+      - name: Magic scheduler consumes exact adapter audit
+        run: python analysis/w33_magic_resource_scheduler.py
