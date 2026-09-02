@@ -1,0 +1,36 @@
+{
+  "bt796D12Shell": {
+    "childStabilizerOrder": 12,
+    "degree": 2160,
+    "naturalPacketAxisParentsFixed": 0,
+    "naturalTwoCover": null,
+    "outerTwistedPacketAxisParentsFixed": 0,
+    "outerTwistedTwoCover": null
+  },
+  "e8Boundary": "Pass123 makes the local-axis coordinate an intrinsic E8 antipodal-axis label.  Even if the outer-twist isomorphism passes, a separate common-root coordinate computation is required before saying that the axis lies inside the packet's selected D4+D4 subsystem.",
+  "groupOrder": 25920,
+  "innerComparisonToObstruction": {
+    "fixedObstructionPointsOfPacketAxisStabilizer": [],
+    "isomorphic": false
+  },
+  "outerAutomorphism": {
+    "meaning": "nontrivial PGSp(4,3)/PSp(4,3) outer automorphism",
+    "projectivePermutationOrder": 2,
+    "similitude": "diag(1,2,1,2)"
+  },
+  "outerTwistedComparisonToObstruction": {
+    "bijection": null,
+    "explicitEquivariantBijectionVerified": false,
+    "fixedObstructionPointsOfTwistedPacketAxisStabilizer": [],
+    "isomorphic": false
+  },
+  "packetAxisCarrier": {
+    "degree": 1080,
+    "factorization": "45 packets * 8 packet points * 3 local axes",
+    "pass123AxisReading": "120 local axes = 120 antipodal E8 root lines",
+    "stabilizerOrder": 24
+  },
+  "schema": "w33.20260901.packet-axis-obstruction-outer-classification.v2",
+  "status": "PASS",
+  "theorem": "The natural packet/local-axis degree-1080 PSp action is NOT silently identified with the chartxline obstruction action unless the inner fixed set above is nonempty.  Conjugation by the explicit nonsquare similitude tests the unique outer sheet objectwise; a nonempty outer fixed set plus the verified bijection proves that the two degree-1080 actions differ by the nontrivial outer automorphism.  The recorded D12-shell cover fields independently decide on which sheet, if either, the 2160 carrier admits an index-two packet-axis quotient."
+}

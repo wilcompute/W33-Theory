@@ -1,0 +1,500 @@
+{
+  "boundary": "This is finite characteristic-zero representation theory.  It neither identifies the Steinberg module with a physical particle sector nor assigns dynamics or observables to the circuit states.",
+  "equivariantHomDimension": 17,
+  "exactProjectorExpansions": {
+    "E_St3": [
+      {
+        "coefficient": "1/10",
+        "crossOrbitPair": [
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": "1/20",
+        "crossOrbitPair": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": "1/40",
+        "crossOrbitPair": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": "1/20",
+        "crossOrbitPair": [
+          1,
+          0
+        ]
+      },
+      {
+        "coefficient": "1/10",
+        "crossOrbitPair": [
+          1,
+          1
+        ]
+      },
+      {
+        "coefficient": "1/40",
+        "crossOrbitPair": [
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": "1/40",
+        "crossOrbitPair": [
+          5,
+          0
+        ]
+      },
+      {
+        "coefficient": "1/40",
+        "crossOrbitPair": [
+          5,
+          1
+        ]
+      },
+      {
+        "coefficient": "1/20",
+        "crossOrbitPair": [
+          5,
+          5
+        ]
+      }
+    ],
+    "P": [
+      {
+        "coefficient": "1/30",
+        "crossOrbitPair": [
+          1,
+          1
+        ]
+      },
+      {
+        "coefficient": "1/30",
+        "crossOrbitPair": [
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": "1/30",
+        "crossOrbitPair": [
+          5,
+          1
+        ]
+      },
+      {
+        "coefficient": "1/30",
+        "crossOrbitPair": [
+          5,
+          5
+        ]
+      }
+    ],
+    "Q_K33": [
+      {
+        "coefficient": "1/40",
+        "crossOrbitPair": [
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": "-1/40",
+        "crossOrbitPair": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": "-1/40",
+        "crossOrbitPair": [
+          1,
+          0
+        ]
+      },
+      {
+        "coefficient": "1/40",
+        "crossOrbitPair": [
+          1,
+          1
+        ]
+      }
+    ],
+    "R": [
+      {
+        "coefficient": "3/80",
+        "crossOrbitPair": [
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": "-1/80",
+        "crossOrbitPair": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": "1/40",
+        "crossOrbitPair": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": "-1/80",
+        "crossOrbitPair": [
+          1,
+          0
+        ]
+      },
+      {
+        "coefficient": "1/240",
+        "crossOrbitPair": [
+          1,
+          1
+        ]
+      },
+      {
+        "coefficient": "-1/120",
+        "crossOrbitPair": [
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": "1/40",
+        "crossOrbitPair": [
+          5,
+          0
+        ]
+      },
+      {
+        "coefficient": "-1/120",
+        "crossOrbitPair": [
+          5,
+          1
+        ]
+      },
+      {
+        "coefficient": "1/60",
+        "crossOrbitPair": [
+          5,
+          5
+        ]
+      }
+    ],
+    "S_dark": [
+      {
+        "coefficient": "1/16",
+        "crossOrbitPair": [
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": "1/16",
+        "crossOrbitPair": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": "1/16",
+        "crossOrbitPair": [
+          1,
+          0
+        ]
+      },
+      {
+        "coefficient": "1/16",
+        "crossOrbitPair": [
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  "fullM3Realized": true,
+  "groupOrder": 25920,
+  "independentCrossOrbitPairs": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      5,
+      0
+    ],
+    [
+      5,
+      1
+    ],
+    [
+      5,
+      5
+    ]
+  ],
+  "orbitalMaps": [
+    {
+      "orbit": 0,
+      "primitiveSandwichScalars": {
+        "P": "10/3",
+        "Q": "10",
+        "R": "20/3",
+        "S": "4"
+      },
+      "steinbergImageRank": 81,
+      "targetOrbitSize": 15
+    },
+    {
+      "orbit": 1,
+      "primitiveSandwichScalars": {
+        "P": "10/3",
+        "Q": "10",
+        "R": "20/3",
+        "S": "4"
+      },
+      "steinbergImageRank": 81,
+      "targetOrbitSize": 15
+    },
+    {
+      "orbit": 2,
+      "primitiveSandwichScalars": {
+        "P": "0",
+        "Q": "0",
+        "R": "0",
+        "S": "16"
+      },
+      "steinbergImageRank": 81,
+      "targetOrbitSize": 30
+    },
+    {
+      "orbit": 3,
+      "primitiveSandwichScalars": {
+        "P": "0",
+        "Q": "0",
+        "R": "0",
+        "S": "16"
+      },
+      "steinbergImageRank": 81,
+      "targetOrbitSize": 60
+    },
+    {
+      "orbit": 4,
+      "primitiveSandwichScalars": {
+        "P": "0",
+        "Q": "0",
+        "R": "0",
+        "S": "16"
+      },
+      "steinbergImageRank": 81,
+      "targetOrbitSize": 60
+    },
+    {
+      "orbit": 5,
+      "primitiveSandwichScalars": {
+        "P": "40/3",
+        "Q": "0",
+        "R": "20/3",
+        "S": "4"
+      },
+      "steinbergImageRank": 81,
+      "targetOrbitSize": 60
+    },
+    {
+      "orbit": 6,
+      "primitiveSandwichScalars": {
+        "P": "40/3",
+        "Q": "0",
+        "R": "20/3",
+        "S": "4"
+      },
+      "steinbergImageRank": 81,
+      "targetOrbitSize": 60
+    },
+    {
+      "orbit": 7,
+      "primitiveSandwichScalars": {
+        "P": "40/3",
+        "Q": "0",
+        "R": "20/3",
+        "S": "4"
+      },
+      "steinbergImageRank": 81,
+      "targetOrbitSize": 60
+    },
+    {
+      "orbit": 8,
+      "primitiveSandwichScalars": {
+        "P": "40/3",
+        "Q": "0",
+        "R": "20/3",
+        "S": "4"
+      },
+      "steinbergImageRank": 81,
+      "targetOrbitSize": 60
+    },
+    {
+      "orbit": 9,
+      "primitiveSandwichScalars": {
+        "P": "0",
+        "Q": "0",
+        "R": "0",
+        "S": "0"
+      },
+      "steinbergImageRank": 0,
+      "targetOrbitSize": 60
+    },
+    {
+      "orbit": 10,
+      "primitiveSandwichScalars": {
+        "P": "10/3",
+        "Q": "10",
+        "R": "80/3",
+        "S": "0"
+      },
+      "steinbergImageRank": 81,
+      "targetOrbitSize": 60
+    },
+    {
+      "orbit": 11,
+      "primitiveSandwichScalars": {
+        "P": "10/3",
+        "Q": "10",
+        "R": "80/3",
+        "S": "0"
+      },
+      "steinbergImageRank": 81,
+      "targetOrbitSize": 60
+    },
+    {
+      "orbit": 12,
+      "primitiveSandwichScalars": {
+        "P": "30",
+        "Q": "10",
+        "R": "0",
+        "S": "16"
+      },
+      "steinbergImageRank": 81,
+      "targetOrbitSize": 60
+    },
+    {
+      "orbit": 13,
+      "primitiveSandwichScalars": {
+        "P": "30",
+        "Q": "10",
+        "R": "0",
+        "S": "16"
+      },
+      "steinbergImageRank": 81,
+      "targetOrbitSize": 60
+    },
+    {
+      "orbit": 14,
+      "primitiveSandwichScalars": {
+        "P": "0",
+        "Q": "0",
+        "R": "0",
+        "S": "0"
+      },
+      "steinbergImageRank": 0,
+      "targetOrbitSize": 120
+    },
+    {
+      "orbit": 15,
+      "primitiveSandwichScalars": {
+        "P": "40/3",
+        "Q": "40",
+        "R": "80/3",
+        "S": "16"
+      },
+      "steinbergImageRank": 81,
+      "targetOrbitSize": 120
+    },
+    {
+      "orbit": 16,
+      "primitiveSandwichScalars": {
+        "P": "40/3",
+        "Q": "40",
+        "R": "80/3",
+        "S": "16"
+      },
+      "steinbergImageRank": 81,
+      "targetOrbitSize": 120
+    }
+  ],
+  "schema": "w33.20260901.circuit216-steinberg-router.v1",
+  "sourceCarrier": 216,
+  "sourceStabilizerOrder": 120,
+  "sourceSteinbergMultiplicity": 1,
+  "status": "PASS",
+  "steinbergCrossGramSpanDimension": 9,
+  "steinbergSeeingOrbitalMaps": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    10,
+    11,
+    12,
+    13,
+    15,
+    16
+  ],
+  "targetCarrier": 1080,
+  "targetOrbitSizes": [
+    15,
+    15,
+    30,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    120,
+    120,
+    120
+  ],
+  "targetSteinbergMultiplicity": 3,
+  "theorem": "The complete PSp-equivariant Hom space from the 216 five-circuit permutation carrier to the 1080 obstruction carrier is enumerated by the recorded S5-stabilizer orbits.  Every nonzero Steinberg image has rank 81, as forced by the unique source Steinberg.  If the recorded cross-Gram span is nine, these maps from the 216 carrier alone realize the full M3(Q) multiplicity algebra of the target St^3 block, with explicit rational formulas for all three primitive projectors."
+}
