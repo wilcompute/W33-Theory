@@ -1,0 +1,460 @@
+{
+  "boundary": "An outer-even/odd multiplicity line is a finite representation-theoretic channel. It is not by itself a particle generation, chirality eigenstate, or physical propagation mode.",
+  "classificationCounts": {
+    "MIXED": 10,
+    "OUTER_EVEN": 2,
+    "OUTER_ODD": 3,
+    "ZERO": 2
+  },
+  "homOrbitalCount": 17,
+  "lineSpanDimensions": {
+    "MIXED": 3,
+    "OUTER_EVEN": 1,
+    "OUTER_ODD": 1
+  },
+  "orbitalMaps": [
+    {
+      "multiplicityLine": [
+        "1",
+        "4/3",
+        "-4"
+      ],
+      "orbit": 0,
+      "reading": "MIXED",
+      "selfGramM3": [
+        [
+          "10/3",
+          "5",
+          "-1"
+        ],
+        [
+          "40/9",
+          "20/3",
+          "-4/3"
+        ],
+        [
+          "-40/3",
+          "-20",
+          "4"
+        ]
+      ],
+      "targetOrbitSize": 15
+    },
+    {
+      "multiplicityLine": [
+        "1",
+        "4/3",
+        "4"
+      ],
+      "orbit": 1,
+      "reading": "MIXED",
+      "selfGramM3": [
+        [
+          "10/3",
+          "5",
+          "1"
+        ],
+        [
+          "40/9",
+          "20/3",
+          "4/3"
+        ],
+        [
+          "40/3",
+          "20",
+          "4"
+        ]
+      ],
+      "targetOrbitSize": 15
+    },
+    {
+      "multiplicityLine": [
+        "0",
+        "0",
+        "1"
+      ],
+      "orbit": 2,
+      "reading": "OUTER_ODD",
+      "selfGramM3": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "16"
+        ]
+      ],
+      "targetOrbitSize": 30
+    },
+    {
+      "multiplicityLine": [
+        "0",
+        "0",
+        "1"
+      ],
+      "orbit": 3,
+      "reading": "OUTER_ODD",
+      "selfGramM3": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "16"
+        ]
+      ],
+      "targetOrbitSize": 60
+    },
+    {
+      "multiplicityLine": [
+        "0",
+        "0",
+        "1"
+      ],
+      "orbit": 4,
+      "reading": "OUTER_ODD",
+      "selfGramM3": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "16"
+        ]
+      ],
+      "targetOrbitSize": 60
+    },
+    {
+      "multiplicityLine": [
+        "1",
+        "-2/3",
+        "-2"
+      ],
+      "orbit": 5,
+      "reading": "MIXED",
+      "selfGramM3": [
+        [
+          "40/3",
+          "-10",
+          "-2"
+        ],
+        [
+          "-80/9",
+          "20/3",
+          "4/3"
+        ],
+        [
+          "-80/3",
+          "20",
+          "4"
+        ]
+      ],
+      "targetOrbitSize": 60
+    },
+    {
+      "multiplicityLine": [
+        "1",
+        "-2/3",
+        "2"
+      ],
+      "orbit": 6,
+      "reading": "MIXED",
+      "selfGramM3": [
+        [
+          "40/3",
+          "-10",
+          "2"
+        ],
+        [
+          "-80/9",
+          "20/3",
+          "-4/3"
+        ],
+        [
+          "80/3",
+          "-20",
+          "4"
+        ]
+      ],
+      "targetOrbitSize": 60
+    },
+    {
+      "multiplicityLine": [
+        "1",
+        "-2/3",
+        "2"
+      ],
+      "orbit": 7,
+      "reading": "MIXED",
+      "selfGramM3": [
+        [
+          "40/3",
+          "-10",
+          "2"
+        ],
+        [
+          "-80/9",
+          "20/3",
+          "-4/3"
+        ],
+        [
+          "80/3",
+          "-20",
+          "4"
+        ]
+      ],
+      "targetOrbitSize": 60
+    },
+    {
+      "multiplicityLine": [
+        "1",
+        "-2/3",
+        "-2"
+      ],
+      "orbit": 8,
+      "reading": "MIXED",
+      "selfGramM3": [
+        [
+          "40/3",
+          "-10",
+          "-2"
+        ],
+        [
+          "-80/9",
+          "20/3",
+          "4/3"
+        ],
+        [
+          "-80/3",
+          "20",
+          "4"
+        ]
+      ],
+      "targetOrbitSize": 60
+    },
+    {
+      "orbit": 9,
+      "reading": "ZERO",
+      "targetOrbitSize": 60
+    },
+    {
+      "multiplicityLine": [
+        "1",
+        "-8/3",
+        "0"
+      ],
+      "orbit": 10,
+      "reading": "OUTER_EVEN",
+      "selfGramM3": [
+        [
+          "10/3",
+          "-10",
+          "0"
+        ],
+        [
+          "-80/9",
+          "80/3",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "targetOrbitSize": 60
+    },
+    {
+      "multiplicityLine": [
+        "1",
+        "-8/3",
+        "0"
+      ],
+      "orbit": 11,
+      "reading": "OUTER_EVEN",
+      "selfGramM3": [
+        [
+          "10/3",
+          "-10",
+          "0"
+        ],
+        [
+          "-80/9",
+          "80/3",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "targetOrbitSize": 60
+    },
+    {
+      "multiplicityLine": [
+        "1",
+        "0",
+        "-8/3"
+      ],
+      "orbit": 12,
+      "reading": "MIXED",
+      "selfGramM3": [
+        [
+          "30",
+          "0",
+          "-6"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-80",
+          "0",
+          "16"
+        ]
+      ],
+      "targetOrbitSize": 60
+    },
+    {
+      "multiplicityLine": [
+        "1",
+        "0",
+        "8/3"
+      ],
+      "orbit": 13,
+      "reading": "MIXED",
+      "selfGramM3": [
+        [
+          "30",
+          "0",
+          "6"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "80",
+          "0",
+          "16"
+        ]
+      ],
+      "targetOrbitSize": 60
+    },
+    {
+      "orbit": 14,
+      "reading": "ZERO",
+      "targetOrbitSize": 120
+    },
+    {
+      "multiplicityLine": [
+        "1",
+        "4/3",
+        "-4"
+      ],
+      "orbit": 15,
+      "reading": "MIXED",
+      "selfGramM3": [
+        [
+          "40/3",
+          "20",
+          "-4"
+        ],
+        [
+          "160/9",
+          "80/3",
+          "-16/3"
+        ],
+        [
+          "-160/3",
+          "-80",
+          "16"
+        ]
+      ],
+      "targetOrbitSize": 120
+    },
+    {
+      "multiplicityLine": [
+        "1",
+        "4/3",
+        "4"
+      ],
+      "orbit": 16,
+      "reading": "MIXED",
+      "selfGramM3": [
+        [
+          "40/3",
+          "20",
+          "4"
+        ],
+        [
+          "160/9",
+          "80/3",
+          "16/3"
+        ],
+        [
+          "160/3",
+          "80",
+          "16"
+        ]
+      ],
+      "targetOrbitSize": 120
+    }
+  ],
+  "outerConjugatorJ": [
+    [
+      "1",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "1",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "-1"
+    ]
+  ],
+  "representativeOrbitByClass": {
+    "MIXED": 0,
+    "OUTER_EVEN": 10,
+    "OUTER_ODD": 2
+  },
+  "schema": "w33.20260902.circuit-selector-outer-parity.v1",
+  "sourceCarrier": 216,
+  "sourceSteinbergMultiplicity": 1,
+  "status": "PASS",
+  "targetSteinbergMultiplicity": 3,
+  "theorem": "Every nonzero circuit216-to-obstruction orbital incidence map determines an exact projective line in the St81 multiplicity-three space. Relative to the global PGSp outer grading J=diag(1,1,-1), the certificate classifies each primitive incidence line as outer-even, outer-odd, or mixed and records the exact rational line coordinates."
+}

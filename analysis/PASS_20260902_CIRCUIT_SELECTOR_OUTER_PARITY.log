@@ -1,0 +1,1 @@
+{"counts": {"MIXED": 10, "OUTER_EVEN": 2, "OUTER_ODD": 3, "ZERO": 2}, "reps": {"MIXED": 0, "OUTER_EVEN": 10, "OUTER_ODD": 2}, "spans": {"MIXED": 3, "OUTER_EVEN": 1, "OUTER_ODD": 1}, "status": "PASS"}
