@@ -1,0 +1,48 @@
+name: PGSp outer M3 router
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20260902_pgsp_outer_m3_router.py'
+      - '.github/workflows/w33_20260902_pgsp_outer_m3_router.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: w33-pgsp-outer-m3-router-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Dependencies
+        run: python -m pip install --disable-pip-version-check numpy scipy sympy networkx
+      - name: Execute outer M3 audit
+        shell: bash
+        run: |
+          set -o pipefail
+          python analysis/w33_20260902_pgsp_outer_m3_router.py 2>&1 | tee analysis/PASS_20260902_PGSP_OUTER_M3_ROUTER.log
+      - name: Freeze evidence
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('data/PART_W33_20260902_PGSP_OUTER_M3_ROUTER.json').read_text())
+          assert d.get('status')=='PASS'
+          assert d['St81']['allNineMatrixUnitsMappedInsideSameBlock']
+          assert d['St64']['allNineMatrixUnitsMappedInsideSameBlock']
+          PY
+          git config user.name 'w33-evidence-bot'
+          git config user.email 'w33-evidence-bot@users.noreply.github.com'
+          git add -f data/PART_W33_20260902_PGSP_OUTER_M3_ROUTER.json analysis/PASS_20260902_PGSP_OUTER_M3_ROUTER.log
+          if ! git diff --cached --quiet; then
+            git commit -m 'Freeze PGSp outer M3 router action'
+            git pull --rebase origin master
+            git push origin HEAD:master
+          fi
