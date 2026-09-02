@@ -1,0 +1,55 @@
+{
+  "factorization": {
+    "productLaw": "m_i = eta * r_i for i=0,1,2",
+    "relativeInjectionFactorByPrimitive": [
+      -1,
+      -1,
+      -1
+    ],
+    "uniformRelativeInjectionFactor": -1,
+    "uniformRelativeInjectionFactorF3": 2,
+    "verifiedForAllThreePrimitives": true
+  },
+  "field": "F3",
+  "mod3Input": {
+    "certificate": "data/PART_W33_20260902_MOD3_PGSP_EXTENSION_TWIN.json",
+    "primitive0And1Source": "obstructionCommonEvenReduction",
+    "primitive2Source": "obstructionOddReduction",
+    "primitiveChainMapSignsRelativeToBuildingS": [
+      -1,
+      -1,
+      1
+    ]
+  },
+  "normalizationBoundary": "J81 is projective, so multiplying J81 by -1 moves one global sign between the rational factor and eta. The invariant content is that the quotient m_i/r_i is constant across all three primitive channels and the product law holds exactly.",
+  "physicsBoundary": "The signs are finite PGSp-extension data for explicit chain maps. They are not by themselves spacetime parity, chirality, charge conjugation, or a particle label.",
+  "rationalInput": {
+    "certificate": "data/PART_W33_20260902_PGSP_OUTER_M3_ROUTER.json",
+    "normalization": "divide by J81[0,0], so primitive 0 has sign +1",
+    "primitiveMultiplicitySigns": [
+      1,
+      1,
+      -1
+    ],
+    "projectiveJ81": [
+      [
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-1"
+      ]
+    ]
+  },
+  "schema": "w33.20260902.mod3-outer-sign-factorization.v1",
+  "status": "PASS",
+  "theorem": "In the deterministic normalization of the rational St81 multiplicity frame, the rational outer signs (+,+,-) and the solved modular chain-map signs (-,-,+) differ by one uniform factor eta=-1. Thus the characteristic-3 sign reversal factorizes exactly as modular PGSp sign = (uniform outer-odd integral-injection factor) x (rational multiplicity sign)."
+}
