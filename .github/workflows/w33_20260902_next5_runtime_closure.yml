@@ -1,0 +1,36 @@
+name: W33 next-five runtime closure
+on:
+  push:
+    paths:
+      - 'analysis/w33_wasm3_capability_runtime.py'
+      - 'analysis/w33_rtl_microsequencer_refinement.py'
+      - 'analysis/w33_qutrit_t_teleportation_port.py'
+      - 'analysis/w33_heterogeneous_36_kernel.py'
+      - 'rtl/w33_universal_packet_microsequencer.v'
+      - 'rtl/verify_w33_universal_packet_refinement.ys'
+      - 'tests/test_w33_next5_runtime_closure.py'
+      - '.github/workflows/w33_20260902_next5_runtime_closure.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run focused next-five tests
+        run: python -m unittest tests/test_w33_next5_runtime_closure.py -v
+      - name: Run executable certificates
+        run: |
+          python analysis/w33_wasm3_capability_runtime.py >/tmp/wasm-capability.json
+          python analysis/w33_rtl_microsequencer_refinement.py >/tmp/rtl-refinement.json
+          python analysis/w33_qutrit_t_teleportation_port.py >/tmp/qutrit-t.json
+          python analysis/w33_heterogeneous_36_kernel.py >/tmp/kernel36.json
+      - name: Install Yosys
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y yosys
+      - name: Prove finite-width packet refinement
+        run: yosys -s rtl/verify_w33_universal_packet_refinement.ys
