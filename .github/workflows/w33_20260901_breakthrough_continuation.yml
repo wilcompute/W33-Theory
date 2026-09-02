@@ -5,6 +5,7 @@ on:
     paths:
       - 'analysis/w33_20260901_packet48_bt796_crossid.py'
       - 'analysis/w33_20260901_bt796_steinberg_hom_scan.py'
+      - 'analysis/w33_20260901_binary48_ext_export.py'
       - 'analysis/w33_20260901_binary48_radical_socle.g'
       - '.github/workflows/w33_20260901_breakthrough_continuation.yml'
   workflow_dispatch:
@@ -37,6 +38,8 @@ jobs:
           : > analysis/PASS_20260901_BREAKTHROUGH_CONTINUATION.log
           python analysis/w33_20260901_packet48_bt796_crossid.py 2>&1 | tee -a analysis/PASS_20260901_BREAKTHROUGH_CONTINUATION.log
           python analysis/w33_20260901_bt796_steinberg_hom_scan.py 2>&1 | tee -a analysis/PASS_20260901_BREAKTHROUGH_CONTINUATION.log
+          python analysis/w33_20260901_binary48_ext_export.py 2>&1 | tee -a analysis/PASS_20260901_BREAKTHROUGH_CONTINUATION.log
+          test -s analysis/PART_W33_20260901_BINARY48_MATRICES.g
           gap -q analysis/w33_20260901_binary48_radical_socle.g 2>&1 | tee -a analysis/PASS_20260901_BREAKTHROUGH_CONTINUATION.log
       - name: Freeze exact evidence
         shell: bash
@@ -47,16 +50,18 @@ jobs:
           for f in [
             'data/PART_W33_20260901_PACKET48_BT796_CROSSID.json',
             'data/PART_W33_20260901_BT796_STEINBERG_HOM_SCAN.json',
+            'data/PART_W33_20260901_BINARY48_EXPORT.json',
             'data/PART_W33_20260901_BINARY48_RADICAL_SOCLE.json']:
               d=json.loads(Path(f).read_text())
               assert d.get('status')=='PASS',(f,d.get('status'))
           PY
           git config user.name 'w33-evidence-bot'
           git config user.email 'w33-evidence-bot@users.noreply.github.com'
-          git add analysis/PASS_20260901_BREAKTHROUGH_CONTINUATION.log \
-            data/PART_W33_20260901_PACKET48_BT796_CROSSID.json \
+          git add data/PART_W33_20260901_PACKET48_BT796_CROSSID.json \
             data/PART_W33_20260901_BT796_STEINBERG_HOM_SCAN.json \
+            data/PART_W33_20260901_BINARY48_EXPORT.json \
             data/PART_W33_20260901_BINARY48_RADICAL_SOCLE.json
+          git add -f analysis/PASS_20260901_BREAKTHROUGH_CONTINUATION.log
           if ! git diff --cached --quiet; then
             git commit -m 'Freeze packet2160 dark-S and binary48 continuation evidence'
             git pull --rebase origin master
