@@ -1,0 +1,47 @@
+% 2026-09-02 failure-control-plane closure.
+\subsection{Revocation, deadlock control, and hardware passport admission}
+
+The capability system now separates immutable authority tokens from a mutable
+revocation root.  The executable witness
+\texttt{analysis/w33\_capability\_epoch\_revocation.py} attaches an issuer and
+epoch to the existing monotone Merkle-memory capability.  Selective revocation
+of a capability invalidates descendants carrying its ancestry marker while
+unrelated siblings remain usable; rotating the issuer epoch invalidates all old
+tokens at once.  Fresh tokens in the new epoch can recover only the rights and
+prefixes granted by the underlying monotone capability.  Revocation therefore
+does not require in-place mutation and does not create a rights-escalation
+channel.  This is a software authority plane, not a hardware-tag or distributed
+consensus implementation.
+
+Asynchronous component composition also gains a liveness control plane.  The
+witness \texttt{analysis/w33\_async\_deadlock\_detector.py} converts neutral
+future/stream/mailbox dependencies into a wait-for graph and computes strongly
+connected components.  A three-component cyclic wait is detected, while an
+ordinary provider--consumer chain is not.  Cycle breaking requires a scoped
+cancellation capability; unauthorized cancellation fails, and a derived
+single-task capability can cancel one deterministic low-priority victim and
+release the cycle.  The detector operates only on neutral task/resource
+identities and never serializes a carrier-private six-state fibre coordinate.
+
+Finally, the execution passport reaches RTL admission.  The module
+\texttt{rtl/w33\_passport\_packet\_gate.v} compares the complete 256-bit packet
+passport digest with the admitted digest and permits the downstream
+microsequencer start only when all of
+\[
+ \texttt{profile\_valid},\qquad
+ P_{\rm packet}=P_{\rm admitted},\qquad
+ C_{\rm req}=C_{\rm host},\qquad
+ N_{\rm Clifford}\ne N_{\rm Weyl},\qquad
+ m_{\rm req}\le m_{\rm budget}
+\]
+hold.  The companion Yosys SAT harness proves the combinational gate equation
+and each fail-closed implication.  The RTL does not compute SHA-256 or establish
+who authorized the admitted digest; it enforces an already authenticated
+passport identity at the finite hardware boundary.
+
+On the sibling Holotrade runtime, recovery now follows the same carrier theorem:
+a healthy same-carrier host is preferred for full checkpoint restoration even
+when a cross-carrier host is cheaper.  Only when no same-carrier target exists
+may the scheduler choose a cross-carrier neutral continuation, and then only at
+an explicit syscall safe point with a content-addressed neutral-state record.
+The target begins a new machine identity rather than retyping the checkpoint.
