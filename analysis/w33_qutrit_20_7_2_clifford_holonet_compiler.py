@@ -57,7 +57,6 @@ def reduce_columns_to_identity(F):
             M[:,j]=(M[:,j]+alpha*M[:,r])%3
             ops.append({'gate':'SUM_ALPHA','control':r,'target':j,'alpha':alpha})
     if not np.array_equal(M,np.eye(n,dtype=np.int64)): raise RuntimeError('column elimination did not reach identity')
-    # F E1...Ek=I, hence build F by inverse operations in reverse order.
     build=[]
     for op in reversed(ops):
         if op['gate']=='SUM_ALPHA': build.append({**op,'alpha':(-op['alpha'])%3})
@@ -83,8 +82,7 @@ def wires(op):
 def pack_microframes(gates):
     frames=[]
     for gi,g in enumerate(gates):
-        placed=False
-        gw=wires(g)
+        placed=False; gw=wires(g)
         for f in frames:
             if len(f['slots'])<16 and not (gw & f['used']):
                 f['slots'].append((gi,g)); f['used']|=gw; placed=True; break
@@ -103,6 +101,7 @@ def pack_microframes(gates):
 
 
 def digest_matrix(a): return 'sha256:'+hashlib.sha256(bytes(int(x) for x in a.flatten())).hexdigest()
+def digest_json(v): return 'sha256:'+hashlib.sha256(json.dumps(v,sort_keys=True,separators=(',',':')).encode()).hexdigest()
 
 
 def verify():
@@ -111,7 +110,7 @@ def verify():
     gates,_=reduce_columns_to_identity(F)
     replay=apply_right_ops(240,gates)
     frames=pack_microframes(gates)
-    counts={k:sum(g['gate']==k for g in gates) for k in ('SUM_ALPHA','SCALE2','SWAP')}
+    counts={k:int(sum(g['gate']==k for g in gates)) for k in ('SUM_ALPHA','SCALE2','SWAP')}
     checks={
       'full_linear_map_rank_240':base.rank(F)==240,
       'data_X_prefix_is_A':np.array_equal(F[:20],A),
@@ -122,12 +121,15 @@ def verify():
       'packet_slots_wire_disjoint':all(len(set(w for s in f['slots'] for w in wires(s['gate'])))==sum(len(wires(s['gate'])) for s in f['slots']) for f in frames),
       'three_phase_word_exact':all([t['op'] for s in f['slots'] for t in s['ticks']]==['LOAD_FLAG','FLIP_Q6_AXIS','LATCH_VERTEX']*len(f['slots']) for f in frames),
     }
+    checks={k:bool(v) for k,v in checks.items()}
+    schedule_digest=digest_json(frames)
+    sample=frames[:2]+(frames[-2:] if len(frames)>2 else [])
     return {
       'schema':'w33.qutrit-20-7-2-clifford-holonet-compiler.v1',
       'status':'PASS' if all(checks.values()) else 'FAIL',
       'checks':checks,
-      'linear_encoder':{'F_sha256':digest_matrix(F),'A_sha256':digest_matrix(A),'B_sha256':digest_matrix(B),'gate_count':len(gates),'gate_counts':counts},
-      'packet_schedule':{'microframes':len(frames),'packet_ticks':72*len(frames),'body_capacity_per_frame':16,'frames':frames},
+      'linear_encoder':{'F_sha256':digest_matrix(F),'A_sha256':digest_matrix(A),'B_sha256':digest_matrix(B),'gate_count':int(len(gates)),'gate_counts':counts},
+      'packet_schedule':{'sha256':schedule_digest,'microframes':int(len(frames)),'packet_ticks':int(72*len(frames)),'body_capacity_per_frame':16,'sample_frames':sample},
       'theorem':'The algebraic A/B Pauli embedding extends to an explicit 240-qutrit linear Clifford encoder U_F, synthesized exactly into ternary SUM, SCALE2 and SWAP generators.',
       'boundary':'The packet lowering proves a finite compiler/refinement contract only. It does not assign calibrated optical pulses, physical two-qutrit error rates, decoder latency, or a fault-tolerance threshold.'
     }
