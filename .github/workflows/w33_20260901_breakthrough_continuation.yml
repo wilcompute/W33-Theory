@@ -57,11 +57,11 @@ jobs:
           PY
           git config user.name 'w33-evidence-bot'
           git config user.email 'w33-evidence-bot@users.noreply.github.com'
-          git add data/PART_W33_20260901_PACKET48_BT796_CROSSID.json \
+          git add -f data/PART_W33_20260901_PACKET48_BT796_CROSSID.json \
             data/PART_W33_20260901_BT796_STEINBERG_HOM_SCAN.json \
             data/PART_W33_20260901_BINARY48_EXPORT.json \
-            data/PART_W33_20260901_BINARY48_RADICAL_SOCLE.json
-          git add -f analysis/PASS_20260901_BREAKTHROUGH_CONTINUATION.log
+            data/PART_W33_20260901_BINARY48_RADICAL_SOCLE.json \
+            analysis/PASS_20260901_BREAKTHROUGH_CONTINUATION.log
           if ! git diff --cached --quiet; then
             git commit -m 'Freeze packet2160 dark-S and binary48 continuation evidence'
             git pull --rebase origin master
