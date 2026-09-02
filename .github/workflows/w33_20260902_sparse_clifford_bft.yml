@@ -9,6 +9,7 @@ on:
       - 'analysis/w33_bft_adversarial_fuzz.py'
       - 'analysis/w33_bft_epoch_consensus.py'
       - 'formal/W33EpochBFT.tla'
+      - 'formal/W33EpochBFT.cfg'
       - 'analysis/w33_qutrit_20_7_2_adapter_attack.py'
       - 'analysis/w33_magic_resource_scheduler.py'
       - '.github/workflows/w33_20260902_sparse_clifford_bft.yml'
@@ -32,11 +33,13 @@ jobs:
         run: python analysis/w33_bft_epoch_consensus.py
       - name: Adversarially fuzz equivocation crash lock and view-change safety
         run: python analysis/w33_bft_adversarial_fuzz.py
+      - name: Model-check finite one-Byzantine BFT safety with TLC 1.8.0
+        run: |
+          set -euo pipefail
+          curl -fsSL https://github.com/tlaplus/tlaplus/releases/download/v1.8.0/tla2tools.jar -o /tmp/tla2tools.jar
+          echo 'ae09269f0f74b9a7f69ac8b1e79f1514328082c6  /tmp/tla2tools.jar' | sha1sum -c -
+          java -Xmx2g -jar /tmp/tla2tools.jar -workers 2 -config formal/W33EpochBFT.cfg formal/W33EpochBFT.tla
       - name: Verify FT evidence gates remain fail closed
         run: |
           python analysis/w33_qutrit_20_7_2_adapter_attack.py
           python analysis/w33_magic_resource_scheduler.py
-      - name: Require TLA+ safety model artifact
-        run: |
-          test -s formal/W33EpochBFT.tla
-          grep -q 'Safety == Cardinality(committed) <= 1' formal/W33EpochBFT.tla
