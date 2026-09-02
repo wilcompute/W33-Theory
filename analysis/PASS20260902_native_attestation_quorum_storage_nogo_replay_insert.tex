@@ -1,0 +1,106 @@
+\section{Native attestation, quorum authority, storage-aware placement, and replay receipts}
+\label{sec:native-attestation-quorum-storage-replay}
+
+This pass closes five runtime frontiers while preserving the distinction between
+mathematical certificates, software security policy, and fabricated hardware.
+The resulting execution chain is
+\[
+\text{native hardware evidence}
+\to \text{execution passport}
+\to \text{quorum epoch authority}
+\to \text{storage-aware placement}
+\to \text{signed replay receipt}.
+\]
+
+\paragraph{Native TPM2 and SEV-SNP verification.}
+The Holotrade sibling repository now contains
+\texttt{js/w33-native-attestation.js}.  For SEV-SNP it parses the 1184-byte
+attestation report, binds the 64-byte \texttt{REPORT\_DATA} field to the W33
+challenge and runtime public-key digest, enforces launch-measurement and
+reported-TCB policy, converts the firmware P-384 signature representation to
+DER, and verifies the report directly with SHA-384.  It supports either an
+explicitly pinned VCEK key or an in-process ARK--ASK--VCEK certificate chain.
+For TPM2 it parses \texttt{TPMS\_ATTEST} for a quote, binds
+\texttt{extraData} to the W33 challenge, verifies the AK signature, replays
+supplied event digests into PCR banks, and recomputes the quoted PCR digest in
+the selected-PCR order.  Thus the preferred path no longer depends on the
+older normalized ``external verifier said yes'' envelope.  A pinned AK/VCEK
+remains a deployment trust anchor; vendor provenance is stated separately from
+cryptographic signature validity.
+
+\paragraph{Quorum-certified authority epochs.}
+\texttt{analysis/w33\_quorum\_epoch\_authority.py} replaces the single-signer
+authority transition with a $4$-of-$5$ Ed25519 quorum certificate transported
+through the same neutral $36$-state ST81/ST64 fabric.  Honest members enforce a
+one-vote-per-predecessor rule.  With $n=5,t=4$, any two quorums intersect in at
+least
+\[
+2t-n=3
+\]
+members.  Under the explicit assumption of at most one Byzantine authority,
+at least two members of that intersection are honest, so conflicting certified
+successors require violation of the honest one-vote rule.  If conflicting valid
+certificates are nevertheless presented, the runtime emits content-addressed
+fork evidence naming the intersecting signer set.  This is quorum
+certification, not a complete asynchronous BFT protocol and not an aggregated
+threshold-signature primitive.
+
+\paragraph{Persistence enters placement.}
+Holotrade's \texttt{js/w33-storage-aware-placement.js} now augments the ordinary
+ExecutionEngine placement score with forecast terms for live strong roots,
+retained reversible history, checkpoint retention, expected recovery storage,
+expected recovery compute time, energy-policy cost, and irreversible-erasure
+policy cost.  The objective is exposed rather than collapsed into an opaque
+number:
+\[
+C_{\rm total}=C_{\rm base}+C_{\rm strong\ root}
+ +\mathbb E[C_{\rm recovery}]+C_{\rm energy}+C_{\rm erase}.
+\]
+The strong-root term is measured in blob-seconds/byte-seconds before a market
+tariff is applied.  No blob tariff or erasure tariff is identified with
+Landauer work; measured device energy remains a distinct quantity.
+
+\paragraph{A restricted but exact $[[20,7,2]]_3$ no-go.}
+The appropriate type-compatible parent for the external qutrit code is not the
+$40$ W33 point set (whose points are two-qutrit Pauli classes), but the exact
+$240$-edge qutrit CSS code with $H_X=d_1$ and $H_Z=d_2^T$.  The executable
+certificate \texttt{analysis/w33\_qutrit\_20\_7\_2\_edge\_css\_no\_go.py}
+computes the W33 graph edge connectivity by Stoer--Wagner and obtains
+\[
+\lambda(W(3,3))=12.
+\]
+For any vertex potential $y\in\mathbb F_3^{40}$, a nonzero parent
+$X$-stabilizer $y^Td_1$ is supported precisely on edges joining unequal
+potential values.  Hence every nonzero word in $\operatorname{row}(H_X)$ has
+weight at least $12$; a one-vertex potential attains weight $12$.  By contrast,
+the frozen external $H_0$ span contains a nonzero weight-$6$ stabilizer.
+Coordinate permutation, injection, and nonzero $\mathbb F_3$ rescaling preserve
+support weight.  Therefore
+\[
+\boxed{\text{no literal CSS-preserving monomial zero-extension }20\to240
+\text{ intertwiner exists}.}
+\]
+This is an UNSAT certificate for that adapter class, not a theorem excluding
+all embeddings.  General symplectic Clifford maps that mix $X/Z$, introduce
+ancillas, or encode external coordinates nonlocally remain open.
+
+\paragraph{Attested replay flight recorder.}
+Holotrade's \texttt{js/w33-attested-replay-receipt.js} builds one Merkle-like
+content commitment over the execution passport, deployment digest, native
+hardware-attestation evidence, complete epoch-transition chain, wait-for root,
+cancellation root, deterministic wake-schedule root, temporal-GC root
+evolution, magic-token reservation/consumption events, and final artifact set.
+That flight-recorder root is embedded in the existing deterministic CBOR/COSE
+Ed25519 delivery receipt.  Reordering, omitting, or substituting any bound
+history changes the signed payload.  The receipt proves integrity and identity
+of the supplied evidence; it does not by itself prove that a fabricated sensor
+or external authority was truthful.
+
+\paragraph{Scope.}
+The five additions materially tighten the runtime trust chain, but they do not
+claim a fabricated SEV-SNP platform, a certified TPM deployment, secure physical
+media erasure, complete asynchronous Byzantine consensus, or a W33-specific
+fault-tolerant magic-state-distillation threshold.  In particular the new
+weight-$6$ versus weight-$12$ obstruction closes only the literal CSS-preserving
+monomial embedding class; the broader symplectic/ancilla-assisted adapter search
+is now the correct remaining target.
