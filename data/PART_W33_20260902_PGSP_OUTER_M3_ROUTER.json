@@ -1,0 +1,228 @@
+{
+  "K33Selected81": {
+    "equalsDeterministicFrameIndex": null,
+    "outerFixed": true
+  },
+  "St64": {
+    "J2Scalar": "1",
+    "allNineMatrixUnitsMappedInsideSameBlock": true,
+    "centralIsotypicFixed": true,
+    "connectors": {
+      "01": [
+        5,
+        5,
+        "15/16"
+      ],
+      "02": [
+        5,
+        5,
+        "3/4"
+      ]
+    },
+    "degree": 64,
+    "detJ": "1",
+    "eigenvalues": {
+      "1": 3
+    },
+    "frameAction": [
+      {
+        "exactFrameTarget": 0,
+        "matrix": [
+          [
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "source": 0
+      },
+      {
+        "exactFrameTarget": 1,
+        "matrix": [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "source": 1
+      },
+      {
+        "exactFrameTarget": 2,
+        "matrix": [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1"
+          ]
+        ],
+        "source": 2
+      }
+    ],
+    "name": "St64^3",
+    "projectiveConjugatorJ": [
+      [
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1"
+      ]
+    ],
+    "traceJ": "3"
+  },
+  "St81": {
+    "J2Scalar": "1",
+    "allNineMatrixUnitsMappedInsideSameBlock": true,
+    "centralIsotypicFixed": true,
+    "connectors": {
+      "01": [
+        5,
+        5,
+        "8/9"
+      ],
+      "02": [
+        16,
+        38,
+        "40/3"
+      ]
+    },
+    "degree": 81,
+    "detJ": "-1",
+    "eigenvalues": {
+      "-1": 1,
+      "1": 2
+    },
+    "frameAction": [
+      {
+        "exactFrameTarget": 0,
+        "matrix": [
+          [
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "source": 0
+      },
+      {
+        "exactFrameTarget": 1,
+        "matrix": [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "source": 1
+      },
+      {
+        "exactFrameTarget": 2,
+        "matrix": [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1"
+          ]
+        ],
+        "source": 2
+      }
+    ],
+    "name": "St81^3",
+    "projectiveConjugatorJ": [
+      [
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-1"
+      ]
+    ],
+    "traceJ": "1"
+  },
+  "boundary": "This is exact finite representation theory on the obstruction/router carriers. A distinguished multiplicity line or plane is a canonical algebraic subspace, not by itself a particle generation, flavour, or physical field.",
+  "outer": {
+    "matrixMod3": "diag(1,2,1,2)",
+    "obstructionInvolution": true,
+    "orbitalInvolution": true
+  },
+  "schema": "w33.20260902.pgsp-outer-m3-router.v1",
+  "status": "PASS",
+  "theorem": "The explicit PGSp/PSp outer involution acts internally on each multiplicity-three Steinberg router as an exact projective inner automorphism of M3(Q). The recorded 3x3 conjugators determine which primitive channels are fixed, exchanged, or mixed; the two degree sectors remain separate."
+}
