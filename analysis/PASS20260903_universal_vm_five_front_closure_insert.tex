@@ -1,0 +1,114 @@
+% PASS20260903 -- Universal VM five-front closure
+\section*{Current VM frontier: the five control-plane gaps close}
+\addcontentsline{toc}{section}{Current VM frontier: the five control-plane gaps close}
+
+\noindent\textbf{Scope.}
+This insert records a software/architecture closure, not a fabricated-machine claim.
+The finite $W(3,3)$ substrate is used as a certified control plane around extensible
+semantic and Merkle-history state.  The five previously named VM frontiers now have
+explicit interfaces and executable reference implementations.
+
+\paragraph{1. The 45 slow targets are a boot-verifiable control store.}
+The Holotrade anomaly catalogue now carries an explicit fixed isomorphism from its
+$45$ real projective expensive targets to the $45$ points of an independently built
+$H(3,4)=GQ(4,2)$.  The runtime decoder normalises $g\sim-g$ and, before admitting the
+ROM, checks $27$ banks of $5$, $135$ incidences, three banks per target, the
+$\operatorname{SRG}(45,12,3,3)$ collinearity graph, the generalized-quadrangle axiom,
+and equality of the transported concrete and abstract line sets.  The labelling is a
+fixed verified engineering contract; it is not claimed canonical.
+
+\paragraph{2. A memory address now carries its own authority.}
+A first-class capability pointer commits
+\[
+ (\text{Merkle root},\ \text{base-40 address},\ \text{bounds},\ \text{rights},\
+   \text{epoch},\ \text{carrier},\ \text{evidence floor},\ \text{seal state}).
+\]
+Bounds, permissions and evidence requirements may be narrowed but not widened.
+Dereference checks the committed Merkle snapshot, construction-time carrier,
+revocation epoch, address prefix, requested right and backend evidence level.  A
+persistent store returns a pointer rebound to the new root; the old pointer remains a
+pointer to the old snapshot rather than silently becoming mutable memory.  This is a
+software capability semantics, not yet a hardware-tag implementation.
+
+\paragraph{3. The qutrit transvection ISA has an explicit Clifford phase lift.}
+For the odd-prime Weyl convention
+\[
+ D(q,p)=\omega^{(q\cdot p)/2}X^qZ^p,
+\]
+and $T(v,\lambda)x=x+\lambda\langle x,v\rangle v$, define
+\[
+ U(v,\lambda)=\sum_{k\in\mathbb F_3}
+ \omega^{\lambda k^2/2}P_k(D_v).
+\]
+The resulting conjugation law is
+\[
+ U(v,\lambda)D_xU(v,\lambda)^\dagger=D_{T(v,\lambda)x}.
+\]
+The reference verifier enumerates all $40$ projective axes and both nonzero values of
+$\lambda$, hence all $80$ primitive transvection opcodes, and also tracks affine Weyl
+displacements and the global composition cocycle.  Physical optical admission remains
+fail-closed unless an accepted W33 device calibration packet explicitly covers the
+Weyl-displacement and transvection-quadratic-phase primitives.
+
+\paragraph{4. Universal guest semantics now lower to proof-carrying packets.}
+The repository already contains a real WebAssembly binary frontend.  Beneath it, the
+new universal core IR is a labelled presentation of the exact two-counter guest:
+\texttt{inc}, \texttt{decjz}, and \texttt{halt} blocks with named control-flow
+edges. Every finite existing two-counter \texttt{Program} has a lossless labelled
+encoding and compiles back to the identical instruction tuple.  Universality is thus
+inherited from the existing Minsky core rather than asserted for an arbitrarily small
+Wasm subset.  After validation, every executed guest transition lowers to a
+proof-carrying W33 control packet committing semantic pre/post state, canonical
+$\le2$-hop route, finite transvection word, projective target, central lift bit and the
+Clifford phase-frame digest.
+
+\paragraph{5. Reversible storage has an explicit time--space--GC trade surface.}
+For a local undo segment of $B$ guest steps and a workload padded to $B2^L$, the
+explicit recursive schedule uses
+\[
+ C(0)=B,\qquad C(L)=3C(L-1),
+\]
+so compute--copy--uncompute has the conservative traversal bound
+\[
+ T=2B3^L.
+\]
+Its modeled peak retained software state is
+\[
+ B\,s_{\rm token}+(L+1)s_{\rm checkpoint}+s_{\rm output},
+\]
+with the byte coefficients obtained by serializing the committed reference VM, not by
+inventing hardware numbers.  Temporary checkpoints are STRONG Merkle roots while live
+and become GC-reclaimable after their reverse branch; HASH\_ONLY audit roots do not pin
+bytes.  A destructive-discard control is reported separately and excluded from the
+reversible Pareto frontier. No Joule estimate is inferred from logical erasure counts.
+
+\begin{center}
+\fbox{\parbox{0.92\linewidth}{
+\textbf{Current virtual-machine contract.}
+Validated source $\rightarrow$ authority-bearing address $\rightarrow$ semantic state
+transition $\rightarrow$ W33 route $\rightarrow$ exact symplectic micro-word
+$\rightarrow$ phase-specified qutrit Clifford $\rightarrow$ geometry-checked exceptional
+control store $\rightarrow$ reversible checkpoint/GC policy.
+}}
+\end{center}
+
+\noindent A compact systems reading is now possible:
+\[
+\boxed{\text{computation}=\text{authorized state transition}
++\text{certified finite control}+\text{retained causal provenance}.}
+\]
+The statement is intentionally architectural.  It does not turn finite geometry into
+literal infinite memory, nor does it promote software verification into a physical
+quantum-universality or hardware-calibration claim.
+
+\paragraph{Artifacts and verification boundary.}
+The W33 implementations are
+\texttt{analysis/w33\_capability\_address\_isa.py},
+\texttt{analysis/w33\_qutrit\_clifford\_phase\_displacement\_lift.py},
+\texttt{analysis/w33\_structured\_counter\_bytecode\_compiler.py}, and
+\texttt{analysis/w33\_reversible\_storage\_economics.py}; the cross-front test is
+\texttt{tests/test\_w33\_universal\_vm\_five\_front\_closure.py}.
+Holotrade owns the concrete 45-slot certificate and
+\texttt{js/w33-slowpath-rom-decoder.js}.  A dedicated Actions gate has been added.
+At insertion time the new jobs were queued at GitHub and therefore are not described
+here as CI-passed until the runner records that conclusion.
