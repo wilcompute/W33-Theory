@@ -23,11 +23,6 @@ import json
 from typing import Any, Sequence
 
 from w33_qutrit_clifford_phase_displacement_lift import (
-    AXIS_INDEX if False else None,
-)
-# Import explicitly below; the conditional dummy above intentionally avoids
-# implying that the phase-lift module exports a projective-axis lookup.
-from w33_qutrit_clifford_phase_displacement_lift import (
     CliffordPhaseFrame,
     GEOMETRY,
     HALF,
