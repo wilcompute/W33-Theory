@@ -109,6 +109,10 @@ The W33 implementations are
 \texttt{analysis/w33\_reversible\_storage\_economics.py}; the cross-front test is
 \texttt{tests/test\_w33\_universal\_vm\_five\_front\_closure.py}.
 Holotrade owns the concrete 45-slot certificate and
-\texttt{js/w33-slowpath-rom-decoder.js}.  A dedicated Actions gate has been added.
-At insertion time the new jobs were queued at GitHub and therefore are not described
-here as CI-passed until the runner records that conclusion.
+\texttt{js/w33-slowpath-rom-decoder.js}.
+The dedicated W33 Actions run \texttt{33830617595} completed successfully: all four
+reference implementations and the cross-front ABI assertions passed.  Holotrade's
+exhaustive explicit-bijection generator reports 178 shape-catalogue tests with zero
+failures; for the new production decoder, RTL formal/synthesis had also passed while its
+Node-test job was still executing when this status line was recorded.  Physical
+calibration remains a separate evidence gate throughout.
