@@ -1,0 +1,33 @@
+name: W33 universal VM five-front closure
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_capability_address_isa.py'
+      - 'analysis/w33_qutrit_clifford_phase_displacement_lift.py'
+      - 'analysis/w33_structured_counter_bytecode_compiler.py'
+      - 'analysis/w33_reversible_storage_economics.py'
+      - 'tests/test_w33_universal_vm_five_front_closure.py'
+      - '.github/workflows/w33_universal_vm_five_front_closure.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Capability-address ISA
+        run: python analysis/w33_capability_address_isa.py
+      - name: Qutrit Clifford phase and displacement lift
+        run: python analysis/w33_qutrit_clifford_phase_displacement_lift.py
+      - name: Structured universal bytecode compiler
+        run: python analysis/w33_structured_counter_bytecode_compiler.py
+      - name: Reversible storage economics
+        run: python analysis/w33_reversible_storage_economics.py
+      - name: Cross-front closure assertions
+        run: python tests/test_w33_universal_vm_five_front_closure.py
