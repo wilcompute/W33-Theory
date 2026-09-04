@@ -5,6 +5,7 @@ on:
     branches: [master]
     paths:
       - 'analysis/w33_wasm_counter_execution_refinement.py'
+      - 'analysis/w33_wasm_trace_counter_refinement.py'
       - 'analysis/w33_qutrit_clifford_photonic_lowering.py'
       - 'analysis/w33_qutrit_optical_calibration_ingest.py'
       - 'analysis/w33_adaptive_reversible_scheduler.py'
@@ -22,6 +23,8 @@ jobs:
           python-version: '3.11'
       - name: Wasm invocation to universal counter refinement
         run: python analysis/w33_wasm_counter_execution_refinement.py
+      - name: Wasm native-step to universal counter packet refinement
+        run: python analysis/w33_wasm_trace_counter_refinement.py
       - name: Fail-closed optical calibration ingest
         run: python analysis/w33_qutrit_optical_calibration_ingest.py
       - name: Phase-specified qutrit photonic lowering
