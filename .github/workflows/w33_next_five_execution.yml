@@ -7,6 +7,7 @@ on:
       - 'analysis/w33_wasm_counter_execution_refinement.py'
       - 'analysis/w33_wasm_trace_counter_refinement.py'
       - 'analysis/w33_qutrit_clifford_photonic_lowering.py'
+      - 'analysis/w33_qutrit_clifford_microisa_lowering.py'
       - 'analysis/w33_qutrit_optical_calibration_ingest.py'
       - 'analysis/w33_adaptive_reversible_scheduler.py'
       - '.github/workflows/w33_next_five_execution.yml'
@@ -15,7 +16,7 @@ on:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -29,5 +30,7 @@ jobs:
         run: python analysis/w33_qutrit_optical_calibration_ingest.py
       - name: Phase-specified qutrit photonic lowering
         run: python analysis/w33_qutrit_clifford_photonic_lowering.py
+      - name: Exact transvection lowering to existing F/CX micro-ISA
+        run: python analysis/w33_qutrit_clifford_microisa_lowering.py
       - name: Adaptive reversible scheduler
         run: python analysis/w33_adaptive_reversible_scheduler.py
