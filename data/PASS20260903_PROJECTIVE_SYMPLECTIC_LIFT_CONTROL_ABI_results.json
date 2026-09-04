@@ -1,0 +1,50 @@
+{
+  "schema": "w33.projective-symplectic-lift-control-abi.v1",
+  "valid": true,
+  "date": "2026-09-03",
+  "local_exact": {
+    "w33_projective_points": 40,
+    "minus_identity_acts_trivially_projectively": true,
+    "qutrit_transvection_actions": 80,
+    "signed_transvection_lifts": 160,
+    "projective_actions_unique": 80,
+    "section_plus_central_bit_roundtrip": true,
+    "psp43_order": 25920,
+    "sp43_order": 51840,
+    "lift_degree": 2
+  },
+  "control_ladder": [
+    {
+      "stage": "projective-schedule",
+      "required": ["projective_action_digest"],
+      "meaning": "routing/scheduling identity on W33 projective states"
+    },
+    {
+      "stage": "symplectic-execute",
+      "required": ["projective_action_digest", "sp_central_lift_bit"],
+      "meaning": "restore which of the two matrices {g,-g} is intended"
+    },
+    {
+      "stage": "calibrated-optical",
+      "required": ["projective_action_digest", "sp_central_lift_bit", "clifford_phase_frame_digest", "calibration_digest"],
+      "meaning": "physical qutrit gate admission remains separately evidenced"
+    },
+    {
+      "stage": "nonclifford",
+      "required": ["projective_action_digest", "sp_central_lift_bit", "clifford_phase_frame_digest", "calibration_digest", "nonclifford_resource_digest"],
+      "meaning": "quantum-universal extension is explicit and fail-closed"
+    }
+  ],
+  "cross_repo_context": {
+    "projective_cost_commit": "3a0a1945439e674171cfbd815043a69e916d0025",
+    "gq45_commit": "605f5e585ce1a124d1cddce9745b47d6f7592708",
+    "pauli_line_commit": "34f2a841925dec20c5fae9c3429686e8390b67ba",
+    "slow_projective_classes": 45,
+    "slow_path_geometry": "GQ(4,2) under anticommutation of Sp lifts",
+    "maximal_slow_path_lines": 27,
+    "line_size": 5,
+    "reason_central_lift_is_semantic": "pairs with gh=-hg become commuting after quotienting by -I in PSp; projective scheduling therefore loses sign information needed by the Sp execution namespace"
+  },
+  "architecture_conclusion": "A W33 execution passport should bind projective target identity, the Sp central-lift bit, then separate Clifford phase/calibration and non-Clifford evidence. The central bit repairs only the PSp-to-Sp quotient; it is not a complete qutrit Clifford phase lift.",
+  "honesty_boundary": "No physical qubit register is inferred from the 27 extraspecial 2-groups. No calibrated optical Clifford or non-Clifford resource is inferred from projective/symplectic group structure alone."
+}
