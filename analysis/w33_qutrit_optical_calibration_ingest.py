@@ -4,15 +4,15 @@
 Two evidence classes are intentionally kept separate:
 
 * EXTERNAL_PRIOR_ART_MEASUREMENT: real measurements from published optical
-  qudit experiments.  They are benchmarks, never W33 hardware calibration.
+  qudit experiments. They are benchmarks, never W33 hardware calibration.
 * W33_DEVICE_MEASUREMENT: a bench packet produced by the actual target device.
-  Only this class may replace the engineering fault-rate defaults used by the
-  circuit-level noise model.
+  Only this class may replace engineering defaults or satisfy CALIBRATED_DEVICE.
 
-A W33 device packet must bind a device/run identity, a measurement digest,
-sample count, primitive engineering metrics, and *directly estimated circuit
-fault probabilities*.  We do not derive a Pauli/leakage channel from insertion
-loss or phase RMS by an unstated physics model.
+A W33 device packet must bind a device/run identity, measurement digest, sample
+count, primitive engineering metrics, directly estimated circuit fault rates,
+and explicit coverage of the exact primitive classes used by the phase-specified
+qutrit Clifford lowering. Aggregate fidelity or insertion loss is never reverse-
+engineered into an unstated Pauli/leakage model.
 """
 from __future__ import annotations
 
@@ -28,6 +28,7 @@ RATE_KEYS=(
  "coupling_heralded_loss","coupling_unheralded_leakage",
 )
 METRIC_KEYS=("insertion_loss_db","crosstalk_probability","leakage_probability","phase_rms_rad")
+PRIMITIVE_KEYS=("WEYL_DISPLACEMENT","TRANSVECTION_QUADRATIC_PHASE")
 
 def canonical(v):return json.dumps(v,sort_keys=True,separators=(",",":"))
 def digest(v):return "sha256:"+hashlib.sha256(canonical(v).encode()).hexdigest()
@@ -54,35 +55,63 @@ def validate_device_packet(raw):
     rates=raw.get("fault_rates") if isinstance(raw.get("fault_rates"),dict) else {}
     for k in RATE_KEYS:
         if k not in rates or not probability(rates.get(k)):errors.append(f"RATE_{k}")
+    coverage=raw.get("primitive_coverage")
+    if not isinstance(coverage,list) or any(not isinstance(x,str) or not x for x in coverage):
+        errors.append("PRIMITIVE_COVERAGE")
+        coverage=[]
+    elif len(set(coverage))!=len(coverage):
+        errors.append("PRIMITIVE_COVERAGE_DUPLICATE")
+    missing=sorted(set(PRIMITIVE_KEYS)-set(coverage))
+    if missing:errors.append("PRIMITIVE_COVERAGE_MISSING_"+"_".join(missing))
     # The packet must state how the direct rates were estimated; the ingestion
     # layer refuses to reverse-engineer them from aggregate fidelity numbers.
     if not isinstance(raw.get("fault_model_method"),str) or not raw.get("fault_model_method"):errors.append("FAULT_MODEL_METHOD")
-    return {"accepted":not errors,"errors":errors,"rates":{k:float(rates[k]) for k in RATE_KEYS} if not errors else None,"metrics":metrics if not errors else None}
+    return {
+      "accepted":not errors,
+      "errors":errors,
+      "rates":{k:float(rates[k]) for k in RATE_KEYS} if not errors else None,
+      "metrics":metrics if not errors else None,
+      "primitive_coverage":sorted(set(coverage)),
+      "required_primitive_coverage":list(PRIMITIVE_KEYS),
+    }
 
 def device_calibration():
-    if not PACKET.exists():return {"present":False,"accepted":False,"path":str(PACKET.relative_to(ROOT)),"reason":"W33 device measurement packet absent"}
+    if not PACKET.exists():return {"present":False,"accepted":False,"path":str(PACKET.relative_to(ROOT)),"reason":"W33 device measurement packet absent","required_primitive_coverage":list(PRIMITIVE_KEYS)}
     try:raw=json.loads(PACKET.read_text(encoding="utf-8"))
-    except Exception as e:return {"present":True,"accepted":False,"path":str(PACKET.relative_to(ROOT)),"reason":f"invalid JSON: {e}"}
+    except Exception as e:return {"present":True,"accepted":False,"path":str(PACKET.relative_to(ROOT)),"reason":f"invalid JSON: {e}","required_primitive_coverage":list(PRIMITIVE_KEYS)}
     v=validate_device_packet(raw)
-    return {"present":True,"accepted":bool(v["accepted"]),"path":str(PACKET.relative_to(ROOT)),"packet_digest":digest(raw),"validation":v,"packet":raw}
+    return {"present":True,"accepted":bool(v["accepted"]),"path":str(PACKET.relative_to(ROOT)),"packet_digest":digest(raw),"validation":v,"packet":raw,"required_primitive_coverage":list(PRIMITIVE_KEYS)}
 
 def rate_source(defaults):
     dev=device_calibration();prior=prior_art()
     if dev.get("accepted"):
         rates=dev["validation"]["rates"]
         return {"source":"W33_DEVICE_MEASUREMENT","hardware_backed":True,"rates":rates,"device":dev,"prior_art":prior}
-    return {"source":"ENGINEERING_DEFAULTS","hardware_backed":False,"rates":{k:float(defaults[k]) for k in RATE_KEYS},"device":dev,"prior_art":prior,"reason":"no accepted W33 device measurement; external prior art is benchmark-only"}
+    return {"source":"ENGINEERING_DEFAULTS","hardware_backed":False,"rates":{k:float(defaults[k]) for k in RATE_KEYS},"device":dev,"prior_art":prior,"reason":"no accepted W33 device measurement with required primitive coverage; external prior art is benchmark-only"}
+
+def calibrated_device():
+    dev=device_calibration()
+    return {
+      "tier":"CALIBRATED_DEVICE",
+      "admissible":bool(dev.get("accepted")),
+      "device_packet_digest":dev.get("packet_digest"),
+      "required_primitive_coverage":list(PRIMITIVE_KEYS),
+      "declared_primitive_coverage":dev.get("validation",{}).get("primitive_coverage",[]) if isinstance(dev.get("validation"),dict) else [],
+      "boundary":"CALIBRATED_DEVICE is reachable only through an accepted W33_DEVICE_MEASUREMENT packet with directly estimated fault rates and the exact primitive coverage."
+    }
 
 def verify(defaults=None):
     if defaults is None:defaults={k:1e-5 for k in RATE_KEYS}
-    src=rate_source(defaults);prior=src["prior_art"]
+    src=rate_source(defaults);prior=src["prior_art"];cal=calibrated_device()
     checks={
       "external_prior_art_never_accepted_as_W33_hardware":prior.get("accepted_for_w33") is False,
       "all_effective_rates_are_probabilities":all(probability(src["rates"][k]) for k in RATE_KEYS),
       "hardware_flag_only_for_accepted_device_packet":src["hardware_backed"]==(src["source"]=="W33_DEVICE_MEASUREMENT"),
       "missing_or_invalid_device_packet_fails_closed":src["hardware_backed"] or src["source"]=="ENGINEERING_DEFAULTS",
+      "calibrated_device_equals_accepted_measured_packet":cal["admissible"]==bool(src["device"].get("accepted")),
+      "calibrated_device_names_exact_required_primitives":set(cal["required_primitive_coverage"])==set(PRIMITIVE_KEYS),
     }
     checks={k:bool(v) for k,v in checks.items()}
-    return {"schema":"w33.qutrit-optical-calibration-ingest.v1","status":"PASS" if all(checks.values()) else "FAIL","checks":checks,"effective_rate_source":src,"boundary":"Published measurements from other devices can guide engineering expectations but never become W33 hardware evidence. Only a W33_DEVICE_MEASUREMENT packet with directly estimated fault rates can replace defaults."}
+    return {"schema":"w33.qutrit-optical-calibration-ingest.v2","status":"PASS" if all(checks.values()) else "FAIL","checks":checks,"effective_rate_source":src,"calibrated_device":cal,"boundary":"Published measurements from other devices can guide engineering expectations but never become W33 hardware evidence. Only a W33_DEVICE_MEASUREMENT packet with directly estimated fault rates and explicit WEYL_DISPLACEMENT + TRANSVECTION_QUADRATIC_PHASE coverage can reach CALIBRATED_DEVICE."}
 if __name__=="__main__":
     out=verify();print(json.dumps(out,indent=2));raise SystemExit(0 if out["status"]=="PASS" else 1)
