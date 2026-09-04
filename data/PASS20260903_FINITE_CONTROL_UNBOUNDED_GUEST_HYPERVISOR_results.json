@@ -1,0 +1,68 @@
+{
+  "schema": "w33.finite-control-unbounded-guest-hypervisor.v1",
+  "valid": true,
+  "date": "2026-09-03",
+  "local_exact_checks": {
+    "base_states": 36,
+    "carrier_states_each": 216,
+    "fibre_product_states": 1296,
+    "states_per_base": 36,
+    "projection_degree_to_each_216_fork": 6,
+    "both_projections_onto": true,
+    "one_projection_does_not_determine_other": true,
+    "w33_route_hop_histogram": {
+      "0": 40,
+      "1": 480,
+      "2": 1080
+    },
+    "w33_diameter": 2,
+    "w33_nonadjacent_common_relays": 4,
+    "projective_transvection_axes": 40,
+    "lambda_values_per_axis": 2,
+    "distinct_qutrit_transvection_opcodes": 80,
+    "inverse_opcode_pairs": 40,
+    "all_80_transvections_symplectic": true
+  },
+  "guest_semantics_check": {
+    "program": "add-r1-into-r0",
+    "input": [5, 7],
+    "output_on_circuit_st81": [12, 0],
+    "output_on_pair_st64": [12, 0],
+    "halt_steps_each": 16,
+    "carrier_conversion_forbidden": true,
+    "interpretation": "guest semantic result is independent of immutable carrier choice"
+  },
+  "cross_repo_imported_certificate": {
+    "repository": "wilcompute/Holotrade",
+    "commit": "e05515fde8f4300080ba7fb6e80b93fb953de8fe",
+    "sp43_elements_exhaustively_compiled": 51840,
+    "transvection_programs_minimal_pointwise": true,
+    "maximum_minimal_word_length": 5,
+    "compiler_group_search_required": false,
+    "boundary": "symplectic word only; phase bookkeeping for a physical qutrit Clifford circuit is separate"
+  },
+  "fibre_product_provenance": {
+    "repository": "wilcompute/Holotrade",
+    "commit": "58f0df389db596c9ee3d7893cdf8f9685c0b18a3",
+    "formula": "216 x_36 216 = 36 x 6 x 6 = 1296",
+    "psp43_orbit_transitive": true,
+    "stabiliser_order": 20,
+    "stabiliser_signature": "F20 = AGL(1,5)",
+    "boundary": "canonical composite over the shared base, not an isomorphism or conversion between the two 216-state forks"
+  },
+  "architecture_conclusion": {
+    "name": "finite-control / unbounded-guest universal hypervisor",
+    "principle": "universal computation does not require infinite control hardware: the finite W33/fibre-product/Sp control plane can remain bounded while universality resides in extensible or abstractly unbounded guest state/history",
+    "machine_types": [
+      "w33.circuit216.steinberg81",
+      "w33.paired-hemisystem216.steinberg64",
+      "w33.fibre1296.steinberg81+64"
+    ],
+    "third_type_role": "hypervisor pairing/synchronisation, not a third carrier conversion target",
+    "finite_control_bounds": {
+      "w33_route_hops": 2,
+      "sp43_transvection_word": 5
+    }
+  },
+  "honesty_boundary": "This is an exact software/control architecture. The finite geometry does not realize an unbounded physical tape. The finite Clifford/symplectic control plane is not quantum-universal by itself. Optical and non-Clifford execution remain fail-closed behind separate measured-calibration and resource certificates."
+}
