@@ -1,0 +1,30 @@
+name: W33 next-five execution closure
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_wasm_counter_execution_refinement.py'
+      - 'analysis/w33_qutrit_clifford_photonic_lowering.py'
+      - 'analysis/w33_qutrit_optical_calibration_ingest.py'
+      - 'analysis/w33_adaptive_reversible_scheduler.py'
+      - '.github/workflows/w33_next_five_execution.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Wasm invocation to universal counter refinement
+        run: python analysis/w33_wasm_counter_execution_refinement.py
+      - name: Fail-closed optical calibration ingest
+        run: python analysis/w33_qutrit_optical_calibration_ingest.py
+      - name: Phase-specified qutrit photonic lowering
+        run: python analysis/w33_qutrit_clifford_photonic_lowering.py
+      - name: Adaptive reversible scheduler
+        run: python analysis/w33_adaptive_reversible_scheduler.py
