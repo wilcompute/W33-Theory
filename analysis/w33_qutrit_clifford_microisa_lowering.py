@@ -11,6 +11,13 @@ generate all 51,840 elements of Sp(4,3).  This module performs one BFS in that
 existing micro-ISA, reconstructs a shortest micro-ISA word for each of the 80
 W33 transvections, and verifies every word against the exact symplectic target.
 
+There is one indispensable coordinate bridge.  The W33 geometry uses the
+phase-space ordering (x_p,x_f,z_p,z_f), whose symplectic pairs are (0,2) and
+(1,3).  The established frame micro-ISA uses (x_p,z_p,x_f,z_f), paired (0,1)
+and (2,3).  They are related by the self-inverse basis permutation (1 2), and
+all target matrices are conjugated by that permutation before micro-ISA lookup.
+The permutation is explicit and verified rather than hidden as a convention.
+
 Hardware vocabulary is therefore reduced to already-owned components:
   * F_p: three-mode qutrit Fourier mixer on the p register;
   * CX_{p->f}, CX_{f->p}: qutrit controlled-add/SUM couplers;
@@ -33,10 +40,37 @@ from w33_qutrit_clifford_phase_displacement_lift import CliffordPhaseFrame, GEOM
 from w33_qutrit_clifford_photonic_lowering import displacement_plan
 
 SELECTED = ("F_p", "CX_pf", "CX_fp")
+# frame[i] = w33[BASIS_PERM[i]]; this transposition is its own inverse.
+BASIS_PERM = (0, 2, 1, 3)
 
 
 def digest(v: Any) -> str:
     return "sha256:" + hashlib.sha256(json.dumps(v, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
+
+
+def to_frame_basis(matrix: Any) -> Any:
+    """Conjugate a W33-basis matrix into the historical frame-ISA basis."""
+    return tuple(
+        tuple(int(matrix[BASIS_PERM[i]][BASIS_PERM[j]]) % 3 for j in range(4))
+        for i in range(4)
+    )
+
+
+def from_frame_basis(matrix: Any) -> Any:
+    # BASIS_PERM is self-inverse, so this is the same conjugation.
+    return to_frame_basis(matrix)
+
+
+def w33_symplectic(a: Sequence[int], b: Sequence[int]) -> int:
+    return (a[0]*b[2] - a[2]*b[0] + a[1]*b[3] - a[3]*b[1]) % 3
+
+
+def frame_symplectic(a: Sequence[int], b: Sequence[int]) -> int:
+    return (a[0]*b[1] - a[1]*b[0] + a[2]*b[3] - a[3]*b[2]) % 3
+
+
+def permute_vector(v: Sequence[int]) -> tuple[int, int, int, int]:
+    return tuple(int(v[BASIS_PERM[i]]) % 3 for i in range(4))  # type: ignore[return-value]
 
 
 def bfs_words() -> tuple[dict[Any, int], dict[Any, tuple[Any, str] | None]]:
@@ -111,10 +145,13 @@ def transvection_table() -> dict[tuple[int, int], tuple[str, ...]]:
     table = {}
     for axis, v in enumerate(GEOMETRY.points):
         for lam in (1, 2):
-            target = transvection(v, lam)
+            target_w33 = transvection(v, lam)
+            target = to_frame_basis(target_w33)
             word = reconstruct(target, parent)
             if word_matrix(word) != target:
                 raise AssertionError(f"micro-ISA word mismatch for axis={axis}, lambda={lam}")
+            if from_frame_basis(word_matrix(word)) != target_w33:
+                raise AssertionError("basis round trip did not reconstruct W33 transvection")
             if len(word) != distance[target]:
                 raise AssertionError("BFS word lost minimality")
             table[(axis, lam)] = word
@@ -140,6 +177,11 @@ def lower_frame(frame: CliffordPhaseFrame, table: dict[tuple[int, int], tuple[st
         "schema": "w33.qutrit-clifford-existing-microisa-plan.v1",
         "phase_frame_digest": frame.phase_frame_digest,
         "selected_microisa": list(SELECTED),
+        "basis_bridge": {
+            "w33_order": ["x_p", "x_f", "z_p", "z_f"],
+            "frame_order": ["x_p", "z_p", "x_f", "z_f"],
+            "permutation": list(BASIS_PERM),
+        },
         "displacement": list(frame.displacement),
         "global_phase_mod3": frame.global_phase_mod3,
         "transvections": trans_rows,
@@ -155,19 +197,31 @@ def verify() -> dict[str, Any]:
     table = {}
     hist = Counter()
     exact = minimal = 0
+    basis_pairing_ok = True
+    # Exhaustively verify the form itself under the basis swap on all 81^2 pairs.
+    vectors = [tuple(((n // (3**k)) % 3) for k in range(4)) for n in range(81)]
+    for a in vectors:
+        pa = permute_vector(a)
+        for b in vectors:
+            pb = permute_vector(b)
+            basis_pairing_ok = basis_pairing_ok and (w33_symplectic(a, b) == frame_symplectic(pa, pb))
+
     for axis, v in enumerate(GEOMETRY.points):
         for lam in (1, 2):
-            target = transvection(v, lam)
+            target_w33 = transvection(v, lam)
+            target = to_frame_basis(target_w33)
             word = reconstruct(target, parent)
             table[(axis, lam)] = word
             hist[len(word)] += 1
-            exact += word_matrix(word) == target
+            exact += word_matrix(word) == target and from_frame_basis(word_matrix(word)) == target_w33
             minimal += len(word) == distance[target]
 
     sample = CliffordPhaseFrame(((0, 1), (13, 2), (39, 1)), (1, 2, 0, 1), 2)
     plan = lower_frame(sample, table)
     physical_names = {x.get("component") for x in plan["operations"] if "component" in x}
     checks = {
+        "basis_permutation_is_self_inverse": tuple(BASIS_PERM[BASIS_PERM[i]] for i in range(4)) == tuple(range(4)),
+        "basis_permutation_preserves_symplectic_form_on_all_81x81_pairs": basis_pairing_ok,
         "selected_three_gate_isa_generates_full_sp43": len(distance) == 51840,
         "all_80_transvections_have_exact_microisa_words": exact == 80,
         "all_80_words_are_shortest_in_selected_microisa": minimal == 80,
@@ -177,16 +231,21 @@ def verify() -> dict[str, Any]:
         "affine_displacement_is_lowered_before_linear_word": any(x.get("primitive") == "WEYL_DISPLACEMENT" for x in plan["operations"]),
     }
     return {
-        "schema": "w33.qutrit-clifford-microisa-lowering.v1",
+        "schema": "w33.qutrit-clifford-microisa-lowering.v2",
         "status": "PASS" if all(checks.values()) else "FAIL",
         "checks": checks,
         "selected_microisa": list(SELECTED),
+        "basis_bridge": {
+            "w33_order": ["x_p", "x_f", "z_p", "z_f"],
+            "frame_order": ["x_p", "z_p", "x_f", "z_f"],
+            "permutation": list(BASIS_PERM),
+        },
         "sp43_elements": len(distance),
         "transvection_word_length_histogram": {str(k): hist[k] for k in sorted(hist)},
         "maximum_transvection_microisa_length": max(hist),
         "sample_plan": plan,
         "interpretation": (
-            "The 80 exact transvection primitives need no new abstract optical gate class at the symplectic level: each is lowered to a shortest word in the already-proved F_p/CX_pf/CX_fp micro-ISA, while the separate phase-frame digest retains the exact Clifford phase semantics."
+            "The 80 exact transvection primitives need no new abstract optical gate class at the symplectic level: after the explicit W33/frame basis conjugacy, each is lowered to a shortest word in the already-proved F_p/CX_pf/CX_fp micro-ISA, while the separate phase-frame digest retains the exact Clifford phase semantics."
         ),
         "boundary": (
             "Shortest means shortest in this selected three-generator Sp(4,3) micro-ISA, not globally minimum optical depth or loss. Physical mixer/coupler calibration remains a device measurement problem."
