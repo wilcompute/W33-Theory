@@ -1,0 +1,154 @@
+% PASS20260903: finite-control / unbounded-guest universal hypervisor
+% Shared current-frontier insert for w33_paper.tex, photonic_holonet.tex,
+% and holonet_machine_blueprint.tex.
+
+\section*{Current VM frontier: finite certified control, extensible guest state}
+
+The current software theorem should be stated more narrowly, and more usefully, than
+``the finite geometry is itself an infinite computer.''  The executable MicroVM separates
+the two roles.  Universal semantics belong to a two-counter guest over $\mathbb N^2$ (or
+an equivalent extensible memory model); the finite $W(3,3)$ substrate supplies typed
+routing, control, capability and proof structure.  Thus the present architecture is
+
+\[
+\boxed{
+\text{universal guest semantics}
+\quad+\quad
+\text{finite proof-carrying control plane}.
+}
+\]
+
+No finite forty-node device is thereby claimed to realise an unbounded physical tape.
+The universality statement is the standard abstract-machine one: a fixed finite
+transition/control mechanism acts on storage whose extent is not fixed in the model.
+The Merkle-memory, reversible-history, checkpoint and execution-passport layers are the
+systems implementation of that separation.
+
+\subsection*{The $1296$-state object is a hypervisor, not a carrier conversion}
+
+The two verified $216$-state carriers remain inequivalent construction-time forks.  The
+canonical relation between them is their fibre product over the common $36$-state base,
+
+\[
+\boxed{
+216\times_{36}216=36\times6\times6=1296.
+}
+\]
+
+Write a composite address as
+\[
+h=(b,a,c)\in 36\times6\times6.
+\]
+Its two projections are
+\[
+\pi_{81}(h)=6b+a,
+\qquad
+\pi_{64}(h)=6b+c.
+\]
+Both are onto and exactly six-to-one.  Fixing either projection leaves six possibilities
+for the other, so the composite does not define an opcode converting one carrier into the
+other.  Architecturally the correct third deployment mode is therefore a
+\emph{hypervisor} machine type,
+\[
+\texttt{w33.fibre1296.steinberg81+64},
+\]
+which synchronises the two immutable guest forks on their shared base while retaining
+both logical modules.  The associated Holotrade fibre-product certificate gives a
+transitive $1296$-point $\PSp(4,3)$ orbit with stabiliser of order $20$ and Frobenius
+signature $F_{20}\cong\mathrm{AGL}(1,5)$.
+
+\subsection*{Bounded control latency is independent of guest magnitude}
+
+The local verifier checks every ordered W33 portal pair and obtains route-hop histogram
+\[
+0^{40},\qquad1^{480},\qquad2^{1080},
+\]
+so the routing diameter is exactly two.  On the qutrit symplectic side, the forty
+projective axes and two nonzero field scalars give
+\[
+\boxed{40\cdot2=80}
+\]
+distinct transvection micro-operations; the two operations on one axis are mutual
+inverses.  The current Holotrade exhaustive compiler independently verifies all
+$51{,}840$ elements of $\Sp(4,3)$ and emits pointwise-minimal transvection words of
+length at most
+\[
+\boxed{5}.
+\]
+Consequently the finite control envelope---W33 placement plus symplectic microcode---is
+bounded by substrate constants and does not grow when a guest counter or Merkle-backed
+semantic object grows.
+
+\subsection*{The control target needs a central-lift bit}
+
+Projective scheduling and matrix-level execution are not the same namespace.  In
+$\Sp(4,3)$ the two matrices $g$ and $-g$ are distinct, whereas their actions on the
+forty W33 projective points coincide.  Hence a projective target alone is insufficient
+to specify matrix-level execution.  The current control ABI is therefore the ladder
+
+\[
+\boxed{
+\text{projective action}
+\;\longrightarrow\;
+\text{$\Sp$ central-lift bit}
+\;\longrightarrow\;
+\text{Clifford phase/calibration evidence}
+\;\longrightarrow\;
+\text{non-Clifford resource evidence}.
+}
+\]
+
+The first arrow restores the twofold $\Sp\to\PSp$ information loss only; it is \emph{not}
+a complete qutrit Clifford phase lift.  This distinction is operationally necessary in
+the newest cost geometry: forty-five expensive projective target classes form
+$GQ(4,2)$ under the relation $gh=-hg$ on their $\Sp$ lifts.  That sign relation becomes
+invisible projectively because $-I$ is quotiented out.  A physical execution passport
+must therefore bind the projective action and the intended central lift separately.
+Measured optical calibration and a non-Clifford resource remain independent fail-closed
+admission requirements.
+
+\subsection*{Virtual-hardware interpretation}
+
+The resulting machine stack is:
+\begin{center}
+\begin{tabular}{lll}
+\hline
+layer & current virtual object & role\\
+\hline
+vCPU & two-counter/compiled guest & universal semantic transition\\
+vALU-control & $80$ qutrit transvections & finite symplectic microcode\\
+vRouter & $40$ W33 portals, diameter $2$ & placement and transport\\
+vHypervisor & $36\times6\times6$ fibre product & pair ST81/ST64 without conversion\\
+vMMU & Merkle capability memory & extensible content-addressed state\\
+vClock & causal ledger + reversible history & logical time, replay and rewind\\
+vTPM/passport & evidence/epoch/revocation roots & proof-carrying execution identity\\
+quantum backend & calibrated qutrit primitives & optional physical accelerator\\
+non-Clifford port & explicit resource token & required for quantum universality\\
+\hline
+\end{tabular}
+\end{center}
+
+The architectural conclusion is therefore precise:
+\[
+\boxed{
+\text{compute}
+=
+\text{finite certified transformation}
++
+\text{advance extensible semantic/history state}
++
+\text{retain enough proof to verify or reverse the transition}.
+}
+\]
+
+Executable witnesses are
+\texttt{analysis/w33\_finite\_control\_unbounded\_guest\_hypervisor.py} and
+\texttt{analysis/w33\_projective\_symplectic\_lift\_control\_abi.py}, with frozen
+result certificates under \texttt{data/PASS20260903\_*}.  The corresponding Holotrade
+runtime object is \texttt{js/w33-fibre-hypervisor-profile.js}.
+
+\paragraph{Boundary.}
+This insert proves and records a software/control architecture.  It does not identify the
+two $216$-state carriers, does not make finite physical storage unbounded, does not turn a
+symplectic word into a measured optical gate, and does not promote a finite Clifford
+kernel to quantum universality without a separately validated non-Clifford resource.
