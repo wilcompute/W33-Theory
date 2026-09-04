@@ -10,9 +10,16 @@ Two evidence classes are intentionally kept separate:
 
 A W33 device packet must bind a device/run identity, measurement digest, sample
 count, primitive engineering metrics, directly estimated circuit fault rates,
-and explicit coverage of the exact primitive classes used by the phase-specified
-qutrit Clifford lowering. Aggregate fidelity or insertion loss is never reverse-
-engineered into an unstated Pauli/leakage model.
+and explicit coverage of BOTH semantic Clifford classes and the physical
+micro-ISA component classes to which they are lowered:
+
+  WEYL_DISPLACEMENT
+  TRANSVECTION_QUADRATIC_PHASE
+  QUTRIT_FOURIER_MIXER
+  QUTRIT_CONTROLLED_ADD
+
+Aggregate fidelity or insertion loss is never reverse-engineered into an
+unstated Pauli/leakage model.
 """
 from __future__ import annotations
 
@@ -28,7 +35,9 @@ RATE_KEYS=(
  "coupling_heralded_loss","coupling_unheralded_leakage",
 )
 METRIC_KEYS=("insertion_loss_db","crosstalk_probability","leakage_probability","phase_rms_rad")
-PRIMITIVE_KEYS=("WEYL_DISPLACEMENT","TRANSVECTION_QUADRATIC_PHASE")
+SEMANTIC_PRIMITIVE_KEYS=("WEYL_DISPLACEMENT","TRANSVECTION_QUADRATIC_PHASE")
+PHYSICAL_PRIMITIVE_KEYS=("QUTRIT_FOURIER_MIXER","QUTRIT_CONTROLLED_ADD")
+PRIMITIVE_KEYS=SEMANTIC_PRIMITIVE_KEYS+PHYSICAL_PRIMITIVE_KEYS
 
 def canonical(v):return json.dumps(v,sort_keys=True,separators=(",",":"))
 def digest(v):return "sha256:"+hashlib.sha256(canonical(v).encode()).hexdigest()
@@ -63,8 +72,6 @@ def validate_device_packet(raw):
         errors.append("PRIMITIVE_COVERAGE_DUPLICATE")
     missing=sorted(set(PRIMITIVE_KEYS)-set(coverage))
     if missing:errors.append("PRIMITIVE_COVERAGE_MISSING_"+"_".join(missing))
-    # The packet must state how the direct rates were estimated; the ingestion
-    # layer refuses to reverse-engineer them from aggregate fidelity numbers.
     if not isinstance(raw.get("fault_model_method"),str) or not raw.get("fault_model_method"):errors.append("FAULT_MODEL_METHOD")
     return {
       "accepted":not errors,
@@ -73,31 +80,42 @@ def validate_device_packet(raw):
       "metrics":metrics if not errors else None,
       "primitive_coverage":sorted(set(coverage)),
       "required_primitive_coverage":list(PRIMITIVE_KEYS),
+      "required_semantic_coverage":list(SEMANTIC_PRIMITIVE_KEYS),
+      "required_physical_coverage":list(PHYSICAL_PRIMITIVE_KEYS),
     }
 
 def device_calibration():
-    if not PACKET.exists():return {"present":False,"accepted":False,"path":str(PACKET.relative_to(ROOT)),"reason":"W33 device measurement packet absent","required_primitive_coverage":list(PRIMITIVE_KEYS)}
+    base={
+      "path":str(PACKET.relative_to(ROOT)),
+      "required_primitive_coverage":list(PRIMITIVE_KEYS),
+      "required_semantic_coverage":list(SEMANTIC_PRIMITIVE_KEYS),
+      "required_physical_coverage":list(PHYSICAL_PRIMITIVE_KEYS),
+    }
+    if not PACKET.exists():return {**base,"present":False,"accepted":False,"reason":"W33 device measurement packet absent"}
     try:raw=json.loads(PACKET.read_text(encoding="utf-8"))
-    except Exception as e:return {"present":True,"accepted":False,"path":str(PACKET.relative_to(ROOT)),"reason":f"invalid JSON: {e}","required_primitive_coverage":list(PRIMITIVE_KEYS)}
+    except Exception as e:return {**base,"present":True,"accepted":False,"reason":f"invalid JSON: {e}"}
     v=validate_device_packet(raw)
-    return {"present":True,"accepted":bool(v["accepted"]),"path":str(PACKET.relative_to(ROOT)),"packet_digest":digest(raw),"validation":v,"packet":raw,"required_primitive_coverage":list(PRIMITIVE_KEYS)}
+    return {**base,"present":True,"accepted":bool(v["accepted"]),"packet_digest":digest(raw),"validation":v,"packet":raw}
 
 def rate_source(defaults):
     dev=device_calibration();prior=prior_art()
     if dev.get("accepted"):
         rates=dev["validation"]["rates"]
         return {"source":"W33_DEVICE_MEASUREMENT","hardware_backed":True,"rates":rates,"device":dev,"prior_art":prior}
-    return {"source":"ENGINEERING_DEFAULTS","hardware_backed":False,"rates":{k:float(defaults[k]) for k in RATE_KEYS},"device":dev,"prior_art":prior,"reason":"no accepted W33 device measurement with required primitive coverage; external prior art is benchmark-only"}
+    return {"source":"ENGINEERING_DEFAULTS","hardware_backed":False,"rates":{k:float(defaults[k]) for k in RATE_KEYS},"device":dev,"prior_art":prior,"reason":"no accepted W33 device measurement with required semantic+physical primitive coverage; external prior art is benchmark-only"}
 
 def calibrated_device():
     dev=device_calibration()
+    declared=dev.get("validation",{}).get("primitive_coverage",[]) if isinstance(dev.get("validation"),dict) else []
     return {
       "tier":"CALIBRATED_DEVICE",
       "admissible":bool(dev.get("accepted")),
       "device_packet_digest":dev.get("packet_digest"),
       "required_primitive_coverage":list(PRIMITIVE_KEYS),
-      "declared_primitive_coverage":dev.get("validation",{}).get("primitive_coverage",[]) if isinstance(dev.get("validation"),dict) else [],
-      "boundary":"CALIBRATED_DEVICE is reachable only through an accepted W33_DEVICE_MEASUREMENT packet with directly estimated fault rates and the exact primitive coverage."
+      "required_semantic_coverage":list(SEMANTIC_PRIMITIVE_KEYS),
+      "required_physical_coverage":list(PHYSICAL_PRIMITIVE_KEYS),
+      "declared_primitive_coverage":declared,
+      "boundary":"CALIBRATED_DEVICE is reachable only through an accepted W33_DEVICE_MEASUREMENT packet with directly estimated fault rates and all semantic plus physical micro-ISA primitive coverage."
     }
 
 def verify(defaults=None):
@@ -109,9 +127,10 @@ def verify(defaults=None):
       "hardware_flag_only_for_accepted_device_packet":src["hardware_backed"]==(src["source"]=="W33_DEVICE_MEASUREMENT"),
       "missing_or_invalid_device_packet_fails_closed":src["hardware_backed"] or src["source"]=="ENGINEERING_DEFAULTS",
       "calibrated_device_equals_accepted_measured_packet":cal["admissible"]==bool(src["device"].get("accepted")),
-      "calibrated_device_names_exact_required_primitives":set(cal["required_primitive_coverage"])==set(PRIMITIVE_KEYS),
+      "calibrated_device_names_all_required_primitives":set(cal["required_primitive_coverage"])==set(PRIMITIVE_KEYS),
+      "semantic_and_physical_coverage_are_both_mandatory":set(cal["required_semantic_coverage"])==set(SEMANTIC_PRIMITIVE_KEYS) and set(cal["required_physical_coverage"])==set(PHYSICAL_PRIMITIVE_KEYS),
     }
     checks={k:bool(v) for k,v in checks.items()}
-    return {"schema":"w33.qutrit-optical-calibration-ingest.v2","status":"PASS" if all(checks.values()) else "FAIL","checks":checks,"effective_rate_source":src,"calibrated_device":cal,"boundary":"Published measurements from other devices can guide engineering expectations but never become W33 hardware evidence. Only a W33_DEVICE_MEASUREMENT packet with directly estimated fault rates and explicit WEYL_DISPLACEMENT + TRANSVECTION_QUADRATIC_PHASE coverage can reach CALIBRATED_DEVICE."}
+    return {"schema":"w33.qutrit-optical-calibration-ingest.v3","status":"PASS" if all(checks.values()) else "FAIL","checks":checks,"effective_rate_source":src,"calibrated_device":cal,"boundary":"Published measurements from other devices can guide engineering expectations but never become W33 hardware evidence. Only a W33_DEVICE_MEASUREMENT packet with directly estimated fault rates and explicit WEYL_DISPLACEMENT, TRANSVECTION_QUADRATIC_PHASE, QUTRIT_FOURIER_MIXER, and QUTRIT_CONTROLLED_ADD coverage can reach CALIBRATED_DEVICE."}
 if __name__=="__main__":
     out=verify();print(json.dumps(out,indent=2));raise SystemExit(0 if out["status"]=="PASS" else 1)
