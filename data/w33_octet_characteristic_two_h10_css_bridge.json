@@ -1,0 +1,57 @@
+{
+  "BT768Relation": {
+    "carrierBoundary": "At odd q, W33 point and line carriers are inequivalent; no coordinatewise point=line identification is asserted here.",
+    "newSynthesis": "Modulo two the primitive integral 15-kernel becomes im(M), while ker(M^T) expands to dimension 25. The ten-dimensional quotient is exactly H10/Smith-2/CSS logical homology.",
+    "rationalStatement": "MM^T=8I+J+2A has a 15-dimensional rational kernel and a transmitted 24-dimensional complement.",
+    "spreadFrame": "The existing BT768/O5 closure realizes the corresponding line-side 15-sector by the centered 36-spread polar frame C0 and proves N C0=0."
+  },
+  "CSS": {
+    "checks": "H_X=H_Z=M^T",
+    "distanceWitness": "weight-4 W33 line/context words lie in ker(M^T), while im(M) is the sentinel [40,15,8] code",
+    "logicalSpace": "H10",
+    "parameters": "[[40,10,4]]"
+  },
+  "boundary": "Exact finite integral/binary coding statement. It does not identify W33 point and line coordinates or imply a physical error-correcting implementation by itself.",
+  "characteristicTwoShadow": {
+    "H10": "ker_F2(M^T) / im_F2(M)",
+    "binaryKernelDimension": 25,
+    "bockstein": "H10 ~= Tor_2 coker_Z(M^T) = (Z/2)^10",
+    "newKernelDimensionsAtTwo": 10,
+    "primitiveIntegralKernelMod2Dimension": 15,
+    "primitiveIntegralKernelMod2EqualsImM": true,
+    "rationalKernelDimension": 15
+  },
+  "checks": {
+    "45_center_quad_supports_reconstructed": true,
+    "45_intrinsic_binary_octets_reconstructed": true,
+    "BT768_companion_spread_sector_certificate_is_green": true,
+    "T_equals_M_transpose_after_support_match": true,
+    "binary_boundary_dimension_is_15": true,
+    "binary_kernel_dimension_is_25": true,
+    "bockstein_target_is_Z2_pow10": true,
+    "characteristic_two_kernel_jump_is_H10": true,
+    "existing_CSS_is_40_10_4": true,
+    "M_transpose_M_zero_mod2": true,
+    "primitive_rational_kernel_reduces_to_im_M": true,
+    "rank_F2_is_15": true,
+    "rank_Q_is_25": true,
+    "smith_is_1pow15_2pow10_0pow15": true,
+    "support_sets_are_identical": true
+  },
+  "integerAndBinaryRanks": {
+    "rankF2": 15,
+    "rankQ": 25,
+    "smith": {"0": 15, "1": 15, "2": 10},
+    "uniqueRankDropPrime": 2
+  },
+  "objectwiseIdentity": {
+    "M": "40x45 intrinsic BT768 point/octet incidence",
+    "T": "45x40 antipodal-center-quad support incidence",
+    "identity": "T = M^T after the unique equality-of-supports ordering",
+    "rowsOrColumns": 45,
+    "supportSize": 8
+  },
+  "schema": "w33.octet-characteristic-two-h10-css-bridge.v1",
+  "status": "PASS",
+  "theorem": "The BT768 octet filter and the H10 Smith/CSS incidence are the same integral matrix transposed. Characteristic two is the unique rank-drop prime, and its ten extra kernel dimensions are exactly H10, equivalently the ten Smith-2 torsion bits and the [[40,10,4]] CSS logical space."
+}
