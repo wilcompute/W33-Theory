@@ -1,0 +1,29 @@
+name: W33 odd-prime Weyl transvection theorem
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_odd_prime_weyl_transvection_theorem.py'
+      - 'analysis/w33_qutrit_clifford_phase_displacement_lift.py'
+      - '.github/workflows/w33_odd_prime_weyl_transvection.yml'
+  workflow_dispatch:
+
+jobs:
+  prove:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Prove odd-prime Weyl transvection identity and check all 80 W33 qutrit opcodes
+        run: python analysis/w33_odd_prime_weyl_transvection_theorem.py --write
+      - name: Recheck materialized theorem certificate
+        run: test -s data/w33_odd_prime_weyl_transvection_theorem.json && python -c "import json; d=json.load(open('data/w33_odd_prime_weyl_transvection_theorem.json')); assert d['status']=='PASS' and all(d['checks'].values())"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w33-odd-prime-weyl-transvection-theorem
+          path: data/w33_odd_prime_weyl_transvection_theorem.json
+          if-no-files-found: error
