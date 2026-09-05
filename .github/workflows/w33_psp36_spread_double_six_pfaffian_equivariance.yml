@@ -1,0 +1,39 @@
+name: W33 PSp36 spread double-six Pfaffian equivariance
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_psp36_spread_double_six_pfaffian_equivariance.py'
+      - 'analysis/w33_all36_pfaffian_double_six_sections.py'
+      - 'data/w33_psp36_spread_double_six_pfaffian_equivariance.json'
+      - '.github/workflows/w33_psp36_spread_double_six_pfaffian_equivariance.yml'
+  workflow_dispatch:
+
+jobs:
+  prove:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install exact graph dependency
+        run: python -m pip install networkx numpy
+      - name: Rebuild the 36-object PSp action and signed E6 lifts
+        run: python analysis/w33_psp36_spread_double_six_pfaffian_equivariance.py --write
+      - name: Recheck generated equivariance certificate
+        run: >-
+          python -c "import json; d=json.load(open('data/w33_psp36_spread_double_six_pfaffian_equivariance.json'));
+          assert d['status']=='PASS' and all(d['checks'].values());
+          assert d['group']['order']==25920 and d['group']['degree']==36 and d['group']['pointStabilizerOrder']==720;
+          assert d['cubicLiftSummary']['signEquationRankDistribution']=={'21':5};
+          assert d['cubicLiftSummary']['negativeCoordinateCountDistribution']=={'0':1,'8':4};
+          assert len(d['cubicLiftSummary']['generatorRecords'])==5;
+          assert all(r['fullCartanCubicPreserved'] and r['all36SectionSupportsTransported'] and r['all36SpreadDoubleSixIntertwiners'] for r in d['cubicLiftSummary']['generatorRecords'])"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w33-psp36-spread-double-six-pfaffian-equivariance
+          path: data/w33_psp36_spread_double_six_pfaffian_equivariance.json
+          if-no-files-found: error
