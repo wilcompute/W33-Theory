@@ -1,0 +1,29 @@
+name: W33 Pfaffian doily E6 cubic bridge
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pfaffian_doily_e6_cubic_bridge.py'
+      - 'data/w33_pfaffian_doily_e6_cubic_bridge.json'
+      - '.github/workflows/w33_pfaffian_doily_e6_cubic_bridge.yml'
+  workflow_dispatch:
+
+jobs:
+  prove:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Prove exact Pfaffian doily truncation of E6 cubic
+        run: python analysis/w33_pfaffian_doily_e6_cubic_bridge.py --write
+      - name: Recheck bridge certificate
+        run: python -c "import json; d=json.load(open('data/w33_pfaffian_doily_e6_cubic_bridge.json')); assert d['status']=='PASS' and all(d['checks'].values()) and d['pfaffianDoily']['terms']==15 and d['e6Trinification']['terms']==45 and d['restriction']['survivingTerms']==15"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w33-pfaffian-doily-e6-cubic-bridge
+          path: data/w33_pfaffian_doily_e6_cubic_bridge.json
+          if-no-files-found: error
