@@ -1,0 +1,35 @@
+{
+  "boundary": "Exact finite group/cubic/incidence theorem. It does not identify gauge choices as observables or infer a physical symmetry implementation.",
+  "chain": "W33 spread <-> Schlaefli double-six -> 15-point doily complement -> signed Pfaffian section of C_E6",
+  "checks": {
+    "PSp_action_on_36_has_order_25920": true,
+    "PSp_action_on_36_is_transitive": true,
+    "all_180_generator_section_pairs_transport_supports": true,
+    "all_180_generator_spread_pairs_intertwine": true,
+    "all_36_source_and_target_sections_are_exact_pfaffians": true,
+    "all_cubic_lift_sign_systems_have_rank_21": true,
+    "all_five_generators_have_signed_E6_cubic_lifts": true,
+    "double_six_to_spread_map_intertwines_all_generators": true,
+    "five_PSp_generators_used": true,
+    "local_stabilizer_has_order_720": true
+  },
+  "cubicLiftSummary": {
+    "generators": 5,
+    "negativeCoordinateCountDistribution": {"0": 1, "8": 4},
+    "signEquationRankDistribution": {"21": 5},
+    "signGaugeDimension": 6
+  },
+  "equivarianceStatement": "The same five PSp generators act on double-sixes and W33 spreads through an explicit intertwiner; after transport to the 27 Cartan coordinates each generator has a signed monomial lift preserving all 45 cubic coefficients and sends every Pfaffian-section support S_D to S_{gD}.",
+  "gaugeBoundary": "The local 15-variable Pfaffian sign solutions have five free bits, and the 27-variable cubic lift has six sign-gauge bits. Equivariance is therefore asserted for the signed-section family/gauge orbit, not for an arbitrary free-bits-zero local orientation.",
+  "group": {
+    "degree": 36,
+    "localInterpretation": "720 = |S6|, the classical local relabeling symmetry of one double-six/doily/Pfaffian six-set",
+    "name": "PSp(4,3)",
+    "order": 25920,
+    "pointStabilizerOrder": 720,
+    "transitive": true
+  },
+  "schema": "w33.psp36-spread-double-six-pfaffian-equivariance.v1",
+  "status": "PASS",
+  "theorem": "The 36 W33 spreads, 36 Schlaefli double-sixes, 36 doily complements and 36 exact Pfaffian sections form one PSp(4,3)-equivariant 36-object family. The local stabilizer is S6-sized (720), and the PSp generators lift to exact signed automorphisms of the full E6 Cartan cubic. Full generator/section records are regenerated and uploaded by CI."
+}
