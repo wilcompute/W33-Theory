@@ -21,7 +21,7 @@ jobs:
       - name: Install exact dependencies
         run: python -m pip install numpy sympy
       - name: Reconstruct both matrices and prove T equals M transpose
-        run: python analysis/w33_octet_characteristic_two_h10_css_bridge.py --write
+        run: PYTHONPATH=. python analysis/w33_octet_characteristic_two_h10_css_bridge.py --write
       - name: Recheck materialized certificate
         run: >-
           python -c "import json; d=json.load(open('data/w33_octet_characteristic_two_h10_css_bridge.json'));
