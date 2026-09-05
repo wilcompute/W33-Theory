@@ -1,0 +1,38 @@
+name: W33 all 36 Pfaffian double-six sections
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_all36_pfaffian_double_six_sections.py'
+      - 'data/w33_all36_pfaffian_double_six_sections.json'
+      - '.github/workflows/w33_all36_pfaffian_double_six_sections.yml'
+  workflow_dispatch:
+
+jobs:
+  prove:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install exact graph dependency
+        run: python -m pip install networkx numpy
+      - name: Derive all 36 signed restrictions coefficient by coefficient
+        run: python analysis/w33_all36_pfaffian_double_six_sections.py --write
+      - name: Recheck generated certificate
+        run: >-
+          python -c "import json; d=json.load(open('data/w33_all36_pfaffian_double_six_sections.json'));
+          assert d['status']=='PASS' and all(d['checks'].values());
+          assert len(d['sections'])==36;
+          assert d['summary']['signEquationRankDistribution']=={'10':36};
+          assert d['summary']['sectionsThroughEachE6Coordinate']==20;
+          assert d['summary']['sectionsContainingEachE6CubicTerm']==12;
+          assert all(r['signedRestrictionEqualsPfaffian'] for r in d['sections'])"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w33-all36-pfaffian-double-six-sections
+          path: data/w33_all36_pfaffian_double_six_sections.json
+          if-no-files-found: error
