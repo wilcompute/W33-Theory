@@ -1,0 +1,89 @@
+{
+  "boundary": "Software hop-crossing counts on certified finite geometry only.  No Joules, no device, no physical network claim.  Time bounds are the inherited Bennett/Li-Tromp-Vitanyi pebble model; novelty here is geometry-certified checkpoint placement.",
+  "certificate_sha256": "sha256:ebb04e0ed67e3c014081d19ce5fe867f3e29379e7912a159130cbdb20d0d6117",
+  "checks": {
+    "all_1023_unions_per_spread": true,
+    "all_ladders_valid": true,
+    "cycle_boundary_1320": true,
+    "exactly_36_spreads": true,
+    "expansion_bound_respected_in_sample": true,
+    "peak_boundary_100": true,
+    "rung_sizes_attain_bound": true,
+    "srg_identity_exact": true,
+    "total_boundary_660": true,
+    "zero_migration": true
+  },
+  "cross_track_anchor": "Holotrade scheduler/w33-elastic-ladder.js froze the ladder metrics; this file independently re-derives them and adds the reversible-GC optimality theorem.  Peak 100 equals the certified 20|20 cut in the Holotrade atomic shape-reservation packet.",
+  "expansion_sample": {
+    "bound_violations": 0,
+    "note": "Sampling corroborates the inequality; attainment is certified by the ladder rungs themselves.",
+    "subsets_checked": 15600
+  },
+  "first_ladder": {
+    "rungs_ok": true,
+    "spread": [
+      0,
+      13,
+      17,
+      21,
+      23,
+      27,
+      28,
+      33,
+      34,
+      38
+    ],
+    "unions_verified": 1023
+  },
+  "ladders_verified": 36,
+  "reversible_gc_economics": {
+    "inherited_time_bound": "T = 2B3^L (Bennett bridge), from w33_reversible_storage_economics",
+    "matches_certified_20_20_cut": true,
+    "migration_cost_per_resize": 0,
+    "model": "checkpoint tier = ladder rung; release cost = edge boundary crossings",
+    "optimality": "Each tier individually attains the global spectral lower bound for its size, so no checkpoint family with one tier of each size 4i can have smaller per-tier, peak, or total boundary.",
+    "peak_is_spectral_minimum_at_20": true,
+    "peak_live_boundary": 100,
+    "peak_rung": 5,
+    "per_tier_formula": "4i(10-i)",
+    "per_tier_release_boundary": [
+      36,
+      64,
+      84,
+      96,
+      100,
+      96,
+      84,
+      64,
+      36,
+      0
+    ],
+    "total_boundary_full_cycle": 1320,
+    "total_boundary_single_pass": 660
+  },
+  "schema": "w33.spread-ladder-reversible-gc.v1",
+  "spectral_bound_attained_at_sizes": [
+    4,
+    8,
+    12,
+    16,
+    20,
+    24,
+    28,
+    32,
+    36
+  ],
+  "spread_count": 36,
+  "srg_certification": {
+    "expansion_bound": "|dS| >= m(40-m)/4 for every m-subset",
+    "identity": "A^2 = 8I - 2A + 4J",
+    "identity_holds": true,
+    "laplacian_spectrum": "0^1, 10^24, 16^15",
+    "spectral_gap": 10,
+    "spectrum_certified": "12^1, 2^24, (-4)^15",
+    "trace_A": 0,
+    "trace_A2": 480
+  },
+  "status": "PASS",
+  "theorem": "The W33 elastic spread ladder is the boundary-optimal reversible checkpoint hierarchy: every tier attains the spectral minimum boundary m(40-m)/4 at its size, so per-tier release cost, peak live boundary (100 at the 20|20 half-ladder), and total cycle boundary (1320 hop-crossings) are simultaneously minimal, with zero retained-point migration on resize."
+}
