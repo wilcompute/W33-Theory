@@ -1,0 +1,47 @@
+{
+  "schema": "w33.paper_insert_manifest.v1",
+  "status": "PASS",
+  "scope": "Incremental registry introduced at Pass7305-7320; legacy inserts remain enumerated directly in analysis/W33_CURRENT_FRONTIER_MANIFEST.tex.",
+  "current_frontier_manifest": "analysis/W33_CURRENT_FRONTIER_MANIFEST.tex",
+  "shared_wrappers": [
+    "w33_paper.tex",
+    "photonic_holonet.tex"
+  ],
+  "entries": [
+    {
+      "id": "pass-7305-7320-intrinsic-naimark-pauli-scope",
+      "passes": "7305-7320",
+      "insert": "analysis/PASS7305_7320_intrinsic_naimark_pauli_scope_insert.tex",
+      "public_card": "analysis/PASS7305_7320_index_insert.html",
+      "materializer": "tools/materialize_pass7305_7320_frontier.py",
+      "focused_test": "tests/test_w33_pass7305_7320_publication.py",
+      "owners": {
+        "intrinsic_double_six_decoder": "analysis/w33_pass7305_7306_cspread_intrinsic_double_six.py",
+        "joint_naimark_isometry": "analysis/w33_pass7307_7309_double_six_naimark_isometry.py",
+        "q7_hardware": "analysis/w33_pass7310_7312_q7_pauli_validator.py",
+        "typed_stabilizers_and_q9_trace": "analysis/w33_pass7313_7316_pauli_trace_and_stabilizer_scope.g",
+        "lean_rescaling": "formal/W33/Pass7316AntisymplecticRescaling.lean",
+        "e8_d4_double_six_fusion": "analysis/w33_pass7317_7320_e8_d4_double_six_fusion.g"
+      },
+      "prior_owners": [
+        "analysis/w33_pass3694_3700_spread_etf_axial_closure.py",
+        "analysis/w33_pass4992_4999_common.py",
+        "analysis/w33_pass7163_7170_e8_hexagonal_lift.py",
+        "analysis/w33_pass7182_d4_glue_spread_code.py",
+        "analysis/w33_pass7184_spread_code_v20_v24_module.py",
+        "analysis/w33_pass7225_7232_spread_code_doily_puncture.py",
+        "analysis/w33_pass7241_7248_double_six_slice_generator.py",
+        "analysis/PASS7249_7304_eight_frontier_attacks.md"
+      ],
+      "boundaries": [
+        "Pass7249-7304 already owns the centered N rank-20 two-distance frame.",
+        "The q7 circuit validates one frozen 33-label certificate and does not prove maximality.",
+        "The q9 51-set is a family of mutually nonorthogonal Desarguesian spread lines, not 51 pairwise-noncommuting physical Pauli classes.",
+        "The q5 stabilizer result concerns only the frozen order-3-invariant 18-set.",
+        "Synthesis and place-and-route values are tool and seed scoped proxies, not device measurements.",
+        "The E8 root-line cross-check uses one chosen A2 anchor and one frozen H36 isomorphism; it is not a canonical invariant subset of the transitive anisotropic 120-set.",
+        "The constant mod-12 column residue of K rules out identifying K mod 12 with the nontrivial E8 Z12 grading."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+start
+generators 2 dim 24
+  searched 250
+  searched 500
+  searched 750
+  searched 1000
+  searched 1250
+  searched 1500
+  searched 1750
+  searched 2000
+  searched 2250
+  searched 2500
+  searched 2750
+  searched 3000
+  searched 3250
+  searched 3500
+  searched 3750
+  searched 4000
+  searched 4250
+  searched 4500
+  searched 4750
+  searched 5000
+  searched 5250
+  searched 5500
+  searched 5750
+  searched 6000
+NONE found in 6000 words

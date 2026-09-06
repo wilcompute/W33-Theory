@@ -1,0 +1,5 @@
+start
+Co0 generators 2 dim 24
+got maxes-2 SLP from 2.Co1
+subgroup generators 2
+wrote _co0_suz_gens.txt

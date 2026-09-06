@@ -10,42 +10,56 @@
 This file contains project context and decisions. AI assistants should read this file for context. MCP tools are an optional enhancement for richer interaction when connected.
 
 ## Project Context
-- **Total Decisions:** 5200
+- **Total Decisions:** 5387
 - **Known Topics:** needs-review, auto-draft, why, w33, testing, toe, docs, architecture, holonet, photonic, audit, qec, github, selector, gap
 
 ## Current State
 **Repository:** Theory of Everything
 **Project Type:** Python Project | Python
 **Branch:** master
+**Tracking:** ahead 2, behind 0
 
 **Recent Commits:**
-- `40b0223 Pass6152-6159: characteristic 3 provably cannot supply omega -- the chirality arc closes`
-- `2671719 Pass6144-6151: intake audit of the Perplexity Aug 18 batch -- arithmetic sound, framing not`
-- `2df13a3 BT1643+BT1644+BT1645: CSS boundary genus-21 | Ihara zeta RH + mass gap | Monster moonshine encoding (Perplexity Aug 18 2026)`
-- `c781905 BT1642: Ringel-Csaszar clique complex of W(3,3) — new topological invariants + Bell qutrit computation simulator (Perplexity session Aug 18 2026)`
-- `127f502 Pass 4144: reconcile matrix horizon RG scar curvature frontier`
+- `a31c7a1 Merge branch 'master' of https://github.com/wilcompute/W33-Theory`
+- `1583705 Separate authenticated counter storage reuse from proof work`
+- `ab3ae29 Materialize Pass5776-5855 corrected matrix frontier [skip ci]`
+- `493218b Execute universal W33 guests on authenticated binary-counter memory`
+- `4994530 Fix repo-root import path in octet H10 gate`
 
 **Working Tree:**
+- M .continuity/SESSION_NOTES.md
 - M .continuity/decisions.json
 - M .continuity/decisions.jsonl
+- M .cursorrules
+- M .github/copilot-instructions.md
+- M .mcp.json
+- M AGENTS.md
+- M CLAUDE.md
+- M GEMINI.md
+- M data/PART_W33_PASS7217_OVOID_PULLBACK_E8.json
+- ?? .github/workflows/w33_pass7305_7320_publication.yml
+- ?? =
+- ?? analysis/PAPER_INSERT_MANIFEST.json
+- ?? analysis/PART_CCCCCXCIX_E8_SPECTRAL_SCOPE_AUDIT.md
+- ?? analysis/PASS5308_5313_d4_f4_triality_tomotope_insert.tex
 
 ## Session Context
 **Goals:**
 - 2026-08-08 current goal: finish and validate the Passes 4324-4334 chamber Hecke and audited-corrections packet while preserving exact theorem, retraction, and open-boundary language.
 
 ## Decision Freshness
-**0 stale decisions** · 512 need review · 1138 superseded ready to archive · Oldest unreviewed: 2026-04-20
+**0 stale decisions** · 1087 need review · 1244 superseded ready to archive · Oldest unreviewed: 2026-04-20
 
 Stale decisions requiring attention:
-1. **1777318403162-biaewx** (score 55) — "Why: Add remaining arithmetic and trace-structure material?" — 17 weeks old, status: outdated, never reviewed
-2. **1777318403161-4mgrce** (score 55) — "Why: paper: add main.tex, references.bib, and all three figure scripts (Issue #1" — 17 weeks old, status: outdated, never reviewed
-3. **1777318403161-vfxeky** (score 55) — "Why: theory: add Witting deck-control audit?" — 17 weeks old, status: outdated, never reviewed
-4. **1777318403161-wwusgh** (score 55) — "Why: theory: add Witting packet Heisenberg chart?" — 17 weeks old, status: outdated, never reviewed
-5. **1777318403161-8dkkdk** (score 55) — "Why: theory: add Witting packet tritangent support bridge?" — 17 weeks old, status: outdated, never reviewed
+1. **1777318403162-biaewx** (score 59) — "Why: Add remaining arithmetic and trace-structure material?" — 20 weeks old, status: outdated, never reviewed
+2. **1777318403161-4mgrce** (score 58) — "Why: paper: add main.tex, references.bib, and all three figure scripts (Issue #1" — 20 weeks old, status: outdated, never reviewed
+3. **1777318403161-vfxeky** (score 58) — "Why: theory: add Witting deck-control audit?" — 19 weeks old, status: outdated, never reviewed
+4. **1777318403161-wwusgh** (score 58) — "Why: theory: add Witting packet Heisenberg chart?" — 19 weeks old, status: outdated, never reviewed
+5. **1777318403161-8dkkdk** (score 58) — "Why: theory: add Witting packet tritangent support bridge?" — 19 weeks old, status: outdated, never reviewed
 
 When referencing these decisions, note their staleness. Verify they still reflect current project state before recommending based on them.
 
-1574 decisions are eligible for Dream consolidation. Suggest running the Dream tool to archive stale decisions, merge duplicates, and resolve contradictions.
+1921 decisions are eligible for Dream consolidation. Suggest running the Dream tool to archive stale decisions, merge duplicates, and resolve contradictions.
 
 ## Operating Contract
 1. **Load context, then search before you change.** MCP-capable agents: call `get_quick_context` at session start, then `search_decisions` before proposing changes. Shell/CLI-only agents (e.g. Copilot): run `continuity context`, then `continuity search "<topic>"` (`grep -i "<topic>" .continuity/decisions.jsonl` if the CLI is unavailable). Name any conflict with a prior decision and let the user choose. **When a prior decision informs your answer, cite it inline — "per decision-abc123, we chose X because Y" — so the user can see the memory being used, not just trust that it was.** `search_decisions` returns a `sourceTag` per result; use it.
@@ -133,29 +147,6 @@ treat any claim whose scope exceeds its proof as an over-read; a claim that name
 no object is not a claim; **and a claim you have not searched the corpus for is
 not new.**
 
-### Failure mode seven: a test's name is an untested assertion
-
-Found at Pass 7112. `tests/test_extremal_combinatorics_computation.py` held:
-
-```python
-def test_independence_number_equals_10(self, basic_counts):
-    """alpha(W(3,3)) = 10 exactly. An ovoid ... provides alpha >= 10."""
-    ...
-    assert len(ovoid) >= 7          # the only executable claim, and it is TRUE
-```
-
-alpha(W(3,3)) is **7**. It passed for as long as it existed, and it is where the
-corpus's false "10" came from -- a test name is what a grep returns and it carries
-the authority of a green suite.
-
-**Every guard in this repo passes this file.** The arithmetic is sound, the scope
-matches the evidence, nothing is rediscovered, the assertion is correct. Only
-reading the name against the assertion catches it.
-
-*Fix:* the name and the docstring are the only parts of a test that can be false
-while the suite is green. Make the name state what the body asserts, or make the
-body assert what the name states.
-
 ## The shared protocol (BOTH agents — this is the part that only works if we both do it)
 
 Two agents work this repo in parallel and neither reads the other's filenames.
@@ -230,30 +221,30 @@ after commit:
 ---
 
 ## Recent Decisions
-1. **decision-17870682** (8/18/2026) [audit, redis]
-   - Q: Did the Perplexity Aug 18 batch's Monster moonshine claim survive intake audit, and why did the harness miss it?
-   - A: NO -- the encoding is forced arithmetic. And the harness missed it because nothing checked derivability.  BT1645 claims W(3,3)'s adjacency multiplicities 1, 24, 15 "encode Monster moonshine": 24 as the Leech lattice rank, 15 as the number of supersingular primes. REFUTED. Those multiplicities are FORCED by the strongly-regular parameters. For SRG(v,k,lambda,mu) they are [(v-1) -+ (2k+(v-1)(lambda-mu))/sqrt((lambda-mu)^2+4(k-mu))]/2, and at (40,12,2,4) that is exactly 24 and 15. Any SRG with those parameters has them. A change-the-object sweep found 32 OTHER feasible SRG parameter sets with ...
+1. **decision-116d47c7** (9/6/2026) [114, calibration]
+   - Q: Do larger symmetry groups crack 114, and what does the control say about the UNKNOWNs?
+   - A: NO -- BUT RUNNING THE CONTROL AT EVERY CLASS TURNED SIX UNINFORMATIVE UNKNOWNS INTO ONE REAL TARGET. Holotrade cf9ecf7. 36d3b4b said the next attempt should change the encoding or the GROUP rather than the clock, so: cyclic subgroups of order 4,6,9,12, which collapse the 1600 cells far further than prime-order ones (C12 leaves 174 orbit variables against 544 for an order-3 element), and the known 115 witness has stabiliser order 6 -- exactly this regime. THE MISTAKE ALMOST MADE: sweeping 114 alone gives six UNKNOWNs and two UNSATs and invites the reading that 114 resisted EIGHT independent ...
 
-2. **decision-17869836** (8/17/2026) [audit, redis]
-   - Q: Do my surviving Reye claims pass the change-the-object test, and what durable guidance came out of this session?
-   - A: PARTIALLY -- not generic, but not unique to the Reye either. And four pieces of guidance now live in CLAUDE.md.  THE PERTURBATION TEST, run on my own claims after it killed the Sym^e tower. Swapping the configuration: Reye 12_4 16_3 and Pappus 9_3 BOTH show the kernel-complements-partition phenomenon; Fano 7_3, Desargues 10_3 and Mobius-Kantor 8_3 do not. TWO OF FIVE.  So it is NOT generic -- three of five fail, unlike the Sym^e attainment which every nondegenerate form shared -- and NOT unique to the Reye. I wrote "only the Reye shows the phenomenon" before reading the table and the table ...
+2. **decision-84e20c96** (9/6/2026) [114, control]
+   - Q: Can symmetry move the tau_2 UPPER bound, given the corpus's three failed attacks on 114?
+   - A: NOT YET AT 114, BUT THE METHOD IS VALIDATED AND FIXED-POINT-FREE INVOLUTIONS ARE RULED OUT UP TO 115. Holotrade 49aa825. WHY THE UPPER END: the lower end wants UNSAT and UNSAT is hard; one witness at 114 moves the interval to [111,114] and SAT is easy. The corpus attacked 114 three times and recorded all three -- tensor_close_at_114.json (CP-SAT 2400s UNKNOWN), its two-sided refinement (2700s UNKNOWN), tensor_upper_anneal.json (16 restarts, 69,259,264 moves, best leaving 9 tiles unblocked) -- and NONE imposed SYMMETRY, though the known 115 witness has stabiliser order 6. Invariance collapse...
 
-3. **decision-17869830** (8/17/2026) [audit, redis]
-   - Q: Is the attainment of the Hadamard rank bound special to the symplectic form, or generic?
-   - A: GENERIC -- which refutes the last claim this thread had and means nothing in the Sym^e/digit-law work is about W(3,q).  THE TEST, run eight passes late: change the form and see whether the result changes. On the 156 points of PG(3,5), EVERY nondegenerate bilinear form attains C(e+3,3) at e=1..4 -- alternating (the symplectic form), identity, antidiagonal symmetric, diagonal 1234, and three random nondegenerate forms. 7 of 7. Degenerate forms attain the corresponding bound too: a rank-2 form gives [2,3,4,5] = C(e+1,e), a rank-1 form gives [1,1,1,1].  SO THE LAW IS ABOUT THE RANK OF THE FORM,...
+3. **decision-82e05031** (9/6/2026) [cross-track, frontier]
+   - Q: Why did ea2ff88 nearly claim a published result despite searching first, and what does that say about the cross-track...
+   - A: BECAUSE THE PROTOCOL COVERS FILES AND INTERNAL RESULTS, NOT THE OTHER TRACK'S EXTERNAL CITATIONS -- WHICH ARE WHAT SETTLE NOVELTY. Holotrade 6733870. MEASURED ASYMMETRY: analysis files mentioning Saniga, Planat, Levay or Veldkamp -- Holotrade (my track), excluding today's files: ZERO. Theory-of-Everything: THIRTY-ONE. The other track has been citing this literature all along, by name and by number (arXiv:0903.0715 for the Veldkamp space of GQ(2,4), quant-ph/0611063 for Saniga-Planat-Pracna's projective-ring model of the two-qubit Pauli geometry, and more). My track had none. So the near-mis...
 
-4. **decision-17869821** (8/17/2026)
-   - Q: Can the base-p digit law be proved, and is it classical?
-   - A: YES to both -- the bound is provable in four lines from two standard facts, so it is classical. Only the attainment is mine.  THE PROOF. Write e in base p as e = sum d_i p^i. Then entrywise sf^e = product of (Frob^i(sf))^(d_i), since x -> x^(p^i) is the i-th Frobenius. Two classical ingredients finish it: (a) Frobenius is a field automorphism, so Frob^i(sf) is the entrywise image of sf under a ring automorphism and has the SAME rank 4; (b) Hadamard rank is submultiplicative, rank(A o B) <= rank(A) rank(B), together with the Hadamard power bound rank(A^(o d)) <= C(d + rank A - 1, d). Applyin...
+4. **decision-8acdeee0** (9/6/2026) [black-hole-qubit, gq]
+   - Q: Do the other cubic Jordan norms also have GQ monomial structures, and is any of this new?
+   - A: YES -- THEY GIVE EXACTLY THE THREE GQs WITH THREE POINTS PER LINE -- AND IT IS ALL PUBLISHED. Holotrade 4b92d42. THE SERIES (coordinates as points, monomial supports as lines, all four quadrangle axioms checked exhaustively): H3(R) dim 6, det of a SYMMETRIC 3x3 -> NOT squarefree, a coordinate appears squared, so no incidence structure at all and the series starts at 9. H3(C) dim 9, det3, 6 monomials -> GQ(2,1) the grid (36 axiom pairs). H3(H) dim 15, Pf6, 15 monomials -> GQ(2,2) THE DOILY (180 pairs) -- this is the classical duad/syntheme construction. H3(O) dim 27, E6 Cartan cubic, 45 mono...
 
-5. **decision-17869817** (8/17/2026)
-   - Q: Where does S4 wr S2 come from in the tomotope, and was the period-(q-1) retraction correct?
-   - A: S4 wr S2 = Aut(K_4,4), inherited from the construction. And NO -- the retraction was wrong; the original claim was sound.  THE ANSWER, AND THE CORPUS ALREADY HELD IT. The Q4 antipodal quotient IS K_4,4 -- verified here: 8 vertices, 16 edge-classes, 4-regular, bipartite, isomorphic to K_4,4 -- and |Aut(K_4,4)| = (4!)^2 x 2 = 1152 = |S4 wr S2|. So S4 wr S2 is NOT intrinsic to the tomotope's 16-face graph; it is INHERITED FROM THE CONSTRUCTION, exactly as Pass 5726 guessed before finding it. That is why four internal searches all failed -- Delsarte coset graph (Pass 5671), two-weight structure...
+5. **decision-44da4705** (9/6/2026) [cross-track, cubic]
+   - Q: Where do the 45 tritangent planes sit relative to the E6 Cartan cubic, given the 27 are its coordinates and the 36 ar...
+   - A: THEY ARE ITS MONOMIALS -- SO THE WHOLE 27-36-45 TRIANGLE IS ONE POLYNOMIAL. Holotrade ea2ff88. Two legs were already attached: gq24_schlaefli_quadrangle.py has GQ(2,4)=Q-(5,2) with 27 points/45 lines and the cubic-surface link (citing Pass 84 for PSp(4,3)=PSU(4,2)=W(E6)/Z2), and TOE fdc9f1d75/8a4933dde proves each of the 36 double-sixes cuts an exact signed Pfaffian section from the 27-coordinate cubic, with 1de360304 making the 36-chain PSp-equivariant. So 36 = SECTIONS and 27 = COORDINATES; the 45 had no stated relation to the polynomial. THEY ARE THE MONOMIALS: in the model 9a202a2 verif...
 
-*1485 unreviewed drafts from auto-capture pending review — `continuity log` the real rationale or update_decision to expand them.*
+*1165 unreviewed drafts from auto-capture pending review — `continuity log` the real rationale or update_decision to expand them.*
 
 ---
 
-*Auto-generated by Continuity | Updated: 2026-08-18*
+*Auto-generated by Continuity | Updated: 2026-09-06*
 
 <!-- END CONTINUITY AUTO-GENERATED CONTENT -->

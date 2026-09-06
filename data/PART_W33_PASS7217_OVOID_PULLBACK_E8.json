@@ -8,6 +8,6 @@
   "induced_degrees": [
     12
   ],
-  "is_w33": false,
+  "is_w33": true,
   "form": "A(x,y)=(Jx,y)-(x,Jy)"
 }

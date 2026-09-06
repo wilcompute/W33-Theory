@@ -1,0 +1,98 @@
+name: W33 Pass7305-7320 exact publication packet
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/PASS7305_7320_intrinsic_naimark_pauli_scope_insert.tex'
+      - 'analysis/PASS7305_7320_index_insert.html'
+      - 'analysis/PAPER_INSERT_MANIFEST.json'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'analysis/w33_pass7305_7306_cspread_intrinsic_double_six.py'
+      - 'analysis/w33_pass7307_7309_double_six_naimark_isometry.py'
+      - 'analysis/w33_pass7310_7312_q7_pauli_validator.py'
+      - 'analysis/w33_pass7313_7316_pauli_trace_and_stabilizer_scope.g'
+      - 'analysis/w33_pass7317_7320_e8_d4_double_six_fusion.g'
+      - 'analysis/w33_e8_spectral_descent_scope_audit.g'
+      - 'analysis/PART_CCCCCXCIX_E8_SPECTRAL_SCOPE_AUDIT.md'
+      - 'analysis/w33_pass5364_publication_dag_audit.py'
+      - 'data/PART_W33_PASS7305_7306_CSPREAD_INTRINSIC_DOUBLE_SIX.json'
+      - 'data/PART_W33_PASS7307_7309_DOUBLE_SIX_NAIMARK_ISOMETRY.json'
+      - 'data/PART_W33_PASS7310_7312_Q7_PAULI_VALIDATOR.json'
+      - 'data/PART_W33_PASS7313_7316_PAULI_TRACE_STABILIZER_SCOPE.json'
+      - 'data/PART_W33_PASS7317_7320_E8_D4_DOUBLE_SIX_FUSION.json'
+      - 'formal/W33/Pass7316AntisymplecticRescaling.lean'
+      - 'tools/materialize_pass7305_7320_frontier.py'
+      - 'tools/materialize_publication_contract_gaps.py'
+      - 'scripts/PART_CCCCCXCIX_e8_spectral_w33_bridge.py'
+      - 'tests/test_w33_pass7305_7320_publication.py'
+      - 'tests/test_w33_pass7317_7320_e8_d4_double_six_fusion.py'
+      - 'tests/test_w33_e8_spectral_descent_scope_audit.py'
+      - 'README.md'
+      - 'index.html'
+      - 'docs/index.html'
+      - '.github/workflows/w33_pass7305_7320_publication.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/PASS7305_7320_intrinsic_naimark_pauli_scope_insert.tex'
+      - 'analysis/PASS7305_7320_index_insert.html'
+      - 'analysis/PAPER_INSERT_MANIFEST.json'
+      - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
+      - 'analysis/w33_pass7317_7320_e8_d4_double_six_fusion.g'
+      - 'analysis/w33_e8_spectral_descent_scope_audit.g'
+      - 'analysis/PART_CCCCCXCIX_E8_SPECTRAL_SCOPE_AUDIT.md'
+      - 'analysis/w33_pass5364_publication_dag_audit.py'
+      - 'data/PART_W33_PASS7317_7320_E8_D4_DOUBLE_SIX_FUSION.json'
+      - 'tools/materialize_pass7305_7320_frontier.py'
+      - 'tools/materialize_publication_contract_gaps.py'
+      - 'scripts/PART_CCCCCXCIX_e8_spectral_w33_bridge.py'
+      - 'tests/test_w33_pass7305_7320_publication.py'
+      - 'tests/test_w33_pass7317_7320_e8_d4_double_six_fusion.py'
+      - 'tests/test_w33_e8_spectral_descent_scope_audit.py'
+      - 'README.md'
+      - 'index.html'
+      - 'docs/index.html'
+      - '.github/workflows/w33_pass7305_7320_publication.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-publication-replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install finite replay dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gap iverilog
+          python -m pip install --upgrade pip
+          python -m pip install numpy networkx pytest
+      - name: Audit the shared TeX insert
+        run: python scripts/check_tex_insert_pitfalls.py analysis/PASS7305_7320_intrinsic_naimark_pauli_scope_insert.tex
+      - name: Replay exact packet and publication contracts
+        run: |
+          python -m pytest -q \
+            tests/test_w33_pass7305_7306_cspread_intrinsic_double_six.py \
+            tests/test_w33_pass7307_7309_double_six_naimark_isometry.py \
+            tests/test_w33_pass7310_7312_q7_pauli_validator.py \
+            tests/test_w33_pass7313_7316_pauli_trace_stabilizer_scope.py \
+            tests/test_w33_pass7317_7320_e8_d4_double_six_fusion.py \
+            tests/test_w33_e8_spectral_descent_scope_audit.py \
+            tests/test_w33_pass7305_7320_publication.py
+      - name: Prove dual-site materialization is already idempotent
+        run: |
+          python tools/materialize_pass7305_7320_frontier.py | tee /tmp/materialize-first.txt
+          python tools/materialize_pass7305_7320_frontier.py | tee /tmp/materialize-second.txt
+          test "$(grep -c already_materialized /tmp/materialize-first.txt)" = 2
+          test "$(grep -c already_materialized /tmp/materialize-second.txt)" = 2
+      - name: Prove the complete publication DAG and long-form atlas contract
+        run: |
+          python tools/materialize_publication_contract_gaps.py --check
+          python analysis/w33_pass5364_publication_dag_audit.py > /tmp/publication-dag.json

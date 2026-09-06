@@ -1,0 +1,7 @@
+M12 cycle types on 12 points
+|M12| = 95040 (expect 95040), degree 12
+classes: 15
+  order-3 class size 1760 cycle structure [ , 3 ] fixed points 9 moved
+  order-3 class size 2640 cycle structure [ , 4 ] fixed points 12 moved
+    *** CYCLE TYPE 3^4 PRESENT ***
+M12 contains a 3^4 element: true

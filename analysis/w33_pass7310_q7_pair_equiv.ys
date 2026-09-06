@@ -1,0 +1,4 @@
+read_verilog -sv -formal rtl/w33_pass7310_7312_q7_pauli_validator.sv formal/w33_pass7310_q7_pair_equiv_formal.sv
+prep -top w33_pass7310_q7_pair_equiv_formal
+flatten
+sat -verify -prove-asserts

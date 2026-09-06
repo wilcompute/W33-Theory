@@ -1,0 +1,17 @@
+maxes sweep
+1 generators 2 dim 24
+  wrote _co0_max1.txt
+2 generators 2 dim 24
+  wrote _co0_max2.txt
+3 generators 2 dim 24
+  wrote _co0_max3.txt
+4 generators 2 dim 24
+  wrote _co0_max4.txt
+5 generators 2 dim 24
+  wrote _co0_max5.txt
+6 generators 3 dim 24
+  wrote _co0_max6.txt
+7 generators 2 dim 24
+  wrote _co0_max7.txt
+8 generators 2 dim 24
+  wrote _co0_max8.txt
