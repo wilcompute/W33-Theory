@@ -191,6 +191,11 @@ python -m pytest tests/test_holonet_vm.py -q     # 13 exact checks of the VM
 
 ## 6. Where the architecture is written up
 
+- **[Authenticated binary-counter virtual hardware](analysis/W33_AUTHENTICATED_COUNTER_MACHINE.md)**
+  — executable carry/borrow memory updates and portable receipts checked without
+  fetching the full counter. Includes a refinement argument, differential tests,
+  explicit proof-size costs and the physical/authority boundaries.
+
 - **`photonic_holonet.tex`** — the full theory (physics + machine), the canonical paper.
 - **`holonet_machine.tex`** — the standalone, submission-grade *Machine* paper (the computer-engineering
   arc as one coherent document).

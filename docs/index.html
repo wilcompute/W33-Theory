@@ -30050,6 +30050,16 @@ deliberately &mdash; including the parts that turned out to be wrong.</p>
   <p><strong>The natural tesseract square-face action now realizes the tomotope objectwise:</strong> 24 square faces pair antipodally to 12 objects, and <code>W(D4)/⟨-I⟩</code> on those 12 objects is explicitly conjugate to the published tomotope action. Its three <code>K4</code> blocks are the axis partitions <code>01|23</code>, <code>02|13</code>, <code>03|12</code>, exposing <code>(C2)^4:S3</code> directly.</p>
   <p><a href="pass5316-5323-latin-q4-d4-facepairs.html">Read the theorem packet and evidence firewall →</a></p>
 </section>
+<section id="authenticated-counter-machine" class="result-card">
+  <h2>Authenticated binary-counter virtual hardware</h2>
+  <p>The existing universal guest now executes on persistent binary-list memory.
+    A verifier checks the arithmetic and branch from the opened carry or borrow
+    prefix, without fetching the untouched counter tail. The certificate checks
+    1,024 small transitions and 40 placement variants. Proof size grows with the
+    changed prefix; this is classical software, with physical implementation and
+    authority enforcement remaining separate obligations.</p>
+  <p><a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/W33_AUTHENTICATED_COUNTER_MACHINE.md">Architecture, proof argument, costs and replay commands</a></p>
+</section>
 </body>
 
 </html>

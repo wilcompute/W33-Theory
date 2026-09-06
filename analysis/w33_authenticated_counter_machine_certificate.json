@@ -1,0 +1,42 @@
+{
+  "boundary": "Scalable classical software semantics; trusted canonical genesis; collision-resistant hashes; no availability, capability enforcement, physical implementation, or full Wasm compiler claim.",
+  "checked_small_transitions": 1024,
+  "checks": {
+    "addition_18_0_in_24_steps": true,
+    "all_40_layouts_preserve_result": true,
+    "carry_borrow_costs_are_explicit": true,
+    "exhaustive_1024_transitions": true,
+    "false_arithmetic_rejected": true,
+    "large_counter_results": true,
+    "one_opening_for_4097_bit_even_counter": true
+  },
+  "layout_variants": 40,
+  "resource_examples": [
+    {
+      "case": "large-even-increment",
+      "exact": true,
+      "input_bits": 4097,
+      "opened_nodes": 1,
+      "receipt_bytes": 1157,
+      "write_nodes": 1
+    },
+    {
+      "case": "full-carry",
+      "exact": true,
+      "input_bits": 4096,
+      "opened_nodes": 4096,
+      "receipt_bytes": 373804,
+      "write_nodes": 4097
+    },
+    {
+      "case": "full-borrow",
+      "exact": true,
+      "input_bits": 4097,
+      "opened_nodes": 4097,
+      "receipt_bytes": 373895,
+      "write_nodes": 4096
+    }
+  ],
+  "schema": "w33.authenticated-counter-machine.certificate.v1",
+  "status": "PASS"
+}

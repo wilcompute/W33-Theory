@@ -1,0 +1,31 @@
+\subsection*{Authenticated binary-counter execution (6 September 2026)}
+The existing universal two-counter guest now has a persistent binary-list
+backend, implemented in
+\texttt{\detokenize{analysis/w33_authenticated_counter_machine.py}}.
+An increment or nonzero decrement opens only its carry or borrow prefix;
+the remaining tail and the other counter are shared by content identity.
+A verifier supplied with the trusted pre-state, program and placement
+reconstructs the arithmetic result and branch from those openings without
+accessing the memory store. A portable receipt binds the resulting roots,
+instruction sequence, carrier, session and W33 dispatch route.
+
+For canonical lists, $V(b,t)=b+2V(t)$. Increment changes low ones to zeros
+until a zero is changed to one; decrement changes low zeros to ones until
+a one is changed to zero, removing a redundant highest zero. These identities
+give one-step refinement of the existing guest semantics and, by induction,
+every finite execution prefix. Abstract universality is inherited with
+extensible storage; it is not a new finite-device universality claim.
+The mathematical argument is not a mechanized proof of the Python source.
+
+The certificate checks $1024$ small arithmetic transitions and the existing
+addition program under $40$ placement shifts. Incrementing $2^{4096}$ opens
+one node; incrementing $2^{4096}-1$ opens $4096$ nodes. Worst-case proof size
+therefore grows with counter bit length. The diameter-two route bounds
+instruction dispatch only, not memory access or proof transfer.
+
+The construction uses established authenticated-data-structure principles
+and requires trusted canonical genesis and collision-resistant hashes.
+Authorization, availability, physical gate implementation, quantum advantage,
+and a static arbitrary-input Wasm compiler remain separate obligations.
+The detailed argument, prior-art references and replay commands are in
+\texttt{\detokenize{analysis/W33_AUTHENTICATED_COUNTER_MACHINE.md}}.

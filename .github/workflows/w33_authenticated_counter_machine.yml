@@ -1,0 +1,42 @@
+name: W33 authenticated counter machine
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_authenticated_counter_machine*'
+      - 'analysis/w33_typed_universal_microvm.py'
+      - 'tests/test_w33_authenticated_counter_machine.py'
+      - '.github/workflows/w33_authenticated_counter_machine.yml'
+  pull_request:
+    paths:
+      - 'analysis/w33_authenticated_counter_machine*'
+      - 'analysis/w33_typed_universal_microvm.py'
+      - 'tests/test_w33_authenticated_counter_machine.py'
+      - '.github/workflows/w33_authenticated_counter_machine.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Differential and adversarial execution tests
+        run: python tests/test_w33_authenticated_counter_machine.py
+      - name: Check existing guest semantics
+        run: python tests/test_w33_typed_universal_microvm.py
+      - name: Reproduce the complete frozen certificate
+        run: |
+          PYTHONPATH=analysis python - <<'PY'
+          import json
+          from pathlib import Path
+          from w33_authenticated_counter_machine import verify
+          actual = verify()
+          expected = json.loads(Path('analysis/w33_authenticated_counter_machine_certificate.json').read_text())
+          assert actual['status'] == 'PASS'
+          assert actual == expected, 'authenticated counter certificate drift'
+          PY
