@@ -12,9 +12,11 @@ instruction sequence, carrier, session and W33 dispatch route.
 For canonical lists, $V(b,t)=b+2V(t)$. Increment changes low ones to zeros
 until a zero is changed to one; decrement changes low zeros to ones until
 a one is changed to zero, removing a redundant highest zero. These identities
-give one-step refinement of the existing guest semantics and, by induction,
-every finite execution prefix. Abstract universality is inherited with
-extensible storage; it is not a new finite-device universality claim.
+give one-step refinement on inductive lists and, by induction, every finite
+execution prefix of that abstract representation. The fixed-digest backend
+implements collision-free finite executions; fixed SHA-256 identities cannot
+injectively encode all natural numbers. Abstract universality is inherited
+with extensible lists, not asserted for a fixed finite device.
 The mathematical argument is not a mechanized proof of the Python source.
 
 The certificate checks $1024$ small arithmetic transitions and the existing

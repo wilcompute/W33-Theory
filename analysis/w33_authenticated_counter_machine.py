@@ -14,6 +14,9 @@ concrete binary-counter refinement of the repository's W33 guest interface.
 This is software, not a physical gate implementation, a SNARK, or a Wasm
 compiler. Roots require trusted canonical genesis and collision-resistant
 hashing; root acceptance supplies neither availability nor authorization.
+Universality concerns inductive lists with abstract identities. Fixed SHA-256
+names implement finite collision-free executions, not an injective encoding of
+all natural numbers into a finite set of digests.
 """
 from __future__ import annotations
 
@@ -59,8 +62,12 @@ class BitStore:
             self.put(node)
 
     def put(self, node: Bit) -> str:
-        self.nodes[node.root] = node
-        return node.root
+        root = node.root
+        previous = self.nodes.get(root)
+        if previous is not None and previous != node:
+            raise ValueError("content hash collision; existing node preserved")
+        self.nodes[root] = node
+        return root
 
     def get(self, root: str) -> Bit:
         node = self.nodes[root]

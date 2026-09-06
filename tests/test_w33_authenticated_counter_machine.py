@@ -19,6 +19,16 @@ def program(op, register=0):
 
 
 class AuthenticatedCounterTests(unittest.TestCase):
+    def test_store_rejects_observed_hash_collision(self):
+        store = a.BitStore()
+        first = a.Bit(1, a.ZERO)
+        second = a.Bit(0, a.digest("nonzero-tail"))
+        with patch.object(a, "digest", return_value="sha256:" + "a"*64):
+            root = store.put(first)
+            with self.assertRaises(ValueError):
+                store.put(second)
+            self.assertEqual(store.nodes[root], first)
+
     def test_wire_roundtrip_and_type_rejection(self):
         import json
         p, store = program("INC"), a.BitStore()
@@ -169,6 +179,29 @@ class AuthenticatedCounterTests(unittest.TestCase):
         self.assertEqual(result["stop_reason"], "fuel-exhausted")
         self.assertFalse(result["state"].halted)
         self.assertEqual(result["store"].decode(result["state"].roots[0]), 30)
+
+    def test_hash_consing_cost_differs_from_proof_cost(self):
+        p = reference.Program((reference.Instruction("INC", 0, 0),), name="monotone")
+        store = a.BitStore()
+        state = a.genesis(p, store, (0, 0), session="amortization")
+        reads = writes = 0
+        for n in range(1, 1025):
+            receipt = a.prove_step(p, state, store)
+            state, nodes = a.verify_step(p, state, receipt)
+            reads += len(receipt.openings)
+            writes += len(nodes)
+            self.assertEqual(writes, 2*n - n.bit_count())
+            self.assertEqual(reads, writes - n.bit_length())
+            self.assertEqual(len(store.nodes), n)
+        p = reference.Program((reference.Instruction("INC", 0, 1),
+                               reference.Instruction("DECJZ", 0, 0, 0)), name="oscillation")
+        store = a.BitStore()
+        state = a.genesis(p, store, ((1 << 64)-1, 0), session="oscillation")
+        for i in range(10):
+            receipt = a.prove_step(p, state, store)
+            state, _ = a.verify_step(p, state, receipt)
+            self.assertEqual(len(receipt.openings), 64 + i % 2)
+            self.assertEqual(len(store.nodes), 128)
 
 
 if __name__ == "__main__":

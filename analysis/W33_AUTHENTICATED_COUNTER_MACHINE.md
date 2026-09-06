@@ -70,16 +70,22 @@ The zero branch and HALT preserve both roots. These cases preserve canonicality.
 
 Therefore decoding the roots after one successful step gives exactly the
 existing guest transition, with the same PC and halt state. Induction extends
-this to every finite execution prefix of every admitted finite `Program`.
-Abstract universality is inherited from the existing two-counter semantics,
-with extensible finite storage for each finite execution; no fixed finite
-physical device is asserted to have infinite memory. This is a mathematical
-argument with executable checks, not a mechanized proof of the Python code.
+this to every finite execution prefix on the inductive list representation,
+and to collision-free finite executions of the digest implementation.
+Abstract universality is inherited from the existing two-counter semantics
+using extensible lists with abstract identities. Fixed SHA-256 digests cannot
+injectively encode all natural numbers; the cryptographic implementation is
+not literally an infinite-state machine. No fixed finite physical device is
+asserted to have infinite memory. This is a mathematical argument with
+executable checks, not a mechanized proof of the Python code.
 
 The verifier's assurance additionally assumes a trusted canonical genesis and
 collision-resistant hashes. It authenticates all opened nodes from the trusted
 root and leaves every unvisited subtree unchanged. Arbitrary externally supplied
 roots need separate admission. A root proves neither authorization nor availability.
+The store rejects an observed collision between unequal nodes; a forced-collision
+test checks that it preserves the original node. Stateless verification still
+depends on the collision-resistance assumption and trusted initial commitments.
 
 ## Measured software costs and checks
 
@@ -109,6 +115,27 @@ history accumulates without external GC. The W33 diameter-two bound covers
 instruction dispatch only; storage-node access and proof transfer have additional
 costs and do not acquire constant latency from that bound. No physical photonic
 implementation, quantum advantage or cryptographic succinctness is claimed.
+
+### Storage reuse is different from proof work
+
+An additional experiment, reproduced by the focused test suite, separates three
+budgets. For `N` increments starting at zero, the standard binary-counter sums
+give `2N - popcount(N)` node constructions and
+`2N - popcount(N) - bit_length(N)` openings. With retained immutable nodes,
+only `N` distinct counter nodes exist: every proper suffix of the new value is
+an earlier smaller value already in the store. The test checks all three
+identities at every prefix through `N=1024`, ending at 2047 constructions,
+2036 openings and 1024 distinct nodes. These are familiar binary-counter and
+hash-consing principles made executable in this backend, not new asymptotic laws.
+
+Incrementing and decrementing around `2^64` illustrates the other regime:
+the first increment brings the store to 128 nodes and subsequent cycles add
+none, but receipts still open 64 and 65 nodes alternately. Content reuse saves
+storage without automatically saving proof work. Receipt history is separate
+and continues to grow. A future proof cache must reuse authenticated openings
+while binding each new sequence/session state; replaying the old receipt is
+correctly rejected. Thus the next scheduling objective should account for
+distinct retained nodes, recomputed hashes and transferred proof bytes separately.
 
 ## External checks and scope of originality
 
