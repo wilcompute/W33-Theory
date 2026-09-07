@@ -30129,6 +30129,17 @@ deliberately &mdash; including the parts that turned out to be wrong.</p>
     the reference implementation requires serialized owner operations.</p>
   <p><a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/W33_SHARED_COUNTER_ARCHIVE.md">Storage architecture, prior work, measured costs and regression evidence</a></p>
 </section>
+<section id="joint-snapshot-admission" class="result-card">
+  <h2>Joint admission fits two guests where greedy admission fits one</h2>
+  <p>Three eight-bit counter snapshots each cost 2,821 canonical payload bytes
+    alone. The shared pair 254 and 255 fits in 3,850 bytes; pairing 128 with
+    either costs 5,350. A bounded exact planner selects the pair and both guests
+    resume, while the tested marginal-cost greedy rule admits only 128.</p>
+  <p>The planner rechecks requests, registry and budget before staging a whole
+    batch. Exactness covers at most sixteen pending requests and payload bytes;
+    CPU scheduling, peak RAM and crash recovery remain separate obligations.</p>
+  <p><a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/W33_JOINT_SNAPSHOT_ADMISSION.md">Architecture, set-union knapsack prior art and regression evidence</a></p>
+</section>
 </body>
 
 </html>

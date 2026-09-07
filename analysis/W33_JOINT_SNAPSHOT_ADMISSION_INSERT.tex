@@ -1,0 +1,24 @@
+\subsection{Joint admission of shared guest snapshots}
+\label{subsec:joint-snapshot-admission}
+Snapshot retention now has a bounded exact set-union admission planner.
+Requests carry caller-supplied nonnegative integer utility; blob payloads are
+charged once across the union of their reachable closures, and all existing
+strong roots remain mandatory. The reference planner exhausts at most sixteen
+requests, maximizes utility, then breaks ties by bytes and request identifiers.
+This instantiates the established set-union knapsack problem, not a new
+optimization theorem or the existing reversible pebble scheduler.
+
+An executable three-request counter workload makes the distinction concrete.
+Snapshots for 128, 254 and 255 each cost 2821 canonical payload bytes alone.
+The pair 254 and 255 costs 3850, whereas either paired with 128 costs 5350.
+At budget 3850 and equal utilities, exact joint admission retains the shared
+pair. The tested smallest-current-marginal greedy rule, with identifier ties,
+retains 128 alone. Both selected guests restore and run to halt.
+
+Publication recomputes the plan against the current registry, request set and
+caller budget, then stages the entire batch before installing it. An injected
+second-publication failure leaves the public stores unchanged. Operations
+must be owner-serialized; crash recovery, peak RAM and registry/index overhead
+remain outside this payload-only model. The source attribution, full subset
+table and regression oracle are in
+\texttt{analysis/W33\_JOINT\_SNAPSHOT\_ADMISSION.md}.

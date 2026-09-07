@@ -1,0 +1,49 @@
+{
+  "budget": 3850,
+  "checks": {
+    "all_eight_subsets_examined": true,
+    "both_selected_guests_resume_and_halt": true,
+    "equal_standalone_payloads": true,
+    "greedy_admits_one_exact_admits_two": true,
+    "installed_payload_matches_plan": true,
+    "joint_plan_selects_shared_pair": true
+  },
+  "exact_plan": {
+    "feasible": true,
+    "feasible_subsets": 5,
+    "payload_bytes": 3850,
+    "problem_root": "sha256:5eb95d1e115316b1821fae308b660a9f607207a79c838b4796b428b13768b53b",
+    "registry_root": "sha256:2b9dce10b60cde23b12216093cb4a3da7186602c5a3eee2964fb52751fae157f",
+    "selected": [
+      "254",
+      "255"
+    ],
+    "subsets_examined": 8,
+    "utility": 2
+  },
+  "greedy_selected": [
+    "128"
+  ],
+  "resumed_outputs": {
+    "254": [
+      254,
+      0
+    ],
+    "255": [
+      255,
+      0
+    ]
+  },
+  "schema": "w33.snapshot-admission-witness.v1",
+  "scope": "Exact at most 16 pending requests; caller utility and canonical payloads only. No CPU scheduling, peak RAM, eviction, authority or durable transaction claim.",
+  "status": "PASS",
+  "subset_payload_bytes": {
+    "128": 2821,
+    "128,254": 5350,
+    "128,254,255": 6379,
+    "128,255": 5350,
+    "254": 2821,
+    "254,255": 3850,
+    "255": 2821
+  }
+}
