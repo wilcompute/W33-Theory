@@ -30107,6 +30107,17 @@ deliberately &mdash; including the parts that turned out to be wrong.</p>
     authority enforcement remaining separate obligations.</p>
   <p><a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/W33_AUTHENTICATED_COUNTER_MACHINE.md">Architecture, proof argument, costs and replay commands</a></p>
 </section>
+<section id="vm-retention-output-audit" class="result-card">
+  <h2>Lossless VM suspension and a useful-output audit</h2>
+  <p>The authenticated counter guest resumes after its worker memory is discarded:
+    a strong archive reference preserves control state, both fibre tags and reachable
+    counter nodes. Tests cover every fibre address and completion from (7,11) to (18,0).
+    Checkpoint audit hashes do not substitute for retained bytes.</p>
+  <p>The new three-copy search has 104 acceptance hits, all with zero logical qubits.
+    This reproduces the blueprint's existing rank-one stabilizer obstruction;
+    useful super-linear magic distillation remains open.</p>
+  <p><a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/W33_VM_RETENTION_AND_OUTPUT_AUDIT.md">Recovery architecture, source reconciliation and executable evidence</a></p>
+</section>
 </body>
 
 </html>

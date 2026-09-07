@@ -3872,17 +3872,18 @@ second --- after the errata, and before anything else.
       \emph{Update (Pass 20260906):} the asked-for exhaustive search over a chosen family
       has now run: all $961$ copy-permutation-symmetric stabilizer groups ($27{,}391$
       signed projectors, exact integer arithmetic, independently dense-confirmed).
-      \textbf{Witnesses exist} --- $104$ across the $36$ rays.  The condition IS
-      satisfiable at three copies; the open problem is now the decoder, the yield, and
-      the acceptance inequality, not existence.  The controller still refuses injection
-      until those are certified.
-      \emph{The question as originally posed} --- does any stabilizer protocol on three
-      or more copies annihilate every single-error input while keeping the clean one ---
-      is therefore answered in the affirmative for the maximal symmetry-respecting
-      family.  What remains open is everything downstream of existence: an explicit
-      decoder, the distillation yield of the witnessed branch, and whether the
-      acceptance inequality is met at the output.  Until those are answered the
-      controller still refuses injection.
+      \textbf{Acceptance witnesses exist} --- $104$ across the $36$ rays --- but
+      every returned hit has six independent generators on six qubits. Its
+      projector therefore has rank one and leaves zero logical qubits: the
+      accepted output is a stabilizer state, not a distilled magic ray.
+      This is the same obstruction already recorded in the three-copy section
+      and Passes 2933, 2977 and 2990. The follow-up
+      \texttt{w33\_three\_copy\_output\_rank\_audit.py} checks every hit.
+      \emph{Useful super-linear distillation remains open.} Nonzero acceptance
+      of the clean input does not establish preservation of its magic at the
+      output. The enumeration adds a symmetric-family result, not a useful
+      protocol awaiting only a decoder. Asymmetric protocols and other
+      correction conditions are not excluded; injection remains refused.
 
 \item \textbf{A power figure exists, and it is modelled, not measured.} This item used to
       read ``no physical power figure exists''; that is no longer true, and the honest

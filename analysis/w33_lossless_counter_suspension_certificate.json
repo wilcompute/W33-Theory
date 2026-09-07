@@ -1,0 +1,28 @@
+{
+  "archived_counter_nodes": 6,
+  "checks": {
+    "each_live_projection_has_six_missing_tag_choices": true,
+    "hash_only_receipt_does_not_retain_snapshot_bytes": true,
+    "ladder_overflow_fails_strong_retention_demand": true,
+    "resumed_guest_halts_at_18_0": true,
+    "worker_loss_preserves_exact_state_and_fibre_tags": true
+  },
+  "choices_per_live_projection": 6,
+  "final_step": 24,
+  "output": [
+    18,
+    0
+  ],
+  "overflow_plan": {
+    "assigned_strong_roots": 10,
+    "audit_only_roots": 3,
+    "required_strong_roots": 13,
+    "retention_demand_met": false,
+    "runtime_dispatch_certified": false
+  },
+  "projection_buckets": 216,
+  "schema": "w33.lossless-counter-suspension-certificate.v1",
+  "scope": "Finite software recovery witness; no capacity, topology, network-traffic, authorization or quantum-resource certificate.",
+  "snapshot_step": 7,
+  "status": "PASS"
+}

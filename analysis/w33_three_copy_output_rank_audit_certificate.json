@@ -1,0 +1,312 @@
+{
+  "checks": {
+    "all_104_hits_dense_confirmed": true,
+    "all_104_hits_have_zero_logical_qubits": true,
+    "all_projectors_per_ray_replayed": true,
+    "all_returned_hits_audited_without_cap": true
+  },
+  "logical_qubit_histogram": {
+    "0": 104
+  },
+  "per_ray": {
+    "A00": {
+      "dense_confirmations": 2,
+      "logical_qubit_histogram": {
+        "0": 2
+      },
+      "tested": 27391,
+      "witnesses": 2
+    },
+    "A01": {
+      "dense_confirmations": 2,
+      "logical_qubit_histogram": {
+        "0": 2
+      },
+      "tested": 27391,
+      "witnesses": 2
+    },
+    "A02": {
+      "dense_confirmations": 2,
+      "logical_qubit_histogram": {
+        "0": 2
+      },
+      "tested": 27391,
+      "witnesses": 2
+    },
+    "A10": {
+      "dense_confirmations": 2,
+      "logical_qubit_histogram": {
+        "0": 2
+      },
+      "tested": 27391,
+      "witnesses": 2
+    },
+    "A11": {
+      "dense_confirmations": 2,
+      "logical_qubit_histogram": {
+        "0": 2
+      },
+      "tested": 27391,
+      "witnesses": 2
+    },
+    "A12": {
+      "dense_confirmations": 6,
+      "logical_qubit_histogram": {
+        "0": 6
+      },
+      "tested": 27391,
+      "witnesses": 6
+    },
+    "A20": {
+      "dense_confirmations": 2,
+      "logical_qubit_histogram": {
+        "0": 2
+      },
+      "tested": 27391,
+      "witnesses": 2
+    },
+    "A21": {
+      "dense_confirmations": 6,
+      "logical_qubit_histogram": {
+        "0": 6
+      },
+      "tested": 27391,
+      "witnesses": 6
+    },
+    "A22": {
+      "dense_confirmations": 2,
+      "logical_qubit_histogram": {
+        "0": 2
+      },
+      "tested": 27391,
+      "witnesses": 2
+    },
+    "B00": {
+      "dense_confirmations": 2,
+      "logical_qubit_histogram": {
+        "0": 2
+      },
+      "tested": 27391,
+      "witnesses": 2
+    },
+    "B01": {
+      "dense_confirmations": 2,
+      "logical_qubit_histogram": {
+        "0": 2
+      },
+      "tested": 27391,
+      "witnesses": 2
+    },
+    "B02": {
+      "dense_confirmations": 2,
+      "logical_qubit_histogram": {
+        "0": 2
+      },
+      "tested": 27391,
+      "witnesses": 2
+    },
+    "B10": {
+      "dense_confirmations": 2,
+      "logical_qubit_histogram": {
+        "0": 2
+      },
+      "tested": 27391,
+      "witnesses": 2
+    },
+    "B11": {
+      "dense_confirmations": 2,
+      "logical_qubit_histogram": {
+        "0": 2
+      },
+      "tested": 27391,
+      "witnesses": 2
+    },
+    "B12": {
+      "dense_confirmations": 6,
+      "logical_qubit_histogram": {
+        "0": 6
+      },
+      "tested": 27391,
+      "witnesses": 6
+    },
+    "B20": {
+      "dense_confirmations": 2,
+      "logical_qubit_histogram": {
+        "0": 2
+      },
+      "tested": 27391,
+      "witnesses": 2
+    },
+    "B21": {
+      "dense_confirmations": 6,
+      "logical_qubit_histogram": {
+        "0": 6
+      },
+      "tested": 27391,
+      "witnesses": 6
+    },
+    "B22": {
+      "dense_confirmations": 2,
+      "logical_qubit_histogram": {
+        "0": 2
+      },
+      "tested": 27391,
+      "witnesses": 2
+    },
+    "C00": {
+      "dense_confirmations": 2,
+      "logical_qubit_histogram": {
+        "0": 2
+      },
+      "tested": 27391,
+      "witnesses": 2
+    },
+    "C01": {
+      "dense_confirmations": 2,
+      "logical_qubit_histogram": {
+        "0": 2
+      },
+      "tested": 27391,
+      "witnesses": 2
+    },
+    "C02": {
+      "dense_confirmations": 2,
+      "logical_qubit_histogram": {
+        "0": 2
+      },
+      "tested": 27391,
+      "witnesses": 2
+    },
+    "C10": {
+      "dense_confirmations": 2,
+      "logical_qubit_histogram": {
+        "0": 2
+      },
+      "tested": 27391,
+      "witnesses": 2
+    },
+    "C11": {
+      "dense_confirmations": 2,
+      "logical_qubit_histogram": {
+        "0": 2
+      },
+      "tested": 27391,
+      "witnesses": 2
+    },
+    "C12": {
+      "dense_confirmations": 6,
+      "logical_qubit_histogram": {
+        "0": 6
+      },
+      "tested": 27391,
+      "witnesses": 6
+    },
+    "C20": {
+      "dense_confirmations": 2,
+      "logical_qubit_histogram": {
+        "0": 2
+      },
+      "tested": 27391,
+      "witnesses": 2
+    },
+    "C21": {
+      "dense_confirmations": 6,
+      "logical_qubit_histogram": {
+        "0": 6
+      },
+      "tested": 27391,
+      "witnesses": 6
+    },
+    "C22": {
+      "dense_confirmations": 2,
+      "logical_qubit_histogram": {
+        "0": 2
+      },
+      "tested": 27391,
+      "witnesses": 2
+    },
+    "D00": {
+      "dense_confirmations": 2,
+      "logical_qubit_histogram": {
+        "0": 2
+      },
+      "tested": 27391,
+      "witnesses": 2
+    },
+    "D01": {
+      "dense_confirmations": 2,
+      "logical_qubit_histogram": {
+        "0": 2
+      },
+      "tested": 27391,
+      "witnesses": 2
+    },
+    "D02": {
+      "dense_confirmations": 2,
+      "logical_qubit_histogram": {
+        "0": 2
+      },
+      "tested": 27391,
+      "witnesses": 2
+    },
+    "D10": {
+      "dense_confirmations": 2,
+      "logical_qubit_histogram": {
+        "0": 2
+      },
+      "tested": 27391,
+      "witnesses": 2
+    },
+    "D11": {
+      "dense_confirmations": 2,
+      "logical_qubit_histogram": {
+        "0": 2
+      },
+      "tested": 27391,
+      "witnesses": 2
+    },
+    "D12": {
+      "dense_confirmations": 6,
+      "logical_qubit_histogram": {
+        "0": 6
+      },
+      "tested": 27391,
+      "witnesses": 6
+    },
+    "D20": {
+      "dense_confirmations": 2,
+      "logical_qubit_histogram": {
+        "0": 2
+      },
+      "tested": 27391,
+      "witnesses": 2
+    },
+    "D21": {
+      "dense_confirmations": 6,
+      "logical_qubit_histogram": {
+        "0": 6
+      },
+      "tested": 27391,
+      "witnesses": 6
+    },
+    "D22": {
+      "dense_confirmations": 2,
+      "logical_qubit_histogram": {
+        "0": 2
+      },
+      "tested": 27391,
+      "witnesses": 2
+    }
+  },
+  "prior_art": [
+    "analysis/w33_pass2990_2995_overhaul_and_rank2.md",
+    "holonet_machine_blueprint_body.tex: The three-copy route",
+    "https://arxiv.org/abs/quant-ph/9705052"
+  ],
+  "schema": "w33.three-copy-output-rank-audit.v1",
+  "scope": "Only the enumerated symmetric support-group family and the stated annihilation condition. No no-go for arbitrary asymmetric protocols or other error-correction conditions.",
+  "source_commit": "c2df9ac5f",
+  "status": "PASS",
+  "verdict": "The 104 hits are rank-one stabilizer outputs, not useful magic distillation branches.",
+  "witnesses": 104
+}

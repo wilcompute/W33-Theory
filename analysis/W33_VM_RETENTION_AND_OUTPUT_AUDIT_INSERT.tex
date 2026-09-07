@@ -1,0 +1,31 @@
+\section*{Runtime audit: retain recoverable state and require useful output}
+\addcontentsline{toc}{section}{Runtime audit: retain recoverable state and require useful output}
+The authenticated-counter guest now has an executable lossless suspension
+adapter. It archives both fibre tags, guest control state and every reachable
+counter node under a STRONG temporal-GC reference. After worker memory is
+discarded and collection runs, the guest resumes at step $7$ and completes
+$(7,11)\mapsto(18,0)$ at step $24$. All $1296$ fibre addresses round-trip in
+the regression suite. The adapter is
+\texttt{analysis/w33\_lossless\_counter\_suspension.py}.
+
+The existing six-to-one fibre projections imply that a live leg and shared
+base do not determine the missing tag. Retain that tag or a recoverable replay
+source. Likewise, $36$ possible base values do not by themselves allocate
+$36$ network points. The spread-ladder cut bound remains valid; converting
+its boundary table to executed traffic requires an explicit routing protocol.
+The actual space-favoured ladder plan requests $13$ STRONG roots but supplies
+$10$ STRONG and $3$ HASH\_ONLY. The latter do not retain bytes under the existing
+collector, so the new admission audit rejects that unsatisfied retention demand.
+
+The output-rank audit also reconciles the new three-copy search with the
+blueprint's earlier rank-one obstruction (Passes 2933, 2977 and 2990).
+Every one of the $104$ returned acceptance hits has six independent generators
+on six qubits, hence zero logical qubits and a one-dimensional stabilizer
+output. The acceptance enumeration is preserved; useful super-linear magic
+distillation remains open. The all-hit replay is
+\texttt{analysis/w33\_three\_copy\_output\_rank\_audit.py}.
+
+These are finite software recovery and audit results. They supply no measured
+device, quantum resource, capacity allocation or physical network-cost proof.
+The report \texttt{analysis/W33\_VM\_RETENTION\_AND\_OUTPUT\_AUDIT.md}
+records source ownership, frozen certificates and replay commands.
