@@ -43,6 +43,18 @@ class TestContinuationSuperpositionSemantics(unittest.TestCase):
         self.assertIsInstance(root, str)
         self.assertTrue(root.startswith("sha256:"))
 
+    def test_relative_phase_changes_selector_but_not_root_table_or_probabilities(self):
+        state = uniform_selector()
+        amps = [0j] * DIMENSION
+        amps[2] = complex(1 / sqrt(2), 0)
+        amps[9] = complex(1 / sqrt(2), 0)
+        a = ContinuationSelector(state.roots, tuple(amps))
+        amps[9] *= -1
+        b = ContinuationSelector(state.roots, tuple(amps))
+        self.assertNotEqual(a.selector_id, b.selector_id)
+        self.assertEqual(a.root_table_id, b.root_table_id)
+        self.assertEqual(a.probabilities(), b.probabilities())
+
     def test_bad_dimension_rejected(self):
         state = uniform_selector()
         with self.assertRaises(ValueError):
