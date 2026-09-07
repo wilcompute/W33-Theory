@@ -58,10 +58,12 @@ class TestHoloVMSyscallABI(unittest.TestCase):
         with self.assertRaises(PermissionError):
             kernel.RESUME(handle)
 
-    def test_foreign_process_handle_is_rejected(self):
+    def test_foreign_process_handle_is_rejected_as_missing_authority(self):
         kernel, _, handle = self.fixture()
         fake = ProcessHandle(handle.reference_id, digest({"fake": True}))
-        with self.assertRaises(ValueError):
+        # The reference id exists, but it authorizes the original process root,
+        # not this forged root. That is an authority failure, not malformed data.
+        with self.assertRaises(PermissionError):
             kernel.RESUME(fake)
 
     def test_cross_carrier_rehydrate_keeps_classical_roots_and_changes_process(self):
