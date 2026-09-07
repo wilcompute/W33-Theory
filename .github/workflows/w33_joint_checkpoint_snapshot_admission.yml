@@ -1,0 +1,30 @@
+name: W33 joint checkpoint snapshot admission
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_joint_checkpoint_snapshot_admission.py'
+      - 'analysis/w33_adaptive_reversible_scheduler.py'
+      - 'analysis/w33_ladder_checkpoint_placement.py'
+      - 'analysis/w33_snapshot_admission_scheduler.py'
+      - 'analysis/w33_shared_counter_archive.py'
+      - 'tests/test_w33_joint_checkpoint_snapshot_admission.py'
+      - '.github/workflows/w33_joint_checkpoint_snapshot_admission.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Run joint admission certificate
+        run: python analysis/w33_joint_checkpoint_snapshot_admission.py
+      - name: Run focused tests
+        run: python -m unittest tests.test_w33_joint_checkpoint_snapshot_admission -v
+      - name: Re-run source retention tests
+        run: python -m unittest tests.test_w33_snapshot_admission_scheduler tests.test_w33_ladder_checkpoint_placement -v
