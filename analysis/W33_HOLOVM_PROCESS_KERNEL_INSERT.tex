@@ -1,0 +1,94 @@
+% 2026-09-07 -- HoloVM content-addressed process kernel
+\section*{HoloVM process kernel: process identity above shared value state}
+\addcontentsline{toc}{section}{HoloVM process kernel: process identity above shared value state}
+
+\noindent\textbf{Scope.}
+The existing runtime already has authenticated guest transitions, persistent
+content-addressed state, capability-address pointers, execution passports,
+same-carrier checkpoints, neutral cross-carrier continuations, temporal GC,
+shared snapshots, and exact bounded snapshot admission. The missing systems
+object was a \emph{process identity}: identical recoverable snapshots can
+legitimately belong to different forks.
+
+\paragraph{Process/value separation.}
+The executable reference model
+\path{analysis/w33_holovm_process_kernel.py} adds one immutable process node
+above the existing recoverable snapshot:
+\[
+ C=
+ (\mathrm{pid},\mathrm{branch},\mathrm{generation},\mathrm{parent},
+  \mathrm{passport},\mathrm{state},\mathrm{fibre},
+  \mathrm{history},\mathrm{receipt}).
+\]
+Its Merkle node has exactly one strong child, the shared snapshot root. Hence
+two same-state forks satisfy
+\[
+ \boxed{\mathrm{snapshot}(C_a)=\mathrm{snapshot}(C_b)}
+ \qquad\text{but}\qquad
+ \boxed{\mathrm{root}(C_a)\ne\mathrm{root}(C_b),\;
+        \mathrm{pid}(C_a)\ne\mathrm{pid}(C_b).}
+\]
+The second fork copies no counter node: its exact marginal canonical-blob
+payload is one outer process descriptor. This is process-level copy-on-write,
+not a claim about physical RAM pages.
+
+\paragraph{Execution as continuation reduction.}
+One guest step is now
+\[
+ C_n\xrightarrow{\rho_n}C_{n+1},
+\]
+where $\rho_n$ is the existing authenticated-counter receipt. The prover's
+post-state is independently reconstructed by the store-free verifier before a
+child continuation is emitted. The logical process id is stable across the
+step, while the continuation id, generation, parent link and causal history root
+change. Deterministic replay of the same parent produces the same receipt and
+child continuation; the receipt's W33 route still has at most two hops.
+
+\paragraph{Retention and software causality.}
+A live process is a STRONG root in the existing temporal root registry. The
+collector follows the process node into the shared snapshot closure. Parent and
+history hashes are intentionally descriptor values rather than Merkle child
+edges. Therefore a descendant can retain the identity of an ancestor without
+pinning all ancestor bytes. The verifier pins sibling and descendant roots,
+demotes an ancestor to HASH\_ONLY, releases its STRONG root, collects the old
+process blob, and still resumes both surviving continuations exactly.
+
+Thus, at the software level only,
+\[
+ \boxed{\text{reconstructible memory}
+ =\text{closure of STRONG continuation roots}}
+\]
+while causal ordering may survive as hashes after the bytes are reclaimed.
+This is a precise process semantics for the project's ``time as memory''
+intuition, \emph{not} a thermodynamic or relativistic identification.
+
+\paragraph{Virtual hardware normal form.}
+The resulting machine reads
+\[
+\boxed{
+\begin{array}{ll}
+\text{vCPU} & \text{authenticated prove/verify transition engine},\\
+\text{registers} & pc,\ portal,\ two\ state\ roots,\ generation,\ history,\\
+\text{MMU} & \text{bounded base-40 capability-address ISA},\\
+\text{interconnect} & W(3,3)\ \text{diameter-two routing},\\
+\text{placement} & 36\times6\times6\ \text{fibre-product coordinate},\\
+\text{process table} & \text{STRONG continuation roots},\\
+\text{checkpoint/swap} & \text{shared immutable snapshot DAG},\\
+\text{fork} & \text{one process node over a shared value closure},\\
+\text{forget} & \text{release STRONG root then temporal GC}.
+\end{array}}
+\]
+The finite geometry remains the control/routing fabric. Abstract universality
+comes from the extensible authenticated guest state, not from treating one
+40-node device as infinite memory.
+
+\paragraph{External context and boundary.}
+Content-addressed deduplication follows the broad Venti lineage; monotone
+authority follows the CHERI capability discipline; the language frontend
+remains compatible with WebAssembly's abstract-machine reduction semantics; and
+the reversible checkpoint trade surface remains in Bennett's
+compute--checkpoint--uncompute tradition. None of those prior ideas is claimed
+as new. The new repository-level statement is the explicit process/value split
+that makes the existing W33 VM components one coherent continuation machine.
+No fabricated photonic processor, hardware capability tag, durability service,
+distributed consensus protocol, or physical energy law is inferred.
