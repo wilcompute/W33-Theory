@@ -1,0 +1,80 @@
+{
+  "actions": [
+    {
+      "dependencies_merged": true,
+      "focused_run": 30940467641,
+      "focused_status": "queued",
+      "mergeable_snapshot": true,
+      "next_action": "observe dedicated focused workflow; do not infer success from source, mergeability, or unrelated checks",
+      "number": 242,
+      "ready_for_human_merge_review": false
+    },
+    {
+      "dependencies_merged": false,
+      "focused_run": null,
+      "focused_status": "action_required",
+      "mergeable_snapshot": false,
+      "next_action": "blocked: complete and merge dependencies #242",
+      "number": 243,
+      "ready_for_human_merge_review": false
+    },
+    {
+      "dependencies_merged": false,
+      "focused_run": 30920672660,
+      "focused_status": "failure",
+      "mergeable_snapshot": true,
+      "next_action": "blocked: complete and merge dependencies #243",
+      "number": 244,
+      "ready_for_human_merge_review": false
+    },
+    {
+      "dependencies_merged": true,
+      "focused_run": 30931074919,
+      "focused_status": "failure",
+      "mergeable_snapshot": true,
+      "next_action": "repair or rerun the focused gate and inspect terminal artifacts",
+      "number": 246,
+      "ready_for_human_merge_review": false
+    },
+    {
+      "dependencies_merged": true,
+      "focused_run": null,
+      "focused_status": "source_merged_pdf_evidence_queued",
+      "mergeable_snapshot": false,
+      "next_action": "record terminal merge artifact and retain explicit evidence boundary",
+      "number": 247,
+      "ready_for_human_merge_review": false
+    }
+  ],
+  "active_chain": [
+    242,
+    243,
+    244
+  ],
+  "boundary": "This is a frozen scheduling certificate, not live GitHub state and not permission to mutate any pull request. Mergeability is not merge readiness.",
+  "exact_next_sequence": [
+    "Observe corrected PR #242 run 30940467641. Mergeability alone is insufficient; require terminal integration idempotence, three PDFs and persisted evidence on head 41e34c85.",
+    "Only after #242 is green and merged, retarget or reconcile #243; approve its action-required workflow, inspect readable materialization, and run its focused gate.",
+    "Only after #243 is green and merged, reconcile #244, repair its failed focused lane, and rerun on the reconciled head.",
+    "Independently inspect the terminal failure in #246 run 30931074919, apply the narrow repair, reconcile current master, and require a green rerun.",
+    "Retain #247 as merged source with PDF and physical boundaries until its dedicated evidence is terminal."
+  ],
+  "independent_gate": [
+    246
+  ],
+  "master_commit": "3cab9f71783c254cb7821f9a88c911f377f0978c",
+  "merge_authority": "none",
+  "ready_count": 0,
+  "recently_merged": [
+    247
+  ],
+  "schema": "w33.pass3218.stack_drain.v1",
+  "snapshot_time": "2026-08-04T14:30:00-04:00",
+  "topological_order": [
+    242,
+    243,
+    244,
+    246,
+    247
+  ]
+}
