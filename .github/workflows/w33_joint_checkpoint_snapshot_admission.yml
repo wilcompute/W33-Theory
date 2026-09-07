@@ -5,6 +5,7 @@ on:
     branches: [master]
     paths:
       - 'analysis/w33_joint_checkpoint_snapshot_admission.py'
+      - 'analysis/w33_holotrade_joint_admission_handoff.py'
       - 'analysis/w33_adaptive_reversible_scheduler.py'
       - 'analysis/w33_ladder_checkpoint_placement.py'
       - 'analysis/w33_snapshot_admission_scheduler.py'
@@ -24,7 +25,14 @@ jobs:
           python-version: '3.12'
       - name: Run joint admission certificate
         run: python analysis/w33_joint_checkpoint_snapshot_admission.py
+      - name: Export exact Holotrade handoff
+        run: python analysis/w33_holotrade_joint_admission_handoff.py --write
       - name: Run focused tests
         run: python -m unittest tests.test_w33_joint_checkpoint_snapshot_admission -v
       - name: Re-run source retention tests
         run: python -m unittest tests.test_w33_snapshot_admission_scheduler tests.test_w33_ladder_checkpoint_placement -v
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w33-holotrade-joint-admission-handoff
+          path: data/w33_holotrade_joint_admission_handoff.json
+          if-no-files-found: error
