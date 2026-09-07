@@ -82,8 +82,16 @@ def conditional_landauer(bits: int, temperature_k: float = DEFAULT_TEMPERATURE_K
 
 
 def _loop_program() -> Program:
-    # One genuine infinite guest: each step increments r0 and branches to itself.
-    return Program((Instruction("INC", 0, 0),), name="holovm-thermo-increment-loop")
+    # Infinite two-PC guest.  Every step increments r0, while alternating PCs
+    # forces the W33 layout/router to execute real (generally nonzero) portal
+    # transitions instead of making the diameter check vacuous at one portal.
+    return Program(
+        (
+            Instruction("INC", 0, 1),
+            Instruction("INC", 0, 0),
+        ),
+        name="holovm-thermo-two-pc-increment-loop",
+    )
 
 
 def _clone_kernel(source: HoloVMKernel) -> HoloVMKernel:
@@ -249,15 +257,25 @@ def verify() -> dict[str, Any]:
         for a, b in zip(intervals, intervals[1:])
     )
     frontier_intervals = {row.interval for row in frontier}
+    exact_sweep_accounting = all(
+        row.logical_unreachable_payload_bits == 8 * row.swept_payload_bytes
+        for row in rows
+    )
+    sparse_policies_really_collect = all(
+        by_interval[i].swept_payload_bytes > 0 for i in (2, 4, 8)
+    )
     checks = {
         "all_actual_recovery_replays_reconstruct_every_generation": all(row.recomputation_replays_verified == row.steps for row in rows),
         "every_policy_releases_one_live_root_per_step": all(row.live_releases == row.steps for row in rows),
         "every_release_cycle_runs_exact_collection": all(row.gc_events == row.steps for row in rows),
         "all_actual_W33_guest_routes_obey_diameter_two": all(row.route_hops_max <= 2 for row in rows),
+        "routing_workload_is_nontrivial": all(row.route_hops_total > 0 for row in rows),
         "larger_checkpoint_intervals_reduce_or_equal_retained_byte_ticks": retention_monotone,
         "larger_checkpoint_intervals_increase_or_equal_recomputation": recompute_monotone,
         "interval_one_has_zero_recomputation": by_interval[1].recomputation_steps_total == 0,
-        "logical_sweep_bytes_are_measured_not_guessed": all(row.swept_payload_bytes > 0 and row.logical_unreachable_payload_bits == 8 * row.swept_payload_bytes for row in rows),
+        "interval_one_has_zero_sweep_because_every_generation_is_strong": by_interval[1].swept_payload_bytes == 0 and by_interval[1].strong_checkpoint_pins == 17,
+        "logical_sweep_accounting_is_exact_for_zero_and_nonzero_cases": exact_sweep_accounting,
+        "sparser_checkpoint_policies_really_collect_payload": sparse_policies_really_collect,
         "conditional_Landauer_formula_is_exactly_kBTln2_per_logical_bit": all(
             math.isclose(
                 row.conditional_landauer_joules_at_300K,
@@ -269,7 +287,7 @@ def verify() -> dict[str, Any]:
         "geometry_does_not_select_a_unique_energy_optimum_without_physical_weights": len(frontier_intervals) >= 2,
     }
     return {
-        "schema": "w33.holovm-thermodynamic-ledger.v1",
+        "schema": "w33.holovm-thermodynamic-ledger.v2",
         "status": "PASS" if all(checks.values()) else "FAIL",
         "checks": checks,
         "temperature_K_for_conditional_bound": DEFAULT_TEMPERATURE_K,
@@ -278,6 +296,7 @@ def verify() -> dict[str, Any]:
         "geometry_probe": {
             "W33_diameter": 2,
             "W33_line_size": 4,
+            "routing_is_exercised": all(row.route_hops_total > 0 for row in rows),
             "both_geometry_aligned_intervals_are_pareto": 2 in frontier_intervals and 4 in frontier_intervals,
             "conclusion": (
                 "The geometry-aligned checkpoint periods are viable Pareto points in this workload, but the finite geometry alone does not choose between retention and recomputation. "
@@ -286,6 +305,7 @@ def verify() -> dict[str, Any]:
         },
         "thermodynamic_boundary": (
             "swept_payload_bytes is an exact canonical-software payload measurement. logical_unreachable_payload_bits = 8*bytes is bookkeeping. "
+            "Zero swept bytes at interval 1 is the measured dense-checkpoint limit, not missing data. "
             "The reported k_B T ln 2 product is only the lower bound that would apply if those bits corresponded to independent unknown physical bits irreversibly reset at 300 K; this software run does not establish that premise."
         ),
         "literature": {
