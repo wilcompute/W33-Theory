@@ -1,0 +1,114 @@
+name: Pass 2977 Full General-Isotropic M36 Sweep
+
+on:
+  push:
+    branches:
+      - agent/pass2974-2983-nonabelian-golden-information-closure
+    paths:
+      - 'analysis/bt2977_general_isotropic_m36_search.py'
+      - 'analysis/bt2977_aggregate_general_isotropic_shards.py'
+      - '.github/workflows/w33_pass2977_full_general_isotropic_sweep.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pass2977-full-general-isotropic-sweep
+  cancel-in-progress: false
+
+jobs:
+  shard-batches:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix:
+        batch: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/pass2974-2983-nonabelian-golden-information-closure
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install exact dependencies
+        run: python -m pip install --upgrade pip numpy sympy
+
+      - name: Execute five duplicate-free pivot shards
+        shell: bash
+        env:
+          BATCH: ${{ matrix.batch }}
+        run: |
+          set -euo pipefail
+          mkdir -p "shard_artifacts/batch_${BATCH}"
+          frozen=data/PART_BT2977_GENERAL_ISOTROPIC_M36_PILOT_results.json
+          cp "$frozen" /tmp/bt2977_frozen.json
+          index="$BATCH"
+          while [ "$index" -lt 495 ]; do
+            cp /tmp/bt2977_frozen.json "$frozen"
+            before=$(sha256sum "$frozen" | cut -d' ' -f1)
+            log="shard_artifacts/batch_${BATCH}/shard_${index}.log"
+            python analysis/bt2977_general_isotropic_m36_search.py --pivot-index "$index" 2>&1 | tee "$log"
+            after=$(sha256sum "$frozen" | cut -d' ' -f1)
+            if [ "$before" != "$after" ]; then
+              cp "$frozen" "shard_artifacts/batch_${BATCH}/shard_${index}.json"
+            fi
+            printf '{"pivot_index":%s,"before_sha256":"%s","after_sha256":"%s"}\n' \
+              "$index" "$before" "$after" \
+              > "shard_artifacts/batch_${BATCH}/shard_${index}.meta.json"
+            index=$((index + 99))
+          done
+          cp /tmp/bt2977_frozen.json "$frozen"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass2977-batch-${{ matrix.batch }}
+          path: shard_artifacts/batch_${{ matrix.batch }}/
+          retention-days: 14
+
+  aggregate:
+    needs: shard-batches
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/pass2974-2983-nonabelian-golden-information-closure
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: pass2977-batch-*
+          path: analysis/evidence/pass2977_full_shards
+          merge-multiple: true
+
+      - name: Aggregate fail-closed
+        run: |
+          python analysis/bt2977_aggregate_general_isotropic_shards.py \
+            analysis/evidence/pass2977_full_shards \
+            --output data/PART_BT2977_GENERAL_ISOTROPIC_M36_FULL_results.json
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pass2977-full-general-isotropic-results
+          path: |
+            data/PART_BT2977_GENERAL_ISOTROPIC_M36_FULL_results.json
+            analysis/evidence/pass2977_full_shards/
+          retention-days: 14
+
+      - name: Publish exhaustive certificate
+        run: |
+          git config user.name 'W33 exhaustive evidence bot'
+          git config user.email 'noreply@github.com'
+          git add data/PART_BT2977_GENERAL_ISOTROPIC_M36_FULL_results.json
+          git commit -m 'Pass 2977: freeze full general-isotropic M36 census'
+          git push origin HEAD:agent/pass2974-2983-nonabelian-golden-information-closure
