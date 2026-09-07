@@ -1,0 +1,85 @@
+name: HoloVM frontier next-five
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_continuation_steinberg_intertwiner.py'
+      - 'analysis/w33_static_wasm_holoir_compiler.py'
+      - 'analysis/w33_photonic_macroop_miner.py'
+      - 'analysis/w33_online_reversible_checkpoint_scheduler.py'
+      - 'analysis/w33_holotrade_transaction_fixture.py'
+      - '.github/workflows/w33_holovm_frontier_next_five.yml'
+  pull_request:
+  workflow_dispatch:
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  steinberg-intertwiner:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install exact algebra dependencies
+        run: pip install numpy sympy networkx
+      - name: Explicit continuation-to-Steinberg intertwiner
+        run: python analysis/w33_continuation_steinberg_intertwiner.py
+
+  static-wasm:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Static Wasm to authenticated HoloIR
+        run: python analysis/w33_static_wasm_holoir_compiler.py
+
+  photonic-macroops:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Mine shortest symplectic macro-op candidates
+        run: python analysis/w33_photonic_macroop_miner.py
+
+  online-checkpoint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Online reversible checkpoint scheduler
+        run: python analysis/w33_online_reversible_checkpoint_scheduler.py
+
+  holotrade-fixture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Real HoloVM cross-repo execution fixture
+        run: |
+          python analysis/w33_holotrade_transaction_fixture.py > /tmp/w33-execution.json
+          python -m json.tool /tmp/w33-execution.json >/dev/null
