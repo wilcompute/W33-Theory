@@ -1,0 +1,15 @@
+{
+  "pass": 5151,
+  "status": "THEOREM_THETA_SECOND_MOMENT_CURVATURE",
+  "theorem": "With k=4(q-1), every nonzero apartment-code indicator x satisfies x^T A_theta^2 x >= k(k+2)|S|.",
+  "defect": "Delta=x^T A_theta^2 x-k(k+2)|S| is a nonnegative multiple of 8.",
+  "equality": "Equality holds iff every exterior boundary apartment has exactly two selected theta-neighbors.",
+  "star_anchors": {
+    "2":{"weight":16,"k":4,"second_moment":384,"moment_per_selected":24,"outside_hist":{"0":42,"2":32}},
+    "3":{"weight":81,"k":8,"second_moment":6480,"moment_per_selected":80,"outside_hist":{"0":1215,"2":324}},
+    "4":{"weight":256,"k":12,"second_moment":43008,"moment_per_selected":168,"outside_hist":{"0":11808,"2":1536}},
+    "5":{"weight":625,"k":16,"second_moment":180000,"moment_per_selected":288,"outside_hist":{"0":67500,"2":5000}}
+  },
+  "q2_exhaustive":{"dimension":16,"nonzero_words":65535,"curvature_zero_words":45,"curvature_zero_weight":16,"minimum_positive_defect":64,"joint_weight_defect_classes":74},
+  "boundary": "The q2 equality shell is complete; q>2 equality classification is not claimed."
+}

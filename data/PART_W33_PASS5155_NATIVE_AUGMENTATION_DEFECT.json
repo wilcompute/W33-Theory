@@ -1,0 +1,13 @@
+{
+  "pass":5155,
+  "status":"THEOREM_NATIVE_AUGMENTATION_PLUS_HIDDEN_DEFECT",
+  "universal_relation":"1^T M=q 1^T, hence the constant left functional becomes null in the native characteristic p|q.",
+  "rows":[
+    {"q":2,"p":2,"generic_rank":15,"native_rank":15,"rank_drop":0,"minimum_hidden_beyond_one_explicit_relation":0},
+    {"q":3,"p":3,"generic_rank":69,"native_rank":68,"rank_drop":1,"minimum_hidden_beyond_one_explicit_relation":0},
+    {"q":4,"p":2,"generic_rank":184,"native_rank":180,"rank_drop":4,"minimum_hidden_beyond_one_explicit_relation":3},
+    {"q":5,"p":5,"generic_rank":405,"native_rank":397,"rank_drop":8,"minimum_hidden_beyond_one_explicit_relation":7},
+    {"q":7,"p":7,"generic_rank":1183,"native_rank":1173,"rank_drop":10,"minimum_hidden_beyond_one_explicit_relation":9}
+  ],
+  "boundary":"q5/q7 hidden composition factors remain open."
+}
