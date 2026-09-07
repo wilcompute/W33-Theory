@@ -64,6 +64,11 @@ def _norm2(amplitudes: Iterable[complex]) -> float:
     return float(sum((z.real * z.real + z.imag * z.imag) for z in amplitudes))
 
 
+def _complex_hex(z: complex) -> tuple[str, str]:
+    """Canonical bit-exact software encoding of a Python complex amplitude."""
+    return (float(z.real).hex(), float(z.imag).hex())
+
+
 @dataclass(frozen=True)
 class ContinuationSelector:
     """81-dimensional coherent control with an external classical root table."""
@@ -83,13 +88,20 @@ class ContinuationSelector:
 
     @property
     def selector_id(self) -> str:
-        # The classical descriptor commits roots and probabilities, not complex
-        # phases; this is an audit identity, not a tomography record.
+        # This is the exact identity of the *software simulation descriptor*.
+        # Relative phase must be committed: equal Born probabilities are not
+        # equal coherent states.  float.hex() records Python's exact binary64
+        # values; this is not a tomography identity for an unknown device state.
         return digest({
-            "schema": "w33.continuation-selector.v1",
+            "schema": "w33.continuation-selector.v2",
             "roots": list(self.roots),
-            "probabilities": [round(abs(z) ** 2, 15) for z in self.amplitudes],
+            "amplitudes_binary64_hex": [list(_complex_hex(z)) for z in self.amplitudes],
         })
+
+    @property
+    def root_table_id(self) -> str:
+        """Classical identity of the external continuation-slot table alone."""
+        return digest({"schema": "w33.continuation-root-table.v1", "roots": list(self.roots)})
 
     def probabilities(self) -> tuple[float, ...]:
         return tuple(abs(z) ** 2 for z in self.amplitudes)
@@ -167,6 +179,12 @@ def verify() -> dict[str, Any]:
     sparse = ContinuationSelector(roots, tuple(amps))
     sparse_distribution = sparse.root_distribution()
 
+    # Equal probabilities with a changed relative phase must be distinct
+    # coherent simulation states while retaining the same classical root table.
+    phased_amps = list(amps)
+    phased_amps[11] *= -1
+    sparse_phase_flip = ContinuationSelector(roots, tuple(phased_amps))
+
     checks = {
         "repository_certifies_a_primitive_rank81_steinberg_projector": exact_rank81,
         "phase_space_has_exactly_81_slots": DIMENSION == 3**4 == 81,
@@ -183,9 +201,12 @@ def verify() -> dict[str, Any]:
             and isclose(sparse_distribution[roots[11]], 0.75, abs_tol=1e-12)
         ),
         "Merkle_roots_are_classical_table_entries_not_amplitudes": all(isinstance(z, complex) for z in sparse.amplitudes) and all(isinstance(r, str) for r in sparse.roots),
+        "relative_phase_changes_coherent_selector_identity": sparse.selector_id != sparse_phase_flip.selector_id,
+        "relative_phase_does_not_change_classical_root_table_identity": sparse.root_table_id == sparse_phase_flip.root_table_id,
+        "relative_phase_flip_preserves_Born_distribution": sparse.probabilities() == sparse_phase_flip.probabilities(),
     }
     return {
-        "schema": "w33.continuation-superposition-semantics.v1",
+        "schema": "w33.continuation-superposition-semantics.v2",
         "status": "PASS" if all(checks.values()) else "FAIL",
         "checks": checks,
         "steinberg_anchor": {
@@ -203,10 +224,13 @@ def verify() -> dict[str, Any]:
         },
         "coherent_control_semantics": {
             "selector_id": sparse.selector_id,
+            "root_table_id": sparse.root_table_id,
+            "phase_flipped_selector_id": sparse_phase_flip.selector_id,
             "nonzero_slots": [3, 11],
             "probabilities": [0.25, 0.75],
             "measurement_surface": "slot measurement returns one external authenticated continuation root",
             "root_storage": "classical immutable Merkle archive outside the 81-dimensional amplitude register",
+            "simulation_identity_boundary": "selector_id commits exact Python binary64 amplitude components; it is a software-state identity, not physical tomography",
         },
         "next_representation_theory_target": (
             "Construct and verify an explicit intertwiner/projector from an operational continuation-control basis into the repository's primitive Steinberg-81 image. "
