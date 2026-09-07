@@ -6,6 +6,8 @@ on:
       - 'analysis/w33_lossless_counter_suspension*'
       - 'analysis/w33_shared_counter_archive*'
       - 'analysis/w33_snapshot_admission*'
+      - 'analysis/w33_holovm_process_kernel.py'
+      - 'analysis/W33_HOLOVM_PROCESS_KERNEL*'
       - 'analysis/w33_three_copy_output_rank_audit*'
       - 'analysis/w33_authenticated_counter_machine.py'
       - 'analysis/w33_temporal_merkle_gc.py'
@@ -16,6 +18,7 @@ on:
       - 'tests/test_w33_lossless_counter_suspension.py'
       - 'tests/test_w33_shared_counter_archive.py'
       - 'tests/test_w33_snapshot_admission_scheduler.py'
+      - 'tests/test_w33_holovm_process_kernel.py'
       - 'tests/test_w33_temporal_gc_replay.py'
       - 'tests/test_w33_three_copy_output_rank_audit.py'
       - '.github/workflows/w33_vm_retention_output_audit.yml'
@@ -33,6 +36,10 @@ jobs:
         with:
           python-version: '3.11'
       - run: python -m pip install numpy
+      - name: HoloVM immutable process kernel certificate
+        run: python analysis/w33_holovm_process_kernel.py
+      - name: HoloVM process identity, fork, resume and GC tests
+        run: python tests/test_w33_holovm_process_kernel.py
       - name: Recovery, GC, malformed archives and frozen result
         run: python tests/test_w33_lossless_counter_suspension.py
       - name: Shared admission, deep collection and frozen payload costs
