@@ -1,0 +1,59 @@
+name: Pass 3065 Prove or Find 27 D4 Triangles
+on:
+  workflow_dispatch:
+  push:
+    branches: [agent/pass3064-3072-noisy-predictive-sync-closure]
+    paths:
+      - 'analysis/bt3065_no27_sat.py'
+      - '.github/workflows/w33_pass3065_no27_sat.yml'
+permissions: {contents: write}
+concurrency: {group: pass3065-no27, cancel-in-progress: false}
+jobs:
+  decide:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install solver and independent proof checker
+        run: |
+          sudo apt-get update && sudo apt-get install -y build-essential git
+          python -m pip install --upgrade pip
+          python -m pip install python-sat[pblib,aiger]
+          git clone --depth 1 https://github.com/marijnheule/drat-trim.git /tmp/drat-trim
+          make -C /tmp/drat-trim
+      - name: Solve exact size-27 central obstruction
+        run: timeout 18000 python analysis/bt3065_no27_sat.py --cnf data/bt3065_no27.cnf --solve --proof data/bt3065_no27.drup
+      - name: Check proof or full-D4 model
+        run: |
+          python - <<'PY'
+          import hashlib,json,pathlib,subprocess
+          p=pathlib.Path('data/PART_BT3065_D4_FIXED_OPTIMUM_results.json');d=json.loads(p.read_text())
+          if d['status']=='UNSAT_REPORTED_PROOF_REQUIRES_INDEPENDENT_CHECK':
+              r=subprocess.run(['/tmp/drat-trim/drat-trim','data/bt3065_no27.cnf','data/bt3065_no27.drup'],text=True,capture_output=True)
+              print(r.stdout,r.stderr)
+              if r.returncode: raise SystemExit('proof rejected')
+              d.update(status='COMPLETE_UNSAT_PROOF_VERIFIED_OPTIMUM_28',independent_proof_checker='drat-trim',proof_sha256=hashlib.sha256(pathlib.Path('data/bt3065_no27.drup').read_bytes()).hexdigest(),exact_optimum=28)
+          elif d['status']=='SAT_FULL_D4_27_FOUND': d['exact_optimum_upper_bound']=27
+          elif d['status']=='SAT_CENTRAL_ONLY_FULL_D4_REJECTED': d['decision']='central candidate rejected; size-27 remains open'
+          else: raise SystemExit('unexpected fail-closed status '+d['status'])
+          p.write_text(json.dumps(d,indent=2,sort_keys=True)+'\n')
+          PY
+      - name: Freeze stable result
+        env: {HEAD_BRANCH: "${{ github.ref_name }}"}
+        run: |
+          mkdir -p evidence/pass3065
+          sha256sum data/bt3065_no27.cnf data/PART_BT3065_D4_FIXED_OPTIMUM_results.json > evidence/pass3065/SHA256SUMS
+          git config user.name w33-sat-bot; git config user.email actions@users.noreply.github.com
+          git add data/PART_BT3065_D4_FIXED_OPTIMUM_results.json evidence/pass3065
+          if ! git diff --cached --quiet; then git commit -m 'Pass 3065: record proof-checked 27-triangle decision'; git push origin HEAD:"$HEAD_BRANCH"; fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3065-no27-sat-proof
+          path: |
+            data/bt3065_no27.cnf
+            data/bt3065_no27.drup
+            data/PART_BT3065_D4_FIXED_OPTIMUM_results.json
+            evidence/pass3065/SHA256SUMS
