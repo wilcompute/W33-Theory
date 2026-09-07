@@ -1,0 +1,37 @@
+{
+  "boundary": "Software control costs on certified finite geometry. The 216 carriers remain inequivalent construction-time forks; suspension retains a shared coordinate, it does not convert between carriers. No device claim.",
+  "certificate_sha256": "sha256:41fd5c87e42c2b759d37727b1c062cb59f28ac8f3b720aec998a7e4b5721426e",
+  "checks": {
+    "cycle_is_72": true,
+    "fibre_product_is_36x6x6": true,
+    "full_carrier_boundary_zero": true,
+    "ladder_certificate_pass_and_rung9_is_36": true,
+    "suspension_boundary_equals_spectral_min": true,
+    "suspension_region_is_rung9_on_all_36_spreads": true,
+    "zero_migration": true
+  },
+  "fibre": {
+    "base_states": 36,
+    "fibre_size": 6,
+    "hypervisor_states": 1296,
+    "projections": "both onto, exactly six-to-one, mutually independent"
+  },
+  "schema": "w33.fibre-suspension-ladder.v1",
+  "source_certificates": [
+    "data/w33_spread_ladder_reversible_gc.json",
+    "data/PASS20260903_finite_control_unbounded_guest_hypervisor.json"
+  ],
+  "status": "PASS",
+  "suspension": {
+    "attains_minimum": true,
+    "migration_on_suspend_or_resume": 0,
+    "nested_inside_full_carrier": "rung 9 subset of rung 10 (40 points, boundary 0)",
+    "release_boundary": 36,
+    "retention_points": 36,
+    "shared_not_summed": "the hypervisor's own control state pins the SAME 36-point base; two-fork suspension does not double the region",
+    "spectral_minimum_at_36": 36,
+    "suspend_resume_cycle_boundary": 72,
+    "suspended_state": "shared base coordinate b in 36 (one fork's fibre tag reclaimed)"
+  },
+  "theorem": "Suspending one 216-state fork of the 1296 fibre hypervisor retains exactly the shared 36-state base, which is ladder rung 9: its release boundary 36 attains the spectral minimum m(40-m)/4, the suspend/resume cycle costs 72 boundary crossings (the minimum for any 36-point retention on W(3,3)), and nesting inside rung 10 gives zero retained-point migration.  The base is shared, so hypervisor control state adds no second region."
+}

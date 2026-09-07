@@ -3869,11 +3869,20 @@ second --- after the errata, and before anything else.
             proof --- the space is far too large to enumerate --- but two independent
             searches now point the same way.
       \end{itemize}
-      \emph{So the open problem is:} does any stabilizer protocol on three or more copies
-      annihilate every single-error input while keeping the clean one? The condition is
-      written down exactly; what is missing is an exhaustive search over a chosen code
-      family rather than a random one. Until it is answered the controller still refuses
-      injection.
+      \emph{Update (Pass 20260906):} the asked-for exhaustive search over a chosen family
+      has now run: all $961$ copy-permutation-symmetric stabilizer groups ($27{,}391$
+      signed projectors, exact integer arithmetic, independently dense-confirmed).
+      \textbf{Witnesses exist} --- $104$ across the $36$ rays.  The condition IS
+      satisfiable at three copies; the open problem is now the decoder, the yield, and
+      the acceptance inequality, not existence.  The controller still refuses injection
+      until those are certified.
+      \emph{The question as originally posed} --- does any stabilizer protocol on three
+      or more copies annihilate every single-error input while keeping the clean one ---
+      is therefore answered in the affirmative for the maximal symmetry-respecting
+      family.  What remains open is everything downstream of existence: an explicit
+      decoder, the distillation yield of the witnessed branch, and whether the
+      acceptance inequality is met at the output.  Until those are answered the
+      controller still refuses injection.
 
 \item \textbf{A power figure exists, and it is modelled, not measured.} This item used to
       read ``no physical power figure exists''; that is no longer true, and the honest

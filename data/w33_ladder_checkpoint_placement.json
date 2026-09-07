@@ -1,0 +1,264 @@
+{
+  "boundary": "Software hop-crossing accounting on the certified geometry. No Joules, no device, no physical network claim. The optimality theorem itself lives in the source certificate; this module binds it to the scheduler.",
+  "boundary_table": [
+    36,
+    64,
+    84,
+    96,
+    100,
+    96,
+    84,
+    64,
+    36,
+    0
+  ],
+  "certificate_sha256": "sha256:0cf744ccc6fb893c062cc66ae9878f83228cc2d6eb561659f46b924bac5e32fc",
+  "checks": {
+    "all_regimes_placed": true,
+    "boundary_table_closed_form": true,
+    "full_ladder_plan_within_certified_budget": true,
+    "ladder_certificate_pass_and_schema": true,
+    "no_energy_field": true,
+    "no_silent_destructive_fallback": true,
+    "overflow_only_to_hash_only": true,
+    "peak_never_exceeds_certified_peak": true,
+    "placement_costs_from_certified_table": true
+  },
+  "placed_regimes": {
+    "balanced": {
+      "feasible": true,
+      "plan": {
+        "assignments": [
+          {
+            "checkpoint_depth": 1,
+            "release_boundary": 36,
+            "rung": 1,
+            "rung_vertices": 4,
+            "strength": "STRONG"
+          },
+          {
+            "checkpoint_depth": 2,
+            "release_boundary": 64,
+            "rung": 2,
+            "rung_vertices": 8,
+            "strength": "STRONG"
+          },
+          {
+            "checkpoint_depth": 3,
+            "release_boundary": 84,
+            "rung": 3,
+            "rung_vertices": 12,
+            "strength": "STRONG"
+          },
+          {
+            "checkpoint_depth": 4,
+            "release_boundary": 96,
+            "rung": 4,
+            "rung_vertices": 16,
+            "strength": "STRONG"
+          },
+          {
+            "checkpoint_depth": 5,
+            "release_boundary": 100,
+            "rung": 5,
+            "rung_vertices": 20,
+            "strength": "STRONG"
+          },
+          {
+            "checkpoint_depth": 6,
+            "release_boundary": 96,
+            "rung": 6,
+            "rung_vertices": 24,
+            "strength": "STRONG"
+          },
+          {
+            "checkpoint_depth": 7,
+            "release_boundary": 84,
+            "rung": 7,
+            "rung_vertices": 28,
+            "strength": "STRONG"
+          },
+          {
+            "checkpoint_depth": 8,
+            "release_boundary": 64,
+            "rung": 8,
+            "rung_vertices": 32,
+            "strength": "STRONG"
+          },
+          {
+            "checkpoint_depth": 9,
+            "release_boundary": 36,
+            "rung": 9,
+            "rung_vertices": 36,
+            "strength": "STRONG"
+          },
+          {
+            "checkpoint_depth": 10,
+            "release_boundary": 0,
+            "rung": 10,
+            "rung_vertices": 40,
+            "strength": "STRONG"
+          }
+        ],
+        "boundary_table_digest": "sha256:6a2b43d3ff694acec6e18b15991e3d0d5850e6fea2192fbded7bc6b08d3287d1",
+        "full_cycle_boundary": 1320,
+        "overflow_to_audit_roots": 0,
+        "peak_live_boundary": 100,
+        "recursion_levels": 9,
+        "segment_steps": 8,
+        "strong_checkpoints": 10,
+        "total_release_boundary": 660
+      }
+    },
+    "space_favoured": {
+      "feasible": true,
+      "plan": {
+        "assignments": [
+          {
+            "checkpoint_depth": 1,
+            "release_boundary": 36,
+            "rung": 1,
+            "rung_vertices": 4,
+            "strength": "STRONG"
+          },
+          {
+            "checkpoint_depth": 2,
+            "release_boundary": 64,
+            "rung": 2,
+            "rung_vertices": 8,
+            "strength": "STRONG"
+          },
+          {
+            "checkpoint_depth": 3,
+            "release_boundary": 84,
+            "rung": 3,
+            "rung_vertices": 12,
+            "strength": "STRONG"
+          },
+          {
+            "checkpoint_depth": 4,
+            "release_boundary": 96,
+            "rung": 4,
+            "rung_vertices": 16,
+            "strength": "STRONG"
+          },
+          {
+            "checkpoint_depth": 5,
+            "release_boundary": 100,
+            "rung": 5,
+            "rung_vertices": 20,
+            "strength": "STRONG"
+          },
+          {
+            "checkpoint_depth": 6,
+            "release_boundary": 96,
+            "rung": 6,
+            "rung_vertices": 24,
+            "strength": "STRONG"
+          },
+          {
+            "checkpoint_depth": 7,
+            "release_boundary": 84,
+            "rung": 7,
+            "rung_vertices": 28,
+            "strength": "STRONG"
+          },
+          {
+            "checkpoint_depth": 8,
+            "release_boundary": 64,
+            "rung": 8,
+            "rung_vertices": 32,
+            "strength": "STRONG"
+          },
+          {
+            "checkpoint_depth": 9,
+            "release_boundary": 36,
+            "rung": 9,
+            "rung_vertices": 36,
+            "strength": "STRONG"
+          },
+          {
+            "checkpoint_depth": 10,
+            "release_boundary": 0,
+            "rung": 10,
+            "rung_vertices": 40,
+            "strength": "STRONG"
+          },
+          {
+            "checkpoint_depth": 11,
+            "release_boundary": 0,
+            "rung": 0,
+            "rung_vertices": 0,
+            "strength": "HASH_ONLY"
+          },
+          {
+            "checkpoint_depth": 12,
+            "release_boundary": 0,
+            "rung": 0,
+            "rung_vertices": 0,
+            "strength": "HASH_ONLY"
+          },
+          {
+            "checkpoint_depth": 13,
+            "release_boundary": 0,
+            "rung": 0,
+            "rung_vertices": 0,
+            "strength": "HASH_ONLY"
+          }
+        ],
+        "boundary_table_digest": "sha256:6a2b43d3ff694acec6e18b15991e3d0d5850e6fea2192fbded7bc6b08d3287d1",
+        "full_cycle_boundary": 1320,
+        "overflow_to_audit_roots": 3,
+        "peak_live_boundary": 100,
+        "recursion_levels": 12,
+        "segment_steps": 1,
+        "strong_checkpoints": 13,
+        "total_release_boundary": 660
+      }
+    },
+    "time_favoured": {
+      "feasible": true,
+      "plan": {
+        "assignments": [
+          {
+            "checkpoint_depth": 1,
+            "release_boundary": 36,
+            "rung": 1,
+            "rung_vertices": 4,
+            "strength": "STRONG"
+          },
+          {
+            "checkpoint_depth": 2,
+            "release_boundary": 64,
+            "rung": 2,
+            "rung_vertices": 8,
+            "strength": "STRONG"
+          },
+          {
+            "checkpoint_depth": 3,
+            "release_boundary": 84,
+            "rung": 3,
+            "rung_vertices": 12,
+            "strength": "STRONG"
+          }
+        ],
+        "boundary_table_digest": "sha256:6a2b43d3ff694acec6e18b15991e3d0d5850e6fea2192fbded7bc6b08d3287d1",
+        "full_cycle_boundary": 368,
+        "overflow_to_audit_roots": 0,
+        "peak_live_boundary": 84,
+        "recursion_levels": 2,
+        "segment_steps": 1024,
+        "strong_checkpoints": 3,
+        "total_release_boundary": 184
+      }
+    }
+  },
+  "schema": "w33.ladder-checkpoint-placement.v1",
+  "source_certificate": {
+    "certificate_sha256": "sha256:ebb04e0ed67e3c014081d19ce5fe867f3e29379e7912a159130cbdb20d0d6117",
+    "path": "data/w33_spread_ladder_reversible_gc.json",
+    "schema": "w33.spread-ladder-reversible-gc.v1"
+  },
+  "status": "PASS",
+  "theorem": "The adaptive reversible scheduler's chosen checkpoint count is now placed on the certified boundary-optimal spread ladder: live STRONG checkpoints occupy rungs in retention order at release cost 4i(10-i) each, overflow roots degrade to HASH_ONLY audit strength (identity without byte retention), and no placement exceeds the certified peak boundary 100."
+}

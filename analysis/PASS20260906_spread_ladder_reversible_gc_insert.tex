@@ -1,0 +1,73 @@
+% PASS20260906 -- spread-ladder reversible GC optimality and scheduler binding
+\section*{Current VM frontier: checkpoint placement is geometry, not policy}
+\addcontentsline{toc}{section}{Current VM frontier: checkpoint placement is geometry, not policy}
+
+\noindent\textbf{Scope.}
+This insert records an exact finite-geometry optimality theorem for the reversible
+virtual machine and its binding to the adaptive scheduler.  It is a software/control
+result: hop-crossing counts on the certified $W(3,3)$ substrate, not Joules, optical
+loss, or a fabricated device.
+
+\paragraph{The theorem.}
+The reversible runtime executes compute--copy--uncompute with STRONG Merkle
+checkpoints.  Releasing a checkpoint tier is a boundary-crossing operation, so
+checkpoint \emph{placement} has a geometric floor.  Exact integer certification of
+\[
+A^2 = 8I - 2A + 4J
+\]
+for the $W(3,3)$ adjacency matrix gives the Laplacian spectrum $0^1,10^{24},16^{15}$,
+hence for every $m$-vertex subset $S$,
+\[
+|\partial S| \;\ge\; \frac{m(40-m)}{4}.
+\]
+All $36$ spreads were re-derived by exact cover, and for every ordered spread the ten
+nested rungs of $4i$ points attain this bound with equality at every tier
+($i=1,\dots,10$; all $1023$ nonempty line unions per spread verified).  Therefore the
+spread ladder is the boundary-optimal reversible checkpoint hierarchy:
+\[
+\boxed{
+\text{per-tier release } 4i(10-i),\qquad
+\text{peak live boundary } 100 \text{ at the } 20|20 \text{ half-ladder},\qquad
+\text{full cycle } 2\cdot 660 = 1320 \text{ crossings},
+}
+\]
+with zero retained-point migration on resize.  The peak value is exactly the certified
+minimum boundary of the $20|20$ cut, so a half-checkpointed reversible guest sits on
+the substrate's spectral Cheeger value; no placement can do better at half retention.
+
+\paragraph{The binding.}
+The adaptive scheduler chooses \emph{how much} to retain (segment size $B$, recursion
+levels $L$) from live memory pressure; the ladder now determines \emph{where}.  A
+chosen strategy pins $L{+}1$ STRONG checkpoint roots on ladder rungs in retention
+order at release cost $4i(10-i)$ each; strategies needing more than ten live roots
+degrade the overflow to HASH\_ONLY audit strength---content identity without byte
+retention, the strength distinction the temporal GC already defines.  No root is
+silently upgraded or discarded, and the destructive-discard control remains excluded
+from the reversible frontier.
+
+\paragraph{Artifacts and verification boundary.}
+The optimality certificate is
+\texttt{analysis/w33\_spread\_ladder\_reversible\_gc.py} with frozen artifact
+\texttt{data/w33\_spread\_ladder\_reversible\_gc.json}
+(\texttt{sha256:ebb04e0ed67e3c014081d19ce5fe867f3e29379e7912a159130cbdb20d0d6117});
+the scheduler binding is
+\texttt{analysis/w33\_ladder\_checkpoint\_placement.py} with
+\texttt{data/w33\_ladder\_checkpoint\_placement.json}
+(\texttt{sha256:0cf744ccc6fb893c062cc66ae9878f83228cc2d6eb561659f46b924bac5e32fc}).
+The Holotrade control-plane object is
+\texttt{scheduler/w33-reversible-checkpoint-ladder.js}, fail-closed
+(\texttt{dispatchable=false}) pending runtime topology attestation.  The result closes
+the placement half of reversible scheduling; it does not supply measured energy,
+physical routing, or a hardware claim.
+
+\paragraph{Corollary: hypervisor suspension is rung 9.}
+When the $1296$-state fibre hypervisor ($216\times_{36}216=36\times6\times6$) suspends
+one $216$-state guest fork, the state that must be retained is exactly the shared
+$36$-state base coordinate --- and a $36$-point region is rung $9$ of the ladder, with
+release boundary $36=36\cdot4/4$, the spectral minimum.  Suspend/resume therefore costs
+$72$ boundary crossings, the minimum possible for any $36$-point retention on $W(3,3)$,
+and nesting inside rung $10$ gives zero retained-point migration.  The base is shared,
+so hypervisor control state adds no second region.  Certificate:
+\texttt{analysis/w33\_fibre\_suspension\_ladder.py},
+\texttt{data/w33\_fibre\_suspension\_ladder.json}
+(\texttt{sha256:41fd5c87e42c2b759d37727b1c062cb59f28ac8f3b720aec998a7e4b5721426e}).
