@@ -1,0 +1,167 @@
+name: Passes 2838-2840 Blueprint Extension
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - agent/pass2824-modular-blueprint-integration
+    paths:
+      - holonet_machine_blueprint.tex
+      - holonet_machine_blueprint.pdf
+      - analysis/BT2838_BT2840_blueprint_extension_insert.tex
+      - analysis/bt2838_optimal_execution_codec.py
+      - analysis/bt2839_m36_purification_cost.py
+      - analysis/bt2840_blueprint_extension_verifier.py
+      - data/PART_BT2838_OPTIMAL_EXECUTION_CODEC_results.json
+      - data/PART_BT2839_M36_REPEATED_BRANCH_COST_results.json
+      - data/PART_BT2840_BLUEPRINT_EXTENSION_results.json
+      - data/w33_pass_namespace_registry_v2.d/2838-2840.json
+      - tools/integrate_bt2838_bt2840_blueprint.py
+      - tests/test_bt2838_bt2840_blueprint_extension.py
+      - .github/workflows/w33_pass2838_2840_blueprint_extension.yml
+  pull_request:
+    branches: [master]
+    paths:
+      - holonet_machine_blueprint.tex
+      - analysis/BT2838_BT2840_blueprint_extension_insert.tex
+      - analysis/bt2838_optimal_execution_codec.py
+      - analysis/bt2839_m36_purification_cost.py
+      - analysis/bt2840_blueprint_extension_verifier.py
+      - data/PART_BT2838_OPTIMAL_EXECUTION_CODEC_results.json
+      - data/PART_BT2839_M36_REPEATED_BRANCH_COST_results.json
+      - tools/integrate_bt2838_bt2840_blueprint.py
+      - tests/test_bt2838_bt2840_blueprint_extension.py
+      - .github/workflows/w33_pass2838_2840_blueprint_extension.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: w33-pass2838-2840-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+
+env:
+  PYTHONUNBUFFERED: "1"
+  SOURCE_DATE_EPOCH: "1722643200"
+
+jobs:
+  verify-compile-freeze:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - name: Checkout writable head
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install exact test dependencies
+        run: python -m pip install --upgrade pip pytest sympy
+
+      - name: Integrate the live canonical blueprint
+        run: |
+          python tools/integrate_bt2838_bt2840_blueprint.py
+          python tools/integrate_bt2838_bt2840_blueprint.py --check
+
+      - name: Rebuild the two new exact certificates
+        run: |
+          python analysis/bt2838_optimal_execution_codec.py
+          python analysis/bt2839_m36_purification_cost.py
+
+      - name: Rebuild parallel observer evidence
+        run: |
+          python analysis/bt2825_2827_support_observer.py
+          python analysis/bt2828_double_word_distance4.py
+          rm -f data/PART_BT2828_DOUBLE_WORD_DISTANCE4_results.json
+
+      - name: Run focused regressions
+        run: |
+          pytest -q tests/test_bt2838_bt2840_blueprint_extension.py
+          pytest -q tests/test_bt2827_support_decoder_rom.py
+
+      - name: Install Tectonic
+        uses: tectonic-typesetting/setup-tectonic@v1
+
+      - name: Compile blueprint twice and require byte stability
+        shell: bash
+        run: |
+          rm -f holonet_machine_blueprint.pdf holonet_machine_blueprint.log
+          tectonic --keep-logs holonet_machine_blueprint.tex
+          cp holonet_machine_blueprint.pdf /tmp/holonet_machine_blueprint.first.pdf
+          tectonic --keep-logs holonet_machine_blueprint.tex
+          cmp /tmp/holonet_machine_blueprint.first.pdf holonet_machine_blueprint.pdf
+
+      - name: Reject TeX errors and layout overflow
+        shell: bash
+        run: |
+          test -s holonet_machine_blueprint.pdf
+          test -f holonet_machine_blueprint.log
+          if grep -E "Overfull|Undefined control sequence|LaTeX Error|Emergency stop|Fatal error" holonet_machine_blueprint.log; then
+            echo "Blueprint log contains a release-blocking TeX or layout error."
+            exit 1
+          fi
+
+      - name: Complete reservation and freeze release certificate
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          path = Path('data/w33_pass_namespace_registry_v2.d/2838-2840.json')
+          data = json.loads(path.read_text())
+          data['status'] = 'complete'
+          data['completed_at_utc'] = '2026-08-03T18:10:00Z'
+          data['completion'] = {
+              'codec_verifier': 'analysis/bt2838_optimal_execution_codec.py',
+              'cost_verifier': 'analysis/bt2839_m36_purification_cost.py',
+              'release_verifier': 'analysis/bt2840_blueprint_extension_verifier.py',
+              'insert': 'analysis/BT2838_BT2840_blueprint_extension_insert.tex',
+              'integration': 'tools/integrate_bt2838_bt2840_blueprint.py',
+              'tests': 'tests/test_bt2838_bt2840_blueprint_extension.py',
+              'workflow': '.github/workflows/w33_pass2838_2840_blueprint_extension.yml'
+          }
+          path.write_text(json.dumps(data, indent=2, sort_keys=True) + '\n')
+          PY
+          python analysis/bt2840_blueprint_extension_verifier.py
+          python analysis/bt2840_blueprint_extension_verifier.py --verify-frozen
+          git diff --check
+
+      - name: Publish generated source, PDF, and certificates
+        if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+        shell: bash
+        env:
+          TARGET_BRANCH: ${{ github.event.pull_request.head.ref || github.ref_name }}
+        run: |
+          git config user.name "w33-blueprint-extension-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            holonet_machine_blueprint.tex \
+            data/PART_BT2838_OPTIMAL_EXECUTION_CODEC_results.json \
+            data/PART_BT2839_M36_REPEATED_BRANCH_COST_results.json \
+            data/PART_BT2840_BLUEPRINT_EXTENSION_results.json \
+            data/w33_pass_namespace_registry_v2.d/2838-2840.json
+          git add -f holonet_machine_blueprint.pdf
+          if git diff --cached --quiet; then
+            echo "No generated changes to publish."
+          else
+            git commit -m "Pass 2840: freeze blueprint extension and PDF"
+            git push origin "HEAD:${TARGET_BRANCH}"
+          fi
+
+      - name: Upload release evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: w33-pass2838-2840-blueprint
+          path: |
+            holonet_machine_blueprint.tex
+            holonet_machine_blueprint.pdf
+            holonet_machine_blueprint.log
+            data/PART_BT2838_OPTIMAL_EXECUTION_CODEC_results.json
+            data/PART_BT2839_M36_REPEATED_BRANCH_COST_results.json
+            data/PART_BT2840_BLUEPRINT_EXTENSION_results.json
+            data/PART_BT2828_DOUBLE_WORD_DISTANCE4_summary.json

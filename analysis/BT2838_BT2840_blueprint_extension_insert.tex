@@ -1,0 +1,71 @@
+% Passes 2838--2840: execution storage, support telemetry, and M36 factory economics.
+\subsection{Execution storage, support telemetry, and repeated-branch economics}
+\label{sec:bt2838-bt2840-blueprint-extension}
+
+\paragraph{Four magic classes, three fidelity values.}
+The stabilizer-fidelity grades have sizes $4$, $24$, and $8$, but fidelity is not a
+complete Clifford invariant.  The $24$-ray middle grade splits into two inequivalent
+$12$-ray classes, so the correct Clifford-class census is
+\[
+  \boxed{4+12+12+8=36}.
+\]
+The full decoder search independently sees both middle classes and finds no improving
+branch in either one.  Exactly $48$ improving branches occur in the deep eight-ray
+class.  Thus the grading remains a valid witness stratification, but a class-sensitive
+search needs four representatives, not three.
+
+\paragraph{The support shell is not an execution register.}
+The binary support map is exact as a geometric readout: a support of Hamming weight $w$
+has exactly $2^w$ ternary phase lifts.  Equivalently, the $81$ frame states split over the
+$16$ masks with fiber-size histogram
+\[
+  1^1,\qquad 2^4,\qquad 4^6,\qquad 8^4,\qquad 16^1.
+\]
+But deterministic refinement under
+$F_p$, $\mathrm{CX}_{p\to f}$, $\mathrm{CX}_{f\to p}$, and $Z_p$ is discrete:
+\[
+  \boxed{16\longrightarrow40\longrightarrow78\longrightarrow81}.
+\]
+Support is therefore a routing and observation tag; ternary phase is execution state.
+
+\paragraph{Seven bits store the state optimally.}
+Because there are $81$ states, every fixed-width lossless code needs at least
+$\lceil\log_2 81\rceil=7$ bits.  Base-$3$ rank,
+\[
+  (x_p,z_p,x_f,z_f)\longmapsto 27x_p+9z_p+3x_f+z_f\in\{0,\ldots,80\},
+\]
+attains the bound.  The current four-trit register uses eight binary flip-flops, so one
+state bit can in principle be removed.  A direct four-operation transition ROM would
+contain $4\cdot81$ seven-bit entries, or $2268$ payload bits.  This is an encoding theorem,
+not an area theorem: synthesis and placement must decide whether rank/decode logic beats
+the measured $43$-LC arithmetic micro-engine.
+
+\paragraph{Three codes have three different jobs.}
+The seven-bit rank code is internal state storage and has no redundancy.  The shortest
+six-operation support observer assigns one selected eight-bit support word to each of the
+$81$ frames and decodes through an $81$-entry ROM; this is the fast, noiseless diagnostic
+path.  Concatenating two shortest observers gives a twelve-operation, $52$-bit trajectory
+code.  Exactly eight of the $64$ ordered concatenations have minimum Hamming distance
+four, so nearest-neighbour decoding detects three arbitrary support-bit errors and
+corrects one.  Seven bits store the state, eight selected bits identify it quickly by
+observation, and $52$ bits identify it with distance-four redundancy.
+
+\paragraph{Cost of repeatedly using the explicit $M_{36}$ branch.}
+One accepted round consumes two inputs and succeeds with
+\[
+  P_{\rm succ}(p)=\frac{p^2-2p+2}{4},
+  \qquad
+  C(p)=\frac{2}{P_{\rm succ}(p)}=\frac{8}{p^2-2p+2}.
+\]
+Near the purified fixed point,
+\[
+  p'=\frac23p+O(p^2),\qquad C(p)=4+O(p).
+\]
+Repeated use of this one branch therefore has local expected-input exponent
+\[
+  \boxed{\gamma_{\rm branch}=\frac{\log4}{\log(3/2)}
+  \approx3.4190225827}.
+\]
+This quantifies the gap between an existence proof of fidelity improvement and an
+engineered factory.  It is not an optimized $M_{36}$ protocol, a lower bound on possible
+protocols, a fault-tolerant injection threshold, or an end-to-end resource estimate.
