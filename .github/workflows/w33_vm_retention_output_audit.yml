@@ -4,6 +4,7 @@ on:
     branches: [master]
     paths:
       - 'analysis/w33_lossless_counter_suspension*'
+      - 'analysis/w33_shared_counter_archive*'
       - 'analysis/w33_three_copy_output_rank_audit*'
       - 'analysis/w33_authenticated_counter_machine.py'
       - 'analysis/w33_temporal_merkle_gc.py'
@@ -12,6 +13,8 @@ on:
       - 'analysis/w33_ladder_checkpoint_placement.py'
       - 'analysis/w33_pass20260906_three_copy_symmetric_exhaustion.py'
       - 'tests/test_w33_lossless_counter_suspension.py'
+      - 'tests/test_w33_shared_counter_archive.py'
+      - 'tests/test_w33_temporal_gc_replay.py'
       - 'tests/test_w33_three_copy_output_rank_audit.py'
       - '.github/workflows/w33_vm_retention_output_audit.yml'
   pull_request:
@@ -30,5 +33,9 @@ jobs:
       - run: python -m pip install numpy
       - name: Recovery, GC, malformed archives and frozen result
         run: python tests/test_w33_lossless_counter_suspension.py
+      - name: Shared admission, deep collection and frozen payload costs
+        run: python tests/test_w33_shared_counter_archive.py
+      - name: Existing temporal collection and replay
+        run: python tests/test_w33_temporal_gc_replay.py
       - name: Full symmetric-family output audit and frozen result
         run: python tests/test_w33_three_copy_output_rank_audit.py

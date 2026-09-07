@@ -83,16 +83,18 @@ class TemporalMerkleGC:
         self.registry = registry
 
     def _mark(self, root: str, marked: set[str]) -> None:
-        if root in marked:
-            return
-        row = self.store.blobs.get(root)
-        if row is None:
-            raise KeyError(f"strong Merkle root/blob is missing: {root}")
-        marked.add(root)
-        if row.get("kind") != "node":
-            return
-        for _, child in row.get("children", []):
-            self._mark(child, marked)
+        # Persistent counter tails can exceed Python's call-stack limit.
+        pending = [root]
+        while pending:
+            key = pending.pop()
+            if key in marked:
+                continue
+            row = self.store.blobs.get(key)
+            if row is None:
+                raise KeyError(f"strong Merkle root/blob is missing: {key}")
+            marked.add(key)
+            if row.get("kind") == "node":
+                pending.extend(child for _, child in row.get("children", []))
 
     def plan(self) -> dict[str, Any]:
         marked: set[str] = {self.store.empty}

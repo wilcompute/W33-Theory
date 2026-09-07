@@ -1,0 +1,28 @@
+{
+  "checks": {
+    "all_256_snapshots_restore": true,
+    "coverage_marginals_diminish_on_all_six_snapshot_subsets": true,
+    "exactly_255_shared_binary_nodes": true,
+    "same_width_candidates_have_different_marginal_cost": true,
+    "shared_population_uses_fewer_payload_bytes": true
+  },
+  "diminishing_return_comparisons": 1458,
+  "marginal_bytes_with_255_retained": {
+    "128": 2529,
+    "254": 1029
+  },
+  "population": {
+    "monolithic_payload_bytes": 469207,
+    "shared_binary_nodes": 255,
+    "shared_blobs": 512,
+    "shared_payload_bytes": 263216,
+    "snapshots": 256
+  },
+  "schema": "w33.shared-counter-archive-economics.v1",
+  "scope": "Canonical JSON blob payloads only; excludes registry/index/RAM/CPU/I/O. Weighted coverage is standard set algebra, not a new mathematical theorem. No scheduling optimality claim.",
+  "status": "PASS",
+  "zero_counter_single_snapshot": {
+    "monolithic_payload_bytes": 671,
+    "shared_payload_bytes": 821
+  }
+}

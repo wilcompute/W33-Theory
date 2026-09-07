@@ -1,0 +1,27 @@
+\subsection{Shared counter archives and exact payload admission}
+\label{subsec:shared-counter-archive}
+The authenticated counter guest now has a collector-visible shared archive.
+Each binary node retains its counter digest and a tail edge; each snapshot
+retains complete control state and both fibre tags. Admission validates and
+prices the union of all strong-root closures before installation, including
+unrelated retained resources. A quote is advisory: publication recomputes it.
+For blob payload weights $w_b$, existing retained closure $B$, and candidate
+closures $C_s$, the cost is
+\[
+ F(S)=\sum_{b\in B\cup\bigcup_{s\in S}C_s}w_b.
+\]
+This is standard weighted coverage, so marginal retention costs diminish as
+the retained set grows; no scheduling optimality follows from that identity.
+
+The executable population witness retains and restores 256 counter states
+using 263216 canonical JSON payload bytes, compared with 469207 for the
+existing monolithic adapter. Sharing has overhead: a single zero-counter
+snapshot uses 821 bytes versus 671. With counter 255 retained, adding 254
+costs 1029 bytes while adding 128 costs 2529, despite equal bit length.
+The collector now uses an explicit stack; a 4096-bit counter survives
+collection and independent recovery. These figures exclude registry, index,
+RAM, CPU and I/O costs. Operations are owner-serialized, with durability and
+concurrent transactions outside the model. The construction extends the
+existing suspension and zero-copy modules, not their universality claims.
+See \texttt{analysis/W33\_SHARED\_COUNTER\_ARCHIVE.md} for attribution,
+architecture, replay commands and finite-implementation boundaries.

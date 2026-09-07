@@ -30118,6 +30118,17 @@ deliberately &mdash; including the parts that turned out to be wrong.</p>
     useful super-linear magic distillation remains open.</p>
   <p><a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/W33_VM_RETENTION_AND_OUTPUT_AUDIT.md">Recovery architecture, source reconciliation and executable evidence</a></p>
 </section>
+<section id="shared-counter-archive" class="result-card">
+  <h2>Shared VM archives with exact payload admission</h2>
+  <p>256 independently resumable counter states use 263,216 canonical payload
+    bytes through shared binary tails, versus 469,207 in separate archives.
+    Admission recomputes all strong-root storage before publishing; stale quotes
+    cannot overcommit. A single small snapshot can cost more with sharing.</p>
+  <p>The collector now handles a 4,096-bit chain without recursive traversal.
+    These measurements exclude RAM, registry, index, CPU and I/O costs;
+    the reference implementation requires serialized owner operations.</p>
+  <p><a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/W33_SHARED_COUNTER_ARCHIVE.md">Storage architecture, prior work, measured costs and regression evidence</a></p>
+</section>
 </body>
 
 </html>
