@@ -14,8 +14,13 @@ on:
       - '.github/workflows/w33_holovm_next_five.yml'
   pull_request:
   workflow_dispatch:
+
+defaults:
+  run:
+    shell: bash
+
 jobs:
-  verify:
+  syscall:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:
@@ -29,14 +34,47 @@ jobs:
         run: |
           python analysis/w33_holovm_syscall_abi.py
           python tests/test_w33_holovm_syscall_abi.py
+
+  photonic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
       - name: Finite photonic continuation accelerator
         run: |
           python analysis/w33_photonic_continuation_accelerator.py
           python tests/test_w33_photonic_continuation_accelerator.py
+
+  superposition:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
       - name: Continuation superposition semantics and Steinberg falsifier
         run: |
           python analysis/w33_continuation_superposition_semantics.py
           python tests/test_w33_continuation_superposition_semantics.py
+
+  thermodynamic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
       - name: HoloVM GC/replay thermodynamic ledger
         run: |
           python analysis/w33_holovm_thermodynamic_ledger.py
