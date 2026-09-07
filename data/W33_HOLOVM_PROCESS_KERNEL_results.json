@@ -1,0 +1,55 @@
+{
+  "causality": {
+    "ancestor_executable_blob_retained": false,
+    "ancestor_hash_retained_as_audit": "sha256:920ceebe7b819b38d64b857e473145569ce0b4571dc16648188499b5274c7f2e",
+    "fork_generation": 1,
+    "root_generation": 0,
+    "stepped_generation": 2
+  },
+  "checks": {
+    "authenticated_step_is_deterministic": true,
+    "descendant_survives_ancestor_collection": true,
+    "fork_marginal_is_exactly_one_process_descriptor": true,
+    "forks_have_distinct_process_and_continuation_ids": true,
+    "forks_share_exact_semantic_state": true,
+    "guest_step_uses_w33_route_of_at_most_two_hops": true,
+    "process_snapshot_keeps_forks_distinct": true,
+    "released_ancestor_bytes_are_collectible": true,
+    "sibling_survives_ancestor_collection": true,
+    "step_preserves_process_id_but_changes_continuation": true,
+    "strong_process_roots_resume_exactly": true,
+    "two_process_roots_share_one_value_closure": true,
+    "value_snapshot_intentionally_deduplicates_forks": true
+  },
+  "honesty_boundary": "Payload byte counts cover canonical JSON blobs only. This is software process semantics, not a hardware process implementation, physical thermodynamic law, or proof that one finite device has unbounded memory.",
+  "interpretation": "The runnable VM is naturally an immutable continuation graph: execution allocates a child state, fork allocates a process descriptor, and GC is the explicit operation that forgets executable history.",
+  "payload": {
+    "one_fork_bytes": 4064,
+    "second_fork_marginal_bytes": 1244,
+    "second_fork_outer_descriptor_bytes": 1244,
+    "two_forks_union_bytes": 5308
+  },
+  "process_model": {
+    "left_process_id": "sha256:b43e67ab70c0286660f5679fd823f097fe455810eaf6137bd29557b75726f818",
+    "left_process_root": "sha256:920ceebe7b819b38d64b857e473145569ce0b4571dc16648188499b5274c7f2e",
+    "receipt_id": "sha256:ba06ea0db182075e573fd4681b52cc80532712ac89458388a5a215a375d4c108",
+    "right_process_id": "sha256:277fa8e7256683a5db0ad56c5fc06b7f44341ad05dc5b9c21e5a1d68bbd256bb",
+    "right_process_root": "sha256:187453168a582f49331a92a35740381a8d18ed558317987a49d52ae632de64e2",
+    "stable_left_process_id_after_step": "sha256:b43e67ab70c0286660f5679fd823f097fe455810eaf6137bd29557b75726f818",
+    "stepped_process_root": "sha256:ca18175589cf142b143352cebfa756e789bd59a4884ad14eec9793c7f0cc813f",
+    "value_snapshot_root": "sha256:fdcb02749f349e59168aa9228d4fb43be59b851466ea0bb9ba101d8c299783cc"
+  },
+  "schema": "w33.holovm-process-kernel-certificate.v1",
+  "status": "PASS",
+  "virtual_hardware": {
+    "forget": "release STRONG root; keep optional HASH_ONLY causal identity",
+    "fork": "one new process descriptor over shared value closure",
+    "interconnect": "W(3,3) diameter-two route certificate",
+    "mmu": "base-40 W33 Merkle capability ISA (existing module)",
+    "placement": "36 x 6 x 6 finite fibre-product coordinate",
+    "process_table": "STRONG content roots in RootRegistry",
+    "register_file": "pc, portal, two authenticated roots, generation, history root",
+    "swap_checkpoint": "shared immutable snapshot DAG",
+    "vcpu": "prove_step + store-free verify_step authenticated transition engine"
+  }
+}
