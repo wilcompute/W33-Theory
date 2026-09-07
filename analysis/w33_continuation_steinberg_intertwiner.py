@@ -1,32 +1,37 @@
 #!/usr/bin/env python3
 """Explicit operational continuation basis inside a primitive Steinberg-81 image.
 
-The previous continuation-superposition pass proved that the obvious F_3^4
-81-slot permutation model is reducible.  This module takes the opposite route:
-start from a primitive rank-81 Steinberg projector already certified in the
-1080-point obstruction-carrier permutation representation and *derive* an
-81-coordinate operational basis from its image.
+The obvious F_3^4 81-slot permutation model was previously falsified as a
+Steinberg model: it has invariant vectors.  This verifier instead starts with
+the repository's exact primitive rank-81 Steinberg idempotent Q in the actual
+1080-point obstruction-carrier permutation representation and derives an
+operational basis from its image.
 
-Let Q be the +4 primitive spectral idempotent in the Steinberg multiplicity
-block materialized by the repository's exact orbital algebra.  We select 81
-independent columns of Q,
+Choose 81 independent projected coordinate vectors
 
-    B = [Q e_j]_{j in J} : Q^81 -> im(Q) subset Q^1080,
+    B = [Q e_j]_{j in J}: Q^81 -> im(Q) subset Q^1080.
 
-and 81 coordinate rows R for which B_R is nonsingular.  For each of the four
-stored PSp(4,3) permutation generators g we then define
+We certify a square coordinate minor B_R as nonsingular by reducing the scaled
+integer matrix modulo a large prime p.  A nonzero determinant modulo p implies
+the integer determinant is nonzero, hence B is an exact rational basis of the
+rank-81 image.
 
-    A_g = B_R^{-1} (P_g B)_R.
+For every stored PSp(4,3) permutation generator g, orbital-relation invariance
+proves exactly that P_g Q = Q P_g.  Therefore P_g preserves im(Q), so there is a
+unique exact rational operational action
 
-Because Q is an orbital-algebra idempotent, it commutes with every group
-permutation.  Therefore P_g B is again in im(Q), and the coordinate equality on
-R lifts to the exact intertwining relation
+    A_g = B_R^{-1} (P_g B)_R
 
-    B A_g = P_g B.
+satisfying B A_g = P_g B.  We do not waste CI expanding four dense 81x81
+rational matrices into huge fractions.  Instead, because det(B_R) is nonzero
+mod p, the same formula reduces legitimately modulo p; we compute A_g mod p and
+verify the full 1080x81 intertwining equation there.  This is both an executable
+coordinate certificate and a rigorous witness that the exact rational formula
+is well-defined.
 
-This is the missing operational-to-Steinberg map.  It deliberately does NOT
-identify the old F_3^4 slot permutation action with Steinberg.  Instead the 81
-operational coordinates are the projected-coordinate basis selected here.
+A full-rank stacked (A_g-I) system modulo p also proves the exact rational module
+has no common fixed vector: a nonzero full-rank minor modulo p is a nonzero
+integer/rational minor in characteristic zero.
 """
 from __future__ import annotations
 
@@ -55,7 +60,7 @@ def digest(value: Any) -> str:
 
 
 def independent_columns_mod(matrix: np.ndarray, wanted: int, prime: int = MOD) -> list[int]:
-    """Greedy exact-rank witness over a large auxiliary prime field."""
+    """Greedy pivot-column certificate over F_p."""
     pivots: list[int] = []
     basis: list[np.ndarray] = []
     chosen: list[int] = []
@@ -69,19 +74,76 @@ def independent_columns_mod(matrix: np.ndarray, wanted: int, prime: int = MOD) -
         if not len(nz):
             continue
         pivot = int(nz[0])
-        inv = pow(int(v[pivot]), -1, prime)
-        v = np.mod(v * inv, prime)
+        v = np.mod(v * pow(int(v[pivot]), -1, prime), prime)
         pivots.append(pivot)
         basis.append(v)
         chosen.append(j)
         if len(chosen) == wanted:
             return chosen
-    raise AssertionError(f"matrix has auxiliary-prime rank < {wanted}")
+    raise AssertionError(f"matrix has F_{prime} rank < {wanted}")
+
+
+def inverse_mod(matrix: np.ndarray, prime: int = MOD) -> np.ndarray:
+    """Gauss-Jordan inverse over F_p using Python ints to avoid overflow."""
+    n, m = matrix.shape
+    if n != m:
+        raise ValueError("inverse_mod requires square matrix")
+    aug = [[int(matrix[i, j]) % prime for j in range(n)] + [1 if i == j else 0 for j in range(n)] for i in range(n)]
+    for c in range(n):
+        pivot = next((r for r in range(c, n) if aug[r][c] % prime), None)
+        if pivot is None:
+            raise AssertionError("selected minor is singular modulo certificate prime")
+        aug[c], aug[pivot] = aug[pivot], aug[c]
+        inv = pow(aug[c][c] % prime, -1, prime)
+        aug[c] = [(x * inv) % prime for x in aug[c]]
+        for r in range(n):
+            if r == c:
+                continue
+            factor = aug[r][c] % prime
+            if factor:
+                aug[r] = [(aug[r][k] - factor * aug[c][k]) % prime for k in range(2 * n)]
+    return np.asarray([row[n:] for row in aug], dtype=np.int64)
+
+
+def matmul_mod(a: np.ndarray, b: np.ndarray, prime: int = MOD) -> np.ndarray:
+    """Overflow-safe matrix multiplication over F_p."""
+    # p^2*81 exceeds signed int64, so accumulate in Python integers by rows.
+    out = np.zeros((a.shape[0], b.shape[1]), dtype=np.int64)
+    for i in range(a.shape[0]):
+        for k in range(a.shape[1]):
+            aik = int(a[i, k]) % prime
+            if not aik:
+                continue
+            out[i, :] = np.asarray([(int(out[i, j]) + aik * int(b[k, j])) % prime for j in range(b.shape[1])], dtype=np.int64)
+    return out
+
+
+def rank_mod(matrix: np.ndarray, prime: int = MOD) -> int:
+    a = [[int(x) % prime for x in row] for row in matrix.tolist()]
+    rows = len(a)
+    cols = len(a[0]) if rows else 0
+    r = 0
+    for c in range(cols):
+        pivot = next((i for i in range(r, rows) if a[i][c]), None)
+        if pivot is None:
+            continue
+        a[r], a[pivot] = a[pivot], a[r]
+        inv = pow(a[r][c], -1, prime)
+        a[r] = [(x * inv) % prime for x in a[r]]
+        for i in range(rows):
+            if i == r or not a[i][c]:
+                continue
+            f = a[i][c]
+            a[i] = [(a[i][j] - f * a[r][j]) % prime for j in range(cols)]
+        r += 1
+        if r == rows:
+            break
+    return r
 
 
 def primitive_projector():
     """Rebuild the exact +4 primitive Steinberg idempotent in orbital coordinates."""
-    acts, charts, lines = obs.build_action()
+    acts, _charts, _lines = obs.build_action()
     rel, reps, _sizes = orbit_ids(acts, acts, 1080, 1080)
     assert len(reps) == 59
     T = orbital_mult(rel, reps)
@@ -121,8 +183,7 @@ def primitive_projector():
             A[:, k] = coord(mulvec(v, U[:, k], T))
         return A
 
-    # The repository certificate identifies the symmetric orbital pair (11,25)
-    # whose Steinberg restriction has eigenvalues -4,0,+4, each multiplicity 3.
+    # Frozen certificate orbital pair: Steinberg restriction eigenvalues -4,0,+4.
     transpose = []
     for seed in reps:
         a, b = divmod(seed, 1080)
@@ -134,14 +195,14 @@ def primitive_projector():
     q[transpose[j]] += 1
     b = mulvec(E, q, T)
     BM = left_matrix(b)
-    assert sp.factor(BM.charpoly().as_expr()) == sp.factor(sp.Symbol("lambda")**3 * (sp.Symbol("lambda") - 4)**3 * (sp.Symbol("lambda") + 4)**3)
+    lam_sym = sp.Symbol("lambda")
+    assert sp.factor(BM.charpoly(lam_sym).as_expr()) == sp.factor(lam_sym**3 * (lam_sym - 4)**3 * (lam_sym + 4)**3)
 
-    lam = sp.Integer(4)
     P = E
     den = sp.Integer(1)
     for mu in (sp.Integer(-4), sp.Integer(0)):
         P = mulvec(P, b - mu * E, T)
-        den *= lam - mu
+        den *= sp.Integer(4) - mu
     P /= den
     assert mulvec(P, P, T) == P
     assert 1080 * P[diag] == 81
@@ -156,88 +217,94 @@ def build_intertwiner() -> dict[str, Any]:
     coeff = np.array([int(sp.Integer(scale) * x) for x in Qvec], dtype=np.int64)
     Qint = coeff[rel]
     assert Qint.shape == (1080, 1080)
-
-    # Q^2=Q in the orbital algebra; trace gives its actual permutation-space rank.
     assert mulvec(Qvec, Qvec, T) == Qvec
     assert sp.Rational(1080) * Qvec[diag] == 81
 
+    # Exact basis proof from a good-prime minor witness.
     pivot_columns = independent_columns_mod(Qint, DIM)
     Bint = Qint[:, pivot_columns]
     pivot_rows = independent_columns_mod(Bint.T, DIM)
-    Bsub = sp.Matrix(Bint[pivot_rows, :].tolist())
-    Bsub_inv = Bsub.inv()  # exact; also certifies the selected 81 columns over Q
+    Bsub = np.mod(Bint[pivot_rows, :], MOD)
+    Bsub_inv = inverse_mod(Bsub)
+    assert np.array_equal(matmul_mod(Bsub, Bsub_inv), np.eye(DIM, dtype=np.int64))
 
     generator_records = []
-    operational_generators: list[sp.Matrix] = []
-    rel0 = rel
+    operational_mod = []
     for gi, perm_tuple in enumerate(acts):
         perm = np.asarray(perm_tuple, dtype=np.int64)
-        # Full simultaneous-orbit invariance is the concrete commutation witness QP=PQ.
-        orbit_invariant = bool(np.array_equal(rel0[np.ix_(perm, perm)], rel0))
-        assert orbit_invariant
+        orbit_invariant = bool(np.array_equal(rel[np.ix_(perm, perm)], rel))
+        assert orbit_invariant  # exact QP=PQ witness because Q is constant on orbitals
         target_cols = [int(perm[j]) for j in pivot_columns]
-        target_sub = sp.Matrix(Qint[np.ix_(pivot_rows, target_cols)].tolist())
-        A = Bsub_inv * target_sub
-        assert A.det() != 0
-        operational_generators.append(A)
+        target_full = np.mod(Qint[:, target_cols], MOD)
+        target_sub = target_full[pivot_rows, :]
+        A = matmul_mod(Bsub_inv, target_sub)
+        full_ok = np.array_equal(matmul_mod(np.mod(Bint, MOD), A), target_full)
+        assert full_ok
+        assert rank_mod(A) == DIM
+        operational_mod.append(A)
         generator_records.append({
             "generator": gi,
             "permutation_digest": digest(list(map(int, perm_tuple))),
-            "operational_matrix_digest": digest([[str(A[i, j]) for j in range(DIM)] for i in range(DIM)]),
-            "orbit_relation_invariant": orbit_invariant,
-            "determinant": str(sp.factor(A.det())),
+            "operational_matrix_mod_p_digest": digest(A.tolist()),
+            "certificate_prime": MOD,
+            "orbit_relation_invariant_exact": orbit_invariant,
+            "full_intertwining_verified_mod_p": full_ok,
+            "operational_rank_mod_p": DIM,
         })
 
-    # A primitive nontrivial Steinberg copy must have no common fixed vector for
-    # these generators.  Verify this directly in the derived operational basis.
-    fixed_equations = sp.Matrix.vstack(*[A - sp.eye(DIM) for A in operational_generators])
-    common_fixed_dimension = DIM - int(fixed_equations.rank())
+    stacked = np.vstack([np.mod(A - np.eye(DIM, dtype=np.int64), MOD) for A in operational_mod])
+    fixed_rank_mod = rank_mod(stacked)
+    common_fixed_dimension = DIM - fixed_rank_mod
     assert common_fixed_dimension == 0
 
-    # Map identity: slot s maps to (1/scale) Qint[:, pivot_columns[s]].  The full
-    # matrix is reproducible from the committed orbital coefficients + pivots,
-    # so the certificate need not dump 87,480 rational entries.
     reconstruction = {
         "scale": scale,
         "orbital_coefficients_scaled": coeff.tolist(),
         "pivot_columns": pivot_columns,
         "pivot_rows": pivot_rows,
+        "certificate_prime": MOD,
     }
     checks = {
         "primitive_projector_actual_rank_is_81": sp.Rational(1080) * Qvec[diag] == 81,
-        "selected_operational_basis_has_81_independent_vectors": len(pivot_columns) == DIM and Bsub.det() != 0,
-        "all_four_group_generators_preserve_orbital_projector": all(r["orbit_relation_invariant"] for r in generator_records),
-        "all_induced_operational_generator_matrices_are_invertible": all(A.det() != 0 for A in operational_generators),
+        "selected_81_projected_columns_are_exactly_independent": len(pivot_columns) == DIM,
+        "selected_coordinate_minor_is_nonsingular_mod_good_prime": np.array_equal(matmul_mod(Bsub, Bsub_inv), np.eye(DIM, dtype=np.int64)),
+        "modular_minor_witness_implies_characteristic_zero_independence": True,
+        "all_four_group_generators_preserve_orbital_projector_exactly": all(r["orbit_relation_invariant_exact"] for r in generator_records),
+        "all_four_full_intertwining_relations_verify_mod_good_prime": all(r["full_intertwining_verified_mod_p"] for r in generator_records),
+        "all_induced_operational_generator_actions_are_invertible": all(r["operational_rank_mod_p"] == DIM for r in generator_records),
         "derived_operational_action_has_no_common_fixed_vector": common_fixed_dimension == 0,
         "map_is_reconstructible_from_orbital_coefficients_and_pivots": len(coeff) == 59 and len(pivot_rows) == DIM,
     }
     return {
-        "schema": "w33.continuation-steinberg-intertwiner.v1",
+        "schema": "w33.continuation-steinberg-intertwiner.v2",
         "status": "PASS" if all(checks.values()) else "FAIL",
         "checks": checks,
         "projector": {
             "ambient_dimension": 1080,
             "image_dimension": 81,
             "orbital_rank": 59,
-            "scaled_orbital_coefficients_digest": digest(reconstruction),
             "scale": scale,
+            "scaled_orbital_coefficients_digest": digest(reconstruction),
         },
         "operational_basis": {
             "dimension": DIM,
             "pivot_columns": pivot_columns,
             "coordinate_rows": pivot_rows,
-            "encoding_rule": "slot s -> Q e_{pivot_columns[s]} in the certified 1080-point permutation module",
+            "certificate_prime": MOD,
+            "encoding_rule": "slot s -> Q e_{pivot_columns[s]} in the exact 1080-point rational permutation module",
             "basis_digest": digest(reconstruction),
         },
+        "exact_action_formula": "A_g = B_R^{-1} (P_g B)_R over Q; det(B_R) != 0 is certified because its scaled integer determinant is nonzero modulo p",
         "generators": generator_records,
         "common_fixed_dimension": common_fixed_dimension,
         "theorem": (
-            "The 81 continuation-control coordinates are realized explicitly as independent projected coordinate vectors inside a certified primitive Steinberg-81 image. "
-            "For each stored PSp(4,3) generator the induced 81x81 rational matrix is defined by exact coordinate extraction and satisfies B A_g = P_g B because the orbital projector commutes with the permutation action."
+            "The 81 continuation-control coordinates are an explicit exact rational basis of a primitive Steinberg-81 image. "
+            "Orbital invariance proves P_g Q = Q P_g exactly, hence the exact rational A_g formula is well-defined and satisfies B A_g = P_g B. "
+            "The good-prime matrices are executable certificates of the same coordinate actions without giant rational expansion."
         ),
         "boundary": (
-            "This replaces the false F3^4=Steinberg identification with a representation-theoretically valid operational basis. "
-            "It is an exact finite algebra construction; it is not yet a physical optical encoding or a fault-tolerance theorem."
+            "This replaces the false F3^4=Steinberg identification with a representation-theoretically valid operational encoding. "
+            "It is an exact finite-algebra construction plus characteristic-p certification; it is not a physical optical encoding or a fault-tolerance theorem."
         ),
     }
 
