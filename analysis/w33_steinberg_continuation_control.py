@@ -9,8 +9,10 @@ content-addressed process trace is replayed as an authenticated Steinberg
 control-state chain.
 
 Identity and representation are deliberately separate. The SHA-256 continuation
-root remains authoritative process identity. The 81-vector is an equivariant
-finite-control state carried alongside it. Executable CI evaluates coordinates
+root and authenticated history remain authoritative process identity. The
+81-vector is an equivariant *finite-control state* and may revisit an earlier
+coordinate after a nontrivial group word; such a revisit must not collapse the
+causal continuation/history identity. Executable CI evaluates coordinates
 modulo the same good prime p=1,000,003 used by the v2 certificate; exact orbital
 invariance identifies these as reductions of uniquely defined rational actions.
 """
@@ -213,24 +215,43 @@ def verify() -> dict[str, Any]:
     wrong_axis = next(axis for axis in range(40) if axis != int(first_axis) and not np.array_equal(np.mod(table[(axis, 1)] @ v0, MOD), gv))
     bad, bv = advance_control(c0, v0, child0, receipt0.receipt_id, wrong_axis, 1, table)
 
+    by_coordinate: dict[str, list[dict[str, Any]]] = {}
+    for record in records:
+        by_coordinate.setdefault(record["coordinate_digest"], []).append(record)
+    revisited = [group for group in by_coordinate.values() if len(group) > 1]
+    revisit_histories_distinct = all(
+        len({r["control_history_digest"] for r in group}) == len(group)
+        and len({r["continuation_root"] for r in group}) == len(group)
+        for group in revisited
+    )
+    distinct_coordinates = len(by_coordinate)
+
     checks = {
         "all_80_qutrit_transvections_have_steinberg_actions": len(table) == 80,
         "stored_four_generators_are_embedded_in_80_action_table": True,
         "real_holovm_trace_halts": process.state.halted and len(records) == 24,
         "every_generation_binds_exact_continuation_and_receipt": all(r["generation"] == i + 1 and r["continuation_root"].startswith("sha256:") and r["receipt_id"].startswith("sha256:") for i, r in enumerate(records)),
         "control_history_is_generation_specific": len({r["control_history_digest"] for r in records}) == len(records),
-        "coordinate_states_are_generation_specific_on_witness": len({r["coordinate_digest"] for r in records}) == len(records),
+        "finite_coordinate_revisits_do_not_collapse_process_identity": revisit_histories_distinct,
         "axis_substitution_changes_control_coordinate": not np.array_equal(gv, bv),
         "axis_substitution_changes_authenticated_control_history": good.history_digest != bad.history_digest,
     }
     return {
-        "schema": "w33.steinberg-continuation-control.v1",
+        "schema": "w33.steinberg-continuation-control.v2",
         "status": "PASS" if all(checks.values()) else "FAIL",
         "checks": checks,
         "basis_digest": op["basis_digest"], "action_table_digest": digest(list(op["records"])), "action_count": len(table), "certificate_prime": MOD,
-        "witness": {"guest_steps": len(records), "final_continuation_root": process.continuation_id, "final_control_history_digest": control_state.history_digest, "final_coordinate_digest": control_state.coordinate_digest, "trace_digest": digest(records)},
-        "theorem": "Every qutrit transvection used by the HoloVM finite-control backend acts on the same explicit primitive Steinberg-81 basis. A real continuation trace therefore carries an equivariant 81-coordinate control state whose authenticated history commits every receipt and exact continuation tuple.",
-        "boundary": "The SHA-256 continuation remains authoritative identity; the finite 81-vector is not an injective encoding of unbounded process state. This is exact finite representation control plus modular execution certification, not a physical optical or fault-tolerance theorem.",
+        "witness": {
+            "guest_steps": len(records),
+            "distinct_coordinate_states": distinct_coordinates,
+            "coordinate_revisit_count": len(records) - distinct_coordinates,
+            "final_continuation_root": process.continuation_id,
+            "final_control_history_digest": control_state.history_digest,
+            "final_coordinate_digest": control_state.coordinate_digest,
+            "trace_digest": digest(records),
+        },
+        "theorem": "Every qutrit transvection used by the HoloVM finite-control backend acts on the same explicit primitive Steinberg-81 basis. A real continuation trace therefore carries an equivariant 81-coordinate finite-control state whose authenticated history commits every receipt and exact continuation tuple; coordinate revisits do not identify processes or generations.",
+        "boundary": "The SHA-256 continuation and authenticated history remain authoritative identity; the finite 81-vector is not an injective encoding of unbounded process state. This is exact finite representation control plus modular execution certification, not a physical optical or fault-tolerance theorem.",
     }
 
 
