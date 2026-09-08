@@ -22,7 +22,7 @@ When two files state the same result in different language, consult the
 human-curated [RESULTS VOCABULARY](RESULTS_VOCABULARY.md) for semantic
 aliases, current status, supersessions, and primary artifacts.
 
-Indexed **9787** files; **13917** distinctive results
+Indexed **9789** files; **13917** distinctive results
 (a token in >25 files identifies a topic and is dropped unless explicitly pinned).
 **5927** appear in exactly one file — the sharpest signal.
 
@@ -4722,7 +4722,7 @@ Indexed **9787** files; **13917** distinctive results
 | `104090` | `analysis/w33_pass2476_2481_the_144_and_a_calibrated_hook.md` · `analysis/w33_pass2632_2639_the_cubic_gate_exists.md` |
 | `104231` | `V23_output/V23_REPORT.md` |
 | `104268` | `analysis/w33_pass5430_q3_radius10_false_vote4_frontier.py` |
-| `104478` | `analysis/W33_COUNTER_ZIPPER_MICROCODE.md` · `analysis/W33_PROCESS_MICROSTEP_OWNER.md` |
+| `104478` | `analysis/W33_COUNTER_ZIPPER_MICROCODE.md` · `analysis/W33_DURABLE_MICROSTEP_OWNER.md` · `analysis/W33_PROCESS_MICROSTEP_OWNER.md` |
 | `104729` | `analysis/bt1018_k3_degree2_row_shard.py` · `analysis/bt1314_deterministic_traffic_stability.py` |
 | `104976` | `analysis/w33_pass5680_deck16_classd_pfaffian_triviality.py` · `docs/index.html` |
 | `105105` | `analysis/w33_pass10477_10484_h4_normalizer_27state_quotient.py` |
@@ -7454,7 +7454,7 @@ Indexed **9787** files; **13917** distinctive results
 | `65395` | `analysis/BT3973_BT3980_extremal_mesh_photon_tensor_monster.md` · `analysis/BT3973_BT3980_rank48_literal_tensor_amendment.md` · `analysis/BT3981_BT3988_five_front_three_photon_closure.md` |
 | `65496` | `PASS2560_2567_SEVEN_FRONTIERS_RELEASE.md` |
 | `65520` | `analysis/w33_BREAKTHROUGH_27_modular_forms_substrate.py` · `analysis/w33_BREAKTHROUGH_311_algebraic_K_theory_substrate.py` · `docs/index.html` · `exploration/w33_curved_a2_refined_quadratic_bridge.py` · *(+13)* |
-| `65535` | `PASS2430_2435_FIVE_FRONTIERS_RELEASE.md` · `analysis/BT2430_BT2435_five_frontiers.md` · `analysis/w33_pass2430_2435_verify_frozen.py` · `analysis/w33_pass2568_2573_the_commutative_ceiling_is_fourteen.md` · *(+1)* |
+| `65535` | `PASS2430_2435_FIVE_FRONTIERS_RELEASE.md` · `analysis/BT2430_BT2435_five_frontiers.md` · `analysis/W33_DURABLE_MICROSTEP_OWNER.md` · `analysis/w33_pass2430_2435_verify_frozen.py` · *(+3)* |
 | `65536` | `W36_PAPER.tex` · `analysis/PASS4640_4647_RESERVATION.md` · `analysis/PASS4648_4655_RESERVATION.md` · `analysis/w33_levi_next5_v5_hybrid.py` · *(+14)* |
 | `65537` | `_cyclotomic_bundle/W33_dual_cyclotomic_ladder_20260330/outputs/dual_cyclotomic_ladder_report.md` · `analysis/BT4185_BT4192_adaptive_c2_hawking_hysteresis_3local_cover_holonomy_ihara_heat.md` · `analysis/BT4213_BT4220_small_cover_su4_quantum_hysteresis_clock_hawking_pell_vacuum_velocity.md` · `analysis/BT4214_BT4221_small_cover_su4_quantum_hysteresis_clock_hawking_pell_vacuum_velocity.md` · *(+3)* |
 | `65560` | `analysis/w33_pass5245_zero_footprint_parity_syndrome_exact_sequence.py` |
@@ -13517,7 +13517,7 @@ Indexed **9787** files; **13917** distinctive results
 | `475` | `PASS474_478_EXECUTION_LEDGER.md` · `analysis/BT1084_incidence_ladder_weight_ledger.md` · `analysis/BT3549_BT3555_borel_pentad_quantum_walk.md` · `analysis/BT4205_BT4212_carrier_native_hodge_delay_interval_bonkers.md` · *(+11)* |
 | `476` | `PASS474_478_EXECUTION_LEDGER.md` · `analysis/BT1233_sp43_word_metric_tomography_protocol.md` · `analysis/BT1236_clifford_word_metric_integration_manifest.md` · `analysis/BT1237_word_metric_recovery_bands.md` · *(+21)* |
 | `477` | `PASS474_478_EXECUTION_LEDGER.md` · `analysis/2026-07-15_pass86_alpha_running_correction.md` · `analysis/MILESTONES.md` · `analysis/PASS4354_4359_RESERVATION.md` · *(+20)* |
-| `478` | `PASS474_478_EXECUTION_LEDGER.md` · `analysis/BT3025_BT3031_predictive_photonic_overhaul.md` · `analysis/BT3404_BT3417_conic_magnetic_closure.md` · `analysis/PASS474_478_RESERVATIONS.md` · *(+7)* |
+| `478` | `PASS474_478_EXECUTION_LEDGER.md` · `analysis/BT3025_BT3031_predictive_photonic_overhaul.md` · `analysis/BT3404_BT3417_conic_magnetic_closure.md` · `analysis/PASS474_478_RESERVATIONS.md` · *(+8)* |
 | `482` | `PASS540_SYMPLECTIC_CHIRALITY_CHAINRING.md` · `W33_FOR_EVERYONE.tex` · `analysis/BT3769_BT3786_gq_veldkamp_axial_lattice_monster.md` · `analysis/BT4213_BT4220_small_cover_su4_quantum_hysteresis_clock_hawking_pell_vacuum_velocity.md` · *(+17)* |
 | `483` | `PASS2400_2406_SIX_FRONTIERS_RELEASE.md` · `analysis/BT1841_1845_execute_all_five.md` · `analysis/BT3973_BT3980_extremal_mesh_photon_tensor.md` · `analysis/BT4153_BT4160_second_chern_disorder_lindblad_clock_thermo.md` · *(+13)* |
 | `485` | `analysis/2026-06-07_bc_ring_torus_lift.md` · `analysis/BT1084_incidence_ladder_weight_ledger.md` · `analysis/BT740_exact_braid_register_realization.md` · `analysis/BT808_600cell_icosahedral_orbits.md` · *(+17)* |

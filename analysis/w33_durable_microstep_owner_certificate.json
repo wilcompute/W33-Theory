@@ -1,0 +1,24 @@
+{
+  "boundary": "Process exit at transaction boundaries; not physical power loss or external I/O.",
+  "crash_rows": [
+    {
+      "completed_ticks": 35,
+      "final_value": 65535,
+      "macro_exit_code": 73,
+      "recovered_ticks": 8,
+      "tick_exit_phase": "before_commit"
+    },
+    {
+      "completed_ticks": 35,
+      "final_value": 65535,
+      "macro_exit_code": 73,
+      "recovered_ticks": 9,
+      "tick_exit_phase": "after_commit"
+    }
+  ],
+  "errors": 0,
+  "failures": 0,
+  "schema": "w33.durable-microstep-owner-audit.v1",
+  "status": "PASS",
+  "tests_run": 5
+}

@@ -30164,8 +30164,21 @@ deliberately &mdash; including the parts that turned out to be wrong.</p>
     while retaining eight distinct histories and continuation identities.</p>
   <p>Seven owner regressions and sixteen existing process and zipper tests
     pass, including recovery through the existing STRONG process archive.
-    Durable owner recovery and external I/O commit remain open.</p>
+    The subsequent SQLite adapter adds local restart recovery; external I/O
+    commit remains open.</p>
   <p><a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/W33_PROCESS_MICROSTEP_OWNER.md">Execution protocol, parallel-track connections and runnable evidence</a></p>
+</section>
+<section id="durable-microstep-owner" class="result-card">
+  <h2>Consumed receipts survive owner restart</h2>
+  <p>A SQLite transaction now stores the execution cursor and every bit needed
+    to resume it together. A worker killed before commit leaves tick 8 and
+    permits one retry; killed after commit, it leaves tick 9 and rejects replay.
+    Both runs finish the borrow in 35 ticks with value 65535.</p>
+  <p>Twelve tests pass, including four actual worker exits, reopening after
+    every microtick, and competing database connections. These tests do not
+    establish power-loss tolerance or exactly-once external effects. Full
+    snapshot writes and trusted-database rollback remain explicit limits.</p>
+  <p><a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/W33_DURABLE_MICROSTEP_OWNER.md">Transaction architecture, SQLite prior work and crash evidence</a></p>
 </section>
 </body>
 

@@ -50,3 +50,14 @@ Seven owner tests plus the seven process-kernel and nine zipper tests pass.
 This is an in-memory execution protocol, not durable exactly-once external I/O;
 see \texttt{analysis/W33\_PROCESS\_MICROSTEP\_OWNER.md} for the executable,
 prior ownership, retention roundtrip and scope.
+
+A subsequent SQLite adapter publishes the consumed cursor and its complete
+live bit closure in one transaction. Killing a worker before commit recovers
+tick $8$ and permits one retry; killing it after commit recovers tick $9$ and
+rejects the retry. Both borrow executions finish in $35$ ticks at $65535$.
+The final macro commit also survives a lost reply without committing twice.
+Five durability tests and seven existing owner tests pass, including a
+two-connection submission race and restart after every tick. These are process
+exit experiments, not power-loss tests or exactly-once external effects.
+The database is trusted authority and each tick writes a full snapshot;
+see \texttt{analysis/W33\_DURABLE\_MICROSTEP\_OWNER.md}.

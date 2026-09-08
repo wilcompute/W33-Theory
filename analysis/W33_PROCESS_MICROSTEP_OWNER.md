@@ -85,3 +85,9 @@ python tests/test_w33_counter_zipper_microcode.py
 ```
 
 The executable writes `analysis/w33_process_microstep_owner_certificate.json`.
+
+Subsequent work: [the durable microstep owner](W33_DURABLE_MICROSTEP_OWNER.md)
+persists the cursor and exact bit closure in one SQLite transaction. Its tests
+cover actual process exits before and after commit and reject replay after
+restart. The in-memory owner above remains the semantic layer reused by that
+adapter; database rollback resistance and external effects remain open.
