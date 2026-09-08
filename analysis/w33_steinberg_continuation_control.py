@@ -1,20 +1,30 @@
 #!/usr/bin/env python3
 """Bind real HoloVM continuation steps to the explicit Steinberg-81 control space.
 
-The v2 continuation/Steinberg certificate constructs an exact rational basis
-B: Q^81 -> im(Q) inside the 1080-point obstruction-carrier permutation module.
-This module closes the operational gap: all 80 qutrit transvections used by the
-HoloVM backend are lifted to that same 81-coordinate basis, and a real
-content-addressed process trace is replayed as an authenticated Steinberg
-control-state chain.
+The primitive Steinberg projector is built in the obstruction code's symplectic
+frame
 
-Identity and representation are deliberately separate. The SHA-256 continuation
-root and authenticated history remain authoritative process identity. The
-81-vector is an equivariant *finite-control state* and may revisit an earlier
-coordinate after a nontrivial group word; such a revisit must not collapse the
-causal continuation/history identity. Executable CI evaluates coordinates
-modulo the same good prime p=1,000,003 used by the v2 certificate; exact orbital
-invariance identifies these as reductions of uniquely defined rational actions.
+    <u,v>_B = u0 v1 - u1 v0 + u2 v3 - u3 v2,
+
+while the HoloVM/qutrit control ISA uses
+
+    <u,v>_H = u0 v2 - u2 v0 + u1 v3 - u3 v1.
+
+The projective point sets are identical, so reusing raw point indices silently
+mislabels transvections.  The exact isometry S(u0,u1,u2,u3)=(u0,u2,u1,u3)
+satisfies <Su,Sv>_B=<u,v>_H and
+
+    S T_H(v,lambda) S^-1 = T_B(Sv,lambda).
+
+This module therefore constructs the Steinberg action in the obstruction frame
+and explicitly conjugates every one of the 80 HoloVM transvection opcodes through
+that coordinate isometry.  A real content-addressed process trace is then
+replayed as an authenticated Steinberg finite-control chain.
+
+Identity and representation remain separate. The SHA-256 continuation root and
+authenticated history are authoritative process identity. The 81-vector is an
+equivariant finite-control state and may revisit an earlier coordinate after a
+nontrivial group word without collapsing causal identity.
 """
 from __future__ import annotations
 
@@ -33,7 +43,7 @@ import w33_20260829_216_clifford_torsor_nogo as base
 from w33_authenticated_counter_machine import BitStore, genesis
 from w33_continuation_steinberg_intertwiner import DIM, MOD, independent_columns_mod, primitive_projector
 from w33_holovm_process_kernel import ProcessContinuation, advance, spawn
-from w33_finite_control_unbounded_guest_hypervisor import FibreProductAddress
+from w33_finite_control_unbounded_guest_hypervisor import FibreProductAddress, form as holo_form
 from w33_merkle_capability_memory import digest as merkle_digest
 from w33_typed_universal_microvm import Carrier, GEOMETRY, add_r1_into_r0_program
 
@@ -64,7 +74,29 @@ def inv_mod(A: np.ndarray, p: int = MOD) -> np.ndarray:
     return np.array(aug[:, n:], dtype=np.int64)
 
 
+def swap_12(v):
+    return (int(v[0]), int(v[2]), int(v[1]), int(v[3]))
+
+
+def holo_to_base_axis_map() -> tuple[int, ...]:
+    """Projective-axis map induced by S: (0,1,2,3)->(0,2,1,3)."""
+    pts, idx, _lines, _N = base.geometry()
+    assert tuple(map(tuple, pts)) == tuple(map(tuple, GEOMETRY.points))
+    # Prove the two alternating forms are exactly related by S on all vectors.
+    for u in itertools.product(range(3), repeat=4):
+        for v in itertools.product(range(3), repeat=4):
+            if base.form(swap_12(u), swap_12(v)) != holo_form(tuple(u), tuple(v)):
+                raise AssertionError("coordinate swap is not an isometry between repo symplectic forms")
+    mapping = []
+    for v in GEOMETRY.points:
+        mapping.append(int(idx[base.norm(swap_12(v))]))
+    if sorted(mapping) != list(range(40)):
+        raise AssertionError("HoloVM-to-obstruction projective axis map is not bijective")
+    return tuple(mapping)
+
+
 def all_transvection_permutations():
+    """The 80 obstruction-frame transvection permutations on the 1080 carrier."""
     pts, idx, lines, N = base.geometry()
     assert tuple(map(tuple, pts)) == tuple(map(tuple, GEOMETRY.points))
     supports, _ = base.supports_from_N(N)
@@ -110,12 +142,13 @@ def operational_table():
     Bsub = np.mod(Bint[pivot_rows, :], MOD).astype(np.int64)
     Bsub_inv = inv_mod(Bsub)
     assert np.array_equal(np.mod(Bsub @ Bsub_inv, MOD), np.eye(DIM, dtype=np.int64))
-    labels, acts80 = all_transvection_permutations()
+
+    base_labels, acts80 = all_transvection_permutations()
     for gi, ref in zip((18, 62, 77, 10), acts4):
         assert acts80[gi] == tuple(ref)
     Bmod = np.mod(Bint, MOD).astype(np.int64)
-    table, action_records = {}, []
-    for label, perm_tuple in zip(labels, acts80):
+    base_table: dict[tuple[int, int], np.ndarray] = {}
+    for label, perm_tuple in zip(base_labels, acts80):
         perm = np.asarray(perm_tuple, dtype=np.int64)
         assert np.array_equal(rel[np.ix_(perm, perm)], rel)
         target_cols = [int(perm[j]) for j in pivot_columns]
@@ -123,12 +156,40 @@ def operational_table():
         A = np.mod(Bsub_inv @ target_sub, MOD).astype(np.int64)
         target_full = np.mod(Qint[:, target_cols], MOD).astype(np.int64)
         assert np.array_equal(np.mod(Bmod @ A, MOD), target_full)
-        key = tuple(label); table[key] = A
-        action_records.append({"axis": key[0], "lambda": key[1], "matrix_digest": digest(A.tolist())})
+        base_table[tuple(label)] = A
+
+    axis_map = holo_to_base_axis_map()
+    table: dict[tuple[int, int], np.ndarray] = {}
+    action_records = []
+    for holo_axis, base_axis in enumerate(axis_map):
+        for lam in (1, 2):
+            A = base_table[(base_axis, lam)]
+            table[(holo_axis, lam)] = A
+            action_records.append({
+                "holo_axis": holo_axis,
+                "obstruction_axis": base_axis,
+                "lambda": lam,
+                "matrix_digest": digest(A.tolist()),
+            })
+    assert len(table) == 80
+    frame = {
+        "schema": "w33.holo-to-obstruction-symplectic-frame.v1",
+        "coordinate_map": "S(u0,u1,u2,u3)=(u0,u2,u1,u3)",
+        "holo_to_obstruction_axis": list(axis_map),
+    }
     return {
         "table": table,
         "records": tuple(action_records),
-        "basis_digest": digest({"scale": scale, "orbital_coefficients_scaled": coeff.tolist(), "pivot_columns": pivot_columns, "pivot_rows": pivot_rows}),
+        "symplectic_frame": frame,
+        "symplectic_frame_digest": digest(frame),
+        "axis_map": axis_map,
+        "basis_digest": digest({
+            "scale": scale,
+            "orbital_coefficients_scaled": coeff.tolist(),
+            "pivot_columns": pivot_columns,
+            "pivot_rows": pivot_rows,
+            "symplectic_frame": frame,
+        }),
         "pivot_columns": tuple(pivot_columns), "pivot_rows": tuple(pivot_rows), "scale": scale,
     }
 
@@ -172,14 +233,14 @@ def advance_control(parent: SteinbergControlState, parent_vector: np.ndarray, ch
     A = table[(axis, lam)]
     out = np.mod(A @ parent_vector, MOD).astype(np.int64)
     body = {
-        "schema": "w33.steinberg-continuation-control-step.v1",
+        "schema": "w33.steinberg-continuation-control-step.v2",
         "parent_control_history": parent.history_digest,
         "parent_continuation_root": parent.continuation_root,
         "child_continuation_root": child.continuation_id,
         "process_id": child.process_id,
         "generation": child.generation,
         "receipt_id": receipt_id,
-        "axis": axis,
+        "holo_axis": axis,
         "lambda": lam,
         "action_digest": digest(A.tolist()),
         "coordinate_digest": digest(out.tolist()),
@@ -193,7 +254,7 @@ def verify() -> dict[str, Any]:
     assert len(table) == 80
     program = add_r1_into_r0_program(); memory = BitStore()
     state = genesis(program, memory, (7, 11), session="steinberg-continuation-control", carrier=Carrier.CIRCUIT_ST81)
-    passport = merkle_digest({"schema": "w33.steinberg-control-passport.v1", "image": program.image_id, "basis": op["basis_digest"]})
+    passport = merkle_digest({"schema": "w33.steinberg-control-passport.v2", "image": program.image_id, "basis": op["basis_digest"], "frame": op["symplectic_frame_digest"]})
     process = spawn(state, FibreProductAddress(0, 0, 0), passport)
     control_state, vector = genesis_control(process, op["basis_digest"])
     records = []
@@ -201,11 +262,11 @@ def verify() -> dict[str, Any]:
         child, receipt = advance(program, process, memory)
         axis = int(receipt.route[-1])
         next_control, next_vector = advance_control(control_state, vector, child, receipt.receipt_id, axis, 1, table)
-        records.append({"generation": child.generation, "continuation_root": child.continuation_id, "receipt_id": receipt.receipt_id, "axis": axis, "control_history_digest": next_control.history_digest, "coordinate_digest": next_control.coordinate_digest})
+        records.append({"generation": child.generation, "continuation_root": child.continuation_id, "receipt_id": receipt.receipt_id, "holo_axis": axis, "obstruction_axis": op["axis_map"][axis], "control_history_digest": next_control.history_digest, "coordinate_digest": next_control.coordinate_digest})
         process, control_state, vector = child, next_control, next_vector
         if len(records) > 1000: raise RuntimeError("control witness failed to halt")
 
-    first_axis = records[0]["axis"]
+    first_axis = records[0]["holo_axis"]
     root_memory = BitStore()
     root_state = genesis(program, root_memory, (7, 11), session="steinberg-continuation-control", carrier=Carrier.CIRCUIT_ST81)
     root_process = spawn(root_state, FibreProductAddress(0, 0, 0), passport)
@@ -227,8 +288,9 @@ def verify() -> dict[str, Any]:
     distinct_coordinates = len(by_coordinate)
 
     checks = {
-        "all_80_qutrit_transvections_have_steinberg_actions": len(table) == 80,
-        "stored_four_generators_are_embedded_in_80_action_table": True,
+        "all_80_holovm_transvections_have_steinberg_actions": len(table) == 80,
+        "repo_symplectic_forms_are_related_by_exact_coordinate_swap": sorted(op["axis_map"]) == list(range(40)),
+        "stored_four_obstruction_generators_remain_embedded": True,
         "real_holovm_trace_halts": process.state.halted and len(records) == 24,
         "every_generation_binds_exact_continuation_and_receipt": all(r["generation"] == i + 1 and r["continuation_root"].startswith("sha256:") and r["receipt_id"].startswith("sha256:") for i, r in enumerate(records)),
         "control_history_is_generation_specific": len({r["control_history_digest"] for r in records}) == len(records),
@@ -237,10 +299,14 @@ def verify() -> dict[str, Any]:
         "axis_substitution_changes_authenticated_control_history": good.history_digest != bad.history_digest,
     }
     return {
-        "schema": "w33.steinberg-continuation-control.v2",
+        "schema": "w33.steinberg-continuation-control.v3",
         "status": "PASS" if all(checks.values()) else "FAIL",
         "checks": checks,
-        "basis_digest": op["basis_digest"], "action_table_digest": digest(list(op["records"])), "action_count": len(table), "certificate_prime": MOD,
+        "basis_digest": op["basis_digest"],
+        "symplectic_frame_digest": op["symplectic_frame_digest"],
+        "symplectic_frame": op["symplectic_frame"],
+        "action_table_digest": digest(list(op["records"])),
+        "action_count": len(table), "certificate_prime": MOD,
         "witness": {
             "guest_steps": len(records),
             "distinct_coordinate_states": distinct_coordinates,
@@ -250,8 +316,8 @@ def verify() -> dict[str, Any]:
             "final_coordinate_digest": control_state.coordinate_digest,
             "trace_digest": digest(records),
         },
-        "theorem": "Every qutrit transvection used by the HoloVM finite-control backend acts on the same explicit primitive Steinberg-81 basis. A real continuation trace therefore carries an equivariant 81-coordinate finite-control state whose authenticated history commits every receipt and exact continuation tuple; coordinate revisits do not identify processes or generations.",
-        "boundary": "The SHA-256 continuation and authenticated history remain authoritative identity; the finite 81-vector is not an injective encoding of unbounded process state. This is exact finite representation control plus modular execution certification, not a physical optical or fault-tolerance theorem.",
+        "theorem": "Every qutrit transvection used by the HoloVM finite-control backend acts on the explicit primitive Steinberg-81 basis after the exact coordinate isometry S(u0,u1,u2,u3)=(u0,u2,u1,u3) converts the HoloVM symplectic frame to the obstruction-carrier frame. A real continuation trace therefore carries an equivariant 81-coordinate finite-control state whose authenticated history commits every receipt and exact continuation tuple.",
+        "boundary": "The coordinate isometry repairs a software convention mismatch; it is not a physical basis rotation claim. SHA-256 continuation/history remain authoritative identity, and the finite 81-vector is not an injective encoding of unbounded process state or a fault-tolerance theorem.",
     }
 
 
