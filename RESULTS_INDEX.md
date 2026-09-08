@@ -22,9 +22,9 @@ When two files state the same result in different language, consult the
 human-curated [RESULTS VOCABULARY](RESULTS_VOCABULARY.md) for semantic
 aliases, current status, supersessions, and primary artifacts.
 
-Indexed **9789** files; **13917** distinctive results
+Indexed **9791** files; **13920** distinctive results
 (a token in >25 files identifies a topic and is dropped unless explicitly pinned).
-**5927** appear in exactly one file — the sharpest signal.
+**5930** appear in exactly one file — the sharpest signal.
 
 ## Index
 
@@ -3589,6 +3589,7 @@ Indexed **9789** files; **13917** distinctive results
 | `58152160` | `analysis/w33_pass427_adaptive_telemetry_channel.py` |
 | `58282126` | `PASS1939_1943_U6_MACWILLIAMS_GAUSSIAN_INTEGRAL_CARRIER_RELEASE.md` · `analysis/BT1939_1943_u6_macwilliams_gaussian_integral_carrier.md` · `analysis/BT2400_BT2406_six_frontiers.md` · `analysis/w33_pass1939_1943_verify_frozen.py` · *(+1)* |
 | `58312125` | `V22_output_corrected/V22_REPORT.md` |
+| `58811056` | `analysis/W33_CARRY_TIMING_INFORMATION.md` |
 | `59049726` | `analysis/BT3444_BT3457_radius_modular_fivechannel.md` |
 | `59103122` | `analysis/w33_20260828_q5_deficiency9_frontier.py` · `analysis/w33_20260829_q5_deficiency9_orbit_census.py` |
 | `59690117` | `analysis/w33_pass1887_1891_verify_frozen.py` |
@@ -3951,6 +3952,7 @@ Indexed **9789** files; **13917** distinctive results
 | `0144864` | `analysis/BT649_projector_comparison.md` · `analysis/BT651_central_minus_sheet_projector.md` |
 | `0180135` | `analysis/w33_pass5292_q9_orbit_moment_distance.py` |
 | `0206128` | `analysis/BT1694_BT1696_dark_braiding_dscft_relic.md` · `analysis/bt1695_dark_anyon_braiding_gate_boundary.py` |
+| `0210005` | `analysis/W33_CARRY_TIMING_INFORMATION.md` |
 | `0212378` | `PASS214_218_SOURCE_TORSOR_DUAL_OVOID_WEIL_SYNTHESIS.md` · `PASS331_332_WEIL_INTEGRAL_CHIRALITY_BRIDGE.md` · `analysis/2026-07-15_pass348_weil_q3_anatomy.md` · `analysis/w33_pass218_weil_shadow_split.g` · *(+4)* |
 | `0218053` | `analysis/W33_VM_RETENTION_AND_OUTPUT_AUDIT.md` |
 | `0219492` | `analysis/PASS5174_5181_EXECUTED_OUTCOMES.md` |
@@ -5811,6 +5813,7 @@ Indexed **9789** files; **13917** distinctive results
 | `910910` | `analysis/BT1701_1705_five_continuations.md` |
 | `911262` | `analysis/w33_pass7317_7320_e8_d4_double_six_fusion.g` |
 | `913555` | `analysis/BT3687_BT3693_realized_octad_borel_psd_proof_tomography_architecture.md` |
+| `916191` | `analysis/W33_CARRY_TIMING_INFORMATION.md` |
 | `916578` | `analysis/BT1831_1835_execute_all_five.md` |
 | `918669` | `analysis/bt1835_raw_artifact_importer.py` |
 | `921600` | `docs/index.html` |
@@ -8212,7 +8215,7 @@ Indexed **9789** files; **13917** distinctive results
 | `1275` | `PASS1273_1277_EXECUTION_RELEASE.md` · `analysis/BT1275_strict_polar_path_recovery_certificate.md` · `analysis/BT1288_readme_recovery_pointer.md` · `analysis/BT1290_v1_release_recovery_packet_addendum.md` · *(+13)* |
 | `1276` | `PASS1273_1277_EXECUTION_RELEASE.md` · `analysis/BT1276_external_candidate_protocol_paper.md` · `analysis/BT1277_recovery_packet_regression.md` · `analysis/BT1278_external_protocol_ci_integration.md` · *(+4)* |
 | `1277` | `PASS1273_1277_EXECUTION_RELEASE.md` · `PASS1300_1304_EXACT_TRIALITY_MATRIX_CYCLE_RELEASE.md` · `analysis/BT1277_recovery_packet_regression.md` · `analysis/BT1310_BT1314_literal_a5_coset_correction.md` · *(+3)* |
-| `1278` | `PASS1278_1282_PARALLEL_ABSORPTION_RELEASE.md` · `analysis/BT1278_external_protocol_ci_integration.md` · `analysis/w33_pass1278_six_transport_channels.py` · `analysis/w33_pass1285_morita_psp43_bridge.py` |
+| `1278` | `PASS1278_1282_PARALLEL_ABSORPTION_RELEASE.md` · `analysis/BT1278_external_protocol_ci_integration.md` · `analysis/W33_CARRY_TIMING_INFORMATION.md` · `analysis/w33_pass1278_six_transport_channels.py` · *(+1)* |
 | `1279` | `PASS1278_1282_PARALLEL_ABSORPTION_RELEASE.md` · `analysis/BT1279_recovery_packet_index.md` · `analysis/BT1288_readme_recovery_pointer.md` · `analysis/BT1290_v1_release_recovery_packet_addendum.md` · *(+4)* |
 | `1281` | `PASS1278_1282_PARALLEL_ABSORPTION_RELEASE.md` · `analysis/BT1280_recovery_packet_guide.md` · `analysis/BT1281_strict_recovery_certificate_verifier.md` · `analysis/BT1283_recovery_packet_ci_workflow.md` · *(+6)* |
 | `1282` | `PASS1278_1282_PARALLEL_ABSORPTION_RELEASE.md` · `analysis/BT1282_recovery_packet_reproducibility.md` · `analysis/BT1283_recovery_packet_ci_workflow.md` · `analysis/BT1284_recovery_docs_and_verifier_regression.md` · *(+4)* |
@@ -13459,7 +13462,7 @@ Indexed **9789** files; **13917** distinctive results
 | `396` | `BT427_ARXIV_PACKAGE.md` · `PASS394_398_COVER_SECTION_DIRAC_LAB_FORMULA_RELEASE.md` · `analysis/2026-05-18_staircase_parity_horizon_lift.md` · `analysis/BT1827_cyclic_residue_winding_protection.md` · *(+17)* |
 | `397` | `PASS394_398_COVER_SECTION_DIRAC_LAB_FORMULA_RELEASE.md` · `PASS405_409_FIVE_FRONTIERS_RELEASE.md` · `analysis/BT1340_BT1344_cartan_atlas_selector_padic.md` · `analysis/PASS5110_5117_EXECUTED_OUTCOMES.md` · *(+13)* |
 | `398` | `PASS1223_1227_EXECUTION_RELEASE.md` · `PASS394_398_COVER_SECTION_DIRAC_LAB_FORMULA_RELEASE.md` · `analysis/BT3813_BT3820_quadratic_discriminant_multiport_holonomy.md` · `analysis/BT3905_BT3912_terwilliger_mesh_strata_rank48.md` · *(+16)* |
-| `403` | `PASS400_404_FIVE_FRONTIERS_RELEASE.md` · `PASS5888_5897_EXPERIMENTAL_FALSIFIER_AND_DELTA_C.md` · `analysis/BT3528_BT3534_borel_star_moore_functor_transplant.md` · `analysis/bt3528_3534_borel_star_moore_functor_transplant.py` · *(+16)* |
+| `403` | `PASS400_404_FIVE_FRONTIERS_RELEASE.md` · `PASS5888_5897_EXPERIMENTAL_FALSIFIER_AND_DELTA_C.md` · `analysis/BT3528_BT3534_borel_star_moore_functor_transplant.md` · `analysis/W33_CARRY_TIMING_INFORMATION.md` · *(+17)* |
 | `404` | `PASS400_404_FIVE_FRONTIERS_RELEASE.md` · `PASS405_409_FIVE_FRONTIERS_RELEASE.md` · `analysis/BT1516_BT1520_five_frontiers.md` · `analysis/BT3344_BT3355_exterior_dual_szegedy_q15.md` · *(+15)* |
 | `406` | `PASS405_409_FIVE_FRONTIERS_RELEASE.md` · `analysis/BT1097_tex_ci_status_latest.md` · `analysis/w33_pass406_nonabelian_clifford_compiler.py` · `analysis/w33_pass5460_ovoid_orbits_and_design.g` · *(+2)* |
 | `407` | `BT427_ARXIV_PACKAGE.md` · `PASS2470_2475_FIVE_FRONTIERS_RELEASE.md` · `PASS405_409_FIVE_FRONTIERS_RELEASE.md` · `analysis/w33_BREAKTHROUGH_453_grand_synthesis_substrate_exceptional.py` · *(+6)* |

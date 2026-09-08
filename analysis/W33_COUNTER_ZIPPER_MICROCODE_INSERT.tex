@@ -61,3 +61,18 @@ two-connection submission race and restart after every tick. These are process
 exit experiments, not power-loss tests or exactly-once external effects.
 The database is trusted authority and each tick writes a full snapshot;
 see \texttt{analysis/W33\_DURABLE\_MICROSTEP\_OWNER.md}.
+
+Exact accounting further separates work, content and observable information.
+Writing $s(x)$ for binary popcount, $L$ increments from $a$ take
+$5L+2s(a)-2s(a+L)$ microticks. From zero, preemption adds $M-s(M)$ bit-write
+operations relative to the prior macro backend, but adds no distinct bit nodes
+when all earlier counter values remain retained. For a uniform $n$-bit initial
+value and $L=2^m$, $0\le m<n$, individual completion times reveal
+$m+2-2^{1-(n-m)}$ bits, while total batch time reveals only
+$2-2^{1-(n-m)}$ bits. The proof identifies the transcript with the low $m$
+bits and the trailing-one count of the remaining high part.
+An explicit reversible XOR permutation erases the correlated timing record
+using the retained final counter: its conditional entropy is zero even when
+its marginal entropy is positive. This supplies no measured heat or zero-energy
+device claim. Exact backend counts, $45$ timing partitions and a $1024$-state
+permutation witness are in \texttt{analysis/W33\_CARRY\_TIMING\_INFORMATION.md}.

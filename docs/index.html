@@ -30180,6 +30180,21 @@ deliberately &mdash; including the parts that turned out to be wrong.</p>
     snapshot writes and trusted-database rollback remain explicit limits.</p>
   <p><a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/W33_DURABLE_MICROSTEP_OWNER.md">Transaction architecture, SQLite prior work and crash evidence</a></p>
 </section>
+<section id="carry-timing-information" class="result-card">
+  <h2>Exact computation cost and observer-dependent timing information</h2>
+  <p>For this zipper, M increments from zero take exactly
+    5M &minus; 2 popcount(M) microticks. Preemption adds
+    M &minus; popcount(M) bit-write operations, but no additional distinct
+    bit nodes when prior values remain retained.</p>
+  <p>For a uniform eight-bit starting value, 128 individual increment timings
+    identify all eight bits; the total batch time reveals only one bit.
+    Exact proofs and 45 finite census cases establish the general dyadic law.</p>
+  <p>An explicit 1,024-state reversible permutation erases a timing record
+    using the retained final counter. Positive timing entropy is therefore
+    different from information that must be discarded. This is a logical
+    construction, with no measured heat or physical zero-energy claim.</p>
+  <p><a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/W33_CARRY_TIMING_INFORMATION.md">Proofs, exact witnesses, prior work and thermodynamic scope</a></p>
+</section>
 </body>
 
 </html>

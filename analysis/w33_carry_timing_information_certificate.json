@@ -1,0 +1,434 @@
+{
+  "backend": {
+    "bit_writes": 766,
+    "distinct_retained_bit_nodes": 256,
+    "extra_preemption_bit_writes": 255,
+    "increments": 256,
+    "microticks": 1278,
+    "prior_macro_bit_constructions": 511,
+    "verified_prefixes": 256
+  },
+  "boundary": "Ideal exact completion timing; logical entropy is not measured device dissipation.",
+  "cost_law": "T(a,L)=5L+2popcount(a)-2popcount(a+L)",
+  "dyadic_partitions": [
+    {
+      "batch_only_information_bits": "1",
+      "complete_input_recovery": true,
+      "distinct_transcripts": 2,
+      "increments": 1,
+      "information_bits": "1",
+      "m": 0,
+      "n": 1
+    },
+    {
+      "batch_only_information_bits": "3/2",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 3,
+      "increments": 1,
+      "information_bits": "3/2",
+      "m": 0,
+      "n": 2
+    },
+    {
+      "batch_only_information_bits": "1",
+      "complete_input_recovery": true,
+      "distinct_transcripts": 4,
+      "increments": 2,
+      "information_bits": "2",
+      "m": 1,
+      "n": 2
+    },
+    {
+      "batch_only_information_bits": "7/4",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 4,
+      "increments": 1,
+      "information_bits": "7/4",
+      "m": 0,
+      "n": 3
+    },
+    {
+      "batch_only_information_bits": "3/2",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 6,
+      "increments": 2,
+      "information_bits": "5/2",
+      "m": 1,
+      "n": 3
+    },
+    {
+      "batch_only_information_bits": "1",
+      "complete_input_recovery": true,
+      "distinct_transcripts": 8,
+      "increments": 4,
+      "information_bits": "3",
+      "m": 2,
+      "n": 3
+    },
+    {
+      "batch_only_information_bits": "15/8",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 5,
+      "increments": 1,
+      "information_bits": "15/8",
+      "m": 0,
+      "n": 4
+    },
+    {
+      "batch_only_information_bits": "7/4",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 8,
+      "increments": 2,
+      "information_bits": "11/4",
+      "m": 1,
+      "n": 4
+    },
+    {
+      "batch_only_information_bits": "3/2",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 12,
+      "increments": 4,
+      "information_bits": "7/2",
+      "m": 2,
+      "n": 4
+    },
+    {
+      "batch_only_information_bits": "1",
+      "complete_input_recovery": true,
+      "distinct_transcripts": 16,
+      "increments": 8,
+      "information_bits": "4",
+      "m": 3,
+      "n": 4
+    },
+    {
+      "batch_only_information_bits": "31/16",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 6,
+      "increments": 1,
+      "information_bits": "31/16",
+      "m": 0,
+      "n": 5
+    },
+    {
+      "batch_only_information_bits": "15/8",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 10,
+      "increments": 2,
+      "information_bits": "23/8",
+      "m": 1,
+      "n": 5
+    },
+    {
+      "batch_only_information_bits": "7/4",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 16,
+      "increments": 4,
+      "information_bits": "15/4",
+      "m": 2,
+      "n": 5
+    },
+    {
+      "batch_only_information_bits": "3/2",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 24,
+      "increments": 8,
+      "information_bits": "9/2",
+      "m": 3,
+      "n": 5
+    },
+    {
+      "batch_only_information_bits": "1",
+      "complete_input_recovery": true,
+      "distinct_transcripts": 32,
+      "increments": 16,
+      "information_bits": "5",
+      "m": 4,
+      "n": 5
+    },
+    {
+      "batch_only_information_bits": "63/32",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 7,
+      "increments": 1,
+      "information_bits": "63/32",
+      "m": 0,
+      "n": 6
+    },
+    {
+      "batch_only_information_bits": "31/16",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 12,
+      "increments": 2,
+      "information_bits": "47/16",
+      "m": 1,
+      "n": 6
+    },
+    {
+      "batch_only_information_bits": "15/8",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 20,
+      "increments": 4,
+      "information_bits": "31/8",
+      "m": 2,
+      "n": 6
+    },
+    {
+      "batch_only_information_bits": "7/4",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 32,
+      "increments": 8,
+      "information_bits": "19/4",
+      "m": 3,
+      "n": 6
+    },
+    {
+      "batch_only_information_bits": "3/2",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 48,
+      "increments": 16,
+      "information_bits": "11/2",
+      "m": 4,
+      "n": 6
+    },
+    {
+      "batch_only_information_bits": "1",
+      "complete_input_recovery": true,
+      "distinct_transcripts": 64,
+      "increments": 32,
+      "information_bits": "6",
+      "m": 5,
+      "n": 6
+    },
+    {
+      "batch_only_information_bits": "127/64",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 8,
+      "increments": 1,
+      "information_bits": "127/64",
+      "m": 0,
+      "n": 7
+    },
+    {
+      "batch_only_information_bits": "63/32",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 14,
+      "increments": 2,
+      "information_bits": "95/32",
+      "m": 1,
+      "n": 7
+    },
+    {
+      "batch_only_information_bits": "31/16",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 24,
+      "increments": 4,
+      "information_bits": "63/16",
+      "m": 2,
+      "n": 7
+    },
+    {
+      "batch_only_information_bits": "15/8",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 40,
+      "increments": 8,
+      "information_bits": "39/8",
+      "m": 3,
+      "n": 7
+    },
+    {
+      "batch_only_information_bits": "7/4",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 64,
+      "increments": 16,
+      "information_bits": "23/4",
+      "m": 4,
+      "n": 7
+    },
+    {
+      "batch_only_information_bits": "3/2",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 96,
+      "increments": 32,
+      "information_bits": "13/2",
+      "m": 5,
+      "n": 7
+    },
+    {
+      "batch_only_information_bits": "1",
+      "complete_input_recovery": true,
+      "distinct_transcripts": 128,
+      "increments": 64,
+      "information_bits": "7",
+      "m": 6,
+      "n": 7
+    },
+    {
+      "batch_only_information_bits": "255/128",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 9,
+      "increments": 1,
+      "information_bits": "255/128",
+      "m": 0,
+      "n": 8
+    },
+    {
+      "batch_only_information_bits": "127/64",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 16,
+      "increments": 2,
+      "information_bits": "191/64",
+      "m": 1,
+      "n": 8
+    },
+    {
+      "batch_only_information_bits": "63/32",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 28,
+      "increments": 4,
+      "information_bits": "127/32",
+      "m": 2,
+      "n": 8
+    },
+    {
+      "batch_only_information_bits": "31/16",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 48,
+      "increments": 8,
+      "information_bits": "79/16",
+      "m": 3,
+      "n": 8
+    },
+    {
+      "batch_only_information_bits": "15/8",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 80,
+      "increments": 16,
+      "information_bits": "47/8",
+      "m": 4,
+      "n": 8
+    },
+    {
+      "batch_only_information_bits": "7/4",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 128,
+      "increments": 32,
+      "information_bits": "27/4",
+      "m": 5,
+      "n": 8
+    },
+    {
+      "batch_only_information_bits": "3/2",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 192,
+      "increments": 64,
+      "information_bits": "15/2",
+      "m": 6,
+      "n": 8
+    },
+    {
+      "batch_only_information_bits": "1",
+      "complete_input_recovery": true,
+      "distinct_transcripts": 256,
+      "increments": 128,
+      "information_bits": "8",
+      "m": 7,
+      "n": 8
+    },
+    {
+      "batch_only_information_bits": "511/256",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 10,
+      "increments": 1,
+      "information_bits": "511/256",
+      "m": 0,
+      "n": 9
+    },
+    {
+      "batch_only_information_bits": "255/128",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 18,
+      "increments": 2,
+      "information_bits": "383/128",
+      "m": 1,
+      "n": 9
+    },
+    {
+      "batch_only_information_bits": "127/64",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 32,
+      "increments": 4,
+      "information_bits": "255/64",
+      "m": 2,
+      "n": 9
+    },
+    {
+      "batch_only_information_bits": "63/32",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 56,
+      "increments": 8,
+      "information_bits": "159/32",
+      "m": 3,
+      "n": 9
+    },
+    {
+      "batch_only_information_bits": "31/16",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 96,
+      "increments": 16,
+      "information_bits": "95/16",
+      "m": 4,
+      "n": 9
+    },
+    {
+      "batch_only_information_bits": "15/8",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 160,
+      "increments": 32,
+      "information_bits": "55/8",
+      "m": 5,
+      "n": 9
+    },
+    {
+      "batch_only_information_bits": "7/4",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 256,
+      "increments": 64,
+      "information_bits": "31/4",
+      "m": 6,
+      "n": 9
+    },
+    {
+      "batch_only_information_bits": "3/2",
+      "complete_input_recovery": false,
+      "distinct_transcripts": 384,
+      "increments": 128,
+      "information_bits": "17/2",
+      "m": 7,
+      "n": 9
+    },
+    {
+      "batch_only_information_bits": "1",
+      "complete_input_recovery": true,
+      "distinct_transcripts": 512,
+      "increments": 256,
+      "information_bits": "9",
+      "m": 8,
+      "n": 9
+    }
+  ],
+  "information_law": "I(X;timing[0:2^m])=m+2-2^(1-(n-m)), X uniform on 0..2^n-1, 0<=m<n",
+  "offset_intervals_checked": 2080,
+  "reversible_eraser": {
+    "all_correlated_records_reset": true,
+    "m": 2,
+    "n": 5,
+    "permutation_states": 1024,
+    "record_register_bits": 4,
+    "scope": "Logical reversible permutation; no physical heat or gate-cost claim.",
+    "timing_entropy_bits": "15/4",
+    "timing_entropy_given_final_counter_bits": "0"
+  },
+  "schema": "w33.carry-timing-information.v1",
+  "status": "PASS"
+}
