@@ -7,6 +7,7 @@ on:
       - 'analysis/w33_shared_counter_archive*'
       - 'analysis/w33_snapshot_admission*'
       - 'analysis/w33_counter_zipper_microcode*'
+      - 'analysis/w33_process_microstep_owner*'
       - 'analysis/w33_holovm_process_kernel.py'
       - 'analysis/W33_HOLOVM_PROCESS_KERNEL*'
       - 'analysis/w33_three_copy_output_rank_audit*'
@@ -20,6 +21,7 @@ on:
       - 'tests/test_w33_shared_counter_archive.py'
       - 'tests/test_w33_snapshot_admission_scheduler.py'
       - 'tests/test_w33_counter_zipper_microcode.py'
+      - 'tests/test_w33_process_microstep_owner.py'
       - 'tests/test_w33_holovm_process_kernel.py'
       - 'tests/test_w33_temporal_gc_replay.py'
       - 'tests/test_w33_three_copy_output_rank_audit.py'
@@ -50,6 +52,10 @@ jobs:
         run: python tests/test_w33_snapshot_admission_scheduler.py
       - name: Bounded microsteps, macro refinement and continuation recovery
         run: python tests/test_w33_counter_zipper_microcode.py
+      - name: Process microstep proof fanout certificate
+        run: python analysis/w33_process_microstep_owner.py
+      - name: Process receipt consumption, duplicate delivery and archive recovery
+        run: python tests/test_w33_process_microstep_owner.py
       - name: Existing temporal collection and replay
         run: python tests/test_w33_temporal_gc_replay.py
       - name: Full symmetric-family output audit and frozen result

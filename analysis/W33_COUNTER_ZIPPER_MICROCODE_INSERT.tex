@@ -39,3 +39,14 @@ rejecting unsupported inputs before target generation. Three regression tests
 cover differential memory execution, five same-opcode mutations and an
 accepted custom-section variation. This enforces the documented restricted
 source language; it is not a general compiler-equivalence theorem.
+
+The process microstep owner now separates reusable arithmetic evidence from
+consumption of a particular process cursor. Eight identical-value forks use
+$19$ inner proofs for $152$ accepted process-bound submissions; all $152$
+immediate duplicate submissions reject. Final values agree with an independent
+macro verifier while all eight histories and continuation identities differ.
+The trusted serialized owner publishes guest state only at macro commit.
+Seven owner tests plus the seven process-kernel and nine zipper tests pass.
+This is an in-memory execution protocol, not durable exactly-once external I/O;
+see \texttt{analysis/W33\_PROCESS\_MICROSTEP\_OWNER.md} for the executable,
+prior ownership, retention roundtrip and scope.

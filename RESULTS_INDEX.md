@@ -22,7 +22,7 @@ When two files state the same result in different language, consult the
 human-curated [RESULTS VOCABULARY](RESULTS_VOCABULARY.md) for semantic
 aliases, current status, supersessions, and primary artifacts.
 
-Indexed **9785** files; **13916** distinctive results
+Indexed **9787** files; **13917** distinctive results
 (a token in >25 files identifies a topic and is dropped unless explicitly pinned).
 **5927** appear in exactly one file — the sharpest signal.
 
@@ -4722,7 +4722,7 @@ Indexed **9785** files; **13916** distinctive results
 | `104090` | `analysis/w33_pass2476_2481_the_144_and_a_calibrated_hook.md` · `analysis/w33_pass2632_2639_the_cubic_gate_exists.md` |
 | `104231` | `V23_output/V23_REPORT.md` |
 | `104268` | `analysis/w33_pass5430_q3_radius10_false_vote4_frontier.py` |
-| `104478` | `analysis/W33_COUNTER_ZIPPER_MICROCODE.md` |
+| `104478` | `analysis/W33_COUNTER_ZIPPER_MICROCODE.md` · `analysis/W33_PROCESS_MICROSTEP_OWNER.md` |
 | `104729` | `analysis/bt1018_k3_degree2_row_shard.py` · `analysis/bt1314_deterministic_traffic_stability.py` |
 | `104976` | `analysis/w33_pass5680_deck16_classd_pfaffian_triviality.py` · `docs/index.html` |
 | `105105` | `analysis/w33_pass10477_10484_h4_normalizer_27state_quotient.py` |
@@ -7201,6 +7201,7 @@ Indexed **9785** files; **13916** distinctive results
 | `47525` | `analysis/w33_MDCCLXXIII_MDCCLXXXII_pell_chain_extension.py` |
 | `47619` | `exploration/w33_142857_deep_dig.py` |
 | `47640` | `analysis/w33_BREAKTHROUGH_152_phi12_spectral_encoding.py` |
+| `47805` | `analysis/W33_PROCESS_MICROSTEP_OWNER.md` |
 | `47824` | `PASS173_INCIDENCE_TRANSCEIVER_ROUTE_DARK_LATTICE.md` · `analysis/w33_20260830_code_ladder_duals_macwilliams.py` · `analysis/w33_pass173_incidence_transceiver_route_dark_lattice.py` · `w33_paper_body.tex` |
 | `47868` | `analysis/BT3205_BT3213_chromatic_closure.md` · `analysis/bt3226_3234_port_spiral_closure.py` · `analysis/bt3244_sat_proof_shards.py` · `analysis/bt3390_3401_exterior_switch_defect_clifford_shell.py` |
 | `47896` | `analysis/BT993_edgewise_density_recurrences.md` |
@@ -13842,7 +13843,7 @@ Indexed **9785** files; **13916** distinctive results
 | `881` | `analysis/BT881_forty_local_gauge_groups.md` · `analysis/BT882_gauge_connection.md` · `analysis/BT883_curvature_two_form.md` · `analysis/BT884_gauge_flux_wilson_loops.md` · *(+16)* |
 | `882` | `analysis/BT3787_BT3794_twirl_floquet_clock_control_hybrid.md` · `analysis/BT732_selector_sibling_exports_certificate.md` · `analysis/BT882_gauge_connection.md` · `analysis/BT883_curvature_two_form.md` · *(+13)* |
 | `883` | `PASS2430_2435_FIVE_FRONTIERS_RELEASE.md` · `analysis/BT883_curvature_two_form.md` · `analysis/BT884_gauge_flux_wilson_loops.md` · `analysis/BT886_standard_model_spine.md` · *(+15)* |
-| `884` | `PASS2550_2557_SEVEN_FRONTIERS_RELEASE.md` · `analysis/BT3743_BT3750_symmetry_os_spacetime_factory_tournament.md` · `analysis/BT884_gauge_flux_wilson_loops.md` · `analysis/BT885_yang_mills_steinberg_coupling.md` · *(+18)* |
+| `884` | `PASS2550_2557_SEVEN_FRONTIERS_RELEASE.md` · `analysis/BT3743_BT3750_symmetry_os_spacetime_factory_tournament.md` · `analysis/BT884_gauge_flux_wilson_loops.md` · `analysis/BT885_yang_mills_steinberg_coupling.md` · *(+19)* |
 | `885` | `analysis/BT885_yang_mills_steinberg_coupling.md` · `analysis/BT886_standard_model_spine.md` · `analysis/bt885_yang_mills_steinberg_coupling.py` · `analysis/w33_pass981_arxiv_batch_intake_audit.py` · *(+2)* |
 | `886` | `V23_output/V23_REPORT.md` · `analysis/BT4245_BT4252_residual_symmetry_ghz_hodge_route_lattice_outside_box.md` · `analysis/BT886_standard_model_spine.md` · `analysis/bt886_standard_model_spine.py` · *(+9)* |
 | `887` | `analysis/BT2808_pg32_tetrahedral_support_lift.md` · `analysis/BT887_color_electroweak_factorization.md` · `analysis/BT888_color_is_matter_heisenberg.md` · `analysis/bt887_color_electroweak_factorization.py` · *(+5)* |

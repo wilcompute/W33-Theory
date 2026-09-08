@@ -1,0 +1,18 @@
+{
+  "boundary": "Serialized in-memory owner; no durable or external-I/O exactly-once claim.",
+  "checks": {
+    "all_children_match_independent_macro_oracle": true,
+    "all_continuations_distinct": true,
+    "all_duplicate_submissions_rejected": true,
+    "all_histories_distinct": true,
+    "all_microheads_consumed": true,
+    "one_proof_per_tick_serves_every_fork": true
+  },
+  "duplicate_rejections": 152,
+  "forks": 8,
+  "inner_proofs": 19,
+  "outer_submissions": 152,
+  "result": 256,
+  "schema": "w33.process-microstep-owner-experiment.v1",
+  "status": "PASS"
+}
