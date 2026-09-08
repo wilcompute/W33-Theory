@@ -1,0 +1,59 @@
+name: HoloVM generalized-control sparse-memory calibration suite
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_capability_holoir_counter_bridge_v2.py'
+      - 'analysis/w33_control_cycle_compiler.py'
+      - 'analysis/w33_dynamic_sparse_memory_counter.py'
+      - 'analysis/w33_accelerator_calibration_request.py'
+      - 'analysis/w33_accelerator_control_artifact_identity.py'
+      - '.github/workflows/w33_holovm_execute_next_five.yml'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  generalized-control-cycles:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install exact algebra dependencies
+        run: pip install numpy sympy networkx
+      - name: Reverify original twelve-step theorem
+        run: python analysis/w33_twelve_step_control_cancellation.py
+      - name: Compile arbitrary finite control cycles modulo exact group order
+        run: python analysis/w33_control_cycle_compiler.py
+
+  capability-and-dynamic-sparse-memory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Alias-safe capability HoloIR counter bridge
+        run: python analysis/w33_capability_holoir_counter_bridge_v2.py
+      - name: Runtime-selected sparse Merkle address counter trie
+        run: python analysis/w33_dynamic_sparse_memory_counter.py
+
+  calibration-and-cache-identity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install exact algebra dependencies
+        run: pip install numpy sympy networkx
+      - name: Reverify attested accelerator certificate
+        run: python analysis/w33_attested_accelerator_macro.py
+      - name: Export physical calibration measurement request ABI
+        run: python analysis/w33_accelerator_calibration_request.py
+      - name: Export process-independent control artifact identity
+        run: python analysis/w33_accelerator_control_artifact_identity.py
