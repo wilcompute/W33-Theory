@@ -151,3 +151,38 @@ kernel or another policy planner. The fresh history has been inventoried;
 complete source/diff reading of this later batch remains open. In particular,
 older Holotrade tau2 intervals in the earlier intake are historical, not current
 frontier assertions.
+
+## Follow-up: identity does not establish compiler refinement
+
+After publishing the zipper packet as `a459c0c92`, an operand mutation exposed
+a separate admission error in `w33_dynamic_sparse_memory_counter.py` (introduced
+in `f862204a0`). Replacing the encoded constant 77 by 78 leaves the Wasm valid
+and preserves every opcode, but the source returns 78 while the old counter
+compiler returns 77. A distinct source digest correctly records that the input
+changed; it cannot establish that the generated program implements that input.
+
+The sparse compiler documents an exact witness, so it now rejects differing
+decoded operands or module bindings before generating target instructions.
+The check covers types, imports, exports, locals, globals and memory as well as
+instructions. Binary digest and instruction byte positions are excluded from
+this semantic-shape check: an added custom section is accepted and retains its
+distinct identity in the manifest. This is deliberately conservative admission,
+not a general compiler or a complete test for semantic equivalence.
+
+`tests/test_w33_sparse_compiler_admission.py` passes three tests: differential
+execution at every admitted address with memory comparison and an unmanifested
+address trap; rejection of five valid same-opcode binary mutations (constant,
+store offset, load offset, import and export names); and acceptance of a custom
+section. The existing sparse-memory CI workflow runs these regressions.
+
+The [WebAssembly Core specification](https://www.w3.org/TR/wasm-core-1/)
+defines memory access using the dynamic address plus the static offset. Therefore
+offset changes belong in this boundary even when the opcode list is unchanged.
+The architecture lesson is concrete: content identity, admission to a compiler's
+supported language, and execution refinement are three separate obligations.
+The existing static HoloIR and dynamic sparse modules own the compilation work;
+this follow-up repairs admission to the latter's explicitly limited language.
+
+The latest Holotrade refresh reaches `a104478`, seven commits beyond `99dec7a`.
+The combined delta is captured (11 paths, 2,076 diff lines), but is not yet fully
+read. No new mathematical conclusion is inferred from its commit subjects.

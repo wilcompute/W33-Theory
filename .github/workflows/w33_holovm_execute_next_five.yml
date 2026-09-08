@@ -6,6 +6,7 @@ on:
       - 'analysis/w33_capability_holoir_counter_bridge_v2.py'
       - 'analysis/w33_control_cycle_compiler.py'
       - 'analysis/w33_dynamic_sparse_memory_counter.py'
+      - 'tests/test_w33_sparse_compiler_admission.py'
       - 'analysis/w33_accelerator_calibration_request.py'
       - 'analysis/w33_accelerator_control_artifact_identity.py'
       - '.github/workflows/w33_holovm_execute_next_five.yml'
@@ -40,6 +41,8 @@ jobs:
         run: python analysis/w33_capability_holoir_counter_bridge_v2.py
       - name: Runtime-selected sparse Merkle address counter trie
         run: python analysis/w33_dynamic_sparse_memory_counter.py
+      - name: Reject unsupported sparse compiler operands and bindings
+        run: python tests/test_w33_sparse_compiler_admission.py
 
   calibration-and-cache-identity:
     runs-on: ubuntu-latest

@@ -30,3 +30,12 @@ The executable, frozen certificate and adversarial recovery tests are
 \texttt{test\_w33\_counter\_zipper\_microcode.py}.
 Prior art, the phase argument and implementation limits are recorded in
 \texttt{analysis/W33\_COUNTER\_ZIPPER\_MICROCODE.md}.
+
+Compiler admission is a separate obligation from content identity. In the
+dynamic sparse witness, replacing the valid Wasm constant $77$ by $78$
+preserved every opcode but formerly left the counter target returning $77$.
+The exact-witness compiler now checks decoded operands and module bindings,
+rejecting unsupported inputs before target generation. Three regression tests
+cover differential memory execution, five same-opcode mutations and an
+accepted custom-section variation. This enforces the documented restricted
+source language; it is not a general compiler-equivalence theorem.

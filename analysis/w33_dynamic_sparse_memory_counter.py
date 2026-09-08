@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+from dataclasses import asdict
 from pathlib import Path
 from typing import Any
 
@@ -120,6 +121,19 @@ class SparseCompiler:
     def compile(self) -> tuple[MCProgram, dict[str, Any]]:
         # This compiler intentionally targets the exact HoloIR shape emitted by
         # build_dynamic_module, but address selection itself is runtime-dynamic.
+        # Opcode order alone is insufficient: immediates and module bindings
+        # determine semantics too. Ignore only byte provenance/locations, so
+        # equivalent custom-section encodings remain admissible.
+        def semantic_shape(module: cap.WasmModule) -> dict[str, Any]:
+            shape = asdict(module)
+            shape.pop("binary_digest")
+            for fn in shape["functions"]:
+                for ins in fn["instructions"]:
+                    ins.pop("offset")
+            return shape
+
+        if semantic_shape(self.module) != semantic_shape(cap.decode_module(build_dynamic_module())):
+            raise ValueError("unsupported sparse witness semantics: operands or module bindings differ")
         rows = self.ir.functions[0]
         ops = [r.op for r in rows]
         expected = ["call", "local.set", "local.get", "i32.const", "i32.store", "local.get", "i32.load", "end"]
