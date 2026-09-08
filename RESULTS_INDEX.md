@@ -22,9 +22,9 @@ When two files state the same result in different language, consult the
 human-curated [RESULTS VOCABULARY](RESULTS_VOCABULARY.md) for semantic
 aliases, current status, supersessions, and primary artifacts.
 
-Indexed **9785** files; **13914** distinctive results
+Indexed **9785** files; **13916** distinctive results
 (a token in >25 files identifies a topic and is dropped unless explicitly pinned).
-**5925** appear in exactly one file — the sharpest signal.
+**5927** appear in exactly one file — the sharpest signal.
 
 ## Index
 
@@ -4722,6 +4722,7 @@ Indexed **9785** files; **13914** distinctive results
 | `104090` | `analysis/w33_pass2476_2481_the_144_and_a_calibrated_hook.md` · `analysis/w33_pass2632_2639_the_cubic_gate_exists.md` |
 | `104231` | `V23_output/V23_REPORT.md` |
 | `104268` | `analysis/w33_pass5430_q3_radius10_false_vote4_frontier.py` |
+| `104478` | `analysis/W33_COUNTER_ZIPPER_MICROCODE.md` |
 | `104729` | `analysis/bt1018_k3_degree2_row_shard.py` · `analysis/bt1314_deterministic_traffic_stability.py` |
 | `104976` | `analysis/w33_pass5680_deck16_classd_pfaffian_triviality.py` · `docs/index.html` |
 | `105105` | `analysis/w33_pass10477_10484_h4_normalizer_27state_quotient.py` |
@@ -5775,6 +5776,7 @@ Indexed **9785** files; **13914** distinctive results
 | `860120` | `analysis/w33_mcxl_master_assertions.py` · `analysis/w33_spectral_action_einstein_hilbert.py` |
 | `860448` | `analysis/w33_pass1950_1954_verify_frozen.py` |
 | `861938` | `exploration/PART_CCLXXXIV_RAMANUJAN_IHARA_BRIDGE.py` |
+| `862204` | `analysis/W33_COUNTER_ZIPPER_MICROCODE.md` |
 | `862998` | `analysis/w33_pass7317_7320_e8_d4_double_six_fusion.g` |
 | `863754` | `analysis/BT1939_1943_u6_macwilliams_gaussian_integral_carrier.md` · `analysis/w33_pass1939_u6_supershard.py` |
 | `868710` | `analysis/BT3787_BT3794_twirl_floquet_clock_control_hybrid.md` |
