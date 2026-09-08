@@ -6,6 +6,7 @@ on:
       - 'analysis/w33_static_holoir_counter_bridge.py'
       - 'analysis/w33_steinberg_continuation_control.py'
       - 'analysis/w33_semantic_safe_photonic_macroop.py'
+      - 'analysis/w33_steinberg_photonic_macro_refinement.py'
       - 'analysis/w33_holotrade_joint_admission_fixture.py'
       - 'analysis/w33_holotrade_policy_execution_bundle.py'
       - 'analysis/w33_joint_checkpoint_snapshot_admission.py'
@@ -54,6 +55,21 @@ jobs:
           python-version: '3.11'
       - name: Receipt-preserving photonic macro refinement
         run: python analysis/w33_semantic_safe_photonic_macroop.py
+
+  steinberg-photonic-macro:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install exact algebra dependencies
+        run: pip install numpy sympy networkx
+      - name: Verify sequential macro action on Steinberg-81
+        run: python analysis/w33_steinberg_photonic_macro_refinement.py
 
   policy-execution-bundle:
     runs-on: ubuntu-latest
