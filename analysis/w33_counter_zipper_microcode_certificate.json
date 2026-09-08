@@ -1,0 +1,52 @@
+{
+  "checks": {
+    "addition_refines_24_macrosteps": true,
+    "all_512_macro_refinements_match_independent_stores": true,
+    "all_deep_results_match": true,
+    "deep_carry_borrow_take_8195_ticks": true,
+    "one_opening_and_write_per_tick": true,
+    "pause_preserves_fibre_and_recovers_borrow": true,
+    "pause_requires_more_than_macro_roots": true,
+    "short_guest_commits_after_three_rounds": true
+  },
+  "macro_cases": 512,
+  "paused_borrow": {
+    "checkpoint_bytes": 4994,
+    "continuation_nodes": 24,
+    "macro_nodes": 17
+  },
+  "resource_examples": [
+    {
+      "case": "full-carry",
+      "exact": true,
+      "macro_openings": 4096,
+      "max_openings_per_tick": 1,
+      "max_writes_per_tick": 1,
+      "microticks": 8195
+    },
+    {
+      "case": "full-borrow",
+      "exact": true,
+      "macro_openings": 4097,
+      "max_openings_per_tick": 1,
+      "max_writes_per_tick": 1,
+      "microticks": 8195
+    },
+    {
+      "case": "large-even-increment",
+      "exact": true,
+      "macro_openings": 1,
+      "max_openings_per_tick": 1,
+      "max_writes_per_tick": 1,
+      "microticks": 3
+    }
+  ],
+  "round_robin": {
+    "long_macrosteps": 0,
+    "rounds_to_short_commit": 3,
+    "short_macrosteps": 1
+  },
+  "schema": "w33.counter-zipper-microcode.v1",
+  "scope": "Bounded bit-node work per tick, not bounded total time, wire bytes, validation, RAM or energy. Trusted genesis/continuations, serialized owner operations, finite collision-free hashes.",
+  "status": "PASS"
+}

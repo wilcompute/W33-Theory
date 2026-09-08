@@ -30140,6 +30140,18 @@ deliberately &mdash; including the parts that turned out to be wrong.</p>
     CPU scheduling, peak RAM and crash recovery remain separate obligations.</p>
   <p><a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/W33_JOINT_SNAPSHOT_ADMISSION.md">Architecture, set-union knapsack prior art and regression evidence</a></p>
 </section>
+<section id="counter-zipper-microcode" class="result-card">
+  <h2>Counter arithmetic can pause inside a carry</h2>
+  <p>A verified microstep opens at most one bit node and writes at most one.
+    A 4,096-bit carry or borrow takes 8,195 interruptible ticks and matches
+    the existing counter ISA. In a one-tick round robin, a short increment
+    commits after three rounds while the long carry is still scanning.</p>
+  <p>Paused execution has storage of its own: one borrow needs 24 live nodes
+    although its committed registers reach only 17. Checkpoints preserve the
+    full continuation and both fibre tags. These are node-access bounds;
+    total time, wire bytes, RAM and durable publication remain separate.</p>
+  <p><a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/W33_COUNTER_ZIPPER_MICROCODE.md">Virtual hardware, zipper prior art, measured witnesses and recovery tests</a></p>
+</section>
 </body>
 
 </html>

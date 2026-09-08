@@ -1,0 +1,32 @@
+\subsection{Preemptible authenticated counter microcode}
+\label{ssec:counter-zipper-microcode}
+The existing authenticated counter ISA admits a persistent path-context
+implementation, specializing Huet's zipper rather than asserting a new
+data-structure theorem. A trusted continuation carries the committed guest
+state, both fibre tags, a phase, and cursor, stack and result roots.
+\texttt{SCAN} consumes one carry/borrow digit; \texttt{UNWIND} rebuilds one;
+\texttt{COMMIT} emits the existing portal route. Each tick opens at most one
+canonical bit node and writes at most one. Only a verified final continuation
+changes the committed guest registers and program counter.
+
+A propagated prefix of length $k$ takes $2k+3$ ticks. The finite-prefix
+scan and unwind terminate and refine the existing macro instruction.
+For a $4096$-bit carry or borrow, the witness gives $8195$ ticks, with the
+same result as the independent macro verifier; all $512$ small cases agree.
+A short increment commits after three one-tick scheduling rounds while a
+long carry remains uncommitted. This bounds bit-node work, not wall-clock
+latency, program validation, wire bytes, RAM or physical gate cost.
+
+Retention must cover the continuation, not just the visible guest registers:
+a paused borrow has $17$ nodes under the committed roots but $24$ under the
+complete live roots. A full-closure checkpoint retains both fibre tags,
+recovers under a trusted continuation identity, and survives collection while
+its archive reference is strong. A hash-only audit reference does not retain
+its bytes. The scalable counter semantics supply the universality argument;
+a finite controller or fixed finite hash space alone does not.
+The executable, frozen certificate and adversarial recovery tests are
+\texttt{w33\_counter\_zipper\_microcode.py},
+\texttt{w33\_counter\_zipper\_microcode\_certificate.json} and
+\texttt{test\_w33\_counter\_zipper\_microcode.py}.
+Prior art, the phase argument and implementation limits are recorded in
+\texttt{analysis/W33\_COUNTER\_ZIPPER\_MICROCODE.md}.

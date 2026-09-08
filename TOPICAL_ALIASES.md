@@ -10,7 +10,7 @@ to guess: `grep -i gow TOPICAL_ALIASES.md` reaches
 `2026-07-15_pass355_sp43_frobenius_schur.md`, which no search for
 "phase" or "complex structure" ever would.
 
-Files scanned: **4502** · distinct tokens: **856**
+Files scanned: **4506** · distinct tokens: **858**
 
 Tokens marked ⚠ appear ONLY in topically opaque filenames (dated or
 numbered), so they are invisible to any topic search — read those first.
@@ -566,6 +566,7 @@ numbered), so they are invisible to any topic search — read those first.
 - `named:Artin` ⚠ — [2026-07-08_pass76_QEC_codes_alpha_code.md](analysis/2026-07-08_pass76_QEC_codes_alpha_code.md), [2026-07-15_pass79_fractal_tqc_scaling.md](analysis/2026-07-15_pass79_fractal_tqc_scaling.md)
 - `named:Assmus` — [PART_DCMLXIV_ASSMUS_MATTSON.md](manuscripts/parts/PART_DCMLXIV_ASSMUS_MATTSON.md)
 - `named:Bekenstein` — [PART_CCLVII_HAWKING_RADIATION_BRIDGE.md](manuscripts/parts/PART_CCLVII_HAWKING_RADIATION_BRIDGE.md), [PART_CCXIX_BLACK_HOLE_ENTROPY_BRIDGE.md](manuscripts/parts/PART_CCXIX_BLACK_HOLE_ENTROPY_BRIDGE.md), [PART_CCXLIII_ONE_PHOTON_HOLOGRAPHIC_BRIDGE.md](manuscripts/parts/PART_CCXLIII_ONE_PHOTON_HOLOGRAPHIC_BRIDGE.md)
+- `named:Bennett` — [W33_HOLOVM_PROCESS_KERNEL.md](analysis/W33_HOLOVM_PROCESS_KERNEL.md)
 - `named:Berge` ⚠ — [w33_pass1972_1977_it_is_a_resolvable_design_question.md](analysis/w33_pass1972_1977_it_is_a_resolvable_design_question.md), [w33_pass1978_1982_the_one_over_q_law_is_proved.md](analysis/w33_pass1978_1982_the_one_over_q_law_is_proved.md)
 - `named:Bonnet` — [404.html](docs/404.html), [COMPLETE_SUMMARY.md](docs/COMPLETE_SUMMARY.md), [exceptional-geometry-41a8d733.html](docs/exceptional-geometry-41a8d733.html), [full-site-2026-08-06.html](docs/full-site-2026-08-06.html), [index.html](docs/index.html)
 - `named:Boppana` — [PART_CCCCCXXVIII_RAMANUJAN_MIXING_AND_EXPANSION.md](manuscripts/parts/PART_CCCCCXXVIII_RAMANUJAN_MIXING_AND_EXPANSION.md)
@@ -621,6 +622,7 @@ numbered), so they are invisible to any topic search — read those first.
 - `named:Firewall` — [COMPLETE_TOE_FEB4_2026.md](docs/archive/COMPLETE_TOE_FEB4_2026.md), [STATUS_COMPLETE_FEB4_2026.md](docs/archive/STATUS_COMPLETE_FEB4_2026.md)
 - `named:Fisher` — [PART_CCCXLVIII_ABSOLUTE_BOUND_BRIDGE.md](manuscripts/parts/PART_CCCXLVIII_ABSOLUTE_BOUND_BRIDGE.md)
 - `named:Flow` — [PART_DCCXXXII_CLOSURE_CLOCK_CODEC_FLOW_BRIDGE.md](manuscripts/parts/PART_DCCXXXII_CLOSURE_CLOCK_CODEC_FLOW_BRIDGE.md)
+- `named:Fork` — [W33_HOLOVM_PROCESS_KERNEL.md](analysis/W33_HOLOVM_PROCESS_KERNEL.md)
 - `named:Formal` — [NOVEL_CONNECTIONS_2026_02_10.md](docs/NOVEL_CONNECTIONS_2026_02_10.md), [README_LIVING_PAPER_2026_02_11.md](docs/README_LIVING_PAPER_2026_02_11.md), [COMPLETE_TOE_FEB4_2026.md](docs/archive/COMPLETE_TOE_FEB4_2026.md)
 - `named:Foster` — [PART_MCLI_KIRCHHOFF_SPANNING_TREE.md](manuscripts/parts/PART_MCLI_KIRCHHOFF_SPANNING_TREE.md)
 - `named:Fourier` ⚠ — [BT1516_BT1520_five_frontiers.md](analysis/BT1516_BT1520_five_frontiers.md), [BT3262_BT3265_signature_s3_affine_lift_insert.tex](analysis/BT3262_BT3265_signature_s3_affine_lift_insert.tex), [PASS440_444_RESERVATIONS.md](analysis/PASS440_444_RESERVATIONS.md), [PASS5074_5081_theta_distance_decoder_bonkers_insert.tex](analysis/PASS5074_5081_theta_distance_decoder_bonkers_insert.tex), [PASS5848_5855_collision_recovered_eight_probe_insert.tex](analysis/PASS5848_5855_collision_recovered_eight_probe_insert.tex), [PASS5848_5855_index_insert.html](analysis/PASS5848_5855_index_insert.html)
