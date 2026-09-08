@@ -1,0 +1,71 @@
+name: HoloVM breakthrough frontier
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_static_holoir_counter_bridge.py'
+      - 'analysis/w33_steinberg_continuation_control.py'
+      - 'analysis/w33_semantic_safe_photonic_macroop.py'
+      - 'analysis/w33_holotrade_joint_admission_fixture.py'
+      - 'analysis/w33_holotrade_policy_execution_bundle.py'
+      - 'analysis/w33_joint_checkpoint_snapshot_admission.py'
+      - '.github/workflows/w33_holovm_breakthrough_frontier.yml'
+  pull_request:
+  workflow_dispatch:
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  static-counter:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Static HoloIR to multi-counter to two-counter bridge
+        run: python analysis/w33_static_holoir_counter_bridge.py
+
+  steinberg-control:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install exact algebra dependencies
+        run: pip install numpy sympy networkx
+      - name: Bind all 80 qutrit transvections to real continuation receipts
+        run: python analysis/w33_steinberg_continuation_control.py
+
+  semantic-macro:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Receipt-preserving photonic macro refinement
+        run: python analysis/w33_semantic_safe_photonic_macroop.py
+
+  policy-execution-bundle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Joint checkpoint snapshot policy theorem
+        run: python analysis/w33_joint_checkpoint_snapshot_admission.py
+      - name: Compact Holotrade policy handoff
+        run: python analysis/w33_holotrade_joint_admission_fixture.py | python -m json.tool >/dev/null
+      - name: Coherent real policy plus execution bundle
+        run: python analysis/w33_holotrade_policy_execution_bundle.py | python -m json.tool >/dev/null
