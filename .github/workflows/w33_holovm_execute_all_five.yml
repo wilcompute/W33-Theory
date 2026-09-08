@@ -1,0 +1,67 @@
+name: HoloVM five-front breakthrough suite
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_steinberg_control_artifact_cache.py'
+      - 'analysis/w33_twelve_step_control_cancellation.py'
+      - 'analysis/w33_capability_holoir_counter_bridge.py'
+      - 'analysis/w33_attested_accelerator_macro.py'
+      - 'analysis/w33_steinberg_photonic_macro_refinement.py'
+      - 'analysis/w33_steinberg_continuation_control.py'
+      - 'analysis/w33_static_holoir_counter_bridge.py'
+      - 'analysis/w33_static_wasm_holoir_compiler.py'
+      - 'analysis/w33_semantic_safe_photonic_macroop.py'
+      - '.github/workflows/w33_holovm_execute_all_five.yml'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  finite-control-cache-and-cancellation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install exact algebra dependencies
+        run: pip install numpy sympy networkx
+      - name: Process-safe Steinberg compiled-artifact cache
+        run: python analysis/w33_steinberg_control_artifact_cache.py
+      - name: Twelve-step finite-control cancellation theorem
+        run: python analysis/w33_twelve_step_control_cancellation.py
+
+  capability-static-counter-bridge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Existing static Wasm to authenticated HoloIR regression
+        run: python analysis/w33_static_wasm_holoir_compiler.py
+      - name: Structured-control static counter regression
+        run: python analysis/w33_static_holoir_counter_bridge.py
+      - name: Capability HoloIR calls globals memory imports to counter core
+        run: python analysis/w33_capability_holoir_counter_bridge.py
+
+  attested-accelerator-certificate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install exact algebra dependencies
+        run: pip install numpy sympy networkx
+      - name: Reverify Steinberg-safe sequential macro refinement
+        run: python analysis/w33_steinberg_photonic_macro_refinement.py
+      - name: Export and verify attestation-ready accelerator certificate
+        run: python analysis/w33_attested_accelerator_macro.py
