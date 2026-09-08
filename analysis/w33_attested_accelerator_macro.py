@@ -5,14 +5,11 @@ The Steinberg-safe macro theorem already proves finite-control equivalence for
 all reported windows.  This module turns the strongest real-trace window into a
 small cross-repository ABI object that Holotrade can bind into measured boot.
 
-The certificate commits:
-  * exact parent/child continuation tuple and generations;
-  * receipt-chain and continuation-chain digests;
-  * explicit HoloVM->Steinberg symplectic frame;
-  * Steinberg basis/action-table identities;
-  * sequential Sp(4,3) endpoint and Steinberg-81 action;
-  * executable time-order transvection word;
-  * calibration epoch namespace.
+The certificate commits the full authenticated interval as well as its compact
+chain digests, so a consumer can verify that a returned execution is exactly the
+same receipt/continuation sequence rather than merely trusting an opaque hash.
+It also commits the corrected HoloVM->Steinberg frame, Steinberg basis/action
+table, sequential group endpoint, executable control word and calibration epoch.
 
 No physical calibration evidence is fabricated.  ``physicalCalibrationEvidenceDigest``
 is null, so the certificate is suitable for software/control attestation only.
@@ -47,6 +44,12 @@ def build() -> dict[str, Any]:
     window = rows[start:start + width]
     if len(window) != width:
         raise AssertionError("selected accelerator window escaped real trace")
+    subreceipts = [x.receipt.receipt_id for x in window]
+    intermediate = [x.child.continuation_id for x in window]
+    if digest(subreceipts) != best["receipt_chain_digest"]:
+        raise AssertionError("receipt-chain digest drift")
+    if digest(intermediate) != best["continuation_chain_digest"]:
+        raise AssertionError("continuation-chain digest drift")
     body = {
         "schema": "w33.attested-accelerator-macro.v1",
         "machineType": "w33.circuit216.steinberg81",
@@ -57,6 +60,8 @@ def build() -> dict[str, Any]:
         "generationAfter": window[-1].child.generation,
         "windowStart": start,
         "windowWidth": width,
+        "subreceiptIds": subreceipts,
+        "intermediateContinuationRoots": intermediate,
         "receiptChainDigest": best["receipt_chain_digest"],
         "continuationChainDigest": best["continuation_chain_digest"],
         "symplecticFrameDigest": digest(SYMPLECTIC_FRAME),
@@ -81,7 +86,9 @@ def verify_certificate(cert: dict[str, Any]) -> dict[str, Any]:
         "content_digest_matches": cert.get("acceleratorCertificateDigest") == digest({k: v for k, v in cert.items() if k != "acceleratorCertificateDigest"}),
         "rebuild_is_deterministic": cert == fresh,
         "real_window_advances_generation_exactly_by_width": cert["generationAfter"] - cert["generationBefore"] == cert["windowWidth"],
-        "receipt_and_continuation_chains_are_committed": cert["receiptChainDigest"].startswith("sha256:") and cert["continuationChainDigest"].startswith("sha256:"),
+        "full_subreceipt_interval_matches_digest": len(cert["subreceiptIds"]) == cert["windowWidth"] and digest(cert["subreceiptIds"]) == cert["receiptChainDigest"],
+        "full_continuation_interval_matches_digest": len(cert["intermediateContinuationRoots"]) == cert["windowWidth"] and digest(cert["intermediateContinuationRoots"]) == cert["continuationChainDigest"],
+        "interval_terminates_at_certified_child": cert["intermediateContinuationRoots"][-1] == cert["childContinuationRoot"],
         "corrected_symplectic_frame_is_committed": cert["symplecticFrameDigest"] == digest(SYMPLECTIC_FRAME),
         "software_certificate_does_not_fake_physical_calibration": cert["physicalCalibrationEvidenceDigest"] is None,
     }
