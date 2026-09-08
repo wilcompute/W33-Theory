@@ -12,6 +12,12 @@ CI without weakening their semantics:
 The compact execution policy remains the identity used by Holotrade pricing and
 attestation.  The strict handoff adds jointPlanDigest and proves the worker's
 policy-keyed retained delta equals W33's baseline-aware set-union delta.
+
+The full handoff contains floating policy diagnostics. Python and JavaScript
+JSON serializers do not preserve the lexical distinction 0.0 versus 0, so the
+bundle also exports a strictBinding projection containing only strings, natural
+numbers and arrays of strings. Its digest is therefore cross-language stable
+under the repositories' shared sorted compact JSON convention.
 """
 from __future__ import annotations
 
@@ -30,12 +36,12 @@ from w33_typed_universal_microvm import Carrier, add_r1_into_r0_program
 
 SCHEMA = "w33.holotrade-strict-policy-execution-bundle.v1"
 POLICY_SCHEMA = "w33.holotrade-joint-admission-policy.v1"
+BINDING_SCHEMA = "w33.holotrade-strict-binding.v1"
 
 
 def plan_for(parent_root: str, process_id: str, generation: int):
     requests = witness_requests()
     archive, registry = ContentStore(), RootRegistry()
-    # Exercise the semantic distinction delta != post retained total.
     foreign = archive.put({"kind": "strict-crossrepo-live", "bytes": "baseline" * 31})
     registry.pin("LIVE_VM", "strict-crossrepo-baseline", foreign, "STRONG")
     baseline = strict.retained_payload_bytes(archive, registry)
@@ -72,13 +78,34 @@ def plan_for(parent_root: str, process_id: str, generation: int):
         "combinedBytes": row["combined_bytes"],
         "capacityBytes": row["capacity_bytes"],
         "snapshotProblemRoot": row["snapshot_plan"]["problem_root"],
-        # Compact-policy placement digest intentionally preserves the existing
-        # policy schema; the strict handoff carries its stronger namespaced
-        # placement digest separately and both are checked against source data.
         "placementDigest": joint.digest(row["placement"]),
     }
     policy = {**body, "executionPolicyDigest": joint.digest(body), "status": "PASS"}
     return plan, handoff, policy, baseline
+
+
+def strict_binding(handoff: dict, policy: dict) -> dict:
+    body = {
+        "schema": BINDING_SCHEMA,
+        "executionPolicyDigest": policy["executionPolicyDigest"],
+        "handoffDigest": handoff["handoffDigest"],
+        "continuationRoot": handoff["continuationRoot"],
+        "processId": handoff["processId"],
+        "generation": handoff["generation"],
+        "problemRoot": handoff["problemRoot"],
+        "jointPlanDigest": handoff["jointPlanDigest"],
+        "strategyDigest": handoff["strategyDigest"],
+        "placementDigest": handoff["placementDigest"],
+        "snapshotProblemRoot": handoff["snapshotProblemRoot"],
+        "baselineRetainedUnionBytes": handoff["baselineRetainedUnionBytes"],
+        "postAdmissionRetainedUnionBytes": handoff["postAdmissionRetainedUnionBytes"],
+        "retainedUnionDeltaBytes": handoff["retainedUnionDeltaBytes"],
+        "checkpointPeakBytes": handoff["checkpointPeakBytes"],
+        "combinedPolicyBytes": handoff["combinedPolicyBytes"],
+        "capacityBytes": handoff["capacityBytes"],
+        "selectedSnapshotIds": list(handoff["selectedSnapshotIds"]),
+    }
+    return {**body, "strictBindingDigest": digest(body)}
 
 
 def build() -> dict:
@@ -89,6 +116,7 @@ def build() -> dict:
     parent = kernel.ADMIT("strict-policy-parent", program, state, memory, FibreProductAddress(0,0,0), passport)
     proc, _ = kernel.RESUME(parent)
     plan, handoff, policy, baseline = plan_for(parent.root, proc.process_id, proc.generation)
+    binding = strict_binding(handoff, policy)
     run = kernel.RUN(parent, fuel=1, owner="strict-policy-child")
     execution = {
         "schema":"w33.holovm-cross-repo-execution.v1",
@@ -108,6 +136,7 @@ def build() -> dict:
         "strict_checkpoint_equals_policy_checkpoint": handoff["checkpointPeakBytes"] == policy["checkpointPeakBytes"],
         "strict_capacity_equals_policy_capacity": handoff["capacityBytes"] == policy["capacityBytes"],
         "strict_delta_is_baseline_aware": handoff["retainedUnionDeltaBytes"] == policy["snapshotPayloadBytes"] - baseline and handoff["retainedUnionDeltaBytes"] < policy["snapshotPayloadBytes"],
+        "binding_commits_policy_and_handoff": binding["executionPolicyDigest"] == policy["executionPolicyDigest"] and binding["handoffDigest"] == handoff["handoffDigest"],
         "real_kernel_advanced": execution["generationAfter"] == execution["generationBefore"] + 1 and len(execution["guestReceiptIds"]) == 1,
     }
     assert all(checks.values()), checks
@@ -115,6 +144,7 @@ def build() -> dict:
         "schema":SCHEMA,"status":"PASS","checks":checks,
         "executionPolicy":policy,
         "jointAdmissionHandoff":handoff,
+        "strictBinding":binding,
         "execution":execution,
         "source":{"programImage":program.image_id,"passportId":passport,"kernelEventCount":len(kernel.events)},
         "boundary":"Software identity/accounting bundle. retainedUnionDeltaBytes is exact canonical STRONG-root set-union growth, not checkpoint peak, network transfer truth, physical RAM, Joules or durability evidence."
