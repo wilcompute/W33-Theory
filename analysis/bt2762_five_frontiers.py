@@ -14,7 +14,8 @@ def main():
     cx_fp = mm(mm(TRANSPOSE, CX_PF), TRANSPOSE)
     f_synth = mm(inv(F_F), F_P)
     checks['transpose_involution'] = mm(TRANSPOSE, TRANSPOSE) == I
-    checks['transpose_multiplier_minus_one'] = mm(mm(tr(TRANSPOSE), J), TRANSPOSE) == tuple((tuple()-x % 3 for x in row)) for row in J))
+    minus_j = tuple(tuple((-x) % 3 for x in row) for row in J)
+    checks['transpose_multiplier_minus_one'] = mm(mm(tr(TRANSPOSE), J), TRANSPOSE) == minus_j
     checks['transpose_outer'] = TRANSPOSE not in group
     checks['transpose_normalizes_generators'] = all((mm(mm(TRANSPOSE, g), TRANSPOSE) in group for g in GENERATORS))
     checks['transpose_reverses_cx'] = cx_fp == ((1, 0, 1, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 2, 0, 1))
@@ -84,8 +85,7 @@ def main():
     base_state = {'frame': (0, 0, 0, 0), 'mirror': (0, 0), 'magic_pending': False, 'magic_ray': 0, 'magic_consumed': 0, 'fault': False, 'retired': False}
     isa_ok = True
     for frame in itertools.product(range(3), repeat=4):
-        st = dict(base_state)
-        st['frame'] = frame
+        st = dict(base_state); st['frame'] = frame
         for opcode in range(6):
             operands = (0, 1) if opcode in (4, 5) else (None,)
             for operand in operands:
@@ -95,39 +95,28 @@ def main():
     d12 = [(r, s) for r in range(6) for s in range(2)]
     isa_ok &= len({d12_mul(a, b) for a in d12 for b in d12}) == 12
     isa_ok &= all((d12_mul(d12_mul(a, b), c) == d12_mul(a, d12_mul(b, c)) for a in d12 for b in d12 for c in d12))
-    req = isa_step(base_state, 7, 35)
-    ack = isa_step(req, 0, magic_ack=True)
-    bad = isa_step(base_state, 7, 36)
+    req = isa_step(base_state, 7, 35); ack = isa_step(req, 0, magic_ack=True); bad = isa_step(base_state, 7, 36)
     isa_ok &= req['magic_pending'] and (not req['retired'])
     isa_ok &= not ack['magic_pending'] and ack['magic_consumed'] == 1 and ack['retired']
     isa_ok &= bad['fault']
     checks['eight_opcode_isa_contract'] = isa_ok and len(opcodes) == 8
     program = [(0, None), (3, None), (4, 0), (5, 1), (6, (2, 1)), (7, 17)]
-    st = dict(base_state)
-    trace_rows = []
+    st = dict(base_state); trace_rows = []
     for opcode, operand in program:
-        st = isa_step(st, opcode, operand)
-        trace_rows.append({'opcode': opcode, 'operand': operand, 'state': dict(st)})
+        st = isa_step(st, opcode, operand); trace_rows.append({'opcode': opcode, 'operand': operand, 'state': dict(st)})
         if opcode == 7:
-            st = isa_step(st, 0, magic_ack=True)
-            trace_rows.append({'event': 'magic_ack', 'state': dict(st)})
+            st = isa_step(st, 0, magic_ack=True); trace_rows.append({'event': 'magic_ack', 'state': dict(st)})
     checks['end_to_end_program_retires'] = st['magic_consumed'] == 1 and (not st['fault'])
-    if not all(checks.values()):
-        failed = [k for k, v in checks.items() if not v]
-        raise AssertionError(f'failed checks: {failed}')
+    if not all(checks.values()): raise AssertionError(f"failed checks: {[k for k, v in checks.items() if not v]}")
     out_root = Path(__file__).resolve().parents[1]
     atlas = {'schema': 'w33.sp43.geometric_gate_class_atlas.v1', 'group_order': len(group), 'class_count': len(atlas_rows), 'carrier_sizes': {'points': len(points), 'lines': len(lines), 'flags': len(flags), 'edges': len(edges), 'apartments': len(apartments)}, 'projective_signature_count': len(projective_decoder), 'projective_decoder': dict(projective_decoder), 'rows': atlas_rows}
     atlas_path = out_root / 'data' / 'PART_BT2764_SP43_GEOMETRIC_GATE_CLASS_ATLAS.json.gz'
-    atlas_bytes = (json.dumps(atlas, indent=2, sort_keys=True) + '\n').encode('utf-8')
-    atlas_path.write_bytes(gzip.compress(atlas_bytes, compresslevel=9, mtime=0))
+    atlas_bytes = (json.dumps(atlas, indent=2, sort_keys=True) + '\n').encode('utf-8'); atlas_path.write_bytes(gzip.compress(atlas_bytes, compresslevel=9, mtime=0))
     cert = {'schema': 'w33.bt2762_2766.five_frontiers.v1', 'checks': checks, 'transpose_direction_reversal': {'transpose': TRANSPOSE, 'cx_p_to_f': CX_PF, 'cx_f_to_p': cx_fp, 'local_fourier_conjugator': f_synth, 'identity': 'CX_f->p=(F_p F_f^-1) CX_p->f (F_p^-1 F_f)', 'cx_class': matrix_class[CX_PF], 'transpose_class_swaps': transpose_swaps}, 'centralizer': {'order': len(centralizer), 'structure': 'C6 x C3 x S3', 'center_order': len(center), 'derived_order': len(derived), 'order_census': dict(sorted(Counter((order(g) for g in centralizer)).items())), 'C6_generator': z6, 'C3_generator': z3, 'S3_order3_generator': s3a, 'S3_order2_generator': s3b, 'fixed_axis_line': axis, 'fixed_external_lines': sorted(external_lines), 'pencils_by_axis_point': {str(k[0]): sorted(v) for k, v in sorted(pencils.items())}, 'fringe_action': 'S3 regular on six external fixed lines; central C3 rotates both three-line pencils'}, 'atlas': {'path': str(atlas_path.relative_to(out_root)), 'sha256': hashlib.sha256(atlas_path.read_bytes()).hexdigest(), 'class_count': 34, 'projective_signature_count': 15}, 'physical_sum_compiler': physical_compiler, 'isa': {'opcodes': opcodes, 'cx_direction_operand': {'0': 'p->f', '1': 'f->p'}, 'z_register_operand': {'0': 'past', '1': 'future'}, 'mirror_operand': '(rotation mod 6, reflection bit), left multiplication in D12', 'magic_operand': 'ray index 0..35; retires only on external magic_ack', 'magic_grade_encoding': {'0': 'deep', '1': 'mid', '2': 'shallow'}, 'magic_grade_map_bt822_order': list(MAGIC_GRADE_MAP), 'program_trace': trace_rows}}
-    cert_path = out_root / 'data' / 'PART_BT2762_BT2766_FIVE_FRONTIERS_results.json'
-    cert_path.write_text(json.dumps(cert, indent=2, sort_keys=True) + '\n', encoding='utf-8')
+    cert_path = out_root / 'data' / 'PART_BT2762_BT2766_FIVE_FRONTIERS_results.json'; cert_path.write_text(json.dumps(cert, indent=2, sort_keys=True) + '\n', encoding='utf-8')
     print(f'PASS {sum((bool(v) for v in checks.values()))}/{len(checks)} checks')
     print(f'group={len(group)} classes={len(atlas_rows)} apartments={len(apartments)}')
     print(f'centralizer={len(centralizer)} structure=C6xC3xS3')
     print(f"atlas_sha256={cert['atlas']['sha256']}")
-    print(f'wrote {cert_path}')
-    print(f'wrote {atlas_path}')
-if __name__ == '__main__':
-    main()
+    print(f'wrote {cert_path}'); print(f'wrote {atlas_path}')
+if __name__ == '__main__': main()
