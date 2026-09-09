@@ -1,0 +1,31 @@
+{
+  "schema": "w33.determinism-prediction-boundary.v1",
+  "status": "PASS",
+  "deterministic_transition_semantics": true,
+  "bounded_predictor": "HALTS-or-UNKNOWN semidecider",
+  "finite_horizon_counterexamples": [
+    {"fuel":1,"program":"delayed-halt-3","bounded_verdict":"UNKNOWN","eventual_verdict_with_more_fuel":"HALTS","eventual_steps":4},
+    {"fuel":2,"program":"delayed-halt-4","bounded_verdict":"UNKNOWN","eventual_verdict_with_more_fuel":"HALTS","eventual_steps":5},
+    {"fuel":3,"program":"delayed-halt-5","bounded_verdict":"UNKNOWN","eventual_verdict_with_more_fuel":"HALTS","eventual_steps":6},
+    {"fuel":4,"program":"delayed-halt-6","bounded_verdict":"UNKNOWN","eventual_verdict_with_more_fuel":"HALTS","eventual_steps":7},
+    {"fuel":5,"program":"delayed-halt-7","bounded_verdict":"UNKNOWN","eventual_verdict_with_more_fuel":"HALTS","eventual_steps":8},
+    {"fuel":6,"program":"delayed-halt-8","bounded_verdict":"UNKNOWN","eventual_verdict_with_more_fuel":"HALTS","eventual_steps":9},
+    {"fuel":7,"program":"delayed-halt-9","bounded_verdict":"UNKNOWN","eventual_verdict_with_more_fuel":"HALTS","eventual_steps":10},
+    {"fuel":8,"program":"delayed-halt-10","bounded_verdict":"UNKNOWN","eventual_verdict_with_more_fuel":"HALTS","eventual_steps":11},
+    {"fuel":9,"program":"delayed-halt-11","bounded_verdict":"UNKNOWN","eventual_verdict_with_more_fuel":"HALTS","eventual_steps":12},
+    {"fuel":10,"program":"delayed-halt-12","bounded_verdict":"UNKNOWN","eventual_verdict_with_more_fuel":"HALTS","eventual_steps":13},
+    {"fuel":11,"program":"delayed-halt-13","bounded_verdict":"UNKNOWN","eventual_verdict_with_more_fuel":"HALTS","eventual_steps":14},
+    {"fuel":12,"program":"delayed-halt-14","bounded_verdict":"UNKNOWN","eventual_verdict_with_more_fuel":"HALTS","eventual_steps":15},
+    {"fuel":13,"program":"delayed-halt-15","bounded_verdict":"UNKNOWN","eventual_verdict_with_more_fuel":"HALTS","eventual_steps":16},
+    {"fuel":14,"program":"delayed-halt-16","bounded_verdict":"UNKNOWN","eventual_verdict_with_more_fuel":"HALTS","eventual_steps":17},
+    {"fuel":15,"program":"delayed-halt-17","bounded_verdict":"UNKNOWN","eventual_verdict_with_more_fuel":"HALTS","eventual_steps":18},
+    {"fuel":16,"program":"delayed-halt-18","bounded_verdict":"UNKNOWN","eventual_verdict_with_more_fuel":"HALTS","eventual_steps":19}
+  ],
+  "known_diverger_bounded_results": [
+    {"fuel":1,"verdict":"UNKNOWN","steps":1},{"fuel":2,"verdict":"UNKNOWN","steps":2},{"fuel":4,"verdict":"UNKNOWN","steps":4},{"fuel":8,"verdict":"UNKNOWN","steps":8},{"fuel":16,"verdict":"UNKNOWN","steps":16},{"fuel":32,"verdict":"UNKNOWN","steps":32},{"fuel":64,"verdict":"UNKNOWN","steps":64}
+  ],
+  "never_infer_nonhalt_from_fuel_exhaustion": true,
+  "universal_boundary": {"repository_core":"finite INC/DECJZ/HALT two-counter programs with unbounded natural counters","bridge":"analysis/w33_static_holoir_counter_bridge.py","statement":"Under ordinary Turing-computability assumptions, a total all-program HALT/NONHALT predictor would decide the halting problem; deterministic laws therefore do not imply a universal prediction oracle."},
+  "separation": ["deterministic transition law","state knowledge","computable prediction for a particular instance","efficient prediction","total all-instance decidability"],
+  "boundary": "Executable part proves finite-fuel semidecision discipline; the no-total-predictor statement is the standard computability consequence of universal two-counter semantics."
+}
