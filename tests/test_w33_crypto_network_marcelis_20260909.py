@@ -25,8 +25,6 @@ def test_contextual_decryption_global_section_boundary():
     assert row["W33"]["global_keys"] == 0
     assert row["contextuality_quantities"]["abramsky_barbosa_contextual_fraction"] == 1
     assert row["contextuality_quantities"]["ks_satisfiability_defect"] == "1/10"
-    # Negative result is part of the theorem firewall: this weak linearization
-    # is soluble and therefore must not be sold as the contextuality witness.
     assert row["linearized_cohomology_probe"]["F2"]["solvable"] is True
     assert row["linearized_cohomology_probe"]["F3"]["solvable"] is True
 
@@ -108,6 +106,7 @@ def test_marcelis_gf4_trace_gauge():
     m = load("analysis/w33_marcelis_gf4_trace_gauge.py", "w33_marcelis_trace")
     row = m.build_result()
     assert row["status"] == "PASS"
+    assert row["schema"] == "w33.marcelis-gf4-trace-gauge.v2"
     assert row["marcelis_source_gauge"]["trace_table"] == {
         "0": 0, "1": 0, "omega": 1, "omega^2": 1
     }
@@ -117,7 +116,11 @@ def test_marcelis_gf4_trace_gauge():
         "1": 1, "2": 2, "4": 4, "8": 8
     }
     assert row["checks"]["marcelis_plane_examples_reproduced"] is True
-    assert row["checks"]["marcelis_complement_examples_reproduced"] is True
+    assert row["checks"]["complement_algebra_matches_source_decimal_list"] is True
+    assert row["checks"]["source_complement_binary_has_exact_two_entry_transposition"] is True
+    assert row["marcelis_source_gauge"]["source_binary_mismatch_positions_zero_based"] == [3, 4]
+    assert row["marcelis_source_gauge"]["complement_algebraic_bits"][3:5] == ["0111", "1001"]
+    assert row["marcelis_source_gauge"]["complement_source_printed_bits"][3:5] == ["1001", "0111"]
     assert row["checks"]["raw_coordinate_trace_fails_projective_invariance"] is True
     assert row["checks"]["omega_gauge_is_representative_invariant"] is True
     assert all(row["checks"].values())
