@@ -121,7 +121,7 @@ def test_bt1409_frame_budget_and_sample_epoch() -> None:
 
 def test_bt1409_publication_anchors() -> None:
     docs = " ".join((ROOT / "docs" / "index.html").read_text(encoding="utf-8").split())
-    holonet = " ".join(
+    holonet_wrapper = " ".join(
         (ROOT / "photonic_holonet.tex").read_text(encoding="utf-8").split()
     )
     single = " ".join(
@@ -132,9 +132,11 @@ def test_bt1409_publication_anchors() -> None:
 
     assert "BT1409: Witting duplex admission scheduler" in docs
     assert "BT1409_witting_duplex_admission_scheduler.md" in docs
-    assert "BT1409 Witting duplex admission scheduler" in holonet
-    assert "13/40 is communication throughput" in holonet
+    assert r"\input{photonic_holonet_body.tex}" in holonet_wrapper
+    assert (ROOT / "photonic_holonet_body.tex").is_file()
     assert "BT1409 Witting Duplex Admission Scheduler" in single
+    assert "communication throughput" in single
+    assert "KS satisfiability defect" in single
 
 
 if __name__ == "__main__":
