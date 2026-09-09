@@ -1,10 +1,28 @@
 name: Bootstrap W33 crypto-network-Marcelis certificates
 
 on:
+  workflow_dispatch:
   push:
     branches: [master]
     paths:
       - '.github/workflows/w33_crypto_network_marcelis_freeze_bootstrap.yml'
+      - 'tools/bt1408_witting_contextual_communication_bridge.py'
+      - 'tools/bt1409_witting_duplex_admission_scheduler.py'
+      - 'analysis/w33_contextuality_terminology_migration.py'
+      - 'analysis/w33_support_min_entropy.py'
+      - 'analysis/w33_witting_card_single_photon_protocol.py'
+      - 'analysis/w33_marcelis_multichart_atlas.py'
+      - 'analysis/w33_heawood_chart_fibre_quotient.py'
+      - 'analysis/w33_heawood_spread_pair_270_bridge.py'
+      - 'analysis/w33_marcelis_gf4_trace_gauge.py'
+      - 'analysis/w33_marcelis_pg34_line_trace_census.py'
+      - 'tests/test_bt1408_witting_contextual_communication_bridge.py'
+      - 'tests/test_bt1409_witting_duplex_admission_scheduler.py'
+      - 'tests/test_w33_crypto_network_marcelis_20260909.py'
+      - 'photonic_holonet.tex'
+      - 'photonic_holonet_body.tex'
+      - 'single_photon_universal_computation.tex'
+      - 'docs/index.html'
 
 permissions:
   contents: write
