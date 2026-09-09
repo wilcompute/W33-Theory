@@ -29,15 +29,30 @@ jobs:
           row=json.loads(p.read_text())
           assert row['schema']=='w33.holovm-signed-representation-economics.v1'
           assert row['status']=='PASS'
-          assert len(row['checks'])==9 and all(row['checks'].values())
+          required_checks={
+            'actual_holovm_checkpoint_replay_is_verified',
+            'actual_holovm_routing_is_nontrivial_and_diameter_two',
+            'real_l1_depth1_factor_is_exact_3_over_2',
+            'real_l1_depth2_factor_is_exact_2',
+            'real_l1_depth3_mass24_factor_is_exact_2',
+            'depth3_increases_integer_depth_without_increasing_normalized_A',
+            'representation_swap_preserves_semantic_and_authenticated_work',
+            'resource_vector_has_no_energy_coordinate',
+            'scalarization_refuses_missing_weights',
+            'second_moment_factors_are_exact',
+            'signed_overhead_is_not_folded_into_retention_or_replay',
+          }
+          assert required_checks <= set(row['checks']) and all(row['checks'].values())
           v=row['resource_vectors']
           assert v['positive-depth0']['representation_amplification']=='1'
           assert v['exception-depth1']['representation_amplification']=='3/2'
           assert v['exception-depth1']['signed_sampling_second_moment_factor']=='9/4'
           assert v['exception-depth2']['representation_amplification']=='2'
           assert v['exception-depth2']['signed_sampling_second_moment_factor']=='4'
+          assert v['exception-depth3-mass24']['representation_amplification']=='2'
+          assert v['exception-depth3-mass24']['signed_sampling_second_moment_factor']=='4'
           work=('semantic_guest_steps','w33_route_hops','authenticated_retained_byte_ticks','authenticated_swept_payload_bytes','deterministic_replay_steps')
-          assert all(v['positive-depth0'][k]==v['exception-depth1'][k]==v['exception-depth2'][k] for k in work)
+          assert all(v['positive-depth0'][k]==v['exception-depth1'][k]==v['exception-depth2'][k]==v['exception-depth3-mass24'][k] for k in work)
           assert all('energy' not in k.lower() and 'joule' not in k.lower() for r in v.values() for k in r)
           assert 'not semantic HoloVM ticks' in row['boundary'] and 'joules' in row['boundary']
           print(json.dumps({'status':'PASS','checks':len(row['checks']),'classes':list(v)}))
