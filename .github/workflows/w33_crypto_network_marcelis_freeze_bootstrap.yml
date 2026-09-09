@@ -1,0 +1,55 @@
+name: Bootstrap W33 crypto-network-Marcelis certificates
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - '.github/workflows/w33_crypto_network_marcelis_freeze_bootstrap.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  freeze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install focused dependencies
+        run: python -m pip install --upgrade numpy pytest
+      - name: Regenerate exact certificates
+        run: |
+          python tools/bt1408_witting_contextual_communication_bridge.py
+          python tools/bt1409_witting_duplex_admission_scheduler.py
+          python analysis/w33_support_min_entropy.py
+          python analysis/w33_witting_card_single_photon_protocol.py
+          python analysis/w33_marcelis_multichart_atlas.py
+          python analysis/w33_heawood_chart_fibre_quotient.py
+          python analysis/w33_marcelis_gf4_trace_gauge.py
+      - name: Focused regression gates
+        run: |
+          python -m pytest -q \
+            tests/test_bt1408_witting_contextual_communication_bridge.py \
+            tests/test_bt1409_witting_duplex_admission_scheduler.py \
+            tests/test_w33_crypto_network_marcelis_20260909.py
+      - name: Freeze generated outputs on master
+        shell: bash
+        run: |
+          git add \
+            data/bt1408_witting_contextual_communication_bridge.json \
+            data/bt1409_witting_duplex_admission_scheduler.json \
+            data/w33_support_min_entropy.json \
+            data/w33_witting_card_single_photon_protocol.json \
+            data/w33_marcelis_multichart_atlas.json \
+            data/w33_heawood_chart_fibre_quotient.json \
+            data/w33_marcelis_gf4_trace_gauge.json
+          if git diff --cached --quiet; then
+            echo 'All focused certificates already frozen.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Freeze crypto network Marcelis certificates'
+          git push
