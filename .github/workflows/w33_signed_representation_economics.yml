@@ -1,0 +1,48 @@
+name: W33 signed-representation economics
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_signed_representation_economics.py'
+      - 'analysis/w33_holovm_thermodynamic_ledger.py'
+      - '.github/workflows/w33_signed_representation_economics.yml'
+  workflow_dispatch:
+
+jobs:
+  certify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Execute typed vector ledger
+        run: PYTHONPATH=analysis python analysis/w33_signed_representation_economics.py
+      - name: Audit exported certificate and physical boundary
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('analysis/w33_signed_representation_economics_certificate.json')
+          row=json.loads(p.read_text())
+          assert row['schema']=='w33.holovm-signed-representation-economics.v1'
+          assert row['status']=='PASS'
+          assert len(row['checks'])==9 and all(row['checks'].values())
+          v=row['resource_vectors']
+          assert v['positive-depth0']['representation_amplification']=='1'
+          assert v['exception-depth1']['representation_amplification']=='3/2'
+          assert v['exception-depth1']['signed_sampling_second_moment_factor']=='9/4'
+          assert v['exception-depth2']['representation_amplification']=='2'
+          assert v['exception-depth2']['signed_sampling_second_moment_factor']=='4'
+          work=('semantic_guest_steps','w33_route_hops','authenticated_retained_byte_ticks','authenticated_swept_payload_bytes','deterministic_replay_steps')
+          assert all(v['positive-depth0'][k]==v['exception-depth1'][k]==v['exception-depth2'][k] for k in work)
+          assert all('energy' not in k.lower() and 'joule' not in k.lower() for r in v.values() for k in r)
+          assert 'not semantic HoloVM ticks' in row['boundary'] and 'joules' in row['boundary']
+          print(json.dumps({'status':'PASS','checks':len(row['checks']),'classes':list(v)}))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w33-signed-representation-economics
+          path: analysis/w33_signed_representation_economics_certificate.json
