@@ -124,3 +124,42 @@ def test_marcelis_gf4_trace_gauge():
     assert row["checks"]["raw_coordinate_trace_fails_projective_invariance"] is True
     assert row["checks"]["omega_gauge_is_representative_invariant"] is True
     assert all(row["checks"].values())
+
+
+def test_heawood_execution_cycles_are_the_270_four_intersection_spread_pairs():
+    m = load("analysis/w33_heawood_spread_pair_270_bridge.py", "w33_heawood_270")
+    row = m.build_result()
+    assert row["status"] == "PASS"
+    assert row["counts"]["slot_cycles"] == 270
+    assert row["counts"]["slot_cycle_length"] == 6
+    assert row["counts"]["spreads"] == 36
+    assert row["counts"]["spread_pairs_total"] == 630
+    assert row["counts"]["spread_pairs_intersection_1"] == 360
+    assert row["counts"]["spread_pairs_intersection_4"] == 270
+    assert row["checks"]["slot_graph_is_270_disjoint_C6"] is True
+    assert row["checks"]["C6_axis_unions_biject_to_four_intersection_spread_symdiffs"] is True
+    assert row["checks"]["cycle_order_alternates_between_the_two_spread_sides"] is True
+    assert all(row["checks"].values())
+
+
+def test_marcelis_pg34_line_trace_census():
+    m = load("analysis/w33_marcelis_pg34_line_trace_census.py", "w33_marcelis_line_trace")
+    row = m.build_result()
+    assert row["status"] == "PASS"
+    assert row["counts"]["PG34_points"] == 85
+    assert row["counts"]["PG34_lines"] == 357
+    assert row["counts"]["PG32_lines_hit"] == 35
+    assert row["counts"]["GF4_lines_to_binary_lines"] == 125
+    assert row["counts"]["GF4_lines_to_five_point_plane_subsets"] == 232
+    assert row["counts"]["distinct_five_point_plane_subsets"] == 30
+    assert row["counts"]["binary_planes_hit"] == 15
+    assert row["binary_line_lift_staircase"]["lift_multiplicity_histogram"] == {
+        "1": 1, "2": 6, "4": 28
+    }
+    assert row["punctured_plane_census"]["subset_lift_multiplicity_histogram"] == {
+        "4": 2, "8": 28
+    }
+    assert row["punctured_plane_census"]["container_plane_total_lift_histogram"] == {
+        "8": 1, "16": 14
+    }
+    assert all(row["checks"].values())
