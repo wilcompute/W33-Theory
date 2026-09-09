@@ -1,0 +1,36 @@
+{
+  "W33": {
+    "choices_per_context": 4,
+    "contexts": 40,
+    "example_global_key": null,
+    "global_keys": 0,
+    "local_key_space": "4^40",
+    "points": 40,
+    "q": 3,
+    "required_global_selected_points": 10,
+    "search_nodes": 104
+  },
+  "boundary": "This certificate concerns selection/ovoid contextuality only. It does not identify all quantum randomness with contextuality, and it does not prove metaphysical indeterminism.",
+  "control_W2": {
+    "choices_per_context": 3,
+    "contexts": 15,
+    "example_global_key": [
+      0,
+      1,
+      14,
+      6,
+      10
+    ],
+    "global_keys": 6,
+    "local_key_space": "3^15",
+    "points": 15,
+    "q": 2,
+    "required_global_selected_points": 5,
+    "search_nodes": 28
+  },
+  "cryptographic_reading": "Classical missing-key randomness can be modeled by one hidden global key. This W33 selection model exhibits a stronger obstruction: under the one-click context semantics there is no such global key to reveal.",
+  "definition": "A local key picks one point per commuting context. A global classical key is one context-independent 0/1 valuation whose line sums all equal 1.",
+  "schema": "w33.contextual-decryption-obstruction.v1",
+  "status": "PASS",
+  "theorem": "The W33 local one-click keys do not glue to a global context-independent key: the exact-cover set is empty. W(2) is a control where gluing succeeds."
+}
