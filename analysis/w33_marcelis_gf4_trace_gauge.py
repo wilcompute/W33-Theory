@@ -16,6 +16,17 @@ chosen representative, so this map is perfectly well-defined on the word.
 It is NOT invariant under arbitrary GF(4)^* rescaling of a homogeneous vector,
 which is why coordinatewise trace alone is not a map PG(3,4)->PG(3,2).
 
+Source audit
+------------
+The E8 four-qubit page has an internal two-entry transcription mismatch in the
+complement row.  For the listed words ... ZYZZ, YZZZ, ZYYZ, YYYZ ... it prints
+binary ... 1011, 1001, 0111, 0001 ... but immediately gives decimal
+... 11, 7, 9, 1 ....  The declared trace rule gives binary
+... 1011, 0111, 1001, 0001 ..., whose decimals are exactly 11,7,9,1.
+Thus the algebra and the source decimal list agree; the printed binary entries
+for YZZZ and ZYYZ are transposed.  This certificate records rather than hides
+that source inconsistency.
+
 Projective completion added here
 --------------------------------
 To make a total projective map, choose an explicit section of each homogeneous
@@ -40,7 +51,6 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "w33_marcelis_gf4_trace_gauge.json"
 
-# GF(4)=F2[omega]/(omega^2+omega+1), encoded 0,1,omega,omega^2 as 0,1,2,3.
 GF4_MUL = (
     (0, 0, 0, 0),
     (0, 1, 2, 3),
@@ -48,7 +58,6 @@ GF4_MUL = (
     (0, 3, 1, 2),
 )
 PAULI_TO_GF4 = {"I": 0, "Y": 1, "X": 2, "Z": 3}
-GF4_TO_PAULI = {v: k for k, v in PAULI_TO_GF4.items()}
 
 
 def gf4_add(a: int, b: int) -> int:
@@ -95,7 +104,6 @@ def bits_text(bits):
 
 
 def canon_first_one(v):
-    """Unique ordinary PG(3,4) representative with first nonzero coordinate 1."""
     for x in v:
         if x:
             return scale(v, gf4_inv(x))
@@ -111,7 +119,6 @@ def projective_points_pg34():
 
 
 def omega_gauge(v):
-    """Scale first nonzero coordinate to omega (encoded 2)."""
     for x in v:
         if x:
             return scale(v, gf4_mul(2, gf4_inv(x)))
@@ -128,12 +135,25 @@ def first_one_index(bits):
     return next(i for i, x in enumerate(bits) if x)
 
 
+def bits_decimal(bitstring: str) -> int:
+    return int(bitstring, 2)
+
+
 def source_examples():
     plane_words = ["YYYY", "ZZYY", "YZYY", "ZYYY", "YZZY", "ZZZY", "YYZY", "ZYZY"]
     plane_bits = ["0000", "1100", "0100", "1000", "0110", "1110", "0010", "1010"]
     complement_words = ["ZZZZ", "YYZZ", "ZYZZ", "YZZZ", "ZYYZ", "YYYZ", "ZZYZ", "YZYZ"]
-    complement_bits = ["1111", "0011", "1011", "1001", "0111", "0001", "1101", "0101"]
-    return plane_words, plane_bits, complement_words, complement_bits
+    # Printed binary sequence on the source page; entries 4 and 5 conflict
+    # with both the declared trace rule and the page's following decimal list.
+    complement_printed_bits = ["1111", "0011", "1011", "1001", "0111", "0001", "1101", "0101"]
+    complement_printed_decimals = [15, 3, 11, 7, 9, 1, 13, 5]
+    return (
+        plane_words,
+        plane_bits,
+        complement_words,
+        complement_printed_bits,
+        complement_printed_decimals,
+    )
 
 
 def build_result():
@@ -141,7 +161,6 @@ def build_result():
     points = projective_points_pg34()
     assert len(points) == 85
 
-    # Representative invariance of the declared omega gauge.
     representative_checks = 0
     for p in points:
         target = projective_trace_gauge(p)
@@ -152,10 +171,6 @@ def build_result():
     fibres = Counter(projective_trace_gauge(p) for p in points)
     assert len(fibres) == 15
     fibre_size_histogram = Counter(fibres.values())
-
-    # The gauge creates an exact staircase: if the first 1 of the binary image
-    # is in position j, all 3-j later GF4 coordinates have two trace-compatible
-    # choices, so the fibre size is 2^(3-j).
     first_one_law = {}
     for binary, size in sorted(fibres.items()):
         j = first_one_index(binary)
@@ -166,12 +181,21 @@ def build_result():
             "fibre_size": size,
         }
 
-    plane_words, plane_bits, comp_words, comp_bits = source_examples()
+    (
+        plane_words,
+        plane_bits,
+        comp_words,
+        comp_printed_bits,
+        comp_printed_decimals,
+    ) = source_examples()
     reproduced_plane = [bits_text(marcelis_word_trace(w)) for w in plane_words]
     reproduced_comp = [bits_text(marcelis_word_trace(w)) for w in comp_words]
+    reproduced_comp_decimals = [bits_decimal(x) for x in reproduced_comp]
+    mismatch_positions = [
+        i for i, (a, b) in enumerate(zip(reproduced_comp, comp_printed_bits))
+        if a != b
+    ]
 
-    # Explicit ambiguity of raw projective trace: [1,0,0,0]=[omega,0,0,0],
-    # but their direct traces are 0000 and 1000.
     raw_counterexample = {
         "representative": [1, 0, 0, 0],
         "scaled_same_projective_point": [2, 0, 0, 0],
@@ -182,7 +206,14 @@ def build_result():
     checks = {
         "trace_table_is_0_0_1_1": trace_table == [0, 0, 1, 1],
         "marcelis_plane_examples_reproduced": reproduced_plane == plane_bits,
-        "marcelis_complement_examples_reproduced": reproduced_comp == comp_bits,
+        "complement_algebra_matches_source_decimal_list": (
+            reproduced_comp_decimals == comp_printed_decimals
+        ),
+        "source_complement_binary_has_exact_two_entry_transposition": (
+            mismatch_positions == [3, 4]
+            and reproduced_comp[3] == comp_printed_bits[4]
+            and reproduced_comp[4] == comp_printed_bits[3]
+        ),
         "raw_coordinate_trace_fails_projective_invariance": (
             raw_counterexample["raw_trace_representative"] != raw_counterexample["raw_trace_scaled"]
         ),
@@ -199,7 +230,7 @@ def build_result():
     }
 
     return {
-        "schema": "w33.marcelis-gf4-trace-gauge.v1",
+        "schema": "w33.marcelis-gf4-trace-gauge.v2",
         "status": "PASS" if all(checks.values()) else "PARTIAL",
         "marcelis_source_gauge": {
             "pauli_to_gf4": {"I": "0", "Y": "1", "X": "omega", "Z": "omega^2"},
@@ -208,7 +239,17 @@ def build_result():
             "plane_example_words": plane_words,
             "plane_example_bits": reproduced_plane,
             "complement_example_words": comp_words,
-            "complement_example_bits": reproduced_comp,
+            "complement_algebraic_bits": reproduced_comp,
+            "complement_source_printed_bits": comp_printed_bits,
+            "complement_source_printed_decimals": comp_printed_decimals,
+            "complement_algebraic_decimals": reproduced_comp_decimals,
+            "source_binary_mismatch_positions_zero_based": mismatch_positions,
+            "source_audit": (
+                "The source binary list swaps YZZZ/ZYYZ outputs (positions 3 and 4). "
+                "Its following decimal list agrees exactly with the declared GF(4) "
+                "trace algebra, so the binary pair is recorded as a source "
+                "transcription mismatch rather than imported as mathematics."
+            ),
             "interpretation": (
                 "The Pauli word fixes a representative before trace. This is why "
                 "Marcelis can use the trace consistently in operator tables even "
@@ -241,6 +282,7 @@ def build_result():
         "claim_boundary": [
             "The projective completion depends on the ordered-coordinate/first-nonzero gauge and is not PGL(4,4)-canonical.",
             "The trace map is a coordinate/label bridge, not an isomorphism between PG(3,4) and PG(3,2).",
+            "The complement-row source mismatch is textual; the declared trace algebra and the source decimal list agree.",
             "No physical cryptographic security follows from the fibre sizes alone.",
         ],
         "sources": [
@@ -257,7 +299,9 @@ def main():
     OUT.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(json.dumps({
         "status": result["status"],
-        "source_examples": result["checks"]["marcelis_plane_examples_reproduced"],
+        "plane_examples": result["checks"]["marcelis_plane_examples_reproduced"],
+        "complement_decimal_audit": result["checks"]["complement_algebra_matches_source_decimal_list"],
+        "source_binary_transposition_detected": result["checks"]["source_complement_binary_has_exact_two_entry_transposition"],
         "pg34_points": result["projective_completion"]["domain_points"],
         "pg32_image_points": result["projective_completion"]["image_points"],
         "fibre_histogram": result["projective_completion"]["fibre_size_histogram"],
