@@ -46,18 +46,19 @@ def forever():
 def bounded_halting_semidecider(program, fuel):
     cap = Capability(Carrier.CIRCUIT_ST81, 81)
     vm = TypedUniversalMicroVM(program, cap)
-    try:
-        final = vm.run(fuel=fuel)
-    except RuntimeError as exc:
-        if str(exc) != "fuel exhausted":
-            raise
-        return {"verdict": "UNKNOWN", "steps": fuel}
-    return {"verdict": "HALTS", "steps": final.steps}
+    for _ in range(fuel):
+        if vm.state.halted:
+            return {"verdict": "HALTS", "steps": vm.state.steps}
+        vm.step()
+        if vm.state.halted:
+            return {"verdict": "HALTS", "steps": vm.state.steps}
+    return {"verdict": "UNKNOWN", "steps": fuel}
 
 
 def verify():
     immediate = bounded_halting_semidecider(delayed_halt(0), 1)
     assert immediate["verdict"] == "HALTS"
+    assert immediate["steps"] == 1
 
     horizon_rows = []
     for fuel in range(1, 17):
@@ -66,6 +67,7 @@ def verify():
         long = bounded_halting_semidecider(p, 4 * fuel + 16)
         assert short["verdict"] == "UNKNOWN"
         assert long["verdict"] == "HALTS"
+        assert long["steps"] == fuel + 3
         horizon_rows.append({
             "fuel": fuel,
             "program": p.name,
