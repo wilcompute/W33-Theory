@@ -92,16 +92,16 @@ def test_bt1408_witting_pair_shell_counts() -> None:
 def test_bt1408_contextual_and_packet_abi_bridge() -> None:
     data = load_result()
 
-    assert data["contextuality_budget"] == {
-        "noncontextual_max": 36,
-        "contexts": 40,
-        "deficit": 4,
-        "contextual_fraction": "1/10",
-        "reading": (
-            "Communication acceptance is 13/40, but tamper evidence is "
-            "checked against the corrected BT823 36/40 contextual ceiling."
-        ),
-    }
+    budget = data["contextuality_budget"]
+    assert budget["noncontextual_max"] == 36
+    assert budget["contexts"] == 40
+    assert budget["deficit"] == 4
+    assert budget["ks_satisfiability_defect"] == "1/10"
+    assert budget["abramsky_barbosa_contextual_fraction"] == 1
+    assert "contextual_fraction" not in budget
+    assert "KS satisfiability defect" in budget["reading"]
+    assert "Abramsky-Barbosa contextual fraction is 1" in budget["reading"]
+
     bridge = data["holonet_abi_bridge"]
     assert bridge["accepted_round_rate"] == "13/40"
     assert bridge["mirror_slot_residues"] == [0, 1, 2, 3]
