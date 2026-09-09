@@ -1,0 +1,223 @@
+{
+  "checks": {
+    "all_rows_match_closed_guessing_formula": true,
+    "classical_min_entropy_never_exceeds_shannon": true,
+    "q2_support_reveals_full_state": true,
+    "q3_guessing_probability_is_16_over_81": true,
+    "q3_min_entropy_is_log2_81_over_16": true,
+    "q3_shannon_matches_pass2836": true
+  },
+  "extractor_boundary": "The leftover-hash lemma can use a proven smooth min-entropy bound as an extractor budget, but this certificate does not supply smoothing, finite-size statistics, or a quantum-proof extractor claim.",
+  "q3_headline": {
+    "H_Shannon_bits": 2.6666666666666665,
+    "H_min_bits": 2.3398500028846247,
+    "P_guess_X_given_support": "16/81",
+    "interpretation": "Seeing support leaves 2.33985 bits of classical min-entropy, while the average Shannon uncertainty is 8/3 bits."
+  },
+  "quantum_side_information_boundary": "These values condition only on the classical support mask. They do not certify randomness against arbitrary quantum side information E. A QKD/randomness proof must bound H_min(X|support,E) in its stated adversary model; that quantity can be smaller and can be zero if E fully determines X.",
+  "rows": [
+    {
+      "averaged_collision_entropy_bits": -0.0,
+      "averaged_collision_probability": "1",
+      "closed_forms": {
+        "H_Shannon_bits": "4*(q-1)*log2(q-1)/q",
+        "H_collision_avg_bits": "4*log2(q/2)",
+        "H_min_bits": "4*log2(q/2)",
+        "P_collision_avg": "16/q^4",
+        "P_guess": "16/q^4"
+      },
+      "conditional_min_entropy_bits": -0.0,
+      "conditional_shannon_entropy_bits": 0.0,
+      "mask_fibres": [
+        {"best_guess_given_mask": "1", "fibre_size": 1, "masks": 1, "probability_per_mask": "1/16", "weight": 0},
+        {"best_guess_given_mask": "1", "fibre_size": 1, "masks": 4, "probability_per_mask": "1/16", "weight": 1},
+        {"best_guess_given_mask": "1", "fibre_size": 1, "masks": 6, "probability_per_mask": "1/16", "weight": 2},
+        {"best_guess_given_mask": "1", "fibre_size": 1, "masks": 4, "probability_per_mask": "1/16", "weight": 3},
+        {"best_guess_given_mask": "1", "fibre_size": 1, "masks": 1, "probability_per_mask": "1/16", "weight": 4}
+      ],
+      "optimal_classical_guessing_probability": "1",
+      "optimal_classical_guessing_probability_float": 1.0,
+      "q": 2,
+      "state_count": 16,
+      "support_masks": 16
+    },
+    {
+      "averaged_collision_entropy_bits": 2.3398500028846247,
+      "averaged_collision_probability": "16/81",
+      "closed_forms": {
+        "H_Shannon_bits": "4*(q-1)*log2(q-1)/q",
+        "H_collision_avg_bits": "4*log2(q/2)",
+        "H_min_bits": "4*log2(q/2)",
+        "P_collision_avg": "16/q^4",
+        "P_guess": "16/q^4"
+      },
+      "conditional_min_entropy_bits": 2.3398500028846247,
+      "conditional_shannon_entropy_bits": 2.6666666666666665,
+      "mask_fibres": [
+        {"best_guess_given_mask": "1", "fibre_size": 1, "masks": 1, "probability_per_mask": "1/81", "weight": 0},
+        {"best_guess_given_mask": "1/2", "fibre_size": 2, "masks": 4, "probability_per_mask": "2/81", "weight": 1},
+        {"best_guess_given_mask": "1/4", "fibre_size": 4, "masks": 6, "probability_per_mask": "4/81", "weight": 2},
+        {"best_guess_given_mask": "1/8", "fibre_size": 8, "masks": 4, "probability_per_mask": "8/81", "weight": 3},
+        {"best_guess_given_mask": "1/16", "fibre_size": 16, "masks": 1, "probability_per_mask": "16/81", "weight": 4}
+      ],
+      "optimal_classical_guessing_probability": "16/81",
+      "optimal_classical_guessing_probability_float": 0.19753086419753085,
+      "q": 3,
+      "state_count": 81,
+      "support_masks": 16
+    },
+    {
+      "averaged_collision_entropy_bits": 4.0,
+      "averaged_collision_probability": "1/16",
+      "closed_forms": {
+        "H_Shannon_bits": "4*(q-1)*log2(q-1)/q",
+        "H_collision_avg_bits": "4*log2(q/2)",
+        "H_min_bits": "4*log2(q/2)",
+        "P_collision_avg": "16/q^4",
+        "P_guess": "16/q^4"
+      },
+      "conditional_min_entropy_bits": 4.0,
+      "conditional_shannon_entropy_bits": 4.754887502163468,
+      "mask_fibres": [
+        {"best_guess_given_mask": "1", "fibre_size": 1, "masks": 1, "probability_per_mask": "1/256", "weight": 0},
+        {"best_guess_given_mask": "1/3", "fibre_size": 3, "masks": 4, "probability_per_mask": "3/256", "weight": 1},
+        {"best_guess_given_mask": "1/9", "fibre_size": 9, "masks": 6, "probability_per_mask": "9/256", "weight": 2},
+        {"best_guess_given_mask": "1/27", "fibre_size": 27, "masks": 4, "probability_per_mask": "27/256", "weight": 3},
+        {"best_guess_given_mask": "1/81", "fibre_size": 81, "masks": 1, "probability_per_mask": "81/256", "weight": 4}
+      ],
+      "optimal_classical_guessing_probability": "1/16",
+      "optimal_classical_guessing_probability_float": 0.0625,
+      "q": 4,
+      "state_count": 256,
+      "support_masks": 16
+    },
+    {
+      "averaged_collision_entropy_bits": 5.287712379549449,
+      "averaged_collision_probability": "16/625",
+      "closed_forms": {
+        "H_Shannon_bits": "4*(q-1)*log2(q-1)/q",
+        "H_collision_avg_bits": "4*log2(q/2)",
+        "H_min_bits": "4*log2(q/2)",
+        "P_collision_avg": "16/q^4",
+        "P_guess": "16/q^4"
+      },
+      "conditional_min_entropy_bits": 5.287712379549449,
+      "conditional_shannon_entropy_bits": 6.4,
+      "mask_fibres": [
+        {"best_guess_given_mask": "1", "fibre_size": 1, "masks": 1, "probability_per_mask": "1/625", "weight": 0},
+        {"best_guess_given_mask": "1/4", "fibre_size": 4, "masks": 4, "probability_per_mask": "4/625", "weight": 1},
+        {"best_guess_given_mask": "1/16", "fibre_size": 16, "masks": 6, "probability_per_mask": "16/625", "weight": 2},
+        {"best_guess_given_mask": "1/64", "fibre_size": 64, "masks": 4, "probability_per_mask": "64/625", "weight": 3},
+        {"best_guess_given_mask": "1/256", "fibre_size": 256, "masks": 1, "probability_per_mask": "256/625", "weight": 4}
+      ],
+      "optimal_classical_guessing_probability": "16/625",
+      "optimal_classical_guessing_probability_float": 0.0256,
+      "q": 5,
+      "state_count": 625,
+      "support_masks": 16
+    },
+    {
+      "averaged_collision_entropy_bits": 7.229419688230417,
+      "averaged_collision_probability": "16/2401",
+      "closed_forms": {
+        "H_Shannon_bits": "4*(q-1)*log2(q-1)/q",
+        "H_collision_avg_bits": "4*log2(q/2)",
+        "H_min_bits": "4*log2(q/2)",
+        "P_collision_avg": "16/q^4",
+        "P_guess": "16/q^4"
+      },
+      "conditional_min_entropy_bits": 7.229419688230417,
+      "conditional_shannon_entropy_bits": 8.862728779022688,
+      "mask_fibres": [
+        {"best_guess_given_mask": "1", "fibre_size": 1, "masks": 1, "probability_per_mask": "1/2401", "weight": 0},
+        {"best_guess_given_mask": "1/6", "fibre_size": 6, "masks": 4, "probability_per_mask": "6/2401", "weight": 1},
+        {"best_guess_given_mask": "1/36", "fibre_size": 36, "masks": 6, "probability_per_mask": "36/2401", "weight": 2},
+        {"best_guess_given_mask": "1/216", "fibre_size": 216, "masks": 4, "probability_per_mask": "216/2401", "weight": 3},
+        {"best_guess_given_mask": "1/1296", "fibre_size": 1296, "masks": 1, "probability_per_mask": "1296/2401", "weight": 4}
+      ],
+      "optimal_classical_guessing_probability": "16/2401",
+      "optimal_classical_guessing_probability_float": 0.006663890045814244,
+      "q": 7,
+      "state_count": 2401,
+      "support_masks": 16
+    },
+    {
+      "averaged_collision_entropy_bits": 8.0,
+      "averaged_collision_probability": "1/256",
+      "closed_forms": {
+        "H_Shannon_bits": "4*(q-1)*log2(q-1)/q",
+        "H_collision_avg_bits": "4*log2(q/2)",
+        "H_min_bits": "4*log2(q/2)",
+        "P_collision_avg": "16/q^4",
+        "P_guess": "16/q^4"
+      },
+      "conditional_min_entropy_bits": 8.0,
+      "conditional_shannon_entropy_bits": 9.826649029982081,
+      "mask_fibres": [
+        {"best_guess_given_mask": "1", "fibre_size": 1, "masks": 1, "probability_per_mask": "1/4096", "weight": 0},
+        {"best_guess_given_mask": "1/7", "fibre_size": 7, "masks": 4, "probability_per_mask": "7/4096", "weight": 1},
+        {"best_guess_given_mask": "1/49", "fibre_size": 49, "masks": 6, "probability_per_mask": "49/4096", "weight": 2},
+        {"best_guess_given_mask": "1/343", "fibre_size": 343, "masks": 4, "probability_per_mask": "343/4096", "weight": 3},
+        {"best_guess_given_mask": "1/2401", "fibre_size": 2401, "masks": 1, "probability_per_mask": "2401/4096", "weight": 4}
+      ],
+      "optimal_classical_guessing_probability": "1/256",
+      "optimal_classical_guessing_probability_float": 0.00390625,
+      "q": 8,
+      "state_count": 4096,
+      "support_masks": 16
+    },
+    {
+      "averaged_collision_entropy_bits": 8.679700005769249,
+      "averaged_collision_probability": "16/6561",
+      "closed_forms": {
+        "H_Shannon_bits": "4*(q-1)*log2(q-1)/q",
+        "H_collision_avg_bits": "4*log2(q/2)",
+        "H_min_bits": "4*log2(q/2)",
+        "P_collision_avg": "16/q^4",
+        "P_guess": "16/q^4"
+      },
+      "conditional_min_entropy_bits": 8.679700005769249,
+      "conditional_shannon_entropy_bits": 10.666666666666666,
+      "mask_fibres": [
+        {"best_guess_given_mask": "1", "fibre_size": 1, "masks": 1, "probability_per_mask": "1/6561", "weight": 0},
+        {"best_guess_given_mask": "1/8", "fibre_size": 8, "masks": 4, "probability_per_mask": "8/6561", "weight": 1},
+        {"best_guess_given_mask": "1/64", "fibre_size": 64, "masks": 6, "probability_per_mask": "64/6561", "weight": 2},
+        {"best_guess_given_mask": "1/512", "fibre_size": 512, "masks": 4, "probability_per_mask": "512/6561", "weight": 3},
+        {"best_guess_given_mask": "1/4096", "fibre_size": 4096, "masks": 1, "probability_per_mask": "4096/6561", "weight": 4}
+      ],
+      "optimal_classical_guessing_probability": "16/6561",
+      "optimal_classical_guessing_probability_float": 0.002438652644414\,
+      ,"q": 9,
+      "state_count": 6561,
+      "support_masks": 16
+    },
+    {
+      "averaged_collision_entropy_bits": 9.83772647454919,
+      "averaged_collision_probability": "16/14641",
+      "closed_forms": {
+        "H_Shannon_bits": "4*(q-1)*log2(q-1)/q",
+        "H_collision_avg_bits": "4*log2(q/2)",
+        "H_min_bits": "4*log2(q/2)",
+        "P_collision_avg": "16/q^4",
+        "P_guess": "16/q^4"
+      },
+      "conditional_min_entropy_bits": 9.83772647454919,
+      "conditional_shannon_entropy_bits": 12.079738571755356,
+      "mask_fibres": [
+        {"best_guess_given_mask": "1", "fibre_size": 1, "masks": 1, "probability_per_mask": "1/14641", "weight": 0},
+        {"best_guess_given_mask": "1/10", "fibre_size": 10, "masks": 4, "probability_per_mask": "10/14641", "weight": 1},
+        {"best_guess_given_mask": "1/100", "fibre_size": 100, "masks": 6, "probability_per_mask": "100/14641", "weight": 2},
+        {"best_guess_given_mask": "1/1000", "fibre_size": 1000, "masks": 4, "probability_per_mask": "1000/14641", "weight": 3},
+        {"best_guess_given_mask": "1/10000", "fibre_size": 10000, "masks": 1, "probability_per_mask": "10000/14641", "weight": 4}
+      ],
+      "optimal_classical_guessing_probability": "16/14641",
+      "optimal_classical_guessing_probability_float": 0.001092821528584113,
+      "q": 11,
+      "state_count": 14641,
+      "support_masks": 16
+    }
+  ],
+  "schema": "w33.support-min-entropy.v1",
+  "source": "Companion to Pass 2836. The state X is uniform on F_q^4 and the observer receives only the zero/nonzero support mask.",
+  "status": "PASS"
+}
