@@ -10,17 +10,19 @@
     "required_global_selected_points": 10,
     "search_nodes": 104
   },
-  "boundary": "This certificate concerns selection/ovoid contextuality only. It does not identify all quantum randomness with contextuality, and it does not prove metaphysical indeterminism.",
+  "boundary": "This certificate concerns selection/ovoid contextuality. The decryption language is an observer-information interpretation, not a proof of QKD secrecy, composability, computational hardness, or metaphysical indeterminism.",
+  "contextuality_quantities": {
+    "abramsky_barbosa_contextual_fraction": 1.0,
+    "distinction": "CF=1 and defect=1/10 are different observables. Strong contextuality means no exact global section; the 1/10 defect measures how close the best Boolean marking gets, namely 36/40.",
+    "global_sections_ovoids": 0,
+    "ks_satisfiability_defect": "1/10",
+    "near_global_max_satisfied_contexts": 36,
+    "total_contexts": 40
+  },
   "control_W2": {
     "choices_per_context": 3,
     "contexts": 15,
-    "example_global_key": [
-      0,
-      1,
-      14,
-      6,
-      10
-    ],
+    "example_global_key": [0, 1, 14, 6, 10],
     "global_keys": 6,
     "local_key_space": "3^15",
     "points": 15,
@@ -30,7 +32,37 @@
   },
   "cryptographic_reading": "Classical missing-key randomness can be modeled by one hidden global key. This W33 selection model exhibits a stronger obstruction: under the one-click context semantics there is no such global key to reveal.",
   "definition": "A local key picks one point per commuting context. A global classical key is one context-independent 0/1 valuation whose line sums all equal 1.",
-  "schema": "w33.contextual-decryption-obstruction.v1",
-  "status": "PASS",
-  "theorem": "The W33 local one-click keys do not glue to a global context-independent key: the exact-cover set is empty. W(2) is a control where gluing succeeds."
+  "global_section_theorem": "The W33 local one-click keys do not glue to a global context-independent key: the exact-cover set is empty. W(2) is a control where gluing succeeds.",
+  "linearized_cohomology_probe": {
+    "F2": {
+      "field": "F_2",
+      "rank": 25,
+      "solution": [1,1,1,1,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+      "solution_support": 12,
+      "solvable": true
+    },
+    "F3": {
+      "field": "F_3",
+      "rank": 25,
+      "solution": [1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+      "solution_support": 13,
+      "solvable": true
+    },
+    "construction": "Use the 40x40 context-ray incidence matrix M and solve Mx=1 over finite fields. This is a deliberately weak linear relaxation of one-hot Boolean gluing, not the full event-sheaf obstruction.",
+    "verdict": "Both linear systems are soluble. Therefore this naive linearized probe does not witness the contextuality even though the exact Boolean global-section obstruction is absolute. Do not report a nonzero cohomology class from this relaxation."
+  },
+  "measurement_cover": {
+    "context_pair_profile": {"intersecting": 240, "skew": 540},
+    "contexts": 40,
+    "local_one_hot_sections_per_context": 4,
+    "measurements": 40,
+    "total_local_sections": 160
+  },
+  "schema": "w33.contextual-decryption-obstruction.v2",
+  "sources": {
+    "cohomology_literature_boundary": "Abramsky-Mansfield-Barbosa: cohomological obstruction is sufficient but not necessary; later work gives explicit incompleteness results.",
+    "near_global_optimum": "data/w33_pass1099_exact_ks_maximum.json",
+    "strong_contextuality": "data/w33_pass1080_contextual_fraction_audit.json"
+  },
+  "status": "PASS"
 }
