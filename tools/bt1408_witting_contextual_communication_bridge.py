@@ -11,6 +11,11 @@ Thus the accepted key-agreement probability is 13/40.  BT1408 connects that
 external communication scheme to the local holonet ABI: the four slots of an
 accepted tetrad are exactly the four BT1374 mirror-slot residues, and an
 accepted round can be carried by the BT1407 72-tick transaction.
+
+Terminology firewall (2026-09-09): the exact 4/40 = 1/10 quantity is the
+Kochen--Specker satisfiability defect.  The Abramsky--Barbosa contextual
+fraction of the strongly contextual W(3,3) empirical model is 1.  These are
+separate quantities and are emitted under separate field names below.
 """
 
 from __future__ import annotations
@@ -144,6 +149,7 @@ def build_result() -> dict[str, Any]:
     profile = pair_profile(pair_to_bases)
 
     bt823 = load_json("data/bt823_the_closure.json")
+    pass1080 = load_json("data/w33_pass1080_contextual_fraction_audit.json")
     bt1374 = load_json("data/bt1374_q6_tomotope_packet_route_compiler.json")
     bt1407 = load_json("data/bt1407_microframe_transaction_composer.json")
 
@@ -188,6 +194,10 @@ def build_result() -> dict[str, Any]:
         == {"0": 1080, "1": 480, "4": 40},
         "bt823_corrected_ks_budget_loaded": bt823["ks_exact_max"] == 36
         and bt823["contextual_deficit"] == 4,
+        "pass1080_contextual_fraction_loaded": (
+            pass1080["contextual_fraction"]["W33"]["value"] == 1.0
+            and pass1080["contextual_fraction"]["W33"]["ovoids"] == 0
+        ),
         "bt1374_four_slot_mirror_abi_loaded": bt1374["checks"][
             "transversal_is_mirror_slot_mod_4"
         ]
@@ -234,10 +244,13 @@ def build_result() -> dict[str, Any]:
             "noncontextual_max": bt823["ks_exact_max"],
             "contexts": 40,
             "deficit": bt823["contextual_deficit"],
-            "contextual_fraction": "1/10",
+            "ks_satisfiability_defect": "1/10",
+            "abramsky_barbosa_contextual_fraction": 1,
             "reading": (
-                "Communication acceptance is 13/40, but tamper evidence is "
-                "checked against the corrected BT823 36/40 contextual ceiling."
+                "Communication acceptance is 13/40. The approximate exactly-one "
+                "marking optimum is 36/40, hence KS satisfiability defect 4/40 = "
+                "1/10. Separately, because W(3,3) has no global section/ovoid, "
+                "the Abramsky-Barbosa contextual fraction is 1."
             ),
         },
         "holonet_abi_bridge": {
@@ -266,7 +279,9 @@ def build_result() -> dict[str, Any]:
         "boundary": (
             "BT1408 is a finite communication/ABI certificate.  It does not "
             "prove cryptographic security, loss tolerance, detector calibration, "
-            "or a physical ququart hardware implementation."
+            "or a physical ququart hardware implementation. The 1/10 KS defect "
+            "must not be labeled as the Abramsky-Barbosa contextual fraction, "
+            "which is 1 for this W33 model."
         ),
         "checks": checks,
     }
