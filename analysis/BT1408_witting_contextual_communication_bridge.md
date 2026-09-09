@@ -30,15 +30,22 @@ incompatible matter shell.
 ## Correction Boundary
 
 The Vlasov paper reports an illustrative classical one-mark ceiling of `34/40`.
-The repo must not re-import that value as a theorem.  BT823 already proved the
-exact Witting noncontextual ceiling:
+The repo must not re-import that value as a theorem.  The exact local results
+are now separated explicitly:
 
 ```text
-36/40, deficit 4, contextual fraction 1/10
+best approximately satisfiable exactly-one marking: 36/40
+KS satisfiability defect:                            4/40 = 1/10
+Abramsky-Barbosa contextual fraction:               1
 ```
 
-So BT1408 uses the paper for the communication architecture and keeps BT823 as
-the local contextuality certificate.
+The first two are the exact BT823/Pass 1099 optimization result.  The last is
+the Pass 1080 strong-contextuality result: W(3,3) has no global section/ovoid.
+The number `1/10` must therefore never again be labeled as the
+Abramsky-Barbosa contextual fraction.
+
+BT1408 uses the Vlasov paper for the communication architecture and keeps the
+repo's exact W33 contextuality certificates as the mathematical firewall.
 
 ## ABI Bridge
 
@@ -73,7 +80,9 @@ Witting query pair -> common tetrad -> mirror slot -> Q6 body -> Hesse epilogue
 
 The accepted sector is `13/40`.  The rejected sector is `27/40`, the same
 `q^q` matter shell already used by the holonet as contextual fuel.  The
-tamper-evidence audit remains the corrected BT823 `36/40` KS budget.
+tamper-evidence audit uses the exact `36/40` KS approximation budget, hence a
+KS satisfiability defect of `1/10`, while strong contextuality remains
+`CF = 1` in the Abramsky-Barbosa sense.
 
 ## Boundary
 
