@@ -43,6 +43,10 @@ def test_bt1409_scheduler_runs_true() -> None:
     data = load_result()
     assert data["verified"] is True
     assert all(data["checks"].values())
+    assert data["checks"]["basis_aperture_rate_is_ks_defect"] is True
+    assert data["checks"]["incidence_accept_rate_matches_ks_defect"] is True
+    assert "basis_aperture_rate_is_contextual_fraction" not in data["checks"]
+    assert "incidence_accept_rate_matches_contextual_fraction" not in data["checks"]
 
 
 def test_bt1409_duplex_law_counts() -> None:
@@ -65,7 +69,18 @@ def test_bt1409_duplex_law_counts() -> None:
     }
     assert "13/40" in data["duplex_law"]["state_query"]
     assert "4/40 = 1/10" in data["duplex_law"]["basis_query"]
+    assert "KS satisfiability defect" in data["duplex_law"]["basis_query"]
     assert "36/40" in data["duplex_law"]["basis_shadow"]
+    assert data["contextuality_quantities"] == {
+        "ks_satisfiability_defect": "1/10",
+        "abramsky_barbosa_contextual_fraction": 1,
+        "why_distinct": (
+            "The KS defect asks how close a Boolean marking can come to "
+            "satisfying all exactly-one context constraints (36/40). The "
+            "Abramsky-Barbosa contextual fraction is 1 because no global "
+            "section exists at all."
+        ),
+    }
 
 
 def test_bt1409_frame_budget_and_sample_epoch() -> None:
@@ -118,10 +133,7 @@ def test_bt1409_publication_anchors() -> None:
     assert "BT1409: Witting duplex admission scheduler" in docs
     assert "BT1409_witting_duplex_admission_scheduler.md" in docs
     assert "BT1409 Witting duplex admission scheduler" in holonet
-    assert (
-        "13/40 is communication throughput, while 1/10 is contextual witness aperture"
-        in holonet
-    )
+    assert "13/40 is communication throughput" in holonet
     assert "BT1409 Witting Duplex Admission Scheduler" in single
 
 
