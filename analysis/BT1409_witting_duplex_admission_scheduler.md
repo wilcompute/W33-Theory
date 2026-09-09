@@ -22,8 +22,23 @@ The complement is:
 ```
 
 This is the useful reconciliation: `13/40` is communication throughput, while
-`1/10` is the contextual witness aperture.  The `36/40` basis shadow matches
-the corrected BT823 noncontextual ceiling.
+`1/10` is the basis-witness aperture and is numerically equal to the exact
+**KS satisfiability defect**.  It is not the Abramsky-Barbosa contextual
+fraction.  The latter is exactly `1` for the W(3,3) empirical model because no
+global section/ovoid exists.
+
+## Two Contextuality Quantities
+
+```text
+KS approximate marking optimum:            36/40
+KS satisfiability defect:                   4/40 = 1/10
+Abramsky-Barbosa contextual fraction (CF): 1
+```
+
+The first quantity asks how many exactly-one contexts a single Boolean marking
+can satisfy simultaneously.  The contextual fraction asks for the maximum
+noncontextual weight in the empirical model; strong contextuality makes that
+weight zero and hence `CF = 1`.
 
 ## Two Clocks
 
@@ -62,7 +77,8 @@ matter-shell classifications unless an implementation chooses to log them.
 
 BT1409 is a finite scheduler/count certificate.  It does not prove
 cryptographic security, channel loss tolerance, detector calibration, or a
-physical Witting-ququart implementation.
+physical Witting-ququart implementation.  The `1/10` basis aperture / KS
+defect must not be relabeled as the Abramsky-Barbosa contextual fraction.
 
 ## Verification
 
