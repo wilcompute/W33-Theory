@@ -1,0 +1,43 @@
+{
+  "boundary": "Trusted nonnegative genesis, canonical roots and collision-resistant hashing; arithmetic microtick accounting excludes wrapper hashes; storage grows with execution history; guest ABI and owner integration open",
+  "cycles": [
+    {
+      "distinct_retained_nodes": 143,
+      "final_value": 15,
+      "initial": 15,
+      "operations": 256,
+      "physical_negative": 128,
+      "physical_positive": 143,
+      "prior_binary_ticks": 2816,
+      "ticks": 1276,
+      "writes": 764
+    },
+    {
+      "distinct_retained_nodes": 393,
+      "final_value": 65535,
+      "initial": 65535,
+      "operations": 256,
+      "physical_negative": 128,
+      "physical_positive": 65663,
+      "prior_binary_ticks": 8960,
+      "ticks": 1294,
+      "writes": 782
+    },
+    {
+      "distinct_retained_nodes": 489,
+      "final_value": 18446744073709551615,
+      "initial": 18446744073709551615,
+      "operations": 256,
+      "physical_negative": 128,
+      "physical_positive": 18446744073709551743,
+      "prior_binary_ticks": 33536,
+      "ticks": 1390,
+      "writes": 878
+    }
+  ],
+  "law": "T=Z+5(U+D)+2s(P0)+2s(N0)-2s(Pf)-2s(Nf)",
+  "negative_controls": 4,
+  "paths": 320,
+  "schema": "w33.monotone-difference-counter.v1",
+  "status": "PASS"
+}

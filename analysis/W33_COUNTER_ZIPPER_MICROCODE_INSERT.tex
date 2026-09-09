@@ -108,3 +108,30 @@ Twenty-eight sizes pass exhaustive clean-ancilla checks. The five-bit example
 uses eighteen gates. This is a basis-permutation construction, not measured
 physical dissipation. The accompanying report separately attributes a published
 colloidal-trap work measurement and keeps Holonet calibration open.
+
+\paragraph{Redundant counters and eight observation experiments.}
+The follow-up \texttt{W33\_EIGHT\_COMPUTATION\_EXPERIMENTS.md} reports seven
+executed computational investigations and one blocked physical collection.
+An authenticated redundant counter stores $P-N$ with $P\geq N$ and increments
+only $P$ or $N$; canonical root equality supplies its zero test under the trusted
+invariant. For $U$ increments, $D$ successful decrements and $Z$ zero decrements,
+\[
+ T=Z+5(U+D)+2s(P_0)+2s(N_0)-2s(P_f)-2s(N_f).
+\]
+All 320 tested six-operation paths pass. At the $2^{64}$ boundary, 128 alternating
+cycles take 1390 arithmetic microticks rather than 33536, at the cost of growing
+representation state; wrapper work and integration into the guest ABI remain
+outside this claim.
+
+Retaining reversible noise seeds permits noisy-record erasure, but reusing a
+common additive seed exposes timing differences: four timings again reveal all
+three input bits in the tested ensemble. A ternary eraser uses eight controlled
+modular-shift gates on nine qutrits; its 19683-state permutation and a complex
+superposition preserve amplitudes while clearing the intended record and
+ancillas in simulation. Sixteen padding policies supply an exact finite
+latency--information frontier. Holotrade separately exports signed pencil
+preimages and rational primal--dual certificates with real $\ell_1$ optima 5
+and 8, so the selected profiles' negativity survives fractional relaxation.
+These statements neither construct blockers nor measure physical heat. The
+reset-work protocol and analyzer reject synthetic provenance, and physical
+collection remains blocked without instrument data.

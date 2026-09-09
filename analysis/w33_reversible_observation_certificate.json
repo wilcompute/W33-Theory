@@ -1,0 +1,337 @@
+{
+  "logical_status": "PASS",
+  "padding": {
+    "n": 4,
+    "pareto": [
+      {
+        "expected_added_ticks": "0",
+        "information_bits": 1.875,
+        "mapping": {
+          "3": 3,
+          "5": 5,
+          "7": 7,
+          "9": 9,
+          "11": 11
+        }
+      },
+      {
+        "expected_added_ticks": "1/8",
+        "information_bits": 1.75,
+        "mapping": {
+          "3": 3,
+          "5": 5,
+          "7": 7,
+          "9": 11,
+          "11": 11
+        }
+      },
+      {
+        "expected_added_ticks": "1/4",
+        "information_bits": 1.7028195311147831,
+        "mapping": {
+          "3": 3,
+          "5": 5,
+          "7": 9,
+          "9": 9,
+          "11": 11
+        }
+      },
+      {
+        "expected_added_ticks": "1/2",
+        "information_bits": 1.5306390622295665,
+        "mapping": {
+          "3": 3,
+          "5": 7,
+          "7": 7,
+          "9": 9,
+          "11": 11
+        }
+      },
+      {
+        "expected_added_ticks": "5/8",
+        "information_bits": 1.4056390622295665,
+        "mapping": {
+          "3": 3,
+          "5": 7,
+          "7": 7,
+          "9": 11,
+          "11": 11
+        }
+      },
+      {
+        "expected_added_ticks": "1",
+        "information_bits": 1.186278124459133,
+        "mapping": {
+          "3": 5,
+          "5": 5,
+          "7": 7,
+          "9": 9,
+          "11": 11
+        }
+      },
+      {
+        "expected_added_ticks": "9/8",
+        "information_bits": 1.061278124459133,
+        "mapping": {
+          "3": 5,
+          "5": 5,
+          "7": 7,
+          "9": 11,
+          "11": 11
+        }
+      },
+      {
+        "expected_added_ticks": "5/4",
+        "information_bits": 1.014097655573916,
+        "mapping": {
+          "3": 5,
+          "5": 5,
+          "7": 9,
+          "9": 9,
+          "11": 11
+        }
+      },
+      {
+        "expected_added_ticks": "13/8",
+        "information_bits": 0.8112781244591328,
+        "mapping": {
+          "3": 5,
+          "5": 5,
+          "7": 11,
+          "9": 11,
+          "11": 11
+        }
+      },
+      {
+        "expected_added_ticks": "5/2",
+        "information_bits": 0.6685644431995964,
+        "mapping": {
+          "3": 7,
+          "5": 7,
+          "7": 7,
+          "9": 9,
+          "11": 11
+        }
+      },
+      {
+        "expected_added_ticks": "21/8",
+        "information_bits": 0.5435644431995964,
+        "mapping": {
+          "3": 7,
+          "5": 7,
+          "7": 7,
+          "9": 11,
+          "11": 11
+        }
+      },
+      {
+        "expected_added_ticks": "17/4",
+        "information_bits": 0.3372900666170139,
+        "mapping": {
+          "3": 9,
+          "5": 9,
+          "7": 9,
+          "9": 9,
+          "11": 11
+        }
+      },
+      {
+        "expected_added_ticks": "49/8",
+        "information_bits": -0.0,
+        "mapping": {
+          "3": 11,
+          "5": 11,
+          "7": 11,
+          "9": 11,
+          "11": 11
+        }
+      }
+    ],
+    "policies_checked": 16,
+    "scope": "All contiguous deterministic upward-padding partitions of this single-instruction timing alphabet; not all randomized policies"
+  },
+  "physical": {
+    "analyzer_fixture_source_class": "synthetic-unit-check",
+    "boundary": "No reset-work samples collected; synthetic fixture is excluded from physical results",
+    "physical_admission_negative_controls": 2,
+    "powercap_energy_counters": [],
+    "required_csv_columns": [
+      "protocol",
+      "temperature_kelvin",
+      "work_joules",
+      "delta_internal_energy_joules"
+    ],
+    "required_metadata": [
+      "device_id",
+      "calibration_reference",
+      "raw_source_reference",
+      "source_class"
+    ],
+    "status": "BLOCKED_NO_PHYSICAL_DATA"
+  },
+  "reversible_seeds": {
+    "m": 1,
+    "n": 3,
+    "noise_entropy_bits": 3.0,
+    "permutation_states_checked": 65536,
+    "record_entropy_given_final_counter_and_seed_bits": 0,
+    "scope": "Total XOR permutation retains the seed; resetting the seed is a separate operation",
+    "seed_bits": 4,
+    "seed_entropy_given_final_counter_and_record_bits": 1.0
+  },
+  "schema": "w33.reversible-observation-experiments.v1",
+  "seed_reuse": [
+    {
+      "independent": {
+        "conditional_record_entropy_bits": 1.5,
+        "input_information_bits": 0.8089645644232899,
+        "record_entropy_bits": 2.30896456442329,
+        "seed_register_bits": 2,
+        "timing_difference_information_bits": null
+      },
+      "m": 0,
+      "reused": {
+        "conditional_record_entropy_bits": 1.5,
+        "input_information_bits": 0.8089645644232899,
+        "record_entropy_bits": 2.30896456442329,
+        "seed_register_bits": 2,
+        "timing_difference_information_bits": -0.0
+      }
+    },
+    {
+      "independent": {
+        "conditional_record_entropy_bits": 3.0,
+        "input_information_bits": 1.3641102677511157,
+        "record_entropy_bits": 4.364110267751116,
+        "seed_register_bits": 4,
+        "timing_difference_information_bits": null
+      },
+      "m": 1,
+      "reused": {
+        "conditional_record_entropy_bits": 1.5,
+        "input_information_bits": 2.5,
+        "record_entropy_bits": 4.0,
+        "seed_register_bits": 2,
+        "timing_difference_information_bits": 2.5
+      }
+    },
+    {
+      "independent": {
+        "conditional_record_entropy_bits": 6.0,
+        "input_information_bits": 2.0050346162282704,
+        "record_entropy_bits": 8.00503461622827,
+        "seed_register_bits": 8,
+        "timing_difference_information_bits": null
+      },
+      "m": 2,
+      "reused": {
+        "conditional_record_entropy_bits": 1.5,
+        "input_information_bits": 3.0,
+        "record_entropy_bits": 4.5,
+        "seed_register_bits": 2,
+        "timing_difference_information_bits": 3.0
+      }
+    }
+  ],
+  "ternary": {
+    "boundary": "Coherent state-vector simulation, not physical gates or a Clifford+T decomposition",
+    "clean_ancillas": 2,
+    "coherent_state_error": 0.0,
+    "dimension": 19683,
+    "gate_basis": "one- or two-equality-controlled qutrit shifts; explicit total basis permutations",
+    "gates": [
+      [
+        [
+          [
+            1,
+            0
+          ]
+        ],
+        7,
+        1
+      ],
+      [
+        [
+          [
+            7,
+            1
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        8,
+        1
+      ],
+      [
+        [
+          [
+            0,
+            1
+          ]
+        ],
+        4,
+        -1
+      ],
+      [
+        [
+          [
+            0,
+            2
+          ]
+        ],
+        4,
+        -2
+      ],
+      [
+        [
+          [
+            7,
+            1
+          ]
+        ],
+        5,
+        -1
+      ],
+      [
+        [
+          [
+            8,
+            1
+          ]
+        ],
+        6,
+        -1
+      ],
+      [
+        [
+          [
+            7,
+            1
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        8,
+        -1
+      ],
+      [
+        [
+          [
+            1,
+            0
+          ]
+        ],
+        7,
+        -1
+      ]
+    ],
+    "m": 1,
+    "n": 3,
+    "qutrits": 9,
+    "record_trits": 3
+  }
+}
