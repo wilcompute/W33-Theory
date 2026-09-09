@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Identify the 270 Heawood execution-slot cycles with 270 spread pairs.
+r"""Identify the 270 Heawood execution-slot cycles with 270 spread pairs.
 
 The local Heawood quotient certificate groups the six neighbours of every W33
 Q3 chart into three two-sheet execution slots.  If each local execution slot
