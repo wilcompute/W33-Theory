@@ -1,0 +1,10 @@
+{
+  "schema": "w33.seeded-vs-quantum-entropy-harness.v1",
+  "status": "PASS",
+  "seeded_source": {"map":"Y=(73*S+41) mod 256","seed_space":256,"output_support":256,"H_output_bits":8.0,"Hmin_output_bits":8.0,"H_output_given_seed_bits":0.0},
+  "ideal_quantum_reference": {"model":"one ideal 8-bit Born-uniform measurement outcome","output_support":256,"H_output_bits":8.0,"Hmin_output_bits":8.0,"classical_seed_variable":null,"physical_certification_status":"PENDING_EXTERNAL_CERTIFICATE","external_metadata":null},
+  "seedless_marginal_total_variation": "0",
+  "holovm_transport": {"guest":"add-r1-into-r0","carrier":"circuit216/steinberg81","inputs_exhaustively_checked":256,"terminal_states":256,"max_steps":512,"source_agnostic_distribution_result":"Identical source marginals induce identical deterministic HoloVM terminal-state distributions; provenance lives in side information/evidence."},
+  "core_result": "A deterministic seeded source can be exactly uniform to a seedless observer while remaining perfectly decryptable to the seed holder. Matching output statistics do not identify whether entropy is fundamental, pseudorandom, or externally certified.",
+  "boundary": "The built-in quantum arm is an ideal distribution reference, not a laboratory randomness certificate. Device-independent or QRNG certification remains an external evidence obligation."
+}
