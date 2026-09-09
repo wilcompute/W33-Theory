@@ -1,0 +1,18 @@
+{
+  "schema": "w33.causal-accessibility-randomness.v1",
+  "status": "PASS",
+  "c": 1,
+  "side_information_events": {"Y":{"t":0,"x":0},"S0":{"t":1,"x":-1},"S1":{"t":1,"x":3}},
+  "observers": [
+    {"observer":"origin_t0","event":{"t":0,"x":0},"accessible_side_information":["Y"],"H_O_given_past_light_cone_bits":3.0},
+    {"observer":"center_t1","event":{"t":1,"x":0},"accessible_side_information":["Y"],"H_O_given_past_light_cone_bits":3.0},
+    {"observer":"center_t2","event":{"t":2,"x":0},"accessible_side_information":["Y","S0"],"H_O_given_past_light_cone_bits":1.5},
+    {"observer":"center_t3","event":{"t":3,"x":0},"accessible_side_information":["Y","S0"],"H_O_given_past_light_cone_bits":1.5},
+    {"observer":"center_t4","event":{"t":4,"x":0},"accessible_side_information":["Y","S0","S1"],"H_O_given_past_light_cone_bits":0.0},
+    {"observer":"right_t2","event":{"t":2,"x":2},"accessible_side_information":["Y","S1"],"H_O_given_past_light_cone_bits":1.5}
+  ],
+  "worldline_monotonicity": "PASS",
+  "core_result": "Along x=0 the timing-record uncertainty falls 3 -> 1.5 -> 0 bits only when the corresponding seed events enter the observer's causal past.",
+  "same_time_observer_dependence": "At t=2, x=0 has Y+S0 while x=2 has Y+S1; both retain 1.5 bits but possess different decrypting side information.",
+  "boundary": "Finite 1+1D causal toy model; no claim that physical horizons are cryptographic ciphers or that relativity creates fundamental randomness."
+}
