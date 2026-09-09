@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "programs": 3,
+  "input_pairs_per_program": 25,
+  "verified_guest_steps": 550,
+  "negative_controls": 6,
+  "refinement": "Each INC or nonzero DECJZ increments the corresponding P or N; root equality selects zero branch; HALT preserves both pairs. Thus P-N matches the existing two-counter ISA by induction.",
+  "boundary": "Trusted canonical nonnegative genesis and collision-resistant hashes; abstract unbounded memory; no new physical universality or exactly-once owner integration claim"
+}

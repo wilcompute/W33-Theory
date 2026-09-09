@@ -22,9 +22,9 @@ When two files state the same result in different language, consult the
 human-curated [RESULTS VOCABULARY](RESULTS_VOCABULARY.md) for semantic
 aliases, current status, supersessions, and primary artifacts.
 
-Indexed **9797** files; **13933** distinctive results
+Indexed **9800** files; **13934** distinctive results
 (a token in >25 files identifies a topic and is dropped unless explicitly pinned).
-**5938** appear in exactly one file — the sharpest signal.
+**5939** appear in exactly one file — the sharpest signal.
 
 ## Index
 
@@ -6607,7 +6607,7 @@ Indexed **9797** files; **13933** distinctive results
 | `19580` | `analysis/w33_pass1500_1504_five_frontiers.py` |
 | `19623` | `analysis/BT4013_BT4018_incidence_link_h1_memory.md` |
 | `19656` | `analysis/PASS437_FULL_SMITH_WELD.md` · `exploration/J_FUNCTION_DEEP_ANALYSIS.py` · `exploration/KKT_GOLAY_INVESTIGATION.py` · `exploration/THE_270_FACTOR.py` · *(+2)* |
-| `19683` | `PASS425_429_FIVE_FRONTIERS_RELEASE.md` · `analysis/W33_EIGHT_COMPUTATION_EXPERIMENTS.md` · `analysis/bt562_leakage_sector_ratios.py` · `analysis/bt567_leakage_killer_dynamics_test.py` · *(+11)* |
+| `19683` | `PASS425_429_FIVE_FRONTIERS_RELEASE.md` · `analysis/W33_EIGHT_COMPUTATION_EXPERIMENTS.md` · `analysis/W33_FIVE_COMPUTATION_FOLLOWUPS.md` · `analysis/bt562_leakage_sector_ratios.py` · *(+12)* |
 | `19684` | `analysis/w33_BREAKTHROUGH_44_hermitian_curve_family.py` |
 | `19740` | `analysis/w33_chiral_sector_discriminant.py` |
 | `19774` | `V23_output/V23_REPORT.md` |
@@ -6984,6 +6984,7 @@ Indexed **9797** files; **13933** distinctive results
 | `33280` | `_co1_bundle/w33_monster_co1_shell_closure_20260330/outputs/monster_co1_shell_closure_report.md` · `_co1_triple_bundle/w33_co1_triple_action_closure_20260330/outputs/co1_triple_action_closure_report.md` · `analysis/w33_pass1889_1891_algebra_voltage_verify.py` · `analysis/w33_pass1904_1906_gaussian_phase_zeta.py` |
 | `33291` | `exploration/w33_fix_mu_mH_beta.py` |
 | `33496` | `analysis/BT3577_BT3583_petersen_matrix_octad_marked_walk.md` · `analysis/bt3577_3583_petersen_matrix_octad_marked_walk.py` · `analysis/bt3580_star_proof_canary.py` |
+| `33519` | `analysis/w33_native_qutrit_seed_frontier.py` |
 | `33536` | `analysis/W33_EIGHT_COMPUTATION_EXPERIMENTS.md` · `docs/index.html` |
 | `33649` | `PASS573_577_C3_600CELL_SCHEME_DVR_IDEMPOTENT_DP_RELEASE.md` |
 | `33670` | `analysis/PASS4745_4752_RESERVATION.md` |
@@ -13582,7 +13583,7 @@ Indexed **9797** files; **13933** distinctive results
 | `544` | `PASS178_EVEN_Q_INCIDENCE_RANK_TRANSFER.md` · `PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md` · `PASS543_547_ICOSAHEDRAL_FOURIER_RECURRENCE_RELEASE.md` · `analysis/BT1307_BT1309_holonet_latency_collision_pulse_budget.md` · *(+21)* |
 | `548` | `PASS2470_2475_FIVE_FRONTIERS_RELEASE.md` · `PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md` · `analysis/BT4019_BT4024_photonic_flat_band_h1.md` · `analysis/THE_SELECTION_LAYER.md` · *(+19)* |
 | `549` | `analysis/BT3628_BT3634_octad_borel_matrix_proof_tomography.md` · `analysis/W33_COUNTER_ZIPPER_MICROCODE.md` · `analysis/w33_levi_cycle_cut_tight_frame_duality.py` · `analysis/w33_levi_cycle_frame_cubic_obstruction_decomposition.py` · *(+9)* |
-| `550` | `PASS434_FIELD_SMITH_PAIRING_RELEASE.md` · `analysis/PASS434_FIELD_SMITH_PAIRING.md` · `analysis/w33_cartan_puncturing.py` · `analysis/w33_levi_flag_association_scheme.py` · *(+10)* |
+| `550` | `PASS434_FIELD_SMITH_PAIRING_RELEASE.md` · `analysis/PASS434_FIELD_SMITH_PAIRING.md` · `analysis/W33_FIVE_COMPUTATION_FOLLOWUPS.md` · `analysis/w33_cartan_puncturing.py` · *(+12)* |
 | `551` | `analysis/BT592_paper_runbook.md` · `analysis/BT714_hinge_selector_matrix_verifier.md` · `analysis/BT715_chart81_levi_e4_comparison.md` · `analysis/bt602_hashimoto_bose_mesner_transfer_map.py` · *(+13)* |
 | `552` | `PASS399_BULK_RAMANUJAN_QUANTUM_RELEASE.md` · `analysis/BT1826_1830_outer_xor_enumerator_decoder_composition.md` · `analysis/BT592_paper_runbook.md` · `analysis/PASS552_VALUATION_CERTIFICATE_NOTE.md` · *(+9)* |
 | `553` | `analysis/PASS558_Q5_TRIALITY_PARTITION.md` · `analysis/w33_levi_flag_q_polynomial_obstruction.py` · `analysis/w33_pass5198_q5_leader34_full_apartment_cubic_correction.py` · `analysis/w33_pass5205_q5_leader36_full_apartment_wall.py` · *(+9)* |

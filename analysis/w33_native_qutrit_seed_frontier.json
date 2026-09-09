@@ -1,0 +1,579 @@
+{
+  "status": "PASS",
+  "compilation": {
+    "basis": "F, F-dagger; equality-controlled X and R9=diag(exp(2 pi i k/9))",
+    "native_gates": [
+      [
+        "X",
+        [
+          1,
+          0
+        ],
+        7,
+        1
+      ],
+      [
+        "F",
+        null,
+        8,
+        1
+      ],
+      [
+        "R9",
+        [
+          7,
+          1
+        ],
+        8,
+        1
+      ],
+      [
+        "F",
+        null,
+        8,
+        -1
+      ],
+      [
+        "X",
+        [
+          7,
+          1
+        ],
+        2,
+        1
+      ],
+      [
+        "F",
+        null,
+        8,
+        1
+      ],
+      [
+        "R9",
+        [
+          2,
+          0
+        ],
+        8,
+        -1
+      ],
+      [
+        "F",
+        null,
+        8,
+        -1
+      ],
+      [
+        "X",
+        [
+          7,
+          1
+        ],
+        2,
+        -1
+      ],
+      [
+        "F",
+        null,
+        8,
+        1
+      ],
+      [
+        "R9",
+        [
+          2,
+          0
+        ],
+        8,
+        1
+      ],
+      [
+        "F",
+        null,
+        8,
+        -1
+      ],
+      [
+        "X",
+        [
+          7,
+          1
+        ],
+        2,
+        2
+      ],
+      [
+        "F",
+        null,
+        8,
+        1
+      ],
+      [
+        "R9",
+        [
+          2,
+          0
+        ],
+        8,
+        -1
+      ],
+      [
+        "F",
+        null,
+        8,
+        -1
+      ],
+      [
+        "X",
+        [
+          7,
+          1
+        ],
+        2,
+        -2
+      ],
+      [
+        "F",
+        null,
+        8,
+        1
+      ],
+      [
+        "R9",
+        [
+          2,
+          0
+        ],
+        8,
+        1
+      ],
+      [
+        "F",
+        null,
+        8,
+        -1
+      ],
+      [
+        "X",
+        [
+          0,
+          1
+        ],
+        4,
+        -1
+      ],
+      [
+        "X",
+        [
+          0,
+          2
+        ],
+        4,
+        -2
+      ],
+      [
+        "X",
+        [
+          7,
+          1
+        ],
+        5,
+        -1
+      ],
+      [
+        "X",
+        [
+          8,
+          1
+        ],
+        6,
+        -1
+      ],
+      [
+        "F",
+        null,
+        8,
+        1
+      ],
+      [
+        "R9",
+        [
+          7,
+          1
+        ],
+        8,
+        -1
+      ],
+      [
+        "F",
+        null,
+        8,
+        -1
+      ],
+      [
+        "X",
+        [
+          7,
+          1
+        ],
+        2,
+        1
+      ],
+      [
+        "F",
+        null,
+        8,
+        1
+      ],
+      [
+        "R9",
+        [
+          2,
+          0
+        ],
+        8,
+        1
+      ],
+      [
+        "F",
+        null,
+        8,
+        -1
+      ],
+      [
+        "X",
+        [
+          7,
+          1
+        ],
+        2,
+        -1
+      ],
+      [
+        "F",
+        null,
+        8,
+        1
+      ],
+      [
+        "R9",
+        [
+          2,
+          0
+        ],
+        8,
+        -1
+      ],
+      [
+        "F",
+        null,
+        8,
+        -1
+      ],
+      [
+        "X",
+        [
+          7,
+          1
+        ],
+        2,
+        2
+      ],
+      [
+        "F",
+        null,
+        8,
+        1
+      ],
+      [
+        "R9",
+        [
+          2,
+          0
+        ],
+        8,
+        1
+      ],
+      [
+        "F",
+        null,
+        8,
+        -1
+      ],
+      [
+        "X",
+        [
+          7,
+          1
+        ],
+        2,
+        -2
+      ],
+      [
+        "F",
+        null,
+        8,
+        1
+      ],
+      [
+        "R9",
+        [
+          2,
+          0
+        ],
+        8,
+        -1
+      ],
+      [
+        "F",
+        null,
+        8,
+        -1
+      ],
+      [
+        "X",
+        [
+          1,
+          0
+        ],
+        7,
+        -1
+      ]
+    ],
+    "gate_count": 44,
+    "two_qutrit_gates": 24,
+    "qutrits": 9,
+    "gadget_basis_checks": 486,
+    "max_gadget_error": 1.5554986004681104e-15,
+    "arbitrary_coherent_state_error": 7.744330970098951e-17,
+    "mutation_rejections": 1,
+    "boundary": "Declared logical target basis; no pulse calibration or gate optimality claim"
+  },
+  "seed_allocation": {
+    "policies": [
+      {
+        "mask": 0,
+        "positions": [],
+        "retained_seed_bits": 0,
+        "information_bits": 3.0,
+        "seed_entropy_given_final_counter_and_record_bits": 0.0
+      },
+      {
+        "mask": 1,
+        "positions": [
+          0
+        ],
+        "retained_seed_bits": 2,
+        "information_bits": 2.827819531114783,
+        "seed_entropy_given_final_counter_and_record_bits": 0.5
+      },
+      {
+        "mask": 2,
+        "positions": [
+          1
+        ],
+        "retained_seed_bits": 2,
+        "information_bits": 2.827819531114783,
+        "seed_entropy_given_final_counter_and_record_bits": 0.5
+      },
+      {
+        "mask": 3,
+        "positions": [
+          0,
+          1
+        ],
+        "retained_seed_bits": 4,
+        "information_bits": 2.6556390622295662,
+        "seed_entropy_given_final_counter_and_record_bits": 1.0
+      },
+      {
+        "mask": 4,
+        "positions": [
+          2
+        ],
+        "retained_seed_bits": 2,
+        "information_bits": 2.827819531114783,
+        "seed_entropy_given_final_counter_and_record_bits": 0.5
+      },
+      {
+        "mask": 5,
+        "positions": [
+          0,
+          2
+        ],
+        "retained_seed_bits": 4,
+        "information_bits": 2.512799852072124,
+        "seed_entropy_given_final_counter_and_record_bits": 1.0
+      },
+      {
+        "mask": 6,
+        "positions": [
+          1,
+          2
+        ],
+        "retained_seed_bits": 4,
+        "information_bits": 2.6556390622295662,
+        "seed_entropy_given_final_counter_and_record_bits": 1.0
+      },
+      {
+        "mask": 7,
+        "positions": [
+          0,
+          1,
+          2
+        ],
+        "retained_seed_bits": 6,
+        "information_bits": 2.3406193831869073,
+        "seed_entropy_given_final_counter_and_record_bits": 1.5
+      },
+      {
+        "mask": 8,
+        "positions": [
+          3
+        ],
+        "retained_seed_bits": 2,
+        "information_bits": 2.827819531114783,
+        "seed_entropy_given_final_counter_and_record_bits": 0.5
+      },
+      {
+        "mask": 9,
+        "positions": [
+          0,
+          3
+        ],
+        "retained_seed_bits": 4,
+        "information_bits": 2.6556390622295662,
+        "seed_entropy_given_final_counter_and_record_bits": 1.0
+      },
+      {
+        "mask": 10,
+        "positions": [
+          1,
+          3
+        ],
+        "retained_seed_bits": 4,
+        "information_bits": 2.512799852072124,
+        "seed_entropy_given_final_counter_and_record_bits": 1.0
+      },
+      {
+        "mask": 11,
+        "positions": [
+          0,
+          1,
+          3
+        ],
+        "retained_seed_bits": 6,
+        "information_bits": 2.3406193831869073,
+        "seed_entropy_given_final_counter_and_record_bits": 1.5
+      },
+      {
+        "mask": 12,
+        "positions": [
+          2,
+          3
+        ],
+        "retained_seed_bits": 4,
+        "information_bits": 2.6556390622295662,
+        "seed_entropy_given_final_counter_and_record_bits": 1.0
+      },
+      {
+        "mask": 13,
+        "positions": [
+          0,
+          2,
+          3
+        ],
+        "retained_seed_bits": 6,
+        "information_bits": 2.3406193831869073,
+        "seed_entropy_given_final_counter_and_record_bits": 1.5
+      },
+      {
+        "mask": 14,
+        "positions": [
+          1,
+          2,
+          3
+        ],
+        "retained_seed_bits": 6,
+        "information_bits": 2.3406193831869073,
+        "seed_entropy_given_final_counter_and_record_bits": 1.5
+      },
+      {
+        "mask": 15,
+        "positions": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "retained_seed_bits": 8,
+        "information_bits": 2.0050346162282704,
+        "seed_entropy_given_final_counter_and_record_bits": 2.0
+      }
+    ],
+    "frontier": [
+      {
+        "budget_bits": 0,
+        "minimum_information_bits": 3.0,
+        "optimal_masks": [
+          0
+        ]
+      },
+      {
+        "budget_bits": 2,
+        "minimum_information_bits": 2.827819531114783,
+        "optimal_masks": [
+          1,
+          2,
+          4,
+          8
+        ]
+      },
+      {
+        "budget_bits": 4,
+        "minimum_information_bits": 2.512799852072124,
+        "optimal_masks": [
+          5,
+          10
+        ]
+      },
+      {
+        "budget_bits": 6,
+        "minimum_information_bits": 2.3406193831869073,
+        "optimal_masks": [
+          7,
+          11,
+          13,
+          14
+        ]
+      },
+      {
+        "budget_bits": 8,
+        "minimum_information_bits": 2.0050346162282704,
+        "optimal_masks": [
+          15
+        ]
+      }
+    ],
+    "scope": "All 16 fixed subsets of four observations; uniform three-bit input; independent two-bit seeds; entropies evaluated numerically from exact counts"
+  },
+  "physical": {
+    "status": "BLOCKED_NO_PHYSICAL_DATA",
+    "powercap_energy_counters": [],
+    "physical_admission_negative_controls": 2,
+    "analyzer_fixture_source_class": "synthetic-unit-check",
+    "required_csv_columns": [
+      "protocol",
+      "temperature_kelvin",
+      "work_joules",
+      "delta_internal_energy_joules"
+    ],
+    "required_metadata": [
+      "device_id",
+      "calibration_reference",
+      "raw_source_reference",
+      "source_class"
+    ],
+    "boundary": "No reset-work samples collected; synthetic fixture is excluded from physical results"
+  }
+}

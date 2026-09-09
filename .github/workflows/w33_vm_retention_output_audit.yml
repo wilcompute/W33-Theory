@@ -12,6 +12,8 @@ on:
       - 'analysis/w33_carry_timing_information*'
       - 'analysis/w33_computation_resource_frontiers*'
       - 'analysis/w33_monotone_difference_counter*'
+      - 'analysis/w33_redundant_guest_abi*'
+      - 'analysis/w33_native_qutrit_seed_frontier*'
       - 'analysis/w33_reversible_observation*'
       - 'analysis/w33_holovm_process_kernel.py'
       - 'analysis/W33_HOLOVM_PROCESS_KERNEL*'
@@ -76,3 +78,7 @@ jobs:
         run: python tests/test_w33_temporal_gc_replay.py
       - name: Full symmetric-family output audit and frozen result
         run: python tests/test_w33_three_copy_output_rank_audit.py
+      - name: Redundant guest refinement
+        run: python analysis/w33_redundant_guest_abi.py
+      - name: Native qutrit compilation and seed allocation
+        run: python analysis/w33_native_qutrit_seed_frontier.py
