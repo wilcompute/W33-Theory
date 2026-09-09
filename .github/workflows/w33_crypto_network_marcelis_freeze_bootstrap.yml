@@ -23,11 +23,14 @@ jobs:
         run: |
           python tools/bt1408_witting_contextual_communication_bridge.py
           python tools/bt1409_witting_duplex_admission_scheduler.py
+          python analysis/w33_contextuality_terminology_migration.py
           python analysis/w33_support_min_entropy.py
           python analysis/w33_witting_card_single_photon_protocol.py
           python analysis/w33_marcelis_multichart_atlas.py
           python analysis/w33_heawood_chart_fibre_quotient.py
+          python analysis/w33_heawood_spread_pair_270_bridge.py
           python analysis/w33_marcelis_gf4_trace_gauge.py
+          python analysis/w33_marcelis_pg34_line_trace_census.py
       - name: Focused regression gates
         run: |
           python -m pytest -q \
@@ -40,11 +43,14 @@ jobs:
           git add \
             data/bt1408_witting_contextual_communication_bridge.json \
             data/bt1409_witting_duplex_admission_scheduler.json \
+            data/w33_contextuality_terminology_migration.json \
             data/w33_support_min_entropy.json \
             data/w33_witting_card_single_photon_protocol.json \
             data/w33_marcelis_multichart_atlas.json \
             data/w33_heawood_chart_fibre_quotient.json \
-            data/w33_marcelis_gf4_trace_gauge.json
+            data/w33_heawood_spread_pair_270_bridge.json \
+            data/w33_marcelis_gf4_trace_gauge.json \
+            data/w33_marcelis_pg34_line_trace_census.json
           if git diff --cached --quiet; then
             echo 'All focused certificates already frozen.'
             exit 0
