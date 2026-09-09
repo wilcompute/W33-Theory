@@ -1,0 +1,19 @@
+{
+  "schema": "w33.observer-information-lattice.v1",
+  "status": "PASS",
+  "target": "two-sample timing record O",
+  "primitive_generators": ["Y", "S0", "S1"],
+  "lattice": [
+    {"observer_state":"EMPTY","side_information":[],"H_O_given_side_bits":4.364110267751116,"P_guess_O_given_side":"3/32","Hmin_O_given_side_bits":3.415037499278844},
+    {"observer_state":"Y","side_information":["Y"],"H_O_given_side_bits":3.0,"P_guess_O_given_side":"1/4","Hmin_O_given_side_bits":2.0},
+    {"observer_state":"S0","side_information":["S0"],"H_O_given_side_bits":3.563307235905091,"P_guess_O_given_side":"5/32","Hmin_O_given_side_bits":2.678071905112638},
+    {"observer_state":"S1","side_information":["S1"],"H_O_given_side_bits":3.563307235905091,"P_guess_O_given_side":"5/32","Hmin_O_given_side_bits":2.678071905112638},
+    {"observer_state":"Y+S0","side_information":["Y","S0"],"H_O_given_side_bits":1.5,"P_guess_O_given_side":"1/2","Hmin_O_given_side_bits":1.0},
+    {"observer_state":"Y+S1","side_information":["Y","S1"],"H_O_given_side_bits":1.5,"P_guess_O_given_side":"1/2","Hmin_O_given_side_bits":1.0},
+    {"observer_state":"S0+S1","side_information":["S0","S1"],"H_O_given_side_bits":2.5,"P_guess_O_given_side":"1/4","Hmin_O_given_side_bits":2.0},
+    {"observer_state":"Y+S0+S1","side_information":["Y","S0","S1"],"H_O_given_side_bits":0.0,"P_guess_O_given_side":"1","Hmin_O_given_side_bits":0.0}
+  ],
+  "key_identity": "H(O|I)-H(O|I,K)=I(O;K|I)",
+  "core_result": "The same record has different randomness profiles for different observers. With Y alone H(O|Y)=3 bits; each independent seed cell removes 1.5 bits; Y+S0+S1 makes the record exactly decryptable.",
+  "boundary": "Exact finite information-theory values; computational hardness and quantum adversary side information are separate layers."
+}
