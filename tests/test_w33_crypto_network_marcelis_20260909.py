@@ -163,3 +163,19 @@ def test_marcelis_pg34_line_trace_census():
         "8": 1, "16": 14
     }
     assert all(row["checks"].values())
+
+
+def test_contextuality_terminology_migration_gate():
+    m = load("analysis/w33_contextuality_terminology_migration.py", "w33_contextuality_terms")
+    row = m.build_result()
+    assert row["status"] == "PASS"
+    assert row["authoritative_values"] == {
+        "abramsky_barbosa_contextual_fraction": 1,
+        "ks_satisfiability_defect": "1/10",
+        "maximum_satisfiable_contexts": "36/40",
+        "global_sections_ovoids": 0,
+    }
+    assert row["active_chain"]["bt1408"].endswith("bt1408_witting_contextual_communication_bridge.json")
+    assert row["active_chain"]["bt1409"].endswith("bt1409_witting_duplex_admission_scheduler.json")
+    assert len(row["legacy_misnamed_artifacts"]) >= 2
+    assert all(row["checks"].values())
