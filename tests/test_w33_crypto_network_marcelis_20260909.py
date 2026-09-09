@@ -78,3 +78,46 @@ def test_marcelis_multichart_firewalls():
     assert {len(x) for x in d2} == {30}
     assert len(m.max_clique_exact(d2)) == 6
     assert m.find_trace_projective_counterexample() is not None
+
+
+def test_heawood_chart_fibre_quotient():
+    m = load("analysis/w33_heawood_chart_fibre_quotient.py", "w33_heawood_fibre")
+    row = m.build_result()
+    assert row["status"] == "PASS"
+    assert row["counts"] == {
+        "charts": 540,
+        "chart_web_edges": 1620,
+        "directed_chart_web_incidences": 3240,
+        "heawood_fibre_vertices_per_chart": 14,
+        "fano_translation_points_per_chart": 7,
+        "fano_lines_per_chart": 7,
+        "execution_lines_through_antipode": 3,
+        "buffer_lines_not_through_antipode": 4,
+        "execution_slots_over_all_charts": 1620,
+        "web_neighbour_sheets_per_execution_slot": 2,
+    }
+    assert row["standard_local_fano"]["canonical_antipode_point"] == 7
+    assert row["standard_local_fano"]["execution_lines"] == [
+        [1, 6, 7], [2, 5, 7], [3, 4, 7]
+    ]
+    assert len(row["standard_local_fano"]["buffer_lines"]) == 4
+    assert all(row["checks"].values())
+
+
+def test_marcelis_gf4_trace_gauge():
+    m = load("analysis/w33_marcelis_gf4_trace_gauge.py", "w33_marcelis_trace")
+    row = m.build_result()
+    assert row["status"] == "PASS"
+    assert row["marcelis_source_gauge"]["trace_table"] == {
+        "0": 0, "1": 0, "omega": 1, "omega^2": 1
+    }
+    assert row["projective_completion"]["domain_points"] == 85
+    assert row["projective_completion"]["image_points"] == 15
+    assert row["projective_completion"]["fibre_size_histogram"] == {
+        "1": 1, "2": 2, "4": 4, "8": 8
+    }
+    assert row["checks"]["marcelis_plane_examples_reproduced"] is True
+    assert row["checks"]["marcelis_complement_examples_reproduced"] is True
+    assert row["checks"]["raw_coordinate_trace_fails_projective_invariance"] is True
+    assert row["checks"]["omega_gauge_is_representative_invariant"] is True
+    assert all(row["checks"].values())
