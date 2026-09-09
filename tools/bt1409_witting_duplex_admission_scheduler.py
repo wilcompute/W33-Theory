@@ -8,11 +8,12 @@ BT1408 proved the state-compatibility shell for a Witting communication round:
 BT1409 adds the second layer that the architecture needs.  A selected Witting
 ray lives in exactly four tetrads.  Therefore the basis/witness aperture is
 
-    4 accepted bases / 40 bases = 1/10,
+    4 accepted bases / 40 bases = 1/10.
 
-which is exactly the corrected BT823 contextual fraction.  The remaining
-36/40 basis choices are the noncontextual shadow, matching the exact BT823
-noncontextual maximum.
+Terminology firewall (2026-09-09): 1/10 is the exact Kochen--Specker
+satisfiability defect / witness-aperture rate.  It is NOT the
+Abramsky--Barbosa contextual fraction.  The latter is 1 for the strongly
+contextual W(3,3) empirical model because there is no global section/ovoid.
 """
 
 from __future__ import annotations
@@ -98,6 +99,7 @@ def build_result() -> dict[str, Any]:
     ray_to_bases, _pair_to_bases = memberships(tetrads)
 
     bt823 = load_json("data/bt823_the_closure.json")
+    pass1080 = load_json("data/w33_pass1080_contextual_fraction_audit.json")
     bt1407 = load_json("data/bt1407_microframe_transaction_composer.json")
     bt1408 = load_json("data/bt1408_witting_contextual_communication_bridge.json")
 
@@ -134,8 +136,17 @@ def build_result() -> dict[str, Any]:
     basis_witness_frames = sample["basis_accept_count"]
     checks = {
         "bt1408_bridge_verified": bt1408["verified"] is True,
+        "bt1408_uses_precise_contextuality_labels": (
+            bt1408["contextuality_budget"]["ks_satisfiability_defect"] == "1/10"
+            and bt1408["contextuality_budget"]["abramsky_barbosa_contextual_fraction"] == 1
+            and "contextual_fraction" not in bt1408["contextuality_budget"]
+        ),
         "bt823_contextual_budget_loaded": bt823["ks_exact_max"] == 36
         and bt823["contextual_deficit"] == 4,
+        "pass1080_contextual_fraction_is_one": (
+            pass1080["contextual_fraction"]["W33"]["value"] == 1.0
+            and pass1080["contextual_fraction"]["W33"]["ovoids"] == 0
+        ),
         "bt1407_frame_loaded": bt1407["verified"] is True
         and bt1407["frame_identity"]
         == "48 Q6 body pulse ticks + 3 Hesse return words * 8 ticks = 72 ticks",
@@ -143,7 +154,7 @@ def build_result() -> dict[str, Any]:
         == {"4": 40},
         "basis_reject_count_matches_bt823_ks_max": histograms_json["basis_reject_count"]
         == {"36": 40},
-        "basis_aperture_rate_is_contextual_fraction": {
+        "basis_aperture_rate_is_ks_defect": {
             row["basis_accept_rate"] for row in ray_profiles
         }
         == {"1/10"},
@@ -153,7 +164,7 @@ def build_result() -> dict[str, Any]:
         == {"13/40"},
         "state_reject_shell_is_matter_27": histograms_json["incompatible_state_count"]
         == {"27": 40},
-        "incidence_accept_rate_matches_contextual_fraction": {
+        "incidence_accept_rate_matches_ks_defect": {
             row["compatible_incidence_rate"] for row in ray_profiles
         }
         == {"1/10"},
@@ -173,12 +184,22 @@ def build_result() -> dict[str, Any]:
                 "1 same + 12 orthogonal over 40 rays"
             ),
             "basis_query": (
-                "witness bases accept at 4/40 = 1/10, the BT823 contextual "
-                "deficit fraction"
+                "witness bases accept at 4/40 = 1/10, equal to the exact "
+                "KS satisfiability defect"
             ),
             "basis_shadow": (
                 "the 36/40 rejected basis choices match the corrected BT823 "
-                "noncontextual ceiling"
+                "best approximately satisfiable context count"
+            ),
+        },
+        "contextuality_quantities": {
+            "ks_satisfiability_defect": "1/10",
+            "abramsky_barbosa_contextual_fraction": 1,
+            "why_distinct": (
+                "The KS defect asks how close a Boolean marking can come to "
+                "satisfying all exactly-one context constraints (36/40). The "
+                "Abramsky-Barbosa contextual fraction is 1 because no global "
+                "section exists at all."
             ),
         },
         "histograms": histograms_json,
@@ -210,15 +231,15 @@ def build_result() -> dict[str, Any]:
         "architecture_breakthrough": (
             "The Witting protocol has two different acceptance clocks.  The "
             "state clock admits 13/40 compatible communication partners.  The "
-            "basis clock admits only 4/40 witness apertures, exactly the BT823 "
-            "contextual fraction 1/10; the complementary 36/40 basis shadow is "
-            "the corrected noncontextual ceiling.  This reconciles communication "
-            "throughput with contextual tamper evidence."
+            "basis clock admits 4/40 witness apertures, numerically equal to the "
+            "exact KS satisfiability defect 1/10.  The Abramsky-Barbosa contextual "
+            "fraction is a different quantity and equals 1."
         ),
         "boundary": (
             "BT1409 is a finite scheduler/count certificate.  It does not prove "
             "cryptographic security, channel loss tolerance, or physical detector "
-            "calibration."
+            "calibration.  The basis aperture / KS defect must not be relabeled "
+            "as the Abramsky-Barbosa contextual fraction."
         ),
         "checks": checks,
     }
