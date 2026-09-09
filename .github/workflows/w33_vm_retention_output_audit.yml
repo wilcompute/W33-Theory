@@ -15,6 +15,7 @@ on:
       - 'analysis/w33_redundant_guest_abi*'
       - 'analysis/w33_native_qutrit_seed_frontier*'
       - 'analysis/w33_reversible_observation*'
+      - 'analysis/w33_observer_relative_randomness*'
       - 'analysis/w33_holovm_process_kernel.py'
       - 'analysis/W33_HOLOVM_PROCESS_KERNEL*'
       - 'analysis/w33_three_copy_output_rank_audit*'
@@ -74,6 +75,8 @@ jobs:
         run: python analysis/w33_monotone_difference_counter.py
       - name: Reversible seeds, coherent ternary gates and observer policies
         run: python analysis/w33_reversible_observation_experiments.py
+      - name: Observer-relative randomness, perfect secrecy and seed-side-information checks
+        run: python analysis/w33_observer_relative_randomness.py
       - name: Existing temporal collection and replay
         run: python tests/test_w33_temporal_gc_replay.py
       - name: Full symmetric-family output audit and frozen result
