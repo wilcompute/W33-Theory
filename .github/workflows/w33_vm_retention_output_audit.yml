@@ -16,6 +16,11 @@ on:
       - 'analysis/w33_native_qutrit_seed_frontier*'
       - 'analysis/w33_reversible_observation*'
       - 'analysis/w33_observer_relative_randomness*'
+      - 'analysis/w33_contextual_decryption_obstruction*'
+      - 'analysis/w33_observer_information_lattice*'
+      - 'analysis/w33_causal_accessibility_randomness*'
+      - 'analysis/w33_seeded_vs_quantum_entropy_harness*'
+      - 'analysis/w33_determinism_prediction_boundary*'
       - 'analysis/w33_holovm_process_kernel.py'
       - 'analysis/W33_HOLOVM_PROCESS_KERNEL*'
       - 'analysis/w33_three_copy_output_rank_audit*'
@@ -77,6 +82,16 @@ jobs:
         run: python analysis/w33_reversible_observation_experiments.py
       - name: Observer-relative randomness, perfect secrecy and seed-side-information checks
         run: python analysis/w33_observer_relative_randomness.py
+      - name: Contextual decryption global-key obstruction
+        run: python analysis/w33_contextual_decryption_obstruction.py
+      - name: Observer information lattice and min-entropy profile
+        run: python analysis/w33_observer_information_lattice.py
+      - name: Causal accessibility of decrypting side information
+        run: python analysis/w33_causal_accessibility_randomness.py
+      - name: Seeded versus ideal-quantum HoloVM entropy harness
+        run: python analysis/w33_seeded_vs_quantum_entropy_harness.py
+      - name: Determinism versus universal prediction boundary
+        run: python analysis/w33_determinism_prediction_boundary.py
       - name: Existing temporal collection and replay
         run: python tests/test_w33_temporal_gc_replay.py
       - name: Full symmetric-family output audit and frozen result
