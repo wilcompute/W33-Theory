@@ -1,0 +1,848 @@
+{
+  "circuit": {
+    "cases": [
+      {
+        "clean_ancillas": 1,
+        "cnot_gates": 3,
+        "m": 0,
+        "n": 1,
+        "not_gates": 2,
+        "record_bits": 1,
+        "toffoli_gates": 0
+      },
+      {
+        "clean_ancillas": 2,
+        "cnot_gates": 5,
+        "m": 0,
+        "n": 2,
+        "not_gates": 4,
+        "record_bits": 2,
+        "toffoli_gates": 2
+      },
+      {
+        "clean_ancillas": 1,
+        "cnot_gates": 4,
+        "m": 1,
+        "n": 2,
+        "not_gates": 2,
+        "record_bits": 2,
+        "toffoli_gates": 0
+      },
+      {
+        "clean_ancillas": 3,
+        "cnot_gates": 6,
+        "m": 0,
+        "n": 3,
+        "not_gates": 6,
+        "record_bits": 2,
+        "toffoli_gates": 4
+      },
+      {
+        "clean_ancillas": 2,
+        "cnot_gates": 6,
+        "m": 1,
+        "n": 3,
+        "not_gates": 4,
+        "record_bits": 3,
+        "toffoli_gates": 2
+      },
+      {
+        "clean_ancillas": 1,
+        "cnot_gates": 5,
+        "m": 2,
+        "n": 3,
+        "not_gates": 2,
+        "record_bits": 3,
+        "toffoli_gates": 0
+      },
+      {
+        "clean_ancillas": 4,
+        "cnot_gates": 9,
+        "m": 0,
+        "n": 4,
+        "not_gates": 8,
+        "record_bits": 3,
+        "toffoli_gates": 6
+      },
+      {
+        "clean_ancillas": 3,
+        "cnot_gates": 7,
+        "m": 1,
+        "n": 4,
+        "not_gates": 6,
+        "record_bits": 3,
+        "toffoli_gates": 4
+      },
+      {
+        "clean_ancillas": 2,
+        "cnot_gates": 7,
+        "m": 2,
+        "n": 4,
+        "not_gates": 4,
+        "record_bits": 4,
+        "toffoli_gates": 2
+      },
+      {
+        "clean_ancillas": 1,
+        "cnot_gates": 6,
+        "m": 3,
+        "n": 4,
+        "not_gates": 2,
+        "record_bits": 4,
+        "toffoli_gates": 0
+      },
+      {
+        "clean_ancillas": 5,
+        "cnot_gates": 10,
+        "m": 0,
+        "n": 5,
+        "not_gates": 10,
+        "record_bits": 3,
+        "toffoli_gates": 8
+      },
+      {
+        "clean_ancillas": 4,
+        "cnot_gates": 10,
+        "m": 1,
+        "n": 5,
+        "not_gates": 8,
+        "record_bits": 4,
+        "toffoli_gates": 6
+      },
+      {
+        "clean_ancillas": 3,
+        "cnot_gates": 8,
+        "m": 2,
+        "n": 5,
+        "not_gates": 6,
+        "record_bits": 4,
+        "toffoli_gates": 4
+      },
+      {
+        "clean_ancillas": 2,
+        "cnot_gates": 8,
+        "m": 3,
+        "n": 5,
+        "not_gates": 4,
+        "record_bits": 5,
+        "toffoli_gates": 2
+      },
+      {
+        "clean_ancillas": 1,
+        "cnot_gates": 7,
+        "m": 4,
+        "n": 5,
+        "not_gates": 2,
+        "record_bits": 5,
+        "toffoli_gates": 0
+      },
+      {
+        "clean_ancillas": 6,
+        "cnot_gates": 12,
+        "m": 0,
+        "n": 6,
+        "not_gates": 12,
+        "record_bits": 3,
+        "toffoli_gates": 10
+      },
+      {
+        "clean_ancillas": 5,
+        "cnot_gates": 11,
+        "m": 1,
+        "n": 6,
+        "not_gates": 10,
+        "record_bits": 4,
+        "toffoli_gates": 8
+      },
+      {
+        "clean_ancillas": 4,
+        "cnot_gates": 11,
+        "m": 2,
+        "n": 6,
+        "not_gates": 8,
+        "record_bits": 5,
+        "toffoli_gates": 6
+      },
+      {
+        "clean_ancillas": 3,
+        "cnot_gates": 9,
+        "m": 3,
+        "n": 6,
+        "not_gates": 6,
+        "record_bits": 5,
+        "toffoli_gates": 4
+      },
+      {
+        "clean_ancillas": 2,
+        "cnot_gates": 9,
+        "m": 4,
+        "n": 6,
+        "not_gates": 4,
+        "record_bits": 6,
+        "toffoli_gates": 2
+      },
+      {
+        "clean_ancillas": 1,
+        "cnot_gates": 8,
+        "m": 5,
+        "n": 6,
+        "not_gates": 2,
+        "record_bits": 6,
+        "toffoli_gates": 0
+      },
+      {
+        "clean_ancillas": 7,
+        "cnot_gates": 13,
+        "m": 0,
+        "n": 7,
+        "not_gates": 14,
+        "record_bits": 3,
+        "toffoli_gates": 12
+      },
+      {
+        "clean_ancillas": 6,
+        "cnot_gates": 13,
+        "m": 1,
+        "n": 7,
+        "not_gates": 12,
+        "record_bits": 4,
+        "toffoli_gates": 10
+      },
+      {
+        "clean_ancillas": 5,
+        "cnot_gates": 12,
+        "m": 2,
+        "n": 7,
+        "not_gates": 10,
+        "record_bits": 5,
+        "toffoli_gates": 8
+      },
+      {
+        "clean_ancillas": 4,
+        "cnot_gates": 12,
+        "m": 3,
+        "n": 7,
+        "not_gates": 8,
+        "record_bits": 6,
+        "toffoli_gates": 6
+      },
+      {
+        "clean_ancillas": 3,
+        "cnot_gates": 10,
+        "m": 4,
+        "n": 7,
+        "not_gates": 6,
+        "record_bits": 6,
+        "toffoli_gates": 4
+      },
+      {
+        "clean_ancillas": 2,
+        "cnot_gates": 10,
+        "m": 5,
+        "n": 7,
+        "not_gates": 4,
+        "record_bits": 7,
+        "toffoli_gates": 2
+      },
+      {
+        "clean_ancillas": 1,
+        "cnot_gates": 9,
+        "m": 6,
+        "n": 7,
+        "not_gates": 2,
+        "record_bits": 7,
+        "toffoli_gates": 0
+      }
+    ],
+    "example_n5_m2_gates": [
+      [
+        [],
+        2
+      ],
+      [
+        [],
+        3
+      ],
+      [
+        [],
+        4
+      ],
+      [
+        [
+          2
+        ],
+        10
+      ],
+      [
+        [
+          10,
+          3
+        ],
+        11
+      ],
+      [
+        [
+          11,
+          4
+        ],
+        12
+      ],
+      [
+        [
+          0
+        ],
+        6
+      ],
+      [
+        [
+          1
+        ],
+        7
+      ],
+      [
+        [
+          10
+        ],
+        8
+      ],
+      [
+        [
+          11
+        ],
+        8
+      ],
+      [
+        [
+          11
+        ],
+        9
+      ],
+      [
+        [
+          12
+        ],
+        8
+      ],
+      [
+        [
+          11,
+          4
+        ],
+        12
+      ],
+      [
+        [
+          10,
+          3
+        ],
+        11
+      ],
+      [
+        [
+          2
+        ],
+        10
+      ],
+      [
+        [],
+        4
+      ],
+      [
+        [],
+        3
+      ],
+      [
+        [],
+        2
+      ]
+    ],
+    "scope": "Exact reversible classical gates, also basis-permutation unitaries; no device or optimality claim"
+  },
+  "mixed": {
+    "cycles": [
+      {
+        "k": 0,
+        "ticks": 6,
+        "writes": 1
+      },
+      {
+        "k": 1,
+        "ticks": 10,
+        "writes": 5
+      },
+      {
+        "k": 2,
+        "ticks": 14,
+        "writes": 9
+      },
+      {
+        "k": 3,
+        "ticks": 18,
+        "writes": 13
+      },
+      {
+        "k": 4,
+        "ticks": 22,
+        "writes": 17
+      },
+      {
+        "k": 5,
+        "ticks": 26,
+        "writes": 21
+      },
+      {
+        "k": 6,
+        "ticks": 30,
+        "writes": 25
+      },
+      {
+        "k": 7,
+        "ticks": 34,
+        "writes": 29
+      },
+      {
+        "k": 8,
+        "ticks": 38,
+        "writes": 33
+      },
+      {
+        "k": 9,
+        "ticks": 42,
+        "writes": 37
+      },
+      {
+        "k": 10,
+        "ticks": 46,
+        "writes": 41
+      },
+      {
+        "k": 11,
+        "ticks": 50,
+        "writes": 45
+      },
+      {
+        "k": 12,
+        "ticks": 54,
+        "writes": 49
+      },
+      {
+        "k": 13,
+        "ticks": 58,
+        "writes": 53
+      },
+      {
+        "k": 14,
+        "ticks": 62,
+        "writes": 57
+      },
+      {
+        "k": 15,
+        "ticks": 66,
+        "writes": 61
+      },
+      {
+        "k": 16,
+        "ticks": 70,
+        "writes": 65
+      }
+    ],
+    "law": "T=zero_DEC_count+3*nonzero_moves+2*sum_edge_crossings(v2(upper_endpoint))",
+    "mixed_paths": 256,
+    "obstruction": "A closed k-boundary cycle costs 4k+6; no state potential gives a uniform constant amortized cost for both operations"
+  },
+  "noise": {
+    "entropy": "floating log2",
+    "noise": "independent additive tick jitter {-2:1/4,0:1/2,2:1/4}, composed 0,1,2 times",
+    "probabilities": "exact rational",
+    "rows": [
+      {
+        "channels": [
+          {
+            "conditional_record_entropy_bits": 0.0,
+            "information_bits": 1.75,
+            "total_record_entropy_bits": 1.75
+          },
+          {
+            "conditional_record_entropy_bits": 1.5,
+            "information_bits": 0.8089645644232899,
+            "total_record_entropy_bits": 2.30896456442329
+          },
+          {
+            "conditional_record_entropy_bits": 2.0306390622295662,
+            "information_bits": 0.5261941565459747,
+            "total_record_entropy_bits": 2.556833218775541
+          }
+        ],
+        "information_bits_by_jitter_layers": [
+          1.75,
+          0.8089645644232899,
+          0.5261941565459747
+        ],
+        "m": 0,
+        "n": 3
+      },
+      {
+        "channels": [
+          {
+            "conditional_record_entropy_bits": 0.0,
+            "information_bits": 2.5,
+            "total_record_entropy_bits": 2.5
+          },
+          {
+            "conditional_record_entropy_bits": 3.0,
+            "information_bits": 1.3641102677511157,
+            "total_record_entropy_bits": 4.364110267751116
+          },
+          {
+            "conditional_record_entropy_bits": 4.0612781244591325,
+            "information_bits": 0.9312438948857196,
+            "total_record_entropy_bits": 4.992522019344852
+          }
+        ],
+        "information_bits_by_jitter_layers": [
+          2.5,
+          1.3641102677511157,
+          0.9312438948857196
+        ],
+        "m": 1,
+        "n": 3
+      },
+      {
+        "channels": [
+          {
+            "conditional_record_entropy_bits": 0.0,
+            "information_bits": 3.0,
+            "total_record_entropy_bits": 3.0
+          },
+          {
+            "conditional_record_entropy_bits": 6.0,
+            "information_bits": 2.0050346162282704,
+            "total_record_entropy_bits": 8.00503461622827
+          },
+          {
+            "conditional_record_entropy_bits": 8.122556248918265,
+            "information_bits": 1.5263191232223825,
+            "total_record_entropy_bits": 9.648875372140647
+          }
+        ],
+        "information_bits_by_jitter_layers": [
+          3.0,
+          2.0050346162282704,
+          1.5263191232223825
+        ],
+        "m": 2,
+        "n": 3
+      }
+    ]
+  },
+  "physics": {
+    "boundary": "Measured fitted colloidal-trap work supports the one-bit reference only; no Holonet energy measurement, noise calibration, or transfer of finite-time coefficients",
+    "full_erasure_difference_in_reported_uncertainty_units": 0.5617606480018227,
+    "model_only": {
+      "conditional_information_bound_joules": 0,
+      "temperature_kelvin": 300,
+      "timing_entropy_bits": 3.75,
+      "unconditioned_erasure_bound_joules": 1.0766170819045214e-20
+    },
+    "one_bit_theoretical_work_over_kBT": 0.6931471805599453,
+    "published": {
+      "full_erasure_asymptotic_work_over_kBT": 0.71,
+      "full_erasure_scale_time": 1.39,
+      "location": "Table I, page 4; Eq. (3)",
+      "no_erasure_asymptotic_work_over_kBT": 0.05,
+      "no_erasure_scale_time": 1.48,
+      "raw_trajectories_included": false,
+      "reported_uncertainty_each": 0.03,
+      "source": "https://www.sfu.ca/chaos/assets/papers/2014/prl14-reprint.pdf",
+      "source_class": "published experimental fit; manually transcribed"
+    }
+  },
+  "radix": {
+    "intervals": 6144,
+    "partitions": [
+      {
+        "information_bits": 1.0,
+        "m": 0,
+        "n": 1,
+        "radix": 2,
+        "residual_input_entropy_bits": 0.0
+      },
+      {
+        "information_bits": 1.5,
+        "m": 0,
+        "n": 2,
+        "radix": 2,
+        "residual_input_entropy_bits": 0.5
+      },
+      {
+        "information_bits": 2.0,
+        "m": 1,
+        "n": 2,
+        "radix": 2,
+        "residual_input_entropy_bits": 0.0
+      },
+      {
+        "information_bits": 1.75,
+        "m": 0,
+        "n": 3,
+        "radix": 2,
+        "residual_input_entropy_bits": 1.25
+      },
+      {
+        "information_bits": 2.5,
+        "m": 1,
+        "n": 3,
+        "radix": 2,
+        "residual_input_entropy_bits": 0.5
+      },
+      {
+        "information_bits": 3.0,
+        "m": 2,
+        "n": 3,
+        "radix": 2,
+        "residual_input_entropy_bits": 0.0
+      },
+      {
+        "information_bits": 1.875,
+        "m": 0,
+        "n": 4,
+        "radix": 2,
+        "residual_input_entropy_bits": 2.125
+      },
+      {
+        "information_bits": 2.75,
+        "m": 1,
+        "n": 4,
+        "radix": 2,
+        "residual_input_entropy_bits": 1.25
+      },
+      {
+        "information_bits": 3.5,
+        "m": 2,
+        "n": 4,
+        "radix": 2,
+        "residual_input_entropy_bits": 0.5
+      },
+      {
+        "information_bits": 4.0,
+        "m": 3,
+        "n": 4,
+        "radix": 2,
+        "residual_input_entropy_bits": 0.0
+      },
+      {
+        "information_bits": 0.9182958340544896,
+        "m": 0,
+        "n": 1,
+        "radix": 3,
+        "residual_input_entropy_bits": 0.6666666666666665
+      },
+      {
+        "information_bits": 1.224394445405986,
+        "m": 0,
+        "n": 2,
+        "radix": 3,
+        "residual_input_entropy_bits": 1.945530556036326
+      },
+      {
+        "information_bits": 2.5032583347756456,
+        "m": 1,
+        "n": 2,
+        "radix": 3,
+        "residual_input_entropy_bits": 0.6666666666666665
+      },
+      {
+        "information_bits": 1.326427315856485,
+        "m": 0,
+        "n": 3,
+        "radix": 3,
+        "residual_input_entropy_bits": 3.4284601863069835
+      },
+      {
+        "information_bits": 2.809356946127142,
+        "m": 1,
+        "n": 3,
+        "radix": 3,
+        "residual_input_entropy_bits": 1.945530556036326
+      },
+      {
+        "information_bits": 4.088220835496801,
+        "m": 2,
+        "n": 3,
+        "radix": 3,
+        "residual_input_entropy_bits": 0.666666666666667
+      },
+      {
+        "information_bits": 1.360438272673318,
+        "m": 0,
+        "n": 4,
+        "radix": 3,
+        "residual_input_entropy_bits": 4.979411730211306
+      },
+      {
+        "information_bits": 2.9113898165776413,
+        "m": 1,
+        "n": 4,
+        "radix": 3,
+        "residual_input_entropy_bits": 3.428460186306983
+      },
+      {
+        "information_bits": 4.394319446848298,
+        "m": 2,
+        "n": 4,
+        "radix": 3,
+        "residual_input_entropy_bits": 1.945530556036326
+      },
+      {
+        "information_bits": 5.673183336217958,
+        "m": 3,
+        "n": 4,
+        "radix": 3,
+        "residual_input_entropy_bits": 0.6666666666666661
+      },
+      {
+        "information_bits": 0.8112781244591328,
+        "m": 0,
+        "n": 1,
+        "radix": 4,
+        "residual_input_entropy_bits": 1.188721875540867
+      },
+      {
+        "information_bits": 1.014097655573916,
+        "m": 0,
+        "n": 2,
+        "radix": 4,
+        "residual_input_entropy_bits": 2.985902344426084
+      },
+      {
+        "information_bits": 2.811278124459133,
+        "m": 1,
+        "n": 2,
+        "radix": 4,
+        "residual_input_entropy_bits": 1.188721875540867
+      },
+      {
+        "information_bits": 1.0648025383526118,
+        "m": 0,
+        "n": 3,
+        "radix": 4,
+        "residual_input_entropy_bits": 4.935197461647388
+      },
+      {
+        "information_bits": 3.014097655573916,
+        "m": 1,
+        "n": 3,
+        "radix": 4,
+        "residual_input_entropy_bits": 2.985902344426084
+      },
+      {
+        "information_bits": 4.8112781244591325,
+        "m": 2,
+        "n": 3,
+        "radix": 4,
+        "residual_input_entropy_bits": 1.1887218755408675
+      },
+      {
+        "information_bits": 1.0774787590472859,
+        "m": 0,
+        "n": 4,
+        "radix": 4,
+        "residual_input_entropy_bits": 6.922521240952714
+      },
+      {
+        "information_bits": 3.064802538352612,
+        "m": 1,
+        "n": 4,
+        "radix": 4,
+        "residual_input_entropy_bits": 4.9351974616473875
+      },
+      {
+        "information_bits": 5.0140976555739165,
+        "m": 2,
+        "n": 4,
+        "radix": 4,
+        "residual_input_entropy_bits": 2.9859023444260835
+      },
+      {
+        "information_bits": 6.8112781244591325,
+        "m": 3,
+        "n": 4,
+        "radix": 4,
+        "residual_input_entropy_bits": 1.1887218755408675
+      },
+      {
+        "information_bits": 0.7219280948873623,
+        "m": 0,
+        "n": 1,
+        "radix": 5,
+        "residual_input_entropy_bits": 1.5999999999999999
+      },
+      {
+        "information_bits": 0.8663137138648348,
+        "m": 0,
+        "n": 2,
+        "radix": 5,
+        "residual_input_entropy_bits": 3.7775424759098897
+      },
+      {
+        "information_bits": 3.0438561897747247,
+        "m": 1,
+        "n": 2,
+        "radix": 5,
+        "residual_input_entropy_bits": 1.5999999999999996
+      },
+      {
+        "information_bits": 0.8951908376603293,
+        "m": 0,
+        "n": 3,
+        "radix": 5,
+        "residual_input_entropy_bits": 6.070593447001758
+      },
+      {
+        "information_bits": 3.1882418087521973,
+        "m": 1,
+        "n": 3,
+        "radix": 5,
+        "residual_input_entropy_bits": 3.7775424759098897
+      },
+      {
+        "information_bits": 5.365784284662087,
+        "m": 2,
+        "n": 3,
+        "radix": 5,
+        "residual_input_entropy_bits": 1.5999999999999996
+      },
+      {
+        "information_bits": 0.9009662624194281,
+        "m": 0,
+        "n": 4,
+        "radix": 5,
+        "residual_input_entropy_bits": 8.38674611713002
+      },
+      {
+        "information_bits": 3.2171189325476917,
+        "m": 1,
+        "n": 4,
+        "radix": 5,
+        "residual_input_entropy_bits": 6.070593447001757
+      },
+      {
+        "information_bits": 5.51016990363956,
+        "m": 2,
+        "n": 4,
+        "radix": 5,
+        "residual_input_entropy_bits": 3.777542475909889
+      },
+      {
+        "information_bits": 7.68771237954945,
+        "m": 3,
+        "n": 4,
+        "radix": 5,
+        "residual_input_entropy_bits": 1.5999999999999988
+      }
+    ],
+    "scope": "Abstract classical radix zipper; binary authenticated backend unchanged"
+  },
+  "schema": "w33.computation-resource-frontiers.v1",
+  "status": "PASS"
+}

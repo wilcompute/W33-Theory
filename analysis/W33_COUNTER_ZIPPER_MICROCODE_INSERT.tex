@@ -76,3 +76,35 @@ using the retained final counter: its conditional entropy is zero even when
 its marginal entropy is positive. This supplies no measured heat or zero-energy
 device claim. Exact backend counts, $45$ timing partitions and a $1024$-state
 permutation witness are in \texttt{analysis/W33\_CARRY\_TIMING\_INFORMATION.md}.
+
+\paragraph{Radix, noisy observations, and synthesized erasure.}
+The executable extension
+\texttt{w33\_computation\_resource\_frontiers.py} checks an abstract radix-$b$
+zipper law
+\[
+ T_b(a,L)=3L+\frac{2}{b-1}\bigl(L+s_b(a)-s_b(a+L)\bigr).
+\]
+For $X$ uniform on $0,\ldots,b^n-1$ and $L=b^m$, the individual timing entropy
+is $m\log_2 b+h_b(n-m)$, whereas the total duration has entropy $h_b(n-m)$,
+where
+\[
+ h_b(d)=(1-b^{-d})\left(\frac{b}{b-1}\log_2 b-\log_2(b-1)\right).
+\]
+Forty finite ensembles check this identity; classical radix symbols do not
+establish coherent qutrit hardware. For mixed binary arithmetic, each crossing
+of the edge $u-1\leftrightarrow u$ costs $3+2v_2(u)$ ticks. A closed cycle at
+$2^k$ costs $4k+6$, preventing a uniform constant amortized bound for both
+operations using a counter-state potential.
+
+For exact timing $Z$, final counter $Y=X+L$, and independent additive observation
+noise $E$, the noisy record $O=Z+E$ satisfies $H(O\mid Y)=H(E)$.
+Thus noise can reduce input leakage while leaving randomness that $Y$ cannot
+uncompute. Four timings with independent jitter $(-2,0,2)$ of probabilities
+$(1/4,1/2,1/4)$ leak about $2.005$ bits but retain six conditional record bits.
+For the exact record, a prefix circuit reconstructs the statistic $(r,k)$ from
+$Y$ with $d=n-m$ clean ancillas, $2d$ NOT gates, $2(d-1)$ Toffoli gates, and
+$m+2+2d-\operatorname{popcount}(d)$ CNOT gates, then restores its ancillas.
+Twenty-eight sizes pass exhaustive clean-ancilla checks. The five-bit example
+uses eighteen gates. This is a basis-permutation construction, not measured
+physical dissipation. The accompanying report separately attributes a published
+colloidal-trap work measurement and keeps Holonet calibration open.
