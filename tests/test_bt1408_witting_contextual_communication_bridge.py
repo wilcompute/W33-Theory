@@ -133,12 +133,13 @@ def test_bt1408_publication_anchors() -> None:
     assert "BT1408: Witting contextual communication bridge" in docs
     assert "BT1408_witting_contextual_communication_bridge.md" in docs
     # photonic_holonet.tex is now a stable wrapper around the separately maintained
-    # body/frontier manifests.  The old test incorrectly required historical BT1408
-    # prose to live literally in the wrapper file itself.
+    # body/frontier manifests.  The publication gate therefore anchors the wrapper
+    # structurally and the current manuscript semantically, rather than pinning a
+    # historical sentence that can be legitimately reworded.
     assert r"\input{photonic_holonet_body.tex}" in holonet_wrapper
     assert (ROOT / "photonic_holonet_body.tex").is_file()
     assert "BT1408 Witting Contextual Communication Bridge" in single
-    assert "1 same ray plus 12 compatible orthogonal rays plus 27 incompatible rays" in single
+    assert "1+12+27=40:" in single
 
 
 if __name__ == "__main__":
