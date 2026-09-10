@@ -2,7 +2,7 @@
 """Close the 270 Heawood/spread bridge under the full PGSp(4,3) action.
 
 The companion PSp certificate proves equivariance for eight symplectic
-transvections.  The only missing coset is represented by the multiplier-two
+transvections. The only missing coset is represented by the multiplier-two
 similitude already used in w33_pass125_two_we6_embeddings.py:
 
     D = diag(2,2,1,1),
@@ -10,13 +10,13 @@ similitude already used in w33_pass125_two_we6_embeddings.py:
 
 Because projective symplectic similitudes preserve isotropic incidence, D acts
 on W(3,3), its 40 lines, 540 skew-line Q3 charts, intrinsic execution slots,
-270 C6 components, and 36 spreads.  This certificate checks directly that D
+270 C6 components, and 36 spreads. This certificate checks directly that D
 preserves the slot graph and commutes with the C6 -> four-intersection spread
-pair bijection.  Together with the audited PSp generators this proves
+pair bijection. Together with the audited PSp generators this proves
 PGSp(4,3)-equivariance.
 
 The full group order 51840 and the PSp order 25920 are prior certified repo
-results.  Since the 270-cycle action is transitive already under PSp, the full
+results. Since the 270-cycle action is transitive already under PSp, the full
 stabilizer has order 51840/270 = 192, agreeing exactly with Pass 1996's
 independent D8 x S4 stabilizer computation.
 """
@@ -70,15 +70,16 @@ def canon_f3(v):
     raise ValueError("zero vector")
 
 
+def apply_matrix(v, matrix):
+    return tuple(
+        sum(matrix[r][c] * v[c] for c in range(4)) % 3
+        for r in range(4)
+    )
+
+
 def matrix_point_perm(points, matrix):
     index = {p: i for i, p in enumerate(points)}
-    out = []
-    for p in points:
-        image = tuple(
-            sum(matrix[r][c] * p[c] for c in range(4)) % 3
-            for r in range(4)
-        )
-        out.append(index[canon_f3(image)])
+    out = [index[canon_f3(apply_matrix(p, matrix))] for p in points]
     assert sorted(out) == list(range(len(points)))
     return tuple(out)
 
@@ -135,20 +136,25 @@ def build_result():
         )
         inner_component_perms.append(comp_perm)
 
+    # Verify the similitude identity on the actual F3 vectors BEFORE
+    # projective canonicalization. Canonicalizing Dx and Dy independently can
+    # multiply the symplectic form by unrelated projective scalars and is not a
+    # valid test of a matrix-level similitude identity.
+    multiplier_checks = [
+        symplectic_form(
+            apply_matrix(x, MULTIPLIER_TWO),
+            apply_matrix(y, MULTIPLIER_TWO),
+        )
+        == (2 * symplectic_form(x, y)) % 3
+        for x in points
+        for y in points
+    ]
+
     Dperm = matrix_point_perm(points, MULTIPLIER_TWO)
     lperm, cperm, mapped_nodes, outer_comp_perm = component_perm_for_point_perm(
         Dperm, lines, charts, slot_adj, components, component_index
     )
     sperm = induced_spread_perm(spreads, lperm)
-
-    multiplier_checks = []
-    for x in points:
-        Dx = points[Dperm[{p: i for i, p in enumerate(points)}[x]]]
-        for y in points:
-            Dy = points[Dperm[{p: i for i, p in enumerate(points)}[y]]]
-            multiplier_checks.append(
-                symplectic_form(Dx, Dy) == (2 * symplectic_form(x, y)) % 3
-            )
 
     chart_web_ok = all(
         {cperm[x] for x in web[ci]} == set(web[cperm[ci]])
@@ -161,7 +167,7 @@ def build_result():
     )
 
     outer_equivariant = True
-    for cid, comp in enumerate(components):
+    for cid in range(len(components)):
         cid2 = outer_comp_perm[cid]
         si, sj = cycle_to_pair[cid]
         expected = tuple(sorted((sperm[si], sperm[sj])))
@@ -181,7 +187,7 @@ def build_result():
     psp_stabilizer = PSP43_ORDER // len(psp_orbit)
 
     checks = {
-        "multiplier_two_identity_holds_on_all_projective_point_pairs": all(multiplier_checks),
+        "multiplier_two_identity_holds_on_all_F3_point_representative_pairs": all(multiplier_checks),
         "outer_matrix_is_projective_involution_on_points": outer_order_two_on_points,
         "outer_preserves_chart_web": chart_web_ok,
         "outer_preserves_intrinsic_slot_graph": slot_graph_ok,
