@@ -149,13 +149,76 @@ The finite-geometry question becomes whether these local decryption maps glue to
 
 This should be tested with an exact W33 contextuality cocycle/section obstruction rather than asserted from analogy.
 
+## Exact Marcelis quotient model: a decoding horizon inside finite geometry
+
+The new `w33_marcelis_observer_quotient_dynamics.py` certificate makes the observer-relative idea literal inside the same finite-geometric program.  Take the 85 points of `PG(3,4)` as global microstates and expose only the gauge-fixed trace image
+
+\[
+B=\tau_\omega(S)\in PG(3,2),
+\]
+
+whose 15 observer states have Schubert fibre sizes `1,2,4,8`.  Evolve the complete microstate with the deterministic projective bijection
+
+\[
+U_1(x_0,x_1,x_2,x_3)=(x_1,x_2,x_3,x_0).
+\]
+
+If an observer knows only `B` and uses the uniform conditional prior on the finite fibre, the induced transition kernel is
+
+\[
+P(B'=b'\mid B=b)=
+\frac{\#\{s\in\tau_\omega^{-1}(b):\tau_\omega(U_1s)=b'\}}
+{|\tau_\omega^{-1}(b)|}.
+\]
+
+The global map is deterministic and invertible, yet the observer quotient is not: exactly 7 of the 15 macrostates have a deterministic next macrostate and 8 have multiple possible next macrostates.  The split is geometric rather than arbitrary:
+
+\[
+B\in F_1=\{x_0=0\}
+\Longleftrightarrow
+\text{deterministic macro update},
+\]
+
+whereas every point in the open Schubert cell `x0=1` is stochastic.  The exact aggregate quantities are
+
+\[
+H(B'\mid B)=\frac{156}{85}\text{ bits},
+\qquad
+P_{\rm guess}(B'\mid B)=\frac{43}{85}.
+\]
+
+Let `K` be the exact local index of the microstate inside its observed fibre. Then the certificate checks
+
+\[
+H(B'\mid B,K)=0.
+\]
+
+This is the cleanest finite realization so far of the proposed **decoding horizon**: randomness can emerge relative to an information-losing projection even when the global evolution is a permutation.  The Schubert flag tells us exactly where the observer begins losing predictive closure.  Exhaustive checks through `n=5` and every nontrivial cyclic shift `U_k` strengthen this to
+
+\[
+\text{macro transition stochastic}
+\Longleftrightarrow
+\operatorname{firstone}(B)<k,
+\]
+
+and therefore
+
+\[
+\text{macro transition deterministic}
+\Longleftrightarrow
+B\in F_k.
+\]
+
+The word **key** remains an information-theoretic analogy here.  The fibre coordinate is sufficient side information, but the certificate does not establish secrecy, hardness, Bell-local hidden variables, or a reduction of operational quantum randomness to classical ignorance.  What it establishes is narrower and exact: **global determinism and observer-relative probability coexist in one finite W33-adjacent geometry, and the loss/restoration of predictability is controlled by a flag.**
+
 ## Reproduce
 
 ```bash
 python analysis/w33_observer_relative_randomness.py
+python analysis/w33_marcelis_observer_quotient_dynamics.py
 ```
 
-The script writes `data/W33_OBSERVER_RELATIVE_RANDOMNESS.json` and fails closed if the exact finite identities do not hold.
+The scripts write `data/W33_OBSERVER_RELATIVE_RANDOMNESS.json` and `data/w33_marcelis_observer_quotient_dynamics.json`; both fail closed if their exact finite identities do not hold.
 
 ## Sources and boundaries
 
@@ -167,4 +230,4 @@ The script writes `data/W33_OBSERVER_RELATIVE_RANDOMNESS.json` and fails closed 
 - Liu et al., device-independent quantum random-number generation: https://www.nature.com/articles/s41586-018-0559-3
 - Stanford Encyclopedia, Many-Worlds Interpretation: https://plato.stanford.edu/entries/qm-manyworlds/
 
-No worldwide novelty claim is made. The exact novelty here is the project-specific observer/key separation certificate and its explicit weld to the existing W33 reversible-noise-seed model and universal-counter-machine boundary.
+No worldwide novelty claim is made. The exact novelty here is the project-specific observer/key separation certificate and its explicit weld to the existing W33 reversible-noise-seed model, Marcelis trace-fibre geometry, and universal-counter-machine boundary.
