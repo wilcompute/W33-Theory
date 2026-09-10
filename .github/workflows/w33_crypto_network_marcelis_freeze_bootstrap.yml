@@ -17,12 +17,14 @@ on:
       - 'analysis/w33_marcelis_gf4_trace_gauge.py'
       - 'analysis/w33_marcelis_pg34_line_trace_census.py'
       - 'analysis/w33_heawood_spread_pair_psp_equivariance.py'
+      - 'analysis/w33_heawood_spread_pair_pgsp_equivariance.py'
       - 'analysis/w33_heawood_spread_pair_stabilizer96_fingerprint.py'
       - 'analysis/w33_marcelis_trace_flag_law.py'
       - 'tests/test_bt1408_witting_contextual_communication_bridge.py'
       - 'tests/test_bt1409_witting_duplex_admission_scheduler.py'
       - 'tests/test_w33_crypto_network_marcelis_20260909.py'
       - 'tests/test_w33_heawood_psp_marcelis_flag_20260909.py'
+      - 'tests/test_w33_heawood_pgsp_stabilizer96_20260910.py'
       - 'photonic_holonet.tex'
       - 'photonic_holonet_body.tex'
       - 'single_photon_universal_computation.tex'
@@ -56,6 +58,7 @@ jobs:
           python analysis/w33_marcelis_gf4_trace_gauge.py
           python analysis/w33_marcelis_pg34_line_trace_census.py
           python analysis/w33_heawood_spread_pair_psp_equivariance.py
+          python analysis/w33_heawood_spread_pair_pgsp_equivariance.py
           python analysis/w33_heawood_spread_pair_stabilizer96_fingerprint.py
           python analysis/w33_marcelis_trace_flag_law.py
       - name: Focused regression gates
@@ -64,12 +67,13 @@ jobs:
             tests/test_bt1408_witting_contextual_communication_bridge.py \
             tests/test_bt1409_witting_duplex_admission_scheduler.py \
             tests/test_w33_crypto_network_marcelis_20260909.py \
-            tests/test_w33_heawood_psp_marcelis_flag_20260909.py
+            tests/test_w33_heawood_psp_marcelis_flag_20260909.py \
+            tests/test_w33_heawood_pgsp_stabilizer96_20260910.py
       - name: Freeze generated outputs on master
         shell: bash
         run: |
           # Most exact-analysis JSONs are intentionally ignored in ordinary
-          # working trees.  This dedicated freezer is their publication path,
+          # working trees. This dedicated freezer is their publication path,
           # so force-add the declared outputs explicitly rather than weakening
           # the repository-wide ignore policy.
           git add -f \
@@ -84,6 +88,7 @@ jobs:
             data/w33_marcelis_gf4_trace_gauge.json \
             data/w33_marcelis_pg34_line_trace_census.json \
             data/w33_heawood_spread_pair_psp_equivariance.json \
+            data/w33_heawood_spread_pair_pgsp_equivariance.json \
             data/w33_heawood_spread_pair_stabilizer96_fingerprint.json \
             data/w33_marcelis_trace_flag_law.json
           if git diff --cached --quiet; then
