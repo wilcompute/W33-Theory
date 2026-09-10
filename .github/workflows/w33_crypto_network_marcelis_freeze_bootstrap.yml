@@ -19,12 +19,17 @@ on:
       - 'analysis/w33_heawood_spread_pair_psp_equivariance.py'
       - 'analysis/w33_heawood_spread_pair_pgsp_equivariance.py'
       - 'analysis/w33_heawood_spread_pair_stabilizer96_fingerprint.py'
+      - 'analysis/w33_heawood_outer_involution_fixed_census.py'
+      - 'analysis/w33_heawood_stabilizer96_presentation_lattice.py'
       - 'analysis/w33_marcelis_trace_flag_law.py'
+      - 'analysis/w33_marcelis_trace_schubert_general.py'
+      - 'analysis/w33_marcelis_observer_quotient_dynamics.py'
       - 'tests/test_bt1408_witting_contextual_communication_bridge.py'
       - 'tests/test_bt1409_witting_duplex_admission_scheduler.py'
       - 'tests/test_w33_crypto_network_marcelis_20260909.py'
       - 'tests/test_w33_heawood_psp_marcelis_flag_20260909.py'
       - 'tests/test_w33_heawood_pgsp_stabilizer96_20260910.py'
+      - 'tests/test_w33_heawood_schubert_observer_20260910.py'
       - 'photonic_holonet.tex'
       - 'photonic_holonet_body.tex'
       - 'single_photon_universal_computation.tex'
@@ -60,7 +65,11 @@ jobs:
           python analysis/w33_heawood_spread_pair_psp_equivariance.py
           python analysis/w33_heawood_spread_pair_pgsp_equivariance.py
           python analysis/w33_heawood_spread_pair_stabilizer96_fingerprint.py
+          python analysis/w33_heawood_outer_involution_fixed_census.py
+          python analysis/w33_heawood_stabilizer96_presentation_lattice.py
           python analysis/w33_marcelis_trace_flag_law.py
+          python analysis/w33_marcelis_trace_schubert_general.py
+          python analysis/w33_marcelis_observer_quotient_dynamics.py
       - name: Focused regression gates
         run: |
           python -m pytest -q \
@@ -68,7 +77,8 @@ jobs:
             tests/test_bt1409_witting_duplex_admission_scheduler.py \
             tests/test_w33_crypto_network_marcelis_20260909.py \
             tests/test_w33_heawood_psp_marcelis_flag_20260909.py \
-            tests/test_w33_heawood_pgsp_stabilizer96_20260910.py
+            tests/test_w33_heawood_pgsp_stabilizer96_20260910.py \
+            tests/test_w33_heawood_schubert_observer_20260910.py
       - name: Freeze generated outputs on master
         shell: bash
         run: |
@@ -90,7 +100,11 @@ jobs:
             data/w33_heawood_spread_pair_psp_equivariance.json \
             data/w33_heawood_spread_pair_pgsp_equivariance.json \
             data/w33_heawood_spread_pair_stabilizer96_fingerprint.json \
-            data/w33_marcelis_trace_flag_law.json
+            data/w33_heawood_outer_involution_fixed_census.json \
+            data/w33_heawood_stabilizer96_presentation_lattice.json \
+            data/w33_marcelis_trace_flag_law.json \
+            data/w33_marcelis_trace_schubert_general.json \
+            data/w33_marcelis_observer_quotient_dynamics.json
           if git diff --cached --quiet; then
             echo 'All focused certificates already frozen.'
             exit 0
