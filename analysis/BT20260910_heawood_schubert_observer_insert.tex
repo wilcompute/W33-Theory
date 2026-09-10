@@ -1,0 +1,167 @@
+% Exact continuation insert, 10 September 2026.
+% Source certificates:
+% data/w33_heawood_spread_pair_pgsp_equivariance.json
+% data/w33_heawood_outer_involution_fixed_census.json
+% data/w33_heawood_stabilizer96_presentation_lattice.json
+% data/w33_marcelis_trace_schubert_general.json
+% data/w33_marcelis_observer_quotient_dynamics.json
+
+\section*{September 2026 exact continuation: Heawood symmetry, Schubert trace fibres, and observer quotients}
+
+\paragraph{Full $\PGSp(4,3)$ Heawood--spread dictionary.}
+The intrinsic execution-slot graph has $1620$ vertices and decomposes into
+$270$ six-cycles.  The previously constructed dictionary sends each such
+$C_6$ to the unique unordered pair of $W(3,3)$ spreads whose intersection has
+four lines and whose symmetric difference is the same twelve-line axis union.
+The eight audited symplectic transvections make this bijection
+$\PSp(4,3)$-equivariant.  The multiplier-two similitude
+\[
+D=\operatorname{diag}(2,2,1,1),\qquad
+\omega(Dx,Dy)=2\,\omega(x,y)\quad(\bmod 3),
+\]
+commutes with the same dictionary, closing the missing outer coset.  Hence the
+bijection is equivariant for the full projective similitude action.  With the
+certified group orders $25920$ and $51840$, orbit--stabilizer gives
+\[
+|\operatorname{Stab}_{\PSp}(C_6)|=96,
+\qquad
+|\operatorname{Stab}_{\PGSp}(C_6)|=192.
+\]
+The latter agrees with the independent spread-pair stabilizer
+$D_8\times S_4$.
+
+The declared outer involution has cycle structure
+\[
+270=12+129\cdot2
+\]
+on both the $C_6$ set and the four-intersection spread-pair set.  The twelve
+fixed pairs split exactly $6+6$: six consist of two individually fixed spreads,
+and six consist of two spreads exchanged by the outer involution.  On the
+underlying W33 objects the same involution fixes $8$ of $40$ points, $6$ of
+$40$ lines, and $4$ of $36$ spreads.
+
+\paragraph{The order-$96$ stabilizer is a split fibre product, not the tomotope group.}
+Let $D_8=\langle r,s\mid r^4=s^2=1,\ srs=r^{-1}\rangle$ and define
+$\chi(r^is^j)=i\pmod 2$.  The exact stabilizer model is
+\[
+H=\{(d,\sigma)\in D_8\times S_4:\chi(d)=\operatorname{sgn}(\sigma)\}
+   =D_8\times_{C_2}S_4.
+\]
+Its $D_8$-character kernel is
+$V=\langle z=r^2,u=s\rangle\cong C_2^2$.  Since $t=rs$ has order two and
+$\chi(t)=1$, the map
+\[
+\sigma\longmapsto(t^{\operatorname{sgn}(\sigma)},\sigma)
+\]
+is a splitting, so
+\[
+H\cong V_4\rtimes S_4,
+\]
+where the action factors through sign: even permutations centralize $V_4$,
+while odd permutations fix $z$ and send $u\mapsto zu$.  A four-generator
+presentation is certified by
+\[
+z^2=u^2=a^2=b^4=(ab)^3=1,
+\qquad [z,u]=[z,a]=[z,b]=1,
+\]
+\[
+aua^{-1}=zu,\qquad bub^{-1}=zu,
+\]
+with $a=(01)$ and $b=(0123)$.  Exhaustive normal-closure enumeration gives
+exactly twelve normal subgroups, with order census
+\[
+1^1,\ 2^1,\ 4^2,\ 8^1,\ 12^1,\ 16^1,\ 24^1,\ 48^3,\ 96^1.
+\]
+In particular
+\[
+Z(H)\cong C_2,\qquad H'\cong C_2\times A_4,
+\qquad H/H'\cong C_2^2.
+\]
+This is a structural firewall against the tempting order coincidence with the
+tomotope automorphism group: the repo-certified tomotope group has trivial
+centre and derived subgroup of order $48$, whereas $H$ has centre order $2$
+and derived subgroup order $24$.
+
+\paragraph{All-$n$ Schubert law for the Marcelis trace gauge.}
+Fix ordered coordinates on $\PG(n,4)$, scale the first nonzero coordinate to
+$\omega$, and apply $\operatorname{Tr}_{\mathbb F_4/\mathbb F_2}$ coordinatewise.
+Relative to the complete coordinate flag
+\[
+F_j=\{x_0=\cdots=x_{j-1}=0\},
+\]
+the resulting gauge-fixed map $\tau_\omega$ obeys the exact point law
+\[
+\bigl|\tau_\omega^{-1}(b)\bigr|=2^{n-j},
+\qquad b\in F_j\setminus F_{j+1}.
+\]
+For a binary projective line $\ell\subseteq F_j$ but
+$\ell\nsubseteq F_{j+1}$, the number of $\mathbb F_4$ projective lines whose
+setwise image is exactly $\ell$ is
+\[
+N_{\rm line}(\ell)=2^{n-1-j}.
+\]
+There are $2^{n-j-1}(2^{n-j}-1)$ binary lines in that stratum, giving total
+incidence-preserving line mass
+\[
+\sum_{j=0}^{n-1}2^{n-j-1}(2^{n-j}-1)2^{n-j-1}
+=
+\frac{2(8^n-1)}7-\frac{4^n-1}{3}.
+\]
+The line law is constructive: after matching the two RREF pivot columns, every
+remaining free column has exactly two admissible $\mathbb F_4$ lifts.  The
+implementation exhausts all points for $1\le n\le6$, all lines for
+$1\le n\le5$, and symbolic mass identities through $n=9$.  At $n=3$ it
+recovers $28\cdot4+6\cdot2+1=125$; at $n=5$ it finds $9021$ preserving lines
+among $93093$ $\PG(5,4)$ lines mapping onto all $651$ binary lines.
+
+\paragraph{Deterministic global law, stochastic observer quotient.}
+The same trace fibres give an exact finite model of observer-relative
+randomness.  Take the $85$ points of $\PG(3,4)$ as microstates, let the observer
+retain only
+\[
+B=\tau_\omega(S)\in\PG(3,2),
+\]
+and evolve the microstate by the deterministic projective bijection
+\[
+U_1(x_0,x_1,x_2,x_3)=(x_1,x_2,x_3,x_0).
+\]
+With a uniform conditional prior within each finite fibre, the induced macro
+transition law is
+\[
+P(B'=b'\mid B=b)
+=
+\frac{\#\{s\in\tau_\omega^{-1}(b):\tau_\omega(U_1s)=b'\}}
+{|\tau_\omega^{-1}(b)|}.
+\]
+Although $U_1$ is globally deterministic and invertible, exactly seven of the
+fifteen observer states have deterministic next macrostates and eight have
+nontrivial transition distributions.  The boundary is the first Schubert
+hyperplane:
+\[
+B\in F_1=\{x_0=0\}\Longleftrightarrow\text{deterministic macro update},
+\]
+while every state in $F_0\setminus F_1=\{x_0=1\}$ is stochastic.  Quantitatively,
+\[
+H(B'\mid B)=\frac{156}{85}\ \text{bits},
+\qquad
+P_{\rm guess}(B'\mid B)=\frac{43}{85}.
+\]
+If $K$ records the exact microstate index inside the observed fibre, then
+\[
+H(B'\mid B,K)=0.
+\]
+Thus this geometry supplies a literal finite example of deterministic global
+information becoming probabilistic relative to a many-to-one observer map,
+with side information restoring predictability.  This is an
+information-theoretic quotient theorem, not a claim that Bell-certified quantum
+randomness is a classical hidden-variable phenomenon or that the fibre index is
+a cryptographic secret key.  Exhaustive checks through $n=5$ show the more
+general horizon law for a $k$-step cyclic coordinate shift: the macro update is
+stochastic exactly when the first nonzero binary coordinate occurs before $k$,
+and deterministic exactly on $F_k$.
+
+\paragraph{Reproducibility.}
+The claims in this insert are regenerated and regression-gated by
+\texttt{w33\_crypto\_network\_marcelis\_freeze\_bootstrap.yml}; the authoritative
+machine-readable witnesses are the five JSON certificates named in the header
+of this insert.
