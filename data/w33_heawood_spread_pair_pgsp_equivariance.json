@@ -1,0 +1,72 @@
+{
+  "checks": {
+    "PGSp_generators_are_transitive_on_270_C6": true,
+    "PSp_generators_are_transitive_on_270_C6": true,
+    "PSp_stabilizer_is_96": true,
+    "full_PGSp_stabilizer_is_192": true,
+    "full_stabilizer_doubles_PSp_stabilizer": true,
+    "multiplier_two_identity_holds_on_all_F3_point_representative_pairs": true,
+    "outer_commutes_with_C6_spread_pair_bijection": true,
+    "outer_is_involution_on_C6_set": true,
+    "outer_matrix_is_projective_involution_on_points": true,
+    "outer_permutes_all_270_C6_components": true,
+    "outer_preserves_chart_web": true,
+    "outer_preserves_intrinsic_slot_graph": true,
+    "spread_pair_census_remains_270_at_intersection4": true
+  },
+  "claim_boundary": [
+    "The group orders 25920 and 51840 are imported from prior exact repo certificates.",
+    "The D8 x S4 structure of the 192-element full stabilizer is the independent Pass 1996 result; this script matches its orbit-stabilizer order and proves the explicit G-set map is full-G equivariant.",
+    "The 96-element PSp stabilizer is not the tomotope automorphism group; the companion stabilizer fingerprint supplies the derived-subgroup obstruction."
+  ],
+  "equivariance_generators": {
+    "conclusion": "These generate the certified full PGSp(4,3) point action; the C6-spread dictionary commutes with every generator.",
+    "inner": "eight explicit symplectic transvections",
+    "outer": "diag(2,2,1,1), multiplier 2"
+  },
+  "headline": "The 270 C6 execution cycles -> 270 four-intersection spread-pair bijection is equivariant under the full PGSp(4,3) action. The single multiplier-two outer similitude preserves the intrinsic slot graph and commutes with the bijection, closing the only coset left open by the PSp certificate.",
+  "orbit_stabilizer": {
+    "PGSp_C6_orbit": 270,
+    "PGSp_C6_stabilizer": 192,
+    "PGSp_order_prior_certified": 51840,
+    "PSp_C6_orbit": 270,
+    "PSp_C6_stabilizer": 96,
+    "PSp_order_prior_certified": 25920,
+    "prior_Pass1996_full_stabilizer_structure": "D8 x S4"
+  },
+  "outer_generator": {
+    "commutes_with_bijection": true,
+    "fixed_C6_components": 12,
+    "matrix_mod3": [
+      [
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "moves_C6_components": 258,
+    "projective_order": 2,
+    "similitude_multiplier": 2
+  },
+  "schema": "w33.heawood-spread-pair-pgsp-equivariance.v1",
+  "status": "PASS"
+}
