@@ -68,7 +68,11 @@ jobs:
       - name: Freeze generated outputs on master
         shell: bash
         run: |
-          git add \
+          # Most exact-analysis JSONs are intentionally ignored in ordinary
+          # working trees.  This dedicated freezer is their publication path,
+          # so force-add the declared outputs explicitly rather than weakening
+          # the repository-wide ignore policy.
+          git add -f \
             data/bt1408_witting_contextual_communication_bridge.json \
             data/bt1409_witting_duplex_admission_scheduler.json \
             data/w33_contextuality_terminology_migration.json \
