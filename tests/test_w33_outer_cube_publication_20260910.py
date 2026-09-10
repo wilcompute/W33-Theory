@@ -8,7 +8,8 @@ ANALYSIS = ROOT / "analysis"
 if str(ANALYSIS) not in sys.path:
     sys.path.insert(0, str(ANALYSIS))
 
-from w33_outer_cube_observer_bridge import build_result  # noqa: E402
+from w33_outer_cube_observer_bridge_v2 import build_result  # noqa: E402
+from w33_stabilizer96_cube_central_cover import build_result as build_cover  # noqa: E402
 from w33_publish_september_2026_frontier import BEGIN, END, render_section  # noqa: E402
 
 
@@ -47,6 +48,26 @@ def test_outer_fixed_residue_is_explicit_cube_and_welds_to_observer_chart() -> N
     assert data["Q4_facet_weld"]["facet_edge_count"] == 12
 
 
+def test_stabilizer96_is_nonsplit_central_cover_of_cube_symmetry() -> None:
+    data = build_cover()
+    assert data["status"] == "PASS"
+    assert all(data["checks"].values())
+    cube = data["cube_automorphism_group"]
+    assert cube["order"] == 48
+    assert cube["center_order"] == 2
+    assert cube["derived_order"] == 12
+    assert cube["direct_product"].endswith("C2 x S4")
+    cover = data["Heawood_stabilizer_cover"]
+    assert cover["H_order"] == 96
+    assert cover["quotient_order"] == 48
+    assert cover["quotient"] == "H/Z(H) ~= C2 x S4 ~= Aut(Q3)"
+    assert cover["splitting"] == "NON-SPLIT"
+    cocycle = data["extension_cocycle"]
+    assert cocycle["cocycle_triples_checked"] == 48 ** 3
+    assert cocycle["nontriviality_witness"]["alpha_g_h"] == 1
+    assert cocycle["nontriviality_witness"]["alpha_h_g"] == 0
+
+
 def test_publication_renderer_and_docs_index_anchor() -> None:
     section = render_section()
     assert BEGIN in section and END in section
@@ -54,12 +75,14 @@ def test_publication_renderer_and_docs_index_anchor() -> None:
     assert "12 + 129×2" in section
     assert "D8 ×_C2 S4" in section
     assert "AG(3,2) ≅ F2^3" in section
+    assert "non-split central double cover" in section
 
     docs = (ROOT / "docs" / "index.html").read_text(encoding="utf-8")
     assert docs.count(BEGIN) == 1
     assert docs.count(END) == 1
     assert 'id="heawood-schubert-observer-20260910"' in docs
     assert "Cube/observer bridge JSON" in docs
+    assert "central-cover cocycle" in docs
 
 
 def test_holonet_publication_insert_is_wired() -> None:
