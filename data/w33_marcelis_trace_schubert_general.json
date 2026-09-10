@@ -1,0 +1,424 @@
+{
+  "checks": {
+    "line_law_exhaustive_n1_through_n5": true,
+    "local_free_column_table_has_exactly_two_solutions_each": true,
+    "n3_line_law_recovers_4_2_1": true,
+    "n3_line_mass_is_125": true,
+    "n3_point_law_recovers_1_2_4_8": true,
+    "point_law_exhaustive_n1_through_n6": true,
+    "symbolic_mass_identities_n1_through_n9": true
+  },
+  "claim_boundary": [
+    "The theorem is for the declared ordered-coordinate omega gauge and its standard complete flag; it is not PGL(n+1,4)-canonical.",
+    "Only point fibres and GF(4) lines whose setwise image is a binary projective line are covered by the general incidence statement.",
+    "No claim is made here for arbitrary higher-dimensional projective subspaces or for a global incidence morphism PG(n,4)->PG(n,2).",
+    "The exhaustive n<=6/n<=5 runs are regression firewalls; the all-n claim rests on the displayed local two-solution proof, not on finite extrapolation."
+  ],
+  "constructive_line_proof": {
+    "basis": "Use the unique binary RREF basis x,y with pivots j<k and a GF(4) RREF basis A,B with the same pivots.",
+    "conclusion": "Exactly two choices at each of n-j-1 free columns give 2^(n-j-1) line lifts; the second pivot removes the otherwise second choice in its column.",
+    "free_columns": "Every column c>j except the second pivot k is independent.",
+    "local_solution_table_encoding_0_1_omega_omega2": {
+      "00": [
+        [
+          0,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "01": [
+        [
+          0,
+          1
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "10": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "11": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    }
+  },
+  "exhaustive_line_checks": [
+    {
+      "PGn4_lines": 1,
+      "binary_line_images": 1,
+      "line_preserving_GF4_mass": 1,
+      "line_preserving_mass_formula": 1,
+      "n": 1,
+      "strata": {
+        "0": {
+          "GF4_line_mass": 1,
+          "binary_lines": 1,
+          "lifts_per_binary_line": 1
+        }
+      }
+    },
+    {
+      "PGn4_lines": 21,
+      "binary_line_images": 7,
+      "line_preserving_GF4_mass": 13,
+      "line_preserving_mass_formula": 13,
+      "n": 2,
+      "strata": {
+        "0": {
+          "GF4_line_mass": 12,
+          "binary_lines": 6,
+          "lifts_per_binary_line": 2
+        },
+        "1": {
+          "GF4_line_mass": 1,
+          "binary_lines": 1,
+          "lifts_per_binary_line": 1
+        }
+      }
+    },
+    {
+      "PGn4_lines": 357,
+      "binary_line_images": 35,
+      "line_preserving_GF4_mass": 125,
+      "line_preserving_mass_formula": 125,
+      "n": 3,
+      "strata": {
+        "0": {
+          "GF4_line_mass": 112,
+          "binary_lines": 28,
+          "lifts_per_binary_line": 4
+        },
+        "1": {
+          "GF4_line_mass": 12,
+          "binary_lines": 6,
+          "lifts_per_binary_line": 2
+        },
+        "2": {
+          "GF4_line_mass": 1,
+          "binary_lines": 1,
+          "lifts_per_binary_line": 1
+        }
+      }
+    },
+    {
+      "PGn4_lines": 5797,
+      "binary_line_images": 155,
+      "line_preserving_GF4_mass": 1085,
+      "line_preserving_mass_formula": 1085,
+      "n": 4,
+      "strata": {
+        "0": {
+          "GF4_line_mass": 960,
+          "binary_lines": 120,
+          "lifts_per_binary_line": 8
+        },
+        "1": {
+          "GF4_line_mass": 112,
+          "binary_lines": 28,
+          "lifts_per_binary_line": 4
+        },
+        "2": {
+          "GF4_line_mass": 12,
+          "binary_lines": 6,
+          "lifts_per_binary_line": 2
+        },
+        "3": {
+          "GF4_line_mass": 1,
+          "binary_lines": 1,
+          "lifts_per_binary_line": 1
+        }
+      }
+    },
+    {
+      "PGn4_lines": 93093,
+      "binary_line_images": 651,
+      "line_preserving_GF4_mass": 9021,
+      "line_preserving_mass_formula": 9021,
+      "n": 5,
+      "strata": {
+        "0": {
+          "GF4_line_mass": 7936,
+          "binary_lines": 496,
+          "lifts_per_binary_line": 16
+        },
+        "1": {
+          "GF4_line_mass": 960,
+          "binary_lines": 120,
+          "lifts_per_binary_line": 8
+        },
+        "2": {
+          "GF4_line_mass": 112,
+          "binary_lines": 28,
+          "lifts_per_binary_line": 4
+        },
+        "3": {
+          "GF4_line_mass": 12,
+          "binary_lines": 6,
+          "lifts_per_binary_line": 2
+        },
+        "4": {
+          "GF4_line_mass": 1,
+          "binary_lines": 1,
+          "lifts_per_binary_line": 1
+        }
+      }
+    }
+  ],
+  "exhaustive_point_checks": [
+    {
+      "PGn2_image_points": 3,
+      "PGn4_points": 5,
+      "n": 1,
+      "strata": {
+        "0": {
+          "binary_points": 2,
+          "fibre_size": 2,
+          "mass": 4
+        },
+        "1": {
+          "binary_points": 1,
+          "fibre_size": 1,
+          "mass": 1
+        }
+      }
+    },
+    {
+      "PGn2_image_points": 7,
+      "PGn4_points": 21,
+      "n": 2,
+      "strata": {
+        "0": {
+          "binary_points": 4,
+          "fibre_size": 4,
+          "mass": 16
+        },
+        "1": {
+          "binary_points": 2,
+          "fibre_size": 2,
+          "mass": 4
+        },
+        "2": {
+          "binary_points": 1,
+          "fibre_size": 1,
+          "mass": 1
+        }
+      }
+    },
+    {
+      "PGn2_image_points": 15,
+      "PGn4_points": 85,
+      "n": 3,
+      "strata": {
+        "0": {
+          "binary_points": 8,
+          "fibre_size": 8,
+          "mass": 64
+        },
+        "1": {
+          "binary_points": 4,
+          "fibre_size": 4,
+          "mass": 16
+        },
+        "2": {
+          "binary_points": 2,
+          "fibre_size": 2,
+          "mass": 4
+        },
+        "3": {
+          "binary_points": 1,
+          "fibre_size": 1,
+          "mass": 1
+        }
+      }
+    },
+    {
+      "PGn2_image_points": 31,
+      "PGn4_points": 341,
+      "n": 4,
+      "strata": {
+        "0": {
+          "binary_points": 16,
+          "fibre_size": 16,
+          "mass": 256
+        },
+        "1": {
+          "binary_points": 8,
+          "fibre_size": 8,
+          "mass": 64
+        },
+        "2": {
+          "binary_points": 4,
+          "fibre_size": 4,
+          "mass": 16
+        },
+        "3": {
+          "binary_points": 2,
+          "fibre_size": 2,
+          "mass": 4
+        },
+        "4": {
+          "binary_points": 1,
+          "fibre_size": 1,
+          "mass": 1
+        }
+      }
+    },
+    {
+      "PGn2_image_points": 63,
+      "PGn4_points": 1365,
+      "n": 5,
+      "strata": {
+        "0": {
+          "binary_points": 32,
+          "fibre_size": 32,
+          "mass": 1024
+        },
+        "1": {
+          "binary_points": 16,
+          "fibre_size": 16,
+          "mass": 256
+        },
+        "2": {
+          "binary_points": 8,
+          "fibre_size": 8,
+          "mass": 64
+        },
+        "3": {
+          "binary_points": 4,
+          "fibre_size": 4,
+          "mass": 16
+        },
+        "4": {
+          "binary_points": 2,
+          "fibre_size": 2,
+          "mass": 4
+        },
+        "5": {
+          "binary_points": 1,
+          "fibre_size": 1,
+          "mass": 1
+        }
+      }
+    },
+    {
+      "PGn2_image_points": 127,
+      "PGn4_points": 5461,
+      "n": 6,
+      "strata": {
+        "0": {
+          "binary_points": 64,
+          "fibre_size": 64,
+          "mass": 4096
+        },
+        "1": {
+          "binary_points": 32,
+          "fibre_size": 32,
+          "mass": 1024
+        },
+        "2": {
+          "binary_points": 16,
+          "fibre_size": 16,
+          "mass": 256
+        },
+        "3": {
+          "binary_points": 8,
+          "fibre_size": 8,
+          "mass": 64
+        },
+        "4": {
+          "binary_points": 4,
+          "fibre_size": 4,
+          "mass": 16
+        },
+        "5": {
+          "binary_points": 2,
+          "fibre_size": 2,
+          "mass": 4
+        },
+        "6": {
+          "binary_points": 1,
+          "fibre_size": 1,
+          "mass": 1
+        }
+      }
+    }
+  ],
+  "headline": "For the declared omega/first-nonzero gauge on PG(n,4), point and incidence-preserving-line fibre multiplicities are Schubert-stratum laws relative to the standard coordinate flag. A point in F_j\\F_{j+1} has 2^(n-j) lifts; a binary line in F_j but not F_{j+1} has 2^(n-1-j) GF(4) line lifts. The proof is local and constructive, and exhaustive checks cover points through n=6 and lines through n=5.",
+  "relation_to_n3_certificate": "At n=3 the point strata give fibre sizes 8,4,2,1 (the prior 1/2/4/8 histogram read in reverse pivot order), while line strata give 4,2,1 on 28,6,1 binary lines, hence 112+12+1=125.",
+  "schema": "w33.marcelis-trace-schubert-general.v1",
+  "status": "PASS",
+  "symbolic_mass_checks": {
+    "1": {
+      "binary_line_strata_sum_to_PGn2_lines": true,
+      "line_mass_matches_closed_form": true,
+      "point_mass_matches_PGn4": true
+    },
+    "2": {
+      "binary_line_strata_sum_to_PGn2_lines": true,
+      "line_mass_matches_closed_form": true,
+      "point_mass_matches_PGn4": true
+    },
+    "3": {
+      "binary_line_strata_sum_to_PGn2_lines": true,
+      "line_mass_matches_closed_form": true,
+      "point_mass_matches_PGn4": true
+    },
+    "4": {
+      "binary_line_strata_sum_to_PGn2_lines": true,
+      "line_mass_matches_closed_form": true,
+      "point_mass_matches_PGn4": true
+    },
+    "5": {
+      "binary_line_strata_sum_to_PGn2_lines": true,
+      "line_mass_matches_closed_form": true,
+      "point_mass_matches_PGn4": true
+    },
+    "6": {
+      "binary_line_strata_sum_to_PGn2_lines": true,
+      "line_mass_matches_closed_form": true,
+      "point_mass_matches_PGn4": true
+    },
+    "7": {
+      "binary_line_strata_sum_to_PGn2_lines": true,
+      "line_mass_matches_closed_form": true,
+      "point_mass_matches_PGn4": true
+    },
+    "8": {
+      "binary_line_strata_sum_to_PGn2_lines": true,
+      "line_mass_matches_closed_form": true,
+      "point_mass_matches_PGn4": true
+    },
+    "9": {
+      "binary_line_strata_sum_to_PGn2_lines": true,
+      "line_mass_matches_closed_form": true,
+      "point_mass_matches_PGn4": true
+    }
+  },
+  "theorem": {
+    "binary_line_stratum_count": "2^(n-j-1)*(2^(n-j)-1)",
+    "binary_point_stratum_count": "2^(n-j)",
+    "flag": "F_j={x_0=...=x_{j-1}=0}",
+    "line_lift_law": "N_line(ell)=2^(n-1-j) for ell<=F_j and ell not<=F_{j+1}",
+    "line_preserving_mass": "2*(8^n-1)/7 - (4^n-1)/3",
+    "point_fibre_law": "|tau_omega^-1(b)|=2^(n-j) for b in F_j\\F_{j+1}"
+  }
+}

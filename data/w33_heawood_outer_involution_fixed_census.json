@@ -1,0 +1,537 @@
+{
+  "checks": {
+    "all_fixed_pair_rows_map_to_fixed_cycles": true,
+    "every_fixed_pair_is_pointwise_fixed_or_exchanged": true,
+    "fixed_C6_count_is_12": true,
+    "fixed_C6_dictionary_equals_fixed_pair_dictionary": true,
+    "fixed_pair_count_is_12": true,
+    "four_intersection_pair_count_is_270": true,
+    "outer_is_involution_on_C6": true,
+    "outer_is_involution_on_four_pairs": true,
+    "outer_is_involution_on_lines": true,
+    "outer_is_involution_on_points": true,
+    "outer_is_involution_on_spreads": true,
+    "pair_and_C6_cycle_histograms_match": true
+  },
+  "claim_boundary": [
+    "Setwise-fixed spread pairs are separated from individually fixed spreads; the two notions are not conflated.",
+    "The certificate concerns the declared multiplier-two outer similitude, not every involution in PGSp(4,3).",
+    "No physical interpretation is assigned to the 12 fixed cycles without an additional hardware/measurement dictionary."
+  ],
+  "cycle_histograms": {
+    "Heawood_C6_components": {
+      "1": 12,
+      "2": 129
+    },
+    "W33_lines": {
+      "1": 6,
+      "2": 17
+    },
+    "W33_points": {
+      "1": 8,
+      "2": 16
+    },
+    "four_intersection_spread_pairs": {
+      "1": 12,
+      "2": 129
+    },
+    "spreads": {
+      "1": 4,
+      "2": 16
+    }
+  },
+  "fixed_line_rows": [
+    {
+      "fixed_points_on_line": 4,
+      "line": 0,
+      "points": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "fixed_points_on_line": 2,
+      "line": 1,
+      "points": [
+        0,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "fixed_points_on_line": 2,
+      "line": 4,
+      "points": [
+        1,
+        4,
+        7,
+        10
+      ]
+    },
+    {
+      "fixed_points_on_line": 2,
+      "line": 7,
+      "points": [
+        2,
+        31,
+        35,
+        39
+      ]
+    },
+    {
+      "fixed_points_on_line": 2,
+      "line": 10,
+      "points": [
+        3,
+        22,
+        27,
+        29
+      ]
+    },
+    {
+      "fixed_points_on_line": 4,
+      "line": 13,
+      "points": [
+        4,
+        13,
+        22,
+        31
+      ]
+    }
+  ],
+  "fixed_objects": {
+    "fixed_C6_ids": [
+      0,
+      1,
+      2,
+      135,
+      152,
+      160,
+      209,
+      215,
+      241,
+      265,
+      266,
+      269
+    ],
+    "fixed_four_intersection_pair_count": 12,
+    "fixed_line_ids": [
+      0,
+      1,
+      4,
+      7,
+      10,
+      13
+    ],
+    "fixed_line_modes": {
+      "fixed_points_2": 4,
+      "fixed_points_4": 2
+    },
+    "fixed_pair_modes": {
+      "both_spreads_fixed": 6,
+      "spreads_exchanged": 6
+    },
+    "fixed_point_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      13,
+      22,
+      31
+    ],
+    "fixed_spread_ids": [
+      0,
+      1,
+      2,
+      9
+    ]
+  },
+  "fixed_pair_rows": [
+    {
+      "cycle_id": 269,
+      "cycle_is_fixed": true,
+      "mode": "both_spreads_fixed",
+      "shared_lines": [
+        0,
+        13,
+        17,
+        21
+      ],
+      "spread_pair": [
+        0,
+        1
+      ],
+      "symmetric_difference_lines": [
+        23,
+        24,
+        25,
+        27,
+        28,
+        29,
+        32,
+        33,
+        34,
+        36,
+        37,
+        38
+      ]
+    },
+    {
+      "cycle_id": 265,
+      "cycle_is_fixed": true,
+      "mode": "both_spreads_fixed",
+      "shared_lines": [
+        0,
+        13,
+        27,
+        38
+      ],
+      "spread_pair": [
+        0,
+        2
+      ],
+      "symmetric_difference_lines": [
+        17,
+        18,
+        20,
+        21,
+        22,
+        23,
+        28,
+        29,
+        31,
+        33,
+        34,
+        36
+      ]
+    },
+    {
+      "cycle_id": 1,
+      "cycle_is_fixed": true,
+      "mode": "both_spreads_fixed",
+      "shared_lines": [
+        17,
+        21,
+        27,
+        38
+      ],
+      "spread_pair": [
+        0,
+        9
+      ],
+      "symmetric_difference_lines": [
+        0,
+        1,
+        4,
+        7,
+        10,
+        13,
+        23,
+        28,
+        29,
+        33,
+        34,
+        36
+      ]
+    },
+    {
+      "cycle_id": 266,
+      "cycle_is_fixed": true,
+      "mode": "both_spreads_fixed",
+      "shared_lines": [
+        0,
+        13,
+        29,
+        36
+      ],
+      "spread_pair": [
+        1,
+        2
+      ],
+      "symmetric_difference_lines": [
+        17,
+        18,
+        20,
+        21,
+        22,
+        24,
+        25,
+        27,
+        31,
+        32,
+        37,
+        38
+      ]
+    },
+    {
+      "cycle_id": 2,
+      "cycle_is_fixed": true,
+      "mode": "both_spreads_fixed",
+      "shared_lines": [
+        17,
+        21,
+        29,
+        36
+      ],
+      "spread_pair": [
+        1,
+        9
+      ],
+      "symmetric_difference_lines": [
+        0,
+        1,
+        4,
+        7,
+        10,
+        13,
+        24,
+        25,
+        27,
+        32,
+        37,
+        38
+      ]
+    },
+    {
+      "cycle_id": 0,
+      "cycle_is_fixed": true,
+      "mode": "both_spreads_fixed",
+      "shared_lines": [
+        27,
+        29,
+        36,
+        38
+      ],
+      "spread_pair": [
+        2,
+        9
+      ],
+      "symmetric_difference_lines": [
+        0,
+        1,
+        4,
+        7,
+        10,
+        13,
+        17,
+        18,
+        20,
+        21,
+        22,
+        31
+      ]
+    },
+    {
+      "cycle_id": 241,
+      "cycle_is_fixed": true,
+      "mode": "spreads_exchanged",
+      "shared_lines": [
+        1,
+        4,
+        18,
+        20
+      ],
+      "spread_pair": [
+        10,
+        11
+      ],
+      "symmetric_difference_lines": [
+        8,
+        9,
+        11,
+        12,
+        26,
+        27,
+        29,
+        30,
+        35,
+        36,
+        38,
+        39
+      ]
+    },
+    {
+      "cycle_id": 209,
+      "cycle_is_fixed": true,
+      "mode": "spreads_exchanged",
+      "shared_lines": [
+        1,
+        7,
+        23,
+        33
+      ],
+      "spread_pair": [
+        12,
+        15
+      ],
+      "symmetric_difference_lines": [
+        5,
+        6,
+        11,
+        12,
+        14,
+        15,
+        17,
+        21,
+        27,
+        30,
+        35,
+        38
+      ]
+    },
+    {
+      "cycle_id": 215,
+      "cycle_is_fixed": true,
+      "mode": "spreads_exchanged",
+      "shared_lines": [
+        1,
+        10,
+        24,
+        32
+      ],
+      "spread_pair": [
+        13,
+        17
+      ],
+      "symmetric_difference_lines": [
+        5,
+        6,
+        8,
+        9,
+        14,
+        15,
+        17,
+        21,
+        26,
+        29,
+        36,
+        39
+      ]
+    },
+    {
+      "cycle_id": 152,
+      "cycle_is_fixed": true,
+      "mode": "spreads_exchanged",
+      "shared_lines": [
+        4,
+        7,
+        25,
+        37
+      ],
+      "spread_pair": [
+        18,
+        27
+      ],
+      "symmetric_difference_lines": [
+        2,
+        3,
+        11,
+        12,
+        16,
+        17,
+        19,
+        21,
+        29,
+        30,
+        35,
+        36
+      ]
+    },
+    {
+      "cycle_id": 160,
+      "cycle_is_fixed": true,
+      "mode": "spreads_exchanged",
+      "shared_lines": [
+        4,
+        10,
+        28,
+        34
+      ],
+      "spread_pair": [
+        19,
+        29
+      ],
+      "symmetric_difference_lines": [
+        2,
+        3,
+        8,
+        9,
+        16,
+        17,
+        19,
+        21,
+        26,
+        27,
+        38,
+        39
+      ]
+    },
+    {
+      "cycle_id": 135,
+      "cycle_is_fixed": true,
+      "mode": "spreads_exchanged",
+      "shared_lines": [
+        7,
+        10,
+        22,
+        31
+      ],
+      "spread_pair": [
+        24,
+        30
+      ],
+      "symmetric_difference_lines": [
+        2,
+        3,
+        5,
+        6,
+        14,
+        15,
+        16,
+        19,
+        27,
+        29,
+        36,
+        38
+      ]
+    }
+  ],
+  "headline": "The multiplier-two outer involution fixes exactly 12 of the 270 intrinsic Heawood C6 components, and full PGSp equivariance carries them to exactly the 12 setwise-fixed four-intersection spread pairs. Each fixed pair is classified exactly as two individually fixed spreads or as an exchanged spread pair.",
+  "interpretation": "The outer C2 is not merely an abstract index-two extension. Its action has a concrete 12 + 129*2 decomposition on the 270 execution cycles, and equivariance identifies the same decomposition on the spread-pair geometry.",
+  "outer_generator": {
+    "matrix_mod3": [
+      [
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "similitude_multiplier": 2
+  },
+  "schema": "w33.heawood-outer-involution-fixed-census.v1",
+  "status": "PASS"
+}

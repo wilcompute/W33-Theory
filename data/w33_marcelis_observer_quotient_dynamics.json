@@ -1,0 +1,1369 @@
+{
+  "checks": {
+    "flag_horizon_exhaustive_n1_through_n5": true,
+    "n3_exact_model_passes": true
+  },
+  "cross_dimension_horizon": {
+    "law": "For U_k cyclic left shift, the macro transition is stochastic on tau^-1(b) iff first_one(b)<k; it is deterministic iff b lies in F_k.",
+    "rows": [
+      {
+        "deterministic_macrostates": 1,
+        "expected_deterministic_count": 1,
+        "expected_stochastic_count": 2,
+        "global_states": 5,
+        "macrostates": 3,
+        "n": 1,
+        "shift_k": 1,
+        "stochastic_iff_first_one_less_than_k": true,
+        "stochastic_macrostates": 2
+      },
+      {
+        "deterministic_macrostates": 3,
+        "expected_deterministic_count": 3,
+        "expected_stochastic_count": 4,
+        "global_states": 21,
+        "macrostates": 7,
+        "n": 2,
+        "shift_k": 1,
+        "stochastic_iff_first_one_less_than_k": true,
+        "stochastic_macrostates": 4
+      },
+      {
+        "deterministic_macrostates": 1,
+        "expected_deterministic_count": 1,
+        "expected_stochastic_count": 6,
+        "global_states": 21,
+        "macrostates": 7,
+        "n": 2,
+        "shift_k": 2,
+        "stochastic_iff_first_one_less_than_k": true,
+        "stochastic_macrostates": 6
+      },
+      {
+        "deterministic_macrostates": 7,
+        "expected_deterministic_count": 7,
+        "expected_stochastic_count": 8,
+        "global_states": 85,
+        "macrostates": 15,
+        "n": 3,
+        "shift_k": 1,
+        "stochastic_iff_first_one_less_than_k": true,
+        "stochastic_macrostates": 8
+      },
+      {
+        "deterministic_macrostates": 3,
+        "expected_deterministic_count": 3,
+        "expected_stochastic_count": 12,
+        "global_states": 85,
+        "macrostates": 15,
+        "n": 3,
+        "shift_k": 2,
+        "stochastic_iff_first_one_less_than_k": true,
+        "stochastic_macrostates": 12
+      },
+      {
+        "deterministic_macrostates": 1,
+        "expected_deterministic_count": 1,
+        "expected_stochastic_count": 14,
+        "global_states": 85,
+        "macrostates": 15,
+        "n": 3,
+        "shift_k": 3,
+        "stochastic_iff_first_one_less_than_k": true,
+        "stochastic_macrostates": 14
+      },
+      {
+        "deterministic_macrostates": 15,
+        "expected_deterministic_count": 15,
+        "expected_stochastic_count": 16,
+        "global_states": 341,
+        "macrostates": 31,
+        "n": 4,
+        "shift_k": 1,
+        "stochastic_iff_first_one_less_than_k": true,
+        "stochastic_macrostates": 16
+      },
+      {
+        "deterministic_macrostates": 7,
+        "expected_deterministic_count": 7,
+        "expected_stochastic_count": 24,
+        "global_states": 341,
+        "macrostates": 31,
+        "n": 4,
+        "shift_k": 2,
+        "stochastic_iff_first_one_less_than_k": true,
+        "stochastic_macrostates": 24
+      },
+      {
+        "deterministic_macrostates": 3,
+        "expected_deterministic_count": 3,
+        "expected_stochastic_count": 28,
+        "global_states": 341,
+        "macrostates": 31,
+        "n": 4,
+        "shift_k": 3,
+        "stochastic_iff_first_one_less_than_k": true,
+        "stochastic_macrostates": 28
+      },
+      {
+        "deterministic_macrostates": 1,
+        "expected_deterministic_count": 1,
+        "expected_stochastic_count": 30,
+        "global_states": 341,
+        "macrostates": 31,
+        "n": 4,
+        "shift_k": 4,
+        "stochastic_iff_first_one_less_than_k": true,
+        "stochastic_macrostates": 30
+      },
+      {
+        "deterministic_macrostates": 31,
+        "expected_deterministic_count": 31,
+        "expected_stochastic_count": 32,
+        "global_states": 1365,
+        "macrostates": 63,
+        "n": 5,
+        "shift_k": 1,
+        "stochastic_iff_first_one_less_than_k": true,
+        "stochastic_macrostates": 32
+      },
+      {
+        "deterministic_macrostates": 15,
+        "expected_deterministic_count": 15,
+        "expected_stochastic_count": 48,
+        "global_states": 1365,
+        "macrostates": 63,
+        "n": 5,
+        "shift_k": 2,
+        "stochastic_iff_first_one_less_than_k": true,
+        "stochastic_macrostates": 48
+      },
+      {
+        "deterministic_macrostates": 7,
+        "expected_deterministic_count": 7,
+        "expected_stochastic_count": 56,
+        "global_states": 1365,
+        "macrostates": 63,
+        "n": 5,
+        "shift_k": 3,
+        "stochastic_iff_first_one_less_than_k": true,
+        "stochastic_macrostates": 56
+      },
+      {
+        "deterministic_macrostates": 3,
+        "expected_deterministic_count": 3,
+        "expected_stochastic_count": 60,
+        "global_states": 1365,
+        "macrostates": 63,
+        "n": 5,
+        "shift_k": 4,
+        "stochastic_iff_first_one_less_than_k": true,
+        "stochastic_macrostates": 60
+      },
+      {
+        "deterministic_macrostates": 1,
+        "expected_deterministic_count": 1,
+        "expected_stochastic_count": 62,
+        "global_states": 1365,
+        "macrostates": 63,
+        "n": 5,
+        "shift_k": 5,
+        "stochastic_iff_first_one_less_than_k": true,
+        "stochastic_macrostates": 62
+      }
+    ],
+    "tested_dimensions": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "cryptographic_boundary": "Calling the fibre coordinate a 'key' is an information-theoretic analogy only. No secrecy, computational hardness, Bell-local hidden variable model, or claim that quantum randomness is reducible to this quotient mechanism follows from the certificate.",
+  "headline": "A deterministic projective coordinate rotation on the 85 PG(3,4) microstates induces a genuinely stochastic 15-state macro kernel after the many-to-one tau_omega observer quotient. For one-step rotation, exactly the 8 macrostates in x0=1 are stochastic and the 7 in x0=0 are deterministic. Full fibre side information restores zero conditional entropy.",
+  "n3_one_step_model": {
+    "checks": {
+      "H_microstate_key_given_macro_is_228_over_85": true,
+      "H_next_given_macro_is_156_over_85": true,
+      "Pguess_microstate_given_macro_is_3_over_17": true,
+      "Pguess_next_given_macro_is_43_over_85": true,
+      "branch_histogram_is_exact": true,
+      "eight_macro_rows_are_stochastic": true,
+      "fibre_histogram_is_1_2_4_8": true,
+      "full_local_key_makes_next_macro_deterministic": true,
+      "global_state_space_is_85": true,
+      "observer_state_space_is_15": true,
+      "rotation_has_projective_order4": true,
+      "rotation_is_global_bijection": true,
+      "row_entropy_histogram_is_exact": true,
+      "seven_macro_rows_are_deterministic": true,
+      "stochastic_rows_are_exactly_first_pivot_zero": true
+    },
+    "flag_horizon": {
+      "deterministic_region": "F_1={x0=0} in PG(3,2), containing 7 macrostates",
+      "reading": "The one-step cyclic update promotes hidden post-pivot GF(4) choices ahead of the observer's gauge pivot exactly on the open Schubert cell.",
+      "stochastic_region": "F_0\\F_1={x0=1}, containing 8 macrostates"
+    },
+    "global_dynamics": {
+      "global_update_is_deterministic_bijection": true,
+      "observer_map": "B=tau_omega(S) in PG(3,2)",
+      "projective_order": 4,
+      "state_space": "PG(3,4), 85 projective points",
+      "update": "U_1(x0,x1,x2,x3)=(x1,x2,x3,x0)"
+    },
+    "observer_kernel": {
+      "H_Bprime_given_B_bits": 1.8352941176470587,
+      "H_Bprime_given_B_bits_exact": "156/85",
+      "Hmin_Bprime_given_B_bits": 0.9831261814356039,
+      "P_guess_Bprime_given_B": "43/85",
+      "branch_count_histogram": {
+        "1": 7,
+        "5": 4,
+        "7": 2,
+        "8": 2
+      },
+      "definition": "P(B'=b'|B=b)=#{s in fibre(b):tau(U_1 s)=b'}/|fibre(b)|",
+      "deterministic_macro_states": 7,
+      "row_entropy_histogram": {
+        "0": 7,
+        "11/4": 2,
+        "2": 4,
+        "3": 2
+      },
+      "stochastic_macro_states": 8
+    },
+    "rows": [
+      {
+        "branch_count": 1,
+        "conditional_entropy_bits": 0.0,
+        "conditional_entropy_bits_exact": "0",
+        "fibre_size": 1,
+        "first_one_index": 3,
+        "guess_probability": "1",
+        "local_key_bits": 0,
+        "macrostate": "0001",
+        "microstate_key_table": [
+          {
+            "local_key": 0,
+            "microstate": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "next_macrostate": "0010"
+          }
+        ],
+        "transition_counts": {
+          "0010": 1
+        }
+      },
+      {
+        "branch_count": 1,
+        "conditional_entropy_bits": 0.0,
+        "conditional_entropy_bits_exact": "0",
+        "fibre_size": 2,
+        "first_one_index": 2,
+        "guess_probability": "1",
+        "local_key_bits": 1,
+        "macrostate": "0010",
+        "microstate_key_table": [
+          {
+            "local_key": 0,
+            "microstate": [
+              0,
+              0,
+              1,
+              0
+            ],
+            "next_macrostate": "0100"
+          },
+          {
+            "local_key": 1,
+            "microstate": [
+              0,
+              0,
+              1,
+              3
+            ],
+            "next_macrostate": "0100"
+          }
+        ],
+        "transition_counts": {
+          "0100": 2
+        }
+      },
+      {
+        "branch_count": 1,
+        "conditional_entropy_bits": 0.0,
+        "conditional_entropy_bits_exact": "0",
+        "fibre_size": 2,
+        "first_one_index": 2,
+        "guess_probability": "1",
+        "local_key_bits": 1,
+        "macrostate": "0011",
+        "microstate_key_table": [
+          {
+            "local_key": 0,
+            "microstate": [
+              0,
+              0,
+              1,
+              1
+            ],
+            "next_macrostate": "0110"
+          },
+          {
+            "local_key": 1,
+            "microstate": [
+              0,
+              0,
+              1,
+              2
+            ],
+            "next_macrostate": "0110"
+          }
+        ],
+        "transition_counts": {
+          "0110": 2
+        }
+      },
+      {
+        "branch_count": 1,
+        "conditional_entropy_bits": 0.0,
+        "conditional_entropy_bits_exact": "0",
+        "fibre_size": 4,
+        "first_one_index": 1,
+        "guess_probability": "1",
+        "local_key_bits": 2,
+        "macrostate": "0100",
+        "microstate_key_table": [
+          {
+            "local_key": 0,
+            "microstate": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "next_macrostate": "1000"
+          },
+          {
+            "local_key": 1,
+            "microstate": [
+              0,
+              1,
+              0,
+              3
+            ],
+            "next_macrostate": "1000"
+          },
+          {
+            "local_key": 2,
+            "microstate": [
+              0,
+              1,
+              3,
+              0
+            ],
+            "next_macrostate": "1000"
+          },
+          {
+            "local_key": 3,
+            "microstate": [
+              0,
+              1,
+              3,
+              3
+            ],
+            "next_macrostate": "1000"
+          }
+        ],
+        "transition_counts": {
+          "1000": 4
+        }
+      },
+      {
+        "branch_count": 1,
+        "conditional_entropy_bits": 0.0,
+        "conditional_entropy_bits_exact": "0",
+        "fibre_size": 4,
+        "first_one_index": 1,
+        "guess_probability": "1",
+        "local_key_bits": 2,
+        "macrostate": "0101",
+        "microstate_key_table": [
+          {
+            "local_key": 0,
+            "microstate": [
+              0,
+              1,
+              0,
+              1
+            ],
+            "next_macrostate": "1010"
+          },
+          {
+            "local_key": 1,
+            "microstate": [
+              0,
+              1,
+              0,
+              2
+            ],
+            "next_macrostate": "1010"
+          },
+          {
+            "local_key": 2,
+            "microstate": [
+              0,
+              1,
+              3,
+              1
+            ],
+            "next_macrostate": "1010"
+          },
+          {
+            "local_key": 3,
+            "microstate": [
+              0,
+              1,
+              3,
+              2
+            ],
+            "next_macrostate": "1010"
+          }
+        ],
+        "transition_counts": {
+          "1010": 4
+        }
+      },
+      {
+        "branch_count": 1,
+        "conditional_entropy_bits": 0.0,
+        "conditional_entropy_bits_exact": "0",
+        "fibre_size": 4,
+        "first_one_index": 1,
+        "guess_probability": "1",
+        "local_key_bits": 2,
+        "macrostate": "0110",
+        "microstate_key_table": [
+          {
+            "local_key": 0,
+            "microstate": [
+              0,
+              1,
+              1,
+              0
+            ],
+            "next_macrostate": "1100"
+          },
+          {
+            "local_key": 1,
+            "microstate": [
+              0,
+              1,
+              1,
+              3
+            ],
+            "next_macrostate": "1100"
+          },
+          {
+            "local_key": 2,
+            "microstate": [
+              0,
+              1,
+              2,
+              0
+            ],
+            "next_macrostate": "1100"
+          },
+          {
+            "local_key": 3,
+            "microstate": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "next_macrostate": "1100"
+          }
+        ],
+        "transition_counts": {
+          "1100": 4
+        }
+      },
+      {
+        "branch_count": 1,
+        "conditional_entropy_bits": 0.0,
+        "conditional_entropy_bits_exact": "0",
+        "fibre_size": 4,
+        "first_one_index": 1,
+        "guess_probability": "1",
+        "local_key_bits": 2,
+        "macrostate": "0111",
+        "microstate_key_table": [
+          {
+            "local_key": 0,
+            "microstate": [
+              0,
+              1,
+              1,
+              1
+            ],
+            "next_macrostate": "1110"
+          },
+          {
+            "local_key": 1,
+            "microstate": [
+              0,
+              1,
+              1,
+              2
+            ],
+            "next_macrostate": "1110"
+          },
+          {
+            "local_key": 2,
+            "microstate": [
+              0,
+              1,
+              2,
+              1
+            ],
+            "next_macrostate": "1110"
+          },
+          {
+            "local_key": 3,
+            "microstate": [
+              0,
+              1,
+              2,
+              2
+            ],
+            "next_macrostate": "1110"
+          }
+        ],
+        "transition_counts": {
+          "1110": 4
+        }
+      },
+      {
+        "branch_count": 8,
+        "conditional_entropy_bits": 3.0,
+        "conditional_entropy_bits_exact": "3",
+        "fibre_size": 8,
+        "first_one_index": 0,
+        "guess_probability": "1/8",
+        "local_key_bits": 3,
+        "macrostate": "1000",
+        "microstate_key_table": [
+          {
+            "local_key": 0,
+            "microstate": [
+              1,
+              0,
+              0,
+              0
+            ],
+            "next_macrostate": "0001"
+          },
+          {
+            "local_key": 1,
+            "microstate": [
+              1,
+              0,
+              0,
+              3
+            ],
+            "next_macrostate": "0011"
+          },
+          {
+            "local_key": 2,
+            "microstate": [
+              1,
+              0,
+              3,
+              0
+            ],
+            "next_macrostate": "0101"
+          },
+          {
+            "local_key": 3,
+            "microstate": [
+              1,
+              0,
+              3,
+              3
+            ],
+            "next_macrostate": "0111"
+          },
+          {
+            "local_key": 4,
+            "microstate": [
+              1,
+              3,
+              0,
+              0
+            ],
+            "next_macrostate": "1001"
+          },
+          {
+            "local_key": 5,
+            "microstate": [
+              1,
+              3,
+              0,
+              3
+            ],
+            "next_macrostate": "1011"
+          },
+          {
+            "local_key": 6,
+            "microstate": [
+              1,
+              3,
+              3,
+              0
+            ],
+            "next_macrostate": "1101"
+          },
+          {
+            "local_key": 7,
+            "microstate": [
+              1,
+              3,
+              3,
+              3
+            ],
+            "next_macrostate": "1111"
+          }
+        ],
+        "transition_counts": {
+          "0001": 1,
+          "0011": 1,
+          "0101": 1,
+          "0111": 1,
+          "1001": 1,
+          "1011": 1,
+          "1101": 1,
+          "1111": 1
+        }
+      },
+      {
+        "branch_count": 8,
+        "conditional_entropy_bits": 3.0,
+        "conditional_entropy_bits_exact": "3",
+        "fibre_size": 8,
+        "first_one_index": 0,
+        "guess_probability": "1/8",
+        "local_key_bits": 3,
+        "macrostate": "1001",
+        "microstate_key_table": [
+          {
+            "local_key": 0,
+            "microstate": [
+              1,
+              0,
+              0,
+              1
+            ],
+            "next_macrostate": "0011"
+          },
+          {
+            "local_key": 1,
+            "microstate": [
+              1,
+              0,
+              0,
+              2
+            ],
+            "next_macrostate": "0010"
+          },
+          {
+            "local_key": 2,
+            "microstate": [
+              1,
+              0,
+              3,
+              1
+            ],
+            "next_macrostate": "0111"
+          },
+          {
+            "local_key": 3,
+            "microstate": [
+              1,
+              0,
+              3,
+              2
+            ],
+            "next_macrostate": "0101"
+          },
+          {
+            "local_key": 4,
+            "microstate": [
+              1,
+              3,
+              0,
+              1
+            ],
+            "next_macrostate": "1011"
+          },
+          {
+            "local_key": 5,
+            "microstate": [
+              1,
+              3,
+              0,
+              2
+            ],
+            "next_macrostate": "1001"
+          },
+          {
+            "local_key": 6,
+            "microstate": [
+              1,
+              3,
+              3,
+              1
+            ],
+            "next_macrostate": "1111"
+          },
+          {
+            "local_key": 7,
+            "microstate": [
+              1,
+              3,
+              3,
+              2
+            ],
+            "next_macrostate": "1101"
+          }
+        ],
+        "transition_counts": {
+          "0010": 1,
+          "0011": 1,
+          "0101": 1,
+          "0111": 1,
+          "1001": 1,
+          "1011": 1,
+          "1101": 1,
+          "1111": 1
+        }
+      },
+      {
+        "branch_count": 7,
+        "conditional_entropy_bits": 2.75,
+        "conditional_entropy_bits_exact": "11/4",
+        "fibre_size": 8,
+        "first_one_index": 0,
+        "guess_probability": "1/4",
+        "local_key_bits": 3,
+        "macrostate": "1010",
+        "microstate_key_table": [
+          {
+            "local_key": 0,
+            "microstate": [
+              1,
+              0,
+              1,
+              0
+            ],
+            "next_macrostate": "0101"
+          },
+          {
+            "local_key": 1,
+            "microstate": [
+              1,
+              0,
+              1,
+              3
+            ],
+            "next_macrostate": "0101"
+          },
+          {
+            "local_key": 2,
+            "microstate": [
+              1,
+              0,
+              2,
+              0
+            ],
+            "next_macrostate": "0100"
+          },
+          {
+            "local_key": 3,
+            "microstate": [
+              1,
+              0,
+              2,
+              3
+            ],
+            "next_macrostate": "0110"
+          },
+          {
+            "local_key": 4,
+            "microstate": [
+              1,
+              3,
+              1,
+              0
+            ],
+            "next_macrostate": "1101"
+          },
+          {
+            "local_key": 5,
+            "microstate": [
+              1,
+              3,
+              1,
+              3
+            ],
+            "next_macrostate": "1111"
+          },
+          {
+            "local_key": 6,
+            "microstate": [
+              1,
+              3,
+              2,
+              0
+            ],
+            "next_macrostate": "1001"
+          },
+          {
+            "local_key": 7,
+            "microstate": [
+              1,
+              3,
+              2,
+              3
+            ],
+            "next_macrostate": "1011"
+          }
+        ],
+        "transition_counts": {
+          "0100": 1,
+          "0101": 2,
+          "0110": 1,
+          "1001": 1,
+          "1011": 1,
+          "1101": 1,
+          "1111": 1
+        }
+      },
+      {
+        "branch_count": 7,
+        "conditional_entropy_bits": 2.75,
+        "conditional_entropy_bits_exact": "11/4",
+        "fibre_size": 8,
+        "first_one_index": 0,
+        "guess_probability": "1/4",
+        "local_key_bits": 3,
+        "macrostate": "1011",
+        "microstate_key_table": [
+          {
+            "local_key": 0,
+            "microstate": [
+              1,
+              0,
+              1,
+              1
+            ],
+            "next_macrostate": "0111"
+          },
+          {
+            "local_key": 1,
+            "microstate": [
+              1,
+              0,
+              1,
+              2
+            ],
+            "next_macrostate": "0111"
+          },
+          {
+            "local_key": 2,
+            "microstate": [
+              1,
+              0,
+              2,
+              1
+            ],
+            "next_macrostate": "0100"
+          },
+          {
+            "local_key": 3,
+            "microstate": [
+              1,
+              0,
+              2,
+              2
+            ],
+            "next_macrostate": "0110"
+          },
+          {
+            "local_key": 4,
+            "microstate": [
+              1,
+              3,
+              1,
+              1
+            ],
+            "next_macrostate": "1111"
+          },
+          {
+            "local_key": 5,
+            "microstate": [
+              1,
+              3,
+              1,
+              2
+            ],
+            "next_macrostate": "1101"
+          },
+          {
+            "local_key": 6,
+            "microstate": [
+              1,
+              3,
+              2,
+              1
+            ],
+            "next_macrostate": "1011"
+          },
+          {
+            "local_key": 7,
+            "microstate": [
+              1,
+              3,
+              2,
+              2
+            ],
+            "next_macrostate": "1001"
+          }
+        ],
+        "transition_counts": {
+          "0100": 1,
+          "0110": 1,
+          "0111": 2,
+          "1001": 1,
+          "1011": 1,
+          "1101": 1,
+          "1111": 1
+        }
+      },
+      {
+        "branch_count": 5,
+        "conditional_entropy_bits": 2.0,
+        "conditional_entropy_bits_exact": "2",
+        "fibre_size": 8,
+        "first_one_index": 0,
+        "guess_probability": "1/2",
+        "local_key_bits": 3,
+        "macrostate": "1100",
+        "microstate_key_table": [
+          {
+            "local_key": 0,
+            "microstate": [
+              1,
+              1,
+              0,
+              0
+            ],
+            "next_macrostate": "1001"
+          },
+          {
+            "local_key": 1,
+            "microstate": [
+              1,
+              1,
+              0,
+              3
+            ],
+            "next_macrostate": "1001"
+          },
+          {
+            "local_key": 2,
+            "microstate": [
+              1,
+              1,
+              3,
+              0
+            ],
+            "next_macrostate": "1001"
+          },
+          {
+            "local_key": 3,
+            "microstate": [
+              1,
+              1,
+              3,
+              3
+            ],
+            "next_macrostate": "1001"
+          },
+          {
+            "local_key": 4,
+            "microstate": [
+              1,
+              2,
+              0,
+              0
+            ],
+            "next_macrostate": "1000"
+          },
+          {
+            "local_key": 5,
+            "microstate": [
+              1,
+              2,
+              0,
+              3
+            ],
+            "next_macrostate": "1010"
+          },
+          {
+            "local_key": 6,
+            "microstate": [
+              1,
+              2,
+              3,
+              0
+            ],
+            "next_macrostate": "1100"
+          },
+          {
+            "local_key": 7,
+            "microstate": [
+              1,
+              2,
+              3,
+              3
+            ],
+            "next_macrostate": "1110"
+          }
+        ],
+        "transition_counts": {
+          "1000": 1,
+          "1001": 4,
+          "1010": 1,
+          "1100": 1,
+          "1110": 1
+        }
+      },
+      {
+        "branch_count": 5,
+        "conditional_entropy_bits": 2.0,
+        "conditional_entropy_bits_exact": "2",
+        "fibre_size": 8,
+        "first_one_index": 0,
+        "guess_probability": "1/2",
+        "local_key_bits": 3,
+        "macrostate": "1101",
+        "microstate_key_table": [
+          {
+            "local_key": 0,
+            "microstate": [
+              1,
+              1,
+              0,
+              1
+            ],
+            "next_macrostate": "1011"
+          },
+          {
+            "local_key": 1,
+            "microstate": [
+              1,
+              1,
+              0,
+              2
+            ],
+            "next_macrostate": "1011"
+          },
+          {
+            "local_key": 2,
+            "microstate": [
+              1,
+              1,
+              3,
+              1
+            ],
+            "next_macrostate": "1011"
+          },
+          {
+            "local_key": 3,
+            "microstate": [
+              1,
+              1,
+              3,
+              2
+            ],
+            "next_macrostate": "1011"
+          },
+          {
+            "local_key": 4,
+            "microstate": [
+              1,
+              2,
+              0,
+              1
+            ],
+            "next_macrostate": "1000"
+          },
+          {
+            "local_key": 5,
+            "microstate": [
+              1,
+              2,
+              0,
+              2
+            ],
+            "next_macrostate": "1010"
+          },
+          {
+            "local_key": 6,
+            "microstate": [
+              1,
+              2,
+              3,
+              1
+            ],
+            "next_macrostate": "1100"
+          },
+          {
+            "local_key": 7,
+            "microstate": [
+              1,
+              2,
+              3,
+              2
+            ],
+            "next_macrostate": "1110"
+          }
+        ],
+        "transition_counts": {
+          "1000": 1,
+          "1010": 1,
+          "1011": 4,
+          "1100": 1,
+          "1110": 1
+        }
+      },
+      {
+        "branch_count": 5,
+        "conditional_entropy_bits": 2.0,
+        "conditional_entropy_bits_exact": "2",
+        "fibre_size": 8,
+        "first_one_index": 0,
+        "guess_probability": "1/2",
+        "local_key_bits": 3,
+        "macrostate": "1110",
+        "microstate_key_table": [
+          {
+            "local_key": 0,
+            "microstate": [
+              1,
+              1,
+              1,
+              0
+            ],
+            "next_macrostate": "1101"
+          },
+          {
+            "local_key": 1,
+            "microstate": [
+              1,
+              1,
+              1,
+              3
+            ],
+            "next_macrostate": "1101"
+          },
+          {
+            "local_key": 2,
+            "microstate": [
+              1,
+              1,
+              2,
+              0
+            ],
+            "next_macrostate": "1101"
+          },
+          {
+            "local_key": 3,
+            "microstate": [
+              1,
+              1,
+              2,
+              3
+            ],
+            "next_macrostate": "1101"
+          },
+          {
+            "local_key": 4,
+            "microstate": [
+              1,
+              2,
+              1,
+              0
+            ],
+            "next_macrostate": "1000"
+          },
+          {
+            "local_key": 5,
+            "microstate": [
+              1,
+              2,
+              1,
+              3
+            ],
+            "next_macrostate": "1010"
+          },
+          {
+            "local_key": 6,
+            "microstate": [
+              1,
+              2,
+              2,
+              0
+            ],
+            "next_macrostate": "1100"
+          },
+          {
+            "local_key": 7,
+            "microstate": [
+              1,
+              2,
+              2,
+              3
+            ],
+            "next_macrostate": "1110"
+          }
+        ],
+        "transition_counts": {
+          "1000": 1,
+          "1010": 1,
+          "1100": 1,
+          "1101": 4,
+          "1110": 1
+        }
+      },
+      {
+        "branch_count": 5,
+        "conditional_entropy_bits": 2.0,
+        "conditional_entropy_bits_exact": "2",
+        "fibre_size": 8,
+        "first_one_index": 0,
+        "guess_probability": "1/2",
+        "local_key_bits": 3,
+        "macrostate": "1111",
+        "microstate_key_table": [
+          {
+            "local_key": 0,
+            "microstate": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "next_macrostate": "1111"
+          },
+          {
+            "local_key": 1,
+            "microstate": [
+              1,
+              1,
+              1,
+              2
+            ],
+            "next_macrostate": "1111"
+          },
+          {
+            "local_key": 2,
+            "microstate": [
+              1,
+              1,
+              2,
+              1
+            ],
+            "next_macrostate": "1111"
+          },
+          {
+            "local_key": 3,
+            "microstate": [
+              1,
+              1,
+              2,
+              2
+            ],
+            "next_macrostate": "1111"
+          },
+          {
+            "local_key": 4,
+            "microstate": [
+              1,
+              2,
+              1,
+              1
+            ],
+            "next_macrostate": "1000"
+          },
+          {
+            "local_key": 5,
+            "microstate": [
+              1,
+              2,
+              1,
+              2
+            ],
+            "next_macrostate": "1010"
+          },
+          {
+            "local_key": 6,
+            "microstate": [
+              1,
+              2,
+              2,
+              1
+            ],
+            "next_macrostate": "1100"
+          },
+          {
+            "local_key": 7,
+            "microstate": [
+              1,
+              2,
+              2,
+              2
+            ],
+            "next_macrostate": "1110"
+          }
+        ],
+        "transition_counts": {
+          "1000": 1,
+          "1010": 1,
+          "1100": 1,
+          "1110": 1,
+          "1111": 4
+        }
+      }
+    ],
+    "side_information_key": {
+      "H_Bprime_given_B_K_bits": 0,
+      "H_K_given_B_bits": 2.6823529411764704,
+      "H_K_given_B_bits_exact": "228/85",
+      "Hmin_S_given_B_bits": 2.502500340529183,
+      "P_guess_S_given_B": "3/17",
+      "definition": "K is the local index of S within the finite fibre tau^-1(B)",
+      "interpretation": "The exact fibre index is sufficient side information to restore deterministic macro prediction, but it is a coordinate/gauge key rather than a cryptographic secret key."
+    },
+    "status": "PASS"
+  },
+  "observer_relative_randomness_statement": "This finite model cleanly separates ontic/global determinism from observer-relative stochasticity: U_k is a bijection, while the quotient observer sees probabilities because tau_omega forgets which microstate in a Schubert fibre is present. Supplying that fibre coordinate acts as sufficient decoding side information.",
+  "schema": "w33.marcelis-observer-quotient-dynamics.v1",
+  "status": "PASS"
+}

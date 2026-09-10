@@ -1,0 +1,368 @@
+{
+  "checks": {
+    "H_order_96": true,
+    "Z_times_S4_section_is_normal": true,
+    "abelianization_is_C2_squared": true,
+    "all_enumerated_subgroups_are_normal": true,
+    "all_presentation_relations_hold": true,
+    "all_split_semidirect_checks_hold": true,
+    "center_is_C2_generated_by_z": true,
+    "derived_is_Z_times_A4": true,
+    "exactly_three_index2_normal_subgroups": true,
+    "fiber_product_condition_holds": true,
+    "known_preimage_A4_is_normal": true,
+    "normal_lattice_contains_trivial_and_full": true
+  },
+  "claim_boundary": [
+    "The abstract identification uses the prior certificate that the stabilizer is the V4-kernel mixed index-two subgroup of D8 x S4.",
+    "The normal-subgroup lattice is exact for this abstract group model; no identification of individual normal subgroups with physical controller subsystems is asserted here."
+  ],
+  "fiber_product": {
+    "D8_character": "chi(r^i s^j)=i mod 2",
+    "action": "even: u->u,z->z; odd: u->z*u,z->z",
+    "definition": "H={(r^i s^j,sigma) in D8 x S4 : i mod 2 = sgn(sigma)}",
+    "kernel": "V4=<z=r^2,u=s>",
+    "odd_section_element": "t=rs, t^2=1",
+    "semidirect_form": "V4 semidirect S4; action factors through sgn:S4->C2",
+    "split_section": "sigma |-> (t^sgn(sigma),sigma)"
+  },
+  "headline": "The order-96 PSp Heawood-C6 stabilizer is the split fiber product D8 x_{C2} S4 ~= V4 semidirect S4, with the S4 action factoring through sign. Even permutations centralize V4; odd permutations fix z and send u to z*u. The complete normal-subgroup lattice is enumerated exactly.",
+  "normal_subgroup_lattice": {
+    "hasse_edges": [
+      {
+        "lower": "N00",
+        "upper": "N01"
+      },
+      {
+        "lower": "N00",
+        "upper": "N02"
+      },
+      {
+        "lower": "N01",
+        "upper": "N03"
+      },
+      {
+        "lower": "N01",
+        "upper": "N04"
+      },
+      {
+        "lower": "N02",
+        "upper": "N04"
+      },
+      {
+        "lower": "N02",
+        "upper": "N05"
+      },
+      {
+        "lower": "N03",
+        "upper": "N06"
+      },
+      {
+        "lower": "N04",
+        "upper": "N06"
+      },
+      {
+        "lower": "N04",
+        "upper": "N07"
+      },
+      {
+        "lower": "N05",
+        "upper": "N07"
+      },
+      {
+        "lower": "N06",
+        "upper": "N08"
+      },
+      {
+        "lower": "N07",
+        "upper": "N08"
+      },
+      {
+        "lower": "N07",
+        "upper": "N09"
+      },
+      {
+        "lower": "N07",
+        "upper": "N10"
+      },
+      {
+        "lower": "N08",
+        "upper": "N11"
+      },
+      {
+        "lower": "N09",
+        "upper": "N11"
+      },
+      {
+        "lower": "N10",
+        "upper": "N11"
+      }
+    ],
+    "index2_nodes": [
+      "N08",
+      "N09",
+      "N10"
+    ],
+    "nodes": [
+      {
+        "D8_projection_order": 1,
+        "S4_projection_order": 1,
+        "contains_V4_kernel": false,
+        "contains_center": false,
+        "contains_derived": false,
+        "element_order_histogram": {
+          "1": 1
+        },
+        "id": "N00",
+        "intersection_S4_section_order": 1,
+        "intersection_V4_kernel_order": 1,
+        "name": "1",
+        "order": 1
+      },
+      {
+        "D8_projection_order": 2,
+        "S4_projection_order": 1,
+        "contains_V4_kernel": false,
+        "contains_center": true,
+        "contains_derived": false,
+        "element_order_histogram": {
+          "1": 1,
+          "2": 1
+        },
+        "id": "N01",
+        "intersection_S4_section_order": 1,
+        "intersection_V4_kernel_order": 2,
+        "name": "Z(H)=C2",
+        "order": 2
+      },
+      {
+        "D8_projection_order": 1,
+        "S4_projection_order": 4,
+        "contains_V4_kernel": false,
+        "contains_center": false,
+        "contains_derived": false,
+        "element_order_histogram": {
+          "1": 1,
+          "2": 3
+        },
+        "id": "N02",
+        "intersection_S4_section_order": 4,
+        "intersection_V4_kernel_order": 1,
+        "name": "S4_normal_V4_section",
+        "order": 4
+      },
+      {
+        "D8_projection_order": 4,
+        "S4_projection_order": 1,
+        "contains_V4_kernel": true,
+        "contains_center": true,
+        "contains_derived": false,
+        "element_order_histogram": {
+          "1": 1,
+          "2": 3
+        },
+        "id": "N03",
+        "intersection_S4_section_order": 1,
+        "intersection_V4_kernel_order": 4,
+        "name": "V4_kernel",
+        "order": 4
+      },
+      {
+        "D8_projection_order": 2,
+        "S4_projection_order": 4,
+        "contains_V4_kernel": false,
+        "contains_center": true,
+        "contains_derived": false,
+        "element_order_histogram": {
+          "1": 1,
+          "2": 7
+        },
+        "id": "N04",
+        "intersection_S4_section_order": 4,
+        "intersection_V4_kernel_order": 2,
+        "name": null,
+        "order": 8
+      },
+      {
+        "D8_projection_order": 1,
+        "S4_projection_order": 12,
+        "contains_V4_kernel": false,
+        "contains_center": false,
+        "contains_derived": false,
+        "element_order_histogram": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "id": "N05",
+        "intersection_S4_section_order": 12,
+        "intersection_V4_kernel_order": 1,
+        "name": "A4_section",
+        "order": 12
+      },
+      {
+        "D8_projection_order": 4,
+        "S4_projection_order": 4,
+        "contains_V4_kernel": true,
+        "contains_center": true,
+        "contains_derived": false,
+        "element_order_histogram": {
+          "1": 1,
+          "2": 15
+        },
+        "id": "N06",
+        "intersection_S4_section_order": 4,
+        "intersection_V4_kernel_order": 4,
+        "name": "V4_kernel_x_V4_section",
+        "order": 16
+      },
+      {
+        "D8_projection_order": 2,
+        "S4_projection_order": 12,
+        "contains_V4_kernel": false,
+        "contains_center": true,
+        "contains_derived": true,
+        "element_order_histogram": {
+          "1": 1,
+          "2": 7,
+          "3": 8,
+          "6": 8
+        },
+        "id": "N07",
+        "intersection_S4_section_order": 12,
+        "intersection_V4_kernel_order": 2,
+        "name": "H_prime=C2_x_A4",
+        "order": 24
+      },
+      {
+        "D8_projection_order": 4,
+        "S4_projection_order": 12,
+        "contains_V4_kernel": true,
+        "contains_center": true,
+        "contains_derived": true,
+        "element_order_histogram": {
+          "1": 1,
+          "2": 15,
+          "3": 8,
+          "6": 24
+        },
+        "id": "N08",
+        "intersection_S4_section_order": 12,
+        "intersection_V4_kernel_order": 4,
+        "name": "preimage_A4=V4_x_A4",
+        "order": 48
+      },
+      {
+        "D8_projection_order": 4,
+        "S4_projection_order": 24,
+        "contains_V4_kernel": false,
+        "contains_center": true,
+        "contains_derived": true,
+        "element_order_histogram": {
+          "1": 1,
+          "2": 7,
+          "3": 8,
+          "4": 24,
+          "6": 8
+        },
+        "id": "N09",
+        "intersection_S4_section_order": 12,
+        "intersection_V4_kernel_order": 2,
+        "name": null,
+        "order": 48
+      },
+      {
+        "D8_projection_order": 4,
+        "S4_projection_order": 24,
+        "contains_V4_kernel": false,
+        "contains_center": true,
+        "contains_derived": true,
+        "element_order_histogram": {
+          "1": 1,
+          "2": 19,
+          "3": 8,
+          "4": 12,
+          "6": 8
+        },
+        "id": "N10",
+        "intersection_S4_section_order": 24,
+        "intersection_V4_kernel_order": 2,
+        "name": "Z_x_S4_section",
+        "order": 48
+      },
+      {
+        "D8_projection_order": 8,
+        "S4_projection_order": 24,
+        "contains_V4_kernel": true,
+        "contains_center": true,
+        "contains_derived": true,
+        "element_order_histogram": {
+          "1": 1,
+          "2": 27,
+          "3": 8,
+          "4": 36,
+          "6": 24
+        },
+        "id": "N11",
+        "intersection_S4_section_order": 24,
+        "intersection_V4_kernel_order": 4,
+        "name": "H",
+        "order": 96
+      }
+    ],
+    "normal_subgroup_count": 12,
+    "order_histogram": {
+      "1": 1,
+      "12": 1,
+      "16": 1,
+      "2": 1,
+      "24": 1,
+      "4": 2,
+      "48": 3,
+      "8": 1,
+      "96": 1
+    }
+  },
+  "presentation": {
+    "generators": [
+      "z",
+      "u",
+      "a=(01)",
+      "b=(0123)"
+    ],
+    "relation_checks": {
+      "(ab)^3=1": true,
+      "[z,u]=1": true,
+      "a^2=1": true,
+      "a_u_a^-1=z*u": true,
+      "b^4=1": true,
+      "b_u_b^-1=z*u": true,
+      "four_generators_have_order_96": true,
+      "u^2=1": true,
+      "z^2=1": true,
+      "z_centralizes_a": true,
+      "z_centralizes_b": true
+    },
+    "relations_text": [
+      "z^2=u^2=a^2=b^4=(ab)^3=1",
+      "[z,u]=[z,a]=[z,b]=1",
+      "a u a^-1 = z u",
+      "b u b^-1 = z u"
+    ]
+  },
+  "schema": "w33.heawood-stabilizer96-presentation-lattice.v1",
+  "status": "PASS",
+  "structure": {
+    "A4_section_order": 12,
+    "S4_complement_order": 24,
+    "S4_normal_V4_section_order": 4,
+    "V4_kernel_order": 4,
+    "abelianization_order": 4,
+    "abelianization_structure": "C2 x C2",
+    "center_order": 2,
+    "derived_order": 24,
+    "derived_structure": "C2 x A4",
+    "order": 96
+  },
+  "tomotope_firewall": "This presentation has center C2 and derived subgroup C2 x A4 of order 24. It therefore remains structurally distinct from the repo-certified tomotope group with trivial center and derived order 48."
+}
