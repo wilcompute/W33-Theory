@@ -1,22 +1,29 @@
 {
-  "architecture_breakthrough": "The Witting protocol has two different acceptance clocks.  The state clock admits 13/40 compatible communication partners.  The basis clock admits only 4/40 witness apertures, exactly the BT823 contextual fraction 1/10; the complementary 36/40 basis shadow is the corrected noncontextual ceiling.  This reconciles communication throughput with contextual tamper evidence.",
-  "boundary": "BT1409 is a finite scheduler/count certificate.  It does not prove cryptographic security, channel loss tolerance, or physical detector calibration.",
+  "architecture_breakthrough": "The Witting protocol has two different acceptance clocks.  The state clock admits 13/40 compatible communication partners.  The basis clock admits 4/40 witness apertures, numerically equal to the exact KS satisfiability defect 1/10.  The Abramsky-Barbosa contextual fraction is a different quantity and equals 1.",
+  "boundary": "BT1409 is a finite scheduler/count certificate.  It does not prove cryptographic security, channel loss tolerance, or physical detector calibration.  The basis aperture / KS defect must not be relabeled as the Abramsky-Barbosa contextual fraction.",
   "bt": 1409,
   "checks": {
-    "basis_aperture_rate_is_contextual_fraction": true,
+    "basis_aperture_rate_is_ks_defect": true,
     "basis_reject_count_matches_bt823_ks_max": true,
     "bt1407_frame_loaded": true,
     "bt1408_bridge_verified": true,
+    "bt1408_uses_precise_contextuality_labels": true,
     "bt823_contextual_budget_loaded": true,
     "every_ray_has_four_witness_bases": true,
-    "incidence_accept_rate_matches_contextual_fraction": true,
+    "incidence_accept_rate_matches_ks_defect": true,
+    "pass1080_contextual_fraction_is_one": true,
     "same_ray_has_four_basis_multiplicity": true,
     "state_accept_rate_is_bt1408_key_rate": true,
     "state_reject_shell_is_matter_27": true
   },
+  "contextuality_quantities": {
+    "abramsky_barbosa_contextual_fraction": 1,
+    "ks_satisfiability_defect": "1/10",
+    "why_distinct": "The KS defect asks how close a Boolean marking can come to satisfying all exactly-one context constraints (36/40). The Abramsky-Barbosa contextual fraction is 1 because no global section exists at all."
+  },
   "duplex_law": {
-    "basis_query": "witness bases accept at 4/40 = 1/10, the BT823 contextual deficit fraction",
-    "basis_shadow": "the 36/40 rejected basis choices match the corrected BT823 noncontextual ceiling",
+    "basis_query": "witness bases accept at 4/40 = 1/10, equal to the exact KS satisfiability defect",
+    "basis_shadow": "the 36/40 rejected basis choices match the corrected BT823 best approximately satisfiable context count",
     "state_query": "unique compatible states accept at 13/40 = 1 same + 12 orthogonal over 40 rays"
   },
   "frame_budget_for_one_selected_ray": {

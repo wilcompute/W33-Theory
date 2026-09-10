@@ -1,0 +1,873 @@
+{
+  "checks": {
+    "H0_contains_exactly_7_binary_lines": true,
+    "PG34_is_85_points_357_lines": true,
+    "all_15_binary_planes_have_two_punctured_images": true,
+    "all_35_binary_lines_are_hit": true,
+    "all_puncture_points_lie_on_Linf": true,
+    "declared_flag_is_point_in_line_in_plane": true,
+    "each_pair_of_missing_pairs_unions_to_a_binary_line": true,
+    "line_lift_mass_identity_is_125": true,
+    "line_lift_strata_are_1_6_28_with_multiplicities_1_2_4": true,
+    "old_4_vs_8_subset_lift_mass_is_recovered": true,
+    "plane_puncture_line_is_P_intersect_H0_except_H0_to_Linf": true,
+    "puncture_line_plane_multiplicity_is_one_3_and_six_2": true,
+    "puncture_lines_are_exactly_the_7_Fano_lines_of_H0": true,
+    "puncture_point_is_line_intersect_Linf_except_Linf_to_pinf": true,
+    "puncture_point_plane_multiplicity_is_7_4_4": true,
+    "punctured_GF4_line_mass_is_232": true,
+    "two_images_are_exactly_delete_r_a_and_r_b": true
+  },
+  "claim_boundary": [
+    "The flag is selected by the declared ordered-coordinate omega gauge and is not PGL(4,2)-canonical.",
+    "The theorem classifies the exact trace images for this gauge; it does not imply PG(3,4) and PG(3,2) are incidence-isomorphic.",
+    "The words 'puncture line' and 'puncture point' describe the finite binary image structure, not physical punctures in an optical device.",
+    "No cryptographic-security statement follows from the flag law alone."
+  ],
+  "flag": {
+    "H0_equation": "x0=0",
+    "H0_points": [
+      "0001",
+      "0010",
+      "0011",
+      "0100",
+      "0101",
+      "0110",
+      "0111"
+    ],
+    "L_inf_equations": "x0=x1=0",
+    "L_inf_points": [
+      "0001",
+      "0010",
+      "0011"
+    ],
+    "p_inf": "0001"
+  },
+  "headline": "The omega-normalized PG(3,4)->PG(3,2) trace gauge is governed by the complete binary flag p_inf=0001 in L_inf:{x0=x1=0} in H0:{x0=0}. The 125 incidence-preserving line lifts split as 1 line x1 lift + 6 lines x2 lifts + 28 lines x4 lifts. The 30 punctured-Fano images are likewise determined plane-by-plane by a puncture line in H0 and a puncture point on L_inf.",
+  "interpretation": "The earlier first-one-index lift staircase is a flag/Schubert staircase: the coordinate gauge privileges a point, then a line, then a plane in PG(3,2). This completely explains the 1/2/4 line lift multiplicities and the combinatorics of all 30 punctured Fano images without promoting the gauge map to an incidence morphism.",
+  "line_lift_flag_strata": {
+    "H0_minus_L_inf": {
+      "GF4_line_mass": 12,
+      "binary_lines": 6,
+      "lifts_per_line": [
+        2
+      ]
+    },
+    "L_inf": {
+      "GF4_line_mass": 1,
+      "binary_lines": 1,
+      "lifts_per_line": [
+        1
+      ]
+    },
+    "mass_identity": "1*1 + 6*2 + 28*4 = 125",
+    "outside_H0": {
+      "GF4_line_mass": 112,
+      "binary_lines": 28,
+      "lifts_per_line": [
+        4
+      ]
+    }
+  },
+  "punctured_plane_flag_law": {
+    "law": "For P != H0, ell_P=P intersect H0; for P=H0, ell_P=L_inf. For ell_P != L_inf, r_P=ell_P intersect L_inf; for ell_P=L_inf, r_P=p_inf. If ell_P={r_P,a,b}, the two five-point images are P\\{r_P,a} and P\\{r_P,b}.",
+    "planes": [
+      {
+        "is_H0": true,
+        "plane": [
+          "0001",
+          "0010",
+          "0011",
+          "0100",
+          "0101",
+          "0110",
+          "0111"
+        ],
+        "puncture_line": [
+          "0001",
+          "0010",
+          "0011"
+        ],
+        "puncture_point": "0001",
+        "punctured_images": [
+          {
+            "GF4_line_lifts": 4,
+            "image": [
+              "0010",
+              "0100",
+              "0101",
+              "0110",
+              "0111"
+            ],
+            "missing_pair": [
+              "0001",
+              "0011"
+            ]
+          },
+          {
+            "GF4_line_lifts": 4,
+            "image": [
+              "0011",
+              "0100",
+              "0101",
+              "0110",
+              "0111"
+            ],
+            "missing_pair": [
+              "0001",
+              "0010"
+            ]
+          }
+        ]
+      },
+      {
+        "is_H0": false,
+        "plane": [
+          "0001",
+          "0010",
+          "0011",
+          "1000",
+          "1001",
+          "1010",
+          "1011"
+        ],
+        "puncture_line": [
+          "0001",
+          "0010",
+          "0011"
+        ],
+        "puncture_point": "0001",
+        "punctured_images": [
+          {
+            "GF4_line_lifts": 8,
+            "image": [
+              "0010",
+              "1000",
+              "1001",
+              "1010",
+              "1011"
+            ],
+            "missing_pair": [
+              "0001",
+              "0011"
+            ]
+          },
+          {
+            "GF4_line_lifts": 8,
+            "image": [
+              "0011",
+              "1000",
+              "1001",
+              "1010",
+              "1011"
+            ],
+            "missing_pair": [
+              "0001",
+              "0010"
+            ]
+          }
+        ]
+      },
+      {
+        "is_H0": false,
+        "plane": [
+          "0001",
+          "0010",
+          "0011",
+          "1100",
+          "1101",
+          "1110",
+          "1111"
+        ],
+        "puncture_line": [
+          "0001",
+          "0010",
+          "0011"
+        ],
+        "puncture_point": "0001",
+        "punctured_images": [
+          {
+            "GF4_line_lifts": 8,
+            "image": [
+              "0010",
+              "1100",
+              "1101",
+              "1110",
+              "1111"
+            ],
+            "missing_pair": [
+              "0001",
+              "0011"
+            ]
+          },
+          {
+            "GF4_line_lifts": 8,
+            "image": [
+              "0011",
+              "1100",
+              "1101",
+              "1110",
+              "1111"
+            ],
+            "missing_pair": [
+              "0001",
+              "0010"
+            ]
+          }
+        ]
+      },
+      {
+        "is_H0": false,
+        "plane": [
+          "0001",
+          "0100",
+          "0101",
+          "1000",
+          "1001",
+          "1100",
+          "1101"
+        ],
+        "puncture_line": [
+          "0001",
+          "0100",
+          "0101"
+        ],
+        "puncture_point": "0001",
+        "punctured_images": [
+          {
+            "GF4_line_lifts": 8,
+            "image": [
+              "0100",
+              "1000",
+              "1001",
+              "1100",
+              "1101"
+            ],
+            "missing_pair": [
+              "0001",
+              "0101"
+            ]
+          },
+          {
+            "GF4_line_lifts": 8,
+            "image": [
+              "0101",
+              "1000",
+              "1001",
+              "1100",
+              "1101"
+            ],
+            "missing_pair": [
+              "0001",
+              "0100"
+            ]
+          }
+        ]
+      },
+      {
+        "is_H0": false,
+        "plane": [
+          "0001",
+          "0100",
+          "0101",
+          "1010",
+          "1011",
+          "1110",
+          "1111"
+        ],
+        "puncture_line": [
+          "0001",
+          "0100",
+          "0101"
+        ],
+        "puncture_point": "0001",
+        "punctured_images": [
+          {
+            "GF4_line_lifts": 8,
+            "image": [
+              "0100",
+              "1010",
+              "1011",
+              "1110",
+              "1111"
+            ],
+            "missing_pair": [
+              "0001",
+              "0101"
+            ]
+          },
+          {
+            "GF4_line_lifts": 8,
+            "image": [
+              "0101",
+              "1010",
+              "1011",
+              "1110",
+              "1111"
+            ],
+            "missing_pair": [
+              "0001",
+              "0100"
+            ]
+          }
+        ]
+      },
+      {
+        "is_H0": false,
+        "plane": [
+          "0001",
+          "0110",
+          "0111",
+          "1000",
+          "1001",
+          "1110",
+          "1111"
+        ],
+        "puncture_line": [
+          "0001",
+          "0110",
+          "0111"
+        ],
+        "puncture_point": "0001",
+        "punctured_images": [
+          {
+            "GF4_line_lifts": 8,
+            "image": [
+              "0110",
+              "1000",
+              "1001",
+              "1110",
+              "1111"
+            ],
+            "missing_pair": [
+              "0001",
+              "0111"
+            ]
+          },
+          {
+            "GF4_line_lifts": 8,
+            "image": [
+              "0111",
+              "1000",
+              "1001",
+              "1110",
+              "1111"
+            ],
+            "missing_pair": [
+              "0001",
+              "0110"
+            ]
+          }
+        ]
+      },
+      {
+        "is_H0": false,
+        "plane": [
+          "0001",
+          "0110",
+          "0111",
+          "1010",
+          "1011",
+          "1100",
+          "1101"
+        ],
+        "puncture_line": [
+          "0001",
+          "0110",
+          "0111"
+        ],
+        "puncture_point": "0001",
+        "punctured_images": [
+          {
+            "GF4_line_lifts": 8,
+            "image": [
+              "0110",
+              "1010",
+              "1011",
+              "1100",
+              "1101"
+            ],
+            "missing_pair": [
+              "0001",
+              "0111"
+            ]
+          },
+          {
+            "GF4_line_lifts": 8,
+            "image": [
+              "0111",
+              "1010",
+              "1011",
+              "1100",
+              "1101"
+            ],
+            "missing_pair": [
+              "0001",
+              "0110"
+            ]
+          }
+        ]
+      },
+      {
+        "is_H0": false,
+        "plane": [
+          "0010",
+          "0100",
+          "0110",
+          "1000",
+          "1010",
+          "1100",
+          "1110"
+        ],
+        "puncture_line": [
+          "0010",
+          "0100",
+          "0110"
+        ],
+        "puncture_point": "0010",
+        "punctured_images": [
+          {
+            "GF4_line_lifts": 8,
+            "image": [
+              "0100",
+              "1000",
+              "1010",
+              "1100",
+              "1110"
+            ],
+            "missing_pair": [
+              "0010",
+              "0110"
+            ]
+          },
+          {
+            "GF4_line_lifts": 8,
+            "image": [
+              "0110",
+              "1000",
+              "1010",
+              "1100",
+              "1110"
+            ],
+            "missing_pair": [
+              "0010",
+              "0100"
+            ]
+          }
+        ]
+      },
+      {
+        "is_H0": false,
+        "plane": [
+          "0010",
+          "0100",
+          "0110",
+          "1001",
+          "1011",
+          "1101",
+          "1111"
+        ],
+        "puncture_line": [
+          "0010",
+          "0100",
+          "0110"
+        ],
+        "puncture_point": "0010",
+        "punctured_images": [
+          {
+            "GF4_line_lifts": 8,
+            "image": [
+              "0100",
+              "1001",
+              "1011",
+              "1101",
+              "1111"
+            ],
+            "missing_pair": [
+              "0010",
+              "0110"
+            ]
+          },
+          {
+            "GF4_line_lifts": 8,
+            "image": [
+              "0110",
+              "1001",
+              "1011",
+              "1101",
+              "1111"
+            ],
+            "missing_pair": [
+              "0010",
+              "0100"
+            ]
+          }
+        ]
+      },
+      {
+        "is_H0": false,
+        "plane": [
+          "0010",
+          "0101",
+          "0111",
+          "1000",
+          "1010",
+          "1101",
+          "1111"
+        ],
+        "puncture_line": [
+          "0010",
+          "0101",
+          "0111"
+        ],
+        "puncture_point": "0010",
+        "punctured_images": [
+          {
+            "GF4_line_lifts": 8,
+            "image": [
+              "0101",
+              "1000",
+              "1010",
+              "1101",
+              "1111"
+            ],
+            "missing_pair": [
+              "0010",
+              "0111"
+            ]
+          },
+          {
+            "GF4_line_lifts": 8,
+            "image": [
+              "0111",
+              "1000",
+              "1010",
+              "1101",
+              "1111"
+            ],
+            "missing_pair": [
+              "0010",
+              "0101"
+            ]
+          }
+        ]
+      },
+      {
+        "is_H0": false,
+        "plane": [
+          "0010",
+          "0101",
+          "0111",
+          "1001",
+          "1011",
+          "1100",
+          "1110"
+        ],
+        "puncture_line": [
+          "0010",
+          "0101",
+          "0111"
+        ],
+        "puncture_point": "0010",
+        "punctured_images": [
+          {
+            "GF4_line_lifts": 8,
+            "image": [
+              "0101",
+              "1001",
+              "1011",
+              "1100",
+              "1110"
+            ],
+            "missing_pair": [
+              "0010",
+              "0111"
+            ]
+          },
+          {
+            "GF4_line_lifts": 8,
+            "image": [
+              "0111",
+              "1001",
+              "1011",
+              "1100",
+              "1110"
+            ],
+            "missing_pair": [
+              "0010",
+              "0101"
+            ]
+          }
+        ]
+      },
+      {
+        "is_H0": false,
+        "plane": [
+          "0011",
+          "0100",
+          "0111",
+          "1000",
+          "1011",
+          "1100",
+          "1111"
+        ],
+        "puncture_line": [
+          "0011",
+          "0100",
+          "0111"
+        ],
+        "puncture_point": "0011",
+        "punctured_images": [
+          {
+            "GF4_line_lifts": 8,
+            "image": [
+              "0100",
+              "1000",
+              "1011",
+              "1100",
+              "1111"
+            ],
+            "missing_pair": [
+              "0011",
+              "0111"
+            ]
+          },
+          {
+            "GF4_line_lifts": 8,
+            "image": [
+              "0111",
+              "1000",
+              "1011",
+              "1100",
+              "1111"
+            ],
+            "missing_pair": [
+              "0011",
+              "0100"
+            ]
+          }
+        ]
+      },
+      {
+        "is_H0": false,
+        "plane": [
+          "0011",
+          "0100",
+          "0111",
+          "1001",
+          "1010",
+          "1101",
+          "1110"
+        ],
+        "puncture_line": [
+          "0011",
+          "0100",
+          "0111"
+        ],
+        "puncture_point": "0011",
+        "punctured_images": [
+          {
+            "GF4_line_lifts": 8,
+            "image": [
+              "0100",
+              "1001",
+              "1010",
+              "1101",
+              "1110"
+            ],
+            "missing_pair": [
+              "0011",
+              "0111"
+            ]
+          },
+          {
+            "GF4_line_lifts": 8,
+            "image": [
+              "0111",
+              "1001",
+              "1010",
+              "1101",
+              "1110"
+            ],
+            "missing_pair": [
+              "0011",
+              "0100"
+            ]
+          }
+        ]
+      },
+      {
+        "is_H0": false,
+        "plane": [
+          "0011",
+          "0101",
+          "0110",
+          "1000",
+          "1011",
+          "1101",
+          "1110"
+        ],
+        "puncture_line": [
+          "0011",
+          "0101",
+          "0110"
+        ],
+        "puncture_point": "0011",
+        "punctured_images": [
+          {
+            "GF4_line_lifts": 8,
+            "image": [
+              "0101",
+              "1000",
+              "1011",
+              "1101",
+              "1110"
+            ],
+            "missing_pair": [
+              "0011",
+              "0110"
+            ]
+          },
+          {
+            "GF4_line_lifts": 8,
+            "image": [
+              "0110",
+              "1000",
+              "1011",
+              "1101",
+              "1110"
+            ],
+            "missing_pair": [
+              "0011",
+              "0101"
+            ]
+          }
+        ]
+      },
+      {
+        "is_H0": false,
+        "plane": [
+          "0011",
+          "0101",
+          "0110",
+          "1001",
+          "1010",
+          "1100",
+          "1111"
+        ],
+        "puncture_line": [
+          "0011",
+          "0101",
+          "0110"
+        ],
+        "puncture_point": "0011",
+        "punctured_images": [
+          {
+            "GF4_line_lifts": 8,
+            "image": [
+              "0101",
+              "1001",
+              "1010",
+              "1100",
+              "1111"
+            ],
+            "missing_pair": [
+              "0011",
+              "0110"
+            ]
+          },
+          {
+            "GF4_line_lifts": 8,
+            "image": [
+              "0110",
+              "1001",
+              "1010",
+              "1100",
+              "1111"
+            ],
+            "missing_pair": [
+              "0011",
+              "0101"
+            ]
+          }
+        ]
+      }
+    ],
+    "puncture_line_plane_multiplicity_histogram": {
+      "2": 6,
+      "3": 1
+    },
+    "puncture_lines": [
+      {
+        "is_L_inf": true,
+        "line": [
+          "0001",
+          "0010",
+          "0011"
+        ],
+        "planes_using_line": 3
+      },
+      {
+        "is_L_inf": false,
+        "line": [
+          "0001",
+          "0100",
+          "0101"
+        ],
+        "planes_using_line": 2
+      },
+      {
+        "is_L_inf": false,
+        "line": [
+          "0001",
+          "0110",
+          "0111"
+        ],
+        "planes_using_line": 2
+      },
+      {
+        "is_L_inf": false,
+        "line": [
+          "0010",
+          "0100",
+          "0110"
+        ],
+        "planes_using_line": 2
+      },
+      {
+        "is_L_inf": false,
+        "line": [
+          "0010",
+          "0101",
+          "0111"
+        ],
+        "planes_using_line": 2
+      },
+      {
+        "is_L_inf": false,
+        "line": [
+          "0011",
+          "0100",
+          "0111"
+        ],
+        "planes_using_line": 2
+      },
+      {
+        "is_L_inf": false,
+        "line": [
+          "0011",
+          "0101",
+          "0110"
+        ],
+        "planes_using_line": 2
+      }
+    ],
+    "puncture_point_plane_counts": {
+      "0001": 7,
+      "0010": 4,
+      "0011": 4
+    }
+  },
+  "schema": "w33.marcelis-trace-complete-flag-law.v1",
+  "status": "PASS"
+}

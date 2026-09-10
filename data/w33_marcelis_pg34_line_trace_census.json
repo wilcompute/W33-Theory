@@ -1,0 +1,714 @@
+{
+  "binary_line_lift_staircase": {
+    "earliest_first_one_index_histogram": {
+      "0": 28,
+      "1": 6,
+      "2": 1
+    },
+    "law": "For a binary line ell, let j be the minimum index of the first 1 among its three points. Then the number of PG(3,4) lines whose tau_omega image is ell is 2^(2-j).",
+    "lift_multiplicity_histogram": {
+      "1": 1,
+      "2": 6,
+      "4": 28
+    },
+    "sample_rows": [
+      {
+        "binary_line": [
+          "0001",
+          "0010",
+          "0011"
+        ],
+        "earliest_first_one_index": 2,
+        "expected_lifts": 1,
+        "gf4_line_lifts": 1
+      },
+      {
+        "binary_line": [
+          "0001",
+          "0100",
+          "0101"
+        ],
+        "earliest_first_one_index": 1,
+        "expected_lifts": 2,
+        "gf4_line_lifts": 2
+      },
+      {
+        "binary_line": [
+          "0001",
+          "0110",
+          "0111"
+        ],
+        "earliest_first_one_index": 1,
+        "expected_lifts": 2,
+        "gf4_line_lifts": 2
+      },
+      {
+        "binary_line": [
+          "0001",
+          "1000",
+          "1001"
+        ],
+        "earliest_first_one_index": 0,
+        "expected_lifts": 4,
+        "gf4_line_lifts": 4
+      },
+      {
+        "binary_line": [
+          "0001",
+          "1010",
+          "1011"
+        ],
+        "earliest_first_one_index": 0,
+        "expected_lifts": 4,
+        "gf4_line_lifts": 4
+      },
+      {
+        "binary_line": [
+          "0001",
+          "1100",
+          "1101"
+        ],
+        "earliest_first_one_index": 0,
+        "expected_lifts": 4,
+        "gf4_line_lifts": 4
+      },
+      {
+        "binary_line": [
+          "0001",
+          "1110",
+          "1111"
+        ],
+        "earliest_first_one_index": 0,
+        "expected_lifts": 4,
+        "gf4_line_lifts": 4
+      },
+      {
+        "binary_line": [
+          "0010",
+          "0100",
+          "0110"
+        ],
+        "earliest_first_one_index": 1,
+        "expected_lifts": 2,
+        "gf4_line_lifts": 2
+      },
+      {
+        "binary_line": [
+          "0010",
+          "0101",
+          "0111"
+        ],
+        "earliest_first_one_index": 1,
+        "expected_lifts": 2,
+        "gf4_line_lifts": 2
+      },
+      {
+        "binary_line": [
+          "0010",
+          "1000",
+          "1010"
+        ],
+        "earliest_first_one_index": 0,
+        "expected_lifts": 4,
+        "gf4_line_lifts": 4
+      },
+      {
+        "binary_line": [
+          "0010",
+          "1001",
+          "1011"
+        ],
+        "earliest_first_one_index": 0,
+        "expected_lifts": 4,
+        "gf4_line_lifts": 4
+      },
+      {
+        "binary_line": [
+          "0010",
+          "1100",
+          "1110"
+        ],
+        "earliest_first_one_index": 0,
+        "expected_lifts": 4,
+        "gf4_line_lifts": 4
+      }
+    ]
+  },
+  "checks": {
+    "125_GF4_lines_descend_to_binary_lines": true,
+    "232_GF4_lines_become_punctured_binary_planes": true,
+    "PG34_has_357_lines": true,
+    "PG34_has_85_points": true,
+    "all_15_binary_planes_are_hit": true,
+    "all_35_binary_lines_are_hit": true,
+    "binary_line_first_index_histogram_is_28_6_1": true,
+    "binary_line_lift_histogram_is_1_2_4_staircase": true,
+    "binary_line_lift_law_is_2_power_2_minus_j": true,
+    "each_binary_plane_has_exactly_two_punctured_images": true,
+    "line_and_punctured_counts_sum_to_357": true,
+    "only_two_trace_image_shapes_occur": true,
+    "plane_total_lift_histogram_is_one_8_and_fourteen_16": true,
+    "punctured_subset_lift_histogram_is_4_or_8": true,
+    "special_x0_zero_plane_is_the_unique_8_line_container": true,
+    "thirty_distinct_punctured_plane_images": true,
+    "two_punctures_per_plane_have_missing_pairs_sharing_one_point": true
+  },
+  "claim_boundary": [
+    "tau_omega depends on the declared first-nonzero-coordinate gauge and is not PGL(4,4)-canonical.",
+    "The 125/232 census is exact for this gauge; another gauge may permute or change which individual GF4 lines lie in each class.",
+    "No quantum-cryptographic security or physical optical equivalence follows from this finite coordinate census alone."
+  ],
+  "counts": {
+    "GF4_lines_to_binary_lines": 125,
+    "GF4_lines_to_five_point_plane_subsets": 232,
+    "PG32_lines_hit": 35,
+    "PG32_points_hit": 15,
+    "PG34_lines": 357,
+    "PG34_points": 85,
+    "binary_planes_hit": 15,
+    "distinct_five_point_plane_subsets": 30
+  },
+  "headline": "Under the explicit omega-normalized Marcelis trace gauge, the 357 lines of PG(3,4) have exactly two image types in PG(3,2): 125 descend to genuine three-point binary lines, while 232 become five-point subsets spanning binary projective planes. The point map is therefore structured but not an incidence morphism.",
+  "marcelis_reading": "Marcelis' GF(4)->GF(2) trace tables should be read as structured, gauge-fixed coordinate projections. Some selected GF4 lines really do descend to PG(3,2) lines, but most do not; 232/357 become punctured Fano planes. This exact census prevents promoting a useful trace dictionary into a false projective-incidence map.",
+  "punctured_plane_census": {
+    "container_plane_total_lift_histogram": {
+      "16": 14,
+      "8": 1
+    },
+    "distinct_subsets": 30,
+    "law": "Each of the 15 binary projective planes contains exactly two five-point trace images. The x0=0 plane receives 8 GF4 lines in total (4 per punctured subset); every other binary plane receives 16 (8 per subset). Within a plane the two missing pairs share exactly one point.",
+    "planes": [
+      {
+        "gf4_lines_mapping_into_plane": 8,
+        "normal": "1000",
+        "punctured_subsets": [
+          {
+            "gf4_line_lifts": 4,
+            "image": [
+              "0010",
+              "0100",
+              "0101",
+              "0110",
+              "0111"
+            ],
+            "missing_pair": [
+              "0001",
+              "0011"
+            ]
+          },
+          {
+            "gf4_line_lifts": 4,
+            "image": [
+              "0011",
+              "0100",
+              "0101",
+              "0110",
+              "0111"
+            ],
+            "missing_pair": [
+              "0001",
+              "0010"
+            ]
+          }
+        ],
+        "shared_missing_point": "0001"
+      },
+      {
+        "gf4_lines_mapping_into_plane": 16,
+        "normal": "0100",
+        "punctured_subsets": [
+          {
+            "gf4_line_lifts": 8,
+            "image": [
+              "0010",
+              "1000",
+              "1001",
+              "1010",
+              "1011"
+            ],
+            "missing_pair": [
+              "0001",
+              "0011"
+            ]
+          },
+          {
+            "gf4_line_lifts": 8,
+            "image": [
+              "0011",
+              "1000",
+              "1001",
+              "1010",
+              "1011"
+            ],
+            "missing_pair": [
+              "0001",
+              "0010"
+            ]
+          }
+        ],
+        "shared_missing_point": "0001"
+      },
+      {
+        "gf4_lines_mapping_into_plane": 16,
+        "normal": "1100",
+        "punctured_subsets": [
+          {
+            "gf4_line_lifts": 8,
+            "image": [
+              "0010",
+              "1100",
+              "1101",
+              "1110",
+              "1111"
+            ],
+            "missing_pair": [
+              "0001",
+              "0011"
+            ]
+          },
+          {
+            "gf4_line_lifts": 8,
+            "image": [
+              "0011",
+              "1100",
+              "1101",
+              "1110",
+              "1111"
+            ],
+            "missing_pair": [
+              "0001",
+              "0010"
+            ]
+          }
+        ],
+        "shared_missing_point": "0001"
+      },
+      {
+        "gf4_lines_mapping_into_plane": 16,
+        "normal": "0010",
+        "punctured_subsets": [
+          {
+            "gf4_line_lifts": 8,
+            "image": [
+              "0100",
+              "1000",
+              "1001",
+              "1100",
+              "1101"
+            ],
+            "missing_pair": [
+              "0001",
+              "0101"
+            ]
+          },
+          {
+            "gf4_line_lifts": 8,
+            "image": [
+              "0101",
+              "1000",
+              "1001",
+              "1100",
+              "1101"
+            ],
+            "missing_pair": [
+              "0001",
+              "0100"
+            ]
+          }
+        ],
+        "shared_missing_point": "0001"
+      },
+      {
+        "gf4_lines_mapping_into_plane": 16,
+        "normal": "1010",
+        "punctured_subsets": [
+          {
+            "gf4_line_lifts": 8,
+            "image": [
+              "0100",
+              "1010",
+              "1011",
+              "1110",
+              "1111"
+            ],
+            "missing_pair": [
+              "0001",
+              "0101"
+            ]
+          },
+          {
+            "gf4_line_lifts": 8,
+            "image": [
+              "0101",
+              "1010",
+              "1011",
+              "1110",
+              "1111"
+            ],
+            "missing_pair": [
+              "0001",
+              "0100"
+            ]
+          }
+        ],
+        "shared_missing_point": "0001"
+      },
+      {
+        "gf4_lines_mapping_into_plane": 16,
+        "normal": "0110",
+        "punctured_subsets": [
+          {
+            "gf4_line_lifts": 8,
+            "image": [
+              "0110",
+              "1000",
+              "1001",
+              "1110",
+              "1111"
+            ],
+            "missing_pair": [
+              "0001",
+              "0111"
+            ]
+          },
+          {
+            "gf4_line_lifts": 8,
+            "image": [
+              "0111",
+              "1000",
+              "1001",
+              "1110",
+              "1111"
+            ],
+            "missing_pair": [
+              "0001",
+              "0110"
+            ]
+          }
+        ],
+        "shared_missing_point": "0001"
+      },
+      {
+        "gf4_lines_mapping_into_plane": 16,
+        "normal": "1110",
+        "punctured_subsets": [
+          {
+            "gf4_line_lifts": 8,
+            "image": [
+              "0110",
+              "1010",
+              "1011",
+              "1100",
+              "1101"
+            ],
+            "missing_pair": [
+              "0001",
+              "0111"
+            ]
+          },
+          {
+            "gf4_line_lifts": 8,
+            "image": [
+              "0111",
+              "1010",
+              "1011",
+              "1100",
+              "1101"
+            ],
+            "missing_pair": [
+              "0001",
+              "0110"
+            ]
+          }
+        ],
+        "shared_missing_point": "0001"
+      },
+      {
+        "gf4_lines_mapping_into_plane": 16,
+        "normal": "0001",
+        "punctured_subsets": [
+          {
+            "gf4_line_lifts": 8,
+            "image": [
+              "0100",
+              "1000",
+              "1010",
+              "1100",
+              "1110"
+            ],
+            "missing_pair": [
+              "0010",
+              "0110"
+            ]
+          },
+          {
+            "gf4_line_lifts": 8,
+            "image": [
+              "0110",
+              "1000",
+              "1010",
+              "1100",
+              "1110"
+            ],
+            "missing_pair": [
+              "0010",
+              "0100"
+            ]
+          }
+        ],
+        "shared_missing_point": "0010"
+      },
+      {
+        "gf4_lines_mapping_into_plane": 16,
+        "normal": "1001",
+        "punctured_subsets": [
+          {
+            "gf4_line_lifts": 8,
+            "image": [
+              "0100",
+              "1001",
+              "1011",
+              "1101",
+              "1111"
+            ],
+            "missing_pair": [
+              "0010",
+              "0110"
+            ]
+          },
+          {
+            "gf4_line_lifts": 8,
+            "image": [
+              "0110",
+              "1001",
+              "1011",
+              "1101",
+              "1111"
+            ],
+            "missing_pair": [
+              "0010",
+              "0100"
+            ]
+          }
+        ],
+        "shared_missing_point": "0010"
+      },
+      {
+        "gf4_lines_mapping_into_plane": 16,
+        "normal": "0101",
+        "punctured_subsets": [
+          {
+            "gf4_line_lifts": 8,
+            "image": [
+              "0101",
+              "1000",
+              "1010",
+              "1101",
+              "1111"
+            ],
+            "missing_pair": [
+              "0010",
+              "0111"
+            ]
+          },
+          {
+            "gf4_line_lifts": 8,
+            "image": [
+              "0111",
+              "1000",
+              "1010",
+              "1101",
+              "1111"
+            ],
+            "missing_pair": [
+              "0010",
+              "0101"
+            ]
+          }
+        ],
+        "shared_missing_point": "0010"
+      },
+      {
+        "gf4_lines_mapping_into_plane": 16,
+        "normal": "1101",
+        "punctured_subsets": [
+          {
+            "gf4_line_lifts": 8,
+            "image": [
+              "0101",
+              "1001",
+              "1011",
+              "1100",
+              "1110"
+            ],
+            "missing_pair": [
+              "0010",
+              "0111"
+            ]
+          },
+          {
+            "gf4_line_lifts": 8,
+            "image": [
+              "0111",
+              "1001",
+              "1011",
+              "1100",
+              "1110"
+            ],
+            "missing_pair": [
+              "0010",
+              "0101"
+            ]
+          }
+        ],
+        "shared_missing_point": "0010"
+      },
+      {
+        "gf4_lines_mapping_into_plane": 16,
+        "normal": "0011",
+        "punctured_subsets": [
+          {
+            "gf4_line_lifts": 8,
+            "image": [
+              "0100",
+              "1000",
+              "1011",
+              "1100",
+              "1111"
+            ],
+            "missing_pair": [
+              "0011",
+              "0111"
+            ]
+          },
+          {
+            "gf4_line_lifts": 8,
+            "image": [
+              "0111",
+              "1000",
+              "1011",
+              "1100",
+              "1111"
+            ],
+            "missing_pair": [
+              "0011",
+              "0100"
+            ]
+          }
+        ],
+        "shared_missing_point": "0011"
+      },
+      {
+        "gf4_lines_mapping_into_plane": 16,
+        "normal": "1011",
+        "punctured_subsets": [
+          {
+            "gf4_line_lifts": 8,
+            "image": [
+              "0100",
+              "1001",
+              "1010",
+              "1101",
+              "1110"
+            ],
+            "missing_pair": [
+              "0011",
+              "0111"
+            ]
+          },
+          {
+            "gf4_line_lifts": 8,
+            "image": [
+              "0111",
+              "1001",
+              "1010",
+              "1101",
+              "1110"
+            ],
+            "missing_pair": [
+              "0011",
+              "0100"
+            ]
+          }
+        ],
+        "shared_missing_point": "0011"
+      },
+      {
+        "gf4_lines_mapping_into_plane": 16,
+        "normal": "0111",
+        "punctured_subsets": [
+          {
+            "gf4_line_lifts": 8,
+            "image": [
+              "0101",
+              "1000",
+              "1011",
+              "1101",
+              "1110"
+            ],
+            "missing_pair": [
+              "0011",
+              "0110"
+            ]
+          },
+          {
+            "gf4_line_lifts": 8,
+            "image": [
+              "0110",
+              "1000",
+              "1011",
+              "1101",
+              "1110"
+            ],
+            "missing_pair": [
+              "0011",
+              "0101"
+            ]
+          }
+        ],
+        "shared_missing_point": "0011"
+      },
+      {
+        "gf4_lines_mapping_into_plane": 16,
+        "normal": "1111",
+        "punctured_subsets": [
+          {
+            "gf4_line_lifts": 8,
+            "image": [
+              "0101",
+              "1001",
+              "1010",
+              "1100",
+              "1111"
+            ],
+            "missing_pair": [
+              "0011",
+              "0110"
+            ]
+          },
+          {
+            "gf4_line_lifts": 8,
+            "image": [
+              "0110",
+              "1001",
+              "1010",
+              "1100",
+              "1111"
+            ],
+            "missing_pair": [
+              "0011",
+              "0101"
+            ]
+          }
+        ],
+        "shared_missing_point": "0011"
+      }
+    ],
+    "subset_lift_multiplicity_histogram": {
+      "4": 2,
+      "8": 28
+    }
+  },
+  "schema": "w33.marcelis-pg34-line-trace-census.v1",
+  "status": "PASS"
+}

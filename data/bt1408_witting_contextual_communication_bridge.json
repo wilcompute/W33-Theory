@@ -31,46 +31,206 @@
     },
     "per_ray_shell_identity": "1 same + 12 compatible + 27 incompatible = 40",
     "per_ray_shells": [
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1},
-      {"compatible_distinct": 12, "incompatible": 27, "same": 1}
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      }
     ],
     "rates": {
       "compatible_distinct": "3/10",
@@ -93,14 +253,39 @@
     "accepted_round_shell": "same-or-orthogonal Witting pair",
     "bt1374_address_rule": "tomotope_flag = 4 * tomotope_block + (mirror_slot mod 4)",
     "bt1407_frame_identity": "48 Q6 body pulse ticks + 3 Hesse return words * 8 ticks = 72 ticks",
-    "mirror_slot_residues": [0, 1, 2, 3],
+    "mirror_slot_residues": [
+      0,
+      1,
+      2,
+      3
+    ],
     "ququart_tetrad_slots": 4,
     "reading": "The four Witting basis outcomes are exactly the four local mirror-slot residues used by the packet ABI.  After basis agreement, a ququart outcome can enter the BT1374 packet row and the BT1407 72-tick body/epilogue transaction.",
     "sample_basis_slot_map": [
-      {"basis_id": 0, "mirror_slot_mod_4": 0, "ray": 0, "slot": 0},
-      {"basis_id": 0, "mirror_slot_mod_4": 1, "ray": 1, "slot": 1},
-      {"basis_id": 0, "mirror_slot_mod_4": 2, "ray": 2, "slot": 2},
-      {"basis_id": 0, "mirror_slot_mod_4": 3, "ray": 3, "slot": 3}
+      {
+        "basis_id": 0,
+        "mirror_slot_mod_4": 0,
+        "ray": 0,
+        "slot": 0
+      },
+      {
+        "basis_id": 0,
+        "mirror_slot_mod_4": 1,
+        "ray": 1,
+        "slot": 1
+      },
+      {
+        "basis_id": 0,
+        "mirror_slot_mod_4": 2,
+        "ray": 2,
+        "slot": 2
+      },
+      {
+        "basis_id": 0,
+        "mirror_slot_mod_4": 3,
+        "ray": 3,
+        "slot": 3
+      }
     ]
   },
   "source_paper": {
@@ -113,10 +298,17 @@
   "title": "Witting contextual communication bridge",
   "verified": true,
   "witting_configuration": {
-    "basis_size_histogram": {"4": 40},
+    "basis_size_histogram": {
+      "4": 40
+    },
     "orthogonal_tetrads": 40,
-    "ray_membership_histogram": {"4": 40},
+    "ray_membership_histogram": {
+      "4": 40
+    },
     "rays": 40,
-    "unordered_pair_common_basis_histogram": {"0": 540, "1": 240}
+    "unordered_pair_common_basis_histogram": {
+      "0": 540,
+      "1": 240
+    }
   }
 }

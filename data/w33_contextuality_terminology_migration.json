@@ -1,0 +1,43 @@
+{
+  "active_chain": {
+    "bt1408": "data/bt1408_witting_contextual_communication_bridge.json",
+    "bt1409": "data/bt1409_witting_duplex_admission_scheduler.json",
+    "reading": "The 13/40 Witting communication admission rate, the 1/10 KS satisfiability defect/witness aperture, and AB contextual fraction 1 are three different quantities and are never interchangeable."
+  },
+  "authoritative_values": {
+    "abramsky_barbosa_contextual_fraction": 1,
+    "global_sections_ovoids": 0,
+    "ks_satisfiability_defect": "1/10",
+    "maximum_satisfiable_contexts": "36/40"
+  },
+  "checks": {
+    "bt1408_source_contains_both_precise_names": true,
+    "bt1408_uses_precise_names": true,
+    "bt1409_source_contains_both_precise_names": true,
+    "bt1409_uses_precise_names": true,
+    "pass1080_AB_contextual_fraction_is_one": true,
+    "pass1099_KS_defect_is_one_tenth": true,
+    "pass1099_names_both_quantities": true
+  },
+  "legacy_misnamed_artifacts": [
+    {
+      "authoritative_replacement": [
+        "data/w33_pass1080_contextual_fraction_audit.json",
+        "data/w33_pass1099_exact_ks_maximum.json"
+      ],
+      "issue": "Historical producer uses the name contextual_fraction for the 36/40 exactly-one satisfiability defect. Do not interpret that field as the Abramsky-Barbosa contextual fraction.",
+      "path": "analysis/w33_contextual_fraction.py"
+    },
+    {
+      "authoritative_replacement": [
+        "data/w33_pass1080_contextual_fraction_audit.json",
+        "data/w33_pass1099_exact_ks_maximum.json"
+      ],
+      "issue": "Historical frozen schema retains the old field name for backward compatibility. Its numerical 1/10 belongs to the KS satisfiability defect observable, not AB contextual fraction.",
+      "path": "data/w33_contextual_fraction.json"
+    }
+  ],
+  "schema": "w33.contextuality-terminology-migration.v1",
+  "scope_boundary": "PASS means the current BT1408/BT1409 Witting communication chain is terminologically migrated and cross-checked against Passes 1080 and 1099. Historical files elsewhere in the repository can retain old names and are not silently rewritten by this certificate.",
+  "status": "PASS"
+}

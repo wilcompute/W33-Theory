@@ -1,0 +1,259 @@
+{
+  "actual_stabilizer": {
+    "Schreier_generators_before_reduction": 95,
+    "abelianization_order": 4,
+    "center_order": 2,
+    "degree": 270,
+    "derived_element_order_histogram": {
+      "1": 1,
+      "2": 7,
+      "3": 8,
+      "6": 8
+    },
+    "derived_order": 24,
+    "element_order_histogram": {
+      "1": 1,
+      "2": 27,
+      "3": 8,
+      "4": 36,
+      "6": 24
+    },
+    "matched_index2_kernel_types": [
+      "mixed fibre product with V4 D8-kernel"
+    ],
+    "matching_character_rows": [
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "orbit_size": 270,
+    "order": 96
+  },
+  "candidate_index2_kernels_of_D8xS4": [
+    {
+      "character_coefficients_rotparity_reflection_s4sign": [
+        1,
+        0,
+        0
+      ],
+      "fingerprint": {
+        "abelianization_order": 8,
+        "center_order": 4,
+        "derived_element_order_histogram": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "derived_order": 12,
+        "element_order_histogram": {
+          "1": 1,
+          "2": 39,
+          "3": 8,
+          "4": 24,
+          "6": 24
+        },
+        "order": 96
+      },
+      "structure_type": "V4 x S4"
+    },
+    {
+      "character_coefficients_rotparity_reflection_s4sign": [
+        0,
+        1,
+        0
+      ],
+      "fingerprint": {
+        "abelianization_order": 8,
+        "center_order": 4,
+        "derived_element_order_histogram": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "derived_order": 12,
+        "element_order_histogram": {
+          "1": 1,
+          "12": 16,
+          "2": 19,
+          "3": 8,
+          "4": 44,
+          "6": 8
+        },
+        "order": 96
+      },
+      "structure_type": "C4 x S4"
+    },
+    {
+      "character_coefficients_rotparity_reflection_s4sign": [
+        1,
+        1,
+        0
+      ],
+      "fingerprint": {
+        "abelianization_order": 8,
+        "center_order": 4,
+        "derived_element_order_histogram": {
+          "1": 1,
+          "2": 3,
+          "3": 8
+        },
+        "derived_order": 12,
+        "element_order_histogram": {
+          "1": 1,
+          "2": 39,
+          "3": 8,
+          "4": 24,
+          "6": 24
+        },
+        "order": 96
+      },
+      "structure_type": "V4 x S4"
+    },
+    {
+      "character_coefficients_rotparity_reflection_s4sign": [
+        0,
+        0,
+        1
+      ],
+      "fingerprint": {
+        "abelianization_order": 12,
+        "center_order": 2,
+        "derived_element_order_histogram": {
+          "1": 1,
+          "2": 7
+        },
+        "derived_order": 8,
+        "element_order_histogram": {
+          "1": 1,
+          "12": 16,
+          "2": 23,
+          "3": 8,
+          "4": 8,
+          "6": 40
+        },
+        "order": 96
+      },
+      "structure_type": "D8 x A4"
+    },
+    {
+      "character_coefficients_rotparity_reflection_s4sign": [
+        1,
+        0,
+        1
+      ],
+      "fingerprint": {
+        "abelianization_order": 4,
+        "center_order": 2,
+        "derived_element_order_histogram": {
+          "1": 1,
+          "2": 7,
+          "3": 8,
+          "6": 8
+        },
+        "derived_order": 24,
+        "element_order_histogram": {
+          "1": 1,
+          "2": 27,
+          "3": 8,
+          "4": 36,
+          "6": 24
+        },
+        "order": 96
+      },
+      "structure_type": "mixed fibre product with V4 D8-kernel"
+    },
+    {
+      "character_coefficients_rotparity_reflection_s4sign": [
+        0,
+        1,
+        1
+      ],
+      "fingerprint": {
+        "abelianization_order": 4,
+        "center_order": 2,
+        "derived_element_order_histogram": {
+          "1": 1,
+          "2": 7,
+          "3": 8,
+          "6": 8
+        },
+        "derived_order": 24,
+        "element_order_histogram": {
+          "1": 1,
+          "12": 16,
+          "2": 31,
+          "3": 8,
+          "4": 32,
+          "6": 8
+        },
+        "order": 96
+      },
+      "structure_type": "mixed fibre product with C4 D8-kernel"
+    },
+    {
+      "character_coefficients_rotparity_reflection_s4sign": [
+        1,
+        1,
+        1
+      ],
+      "fingerprint": {
+        "abelianization_order": 4,
+        "center_order": 2,
+        "derived_element_order_histogram": {
+          "1": 1,
+          "2": 7,
+          "3": 8,
+          "6": 8
+        },
+        "derived_order": 24,
+        "element_order_histogram": {
+          "1": 1,
+          "2": 27,
+          "3": 8,
+          "4": 36,
+          "6": 24
+        },
+        "order": 96
+      },
+      "structure_type": "mixed fibre product with V4 D8-kernel"
+    }
+  ],
+  "checks": {
+    "PSp_cycle_orbit_is_270": true,
+    "Schreier_stabilizer_has_order_96": true,
+    "derived_order_at_most_D8xS4_derived_24": true,
+    "fingerprint_matches_an_index2_D8xS4_kernel": true,
+    "fingerprint_selects_one_isomorphism_type": true,
+    "full_stabilizer_prior_result_is_D8xS4_order192": true,
+    "orbit_stabilizer_matches_25920": true,
+    "tomotope_96_is_not_identified_by_order": true,
+    "tomotope_96_is_ruled_out_by_derived_order": true
+  },
+  "claim_boundary": [
+    "The candidate-type identification uses the prior theorem that the full stabilizer is D8 x S4.",
+    "Matching a unique index-two-kernel fingerprint identifies the abstract subgroup type inside that parent; it does not identify it with an unrelated order-96 controller.",
+    "The tomotope equality is explicitly falsified, not suggested, by the derived-subgroup obstruction."
+  ],
+  "headline": "The PSp(4,3) stabilizer of one intrinsic Heawood execution C6 is closed explicitly as a 96-element permutation group. Its exact center/derived/order-spectrum fingerprint selects one index-two subgroup type inside the prior D8 x S4 full stabilizer and rules out the order-96 tomotope automorphism group structurally.",
+  "prior_repo_inputs": {
+    "PSp_order": 25920,
+    "full_G_spread_pair_stabilizer": "D8 x S4, order 192 (Pass 1996)",
+    "tomotope_group": "IdGroup [96,227], derived subgroup [48,50] = C2^4:C3, center order 1 (Pass 1376 published-generator audit)"
+  },
+  "schema": "w33.heawood-spread-pair-stabilizer96-fingerprint.v1",
+  "status": "PASS",
+  "tomotope_firewall": {
+    "parent_derived_group": "(D8 x S4)' = C2 x A4, order 24",
+    "reason": "For H <= D8 x S4, H' <= (D8 x S4)'. Therefore the PSp index-two stabilizer has derived order at most 24, whereas the published tomotope group has derived order 48.",
+    "tomotope_center_order_repo_certified": 1,
+    "tomotope_derived_order_repo_certified": 48,
+    "tomotope_order": 96
+  }
+}

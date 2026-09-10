@@ -1,0 +1,1135 @@
+{
+  "carrier": {
+    "boundary": "The rail labeling is a physical convention. The exact theorem is the four-mode single-photon realization; other two-factor encodings such as path x OAM are possible implementation choices.",
+    "hilbert_space": "C^4 = C^2_path tensor C^2_polarization",
+    "rail_convention": {
+      "0": "|a,H>",
+      "1": "|a,V>",
+      "2": "|b,H>",
+      "3": "|b,V>"
+    }
+  },
+  "checks": {
+    "accepted_query_rate_is_13_over_40": true,
+    "all_analyzers_unitary": true,
+    "all_preparations_recover_target_ray": true,
+    "analyzer_family_split_is_1_12_27": true,
+    "every_ray_has_four_preparation_routes": true,
+    "forty_rays": true,
+    "forty_tetrads": true,
+    "one_hundred_sixty_preparation_programs": true,
+    "ordered_pair_shell_is_40_480_1080": true
+  },
+  "component_model": {
+    "model": "For an in-basis card, rho -> V rho + (1-V) I/4, followed by a basis-independent total detection efficiency eta.",
+    "scenarios": [
+      {
+        "accepted_correct_click_per_emitted_photon": 0.325,
+        "accepted_wrong_click_per_emitted_photon": 0.0,
+        "compatible_query_acceptance": 0.325,
+        "correct_slot_given_click": 1.0,
+        "depolarizing_visibility": 1.0,
+        "name": "ideal",
+        "total_detection_efficiency_eta": 1.0,
+        "wrong_slot_given_click": 0.0
+      },
+      {
+        "accepted_correct_click_per_emitted_photon": 0.25805,
+        "accepted_wrong_click_per_emitted_photon": 0.0019500000000000162,
+        "compatible_query_acceptance": 0.325,
+        "correct_slot_given_click": 0.9924999999999999,
+        "depolarizing_visibility": 0.99,
+        "name": "high_visibility",
+        "total_detection_efficiency_eta": 0.8,
+        "wrong_slot_given_click": 0.007500000000000062
+      },
+      {
+        "accepted_correct_click_per_emitted_photon": 0.15640625,
+        "accepted_wrong_click_per_emitted_photon": 0.006093750000000015,
+        "compatible_query_acceptance": 0.325,
+        "correct_slot_given_click": 0.9624999999999999,
+        "depolarizing_visibility": 0.95,
+        "name": "moderate",
+        "total_detection_efficiency_eta": 0.5,
+        "wrong_slot_given_click": 0.03750000000000009
+      },
+      {
+        "accepted_correct_click_per_emitted_photon": 0.07515625000000001,
+        "accepted_wrong_click_per_emitted_photon": 0.006093749999999997,
+        "compatible_query_acceptance": 0.325,
+        "correct_slot_given_click": 0.925,
+        "depolarizing_visibility": 0.9,
+        "name": "stress",
+        "total_detection_efficiency_eta": 0.25,
+        "wrong_slot_given_click": 0.07499999999999996
+      }
+    ],
+    "what_it_measures": "Correct/wrong accepted click opportunities per emitted photon. These are component-level rates, not secret-key rates."
+  },
+  "exact_compiler": {
+    "all_preparation_programs": [
+      {
+        "basis_id": 0,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 0,
+        "slot": 0
+      },
+      {
+        "basis_id": 0,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 1,
+        "slot": 1
+      },
+      {
+        "basis_id": 0,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 2,
+        "slot": 2
+      },
+      {
+        "basis_id": 0,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 3,
+        "slot": 3
+      },
+      {
+        "basis_id": 1,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 0,
+        "slot": 0
+      },
+      {
+        "basis_id": 1,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 4,
+        "slot": 1
+      },
+      {
+        "basis_id": 1,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 24,
+        "slot": 2
+      },
+      {
+        "basis_id": 1,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 32,
+        "slot": 3
+      },
+      {
+        "basis_id": 2,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 0,
+        "slot": 0
+      },
+      {
+        "basis_id": 2,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 8,
+        "slot": 1
+      },
+      {
+        "basis_id": 2,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 16,
+        "slot": 2
+      },
+      {
+        "basis_id": 2,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 36,
+        "slot": 3
+      },
+      {
+        "basis_id": 3,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 0,
+        "slot": 0
+      },
+      {
+        "basis_id": 3,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 12,
+        "slot": 1
+      },
+      {
+        "basis_id": 3,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 20,
+        "slot": 2
+      },
+      {
+        "basis_id": 3,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 28,
+        "slot": 3
+      },
+      {
+        "basis_id": 4,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 1,
+        "slot": 0
+      },
+      {
+        "basis_id": 4,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 5,
+        "slot": 1
+      },
+      {
+        "basis_id": 4,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 25,
+        "slot": 2
+      },
+      {
+        "basis_id": 4,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 33,
+        "slot": 3
+      },
+      {
+        "basis_id": 5,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 1,
+        "slot": 0
+      },
+      {
+        "basis_id": 5,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 9,
+        "slot": 1
+      },
+      {
+        "basis_id": 5,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 17,
+        "slot": 2
+      },
+      {
+        "basis_id": 5,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 37,
+        "slot": 3
+      },
+      {
+        "basis_id": 6,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 1,
+        "slot": 0
+      },
+      {
+        "basis_id": 6,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 13,
+        "slot": 1
+      },
+      {
+        "basis_id": 6,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 21,
+        "slot": 2
+      },
+      {
+        "basis_id": 6,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 29,
+        "slot": 3
+      },
+      {
+        "basis_id": 7,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 2,
+        "slot": 0
+      },
+      {
+        "basis_id": 7,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 6,
+        "slot": 1
+      },
+      {
+        "basis_id": 7,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 26,
+        "slot": 2
+      },
+      {
+        "basis_id": 7,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 34,
+        "slot": 3
+      },
+      {
+        "basis_id": 8,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 2,
+        "slot": 0
+      },
+      {
+        "basis_id": 8,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 10,
+        "slot": 1
+      },
+      {
+        "basis_id": 8,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 18,
+        "slot": 2
+      },
+      {
+        "basis_id": 8,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 38,
+        "slot": 3
+      },
+      {
+        "basis_id": 9,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 2,
+        "slot": 0
+      },
+      {
+        "basis_id": 9,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 14,
+        "slot": 1
+      },
+      {
+        "basis_id": 9,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 22,
+        "slot": 2
+      },
+      {
+        "basis_id": 9,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 30,
+        "slot": 3
+      },
+      {
+        "basis_id": 10,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 3,
+        "slot": 0
+      },
+      {
+        "basis_id": 10,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 7,
+        "slot": 1
+      },
+      {
+        "basis_id": 10,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 27,
+        "slot": 2
+      },
+      {
+        "basis_id": 10,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 35,
+        "slot": 3
+      },
+      {
+        "basis_id": 11,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 3,
+        "slot": 0
+      },
+      {
+        "basis_id": 11,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 11,
+        "slot": 1
+      },
+      {
+        "basis_id": 11,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 19,
+        "slot": 2
+      },
+      {
+        "basis_id": 11,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 39,
+        "slot": 3
+      },
+      {
+        "basis_id": 12,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 3,
+        "slot": 0
+      },
+      {
+        "basis_id": 12,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 15,
+        "slot": 1
+      },
+      {
+        "basis_id": 12,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 23,
+        "slot": 2
+      },
+      {
+        "basis_id": 12,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 31,
+        "slot": 3
+      },
+      {
+        "basis_id": 13,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 4,
+        "slot": 0
+      },
+      {
+        "basis_id": 13,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 5,
+        "slot": 1
+      },
+      {
+        "basis_id": 13,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 6,
+        "slot": 2
+      },
+      {
+        "basis_id": 13,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 7,
+        "slot": 3
+      },
+      {
+        "basis_id": 14,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 4,
+        "slot": 0
+      },
+      {
+        "basis_id": 14,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 21,
+        "slot": 1
+      },
+      {
+        "basis_id": 14,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 22,
+        "slot": 2
+      },
+      {
+        "basis_id": 14,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 23,
+        "slot": 3
+      },
+      {
+        "basis_id": 15,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 4,
+        "slot": 0
+      },
+      {
+        "basis_id": 15,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 37,
+        "slot": 1
+      },
+      {
+        "basis_id": 15,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 38,
+        "slot": 2
+      },
+      {
+        "basis_id": 15,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 39,
+        "slot": 3
+      },
+      {
+        "basis_id": 16,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 5,
+        "slot": 0
+      },
+      {
+        "basis_id": 16,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 18,
+        "slot": 1
+      },
+      {
+        "basis_id": 16,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 19,
+        "slot": 2
+      },
+      {
+        "basis_id": 16,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 36,
+        "slot": 3
+      },
+      {
+        "basis_id": 17,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 5,
+        "slot": 0
+      },
+      {
+        "basis_id": 17,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 20,
+        "slot": 1
+      },
+      {
+        "basis_id": 17,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 30,
+        "slot": 2
+      },
+      {
+        "basis_id": 17,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 31,
+        "slot": 3
+      },
+      {
+        "basis_id": 18,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 6,
+        "slot": 0
+      },
+      {
+        "basis_id": 18,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 11,
+        "slot": 1
+      },
+      {
+        "basis_id": 18,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 16,
+        "slot": 2
+      },
+      {
+        "basis_id": 18,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 17,
+        "slot": 3
+      },
+      {
+        "basis_id": 19,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 6,
+        "slot": 0
+      },
+      {
+        "basis_id": 19,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 15,
+        "slot": 1
+      },
+      {
+        "basis_id": 19,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 28,
+        "slot": 2
+      },
+      {
+        "basis_id": 19,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 29,
+        "slot": 3
+      },
+      {
+        "basis_id": 20,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 7,
+        "slot": 0
+      },
+      {
+        "basis_id": 20,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 8,
+        "slot": 1
+      },
+      {
+        "basis_id": 20,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 9,
+        "slot": 2
+      },
+      {
+        "basis_id": 20,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 10,
+        "slot": 3
+      },
+      {
+        "basis_id": 21,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 7,
+        "slot": 0
+      },
+      {
+        "basis_id": 21,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 12,
+        "slot": 1
+      },
+      {
+        "basis_id": 21,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 13,
+        "slot": 2
+      },
+      {
+        "basis_id": 21,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 14,
+        "slot": 3
+      },
+      {
+        "basis_id": 22,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 8,
+        "slot": 0
+      },
+      {
+        "basis_id": 22,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 23,
+        "slot": 1
+      },
+      {
+        "basis_id": 22,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 25,
+        "slot": 2
+      },
+      {
+        "basis_id": 22,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 26,
+        "slot": 3
+      },
+      {
+        "basis_id": 23,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 8,
+        "slot": 0
+      },
+      {
+        "basis_id": 23,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 29,
+        "slot": 1
+      },
+      {
+        "basis_id": 23,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 30,
+        "slot": 2
+      },
+      {
+        "basis_id": 23,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 39,
+        "slot": 3
+      },
+      {
+        "basis_id": 24,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 9,
+        "slot": 0
+      },
+      {
+        "basis_id": 24,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 19,
+        "slot": 1
+      },
+      {
+        "basis_id": 24,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 22,
+        "slot": 2
+      },
+      {
+        "basis_id": 24,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 28,
+        "slot": 3
+      },
+      {
+        "basis_id": 25,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 9,
+        "slot": 0
+      },
+      {
+        "basis_id": 25,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 24,
+        "slot": 1
+      },
+      {
+        "basis_id": 25,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 31,
+        "slot": 2
+      },
+      {
+        "basis_id": 25,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 34,
+        "slot": 3
+      },
+      {
+        "basis_id": 26,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 10,
+        "slot": 0
+      },
+      {
+        "basis_id": 26,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 11,
+        "slot": 1
+      },
+      {
+        "basis_id": 26,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 20,
+        "slot": 2
+      },
+      {
+        "basis_id": 26,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 21,
+        "slot": 3
+      },
+      {
+        "basis_id": 27,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 10,
+        "slot": 0
+      },
+      {
+        "basis_id": 27,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 15,
+        "slot": 1
+      },
+      {
+        "basis_id": 27,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 32,
+        "slot": 2
+      },
+      {
+        "basis_id": 27,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 33,
+        "slot": 3
+      },
+      {
+        "basis_id": 28,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 11,
+        "slot": 0
+      },
+      {
+        "basis_id": 28,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 14,
+        "slot": 1
+      },
+      {
+        "basis_id": 28,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 24,
+        "slot": 2
+      },
+      {
+        "basis_id": 28,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 25,
+        "slot": 3
+      },
+      {
+        "basis_id": 29,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 12,
+        "slot": 0
+      },
+      {
+        "basis_id": 29,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 17,
+        "slot": 1
+      },
+      {
+        "basis_id": 29,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 18,
+        "slot": 2
+      },
+      {
+        "basis_id": 29,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 23,
+        "slot": 3
+      },
+      {
+        "basis_id": 30,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 12,
+        "slot": 0
+      },
+      {
+        "basis_id": 30,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 33,
+        "slot": 1
+      },
+      {
+        "basis_id": 30,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 34,
+        "slot": 2
+      },
+      {
+        "basis_id": 30,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 39,
+        "slot": 3
+      },
+      {
+        "basis_id": 31,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 13,
+        "slot": 0
+      },
+      {
+        "basis_id": 31,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 16,
+        "slot": 1
+      },
+      {
+        "basis_id": 31,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 31,
+        "slot": 2
+      },
+      {
+        "basis_id": 31,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 38,
+        "slot": 3
+      },
+      {
+        "basis_id": 32,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 13,
+        "slot": 0
+      },
+      {
+        "basis_id": 32,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 19,
+        "slot": 1
+      },
+      {
+        "basis_id": 32,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 26,
+        "slot": 2
+      },
+      {
+        "basis_id": 32,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 32,
+        "slot": 3
+      },
+      {
+        "basis_id": 33,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 14,
+        "slot": 0
+      },
+      {
+        "basis_id": 33,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 15,
+        "slot": 1
+      },
+      {
+        "basis_id": 33,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 36,
+        "slot": 2
+      },
+      {
+        "basis_id": 33,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 37,
+        "slot": 3
+      },
+      {
+        "basis_id": 34,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 16,
+        "slot": 0
+      },
+      {
+        "basis_id": 34,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 22,
+        "slot": 1
+      },
+      {
+        "basis_id": 34,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 27,
+        "slot": 2
+      },
+      {
+        "basis_id": 34,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 33,
+        "slot": 3
+      },
+      {
+        "basis_id": 35,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 17,
+        "slot": 0
+      },
+      {
+        "basis_id": 35,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 30,
+        "slot": 1
+      },
+      {
+        "basis_id": 35,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 32,
+        "slot": 2
+      },
+      {
+        "basis_id": 35,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 35,
+        "slot": 3
+      },
+      {
+        "basis_id": 36,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 18,
+        "slot": 0
+      },
+      {
+        "basis_id": 36,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 24,
+        "slot": 1
+      },
+      {
+        "basis_id": 36,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 27,
+        "slot": 2
+      },
+      {
+        "basis_id": 36,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 29,
+        "slot": 3
+      },
+      {
+        "basis_id": 37,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 20,
+        "slot": 0
+      },
+      {
+        "basis_id": 37,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 26,
+        "slot": 1
+      },
+      {
+        "basis_id": 37,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 27,
+        "slot": 2
+      },
+      {
+        "basis_id": 37,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 37,
+        "slot": 3
+      },
+      {
+        "basis_id": 38,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 21,
+        "slot": 0
+      },
+      {
+        "basis_id": 38,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 34,
+        "slot": 1
+      },
+      {
+        "basis_id": 38,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 35,
+        "slot": 2
+      },
+      {
+        "basis_id": 38,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 36,
+        "slot": 3
+      },
+      {
+        "basis_id": 39,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 25,
+        "slot": 0
+      },
+      {
+        "basis_id": 39,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 28,
+        "slot": 1
+      },
+      {
+        "basis_id": 39,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 35,
+        "slot": 2
+      },
+      {
+        "basis_id": 39,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 38,
+        "slot": 3
+      }
+    ],
+    "analyzer_family_histogram": {
+      "COMPUTATIONAL_DIRECT_RAILS": 1,
+      "FOUR_THREE_RAIL_WITTING_ROWS": 27,
+      "ONE_DIRECT_RAIL_PLUS_COMPLEMENT_TRITTER": 12
+    },
+    "analyzer_rule": "U_B |Witting ray in B> = |detector slot>",
+    "max_analyzer_unitarity_error": 2.220446049250313e-16,
+    "max_preparation_projective_error": 0.0,
+    "preparation_programs": 160,
+    "preparation_rule": "U_B^dagger |slot> = |Witting ray>",
+    "rays": 40,
+    "sample_preparation_programs": [
+      {
+        "basis_id": 0,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 0,
+        "slot": 0
+      },
+      {
+        "basis_id": 0,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 1,
+        "slot": 1
+      },
+      {
+        "basis_id": 0,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 2,
+        "slot": 2
+      },
+      {
+        "basis_id": 0,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 3,
+        "slot": 3
+      },
+      {
+        "basis_id": 1,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 0,
+        "slot": 0
+      },
+      {
+        "basis_id": 1,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 4,
+        "slot": 1
+      },
+      {
+        "basis_id": 1,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 24,
+        "slot": 2
+      },
+      {
+        "basis_id": 1,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 32,
+        "slot": 3
+      },
+      {
+        "basis_id": 2,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 0,
+        "slot": 0
+      },
+      {
+        "basis_id": 2,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 8,
+        "slot": 1
+      },
+      {
+        "basis_id": 2,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 16,
+        "slot": 2
+      },
+      {
+        "basis_id": 2,
+        "program": "prepare = U_basis^dagger |slot>",
+        "ray": 36,
+        "slot": 3
+      }
+    ],
+    "tetrads": 40
+  },
+  "prior_art_boundary": {
+    "hybrid_single_photon_ququart": "Single-photon hybrid-ququart contextuality experiments using two internal degrees of freedom establish an implementation class, not a validation of this complete Holonet protocol.",
+    "vlasov": "Vlasov 2025 supplies the 40-card delayed-query communication architecture; the repo supplies the exact 40-ray/tetrad compiler."
+  },
+  "schema": "w33.witting-card-single-photon-protocol.v1",
+  "security_boundary": "No eavesdropper model, finite-key analysis, detector-side-channel model, composable secrecy parameter, or quantum-side-information min-entropy bound is supplied. The 13/40 rate is a geometric admission rate, not a secret-key rate.",
+  "status": "PASS",
+  "vlasov_desk": {
+    "accepted_fraction": "13/40",
+    "accepted_same_or_orthogonal": 520,
+    "compatible_distinct": 480,
+    "incompatible": 1080,
+    "ordered_pairs": 1600,
+    "rejected_fraction": "27/40",
+    "same": 40
+  }
+}

@@ -1,0 +1,1027 @@
+{
+  "checks": {
+    "C6_axis_unions_biject_to_four_intersection_spread_symdiffs": true,
+    "cycle_order_alternates_between_the_two_spread_sides": true,
+    "each_C6_has_three_axis_pairs_from_each_spread_side": true,
+    "each_side_three_pairs_partition_its_six_exclusive_lines": true,
+    "every_C6_axis_union_is_12_distinct_lines": true,
+    "heawood_slot_graph_has_1620_degree2_vertices": true,
+    "slot_graph_is_270_disjoint_C6": true,
+    "spread_pair_intersections_are_360_at_1_and_270_at_4": true,
+    "w33_chart_web_is_540_degree6_1620": true,
+    "w33_has_36_spreads": true
+  },
+  "claim_boundary": [
+    "This is an exact finite-set bijection. A separate automorphism audit is required before calling it a proved G-set isomorphism.",
+    "The local numerical F2^3/Fano labels are gauge choices; the slot pairing, C6 components and 12-line symmetric-difference objects are the invariant content tested here.",
+    "No cryptographic or physical-network security property follows from the 270-cycle identification by itself."
+  ],
+  "counts": {
+    "chart_web_edges": 1620,
+    "charts": 540,
+    "local_execution_slots": 1620,
+    "slot_cycle_length": 6,
+    "slot_cycles": 270,
+    "spread_pairs_intersection_1": 360,
+    "spread_pairs_intersection_4": 270,
+    "spread_pairs_total": 630,
+    "spreads": 36
+  },
+  "headline": "The 1620 local Heawood execution slots glue through the 540-chart web into 270 disjoint C6 cycles.  The 12 W33 axis lines carried by each C6 are exactly the symmetric difference of a unique pair of spreads meeting in four lines.  Hence the 270 Heawood-slot cycles and the repo's 270 four-intersection spread pairs are the same finite objects under an explicit bijection.",
+  "object_dictionary": {
+    "C6_to_spread_pair": "Union the two W33 axis lines of the six chart vertices in the execution-slot C6.  The resulting 12-line set is S triangle T for one and only one spread pair with |S cap T|=4.",
+    "cycle_internal_law": "The six chart vertices alternate A,B,A,B,A,B around C6. The three A charts partition S\\T into three axis pairs; the three B charts partition T\\S into three axis pairs.",
+    "spread_pair_to_C6": "For a four-intersection pair S,T, its 12-line symmetric difference occurs as exactly one execution-slot cycle axis union."
+  },
+  "prior_repo_bridge": {
+    "pass_1996": "Pass 1996 identified the size-270 G-set with unordered pairs of spreads meeting in four lines. This certificate identifies the new Heawood execution-slot C6 objects with those same spread pairs by their literal 12-line symmetric differences, not by matching cardinalities."
+  },
+  "samples": [
+    {
+      "A_only_six_lines": [
+        0,
+        13,
+        18,
+        20,
+        22,
+        31
+      ],
+      "B_only_six_lines": [
+        1,
+        4,
+        7,
+        10,
+        17,
+        21
+      ],
+      "common_four_lines": [
+        27,
+        29,
+        36,
+        38
+      ],
+      "cycle_axis_union_12": [
+        0,
+        1,
+        4,
+        7,
+        10,
+        13,
+        17,
+        18,
+        20,
+        21,
+        22,
+        31
+      ],
+      "cycle_id": 0,
+      "cycle_order": [
+        {
+          "axis_lines": [
+            0,
+            13
+          ],
+          "chart_id": 0,
+          "local_execution_line": [
+            1,
+            6,
+            7
+          ],
+          "spread_side": "A"
+        },
+        {
+          "axis_lines": [
+            1,
+            4
+          ],
+          "chart_id": 27,
+          "local_execution_line": [
+            1,
+            6,
+            7
+          ],
+          "spread_side": "B"
+        },
+        {
+          "axis_lines": [
+            22,
+            31
+          ],
+          "chart_id": 445,
+          "local_execution_line": [
+            1,
+            6,
+            7
+          ],
+          "spread_side": "A"
+        },
+        {
+          "axis_lines": [
+            17,
+            21
+          ],
+          "chart_id": 368,
+          "local_execution_line": [
+            1,
+            6,
+            7
+          ],
+          "spread_side": "B"
+        },
+        {
+          "axis_lines": [
+            18,
+            20
+          ],
+          "chart_id": 384,
+          "local_execution_line": [
+            1,
+            6,
+            7
+          ],
+          "spread_side": "A"
+        },
+        {
+          "axis_lines": [
+            7,
+            10
+          ],
+          "chart_id": 180,
+          "local_execution_line": [
+            1,
+            6,
+            7
+          ],
+          "spread_side": "B"
+        }
+      ],
+      "spread_pair": [
+        2,
+        9
+      ]
+    },
+    {
+      "A_only_six_lines": [
+        0,
+        13,
+        24,
+        25,
+        32,
+        37
+      ],
+      "B_only_six_lines": [
+        1,
+        4,
+        7,
+        10,
+        27,
+        38
+      ],
+      "common_four_lines": [
+        17,
+        21,
+        29,
+        36
+      ],
+      "cycle_axis_union_12": [
+        0,
+        1,
+        4,
+        7,
+        10,
+        13,
+        24,
+        25,
+        27,
+        32,
+        37,
+        38
+      ],
+      "cycle_id": 1,
+      "cycle_order": [
+        {
+          "axis_lines": [
+            0,
+            13
+          ],
+          "chart_id": 0,
+          "local_execution_line": [
+            2,
+            5,
+            7
+          ],
+          "spread_side": "A"
+        },
+        {
+          "axis_lines": [
+            1,
+            10
+          ],
+          "chart_id": 33,
+          "local_execution_line": [
+            1,
+            6,
+            7
+          ],
+          "spread_side": "B"
+        },
+        {
+          "axis_lines": [
+            25,
+            37
+          ],
+          "chart_id": 481,
+          "local_execution_line": [
+            1,
+            6,
+            7
+          ],
+          "spread_side": "A"
+        },
+        {
+          "axis_lines": [
+            27,
+            38
+          ],
+          "chart_id": 499,
+          "local_execution_line": [
+            1,
+            6,
+            7
+          ],
+          "spread_side": "B"
+        },
+        {
+          "axis_lines": [
+            24,
+            32
+          ],
+          "chart_id": 468,
+          "local_execution_line": [
+            3,
+            4,
+            7
+          ],
+          "spread_side": "A"
+        },
+        {
+          "axis_lines": [
+            4,
+            7
+          ],
+          "chart_id": 108,
+          "local_execution_line": [
+            1,
+            6,
+            7
+          ],
+          "spread_side": "B"
+        }
+      ],
+      "spread_pair": [
+        1,
+        9
+      ]
+    },
+    {
+      "A_only_six_lines": [
+        0,
+        13,
+        23,
+        28,
+        33,
+        34
+      ],
+      "B_only_six_lines": [
+        1,
+        4,
+        7,
+        10,
+        29,
+        36
+      ],
+      "common_four_lines": [
+        17,
+        21,
+        27,
+        38
+      ],
+      "cycle_axis_union_12": [
+        0,
+        1,
+        4,
+        7,
+        10,
+        13,
+        23,
+        28,
+        29,
+        33,
+        34,
+        36
+      ],
+      "cycle_id": 2,
+      "cycle_order": [
+        {
+          "axis_lines": [
+            0,
+            13
+          ],
+          "chart_id": 0,
+          "local_execution_line": [
+            3,
+            4,
+            7
+          ],
+          "spread_side": "A"
+        },
+        {
+          "axis_lines": [
+            1,
+            7
+          ],
+          "chart_id": 30,
+          "local_execution_line": [
+            1,
+            6,
+            7
+          ],
+          "spread_side": "B"
+        },
+        {
+          "axis_lines": [
+            28,
+            34
+          ],
+          "chart_id": 503,
+          "local_execution_line": [
+            1,
+            6,
+            7
+          ],
+          "spread_side": "A"
+        },
+        {
+          "axis_lines": [
+            29,
+            36
+          ],
+          "chart_id": 511,
+          "local_execution_line": [
+            1,
+            6,
+            7
+          ],
+          "spread_side": "B"
+        },
+        {
+          "axis_lines": [
+            23,
+            33
+          ],
+          "chart_id": 458,
+          "local_execution_line": [
+            2,
+            5,
+            7
+          ],
+          "spread_side": "A"
+        },
+        {
+          "axis_lines": [
+            4,
+            10
+          ],
+          "chart_id": 111,
+          "local_execution_line": [
+            1,
+            6,
+            7
+          ],
+          "spread_side": "B"
+        }
+      ],
+      "spread_pair": [
+        0,
+        9
+      ]
+    },
+    {
+      "A_only_six_lines": [
+        0,
+        14,
+        16,
+        21,
+        23,
+        32
+      ],
+      "B_only_six_lines": [
+        2,
+        4,
+        9,
+        11,
+        18,
+        19
+      ],
+      "common_four_lines": [
+        25,
+        30,
+        34,
+        39
+      ],
+      "cycle_axis_union_12": [
+        0,
+        2,
+        4,
+        9,
+        11,
+        14,
+        16,
+        18,
+        19,
+        21,
+        23,
+        32
+      ],
+      "cycle_id": 3,
+      "cycle_order": [
+        {
+          "axis_lines": [
+            0,
+            14
+          ],
+          "chart_id": 1,
+          "local_execution_line": [
+            1,
+            6,
+            7
+          ],
+          "spread_side": "A"
+        },
+        {
+          "axis_lines": [
+            2,
+            4
+          ],
+          "chart_id": 54,
+          "local_execution_line": [
+            1,
+            6,
+            7
+          ],
+          "spread_side": "B"
+        },
+        {
+          "axis_lines": [
+            23,
+            32
+          ],
+          "chart_id": 457,
+          "local_execution_line": [
+            1,
+            6,
+            7
+          ],
+          "spread_side": "A"
+        },
+        {
+          "axis_lines": [
+            18,
+            19
+          ],
+          "chart_id": 383,
+          "local_execution_line": [
+            1,
+            6,
+            7
+          ],
+          "spread_side": "B"
+        },
+        {
+          "axis_lines": [
+            16,
+            21
+          ],
+          "chart_id": 352,
+          "local_execution_line": [
+            1,
+            6,
+            7
+          ],
+          "spread_side": "A"
+        },
+        {
+          "axis_lines": [
+            9,
+            11
+          ],
+          "chart_id": 223,
+          "local_execution_line": [
+            2,
+            5,
+            7
+          ],
+          "spread_side": "B"
+        }
+      ],
+      "spread_pair": [
+        3,
+        20
+      ]
+    },
+    {
+      "A_only_six_lines": [
+        0,
+        14,
+        22,
+        26,
+        33,
+        38
+      ],
+      "B_only_six_lines": [
+        2,
+        4,
+        9,
+        11,
+        25,
+        39
+      ],
+      "common_four_lines": [
+        18,
+        19,
+        30,
+        34
+      ],
+      "cycle_axis_union_12": [
+        0,
+        2,
+        4,
+        9,
+        11,
+        14,
+        22,
+        25,
+        26,
+        33,
+        38,
+        39
+      ],
+      "cycle_id": 4,
+      "cycle_order": [
+        {
+          "axis_lines": [
+            0,
+            14
+          ],
+          "chart_id": 1,
+          "local_execution_line": [
+            2,
+            5,
+            7
+          ],
+          "spread_side": "A"
+        },
+        {
+          "axis_lines": [
+            2,
+            11
+          ],
+          "chart_id": 61,
+          "local_execution_line": [
+            2,
+            5,
+            7
+          ],
+          "spread_side": "B"
+        },
+        {
+          "axis_lines": [
+            26,
+            38
+          ],
+          "chart_id": 491,
+          "local_execution_line": [
+            1,
+            6,
+            7
+          ],
+          "spread_side": "A"
+        },
+        {
+          "axis_lines": [
+            25,
+            39
+          ],
+          "chart_id": 482,
+          "local_execution_line": [
+            1,
+            6,
+            7
+          ],
+          "spread_side": "B"
+        },
+        {
+          "axis_lines": [
+            22,
+            33
+          ],
+          "chart_id": 447,
+          "local_execution_line": [
+            3,
+            4,
+            7
+          ],
+          "spread_side": "A"
+        },
+        {
+          "axis_lines": [
+            4,
+            9
+          ],
+          "chart_id": 110,
+          "local_execution_line": [
+            2,
+            5,
+            7
+          ],
+          "spread_side": "B"
+        }
+      ],
+      "spread_pair": [
+        4,
+        20
+      ]
+    },
+    {
+      "A_only_six_lines": [
+        0,
+        14,
+        24,
+        29,
+        31,
+        35
+      ],
+      "B_only_six_lines": [
+        2,
+        4,
+        9,
+        11,
+        30,
+        34
+      ],
+      "common_four_lines": [
+        18,
+        19,
+        25,
+        39
+      ],
+      "cycle_axis_union_12": [
+        0,
+        2,
+        4,
+        9,
+        11,
+        14,
+        24,
+        29,
+        30,
+        31,
+        34,
+        35
+      ],
+      "cycle_id": 5,
+      "cycle_order": [
+        {
+          "axis_lines": [
+            0,
+            14
+          ],
+          "chart_id": 1,
+          "local_execution_line": [
+            3,
+            4,
+            7
+          ],
+          "spread_side": "A"
+        },
+        {
+          "axis_lines": [
+            2,
+            9
+          ],
+          "chart_id": 59,
+          "local_execution_line": [
+            2,
+            5,
+            7
+          ],
+          "spread_side": "B"
+        },
+        {
+          "axis_lines": [
+            29,
+            35
+          ],
+          "chart_id": 510,
+          "local_execution_line": [
+            1,
+            6,
+            7
+          ],
+          "spread_side": "A"
+        },
+        {
+          "axis_lines": [
+            30,
+            34
+          ],
+          "chart_id": 517,
+          "local_execution_line": [
+            1,
+            6,
+            7
+          ],
+          "spread_side": "B"
+        },
+        {
+          "axis_lines": [
+            24,
+            31
+          ],
+          "chart_id": 467,
+          "local_execution_line": [
+            2,
+            5,
+            7
+          ],
+          "spread_side": "A"
+        },
+        {
+          "axis_lines": [
+            4,
+            11
+          ],
+          "chart_id": 112,
+          "local_execution_line": [
+            2,
+            5,
+            7
+          ],
+          "spread_side": "B"
+        }
+      ],
+      "spread_pair": [
+        5,
+        20
+      ]
+    },
+    {
+      "A_only_six_lines": [
+        0,
+        15,
+        17,
+        19,
+        24,
+        33
+      ],
+      "B_only_six_lines": [
+        3,
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "common_four_lines": [
+        26,
+        28,
+        35,
+        37
+      ],
+      "cycle_axis_union_12": [
+        0,
+        3,
+        4,
+        8,
+        12,
+        15,
+        16,
+        17,
+        19,
+        20,
+        24,
+        33
+      ],
+      "cycle_id": 6,
+      "cycle_order": [
+        {
+          "axis_lines": [
+            0,
+            15
+          ],
+          "chart_id": 2,
+          "local_execution_line": [
+            1,
+            6,
+            7
+          ],
+          "spread_side": "A"
+        },
+        {
+          "axis_lines": [
+            3,
+            4
+          ],
+          "chart_id": 81,
+          "local_execution_line": [
+            1,
+            6,
+            7
+          ],
+          "spread_side": "B"
+        },
+        {
+          "axis_lines": [
+            24,
+            33
+          ],
+          "chart_id": 469,
+          "local_execution_line": [
+            1,
+            6,
+            7
+          ],
+          "spread_side": "A"
+        },
+        {
+          "axis_lines": [
+            16,
+            20
+          ],
+          "chart_id": 351,
+          "local_execution_line": [
+            1,
+            6,
+            7
+          ],
+          "spread_side": "B"
+        },
+        {
+          "axis_lines": [
+            17,
+            19
+          ],
+          "chart_id": 367,
+          "local_execution_line": [
+            1,
+            6,
+            7
+          ],
+          "spread_side": "A"
+        },
+        {
+          "axis_lines": [
+            8,
+            12
+          ],
+          "chart_id": 203,
+          "local_execution_line": [
+            3,
+            4,
+            7
+          ],
+          "spread_side": "B"
+        }
+      ],
+      "spread_pair": [
+        8,
+        28
+      ]
+    },
+    {
+      "A_only_six_lines": [
+        0,
+        15,
+        23,
+        27,
+        31,
+        39
+      ],
+      "B_only_six_lines": [
+        3,
+        4,
+        8,
+        12,
+        26,
+        37
+      ],
+      "common_four_lines": [
+        16,
+        20,
+        28,
+        35
+      ],
+      "cycle_axis_union_12": [
+        0,
+        3,
+        4,
+        8,
+        12,
+        15,
+        23,
+        26,
+        27,
+        31,
+        37,
+        39
+      ],
+      "cycle_id": 7,
+      "cycle_order": [
+        {
+          "axis_lines": [
+            0,
+            15
+          ],
+          "chart_id": 2,
+          "local_execution_line": [
+            2,
+            5,
+            7
+          ],
+          "spread_side": "A"
+        },
+        {
+          "axis_lines": [
+            3,
+            12
+          ],
+          "chart_id": 89,
+          "local_execution_line": [
+            3,
+            4,
+            7
+          ],
+          "spread_side": "B"
+        },
+        {
+          "axis_lines": [
+            27,
+            39
+          ],
+          "chart_id": 500,
+          "local_execution_line": [
+            1,
+            6,
+            7
+          ],
+          "spread_side": "A"
+        },
+        {
+          "axis_lines": [
+            26,
+            37
+          ],
+          "chart_id": 490,
+          "local_execution_line": [
+            1,
+            6,
+            7
+          ],
+          "spread_side": "B"
+        },
+        {
+          "axis_lines": [
+            23,
+            31
+          ],
+          "chart_id": 456,
+          "local_execution_line": [
+            3,
+            4,
+            7
+          ],
+          "spread_side": "A"
+        },
+        {
+          "axis_lines": [
+            4,
+            8
+          ],
+          "chart_id": 109,
+          "local_execution_line": [
+            3,
+            4,
+            7
+          ],
+          "spread_side": "B"
+        }
+      ],
+      "spread_pair": [
+        7,
+        28
+      ]
+    }
+  ],
+  "schema": "w33.heawood-spread-pair-270-bridge.v1",
+  "status": "PASS"
+}

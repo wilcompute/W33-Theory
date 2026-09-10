@@ -1,0 +1,996 @@
+{
+  "bt1714_bridge": "BT1714's 3 Heawood execution slots + 4 co-Heawood buffer slots now have a project-native local realization: the three Fano lines incident with the Q3 antipode translation versus the four nonincident Fano lines.",
+  "checks": {
+    "canonical_antipode_point_has_three_incident_lines": true,
+    "chart_web_is_540_nodes_1620_edges_degree6": true,
+    "each_standard_execution_line_occurs_once_per_chart": true,
+    "every_chart_has_four_transversals": true,
+    "every_execution_slot_has_complementary_two_sheets": true,
+    "four_nonincident_lines_are_buffers": true,
+    "local_translation_fano_has_7_points_7_lines": true,
+    "six_neighbors_are_two_sheet_cover_of_three_execution_lines": true
+  },
+  "claim_boundary": [
+    "The Heawood graph is a local 14-vertex fibre, not a subgraph of the 540-chart web.",
+    "The numerical F2^3 labels depend on a deterministic Gray gauge, while the 3+4 incidence split and two-sheet quotient are intrinsic up to cube automorphism.",
+    "No global identification of the seven Fano labels across all 540 chart fibres is asserted."
+  ],
+  "counts": {
+    "buffer_lines_not_through_antipode": 4,
+    "chart_web_edges": 1620,
+    "charts": 540,
+    "directed_chart_web_incidences": 3240,
+    "execution_lines_through_antipode": 3,
+    "execution_slots_over_all_charts": 1620,
+    "fano_lines_per_chart": 7,
+    "fano_translation_points_per_chart": 7,
+    "heawood_fibre_vertices_per_chart": 14,
+    "web_neighbour_sheets_per_execution_slot": 2
+  },
+  "headline": "Each of the 540 W33 Q3 charts carries a local Heawood fibre on the seven nonzero F2^3 translations and their seven Fano lines. The intrinsic antipode translation 111 selects one Heawood point. The six chart-web neighbours descend 2-to-1 onto its three incident Fano-line vertices; the other four Fano lines are nonincident buffer slots.",
+  "marcelis_bridge": "Marcelis places Fano point/line data and harmonic cubes on the Heawood incidence graph. Here the same Fano incidence object arises from the translation algebra internal to every W33 cube chart. This is an incidence/fibre bridge, not a claim that his harmonic cross-ratio geometry has been reconstructed optically.",
+  "sample_chart_fibres": [
+    {
+      "axis_lines": [
+        0,
+        13
+      ],
+      "buffer_fano_lines": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          3,
+          5,
+          6
+        ]
+      ],
+      "canonical_heawood_point": 7,
+      "chart_id": 0,
+      "execution_fano_lines": [
+        [
+          1,
+          6,
+          7
+        ],
+        [
+          2,
+          5,
+          7
+        ],
+        [
+          3,
+          4,
+          7
+        ]
+      ],
+      "two_sheet_interfaces": {
+        "1-6-7": [
+          {
+            "neighbour": 27,
+            "shared_addresses": [
+              0,
+              1,
+              6,
+              7
+            ]
+          },
+          {
+            "neighbour": 180,
+            "shared_addresses": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ],
+        "2-5-7": [
+          {
+            "neighbour": 33,
+            "shared_addresses": [
+              0,
+              2,
+              5,
+              7
+            ]
+          },
+          {
+            "neighbour": 108,
+            "shared_addresses": [
+              1,
+              3,
+              4,
+              6
+            ]
+          }
+        ],
+        "3-4-7": [
+          {
+            "neighbour": 30,
+            "shared_addresses": [
+              0,
+              3,
+              4,
+              7
+            ]
+          },
+          {
+            "neighbour": 111,
+            "shared_addresses": [
+              1,
+              2,
+              5,
+              6
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "axis_lines": [
+        0,
+        14
+      ],
+      "buffer_fano_lines": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          3,
+          5,
+          6
+        ]
+      ],
+      "canonical_heawood_point": 7,
+      "chart_id": 1,
+      "execution_fano_lines": [
+        [
+          1,
+          6,
+          7
+        ],
+        [
+          2,
+          5,
+          7
+        ],
+        [
+          3,
+          4,
+          7
+        ]
+      ],
+      "two_sheet_interfaces": {
+        "1-6-7": [
+          {
+            "neighbour": 54,
+            "shared_addresses": [
+              0,
+              1,
+              6,
+              7
+            ]
+          },
+          {
+            "neighbour": 223,
+            "shared_addresses": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ],
+        "2-5-7": [
+          {
+            "neighbour": 61,
+            "shared_addresses": [
+              0,
+              2,
+              5,
+              7
+            ]
+          },
+          {
+            "neighbour": 110,
+            "shared_addresses": [
+              1,
+              3,
+              4,
+              6
+            ]
+          }
+        ],
+        "3-4-7": [
+          {
+            "neighbour": 59,
+            "shared_addresses": [
+              0,
+              3,
+              4,
+              7
+            ]
+          },
+          {
+            "neighbour": 112,
+            "shared_addresses": [
+              1,
+              2,
+              5,
+              6
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "axis_lines": [
+        0,
+        15
+      ],
+      "buffer_fano_lines": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          3,
+          5,
+          6
+        ]
+      ],
+      "canonical_heawood_point": 7,
+      "chart_id": 2,
+      "execution_fano_lines": [
+        [
+          1,
+          6,
+          7
+        ],
+        [
+          2,
+          5,
+          7
+        ],
+        [
+          3,
+          4,
+          7
+        ]
+      ],
+      "two_sheet_interfaces": {
+        "1-6-7": [
+          {
+            "neighbour": 81,
+            "shared_addresses": [
+              0,
+              1,
+              6,
+              7
+            ]
+          },
+          {
+            "neighbour": 203,
+            "shared_addresses": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ],
+        "2-5-7": [
+          {
+            "neighbour": 89,
+            "shared_addresses": [
+              0,
+              2,
+              5,
+              7
+            ]
+          },
+          {
+            "neighbour": 109,
+            "shared_addresses": [
+              1,
+              3,
+              4,
+              6
+            ]
+          }
+        ],
+        "3-4-7": [
+          {
+            "neighbour": 85,
+            "shared_addresses": [
+              0,
+              3,
+              4,
+              7
+            ]
+          },
+          {
+            "neighbour": 113,
+            "shared_addresses": [
+              1,
+              2,
+              5,
+              6
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "axis_lines": [
+        0,
+        16
+      ],
+      "buffer_fano_lines": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          3,
+          5,
+          6
+        ]
+      ],
+      "canonical_heawood_point": 7,
+      "chart_id": 3,
+      "execution_fano_lines": [
+        [
+          1,
+          6,
+          7
+        ],
+        [
+          2,
+          5,
+          7
+        ],
+        [
+          3,
+          4,
+          7
+        ]
+      ],
+      "two_sheet_interfaces": {
+        "1-6-7": [
+          {
+            "neighbour": 28,
+            "shared_addresses": [
+              0,
+              1,
+              6,
+              7
+            ]
+          },
+          {
+            "neighbour": 223,
+            "shared_addresses": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ],
+        "2-5-7": [
+          {
+            "neighbour": 34,
+            "shared_addresses": [
+              0,
+              2,
+              5,
+              7
+            ]
+          },
+          {
+            "neighbour": 134,
+            "shared_addresses": [
+              1,
+              3,
+              4,
+              6
+            ]
+          }
+        ],
+        "3-4-7": [
+          {
+            "neighbour": 32,
+            "shared_addresses": [
+              0,
+              3,
+              4,
+              7
+            ]
+          },
+          {
+            "neighbour": 136,
+            "shared_addresses": [
+              1,
+              2,
+              5,
+              6
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "axis_lines": [
+        0,
+        17
+      ],
+      "buffer_fano_lines": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          3,
+          5,
+          6
+        ]
+      ],
+      "canonical_heawood_point": 7,
+      "chart_id": 4,
+      "execution_fano_lines": [
+        [
+          1,
+          6,
+          7
+        ],
+        [
+          2,
+          5,
+          7
+        ],
+        [
+          3,
+          4,
+          7
+        ]
+      ],
+      "two_sheet_interfaces": {
+        "1-6-7": [
+          {
+            "neighbour": 55,
+            "shared_addresses": [
+              0,
+              1,
+              6,
+              7
+            ]
+          },
+          {
+            "neighbour": 203,
+            "shared_addresses": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ],
+        "2-5-7": [
+          {
+            "neighbour": 62,
+            "shared_addresses": [
+              0,
+              2,
+              5,
+              7
+            ]
+          },
+          {
+            "neighbour": 133,
+            "shared_addresses": [
+              1,
+              3,
+              4,
+              6
+            ]
+          }
+        ],
+        "3-4-7": [
+          {
+            "neighbour": 58,
+            "shared_addresses": [
+              0,
+              3,
+              4,
+              7
+            ]
+          },
+          {
+            "neighbour": 137,
+            "shared_addresses": [
+              1,
+              2,
+              5,
+              6
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "axis_lines": [
+        0,
+        18
+      ],
+      "buffer_fano_lines": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          3,
+          5,
+          6
+        ]
+      ],
+      "canonical_heawood_point": 7,
+      "chart_id": 5,
+      "execution_fano_lines": [
+        [
+          1,
+          6,
+          7
+        ],
+        [
+          2,
+          5,
+          7
+        ],
+        [
+          3,
+          4,
+          7
+        ]
+      ],
+      "two_sheet_interfaces": {
+        "1-6-7": [
+          {
+            "neighbour": 82,
+            "shared_addresses": [
+              0,
+              1,
+              6,
+              7
+            ]
+          },
+          {
+            "neighbour": 180,
+            "shared_addresses": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ],
+        "2-5-7": [
+          {
+            "neighbour": 87,
+            "shared_addresses": [
+              0,
+              2,
+              5,
+              7
+            ]
+          },
+          {
+            "neighbour": 132,
+            "shared_addresses": [
+              1,
+              3,
+              4,
+              6
+            ]
+          }
+        ],
+        "3-4-7": [
+          {
+            "neighbour": 84,
+            "shared_addresses": [
+              0,
+              3,
+              4,
+              7
+            ]
+          },
+          {
+            "neighbour": 135,
+            "shared_addresses": [
+              1,
+              2,
+              5,
+              6
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "axis_lines": [
+        0,
+        19
+      ],
+      "buffer_fano_lines": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          3,
+          5,
+          6
+        ]
+      ],
+      "canonical_heawood_point": 7,
+      "chart_id": 6,
+      "execution_fano_lines": [
+        [
+          1,
+          6,
+          7
+        ],
+        [
+          2,
+          5,
+          7
+        ],
+        [
+          3,
+          4,
+          7
+        ]
+      ],
+      "two_sheet_interfaces": {
+        "1-6-7": [
+          {
+            "neighbour": 29,
+            "shared_addresses": [
+              0,
+              1,
+              6,
+              7
+            ]
+          },
+          {
+            "neighbour": 203,
+            "shared_addresses": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ],
+        "2-5-7": [
+          {
+            "neighbour": 35,
+            "shared_addresses": [
+              0,
+              2,
+              5,
+              7
+            ]
+          },
+          {
+            "neighbour": 157,
+            "shared_addresses": [
+              1,
+              3,
+              4,
+              6
+            ]
+          }
+        ],
+        "3-4-7": [
+          {
+            "neighbour": 31,
+            "shared_addresses": [
+              0,
+              3,
+              4,
+              7
+            ]
+          },
+          {
+            "neighbour": 161,
+            "shared_addresses": [
+              1,
+              2,
+              5,
+              6
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "axis_lines": [
+        0,
+        20
+      ],
+      "buffer_fano_lines": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          3,
+          5,
+          6
+        ]
+      ],
+      "canonical_heawood_point": 7,
+      "chart_id": 7,
+      "execution_fano_lines": [
+        [
+          1,
+          6,
+          7
+        ],
+        [
+          2,
+          5,
+          7
+        ],
+        [
+          3,
+          4,
+          7
+        ]
+      ],
+      "two_sheet_interfaces": {
+        "1-6-7": [
+          {
+            "neighbour": 56,
+            "shared_addresses": [
+              0,
+              1,
+              6,
+              7
+            ]
+          },
+          {
+            "neighbour": 180,
+            "shared_addresses": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ],
+        "2-5-7": [
+          {
+            "neighbour": 60,
+            "shared_addresses": [
+              0,
+              2,
+              5,
+              7
+            ]
+          },
+          {
+            "neighbour": 156,
+            "shared_addresses": [
+              1,
+              3,
+              4,
+              6
+            ]
+          }
+        ],
+        "3-4-7": [
+          {
+            "neighbour": 57,
+            "shared_addresses": [
+              0,
+              3,
+              4,
+              7
+            ]
+          },
+          {
+            "neighbour": 159,
+            "shared_addresses": [
+              1,
+              2,
+              5,
+              6
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "schema": "w33.heawood-chart-fibre-quotient.v1",
+  "standard_local_fano": {
+    "buffer_lines": [
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        4,
+        5
+      ],
+      [
+        2,
+        4,
+        6
+      ],
+      [
+        3,
+        5,
+        6
+      ]
+    ],
+    "canonical_antipode_point": 7,
+    "execution_lines": [
+      [
+        1,
+        6,
+        7
+      ],
+      [
+        2,
+        5,
+        7
+      ],
+      [
+        3,
+        4,
+        7
+      ]
+    ],
+    "lines": [
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        4,
+        5
+      ],
+      [
+        1,
+        6,
+        7
+      ],
+      [
+        2,
+        4,
+        6
+      ],
+      [
+        2,
+        5,
+        7
+      ],
+      [
+        3,
+        4,
+        7
+      ],
+      [
+        3,
+        5,
+        6
+      ]
+    ],
+    "points": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "status": "PASS"
+}

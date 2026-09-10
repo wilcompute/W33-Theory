@@ -1,0 +1,115 @@
+{
+  "checks": {
+    "Fano_is_7_points_7_lines": true,
+    "GF4_trace_table_is_0_0_1_1": true,
+    "Heawood_is_14_vertices_21_edges_cubic": true,
+    "Hesse_is_9_points_12_lines": true,
+    "PG32_is_15_points_35_lines": true,
+    "W33_has_540_skew_line_pairs": true,
+    "W33_is_40_points_40_lines": true,
+    "chart_web_is_540_6_regular_1620": true,
+    "chart_web_is_triangle_free": true,
+    "coordinatewise_trace_is_not_projectively_well_defined": true,
+    "distance2_clique_number_is_six": true,
+    "distance2_graph_is_30_regular": true,
+    "every_chart_has_four_common_transversals": true,
+    "therefore_no_literal_Heawood_subgraph": true
+  },
+  "gf4_trace_firewall": {
+    "counterexample": {
+      "representative": [
+        0,
+        0,
+        1,
+        2
+      ],
+      "scalar": 2,
+      "scaled_same_GF4_projective_point": [
+        0,
+        0,
+        2,
+        3
+      ],
+      "trace_representative": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "trace_scaled": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    "encoding": {
+      "0": 0,
+      "1": 1,
+      "omega": 2,
+      "omega2=omega+1": 3
+    },
+    "trace_table": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "verdict": "Coordinatewise Tr_GF4/GF2 is additive on vectors but not a canonical projective map PG(3,4)->PG(3,2). Marcelis-style trace constructions must include a representative convention or additional geometry."
+  },
+  "methodological_boundary": "The atlas records compatible projections/quotients and exact finite incidence identities. Binary PG(3,2), GF(4) projective coordinates, ternary W33 symplectic coordinates and complex Witting amplitudes are different coordinate languages and are never identified by bare count.",
+  "schema": "w33.marcelis-multichart-atlas.v1",
+  "site_cross_index": {
+    "GQ(4,2)_elliptic_and_27_lines": "the 15+12 decomposition, double-six/cubic-surface language and 600-cell model sit on the E6/GQ(4,2) flank of the 27-40-45 ladder",
+    "Heawood_harmonic_cubes": "use as an incidence/scheduler quotient; the direct 14-vertex lift into the 540 W33 chart web is ruled out by this certificate",
+    "Hessian_configuration": "the 9_4,12_3 Hesse incidence is AG(2,3), matching the qutrit/Hesse phase-space layer",
+    "Icosians_and_E8": "quaternionic 600-cell/E8 route is a separate realization path to the complex Witting/Eisenstein material",
+    "MOG_and_Steiner_systems": "PG(3,2) lines, Fano pencils/spreads and Witt-design coordinates connect the code/combinatorics threads to the same binary atlas",
+    "Mermin_Cayley_Salmon_Desargues": "commuting Pauli/Fano contextuality and cubic-surface incidence provide an operator/incidence bridge rather than an equality of fields",
+    "PG(3,2)_and_hypercubes": "binary local chart language; Fano planes/pencils and the Heawood incidence graph belong here, not in the global F3^4 coordinate field",
+    "Penrose_dodecahedron_and_Witting": "40 Penrose/Witting projective states and 40 orthogonal tetrads give the state-side realization of the W33 context geometry"
+  },
+  "small_incidence_atlas": {
+    "Fano_PG(2,2)": {
+      "lines": 7,
+      "points": 7
+    },
+    "Heawood_incidence_graph": {
+      "degree": 3,
+      "edges": 21,
+      "vertices": 14
+    },
+    "Hesse_AG(2,3)": {
+      "lines": 12,
+      "point_degree": 4,
+      "points": 9
+    },
+    "PG(3,2)": {
+      "lines": 35,
+      "points": 15
+    },
+    "W(3,3)": {
+      "lines": 40,
+      "points": 40
+    }
+  },
+  "status": "PASS",
+  "w33_chart_web": {
+    "charts_skew_line_pairs": 540,
+    "common_transversals_per_chart": 4,
+    "distance2_graph_clique_number": 6,
+    "distance2_graph_degree": 30,
+    "heawood_literal_lift_falsifier": "A Heawood graph has a seven-vertex bipartition class. Any two vertices in that class share a neighbor in the other class. In a triangle-free host these pairs are nonadjacent but share a common neighbor, so their images would form K7 in the host distance-2 common-neighbor graph. The exact chart-web distance-2 clique number is only 6. Hence the 14-vertex Heawood graph is not a literal subgraph of the 540-chart web.",
+    "maximum_clique_witness": [
+      0,
+      5,
+      7,
+      298,
+      299,
+      384
+    ],
+    "web_degree": 6,
+    "web_edges": 1620,
+    "web_triangles": 0
+  }
+}
