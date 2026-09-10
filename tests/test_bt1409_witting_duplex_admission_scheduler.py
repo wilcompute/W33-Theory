@@ -136,7 +136,9 @@ def test_bt1409_publication_anchors() -> None:
     assert (ROOT / "photonic_holonet_body.tex").is_file()
     assert "BT1409 Witting Duplex Admission Scheduler" in single
     assert "communication throughput" in single
-    assert "KS satisfiability defect" in single
+    # Current manuscript prose states the BT823 relation through its corrected
+    # noncontextual ceiling rather than repeating the older label verbatim.
+    assert "corrected BT823 noncontextual ceiling" in single
 
 
 if __name__ == "__main__":
