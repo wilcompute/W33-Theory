@@ -1,0 +1,71 @@
+{
+  "Heawood_stabilizer_cover": {
+    "H_derived": "C2 x A4",
+    "H_order": 96,
+    "abelianization": "C2 x C2",
+    "derived_image": "H'/Z(H) ~= A4 = Aut(Q3)'",
+    "kernel": "Z(H)=<z>~=C2",
+    "quotient": "H/Z(H) ~= C2 x S4 ~= Aut(Q3)",
+    "quotient_order": 48,
+    "splitting": "NON-SPLIT",
+    "splitting_proof": "A split central extension would be C2 x Aut(Q3), whose center has order at least 4 because Aut(Q3) itself has central antipodal C2; the certified H has center order 2."
+  },
+  "checks": {
+    "H_center_is_C2": true,
+    "H_mod_center_is_C2_times_S4": true,
+    "central_extension_class_has_asymmetric_abelian_restriction": true,
+    "cocycle_identity_checked_on_all_48_cubed_triples": true,
+    "constructed_48_affine_maps_are_all_cube_automorphisms": true,
+    "cube_aut_center_is_antipodal_C2": true,
+    "cube_aut_decomposes_as_C2_times_S4": true,
+    "cube_aut_derived_is_A4_order12": true,
+    "derived_quotient_matches_A4": true,
+    "extension_is_non_split_by_center_obstruction": true
+  },
+  "claim_boundary": [
+    "Aut(Q3) is constructed and exhausted internally; the S4 x C2 identification is not inferred from order alone.",
+    "The map H -> Aut(Q3) is an abstract quotient representation derived from the certified presentation; this certificate does not assert that H acts geometrically on the particular outer-fixed Q3 from the companion certificate.",
+    "The nonzero C2 cocycle is a group-extension phase obstruction. It is not identified here with the spin double cover, a Pin group, a quantum Berry phase, or a physical fermion sign.",
+    "Any such representation-level interpretation requires an explicit compatible linear/projective representation and is left as a falsifiable next step."
+  ],
+  "cube_automorphism_group": {
+    "S4_factor": "even-parity translations V4 semidirect S3 acts faithfully as Sym(4) on the four even-parity vertices",
+    "center_generator": "antipodal translation x -> x + 111",
+    "center_order": 2,
+    "construction": "F2^3 translations semidirect coordinate S3",
+    "derived_order": 12,
+    "derived_structure": "A4",
+    "direct_product": "Aut(Q3) = <111> x (V4_even semidirect S3) ~= C2 x S4",
+    "element_order_histogram": {
+      "1": 1,
+      "2": 19,
+      "3": 8,
+      "4": 12,
+      "6": 8
+    },
+    "order": 48,
+    "upper_bound": 48,
+    "upper_bound_argument": "image of 000: 8 choices; permutation of its three neighbours: at most 6"
+  },
+  "extension_cocycle": {
+    "cocycle_triples_checked": 110592,
+    "controller_reading": "The central bit behaves like a parity carry: moving an antipodal cube bit through an odd S4 operation contributes z.",
+    "formula": "alpha((b,sigma),(d,tau)) = d * sgn(sigma) mod 2",
+    "nontriviality_witness": {
+      "alpha_g_h": 1,
+      "alpha_h_g": 0,
+      "commuting_quotient_pair": "g=(0,odd sigma), h=(1,id)",
+      "reading": "g and h commute in C2 x S4, but their chosen lifts have commutator z.  The asymmetric restriction cannot be a coboundary on this abelian C2xC2 subgroup."
+    },
+    "quotient_coordinates": "q=(b,sigma) in C2 x S4",
+    "section": "s(b,sigma)=u^b * sigma"
+  },
+  "external_cross_check": {
+    "source": "Cubic symmetric graphs of order 8p^3, Discrete Mathematics 2014; also standard cube/Coxeter literature",
+    "standard_fact": "Aut(Q3) ~= S4 x C2 and has order 48"
+  },
+  "headline": "The order-96 Heawood C6 stabilizer is a non-split central double cover of the full cube automorphism group: 1 -> C2 -> H -> Aut(Q3) -> 1, with Aut(Q3) ~= C2 x S4.  The extension twist is the explicit cocycle alpha((b,sigma),(d,tau))=d*sgn(sigma) mod 2.",
+  "schema": "w33.heawood-stabilizer96-cube-central-cover.v1",
+  "status": "PASS",
+  "tomotope_firewall": "This makes the two order-96 groups even more sharply opposite: the Heawood stabilizer is a central DOUBLE COVER of cube symmetry, while the repo-certified tomotope group is W(D4)/{+-1}, a central QUOTIENT. The prior center/derived invariants already prove they are nonisomorphic."
+}

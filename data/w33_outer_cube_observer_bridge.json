@@ -1,0 +1,346 @@
+{
+  "Q4_facet_weld": {
+    "facet_edge_count": 12,
+    "facet_vertex_count": 8,
+    "observer_macrostate_to_Q4_facet_vertex": {
+      "1000": "0000",
+      "1001": "0001",
+      "1010": "0010",
+      "1011": "0011",
+      "1100": "0100",
+      "1101": "0101",
+      "1110": "0110",
+      "1111": "0111"
+    },
+    "prior_Q4_edges": 32,
+    "prior_Q4_vertices": 16,
+    "prior_certificate": "data/PART_W33_PASS5468_5475_SIMPLEX_STABILISER_IS_WF4.json#pass_5470"
+  },
+  "checks": {
+    "Q3_has_8_vertices_12_edges_6_square_faces": true,
+    "fixed_Q3_is_explicitly_isomorphic_to_observer_affine_cube": true,
+    "fixed_collinearity_complement_is_explicit_Q3": true,
+    "fixed_collinearity_is_two_K4s_plus_perfect_matching": true,
+    "four_fixed_spreads_form_K4_in_four_intersection_graph": true,
+    "observer_cube_embeds_as_Q4_facet": true,
+    "outer_fixed_points_are_two_disjoint_four_point_lines": true,
+    "prior_temporal_router_certificate_says_knight_is_Q4": true,
+    "six_swapped_spread_orbits_are_internal_four_intersection_edges": true,
+    "spread_quotient_has_12_fixed_edge_orbits_split_6_plus_6": true,
+    "stochastic_observer_sector_is_affine_F2_cubed": true
+  },
+  "claim_boundary": [
+    "The fixed-point Q3 is intrinsic after choosing the declared outer involution; its bit labels are not canonical.",
+    "The observer Q3 uses the ordered Marcelis gauge and Hamming adjacency on AG(3,2).",
+    "The cross-Q3 and Q4-facet welds are explicit combinatorial/controller dictionaries, not hidden-variable reductions of quantum mechanics.",
+    "Quotient loops record exchanged spread endpoints and are not self-incidence in the original simple graph."
+  ],
+  "headline": "The outer involution exposes an intrinsic Q3 as complement(W33[Fix(D)]); the stochastic Schubert chart x0=1 is a second F2^3 cube, and an explicit gauge-fixed isomorphism welds both to a Q4 router facet.",
+  "observer_affine_cube": {
+    "affine_chart": "x0=1; tail (x1,x2,x3) in F2^3",
+    "dynamics_boundary": "Q3 is the coordinate/Hamming graph on the stochastic macrostates, not the support graph of all observer transitions.",
+    "fixed_point_to_observer_macrostate": {
+      "0": "1000",
+      "1": "1011",
+      "13": "1111",
+      "2": "1101",
+      "22": "1001",
+      "3": "1110",
+      "31": "1010",
+      "4": "1100"
+    },
+    "observer_Q3_edges": [
+      [
+        "1000",
+        "1001"
+      ],
+      [
+        "1000",
+        "1010"
+      ],
+      [
+        "1000",
+        "1100"
+      ],
+      [
+        "1001",
+        "1011"
+      ],
+      [
+        "1001",
+        "1101"
+      ],
+      [
+        "1010",
+        "1011"
+      ],
+      [
+        "1010",
+        "1110"
+      ],
+      [
+        "1011",
+        "1111"
+      ],
+      [
+        "1100",
+        "1101"
+      ],
+      [
+        "1100",
+        "1110"
+      ],
+      [
+        "1101",
+        "1111"
+      ],
+      [
+        "1110",
+        "1111"
+      ]
+    ],
+    "projective_split": "PG(3,2) = AG(3,2) disjoint_union PG(2,2) = 8 + 7",
+    "stochastic_macrostates": [
+      "1000",
+      "1001",
+      "1010",
+      "1011",
+      "1100",
+      "1101",
+      "1110",
+      "1111"
+    ]
+  },
+  "outer_fixed_cube": {
+    "Q3_bit_labels": {
+      "0": "000",
+      "1": "011",
+      "13": "111",
+      "2": "101",
+      "22": "001",
+      "3": "110",
+      "31": "010",
+      "4": "100"
+    },
+    "Q3_square_faces": [
+      [
+        "000",
+        "011",
+        "001",
+        "010"
+      ],
+      [
+        "000",
+        "101",
+        "100",
+        "001"
+      ],
+      [
+        "000",
+        "110",
+        "100",
+        "010"
+      ],
+      [
+        "011",
+        "101",
+        "111",
+        "001"
+      ],
+      [
+        "011",
+        "110",
+        "111",
+        "010"
+      ],
+      [
+        "101",
+        "110",
+        "100",
+        "111"
+      ]
+    ],
+    "W33_collinearity_edges_on_fixed_points": 16,
+    "complement_Q3_edges": [
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        22
+      ],
+      [
+        0,
+        31
+      ],
+      [
+        1,
+        13
+      ],
+      [
+        1,
+        22
+      ],
+      [
+        1,
+        31
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        13
+      ],
+      [
+        2,
+        22
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        13
+      ],
+      [
+        3,
+        31
+      ]
+    ],
+    "cross_collinearity_perfect_matching": [
+      [
+        0,
+        13
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        31
+      ],
+      [
+        3,
+        22
+      ]
+    ],
+    "eigenspace_point_blocks": [
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        4,
+        13,
+        22,
+        31
+      ]
+    ],
+    "fixed_point_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      13,
+      22,
+      31
+    ],
+    "fully_fixed_line_ids": [
+      0,
+      13
+    ],
+    "graph_identity": "complement(W33[Fix(D)]) = K4,4 - perfect_matching ~= Q3"
+  },
+  "schema": "w33.outer-cube-observer-bridge.v2",
+  "spread_orbit_quotient": {
+    "edge_orbit_size_histogram": {
+      "1": 12,
+      "2": 129
+    },
+    "fixed_edge_types": {
+      "edge_between_fixed_spreads": 6,
+      "loop_from_exchanged_spreads": 6
+    },
+    "fixed_spread_K4_edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        9
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        9
+      ],
+      [
+        2,
+        9
+      ]
+    ],
+    "fixed_spread_ids": [
+      0,
+      1,
+      2,
+      9
+    ],
+    "four_intersection_edge_orbits": 141,
+    "lifted_edge_mass": 270,
+    "quotient_loop_count": 6,
+    "quotient_parallel_multiplicity_histogram": {
+      "1": 105,
+      "2": 18
+    },
+    "quotient_underlying_edge_keys": 123,
+    "reading": "Six fixed C6s are the K4 edges on four fixed spreads; six more are internal edges of spread 2-cycles and become quotient loops.",
+    "spread_orbit_count": 20,
+    "spread_orbit_size_histogram": {
+      "1": 4,
+      "2": 16
+    },
+    "swapped_orbit_internal_edges": [
+      [
+        10,
+        11
+      ],
+      [
+        12,
+        15
+      ],
+      [
+        13,
+        17
+      ],
+      [
+        18,
+        27
+      ],
+      [
+        19,
+        29
+      ],
+      [
+        24,
+        30
+      ]
+    ]
+  },
+  "status": "PASS"
+}
