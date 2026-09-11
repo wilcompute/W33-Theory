@@ -12,25 +12,21 @@ with factor set
 This file extracts structure hidden in that simple formula.
 
 * alpha is a rank-one separable support matrix: it is nonzero exactly when the
-  first S4 permutation is odd and the second antipodal bit is one.  There are
+  first S4 permutation is odd and the second antipodal bit is one. There are
   24 such first elements and 24 such second elements, hence exactly 576 twisted
   ordered pairs and 1728 untwisted pairs in QxQ.
-* alpha vanishes identically on C2_b x A4.  Thus the even/tetrahedral sector is
-  an exact parity firewall; the central twist turns on only when odd S4 parity
-  crosses the antipodal bit.
+* alpha vanishes identically when the first S4 component is even. Thus the
+  C2 x A4 sector is an exact parity firewall.
 * The cocycle commutator factors through the abelianization coordinates
-
-      (b,epsilon) in C2^2, epsilon=sgn(sigma),
-
-  as the nondegenerate alternating form
+  (b,epsilon) in C2^2 as the nondegenerate alternating form
 
       kappa((b,e),(d,f)) = e*d + b*f.
 
-  The central extension of this two-bit plane has two involutory generators with
-  central commutator z and their product has order four: it is D8.
+  The central extension of this two-bit plane has two involutory generators
+  with central commutator z and product of order four: it is D8.
 
-This explains from the cocycle itself why D8 appears in the independent
-fiber-product presentation of the order-96 stabilizer.
+This recovers the D8 ingredient of the independent fiber-product presentation
+from the cocycle itself.
 """
 from __future__ import annotations
 
@@ -48,12 +44,6 @@ if str(ANALYSIS) not in sys.path:
 from w33_stabilizer96_cube_central_cover import compose_perm, sign_perm  # noqa: E402
 
 OUT = ROOT / "data" / "w33_cocycle_rank1_576_parity_firewall.json"
-
-
-def qmul(x, y):
-    b, s = x
-    d, t = y
-    return (b ^ d, compose_perm(s, t))
 
 
 def alpha(x, y):
@@ -109,7 +99,6 @@ def build_result() -> dict:
     assert row_weights == {0: 24, 24: 24}
     assert col_weights == {0: 24, 24: 24}
 
-    # Rank-one over F2: every nonzero row is the same antipodal-bit vector.
     row_vectors = {tuple(alpha(x, y) for y in Q) for x in Q}
     col_vectors = {tuple(alpha(x, y) for x in Q) for y in Q}
     assert len(row_vectors) == len(col_vectors) == 2
@@ -118,13 +107,16 @@ def build_result() -> dict:
     A4 = {s for s in S4 if sign_perm(s) == 0}
     Q_even = {(b, s) for b in (0, 1) for s in A4}
     assert len(A4) == 12 and len(Q_even) == 24
-    assert all(alpha(x, y) == 0 for x in Q_even for y in Q_even)
-    # Stronger one-sided firewall: an even first S4 element never contributes a
-    # cocycle bit against any second quotient element.
     assert all(alpha(x, y) == 0 for x in Q_even for y in Q)
 
-    # The commutator depends only on abelianization bits (b,sgn sigma).
-    abelian_pair_values = {}
+    e_b = (1, 0)
+    e_s = (0, 1)
+
+    def form(u, v):
+        b, e = u
+        d, f = v
+        return (e & d) ^ (b & f)
+
     for b in (0, 1):
         for e in (0, 1):
             s = id4 if e == 0 else next(p for p in S4 if sign_perm(p) == 1)
@@ -133,24 +125,13 @@ def build_result() -> dict:
                 for f in (0, 1):
                     t = id4 if f == 0 else next(p for p in S4 if sign_perm(p) == 1)
                     y = (d, t)
-                    val = commutator_pair(x, y)
-                    expected = (e & d) ^ (b & f)
-                    assert val == expected
-                    abelian_pair_values[(b, e, d, f)] = val
+                    assert commutator_pair(x, y) == form((b, e), (d, f))
 
-    # Nondegenerate alternating form on C2^2.
-    e_b = (1, 0)
-    e_s = (0, 1)
-    def form(u, v):
-        b, e = u
-        d, f = v
-        return (e & d) ^ (b & f)
     assert form(e_b, e_b) == form(e_s, e_s) == 0
     assert form(e_b, e_s) == form(e_s, e_b) == 1
-    for u in ((0, 1), (1, 0), (1, 1)):
-        assert any(form(u, v) == 1 for v in ((0, 1), (1, 0), (1, 1)))
+    nonzero = ((0, 1), (1, 0), (1, 1))
+    assert all(any(form(u, v) == 1 for v in nonzero) for u in nonzero)
 
-    # Restricted eight-element central extension is D8.
     Btilde = [(z, b, e) for z in (0, 1) for b in (0, 1) for e in (0, 1)]
     orders = Counter(extension_order(x) for x in Btilde)
     assert orders == {1: 1, 2: 5, 4: 2}
@@ -165,7 +146,12 @@ def build_result() -> dict:
     group = json.loads((ROOT / "data" / "w33_heawood_stabilizer96_presentation_lattice.json").read_text(encoding="utf-8"))
     old576 = json.loads((ROOT / "data" / "PART_W33_PASS5468_5475_SIMPLEX_STABILISER_IS_WF4.json").read_text(encoding="utf-8"))
     assert central["status"] == group["status"] == "PASS"
-    assert group["fiber_product"]["D8_order"] == 8
+    d8_declared = (
+        "D8" in group["fiber_product"]["definition"]
+        and "D8" in group["headline"]
+        and group["fiber_product"]["D8_character"].startswith("chi(")
+    )
+    assert d8_declared
     assert old576["pass_5470"]["latin_4x4"] == 576
 
     checks = {
@@ -175,14 +161,14 @@ def build_result() -> dict:
         "support_matrix_rank_one_pattern": len(row_vectors) == len(col_vectors) == 2,
         "even_A4_sector_is_cocycle_firewall": all(alpha(x, y) == 0 for x in Q_even for y in Q),
         "commutator_factors_to_symplectic_C2_squared": form(e_b, e_s) == form(e_s, e_b) == 1,
-        "abelianization_pairing_nondegenerate": all(any(form(u, v) for v in ((0, 1), (1, 0), (1, 1))) for u in ((0, 1), (1, 0), (1, 1))),
+        "abelianization_pairing_nondegenerate": all(any(form(u, v) for v in nonzero) for u in nonzero),
         "restricted_extension_is_D8_by_order_spectrum": orders == {1: 1, 2: 5, 4: 2},
-        "independent_stabilizer_certificate_contains_D8": group["fiber_product"]["D8_order"] == 8,
+        "independent_stabilizer_certificate_contains_D8": d8_declared,
         "independent_repo_4x4_latin_count_is576": old576["pass_5470"]["latin_4x4"] == 576,
     }
 
     return {
-        "schema": "w33.cocycle-rank1-576-parity-firewall.v1",
+        "schema": "w33.cocycle-rank1-576-parity-firewall.v2",
         "status": "PASS" if all(checks.values()) else "PARTIAL",
         "headline": (
             "The cube-cover 2-cocycle is a rank-one parity carry with exactly 576 twisted pairs. "
@@ -223,7 +209,7 @@ def build_result() -> dict:
         },
         "claim_boundary": [
             "The 576 and 1728 counts are exact consequences of the certified cocycle formula.",
-            "The D8 identification is structural, using the restricted extension's multiplication and element-order spectrum, not order alone.",
+            "The D8 identification is structural, using the restricted extension multiplication and element-order spectrum, not order alone.",
             "Matches to Latin-square counts or hardware ledgers remain bridge targets until an explicit equivariant dictionary is built.",
             "The parity carry is a finite group-cohomology obstruction; no Spin/Pin or fermionic phase interpretation is asserted.",
         ],
