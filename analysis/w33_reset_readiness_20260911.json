@@ -1,0 +1,19 @@
+{
+  "status": "BLOCKED_NO_PHYSICAL_DATA",
+  "powercap_energy_counters": [],
+  "physical_admission_negative_controls": 2,
+  "analyzer_fixture_source_class": "synthetic-unit-check",
+  "required_csv_columns": [
+    "protocol",
+    "temperature_kelvin",
+    "work_joules",
+    "delta_internal_energy_joules"
+  ],
+  "required_metadata": [
+    "device_id",
+    "calibration_reference",
+    "raw_source_reference",
+    "source_class"
+  ],
+  "boundary": "No reset-work samples collected; synthetic fixture is excluded from physical results"
+}

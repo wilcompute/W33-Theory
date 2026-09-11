@@ -1,0 +1,32 @@
+name: Durable redundant guests and Clifford T privacy frontiers
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_durable_redundant_guest*'
+      - 'analysis/w33_redundant_guest_abi.py'
+      - 'analysis/w33_qutrit_clifford_t_compiler*'
+      - 'analysis/w33_native_qutrit_seed_frontier.py'
+      - 'analysis/w33_adaptive_observer_privacy*'
+      - 'analysis/w33_trace_observer_finite_observability.py'
+      - 'tests/test_w33_durable_redundant_guest.py'
+      - '.github/workflows/w33_durable_compiler_privacy.yml'
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy sympy networkx
+      - run: python tests/test_w33_durable_redundant_guest.py
+      - run: python analysis/w33_qutrit_clifford_t_compiler.py
+      - run: python analysis/w33_adaptive_observer_privacy.py

@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "tests": 4,
+  "failures": 0,
+  "errors": 0,
+  "boundary": "SQLite process-death/restart tests, not physical power loss or external I/O exactly-once semantics."
+}

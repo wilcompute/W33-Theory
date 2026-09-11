@@ -1,0 +1,3412 @@
+{
+  "w33": {
+    "base": "ffbb297ff",
+    "tip": "3d981d09e",
+    "changed_files": 124,
+    "files": [
+      {
+        "path": ".github/workflows/w33_crypto_network_marcelis_freeze_bootstrap.yml",
+        "exists": true,
+        "sha256": "1b131b8ef100c29cdf5b326f81370a4ed7a6c6a2cf1499de20958e35bd39582b",
+        "lines": 160
+      },
+      {
+        "path": ".github/workflows/w33_phase_fibre_frontier.yml",
+        "exists": true,
+        "sha256": "7c4df651007ab8ee3f58737f46ccf7f84714bbfdedb35dd963a3f2289a944a15",
+        "lines": 73
+      },
+      {
+        "path": ".github/workflows/w33_pytest_failure_probe.yml",
+        "exists": false
+      },
+      {
+        "path": ".github/workflows/w33_schur_quartic_frontier.yml",
+        "exists": true,
+        "sha256": "0ec8a6826a9ee3325eacd435e4bdff539b81ad010d0f15ae114ab24f1244d2fe",
+        "lines": 71
+      },
+      {
+        "path": ".github/workflows/w33_signed_representation_economics.yml",
+        "exists": true,
+        "sha256": "a1f35cda606cf0c16dbe41d065c41c46de04d690e736e0db6d0702eb21fc4d0c",
+        "lines": 63
+      },
+      {
+        "path": ".github/workflows/w33_vm_retention_output_audit.yml",
+        "exists": true,
+        "sha256": "3102eb6b78f692119373a72e232bddb4713027e9e9eaa3e2f064563e67e52d08",
+        "lines": 102
+      },
+      {
+        "path": "analysis/BT1408_witting_contextual_communication_bridge.md",
+        "exists": true,
+        "sha256": "bc60ac6a598440f7b4154f0db988f6306625baeb7fd25fe4a0d13ee3886fb041",
+        "lines": 100,
+        "opening": "# BT1408 Witting Contextual Communication Bridge\n\nBT1408 imports the useful part of Vlasov's Witting-polytope communication\nscheme into the holonet ABI.\n\nThe external scheme uses the Witting configuration as a 40-card ququart\ncommunication desk: 40 rays and 40 orthogonal tetrads.  The holonet reading is\nsharper than a generic QKD analogy.  Around any selected ray, the other side of\nthe protocol splits as:\n\n```text\n1 same ray + 12 compatible orthogonal rays + 27 incompatible rays = 40\n```\n\nThus a delayed-query agreement round accepts with probability:\n\n```text\n(1 + 12) / 40 = 13/40\n```\n\nand rejects with probability:\n\n```text\n27/40\n```\n\nThis is the Bell-line shell in protocol form: self, compatible gauge shell, and\nincompatible matter shell.\n\n## Correction Boundary\n\nThe Vlasov paper reports "
+      },
+      {
+        "path": "analysis/BT1409_witting_duplex_admission_scheduler.md",
+        "exists": true,
+        "sha256": "9fc09193efdcb36b621ce73e9be1dfde263231e6b94cee1d7f6a357d357b8f50",
+        "lines": 90,
+        "opening": "# BT1409 Witting Duplex Admission Scheduler\n\nBT1408 established the Witting communication bridge:\n\n```text\n1 same ray + 12 compatible orthogonal rays + 27 incompatible rays = 40\n```\n\nso a state-query round accepts at `13/40`.\n\nBT1409 adds the missing scheduler distinction.  A Witting ray lives in exactly\nfour tetrads.  Therefore a basis-query round has a smaller witness aperture:\n\n```text\n4 witness bases / 40 bases = 1/10\n```\n\nThe complement is:\n\n```text\n36 rejected bases / 40 bases = 36/40\n```\n\nThis is the useful reconciliation: `13/40` is communication throughput, while\n`1/10` is the basis-witness aperture and is numerically equal to the exact\n**KS satisfiability defect**.  It is not the Abramsky-Barbosa contextual\nfraction.  The latter is exactly `1` for the W(3,3) empirical model becau"
+      },
+      {
+        "path": "analysis/BT20260910_heawood_schubert_observer_insert.tex",
+        "exists": true,
+        "sha256": "b12cfc9cde424b220cedd9dfbaa073a2f23f2517377714dd083d34da35aa9a14",
+        "lines": 167,
+        "opening": "% Exact continuation insert, 10 September 2026.\r\n% Source certificates:\r\n% data/w33_heawood_spread_pair_pgsp_equivariance.json\r\n% data/w33_heawood_outer_involution_fixed_census.json\r\n% data/w33_heawood_stabilizer96_presentation_lattice.json\r\n% data/w33_marcelis_trace_schubert_general.json\r\n% data/w33_marcelis_observer_quotient_dynamics.json\r\n\r\n\\section*{September 2026 exact continuation: Heawood symmetry, Schubert trace fibres, and observer quotients}\r\n\r\n\\paragraph{Full $\\PGSp(4,3)$ Heawood--spread dictionary.}\r\nThe intrinsic execution-slot graph has $1620$ vertices and decomposes into\r\n$270$ six-cycles.  The previously constructed dictionary sends each such\r\n$C_6$ to the unique unordered pair of $W(3,3)$ spreads whose intersection has\r\nfour lines and whose symmetric difference is the same"
+      },
+      {
+        "path": "analysis/MARCELIS_DEEP_CRAWL_2026_09_09.md",
+        "exists": true,
+        "sha256": "f89a1318a4e9711e972f7c6943da59e5a1c2401bf33fa4d3f1f7f21e1324b020",
+        "lines": 147,
+        "opening": "# Frans Marcelis deep crawl: the multichart finite-geometry atlas\n\n**Date:** 2026-09-09  \n**Scope:** external-site synthesis plus exact local falsifiers.  This note does not claim that Marcelis' constructions are identical to the W33/Holonet objects.  The recurring lesson of his site is the opposite: the useful relations are projections, quotients, trace maps, incidence correspondences, changes of coordinates, and alternative realizations.\n\n## Crawl scope\n\nThe mathematical navigation was followed broadly rather than stopping at the pages whose titles already mention Witting or E8.  The pages/threads inspected include:\n\n- PG(3,2): points, planes, pencils, coordinates, generalized quadrangles, spreads/ovoids/grids and the Veldkamp-space material;\n- the E8 sequence: 600-cell slices, hypercube"
+      },
+      {
+        "path": "analysis/W33_OBSERVER_RELATIVE_RANDOMNESS.md",
+        "exists": true,
+        "sha256": "a56a57ccc3be3212d016fa5da03b01bf8a81ac9c7ea1dfdf31a756a2498a39eb",
+        "lines": 233,
+        "opening": "# Observer-relative randomness and decryptability\n\n## Core correction\n\nThe slogan \"random information is encrypted information\" is too strong. A stronger and technically safer formulation is:\n\n> **Randomness is a relation among an outcome, an observer's side information, the observer's computational resources, and the physically admissible information available to that observer. Encryption is one engineered way of making information unresolved relative to an observer.**\n\nFor outcome `X`, observer information `O`, and added side information/key `K`, the exact Shannon identity is\n\n\\[\nH(X\\mid O)-H(X\\mid O,K)=I(X;K\\mid O).\n\\]\n\nThe left side is the amount of observer-relative uncertainty removed by the added side information. If\n\n\\[\nH(X\\mid O,K)=0,\n\\]\n\nthen all of the observer's Shannon uncerta"
+      },
+      {
+        "path": "analysis/W33_RANDOMNESS_DECRYPTABILITY_FIVE_FRONT.md",
+        "exists": true,
+        "sha256": "35e70418376c794eabc80043451c533f0079dea6617b6a3b3921305310bbc23b",
+        "lines": 102,
+        "opening": "# Randomness / decryptability five-front execution\n\nThis packet executes the five continuations opened by `W33_OBSERVER_RELATIVE_RANDOMNESS.md`.\n\n## 1. Contextual decryption obstruction\n\n`analysis/w33_contextual_decryption_obstruction.py`\n\nA local one-click key chooses one point in every commuting context. A single global noncontextual key would be a 0/1 valuation whose line sums all equal one, i.e. an ovoid.\n\nThe exact finite search gives:\n\n- `W(2)`: 15 contexts, 3 choices/context, **6** global keys;\n- `W(3,3)`: 40 contexts, 4 choices/context, **0** global keys.\n\nSo the cryptographic metaphor splits cleanly:\n\n- classical epistemic randomness may be missing a global key;\n- the W33 one-click contextual model has no context-independent global key to reveal.\n\nBoundary: this is selection/ovoid"
+      },
+      {
+        "path": "analysis/w33_a4_untwisted_core_synthesis.py",
+        "exists": true,
+        "sha256": "39932e9e699e0d7b961cbae0a4afb2eadfdaadc592b6fad881333c16480a121f",
+        "lines": 162,
+        "python_syntax": "PASS",
+        "purpose": "A4 untwisted-core synthesis across the 84 codec and order-96 cover.\n\nThree independently derived objects meet on the same four-label permutation\nrepresentation:\n\n1. The boundary-Singer 84 bridge has local quotient\n\n       (PG(2,4) x GF(4))/C7 ~= GF(4) x GF(4)^*,\n\n   acting as AGL(1,4) on the four GF(4) labels.  Its 12 maps are exactly the 12\n   even permutations, hence the standard A4 < S4.\n\n2. The order-96 stabilizer presentation contains an explicit normal A4 section\n   of order 12, with H'=C2 x A4 and preimage_A4=V4 x A4.\n\n3. The cube-cover cocycle alpha((b,sigma),(d,tau))=d*sgn(sigma) vanishes whenever\n   sigma is even.  Therefore the restriction to C2 x A4 is cohomologically\n   trivial in the chosen section: the entire local A4 codec sits inside the\n   untwisted parity firewall.  The central obstruction turns on only on extending\n   from A4 to the odd S4 coset and coupling that parity to the antipodal C2 bit.\n\nThus the local 12-phase tetrahedral codec is not merely another order-1",
+        "definitions": [
+          "perm_order",
+          "agl14",
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_affine_fano_information_horizon.py",
+        "exists": true,
+        "sha256": "21e8874f780c086f2179627773a97685e118e2ac2fecdde2ab5193e66df76966",
+        "lines": 238,
+        "python_syntax": "PASS",
+        "purpose": "Affine/Fano information horizon for the Marcelis observer quotient.\n\nFor the ordered omega gauge, PG(n,2) splits across its first coordinate as\n\n    A_n={x0=1} ~= AG(n,2),       |A_n|=2^n,\n    F_n={x0=0} ~= PG(n-1,2),     |F_n|=2^n-1.\n\nThe observer certificate proves that for the one-step cyclic update U_1, A_n is\nexactly the stochastic macro sector and F_n exactly the deterministic macro\nsector.  For a uniformly sampled PG(n,4) microstate, the stationary *pair\nconditional table* between membership in the current A/F chart and the next\ncoordinate chart is\n\n       [ 3/4                         1/4                    ]\nP_n = [ 3*4^(n-1)/(4^n-1)           (4^(n-1)-1)/(4^n-1)   ].\n\nThe nontrivial eigenvalue of this 2x2 pair table is\n\n    rho_n = -1/(4 |PG(n-1,4)|).\n\nAt n=3 this is -1/84.  Important correction: U has projective order n+1, so\npowers P_n^t do NOT describe the deterministic multistep dynamics.  The companion\nlag-law certificate proves that every distinct coordinate pair has th",
+        "definitions": [
+          "sector",
+          "qstr",
+          "exact_row",
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_b288_phase_completion_no_go.py",
+        "exists": true,
+        "sha256": "d0843e9ae58b6cebbdc4e4f1d4efa6d83d1b6b3c51079f725ca01d851f02891e",
+        "lines": 205,
+        "python_syntax": "PASS",
+        "purpose": "Exact phase-completion comparison over the common projective group B_288.\n\nRepo input:\n  H_W33 has order 576, center C2, derived order 96, and\n  H_W33/Z(H_W33) ~= A4 wr C2 = SmallGroup(288,1025).\n\nExternal classification input (Kubischta--Teixeira, arXiv:2409.14624):\n  the primitive non-entangling group C1' bowtie C1' has total order 1152,\n  projective group SmallGroup(288,1025), and sigma lift notation, i.e. the\n  displayed SU(4) lift has scalar center C4.\n\nQuotienting that C4 lift by its unique order-two scalar subgroup gives an\nabstract order-576 central extension of B_288. The quotient can be constructed\nwithout matrix numerics as\n\n    G_Cliff,576 = (A4 x A4) : C4,\n\nwhere the generator of C4 acts by swapping the two A4 factors. Its square is\nthe residual central phase. This script enumerates that group exactly and\nproves it is NOT isomorphic to the W33 lift by derived order and element-order\nspectrum.",
+        "definitions": [
+          "compose",
+          "inverse",
+          "parity",
+          "mul",
+          "invg",
+          "order",
+          "closure",
+          "derived",
+          "build",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_binary_tetrahedral_split_swap_completion.py",
+        "exists": true,
+        "sha256": "8d2ee4bb15f28b14383988103512ef1c982fdffe1dacfcd60b70d512bcb3f8fe",
+        "lines": 277,
+        "python_syntax": "PASS",
+        "purpose": "Exact split-swap realization of the W33 order-576 stabilizer.\n\nLet K=(2T x 2T)/diag(C2), where 2T=SL(2,3).  K acts faithfully on the\n24 elements of 2T by left-right multiplication x -> a x b^{-1}; the diagonal\ncentral pair is exactly the kernel.  Factor exchange (a,b)<->(b,a) is realized\non this 24-point carrier by inversion x -> x^{-1}.\n\nThis script adjoins that honest involution to K, obtaining K:C2 of order 576,\nand constructs an explicit isomorphism from the W33 minimum-vector stabilizer\nonto it.  The map carries the W33 oriented subgroup H+ exactly onto K and one\nouter W33 involution exactly onto the inversion/factor-swap permutation.\nAll 576^2 multiplication identities are checked.",
+        "definitions": [
+          "binary_tetrahedral_left_right_action",
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_boundary_singer_toroidal_84_bridge.py",
+        "exists": true,
+        "sha256": "0c03856676435c68a5aa7d577e262fc7be4f4cca2dd4dd15076302fde265ac44",
+        "lines": 382,
+        "python_syntax": "PASS",
+        "purpose": "C7-equivariant 84-state bridge from the PG(2,4) observer boundary to toroidal flags.\n\nThe affine/Fano horizon exposed the exact denominator\n\n    84 = 4 * |PG(2,4)| = 4 * 21.\n\nEarlier repo work independently constructed:\n\n    84 toroidal flags = 12 Singer phases * 7 Singer steps,\n\nand identified the local quotient 12 with the directed-edge codec of K4 after\na Fano-triangle affine completion.\n\nThis certificate closes that gap constructively.\n\n1. Find a projective Singer cycle C21 acting regularly on PG(2,4).\n2. Its C7 subgroup has exactly three orbits on the 21 boundary points.\n3. Add one GF(4) anchor label a in the four-element additive group.  The resulting\n   boundary codec has 21*4=84 states and twelve C7-orbits.\n4. The quotient labels are\n\n       (a,d) in GF(4) x GF(4)^*,\n\n   because C21/C7 ~= C3 ~= GF(4)^*.  Map (a,d) to the directed K4 edge\n\n       a -> a+d.\n\n   These 12 labels are exactly AGL(1,4), which acts sharply transitively on the\n   12 directed edges of K4 and is isomorphi",
+        "definitions": [
+          "mat_vec3",
+          "compose",
+          "perm_power_local",
+          "perm_order",
+          "orbit",
+          "projective_perm",
+          "find_singer21",
+          "gf4_pow_omega",
+          "perm_parity",
+          "agl14_certificate",
+          "stringify_flag",
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_causal_accessibility_randomness.py",
+        "exists": true,
+        "sha256": "bb75a89f22bf65928d97b3e32d7c64fb2df8a68c86c4b4dd55a143565079f431",
+        "lines": 137,
+        "python_syntax": "PASS",
+        "purpose": "Causal-accessibility version of observer-relative randomness.\n\nThe same finite timing model is used, but side information is attached to\nspacetime events. An observer may condition only on events inside its past\nlight cone (c=1 units). This turns \"has the key\" into a causal-access question.",
+        "definitions": [
+          "v2",
+          "error_cell",
+          "observed",
+          "rows",
+          "in_past",
+          "accessible",
+          "entropy",
+          "conditional_entropy",
+          "verify"
+        ]
+      },
+      {
+        "path": "analysis/w33_cocycle_rank1_576_parity_firewall.py",
+        "exists": true,
+        "sha256": "07e039f8cda666bf9655105e0d9df11635e69206186bdcb16189772d2723a496",
+        "lines": 235,
+        "python_syntax": "PASS",
+        "purpose": "Rank-one support, parity firewall, and D8 core of the cube-cover cocycle.\n\nThe certified order-96 Heawood stabilizer is the central extension of\n\n    Q = C2_b x S4\n\nwith factor set\n\n    alpha((b,sigma),(d,tau)) = d * sgn(sigma) mod 2.\n\nThis file extracts structure hidden in that simple formula.\n\n* alpha is a rank-one separable support matrix: it is nonzero exactly when the\n  first S4 permutation is odd and the second antipodal bit is one. There are\n  24 such first elements and 24 such second elements, hence exactly 576 twisted\n  ordered pairs and 1728 untwisted pairs in QxQ.\n* alpha vanishes identically when the first S4 component is even. Thus the\n  C2 x A4 sector is an exact parity firewall.\n* The cocycle commutator factors through the abelianization coordinates\n  (b,epsilon) in C2^2 as the nondegenerate alternating form\n\n      kappa((b,e),(d,f)) = e*d + b*f.\n\n  The central extension of this two-bit plane has two involutory generators\n  with central commutator z and product of order ",
+        "definitions": [
+          "alpha",
+          "commutator_pair",
+          "extension_mul",
+          "extension_power",
+          "extension_order",
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_contextual_decryption_obstruction.py",
+        "exists": true,
+        "sha256": "a4a13501bfd69de597fca520bb91171c3d669a04c1e8665200682db12eadc6a1",
+        "lines": 275,
+        "python_syntax": "PASS",
+        "purpose": "Contextual decryption = local-section gluing obstruction on W(q).\n\nA local \"key\" chooses exactly one point on every line/context. A global\nnoncontextual key is one point-value assignment whose restriction to every line\nmakes exactly one choice. For a generalized quadrangle this is precisely an\novoid.\n\nThis certificate now joins four layers which must not be conflated:\n  * W(2) has six Boolean global keys (positive control).\n  * W(3,3) has no Boolean global key at all.\n  * therefore the Abramsky-Barbosa contextual fraction for the W33 KS support\n    is 1 (strong contextuality).\n  * nevertheless the best *near*-global marking satisfies 36/40 contexts, so\n    the KS satisfiability defect is 4/40 = 1/10.\n\nIt additionally probes a naive Cech-style linear relaxation Mx=1. The\nrelaxation is soluble over F2 and F3 even though Boolean gluing fails. That\nnegative result is important: the simple linearized probe does NOT supply a\ncohomological witness for W33. Cohomological obstructions are suffi",
+        "definitions": [
+          "load",
+          "canon",
+          "symplectic",
+          "build_w",
+          "enumerate_global_keys",
+          "incidence_matrix",
+          "solve_mod_p",
+          "context_pair_profile",
+          "verify"
+        ]
+      },
+      {
+        "path": "analysis/w33_contextuality_terminology_migration.py",
+        "exists": true,
+        "sha256": "74b953ba70a417dc098afa0477074a488f9952b35edb976cb47ef55871bb4d7a",
+        "lines": 150,
+        "python_syntax": "PASS",
+        "purpose": "Freeze the contextuality terminology boundary used by the Witting protocol.\n\nTwo exact quantities coexist for the W(3,3) Witting/KS support model:\n\n  Abramsky-Barbosa contextual fraction = 1\n      because there is no global section/ovoid at all (strong contextuality),\n\n  KS satisfiability defect = (40-36)/40 = 1/10\n      because an optimal global Boolean marking can satisfy 36 of 40 contexts.\n\nOlder repository material used \"contextual fraction\" for the second quantity.\nPass 1080 and Pass 1099 corrected that terminology.  This certificate gates the\ncurrent BT1408/BT1409 Witting communication chain so the stale name cannot\nre-enter those generated packets or their executable source.\n\nScope: this is a migration gate for the active Witting communication chain, not\na claim that every historical archive file has been rewritten.  Legacy files\nare deliberately listed rather than silently erased.",
+        "definitions": [
+          "load",
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_determinism_prediction_boundary.py",
+        "exists": true,
+        "sha256": "f67cb6d1bf9771b225cd4770c61f2cb6730e4c5e496eb12b466b14aca5e686c8",
+        "lines": 123,
+        "python_syntax": "PASS",
+        "purpose": "Determinism / prediction boundary for the HoloVM two-counter core.\n\nThe VM transition relation is deterministic. This script demonstrates the\ncorrect operational predictor: bounded simulation is a one-sided semidecision\nprocedure.\n\nIf HALT is reached within fuel, report HALTS. If fuel is exhausted, report\nUNKNOWN -- never NONHALT. For every tested fuel bound F, a program that halts\nafter more than F steps is a finite counterexample to interpreting fuel\nexhaustion as non-halting.\n\nThe stronger all-program boundary is reduction-theoretic: the repository's\ntwo-counter core is a universal abstract machine, so a total algorithm deciding\nHALT/NONHALT for every finite program/state would decide the halting problem.",
+        "definitions": [
+          "delayed_halt",
+          "forever",
+          "bounded_halting_semidecider",
+          "verify"
+        ]
+      },
+      {
+        "path": "analysis/w33_e7_d4_presymplectic_reye_normal_form.py",
+        "exists": true,
+        "sha256": "4a48ec2b585c62201a003719ce236451fb8143fded0f4f57221ac961893b2d67",
+        "lines": 265,
+        "python_syntax": "PASS",
+        "purpose": "Presymplectic three-qubit-Pauli normal form of the E8-selected D4/Reye sector.\n\nPass8909-8916 proves that the explicit ternary E8 residue selects a complementary\nD4 inside E7, with 12 antipodal roots and 16 zero-sum A2 blocks forming a\n(12_4,16_3) Reye/Klein-Latin configuration.  The Schur64/E7 Pauli bridge fixes\na standard three-qubit coordinate gauge (x1,z1,x2,z2,x3,z3).\n\nIn that gauge this certificate proves the selected 12 D4 root pairs are exactly\n\n    {X,Y,Z}_1 x {I,Z}_2 x {I,X}_3,\n\nor equivalently W \\ Rad(W), where\n\n    W = <X1,Z1,Z2,X3>  <= F2^6,\n    Rad(W) = <Z2,X3>.\n\nThus the 12 points are the three nonzero cosets of the four-element radical.\nSame-coset pairs commute and different-coset pairs anticommute, so the\nanticommutation graph is K4,4,4.  Its 16 closed anticommuting XOR triangles are\nexactly a (12_4,16_3) incidence geometry and are typed-isomorphic to the repo's\nQ4/tomotope and 24-cell Reye models.\n\nThis supplies a Pauli-coordinate explanation of the old D4/Reye select",
+        "definitions": [
+          "vxor",
+          "span",
+          "complementary_d4_pairs",
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_heawood_chart_fibre_quotient.py",
+        "exists": true,
+        "sha256": "c20cc3b8b2bf3aad1bab4424dc7c3d91034fd32600ebb0b68ee0e6783048fe2b",
+        "lines": 261,
+        "python_syntax": "PASS",
+        "purpose": "Exact Heawood/Fano fibre quotient carried by each W33 Q3 chart.\n\nThe 540-chart web does NOT contain a literal Heawood subgraph (the companion\nMarcelis atlas proves that).  The correct bridge is local and quotient-like.\n\nEach W33 chart is Q3 = Cay(F2^3,{e1,e2,e3}).  Its translation group therefore\nhas seven nonidentity elements, whose triples {a,b,a+b} form a Fano plane.\nThe incidence graph of those seven translation points and seven Fano lines is\na Heawood graph: a natural 14-vertex fibre over the chart.\n\nThe cube has an intrinsic antipode translation c=(1,1,1).  An adjacent chart\nshares four vertices with the original chart.  Those four vertices are an\naffine 2-plane in F2^3; its three nonzero translation stabilizers form a Fano\nline containing c.  The six chart-web neighbours collapse 2-to-1 onto the\nthree Fano lines through c.  The other four Fano lines are nonincident buffer\nslots.  Thus the exact local law is\n\n    6 web neighbours -> 3 Heawood execution edges (two sheets each)\n   ",
+        "definitions": [
+          "fano_lines",
+          "point_pair_collinearity",
+          "cube_model",
+          "deterministic_gray_address",
+          "translate_set",
+          "interface_line",
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_heawood_outer_involution_fixed_census.py",
+        "exists": true,
+        "sha256": "c8ca0c001a0de8bfdc123c426b463cdf789b914b6a549aa3084535473dcc35ab",
+        "lines": 249,
+        "python_syntax": "PASS",
+        "purpose": "Fixed-object census for the multiplier-two outer involution on the 270 C6 G-set.\n\nThe full PGSp equivariance certificate closes the C6 <-> four-intersection\nspread-pair dictionary under the outer similitude\n\n    D = diag(2,2,1,1),   omega(Dx,Dy)=2 omega(x,y).\n\nThat certificate records 12 fixed C6 components.  Here we resolve what those\n12 fixed objects mean on the spread side.  For an unordered spread pair\n{S,T}, an involution can fix the pair in exactly two ways:\n\n  * pointwise on the pair: D(S)=S and D(T)=T;\n  * setwise by exchange:   D(S)=T and D(T)=S.\n\nThe script computes the complete cycle structure on W33 points, lines, spreads,\n270 four-intersection spread pairs, and 270 intrinsic Heawood C6 components,\nand verifies that the explicit equivariant dictionary carries fixed C6s to\nexactly the fixed spread pairs with the same two-way classification.",
+        "definitions": [
+          "involution_cycle_histogram",
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_heawood_spread_pair_270_bridge.py",
+        "exists": true,
+        "sha256": "22918d90f2ad552f697d40898208b447540f8808cdc2d4d3848d5289f59bfb9e",
+        "lines": 344,
+        "python_syntax": "PASS",
+        "purpose": "Identify the 270 Heawood execution-slot cycles with 270 spread pairs.\n\nThe local Heawood quotient certificate groups the six neighbours of every W33\nQ3 chart into three two-sheet execution slots.  If each local execution slot\n(chart, local-Fano-line) is treated as a vertex and every chart-web edge joins\nthe corresponding endpoint slots, the resulting 1620-vertex slot graph is\n2-regular.\n\nExact computation gives a much stronger global statement:\n\n    slot graph = 270 disjoint copies of C6.\n\nIndependently, W(3,3) has 36 spreads.  Its C(36,2)=630 unordered spread pairs\nsplit by intersection size as\n\n    |S cap T| = 1 : 360 pairs\n    |S cap T| = 4 : 270 pairs.\n\nThis script proves an object-level bijection, not merely a count match.  For\neach slot C6, take the union of the two W33 axis lines of its six chart\nvertices.  It is always a 12-line set, and it is exactly the symmetric\ndifference S triangle T of a unique spread pair with |S cap T|=4.  Around the\nsix-cycle, the chart vertices altern",
+        "definitions": [
+          "enumerate_spreads",
+          "execution_lines",
+          "slot_graph",
+          "connected_components",
+          "cycle_order",
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_heawood_spread_pair_pgsp_equivariance.py",
+        "exists": true,
+        "sha256": "662ddc2fa9e8cdcc8bb421d045e582dbaa9c3fcd0348d706a9ce18765c1fb4f6",
+        "lines": 264,
+        "python_syntax": "PASS",
+        "purpose": "Close the 270 Heawood/spread bridge under the full PGSp(4,3) action.\n\nThe companion PSp certificate proves equivariance for eight symplectic\ntransvections. The only missing coset is represented by the multiplier-two\nsimilitude already used in w33_pass125_two_we6_embeddings.py:\n\n    D = diag(2,2,1,1),\n    omega(Dx,Dy) = 2 omega(x,y)  over F3.\n\nBecause projective symplectic similitudes preserve isotropic incidence, D acts\non W(3,3), its 40 lines, 540 skew-line Q3 charts, intrinsic execution slots,\n270 C6 components, and 36 spreads. This certificate checks directly that D\npreserves the slot graph and commutes with the C6 -> four-intersection spread\npair bijection. Together with the audited PSp generators this proves\nPGSp(4,3)-equivariance.\n\nThe full group order 51840 and the PSp order 25920 are prior certified repo\nresults. Since the 270-cycle action is transitive already under PSp, the full\nstabilizer has order 51840/270 = 192, agreeing exactly with Pass 1996's\nindependent D8 x S4 stabil",
+        "definitions": [
+          "canon_f3",
+          "apply_matrix",
+          "matrix_point_perm",
+          "component_perm_for_point_perm",
+          "orbit",
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_heawood_spread_pair_psp_equivariance.py",
+        "exists": true,
+        "sha256": "8394642083de1318408b5e163c309145780f9e39785367a8e80556f2b4661b68",
+        "lines": 396,
+        "python_syntax": "PASS",
+        "purpose": "Exact PSp(4,3)-equivariance audit for the 270 Heawood/spread bridge.\n\nThe companion certificate ``w33_heawood_spread_pair_270_bridge.py`` proved an\nobject-level bijection between\n\n  * the 270 C6 components of the intrinsic Heawood execution-slot graph, and\n  * the 270 unordered pairs of W(3,3) spreads meeting in four lines,\n\nby sending a C6 to the unique spread pair whose symmetric difference is the\n12-line union of the six chart axes in that cycle.\n\nThis file upgrades that finite-set bijection to an equivariant statement for\nthe projective symplectic group PSp(4,3).  We reuse the eight explicit\nsymplectic transvections already used by ``bt980_aut_action_on_homology.py``.\nFor each generator we induce its permutations on W33 points, lines, the 540 Q3\ncharts, intrinsic two-sheet execution slots, C6 components and the 36 spreads.\nThe audit checks generator-by-generator that the C6 -> spread-pair map commutes\nwith the action.\n\nThe resulting action on the 270 cycles is transitive.  Using th",
+        "definitions": [
+          "canon_f3",
+          "symplectic_form",
+          "transvection_point_perm",
+          "induced_line_perm",
+          "induced_chart_perm",
+          "intrinsic_slot_graph",
+          "component_to_spread_pair",
+          "induced_spread_perm",
+          "map_slot_node",
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_heawood_spread_pair_stabilizer96_fingerprint.py",
+        "exists": true,
+        "sha256": "e499be85bbe9dc752906657d04a6c57dcfde0ea4e8f80f25abd487716f8cee97",
+        "lines": 358,
+        "python_syntax": "PASS",
+        "purpose": "Fingerprint the order-96 PSp stabilizer of a Heawood/spread C6.\n\nThe PSp-equivariance certificate proves that the 270 intrinsic Heawood execution\nC6 components form one transitive PSp(4,3)-orbit.  Hence a C6 stabilizer has\norder 25920/270 = 96.  Pass 1996 independently identifies the corresponding\nfull order-51840 stabilizer as D8 x S4 of order 192.\n\nThis script closes the actual PSp stabilizer in its degree-270 permutation\naction using Schreier generators, computes its center, derived subgroup and\nelement-order spectrum, and compares that fingerprint with every index-two\nkernel in D8 x S4.  This identifies the subgroup type without relying on the\ncoincidence 96 = |Aut(tomotope)|.\n\nIt also freezes a hard no-go: the published tomotope group has derived subgroup\norder 48 and trivial center, while any index-two subgroup of D8 x S4 has derived\nsubgroup contained in (D8 x S4)' = C2 x A4 of order 24.  Therefore the C6\nstabilizer cannot be the tomotope group even before the finer fingerprint ",
+        "definitions": [
+          "compose",
+          "inverse",
+          "identity",
+          "closure",
+          "perm_order",
+          "commutator",
+          "derived_subgroup",
+          "fingerprint",
+          "actual_component_generators",
+          "schreier_stabilizer",
+          "d8_perm",
+          "parity_of_perm",
+          "combined_perm",
+          "index_two_kernel_candidates",
+          "comparable_key",
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_heawood_stabilizer96_presentation_lattice.py",
+        "exists": true,
+        "sha256": "c39f393e6cde104523fcfaf6a8aea9a495bf18195f927eed78097f949badf601",
+        "lines": 418,
+        "python_syntax": "PASS",
+        "purpose": "Exact presentation and normal-subgroup lattice of the Heawood C6 PSp stabilizer.\n\nThe companion fingerprint certificate identifies the order-96 stabilizer H as\nthe mixed index-two kernel inside D8 x S4 with a V4 kernel on the D8 side.\nThis file turns that fingerprint into an explicit abstract model:\n\n    H = {(d,sigma) in D8 x S4 : chi(d)=sgn(sigma)},\n    chi(r^i s^j)=i mod 2.\n\nBecause the odd D8 coset contains the reflection t=rs of order two, the fiber\nproduct splits.  Writing\n\n    V = ker chi = <z=r^2, u=s> ~= C2 x C2,\n\nand using the section sigma |-> (t^sgn(sigma), sigma), gives\n\n    H ~= V4 semidirect S4,\n\nwhere the S4 action factors through sign: even permutations act trivially on\nV, while every odd permutation fixes z and sends u -> z u.\n\nThe script verifies a four-generator presentation, enumerates every normal\nsubgroup by normal closures and joins, and freezes the Hasse diagram of the\nnormal-subgroup lattice.  It also recovers Z(H)=C2 and H'=C2 x A4 of order 24.",
+        "definitions": [
+          "perm_compose",
+          "perm_inverse",
+          "perm_parity",
+          "perm_order",
+          "d8_mul",
+          "d8_inv",
+          "d8_chi",
+          "mul",
+          "inv",
+          "identity",
+          "element_order",
+          "closure",
+          "conjugate",
+          "all_group_elements",
+          "center",
+          "commutator",
+          "derived",
+          "normal_closure",
+          "enumerate_normal_subgroups",
+          "subgroup_product",
+          "projection_s4",
+          "projection_d8",
+          "element_text",
+          "set_signature",
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_latin288_w33_central_quotient_bridge.py",
+        "exists": true,
+        "sha256": "16fd0ea8368b3f0dad774df42c3c20c87069597645d9ad688e038d40474383ec",
+        "lines": 507,
+        "python_syntax": "PASS",
+        "purpose": "Latin-288 / W33 central-quotient bridge.\n\nThis resolves the open 576/Latin comparison at the correct structural level.\nThe 576 labelled order-four Latin squares are NOT a regular W33 576-set; an\nolder certificate already rules that out.  The right bridge is instead between\nan index-two subgroup of the V4 Latin-square stabilizer and a central quotient\nof the W33 minimum-vector stabilizer.\n\nFor the Klein four Latin square L(r,c)=r+c over F2^2:\n\n  * its full standard paratopy stabilizer has order 576 and is exactly\n        C2^4 : (S3 x S3);\n  * the subgroup using only even coordinate parastrophes has order 288 and is\n        C2^4 : (S3 x C3);\n  * an explicit GL(4,2) matrix conjugates this affine 288-group to the standard\n        A4 wr C2 = (A4 x A4) : C2 action.\n\nThe independently certified W33 minimum-vector stabilizer H has\n\n        H ~= 2^{1+4}_+ : (S3 x C3),\n        H/Z(H) ~= A4 wr C2.\n\nHence the Latin orientation-even stabilizer is explicitly isomorphic to the W33\ncentral quotient H/",
+        "definitions": [
+          "parity",
+          "pcompose",
+          "pinverse",
+          "porder",
+          "generated_perm_group",
+          "center_order",
+          "derived_order",
+          "bits2",
+          "vadd",
+          "mat_vec",
+          "mat_mul",
+          "eye",
+          "kron",
+          "inv_mat",
+          "generated_matrix_group",
+          "paratopy",
+          "induced_cell_perm",
+          "affine_perm",
+          "qdet",
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_marcelis_gf4_trace_gauge.py",
+        "exists": true,
+        "sha256": "ef72fda219fcb6587734a5fc79e30cad9dee03bf69a701b03cc62547138c21f8",
+        "lines": 313,
+        "python_syntax": "PASS",
+        "purpose": "Explicit GF(4)->GF(2) trace gauges for the Marcelis/Witting atlas.\n\nSource-faithful layer\n---------------------\nMarcelis' Penrose/Witting page fixes the Pauli/GF(4) alphabet\n\n    I -> 0,  Y -> 1,  X -> omega,  Z -> omega^2,\n\nand his E8 four-qubit page then applies Tr(x)=x+x^2.  Since\n\n    Tr(0)=Tr(1)=0,  Tr(omega)=Tr(omega^2)=1,\n\nthe induced word map is simply I,Y -> 0 and X,Z -> 1.  A Pauli word is a\nchosen representative, so this map is perfectly well-defined on the word.\nIt is NOT invariant under arbitrary GF(4)^* rescaling of a homogeneous vector,\nwhich is why coordinatewise trace alone is not a map PG(3,4)->PG(3,2).\n\nSource audit\n------------\nThe E8 four-qubit page has an internal two-entry transcription mismatch in the\ncomplement row.  For the listed words ... ZYZZ, YZZZ, ZYYZ, YYYZ ... it prints\nbinary ... 1011, 1001, 0111, 0001 ... but immediately gives decimal\n... 11, 7, 9, 1 ....  The declared trace rule gives binary\n... 1011, 0111, 1001, 0001 ..., whose decimals are exactly ",
+        "definitions": [
+          "gf4_add",
+          "gf4_mul",
+          "gf4_inv",
+          "gf4_trace",
+          "scale",
+          "trace_vector",
+          "word_to_gf4",
+          "marcelis_word_trace",
+          "bits_text",
+          "canon_first_one",
+          "projective_points_pg34",
+          "omega_gauge",
+          "projective_trace_gauge",
+          "first_one_index",
+          "bits_decimal",
+          "source_examples",
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_marcelis_multichart_atlas.py",
+        "exists": true,
+        "sha256": "2562a360496a8d780c0227df39e7cb72ec3e63c6c2ef717e5206814502180664",
+        "lines": 394,
+        "python_syntax": "PASS",
+        "purpose": "Deep Marcelis multichart atlas and two exact bridge firewalls.\n\nFrans Marcelis' site repeatedly relates finite-geometric objects by projections,\nquotients and changes of coordinates.  This certificate keeps those coordinate\nlanguages separate while testing two tempting literal identifications:\n\n1. W33 chart web versus the Heawood graph.\n   W(3,3) has 540 Q3 charts, one for each skew pair of lines.  Two charts are\n   adjacent when their four defining lines form an apartment.  The web is\n   6-regular with 1620 edges.  A literal Heawood subgraph would force seven\n   vertices in one bipartition class to form a K7 in the chart web's distance-2\n   common-neighbour graph.  Exact maximum-clique search gives omega=6, so no\n   literal Heawood subgraph exists.  Any Heawood bridge must therefore be a\n   projection/quotient/incidence/scheduler construction, not direct inclusion.\n\n2. GF(4) trace versus a projective coordinate map.\n   Marcelis uses GF(4)->GF(2) trace in structured coordinate construc",
+        "definitions": [
+          "canon_prime",
+          "rank_mod_p",
+          "projective_points_prime",
+          "pg32",
+          "fano_plane",
+          "heawood_graph",
+          "hesse_ag23",
+          "w33",
+          "chart_web",
+          "edge_count",
+          "triangle_count",
+          "distance_two_graph",
+          "max_clique_exact",
+          "gf4_add",
+          "gf4_mul",
+          "gf4_square",
+          "gf4_trace",
+          "scale4",
+          "trace4",
+          "find_trace_projective_counterexample",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_marcelis_observer_quotient_dynamics.py",
+        "exists": true,
+        "sha256": "72cf270e6377a24cb7dfe63c25f523df5e8f74ca3030b443ac2b67f224ffc1f0",
+        "lines": 304,
+        "python_syntax": "PASS",
+        "purpose": "Deterministic global dynamics, stochastic observer quotient on the Marcelis trace gauge.\n\nThis is the project-native finite model behind the observer-relative randomness\nidea.  The global state space is the 85 points of PG(3,4).  The observer sees\nonly\n\n    B = tau_omega(S) in PG(3,2),\n\nso the 85 microstates collapse onto 15 macrostates with Schubert fibre sizes\n1,2,4,8.  Global dynamics is the completely deterministic invertible coordinate\nrotation\n\n    U_k(x_0,...,x_n) = (x_k,...,x_n,x_0,...,x_{k-1}).\n\nFor an observer who knows only B and uses the uniform conditional prior on the\nfinite fibre tau^-1(B), the induced macro-dynamics is the exact Markov kernel\n\n    P(B'=b' | B=b)\n      = #{s in tau^-1(b): tau(U_k s)=b'} / |tau^-1(b)|.\n\nKnowing the full microstate (or an exact local fibre index K) makes B' certain:\nH(B'|B,K)=0.  Without K, the same globally deterministic U_k can have positive\nconditional entropy and subunit guessing probability.\n\nFor n=3 and k=1, the flag boundary is espe",
+        "definitions": [
+          "projective_points",
+          "rotate_projective",
+          "dyadic_entropy_exact",
+          "build_kernel",
+          "n3_exact_dynamics",
+          "cross_dimension_flag_horizon",
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_marcelis_pg34_line_trace_census.py",
+        "exists": true,
+        "sha256": "4176d1cabc97d218525fe3db4f16cae23b691a12999fbcb9948f9397826fe6e2",
+        "lines": 331,
+        "python_syntax": "PASS",
+        "purpose": "Exact line-level census for the Marcelis GF(4)->GF(2) trace gauge.\n\nThe companion trace-gauge certificate constructs a total, explicitly gauge-\nfixed map\n\n    tau_omega : PG(3,4) -> PG(3,2)\n\nby scaling the first nonzero GF(4) coordinate to omega and then applying the\ncoordinatewise field trace.  It maps 85 projective points onto all 15 binary\nprojective points with fibre sizes 1,2,4,8.\n\nThis pass asks what happens one incidence rank higher, to all 357 projective\nlines of PG(3,4).  The answer is highly structured and also supplies an\nimportant firewall: tau_omega is a point map but is not a projective-geometry\nmorphism carrying every GF(4) line to a binary line.\n\nExact census:\n\n  * 125 GF(4) lines map onto actual 3-point lines of PG(3,2).\n  * 232 GF(4) lines map onto five-point subsets spanning a 7-point binary\n    projective plane (a punctured Fano plane), never to any other image type.\n\nAll 35 binary lines occur.  Their lift multiplicities are 1,2,4 in a gauge\nstaircase: 1 binary line",
+        "definitions": [
+          "gf4_linear_combination",
+          "pg34_lines",
+          "rank_f2",
+          "binary_span_nonzero",
+          "first_one",
+          "plane_normal",
+          "bits",
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_marcelis_trace_flag_law.py",
+        "exists": true,
+        "sha256": "dcd3a6e1db10c38750742086fa64dbb37513b5746736da22eb64094a2fb5d359",
+        "lines": 394,
+        "python_syntax": "PASS",
+        "purpose": "Complete-flag law behind the Marcelis omega-normalized trace census.\n\nThe companion certificates established an explicit gauge-fixed point map\n\n    tau_omega : PG(3,4) -> PG(3,2)\n\nand the exact line census\n\n    357 = 125 genuine binary-line images + 232 punctured-Fano images.\n\nThis file identifies the coordinate geometry controlling both numbers.  The\nfirst-nonzero/omega gauge selects the complete binary flag\n\n    p_inf = 0001  in  L_inf : x0=x1=0\n                      in  H0 : x0=0\n                      in  PG(3,2).\n\nLine-preserving lifts stratify exactly by this flag:\n\n  * the unique line L_inf has 1 PG(3,4) line lift;\n  * the other 6 lines contained in H0 have 2 lifts each;\n  * the 28 binary lines not contained in H0 have 4 lifts each.\n\nHence 1*1 + 6*2 + 28*4 = 125.\n\nThe 232 non-line images also obey the same flag.  Every binary plane P contains\nexactly two five-point trace images.  Their two missing pairs have a three-point\nunion, called the puncture line ell_P.  For P != H0,\n\n    ",
+        "definitions": [
+          "binary_points_pg32",
+          "binary_planes",
+          "is_binary_line",
+          "build_trace_incidence_data",
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_marcelis_trace_schubert_general.py",
+        "exists": true,
+        "sha256": "33dc43ce9a5aae4611358edee4024f9fe6c1de72c320f377e2f50b45e327e35c",
+        "lines": 407,
+        "python_syntax": "PASS",
+        "purpose": "General Schubert/flag law for the omega-normalized GF(4)->GF(2) trace gauge.\n\nFor every n, fix ordered homogeneous coordinates on PG(n,4).  The gauge\nscales the first nonzero coordinate to omega and then applies the field trace\nTr:F4->F2 coordinatewise.  Relative to the standard complete flag\n\n    F_j = {x_0=...=x_{j-1}=0},\n\nthis gives exact point and incidence-preserving-line multiplicity laws.\n\nPOINTS.  If a binary point b lies in F_j \\ F_{j+1}, equivalently its first 1\nis in coordinate j, then\n\n    |tau_omega^{-1}(b)| = 2^(n-j).\n\nAfter the first coordinate is gauge-fixed, each later binary bit has exactly\ntwo GF(4) lifts.\n\nLINES.  Let ell be a binary projective line (a 2D F2 subspace) with first RREF\npivot j, equivalently ell <= F_j but ell not<= F_{j+1}.  The number of GF(4)\nprojective lines whose tau_omega image is exactly ell is\n\n    2^(n-1-j).\n\nConstructive proof: use the unique binary RREF basis x,y with pivots j<k and\nthe unique GF(4) RREF basis A,B.  The pivot columns are fix",
+        "definitions": [
+          "gf4_mul",
+          "gf4_inv",
+          "gf4_trace",
+          "scale",
+          "canon_first_one",
+          "omega_gauge",
+          "tau",
+          "first_one",
+          "projective_points",
+          "vector_add",
+          "scalar_mul",
+          "gf4_rref_lines",
+          "line_points",
+          "rank_f2",
+          "binary_line_first_pivot",
+          "gaussian_2_lines",
+          "gaussian_4_lines",
+          "point_formula",
+          "binary_line_stratum_count",
+          "line_lift_formula",
+          "line_preserving_mass_formula",
+          "local_column_solution_table",
+          "exhaust_points",
+          "exhaust_lines",
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_observer_information_lattice.py",
+        "exists": true,
+        "sha256": "e9d29b8c02616f0dbbec15e4c17ae4ca99b80bd92128adf03dd4eaa4b2d2620f",
+        "lines": 162,
+        "python_syntax": "PASS",
+        "purpose": "Observer-information lattice for the retained-noise W33 timing toy model.\n\nThe target is a two-sample timing record O. Primitive side-information\ngenerators are Y (final counter), S0 and S1 (two independent two-bit noise\ncells). All eight observer states are enumerated with Shannon entropy,\nguessing probability and conditional min-entropy.",
+        "definitions": [
+          "v2",
+          "increment_trace",
+          "error_cell",
+          "observed",
+          "sample_space",
+          "entropy",
+          "conditional_entropy",
+          "guess_probability",
+          "powerset",
+          "verify"
+        ]
+      },
+      {
+        "path": "analysis/w33_oriented288_binary_tetrahedral_bridge.py",
+        "exists": true,
+        "sha256": "f8d383cd62d9e9db924a83c6cafc2e1182fbe324fb760a88bf89b55388853969",
+        "lines": 451,
+        "python_syntax": "PASS",
+        "purpose": "Exact W33 oriented-288 / binary-tetrahedral Clifford interior bridge.\n\nThe order-576 W33 minimum-vector stabilizer H has a unique index-two subgroup\nH+ obtained by killing the C2 quotient of its S3 factor.  Geometrically this is\nthe oriented minimum-vector stabilizer; algebraically it is generated by H'\nand the order-three elements of H.\n\nIndependently, the determinant-one single-qubit Clifford commutator C1' is the\nbinary tetrahedral group 2T ~= SL(2,3).  The local two-qubit group\n\n    C1' tensor C1' ~= (2T x 2T) / diag(C2)\n\nhas order 288.  Its 2-core is the central product Q8 * Q8 = 2_+^{1+4}, and the\nquotient by that 2-core is C3 x C3.\n\nThis certificate reconstructs both groups independently, builds an explicit\nisomorphism through their characteristic extraspecial kernels, and checks all\n288^2 products.  It then records the extension-class divergence above the\ncommon interior: W33 adds an involutory factor exchange, whereas the standard\ncomplex Clifford non-entangling lift adds a sw",
+        "definitions": [
+          "oriented_w33_288",
+          "det2",
+          "mmul",
+          "minv3",
+          "neg",
+          "canon_pair",
+          "cmul",
+          "cinv",
+          "corder",
+          "cclosure",
+          "ccenter",
+          "cderived",
+          "cquotient_coords",
+          "caction_mats",
+          "cnormal_form",
+          "cgroup_from_two",
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_outer_cube_observer_bridge.py",
+        "exists": true,
+        "sha256": "613e8b95be54b7ea2fc6082548bdcf7a48ed1c8549ac80838868711377c5bb3a",
+        "lines": 394,
+        "python_syntax": "PASS",
+        "purpose": "Outer-involution / Schubert-observer cube bridge.\n\nThis certificate deliberately connects three independently certified pieces of the\nrepository without identifying them merely because their cardinalities agree:\n\n1. the multiplier-two outer involution D=diag(2,2,1,1) on W(3,3);\n2. the eight-point stochastic open Schubert cell x0=1 in the Marcelis observer\n   quotient PG(3,4)->PG(3,2);\n3. the already-certified Q4 temporal router.\n\nThe new exact statement is that the complement of the W33 collinearity graph on\nthe eight fixed points of D is Q3.  The same Q3 has a gauge-fixed coordinate\nrealization on the eight stochastic observer macrostates, because x0=1 is the\naffine chart AG(3,2)=F2^3.  Appending one frozen bit embeds that cube as a facet\nof the repo-certified Q4.  The graph isomorphisms are explicit; the final\ncross-model identification is coordinate/gauge dependent and is not claimed to\nbe canonical physics.\n\nA second result records the quotient of the 36-spread four-intersection gr",
+        "definitions": [
+          "cycles_of_involution",
+          "hamming",
+          "edge_set",
+          "induced_cycle4_faces",
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_outer_cube_observer_bridge_v2.py",
+        "exists": true,
+        "sha256": "c042dc89b291880ec57809eb91d81cae035ae16cf12987bbeeb5be49da23dde0",
+        "lines": 255,
+        "python_syntax": "PASS",
+        "purpose": "Corrected outer-involution / observer Q3 bridge.\n\nSupersedes the first bridge runner by keeping W33 point ids as integers until\nserialization.  It proves four exact statements:\n  * complement(W33[Fix(D)]) is Q3 for D=diag(2,2,1,1);\n  * the four fixed spreads form a K4 and the 12 fixed four-intersection edges\n    split as 6 K4 edges + 6 exchanged-endpoint loops in the orbit quotient;\n  * the eight stochastic observer states are the affine chart x0=1 ~= F2^3;\n  * an explicit bit labelling identifies the two Q3 realizations and embeds the\n    observer cube as a facet of the already-certified Q4 temporal router.",
+        "definitions": [
+          "hamming",
+          "inv_cycles",
+          "four_cycle_faces",
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_projective_horizon_lag_law.py",
+        "exists": true,
+        "sha256": "c3588e745c0fd77037d9173694704cefe35a929c3ea29d13dbe0cd65f40509ce",
+        "lines": 250,
+        "python_syntax": "PASS",
+        "purpose": "Projective lag law behind the affine/Fano -1/84 coefficient.\n\nThe earlier affine/Fano certificate correctly computed the one-step conditional\nmatrix between\n\n    A = {x0 != 0}  and  F = {x0 = 0}\n\nfor a uniformly sampled point of PG(n,4), but the deterministic cyclic update\nU has finite order n+1.  Therefore that 2x2 matrix must not be interpreted as a\nMarkov transition matrix whose powers describe the actual multistep dynamics.\n\nThis certificate gives the exact correction.\n\nFor a uniform projective point S in PG(n,4), let X_j indicate whether coordinate\nj is nonzero.  Any two distinct coordinates have the same conditional table:\n\n       P(X_j=1 | X_i=1) = 3/4,\n       P(X_j=1 | X_i=0) = 3*4^(n-1)/(4^n-1).\n\nHence every nonzero cyclic lag k=1,...,n has the same two-sector pair kernel,\nwhile lag n+1 is exactly the identity because U^(n+1)=1.  The nontrivial\n2x2 eigenvalue\n\n    rho_n = -1/(4 |PG(n-1,4)|)\n\nis therefore the exact Pearson correlation of two distinct coordinate-occupancy\nindica",
+        "definitions": [
+          "qstr",
+          "sector",
+          "two_sector_pair_kernel",
+          "matmul",
+          "matrix_from_kernel",
+          "exact_row",
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_projective_phase_fibre_dichotomy.py",
+        "exists": true,
+        "sha256": "bd9099570f206f16aedb2fdde3bacd68b1049cf8cabdc8689845ce20432270c6",
+        "lines": 359,
+        "python_syntax": "PASS",
+        "purpose": "Projective phase-fibre dichotomy over the common B_288 observable group.\n\nBoth the W33 minimum-vector stabilizer and the standard non-entangling complex\nClifford group project to\n\n    B_288 = (A4 x A4) : C2 = SmallGroup(288,1025).\n\nThe common local interior is K_288=(2T x 2T)/diag(C2), 2T=SL(2,3).\nThis script constructs two completions of that interior exactly:\n\n  W33 / real completion:\n      W = K : <s>, s^2=1, s(a,b)s^{-1}=(b,a), |W|=576.\n\n  determinant-one complex Clifford completion:\n      G = <K,t>, tKt^{-1}=swap(K), t^4=z, |G|=1152,\n      where z is the nontrivial center of K.  Thus t has order 8 and t^2\n      generates the scalar C4 center.  This is the abstract lift relation of\n      the special-SWAP SU(4) representative used for C1' bowtie C1'.\n\nThe two maps to B_288 are built explicitly using the projective action\nSL(2,3)/{+-I} = A4 on P^1(F3).  Their kernels are C2 and C4 respectively.\nFor a uniform hidden group element conditioned only on its projective image,\nShannon entro",
+        "definitions": [
+          "cpswap",
+          "wmul",
+          "winv",
+          "gmul",
+          "ginv",
+          "order",
+          "center",
+          "closure",
+          "derived",
+          "canon_p1",
+          "rho",
+          "pcompose",
+          "bmul",
+          "projective_pair",
+          "pi_w",
+          "pi_g",
+          "quotient_by_subgroup",
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_publish_september_2026_frontier.py",
+        "exists": true,
+        "sha256": "45d8a5c6920c5ef36b7ee175ff810bf730d609f26160adda1488f276d4b6f5c9",
+        "lines": 128,
+        "python_syntax": "PASS",
+        "purpose": "Publish the September 2026 Heawood/Schubert/observer frontier into docs/index.html.\n\nThe section is generated only from frozen exact certificates and replaced between\nstable markers.  Running twice is idempotent.",
+        "definitions": [
+          "load",
+          "render_section",
+          "patch",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_schur176_qplus_macro_skeleton.py",
+        "exists": true,
+        "sha256": "eb3b7a5d2937095132c744354ff104cdcb7583eb6cdb945997a64144f4aac23c",
+        "lines": 215,
+        "python_syntax": "PASS",
+        "purpose": "Q^+(3,2) macro-skeleton for Nurowski's six-Schur-quartic 176-line arrangement.\n\nNurowski (arXiv:2609.10751, 2026-09-09) proves that six projectively equivalent\nSchur quartics split into two triples.  Each triple has a common 16-line core;\neach of the 3x3 cross-triple surface pairs has a distinct common 16-line block.\nThus the union has 16+16+9*16=176 lines, each surface contains\n16+3*16=64 lines, and the induced surface permutation group is S3 x S3.\n\nThe repo independently carries the plus quadric Q^+(3,2) on F2^4 via\nq(x)=x0*x3+x1*x2.  Its six generator lines split into two rulings of three;\neach generator from one ruling meets each generator of the other ruling in one\nof the nine singular projective points.  The ruling-preserving automorphism\nskeleton is S3 x S3.\n\nThis certificate proves that Nurowski's *block/surface incidence skeleton* is\nexactly the augmented Q^+(3,2) ruling grid:\n\n  - six surfaces <-> six generator lines (3+3),\n  - nine cross 16-line blocks <-> nine cross-ruling ",
+        "definitions": [
+          "vadd",
+          "q",
+          "plane",
+          "singular_generator_planes",
+          "ruling_partition",
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_schur64_e7_threequbit_pauli_objectwise_bridge.py",
+        "exists": true,
+        "sha256": "d93834aab8b1ddc645484d77438d70be865ecae87f4e0f10ebd89fa52641d7c7",
+        "lines": 300,
+        "python_syntax": "PASS",
+        "purpose": "Objectwise bridge from the Schur64 real three-qubit Pauli phase quotient to E7.\n\nNurowski (arXiv:2609.10751) identifies the normal order-128 subgroup of the\n64-line Schur incidence automorphism group as the real three-qubit Pauli group\n\n    E3 = <-I, X1,Z1,X2,Z2,X3,Z3> ~= 2_+^{1+6}.\n\nProjectivizing by its center gives E3/Z(E3) ~= F2^6, with the standard\nthree-qubit symplectic form on coordinates\n\n    (x1,z1,x2,z2,x3,z3).\n\nIndependently, Pass8489-8496 proves that the 63 antipodal E7 root pairs exhaust\nthe 63 nonzero vectors of a six-dimensional symplectic quotient of the E7\nlattice, with root-inner-product parity equal to the quotient symplectic form.\n\nThis certificate constructs an explicit symplectic basis change between those\ntwo F2^6 models, then freezes an objectwise 63-entry dictionary\n\n    Schur/Pauli direction <-> Pauli word <-> E7 antipodal root pair.\n\nIt verifies every pairwise symplectic/root-parity relation and all 336 closed\nanticommuting XOR triangles.  This is a phase-quo",
+        "definitions": [
+          "e8_roots",
+          "rank2",
+          "root_pair_key",
+          "omega",
+          "vec_xor",
+          "mat_vec",
+          "symplectic_basis",
+          "pauli_word",
+          "build_e7_model",
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_schur_central_phase_reye_quotient.py",
+        "exists": true,
+        "sha256": "2c26c5c20a3b349fe1b55152a7203d9d67bdb1c8ee08efd76fecf41610d8a353",
+        "lines": 244,
+        "python_syntax": "PASS",
+        "purpose": "Central-phase quotient of the Schur extraspecial coset geometry is dual Reye.\n\nThe Schur (24_4,32_3) configuration was independently reconstructed in the\ncompanion certificates as\n\n    points = E = 2_+^{1+4},\n    lines  = left cosets of three V4 subgroups V1,V2,V3 < E,\n\nwhere the V_i project to one ruling of Q^+(3,2) in E/Z(E).\n\nThis verifier quotients the 32-point E-torsor by the central phase\nZ(E)=<z> of order two.  Because each V_i avoids z, every Schur line gV_i and\nits central translate zgV_i project to the same 4-point affine plane.  Hence\n32 points -> 16 central-phase classes and 24 lines -> 12 line classes.\n\nThe resulting quotient has type 16_3,12_4, i.e. the *incidence dual* of the\nproject-native Reye models, which are stored as 12_4,16_3.  Since Reye is\nself-dual this is the same abstract configuration, but the typed orientation\nmatters and is checked explicitly here rather than erased by an untyped graph\nisomorphism.\n\nPrior-art boundary: Nurowski, arXiv:2609.10751 (2026-09-0",
+        "definitions": [
+          "typed_dual",
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_schur_extraspecial_coset_geometry.py",
+        "exists": true,
+        "sha256": "ee19cf428bc2deaf4f2283ff783d5f75f986469f6f5475ff731fc7acd63df9ad",
+        "lines": 210,
+        "python_syntax": "PASS",
+        "purpose": "Realize the Schur (24_4,32_3) configuration as an extraspecial coset geometry.\n\nStart from the internally reconstructed F4 root-parity group H_576 that the\ncompanion certificates identify with both the W33 minimum-vector stabilizer and\nthe Schur half-stabilizer W(D4):C3.  Its characteristic second derived subgroup\nis E = 2_+^{1+4}, order 32.\n\nExact result:\n  * E acts regularly on the 32 zero-sum D4 root triples;\n  * its action on the 24 roots has three orbits of size 8;\n  * after choosing a base triple as identity, the unique line from each orbit\n    through the base triple pulls back to a V4 subgroup V_i < E;\n  * all 24 lines are exactly the left cosets of V_1,V_2,V_3;\n  * V_i cap V_j = 1 for i != j;\n  * modulo Z(E), their images are the three totally-singular 2-spaces in one\n    ruling of Q^+(3,2), partitioning all nine nonzero singular vectors.\n\nThus the Schur incidence configuration is a rank-three coset geometry of the\nsame extraspecial-plus phase group appearing in the W33/Latin/",
+        "definitions": [
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_schur_incidence_vs_projective_symmetry.py",
+        "exists": true,
+        "sha256": "8d725173ce915f5d4ea42dc8c2792a8f95d4f9be588455682e7d7e5df0877ccf",
+        "lines": 106,
+        "python_syntax": "PASS",
+        "purpose": "Separate bare Schur (24_4,32_3) incidence symmetry from projective half symmetry.\n\nUsing the D4-root incidence model from arXiv:2607.10090, build the 56-vertex\nLevi graph (24 roots, 32 zero-sum triples).  Exact graph-isomorphism enumeration\nshows that its abstract combinatorial automorphism group has order 1152.  Its\ninduced action on the 24 roots is exactly the full W(F4) root action.\n\nExternal geometric input from Hohn: the projective stabilizer of one Schur\n24-line half is only W(D4):C3 of order 576.  Thus forgetting the K3/projective\nembedding restores an extra C2 of abstract incidence symmetry.",
+        "definitions": [
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_schur_quartic_d4_triality_bridge.py",
+        "exists": true,
+        "sha256": "e82f848bb8b973b071d048bf22bfd4ef99c9c26b5fe7baf520c93b68edc7c4a5",
+        "lines": 183,
+        "python_syntax": "PASS",
+        "purpose": "Bridge the W33 order-576 minimum stabilizer to the 2026 Schur-quartic line configuration.\n\nExternal input (Hohn, arXiv:2607.10090): one 24-line half of the Schur quartic's\n48 lines of the second kind is modeled by the 24 roots of D4; its 32 triple\npoints are the unordered root triples r1+r2+r3=0; the projective stabilizer of\nthe half is W(D4):C3 with C3 acting by even triality.\n\nRepo computation: reconstruct W(F4) independently, reconstruct W(D4) as even\nsigned coordinate permutations, and prove that adjoining an order-3 triality\nelement produces exactly the same root-parity order-576 subgroup already\nexplicitly identified with the W33 PSp(4,3) minimum-vector stabilizer.\n\nThis closes an abstract group/action bridge onto the Schur 24-line carrier. It\ndoes not identify the 45 W33 minimum-vector lines with the 24 Schur lines.",
+        "definitions": [
+          "dot",
+          "f4_roots",
+          "signed_perm_action",
+          "wd4_group",
+          "schur_incidence",
+          "restrict_perm",
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_seeded_vs_quantum_entropy_harness.py",
+        "exists": true,
+        "sha256": "57da86040e2aea97282c9eb70b3ae2dd4bcddda3d5410fad6017fa19c1499cf6",
+        "lines": 173,
+        "python_syntax": "PASS",
+        "purpose": "Seeded pseudorandom vs ideal-quantum-reference HoloVM entropy harness.\n\nTwo source models are kept distinct from deterministic VM transport:\n\n1. Seeded deterministic byte generator: Y=(73*S+41) mod 256.\n2. Ideal Born-uniform byte reference: all 256 outcomes equiprobable.\n\nThe seedless marginals are exactly identical, but the seeded arm has H(Y|S)=0.\nEvery byte is then fed to the same HoloVM two-counter guest, proving that the\nVM transports source entropy/provenance rather than creating it.\n\nAn optional JSON metadata file may record an external quantum-randomness\ncertificate or dataset reference. This script does not independently validate\nthat physical certificate.",
+        "definitions": [
+          "entropy",
+          "min_entropy",
+          "seeded_byte",
+          "vm_byte",
+          "total_variation",
+          "load_external_metadata",
+          "verify"
+        ]
+      },
+      {
+        "path": "analysis/w33_signed_representation_economics.py",
+        "exists": true,
+        "sha256": "166bbb9b089665924d9a92827092e913fdb5e4e7a62d8f1b8034e4dcfffb14fe",
+        "lines": 212,
+        "python_syntax": "PASS",
+        "purpose": "Cross-repo resource ledger for authenticated HoloVM + signed W33 representations.\n\nThe central rule is type separation.  A signed-pencil representation factor is\nnot semantic work, authenticated-history storage, replay work, information\nleakage, or physical energy.  We therefore keep a vector ledger and refuse to\nproduce a scalar score unless every coordinate receives an explicit weight.\n\nExact representation factors come from rational primal/dual Holotrade\ncertificates:\n  mass 16 depth 1: gamma=6,  k=4, A=gamma/k=3/2, A^2=9/4\n  mass 16 depth 2: gamma=8,  k=4, A=2,             A^2=4\n  mass 24 depth 3: gamma=12, k=6, A=2,             A^2=4\nThe depth-three result is the unique mass-24 depth-three orbit certified in\nworkflow 34381463322 and its exact real-l1 certificate in workflow 34385613729.\nThus integer negativity depth increases from 2 to 3 while normalized signed\namplification remains A=2.  No physical-energy interpretation is made here.",
+        "definitions": [
+          "ResourceVector",
+          "scalarize",
+          "build_vectors",
+          "verify"
+        ]
+      },
+      {
+        "path": "analysis/w33_stabilizer96_cube_central_cover.py",
+        "exists": true,
+        "sha256": "9600203c9f2293e866cd3caf9531f14f94b538eff4946ad17cbd27f279245c3f",
+        "lines": 358,
+        "python_syntax": "PASS",
+        "purpose": "The order-96 Heawood stabilizer as a non-split central cover of Aut(Q3).\n\nPrior exact certificates give\n\n    H = V4 semidirect S4,  V4=<z,u>,\n    z central,\n    sigma u sigma^-1 = z^sgn(sigma) u.\n\nTherefore H/<z> = C2 x S4.  This script independently constructs every affine\nHamming automorphism of Q3, proves that there are exactly 48 and decomposes them\nas\n\n    Aut(Q3) = <antipode> x (V4_even semidirect S3) ~= C2 x S4.\n\nIt then writes the explicit central extension\n\n    1 -> C2 -> H -> Aut(Q3) -> 1\n\nand its normalized Z2-valued factor set\n\n    alpha((b,sigma),(d,tau)) = d * sgn(sigma)  (mod 2).\n\nThe cocycle is nontrivial: on the commuting quotient elements represented by an\nodd S4 permutation and the cube-antipode bit, alpha(g,h) != alpha(h,g).  A\ncoboundary on an abelian subgroup would be symmetric, so this is a direct\ncohomological obstruction to splitting.  Equivalently, the two commuting cube\nsymmetries lift to elements whose commutator is the central z.\n\nThis is a finite-group/con",
+        "definitions": [
+          "bits",
+          "integer",
+          "parity",
+          "affine_signature",
+          "compose",
+          "inverse",
+          "order",
+          "generated_subgroup",
+          "sign_perm",
+          "compose_perm",
+          "cube_group",
+          "quotient_and_cocycle_certificate",
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_support_min_entropy.py",
+        "exists": true,
+        "sha256": "124ec30caaa6ebe54b27186dae3f7936633f55d99a5d81c86ca084c4d5be1165",
+        "lines": 170,
+        "python_syntax": "PASS",
+        "purpose": "Exact cryptographic entropy of the W33 support-only observer.\n\nPass 2836 computed Shannon information erased by the support map\n    supp : F_q^4 -> {0,1}^4.\nThis companion computes the classical adversarial guessing probability,\nconditional min-entropy, and averaged collision probability exactly.\n\nFor a support mask of Hamming weight k there are (q-1)^k equiprobable\npreimages. There are C(4,k) such masks. Consequently every one of the\n16 masks contributes exactly 1/q^4 to both the optimal classical guessing\nprobability and the averaged collision probability:\n\n    P_guess(X | supp X) = 16/q^4,\n    H_min(X | supp X) = 4 log2(q/2).\n\nAt q=3 this is log2(81/16) ~= 2.33985 bits.\n\nThis is a classical side-information statement. It is NOT a lower bound on\nH_min(X | supp(X), E) for an adversary holding arbitrary quantum side\ninformation E; if E contains a perfect copy/encoding of X that entropy can\nfall to zero.",
+        "definitions": [
+          "exact_row",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_swap_extension_class_localization.py",
+        "exists": true,
+        "sha256": "2d6e876c1dceea7f145d49b47045606a7eb5b22a2d0dbd15a610268bd5a43602",
+        "lines": 145,
+        "python_syntax": "PASS",
+        "purpose": "Localize the W33/Clifford residual C2-extension difference to the swap subgroup.\n\nBoth residual order-576 completions map onto the same projective\nB_288=(A4 x A4):C2 with central kernel C2.  Globally they are non-isomorphic.\nThis script proves the difference is already visible on the projective factor-\nswap subgroup <sbar> ~= C2:\n\n    W33 pullback       ~= C2 x C2   (split class),\n    Clifford pullback  ~= C4        (nontrivial class).\n\nThus the two restrictions represent the two elements of H^2(C2,C2)=C2.\nThe statement is finite group cohomology language for an explicitly enumerated\nfour-element preimage, not a physical phase claim by itself.",
+        "definitions": [
+          "quotient_mul",
+          "element_order_q",
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_threeway_576_provenance_closure.py",
+        "exists": true,
+        "sha256": "4dfda3d25f1bf065a24efe6cf782e6c009ccaa6fbd8899a291c9af27829cd382",
+        "lines": 352,
+        "python_syntax": "PASS",
+        "purpose": "",
+        "definitions": [
+          "compose",
+          "pinv",
+          "porder",
+          "generated_group",
+          "center",
+          "derived_subgroup",
+          "sha",
+          "norm3",
+          "sp3",
+          "psp_minimum_stabilizer",
+          "dot",
+          "reflect",
+          "wf4_and_kernels",
+          "quotient_E_coords",
+          "action_mats",
+          "rank4",
+          "mapply",
+          "mcomp",
+          "minv",
+          "morder",
+          "gen_mats",
+          "find_GL4_conjugator",
+          "normal_form",
+          "find_complement_generators",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_trace_observer_finite_observability.py",
+        "exists": true,
+        "sha256": "cc503b4c629d70c8a94e0bb309ca23c45a6f66db9e1a4a88f1d603a0f9868689",
+        "lines": 289,
+        "python_syntax": "PASS",
+        "purpose": "Finite observability of the Marcelis trace-gauge quotient.\n\nThe existing observer certificate gives a deterministic order-four global update\n\n    U(x0,x1,x2,x3) = (x1,x2,x3,x0)\n\non the 85 points of PG(3,4), while the gauge-fixed trace observer\n\n    tau : PG(3,4) -> PG(3,2)\n\nhas only 15 macrostates and therefore produces stochastic one-step macro rows.\nThis certificate asks the control/observability question rather than treating\nthat one-step stochasticity as irreducible:\n\n    how many consecutive observer outputs are required to recover the exact\n    global microstate?\n\nThe answer is exactly four.  The trajectory code\n\n    O_L(s) = (tau(s), tau(U s), ..., tau(U^(L-1) s))\n\nhas 15, 57, 77, 85 distinct words for L=1,2,3,4 respectively, and O_4 is\ninjective on all 85 microstates.  The exact residual fibre entropies are\n\n    H(S|O_1)=228/85,\n    H(S|O_2)= 72/85,\n    H(S|O_3)= 16/85,\n    H(S|O_4)=0 bits.\n\nThus the successive extra observations reveal 156/85, 56/85, and 16/85 bits\nof the init",
+        "definitions": [
+          "bits_text",
+          "support_mask",
+          "rotate_bits",
+          "trajectory_code",
+          "partition_by",
+          "dyadic_residual_entropy",
+          "factor_test",
+          "hamming",
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_witting_card_single_photon_protocol.py",
+        "exists": true,
+        "sha256": "289f8cd6b8c98a3a2a59c67b3f52de404b2bf889bc1cfa92d7b31115fe07558d",
+        "lines": 245,
+        "python_syntax": "PASS",
+        "purpose": "Compile the 40 Witting \"quantum cards\" to a single-photon four-mode protocol.\n\nThe carrier is a single photon in four orthogonal modes, read physically as\npath x polarization by the convention\n    0=aH, 1=aV, 2=bH, 3=bV.\n\nFor every Witting tetrad B=(r0,r1,r2,r3), the analyzer U_B has row j equal\nto <r_j|. Therefore\n    U_B |r_j> = |j>\nand, conversely,\n    U_B^dagger |j> = |r_j>.\nSo the same 40 sparse analyzer unitaries also give 160 exact preparation\nprograms (40 contexts x 4 slots). Every ray has four preparation programs\nbecause every ray lies in four tetrads.\n\nThe finite protocol layer is exact. The loss/visibility rows are a simple\ndepolarizing four-mode component model, not a QKD security proof.",
+        "definitions": [
+          "rays40",
+          "tetrads",
+          "analyzer",
+          "support_weight",
+          "family",
+          "component_model",
+          "main"
+        ]
+      },
+      {
+        "path": "data/W33_CAUSAL_ACCESSIBILITY_RANDOMNESS.json",
+        "exists": true,
+        "sha256": "d4515c0d4727a27495a9fbdc78b9280d2def9f3582c5cf81aca59bf04d4516bf",
+        "lines": 18,
+        "json_parse": "PASS",
+        "keys": [
+          "schema",
+          "status",
+          "c",
+          "side_information_events",
+          "observers",
+          "worldline_monotonicity",
+          "core_result",
+          "same_time_observer_dependence",
+          "boundary"
+        ],
+        "declared_status": "PASS",
+        "headline": "Finite 1+1D causal toy model; no claim that physical horizons are cryptographic ciphers or that relativity creates fundamental randomness."
+      },
+      {
+        "path": "data/W33_CONTEXTUAL_DECRYPTION_OBSTRUCTION.json",
+        "exists": true,
+        "sha256": "8fd2bacf3930db48e1bce613db18f47bab6516f82ddb80d3beae4f4a2331fc4c",
+        "lines": 68,
+        "json_parse": "PASS",
+        "keys": [
+          "W33",
+          "boundary",
+          "contextuality_quantities",
+          "control_W2",
+          "cryptographic_reading",
+          "definition",
+          "global_section_theorem",
+          "linearized_cohomology_probe",
+          "measurement_cover",
+          "schema",
+          "sources",
+          "status"
+        ],
+        "declared_status": "PASS",
+        "headline": "This certificate concerns selection/ovoid contextuality. The decryption language is an observer-information interpretation, not a proof of QKD secrecy, composability, computational hardness, or metaphysical indeterminism."
+      },
+      {
+        "path": "data/W33_DETERMINISM_PREDICTION_BOUNDARY.json",
+        "exists": true,
+        "sha256": "554826ff82304494f523529cbf398fc47f60586cec803d18b80305e4e3d5390f",
+        "lines": 31,
+        "json_parse": "PASS",
+        "keys": [
+          "schema",
+          "status",
+          "deterministic_transition_semantics",
+          "bounded_predictor",
+          "finite_horizon_counterexamples",
+          "known_diverger_bounded_results",
+          "never_infer_nonhalt_from_fuel_exhaustion",
+          "universal_boundary",
+          "separation",
+          "boundary"
+        ],
+        "declared_status": "PASS",
+        "headline": "Executable part proves finite-fuel semidecision discipline; the no-total-predictor statement is the standard computability consequence of universal two-counter semantics."
+      },
+      {
+        "path": "data/W33_OBSERVER_INFORMATION_LATTICE.json",
+        "exists": true,
+        "sha256": "92bfb3835b09a2bc3122b57744316dce03eec7e1f8a90a05e151056985979a6c",
+        "lines": 19,
+        "json_parse": "PASS",
+        "keys": [
+          "schema",
+          "status",
+          "target",
+          "primitive_generators",
+          "lattice",
+          "key_identity",
+          "core_result",
+          "boundary"
+        ],
+        "declared_status": "PASS",
+        "headline": "Exact finite information-theory values; computational hardness and quantum adversary side information are separate layers."
+      },
+      {
+        "path": "data/W33_SEEDED_VS_QUANTUM_ENTROPY_HARNESS.json",
+        "exists": true,
+        "sha256": "c5ca767c2738a0f83721d83648416e0d5d6eeac58df24221d0cd4233b61e95e4",
+        "lines": 10,
+        "json_parse": "PASS",
+        "keys": [
+          "schema",
+          "status",
+          "seeded_source",
+          "ideal_quantum_reference",
+          "seedless_marginal_total_variation",
+          "holovm_transport",
+          "core_result",
+          "boundary"
+        ],
+        "declared_status": "PASS",
+        "headline": "The built-in quantum arm is an ideal distribution reference, not a laboratory randomness certificate. Device-independent or QRNG certification remains an external evidence obligation."
+      },
+      {
+        "path": "data/bt1408_witting_contextual_communication_bridge.json",
+        "exists": true,
+        "sha256": "55769673d46ac2e5ddc8da008bfcd8538e98ff532b23c51e276ace29a6f2149f",
+        "lines": 314,
+        "json_parse": "PASS",
+        "keys": [
+          "architecture_breakthrough",
+          "boundary",
+          "bt",
+          "checks",
+          "communication_profile",
+          "contextuality_budget",
+          "holonet_abi_bridge",
+          "source_paper",
+          "title",
+          "verified",
+          "witting_configuration"
+        ],
+        "declared_status": null,
+        "headline": "BT1408 is a finite communication/ABI certificate.  It does not prove cryptographic security, loss tolerance, detector calibration, or a physical ququart hardware implementation. The 1/10 KS defect must not be labeled as the Abramsky-Barbosa contextual fraction, which is 1 for this W33 model."
+      },
+      {
+        "path": "data/bt1409_witting_duplex_admission_scheduler.json",
+        "exists": true,
+        "sha256": "0a2fbb1da393fa730c851072810b186efdcf0e5a6e33644ee80b3c3da49ea2cf",
+        "lines": 518,
+        "json_parse": "PASS",
+        "keys": [
+          "architecture_breakthrough",
+          "boundary",
+          "bt",
+          "checks",
+          "contextuality_quantities",
+          "duplex_law",
+          "frame_budget_for_one_selected_ray",
+          "histograms",
+          "rates",
+          "sample_ray_0",
+          "title",
+          "verified"
+        ],
+        "declared_status": null,
+        "headline": "BT1409 is a finite scheduler/count certificate.  It does not prove cryptographic security, channel loss tolerance, or physical detector calibration.  The basis aperture / KS defect must not be relabeled as the Abramsky-Barbosa contextual fraction."
+      },
+      {
+        "path": "data/w33_a4_untwisted_core_synthesis.json",
+        "exists": true,
+        "sha256": "f1a6b62dcb3cf0edd0ddf1c43d10ce62b713db0ff725341ecc7031e79cc75c80",
+        "lines": 58,
+        "json_parse": "PASS",
+        "keys": [
+          "checks",
+          "claim_boundary",
+          "codec_chain",
+          "headline",
+          "same_four_label_A4",
+          "schema",
+          "stabilizer_ladder",
+          "status",
+          "twist_boundary"
+        ],
+        "declared_status": "PASS",
+        "headline": "The 12 local phases of the C7-equivariant boundary/toroidal 84 codec are literally AGL(1,4)=A4 as the even permutations of the four affine labels.  This is the same A4 section appearing in the order-96 stabilizer and it lies completely inside the cocycle's untwisted parity firewall; the central twist begins only in the odd S4 coset."
+      },
+      {
+        "path": "data/w33_affine_fano_information_horizon.json",
+        "exists": true,
+        "sha256": "c511fdf0ada84d4663395801d964f07ddbe8d2d48f546b8c3d515dde96f0d6bc",
+        "lines": 278,
+        "json_parse": "PASS",
+        "keys": [
+          "checks",
+          "claim_boundary",
+          "correction",
+          "dimension_census",
+          "general_theorem",
+          "headline",
+          "n3_information_horizon",
+          "schema",
+          "status",
+          "toroidal_84_echo"
+        ],
+        "declared_status": "PASS",
+        "headline": "The Marcelis observer quotient has an exact affine/Fano information horizon.  Under uniform PG(n,4) microstate measure, two distinct coordinate charts have the pair-conditional table [[3/4,1/4],[3*4^(n-1)/(4^n-1),(4^(n-1)-1)/(4^n-1)]], whose nontrivial eigenvalue is the projective anti-correlation -1/(4|PG(n-1,4)|).  At n=3 this is -1/84."
+      },
+      {
+        "path": "data/w33_boundary_singer_toroidal_84_bridge.json",
+        "exists": true,
+        "sha256": "bf9bf23a9a5fb410d0282ab10845ef2c231f09feeaaaede59a32ce694085e7ce",
+        "lines": 385,
+        "json_parse": "PASS",
+        "keys": [
+          "boundary_singer",
+          "checks",
+          "choice_boundary",
+          "explicit_bridge_sample",
+          "headline",
+          "local12",
+          "schema",
+          "spectral_bridge",
+          "status",
+          "toroidal_codec"
+        ],
+        "declared_status": "PASS",
+        "headline": "The affine/Fano denominator 84 now has an explicit C7-equivariant toroidal realization. PG(2,4)xGF(4) has 84 states; a regular Singer C21 supplies a C7 with twelve size-7 orbits, the quotient is GF(4)xGF(4)^* = the 12 directed K4 edges = AGL(1,4)~=A4, and an explicit lift bijects all 84 states with the repo's 84 Singer-toroidal flags."
+      },
+      {
+        "path": "data/w33_cocycle_rank1_576_parity_firewall.json",
+        "exists": true,
+        "sha256": "a4b79effb0ab49f3456b45227775655b0a8c92b8111e31df378bedc66ef34b9d",
+        "lines": 74,
+        "json_parse": "PASS",
+        "keys": [
+          "abelianization_core",
+          "checks",
+          "claim_boundary",
+          "count_bridges",
+          "headline",
+          "parity_firewall",
+          "schema",
+          "status",
+          "support_geometry"
+        ],
+        "declared_status": "PASS",
+        "headline": "The cube-cover 2-cocycle is a rank-one parity carry with exactly 576 twisted pairs. It vanishes on the even A4 sector, and its commutator descends to the nondegenerate symplectic form on C2^2 whose eight-element central lift is D8."
+      },
+      {
+        "path": "data/w33_contextuality_terminology_migration.json",
+        "exists": true,
+        "sha256": "61db01f5b2ea7d1204a1b2c1f1cb66a1ec9fadc448e6b2e9fba9dc87ff6ab5b8",
+        "lines": 43,
+        "json_parse": "PASS",
+        "keys": [
+          "active_chain",
+          "authoritative_values",
+          "checks",
+          "legacy_misnamed_artifacts",
+          "schema",
+          "scope_boundary",
+          "status"
+        ],
+        "declared_status": "PASS",
+        "headline": ""
+      },
+      {
+        "path": "data/w33_heawood_chart_fibre_quotient.json",
+        "exists": true,
+        "sha256": "c6011bb7143e59b539d4ac8faf46a894c413b0171fa71479099b6173afe7ebe7",
+        "lines": 996,
+        "json_parse": "PASS",
+        "keys": [
+          "bt1714_bridge",
+          "checks",
+          "claim_boundary",
+          "counts",
+          "headline",
+          "marcelis_bridge",
+          "sample_chart_fibres",
+          "schema",
+          "standard_local_fano",
+          "status"
+        ],
+        "declared_status": "PASS",
+        "headline": "Each of the 540 W33 Q3 charts carries a local Heawood fibre on the seven nonzero F2^3 translations and their seven Fano lines. The intrinsic antipode translation 111 selects one Heawood point. The six chart-web neighbours descend 2-to-1 onto its three incident Fano-line vertices; the other four Fano lines are nonincident buffer slots."
+      },
+      {
+        "path": "data/w33_heawood_outer_involution_fixed_census.json",
+        "exists": true,
+        "sha256": "8e8c49a9e966e077ef996e9beb50d281fa1e65f5ddbf2a6592a4ab08ca78b0e5",
+        "lines": 537,
+        "json_parse": "PASS",
+        "keys": [
+          "checks",
+          "claim_boundary",
+          "cycle_histograms",
+          "fixed_line_rows",
+          "fixed_objects",
+          "fixed_pair_rows",
+          "headline",
+          "interpretation",
+          "outer_generator",
+          "schema",
+          "status"
+        ],
+        "declared_status": "PASS",
+        "headline": "The multiplier-two outer involution fixes exactly 12 of the 270 intrinsic Heawood C6 components, and full PGSp equivariance carries them to exactly the 12 setwise-fixed four-intersection spread pairs. Each fixed pair is classified exactly as two individually fixed spreads or as an exchanged spread pair."
+      },
+      {
+        "path": "data/w33_heawood_spread_pair_270_bridge.json",
+        "exists": true,
+        "sha256": "75b151dfa15ef7eb617587cfca802ac9000b96c54b976ad3ae604d06711871b1",
+        "lines": 1027,
+        "json_parse": "PASS",
+        "keys": [
+          "checks",
+          "claim_boundary",
+          "counts",
+          "headline",
+          "object_dictionary",
+          "prior_repo_bridge",
+          "samples",
+          "schema",
+          "status"
+        ],
+        "declared_status": "PASS",
+        "headline": "The 1620 local Heawood execution slots glue through the 540-chart web into 270 disjoint C6 cycles.  The 12 W33 axis lines carried by each C6 are exactly the symmetric difference of a unique pair of spreads meeting in four lines.  Hence the 270 Heawood-slot cycles and the repo's 270 four-intersection spread pairs are the same finite objects under an explicit bijection."
+      },
+      {
+        "path": "data/w33_heawood_spread_pair_pgsp_equivariance.json",
+        "exists": true,
+        "sha256": "b3d8bae161d9e110361bbc4f9425cd53c890df165d06546ed69936e982ebfa14",
+        "lines": 72,
+        "json_parse": "PASS",
+        "keys": [
+          "checks",
+          "claim_boundary",
+          "equivariance_generators",
+          "headline",
+          "orbit_stabilizer",
+          "outer_generator",
+          "schema",
+          "status"
+        ],
+        "declared_status": "PASS",
+        "headline": "The 270 C6 execution cycles -> 270 four-intersection spread-pair bijection is equivariant under the full PGSp(4,3) action. The single multiplier-two outer similitude preserves the intrinsic slot graph and commutes with the bijection, closing the only coset left open by the PSp certificate."
+      },
+      {
+        "path": "data/w33_heawood_spread_pair_psp_equivariance.json",
+        "exists": true,
+        "sha256": "6845e801ed889fd823a719f56a351ffbc1e2d1800ca9e30c177b7f120353b284",
+        "lines": 148,
+        "json_parse": "PASS",
+        "keys": [
+          "checks",
+          "claim_boundary",
+          "counts",
+          "equivariant_dictionary",
+          "generator_audit",
+          "headline",
+          "new_leads_not_claims",
+          "prior_repo_bridge",
+          "schema",
+          "status"
+        ],
+        "declared_status": "PASS",
+        "headline": "The explicit C6-to-spread-pair bijection is PSp(4,3)-equivariant. Each of the eight symplectic transvection generators preserves the intrinsic two-sheet execution-slot graph and commutes with the map from a C6 to the unique four-intersection spread pair having the same 12-line symmetric difference. The PSp orbit of one cycle has all 270 cycles, so the PSp stabilizer has order 96."
+      },
+      {
+        "path": "data/w33_heawood_spread_pair_stabilizer96_fingerprint.json",
+        "exists": true,
+        "sha256": "1ebbf61b52e217e96d067ef49c33c661c9c6e3eedfcf7240da789b59b584f9ea",
+        "lines": 259,
+        "json_parse": "PASS",
+        "keys": [
+          "actual_stabilizer",
+          "candidate_index2_kernels_of_D8xS4",
+          "checks",
+          "claim_boundary",
+          "headline",
+          "prior_repo_inputs",
+          "schema",
+          "status",
+          "tomotope_firewall"
+        ],
+        "declared_status": "PASS",
+        "headline": "The PSp(4,3) stabilizer of one intrinsic Heawood execution C6 is closed explicitly as a 96-element permutation group. Its exact center/derived/order-spectrum fingerprint selects one index-two subgroup type inside the prior D8 x S4 full stabilizer and rules out the order-96 tomotope automorphism group structurally."
+      },
+      {
+        "path": "data/w33_heawood_stabilizer96_presentation_lattice.json",
+        "exists": true,
+        "sha256": "d05bfb783d4a45dd079f7669ec405c8128e25422d140b5600ff3f621e828912b",
+        "lines": 368,
+        "json_parse": "PASS",
+        "keys": [
+          "checks",
+          "claim_boundary",
+          "fiber_product",
+          "headline",
+          "normal_subgroup_lattice",
+          "presentation",
+          "schema",
+          "status",
+          "structure",
+          "tomotope_firewall"
+        ],
+        "declared_status": "PASS",
+        "headline": "The order-96 PSp Heawood-C6 stabilizer is the split fiber product D8 x_{C2} S4 ~= V4 semidirect S4, with the S4 action factoring through sign. Even permutations centralize V4; odd permutations fix z and send u to z*u. The complete normal-subgroup lattice is enumerated exactly."
+      },
+      {
+        "path": "data/w33_marcelis_gf4_trace_gauge.json",
+        "exists": true,
+        "sha256": "5379562ca74fb66a48fad98047c5bdcdcc8d63df5949a41c60bf8a1b102ee82c",
+        "lines": 210,
+        "json_parse": "PASS",
+        "keys": [
+          "checks",
+          "claim_boundary",
+          "marcelis_source_gauge",
+          "projective_completion",
+          "raw_projective_trace_firewall",
+          "relation_to_marcelis",
+          "schema",
+          "sources",
+          "status"
+        ],
+        "declared_status": "PASS",
+        "headline": ""
+      },
+      {
+        "path": "data/w33_marcelis_multichart_atlas.json",
+        "exists": true,
+        "sha256": "103a16911c05c33499fcf958533c0e07474cccbf6d461f73f07a9d540c4d1cfe",
+        "lines": 115,
+        "json_parse": "PASS",
+        "keys": [
+          "checks",
+          "gf4_trace_firewall",
+          "methodological_boundary",
+          "schema",
+          "site_cross_index",
+          "small_incidence_atlas",
+          "status",
+          "w33_chart_web"
+        ],
+        "declared_status": "PASS",
+        "headline": ""
+      },
+      {
+        "path": "data/w33_marcelis_observer_quotient_dynamics.json",
+        "exists": true,
+        "sha256": "3af01ae33c5c5374c30f830b6b0d788c93ebe48ce812ff7881510be8a731462c",
+        "lines": 1369,
+        "json_parse": "PASS",
+        "keys": [
+          "checks",
+          "cross_dimension_horizon",
+          "cryptographic_boundary",
+          "headline",
+          "n3_one_step_model",
+          "observer_relative_randomness_statement",
+          "schema",
+          "status"
+        ],
+        "declared_status": "PASS",
+        "headline": "A deterministic projective coordinate rotation on the 85 PG(3,4) microstates induces a genuinely stochastic 15-state macro kernel after the many-to-one tau_omega observer quotient. For one-step rotation, exactly the 8 macrostates in x0=1 are stochastic and the 7 in x0=0 are deterministic. Full fibre side information restores zero conditional entropy."
+      },
+      {
+        "path": "data/w33_marcelis_pg34_line_trace_census.json",
+        "exists": true,
+        "sha256": "f71334af3830dfa6a0d446e9e27123c42b22ac59cb4b733c2ccb3fba09305f69",
+        "lines": 714,
+        "json_parse": "PASS",
+        "keys": [
+          "binary_line_lift_staircase",
+          "checks",
+          "claim_boundary",
+          "counts",
+          "headline",
+          "marcelis_reading",
+          "punctured_plane_census",
+          "schema",
+          "status"
+        ],
+        "declared_status": "PASS",
+        "headline": "Under the explicit omega-normalized Marcelis trace gauge, the 357 lines of PG(3,4) have exactly two image types in PG(3,2): 125 descend to genuine three-point binary lines, while 232 become five-point subsets spanning binary projective planes. The point map is therefore structured but not an incidence morphism."
+      },
+      {
+        "path": "data/w33_marcelis_trace_flag_law.json",
+        "exists": true,
+        "sha256": "b320055f495d110f48f31d9f61e9d50ee123aa4ceef9faedc02afb74146b591c",
+        "lines": 873,
+        "json_parse": "PASS",
+        "keys": [
+          "checks",
+          "claim_boundary",
+          "flag",
+          "headline",
+          "interpretation",
+          "line_lift_flag_strata",
+          "punctured_plane_flag_law",
+          "schema",
+          "status"
+        ],
+        "declared_status": "PASS",
+        "headline": "The omega-normalized PG(3,4)->PG(3,2) trace gauge is governed by the complete binary flag p_inf=0001 in L_inf:{x0=x1=0} in H0:{x0=0}. The 125 incidence-preserving line lifts split as 1 line x1 lift + 6 lines x2 lifts + 28 lines x4 lifts. The 30 punctured-Fano images are likewise determined plane-by-plane by a puncture line in H0 and a puncture point on L_inf."
+      },
+      {
+        "path": "data/w33_marcelis_trace_schubert_general.json",
+        "exists": true,
+        "sha256": "7d416c0baae561e5aba7871b7bff04c0efa13dc833eab8b00382f985f7c5a19d",
+        "lines": 424,
+        "json_parse": "PASS",
+        "keys": [
+          "checks",
+          "claim_boundary",
+          "constructive_line_proof",
+          "exhaustive_line_checks",
+          "exhaustive_point_checks",
+          "headline",
+          "relation_to_n3_certificate",
+          "schema",
+          "status",
+          "symbolic_mass_checks",
+          "theorem"
+        ],
+        "declared_status": "PASS",
+        "headline": "For the declared omega/first-nonzero gauge on PG(n,4), point and incidence-preserving-line fibre multiplicities are Schubert-stratum laws relative to the standard coordinate flag. A point in F_j\\F_{j+1} has 2^(n-j) lifts; a binary line in F_j but not F_{j+1} has 2^(n-1-j) GF(4) line lifts. The proof is local and constructive, and exhaustive checks cover points through n=6 and lines through n=5."
+      },
+      {
+        "path": "data/w33_outer_cube_observer_bridge.json",
+        "exists": true,
+        "sha256": "0d9bc6c6539bfe6f44cef577221b6b2addd99d188ba68f7d3a62d4eada1aaa65",
+        "lines": 346,
+        "json_parse": "PASS",
+        "keys": [
+          "Q4_facet_weld",
+          "checks",
+          "claim_boundary",
+          "headline",
+          "observer_affine_cube",
+          "outer_fixed_cube",
+          "schema",
+          "spread_orbit_quotient",
+          "status"
+        ],
+        "declared_status": "PASS",
+        "headline": "The outer involution exposes an intrinsic Q3 as complement(W33[Fix(D)]); the stochastic Schubert chart x0=1 is a second F2^3 cube, and an explicit gauge-fixed isomorphism welds both to a Q4 router facet."
+      },
+      {
+        "path": "data/w33_projective_horizon_lag_law.json",
+        "exists": true,
+        "sha256": "88ac0547002ef8a103727242dd2df476a5aa6a2d689e024042cf139e975bce8b",
+        "lines": 690,
+        "json_parse": "PASS",
+        "keys": [
+          "checks",
+          "claim_boundary",
+          "dimension_census",
+          "headline",
+          "n3_projective_anticorrelation",
+          "schema",
+          "status",
+          "theorem"
+        ],
+        "declared_status": "PASS",
+        "headline": "The affine/Fano -1/84 is a projective pair-correlation, not a temporal mixing rate. For PG(n,4), every pair of distinct coordinate-occupancy indicators has correlation -1/(4|PG(n-1,4)|); under cyclic U all nonzero lags share that kernel and lag n+1 is identity."
+      },
+      {
+        "path": "data/w33_schur176_qplus_macro_skeleton.json",
+        "exists": true,
+        "sha256": "014212ea22bfe4a74b02c1fcb151be59c18f4e74aa16679924de5181615f2778",
+        "lines": 57,
+        "json_parse": "PASS",
+        "keys": [
+          "checks",
+          "dictionary",
+          "prior_art_boundary",
+          "qplus",
+          "schema",
+          "schur176_macro",
+          "status",
+          "theorem"
+        ],
+        "declared_status": "PASS",
+        "headline": "Nurowski's six-surface 176-line block incidence has exactly the augmented hyperbolic-quadric Q^+(3,2) ruling skeleton: two triples of generators, nine cross-ruling grid points, one common 16-line core per ruling, and S3 x S3 ruling-preserving symmetry."
+      },
+      {
+        "path": "data/w33_schur64_e7_threequbit_pauli_objectwise_bridge.json",
+        "exists": true,
+        "sha256": "dbd3cef2a8b96ec3ef926704da916e217a0bce718c6ee0991b3673521eb9a866",
+        "lines": 2065,
+        "json_parse": "PASS",
+        "keys": [
+          "E7_symplectic_matrix",
+          "census",
+          "checks",
+          "chosen_E7_hyperbolic_basis_columns",
+          "claim_boundary",
+          "dictionary",
+          "schema",
+          "source_alignment",
+          "standard_coordinate_order",
+          "standard_symplectic_matrix",
+          "standard_to_E7_basis_matrix_columns",
+          "status",
+          "theorem"
+        ],
+        "declared_status": "PASS",
+        "headline": "In the standard Xi,Zi gauge used by the Schur64 real three-qubit Pauli normal subgroup, the 63 noncentral projective phase directions admit an explicit symplectic objectwise dictionary to the 63 antipodal E7 root pairs; the dictionary preserves every commutation relation and every one of the 336 closed anticommuting XOR triangles."
+      },
+      {
+        "path": "data/w33_schur_central_phase_reye_quotient.json",
+        "exists": true,
+        "sha256": "4e90e95fe671b1f3698f171d33816bc51f832e699aecdec0646c505daa04c6d1",
+        "lines": 43,
+        "json_parse": "PASS",
+        "keys": [
+          "central_phase",
+          "checks",
+          "downstairs",
+          "prior_art_boundary",
+          "schema",
+          "status",
+          "theorem",
+          "upstairs"
+        ],
+        "declared_status": "PASS",
+        "headline": "Quotienting the Schur extraspecial coset geometry by the central phase Z(E) pairs its 32 triple points and 24 lines 2-to-1 and yields the typed incidence dual of the project-native Reye configuration."
+      },
+      {
+        "path": "data/w33_schur_extraspecial_coset_geometry.json",
+        "exists": true,
+        "sha256": "78433b10988fbbd96041058e1f7c7cf4478c008f6577ecebe5e653ddfe6bc901",
+        "lines": 78,
+        "json_parse": "PASS",
+        "keys": [
+          "boundary",
+          "checks",
+          "line_cosets",
+          "outer_action",
+          "point_torsor",
+          "quadratic_quotient",
+          "schema",
+          "status",
+          "theorem"
+        ],
+        "declared_status": "PASS",
+        "headline": "The Schur (24_4,32_3) root configuration is exactly the rank-three coset geometry of the W33 extraspecial-plus phase kernel E: its points are the E-torsor and its lines are the 24 left cosets of three V4 subgroups whose images form one ruling of Q^+(3,2)."
+      },
+      {
+        "path": "data/w33_schur_incidence_vs_projective_symmetry.json",
+        "exists": true,
+        "sha256": "3898c897d20d8441644245234160cb1dfefb0fcbd6fdd4e3fe073c83e22d780f",
+        "lines": 27,
+        "json_parse": "PASS",
+        "keys": [
+          "Schur_geometric_half",
+          "bare_incidence",
+          "checks",
+          "information_reading",
+          "schema",
+          "status",
+          "theorem"
+        ],
+        "declared_status": "PASS",
+        "headline": "The bare D4-root (24_4,32_3) Levi graph has full automorphism group W(F4) of order 1152, while the Schur-quartic realization of a chosen half has projective stabilizer W(D4):C3 of order 576."
+      },
+      {
+        "path": "data/w33_schur_quartic_d4_triality_bridge.json",
+        "exists": true,
+        "sha256": "07f8cbca14297729aece435913a8c30bd3674c42abaea502516d41030d87769c",
+        "lines": 47,
+        "json_parse": "PASS",
+        "keys": [
+          "boundary",
+          "checks",
+          "configuration",
+          "external_input",
+          "group_bridge",
+          "schema",
+          "status",
+          "theorem"
+        ],
+        "declared_status": "PASS",
+        "headline": "The 2026 Schur-quartic half-stabilizer W(D4):C3 is realized internally as the same F4 root-parity order-576 group already explicitly isomorphic to the W33 PSp(4,3) minimum-vector stabilizer; its faithful 24-root action preserves the exact (24_4,32_3) zero-sum incidence configuration."
+      },
+      {
+        "path": "data/w33_stabilizer96_cube_central_cover.json",
+        "exists": true,
+        "sha256": "45cfb336b30c7f42180f3608d39172fa7f3455e405e0648dfd9acbe67aed78ab",
+        "lines": 71,
+        "json_parse": "PASS",
+        "keys": [
+          "Heawood_stabilizer_cover",
+          "checks",
+          "claim_boundary",
+          "cube_automorphism_group",
+          "extension_cocycle",
+          "external_cross_check",
+          "headline",
+          "schema",
+          "status",
+          "tomotope_firewall"
+        ],
+        "declared_status": "PASS",
+        "headline": "The order-96 Heawood C6 stabilizer is a non-split central double cover of the full cube automorphism group: 1 -> C2 -> H -> Aut(Q3) -> 1, with Aut(Q3) ~= C2 x S4.  The extension twist is the explicit cocycle alpha((b,sigma),(d,tau))=d*sgn(sigma) mod 2."
+      },
+      {
+        "path": "data/w33_support_min_entropy.json",
+        "exists": true,
+        "sha256": "e20a5a6a786d89fdaa54658396a270d233b268740e25a29928ce0c9fc495699c",
+        "lines": 463,
+        "json_parse": "PASS",
+        "keys": [
+          "checks",
+          "extractor_boundary",
+          "q3_headline",
+          "quantum_side_information_boundary",
+          "rows",
+          "schema",
+          "source",
+          "status"
+        ],
+        "declared_status": "PASS",
+        "headline": ""
+      },
+      {
+        "path": "data/w33_trace_observer_finite_observability.json",
+        "exists": true,
+        "sha256": "67210ec03f79c5e620ce719a73f313448b0fedcfe61b29749f8057bf9c8e9152",
+        "lines": 226,
+        "json_parse": "PASS",
+        "keys": [
+          "checks",
+          "claim_boundary",
+          "headline",
+          "observer_partition_contrast",
+          "schema",
+          "status",
+          "terminal_ambiguity_cube",
+          "trace_trajectory_observability"
+        ],
+        "declared_status": "PASS",
+        "headline": "The 15-state Marcelis trace observer is globally observable in exactly four samples: the 85 PG(3,4) microstates give 15,57,77,85 distinct trace trajectories at lengths 1,2,3,4, and the length-four trajectory map is injective.  A support-mask observer with the same 15-state output alphabet is instead an exact deterministic factor of U."
+      },
+      {
+        "path": "data/w33_witting_card_single_photon_protocol.json",
+        "exists": true,
+        "sha256": "dde0453c7d5a1a0c82580d7e7152f6b1c14fb9c933d3deef35465a24f37e32a9",
+        "lines": 1135,
+        "json_parse": "PASS",
+        "keys": [
+          "carrier",
+          "checks",
+          "component_model",
+          "exact_compiler",
+          "prior_art_boundary",
+          "schema",
+          "security_boundary",
+          "status",
+          "vlasov_desk"
+        ],
+        "declared_status": "PASS",
+        "headline": ""
+      },
+      {
+        "path": "docs/index.html",
+        "exists": true,
+        "sha256": "f4360b154420dd01c80cf4256bfdc1e9bd5f094c21e39c23f3ce1fa0cc5ed797",
+        "lines": 30253
+      },
+      {
+        "path": "photonic_holonet.tex",
+        "exists": true,
+        "sha256": "df20cf11a0ceb31c3b0a8766654a1de286cbb07031426773e26ee32891cd7170",
+        "lines": 78,
+        "opening": "\\providecommand{\\PGSp}{\\mathrm{PGSp}}\r\n% Historical theorem ledger through Pass 3002 plus the Pass 3025--3031 predictive architecture overhaul:\r\n% preserve the complete manuscript body and certified inserts while placing the new\r\n% evidence-first architecture spine immediately after the contents.\r\n\\AtBeginDocument{%\r\n  \\let\\BTorigtableofcontents\\tableofcontents\r\n  \\renewcommand{\\tableofcontents}{%\r\n    \\BTorigtableofcontents\r\n    \\input{analysis/BT3025_BT3031_unified_architecture_spine}%\r\n    \\input{analysis/BT1420_frame_signed_turn_bridge_insert}%\r\n    \\input{analysis/BT1425_full_weyl_integral_cover_addendum}%\r\n    \\input{analysis/BT1408_frame_cross_matching_theorem_insert}%\r\n    \\input{analysis/BT1509_census_morita_m20_insert}%\r\n    \\input{analysis/BT1510_bidirectional_cover_saturation_i"
+      },
+      {
+        "path": "tests/test_bt1408_witting_contextual_communication_bridge.py",
+        "exists": true,
+        "sha256": "a0dcb2599228dc65a47ad64b5e056863fecae74900e0c4e32cfb3093febd8482",
+        "lines": 150,
+        "python_syntax": "PASS",
+        "purpose": "",
+        "definitions": [
+          "run_tool",
+          "load_result",
+          "test_bt1408_bridge_runs_true",
+          "test_bt1408_witting_pair_shell_counts",
+          "test_bt1408_contextual_and_packet_abi_bridge",
+          "test_bt1408_publication_anchors"
+        ]
+      },
+      {
+        "path": "tests/test_bt1409_witting_duplex_admission_scheduler.py",
+        "exists": true,
+        "sha256": "cfc8f05d477e67d0544a5a556f88c866eb76f573d4a1f5503038c3250c0940cf",
+        "lines": 149,
+        "python_syntax": "PASS",
+        "purpose": "",
+        "definitions": [
+          "run_tool",
+          "load_result",
+          "test_bt1409_scheduler_runs_true",
+          "test_bt1409_duplex_law_counts",
+          "test_bt1409_frame_budget_and_sample_epoch",
+          "test_bt1409_publication_anchors"
+        ]
+      },
+      {
+        "path": "tests/test_w33_a4_untwisted_core_synthesis_20260910.py",
+        "exists": true,
+        "sha256": "8804cfb8c198948c973e2655e28204205888b71b0cc138ff31a43fae0858fbe3",
+        "lines": 26,
+        "python_syntax": "PASS",
+        "purpose": "",
+        "definitions": [
+          "test_local12_is_literal_A4_untwisted_core"
+        ]
+      },
+      {
+        "path": "tests/test_w33_affine_fano_horizon_20260910.py",
+        "exists": true,
+        "sha256": "724880516b5fc5d7e515af20b1b4dedd03ccb945abb15f5e0d7692abe4d92c8c",
+        "lines": 37,
+        "python_syntax": "PASS",
+        "purpose": "",
+        "definitions": [
+          "test_affine_fano_horizon_exact_kernel_and_all_n_law"
+        ]
+      },
+      {
+        "path": "tests/test_w33_b288_phase_completion_20260911.py",
+        "exists": true,
+        "sha256": "21e2c46e1fee14881bb8953d59cd8d37e5f855960cad9a6b9d54cf3c8e8ee02b",
+        "lines": 57,
+        "python_syntax": "PASS",
+        "purpose": "",
+        "definitions": [
+          "test_b288_has_inequivalent_residual_c2_phase_lifts"
+        ]
+      },
+      {
+        "path": "tests/test_w33_binary_tetrahedral_split_swap_20260911.py",
+        "exists": true,
+        "sha256": "63057f1e602ecbb1af0313fe2062b70859b9e2eef65108dfb22738b10f5e4312",
+        "lines": 51,
+        "python_syntax": "PASS",
+        "purpose": "",
+        "definitions": [
+          "test_w33_576_is_split_binary_tetrahedral_factor_swap_completion"
+        ]
+      },
+      {
+        "path": "tests/test_w33_boundary_singer_toroidal_84_bridge_20260910.py",
+        "exists": true,
+        "sha256": "06e3c3afb86cc18465d3086723a51196d55c5cb1d31047df9d39251543cc4d01",
+        "lines": 35,
+        "python_syntax": "PASS",
+        "purpose": "",
+        "definitions": [
+          "test_boundary_singer_toroidal_84_bridge_is_equivariant"
+        ]
+      },
+      {
+        "path": "tests/test_w33_cocycle_rank1_576_parity_firewall_20260910.py",
+        "exists": true,
+        "sha256": "2d241a29016dea49b08616064e386112f1a405c2632e4538f566f8d1fcafc634",
+        "lines": 34,
+        "python_syntax": "PASS",
+        "purpose": "",
+        "definitions": [
+          "test_cocycle_support_firewall_and_D8_core"
+        ]
+      },
+      {
+        "path": "tests/test_w33_crypto_network_marcelis_20260909.py",
+        "exists": true,
+        "sha256": "dd7e0f02f0c84dc1b1710b86afa08e5cc30deed3696450dca5101a80db9ddefc",
+        "lines": 181,
+        "python_syntax": "PASS",
+        "purpose": "Regression gates for the 2026-09-09 crypto/network/Marcelis execution pass.",
+        "definitions": [
+          "load",
+          "test_contextual_decryption_global_section_boundary",
+          "test_support_min_entropy_q3",
+          "test_witting_card_inverse_analyzer_compiler",
+          "test_marcelis_multichart_firewalls",
+          "test_heawood_chart_fibre_quotient",
+          "test_marcelis_gf4_trace_gauge",
+          "test_heawood_execution_cycles_are_the_270_four_intersection_spread_pairs",
+          "test_marcelis_pg34_line_trace_census",
+          "test_contextuality_terminology_migration_gate"
+        ]
+      },
+      {
+        "path": "tests/test_w33_heawood_pgsp_stabilizer96_20260910.py",
+        "exists": true,
+        "sha256": "86b3e7f74edfecb9ba31701c1b00e33a291f077f7af352d9b3ce39764d7b3a72",
+        "lines": 59,
+        "python_syntax": "PASS",
+        "purpose": "",
+        "definitions": [
+          "test_full_pgsp_equivariance_closes_outer_coset",
+          "test_psp_stabilizer96_exact_fingerprint_and_tomotope_no_go"
+        ]
+      },
+      {
+        "path": "tests/test_w33_heawood_psp_marcelis_flag_20260909.py",
+        "exists": true,
+        "sha256": "ed60e415e02f3f0dd470f8e157059c574d4af531dec149de1d7ff72f3a5c2f09",
+        "lines": 77,
+        "python_syntax": "PASS",
+        "purpose": "",
+        "definitions": [
+          "test_heawood_spread_pair_bijection_is_psp_equivariant",
+          "test_marcelis_trace_complete_flag_controls_line_lifts",
+          "test_marcelis_punctured_images_obey_plane_line_point_flag_law"
+        ]
+      },
+      {
+        "path": "tests/test_w33_heawood_schubert_observer_20260910.py",
+        "exists": true,
+        "sha256": "bafa11c25f067728373159fd55d3d1d46bde06da5891b1b251c18681fb2c1134",
+        "lines": 132,
+        "python_syntax": "PASS",
+        "purpose": "",
+        "definitions": [
+          "test_outer_fixed_c6_spread_pair_census",
+          "test_order96_presentation_and_normal_lattice",
+          "test_all_n_schubert_trace_laws",
+          "test_deterministic_global_stochastic_observer_quotient"
+        ]
+      },
+      {
+        "path": "tests/test_w33_latin288_w33_central_quotient_bridge_20260910.py",
+        "exists": true,
+        "sha256": "773fb096ad3b6007bd245edb9b9cd72ebca4c6b4e6fba6d612c797c6a7021708",
+        "lines": 83,
+        "python_syntax": "PASS",
+        "purpose": "",
+        "definitions": [
+          "test_latin_even_stabilizer_is_explicit_w33_288_quotient_model",
+          "test_plus_quadratic_geometry_and_extraspecial_lift",
+          "test_crossed_576_completions_and_144_torsor_boundary"
+        ]
+      },
+      {
+        "path": "tests/test_w33_oriented288_binary_tetrahedral_20260911.py",
+        "exists": true,
+        "sha256": "bf5045b87951f8ae8c977f3a431d45956850a3696895bed85e04d955e3592c17",
+        "lines": 50,
+        "python_syntax": "PASS",
+        "purpose": "",
+        "definitions": [
+          "test_oriented_288_is_binary_tetrahedral_local_clifford"
+        ]
+      },
+      {
+        "path": "tests/test_w33_outer_cube_publication_20260910.py",
+        "exists": true,
+        "sha256": "35537d2abd2c03bfd62c02925c8473603fab00e42fda17c253664a3c0fc24e97",
+        "lines": 104,
+        "python_syntax": "PASS",
+        "purpose": "",
+        "definitions": [
+          "test_outer_fixed_residue_is_explicit_cube_and_welds_to_observer_chart",
+          "test_stabilizer96_is_nonsplit_central_cover_of_cube_symmetry",
+          "test_publication_renderer_and_docs_index_anchor",
+          "test_holonet_publication_insert_is_wired"
+        ]
+      },
+      {
+        "path": "tests/test_w33_projective_horizon_lag_law_20260910.py",
+        "exists": true,
+        "sha256": "309502c8c7d065dc97c9dab8ee737ba4b0b1cd436d9aaa25ed4d30b707b09e02",
+        "lines": 27,
+        "python_syntax": "PASS",
+        "purpose": "",
+        "definitions": [
+          "test_minus_one_over_84_is_pair_correlation_not_markov_decay"
+        ]
+      },
+      {
+        "path": "tests/test_w33_projective_phase_fibre_dichotomy_20260911.py",
+        "exists": true,
+        "sha256": "99a31b89c71a1c1198b29a1299c8df5b4296a917f18a8fe949fe809e33149eeb",
+        "lines": 34,
+        "python_syntax": "PASS",
+        "purpose": "",
+        "definitions": [
+          "test_projective_phase_fibre_dichotomy"
+        ]
+      },
+      {
+        "path": "tests/test_w33_schur176_qplus_macro_20260911.py",
+        "exists": true,
+        "sha256": "517ea404c81ea62dd428d419abb8d18b6a615d26d2d0fc7983359f2878dde16b",
+        "lines": 32,
+        "python_syntax": "PASS",
+        "purpose": "",
+        "definitions": [
+          "test_schur176_has_qplus_ruling_macro_skeleton"
+        ]
+      },
+      {
+        "path": "tests/test_w33_schur64_e7_threequbit_pauli_objectwise_20260911.py",
+        "exists": true,
+        "sha256": "d389e83bdf158c0d88ea7129d82cf537f5a783b5aa0e9975d43ca8b367b4bb2d",
+        "lines": 34,
+        "python_syntax": "PASS",
+        "purpose": "",
+        "definitions": [
+          "test_objectwise_schur64_e7_pauli_bridge"
+        ]
+      },
+      {
+        "path": "tests/test_w33_schur_central_phase_reye_20260911.py",
+        "exists": true,
+        "sha256": "f98f197b492f99f9c3b0e5322a3e03ff8dd5a176cbfdcdaa4cb3b74af0e1ca49",
+        "lines": 38,
+        "python_syntax": "PASS",
+        "purpose": "",
+        "definitions": [
+          "test_schur_central_phase_quotient_is_dual_reye"
+        ]
+      },
+      {
+        "path": "tests/test_w33_schur_extraspecial_coset_geometry_20260911.py",
+        "exists": true,
+        "sha256": "083eda8557bf17c79557d134134765490d491bb17de267dd3db3ca636d748805",
+        "lines": 32,
+        "python_syntax": "PASS",
+        "purpose": "",
+        "definitions": [
+          "test_schur_configuration_is_extraspecial_coset_geometry"
+        ]
+      },
+      {
+        "path": "tests/test_w33_schur_quartic_frontier_20260911.py",
+        "exists": true,
+        "sha256": "6bb313e12756c71f285d58c4282658e091588dd85461fe9c9795495eb1a36c8f",
+        "lines": 42,
+        "python_syntax": "PASS",
+        "purpose": "",
+        "definitions": [
+          "test_schur_d4_triality_bridge",
+          "test_bare_incidence_has_full_WF4_symmetry"
+        ]
+      },
+      {
+        "path": "tests/test_w33_swap_extension_class_localization_20260911.py",
+        "exists": true,
+        "sha256": "083a5fd2822dfd12b81b6fff3910de0a80f4718aba696c7856c1ed813c2e3e1a",
+        "lines": 27,
+        "python_syntax": "PASS",
+        "purpose": "",
+        "definitions": [
+          "test_swap_pullback_distinguishes_extension_classes"
+        ]
+      },
+      {
+        "path": "tests/test_w33_threeway_576_provenance_20260911.py",
+        "exists": true,
+        "sha256": "80020ca0d662417bb0777550140468db10f9b0703e56381aae4e9c1b162494c0",
+        "lines": 53,
+        "python_syntax": "PASS",
+        "purpose": "",
+        "definitions": [
+          "test_threeway_576_provenance_closes_exactly"
+        ]
+      },
+      {
+        "path": "tests/test_w33_trace_observer_finite_observability_20260910.py",
+        "exists": true,
+        "sha256": "7ec3493e7eeece664968498aa9e169c62d0a56384003115df417089ae4211fc7",
+        "lines": 34,
+        "python_syntax": "PASS",
+        "purpose": "",
+        "definitions": [
+          "test_trace_observer_is_exactly_four_step_observable"
+        ]
+      },
+      {
+        "path": "tools/bt1408_witting_contextual_communication_bridge.py",
+        "exists": true,
+        "sha256": "d84f53328bdbe043a7ce86a5be3a02de84e6f43f4e340449cb24aa765c482aa8",
+        "lines": 320,
+        "python_syntax": "PASS",
+        "purpose": "BT1408: bridge Witting contextual communication into the holonet ABI.\n\nVlasov's Witting-polytope communication scheme uses 40 ququart states and 40\northogonal tetrads.  The architectural point is that a delayed-query round\nsplits around any selected ray as\n\n    1 same ray + 12 compatible orthogonal rays + 27 incompatible rays = 40.\n\nThus the accepted key-agreement probability is 13/40.  BT1408 connects that\nexternal communication scheme to the local holonet ABI: the four slots of an\naccepted tetrad are exactly the four BT1374 mirror-slot residues, and an\naccepted round can be carried by the BT1407 72-tick transaction.\n\nTerminology firewall (2026-09-09): the exact 4/40 = 1/10 quantity is the\nKochen--Specker satisfiability defect.  The Abramsky--Barbosa contextual\nfraction of the strongly contextual W(3,3) empirical model is 1.  These are\nseparate quantities and are emitted under separate field names below.",
+        "definitions": [
+          "load_json",
+          "construct_witting_40_rays",
+          "orthogonal",
+          "find_tetrads",
+          "memberships",
+          "pair_profile",
+          "build_result",
+          "main"
+        ]
+      },
+      {
+        "path": "tools/bt1409_witting_duplex_admission_scheduler.py",
+        "exists": true,
+        "sha256": "aa64d7484ca7dd870b790caa251a6878339d1b13aabbd5b015d1606496d0f48e",
+        "lines": 274,
+        "python_syntax": "PASS",
+        "purpose": "BT1409: split Witting communication into state and basis admission laws.\n\nBT1408 proved the state-compatibility shell for a Witting communication round:\n\n    1 same + 12 compatible + 27 incompatible = 40, so accepts at 13/40.\n\nBT1409 adds the second layer that the architecture needs.  A selected Witting\nray lives in exactly four tetrads.  Therefore the basis/witness aperture is\n\n    4 accepted bases / 40 bases = 1/10.\n\nTerminology firewall (2026-09-09): 1/10 is the exact Kochen--Specker\nsatisfiability defect / witness-aperture rate.  It is NOT the\nAbramsky--Barbosa contextual fraction.  The latter is 1 for the strongly\ncontextual W(3,3) empirical model because there is no global section/ovoid.",
+        "definitions": [
+          "fraction_text",
+          "classify_for_ray",
+          "build_result",
+          "main"
+        ]
+      }
+    ]
+  },
+  "holotrade": {
+    "base": "49c10ab",
+    "tip": "a1df519",
+    "changed_files": 109,
+    "files": [
+      {
+        "path": ".github/workflows/exceptional_depth_derivative_automaton.yml",
+        "exists": true,
+        "sha256": "991f71d205ecb52dc4ef6f02c934580db4a2bc0afd5a33592190fa1e1003e8fd",
+        "lines": 35
+      },
+      {
+        "path": ".github/workflows/five_frontier_master_certificate.yml",
+        "exists": true,
+        "sha256": "07675769d891bb846d94b48acf3d95cf81da1965b81b3971a57791d313b93f4b",
+        "lines": 31
+      },
+      {
+        "path": ".github/workflows/mass20_real_l1_exceptional_filtration.yml",
+        "exists": true,
+        "sha256": "a79c8bc74c98aeb0f2923f365df3b27fa9fb22ee0fe658919a7f7e58ebd18088",
+        "lines": 27
+      },
+      {
+        "path": ".github/workflows/mass24_1080_gset_character_fingerprint.yml",
+        "exists": true,
+        "sha256": "7ab3a1afbc29d367b9cebc4aec8cd78e2a3887eacb83f9dac5a207fe3cc62e5a",
+        "lines": 37
+      },
+      {
+        "path": ".github/workflows/mass24_1080_irreducible_decomposition.yml",
+        "exists": true,
+        "sha256": "06f7adb4eb6919b342cda327aa801855c087c6053c2e9e22e482310714efb1a1",
+        "lines": 41
+      },
+      {
+        "path": ".github/workflows/mass24_depth3_steinberg_real_l1.yml",
+        "exists": true,
+        "sha256": "bb08ef25032f79e7a1c1a170479e1ef5cc35af4ff9961dc1902ac7e94477ce2d",
+        "lines": 37
+      },
+      {
+        "path": ".github/workflows/mass24_mass20_real_l1_frontier.yml",
+        "exists": true,
+        "sha256": "e9a9f6d9b6c8292a4d993b46f81de80e7dddf0a5cb0e046552387db67fd16d1b",
+        "lines": 44
+      },
+      {
+        "path": ".github/workflows/mass24_steinberg_cross_intertwiners.yml",
+        "exists": true,
+        "sha256": "3ea202335f5d7ec05b1278554583484eac463faba9bdb8ddb5c13a689c3b9a8f",
+        "lines": 35
+      },
+      {
+        "path": ".github/workflows/mass24_steinberg_full_m8_algebra.yml",
+        "exists": true,
+        "sha256": "655a3a3dfae699988fe5a66c0dc3dd4dad658a28aacc915b2ab03e7c8bbded81",
+        "lines": 27
+      },
+      {
+        "path": ".github/workflows/mass24_steinberg_gram192_w33_comparison.yml",
+        "exists": true,
+        "sha256": "e5da70082bf53cefef15759d45c0cd91440043f2b4273940349123ec05c09f42",
+        "lines": 38
+      },
+      {
+        "path": ".github/workflows/mass24_steinberg_integral_gram_gauge.yml",
+        "exists": true,
+        "sha256": "4bcf7d632f92f6e28fe0bf0277ca3324db4a8159bb571e8fccd3621f579a58f1",
+        "lines": 27
+      },
+      {
+        "path": ".github/workflows/mass24_steinberg_matrix_units.yml",
+        "exists": true,
+        "sha256": "cfc65fdc9e424827f7fd7d3eeb45866d3438ff371528a4ca3c89a3458d99f80d",
+        "lines": 36
+      },
+      {
+        "path": ".github/workflows/mass28_depth3_descendant_structure.yml",
+        "exists": true,
+        "sha256": "946a398fcc1b720967a4a07b2251349c0e2d8dfcc987cbeba859c0cd2265181e",
+        "lines": 38
+      },
+      {
+        "path": ".github/workflows/mass28_depth4_birth_frontier.yml",
+        "exists": true,
+        "sha256": "09f8eb3d16e2d718d9180c370b1e167efd9ef50ff9f8179ca8db6369e0bac55b",
+        "lines": 43
+      },
+      {
+        "path": ".github/workflows/mass36_depth4_lineage_real_integer.yml",
+        "exists": true,
+        "sha256": "1c6b35b75af32300b2c6eac73091b0e7d2d1da2c537fa5bcc4bb5850a542d192",
+        "lines": 28
+      },
+      {
+        "path": ".github/workflows/mass36_depth4_structural_types.yml",
+        "exists": true,
+        "sha256": "244069d1954e731c690fa319397b1fc87c83e28e315cb6e8bd270544bff8b7ec",
+        "lines": 35
+      },
+      {
+        "path": ".github/workflows/mass36_no_pencil_candidate_hunt.yml",
+        "exists": true,
+        "sha256": "d14f2d0fe95a1eede5ff65f6e52d571275ee2bc523447927a5e3d8974bfb44fb",
+        "lines": 30
+      },
+      {
+        "path": ".github/workflows/mass36_real_integer_gap_frontier.yml",
+        "exists": true,
+        "sha256": "6e17aa4c24c0e53ec85c6d8c9238bd270e5b9fe0040e17f64bbeec42a9a27e74",
+        "lines": 26
+      },
+      {
+        "path": ".github/workflows/mass40_no_pencil_depth5_frontier.yml",
+        "exists": true,
+        "sha256": "19644410757fa4910c2d12237b568e295a7d7cb7327e1ef79c24740c1bcf6a61",
+        "lines": 47
+      },
+      {
+        "path": ".github/workflows/octet_circuit_decoder_instance.yml",
+        "exists": true,
+        "sha256": "ba9af847b07778aff098a80959dafceb15d98a0cca5dd33b16d2e3746f272421",
+        "lines": 32
+      },
+      {
+        "path": ".github/workflows/octet_circuit_library_minimization.yml",
+        "exists": true,
+        "sha256": "d5a057d76d513eea09d50237d4554d64c28235b719f45a4677d24fdcdc14a59d",
+        "lines": 28
+      },
+      {
+        "path": ".github/workflows/octet_circuit_radius_two_obstruction.yml",
+        "exists": true,
+        "sha256": "4f73a6a714195d0f535488ffbf4fed628019056ad2c9dac281e6444c7c467fa0",
+        "lines": 55
+      },
+      {
+        "path": ".github/workflows/octet_gauge_radius_two_cutting_plane.yml",
+        "exists": true,
+        "sha256": "569411eda886ba4ecaa84d9e66ead26002c1bea085925c11f9df030fbeeb7497",
+        "lines": 31
+      },
+      {
+        "path": ".github/workflows/octet_gauge_radius_two_cutting_plane_all7.yml",
+        "exists": true,
+        "sha256": "f871e553ace7434f20ae8cf92a770e2e7775a1aae5c5618eeb2df55ed2bf6c2b",
+        "lines": 30
+      },
+      {
+        "path": ".github/workflows/octet_gauge_radius_two_global_attack.yml",
+        "exists": true,
+        "sha256": "9aa1586ccef0184b592da117fab055cb41a2e56e0495db904a12836331e7f2d0",
+        "lines": 27
+      },
+      {
+        "path": ".github/workflows/octet_graver_intrinsic15.yml",
+        "exists": true,
+        "sha256": "25f5f12f50cb35e13593b201d57afe7a01a68ebbc80ee352459e45bf25c0bde0",
+        "lines": 57
+      },
+      {
+        "path": ".github/workflows/octet_graver_radius_two.yml",
+        "exists": true,
+        "sha256": "b21667b5c0841b0733eb28ce00c2bb43c03b630bbb32ff0be6ad720b9e05ebe4",
+        "lines": 60
+      },
+      {
+        "path": ".github/workflows/octet_hybrid_certified_decoder.yml",
+        "exists": true,
+        "sha256": "9139127d6ec18371809ff66de7252ce940199d99592da1c064c4f6595e39db4f",
+        "lines": 28
+      },
+      {
+        "path": ".github/workflows/octet_single_circuit_obstruction.yml",
+        "exists": true,
+        "sha256": "67201ec567be3a5e32f5e69e49b92db6a6b99cb3b0603b6904d2435b5a3e1e0b",
+        "lines": 27
+      },
+      {
+        "path": ".github/workflows/optimal_negativity_discrete_derivative.yml",
+        "exists": true,
+        "sha256": "9d7cb4190f1cd1ebcb3f10bb0eab113d8c2a3715e40b0bdec9adedf672d60288",
+        "lines": 27
+      },
+      {
+        "path": ".github/workflows/real_integer_negativity_gap_frontier.yml",
+        "exists": true,
+        "sha256": "72d829d36efede612a057437de06d5b691ace1d760a094ad83ce6672528ce7e6",
+        "lines": 42
+      },
+      {
+        "path": ".github/workflows/w33-quantum-routing-benchmark.yml",
+        "exists": true,
+        "sha256": "07ee49045fb2281b6512270b5d279a09579eef869e5f0696affc92235954bcfb",
+        "lines": 42
+      },
+      {
+        "path": ".github/workflows/w33_certified_decoder_transaction.yml",
+        "exists": true,
+        "sha256": "e05110864c0a31c793bec090ba75c1a3807a4d10ca6b9788e2e43962a4567761",
+        "lines": 25
+      },
+      {
+        "path": ".github/workflows/w33_depth3_dynamic_resource.yml",
+        "exists": true,
+        "sha256": "fa0a72ae60994fe3eb0baff221dc713a8cf6b25aa4492e21d27f8e3a77ef0385",
+        "lines": 47
+      },
+      {
+        "path": ".github/workflows/w33_dynamic_resource_telemetry.yml",
+        "exists": true,
+        "sha256": "e58c4f9d225c5f0d5e94e2c1ebc371df5ad9984984ae5bc5e62df8747bf16beb",
+        "lines": 44
+      },
+      {
+        "path": ".github/workflows/w33_representation_history_attestation.yml",
+        "exists": true,
+        "sha256": "31587debcfcdb1c3356fb0206750e5b999945ef9417ce5b0db0fc1a8c36aa4a0",
+        "lines": 51
+      },
+      {
+        "path": ".github/workflows/w33_representation_market_identity.yml",
+        "exists": true,
+        "sha256": "df4d15caed4f0201b6e9afda0233a25206efcf7611f31cbfb8974ef8c579aeb5",
+        "lines": 48
+      },
+      {
+        "path": ".github/workflows/w33_representation_market_merkle_provenance.yml",
+        "exists": true,
+        "sha256": "f6942957cc408c3d7e9c1c9298f9d1b65d54a422242236fe8c6e8be6305b34a7",
+        "lines": 35
+      },
+      {
+        "path": ".github/workflows/w33_representation_market_provenance.yml",
+        "exists": true,
+        "sha256": "2f22fc3c91bbeda1849bd2936075df4cba08ef4944781f77b116ad512adad1c1",
+        "lines": 32
+      },
+      {
+        "path": ".github/workflows/w33_signed_resource_scheduler.yml",
+        "exists": true,
+        "sha256": "f1af911c9c6069ab549e4b571a25d181ea03defb0f604e8e2bde69e054825b28",
+        "lines": 46
+      },
+      {
+        "path": "analysis/check_five_frontier_master_certificate.py",
+        "exists": true,
+        "sha256": "51fcb37839fb5f8e0b0828fc2f15a80b224c10a025ac9ffe0f07e90fed6ba4bb",
+        "lines": 86,
+        "python_syntax": "PASS",
+        "purpose": "Validate the frozen 2026-09-11 five-frontier synthesis against source certificates.",
+        "definitions": [
+          "load",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/exceptional_depth_derivative_automaton.py",
+        "exists": true,
+        "sha256": "c8ef4f3d530174a3ee49d0d18785014782b6cd7183afa444fbbaa61337ac70c1",
+        "lines": 157,
+        "python_syntax": "PASS",
+        "purpose": "Finite-state derivative automaton for exceptional W33 negativity depth.\n\nFor any certified parent excess e of mass 4k and exact integer negativity depth d,\nthe universal pencil derivative theorem gives\n\n    d(e + P_p) = d-1  iff p is negative in some optimal preimage of e,\n                     d otherwise.\n\nThus one does not need to re-optimize all 40 children.  We solve the finite\noptimal-support feasibility problem at the parent, compute the parent stabilizer\ninside the exact 25,920-element PSp(4,3) point action, quotient the 40 points by\nthat stabilizer, and emit one transition for each point orbit.  The target child\nis independently canonicalized under PSp(4,3).\n\nThe regression parents are the unique mass-24 depth-3 birth and BOTH newly\ncertified mass-32 depth-4 births.  The latter predicts their complete immediate\nmass-36 descendant depths exactly, extending the automaton beyond the census\nthat discovered them.",
+        "definitions": [
+          "addv",
+          "optimal_negative_support",
+          "generic_mass_orbit_actions",
+          "parent_stabilizer_point_orbits",
+          "automaton_parent",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/exceptional_depth_derivative_automaton_certificate.json",
+        "exists": true,
+        "sha256": "946be933b7f239d581bee88c84011b07d82d305b6d702bf73acc1f638f097e65",
+        "lines": 64,
+        "json_parse": "PASS",
+        "keys": [
+          "alphabet",
+          "boundary",
+          "group",
+          "groupOrder",
+          "mass24Regression",
+          "mass32Extension",
+          "schema",
+          "states",
+          "status",
+          "theorem",
+          "transitionLaw",
+          "source"
+        ],
+        "declared_status": "PASS",
+        "headline": "The universal discrete derivative law turns every certified exceptional orbit into a finite deterministic depth-transition state once its optimal-negative support is known. Quotienting points by the exact parent stabilizer compresses forty pencil additions to a finite alphabet without losing depth or target-orbit information. The certificate instantiates this for the mass-24 depth-3 birth and both first mass-32 depth-4 births, thereby predicting all their immediate mass-36 child depths without child depth optimization."
+      },
+      {
+        "path": "analysis/five_frontier_master_certificate_20260911.json",
+        "exists": true,
+        "sha256": "ff13b48721a9eb906aec00dbde4db39a883efdffff417a20b2dce97a41bd339a",
+        "lines": 83,
+        "json_parse": "PASS",
+        "keys": [
+          "schema",
+          "status",
+          "scope",
+          "frontiers",
+          "jointReading",
+          "boundary",
+          "sourceCommits",
+          "validation"
+        ],
+        "declared_status": "PASS",
+        "headline": "Exact finite combinatorics, integer/rational optimization, cryptographic provenance, and rational finite-group representation theory only. None of these results is a claim about physical energy, experimental quantum advantage, fault tolerance, or hardware dynamics."
+      },
+      {
+        "path": "analysis/mass20_real_l1_exceptional_filtration.py",
+        "exists": true,
+        "sha256": "e153d65a10c92d11cb764091c73e33c4e8c9dfa36a6c2975bf7bb3d0d6bbaa70",
+        "lines": 57,
+        "python_syntax": "PASS",
+        "purpose": "Exact real-l1 filtration for the complete exceptional mass-20 sector.\n\nThis intentionally avoids the slower positive-cover orbit census.  The\nexceptional classification is already exhaustive: 51 contained-pencil\nmass-16 descendants from the seven complete exceptional parent orbits, plus the\nsingle exhaustively certified no-pencil mass-20 orbit.  Positive mass-20\nclasses satisfy gamma_R=5 and delta_R=0 analytically.",
+        "definitions": [
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/mass24_1080_gset_character_fingerprint.py",
+        "exists": true,
+        "sha256": "be7b180e26dcc212a6f5d5aa32afce4e47dd978b0d74fe648ea8b51c5dda8d80",
+        "lines": 194,
+        "python_syntax": "PASS",
+        "purpose": "Exact representation-theoretic fingerprint of the two 1080-point PSp(4,3)-sets.\n\nThe unique mass-24 depth-three orbit and the existing obstruction carrier both\nhave degree 1080 and point stabilizer order 24, yet an explicit equivariant\nbijection search found none.  This script explains *why* by working entirely in\nPSp(4,3) acting faithfully on the 40 W(3,3) points.\n\nFor each action we recover the order-24 stabilizer of a base point.  Conjugacy\nclasses of the 25,920 projective group are generated exactly from the same four\ncertified transvections.  For a transitive G/H action,\n\n    chi(g) = |C_G(g)| * |g^G cap H| / |H|.\n\nThus class intersections with the two stabilizers give both permutation\ncharacters exactly.  From the characters we also obtain the orbital ranks\n<chi,chi> and the complex permutation-module intertwiner dimension\n<chi_mass,chi_obstruction>.\n\nNo physical interpretation is attached to these finite representation data.",
+        "definitions": [
+          "compose",
+          "inv",
+          "perm_order",
+          "same_generators",
+          "build_group_with_base_images",
+          "conjugacy_classes",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/mass24_1080_irreducible_decomposition.py",
+        "exists": true,
+        "sha256": "6a1a98f15b2a47cb12c57708e1eee2383ad3ffcf18c2bff62b03bcfda2b1e05c",
+        "lines": 84,
+        "python_syntax": "PASS",
+        "purpose": "Exact irreducible decomposition of the two degree-1080 PSp(4,3) actions.\n\nThe mass-24 depth-three orbit and the obstruction carrier are reconstructed in\nthe same faithful 40-point PSp(4,3) permutation group used by the green\ncharacter-fingerprint certificate. Their point stabilizers H_m,H_o have order\n24. We export those actual subgroups of the same permutation group to GAP and\ncompute C[G/H_m] and C[G/H_o] against Irr(G). The unique degree-81 irreducible\nis recorded explicitly as the Steinberg constituent.",
+        "definitions": [
+          "gap_perm",
+          "gap_list",
+          "build_actions",
+          "run_gap",
+          "ints",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/mass24_birth_mass20_census_real_l1.py",
+        "exists": true,
+        "sha256": "9947436c30b0287ada84d333ba8b199d6ce5015e33c743b6890f85766d1dfc0c",
+        "lines": 289,
+        "python_syntax": "PASS",
+        "purpose": "Complete the mass-20 orbit/depth census, extend delta_R, and attack mass 24.\n\nThree evidence layers are kept separate.\n\n1. Positive mass-20 excesses are exactly the incidence sums of five point\n   pencils.  We enumerate every 5-multiset of the 40 points, quotient those\n   covers by the exact PSp(4,3) action, and then quotient their excess vectors.\n2. Exceptional mass-20 excesses either contain a pencil and descend from the\n   complete seven-orbit mass-16 exceptional census, or contain no pencil.  The\n   latter sector was exhaustively closed by workflow 34375107072: 5,184 vectors,\n   one orbit of size 5,184, exact depth 2.  We re-verify that frozen\n   representative against the current geometry and merge it with the complete\n   one-pencil descendant frontier.  This gives a complete mass-20 orbit census.\n3. A mass-24 depth >=3 class containing a pencil would descend to a mass-20\n   class of depth >=3 because +pencil cannot increase integer negativity.\n   Therefore, after the complete mas",
+        "definitions": [
+          "addv",
+          "excess_from_multiset",
+          "point_action_generators",
+          "multiset_orbit",
+          "positive_mass20_orbits",
+          "small_depth_witness",
+          "complete_mass20_and_real_l1",
+          "mass24_no_pencil_search",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/mass24_depth3_steinberg_real_l1.py",
+        "exists": true,
+        "sha256": "036dc4ed43bad0f555614e9731c6c5a2ae404bf64f5cc8c16a257e806a2f76be",
+        "lines": 201,
+        "python_syntax": "PASS",
+        "purpose": "Exact cross-repo analysis of the unique mass-24 depth-three orbit.\n\nTwo questions are kept logically separate.\n\n1. Is the 1,080-element PSp(4,3) orbit discovered at mass 24 actually the\n   existing 1,080-point obstruction carrier used by the W33 Steinberg model?\n   We reconstruct the SAME four transvections on both finite G-sets and search\n   for an explicit generator-by-generator equivariant bijection.  Matching\n   degree or stabilizer order alone is not accepted.\n2. What is the exact real l1 optimum of the depth-three representative?  The\n   Holotrade rational primal/dual LP certificate gives gamma_R.  For mass 24,\n   k=6 and delta_R=(gamma_R-6)/2, while A=gamma_R/6 and A^2 is the signed\n   sampling second-moment factor.\n\nThe output is finite algebra / exact representation economics.  A, A^2 and\nnegativity are not physical energy, magic, or a hardware performance claim.",
+        "definitions": [
+          "act_vector",
+          "matching_line_generators",
+          "mass_orbit_actions",
+          "equivariant_bijections",
+          "exact_real_l1",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/mass24_no_pencil_depth3_birth_certificate.json",
+        "exists": true,
+        "sha256": "b1c9bb3f9f8706b7b127bf79b49bd530f3c63d0453c0c9fa686049c9f4de20fe",
+        "lines": 38,
+        "json_parse": "PASS",
+        "keys": [
+          "bornDepthAtLeast3",
+          "budgetSeconds",
+          "complete",
+          "depth3ExistenceProved",
+          "groupOrder",
+          "hitCap",
+          "noDepth3Mass24Proved",
+          "orbitSeedsFound",
+          "proofBoundary",
+          "schema",
+          "seconds",
+          "solutionCap",
+          "solutionsFound",
+          "solverStatus",
+          "status",
+          "unknownExactDepthRepresentatives",
+          "noPencilOrbitDepthCounts",
+          "certificateJsonSha256",
+          "workflow",
+          "note"
+        ],
+        "declared_status": "PASS",
+        "headline": ""
+      },
+      {
+        "path": "analysis/mass24_steinberg_cross_intertwiners.py",
+        "exists": true,
+        "sha256": "5144e5bc63647892f06e06f383fda82e6626b73c88383d1c6ba40210ecb50d6d",
+        "lines": 166,
+        "python_syntax": "PASS",
+        "purpose": "Materialize the 15 Steinberg channels between the two 1080 PSp(4,3) carriers.\n\nThe mass-24 depth-three permutation module has Steinberg multiplicity five and\nthe obstruction carrier has multiplicity three.  A character calculation gives\n15 for the Steinberg-only cross Hom dimension, but a dimension count is not an\nintertwiner.\n\nThis script constructs the full 61-dimensional cross orbital Hom space\nHom_G(C[mass], C[obstruction]) and lets each of the obstruction carrier's three\nexplicit rational primitive rank-81 Steinberg projectors act on it.  Each\nprojector has rank five on the cross Hom space; the three images are pairwise\northogonal and their direct sum has rank 15.\n\nEach reported channel is stored as a sparse rational coefficient vector in the\n61 cross-orbital basis.  This is an exact compact representation of a\n1080x1080 G-equivariant matrix, avoiding fifteen dense million-entry matrices.",
+        "definitions": [
+          "obstruction_primitive_projectors",
+          "mass_action",
+          "cross_projector_matrix",
+          "sparse_column",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/mass24_steinberg_full_m8_algebra.py",
+        "exists": true,
+        "sha256": "5f331ff590dfd9013284be38e8d1381bc2b7fd3b3934fb8783e1ddc8d9e8de7f",
+        "lines": 106,
+        "python_syntax": "PASS",
+        "purpose": "Close the Steinberg multiplicity bridge as a full M8(Q) composition algebra.\n\nThe previously certified obstruction M3 matrix units, mass M5 matrix units and\n3x5 / 5x3 rectangular dual channels are the four blocks of one 8x8 matrix-unit\nsystem on the multiplicity space of the common 81-dimensional Steinberg\nirreducible.  This script verifies the full abstract 64-unit multiplication\ntable exactly, then exhibits a nontrivial block-diagonal multiplicity-frame\nchange that fixes the carrier split while changing primitive matrix units.\n\nConsequently PSp(4,3) symmetry alone does not canonically choose the three and\nfive primitive Steinberg copies or the 15 aligned channels.  The canonical\nobjects are the isotypic blocks and the whole cross-Hom space; individual\nchannels require extra structure.",
+        "definitions": [
+          "E",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/mass24_steinberg_full_m8_algebra_certificate.json",
+        "exists": true,
+        "sha256": "1e8c9a43ce198e66212c5abd26a217d5c815bdba3cde8014cee6376d445c397b",
+        "lines": 44,
+        "json_parse": "PASS",
+        "keys": [
+          "automorphismStructure",
+          "blockDimensions",
+          "boundary",
+          "canonicalityResult",
+          "carrierSplitProjectorRanks",
+          "combinedMultiplicity",
+          "combinedSteinbergIsotypicRank",
+          "explicitSplitPreservingGauge",
+          "fullCommutantAlgebra",
+          "fullCommutantDimension",
+          "group",
+          "groupOrder",
+          "massSteinbergIsotypicRank",
+          "matrixUnitCount",
+          "matrixUnitLabels",
+          "matrixUnitProductsChecked",
+          "multiplicitySplit",
+          "nonzeroMatrixUnitProducts",
+          "obstructionSteinbergIsotypicRank",
+          "schema",
+          "sourceMatrixUnitCertificate",
+          "status",
+          "steinbergDegree",
+          "theorem",
+          "zeroMatrixUnitProducts"
+        ],
+        "declared_status": "PASS",
+        "headline": "The obstruction and mass-24 Steinberg sectors combine as St tensor Q^8, and their certified M3, M5 and rectangular Morita blocks assemble into the full rational commutant M8(Q). The carrier split is stabilized by (GL3 x GL5)/Q^x. Therefore finite-group symmetry alone cannot eliminate the primitive-projector/channel basis choice; only the isotypic blocks and cross-Hom space are canonical without additional structure."
+      },
+      {
+        "path": "analysis/mass24_steinberg_gram192_w33_comparison.py",
+        "exists": true,
+        "sha256": "ca166d3fb7936324fefc6913d2cad059df0c9ce3fe19af26323070f793ed7009",
+        "lines": 118,
+        "python_syntax": "PASS",
+        "purpose": "Compare the projective order-192 Gram symmetry with existing W33 192s.\n\nThe integral Steinberg bridge certificate produces\n    Gamma = (Aut(I3) x Aut(G5)) / <(-I3,-I5)>\nof order 192, with Aut(I3)=C2 x S4 and Aut(G5)=C2^3.  Abstractly the diagonal\ncentral quotient is S4 x C2^3.\n\nWe compare Gamma with two independently defined order-192 groups:\n  * the W33 Pass5705 magnetic group G96 x C2, whose frozen fingerprint has\n    center order 4 and derived subgroup order 24;\n  * W(D4), the even signed permutation group C2^3 : S4, whose center and\n    derived subgroup are computed directly here.\n\nOrder equality alone is therefore decisively rejected.  At the same time Gamma\nhas an exact positive connection to the W33 projective cube/frame controller\nC2 x S4: Gamma ~= (C2 x S4) x C2^2.",
+        "definitions": [
+          "porder",
+          "gram192_hist",
+          "wd4_elements",
+          "comp",
+          "inv",
+          "order",
+          "closure",
+          "wd4_fp",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/mass24_steinberg_integral_gram_gauge.py",
+        "exists": true,
+        "sha256": "13b882b5c553a846bd2f878cc2cf6460baf69fa539f2220ee6856c1c6024c2cd",
+        "lines": 124,
+        "python_syntax": "PASS",
+        "purpose": "Add an exact integral Gram-lattice structure to the Steinberg M8 gauge.\n\nPSp(4,3) alone sees St tensor Q^8 and therefore leaves a PGL8(Q) multiplicity\nframe gauge.  The matrix-unit construction also produced an exact integral\n5x5 Gram matrix for the five mass-side bridge seeds.  If we retain that\nintegral lattice, the allowed mass-frame changes collapse from GL5(Q) to the\nfinite integral isometry group Aut(Z^5,G).\n\nThis script enumerates that group exactly.  It then combines G with the\nstandard rank-3 trace lattice on the obstruction primitive-copy frame.  Because\nthe obstruction block has norm-one vectors while the mass lattice has minimum\nnorm eight, the rank-3 block is intrinsically recovered as the span of the\nnorm-one shell.  Hence the full split-lattice isometry group factors exactly.\n\nThis is additional structure, not a consequence of PSp symmetry alone.",
+        "definitions": [
+          "q",
+          "ip",
+          "exact_floor_sqrt_rat",
+          "candidates",
+          "matkey",
+          "order",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/mass24_steinberg_integral_gram_gauge_certificate.json",
+        "exists": true,
+        "sha256": "c30afb197c30296201b38de523f580dc245342fa3e6a81c2483e7d575ae384bd",
+        "lines": 24,
+        "json_parse": "PASS",
+        "keys": [
+          "schema",
+          "status",
+          "sourceGramDeterminant",
+          "massGramMatrix",
+          "leadingPrincipalMinors",
+          "massMinimumNorm",
+          "massMinimumShell",
+          "massIntegralIsometryGroup",
+          "massIntegralIsometryGroupOrder",
+          "massIntegralIsometryElementOrders",
+          "obstructionStandardTraceLatticeAutOrder",
+          "combinedIntegralSplitLatticeAutOrder",
+          "combinedProjectiveAutOrderModuloGlobalSign",
+          "splitRecoveredFromNormShell",
+          "canonicalMassLineFromShortestShell",
+          "source",
+          "theorem",
+          "boundary"
+        ],
+        "declared_status": "PASS",
+        "headline": "After adjoining the certified integral bridge Gram lattice, the continuous mass-side GL5(Q) frame gauge reduces to Aut(Z^5,G)=C2^3 of order 8. For the block lattice I3 direct-sum G, the norm-one shell intrinsically recovers the obstruction rank-3 block; the split-preserving integral isometry group has order 384 and its quotient by central global sign has order 192."
+      },
+      {
+        "path": "analysis/mass24_steinberg_matrix_units.py",
+        "exists": true,
+        "sha256": "1c68826bb00d9142963cd8c020ec37f4fbce5f2f04aeaa2f6b637bd7fb79e147",
+        "lines": 224,
+        "python_syntax": "PASS",
+        "purpose": "Construct exact M3/M5 matrix units and the 3x5 Steinberg bridge.\n\nThe two non-isomorphic degree-1080 PSp(4,3) permutation modules contain the\n81-dimensional Steinberg irreducible with multiplicities 3 (obstruction) and 5\n(mass-24 exceptional carrier).  The previously materialized 15-dimensional\ncross Hom space should therefore be the rectangular Morita bimodule\nMat_{3x5}(Q) on this isotypic sector.\n\nThis script proves that statement constructively.  It selects five exact cross\nmaps into one obstruction Steinberg copy, computes their rational Gram matrix,\ndualizes them, obtains five explicit primitive mass-side projectors and all 25\nM5 matrix units, constructs normalized inter-copy maps among the three\nobstruction copies and all 9 M3 matrix units, then aligns the 15 cross channels\nas E_ai with dual reverse channels F_ia.\n\nAll matrices are stored compactly in orbital bases.  \"Channel\" means a finite\nG-intertwiner, not a physical communication or quantum hardware channel.",
+        "definitions": [
+          "zero",
+          "sparse",
+          "lincomb",
+          "scalar_against",
+          "transpose_coeff",
+          "cross_reverse",
+          "reverse_cross",
+          "left_obs_cross",
+          "reverse_right_obs",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/mass24_steinberg_matrix_units_certificate.json",
+        "exists": true,
+        "sha256": "933b100f5c0c792e373be55cb1e202a8538239e31b4f1c43caafd0e3e38167c0",
+        "lines": 38,
+        "json_parse": "PASS",
+        "keys": [
+          "schema",
+          "status",
+          "group",
+          "groupOrder",
+          "degree",
+          "steinbergDegree",
+          "obstructionOrbitalRank",
+          "massOrbitalRank",
+          "crossOrbitalRank",
+          "obstructionMultiplicity",
+          "massMultiplicity",
+          "rectangularDimension",
+          "gramDeterminant",
+          "massPrimitiveRanks",
+          "massSteinbergIsotypicRank",
+          "obstructionPrimitiveRanks",
+          "massMatrixUnitCount",
+          "obstructionMatrixUnitCount",
+          "rectangularChannelCount",
+          "exactChecks",
+          "sourceArtifact",
+          "theorem",
+          "boundary"
+        ],
+        "declared_status": "PASS",
+        "headline": "The Steinberg isotypic endomorphism algebras of the obstruction and mass-24 carriers contain explicit rational matrix-unit systems M3(Q) and M5(Q). The 15 exact aligned cross intertwiners form the corresponding 3x5 rectangular Morita bimodule."
+      },
+      {
+        "path": "analysis/mass28_depth3_descendant_structure.py",
+        "exists": true,
+        "sha256": "a29db7480d4fe7dac9e7dcbcb73236eb2569e24e02a7d9f962acb3dfe78bf7b8",
+        "lines": 152,
+        "python_syntax": "PASS",
+        "purpose": "Structural classification of the five mass-28 children of the depth-3 parent.\n\nLet e be the unique mass-24 depth-three representative and P_p the pencil at\npoint p.  On integer preimages, e -> e+P_p is exactly x -> x+unit_p.\nTherefore\n\n    depth(e+P_p) <= depth(e)-1\n\niff there exists an *optimal* preimage x of e with x_p < 0.  The reverse\nimplication follows by subtracting unit_p from any child preimage of depth at\nmost d-1.  This gives an intrinsic, stabilizer-invariant predictor of when a\npencil child drops from depth three to depth two.\n\nFor this parent, optimal negative mass is 3 and total point coefficient sum is\n6, hence every optimal preimage has negative mass 3 and positive mass 9.  The\nfeasibility search is therefore finite with -3 <= x_p <= 9 and is exact.\n\nWe also recover the parent stabilizer (order 24) inside PSp(4,3), compute its\nfive point orbits, and attach simple local incidence signatures to each orbit.",
+        "definitions": [
+          "addv",
+          "optimal_negative_support",
+          "parent_stabilizer_point_orbits",
+          "child_depths",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/mass28_depth4_birth_frontier.py",
+        "exists": true,
+        "sha256": "d8c89c13b5a64b3da480ce7c0e42ab8fe6b098d85758cfdcf2d215a5b75e2c3c",
+        "lines": 120,
+        "python_syntax": "PASS",
+        "purpose": "Mass-28 lineage and depth-four birth frontier.\n\nThe unique mass-24 depth-three no-pencil orbit is used in two complementary\nways.\n\n* INHERITED LINEAGE: add each of the 40 point pencils to its representative,\n  quotient by PSp(4,3), and compute the exact integer negativity depth of every\n  resulting mass-28 orbit.  These are the immediate children of the new\n  depth-three class.\n* BIRTH SECTOR: a mass-28 class of depth >=4 that contains a point pencil would\n  descend to a mass-24 class of depth >=4, impossible because the complete\n  mass-24 census has maximum depth 3.  Therefore depth four can only be born in\n  the no-contained-pencil mass-28 sector.  CP-SAT enumerates that sector and\n  every orbit representative is sent to exact integer depth minimization.\n\nEnumeration completeness and per-orbit depth completeness are reported\nseparately.  Timeouts/caps are never promoted to absence theorems.",
+        "definitions": [
+          "addv",
+          "inherited",
+          "no_pencil",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/mass32_depth4_birth_certificate.json",
+        "exists": true,
+        "sha256": "df28ec451751f4b598c9a992966677d14dcd75bb9c04a5da835c033b3f5df7ff",
+        "lines": 55,
+        "json_parse": "PASS",
+        "keys": [
+          "boundary",
+          "deltaRealHistogram",
+          "depth4BirthOrbitCount",
+          "depth4Births",
+          "firstDepth4MassProved",
+          "integerDepthHistogram",
+          "k",
+          "mass",
+          "noPencilEnumerationComplete",
+          "noPencilOrbitCount",
+          "proof",
+          "rawSolutionsFound",
+          "realIntegerStatement",
+          "schema",
+          "source",
+          "status"
+        ],
+        "declared_status": "PASS",
+        "headline": "Exact finite W(3,3) signed-preimage optimization. Negativity and l1 values are representation/estimator quantities, not physical energy, magic-state cost, or hardware performance."
+      },
+      {
+        "path": "analysis/mass36_depth4_lineage_real_integer.py",
+        "exists": true,
+        "sha256": "b07a4c9d4310e54381bb158f6f90e79d0501d607e83a1b87d108ea3c1e0db7d8",
+        "lines": 107,
+        "python_syntax": "PASS",
+        "purpose": "Exact mass-36 lineage of the two first W33 depth-four births.\n\nThe frozen derivative-automaton certificate predicts all immediate pencil\nchildren of the two mass-32 depth-four birth orbits.  This script reconstructs\nevery target orbit from the certified parents, deduplicates across both parent\nlineages, and independently re-solves each target in two ways:\n\n* integer negative-mass optimum delta_Z via CP-SAT;\n* real l1 optimum gamma_R via exact rational primal/dual certificate, with\n  delta_R=(gamma_R-k)/2 for k=9.\n\nThus it simultaneously audits the derivative transition law and tests whether\nreal/integer equality delta_R=delta_Z survives every depth-four descendant.\nThese quantities are finite signed-preimage optimization invariants, not\nphysical energy, magic-state cost, or hardware performance.",
+        "definitions": [
+          "addv",
+          "exact_row",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/mass36_depth4_lineage_real_integer_certificate.json",
+        "exists": true,
+        "sha256": "e565569d00e748bf5d676ab3978caf310789a75ab1d3f6a213fbcdec8ef717ea",
+        "lines": 29,
+        "json_parse": "PASS",
+        "keys": [
+          "schema",
+          "status",
+          "group",
+          "groupOrder",
+          "sourceParentMass",
+          "targetMass",
+          "parentBirthCount",
+          "rawPencilDirections",
+          "uniqueChildOrbitCount",
+          "crossParentSharedChildOrbitCount",
+          "uniqueOrbitDepthHistogram",
+          "combinedDirectionDepthHistogram",
+          "parentDirectionDepthHistograms",
+          "deltaRealHistogram",
+          "depth4ChildOrbitCount",
+          "strictSeparationOrbitCount",
+          "allLineageOrbitsSatisfyDeltaRealEqualsIntegerDepth",
+          "sourceArtifact",
+          "theorem",
+          "birthBoundary",
+          "physicalBoundary"
+        ],
+        "declared_status": "PASS",
+        "headline": "Every immediate pencil descendant of either first mass-32 depth-four birth lies in one of 12 distinct PSp(4,3) mass-36 orbits. Exact integer re-optimization reproduces the derivative-law depths, and exact rational primal/dual l1 certificates give delta_R=d on all 12 orbits."
+      },
+      {
+        "path": "analysis/mass36_depth4_structural_types.py",
+        "exists": true,
+        "sha256": "3ddf1cc055af5b75ed99fff309ed7382691b71e3c93cb4c05ab29191dc39ceed",
+        "lines": 130,
+        "python_syntax": "PASS",
+        "purpose": "Exact structural classification of the three mass-36 no-pencil depth-4 orbits.\n\nThe exhaustive mass-36 census found exactly three depth-four orbits: two of size\n4320 and one of size 25920.  For each canonical representative we recover the\nexact parent stabilizer, its point orbits, the full optimal-negativity support,\nlocal incident-line signatures, and the complete one-pencil descendant symbol\ntable supplied by the universal discrete derivative theorem.\n\nA deliberately coarse invariant package is reported separately from a refined\none.  The coarse package is *not* forced to classify the three PSp(4,3) orbits:\nif two inequivalent parents share it, that coincidence is itself evidence.  The\nrefined package adds exact support-point incidence and canonical descendant\norbit identities.  This preserves the distinction between a predictive local\nsignature and the full group-orbit label rather than hiding collisions behind an\nassertion.",
+        "definitions": [
+          "addv",
+          "hist",
+          "digest_obj",
+          "classify",
+          "classes",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/mass36_hunt_exhaustive_crosscheck.json",
+        "exists": true,
+        "sha256": "3fd54e1dfd16c208e268ce5d1790d526a93fea0c670c42ec4afdcb9250e3e8b2",
+        "lines": 28,
+        "json_parse": "PASS",
+        "keys": [
+          "allHuntOrbitsInExhaustiveCensus",
+          "depth5WitnessFound",
+          "exhaustiveDepth4OrbitCount",
+          "exhaustiveOrbitCount",
+          "huntDepth4CoverageCount",
+          "huntDepth4CoverageFraction",
+          "huntDepth4OrbitsFound",
+          "mergedDistinctOrbitCount",
+          "mergedOrbits",
+          "missedDepth4Orbits",
+          "reading",
+          "schema",
+          "seeds",
+          "sourceExhaustiveWorkflowRun",
+          "sourceHuntWorkflowRun",
+          "status",
+          "strictSeparationFound",
+          "theoremBoundary",
+          "totalOptimizationTrials"
+        ],
+        "declared_status": "PASS",
+        "headline": ""
+      },
+      {
+        "path": "analysis/mass36_no_pencil_candidate_hunt.py",
+        "exists": true,
+        "sha256": "778344dbf01ad67055fd95fb31284ba5546d0ff07b991449202d71f5708f5127",
+        "lines": 91,
+        "python_syntax": "PASS",
+        "purpose": "Exact-certificate candidate hunt inside the mass-36 no-pencil sector.\n\nThe exhaustive mass-36 census is the absence-proof lane.  This companion is a\nfinding lane: repeatedly optimize deterministic pseudo-random linear functionals\nover the exact admissible/no-pencil polytope, quotient each integer solution by\nPSp(4,3), and run exact integer-depth plus rational primal/dual l1 certificates\non every new orbit.\n\nAny depth >=5 orbit or delta_R < delta_Z found here is unconditional.  Failure\nto find one proves nothing about the rest of the no-pencil sector.",
+        "definitions": [
+          "build_model",
+          "exact_row",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/mass36_no_pencil_exhaustive_summary.json",
+        "exists": true,
+        "sha256": "a47557d4d9e853238bb3fe747bdd563f34b3ad4932af72bfc0484a4fb0fba2da",
+        "lines": 29,
+        "json_parse": "PASS",
+        "keys": [
+          "artifactJsonSha256",
+          "birthLogic36",
+          "boundary",
+          "deltaRealHistogram",
+          "depth4Rows",
+          "depthAtLeastFiveOrbitCount",
+          "enumerationComplete",
+          "hitCap",
+          "integerDepthHistogram",
+          "mass",
+          "maximumResolvedIntegerDepth",
+          "mode",
+          "noSeparationInEnumeratedSectorProved",
+          "orbitCount",
+          "rawSolutionsFound",
+          "schema",
+          "solverStatus",
+          "sourceHeadSha",
+          "sourceWorkflowRun",
+          "status",
+          "strictSeparationOrbitCount",
+          "theorem",
+          "unresolvedOrbitCount"
+        ],
+        "declared_status": "PASS",
+        "headline": "The complete mass-36 no-contained-pencil sector has maximum integer depth 4 and delta_R = delta_Z on all 55 PSp(4,3) orbits. There are 52 depth-3 orbits and 3 depth-4 orbits; there is no depth-5 orbit and no strict real/integer separation in this sector."
+      },
+      {
+        "path": "analysis/mass40_no_pencil_30_orbit_index.json",
+        "exists": true,
+        "sha256": "b9d82f600c1fab46ec16fdebbe2e7ec4d9968fb81b9b03369fc273b4b72a9f03",
+        "lines": 45,
+        "json_parse": "PASS",
+        "keys": [
+          "boundary",
+          "group",
+          "groupOrder",
+          "mass",
+          "orbitCount",
+          "rawSolutionsFound",
+          "rows",
+          "schema",
+          "sourceArtifactId",
+          "sourceArtifactZipSha256",
+          "sourceWorkflowRunId",
+          "status"
+        ],
+        "declared_status": "PASS",
+        "headline": "All 30 orbit identities and primary exact optimization invariants are frozen here. Canonical representatives/preimages remain in the source artifact; the two depth-5 representatives are also frozen in mass40_no_pencil_exhaustive_summary.json."
+      },
+      {
+        "path": "analysis/mass40_no_pencil_candidate_hunt.py",
+        "exists": true,
+        "sha256": "a3e1c57cae57a7f6b5f7e59d578a8667af0fcd2b649ec9adb2fb3a25dd7ebb80",
+        "lines": 89,
+        "python_syntax": "PASS",
+        "purpose": "Exact-certificate candidate hunt inside the mass-40 no-pencil sector.\n\nThe exhaustive mass-40 census is the absence-proof lane. This companion is a\nfinding lane: optimize deterministic pseudo-random linear functionals over the\nexact admissible/no-pencil polytope, quotient each solution by PSp(4,3), and run\nexact integer-depth plus rational primal/dual l1 certificates on every new\norbit.\n\nBecause mass 36 is globally certified to have maximum depth four, every first\nmass-40 depth-five birth must be no-pencil. Any depth >=5 orbit or\nDelta_R < Delta_Z found here is unconditional. Failure to find one proves\nnothing about the rest of the sector.",
+        "definitions": [
+          "build_model",
+          "exact_row",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/mass40_no_pencil_exhaustive_summary.json",
+        "exists": true,
+        "sha256": "00e76f537f3eaf4948928b660332e68851518406e98a179cb9fd309013e90bbf",
+        "lines": 53,
+        "json_parse": "PASS",
+        "keys": [
+          "schema",
+          "status",
+          "mass",
+          "k",
+          "mode",
+          "group",
+          "groupOrder",
+          "solverStatus",
+          "enumerationComplete",
+          "rawSolutionsFound",
+          "orbitCount",
+          "integerDepthHistogram",
+          "deltaRealHistogram",
+          "maximumResolvedIntegerDepth",
+          "unresolvedOrbitCount",
+          "strictSeparationOrbitCount",
+          "depth5BirthOrbitCount",
+          "depth5Births",
+          "source",
+          "lowerMassLogic",
+          "theorem",
+          "boundary"
+        ],
+        "declared_status": "PASS",
+        "headline": "The complete mass-40 no-contained-pencil sector has 422280 vectors in 30 PSp(4,3) orbits. Exactly two orbits, of sizes 216 and 4320, have integer depth 5. All 30 orbits satisfy delta_R=d; in particular both first depth-5 births have gamma_R=20 and delta_R=d=5. Together with the complete mass-36 maximum-depth-4 theorem, this proves that depth 5 is first born at mass 40 and has at least these two inequivalent birth orbits, with this sector exhaustively complete."
+      },
+      {
+        "path": "analysis/octet_circuit_decoder_instance.py",
+        "exists": true,
+        "sha256": "2740575a58209ca1d4a76cd4c704e121dce062be98663c1d0d6f0c5caab45f60",
+        "lines": 119,
+        "python_syntax": "PASS",
+        "purpose": "Construct an actual decoder instance for the certified outside-radius-two circuit.\n\nThe frozen primitive circuit c is a genuine Graver element of ker_Z(N^T) but is\nnot one of the 4,140 one/two-octet displacements.  That fact alone only kills a\nuniversal Graver proof strategy.  Here we ask the sharper operational question:\ncan c actually escape a radius-two local minimum of the negativity objective?\n\nWe search bounded integer preimages x with nonnegative line image e=N^T x and\npositive pencil mass k=sum(x).  The chosen circuit orientation must strictly\nlower negativity, while an exact cutting-plane separation oracle enforces that\nall 4,140 radius-two endpoints have negativity at least that of x.\n\nIf a witness is found, it is unconditional after verification: the coordinate\nbox is only how the witness was discovered.  If the bounded model is infeasible,\nthat is only a bounded nonexistence statement.",
+        "definitions": [
+          "addv",
+          "negmass",
+          "endpoint_expr",
+          "attack",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/octet_circuit_decoder_trap_certificate.json",
+        "exists": true,
+        "sha256": "c49e72f5a711d31aab2b431dad58924c1e01457a42229cde273b0b44525e28b7",
+        "lines": 36,
+        "json_parse": "PASS",
+        "keys": [
+          "schema",
+          "status",
+          "sourceWorkflowRun",
+          "sourceHeadSha",
+          "distinctRadiusTwoDisplacements",
+          "mass",
+          "traps",
+          "exactVerification",
+          "theorem",
+          "boundary"
+        ],
+        "declared_status": "PASS",
+        "headline": "The certified primitive W33 circuit outside the radius-two octet ball is operationally relevant: in both orientations there exists a nonnegative mass-28 signed-pencil fiber with a preimage of negativity 2 that is a true local minimum under all 4,140 one/two-octet displacements, while the circuit preserves the line image and lowers negativity to 1. Radius-two octet descent therefore fails as a universal decoder."
+      },
+      {
+        "path": "analysis/octet_circuit_library_minimization.py",
+        "exists": true,
+        "sha256": "e65b1b7a275732b4a8d5c1a844b468aabcb61798bcced39fc2763edd16fc0d80",
+        "lines": 110,
+        "python_syntax": "PASS",
+        "purpose": "Minimize the certified outside-radius-two circuit fallback under PSp(4,3).\n\nThe exact primitive circuit c and its negative each escape a certified mass-28\nradius-two trap. A runtime library should not carry redundant group images.\nThis script computes the exact PSp(4,3) point-action orbit of c and -c, determines\nwhether they are one orbit or two, and solves the tiny set-cover problem over\nthose PSp-invariant orientation orbits for the two frozen trap witnesses.\n\nThe trap inputs come from the repository-frozen summary certificate rather than\nartifact-only per-orientation files, so the result is reproducible from master.\n\nThe resulting minimality statement is scoped to PSp-invariant libraries built\nfrom the certified circuit orientation orbits and to the frozen exact traps.\nIt is not a claim that no other primitive-circuit orbit is useful on other\nfibers.",
+        "definitions": [
+          "addv",
+          "negmass",
+          "vector_digest",
+          "act",
+          "orbit",
+          "digest_moves",
+          "escape_info",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/octet_circuit_radius_two_obstruction.py",
+        "exists": true,
+        "sha256": "02555241005f12ac7b4e90f71ba788ee74be48a412f7757f8a41d2205eb849af",
+        "lines": 84,
+        "python_syntax": "PASS",
+        "purpose": "Exact circuit obstruction to radius-two universal octet augmentation.\n\nA primitive support-minimal integer kernel vector is a circuit, hence a Graver\nbasis element.  Therefore a single exact circuit outside the one/two-octet\nball is enough to disprove the claim that radius-two octet displacements form a\nuniversal Graver augmentation test set; the full Graver enumeration is not\nneeded for that yes/no question.\n\nThe 4ti2 circuit output is independently checked by exact SymPy ranks: the\nsupport-restricted incidence matrix has nullity one and deleting any supported\ncolumn makes the remaining columns independent.  Primitive gcd=1 then proves a\nprimitive circuit.  We also determine whether the first missing circuit has\nexact octet word length three.",
+        "definitions": [
+          "add",
+          "sub",
+          "gcd_entries",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/octet_decoder_graver_direct_crosscheck.json",
+        "exists": true,
+        "sha256": "4b411607b88d4a3d001f5840195c99cc788024d1d0eb12de44562d15da81ac2f",
+        "lines": 25,
+        "json_parse": "PASS",
+        "keys": [
+          "schema",
+          "status",
+          "graverObstruction",
+          "directDecoderSearch",
+          "conclusion",
+          "boundary"
+        ],
+        "declared_status": "PASS",
+        "headline": "Exact finite combinatorics and integer linear algebra only. UNKNOWN direct-search statuses are not promoted to convergence theorems."
+      },
+      {
+        "path": "analysis/octet_gauge_radius_two_all7_merged_certificate.json",
+        "exists": true,
+        "sha256": "5485407f5a7ecfc88a2885bb8ee8ab507675e6d465cbc5e236d468c50aeda3a5",
+        "lines": 171,
+        "json_parse": "PASS",
+        "keys": [
+          "allJobsCompletedSuccessfully",
+          "boundedNoTrapProvedOnAny",
+          "counterexampleFound",
+          "distinctRadiusTwoDisplacements",
+          "exceptionalCosetCount",
+          "finalStatusHistogram",
+          "reading",
+          "rows",
+          "schema",
+          "sourceWorkflowRun",
+          "status",
+          "theoremBoundary"
+        ],
+        "declared_status": "PASS",
+        "headline": ""
+      },
+      {
+        "path": "analysis/octet_gauge_radius_two_cutting_plane.py",
+        "exists": true,
+        "sha256": "47d99017d665c8321e536e594bbe0b677c6f084b8d9d0f0dca67bd4977cb6a7f",
+        "lines": 92,
+        "python_syntax": "PASS",
+        "purpose": "Cutting-plane search for radius-two octet-gauge traps.\n\nThe direct formulation materializes 4,140 endpoint negativity expressions at\nonce and timed out on all seven mass-16 exceptional cosets.  Here we use an\nexact separation oracle: solve the current bounded trap relaxation, enumerate\nall 4,140 radius-two displacements on the integer candidate, add the most\nviolated endpoint inequalities, and repeat.\n\nA SAT candidate with no improving displacement is an unconditional radius-two\ncounterexample (the coordinate box is only a search device).  INFEASIBLE is a\nno-trap theorem only inside the stated coordinate box.",
+        "definitions": [
+          "addv",
+          "negmass",
+          "ball2",
+          "add_endpoint_cut",
+          "attack",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/octet_gauge_radius_two_global_attack.py",
+        "exists": true,
+        "sha256": "b17a8a8947e59238c5882a1e0a4cb8cbfef9b1df97fbf9833b84e8df506f5472",
+        "lines": 104,
+        "python_syntax": "PASS",
+        "purpose": "Direct radius-two local-minimum attack for the 45-octet gauge decoder.\n\nA radius-two trap is a preimage x whose negativity is above the independently\ncertified optimum while no endpoint reachable by <=2 signed octet moves has\nsmaller negativity.  Since any radius-two trap is automatically a radius-one\ntrap, this is the exact finite condition the previous counterexample pass left\nopen.\n\nFor each of the seven mass-16 exceptional PSp(4,3) cosets we build one CP-SAT\nmodel that includes every *distinct* displacement in the radius-two move ball.\nIf SAT, the returned witness is an unconditional counterexample (the coordinate\nbox was only used to find it, and every endpoint is explicitly rechecked).  If\nINFEASIBLE, the result is an exact no-trap theorem inside the stated coordinate\nbox only.  We never promote bounded infeasibility to global convergence.",
+        "definitions": [
+          "addv",
+          "negmass",
+          "radius_two_ball",
+          "search_coset",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/octet_graver_intrinsic15.py",
+        "exists": true,
+        "sha256": "b51aff0883d1884cb4132bb20ca655c15075d4f482a64333752d64332ad7caa5",
+        "lines": 169,
+        "python_syntax": "PASS",
+        "purpose": "Exact intrinsic-kernel Graver attack for the W33 signed-octet decoder.\n\nThe 40x40 W33 line/point incidence matrix N^T has rank 25 and integer kernel\nrank 15.  A deterministic 25-row basis of its row space has *exactly the same\ninteger kernel*, so 4ti2 can work on 25 equations rather than 40 without\nchanging any feasible lattice fiber.\n\nIndependently, the 45 signed octet differences generate ker_Z(N^T) as a\nsaturated lattice.  Hermite normal form of their transpose therefore yields a\n15-vector integer basis B.  Every exact Graver vector is expressed in this\nintrinsic coordinate system and also checked against the exact one/two-octet\nmove ball.\n\nIf the exact Graver basis is contained in that ball, separable-convex Graver\naugmentation proves global radius-two negativity descent.  If not, the first\nmissing Graver vector is preserved together with its intrinsic coordinates;\nthat is an exact missing universal augmentation direction, not automatically a\nlocal-minimum counterexample.",
+        "definitions": [
+          "add",
+          "neg",
+          "digest_obj",
+          "sha256_file",
+          "incidence",
+          "reduced_presentation",
+          "intrinsic_basis",
+          "write_4ti2",
+          "read_4ti2",
+          "coords_of",
+          "conformal_leq",
+          "verify",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/octet_graver_radius_two_theorem.py",
+        "exists": true,
+        "sha256": "ae8657aea2b4d0f1eb5ffd67a126273dda5c323bf9abb1665a2687f805e235d6",
+        "lines": 122,
+        "python_syntax": "PASS",
+        "purpose": "Exact Graver-basis attack on global radius-two octet descent.\n\nFor fixed excess e, preimages form {x in Z^40 : N^T x=e} and the decoder\nobjective is\n\n    f(x)=sum_i max(0,-x_i),\n\na separable convex integer objective.  The Graver basis G(N^T) is a universal\naugmentation test set for separable convex integer minimization: every\nnon-optimal feasible x admits g in G with f(x+g)<f(x).\n\nHence, if every Graver element is one signed octet move or the sum of two signed\noctet moves, radius-two octet descent is globally sufficient on EVERY affine\nfiber, not merely inside a coordinate box.\n\nThis script writes the exact 40x40 incidence matrix for 4ti2 and independently\nverifies the returned .gra file: dimensions, nonzero rows, kernel equations,\nconformal minimality against the returned set, and membership in the exact\nradius-two octet ball.  Completeness of the Graver enumeration is supplied by\n4ti2's exact graver command; the output records its version and file digest.",
+        "definitions": [
+          "add",
+          "neg",
+          "incidence",
+          "write_matrix",
+          "read_4ti2_matrix",
+          "in_kernel",
+          "conformal_leq",
+          "sha256_file",
+          "verify",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/octet_hybrid_certified_decoder.py",
+        "exists": true,
+        "sha256": "66e0d36c5a065bb9737f1028710d6016a1c903ab1e389c50eb606fb96e758288",
+        "lines": 147,
+        "python_syntax": "PASS",
+        "purpose": "Certified hybrid decoder for signed-pencil preimages.\n\nFast path: best strict descent among all 4,140 one/two-octet displacements.\nFallback: best strict descent among the finite PSp(4,3)-orbit of the certified\nprimitive circuit lying outside that radius-two ball (and its negatives).\n\nEvery library move is independently verified to lie in ker_Z(N^T), and the\ncanonical move lists are content-addressed. Every accepted step strictly lowers\nthe nonnegative integer negativity objective, so every run terminates after at\nmost its starting negativity many accepted steps. No complete Graver basis is\nneeded at runtime.\n\nThe decoder is conservative: if neither finite library offers a strict descent,\nit returns STALLED rather than claiming global optimality. The regression suite\naudits deterministic perturbed starts in all seven certified mass-16 exceptional\ncosets and, crucially, the frozen mass-28 radius-two traps that require the\noutside-radius-two circuit fallback.",
+        "definitions": [
+          "addv",
+          "negmass",
+          "act_point_vector",
+          "orbit_vectors",
+          "digest_moves",
+          "best_strict",
+          "decode",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/octet_single_circuit_obstruction.py",
+        "exists": true,
+        "sha256": "fcb01ba23801dc741521801b8530fbcdf5dd91ec190315410505731a4381f195",
+        "lines": 105,
+        "python_syntax": "PASS",
+        "purpose": "Find one exact W33 incidence circuit outside the radius-two octet ball.\n\nThe 40x40 line/point incidence matrix has rank 25.  Choose an exact 25-column\nbasis and add one nonbasis column.  The unique dependence in that 26-column set\nis the fundamental circuit of the added column.  After primitive integer\nscaling it is a circuit and hence a Graver element.  One such circuit outside\nall one/two signed-octet displacements refutes radius-two as a universal Graver\naugmentation test set without enumerating all circuits or all Graver elements.",
+        "definitions": [
+          "primitive_integer",
+          "add",
+          "sub",
+          "fundamental_circuits",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/octet_single_circuit_obstruction_certificate.json",
+        "exists": true,
+        "sha256": "ee1bf30550b161f1657a4c9127067eaf02402f4011c685ed1e849f3031cb1ed2",
+        "lines": 31,
+        "json_parse": "PASS",
+        "keys": [
+          "boundary",
+          "circuit",
+          "decoderConnection",
+          "distinctRadiusTwoDisplacements",
+          "fundamentalCircuitsTried",
+          "incidenceRank",
+          "independentBasesPrepared",
+          "insideRadiusTwo",
+          "isGraverElement",
+          "kernelDimension",
+          "radiusTwoIsUniversalGraverTestSet",
+          "schema",
+          "sourceWorkflowRun",
+          "sourceArtifactId",
+          "sourceArtifactZipSha256",
+          "status",
+          "supportMinimalityProof",
+          "theorem"
+        ],
+        "declared_status": "PASS",
+        "headline": "A primitive W33 incidence circuit, hence a Graver element of ker_Z(N^T), lies outside the one/two signed-octet displacement set. Radius-two octet moves therefore cannot be a universal Graver augmentation test set."
+      },
+      {
+        "path": "analysis/optimal_negativity_discrete_derivative.py",
+        "exists": true,
+        "sha256": "95211907006725c4ba0240be1f28c0ba62d9ae5e813a6e2aa2f5d83a2ca9a16a",
+        "lines": 114,
+        "python_syntax": "PASS",
+        "purpose": "Universal discrete derivative theorem for W33 pencil negativity.\n\nLet N^T : Z^40 -> Z^40 be the W(3,3) point-pencil incidence map and\n\n    d(e) = min { f(x) : N^T x=e },   f(x)=sum_i max(0,-x_i).\n\nFor the point pencil P_p=N^T e_p, every feasible parent preimage x maps to\nx+e_p for e+P_p.  Since only one coordinate changes,\n\n    f(x+e_p) = f(x)-1  if x_p<0,\n               f(x)    otherwise.\n\nConversely every child preimage y maps to y-e_p for e, and\nf(y-e_p) <= f(y)+1.  Hence, for every integer excess e for which the affine\nfiber is nonempty,\n\n    d(e+P_p) in {d(e)-1,d(e)}.\n\nMoreover\n\n    d(e+P_p)=d(e)-1\n      iff some optimal parent preimage has x_p<0.\n\nThe reverse implication is exact: if a child optimum has value d(e)-1, then\ny_p cannot be >=1 (otherwise y-e_p would be a parent preimage of value <=d-1),\nso x=y-e_p is parent-optimal and x_p<0.\n\nThus the union of negative supports of optimal parent preimages is literally\nthe support of the one-step downward discrete derivative of integ",
+        "definitions": [
+          "phi",
+          "scalar_delta",
+          "reverse_bound",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/real_integer_negativity_gap_frontier.py",
+        "exists": true,
+        "sha256": "bc267e9791f7d8008e967d7f30fc7befaacda23714ac136263ea2dd97f389dab",
+        "lines": 121,
+        "python_syntax": "PASS",
+        "purpose": "Search higher mass for a certified real/integer negativity-depth separation.\n\nFor an admissible excess vector e of mass 4k,\n\n    delta_Z(e) = minimum integer negative mass,\n    gamma_R(e) = minimum real l1 norm of a preimage,\n    delta_R(e) = (gamma_R(e)-k)/2.\n\nAlways delta_R <= delta_Z. The lower-mass certificates repeatedly found\nequality. This program searches masses 28, 32, 36, and 40 with exact orbit\nreduction, integer CP-SAT depth certificates, and the repository's rational\nprimal/dual l1 certificate.\n\nTwo modes are useful:\n* full: enumerate every admissible vector of the requested mass;\n* no-pencil: enumerate only vectors containing no point pencil. At mass 32 this\n  is the only sector where depth four can be born because the global mass-28\n  maximum depth is certified as three. At mass 36 it is likewise the only\n  sector in which a depth-five class could be born because mass 32 has global\n  maximum depth four. The exhaustive mass-36 certificate again has global\n  maximum depth ",
+        "definitions": [
+          "enumerate_vectors",
+          "rational_row",
+          "main"
+        ]
+      },
+      {
+        "path": "analysis/w33_mmr_history_migration_certificate.js",
+        "exists": true,
+        "sha256": "b743a17cfca54417b23d5d87a6bb91d7a641bf7a4d8238e1221a4004f25fcb71",
+        "lines": 83
+      },
+      {
+        "path": "analysis/w33_mmr_history_migration_certificate.json",
+        "exists": true,
+        "sha256": "45018b169d1fcbac0f9eb631b95d1397222e9d2e10253c5597968cd98a506264",
+        "lines": 33,
+        "json_parse": "PASS",
+        "keys": [
+          "schema",
+          "status",
+          "representationClass",
+          "representationMarketIdentityDigest",
+          "signedResourceSelectionDigest",
+          "oldHistoryRootDigest",
+          "newHistoryRootDigest",
+          "oldEventCount",
+          "newEventCount",
+          "oldHistoryDigest",
+          "newHistoryDigest",
+          "consistencyCode",
+          "consistencyProofDigest",
+          "oldAttestationChallengeDigest",
+          "newAttestationChallengeDigest",
+          "challengeChanged",
+          "attestationMustBeRenewed",
+          "migrationDigest",
+          "historyAdvanced",
+          "adversarialChecks",
+          "sourceArtifact",
+          "theorem",
+          "boundary"
+        ],
+        "declared_status": "PASS",
+        "headline": "A continuation worker migration may advance the bound representation-market history only when the previously attested commitment is an exact MMR prefix of the new commitment. The accepted advance strictly increases event count, changes the measured-boot continuation challenge, and therefore requires fresh attestation."
+      },
+      {
+        "path": "data/w33_quantum_routing_benchmark.json",
+        "exists": true,
+        "sha256": "9a62b3128f944063bd9970560cdd984d87c14dd9b7dc68482a655a4412a65c8b",
+        "lines": 101,
+        "json_parse": "PASS",
+        "keys": [
+          "schema",
+          "evidence",
+          "status",
+          "topologyControls",
+          "linkModels",
+          "structural",
+          "modelResults",
+          "exactW33Reading",
+          "metricBoundary",
+          "limitations",
+          "checks"
+        ],
+        "declared_status": "PASS",
+        "headline": ""
+      },
+      {
+        "path": "experiments/w33_quantum_routing_benchmark.js",
+        "exists": true,
+        "sha256": "109fa8f9498527ae3c4ba2ff4b3a641124a37e8cef7a70bb281da425cf97d23e",
+        "lines": 284
+      },
+      {
+        "path": "js/w33-continuation-attestation.js",
+        "exists": true,
+        "sha256": "18eebe1584708ed5537f626bbf8c67eafae6efe94ef4dba62510dba3c67dc981",
+        "lines": 175
+      },
+      {
+        "path": "js/w33-octet-decoder-binding.js",
+        "exists": true,
+        "sha256": "c33428c00904f6a32e51744aa03d250b9a81836568f5c394ffba8571e13f3e77",
+        "lines": 84
+      },
+      {
+        "path": "js/w33-representation-market-identity.js",
+        "exists": true,
+        "sha256": "3511e941d00b4e5538177ba597977f0aeaff71bfe865b511b0514fb0aa504af6",
+        "lines": 114
+      },
+      {
+        "path": "js/w33-representation-market-merkle-provenance.js",
+        "exists": true,
+        "sha256": "ab52441017d33f189556f227d8fb10915fa1ac0781ad0777a2797809a5894644",
+        "lines": 175
+      },
+      {
+        "path": "js/w33-representation-market-provenance.js",
+        "exists": true,
+        "sha256": "65bf2e431c4e883da14c1d3c9f8f5f5a9c15cfb65f11a24e1047482a228788cc",
+        "lines": 99
+      },
+      {
+        "path": "js/w33-signed-resource-policy.js",
+        "exists": true,
+        "sha256": "661fc50d511d577d71d4d808edec3f9341d11d98f10baf4ab3efe9517f9540a5",
+        "lines": 106
+      },
+      {
+        "path": "js/w33-signed-resource-telemetry.js",
+        "exists": true,
+        "sha256": "4a3f9df83a894fbffe6310901d2e40c02d40485a359f9fb46ab25612b54f899d",
+        "lines": 75
+      },
+      {
+        "path": "scheduler/w33-certified-decoder-transaction.js",
+        "exists": true,
+        "sha256": "285b6b015cde5ab151027cdcf5db0489cd3dd64f1c27b5c819a5839ebd75daea",
+        "lines": 124
+      },
+      {
+        "path": "scheduler/w33-continuation-scheduler.js",
+        "exists": true,
+        "sha256": "41737a7f98f51c8eed5819b18cf53135b62741804ba94446dce3931862c243a0",
+        "lines": 285
+      },
+      {
+        "path": "scheduler/w33-continuation-transaction.js",
+        "exists": true,
+        "sha256": "76983f76dc45f1fbab7f2bd64fa489977f0496f519a0c89c7c38025bcdef028c",
+        "lines": 194
+      },
+      {
+        "path": "scheduler/w33-dynamic-resource-transaction.js",
+        "exists": true,
+        "sha256": "f19df66eb37f50300a89de699bb653cb9e649b5f542900c9c8167ffb8742029d",
+        "lines": 111
+      },
+      {
+        "path": "tests/w33-certified-decoder-transaction.test.js",
+        "exists": true,
+        "sha256": "cd9120c643a7e09fdc9d2a48d56c28e3c7330f06cc8e7645a8814f6e8e5c9e2e",
+        "lines": 67
+      },
+      {
+        "path": "tests/w33-depth3-dynamic-resource-crossrepo.test.js",
+        "exists": true,
+        "sha256": "c0dad48945d847fe2598be31bce4d5deb77473afeda2be07ef5eda1c51a82180",
+        "lines": 81
+      },
+      {
+        "path": "tests/w33-dynamic-resource-telemetry-crossrepo.test.js",
+        "exists": true,
+        "sha256": "afefb4f1bc8d2450d74e3dbed196b680dbf9e13bc52faf0ec724c3a6fd4d21f6",
+        "lines": 124
+      },
+      {
+        "path": "tests/w33-quantum-routing-benchmark.test.js",
+        "exists": true,
+        "sha256": "aa9d29489cf35e8c08ed8d0076d1837d23c3711f6e069d27b04daef741912f0f",
+        "lines": 75
+      },
+      {
+        "path": "tests/w33-representation-market-history-attestation-crossrepo.test.js",
+        "exists": true,
+        "sha256": "2369a3cbe51594d3b5d09fca8a9113c8822d93d777968ee83d3e53d739c7716e",
+        "lines": 138
+      },
+      {
+        "path": "tests/w33-representation-market-identity-crossrepo.test.js",
+        "exists": true,
+        "sha256": "75b07f034a289115a95f9ce77604885794227ba312165eb5d8d6f5ad450aa06a",
+        "lines": 111
+      },
+      {
+        "path": "tests/w33-representation-market-merkle-provenance-crossrepo.test.js",
+        "exists": true,
+        "sha256": "b15425e670c796bf7c5a94c559f356357c36fe1aa820ba1448094a0fe7e4767c",
+        "lines": 69
+      },
+      {
+        "path": "tests/w33-representation-market-provenance-crossrepo.test.js",
+        "exists": true,
+        "sha256": "0fb4331b70a4ad360dcf55f8c05de6bdd95fc7ef7a031932492746a4114aeeca",
+        "lines": 59
+      },
+      {
+        "path": "tests/w33-signed-resource-scheduler-crossrepo.test.js",
+        "exists": true,
+        "sha256": "e297e1ebc701c600d76150b2205aee2b61c2f65365b96e4908d37b031bc03109",
+        "lines": 109
+      }
+    ]
+  },
+  "coverage": "All 233 net-changed paths inventoried and hashed; all Python ASTs and JSON parsed. This is structural intake, not full semantic review of every line or every intermediate commit."
+}
