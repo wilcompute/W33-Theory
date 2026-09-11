@@ -10,9 +10,11 @@ on:
       - 'analysis/w33_schur_incidence_vs_projective_symmetry.py'
       - 'analysis/w33_schur_extraspecial_coset_geometry.py'
       - 'analysis/w33_schur_central_phase_reye_quotient.py'
+      - 'analysis/w33_schur176_qplus_macro_skeleton.py'
       - 'tests/test_w33_schur_quartic_frontier_20260911.py'
       - 'tests/test_w33_schur_extraspecial_coset_geometry_20260911.py'
       - 'tests/test_w33_schur_central_phase_reye_20260911.py'
+      - 'tests/test_w33_schur176_qplus_macro_20260911.py'
 
 permissions:
   contents: write
@@ -35,12 +37,14 @@ jobs:
           python analysis/w33_schur_incidence_vs_projective_symmetry.py
           python analysis/w33_schur_extraspecial_coset_geometry.py
           python analysis/w33_schur_central_phase_reye_quotient.py
+          python analysis/w33_schur176_qplus_macro_skeleton.py
       - name: Focused regression
         run: |
           python -m pytest -q \
             tests/test_w33_schur_quartic_frontier_20260911.py \
             tests/test_w33_schur_extraspecial_coset_geometry_20260911.py \
-            tests/test_w33_schur_central_phase_reye_20260911.py
+            tests/test_w33_schur_central_phase_reye_20260911.py \
+            tests/test_w33_schur176_qplus_macro_20260911.py
       - name: Freeze exact JSON certificates
         shell: bash
         run: |
@@ -48,7 +52,8 @@ jobs:
             data/w33_schur_quartic_d4_triality_bridge.json \
             data/w33_schur_incidence_vs_projective_symmetry.json \
             data/w33_schur_extraspecial_coset_geometry.json \
-            data/w33_schur_central_phase_reye_quotient.json
+            data/w33_schur_central_phase_reye_quotient.json \
+            data/w33_schur176_qplus_macro_skeleton.json
           if git diff --cached --quiet; then
             echo 'Schur certificates already frozen.'
             exit 0
