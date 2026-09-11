@@ -1,0 +1,68 @@
+name: W33 phase-fibre frontier
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - '.github/workflows/w33_phase_fibre_frontier.yml'
+      - 'analysis/w33_threeway_576_provenance_closure.py'
+      - 'analysis/w33_oriented288_binary_tetrahedral_bridge.py'
+      - 'analysis/w33_binary_tetrahedral_split_swap_completion.py'
+      - 'analysis/w33_b288_phase_completion_no_go.py'
+      - 'analysis/w33_projective_phase_fibre_dichotomy.py'
+      - 'tests/test_w33_threeway_576_provenance_20260911.py'
+      - 'tests/test_w33_oriented288_binary_tetrahedral_20260911.py'
+      - 'tests/test_w33_binary_tetrahedral_split_swap_20260911.py'
+      - 'tests/test_w33_b288_phase_completion_20260911.py'
+      - 'tests/test_w33_projective_phase_fibre_dichotomy_20260911.py'
+
+permissions:
+  contents: write
+
+jobs:
+  certify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install focused dependencies
+        run: python -m pip install --upgrade numpy pytest
+      - name: Regenerate phase-fibre certificates
+        run: |
+          python analysis/w33_threeway_576_provenance_closure.py
+          python analysis/w33_oriented288_binary_tetrahedral_bridge.py
+          python analysis/w33_binary_tetrahedral_split_swap_completion.py
+          python analysis/w33_b288_phase_completion_no_go.py
+          python analysis/w33_projective_phase_fibre_dichotomy.py
+      - name: Focused regression gates
+        run: |
+          python -m pytest -q \
+            tests/test_w33_threeway_576_provenance_20260911.py \
+            tests/test_w33_oriented288_binary_tetrahedral_20260911.py \
+            tests/test_w33_binary_tetrahedral_split_swap_20260911.py \
+            tests/test_w33_b288_phase_completion_20260911.py \
+            tests/test_w33_projective_phase_fibre_dichotomy_20260911.py
+      - name: Freeze exact JSON certificates
+        shell: bash
+        run: |
+          git add -f \
+            data/w33_threeway_576_provenance_closure.json \
+            data/w33_oriented288_binary_tetrahedral_bridge.json \
+            data/w33_binary_tetrahedral_split_swap_completion.json \
+            data/w33_b288_phase_completion_no_go.json \
+            data/w33_projective_phase_fibre_dichotomy.json
+          if git diff --cached --quiet; then
+            echo 'Phase-fibre certificates already frozen.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Freeze W33 phase-fibre frontier certificates'
+          git fetch origin master
+          git rebase origin/master
+          git push origin HEAD:master
