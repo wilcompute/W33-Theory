@@ -26,6 +26,12 @@ on:
       - 'analysis/w33_marcelis_observer_quotient_dynamics.py'
       - 'analysis/w33_outer_cube_observer_bridge_v2.py'
       - 'analysis/w33_stabilizer96_cube_central_cover.py'
+      - 'analysis/w33_affine_fano_information_horizon.py'
+      - 'analysis/w33_projective_horizon_lag_law.py'
+      - 'analysis/w33_trace_observer_finite_observability.py'
+      - 'analysis/w33_boundary_singer_toroidal_84_bridge.py'
+      - 'analysis/w33_cocycle_rank1_576_parity_firewall.py'
+      - 'analysis/w33_a4_untwisted_core_synthesis.py'
       - 'analysis/w33_publish_september_2026_frontier.py'
       - 'analysis/BT20260910_heawood_schubert_observer_insert.tex'
       - 'tests/test_bt1408_witting_contextual_communication_bridge.py'
@@ -35,6 +41,12 @@ on:
       - 'tests/test_w33_heawood_pgsp_stabilizer96_20260910.py'
       - 'tests/test_w33_heawood_schubert_observer_20260910.py'
       - 'tests/test_w33_outer_cube_publication_20260910.py'
+      - 'tests/test_w33_affine_fano_horizon_20260910.py'
+      - 'tests/test_w33_projective_horizon_lag_law_20260910.py'
+      - 'tests/test_w33_trace_observer_finite_observability_20260910.py'
+      - 'tests/test_w33_boundary_singer_toroidal_84_bridge_20260910.py'
+      - 'tests/test_w33_cocycle_rank1_576_parity_firewall_20260910.py'
+      - 'tests/test_w33_a4_untwisted_core_synthesis_20260910.py'
       - 'photonic_holonet.tex'
       - 'photonic_holonet_body.tex'
       - 'single_photon_universal_computation.tex'
@@ -77,6 +89,12 @@ jobs:
           python analysis/w33_marcelis_observer_quotient_dynamics.py
           python analysis/w33_outer_cube_observer_bridge_v2.py
           python analysis/w33_stabilizer96_cube_central_cover.py
+          python analysis/w33_affine_fano_information_horizon.py
+          python analysis/w33_projective_horizon_lag_law.py
+          python analysis/w33_trace_observer_finite_observability.py
+          python analysis/w33_boundary_singer_toroidal_84_bridge.py
+          python analysis/w33_cocycle_rank1_576_parity_firewall.py
+          python analysis/w33_a4_untwisted_core_synthesis.py
           python analysis/w33_publish_september_2026_frontier.py
       - name: Focused regression gates
         run: |
@@ -87,14 +105,16 @@ jobs:
             tests/test_w33_heawood_psp_marcelis_flag_20260909.py \
             tests/test_w33_heawood_pgsp_stabilizer96_20260910.py \
             tests/test_w33_heawood_schubert_observer_20260910.py \
-            tests/test_w33_outer_cube_publication_20260910.py
+            tests/test_w33_outer_cube_publication_20260910.py \
+            tests/test_w33_affine_fano_horizon_20260910.py \
+            tests/test_w33_projective_horizon_lag_law_20260910.py \
+            tests/test_w33_trace_observer_finite_observability_20260910.py \
+            tests/test_w33_boundary_singer_toroidal_84_bridge_20260910.py \
+            tests/test_w33_cocycle_rank1_576_parity_firewall_20260910.py \
+            tests/test_w33_a4_untwisted_core_synthesis_20260910.py
       - name: Freeze generated outputs and public index on master
         shell: bash
         run: |
-          # Most exact-analysis JSONs are intentionally ignored in ordinary
-          # working trees. This dedicated freezer is their publication path,
-          # so force-add the declared outputs explicitly rather than weakening
-          # the repository-wide ignore policy.
           git add -f \
             data/bt1408_witting_contextual_communication_bridge.json \
             data/bt1409_witting_duplex_admission_scheduler.json \
@@ -116,6 +136,12 @@ jobs:
             data/w33_marcelis_observer_quotient_dynamics.json \
             data/w33_outer_cube_observer_bridge.json \
             data/w33_stabilizer96_cube_central_cover.json \
+            data/w33_affine_fano_information_horizon.json \
+            data/w33_projective_horizon_lag_law.json \
+            data/w33_trace_observer_finite_observability.json \
+            data/w33_boundary_singer_toroidal_84_bridge.json \
+            data/w33_cocycle_rank1_576_parity_firewall.json \
+            data/w33_a4_untwisted_core_synthesis.json \
             docs/index.html
           if git diff --cached --quiet; then
             echo 'All focused certificates and publication anchors already frozen.'
@@ -123,10 +149,7 @@ jobs:
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'Freeze outer cube observer frontier'
-          # Master is extremely active. Rebase the generated-data/publication-only
-          # commit on the then-current remote tip so parallel research commits do
-          # not turn a successful mathematical run into a non-fast-forward failure.
+          git commit -m 'Freeze corrected observer synthesis frontier'
           git fetch origin master
           git rebase origin/master
           git push origin HEAD:master
