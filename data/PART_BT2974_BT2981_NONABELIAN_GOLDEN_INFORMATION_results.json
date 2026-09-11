@@ -1,0 +1,78 @@
+{
+  "check_count": 6,
+  "headline": "The router's full gauge quotient is D4^36/conjugacy; its sign curvature is the exceptional S6 two-graph. The golden word is selected by shortest rational reduction, generates a balanced Sturmian scheduler, and acts faithfully only on the A4 abelian syndrome shell, not on the D4 core.",
+  "pass2974": {
+    "boundary": "Complete for discrete D4 transport tables. It is not an optical phase measurement.",
+    "centralizer_sizes": {"(0, 0)": 8, "(0, 1)": 4, "(1, 0)": 4, "(1, 1)": 4, "(2, 0)": 8, "(2, 1)": 4, "(3, 0)": 4, "(3, 1)": 4},
+    "complete_invariant": "D4^36 modulo one simultaneous conjugation",
+    "deterministic_gauge_equivariance_tests": 256,
+    "edges": 45,
+    "fundamental_chords": 36,
+    "gauge_orbit_count": 81129638418148456557941239054336,
+    "graph": "K10",
+    "status": "COMPLETE_EXACT_NONABELIAN_GAUGE_QUOTIENT",
+    "tree_edges": 9
+  },
+  "pass2975": {
+    "boundary": "The standard two-graph is prior art; its constructive emergence from W33 spread transport is the project result.",
+    "design": "2-(10,3,4)",
+    "explicit_s6_actions": 720,
+    "odd_edge_triples": 60,
+    "pair_replication": 4,
+    "petersen_model": "two-subsets of a five-set, adjacency by disjointness",
+    "point_replication": 18,
+    "status": "COMPLETE_CONSTRUCTIVE_S6_DERIVATION",
+    "tetrahedral_bianchi": true,
+    "vertices": "ten unordered 3+3 partitions of a six-set",
+    "w33_to_partition_vertex_map": {"0": 0, "1": 8, "2": 9, "3": 7, "4": 4, "5": 6, "6": 2, "7": 5, "8": 1, "9": 3}
+  },
+  "pass2976": {
+    "boundary": "Pair/frame label known. Noise profiles are synthetic detector models, not measurements.",
+    "ideal_adaptive_success_1_to_12": {"1": 0.9082482904638599, "2": 0.9714045207910297, "3": 0.9906533814626595, "4": 0.9969039949999493, "5": 0.9989701327891594, "6": 0.9996569467863688, "7": 0.9998856750871088, "8": 0.9999618946004087, "9": 0.9999872985228184, "10": 0.9999957662101182, "11": 0.9999985887406884, "12": 0.9999995295806685},
+    "ideal_formula": "(1+sqrt(1-3^-n))/2",
+    "local_pauli_single_copy_success": 0.7886751345948129,
+    "modeled_readout": {
+      "flip=0.01,erasure=0.0": {"1": 0.9000833246545898, "3": 0.9774015363432995, "5": 0.9929545541174082, "7": 0.9979619207611751, "9": 0.9992504901724997, "12": 0.9998599656605177},
+      "flip=0.02,erasure=0.05": {"1": 0.8723224409030444, "3": 0.9618579201515342, "5": 0.9874346198862637, "7": 0.9951769800659944, "9": 0.9980860162644909, "12": 0.9994927148259531},
+      "flip=0.05,erasure=0.1": {"1": 0.8306811152757321, "3": 0.9340784464545273, "5": 0.9711894285742529, "7": 0.9857053731335543, "9": 0.9928859609108268, "12": 0.9973386025625826}
+    },
+    "physical_controller": "pair-conditioned two-outcome basis, Bayes posterior update, repeat",
+    "squared_overlap": "1/3",
+    "status": "COMPLETE_IDEAL_ADAPTIVE_RECEIVER_AND_MODELED_DETECTOR",
+    "unrestricted_single_copy_helstrom": 0.9082482904638599
+  },
+  "pass2979": {
+    "boundary": "Unique only up to inverse/cyclic/conjugate word symmetries in the stated symmetric generator metric.",
+    "canonical_golden_word": "rru = R4^2 U6",
+    "distinct_new_elements_by_length_1_to_10": [4,11,29,66,143,314,696,1536,3258,6418],
+    "fixed_rational_sector": "primitive line <(1,0,0)>, eigenvalue -1",
+    "generator_group": "<R4,U6>=SL3(Z) (repository predecessor theorem)",
+    "quotient_matrix": [[0,-1],[-1,1]],
+    "quotient_polynomial": "t^2-t-1",
+    "selector_statement": "golden growth is selected by shortest rational-line reduction, not by minimal spectral radius",
+    "shortest_reducible_expanding_length": 3,
+    "shortest_words": [["rru","(x + 1)*(x**2 - x - 1)"],["rrU","(x + 1)*(x**2 + x - 1)"],["rur","(x + 1)*(x**2 - x - 1)"],["rUr","(x + 1)*(x**2 + x - 1)"],["RuR","(x + 1)*(x**2 - x - 1)"],["RUR","(x + 1)*(x**2 + x - 1)"],["urr","(x + 1)*(x**2 - x - 1)"],["Urr","(x + 1)*(x**2 + x - 1)"]],
+    "status": "COMPLETE_EXACT_WORD_METRIC_SELECTOR"
+  },
+  "pass2980": {
+    "boundary": "Sturmian balance and complexity are standard mathematics; the controller placement is the architecture proposal.",
+    "maximum_prefix_discrepancy": 0.9998930366896275,
+    "no_consecutive_expensive_slots": true,
+    "prefix_length_tested": 10000,
+    "slope": "1/phi^2",
+    "status": "COMPLETE_EXACT_BALANCED_GOLDEN_SCHEDULER",
+    "subword_complexity_1_to_12": {"1":2,"2":3,"3":4,"4":5,"5":6,"6":7,"7":8,"8":9,"9":10,"10":11,"11":12,"12":13}
+  },
+  "pass2981": {
+    "a4_element_order_histogram": {"1":1,"2":3,"3":8},
+    "abelian_shell": "V4 semidirect C3 is A4",
+    "architecture": "golden controller acts on the V4 parity shell; D4 remains the protected nonabelian core",
+    "aut_D4_element_orders": {"1":1,"2":5,"4":2},
+    "aut_D4_order": 8,
+    "faithful_order3_lift_to_D4": false,
+    "fibonacci_mod2_order": 3,
+    "nonzero_syndrome_cycle": [[1,1],[1,0],[0,1]],
+    "status": "COMPLETE_EXACT_A4_SHELL_AND_D4_LIFT_OBSTRUCTION"
+  },
+  "schema": "w33.pass2974_2981.nonabelian_golden_information.v1"
+}

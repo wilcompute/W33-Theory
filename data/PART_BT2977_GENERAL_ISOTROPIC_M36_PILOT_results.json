@@ -1,0 +1,24 @@
+{
+  "schema": "w33.pass2977.general_isotropic_m36_pilot.v1",
+  "status": "DETERMINISTIC_GENERAL_ISOTROPIC_PILOT_COMPLETE_FULL_495_SHARD_SWEEP_PENDING",
+  "total_rank4_isotropic_subspaces": 213648435,
+  "count_formula": "product_{i=0}^{3}(2^{2(6-i)}-1)/(2^{4-i}-1)",
+  "rref_pivot_shards": 495,
+  "partition_is_duplicate_free": true,
+  "small_dimension_exact_selftest": {"2,2":15,"3,2":315,"3,3":135,"4,2":5355},
+  "pilot_specs": [[2977,250000],[2977002,200000],[2977003,200000]],
+  "distinct_general_subspaces_examined": 649940,
+  "single_error_collinear_projectors": 6,
+  "non_css_collinear_projectors": 6,
+  "nonstabilizer_collinear_candidates": 0,
+  "candidate_rows": [
+    {"basis":[661,264,66,32],"syndrome":9,"clean_success":"1/27","css":false,"accepted_clean_is_stabilizer":true},
+    {"basis":[2448,1056,768,64],"syndrome":0,"clean_success":"1/27","css":false,"accepted_clean_is_stabilizer":true},
+    {"basis":[2457,1056,582,66],"syndrome":5,"clean_success":"1/27","css":false,"accepted_clean_is_stabilizer":true},
+    {"basis":[152,88,48,4],"syndrome":4,"clean_success":"1/27","css":false,"accepted_clean_is_stabilizer":true},
+    {"basis":[3213,1094,129,12],"syndrome":14,"clean_success":"1/27","css":false,"accepted_clean_is_stabilizer":true},
+    {"basis":[2180,1024,64,8],"syndrome":9,"clean_success":"1/27","css":false,"accepted_clean_is_stabilizer":true}
+  ],
+  "headline": "A 649,940-subspace deterministic general-isotropic pilot found six non-CSS quadratic-collinearity projectors; all six close on stabilizer accepted states at clean success 1/27.",
+  "boundary": "This advances beyond the complete CSS census but is not the full 213,648,435-subspace sweep. The executable --pivot-index interface partitions the exhaustive search exactly into 495 duplicate-free RREF shards."
+}
