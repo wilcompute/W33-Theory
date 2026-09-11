@@ -1,0 +1,39 @@
+{
+  "check_count": 7,
+  "checks": {
+    "explicit_non_lumpability_witness": true,
+    "four_total_transition_tables": true,
+    "rank7_bijection_81": true,
+    "refinement_16_40_78_81": true,
+    "seven_bit_lower_bound": true,
+    "support_fiber_law": true,
+    "support_phase_bijection_81": true
+  },
+  "claim_boundary": "Information-theoretic storage optimum only; synthesis and placement decide hardware merit.",
+  "current_register_bits": 8,
+  "deterministic_refinement_counts": [16, 40, 78, 81],
+  "deterministic_refinement_histograms": [
+    {"1": 1, "16": 1, "2": 4, "4": 6, "8": 4},
+    {"1": 7, "2": 29, "4": 4},
+    {"1": 75, "2": 3},
+    {"1": 81}
+  ],
+  "non_lumpability_witness": {
+    "next_supports": ["0100", "0000"],
+    "operation": "Z_p",
+    "shared_support": "0100",
+    "states": [[0, 1, 0, 0], [0, 2, 0, 0]]
+  },
+  "optimal_fixed_width_bits": 7,
+  "potential_register_saving_bits": 1,
+  "rank_code_range": [0, 80],
+  "schema": "w33.pass2838.optimal_execution_codec.v1",
+  "state_count": 81,
+  "status": "COMPLETE_EXACT",
+  "support_class_count": 16,
+  "support_fiber_histogram": {"1": 1, "16": 1, "2": 4, "4": 6, "8": 4},
+  "support_phase_law": "fiber size = 2^support_weight; residual phase width = support_weight",
+  "transition_table_entries": 324,
+  "transition_table_payload_bits": 2268,
+  "unused_7bit_words": 47
+}
