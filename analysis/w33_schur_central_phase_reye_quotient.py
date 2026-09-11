@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Central-phase quotient of the Schur extraspecial coset geometry is Reye.
+"""Central-phase quotient of the Schur extraspecial coset geometry is dual Reye.
 
 The Schur (24_4,32_3) configuration was independently reconstructed in the
 companion certificates as
@@ -14,9 +14,11 @@ Z(E)=<z> of order two.  Because each V_i avoids z, every Schur line gV_i and
 its central translate zgV_i project to the same 4-point affine plane.  Hence
 32 points -> 16 central-phase classes and 24 lines -> 12 line classes.
 
-The resulting incidence structure is checked exactly to be the classical
-Reye configuration (dually 12_4,16_3) already used independently in the
-Q4/tomotope/24-cell certificates.
+The resulting quotient has type 16_3,12_4, i.e. the *incidence dual* of the
+project-native Reye models, which are stored as 12_4,16_3.  Since Reye is
+self-dual this is the same abstract configuration, but the typed orientation
+matters and is checked explicitly here rather than erased by an untyped graph
+isomorphism.
 
 Prior-art boundary: Nurowski, arXiv:2609.10751 (2026-09-09), independently
 identifies the antipodal quotient of the Naskrecki--Pokora Schur configuration
@@ -50,6 +52,18 @@ from analysis.w33_q4_tomotope_reye_double_cover import reye_configuration_graph 
 from analysis.w33_reye_tomotope_24cell_common_spine import twenty_four_cell_reye_graph  # noqa: E402
 
 OUT = ROOT / "data" / "w33_schur_central_phase_reye_quotient.json"
+
+
+def typed_dual(graph: nx.Graph) -> nx.Graph:
+    """Swap point/line incidence types while preserving the underlying graph."""
+    out = graph.copy()
+    for node, attrs in out.nodes(data=True):
+        kind = attrs.get("kind")
+        if kind == "point":
+            attrs["kind"] = "line"
+        elif kind == "line":
+            attrs["kind"] = "point"
+    return out
 
 
 def build_result():
@@ -93,7 +107,7 @@ def build_result():
     )
     assert len(line_points) == 24 and {len(S) for S in line_points} == {4}
 
-    # Quotient E by the center.  Each quotient point is a two-element phase pair.
+    # Quotient E by the center. Each quotient point is a two-element phase pair.
     cosets = []
     coset_of = {}
     for g in E:
@@ -137,17 +151,21 @@ def build_result():
     assert degree_profile == {3: 16, 4: 12}
     assert nx.is_connected(G)
 
-    # Compare to both independently existing project-native Reye models.
+    # Project-native Reye models are typed 12 points of degree 4 + 16 lines of
+    # degree 3. Our quotient is the dual typing 16 points + 12 lines. Compare
+    # against the typed dual explicitly, and also record that the same-typing
+    # comparison fails for the expected degree reason.
     node_match = iso.categorical_node_match("kind", None)
     q4_reye = reye_configuration_graph()["graph"]
     cell24_reye = twenty_four_cell_reye_graph()["graph"]
-    q4_iso = nx.is_isomorphic(G, q4_reye, node_match=node_match)
-    cell24_iso = nx.is_isomorphic(G, cell24_reye, node_match=node_match)
-    assert q4_iso and cell24_iso
+    q4_same_typed = nx.is_isomorphic(G, q4_reye, node_match=node_match)
+    cell24_same_typed = nx.is_isomorphic(G, cell24_reye, node_match=node_match)
+    q4_dual_iso = nx.is_isomorphic(G, typed_dual(q4_reye), node_match=node_match)
+    cell24_dual_iso = nx.is_isomorphic(G, typed_dual(cell24_reye), node_match=node_match)
+    assert not q4_same_typed and not cell24_same_typed
+    assert q4_dual_iso and cell24_dual_iso
 
     # The central action pairs the original 24 lines exactly 2-to-1.
-    # Recover its action on triple labels and verify every projected line pair is
-    # related by z, rather than merely sharing a quotient image accidentally.
     zt = triple_perm(z)
     line_index = {S: i for i, S in enumerate(line_points)}
     z_line_perm = []
@@ -166,12 +184,13 @@ def build_result():
         "24_lines_pair_to_12_blocks": len(blocks) == 12 and set(block_mult.values()) == {2},
         "central_element_pairs_lines_fixed_point_freely": all(z_line_perm[i] != i for i in range(24)),
         "quotient_is_16_3_12_4": degree_profile == {3: 16, 4: 12} and G.number_of_edges() == 48,
-        "quotient_is_project_Q4_Reye": q4_iso,
-        "quotient_is_project_24cell_Reye": cell24_iso,
+        "same_typed_orientation_is_not_project_Reye": not q4_same_typed and not cell24_same_typed,
+        "quotient_is_typed_dual_of_Q4_tomotope_Reye": q4_dual_iso,
+        "quotient_is_typed_dual_of_24cell_Reye": cell24_dual_iso,
     }
 
     return {
-        "schema": "w33.schur-central-phase-reye-quotient.v1",
+        "schema": "w33.schur-central-phase-reye-quotient.v2",
         "status": "PASS" if all(checks.values()) else "FAIL",
         "upstairs": {
             "configuration": "Schur (24_4,32_3)",
@@ -190,15 +209,18 @@ def build_result():
             "blocks": 12,
             "incidences": 48,
             "degree_profile": degree_profile,
-            "configuration": "dual Reye 16_3,12_4 (equivalently Reye 12_4,16_3)",
-            "isomorphic_to_Q4_tomotope_Reye": q4_iso,
-            "isomorphic_to_24cell_Reye": cell24_iso,
+            "configuration": "dual Reye 16_3,12_4",
+            "typed_orientation": "incidence dual of project-native Reye 12_4,16_3",
+            "same_typed_Q4_Reye": q4_same_typed,
+            "same_typed_24cell_Reye": cell24_same_typed,
+            "typed_dual_Q4_tomotope_Reye": q4_dual_iso,
+            "typed_dual_24cell_Reye": cell24_dual_iso,
         },
         "theorem": (
-            "Quotienting the Schur extraspecial coset geometry by the central phase Z(E) pairs its 32 triple points and 24 lines 2-to-1 and yields exactly the project-native Reye configuration."
+            "Quotienting the Schur extraspecial coset geometry by the central phase Z(E) pairs its 32 triple points and 24 lines 2-to-1 and yields the typed incidence dual of the project-native Reye configuration."
         ),
         "prior_art_boundary": (
-            "Nurowski, arXiv:2609.10751 (2026-09-09), independently proves that the antipodal quotient of the Schur 24-line configuration is Reye. This certificate supplies the project-internal extraspecial-group/coset derivation and explicit isomorphisms to the pre-existing Q4/tomotope and 24-cell Reye models."
+            "Nurowski, arXiv:2609.10751 (2026-09-09), independently proves that the antipodal quotient of the Schur 24-line configuration is Reye. This certificate supplies the project-internal extraspecial-group/coset derivation and explicit dual-typed isomorphisms to the pre-existing Q4/tomotope and 24-cell Reye models."
         ),
         "checks": checks,
     }
@@ -213,6 +235,7 @@ def main():
         "upstairs": [r["upstairs"]["triple_points"], r["upstairs"]["lines"]],
         "downstairs": [r["downstairs"]["points"], r["downstairs"]["blocks"]],
         "hidden_bits": r["central_phase"]["hidden_bits_per_point_fibre"],
+        "orientation": r["downstairs"]["typed_orientation"],
     }, sort_keys=True))
     return 0 if r["status"] == "PASS" else 1
 
