@@ -32,6 +32,7 @@ on:
       - 'analysis/w33_boundary_singer_toroidal_84_bridge.py'
       - 'analysis/w33_cocycle_rank1_576_parity_firewall.py'
       - 'analysis/w33_a4_untwisted_core_synthesis.py'
+      - 'analysis/w33_latin288_w33_central_quotient_bridge.py'
       - 'analysis/w33_publish_september_2026_frontier.py'
       - 'analysis/BT20260910_heawood_schubert_observer_insert.tex'
       - 'tests/test_bt1408_witting_contextual_communication_bridge.py'
@@ -47,6 +48,7 @@ on:
       - 'tests/test_w33_boundary_singer_toroidal_84_bridge_20260910.py'
       - 'tests/test_w33_cocycle_rank1_576_parity_firewall_20260910.py'
       - 'tests/test_w33_a4_untwisted_core_synthesis_20260910.py'
+      - 'tests/test_w33_latin288_w33_central_quotient_bridge_20260910.py'
       - 'photonic_holonet.tex'
       - 'photonic_holonet_body.tex'
       - 'single_photon_universal_computation.tex'
@@ -95,6 +97,7 @@ jobs:
           python analysis/w33_boundary_singer_toroidal_84_bridge.py
           python analysis/w33_cocycle_rank1_576_parity_firewall.py
           python analysis/w33_a4_untwisted_core_synthesis.py
+          python analysis/w33_latin288_w33_central_quotient_bridge.py
           python analysis/w33_publish_september_2026_frontier.py
       - name: Focused regression gates
         run: |
@@ -111,7 +114,8 @@ jobs:
             tests/test_w33_trace_observer_finite_observability_20260910.py \
             tests/test_w33_boundary_singer_toroidal_84_bridge_20260910.py \
             tests/test_w33_cocycle_rank1_576_parity_firewall_20260910.py \
-            tests/test_w33_a4_untwisted_core_synthesis_20260910.py
+            tests/test_w33_a4_untwisted_core_synthesis_20260910.py \
+            tests/test_w33_latin288_w33_central_quotient_bridge_20260910.py
       - name: Freeze generated outputs and public index on master
         shell: bash
         run: |
@@ -142,6 +146,7 @@ jobs:
             data/w33_boundary_singer_toroidal_84_bridge.json \
             data/w33_cocycle_rank1_576_parity_firewall.json \
             data/w33_a4_untwisted_core_synthesis.json \
+            data/w33_latin288_w33_central_quotient_bridge.json \
             docs/index.html
           if git diff --cached --quiet; then
             echo 'All focused certificates and publication anchors already frozen.'
@@ -149,7 +154,7 @@ jobs:
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'Freeze corrected observer synthesis frontier'
+          git commit -m 'Freeze Latin 288 crossed-completion frontier'
           git fetch origin master
           git rebase origin/master
           git push origin HEAD:master
