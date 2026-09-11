@@ -1,0 +1,2065 @@
+{
+  "E7_symplectic_matrix": [
+    [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ]
+  ],
+  "census": {
+    "anticommuting_pairs": 1008,
+    "closed_anticommuting_XOR_triangles": 336,
+    "commuting_pairs": 945,
+    "pair_relations_checked": 1953,
+    "projective_threequbit_Pauli_directions": 63
+  },
+  "checks": {
+    "E7_symplectic_form_rank6": true,
+    "all_1953_pair_relations_checked": true,
+    "all_336_closed_anticommuting_XOR_triangles_preserved": true,
+    "all_63_E7_root_pairs_hit_once": true,
+    "all_63_nonzero_standard_Pauli_directions_mapped": true,
+    "anticommuting_pair_count_1008": true,
+    "basis_change_is_GL6F2": true,
+    "basis_change_is_symplectic_to_standard_threequbit_gauge": true,
+    "commuting_pair_count_945": true
+  },
+  "chosen_E7_hyperbolic_basis_columns": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "claim_boundary": "This identifies the Schur64 normal phase quotient E3/Z(E3) with the repo's E7/three-qubit Pauli carrier. It does not yet identify Schur's 64 lines or 64 ordinary triple points objectwise with E7 roots, Pauli classes, or affine F2^6 states.",
+  "dictionary": [
+    {
+      "e7_antipodal_root_pair_representative": [
+        -1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        -1
+      ],
+      "e7_quotient_bits": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pauli_word_projective": "IIZ",
+      "standard_bits_x1z1x2z2x3z3": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        -2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "e7_quotient_bits": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pauli_word_projective": "IIX",
+      "standard_bits_x1z1x2z2x3z3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        -1,
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "e7_quotient_bits": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pauli_word_projective": "IIY",
+      "standard_bits_x1z1x2z2x3z3": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        0,
+        0,
+        -2,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "e7_quotient_bits": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "pauli_word_projective": "IZI",
+      "standard_bits_x1z1x2z2x3z3": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        -1,
+        1,
+        1,
+        1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "e7_quotient_bits": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "pauli_word_projective": "IZZ",
+      "standard_bits_x1z1x2z2x3z3": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        0,
+        0,
+        -2,
+        -2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "e7_quotient_bits": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "pauli_word_projective": "IZX",
+      "standard_bits_x1z1x2z2x3z3": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        -1,
+        1,
+        -1,
+        -1,
+        1,
+        1,
+        1,
+        -1
+      ],
+      "e7_quotient_bits": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "pauli_word_projective": "IZY",
+      "standard_bits_x1z1x2z2x3z3": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        0,
+        0,
+        -2,
+        0,
+        0,
+        0,
+        0,
+        -2
+      ],
+      "e7_quotient_bits": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "pauli_word_projective": "IXI",
+      "standard_bits_x1z1x2z2x3z3": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        -1,
+        1,
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "e7_quotient_bits": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "pauli_word_projective": "IXZ",
+      "standard_bits_x1z1x2z2x3z3": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        0,
+        0,
+        -2,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "e7_quotient_bits": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "pauli_word_projective": "IXX",
+      "standard_bits_x1z1x2z2x3z3": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        -1,
+        1,
+        -1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "e7_quotient_bits": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "pauli_word_projective": "IXY",
+      "standard_bits_x1z1x2z2x3z3": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        0,
+        0,
+        0,
+        -2,
+        0,
+        0,
+        0,
+        -2
+      ],
+      "e7_quotient_bits": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "pauli_word_projective": "IYI",
+      "standard_bits_x1z1x2z2x3z3": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "e7_quotient_bits": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "pauli_word_projective": "IYZ",
+      "standard_bits_x1z1x2z2x3z3": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        0,
+        0,
+        0,
+        -2,
+        0,
+        0,
+        0,
+        2
+      ],
+      "e7_quotient_bits": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "pauli_word_projective": "IYX",
+      "standard_bits_x1z1x2z2x3z3": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        -1,
+        1,
+        1,
+        -1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "e7_quotient_bits": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "pauli_word_projective": "IYY",
+      "standard_bits_x1z1x2z2x3z3": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        0,
+        0,
+        0,
+        0,
+        -2,
+        2,
+        0,
+        0
+      ],
+      "e7_quotient_bits": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "pauli_word_projective": "ZII",
+      "standard_bits_x1z1x2z2x3z3": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        -1,
+        1,
+        -1,
+        -1,
+        1,
+        1,
+        -1,
+        1
+      ],
+      "e7_quotient_bits": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "pauli_word_projective": "ZIZ",
+      "standard_bits_x1z1x2z2x3z3": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        0,
+        0,
+        0,
+        0,
+        -2,
+        -2,
+        0,
+        0
+      ],
+      "e7_quotient_bits": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "pauli_word_projective": "ZIX",
+      "standard_bits_x1z1x2z2x3z3": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        -1,
+        1,
+        1,
+        1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "e7_quotient_bits": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "pauli_word_projective": "ZIY",
+      "standard_bits_x1z1x2z2x3z3": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -2,
+        -2
+      ],
+      "e7_quotient_bits": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "pauli_word_projective": "ZZI",
+      "standard_bits_x1z1x2z2x3z3": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        -1,
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "e7_quotient_bits": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "pauli_word_projective": "ZZZ",
+      "standard_bits_x1z1x2z2x3z3": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -2,
+        2
+      ],
+      "e7_quotient_bits": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "pauli_word_projective": "ZZX",
+      "standard_bits_x1z1x2z2x3z3": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        -1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        -1,
+        1
+      ],
+      "e7_quotient_bits": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "pauli_word_projective": "ZZY",
+      "standard_bits_x1z1x2z2x3z3": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        0,
+        0,
+        0,
+        -2,
+        0,
+        0,
+        2,
+        0
+      ],
+      "e7_quotient_bits": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "pauli_word_projective": "ZXI",
+      "standard_bits_x1z1x2z2x3z3": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "e7_quotient_bits": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "pauli_word_projective": "ZXZ",
+      "standard_bits_x1z1x2z2x3z3": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        0,
+        0,
+        0,
+        -2,
+        0,
+        0,
+        -2,
+        0
+      ],
+      "e7_quotient_bits": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "pauli_word_projective": "ZXX",
+      "standard_bits_x1z1x2z2x3z3": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        -1,
+        1,
+        1,
+        -1,
+        1,
+        1,
+        -1,
+        -1
+      ],
+      "e7_quotient_bits": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "pauli_word_projective": "ZXY",
+      "standard_bits_x1z1x2z2x3z3": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        0,
+        0,
+        -2,
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      "e7_quotient_bits": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pauli_word_projective": "ZYI",
+      "standard_bits_x1z1x2z2x3z3": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        -1,
+        1,
+        1,
+        -1,
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "e7_quotient_bits": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pauli_word_projective": "ZYZ",
+      "standard_bits_x1z1x2z2x3z3": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        0,
+        0,
+        -2,
+        0,
+        0,
+        0,
+        -2,
+        0
+      ],
+      "e7_quotient_bits": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pauli_word_projective": "ZYX",
+      "standard_bits_x1z1x2z2x3z3": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        -1,
+        1,
+        -1,
+        1,
+        1,
+        1,
+        -1,
+        -1
+      ],
+      "e7_quotient_bits": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pauli_word_projective": "ZYY",
+      "standard_bits_x1z1x2z2x3z3": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        -2,
+        2,
+        0
+      ],
+      "e7_quotient_bits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "pauli_word_projective": "XII",
+      "standard_bits_x1z1x2z2x3z3": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        -1,
+        1,
+        -1,
+        -1,
+        -1,
+        1,
+        1,
+        1
+      ],
+      "e7_quotient_bits": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "pauli_word_projective": "XIZ",
+      "standard_bits_x1z1x2z2x3z3": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        -2,
+        -2,
+        0
+      ],
+      "e7_quotient_bits": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "pauli_word_projective": "XIX",
+      "standard_bits_x1z1x2z2x3z3": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        -1,
+        1,
+        1,
+        1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "e7_quotient_bits": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "pauli_word_projective": "XIY",
+      "standard_bits_x1z1x2z2x3z3": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        0,
+        0,
+        0,
+        0,
+        -2,
+        0,
+        0,
+        -2
+      ],
+      "e7_quotient_bits": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "pauli_word_projective": "XZI",
+      "standard_bits_x1z1x2z2x3z3": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        -1,
+        1,
+        -1,
+        -1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "e7_quotient_bits": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "pauli_word_projective": "XZZ",
+      "standard_bits_x1z1x2z2x3z3": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        0,
+        0,
+        0,
+        0,
+        -2,
+        0,
+        0,
+        2
+      ],
+      "e7_quotient_bits": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "pauli_word_projective": "XZX",
+      "standard_bits_x1z1x2z2x3z3": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        -1,
+        1,
+        1,
+        1,
+        -1,
+        1,
+        1,
+        1
+      ],
+      "e7_quotient_bits": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "pauli_word_projective": "XZY",
+      "standard_bits_x1z1x2z2x3z3": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        0,
+        0,
+        0,
+        -2,
+        2,
+        0,
+        0,
+        0
+      ],
+      "e7_quotient_bits": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "pauli_word_projective": "XXI",
+      "standard_bits_x1z1x2z2x3z3": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        -1,
+        1,
+        -1,
+        1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "e7_quotient_bits": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "pauli_word_projective": "XXZ",
+      "standard_bits_x1z1x2z2x3z3": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        0,
+        0,
+        0,
+        -2,
+        -2,
+        0,
+        0,
+        0
+      ],
+      "e7_quotient_bits": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "pauli_word_projective": "XXX",
+      "standard_bits_x1z1x2z2x3z3": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        -1,
+        1,
+        1,
+        -1,
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "e7_quotient_bits": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "pauli_word_projective": "XXY",
+      "standard_bits_x1z1x2z2x3z3": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        0,
+        0,
+        -2,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "e7_quotient_bits": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "pauli_word_projective": "XYI",
+      "standard_bits_x1z1x2z2x3z3": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        -1,
+        1,
+        1,
+        -1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "e7_quotient_bits": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "pauli_word_projective": "XYZ",
+      "standard_bits_x1z1x2z2x3z3": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        0,
+        0,
+        -2,
+        0,
+        -2,
+        0,
+        0,
+        0
+      ],
+      "e7_quotient_bits": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "pauli_word_projective": "XYX",
+      "standard_bits_x1z1x2z2x3z3": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "e7_quotient_bits": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "pauli_word_projective": "XYY",
+      "standard_bits_x1z1x2z2x3z3": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        0,
+        0,
+        0,
+        0,
+        -2,
+        0,
+        2,
+        0
+      ],
+      "e7_quotient_bits": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "pauli_word_projective": "YII",
+      "standard_bits_x1z1x2z2x3z3": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        -1,
+        1,
+        -1,
+        -1,
+        1,
+        -1,
+        1,
+        1
+      ],
+      "e7_quotient_bits": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "pauli_word_projective": "YIZ",
+      "standard_bits_x1z1x2z2x3z3": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        0,
+        0,
+        0,
+        0,
+        -2,
+        0,
+        -2,
+        0
+      ],
+      "e7_quotient_bits": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "pauli_word_projective": "YIX",
+      "standard_bits_x1z1x2z2x3z3": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        -1,
+        1,
+        1,
+        1,
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "e7_quotient_bits": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "pauli_word_projective": "YIY",
+      "standard_bits_x1z1x2z2x3z3": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        -2,
+        0,
+        -2
+      ],
+      "e7_quotient_bits": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "pauli_word_projective": "YZI",
+      "standard_bits_x1z1x2z2x3z3": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        -1,
+        1,
+        -1,
+        -1,
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "e7_quotient_bits": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "pauli_word_projective": "YZZ",
+      "standard_bits_x1z1x2z2x3z3": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        -2,
+        0,
+        2
+      ],
+      "e7_quotient_bits": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "pauli_word_projective": "YZX",
+      "standard_bits_x1z1x2z2x3z3": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        -1,
+        1,
+        1,
+        1,
+        1,
+        -1,
+        1,
+        1
+      ],
+      "e7_quotient_bits": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "pauli_word_projective": "YZY",
+      "standard_bits_x1z1x2z2x3z3": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        0,
+        0,
+        0,
+        -2,
+        0,
+        2,
+        0,
+        0
+      ],
+      "e7_quotient_bits": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "pauli_word_projective": "YXI",
+      "standard_bits_x1z1x2z2x3z3": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "e7_quotient_bits": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "pauli_word_projective": "YXZ",
+      "standard_bits_x1z1x2z2x3z3": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        0,
+        0,
+        0,
+        -2,
+        0,
+        -2,
+        0,
+        0
+      ],
+      "e7_quotient_bits": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "pauli_word_projective": "YXX",
+      "standard_bits_x1z1x2z2x3z3": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        -1,
+        1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "e7_quotient_bits": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "pauli_word_projective": "YXY",
+      "standard_bits_x1z1x2z2x3z3": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        0,
+        0,
+        -2,
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "e7_quotient_bits": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "pauli_word_projective": "YYI",
+      "standard_bits_x1z1x2z2x3z3": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        -1,
+        1,
+        1,
+        -1,
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "e7_quotient_bits": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "pauli_word_projective": "YYZ",
+      "standard_bits_x1z1x2z2x3z3": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        0,
+        0,
+        -2,
+        0,
+        0,
+        -2,
+        0,
+        0
+      ],
+      "e7_quotient_bits": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "pauli_word_projective": "YYX",
+      "standard_bits_x1z1x2z2x3z3": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "e7_antipodal_root_pair_representative": [
+        -1,
+        1,
+        -1,
+        1,
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "e7_quotient_bits": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "pauli_word_projective": "YYY",
+      "standard_bits_x1z1x2z2x3z3": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "schema": "w33.schur64-e7-threequbit-pauli-objectwise-bridge.v1",
+  "source_alignment": {
+    "external_2026_Schur64": "Nurowski arXiv:2609.10751 identifies the normal order-128 group as the real three-qubit Pauli group generated by -I and Xi,Zi for i=1,2,3.",
+    "repo_E7": "Pass8489-8496 identifies all 63 antipodal E7 root pairs with all 63 nonzero vectors of a six-dimensional symplectic quotient."
+  },
+  "standard_coordinate_order": [
+    "x1",
+    "z1",
+    "x2",
+    "z2",
+    "x3",
+    "z3"
+  ],
+  "standard_symplectic_matrix": [
+    [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ]
+  ],
+  "standard_to_E7_basis_matrix_columns": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      0,
+      0,
+      0
+    ]
+  ],
+  "status": "PASS",
+  "theorem": "In the standard Xi,Zi gauge used by the Schur64 real three-qubit Pauli normal subgroup, the 63 noncentral projective phase directions admit an explicit symplectic objectwise dictionary to the 63 antipodal E7 root pairs; the dictionary preserves every commutation relation and every one of the 336 closed anticommuting XOR triangles."
+}
