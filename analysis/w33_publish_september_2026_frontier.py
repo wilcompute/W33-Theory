@@ -33,8 +33,9 @@ def render_section() -> str:
     bridge84 = load("data/w33_boundary_singer_toroidal_84_bridge.json")
     parity = load("data/w33_cocycle_rank1_576_parity_firewall.json")
     a4core = load("data/w33_a4_untwisted_core_synthesis.json")
+    latin288 = load("data/w33_latin288_w33_central_quotient_bridge.json")
 
-    certs = (outer, group, schubert, observer, cube, cover, horizon, lag, finite, bridge84, parity, a4core)
+    certs = (outer, group, schubert, observer, cube, cover, horizon, lag, finite, bridge84, parity, a4core, latin288)
     assert all(x["status"] == "PASS" for x in certs)
 
     fixed_modes = outer["fixed_objects"]["fixed_pair_modes"]
@@ -45,6 +46,8 @@ def render_section() -> str:
     h3 = horizon["n3_information_horizon"]
     l3 = lag["n3_projective_anticorrelation"]
     obs = finite["trace_trajectory_observability"]
+    crossed = latin288["crossed_576_completions"]
+    qplus = latin288["plus_quadratic_geometry"]
 
     links = {
         "outer": "https://github.com/wilcompute/W33-Theory/blob/master/data/w33_heawood_outer_involution_fixed_census.json",
@@ -59,6 +62,7 @@ def render_section() -> str:
         "bridge84": "https://github.com/wilcompute/W33-Theory/blob/master/data/w33_boundary_singer_toroidal_84_bridge.json",
         "parity": "https://github.com/wilcompute/W33-Theory/blob/master/data/w33_cocycle_rank1_576_parity_firewall.json",
         "a4": "https://github.com/wilcompute/W33-Theory/blob/master/data/w33_a4_untwisted_core_synthesis.json",
+        "latin288": "https://github.com/wilcompute/W33-Theory/blob/master/data/w33_latin288_w33_central_quotient_bridge.json",
         "note": "https://github.com/wilcompute/W33-Theory/blob/master/analysis/W33_OBSERVER_RELATIVE_RANDOMNESS.md",
     }
 
@@ -75,9 +79,10 @@ def render_section() -> str:
   <p><strong>Corrected affine/Fano law.</strong> The observer split is <code>PG(3,2)=AG(3,2) ⊔ PG(2,2)</code>: eight stochastic affine macrostates over 64 GF(4) microstates versus seven deterministic Fano-at-infinity macrostates over 21 microstates. The one-lag pair table is <code>[[3/4,1/4],[16/21,5/21]]</code>, whose nontrivial eigenvalue is <strong>{html.escape(h3['nontrivial_eigenvalue'])}</strong>. This value is <em>not</em> a repeated-time decay rate: the exact lag certificate gives autocorrelation <code>{html.escape(str(l3['autocorrelation_over_one_period']))}</code>, so lags 1,2,3 all have correlation −1/84 and lag 4 is the exact identity.</p>
   <p><strong>Finite observability.</strong> The trace quotient is not irreversibly lossy under the declared order-four dynamics. Consecutive trace words distinguish <code>15 → 57 → 77 → 85</code> microstate classes, and <strong>{obs['minimal_observability_horizon']} samples recover the exact PG(3,4) microstate</strong>. Residual entropies are <code>228/85 → 72/85 → 16/85 → 0</code> bits. By contrast, a support-mask observer with the same 15 macrostate cardinality is an exact deterministic factor from the first step. Apparent stochasticity is therefore a partition-equivariance property, not a state-count property.</p>
   <p><strong>The 84 bridge is now constructive.</strong> The projective boundary codec has <code>84=|PG(2,4)|·|GF(4)|=21·4</code> states. A regular Singer <code>C21</code> supplies a <code>C7</code> whose quotient has 12 states, identified exactly as <code>GF(4)×GF(4)* = AGL(1,4) ≅ A4</code>, acting sharply transitively on the 12 directed K4 edges. Lifting those phases around the repo's concrete toroidal Singer cycle gives an explicit <strong>C7-equivariant 84↔84 bijection</strong> to the Császár/Szilassi flag system, after the declared Singer and affine-coordinate choices.</p>
-  <p><strong>A4 untwisted core and the 576 firewall.</strong> The same local <code>AGL(1,4)</code> is literally the even-permutation <code>A4 &lt; S4</code> on the four affine labels. It matches the normal order-12 <code>A4_section</code> in the stabilizer lattice, while <code>H′=C2×A4</code> and the order-48 preimage is <code>V4×A4</code>. The cocycle vanishes whenever the first S4 element is even. Its 48×48 support therefore has exactly <strong>{parity['support_geometry']['twisted_pairs']}</strong> twisted entries <code>=24²=576</code> and <strong>{parity['support_geometry']['untwisted_pairs']}</strong> untwisted entries. On abelianization the commutator is the nondegenerate binary symplectic form, and its eight-element central lift is exactly <code>D8</code>. Thus the tetrahedral A4 codec is an exact untwisted core; the central obstruction appears only on extension through odd S4 parity and the antipodal bit.</p>
-  <p><a href="{links['cube']}">cube/observer Q3</a> · <a href="{links['cover']}">central-cover cocycle</a> · <a href="{links['horizon']}">affine/Fano pair law</a> · <a href="{links['lag']}">exact lag correction</a> · <a href="{links['finite']}">four-sample observability</a> · <a href="{links['bridge84']}">C7-equivariant 84 bridge</a> · <a href="{links['parity']}">576 parity firewall</a> · <a href="{links['a4']}">A4 untwisted core</a> · <a href="{links['outer']}">outer census</a> · <a href="{links['group']}">order-96 lattice</a> · <a href="{links['schubert']}">all-n Schubert law</a> · <a href="{links['observer']}">observer quotient</a> · <a href="{links['note']}">randomness/decryptability note</a></p>
-  <p><em>Boundary:</em> the finite-geometry, group-cohomology, and information-theory statements above are exact certificates. The Q3 and 84 cross-model dictionaries use declared gauges, and the central cocycle is a finite group-extension invariant. None of these statements reduces Bell-certified quantum randomness to hidden classical variables, identifies the cocycle with Spin/Pin physics, or supplies a spacetime interpretation of the observer horizon.</p>
+  <p><strong>A4 untwisted core and the 576 firewall.</strong> The same local <code>AGL(1,4)</code> is literally the even-permutation <code>A4 &lt; S4</code> on the four affine labels. It matches the normal order-12 <code>A4_section</code> in the stabilizer lattice, while <code>H′=C2×A4</code> and the order-48 preimage is <code>V4×A4</code>. The cocycle vanishes whenever the first S4 element is even. Its 48×48 support therefore has exactly <strong>{parity['support_geometry']['twisted_pairs']}</strong> twisted entries <code>=24²=576</code> and <strong>{parity['support_geometry']['untwisted_pairs']}</strong> untwisted entries. On abelianization the commutator is the nondegenerate binary symplectic form, and its eight-element central lift is exactly <code>D8</code>.</p>
+  <p><strong>Crossed 576 completions.</strong> The old equality “576 Latin squares = 576 W33 stabilizer elements” is false as an equivariant G-set bridge, but the correct structure is stronger. The Klein-four Latin square has full paratopy stabilizer <code>2^4:(S3×S3)</code>; its even-coordinate subgroup is an explicit affine <code>B288 ≅ A4 wr C2</code>. A certified 4×4 binary conjugator sends this Latin action to the standard wreath action. Independently, the W33 minimum-vector stabilizer has <code>H576/Z(H576) ≅ A4 wr C2</code>. Thus the same <strong>288-element core</strong> occurs once as an index-two Latin subgroup and once as a W33 central quotient. Its binary kernel is <code>M2(F2)</code> with plus form <code>q(X)=det X</code>; the ruling-preserving linear group is <code>S3×S3</code>, and adjoining transpose gives <code>O+(4,2)</code> of order <strong>{72}</strong>. The explicit central lift of this kernel has order profile <code>1^1 2^19 4^12</code>, exactly the W33 extraspecial <code>2^(1+4)_+</code> profile. In compressed form: <code>{html.escape(crossed['Latin'])}</code>, while <code>{html.escape(crossed['W33'])}</code>. Latin restores an outer ruling reflection; W33 adds an internal central phase.</p>
+  <p><a href="{links['cube']}">cube/observer Q3</a> · <a href="{links['cover']}">central-cover cocycle</a> · <a href="{links['horizon']}">affine/Fano pair law</a> · <a href="{links['lag']}">exact lag correction</a> · <a href="{links['finite']}">four-sample observability</a> · <a href="{links['bridge84']}">C7-equivariant 84 bridge</a> · <a href="{links['parity']}">576 parity firewall</a> · <a href="{links['a4']}">A4 untwisted core</a> · <a href="{links['latin288']}">Latin/W33 crossed 576 bridge</a> · <a href="{links['outer']}">outer census</a> · <a href="{links['group']}">order-96 lattice</a> · <a href="{links['schubert']}">all-n Schubert law</a> · <a href="{links['observer']}">observer quotient</a> · <a href="{links['note']}">randomness/decryptability note</a></p>
+  <p><em>Boundary:</em> the finite-geometry, group-cohomology, and information-theory statements above are exact certificates. The Q3 and 84 cross-model dictionaries use declared gauges. The Latin/W33 288 bridge is an explicit conjugacy on the Latin side plus the independently certified W33 abstract quotient; it does not claim identical embeddings in the ambient PSp action. None of these statements reduces Bell-certified quantum randomness to hidden classical variables or identifies the finite central cocycles with Spin/Pin physics.</p>
 </section>
 {END}
 """.strip()
@@ -114,6 +119,7 @@ def main() -> int:
         "four_sample_observability_present": "4 samples recover" in updated,
         "equivariant_84_bridge_present": "C7-equivariant 84" in updated,
         "A4_untwisted_core_present": "A4 untwisted core" in updated,
+        "latin288_crossed_completion_present": "Crossed 576 completions" in updated,
     }, indent=2))
     return 0
 
