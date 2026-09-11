@@ -1,0 +1,43 @@
+{
+  "central_phase": {
+    "center_order": 2,
+    "hidden_bits_per_point_fibre": 1,
+    "line_fibre_size": 2,
+    "point_fibre_size": 2
+  },
+  "checks": {
+    "24_lines_pair_to_12_blocks": true,
+    "32_triples_quotient_to_16_phase_classes": true,
+    "central_element_pairs_lines_fixed_point_freely": true,
+    "extraspecial_center_order2": true,
+    "quotient_is_16_3_12_4": true,
+    "quotient_is_typed_dual_of_24cell_Reye": true,
+    "quotient_is_typed_dual_of_Q4_tomotope_Reye": true,
+    "same_typed_orientation_is_not_project_Reye": true
+  },
+  "downstairs": {
+    "blocks": 12,
+    "configuration": "dual Reye 16_3,12_4",
+    "degree_profile": {
+      "3": 16,
+      "4": 12
+    },
+    "incidences": 48,
+    "points": 16,
+    "same_typed_24cell_Reye": false,
+    "same_typed_Q4_Reye": false,
+    "typed_dual_24cell_Reye": true,
+    "typed_dual_Q4_tomotope_Reye": true,
+    "typed_orientation": "incidence dual of project-native Reye 12_4,16_3"
+  },
+  "prior_art_boundary": "Nurowski, arXiv:2609.10751 (2026-09-09), independently proves that the antipodal quotient of the Schur 24-line configuration is Reye. This certificate supplies the project-internal extraspecial-group/coset derivation and explicit dual-typed isomorphisms to the pre-existing Q4/tomotope and 24-cell Reye models.",
+  "schema": "w33.schur-central-phase-reye-quotient.v2",
+  "status": "PASS",
+  "theorem": "Quotienting the Schur extraspecial coset geometry by the central phase Z(E) pairs its 32 triple points and 24 lines 2-to-1 and yields the typed incidence dual of the project-native Reye configuration.",
+  "upstairs": {
+    "configuration": "Schur (24_4,32_3)",
+    "lines": 24,
+    "point_model": "E = 2_+^{1+4} torsor",
+    "triple_points": 32
+  }
+}

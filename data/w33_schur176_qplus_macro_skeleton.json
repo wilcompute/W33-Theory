@@ -1,0 +1,57 @@
+{
+  "checks": {
+    "Qplus_has_six_generators": true,
+    "Qplus_intersection_profile_is_6_same_plus_9_cross": true,
+    "cross_ruling_grid_has_nine_points": true,
+    "cross_surface_pairs_share_unique_grid_block": true,
+    "each_surface_is_16_plus_3_times_16": true,
+    "generators_split_3_plus_3": true,
+    "line_count_is_16_times_11": true,
+    "macro_blocks_are_2_plus_9": true,
+    "macro_symmetry_is_S3xS3_order36": true,
+    "same_ruling_surface_pairs_share_core": true,
+    "six_surfaces_split_3_plus_3": true
+  },
+  "dictionary": {
+    "first_ruling_core": "H_core",
+    "first_ruling_generators": "Phi_0,Phi_1,Phi_2",
+    "grid_point_(i,j)": "B_ij = Phi_i cap Psi_j",
+    "second_ruling_core": "K_core",
+    "second_ruling_generators": "Psi_0,Psi_1,Psi_2",
+    "surface_rule": "generator line -> ruling core plus its three cross-ruling grid-point blocks"
+  },
+  "prior_art_boundary": "The 176-line decomposition, six surfaces, and S3 x S3 surface action are external results of Nurowski, arXiv:2609.10751. This certificate supplies the project-internal Q^+(3,2) identification of the block/surface macro-skeleton. It does not yet identify individual lines inside each 16-line block with E/Z(E).",
+  "qplus": {
+    "generator_lines": 6,
+    "ruling_preserving_group": "S3 x S3",
+    "rulings": [
+      [
+        0,
+        4,
+        5
+      ],
+      [
+        1,
+        2,
+        3
+      ]
+    ],
+    "singular_projective_points": 9,
+    "space": "Q^+(3,2) in F2^4 with q=x0*x3+x1*x2"
+  },
+  "schema": "w33.schur176-qplus-macro-skeleton.v1",
+  "schur176_macro": {
+    "common_core_blocks": 2,
+    "cross_blocks": 9,
+    "lines_per_block": 16,
+    "lines_per_surface": 64,
+    "surface_group_order": 36,
+    "surface_partition": [
+      3,
+      3
+    ],
+    "total_lines": 176
+  },
+  "status": "PASS",
+  "theorem": "Nurowski's six-surface 176-line block incidence has exactly the augmented hyperbolic-quadric Q^+(3,2) ruling skeleton: two triples of generators, nine cross-ruling grid points, one common 16-line core per ruling, and S3 x S3 ruling-preserving symmetry."
+}
