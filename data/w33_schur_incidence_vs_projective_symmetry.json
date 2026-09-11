@@ -1,0 +1,27 @@
+{
+  "Schur_geometric_half": {
+    "projective_stabilizer_order": 576,
+    "source": "Gerald Hohn, arXiv:2607.10090",
+    "structure": "W(D4):C3"
+  },
+  "bare_incidence": {
+    "Levi_edges": 96,
+    "Levi_vertices": 56,
+    "automorphism_order": 1152,
+    "configuration": "(24_4,32_3)",
+    "root_action": "exactly W(F4) on the 24 D4 roots"
+  },
+  "checks": {
+    "Levi_edges_96": true,
+    "Levi_vertices_56": true,
+    "abstract_incidence_automorphisms_1152": true,
+    "abstract_root_action_equals_WF4": true,
+    "incidence_to_projective_index_is_2": true,
+    "projective_half_stabilizer_external_order_576": true,
+    "root_action_faithful_1152": true
+  },
+  "information_reading": "The isolated incidence observer forgets projective/K3 embedding data and consequently admits twice as many symmetries as the stabilizer of the realized 24-line half. This is symmetry gained by coarse-graining, not evidence that every abstract incidence automorphism is induced by a projective automorphism preserving that half.",
+  "schema": "w33.schur-incidence-vs-projective-symmetry.v1",
+  "status": "PASS",
+  "theorem": "The bare D4-root (24_4,32_3) Levi graph has full automorphism group W(F4) of order 1152, while the Schur-quartic realization of a chosen half has projective stabilizer W(D4):C3 of order 576."
+}

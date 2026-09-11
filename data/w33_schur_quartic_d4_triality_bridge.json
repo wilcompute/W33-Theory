@@ -1,0 +1,47 @@
+{
+  "boundary": "This is an abstract group plus 24-root-action bridge. It does not supply a canonical W33 45-minimum to Schur 24-line bijection, and it imports the algebro-geometric identification of the root model with actual Schur lines from arXiv:2607.10090.",
+  "checks": {
+    "24_root_action_preserves_all_32_triples": true,
+    "D4_root_shell_has_24_roots": true,
+    "WD4_even_signed_permutations_order192": true,
+    "WD4_lies_in_unique_F4_index2_kernel": true,
+    "faithful_24_root_action_order576": true,
+    "incidence_is_24_4_32_3": true,
+    "order3_even_triality_closes_to_576": true,
+    "spectrum_matches_W33_minimum_stabilizer": true,
+    "triality_closure_equals_root_parity_kernel": true,
+    "zero_sum_triples_are_32": true
+  },
+  "configuration": {
+    "line_degree": 4,
+    "line_roots": 24,
+    "triple_degree": 3,
+    "triple_points": 32
+  },
+  "external_input": {
+    "claims_used": [
+      "24 lines are labeled by the 24 D4 roots",
+      "32 triple points are unordered zero-sum root triples",
+      "half-stabilizer is W(D4):C3 with even triality"
+    ],
+    "paper": "Gerald Hohn, Automorphisms of a (24_4,32_3)-configuration on the Schur quartic, arXiv:2607.10090 (2026)"
+  },
+  "group_bridge": {
+    "F4_kernel_name_in_declared_simple-root_gauge": "short-root parity",
+    "W33_identification": "the companion three-way provenance certificate gives an explicit isomorphism from the W33 minimum-vector stabilizer to this root-parity F4 kernel",
+    "WD4_order": 192,
+    "closure_order": 576,
+    "element_orders": {
+      "1": 1,
+      "2": 43,
+      "3": 80,
+      "4": 84,
+      "6": 272,
+      "12": 96
+    },
+    "triality_order": 3
+  },
+  "schema": "w33.schur-quartic-d4-triality-bridge.v1",
+  "status": "PASS",
+  "theorem": "The 2026 Schur-quartic half-stabilizer W(D4):C3 is realized internally as the same F4 root-parity order-576 group already explicitly isomorphic to the W33 PSp(4,3) minimum-vector stabilizer; its faithful 24-root action preserves the exact (24_4,32_3) zero-sum incidence configuration."
+}
