@@ -1,0 +1,385 @@
+{
+  "boundary_singer": {
+    "C21_order": 21,
+    "C7_generator_power": 3,
+    "C7_orbit_count_on_PG24": 3,
+    "C7_orbit_sizes": [
+      7,
+      7,
+      7
+    ],
+    "PG24_points": 21,
+    "companion_Singer_candidates_found": 12,
+    "quotient_residue_to_GF4_direction": {
+      "0": 1,
+      "1": 2,
+      "2": 3
+    },
+    "selected_matrix": [
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1
+      ]
+    ]
+  },
+  "checks": {
+    "AGL14_is_A4_even_order12": true,
+    "AGL14_sharply_transitive_on_directed_K4_edges": true,
+    "C7_subgroup_has_three_seven_cycles": true,
+    "boundary_C7_quotient_has_12_states": true,
+    "boundary_codec_has_84_states": true,
+    "full_bridge_is_C7_equivariant_on_all_states": true,
+    "full_bridge_is_bijection": true,
+    "local_A4_matches_cube_cover_derived_image": true,
+    "pg24_boundary_has_21_points": true,
+    "projective_singer_C21_regular": true,
+    "quotient_is_all_directed_K4_edges": true,
+    "toroidal_flags_84": true
+  },
+  "choice_boundary": [
+    "The PG(2,4) Singer generator is chosen from a verified companion-matrix search.",
+    "The C21/C7 residue classes are identified with GF(4)^* by a declared omega phase.",
+    "The completed K4 is given a declared affine GF(4) coordinate gauge.",
+    "The resulting 84-state map is exactly bijective and C7-equivariant, but no full ambient-group canonicity is claimed."
+  ],
+  "explicit_bridge_sample": [
+    {
+      "GF4_anchor": 0,
+      "boundary_point": [
+        0,
+        0,
+        1
+      ],
+      "quotient_edge": [
+        0,
+        1
+      ],
+      "toroidal_flag": {
+        "from": 10,
+        "hexagon": [
+          0,
+          7,
+          1,
+          10,
+          3,
+          8
+        ],
+        "to": 1
+      }
+    },
+    {
+      "GF4_anchor": 1,
+      "boundary_point": [
+        0,
+        0,
+        1
+      ],
+      "quotient_edge": [
+        1,
+        0
+      ],
+      "toroidal_flag": {
+        "from": 10,
+        "hexagon": [
+          0,
+          7,
+          1,
+          10,
+          3,
+          8
+        ],
+        "to": 3
+      }
+    },
+    {
+      "GF4_anchor": 2,
+      "boundary_point": [
+        0,
+        0,
+        1
+      ],
+      "quotient_edge": [
+        2,
+        3
+      ],
+      "toroidal_flag": {
+        "from": 1,
+        "hexagon": [
+          0,
+          7,
+          1,
+          10,
+          3,
+          8
+        ],
+        "to": 10
+      }
+    },
+    {
+      "GF4_anchor": 3,
+      "boundary_point": [
+        0,
+        0,
+        1
+      ],
+      "quotient_edge": [
+        3,
+        2
+      ],
+      "toroidal_flag": {
+        "from": 3,
+        "hexagon": [
+          0,
+          7,
+          1,
+          10,
+          3,
+          8
+        ],
+        "to": 10
+      }
+    },
+    {
+      "GF4_anchor": 0,
+      "boundary_point": [
+        0,
+        1,
+        0
+      ],
+      "quotient_edge": [
+        0,
+        3
+      ],
+      "toroidal_flag": {
+        "from": 9,
+        "hexagon": [
+          0,
+          8,
+          4,
+          11,
+          6,
+          9
+        ],
+        "to": 6
+      }
+    },
+    {
+      "GF4_anchor": 1,
+      "boundary_point": [
+        0,
+        1,
+        0
+      ],
+      "quotient_edge": [
+        1,
+        2
+      ],
+      "toroidal_flag": {
+        "from": 6,
+        "hexagon": [
+          0,
+          8,
+          4,
+          11,
+          6,
+          9
+        ],
+        "to": 9
+      }
+    },
+    {
+      "GF4_anchor": 2,
+      "boundary_point": [
+        0,
+        1,
+        0
+      ],
+      "quotient_edge": [
+        2,
+        1
+      ],
+      "toroidal_flag": {
+        "from": 0,
+        "hexagon": [
+          0,
+          8,
+          4,
+          11,
+          6,
+          9
+        ],
+        "to": 9
+      }
+    },
+    {
+      "GF4_anchor": 3,
+      "boundary_point": [
+        0,
+        1,
+        0
+      ],
+      "quotient_edge": [
+        3,
+        0
+      ],
+      "toroidal_flag": {
+        "from": 9,
+        "hexagon": [
+          0,
+          8,
+          4,
+          11,
+          6,
+          9
+        ],
+        "to": 0
+      }
+    },
+    {
+      "GF4_anchor": 0,
+      "boundary_point": [
+        0,
+        1,
+        1
+      ],
+      "quotient_edge": [
+        0,
+        2
+      ],
+      "toroidal_flag": {
+        "from": 9,
+        "hexagon": [
+          0,
+          7,
+          2,
+          13,
+          5,
+          9
+        ],
+        "to": 0
+      }
+    },
+    {
+      "GF4_anchor": 1,
+      "boundary_point": [
+        0,
+        1,
+        1
+      ],
+      "quotient_edge": [
+        1,
+        3
+      ],
+      "toroidal_flag": {
+        "from": 5,
+        "hexagon": [
+          0,
+          7,
+          2,
+          13,
+          5,
+          9
+        ],
+        "to": 9
+      }
+    },
+    {
+      "GF4_anchor": 2,
+      "boundary_point": [
+        0,
+        1,
+        1
+      ],
+      "quotient_edge": [
+        2,
+        0
+      ],
+      "toroidal_flag": {
+        "from": 9,
+        "hexagon": [
+          0,
+          7,
+          2,
+          13,
+          5,
+          9
+        ],
+        "to": 5
+      }
+    },
+    {
+      "GF4_anchor": 3,
+      "boundary_point": [
+        0,
+        1,
+        1
+      ],
+      "quotient_edge": [
+        3,
+        1
+      ],
+      "toroidal_flag": {
+        "from": 0,
+        "hexagon": [
+          0,
+          7,
+          2,
+          13,
+          5,
+          9
+        ],
+        "to": 9
+      }
+    }
+  ],
+  "headline": "The affine/Fano denominator 84 now has an explicit C7-equivariant toroidal realization. PG(2,4)xGF(4) has 84 states; a regular Singer C21 supplies a C7 with twelve size-7 orbits, the quotient is GF(4)xGF(4)^* = the 12 directed K4 edges = AGL(1,4)~=A4, and an explicit lift bijects all 84 states with the repo's 84 Singer-toroidal flags.",
+  "local12": {
+    "AGL14_element_order_histogram": {
+      "1": 1,
+      "2": 3,
+      "3": 8
+    },
+    "AGL14_isomorphism": "AGL(1,4) acts as all 12 even permutations of four GF(4) points, hence A4",
+    "AGL14_order": 12,
+    "cube_cover_match": "H'/Z(H) ~= A4 = Aut(Q3)'",
+    "edge_map": "(a,d) -> directed K4 edge a -> a+d",
+    "identity": "(PG(2,4)xGF(4))/C7 ~= GF(4)^* x GF(4)"
+  },
+  "schema": "w33.boundary-singer-toroidal-84-bridge.v1",
+  "spectral_bridge": {
+    "denominator_identity": "84 = 4*|PG(2,4)| = |PG(2,4)xGF(4)|",
+    "new_reading": "The inverse projective anti-correlation scale equals the cardinality of an explicit C7-equivariant boundary codec that is bijective with the 84 toroidal flags.",
+    "prior_coefficient": "rho_3=-1/84"
+  },
+  "status": "PASS",
+  "toroidal_codec": {
+    "C7_equivariance_checks": 84,
+    "K4_point_to_GF4": {
+      "(0, 0, 1)": 1,
+      "(0, 1, 0)": 2,
+      "(1, 0, 0)": 3,
+      "(1, 1, 1)": 0
+    },
+    "completed_K4_origin": "(1, 1, 1)",
+    "flag_count": 84,
+    "reference_hexagon": [
+      0,
+      7,
+      1,
+      10,
+      3,
+      8
+    ]
+  }
+}

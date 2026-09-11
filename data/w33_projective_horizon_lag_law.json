@@ -1,0 +1,690 @@
+{
+  "checks": {
+    "all_distinct_coordinate_lags_share_one_kernel": true,
+    "correlation_formula_exact": true,
+    "cyclic_return_is_identity": true,
+    "enumerated_n1_through_n6": true,
+    "n3_correlation_is_minus_one_over_84": true,
+    "n3_lags_1_2_3_same_and_lag4_identity": true,
+    "one_step_kernel_is_not_multistep_markov_kernel": true
+  },
+  "claim_boundary": [
+    "The -1/84 value remains exact; what changes is its interpretation from repeated-time decay to pairwise projective anti-correlation.",
+    "The pair kernel becomes a genuine Markov chain only under an extra conditional re-randomization assumption that is absent from the deterministic U dynamics.",
+    "No thermodynamic relaxation, quantum decoherence, or physical mixing timescale follows from this coefficient alone."
+  ],
+  "dimension_census": [
+    {
+      "affine_sector_microstates": 4,
+      "all_nonzero_lags": [
+        {
+          "counts": {
+            "A_to_A": 3,
+            "A_to_F": 1,
+            "F_to_A": 1,
+            "F_to_F": 0
+          },
+          "kernel": {
+            "A_to_A": "3/4",
+            "A_to_F": "1/4",
+            "F_to_A": "1",
+            "F_to_F": "0"
+          },
+          "lag": 1
+        }
+      ],
+      "boundary_sector_microstates": 1,
+      "correlation_formula": "-1/(4*1)",
+      "n": 1,
+      "non_markov_witness": null,
+      "nonzero_lag_kernel": {
+        "A_to_A": "3/4",
+        "A_to_F": "1/4",
+        "F_to_A": "1",
+        "F_to_F": "0"
+      },
+      "pairwise_correlation": "-1/4",
+      "projective_microstates": 5,
+      "return_kernel": {
+        "A_to_A": "1",
+        "A_to_F": "0",
+        "F_to_A": "0",
+        "F_to_F": "1"
+      },
+      "return_lag": 2
+    },
+    {
+      "affine_sector_microstates": 16,
+      "all_nonzero_lags": [
+        {
+          "counts": {
+            "A_to_A": 12,
+            "A_to_F": 4,
+            "F_to_A": 4,
+            "F_to_F": 1
+          },
+          "kernel": {
+            "A_to_A": "3/4",
+            "A_to_F": "1/4",
+            "F_to_A": "4/5",
+            "F_to_F": "1/5"
+          },
+          "lag": 1
+        },
+        {
+          "counts": {
+            "A_to_A": 12,
+            "A_to_F": 4,
+            "F_to_A": 4,
+            "F_to_F": 1
+          },
+          "kernel": {
+            "A_to_A": "3/4",
+            "A_to_F": "1/4",
+            "F_to_A": "4/5",
+            "F_to_F": "1/5"
+          },
+          "lag": 2
+        }
+      ],
+      "boundary_sector_microstates": 5,
+      "correlation_formula": "-1/(4*5)",
+      "n": 2,
+      "non_markov_witness": {
+        "P_squared": [
+          [
+            "61/80",
+            "19/80"
+          ],
+          [
+            "19/25",
+            "6/25"
+          ]
+        ],
+        "actual_lag2": [
+          [
+            "3/4",
+            "1/4"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ]
+        ]
+      },
+      "nonzero_lag_kernel": {
+        "A_to_A": "3/4",
+        "A_to_F": "1/4",
+        "F_to_A": "4/5",
+        "F_to_F": "1/5"
+      },
+      "pairwise_correlation": "-1/20",
+      "projective_microstates": 21,
+      "return_kernel": {
+        "A_to_A": "1",
+        "A_to_F": "0",
+        "F_to_A": "0",
+        "F_to_F": "1"
+      },
+      "return_lag": 3
+    },
+    {
+      "affine_sector_microstates": 64,
+      "all_nonzero_lags": [
+        {
+          "counts": {
+            "A_to_A": 48,
+            "A_to_F": 16,
+            "F_to_A": 16,
+            "F_to_F": 5
+          },
+          "kernel": {
+            "A_to_A": "3/4",
+            "A_to_F": "1/4",
+            "F_to_A": "16/21",
+            "F_to_F": "5/21"
+          },
+          "lag": 1
+        },
+        {
+          "counts": {
+            "A_to_A": 48,
+            "A_to_F": 16,
+            "F_to_A": 16,
+            "F_to_F": 5
+          },
+          "kernel": {
+            "A_to_A": "3/4",
+            "A_to_F": "1/4",
+            "F_to_A": "16/21",
+            "F_to_F": "5/21"
+          },
+          "lag": 2
+        },
+        {
+          "counts": {
+            "A_to_A": 48,
+            "A_to_F": 16,
+            "F_to_A": 16,
+            "F_to_F": 5
+          },
+          "kernel": {
+            "A_to_A": "3/4",
+            "A_to_F": "1/4",
+            "F_to_A": "16/21",
+            "F_to_F": "5/21"
+          },
+          "lag": 3
+        }
+      ],
+      "boundary_sector_microstates": 21,
+      "correlation_formula": "-1/(4*21)",
+      "n": 3,
+      "non_markov_witness": {
+        "P_squared": [
+          [
+            "253/336",
+            "83/336"
+          ],
+          [
+            "332/441",
+            "109/441"
+          ]
+        ],
+        "actual_lag2": [
+          [
+            "3/4",
+            "1/4"
+          ],
+          [
+            "16/21",
+            "5/21"
+          ]
+        ]
+      },
+      "nonzero_lag_kernel": {
+        "A_to_A": "3/4",
+        "A_to_F": "1/4",
+        "F_to_A": "16/21",
+        "F_to_F": "5/21"
+      },
+      "pairwise_correlation": "-1/84",
+      "projective_microstates": 85,
+      "return_kernel": {
+        "A_to_A": "1",
+        "A_to_F": "0",
+        "F_to_A": "0",
+        "F_to_F": "1"
+      },
+      "return_lag": 4
+    },
+    {
+      "affine_sector_microstates": 256,
+      "all_nonzero_lags": [
+        {
+          "counts": {
+            "A_to_A": 192,
+            "A_to_F": 64,
+            "F_to_A": 64,
+            "F_to_F": 21
+          },
+          "kernel": {
+            "A_to_A": "3/4",
+            "A_to_F": "1/4",
+            "F_to_A": "64/85",
+            "F_to_F": "21/85"
+          },
+          "lag": 1
+        },
+        {
+          "counts": {
+            "A_to_A": 192,
+            "A_to_F": 64,
+            "F_to_A": 64,
+            "F_to_F": 21
+          },
+          "kernel": {
+            "A_to_A": "3/4",
+            "A_to_F": "1/4",
+            "F_to_A": "64/85",
+            "F_to_F": "21/85"
+          },
+          "lag": 2
+        },
+        {
+          "counts": {
+            "A_to_A": 192,
+            "A_to_F": 64,
+            "F_to_A": 64,
+            "F_to_F": 21
+          },
+          "kernel": {
+            "A_to_A": "3/4",
+            "A_to_F": "1/4",
+            "F_to_A": "64/85",
+            "F_to_F": "21/85"
+          },
+          "lag": 3
+        },
+        {
+          "counts": {
+            "A_to_A": 192,
+            "A_to_F": 64,
+            "F_to_A": 64,
+            "F_to_F": 21
+          },
+          "kernel": {
+            "A_to_A": "3/4",
+            "A_to_F": "1/4",
+            "F_to_A": "64/85",
+            "F_to_F": "21/85"
+          },
+          "lag": 4
+        }
+      ],
+      "boundary_sector_microstates": 85,
+      "correlation_formula": "-1/(4*85)",
+      "n": 4,
+      "non_markov_witness": {
+        "P_squared": [
+          [
+            "1021/1360",
+            "339/1360"
+          ],
+          [
+            "5424/7225",
+            "1801/7225"
+          ]
+        ],
+        "actual_lag2": [
+          [
+            "3/4",
+            "1/4"
+          ],
+          [
+            "64/85",
+            "21/85"
+          ]
+        ]
+      },
+      "nonzero_lag_kernel": {
+        "A_to_A": "3/4",
+        "A_to_F": "1/4",
+        "F_to_A": "64/85",
+        "F_to_F": "21/85"
+      },
+      "pairwise_correlation": "-1/340",
+      "projective_microstates": 341,
+      "return_kernel": {
+        "A_to_A": "1",
+        "A_to_F": "0",
+        "F_to_A": "0",
+        "F_to_F": "1"
+      },
+      "return_lag": 5
+    },
+    {
+      "affine_sector_microstates": 1024,
+      "all_nonzero_lags": [
+        {
+          "counts": {
+            "A_to_A": 768,
+            "A_to_F": 256,
+            "F_to_A": 256,
+            "F_to_F": 85
+          },
+          "kernel": {
+            "A_to_A": "3/4",
+            "A_to_F": "1/4",
+            "F_to_A": "256/341",
+            "F_to_F": "85/341"
+          },
+          "lag": 1
+        },
+        {
+          "counts": {
+            "A_to_A": 768,
+            "A_to_F": 256,
+            "F_to_A": 256,
+            "F_to_F": 85
+          },
+          "kernel": {
+            "A_to_A": "3/4",
+            "A_to_F": "1/4",
+            "F_to_A": "256/341",
+            "F_to_F": "85/341"
+          },
+          "lag": 2
+        },
+        {
+          "counts": {
+            "A_to_A": 768,
+            "A_to_F": 256,
+            "F_to_A": 256,
+            "F_to_F": 85
+          },
+          "kernel": {
+            "A_to_A": "3/4",
+            "A_to_F": "1/4",
+            "F_to_A": "256/341",
+            "F_to_F": "85/341"
+          },
+          "lag": 3
+        },
+        {
+          "counts": {
+            "A_to_A": 768,
+            "A_to_F": 256,
+            "F_to_A": 256,
+            "F_to_F": 85
+          },
+          "kernel": {
+            "A_to_A": "3/4",
+            "A_to_F": "1/4",
+            "F_to_A": "256/341",
+            "F_to_F": "85/341"
+          },
+          "lag": 4
+        },
+        {
+          "counts": {
+            "A_to_A": 768,
+            "A_to_F": 256,
+            "F_to_A": 256,
+            "F_to_F": 85
+          },
+          "kernel": {
+            "A_to_A": "3/4",
+            "A_to_F": "1/4",
+            "F_to_A": "256/341",
+            "F_to_F": "85/341"
+          },
+          "lag": 5
+        }
+      ],
+      "boundary_sector_microstates": 341,
+      "correlation_formula": "-1/(4*341)",
+      "n": 5,
+      "non_markov_witness": {
+        "P_squared": [
+          [
+            "4093/5456",
+            "1363/5456"
+          ],
+          [
+            "87232/116281",
+            "29049/116281"
+          ]
+        ],
+        "actual_lag2": [
+          [
+            "3/4",
+            "1/4"
+          ],
+          [
+            "256/341",
+            "85/341"
+          ]
+        ]
+      },
+      "nonzero_lag_kernel": {
+        "A_to_A": "3/4",
+        "A_to_F": "1/4",
+        "F_to_A": "256/341",
+        "F_to_F": "85/341"
+      },
+      "pairwise_correlation": "-1/1364",
+      "projective_microstates": 1365,
+      "return_kernel": {
+        "A_to_A": "1",
+        "A_to_F": "0",
+        "F_to_A": "0",
+        "F_to_F": "1"
+      },
+      "return_lag": 6
+    },
+    {
+      "affine_sector_microstates": 4096,
+      "all_nonzero_lags": [
+        {
+          "counts": {
+            "A_to_A": 3072,
+            "A_to_F": 1024,
+            "F_to_A": 1024,
+            "F_to_F": 341
+          },
+          "kernel": {
+            "A_to_A": "3/4",
+            "A_to_F": "1/4",
+            "F_to_A": "1024/1365",
+            "F_to_F": "341/1365"
+          },
+          "lag": 1
+        },
+        {
+          "counts": {
+            "A_to_A": 3072,
+            "A_to_F": 1024,
+            "F_to_A": 1024,
+            "F_to_F": 341
+          },
+          "kernel": {
+            "A_to_A": "3/4",
+            "A_to_F": "1/4",
+            "F_to_A": "1024/1365",
+            "F_to_F": "341/1365"
+          },
+          "lag": 2
+        },
+        {
+          "counts": {
+            "A_to_A": 3072,
+            "A_to_F": 1024,
+            "F_to_A": 1024,
+            "F_to_F": 341
+          },
+          "kernel": {
+            "A_to_A": "3/4",
+            "A_to_F": "1/4",
+            "F_to_A": "1024/1365",
+            "F_to_F": "341/1365"
+          },
+          "lag": 3
+        },
+        {
+          "counts": {
+            "A_to_A": 3072,
+            "A_to_F": 1024,
+            "F_to_A": 1024,
+            "F_to_F": 341
+          },
+          "kernel": {
+            "A_to_A": "3/4",
+            "A_to_F": "1/4",
+            "F_to_A": "1024/1365",
+            "F_to_F": "341/1365"
+          },
+          "lag": 4
+        },
+        {
+          "counts": {
+            "A_to_A": 3072,
+            "A_to_F": 1024,
+            "F_to_A": 1024,
+            "F_to_F": 341
+          },
+          "kernel": {
+            "A_to_A": "3/4",
+            "A_to_F": "1/4",
+            "F_to_A": "1024/1365",
+            "F_to_F": "341/1365"
+          },
+          "lag": 5
+        },
+        {
+          "counts": {
+            "A_to_A": 3072,
+            "A_to_F": 1024,
+            "F_to_A": 1024,
+            "F_to_F": 341
+          },
+          "kernel": {
+            "A_to_A": "3/4",
+            "A_to_F": "1/4",
+            "F_to_A": "1024/1365",
+            "F_to_F": "341/1365"
+          },
+          "lag": 6
+        }
+      ],
+      "boundary_sector_microstates": 1365,
+      "correlation_formula": "-1/(4*1365)",
+      "n": 6,
+      "non_markov_witness": {
+        "P_squared": [
+          [
+            "16381/21840",
+            "5459/21840"
+          ],
+          [
+            "1397504/1863225",
+            "465721/1863225"
+          ]
+        ],
+        "actual_lag2": [
+          [
+            "3/4",
+            "1/4"
+          ],
+          [
+            "1024/1365",
+            "341/1365"
+          ]
+        ]
+      },
+      "nonzero_lag_kernel": {
+        "A_to_A": "3/4",
+        "A_to_F": "1/4",
+        "F_to_A": "1024/1365",
+        "F_to_F": "341/1365"
+      },
+      "pairwise_correlation": "-1/5460",
+      "projective_microstates": 5461,
+      "return_kernel": {
+        "A_to_A": "1",
+        "A_to_F": "0",
+        "F_to_A": "0",
+        "F_to_F": "1"
+      },
+      "return_lag": 7
+    }
+  ],
+  "headline": "The affine/Fano -1/84 is a projective pair-correlation, not a temporal mixing rate. For PG(n,4), every pair of distinct coordinate-occupancy indicators has correlation -1/(4|PG(n-1,4)|); under cyclic U all nonzero lags share that kernel and lag n+1 is identity.",
+  "n3_projective_anticorrelation": {
+    "affine_sector_microstates": 64,
+    "all_nonzero_lags": [
+      {
+        "counts": {
+          "A_to_A": 48,
+          "A_to_F": 16,
+          "F_to_A": 16,
+          "F_to_F": 5
+        },
+        "kernel": {
+          "A_to_A": "3/4",
+          "A_to_F": "1/4",
+          "F_to_A": "16/21",
+          "F_to_F": "5/21"
+        },
+        "lag": 1
+      },
+      {
+        "counts": {
+          "A_to_A": 48,
+          "A_to_F": 16,
+          "F_to_A": 16,
+          "F_to_F": 5
+        },
+        "kernel": {
+          "A_to_A": "3/4",
+          "A_to_F": "1/4",
+          "F_to_A": "16/21",
+          "F_to_F": "5/21"
+        },
+        "lag": 2
+      },
+      {
+        "counts": {
+          "A_to_A": 48,
+          "A_to_F": 16,
+          "F_to_A": 16,
+          "F_to_F": 5
+        },
+        "kernel": {
+          "A_to_A": "3/4",
+          "A_to_F": "1/4",
+          "F_to_A": "16/21",
+          "F_to_F": "5/21"
+        },
+        "lag": 3
+      }
+    ],
+    "autocorrelation_over_one_period": [
+      "1",
+      "-1/84",
+      "-1/84",
+      "-1/84",
+      "1"
+    ],
+    "boundary_sector_microstates": 21,
+    "correlation_formula": "-1/(4*21)",
+    "n": 3,
+    "non_markov_witness": {
+      "P_squared": [
+        [
+          "253/336",
+          "83/336"
+        ],
+        [
+          "332/441",
+          "109/441"
+        ]
+      ],
+      "actual_lag2": [
+        [
+          "3/4",
+          "1/4"
+        ],
+        [
+          "16/21",
+          "5/21"
+        ]
+      ]
+    },
+    "nonzero_lag_kernel": {
+      "A_to_A": "3/4",
+      "A_to_F": "1/4",
+      "F_to_A": "16/21",
+      "F_to_F": "5/21"
+    },
+    "pairwise_correlation": "-1/84",
+    "projective_microstates": 85,
+    "reading": "The four coordinate charts are uniformly weakly anti-correlated; cyclic time simply permutes those four chart tests and returns exactly after four steps.",
+    "return_kernel": {
+      "A_to_A": "1",
+      "A_to_F": "0",
+      "F_to_A": "0",
+      "F_to_F": "1"
+    },
+    "return_lag": 4
+  },
+  "schema": "w33.projective-horizon-lag-law.v1",
+  "status": "PASS",
+  "theorem": {
+    "correction": "The 2x2 one-lag kernel is a stationary pair-conditional table. Its powers do not give the actual deterministic multistep sector law unless one artificially re-randomizes inside sectors after each step.",
+    "cyclic_lag_law": "for U rotating n+1 coordinates, lags 1..n have the same pair kernel; lag n+1 is identity",
+    "distinct_coordinate_kernel": "[[3/4,1/4],[3*4^(n-1)/(4^n-1),(4^(n-1)-1)/(4^n-1)]]",
+    "pairwise_correlation": "rho_n=-1/(4*|PG(n-1,4)|)",
+    "sector_definition": "A_i={projective points with coordinate i nonzero}; F_i={coordinate i zero}"
+  }
+}

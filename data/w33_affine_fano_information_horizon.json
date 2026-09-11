@@ -1,0 +1,278 @@
+{
+  "checks": {
+    "all_pair_rows_match_closed_formula": true,
+    "exact_microstate_enumeration_n1_through_n6": true,
+    "n3_kernel_is_exact": true,
+    "n3_macro_split_is_affine8_plus_fano7": true,
+    "n3_projective_anticorrelation_is_minus_one_over_84": true,
+    "n3_projective_split_is_64_plus21_microstates": true,
+    "nontrivial_pair_mode_is_minus_inverse_four_boundary_microstates": true,
+    "pair_mode_equals_exact_Pearson_correlation": true,
+    "repo_has_independent_toroidal_84_certificate": true,
+    "stationary_measure_is_projective_microstate_mass": true
+  },
+  "claim_boundary": [
+    "The pair table is weighted by the uniform distribution on PG(n,4) microstates, not by a uniform distribution on binary macrostates.",
+    "Calling PG(n-1,2) an information horizon refers to deterministic-vs-stochastic closure under the declared observer map and U1 update; it is not a spacetime event horizon.",
+    "The -1/84 value is an exact projective anti-correlation coefficient, not a thermodynamic relaxation rate or quantum decoherence scale.",
+    "The C7-equivariant toroidal bridge requires declared Singer and affine-coordinate choices; full ambient-group canonicity is not claimed."
+  ],
+  "correction": {
+    "companion_certificate": "data/w33_projective_horizon_lag_law.json",
+    "reason": "U has finite projective order; actual lag kernels must be computed from U^k rather than powers of the one-lag conditional table",
+    "supersedes": "v1 wording that treated the 2x2 pair table as an iterated coarse Markov chain"
+  },
+  "dimension_census": [
+    {
+      "affine_macrostates": 2,
+      "affine_microstates": 4,
+      "determinant": "-1/4",
+      "eigenvalues": [
+        "1",
+        "-1/4"
+      ],
+      "fano_infinity_macrostates": 1,
+      "fano_infinity_microstates": 1,
+      "global_microstates": 5,
+      "mixing_reading": "Corrected: this 2x2 object is the stationary pair-conditional table for two distinct coordinate charts.  Its nontrivial eigenvalue equals their Pearson anti-correlation; it is not an iterated temporal decay mode for deterministic U.",
+      "n": 1,
+      "nontrivial_eigenvalue": "-1/4",
+      "nontrivial_eigenvalue_formula": "-1/(4*1)",
+      "pairwise_correlation": "-1/4",
+      "stationary_sector_weights": {
+        "A": "4/5",
+        "F": "1/5"
+      },
+      "transition_counts": {
+        "A_to_A": 3,
+        "A_to_F": 1,
+        "F_to_A": 1,
+        "F_to_F": 0
+      },
+      "transition_matrix": {
+        "A_to_A": "3/4",
+        "A_to_F": "1/4",
+        "F_to_A": "1",
+        "F_to_F": "0"
+      }
+    },
+    {
+      "affine_macrostates": 4,
+      "affine_microstates": 16,
+      "determinant": "-1/20",
+      "eigenvalues": [
+        "1",
+        "-1/20"
+      ],
+      "fano_infinity_macrostates": 3,
+      "fano_infinity_microstates": 5,
+      "global_microstates": 21,
+      "mixing_reading": "Corrected: this 2x2 object is the stationary pair-conditional table for two distinct coordinate charts.  Its nontrivial eigenvalue equals their Pearson anti-correlation; it is not an iterated temporal decay mode for deterministic U.",
+      "n": 2,
+      "nontrivial_eigenvalue": "-1/20",
+      "nontrivial_eigenvalue_formula": "-1/(4*5)",
+      "pairwise_correlation": "-1/20",
+      "stationary_sector_weights": {
+        "A": "16/21",
+        "F": "5/21"
+      },
+      "transition_counts": {
+        "A_to_A": 12,
+        "A_to_F": 4,
+        "F_to_A": 4,
+        "F_to_F": 1
+      },
+      "transition_matrix": {
+        "A_to_A": "3/4",
+        "A_to_F": "1/4",
+        "F_to_A": "4/5",
+        "F_to_F": "1/5"
+      }
+    },
+    {
+      "affine_macrostates": 8,
+      "affine_microstates": 64,
+      "determinant": "-1/84",
+      "eigenvalues": [
+        "1",
+        "-1/84"
+      ],
+      "fano_infinity_macrostates": 7,
+      "fano_infinity_microstates": 21,
+      "global_microstates": 85,
+      "mixing_reading": "Corrected: this 2x2 object is the stationary pair-conditional table for two distinct coordinate charts.  Its nontrivial eigenvalue equals their Pearson anti-correlation; it is not an iterated temporal decay mode for deterministic U.",
+      "n": 3,
+      "nontrivial_eigenvalue": "-1/84",
+      "nontrivial_eigenvalue_formula": "-1/(4*21)",
+      "pairwise_correlation": "-1/84",
+      "stationary_sector_weights": {
+        "A": "64/85",
+        "F": "21/85"
+      },
+      "transition_counts": {
+        "A_to_A": 48,
+        "A_to_F": 16,
+        "F_to_A": 16,
+        "F_to_F": 5
+      },
+      "transition_matrix": {
+        "A_to_A": "3/4",
+        "A_to_F": "1/4",
+        "F_to_A": "16/21",
+        "F_to_F": "5/21"
+      }
+    },
+    {
+      "affine_macrostates": 16,
+      "affine_microstates": 256,
+      "determinant": "-1/340",
+      "eigenvalues": [
+        "1",
+        "-1/340"
+      ],
+      "fano_infinity_macrostates": 15,
+      "fano_infinity_microstates": 85,
+      "global_microstates": 341,
+      "mixing_reading": "Corrected: this 2x2 object is the stationary pair-conditional table for two distinct coordinate charts.  Its nontrivial eigenvalue equals their Pearson anti-correlation; it is not an iterated temporal decay mode for deterministic U.",
+      "n": 4,
+      "nontrivial_eigenvalue": "-1/340",
+      "nontrivial_eigenvalue_formula": "-1/(4*85)",
+      "pairwise_correlation": "-1/340",
+      "stationary_sector_weights": {
+        "A": "256/341",
+        "F": "85/341"
+      },
+      "transition_counts": {
+        "A_to_A": 192,
+        "A_to_F": 64,
+        "F_to_A": 64,
+        "F_to_F": 21
+      },
+      "transition_matrix": {
+        "A_to_A": "3/4",
+        "A_to_F": "1/4",
+        "F_to_A": "64/85",
+        "F_to_F": "21/85"
+      }
+    },
+    {
+      "affine_macrostates": 32,
+      "affine_microstates": 1024,
+      "determinant": "-1/1364",
+      "eigenvalues": [
+        "1",
+        "-1/1364"
+      ],
+      "fano_infinity_macrostates": 31,
+      "fano_infinity_microstates": 341,
+      "global_microstates": 1365,
+      "mixing_reading": "Corrected: this 2x2 object is the stationary pair-conditional table for two distinct coordinate charts.  Its nontrivial eigenvalue equals their Pearson anti-correlation; it is not an iterated temporal decay mode for deterministic U.",
+      "n": 5,
+      "nontrivial_eigenvalue": "-1/1364",
+      "nontrivial_eigenvalue_formula": "-1/(4*341)",
+      "pairwise_correlation": "-1/1364",
+      "stationary_sector_weights": {
+        "A": "1024/1365",
+        "F": "341/1365"
+      },
+      "transition_counts": {
+        "A_to_A": 768,
+        "A_to_F": 256,
+        "F_to_A": 256,
+        "F_to_F": 85
+      },
+      "transition_matrix": {
+        "A_to_A": "3/4",
+        "A_to_F": "1/4",
+        "F_to_A": "256/341",
+        "F_to_F": "85/341"
+      }
+    },
+    {
+      "affine_macrostates": 64,
+      "affine_microstates": 4096,
+      "determinant": "-1/5460",
+      "eigenvalues": [
+        "1",
+        "-1/5460"
+      ],
+      "fano_infinity_macrostates": 63,
+      "fano_infinity_microstates": 1365,
+      "global_microstates": 5461,
+      "mixing_reading": "Corrected: this 2x2 object is the stationary pair-conditional table for two distinct coordinate charts.  Its nontrivial eigenvalue equals their Pearson anti-correlation; it is not an iterated temporal decay mode for deterministic U.",
+      "n": 6,
+      "nontrivial_eigenvalue": "-1/5460",
+      "nontrivial_eigenvalue_formula": "-1/(4*1365)",
+      "pairwise_correlation": "-1/5460",
+      "stationary_sector_weights": {
+        "A": "4096/5461",
+        "F": "1365/5461"
+      },
+      "transition_counts": {
+        "A_to_A": 3072,
+        "A_to_F": 1024,
+        "F_to_A": 1024,
+        "F_to_F": 341
+      },
+      "transition_matrix": {
+        "A_to_A": "3/4",
+        "A_to_F": "1/4",
+        "F_to_A": "1024/1365",
+        "F_to_F": "341/1365"
+      }
+    }
+  ],
+  "general_theorem": {
+    "correlation": "rho_n=-1/(4*|PG(n-1,4)|)",
+    "deterministic_sector": "F={x0=0}, with 2^n-1 observer states and (4^n-1)/3 microstates",
+    "kernel": "[[3/4,1/4],[3*4^(n-1)/(4^n-1),(4^(n-1)-1)/(4^n-1)]]",
+    "kernel_semantics": "stationary pair-conditional table for distinct coordinate charts; not an iterated temporal Markov law for U",
+    "macro_decomposition": "PG(n,2)=AG(n,2) disjoint_union PG(n-1,2)",
+    "micro_decomposition": "PG(n,4)=AG(n,4) disjoint_union PG(n-1,4)",
+    "second_eigenvalue": "-3/(4*(4^n-1)) = -1/(4*|PG(n-1,4)|)",
+    "stationary_weights": "[3*4^n/(4^(n+1)-1), (4^n-1)/(4^(n+1)-1)]",
+    "stochastic_sector": "A={x0=1}, with 2^n observer states and 4^n microstates"
+  },
+  "headline": "The Marcelis observer quotient has an exact affine/Fano information horizon.  Under uniform PG(n,4) microstate measure, two distinct coordinate charts have the pair-conditional table [[3/4,1/4],[3*4^(n-1)/(4^n-1),(4^(n-1)-1)/(4^n-1)]], whose nontrivial eigenvalue is the projective anti-correlation -1/(4|PG(n-1,4)|).  At n=3 this is -1/84.",
+  "n3_information_horizon": {
+    "affine_macrostates": 8,
+    "affine_microstates": 64,
+    "determinant": "-1/84",
+    "eigenvalues": [
+      "1",
+      "-1/84"
+    ],
+    "fano_infinity_macrostates": 7,
+    "fano_infinity_microstates": 21,
+    "global_microstates": 85,
+    "mixing_reading": "Corrected: this 2x2 object is the stationary pair-conditional table for two distinct coordinate charts.  Its nontrivial eigenvalue equals their Pearson anti-correlation; it is not an iterated temporal decay mode for deterministic U.",
+    "n": 3,
+    "nontrivial_eigenvalue": "-1/84",
+    "nontrivial_eigenvalue_formula": "-1/(4*21)",
+    "pairwise_correlation": "-1/84",
+    "stationary_sector_weights": {
+      "A": "64/85",
+      "F": "21/85"
+    },
+    "transition_counts": {
+      "A_to_A": 48,
+      "A_to_F": 16,
+      "F_to_A": 16,
+      "F_to_F": 5
+    },
+    "transition_matrix": {
+      "A_to_A": "3/4",
+      "A_to_F": "1/4",
+      "F_to_A": "16/21",
+      "F_to_F": "5/21"
+    }
+  },
+  "schema": "w33.affine-fano-information-horizon.v2",
+  "status": "PASS",
+  "toroidal_84_echo": {
+    "arithmetic_origin": "84=4*|PG(2,4)|=4*21",
+    "independent_repo_value": "Csaszar flags=84 and Szilassi flags=84 are certified elsewhere",
+    "interpretation": "The exact denominator motivated a bridge search.  The newer boundary-Singer certificate constructs an explicit C7-equivariant 84-to-84 codec after declared gauge choices.",
+    "observer_value": "rho_3=-1/84"
+  }
+}

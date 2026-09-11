@@ -1,0 +1,58 @@
+{
+  "checks": {
+    "A4_section_is_order12_normal_lattice_node": true,
+    "AGL14_equals_even_permutation_A4_on_four_labels": true,
+    "boundary_bridge_local_group_is_AGL14": true,
+    "cocycle_firewall_contains_C2_times_A4": true,
+    "cube_cover_derived_image_is_A4": true,
+    "derived_is_C2_times_A4_order24": true,
+    "local12_order_spectrum_matches_A4_section": true,
+    "local_A4_is_sharply_transitive_on_12_directed_K4_edges": true,
+    "preimage_A4_is_V4_times_A4_order48": true
+  },
+  "claim_boundary": [
+    "Equality with the standard A4 is literal after the declared four-label GF(4) coordinate gauge: both are the same set of even permutations of {0,1,2,3}.",
+    "The choice of that four-label gauge and Singer phase origin is not claimed canonical under the full ambient geometry.",
+    "Untwisted refers to the certified Z2 group-extension cocycle; it is not a statement about absence of physical quantum phase."
+  ],
+  "codec_chain": "PG(2,4)xGF(4) --/C7--> AGL(1,4)=A4 --regularly--> 12 directed K4 edges --C7 lift--> 84 toroidal flags",
+  "headline": "The 12 local phases of the C7-equivariant boundary/toroidal 84 codec are literally AGL(1,4)=A4 as the even permutations of the four affine labels.  This is the same A4 section appearing in the order-96 stabilizer and it lies completely inside the cocycle's untwisted parity firewall; the central twist begins only in the odd S4 coset.",
+  "same_four_label_A4": {
+    "GF4_affine_maps": 12,
+    "directed_K4_edge_torsor": "A4 acts sharply transitively on the 12 ordered pairs u->v with u!=v",
+    "element_order_histogram": {
+      "1": 1,
+      "2": 3,
+      "3": 8
+    },
+    "even_permutations_of_four_labels": 12,
+    "sets_equal": true
+  },
+  "schema": "w33.a4-untwisted-core-synthesis.v1",
+  "stabilizer_ladder": {
+    "A4_section": {
+      "node": "N05",
+      "order": 12
+    },
+    "H_prime": {
+      "node": "N07",
+      "order": 24,
+      "structure": "C2 x A4"
+    },
+    "full_H": {
+      "order": 96,
+      "structure": "V4 semidirect S4"
+    },
+    "preimage_A4": {
+      "node": "N08",
+      "order": 48,
+      "structure": "V4 x A4"
+    }
+  },
+  "status": "PASS",
+  "twist_boundary": {
+    "reading": "The local tetrahedral codec is an exact untwisted core; the nontrivial central phase is an orientation-parity extension effect, not an intrinsic A4 effect.",
+    "twisted_extension": "odd S4 parity couples to the second antipodal bit through alpha=d*sgn(sigma)",
+    "untwisted": "A4 and C2_antipode x A4: first S4 parity even implies alpha=0 against every second argument"
+  }
+}

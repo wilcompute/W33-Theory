@@ -1,0 +1,74 @@
+{
+  "abelianization_core": {
+    "central_lift_isomorphism": "D8",
+    "central_lift_order": 8,
+    "central_lift_order_histogram": {
+      "1": 1,
+      "2": 5,
+      "4": 2
+    },
+    "commutator_form": "kappa((b,e),(d,f))=e*d+b*f mod 2",
+    "coordinates": "(b,epsilon) with b=antipodal bit and epsilon=sgn(sigma)",
+    "matrix_in_basis_b_sign": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "nondegenerate": true,
+    "recovery": "This D8 is recovered directly from the cocycle and agrees with the independent D8 ingredient in the stabilizer fiber-product certificate."
+  },
+  "checks": {
+    "abelianization_pairing_nondegenerate": true,
+    "cocycle_support_exactly_24_times24_equals576": true,
+    "cocycle_zero_entries_1728": true,
+    "commutator_factors_to_symplectic_C2_squared": true,
+    "even_A4_sector_is_cocycle_firewall": true,
+    "independent_repo_4x4_latin_count_is576": true,
+    "independent_stabilizer_certificate_contains_D8": true,
+    "quotient_order_48": true,
+    "restricted_extension_is_D8_by_order_spectrum": true,
+    "support_matrix_rank_one_pattern": true
+  },
+  "claim_boundary": [
+    "The 576 and 1728 counts are exact consequences of the certified cocycle formula.",
+    "The D8 identification is structural, using the restricted extension multiplication and element-order spectrum, not order alone.",
+    "Matches to Latin-square counts or hardware ledgers remain bridge targets until an explicit equivariant dictionary is built.",
+    "The parity carry is a finite group-cohomology obstruction; no Spin/Pin or fermionic phase interpretation is asserted."
+  ],
+  "count_bridges": {
+    "1728": "Untwisted ordered quotient pairs = 1728. This is recorded as a bridge target because 1728 also recurs in Holonet controller ledgers; no canonical identification is asserted here.",
+    "576": "Cocycle support size 24^2; independently the repo certifies 576 distinct 4x4 Latin squares and multiple order-576 group constructions. Equality of counts alone is not an isomorphism."
+  },
+  "headline": "The cube-cover 2-cocycle is a rank-one parity carry with exactly 576 twisted pairs. It vanishes on the even A4 sector, and its commutator descends to the nondegenerate symplectic form on C2^2 whose eight-element central lift is D8.",
+  "parity_firewall": {
+    "A4_size": 12,
+    "C2_times_A4_size": 24,
+    "law": "alpha((b,sigma),y)=0 for every y whenever sigma is even",
+    "reading": "The local orientation-preserving tetrahedral A4 sector carries no central twist; odd S4 parity is required to activate z."
+  },
+  "schema": "w33.cocycle-rank1-576-parity-firewall.v2",
+  "status": "PASS",
+  "support_geometry": {
+    "antipodal_second_elements": 24,
+    "column_weight_histogram": {
+      "0": 24,
+      "24": 24
+    },
+    "factorization": "576=24^2; 1728=3*576",
+    "odd_first_elements": 24,
+    "ordered_pair_count": 2304,
+    "quotient_size": 48,
+    "rank_one_reading": "alpha(x,y)=oddParity(x)*antipodalBit(y), so the 48x48 support matrix is an outer product over F2.",
+    "row_weight_histogram": {
+      "0": 24,
+      "24": 24
+    },
+    "twisted_pairs": 576,
+    "untwisted_pairs": 1728
+  }
+}
