@@ -2,18 +2,19 @@
   "schema": "w33.pass_namespace_reservation.v2",
   "range": "3003-3011",
   "owner": "agent/pass3003-3011-seven-front-optimal-information-closure",
-  "status": "reserved",
+  "status": "executed_local_exact_source_complete_remote_rtl_pdf_and_full_m36_pending",
   "reserved_after": "parallel reservation frontier through Pass 3002",
   "passes": {
-    "3003": "finish the general-isotropic three-copy M36 frontier by exact orbit/rank reduction and integrate the full-shard census without overstating queued evidence",
-    "3004": "prove or improve the minimum triangle schedule for all one- and two-edge nonidentity D4 faults",
-    "3005": "build synthesizable golden A4 syndrome-shell RTL with a structural type barrier protecting the D4 route core",
-    "3006": "resolve or falsify the 540 by 12 curvature-clock to historical 540-fiber correspondence objectwise",
-    "3007": "compile a component-resolved Bayesian sequential chirality receiver with optimal stopping under loss, crosstalk, dark counts, and action cost",
-    "3008": "BONKERS: realize the A4 syndrome shell as a tetrahedral four-outcome information geometry and quantify its noise robustness",
-    "3009": "BONKERS: fuse the D12 phase clock with the golden Sturmian schedule as a cut-and-project calibration calendar and prove its burst/discrepancy properties",
-    "3010": "promote verified results into w33_paper, photonic_holonet, holonet_machine_blueprint, and docs/index",
-    "3011": "freeze exact certificates, RTL tests, focused regressions, literature boundaries, and guarded release workflows"
+    "3003": "complete exact pilot classification: six general-isotropic hits form one 729-element orbit under a 34992-element symmetry; 495 pivot patterns reduce to 98; full 213648435 census launched but pending",
+    "3004": "complete exact 28-triangle construction separating all 48826 no/one/two-edge nonidentity D4 hypotheses; optimality remains in [23,28]",
+    "3005": "complete exact model and synthesizable source: A4 shell, 89/233 scheduler, structural authorization barrier around D4 core",
+    "3006": "complete exact object bundle and obstruction: 540 skew pairs each carry a 3x4 flag fiber; no PGSp order-12 element has cycle profile 12^540",
+    "3007": "complete exact stopping policy for the stated component channel; frozen calibration counts remain synthetic",
+    "3008": "complete exact ideal tetrahedral A4/SIC syndrome-shell model",
+    "3009": "complete exact 2796-tick D12-Christoffel calendar with 89 events in every phase and reversal shift 89",
+    "3010": "shared paper and blueprint insert plus fail-closed four-front-door integrator complete",
+    "3011": "focused exact/RTL/manuscript workflow and separate 495-shard exhaustive M36 workflow complete; observed jobs and PDFs pending"
   },
-  "claim_boundary": "Reservation only. Exhaustive finite searches, schedule optimality, RTL behavior, objectwise correspondences, calibrated decision policies, and physical interpretations remain separately typed until executable evidence exists."
+  "certificate": "data/PART_BT3003_BT3009_SEVEN_FRONT_summary.json",
+  "claim_boundary": "Exact finite mathematics and source are complete in their stated scopes. The full M36 census, Icarus/Yosys evidence, manuscript PDFs, and all laboratory claims remain pending observed evidence."
 }
