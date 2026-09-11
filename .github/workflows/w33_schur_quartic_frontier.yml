@@ -1,0 +1,49 @@
+name: W33 Schur-quartic frontier
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - '.github/workflows/w33_schur_quartic_frontier.yml'
+      - 'analysis/w33_schur_quartic_d4_triality_bridge.py'
+      - 'analysis/w33_schur_incidence_vs_projective_symmetry.py'
+      - 'tests/test_w33_schur_quartic_frontier_20260911.py'
+
+permissions:
+  contents: write
+
+jobs:
+  certify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install focused dependencies
+        run: python -m pip install --upgrade networkx pytest
+      - name: Regenerate Schur certificates
+        run: |
+          python analysis/w33_schur_quartic_d4_triality_bridge.py
+          python analysis/w33_schur_incidence_vs_projective_symmetry.py
+      - name: Focused regression
+        run: python -m pytest -q tests/test_w33_schur_quartic_frontier_20260911.py
+      - name: Freeze exact JSON certificates
+        shell: bash
+        run: |
+          git add -f \
+            data/w33_schur_quartic_d4_triality_bridge.json \
+            data/w33_schur_incidence_vs_projective_symmetry.json
+          if git diff --cached --quiet; then
+            echo 'Schur certificates already frozen.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Freeze W33 Schur-quartic frontier certificates'
+          git fetch origin master
+          git rebase origin/master
+          git push origin HEAD:master
