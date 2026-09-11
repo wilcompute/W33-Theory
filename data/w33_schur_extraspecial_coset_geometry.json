@@ -1,0 +1,78 @@
+{
+  "boundary": "The algebraic identification with actual Schur-quartic lines still uses the external D4-root model. The coset/torsor theorem itself is recomputed entirely from the finite root incidence and group action.",
+  "checks": {
+    "E_is_extraspecial_plus_order32": true,
+    "E_line_orbits_8_8_8": true,
+    "E_regular_on_32_triples": true,
+    "V4s_pairwise_intersect_trivially": true,
+    "all_24_lines_are_left_cosets": true,
+    "family_action_is_S3": true,
+    "family_kernel_over_E_is_C3_order": true,
+    "quotient_planes_totally_singular": true,
+    "three_base_stabilizers_are_V4": true,
+    "three_planes_partition_9_singular_points": true
+  },
+  "line_cosets": {
+    "all_lines": "left cosets of V1,V2,V3",
+    "base_line_indices": [
+      0,
+      22,
+      14
+    ],
+    "families": [
+      8,
+      8,
+      8
+    ],
+    "pairwise_intersection_orders": [
+      1,
+      1,
+      1
+    ],
+    "subgroup_types": [
+      "V4",
+      "V4",
+      "V4"
+    ]
+  },
+  "outer_action": {
+    "family_kernel_mod_E_order": 3,
+    "family_kernel_order": 96,
+    "family_permutation_group_order": 6,
+    "reading": "H/E ~= S3 x C3: the S3 triality factor permutes the three ruling families; a C3 remains in the family kernel."
+  },
+  "point_torsor": {
+    "action": "regular",
+    "group": "E = 2_+^{1+4}",
+    "order": 32,
+    "triple_points": 32
+  },
+  "quadratic_quotient": {
+    "V_images": [
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        0,
+        4,
+        8,
+        12
+      ],
+      [
+        0,
+        5,
+        10,
+        15
+      ]
+    ],
+    "interpretation": "the three V_i/Z-intersection images are the three generator lines of one ruling of Q^+(3,2)",
+    "singular_nonzero_count": 9,
+    "space": "E/Z(E) ~= F2^4 with plus quadratic form"
+  },
+  "schema": "w33.schur-extraspecial-coset-geometry.v1",
+  "status": "PASS",
+  "theorem": "The Schur (24_4,32_3) root configuration is exactly the rank-three coset geometry of the W33 extraspecial-plus phase kernel E: its points are the E-torsor and its lines are the 24 left cosets of three V4 subgroups whose images form one ruling of Q^+(3,2)."
+}
