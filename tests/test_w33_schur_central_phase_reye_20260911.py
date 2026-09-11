@@ -12,7 +12,7 @@ if str(ANALYSIS) not in sys.path:
 from w33_schur_central_phase_reye_quotient import build_result  # noqa: E402
 
 
-def test_schur_central_phase_quotient_is_reye() -> None:
+def test_schur_central_phase_quotient_is_dual_reye() -> None:
     data = build_result()
     assert data["status"] == "PASS"
     assert all(data["checks"].values())
@@ -24,10 +24,15 @@ def test_schur_central_phase_quotient_is_reye() -> None:
     assert data["downstairs"]["blocks"] == 12
     assert data["downstairs"]["incidences"] == 48
     assert data["downstairs"]["degree_profile"] == {3: 16, 4: 12}
-    assert data["downstairs"]["isomorphic_to_Q4_tomotope_Reye"] is True
-    assert data["downstairs"]["isomorphic_to_24cell_Reye"] is True
+    assert data["downstairs"]["same_typed_Q4_Reye"] is False
+    assert data["downstairs"]["same_typed_24cell_Reye"] is False
+    assert data["downstairs"]["typed_dual_Q4_tomotope_Reye"] is True
+    assert data["downstairs"]["typed_dual_24cell_Reye"] is True
+    assert data["downstairs"]["typed_orientation"] == (
+        "incidence dual of project-native Reye 12_4,16_3"
+    )
 
 
 if __name__ == "__main__":
-    test_schur_central_phase_quotient_is_reye()
-    print("Schur central-phase Reye quotient test passed")
+    test_schur_central_phase_quotient_is_dual_reye()
+    print("Schur central-phase dual-Reye quotient test passed")
