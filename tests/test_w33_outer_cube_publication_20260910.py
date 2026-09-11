@@ -10,7 +10,7 @@ if str(ANALYSIS) not in sys.path:
 
 from w33_outer_cube_observer_bridge_v2 import build_result  # noqa: E402
 from w33_stabilizer96_cube_central_cover import build_result as build_cover  # noqa: E402
-from w33_publish_september_2026_frontier import BEGIN, END, render_section  # noqa: E402
+from w33_publish_september_2026_frontier import BEGIN, END, patch, render_section  # noqa: E402
 
 
 def test_outer_fixed_residue_is_explicit_cube_and_welds_to_observer_chart() -> None:
@@ -76,13 +76,25 @@ def test_publication_renderer_and_docs_index_anchor() -> None:
     assert "D8 ×_C2 S4" in section
     assert "AG(3,2) ≅ F2^3" in section
     assert "non-split central double cover" in section
+    assert "cube/observer Q3" in section
+    assert "central-cover cocycle" in section
+    assert "C7-equivariant 84" in section
+    assert "A4 untwisted core" in section
 
+    # The freezer regenerates the bounded section before this focused test and
+    # commits it only after all gates pass.  Keep this regression race-free on
+    # ordinary pytest runs by checking the idempotent patch result rather than
+    # requiring the pre-freeze working-tree copy of docs/index.html to already
+    # contain the newest link labels.
     docs = (ROOT / "docs" / "index.html").read_text(encoding="utf-8")
     assert docs.count(BEGIN) == 1
     assert docs.count(END) == 1
     assert 'id="heawood-schubert-observer-20260910"' in docs
-    assert "Cube/observer bridge JSON" in docs
-    assert "central-cover cocycle" in docs
+    patched = patch(docs, section)
+    assert patched.count(BEGIN) == patched.count(END) == 1
+    assert "cube/observer Q3" in patched
+    assert "central-cover cocycle" in patched
+    assert "C7-equivariant 84" in patched
 
 
 def test_holonet_publication_insert_is_wired() -> None:
