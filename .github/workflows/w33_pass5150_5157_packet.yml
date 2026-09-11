@@ -1,0 +1,48 @@
+name: Pass5150-5157 theta curvature packet
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass515*.py'
+      - 'data/PART_W33_PASS515*.json'
+      - 'analysis/PASS5150_5157_*'
+      - 'tests/test_w33_pass5150_5157_packet.py'
+      - '.github/workflows/w33_pass5150_5157_packet.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass515*.py'
+      - 'data/PART_W33_PASS515*.json'
+      - 'tests/test_w33_pass5150_5157_packet.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-packet:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    env:
+      PYTHONPATH: .
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check numpy sympy pytest
+      - name: Syntax check producers
+        run: python -m py_compile analysis/w33_pass5150_theta_exterior_parity.py analysis/w33_pass5151_theta_curvature_second_moment.py analysis/w33_pass5152_centered_theta_rayleigh_weight.py analysis/w33_pass5153_q4_root_coset_smith.py analysis/w33_pass5154_theta_two_step_markov_curvature.py analysis/w33_pass5155_native_augmentation_defect.py analysis/w33_pass5156_root_volume_depth_calculus.py analysis/w33_pass5157_theta_cheeger_blindness.py
+      - name: Frozen regression
+        run: pytest -q tests/test_w33_pass5150_5157_packet.py
+      - name: Replay exact producers
+        run: |
+          python analysis/w33_pass5150_theta_exterior_parity.py
+          python analysis/w33_pass5151_theta_curvature_second_moment.py
+          python analysis/w33_pass5152_centered_theta_rayleigh_weight.py
+          python analysis/w33_pass5153_q4_root_coset_smith.py
+          python analysis/w33_pass5154_theta_two_step_markov_curvature.py
+          python analysis/w33_pass5155_native_augmentation_defect.py
+          python analysis/w33_pass5156_root_volume_depth_calculus.py
+          python analysis/w33_pass5157_theta_cheeger_blindness.py
