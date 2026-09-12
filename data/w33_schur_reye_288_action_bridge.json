@@ -1,0 +1,41 @@
+{
+  "checks": {
+    "Schur_Reye_image_has_index2_in_decoder_group": true,
+    "Schur_induced_Reye_action_order288": true,
+    "Schur_signed_root_stabilizer_order576": true,
+    "antipodal_kernel_exactly_order2": true,
+    "decoder_full_group_order576": true,
+    "explicit_conjugated_Schur_action_is_subset_of_full_decoder_group": true,
+    "two_576_groups_are_not_identified_by_Reye_quotient": true,
+    "typed_Schur_quotient_is_Reye": true
+  },
+  "claim_boundary": "Exact finite permutation/action theorem. It corrects a previous overidentification of two order-576 groups. It does not construct Nurowski's P3 projective matrices; it uses the D4 root action imported from Hohn and the exact incidence quotient.",
+  "correction": "The Schur component stabilizer of order 576 is NOT the full typed Reye automorphism group of order 576. Its antipodal central involution dies in the Reye projection, leaving an order-288 image which embeds with index two in Aut(Reye). Equal order of the two parent groups was a count trap.",
+  "induced_288": {
+    "affine_structure_reading": "C2^4 : (C3 x S3)",
+    "center_order": 1,
+    "derived_order": 48,
+    "element_order_census": {
+      "1": 1,
+      "2": 27,
+      "3": 80,
+      "4": 36,
+      "6": 144
+    },
+    "parity_rule_in_chosen_incidence_isomorphism": "GL(2,2) S3 even",
+    "parity_support_counts": {
+      "(0, 0)": 144,
+      "(0, 1)": 144
+    }
+  },
+  "orders": {
+    "Schur_half_signed_root_stabilizer": 576,
+    "Schur_induced_Reye_group": 288,
+    "antipodal_kernel": 2,
+    "full_typed_Reye_automorphism_group": 576,
+    "index": 2
+  },
+  "schema": "w33.schur-reye-288-action-bridge.v1",
+  "status": "PASS",
+  "theorem": "The D4-root antipodal quotient gives an exact sequence 1 -> C2 -> H_Schur(576) -> B_Reye(288) -> 1, and an explicit typed-incidence conjugator embeds B_Reye as an index-two subgroup of the affine V4 decoder Aut(Reye)=C2^4:(S3xS3)."
+}

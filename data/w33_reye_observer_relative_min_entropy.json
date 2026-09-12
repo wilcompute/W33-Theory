@@ -1,0 +1,60 @@
+{
+  "block_decoder": {
+    "H_min_bits_no_offsets": 4.0,
+    "H_min_bits_one_offset": 2.0,
+    "H_min_bits_two_offsets": -0.0,
+    "bits_per_offset": 2,
+    "blocks": 16,
+    "coordinates": "(r,s) in R^2; third offset t=r XOR s",
+    "independent_hidden_offsets": 2,
+    "uniform_p_guess_no_offsets": "1/16",
+    "uniform_p_guess_one_offset": "1/4",
+    "uniform_p_guess_two_offsets": "1"
+  },
+  "checks": {
+    "coarse_block_conditional_min_entropy_is_4_bits": true,
+    "coarse_block_guess_probability_is_1_over_16": true,
+    "coarse_point_role_has_four_state_fibre": true,
+    "decoder_reveal_side_information_monotonicity": true,
+    "fully_suppressed_85_state_trace_returns_uniform_guess_1_over_85": true,
+    "fully_visible_85_state_trace_is_decodable": true,
+    "one_block_offset_leaves_2_bits": true,
+    "point_role_conditional_min_entropy_is_2_bits": true,
+    "point_role_guess_probability_is_1_over_4": true,
+    "privacy_controller_uses_same_guessing_probability_semantics": true,
+    "privacy_suppression_monotonically_reduces_guessing_probability": true,
+    "radical_offset_perfectly_decodes_point": true,
+    "third_offset_is_determined_not_independent": true,
+    "two_block_offsets_perfectly_decode_block": true
+  },
+  "claim_boundary": "Classical finite information theorem under explicit uniform priors and deterministic observation/decoder maps. It does not imply Bell-certified quantum outcomes have hidden classical keys, does not assert a local/noncontextual hidden-variable theory, and does not equate determinism with predictability, computability, or efficient calculability.",
+  "cryptographic_reading": "In these finite models, 'decryptability' can be formalized as the existence of a decoder D(O,K)=X where O is the coarse observation and K is side information. The residual uncertainty before K is H_min(X|O). This is a rigorous special case of observer-relative hidden information, not a universal definition of randomness.",
+  "finite_theorem": "For the declared uniform Reye decoder model, apparent uncertainty under the coarse observation is exactly conditional min-entropy of the hidden radical fibre: 2 bits for a point and 4 bits for a contextual block. Supplying the corresponding finite side information decodes the exact state. The independent Marcelis privacy controller exhibits the dual operation: withholding observations increases conditional min-entropy.",
+  "independent_observer_cross_check": {
+    "H_min_bits_all_four_outputs_suppressed": 6.409390936137702,
+    "H_min_bits_no_suppression": -0.0,
+    "frontier_guess_probabilities": [
+      "1",
+      "71/85",
+      "47/85",
+      "3/17",
+      "1/85"
+    ],
+    "model": "85-state Marcelis finite trace observer with public adaptive suppression",
+    "p_guess_all_four_outputs_suppressed": "1/85",
+    "p_guess_no_suppression": "1"
+  },
+  "point_decoder": {
+    "H_min_bits_after_side_information": -0.0,
+    "H_min_bits_given_role": 2.0,
+    "coarse_roles": 3,
+    "microstates": 12,
+    "p_guess_after_side_information": "1",
+    "side_information": "radical offset r in R ~= F2^2",
+    "side_information_bits": 2,
+    "states_per_role": 4,
+    "uniform_p_guess_given_role": "1/4"
+  },
+  "schema": "w33.reye-observer-relative-min-entropy.v1",
+  "status": "PASS"
+}

@@ -1,0 +1,59 @@
+{
+  "checks": {
+    "H_core_has_regular_C2^4_product_torsor": true,
+    "Hessian_character_kernel_is_projective_V4": true,
+    "Hessian_character_profile_is_4_4_4_on_A4": true,
+    "K_core_has_regular_C2^4_product_torsor": true,
+    "all_nine_cross_blocks_share_the_same_torsor_type": true,
+    "cross_fibre_kernel_contains_order4_scalar": true,
+    "cross_fibre_kernel_has_order16": true,
+    "cross_fibre_kernel_is_not_C2^4": true,
+    "each_cross_character_fibre_has_16_lines": true,
+    "h_double_transpositions_form_regular_V4": true,
+    "h_root_projective_stabilizer_is_A4_order12": true,
+    "lifted_binary_quartic_symmetry_has_48_graph_lines": true,
+    "phi_double_transpositions_form_regular_V4": true,
+    "phi_root_projective_stabilizer_is_A4_order12": true
+  },
+  "claim_boundary": "Exact binary-quartic/projective-root calculation using Nurowski's displayed Section-4 equations. It proves blockwise torsor structures. It does not yet identify the nonabelian order-16 cross kernel up to SmallGroup type or prove a single order-16 group acts globally and simultaneously on all eleven blocks.",
+  "core_fibres": {
+    "H": {
+      "lines": 16,
+      "origin_model": "Z(phi) x Z(phi)",
+      "torsor": "V4 x V4 ~= C2^4"
+    },
+    "K": {
+      "lines": 16,
+      "origin_model": "Z(h) x Z(h)",
+      "torsor": "V4 x V4 ~= C2^4"
+    }
+  },
+  "cross_fibres": {
+    "binary_quartic_projective_group": "A4",
+    "blocks": 9,
+    "character": "chi(M)=det(M)^(-2) from Hessian covariance",
+    "contains_order4_scalar": true,
+    "graph_line_total": 48,
+    "is_C2^4": false,
+    "kernel_order": 16,
+    "kernel_projective_quotient": "V4",
+    "lines_per_block": 16,
+    "projective_character_profile": {
+      "1": 4,
+      "omega": 4,
+      "omega2": 4
+    },
+    "projective_order": 12,
+    "scalar_lifts_per_projective_element": 4,
+    "torsor_statement": "each B_{k,c} is a coset torsor for the order-16 kernel of chi; D_a transports the Phi_0 statement to all k"
+  },
+  "external_equations": {
+    "cross_rule": "H2|L = c(L) H1|L with c(L)^3=1 and 16 lines for each c",
+    "h": "v(8u^3+v^3)",
+    "phi": "u(u^3-v^3)",
+    "source": "P. Nurowski, arXiv:2609.10751 (2026), Section 4"
+  },
+  "schema": "w33.schur176-sixteen-line-fibre-structure.v1",
+  "status": "PASS",
+  "theorem": "The eleven 16-line Schur-176 blocks are not a uniform C2^4 bundle. The two common cores H,K carry regular V4xV4=C2^4 product torsors. The nine cross blocks are 16-element cosets of the Hessian character kernel in the 48-element exact binary-quartic graph-line symmetry; that kernel contains the order-four scalar iI, so it is not C2^4."
+}

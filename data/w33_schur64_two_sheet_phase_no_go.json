@@ -1,0 +1,51 @@
+{
+  "affine_six_bit_test": {
+    "hypothesis": "F2^6 acts regularly and the sheet is one linear coordinate extending the certified sheet action",
+    "reason": "the certified regular 32-state sheet group is nonabelian extraspecial and contains order-4 elements, whereas F2^5 is elementary abelian",
+    "required_sheet_kernel": "F2^5 ~= C2^5",
+    "required_sheet_kernel_order": 32,
+    "result": "NO_GO"
+  },
+  "checks": {
+    "certified_sheet_group_has_order4_elements": true,
+    "certified_sheet_group_is_nonabelian": true,
+    "compatible_F2_6_translation_extension_is_impossible": true,
+    "linear_F2_5_sheet_kernel_would_be_elementary_abelian": true,
+    "one_sheet_is_certified_regular_extraspecial_torsor": true,
+    "set_level_two_sheet_completion_has_64_states": true,
+    "two_components_have_32_triples_each": true,
+    "two_components_plus_16_isolated_lines_exhaust_64_lines": true,
+    "uniform_sheet_label_is_one_bit": true
+  },
+  "claim_boundary": "Exact finite-group obstruction conditional only on the external two-component census and the repo's certified regular extraspecial sheet action. It does not rule out arbitrary six-bit labels unrelated to that action, nor does it identify the full 2_+^{1+6} action on individual Schur lines.",
+  "external_input": {
+    "component_line_counts": [
+      24,
+      24
+    ],
+    "full_line_count": 64,
+    "isolated_quadruple_point_lines": 16,
+    "ordinary_triple_components": [
+      32,
+      32
+    ],
+    "source": "P. Nurowski, arXiv:2609.10751 (2026), Proposition 3.1; Naskrecki-Pokora arXiv:2607.07898"
+  },
+  "information_reading": {
+    "qualification": "one bit only as a set-level sheet choice under a uniform prior; not an ontic-randomness claim and not a sixth linear Pauli coordinate",
+    "uniform_sheet_label_bits": 1
+  },
+  "schema": "w33.schur64-two-sheet-phase-no-go.v1",
+  "sheet_torsor": {
+    "center_order": 2,
+    "derived_order": 2,
+    "has_order4_elements": true,
+    "nonabelian": true,
+    "one_sheet_group": "2_+^{1+4}",
+    "order": 32,
+    "second_sheet": "transported by the projective automorphism exchanging D and D*",
+    "set_model_after_origins": "E32 x C2"
+  },
+  "status": "PASS",
+  "theorem": "The 64 ordinary Schur triple points are naturally two 32-state extraspecial torsors exchanged by symmetry. The sheet label contributes one set-level bit, but it cannot be the missing sixth linear coordinate of an affine F2^6 translation extension compatible with the certified 2_+^{1+4} regular sheet action."
+}

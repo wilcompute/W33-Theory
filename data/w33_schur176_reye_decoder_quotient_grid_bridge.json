@@ -1,0 +1,46 @@
+{
+  "checks": {
+    "GL22_on_nonzero_radical_is_full_S3": true,
+    "Schur176_lines_per_macro_block_matches_decoder_kernel_order": true,
+    "decoder_exact_sequence_orders_are_16_36_576": true,
+    "decoder_quotient_product_action_has_order36": true,
+    "explicit_grid_conjugacy_matches_all_36_actions": true,
+    "macro_product_action_has_order36": true,
+    "three_radical_directions_times_three_roles_give_nine_cross_blocks": true,
+    "two_coordinate_partition_classes_give_six_surfaces": true
+  },
+  "claim_boundary": "Exact quotient/permutation-representation theorem on the certified macro skeleton. The equality 16 geometric lines per macro block = |C2^4| is only a fibre-cardinality match here; no individual-line C2^4 torsor action is claimed until constructed from the Schur-176 line action.",
+  "decoder_group": {
+    "full": "C2^4 : (S3 x S3)",
+    "kernel_order": 16,
+    "normal_kernel": "R^2 ~= C2^4",
+    "order": 576,
+    "quotient": "GL(2,2) x S3 ~= S3 x S3",
+    "quotient_order": 36,
+    "short_exact_sequence": "1 -> C2^4 -> G_576 -> S3 x S3 -> 1"
+  },
+  "fibre_frontier": {
+    "cardinality_match": true,
+    "decoder_kernel_order": 16,
+    "geometric_lines_per_macro_block": 16,
+    "macro_blocks": 11,
+    "status": "UNPROVED_OBJECTWISE_LIFT",
+    "target": "identify each 16-line Schur macro block as a torsor/fibre for the decoder C2^4 kernel and verify transition maps across the augmented Q+(3,2) base"
+  },
+  "quotient_grid": {
+    "action": "(g,sigma).(d,role)=(g d, sigma(role))",
+    "cells": 9,
+    "first_coordinate": "three nonzero radical directions R\\{0}",
+    "second_coordinate": "three decoder roles A,B,C"
+  },
+  "schema": "w33.schur176-reye-decoder-quotient-grid-bridge.v1",
+  "schur176_macro_dictionary": {
+    "decoder_role_A_B_C": "Psi_0,Psi_1,Psi_2 coordinate / second ruling",
+    "first_coordinate_partition_class": "H_core ruling class",
+    "grid_cell_(d,role)": "B_ij cross 16-line block",
+    "radical_direction_1_2_3": "Phi_0,Phi_1,Phi_2 coordinate / first ruling",
+    "second_coordinate_partition_class": "K_core ruling class"
+  },
+  "status": "PASS",
+  "theorem": "The ruling-preserving S3 x S3 symmetry of the Schur-176 augmented Q+(3,2) macro skeleton is explicitly the quotient permutation action of the Reye decoder group C2^4:(S3 x S3) by its normal C2^4 kernel. The nine cross blocks are the product grid (R\\{0}) x {A,B,C}."
+}
