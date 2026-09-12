@@ -1,0 +1,100 @@
+{
+  "Reye": {
+    "block_rule": "closed anticommuting XOR triple {a,b,a+b}",
+    "blocks": 16,
+    "incidences": 48,
+    "point_multiplicity": 4,
+    "points": 12,
+    "typed_24cell_isomorphism": true,
+    "typed_Q4_tomotope_isomorphism": true
+  },
+  "checks": {
+    "Pauli_triangle_incidence_is_24cell_Reye": true,
+    "Pauli_triangle_incidence_is_Q4_tomotope_Reye": true,
+    "anticommutation_graph_is_K444": true,
+    "closed_anticommuting_XOR_triangles_are_16": true,
+    "each_selected_point_lies_on_4_triangles": true,
+    "radical_is_2dim_4element": true,
+    "radical_words_are_III_IZI_IIX_IZX": true,
+    "restricted_symplectic_rank_is_2": true,
+    "selected_D4_root_pairs_are_12": true,
+    "selected_set_is_exactly_span_minus_radical": true,
+    "span_is_4dim_16element_flat": true,
+    "standard_Pauli_product_description_exact": true,
+    "three_nonzero_radical_cosets_have_size4": true
+  },
+  "coset_geometry": {
+    "anticommutation_graph": "K4,4,4",
+    "commutation_between_distinct_cosets": "all anticommute",
+    "commutation_inside_each_coset": "all commute",
+    "nonzero_radical_cosets": [
+      [
+        "ZII",
+        "ZIX",
+        "ZZI",
+        "ZZX"
+      ],
+      [
+        "XII",
+        "XIX",
+        "XZI",
+        "XZX"
+      ],
+      [
+        "YII",
+        "YIX",
+        "YZI",
+        "YZX"
+      ]
+    ]
+  },
+  "normal_form": {
+    "formula": "selected = W \\ Rad(W) = {X,Y,Z}_1 x {I,Z}_2 x {I,X}_3",
+    "radical_generators": [
+      "Z2",
+      "X3"
+    ],
+    "radical_order": 4,
+    "radical_words": [
+      "III",
+      "IIX",
+      "IZI",
+      "IZX"
+    ],
+    "restricted_symplectic_rank": 2,
+    "selected_words": [
+      "XII",
+      "XIX",
+      "XZI",
+      "XZX",
+      "YII",
+      "YIX",
+      "YZI",
+      "YZX",
+      "ZII",
+      "ZIX",
+      "ZZI",
+      "ZZX"
+    ],
+    "span_dimension": 4,
+    "span_generators": [
+      "X1",
+      "Z1",
+      "Z2",
+      "X3"
+    ],
+    "span_order": 16
+  },
+  "prior_repo_boundary": "Pass8909-8916 already proved the selected complementary D4, the 12_4,16_3 Reye-type incidence, K4,4,4 point graph, and Klein-V4 Latin isotopy. New here is the explicit presymplectic three-qubit-Pauli normal form and the radical-coset/XOR-triangle derivation.",
+  "schema": "w33.e7-d4-presymplectic-reye-normal-form.v1",
+  "standard_coordinate_order": [
+    "x1",
+    "z1",
+    "x2",
+    "z2",
+    "x3",
+    "z3"
+  ],
+  "status": "PASS",
+  "theorem": "The E8-selected complementary D4 of Pass8909 has the standard three-qubit-Pauli normal form W\\Rad(W), where W=<X1,Z1,Z2,X3> has two-dimensional radical <Z2,X3>. The three nonzero radical cosets give K4,4,4 and the 16 closed anticommuting XOR triangles are exactly the Reye incidence blocks."
+}

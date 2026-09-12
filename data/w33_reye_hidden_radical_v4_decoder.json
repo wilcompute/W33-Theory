@@ -1,0 +1,275 @@
+{
+  "Pass8909_Latin_resolution": {
+    "affine_offset": 3,
+    "part_first_qubit_letters_in_stored_component_order": [
+      "Z",
+      "Y",
+      "X"
+    ],
+    "position_to_radical_index": {
+      "column": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "row": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "symbol": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    "semantic_law": "phi_symbol(L(i,j)) = phi_row(i) XOR phi_column(j)",
+    "stored_numeric_affine_law": "L(i,j) = i XOR j XOR 3",
+    "stored_table": [
+      [
+        3,
+        2,
+        1,
+        0
+      ],
+      [
+        2,
+        3,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        3,
+        2
+      ],
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  "block_graph": {
+    "intersection_rule": "same r OR same s OR same r+s",
+    "parameters": [
+      16,
+      9,
+      4,
+      6
+    ]
+  },
+  "checks": {
+    "Pass8909_exact_Latin_table_reconstructed": true,
+    "block_graph_is_SRG_16_9_4_6": true,
+    "block_intersection_has_row_column_symbol_criterion": true,
+    "decoder_R2_has_16_unique_blocks": true,
+    "decoder_blocks_equal_all_Reye_XOR_triangles": true,
+    "explicit_position_maps_turn_Latin_rule_into_radical_XOR": true,
+    "hidden_radical_is_V4": true,
+    "stored_numeric_Latin_table_is_i_xor_j_xor_3": true,
+    "uniform_block_choice_side_information_is_4_bits": true,
+    "uniform_point_fibre_side_information_is_2_bits": true
+  },
+  "claim_boundary": "Exact finite symplectic/incidence theorem. The 2-bit and 4-bit statements are uniform finite side-information counts, not a claim that physical quantum randomness is hidden classical information.",
+  "decoder": {
+    "blocks": 16,
+    "domain": "R x R",
+    "formula": "T(r,s)={X1+r, Z1+s, Y1+r+s}",
+    "rows": [
+      {
+        "block_pauli_words": [
+          "XII",
+          "YII",
+          "ZII"
+        ],
+        "column_radical_index": 0,
+        "row_radical_index": 0,
+        "symbol_radical_index": 0
+      },
+      {
+        "block_pauli_words": [
+          "XII",
+          "YIX",
+          "ZIX"
+        ],
+        "column_radical_index": 1,
+        "row_radical_index": 0,
+        "symbol_radical_index": 1
+      },
+      {
+        "block_pauli_words": [
+          "XII",
+          "YZI",
+          "ZZI"
+        ],
+        "column_radical_index": 2,
+        "row_radical_index": 0,
+        "symbol_radical_index": 2
+      },
+      {
+        "block_pauli_words": [
+          "XII",
+          "YZX",
+          "ZZX"
+        ],
+        "column_radical_index": 3,
+        "row_radical_index": 0,
+        "symbol_radical_index": 3
+      },
+      {
+        "block_pauli_words": [
+          "XIX",
+          "YIX",
+          "ZII"
+        ],
+        "column_radical_index": 0,
+        "row_radical_index": 1,
+        "symbol_radical_index": 1
+      },
+      {
+        "block_pauli_words": [
+          "XIX",
+          "YII",
+          "ZIX"
+        ],
+        "column_radical_index": 1,
+        "row_radical_index": 1,
+        "symbol_radical_index": 0
+      },
+      {
+        "block_pauli_words": [
+          "XIX",
+          "YZX",
+          "ZZI"
+        ],
+        "column_radical_index": 2,
+        "row_radical_index": 1,
+        "symbol_radical_index": 3
+      },
+      {
+        "block_pauli_words": [
+          "XIX",
+          "YZI",
+          "ZZX"
+        ],
+        "column_radical_index": 3,
+        "row_radical_index": 1,
+        "symbol_radical_index": 2
+      },
+      {
+        "block_pauli_words": [
+          "XZI",
+          "YZI",
+          "ZII"
+        ],
+        "column_radical_index": 0,
+        "row_radical_index": 2,
+        "symbol_radical_index": 2
+      },
+      {
+        "block_pauli_words": [
+          "XZI",
+          "YZX",
+          "ZIX"
+        ],
+        "column_radical_index": 1,
+        "row_radical_index": 2,
+        "symbol_radical_index": 3
+      },
+      {
+        "block_pauli_words": [
+          "XZI",
+          "YII",
+          "ZZI"
+        ],
+        "column_radical_index": 2,
+        "row_radical_index": 2,
+        "symbol_radical_index": 0
+      },
+      {
+        "block_pauli_words": [
+          "XZI",
+          "YIX",
+          "ZZX"
+        ],
+        "column_radical_index": 3,
+        "row_radical_index": 2,
+        "symbol_radical_index": 1
+      },
+      {
+        "block_pauli_words": [
+          "XZX",
+          "YZX",
+          "ZII"
+        ],
+        "column_radical_index": 0,
+        "row_radical_index": 3,
+        "symbol_radical_index": 3
+      },
+      {
+        "block_pauli_words": [
+          "XZX",
+          "YZI",
+          "ZIX"
+        ],
+        "column_radical_index": 1,
+        "row_radical_index": 3,
+        "symbol_radical_index": 2
+      },
+      {
+        "block_pauli_words": [
+          "XZX",
+          "YIX",
+          "ZZI"
+        ],
+        "column_radical_index": 2,
+        "row_radical_index": 3,
+        "symbol_radical_index": 1
+      },
+      {
+        "block_pauli_words": [
+          "XZX",
+          "YII",
+          "ZZX"
+        ],
+        "column_radical_index": 3,
+        "row_radical_index": 3,
+        "symbol_radical_index": 0
+      }
+    ]
+  },
+  "radical": {
+    "group": "R = <Z2,X3> ~= F2^2 ~= V4",
+    "index_convention": "index = x3 + 2*z2",
+    "index_to_pauli_word": {
+      "0": "III",
+      "1": "IIX",
+      "2": "IZI",
+      "3": "IZX"
+    },
+    "order": 4
+  },
+  "schema": "w33.reye-hidden-radical-v4-decoder.v1",
+  "status": "PASS",
+  "theorem": "The E8-selected D4/Reye configuration is the V4 radical decoder of the presymplectic Pauli flat: its 16 blocks are canonically R^2 via T(r,s)={X1+r,Z1+s,Y1+r+s}. Pass8909's Latin square becomes the exact addition law of R under explicit point-coordinate maps; its stored numeric table is the affine gauge L(i,j)=i XOR j XOR 3.",
+  "three_nonzero_cosets": {
+    "A": "X1 + R",
+    "B": "Z1 + R",
+    "C": "Y1 + R"
+  },
+  "uniform_finite_information_model": {
+    "hidden_bits_per_point_fibre": 2.0,
+    "hidden_bits_to_select_exact_block": 4.0,
+    "independent_radical_offsets_per_block": 2,
+    "possible_blocks_for_fixed three_coset_roles": 16,
+    "qualification": "counting/min-entropy statement only under a uniform prior on radical offsets; no ontic-randomness claim",
+    "states_per_coarse_nonzero_coset": 4,
+    "third_offset_rule": "t = r XOR s"
+  }
+}
