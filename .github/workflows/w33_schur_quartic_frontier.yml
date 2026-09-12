@@ -15,6 +15,11 @@ on:
       - 'analysis/w33_e7_d4_presymplectic_reye_normal_form.py'
       - 'analysis/w33_reye_hidden_radical_v4_decoder.py'
       - 'analysis/w33_reye_v4_decoder_automorphism_576.py'
+      - 'analysis/w33_schur176_reye_decoder_quotient_grid_bridge.py'
+      - 'analysis/w33_schur176_sixteen_line_fibre_structure.py'
+      - 'analysis/w33_schur64_two_sheet_phase_no_go.py'
+      - 'analysis/w33_schur_reye_288_action_bridge.py'
+      - 'analysis/w33_reye_observer_relative_min_entropy.py'
       - 'tests/test_w33_schur_quartic_frontier_20260911.py'
       - 'tests/test_w33_schur_extraspecial_coset_geometry_20260911.py'
       - 'tests/test_w33_schur_central_phase_reye_20260911.py'
@@ -23,6 +28,11 @@ on:
       - 'tests/test_w33_e7_d4_presymplectic_reye_20260911.py'
       - 'tests/test_w33_reye_hidden_radical_v4_decoder_20260911.py'
       - 'tests/test_w33_reye_v4_decoder_automorphism_576_20260911.py'
+      - 'tests/test_w33_schur176_reye_decoder_quotient_grid_20260911.py'
+      - 'tests/test_w33_schur176_sixteen_line_fibre_structure_20260911.py'
+      - 'tests/test_w33_schur64_two_sheet_phase_no_go_20260911.py'
+      - 'tests/test_w33_schur_reye_288_action_bridge_20260911.py'
+      - 'tests/test_w33_reye_observer_relative_min_entropy_20260911.py'
 
 permissions:
   contents: write
@@ -50,6 +60,11 @@ jobs:
           python analysis/w33_e7_d4_presymplectic_reye_normal_form.py
           python analysis/w33_reye_hidden_radical_v4_decoder.py
           python analysis/w33_reye_v4_decoder_automorphism_576.py
+          python analysis/w33_schur176_reye_decoder_quotient_grid_bridge.py
+          python analysis/w33_schur176_sixteen_line_fibre_structure.py
+          python analysis/w33_schur64_two_sheet_phase_no_go.py
+          python analysis/w33_schur_reye_288_action_bridge.py
+          python analysis/w33_reye_observer_relative_min_entropy.py
       - name: Focused regression
         run: |
           python -m pytest -q \
@@ -60,7 +75,12 @@ jobs:
             tests/test_w33_schur64_e7_threequbit_pauli_objectwise_20260911.py \
             tests/test_w33_e7_d4_presymplectic_reye_20260911.py \
             tests/test_w33_reye_hidden_radical_v4_decoder_20260911.py \
-            tests/test_w33_reye_v4_decoder_automorphism_576_20260911.py
+            tests/test_w33_reye_v4_decoder_automorphism_576_20260911.py \
+            tests/test_w33_schur176_reye_decoder_quotient_grid_20260911.py \
+            tests/test_w33_schur176_sixteen_line_fibre_structure_20260911.py \
+            tests/test_w33_schur64_two_sheet_phase_no_go_20260911.py \
+            tests/test_w33_schur_reye_288_action_bridge_20260911.py \
+            tests/test_w33_reye_observer_relative_min_entropy_20260911.py
       - name: Freeze exact JSON certificates
         shell: bash
         run: |
@@ -73,7 +93,12 @@ jobs:
             data/w33_schur64_e7_threequbit_pauli_objectwise_bridge.json \
             data/w33_e7_d4_presymplectic_reye_normal_form.json \
             data/w33_reye_hidden_radical_v4_decoder.json \
-            data/w33_reye_v4_decoder_automorphism_576.json
+            data/w33_reye_v4_decoder_automorphism_576.json \
+            data/w33_schur176_reye_decoder_quotient_grid_bridge.json \
+            data/w33_schur176_sixteen_line_fibre_structure.json \
+            data/w33_schur64_two_sheet_phase_no_go.json \
+            data/w33_schur_reye_288_action_bridge.json \
+            data/w33_reye_observer_relative_min_entropy.json
           if git diff --cached --quiet; then
             echo 'Schur certificates already frozen.'
             exit 0
