@@ -1,0 +1,41 @@
+{
+  "checks": {
+    "GL22_and_role_S3_commute": true,
+    "GL22_factor_has_order6": true,
+    "complement_is_GL22_times_S3_order36": true,
+    "every_explicit_action_preserves_Reye_incidence": true,
+    "explicit_affine_actions_are_576": true,
+    "explicit_group_exhausts_full_typed_automorphism_group": true,
+    "independent_typed_Levi_automorphism_count_is_576": true,
+    "role_S3_factor_has_order6": true,
+    "translation_shift_family_is_normal_under_complement": true,
+    "translation_subgroup_is_R2_order16": true,
+    "translations_are_regular_on_16_blocks": true
+  },
+  "claim_boundary": "Exact finite incidence/group theorem. Equality of the order-576 projective Schur-component stabilizer with this abstract Reye automorphism model is structurally aligned with the cited paper, but this certificate does not construct Nurowski's projective matrices objectwise.",
+  "identification": {
+    "literature_alignment": "Nurowski arXiv:2609.10751 gives projective stabilizer order 576 for either Schur 24-line component; this certificate supplies the internal affine V4 decoder model of the same Reye/D4 symmetry order.",
+    "new_explicit_model": "W(F4)/{+-I} ~= C2^4 : (S3 x S3) in the hidden-radical decoder coordinates",
+    "repo_prior": "full colored Reye automorphism group = W(F4)/{+-I}, order 576"
+  },
+  "orders": {
+    "GL_2_2": 6,
+    "R": 4,
+    "R_x_R_translation_kernel": 16,
+    "complement": 36,
+    "full_typed_automorphism_group": 576,
+    "role_S3": 6
+  },
+  "schema": "w33.reye-v4-decoder-automorphism-576.v1",
+  "status": "PASS",
+  "structure": {
+    "complement": "GL(2,2) x S3 ~= S3 x S3",
+    "linear_action": "g in GL(2,2) acts simultaneously on r,s,t",
+    "normal_kernel": "R^2 ~= C2^4",
+    "order_factorization": "576 = 16 * 6 * 6",
+    "role_action": "sigma in S3 permutes A,B,C; r+s+t=0 is symmetric",
+    "semidirect_product": "C2^4 : (S3 x S3)",
+    "translation_action": "(a,b): (A_r,B_s,C_t) -> (A_{r+a},B_{s+b},C_{t+a+b})"
+  },
+  "theorem": "The full typed automorphism group of the E8-selected D4/Reye incidence geometry is exactly the affine autotopism group of its hidden V4 radical decoder: (R x R) semidirect (GL(2,2) x S3), of order 16*6*6=576. The normal C2^4 acts regularly on the 16 Reye blocks."
+}
