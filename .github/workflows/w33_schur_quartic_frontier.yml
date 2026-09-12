@@ -12,11 +12,15 @@ on:
       - 'analysis/w33_schur_central_phase_reye_quotient.py'
       - 'analysis/w33_schur176_qplus_macro_skeleton.py'
       - 'analysis/w33_schur64_e7_threequbit_pauli_objectwise_bridge.py'
+      - 'analysis/w33_e7_d4_presymplectic_reye_normal_form.py'
+      - 'analysis/w33_reye_hidden_radical_v4_decoder.py'
       - 'tests/test_w33_schur_quartic_frontier_20260911.py'
       - 'tests/test_w33_schur_extraspecial_coset_geometry_20260911.py'
       - 'tests/test_w33_schur_central_phase_reye_20260911.py'
       - 'tests/test_w33_schur176_qplus_macro_20260911.py'
       - 'tests/test_w33_schur64_e7_threequbit_pauli_objectwise_20260911.py'
+      - 'tests/test_w33_e7_d4_presymplectic_reye_20260911.py'
+      - 'tests/test_w33_reye_hidden_radical_v4_decoder_20260911.py'
 
 permissions:
   contents: write
@@ -41,6 +45,8 @@ jobs:
           python analysis/w33_schur_central_phase_reye_quotient.py
           python analysis/w33_schur176_qplus_macro_skeleton.py
           python analysis/w33_schur64_e7_threequbit_pauli_objectwise_bridge.py
+          python analysis/w33_e7_d4_presymplectic_reye_normal_form.py
+          python analysis/w33_reye_hidden_radical_v4_decoder.py
       - name: Focused regression
         run: |
           python -m pytest -q \
@@ -48,7 +54,9 @@ jobs:
             tests/test_w33_schur_extraspecial_coset_geometry_20260911.py \
             tests/test_w33_schur_central_phase_reye_20260911.py \
             tests/test_w33_schur176_qplus_macro_20260911.py \
-            tests/test_w33_schur64_e7_threequbit_pauli_objectwise_20260911.py
+            tests/test_w33_schur64_e7_threequbit_pauli_objectwise_20260911.py \
+            tests/test_w33_e7_d4_presymplectic_reye_20260911.py \
+            tests/test_w33_reye_hidden_radical_v4_decoder_20260911.py
       - name: Freeze exact JSON certificates
         shell: bash
         run: |
@@ -58,7 +66,9 @@ jobs:
             data/w33_schur_extraspecial_coset_geometry.json \
             data/w33_schur_central_phase_reye_quotient.json \
             data/w33_schur176_qplus_macro_skeleton.json \
-            data/w33_schur64_e7_threequbit_pauli_objectwise_bridge.json
+            data/w33_schur64_e7_threequbit_pauli_objectwise_bridge.json \
+            data/w33_e7_d4_presymplectic_reye_normal_form.json \
+            data/w33_reye_hidden_radical_v4_decoder.json
           if git diff --cached --quiet; then
             echo 'Schur certificates already frozen.'
             exit 0
