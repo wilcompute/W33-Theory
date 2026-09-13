@@ -1,0 +1,997 @@
+{
+  "status": "PASS",
+  "schedule": {
+    "serial_duration": 26,
+    "scheduled_duration": 19,
+    "schedule": [
+      {
+        "edge": [
+          2,
+          0
+        ],
+        "duration": 1,
+        "ports": [],
+        "id": 0,
+        "deps": [],
+        "resources": [
+          "q:0",
+          "q:2"
+        ],
+        "start": 0,
+        "end": 1
+      },
+      {
+        "edge": [
+          0,
+          2
+        ],
+        "duration": 1,
+        "ports": [],
+        "id": 1,
+        "deps": [
+          0
+        ],
+        "resources": [
+          "q:0",
+          "q:2"
+        ],
+        "start": 1,
+        "end": 2
+      },
+      {
+        "edge": [
+          2,
+          0
+        ],
+        "duration": 1,
+        "ports": [],
+        "id": 2,
+        "deps": [
+          1
+        ],
+        "resources": [
+          "q:0",
+          "q:2"
+        ],
+        "start": 2,
+        "end": 3
+      },
+      {
+        "edge": [
+          0,
+          3
+        ],
+        "duration": 1,
+        "ports": [
+          "bus:0",
+          "bus:1"
+        ],
+        "id": 3,
+        "deps": [
+          2
+        ],
+        "resources": [
+          "bus:0",
+          "bus:1",
+          "q:0",
+          "q:3"
+        ],
+        "start": 3,
+        "end": 4
+      },
+      {
+        "edge": [
+          3,
+          0
+        ],
+        "duration": 1,
+        "ports": [
+          "bus:0",
+          "bus:1"
+        ],
+        "id": 4,
+        "deps": [
+          3
+        ],
+        "resources": [
+          "bus:0",
+          "bus:1",
+          "q:0",
+          "q:3"
+        ],
+        "start": 4,
+        "end": 5
+      },
+      {
+        "edge": [
+          0,
+          3
+        ],
+        "duration": 1,
+        "ports": [
+          "bus:0",
+          "bus:1"
+        ],
+        "id": 5,
+        "deps": [
+          4
+        ],
+        "resources": [
+          "bus:0",
+          "bus:1",
+          "q:0",
+          "q:3"
+        ],
+        "start": 5,
+        "end": 6
+      },
+      {
+        "edge": [
+          3,
+          5
+        ],
+        "duration": 1,
+        "ports": [],
+        "id": 6,
+        "deps": [
+          5
+        ],
+        "resources": [
+          "q:3",
+          "q:5"
+        ],
+        "start": 6,
+        "end": 7
+      },
+      {
+        "edge": [
+          0,
+          3
+        ],
+        "duration": 1,
+        "ports": [
+          "bus:0",
+          "bus:1"
+        ],
+        "id": 7,
+        "deps": [
+          5,
+          6
+        ],
+        "resources": [
+          "bus:0",
+          "bus:1",
+          "q:0",
+          "q:3"
+        ],
+        "start": 7,
+        "end": 8
+      },
+      {
+        "edge": [
+          3,
+          0
+        ],
+        "duration": 1,
+        "ports": [
+          "bus:0",
+          "bus:1"
+        ],
+        "id": 8,
+        "deps": [
+          7
+        ],
+        "resources": [
+          "bus:0",
+          "bus:1",
+          "q:0",
+          "q:3"
+        ],
+        "start": 8,
+        "end": 9
+      },
+      {
+        "edge": [
+          0,
+          3
+        ],
+        "duration": 1,
+        "ports": [
+          "bus:0",
+          "bus:1"
+        ],
+        "id": 9,
+        "deps": [
+          8
+        ],
+        "resources": [
+          "bus:0",
+          "bus:1",
+          "q:0",
+          "q:3"
+        ],
+        "start": 9,
+        "end": 10
+      },
+      {
+        "edge": [
+          2,
+          0
+        ],
+        "duration": 1,
+        "ports": [],
+        "id": 10,
+        "deps": [
+          2,
+          9
+        ],
+        "resources": [
+          "q:0",
+          "q:2"
+        ],
+        "start": 10,
+        "end": 11
+      },
+      {
+        "edge": [
+          0,
+          2
+        ],
+        "duration": 1,
+        "ports": [],
+        "id": 11,
+        "deps": [
+          10
+        ],
+        "resources": [
+          "q:0",
+          "q:2"
+        ],
+        "start": 11,
+        "end": 12
+      },
+      {
+        "edge": [
+          2,
+          0
+        ],
+        "duration": 1,
+        "ports": [],
+        "id": 12,
+        "deps": [
+          11
+        ],
+        "resources": [
+          "q:0",
+          "q:2"
+        ],
+        "start": 12,
+        "end": 13
+      },
+      {
+        "edge": [
+          8,
+          6
+        ],
+        "duration": 1,
+        "ports": [],
+        "id": 13,
+        "deps": [],
+        "resources": [
+          "q:6",
+          "q:8"
+        ],
+        "start": 0,
+        "end": 1
+      },
+      {
+        "edge": [
+          6,
+          8
+        ],
+        "duration": 1,
+        "ports": [],
+        "id": 14,
+        "deps": [
+          13
+        ],
+        "resources": [
+          "q:6",
+          "q:8"
+        ],
+        "start": 1,
+        "end": 2
+      },
+      {
+        "edge": [
+          8,
+          6
+        ],
+        "duration": 1,
+        "ports": [],
+        "id": 15,
+        "deps": [
+          14
+        ],
+        "resources": [
+          "q:6",
+          "q:8"
+        ],
+        "start": 2,
+        "end": 3
+      },
+      {
+        "edge": [
+          6,
+          9
+        ],
+        "duration": 1,
+        "ports": [
+          "bus:0",
+          "bus:1"
+        ],
+        "id": 16,
+        "deps": [
+          15
+        ],
+        "resources": [
+          "bus:0",
+          "bus:1",
+          "q:6",
+          "q:9"
+        ],
+        "start": 6,
+        "end": 7
+      },
+      {
+        "edge": [
+          9,
+          6
+        ],
+        "duration": 1,
+        "ports": [
+          "bus:0",
+          "bus:1"
+        ],
+        "id": 17,
+        "deps": [
+          16
+        ],
+        "resources": [
+          "bus:0",
+          "bus:1",
+          "q:6",
+          "q:9"
+        ],
+        "start": 10,
+        "end": 11
+      },
+      {
+        "edge": [
+          6,
+          9
+        ],
+        "duration": 1,
+        "ports": [
+          "bus:0",
+          "bus:1"
+        ],
+        "id": 18,
+        "deps": [
+          17
+        ],
+        "resources": [
+          "bus:0",
+          "bus:1",
+          "q:6",
+          "q:9"
+        ],
+        "start": 11,
+        "end": 12
+      },
+      {
+        "edge": [
+          9,
+          11
+        ],
+        "duration": 1,
+        "ports": [],
+        "id": 19,
+        "deps": [
+          18
+        ],
+        "resources": [
+          "q:11",
+          "q:9"
+        ],
+        "start": 12,
+        "end": 13
+      },
+      {
+        "edge": [
+          6,
+          9
+        ],
+        "duration": 1,
+        "ports": [
+          "bus:0",
+          "bus:1"
+        ],
+        "id": 20,
+        "deps": [
+          18,
+          19
+        ],
+        "resources": [
+          "bus:0",
+          "bus:1",
+          "q:6",
+          "q:9"
+        ],
+        "start": 13,
+        "end": 14
+      },
+      {
+        "edge": [
+          9,
+          6
+        ],
+        "duration": 1,
+        "ports": [
+          "bus:0",
+          "bus:1"
+        ],
+        "id": 21,
+        "deps": [
+          20
+        ],
+        "resources": [
+          "bus:0",
+          "bus:1",
+          "q:6",
+          "q:9"
+        ],
+        "start": 14,
+        "end": 15
+      },
+      {
+        "edge": [
+          6,
+          9
+        ],
+        "duration": 1,
+        "ports": [
+          "bus:0",
+          "bus:1"
+        ],
+        "id": 22,
+        "deps": [
+          21
+        ],
+        "resources": [
+          "bus:0",
+          "bus:1",
+          "q:6",
+          "q:9"
+        ],
+        "start": 15,
+        "end": 16
+      },
+      {
+        "edge": [
+          8,
+          6
+        ],
+        "duration": 1,
+        "ports": [],
+        "id": 23,
+        "deps": [
+          15,
+          22
+        ],
+        "resources": [
+          "q:6",
+          "q:8"
+        ],
+        "start": 16,
+        "end": 17
+      },
+      {
+        "edge": [
+          6,
+          8
+        ],
+        "duration": 1,
+        "ports": [],
+        "id": 24,
+        "deps": [
+          23
+        ],
+        "resources": [
+          "q:6",
+          "q:8"
+        ],
+        "start": 17,
+        "end": 18
+      },
+      {
+        "edge": [
+          8,
+          6
+        ],
+        "duration": 1,
+        "ports": [],
+        "id": 25,
+        "deps": [
+          24
+        ],
+        "resources": [
+          "q:6",
+          "q:8"
+        ],
+        "start": 18,
+        "end": 19
+      }
+    ],
+    "scope": "Exclusive declared port and qubit resources, integer durations, dependency-preserving list heuristic. No optimal makespan, analog overlap or calibrated bandwidth claim."
+  },
+  "frames": {
+    "clifford_sandwich_before": 4,
+    "clifford_sandwich_after": 0,
+    "relowered_after_commuting": 301,
+    "input_native_pulses": 337,
+    "rotation_ir_count": 63,
+    "terminal_frame_pulses": 0,
+    "relowered_native_pulses": 337,
+    "matrix_error": 2.1276056357529605e-15,
+    "random_matrix_checks": 60,
+    "scope": "Exact phase-retaining Clifford IR factoring. Abstract rotations are not free native gates; relowering cost reported. Prior: PCOAST and arXiv:1903.12456."
+  },
+  "echo": {
+    "rows": [
+      {
+        "amplitude": 0.03,
+        "crosstalk": 0.01,
+        "base": {
+          "worst_infidelity": 0.00017680423059573958,
+          "worst_leakage": 5.8392368799928435e-05
+        },
+        "bb1": {
+          "worst_infidelity": 0.003161131790668681,
+          "worst_leakage": 0.002122703174764137
+        },
+        "echo4": {
+          "worst_infidelity": 1.1271224331643737e-07,
+          "worst_leakage": 2.5293788898683764e-07
+        },
+        "echo16": {
+          "worst_infidelity": 7.259141066029429e-10,
+          "worst_leakage": 9.61375551640041e-10
+        }
+      },
+      {
+        "amplitude": -0.03,
+        "crosstalk": 0.01,
+        "base": {
+          "worst_infidelity": 0.00017680253019491943,
+          "worst_leakage": 5.8757462267643645e-05
+        },
+        "bb1": {
+          "worst_infidelity": 0.0032600427746088956,
+          "worst_leakage": 0.002345386039619669
+        },
+        "echo4": {
+          "worst_infidelity": 9.969382830377072e-08,
+          "worst_leakage": 2.2361169106849968e-07
+        },
+        "echo16": {
+          "worst_infidelity": 6.785335626702249e-10,
+          "worst_leakage": 8.525638347707048e-10
+        }
+      },
+      {
+        "amplitude": 0.1,
+        "crosstalk": 0.02,
+        "base": {
+          "worst_infidelity": 0.0015830698574177404,
+          "worst_leakage": 0.00023175058230806193
+        },
+        "bb1": {
+          "worst_infidelity": 0.01215087741498444,
+          "worst_leakage": 0.0074555196696641365
+        },
+        "echo4": {
+          "worst_infidelity": 9.08277776545674e-07,
+          "worst_leakage": 1.132929426785288e-06
+        },
+        "echo16": {
+          "worst_infidelity": 4.078482154223906e-07,
+          "worst_leakage": 4.289415870139212e-09
+        }
+      },
+      {
+        "amplitude": 0.03,
+        "crosstalk": -0.01,
+        "base": {
+          "worst_infidelity": 0.00017680423059573958,
+          "worst_leakage": 5.8392368799928435e-05
+        },
+        "bb1": {
+          "worst_infidelity": 0.003161131790668681,
+          "worst_leakage": 0.002122703174764137
+        },
+        "echo4": {
+          "worst_infidelity": 1.1271224331643737e-07,
+          "worst_leakage": 2.5293788898683764e-07
+        },
+        "echo16": {
+          "worst_infidelity": 7.259141066029429e-10,
+          "worst_leakage": 9.61375551640041e-10
+        }
+      }
+    ],
+    "settings_per_row": 12,
+    "echo_pulses_per_bb1": {
+      "echo4": 40,
+      "echo16": 160
+    },
+    "proof": "E=Z2 commutes with the selected control and anticommutes with X2 crosstalk. Symmetric echo cycling removes the mean crosstalk; finite-cycle residuals are checked with full matrices.",
+    "boundary": "Ideal instantaneous error-free Z2 echoes and simultaneous phased sector controls; BB1 duration remains ninefold excluding echoes. No finite-bandwidth echo, detuning, Markov-dephasing or hardware robustness claim."
+  },
+  "quartic": {
+    "preserving_projective_frames": 12,
+    "rejected_projective_frames": 12,
+    "quartic_exact_scalar_lifts": 48,
+    "character_counts": {
+      "1": 4,
+      "(-sqrt(3) + I)/(sqrt(3) + I)": 4,
+      "(-sqrt(3) - I)/(sqrt(3) - I)": 4
+    },
+    "rows": [
+      {
+        "word": [],
+        "frame_permutation": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "quartic_multiplier": "1",
+        "hessian_character_after_phase_lift": "1",
+        "scalar_lift_equation": "lambda^4 = 1/(1)"
+      },
+      {
+        "word": [
+          0,
+          1
+        ],
+        "frame_permutation": [
+          0,
+          2,
+          15,
+          5,
+          4,
+          6,
+          3,
+          9,
+          8,
+          10,
+          7,
+          13,
+          12,
+          14,
+          11,
+          1
+        ],
+        "quartic_multiplier": "1/2 - sqrt(3)*I/2",
+        "hessian_character_after_phase_lift": "(-sqrt(3) + I)/(sqrt(3) + I)",
+        "scalar_lift_equation": "lambda^4 = 1/(1/2 - sqrt(3)*I/2)"
+      },
+      {
+        "word": [
+          1,
+          0
+        ],
+        "frame_permutation": [
+          0,
+          7,
+          1,
+          14,
+          4,
+          11,
+          5,
+          2,
+          8,
+          15,
+          9,
+          6,
+          12,
+          3,
+          13,
+          10
+        ],
+        "quartic_multiplier": "1/2 + sqrt(3)*I/2",
+        "hessian_character_after_phase_lift": "(-sqrt(3) - I)/(sqrt(3) - I)",
+        "scalar_lift_equation": "lambda^4 = 1/(1/2 + sqrt(3)*I/2)"
+      },
+      {
+        "word": [
+          1,
+          1
+        ],
+        "frame_permutation": [
+          0,
+          9,
+          2,
+          11,
+          4,
+          13,
+          6,
+          15,
+          8,
+          1,
+          10,
+          3,
+          12,
+          5,
+          14,
+          7
+        ],
+        "quartic_multiplier": "1",
+        "hessian_character_after_phase_lift": "1",
+        "scalar_lift_equation": "lambda^4 = 1/(1)"
+      },
+      {
+        "word": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "frame_permutation": [
+          0,
+          15,
+          1,
+          6,
+          4,
+          3,
+          5,
+          10,
+          8,
+          7,
+          9,
+          14,
+          12,
+          11,
+          13,
+          2
+        ],
+        "quartic_multiplier": "-1/2 - sqrt(3)*I/2",
+        "hessian_character_after_phase_lift": "(-sqrt(3) - I)/(sqrt(3) - I)",
+        "scalar_lift_equation": "lambda^4 = 1/(-1/2 - sqrt(3)*I/2)"
+      },
+      {
+        "word": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "frame_permutation": [
+          0,
+          1,
+          10,
+          11,
+          4,
+          5,
+          14,
+          15,
+          8,
+          9,
+          2,
+          3,
+          12,
+          13,
+          6,
+          7
+        ],
+        "quartic_multiplier": "1",
+        "hessian_character_after_phase_lift": "1",
+        "scalar_lift_equation": "lambda^4 = 1/(1)"
+      },
+      {
+        "word": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "frame_permutation": [
+          0,
+          2,
+          7,
+          13,
+          4,
+          6,
+          11,
+          1,
+          8,
+          10,
+          15,
+          5,
+          12,
+          14,
+          3,
+          9
+        ],
+        "quartic_multiplier": "1/2 - sqrt(3)*I/2",
+        "hessian_character_after_phase_lift": "(-sqrt(3) + I)/(sqrt(3) + I)",
+        "scalar_lift_equation": "lambda^4 = 1/(1/2 - sqrt(3)*I/2)"
+      },
+      {
+        "word": [
+          1,
+          0,
+          1,
+          1
+        ],
+        "frame_permutation": [
+          0,
+          15,
+          9,
+          14,
+          4,
+          3,
+          13,
+          2,
+          8,
+          7,
+          1,
+          6,
+          12,
+          11,
+          5,
+          10
+        ],
+        "quartic_multiplier": "1/2 + sqrt(3)*I/2",
+        "hessian_character_after_phase_lift": "(-sqrt(3) - I)/(sqrt(3) - I)",
+        "scalar_lift_equation": "lambda^4 = 1/(1/2 + sqrt(3)*I/2)"
+      },
+      {
+        "word": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "frame_permutation": [
+          0,
+          10,
+          15,
+          13,
+          4,
+          14,
+          3,
+          1,
+          8,
+          2,
+          7,
+          5,
+          12,
+          6,
+          11,
+          9
+        ],
+        "quartic_multiplier": "1/2 - sqrt(3)*I/2",
+        "hessian_character_after_phase_lift": "(-sqrt(3) + I)/(sqrt(3) + I)",
+        "scalar_lift_equation": "lambda^4 = 1/(1/2 - sqrt(3)*I/2)"
+      },
+      {
+        "word": [
+          0,
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "frame_permutation": [
+          0,
+          10,
+          7,
+          5,
+          4,
+          14,
+          11,
+          9,
+          8,
+          2,
+          15,
+          13,
+          12,
+          6,
+          3,
+          1
+        ],
+        "quartic_multiplier": "1/2 - sqrt(3)*I/2",
+        "hessian_character_after_phase_lift": "(-sqrt(3) + I)/(sqrt(3) + I)",
+        "scalar_lift_equation": "lambda^4 = 1/(1/2 - sqrt(3)*I/2)"
+      },
+      {
+        "word": [
+          0,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        "frame_permutation": [
+          0,
+          7,
+          9,
+          6,
+          4,
+          11,
+          13,
+          10,
+          8,
+          15,
+          1,
+          14,
+          12,
+          3,
+          5,
+          2
+        ],
+        "quartic_multiplier": "-1/2 - sqrt(3)*I/2",
+        "hessian_character_after_phase_lift": "(-sqrt(3) - I)/(sqrt(3) - I)",
+        "scalar_lift_equation": "lambda^4 = 1/(-1/2 - sqrt(3)*I/2)"
+      },
+      {
+        "word": [
+          0,
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "frame_permutation": [
+          0,
+          9,
+          10,
+          3,
+          4,
+          13,
+          14,
+          7,
+          8,
+          1,
+          2,
+          11,
+          12,
+          5,
+          6,
+          15
+        ],
+        "quartic_multiplier": "1",
+        "hessian_character_after_phase_lift": "1",
+        "scalar_lift_equation": "lambda^4 = 1/(1)"
+      }
+    ],
+    "boundary": "Preservation up to phase for projective frames; four scalar fourth-root corrections per frame give exact quartic preservation. Prior A4/48 theorem cited, not rediscovered. Only four projective frames preserve quartic and Hessian simultaneously after correction."
+  }
+}

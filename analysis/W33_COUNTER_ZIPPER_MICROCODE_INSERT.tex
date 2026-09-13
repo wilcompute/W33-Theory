@@ -251,3 +251,24 @@ inferred.  Companion Holotrade now verifies bounded exact-dual move histories
 with every intermediate state derived in integer arithmetic.
 See \texttt{W33\_REYE\_ROUTING\_ROBUST\_FRAMES.md} for interfaces, citations,
 reproduction and the negative control-error findings.
+
+\subsection{Shared ports, echoed sectors and quartic-preserving frames}
+The dependency-preserving circuit scheduler now reserves both endpoint buses
+for cross-register operations: the checked example takes 19 rather than 26
+serial ticks. Clifford-frame propagation removes a four-pulse conjugation
+identity that commuting-only reduction misses; its 63-rotation benchmark still
+lowers to the prior 301 native pulses, so abstract frame counts are not treated
+as physical savings. Combining selected-sector BB1 with $Z_2$ echoes suppresses
+common amplitude error and modeled $X_2$ crosstalk in the tested cases. The
+16-cycle construction assumes 160 instantaneous error-free echo pulses and
+simultaneous phased controls; finite-bandwidth performance remains open.
+
+Exactly twelve of the twenty-four explicit projective Clifford frames preserve
+$\phi$ up to a phase multiplier $a$. Four corrections satisfying
+$\lambda^4a=1$ per accepted frame recover the prior forty-eight quartic lifts.
+The Hessian character has three values, four projective frames each, recovering
+the prior sixteen-element joint kernel. This connects explicit frame maps to
+the existing $A_4$ result without claiming a new classification.
+Companion Holotrade verifies arriving move chunks atomically and resumes from
+trusted-digest checkpoints by replay; final optimality remains gated on the
+exact dual proof. See \texttt{W33\_REYE\_PORTS\_FRAMES\_ECHO\_STREAMS.md}.
