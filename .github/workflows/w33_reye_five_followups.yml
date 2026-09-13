@@ -1,0 +1,28 @@
+name: Reye register compiler noise and Schur kernel
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_reye_control_extensions.py'
+      - 'analysis/w33_reye_sector_control.py'
+      - 'analysis/w33_schur_cross_kernel_matrices.py'
+      - 'analysis/w33_schur176_sixteen_line_fibre_structure.py'
+      - 'data/w33_schur176_sixteen_line_fibre_structure.json'
+      - '.github/workflows/w33_reye_five_followups.yml'
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy scipy sympy
+      - name: Register network compiler and synthetic channels
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+        run: python analysis/w33_reye_control_extensions.py
+      - name: Exact cross-fibre kernel matrices
+        run: python analysis/w33_schur_cross_kernel_matrices.py

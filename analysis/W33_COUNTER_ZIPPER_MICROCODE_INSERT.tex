@@ -195,3 +195,37 @@ also compiles all 63 Pauli rotations through exact conjugation identities,
 checks their coherent matrices, and verifies a second realization.
 These are ideal finite-register control results, not a physical Holonet
 implementation, a noise threshold, or a scalable universal-machine proof.
+
+\subsection{Connected Reye registers and exact cross-fibre frames}
+The register family now has an explicit inter-tile port:
+$Z_{1,r}Z_{1,r+1}$, independently switchable on a tile chain.
+Local full control and these ports lower routed CNOTs through
+$\mathrm{CZ}=e^{-i\pi/4}R_{Z_a}(-\pi/4)R_{Z_b}(-\pi/4)R_{Z_aZ_b}(\pi/4)$.
+All 108 ordered routing pairs on one through three tiles pass, and a
+non-port two-tile CNOT lowers to 247 declared Pauli pulses with its
+full coherent matrix checked. This supplies a logically scalable circuit
+architecture under the stated ideal coupling assumptions.
+Shortest conjugation templates reduce the 63-rotation total from 369 to
+337 pulses and the worst case from 21 to 15; all-pair cost inequalities
+certify the bound within the recursive conjugation grammar.
+Synthetic channel sweeps separately track coherent gate fidelity and
+sector leakage: dephasing can damage coherence without leaving a sector.
+These model data are not device calibration.
+
+The Schur cross-fibre kernel also has explicit matrices. With
+$\omega=(-1+i\sqrt3)/2$, set
+\[
+ A=\frac1{\sqrt3}\begin{pmatrix}-1&1\\2&1\end{pmatrix},\qquad
+ B=\frac1{\sqrt3}\begin{pmatrix}-1&\omega\\2\bar\omega&1\end{pmatrix}.
+\]
+They preserve the binary quartic and Hessian, obey $A^2=B^2=I$ and
+$AB=-BA$, and generate the sixteen matrices $i^pA^aB^b$.
+An explicit conjugator identifies them with the one-qubit Pauli group;
+the original-coordinate positive Hermitian form is $\operatorname{diag}(2,1)$.
+The phase-aware frame update is
+$(p,a,b)(q,c,d)=(p+q+2bc\bmod4,a\mathbin\oplus c,b\mathbin\oplus d)$.
+Companion Holotrade now offers an opt-in one-step exact-dual transaction
+mode checking actual integer vectors and rational optimality before signed
+delivery. Full code, synthetic data, and scope appear in
+\texttt{W33\_REYE\_FIVE\_FOLLOWUPS.md}; no physical scalability or
+fault-tolerance claim follows from these finite certificates.

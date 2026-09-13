@@ -1,0 +1,509 @@
+{
+  "schema": "w33.reye-control-extensions.v1",
+  "compiler": {
+    "status": "PASS",
+    "rows": [
+      {
+        "word": "IIX",
+        "old_pulses": 21,
+        "new_pulses": 15,
+        "conjugation_distance": 7
+      },
+      {
+        "word": "IIY",
+        "old_pulses": 17,
+        "new_pulses": 13,
+        "conjugation_distance": 6
+      },
+      {
+        "word": "IIZ",
+        "old_pulses": 1,
+        "new_pulses": 1,
+        "conjugation_distance": 0
+      },
+      {
+        "word": "IXI",
+        "old_pulses": 1,
+        "new_pulses": 1,
+        "conjugation_distance": 0
+      },
+      {
+        "word": "IXX",
+        "old_pulses": 5,
+        "new_pulses": 5,
+        "conjugation_distance": 2
+      },
+      {
+        "word": "IXY",
+        "old_pulses": 7,
+        "new_pulses": 7,
+        "conjugation_distance": 3
+      },
+      {
+        "word": "IXZ",
+        "old_pulses": 9,
+        "new_pulses": 9,
+        "conjugation_distance": 4
+      },
+      {
+        "word": "IYI",
+        "old_pulses": 3,
+        "new_pulses": 3,
+        "conjugation_distance": 1
+      },
+      {
+        "word": "IYX",
+        "old_pulses": 7,
+        "new_pulses": 7,
+        "conjugation_distance": 3
+      },
+      {
+        "word": "IYY",
+        "old_pulses": 9,
+        "new_pulses": 9,
+        "conjugation_distance": 4
+      },
+      {
+        "word": "IYZ",
+        "old_pulses": 7,
+        "new_pulses": 7,
+        "conjugation_distance": 3
+      },
+      {
+        "word": "IZI",
+        "old_pulses": 1,
+        "new_pulses": 1,
+        "conjugation_distance": 0
+      },
+      {
+        "word": "IZX",
+        "old_pulses": 11,
+        "new_pulses": 9,
+        "conjugation_distance": 4
+      },
+      {
+        "word": "IZY",
+        "old_pulses": 13,
+        "new_pulses": 11,
+        "conjugation_distance": 5
+      },
+      {
+        "word": "IZZ",
+        "old_pulses": 5,
+        "new_pulses": 5,
+        "conjugation_distance": 2
+      },
+      {
+        "word": "XII",
+        "old_pulses": 1,
+        "new_pulses": 1,
+        "conjugation_distance": 0
+      },
+      {
+        "word": "XIX",
+        "old_pulses": 1,
+        "new_pulses": 1,
+        "conjugation_distance": 0
+      },
+      {
+        "word": "XIY",
+        "old_pulses": 3,
+        "new_pulses": 3,
+        "conjugation_distance": 1
+      },
+      {
+        "word": "XIZ",
+        "old_pulses": 15,
+        "new_pulses": 13,
+        "conjugation_distance": 6
+      },
+      {
+        "word": "XXI",
+        "old_pulses": 5,
+        "new_pulses": 5,
+        "conjugation_distance": 2
+      },
+      {
+        "word": "XXX",
+        "old_pulses": 5,
+        "new_pulses": 5,
+        "conjugation_distance": 2
+      },
+      {
+        "word": "XXY",
+        "old_pulses": 7,
+        "new_pulses": 7,
+        "conjugation_distance": 3
+      },
+      {
+        "word": "XXZ",
+        "old_pulses": 9,
+        "new_pulses": 7,
+        "conjugation_distance": 3
+      },
+      {
+        "word": "XYI",
+        "old_pulses": 3,
+        "new_pulses": 3,
+        "conjugation_distance": 1
+      },
+      {
+        "word": "XYX",
+        "old_pulses": 3,
+        "new_pulses": 3,
+        "conjugation_distance": 1
+      },
+      {
+        "word": "XYY",
+        "old_pulses": 5,
+        "new_pulses": 5,
+        "conjugation_distance": 2
+      },
+      {
+        "word": "XYZ",
+        "old_pulses": 11,
+        "new_pulses": 9,
+        "conjugation_distance": 4
+      },
+      {
+        "word": "XZI",
+        "old_pulses": 1,
+        "new_pulses": 1,
+        "conjugation_distance": 0
+      },
+      {
+        "word": "XZX",
+        "old_pulses": 1,
+        "new_pulses": 1,
+        "conjugation_distance": 0
+      },
+      {
+        "word": "XZY",
+        "old_pulses": 3,
+        "new_pulses": 3,
+        "conjugation_distance": 1
+      },
+      {
+        "word": "XZZ",
+        "old_pulses": 15,
+        "new_pulses": 11,
+        "conjugation_distance": 5
+      },
+      {
+        "word": "YII",
+        "old_pulses": 1,
+        "new_pulses": 1,
+        "conjugation_distance": 0
+      },
+      {
+        "word": "YIX",
+        "old_pulses": 1,
+        "new_pulses": 1,
+        "conjugation_distance": 0
+      },
+      {
+        "word": "YIY",
+        "old_pulses": 3,
+        "new_pulses": 3,
+        "conjugation_distance": 1
+      },
+      {
+        "word": "YIZ",
+        "old_pulses": 15,
+        "new_pulses": 13,
+        "conjugation_distance": 6
+      },
+      {
+        "word": "YXI",
+        "old_pulses": 5,
+        "new_pulses": 5,
+        "conjugation_distance": 2
+      },
+      {
+        "word": "YXX",
+        "old_pulses": 5,
+        "new_pulses": 5,
+        "conjugation_distance": 2
+      },
+      {
+        "word": "YXY",
+        "old_pulses": 7,
+        "new_pulses": 7,
+        "conjugation_distance": 3
+      },
+      {
+        "word": "YXZ",
+        "old_pulses": 7,
+        "new_pulses": 7,
+        "conjugation_distance": 3
+      },
+      {
+        "word": "YYI",
+        "old_pulses": 3,
+        "new_pulses": 3,
+        "conjugation_distance": 1
+      },
+      {
+        "word": "YYX",
+        "old_pulses": 3,
+        "new_pulses": 3,
+        "conjugation_distance": 1
+      },
+      {
+        "word": "YYY",
+        "old_pulses": 5,
+        "new_pulses": 5,
+        "conjugation_distance": 2
+      },
+      {
+        "word": "YYZ",
+        "old_pulses": 9,
+        "new_pulses": 9,
+        "conjugation_distance": 4
+      },
+      {
+        "word": "YZI",
+        "old_pulses": 1,
+        "new_pulses": 1,
+        "conjugation_distance": 0
+      },
+      {
+        "word": "YZX",
+        "old_pulses": 1,
+        "new_pulses": 1,
+        "conjugation_distance": 0
+      },
+      {
+        "word": "YZY",
+        "old_pulses": 3,
+        "new_pulses": 3,
+        "conjugation_distance": 1
+      },
+      {
+        "word": "YZZ",
+        "old_pulses": 13,
+        "new_pulses": 11,
+        "conjugation_distance": 5
+      },
+      {
+        "word": "ZII",
+        "old_pulses": 1,
+        "new_pulses": 1,
+        "conjugation_distance": 0
+      },
+      {
+        "word": "ZIX",
+        "old_pulses": 1,
+        "new_pulses": 1,
+        "conjugation_distance": 0
+      },
+      {
+        "word": "ZIY",
+        "old_pulses": 3,
+        "new_pulses": 3,
+        "conjugation_distance": 1
+      },
+      {
+        "word": "ZIZ",
+        "old_pulses": 15,
+        "new_pulses": 13,
+        "conjugation_distance": 6
+      },
+      {
+        "word": "ZXI",
+        "old_pulses": 5,
+        "new_pulses": 5,
+        "conjugation_distance": 2
+      },
+      {
+        "word": "ZXX",
+        "old_pulses": 5,
+        "new_pulses": 5,
+        "conjugation_distance": 2
+      },
+      {
+        "word": "ZXY",
+        "old_pulses": 7,
+        "new_pulses": 7,
+        "conjugation_distance": 3
+      },
+      {
+        "word": "ZXZ",
+        "old_pulses": 7,
+        "new_pulses": 7,
+        "conjugation_distance": 3
+      },
+      {
+        "word": "ZYI",
+        "old_pulses": 3,
+        "new_pulses": 3,
+        "conjugation_distance": 1
+      },
+      {
+        "word": "ZYX",
+        "old_pulses": 3,
+        "new_pulses": 3,
+        "conjugation_distance": 1
+      },
+      {
+        "word": "ZYY",
+        "old_pulses": 5,
+        "new_pulses": 5,
+        "conjugation_distance": 2
+      },
+      {
+        "word": "ZYZ",
+        "old_pulses": 9,
+        "new_pulses": 9,
+        "conjugation_distance": 4
+      },
+      {
+        "word": "ZZI",
+        "old_pulses": 1,
+        "new_pulses": 1,
+        "conjugation_distance": 0
+      },
+      {
+        "word": "ZZX",
+        "old_pulses": 1,
+        "new_pulses": 1,
+        "conjugation_distance": 0
+      },
+      {
+        "word": "ZZY",
+        "old_pulses": 3,
+        "new_pulses": 3,
+        "conjugation_distance": 1
+      },
+      {
+        "word": "ZZZ",
+        "old_pulses": 13,
+        "new_pulses": 11,
+        "conjugation_distance": 5
+      }
+    ],
+    "old_total": 369,
+    "new_total": 337,
+    "max_pulses": 15,
+    "distance_histogram": {
+      "0": 15,
+      "1": 13,
+      "2": 11,
+      "3": 9,
+      "4": 6,
+      "5": 4,
+      "6": 4,
+      "7": 1
+    },
+    "optimality_scope": "Shortest native-conjugation template, also minimal in the recursive conjugation grammar by all-pair cost inequalities. Arbitrary pulse identities or cancellations may improve further."
+  },
+  "network": {
+    "status": "PASS",
+    "physical_example_pulse_count": 247,
+    "physical_example_full_matrix_error": 1.0056468821861849e-14,
+    "routing_checks": [
+      {
+        "registers": 1,
+        "all_ordered_pairs": 6,
+        "max_adjacent_cnot_count": 7
+      },
+      {
+        "registers": 2,
+        "all_ordered_pairs": 30,
+        "max_adjacent_cnot_count": 13
+      },
+      {
+        "registers": 3,
+        "all_ordered_pairs": 72,
+        "max_adjacent_cnot_count": 19
+      }
+    ],
+    "port": "one independently switchable Z(first) tensor Z(first) interaction per neighbouring tile pair",
+    "cnot_port_rotation_angle": "pi/4",
+    "per_cnot_phase_correction": "exp(-i*pi/4)",
+    "bell_reduced_purity": 0.49999999999999956,
+    "proof": "Connected tile chain plus exact local SU(8) controls yields arbitrary one-qubit gates and routed CNOTs on every finite number of tiles.",
+    "boundary": "Logical scalable circuit architecture under supplied coupling and local-control assumptions; no physical scalability, fault tolerance, or unbounded storage proof."
+  },
+  "noise": {
+    "status": "PASS",
+    "rows": [
+      {
+        "amplitude_fraction": 0,
+        "detuning_over_rabi": 0,
+        "crosstalk_over_rabi": 0,
+        "dephasing_rate_over_rabi": 0,
+        "minimum_average_gate_fidelity": 0.9999999999999998,
+        "maximum_sector_leakage": 2.790360190771335e-17
+      },
+      {
+        "amplitude_fraction": 0.001,
+        "detuning_over_rabi": 0,
+        "crosstalk_over_rabi": 0,
+        "dephasing_rate_over_rabi": 0,
+        "minimum_average_gate_fidelity": 0.9999998629221734,
+        "maximum_sector_leakage": 2.834076123090019e-17
+      },
+      {
+        "amplitude_fraction": 0.01,
+        "detuning_over_rabi": 0,
+        "crosstalk_over_rabi": 0,
+        "dephasing_rate_over_rabi": 0,
+        "minimum_average_gate_fidelity": 0.9999862923394203,
+        "maximum_sector_leakage": 0
+      },
+      {
+        "amplitude_fraction": 0.05,
+        "detuning_over_rabi": 0,
+        "crosstalk_over_rabi": 0,
+        "dephasing_rate_over_rabi": 0,
+        "minimum_average_gate_fidelity": 0.9996573824617165,
+        "maximum_sector_leakage": 4.274988580325069e-18
+      },
+      {
+        "amplitude_fraction": 0,
+        "detuning_over_rabi": 0.01,
+        "crosstalk_over_rabi": 0,
+        "dephasing_rate_over_rabi": 0,
+        "minimum_average_gate_fidelity": 0.999945169991849,
+        "maximum_sector_leakage": 0
+      },
+      {
+        "amplitude_fraction": 0,
+        "detuning_over_rabi": 0,
+        "crosstalk_over_rabi": 0.01,
+        "dephasing_rate_over_rabi": 0,
+        "minimum_average_gate_fidelity": 0.9999473320570955,
+        "maximum_sector_leakage": 5.838972409191743e-05
+      },
+      {
+        "amplitude_fraction": 0,
+        "detuning_over_rabi": 0,
+        "crosstalk_over_rabi": 0.05,
+        "dephasing_rate_over_rabi": 0,
+        "minimum_average_gate_fidelity": 0.9986839312452803,
+        "maximum_sector_leakage": 0.0014590175445567417
+      },
+      {
+        "amplitude_fraction": 0,
+        "detuning_over_rabi": 0,
+        "crosstalk_over_rabi": 0,
+        "dephasing_rate_over_rabi": 0.01,
+        "minimum_average_gate_fidelity": 0.9930732281563175,
+        "maximum_sector_leakage": 2.0650569881890783e-18
+      },
+      {
+        "amplitude_fraction": 0.01,
+        "detuning_over_rabi": 0.01,
+        "crosstalk_over_rabi": 0.01,
+        "dephasing_rate_over_rabi": 0.01,
+        "minimum_average_gate_fidelity": 0.9929534141419308,
+        "maximum_sector_leakage": 5.817212471131983e-05
+      }
+    ],
+    "models": "Static amplitude/detuning/crosstalk errors plus independent Markov Z2 dephasing; normalized Rabi rate one.",
+    "interpretation": "Sector leakage alone misses coherence loss: dephasing can preserve sectors and damage the coherent gate.",
+    "boundary": "Synthetic parameter sweep, no measured calibration, error threshold, or device performance claim."
+  },
+  "status": "PASS"
+}
