@@ -4,6 +4,8 @@ on:
     branches: [master]
     paths:
       - 'analysis/w33_reye_control_extensions.py'
+      - 'analysis/w33_reye_network_robust_frames.py'
+      - 'analysis/w33_schur_cross_kernel_matrices.json'
       - 'analysis/w33_reye_sector_control.py'
       - 'analysis/w33_schur_cross_kernel_matrices.py'
       - 'analysis/w33_schur176_sixteen_line_fibre_structure.py'
@@ -26,3 +28,7 @@ jobs:
         run: python analysis/w33_reye_control_extensions.py
       - name: Exact cross-fibre kernel matrices
         run: python analysis/w33_schur_cross_kernel_matrices.py
+      - name: Weighted routing robust sector controls and Clifford frames
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+        run: python analysis/w33_reye_network_robust_frames.py

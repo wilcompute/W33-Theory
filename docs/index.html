@@ -30267,6 +30267,12 @@ deliberately &mdash; including the parts that turned out to be wrong.</p>
 <p>108 routing pairs pass. A two-tile CNOT lowers to 247 model pulses with a full coherent matrix check. These are ideal-control and synthetic-noise results, not calibrated hardware or fault-tolerance evidence.</p>
 <p><a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/W33_REYE_FIVE_FOLLOWUPS.md">Five-item execution report, proofs and reproduction</a></p>
 </section>
+<section id="reye-routing-robust-frames" class="result-card">
+<h2>Weighted register routing and exact Clifford frame updates</h2>
+<p>210 routed CNOT cases match an exhaustive cost oracle. Cross-template cancellation reduces the compiled batch from 337 to 301 pulses. The Schur kernel now has 24 exact projective Clifford frame maps with 6144 multiplication checks. Companion Holotrade verifies bounded multi-step dual histories before signed delivery.</p>
+<p>BB1 improves synthetic amplitude-error tolerance but takes nine times as long and worsens the tested mixed-error case. Phased simultaneous sector controls are an explicit added assumption; this is not measured device performance.</p>
+<p><a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/W33_REYE_ROUTING_ROBUST_FRAMES.md">Five-followup report and reproduction</a></p>
+</section>
 </body>
 
 </html>

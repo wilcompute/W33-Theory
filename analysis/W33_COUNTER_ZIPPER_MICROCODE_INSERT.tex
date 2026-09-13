@@ -229,3 +229,25 @@ mode checking actual integer vectors and rational optimality before signed
 delivery. Full code, synthetic data, and scope appear in
 \texttt{W33\_REYE\_FIVE\_FOLLOWUPS.md}; no physical scalability or
 fault-tolerance claim follows from these finite certificates.
+
+\subsection{Routing costs, composite-control limits and frame normalizers}
+The next execution packet supplies weighted routing on arbitrary declared
+CNOT graphs.  Its move-control-and-restore grammar minimizes twice the
+SWAP cost plus the terminal CNOT cost; 210 finite cases match an independent
+simple-path oracle.  Commutation across pulse-template boundaries reduces
+the 63-rotation batch from 337 to 301 pulses while preserving its full matrix.
+A BB1 sequence on selected-sector quadratures improves common amplitude-error
+sensitivity but requires nine times the duration.  The tested mixed-error
+case becomes worse, so no unconditional robustness claim follows.
+Simultaneous phased sector quadratures are an explicit added control assumption.
+
+For the previously supplied Schur-to-Pauli conjugator $S$, the two matrices
+$SHS^{-1}$ and $S\operatorname{diag}(1,i)S^{-1}$ normalize the sixteen kernel
+matrices and preserve the supplied Hermitian form.  Their induced frame maps
+have order 24 and pass all 6144 kernel multiplication checks.  The full
+unitary normalizer retains a central $U(1)$; the finite order refers to its
+projective action.  No preservation of the whole Schur configuration is
+inferred.  Companion Holotrade now verifies bounded exact-dual move histories
+with every intermediate state derived in integer arithmetic.
+See \texttt{W33\_REYE\_ROUTING\_ROBUST\_FRAMES.md} for interfaces, citations,
+reproduction and the negative control-error findings.
