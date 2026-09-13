@@ -1,0 +1,340 @@
+{
+  "schema": "w33.reye-sector-control.v1",
+  "status": "PASS",
+  "prior_geometry": "data/w33_e7_d4_presymplectic_reye_normal_form.json",
+  "base_controls": [
+    "XII",
+    "XIX",
+    "XZI",
+    "XZX",
+    "YII",
+    "YIX",
+    "YZI",
+    "YZX",
+    "ZII",
+    "ZIX",
+    "ZZI",
+    "ZZX"
+  ],
+  "additional_controls": [
+    "IXI",
+    "IIZ",
+    "IZI"
+  ],
+  "lie_dimensions": [
+    12,
+    20,
+    36,
+    63
+  ],
+  "base_lie_algebra": "su(2) direct-sum su(2) direct-sum su(2) direct-sum su(2)",
+  "base_associative_algebra": "M2(C) tensor C^4",
+  "base_commutant_basis": [
+    "III",
+    "IIX",
+    "IZI",
+    "IZX"
+  ],
+  "two_bridge_commutant_basis": [
+    "III"
+  ],
+  "two_bridge_skew_form": "YZX",
+  "two_bridge_lie_algebra": "compact sp(4) on C^8 (dimension 36)",
+  "full_lie_algebra": "su(8)",
+  "single_extra_dimension_histogram": {
+    "13": 3,
+    "20": 48
+  },
+  "two_extra_dimension_histogram": {
+    "14": 3,
+    "20": 168,
+    "21": 48,
+    "30": 288,
+    "36": 768
+  },
+  "minimum_additional_individual_pauli_controls": 3,
+  "proof_dag": {
+    "IIZ": null,
+    "IXI": null,
+    "IZI": null,
+    "XII": null,
+    "XIX": null,
+    "XZI": null,
+    "XZX": null,
+    "YII": null,
+    "YIX": null,
+    "YZI": null,
+    "YZX": null,
+    "ZII": null,
+    "ZIX": null,
+    "ZZI": null,
+    "ZZX": null,
+    "XIY": [
+      "IIZ",
+      "XIX"
+    ],
+    "XZY": [
+      "IIZ",
+      "XZX"
+    ],
+    "YIY": [
+      "IIZ",
+      "YIX"
+    ],
+    "YZY": [
+      "IIZ",
+      "YZX"
+    ],
+    "ZIY": [
+      "IIZ",
+      "ZIX"
+    ],
+    "ZZY": [
+      "IIZ",
+      "ZZX"
+    ],
+    "IYI": [
+      "IXI",
+      "IZI"
+    ],
+    "XYI": [
+      "IXI",
+      "XZI"
+    ],
+    "XYX": [
+      "IXI",
+      "XZX"
+    ],
+    "YYI": [
+      "IXI",
+      "YZI"
+    ],
+    "YYX": [
+      "IXI",
+      "YZX"
+    ],
+    "ZYI": [
+      "IXI",
+      "ZZI"
+    ],
+    "ZYX": [
+      "IXI",
+      "ZZX"
+    ],
+    "XYY": [
+      "IXI",
+      "XZY"
+    ],
+    "YYY": [
+      "IXI",
+      "YZY"
+    ],
+    "ZYY": [
+      "IXI",
+      "ZZY"
+    ],
+    "XXI": [
+      "IZI",
+      "XYI"
+    ],
+    "XXX": [
+      "IZI",
+      "XYX"
+    ],
+    "YXI": [
+      "IZI",
+      "YYI"
+    ],
+    "YXX": [
+      "IZI",
+      "YYX"
+    ],
+    "ZXI": [
+      "IZI",
+      "ZYI"
+    ],
+    "ZXX": [
+      "IZI",
+      "ZYX"
+    ],
+    "XXY": [
+      "IZI",
+      "XYY"
+    ],
+    "YXY": [
+      "IZI",
+      "YYY"
+    ],
+    "ZXY": [
+      "IZI",
+      "ZYY"
+    ],
+    "IZZ": [
+      "XIX",
+      "XZY"
+    ],
+    "IYZ": [
+      "XIX",
+      "XYY"
+    ],
+    "IXZ": [
+      "XIX",
+      "XXY"
+    ],
+    "IXX": [
+      "XZI",
+      "XYX"
+    ],
+    "IXY": [
+      "XZI",
+      "XYY"
+    ],
+    "IYX": [
+      "XZI",
+      "XXX"
+    ],
+    "IYY": [
+      "XZI",
+      "XXY"
+    ],
+    "XXZ": [
+      "XZI",
+      "IYZ"
+    ],
+    "XYZ": [
+      "XZI",
+      "IXZ"
+    ],
+    "ZXZ": [
+      "XZX",
+      "YYY"
+    ],
+    "YXZ": [
+      "XZX",
+      "ZYY"
+    ],
+    "ZYZ": [
+      "XZX",
+      "YXY"
+    ],
+    "YYZ": [
+      "XZX",
+      "ZXY"
+    ],
+    "IZX": [
+      "IYI",
+      "IXX"
+    ],
+    "IZY": [
+      "IYI",
+      "IXY"
+    ],
+    "XZZ": [
+      "IYI",
+      "XXZ"
+    ],
+    "ZZZ": [
+      "IYI",
+      "ZXZ"
+    ],
+    "YZZ": [
+      "IYI",
+      "YXZ"
+    ],
+    "YIZ": [
+      "XYI",
+      "ZYZ"
+    ],
+    "ZIZ": [
+      "XYI",
+      "YYZ"
+    ],
+    "XIZ": [
+      "XYX",
+      "IYY"
+    ],
+    "IIY": [
+      "XYX",
+      "XYZ"
+    ],
+    "IIX": [
+      "XYY",
+      "XYZ"
+    ]
+  },
+  "sector_instruction": "SELROT(axis, Z2_sign, X3_sign, angle): four commuting pulses",
+  "sector_instruction_matrix_checks": 12,
+  "compiled_rotation_count": 63,
+  "compiled_pulse_counts": {
+    "IIX": 21,
+    "IIY": 17,
+    "IIZ": 1,
+    "IXI": 1,
+    "IXX": 5,
+    "IXY": 7,
+    "IXZ": 9,
+    "IYI": 3,
+    "IYX": 7,
+    "IYY": 9,
+    "IYZ": 7,
+    "IZI": 1,
+    "IZX": 11,
+    "IZY": 13,
+    "IZZ": 5,
+    "XII": 1,
+    "XIX": 1,
+    "XIY": 3,
+    "XIZ": 15,
+    "XXI": 5,
+    "XXX": 5,
+    "XXY": 7,
+    "XXZ": 9,
+    "XYI": 3,
+    "XYX": 3,
+    "XYY": 5,
+    "XYZ": 11,
+    "XZI": 1,
+    "XZX": 1,
+    "XZY": 3,
+    "XZZ": 15,
+    "YII": 1,
+    "YIX": 1,
+    "YIY": 3,
+    "YIZ": 15,
+    "YXI": 5,
+    "YXX": 5,
+    "YXY": 7,
+    "YXZ": 7,
+    "YYI": 3,
+    "YYX": 3,
+    "YYY": 5,
+    "YYZ": 9,
+    "YZI": 1,
+    "YZX": 1,
+    "YZY": 3,
+    "YZZ": 13,
+    "ZII": 1,
+    "ZIX": 1,
+    "ZIY": 3,
+    "ZIZ": 15,
+    "ZXI": 5,
+    "ZXX": 5,
+    "ZXY": 7,
+    "ZXZ": 7,
+    "ZYI": 3,
+    "ZYX": 3,
+    "ZYY": 5,
+    "ZYZ": 9,
+    "ZZI": 1,
+    "ZZX": 1,
+    "ZZY": 3,
+    "ZZZ": 13
+  },
+  "max_compilation_matrix_error": 3.60486886464152e-16,
+  "second_realization": "Hadamard conjugation on qubit 3 verified",
+  "boundary": "Ideal independently switchable signed continuous controls. Three is minimal for additional individual Pauli Hamiltonians, not for arbitrary linear-combination controls. No pulse-time optimality, noise threshold, physical implementation, or scalable universal machine is established.",
+  "references": [
+    "https://arxiv.org/abs/1012.5256",
+    "https://arxiv.org/abs/quant-ph/0010100"
+  ]
+}

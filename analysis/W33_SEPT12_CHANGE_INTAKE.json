@@ -1,0 +1,482 @@
+[
+  {
+    "repo": "W33",
+    "from": "51e1ecb02",
+    "to": "4292575fa",
+    "files": [
+      {
+        "path": ".github/workflows/w33_schur_quartic_frontier.yml",
+        "patchLines": 82,
+        "sha256": "0bac26c01ed7a2f2a2c2110f6e5ab5b8c1fde9f3bea9ecad14f26a156355ccc3"
+      },
+      {
+        "path": "analysis/w33_reye_hidden_radical_v4_decoder.py",
+        "patchLines": 335,
+        "sha256": "87969ab864b825a853e33865498c8f5bc4b0a085d165ba1e96c307542ac22864"
+      },
+      {
+        "path": "analysis/w33_reye_observer_relative_min_entropy.py",
+        "patchLines": 223,
+        "sha256": "471c680ea30442fbd363b3a617aa39a396376f31580db9194d9fa8c0616cfc2e"
+      },
+      {
+        "path": "analysis/w33_reye_v4_decoder_automorphism_576.py",
+        "patchLines": 264,
+        "sha256": "b5ef85faa03456954572c39c40b1d74f067a03767b293839a19f7c692a2feabf"
+      },
+      {
+        "path": "analysis/w33_schur176_reye_decoder_quotient_grid_bridge.py",
+        "patchLines": 226,
+        "sha256": "948034cb6f94e8a0c27e4b412b1b8821a4be31d33905c25ec8327c3b7062672a"
+      },
+      {
+        "path": "analysis/w33_schur176_sixteen_line_fibre_structure.py",
+        "patchLines": 263,
+        "sha256": "3fa5d840931758cc5f9103c66ae7e1d9fd4efbfbd5fa7d50c7b72237b9f6a023"
+      },
+      {
+        "path": "analysis/w33_schur64_two_sheet_phase_no_go.py",
+        "patchLines": 150,
+        "sha256": "5aa768e9be0421ff37d2c4b8336cb66de20c4e130d308d37f9970f37612a4daf"
+      },
+      {
+        "path": "analysis/w33_schur_reye_288_action_bridge.py",
+        "patchLines": 291,
+        "sha256": "e7f5f556d81a00b56446382945daf96a04ce148407589d33eba4906508142fec"
+      },
+      {
+        "path": "data/w33_e7_d4_presymplectic_reye_normal_form.json",
+        "patchLines": 107,
+        "sha256": "d6523db4595b035bd3c79c189312adb3861bf0a2193de4647e386c5a4199872c"
+      },
+      {
+        "path": "data/w33_reye_hidden_radical_v4_decoder.json",
+        "patchLines": 282,
+        "sha256": "f06368f06a12214430c22d7dced7eac98d6d51ee4c507e83426c1afd18c5e0d3"
+      },
+      {
+        "path": "data/w33_reye_observer_relative_min_entropy.json",
+        "patchLines": 67,
+        "sha256": "4d855ec386b51444ad8962a8eebf30505c6962f83e5e7766fbfd378d552d3f04"
+      },
+      {
+        "path": "data/w33_reye_v4_decoder_automorphism_576.json",
+        "patchLines": 48,
+        "sha256": "8f988ad0e4ffc611a984748ba7b739d9090da403c304cfd8f4ab7de6de99bf52"
+      },
+      {
+        "path": "data/w33_schur176_reye_decoder_quotient_grid_bridge.json",
+        "patchLines": 53,
+        "sha256": "2620f8e1cac967e001c4ccf93436f45f485267a54926d28e7cfe4e7605bc34ac"
+      },
+      {
+        "path": "data/w33_schur176_sixteen_line_fibre_structure.json",
+        "patchLines": 66,
+        "sha256": "2e95f328f0a761606bb6a6fa247ffbef59948de7bc0e013e01786832b64b562a"
+      },
+      {
+        "path": "data/w33_schur64_two_sheet_phase_no_go.json",
+        "patchLines": 58,
+        "sha256": "1a1aea128b1392c316d100f3b25ebc1d79b6c8ddc52eea3ec2f13fce03d133c0"
+      },
+      {
+        "path": "data/w33_schur_reye_288_action_bridge.json",
+        "patchLines": 48,
+        "sha256": "1df416153a2bd9fda62cdf208fce4d305a6d536e0b78d0fa36add544023aff96"
+      },
+      {
+        "path": "tests/test_w33_e7_d4_presymplectic_reye_20260911.py",
+        "patchLines": 42,
+        "sha256": "8756acc375406fe1268b7b20945c21a21f18c3ccc1aa702fd2274ab804ed6ef0"
+      },
+      {
+        "path": "tests/test_w33_reye_hidden_radical_v4_decoder_20260911.py",
+        "patchLines": 48,
+        "sha256": "8229d958ac5fcc55c45abdedb2b606d5d1bc4d53e523147148bc4a0ab3111ee5"
+      },
+      {
+        "path": "tests/test_w33_reye_observer_relative_min_entropy_20260911.py",
+        "patchLines": 38,
+        "sha256": "5299d2c2374c3fa2d29eab8722027c233fdd40f84e1ffd3c299077a416a2d7b5"
+      },
+      {
+        "path": "tests/test_w33_reye_v4_decoder_automorphism_576_20260911.py",
+        "patchLines": 42,
+        "sha256": "9bd71c3f0fbcb4a3b7c8fee16ec5b16c8ae565c566497203b9a1a8969ece10c6"
+      },
+      {
+        "path": "tests/test_w33_schur176_reye_decoder_quotient_grid_20260911.py",
+        "patchLines": 36,
+        "sha256": "bd11ef838e7a5302982acd9c1cb8d21e292dc59f0012472a902cf7fbd4251a31"
+      },
+      {
+        "path": "tests/test_w33_schur176_sixteen_line_fibre_structure_20260911.py",
+        "patchLines": 37,
+        "sha256": "e21b4e312d6319ce81d77c51eef1004ee5833ed1e1fa2460f6b5725fcaf6cc65"
+      },
+      {
+        "path": "tests/test_w33_schur64_two_sheet_phase_no_go_20260911.py",
+        "patchLines": 34,
+        "sha256": "c24572992dc78fc0a80eee29577482159b06bc1ef1f0e353399da71c9f05aad6"
+      },
+      {
+        "path": "tests/test_w33_schur_reye_288_action_bridge_20260911.py",
+        "patchLines": 35,
+        "sha256": "e6440e047639a3555bde8dc6a25ee0c750232642c1d7a0f7df4e118d917394b7"
+      }
+    ],
+    "coverage": "Read full net diff; retrieved all per-commit patches and compared every added/deleted line against the read net diff. The only additional intermediate lines were workflow continuation-line changes, also inspected. Earlier history and recursive manuscript reading backlog remains incomplete.",
+    "commits": [
+      {
+        "sha": "4292575fa",
+        "repo": "W33",
+        "patchLines": 287
+      },
+      {
+        "sha": "d4c798558",
+        "repo": "W33",
+        "patchLines": 68
+      },
+      {
+        "sha": "86e7232a7",
+        "repo": "W33",
+        "patchLines": 37
+      },
+      {
+        "sha": "909fa7bf8",
+        "repo": "W33",
+        "patchLines": 222
+      },
+      {
+        "sha": "5187ba2f3",
+        "repo": "W33",
+        "patchLines": 35
+      },
+      {
+        "sha": "afc78b2a6",
+        "repo": "W33",
+        "patchLines": 290
+      },
+      {
+        "sha": "c773a066a",
+        "repo": "W33",
+        "patchLines": 33
+      },
+      {
+        "sha": "466ca924c",
+        "repo": "W33",
+        "patchLines": 149
+      },
+      {
+        "sha": "32287920c",
+        "repo": "W33",
+        "patchLines": 36
+      },
+      {
+        "sha": "5207410e9",
+        "repo": "W33",
+        "patchLines": 262
+      },
+      {
+        "sha": "af15ef1ec",
+        "repo": "W33",
+        "patchLines": 35
+      },
+      {
+        "sha": "705529284",
+        "repo": "W33",
+        "patchLines": 225
+      },
+      {
+        "sha": "88b4e48f2",
+        "repo": "W33",
+        "patchLines": 47
+      },
+      {
+        "sha": "7d32b0ed2",
+        "repo": "W33",
+        "patchLines": 48
+      },
+      {
+        "sha": "9dc10224b",
+        "repo": "W33",
+        "patchLines": 41
+      },
+      {
+        "sha": "9ae46a87c",
+        "repo": "W33",
+        "patchLines": 263
+      },
+      {
+        "sha": "e5c90ac9d",
+        "repo": "W33",
+        "patchLines": 387
+      },
+      {
+        "sha": "680166e55",
+        "repo": "W33",
+        "patchLines": 51
+      },
+      {
+        "sha": "3eb667c8c",
+        "repo": "W33",
+        "patchLines": 47
+      },
+      {
+        "sha": "6ba643150",
+        "repo": "W33",
+        "patchLines": 41
+      },
+      {
+        "sha": "b2ffed9ac",
+        "repo": "W33",
+        "patchLines": 334
+      }
+    ]
+  },
+  {
+    "repo": "Holotrade",
+    "from": "6a49550",
+    "to": "361b51e",
+    "files": [
+      {
+        "path": ".github/workflows/five_frontier_depth5_decoder_synthesis.yml",
+        "patchLines": 40,
+        "sha256": "6e6979b0a64075698b77f1faa549c6535d6c5c15bab64cc4b9362d9baa4404b8"
+      },
+      {
+        "path": ".github/workflows/mass24_steinberg_gram192_explicit_w33_embedding.yml",
+        "patchLines": 42,
+        "sha256": "a0198bde74c05af1fd176fc4a6f14f9decd95b0301648828c803e607198a48e4"
+      },
+      {
+        "path": ".github/workflows/mass36_to_mass40_inheritance_separator.yml",
+        "patchLines": 43,
+        "sha256": "6b428eb4d096b61233268cb211ebb20cf148f33889b5bde2edcdaab49cb6f491"
+      },
+      {
+        "path": ".github/workflows/mass40_depth5_structural_types.yml",
+        "patchLines": 43,
+        "sha256": "c82e12cbbf317c6c9d5b425eec01b1c00d85efed00a3d22bd6e1c50f780b7cb7"
+      },
+      {
+        "path": ".github/workflows/octet_hybrid_certified_decoder.yml",
+        "patchLines": 14,
+        "sha256": "fba271b874314e63c3fc85aee257af624944037a8942ffa351ac2b5a6286adf6"
+      },
+      {
+        "path": ".github/workflows/w33_certified_decoder_provenance.yml",
+        "patchLines": 48,
+        "sha256": "2f1fc39ddee914e8a074a1beb0874d658081648ac4acaf66a568e8aa1d49e1ca"
+      },
+      {
+        "path": "analysis/five_frontier_depth5_decoder_synthesis.json",
+        "patchLines": 74,
+        "sha256": "1e19c7c2f2be3f2e2aba778243187ea47e34c7246f5629be613513aeec31fc04"
+      },
+      {
+        "path": "analysis/mass24_steinberg_gram192_explicit_w33_embedding.py",
+        "patchLines": 179,
+        "sha256": "1a95e3554615f1262b59b47dd87e7d141aa781b8f8e47f967469a150a61d5126"
+      },
+      {
+        "path": "analysis/mass24_steinberg_gram192_explicit_w33_embedding_certificate.json",
+        "patchLines": 8,
+        "sha256": "85858ff47db4c4da7db19bcfbdcab3a1511dc69a3ece203788579d2ebb36f517"
+      },
+      {
+        "path": "analysis/mass36_to_mass40_inheritance_separator.py",
+        "patchLines": 90,
+        "sha256": "8d9d1e98ccbd7dbf34e01faa933a1908e68469c2a2bbbd6124cc65bdb69b54b2"
+      },
+      {
+        "path": "analysis/mass36_to_mass40_inheritance_separator_summary.json",
+        "patchLines": 35,
+        "sha256": "43c6fb3b158ae4799ff524e37d4334e7f976362127dc4d3176a9b8ac761ca9e4"
+      },
+      {
+        "path": "analysis/mass40_depth5_structural_types.py",
+        "patchLines": 103,
+        "sha256": "524ea4e3aa8f5468844acf8d85f8b394e81d52491095a2b784facfad8b191e93"
+      },
+      {
+        "path": "analysis/mass40_depth5_structural_types_certificate.json",
+        "patchLines": 8,
+        "sha256": "4919055f5746210da67a70743151e556ae31f7753f8ee3e02068cd2bcbe729fb"
+      },
+      {
+        "path": "analysis/octet_circuit_library_minimization_certificate.json",
+        "patchLines": 53,
+        "sha256": "ce2ccbbbfe2a957ae5adec46f6a098a86fd1c08a5b75183b012ccbcca3f49f61"
+      },
+      {
+        "path": "analysis/octet_hybrid_certified_decoder.py",
+        "patchLines": 99,
+        "sha256": "e64a13af0cb746c4d88f31761ecaf05f327d11fa24f158cb2fbde822e369274a"
+      },
+      {
+        "path": "analysis/octet_hybrid_certified_decoder_minimal_summary.json",
+        "patchLines": 31,
+        "sha256": "6457ca995aa2712cbe0bf8c0ddc18b332a68b978196635313e66de826d03058f"
+      },
+      {
+        "path": "analysis/the_cheap_filters_do_not_prune_the_1225_cases.py",
+        "patchLines": 241,
+        "sha256": "5376e10a77dcb94ddc05b8a09532ecb68c7a7ffe256deb7e6583115f216b2e77"
+      },
+      {
+        "path": "analysis/the_minimality_fence_was_wrong.py",
+        "patchLines": 58,
+        "sha256": "3c2358f0105dbf919c502f96b77a8892e9b465ca254e90ef2af173d374d1a40b"
+      },
+      {
+        "path": "analysis/the_transpose_class_hosts_115_but_not_114.py",
+        "patchLines": 85,
+        "sha256": "f53e5c780c895f3c296c24e1a1d17c6b5eccb63c24a917b2c14234ffe782e844"
+      },
+      {
+        "path": "analysis/validate_five_frontier_depth5_decoder_synthesis.py",
+        "patchLines": 121,
+        "sha256": "91b0d6d9e5bc060bcfb9ccc6cbde0417e4b869e0dda6fc6ff8c26e7378136bfe"
+      },
+      {
+        "path": "analysis/w33_certified_decoder_provenance_certificate.js",
+        "patchLines": 96,
+        "sha256": "bceb4fb718683b38ed07d80d93a7cc42efca98c8fa0fa18a6734f123693e2508"
+      },
+      {
+        "path": "analysis/w33_certified_decoder_provenance_certificate.json",
+        "patchLines": 8,
+        "sha256": "9f548d81e5c7de28c95c3ba7cd941f08b6221aae26e563a713353327bf638576"
+      },
+      {
+        "path": "data/cheap_filters_do_not_prune.json",
+        "patchLines": 199,
+        "sha256": "d5963785c8abe1495dc17b5a55bd7e209af1cf37d5c1620f9f3dd6d76f46ef3c"
+      },
+      {
+        "path": "data/minimality_fence_was_wrong.json",
+        "patchLines": 27,
+        "sha256": "ed3988c7562fae395ab15f82ecf04b0a55fb86913246c4cb9496b860d4eb0137"
+      },
+      {
+        "path": "tests/shape-catalogue.test.js",
+        "patchLines": 65,
+        "sha256": "ecf77266beddbdfbc40031bffc271cfd1863a00cc3206e45302027fd31236692"
+      }
+    ],
+    "coverage": "Read full net diff; retrieved all per-commit patches and compared every added/deleted line against the read net diff. The only additional intermediate lines were workflow continuation-line changes, also inspected. Earlier history and recursive manuscript reading backlog remains incomplete.",
+    "commits": [
+      {
+        "sha": "361b51e",
+        "repo": "Holotrade",
+        "patchLines": 18
+      },
+      {
+        "sha": "4d1a1da",
+        "repo": "Holotrade",
+        "patchLines": 39
+      },
+      {
+        "sha": "0aa85a9",
+        "repo": "Holotrade",
+        "patchLines": 120
+      },
+      {
+        "sha": "26da618",
+        "repo": "Holotrade",
+        "patchLines": 66
+      },
+      {
+        "sha": "71c5cb0",
+        "repo": "Holotrade",
+        "patchLines": 34
+      },
+      {
+        "sha": "6570b8c",
+        "repo": "Holotrade",
+        "patchLines": 30
+      },
+      {
+        "sha": "06d433b",
+        "repo": "Holotrade",
+        "patchLines": 7
+      },
+      {
+        "sha": "cd3aab9",
+        "repo": "Holotrade",
+        "patchLines": 7
+      },
+      {
+        "sha": "959b4b0",
+        "repo": "Holotrade",
+        "patchLines": 7
+      },
+      {
+        "sha": "92124f1",
+        "repo": "Holotrade",
+        "patchLines": 197
+      },
+      {
+        "sha": "774be8b",
+        "repo": "Holotrade",
+        "patchLines": 47
+      },
+      {
+        "sha": "e04a5fd",
+        "repo": "Holotrade",
+        "patchLines": 95
+      },
+      {
+        "sha": "3ff63f7",
+        "repo": "Holotrade",
+        "patchLines": 42
+      },
+      {
+        "sha": "4d1fe50",
+        "repo": "Holotrade",
+        "patchLines": 89
+      },
+      {
+        "sha": "752ad8d",
+        "repo": "Holotrade",
+        "patchLines": 41
+      },
+      {
+        "sha": "836a5ba",
+        "repo": "Holotrade",
+        "patchLines": 178
+      },
+      {
+        "sha": "4b61efc",
+        "repo": "Holotrade",
+        "patchLines": 42
+      },
+      {
+        "sha": "cb26854",
+        "repo": "Holotrade",
+        "patchLines": 102
+      },
+      {
+        "sha": "4ff528c",
+        "repo": "Holotrade",
+        "patchLines": 13
+      },
+      {
+        "sha": "467a065",
+        "repo": "Holotrade",
+        "patchLines": 98
+      },
+      {
+        "sha": "87e209b",
+        "repo": "Holotrade",
+        "patchLines": 52
+      },
+      {
+        "sha": "71cca86",
+        "repo": "Holotrade",
+        "patchLines": 477
+      }
+    ]
+  }
+]

@@ -173,3 +173,25 @@ information.  Companion Holotrade rational dual receipts certify the existing
 mass-28 circuit escapes at negative mass one without a runtime solver.
 Physical reset collection remains blocked by absent data.  Full statements
 and prior ownership appear in \texttt{W33\_SEPT11\_EXECUTION\_FRONTIERS.md}.
+
+\subsection{Reye sector control and its symplectic obstruction}
+The certified carrier
+$\{X,Y,Z\}_1\times\{I,Z\}_2\times\{I,X\}_3$ generates
+$\mathfrak{su}(2)^{\oplus4}$ under independently switchable signed
+continuous Hamiltonian controls. Its rank-two sector projectors are
+$Q_{s,t}=(I+sZ_2)(I+tX_3)/4$.
+A sector-addressed rotation $\exp(-i\theta A_1Q_{s,t})$ lowers to four
+commuting selected-Pauli pulses with angles
+$\theta(1,s,t,st)/4$.
+Adding $X_2,Z_3,Z_2$ successively gives Lie dimensions
+$12,20,36,63$. After the first two additions the commutant is scalar,
+but the skew form $J=Y_1Z_2X_3$ is preserved:
+$P^TJ+JP=0$. The resulting algebra is compact $\mathfrak{sp}(4)$
+on $\mathbb C^8$; adding $Z_2$ gives $\mathfrak{su}(8)$.
+Exhaustion of all $\binom{51}{2}=1275$ pairs of extra individual Pauli
+controls proves that three such additions are minimal for this fixed carrier.
+The executable certificate \texttt{analysis/w33\_reye\_sector\_control.py}
+also compiles all 63 Pauli rotations through exact conjugation identities,
+checks their coherent matrices, and verifies a second realization.
+These are ideal finite-register control results, not a physical Holonet
+implementation, a noise threshold, or a scalable universal-machine proof.
