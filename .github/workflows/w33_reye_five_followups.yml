@@ -6,6 +6,8 @@ on:
       - 'analysis/w33_reye_control_extensions.py'
       - 'analysis/w33_reye_network_robust_frames.py'
       - 'analysis/w33_reye_scheduled_frames_echo.py'
+      - 'analysis/w33_reye_finite_control_costs.py'
+      - 'analysis/w33_schur48_phase_isa.py'
       - 'analysis/w33_reye_network_robust_frames.json'
       - 'analysis/w33_schur_cross_kernel_matrices.json'
       - 'analysis/w33_reye_sector_control.py'
@@ -38,3 +40,9 @@ jobs:
         env:
           OPENBLAS_NUM_THREADS: '1'
         run: python analysis/w33_reye_scheduled_frames_echo.py
+      - name: Finite controls native costs and noisy scheduling
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+        run: python analysis/w33_reye_finite_control_costs.py
+      - name: Exact Schur48 phase ISA
+        run: python analysis/w33_schur48_phase_isa.py

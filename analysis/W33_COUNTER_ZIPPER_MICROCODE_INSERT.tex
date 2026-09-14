@@ -272,3 +272,33 @@ the existing $A_4$ result without claiming a new classification.
 Companion Holotrade verifies arriving move chunks atomically and resumes from
 trusted-digest checkpoints by replay; final optimality remains gated on the
 exact dual proof. See \texttt{W33\_REYE\_PORTS\_FRAMES\_ECHO\_STREAMS.md}.
+
+\subsection{Finite control costs and a phase-aware instruction algebra}
+The executable followup \texttt{w33\_reye\_finite\_control\_costs.py}
+reduces the same native-control batch from 301 to 264 pulses, with full-matrix
+error below $1.3\times10^{-15}$. Its finite square-echo model also separates
+leakage from coherent error: at fractional echo error $10^{-3}$, sixteen
+cycles have leakage below $2.2\times10^{-9}$ but infidelity approximately
+$0.055$. These are synthetic control results, not device calibration.
+The bounded four-job scheduler explicitly trades memory exposure against
+simultaneous-drive penalties; minimum duration need not minimize that score.
+
+The prior 48 quartic lifts now have an exact instruction table in
+\texttt{w33\_schur48\_phase\_isa.py}. With
+$\omega=(-1+i\sqrt3)/2$ and $C=\omega(-I+i(X+Y+Z))/2$,
+every instruction is $i^p Z^aX^bC^k$, where $C^3=I$.
+All 2304 matrix products and 110592 associativity triples are checked.
+The projective multiplication carries an explicit $\mathbb Z/4$ phase
+cocycle: the commuting projective $Z,X$ pair has exact commutator $-I$.
+This obstruction cannot be removed by changing scalar representatives.
+Known phase-referenced controlled implementations distinguish the four
+central lifts, although their standalone channels agree. This invokes an
+additional control interface, not control of a completely unknown black box.
+The finite group alone is not a universal quantum gate set.
+
+Companion Holotrade streams now use transactional SQLite checkpoints and a
+separately trusted revision anchor, with replay and strict prefix extension.
+Crash, stale-write and data-only rollback tests pass. Restoring both checkpoint
+and anchor is outside the contract. See
+\texttt{analysis/W33\_FINITE\_CONTROL\_PHASE\_ISA.md} for prior ownership,
+primary references, executable artifacts and limits.
