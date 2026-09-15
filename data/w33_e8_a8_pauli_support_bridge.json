@@ -1,0 +1,34 @@
+{
+  "schema": "w33.e8_a8_pauli_support_bridge.v1",
+  "status": "PASS",
+  "headline": "The 80 E8 order-3 oriented-A2 orbit labels have exactly the bracket-support law of the F_3^4 tensor-Pauli grading of sl(9): Omega=0 iff no root sum, while Omega!=0 gives exactly three root sums in the unique degree v+w.",
+  "root_orbit_pair_census": {
+    "Omega_0_no_root_sum": 1000,
+    "Omega_1_three_root_sums_one_target": 1080,
+    "Omega_2_three_root_sums_one_target": 1080,
+    "total_unordered_pairs": 3160
+  },
+  "pauli_pair_census": {
+    "commuting": 1000,
+    "phase_1": 1080,
+    "phase_2": 1080
+  },
+  "grading_law": "[degree v, degree w] has support 0 iff Omega(v,w)=0; otherwise support lies in the unique degree v+w.",
+  "literature_boundary": {
+    "A8_fixed_algebra": "Classical order-3 E8 grading has fixed algebra sl(9).",
+    "tensor_pauli_grading": "Pelantova-Svobodova-Tremblay, quant-ph/0510106: fine grading of sl(p^2,C) by tensor generalized Pauli matrices; normalizer quotient Sp(4,F_p) x Z2.",
+    "new_corpus_piece": "Exact identification of the E8 root-orbit addition support with the same F_3^4 symplectic Pauli support law."
+  },
+  "check_count": 8,
+  "checks": {
+    "80_oriented_root_orbits": true,
+    "root_support_census_omega0_1000": true,
+    "root_support_census_omega1_1080": true,
+    "root_support_census_omega2_1080": true,
+    "orthogonal_labels_have_no_root_sum": true,
+    "nonorthogonal_labels_have_three_root_sums_one_target": true,
+    "root_sum_target_is_quotient_label_sum": true,
+    "two_qutrit_pauli_pair_census_matches": true
+  },
+  "scope": "Support-level Lie-grading bridge only. A Chevalley cocycle/lift is still required before claiming equality of structure constants or a canonical Lie-algebra isomorphism."
+}
