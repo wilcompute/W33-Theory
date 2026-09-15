@@ -39,3 +39,16 @@ The $d=3$ rung is the Leech analogue of P1021's 6:1 fibration $E_8\to W(3,3)$. I
 ## Boundary
 
 These are finite exact checks. The lattice, group and intriguing-set facts are classical or published, and are cited in the Holotrade certificates. No physics is asserted.
+
+## Addendum: the extremal-lattice W(3,q) tower (Holotrade `ea0abb2`)
+
+A unimodular lattice of rank $4(q-1)$ with an automorphism of type $q$-$(4,0)$-$0$ carries $W(3,q)$ by the parity lemma. The extremal lattices realise this:
+
+| Dimension | Lattice | Geometry | Status |
+|---|---|---|---|
+| 8 | $E_8$ | $W(3,3)$ | this corpus's substrate |
+| 24 | Leech | $W(3,7)$ | certified |
+| 48 | $P_{48n}$ | $W(3,13)$ | certified |
+| 72 | ? | $W(3,19)$ | **open** |
+
+$P_{48n}$ was built explicitly as Nebe's principal ideal lattice over $\mathbb Z[\zeta_{65}]$: there are 32 totally positive unit classes, and exactly 2 of the resulting lattices are extremal. Its order-13 automorphism $\zeta^5$ gives a skew form of $\mathbb F_{13}$-rank exactly 4. The dimension-72 rung needs an extremal lattice with a $19$-$(4,0)$-$0$ automorphism. Nebe's dimension-72 theorem allows one, and none is known. In this corpus's dictionary $W(3,q)$ is two-qudit Pauli geometry, so the substrate's $W(3,3)\subset E_8$ is the first rung.
