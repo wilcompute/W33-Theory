@@ -1,0 +1,72 @@
+{
+  "schema": "w33.e8_twisted_fibration_weld.v1",
+  "status": "PASS",
+  "headline": "The Pass-1021 240->40 Eisenstein root fibration and the Z3-twisted E8 ground-state quotient are the same quotient map on roots.",
+  "prior_art": {
+    "w33_pass1021": "data/w33_pass1021_e8_fibration_over_forty.json",
+    "holotrade_twisted_register": "Holotrade commit 68df33f",
+    "w33_cross_track_ledger": "W33-Theory commit aaae20b",
+    "classical_twisted_module_reference": "Bakalov-Kac, arXiv:math/0402315, especially Eq. (4.43)"
+  },
+  "quotient": {
+    "group": "E8/(1-g)E8",
+    "g": "c^10 for the canonical Pass-1021 Coxeter element c",
+    "det_one_minus_g": 81,
+    "smith_diagonal": [
+      1,
+      1,
+      1,
+      1,
+      3,
+      3,
+      3,
+      3
+    ],
+    "isomorphic_to": "F_3^4",
+    "nonzero_vectors": 80,
+    "root_cosets": 80,
+    "roots_per_nonzero_vector": 3,
+    "projective_points": 40,
+    "roots_per_projective_point": 6
+  },
+  "weld": {
+    "three_root_coset": "{r, g r, g^2 r}",
+    "projective_six_root_fibre": "{+-r, +-g r, +-g^2 r}",
+    "pass1021_fibre": "<-1,g> = <c^5> ~= Z6",
+    "same_fibres_exactly": true
+  },
+  "twisted_commutator": {
+    "formula": "Omega(a,b)=sum_{k=1}^2 k<g^k a,b> mod 3",
+    "alternating": true,
+    "rank_on_E8_mod_3": 4,
+    "radical": "(1-g)E8 mod 3",
+    "quotient_dimension": 4,
+    "projective_orthogonality_graph": {
+      "n": 40,
+      "k": 12,
+      "lambda": 2,
+      "mu": 4,
+      "strongly_regular": true
+    }
+  },
+  "check_count": 16,
+  "checks": {
+    "coxeter_order_30": true,
+    "g_equals_c10_order_3": true,
+    "c15_is_minus_one": true,
+    "c5_is_unit_Z6_with_square_g_and_cube_minus1": true,
+    "quotient_order_81": true,
+    "quotient_snf_is_F3_4": true,
+    "roots_hit_all_80_nonzero_vectors": true,
+    "three_roots_per_nonzero_vector": true,
+    "each_vector_fibre_is_g_orbit": true,
+    "projectivization_has_40_points": true,
+    "six_roots_per_projective_point": true,
+    "projective_fibres_equal_pass1021_unit_orbits": true,
+    "twisted_form_alternating": true,
+    "twisted_form_rank_4": true,
+    "one_minus_g_is_twisted_form_radical_mod3": true,
+    "projective_orthogonality_is_W33_srg": true
+  },
+  "scope": "Exact finite lattice/VOA-register identification.  The twisted-module commutator formalism is classical; the new corpus result is the exact equality of the previously separate root-fibration and twisted-register maps."
+}
