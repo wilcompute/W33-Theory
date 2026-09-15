@@ -1,0 +1,38 @@
+name: W33 Coxeter Todd oriented observer
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analysis/w33_coxeter_todd_oriented_observer.py'
+      - 'analysis/w33_coxeter_todd_oriented_observer.json'
+      - 'analysis/w33_pass4495_4502_distance_prism_reconstruction.py'
+      - 'data/bt866_h2_oriented_irreducible_decomposition.json'
+      - '.github/workflows/w33_coxeter_todd_oriented_observer.yml'
+  pull_request:
+    paths:
+      - 'analysis/w33_coxeter_todd_oriented_observer.*'
+      - 'analysis/w33_pass4495_4502_distance_prism_reconstruction.py'
+      - 'data/bt866_h2_oriented_irreducible_decomposition.json'
+jobs:
+  exact-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy sympy networkx
+      - name: Reconstruct and compare certificate
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+        run: |
+          python - <<'PYCODE'
+          import json, sys
+          from pathlib import Path
+          sys.path.insert(0, 'analysis')
+          from w33_coxeter_todd_oriented_observer import audit
+          actual = json.loads(json.dumps(audit()))
+          stored = json.loads(Path('analysis/w33_coxeter_todd_oriented_observer.json').read_text())
+          assert actual == stored
+          print('Exact audit and stored certificate: PASS')
+          PYCODE
