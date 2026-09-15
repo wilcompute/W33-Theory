@@ -1,0 +1,156 @@
+name: Passes 1023-1027 Obstruction Suite
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'analysis/w33_e8_c6_bundle_common.g'
+      - 'analysis/w33_pass1023_c6_factor_obstruction.g'
+      - 'analysis/w33_pass1024_subgroup_section_phase_diagram.g'
+      - 'analysis/w33_pass1025_explicit_c6_groupoid_cocycle.g'
+      - 'analysis/w33_pass1026_export_selector_gap_data.py'
+      - 'analysis/w33_pass1026_selector_c6_bridge.g'
+      - 'analysis/w33_pass1026_selector_obstruction_crosswalk.py'
+      - 'analysis/w33_pass1027_photonic_c6_holonomy_falsifier.py'
+      - '.github/workflows/pass1023_1027_obstruction_suite.yml'
+  push:
+    branches: [ master ]
+    paths:
+      - 'analysis/w33_e8_c6_bundle_common.g'
+      - 'analysis/w33_pass1023_c6_factor_obstruction.g'
+      - 'analysis/w33_pass1024_subgroup_section_phase_diagram.g'
+      - 'analysis/w33_pass1025_explicit_c6_groupoid_cocycle.g'
+      - 'analysis/w33_pass1026_export_selector_gap_data.py'
+      - 'analysis/w33_pass1026_selector_c6_bridge.g'
+      - 'analysis/w33_pass1026_selector_obstruction_crosswalk.py'
+      - 'analysis/w33_pass1027_photonic_c6_holonomy_falsifier.py'
+      - '.github/workflows/pass1023_1027_obstruction_suite.yml'
+
+concurrency:
+  group: pass1023-1027-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  factor-cocycle-selector-photonic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          show-progress: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install minimal GAP runtime
+        run: |
+          set -euo pipefail
+          sudo add-apt-repository -y universe >/tmp/gap-apt.log 2>&1 || true
+          sudo apt-get update -qq >>/tmp/gap-apt.log 2>&1
+          sudo apt-get install -y --no-install-recommends gap-core gap-libs >>/tmp/gap-apt.log 2>&1
+          command -v gap
+          gap -q -c 'Print(GAPInfo.Version, "\n"); QUIT;'
+      - name: Run Pass 1023 fail closed
+        env:
+          W33_REPO: ${{ github.workspace }}
+        run: |
+          set -euo pipefail
+          rm -f data/w33_pass1023_c6_factor_obstruction.json
+          gap -q -b --nointeract analysis/w33_pass1023_c6_factor_obstruction.g >data/w33_pass1023_runtime.log 2>&1
+          cat data/w33_pass1023_runtime.log
+          test -s data/w33_pass1023_c6_factor_obstruction.json
+          python -m json.tool data/w33_pass1023_c6_factor_obstruction.json >/dev/null
+      - name: Run Pass 1025 fail closed
+        env:
+          W33_REPO: ${{ github.workspace }}
+        run: |
+          set -euo pipefail
+          rm -f data/w33_pass1025_explicit_c6_groupoid_cocycle.json
+          gap -q -b --nointeract analysis/w33_pass1025_explicit_c6_groupoid_cocycle.g >data/w33_pass1025_runtime.log 2>&1
+          cat data/w33_pass1025_runtime.log
+          test -s data/w33_pass1025_explicit_c6_groupoid_cocycle.json
+          python -m json.tool data/w33_pass1025_explicit_c6_groupoid_cocycle.json >/dev/null
+      - name: Rebuild selector GAP input
+        run: |
+          set -euo pipefail
+          rm -f data/bt360_120sheet_design_for_gap.txt
+          python analysis/w33_pass1026_export_selector_gap_data.py >data/w33_pass1026_export_runtime.log 2>&1 || true
+          cat data/w33_pass1026_export_runtime.log
+          test -s data/bt360_120sheet_design_for_gap.txt
+      - name: Run Pass 1026 bridge fail closed
+        env:
+          W33_REPO: ${{ github.workspace }}
+        run: |
+          set -euo pipefail
+          rm -f data/w33_pass1026_selector_c6_bridge_diagnostic.json
+          gap -q -b --nointeract analysis/w33_pass1026_selector_c6_bridge.g >data/w33_pass1026_runtime.log 2>&1 || true
+          cat data/w33_pass1026_runtime.log
+          test -s data/w33_pass1026_selector_c6_bridge_diagnostic.json
+          python -m json.tool data/w33_pass1026_selector_c6_bridge_diagnostic.json >/dev/null
+          cat data/w33_pass1026_selector_c6_bridge_diagnostic.json
+      - name: Run Pass 1026 crosswalk
+        run: |
+          set -euo pipefail
+          rm -f data/w33_pass1026_selector_obstruction_crosswalk.json
+          python analysis/w33_pass1026_selector_obstruction_crosswalk.py
+          python -m json.tool data/w33_pass1026_selector_obstruction_crosswalk.json >/dev/null
+      - name: Run Pass 1027 photonic falsifier
+        run: |
+          set -euo pipefail
+          rm -f data/w33_pass1027_photonic_c6_holonomy_falsifier.json
+          python analysis/w33_pass1027_photonic_c6_holonomy_falsifier.py
+          python -m json.tool data/w33_pass1027_photonic_c6_holonomy_falsifier.json >/dev/null
+      - name: Upload integrated certificates and logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pass1023-1025-1026-1027-certificates
+          path: |
+            data/w33_pass1023_c6_factor_obstruction.json
+            data/w33_pass1025_explicit_c6_groupoid_cocycle.json
+            data/w33_pass1026_selector_c6_bridge_diagnostic.json
+            data/w33_pass1026_selector_obstruction_crosswalk.json
+            data/w33_pass1027_photonic_c6_holonomy_falsifier.json
+            data/w33_pass1023_runtime.log
+            data/w33_pass1025_runtime.log
+            data/w33_pass1026_export_runtime.log
+            data/w33_pass1026_runtime.log
+          if-no-files-found: error
+
+  subgroup-phase-diagram:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          show-progress: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install GAP subgroup libraries
+        run: |
+          set -euo pipefail
+          sudo add-apt-repository -y universe >/tmp/gap-apt.log 2>&1 || true
+          sudo apt-get update -qq >>/tmp/gap-apt.log 2>&1
+          sudo apt-get install -y --no-install-recommends gap-core gap-libs gap-smallgrp gap-primgrp gap-transgrp >>/tmp/gap-apt.log 2>&1
+          command -v gap
+          gap -q -c 'Print(GAPInfo.Version, "\n"); QUIT;'
+      - name: Run Pass 1024 exact search fail closed
+        env:
+          W33_REPO: ${{ github.workspace }}
+        run: |
+          set -euo pipefail
+          rm -f data/w33_pass1024_subgroup_section_phase_diagram.json
+          gap -q -b --nointeract analysis/w33_pass1024_subgroup_section_phase_diagram.g >data/w33_pass1024_runtime.log 2>&1 || true
+          cat data/w33_pass1024_runtime.log
+          test -s data/w33_pass1024_subgroup_section_phase_diagram.json
+          python -m json.tool data/w33_pass1024_subgroup_section_phase_diagram.json >/dev/null
+          cat data/w33_pass1024_subgroup_section_phase_diagram.json
+      - name: Upload subgroup certificate and log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pass1024-subgroup-phase-diagram
+          path: |
+            data/w33_pass1024_subgroup_section_phase_diagram.json
+            data/w33_pass1024_runtime.log
+          if-no-files-found: error
