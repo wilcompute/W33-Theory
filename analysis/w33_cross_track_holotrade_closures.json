@@ -1,0 +1,113 @@
+{
+  "boundary": "finite exact re-checks of the fast cores; heavy certificates live in the cited Holotrade commits; no physics",
+  "checks": {
+    "css_family_q3_q5": true,
+    "css_parity_and_gq_q3_q5": true,
+    "css_q3_min_words_are_the_40_lines": true,
+    "k12_mod2_split": true,
+    "k12_srg_126_45_12_18": true,
+    "k12_theta": true,
+    "leech_9b_is_phi9_cubed": true,
+    "leech_has_no_zeta9_structure": true
+  },
+  "closes": [
+    "ledger P326: CSS distance d=q+1 for all odd q (was open)",
+    "ledger P368/369: m=6 Coxeter-Todd rung (was open)",
+    "Pass 7289: SRG(126,45,12,18) prediction (was untested) -- confirmed",
+    "Pass 7294: Leech d=9 row -- empty (no Z[zeta_9]-structure)"
+  ],
+  "css": {
+    "3": {
+      "CperpDoublyEven": true,
+      "CperpInC": true,
+      "dimC": 25,
+      "gqAxiomAndParity": true,
+      "k": 10,
+      "lineIsLogical": true,
+      "lines": 40,
+      "points": 40,
+      "theyAreTheLines": true,
+      "wordsOfWeightAtMost4": 40
+    },
+    "5": {
+      "CperpDoublyEven": true,
+      "CperpInC": true,
+      "dimC": 91,
+      "gqAxiomAndParity": true,
+      "k": 26,
+      "lineIsLogical": true,
+      "lines": 156,
+      "points": 156
+    }
+  },
+  "k12": {
+    "mod2ClassesByMinNorm": {
+      "4": 378,
+      "6": 2016,
+      "8": 1701
+    },
+    "reflectionLines": 126,
+    "singular": 2080,
+    "srg": [
+      [
+        45
+      ],
+      [
+        12
+      ],
+      [
+        18
+      ]
+    ],
+    "theta": [
+      0,
+      756,
+      4032,
+      20412
+    ]
+  },
+  "leech": {
+    "existingRungs": {
+      "13a": "PG(1,13), 6/8",
+      "3a": "W(11,3), 2.Suz 90-tight (32760)",
+      "5a": "W(5,5), 2.J2 15/16-ovoids (1890/2016)",
+      "7a": "W(3,7), 2.A7 15/35-tight (120/280)"
+    },
+    "fixedPointFreeTraces": {
+      "13a": -2,
+      "3a": -12,
+      "5a": -6,
+      "7a": -4
+    },
+    "order9Multiplicities(Phi9,Phi3,Phi1)": {
+      "9a": [
+        [
+          3,
+          3,
+          0
+        ]
+      ],
+      "9b": [
+        [
+          3,
+          2,
+          2
+        ]
+      ],
+      "9c": [
+        [
+          3,
+          1,
+          4
+        ]
+      ]
+    },
+    "phi9FourthPowerExists": false
+  },
+  "owner": {
+    "coxeter_todd_rung": "Holotrade a0ed473",
+    "css_distance": "Holotrade 7c57f8e",
+    "leech_suzuki_chain": "Holotrade e680b23"
+  },
+  "status": "PASS"
+}
