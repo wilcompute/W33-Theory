@@ -1,0 +1,46 @@
+{
+  "schema": "w33.e8_pauli_cocycle_lift.v1",
+  "status": "PASS",
+  "headline": "An explicit E8 lattice cocycle and order-3 lift turn the 80 oriented A2 root orbits into invariant Chevalley generators, and a solved zeta_12 rescaling identifies their complete Lie bracket with the standard two-qutrit Pauli basis of sl(9,C).",
+  "lift": {
+    "g": "c^10",
+    "cocycle": "epsilon(a,b)=(-1)^(a L b^T), L=lower-triangular off-diagonal E8 Gram matrix mod 2",
+    "lift_phase": "eta(a)=(-1)^h(a), where delta h = epsilon/epsilon after g and h includes diagonal binomial terms",
+    "order": 3
+  },
+  "quotient": {
+    "right_kernel_matrix_mod3": [[1,2,1,0],[1,2,2,1],[0,1,2,1],[1,2,1,2],[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]],
+    "raw_symplectic_basis_rows": [[0,0,0,1],[0,0,1,0],[0,1,0,1],[1,0,0,0]],
+    "pauli_coordinate_order": ["x1","z1","x2","z2"]
+  },
+  "brackets": {
+    "unordered_pair_census": {"plus_one":1100,"minus_one":1060,"zero":1000},
+    "nonzero_equations": 2160,
+    "phase_solver": {"rank_mod3":76,"rank_mod2":80,"lift_rank_mod2":80},
+    "phase_exponent_census": {"1":12,"3":18,"5":12,"7":12,"9":14,"11":12},
+    "isomorphism": "Phi(E_v)=zeta_12^{m_v}/sqrt(3) * (X^x1 Z^z1 tensor X^x2 Z^z2)"
+  },
+  "check_count": 12,
+  "checks": {
+    "lattice_cocycle_has_e8_commutator": true,
+    "explicit_lift_intertwines_cocycle": true,
+    "lift_has_order_three_on_all_roots": true,
+    "80_invariant_root_orbits": true,
+    "quotient_coordinates_cover_all_nonzero_F3_4": true,
+    "quotient_form_equals_standard_two_qutrit_symplectic_form": true,
+    "opposite_degree_cartan_brackets_cancel": true,
+    "full_e8_bracket_census": true,
+    "phase_system_has_2160_nonzero_brackets": true,
+    "phase_system_solved_mod12": true,
+    "all_nonzero_brackets_match_pauli_structure_constants": true,
+    "all_80_actual_9x9_pauli_actions_materialized": true
+  },
+  "scope": "This fixes an explicit root-algebra/lattice-cocycle lift and an explicit matrix realization. Different cocycle gauges or symplectic bases give equivalent tables; the certificate claims exact equivalence, not uniqueness of gauge.",
+  "entry_shards": [
+    "data/w33_e8_pauli_cocycle_lift_entries_00.json",
+    "data/w33_e8_pauli_cocycle_lift_entries_01.json",
+    "data/w33_e8_pauli_cocycle_lift_entries_02.json",
+    "data/w33_e8_pauli_cocycle_lift_entries_03.json"
+  ],
+  "entry_count": 80
+}
