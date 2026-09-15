@@ -1,0 +1,34 @@
+{
+  "schema": "w33.e8_oriented_a2_refinement.v1",
+  "status": "PASS",
+  "headline": "The 80 nonzero twisted-register/Pauli labels are 80 oriented A2 root triangles; v and -v are opposite orientations of the same Pass-1021 six-root A2 fibre.",
+  "prior_art": {
+    "base_weld": "data/w33_e8_twisted_fibration_weld.json",
+    "pass1021": "data/w33_pass1021_e8_fibration_over_forty.json"
+  },
+  "counts": {
+    "E8_roots": 240,
+    "oriented_A2_triangles": 80,
+    "opposite_orientation_pairs": 40,
+    "roots_per_oriented_triangle": 3,
+    "roots_per_full_A2": 6
+  },
+  "identification": {
+    "v": "{r,gr,g^2r}",
+    "minus_v": "{-r,-gr,-g^2r}",
+    "projective_point": "the union, a six-root A2 subsystem",
+    "pass1021_fibre": "the same <c^5> = <-1,g> orbit"
+  },
+  "check_count": 8,
+  "checks": {
+    "one_plus_g_plus_g2_is_zero": true,
+    "root_shell_has_80_g_orbits": true,
+    "every_g_orbit_sums_to_zero": true,
+    "every_g_orbit_has_pairwise_inner_product_minus_one": true,
+    "each_g_orbit_is_an_oriented_A2_triangle": true,
+    "negation_pairs_80_oriented_triangles_into_40": true,
+    "each_opposite_pair_is_six_roots": true,
+    "each_six_root_A2_equals_pass1021_c5_unit_orbit": true
+  },
+  "scope": "Exact finite root-system refinement of the already-certified E8 twisted-register/root-fibration weld; no new physical claim."
+}
