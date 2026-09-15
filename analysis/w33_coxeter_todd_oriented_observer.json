@@ -19731,6 +19731,7 @@
   ],
   "additional_ports_minimum": 45,
   "completed_observer_rank": 126,
+  "global_scalar_output_minimum": 90,
   "symmetry_breaking_negative_control": true,
   "boundary": "Exact finite maps and linear amplitude observability. K12, oriented H2 and grid incidence have prior owners. No physical masses, spacetime, selected absolute handedness, single-shot tomography, or built device is inferred."
 }

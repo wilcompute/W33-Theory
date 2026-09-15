@@ -149,6 +149,9 @@ def audit():
  assert np.array_equal(A@RR,RR@S) and not np.any(C@RR)
  assert np.array_equal(A@FF@P15,3*FF@P15) and not np.any(C@FF@P15)
  O=np.vstack([C,C@A,C@A@A]);assert rank_mod(O)==71
+ # The full eigenvalue-3 space has dimension 90: a global scalar-output bound.
+ assert rank_mod(A-3*np.eye(126,dtype=int))==36
+ assert np.trace(A)==0 # with spectrum 45^1, 3^90, -9^35 from the SRG identity
  extra=[3,4,6,7,8,10,12,13,14,16,18,20,22,23,25,26,28,30,33,35,36,37,41,42,43,46,47,49,50,52,53,54,55,56,57,62,64,66,68,71,72,73,76,77,79]
  ports=list(N)+extra;assert len(set(ports))==90 and set(extra)<=set(M)
  C2=np.eye(126,dtype=int)[ports];assert rank_mod(np.vstack([C2,C2@A,C2@A@A]))==126
@@ -170,7 +173,7 @@ def audit():
   'complex_structure':'J=K/4, J^2=-3P10; sign of J is a conjugate orientation choice',
   'model_hamiltonian':'g*S + i*eta*K: energies 3g (30), -9g +/- 4sqrt(3)eta (5 each)',
   'tritangent_observer_rank':71,'dark_dimension':55,'dark_eigenvalue_multiplicities':{'3':45,'-9':10},
-  'additional_coordinate_ports':extra,'additional_ports_minimum':45,'completed_observer_rank':126,
+  'additional_coordinate_ports':extra,'additional_ports_minimum':45,'completed_observer_rank':126,'global_scalar_output_minimum':90,
   'symmetry_breaking_negative_control':True,
   'boundary':'Exact finite maps and linear amplitude observability. K12, oriented H2 and grid incidence have prior owners. No physical masses, spacetime, selected absolute handedness, single-shot tomography, or built device is inferred.'}
 
