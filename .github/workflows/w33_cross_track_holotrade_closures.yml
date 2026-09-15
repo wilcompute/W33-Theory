@@ -1,0 +1,37 @@
+name: W33 cross-track Holotrade closures
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analysis/w33_cross_track_holotrade_closures.py'
+      - 'analysis/w33_cross_track_holotrade_closures.json'
+      - 'scripts/check_claims_ledger.py'
+      - 'w33_paper_body.tex'
+      - '.github/workflows/w33_cross_track_holotrade_closures.yml'
+  pull_request:
+    paths:
+      - 'analysis/w33_cross_track_holotrade_closures.*'
+      - 'scripts/check_claims_ledger.py'
+jobs:
+  exact-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install sympy
+      - name: Recompute and compare certificate
+        run: |
+          python - <<'PYCODE'
+          import json, sys
+          from pathlib import Path
+          sys.path.insert(0, 'analysis')
+          from w33_cross_track_holotrade_closures import audit
+          actual = json.loads(json.dumps(audit(), sort_keys=True))
+          stored = json.loads(Path('analysis/w33_cross_track_holotrade_closures.json').read_text())
+          assert actual == stored and actual["status"] == "PASS"
+          print('Exact audit and stored certificate: PASS')
+          PYCODE
+      - name: Claims ledger resolves (follows \input)
+        run: python scripts/check_claims_ledger.py

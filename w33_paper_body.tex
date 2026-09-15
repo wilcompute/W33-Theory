@@ -15225,7 +15225,7 @@ rank law, odd $q$, cross-char & \textsc{thm} & P322 & \texttt{levi\_next5} (in-r
 rank law, defining char; $\det(B_p)$ & \textsc{thm} & P324 & Chandler--Sin--Xiang \\
 $[[40,10,4]]$, $[40,15,8]$, uniserial $1|14|1|8|1|14|1$ & \textsc{thm} & P323 & Passes 187/189 \\
 $k\cdot d=n$ ``conservation'' & \textsc{killed} & P323 & (tautology) \\
-CSS distance $d=q{+}1$, $q\ge5$ & \textsc{open} & P326 & this programme ($d\le q{+}1$ only) \\
+CSS distance $d=q{+}1$, \emph{all} odd $q$; minimum words $=$ lines & \textsc{thm} & P326 $+$ Holotrade \texttt{7c57f8e} & Holotrade (parity lemma; binary odd case outside Petit--Van de Voorde Thm.~7) \\
 $q=3$ Weil shadow chiral & \textsc{thm} & P331/353 & GAP cert.; Gow, Vinroot \\
 chirality unselectable from inside & \textsc{thm} & P346 & this programme \\
 leaf/type/chirality are one act & \textsc{cert} & P347 & this programme \\
@@ -15239,7 +15239,13 @@ Eisenstein rank-parity law, type $=(-1)^n$ & \textsc{thm} & P368 & this programm
 $36$ W33 spreads $=$ $E_6$ root pairs mod 2 & \textsc{cert} & P368 $+$ P365 & this programme $+$ GAP track \\
 $K_{12}$ mod 2 plus, $2080$ & \textsc{cert} & P369 & this programme \\
 $27$ admits regular Heisenberg $3^{1+2}_+$ & \textsc{cert} & P369/370 & this programme \\
-$m=6$ Coxeter--Todd rung of the QR tower & \textsc{open} & P368/369 & handed to GAP track \\
+$m=6$ Coxeter--Todd rung: $K_{12}/2K_{12}$ singular $=1{+}378{+}1701$, a \emph{proper} shadow in $O^+(12,2)$ & \textsc{cert} & P368/369 $+$ Holotrade \texttt{a0ed473} & Holotrade (lattice facts classical: Conway--Sloane 1983) \\
+$K_{12}$ mod $\theta$: $126$ reflection lines $=$ SRG$(126,45,12,18)$ (Pass 7289's prediction) & \textsc{cert} & Holotrade \texttt{a0ed473} & Holotrade; local $=$ GQ$(4,2)$ $+$ double cover of $Q(4,3)$ \\
+Leech at $d=9$ gives $W(3,3)$ (Pass 7294) & \textsc{killed} & Holotrade \texttt{e680b23} & no $\Phi_9^4$ class in $2.\mathrm{Co}_1$ \\
+Leech rungs $d=3,5,7,13$: $W(11,3),W(5,5),W(3,7),PG(1,13)$ $=$ Suzuki chain & \textsc{cert} & Holotrade \texttt{e680b23} & Feng--Xiang intriguing sets; re-checked in \texttt{w33\_cross\_track\_holotrade\_closures} \\
+extremal-lattice tower: $E_8{\to}W(3,3)$, Leech${\to}W(3,7)$, $P_{48n}{\to}W(3,13)$ ($P_{48n}$ built over $\ZZ[\zeta_{65}]$) & \textsc{cert} & Holotrade \texttt{ea0abb2} & Holotrade; $P_{48n}$ identified by Nebe's order-$65$ theorem \\
+next rung $W(3,19)$: an extremal $72$-lattice with a $19$-$(4,0)$-$0$ automorphism & \textsc{open} & Holotrade \texttt{ea0abb2} & allowed by Nebe (dim-72 Thm.~3.4); none known \\
+Gaussian ($d=4$) rungs (Pass 7293 table): Leech $\to$ PG$(11,2)$, $48$ per class; $K_{12}\to$ PG$(5,2)$, $12$ per class & \textsc{cert} & Holotrade \texttt{b63daac} & uniform as predicted; $K_{12}$'s $\ZZ[i]$-structure is antilinear (none in $G_{34}$) \\
 selection A/B as physics & \textsc{cond} & P326 & on two named identifications \\
 $d=21\leftrightarrow\sqrt{21}$ & \textsc{killed} & P369 & (Legendre symbols) \\
 ``frequency is a mass'' & \textsc{killed} & P320 & (no scale supplied) \\

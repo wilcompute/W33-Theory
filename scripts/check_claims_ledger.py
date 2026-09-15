@@ -31,8 +31,23 @@ PAPER = ROOT / "w33_paper.tex"
 DATA = ROOT / "data"
 
 
+def read_with_inputs(path: Path, depth: int = 0) -> str:
+    """Inline \\input{...} files. The ledger moved into w33_paper_body.tex, which
+    w33_paper.tex inputs; reading only the wrapper made this check report "no
+    ledger found" and exit 1 regardless of the certificates."""
+    tex = path.read_text(encoding="utf-8", errors="ignore")
+    if depth > 3:
+        return tex
+
+    def sub(m: re.Match) -> str:
+        name = m.group(1)
+        child = ROOT / (name if name.endswith(".tex") else name + ".tex")
+        return read_with_inputs(child, depth + 1) if child.exists() else m.group(0)
+    return re.sub(r"\\input\{([^}]+)\}", sub, tex)
+
+
 def main() -> int:
-    tex = PAPER.read_text(encoding="utf-8", errors="ignore")
+    tex = read_with_inputs(PAPER)
     # every ledger block: the original table plus any "Claims ledger,
     # continued" tables added as the ledger outgrows one tabular
     blocks = re.findall(r"\\paragraph\{Claims ledger[^}]*\}(.*?)\\end\{tabular\}",
