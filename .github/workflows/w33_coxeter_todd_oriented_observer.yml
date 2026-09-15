@@ -3,6 +3,7 @@ on:
   workflow_dispatch:
   push:
     paths:
+      - 'analysis/w33_k12_genus_polarization.*'
       - 'analysis/w33_coxeter_todd_oriented_observer.py'
       - 'analysis/w33_coxeter_todd_oriented_observer.json'
       - 'analysis/w33_pass4495_4502_distance_prism_reconstruction.py'
@@ -10,6 +11,7 @@ on:
       - '.github/workflows/w33_coxeter_todd_oriented_observer.yml'
   pull_request:
     paths:
+      - 'analysis/w33_k12_genus_polarization.*'
       - 'analysis/w33_coxeter_todd_oriented_observer.*'
       - 'analysis/w33_pass4495_4502_distance_prism_reconstruction.py'
       - 'data/bt866_h2_oriented_irreducible_decomposition.json'
@@ -35,4 +37,8 @@ jobs:
           stored = json.loads(Path('analysis/w33_coxeter_todd_oriented_observer.json').read_text())
           assert actual == stored
           print('Exact audit and stored certificate: PASS')
+          from w33_k12_genus_polarization import audit as genus_audit
+          stored_genus = json.loads(Path('analysis/w33_k12_genus_polarization.json').read_text())
+          assert genus_audit() == stored_genus
+          print('Genus polarization certificate: PASS')
           PYCODE

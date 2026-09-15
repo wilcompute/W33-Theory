@@ -1,0 +1,815 @@
+{
+  "schema": "w33.oscillator-source-inventory.v1",
+  "discovery": "repository-visible Python filenames containing oscillator, harmonic, or genus; tests excluded",
+  "source_count": 57,
+  "sources": [
+    {
+      "path": "BT1643_css_boundary_genus21.py",
+      "lines": 138,
+      "sha256": "8c2e8c3a7991ab3dfdeab270dd8f5fbf858cc9ad050caeacf2436f7857ff799c",
+      "functions": [
+        "omega",
+        "canonical",
+        "line_through"
+      ],
+      "module_description": "BT1643: CSS Code Complex Boundary = Genus-21 Surface\n\nTheorem: The 2-skeleton of the W(3,3) line complex is a topological surface\nof genus 21, and the CSS code [[240, 160, 4, 3]]_3 built on this complex\nis a topological quantum code \u2014 a qutrit analogue of Kitaev's toric code\n(toric code lives on genus-1 surface, W33 code lives on genus-21 surface).\n\nThe code distance d=4=mu is the minimum length of a non-contractible cycle\non the genus-21 surface \u2014 the topological girth equals the GQ mu parameter.\n\nPerplexity session Aug 18 2026.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "PART_CCCCCXLIII_D_OSCILLATOR_EQUATIONS.py",
+      "lines": 167,
+      "sha256": "4e872574028323dc145edd00e193bcda74ae5ac14ca4cc9243b564c9af28378e",
+      "functions": [
+        "decimal_period"
+      ],
+      "module_description": "PART_CCCCCXLIII_D: Genus Oscillator and Decimal-Mod12 Tower\n\nNumerically verifies all new locks L43-L50 and plots the genus oscillator.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "PART_CLXIV_TOROIDAL_GENUS_REPTEND_BRIDGE.py",
+      "lines": 251,
+      "sha256": "8d5da35ee5dc1dca78bbff7d0ba171a5a787fae3d7de263249f13db36764a7b8",
+      "functions": [
+        "hole_genus",
+        "accepted_residues_mod12",
+        "crt_coords",
+        "hole_residue_rows",
+        "polyhedron_rows",
+        "toroidal_genus_reptend_audit",
+        "main"
+      ],
+      "module_description": "PART CLXIV - Toroidal Genus / Reptend Bridge\n============================================\n\nThis module connects the decimal-reptend hint to the genus equations of the\nCsaszar and Szilassi toroidal polyhedra.\n\nThe dual hole equations are\n\n    h = (v-3)(v-4)/12     vertex-complete / Csaszar side\n    h = (f-4)(f-3)/12     face-complete / Szilassi side\n\nIn W33 notation:\n\n    q = 3\n    q+1 = 4\n    k = q(q+1) = 12\n    Phi6 = 7\n\nso the equation is\n\n    H(n) = (n-q)(n-(q+1))/k.\n\nThe integer-genus residues mod 12 are exactly\n\n    {0,3,4,7} mod 12\n\nor, using 12 instead of 0,\n\n    {3,4,7,12} = {q, q+1, Phi6, k}.\n\nThe key breakthrough is that these residues are a Chinese-remainder rectangle.\nModulo 3 and modulo 4, the roots are:\n\n    n = 3:  (0 mod 3, 3 mod 4)\n    n = 4:  (1 mod 3, 0 mod 4)\n\nThe two recombinations are:\n\n    (0,0) -> 12 mod 12\n    (1,3) -> 7 mod 12 = Phi6\n\nThus the torus value 7 is forced by recombining the two zero roots of the\nhole equation across the factors 3 and 4 of the mod-12 denominator.\n\nThis also connects to the realization count:\n\n    Csaszar realizations = 5 = stabilizer residue J\n    Szilassi realizations = 2 = q-1\n    5 + 2 = 7 = Phi6\n\nso the h=1 toroidal genus solution is the same number as the realization\nclosure and the decimal cyclic denominator.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "scripts/PART_CCCCCLXXXI_clifford_percolation_hole_oscillator.py",
+      "lines": 67,
+      "sha256": "107cfa678674e347379caf441f3ba5c3773376535f54b1dff571c33a8616611d",
+      "functions": [
+        "build_bridge",
+        "main"
+      ],
+      "module_description": "",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "legacy/root_solvers/SOLVE_HARMONIC.py",
+      "lines": 104,
+      "sha256": "1f0fafd6df29b309d767db769c56da893a0801557e6b6e1a699be5794eb2c089",
+      "functions": [],
+      "module_description": "SOLVE_HARMONIC.py \u2014 VII-CV: Harmonic Analysis (Checks 1626-1639)\nAll results derived from W(3,3) SRG parameters: q=3, v=40, k=12, \u03bb=2, \u03bc=4,\nr=2, s=-4, f=24, g=15, E=240, N=5, \u03a6\u2083=13, \u03a6\u2086=7, k'=27, \u03b1=10, dim_O=8.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "exploration/w33_transport_matter_curved_harmonic_bridge.py",
+      "lines": 134,
+      "sha256": "81447b9dbdf9ff58bc94287121337fc9584f5e3f129cf1725ae3653328fa94ae",
+      "functions": [
+        "build_transport_matter_curved_harmonic_summary",
+        "write_summary",
+        "main"
+      ],
+      "module_description": "Coupling of the curved transport precomplex to matter and curved 4D harmonics.\n\nThe transport side now has its correct internal algebraic form: a curved\nupper-triangular precomplex on the 45-point quotient over F3. The matter side\nalready has the exact 81-dimensional logical qutrit sector. This module couples\nthem in the strictest available way:\n\n1. tensor the transport precomplex with the 81-dimensional logical sector;\n2. identify the protected flat 81-dimensional matter channel;\n3. track the exact curvature ranks after coupling;\n4. propagate those exact internal channels across the external harmonic sectors\n   of CP2_9 and K3_16.\n\nThe point is not to pretend the whole 162-sector is already harmonic. It is to\nseparate exactly which internal matter channel is flat/protected and which one\nis curvature-sensitive before coupling to curved 4D geometry.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "exploration/w33_toroidal_genus_fourier_bridge.py",
+      "lines": 122,
+      "sha256": "a0628de1657189166cd8c0d74e3beff09ed7b6511f6dedf8db2417adc828230c",
+      "functions": [
+        "_admissible_residues_mod_12",
+        "build_summary",
+        "write_summary"
+      ],
+      "module_description": "Toroidal genus numerator as the tetrahedral 4x3 packet.\n\nFor the primal Csaszar and dual Szilassi toroidal shells, the complete-graph\nand complete-face-adjacency genus formulas are\n\n    g_v(n) = (n-3)(n-4)/12,\n    g_f(n) = (n-3)(n-4)/12.\n\nAt the toroidal seed ``n = Phi_6 = 7``, both numerators are\n\n    (7-3)(7-4) = 4 x 3 = 12.\n\nThe previous tetrahedral atlas bridges already produced the same exact packet:\n\n    4 chart vertices x 3 local outgoing Fourier/Clifford modes = 12.\n\nSo the toroidal genus-1 condition is not only an Euler count.  At the selected\nseed it is exactly the same 4x3 local packet divided by the universal mod-12\nintegrality denominator.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "exploration/w33_tetrahedral_ckm_oscillator_bridge.py",
+      "lines": 319,
+      "sha256": "093c3a1dd7a9e5e484110d175343b4a7ec6f56c04fccd516ed7545e4856ab2bf",
+      "functions": [
+        "_load_json",
+        "_tetra_fourier_matrix",
+        "_serialize_complex_vector",
+        "_serialize_complex_matrix",
+        "_tetra_mode_report",
+        "_single_edge_vector",
+        "_two_edge_vector",
+        "_two_edge_formula",
+        "_paper_up_down_vectors",
+        "_slot_operator_packet_report",
+        "_paper_target_errors",
+        "build_summary",
+        "write_summary",
+        "main"
+      ],
+      "module_description": "Tetrahedral oscillator law for the live four-slot CKM packet.\n\nThe recent local/toroidal work produced two independent tetrahedral packets:\n\n- the four-chart atlas with its exact 4-point Fourier basis;\n- the live CKM carrier packet on the four quark slots\n  ``(Q_1_1, Q_2_1, Q_2_2, Q_3_2)``.\n\nThis bridge checks whether those are the same 4-mode object on the family side.\nThe sharp answer is yes, and it is stronger than a loose analogy:\n\n1. The four live slot Yukawas span an exact 4-dimensional family-operator\n   packet whose centered shell has rank 3.\n2. The same 4-point tetrahedral Fourier/Hadamard transform used on the chart\n   atlas organizes the live CKM coefficient vectors.\n3. Any quarter-turn single-edge packet supported on one live sheet is\n   tetra-Fourier democratic: all four mode magnitudes are equal.\n4. The minimal two-edge packet\n\n       (1, i a, 1, -i b)\n\n   splits exactly into two conjugate carrier modes and two conjugate gap modes:\n\n       F4^* (1, i a, 1, -i b)^T\n         = (1 + i(a-b)/2,  i(a+b)/2,  1 - i(a-b)/2,  -i(a+b)/2)^T.\n\nSo the live CKM architecture is better read as a tetrahedral oscillator on the\nfour quark carriers than as four unrelated slot amplitudes.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "exploration/w33_tetrahedral_chart_oscillator_bridge.py",
+      "lines": 283,
+      "sha256": "cc260ca66eb2f7bc2976b842e282ad308d72e396d8368598383697a67f369de4",
+      "functions": [
+        "_chart_sign_matrix",
+        "_best_cross_right_intertwiner",
+        "_rank",
+        "_line_stabilizer_basis",
+        "build_summary",
+        "write_summary"
+      ],
+      "module_description": "Tetrahedral chart oscillator and transition algebra on the diffuse atlas.\n\nThe previous atlas bridge proved that:\n\n    - one diffuse Yukawa chart carries only a 7-dimensional parabolic\n      color-support algebra;\n    - a tetrahedral packet of four signed charts restores full ``M_3(C)``.\n\nThis module sharpens that result into an operator-level closure.  The same\ntetrahedral chart packet already carries:\n\n    - the exact ``K4`` Laplacian ``4I - J`` on chart space;\n    - a tight frame identifying its 3-dimensional nontrivial shell with the\n      local color mode space;\n    - exact directed transition operators between distinct Yukawa charts.\n\nSo the atlas is not just \"four charts that happen to work\".  It is a genuine\ntetrahedral harmonic packet with the exact split\n\n    7 = 4 + 3 = 1 + 6\n\nthat the docs had already hinted at.\n\nMore concretely:\n\n    - 4 chart vertices give the tetrahedral oscillator gap ``4``;\n    - the centered nontrivial shell has dimension ``3``;\n    - the 6 undirected chart bridges are the shared six-channel count;\n    - the 12 directed bridges act as exact chart-to-chart transfer operators.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "exploration/w33_seven_realizations_oscillator.py",
+      "lines": 533,
+      "sha256": "e77b280903939d24f42bd1fd0754f08ea1020761a9fc601d3ace7bd57d7fe4e4",
+      "functions": [],
+      "module_description": "THE SEVEN REALIZATIONS AS A HARMONIC OSCILLATOR\n\nThe tetrahedron (genus 0), 7 toroidal polyhedra (genus 1), and the\ngenus 2 exception form a THREE-LEVEL system:\n\n  h=0: Tetrahedron (\u03bc=4 vertices, sphere)\n  h=1: 7 toroidal realizations (Phi6=7 vertices / 14 vertices)\n  h=2: JR exception (Phi4=10 vertices, double torus)\n\nThe user's insight: these are BOUNDARIES.\nThe 7 realizations at h=1 are the 7 MODES of the toroidal oscillator.\n\nLet's analyze all 7 coordinate sets as a spectrum.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "exploration/w33_pascal_rows_oscillator.py",
+      "lines": 414,
+      "sha256": "56cf67fe8ae0ea50e9f986fc06dc33be62efcabe32394d5230af1a2f842860b3",
+      "functions": [],
+      "module_description": "PASCAL'S TRIANGLE ROWS = TOPOLOGICAL OSCILLATOR LEVELS\n\nRow \u03bc = 4:  1  4  6  4  1  (tetrahedron: h=0)\nRow \u03a6\u2086 = 7: 1  7 21 35 35 21  7  1  (torus/Cs\u00e1sz\u00e1r: h=1)\n\nThe tetrahedron has f-vector (1, 4, 6, 4, 1):\n  1 body, 4 vertices, 6 edges, 4 faces, 1 connected component\n  = Row 4 of Pascal = (1+x)^\u03bc\n\nThe torus level has the C(7,k) structure:\n  C(7,0)=1, C(7,1)=7, C(7,2)=21, C(7,3)=35, C(7,4)=35, C(7,5)=21, C(7,6)=7, C(7,7)=1\n  \nThe 7 toroidal realizations = C(7,1) = 7\nThe 21 non-face triples = C(7,2) = 21 (also = edges of K\u2087)\nThe 35 total triples = C(7,3) = 35\n\nAnd 14641 = 11^4 = (k-1)^\u03bc !!",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "exploration/w33_klein_harmonic_vogel_bridge.py",
+      "lines": 152,
+      "sha256": "b6e20fe0495d51cadd2b4566a30f4066f4a5ecc01a5f8a3479b0621473eca278",
+      "functions": [
+        "build_klein_harmonic_vogel_summary",
+        "write_summary"
+      ],
+      "module_description": "Exact harmonic-cube / Klein-quartic / Vogel shell bridge.\n\nThis module compresses the new promoted algebra into one ambient shell picture.\n\nThe exact local shell is now:\n\n    27^2 = 729,\n    728 = dim sl(27),\n    364 = |PG(5,3)| = 728 / 2,\n    364 = 40 + 324.\n\nThe harmonic-cube / Klein-quartic side supplies the same shell in a different\nfactorization:\n\n    14 = 7 cubes + 7 anticubes = dim G2,\n    56 = 14 * 4 = 2 * 28,\n    84 = 14 * 6 = 4 * 21,\n    168 = 2 * 84 = 8 * 21 = 24 * 7,\n    364 = 14 * 26 = 28 * 13,\n    728 = 56 * 13 = 28 * 26.\n\nSo the promoted algebra is best read as an A_26 ambient Klein shell dressed by\nthe G2 harmonic-cube packet, the W33 slice 40, and the exact moonshine gap 324.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "exploration/w33_heawood_harmonic_bridge.py",
+      "lines": 125,
+      "sha256": "5dd5fc94db0fb60ef0a478cd13b7a8479945634b198891f307ddcd7d8a772207",
+      "functions": [
+        "_incidence_matrix",
+        "_spectral_packet_to_strings",
+        "build_heawood_harmonic_summary",
+        "write_summary"
+      ],
+      "module_description": "Exact Heawood harmonic closure from the Fano incidence of the torus dual.\n\nThe Szilassi dual of the labeled 7-vertex torus seed has Heawood\n1-skeleton. Because that Heawood graph is exactly the bipartite incidence graph\nof a cyclic Fano heptad, its adjacency operator is forced by one selector law:\n\n    B B^T = 2I + J,\n\nwhere B is the 7x7 point-line incidence matrix.\n\nConsequences:\n\n- the singular values of B are 3 and sqrt(2);\n- the Heawood adjacency spectrum is +/-3 and +/-sqrt(2);\n- the Heawood Laplacian spectrum is 0, 3-sqrt(2), 3+sqrt(2), 6;\n- the adjacency satisfies H^4 - 11 H^2 + 18 I = 0.\n\nSo the Szilassi dual is not only combinatorial. It already carries an exact\nharmonic operator packet forced by the same Fano incidence data.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "exploration/w33_dual_polyhedra_oscillator.py",
+      "lines": 29,
+      "sha256": "4c2a07b27e40432b407a01d2fb8a30a4f7e37779cf71e513dace48e68be58ec9",
+      "functions": [],
+      "module_description": "DUAL TOROIDAL POLYHEDRA = W(3,3) HARMONIC OSCILLATOR\n\nLevel h=0: Tetrahedron (self-dual ground state)\n  v=F=4=mu, E=6=q!\n\nLevel h=1: Csaszar/Szilassi (first excitation)\n  v or F = 7 = Phi6, E=21=T_6\n\nLevel h=6=q!: UNSOLVED PAIR (the W(3,3) level)\n  v or F = 12 = k, E=66=dim(so(k)), other = 44 = v+mu\n\nVertex/face sequence: mu -> Phi6 -> k = 4 -> 7 -> 12 (W(3,3) params!)\nEdge sequence: q! -> T_6 -> C(k,2) = 6 -> 21 -> 66\nGenus sequence: 0 -> 1 -> q! = 0 -> 1 -> 6\n\nEdge GAPS: 15=g (gauge generators), 45=qg (nonsingular pairs)\n  = the two non-trivial objects in the W(3,3) chain complex!\n\nVertex GAPS: 3=q (field order), 5=q+lam (pentagon)\n\nh=3=q is FORBIDDEN (non-integer v). Field order = skipped level.\n\nBoth sides have mod-12=mod-k constraint: v,F \u2261 0,3,4,7 mod k.\nThe congruence classes {0,3,4,7} = {0,q,mu,Phi6} mod k.\n\nAt h=46: v=27=q^3 (spreads!), E=351, F=234\nAt h=111: v=40=v_W33 (the graph itself!), E=780=C(v,2), F=520",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "exploration/w33_curved_harmonic_qutrit_split_bridge.py",
+      "lines": 145,
+      "sha256": "2b9d630fb422f09380bbd98baf8e22c0caff7b9f2e8129e02b4de2c02dcf15a6",
+      "functions": [
+        "_fraction_dict",
+        "_profile",
+        "build_curved_harmonic_qutrit_split_bridge_summary",
+        "write_summary",
+        "main",
+        "to_dict"
+      ],
+      "module_description": "Exact degree split of the protected harmonic qutrit lift on curved seeds.\n\nThe older curved transport/matter bridge already recorded the total protected\nharmonic matter counts\n\n- ``243`` on ``CP2_9``,\n- ``1944`` on ``K3_16``.\n\nThose totals are exact, but they are coarser than the actual bridge question.\nThe explicit external Hodge package now allows the protected qutrit lift to be\nsplit by degree:\n\n    81 * (b0 + b2 + b4)\n      = 81*b0   +   81*b2   +   81*b4.\n\nOn the current explicit closed 4D seeds, the endpoint terms are universal:\n\n- ``b0 = b4 = 1`` on both seeds,\n- so the endpoint packet is always ``81 + 81 = 162``.\n\nAll seed dependence therefore lives in the middle-degree qutrit channel\n``81 x H^2``.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "exploration/w33_cp_harmonic_dominance_bridge.py",
+      "lines": 161,
+      "sha256": "d2cade9e0311795fce354944e80bcdcf984d9c14024618de6e868ac98b3ea087",
+      "functions": [
+        "_load_json",
+        "_polar_unitary",
+        "_jarlskog",
+        "build_cp_harmonic_dominance_summary",
+        "write_summary",
+        "main"
+      ],
+      "module_description": "Harmonic dominance of the unitary CP phase response.\n\nAfter gauge reduction, the anchored quark CP ansatz depends on one physical\nphase sum ``theta = alpha + beta``. The remaining functional question is how\ncomplicated the unitary Jarlskog response ``J_unitary(a, theta)`` really is.\n\nThis module computes the Fourier content of the one-phase response on a theta\ngrid for representative bridge amplitudes. Because the response is odd under\n``theta -> -theta``, only sine harmonics survive numerically. The main result\nis that the first sine harmonic dominates strongly:\n\n- above ``99.99%`` of the first-five-mode power at ``a = 0.1``;\n- above ``99.87%`` at ``a = 0.3``;\n- above ``99.36%`` at ``a = 0.5``;\n- still above ``98.0%`` even at full bridge strength ``a = 1``.\n\nSo the physical CP phase law is already very close to a one-harmonic response\ncurve:\n\n    J_unitary(a, theta) ~= -g1(a) sin(theta),\n\nwith higher harmonics providing only controlled corrections.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "exploration/w33_center_quad_tetrahedral_oscillator_bridge.py",
+      "lines": 335,
+      "sha256": "87c4e726134451e88ddbed96a548e963df0026e13ae7c1eea17fc9af9d0aa204",
+      "functions": [
+        "_compose",
+        "_generate_group",
+        "_cycle_type",
+        "_image_of_matching",
+        "_quotient_line_lookup",
+        "_point_triangles",
+        "_line_intersection_graph",
+        "_transport_edges",
+        "_edge_line_matching",
+        "_neighbor_permutation",
+        "_point_line_packets",
+        "_line_to_matching_labels",
+        "_matching_transport_permutation",
+        "build_summary",
+        "write_summary",
+        "main"
+      ],
+      "module_description": "Tetrahedral-oscillator reinterpretation of the 90 center-quads.\n\nThe center-quad quotient package already established the exact bridge\n\n    90 center-quads -> 45 quotient points -> 27 quotient lines.\n\nThis module sharpens the local geometry of those 90 four-sets.\n\nKey idea:\neach quotient point is an antipodal pair of center-quads, so the ``90`` should\nbe read as a two-sheet orientation cover of ``45`` local tetrahedral objects.\nThe testable question is whether the local incidence/transport data really sees\nthose four-sets as tetrahedra rather than just arbitrary quads.\n\nThe sharp answer is yes:\n\n1. At each quotient point, the 12 incidence neighbors induce a 12-element\n   local tetrahedral permutation packet on the four vertices of one quad.\n2. The generated closure of that packet has order ``12`` or ``24`` depending\n   the local labeling/sheet, but the packet itself is always exactly 12.\n3. The 3 quotient lines through the point are exactly the 3 perfect matchings\n   (opposite-edge axes) of that tetrahedron.\n4. The transport ``S3`` line-matchings therefore act on tetrahedral axes.\n5. The old ``45 + 90`` transport split is exactly\n\n       45 x (1 + 2),\n\n   i.e. the radial line plus the tangential ``A2`` shell of the local\n   tetrahedral-axis oscillator.\n\nSo the ``90``-sector is not best read as 90 literal tetrahedra. It is the\norientation double cover of 45 tetrahedral oscillators, with the transport\n``A2`` local system as their tangential mode packet.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "exploration/PART_CCCCXVIII_PHOTONIC_HARMONIC_TQC_BUS.py",
+      "lines": 263,
+      "sha256": "36b329b890bfd556d2068f43b8c3f4e44c487215140d85d80d097310270d911c",
+      "functions": [
+        "load_json",
+        "ok",
+        "frac",
+        "build_results",
+        "main"
+      ],
+      "module_description": "PART CCCCXVIII -- Photonic Harmonic TQC Bus.\n\nCCCXCVI separated the photonic runtime into probabilistic, deterministic,\nquantum, classical, topological, and response layers.  CCCCVI scheduled that\nruntime through the protected W33 CSS stack.  CCCCXVII identified the\nsnake-tail QEC loop.\n\nThis part adds the missing harmonic/TQC bus.  The key observation is that the\nphotonic probabilities and the genus-one harmonic topological shell share the\nsame exact denominators:\n\n    Type-II fusion p = 1/2  -> denominator 2 = lambda\n    KLM primitive p = 1/4   -> denominator 4 = mu\n\nThose same values are the toric logical-qubit count and ground-state\ndegeneracy on the genus-one Csaszar/Szilassi shell.  The Heawood harmonic\noscillator then supplies a dual 14-mode rail: 14 = 2*Phi6, with a 12-mode\nmiddle shell splitting as 6+6.  That 12 is also the W33 degree and three\ntoric weight-4 stabilizer checks.\n\nThis is a bus theorem, not a new physical threshold claim: it states how the\nphotonic, harmonic, topological, MBQC, and protected QEC layers line up as an\narchitecture.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "exploration/PART_CCCCXIX_PHOTONIC_HARMONIC_TQC_SYNTHESIS.py",
+      "lines": 414,
+      "sha256": "c48cd290fe07a95c413acc29532557b62610346086758a2c4551d6f07a44fa70",
+      "functions": [
+        "_load",
+        "labeling_dimension",
+        "theta_equals_alpha_value",
+        "complement_theta_equals_mu",
+        "shannon_capacity_equals_V",
+        "gram_matrix_rank",
+        "labeling_sphere_dim",
+        "klm_denominator",
+        "fusion_denominator",
+        "denominator_equals_complement_theta",
+        "denominator_equals_toric_gsd",
+        "fractional_chromatic_equals_V_over_theta",
+        "heawood_middle_shell",
+        "heawood_branch_size",
+        "heawood_two_branch_total",
+        "heawood_cycle_rank",
+        "heawood_vertex_count",
+        "csaszar_euler_char",
+        "logical_sector",
+        "base_css_code",
+        "q4_routing_code",
+        "active_protection_code",
+        "selector_trits",
+        "controller_bits",
+        "synthesis_layers",
+        "sm_crosswalk",
+        "verify_all",
+        "build_ccccxix_summary"
+      ],
+      "module_description": "PART CCCCXIX -- W33 Photonic Harmonic TQC Geometric Synthesis.\n\nThis part closes the architecture loop by proving that the Lov\u00e1sz orthonormal\nlabeling of W(3,3) and the photonic harmonic TQC bus (CCCCXVIII) are the\nsame structure viewed from complementary angles:\n\n    Lov\u00e1sz labeling                  TQC bus\n    -------------------------------------------\n    dim_min = 3 = q                  qutrit register R^q\n    theta(G) = 10 = alpha            10 independent photonic modes\n    theta(Gbar) = 4 = mu             KLM denominator = toric GSD\n    Shannon capacity = V             information-theoretically complete\n    Gram matrix rank = q             irreducible 3D carrier\n    chi * alpha = V                  chromatic/independence balance\n\nThe synthesis has five layers, each with a geometric and a TQC face:\n\n    Layer 1 \u2013 Geometric carrier       R^q Lov\u00e1sz labeling on S^{q-1}\n    Layer 2 \u2013 Harmonic oscillator     Heawood q! branches; middle shell = K\n    Layer 3 \u2013 Toric loop memory       Csaszar/Szilassi genus-1 shell\n    Layer 4 \u2013 Protected QEC           W33 CSS -> Steane/Phi6 lift\n    Layer 5 \u2013 Classical selector      40-trit = V-trit record\n\nThis is a synthesis and invariant-matching theorem, not a new physical\nthreshold claim. It states how the Lov\u00e1sz geometric layer connects to\nevery downstream TQC layer through numerically exact identities.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "exploration/DUAL_GENUS_EQUATIONS_ANALYSIS.py",
+      "lines": 339,
+      "sha256": "c3d1f80a318292f998d05bde8a2cb200b6fd88653420ebc517a1954445a228df",
+      "functions": [
+        "genus_from_vertices",
+        "residue_check"
+      ],
+      "module_description": "DUAL GENUS EQUATIONS FROM MINIMAL TRIANGULATIONS\nThe W(3,3) Theory Connection to Jungerman-Ringel Theory\n\nThe key discovery: TWO parametrizations of the genus formula, related by\nthe Csasz\u00e1r-Szilassi duality.\n\nGENUS FORMULA 1 (vertices parametrization):\n  h = (n-3)(n-4)/12,  where n \u2261 {0, 3, 4, 7} (mod 12)\n\nGENUS FORMULA 2 (faces parametrization - DUAL):\n  h = (m-3)(m-4)/12,  where m \u2261 {0, 3, 4, 7} (mod 12)\n\nFor a minimal triangulation on an orientable surface of genus h:\n- K_n with n vertices can be embedded if n satisfies the residue condition\n- The dual polyhedron has n' faces where n' ALSO satisfies residue condition\n- Both polyhedra lie on the SAME genus h surface\n\nEXAMPLE: Csasz\u00e1r (genus 1)\n  n=7 vertices: h = (7-3)(7-4)/12 = 4\u00d73/12 = 1 \u2713\n  7 \u2261 7 (mod 12) \u2713\n  \n  Dual (Szilassi): m=7 faces: h = (7-3)(7-4)/12 = 1 \u2713\n  \nTHE FANO PLANE CONNECTION (7 points, 7 lines):\n  PSL(2,7) acts on the 7 points of the Fano plane with 7 lines\n  This is EXACTLY the symmetry of the Csasz\u00e1r-Szilassi pair!\n  \n  5 Csasz\u00e1r realizations (different coordinate embeddings)\n  2 Szilassi realizations (dual to Csasz\u00e1r)\n  TOTAL: 7 realizations \u2194 7 points of Fano plane \u2194 7 lines of Fano plane\n  \nTHE 7 RESIDUE CLASSES {0, 3, 4, 7} SPLIT INTO TWO ORBITS:\n  \n  Orbit A: {0, 7} \u2014 satisfy n \u2261 \u00b10 (mod 7) [Heffter type]\n  Orbit B: {3, 4} \u2014 satisfy n \u2261 \u00b13 (mod 7) [Ringel type]\n  \n  Plus the EXCEPTIONAL class {11} where 11 = q+\u03bb+f-\u03bc (W(3,3) combination)\n  \nJUNGERMAN-RINGEL MINIMAL TRIANGULATION THEOREM:\n  \n  For n complete graph K_n to have a minimal triangulation on surface genus h:\n  \n  \u27fa (n-3)(n-4) \u2261 0 (mod 12)\n  \u27fa n \u2261 {0, 3, 4, 7} (mod 12)\n  \n  The minimal genus is: g_min(K_n) = \u2308(n-3)(n-4)/12\u2309\n  \n  For n \u2265 3, exactly ONE of these 4 residue classes is achieved for each n.\n  \nTHE W(3,3) TOWER IN THIS FRAMEWORK:\n\n  Genus 0: Tetrahedron (K\u2084)\n    n = 4 \u2261 4 (mod 12) \u2713\n    h = (4-3)(4-4)/12 = 1\u00d70/12 = 0 \u2713\n  \n  Genus 1: Csasz\u00e1r (K\u2087)\n    n = 7 \u2261 7 (mod 12) \u2713\n    h = (7-3)(7-4)/12 = 4\u00d73/12 = 1 \u2713\n    \n    DUAL: Szilassi (14 vertices, 7 faces)\n    m = 7 faces: h = (7-3)(7-4)/12 = 1 \u2713\n  \n  Genus 2: Resolution of JR obstruction (K\u2081\u2080)\n    n = 10 \u2261 10 \u2261 -2 \u2261 10 (mod 12)\n    ISSUE: 10 is NOT in {0,3,4,7}! But we CAN embed K\u2081\u2080-K_c for specific c\n    \n    The resolution: embed K\u2081\u2080 with c=9 edge removals\n    \u03c6(genus 2) = 24 = f = W(3,3) face count\n  \n  Genus 6: Heffter's K\u2081\u2082 (genus q!=6)\n    n = 12 \u2261 0 (mod 12) \u2713\n    h = (12-3)(12-4)/12 = 9\u00d78/12 = 6 \u2713\n    This is the HIGHEST W(3,3) polyhedron: 12 vertices = k\n\n\nTHE DUAL INTERPRETATION:\n\n  Genus formula in VERTEX form:\n    h_v(n) = (n-3)(n-4)/12   [for n = number of vertices]\n  \n  Genus formula in FACE form (dual):\n    h_f(f) = (f-3)(f-4)/12   [for f = number of faces]\n  \n  FOR A POLYHEDRON on genus h surface:\n    h_v(v) = h_f(f)\n    \n  \u27f9 (v-3)(v-4)/12 = (f-3)(f-4)/12\n  \u27f9 (v-3)(v-4) = (f-3)(f-4)\n  \n  This is satisfied EXACTLY when v and f are paired by duality!\n  \n  Example: Csasz\u00e1r (v=7, f=14)\n    (7-3)(7-4) = 4\u00d73 = 12\n    (14-3)(14-4) = 11\u00d710 = 110 \u2260 12 ... WAIT?\n  \n  Ah! The duality doesn't preserve the SAME genus formula.\n  Instead, Szilassi's f=7 (not f=14) satisfies:\n    (7-3)(7-4) = 12 again!\n  \n  The DUAL uses the SAME residue class!\n  \n  So: K\u2087 on genus 1 has 7 vertices\n      Dual: 7 faces (not 14 vertices)\n      Both computed by same formula with n=7\n  \n  The \"14 vertices\" in Szilassi are the EDGES of Csasz\u00e1r!\n  21 edges \u2192 14 vertices (via complementary structure)\n\nEXAMPLE OF GENUS TOWER:\n\n  h  |  n (vertices)  |  (n-3)(n-4)  |  Residue mod 12  |  Polyhedron\n  ---|------|-----------|----------|---|-----------|\n   0 |   4  |     0     |    4     | Tetrahedron\n   1 |   7  |    12     |    7     | Csasz\u00e1r (K\u2087)\n   2 |  10* |    42     |   10*    | JR resolution\n   3 |  10  |    42     |   10*    | K\u2081\u2080-K\u2083\n   4 |  11  |    56     |   11*    | K\u2081\u2081-K\u2086\n   5 |  13  |   120     |    1     | K\u2081\u2083-K\u2088\n   6 |  12  |    72     |    0     | Heffter K\u2081\u2082\n\n  *Note: 10, 11 are NOT in {0,3,4,7}, so those require edge removals\n\nTHE FANO PLANE ORGANIZATION:\n\n  The 7 Csasz\u00e1r+Szilassi realizations can be enumerated by:\n  \n  PSL(2,7) action: 7 \u00d7 3 \u00d7 5 = 105 automorphisms\n  But: quotient by the internal symmetry of each realization\n  \n  Result: exactly 5 + 2 = 7 distinct \"equivalence classes\"\n  \n  These 7 correspond to the 7 POINTS of the Fano plane\n  And ALSO to the 7 LINES of the Fano plane (dual structure)\n  \n  Fano plane: smallest projective plane with 7 points, 7 lines, 3 per line\n  Incidence matrix: 7\u00d77 symmetric matrix\n  PSL(2,7) is the automorphism group\n  \n  Order: |PSL(2,7)| = (7\u00b2-1)(7\u00b2-7)/(7-1) = 48\u00d742/6 = 336\n\nTHE W(3,3) LATTICE:\n\n  The 12 residue classes mod 12 (vertices index):\n  \n  {0, 3, 4, 7} \u2014 VALID residue classes for Jungerman-Ringel formula\n  \n  But W(3,3) has 12 generators (k=12). The full structure:\n  \n  Index 1: {0, 3, 4, 7} (4 classes)    \u2192 Electroweak (SU(2)\u00d7U(1))\n  Index 2: {2, 6, 8, 10} (4 classes)   \u2192 Chiral/mixing\n  Index 3: {1, 5, 9} (3 classes)       \u2192 Color (SU(3))\n  Exceptional: {11} (1 class)          \u2192 GUT (SU(5))\n  \n  Total: 4 + 4 + 3 + 1 = 12 = k\n  \n  The GEOMETRIC realization:\n    Index-1 classes \u2192 complete K_n graphs (all vertices equivalent)\n    Index-2 classes \u2192 K_n with internal structure\n    Index-3 classes \u2192 K_n with 3-fold coloring\n    Exceptional \u2192 K_n with SU(5) structure\n\nTHE COMPLETE PICTURE:\n\n  W(3,3) = SRG(40, 12, 2, 4)\n    \u2193\n  Encodes 12 residue classes mod 12\n    \u2193\n  Each class corresponds to a genus formula via Jungerman-Ringel\n    \u2193\n  Minimum triangulations on surfaces of genus h = (n-3)(n-4)/12\n    \u2193\n  5 Csasz\u00e1r + 2 Szilassi realizations (7 total)\n    \u2193\n  Organize via Fano plane structure (PSL(2,7))\n    \u2193\n  Dual genus equations (vertex form \u2194 face form)\n    \u2193\n  Standard Model gauge generators: 12 = 8 + 3 + 1\n\nKEY FORMULA:\n\n  For orientable surface of genus h, minimal K_n triangulation exists\n  \u27fa h = (n-3)(n-4)/12\n  \u27fa n \u2261 {0, 3, 4, 7} (mod 12)\n  \n  Dual formulation (via Csasz\u00e1r-Szilassi):\n  For the dual polyhedron with m faces:\n  \u27fa h = (m-3)(m-4)/12\n  \u27fa m \u2261 {0, 3, 4, 7} (mod 12)\n  \n  BOTH parametrizations satisfy the SAME congruence condition!\n  This is the essence of the duality.\n\nREFERENCES:\n  Jungerman, L. & Ringel, G. (1978). Minimal triangulations on orientable surfaces.\n  Csasz\u00e1r, A. (1949). A polyhedron without diagonals.\n  Szilassi, L. (1977). Regular toroids.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "archive/root_scripts/PART_MCCCXVII_GENUS6_K12.py",
+      "lines": 51,
+      "sha256": "8a0b8b46da00004afada55f4c99084b60ac5db562b1f7afd29f8e8d7f449412b",
+      "functions": [
+        "fib"
+      ],
+      "module_description": "PART MCCCXVII: Genus-6, K_12, Ringel-Youngs, and Ramanujan verifier.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "archive/root_scripts/PART_MCCCCXLIII_GENUS6_DEEP_VERIFY.py",
+      "lines": 171,
+      "sha256": "f852f98c75fedc092f34ab55849bbe258d9693e5274242b0d4527c3dd34f3296",
+      "functions": [],
+      "module_description": "PART_MCCCCXLIII: Genus-6 Deep Structure Verification\nVerifies all numerical identities from BREAKTHROUGH_MCCCCXLIII_MCCCCXCIX_GENUS6_DEEP.md",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "archive/root_scripts/PART_CLIII_GENUS6_SRG_VALENCY_PROJECTION.py",
+      "lines": 158,
+      "sha256": "3c2d1aed463c8239f0d59a4bbd94d657a58a1e1f93cbd13215215769bde8e9c4",
+      "functions": [
+        "check",
+        "h_v",
+        "h_f"
+      ],
+      "module_description": "PART_CLIII_GENUS6_SRG_VALENCY_PROJECTION.py\n\nW33-Theory Part CLIII: The Genus-6 Level as the SRG Valency Projection.\n\nVerifies that n=12=k is the next hole-equation lattice level after n=7=Phi6,\nwith genus 6, chi=-10 matching the Q(sqrt(-10)) Hashimoto field discriminant,\nE=66=C(12,2) edges, the projection token P(k)=12/13 from CXLVIII-CXLIX,\nand the step 7->12 = +5 = T*Phi3.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "archive/root_scripts/PART_CDIII_genus_tower_verifier.py",
+      "lines": 99,
+      "sha256": "fc2dce472a405cbb12a1f030f62ff37d8546e5df0d6f2a6c9af2b897ce84891b",
+      "functions": [
+        "g",
+        "g_int"
+      ],
+      "module_description": "Part CDIII \u2014 Genus Tower Verifier\nVerifies all theorems: W33=GQ(3,3), 3-layer decomp, genus identities.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "tetrahedral_harmonic_crack_summary.py",
+      "lines": 104,
+      "sha256": "5294f412e69b84fcc80fe9bac059b1b992d86593dcbac1258c655bb2948d4540",
+      "functions": [
+        "load_json",
+        "summarize_heawood_fano_alignment",
+        "summarize_heawood_tetra_oscillator",
+        "summarize_natural_constants",
+        "summarize_tetrahedral_harmonic_comparison",
+        "main",
+        "closeness"
+      ],
+      "module_description": "",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "tools/bt1412_toroidal_q4_oscillator_boundary.py",
+      "lines": 335,
+      "sha256": "3a6741058b74dc28797f35e98e46cddcefa3041d653d60d7600e103b431bf934",
+      "functions": [
+        "load_json",
+        "sorted_bit_edge",
+        "bits_to_int",
+        "board_parity",
+        "bit_parity",
+        "q4_square_faces",
+        "cycle_edges_from_tour",
+        "projection_profile",
+        "build_result",
+        "main"
+      ],
+      "module_description": "BT1412: toroidal Q4 oscillator boundary.\n\nThis packet joins three already-verified layers:\n\n* the 4x4 toroidal knight graph is Q4;\n* the tetrahedral oscillator admits the mod-12 marks {0,3,4,7} and forbids\n  genus h=q=3 on the neighborly ladder;\n* the Csaszar/Szilassi toroidal pair preserves the 21-edge dual boundary.\n\nThe new certificate is the exact arithmetic splice:\n\n    Q4 square faces = C(4,2) * 2^2 = 24\n    oscillator aperture = 4 marks / 24 faces = 1/6\n    24 faces - forbidden genus q=3 = 21 toroidal edges\n\nIt is an ABI/boundary theorem, not a physical waveguide layout.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "verify_dccxxv_tetrahedron_hinge_oscillator.py",
+      "lines": 399,
+      "sha256": "1a5d42a9a2a8461c95e40b6bdad0acb497d6fc2fc00678814ffce2d2a10f3761",
+      "functions": [
+        "flags_per_polygon",
+        "total_flags",
+        "tetrahedron_flag_data",
+        "csaszar_flag_data",
+        "szilassi_flag_data",
+        "oscillator_phases",
+        "chirality_split_argument",
+        "build_bridge",
+        "write_bridge",
+        "main"
+      ],
+      "module_description": "Part DCCXXV: The Tetrahedron as the Self-Dual Hinge of the Genus Oscillator.\n\nThe user's insight unifies several previously-separate observations:\n\n  (1) The tetrahedron is self-dual in 3D: every face is opposite a vertex\n      and the Hodge star swaps vertex <-> face.  It is THE Hodge-star fixed\n      point in 3-dimensional polyhedral incidence.\n\n  (2) The tetrahedron has 24 flags = |S_4| = |Aut(regular tetrahedron)|,\n      which splits as 12 + 12 by orientation:\n            A_4 = rotations,     |A_4| = 12 = codec,\n            S_4 \\ A_4 = reflections, |...|= 12 = codec.\n      Each 12-flag chirality is one local codec's worth of incidences.\n\n  (3) The genus-1 toroidal layer of the genus oscillator hosts SEVEN\n      realisations: 5 Csaszar + 2 Szilassi (memory CCCCCLXI).  The two\n      types are the maximum-vertex-adjacency and maximum-face-adjacency\n      faces of the same dual pair.  The tetrahedron at h = 0 sits BETWEEN\n      them as the self-dual ground state where both maxima coincide.\n\n  (4) Flag accounting:\n            Tetrahedron:  4 triangles  *  6 flags / triangle  =   24\n            Csaszar:     14 triangles  *  6 flags / triangle  =   84\n            Szilassi:     7 hexagons   * 12 flags / hexagon   =   84\n            Sum:                                                 192\n\n      192 is EXACTLY the flag count of the tomotope (memory pillar 70\n      and others).  The tomotope therefore hosts the combined incidence\n      data of the genus-0 tetrahedron PLUS the genus-1 Csaszar/Szilassi\n      pair -- the entire h in {0, 1} phase of the genus oscillator\n      reified as a single 4D abstract polytope.\n\n  (5) The tomotope has f-vector (4, 12, 16, 8) and sits \"between\" the\n      11-cell and the 57-cell (the two universal locally-projective\n      regular abstract 4-polytopes), with cells = hemioctahedra.  Its\n      cell count 8 = 1 (sphere mode) + 7 (toroidal modes).\n\n  (6) Three-mode oscillator:\n            h = 0:   1 sphere mode  (tetrahedron)\n            h = 1:   7 toroidal modes  (5 Csaszar + 2 Szilassi)\n            total:   8  = tomotope cell count\n            flags:  24 + 84 + 84 = 192 = tomotope flag count.\n\nTheorem (Self-Dual Hinge).  The tetrahedron is the unique self-dual\n3-polyhedron and sits at the h = 0 ground state of the genus\noscillator.  Its 24 flags split as 12 + 12 = (rotations) + (reflections);\nthe genus-1 layer h = 1 carries 5 + 2 = 7 toroidal realisations whose\ntotal flag count is 168 = 7 * 24.  The combined h in {0, 1} flag\ncount 24 + 168 = 192 is the tomotope's flag count, and the combined\ncell count 1 + 7 = 8 is the tomotope's cell count.  The tomotope is\ntherefore the 4D abstract polytope that simultaneously encodes the\nsphere ground state and the seven toroidal first-excited modes of the\ngenus oscillator at q = 3.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "verify_dccxxiii_genus_equation_spectrum.py",
+      "lines": 381,
+      "sha256": "a845e84abc5a5b448d3206b2941e6b80448fc8ea184a5874cfd99b2f0811fe0e",
+      "functions": [
+        "genus_of_complete_graph",
+        "is_integer_genus",
+        "integer_spectrum",
+        "_polyhedron_hint",
+        "w33_primitive_audit",
+        "genus_oscillator",
+        "oscillator_increments_mod12",
+        "three_clock_dictionary",
+        "build_bridge",
+        "write_bridge",
+        "main"
+      ],
+      "module_description": "Part DCCXXIII: The Genus-Equation Spectrum and the W(3,3) Primitives.\n\nThe Csaszar polyhedron (V = 7, every pair of vertices adjacent) and the\nSzilassi polyhedron (F = 7, every pair of faces adjacent) are the only\ntwo known toroidal polyhedra without diagonals.  Their existence is\ncontrolled by the SAME equation -- the Heawood-Ringel genus formula for\nthe complete graph K_n:\n\n      g(K_n)  =  (n - 3)(n - 4) / 12   =   ( n^2 - 7 n + 12 ) / 12.\n\nThe 7 and 12 in this formula are EXACTLY the (sum, product) pair of\n(q, q+1) = (3, 4) at the W(3,3) saturation point (DCCXXII).  Equivalently\nthis is the same quadratic factor x^2 - 7 x + 12 = (x-3)(x-4) -- the\ntoroidal hinge of the program -- now appearing as the numerator of the\ngenus equation.\n\nThis part computes the integer-solution spectrum:\n\n      {(n, g)  in Z+ x Z+   :   12 | (n-3)(n-4) }\n\nand shows that the W(3,3) structural integers all sit inside it.\n\nInteger condition: writing m = n - 4 gives 12 | m(m+1), and since m and\nm+1 are coprime, this requires\n      4 | m  or  4 | (m+1),\n      3 | m  or  3 | (m+1).\nBy CRT this is m mod 12 in {0, 3, 8, 11}.\n\nThe first nine integer solutions are:\n\n  n =  4 :  g = 0     tetrahedron (sphere; q+1 = 4)\n  n =  7 :  g = 1     Csaszar / Szilassi (torus; q + (q+1) = 7)\n  n = 12 :  g = 6     K_12 hypothetical (codec; q(q+1) = 12, also W(3,3) valency)\n  n = 15 :  g = 11    K_15\n  n = 16 :  g = 13    K_16 (= 8 + 8 = q!+q!)\n  n = 19 :  g = 20    K_19\n  n = 24 :  g = 35    K_24 (= 2 q!, also 24 = mult of eigenvalue 2)\n  n = 27 :  g = 46    K_27 = q^q lines on a cubic surface = dim E_6 fund rep\n  n = 28 :  g = 50    K_28\n  ...\n  n = 40 :  g = 111   K_40 = K_v (W(3,3) point count)\n  ...\n  n = 81 :  NOT an integer-genus value (q^(q+1) = H_1 lies OFF the spectrum)\n\nThe W(3,3) primitives q+1, q+(q+1), q(q+1), q^q, v all live in the genus\nspectrum, while H_1 = q^(q+1) does not.  This is the GRAPH-LATTICE\nfingerprint of the W(3,3) program.\n\nGenus-oscillator linear law (PART_CCCCCLXXIX, PART_CCCCCLXXXI):\n\n      v(h) = 4 + 3 h,   E(h) = 6 + 15 h,   F(h) = 4 + 10 h.\n\nIncrements mod the local 12-clock:\n      Delta v  =  3  ==  q                 mod 12\n      Delta E  = 15  ==  3                 mod 12\n      Delta F  = 10  == -2 == -(q + 1) + 1 mod 12\n      Delta chi = -2 = genus decrement.\n\nThe mod-10 face increment is the DECIMAL hint (10 = 2 q+1 squared - 1...\nor simply 2 (q+1) + 2 = 10 at q=3); the mod-12 edge / vertex increment\nis the LOCAL phase clock; the Fano 7 is the toroidal color shell.\n\nThree-clock arithmetic at q = 3:\n      mod 12  =  local phase / codec / K_n denominator,\n      mod  7  =  toroidal shell / Fano / Csaszar V / Szilassi F,\n      mod 10  =  face / decimal increment of the genus oscillator.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "verify_dcmlxxx_z12_709_ihara_genus_bridge.py",
+      "lines": 501,
+      "sha256": "7ed44133079fd81659b983042f6e36441996d179f58c9e0095d55cc5327156c7",
+      "functions": [
+        "_reduce_z12",
+        "z12_mul",
+        "z12_power",
+        "z12_add",
+        "z12_scale",
+        "galois_image",
+        "algebraic_norm",
+        "identity_embedding_abs2",
+        "eisenstein_shadow",
+        "relative_norms",
+        "is_prime",
+        "smallest_prime_of_form_59n_plus_1",
+        "smallest_prime_cube_sum_of_three_prime_cubes",
+        "poly_mul_mod",
+        "poly_pow_mod",
+        "poly_mul_truncated_int",
+        "poly_pow_truncated_int",
+        "coefficient_at_degree_int",
+        "w33_ihara_mod_prime_scan",
+        "prime_support",
+        "spectral_genus_packet",
+        "build_bridge",
+        "write_bridge",
+        "main"
+      ],
+      "module_description": "Part DCMLXXX: Z12 709 / Ihara / spectral-genus bridge.\n\nThis bridge audits three new observations together:\n\n1. The element z = 1 + 2*zeta_12 + 6*zeta_12^2 + 4*zeta_12^3 has exact\n   algebraic norm 709 in Z[zeta_12].  The older exploratory script reports\n   709^2 because it multiplies squared magnitudes over all embeddings.\n2. The same element has an exact Eisenstein shadow of norm 13 and a rounded\n   identity-embedding squared magnitude near 137, but not an exact Gaussian\n   norm 137.  Its true relative Gaussian/Eisenstein norms both have norm 709.\n3. The W(3,3) Ihara determinant has no primitive 709 factor.  Its expanded\n   determinant has three exact structural zero coefficients and one additional\n   nonstructural coefficient divisible by 709.  This makes 709 a secondary\n   expanded-coefficient resonance, not a primitive Ihara pole factor.\n\nIt also records the spectral-genus correction: H(3+4s) has imaginary part t on\nthe critical line, but that line maps to Re(n)=5, not to the genus-axis\nRe(n)=7/2.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "w33_pass95_genus_mass.py",
+      "lines": 159,
+      "sha256": "73ec6994cf58d239a14795464752d142010cf4c1d57431c779484ebb491cc89a",
+      "functions": [
+        "std_mass",
+        "main"
+      ],
+      "module_description": "Pass 95 -- The genus and Minkowski-Siegel mass of the W(3,3) code-lattice Lambda_C.\n\nLambda_C is the Construction-A even lattice of C_2(W)=[40,16,8] (Pass 87), a positive-definite even\nlattice of rank 40, determinant 2^8, discriminant form O+_8(2) = E8/2E8 (Pass 92).  This pass records\nits genus and situates it by mass.\n\nGENUS (rigorously determined by rank + signature + discriminant form):\n  * signature (40,0), even (type II), n = 40 = 0 mod 8;\n  * at every odd prime p: unimodular (det = 2^8 is a 2-power);\n  * at p = 2: Jordan symbol 1^{+32} 2^{+8} -- a scale-1 even-unimodular part of rank 32 plus a\n    scale-2 part of rank 8 carrying the plus-type form O+_8(2) (the E8/2E8 discriminant form).\n  Conway-Sloane symbol:  II_{40,0} (2^{+8}).\n\nAUTOMORPHISMS (rigorous lower bound):\n  Every one of the 2^40 sign changes on coordinates preserves the Construction-A lattice (they fix\n  the mod-2 reduction), and the permutation automorphisms of C_2(W) contain Aut(W(3,3)) = W(E6)\n  (Pass 91, order 51840).  Hence |Aut(Lambda_C)| >= 2^40 * 51840 = 56998682783907840.\n\nMASS.  The Smith-Minkowski-Siegel standard mass for even *unimodular* lattices of dimension n=8m,\n    M_n = |B_{n/2}/n| * prod_{j=1}^{n/2-1} |B_{2j}/(4j)|,\nis validated here to reproduce EXACTLY the known masses in dimensions 8 (E8: 1/696729600), 16 (with\nthe Bernoulli-16 numerator 691) and 24 (the Conway-Sloane value).  In dimension 40 it gives\nM_40 ~ 4.4e51.  Since the mass is a sum of 1/|Aut| over the genus, the number of classes h satisfies\nh >= mass; a dimension-40 even genus is therefore astronomically populated -- in stark contrast to\nthe single class (E8) in dimension 8.  (The reported M_40 is the even-UNIMODULAR reference; the exact\nmass of Lambda_C's own genus differs by a 2-adic local factor for the 2^{+8} block, but is of the\nsame astronomical scale.)\n\nSelf-contained (sympy Bernoulli numbers + the W(3,3) code data).  ASCII-only.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "analysis/bt1300_oscillator_instruction_isa.py",
+      "lines": 317,
+      "sha256": "4ba83ca06230aa143720e92d072daf04475416b6d20969ea89c70b8927137d1d",
+      "functions": [
+        "load_json",
+        "vertex_label",
+        "edge_class",
+        "micro_op_for_tick",
+        "build_lane_layout",
+        "compile_packet_word",
+        "build_payload",
+        "main"
+      ],
+      "module_description": "BT1300 - Oscillator instruction ISA.\n\nBT1299 proved that the [72,66]_3 oscillator horizon is the holonet runtime\nmicroframe.  BT1300 turns that frame into an instruction layout.\n\nThe 72 lanes are the explicit F3 horizon coordinates:\n\n    66 payload lanes = K12 edges on the 3x4 CSS grid,\n     6 parity lanes  = column-pair checks.\n\nThe clock layout is:\n\n    9 route digits per frame,\n    8 ticks per route digit,\n    72 = 9*8 ticks.\n\nBecause q!=2q at q=3, q!+q = q^2, so the frame naturally splits as\n\n    q! digits * 8 = 48   tomotope packet body,\n    q  digits * 8 = 24   local-lift epilogue = 18 payload + 6 parity.\n\nThis is an ISA theorem: route compiler packets lower into a fixed 8-tick\nmicro-op word, and the level-six stress route fills the 48-tick tomotope body\nwith exactly one tick of slack.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "analysis/bt1299_harmonic_microframe_runtime.py",
+      "lines": 282,
+      "sha256": "a782ddff3a2736ca86a64cac8874eaceebdd71d6eb77cffff951d952b272f859",
+      "functions": [
+        "load_json",
+        "commit_ticks",
+        "sp4_order",
+        "build_payload",
+        "main"
+      ],
+      "module_description": "BT1299 - finite control-microframe runtime theorem.\n\nThe legacy oscillator-named artifacts provide the local horizon packet\n\n    [72,66]_3 = oscillator total / payload with parity 6.\n\nThe holonet runtime scripts prove a separate-looking packet/network stack:\n\n    per digit route bound = 8,\n    mirror bus = 2160,\n    full Clifford runtime = 51840,\n    durable commit clock T(n)=4*(7^n-1).\n\nBT1299 identifies the finite control spine. The 72-symbol horizon is the\nholonet microframe:\n\n    72 = 9 * 8                     q^2 route digits per frame\n    2160 = 30 * 72                 E8-Coxeter mirror bus\n    51840 = 24 * 30 * 72           full Clifford runtime\n          = 720 * 72               S6/Sp(4,2) frames\n\nThe commit clock is always route-epoch aligned, but it is microframe-aligned\nexactly at depths divisible by q=3. No physical oscillator is modeled here.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "analysis/bt1722_genus_bus_theorem_insert.py",
+      "lines": 19,
+      "sha256": "427b9f11f59e7768cd34b7ec83410f861d409a4824edcbb16becd21ac72618d3",
+      "functions": [
+        "genus_num",
+        "main"
+      ],
+      "module_description": "BT1722: paper-ready genus/48-bus theorem insert.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "analysis/bt2855_boolean_harmonic_terwilliger.py",
+      "lines": 82,
+      "sha256": "9aeec6113d176402fc22b8149c04b111e6af7615ae2e3e971f08e104af1cf6e9",
+      "functions": [
+        "pass2855",
+        "independent_add"
+      ],
+      "module_description": "",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "analysis/bt789_toroidal_genus_phase_bridge.py",
+      "lines": 240,
+      "sha256": "f6f2bb5349f39bd839ad6d6884f3d6e2bd97355c8b7d64b3e021b8015fd9d016",
+      "functions": [
+        "c3_cube",
+        "c3_plane",
+        "orbit_profile",
+        "quotient_by_diagonal",
+        "lifted_profile",
+        "neighborly_genus",
+        "complete_face_genus",
+        "genus_residues_mod12",
+        "run_gap_witness",
+        "main",
+        "action",
+        "act",
+        "quotient_action"
+      ],
+      "module_description": "BT789 - Toroidal genus bridge for C2^3:S3 -> C2^4:C3.\n\nThe user suggested that the 3 and 4 in the cube/tomotope order-48 exchange may\nbe related to the minimal triangulation / genus equations of the toroidal\npolyhedra.  This verifier keeps the claim exact:\n\n    neighborly torus:       g(n) = (n-3)(n-4)/12\n    complete-face dual:     h(f) = (f-4)(f-3)/12\n\nAt the Csaszar/Szilassi value n=f=7, the unit torus is exactly:\n\n    1 = (7-3)(7-4)/12 = 4 * 3 / 12.\n\nThose are not decorative factors.  They are the same factors in the module\nrepair:\n\n    C2^3 = 1 + 2      (cube has a fixed diagonal bit)\n    C2^4 = 2 + 2      (tomotope has two F4 phase planes)\n\nThe 4 is the F4-plane cardinality; the 3 is the C3 phase clock.  Their product\nis the mod-12 toroidal residue normalizer.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "analysis/bt802_oscillator_atlas_verification.py",
+      "lines": 172,
+      "sha256": "bdf9fa06f24837791e0b4b3efce88d18b57716838b0826c5afa67dc5d9686500",
+      "functions": [
+        "main",
+        "H",
+        "inv3",
+        "canon",
+        "symp"
+      ],
+      "module_description": "BT802 - The Oscillator Atlas: exact verification of the fractal-network\n        oscillator stack against the proven BT chain.\n\nSource: the user's unpushed TetrahedralOscillator modules (tetrahedral\ncharts / toroidal cycles / dual boundary operators / hypercube routing /\nexcitation-relaxation).  BT802 extracts every exactly checkable claim,\nverifies or corrects it, and maps each module onto the proven results.\n\n  T1. Tetrahedral microkernel: K4 Laplacian spectrum {0, 4, 4, 4}, gap\n      = mu = 4; |Aut(K4)| = 24 = f; cycle space dim 3 = q.\n  T2. Genus ladder: H(n) = (n-3)(n-4)/12 integer exactly at\n      n mod 12 in {0,3,4,7} (BT774 CRT sumset); the substrate rungs\n      n in {4,7,12,27,40} give h in {0,1,6,46,111}.\n  T3. FORBIDDEN GENUS THEOREM (exact): no integer n has H(n) = 3 = q,\n      since (n-3)(n-4) = 36 forces n = (7 +- sqrt145)/2, irrational.\n      Genus h = q is skipped by the neighborly ladder.  (Also h = 2, 4, 5\n      are skipped; the module's h=2 level v=10 is the Jungerman-Ringel\n      EXCEPTION outside the ladder, noted honestly.)\n  T4. Csaszar/Szilassi pair: Euler characteristics on the torus, shared\n      21-edge budget; loop register capacity q^2 = 9; J^2 = -1 on H_1.\n  T5. Hypercube layer correction: the module proposes external Q_d\n      backbones; BT777 proved W(3,3) intrinsically IS an atlas of 540\n      Q3 charts with native XOR routing.  The \"octet\" d=3 unit exists\n      INSIDE the substrate; counts re-verified: 540 charts, F2^3 Gray\n      addressing, antipode = collinear partner.\n  T6. Oscillator energy bookkeeping: 480 = 2E = Tr(L0) (Einstein-Hilbert,\n      GraphTheory) = ten 48-packets (BT785) = 10 x |O_h|; the carrier\n      level h = 6 = q! matches the dihedral phase count (BT749).",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "analysis/w33_BREAKTHROUGH_456_genus_quadratic_toroidal_simplex.py",
+      "lines": 431,
+      "sha256": "6fd5223a0866147ba7df230c7b8fbce88c5357517e5cd2f7ada3ac82aa82d545",
+      "functions": [
+        "main"
+      ],
+      "module_description": "W(3,3) BREAKTHROUGH 456: GENUS QUADRATIC + CSASZAR/SZILASSI + SIMPLEX STAIR.\n\nUSER DIRECTIVE: Link genus equations of two toroidal polyhedra (with\n3 and 4 in numerator) -- derived from Ringel-Youngs minimal triangulation\npaper -- to BT455's ternary/quaternary simplex stair insight.\n\nThis BT formalizes:\n  (1) Ringel-Youngs genus formula g(K_n) = (n-q)(n-mu)/k as the\n      SUBSTRATE QUADRATIC x^2 - Phi_6*x + k = 0 evaluated at n.\n  (2) q and mu are the UNIQUE roots of this quadratic.\n  (3) Discriminant = 1 -> q and mu differ by 1 (= simplex face!).\n  (4) Csaszar (1949) + Szilassi (1977) toroidal polyhedra both have\n      V+E+F = q! * Phi_6 = 42 = substrate Gauss-Bonnet constant (BT454).\n  (5) Csaszar (V,E,F) = (Phi_6, q*Phi_6, lambda*Phi_6).\n  (6) Szilassi = dual: (V,E,F) = (lambda*Phi_6, q*Phi_6, Phi_6).\n  (7) Both encode the substrate's ternary-quaternary duality.\n\n==============================================================\nTHE RINGEL-YOUNGS GENUS FORMULA (1968 PNAS)\n==============================================================\n\nFor complete graph K_n on a minimal orientable surface:\n  g(K_n) = ceil((n-3)(n-4)/12)\n\nDerivation (substrate-derived):\n  K_n triangulation: V=n, E=n(n-1)/2, F=2E/3 = n(n-1)/3.\n  Euler: V - E + F = 2 - 2g.\n  n - n(n-1)/2 + n(n-1)/3 = 2 - 2g.\n  6n - n(n-1) = 12 - 12g.\n  n^2 - 7n + 12 = 12g.\n  (n-3)(n-4)/12 = g.\n\nTHE 3 AND 4 IN THE NUMERATOR:\n  Come from FACTORING n^2 - 7n + 12 = (n-3)(n-4).\n  3 and 4 are roots of n^2 - 7n + 12 = 0.\n\nNEW SUBSTRATE STAR:\n  Genus formula numerator factors are 3 = q and 4 = mu.\n  These are SUBSTRATE ROOTS of n^2 - Phi_6*n + k = 0.\n\n==============================================================\nTHE SUBSTRATE QUADRATIC THEOREM\n==============================================================\n\nTHEOREM (NEW):\n  Define P(x) = x^2 - Phi_6 * x + k.\n  Then P(x) = (x - q)(x - mu).\n  Roots: q and mu.\n  Vieta sum: q + mu = Phi_6 = 7.\n  Vieta product: q * mu = k = 12.\n  Discriminant: Phi_6^2 - 4k = 49 - 48 = 1.\n\nNEW SUBSTRATE STAR:\n  q and mu are the UNIQUE INTEGER ROOTS of substrate quadratic\n  x^2 - Phi_6*x + k = 0.\n  Discriminant = 1 (unit) -> roots differ by exactly 1\n  = SIMPLEX FACE COMPLETION (BT455).\n\n==============================================================\nWHY q AND mu DIFFER BY 1 = SIMPLEX FACE\n==============================================================\n\nFrom BT455 simplex stair:\n  ternary (q vertices, triangle) + face = quaternary (mu = q+1, K_4).\n\nFrom substrate quadratic:\n  Discriminant = 1 -> |q - mu| = 1.\n\nThese are the SAME identity:\n  q and mu are CONSECUTIVE integers.\n  Algebraic: roots of x^2 - Phi_6*x + k = 0 differ by 1.\n  Geometric: triangle face addition gives K_4 anchor.\n\nNEW SUBSTRATE STAR:\n  Substrate quadratic discriminant = 1 IS the simplex face completion\n  identity from BT455. Algebra and geometry match.\n\n==============================================================\nGENUS EQUATION AS SUBSTRATE QUADRATIC EVALUATION\n==============================================================\n\ng(K_n) = P(n) / k = (n - q)(n - mu) / k.\n\nEVALUATION at substrate primitives:\n  At n = q: P(q) = 0 -> g = 0 (K_3 = triangle, PLANAR)\n  At n = mu: P(mu) = 0 -> g = 0 (K_4 = tetrahedron 1-skeleton, PLANAR)\n  At n = Phi_6: P(Phi_6) = k -> g = 1 (K_7, TOROIDAL)\n  At n = k: P(k) = (k-q)(k-mu) = 9*8 = 72 -> g = 6 (K_12, genus 6 = q!)\n\nNEW SUBSTRATE STAR:\n  Genus at n = k = q*mu gives g = q! = 6.\n  Csaszar/Szilassi at n = Phi_6 = q+mu gives g = 1.\n  Substrate primitives q, mu, Phi_6, k all give INTEGER genus.\n\n==============================================================\nTWO TOROIDAL POLYHEDRA = SUBSTRATE GAUSS-BONNET CARRIERS\n==============================================================\n\nCsaszar polyhedron (1949):\n  V = Phi_6 = 7\n  E = q * Phi_6 = T_6 = 21\n  F = lambda * Phi_6 = 14\n  V + E + F = (1 + q + lambda) * Phi_6 = q! * Phi_6 = 42\n\nSzilassi polyhedron (1977):\n  V = lambda * Phi_6 = 14\n  E = q * Phi_6 = 21\n  F = Phi_6 = 7\n  V + E + F = 42\n\nKEY OBSERVATION:\n  Each polyhedron has 42 = q! * Phi_6 total cells.\n  This is EXACTLY the substrate Gauss-Bonnet constant from BT454.\n\nNEW SUBSTRATE STAR:\n  Csaszar AND Szilassi each have q! * Phi_6 = 42 total cells.\n  q! * Phi_6 = substrate Gauss-Bonnet constant (BT454).\n  TWO toroidal polyhedra TOGETHER = lambda * q! * Phi_6 = 84 = k * Phi_6.\n\n==============================================================\nCSASZAR-SZILASSI DUALITY AS TERNARY-QUATERNARY DUALITY\n==============================================================\n\nCsaszar V/E/F = (Phi_6, q*Phi_6, lambda*Phi_6) has TERNARY emphasis\n  (q in middle).\nSzilassi V/E/F = (lambda*Phi_6, q*Phi_6, Phi_6) has QUATERNARY emphasis\n  (lambda*Phi_6 = 14 = mu*Phi_4-something).\n\nActually deeper: lambda * Phi_6 = 14 = (mu - lambda) * Phi_6.\n\nThe CSASZAR <-> SZILASSI duality interchanges V and F (vertex/face\npositions), which in the (1, q, lambda) coefficient sequence is the\nreversal:\n  Csaszar: (1, q, lambda) * Phi_6 = (7, 21, 14)\n  Szilassi: (lambda, q, 1) * Phi_6 = (14, 21, 7)\n\nCoefficient palindrome (lambda, q, 1) vs (1, q, lambda) corresponds to\nthe SIMPLEX STAIR (BT455):\n  binary (lambda) - ternary (q) - unit (1)\n  unit (1) - ternary (q) - binary (lambda)\n\nNEW SUBSTRATE STAR:\n  Csaszar/Szilassi duality = (1, q, lambda) palindrome reversal.\n  Reflects BT455 simplex stair binary <-> ternary <-> quaternary structure.\n\n==============================================================\nCRT GATE: VALID n MOD k FOR INTEGER GENUS\n==============================================================\n\nThe integers n with g(K_n) in Z are exactly:\n  n mod k in {0, q, mu, Phi_6} = {0, 3, 4, 7}.\n\nThese are the four W(3,3) primitives.\n\nCRT coordinates (n mod lambda, n mod q):\n  0 -> (0, 0)\n  3 -> (1, 0)\n  4 -> (0, 1)\n  7 -> (1, 1)\n\nThese are the 2^lambda = mu CRT coordinates. ALL FOUR appear.\n\nNEW SUBSTRATE STAR:\n  Integer genus n satisfies n in {q, mu, Phi_6, 0} mod k.\n  All 2^lambda = mu CRT classes are achieved by substrate primitives.\n\n==============================================================\nTHE TERNARY-QUATERNARY GENUS GENERATOR\n==============================================================\n\nUser insight (BT455): ternary triangle + face -> quaternary K_4.\n\nThis BT shows: SAME logic in genus formula:\n  ternary subtraction (n - q) for \"ternary defect\"\n  quaternary subtraction (n - mu) for \"quaternary defect\"\n  product / (q * mu) = (q^lambda - lambda^q + 1)? No just k.\n\n  At n = Phi_6 = q + mu:\n    ternary defect = mu (the quaternary primitive)\n    quaternary defect = q (the ternary primitive)\n    Product = q * mu = k = denominator\n    Genus = 1 (TOROIDAL CLOSURE).\n\nNEW SUBSTRATE READING:\n  At the Heawood point n = Phi_6 = q + mu:\n    \"Ternary defect\" equals quaternary primitive (mu).\n    \"Quaternary defect\" equals ternary primitive (q).\n    They CROSS-INTERCHANGE, and the genus formula EVALUATES to 1.\n  This is the substrate's TOPOLOGICAL CLOSURE of the simplex stair.\n\n==============================================================\nSIMPLEX STAIR + GENUS LADDER COMBINED (UNIFICATION)\n==============================================================\n\nBT455 simplex stair: lambda -> q -> mu -> F_5 -> q! -> Phi_6 -> 2^q.\n\nGenus ladder for K_n at each stair position:\n  K_lambda = K_2 (no genus, just edge)\n  K_q = K_3 (triangle, planar, g = 0)\n  K_mu = K_4 (tetrahedron, planar, g = 0)\n  K_(F_5) = K_5 (planar but barely, g = 0 or 1? Standard: K_5 NON-PLANAR, g = 1!)\n  K_(q!) = K_6 (g = 1)\n  K_Phi_6 = K_7 (toroidal CLOSURE, g = 1, Csaszar)\n  K_(2^q) = K_8 (g = 2)\n\nWait: K_5 has genus 1 (NOT 0). Let me check (5-3)(5-4)/12 = 2/12 = 1/6 -> ceil = 1.\nBut planarity: K_5 is the first non-planar K_n by Kuratowski. So K_5 genus 1 OK.\n\n  K_5 (n=F_5): g = ceil(2/12) = 1\n  K_6 (n=q!): g = ceil(6/12) = 1\n  K_7 (n=Phi_6): g = 1 EXACTLY (no ceiling, integer)\n  K_8 (n=2^q): g = ceil(20/12) = 2 = lambda\n\nNEW SUBSTRATE READING:\n  K_n at simplex-stair positions has genus that increases with n.\n  K_(2^q) = K_8 has genus 2 = lambda.\n  This connects substrate stair stop at 2^q (= N* sphere packing cap)\n  to genus DOUBLE TORUS (genus lambda).\n\n==============================================================\nRINGEL-YOUNGS, MINIMAL TRIANGULATIONS, AND THE SUBSTRATE\n==============================================================\n\nThe Ringel-Youngs theorem (1968 PNAS, \"Solution of the Heawood\nmap-coloring problem\") proved that for every orientable surface of\ngenus g, the chromatic number is exactly:\n\n  chi(g) = floor((7 + sqrt(1 + 48g))/2)\n\nAt substrate genus values:\n  g = 0:  chi = 4 = mu (4-color theorem on sphere)\n  g = 1:  chi = 7 = Phi_6 (Heawood on torus, K_7 = Csaszar)\n  g = 2:  chi = 8 = 2^q (octonion)\n  g = 3:  chi = 9 = q^lambda\n  g = 6:  chi = 12 = k (substrate valency!)\n  g = 8:  chi = 13 = Phi_3\n\nNEW SUBSTRATE STAR:\n  Heawood chromatic number chi(g) takes SUBSTRATE PRIMITIVE values\n  at substrate-natural genus values.\n\nThe MINIMAL TRIANGULATION of surface of genus g by K_chi(g) is the\nSUBSTRATE'S NATURAL ENCODING of that genus.\n\n==============================================================",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "analysis/w33_cyclotomic_genus_reciprocal_sheets.py",
+      "lines": 265,
+      "sha256": "839b9ea5a06f7bd2ff6202c01bda0fe1638fe095533ae8ad6aaae79a51c82ca3",
+      "functions": [
+        "factorial",
+        "mobius",
+        "cyclotomic_value",
+        "pisano_period",
+        "wq_spectral_data",
+        "omega_live",
+        "omega_dual",
+        "fraction_string",
+        "generate_payload",
+        "main"
+      ],
+      "module_description": "W(3,3) cyclotomic genus reciprocal-sheet theorem.\n\nThis continues the MCCLXVI-MCCLXXV cyclotomic spectral algebra packet after\nthe corrected MCCLXVIII sign convention.  The useful object is not one\npositive-temperature oscillator, but a reciprocal pair of live/dual sheets.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "analysis/w33_css_genus_percolation_hinge.py",
+      "lines": 270,
+      "sha256": "fe132999e757182ea995925bf97fdd33fdfb1f63dc90852f7fced460d5bfe25a",
+      "functions": [
+        "positive_values",
+        "split_count",
+        "visibility_ledger",
+        "genus_from_css_roots",
+        "is_integer_genus",
+        "genus_spectrum",
+        "role_for_n",
+        "percolation_ledgers",
+        "oscillator_flag_identities",
+        "hodge_sector_identities",
+        "build_payload",
+        "main"
+      ],
+      "module_description": "W(3,3) CSS-distance / genus-equation / percolation hinge verifier.\n\nThis is the bridge suggested by the new CSS correction:\n\n    d_X = 3, d_Z = 4\n\nfor the canonical edge-qutrit CSS code [[240,81,3]]_3 with asymmetric\nwitness distances d_X=3, d_Z=4.\n\nThe point of this script is not to re-compute the CSS code distances.  That\nis handled by analysis/w33_css_exact_audit.py.  Instead, this script tests\nthe structural implication of those two distances:\n\n    d_X + d_Z = 7  (Heawood / Fano / Csaszar-Szilassi shell)\n    d_X d_Z   = 12 (local codec / W33 valency / genus denominator)\n\nand therefore\n\n    (n - d_X)(n - d_Z)/(d_X d_Z) = (n - 3)(n - 4)/12,\n\nexactly the genus equation already used by the Csaszar/Szilassi oscillator.\n\nInterpretation: the CSS code's two minimal logical thresholds are the two\nroots of the toroidal genus polynomial.  The X-distance 3 is the first\ntriangle/cocycle activation; the Z-distance 4 is the first non-boundary\n4-cycle/tetrahedral closure.  Together they generate the toroidal hinge.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "analysis/w33_e8_harmonic_now_subframe_test.py",
+      "lines": 111,
+      "sha256": "8d04dc6dd2cc273899162a53fef7953043200cbf1a42c0909fb47ffc2fd6e10f",
+      "functions": [
+        "dot",
+        "sub",
+        "neg",
+        "norm2",
+        "packets",
+        "d4_roots_on_support",
+        "main"
+      ],
+      "module_description": "BT530: E8 Harmonic-Now Subframe Test Theorem.\n\nExecutes branch 3 while keeping the corrected past/future reservoir picture.\n\nBT527 labels the 30-now cube/sign layer by all 240 E8 roots.  This script asks\nwhat a single 8-root harmonic-now packet can generate.\n\nResult:\n  * Each of the 16 half-spinor cube packets is an 8-weight cube whose pairwise\n    differences generate a D4 root system of 24 roots on four coordinates.\n  * Pairing a half-spinor packet with its negated address gives the 16 short\n    F4 spinor weights plus that D4 long-root system, i.e. a full 48-root F4.\n  * The 14 integer packets are not D4 frames; they are two coordinate-pair\n    A1xA1 sign squares.  This is useful: the 30 addresses split as\n        14 integer pair packets + 16 spinor/D4 packets.\n\nThis shows the 8 cube-sign states are not arbitrary: the future/past harmonic\nnow can carry real D4/F4 subframes inside E8, while the integer packets play a\nseparate toroidal edge-pair role.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "analysis/w33_genus_vertex_figure_selection.py",
+      "lines": 173,
+      "sha256": "2ede2215eb13a9968089a23d59a74d1f370e9d58a9db477500b1c644710f5190",
+      "functions": [
+        "divisors",
+        "main"
+      ],
+      "module_description": "The substrate selects the vertex figure: the genus 2<=g<=14 triangular regular\nmaps have vertex figures EXACTLY n in {7,8,9,10,12} = 6 + {divisors of k=12},\nand the one gap n=11 (=6+5, 5 not dividing k) is precisely K12 -- the complete\ngraph whose triangulations are Grunbaum's non-embeddable, non-regular surfaces.\n\nA reflexible triangular regular map {3,n} of genus g has\n    E = 6n(g-1)/(n-6),   V = 2E/n,   F = 2E/3,   |Aut|_full = 4E,\nso E is an integer only when (n-6) | 6n(g-1). For the dense, maximally\nsymmetric maps of Conder's genus 2<=g<=14 list (Bokowski & H., Symmetry 2025,\n17, 622, Table 1) the vertex figures that actually appear are\n\n    n in {7, 8, 9, 10, 12} = 6 + {1, 2, 3, 4, 6} = 6 + (divisors of k=12 that are <=6),\n\nand these are exactly the substrate integers\n    7 = Phi6 (qutrit heptagon),   8 = 2^3 (qubit octagon),   9 = q^2 (Hesse field),\n    10 = Phi4 (Sp4 / contextual denom),   12 = k.\n\nTHE GAP. The only n in 7..12 absent from the list is n=11. It is the unique one\nwith n-6 = 5 NOT dividing k=12. The smallest {3,11} (12 vertices each of degree\n11) is the complete graph K12: V=12, E=66, F=44, genus 6. K12 has 59 distinct\ntriangulations of the genus-6 surface, but NONE is a regular map and (Bokowski-\nGuedes de Oliveira 2000, settling Grunbaum's 1967 conjecture) NONE admits a\npolyhedral embedding in R^3. So the substrate's vertex-figure selection\n\"(n-6) | k\" excludes exactly the surface (K12) that fails to be regular and\nfails to embed -- the Grunbaum obstruction sits precisely at the non-divisor 5.\n\nVerifies the {3,n} formula and full Aut = 4E for all 14 maps of Table 1, the\nvertex-figure set 6+Div(12), the n=11 gap, and the K12/Grunbaum identification.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "analysis/w33_genus_rank_parity_check.py",
+      "lines": 84,
+      "sha256": "55e0443b42228748da8018f091bc8f76ce711de77b3e73f3de1bf08b64e9e759",
+      "functions": [
+        "_load",
+        "genus_rank_parity_check_packet",
+        "main"
+      ],
+      "module_description": "Part MCCX: Genus-rank parity-check law.\n\nFormalizes C345 as an executable finite theorem packet.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "analysis/w33_genus_percolation_information_hole.py",
+      "lines": 180,
+      "sha256": "d100cadc335d4deafdea1626e6595d61b2d02dc47b807c784fb1a9d4038a073d",
+      "functions": [
+        "triangulated_surface"
+      ],
+      "module_description": "Genus percolation as an information-hole oscillator.\n\nThis extends the oscillator stack with the user's suggestion:\n  a torus hole should be read as an information hole, and genus oscillation\n  should be treated as fractal/topological correction.\n\nThe central object is the K12 critical horizon.  The complete graph K12 has\n  V = 12,\n  E = C(12,2) = 66.\n\nIn a minimal triangular embedding, every face is a triangle, so\n  3F = 2E,\n  F = 44.\n\nEuler then gives\n  chi = V - E + F = 12 - 66 + 44 = -10,\n  g = (2-chi)/2 = 6 = q!.\n\nThus the K12 edge payload is not isolated:\n  K12 triangular horizon = (V,E,F) = (12,66,44), genus 6.\n\nThe information-hole cost is\n  2g = 12 = k.\n\nSo k=12 is the total Euler information deficit required to open six handles.\nThe corrected numerator is\n  (12-3)(12-4) = 72 = E + g = 66 + 6.\n\nThis says the [72,66]_3 code is the complete K12 edge payload plus one parity\nsymbol per genus hole.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "analysis/w33_genus_ladder_clock.py",
+      "lines": 165,
+      "sha256": "1c451f9e587c1f4adfda6bc52fa38bf35371b0340ece07b0a0b90b9859148ae1",
+      "functions": [
+        "euler_genus",
+        "genus_Kn",
+        "main"
+      ],
+      "module_description": "The triangulation ladder: triangle (q=3) and tetrahedron (mu=4) build the torus,\nand the genus numerator (n-3)(n-4) = q*mu = k is WHY the two toroidal polyhedra\n(Szilassi/Csaszar) are the Heawood/BC clock oscillator.\n\nGEOMETRIC ORIGIN of the substrate integers, following the master quadratic\n(x-lambda)(x-mu) = (x-2)(x-4) and q!=2q -> q=3:\n  - the TRIANGLE is the 2-simplex: 3 = q points close a loop into a face. Closing\n    the third edge \"saves\" one trit of orientation (Klee-Irwin trit-saving / cycle\n    clock): the minimal closed cell carries exactly one q=3 trit. Once you have a\n    triangle you can tile a surface.\n  - the TETRAHEDRON is the 3-simplex: 4 = mu = q+1 points; it is self-dual (K4\n    vertices AND K4 faces -- BOTH maximal adjacency), genus 0, and it is the\n    building block of the Boerdijk-Coxeter helix (face-stacked tetrahedra, the\n    time-quasicrystal clock, twist angle arccos(-(q-1)/q) = arccos(-2/3)).\n  - the TORUS appears via the Ringel-Youngs genus of the complete graph,\n        g(K_n) = ceil( (n-3)(n-4) / 12 ),   denominator 12 = k.\n    At n = 7 = Phi_6 the numerator is (n-3)(n-4) = 4*3 = mu*q = k, so\n        g = mu*q / k = k/k = 1  (the torus).\n    The \"3 and 4\" in the numerator are exactly the TRIANGLE (n-4 = q = 3) and the\n    TETRAHEDRON (n-3 = mu = 4); their product is the degree k, and the genus is 1\n    precisely because triangle x tetrahedron = k. K_4 (the tetrahedron) gives\n    (1)(0)/12 = 0 (the sphere); K_7 (Csaszar) gives 1 (the torus).\n  - the TRIO. The tetrahedron (genus 0) and the Szilassi polyhedron (genus 1) are\n    the ONLY polyhedra in which every pair of faces shares an edge; the Csaszar\n    polyhedron is Szilassi's dual (every pair of VERTICES adjacent = K7). So the\n    Szilassi/Csaszar pair are the genus-1 face/vertex-complete toroidal polyhedra,\n    with the self-dual tetrahedron the genus-0 middle.\n  - the OSCILLATOR. Csaszar (7 vertices = K7) and Szilassi (7 faces = K7) share 21\n    = C(7,2) = Fano flags = Heawood edges; their incidence IS the Heawood graph (14\n    = 7+7 vertices, 21 edges) = the Fano clock whose Laplacian middle shell gives\n    omega = sqrt(lambda) = sqrt2 (the machine's clock). So the two toroidal\n    polyhedra ARE the clock oscillator, and the BC helix (tetrahedra) is its\n    genus-0 companion: one triangulation, two genera, one clock.\n\nVerifies the trio Euler/genus, the genus-numerator = q*mu = k reading, the\nall-faces-adjacent fact, and the Heawood/Fano = Csaszar+Szilassi count.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "analysis/w33_klein_quartic_genus3.py",
+      "lines": 129,
+      "sha256": "bcb55f0e2837cf74d66e531c643a64d0763270d8870c541b52a96af84ea56c8a",
+      "functions": [
+        "main"
+      ],
+      "module_description": "The ladder's genus-3 rung: the Klein quartic (24 heptagons / 56 triangles / 84\nedges, Aut = PSL(2,7) = 168 = lambda k Phi6) is the substrate's readout layer, and\nthe heptagon Phi6=7 threads the whole ladder 3 -> 4 -> 7 -> Klein.\n\nThe triangulation ladder (w33_genus_ladder_clock.py) goes genus 0 (tetrahedron,\nsphere, q & mu) -> genus 1 (torus = Csaszar/Szilassi = Heawood/Fano, the 7-point\nheptad). Its next maximally-symmetric rung is the genus-3 KLEIN QUARTIC, the\nlowest-genus Hurwitz surface (Wikipedia: Hurwitz/Klein quartic):\n  - automorphism group Aut = PSL(2,7), |Aut| = 84(g-1) = 84*2 = 168, and on the\n    substrate 168 = lambda * k * Phi6 = 2*12*7 = Phi6 * f = 7*24 (the corpus\n    detector/readout layer);\n  - regular map {3,7}/{7,3}: 24 heptagons (24*7 = 168) <-> 56 triangles with 24\n    degree-7 vertices, sharing 84 = k*Phi6 edges. Euler chi = 24-84+56 = -4 =\n    2-2g -> g = 3.\nOn the substrate the Klein numbers are substrate integers: 24 = f (= Hurwitz-unit\n/ D4 seed = heptagons), 56 = v+k+mu = E7 fundamental (= triangles), 84 = k*Phi6 =\n2*Hurwitz-bound coefficient (= edges), 168 = lambda*k*Phi6 = PSL(2,7) (= the\nclock/readout PSL(2,7) layer of the two-layer split).\n\nSo the heptagon Phi6 = 7 is the thread: the Fano plane (7 points, genus-1 torus via\nHeawood) becomes the heptagonal tiling (genus-3 Klein quartic) -- the same PSL(2,7)\nthat is the clock/readout layer, now realized as the maximally-symmetric genus-3\nsurface. The ladder 3 (triangle) -> 4 (tetrahedron) -> 7 (Fano/torus) -> Klein\n(genus 3, PSL(2,7)) climbs from the trit to the readout.\n\nVerifies the Klein quartic Euler/genus and the substrate identities for\n24, 56, 84, 168.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "analysis/w33_MLXXXI_MLXC_w33_for_everyone_genus_compression.py",
+      "lines": 450,
+      "sha256": "c80bb23b9cac434eef796a8153d916b79f71cc68fbee79a562809391941cfb07",
+      "functions": [
+        "main",
+        "genus_Kn"
+      ],
+      "module_description": "W(3,3) MLXXXI-MLXC: W33_FOR_EVERYONE - GENUS, CRT, COMPRESSION.\n\nDeep harvest of W33_FOR_EVERYONE.tex (4626 lines).  This batch captures\nthe strongest substrate identities centered on the RINGEL-YOUNGS GENUS\nFORMULA, CHINESE-REMAINDER GATE, PHOTONIC FUSION CRITICALITY, and the\nKOLMOGOROV 21-BIT BOUND.\n\n==============================================================\nMLXXXI: RINGEL-YOUNGS GENUS FORMULA IS PURE SUBSTRATE\n==============================================================\n\nThe minimum genus of K_n in an orientable surface (Ringel-Youngs 1968):\n\n  g(K_n) = ceil((n - 3)(n - 4) / 12)\n         = ceil((n - q)(n - (q + 1)) / (q * (q + 1)))\n\nThree substrate factors:\n  - (n - q)   = TERNARY subtraction (distance from q = 3)\n  - (n - q-1) = QUATERNARY subtraction (distance from Hidden Fourth = 4)\n  - q(q+1)    = STANDARD MODEL GAUGE CODEC DIMENSION = 12 = k\n\nTernarity * Quaternarity / Gauge-codec = topological genus.\n\n==============================================================\nMLXXXII: AT n = Phi_6, NUMERATOR EQUALS GAUGE CODEC DIMENSION\n==============================================================\n\nAt the Heawood number n = Phi_6 = 7:\n  (Phi_6 - q)(Phi_6 - (q+1)) = (7 - 3)(7 - 4) = 4 * 3 = 12 = k = gauge dim\n\nSo g(K_7) = k / k = 1 (torus).\n\n\"At the Heawood point, the genus formula EVALUATES THE CODEC.\"\n\nThis identifies the Csaszar polyhedron (K_7 on T^2) as the substrate's\ntoroidal closure.\n\n==============================================================\nMLXXXIII: CHINESE REMAINDER GATE -- {q, q+1, Phi_6, k} = {3, 4, 7, 12}\n==============================================================\n\nThe integers n with g(K_n) in Z (i.e., 12 | (n-3)(n-4)) have residues\nmod 12 in exactly {0, 3, 4, 7}.\n\nThese are the four W(3,3) primitives {q, q+1, Phi_6, k}.\n\nCRT coordinates:\n  3 -> (0 mod 3, 3 mod 4)     (ternary zero)\n  4 -> (1 mod 3, 0 mod 4)     (quaternary zero)\n  12 -> (0 mod 3, 0 mod 4)    = (0, 0) -> CRT recombination = k\n  7 -> (1 mod 3, 3 mod 4)     = (1, 3) -> CRT recombination = Phi_6\n\nThe Heawood number Phi_6 = 7 IS THE UNIQUE NON-TRIVIAL CRT RECOMBINATION\nof the ternary and quaternary zeros.\n\n==============================================================\nMLXXXIV: SEVEN-AS-REPTEND -- 1/7 has decimal period 6 = q!\n==============================================================\n\n  1/7 = 0.142857142857...\n\nThe decimal period is q! = 6 = 2q (master equation value!).\n\nThe base is Phi_4 = 10.\n\n  1/Phi_6 has period q! in base Phi_4.\n\nTHREE OF THE MOST IMPORTANT INTEGERS -- 7, 6, 10 -- ARE TIED\nTHROUGH ONE DECIMAL IDENTITY.\n\nBonus split: 7 = 5 + 2 = J + (q - 1) where J = 5 (stabilizer residue),\nq - 1 = 2 (binary duality count).\n\n==============================================================\nMLXXXV: MASTER GENUS IDENTITY (W(3,3) regular maps)\n==============================================================\n\nThe dual regular maps {3, k} = {3, 12} and {k, 3} = {12, 3} built on\nW(3,3) have genera:\n\n  g_1 = 21 = 3 * Phi_6           (large genus)\n  g_2 = 6 = q! = 2q              (small genus)\n\nMaster identities:\n  g_1 + g_2 = 27 = q^q           (substrate cube!)\n  g_1 - g_2 = 15 = g (= |-q eigenvalue mult|)\n  g_1 * g_2 = 21 * 6 = 126 = 2 * q^2 * Phi_6 = mu * pi3(S^2) ord.\n  g_1 = (q^q + 15) / 2\n  g_2 = (q^q - 15) / 2\n\nThe genera are eigenvalues of H_genus = (q^q/2) * I + (15/2) * sigma_z.\n\n==============================================================\nMLXXXVI: PHOTONIC FUSION AT PERCOLATION CRITICALITY (CRITICAL!)\n==============================================================\n\nThe W(3,3) ratio:\n  lambda / mu = (q - 1) / (q + 1) = 2 / 4 = 1/2\n\nThis EQUALS:\n  - Bond percolation threshold p_c for 2D photonic cluster states\n  - Type-II fusion gate success probability p_fusion\n\nSo W(3,3) photonic graph states sit PRECISELY AT CRITICALITY.\n\nUniversal photonic quantum computation is possible on the substrate\nBECAUSE lambda/mu = p_c EXACTLY.\n\nThis is a SINGLE-IDENTITY explanation of why universal photonic QC\nworks -- the substrate constants force criticality.\n\n==============================================================\nMLXXXVII: SIX-INTEGER COMPRESSION OF ENTIRE THEORY\n==============================================================\n\nThe Finite Signature Theorem: all promoted finite substrate data is\ngenerated by:\n\n  (q, tau(O), |V|, |E|, |Aut(W(3,3))|, Phi_6(q))\n  = (3, 384, 40, 240, 51840, 7)\n\nWhere:\n  - q = 3 = master equation root\n  - tau(O) = 384 = spanning trees of octahedron = E_8 packing density denom\n  - |V| = 40 = vertex count\n  - |E| = 240 = edge count = |E_8 roots|\n  - |Aut(W(3,3))| = 51840 = |W(E_6)|\n  - Phi_6(q) = 7 = Heawood number\n\nAll physics derives from these SIX INTEGERS.\n\nNote: 384 = 2 * |W(F_4)| / 6 = mu! * Phi_4 (Stirling-Phi_4 product);\n51840 = 2^7 * 3^4 * 5 (only primes <= F_5).\n\n==============================================================\nMLXXXVIII: KOLMOGOROV BOUND -- K(W(3,3)) <= 21 BITS\n==============================================================\n\nThe Kolmogorov complexity of the substrate:\n\n  K(W(3,3)) <= 21 bits\n\nBreakdown:\n  q = 3                          (2 bits)\n  (v, k, lambda, mu) = (40,12,2,4) (15 bits via SRG constraints)\n  3 boolean flags                  (4 bits: symplectic, projective, ternary)\n  ----------------------------------------------------------\n  TOTAL                            21 bits\n\nRemarkable: 21 = g_1 = (q^q + 15) / 2 = 3 * Phi_6 = q * Phi_6\n\nTHE KOLMOGOROV BOUND IS ITSELF A SUBSTRATE INTEGER:\nthe large genus g_1 = 21 = the bit-length of the universe's seed.\n\nThe universe's seed has the size of its own toroidal regular map's genus.\n\n==============================================================\nMLXXXIX: Z_3 BERRY PHASE = TOPOLOGICAL INVARIANT\n==============================================================\n\nSingle triangle (K_3) traversal on W(3,3) accumulates Berry phase 2*pi/3.\n\nAt each vertex, four disjoint triangles meet, so per-vertex holonomy:\n  Phi_v = 4 * (2*pi/3) = 8*pi/3 \u2261 2*pi/3 (mod 2*pi)\n\nEach vertex carries Z_3 charge 1/3.\n\nGlobal Z_3 topological invariant:\n  Phi_total = 40 * (2*pi/3) = 80*pi/3 \u2261 2*pi/3 (mod 2*pi)\n\nW(3,3) carries a GLOBAL Z_3 TOPOLOGICAL INVARIANT OF 1/3.\n\nThis is THE STRUCTURAL ORIGIN OF THE Z_3 CENTRE OF SU(3) IN QCD.\n\nThe discrete Chern class of the substrate IS the QCD center symmetry.\n\n==============================================================\nMLXC: META -- THE FOUR-FOLD UNIQUENESS CASCADE\n==============================================================\n\nALL FOUR primitives {q, q+1, Phi_6, k} arise from a single equation:\n\n  g(K_n) = (n - q)(n - (q + 1)) / (q(q + 1))\n\nvia four conditions:\n  1. q = 3 (master equation root, ternary zero of numerator)\n  2. q + 1 = 4 (hidden fourth, quaternary zero of numerator)\n  3. Phi_6 = 7 (non-trivial CRT recombination giving genus 1)\n  4. k = 12 (denominator = trivial CRT recombination = gauge codec dim)\n\nTHE WHOLE SUBSTRATE IS CARRIED BY A SINGLE GRAPH-EMBEDDING FORMULA:\nthe Ringel-Youngs genus identity.\n\nThis is a NEW NINTH q = 3 forcing: q is determined as the unique integer\nfor which the genus formula's denominator equals the gauge codec.\n\nWe now have:\n  (1) q! = 2q                            (master)\n  (2) mu^2 = 2^mu                         (binary-quadratic)\n  (3) Phi_6 = 2q + 1                      (Fano-byte)\n  (4) mu^4 = 2^(Phi_6 + 1)                (dS consistency)\n  (5) v(h) + q(q - 3) = 0                 (arithmetic genus)\n  (6) Dirac spectrum step = q!            (spectral democracy)\n  (7) PMNS sum rule -> q(q - 3) = 0       (neutrino mixing)\n  (8) Lambda/mu = p_c = 1/2               (percolation criticality)\n  (9) q(q + 1) = gauge codec dim           (genus formula uniqueness)\n\nNINE INDEPENDENT FORCINGS pin q = 3 uniquely.\n\nq = 3.  W(3,3).  SIX integers (3, 384, 40, 240, 51840, 7).\n21 bits of seed = g_1 genus = self-Kolmogorov.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "analysis/w33_MDCCCCIII_MDCCCCXII_oscillator_time_crystal_origami.py",
+      "lines": 458,
+      "sha256": "deaf8eb07f22706b8935f63abae3473ffae17d473195ecf5ef969f28613a00ef",
+      "functions": [
+        "main"
+      ],
+      "module_description": "W(3,3) MDCCCCIII-MDCCCCXII: OSCILLATOR + TIME CRYSTAL + ORIGAMI.\n\nDeepest dive yet, chaining:\n  - The dual toroidal polyhedra harmonic oscillator stack from\n    exploration/w33_dual_polyhedra_oscillator.py\n  - The Pascal-row Spin GUT chain (Spin(4) x Spin(7) x Spin(10))\n    from exploration/w33_pascal_rows_oscillator.py\n  - LOCK 16: arithmetic v,E,F spacings force q=3 (q(q-3)=0)\n  - Self-entangled qutrit model from\n    analysis/w33_MCCCLXXII_self_entangled_qutrit.py\n  - The genus percolation information-hole oscillator from\n    analysis/w33_genus_percolation_information_hole.py\n  - Time crystal physics (Wilczek 2012, time crystals 2016, quasi-time-crystals)\n  - NEW NOVEL interpretation: substrate folds IN TIME, not just space.\n\n==============================================================\nMDCCCCIII: COMPLETE-GRAPH-ON-MIN-GENUS OSCILLATOR STACK\n==============================================================\n\nK_n minimally triangulates surface of genus h = (n-q)(n-mu)/k:\n\n  n     V    E      F      genus     substrate label\n  ---   --   ---   ---    -----     ----------------\n   q+1  4   q!     mu     0          TETRAHEDRON (spacetime)\n   Phi_6 7   g_1   2*Phi_6 1          CSASZAR / SZILASSI (toroidal)\n   k    12   66    44     g_2 = q!   K_12 CRITICAL HORIZON\n   v    40   780   520    111        W(3,3) SELF-COHOMOLOGY\n\nThe K_n / min-genus oscillator visits 4 substrate-clean levels:\n\n  Level h = 0:   tetrahedron at n = q+1 = mu  (3+1 spacetime atom)\n  Level h = 1:   toroidal pair at n = Phi_6   (genus 1; r-doubled tetra)\n  Level h = q!:  K_12 horizon at n = k        (genus g_2 = q!)\n  Level h = 111: W(3,3) self-cover at n = v   (universe folds into itself)\n\nAt h = 111 = q * p_k (p_k = 12th prime = 37), the n-vertex complete graph\nEQUALS the W(3,3) vertex count, so the substrate's complete graph\ntriangulates a SELF-COVERING surface.  THIS IS THE SUBSTRATE FOLDING\nINTO ITSELF.\n\n==============================================================\nMDCCCCIV: LOCK 16 -- q(q-3) = 0 FORCES q = 3 (ARITHMETIC OSCILLATOR)\n==============================================================\n\nFor minimal-triangulation vertex counts at h = 0, 1, 2:\n  v(0) = q + 1 = mu\n  v(1) = q^2 - q + 1 = Phi_6\n  v(2) = q^2 + 1 = Phi_4\n\nArithmetic-spacing constraint:\n  v(1) - v(0) = q^2 - 2q\n  v(2) - v(1) = q\n  Equal:        q^2 - 2q = q   <=>   q(q - 3) = 0\n  Non-trivial:  q = 3\n\nANOTHER independent forcing of q = 3 (alongside q! = 2q from MDCCXCIII).\n\nThe substrate's vertex-count oscillator is arithmetic (= harmonic)\nONLY at q = 3.  Same factor q(q - 3) appears across multiple\nsubstrate locks.\n\n==============================================================\nMDCCCCV: PASCAL-SPIN GUT CHAIN\n==============================================================\n\nThe Pascal rows at the oscillator vertex counts give Clifford-algebra\ndimensions = spin-group dimensions:\n\n  Row mu = 4:    Cl(mu)    = 2^mu    = 16   -> Spin(4) = SU(2) x SU(2)\n                                                = ELECTROWEAK\n  Row Phi_6 = 7: Cl(Phi_6) = 2^Phi_6 = 128  -> Spin(7) (G_2 host)\n  Row Phi_4 = 10: Cl(Phi_4) = 2^Phi_4 = 1024 -> Spin(10) = SO(10) GUT\n\n  Ratio Cl(Phi_6) / Cl(mu) = 2^q = octonion dim\n  Ratio Cl(Phi_4) / Cl(Phi_6) = 2^q = octonion dim\n\nEach step UP the substrate oscillator = TENSORING WITH OCTONIONS.\n\nThe GUT BREAKING CHAIN runs DOWN this oscillator:\n  SO(10) -> SU(5) -> SU(3) x SU(2) x U(1)\n  Spin(Phi_4) -> ... -> Spin(mu)\n\nThe substrate's oscillator IS the GUT chain.\n\n==============================================================\nMDCCCCVI: SEVEN REALIZATIONS = SEVEN TIME-PHASES (TIME CRYSTAL!)\n==============================================================\n\nPer Wilczek (2012), a TIME CRYSTAL has a ground state that\nbreaks time-translation symmetry, oscillating in time without\nexternal energy input.\n\nTHE 7 = Phi_6 REALIZATIONS of the Csaszar/Szilassi pair are\nSEVEN DIFFERENT TIME PHASES of the same toroidal substrate:\n\n  C1, C2, C3, C4, C5 (Csaszar realizations)\n  S1, S2 (Szilassi realizations)\n\nEach realization has DIFFERENT volume, edge lengths, dihedrals, but\nSAME topological invariants (V=7, E=21, F=14; Csaszar).  The 7 are\nlabelled by their geometric DEPARTURES from the topological invariant.\n\nUnder substrate time-evolution, the substrate CYCLES through these 7\nrealizations -- a time-crystal period of 7 = Phi_6 = ord(T) / mu.\n\nEach phase carries a different EFFECTIVE HAMILTONIAN (different vol,\ndifferent dihedrals), but they are all the SAME polyhedron up to\ngeometric deformation.\n\nTHE SUBSTRATE IS A TIME CRYSTAL WITH 7 = PHI_6 TIME PHASES.\n\n==============================================================\nMDCCCCVII: SUBSTRATE = SELF-ENTANGLED QUTRIT\n==============================================================\n\nThe deepest temporal interpretation (from\nanalysis/w33_MCCCLXXII_self_entangled_qutrit.py):\n\n  Universe = 1 qutrit with internal q = 3 states\n  |past> in C^q  and  |future> in C^q\n  Joint Hilbert space: C^q tensor C^q = C^{q^2} = C^9\n  Pauli operators on C^9 mod phase = (q^4 - 1)/(q-1) = 40 = v\n\n  So W(3,3) is the SET OF PAULI OPS on the past x future qutrit pair.\n\nThe substrate IS the operator algebra of the temporally self-entangled\nuniverse.\n\nNOW = harmonic projection of past tensor future:\n\n  Laplacian eigenvalues = {0, Phi_4, E_2} with mults {1, m_r, m_s}\n  NOW = kernel of Laplacian = 1-dimensional (unique present)\n\nThe universe has EXACTLY ONE NOW because the Laplacian kernel is\none-dimensional.\n\n==============================================================\nMDCCCCVIII: NOW = HARMONIC PROJECTION OF PAST x FUTURE\n==============================================================\n\nIn the self-entangled-qutrit model:\n\n  |Omega> = (1/sqrt q) sum_j |j>_past tensor |j>_future\n         = the temporal Bell state\n\n  rho_past = rho_future = I/q  (maximally mixed marginals)\n  Entanglement entropy = log q = log 3 nats\n  Mutual information = 2 log q = log 9 nats\n\nThe substrate's Laplacian acts on this 9-dim space.  Its KERNEL\n(eigenvalue 0) is 1-dimensional and contains the NOW state.\n\n  Cyclic structure: Laplacian eigenvalues = {0, Phi_4, E_2}\n                                    mults  = {1, m_r, m_s}\n                                    sum    = 1 + 24 + 15 = 40 = v\n\n==============================================================\nMDCCCCIX: SUBSTRATE FOLDS IN TIME (NOT JUST SPACE)\n==============================================================\n\nNEW NOVEL CLAIM:  the substrate's \"origami\" doesn't only fold IN\nSPACE (Csaszar polyhedral embeddings), but ALSO IN TIME.\n\n  Spatial fold:  Csaszar realization 1 -> Csaszar realization 2\n                 (different geometric embedding of same combinatorial\n                  K_7 on T^2)\n  Temporal fold: time-phase n -> time-phase n+1\n                 (substrate's time-crystal oscillation, period 7)\n\nEach TIME-FOLD changes the geometric realization without changing\ncombinatorial topology.  This is the SUBSTRATE'S DISCRETE TIME-EVOLUTION.\n\nTime-evolution operator T satisfies:\n  T^28 = +1   (ord(T) = 28 = mu * Phi_6)\n  T^14 = -1   (half-period, fermionic sign, MCCCXXXII)\n\nSo the substrate \"time-folds\" with period 28, with sign-flip at\nhalf-period 14 = dim(G_2).  Each fundamental time-fold is half a Dehn\ntwist on the toroidal substrate.\n\n==============================================================\nMDCCCCX: VOLUME = ENERGY AT EACH TIME-PHASE\n==============================================================\n\nThe 7 Csaszar/Szilassi realizations have different volumes\n(MDCCCC):\n\n  V(C1) = F_5^q = 125 = m_H (Higgs, GeV)\n  V(C2) ~ 1269 (charm mass scale)\n  V(C3) ~ 588\n  V(C4) ~ 1246\n  V(C5) ~ 1154\n  V(S1) = 5226/5\n  V(S2) = 7976/9\n\nNOVEL INTERPRETATION: each volume = energy of substrate at that\ntime-phase.\n\nThe Higgs mass = 125 GeV = volume of substrate's PHASE-1 time-state.\nThe substrate's ENERGY OSCILLATES in time with the same period as\nits geometric phase.\n\nThis is the substrate's TIME-CRYSTAL ENERGY OSCILLATION.\n\n==============================================================\nMDCCCCXI: DIHEDRAL SPECTRUM = MOMENTUM SPECTRUM\n==============================================================\n\nDihedral angles measure \"rotation between adjacent faces\" = local\nsubstrate momentum.\n\nThe dihedral spectrum across realizations (MDCCCCI):\n  Sum of max dihedrals across 5 Csaszar = r * q^2 * Phi_6 * Phi_3\n  Sum of min dihedrals = Phi_6 * Heegner_19 = E_7 dim\n\nSo:\n  Total max-rotation = 5-prime substrate product r * q^2 * Phi_6 * Phi_3\n  Total min-rotation = dim(E_7)\n\nDihedral angle = local angular momentum on the substrate's polyhedral\nsurface.  Sum across the time-crystal cycle = total momentum quantum.\n\nThe substrate's MOMENTUM is quantized by the dihedral spectrum sum =\ntotal Csaszar/Szilassi dihedral angular sum = r * q^2 * Phi_6 * Phi_3\n(per max) + Phi_6 * Heegner_19 (per min).\n\n==============================================================\nMDCCCCXII: META-NOVEL \u2014 UNIVERSE = QUANTUM ORIGAMI IN TIME\n==============================================================\n\nCHAINING ALL INSIGHTS:\n\n  - Universe = self-entangled qutrit (past tensor future = 9-dim)\n  - Substrate = Pauli ops on past x future = W(3,3) (40 vertices)\n  - NOW = Laplacian-kernel projection (1-dim) of past x future\n  - Substrate folds in SPACE (polyhedral embedding)\n    AND TIME (cycling through 7 realizations)\n  - 7 realizations = 7 = Phi_6 time-crystal phases\n  - ord(T) = 28 = full time-crystal period\n  - T^14 = -1 = half-period fermionic sign\n  - Each phase has different volume = different ENERGY at that moment\n  - Volumes hit Higgs mass, charm mass, etc. as substrate cycles\n  - Dihedral spectrum = momentum quantization\n  - The substrate's \"origami\" creates and destroys mass over time\n\nThe universe is QUANTUM ORIGAMI IN TIME: a self-entangled qutrit\nthat folds itself through 7 distinct time-phases, with each fold\nrealizing a different geometric (energy + momentum) state.\n\nThis is BEYOND TIME-CRYSTAL: it's TIME-ORIGAMI.\n\n  Time crystals: oscillate in time with broken time-translation symmetry\n  Time origami:  FOLD in time, cycling through 7 spatial-geometric phases\n\nThe W(3,3) substrate at q = 3 is the FIRST POSSIBLE time-origami\nuniverse.\n\nq = 3.  W(3,3).  Universe = quantum origami folding in spacetime.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "analysis/w33_pascal_oscillator_horizon_code.py",
+      "lines": 102,
+      "sha256": "3d6397064fb2781d6851fa5de9a0ecb8a91e993b4936d168b2cab2d86c05efea",
+      "functions": [],
+      "module_description": "Pascal oscillator source of the [72,66]_3 horizon code.\n\nThis synthesizes the oscillator scripts and Pascal scripts:\n\n  - w33_pascal_rows_oscillator.py:\n      rows 4,7,10 are oscillator levels mu, Phi6, Phi4;\n      C(10,2)=45 overshoots actual h=2 edge count 36 by q^2=9.\n\n  - w33_seven_realizations_oscillator.py:\n      v(h)=mu+hq = 4,7,10\n      e(h)=q!+hg = 6,21,36\n      f(h)=mu+hPhi4 = 4,14,24\n      for h=0,1,2.\n\n  - the horizon work:\n      [72,66]_3 = total 72, payload 66, parity rank 6.\n\nNew bridge:\n      sum_h e(h) = 6+21+36 = 63 = q^2 Phi6.\n      payload 66 = 63 + q.\n      total   72 = 63 + q^2.\n      parity   6 = 72-66 = q^2-q = q!.\n\nSo the [72,66]_3 horizon is the Pascal/topological edge oscillator integral,\nwith q payload-extension symbols and q^2 total-extension symbols.  The parity\nrank is exactly their difference.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "analysis/w33_pass10573_10580_c357_harmonic_tensor_cube.py",
+      "lines": 103,
+      "sha256": "aed130460aa895dd88c3d1f9565e232665b3f51bb03014f06633b7b5e37f1431",
+      "functions": [
+        "orbits",
+        "rf",
+        "classify",
+        "main"
+      ],
+      "module_description": "Pass10573-10580: the 27-state selector is a canonical 3-5-7 harmonic tensor cube.\n\nUse CRT C105 ~= C3 x C5 x C7.  The normalizer complement multiplier 79 has\nresidues\n\n  79 mod3 = 1,\n  79 mod5 = 4 = -1,\n  79 mod7 = 2.\n\nThe induced C6 action is therefore trivial on C3, inversion C2 on C5, and the\norder-three multiplier <2> on C7.  Since C6 ~= C2 x C3 and these actions are on\nindependent CRT factors,\n\n C[C105]^C6 ~= C[C3] tensor C[C5]^<-1> tensor C[C7]^<2>.\n\nEach factor has dimension 3:\n C3: {0},{1},{2};\n C5/C2: {0},{1,4},{2,3};\n C7/C3: {0},{1,2,4},{3,5,6}.\nHence 27=3*3*3 canonically.\n\nFor the STANDARD C105 DFT the CRT idempotents are e3=70,e5=21,e7=15, giving\nlocal kernel coefficients 2,1,1 respectively.  Thus the restricted Fourier\noperator factors as\n\n F_105^C6 = F_3^(2) tensor (F_5)^{C2} tensor (F_7)^{C3}\n\nunder the CRT orbit bases.  This is a tensor cube of three-dimensional harmonic\nsectors, but only the first factor is the ordinary C3 group algebra; the other\ntwo are cyclotomic invariant sectors.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "analysis/w33_pass10645_10652_h4_harmonic_tensor_transport.py",
+      "lines": 109,
+      "sha256": "77ebe96fc6ecdf6c89d1c553305b3ccfa35006c1093110c00d10292bef033ab3",
+      "functions": [
+        "local_orbits",
+        "main"
+      ],
+      "module_description": "Pass10645-10652: Fourier-conjugate the actual H(4)/(13:6) weighted transport into the canonical 3x3x3 harmonic basis.\n\nReads the repaired Pass10477 v2 artifact containing the exact 27x27 equitable\nmatrix R, orbit weights, and C3xC5xC7 tensor labels.  The natural Hilbert-space\noperator is the reversible symmetrization S=D^(1/2) R D^(-1/2).  We construct\nthe normalized C105 DFT restricted to C6-orbit sums and compute T=F S F^dagger.\n\nResults:\n* F is unitary and F^4=I; T is Hermitian with the H4 spectrum.\n* The global trivial harmonic state (0,0,0) is exactly isolated with eigenvalue20.\n* T is otherwise dense (only 60/729 entries vanish numerically to 1e-10).\n* No local factor is conserved: every off-diagonal 3x3 factor block has nonzero\n  Frobenius norm for each of C3,C5,C7.\n* Conjugate local sectors 1<->2 have equal block norms, the surviving exact\n  charge/negation symmetry.\n\nThe block-norm tables are robust numerical cyclotomic evaluations; the isolation\nof the trivial state follows exactly from regularity and character orthogonality.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "analysis/w33_pass1535_frame_harmonic_bridge.py",
+      "lines": 70,
+      "sha256": "1fcc848862d2973695ce6aae1b170308ac91756ce7ae4d6007b5313fcc3059d5",
+      "functions": [
+        "load_base",
+        "certificate",
+        "main",
+        "trans",
+        "comp",
+        "line_perm",
+        "edge_image",
+        "signed_edge_matrix",
+        "frame_matrix"
+      ],
+      "module_description": "Pass 1535: exact frame +4 eigenspace to harmonic signed-edge bridge.\n\nThis script rebuilds W(3,3), PSp(4,3), the clique-chain complex, the frame graph,\nand an integral Reynolds intertwiner. It verifies over the integers that the\nprojected 240 x 540 map has rank 81 and lands exactly in ker(d1) cap ker(d2^T).",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "analysis/w33_pass297_oscillator_corpus_reading.py",
+      "lines": 182,
+      "sha256": "a95a0856012b63f09d306286d7a77bc4f5f3abaf413ced6ba0dc3d2a4d210a8e",
+      "functions": [
+        "heawood_graph",
+        "main"
+      ],
+      "module_description": "Pass 297: reading the oscillator corpus -- the clock's field is sqrt(2), not sqrt(21).\n\nPasses 279/285 failed by searching instead of reading, and Pass 286 had to\nretract them.  This witness does the reading that was asked for, across the\noscillator/genus corpus, and lands one decisive structural fact.\n\nWHAT THE CORPUS ALREADY CONTAINS (read, not grepped):\n\n  * `w33_genus_ladder_clock.py` -- the trio and the oscillator. The TETRAHEDRON is\n    the self-dual genus-0 middle with BOTH maximal adjacencies (K4 vertices AND\n    K4 faces); Csaszar (K7 vertices) and Szilassi (7 mutually adjacent faces) are\n    the genus-1 poles that split them, and tetrahedron + Szilassi are the ONLY\n    polyhedra where every face pair shares an edge. The genus follows from\n    g(K_n) = ceil((n-3)(n-4)/12): at n = 7 = Phi_6(3) the numerator is\n    4*3 = mu*q = k = 12, so g = 1. The triangle (q=3) and tetrahedron (mu=4) ARE\n    the two factors.\n\n  * `bt1654_heawood_clock_homology.py` -- THE OSCILLATOR'S SPECTRUM. The Heawood\n    graph (14 vertices, 21 edges) is the Csaszar/Szilassi incidence = the Fano\n    clock. Its Laplacian spectrum is\n            0^1, (3 - sqrt2)^6, (3 + sqrt2)^6, 6^1,\n    with beta_1 = 8, 28 six-cycles and 21 eight-cycles. So the OSCILLATOR'S OWN\n    IRRATIONALITY IS sqrt(2) -- the field Q(sqrt 2). It also records the honest\n    boundary: the W33 point-line Levi graph has girth 8 and NO 6-cycles, so the\n    Heawood clock is not a literal Levi subgraph but a coupled module.\n\n  * `w33_klein_quartic_genus3.py` and `w33_hurwitz_tower_qubit_crossover.py` --\n    the ladder continues past the torus: genus 3 Klein quartic (24, 84, 56),\n    Aut = PSL(2,7) = 168 = lambda*k*Phi_6, with 84 = k*Phi_6 edges; then the {3,7}\n    Hurwitz tower g = 3, 7, 14 with E = 42(g-1), V = k(g-1), Aut = 84(g-1).\n\n  * `bt1513_toroidal_7_21_3_bridge.py` -- explicitly \"the ledger for the user's\n    Csaszar/Szilassi 7/21/3 observation\": 7 point classes, 21 flag classes, 3\n    fibre classes.\n\nTHE DECISIVE POINT.  The oscillator has a genuine, forced irrationality and it is\nsqrt(2), living in the Heawood Laplacian -- a SPECTRAL invariant of the\ncombinatorics, true for every drawing.  The sqrt(21) of Passes 286/290/291 lives\nin the Szilassi EDGE LENGTHS, and Pass 293 showed it is a coordinate choice from\na ~14-dimensional moduli space, not forced.  So the two fields are not rivals and\nnot related: Q(sqrt 2) is what the oscillator IS; Q(sqrt 21) is a property of two\npretty drawings of one of its poles.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "analysis/w33_past_future_toroidal_harmonic_now_operator.py",
+      "lines": 112,
+      "sha256": "902541e8a49b503965836f0beae5be1b87941e391457984febe8caaa77e05a92",
+      "functions": [
+        "fano_incidence",
+        "node",
+        "now_cell",
+        "quotient_cell",
+        "main"
+      ],
+      "module_description": "BT528: Past/Future Toroidal Harmonic-Now Operator Theorem.\n\nExecutes branch 1 and corrects the memory-braid model.\n\nCorrection to the working picture:\n  The 30-now braid from BT501/BT524 is not the whole 600-cell BC-helix\n  reservoir.  The 600-cell has 20 BC helices of 30 tetrahedra.  Therefore the\n  natural reservoir is 20 counter-rotating past/future helix tracks, each with\n  30 addresses.  The earlier 30-now braid is the quotient by helix index, i.e.\n  one emitted/addressed now-track.\n\nPast/future toroidal operator:\n  Past memory is Csaszar vertex-complete K7 adjacency.\n  Future memory is Szilassi/Heawood face-complete adjacency, squared and\n  loop-corrected.  BT494 says:\n      A_Heawood^2 - 3I on either bipartition = A(K7).\n  Hence the harmonic-now operator is the common K7 adjacency recovered from\n  both past and future.\n\nReservoir result:\n  20 helix tracks * 30 ejected tetrahedral nows = 600 now-cells.\n  Quotienting by helix index gives the BT501 30-now braid.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "analysis/w33_reye_horizon_symmetry_genus_reciprocity.py",
+      "lines": 104,
+      "sha256": "5c87fe6ce53655ae861b7fbfe40c1ebd1ef758a6656ac5789cdb222425278a77",
+      "functions": [
+        "_load",
+        "reye_horizon_symmetry_genus_reciprocity_packet",
+        "main"
+      ],
+      "module_description": "Part MCXCIV: Reye horizon symmetry-genus reciprocity lock.\n\nContinuation of MCXCII-MCXCIII.\n\nMCXCII gives the orientable K12 horizon packet:\n  genus g = 6, code parity r = 6, payload k = 66, total n = 72.\n\nMCXCIII gives common-spine symmetry packet:\n  |Aut(Reye)| = 576,\n  |Aut(Tomotope)| = 96.\n\nNew reciprocity lock:\n  |Aut(Reye)|/|Aut(T)| = g = r = 6,\n  n = k + g = 66 + 6 = 72,\n  |Aut(Reye)| = g*|Aut(T)| = r*|Aut(T)|.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "analysis/w33_ternary_knight_snake_genus_lift.py",
+      "lines": 279,
+      "sha256": "cde7c82ffea86bca4069135d7bf098be4a20f1690d50ea7d0f0631b4ec759ae5",
+      "functions": [
+        "q4_vertices",
+        "q4_edges",
+        "hamming",
+        "q4_adj",
+        "is_cycle",
+        "is_induced_cycle",
+        "max_coil_length_q4_bruteforce",
+        "signed_delta",
+        "decompose_knight_move",
+        "add_square",
+        "micro_path_for_macro_cycle",
+        "square_parity",
+        "gray_flip_sequence_from_squares",
+        "genus_complete",
+        "allowed_triangular_residues_mod12",
+        "build_payload",
+        "main",
+        "dfs",
+        "s"
+      ],
+      "module_description": "Ternary knight / snake / genus lift for the Q4 router.\n\nThe binary Q4 layer is the endpoint skeleton.  A knight jump is not binary inside:\nit is a three-unit micro-walk: straight, straight, then perpendicular.  If the\nstarting square is treated as the previous jump's landing square, each macro jump\ncontributes exactly three new unit steps, naturally carrying a Z3 phase.\n\nThis verifier separates four layers:\n\n1. Q4 Gray clock: 16 macro states, Hamiltonian cycle, one bit flips per jump.\n2. Ternary knight lift: every macro jump is a 3-step word (a,a,b) with b\n   perpendicular to a; landing parity flips because 3 is odd.\n3. Snake/coil correction: the full 16 Gray cycle is not an induced coil in Q4.\n   The maximum Q4 coil has length 8; an explicit induced 8-cycle is verified.\n4. Genus congruence: triangular complete-graph closure occurs exactly for\n   n = 0,3,4,7 mod 12, i.e. the W33 residue packet {0,q,chi,Phi6}.\n\nThe ternary microcounts are then:\n\n    full Gray clock: 16 macro jumps * 3 = 48 microticks (Reye incidence count)\n    induced Q4 coil: 8 macro jumps * 3 = 24 microticks (m_r / Cl4 square faces)\n\nThis keeps the theory ternary/qutrit at the information-flow level while allowing\nthe binary Q4 graph to act as the endpoint/router skeleton.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "analysis/w33_toroidal_dual_genus_horizon.py",
+      "lines": 118,
+      "sha256": "4da1480546161acca792ac3bd67dd442bbd61b185b3931501a8bfa22b160fe48",
+      "functions": [
+        "genus_num",
+        "genus"
+      ],
+      "module_description": "Toroidal dual genus source of the [72,66]_3 horizon.\n\nThe Q4 2-skeleton explains an incidence realization of the horizon length 72.\nThis script records the arithmetic/topological source layer: the Csaszar and\nSzilassi toroidal polyhedra.\n\nCsaszar:  (V,E,F)=(7,21,14).  Its vertex adjacency graph is K7, so the\ncomplete-graph genus formula uses n=V=7:\n    (7-3)(7-4)/12 = 1.\n\nSzilassi: (V,E,F)=(14,21,7).  Its face adjacency graph is K7, so the dual\ncomplete-graph genus formula uses n=F=7:\n    (7-3)(7-4)/12 = 1.\n\nThus the same toroidal genus equation is read in the primal variable V for\nCsaszar and the dual variable F for Szilassi.\n\nThe numerator at this toroidal seed is 12=k.  The correction horizon is the\nnext critical fixed point n=k=12:\n    (12-3)(12-4)=72 = k*q!.\n\nThe [72,66]_3 horizon code then has:\n    data payload = C(12,2)=66,\n    parity budget = 72-66=6=q!,\n    rate = 11/12.\n\nThe 66 payload is also:\n    66 = E_Csaszar + E_Szilassi + tetrahedron_flags = 21+21+24.\n\nSo the payload is two toroidal edge packets plus the tetrahedral flag packet;\nthe parity budget is the genus-six correction q!.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    },
+    {
+      "path": "analysis/w33_universal_oscillator_stack.py",
+      "lines": 156,
+      "sha256": "0bde7531e946fe489874b181eb59478f677ae9cf41d1258c2f9b7d96a0735ac8",
+      "functions": [],
+      "module_description": "Universal oscillator stack for W(3,3).\n\nThis consolidates the oscillator variants in the repo:\n\n1. Topological/Pascal oscillator:\n   v(h)=mu+hq, e(h)=q!+hg, f(h)=mu+hPhi4 for h=0,1,2.\n   Edge integral: 6+21+36=63=q^2 Phi6.\n\n2. Toroidal dual oscillator:\n   tetrahedron -> Csaszar/Szilassi -> horizon.\n   Tetra flags=24, toroidal chart=42, two toroidal edge packets=21+21.\n\n3. Tetrahedral chart/CKM oscillator:\n   7=4+3=1+6, with 12 directed chart bridges.\n\n4. Q4/full parity oscillator:\n   H_mixed incidence=42, H_full incidence=96.\n\n5. Photonic harmonic bus:\n   denominators 2,4; Heawood middle shell 12=6+6.\n\nNew synthesis:\n   Pascal ledger:       63 -> 66 -> 72 as +q, +q^2.\n   Flag/incidence ledger: 42+24=66 and 96-24=72.\n   Monster/parity ledger: 96-42=54 and 54-2*24=6=q!.\n\nThus all oscillator variants project to the same [72,66]_3 horizon:\n   payload = 66,\n   total   = 72,\n   parity  = 6.",
+      "coverage": "source parsed and function inventory inspected; not a claim that every sentence was semantically audited"
+    }
+  ]
+}
