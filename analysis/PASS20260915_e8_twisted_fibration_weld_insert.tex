@@ -1,0 +1,36 @@
+\subsection{The $E_8$ twisted register is the root-fibration quotient}
+The previously separate $E_8\to W(3,3)$ constructions are in fact the same
+quotient map on roots.  Let $c$ be the canonical Coxeter element of Pass 1021
+and $g=c^{10}$.  The exact certificate
+\texttt{w33\_e8\_twisted\_fibration\_weld.json} gives
+\[
+ \operatorname{SNF}(1-g)=
+ \operatorname{diag}(1,1,1,1,3,3,3,3),
+ \qquad
+ E_8/(1-g)E_8\cong\mathbb F_3^4.
+\]
+The 240 roots hit all 80 nonzero quotient vectors, exactly three roots per
+vector, with fibre $\{r,gr,g^2r\}$.  Projectivizing $v\sim -v$ therefore gives
+40 points with six-root fibres
+$\{\pm r,\pm gr,\pm g^2r\}$.  Since
+$g=(c^5)^2$ and $-1=(c^5)^3$, these are exactly the
+$\langle c^5\rangle\cong C_6$ Eisenstein fibres certified in Pass 1021.
+For the order-three twisted-module commutator exponent
+\[
+ \Omega(a,b)=\sum_{k=1}^{2}k\,\langle g^k a,b\rangle\pmod 3,
+\]
+the form is alternating of rank four and has
+$(1-g)E_8\bmod3$ as its radical.  Hence the induced quotient form is
+nondegenerate symplectic, and projective orthogonality is
+$\operatorname{srg}(40,12,2,4)$, i.e. $W(3,3)$.
+Thus the exact finite dictionary is
+\[
+ 240\ E_8\hbox{ roots}\longrightarrow
+ 80\hbox{ nonidentity two-qutrit Pauli labels}\longrightarrow
+ 40\ W(3,3)\hbox{ projective Pauli points}.
+\]
+Pass 1021 owns the six-root fibration; Holotrade \texttt{68df33f} owns the
+twisted-register identification; the classical twisted-module framework is
+Bakalov--Kac (\texttt{arXiv:math/0402315}, Eq.~4.43).  The new result here is
+the exact equality of the two quotient maps.  No continuum or experimental
+claim follows from this finite identification.
