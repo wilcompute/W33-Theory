@@ -1,0 +1,24 @@
+\subsubsection{The Pauli powers are the two orientations of an $A_2$ fibre}
+The root-fibration/twisted-register weld admits a sharper root-system reading.
+For $g=c^{10}$, fixed-point-free of order three, $1+g+g^2=0$.  The exact
+certificate \texttt{w33\_e8\_oriented\_a2\_refinement.json} checks all 80
+$g$-orbits on the $E_8$ root shell and finds
+\[
+ r+gr+g^2r=0,
+ \qquad
+ \langle r,gr\rangle=\langle gr,g^2r\rangle=
+ \langle g^2r,r\rangle=-1.
+\]
+Thus every nonzero vector $v\in E_8/(1-g)E_8\cong\mathbb F_3^4$ is an
+oriented $A_2$ root triangle $\{r,gr,g^2r\}$, while $-v$ is the opposite
+triangle.  Pairing $v$ with $-v$ gives one full six-root $A_2$ subsystem,
+and every such subsystem is exactly the corresponding Pass-1021
+$\langle c^5\rangle=\langle-1,g\rangle\cong C_6$ fibre.  Consequently the
+finite dictionary refines to
+\[
+240\ E_8\text{ roots}\longrightarrow
+80\text{ oriented }A_2\text{ triangles / Pauli labels}\longrightarrow
+40\text{ full }A_2\text{ systems / }W(3,3)\text{ points}.
+\]
+This is a finite root-system refinement of the already-certified weld, not an
+additional physical claim.
