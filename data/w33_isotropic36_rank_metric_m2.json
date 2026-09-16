@@ -1,0 +1,12 @@
+{
+  "schema":"w33.isotropic36_rank_metric_m2.v1",
+  "status":"PASS",
+  "headline":"The 81 graph lines in the Suzuki PG(3,3)-minus-line chart carry the M2(F3) rank metric. Invertible difference gives SRG(81,48,27,30) with spectrum 48^1+3^48+(-6)^32. Exactly 18 two-dimensional MRD subspaces exist; their 9 affine cosets give 162 distinct 9-line parallel frames, each closing with the deleted line to a 10-line projective spread.",
+  "matrix_space":{"size":81,"rank_census":{"0":1,"1":32,"2":48}},
+  "rank_metric_graph":{"srg":[81,48,27,30],"edges":1944,"spectrum":{"48":1,"3":48,"-6":32},"adjacency":"rank(A-B)=2 iff graph lines Gamma_A,Gamma_B are disjoint"},
+  "two_planes":{"total":130,"MRD_every_nonzero_invertible":18,"MRD_containing_identity":3},
+  "affine_frames":{"cosets_per_MRD_direction":9,"distinct_cosets":162,"matrices_per_coset":9,"geometry":"9 pairwise-disjoint graph lines + deleted line = 10-line spread of PG(3,3)"},
+  "computation_reading":"M2(F3) is a four-trit address space. Rank distance becomes a directly geometric collision/disjointness test, and the 18 MRD directions provide maximal affine channel codes. This is a finite coding/compiler structure, not yet a physical gate set.",
+  "boundary":"These 162 are projective line spreads inside a totally isotropic PG(3,3) chart. They must not be conflated with the 36 symplectic W33 spreads/double-sixes, whose underlying 4-space is nondegenerate.",
+  "checks":{"parent_81_lines":true,"rank_census":true,"SRG_81_48_27_30":true,"130_two_planes":true,"18_MRD":true,"162_affine_frames":true}
+}
