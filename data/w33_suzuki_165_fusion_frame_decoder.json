@@ -1,0 +1,12 @@
+{
+  "schema":"w33.suzuki_165_fusion_frame_decoder.v1",
+  "status":"PASS",
+  "headline":"The 165 complex Pauli fusion shadow has an exact rank-three association-algebra decoder. For G=I+A/13, G^-1=(91/64)I-(13/64)A+(117/3136)J. The 120D and 45D spectral sectors therefore define exact collective noise/readout channels, and every surviving principal subframe has condition number <=49/4 by interlacing.",
+  "association_scheme":{"srg":[165,36,3,9],"A_squared":"27 I - 6 A + 9 J","eigenspaces":{"constant":1,"plus3":120,"minus9":44}},
+  "primitive_idempotents":{"E0":"J/165","E_plus3":"(A+9I-(3/11)J)/12","E_minus9":"(-A+3I+(1/5)J)/12"},
+  "Gram":{"formula":"I+A/13","eigenvalues":{"constant":"49/13","plus3_120D":"16/13","minus9_44D":"4/13"},"condition_number":"49/4"},
+  "canonical_dual":{"inverse_Gram":"(91/64)I-(13/64)A+(117/3136)J","per_encoding":"dual(U)=(91/64)phi_U-(13/64) sum_{V~U} phi_V+(117/3136) sum_V phi_V"},
+  "noise_sector_reading":{"120D":"plus-3 SRG eigenspace; Gram gain 16/13","45D":"constant plus 44D minus-9 sector; dark component gain 4/13","relation_to_local_split":"165=(1+44)+120=45+120"},
+  "erasure_robustness":{"every_principal_subframe_independent":true,"principal_condition_number_upper_bound":"49/4","full_span_erasure_correction":false,"reason":"the original 165 Gram matrix is full rank, so the 165 coefficient vectors are linearly independent; deleting a vector deletes one span dimension"},
+  "checks":{"inverse_exact":true,"SRG_product":true,"spectral_decoder":true,"interlacing_bound":true}
+}
