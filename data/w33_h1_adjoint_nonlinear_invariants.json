@@ -1,0 +1,11 @@
+{
+  "schema":"w33.h1_adjoint_nonlinear_invariants.v1",
+  "status":"PASS",
+  "headline":"For the cubic H1 = sp4(F3) adjoint, homogeneous invariant-polynomial dimensions in degrees 1..4 are 0,1,0,3. There is no cubic invariant. The first genuinely new pointwise nonlinear invariant is quartic det(X), independent of q2=tr(X^2); all nine (q2,det) values occur across the 59049 adjoint elements.",
+  "invariant_dimensions":{"1":0,"2":1,"3":0,"4":3},
+  "canonical_invariants":{"degree2":"q2(X)=tr(X^2)","degree3":"none","degree4_formal_basis":["q2^2","det(X)","Frobenius lift qF=B(X^[3],X)"],"F3_point_relation":"qF=2 q2 on F3-rational points"},
+  "point_census_q2_det":{"0,0":6561,"0,1":6480,"0,2":6480,"1,0":4860,"1,1":9720,"1,2":5184,"2,0":9720,"2,1":4860,"2,2":5184},
+  "quartic_magic_candidate":{"phase":"omega^(r det X), r=1 or 2 synchronized A8^3 central character","nonquadratic_as_F3_polynomial_function":true,"certified_register_gate":false,"missing_bridge":"an explicit coupling/intertwiner mapping the H1 controller variable X into a basis-dependent phase on the six-qutrit ground register"},
+  "boundary":"The invariant computation is exact finite algebra. Calling omega^det(X) a physical non-Clifford gate requires an H1-to-register coupling that is not yet certified.",
+  "checks":{"sp4_dimension10":true,"invariant_dims_0_1_0_3":true,"no_cubic":true,"all_59049_points":true,"q2_det_independent":true}
+}
