@@ -1,0 +1,9 @@
+{
+  "schema":"w33.pauli_cartan_system.v1","status":"PASS",
+  "headline":"Every W(3,3) line lifts to an 8-dimensional Cartan subalgebra of sl(9,C): its four projective points are eight nonzero F3^4 Pauli degrees, all commute, and their finite-order Pauli matrices are semisimple. The 40 Cartans reproduce W33 again under nonzero intersection.",
+  "counts":{"W33_projective_points":40,"W33_lines":40,"oriented_nonzero_degrees_per_line":8,"sl9_rank":8,"intersecting_cartan_pairs_dimension2":240,"disjoint_cartan_pairs":540},
+  "cartan_argument":{"abelian":"symplectic form vanishes on each 2D Lagrangian, so all eight Pauli homogeneous generators commute","semisimple":"each Pauli generator has finite order 3 up to scalar and is diagonalizable over C","maximal":"the commuting semisimple subalgebra has dimension 8 = rank(sl9), hence is a Cartan subalgebra"},
+  "intersection_graph":{"vertices":40,"adjacent_iff":"Cartan intersection has dimension 2, equivalently the two W33 lines share one projective point","srg":[40,12,2,4],"isomorphic_to":"W(3,3) point/line graph by self-duality"},
+  "table":"analysis/w33_pauli_cartans.py regenerates all 40 projective supports and their 8 oriented Pauli degrees",
+  "checks":{"40_lines":true,"each_support_has_8_degrees":true,"all_cartans_isotropic":true,"pair_census_240_540":true,"intersection_graph_SRG_40_12_2_4":true}
+}
