@@ -1,0 +1,48 @@
+\subsection{Explicit Pauli normalizer, Cartan system, $A_8^3$ glue, and the rank--24 six-qutrit bridge}
+\label{sec:execute-all5-pauli-stack}
+
+The order-three $E_8$ construction now admits a completely explicit matrix-level closure.  The lattice-cocycle certificate and its four table shards materialize all eighty oriented $A_2$ root orbits as the eighty nonzero two-qutrit Pauli degrees, with
+\[
+ \Phi(E_v)=\frac{\zeta_{12}^{m_v}}{\sqrt3}
+ \bigl(X^{x_1}Z^{z_1}\otimes X^{x_2}Z^{z_2}\bigr),
+\]
+and all $2160$ nonzero Lie brackets matched.  The four shards are checked by \texttt{w33\_e8\_pauli\_cocycle\_lift\_shard\_verify.py}.
+
+The Weyl-group symmetry closes just as sharply.  For the canonical $g=c^{10}$,
+\[
+ |C_{W(E_8)}(g)|=155520,
+ \qquad
+ |N_{W(E_8)}(\langle g\rangle)|=311040.
+\]
+An explicit involution reverses $g$, and on the eighty oriented Pauli degrees the kernel is exactly $\langle g\rangle$.  Hence
+\[
+ C_{W(E_8)}(g)/\langle g\rangle\cong Sp(4,3),
+\]
+of order $51840$, while the normalizer induces the order-$103680$ anti-symplectic extension.  The centralizer generators preserve the standard $F_3^4$ symplectic form and the reversing involution negates it.
+
+Every line of $W(3,3)$ is a two-dimensional Lagrangian subspace of $F_3^4$.  Its four projective points are the eight nonzero oriented Pauli degrees in that subspace.  These eight homogeneous matrices commute and are semisimple, and their span has dimension eight, equal to $\operatorname{rank}\mathfrak{sl}_9$.  Thus all forty W33 lines lift to Cartan subalgebras of $\mathfrak{sl}_9$.  Of the $\binom{40}{2}$ pairs, $240$ intersect in dimension two and $540$ are disjoint.  Joining Cartans with nonzero intersection again gives
+\[
+ \operatorname{srg}(40,12,2,4),
+\]
+so the Cartan-intersection graph is another copy of W33.
+
+For the anomaly-free triple, the $A_8^3$ Niemeier extension couples the three $SU(9)_1$ factors through the discriminant glue
+\[
+ C=\langle(1,1,4),(1,4,1),(4,1,1)\rangle
+ \le (\mathbb Z_9)^3,
+ \qquad C\cong\mathbb Z_9\times\mathbb Z_3.
+\]
+The code has $27$ sectors and is totally isotropic and $S_3$-invariant.  Its nonidentity ground weights are eighteen sectors at weight $2$ and eight at weight $3$; there is no weight-one glue.  Hence the weight-one algebra remains $\mathfrak{sl}_9^3$.  The first cross-factor fields are simple-current sectors such as
+\[
+ 9\otimes9\otimes\Lambda^4 9,
+ \qquad h=2,
+\]
+from the word $(1,1,4)$.  The glue constrains the three $SU(9)$ center charges, not the three adjoint $F_3^4$ Pauli labels, so the two-qutrit gradings remain independent at weight one and are coupled only by higher-weight center-charge sectors.
+
+Finally, the diagonal order-three twist of $E_8^3$ and the fixed-point-free order-three Leech twist have the same abstract twisted register:
+\[
+ E_8^3/(1-g)E_8^3\cong\Lambda/(1-g)\Lambda\cong F_3^{12},
+\]
+with symplectic geometry $W(11,3)$, conformal ground weight $4/3$, and $729=3^6$ ground states.  By finite Stone--von Neumann, after a symplectic identification the two ground spaces are equivalent six-qutrit Heisenberg modules.  Their distinguished shells are not equivalent.  The $E_8^3$ root shadow is the $120$-point union of three orthogonal W33 copies, with outside intersection numbers $66$ and $39$, and therefore is not tight.  The Leech minimal shell is the certified $32760$-point $90$-tight $2.\mathrm{Suz}$ orbit.  Thus the universal object is the six-qutrit register kinematics; the ambient lattice selects the shell and the orbifold extension.
+
+A parallel heterotic audit in Holotrade gives an important boundary.  All decorated two-Cartan hinges form one $PSp(4,3)$ orbit, so the hinge incidence of the known net-three witness is not itself a selector.  The frozen three-family $SU(5)$ witness does carry the canonical embedding $Y^2=5/6$, hence $k_Y=5/3$, with three chiral tens and net three antifives, but its nine additional $5+\bar5$ pairs are only vectorlike after forgetting spectator charges: no weighted state has an exact opposite under the full rank--16 Cartan.  Level-one GUT breaking and exotic lifting therefore remain open.
