@@ -1,0 +1,13 @@
+{
+  "schema": "w33.suzuki_isotropic36_affine_matrix_chart.v1",
+  "status": "PASS",
+  "headline": "A totally isotropic four-space meets the Suzuki 32760-set in exactly PG(3,3) minus one projective line: 36 points. The section has 81 fully contained projective lines, exactly the lines disjoint from the missing line. Choosing a complementary 2-space identifies those 81 lines with graphs of all linear maps F3^2 -> F3^2, i.e. M_2(F3).",
+  "basis_12d": [[1,0,0,0,0,1,2,2,1,1,1,1],[0,1,0,0,0,0,2,1,2,0,1,1],[0,0,1,0,0,1,0,1,0,0,1,2],[0,0,0,1,1,0,1,2,1,0,2,2]],
+  "symplectic_rank": 0,
+  "section": {"PG3_points":40,"tight_points":36,"missing_points":4,"missing_span_dimension":2,"missing_object":"PG(1,3)"},
+  "projective_line_census_by_missing_line_intersection": {"0":81,"1":48,"4":1},
+  "affine_chart": {"quotient_projective_directions":4,"lifts_per_direction":9,"factorization":"36=4*9","contained_lines":81,"matrix_model":"End(F3^2)=M_2(F3), |M_2(F3)|=3^4=81"},
+  "spread_boundary": "This 36-point isotropic section is not identified with the 36 W33 spreads. The latter are a different PSp(4,3)-set already proved equivariantly equivalent to the 36 E6 cubic double-sixes in Pass 4964.",
+  "computational_reading": "The 81 contained lines give an exact finite M_2(F3) chart, numerically and algebraically the same 3^4 register size as two-qutrit Pauli displacement labels. A quantum-computational identification requires an explicit operator map and is not asserted here.",
+  "checks": {"isotropic":true,"intersection_36":true,"missing_is_one_line":true,"line_census_81_48_1":true,"quotient_4_times_9":true}
+}
