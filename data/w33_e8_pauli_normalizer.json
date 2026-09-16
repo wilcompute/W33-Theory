@@ -1,0 +1,8 @@
+{
+  "schema":"w33.e8_pauli_normalizer.v1","status":"PASS",
+  "headline":"The Weyl normalizer of the canonical order-3 E8 twist induces exactly the extended two-qutrit Pauli grading symmetry: C_W(E8)(g)/<g> ~= Sp(4,3) of order 51840, and adjoining an explicit involution h with hgh^-1=g^-1 doubles it to an anti-symplectic extension of order 103680.",
+  "weyl":{"W_E8_order":696729600,"coxeter_order":30,"g":"c^10","g_order":3,"g_root_orbits":80,"centralizer_order":155520,"normalizer_order":311040,"reverser_simple_reflection_word_zero_based":[0,1,2,0,3,1,2,0,5,6,5,7,6,5],"reverser_word_length":14,"reverser_order":2},
+  "oriented_80_degree_action":{"centralizer_image_order":51840,"normalizer_image_order":103680,"kernel_order":3,"kernel":"<g>","centralizer_identification":"Sp(4,3)","normalizer_identification":"Sp(4,3).2 anti-symplectic extension"},
+  "forms":{"pauli_coordinate_order":["x1","z1","x2","z2"],"symplectic_matrix_mod3":[[0,2,0,0],[1,0,0,0],[0,0,0,2],[0,0,1,0]],"centralizer_generators_symplectic":true,"reverser_matrix_mod3":[[2,0,0,0],[0,1,0,2],[1,0,1,2],[0,0,0,2]],"reverser_is_anti_symplectic":true},
+  "checks":{"W_E8_order":true,"centralizer_155520":true,"normalizer_311040":true,"explicit_involutory_reverser":true,"80_degree_centralizer_image_51840":true,"80_degree_normalizer_image_103680":true,"kernel_is_order3":true,"all_centralizer_generators_symplectic":true,"reverser_anti_symplectic":true}
+}
