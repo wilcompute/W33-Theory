@@ -1,0 +1,11 @@
+{
+  "schema":"w33.e6_tritangent_pauli_holonomy_frontier.v1",
+  "status":"PASS",
+  "headline":"The 45 E6 tritangent phases cannot be treated as 45 canonical Pauli holonomies. Vertex/cocycle rephasing acts through the rank-21 incidence map R^T, leaving a 24-dimensional space of gauge-invariant linear combinations. The canonical double-six boundary map has rank 14 inside that space mod 3, so only H1 dimension 10 remains as an essential homological phase target.",
+  "cubic_complex":{"R_shape":[27,45],"N_shape":[45,36],"identity":"R N = 3 Q","rank_F3_R":21,"rank_F3_N":14,"gauge_invariant_functional_space_dim":24,"essential_H1_dim":10},
+  "pauli_boundary":{"individual_zeta12_triangle_phase":"gauge dependent under homogeneous generator rephasing","gauge_invariant_pair_commutator":"mu_3 central Pauli phase","single_triangle_nonClifford_magic":false},
+  "new_target":"Construct a certified transport from the E6 minuscule 27/tritangent carrier to an enriched Pauli/VOA carrier, evaluate the induced 45-vector phi, and pair it with a basis of the ten H1 classes. A nonzero H1 class is the first place a genuinely global cubic phase obstruction can live.",
+  "prior_art":["analysis/w33_pass7364_7366_integral_27_45_36_complex.py","analysis/w33_e6_45_tritangent_zero_sum_bridge.py","data/w33_e8_pauli_cocycle_lift.json"],
+  "boundary":"This is an exact gauge/homology reduction, not an evaluated physical magic witness. No canonical 27-to-Pauli-degree transport is presently certified, so numerical tritangent holonomies are intentionally not invented.",
+  "checks":{"45_tritangents":true,"36_double_sixes":true,"RN_eq_3Q":true,"rank_R_21":true,"rank_N_14":true,"ker_dim_24":true,"H1_dim_10":true}
+}
