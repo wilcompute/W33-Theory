@@ -1,0 +1,11 @@
+{
+  "schema":"w33.nonclifford_extension_search.v1","status":"PASS",
+  "headline":"No internal non-Clifford endomorphism is certified by the current three-W33 refactorization, ten-class cubic holonomy, or A8^3 simple-current center layers. Refactorization is 2.Suz Clifford; cubic H1 is sp4(F3) adjoint; and the Z9 center is a sector scalar, while the first glue fields map between representation sectors rather than acting as endomorphisms of the fixed six-qutrit ground register.",
+  "candidate_1_refactorization":{"generated_group":"2.Suz","ambient":"Sp(12,3)","result":"Clifford subgroup, not non-Clifford"},
+  "candidate_2_cubic_H1":{"module":"sp4(F3) adjoint","dimension":10,"result":"symplectic-adjoint/Clifford-side controller, not a non-Clifford gate by itself"},
+  "candidate_3_A8_glue":{"center":"Z9","action_on_Lambda_k":"scalar xi^k","generator_sector_dimensions":[[9,9,126],[9,126,9],[126,9,9]],"result":"scalar center phase is conjugation-trivial; weight-two simple currents are inter-sector fields, not certified register endomorphisms"},
+  "qutrit_T_control":{"xi_order":9,"T_phase_exponents_mod9":[0,1,8],"T_cubed_phase_exponents":[0,3,6],"T_cubed":"Z","T_X_Tdagger_phase_exponents":[1,7,1],"is_proportional_to_any_XZk":false,"T_is_nonClifford":true},
+  "missing_datum":"An explicit sector-return intertwiner/endomorphism whose conjugation on Pauli generators leaves the Clifford normalizer, or a certified magic-state injection (the blueprint currently keeps M36 magic as an external handshake).",
+  "boundary":"This is a no-go only for the presently certified internal candidates. It does not prove no non-Clifford operation exists anywhere in the full VOA/orbifold theory.",
+  "checks":{"refactorization_Clifford":true,"H1_sp4":true,"center_scalar_trivial":true,"qutrit_T_control_nonClifford":true,"simple_currents_not_ground_register_endomorphisms":true}
+}
