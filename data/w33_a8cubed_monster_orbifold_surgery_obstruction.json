@@ -1,0 +1,12 @@
+{
+  "schema":"w33.a8cubed_monster_orbifold_surgery_obstruction.v1",
+  "status":"PASS",
+  "headline":"The exact A8^3 factor-cycle twining T_3C is not a direct orbifold construction of Moonshine. The 3-cycle fixes diagonal sl9 at weight one (dimension 80), which survives in every extension of the fixed-point VOA, while V^natural has V1=0. Its permutation-twisted vacuum shift is 8/9. Dressing only by the certified Z9 center/simple-current glue cannot remove the diagonal currents because the center is trivial on the adjoint.",
+  "weight_one":{"A8cubed":"sl9^3","dimension":240,"factor_cycle_fixed":"diagonal sl9","fixed_dimension":80,"moonshine_V1_dimension":0,"direct_orbifold_to_moonshine":false},
+  "permutation_twist":{"single_factor_c":8,"cycle_length":3,"ground_shift":"8/9","formula":"c/24*(n-1/n)"},
+  "glue_test":{"simple_current_sectors":27,"ground_weight_census":{"0.0":1,"2.0":18,"3.0":8},"center_action_on_adjoint":"trivial","center_dressing_removes_fixed_currents":false},
+  "interpretation":"The all-level 3C/2A twining equality is a precise character shadow. A literal A8^3 -> V^natural operation must remove the current algebra by something beyond factor permutation plus center glue.",
+  "literature":["Chen-Lam-Shimakura, arXiv:1606.05961: Moonshine from a fixed-point-free order-3 Leech orbifold","Abe-Lam-Yamada, arXiv:1705.09022: Z_p Leech orbifolds and Moonshine"],
+  "boundary":"This rules out the plain factor-cycle orbifold and its center-phase dressing. It does not rule out more elaborate coset, commutant, BRST, extension, or non-central automorphism constructions involving A8^3.",
+  "checks":{"fixed_sl9_dim80":true,"twisted_shift_8_9":true,"glue_27":true,"center_trivial_on_adjoint":true}
+}
