@@ -1,0 +1,15 @@
+{
+  "schema": "w33.e6_cubic_h1_is_sp4_adjoint.v1",
+  "status": "PASS",
+  "headline": "The ten-dimensional mod-3 H1 of the integral 27-line -> 45-tritangent -> 36-double-six cubic complex is PSp(4,3)-equivariantly isomorphic to Lambda^2(F3^5)=so5(F3)=sp4(F3). On common exact generators the Hom space has dimension one and its nonzero intertwiner has rank ten.",
+  "cubic_complex": {"R_shape":[27,45],"N_shape":[45,36],"rank_F3_R":21,"rank_F3_N":14,"ker_R":24,"H1":10},
+  "intertwiner": {
+    "Hom_dimension_F3": 1,
+    "rank": 10,
+    "matrix_mod3": [[0,1,1,2,2,2,1,0,0,0],[1,1,0,0,2,0,0,0,0,0],[0,2,0,0,1,0,0,0,0,0],[2,1,0,2,2,0,1,0,0,0],[0,2,1,0,1,2,0,0,2,1],[1,1,2,0,0,0,1,0,1,2],[2,1,2,0,0,0,2,0,1,2],[0,2,1,0,0,0,0,2,2,1],[2,1,1,0,2,0,2,2,1,1],[2,2,1,2,1,0,0,1,1,0]]
+  },
+  "target_module": "Lambda^2(F3^5) ~= so5(F3) ~= sp4(F3), the adjoint PSp(4,3) module",
+  "repo_bridge": "This identifies Pass7364 H1 with the same adjoint isomorphism class constructed independently in Pass4858 and explicitly realized as O5(3) adjoint in Pass4863/4864.",
+  "magic_boundary": "Linear tritangent holonomy in this H1 is finite symplectic-adjoint/Clifford-side data. A nonzero H1 coordinate may encode global contextual transport, but H1 membership alone is not a non-Clifford gate or magic-state witness.",
+  "checks": {"RN_zero_mod3":true,"H1_dim10":true,"common_PSp_generators":true,"Hom_dim1":true,"intertwiner_rank10":true}
+}
