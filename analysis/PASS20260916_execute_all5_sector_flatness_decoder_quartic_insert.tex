@@ -1,0 +1,50 @@
+\subsection{Sector return, dual covers, protected singlet directions, and the first nonlinear adjoint invariant}
+\label{sec:20260916-sector-flatness-decoder-quartic}
+
+The $A_8^3$ Niemeier glue code $C\le (\mathbb Z/9)^3$ has order $27$ and conformal-weight census $0^1+2^{18}+3^8$.  Hence its discriminant quadratic form $q(c)=h_c\bmod1$ vanishes identically, and so does the simple-current monodromy bicharacter
+\[
+ b(c,d)=q(c+d)-q(c)-q(d).
+\]
+The $26$ nonzero sectors therefore form $13$ inverse pairs $c,-c$ with bosonic/local return $V_cV_{-c}\to V_0$.  The abelian glue fusion data cannot by themselves supply a qutrit-$T$-like ninth-root exchange phase.  Moreover, on the irreducible $729$-dimensional $3^{1+12}$ Heisenberg ground module, any return endomorphism commuting with the full Heisenberg action is scalar.  A non-Clifford return, if present, must therefore use noncentral descendant/OPE structure not encoded by the simple-current group alone.
+
+The Suzuki $120$-cover and the classical Steiner $120$-cover are now separated exactly.  Their forty three-element fibers quotient respectively to the standard $W(3,3)$ point graph and the dual $Q(4,3)$ line graph.  Both rational degree-$40$ permutation modules are $\mathbf1\oplus V_{24}\oplus V_{15}$, while literal point--line incidence $Z$ obeys
+\[
+ ZZ^T=4I+A_{\rm pt},\qquad Z^TZ=4I+A_{\rm line},\qquad \operatorname{rank}Z=25.
+\]
+Thus incidence transmits exactly $\mathbf1\oplus V_{24}$ and annihilates the two distinct $15$-dimensional dark constituents.  The modular separator
+\[
+ \operatorname{rank}_{\mathbf F_3}(A_{\rm pt}+I)=11,
+ \qquad
+ \operatorname{rank}_{\mathbf F_3}(A_{\rm line}+I)=15
+\]
+is a characteristic-three extension effect, not a new four-dimensional characteristic-zero module.
+
+On the heterotic branch, the frozen SU(5) witness has $24$ untwisted and $22$ twisted selected-SU(5) singlet momentum types.  Exact sixteen-dimensional lattice-momentum enumeration finds $36$ neutral cubics and exactly $16$ primitive neutral quartics, all of type
+\[
+ U\,T_0T_1T_2.
+\]
+For every one of these sixteen supports, no neutral cubic contains two support fields, no dangerous neutral term occurs at degrees $5,6,7$, the unique degree-$8$ self-square is forbidden by the $\mathbb Z_3$ R rule, and degrees $9,10,11$ are empty again.  The first gauge-plus-R-admissible self-lift is the degree-$12$ cube, with three untwisted copies distributed one per complex plane.  Hence these are exact lattice-neutral zero-FI D-flat candidates protected against gauge-plus-R F-terms through order eleven.  The anomalous-U(1) Fayet--Iliopoulos shift and the degree-$12$ space-group/Rule--4/Rule--5 amplitude remain open.
+
+For the local $165$ complex Pauli fusion shadow, the normalized projection Gram matrix
+\[
+ G=I+\frac1{13}A_{165}
+\]
+has the exact inverse
+\[
+ \boxed{G^{-1}=\frac{91}{64}I-\frac{13}{64}A_{165}+\frac{117}{3136}J}.
+\]
+Its gains on the constant, $120$-dimensional, and $44$-dimensional SRG eigenspaces are respectively $49/13$, $16/13$, and $4/13$.  Thus the canonical dual is a fixed rational combination of self, nearest-neighbour sum and global mean.  Every principal subframe is positive definite and has condition number at most $49/4$ by interlacing.  Since the full Gram matrix is nonsingular, this is robust surviving-subframe conditioning rather than exact erasure recovery of the deleted coefficient.
+
+Finally, the ten global cubic-holonomy coordinates, already identified with the adjoint $\mathfrak{sp}_4(\mathbf F_3)$, have invariant-polynomial dimensions
+\[
+ \dim \mathbf F_3[H_1]_d^{Sp_4(3)}=(0,1,0,3),\qquad d=1,2,3,4.
+\]
+There is no invariant cubic.  The quadratic is $q_2(X)=\operatorname{tr}(X^2)$.  A formal quartic basis is $q_2^2$, $\det X$, and the Frobenius lift $q_F$; on $\mathbf F_3$-points $q_F=2q_2$, so $\det X$ is the first genuinely new nonlinear pointwise invariant.  Exhausting all $3^{10}=59049$ adjoint elements realizes all nine pairs $(q_2,\det)\in\mathbf F_3^2$.  Therefore a phase $\omega^{r\det X}$, $r=1,2$, is a concrete quartic magic candidate only after an explicit coupling maps the adjoint controller variable into a basis-dependent phase on the six-qutrit register; no such gate is asserted here.
+
+The executable certificates are
+\texttt{data/w33\_a8cubed\_sector\_return\_monodromy.json},
+\texttt{data/w33\_steiner\_twin\_point\_line\_dark\_module.json},
+\texttt{data/w33\_suzuki\_165\_fusion\_frame\_decoder.json}, and
+\texttt{data/w33\_h1\_adjoint\_nonlinear\_invariants.json}.
+The protected-singlet certificate lives in the companion Holotrade repository as
+\texttt{data/w33\_su5\_singlet\_flat\_directions.json}.
