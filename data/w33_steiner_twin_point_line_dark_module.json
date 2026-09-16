@@ -1,0 +1,13 @@
+{
+  "schema":"w33.steiner_twin_point_line_dark_module.v1",
+  "status":"PASS",
+  "headline":"The Suzuki 120 Steiner-twin cover lies over W33 points, while the classical Steiner cover lies over W33 lines/Q(4,3). Their degree-40 rational permutation modules share 1+24+15, and literal point-line incidence transmits exactly 1+24 while annihilating the two distinct 15-dimensional dark sectors. The mod-3 ranks 11 versus 15 are a modular-extension separator, not a new 4D characteristic-zero module.",
+  "covers":{
+    "Suzuki_twin_120":{"blocks":40,"quotient":"W33 point graph","rank_F3_A_plus_I":11},
+    "classical_Steiner_120":{"blocks":40,"quotient":"W33 line graph = Q(4,3)","rank_F3_A_plus_I":15}
+  },
+  "point_line_incidence":{"shape":[40,40],"rank_Q":25,"rank_F3":25,"ZZt":"4I+A_point","ZtZ":"4I+A_line","singular_sector_dimensions":[1,24,15]},
+  "difference_module":{"common_transmitted":"1 + 24","point_dark_dimension":15,"line_dark_dimension":15,"interpretation":"dual -4 eigenspaces killed on the left/right by incidence"},
+  "modular_boundary":"The numerical rank gap 15-11=4 in A+I over F3 is not by itself a 4-dimensional characteristic-zero representation; the exact rational separator is the pair of dark 15-spaces.",
+  "checks":{"twin_rank11":true,"Steiner_rank15":true,"incidence_rank25":true,"Gram_identities":true,"dual_dark15":true}
+}
