@@ -1,0 +1,11 @@
+{
+  "schema":"w33.suzuki_165_quaternionic_design_shadow.v1",
+  "status":"PASS",
+  "headline":"The local 165 Suzuki/Leech W33 encodings reconstruct all 297 lines of GQ(4,8) as unique K5 Jordan-frame candidates: five W33 encodings per line, nine lines per encoding, and every graph edge lies on one line. This is the same U5(2) degree-165/297 incidence G-set that has a classical quaternionic tight-projective-3-design realization in HP^4.",
+  "finite_incidence":{"points":165,"lines":297,"points_per_line":5,"lines_per_point":9,"identity":"165*9=297*5","collinearity_srg":[165,36,3,9],"edge_in_unique_line":true},
+  "quaternionic_external_realization":{"group":"2 x PSU5(2)","space":"HP^4","rays":165,"design":"tight projective 3-design","angle_set":["0","1/4"],"Jordan_frames":297,"frames_per_ray":9},
+  "physics_probe":"The abstract carrier supplies an exact highly symmetric ensemble/frame schedule. A useful next experiment is to construct a complex/fusion-frame image and test whether it gives a unitary-design or randomized-benchmarking ensemble for the six-qutrit register.",
+  "falsifier":"If no physically natural complex/fusion-frame intertwiner preserves the U5(2) incidence/overlap algebra, the quaternionic design remains a beautiful alternative realization with no direct quantum-hardware meaning.",
+  "boundary":"This certificate identifies finite U5(2) incidence. It does not assume quaternionic quantum mechanics or identify a Leech/W33 subspace with a quaternionic ray without an explicit intertwiner.",
+  "checks":{"165_points":true,"297_lines":true,"five_per_line":true,"nine_per_point":true,"edge_unique_line":true}
+}
