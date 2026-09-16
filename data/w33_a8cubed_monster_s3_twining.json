@@ -1,0 +1,26 @@
+{
+  "schema": "w33.a8cubed_monster_s3_twining.v1",
+  "status": "PASS",
+  "headline": "Factor permutations of the Niemeier A8^3 lattice VOA reproduce Monster 3C exactly and Monster 2A up to the 80-dimensional weight-one fixed space: Z_(123)=T_3C and Z_(12)=T_2A+80. Since the untwined characters are J+240 versus J, the S3 characters agree exactly at every conformal weight n>=2.",
+  "fixed_lattices": {
+    "3cycle": {"rank":8,"determinant":"3^8","rescaled_by_1_over_3":"even unimodular rank 8 = E8","theta":"E4(3 tau)"},
+    "transposition": {"rank":16,"determinant":"2^8","level":2,"theta_first_coefficients":[1,72,3744],"sturm_bound":2}
+  },
+  "twining_identities": {
+    "3cycle": "Z_c(tau)=E4(3tau)/eta(3tau)^8=T_3C(tau)",
+    "transposition": "Z_s(tau)=T_2A(tau)+80"
+  },
+  "trace_sequences_V0_to_V6": {
+    "transposition": [1,80,4372,96256,1240002,10698752,74428120],
+    "3cycle": [1,0,0,248,0,0,4124]
+  },
+  "weight_one": {
+    "A8cubed_character": [240,80,0],
+    "moonshine_character": [0,0,0],
+    "difference": "80 trivial + 80 standard as an S3 module"
+  },
+  "all_levels_n_ge_2": "V_{A8^3,n} and V^natural_n have identical complex S3 characters for identity, a 2A-type transposition and a 3C-type three-cycle; hence they are isomorphic as S3-modules at each n>=2, although not as VOAs.",
+  "weight_two_S3_multiplicities": {"trivial":35000,"sign":30628,"standard_2d":65628},
+  "boundary": "The equality is an equality of graded S3 characters/modules for weights >=2. A8^3 has a 240-dimensional weight-one Lie algebra whereas moonshine has V1=0, so no VOA isomorphism is claimed.",
+  "checks": {"fixed_cycle_is_sqrt3_E8":true,"swap_level2_det256":true,"swap_sturm_bound_passed":true,"T3C_exact":true,"T2A_plus_80_exact":true,"weight2_decomposition":true}
+}
