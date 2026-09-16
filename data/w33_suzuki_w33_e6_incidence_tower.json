@@ -1,0 +1,51 @@
+{
+  "schema": "w33.suzuki_w33_e6_incidence_tower.v1",
+  "status": "PASS",
+  "headline": "The 32760-point 2.Suz tight orbit in W(11,3) contains complete nondegenerate W(3,3) subspaces. Their 2.Suz orbit has size 135135. Each has 54 orthogonal full-W33 partners; complement pairs those partners into 27 decompositions and every complement is again a full W33 in the tight set. Hence the E8^3 three-W33 root shadow embeds 120/120 in the Leech shell, and the 27 local decompositions form SRG(27,10,1,5), the E6 cubic-surface 27-line carrier.",
+  "tight_set_points": 32760,
+  "full_W33_orbit": {
+    "count": 135135,
+    "points_each": 40,
+    "through_each_tight_point": 165,
+    "orthogonal_partners_each": 54
+  },
+  "three_W33_decompositions": {
+    "count": 1216215,
+    "through_each_W33": 27,
+    "root_shadow_overlap": "120/120"
+  },
+  "generalized_hamming": {
+    "projective_two_weight_code": "[32760,12]_3",
+    "d_8": 32720,
+    "reason": "A 4-dimensional vector subspace has at most 40 projective points, and a full 40-point intersection is attained."
+  },
+  "local_E6_carrier": {
+    "vertices": 27,
+    "pair_signature_census": {"0,0,0,0": 216, "2,2,2,2": 135},
+    "adjacency": "all four cross-intersections have vector dimension 2",
+    "srg": [27,10,1,5],
+    "complement_srg": [27,16,10,8]
+  },
+  "explicit_decomposition": {
+    "U1": [[1,0,0,0,2,2,2,1,1,0,2,1],[0,1,0,0,1,2,1,2,2,2,1,0],[0,0,1,0,1,2,2,1,1,2,1,0],[0,0,0,1,2,2,0,1,2,2,1,0]],
+    "U2": [[1,0,0,2,0,0,2,1,0,0,1,0],[0,1,0,1,0,0,2,1,0,0,2,1],[0,0,1,2,0,2,1,1,0,2,0,0],[0,0,0,0,1,2,1,0,0,1,0,1]],
+    "U3": [[1,0,0,0,1,2,1,2,0,1,0,0],[0,1,0,0,1,1,0,0,2,0,1,0],[0,0,1,0,1,2,1,2,0,1,2,2],[0,0,0,1,2,2,2,2,2,2,0,0]]
+  },
+  "repo_prior_art": [
+    "exploration/w33_center_quad_gq42_e6_bridge.py: SRG(27,10,1,5) cubic/E6 carrier",
+    "analysis/w33_pass4659_internal_e6_27_36_45_triangle.py: internal 27-36-45 E6 incidence triangle",
+    "analysis/w33_pass4964_4965_4967_double_six_spread_transceiver.py: unique 36 double-six <-> 36 W33 spread equivariant bridge"
+  ],
+  "boundary": "These are exact finite-geometric statements. Identifying the three-W33 decomposition with a physical tensor factorization or error-correcting architecture is an interpretation, not part of the theorem.",
+  "checks": {
+    "T_32760": true,
+    "three_full_W33s": true,
+    "orbit_135135": true,
+    "orthogonal_degree_54": true,
+    "all_54_complements_full": true,
+    "decompositions_1216215": true,
+    "incidence_165": true,
+    "local_E6_srg": true,
+    "global_overlap_120": true
+  }
+}
