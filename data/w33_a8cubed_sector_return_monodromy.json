@@ -1,0 +1,38 @@
+{
+  "schema": "w33.a8cubed_sector_return_monodromy.v1",
+  "status": "PASS",
+  "headline": "All 27 A8^3 glue simple currents are bosonic/totally isotropic: h_c is integral and the monodromy bicharacter vanishes identically. The 26 nonzero sectors form 13 inverse pairs V_c V_-c -> V_0 with trivial simple-current exchange phase. Thus glue fusion/monodromy alone cannot produce a qutrit-T-like ninth-root gate.",
+  "glue": {
+    "order": 27,
+    "weight_census": {"0": 1, "2": 18, "3": 8},
+    "q_mod_1_identically_zero": true,
+    "monodromy_bicharacter_identically_zero": true
+  },
+  "inverse_pairs": {
+    "count": 13,
+    "profile_weight_order": {"h2_ord3": 3, "h2_ord9": 6, "h3_ord3": 1, "h3_ord9": 3},
+    "pairs": [
+      {"c":[0,3,6],"minus_c":[0,6,3],"weight":"2","order":3},
+      {"c":[1,1,4],"minus_c":[8,8,5],"weight":"2","order":9},
+      {"c":[1,4,1],"minus_c":[8,5,8],"weight":"2","order":9},
+      {"c":[1,7,7],"minus_c":[8,2,2],"weight":"2","order":9},
+      {"c":[2,2,8],"minus_c":[7,7,1],"weight":"2","order":9},
+      {"c":[2,5,5],"minus_c":[7,4,4],"weight":"3","order":9},
+      {"c":[2,8,2],"minus_c":[7,1,7],"weight":"2","order":9},
+      {"c":[3,0,6],"minus_c":[6,0,3],"weight":"2","order":3},
+      {"c":[3,3,3],"minus_c":[6,6,6],"weight":"3","order":3},
+      {"c":[3,6,0],"minus_c":[6,3,0],"weight":"2","order":3},
+      {"c":[4,1,1],"minus_c":[5,8,8],"weight":"2","order":9},
+      {"c":[4,4,7],"minus_c":[5,5,2],"weight":"3","order":9},
+      {"c":[4,7,4],"minus_c":[5,2,5],"weight":"3","order":9}
+    ]
+  },
+  "six_qutrit_register": {
+    "dimension": 729,
+    "Heisenberg_shape": "3^(1+12)",
+    "Schur_boundary": "Any return endomorphism commuting with the full irreducible Heisenberg action is scalar."
+  },
+  "result": "No nontrivial sector-return phase is available from the abelian simple-current topological data. A non-Clifford return map would have to use noncentral descendant/OPE action that is not fixed by the fusion group C.",
+  "boundary": "This does not classify all intertwining operators on the twisted module. It closes only the topological/simple-current return mechanism and the Heisenberg-equivariant subcase.",
+  "checks": {"C_order_27":true,"weights_0_2_3":true,"all_integral":true,"all_monodromy_zero":true,"13_inverse_pairs":true,"register_729":true}
+}
