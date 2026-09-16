@@ -1,0 +1,42 @@
+{
+  "schema": "w33.a8_cubed_weight2_pauli_interactions.v1",
+  "status": "PASS",
+  "headline": "The A8^3 extension has 18 weight-two glue sectors, six each with synchronized Pauli central character r=0,1,2. Their ground dimensions are six each of 7056, 10206 and 11664, totaling 173556; adding the 23328 vacuum-sector weight-two states gives 196884. On r=1,2 sectors the induced three-factor Pauli commutator is the full six-qutrit W(11,3) form r*(Omega1+Omega2+Omega3), while r=0 sectors have trivial Pauli commutator scalar.",
+  "glue": {
+    "order": 27,
+    "weight_two_sectors": 18,
+    "central_character_census": {"0":6,"1":6,"2":6},
+    "ground_dimension_census": {"7056":6,"10206":6,"11664":6},
+    "weight_two_glue_ground_states": 173556
+  },
+  "vacuum_weight_two": {
+    "alpha_minus_2": 24,
+    "symmetric_alpha_minus_1_squared": 300,
+    "root_times_oscillator": 5184,
+    "A8_norm4_per_factor": 756,
+    "A8cubed_norm4": 17820,
+    "total": 23328
+  },
+  "total_weight_two_dimension": 196884,
+  "ordered_weight2_fusion_target_weight_census": {"0":18,"2":216,"3":90},
+  "inter_register_operator": "O_c(v1,v2,v3)=Lambda^{k1}P(v1) tensor Lambda^{k2}P(v2) tensor Lambda^{k3}P(v3)",
+  "commutator": "O_c(v) O_c(w) = omega^{r*(Omega(v1,w1)+Omega(v2,w2)+Omega(v3,w3))} O_c(w) O_c(v), r=ki mod 3",
+  "degree_geometry": {
+    "r_1_or_2": "nondegenerate F3^12 six-qutrit phase space W(11,3)",
+    "r_0": "trivial commutator scalar"
+  },
+  "selector_test": {
+    "factor_W33_cartans": 40,
+    "factor_W33_spreads": 36,
+    "preserved_symmetry": "Sp(4,3)^3 semidirect S3",
+    "result": "No individual factor Cartan, spread, or heterotic Wilson fingerprint is selected by weight-two glue/central-character data alone; Sp(4,3) is transitive on the factor geometries and the glue depends on center charge, not Pauli degree."
+  },
+  "checks": {
+    "27_glue_sectors": true,
+    "18_weight_two": true,
+    "six_each_central_character": true,
+    "weight_two_196884": true,
+    "fusion_18_216_90": true,
+    "W33_has_36_spreads": true
+  }
+}
