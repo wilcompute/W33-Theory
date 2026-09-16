@@ -1,0 +1,40 @@
+{
+  "schema": "w33.suzuki_local_165_gq48_spectral_bridge.v1",
+  "status": "PASS",
+  "headline": "The 165 full Suzuki/Leech W33 4-spaces through a fixed tight-set point form SRG(165,36,3,9), the U5(2) polar graph / point graph of GQ(4,8). Its spectrum is 36^1 + 3^120 + (-9)^44, hence the permutation module splits as (1+44)+120 = 45+120.",
+  "construction": {
+    "vertices": 165,
+    "adjacency": "intersection vector dimension 2",
+    "srg": [165,36,3,9]
+  },
+  "local_neighborhood": {
+    "neighbors": 36,
+    "intersection_lines_through_base_point": 9,
+    "neighbors_per_intersection_line": 4,
+    "all_nine_intersection_lines_nonisotropic": true,
+    "W33_isotropic_lines_through_point": 4
+  },
+  "spectrum": {"36":1,"3":120,"-9":44},
+  "module_dimensions": {
+    "trivial_plus_minus9": 45,
+    "plus3": 120,
+    "identity": "165=1+44+120=45+120"
+  },
+  "external_identification": "Classical rank-3 U5(2) graph; point graph of GQ(4,8). ATLAS degree-165 representation has suborbit lengths 1,36,128.",
+  "repo_crosscheck": {
+    "cubic_tritangents": 45,
+    "Steiner_triangles": 120,
+    "sources": [
+      "analysis/w33_pass4659_internal_e6_27_36_45_triangle.py",
+      "analysis/w33_pass4964_4965_4967_double_six_spread_transceiver.py"
+    ]
+  },
+  "boundary": "The equality 45+120 with the old tritangent/Steiner carrier sizes is exact and representation-theoretically suggestive, but this certificate does not claim an equivariant identification. A concrete intertwiner or common group action is still required.",
+  "checks": {
+    "orbit_135135": true,
+    "through_point_165": true,
+    "srg_165_36_3_9": true,
+    "nine_by_four_local_chart": true,
+    "spectrum_multiplicities": true
+  }
+}
