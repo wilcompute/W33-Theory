@@ -1,0 +1,45 @@
+{
+  "schema": "w33.u52_165_e6_45_120_split.v1",
+  "status": "PASS",
+  "headline": "Under the ATLAS maximal subgroup 3 x U4(2), the local U5(2) degree-165 carrier splits 45+120. The 45 orbit is concretely isomorphic to the cubic tritangent SRG(45,12,3,3). The 120 orbit has the same pair-orbit sizes and 40x3 block system as the classical Steiner trihedral-pair action, but its 2160 K3,3 lift quotient is the standard W33 point graph (rank_F3(A+I)=11), whereas Pass4870 proves the Steiner quotient is Q(4,3) with rank 15. Thus only the 45 half is the old cubic carrier; the 120 half is a distinct Steiner-twin action.",
+  "atlas": {
+    "ambient": "U5(2) degree 165",
+    "maximal_subgroup": "3 x U4(2)",
+    "orbit_sizes": [45,120],
+    "central_C3_fixed_points": 45,
+    "central_C3_cycles_on_120": 40
+  },
+  "orbit45": {
+    "pair_orbits": [270,720],
+    "small_orbital_srg": [45,12,3,3],
+    "cubic_intersection_graph_isomorphic": true
+  },
+  "orbit120": {
+    "pair_orbits": [120,1620,2160,3240],
+    "central_blocks": "40 K3",
+    "2160_relation": "complete K3,3 over quotient edges",
+    "quotient_srg": [40,12,2,4],
+    "quotient_rank_F3_A_plus_I": 11,
+    "identification": "standard W33 point action"
+  },
+  "classical_Steiner_control": {
+    "pair_orbits": [120,1620,2160,3240],
+    "blocks": "40 K3",
+    "quotient": "Q(4,3) line action",
+    "rank_F3_A_plus_I": 15,
+    "source": "analysis/PASS4870_steiner_w33_quadratic_bridge_insert.tex"
+  },
+  "external_sources": [
+    "ATLAS U5(2) degree-165 permutation representation U52G1-p165B0",
+    "ATLAS maximal subgroup 3 x U4(2), U52G1-max2W1"
+  ],
+  "boundary": "The 45 carrier has an explicit graph intertwiner to cubic tritangents. The 120 carrier is NOT identified with classical Steiner pairs; the rank-11/rank-15 separator proves they are nonisomorphic degree-120 covers despite matching coarse orbit data.",
+  "checks": {
+    "atlas_generator_orders": true,
+    "split_45_120": true,
+    "45_cubic_intertwiner": true,
+    "120_pair_orbits_match": true,
+    "120_quotient_rank11": true,
+    "Steiner_rank15_control": true
+  }
+}
