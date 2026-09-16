@@ -1,0 +1,14 @@
+{
+  "schema": "w33.h1_det_weight2_coupling_no_go.v1",
+  "status": "PASS",
+  "headline": "The complete quadratic PSp(4,3)-equivariant coupling space from three factor Pauli labels to H1=sp4(F3) has dimension six and is spanned by the six symmetric moment maps M_ij. Every image from one triple (v1,v2,v3) has rank at most three, so det(X)=0 identically. Four independent Pauli directions attain det=1.",
+  "domain": "Sym^2((F3^4)^3)",
+  "target": "sp4(F3) ~= Sym^2(F3^4)",
+  "Hom_dimension_F3": 6,
+  "moment_map_basis": ["M11","M12","M13","M22","M23","M33"],
+  "single_weight2_triple": {"available_factor_degrees":3,"image_rank_bound":3,"determinant":"identically zero","phase_omega_r_det":"trivial"},
+  "four_vector_control": {"vectors":"standard basis e1,e2,e3,e4","image":"J","det_mod3":1},
+  "consequence": "The quartic determinant invariant remains a genuine nonlinear H1 invariant, but it cannot couple directly through one synchronized A8^3 weight-two operator. A determinant phase requires at least four independent Pauli directions, hence a composite/multi-operator channel.",
+  "boundary": "This no-go is for quadratic equivariant coupling of one three-label weight-two operator. It does not exclude higher-degree/OPE composites carrying four or more independent Pauli degrees.",
+  "checks": {"Hom_dim_6":true,"six_moment_maps_span":true,"single_triple_det_zero":true,"four_vector_det_one":true}
+}
