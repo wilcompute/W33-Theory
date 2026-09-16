@@ -1,0 +1,11 @@
+{
+  "schema":"w33.suzuki_165_complex_pauli_fusion_shadow.v1","status":"PASS",
+  "headline":"The 165 local Leech/Suzuki W33 encodings have a canonical complex six-qutrit operator-space realization. After removing their common +/-p Pauli core, each gives a rank-78 projection; adjacent encodings have projection overlap 6 and nonadjacent encodings overlap 0. Normalized projection Gram is I+A/13 with spectrum (49/13)^1+(16/13)^120+(4/13)^44.",
+  "ambient":"traceless six-qutrit Hilbert-Schmidt operator space with orthonormal Pauli monomial basis",
+  "raw_W33_operator_rank":80,"common_core_rank":2,"reduced_rank":78,
+  "pair_overlap":{"adjacent_trace_PUPV":6,"nonadjacent_trace_PUPV":0,"normalized_adjacent_inner":"1/13","normalized_nonadjacent_inner":"0"},
+  "normalized_projection_Gram":{"formula":"I + A_165/13","spectrum":{"49/13":1,"16/13":120,"4/13":44},"rank":165},
+  "frame_potentials":{"sum_inner_products":"8085/13","second_projection_frame_potential":"33825/169","tight_frame_value_for_165_vectors_in_165D_span":"165","is_tight":false},
+  "design_boundary":"This is an exact complex two-distance fusion/projection frame in six-qutrit operator space. It is not a complex projective 2- or 3-design certificate and it does not imply quaternionic quantum mechanics. The classical HP^4 design and this complex shadow share the U5(2)/GQ(4,8) incidence carrier, not a claimed canonical Hilbert-space isometry.",
+  "checks":{"rank78":true,"adjacent_overlap6":true,"nonadjacent_overlap0":true,"Gram_spectrum":true,"frame_potential":true}
+}
