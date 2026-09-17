@@ -1,0 +1,87 @@
+{
+  "schema": "w33.projective_basis_orbits_two_trit_classifier.v1",
+  "status": "PASS",
+  "headline": "The 63180 projective bases of PG(3,3) split into exactly six PSp(4,3) orbits, classified by the induced W33 orthogonality graph. The symmetric projective pair (E,W) over F3 is distinct on all six and therefore gives a minimal two-trit orbit classifier. The C4 orbit has size 1620 and is exactly the apartment shell.",
+  "totals": {
+    "PG33_points": 40,
+    "four_point_subsets": 91390,
+    "projective_bases": 63180,
+    "dependent_four_sets": 28210,
+    "PSp_order": 25920,
+    "basis_orbits": 6
+  },
+  "orbits": [
+    {
+      "graph": "C4",
+      "orbit_size": 1620,
+      "PSp_stabilizer_order": 16,
+      "classifier_EW": [1, 1]
+    },
+    {
+      "graph": "2K2",
+      "orbit_size": 3240,
+      "PSp_stabilizer_order": 8,
+      "classifier_EW": [2, 0]
+    },
+    {
+      "graph": "4K1",
+      "orbit_size": 6480,
+      "PSp_stabilizer_order": 4,
+      "classifier_EW": [0, 0]
+    },
+    {
+      "graph": "K2+2K1",
+      "orbit_size": 12960,
+      "PSp_stabilizer_order": 2,
+      "classifier_EW": [1, 0]
+    },
+    {
+      "graph": "P4",
+      "orbit_size": 12960,
+      "PSp_stabilizer_order": 2,
+      "classifier_EW": [0, 2]
+    },
+    {
+      "graph": "P3+K1",
+      "orbit_size": 25920,
+      "PSp_stabilizer_order": 1,
+      "classifier_EW": [2, 1]
+    }
+  ],
+  "classifier": {
+    "orthogonality_bit": "z_ij = 1 - <v_i,v_j>^2 in F3",
+    "E": "sum_{i<j} z_ij mod 3",
+    "W": "sum_i sum_{j<k, j,k != i} z_ij z_ik mod 3",
+    "distinct_pairs": {
+      "C4": [1, 1],
+      "P4": [0, 2],
+      "P3+K1": [2, 1],
+      "2K2": [2, 0],
+      "K2+2K1": [1, 0],
+      "4K1": [0, 0]
+    },
+    "minimality": "One trit has only three values and cannot classify six orbits; the displayed two trits do classify all six."
+  },
+  "determinant_boundary": {
+    "quartic_det_on_every_projective_basis": 1,
+    "consequence": "The four-direction determinant phase is universal across all six basis orbits and cannot by itself distinguish an apartment from another projective basis."
+  },
+  "apartment": {
+    "graph": "C4",
+    "count": 1620,
+    "basis_fraction": "1/39",
+    "PSp_stabilizer_order": 16,
+    "pfaffian_formula": "For ordered a-b-c-d-a, Pf(G)=-<a,c><b,d>; hence Pf(G)^2=1.",
+    "levi_bridge": "These are the point shadows of the 1620 minimum-weight Levi 8-cycle apartments already certified in Pass 5042 / the apartment code arc."
+  },
+  "boundary": "Exact finite geometry only. The classifier is a canonical pair of discrete projective observables; no hardware addressability, Hamiltonian coupling, or physical non-Clifford action is claimed.",
+  "checks": {
+    "63180_bases": true,
+    "six_PSp_orbits": true,
+    "graph_type_classifies_orbit": true,
+    "two_trit_pairs_distinct": true,
+    "determinant_blind_across_bases": true,
+    "1620_C4_apartments": true,
+    "apartment_pfaffian_square_one": true
+  }
+}
