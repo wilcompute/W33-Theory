@@ -1,0 +1,40 @@
+{
+  "schema": "w33.h1_det_apartment_phase_bridge.v1",
+  "status": "PASS",
+  "headline": "All 1620 induced W33 quadrangles/apartments are projective bases of F3^4 and therefore have det((VV^T)J)=1. Each lifts uniquely to one point-line Levi 8-cycle, so the determinant/Tutte phase candidate is uniform on the complete apartment set.",
+  "W33": {
+    "points": 40,
+    "lines": 40,
+    "point_graph_edges": 240,
+    "induced_C4_apartments": 1620,
+    "levi_8cycle_lifts": 1620
+  },
+  "direct_proof": {
+    "cyclic_order": "p1-p2-p3-p4-p1",
+    "adjacent_pairing": "<p_i,p_{i+1}>=0",
+    "opposite_pairings": "a=<p1,p3>, b=<p2,p4> are both nonzero",
+    "gram_determinant": "det(V^T J V)=(a b)^2=1 in F3",
+    "consequence": "V is a projective basis and det((VV^T)J)=det(V)^2 det(J)=1"
+  },
+  "opposite_pairing_profile": {
+    "2,2": 448,
+    "2,1": 332,
+    "1,2": 452,
+    "1,1": 388
+  },
+  "candidate_phase": {
+    "central_character_r1": "omega",
+    "central_character_r2": "omega^2",
+    "uniform_on_all_apartments": true
+  },
+  "relation_to_pass4474": "Uses only induced C4 quadrangles/apartments. The separate 120 simple C4s lying inside geometric K4 lines are excluded.",
+  "boundary": "This is an exact finite bridge between the determinant invariant and the W33/Levi apartment geometry. It does not show that a VOA OPE or physical controller implements the apartment phase.",
+  "checks": {
+    "W33_SRG_degree12": true,
+    "40_GQ_lines": true,
+    "1620_induced_apartments": true,
+    "every_apartment_projective_basis": true,
+    "every_apartment_det1": true,
+    "unique_Levi_8cycle_lift": true
+  }
+}
