@@ -1,0 +1,73 @@
+\subsection{The full $E_6$ involution ladder closes on the cubic $36$--$45$ incidence geometry}
+\label{sec:20260917-e6-involution-ladder-flags}
+
+The preceding involution reconstruction can be sharpened so that all four
+nontrivial involution degrees of $W(E_6)$ acquire direct cubic-surface meaning.
+The degree-one class is the $36$ reflections, already identified objectwise with
+the $36$ double-sixes through their moved twelve-line supports.
+
+For two distinct double-sixes $D_1,D_2$, their supports meet in either four or
+six cubic lines, with exact census
+\[
+ \binom{36}{2}=270+360.
+\]
+The corresponding reflections commute if and only if the overlap is four.
+Their $270$ products are distinct and exhaust the degree-two involution class.
+Thus
+\[
+ \boxed{\{d=2\text{ involutions}\}
+ \longleftrightarrow
+ \{\text{syzygetic double-six pairs}\}},
+ \qquad |D_1\cap D_2|=4.
+\]
+The remaining $360$ pairs have six-line overlap and are noncommuting.
+
+At the opposite end, each degree-four involution fixes exactly three cubic
+lines pointwise, those three lines form a tritangent, and the resulting map is
+a bijection
+\[
+ \boxed{\{d=4\text{ involutions}\}\longleftrightarrow
+        \{45\text{ tritangents}\}}.
+\]
+Write $q_T$ for the unique degree-four involution attached to tritangent $T$.
+
+Now let $w$ be one of the $540$ degree-three involutions.  Its three fixed
+lines form a tritangent $T$, and $w$ commutes with $q_T$.  The product
+\[
+ r=wq_T
+\]
+is a degree-one reflection.  If $D$ is the double-six moved by $r$, then
+\[
+ T\cap D=\varnothing.
+\]
+For each fixed $T$, the twelve degree-three involutions above $T$ map to the
+twelve double-sixes disjoint from $T$, each exactly once.  Globally this gives
+the canonical bijection
+\[
+ \boxed{
+ \{d=3\text{ involutions}\}
+ \longleftrightarrow
+ \{(T,D):T\text{ tritangent},\ D\text{ double-six},\ T\cap D=\varnothing\}},
+\]
+and therefore
+\[
+ \boxed{540=45\cdot12}.
+\]
+So the four involution degrees organize the cubic geometry as
+\[
+ 36\ \longrightarrow\ 270\ \longrightarrow\ 540\ \longrightarrow\ 45,
+\]
+with carriers double-sixes, syzygetic double-six pairs, disjoint
+tritangent--double-six flags, and tritangents respectively.  The complementary
+$1080$ tritangent/double-six pairs have two-line intersection, giving again the
+Pass~4659 census
+\[
+ 45\cdot36=540+1080.
+\]
+
+The executable certificate is
+\texttt{analysis/w33\_e6\_involution\_ladder\_flags.py}, with frozen output
+\texttt{data/w33\_e6\_involution\_ladder\_flags.json}.  This is an exact finite
+$W(E_6)$/cubic-surface theorem.  Transport to the W33/Suzuki carriers uses the
+separately certified equivariant bridges and does not by itself assert a
+physical $E_6$ gauge symmetry.
