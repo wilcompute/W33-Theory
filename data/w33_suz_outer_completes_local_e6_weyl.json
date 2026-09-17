@@ -1,0 +1,44 @@
+{
+  "schema": "w33.suz_outer_completes_local_e6_weyl.v1",
+  "status": "PASS_WITH_PUBLISHED_ATLAS_STRUCTURE",
+  "headline": "Suz induces only the inner U4(2) ~= PSp(4,3) symmetry on the 27 local three-W33 decompositions, but the corresponding Suz:2 point stabilizer is 2^(1+6).U4(2).2 at the same degree 135135. Its normal 2-core is forced to act trivially on the transitive odd 27-set, while the U4(2) socle is already faithful. Hence the Suz:2 image is the full U4(2):2 of order 51840, exactly W(E6), the automorphism group of the Schlaefli/cubic-surface 27-line graph.",
+  "computed_parent": {
+    "degree": 27,
+    "Suz_inner_image": 25920,
+    "inner_identification": "U4(2) ~= PSp(4,3)",
+    "local_graph": "SRG(27,10,1,5); complement Schlaefli SRG(27,16,10,8)"
+  },
+  "ATLAS_inputs": {
+    "Suz_order": 448345497600,
+    "Suz_degree_135135_stabilizer": "2^(1+6).U4(2)",
+    "Suz_point_stabilizer_order": 3317760,
+    "Suz2_order": 896690995200,
+    "Suz2_degree_135135_stabilizer": "2^(1+6).U4(2).2",
+    "Suz2_point_stabilizer_order": 6635520,
+    "U4_2_order": 25920,
+    "Out_U4_2": 2
+  },
+  "deduction": {
+    "normal_2_core_order": 128,
+    "normal_2_core_local_action": "trivial by the odd transitive 27-set block argument",
+    "quotient_available": "U4(2):2",
+    "socle_U4_2_faithful": true,
+    "quotient_kernel": "trivial: U4(2):2 is almost simple and the kernel cannot contain the already-faithful socle",
+    "Suz2_local_image_order": 51840,
+    "identification": "U4(2):2 ~= W(E6)"
+  },
+  "interpretation": "The factor-of-two missing from the local E6 graph symmetry inside Suz is not accidental. It is exactly restored by the outer automorphism in Suz:2.",
+  "sources": [
+    "ATLAS of Finite Group Representations: Suz, maximal subgroups of Suz and Suz:2",
+    "ATLAS: U4(2)=S4(3), order 25920, Out=2",
+    "classical cubic-surface 27-line configuration: graph automorphism W(E6)"
+  ],
+  "boundary": "This theorem combines an exact repository computation with published finite-group classifications. It proves a local symmetry action, not physical E6 gauge dynamics or a continuum unification mechanism.",
+  "checks": {
+    "parent_inner_25920": true,
+    "inner_stabilizer_128_times_25920": true,
+    "outer_stabilizer_128_times_51840": true,
+    "odd_27_core_kernel": true,
+    "full_outer_image_51840": true
+  }
+}
