@@ -1,0 +1,41 @@
+{
+  "schema": "w33.e6_involution_full_w33_dictionary.v1",
+  "status": "PASS",
+  "headline": "All four nontrivial W(E6) involution degrees now transport objectwise into native W33 carriers. The formerly missing degree-2/270 bridge is canonical, and degree-3/540 is exactly the complement of the certified 45x36 tritangent/spread selector.",
+  "dictionary": {
+    "degree1_36": {
+      "E6": "reflections = double-sixes",
+      "W33": "36 spreads",
+      "bridge": "unique W(E6)-equivariant Pass4964 bijection"
+    },
+    "degree2_270": {
+      "E6": "syzygetic double-six pairs = degree-2 involutions",
+      "W33": ["pairs of spreads with overlap 4", "selected 270 singular lines", "base of the 1620-apartment six-sheet cover"],
+      "bridge": "canonical 12-signature selected270 bridge + Pass4964 pair transport"
+    },
+    "degree3_540": {
+      "E6": "disjoint tritangent-double-six flags = degree-3 involutions",
+      "W33": "(tritangent/protected45, spread36) flags in the complement of Pass4979 selector",
+      "count_identity": "45*12=36*15=540"
+    },
+    "degree4_45": {
+      "E6": "tritangents = degree-4 involutions",
+      "W33": ["internal Pass4659 45", "protected45", "center-quad/E6 tritangent45"],
+      "bridge": "Pass4659 action-level 45 -> protected45 composed with Pass4616"
+    }
+  },
+  "cross_relations": {
+    "36_pair_partition": "630 = 270 four-overlap/syzygetic + 360 one-overlap/azygetic spread pairs",
+    "45x36_partition": "1620 = 540 disjoint/unselected + 1080 two-line/selected flags",
+    "selected270_apartment_cover": "1620 = 270*6"
+  },
+  "stabilizer_crosschecks": {
+    "PSp_selected270": 96,
+    "W_E6_degree2": 192,
+    "PSp_tritangent45": 576,
+    "W_E6_degree4": 1152,
+    "note": "outer completion doubles the PSp stabilizers on the corresponding W(E6) carriers"
+  },
+  "commutative_closure": true,
+  "boundary": "Exact finite G-set/incidence transport only; no physical E6 gauge symmetry follows."
+}
