@@ -1,0 +1,24 @@
+{
+  "schema": "w33.det_phase_scalar_no_go.v1",
+  "status": "PASS_NO_GO",
+  "register": {
+    "group": "extraspecial 3^(1+12)",
+    "dimension": 729,
+    "central_characters": [1, 2],
+    "irreducible": true
+  },
+  "controller": {
+    "module": "sp4(F3) adjoint",
+    "dimension": 10,
+    "invariant": "det(X) in F3"
+  },
+  "theorem": {
+    "commutant": "End_H(V_r)=C I by irreducibility/Schur",
+    "bare_candidate": "omega^(r det(X)) I",
+    "action": "scalar global phase",
+    "nontrivial_register_gate": false
+  },
+  "required_escape": "An operator-valued coupling X -> sum_u c_u(X) W_u with some nonzero Weyl label u, or an equivalent noncentral VOA descendant/OPE channel; the scalar invariant may enter coefficients but cannot itself be the gate.",
+  "consequence": "The prior quartic determinant result remains a nonlinear controller invariant and fusion-compatible witness, but its interpretation as a magic gate requires a state-dependent operator intertwiner that is still open.",
+  "boundary": "Exact representation-theoretic no-go; it does not exclude non-Heisenberg-equivariant or noncentral physical couplings."
+}
