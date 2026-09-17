@@ -1,0 +1,71 @@
+\subsection{The hidden $E_6$ binary carrier inside the Suzuki W33 kernel}
+\label{sec:20260917-suzuki-kernel-e6-shells}
+
+The stabilizer calculation identifies the linear kernel of one embedded W33 block as the
+extraspecial minus group
+\[
+ K_{\rm lin}\cong 2_-^{1+6},\qquad |K_{\rm lin}|=128.
+\]
+For an extraspecial $2$-group the quotient by the center carries the canonical quadratic
+form $q(\bar x)=x^2\in Z(K)\cong\mathbf F_2$.  Minus type therefore gives
+\[
+ K_{\rm lin}/Z(K_{\rm lin})\cong \mathbf F_2^6
+\]
+with a nondegenerate minus quadratic form.  Its $63$ nonzero vectors split as
+\[
+ \boxed{63=27+36},
+\]
+with $27$ nonzero singular vectors and $36$ nonsingular vectors.
+
+This is not only a count.  The $27$ singular vectors form the elliptic quadric
+$Q^-(5,2)=GQ(2,4)$; polar orthogonality gives
+\[
+ \boxed{\operatorname{SRG}(27,10,1,5)}.
+\]
+The executable certificate constructs this graph and an explicit vertex-by-vertex
+isomorphism to the repository's independent W33 center-quad quotient
+\[
+ 90\longrightarrow45\longrightarrow27,
+\]
+whose $27$ quotient lines carry the same cubic-surface incidence graph.  Thus the new
+Suzuki stabilizer kernel itself contains a canonical binary realization of the old
+W33$\to E_6$ $27$-line carrier.
+
+The complementary $36$ nonsingular vectors are equally suggestive.  Under the inner
+$U_4(2)\cong\mathrm{PSp}(4,3)$ action their stabilizer has order
+\[
+ 25920/36=720,
+\]
+matching the already certified transitive $36$-object family
+\[
+ \text{W33 spreads}\leftrightarrow\text{Schl\"afli double-sixes}
+ \leftrightarrow\text{doily complements}
+ \leftrightarrow\text{Pfaffian sections}.
+\]
+Under the full orthogonal action the stabilizer doubles to
+\[
+ 51840/36=1440,
+\]
+which is exactly the classical full double-six stabilizer.  At this stage the $27$ bridge
+is objectwise, while the $36$ bridge is an exact orbit/stabilizer fingerprint; the explicit
+nonsingular-vector-to-spread intertwiner remains open.
+
+Most importantly, the extension puzzle is now structural.  The full automorphism group of
+the minus quadratic quotient is
+\[
+ \operatorname{Out}(2_-^{1+6})\cong O_6^-(2)\cong W(E_6),
+\]
+whereas the Suzuki W33 block stabilizer acts through only the index-two subgroup
+\[
+ \Omega_6^-(2)\cong U_4(2)\cong\mathrm{PSp}(4,3).
+\]
+So the ``missing'' outer $E_6$ involution is not mysterious: it is an intrinsic automorphism
+of the extraspecial kernel that is not induced by conjugation from the ambient Suzuki block
+stabilizer.  This explains simultaneously why the local $27$-carrier admits the full Weyl
+symmetry and why the actual $2.\mathrm{Suz}$ action sees only the inner half.
+
+The executable artifacts are
+\texttt{analysis/w33\_suzuki\_w33\_kernel\_structure\_reconciliation.py} and
+\texttt{analysis/w33\_suzuki\_kernel\_e6\_quadratic\_shell\_bridge.py}, with frozen JSON
+certificates of the same names under \texttt{data/}.  These are finite-group and finite-
+geometry statements; no physical implementation of the missing outer automorphism is inferred.
