@@ -1,0 +1,93 @@
+\subsection{Weyl involutions reconstruct the $36$ double-sixes, the $45$ tritangents, and their cross-incidence}
+\label{sec:20260917-e6-involution-36-45}
+
+There is a second, independent route to the cubic-surface $27$--$36$--$45$
+triangle that does not start from the W33 apartment/code carrier.  Work in the
+Picard lattice of a smooth cubic surface with basis $H,E_1,\ldots,E_6$ and
+intersection form $\operatorname{diag}(1,-1^6)$.  The $27$ $(-1)$-curve
+classes are
+\[
+ E_i,\qquad H-E_i-E_j,\qquad
+ 2H-\sum_{j\ne i}E_j.
+\]
+The six simple root reflections generate the full Weyl permutation group
+\[
+ |W(E_6)|=51840,
+\]
+and the sign kernel has order $25920$.
+
+Exhaustive enumeration of the $891$ nonidentity involutions gives the four
+class sizes
+\[
+ \boxed{36,\ 270,\ 540,\ 45},
+\]
+corresponding to involution degrees $1,2,3,4$.  The simultaneous fixed-carrier
+fingerprints on the $(27,36,45)$ objects are
+\[
+\begin{array}{c|c|c|c|c}
+ d & |C_d| & \#\operatorname{Fix}(27) &
+ \#\operatorname{Fix}(45) & \#\operatorname{Fix}(36)\\ \hline
+ 1&36 &15&15&16\\
+ 2&270& 7& 5& 8\\
+ 3&540& 3& 7& 4\\
+ 4&45 & 3&13&12.
+\end{array}
+\]
+The degree census is classical; the objectwise identifications below are the
+new executable reconstruction.
+
+\paragraph{The $36$ reflection class is literally the double-six carrier.}
+For every root reflection $r$, the $12$ cubic lines moved by $r$ are exactly the
+support of one double-six.  The $36$ moved supports are distinct and exhaust the
+$36$ double-sixes.  Thus
+\[
+ \boxed{\{\text{reflections of }W(E_6)\}\ \longleftrightarrow\
+        \{\text{double-sixes}\}}.
+\]
+Equivalently, the classical root-pair/double-six correspondence is visible
+directly in the $27$-line permutation action, without importing labels.
+
+\paragraph{The $540$ odd degree-three involutions form a $12$-sheeted cover of the $45$ tritangents.}
+Every degree-three involution fixes exactly three of the $27$ lines pointwise,
+and those three lines form a tritangent.  Conversely every tritangent occurs as
+the fixed triple of exactly twelve such involutions.  Hence
+\[
+ \boxed{540=45\cdot12}.
+\]
+Write $F_T$ for the twelve degree-three involutions above a tritangent $T$,
+and let $r_D$ be the reflection corresponding to a double-six $D$.
+
+\paragraph{The group law reconstructs the $45\times36$ incidence matrix.}
+A direct census gives the sharp dichotomy
+\[
+ |T\cap D|=0
+ \quad\Longleftrightarrow\quad
+ \#\{w\in F_T:wr_D=r_Dw\}=4,
+\]
+while
+\[
+ |T\cap D|=2
+ \quad\Longleftrightarrow\quad
+ \#\{w\in F_T:wr_D=r_Dw\}=0.
+\]
+Therefore the commutation relation internal to $W(E_6)$ alone reconstructs the
+tritangent/double-six cross-incidence.  The exact census is
+\[
+ \boxed{0^{540}+2^{1080}},
+ \qquad 45\cdot36=540+1080.
+\]
+This is precisely the cross-incidence independently reconstructed in
+Pass~4659 from the W33 internal $27/36$ carrier, where
+$T^{\mathsf T}R=2(J-D)$ and the same $0^{540},2^{1080}$ intersection census
+appears.  Thus the W33/code route and the classical Weyl-involution route meet
+objectwise, not merely numerically.
+
+The executable certificate is
+\texttt{analysis/w33\_e6\_involution\_reconstructs\_double\_six\_tritangent.py},
+with frozen output
+\texttt{data/w33\_e6\_involution\_reconstructs\_double\_six\_tritangent.json}.
+The classical involution-degree census agrees with Carter's Weyl-group
+classification and with the cubic-surface involution discussion of
+Dolgachev--Duncan.  The finite theorem does not assert a physical $E_6$ gauge
+field; transport to the W33/Suzuki carriers uses the separately certified
+$27$--$36$--$45$ equivariant intertwiners.
