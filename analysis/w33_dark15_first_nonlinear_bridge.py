@@ -81,12 +81,12 @@ for pp,ll in seen:
  s3=(c[1]**3+3*c[1]*c[2]+2*c[3])//6
  s4=(c[1]**4+6*c[1]**2*c[2]+3*c[2]**2+8*c[1]*c[3]+6*c[4])//24
  for d,x in ((2,s2),(3,s3),(4,s4)):S[d]+=cp*x
-H={d:S[d]//len(seen) for d in S};assert H=={2:0,3:0,4:1}
+H={d:int(S[d]//len(seen)) for d in S};assert H=={2:0,3:0,4:1}
 
 def main(write=True):
  out={'schema':'w33.dark15_first_nonlinear_bridge.v1','status':'PASS',
   'headline':'The two inequivalent 15-dimensional dark constituents of the W33 point and line actions have no ordinary PSp(4,3)-equivariant bridge at linear, quadratic, or cubic degree. The first nonlinear bridge is quartic and has multiplicity exactly one: Hom_PSp(Sym^4 V15_line,V15_point)=1.',
-  'group_order':len(seen),'point_action':{'vertices':40,'dark_eigenvalue':-4,'dark_dimension':15},'line_action':{'vertices':40,'dark_eigenvalue':-4,'dark_dimension':15},
+  'group_order':int(len(seen)),'point_action':{'vertices':40,'dark_eigenvalue':-4,'dark_dimension':15},'line_action':{'vertices':40,'dark_eigenvalue':-4,'dark_dimension':15},
   'Hom_dimensions':{'linear':0,'Sym2_line_to_point':H[2],'Sym3_line_to_point':H[3],'Sym4_line_to_point':H[4]},
   'method':'Exact full-group character inner products. The -4 character is Tr(P_g E_-), E_-=(A-12I)(A-2I)/96; symmetric-power characters use chi(g),chi(g^2),chi(g^3),chi(g^4).',
   'consequence':'The Pass4961/4977 linear and outer-twist obstructions are not the end of the point-line correlation problem: there is a unique quartic PSp-equivariant transceiver up to scale.',

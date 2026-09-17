@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Complex six-qutrit operator-space shadow of the local 165 U5(2) carrier.
+r"""Complex six-qutrit operator-space shadow of the local 165 U5(2) carrier.
 
 Each full W33 four-space U <= F3^12 supplies the 80-dimensional Hilbert-Schmidt
 subspace spanned by the nonidentity six-qutrit Pauli monomials P_v, v in U\{0}.

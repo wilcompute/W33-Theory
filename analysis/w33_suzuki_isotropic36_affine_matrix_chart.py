@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Resolve the special 36-point totally-isotropic Suzuki section.
+r"""Resolve the special 36-point totally-isotropic Suzuki section.
 
 A 4-dimensional totally isotropic subspace of the 12-dimensional 2.Suz module
 meets the 32760-point tight set in 36 of its 40 projective points.  The four

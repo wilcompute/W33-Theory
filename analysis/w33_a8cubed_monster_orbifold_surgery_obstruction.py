@@ -38,7 +38,7 @@ OUT=ROOT/'data'/'w33_a8cubed_monster_orbifold_surgery_obstruction.json'
 
 def main(write=True):
  glue=json.loads((ROOT/'data'/'w33_a8_cubed_niemeier_glue.json').read_text());assert glue['status']=='PASS' and glue['glue']['order']==27
- tw=json.loads((ROOT/'data'/'w33_a8_cubed_monster_s3_twining.json').read_text()) if (ROOT/'data'/'w33_a8_cubed_monster_s3_twining.json').exists() else None
+ tw=json.loads((ROOT/'data'/'w33_a8cubed_monster_s3_twining.json').read_text()) if (ROOT/'data'/'w33_a8cubed_monster_s3_twining.json').exists() else None
  dim_sl9=9*9-1; fixed=dim_sl9; assert dim_sl9==fixed==80
  h=Fraction(8,24)*(Fraction(3)-Fraction(1,3));assert h==Fraction(8,9)
  # All glue ground weights are integral (0,2,3), and the certified center action

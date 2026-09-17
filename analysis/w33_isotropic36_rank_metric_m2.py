@@ -48,7 +48,7 @@ def span(B):
  return {tuple((x*np.array(B[0])+y*np.array(B[1]))%3) for x in range(3) for y in range(3)}
 
 def main(write=True):
- parent=json.loads((ROOT/'data'/'w33_suzuki_isotropic36_affine_matrix_chart.json').read_text());assert parent['status']=='PASS' and parent['lines']['contained']==81
+ parent=json.loads((ROOT/'data'/'w33_suzuki_isotropic36_affine_matrix_chart.json').read_text());assert parent['status']=='PASS' and parent['affine_chart']['contained_lines']==81
  V=[tuple(v) for v in itertools.product(range(3),repeat=4)]
  ranks=Counter(mrank(v) for v in V);assert ranks==Counter({2:48,1:32,0:1})
  # rank-distance graph
