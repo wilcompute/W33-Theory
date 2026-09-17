@@ -1,0 +1,41 @@
+{
+  "schema": "w33.doubled_central_character_logical_qubit.v1",
+  "status": "PASS",
+  "code_space": {
+    "sectors": ["r=1", "r=2"],
+    "dimension_total": 1458,
+    "formal_factor": "C^2 sector label x C^729 after choosing conjugate bases"
+  },
+  "logical_paulis": {
+    "Z_L": "(z-z^-1)/(i sqrt(3)) = diag(1,-1)",
+    "X_L": "outer sector swap",
+    "anticommute": true
+  },
+  "finite_control": {
+    "center_gate": "z=exp(2 pi i Z_L/3)",
+    "outer_gate": "X_L",
+    "group": "S3 = C3:C2",
+    "order": 6,
+    "universal_alone": false
+  },
+  "non_clifford_relative_to_logical_pauli": {
+    "center_gate_normalizes_logical_Pauli": false,
+    "conjugated_X": "-1/2 X + sqrt(3)/2 Y (up to orientation convention)"
+  },
+  "leakage_syndrome": {
+    "projector": "P_code=(2I-z-z^-1)/3",
+    "eigenvalues": {"r0": 0, "r1": 1, "r2": 1},
+    "use": "detects centre-trivial r=0 leakage without distinguishing r=1 from r=2"
+  },
+  "conditional_dense_extension": {
+    "extra_gate": "logical Hadamard H_L",
+    "trace_of_SU2_representative_Hz": "-sqrt(3/2)",
+    "trace_is_algebraic_integer": false,
+    "product_has_finite_order": false,
+    "consequence": "if H_L is physically available, <H_L,z> is not a finite Clifford-like subgroup; with nonparallel axes its closure is SU(2)"
+  },
+  "realification": "V_1 plus V_2=conjugate(V_1) is the complexification pattern of a real 1458-dimensional carrier; the antiunitary outer action on one sector becomes a complex-linear swap on the doubled space.",
+  "fault_tolerance_boundary": "P_code is a genuine symmetry-based leakage check. Z_L itself is logical information, so measuring r=1 versus r=2 is not a stabilizer syndrome. No distance or threshold claim is made.",
+  "universality_boundary": "S3 alone is finite. A certified logical basis-changing gate such as H_L, or another independent sector operation, is still required before the doubled sector supplies universal control.",
+  "physical_boundary": "All statements assume coherent access to V_1 direct-sum V_2. If central character is a strict superselection charge, the logical qubit and relative center phase are not operational."
+}
