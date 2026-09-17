@@ -1,0 +1,13 @@
+{
+  "schema": "w33.dark15_first_nonlinear_bridge.v1",
+  "status": "PASS",
+  "headline": "The two inequivalent 15-dimensional dark constituents of the W33 point and line actions have no ordinary PSp(4,3)-equivariant bridge at linear, quadratic, or cubic degree. The first nonlinear bridge is quartic and has multiplicity exactly one: Hom_PSp(Sym^4 V15_line,V15_point)=1.",
+  "group_order": 25920,
+  "point_action": {"vertices": 40, "dark_eigenvalue": -4, "dark_dimension": 15},
+  "line_action": {"vertices": 40, "dark_eigenvalue": -4, "dark_dimension": 15},
+  "Hom_dimensions": {"linear": 0, "Sym2_line_to_point": 0, "Sym3_line_to_point": 0, "Sym4_line_to_point": 1},
+  "method": "Exact full-group character inner products. The -4 character is Tr(P_g E_-), E_-=(A-12I)(A-2I)/96; symmetric-power characters use chi(g), chi(g^2), chi(g^3), chi(g^4).",
+  "consequence": "The Pass4961/4977 linear and outer-twist obstructions are not the end of the point-line correlation problem: there is a unique quartic PSp-equivariant transceiver up to scale.",
+  "boundary": "This certificate proves existence and uniqueness in representation theory. It does not construct a preferred normalized quartic polynomial, a local incidence formula, or a physical/VOA interaction realizing it.",
+  "checks": {"40_points": true, "40_lines": true, "PSp_order_25920": true, "quadratic_zero": true, "cubic_zero": true, "quartic_unique": true}
+}
