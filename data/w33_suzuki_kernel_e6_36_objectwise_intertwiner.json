@@ -1,0 +1,14 @@
+{
+  "schema": "w33.suzuki_kernel_e6_36_objectwise_intertwiner.v1",
+  "status": "PASS",
+  "headline": "The 36 nonsingular vectors of the Suzuki kernel quotient E/Z(E)=F2^6_minus are uniquely and explicitly equivariantly identified with the 36 Schlaefli double-sixes under the exact five repository PSp(4,3) generators. The same bijection intertwines the outer orthogonal generator, so it is full W(E6)=O6^-(2)-equivariant. Composing with the certified double-six-to-W33-spread map gives an explicit nonsingular-vector <-> W33-spread bijection and closes the 27+36 kernel-shell bridge objectwise.",
+  "generator_indices": [0, 2, 5, 9, 19],
+  "inner_group_order": 25920,
+  "full_group_order": 51840,
+  "unique_intertwiner_count": 1,
+  "nonsingular_to_double_six": [34, 31, 28, 19, 22, 25, 9, 12, 15, 5, 33, 30, 27, 18, 21, 24, 8, 11, 14, 4, 32, 29, 26, 17, 20, 23, 7, 10, 13, 3, 35, 16, 6, 2, 1, 0],
+  "nonsingular_to_W33_spread": [7, 12, 32, 2, 21, 29, 8, 9, 22, 3, 6, 13, 20, 26, 14, 28, 27, 33, 23, 15, 5, 18, 35, 10, 24, 17, 25, 11, 30, 34, 1, 31, 16, 19, 4, 0],
+  "outer_generator_intertwines": true,
+  "composed_existing_chain": "nonsingular kernel vector <-> Schlaefli double-six <-> W33 spread <-> doily complement <-> signed Pfaffian section of the E6 Cartan cubic",
+  "boundary": "This is an exact finite equivariant identification. It does not make the binary kernel shell a physical three-qubit subsystem or identify its quadratic value with an experimentally measured observable."
+}
