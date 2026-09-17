@@ -1,0 +1,30 @@
+{
+  "schema": "w33.suzuki_kernel_e6_quadratic_shell_bridge.v1",
+  "status": "PASS",
+  "headline": "The newly identified Suzuki W33 linear kernel 2_-^(1+6) has canonical quotient E/Z(E)=F2^6 of minus type. Its nonzero vectors split exactly into 27 singular and 36 nonsingular vectors. The 27 singular polar graph is SRG(27,10,1,5) and is explicitly isomorphic to the repository W33 center-quad/GQ(4,2) 27-line graph. The 36 nonsingular shell has inner/full stabilizer orders 720/1440, matching the certified PSp spread-double-six-Pfaffian family and the classical W(E6) double-six action.",
+  "kernel": {
+    "shape": "2_-^(1+6)",
+    "center_order": 2,
+    "quotient": "F2^6 minus quadratic space"
+  },
+  "quadratic_shells": {
+    "singular_nonzero": 27,
+    "nonsingular": 36,
+    "total_nonzero": 63
+  },
+  "singular_shell": {
+    "geometry": "Q^-(5,2)=GQ(2,4)",
+    "graph_srg": [27, 10, 1, 5],
+    "w33_center_quad_line_graph_isomorphism": [0, 5, 6, 11, 1, 13, 12, 7, 26, 21, 25, 2, 23, 3, 22, 4, 20, 24, 18, 8, 16, 14, 19, 9, 10, 15, 17],
+    "objectwise_verified": true
+  },
+  "nonsingular_shell": {
+    "size": 36,
+    "PSp4_3_stabilizer_order": 720,
+    "O6minus2_stabilizer_order": 1440,
+    "repo_36_family": "W33 spreads <-> Schlaefli double-sixes <-> doily complements <-> Pfaffian sections",
+    "objectwise_intertwiner_to_repo_36_family": "OPEN"
+  },
+  "outer_automorphism_explanation": "Out(2_-^(1+6)) is the full minus orthogonal group O6^-(2), the order-51840 E6 Weyl action. The Suzuki block stabilizer supplies only its index-two U4(2) ~= PSp(4,3) subgroup, explaining why the local 27-carrier admits an outer E6 involution that is absent from the ambient 2.Suz-induced action.",
+  "boundary": "The 27-shell graph bridge is explicit. The 36-shell match currently uses exact orbit/stabilizer fingerprints plus the already certified 36-object PSp family; an explicit nonsingular-vector <-> spread/double-six intertwiner remains to be constructed."
+}
