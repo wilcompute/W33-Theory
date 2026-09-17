@@ -1,0 +1,28 @@
+{
+  "schema": "w33.e6_degree2_selected270_bridge.v1",
+  "status": "PASS",
+  "headline": "The selected 270 lines of the intrinsic 135_6-270_3 geometry are canonically the 270 syzygetic double-six pairs, hence the degree-2 involution carrier of W(E6).",
+  "selected_geometry": {
+    "points": 135,
+    "lines": 270,
+    "line_size": 3,
+    "line_stabilizer_order_prior": 96
+  },
+  "double_six_carrier": {
+    "count": 36,
+    "syzygetic_graph": "SRG(36,15,6,6)",
+    "pair_intersection_census_on_27_lines": {
+      "4": 270,
+      "6": 360
+    }
+  },
+  "canonical_signature": {
+    "selected_line": "12 double-sixes meeting the selected line in two singular points",
+    "syzygetic_pair": "12 double-sixes nonadjacent to both endpoints",
+    "distinct_selected_signatures": 270,
+    "distinct_pair_signatures": 270,
+    "signature_sets_equal": true
+  },
+  "consequence": "PSp-equivariant bijection selected270 <-> syzygetic-pair270 <-> W(E6) degree-2 involutions; stabilizer order 25920/270=96.",
+  "boundary": "Exact finite G-set theorem. No physical involution or gauge field is inferred."
+}
