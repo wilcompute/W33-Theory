@@ -1,0 +1,38 @@
+{
+  "schema": "w33.suzuki_gq48_stopping_distance.v1",
+  "status": "PASS",
+  "headline": "The 165-point/297-line GQ(4,8) peeling decoder has exact stopping distance 30. The SRG upper-eigenvalue bound forces every stopping set to have at least 30 points, and an explicit 30-point Hermitian-model witness meets the 297 lines as 162 empty + 135 secants.",
+  "incidence": {
+    "points": 165,
+    "lines": 297,
+    "points_per_line": 5,
+    "lines_per_point": 9,
+    "point_graph_srg": [165, 36, 3, 9],
+    "point_graph_spectrum": {"36": 1, "3": 120, "-9": 44}
+  },
+  "lower_bound": {
+    "stopping_implies_min_induced_degree": 9,
+    "rayleigh_upper": "2e(S) <= 3m + m^2/5",
+    "stopping_lower": "2e(S) >= 9m",
+    "consequence": "m>=30"
+  },
+  "witness": {
+    "size": 30,
+    "line_intersection_census": {"0": 162, "2": 135},
+    "induced_degree": 9
+  },
+  "decoder_consequence": {
+    "stopping_distance": 30,
+    "all_point_erasure_patterns_up_to": 29,
+    "decoder": "iterative peeling using surviving point values and all 297 line-sum measurements",
+    "sharp": true
+  },
+  "boundary": "Stopping distance controls the local peeling decoder. A size-30 stopping set may still be recoverable by a different global linear solver; that stronger question is not claimed here.",
+  "checks": {
+    "classical_GQ48_165_297": true,
+    "srg_165_36_3_9": true,
+    "spectral_lower_bound_30": true,
+    "explicit_size30_stopping_set": true,
+    "line_census_162_135": true
+  }
+}
