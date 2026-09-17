@@ -1,0 +1,36 @@
+{
+  "schema": "w33.a8cubed_affine_return_universality.v1",
+  "status": "PASS",
+  "headline": "Conditional on independent control of the certified local sl9 zero modes and one nonzero quadratic return-OPE cross term on a connected block graph, the A8^3 9x9x9 register has dynamical Lie algebra sl729, dimension 531440. The glue generator (1,1,4) supplies cross terms on all three block pairs through (J_lambda)^2.",
+  "register": {
+    "block_dimension": 9,
+    "blocks": 3,
+    "Hilbert_dimension": 729,
+    "local_algebra": "sl9^3"
+  },
+  "glue_return": {
+    "word": [1,1,4],
+    "weight": 2.0,
+    "all_factor_components_nonzero": true,
+    "quadratic_descendant": "(J_lambda)^2/2",
+    "cross_edges": [[1,2],[1,3],[2,3]]
+  },
+  "lie_closure": {
+    "single_edge": "sl81",
+    "single_edge_dimension": 6560,
+    "connected_three_block_graph": "sl729",
+    "full_dimension": 531440,
+    "proof": "sl9 is simple, so the local adjoint orbit of any nonzero H spans sl9; commutators of local controls with H tensor K generate sl9 tensor sl9. Adding the two local summands gives sl81. Repeating across a connected edge to the third block gives sl729."
+  },
+  "external_control_theorem": "Consistent with Nielsen-Bremner-Dodd-Childs-Dawson, Phys. Rev. A 66, 022317 (2002): any fixed entangling qudit interaction plus local unitaries is universal for Hamiltonian simulation.",
+  "control_assumption": "The relevant affine zero modes and quadratic V_c V_-c return descendants can be independently addressed with continuously tunable real Hamiltonian coefficients.",
+  "physical_boundary": "The repository certifies the operator algebra, not hardware addressability, switching bandwidth, leakage suppression, or an implemented pulse sequence. Therefore this is conditional controllability, not a machine-level universality certificate.",
+  "checks": {
+    "register_729": true,
+    "glue_word_114": true,
+    "weight2_return_sector": true,
+    "all_three_cross_edges": true,
+    "sl81_dimension": true,
+    "sl729_dimension_531440": true
+  }
+}
