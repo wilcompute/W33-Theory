@@ -1,0 +1,29 @@
+{
+  "schema": "w33.det_phase_outer_s3_closure.v1",
+  "status": "PASS_CONDITIONAL_ON_DET_PHASE_COUPLING",
+  "headline": "On the doubled r=1 plus r=2 central-character sector, the candidate determinant phase D_f=diag(omega^f,omega^-f) and the certified outer sector swap S obey S D_f S=D_f^-1. For det(X)=f=1 or 2 they generate exactly C3:C2 ~= S3; for f=0 only the C2 swap remains. Thus the determinant phase and Suzuki outer inversion are algebraically compatible and close the noncentral ternary/binary hinge left open in Pass5732, conditional on a physical H1-to-register determinant-phase coupling.",
+  "relations": {
+    "S2": "1",
+    "D3": "1 for f != 0",
+    "SDS": "D^-1",
+    "presentation": "<D,S | D^3=S^2=1, SDS=D^-1> ~= S3"
+  },
+  "fiber_census": {
+    "0": {"group_order": 2, "group": "C2", "D_order": 1},
+    "1": {"group_order": 6, "group": "S3", "D_order": 3},
+    "2": {"group_order": 6, "group": "S3", "D_order": 3}
+  },
+  "inputs": [
+    "w33_h1_adjoint_nonlinear_invariants.py: det(X) is first new pointwise quartic invariant; omega^(r det X) is a candidate phase, not a certified gate",
+    "w33_suzuki_outer_heisenberg_sector_swap.py: multiplier-minus-one outer swaps r=1 and r=2",
+    "Pass5725-5732: a noncentral C3:C2 route requires qutrit inversion; Chinese-remainder packaging alone is insufficient"
+  ],
+  "cross_repo_note": "Holotrade requires an even-order ingredient beyond the order-three GUT twist. The S3 closure supplies an exact finite algebraic C2 extension of the ternary phase sector, but no heterotic orbifold embedding is certified.",
+  "boundary": "The S3 presentation and matrix closure are exact. The determinant phase remains conditional because the H1 controller variable has not yet been coupled to the six-qutrit register as a physical nonlinear gate.",
+  "checks": {
+    "f0_C2": true,
+    "f1_S3": true,
+    "f2_S3": true,
+    "outer_inverts_phase": true
+  }
+}
