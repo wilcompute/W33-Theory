@@ -1,0 +1,69 @@
+% 2026-09-17: projective-basis orbit classification and symplectic two-trit observable.
+\subsection{The quartic determinant needs a geometry bit: six projective-basis orbits and a minimal two-trit classifier}
+
+The determinant/matroid bridge gives a quartic invariant of a finite set of Pauli
+projective directions, but an exact census shows a sharp limitation at support size
+four.  Let $B=\{v_0,v_1,v_2,v_3\}\subset\mathrm{PG}(3,3)$ be a projective basis.
+Exhausting all $\binom{40}{4}=91390$ four-point subsets gives $63180$ bases and
+$28210$ dependent sets.  The inner group $\PSp(4,3)$ has exactly six orbits on the
+bases.  More strongly, the induced $W(3,3)$ orthogonality graph on the four points
+classifies the orbit completely:
+\[
+\begin{array}{c|r|r}
+\text{orthogonality graph}&\text{orbit size}&|\operatorname{Stab}_{\PSp}(B)|\\\hline
+C_4&1620&16\\
+2K_2&3240&8\\
+4K_1&6480&4\\
+K_2+2K_1&12960&2\\
+P_4&12960&2\\
+P_3+K_1&25920&1
+\end{array}
+\]
+The $C_4$ orbit is exactly the generalized-quadrangle apartment shell; its size
+$1620$ agrees with the point shadows of the $1620$ minimum-weight Levi $8$-cycle
+apartments already certified in the apartment-code arc.  Thus apartments comprise
+exactly $1/39$ of all projective bases.
+
+There is a compact projective classifier.  Write
+\[
+ z_{ij}=1-\langle v_i,v_j\rangle^2\in\mathbb F_3.
+\]
+Because every nonzero scalar of $\mathbb F_3$ has square one, $z_{ij}$ is precisely
+the orthogonality indicator.  Define
+\[
+ E=\sum_{i<j}z_{ij},\qquad
+ W=\sum_i\sum_{\substack{j<k\\j,k\ne i}}z_{ij}z_{ik}\pmod3.
+\]
+The six orbit values are respectively
+\[
+ C_4:(1,1),\quad P_4:(0,2),\quad P_3{+}K_1:(2,1),\quad
+ 2K_2:(2,0),\quad K_2{+}2K_1:(1,0),\quad 4K_1:(0,0).
+\]
+Hence $(E,W)$ is a complete two-trit orbit classifier.  It is minimal in the
+literal information sense: one trit has only three values and cannot distinguish six
+orbits, while the displayed pair distinguishes all six.
+
+The same computation also supplies an important no-go.  If $V$ is the $4\times4$
+matrix of any projective basis, then the determinant/matroid quartic is
+\[
+ \det(VV^T J)=\det(V)^2\det J=1\in\mathbb F_3.
+\]
+Thus the four-direction determinant phase takes the same value on every one of the six
+basis orbits and cannot by itself select the apartment geometry.  On an ordered apartment
+$a-b-c-d-a$, however, the symplectic Gram matrix has only the two diagonal pairings
+nonzero and
+\[
+ \operatorname{Pf}(G)=-\langle a,c\rangle\langle b,d\rangle,
+ \qquad \operatorname{Pf}(G)^2=1.
+\]
+This makes the apartment determinant-one statement incidence-theoretic while also showing
+why a second observable is required to distinguish the apartment from other bases.
+
+\paragraph{Evidence boundary.}
+The exhaustive witness is
+\texttt{analysis/w33\_projective\_basis\_orbits\_two\_trit\_classifier.py}, with
+frozen certificate
+\texttt{data/w33\_projective\_basis\_orbits\_two\_trit\_classifier.json}.
+This is exact finite geometry and representation theory.  The two trits are canonical
+discrete projective observables; no Hamiltonian addressability, optical implementation,
+or physical non-Clifford gate follows from the classification alone.
