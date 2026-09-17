@@ -1,0 +1,47 @@
+\subsection{Conditional $S_3$ closure of the doubled determinant-phase sector}
+\label{sec:20260917-det-phase-outer-s3}
+
+The quartic adjoint invariant supplies the candidate phase
+\[
+ \omega^{r\det X},\qquad r\in\{1,2\},
+\]
+while the Suzuki outer similitude exchanges the two faithful Heisenberg
+central-character sectors $r=1\leftrightarrow2$.  On the doubled sector write
+\[
+ D_f=\begin{pmatrix}\omega^f&0\\0&\omega^{-f}\end{pmatrix},
+ \qquad
+ S=\begin{pmatrix}0&1\\1&0\end{pmatrix},
+ \qquad f=\det X\in\mathbb F_3.
+\]
+Then
+\[
+ S^2=1,
+ \qquad
+ SD_fS=D_f^{-1}.
+\]
+For $f=1,2$, $D_f$ has order three, so
+\[
+ \boxed{\langle D_f,S\rangle\cong C_3{:}C_2\cong S_3}.
+\]
+For $f=0$ the ternary factor collapses and only the $C_2$ sector swap remains.
+
+This is precisely the noncentral ternary/binary presentation left open in
+Passes~5725--5732: the required inversion is now supplied by the certified
+outer action on the doubled six-qutrit carrier.  The closure also shows why the
+$r=1,2$ pair is the natural outer-complete object for the determinant phase;
+fixing one central character removes the linear $C_2$ completion.
+
+The group theorem is exact, but the gate claim remains conditional.  The
+repository still lacks a physical intertwiner that couples the cubic-holonomy
+controller variable $X$ to the six-qutrit register with phase
+$\omega^{r\det X}$.  Therefore this subsection certifies
+\emph{algebraic compatibility and closure}, not a realized non-Clifford gate.
+
+There is again a cross-repository alignment with the Holotrade order-three GUT
+audit: both Georgi--Glashow and flipped-$SU(5)$ routes now require an even-order
+ingredient.  The finite carrier supplies an exact $C_3{:}C_2$ extension, but no
+heterotic space-group/orbifold embedding of this $S_3$ is currently certified.
+
+The executable certificate is
+\texttt{analysis/w33\_det\_phase\_outer\_s3\_closure.py}, with frozen output
+\texttt{data/w33\_det\_phase\_outer\_s3\_closure.json}.
