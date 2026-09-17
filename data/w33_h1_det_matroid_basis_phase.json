@@ -1,0 +1,49 @@
+{
+  "schema": "w33.h1_det_matroid_basis_phase.v1",
+  "status": "PASS",
+  "headline": "For any Pauli-direction matrix V over F3, the quartic H1 determinant det((VV^T)J) equals the number of rank-4 bases of the represented column matroid modulo 3. Equivalently det(X)=T_M(1,1) mod 3. The two-operator e1,e2,e3,e4 witness is therefore not exceptional: every projective basis gives determinant 1.",
+  "identity": {
+    "cauchy_binet": "det(V V^T) = sum_{|I|=4} det(V_I)^2",
+    "F3_reduction": "det(V_I)^2 is 1 for a basis and 0 otherwise",
+    "symplectic_factor": "det(J)=1",
+    "matroid": "det((V V^T)J) = #bases(M(V)) mod 3 = T_M(1,1) mod 3",
+    "candidate_phase": "omega^(r T_M(1,1)) for central character r in F3",
+    "deletion_contraction": "For an ordinary element e, the phase exponent obeys b(M)=b(M\\e)+b(M/e) mod 3."
+  },
+  "PG33_four_subset_census": {
+    "total": 91390,
+    "projective_bases": 63180,
+    "dependent": 28210,
+    "closed_form_projective_bases": "|GL(4,3)|/(2^4*4!) = 63180",
+    "determinant_distribution": {
+      "0": 28210,
+      "1": 63180,
+      "2": 0
+    }
+  },
+  "PG33_five_subset_census": {
+    "total": 658008,
+    "basis_count_distribution": {
+      "0": 51480,
+      "3": 252720,
+      "4": 252720,
+      "5": 101088
+    },
+    "determinant_distribution": {
+      "0": 304200,
+      "1": 252720,
+      "2": 101088
+    }
+  },
+  "minimality": "With four projective directions, det(X) is nonzero iff they span F3^4; then det(X)=1. Fewer than four directions have rank at most three and determinant zero.",
+  "interpretation": "The proposed determinant phase is a mod-3 matroid/Tutte invariant of the Pauli support, not a coordinate artifact. It can be evaluated recursively by deletion-contraction.",
+  "boundary": "This theorem identifies the exact finite combinatorial invariant seen by the determinant candidate. It does not prove that the A8^3 VOA OPE couples to this invariant or that hardware can address the coefficient.",
+  "checks": {
+    "PG33_40_points": true,
+    "cauchy_binet_basis_law_exhaustive_4sets": true,
+    "cauchy_binet_basis_law_exhaustive_5sets": true,
+    "projective_basis_count_63180": true,
+    "five_subset_census_658008": true,
+    "four_direction_minimality": true
+  }
+}
