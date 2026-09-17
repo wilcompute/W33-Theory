@@ -1,0 +1,30 @@
+{
+  "schema": "w33.suzuki_w33_kernel_structure_reconciliation.v1",
+  "status": "PASS",
+  "headline": "The order-128 kernel of the Suzuki W33 local quotient is the normal extraspecial group 2_-^(1+6) from the previously certified projective stabilizer shape 2_-^(1+6):U4(2), with U4(2) ~= PSp(4,3). In the faithful 2.Suz symplectic lift the central involution acts as -I12, lies outside the linear kernel but inside the projective kernel, so K_linear ~= 2_-^(1+6) and K_projective ~= 2_-^(1+6) x C2.",
+  "projective_Suzuki_stabilizer": {
+    "order": 3317760,
+    "shape": "2_-^(1+6):U4(2)"
+  },
+  "quotient_alias": {
+    "U4(2)_order": 25920,
+    "PSp4_3_order": 25920,
+    "identified_in_repo": true
+  },
+  "linear_kernel": {
+    "order": 128,
+    "shape": "2_-^(1+6)"
+  },
+  "projective_kernel_in_2Suz": {
+    "order": 256,
+    "shape": "2_-^(1+6) x C2",
+    "extra_C2": "central involution -I12 of the faithful 2.Suz lift"
+  },
+  "order_checks": {
+    "extraspecial_order": 128,
+    "2Suz_stabilizer_is_double_projective": true,
+    "linear_kernel_128": true,
+    "projective_kernel_256": true
+  },
+  "boundary": "This identifies exact finite subgroup structure by reconciling two certified repository computations. It does not assign a physical meaning to the extraspecial kernel or central involution."
+}
