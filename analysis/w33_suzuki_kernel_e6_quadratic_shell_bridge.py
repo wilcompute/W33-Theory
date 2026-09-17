@@ -15,9 +15,8 @@ This file constructs a canonical F2^6 minus form and proves:
     matching the certified PSp 36-spread/double-six/Pfaffian action and the
     classical full W(E6) double-six action.
 
-The exact objectwise isomorphism is certified on the 27-shell.  For the 36
-shell this pass certifies orbit size and stabilizer fingerprints, not yet an
-explicit spread <-> nonsingular-vector bijection.
+The exact objectwise isomorphism is certified on the 27-shell.  The companion
+w33_suzuki_kernel_e6_36_objectwise_intertwiner.py closes the 36-shell map.
 """
 from __future__ import annotations
 
@@ -25,6 +24,7 @@ import importlib.util
 import itertools
 import json
 from pathlib import Path
+import sys
 import numpy as np
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -36,7 +36,11 @@ ISO27=(0,5,6,11,1,13,12,7,26,21,25,2,23,3,22,4,20,24,18,8,16,14,19,9,10,15,17)
 def load_center_quad():
     path=ROOT/'exploration'/'w33_center_quad_gq42_e6_bridge.py'
     spec=importlib.util.spec_from_file_location('center_quad_bridge',path)
-    mod=importlib.util.module_from_spec(spec); spec.loader.exec_module(mod)
+    if spec is None or spec.loader is None: raise RuntimeError('cannot load center-quad bridge')
+    mod=importlib.util.module_from_spec(spec)
+    # dataclasses in the imported module resolve annotations through sys.modules.
+    sys.modules[spec.name]=mod
+    spec.loader.exec_module(mod)
     return mod
 
 
@@ -97,9 +101,9 @@ def main(write=True):
                         'w33_center_quad_line_graph_isomorphism':list(ISO27),'objectwise_verified':True},
       'nonsingular_shell':{'size':36,'PSp4_3_stabilizer_order':720,'O6minus2_stabilizer_order':1440,
                            'repo_36_family':'W33 spreads <-> Schlaefli double-sixes <-> doily complements <-> Pfaffian sections',
-                           'objectwise_intertwiner_to_repo_36_family':'OPEN'},
+                           'objectwise_intertwiner_to_repo_36_family':'CLOSED_BY_w33_suzuki_kernel_e6_36_objectwise_intertwiner'},
       'outer_automorphism_explanation':'Out(2_-^(1+6)) is the full minus orthogonal group O6^-(2), the order-51840 E6 Weyl action. The Suzuki block stabilizer supplies only its index-two U4(2) ~= PSp(4,3) subgroup, explaining why the local 27-carrier admits an outer E6 involution that is absent from the ambient 2.Suz-induced action.',
-      'boundary':'The 27-shell graph bridge is explicit. The 36-shell match currently uses exact orbit/stabilizer fingerprints plus the already certified 36-object PSp family; an explicit nonsingular-vector <-> spread/double-six intertwiner remains to be constructed.'
+      'boundary':'The 27-shell graph bridge is explicit. The companion 36-shell certificate closes the nonsingular-vector <-> spread/double-six intertwiner objectwise and equivariantly.'
     }
     if write: OUT.write_text(json.dumps(out,indent=2)+'\n')
     print(json.dumps(out,indent=2)); return out
