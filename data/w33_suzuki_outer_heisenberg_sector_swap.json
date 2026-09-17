@@ -1,0 +1,41 @@
+{
+  "schema": "w33.suzuki_outer_heisenberg_sector_swap.v1",
+  "status": "PASS",
+  "headline": "A multiplier-minus-one similitude of the F3^12 six-qutrit phase space induces z->z^{-1} on the extraspecial Heisenberg group 3^(1+12). Hence it swaps the two faithful 729-dimensional Schrödinger sectors r=1 and r=2. It cannot be implemented complex-linearly inside either sector alone; standard qutrit complex conjugation implements it antiunitarily, while rho_1 direct-sum rho_2 admits a linear block-swap implementation. The explicit Suzuki outer similitude therefore belongs to the determinant-reversing extended-Clifford side of the six-qutrit carrier.",
+  "phase_space": {
+    "dimension_F3": 12,
+    "qutrits": 6,
+    "anti_symplectic_involution": "diag(1,-1)^6",
+    "multiplier_mod3": 2
+  },
+  "heisenberg": {
+    "shape": "3^(1+12)",
+    "centre": "C3",
+    "schrodinger_dimension": 729,
+    "central_characters": [1,2],
+    "outer_action_on_centre": "z -> z^{-1}",
+    "sector_action": "r -> -r mod 3"
+  },
+  "representation_boundary": {
+    "linear_within_single_r_sector": false,
+    "reason": "similarity preserves the scalar rho_r(z)=omega^r I, whereas tau requires omega^{-r} I",
+    "antiunitary_single_sector": true,
+    "antiunitary_model": "complex conjugation: X->X, Z->Z^{-1}, omega->omega^{-1}",
+    "linear_on_doubled_r1_plus_r2": true,
+    "linear_doubled_model": "swap the rho_1 and rho_2 blocks"
+  },
+  "repo_links": [
+    "Pass5725-5732: determinant-reversing qutrit normalizer is antiunitary extended-Clifford",
+    "w33_suz_outer_completes_local_e6_weyl.py: explicit Suzuki outer GF(3) similitude has multiplier -1",
+    "w33_h1_adjoint_nonlinear_invariants.py: candidate phase uses synchronized r=1 or 2 central character"
+  ],
+  "cross_repo_boundary": "Holotrade now finds that order-three SU(5) and flipped-SU(5) routes require an even-order ingredient. This certificate supplies a canonical finite C2 inversion on the six-qutrit Heisenberg carrier, but does not identify it with a heterotic space-group/orbifold element or prove Standard-Model breaking.",
+  "checks": {
+    "anti_symplectic_order2": true,
+    "center_inversion": true,
+    "r1_r2_swapped": true,
+    "no_linear_single_sector": true,
+    "antiunitary_qutrit_model": true,
+    "linear_doubled_sector_model": true
+  }
+}
