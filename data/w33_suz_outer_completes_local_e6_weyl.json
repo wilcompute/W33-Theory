@@ -1,44 +1,55 @@
 {
-  "schema": "w33.suz_outer_completes_local_e6_weyl.v1",
-  "status": "PASS_WITH_PUBLISHED_ATLAS_STRUCTURE",
-  "headline": "Suz induces only the inner U4(2) ~= PSp(4,3) symmetry on the 27 local three-W33 decompositions, but the corresponding Suz:2 point stabilizer is 2^(1+6).U4(2).2 at the same degree 135135. Its normal 2-core is forced to act trivially on the transitive odd 27-set, while the U4(2) socle is already faithful. Hence the Suz:2 image is the full U4(2):2 of order 51840, exactly W(E6), the automorphism group of the Schlaefli/cubic-surface 27-line graph.",
+  "schema": "w33.suz_outer_completes_local_e6_weyl.v2",
+  "status": "PASS_WITH_CONSTRUCTIVE_ATLAS_OUTER_WITNESS",
+  "headline": "Inside 2.Suz the local 27-decomposition action is exactly PSp(4,3), order 25920. In the vendored ATLAS 2.Suz:2 representation, the new standard generator C has symplectic multiplier -1 and sends the chosen W33 block U to the same block reached by the explicit old-group word BABABABABABBABABABABBABABA. Therefore h=C T^{-1} is an explicit outer-coset element fixing U. Combined with the published stabilizer 2^(1+6).U4(2).2 and the already-faithful inner U4(2) action, this completes the local image to U4(2):2 ~= W(E6), order 51840.",
   "computed_parent": {
-    "degree": 27,
-    "Suz_inner_image": 25920,
-    "inner_identification": "U4(2) ~= PSp(4,3)",
-    "local_graph": "SRG(27,10,1,5); complement Schlaefli SRG(27,16,10,8)"
+    "source": "data/w33_suzuki_w33_stabilizer_projective_quotient.json",
+    "2Suz_projective_image": "PSp(4,3)",
+    "order": 25920,
+    "outer_Schreier_generators_in_2Suz": 0
   },
-  "ATLAS_inputs": {
-    "Suz_order": 448345497600,
-    "Suz_degree_135135_stabilizer": "2^(1+6).U4(2)",
-    "Suz_point_stabilizer_order": 3317760,
-    "Suz2_order": 896690995200,
-    "Suz2_degree_135135_stabilizer": "2^(1+6).U4(2).2",
-    "Suz2_point_stabilizer_order": 6635520,
+  "constructive_outer_witness": {
+    "ATLAS_representation": "2Suzd2G1-f3r12aB0 over GF(3)",
+    "D_equals_old_B": true,
+    "C_symplectic_multiplier_mod3": 2,
+    "old_transport_word": "BABABABABABBABABABABBABABA",
+    "old_transport_word_length": 26,
+    "U_times_C_equals_U_times_transport_as_subspace": true,
+    "outer_block_stabilizer": "h = C * T^{-1}",
+    "h_fixes_U_projectively": true,
+    "h_symplectic_multiplier_mod3": 2,
+    "consequence": "h lies outside the old symplectic 2.Suz image while stabilizing the chosen W33 block"
+  },
+  "ATLAS_stabilizers": {
+    "Suz": "2^(1+6).U4(2), order 3317760, index 135135",
+    "Suz2": "2^(1+6).U4(2).2, order 6635520, index 135135",
+    "normal_2_core_order": 128,
     "U4_2_order": 25920,
-    "Out_U4_2": 2
+    "U4_2_outer_order": 2
   },
   "deduction": {
-    "normal_2_core_order": 128,
     "normal_2_core_local_action": "trivial by the odd transitive 27-set block argument",
-    "quotient_available": "U4(2):2",
-    "socle_U4_2_faithful": true,
-    "quotient_kernel": "trivial: U4(2):2 is almost simple and the kernel cannot contain the already-faithful socle",
+    "inner_socle_action": "faithful U4(2) ~= PSp(4,3)",
+    "explicit_outer_coset_block_stabilizer": true,
     "Suz2_local_image_order": 51840,
     "identification": "U4(2):2 ~= W(E6)"
   },
-  "interpretation": "The factor-of-two missing from the local E6 graph symmetry inside Suz is not accidental. It is exactly restored by the outer automorphism in Suz:2.",
+  "interpretation": "The E6 factor of two absent from the 2.Suz-induced projective action is realized constructively by adjoining the Suzuki outer automorphism; the corresponding ATLAS generator is an anti-symplectic/similitude outer operation on the 12-dimensional ternary carrier.",
   "sources": [
-    "ATLAS of Finite Group Representations: Suz, maximal subgroups of Suz and Suz:2",
-    "ATLAS: U4(2)=S4(3), order 25920, Out=2",
-    "classical cubic-surface 27-line configuration: graph automorphism W(E6)"
+    "ATLAS 2.Suz:2 12a-dimensional GF(3) representation, vendored under data/atlas",
+    "ATLAS maximal subgroups of Suz and Suz:2",
+    "ATLAS U4(2)=S4(3): order 25920, Out=2",
+    "classical cubic-surface 27-line graph automorphism group W(E6)"
   ],
-  "boundary": "This theorem combines an exact repository computation with published finite-group classifications. It proves a local symmetry action, not physical E6 gauge dynamics or a continuum unification mechanism.",
+  "boundary": "The matrix witness and finite-group completion are exact. They do not establish physical availability of the outer similitude, E6 gauge dynamics, or a continuum unification mechanism.",
   "checks": {
     "parent_inner_25920": true,
-    "inner_stabilizer_128_times_25920": true,
+    "D_is_old_B": true,
+    "C_multiplier_minus_one": true,
+    "explicit_26_step_inner_transporter": true,
+    "outer_element_fixes_U": true,
+    "outer_element_not_symplectic": true,
     "outer_stabilizer_128_times_51840": true,
-    "odd_27_core_kernel": true,
     "full_outer_image_51840": true
   }
 }
