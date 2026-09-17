@@ -23,8 +23,8 @@
     "PSp4_3_stabilizer_order": 720,
     "O6minus2_stabilizer_order": 1440,
     "repo_36_family": "W33 spreads <-> Schlaefli double-sixes <-> doily complements <-> Pfaffian sections",
-    "objectwise_intertwiner_to_repo_36_family": "OPEN"
+    "objectwise_intertwiner_to_repo_36_family": "CLOSED_BY_w33_suzuki_kernel_e6_36_objectwise_intertwiner"
   },
   "outer_automorphism_explanation": "Out(2_-^(1+6)) is the full minus orthogonal group O6^-(2), the order-51840 E6 Weyl action. The Suzuki block stabilizer supplies only its index-two U4(2) ~= PSp(4,3) subgroup, explaining why the local 27-carrier admits an outer E6 involution that is absent from the ambient 2.Suz-induced action.",
-  "boundary": "The 27-shell graph bridge is explicit. The 36-shell match currently uses exact orbit/stabilizer fingerprints plus the already certified 36-object PSp family; an explicit nonsingular-vector <-> spread/double-six intertwiner remains to be constructed."
+  "boundary": "The 27-shell graph bridge is explicit. The companion 36-shell certificate closes the nonsingular-vector <-> spread/double-six intertwiner objectwise and equivariantly."
 }
