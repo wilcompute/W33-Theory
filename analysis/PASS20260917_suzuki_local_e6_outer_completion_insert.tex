@@ -1,0 +1,76 @@
+\subsection{The local cubic carrier sees $PSp(4,3)$ in Suz and the full $W(E_6)$ in Suz${:}2$}
+\label{sec:20260917-suzuki-local-e6-outer}
+
+The $32760$-point Suzuki/Leech tight shell contains a transitive family of
+$135135$ full nondegenerate $W(3,3)$ subspaces.  Fix one such subspace $U$.
+Its $54$ orthogonal full-$W33$ partners pair by symplectic complement into
+$27$ unordered decompositions
+\[
+   \mathbf F_3^{12}=U\perp V\perp V^{\perp(U\oplus V)}.
+\]
+The parent incidence certificate proves that these $27$ decompositions carry
+$\operatorname{SRG}(27,10,1,5)$; its complement is the Schlaefli graph of the
+$27$ lines on a smooth cubic surface.
+
+The new calculation retains transporters through the complete $135135$-vertex
+$2.\mathrm{Suz}$ subspace orbit and constructs explicit Schreier loops in the
+stabilizer of $U$.  Two such loops induce permutations of orders $5$ and $6$
+on the local $27$-set and generate a transitive permutation group of order
+\[
+  \boxed{25920}.
+\]
+Thus the symmetry actually realized by the Suzuki stabilizer on the local
+cubic carrier is
+\[
+  \boxed{U_4(2)\cong PSp(4,3)},
+\]
+not yet the full graph automorphism group.
+
+This inner/outer split is independently forced by the published ATLAS
+classification.  The primitive Suzuki action of degree $135135$ has point
+stabilizer
+\[
+  2^{1+6}.U_4(2),
+\]
+of order $3317760=128\cdot25920$.  Because the induced action on the local
+$27$-set is transitive, the normal $2$-core must act trivially: its equal-size
+orbits are powers of two dividing $27$, hence singletons.  The computed
+$25920$ image therefore saturates the $U_4(2)$ quotient.
+
+Passing to the outer extension supplies exactly the missing factor of two.
+ATLAS lists the corresponding maximal subgroup of $\mathrm{Suz}{:}2$, at the
+same index $135135$, as
+\[
+  2^{1+6}.U_4(2).2,
+\]
+of order
+\[
+  6635520=128\cdot51840.
+\]
+The normal $2$-core is again invisible on the odd transitive $27$-set, while
+the $U_4(2)$ socle is already faithful.  Since $U_4(2){:}2$ is almost simple,
+there is no additional kernel disjoint from that faithful socle.  Therefore
+\[
+  \boxed{\operatorname{Im}_{\mathrm{Suz}:2}(27)=U_4(2){:}2
+         \cong W(E_6),\qquad |W(E_6)|=51840.}
+\]
+This is exactly the classical automorphism group of the Schlaefli/cubic-surface
+$27$-line graph.  The factor-of-two absent inside Suz is therefore not a
+numerical accident: it is the Suzuki outer automorphism itself.
+
+The executable certificates are
+\texttt{analysis/w33\_suzuki\_local\_e6\_inner\_outer\_split.py},
+\texttt{data/w33\_suzuki\_local\_e6\_inner\_outer\_split.json},
+\texttt{analysis/w33\_suz\_outer\_completes\_local\_e6\_weyl.py}, and
+\texttt{data/w33\_suz\_outer\_completes\_local\_e6\_weyl.json}.  The published
+classification inputs are the ATLAS degree-$135135$ Suzuki action and the
+standard cubic-surface identification of the Schlaefli automorphism group with
+$W(E_6)$.
+
+\paragraph{Evidence boundary.}
+The repository computation establishes the local incidence graph, explicit
+Schreier action, and inner group order.  The extension from Suz to Suz${:}2$
+uses the published ATLAS point-stabilizer structure.  These are finite-group
+and finite-geometry statements.  They do not establish a physical $E_6$ gauge
+symmetry, a continuum unification mechanism, or a dynamical enhancement of the
+Holonet architecture.
