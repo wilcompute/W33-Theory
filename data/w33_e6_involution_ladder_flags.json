@@ -1,0 +1,35 @@
+{
+  "schema": "w33.e6_involution_ladder_flags.v1",
+  "status": "PASS",
+  "headline": "All four nontrivial involution degrees of W(E6) land directly on the cubic 36/45 incidence geometry. Degree-1 reflections are the 36 double-sixes by moved support. Degree-2 involutions are exactly the 270 products of commuting reflection pairs, equivalently the 270 syzygetic double-six pairs with four-line overlap. Degree-4 involutions are in bijection with the 45 tritangents by their pointwise fixed triples. Finally, if w is degree 3 with fixed tritangent T and q_T is the unique degree-4 involution fixing T, then w q_T is the reflection of a double-six D disjoint from T; this is a bijection between the 540 degree-3 involutions and the 540 disjoint tritangent-double-six flags.",
+  "involution_ladder": {
+    "degree1": {"count": 36, "carrier": "double-sixes", "map": "moved 12-line support"},
+    "degree2": {"count": 270, "carrier": "syzygetic double-six pairs", "map": "product of commuting reflection pair", "support_intersection": 4},
+    "degree3": {"count": 540, "carrier": "disjoint tritangent-double-six flags", "map": "w -> (FixLines(w), moved_support(w q_T))"},
+    "degree4": {"count": 45, "carrier": "tritangents", "map": "pointwise fixed three-line set"}
+  },
+  "double_six_pair_census": {
+    "syzygetic_overlap4": 270,
+    "azygetic_overlap6": 360,
+    "total": 630
+  },
+  "degree3_flag_factorization": {
+    "identity": "540=45*12",
+    "fibres_per_tritangent": 12,
+    "all_540_disjoint_flags_hit_once": true,
+    "q_T_commutes_with_all_12_degree3_fibre_elements": true
+  },
+  "full_cross_incidence": {
+    "disjoint_flags": 540,
+    "two_line_pairs": 1080,
+    "total": 1620
+  },
+  "crosscheck": "Pass4659 independently gives the same 45x36 0^540,2^1080 tritangent/double-six census.",
+  "boundary": "Exact finite W(E6)/cubic-surface theorem. Names syzygetic/azygetic refer to the classical double-six support intersections; no physical E6 dynamics are asserted.",
+  "checks": {
+    "degree2_is_270_commuting_reflection_pairs": true,
+    "degree4_bijection_45_tritangents": true,
+    "degree3_bijection_540_disjoint_flags": true,
+    "all_four_involution_degrees_geometric": true
+  }
+}
