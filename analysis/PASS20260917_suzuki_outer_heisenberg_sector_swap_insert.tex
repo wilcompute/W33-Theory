@@ -1,0 +1,67 @@
+\subsection{The Suzuki outer involution is determinant-reversing on the six-qutrit Heisenberg carrier}
+\label{sec:20260917-suzuki-outer-heisenberg-sector-swap}
+
+The six-qutrit carrier has extraspecial Heisenberg group
+\[
+ H=3^{1+12},\qquad H/Z(H)\cong\mathbb F_3^{12},
+\]
+with two faithful irreducible Schr\"odinger sectors
+\[
+ \rho_r: H\to U(729),\qquad r\in\{1,2\},
+ \qquad \rho_r(z)=\omega^r I.
+\]
+The constructive Suzuki outer completion supplies a ternary symplectic
+similitude of multiplier $-1$.  Abstractly, any such similitude satisfies
+\[
+ \Omega(gv,gw)=-\Omega(v,w),
+\]
+so its lift $\tau$ to $H$ sends the center to its inverse,
+\[
+ \boxed{\tau(z)=z^{-1}}.
+\]
+Consequently
+\[
+ \boxed{\rho_r\circ\tau\simeq\rho_{-r}},
+ \qquad 1\leftrightarrow2.
+\]
+
+This immediately gives a representation-theoretic firewall.  No
+complex-linear similarity can implement $\tau$ inside a single faithful sector:
+similarity preserves the scalar $\rho_r(z)=\omega^rI$, whereas $\tau$ requires
+$\omega^{-r}I$.  In the standard qutrit model
+\[
+ X|j\rangle=|j+1\rangle,
+ \qquad Z=\operatorname{diag}(1,\omega,\omega^2),
+\]
+complex conjugation gives
+\[
+ X\mapsto X,\qquad Z\mapsto Z^{-1},\qquad
+ \omega\mapsto\omega^{-1},
+\]
+and therefore realizes the determinant-reversing operation antiunitarily.
+On the doubled carrier
+\[
+ \rho_1\oplus\rho_2,
+\]
+a block swap implements the same outer action complex-linearly.
+
+This is the rank-$12$ completion of Passes~5725--5732, where the determinant
+character of $GL(2,3)$ separated the unitary Clifford $SL(2,3)$ sector from a
+determinant-reversing antiunitary coset.  It also sharpens the current quartic
+phase proposal $\omega^{r\det X}$: the central-character label $r$ is exchanged
+by the outer symmetry, so the pair $r=1,2$ is the outer-closed object; a
+single-$r$ realization explicitly breaks that completion unless an antiunitary
+implementation is intended.
+
+There is a suggestive cross-repository consequence but not yet a physical
+identification.  The Holotrade order-three GUT audit now finds that both the
+Georgi--Glashow and flipped-$SU(5)$ routes require an even-order ingredient for
+Standard-Model species to coexist.  The finite six-qutrit carrier now has a
+canonical determinant-reversing $C_2$, but no certificate identifies that
+$C_2$ with a heterotic space-group/deck element or proves an even-order
+orbifold realization.
+
+The executable certificate is
+\texttt{analysis/w33\_suzuki\_outer\_heisenberg\_sector\_swap.py}, with frozen
+output
+\texttt{data/w33\_suzuki\_outer\_heisenberg\_sector\_swap.json}.
