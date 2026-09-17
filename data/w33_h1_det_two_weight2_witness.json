@@ -1,0 +1,11 @@
+{
+  "schema": "w33.h1_det_two_weight2_witness.v1",
+  "status": "PASS",
+  "headline": "Two synchronized A8^3 weight-two insertions already evade the single-triple determinant no-go. Taking c=(1,1,4) twice fuses to the weight-two sector (2,2,8), r=2. Labels (e1,e2,e3) and (e4,0,0) give summed moment map X=J with det(X)=1, so the candidate phase omega^(r det X) is omega^2.",
+  "fusion": {"input_sector": [1,1,4], "input_weight": 2, "two_insertions": true, "target_sector": [2,2,8], "target_weight": 2, "target_central_character_mod3": 2},
+  "Pauli_labels": {"operator_1": ["e1","e2","e3"], "operator_2": ["e4","0","0"], "independent_nonzero_directions": 4},
+  "moment_map": {"S": "I4", "X": "J", "rank": 4, "det_mod3": 1, "candidate_phase_exponent_mod3": 2, "candidate_phase": "omega^2"},
+  "consequence": "The determinant obstruction is specific to one three-label operator. At the two-operator level there is an explicit fusion-compatible nonzero-determinant controller witness while remaining in a nonzero synchronized weight-two sector.",
+  "boundary": "This does not prove that the actual VOA OPE realizes exp(2 pi i det(X)/3), nor that the coefficient is independently controllable. It removes the finite equivariant/fusion obstruction and supplies the exact target matrix element to evaluate next.",
+  "checks": {"input_weight2": true, "target_weight2": true, "target_r2": true, "four_independent_directions": true, "X_equals_J": true, "det_one": true, "nontrivial_phase_candidate": true}
+}
