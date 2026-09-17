@@ -1,0 +1,49 @@
+{
+  "schema": "w33.suzuki_w33_stabilizer_projective_quotient.v1",
+  "status": "PASS",
+  "headline": "For a full W33 block U in the 135135-element 2.Suz orbit, Stab(U) has order 6635520. Its restriction to U is the full symplectic double cover Sp(4,3), order 51840, with kernel 128. Its induced action on the 27 complementary three-W33 decompositions is only the inner projective group PSp(4,3), order 25920, with kernel 256. Exhaustive scanning of all 270270 Schreier generators finds none in the outer coset of the 51840-element E6/Schlaefli graph automorphism group.",
+  "ambient": {
+    "group": "2.Suz",
+    "order": 896690995200,
+    "full_W33_orbit": 135135
+  },
+  "block_stabilizer": {
+    "order": 6635520
+  },
+  "linear_restriction": {
+    "group": "Sp(4,3)",
+    "order": 51840,
+    "kernel_order": 128,
+    "sample_generators_needed": 3
+  },
+  "projective_27_action": {
+    "group": "PSp(4,3)",
+    "order": 25920,
+    "kernel_order": 256,
+    "sample_generators_needed": 2
+  },
+  "local_graph": {
+    "vertices": 27,
+    "srg": [27, 10, 1, 5],
+    "full_automorphism_order": 51840,
+    "outer_coset_size": 25920,
+    "five_vertex_base": [0, 1, 4, 16, 2]
+  },
+  "exhaustive_schreier": {
+    "orbit_edges_scanned": 270270,
+    "unique_five_image_signatures_seen": 19876,
+    "outer_generators_seen": 0
+  },
+  "extension_firewall": "Sp(4,3) and W(E6)=PSp(4,3):2 both have order 51840 but are different extensions. The Suzuki stabilizer realizes Sp(4,3) linearly and PSp(4,3) projectively; the E6 outer involution is absent from this 2.Suz-induced 27-point action.",
+  "boundary": "This is an exact finite-group/permutation statement for the vendored ATLAS representation. It does not identify the absent outer graph involution with a physical operation or assert that enlarging 2.Suz by any particular element is dynamically available.",
+  "checks": {
+    "orbit_135135": true,
+    "stabilizer_6635520": true,
+    "linear_image_sp4_51840": true,
+    "linear_kernel_128": true,
+    "projective_image_psp4_25920": true,
+    "projective_kernel_256": true,
+    "full_graph_aut_51840": true,
+    "all_270270_schreier_inner": true
+  }
+}
