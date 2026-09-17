@@ -1,4 +1,4 @@
-\subsection{The local cubic carrier sees $PSp(4,3)$ in Suz and the full $W(E_6)$ in Suz${:}2$}
+\subsection{The local cubic carrier sees $PSp(4,3)$ in $2.\mathrm{Suz}$ and the full $W(E_6)$ in $2.\mathrm{Suz}{:}2$}
 \label{sec:20260917-suzuki-local-e6-outer}
 
 The $32760$-point Suzuki/Leech tight shell contains a transitive family of
@@ -9,37 +9,47 @@ $27$ unordered decompositions
    \mathbf F_3^{12}=U\perp V\perp V^{\perp(U\oplus V)}.
 \]
 The parent incidence certificate proves that these $27$ decompositions carry
-$\operatorname{SRG}(27,10,1,5)$; its complement is the Schlaefli graph of the
+$\operatorname{SRG}(27,10,1,5)$; its complement is the Schl\"afli graph of the
 $27$ lines on a smooth cubic surface.
 
-The new calculation retains transporters through the complete $135135$-vertex
-$2.\mathrm{Suz}$ subspace orbit and constructs explicit Schreier loops in the
-stabilizer of $U$.  Two such loops induce permutations of orders $5$ and $6$
-on the local $27$-set and generate a transitive permutation group of order
+The exhaustive stabilizer computation already separates two order-$51840$
+extensions which must not be conflated.  On the four-dimensional block itself,
+$\operatorname{Stab}_{2.\mathrm{Suz}}(U)$ restricts onto the symplectic double
+cover $\mathrm{Sp}(4,3)$, order $51840$, with kernel $2^7$.  After
+projectivizing to the local $27$ decompositions, however, all $270270$
+Schreier generators lie in the inner subgroup
 \[
-  \boxed{25920}.
+  \boxed{\mathrm{PSp}(4,3)\cong U_4(2)},\qquad |\mathrm{PSp}(4,3)|=25920,
 \]
-Thus the symmetry actually realized by the Suzuki stabilizer on the local
-cubic carrier is
-\[
-  \boxed{U_4(2)\cong PSp(4,3)},
-\]
-not yet the full graph automorphism group.
+with projective kernel $2^8$.  The outer Weyl coset is genuinely absent from
+$2.\mathrm{Suz}$.
 
-This inner/outer split is independently forced by the published ATLAS
-classification.  The primitive Suzuki action of degree $135135$ has point
-stabilizer
+The new result constructs that missing coset explicitly.  We vendor the ATLAS
+$12$-dimensional $\mathbf F_3$ representation of $2.\mathrm{Suz}{:}2$.
+Its second standard generator $D$ is literally the old Suzuki generator $B$.
+The new generator $C$ satisfies
+\[
+  CJC^T=-J,
+\]
+so it is a symplectic similitude of multiplier $-1$ rather than an element of
+the old symplectic image.  For the chosen block $U$, direct computation finds
+that $C(U)$ is also reached from $U$ by the old-group word
+\[
+ \boxed{\texttt{BABABABABABBABABABABBABABA}}
+\]
+of length $26$.  If $T$ is the matrix of that word, then
+\[
+   h=CT^{-1}
+\]
+fixes $U$ projectively while retaining multiplier $-1$.  Thus $h$ is an
+explicit outer-coset block-stabilizer element, not merely an order argument.
+
+The published ATLAS subgroup structure closes the proof.  The degree-$135135$
+Suzuki point stabilizer is
 \[
   2^{1+6}.U_4(2),
 \]
-of order $3317760=128\cdot25920$.  Because the induced action on the local
-$27$-set is transitive, the normal $2$-core must act trivially: its equal-size
-orbits are powers of two dividing $27$, hence singletons.  The computed
-$25920$ image therefore saturates the $U_4(2)$ quotient.
-
-Passing to the outer extension supplies exactly the missing factor of two.
-ATLAS lists the corresponding maximal subgroup of $\mathrm{Suz}{:}2$, at the
-same index $135135$, as
+whereas the corresponding stabilizer in the outer extension is
 \[
   2^{1+6}.U_4(2).2,
 \]
@@ -47,30 +57,31 @@ of order
 \[
   6635520=128\cdot51840.
 \]
-The normal $2$-core is again invisible on the odd transitive $27$-set, while
-the $U_4(2)$ socle is already faithful.  Since $U_4(2){:}2$ is almost simple,
-there is no additional kernel disjoint from that faithful socle.  Therefore
+The normal $2$-core is invisible on the transitive odd $27$-set: its equal-size
+orbits are powers of two dividing $27$, hence singletons.  The inner
+$U_4(2)$ socle is already faithful, and the explicit multiplier-$-1$ element
+supplies the nontrivial outer coset.  Therefore
 \[
-  \boxed{\operatorname{Im}_{\mathrm{Suz}:2}(27)=U_4(2){:}2
+  \boxed{\operatorname{Im}_{2.\mathrm{Suz}:2}(27)=U_4(2){:}2
          \cong W(E_6),\qquad |W(E_6)|=51840.}
 \]
-This is exactly the classical automorphism group of the Schlaefli/cubic-surface
-$27$-line graph.  The factor-of-two absent inside Suz is therefore not a
-numerical accident: it is the Suzuki outer automorphism itself.
+This is exactly the classical automorphism group of the Schl\"afli/cubic-surface
+$27$-line graph.  The factor of two missing inside $2.\mathrm{Suz}$ is therefore
+restored constructively by the Suzuki outer automorphism.
 
-The executable certificates are
-\texttt{analysis/w33\_suzuki\_local\_e6\_inner\_outer\_split.py},
-\texttt{data/w33\_suzuki\_local\_e6\_inner\_outer\_split.json},
+The executable/frozen artifacts are
+\texttt{analysis/w33\_suzuki\_w33\_stabilizer\_projective\_quotient.py},
+\texttt{data/w33\_suzuki\_w33\_stabilizer\_projective\_quotient.json},
 \texttt{analysis/w33\_suz\_outer\_completes\_local\_e6\_weyl.py}, and
-\texttt{data/w33\_suz\_outer\_completes\_local\_e6\_weyl.json}.  The published
-classification inputs are the ATLAS degree-$135135$ Suzuki action and the
-standard cubic-surface identification of the Schlaefli automorphism group with
-$W(E_6)$.
+\texttt{data/w33\_suz\_outer\_completes\_local\_e6\_weyl.json}.  The ATLAS
+outer matrices are vendored as
+\texttt{data/atlas/2Suzd2G1-f3r12aB0.m1} and
+\texttt{data/atlas/2Suzd2G1-f3r12aB0.m2}.
 
 \paragraph{Evidence boundary.}
-The repository computation establishes the local incidence graph, explicit
-Schreier action, and inner group order.  The extension from Suz to Suz${:}2$
-uses the published ATLAS point-stabilizer structure.  These are finite-group
-and finite-geometry statements.  They do not establish a physical $E_6$ gauge
-symmetry, a continuum unification mechanism, or a dynamical enhancement of the
-Holonet architecture.
+The matrix similitude, transporter word, block stabilization, and inner Suzuki
+projective action are exact finite computations.  The abstract names of the
+point stabilizers and the classical identification of the full cubic-surface
+graph automorphism group with $W(E_6)$ are published finite-group/geometric
+inputs.  No physical $E_6$ gauge symmetry, continuum unification mechanism, or
+hardware availability of the outer similitude is inferred.
