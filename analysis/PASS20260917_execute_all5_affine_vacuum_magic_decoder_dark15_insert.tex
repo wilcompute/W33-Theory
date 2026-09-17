@@ -1,0 +1,51 @@
+\subsection{Affine-return control, vacuum-profile rank, determinant depth, decoder distance, and the quartic dark bridge}
+\label{sec:20260917-affine-vacuum-magic-decoder-dark15}
+
+The $A_8^3$ order-three construction carries a certified $9\times9\times9=729$ ground register with local current algebra $\mathfrak{sl}_9^3$.  For a nontrivial glue word such as $(1,1,4)$, the lattice-VOA return OPE $V_\lambda V_{-\lambda}$ has quadratic descendant $(J_\lambda)^2/2$ and therefore nonzero cross terms on all three factor pairs.  Conditional on independent continuous control of the local $\mathfrak{sl}_9$ zero modes and at least one such cross Hamiltonian on a connected block graph, simplicity of $\mathfrak{sl}_9$ gives the full dynamical algebra
+\[
+ \boxed{\mathfrak{sl}_{729}},\qquad \dim=729^2-1=531440.
+\]
+This is a controllability theorem for the certified operator algebra, not a claim that the present hardware independently addresses those Hamiltonians.
+
+On the heterotic branch, the frozen $SU(5)$ witness has $\operatorname{Tr}Q_A=-72$ in the convention $Q_A=P_9/6$.  Its two minimal FI-cancelling untwisted bilinears are $U_0U_1$ and $U_2U_3$, each of total anomalous charge $+2$, and these are exactly the untwisted pairs entering the sextic exotic-mass channels.  Thus FI cancellation and exotic lifting are compatible at charge level.  Fixed-point resolution is nevertheless decisive.  The mass matrix factorizes as
+\[
+ M(f,c)=\sum_s A_s(f)B_s(c),
+\]
+through four twisted-singlet pair profiles.  Translation-invariant twisted VEVs give rank one, one-point support gives rank at most four, and the diagonal profile used by the allowed degree-twelve quartic cube also gives rank one.  Rank nine is reachable only for sufficiently nonuniform fixed-point condensates.  Consequently the old unconstrained Vandermonde rank-nine matrix is an algebraic existence witness, not a physical-vacuum certificate.
+
+The ten global cubic-holonomy variables form the adjoint $\mathfrak{sp}_4(\mathbf F_3)$, whose first new pointwise nonlinear invariant is $\det X$.  A single synchronized weight-two operator supplies only three Pauli directions and all equivariant moment maps have rank at most three, hence $\det X=0$.  Two insertions are sufficient: two copies of $c=(1,1,4)$ fuse to the weight-two sector $(2,2,8)$ of synchronized central character $r=2$, and Pauli labels $(e_1,e_2,e_3)$ and $(e_4,0,0)$ give
+\[
+ S=I_4,\qquad X=SJ=J,\qquad \det X=1,
+\]
+so the finite fusion layer admits the candidate phase $\omega^{r\det X}=\omega^2$.  This is a kinematic/equivariant witness, not yet an evaluated nonlinear VOA phase coupling.
+
+The $165$ local Suzuki/W33 encodings and $297$ five-point lines of $GQ(4,8)$ also give an exact redundant-readout theorem.  A peeling stopping set $S$ induces degree at least nine, so $2e(S)\ge9|S|$.  Since the point graph is $\operatorname{srg}(165,36,3,9)$ with largest nontrivial eigenvalue $3$, the Rayleigh bound gives
+\[
+ 2e(S)\le3m+\frac{m^2}{5},\qquad m=|S|.
+\]
+Hence $m\ge30$.  An explicit Hermitian-model $30$-set meets the $297$ lines as $0^{162}+2^{135}$, proving
+\[
+ \boxed{d_{\rm stop}=30}.
+\]
+Thus every pattern of at most $29$ erased point channels is exactly peel-decodable from the surviving point values plus all line-sum measurements; the statement concerns peeling and does not preclude a stronger global solver at weight $30$.
+
+Finally, the inequivalent $15$-dimensional dark constituents of the W33 point and line actions remain disconnected at linear, quadratic and cubic degree, including under the certified PGSp outer twist.  Exact full-group characters give
+\[
+ \operatorname{Hom}_{PSp}(\operatorname{Sym}^2V_{15}^{\rm line},V_{15}^{\rm point})=0,
+ \qquad
+ \operatorname{Hom}_{PSp}(\operatorname{Sym}^3V_{15}^{\rm line},V_{15}^{\rm point})=0,
+\]
+but
+\[
+ \boxed{\dim\operatorname{Hom}_{PSp}(\operatorname{Sym}^4V_{15}^{\rm line},V_{15}^{\rm point})=1}.
+\]
+The first ordinary equivariant nonlinear point--line transceiver is therefore quartic and unique up to scale.  A preferred local polynomial and a physical/VOA realization remain open.
+
+The executable certificates are
+\texttt{data/w33\_a8cubed\_affine\_return\_universality.json},
+\texttt{data/w33\_h1\_det\_two\_weight2\_witness.json},
+\texttt{data/w33\_suzuki\_gq48\_stopping\_distance.json}, and
+\texttt{data/w33\_dark15\_first\_nonlinear\_bridge.json}.  The heterotic vacuum-profile correction is cross-certified in the companion Holotrade repository by
+\texttt{data/w33\_su5\_fi\_degree12\_flatness.json},
+\texttt{data/w33\_exotic\_mass\_rank\_by\_condensate.json}, and
+\texttt{data/w33\_fi\_exotic\_condensate\_compatibility.json}.
