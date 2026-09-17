@@ -1,0 +1,69 @@
+\subsection{The Suzuki block stabilizer: symplectic double cover upstairs, inner projective action downstairs}
+\label{sec:20260917-suzuki-w33-stabilizer-quotient}
+
+The full-W33 incidence tower gives a $135135$-element $2.\mathrm{Suz}$ orbit of
+nondegenerate $4$-spaces $U\cong W(3,3)$ inside the twelve-dimensional
+symplectic carrier, with $27$ complementary three-W33 decompositions through
+each fixed $U$.  The latter carry the Schläfli/cubic-surface graph
+$\operatorname{SRG}(27,10,1,5)$.  The next question is not whether that graph
+\emph{admits} the usual $E_6$ symmetry, but which part of that symmetry is
+actually induced by the ambient Suzuki action.
+
+Using the vendored ATLAS matrices, the orbit-stabilizer order is
+\[
+ |\operatorname{Stab}_{2.\mathrm{Suz}}(U)|
+ =\frac{896690995200}{135135}
+ =\boxed{6635520}.
+\]
+A Schreier transversal over the complete orbit shows that restriction to the
+four-dimensional block is surjective onto
+\[
+ \boxed{\mathrm{Sp}(4,3)},\qquad |\mathrm{Sp}(4,3)|=51840,
+\]
+with kernel of order
+\[
+ \boxed{128=2^7}.
+\]
+Thus the embedded block sees the full symplectic double cover.
+
+Projectivising changes the answer.  The action on the $27$ complementary
+decompositions has image
+\[
+ \boxed{\mathrm{PSp}(4,3)},\qquad |\mathrm{PSp}(4,3)|=25920,
+\]
+and kernel
+\[
+ \boxed{256=2^8}.
+\]
+The computation is exhaustive rather than sampled.  A five-vertex base for the
+full $51840$-element automorphism group of the local Schläfli graph is fixed;
+all $270270=2\cdot135135$ Schreier generators are then classified by their
+images on that base.  Every generator lies in the inner $25920$-element
+projective subgroup.  No outer-coset generator occurs.
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{\small
+\textbf{Extension firewall.}  Two order-$51840$ groups occur here and they must
+not be identified.  The linear block action is the central double cover
+$\mathrm{Sp}(4,3)\to\mathrm{PSp}(4,3)$.  The full cubic-surface Weyl symmetry is
+the different extension
+$W(E_6)\cong\mathrm{PSp}(4,3){:}2$.  The ambient $2.\mathrm{Suz}$ action realizes
+the former upstairs and only the inner $\mathrm{PSp}(4,3)$ action on the
+projective $27$-carrier.  The outer $E_6$ involution is absent from this induced
+action.}}
+\end{center}
+
+This sharpens the earlier local-$E_6$ statement.  The $27$ decompositions still
+form the exact cubic-surface incidence carrier, whose full graph automorphism
+group is the Weyl group of type $E_6$; what is new is the actual subgroup
+selected by the Suzuki embedding.  Standard cubic-surface geometry identifies
+the automorphism group of the $27$-line incidence graph with $W(E_6)$, while
+the repository computation determines the induced subgroup and both kernels.
+
+The executable certificate is
+\texttt{analysis/w33\_suzuki\_w33\_stabilizer\_projective\_quotient.py}, with
+frozen output
+\texttt{data/w33\_suzuki\_w33\_stabilizer\_projective\_quotient.json}.
+The statement is finite group theory only: it does not make the absent outer
+involution into a physical gate or assert that any enlargement of the Suzuki
+action is dynamically available.
