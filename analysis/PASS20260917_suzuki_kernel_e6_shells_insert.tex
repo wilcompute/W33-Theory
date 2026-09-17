@@ -31,24 +31,29 @@ whose $27$ quotient lines carry the same cubic-surface incidence graph.  Thus th
 Suzuki stabilizer kernel itself contains a canonical binary realization of the old
 W33$\to E_6$ $27$-line carrier.
 
-The complementary $36$ nonsingular vectors are equally suggestive.  Under the inner
-$U_4(2)\cong\mathrm{PSp}(4,3)$ action their stabilizer has order
+The complementary $36$ nonsingular vectors close just as strongly.  The Pass4992 common
+reconstruction builds the repository's five $\mathrm{PSp}(4,3)$ generators from orthogonal
+symmetries of this same $Q^-(5,2)$ model.  Propagating those identical generator words on the
+nonsingular vectors and on the $36$ Schl\"afli double-sixes yields \emph{exactly one}
+equivariant bijection.  It also intertwines the additional orthogonal symmetry that enlarges
+the inner group to the full Weyl action.  Hence the identification is
+$W(E_6)$-equivariant, not merely a match of orbit sizes:
 \[
- 25920/36=720,
+ \boxed{
+ \begin{array}{c}
+ 36\ \text{nonsingular kernel vectors}
+ \\ \updownarrow \\
+ 36\ \text{Schl\"afli double-sixes}
+ \\ \updownarrow \\
+ 36\ \text{W33 spreads}
+ \\ \updownarrow \\
+ 36\ \text{doily complements}
+ \\ \updownarrow \\
+ 36\ \text{signed Pfaffian sections of }C_{E_6}.
+ \end{array}}
 \]
-matching the already certified transitive $36$-object family
-\[
- \text{W33 spreads}\leftrightarrow\text{Schl\"afli double-sixes}
- \leftrightarrow\text{doily complements}
- \leftrightarrow\text{Pfaffian sections}.
-\]
-Under the full orthogonal action the stabilizer doubles to
-\[
- 51840/36=1440,
-\]
-which is exactly the classical full double-six stabilizer.  At this stage the $27$ bridge
-is objectwise, while the $36$ bridge is an exact orbit/stabilizer fingerprint; the explicit
-nonsingular-vector-to-spread intertwiner remains open.
+The inner point stabilizer has order $25920/36=720$, while the full orthogonal/Weyl
+stabilizer has order $51840/36=1440$, reproducing the classical double-six stabilizer.
 
 Most importantly, the extension puzzle is now structural.  The full automorphism group of
 the minus quadratic quotient is
@@ -65,7 +70,9 @@ stabilizer.  This explains simultaneously why the local $27$-carrier admits the 
 symmetry and why the actual $2.\mathrm{Suz}$ action sees only the inner half.
 
 The executable artifacts are
-\texttt{analysis/w33\_suzuki\_w33\_kernel\_structure\_reconciliation.py} and
-\texttt{analysis/w33\_suzuki\_kernel\_e6\_quadratic\_shell\_bridge.py}, with frozen JSON
+\texttt{analysis/w33\_suzuki\_w33\_kernel\_structure\_reconciliation.py},
+\texttt{analysis/w33\_suzuki\_kernel\_e6\_quadratic\_shell\_bridge.py}, and
+\texttt{analysis/w33\_suzuki\_kernel\_e6\_36\_objectwise\_intertwiner.py}, with frozen JSON
 certificates of the same names under \texttt{data/}.  These are finite-group and finite-
-geometry statements; no physical implementation of the missing outer automorphism is inferred.
+geometry statements; no physical implementation of the binary shell or missing outer
+automorphism is inferred.
