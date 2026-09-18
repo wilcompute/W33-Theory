@@ -1,0 +1,93 @@
+\subsection{External orbifold benchmark, two-invariant magic compiler, and the correct non-Abelian heterotic target}
+\label{sec:20260918-benchmark-twoinv-transducer-s3}
+
+The heterotic spectrum code now has its first external regression fixture.
+Using the published \(Z_6\)-II model of
+Buchm\"uller--Hamaguchi--Lebedev--Ratz, exact \(E_8\times E_8\) root
+enumeration reproduces
+\[
+A_2+A_1\quad(8\ {\rm roots})
+\]
+in the visible first \(E_8\) and
+\[
+A_3+A_1\quad(14\ {\rm roots})
+\]
+in the hidden second \(E_8\), i.e.
+\[
+SU(3)\times SU(2)\times[SU(4)\times SU(2)]
+\]
+before the Abelian factors.  At the origin \(T_1\) fixed point, the published
+visible shell
+\[
+(p+V_6)^2_{\rm obs}={23\over18}
+\]
+contains exactly \(16\) weights, while the hidden shell of norm \(1/9\)
+contains one shifted weight, reproducing the local \(SO(10)\) sixteen-plet.
+The published Table~5.1 aggregate spectrum has been frozen as the next
+row-by-row regression checksum.  Full Tables D.2--D.3 reproduction is not yet
+claimed.
+
+On the W33 controller, the determinant gate admits a much smaller compiler
+once the hardware library is enlarged from reduced monomial phases to
+adjoint-invariant phases.  For \(X\in\mathfrak{sp}_4(\mathbb F_3)\), the
+even characteristic polynomial and Newton identities give
+\[
+\det X={(\operatorname{tr}X^2)^2-2\operatorname{tr}X^4\over8}.
+\]
+Reducing in \(\mathbb F_3\),
+\[
+\boxed{\det X=2\left[(\operatorname{tr}X^2)^2+\operatorname{tr}X^4\right]}.
+\]
+This identity has been verified on all \(3^{10}=59049\) controller states.
+Hence, if direct invariant-phase primitives are available,
+\[
+\boxed{U_{\det}=P_{(\operatorname{tr}X^2)^2}^{\,2}\,
+                  P_{\operatorname{tr}X^4}^{\,2}},
+\]
+only two commuting nonlinear primitives are required, versus the exact
+seventeen-primitive optimum in the native reduced-monomial library.
+
+The doubled \(1458\)-state carrier also has a concrete optical packing.  Flatten
+\[
+n=(n_0,\ldots,n_5)\in\mathbb F_3^6
+\]
+to one mode label
+\[
+m=\sum_{j=0}^{5}n_j3^j\in\{0,\ldots,728\}
+\]
+and use a polarization/path rail for \(r=\pm1\).  The physical mode count is
+therefore exactly
+\[
+2\times729=1458.
+\]
+Each \(X_j\) is a permutation of \(243\) disjoint three-cycles on the comb,
+each \(Z_j\) is a rail-conditioned phase \(\omega^{r n_j}\), the center is a
+relative rail phase, and the outer involution is a rail swap.  Declared
+\(99\%\) single-gate planning targets give phase-error budgets of approximately
+\(0.123\) rad for the rail phase and \(0.142\) rad for a qutrit digit phase.
+A conservative \(1\%\) total wrong-mode leakage budget across 728 unwanted
+modes corresponds to \(-48.6\) dB per wrong mode under an equal-leakage union
+bound.  These are derived engineering targets, not measurements.
+
+Finally, the previous cyclic \(Z_6\)-II no-go points to the correct heterotic
+symmetry class.  Konopka's explicit non-Abelian heterotic \(S_3\) orbifold has
+published generators obeying
+\[
+S_3=\langle\tau,\sigma\mid\tau^2=\sigma^3=(\tau\sigma)^2=1\rangle,
+\]
+so
+\[
+\tau\sigma\tau^{-1}=\sigma^{-1}.
+\]
+The published \(6\times6\) lattice matrices have been checked directly.
+Therefore the abstract extension law matches W33 exactly under
+\[
+\tau\leftrightarrow s,\qquad \sigma\leftrightarrow z.
+\]
+This is a group-extension bridge only: a geometric heterotic point-group
+rotation is not thereby identified with the Heisenberg center phase.
+
+Executable certificates:
+\texttt{data/w33\_controlled\_det\_two\_invariant\_compiler.json},
+\texttt{data/w33\_1458\_mode\_photonic\_transducer\_spec.json}, and
+\texttt{data/w33\_heterotic\_s3\_outer\_target.json}.
