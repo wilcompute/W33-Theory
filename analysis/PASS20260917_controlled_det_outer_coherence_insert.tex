@@ -1,0 +1,73 @@
+\subsection{Controlled determinant gate and outer-complete coherence}
+\label{sec:20260917-controlled-det-outer-coherence}
+
+The determinant controller target can now be stated as an exact unitary rather
+than a verbal missing bridge.  Let \(X\in\mathfrak{sp}_4(\mathbb F_3)\) label
+the certified ten-qutrit controller basis and let
+\[
+z=\operatorname{diag}(\omega,\omega^{-1})
+\]
+act on the doubled \(r=1,2\) central-character factor.  Define
+\[
+\boxed{
+U_{\det}=\sum_X |X\rangle\!\langle X|\otimes z^{\det X}.
+}
+\]
+This is unitary.  Since the determinant assumes all three values in
+\(\mathbb F_3\), it is not a product gate.  For a controller superposition of
+one \(\det X=0\) and one \(\det X=1\) basis state and logical
+\(|+\rangle=(|1\rangle+|2\rangle)/\sqrt2\), the two logical branches have
+overlap
+\[
+\langle +|z|+\rangle=-{1\over2},
+\]
+so the output has Schmidt rank two.
+
+The gate is also non-Clifford on the controller.  For prime qutrits, a
+cube-root diagonal Clifford has a quadratic polynomial exponent.  The exact
+adjoint invariant calculation already proves that the only invariant
+quadratic is \(q_2(X)=\operatorname{tr}(X^2)\), while all nine pairs
+\((q_2,\det)\in\mathbb F_3^2\) occur.  Hence \(\det X\) is not any quadratic
+function on the controller, and each logical-\(Z\) block
+\(\omega^{\pm\det X}\) is non-Clifford.
+
+This does not contradict the single-sector Schur no-go.  On a fixed
+\(729\)-dimensional Schr\"odinger sector the determinant phase is scalar.  The
+new unitary uses both controller dependence and the doubled logical sector.
+What remains physically open is an actual VOA/OPE, Hamiltonian, photonic, or
+fault-tolerant implementation of \(U_{\det}\).
+
+The doubled-sector coherence question also closes algebraically.  Let
+\(H=3^{1+12}\) and adjoin the certified outer involution \(s\) with
+\(szs^{-1}=z^{-1}\).  The two \(729\)-dimensional Schr\"odinger irreducibles
+\(V_1,V_2\) have distinct central characters and satisfy
+\[
+V_1^s\simeq V_2\not\simeq V_1.
+\]
+For the index-two normal extension
+\[
+G=H\rtimes\langle s\rangle,
+\]
+Mackey--Clifford irreducibility therefore gives
+\[
+\boxed{\operatorname{Ind}_H^G V_1\ \text{irreducible},\qquad
+\left.\operatorname{Ind}_H^G V_1\right|_H=V_1\oplus V_2.}
+\]
+Thus the certified \(1458\)-dimensional doubled carrier is one irreducible
+outer-complete module.  The projectors \(P_1,P_2\) onto the two central
+characters obey
+\[
+sP_1s^{-1}=P_2
+\]
+and are not central projectors of the enlarged representation algebra.
+Therefore \(r=1\) versus \(r=2\) is not an \emph{intrinsic} superselection
+label once the outer operation is admitted.
+
+The physical boundary is precise: if the outer coset is not dynamically
+realizable and the observable algebra is restricted to operations commuting
+with \(z\), then the two labels remain operationally superselected.  The open
+question is implementation of the outer operation, not representation theory.
+
+Executable certificates:
+\texttt{data/w33\_controlled\_det\_logical\_gate.json} and
+\texttt{data/w33\_outer\_complete\_no\_intrinsic\_superselection.json}.
