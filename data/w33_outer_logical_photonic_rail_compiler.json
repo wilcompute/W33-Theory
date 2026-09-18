@@ -1,0 +1,27 @@
+{
+  "schema": "w33.outer_logical_photonic_rail_compiler.v1",
+  "status": "PASS_ENCODING_COMPILER__NATIVE_SECTOR_INTERFACE_OPEN",
+  "encoding": {
+    "r1": "polarization H or path rail A",
+    "r2": "polarization V or path rail B",
+    "internal_729": "same computational labels on both rails",
+    "phase_convention": "Z phases have opposite sign on r1 and r2 rails"
+  },
+  "logical_operations": {
+    "outer_XL": "rail SWAP [[0,1],[1,0]]",
+    "photonic_candidate": "half-wave-plate polarization swap or deterministic path cross-connect",
+    "center_z": "relative rail phase diag(omega,omega^-1)",
+    "basis_change": "generic coherent two-rail SU(2) rotation using waveplates or Mach-Zehnder beam splitters once the sector-to-rail interface exists"
+  },
+  "representation_check": {
+    "identity": "X_L z X_L = z^-1",
+    "rho2_is_conjugate_phase_convention": true,
+    "outer_requires_no_antiunitary_device_after_doubling": true
+  },
+  "dense_logical_control": {
+    "finite_native_group": "<z,X_L> = S3",
+    "additional_photonic_resource": "one continuously tunable rail mixer plus relative phase",
+    "consequence": "arbitrary logical SU(2) is available at the rail-encoding layer in principle"
+  },
+  "native_VOA_boundary": "The compiler assumes a coherent isometry from the native V1 direct-sum V2 carrier into two optical rails. Representation theory permits it but does not construct the material/VOA interface. No claim of an experimentally realized W33 outer gate is made."
+}
