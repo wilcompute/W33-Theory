@@ -1,0 +1,16 @@
+{
+  "schema":"w33.e6_gauge_three_qutrit_pauli_firewall.v1",
+  "status":"PASS_MONOMIAL_THREE_QUTRIT_REALIZATION_NO_GO",
+  "theorem":{
+    "necessary_condition":"a standard 3-qutrit Pauli computational basis requires a regular elementary-abelian C3^3 shift subgroup on 27 labels",
+    "complete_E6_Sylow_result":"C3^3 exists in the E6 27 permutation action but is not regular; regular order-27 torsors are nonabelian",
+    "conclusion":"no monomial cubic/weight-basis realization of H(3^3)=3^(1+6) with the standard shift Lagrangian inside W(E6)"
+  },
+  "independent_cubic_chart_falsifier":{
+    "support_triads":45,
+    "plain_coordinate_translation_bad_supports":[29,29,30],
+    "coordinate_phase_residue_histograms":[{"0":45,"1":0,"2":0},{"0":45,"1":0,"2":0},{"0":25,"1":10,"2":10}]
+  },
+  "surviving_bridge":"the 27x27=729 heterotic matter space remains an exact six-trit carrier/basis intertwiner",
+  "open_loophole":"a nonmonomial or string-vertex/Narain projective action could still realize the missing gauge-side Weyl pairs"
+}
