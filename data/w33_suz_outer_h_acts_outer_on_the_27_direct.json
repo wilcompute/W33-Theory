@@ -1,0 +1,68 @@
+{
+  "schema": "w33.suz_outer_h_acts_outer_on_the_27_direct.v1",
+  "status": "PASS",
+  "headline": "The outer-coset block stabilizer h = C T^{-1} of w33_suz_outer_completes_local_e6_weyl is induced directly on the 27 complementary three-W33 decompositions. It preserves the SRG(27,10,1,5) graph, lies outside the inner PSp(4,3) image, and closes the local image at 51840 = |W(E6)|. Its permutation has order 6 and no fixed points. The parent certificate recorded full_outer_image_51840 as a classification deduction; this is the computation.",
+  "orbit": {
+    "embedded_W33s": 135135,
+    "orthogonal_partners": 54,
+    "decompositions": 27
+  },
+  "inner_image": {
+    "group": "PSp(4,3)",
+    "order": 25920,
+    "generators_used": 2
+  },
+  "outer_element": {
+    "word": "BABABABABABBABABABABBABABA",
+    "multiplier_mod3": 2,
+    "fixes_U": true,
+    "permutation_on_27": [
+      1,
+      16,
+      17,
+      6,
+      13,
+      8,
+      12,
+      25,
+      18,
+      5,
+      20,
+      7,
+      26,
+      3,
+      0,
+      19,
+      10,
+      24,
+      21,
+      11,
+      14,
+      22,
+      9,
+      15,
+      2,
+      23,
+      4
+    ],
+    "permutation_order": 6,
+    "fixed_points_on_27": 0,
+    "preserves_local_graph": true,
+    "inside_inner_PSp": false
+  },
+  "closure": {
+    "order_with_h": 51840,
+    "identification": "U4(2):2 = W(E6)"
+  },
+  "relation_to_parent": "independent of the ATLAS stabilizer shape and of the odd-transitive-set argument; only the vendored matrices and this orbit computation are used",
+  "boundary": "Exact finite computation for the vendored ATLAS representation. It does not make the outer similitude a physically available operation.",
+  "checks": {
+    "orbit_135135": true,
+    "decompositions_27": true,
+    "inner_image_25920": true,
+    "h_preserves_graph": true,
+    "h_outside_inner_image": true,
+    "closure_51840": true,
+    "h_order_six_fixed_point_free": true
+  }
+}
