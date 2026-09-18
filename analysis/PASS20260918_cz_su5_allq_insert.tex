@@ -1,0 +1,86 @@
+\subsection{Entangling qutrit Wilson line, canonical \(SU(5)\), and the all-\(q\) \(CZ\) weld}
+\label{sec:20260918-cz-su5-allq}
+
+The viable W33-class \(Z_6\)-I flagship selects a distinguished order-three
+class inside its local \(A_8=\mathfrak{su}_9\).  Its roots split as
+\[
+72=24_0+24_1+24_2,
+\]
+with neutral root subsystem \(A_4+A_1+A_1\).  Consequently the defining
+nine-dimensional holonomy has eigenvalue multiplicities \(5+2+2\), and is
+projectively \(SU(9)\)-conjugate to the two-qutrit gate
+\[
+CZ_3|x,y\rangle=\omega^{xy}|x,y\rangle.
+\]
+This is the entangling Clifford branch: the corresponding W33 point action is
+\[
+1^4\,3^{12},
+\]
+with the four fixed points one totally isotropic line.  By contrast, a local
+single-qutrit phase gate has \(6+3\) fundamental spectrum, adjoint grading
+\(44+18+18\), and W33 profile \(1^{13}3^9\).
+
+The construction extends uniformly to prime \(q\).  For
+\[
+CZ_q|x,y\rangle=\zeta^{xy}|x,y\rangle
+\]
+the fundamental phase multiplicities are
+\[
+m_0=2q-1,\qquad m_a=q-1\quad(a\ne0),
+\]
+and the induced \(\mathbb Z_q\)-grading of \(\mathfrak{sl}_{q^2}\) obeys
+\[
+\dim\mathfrak g_0=(q+1)(q^2-1),\qquad
+\dim\mathfrak g_a=q(q^2-1)\quad(a\ne0).
+\]
+The charged dimension is therefore
+\[
+q(q^2-1)=|SL(2,q)|.
+\]
+On the projective two-qudit Pauli geometry \(W(3,q)\), the same Clifford has
+cycle profile
+\[
+1^{\,q+1}\,q^{\,q(q+1)}.
+\]
+Its fixed set is one totally isotropic \(PG(1,q)\), and the number of
+nontrivial projective cycles is
+\[
+q(q+1)=k,
+\]
+the GQ\((q,q)\) collinearity valency.  On all nonzero Pauli vectors the profile
+is
+\[
+1^{\,q^2-1}\,q^{\,q(q^2-1)},
+\]
+so the number of nontrivial vector cycles equals every nonzero adjoint-grade
+dimension and \(|SL(2,q)|\).
+
+At \(q=3\), the \(CZ_3\) zero-phase states are
+\[
+(0,0),(0,1),(0,2),(1,0),(2,0),
+\]
+the zero locus \(xy=0\) in \(\mathbb F_3^2\).  Thus its connected centralizer is
+\[
+S(U(5)\times U(2)\times U(2)).
+\]
+The flagship's measured neutral \(A_4\) is consequently the \(SU(5)\) acting
+on this five-dimensional zero-phase block, after the projective conjugation.
+A \(3+2\) split of that block carries the canonical generator
+\[
+Y=\operatorname{diag}\left(-\frac13,-\frac13,-\frac13,
+                           \frac12,\frac12\right),
+\]
+with
+\[
+\operatorname{tr}Y^2=\frac56,\qquad k_Y=\frac53.
+\]
+Thus the same exact entangling qutrit conjugacy class controls the observed
+\(32+24+24\) \(SU(9)\) grading and contains the flagship's canonically
+normalised \(SU(5)\) hypercharge block.
+
+This is a conjugacy-class result; no preferred map from the displayed heterotic
+root basis to the standard qutrit computational basis is claimed.
+
+Executable certificates:
+\texttt{data/w33\_allq\_cz\_orbit\_adjoint\_weld.json} and
+\texttt{data/w33\_cz\_zero\_phase\_su5\_hypercharge.json}.
