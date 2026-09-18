@@ -1,0 +1,30 @@
+{
+  "schema":"w33.heterotic_z3_729_matter_carrier.v1",
+  "status":"PASS_EXACT_CARRIER_INTERTWINER__PHYSICAL_WEYL_REALIZATION_OPEN",
+  "external_string_input":{
+    "compactification":"factorized heterotic T6/Z3 standard embedding",
+    "fixed_points":27,
+    "twisted_E6_multiplets":27,
+    "representation_per_fixed_point":"27 of E6",
+    "twisted_E6_matter_dimension":729,
+    "spectrum_formula":"3(3,27) + 27(1,27) + 81(3,1) under SU(3) x E6"
+  },
+  "basis_intertwiner":{
+    "heterotic_basis":"|f0,f1,f2; e6id>",
+    "six_qutrit_basis":"|f0,f1,f2,u0,u1,z>",
+    "coordinate_space":"F3^6",
+    "dimension":729,
+    "bijection_verified":true
+  },
+  "abstract_heisenberg":{
+    "shape":"3^(1+12)",
+    "schrodinger_dimension":729,
+    "all_generator_commutators_verified":true
+  },
+  "factorization":{
+    "geometry_factor":"27 fixed points = F3^3",
+    "gauge_factor":"27 E6 labels = F3^3 via repo chart",
+    "carrier":"C^27_fixed tensor C^27_E6 = C^729 = (C^3)^tensor6"
+  },
+  "physics_boundary":"Exact carrier/basis intertwiner only. The three gauge-side Weyl pairs are not yet certified microscopic heterotic symmetries."
+}
