@@ -1,0 +1,102 @@
+\subsection{Five-front plus three-physics closure: unique hypercharge, exact \(S_3\) module, and spectral/commutator probes}
+\label{sec:20260918-five-plus-three}
+
+The companion heterotic benchmark has now been frozen at row level.  The
+published Buchm\"uller--Hamaguchi--Lebedev--Ratz Table~D.2 visible-state labels
+close exactly to
+\[
+3Q+3u^c+7d^c+4d+5\bar L+8L+8m+3e^c+16s^++16s^-,
+\]
+and every Table~D.3 row identity is frozen through
+\(s_1,\ldots,s_{69}\), \(h_1,\ldots,h_{14}\),
+\(f_1,\ldots,f_4\), \(\bar f_1,\ldots,\bar f_4\), and
+\(w_1,\ldots,w_5\).  Reproduction of every published Abelian charge column
+remains the external fail-closed target.
+
+The explicit witness also has a hypercharge rigidity theorem.  Requiring a
+Cartan vector to reproduce the hypercharge of all \(27\) exact local-\(E_6\)
+weights gives
+\[
+Y(t)=\left(t,-2t-\frac14,t,\frac5{12},-\frac7{12},
+\frac14,\frac14,-\frac5{12}\right).
+\]
+Since
+\[
+Y(t)^2-\frac56=\frac{(12t+1)^2}{24},
+\]
+the canonical condition \(k_Y=2Y^2=5/3\) uniquely fixes
+\[
+t=-\frac1{12}.
+\]
+Thus the canonical \(Y\) cannot be continuously repaired by first-\(E_8\)
+Cartan mixing while preserving the full local-family charges and normalization.
+
+The non-Abelian heterotic bridge is now representation-level rather than only
+presentation-level.  Konopka's defining \(S_3\) matrices
+\[
+\tau=\begin{pmatrix}1&-1\\0&-1\end{pmatrix},\qquad
+\sigma=\begin{pmatrix}0&-1\\1&-1\end{pmatrix}
+\]
+are conjugate, in the basis
+\[
+v_+=(-\omega^2,1)^T,\qquad v_-=(\omega,-1)^T,
+\]
+to
+\[
+\tau\mapsto X_L,\qquad
+\sigma\mapsto\operatorname{diag}(\omega,\omega^{-1}).
+\]
+Hence the heterotic defining doublet and the W33 central-character logical
+doublet are isomorphic as complex \(S_3\)-modules.  The physical operator
+identification remains open.
+
+Three additional physics consequences follow.
+
+First, for the W33 Laplacian
+\[
+L=12I-A,\qquad \operatorname{spec}L=0^1+10^{24}+16^{15},
+\]
+an engineered evolution at \(gt=\pi/2\) is the exact eigenspace reflection
+\[
+e^{-i(\pi/2)L}
+=I-2P_{10}
+=\frac{A^2-8A-18I}{30}.
+\]
+Only the \(24\)-dimensional \(\lambda=10\) sector changes sign, and the full
+system revives at \(gt=\pi\).
+
+Second, the common \(S_3\) normal form gives the closed commutator loop
+\[
+K=X_LzX_L^{-1}z^{-1}=z.
+\]
+A Ramsey experiment beginning in
+\[
+|+\rangle=(|r=1\rangle+|r=2\rangle)/\sqrt2
+\]
+therefore has return probability
+\[
+|\langle+|K|+\rangle|^2=\frac14,
+\]
+whereas a commuting \(C_3\times C_2\) null model gives unity.
+
+Third, the determinant magic interaction admits a one-window analog target.
+Writing
+\[
+A(X)=((\operatorname{tr}X^2)^2+\operatorname{tr}X^4)\pmod3,
+\]
+the Hamiltonian
+\[
+H_{\det}=-\frac{4\pi\hbar}{3T}A(X)\otimes Z_L
+\]
+obeys
+\[
+e^{-iH_{\det}T/\hbar}=U_{\det}.
+\]
+The unresolved problem is microscopic realization of this invariant coupling,
+not its finite-dimensional synthesis.
+
+Executable certificates are
+\texttt{data/w33\_heterotic\_s3\_defining\_irrep\_intertwiner.json},
+\texttt{data/w33\_laplacian\_spectral\_echo.json},
+\texttt{data/w33\_s3\_commutator\_ramsey\_witness.json}, and
+\texttt{data/w33\_det\_single\_window\_hamiltonian.json}.
