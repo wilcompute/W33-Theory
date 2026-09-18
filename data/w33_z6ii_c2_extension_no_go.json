@@ -1,0 +1,20 @@
+{
+  "schema": "w33.z6ii_c2_extension_no_go.v1",
+  "status": "PASS_NO_GO",
+  "heterotic": {
+    "point_group": "C6=<theta> isomorphic to C3 x C2",
+    "C3_generator": "theta^2",
+    "C2_generator": "theta^3",
+    "conjugation": "theta^3 theta^2 theta^-3 = theta^2",
+    "action_on_C3": "trivial"
+  },
+  "W33": {
+    "C3_generator": "Heisenberg center z",
+    "C2_generator": "multiplier-minus-one outer involution s",
+    "conjugation": "s z s^-1 = z^-1",
+    "action_on_C3": "nontrivial inversion",
+    "generated_group": "C3:C2 = S3"
+  },
+  "obstruction": "The two homomorphisms C2 -> Aut(C3) are inequivalent, so no extension-equivariant identification exists.",
+  "what_would_be_needed": "A non-Abelian heterotic extension containing an order-two reflection that inverts an order-three generator."
+}
