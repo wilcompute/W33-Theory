@@ -1,0 +1,36 @@
+{
+  "schema": "w33.controlled_det_logical_gate.v1",
+  "status": "PASS_MATHEMATICAL_GATE_PHYSICAL_COUPLING_OPEN",
+  "controller": {
+    "basis": "|X>, X in sp4(F3)",
+    "dimension": 59049,
+    "invariant": "det(X) in F3",
+    "all_det_values_occur": true
+  },
+  "logical_sector": {
+    "basis": ["r=1","r=2"],
+    "center": "z=diag(omega,omega^-1)",
+    "dimension": 2
+  },
+  "gate": {
+    "formula": "U_det=sum_X |X><X| tensor z^det(X)",
+    "unitary": true,
+    "logical_Z_blocks": ["omega^det(X)","omega^-det(X)"],
+    "new_relative_dynamics": true,
+    "new_uncontrolled_generator": false
+  },
+  "entanglement_witness": {
+    "controller_branches": "choose det=0 and det=1 basis states",
+    "logical_input": "|+>=(|r=1>+|r=2>)/sqrt(2)",
+    "branch_overlap_after_gate": "<+|z|+>=-1/2",
+    "conclusion": "output has Schmidt rank 2; U_det is not a product gate"
+  },
+  "nonclifford_witness": {
+    "literature_input": "prime-dimensional diagonal Clifford gates with cube-root precision have quadratic polynomial exponents",
+    "det_not_quadratic_function": true,
+    "proof": "degree<=2 reduced polynomial functions on F3^10 are unique; an invariant quadratic representation of det would be a multiple of the unique q2, but all nine (q2,det) pairs occur",
+    "consequence": "each logical-Z block omega^(+/-det X) is non-Clifford on the 10-qutrit controller"
+  },
+  "relation_to_previous_no_go": "The single-729-sector Schur no-go remains correct. U_det acts through the doubled logical label and controller dependence; it does not create a noncentral gate inside the 729-state register.",
+  "physical_boundary": "No certified VOA OPE, sector-return Hamiltonian, photonic interaction, or fault-tolerant synthesis currently realizes U_det. This certificate defines and classifies the target unitary only."
+}
