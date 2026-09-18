@@ -128,9 +128,44 @@ satisfies
 \]
 On every \(SU(5)\) root the \(W_2\) character equals the character of
 \((3/5)Y\), with phases \(0\) and \(1/2\).  This closes the
-\emph{gauge-embedding} version of the even-order escape.  It does not yet
-compute the full \(Z_6\)-II massless spectrum, net chirality, hypercharge
-anomaly, exotic decoupling, flatness or Yukawas.
+\emph{gauge-embedding} version of the even-order escape.
+
+The first twisted sector can now be pushed one step further without building
+the full spectrum.  The twelve \(T_1\) fixed points have local shifts
+\[
+ V_g=V+n_3W_3+n_2W_2+n'_2W'_2,\qquad
+ n_3=0,1,2,\quad n_2,n'_2=0,1.
+\]
+For the present witness \(W'_2=0\), so each of six local shifts occurs twice.
+At \(n_3=n_2=0\) the local algebra is \(E_6\), giving exactly two local
+\(E_6\) fixed points.  Since \(\delta c_{T_1}=11/36\), the unoscillated
+left-moving mass equation is
+\[
+ (P+V_g)^2={25\over18}.
+\]
+At either local \(E_6\) point the shifted \(E_8\) lattice contains exactly
+\(27\) solutions.  Those \(27\) weights form one transitive orbit under all
+\(72\) local \(E_6\) root reflections.  Using the standard \(Z_6\)-II result
+that massless \(T_1\) solutions are twist invariant and survive as complete
+local-GUT multiplets, the witness therefore contains two complete localized
+\(27\)s.
+
+Restricting one exact \(27\)-weight shell to the globally surviving
+\(SU(3)\times SU(2)\times U(1)_Y\) gives
+\[
+\begin{split}
+27={}&(3,2)_{1/6}+(\bar3,1)_{-2/3}
+ +2(\bar3,1)_{1/3}+(3,1)_{-1/3}\\
+ &+2(1,2)_{-1/2}+(1,2)_{1/2}
+ +(1,1)_1+2(1,1)_0.
+\end{split}
+\]
+Thus each local \(27\) contains one complete Standard-Model family
+(including \(\nu^c\)), a vectorlike \(5+\bar5\) package, and an extra singlet.
+Two localized family multiplets are therefore closed.  The third net family,
+the other twisted and untwisted sectors, global anomaly accounting, exotic
+decoupling, flatness and Yukawas remain open; no complete MSSM spectrum is
+claimed.
 
 Executable certificates are
 \texttt{data/w33\_e6\_degree2\_selected270\_bridge.json},
@@ -138,8 +173,10 @@ Executable certificates are
 \texttt{data/w33\_det\_phase\_scalar\_no\_go.json},
 \texttt{data/w33\_doubled\_central\_character\_logical\_qubit.json}, and
 \texttt{data/w33\_det\_phase\_doubled\_logical\_reconciliation.json}.
-The even-order gauge witness is frozen in the companion Holotrade repository
-as \texttt{data/w33\_z6ii\_sm\_shape\_builder.json}.
+The even-order witnesses are frozen in the companion Holotrade repository as
+\texttt{data/w33\_z6ii\_sm\_shape\_builder.json},
+\texttt{data/w33\_z6ii\_t1\_local\_e6\_shell.json}, and
+\texttt{data/w33\_z6ii\_t1\_two\_local\_27s.json}.
 
 All statements above are finite group, representation, lattice, or
 gauge-embedding statements.  No claim of a completed MSSM spectrum, observed
