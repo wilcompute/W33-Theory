@@ -1,0 +1,24 @@
+{
+  "schema": "w33.photonic_transducer_1458.v1",
+  "status": "PASS_MODE_COMPILER_ENGINEERING_TARGETS_NOT_MEASURED",
+  "encoding": {
+    "logical_rail": "r=+1,-1 -> polarization H/V or path A/B",
+    "internal_index": "m=sum_j n_j 3^j, n_j in {0,1,2}",
+    "internal_modes": 729,
+    "total_modes": 1458,
+    "recommended_physical_basis": "frequency-bin or time-bin comb for m; polarization/path for r"
+  },
+  "planning_requirements": {
+    "single_outer_or_center_Favg_target": 0.99,
+    "center_symmetric_phase_error_max_rad": 0.12278275875764666,
+    "single_internal_qutrit_phase_Favg_target": 0.99,
+    "internal_phase_error_max_rad": 0.14177715737016178,
+    "aggregate_wrong_mode_leakage_target": 0.01,
+    "equal_leakage_per_wrong_mode_power_max": 1.3736263736263736e-05,
+    "equal_leakage_per_wrong_mode_db": -48.621313793130376,
+    "throughput_target_after_nonlinear_stack": 0.5,
+    "17_native_stack_insertion_loss_max_db_each": 0.17707646803763602,
+    "2_invariant_stack_insertion_loss_max_db_each": 1.505149978319906
+  },
+  "physical_boundary": "Mode count and unitary normal forms are exact. Source brightness, detector efficiency, comb bandwidth, actual insertion loss, phase noise and crosstalk remain unmeasured for a W33 implementation."
+}
