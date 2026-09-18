@@ -1,0 +1,26 @@
+{
+  "schema":"w33.allq_cz_orbit_adjoint_weld.v1",
+  "status":"PASS",
+  "headline":"For prime q, two-qudit CZ_q has fundamental multiplicities m0=2q-1 and ma=q-1; adjoint sl(q^2) grades (q+1)(q^2-1) and q(q^2-1); W(3,q) point orbits 1^(q+1) q^(q(q+1)); and nonzero-Pauli-vector orbits 1^(q^2-1) q^(q(q^2-1)). Hence the nontrivial projective orbit count is k=q(q+1), while the nontrivial vector orbit count equals every charged adjoint-grade dimension and |SL(2,q)|.",
+  "theorem":{
+    "fundamental_phase_multiplicities":"m_0=2q-1; m_a=q-1 for a!=0",
+    "centralizer":"S(U(2q-1) x U(q-1)^(q-1))",
+    "neutral_adjoint_dimension":"(q+1)(q^2-1)",
+    "charged_adjoint_dimension":"q(q^2-1)=|SL(2,q)|",
+    "W3q_projective_cycle_profile":"1^(q+1) q^(q(q+1))",
+    "fixed_projective_geometry":"one totally isotropic line PG(1,q)",
+    "nontrivial_projective_cycle_count":"q(q+1)=k",
+    "nonzero_vector_cycle_profile":"1^(q^2-1) q^(q(q^2-1))",
+    "nontrivial_vector_cycle_count":"q(q^2-1)=|SL(2,q)|"
+  },
+  "q3_specialization":{
+    "fundamental_spectrum":[5,2,2],
+    "centralizer":"S(U(5) x U(2) x U(2))",
+    "sl9_grading":[32,24,24],
+    "W33_point_cycles":{"1":4,"3":12},
+    "nonzero_Pauli_vector_cycles":{"1":8,"3":24},
+    "SL2_3_order":24
+  },
+  "controls_q":[2,3,5,7],
+  "scope":"Exact finite theorem for prime q; no Standard-Model interpretation is asserted away from q=3."
+}
