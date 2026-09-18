@@ -1,0 +1,19 @@
+{
+  "schema": "w33.native_sector_rail_intertwiner.v1",
+  "status": "PASS_ALGEBRAIC_INTERTWINER",
+  "map": "J|r=+1,n>=|0>rail|n>; J|r=-1,n>=|1>rail|n>",
+  "dimension": 1458,
+  "generator_normal_form": {
+    "X_j": "I_rail tensor X_j",
+    "Z_j": "|0><0| tensor Z_j + |1><1| tensor Z_j^-1",
+    "center": "diag(omega,omega^-1) tensor I_729",
+    "outer": "X_rail tensor I_729"
+  },
+  "optical_compiler": {
+    "outer": "deterministic rail or polarization swap",
+    "center": "relative +/-2pi/3 phase between rails",
+    "Z_j": "rail-conditioned sign of the internal qutrit phase",
+    "X_j": "same internal cyclic shift on both rails"
+  },
+  "physical_interface_obligation": "Construct a coherent loading/readout isometry from native V1,V2 states into the two rails. This certificate proves the target normal form, not a material transducer."
+}
