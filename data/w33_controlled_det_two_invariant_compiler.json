@@ -1,0 +1,20 @@
+{
+  "schema": "w33.controlled_det_two_invariant_compiler.v1",
+  "status": "PASS_TWO_PRIMITIVE_RICH_LIBRARY",
+  "identity": "det(X)=2*((tr X^2)^2 + tr X^4) mod 3 for X in sp4(F3)",
+  "exhaustive_controller_states": 59049,
+  "all_states_verified": true,
+  "compiler": {
+    "primitive_1": "P_q2sq: exponent (tr X^2)^2",
+    "primitive_2": "P_q4: exponent tr X^4",
+    "formula": "U_det = P_q2sq^2 * P_q4^2",
+    "commuting": true,
+    "primitive_count": 2
+  },
+  "comparison": {
+    "native_reduced_monomial_optimum": 17,
+    "rich_invariant_library": 2,
+    "compression_factor": "17/2=8.5 in primitive count"
+  },
+  "physical_boundary": "No present Holonet certificate implements direct q2^2 or tr(X^4) phase Hamiltonians."
+}
