@@ -1,0 +1,50 @@
+{
+  "schema": "w33.det_phase_doubled_logical_reconciliation.v1",
+  "status": "PASS_WITH_COUPLING_BOUNDARY",
+  "single_sector": {
+    "space": "V_r, dim 729",
+    "commutant": "End_H(V_r)=C I",
+    "determinant_phase": "omega^(r det X) I",
+    "meaning": "global phase only",
+    "parent": "data/w33_det_phase_scalar_no_go.json"
+  },
+  "doubled_sector": {
+    "space": "V_1 direct-sum V_2, dim 1458",
+    "commutant": "End_H(V_1 direct-sum V_2)=C direct-sum C because V_1,V_2 are inequivalent multiplicity-one irreps",
+    "logical_factor": "C^2 central-character label",
+    "center": "z=diag(omega,omega^-1)",
+    "outer": "X_L swaps r=1 and r=2",
+    "parent": "data/w33_doubled_central_character_logical_qubit.json"
+  },
+  "determinant_action": {
+    "formula": "D_X = diag(omega^detX, omega^-detX) tensor I_729 = z^detX tensor I_729",
+    "census": [
+      {"det_mod3":0,"logical_action":"I","scalar_on_logical_factor":true,"acts_on_internal_729":"identity"},
+      {"det_mod3":1,"logical_action":"z^1","scalar_on_logical_factor":false,"acts_on_internal_729":"identity"},
+      {"det_mod3":2,"logical_action":"z^2","scalar_on_logical_factor":false,"acts_on_internal_729":"identity"}
+    ],
+    "nontrivial_relative_phase_for_det_nonzero": true,
+    "new_gate_generator": false,
+    "reason": "D_X belongs to the already certified logical center C3=<z>"
+  },
+  "outer_relation": {
+    "identity": "X_L D_X X_L = D_X^-1",
+    "nonzero_det_group": "<D_X,X_L> = C3:C2 = S3",
+    "interpretation": "same exact S3 closure as the prior outer-phase certificate, now located on the logical central-character factor rather than the internal six-qutrit register"
+  },
+  "missing_intertwiner": {
+    "desired_controlled_operation": "sum_X |X><X| tensor z^(det X)",
+    "status": "not constructed",
+    "why_it_matters": "without coherent controller dependence, det(X) supplies no new dynamics beyond the pre-existing center gate",
+    "alternative_escape": "operator-valued noncentral coupling X -> sum_u c_u(X) W_u or a noncentral VOA/OPE descendant"
+  },
+  "superselection_boundary": "If r=1 and r=2 are strict superselection sectors, their relative phase and X_L coherence are not operational and the logical-qubit reading fails physically.",
+  "consequence": "The quartic determinant is retained as a nonlinear controller invariant and possible conditional logical-phase selector, but is removed as a standalone internal magic-gate claim.",
+  "checks": {
+    "parents_loaded": true,
+    "D_equals_z_power": true,
+    "outer_inverts_D": true,
+    "det_nonzero_non_scalar_on_logical_factor": true,
+    "internal_729_action_trivial": true
+  }
+}
