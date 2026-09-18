@@ -1,0 +1,8 @@
+{
+  "schema":"w33.laplacian_spectral_echo.v1",
+  "status":"PASS_EXACT_ENGINEERED_SPECTRAL_PRIMITIVE",
+  "laplacian_spectrum":{"0":1,"10":24,"16":15},
+  "half_echo":{"dimensionless_time_gt":"pi/2","sector_phases":{"lambda0":1,"lambda10":-1,"lambda16":1},"operator":"R10=I-2P10=I-L(16I-L)/30=(A^2-8A-18I)/30","flipped_dimension":24},
+  "full_revival":{"dimensionless_time_gt":"pi","operator":"I_40"},
+  "physics_boundary":"Requires an engineered Hamiltonian proportional to the W33 Laplacian; no vacuum-propagation claim is made."
+}
