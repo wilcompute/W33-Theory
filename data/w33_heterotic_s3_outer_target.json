@@ -1,0 +1,16 @@
+{
+  "schema": "w33.heterotic_s3_outer_target.v1",
+  "status": "PASS_EXACT_EXTENSION_LAW_MATCH",
+  "source": "Sebastian J.H. Konopka, JHEP 07 (2013) 023, Sec.6",
+  "heterotic_point_group": {
+    "presentation": "S3=<tau,sigma | tau^2=sigma^3=(tau sigma)^2=e>",
+    "inversion": "tau sigma tau^-1=sigma^-1"
+  },
+  "W33": {
+    "presentation_fragment": "<s,z | s^2=z^3=1, s z s^-1=z^-1>",
+    "map_of_extension_law": {"tau":"s","sigma":"z"},
+    "generated_subgroup": "S3"
+  },
+  "bridge_status": "The abstract semidirect extension law matches exactly, unlike cyclic Z6-II.",
+  "representation_boundary": "sigma is a geometric point-group generator whereas z is the Heisenberg center phase. No representation/gauge-spectrum intertwiner is yet constructed."
+}
