@@ -1,0 +1,17 @@
+{
+  "schema": "w33.det_single_window_hamiltonian.v1",
+  "status": "PASS_EXACT_ANALOG_SYNTHESIS__MICROSCOPIC_COUPLING_OPEN",
+  "observable": "A(X)=((tr X^2)^2+tr X^4) mod3",
+  "hamiltonian": "H_det=-(4*pi*hbar/(3T))*A(X) tensor Z_L",
+  "evolution": "exp(-i H_det T/hbar)=U_det",
+  "resource_comparison": {
+    "native_monomial_phases": 17,
+    "sequential_invariant_phases": 2,
+    "simultaneous_analog_windows": 1
+  },
+  "planning": {
+    "max_fractional_pulse_area_error_for_0.1rad": 0.01193662073189215,
+    "percent": 1.1936620731892151
+  },
+  "physics_boundary": "A microscopic interaction or ancilla-mediated effective Hamiltonian proportional to A(X) tensor Z_L remains to be constructed."
+}
