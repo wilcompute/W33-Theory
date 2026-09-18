@@ -1,0 +1,22 @@
+{
+  "schema": "w33.heterotic_s3_defining_irrep_intertwiner.v1",
+  "status": "PASS_EXACT_S3_MODULE_ISOMORPHISM",
+  "source": "Konopka JHEP 07 (2013) 023 Eq.(6.3), Table 1-2",
+  "normal_form": {
+    "P^-1 sigma P": "diag(omega,omega^-1)",
+    "P^-1 tau P": "[[0,1],[1,0]]"
+  },
+  "W33_identification": {
+    "sigma": "logical center z",
+    "tau": "outer logical swap X_L",
+    "Z3_character_plus": "r=1 rail",
+    "Z3_character_minus": "r=2 rail"
+  },
+  "character_match": {
+    "e": 2,
+    "transposition": 0,
+    "three_cycle": -1
+  },
+  "conclusion": "The heterotic S3 defining representation and the W33 central-character logical doublet are isomorphic as complex S3-modules.",
+  "physical_boundary": "No microscopic identification of heterotic geometric sigma with the Heisenberg center z is claimed."
+}
