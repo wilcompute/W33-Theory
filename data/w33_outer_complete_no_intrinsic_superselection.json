@@ -1,0 +1,26 @@
+{
+  "schema": "w33.outer_complete_no_intrinsic_superselection.v1",
+  "status": "PASS_ALGEBRAIC_PHYSICAL_IMPLEMENTATION_OPEN",
+  "normal_subgroup": "H=3^(1+12)",
+  "extension": "G=H:C2 using the multiplier-minus-one outer involution",
+  "H_irreps": {
+    "V1": {"dimension":729,"center":"omega"},
+    "V2": {"dimension":729,"center":"omega^-1"},
+    "inequivalent": true,
+    "outer_relation": "V1^s isomorphic to V2"
+  },
+  "clifford_mackey_step": "H is normal of index 2; V1 is irreducible and inequivalent to its only outer conjugate V2, so Ind_H^G(V1) is irreducible.",
+  "induced_representation": {
+    "dimension": 1458,
+    "restriction_to_H": "V1 direct-sum V2",
+    "identified_with_doubled_carrier": true
+  },
+  "projectors": {
+    "P1": "projector onto r=1",
+    "P2": "projector onto r=2",
+    "outer_action": "s P1 s^-1=P2",
+    "central_in_outer_complete_algebra": false
+  },
+  "superselection_conclusion": "There is no intrinsic r=1 versus r=2 superselection sector for the outer-complete representation algebra; the two labels are components of one irreducible G-module.",
+  "physical_boundary": "If the outer operation is only a formal symmetry and available observables/dynamics commute with z, then P1,P2 remain operational superselection projectors. Physical coherence is equivalent to implementing at least one allowed operation in the outer coset."
+}
