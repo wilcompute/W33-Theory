@@ -1,0 +1,15 @@
+{
+  "schema": "w33.controlled_det_17term_compiler.v1",
+  "status": "PASS_EXACT_COMPILER_PHYSICAL_PRIMITIVE_OPEN",
+  "controller_matrix": "[[2x4,2x8,x0,x1],[2x5,2x9,x1,x2],[x3,x6,x4,x5],[x6,x7,x8,x9]] mod3",
+  "nonzero_monomials": 17,
+  "all_59049_controller_points_verified": true,
+  "gate_factorization": "U_det = product over 17 commuting primitives P_m(c), P_m(c)|x,r>=omega^(r c m(x))|x,r>",
+  "resource_upper_bound": {
+    "quartic_or_lower_phase_primitives": 17,
+    "ancilla_for_truth_table": 0,
+    "commuting_layers_if_parallel_hardware_supports_all_monomials": 1
+  },
+  "classical_controller_fast_path": "If X is measured/classical, compute det(X) digitally and apply z^det(X); this does not realize coherent non-Clifford controller dynamics.",
+  "single_photon_boundary": "The present deterministic time-frequency SUM compiler does not by itself provide quartic monomial phases. A fully single-photon deterministic 17-term implementation remains open."
+}
