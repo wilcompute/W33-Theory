@@ -1,0 +1,37 @@
+{
+  "schema":"w33.heterotic_flagship_cz_clifford_bridge.v1",
+  "status":"PASS",
+  "headline":"The heterotic qutrit gauge register migrates from E6 to A8=SU9: the complete Pauli firewall excludes dim(E6)=78 from any three-qutrit Pauli-stable simple algebra, while sl9 (dim 80) is exactly the W33 two-qutrit Pauli algebra. In the actual W33-class Standard-Model flagship, the order-three Wilson line has 5+2+2 SU9 spectrum and is projectively conjugate to qutrit CZ_3, whose W33 action is 1^4 3^12 with one fixed isotropic line.",
+  "parallel_inputs":{
+    "holotrade_complete_E6_no_go":"1cde1f14aa63efa599cb50e07aae935573ad3718",
+    "holotrade_flagship_CZ_certificate":"8357f0ebc4230ad47430aac272863013db422786",
+    "w33_A8_pauli_support":"data/w33_e8_a8_pauli_support_bridge.json",
+    "w33_SUM_fixed_geometry":"data/PART_BT2757_QUTRIT_CX_W33_LAGRANGIAN_UNIPOTENT_results.json"
+  },
+  "negative_branch":{
+    "E6_dimension":78,
+    "achievable_connected_Pauli_component_sizes":[8,24,72,80,216,240,648,720,728],
+    "three_qutrit_E6_action":"excluded, including nonmonomial/projective actions preserving the cubic up to scale"
+  },
+  "positive_branch":{
+    "native_gauge_algebra":"sl9 = A8 = local SU9",
+    "dimension":80,
+    "register":"two qutrits",
+    "flagship_model":"SM_20260917_3",
+    "wilson_line_projective_class":"CZ_3",
+    "fundamental_multiplicities":[5,2,2],
+    "sl9_Z3_grading":[32,24,24],
+    "neutral_centralizer":"S(U(5) x U(2) x U(2))",
+    "charged_grade_plus":"10 + 4 + 10 = 24",
+    "charged_grade_minus":"10 + 4 + 10 = 24",
+    "W33_point_cycles":{"fixed":4,"three_cycles":12},
+    "fixed_geometry":"one isotropic W33 line",
+    "Clifford_relation":"CZ = F_target^{-1} SUM F_target"
+  },
+  "revised_729_reading":{
+    "exact":"C^27_fixed tensor C^27_E6 has dimension 729 and the stored F3^6 basis is a valid carrier-level coordinate system",
+    "physical_qutrits_certified":"three geometric/fixed-point flavour qutrits; separately, the W33 A8 gauge algebra is a native two-qutrit operator algebra",
+    "not_certified":"a physical six-qutrit tensor factorization with three gauge-side qutrits on the E6 27"
+  },
+  "scope":"Projective CZ is a conjugacy-class statement; no preferred simultaneous heterotic/Pauli basis is fixed, and the five top couplings are not identified with the five CZ phase-zero basis states."
+}
