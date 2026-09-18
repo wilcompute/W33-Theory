@@ -1,0 +1,9 @@
+{
+  "schema":"w33.heterotic_twisted_sector_dimension_firewall.v1",
+  "status":"PASS_LABEL_BRIDGE__FULL_MODULE_IDENTIFICATION_NO_GO_WITH_FIXED_POINTS_ALONE",
+  "W33":{"Heisenberg":"3^(1+12)","d":6,"Schrodinger_irrep_dimension":729,"doubled_dimension":1458},
+  "ordinary_factorized_T6_Z3_fixed_point_flavour":{"complex_Z3_planes_max":3,"shared_center_Heisenberg":"3^(1+6)","faithful_irrep_dimension_max":27,"doubled_theta_theta2_dimension_max":54},
+  "dimension_obstruction":{"single_sector_ratio":27,"missing_ternary_degrees_of_freedom":3,"missing_canonical_pairs":3},
+  "surviving_exact_bridge":{"object":"two-dimensional sector/central-character label only","order3_action":"diag(omega,omega^-1)","inversion":"sector swap","module":"defining complex S3 doublet"},
+  "needed_for_full_bridge":"Find three additional ternary canonical pairs in gauge/Narain momentum-winding/oscillator structure and prove a common extraspecial 3^(1+12) action."
+}
