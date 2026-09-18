@@ -1,0 +1,12 @@
+{
+  "schema":"w33.s3_commutator_ramsey_witness.v1",
+  "status":"PASS_EXACT_INTERFEROMETRIC_SIGNATURE",
+  "sequence":"K=X_L z X_L^-1 z^-1",
+  "exact_result":"K=z",
+  "input":"|+>=(|r=1>+|r=2>)/sqrt(2)",
+  "return_amplitude":"-1/2",
+  "return_probability":0.25,
+  "commuting_null_hypothesis_return_probability":1.0,
+  "contrast":0.75,
+  "boundary":"Assumes the coherent native-sector-to-rail interface exists."
+}
