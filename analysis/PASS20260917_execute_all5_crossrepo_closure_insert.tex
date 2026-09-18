@@ -1,0 +1,147 @@
+\subsection{Execute-all-five closure: the $270$ carrier, doubled determinant phase, and the even-order heterotic branch}
+\label{sec:20260917-execute-all5-crossrepo-closure}
+
+The four nontrivial involution degrees of \(W(E_6)\) now admit an objectwise
+dictionary in native \(W(3,3)\) language.  The formerly missing degree-two
+case is no longer an order coincidence.  Starting from the selected
+\(135_6\!-\!270_3\) geometry, the intrinsic \([135,16,30]_2\) minimum shell
+gives the \(36\) double-six carrier.  Each selected three-point line determines
+the twelve double-sixes meeting it in two singular points.  Independently,
+each syzygetic pair of double-sixes determines the twelve double-sixes
+nonadjacent to both endpoints in the \(\operatorname{srg}(36,15,6,6)\).
+The two collections of \(270\) twelve-subsets are exactly equal.  Hence
+\[
+ \boxed{\;270_{\rm selected\ lines}
+   \;\cong\;270_{\rm syzygetic\ pairs}
+   \;\cong\;270_{\deg 2\ {\rm involutions}}\;}
+\]
+as \(PSp(4,3)\)-sets, with stabilizer order \(25920/270=96\).
+
+Composing this bridge with the already certified double-six/spread and
+tritangent/protected-carrier intertwiners closes the complete ladder
+\[
+\begin{array}{c|c|c}
+\text{\(W(E_6)\) involution degree} & \text{cubic-surface carrier} &
+\text{\(W33\) carrier}\\ \hline
+1 & 36\ \text{double-sixes} & 36\ \text{spreads}\\
+2 & 270\ \text{syzygetic double-six pairs} &
+270\ \text{spread-overlap-4 pairs / selected lines}\\
+3 & 540\ \text{disjoint tritangent--double-six flags} &
+540\ \text{unselected tritangent--spread flags}\\
+4 & 45\ \text{tritangents} &
+45\ \text{protected / center-quad carriers}.
+\end{array}
+\]
+Thus the \(1620=270\cdot6=45\cdot36\) apartment/flag scale is now tied to the
+full involution ladder through explicit equivariant maps rather than through
+cardinality alone.
+
+The quartic determinant branch also acquires a sharp representation-theoretic
+boundary.  On one irreducible \(729\)-dimensional Schrödinger sector
+\(V_r\) of \(H=3^{1+12}\), Schur's lemma gives
+\[
+ \operatorname{End}_{H}(V_r)=\mathbf C I.
+\]
+Consequently the bare candidate
+\[
+ \omega^{\,r\det X} I
+\]
+is only a global phase and is not an internal six-qutrit magic gate.  A
+noncentral operator-valued coupling is required to evade this single-sector
+no-go.
+
+On the outer-complete doubled carrier \(V_1\oplus V_2\), however,
+\[
+ \operatorname{End}_{H}(V_1\oplus V_2)\cong\mathbf C\oplus\mathbf C,
+\]
+and the same scalar invariant has a different exact meaning.  With
+\[
+ z=\operatorname{diag}(\omega,\omega^{-1}),\qquad
+ X_L=\begin{pmatrix}0&1\\1&0\end{pmatrix},
+\]
+the determinant-controlled phase is
+\[
+ D_X=\operatorname{diag}(\omega^{\det X},\omega^{-\det X})
+      \otimes I_{729}
+     =z^{\det X}\otimes I_{729}.
+\]
+For \(\det X\ne0\) this is a nontrivial \emph{relative} logical phase on the
+central-character two-level factor, while it remains the identity on the
+internal \(729\)-state degree of freedom.  It is not a new generator:
+\(D_X\in\langle z\rangle\cong C_3\).  The outer swap obeys
+\[
+ X_L D_X X_L=D_X^{-1},
+\]
+so the nonzero-determinant sector again closes as \(C_3{:}C_2\cong S_3\).
+The genuinely open intertwiner is the coherent controller operation
+\[
+ \sum_X |X\rangle\!\langle X|\otimes z^{\det X},
+\]
+or an equivalent noncentral Weyl/VOA descendant.  If the two central
+characters are superselected, even this logical interpretation is not
+operational.
+
+The doubled carrier itself therefore has an exact logical-qubit structure
+conditional on coherent access to both sectors:
+\[
+ Z_L={z-z^{-1}\over i\sqrt3},\qquad X_L=\text{outer sector swap},
+\]
+with \(X_LZ_L=-Z_LX_L\).  The symmetry polynomial
+\[
+ P_{\rm code}={2I-z-z^{-1}\over3}
+\]
+vanishes on a center-trivial \(r=0\) sector and equals one on \(r=1,2\), giving
+a genuine leakage check without measuring the logical \(r=1\) versus \(r=2\)
+information.  The certified \(S_3\) control remains finite; a separately
+available logical basis-changing gate is still required for dense one-qubit
+control.
+
+Finally, the companion Holotrade branch now contains the first honest
+even-order gauge embedding replacing the old order-three software boundary.
+For the standard \(Z_6\)-II twist
+\[
+ v_6=(1/6,1/3,-1/2),
+\]
+the explicit first-\(E_8\) data
+\[
+ V_6=(1/6,1/3,-1/2,0,0,0,0,0),
+\]
+\[
+ W_2=(-1,1/2,0,-1,-1,-1/2,-1/2,-1/2),
+\]
+\[
+ W_3=(-2/3,-2/3,2/3,0,2/3,-1/3,-1/3,0)
+\]
+have exact lattice orders \(6,2,3\) and satisfy all six Abelian modular
+congruences.  Exact \(E_8\)-root enumeration gives
+\[
+ E_6 \longrightarrow A_4+A_1 \longrightarrow A_2+A_1
+\]
+along the \(W_3\) then \(W_2\) route.  The final \(A_2+A_1\) is contained
+inside the \(A_4\cong SU(5)\) parent, and the canonical Cartan direction
+\[
+ Y={1\over12}(-1,-1,-1,5,-7,3,3,-5)
+\]
+satisfies
+\[
+ Y^2={5\over6},\qquad \boxed{k_Y=2Y^2={5\over3}}.
+\]
+On every \(SU(5)\) root the \(W_2\) character equals the character of
+\((3/5)Y\), with phases \(0\) and \(1/2\).  This closes the
+\emph{gauge-embedding} version of the even-order escape.  It does not yet
+compute the full \(Z_6\)-II massless spectrum, net chirality, hypercharge
+anomaly, exotic decoupling, flatness or Yukawas.
+
+Executable certificates are
+\texttt{data/w33\_e6\_degree2\_selected270\_bridge.json},
+\texttt{data/w33\_e6\_involution\_full\_w33\_dictionary.json},
+\texttt{data/w33\_det\_phase\_scalar\_no\_go.json},
+\texttt{data/w33\_doubled\_central\_character\_logical\_qubit.json}, and
+\texttt{data/w33\_det\_phase\_doubled\_logical\_reconciliation.json}.
+The even-order gauge witness is frozen in the companion Holotrade repository
+as \texttt{data/w33\_z6ii\_sm\_shape\_builder.json}.
+
+All statements above are finite group, representation, lattice, or
+gauge-embedding statements.  No claim of a completed MSSM spectrum, observed
+particle parameters, continuum unification, or experimentally realized
+logical sector is made.
