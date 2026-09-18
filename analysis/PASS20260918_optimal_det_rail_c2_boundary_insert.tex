@@ -1,0 +1,91 @@
+\subsection{Optimal determinant compiler, exact rail intertwiner, and the heterotic extension boundary}
+\label{sec:20260918-optimal-det-rail-c2-boundary}
+
+Three previously open finite-control questions now have exact answers.
+
+First, the seventeen-term determinant compiler is optimal in its native
+ancilla-free monomial-phase library.  Polynomial functions
+\[
+\mathbb F_3^{10}\longrightarrow\mathbb F_3
+\]
+have unique reduced representatives modulo
+\[
+x_i^3-x_i,\qquad i=0,\ldots,9,
+\]
+with each exponent in \(\{0,1,2\}\).  The reduced determinant polynomial has
+exactly seventeen nonzero coefficients.  Since one native primitive contributes
+one reduced monomial coefficient to the phase exponent, every circuit in this
+fixed commuting library needs at least seventeen nontrivial primitives.  The
+existing compiler meets the bound:
+\[
+\boxed{N_{\rm native}^{\rm ancilla-free}(U_{\det})=17.}
+\]
+Ancillas, nonmonomial analog Hamiltonians, measurement/feedforward and a
+different basis/library are explicitly outside this optimum.
+
+Second, the native doubled carrier has an exact generator-level rail
+intertwiner.  Choose computational bases \(|n\rangle\), \(n\in\mathbb F_3^6\),
+for \(V_1,V_2\) so that
+\[
+\rho_1(X_j)=X_j,\quad \rho_1(Z_j)=Z_j,\qquad
+\rho_2(X_j)=X_j,\quad \rho_2(Z_j)=Z_j^{-1}.
+\]
+The basis map
+\[
+J|r=+1,n\rangle=|0\rangle_{\rm rail}|n\rangle,\qquad
+J|r=-1,n\rangle=|1\rangle_{\rm rail}|n\rangle
+\]
+gives
+\[
+X_j\mapsto I_{\rm rail}\otimes X_j,
+\]
+\[
+Z_j\mapsto |0\rangle\!\langle0|\otimes Z_j
+          +|1\rangle\!\langle1|\otimes Z_j^{-1},
+\]
+\[
+z\mapsto {\rm diag}(\omega,\omega^{-1})\otimes I_{729},\qquad
+s\mapsto X_{\rm rail}\otimes I_{729}.
+\]
+Thus the algebraic native-sector-to-rail intertwiner is no longer missing.
+The laboratory obligation is specifically a coherent loading/readout isometry
+implementing this normal form.
+
+Third, the tempting identification of the W33 outer \(C_2\) with the current
+heterotic \(Z_6\)-II even-order factor is false.  The cyclic point group is
+\[
+C_6=\langle\theta\rangle\cong C_3\times C_2,
+\]
+so
+\[
+\theta^3\theta^2\theta^{-3}=\theta^2.
+\]
+Its \(C_2\) acts trivially on its \(C_3\).  The W33 outer involution instead
+satisfies
+\[
+s z s^{-1}=z^{-1},
+\]
+and therefore
+\[
+\langle z,s\rangle\cong C_3{:}C_2\cong S_3.
+\]
+The two extensions correspond to the trivial and nontrivial homomorphisms
+\(C_2\to{\rm Aut}(C_3)\) and are not equivariantly isomorphic.  A genuine
+heterotic analogue of the W33 inversion would require a non-Abelian
+\(S_3\)/dihedral-type space-group or flavor extension.
+
+The companion \(Z_6\)-II spectrum audit also corrected the earlier
+\(SU(3)^3=-2\) quarantine sentinel.  Restoring the published
+\(D_{\gamma=+1,-1}=(1,2)\) multiplicities and Table-VII \(T_3\) vector right
+movers gives
+\[
+\boxed{A_{SU(3)^3}=0}.
+\]
+Hypercharge-related visible anomalies remain nonzero in the current ledger,
+so the heterotic witness remains quarantined and is not promoted to an MSSM
+compactification.
+
+Executable certificates:
+\texttt{data/w33\_controlled\_det\_17term\_optimality.json},
+\texttt{data/w33\_native\_sector\_rail\_intertwiner.json}, and
+\texttt{data/w33\_z6ii\_c2\_extension\_no\_go.json}.
