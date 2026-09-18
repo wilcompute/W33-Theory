@@ -1,0 +1,9 @@
+{
+  "schema":"w33.cz_zero_phase_su5_hypercharge.v1",
+  "status":"PASS",
+  "headline":"For qutrit CZ_3, the zero-phase eigenspace is the five-state set xy=0 in F3^2, while the two charged eigenspaces have dimension two. Therefore its SU(9) centralizer is S(U(5)xU(2)xU(2)). Since the recorded heterotic flagship Wilson line is projectively SU(9)-conjugate to CZ_3 and has neutral A4+A1+A1, its SU(5) GUT factor is exactly the unitary factor on this five-dimensional zero-phase block. Standard SU(5) hypercharge on a 3+2 split has tr(Y^2)=5/6 and kY=5/3.",
+  "CZ3":{"zero_phase_basis":[[0,0],[0,1],[0,2],[1,0],[2,0]],"multiplicities":[5,2,2],"zero_phase_equation":"xy=0 over F3"},
+  "centralizer":{"SU9":"S(U(5) x U(2) x U(2))","su9_dimension":32,"semisimple_type":"A4 + A1 + A1","GUT_factor":"SU(5) on the zero-phase eigenspace"},
+  "hypercharge":{"inside_zero_phase_SU5":["-1/3","-1/3","-1/3","1/2","1/2"],"trace_Y2":"5/6","level_kY":"5/3"},
+  "scope":"Conjugacy-class theorem; no preferred heterotic-root-to-computational-basis matrix or five-coupling/five-Hall-mode identification is claimed."
+}
