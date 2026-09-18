@@ -1,0 +1,72 @@
+\subsection{Seventeen-term determinant compiler, photonic outer rail, and the corrected heterotic frontier}
+\label{sec:20260918-det17-outer-rail-z6-correction}
+
+The controlled determinant gate now has an exact sparse compiler. In the
+certified ten-coordinate basis of \(\mathfrak{sp}_4(\mathbb F_3)\),
+\[
+X=
+\begin{pmatrix}
+2x_4&2x_8&x_0&x_1\\
+2x_5&2x_9&x_1&x_2\\
+x_3&x_6&x_4&x_5\\
+x_6&x_7&x_8&x_9
+\end{pmatrix}.
+\]
+Direct expansion over \(\mathbb F_3\) contains exactly \(17\) nonzero quartic
+monomials. Exhaustive evaluation on all \(3^{10}=59049\) controller states
+verifies the identity pointwise. Hence
+\[
+ U_{\det}
+ =\sum_X |X\rangle\!\langle X|\otimes z^{\det X}
+ =\prod_{a=1}^{17}P_{m_a}(c_a),
+\]
+where the diagonal primitives commute and
+\[
+ P_m(c)|x,r\rangle=\omega^{r\,c\,m(x)}|x,r\rangle.
+\]
+Thus the nonlinear hardware target is a seventeen-primitive quartic phase
+compiler rather than a \(59049\)-entry truth table. If the controller is
+measured classically one may compute \(\det X\) digitally and apply
+\(z^{\det X}\), but that fast path does not implement coherent non-Clifford
+controller dynamics.
+
+The outer logical operation also admits a concrete photonic encoding. Choose
+two coherent rails for the two central characters,
+\[
+ r=1\leftrightarrow H\ {\rm(or\ path\ A)},\qquad
+ r=2\leftrightarrow V\ {\rm(or\ path\ B)},
+\]
+and program the \(r=2\) rail with the conjugate qutrit phase convention
+\(Z\mapsto Z^{-1}\). Then the certified outer involution is the rail swap,
+\[
+ X_L=
+ \begin{pmatrix}0&1\\1&0\end{pmatrix},
+ \qquad
+ X_L\,\operatorname{diag}(\omega,\omega^{-1})\,X_L
+ =\operatorname{diag}(\omega^{-1},\omega).
+\]
+At the encoding layer this is implementable by a polarization swap or path
+cross-connect. Once coherent access to both rails is available, an ordinary
+two-mode mixer plus a relative phase gives arbitrary logical \(SU(2)\), not
+only the finite \(\langle z,X_L\rangle\cong S_3\) subgroup. The unresolved
+physical step is the coherent isometry from the native
+\(V_1\oplus V_2\) carrier into those laboratory rails; representation theory
+does not construct that interface.
+
+The companion heterotic track also changed materially during this pass. The
+full \(T_1\) B.3--B.5 oscillator ledger retains the two local \(E_6\) \(27\)s
+but reveals additional states at the other fixed points. Consequently the
+earlier shorthand that the model had two families plus an untwisted ten and
+only one missing \(\bar5\) is withdrawn as a global claim. A first all-sector
+\(Z_6\)-II engine now covers \(U,T_1/T_5,T_2/T_4,T_3\), but its anomaly
+sentinel currently returns \(A_{SU(3)^3}=-2\). The engine is therefore
+quarantined rather than promoted to a physical spectrum. This is an evidence
+improvement: the remaining projection/chirality convention bug is visible and
+testable.
+
+Executable certificates are
+\texttt{data/w33\_controlled\_det\_17term\_compiler.json} and
+\texttt{data/w33\_outer\_logical\_photonic\_rail\_compiler.json}.
+The heterotic correction is frozen in the companion Holotrade repository as
+\texttt{data/w33\_z6ii\_t1\_full\_oscillator\_ledger.json} and
+\texttt{data/w33\_z6ii\_full\_spectrum\_engine\_v1.json}.
