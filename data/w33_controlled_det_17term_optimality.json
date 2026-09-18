@@ -1,0 +1,17 @@
+{
+  "schema": "w33.controlled_det_17term_optimality.v1",
+  "status": "PASS_LIBRARY_OPTIMUM",
+  "function_space": {
+    "domain": "F3^10",
+    "codomain": "F3",
+    "reduced_basis_size": 59049,
+    "basis": "monomials product_i x_i^e_i with e_i in {0,1,2}",
+    "uniqueness": "evaluation modulo x_i^3-x_i gives a unique reduced polynomial function"
+  },
+  "native_library": "one primitive P_m(c) contributes one nonzero reduced monomial coefficient to the phase exponent",
+  "determinant_support": 17,
+  "lower_bound": 17,
+  "achieved_by_parent_compiler": 17,
+  "conclusion": "17 is the exact minimum number of nontrivial primitives for ancilla-free circuits in the fixed native monomial-phase coordinate library.",
+  "not_covered": ["ancilla-assisted arithmetic","nonmonomial analog Hamiltonians","measurement/feedforward","arbitrary linear basis changes followed by a different hardware library","approximate synthesis"]
+}
