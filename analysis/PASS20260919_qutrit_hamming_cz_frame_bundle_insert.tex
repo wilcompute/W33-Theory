@@ -1,0 +1,74 @@
+\subsection{The 72-slot packet frame is the full qutrit Hamming frame of the \(CZ_3\) entangler}
+\label{sec:20260919-qutrit-hamming-cz-frame}
+
+The punctured-Hesse packet group admits a sharper interpretation at \(q=3\).
+The nine affine bins are the two-trit computational grid
+\[
+\mathbb F_3^2,
+\]
+whose Hamming graph \(H(2,3)\) joins basis labels differing in exactly one
+coordinate.  The packet-frame group is
+\[
+\mathbb F_3^2\rtimes D_8
+\cong AGL(1,3)\wr C_2
+\cong S_3\wr C_2
+=\operatorname{Aut}H(2,3),
+\]
+of order \(72\).  Thus the current \(9\times2\times4\) packet radix is the
+full local classical relabelling group of the two-qutrit computational basis.
+
+For
+\[
+CZ_3|x,y\rangle=\omega^{xy}|x,y\rangle,
+\]
+the zero-phase support is the five-state cross
+\[
+Z_0=\{(x,y):xy=0\}.
+\]
+Its stabiliser inside the 72-element local-frame group is exactly the linear
+monomial \(D_8\).  The orbit of \(Z_0\) consists of the nine translated crosses
+\[
+Z_{a,b}=\{(x,y):(x-a)(y-b)=0\},
+\]
+one centered on each affine Hesse bin.  Hence
+\[
+G_3/D_8\cong\mathbb F_3^2
+\]
+is literally the bundle of nine \(CZ\) zero-phase frames.
+
+The two retained infinity points of the punctured plane are
+\[
+[1:1:0],\qquad [1:-1:0].
+\]
+For a linear monomial frame change
+\[
+L=\operatorname{diag}(\alpha,\beta)
+\]
+with optional register swap, the \(CZ\) phase rescales by
+\[
+xy\longmapsto \chi(L)\,xy,\qquad \chi(L)=\alpha\beta.
+\]
+The infinity slope transforms by \(\beta/\alpha\) (up to inversion under the
+swap).  Because every nonzero element of \(\mathbb F_3\) is self-inverse,
+\[
+\frac{\beta}{\alpha}=\alpha\beta.
+\]
+Therefore the two infinity points swap if and only if
+\[
+CZ_3\longleftrightarrow CZ_3^{-1}.
+\]
+The existing runtime alphabet
+\[
+11=9+2
+\]
+is consequently equivariantly interpretable as nine affine \(CZ\)-frame
+centers plus the two nonzero \(CZ\) phase sectors.
+
+Both coincidences are \(q=3\)-specific among odd primes: \(AGL(1,3)=S_3\), so
+the affine packet group is the full Hamming automorphism group, and the ratio
+and product characters on \(\mathbb F_3^\times\) coincide.  The result is an
+exact finite control/frame theorem, not a claim that current hardware
+dynamically implements all 72 frame symmetries.
+
+Executable certificate:
+\texttt{data/w33\_qutrit\_hamming\_cz\_frame\_bundle.json}.
