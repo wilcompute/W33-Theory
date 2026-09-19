@@ -1,0 +1,75 @@
+{
+  "schema": "w33.pass3193_3204.month_audit_seven_front.source_summary.v2",
+  "status": "SOURCE_COMPLETE_EVIDENCE_PENDING",
+  "audit_window": {
+    "start": "2026-07-04",
+    "end": "2026-08-04",
+    "claim_correction_families": 12,
+    "open_pull_requests_in_evidence_debt_snapshot": 21
+  },
+  "pass3194_curvature_quotient": {
+    "hypotheses": 48826,
+    "collision_classes": 1436,
+    "untyped_initial_states": 457,
+    "untyped_recursive_states": 470,
+    "curvature_initial_states": 770,
+    "curvature_recursive_states": 876,
+    "additional_fixed_bits": 1,
+    "boundary": "Exact for the frozen noiseless future-action policy and none/flat/curved output label."
+  },
+  "pass3195_runtime_information": {
+    "information_census_scope": "universal five- and six-opcode designs",
+    "information_records": 194,
+    "runtime_records_total": 3,
+    "joined_census_runtime_records": 1,
+    "joined_census_runtime_names": ["fast6"],
+    "out_of_census_baseline_count": 2,
+    "out_of_census_baseline_names": ["current4", "low4"],
+    "pending_census_runtime_records": 193,
+    "status": "PARTIAL_RUNTIME_1_OF_194_PLUS_2_BASELINES",
+    "promotion_rule": "No global runtime-information optimum until all 194 five/six-opcode census records reach affine order 4199040.",
+    "boundary": "The two four-opcode baselines are exact comparison records but are not members of the 194-design census."
+  },
+  "pass3196_four_edit_epoch": {
+    "alphabet_size": 24,
+    "marker_length": 9,
+    "corrected_edits": 4,
+    "minimum_distance": 9,
+    "traces_per_phase": 536484991,
+    "phase_labelled_traces": 6437819892,
+    "clean_payload_symbols_after_marker": 0
+  },
+  "pass3197_proof_envelope": {
+    "required_fields": 12,
+    "positive_control_authorized": true,
+    "negative_controls": 3,
+    "sha256_engine_in_rtl": false,
+    "boundary": "RTL gates a supplied computed digest; SHA-256 computation remains upstream. No accepted M36 candidate is asserted."
+  },
+  "pass3198_concurrent_virtualization": {
+    "branching": 40,
+    "depth": 6,
+    "context_bits": 52,
+    "k64_minimum_live_contexts": 70,
+    "k64_minimum_live_bits": 3640,
+    "k1024_maximum_live_contexts": 5160
+  },
+  "pass3199_chromatic_curvature": {
+    "chromatic_relation_degree": 32,
+    "chromatic_relation_spectrum": {"32": 1, "2": 24, "-4": 20},
+    "route_S6_pair_orbital_degrees": [2, 2, 8, 8, 8, 16],
+    "degree32_route_orbital_unions": 3,
+    "matching_polynomial_identities": 0,
+    "direct_equivariant_bridge": false,
+    "boundary": "Falsifies only the direct natural-relation identification."
+  },
+  "pass3200_evidence_debt": {
+    "active_stack": [242, 243, 244],
+    "independent_current_front": [246],
+    "recent_merged_front": [245],
+    "older_overlapping_stack": [236, 239],
+    "merge_authority": "none"
+  },
+  "digital_boundary": "Python source, tests, RTL, testbench and workflow are committed. Icarus, Yosys, HX8K placement, generated JSON and PDFs are unobserved until the focused workflow completes.",
+  "physical_boundary": "No laboratory error rate, optical loss, timing, power, thermal, detector, coherence or fabrication claim is made."
+}
