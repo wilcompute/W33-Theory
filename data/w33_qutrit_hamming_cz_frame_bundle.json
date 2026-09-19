@@ -1,0 +1,10 @@
+{
+  "schema":"w33.qutrit_hamming_cz_frame_bundle.v1",
+  "status":"PASS_Q3_LOCAL_FRAME_PHASE_LOCK",
+  "headline":"The 72-slot punctured-Hesse packet group is Aut H(2,3)=S3 wr C2, the full local classical relabeling group of the 3x3 two-qutrit computational grid. Its D8 stabilizer fixes one five-state CZ zero-phase cross; the 9 cosets are exactly the 9 translated CZ crosses centered on the affine Hesse bins. The two punctured-plane infinity points transform by exactly the CZ inversion character, so the existing 11=9+2 runtime alphabet is equivariantly 9 CZ-frame centers plus the two nonzero CZ phase sectors.",
+  "group":{"packet_group":"F3^2 semidirect D8","isomorphism":"AGL(1,3) wr C2 = S3 wr C2 = Aut H(2,3)","order":72},
+  "CZ_frame":{"phase":"xy mod 3","zero_support":"five-state cross xy=0","cross_stabilizer":"D8","stabilizer_order":8,"translated_crosses":9,"exact_phase_preservers":4,"phase_inverters":4},
+  "punctured_plane":{"affine_orbit":9,"infinity_orbit":2,"equivariance":"the infinity pair swaps iff CZ_3 is sent to CZ_3^{-1}"},
+  "q3_speciality":["AGL(1,3)=S3","beta/alpha=alpha*beta for nonzero F3 scalars, so sideband and CZ inversion characters coincide"],
+  "boundary":"Exact finite control/frame semantics; no claim that current optical hardware dynamically implements the whole group."
+}
