@@ -1,19 +1,19 @@
 {
-  "schema":"w33.e8_cz_parity_c6_root_lift.v1",
-  "status":"PASS",
-  "headline":"The heterotic/Clifford CZ-parity C6 lifts exactly through the 240-root E8 Coxeter fibration. An order-six E8 root automorphism L preserves the full Gram matrix, commutes with the internal fiber rotation d, induces CZ*parity on the 80-state signed-Pauli quotient, and satisfies L^3=d^3=-I. Therefore C=L d^-1 has order three and induces pure CZ, while d induces parity; <d,C> is C6 x C3 of order 18.",
-  "lift":{
-    "orientation_preserving_solution":true,
-    "orientation_reversing_solution":false,
-    "full_240_root_Gram_preserved":true,
-    "commutes_with_internal_fiber_C6":true
-  },
+  "schema":"w33.e8_cz_parity_c6_root_lift.v2",
+  "status":"PASS_LABEL_LIFT__PHYSICAL_PARITY_FIREWALL",
+  "headline":"The oriented-Pauli LABEL permutation CZ*(-I) admits an exact 240-root E8 lift through the Coxeter fibration, preserving the full Gram matrix and yielding C6 x C3. This is not a physical lift of flagship theta^3 parity: physical parity is inner on su9 with fixed dimension 40, whereas the Coxeter half-turn is outer with fixed dimension 36.",
   "root_actions":{
-    "internal_d":{"order":6,"cycles":{"6":40},"quotient_action":"parity P"},
-    "lift_L":{"order":6,"cycles":{"2":3,"6":39},"quotient_action":"CZ*parity"},
-    "pure_CZ_C=L*d^-1":{"order":3,"cycles":{"1":12,"3":76},"quotient_action":"CZ"}
+    "internal_d":{"order":6,"cycles":{"6":40},"quotient_label_action":"v -> -v"},
+    "lift_L":{"order":6,"cycles":{"2":3,"6":39},"quotient_label_action":"CZ followed by v -> -v"},
+    "pure_CZ_label_lift_C=L*d^-1":{"order":3,"cycles":{"1":12,"3":76},"quotient_label_action":"CZ"}
   },
-  "shared_center":{"identity":"L^3=d^3=-I"},
+  "shared_center":{"identity":"L^3=d^3=global E8 root negation"},
   "generated_group":{"order":18,"isomorphism":"C6 x C3"},
-  "remaining_boundary":"The witness depends on the frozen Coxeter-fiber/base/switching gauge. Existence and group relations are exact; coordinate canonicity is not claimed."
+  "physical_parity_firewall":{
+    "source":"wilcompute/Holotrade commit e2390ded61d93030eea0cc3f21bd5863e3b0d49f",
+    "physical_theta3":"inner; fixed su5+su4+u1; dimension 40",
+    "coxeter_half_turn_d3":"outer on su9; fixed so9; dimension 36",
+    "conclusion":"40 != 36; label antipode is not physical parity"
+  },
+  "next_target":"Construct or rule out an E8/Chevalley realization of the inner 5+4 parity together with the commuting 5+2+2 order-three holonomy."
 }
