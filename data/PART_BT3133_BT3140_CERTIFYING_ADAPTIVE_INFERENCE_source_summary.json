@@ -1,0 +1,61 @@
+{
+  "schema": "w33.pass3133_3140.certifying_adaptive_inference.source_summary.v1",
+  "local_generator_status": "PASS",
+  "pass_3133": {
+    "hypotheses": 48826,
+    "base_rows": 23,
+    "signature_classes": 46284,
+    "unique_immediately": 44848,
+    "largest_collision_class": 3,
+    "batch_stream_max_abs_difference": 3.4416913763379853e-15,
+    "moderate_modal_examples": {
+      "no_fault_truth_probability": 0.9999901975626091,
+      "single_r_truth_probability": 0.06917328324620241,
+      "single_r_map_probability": 0.9286310858887437,
+      "adjacent_r_s_truth_probability": 0.1074234320105206,
+      "disjoint_r_s_truth_probability": 0.7682193611224274
+    },
+    "boundary": "exact for the explicit synthetic channel and prior; no laboratory likelihoods"
+  },
+  "pass_3134": {
+    "certifier_negative_control": "PASS_REJECTED",
+    "negative_control_generator_rank": 3,
+    "negative_control_projector_trace": 8.0,
+    "negative_control_max_single_projection_norm": 0.577350269189626,
+    "boundary": "candidate certifier; no rank-three search result claimed"
+  },
+  "pass_3136": {
+    "single_edit_scenarios": 576,
+    "relock_in_two_received_symbols": 565,
+    "relock_in_three_received_symbols": 11,
+    "worst_received_symbols_to_relock": 3,
+    "boundary": "previously locked phase, one edit only"
+  },
+  "pass_3137": {
+    "catalogue_points": 105,
+    "lower_convex_frontier_points": 11,
+    "boundary": "dimensionless explicit design model, not physical energy"
+  },
+  "pass_3138": {
+    "moderate_dobrushin": 0.9969072164948454,
+    "moderate_birkhoff": 0.9992044550517104,
+    "moderate_tv_horizon_0p01": 1487,
+    "moderate_tv_horizon_1e_6": 4461,
+    "boundary": "uniform worst-case prediction contraction for the stated positive kernel"
+  },
+  "pass_3139": {
+    "raw_states_per_guest": 1436,
+    "causal_states_per_guest": 470,
+    "fixed_bits_per_guest_before": 11,
+    "fixed_bits_per_guest_after": 9,
+    "saved_bits_for_16_guests": 32
+  },
+  "pass_3140": {
+    "current_collision_probability": 0.1388888888888889,
+    "minimum_computing_collision_probability": 0.05555555555555555,
+    "reduction": 0.08333333333333334,
+    "avoided_mean_collision_exposures_per_program": 1.18129875,
+    "equal_cost_break_even_extra_mean_instructions": 1.18129875
+  },
+  "evidence_boundary": "Python source was executed in an isolated local environment. Repository CI, RTL tools, manuscript integration and candidate certification remain separate gates."
+}

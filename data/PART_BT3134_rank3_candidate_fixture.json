@@ -1,0 +1,14 @@
+{
+  "schema": "w33.pass3134.rank3_candidate_fixture.v1",
+  "expected": "all_rejected",
+  "candidates": [
+    {
+      "name": "negative_control_Z0_Z1_Z2",
+      "generators": [
+        {"vector": [0,0,0,0,0,0,1,0,0,0,0,0], "sign": 1},
+        {"vector": [0,0,0,0,0,0,0,1,0,0,0,0], "sign": 1},
+        {"vector": [0,0,0,0,0,0,0,0,1,0,0,0], "sign": 1}
+      ]
+    }
+  ]
+}
