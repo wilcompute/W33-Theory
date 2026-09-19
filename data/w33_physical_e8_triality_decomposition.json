@@ -1,0 +1,14 @@
+{
+  "schema":"w33.physical_e8_triality_decomposition.v1",
+  "status":"PASS_TRIALITY_MATTER_SKELETON",
+  "neutral_algebra":"D4 + A3 + u1",
+  "decomposition":{
+    "(0,-)":"(8_A,6)",
+    "(1,+)":"(8_B,4) + (1,6)",
+    "(2,+)":"(8_B,bar4) + (1,6)",
+    "(1,-)":"(8_C,bar4) + (8_A,1)",
+    "(2,-)":"(8_C,4) + (8_A,1)"
+  },
+  "triality":"8_A,8_B,8_C are exactly three distinct D4 eight-weight minuscule orbits, hence {8v,8s,8c} up to triality-frame permutation.",
+  "boundary":"No Standard-Model particle assignment and no canonical vector/spinor naming is claimed."
+}
