@@ -9,6 +9,9 @@ on:
       - 'data/w33_cz_hashimoto_orbit_weld.json'
       - 'data/w33_frequency_bin_hashimoto_compiler.json'
       - 'tests/test_w33_punctured_hesse_packet_group.py'
+      - 'analysis/w33_qutrit_hamming_cross_incidence.py'
+      - 'data/w33_qutrit_hamming_cross_incidence.json'
+      - 'tests/test_w33_qutrit_hamming_cross_incidence.py'
       - 'analysis/PASS20260919_punctured_hesse_packet_group_insert.tex'
       - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
       - '.github/workflows/w33_punctured_hesse_packet_group.yml'
@@ -25,9 +28,10 @@ jobs:
       - name: Replay exact certificate
         run: |
           python analysis/w33_punctured_hesse_packet_group.py --write
-          git diff --exit-code -- data/w33_punctured_hesse_packet_group.json
+          python analysis/w33_qutrit_hamming_cross_incidence.py
+          git diff --exit-code -- data/w33_punctured_hesse_packet_group.json data/w33_qutrit_hamming_cross_incidence.json
       - name: Focused regression
-        run: python -m pytest -q tests/test_w33_punctured_hesse_packet_group.py
+        run: python -m pytest -q tests/test_w33_punctured_hesse_packet_group.py tests/test_w33_qutrit_hamming_cross_incidence.py
       - name: Manuscript reachability and whitespace audit
         run: |
           grep -Fq '\input{analysis/PASS20260919_punctured_hesse_packet_group_insert}' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
