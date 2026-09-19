@@ -1,0 +1,9 @@
+{
+  "schema":"w33.cz_parity_oriented_c6.v1",
+  "status":"PASS",
+  "headline":"The flagship-compatible pair (CZ_3, parity) generates C6 on the oriented two-qutrit Pauli/sl9 lift. Parity is central symplectic -I, so it disappears on projective W33 but acts nontrivially on the 80 oriented Pauli vectors. CZ*parity has vector cycle type 2^4 6^12 and exact adjoint C6 multiplicities 16,12,12,16,12,12, matching the Holotrade flagship joint-adjoint spectrum.",
+  "projective_W33":{"parity_cycles":{"1":40},"CZ_cycles":{"1":4,"3":12},"CZ_times_parity_cycles":{"1":4,"3":12}},
+  "oriented_80":{"parity_cycles":{"2":40},"CZ_cycles":{"1":8,"3":24},"CZ_times_parity_cycles":{"2":4,"6":12},"phase_product_on_every_cycle":"1","C6_eigenvalue_multiplicities":[16,12,12,16,12,12]},
+  "heterotic_import":{"source_commit":"1d03cbb4fb0cfeac7a0e6b455231f715db8f8ce1","adjoint_C6_multiplicities":[16,12,12,16,12,12],"exact_match":true},
+  "scope":"Exact finite representation fingerprint; canonical lattice-to-Pauli basis identification remains open."
+}
