@@ -6,6 +6,10 @@ on:
     branches: [master]
     paths:
       - '.github/workflows/w33_manuscript_page_audit.yml'
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - 'holonet_machine_blueprint.tex'
+      - 'analysis/**.tex'
 
 jobs:
   compile-current-manuscripts:
