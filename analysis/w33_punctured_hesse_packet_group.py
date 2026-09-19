@@ -247,12 +247,22 @@ def packet_group_72():
     assert orbit_sizes == [2, 9]
 
     # The affine 9-orbit and infinity 2-orbit are intrinsic.
+    def chart_rep(p):
+        # Present the two intrinsic orbits in the same chart gauge used by the
+        # compiler certificate: affine points have z=1, surviving infinity
+        # points have x=1.  Internally the action remains globally canonical.
+        if p[2] % q:
+            z = inv(p[2], q)
+            return tuple((z * x) % q for x in p)
+        x = inv(p[0], q)
+        return tuple((x * y) % q for y in p)
+
     orbit_types = sorted(
         [
             {
                 "size": len(o),
-                "z_values": sorted({p[2] for p in o}),
-                "points": [list(p) for p in o],
+                "z_values": sorted({chart_rep(p)[2] for p in o}),
+                "points": [list(p) for p in sorted(chart_rep(x) for x in o)],
             }
             for o in orbits
         ],
