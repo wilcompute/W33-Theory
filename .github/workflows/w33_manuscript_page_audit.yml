@@ -1,0 +1,38 @@
+name: W33 manuscript page audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - '.github/workflows/w33_manuscript_page_audit.yml'
+
+jobs:
+  compile-current-manuscripts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: WtfJoke/setup-tectonic@v3
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+      - name: Compile canonical manuscripts
+        run: |
+          set -euxo pipefail
+          mkdir -p evidence/current_manuscript_page_audit
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            tectonic --keep-logs "$source" 2>&1 | tee "evidence/current_manuscript_page_audit/${source%.tex}.log"
+            test -s "${source%.tex}.pdf"
+          done
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
+            > evidence/current_manuscript_page_audit/pdf_sha256.txt
+      - name: Upload current manuscript PDFs
+        uses: actions/upload-artifact@v4
+        with:
+          name: w33-current-manuscript-page-audit
+          path: |
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
+            evidence/current_manuscript_page_audit/**
+          retention-days: 7
