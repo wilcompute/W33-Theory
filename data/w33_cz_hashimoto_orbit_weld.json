@@ -1,0 +1,166 @@
+{
+  "boundary": "The displayed map is an exact coordinate/Darboux-gauge bijection after choosing the CZ-fixed Lagrangian and directed base edge. It is not claimed to be a natural global PSp(4,q)-equivariant intertwiner. The one-photon architecture interpretation is retained only at q=3.",
+  "checks": {
+    "all_control_checks_pass": true,
+    "q3_exact_11_eq_2_plus_9": true,
+    "q3_unique_cyclotomic_match_across_controls": true,
+    "q_controls": [
+      3,
+      5,
+      7,
+      11
+    ]
+  },
+  "controls": [
+    {
+      "q": 3,
+      "gq": {
+        "collinearity_degree_k": 12,
+        "contexts": 40,
+        "hashimoto_outdegree": 11
+      },
+      "cz_counts": {
+        "fixed_contexts": 7,
+        "intersecting_nonfixed_orbits": 2,
+        "nonfixed_orbits_total": 11,
+        "transverse_nonfixed_orbits": 9
+      },
+      "hashimoto_counts": {
+        "off_line": 9,
+        "same_line": 2,
+        "total": 11
+      },
+      "mapping_sha256": "a73abeaae07e5699774de1138168ce67e34825663318ec9b7ac343a8687221b3",
+      "cyclotomic": {
+        "Phi6": 7,
+        "Phi6_minus_fixed": 0,
+        "equal": true,
+        "factorization": "Phi6(q)-(2q+1)=q(q-3)",
+        "fixed_contexts_2q_plus_1": 7
+      },
+      "checks": {
+        "branch_counts_match": true,
+        "context_cycle_accounting": true,
+        "context_cycle_count_equals_hashimoto_outdegree": true,
+        "cyclotomic_gap_factorization": true,
+        "explicit_bijection_complete": true,
+        "gq_degree": true
+      }
+    },
+    {
+      "q": 5,
+      "gq": {
+        "collinearity_degree_k": 30,
+        "contexts": 156,
+        "hashimoto_outdegree": 29
+      },
+      "cz_counts": {
+        "fixed_contexts": 11,
+        "intersecting_nonfixed_orbits": 4,
+        "nonfixed_orbits_total": 29,
+        "transverse_nonfixed_orbits": 25
+      },
+      "hashimoto_counts": {
+        "off_line": 25,
+        "same_line": 4,
+        "total": 29
+      },
+      "mapping_sha256": "3149e66e3fea2bec1a925e4dbb00487feff3d5cc0f256b342def7a5d7afc3b84",
+      "cyclotomic": {
+        "Phi6": 21,
+        "Phi6_minus_fixed": 10,
+        "equal": false,
+        "factorization": "Phi6(q)-(2q+1)=q(q-3)",
+        "fixed_contexts_2q_plus_1": 11
+      },
+      "checks": {
+        "branch_counts_match": true,
+        "context_cycle_accounting": true,
+        "context_cycle_count_equals_hashimoto_outdegree": true,
+        "cyclotomic_gap_factorization": true,
+        "explicit_bijection_complete": true,
+        "gq_degree": true
+      }
+    },
+    {
+      "q": 7,
+      "gq": {
+        "collinearity_degree_k": 56,
+        "contexts": 400,
+        "hashimoto_outdegree": 55
+      },
+      "cz_counts": {
+        "fixed_contexts": 15,
+        "intersecting_nonfixed_orbits": 6,
+        "nonfixed_orbits_total": 55,
+        "transverse_nonfixed_orbits": 49
+      },
+      "hashimoto_counts": {
+        "off_line": 49,
+        "same_line": 6,
+        "total": 55
+      },
+      "mapping_sha256": "315be6427b5330e5f154403d677c2fe8c67e6f1dc5fff28582835caf4fc9d910",
+      "cyclotomic": {
+        "Phi6": 43,
+        "Phi6_minus_fixed": 28,
+        "equal": false,
+        "factorization": "Phi6(q)-(2q+1)=q(q-3)",
+        "fixed_contexts_2q_plus_1": 15
+      },
+      "checks": {
+        "branch_counts_match": true,
+        "context_cycle_accounting": true,
+        "context_cycle_count_equals_hashimoto_outdegree": true,
+        "cyclotomic_gap_factorization": true,
+        "explicit_bijection_complete": true,
+        "gq_degree": true
+      }
+    },
+    {
+      "q": 11,
+      "gq": {
+        "collinearity_degree_k": 132,
+        "contexts": 1464,
+        "hashimoto_outdegree": 131
+      },
+      "cz_counts": {
+        "fixed_contexts": 23,
+        "intersecting_nonfixed_orbits": 10,
+        "nonfixed_orbits_total": 131,
+        "transverse_nonfixed_orbits": 121
+      },
+      "hashimoto_counts": {
+        "off_line": 121,
+        "same_line": 10,
+        "total": 131
+      },
+      "mapping_sha256": "cb3653afb8cc44d386d79ed2556cebe241beac72af2852bc874b6f13ec536a4e",
+      "cyclotomic": {
+        "Phi6": 111,
+        "Phi6_minus_fixed": 88,
+        "equal": false,
+        "factorization": "Phi6(q)-(2q+1)=q(q-3)",
+        "fixed_contexts_2q_plus_1": 23
+      },
+      "checks": {
+        "branch_counts_match": true,
+        "context_cycle_accounting": true,
+        "context_cycle_count_equals_hashimoto_outdegree": true,
+        "cyclotomic_gap_factorization": true,
+        "explicit_bijection_complete": true,
+        "gq_degree": true
+      }
+    }
+  ],
+  "headline": "For every tested odd prime q, the non-fixed context orbits of the CZ shear split as (q-1)+q^2 and admit an explicit Darboux-gauge bijection to the (q-1)+q^2 local nonbacktracking turns from a directed W(3,q) collinearity edge. Hence the number of nontrivial CZ context orbits is exactly k-1, the Hashimoto outdegree. At q=3 this is 11=2+9, the existing triangle/open-turn routing split.",
+  "schema": "w33.cz_hashimoto_orbit_weld.v1",
+  "status": "PASS_GAUGE_FIXED_GATE_ROUTE_WELD",
+  "theorem": {
+    "count_identity": "q^2+q-1 = k-1 for k=q(q+1)",
+    "cz_nonfixed_orbit_set": "F_q^* disjoint_union F_q^2",
+    "explicit_gauge_map": "s -> [1,s,0,0]; (a,c) -> [a,c,1,0]",
+    "hashimoto_turn_set": "F_q^* disjoint_union F_q^2",
+    "q3_lock": "fixed CZ contexts = 2q+1 = Phi6(q) iff q=3 (positive q), because Phi6-(2q+1)=q(q-3)"
+  }
+}
