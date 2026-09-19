@@ -1,0 +1,37 @@
+\subsection{A two-punctured Hesse plane is the exact 11-bin gate--route alphabet}
+\label{sec:20260919-punctured-hesse-packet-group}
+
+The gauge-fixed CZ/context--Hashimoto weld admits a sharper projective description.
+For odd prime $q$, its common moving alphabet is
+\[
+\mathbb F_q^2\sqcup\mathbb F_q^*\cong PG(2,q)\setminus\{[1{:}0{:}0],[0{:}1{:}0]\}.
+\]
+The $q^2$ transverse CZ-context orbits are the affine points $[a{:}c{:}1]$, while the
+$q-1$ moving intersecting orbits are the surviving infinity points $[1{:}s{:}0]$, $s\ne0$.
+The two deleted infinity directions are exactly the two fixed intersection directions of CZ.
+Hence the alphabet has $q^2+q-1=k-1$ points, equal to the Hashimoto outdegree.
+Its retained lines comprise one of size $q-1$, $2q$ of size $q$, and $q(q-1)$ of size $q+1$.
+
+At $q=3$ this exactly explains the existing frequency plan: $11=9+2$.
+Bins $H_0,\ldots,H_8$ already carry $({\tt route\_trit},{\tt phase\_trit})\in\mathbb F_3^2$,
+so they are the nine affine Hesse points; the two Hashimoto sidebands are the two surviving
+points at infinity. Their gauge/chiral ordering is only an ABI gauge choice.
+
+The setwise $PGL(3,3)$ stabiliser of the deleted pair is
+\[\mathbb F_3^2\rtimes D_8,\qquad |\mathbb F_3^2\rtimes D_8|=9\cdot8=72.\]
+With $R=\left(\begin{smallmatrix}0&-1\\1&0\end{smallmatrix}\right)$ and
+$S=\left(\begin{smallmatrix}1&0\\0&-1\end{smallmatrix}\right)$,
+$R^4=S^2=1$ and $SRS=R^{-1}$.  The existing packet frame therefore admits the exact overlay
+\[
+72=9\ {\rm Hesse\ bins}\times2\ {\rm Hashimoto\ sectors}\times4\ {\rm probe\ slots},
+\qquad (h,b,r)\mapsto(t_h,S^bR^r).
+\]
+The faithful action on the eleven retained points has exactly two orbits, of sizes $9$ and $2$.
+Thus the compiler's $9+2$ split is an orbit decomposition, not merely a numerical match.
+
+\paragraph{Evidence boundary.}
+The finite projective geometry, the $72$-element stabiliser and the slot bijection are exact.
+The sideband ordering is conventional, and the group overlay is a control semantics rather than
+a claim that present optical hardware dynamically implements $PGL(3,3)$.
+Executable witness: \texttt{analysis/w33\_punctured\_hesse\_packet\_group.py};
+frozen certificate: \texttt{data/w33\_punctured\_hesse\_packet\_group.json}.
