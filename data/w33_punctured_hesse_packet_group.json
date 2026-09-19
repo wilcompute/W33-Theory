@@ -1,0 +1,560 @@
+{
+  "schema": "w33.punctured_hesse_packet_group.v1",
+  "status": "PASS_TWO_PUNCTURE_PACKET_GROUP",
+  "headline": "The common CZ-context/Hashimoto moving alphabet F_q^2 disjoint_union F_q^* is exactly PG(2,q) with two points removed from the line at infinity. At q=3 the 11-bin frequency plan is therefore a two-punctured Hesse projective plane: 9 affine Hesse bins plus 2 surviving infinity points. The setwise PGL(3,3) stabilizer of the deleted pair is F_3^2 semidirect D8 of order 72, exactly the packet-frame radix 9*2*4. Its action on the 11 retained points has the intrinsic orbit split 9+2.",
+  "theorem": {
+    "moving_alphabet": "PG(2,q) minus {[1:0:0],[0:1:0]} = F_q^2 disjoint_union F_q^*",
+    "size": "q^2+q-1 = k-1",
+    "line_profile": "one retained line of size q-1; 2q lines of size q; q(q-1) lines of size q+1",
+    "pair_stabilizer_order": "2 q^2 (q-1)^2",
+    "q3_pair_stabilizer": "F_3^2 semidirect D8, order 72",
+    "q3_point_orbits": "9 affine Hesse points + 2 surviving infinity points",
+    "packet_overlay": "(h,sector,probe) -> translation(route_trit,phase_trit) * S^sector R^probe"
+  },
+  "controls": [
+    {
+      "q": 3,
+      "size": 11,
+      "affine_count": 9,
+      "infinity_count": 2,
+      "line_size_histogram": {
+        "2": 1,
+        "3": 6,
+        "4": 6
+      }
+    },
+    {
+      "q": 5,
+      "size": 29,
+      "affine_count": 25,
+      "infinity_count": 4,
+      "line_size_histogram": {
+        "4": 1,
+        "5": 10,
+        "6": 20
+      }
+    },
+    {
+      "q": 7,
+      "size": 55,
+      "affine_count": 49,
+      "infinity_count": 6,
+      "line_size_histogram": {
+        "6": 1,
+        "7": 14,
+        "8": 42
+      }
+    },
+    {
+      "q": 11,
+      "size": 131,
+      "affine_count": 121,
+      "infinity_count": 10,
+      "line_size_histogram": {
+        "10": 1,
+        "11": 22,
+        "12": 110
+      }
+    }
+  ],
+  "q3_geometry": {
+    "deleted": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "affine": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        2,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        2,
+        1
+      ],
+      [
+        2,
+        0,
+        1
+      ],
+      [
+        2,
+        1,
+        1
+      ],
+      [
+        2,
+        2,
+        1
+      ]
+    ],
+    "infinity": [
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        2,
+        0
+      ]
+    ],
+    "size": 11,
+    "line_size_histogram": {
+      "2": 1,
+      "3": 6,
+      "4": 6
+    }
+  },
+  "q3_group": {
+    "order": 72,
+    "structure": "F_3^2 semidirect D_8",
+    "presentation": "D8=<R,S | R^4=S^2=1, SRS=R^-1>",
+    "R": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "S": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "point_orbits": [
+      {
+        "size": 2,
+        "z_values": [
+          0
+        ],
+        "points": [
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ]
+        ]
+      },
+      {
+        "size": 9,
+        "z_values": [
+          1
+        ],
+        "points": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ]
+        ]
+      }
+    ],
+    "orbit_sizes": [
+      2,
+      9
+    ],
+    "distinct_projective_permutations": 72,
+    "slot_overlay": {
+      "formula": "slot=8*h+4*sector+probe",
+      "first_four": [
+        {
+          "packet_slot": 0,
+          "hesse_bin": 0,
+          "route_trit": 0,
+          "phase_trit": 0,
+          "hashimoto_sector_id": 0,
+          "probe_slot": 0,
+          "translation": [
+            0,
+            0
+          ],
+          "linear_D8": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "packet_slot": 1,
+          "hesse_bin": 0,
+          "route_trit": 0,
+          "phase_trit": 0,
+          "hashimoto_sector_id": 0,
+          "probe_slot": 1,
+          "translation": [
+            0,
+            0
+          ],
+          "linear_D8": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "packet_slot": 2,
+          "hesse_bin": 0,
+          "route_trit": 0,
+          "phase_trit": 0,
+          "hashimoto_sector_id": 0,
+          "probe_slot": 2,
+          "translation": [
+            0,
+            0
+          ],
+          "linear_D8": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "packet_slot": 3,
+          "hesse_bin": 0,
+          "route_trit": 0,
+          "phase_trit": 0,
+          "hashimoto_sector_id": 0,
+          "probe_slot": 3,
+          "translation": [
+            0,
+            0
+          ],
+          "linear_D8": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              0
+            ]
+          ]
+        }
+      ],
+      "last_four": [
+        {
+          "packet_slot": 68,
+          "hesse_bin": 8,
+          "route_trit": 2,
+          "phase_trit": 2,
+          "hashimoto_sector_id": 1,
+          "probe_slot": 0,
+          "translation": [
+            2,
+            2
+          ],
+          "linear_D8": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "packet_slot": 69,
+          "hesse_bin": 8,
+          "route_trit": 2,
+          "phase_trit": 2,
+          "hashimoto_sector_id": 1,
+          "probe_slot": 1,
+          "translation": [
+            2,
+            2
+          ],
+          "linear_D8": [
+            [
+              0,
+              2
+            ],
+            [
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "packet_slot": 70,
+          "hesse_bin": 8,
+          "route_trit": 2,
+          "phase_trit": 2,
+          "hashimoto_sector_id": 1,
+          "probe_slot": 2,
+          "translation": [
+            2,
+            2
+          ],
+          "linear_D8": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "packet_slot": 71,
+          "hesse_bin": 8,
+          "route_trit": 2,
+          "phase_trit": 2,
+          "hashimoto_sector_id": 1,
+          "probe_slot": 3,
+          "translation": [
+            2,
+            2
+          ],
+          "linear_D8": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "frequency_compiler_bridge": {
+    "source_verified": true,
+    "total_bins": 11,
+    "hesse_bins": [
+      {
+        "label": "H0",
+        "bin_index": 0,
+        "affine_coordinate": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "label": "H1",
+        "bin_index": 1,
+        "affine_coordinate": [
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "label": "H2",
+        "bin_index": 2,
+        "affine_coordinate": [
+          0,
+          2,
+          1
+        ]
+      },
+      {
+        "label": "H3",
+        "bin_index": 3,
+        "affine_coordinate": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "label": "H4",
+        "bin_index": 4,
+        "affine_coordinate": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "label": "H5",
+        "bin_index": 5,
+        "affine_coordinate": [
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "label": "H6",
+        "bin_index": 6,
+        "affine_coordinate": [
+          2,
+          0,
+          1
+        ]
+      },
+      {
+        "label": "H7",
+        "bin_index": 7,
+        "affine_coordinate": [
+          2,
+          1,
+          1
+        ]
+      },
+      {
+        "label": "H8",
+        "bin_index": 8,
+        "affine_coordinate": [
+          2,
+          2,
+          1
+        ]
+      }
+    ],
+    "sidebands": [
+      {
+        "label": "S_gauge",
+        "sector": "gauge",
+        "projective_coordinate": [
+          1,
+          1,
+          0
+        ],
+        "assignment_scope": "ABI convention; may be swapped with the other infinity point"
+      },
+      {
+        "label": "S_chiral",
+        "sector": "chiral",
+        "projective_coordinate": [
+          1,
+          2,
+          0
+        ],
+        "assignment_scope": "ABI convention; may be swapped with the other infinity point"
+      }
+    ],
+    "packet_frame_factorization": "9*2*4=72",
+    "packet_frame_slots": 72,
+    "source_certificate": "data/w33_frequency_bin_hashimoto_compiler.json"
+  },
+  "cz_hashimoto_parent": {
+    "source_verified": true,
+    "moving_alphabet": "F_3^2 disjoint_union F_3^*",
+    "branch_counts": {
+      "affine": 9,
+      "infinity": 2,
+      "total": 11
+    },
+    "source_certificate": "data/w33_cz_hashimoto_orbit_weld.json"
+  },
+  "checks": {
+    "two_punctured_plane_size_is_k_minus_1": true,
+    "q3_is_9_plus_2": true,
+    "q3_incidence_profile_is_2_1__3_6__4_6": true,
+    "packet_group_order_is_72": true,
+    "packet_group_is_faithful_on_11_points": true,
+    "packet_group_orbits_are_9_and_2": true,
+    "frequency_bins_are_exactly_9_plus_2": true,
+    "packet_frame_radix_is_group_order": true,
+    "parent_weld_is_9_plus_2": true,
+    "q3_unique_positive_integer_frame_match": true
+  },
+  "boundary": "The finite projective geometry, stabilizer group and 72-slot bijection are exact. Assigning gauge/chiral to the two surviving infinity points is an ABI gauge choice and may be swapped. The group-native packet overlay is a new exact control semantics, not a claim that the present optical hardware physically implements PGL(3,3) dynamics."
+}
