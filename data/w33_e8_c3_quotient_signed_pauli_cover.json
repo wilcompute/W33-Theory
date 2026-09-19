@@ -1,0 +1,9 @@
+{
+  "schema":"w33.e8_c3_quotient_signed_pauli_cover.v1",
+  "status":"PASS",
+  "headline":"Quotienting each Pass-7164 E8 Coxeter C6 fiber by C3 gives 80 alternating root triples in a 240->80->40 tower. Their exact inner-product relations have valencies 1,24,54 and project respectively to antipode, W33 adjacency, and W33 nonadjacency. This is gauge-isomorphic to the fused antipodal orthogonality cover of the 80 nonzero two-qutrit Pauli vectors.",
+  "tower":{"E8_roots":240,"intermediate_objects":80,"base_W33_points":40,"quotients":"240 --/C3--> 80 --/C2--> 40"},
+  "relations":{"antipode":{"unordered_pairs":40,"valency":1},"commuting":{"unordered_pairs":960,"valency":24},"noncommuting":{"unordered_pairs":2160,"valency":54}},
+  "signed_Pauli_comparison":{"per_vector_relations":{"antipode":1,"other_commuting":24,"noncommuting_fused":54},"cover_isomorphism":"fiberwise over W33; 2^40 sign gauges","canonical_sign_section":false},
+  "boundary":"The fused 54-class is proved; an equivariant 27+27 symplectic-sign refinement remains open. Do not identify the internal E8 Coxeter C6 with the separate CZ-parity C6 without a future equivariant theorem."
+}
