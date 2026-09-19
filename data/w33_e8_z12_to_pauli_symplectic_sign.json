@@ -1,0 +1,8 @@
+{
+  "schema":"w33.e8_z12_to_pauli_symplectic_sign.v1",
+  "status":"PASS",
+  "headline":"The Pass-7168 E8 Z12 midpoint cocycle refines the 80-state antipodal cover to the full two-qutrit symplectic sign structure. The binary reduction eps_xy=(-1)^s for phi_xy=2s+1 is switching-covariant, and an explicit W33 base isomorphism plus switching gauge identifies it with sign(omega(v_x,v_y)) on all 540 nonedges. The two C3-orbit sheets map bijectively to all 80 nonzero F3^4 vectors, with degrees 24 commuting, 27 positive and 27 negative.",
+  "full_80_map":{"bijection_to_F3four_nonzero":true,"sheet_flip_is_vector_negation":true,"commuting_degree":24,"positive_symplectic_degree":27,"negative_symplectic_degree":27},
+  "switching_invariants":{"complement_triangles":3240,"triangle_product_plus":1620,"triangle_product_minus":1620},
+  "closure":{"resolves":"the open 27+27 sign refinement in data/w33_e8_c3_quotient_signed_pauli_cover.json","still_open":"whether the heterotic CZ-parity C6 action lifts to an automorphism of the full 240-root E8 Coxeter-fiber structure"}
+}
