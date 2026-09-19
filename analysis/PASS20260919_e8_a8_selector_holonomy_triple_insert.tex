@@ -1,0 +1,29 @@
+\subsection{The physical E8 lift closes only after the local $A_8$ selector is included}
+\label{sec:20260919-e8-a8-selector-triple}
+
+The physical Wilson/parity pair has an exact inner lift to all of $E_8$, but its common fixed algebra in the full exceptional algebra is larger than the local gauge algebra:
+\[
+\mathfrak g^{W_3,\theta^3}=D_4\oplus A_3\oplus\mathfrak u(1),\qquad \dim=44.
+\]
+The local $SU(9)$ chart is itself selected by an independent order-three inner automorphism $\rho$ with grading
+\[
+E_8=A_{8,0}\oplus\Lambda^3(\mathbf 9)_1\oplus\Lambda^6(\mathbf 9)_2.
+\]
+Among the 36 roots fixed by the physical pair, eight lie in $A_8$ and twenty-eight lie in the two exterior-power sectors, fourteen in each. Imposing $\rho$-neutrality therefore removes exactly those twenty-eight roots.
+
+The resulting triple fixed root system has component signatures $(6,2)$ and $(2,1)$, hence
+\[
+\mathfrak g^{\rho,W_3,\theta^3}=A_2\oplus A_1\oplus\mathfrak u(1)^5,
+\qquad \dim=16.
+\]
+This is exactly the corrected local joint centralizer of the $(3,2,1,1,1,1)$ fundamental spectrum. The fixed-algebra chain is
+\[
+\rho:A_8(80),\quad W_3:D_7{+}u_1(92),\quad \theta^3:D_8(120),
+\]
+\[
+W_3\cap\theta^3:D_4{+}A_3{+}u_1(44),\qquad
+\rho\cap W_3\cap\theta^3:A_2{+}A_1{+}u_1^5(16).
+\]
+Thus the apparent 44-versus-16 tension is not a contradiction: the $A_8$ selector is the missing projector from the full $E_8$ centralizer to the local orbifold gauge algebra.
+
+Executable witness: \texttt{analysis/w33\_e8\_a8\_selector\_holonomy\_triple\_intersection.py}; frozen certificate: \texttt{data/w33\_e8\_a8\_selector\_holonomy\_triple\_intersection.json}.
