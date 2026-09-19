@@ -1,0 +1,40 @@
+\subsection{Root-level closure of the \(CZ_3\)-parity lift inside \(E_8\)}
+\label{sec:20260918-e8-cz-parity-root-lift}
+
+The signed-Pauli bridge can now be lifted from the \(80\)-state quotient back to
+the complete \(240\)-root \(E_8\) Coxeter fibration. Let
+\[ d=c_{\mathrm{Cox}}^5 \]
+be the order-six rotation of each of the forty six-root fibers. Quotienting
+by \(\langle d^2\rangle\cong C_3\) gives the certified signed two-qutrit carrier.
+
+Transport the oriented-Pauli action of \(CZ_3P\), with \(P=-I\), through the
+explicit signed-Pauli isomorphism. If \(Q\) denotes the induced permutation of
+the forty fibers, seek
+\[ L:(x,k)\longmapsto (Qx,k+\delta_x)\pmod 6. \]
+The Pass-7164 phase-offset law reduces Gram preservation to
+\[ \delta_y-\delta_x=s_{Qx,Qy}-s_{xy}\pmod6. \]
+These equations have an orientation-preserving solution and no
+orientation-reversing solution. After one global fiber rotation the parity of
+\(\delta_x\) agrees with the signed-Pauli sheet action at every fiber.
+
+The resulting \(L\) preserves every \(E_8\) root inner product, commutes with
+\(d\), has order six and cycle profile \(2^3 6^{39}\), and induces
+\(CZ_3P\) on the \(80\)-state quotient. Moreover,
+\[ \boxed{L^3=d^3=-I}. \]
+Hence the two sixfold structures are distinct but share the same central antipode.
+
+Define \(C=Ld^{-1}\). Then \(C\) is an order-three \(E_8\) root automorphism,
+commuting with \(d\), with cycle profile \(1^{12}3^{76}\), and it induces
+pure \(CZ_3\) on the signed-Pauli quotient. Thus
+\[ \boxed{\langle d,C\rangle\cong C_6\times C_3}. \]
+The quotient dictionary is \(d\mapsto P\), \(C\mapsto CZ_3\),
+\(Cd\mapsto CZ_3P\).
+
+This closes the previous nonidentification boundary between the internal
+Coxeter-fiber \(C_6\) and the heterotic/Clifford \(C_6\): they are not the same
+generator, but they coexist inside one exact \(E_8\) root automorphism structure
+and share the central \(C_2\). Coordinate canonicity of the displayed witness is
+not claimed.
+
+Executable certificate:
+\texttt{data/w33\_e8\_cz\_parity\_c6\_root\_lift.json}.
