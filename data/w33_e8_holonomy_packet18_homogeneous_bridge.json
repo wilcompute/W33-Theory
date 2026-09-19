@@ -1,0 +1,87 @@
+{
+  "schema": "w33.e8_holonomy_packet18_homogeneous_bridge.v1",
+  "status": "PASS_TORSOR_BRIDGE__GROUP_IDENTIFICATION_KILLED",
+  "headline": "The 18 E8 holonomy characters form the abelian group C3^2 x C2, but the 18 runtime probe blocks are the homogeneous space (F3^2 semidirect D8)/C4, not an order-18 group. G contains no abelian subgroup of order18. The surviving exact bridge is T=F3^2-equivariant: both objects are two regular nine-point T-torsors after forgetting the holonomy group multiplication.",
+  "negative_result": {
+    "holonomy_character_group": "C3 x C3 x C2",
+    "packet_group": "F3^2 semidirect D8",
+    "unique_sylow3": "T=F3^2 because every 3-subgroup maps trivially to D8",
+    "centralizer_of_T_order": 9,
+    "centralizer_of_T": "T",
+    "abelian_order18_subgroup_exists": false,
+    "consequence": "no group-equivariant 18=18 identification inside the 72-element packet group"
+  },
+  "positive_bridge": {
+    "packet_18": "right cosets G/<R>, <R>=C4",
+    "coset_count": 18,
+    "coset_size": 4,
+    "C4_normal": false,
+    "translation_orbits": [
+      9,
+      9
+    ],
+    "interpretation": "two regular F3^2 torsors, matching the underlying translation-set type of C3^2 x C2 after b is treated as a sheet label",
+    "coordinate_bijection_candidate": "(rho,a,b) -> (hesse_bin=3*rho+a, hashimoto_sector=b), defined only after origin/sheet conventions"
+  },
+  "E8_joint_sector_dimensions": {
+    "0,0,0": 16,
+    "0,0,1": 16,
+    "0,1,0": 12,
+    "0,1,1": 12,
+    "0,2,0": 12,
+    "0,2,1": 12,
+    "1,0,0": 14,
+    "1,0,1": 16,
+    "1,1,0": 13,
+    "1,1,1": 14,
+    "1,2,0": 13,
+    "1,2,1": 14,
+    "2,0,0": 14,
+    "2,0,1": 16,
+    "2,1,0": 13,
+    "2,1,1": 14,
+    "2,2,0": 13,
+    "2,2,1": 14
+  },
+  "E8_holonomy_trace_fingerprint": {
+    "0,0,0": 248,
+    "0,0,1": -8,
+    "0,1,0": 14,
+    "0,1,1": -2,
+    "0,2,0": 14,
+    "0,2,1": -2,
+    "1,0,0": -4,
+    "1,0,1": 4,
+    "1,1,0": 5,
+    "1,1,1": 1,
+    "1,2,0": 5,
+    "1,2,1": 1,
+    "2,0,0": -4,
+    "2,0,1": 4,
+    "2,1,0": 5,
+    "2,1,1": 1,
+    "2,2,0": 5,
+    "2,2,1": 1
+  },
+  "trace_values": [
+    -8,
+    -4,
+    -2,
+    1,
+    4,
+    5,
+    14,
+    248
+  ],
+  "boundary": "Exact group/G-set and E8 character arithmetic. The T-equivariant bijection is a control/address bridge, not a physical identification of E8 root spaces with optical frequency bins; the full abelian holonomy group law is explicitly not present on packet18.",
+  "checks": {
+    "18_right_cosets": true,
+    "C4_not_normal": true,
+    "D8_faithful_on_T": true,
+    "centralizer_T_is_T": true,
+    "no_abelian_C3sq_x_C2_subgroup": true,
+    "two_regular_translation_orbits": true,
+    "E8_sector_sum248": true,
+    "all_holonomy_traces_integral": true
+  }
+}
