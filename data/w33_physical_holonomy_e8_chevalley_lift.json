@@ -1,0 +1,13 @@
+{
+  "schema":"w33.physical_holonomy_e8_chevalley_lift.v1",
+  "status":"PASS_PHYSICAL_INNER_CHEVALLEY_LIFT",
+  "headline":"The flagship commuting order-(3,2) holonomy pair has an exact physical inner lift to all of E8 through SU(9). The full 248-dimensional joint multiplicities are (0,+)=44,(0,-)=48,(1,+)=38,(1,-)=40,(2,+)=38,(2,-)=40. Fixed algebras: D7+u1 (92), D8 (120), and D4+A3+u1 (44) for the order-3, order-2, and order-6 elements respectively.",
+  "branching":"E8 -> SU9: 248 = 80 + 84 + 84bar = sl9 + Lambda^3(9) + Lambda^6(9)",
+  "physical_C6_eigenvalue_multiplicities":[44,40,38,48,38,40],
+  "fixed_algebras":{
+    "order3_W3":{"neutral_roots":84,"type":"D7 + u1","dimension":92},
+    "order2_theta3":{"neutral_roots":112,"type":"D8","dimension":120},
+    "order6_product":{"neutral_roots":36,"components":[[24,4],[12,3]],"type":"D4 + A3 + u1","dimension":44}
+  },
+  "resolution":"Physical parity is an inner torus/Chevalley automorphism, not a Coxeter root permutation; this resolves the 40-vs-36 firewall without identifying the two operations."
+}
