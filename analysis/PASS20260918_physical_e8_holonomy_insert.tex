@@ -1,0 +1,69 @@
+\subsection{Physical inner holonomies in \(E_8\): Chevalley centralizers, triality, and the mod-three charge law}
+\label{sec:20260918-physical-e8-holonomy}
+
+The physical flagship holonomies admit an exact lift to all of \(E_8\) in the
+correct category: as commuting inner torus automorphisms of the regular
+\(A_8\cong SU(9)\) subgroup, not as Weyl permutations of the root set.
+The classical branching is
+\[
+\mathfrak e_8=\mathfrak{sl}_9\oplus\Lambda^3\mathbf9\oplus\Lambda^6\mathbf9
+=80+84+\overline{84}.
+\]
+The exact fundamental joint multiplicities
+\[
+(0,+),(0,-),(1,+),(1,-),(2,+),(2,-)=3,2,1,1,1,1
+\]
+propagate to the full adjoint as
+\[
+\boxed{44,48,38,40,38,40}.
+\]
+Hence the product \(C_6\) eigenvalue multiplicities are
+\[\boxed{44,40,38,48,38,40}.\]
+
+Explicit reconstruction of the 240 roots in the \(A_8\) model gives
+\[
+\begin{aligned}
+\mathfrak e_8^{W_3}&\cong D_7\oplus\mathfrak u_1, &\dim&=92,\\
+\mathfrak e_8^{\theta^3}&\cong D_8, &\dim&=120,\\
+\mathfrak e_8^{W_3\theta^3}&\cong D_4\oplus A_3\oplus\mathfrak u_1, &\dim&=44.
+\end{aligned}
+\]
+The last line is the exact neutral algebra \(SO(8)\times SU(4)\times U(1)\).
+
+The non-neutral sectors exhibit the full Spin(8) triality triple.  Denoting the
+three eight-dimensional minuscule weight orbits by \(8_A,8_B,8_C\), which are
+\(8_v,8_s,8_c\) in some triality frame, one obtains
+\[
+\begin{aligned}
+(0,-)&=(8_A,6),\\
+(1,+)&=(8_B,4)\oplus(1,6),\\
+(2,+)&=(8_B,\bar4)\oplus(1,6),\\
+(1,-)&=(8_C,\bar4)\oplus(8_A,1),\\
+(2,-)&=(8_C,4)\oplus(8_A,1).
+\end{aligned}
+\]
+
+The residual Cartan generator can be chosen
+\[Q=(0,0,0,0,0,-1,-1,+1,+1),\]
+giving the complete branching
+\[
+\begin{aligned}
+248={}&(28,1)_0+(1,15)_0+(1,1)_0+(8_A,6)_0\\
+&+(8_B,4)_{-1}+(8_C,\bar4)_{-1}+(1,6)_{+2}+(8_A,1)_{+2}\\
+&+(8_B,\bar4)_{+1}+(8_C,4)_{+1}+(1,6)_{-2}+(8_A,1)_{-2}.
+\end{aligned}
+\]
+On every E8 root space the order-three Wilson character satisfies the exact
+continuous-to-discrete law
+\[\boxed{a\equiv-Q\pmod3}.\]
+
+This resolves the earlier parity firewall. The physical parity is an inner
+Chevalley/torus automorphism with a 120-dimensional \(D_8\) fixed algebra in
+all of \(E_8\), whereas the Coxeter-fiber antipode is a distinct Weyl/root
+permutation. No Standard-Model particle assignment or canonical naming of the
+three triality orbits is inferred.
+
+Executable certificates:
+\texttt{data/w33\_physical\_holonomy\_e8\_chevalley\_lift.json},
+\texttt{data/w33\_physical\_e8\_triality\_decomposition.json}, and
+\texttt{data/w33\_physical\_e8\_so8\_su4\_u1\_branching.json}.
