@@ -95,3 +95,31 @@ def test_control_plane_publication_anchor():
     assert "w33_architecture_control_plane_abi.py" in docs
     assert "w33_architecture_control_plane_abi.json" in docs
     assert "24&times;5&times;6&times;9&times;2&times;4 = 51840" in docs
+
+
+def test_packet_frame_is_exact_72_element_group():
+    data = run_abi()
+    group = data["packet_group_abi"]
+    checks = data["checks"]
+
+    assert group["order"] == 72
+    assert group["group"] == "F3^2 semidirect D8 ~= Aut H(2,3)"
+    assert group["products_exhaustively_checked"] == 72 * 72
+    assert group["inverses_checked"] == 72
+    assert checks["source_qutrit_hamming_frame_verified"] is True
+    assert checks["packet_frame_is_72_element_group"] is True
+    assert checks["packet_group_exhaustive_closure_5184"] is True
+    assert checks["packet_group_all_inverses"] is True
+
+
+def test_runtime_word_exposes_packet_group_coordinates():
+    data = run_abi()
+    for row in data["runtime_decode_samples"]:
+        h = row["hesse_bin"]
+        s = row["hashimoto_sector_id"]
+        p = row["probe_slot"]
+        assert row["packet_frame_tick"] == 8 * h + 4 * s + p
+        assert row["packet_group_translation_x"] == h // 3
+        assert row["packet_group_translation_y"] == h % 3
+        assert row["packet_group_d8_reflection"] == s
+        assert row["packet_group_d8_rotation"] == p
