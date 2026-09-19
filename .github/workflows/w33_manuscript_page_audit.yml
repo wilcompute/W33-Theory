@@ -20,6 +20,33 @@ jobs:
       - uses: WtfJoke/setup-tectonic@v3
         with:
           github-token: '${{ secrets.GITHUB_TOKEN }}'
+      - name: Install PDF text tools
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      - name: Preflight literal TeX inputs
+        run: |
+          python - <<'PY'
+          import pathlib,re,sys
+          roots=[pathlib.Path(x) for x in ('w33_paper.tex','photonic_holonet.tex','holonet_machine_blueprint.tex')]
+          seen=set(); missing=set(); stack=list(roots)
+          pat=re.compile(r'\\\\input\{([^}]+)\}')
+          while stack:
+              p=stack.pop()
+              if p in seen: continue
+              seen.add(p)
+              if not p.exists(): missing.add(str(p)); continue
+              txt=p.read_text(errors='replace')
+              for raw in pat.findall(txt):
+                  if '\\' in raw or '#' in raw: continue
+                  q=pathlib.Path(raw)
+                  if not q.suffix: q=q.with_suffix('.tex')
+                  if q.exists(): stack.append(q)
+                  else: missing.add(str(q))
+          print(f'checked {len(seen)} literal-input TeX files')
+          if missing:
+              print('MISSING LITERAL INPUTS:')
+              print('\n'.join(sorted(missing)))
+              sys.exit(1)
+          PY
       - name: Compile canonical manuscripts
         run: |
           set -euxo pipefail
@@ -30,6 +57,10 @@ jobs:
           done
           sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
             > evidence/current_manuscript_page_audit/pdf_sha256.txt
+          pdfinfo photonic_holonet.pdf > evidence/current_manuscript_page_audit/photonic_holonet_pdfinfo.txt
+          pdfinfo holonet_machine_blueprint.pdf > evidence/current_manuscript_page_audit/holonet_machine_blueprint_pdfinfo.txt
+          pdftotext -layout -f 194 -l 195 photonic_holonet.pdf evidence/current_manuscript_page_audit/photonic_holonet_pages_194_195.txt
+          pdftotext -layout -f 182 -l 230 holonet_machine_blueprint.pdf evidence/current_manuscript_page_audit/holonet_machine_blueprint_pages_182_230.txt
       - name: Upload current manuscript PDFs
         uses: actions/upload-artifact@v4
         with:
