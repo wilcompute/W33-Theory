@@ -26,6 +26,75 @@ OUT = ROOT / "data" / "w33_architecture_control_plane_abi.json"
 SECTOR_LABELS = ("gauge", "chiral")
 SIGN_LABELS = ("positive", "negative")
 
+Q = 3
+R2 = (0, 2, 1, 0)  # [[0,-1],[1,0]]
+S2 = (1, 0, 0, 2)  # [[1,0],[0,-1]]
+I2 = (1, 0, 0, 1)
+
+
+def mat2_mul(A: tuple[int, int, int, int], B: tuple[int, int, int, int]) -> tuple[int, int, int, int]:
+    return tuple(
+        sum(A[2 * i + k] * B[2 * k + j] for k in range(2)) % Q
+        for i in range(2) for j in range(2)
+    )
+
+
+def mat2_vec(A: tuple[int, int, int, int], v: tuple[int, int]) -> tuple[int, int]:
+    return (
+        (A[0] * v[0] + A[1] * v[1]) % Q,
+        (A[2] * v[0] + A[3] * v[1]) % Q,
+    )
+
+
+def mat2_pow(A: tuple[int, int, int, int], n: int) -> tuple[int, int, int, int]:
+    out = I2
+    for _ in range(n):
+        out = mat2_mul(out, A)
+    return out
+
+
+def d8_matrix(sector: int, probe_slot: int) -> tuple[int, int, int, int]:
+    return mat2_mul(mat2_pow(S2, sector), mat2_pow(R2, probe_slot))
+
+
+D8_BY_MATRIX = {
+    d8_matrix(sector, probe): (sector, probe)
+    for sector in range(2) for probe in range(4)
+}
+assert len(D8_BY_MATRIX) == 8
+
+
+def packet_group_element(hesse_bin: int, sector: int, probe_slot: int) -> tuple[tuple[int, int], tuple[int, int, int, int]]:
+    """Return (translation, D8 linear part) for one 72-tick packet-frame word."""
+    return ((hesse_bin // 3, hesse_bin % 3), d8_matrix(sector, probe_slot))
+
+
+def encode_packet_group_element(t: tuple[int, int], L: tuple[int, int, int, int]) -> tuple[int, int, int]:
+    sector, probe = D8_BY_MATRIX[L]
+    hesse = 3 * (t[0] % Q) + (t[1] % Q)
+    return hesse, sector, probe
+
+
+def packet_group_multiply(
+    a: tuple[int, int, int], b: tuple[int, int, int]
+) -> tuple[int, int, int]:
+    """Semidirect law (t1,L1)(t2,L2)=(t1+L1 t2,L1 L2)."""
+    t1, L1 = packet_group_element(*a)
+    t2, L2 = packet_group_element(*b)
+    u = mat2_vec(L1, t2)
+    t = ((t1[0] + u[0]) % Q, (t1[1] + u[1]) % Q)
+    return encode_packet_group_element(t, mat2_mul(L1, L2))
+
+
+def packet_group_inverse(a: tuple[int, int, int]) -> tuple[int, int, int]:
+    t, L = packet_group_element(*a)
+    Linv = next(M for M in D8_BY_MATRIX if mat2_mul(L, M) == I2 and mat2_mul(M, L) == I2)
+    u = mat2_vec(Linv, t)
+    tinv = ((-u[0]) % Q, (-u[1]) % Q)
+    return encode_packet_group_element(tinv, Linv)
+
+
+
 
 def load_json(relpath: str) -> dict[str, Any]:
     return json.loads((ROOT / relpath).read_text(encoding="utf-8"))
@@ -87,6 +156,11 @@ def decode_slot(slot: int, radix: dict[str, int]) -> dict[str, int | str]:
         "hesse_bin": hesse_bin,
         "hashimoto_sector_id": sector_id,
         "hashimoto_sector": SECTOR_LABELS[sector_id],
+        "packet_frame_tick": hesse_bin * sectors * slots_per_probe + sector_id * slots_per_probe + probe_slot,
+        "packet_group_translation_x": hesse_bin // 3,
+        "packet_group_translation_y": hesse_bin % 3,
+        "packet_group_d8_reflection": sector_id,
+        "packet_group_d8_rotation": probe_slot,
     }
 
 
@@ -119,6 +193,7 @@ def build_certificate() -> dict[str, Any]:
     fabric = load_json("data/w33_holonet_firmware_fabric_profile.json")
     compiler = load_json("data/w33_frequency_bin_hashimoto_compiler.json")
     lab = load_json("data/w33_frequency_bin_lab_packet.json")
+    packet_group_cert = load_json("data/w33_qutrit_hamming_cz_frame_bundle.json")
 
     runtime = bridge["runtime_surface"]
     selector = bridge["selector_e6_surface"]
@@ -236,11 +311,27 @@ def build_certificate() -> dict[str, Any]:
             and 0 <= int(word["probe_slot"]) < radix["probe_slots"]
         )
 
+    # Promote one 72-tick packet frame to the exact F3^2 semidirect D8 group.
+    group_words = [(h, s, p) for h in range(9) for s in range(2) for p in range(4)]
+    group_elements = {packet_group_element(*w) for w in group_words}
+    identity = (0, 0, 0)
+    closure_ok = True
+    inverse_ok = True
+    for a in group_words:
+        ai = packet_group_inverse(a)
+        inverse_ok = inverse_ok and packet_group_multiply(a, ai) == identity and packet_group_multiply(ai, a) == identity
+        for b in group_words:
+            closure_ok = closure_ok and packet_group_multiply(a, b) in group_words
+
     checks = {
         "source_selector_bridge_verified": bridge["verified"] is True,
         "source_firmware_profile_verified": fabric["verified"] is True,
         "source_frequency_compiler_verified": compiler["verified"] is True,
         "source_lab_packet_verified": lab["verified"] is True,
+        "source_qutrit_hamming_frame_verified": packet_group_cert["status"] == "PASS_Q3_LOCAL_FRAME_PHASE_LOCK",
+        "packet_frame_is_72_element_group": len(group_words) == len(group_elements) == packet_group_cert["group"]["order"] == 72,
+        "packet_group_exhaustive_closure_5184": closure_ok,
+        "packet_group_all_inverses": inverse_ok,
         "mixed_radix_product_is_supercycle": supercycle_slots
         == mirror["supercycle_slots"]
         == 51840,
@@ -333,9 +424,23 @@ def build_certificate() -> dict[str, Any]:
             "signed_sheet_count": signed_sheet_count,
             "selector_sheet_count": selector["sheet_count"],
             "hashimoto_sector_labels": list(SECTOR_LABELS),
+            "packet_frame_group": "F3^2 semidirect D8 ~= Aut H(2,3)",
+            "packet_frame_group_order": len(group_elements),
             "sign_labels": list(SIGN_LABELS),
         },
         "runtime_decode_samples": sample_words,
+        "packet_group_abi": {
+            "group": "F3^2 semidirect D8 ~= Aut H(2,3)",
+            "order": 72,
+            "frame_tick_formula": "tick = 8*hesse_bin + 4*hashimoto_sector_id + probe_slot",
+            "coordinate_formula": "(hesse,sector,probe) -> (t=(hesse//3,hesse%3), S^sector R^probe)",
+            "multiplication": "(t1,L1)(t2,L2)=(t1+L1*t2,L1*L2)",
+            "identity_word": [0,0,0],
+            "R": [[0,2],[1,0]],
+            "S": [[1,0],[0,2]],
+            "products_exhaustively_checked": len(group_words) * len(group_words),
+            "inverses_checked": len(group_words),
+        },
         "decoder_pseudocode": [
             "probe_id = runtime_slot // 4; probe_slot = runtime_slot % 4",
             "sector = probe_id % 2",
@@ -349,6 +454,8 @@ def build_certificate() -> dict[str, Any]:
             "data/w33_holonet_firmware_fabric_profile.json",
             "data/w33_frequency_bin_hashimoto_compiler.json",
             "data/w33_frequency_bin_lab_packet.json",
+            "data/w33_qutrit_hamming_cz_frame_bundle.json",
+            "data/w33_punctured_hesse_packet_group.json",
         ],
         "checks": checks,
         "claim_boundary": [
@@ -356,6 +463,7 @@ def build_certificate() -> dict[str, Any]:
             "The sheet ordering is a quotient control-plane ordering: five sheets per atlas and two signs per sheet.",
             "Physical bin spacing, phase visibility, loss, detector efficiency, and chip layout remain bench work.",
             "The decoder removes slot lookup tables; it does not replace route, fault, or calibration policy.",
+            "The 72-element packet-frame group is an exact control semantics; it does not claim the optical device dynamically implements every projective symmetry.",
         ],
     }
 
