@@ -12,6 +12,12 @@ on:
       - 'analysis/w33_qutrit_hamming_cross_incidence.py'
       - 'data/w33_qutrit_hamming_cross_incidence.json'
       - 'tests/test_w33_qutrit_hamming_cross_incidence.py'
+      - 'analysis/w33_packet_frame_symmetry_tomography.py'
+      - 'data/w33_packet_frame_symmetry_tomography.json'
+      - 'tests/test_w33_packet_frame_symmetry_tomography.py'
+      - 'analysis/w33_e8_holonomy_packet18_homogeneous_bridge.py'
+      - 'data/w33_e8_holonomy_packet18_homogeneous_bridge.json'
+      - 'tests/test_w33_e8_holonomy_packet18_homogeneous_bridge.py'
       - 'analysis/PASS20260919_punctured_hesse_packet_group_insert.tex'
       - 'analysis/W33_CURRENT_FRONTIER_MANIFEST.tex'
       - '.github/workflows/w33_punctured_hesse_packet_group.yml'
@@ -29,9 +35,11 @@ jobs:
         run: |
           python analysis/w33_punctured_hesse_packet_group.py --write
           python analysis/w33_qutrit_hamming_cross_incidence.py
-          git diff --exit-code -- data/w33_punctured_hesse_packet_group.json data/w33_qutrit_hamming_cross_incidence.json
+          python analysis/w33_packet_frame_symmetry_tomography.py
+          python analysis/w33_e8_holonomy_packet18_homogeneous_bridge.py
+          git diff --exit-code -- data/w33_punctured_hesse_packet_group.json data/w33_qutrit_hamming_cross_incidence.json data/w33_packet_frame_symmetry_tomography.json data/w33_e8_holonomy_packet18_homogeneous_bridge.json
       - name: Focused regression
-        run: python -m pytest -q tests/test_w33_punctured_hesse_packet_group.py tests/test_w33_qutrit_hamming_cross_incidence.py
+        run: python -m pytest -q tests/test_w33_punctured_hesse_packet_group.py tests/test_w33_qutrit_hamming_cross_incidence.py tests/test_w33_packet_frame_symmetry_tomography.py tests/test_w33_e8_holonomy_packet18_homogeneous_bridge.py
       - name: Manuscript reachability and whitespace audit
         run: |
           grep -Fq '\input{analysis/PASS20260919_punctured_hesse_packet_group_insert}' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
