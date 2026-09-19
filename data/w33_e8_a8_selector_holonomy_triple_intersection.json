@@ -1,0 +1,131 @@
+{
+  "schema": "w33.e8_a8_selector_holonomy_triple_intersection.v1",
+  "status": "PASS_A8_SELECTOR_TRIPLE_CENTRALIZER",
+  "headline": "Adjoining the order-3 A8 selector rho to the physical inner E8 Wilson/parity pair projects away the pair-neutral Lambda^3+Lambda^6 roots and reduces the full E8 pair centralizer D4+A3+u1 (dim44) to A2+A1+u1^5 (dim16), exactly the corrected local SU(9) joint centralizer. The three commuting inner automorphisms therefore give a single exact fixed-algebra chain rather than competing E8 and SU9 pictures.",
+  "grading": "E8 = A8_0 + Lambda3(9)_1 + Lambda6(9)_2 under rho",
+  "fixed_chain": {
+    "rho": {
+      "roots": 72,
+      "signature": [
+        [
+          72,
+          8
+        ]
+      ],
+      "algebra": "A8",
+      "dimension": 80
+    },
+    "W3": {
+      "roots": 84,
+      "signature": [
+        [
+          84,
+          7
+        ]
+      ],
+      "algebra": "D7+u1",
+      "dimension": 92
+    },
+    "theta3": {
+      "roots": 112,
+      "signature": [
+        [
+          112,
+          8
+        ]
+      ],
+      "algebra": "D8",
+      "dimension": 120
+    },
+    "W3_and_theta3": {
+      "roots": 36,
+      "signature": [
+        [
+          12,
+          3
+        ],
+        [
+          24,
+          4
+        ]
+      ],
+      "algebra": "D4+A3+u1",
+      "dimension": 44
+    },
+    "rho_and_W3": {
+      "roots": 24,
+      "signature": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          20,
+          4
+        ]
+      ],
+      "algebra": "A4+A1+A1+u1^2",
+      "dimension": 32
+    },
+    "rho_and_theta3": {
+      "roots": 32,
+      "signature": [
+        [
+          12,
+          3
+        ],
+        [
+          20,
+          4
+        ]
+      ],
+      "algebra": "A4+A3+u1",
+      "dimension": 40
+    },
+    "rho_W3_theta3": {
+      "roots": 8,
+      "signature": [
+        [
+          2,
+          1
+        ],
+        [
+          6,
+          2
+        ]
+      ],
+      "algebra": "A2+A1+u1^5",
+      "dimension": 16
+    }
+  },
+  "pair_neutral_sector_split_before_rho": {
+    "A8": 8,
+    "L3": 14,
+    "L6": 14
+  },
+  "triple_neutral_sector_split_after_rho": {
+    "A8": 8
+  },
+  "removed_by_A8_selector": {
+    "roots": 28,
+    "source": "14 Lambda3 + 14 Lambda6 pair-neutral roots"
+  },
+  "physics_reading": "The physical Wilson/parity pair has a larger 44-dimensional centralizer in all of E8; the local orbifold A8 selector is the missing projector that makes the local gauge algebra 16-dimensional. Hypercharge still selects one of the five surviving abelian Cartan directions; four further U(1)s require the usual heterotic mass/projection analysis.",
+  "checks": {
+    "E8_roots_240": true,
+    "rho_fixes_A8_80": true,
+    "physical_pair_fixes_44": true,
+    "rho_removes_28_pair_neutral_off_A8_roots": true,
+    "triple_fixed_A2_A1_u1_5_dim16": true,
+    "matches_corrected_local_centralizer": true
+  },
+  "parents": [
+    "data/w33_physical_holonomy_e8_chevalley_lift.json",
+    "data/w33_holonomy_joint_centralizer_scope.json"
+  ],
+  "boundary": "Exact E8 root/character arithmetic in the regular A8 model. Identifying rho with the recorded local orbifold selector uses the already-certified fact that the local fixed algebra is A8; this does not by itself determine the fate of the four extra U(1) gauge bosons."
+}
