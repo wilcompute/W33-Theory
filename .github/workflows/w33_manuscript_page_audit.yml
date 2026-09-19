@@ -9,7 +9,9 @@ on:
       - 'w33_paper.tex'
       - 'photonic_holonet.tex'
       - 'holonet_machine_blueprint.tex'
-      - 'analysis/**.tex'
+      - 'analysis/**/*.tex'
+      - 'analysis/*.tex'
+      - 'w33_paper_body.tex'
 
 jobs:
   compile-current-manuscripts:
