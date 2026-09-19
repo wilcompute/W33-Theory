@@ -1,0 +1,656 @@
+{
+  "schema": "w33.packet_frame_symmetry_tomography.v1",
+  "status": "PASS_72_FRAME_TOMOGRAPHY_TWIRL",
+  "headline": "The 72-slot packet is exactly nine translated CZ-cross population-tomography channels times eight D8 stabilizer settings. The nine cross sums reconstruct all nine computational-bin populations with B3^{-1}=A/2-J/5 and condition number 5. Within each center, four settings preserve CZ3 and four invert CZ3, giving a native symmetry/phase audit. A full Aut H(2,3) frame twirl has a three-dimensional invariant operator algebra and a 105-dimensional superoperator commutant, compressing a generic 6561-coefficient linear noise map by symmetry.",
+  "population_tomography": {
+    "measurements": 9,
+    "unknown_populations": 9,
+    "measurement": "y_center = sum of populations on the five-state translated CZ zero-phase cross",
+    "decoder": "p=(A(H(2,3))/2-J/5)y",
+    "singular_values": {
+      "1": 4,
+      "2": 4,
+      "5": 1
+    },
+    "condition_number_2": "5",
+    "white_measurement_noise_average_variance_gain": "14/25",
+    "scope": "computational-basis populations only; not full quantum-state tomography"
+  },
+  "runtime_frame": {
+    "factorization": "72=9*8",
+    "center_fibers": [
+      {
+        "hesse_bin": 0,
+        "center": [
+          0,
+          0
+        ],
+        "cross_size": 5,
+        "settings": [
+          {
+            "slot": 0,
+            "sector": 0,
+            "probe": 0,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          },
+          {
+            "slot": 1,
+            "sector": 0,
+            "probe": 1,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 2,
+            "sector": 0,
+            "probe": 2,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          },
+          {
+            "slot": 3,
+            "sector": 0,
+            "probe": 3,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 4,
+            "sector": 1,
+            "probe": 0,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 5,
+            "sector": 1,
+            "probe": 1,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          },
+          {
+            "slot": 6,
+            "sector": 1,
+            "probe": 2,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 7,
+            "sector": 1,
+            "probe": 3,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          }
+        ]
+      },
+      {
+        "hesse_bin": 1,
+        "center": [
+          0,
+          1
+        ],
+        "cross_size": 5,
+        "settings": [
+          {
+            "slot": 8,
+            "sector": 0,
+            "probe": 0,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          },
+          {
+            "slot": 9,
+            "sector": 0,
+            "probe": 1,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 10,
+            "sector": 0,
+            "probe": 2,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          },
+          {
+            "slot": 11,
+            "sector": 0,
+            "probe": 3,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 12,
+            "sector": 1,
+            "probe": 0,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 13,
+            "sector": 1,
+            "probe": 1,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          },
+          {
+            "slot": 14,
+            "sector": 1,
+            "probe": 2,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 15,
+            "sector": 1,
+            "probe": 3,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          }
+        ]
+      },
+      {
+        "hesse_bin": 2,
+        "center": [
+          0,
+          2
+        ],
+        "cross_size": 5,
+        "settings": [
+          {
+            "slot": 16,
+            "sector": 0,
+            "probe": 0,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          },
+          {
+            "slot": 17,
+            "sector": 0,
+            "probe": 1,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 18,
+            "sector": 0,
+            "probe": 2,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          },
+          {
+            "slot": 19,
+            "sector": 0,
+            "probe": 3,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 20,
+            "sector": 1,
+            "probe": 0,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 21,
+            "sector": 1,
+            "probe": 1,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          },
+          {
+            "slot": 22,
+            "sector": 1,
+            "probe": 2,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 23,
+            "sector": 1,
+            "probe": 3,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          }
+        ]
+      },
+      {
+        "hesse_bin": 3,
+        "center": [
+          1,
+          0
+        ],
+        "cross_size": 5,
+        "settings": [
+          {
+            "slot": 24,
+            "sector": 0,
+            "probe": 0,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          },
+          {
+            "slot": 25,
+            "sector": 0,
+            "probe": 1,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 26,
+            "sector": 0,
+            "probe": 2,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          },
+          {
+            "slot": 27,
+            "sector": 0,
+            "probe": 3,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 28,
+            "sector": 1,
+            "probe": 0,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 29,
+            "sector": 1,
+            "probe": 1,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          },
+          {
+            "slot": 30,
+            "sector": 1,
+            "probe": 2,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 31,
+            "sector": 1,
+            "probe": 3,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          }
+        ]
+      },
+      {
+        "hesse_bin": 4,
+        "center": [
+          1,
+          1
+        ],
+        "cross_size": 5,
+        "settings": [
+          {
+            "slot": 32,
+            "sector": 0,
+            "probe": 0,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          },
+          {
+            "slot": 33,
+            "sector": 0,
+            "probe": 1,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 34,
+            "sector": 0,
+            "probe": 2,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          },
+          {
+            "slot": 35,
+            "sector": 0,
+            "probe": 3,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 36,
+            "sector": 1,
+            "probe": 0,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 37,
+            "sector": 1,
+            "probe": 1,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          },
+          {
+            "slot": 38,
+            "sector": 1,
+            "probe": 2,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 39,
+            "sector": 1,
+            "probe": 3,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          }
+        ]
+      },
+      {
+        "hesse_bin": 5,
+        "center": [
+          1,
+          2
+        ],
+        "cross_size": 5,
+        "settings": [
+          {
+            "slot": 40,
+            "sector": 0,
+            "probe": 0,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          },
+          {
+            "slot": 41,
+            "sector": 0,
+            "probe": 1,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 42,
+            "sector": 0,
+            "probe": 2,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          },
+          {
+            "slot": 43,
+            "sector": 0,
+            "probe": 3,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 44,
+            "sector": 1,
+            "probe": 0,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 45,
+            "sector": 1,
+            "probe": 1,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          },
+          {
+            "slot": 46,
+            "sector": 1,
+            "probe": 2,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 47,
+            "sector": 1,
+            "probe": 3,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          }
+        ]
+      },
+      {
+        "hesse_bin": 6,
+        "center": [
+          2,
+          0
+        ],
+        "cross_size": 5,
+        "settings": [
+          {
+            "slot": 48,
+            "sector": 0,
+            "probe": 0,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          },
+          {
+            "slot": 49,
+            "sector": 0,
+            "probe": 1,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 50,
+            "sector": 0,
+            "probe": 2,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          },
+          {
+            "slot": 51,
+            "sector": 0,
+            "probe": 3,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 52,
+            "sector": 1,
+            "probe": 0,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 53,
+            "sector": 1,
+            "probe": 1,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          },
+          {
+            "slot": 54,
+            "sector": 1,
+            "probe": 2,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 55,
+            "sector": 1,
+            "probe": 3,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          }
+        ]
+      },
+      {
+        "hesse_bin": 7,
+        "center": [
+          2,
+          1
+        ],
+        "cross_size": 5,
+        "settings": [
+          {
+            "slot": 56,
+            "sector": 0,
+            "probe": 0,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          },
+          {
+            "slot": 57,
+            "sector": 0,
+            "probe": 1,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 58,
+            "sector": 0,
+            "probe": 2,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          },
+          {
+            "slot": 59,
+            "sector": 0,
+            "probe": 3,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 60,
+            "sector": 1,
+            "probe": 0,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 61,
+            "sector": 1,
+            "probe": 1,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          },
+          {
+            "slot": 62,
+            "sector": 1,
+            "probe": 2,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 63,
+            "sector": 1,
+            "probe": 3,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          }
+        ]
+      },
+      {
+        "hesse_bin": 8,
+        "center": [
+          2,
+          2
+        ],
+        "cross_size": 5,
+        "settings": [
+          {
+            "slot": 64,
+            "sector": 0,
+            "probe": 0,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          },
+          {
+            "slot": 65,
+            "sector": 0,
+            "probe": 1,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 66,
+            "sector": 0,
+            "probe": 2,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          },
+          {
+            "slot": 67,
+            "sector": 0,
+            "probe": 3,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 68,
+            "sector": 1,
+            "probe": 0,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 69,
+            "sector": 1,
+            "probe": 1,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          },
+          {
+            "slot": 70,
+            "sector": 1,
+            "probe": 2,
+            "cz_character": 2,
+            "phase_action": "invert"
+          },
+          {
+            "slot": 71,
+            "sector": 1,
+            "probe": 3,
+            "cz_character": 1,
+            "phase_action": "preserve"
+          }
+        ]
+      }
+    ],
+    "per_center_phase_preservers": 4,
+    "per_center_phase_inverters": 4
+  },
+  "twirl": {
+    "group": "Aut H(2,3)=S3 wr C2",
+    "order": 72,
+    "fixed_point_census": {
+      "0": 32,
+      "1": 27,
+      "3": 12,
+      "9": 1
+    },
+    "operator_invariant_dimension": 3,
+    "operator_invariants": "the three Hamming-distance kernels d=0,1,2",
+    "generic_superoperator_dimension_before": 6561,
+    "twirled_superoperator_commutant_dimension": 105,
+    "compression_factor": "2187/35",
+    "burnside_formula": "dim Comm(conjugation)=|G|^-1 sum_g fix(g)^4"
+  },
+  "literature_context": [
+    {
+      "topic": "group twirling/noise tailoring for controlled-phase gates",
+      "ref": "arXiv:2309.15651"
+    },
+    {
+      "topic": "qutrit randomized benchmarking",
+      "ref": "arXiv:2009.00599"
+    }
+  ],
+  "boundary": "Exact finite-frame/tomography/representation arithmetic. A laboratory protocol still needs calibrated implementations or virtual frame updates for the required permutations, plus a physical definition of each cross-sum measurement.",
+  "checks": {
+    "B_inverse_exact": true,
+    "condition_number5": true,
+    "72_group_exact": true,
+    "fixed_point_census_exact": true,
+    "operator_invariants3": true,
+    "superoperator_commutant105": true,
+    "D8_four_preserve_four_invert": true
+  }
+}
