@@ -407,8 +407,28 @@ def build():
             }
             for r in controls
         ],
-        "q3_geometry": controls[0],
-        "q3_group": group,
+        "q3_geometry": {
+            "deleted": controls[0]["deleted"],
+            "affine": controls[0]["affine"],
+            "infinity": controls[0]["infinity"],
+            "size": controls[0]["size"],
+            "line_size_histogram": controls[0]["line_size_histogram"],
+        },
+        "q3_group": {
+            "order": group["order"],
+            "structure": group["structure"],
+            "presentation": group["presentation"],
+            "R": group["R"],
+            "S": group["S"],
+            "point_orbits": group["point_orbits"],
+            "orbit_sizes": group["orbit_sizes"],
+            "distinct_projective_permutations": group["distinct_projective_permutations"],
+            "slot_overlay": {
+                "formula": "slot=8*h+4*sector+probe",
+                "first_four": group["slot_rows"][:4],
+                "last_four": group["slot_rows"][-4:],
+            },
+        },
         "frequency_compiler_bridge": freq,
         "cz_hashimoto_parent": weld,
         "checks": checks,
