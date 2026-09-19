@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Punctured-Hesse packet group behind the W33 CZ/Hashimoto 11-bin alphabet.
+r"""Punctured-Hesse packet group behind the W33 CZ/Hashimoto 11-bin alphabet.
 
 This pass strengthens the gauge-fixed CZ-context / Hashimoto-turn weld.
 
@@ -129,13 +129,18 @@ def punctured_plane(q: int):
     ex = (1, 0, 0)
     ey = (0, 1, 0)
     punctured = [p for p in pts if p not in {ex, ey}]
-    affine = sorted(p for p in punctured if p[2] != 0)
-    infinity = sorted(p for p in punctured if p[2] == 0)
+    affine_canon = sorted(p for p in punctured if p[2] != 0)
+    infinity_canon = sorted(p for p in punctured if p[2] == 0)
 
-    expected_affine = sorted((a, c, 1) for a in range(q) for c in range(q))
-    expected_infinity = sorted((1, s, 0) for s in range(1, q))
-    assert affine == expected_affine
-    assert infinity == expected_infinity
+    # Use the physically convenient affine-chart representatives [a:c:1] and
+    # infinity representatives [1:s:0] in the public certificate.  The global
+    # projective canonicalizer instead normalizes the *first* nonzero coordinate,
+    # so compare only after canonicalization; equating the two representative
+    # lists literally was the CI bug caught by the first replay.
+    affine = sorted((a, cc, 1) for a in range(q) for cc in range(q))
+    infinity = sorted((1, s, 0) for s in range(1, q))
+    assert sorted({canon(p, q) for p in affine}) == affine_canon
+    assert sorted({canon(p, q) for p in infinity}) == infinity_canon
 
     # Projective lines are dual projective coefficient triples.
     hist = Counter()
@@ -190,7 +195,7 @@ def packet_group_72():
     q = 3
     _, R, S, d8 = d8_linear_elements()
     plane = punctured_plane(q)
-    punct = [tuple(p) for p in plane["affine"] + plane["infinity"]]
+    punct = [canon(tuple(p), q) for p in plane["affine"] + plane["infinity"]]
     deleted = {tuple(p) for p in plane["deleted"]}
 
     rows = []
