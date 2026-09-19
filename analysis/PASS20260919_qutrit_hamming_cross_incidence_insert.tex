@@ -1,0 +1,91 @@
+\subsection{The translated \(CZ_3\) cross bundle has determinant \(80\)}
+\label{sec:20260919-qutrit-hamming-cross-incidence}
+
+The nine translated \(CZ_3\) zero-phase frames from the Hamming packet theorem
+form a square incidence operator on \(\mathbb F_3^2\).  For general \(q\), let
+\[
+ C_{a,b}=\{(x,y):x=a\ \hbox{or}\ y=b\}
+\]
+and define
+\[
+ B_q[(a,b),(x,y)]=1_{(x,y)\in C_{a,b}}.
+\]
+Then
+\[
+ B_q=I+A(H(2,q))
+    =J_q\otimes I_q+I_q\otimes J_q-I_{q^2}.
+\]
+The Hamming spectrum gives
+\[
+ \operatorname{spec}(B_q)
+ =\{2q-1\}^{1}\cup\{q-1\}^{2(q-1)}
+   \cup\{-1\}^{(q-1)^2},
+\]
+and hence
+\[
+ \det B_q=(-1)^{(q-1)^2}(2q-1)(q-1)^{2(q-1)}.
+\]
+At \(q=3\),
+\[
+ \boxed{\det B_3=80=3^4-1=\dim\mathfrak{sl}_9.}
+\]
+The equality with \(q^4-1\) is unique for integer \(q\ge2\).  This is an exact
+arithmetic lock between the translated-\(CZ\) frame incidence and the
+independently certified nonzero two-qutrit Pauli carrier; it is not by itself
+an equivariant identification.
+
+The integral Smith form is
+\[
+ \operatorname{SNF}(B_3)=
+ \operatorname{diag}(1^5,2^3,10).
+\]
+Reducing its row span modulo two gives a binary
+\[
+ [9,5,3]
+\]
+code with weight enumerator
+\[
+ 1+6z^3+9z^4+9z^5+6z^6+z^9.
+\]
+Thus the same five-dimensional number that appears as the \(CZ_3\) zero-phase
+block also appears as the binary rank of the nine-frame incidence, without
+identifying the corresponding vector spaces.
+
+There is a second \(q=3\) lock in native characteristic.  For odd prime \(q\),
+\[
+ B_q=-I+N,\qquad
+ N=J_q\otimes I_q+I_q\otimes J_q,
+\]
+and over \(\mathbb F_q\),
+\[
+ N^3=0,\qquad
+ \operatorname{rank}N=2q-2,\qquad
+ \operatorname{rank}N^2=1.
+\]
+Therefore
+\[
+ \dim\ker N=(q-1)^2+1.
+\]
+This equals the \(CZ_q\) zero-support size \(2q-1\) precisely when
+\[
+ (q-1)(q-3)=0,
+\]
+so among \(q>1\) it singles out \(q=3\).
+
+Finally the exact inverse lies in the Hamming Bose--Mesner algebra:
+\[
+ B_q^{-1}
+ =\frac{3-q}{q-1}I+\frac1{q-1}A
+  -\frac{2}{(q-1)(2q-1)}J.
+\]
+At \(q=3\) the explicit identity coefficient vanishes,
+\[
+ \boxed{B_3^{-1}=\frac12A(H(2,3))-\frac15J.}
+\]
+Thus the nine translated frame sums can be inverted from rook-neighbour sums
+and one global mean, with no separate identity-channel term in this basis.
+
+Executable witness:
+\texttt{analysis/w33\_qutrit\_hamming\_cross\_incidence.py};
+frozen certificate:
+\texttt{data/w33\_qutrit\_hamming\_cross\_incidence.json}.
