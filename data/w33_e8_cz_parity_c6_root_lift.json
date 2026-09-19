@@ -1,0 +1,19 @@
+{
+  "schema":"w33.e8_cz_parity_c6_root_lift.v1",
+  "status":"PASS",
+  "headline":"The heterotic/Clifford CZ-parity C6 lifts exactly through the 240-root E8 Coxeter fibration. An order-six E8 root automorphism L preserves the full Gram matrix, commutes with the internal fiber rotation d, induces CZ*parity on the 80-state signed-Pauli quotient, and satisfies L^3=d^3=-I. Therefore C=L d^-1 has order three and induces pure CZ, while d induces parity; <d,C> is C6 x C3 of order 18.",
+  "lift":{
+    "orientation_preserving_solution":true,
+    "orientation_reversing_solution":false,
+    "full_240_root_Gram_preserved":true,
+    "commutes_with_internal_fiber_C6":true
+  },
+  "root_actions":{
+    "internal_d":{"order":6,"cycles":{"6":40},"quotient_action":"parity P"},
+    "lift_L":{"order":6,"cycles":{"2":3,"6":39},"quotient_action":"CZ*parity"},
+    "pure_CZ_C=L*d^-1":{"order":3,"cycles":{"1":12,"3":76},"quotient_action":"CZ"}
+  },
+  "shared_center":{"identity":"L^3=d^3=-I"},
+  "generated_group":{"order":18,"isomorphism":"C6 x C3"},
+  "remaining_boundary":"The witness depends on the frozen Coxeter-fiber/base/switching gauge. Existence and group relations are exact; coordinate canonicity is not claimed."
+}
