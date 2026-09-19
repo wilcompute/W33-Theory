@@ -1,0 +1,9 @@
+{
+  "schema":"w33.physical_e8_so8_su4_u1_branching.v1",
+  "status":"PASS_CONTINUOUS_TO_DISCRETE_CHARGE_LAW",
+  "fixed_algebra":"SO(8) x SU(4) x U(1)",
+  "U1_generator":[0,0,0,0,0,-1,-1,1,1],
+  "branching":"(28,1)_0+(1,15)_0+(1,1)_0+(8_A,6)_0+(8_B,4)_-1+(8_C,bar4)_-1+(1,6)_+2+(8_A,1)_+2+(8_B,bar4)_+1+(8_C,4)_+1+(1,6)_-2+(8_A,1)_-2",
+  "discrete_charge_law":"Wilson Z3 character a = -Q mod 3 on all 240 E8 root spaces",
+  "boundary":"No Standard-Model particle assignment or canonical v/s/c triality naming is claimed."
+}
