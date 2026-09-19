@@ -1,0 +1,21 @@
+\subsection{Scope correction: the holonomy pair fixes the SM nonabelian factor, not the full SM group}
+\label{sec:20260919-holonomy-centralizer-scope}
+
+The certified joint fundamental multiplicities of the commuting order-three Wilson line and order-two $\theta^3$ holonomy are
+\[
+(3,2,1,1,1,1).
+\]
+For a commuting semisimple family with joint multiplicities $m_i$, the centralizer in $SU(n)$ is $S(\prod_i U(m_i))$ and has dimension $\sum_i m_i^2-1$. Hence the full local centralizer here is
+\[
+S(U(3)\times U(2)\times U(1)^4),
+\]
+with Lie algebra
+\[
+\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1)^5,
+\qquad \dim=16.
+\]
+The observable Standard Model algebra has dimension $8+3+1=12$. Thus the exact positive statement is that the pair cuts the Wilson-line $SU(5)$ block as $3+2$, yielding the observable $SU(3)\times SU(2)$ factor, with hypercharge one selected $U(1)$. Four further local abelian directions remain and must be removed or lifted by the rest of the heterotic compactification.
+
+This corrects the stronger historical shorthand ``the SM gauge group is the joint stabilizer'' without changing the measured $25/25$ $3+2$ split or the $630/2099$ background control.
+
+Executable witness: \texttt{analysis/w33\_holonomy\_joint\_centralizer\_scope.py}; frozen certificate: \texttt{data/w33\_holonomy\_joint\_centralizer\_scope.json}.
