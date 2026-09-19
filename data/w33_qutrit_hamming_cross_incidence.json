@@ -1,0 +1,54 @@
+{
+  "all_q_decoder": "B_q^{-1}=((3-q)/(q-1))I + (1/(q-1))A - 2/((q-1)(2q-1))J",
+  "checks": {
+    "binary_cross_code_9_5_3": true,
+    "controls_q2_q3_q4_q5_exact": true,
+    "native_kernel_equals_cross_size_only_q3_in_controls": true,
+    "native_nilpotent_controls_q3_q5_q7": true,
+    "parent_translated_cross_bundle_loaded": true,
+    "q3_det_equals_nonzero_two_qutrit_paulis": true,
+    "q3_det_is_80": true,
+    "q3_det_lock_unique_for_integer_q_ge_2": true,
+    "q3_inverse_has_no_identity_coefficient": true,
+    "q3_snf_1pow5_2pow3_10": true
+  },
+  "controls": [
+    {"abs_det":3,"cross_size":3,"det_direct":-3,"det_equals_q4_minus_1":false,"det_formula":-3,"intersection_types":{"hamming_adjacent":2,"hamming_distance_2":2,"same":3},"inverse_I_coefficient":"1","pauli_nonzero_q4_minus_1":15,"q":2,"size":4},
+    {"abs_det":80,"cross_size":5,"det_direct":80,"det_equals_q4_minus_1":true,"det_formula":80,"intersection_types":{"hamming_adjacent":3,"hamming_distance_2":2,"same":5},"inverse_I_coefficient":"0","pauli_nonzero_q4_minus_1":80,"q":3,"size":9},
+    {"abs_det":5103,"cross_size":7,"det_direct":-5103,"det_equals_q4_minus_1":false,"det_formula":-5103,"intersection_types":{"hamming_adjacent":4,"hamming_distance_2":2,"same":7},"inverse_I_coefficient":"-1/3","pauli_nonzero_q4_minus_1":255,"q":4,"size":16},
+    {"abs_det":589824,"cross_size":9,"det_direct":589824,"det_equals_q4_minus_1":false,"det_formula":589824,"intersection_types":{"hamming_adjacent":5,"hamming_distance_2":2,"same":9},"inverse_I_coefficient":"-1/2","pauli_nonzero_q4_minus_1":624,"q":5,"size":25}
+  ],
+  "evidence_boundary": "The equality 80=3^4-1=dim sl9 is exact arithmetic between independently certified carriers; no equivariant isomorphism follows from the determinant alone.",
+  "headline": "The nine translated CZ_3 zero-phase crosses are the closed neighborhoods of H(2,3). Their 9x9 incidence matrix B_3 has determinant 80, exactly 3^4-1, the number of nonzero two-qutrit Pauli vectors and dim sl9.  For general q, |det B_q|=(2q-1)(q-1)^(2(q-1)), and equality with q^4-1 occurs only at q=3. At q=3 the Smith form is 1^5 2^3 10, the binary cross code is [9,5,3], and B_3^{-1}=A(H(2,3))/2-J/5.",
+  "literature_boundary": "The Hamming/rook graph and generalized CZ gate are classical.  This packet records the derived translated-cross incidence determinant, q=3 determinant lock, Smith/code data, native-characteristic nilpotent filtration and decoder identity.",
+  "matrix": {
+    "cross_intersections": {"Hamming-adjacent centers":"q","Hamming-distance-2 centers":2,"same":"2q-1"},
+    "definition": "B_q[(a,b),(x,y)]=1 iff x=a or y=b",
+    "determinant": "(-1)^((q-1)^2)(2q-1)(q-1)^(2(q-1))",
+    "graph_identity": "B_q=I+A(H(2,q))=J_q tensor I_q + I_q tensor J_q - I",
+    "spectrum": {"-1":"(q-1)^2","2q-1":1,"q-1":"2(q-1)"}
+  },
+  "native_characteristic": {
+    "controls": {
+      "3":{"CZ_zero_support_size":5,"dim_ker_N":5,"equal":true,"rank_N":4,"rank_N2":1,"rank_N3":0},
+      "5":{"CZ_zero_support_size":9,"dim_ker_N":17,"equal":false,"rank_N":8,"rank_N2":1,"rank_N3":0},
+      "7":{"CZ_zero_support_size":13,"dim_ker_N":37,"equal":false,"rank_N":12,"rank_N2":1,"rank_N3":0}
+    },
+    "cross_size":"2q-1",
+    "dim_ker_N":"(q-1)^2+1",
+    "formula":"over F_q (odd prime), B_q=-I+N, N=J tensor I + I tensor J, N^3=0",
+    "q3_lock":"dim ker N = cross size iff (q-1)(q-3)=0; for q>1 this means q=3",
+    "rank_N":"2q-2",
+    "rank_N2":1
+  },
+  "q3_locks": {
+    "binary_row_code":{"parameters":"[9,5,3]","weight_enumerator":{"0":1,"3":6,"4":9,"5":9,"6":6,"9":1}},
+    "decoder":"B_3^{-1}=(1/2)A(H(2,3))-(1/5)J",
+    "determinant":80,
+    "dim_sl9":80,
+    "nonzero_two_qutrit_Pauli_vectors":80,
+    "smith_normal_form":[1,1,1,1,1,2,2,2,10]
+  },
+  "schema":"w33.qutrit_hamming_cross_incidence.v1",
+  "status":"PASS_Q3_CROSS_INCIDENCE_LOCK"
+}
