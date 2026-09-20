@@ -1,0 +1,181 @@
+{
+  "schema": "w33.packet72_error_spread.v1",
+  "status": "PASS_EXACT_ERROR_PROPAGATION_KERNEL",
+  "headline": "The packet72 causal graph carries exact stochastic error kernels. Conditioned on one uniformly random primitive error per step, support sizes are 1,7,24,49,67,72 and all runtime addresses become reachable after five errors. For a measured per-tick primitive-error probability epsilon, exact shell probabilities through five ticks are frozen as polynomials.",
+  "primitive_error_alphabet": [
+    "+rho",
+    "-rho",
+    "+a",
+    "-a",
+    "R",
+    "R^-1",
+    "S"
+  ],
+  "conditional_uniform_error_walk": [
+    {
+      "errors": 0,
+      "support_size": 1,
+      "return_probability": "1",
+      "shell_probabilities": {
+        "0": "1"
+      },
+      "collision_probability": "1",
+      "total_variation_from_uniform": "71/72"
+    },
+    {
+      "errors": 1,
+      "support_size": 7,
+      "return_probability": "0",
+      "shell_probabilities": {
+        "1": "1"
+      },
+      "collision_probability": "1/7",
+      "total_variation_from_uniform": "65/72"
+    },
+    {
+      "errors": 2,
+      "support_size": 24,
+      "return_probability": "1/7",
+      "shell_probabilities": {
+        "0": "1/7",
+        "1": "4/49",
+        "2": "38/49"
+      },
+      "collision_probability": "129/2401",
+      "total_variation_from_uniform": "2/3"
+    },
+    {
+      "errors": 3,
+      "support_size": 49,
+      "return_probability": "4/343",
+      "shell_probabilities": {
+        "0": "4/343",
+        "1": "129/343",
+        "2": "60/343",
+        "3": "150/343"
+      },
+      "collision_probability": "3547/117649",
+      "total_variation_from_uniform": "263/686"
+    },
+    {
+      "errors": 4,
+      "support_size": 67,
+      "return_probability": "129/2401",
+      "shell_probabilities": {
+        "0": "129/2401",
+        "1": "220/2401",
+        "2": "1236/2401",
+        "3": "432/2401",
+        "4": "384/2401"
+      },
+      "collision_probability": "17587/823543",
+      "total_variation_from_uniform": "2210/7203"
+    },
+    {
+      "errors": 5,
+      "support_size": 72,
+      "return_probability": "220/16807",
+      "shell_probabilities": {
+        "0": "220/16807",
+        "1": "3547/16807",
+        "2": "3740/16807",
+        "3": "1020/2401",
+        "4": "240/2401",
+        "5": "480/16807"
+      },
+      "collision_probability": "4943487/282475249",
+      "total_variation_from_uniform": "6887/33614"
+    }
+  ],
+  "lazy_per_tick_model": {
+    "definition": "identity with probability 1-epsilon; each of seven primitive errors with probability epsilon/7",
+    "shell_kernels": [
+      {
+        "ticks": 0,
+        "shell_probability_polynomials": {
+          "0": "1"
+        },
+        "probability_any_error": "0"
+      },
+      {
+        "ticks": 1,
+        "shell_probability_polynomials": {
+          "0": "1 - epsilon",
+          "1": "epsilon"
+        },
+        "probability_any_error": "epsilon"
+      },
+      {
+        "ticks": 2,
+        "shell_probability_polynomials": {
+          "0": "(8*epsilon**2 - 14*epsilon + 7)/7",
+          "1": "-2*epsilon*(47*epsilon - 49)/49",
+          "2": "38*epsilon**2/49"
+        },
+        "probability_any_error": "-epsilon**2 + 2*epsilon"
+      },
+      {
+        "ticks": 3,
+        "shell_probability_polynomials": {
+          "0": "-(486*epsilon**3 - 1176*epsilon**2 + 1029*epsilon - 343)/343",
+          "1": "3*epsilon*(358*epsilon**2 - 658*epsilon + 343)/343",
+          "2": "-6*epsilon**2*(123*epsilon - 133)/343",
+          "3": "150*epsilon**3/343"
+        },
+        "probability_any_error": "epsilon**3 - 3*epsilon**2 + 3*epsilon"
+      },
+      {
+        "ticks": 4,
+        "shell_probability_polynomials": {
+          "0": "(4476*epsilon**4 - 13608*epsilon**3 + 16464*epsilon**2 - 9604*epsilon + 2401)/2401",
+          "1": "-4*epsilon*(2955*epsilon**3 - 7518*epsilon**2 + 6909*epsilon - 2401)/2401",
+          "2": "12*epsilon**2*(894*epsilon**2 - 1722*epsilon + 931)/2401",
+          "3": "-24*epsilon**3*(157*epsilon - 175)/2401",
+          "4": "384*epsilon**4/2401"
+        },
+        "probability_any_error": "-epsilon**4 + 4*epsilon**3 - 6*epsilon**2 + 4*epsilon"
+      },
+      {
+        "ticks": 5,
+        "shell_probability_polynomials": {
+          "0": "-(43152*epsilon**5 - 156660*epsilon**4 + 238140*epsilon**3 - 192080*epsilon**2 + 84035*epsilon - 16807)/16807",
+          "1": "epsilon*(129372*epsilon**4 - 413700*epsilon**3 + 526260*epsilon**2 - 322420*epsilon + 84035)/16807",
+          "2": "-20*epsilon**2*(7023*epsilon**3 - 18774*epsilon**2 + 18081*epsilon - 6517)/16807",
+          "3": "60*epsilon**3*(156*epsilon**2 - 314*epsilon + 175)/2401",
+          "4": "-240*epsilon**4*(7*epsilon - 8)/2401",
+          "5": "480*epsilon**5/16807"
+        },
+        "probability_any_error": "epsilon**5 - 5*epsilon**4 + 10*epsilon**3 - 10*epsilon**2 + 5*epsilon"
+      }
+    ]
+  },
+  "containment": {
+    "deterministic_causal_ball_sizes": [
+      1,
+      8,
+      27,
+      52,
+      68,
+      72
+    ],
+    "conditional_support_sizes": [
+      1,
+      7,
+      24,
+      49,
+      67,
+      72
+    ],
+    "all72_reachable_after_five_error_events": true
+  },
+  "usage": "Insert an experimentally measured epsilon into the frozen shell polynomials to obtain the exact probability that a primitive control error has propagated to graph distance r after n<=5 scheduled ticks.",
+  "boundary": "This is a classical stochastic control-error model on the finite runtime group. It does not include coherent quantum amplitudes, correlated physical noise, unequal primitive error rates, or a hardware-derived epsilon. Those can be added by replacing the seven equal transition weights.",
+  "parent": "data/w33_packet72_cayley_causal_cone.json",
+  "checks": {
+    "group72": true,
+    "support_1_7_24_49_67_72": true,
+    "causal_containment": true,
+    "exact_lazy_polynomials_through5": true,
+    "no_invented_error_rate": true
+  }
+}
