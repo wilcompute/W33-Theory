@@ -1,0 +1,49 @@
+{
+  "schema": "w33.e8_bracket_deficiency_formula.v1",
+  "status": "PASS_CLOSED_PROJECTIVE_DEFICIENCY_FORMULA",
+  "headline": "The full 18x18 E8 bracket deficiency tensor has a closed PG(1,3)-plus-parity formula. All 324 entries are reproduced without the 13-record exception table: deficiencies occur only on the neutral direction, the two coordinate axes with distinct parity restrictions, and the two diagonal projective lines.",
+  "formula": {
+    "neutral": "(r,a)=(s,c)=(0,0): delta=5 for b=d=0; delta=2 for b=d=1; else 0",
+    "a_axis": "r=s=0, a,c nonzero opposite: delta=1 iff b=d=0",
+    "rho_axis": "a=c=0, r,s nonzero opposite: delta=1 iff b=d",
+    "diagonal": "all C3 coordinates nonzero and r*c-a*s=0 mod3: delta=2 for identical C3 vector with b=d=0, otherwise delta=1",
+    "else": "delta=0"
+  },
+  "projective_geometry": {
+    "space": "PG(1,3)",
+    "directions": 4,
+    "coordinate_axes": 2,
+    "diagonal_lines": 2,
+    "deficient_support_counts": {
+      "neutral": 2,
+      "a_axis": 2,
+      "rho_axis": 4,
+      "diagonal": 32
+    }
+  },
+  "deficiency_distribution": {
+    "0": 284,
+    "1": 34,
+    "2": 5,
+    "5": 1
+  },
+  "replay": {
+    "ordered_pairs": 324,
+    "mismatches": 0,
+    "exact": true
+  },
+  "compression": {
+    "old": "18 target dimensions + 13 exception records",
+    "new": "18 target dimensions + fixed arithmetic branch rule",
+    "lookup_table_entries_for_deficiency": 0
+  },
+  "physical_reading": "The small fusion defects are controlled by the relative projective direction of the two C3 grading vectors and by theta3 parity. The five-dimensional neutral defect is exactly the central u(1)^5 already identified independently.",
+  "boundary": "Exact arithmetic description of bracket ranks only. It does not determine structure constants or amplitudes.",
+  "parent": "data/w33_e8_holonomy_bracket_rank_tensor.json",
+  "checks": {
+    "all324_exact": true,
+    "distribution_284_34_5_1": true,
+    "support_2_2_4_32": true,
+    "no_exception_table_needed": true
+  }
+}
