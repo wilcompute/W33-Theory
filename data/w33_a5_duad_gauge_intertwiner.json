@@ -1,0 +1,49 @@
+{
+  "schema": "w33.a5_duad_gauge_intertwiner.v1",
+  "status": "PASS_A5_DUAD_INTERTWINER",
+  "headline": "The A5 root lattice Q(A5) embeds S6-equivariantly into the 15-dimensional K6-duad carrier by Phi(x)_{ij}=x_i+x_j. Its image is exactly the five-dimensional kernel of syntheme incidence, i.e. the existing W33 P5 gauge sector, and Phi scales the A5 Cartan metric by four. The natural six-cycle is the A5 Coxeter element and acts on duads with cycle types c:6^2 3, c^2:3^5, c^3:2^6 1^3.",
+  "intertwiner": {
+    "domain": "Q(A5)={x in Z^6: sum x_i=0}",
+    "codomain": "Z^{15} on K6 duads",
+    "formula": "Phi(x)_{ij}=x_i+x_j",
+    "domain_rank": 5,
+    "image_rank": 5,
+    "syntheme_incidence_rank": 10,
+    "kernel_dimension": 5,
+    "image_equals_kernel": true,
+    "metric": "Phi^T Phi = 4*C_A5",
+    "S6_equivariant_checked_elements": 720
+  },
+  "coxeter_C6": {
+    "six_cycle": "(0 1 2 3 4 5)",
+    "order": 6,
+    "duad_cycle_type": {
+      "3": 1,
+      "6": 2
+    },
+    "square_order": 3,
+    "square_duad_cycle_type": {
+      "3": 5
+    },
+    "cube_order": 2,
+    "cube_duad_cycle_type": {
+      "1": 3,
+      "2": 6
+    }
+  },
+  "bridge": "The same A5 whose discriminant Z6 carries flagship hypercharge has an intrinsic five-dimensional W33/S6 gauge-module realization. This is an actual module intertwiner, not a 6=3*2 numerology.",
+  "firewall": "This A5 Coxeter C6 is not identified with the oriented-Pauli CZ*parity C6. The latter acts on a different carrier and physical theta^3 parity has its own inner-E8 lift.",
+  "parents": [
+    "PART_MMCCCXCI_S6_DUAD_REPRESENTATION_DECOMPOSITION_results.json",
+    "Holotrade data/w33_flagship_a5_hypercharge_organizer.json"
+  ],
+  "checks": {
+    "synthemes15": true,
+    "D_rank10": true,
+    "Phi_rank5": true,
+    "image_kernel": true,
+    "metric_4A5": true,
+    "S6_equivariance720": true,
+    "C6_cycle_types": true
+  }
+}
