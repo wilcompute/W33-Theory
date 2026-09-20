@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "frozen_universe_sha256": "ccc3462ea8307079abfdd2d68f960cbba7faf9ba888eebd4dc2e378a3edd52dc",
+  "source_file_sha256": "42cebab38181884c632594da0926c5b22a57e194c17edfac3b3d87cdb1633e30",
+  "frozen_repository_head": "b81856277c47cc96c7f76ef0a6450099d8e028ac",
+  "exact_family_count": 51287,
+  "structural_family_count": 49865,
+  "tests": [
+    {
+      "observable": "inverse_alpha",
+      "prediction": 137.0,
+      "observation": 137.035999177,
+      "measurement_sigma": 2.1e-08,
+      "residual_measurement_sigma_if_prediction_exact": 1714246.5238098989,
+      "fractional_error": 0.0002626986865948283,
+      "declared_uniform_null_interval": [
+        100.0,
+        200.0
+      ],
+      "conditional_window_probability": 0.0007199835400001575,
+      "family_adjusted_bound": 1,
+      "matching_frozen_formula_count": 558,
+      "example_formula_ids": [
+        "e7957c6fe14f4ec43dd973c687161c72d60303b743c122a2bc181187044b999b",
+        "23bdcf80ff88b261a50b6d76af077aee3e00e8e26e8fd0b0fdfed319f195cc69",
+        "84ba378c8e9e35ef3a441ce1b38706a9322b9c66a1bfc4c78708a05bce0b6187"
+      ],
+      "null_window_sensitivity_factor10": 1,
+      "prospective_credit": false
+    },
+    {
+      "observable": "proton_electron_ratio",
+      "prediction": 1836.0,
+      "observation": 1836.152673426,
+      "measurement_sigma": 3.2e-08,
+      "residual_measurement_sigma_if_prediction_exact": 4771044.56250288,
+      "fractional_error": 8.314854652866378e-05,
+      "declared_uniform_null_interval": [
+        1000.0,
+        2000.0
+      ],
+      "conditional_window_probability": 0.0003053468520001843,
+      "family_adjusted_bound": 1,
+      "matching_frozen_formula_count": 73,
+      "example_formula_ids": [
+        "1eecece4b346149982b59d7cf66abdffbd5169085888cccf81ba56036799727e",
+        "137a08f725eada8d73376466357f2ed9d6ffc2837668e914bd38b292ed4f4e8c",
+        "4f25805ac900e99d5f928eb0bc50a8c56bff0163f59b3c301c5e0d8841b1c90d"
+      ],
+      "null_window_sensitivity_factor10": 1,
+      "prospective_credit": false
+    },
+    {
+      "observable": "weak_angle_MSbar_MZ",
+      "prediction": 0.23076923076923078,
+      "observation": 0.23122,
+      "measurement_sigma": 6e-05,
+      "residual_measurement_sigma_if_prediction_exact": 7.512820512820447,
+      "fractional_error": 0.0019495252606574985,
+      "declared_uniform_null_interval": [
+        0.0,
+        1.0
+      ],
+      "conditional_window_probability": 0.0009015384615384536,
+      "family_adjusted_bound": 1,
+      "matching_frozen_formula_count": 238,
+      "example_formula_ids": [
+        "596d10727d3ce1834988b1a0a35c3f88e338b54775ccf0d9ba87a66d6d8ce235",
+        "4ce8eaa64b598f564fd4ccd05d95da2f83842c9c2e472e122218c11ced6cce37",
+        "21643ab1c45b4b9358745026be9e20446aef6f3b00390664431dc1872804af46"
+      ],
+      "null_window_sensitivity_factor10": 1,
+      "prospective_credit": false
+    }
+  ],
+  "sources": [
+    "https://physics.nist.gov/cuu/pdf/wall_2022.pdf",
+    "https://pdg.lbl.gov/2025/reviews/rpp2025-rev-standard-model.pdf"
+  ],
+  "scope": "Illustrative explicitly chosen uniform-observable nulls, not a calibrated distribution over physical theories. Formula census includes false positives. Bonferroni values are conservative sensitivity bounds under these nulls, not posterior probabilities. Retrospective data cannot supply prospective evidence.",
+  "interpretation": "These three coarse formulas neither match measurement precision when treated as exact nor establish significance under the stated full-family sensitivity test. Corrections require specified predictions and uncertainty, not unpriced fitting."
+}

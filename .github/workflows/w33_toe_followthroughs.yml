@@ -1,0 +1,25 @@
+name: TOE followthrough certificates
+on:
+  push:
+    paths:
+      - 'analysis/w33_surface_hodge_transport*'
+      - 'analysis/w33_oscillator_calibration_test*'
+      - 'analysis/w33_frozen_formula_null_audit*'
+      - 'analysis/w33_genus_six_execution*'
+      - 'data/w33_formula_search_universe_v1.json'
+      - 'tests/test_surface_toe_followthroughs.py'
+      - '.github/workflows/w33_toe_followthroughs.yml'
+  workflow_dispatch:
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy scipy sympy mpmath pytest
+      - env:
+          OPENBLAS_NUM_THREADS: '1'
+          PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'
+        run: python -m pytest --noconftest --rootdir=. -o addopts='' tests/test_surface_toe_followthroughs.py -q
