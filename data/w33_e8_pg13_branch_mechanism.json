@@ -1,0 +1,155 @@
+{
+  "schema": "w33.e8_pg13_branch_mechanism.v1",
+  "status": "PASS_PG13_BRANCH_MECHANISM",
+  "headline": "The PG(1,3) bracket-deficiency law is the shadow of the A8 branching e8=sl9+Lambda3+Lambda6. All 144 mixed sl9/exterior natural-action products are surjective. The 40 defects split exactly into 4 sl9-commutator defects (neutral/a-axis), 16 exterior-wedge defects (the two diagonal projective lines), and 20 Lambda3/Lambda6 contraction defects (rho-axis plus diagonals).",
+  "A8_branching": {
+    "rho0": "sl9",
+    "rho1": "Lambda^3(9)",
+    "rho2": "Lambda^6(9)",
+    "dimensions": "80+84+84=248"
+  },
+  "bracket_mechanisms": {
+    "commutator_sl9_sl9": {
+      "pairs": 36,
+      "deficient": 4,
+      "distribution": {
+        "0": 32,
+        "1": 2,
+        "2": 1,
+        "5": 1
+      },
+      "directions": {
+        "neutral": 2,
+        "[0:1]_a_axis": 2
+      }
+    },
+    "natural_sl9_action": {
+      "pairs": 144,
+      "deficient": 0,
+      "distribution": {
+        "0": 144
+      },
+      "directions": {}
+    },
+    "wedge_exterior_same_branch": {
+      "pairs": 72,
+      "deficient": 16,
+      "distribution": {
+        "0": 56,
+        "1": 12,
+        "2": 4
+      },
+      "directions": {
+        "[1:1]_diagonal": 8,
+        "[1:2]_diagonal": 8
+      }
+    },
+    "contraction_L3_L6": {
+      "pairs": 72,
+      "deficient": 20,
+      "distribution": {
+        "0": 52,
+        "1": 20
+      },
+      "directions": {
+        "[1:0]_rho_axis": 4,
+        "[1:1]_diagonal": 8,
+        "[1:2]_diagonal": 8
+      }
+    }
+  },
+  "rho_branch_pair_census": {
+    "10": {
+      "pairs": 36,
+      "deficient": 0,
+      "distribution": {
+        "0": 36
+      }
+    },
+    "11": {
+      "pairs": 36,
+      "deficient": 8,
+      "distribution": {
+        "0": 28,
+        "1": 6,
+        "2": 2
+      }
+    },
+    "12": {
+      "pairs": 36,
+      "deficient": 10,
+      "distribution": {
+        "0": 26,
+        "1": 10
+      }
+    },
+    "20": {
+      "pairs": 36,
+      "deficient": 0,
+      "distribution": {
+        "0": 36
+      }
+    },
+    "21": {
+      "pairs": 36,
+      "deficient": 10,
+      "distribution": {
+        "0": 26,
+        "1": 10
+      }
+    },
+    "22": {
+      "pairs": 36,
+      "deficient": 8,
+      "distribution": {
+        "0": 28,
+        "1": 6,
+        "2": 2
+      }
+    },
+    "00": {
+      "pairs": 36,
+      "deficient": 4,
+      "distribution": {
+        "0": 32,
+        "1": 2,
+        "2": 1,
+        "5": 1
+      }
+    },
+    "01": {
+      "pairs": 36,
+      "deficient": 0,
+      "distribution": {
+        "0": 36
+      }
+    },
+    "02": {
+      "pairs": 36,
+      "deficient": 0,
+      "distribution": {
+        "0": 36
+      }
+    }
+  },
+  "projective_dictionary": {
+    "[0:1]": "W3/a axis; only sl9 commutator defects",
+    "[1:0]": "rho branch axis; only Lambda3-Lambda6 contraction defects",
+    "[1:1]": "diagonal; wedge and contraction defects",
+    "[1:2]": "diagonal; wedge and contraction defects"
+  },
+  "structural_explanation": "The rho coordinate is not interchangeable with the W3 charge coordinate: rho chooses the SU9 representation branch, while a grades weights inside each branch. That is why the two coordinate axes obey different parity rules even though the final arithmetic support is PG(1,3).",
+  "neutral_center": "The unique deficiency-five neutral-neutral product is [A2+A1+u1^5,A2+A1+u1^5]=A2+A1; the missing five dimensions are the Abelian center.",
+  "parents": [
+    "data/w33_e8_holonomy_bracket_rank_tensor.json",
+    "data/w33_e8_bracket_deficiency_formula.json"
+  ],
+  "checks": {
+    "natural_action_144_surjective": true,
+    "commutator_defects4": true,
+    "wedge_defects16": true,
+    "contraction_defects20": true,
+    "total_defects40": true,
+    "PG13_dictionary_exact": true
+  }
+}
