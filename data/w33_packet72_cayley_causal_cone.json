@@ -1,0 +1,68 @@
+{
+  "schema": "w33.packet72_cayley_causal_cone.v1",
+  "status": "PASS_FINITE_CONTROL_CAUSAL_CONE",
+  "headline": "With the seven natural runtime primitives as one-tick local controls, the 72-element packet group has an exact 7-regular Cayley light-cone of diameter5. Distance shells are 1,7,19,25,16,4 and cumulative reach is 1,8,27,52,68,72. The adjacency spectrum is integral and the simple-random-walk gap is 2/7.",
+  "group": "F3^2 semidirect D8",
+  "order": 72,
+  "primitive_controls": [
+    "+rho",
+    "-rho",
+    "+a",
+    "-a",
+    "R",
+    "R^-1",
+    "S"
+  ],
+  "cayley_graph": {
+    "degree": 7,
+    "diameter": 5,
+    "distance_shells": [
+      1,
+      7,
+      19,
+      25,
+      16,
+      4
+    ],
+    "cumulative_balls": [
+      1,
+      8,
+      27,
+      52,
+      68,
+      72
+    ],
+    "adjacency_spectrum": {
+      "0": 12,
+      "1": 5,
+      "2": 12,
+      "3": 3,
+      "4": 4,
+      "5": 3,
+      "7": 1,
+      "-1": 12,
+      "-2": 4,
+      "-3": 12,
+      "-5": 4
+    },
+    "random_walk_spectral_gap": "2/7"
+  },
+  "radius_two_27": {
+    "count": 27,
+    "is_subgroup": false,
+    "lagrange_obstruction": "27 does not divide 72",
+    "closure_counterexample": "frozen by executable producer"
+  },
+  "physics_reading": "The controller has a strict finite propagation bound in word metric: no sequence of n primitive operations can leave the radius-n Cayley ball, and every runtime state is reachable in at most five primitive ticks. This is a control-plane analogue of a causal cone, not a spacetime theorem.",
+  "boundary": "Graph/control distance is not physical length and the five-tick diameter does not determine c or a Lieb-Robinson velocity without a Hamiltonian, gate duration, and physical locality map.",
+  "parent": "data/w33_punctured_hesse_packet_group.json",
+  "checks": {
+    "group72": true,
+    "degree7": true,
+    "diameter5": true,
+    "balls_1_8_27_52_68_72": true,
+    "radius2_not_H27_subgroup": true,
+    "integral_spectrum": true,
+    "gap_2_7": true
+  }
+}
