@@ -1,0 +1,10 @@
+{
+  "schema":"w33.packet18_e8_bracket_scheduler.v1",
+  "status":"PASS_EXACT_LOOKUP_LIGHT_BRACKET_SCHEDULER",
+  "headline":"The complete 18x18 E8 holonomy bracket-rank tensor compiles onto packet18 as group-add target routing plus a 13-record deficiency table. All 324 brackets are nonzero; 284 use the full target dimension by default. The remaining 40 ordered pairs are exactly 13 C2xC2 inversion orbits.",
+  "routing":{"label_group":"C3_rho x C3_a x C2_b","target_rule":"componentwise addition mod (3,3,2)","packet_address":"hesse_bin=3*rho+a; packet18_index=2*hesse_bin+b","all_products_nonzero":true},
+  "rank_compiler":{"default":"rank=dimension(target)","surjective_pairs":284,"deficient_pairs":40,"exception_orbits":13,"reconstruction_exact_324_of_324":true},
+  "storage_comparison":{"raw_rank_entries":324,"sector_dimensions":18,"exception_records":13,"integer_payload_entries_after_compression":31,"raw_to_payload_ratio":10.451612903225806},
+  "packet_boundary":"Uses external holonomy-character addition, not coset multiplication in G/C4.",
+  "physical_boundary":"Schedules targets and ranks only; no structure constants or microscopic bracket implementation is claimed."
+}
