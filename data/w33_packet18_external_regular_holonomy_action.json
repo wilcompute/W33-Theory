@@ -1,0 +1,10 @@
+{
+  "schema":"w33.packet18_external_regular_holonomy_action.v1",
+  "status":"PASS_EXTERNAL_REGULAR_HOLONOMY_ACTION",
+  "headline":"Although K=C3_rho x C3_a x C2_b is not a subgroup of the 72-element runtime group G, packet18=X=G/C4 has Aut_G(X)=N_G(C4)/C4=C2. The unique nontrivial deck involution swaps the two regular F3^2 sheets. Combining left runtime translations T=F3^2 with this commuting right deck action gives T x C2 ~= C3^2 x C2 acting regularly on all 18 packet blocks. Under n=4a+3b mod6, the physical C6 generator is exactly one a-translation followed by the deck swap and has packet cycle profile 6^3.",
+  "runtime":{"G":"F3^2 semidirect D8","order":72,"H":"C4=<R>","packet_space":"X=G/H","packet_count":18,"normalizer":"{0} x D8","Aut_G_X":"C2"},
+  "deck":{"action":"(t,b)->(t,1-b)","unique_nontrivial_G_equivariant_automorphism":true,"commutes_with_full_left_G_action":true},
+  "holonomy_action":{"K":"C3_rho x C3_a x C2_b","realization":"left T translations times right deck C2","order":18,"regular_on_packet18":true,"physical_C6_generator":"(0,1,1)","physical_C6_profile":{"6_cycles":3},"CRT":"n=4a+3b mod6"},
+  "relation_to_parent_negative_result":{"unchanged":"K is not a subgroup of G","upgrade":"K has an exact regular permutation representation on packet18 using the commuting right deck symmetry"},
+  "physical_boundary":"Exact finite group/G-set theorem; no E8-to-hardware state identification is implied."
+}
