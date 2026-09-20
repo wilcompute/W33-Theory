@@ -8,6 +8,9 @@ on:
       - 'analysis/w33_genus_six_execution*'
       - 'data/w33_formula_search_universe_v1.json'
       - 'tests/test_surface_toe_followthroughs.py'
+      - 'tests/test_harmonic_prospective_execution.py'
+      - 'analysis/w33_harmonic_qutrit_redundancy*'
+      - 'analysis/w33_prospective_surface_test*'
       - '.github/workflows/w33_toe_followthroughs.yml'
   workflow_dispatch:
 jobs:
@@ -22,4 +25,4 @@ jobs:
       - env:
           OPENBLAS_NUM_THREADS: '1'
           PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'
-        run: python -m pytest --noconftest --rootdir=. -o addopts='' tests/test_surface_toe_followthroughs.py -q
+        run: python -m pytest --noconftest --rootdir=. -o addopts='' tests/test_surface_toe_followthroughs.py tests/test_harmonic_prospective_execution.py -q

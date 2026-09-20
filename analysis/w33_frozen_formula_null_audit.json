@@ -1,10 +1,10 @@
 {
   "status": "PASS",
-  "frozen_universe_sha256": "3415ec387023e4b3fee0f052a8b8f84521f983b7f51e1090e538cadcd406560e",
-  "source_file_sha256": "e98acebdc2271b1c1ef9850846a2d506af046a87cf18a9b8e7cd3135cb6cc6a5",
-  "frozen_repository_head": "76f3efe0619027b7d61c785f54ce56f33fdac6e6",
-  "exact_family_count": 51294,
-  "structural_family_count": 49872,
+  "frozen_universe_sha256": "396131cb74f2950a1292f13fac98df2dbe767c67e2730e596b177e1efa52e3d2",
+  "source_file_sha256": "ef00c74ce8283c597136a286bbc5a3ad5e2606d02db9530130e8bccc399e8c29",
+  "frozen_repository_head": "f2575957a414fcee0dea6f151aefa5f36410d9c2",
+  "exact_family_count": 51323,
+  "structural_family_count": 49901,
   "tests": [
     {
       "observable": "inverse_alpha",
@@ -19,7 +19,7 @@
       ],
       "conditional_window_probability": 0.0007199835400001575,
       "family_adjusted_bound": 1,
-      "matching_frozen_formula_count": 558,
+      "matching_frozen_formula_count": 560,
       "example_formula_ids": [
         "e7957c6fe14f4ec43dd973c687161c72d60303b743c122a2bc181187044b999b",
         "23bdcf80ff88b261a50b6d76af077aee3e00e8e26e8fd0b0fdfed319f195cc69",
@@ -41,7 +41,7 @@
       ],
       "conditional_window_probability": 0.0003053468520001843,
       "family_adjusted_bound": 1,
-      "matching_frozen_formula_count": 73,
+      "matching_frozen_formula_count": 74,
       "example_formula_ids": [
         "1eecece4b346149982b59d7cf66abdffbd5169085888cccf81ba56036799727e",
         "137a08f725eada8d73376466357f2ed9d6ffc2837668e914bd38b292ed4f4e8c",
@@ -63,7 +63,7 @@
       ],
       "conditional_window_probability": 0.0009015384615384536,
       "family_adjusted_bound": 1,
-      "matching_frozen_formula_count": 238,
+      "matching_frozen_formula_count": 239,
       "example_formula_ids": [
         "596d10727d3ce1834988b1a0a35c3f88e338b54775ccf0d9ba87a66d6d8ce235",
         "4ce8eaa64b598f564fd4ccd05d95da2f83842c9c2e472e122218c11ced6cce37",

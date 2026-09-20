@@ -1,0 +1,556 @@
+{
+  "status": "PASS",
+  "field": 3,
+  "single_block": {
+    "n": 9,
+    "k": 1,
+    "d": 3
+  },
+  "six_handle_code": {
+    "n": 54,
+    "k": 6,
+    "d": 3
+  },
+  "stabilizers": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      2,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      2
+    ],
+    [
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "logical_X": [
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "logical_Z": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0
+  ],
+  "identity_and_single_site_errors": 73,
+  "syndrome_classes": 61,
+  "error_pair_checks": 5329,
+  "weight_two_checks": 2304,
+  "stabilizer_rank_six_handles": 48,
+  "carrier_assignment": [
+    {
+      "copy": 0,
+      "handle": 0,
+      "block": 0,
+      "site": 0
+    },
+    {
+      "copy": 0,
+      "handle": 1,
+      "block": 1,
+      "site": 0
+    },
+    {
+      "copy": 0,
+      "handle": 2,
+      "block": 2,
+      "site": 0
+    },
+    {
+      "copy": 0,
+      "handle": 3,
+      "block": 3,
+      "site": 0
+    },
+    {
+      "copy": 0,
+      "handle": 4,
+      "block": 4,
+      "site": 0
+    },
+    {
+      "copy": 0,
+      "handle": 5,
+      "block": 5,
+      "site": 0
+    },
+    {
+      "copy": 1,
+      "handle": 0,
+      "block": 0,
+      "site": 1
+    },
+    {
+      "copy": 1,
+      "handle": 1,
+      "block": 1,
+      "site": 1
+    },
+    {
+      "copy": 1,
+      "handle": 2,
+      "block": 2,
+      "site": 1
+    },
+    {
+      "copy": 1,
+      "handle": 3,
+      "block": 3,
+      "site": 1
+    },
+    {
+      "copy": 1,
+      "handle": 4,
+      "block": 4,
+      "site": 1
+    },
+    {
+      "copy": 1,
+      "handle": 5,
+      "block": 5,
+      "site": 1
+    },
+    {
+      "copy": 2,
+      "handle": 0,
+      "block": 0,
+      "site": 2
+    },
+    {
+      "copy": 2,
+      "handle": 1,
+      "block": 1,
+      "site": 2
+    },
+    {
+      "copy": 2,
+      "handle": 2,
+      "block": 2,
+      "site": 2
+    },
+    {
+      "copy": 2,
+      "handle": 3,
+      "block": 3,
+      "site": 2
+    },
+    {
+      "copy": 2,
+      "handle": 4,
+      "block": 4,
+      "site": 2
+    },
+    {
+      "copy": 2,
+      "handle": 5,
+      "block": 5,
+      "site": 2
+    },
+    {
+      "copy": 3,
+      "handle": 0,
+      "block": 0,
+      "site": 3
+    },
+    {
+      "copy": 3,
+      "handle": 1,
+      "block": 1,
+      "site": 3
+    },
+    {
+      "copy": 3,
+      "handle": 2,
+      "block": 2,
+      "site": 3
+    },
+    {
+      "copy": 3,
+      "handle": 3,
+      "block": 3,
+      "site": 3
+    },
+    {
+      "copy": 3,
+      "handle": 4,
+      "block": 4,
+      "site": 3
+    },
+    {
+      "copy": 3,
+      "handle": 5,
+      "block": 5,
+      "site": 3
+    },
+    {
+      "copy": 4,
+      "handle": 0,
+      "block": 0,
+      "site": 4
+    },
+    {
+      "copy": 4,
+      "handle": 1,
+      "block": 1,
+      "site": 4
+    },
+    {
+      "copy": 4,
+      "handle": 2,
+      "block": 2,
+      "site": 4
+    },
+    {
+      "copy": 4,
+      "handle": 3,
+      "block": 3,
+      "site": 4
+    },
+    {
+      "copy": 4,
+      "handle": 4,
+      "block": 4,
+      "site": 4
+    },
+    {
+      "copy": 4,
+      "handle": 5,
+      "block": 5,
+      "site": 4
+    },
+    {
+      "copy": 5,
+      "handle": 0,
+      "block": 0,
+      "site": 5
+    },
+    {
+      "copy": 5,
+      "handle": 1,
+      "block": 1,
+      "site": 5
+    },
+    {
+      "copy": 5,
+      "handle": 2,
+      "block": 2,
+      "site": 5
+    },
+    {
+      "copy": 5,
+      "handle": 3,
+      "block": 3,
+      "site": 5
+    },
+    {
+      "copy": 5,
+      "handle": 4,
+      "block": 4,
+      "site": 5
+    },
+    {
+      "copy": 5,
+      "handle": 5,
+      "block": 5,
+      "site": 5
+    },
+    {
+      "copy": 6,
+      "handle": 0,
+      "block": 0,
+      "site": 6
+    },
+    {
+      "copy": 6,
+      "handle": 1,
+      "block": 1,
+      "site": 6
+    },
+    {
+      "copy": 6,
+      "handle": 2,
+      "block": 2,
+      "site": 6
+    },
+    {
+      "copy": 6,
+      "handle": 3,
+      "block": 3,
+      "site": 6
+    },
+    {
+      "copy": 6,
+      "handle": 4,
+      "block": 4,
+      "site": 6
+    },
+    {
+      "copy": 6,
+      "handle": 5,
+      "block": 5,
+      "site": 6
+    },
+    {
+      "copy": 7,
+      "handle": 0,
+      "block": 0,
+      "site": 7
+    },
+    {
+      "copy": 7,
+      "handle": 1,
+      "block": 1,
+      "site": 7
+    },
+    {
+      "copy": 7,
+      "handle": 2,
+      "block": 2,
+      "site": 7
+    },
+    {
+      "copy": 7,
+      "handle": 3,
+      "block": 3,
+      "site": 7
+    },
+    {
+      "copy": 7,
+      "handle": 4,
+      "block": 4,
+      "site": 7
+    },
+    {
+      "copy": 7,
+      "handle": 5,
+      "block": 5,
+      "site": 7
+    },
+    {
+      "copy": 8,
+      "handle": 0,
+      "block": 0,
+      "site": 8
+    },
+    {
+      "copy": 8,
+      "handle": 1,
+      "block": 1,
+      "site": 8
+    },
+    {
+      "copy": 8,
+      "handle": 2,
+      "block": 2,
+      "site": 8
+    },
+    {
+      "copy": 8,
+      "handle": 3,
+      "block": 3,
+      "site": 8
+    },
+    {
+      "copy": 8,
+      "handle": 4,
+      "block": 4,
+      "site": 8
+    },
+    {
+      "copy": 8,
+      "handle": 5,
+      "block": 5,
+      "site": 8
+    }
+  ],
+  "surface_sha256": "ca933ca97fa803ed03a6c82a08fd99c64a405abbf59f98d3eb2534bdf9d66c25",
+  "correctable_fault": "Any operator supported on the six handles of one of nine surface copies; Pauli basis factorizes to at most one error per block.",
+  "negative_control": "A weight-three logical X on three carrier copies has zero syndrome and is not a stabilizer.",
+  "scope": "Finite qutrit algebra after choosing the existing symplectic marking. Encoding is an entangled isometry, not cloning. No quantization mechanism, physical syndrome measurement, threshold, or protection from arbitrary correlated faults established.",
+  "prior": [
+    "w33_surface_hodge_transport.py",
+    "w33_BREAKTHROUGH_300_QEC_substrate_tower.py",
+    "https://arxiv.org/abs/1807.01863"
+  ]
+}

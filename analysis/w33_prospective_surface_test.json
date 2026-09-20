@@ -1,0 +1,23 @@
+{
+  "protocol": "surface-mode-ratio-v1",
+  "registered_utc": "2026-09-20T19:16:14.891839+00:00",
+  "model": "66 edge coordinates; M=m I; K=k (d1.T d1+d2 d2.T); damping diagonal in these modes",
+  "surface_sha256": "ca933ca97fa803ed03a6c82a08fd99c64a405abbf59f98d3eb2534bdf9d66c25",
+  "prediction": "omega_gap_natural_squared / omega_vertex_natural_squared = (2-sqrt(2))/12",
+  "prediction_value": 0.04881553646890874,
+  "units": "dimensionless ratio; SI seconds, metres, kg or N/m in input",
+  "acceptance": "absolute standardized residual <=3; otherwise conditional model rejected; agreement alone does not identify a TOE",
+  "required_assumptions": [
+    "uniform independently checked edge masses and stiffnesses",
+    "certified oriented surface incidence",
+    "linear small-amplitude dynamics",
+    "resolved gap and vertex modes",
+    "damping model validated independently",
+    "uncertainty includes fit and mode-dependent systematic errors"
+  ],
+  "multiplicity": 1,
+  "refitting_prediction_to_observation": false,
+  "baseline": "Unconstrained two-mode ratio; no Bayes factor assigned without a predictive baseline distribution",
+  "status": "REGISTERED_AWAITING_MEASUREMENT",
+  "scope": "Conditional engineered-substrate test. Not a prediction of a fundamental constant or a completed TOE; no unseen observations available."
+}
