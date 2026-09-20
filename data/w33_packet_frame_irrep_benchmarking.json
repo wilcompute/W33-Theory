@@ -1,0 +1,492 @@
+{
+  "schema": "w33.packet_frame_irrep_benchmarking.v1",
+  "status": "PASS_72_FRAME_IRREP_BENCHMARKING",
+  "headline": "The 72-slot Aut H(2,3) runtime frame compiles into nine exact character classes and eight present End(V9) isotypic sectors. End(V9) multiplicities are (3,1,1,0,6,3,2,6,3), giving commutant dimension 105. Central projectors are exact weighted averages of runtime conjugations; a generic covariant channel has at most 25 multiplicity-space decay eigenvalues, dropping to eight character-resolved rates if each multiplicity block is scalarized.",
+  "group": "Aut H(2,3)=S3 wr C2",
+  "order": 72,
+  "irrep_order": [
+    "1_sym",
+    "1_alt",
+    "sgn_sym",
+    "sgn_alt",
+    "std_sym",
+    "std_alt",
+    "1xsgn",
+    "1xstd",
+    "sgnxstd"
+  ],
+  "irrep_dimensions": [
+    1,
+    1,
+    1,
+    1,
+    4,
+    4,
+    2,
+    4,
+    4
+  ],
+  "V9_decomposition": {
+    "multiplicities": [
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0
+    ],
+    "formula": "1_sym + std_sym + 1xstd",
+    "dimensions": "1+4+4=9"
+  },
+  "EndV9_decomposition": {
+    "multiplicities": [
+      3,
+      1,
+      1,
+      0,
+      6,
+      3,
+      2,
+      6,
+      3
+    ],
+    "dimension": 81,
+    "commutant_dimension": 105,
+    "present_isotypic_sectors": 8,
+    "max_generic_decay_eigenvalues": 25,
+    "scalarized_character_decay_rates": 8
+  },
+  "runtime_character_classes": [
+    {
+      "class_id": 0,
+      "size": 18,
+      "slots": [
+        1,
+        3,
+        9,
+        11,
+        17,
+        19,
+        25,
+        27,
+        33,
+        35,
+        41,
+        43,
+        49,
+        51,
+        57,
+        59,
+        65,
+        67
+      ],
+      "characters": [
+        1,
+        -1,
+        -1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "class_id": 1,
+      "size": 12,
+      "slots": [
+        13,
+        15,
+        21,
+        23,
+        29,
+        31,
+        39,
+        45,
+        53,
+        55,
+        61,
+        71
+      ],
+      "characters": [
+        1,
+        -1,
+        1,
+        -1,
+        -1,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "class_id": 2,
+      "size": 12,
+      "slots": [
+        14,
+        22,
+        28,
+        36,
+        38,
+        44,
+        46,
+        52,
+        60,
+        62,
+        68,
+        70
+      ],
+      "characters": [
+        1,
+        1,
+        -1,
+        -1,
+        0,
+        0,
+        0,
+        -1,
+        1
+      ]
+    },
+    {
+      "class_id": 3,
+      "size": 9,
+      "slots": [
+        2,
+        10,
+        18,
+        26,
+        34,
+        42,
+        50,
+        58,
+        66
+      ],
+      "characters": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        -2,
+        0,
+        0
+      ]
+    },
+    {
+      "class_id": 4,
+      "size": 6,
+      "slots": [
+        4,
+        6,
+        12,
+        20,
+        30,
+        54
+      ],
+      "characters": [
+        1,
+        1,
+        -1,
+        -1,
+        0,
+        0,
+        0,
+        2,
+        -2
+      ]
+    },
+    {
+      "class_id": 5,
+      "size": 6,
+      "slots": [
+        5,
+        7,
+        37,
+        47,
+        63,
+        69
+      ],
+      "characters": [
+        1,
+        -1,
+        1,
+        -1,
+        2,
+        -2,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "class_id": 6,
+      "size": 4,
+      "slots": [
+        8,
+        16,
+        24,
+        48
+      ],
+      "characters": [
+        1,
+        1,
+        1,
+        1,
+        -2,
+        -2,
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "class_id": 7,
+      "size": 4,
+      "slots": [
+        32,
+        40,
+        56,
+        64
+      ],
+      "characters": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        -2,
+        -2
+      ]
+    },
+    {
+      "class_id": 8,
+      "size": 1,
+      "slots": [
+        0
+      ],
+      "characters": [
+        1,
+        1,
+        1,
+        1,
+        4,
+        4,
+        2,
+        4,
+        4
+      ]
+    }
+  ],
+  "projectors": [
+    {
+      "name": "1_sym",
+      "dimension": 1,
+      "V9_multiplicity": 1,
+      "EndV9_multiplicity": 3,
+      "EndV9_isotypic_rank": 3,
+      "present": true,
+      "projector_denominator": 72,
+      "projector_class_weight_numerators": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "1_alt",
+      "dimension": 1,
+      "V9_multiplicity": 0,
+      "EndV9_multiplicity": 1,
+      "EndV9_isotypic_rank": 1,
+      "present": true,
+      "projector_denominator": 72,
+      "projector_class_weight_numerators": [
+        -1,
+        -1,
+        1,
+        1,
+        1,
+        -1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "sgn_sym",
+      "dimension": 1,
+      "V9_multiplicity": 0,
+      "EndV9_multiplicity": 1,
+      "EndV9_isotypic_rank": 1,
+      "present": true,
+      "projector_denominator": 72,
+      "projector_class_weight_numerators": [
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "sgn_alt",
+      "dimension": 1,
+      "V9_multiplicity": 0,
+      "EndV9_multiplicity": 0,
+      "EndV9_isotypic_rank": 0,
+      "present": false,
+      "projector_denominator": 72,
+      "projector_class_weight_numerators": [
+        1,
+        -1,
+        -1,
+        1,
+        -1,
+        -1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "std_sym",
+      "dimension": 4,
+      "V9_multiplicity": 1,
+      "EndV9_multiplicity": 6,
+      "EndV9_isotypic_rank": 24,
+      "present": true,
+      "projector_denominator": 72,
+      "projector_class_weight_numerators": [
+        0,
+        -4,
+        0,
+        0,
+        0,
+        8,
+        -8,
+        4,
+        16
+      ]
+    },
+    {
+      "name": "std_alt",
+      "dimension": 4,
+      "V9_multiplicity": 0,
+      "EndV9_multiplicity": 3,
+      "EndV9_isotypic_rank": 12,
+      "present": true,
+      "projector_denominator": 72,
+      "projector_class_weight_numerators": [
+        0,
+        4,
+        0,
+        0,
+        0,
+        -8,
+        -8,
+        4,
+        16
+      ]
+    },
+    {
+      "name": "1xsgn",
+      "dimension": 2,
+      "V9_multiplicity": 0,
+      "EndV9_multiplicity": 2,
+      "EndV9_isotypic_rank": 4,
+      "present": true,
+      "projector_denominator": 72,
+      "projector_class_weight_numerators": [
+        0,
+        0,
+        0,
+        -4,
+        0,
+        0,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "name": "1xstd",
+      "dimension": 4,
+      "V9_multiplicity": 1,
+      "EndV9_multiplicity": 6,
+      "EndV9_isotypic_rank": 24,
+      "present": true,
+      "projector_denominator": 72,
+      "projector_class_weight_numerators": [
+        0,
+        0,
+        -4,
+        0,
+        8,
+        0,
+        4,
+        -8,
+        16
+      ]
+    },
+    {
+      "name": "sgnxstd",
+      "dimension": 4,
+      "V9_multiplicity": 0,
+      "EndV9_multiplicity": 3,
+      "EndV9_isotypic_rank": 12,
+      "present": true,
+      "projector_denominator": 72,
+      "projector_class_weight_numerators": [
+        0,
+        0,
+        4,
+        0,
+        -8,
+        0,
+        4,
+        -8,
+        16
+      ]
+    }
+  ],
+  "protocol": [
+    "For each of the nine character classes, average the measured conjugation response over its listed runtime slots.",
+    "For irrep lambda, combine those nine class averages with numerator d_lambda*chi_lambda(C) and common denominator 72.",
+    "Fit dynamics inside each present multiplicity block; without an extra depolarizing assumption there can be up to 25 decay eigenvalues, not merely eight.",
+    "If randomized compiling/twirling scalarizes each multiplicity block, fit one decay rate per present isotypic sector (eight total)."
+  ],
+  "boundary": "Exact finite representation/control compilation. Character-projector coefficients are signed post-processing weights, not probabilities. Laboratory use still requires calibrated or virtual implementations of all listed frame permutations and a SPAM-aware estimator.",
+  "parents": [
+    "data/w33_packet_frame_symmetry_tomography.json",
+    "data/w33_qutrit_hamming_cz_frame_bundle.json"
+  ],
+  "checks": {
+    "irreps9": true,
+    "character_orthogonality": true,
+    "V9_1_4_4": true,
+    "EndV9_dim81": true,
+    "commutant105": true,
+    "runtime_classes9": true,
+    "present_sectors8": true,
+    "max_decays25": true
+  }
+}
