@@ -30,6 +30,7 @@ to eight character-resolved rates.
 """
 from __future__ import annotations
 import itertools,json
+from fractions import Fraction as F
 from collections import Counter,defaultdict
 from pathlib import Path
 
@@ -129,11 +130,21 @@ def main(write=True):
     irreps=[]
     for i,(name,d,_) in enumerate(IR):
         m=mEnd[i]
+        sum_nums=[d*c['characters'][i] for c in classes]
+        avg_nums=[d*c['size']*c['characters'][i] for c in classes]
+        l1=F(sum(abs(x) for x in avg_nums),72)
+        total_abs=sum(abs(x) for x in avg_nums)
+        shot=[str(F(abs(x),total_abs)) if total_abs else '0' for x in avg_nums]
         irreps.append({
           'name':name,'dimension':d,'V9_multiplicity':mV[i],'EndV9_multiplicity':m,
           'EndV9_isotypic_rank':d*m,'present':m>0,
           'projector_denominator':72,
-          'projector_class_weight_numerators':[d*c['characters'][i] for c in classes]})
+          'projector_class_sum_weight_numerators':sum_nums,
+          'projector_class_average_weight_numerators':avg_nums,
+          'class_average_l1_overhead':str(l1),
+          'bounded_variance_overhead':str(l1*l1),
+          'optimal_equal_variance_shot_fractions':shot,
+          'nonzero_character_classes':sum(x!=0 for x in avg_nums)})
     assert sum(x['EndV9_isotypic_rank'] for x in irreps)==81
 
     present=[x for x in irreps if x['present']]
@@ -158,10 +169,13 @@ def main(write=True):
       'projectors':irreps,
       'protocol':[
         'For each of the nine character classes, average the measured conjugation response over its listed runtime slots.',
-        'For irrep lambda, combine those nine class averages with numerator d_lambda*chi_lambda(C) and common denominator 72.',
+        'For irrep lambda, combine class AVERAGES with numerator d_lambda*|C|*chi_lambda(C) and common denominator 72. (For class SUMS the numerator is d_lambda*chi_lambda(C).)',
         'Fit dynamics inside each present multiplicity block; without an extra depolarizing assumption there can be up to 25 decay eigenvalues, not merely eight.',
         'If randomized compiling/twirling scalarizes each multiplicity block, fit one decay rate per present isotypic sector (eight total).'],
-      'boundary':'Exact finite representation/control compilation. Character-projector coefficients are signed post-processing weights, not probabilities. Laboratory use still requires calibrated or virtual implementations of all listed frame permutations and a SPAM-aware estimator.',
+      'sampling':{'bound':'For bounded unit-variance class estimators and a fixed total shot budget N, optimal allocation is proportional to the absolute class-average weights; the variance bound is gamma_lambda^2/N with gamma_lambda=sum_C |d|C|chi(C)|/72.',
+                  'present_sector_l1_overheads':{x['name']:x['class_average_l1_overhead'] for x in present},
+                  'present_sector_variance_overheads':{x['name']:x['bounded_variance_overhead'] for x in present}},
+      'boundary':'Exact finite representation/control compilation. Character-projector coefficients are signed post-processing weights, not probabilities. The variance result is a worst-case bounded-outcome allocation rule, not a device-specific shot prediction. Laboratory use still requires calibrated or virtual implementations and SPAM-aware decay fitting.',
       'parents':['data/w33_packet_frame_symmetry_tomography.json','data/w33_qutrit_hamming_cz_frame_bundle.json'],
       'checks':{'irreps9':True,'character_orthogonality':True,'V9_1_4_4':True,'EndV9_dim81':True,
                 'commutant105':True,'runtime_classes9':True,'present_sectors8':True,'max_decays25':True}}
