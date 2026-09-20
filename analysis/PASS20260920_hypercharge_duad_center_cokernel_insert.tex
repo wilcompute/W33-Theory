@@ -1,0 +1,89 @@
+\subsection{Hypercharge as a W33 duad vector and the five-dimensional neutral center cokernel}
+\label{sec:20260920-hypercharge-duad-center-cokernel}
+
+The flagship global Standard-Model-side root algebra is
+\[
+A_2+A_1+\mathfrak u(1)^5,
+\]
+and the orthogonal rank-five lattice inside \(E_8\) is exactly \(A_5\).
+With standard \(A_5\) coordinates
+\[
+Q(A_5)=\{x\in\mathbb Z^6:\sum_i x_i=0\},
+\]
+the canonical hypercharge vector is
+\[
+Y=-\omega_1=\frac16(-5,1,1,1,1,1),
+\qquad
+Y^2=\frac56.
+\]
+
+The existing \(S_6\)-duad gauge module admits the normalized intertwiner
+\[
+\Psi(x)_{\{i,j\}}=\frac{x_i+x_j}{2}.
+\]
+Unlike the earlier unnormalized map, \(\Psi\) is an isometry: the five simple
+roots \(e_i-e_{i+1}\) have exactly the \(A_5\) Cartan Gram matrix in the
+fifteen-duad carrier.  Hypercharge therefore has the explicit W33-coordinate
+form
+\[
+\Psi(Y)_{\{0,i\}}=-\frac13\quad(i=1,\ldots,5),
+\qquad
+\Psi(Y)_{\{i,j\}}=\frac16\quad(1\le i<j\le5).
+\]
+Thus the discriminant generator is a five-versus-ten duad pattern.  Every
+syntheme sum vanishes, \(\|\Psi(Y)\|^2=5/6\), and
+\[
+6\Psi(Y)=(-2)^5(+1)^{10}
+\]
+in the star/nonstar ordering.  Its stabilizer in \(S_6\) is exactly the
+\(S_5=W(A_4)\) fixing the distinguished vertex.
+
+The hypercharge-orthogonal integral sublattice is
+\[
+A_4=\{x_0=0,\ \sum_{i=1}^{5}x_i=0\}.
+\]
+Writing
+\[
+y_i=\Psi(x)_{\{0,i\}}=\frac{x_i}{2},
+\]
+this four-dimensional sector is simply
+\[
+\sum_{i=1}^{5}y_i=0,
+\]
+and all ten nonstar coordinates are reconstructed by
+\[
+\Psi(x)_{\{i,j\}}=y_i+y_j.
+\]
+Hence the four extra Abelian directions in the flagship have an exact W33
+realization as zero-sum fluctuations on the five-edge duad star.
+
+Independently, the physical \(E_8\) holonomy bracket tensor gives the neutral
+sector
+\[
+\dim\mathfrak g_{000}=16,
+\qquad
+\operatorname{rank}[\mathfrak g_{000},\mathfrak g_{000}]=11.
+\]
+Its five-dimensional cokernel is therefore precisely the center
+\(\mathfrak u(1)^5\).  The lattice result refines this as
+\[
+16=11+1+4,
+\]
+namely
+\[
+\mathfrak{su}(3)\oplus\mathfrak{su}(2)
+\quad+\quad
+\mathfrak u(1)_Y
+\quad+\quad
+\mathfrak u(1)^4_{A_4}.
+\]
+A hypercharge-preserving singlet vacuum removes all extra Abelian factors only
+if its charge projections span rank four on this \(A_4\) sector.
+
+There is an important cardinality firewall.  The five duads in the
+hypercharge star have natural stabilizer \(S_5\), whereas the five-state
+\(CZ_3\) zero-phase cross has classical frame stabilizer \(D_8\).  Their equal
+size does not define a canonical intertwiner.
+
+The executable certificate is
+\texttt{data/w33\_hypercharge\_duad\_center\_cokernel.json}.
