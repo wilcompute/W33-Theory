@@ -168,7 +168,6 @@ def main(write=True):
         'ordered_products':324,'nonzero_products':324,'surjective_products':284,
         'deficient_products':40,'deficiency_distribution':{str(k):v for k,v in sorted(by_def.items())},
         'neutral_neutral':nn},
-      'deficient_products':deficient,
       'rank_tensor_symmetry':{
         'group':'C2 x C2','action':'independent inversion of rho and W3 C3 coordinates',
         'matrices_mod3':[list(M) for M in mats],'deficient_orbits':orbits,'orbit_count':13},
