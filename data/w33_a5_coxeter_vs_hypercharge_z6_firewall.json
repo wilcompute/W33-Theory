@@ -1,0 +1,50 @@
+{
+  "schema": "w33.a5_coxeter_vs_hypercharge_z6_firewall.v1",
+  "status": "PASS_DISTINCT_A5_Z6_STRUCTURES",
+  "headline": "The A5 discriminant Z6 carrying hypercharge and the A5 Coxeter C6 are exact but distinct structures. The Coxeter element has order6 on the A5 root module yet acts trivially on P(A5)/Q(A5)=Z6; physical inner-torus holonomies fix the A5 Cartan complement pointwise, whereas the Coxeter powers have fixed dimensions 0,1,2,5. No action-level intertwiner can identify them.",
+  "discriminant_Z6": {
+    "group": "P(A5)/Q(A5) ~= Z/6",
+    "generator": "[omega1]; flagship Y=-omega1",
+    "coxeter_action_on_discriminant": "identity",
+    "explicit_witness": "c(omega1)-omega1 is an A5 root",
+    "witness_norm2": "2"
+  },
+  "coxeter_C6": {
+    "element": "c=(0 1 2 3 4 5)",
+    "order": 6,
+    "eigenphases": "2*pi*k/6, k=1..5",
+    "fixed_dimensions_by_power": {
+      "1": 0,
+      "2": 1,
+      "3": 2,
+      "6": 5
+    }
+  },
+  "physical_holonomy_C6": {
+    "type": "product of commuting inner torus automorphisms of E8",
+    "action_on_rank5_A5_Cartan": "identity",
+    "fixed_dimensions_by_power": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "6": 5
+    }
+  },
+  "no_go": {
+    "same_action_on_A5": false,
+    "reason": "fixed-space dimensions disagree already for powers 1,2,3",
+    "safe_common_structure": "the same A5 lattice supports both discriminant gluing and an independent Weyl Coxeter action"
+  },
+  "physics_reading": "The SM global Z6 is a center/discriminant quotient, not a six-step dynamical rotation. Any Floquet use of the Coxeter six-cycle must be presented as a separate control symmetry, not as the physical hypercharge-center kernel.",
+  "parents": [
+    "data/w33_a5_duad_gauge_intertwiner.json",
+    "data/w33_e8_holonomy_c3xc6_factorization.json"
+  ],
+  "checks": {
+    "coxeter_order6": true,
+    "coxeter_trivial_on_discriminant": true,
+    "coxeter_fixed_0_1_2_5": true,
+    "physical_torus_fixes_Cartan5": true,
+    "action_identification_killed": true
+  }
+}
