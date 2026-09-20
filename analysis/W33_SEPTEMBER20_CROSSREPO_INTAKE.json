@@ -1,0 +1,3628 @@
+{
+  "schema": "w33.september20.crossrepo-intake.v1",
+  "coverage": "All net diff paths inventoried and Python/JSON structurally parsed. Targeted semantic reading; no claim of full validation of all incoming theorems.",
+  "repositories": [
+    {
+      "repo": "w33",
+      "revision_range": "3fe34a872..0d1d014d6",
+      "files": [
+        {
+          "path": ".github/workflows/w33_manuscript_page_audit.yml",
+          "added": 75,
+          "removed": 0,
+          "bytes": 3286,
+          "sha256": "525478cc8c45a21ec58bc2e3bc26f03b51065cbb2fd49ee3263614c3ded4a0d3",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": ".github/workflows/w33_punctured_hesse_packet_group.yml",
+          "added": 63,
+          "removed": 0,
+          "bytes": 3289,
+          "sha256": "6c7a5f54fd77a5b1ad8b85b7a5d809fb0e691158056e08047a2487ebdbb447af",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "RESULTS_INDEX.md",
+          "added": 424,
+          "removed": 369,
+          "bytes": 1956224,
+          "sha256": "758643e31a990349f50072babc86981386a37d3ea90fb1f6fc5b4de32dd3cdb2",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260915_execute_all5_pauli_stack.md",
+          "added": 130,
+          "removed": 0,
+          "bytes": 6653,
+          "sha256": "3eb859dbe9ba87180a0305acc880c0f137b942c6200f057fe876d33adc131c92",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260915_execute_all5_pauli_stack_insert.tex",
+          "added": 48,
+          "removed": 0,
+          "bytes": 4162,
+          "sha256": "878d5e7590e74d8c4db81168c5168d42495cb61c65f369cc820c1ad86f0ec4a8",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260916_execute_all5_intertwiner_magic_closure.md",
+          "added": 147,
+          "removed": 0,
+          "bytes": 7061,
+          "sha256": "191ec8fc79f1d82c1a7d8022e9408df30005ea268e678209473e1ecbd2d28d19",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260916_execute_all5_intertwiner_magic_closure_insert.tex",
+          "added": 47,
+          "removed": 0,
+          "bytes": 4321,
+          "sha256": "7da3ba5dab84debd3a1ef37b334e756e8d339b9e71a4ac18ea9eaf08df6ed515",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260916_execute_all5_sector_flatness_decoder_quartic.md",
+          "added": 109,
+          "removed": 0,
+          "bytes": 6511,
+          "sha256": "a17fab60dd2d9302fd271a2c957a8c2547eada005d7b6b7e56e0465615f9f868",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260916_execute_all5_sector_flatness_decoder_quartic_insert.tex",
+          "added": 50,
+          "removed": 0,
+          "bytes": 4694,
+          "sha256": "b9bc9f39fce1f99d7657df3ebbc816c22d6a6e92f682c2177e95fc80a4c35112",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260916_suzuki_e6_instanton_qc_frontier.md",
+          "added": 170,
+          "removed": 0,
+          "bytes": 7935,
+          "sha256": "72e63bb9c7ef22b0b873e6e7550fefc2e1fad0623d6e9bcff0d19eb6c69adcce",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260916_suzuki_e6_instanton_qc_frontier_insert.tex",
+          "added": 65,
+          "removed": 0,
+          "bytes": 5300,
+          "sha256": "13ede25ddeeec4be516d4f52ae56cb2c436a60a0790969d8666bb1735aa917bf",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260917_controlled_det_outer_coherence_insert.tex",
+          "added": 73,
+          "removed": 0,
+          "bytes": 3148,
+          "sha256": "7a00a2974392e6f47b3c60d798897f0ee1cbbcaa1f87621abb8156ee20144693",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260917_det_matroid_apartment_bridge_insert.tex",
+          "added": 88,
+          "removed": 0,
+          "bytes": 3651,
+          "sha256": "c660ddfac74b534891831c2f606a556f1ea98284cc5076edb1a19adba9ec6c17",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260917_det_phase_outer_s3_closure_insert.tex",
+          "added": 47,
+          "removed": 0,
+          "bytes": 1996,
+          "sha256": "fbe8fec9567b020265ab6e5747c2e7d9a6366c532ce18aa750c62c6468642436",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260917_e6_involution_36_45_reconstruction_insert.tex",
+          "added": 93,
+          "removed": 0,
+          "bytes": 3672,
+          "sha256": "31738b46f01a1d022a2b70f25681c18e0cd265afa7d7dc15a263c3b2b3587190",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260917_e6_involution_ladder_flags_insert.tex",
+          "added": 73,
+          "removed": 0,
+          "bytes": 2762,
+          "sha256": "2b7116da18d51cdf83b9aa71bf84167527d7f6933ef6fc631e8e0184077d8430",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260917_execute_all5_affine_vacuum_magic_decoder_dark15.md",
+          "added": 152,
+          "removed": 0,
+          "bytes": 7868,
+          "sha256": "df7494aa973b791fc0b6bd7b7faca9787514f4c5ad8cb871168188108537ccb3",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260917_execute_all5_affine_vacuum_magic_decoder_dark15_insert.tex",
+          "added": 51,
+          "removed": 0,
+          "bytes": 4702,
+          "sha256": "de44069c96de0fb7f57efdc6a52654a325e509591f1192cd7acaeb48ab89ab39",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260917_execute_all5_crossrepo_closure_insert.tex",
+          "added": 184,
+          "removed": 0,
+          "bytes": 7522,
+          "sha256": "8a6cd97b11ecb6d348babd7c2da40364cd8dabe6ee71216a7585479280ff50e2",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260917_projective_basis_two_trit_classifier_insert.tex",
+          "added": 69,
+          "removed": 0,
+          "bytes": 3222,
+          "sha256": "b09933d7d252f70fb3825c0a10cbfe1d25c0c25e755658ceee6da32acf92b97d",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260917_suzuki_kernel_e6_shells_insert.tex",
+          "added": 78,
+          "removed": 0,
+          "bytes": 3530,
+          "sha256": "d14312c0b8136b513421f9379892bffe6efbe278b8830db8f97a695e43da3b8d",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260917_suzuki_local_e6_outer_completion_insert.tex",
+          "added": 87,
+          "removed": 0,
+          "bytes": 3910,
+          "sha256": "c67b982a0b4edc63aa41fa232f35e8ab86f9eb74df0df55d3580edfbb0498b43",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260917_suzuki_outer_heisenberg_sector_swap_insert.tex",
+          "added": 67,
+          "removed": 0,
+          "bytes": 2618,
+          "sha256": "37924cbecffa54a59d56351533faadd7021c80252c526c0fda19e51e377846c0",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260917_suzuki_w33_stabilizer_projective_quotient_insert.tex",
+          "added": 69,
+          "removed": 0,
+          "bytes": 3161,
+          "sha256": "0dd282d6acf55189e56a837442642c933440235ad69404f68d221dc65fc76767",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260918_benchmark_twoinv_transducer_s3_insert.tex",
+          "added": 93,
+          "removed": 0,
+          "bytes": 3695,
+          "sha256": "4875dab819e212704e43e68944da320c8184f7b0546d92e5d2daf85f6aa082da",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260918_cz_su5_allq_insert.tex",
+          "added": 86,
+          "removed": 0,
+          "bytes": 2862,
+          "sha256": "c6e9ca7bd18d9cc6bb5419908fa874282b929a81ab703b5ce4df943b6d34a1cc",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260918_det17_outerrail_z6_correction_insert.tex",
+          "added": 76,
+          "removed": 0,
+          "bytes": 3496,
+          "sha256": "f04e420b3ab1e050e408e9182ca32dcf9db608622827d5fa60fb566e04eaf0be",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260918_e8_cz_parity_root_lift_insert.tex",
+          "added": 25,
+          "removed": 0,
+          "bytes": 1556,
+          "sha256": "610257f35cd54b07bdf6a782392ab3f859627923e31529efb1ed75cf3b5e0c8f",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260918_five_plus_three_insert.tex",
+          "added": 102,
+          "removed": 0,
+          "bytes": 3223,
+          "sha256": "23c5f4caf430728e959fcfcfde245755c64b4b5a8e69a8a34bde838f8f7dd84c",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260918_optimal_det_rail_c2_boundary_insert.tex",
+          "added": 91,
+          "removed": 0,
+          "bytes": 3264,
+          "sha256": "5e3f01916fc4cb60ba66278fbca5204602a343f79fe488de5492095a60b9687a",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260918_physical_e8_holonomy_insert.tex",
+          "added": 69,
+          "removed": 0,
+          "bytes": 2587,
+          "sha256": "c618cb241b437ca6ca9b8a9f16b06f71610084b3d6ac5e684406c4aac9723a59",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260919_e8_a8_selector_holonomy_triple_insert.tex",
+          "added": 29,
+          "removed": 0,
+          "bytes": 1666,
+          "sha256": "e072f59912694bc9a643ff6f7afe129e767fcf5c583c29242a0e3f8323e78486",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260919_holonomy_joint_centralizer_scope_insert.tex",
+          "added": 21,
+          "removed": 0,
+          "bytes": 1375,
+          "sha256": "f42ee9fe38cafd90e28622e175754e6ede772aea76a52c4ce05eef0ff77af25f",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260919_packet18_external_holonomy_insert.tex",
+          "added": 51,
+          "removed": 0,
+          "bytes": 2410,
+          "sha256": "65a3af17393f85db1d7664c4effda3f263f83b47212a52dc3227ba6d273db1ea",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260919_punctured_hesse_packet_group_insert.tex",
+          "added": 37,
+          "removed": 0,
+          "bytes": 2290,
+          "sha256": "000913f84e3f0ac78419107f045982d612411914d35a95ba0b5690012a7143cc",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260919_qutrit_hamming_cross_incidence_insert.tex",
+          "added": 91,
+          "removed": 0,
+          "bytes": 2446,
+          "sha256": "ac1468388142998b2f202b568728b85c5d11d5352090bc27b500e0ca2ecab7fc",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260919_qutrit_hamming_cz_frame_bundle_insert.tex",
+          "added": 74,
+          "removed": 0,
+          "bytes": 2367,
+          "sha256": "e59c90e53e0d213899a1f708968b5cf8473e649999dc733904c163a0b5134cba",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS5691_5698_physics_ym_duality_ramanujan_insert.tex",
+          "added": 23,
+          "removed": 0,
+          "bytes": 2895,
+          "sha256": "e8e6e8b204f1771feae1bbacc90d59988d083b703aa0f0ee14faf6e279f771ef",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS7146_7153_exact_q9_pgl2_hexad_code_insert.tex",
+          "added": 1,
+          "removed": 1,
+          "bytes": 4412,
+          "sha256": "8bb7993786a44fa5c821108b4ded94a280557f429a200724268a3f8e86999397",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/W33_APARTMENT_DETERMINANT_PHASE_BRIDGE.md",
+          "added": 139,
+          "removed": 0,
+          "bytes": 3303,
+          "sha256": "6d68787b2ae45df3bbe438ff537b35b5c4056a03284fb03d82ed56e3da5f1073",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/W33_CURRENT_FRONTIER_MANIFEST.tex",
+          "added": 1,
+          "removed": 0,
+          "bytes": 7625,
+          "sha256": "813f0d96774fc6a0c344b35b2bfd53f346ef29b8ce10dab8844352ddcd4d9b3f",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/W33_CZ_HASHIMOTO_ORBIT_WELD.md",
+          "added": 27,
+          "removed": 0,
+          "bytes": 3104,
+          "sha256": "582d20a385d3d839974e614e8ab357b5452c1d052e7c65311b51d55ee6af3a16",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/W33_H1_DETERMINANT_MATROID_BASIS_PHASE.md",
+          "added": 169,
+          "removed": 0,
+          "bytes": 3712,
+          "sha256": "dbcc417051aa098b5bca0de860414e3d60950fff80646460d1f2f2b40d88ac4e",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/W33_SHARED_FRONTIER_TAIL.tex",
+          "added": 27,
+          "removed": 0,
+          "bytes": 7378,
+          "sha256": "c39bd311b62311156acd11442d04528394afdb5d26ca907264450fab2e1c34bb",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/w33_1458_mode_photonic_transducer_spec.py",
+          "added": 96,
+          "removed": 0,
+          "bytes": 4709,
+          "sha256": "935421a40fba7dbacee774c7adbf70c3bf4cafcb8a6c118249276d24b4599b15",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_a5_coxeter_vs_hypercharge_z6_firewall.py",
+          "added": 107,
+          "removed": 0,
+          "bytes": 4704,
+          "sha256": "9b0742666aafd72892e139aa12201939def8f2ac379a457d705d267d59c407b2",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_a5_duad_gauge_intertwiner.py",
+          "added": 157,
+          "removed": 0,
+          "bytes": 6302,
+          "sha256": "9ee0d7d99c15f203f0bad5dbbf183ecfe097bb5e9cf7bb336dfb011421c1d0bd",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_a8_cubed_niemeier_glue.py",
+          "added": 54,
+          "removed": 0,
+          "bytes": 4523,
+          "sha256": "75f6eae2aa997b023271719e7ec0d8e67be531085604778c69421fead4d8b84c",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_a8_cubed_weight2_pauli_interactions.py",
+          "added": 112,
+          "removed": 0,
+          "bytes": 6167,
+          "sha256": "631511454b46ecc1d182f5882757a25fd97480537bd47aa0ef34e4aa51a91336",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_a8cubed_affine_return_universality.py",
+          "added": 68,
+          "removed": 0,
+          "bytes": 4579,
+          "sha256": "270d7073b33360a177730fb5289ede2c28b382896ac8e03b672aaba429dceeaa",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_a8cubed_monster_orbifold_surgery_obstruction.py",
+          "added": 60,
+          "removed": 0,
+          "bytes": 4375,
+          "sha256": "f70b5cfd991ce6b1f93bd1308ec8980976a15f32567daab3d40e910ae1fa8f50",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_a8cubed_monster_s3_twining.py",
+          "added": 146,
+          "removed": 0,
+          "bytes": 6522,
+          "sha256": "34cff0866e3881d2133eef7d1cc6a89eb44ff0a246c0d8ec07c25e7bb597f9ed",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_a8cubed_sector_return_monodromy.py",
+          "added": 85,
+          "removed": 0,
+          "bytes": 4679,
+          "sha256": "351b9ee8a76b1da02c86a1a6aabf344155370ddb91417c6785aeb578408b8d4b",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_allq_cz_context_affine_translation.py",
+          "added": 136,
+          "removed": 0,
+          "bytes": 5601,
+          "sha256": "66e2fa09d53c4d53c7727f28bd0c694e57984c67fa3d07add71a763bedbe925a",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_allq_cz_orbit_adjoint_weld.py",
+          "added": 179,
+          "removed": 0,
+          "bytes": 7124,
+          "sha256": "b8f45c680cff81bd386036e89608a3d553fded64b1b0d02f3df9557ae28d4507",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_architecture_control_plane_abi.py",
+          "added": 108,
+          "removed": 0,
+          "bytes": 19183,
+          "sha256": "9610d775df80fe11055d4afe17eaa17fc44e783a8d1522eca451747caa851db0",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_controlled_det_17term_compiler.py",
+          "added": 105,
+          "removed": 0,
+          "bytes": 4452,
+          "sha256": "eaab107300b3dc53debc5e9cd03f3b50356df9fd22a946e2aabe3e1f98b3279f",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_controlled_det_17term_optimality.py",
+          "added": 59,
+          "removed": 0,
+          "bytes": 3260,
+          "sha256": "738af5d9f0943dff918952f042c2ec74b4f29ecd3d5e161305b0b81b8581cb55",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_controlled_det_logical_gate.py",
+          "added": 68,
+          "removed": 0,
+          "bytes": 4294,
+          "sha256": "41c202bc65ce3cfb1cfa025ab9e5a91a2452c3fb03fdaed310df4e54d0136197",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_controlled_det_two_invariant_compiler.py",
+          "added": 78,
+          "removed": 0,
+          "bytes": 3520,
+          "sha256": "83b1091640f26ca48dc0a90f088631bc6aae2a7f85e3c421810faeba73552b3e",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_cz_hashimoto_orbit_weld.py",
+          "added": 281,
+          "removed": 0,
+          "bytes": 10824,
+          "sha256": "80f46b9dc31ee7240d85f806751387c995b152846df53e74fe2827ec97a496bc",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_cz_parity_oriented_c6.py",
+          "added": 210,
+          "removed": 0,
+          "bytes": 7841,
+          "sha256": "14d81dd141ef309051fd9a6db76bbb25670a98cd5d9266e6cd848c28c6d36931",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_cz_zero_phase_su5_hypercharge.py",
+          "added": 118,
+          "removed": 0,
+          "bytes": 5336,
+          "sha256": "c6af47797af72c3c63014b66072bbbd9c2bd789d5fbd3d18763e5d8891aa50a6",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_dark15_first_nonlinear_bridge.py",
+          "added": 97,
+          "removed": 0,
+          "bytes": 4898,
+          "sha256": "162cfe83b524cd87a84e99ac3cae9635616621f441d5a9b9b4260d41cc4114b0",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_det_phase_doubled_logical_reconciliation.py",
+          "added": 103,
+          "removed": 0,
+          "bytes": 5088,
+          "sha256": "7eafd7284b4990004938ca3f71938ead1be5458dd3fb53b1211207b21770c554",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_det_phase_outer_s3_closure.py",
+          "added": 72,
+          "removed": 0,
+          "bytes": 3640,
+          "sha256": "8cd5352af9ffcfe374eb9d8bf85d8d09ef679d7847bc685627807d121af0b6e6",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_det_phase_scalar_no_go.py",
+          "added": 32,
+          "removed": 0,
+          "bytes": 2147,
+          "sha256": "907d77e89af3fcbc12a0c8a89e49b94f56b0317f96a9b79d99423edc2843aaa9",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_det_single_window_hamiltonian.py",
+          "added": 67,
+          "removed": 0,
+          "bytes": 2851,
+          "sha256": "d066e691c61fc969476a33fc73ecaf9eff7fe30f320664c93f6195afe487a6eb",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_doubled_central_character_logical_qubit.py",
+          "added": 58,
+          "removed": 0,
+          "bytes": 4320,
+          "sha256": "53f5d39148775c6fe490a9c7cc0708983555023228df96c78292d139db1766aa",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_e6_cubic_h1_is_sp4_adjoint.py",
+          "added": 138,
+          "removed": 0,
+          "bytes": 6596,
+          "sha256": "8dfbf74d4426bec21e821dea19ce518237e69eaaae114e8e760d06fafc12ecd0",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_e6_degree2_selected270_bridge.py",
+          "added": 93,
+          "removed": 0,
+          "bytes": 5124,
+          "sha256": "c53d76bd0feee5dc2af64d6a849504103ebc0d3814449d49d75a4ca8af2ce7f0",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_e6_gauge_three_qutrit_pauli_firewall.py",
+          "added": 96,
+          "removed": 0,
+          "bytes": 4696,
+          "sha256": "0eed88d2f9f8061fdae81b9bab23dc8e69474afc7b21dd5965033b5640b16da0",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_e6_involution_full_w33_dictionary.py",
+          "added": 49,
+          "removed": 0,
+          "bytes": 3546,
+          "sha256": "480700e087619df3d51714f534c7b9074878d4bcf5c1c0127bd00539caa17675",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_e6_involution_ladder_flags.py",
+          "added": 115,
+          "removed": 0,
+          "bytes": 6304,
+          "sha256": "f1f14de1d75b1f4431a1668465976119722be4ecda955a2e7d26a523d12cd40f",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_e6_involution_reconstructs_double_six_tritangent.py",
+          "added": 225,
+          "removed": 0,
+          "bytes": 10057,
+          "sha256": "d5ee6da768dbcc6865437c9965b6e3247521c10a777f26d76d45386f4bfc2130",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_e6_tritangent_pauli_holonomy_frontier.py",
+          "added": 74,
+          "removed": 0,
+          "bytes": 4811,
+          "sha256": "18113bab6f09832da473818ee25a80f9cfe84ed1fe51713c5ca80ad621d4eae1",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_e8_a8_selector_holonomy_triple_intersection.py",
+          "added": 173,
+          "removed": 0,
+          "bytes": 8171,
+          "sha256": "187eac9f6a3fa995f5a50a69c5df70d28b9d4e88316d08bd8f56cf6b4751dac7",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_e8_bracket_deficiency_formula.py",
+          "added": 135,
+          "removed": 0,
+          "bytes": 5224,
+          "sha256": "41f7da67d4d3ed253168821c0cd200eb84756a1aadc6eb9d127433d8282c8753",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_e8_c3_quotient_signed_pauli_cover.py",
+          "added": 215,
+          "removed": 0,
+          "bytes": 9062,
+          "sha256": "066d1e9a321586b744c175996e0f307832fab0a3ee5764e662e4137b915d3844",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_e8_cz_parity_c6_root_lift.py",
+          "added": 254,
+          "removed": 0,
+          "bytes": 10625,
+          "sha256": "a7e2ce70c4e0a244518e349130440855476edc481ecb4387beb02f3781ee5a3b",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_e8_holonomy_bracket_rank_tensor.py",
+          "added": 182,
+          "removed": 0,
+          "bytes": 8368,
+          "sha256": "20073de5d5ca5099e9705a4523b9e783cbc2a38bd1e63278ce1ae81179cef914",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_e8_holonomy_c3xc6_factorization.py",
+          "added": 174,
+          "removed": 0,
+          "bytes": 7062,
+          "sha256": "48282b3d514ffb6306a9cd80f8133dc5b132d01f76fe741607250a82cdd9ba0a",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_e8_holonomy_packet18_homogeneous_bridge.py",
+          "added": 202,
+          "removed": 0,
+          "bytes": 8464,
+          "sha256": "621feb31de9054ef1970d667d2b8a9b8c2c4d1941b9a3d79fb9dac631b41fb96",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_e8_pauli_cocycle_lift_shard_verify.py",
+          "added": 18,
+          "removed": 0,
+          "bytes": 1000,
+          "sha256": "d06b8d67f0789e80031d2d374161daaaac44b68777af624accaa87fa117548c0",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_e8_pauli_normalizer.py",
+          "added": 106,
+          "removed": 0,
+          "bytes": 5953,
+          "sha256": "57ea89f5dfc844b39a5a3f783ca1f8082f7fd4503d9e5af8ae86facc60b650f0",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_e8_z12_to_pauli_symplectic_sign.py",
+          "added": 263,
+          "removed": 0,
+          "bytes": 9664,
+          "sha256": "609f2caffbf7b1b76f85bfcacf2c9dfd0f025d0a351d00f84a0a9e2c16824c38",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_e8cubed_leech_six_qutrit_register.py",
+          "added": 27,
+          "removed": 0,
+          "bytes": 4562,
+          "sha256": "e0a344e9c3937569ec0d44f300ab4c9142b77625dedf164bc857fd50109d6040",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_h1_adjoint_nonlinear_invariants.py",
+          "added": 144,
+          "removed": 0,
+          "bytes": 7015,
+          "sha256": "30388e4c7d4c9f8faa90cc8f1f4c550db6736e39d7c3452b811b8f7ab2f7a7c1",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_h1_det_apartment_phase_bridge.py",
+          "added": 224,
+          "removed": 0,
+          "bytes": 7563,
+          "sha256": "a14e212c824f17d69fee43563042f4d0c087d4078ab0f19d4d4793974da4cc10",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_h1_det_matroid_basis_phase.py",
+          "added": 214,
+          "removed": 0,
+          "bytes": 7527,
+          "sha256": "1c66e3bfd63326ef2f8625585bbaa15236c082d476264b51854a7a1b41b91316",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_h1_det_two_weight2_witness.py",
+          "added": 65,
+          "removed": 0,
+          "bytes": 3903,
+          "sha256": "ee1516d1e72e9e9fb9c26a7491e1764702714f8fe0fe0ecb90b73eae61d051ac",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_h1_det_weight2_coupling_no_go.py",
+          "added": 125,
+          "removed": 0,
+          "bytes": 5979,
+          "sha256": "307840fcd049b33c9fcade6178dda1bfbc2fd6c9cc87cfd6fc42fa0789201691",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_heterotic_flagship_cz_clifford_bridge.py",
+          "added": 198,
+          "removed": 0,
+          "bytes": 9104,
+          "sha256": "3be4eef51f0aea55bb759881681361f42286b1dd359d929b3f05fedd3a84fa57",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_heterotic_s3_defining_irrep_intertwiner.py",
+          "added": 82,
+          "removed": 0,
+          "bytes": 3533,
+          "sha256": "e34043b86ddb664f42cd76b79c2d0d46b9f491aa2e053098bf6ecb65f798357c",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_heterotic_s3_outer_target.py",
+          "added": 83,
+          "removed": 0,
+          "bytes": 3187,
+          "sha256": "b1928cd2e71f7a22cd8911e9ee8b4c9deab5facc15c99a4c01f116fe741b140f",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_heterotic_twisted_sector_dimension_firewall.py",
+          "added": 78,
+          "removed": 0,
+          "bytes": 3764,
+          "sha256": "128a4983e0d8a64da2ff087b73a3b7d56eac217d5a081c1c4448fd54035db487",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_heterotic_z3_729_matter_carrier.py",
+          "added": 174,
+          "removed": 0,
+          "bytes": 7179,
+          "sha256": "dc71d2d77eb3725bc66b8501ec917c8759e38526e034751d3fe26229054d0ec6",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_holonomy_joint_centralizer_scope.py",
+          "added": 66,
+          "removed": 0,
+          "bytes": 3472,
+          "sha256": "f9cb501d50d75e0e95db0d43138e78ba8468d900eca74ec1f5bb534e7e3fdd8f",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_isotropic36_rank_metric_m2.py",
+          "added": 97,
+          "removed": 0,
+          "bytes": 5238,
+          "sha256": "038aa7065f2c1efd29dd95df98d8f4b65e435c219f475229448c7d742ceec053",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_laplacian_spectral_echo.py",
+          "added": 60,
+          "removed": 0,
+          "bytes": 2720,
+          "sha256": "9f9d10050489cef049e89a6c47434068cbf165476c9820c93fb0be9db378a2b6",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_native_sector_rail_intertwiner.py",
+          "added": 95,
+          "removed": 0,
+          "bytes": 4321,
+          "sha256": "89ac0749d75288a515e6cef679c672f2c5166117ca124dcb8536a9f45a65ac14",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_nonclifford_extension_search.py",
+          "added": 52,
+          "removed": 0,
+          "bytes": 4196,
+          "sha256": "efde5df4ef685dfa141d1b252841aebcfb35134a00f352cb3bb2c954f8916e69",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_outer_complete_no_intrinsic_superselection.py",
+          "added": 50,
+          "removed": 0,
+          "bytes": 3417,
+          "sha256": "42c55e576e3d9712e45718d3505e2dfeffd870d62c5a3202d56d6588a45fc21e",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_outer_logical_photonic_rail_compiler.py",
+          "added": 76,
+          "removed": 0,
+          "bytes": 4168,
+          "sha256": "36de45782b65d4fab34fb03bf4d1f3f9f94d9d5e5c5588154bfce1d0a516d9fb",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_packet18_e8_bracket_scheduler.py",
+          "added": 163,
+          "removed": 0,
+          "bytes": 6948,
+          "sha256": "b59df6e350955a5c8f5487dd26ec26cf6460223a27cd2f53754d5a92119cb352",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_packet18_external_regular_holonomy_action.py",
+          "added": 255,
+          "removed": 0,
+          "bytes": 9434,
+          "sha256": "199a845feb82c0cfdc73a616a789b902aa345fe002e288181c3aed322ad663d5",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_packet72_cayley_causal_cone.py",
+          "added": 140,
+          "removed": 0,
+          "bytes": 5569,
+          "sha256": "0001a13e53551cfe623da7b24b2ad1f66185c244946a44189485449b6314c3c2",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_packet72_physical_c6_address_compiler.py",
+          "added": 165,
+          "removed": 0,
+          "bytes": 5888,
+          "sha256": "0a287d98012dd1c7bfd57bdc6568d8c4c01d021b6c6390e435e143254b043083",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_packet_frame_irrep_benchmarking.py",
+          "added": 185,
+          "removed": 0,
+          "bytes": 8828,
+          "sha256": "8228c325da613effa63ed4ed2e0f57366fab8e39f01980ddd03db142c2963b75",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_packet_frame_symmetry_tomography.py",
+          "added": 169,
+          "removed": 0,
+          "bytes": 7563,
+          "sha256": "20e58d1ae0ae52057c59cd64164182187940a5c416f158e59b5d998e022f0efd",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_pauli_cartans.py",
+          "added": 46,
+          "removed": 0,
+          "bytes": 3565,
+          "sha256": "1b895a898105b65fc305b97eeebf5c163c864a8e193fe0ed744a90d47b6d6671",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_physical_e8_so8_su4_u1_branching.py",
+          "added": 120,
+          "removed": 0,
+          "bytes": 5638,
+          "sha256": "0bd3d4c2df083f516a4441fcff1f9221eba6b7a7355c8b915a3c9182a9270ba4",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_physical_e8_triality_decomposition.py",
+          "added": 179,
+          "removed": 0,
+          "bytes": 7985,
+          "sha256": "83e8eda6ed33bb5d9e634607e973e2df81e202101978b17dc56e794b246458d2",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_physical_holonomy_e8_chevalley_lift.py",
+          "added": 178,
+          "removed": 0,
+          "bytes": 7900,
+          "sha256": "ca9f96bbe225d05870115d0d27765fc6ce1653d188316af4b2f8398ebd00e918",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_projective_basis_orbits_two_trit_classifier.py",
+          "added": 303,
+          "removed": 0,
+          "bytes": 10326,
+          "sha256": "50059fe2a83ff8082771a26374a68ad9dec8b6b18a4f9a8f41c03c4c7b0f9558",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_punctured_hesse_packet_group.py",
+          "added": 470,
+          "removed": 0,
+          "bytes": 17182,
+          "sha256": "0cb5e4c9bd25848e973eebaed9dc63fe757fa9c74bf46a6f25dcd5ef9e49a1e3",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_qutrit_hamming_cross_incidence.py",
+          "added": 341,
+          "removed": 0,
+          "bytes": 11410,
+          "sha256": "5578c489bd9335e2bd7e010ff91729e57d054cde843131fed0f7e4b5a25a914a",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_qutrit_hamming_cz_frame_bundle.py",
+          "added": 223,
+          "removed": 0,
+          "bytes": 8807,
+          "sha256": "bbb010050cdde80d469136fcd4a4013fde95550c4d7acee0285228a97d5a04e5",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_s3_commutator_ramsey_witness.py",
+          "added": 50,
+          "removed": 0,
+          "bytes": 2178,
+          "sha256": "2b2bdcababbeaff0693576d33369458d52dba0e4ee0980c22bee8e31f599c283",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_steiner_twin_point_line_dark_module.py",
+          "added": 80,
+          "removed": 0,
+          "bytes": 4574,
+          "sha256": "7ba33966fb385ae4024b5fb92a0b79820a0dfb8db89f04128de8f07ad6f0ac00",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_suz_outer_completes_local_e6_weyl.py",
+          "added": 180,
+          "removed": 0,
+          "bytes": 7652,
+          "sha256": "ede598394cccc82486fa683ca5f113a01694641ae5289a4d3b684c58d29a59bf",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_suz_outer_h_acts_outer_on_the_27_direct.py",
+          "added": 173,
+          "removed": 0,
+          "bytes": 7308,
+          "sha256": "7bed7aa637708fe582a1c8f158d10f14a78c2497387c09997e9308487e495470",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_suzuki_165_complex_pauli_fusion_shadow.py",
+          "added": 47,
+          "removed": 0,
+          "bytes": 3513,
+          "sha256": "d9c7087912be273e5a03844a8a4a509a5515cd97a3314ba61a12ac43383bc0fe",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_suzuki_165_fusion_frame_decoder.py",
+          "added": 52,
+          "removed": 0,
+          "bytes": 3716,
+          "sha256": "8274309bce30a6e882d1f1770d5f06185dbeddc9e7bd91d871465ac523e779bc",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_suzuki_165_quaternionic_design_shadow.py",
+          "added": 68,
+          "removed": 0,
+          "bytes": 4495,
+          "sha256": "164e57c1cb03e67d6782aabefde56e18049af362b734659785430f7e5001eca3",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_suzuki_gq48_stopping_distance.py",
+          "added": 120,
+          "removed": 0,
+          "bytes": 5668,
+          "sha256": "5225b8712f2da6a9f3dc2b53f6b601be5ceaf2cc0b3012e1b9059cc9ed029759",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_suzuki_isotropic36_affine_matrix_chart.py",
+          "added": 127,
+          "removed": 0,
+          "bytes": 6134,
+          "sha256": "8901d1cd1a8a7fb8c2b8677dbb0912f6fd927024524ae453a04976374d082ee9",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_suzuki_kernel_e6_36_objectwise_intertwiner.py",
+          "added": 109,
+          "removed": 0,
+          "bytes": 5370,
+          "sha256": "d2011457b47ab2e643380fe5b4df97923fffce598499e4c715b439e5c1814287",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_suzuki_kernel_e6_quadratic_shell_bridge.py",
+          "added": 111,
+          "removed": 0,
+          "bytes": 5815,
+          "sha256": "6eb7a2cbba9502069fe3adb6e5456dc69b78520a6987ddf1dab27872caf9d608",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_suzuki_local_165_gq48_spectral_bridge.py",
+          "added": 108,
+          "removed": 0,
+          "bytes": 5517,
+          "sha256": "7d85f5f9da1e5f83c650761861ca1d609b148f7df5b4bcf770f0d195ec42833d",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_suzuki_local_e6_inner_outer_split.py",
+          "added": 243,
+          "removed": 0,
+          "bytes": 9958,
+          "sha256": "492d8d76485c740de83396890adb2e24c0c873e57bfc61a7162e5dd87ea840de",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_suzuki_outer_heisenberg_sector_swap.py",
+          "added": 85,
+          "removed": 0,
+          "bytes": 4828,
+          "sha256": "e498d4c2130c576eba5685125093101c21609924fded71b1d1ad1bbb6cf5f788",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_suzuki_refactorization_compiler.py",
+          "added": 59,
+          "removed": 0,
+          "bytes": 3894,
+          "sha256": "129ab4d02ba9c5f34e11685cb66f43b8299065153ae69d2ef033625fb65bc45d",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_suzuki_w33_e6_incidence_tower.py",
+          "added": 239,
+          "removed": 0,
+          "bytes": 10387,
+          "sha256": "f4750548519f7989c5069304538ddc7ed735b0f19095c0301a4b40f745069e02",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_suzuki_w33_kernel_structure_reconciliation.py",
+          "added": 58,
+          "removed": 0,
+          "bytes": 3455,
+          "sha256": "c6fde9cbe10015c4e98349ba0841b50b46b37cb8cc9aac626cab120280cb8a70",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_suzuki_w33_stabilizer_projective_quotient.py",
+          "added": 252,
+          "removed": 0,
+          "bytes": 10880,
+          "sha256": "2abe380ff6f659d4ea93b72a45c1bb1fd5bb34b2c40ef89f55fbf1875398cc60",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_u52_165_e6_45_120_split.py",
+          "added": 139,
+          "removed": 0,
+          "bytes": 8209,
+          "sha256": "e774db9191eca5f3327b72e1406445f8d40ee56e06d617c9883d44f620bb36f1",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_z6ii_c2_extension_no_go.py",
+          "added": 58,
+          "removed": 0,
+          "bytes": 2912,
+          "sha256": "fd20544ce9a1c5b206d20c3ae2aa86eb28b9d4f7401f955a8bacb21503b45ecb",
+          "parse": "PASS"
+        },
+        {
+          "path": "data/atlas/2Suzd2G1-f3r12aB0.m1",
+          "added": 13,
+          "removed": 0,
+          "bytes": 189,
+          "sha256": "44c51d85e8c64e248886a9429bb90f84757c8435cb5505ff1a01be995e05d6cb",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "data/atlas/2Suzd2G1-f3r12aB0.m2",
+          "added": 13,
+          "removed": 0,
+          "bytes": 189,
+          "sha256": "7ac5c13e79e9daa051cffd01ac393fe4533946f4202b7513dd60b370160f785b",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "data/w33_1458_mode_photonic_transducer_spec.json",
+          "added": 24,
+          "removed": 0,
+          "bytes": 1282,
+          "sha256": "da5e656b9f635057ad312305583ee4bbed492bf577c2d53d4e04fb2f1a222943",
+          "parse": "PASS",
+          "schema": "w33.photonic_transducer_1458.v1",
+          "claimed_status": "PASS_MODE_COMPILER_ENGINEERING_TARGETS_NOT_MEASURED"
+        },
+        {
+          "path": "data/w33_a5_coxeter_vs_hypercharge_z6_firewall.json",
+          "added": 50,
+          "removed": 0,
+          "bytes": 2066,
+          "sha256": "6e01926cfddb1047532fb0621c4f2f70b3f7b64b892e2c0ac0300cc3386bd2f1",
+          "parse": "PASS",
+          "schema": "w33.a5_coxeter_vs_hypercharge_z6_firewall.v1",
+          "claimed_status": "PASS_DISTINCT_A5_Z6_STRUCTURES"
+        },
+        {
+          "path": "data/w33_a5_duad_gauge_intertwiner.json",
+          "added": 49,
+          "removed": 0,
+          "bytes": 1940,
+          "sha256": "31956e177b98aa99ec60661d3249abc734dcff53d27bc010282c9106aeea3f34",
+          "parse": "PASS",
+          "schema": "w33.a5_duad_gauge_intertwiner.v1",
+          "claimed_status": "PASS_A5_DUAD_INTERTWINER"
+        },
+        {
+          "path": "data/w33_a8_cubed_niemeier_glue.json",
+          "added": 16,
+          "removed": 0,
+          "bytes": 2625,
+          "sha256": "651d098ef9bedecb33a4d667ae70cf10409e0482ced934141d6b3163f468a8ff",
+          "parse": "PASS",
+          "schema": "w33.a8_cubed_niemeier_glue_intertwiner.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_a8_cubed_weight2_pauli_interactions.json",
+          "added": 42,
+          "removed": 0,
+          "bytes": 2078,
+          "sha256": "386cc967c401398eed81f7e566b0a39986a043ddf5ea8a136216c5c59afa495e",
+          "parse": "PASS",
+          "schema": "w33.a8_cubed_weight2_pauli_interactions.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_a8cubed_affine_return_universality.json",
+          "added": 36,
+          "removed": 0,
+          "bytes": 2073,
+          "sha256": "f1a5a8611dc1d476b30e8de3a2484cc8c8992bc8fd96263814ff5728b3a92ea6",
+          "parse": "PASS",
+          "schema": "w33.a8cubed_affine_return_universality.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_a8cubed_monster_orbifold_surgery_obstruction.json",
+          "added": 12,
+          "removed": 0,
+          "bytes": 1737,
+          "sha256": "c989c67bbfba5a96660e353b6274347e4b1cb85aa64e8ca6521fd4f68e298200",
+          "parse": "PASS",
+          "schema": "w33.a8cubed_monster_orbifold_surgery_obstruction.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_a8cubed_monster_s3_twining.json",
+          "added": 26,
+          "removed": 0,
+          "bytes": 1797,
+          "sha256": "d2045ecb6e9ff75526696afbc70167fbd09a2cdc40eaf20b719da0cc65f55862",
+          "parse": "PASS",
+          "schema": "w33.a8cubed_monster_s3_twining.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_a8cubed_sector_return_monodromy.json",
+          "added": 38,
+          "removed": 0,
+          "bytes": 2346,
+          "sha256": "eee1c09f6a9430b0ebd55f447b828919f46faa9da3b364afca307821e04be589",
+          "parse": "PASS",
+          "schema": "w33.a8cubed_sector_return_monodromy.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_allq_cz_orbit_adjoint_weld.json",
+          "added": 26,
+          "removed": 0,
+          "bytes": 1407,
+          "sha256": "ffdd336afe9a59a133ddaa08aa3d864c9be9351b9b742e06fcd509f24e9fe0ae",
+          "parse": "PASS",
+          "schema": "w33.allq_cz_orbit_adjoint_weld.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_controlled_det_17term_compiler.json",
+          "added": 15,
+          "removed": 0,
+          "bytes": 979,
+          "sha256": "04609770ff0bc7be5eadd574110f71e03d76322c69aa41880ec616e9f0c2677d",
+          "parse": "PASS",
+          "schema": "w33.controlled_det_17term_compiler.v1",
+          "claimed_status": "PASS_EXACT_COMPILER_PHYSICAL_PRIMITIVE_OPEN"
+        },
+        {
+          "path": "data/w33_controlled_det_17term_optimality.json",
+          "added": 17,
+          "removed": 0,
+          "bytes": 939,
+          "sha256": "3d3228ad8b15e5dcf2a12add330334ca093524f1c021c7d8d70ba93fa1467000",
+          "parse": "PASS",
+          "schema": "w33.controlled_det_17term_optimality.v1",
+          "claimed_status": "PASS_LIBRARY_OPTIMUM"
+        },
+        {
+          "path": "data/w33_controlled_det_logical_gate.json",
+          "added": 36,
+          "removed": 0,
+          "bytes": 1846,
+          "sha256": "808a1a6490c9756531824ea84352e90e921701d6d3ac35d62240b733dc15563f",
+          "parse": "PASS",
+          "schema": "w33.controlled_det_logical_gate.v1",
+          "claimed_status": "PASS_MATHEMATICAL_GATE_PHYSICAL_COUPLING_OPEN"
+        },
+        {
+          "path": "data/w33_controlled_det_two_invariant_compiler.json",
+          "added": 20,
+          "removed": 0,
+          "bytes": 744,
+          "sha256": "f387a3f147204b6d9caada70f6609d3ce5398a586daaa14b9e4b0d22526a79f1",
+          "parse": "PASS",
+          "schema": "w33.controlled_det_two_invariant_compiler.v1",
+          "claimed_status": "PASS_TWO_PRIMITIVE_RICH_LIBRARY"
+        },
+        {
+          "path": "data/w33_cz_hashimoto_orbit_weld.json",
+          "added": 166,
+          "removed": 0,
+          "bytes": 5565,
+          "sha256": "b01b59cc31554d5332a817f69c95bdaa623f580f9a68c494ef20088b08c5dd34",
+          "parse": "PASS",
+          "schema": "w33.cz_hashimoto_orbit_weld.v1",
+          "claimed_status": "PASS_GAUGE_FIXED_GATE_ROUTE_WELD"
+        },
+        {
+          "path": "data/w33_cz_parity_oriented_c6.json",
+          "added": 9,
+          "removed": 0,
+          "bytes": 1041,
+          "sha256": "fce41cd74262ae138634bf5da1c82b0cd23fedcf004f3acd653e6a3a8fcbba3e",
+          "parse": "PASS",
+          "schema": "w33.cz_parity_oriented_c6.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_cz_zero_phase_su5_hypercharge.json",
+          "added": 9,
+          "removed": 0,
+          "bytes": 1105,
+          "sha256": "e6a8637fa4c5093a89e290be7ae5b3d8a04e60b2c0775ad0b99841f0cb3a1154",
+          "parse": "PASS",
+          "schema": "w33.cz_zero_phase_su5_hypercharge.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_dark15_first_nonlinear_bridge.json",
+          "added": 13,
+          "removed": 0,
+          "bytes": 1431,
+          "sha256": "f5f58f9fafd0a200f01d8ac4ebe4b01ed21367b0de3c27cd528716d7a8b92bc5",
+          "parse": "PASS",
+          "schema": "w33.dark15_first_nonlinear_bridge.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_det_phase_doubled_logical_reconciliation.json",
+          "added": 50,
+          "removed": 0,
+          "bytes": 2688,
+          "sha256": "d25374906a82b6b340c419cd9cab74e16544f255af435fda4ca5e8fac6d7b45b",
+          "parse": "PASS",
+          "schema": "w33.det_phase_doubled_logical_reconciliation.v1",
+          "claimed_status": "PASS_WITH_COUPLING_BOUNDARY"
+        },
+        {
+          "path": "data/w33_det_phase_outer_s3_closure.json",
+          "added": 29,
+          "removed": 0,
+          "bytes": 1941,
+          "sha256": "f99fdb6b29163c4d26afca880389d46461ae54156ebd9188a14dfb13f90ce588",
+          "parse": "PASS",
+          "schema": "w33.det_phase_outer_s3_closure.v1",
+          "claimed_status": "PASS_CONDITIONAL_ON_DET_PHASE_COUPLING"
+        },
+        {
+          "path": "data/w33_det_phase_scalar_no_go.json",
+          "added": 24,
+          "removed": 0,
+          "bytes": 1153,
+          "sha256": "cd2798e53f4ecf1aac07cf6e9c87ddd3413abeaf967ada0cfeab6ae6b7c06941",
+          "parse": "PASS",
+          "schema": "w33.det_phase_scalar_no_go.v1",
+          "claimed_status": "PASS_NO_GO"
+        },
+        {
+          "path": "data/w33_det_single_window_hamiltonian.json",
+          "added": 17,
+          "removed": 0,
+          "bytes": 713,
+          "sha256": "744f2d3aaae583935d6bb714e93f975fb0a492fd912c7fdfa28d72cca660ebad",
+          "parse": "PASS",
+          "schema": "w33.det_single_window_hamiltonian.v1",
+          "claimed_status": "PASS_EXACT_ANALOG_SYNTHESIS__MICROSCOPIC_COUPLING_OPEN"
+        },
+        {
+          "path": "data/w33_doubled_central_character_logical_qubit.json",
+          "added": 41,
+          "removed": 0,
+          "bytes": 2174,
+          "sha256": "d75c6d8a60080355f6b1af6b89c9500c2bbe54b0212db46543e87f7ed7be4218",
+          "parse": "PASS",
+          "schema": "w33.doubled_central_character_logical_qubit.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_e6_cubic_h1_is_sp4_adjoint.json",
+          "added": 15,
+          "removed": 0,
+          "bytes": 1437,
+          "sha256": "ecd3481f913dd331fe15035baaeff3f4fa4e498b8495aa663eb9f56e562631fc",
+          "parse": "PASS",
+          "schema": "w33.e6_cubic_h1_is_sp4_adjoint.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_e6_degree2_selected270_bridge.json",
+          "added": 28,
+          "removed": 0,
+          "bytes": 1120,
+          "sha256": "2629f97c6bf04b085eef2533d62bba94ec5390ba35f50c67bf15e859bab9fc82",
+          "parse": "PASS",
+          "schema": "w33.e6_degree2_selected270_bridge.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_e6_gauge_three_qutrit_pauli_firewall.json",
+          "added": 16,
+          "removed": 0,
+          "bytes": 1048,
+          "sha256": "75a3a017681f2e6a2e50ecacf25ffea813c4bd73c882a0dac6d28f7ecfbc314a",
+          "parse": "PASS",
+          "schema": "w33.e6_gauge_three_qutrit_pauli_firewall.v1",
+          "claimed_status": "PASS_MONOMIAL_THREE_QUTRIT_REALIZATION_NO_GO"
+        },
+        {
+          "path": "data/w33_e6_involution_full_w33_dictionary.json",
+          "added": 41,
+          "removed": 0,
+          "bytes": 1988,
+          "sha256": "69535bc370e1219152beddc445358c65cec703bc5735bbac941b46f484dcbb3d",
+          "parse": "PASS",
+          "schema": "w33.e6_involution_full_w33_dictionary.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_e6_involution_ladder_flags.json",
+          "added": 35,
+          "removed": 0,
+          "bytes": 2234,
+          "sha256": "0ebad9518434a51e0d2cd9b8b99e647034119ceb1102a2ef5a5e23383a88726b",
+          "parse": "PASS",
+          "schema": "w33.e6_involution_ladder_flags.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_e6_involution_reconstructs_double_six_tritangent.json",
+          "added": 54,
+          "removed": 0,
+          "bytes": 2828,
+          "sha256": "25489ba9d7dc022fdc053629f3aef765b94689ea8f509a881590dc38b3f95e08",
+          "parse": "PASS",
+          "schema": "w33.e6_involution_reconstructs_double_six_tritangent.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_e6_tritangent_pauli_holonomy_frontier.json",
+          "added": 11,
+          "removed": 0,
+          "bytes": 1711,
+          "sha256": "46b227484a61433478124b27a88025d11adbd36cbde418210c1a9fa87cfc832f",
+          "parse": "PASS",
+          "schema": "w33.e6_tritangent_pauli_holonomy_frontier.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_e8_a8_selector_holonomy_triple_intersection.json",
+          "added": 131,
+          "removed": 0,
+          "bytes": 3487,
+          "sha256": "c51c35cb856efa4ffe60f1434e3d7dc104a11d1db489ac651b817c8860f77d4f",
+          "parse": "PASS",
+          "schema": "w33.e8_a8_selector_holonomy_triple_intersection.v1",
+          "claimed_status": "PASS_A8_SELECTOR_TRIPLE_CENTRALIZER"
+        },
+        {
+          "path": "data/w33_e8_bracket_deficiency_formula.json",
+          "added": 49,
+          "removed": 0,
+          "bytes": 2065,
+          "sha256": "ec9df0ae5cbcccec6dba86def9de7e98df924621b98c86fe136b412f1ce005d3",
+          "parse": "PASS",
+          "schema": "w33.e8_bracket_deficiency_formula.v1",
+          "claimed_status": "PASS_CLOSED_PROJECTIVE_DEFICIENCY_FORMULA"
+        },
+        {
+          "path": "data/w33_e8_c3_quotient_signed_pauli_cover.json",
+          "added": 9,
+          "removed": 0,
+          "bytes": 1163,
+          "sha256": "2f2a44999481a713f44b224a94ed5c735da87c6a1cc254806f06440dfe46de30",
+          "parse": "PASS",
+          "schema": "w33.e8_c3_quotient_signed_pauli_cover.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_e8_cz_parity_c6_root_lift.json",
+          "added": 19,
+          "removed": 0,
+          "bytes": 1376,
+          "sha256": "25ed1d8676f51e8b55c8d8ec864e6d571a857ddeada01b91ab2c0b9be267584e",
+          "parse": "PASS",
+          "schema": "w33.e8_cz_parity_c6_root_lift.v2",
+          "claimed_status": "PASS_LABEL_LIFT__PHYSICAL_PARITY_FIREWALL"
+        },
+        {
+          "path": "data/w33_e8_holonomy_bracket_rank_tensor.json",
+          "added": 979,
+          "removed": 0,
+          "bytes": 13311,
+          "sha256": "66fe7af7ba678399077de2ab03082450d594187c3a3e429672eec74c0efd6b94",
+          "parse": "PASS",
+          "schema": "w33.e8_holonomy_bracket_rank_tensor.v1",
+          "claimed_status": "PASS_COMPLETE_18x18_BRACKET_TENSOR"
+        },
+        {
+          "path": "data/w33_e8_holonomy_c3xc6_factorization.json",
+          "added": 14,
+          "removed": 0,
+          "bytes": 1401,
+          "sha256": "902014b6d30c47a354d36205d7ae0d95396b502bd6d4be1b2644a3df788d968d",
+          "parse": "PASS",
+          "schema": "w33.e8_holonomy_c3xc6_factorization.v1",
+          "claimed_status": "PASS_EXACT_C3_SELECTOR_X_PHYSICAL_C6_FACTORIZATION"
+        },
+        {
+          "path": "data/w33_e8_holonomy_packet18_homogeneous_bridge.json",
+          "added": 87,
+          "removed": 0,
+          "bytes": 2812,
+          "sha256": "79d3dc1d875c32c3045d5fc41d5c4a15c58a176fb6c57c491b65a0c9af8676c4",
+          "parse": "PASS",
+          "schema": "w33.e8_holonomy_packet18_homogeneous_bridge.v1",
+          "claimed_status": "PASS_TORSOR_BRIDGE__GROUP_IDENTIFICATION_KILLED"
+        },
+        {
+          "path": "data/w33_e8_pauli_cocycle_lift_entries_03.json",
+          "added": 1,
+          "removed": 0,
+          "bytes": 12498,
+          "sha256": "1543e6f1783bf40c961898275dd8b831dbcc56a7355454d2545e0d75ac49bb34",
+          "parse": "PASS",
+          "schema": "w33.e8_pauli_cocycle_lift.entries.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_e8_pauli_normalizer.json",
+          "added": 8,
+          "removed": 0,
+          "bytes": 1433,
+          "sha256": "78e921860d2f17ac9d71b35ce4d69704af79812deecdeba169619d4517b6b176",
+          "parse": "PASS",
+          "schema": "w33.e8_pauli_normalizer.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_e8_z12_to_pauli_symplectic_sign.json",
+          "added": 8,
+          "removed": 0,
+          "bytes": 1076,
+          "sha256": "0be5613857c407834a9fb6be5caa5f2969e454c94c8a3dd037a00b23cfc5e08b",
+          "parse": "PASS",
+          "schema": "w33.e8_z12_to_pauli_symplectic_sign.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_e8cubed_leech_six_qutrit_register.json",
+          "added": 9,
+          "removed": 0,
+          "bytes": 3283,
+          "sha256": "4ae378d270eb3fb48e20bde3370a0e8ccd0f93f9ae72c8049a4de0b67643cd61",
+          "parse": "PASS",
+          "schema": "w33.e8cubed_leech_six_qutrit_register.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_formula_search_universe_v1.json",
+          "added": 12266,
+          "removed": 347,
+          "bytes": 76179384,
+          "sha256": "7acf3d47a6a2dc0be1c598764ff502637c33b1231c57b738ddfd0b285a121d4e",
+          "parse": "PASS",
+          "schema": "w33.formula-search-universe.v1",
+          "claimed_status": null
+        },
+        {
+          "path": "data/w33_h1_adjoint_nonlinear_invariants.json",
+          "added": 11,
+          "removed": 0,
+          "bytes": 1425,
+          "sha256": "95924a6e8c9ebd4825356f2111888e58579b95161aeb9807065e0b8da97f132f",
+          "parse": "PASS",
+          "schema": "w33.h1_adjoint_nonlinear_invariants.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_h1_det_apartment_phase_bridge.json",
+          "added": 40,
+          "removed": 0,
+          "bytes": 1652,
+          "sha256": "6a91f408c311ae68291f3df084c86dde14dd0304944fe2430f28563469f68bf8",
+          "parse": "PASS",
+          "schema": "w33.h1_det_apartment_phase_bridge.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_h1_det_matroid_basis_phase.json",
+          "added": 49,
+          "removed": 0,
+          "bytes": 2291,
+          "sha256": "27ca2455f36288bd88c4c58538c9a2e8a1a80f326d83ac10aa7ef136f618f68a",
+          "parse": "PASS",
+          "schema": "w33.h1_det_matroid_basis_phase.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_h1_det_two_weight2_witness.json",
+          "added": 11,
+          "removed": 0,
+          "bytes": 1509,
+          "sha256": "67ce24b62c3102967016c74be9271d76b2aec7013e45d7869f9e24b2882c9d95",
+          "parse": "PASS",
+          "schema": "w33.h1_det_two_weight2_witness.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_h1_det_weight2_coupling_no_go.json",
+          "added": 14,
+          "removed": 0,
+          "bytes": 1421,
+          "sha256": "3957bce925185c7c73a5c0e38b210f01e903cf3be64f4ebc65034d8188a9f778",
+          "parse": "PASS",
+          "schema": "w33.h1_det_weight2_coupling_no_go.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_heterotic_flagship_cz_clifford_bridge.json",
+          "added": 37,
+          "removed": 0,
+          "bytes": 2384,
+          "sha256": "483de6553830dd83fab95ef611413329f8302a0eed019320b1891c01b5343aa0",
+          "parse": "PASS",
+          "schema": "w33.heterotic_flagship_cz_clifford_bridge.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_heterotic_s3_defining_irrep_intertwiner.json",
+          "added": 22,
+          "removed": 0,
+          "bytes": 828,
+          "sha256": "ca36c336d40841b46bff33c8ca8922fc44748543272c3b7b1e91665b973d2ebf",
+          "parse": "PASS",
+          "schema": "w33.heterotic_s3_defining_irrep_intertwiner.v1",
+          "claimed_status": "PASS_EXACT_S3_MODULE_ISOMORPHISM"
+        },
+        {
+          "path": "data/w33_heterotic_s3_outer_target.json",
+          "added": 16,
+          "removed": 0,
+          "bytes": 770,
+          "sha256": "2554fb6e9cc3efddd65837bb16403fc7f7513f10e82783d0180c45d3e1dd959b",
+          "parse": "PASS",
+          "schema": "w33.heterotic_s3_outer_target.v1",
+          "claimed_status": "PASS_EXACT_EXTENSION_LAW_MATCH"
+        },
+        {
+          "path": "data/w33_heterotic_twisted_sector_dimension_firewall.json",
+          "added": 9,
+          "removed": 0,
+          "bytes": 952,
+          "sha256": "35a086247a554d824fc74c1563bacef1ead2173f21aaa089d1623525808b241f",
+          "parse": "PASS",
+          "schema": "w33.heterotic_twisted_sector_dimension_firewall.v1",
+          "claimed_status": "PASS_LABEL_BRIDGE__FULL_MODULE_IDENTIFICATION_NO_GO_WITH_FIXED_POINTS_ALONE"
+        },
+        {
+          "path": "data/w33_heterotic_z3_729_matter_carrier.json",
+          "added": 30,
+          "removed": 0,
+          "bytes": 1158,
+          "sha256": "7cd930834dead07432cd0bb4305933e4d3d4a7cada0d51f2ac7f753cf21e6f14",
+          "parse": "PASS",
+          "schema": "w33.heterotic_z3_729_matter_carrier.v1",
+          "claimed_status": "PASS_EXACT_CARRIER_INTERTWINER__PHYSICAL_WEYL_REALIZATION_OPEN"
+        },
+        {
+          "path": "data/w33_holonomy_joint_centralizer_scope.json",
+          "added": 62,
+          "removed": 0,
+          "bytes": 2224,
+          "sha256": "cb54c04bf9985b61eef1e759981b4bf0697c4e3ccd4e94afef9335e81d15940e",
+          "parse": "PASS",
+          "schema": "w33.holonomy_joint_centralizer_scope.v1",
+          "claimed_status": "PASS_SCOPE_CORRECTION"
+        },
+        {
+          "path": "data/w33_isotropic36_rank_metric_m2.json",
+          "added": 12,
+          "removed": 0,
+          "bytes": 1576,
+          "sha256": "a6d1a00f287ff2ad7c6bf10799dce0d8786ee80a8bd9917f140f7f6c5331af9c",
+          "parse": "PASS",
+          "schema": "w33.isotropic36_rank_metric_m2.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_laplacian_spectral_echo.json",
+          "added": 8,
+          "removed": 0,
+          "bytes": 539,
+          "sha256": "bcc402c2dddb63f95b086b34e4a74b44e6e11bce3211af8ad7b957ef8aedd683",
+          "parse": "PASS",
+          "schema": "w33.laplacian_spectral_echo.v1",
+          "claimed_status": "PASS_EXACT_ENGINEERED_SPECTRAL_PRIMITIVE"
+        },
+        {
+          "path": "data/w33_native_sector_rail_intertwiner.json",
+          "added": 19,
+          "removed": 0,
+          "bytes": 861,
+          "sha256": "7c900171e7bfb45480d9ee48aedca9024a36d31c3364556a985f25170c432627",
+          "parse": "PASS",
+          "schema": "w33.native_sector_rail_intertwiner.v1",
+          "claimed_status": "PASS_ALGEBRAIC_INTERTWINER"
+        },
+        {
+          "path": "data/w33_nonclifford_extension_search.json",
+          "added": 11,
+          "removed": 0,
+          "bytes": 1889,
+          "sha256": "4d745b7bbf0356cf13e9df655bd0a52c6dd394b7d7236b4e606ea78fb9633903",
+          "parse": "PASS",
+          "schema": "w33.nonclifford_extension_search.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_outer_complete_no_intrinsic_superselection.json",
+          "added": 26,
+          "removed": 0,
+          "bytes": 1396,
+          "sha256": "94f1e174197a69a24caa678b888240c3660daf30f8532394699e68a67d2f186f",
+          "parse": "PASS",
+          "schema": "w33.outer_complete_no_intrinsic_superselection.v1",
+          "claimed_status": "PASS_ALGEBRAIC_PHYSICAL_IMPLEMENTATION_OPEN"
+        },
+        {
+          "path": "data/w33_outer_logical_photonic_rail_compiler.json",
+          "added": 27,
+          "removed": 0,
+          "bytes": 1515,
+          "sha256": "631383fca84cba2c6a3c4c19303ae446b9c71a823b5785f751bc95571d2037e4",
+          "parse": "PASS",
+          "schema": "w33.outer_logical_photonic_rail_compiler.v1",
+          "claimed_status": "PASS_ENCODING_COMPILER__NATIVE_SECTOR_INTERFACE_OPEN"
+        },
+        {
+          "path": "data/w33_packet18_e8_bracket_scheduler.json",
+          "added": 10,
+          "removed": 0,
+          "bytes": 1192,
+          "sha256": "2674a8caf4e929f72dd7833795899a17a2e212a11c70198116eb385a32e43387",
+          "parse": "PASS",
+          "schema": "w33.packet18_e8_bracket_scheduler.v1",
+          "claimed_status": "PASS_EXACT_LOOKUP_LIGHT_BRACKET_SCHEDULER"
+        },
+        {
+          "path": "data/w33_packet18_external_regular_holonomy_action.json",
+          "added": 10,
+          "removed": 0,
+          "bytes": 1443,
+          "sha256": "8afa2b21c58e5d23ab035f14713ec4db9116932f403e409d31584493928a424d",
+          "parse": "PASS",
+          "schema": "w33.packet18_external_regular_holonomy_action.v1",
+          "claimed_status": "PASS_EXTERNAL_REGULAR_HOLONOMY_ACTION"
+        },
+        {
+          "path": "data/w33_packet72_physical_c6_address_compiler.json",
+          "added": 11,
+          "removed": 0,
+          "bytes": 954,
+          "sha256": "81c3147a24b8e3f3f23731e3b4dc2ff115e07d5a5e680ff7c1583260b4b6403c",
+          "parse": "PASS",
+          "schema": "w33.packet72_physical_c6_address_compiler.v1",
+          "claimed_status": "PASS_LOOKUP_FREE_CONTROL_PLANE_COMPILER"
+        },
+        {
+          "path": "data/w33_packet_frame_irrep_benchmarking.json",
+          "added": 740,
+          "removed": 0,
+          "bytes": 14555,
+          "sha256": "c3804858a653b1905adc2ca67e13e15220bc59e03d1e7921f5db405d3d69c587",
+          "parse": "PASS",
+          "schema": "w33.packet_frame_irrep_benchmarking.v1",
+          "claimed_status": "PASS_72_FRAME_IRREP_BENCHMARKING"
+        },
+        {
+          "path": "data/w33_packet_frame_symmetry_tomography.json",
+          "added": 656,
+          "removed": 0,
+          "bytes": 16592,
+          "sha256": "41e84d884206b6c31e6434f5fd4abfd9d85f2f0553d6d3cb6ec09af61076199f",
+          "parse": "PASS",
+          "schema": "w33.packet_frame_symmetry_tomography.v1",
+          "claimed_status": "PASS_72_FRAME_TOMOGRAPHY_TWIRL"
+        },
+        {
+          "path": "data/w33_pauli_cartans.json",
+          "added": 9,
+          "removed": 0,
+          "bytes": 1373,
+          "sha256": "dece9cf9a205d56004be4be91f7d75a24c4596418dde53523cebeb11b0a4f19e",
+          "parse": "PASS",
+          "schema": "w33.pauli_cartan_system.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_physical_e8_so8_su4_u1_branching.json",
+          "added": 9,
+          "removed": 0,
+          "bytes": 529,
+          "sha256": "f7ddfe4426d56d0976854a75226f61329ed96e66d22445c6f3f3e0b62a583ee6",
+          "parse": "PASS",
+          "schema": "w33.physical_e8_so8_su4_u1_branching.v1",
+          "claimed_status": "PASS_CONTINUOUS_TO_DISCRETE_CHARGE_LAW"
+        },
+        {
+          "path": "data/w33_physical_e8_triality_decomposition.json",
+          "added": 14,
+          "removed": 0,
+          "bytes": 576,
+          "sha256": "534195605e9b2d05e2626e121ff631e82b856ffeb8066db263358a154443e29a",
+          "parse": "PASS",
+          "schema": "w33.physical_e8_triality_decomposition.v1",
+          "claimed_status": "PASS_TRIALITY_MATTER_SKELETON"
+        },
+        {
+          "path": "data/w33_physical_holonomy_e8_chevalley_lift.json",
+          "added": 13,
+          "removed": 0,
+          "bytes": 1074,
+          "sha256": "3f60e2a14f30ef9d8e53ce5eb5051a21add7a4f48c8c14a109a420cc93e4e2cd",
+          "parse": "PASS",
+          "schema": "w33.physical_holonomy_e8_chevalley_lift.v1",
+          "claimed_status": "PASS_PHYSICAL_INNER_CHEVALLEY_LIFT"
+        },
+        {
+          "path": "data/w33_projective_basis_orbits_two_trit_classifier.json",
+          "added": 87,
+          "removed": 0,
+          "bytes": 3018,
+          "sha256": "d4549a36e32eda44c32f8907dc8a872d8fe3f726e474a2b1dadfbe79d29f97cf",
+          "parse": "PASS",
+          "schema": "w33.projective_basis_orbits_two_trit_classifier.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_punctured_hesse_packet_group.json",
+          "added": 560,
+          "removed": 0,
+          "bytes": 11348,
+          "sha256": "cd06093c1a7eb4f91fbbf761e50a19ec8c7ab899c7847170dd3bdc065a9d15c8",
+          "parse": "PASS",
+          "schema": "w33.punctured_hesse_packet_group.v1",
+          "claimed_status": "PASS_TWO_PUNCTURE_PACKET_GROUP"
+        },
+        {
+          "path": "data/w33_qutrit_hamming_cross_incidence.json",
+          "added": 54,
+          "removed": 0,
+          "bytes": 3902,
+          "sha256": "7976f75013b66a05ac9de03c2419d8b417cada162430eb8eb66fa0a965529d44",
+          "parse": "PASS",
+          "schema": "w33.qutrit_hamming_cross_incidence.v1",
+          "claimed_status": "PASS_Q3_CROSS_INCIDENCE_LOCK"
+        },
+        {
+          "path": "data/w33_qutrit_hamming_cz_frame_bundle.json",
+          "added": 10,
+          "removed": 0,
+          "bytes": 1324,
+          "sha256": "12292de1725e8590a312174195dda82dc9a9be6f8b19b395588a13dcc6944c5a",
+          "parse": "PASS",
+          "schema": "w33.qutrit_hamming_cz_frame_bundle.v1",
+          "claimed_status": "PASS_Q3_LOCAL_FRAME_PHASE_LOCK"
+        },
+        {
+          "path": "data/w33_s3_commutator_ramsey_witness.json",
+          "added": 12,
+          "removed": 0,
+          "bytes": 423,
+          "sha256": "4cd9317dfffe020f8fc1133e75e813b663e956972f3e4cd65fbee66b3501d1e0",
+          "parse": "PASS",
+          "schema": "w33.s3_commutator_ramsey_witness.v1",
+          "claimed_status": "PASS_EXACT_INTERFEROMETRIC_SIGNATURE"
+        },
+        {
+          "path": "data/w33_steiner_twin_point_line_dark_module.json",
+          "added": 13,
+          "removed": 0,
+          "bytes": 1367,
+          "sha256": "6ca33b0ca866d65e38d9bb536d6837a69a67e80944d424533008da95a226b2a4",
+          "parse": "PASS",
+          "schema": "w33.steiner_twin_point_line_dark_module.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_suz_outer_completes_local_e6_weyl.json",
+          "added": 55,
+          "removed": 0,
+          "bytes": 3072,
+          "sha256": "e56c1a1e6d2389369ded1683338f04ecd9db976cb016cea5890ba2f4764d2b76",
+          "parse": "PASS",
+          "schema": "w33.suz_outer_completes_local_e6_weyl.v2",
+          "claimed_status": "PASS_WITH_CONSTRUCTIVE_ATLAS_OUTER_WITNESS"
+        },
+        {
+          "path": "data/w33_suz_outer_h_acts_outer_on_the_27_direct.json",
+          "added": 68,
+          "removed": 0,
+          "bytes": 1992,
+          "sha256": "9be978a912ff50346258e32c3b1bb0a68f5a96de50af09f61821bb0f3fcc644a",
+          "parse": "PASS",
+          "schema": "w33.suz_outer_h_acts_outer_on_the_27_direct.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_suzuki_165_complex_pauli_fusion_shadow.json",
+          "added": 11,
+          "removed": 0,
+          "bytes": 1553,
+          "sha256": "74b501c0adcd15d938d3400283b739d4c25fd8174ef544571dccfa8a86f55f31",
+          "parse": "PASS",
+          "schema": "w33.suzuki_165_complex_pauli_fusion_shadow.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_suzuki_165_fusion_frame_decoder.json",
+          "added": 12,
+          "removed": 0,
+          "bytes": 1543,
+          "sha256": "7a441996819d0c71f45928c9e4fbfb4e3a94d0787c1505759a9c7af294ec0040",
+          "parse": "PASS",
+          "schema": "w33.suzuki_165_fusion_frame_decoder.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_suzuki_165_quaternionic_design_shadow.json",
+          "added": 11,
+          "removed": 0,
+          "bytes": 1649,
+          "sha256": "a4fb447d7b992e922fff65ce5de1101926dc6e3c592cd2303d7a2196124da4cd",
+          "parse": "PASS",
+          "schema": "w33.suzuki_165_quaternionic_design_shadow.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_suzuki_gq48_stopping_distance.json",
+          "added": 38,
+          "removed": 0,
+          "bytes": 1509,
+          "sha256": "49cbf1b2cc4bcaf24171d800271708e1f2342183beb36cb62c99eeded51cadad",
+          "parse": "PASS",
+          "schema": "w33.suzuki_gq48_stopping_distance.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_suzuki_isotropic36_affine_matrix_chart.json",
+          "added": 13,
+          "removed": 0,
+          "bytes": 1624,
+          "sha256": "322f406670c08d0a7638d5597fb6242b5eaaa42d39e38f4a7e4e518f692d248e",
+          "parse": "PASS",
+          "schema": "w33.suzuki_isotropic36_affine_matrix_chart.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_suzuki_kernel_e6_36_objectwise_intertwiner.json",
+          "added": 14,
+          "removed": 0,
+          "bytes": 1507,
+          "sha256": "8c9bed9f4662f9d6601d0be6fe1ac9d6887cb926d15e5fbc8533a11b8dcf5b8a",
+          "parse": "PASS",
+          "schema": "w33.suzuki_kernel_e6_36_objectwise_intertwiner.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_suzuki_kernel_e6_quadratic_shell_bridge.json",
+          "added": 30,
+          "removed": 0,
+          "bytes": 1967,
+          "sha256": "490ddd16419d6fcd0c16915007582b9d9c9b329e5cc651adbfa5618e59b75628",
+          "parse": "PASS",
+          "schema": "w33.suzuki_kernel_e6_quadratic_shell_bridge.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_suzuki_local_165_gq48_spectral_bridge.json",
+          "added": 40,
+          "removed": 0,
+          "bytes": 1742,
+          "sha256": "6922c27a66b0754cc15dda8b645da902c9b6d34ef7cb727a4e33665b03a2298b",
+          "parse": "PASS",
+          "schema": "w33.suzuki_local_165_gq48_spectral_bridge.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_suzuki_local_e6_inner_outer_split.json",
+          "added": 46,
+          "removed": 0,
+          "bytes": 2550,
+          "sha256": "8de26dcf8c9f0891b7b5a410f448ab5e0a65a80c316cc8414eb9608cad5d396d",
+          "parse": "PASS",
+          "schema": "w33.suzuki_local_e6_inner_outer_split.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_suzuki_outer_heisenberg_sector_swap.json",
+          "added": 41,
+          "removed": 0,
+          "bytes": 2354,
+          "sha256": "7d25b0cb22ca9a88b91444895f17763948f64eef688f345a0ebc7fd14d78dc4e",
+          "parse": "PASS",
+          "schema": "w33.suzuki_outer_heisenberg_sector_swap.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_suzuki_refactorization_compiler.json",
+          "added": 11,
+          "removed": 0,
+          "bytes": 1573,
+          "sha256": "edb20d9918bf1ce39d00d760fd48651c55f35626693509b61bc347398c553925",
+          "parse": "PASS",
+          "schema": "w33.suzuki_refactorization_compiler.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_suzuki_w33_e6_incidence_tower.json",
+          "added": 51,
+          "removed": 0,
+          "bytes": 2596,
+          "sha256": "69fc7ab835972d13e196b60b75ccc48a7e9fdf4b90ee69ad3c2990b19f00a083",
+          "parse": "PASS",
+          "schema": "w33.suzuki_w33_e6_incidence_tower.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_suzuki_w33_kernel_structure_reconciliation.json",
+          "added": 30,
+          "removed": 0,
+          "bytes": 1340,
+          "sha256": "d57280adc94e042bbdfe04d59c31b00ebb8db65610faac9ba84601ed9968f3ef",
+          "parse": "PASS",
+          "schema": "w33.suzuki_w33_kernel_structure_reconciliation.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_suzuki_w33_stabilizer_projective_quotient.json",
+          "added": 49,
+          "removed": 0,
+          "bytes": 2189,
+          "sha256": "1ad040ec62fcd86c5639e60afa6a980ef2d5cf223cd9bf5fbb534af2eea2ba3b",
+          "parse": "PASS",
+          "schema": "w33.suzuki_w33_stabilizer_projective_quotient.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_u52_165_e6_45_120_split.json",
+          "added": 45,
+          "removed": 0,
+          "bytes": 2139,
+          "sha256": "94122dd971827c58d377c3464797cc89d7a61bd51dcfe2d7c892785433a9440e",
+          "parse": "PASS",
+          "schema": "w33.u52_165_e6_45_120_split.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_z6ii_c2_extension_no_go.json",
+          "added": 20,
+          "removed": 0,
+          "bytes": 821,
+          "sha256": "e59cfd721324787b1518abd4980d0ee10d4c0b811ab0f3e08954ac3b8f218714",
+          "parse": "PASS",
+          "schema": "w33.z6ii_c2_extension_no_go.v1",
+          "claimed_status": "PASS_NO_GO"
+        },
+        {
+          "path": "holonet_machine_blueprint.tex",
+          "added": 1,
+          "removed": 0,
+          "bytes": 1085,
+          "sha256": "e3793bd13b4e8839e5dcf8dc917b29c68bb892fef77027e65e15b89d84e3578c",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "photonic_holonet.tex",
+          "added": 1,
+          "removed": 0,
+          "bytes": 4862,
+          "sha256": "1b8aed8a186388806b0695ae2ddcbfc69611b7db429fcbeb2ff826f68d3516f0",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "tests/test_w33_architecture_control_plane_abi.py",
+          "added": 28,
+          "removed": 0,
+          "bytes": 4458,
+          "sha256": "8dd532cbe0ff3fe7bdd4d72d257b6dc3f1300aaa35718d42c1f9918d832ec81d",
+          "parse": "PASS"
+        },
+        {
+          "path": "tests/test_w33_cz_hashimoto_orbit_weld.py",
+          "added": 43,
+          "removed": 0,
+          "bytes": 1707,
+          "sha256": "b2a497a22d0da889604044e6ff23bad9de9e91cf707464c7d25a1de46aa64fb5",
+          "parse": "PASS"
+        },
+        {
+          "path": "tests/test_w33_e8_holonomy_packet18_homogeneous_bridge.py",
+          "added": 29,
+          "removed": 0,
+          "bytes": 1009,
+          "sha256": "db97cf6269b0d8a42990e2e2aa44829829c6f824fb7fd220da65296c72505ede",
+          "parse": "PASS"
+        },
+        {
+          "path": "tests/test_w33_packet18_external_holonomy_action.py",
+          "added": 34,
+          "removed": 0,
+          "bytes": 1434,
+          "sha256": "8b9bbee2389a1ef669ad1a19f5a50560f3dda05d8f89503178b741bd7254211f",
+          "parse": "PASS"
+        },
+        {
+          "path": "tests/test_w33_packet_frame_symmetry_tomography.py",
+          "added": 31,
+          "removed": 0,
+          "bytes": 1346,
+          "sha256": "c5d5e5271c7bb6d41936e45d6b63ea76c68b46fe3c6763982063b58626b7e359",
+          "parse": "PASS"
+        },
+        {
+          "path": "tests/test_w33_punctured_hesse_packet_group.py",
+          "added": 66,
+          "removed": 0,
+          "bytes": 2383,
+          "sha256": "2887708d6b6a4cd29a04fe3136639f9400d870e0bd20876a3ed35f946d43621c",
+          "parse": "PASS"
+        },
+        {
+          "path": "tests/test_w33_qutrit_hamming_cross_incidence.py",
+          "added": 57,
+          "removed": 0,
+          "bytes": 1974,
+          "sha256": "5fb7b50bb7ab761c2b1e248e79d46b37ae6f42f1b42bf55ee33157c5412484d4",
+          "parse": "PASS"
+        },
+        {
+          "path": "w33_paper.pdf",
+          "added": 31469,
+          "removed": 8773,
+          "bytes": 3923511,
+          "sha256": "28518382b6b6f96480b3d3f783088d525fc1c098fcf6bb1286d0b86dc474af8f",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "w33_paper.tex",
+          "added": 1,
+          "removed": 0,
+          "bytes": 4689,
+          "sha256": "b88ef43f2694131c0495412ef257b7c42f1f3cd8ac633df24da59ce47d38d5b3",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "w33_paper_body.tex",
+          "added": 31,
+          "removed": 0,
+          "bytes": 842173,
+          "sha256": "780798b42e5c19187e488af7767e7f5aa691ece1cdbfd038250b36eeb8105f8d",
+          "coverage": "diff intake; not independent semantic certification"
+        }
+      ]
+    },
+    {
+      "repo": "holotrade",
+      "revision_range": "bf78db7..d1fe6ce",
+      "files": [
+        {
+          "path": ".github/workflows/flagship_orbifolder_charge_ledger.yml",
+          "added": 103,
+          "removed": 0,
+          "bytes": 4106,
+          "sha256": "f1ec1a637936d367213c86fd6870c2e7a900877f14bbd12c2fc8a220928250a2",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": ".github/workflows/w33_flagship_global_u1_closure.yml",
+          "added": 45,
+          "removed": 0,
+          "bytes": 1940,
+          "sha256": "8224a6c520f2a4bf3750a495e9a9d50d69c3af91f16f614a060363d5445b2e89",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PARALLEL2365_TWISTED_SECTOR_BRIDGE_AUDIT.md",
+          "added": 14,
+          "removed": 0,
+          "bytes": 1679,
+          "sha256": "82f9d7da0726d0520f0dd23330a0b8be5a5d4f97e49d971f50a96d47b8a0c2e4",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260915_w33_hinge_hypercharge_followup.md",
+          "added": 61,
+          "removed": 0,
+          "bytes": 3317,
+          "sha256": "2a4761492fba028e9b9c66b2d8cb9d4e5ef0ddc885e3af994be94d00f59852b4",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260917_execute_all5_antifive_anomaly_mass.md",
+          "added": 134,
+          "removed": 0,
+          "bytes": 4867,
+          "sha256": "31c30a788d618402247d5ae77a1d138cd8b50a57b54a2be9aaa05a1e5275d906",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260917_z6ii_sm_shape_builder.md",
+          "added": 122,
+          "removed": 0,
+          "bytes": 2692,
+          "sha256": "a0f10acde9ff247b08f3d69ac7c36604f2e8042959897df1474e76f89f698ce2",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260918_PHYSICAL_E8_HOLONOMY_TRIALITY.md",
+          "added": 32,
+          "removed": 0,
+          "bytes": 1393,
+          "sha256": "8ccd4872d465d6ea39fe28263d7ee6a5f900f6d0490686e74dfe81af13b8c41d",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260918_cz_su5_bowtie_step8.md",
+          "added": 160,
+          "removed": 0,
+          "bytes": 5015,
+          "sha256": "bbb9d55f277544b60a2e5072a434fa385f0bf2112746873e03a425b3871d4426",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260918_execute_all5_anomaly_fflat_c2_repair.md",
+          "added": 110,
+          "removed": 0,
+          "bytes": 3655,
+          "sha256": "78c655dbad8ddfe72db9fd6af4dc9b57611efe30d2dde04ab51a6e7b060fb13e",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260918_execute_all5_benchmark_singlet_s3.md",
+          "added": 86,
+          "removed": 0,
+          "bytes": 3185,
+          "sha256": "4f68dbc1933e81037413d7aa59d7de9f571b41564b4f7aee283cef8eabf93997",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260918_execute_all5_t1_rule456_spectrum_quarantine.md",
+          "added": 120,
+          "removed": 0,
+          "bytes": 4421,
+          "sha256": "3c4873336c21b56e9e569405cafaa4ab5d11d2793099aa5e314d817fc822dc0e",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260918_five_plus_three_integration.md",
+          "added": 190,
+          "removed": 0,
+          "bytes": 5743,
+          "sha256": "a7f8846dae5db90f8b735b06df08cd580b8b4458ee285aeebcd89530b421607e",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260919_QUTRIT_HAMMING_CROSS_INCIDENCE.md",
+          "added": 46,
+          "removed": 0,
+          "bytes": 2006,
+          "sha256": "5332ecb404f533670c7545f6a40feac0ac9001f1665824a4bb809b39ded80f66",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/PASS20260919_QUTRIT_HAMMING_CZ_PACKET_BRIDGE.md",
+          "added": 46,
+          "removed": 0,
+          "bytes": 1910,
+          "sha256": "e9bbb92b09af6858189bf7fcf8a4683ca102cab5770c6f6f3e38d5890ab73c82",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/W33_E8_CZ_PARITY_ROOT_LIFT.md",
+          "added": 1,
+          "removed": 0,
+          "bytes": 1165,
+          "sha256": "ec898e47d835f1c5373315d136552fa3ee80602635e650a0d791e06c89f0cc91",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/W33_HETEROTIC_S3_OUTER_TARGET.md",
+          "added": 7,
+          "removed": 0,
+          "bytes": 707,
+          "sha256": "d6d75cf2cc98da8100849ac59d6e1eab61100adc91450187026eff55948df325",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/W33_PHYSICAL_E8_CHEVALLEY_HOLONOMY.md",
+          "added": 22,
+          "removed": 0,
+          "bytes": 1095,
+          "sha256": "0000fb59a5a826c7efb5e0bbc623c3b8a6445ee071d4ac42fd5bab0e3c1fdfd8",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/W33_Z6II_C2_EXTENSION_NO_GO.md",
+          "added": 11,
+          "removed": 0,
+          "bytes": 831,
+          "sha256": "dfa0d442903e4c78b1cfed351192ea34c16d1c2f7fad2a8bdc6e1f8c61610f03",
+          "coverage": "diff intake; not independent semantic certification"
+        },
+        {
+          "path": "analysis/does_the_w33_vacuum_contain_a_three_family_gut.py",
+          "added": 358,
+          "removed": 0,
+          "bytes": 16789,
+          "sha256": "439bf66450d3abba4443ef063cea2d5a8b2c01ba5ab82889c32c42d8e5ad41ca",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/doublet_triplet_splitting_is_solvable_but_only_by_cancellation.py",
+          "added": 400,
+          "removed": 0,
+          "bytes": 23624,
+          "sha256": "3f5b7e8bf5c8f49d0ab6307e0815e7124746f07b3556844e32904e7f03a968bf",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/flipped_su5_is_closed_too_at_order_three.py",
+          "added": 226,
+          "removed": 0,
+          "bytes": 11015,
+          "sha256": "480dd520acaa643ad594295cf0314d4581380a0d666b1a3e43cac7f83836f01b",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/no_three_qutrit_pauli_group_lives_inside_e6.py",
+          "added": 336,
+          "removed": 0,
+          "bytes": 16111,
+          "sha256": "1acc38972d0b9434398d165bc43be020039ec0b91c3f556f6028fd9d8f6c6a24",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/no_vacuum_suppresses_mu_without_losing_the_exotics.py",
+          "added": 392,
+          "removed": 0,
+          "bytes": 17335,
+          "sha256": "19a6beb649133bf98a826c4b2a8798bba4d7800e2bb1960416a824ffe324dcb8",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/retraction_the_local_gut_multiplet_is_complete_so_the_coefficients_are_locked.py",
+          "added": 222,
+          "removed": 0,
+          "bytes": 13696,
+          "sha256": "080b01d04921dbc6c027c41377c4c5423468b00b23df66f193ebbf67f8e4c058",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/the_3_1_12_invariants_of_a8_cubed_and_moonshine_part_at_weight_three.py",
+          "added": 148,
+          "removed": 0,
+          "bytes": 8219,
+          "sha256": "5278b87170da9b8b2c79f3b7021a6998428e01f9fc239e583b1d3a0ad7c7f45c",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/the_a8_cubed_pauli_group_moves_between_the_w33_carriers.py",
+          "added": 327,
+          "removed": 0,
+          "bytes": 15333,
+          "sha256": "b66e4e2070bfdafb2546cd28aa1b65afc61f2038a63993d4727d501c0ca6fd2f",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/the_central_character_doublet_is_the_pair_of_twisted_sectors.py",
+          "added": 298,
+          "removed": 0,
+          "bytes": 15367,
+          "sha256": "8b9e5f5ad69b9773e4811b85c1afc0877dfd662acf03cb310921515f7bfe8c88",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/the_entangling_gate_fixes_the_photons_product_context.py",
+          "added": 208,
+          "removed": 0,
+          "bytes": 11056,
+          "sha256": "7359bed2b68056bd8b5ce7d91a153a378f568de976c006be8314ea8ad7b5da3b",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/the_exceptional_case_is_empty_too.py",
+          "added": 185,
+          "removed": 0,
+          "bytes": 9503,
+          "sha256": "7e3f0a41880d1975c4e6c1b5c07ef028efe3a7b78aa6b62e7096a1b92252298e",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/the_exotic_mass_rank_is_set_by_where_the_singlets_condense.py",
+          "added": 270,
+          "removed": 0,
+          "bytes": 14327,
+          "sha256": "e1fb341b876b09cc1672f4589bccb71fcf805795209640ca945f45848a9ac7cb",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/the_flagship_wilson_line_has_the_cz_spectrum.py",
+          "added": 192,
+          "removed": 0,
+          "bytes": 9986,
+          "sha256": "9059b2b14979f9d2ffc427d330f0b405cc6d3e2e03aacf8d9c6e8563676b6c61",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/the_flagship_wilson_line_sits_in_the_third_pair.py",
+          "added": 160,
+          "removed": 0,
+          "bytes": 8279,
+          "sha256": "34e0cb26a42ffe1ac69348f8e81b27db7e8b38d735f8b3ab2d176794d8e29137",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/the_holonomy_pair_is_the_cz_parity_pair.py",
+          "added": 227,
+          "removed": 0,
+          "bytes": 12548,
+          "sha256": "e18495780ca0b6fc92af1e752fda3ea60f7ee82cdf832a3d489885be9822be12",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/the_mu_obstruction_is_doublet_triplet_splitting.py",
+          "added": 171,
+          "removed": 0,
+          "bytes": 10524,
+          "sha256": "32255908d1d40b17de65e40c8e1ddeb1710a24014313366939e73f388e8a663b",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/the_pauli_centre_is_the_reverse_orbifold_to_e8_cubed.py",
+          "added": 199,
+          "removed": 0,
+          "bytes": 9965,
+          "sha256": "1cd0b13c72a23d9c6722266b0e3600174bb86b46236dadeb251bb843577c6bbd",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/the_s3_route_costs_the_standard_models_su5.py",
+          "added": 227,
+          "removed": 0,
+          "bytes": 12250,
+          "sha256": "e78273f828d70d8c1a6d8f0892c0fe0ea1d29374b16cd2372fe975caa02995d0",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/the_standard_model_forces_the_entangling_branch.py",
+          "added": 164,
+          "removed": 0,
+          "bytes": 9828,
+          "sha256": "af8c7a00f29b0bded5fad25ab2af15f63c1a32558baef80ca41ea89fbc48f860",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/the_standard_model_gate_preserves_readout_and_moves_all_magic.py",
+          "added": 223,
+          "removed": 0,
+          "bytes": 12614,
+          "sha256": "bdfafdcb87de814d353800443ff42c3885d9515c73cc288d0e31d7b4136c42bb",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/the_standard_model_is_the_joint_stabiliser_and_mu_is_universal.py",
+          "added": 191,
+          "removed": 0,
+          "bytes": 11519,
+          "sha256": "94dc61f01c1973acf618b0b73522235391bffef5d59b39d1330eb0a4bbd3ff77",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/the_standard_model_no_go_is_closed.py",
+          "added": 125,
+          "removed": 0,
+          "bytes": 7840,
+          "sha256": "67ad7d8170f957a40a8bd6009822af7da6af2ab151ac753f3753d0b709549312",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/the_three_pauli_groups_of_a8_cubed_are_one_extraspecial_group.py",
+          "added": 240,
+          "removed": 0,
+          "bytes": 13468,
+          "sha256": "2bf7a1ae3201a145c57d44cc386edc25083a6939550b4f5e2b1df024e248627b",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/the_twisted_sectors_carry_no_ten.py",
+          "added": 229,
+          "removed": 0,
+          "bytes": 11974,
+          "sha256": "13f4f0ebde0b0aec145709ca95e29cbe6ca5a85c0c1671e0ee4fa8432900531f",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/the_two_parities_are_different_involutions.py",
+          "added": 204,
+          "removed": 0,
+          "bytes": 10916,
+          "sha256": "1a1edec41cc30c8064a1aba8b169c859432223f2e183f8e548cadb47a1d60ede",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/the_w33_flagship_exotics_decouple_at_order_four.py",
+          "added": 269,
+          "removed": 0,
+          "bytes": 16581,
+          "sha256": "63b791346ced75c4c49fcd709f8d155afa4bc0845ebb80e07173ba1155d224b1",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/the_w33_standard_models_have_a_renormalisable_top_yukawa.py",
+          "added": 211,
+          "removed": 0,
+          "bytes": 11512,
+          "sha256": "0e61a604667cc8c0f1d16ea975418beae7a1fd5289b5da1f7058ade34eec6cca",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/the_w33_twist_does_host_a_standard_model_in_the_even_order_orbifold.py",
+          "added": 421,
+          "removed": 0,
+          "bytes": 23896,
+          "sha256": "048b2359f92c26853c1a83fe899de5e9e70a35aa2c1e81386bbd165ca524b78a",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/the_w33_vacuum_families_live_on_the_untwisted_planes.py",
+          "added": 12,
+          "removed": 2,
+          "bytes": 17466,
+          "sha256": "abdde9bec9a9d052485409531c40a84afdbd04a7c5344e70d9c72ad36fe2059d",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/the_w33_vacuum_never_completes_a_standard_model_family.py",
+          "added": 331,
+          "removed": 0,
+          "bytes": 16804,
+          "sha256": "ff208c6cc189657bc7e54ce4fed92a43b56be2b47fccdc98ddb6c9b0905c7234",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/the_wilson_line_splits_every_gut_multiplet.py",
+          "added": 279,
+          "removed": 0,
+          "bytes": 13819,
+          "sha256": "935794ef5932e3e391474335f6060811647f5411da020a395554946b4a5ba33c",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_e8cubed_leech_overlap56.py",
+          "added": 68,
+          "removed": 0,
+          "bytes": 3665,
+          "sha256": "f460e6246e63658c6ee1ff68894171fe6a48c3d058e1b1f2c0617c4743c3b77a",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_enriched_pauli_wilson_fingerprints.py",
+          "added": 123,
+          "removed": 0,
+          "bytes": 7651,
+          "sha256": "f3860f0fd76d07c1acddc3561c13ccf463e4cdc3dfc12b72337f1462a07af8e8",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_even_order_gut_phase_frontier.py",
+          "added": 64,
+          "removed": 0,
+          "bytes": 3958,
+          "sha256": "c848f5c71c47d029379a6e08eb9c003172d753085b7cdcb04125ba8d58f4189c",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_exotic_benchmark_mass_matrix.py",
+          "added": 64,
+          "removed": 0,
+          "bytes": 4528,
+          "sha256": "ce73b260a6a2779a1b551c5a0ad6cf527ba8cbec2e605b021d656508ebd52b9b",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_exotic_quartic_selection.py",
+          "added": 129,
+          "removed": 0,
+          "bytes": 7932,
+          "sha256": "b955974aa37b55f87528f5e7f95bcd8fcaf0c468293d10984421ae330c1ae97d",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_exotic_rcharge_closure.py",
+          "added": 85,
+          "removed": 0,
+          "bytes": 4676,
+          "sha256": "54b252a63e6ce140319e1b059f7b1ddcd215f4280c10582f74e56b8bdefdbe28",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_exotic_sextic_nonic_completion.py",
+          "added": 171,
+          "removed": 0,
+          "bytes": 10647,
+          "sha256": "8a79003b7e8acd2d7426bfd9b6a3394c9bb59e122b00e22f9bd908925ff7d928",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_exotic_worldsheet_instanton_kernel.py",
+          "added": 86,
+          "removed": 0,
+          "bytes": 4930,
+          "sha256": "762b5b2574598fc179298ecf42fbfcb0b324e3339afabf53f581e2cc06b243f7",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_fi_exotic_condensate_compatibility.py",
+          "added": 60,
+          "removed": 0,
+          "bytes": 4542,
+          "sha256": "00ba07c07e7693a74a0e9d759a2ec170a9b02cf34a84caa2098cd18f6a903aeb",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_flagship_a5_hypercharge_organizer.py",
+          "added": 141,
+          "removed": 0,
+          "bytes": 6361,
+          "sha256": "9564d7179915d955eff10cf8240d6b3a9d56f876135f325cf20a432d76085511",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_flagship_global_u1_closure.py",
+          "added": 174,
+          "removed": 0,
+          "bytes": 7766,
+          "sha256": "e0234b695cc35dc3c73d5ac9e4481aee3460b00945b01584578ce8349bae6076",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_flagship_hypercharge_z6_gluing.py",
+          "added": 121,
+          "removed": 0,
+          "bytes": 5869,
+          "sha256": "25b3a80b7e60b22fa7a64878abf81682fc844bc5144e7825a66a37db1611f873",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_flagship_mass_order_provenance_audit.py",
+          "added": 76,
+          "removed": 0,
+          "bytes": 4047,
+          "sha256": "c3229eca23272c8c27955375ecb00fdf408f50832ca5b58695c17ef21f4ce2cd",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_flagship_orbifolder_model.py",
+          "added": 59,
+          "removed": 0,
+          "bytes": 2009,
+          "sha256": "7a84b7bca59a971ab75782079cf35749b8f0ac17a7079717fd75342044ff9b57",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_flagship_vbv_bowtie_repair.py",
+          "added": 175,
+          "removed": 0,
+          "bytes": 7797,
+          "sha256": "2a43416db9ad2afaf642a981ff59315ee1c53edf2a5a062a3ac86f0d97551fa1",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_flagship_vbv_hall_obstruction.py",
+          "added": 169,
+          "removed": 0,
+          "bytes": 6446,
+          "sha256": "2fb2c1eec603e8c9e63e4af157ceccecd33ac7538349a22b25396b802dc1e1a0",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_flagship_wilson_line_cz_bridge.py",
+          "added": 246,
+          "removed": 0,
+          "bytes": 10259,
+          "sha256": "f5cb35cc4790da07b0a1ff1fdb19e334f86fc148a198b64e3deb706492030dde",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_gut_hypercharge_exotics.py",
+          "added": 111,
+          "removed": 0,
+          "bytes": 6983,
+          "sha256": "6ea2170ab6cda022f9810a95b9bc58697fea741ab6ee75c557cd732e44999013",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_mu_exotic_monomial_ideal_containment.py",
+          "added": 115,
+          "removed": 0,
+          "bytes": 5703,
+          "sha256": "822be742fba0fa509971be08dd8b5b5cea3729a7175981d7ead2bf99dded608a",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_su5_breaking_exhaustive.py",
+          "added": 160,
+          "removed": 0,
+          "bytes": 8032,
+          "sha256": "f13c27f6901e63d4e0ff4e54df8dc6ba194bf531c107e7f8226b56cdf931ce1c",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_su5_fi_degree12_flatness.py",
+          "added": 111,
+          "removed": 0,
+          "bytes": 7687,
+          "sha256": "102156ef3a942ed78ca390a9eb202d131cd49bc5acc88c113589877262581fc1",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_su5_singlet_flat_directions.py",
+          "added": 126,
+          "removed": 0,
+          "bytes": 7470,
+          "sha256": "996f7c2b09191a699d2660c22d97fa0b33b4a4cc69e731b96939e6959ac3ba2c",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_su5_sm_chiral_exhaustive.py",
+          "added": 196,
+          "removed": 0,
+          "bytes": 9183,
+          "sha256": "97148e6acc35dc03735a0acdafff168eba3560466a1733158f8608764337c082",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_su9_order3_flagship_entangling_selection.py",
+          "added": 167,
+          "removed": 0,
+          "bytes": 7077,
+          "sha256": "88bd5c3bc97b0d5a182b1e17dd96a8b615dc1849207e1ca36904e84af20cd76f",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_two_cartan_hinge_orbits.py",
+          "added": 122,
+          "removed": 0,
+          "bytes": 6167,
+          "sha256": "3300d50a702422d1d4ac8f3191d6d075ba3f90a5667af85fa7685c5617175496",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_z6ii_dflat_fflat_first_obstruction.py",
+          "added": 64,
+          "removed": 0,
+          "bytes": 3615,
+          "sha256": "fbf1e4e0ef3ff9a5afee407cb67ad9b7b7483881afa647b06e626d77955009fa",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_z6ii_full_spectrum_engine_v1.py",
+          "added": 172,
+          "removed": 0,
+          "bytes": 8639,
+          "sha256": "0263f436bb56fb622b014921c4665624e112397c8c0affc97486f2897a10294f",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_z6ii_hypercharge_gs_universality_firewall.py",
+          "added": 51,
+          "removed": 0,
+          "bytes": 2924,
+          "sha256": "d89cdadce48464054e5817afaa5d41b32b8185f84efb092e2fc23dbea99339a5",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_z6ii_hypercharge_uniqueness_local27.py",
+          "added": 106,
+          "removed": 0,
+          "bytes": 4517,
+          "sha256": "a5f5a45f684e465772e858f9f0254323659b9e23a4c899870a1c82ceafa58574",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_z6ii_local_vectorlike_cubic_mass_channel.py",
+          "added": 141,
+          "removed": 0,
+          "bytes": 7339,
+          "sha256": "a624a6cec530816bb8c9765586e648ebc91b9b8277bce00e0d468bf4393d97c9",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_z6ii_singlet_pair_superpotential_search.py",
+          "added": 88,
+          "removed": 0,
+          "bytes": 4366,
+          "sha256": "9dfcacc3bd1b91806b799ec1fdc2c3762be19dc5f0794536be0e8eb744084b37",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_z6ii_singlet_selection_semigroup_v1.py",
+          "added": 98,
+          "removed": 0,
+          "bytes": 5056,
+          "sha256": "82fa3f41e7c888a068103697df09536851131ae50fa6ca6b5662bf8b6e010d4b",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_z6ii_sm_shape_builder.py",
+          "added": 219,
+          "removed": 0,
+          "bytes": 9222,
+          "sha256": "8c787874876bd022683a2b04862d5ced455168ccc45d6e871b180cf113404d13",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_z6ii_t1_full_oscillator_ledger.py",
+          "added": 231,
+          "removed": 0,
+          "bytes": 9977,
+          "sha256": "17082b0bc315e8f2bbabb274064ee99b1b195fc8600aed2712998da594debf33",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_z6ii_t1_local_e6_shell.py",
+          "added": 161,
+          "removed": 0,
+          "bytes": 7106,
+          "sha256": "bb6c1ea0b1e94b2439a703db691ac71f53d0357718a37bd069ddecb67471a4da",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_z6ii_t1_two_local_27s.py",
+          "added": 128,
+          "removed": 0,
+          "bytes": 6085,
+          "sha256": "29649d47d55298fee2c44fd64d017b81be3952ac43c4bfb84cba369e8626b942",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_z6ii_t1t1t4_rule456_dflat.py",
+          "added": 81,
+          "removed": 0,
+          "bytes": 4223,
+          "sha256": "5d9b6ea03d7138baee674017d6582ee0b9925a30f6d59210c3e52ca5d18744d6",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_z6ii_t2_t4_antifive_nogo.py",
+          "added": 153,
+          "removed": 0,
+          "bytes": 7184,
+          "sha256": "201af474220650632ed807933b66d5c3d6b6ca780f39ad13ef883b9782345855",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_z6ii_third_family_anomaly_fingerprint.py",
+          "added": 64,
+          "removed": 0,
+          "bytes": 3406,
+          "sha256": "142e3e5d5519034c116f20774d73d5768742323a4f1865cc000e4500e48de635",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/w33_z6ii_untwisted_split_ten.py",
+          "added": 90,
+          "removed": 0,
+          "bytes": 4476,
+          "sha256": "cacb8e240f4e4bd32a14fa5aaff599ae45120ed2966bc8cbf57b2d763cb04178",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/z6ii_buchmuller2007_benchmark_regression.py",
+          "added": 127,
+          "removed": 0,
+          "bytes": 5532,
+          "sha256": "782b61bbda62cfde9201300b3d90a2636ba53450368e3913087e7c2f5d26507b",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/z6ii_buchmuller2007_tableD2_visible_fixture.py",
+          "added": 69,
+          "removed": 0,
+          "bytes": 3282,
+          "sha256": "836ae439c52b64d8b139c8636965b9d90c0d91435481ac35bd3b97d6f0570a21",
+          "parse": "PASS"
+        },
+        {
+          "path": "analysis/z6ii_buchmuller2007_tableD3_row_fixture.py",
+          "added": 52,
+          "removed": 0,
+          "bytes": 2495,
+          "sha256": "0a96b1187416ffe508a1825ea7f6418f6998fc9feeecb8b1c41ac9428ff4416b",
+          "parse": "PASS"
+        },
+        {
+          "path": "data/w33_3_1_12_invariants_a8cubed_vs_moonshine.json",
+          "added": 65,
+          "removed": 0,
+          "bytes": 1769,
+          "sha256": "8df43f3a4ecdd0a16bebaa428d639eeab7c7cae1816871771989941fae994994",
+          "parse": "PASS",
+          "schema": null,
+          "claimed_status": "exact computation; refutes the shared-fixed-subalgebra route only"
+        },
+        {
+          "path": "data/w33_a8cubed_pauli_extraspecial.json",
+          "added": 108,
+          "removed": 0,
+          "bytes": 2823,
+          "sha256": "071667cec28d694386d5835329e061976b28c1a17c8200ef93f8dac1a4ff828f",
+          "parse": "PASS",
+          "schema": null,
+          "claimed_status": "items 1-3 proved and verified; item 4 is a structural identification, not a construction"
+        },
+        {
+          "path": "data/w33_a8cubed_pauli_moves_between_carriers.json",
+          "added": 178,
+          "removed": 0,
+          "bytes": 3756,
+          "sha256": "f4ce55c5783bd53f3f6b21e79768502e2f14f183aeea97d22500f99c2dd7d8a2",
+          "parse": "PASS",
+          "schema": null,
+          "claimed_status": "exact twining and root-count computations; modular Hauptmodul argument; external Kneser-neighbour data"
+        },
+        {
+          "path": "data/w33_central_character_doublet_is_twisted_sectors.json",
+          "added": 79,
+          "removed": 0,
+          "bytes": 3697,
+          "sha256": "0e5d8f65ecb49617deea71cba04622bc5d82d4fb656c59c617c6319df762b342",
+          "parse": "PASS",
+          "schema": null,
+          "claimed_status": "exact finite group and character computation; the stringy identification of X, Z, the centre and CP is published and cited, not re-derived"
+        },
+        {
+          "path": "data/w33_doublet_triplet_solvable_by_cancellation.json",
+          "added": 86,
+          "removed": 0,
+          "bytes": 4592,
+          "sha256": "4c94a96d5afbe72f1a075109cfa2f50811a115546e5801090ab81828ea825765",
+          "parse": "PASS",
+          "schema": null,
+          "claimed_status": "coupling lists and localisations from the orbifolder (validated in 93b34e1); the support, divisibility, tropical-LP, vacuum and D-flatness computations are done here, and the flagship data is embedded so the file recomputes rather than quotes"
+        },
+        {
+          "path": "data/w33_e8cubed_leech_overlap56.json",
+          "added": 41,
+          "removed": 0,
+          "bytes": 1838,
+          "sha256": "9c45cacd489cae44a7f24a8aec098ddaf020af8123b116b19cc06284d2541675",
+          "parse": "PASS",
+          "schema": "holotrade.w33_e8cubed_leech_overlap56.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_enriched_pauli_wilson_fingerprints.json",
+          "added": 49,
+          "removed": 0,
+          "bytes": 2663,
+          "sha256": "b1b9f353eca2e47f80befdd0e7c460ad846060d8a0ad7896509f8996fb4f6e74",
+          "parse": "PASS",
+          "schema": "holotrade.w33_enriched_pauli_wilson_fingerprints.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_entangling_gate_fixes_product_context.json",
+          "added": 63,
+          "removed": 0,
+          "bytes": 2826,
+          "sha256": "3178954ff3f84bba40819f0fc56d7b849a0a82f92476aeed146234fb796c3e11",
+          "parse": "PASS",
+          "schema": null,
+          "claimed_status": "geometry and CZ action computed exactly here; the Witting/SRG/4+36 facts are BT817's, cited"
+        },
+        {
+          "path": "data/w33_even_order_gut_phase_frontier.json",
+          "added": 25,
+          "removed": 0,
+          "bytes": 1556,
+          "sha256": "63cbb16e52965270d52e47e80596a8b19c0fe46b4bce82d317a9277c06c7f89d",
+          "parse": "PASS",
+          "schema": "w33.even_order_gut_phase_frontier.v1",
+          "claimed_status": "PASS_WITH_BUILDER_BOUNDARY"
+        },
+        {
+          "path": "data/w33_exceptional_case_is_empty.json",
+          "added": 88,
+          "removed": 0,
+          "bytes": 2027,
+          "sha256": "339fb38557a0099ab218ab36714c47fbee84d284959daf688471b6338d05f373",
+          "parse": "PASS",
+          "schema": null,
+          "claimed_status": "norm rule and reduction are proofs; the emptiness of the exceptional branch is a constructed search"
+        },
+        {
+          "path": "data/w33_exotic_benchmark_mass_matrix.json",
+          "added": 11,
+          "removed": 0,
+          "bytes": 1870,
+          "sha256": "abee182405abb6387751fc015e5915aeeaad275f76344000aef458957d18bbb7",
+          "parse": "PASS",
+          "schema": "holotrade.w33_exotic_benchmark_mass_matrix.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_exotic_mass_rank_by_condensate.json",
+          "added": 145,
+          "removed": 0,
+          "bytes": 3195,
+          "sha256": "94d471f8f7b4b34404f1fea36b103ab77669a77ccd2019d7c972c2fa5189280a",
+          "parse": "PASS",
+          "schema": null,
+          "claimed_status": "bounds A and B are proofs; the support-size table measures what generic realisations can reach"
+        },
+        {
+          "path": "data/w33_exotic_quartic_selection.json",
+          "added": 39,
+          "removed": 0,
+          "bytes": 3039,
+          "sha256": "bf4229d26a880b7cf5f3107006147d904fcb22c2faf800eee7df3a1b9744213e",
+          "parse": "PASS",
+          "schema": "holotrade.w33_exotic_quartic_selection.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_exotic_rcharge_closure.json",
+          "added": 29,
+          "removed": 0,
+          "bytes": 1945,
+          "sha256": "d07ecbb2c4f447e777efbc68fd3d6185266d8a2d236a97057aac3b5f4137dc2e",
+          "parse": "PASS",
+          "schema": "holotrade.w33_exotic_rcharge_closure.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_exotic_sextic_nonic_completion.json",
+          "added": 54,
+          "removed": 0,
+          "bytes": 3816,
+          "sha256": "af1a17d91bee069cee3bbb50e1abd79184ad679b59ba8ab55938262389c08f53",
+          "parse": "PASS",
+          "schema": "holotrade.w33_exotic_sextic_nonic_completion.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_exotic_worldsheet_instanton_kernel.json",
+          "added": 25,
+          "removed": 0,
+          "bytes": 1793,
+          "sha256": "02ec435d0f9f2c20a50417effcc76d09257fbfede5847beb2608fde927a606ca",
+          "parse": "PASS",
+          "schema": "holotrade.w33_exotic_worldsheet_instanton_kernel.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_fi_exotic_condensate_compatibility.json",
+          "added": 27,
+          "removed": 0,
+          "bytes": 2134,
+          "sha256": "e90b341370c01a643403381914652793b2f579fb33306d0d272c8958d2ed79e9",
+          "parse": "PASS",
+          "schema": "holotrade.w33_fi_exotic_condensate_compatibility.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_flagship_a5_hypercharge_organizer.json",
+          "added": 162,
+          "removed": 0,
+          "bytes": 3720,
+          "sha256": "cd118c85b890b8e0cc9819e78ee919427907be7547ed7e3d26b8ba6e204be4f6",
+          "parse": "PASS",
+          "schema": "holotrade.w33_flagship_a5_hypercharge_organizer.v1",
+          "claimed_status": "PASS_A5_HYPERCHARGE_ORGANIZER"
+        },
+        {
+          "path": "data/w33_flagship_exotics_decouple.json",
+          "added": 111,
+          "removed": 0,
+          "bytes": 4823,
+          "sha256": "fc83ae3de2b48acbead0587151bac3c520663cf726ffa42026eb91e3874c2ec2",
+          "parse": "PASS",
+          "schema": null,
+          "claimed_status": "coupling generation by the orbifolder (arXiv:1110.5229), validated in 93b34e1; rank arithmetic exact and computed here"
+        },
+        {
+          "path": "data/w33_flagship_global_u1_closure.json",
+          "added": 124,
+          "removed": 0,
+          "bytes": 3612,
+          "sha256": "6dcc036a512f59a2dd1b119ed59abd2432fcbb91d9c2ecb10321a52b558a9908",
+          "parse": "PASS",
+          "schema": "holotrade.w33_flagship_global_u1_closure.v1",
+          "claimed_status": "PASS_GLOBAL_GAUGE_INTERSECTION"
+        },
+        {
+          "path": "data/w33_flagship_hypercharge_z6_gluing.json",
+          "added": 162,
+          "removed": 0,
+          "bytes": 3589,
+          "sha256": "a8fbd86a1d027075f8934e3a7179d7173dbbe34fa8d85a55ce5dd32a4091559b",
+          "parse": "PASS",
+          "schema": "holotrade.w33_flagship_hypercharge_z6_gluing.v1",
+          "claimed_status": "PASS_E8_Z6_HYPERCHARGE_GLUE"
+        },
+        {
+          "path": "data/w33_flagship_mass_order_provenance_audit.json",
+          "added": 9,
+          "removed": 0,
+          "bytes": 932,
+          "sha256": "ee2613d19104e288398d6e34969a484e706a34f4241c0f70282775e6c39c72e5",
+          "parse": "PASS",
+          "schema": "w33.flagship_mass_order_provenance_audit.v1",
+          "claimed_status": "PASS_COMMITTED_PROVENANCE_IMPLIES_ORDER5_SEARCHED"
+        },
+        {
+          "path": "data/w33_flagship_vbv_bowtie_repair.json",
+          "added": 10,
+          "removed": 0,
+          "bytes": 1158,
+          "sha256": "978d2a78b5fc02a8da37a8ecc3edfed75b1c528930b21deac047797c6ca31bdf",
+          "parse": "PASS",
+          "schema": "w33.flagship_vbv_bowtie_repair.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_flagship_vbv_hall_obstruction.json",
+          "added": 10,
+          "removed": 0,
+          "bytes": 1065,
+          "sha256": "5b3be9dd880794176953aab46a3e4793bedc606200563f4e02b690ddaa2c47d3",
+          "parse": "PASS",
+          "schema": "w33.flagship_vbv_hall_obstruction.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_flagship_wilson_line_cz_bridge.json",
+          "added": 30,
+          "removed": 0,
+          "bytes": 1971,
+          "sha256": "ee962d880031e68efdf0b6c175d89a847339430a9291d835dbe308d5cbafc889",
+          "parse": "PASS",
+          "schema": "w33.flagship_wilson_line_cz_bridge.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_flagship_wilson_line_cz_spectrum.json",
+          "added": 63,
+          "removed": 0,
+          "bytes": 2407,
+          "sha256": "0bdb7b9ba87fe46fc3dd7802ef30326a5c77226b26c6fb5a57d3137d07ace56b",
+          "parse": "PASS",
+          "schema": null,
+          "claimed_status": "exact root-system arithmetic on the recorded model; independent confirmation of the reading in TOE 422271f78 / 030a44590, plus the SU(5)-in-the-neutral-block fact"
+        },
+        {
+          "path": "data/w33_flagship_wilson_line_pair_slot.json",
+          "added": 41,
+          "removed": 0,
+          "bytes": 2899,
+          "sha256": "fc47c4dfec6e05ad5006b2bd1d38102f5606d941becc656dd5c4a58782420ec4",
+          "parse": "PASS",
+          "schema": null,
+          "claimed_status": "the model file is quoted verbatim from the scan; the row, slot, lattice and order-three arithmetic are computed here"
+        },
+        {
+          "path": "data/w33_flipped_su5_closed_order3.json",
+          "added": 37,
+          "removed": 0,
+          "bytes": 1480,
+          "sha256": "0bfc9ca624819ea38278d3d16313f0fa1a66b61fecc741f9f2b85942b60b930b",
+          "parse": "PASS",
+          "schema": null,
+          "claimed_status": "(a) exact on sampled parents; (b) lemma plus verification"
+        },
+        {
+          "path": "data/w33_gut_hypercharge_exotics.json",
+          "added": 57,
+          "removed": 0,
+          "bytes": 3331,
+          "sha256": "8ce376c684359eb92eea30d3f4fdbb0a1c08567471324c06ea37d74d1a972fe6",
+          "parse": "PASS",
+          "schema": "holotrade.w33_gut_hypercharge_exotics.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_holonomy_pair_is_cz_parity.json",
+          "added": 78,
+          "removed": 0,
+          "bytes": 3062,
+          "sha256": "d841f5f3f11e50b0b0d3c69815c96ba4c4e85a212b8329f1bf6b286dcac4640e",
+          "parse": "PASS",
+          "schema": null,
+          "claimed_status": "exact root-system arithmetic on the recorded flagship, plus finite enumeration of the nine joint spectra; everything at the adjoint level, since E8 contains SU(9)/Z3"
+        },
+        {
+          "path": "data/w33_local_gut_multiplet_is_complete_retraction.json",
+          "added": 129,
+          "removed": 0,
+          "bytes": 4812,
+          "sha256": "0d241827c40554cdb01e20d80466a802f96ed4ff59905185f289d25a6a3c5ba8",
+          "parse": "PASS",
+          "schema": null,
+          "claimed_status": "weights, space-group elements and Wilson lines from the orbifolder at 17 digits, verified to be exact rationals with denominator dividing 6; the local shifts, local roots and multiplet components are computed here"
+        },
+        {
+          "path": "data/w33_mu_exotic_monomial_ideal_containment.json",
+          "added": 44,
+          "removed": 0,
+          "bytes": 2570,
+          "sha256": "ffd870290fa4f622c4cede151f6b4ce6c3c4c4bfa10d0623aa13d56ed3d66f1a",
+          "parse": "PASS",
+          "schema": "holotrade.w33_mu_exotic_monomial_ideal_containment.v1",
+          "claimed_status": "PASS_STRUCTURAL_DEDUCTION_FROM_MEASURED_PREMISE"
+        },
+        {
+          "path": "data/w33_mu_obstruction_is_doublet_triplet.json",
+          "added": 123,
+          "removed": 0,
+          "bytes": 3752,
+          "sha256": "2d58544bee8121ae3b56453ce6c464a4ef0ef02bb2dec04a3ae26d8ce57e1535",
+          "parse": "PASS",
+          "schema": null,
+          "claimed_status": "coupling lists and localisations from the orbifolder (validated in 93b34e1); the support and rank arithmetic is computed here"
+        },
+        {
+          "path": "data/w33_no_three_qutrit_pauli_group_in_e6.json",
+          "added": 57,
+          "removed": 0,
+          "bytes": 3114,
+          "sha256": "f9794c88f38172f4a36a300d58c1e40292d7d6dbca054e4a2a162c7de56c08fd",
+          "parse": "PASS",
+          "schema": null,
+          "claimed_status": "exact finite computation over F3^6 plus exact character arithmetic; L2 verified on every connected component of 400 randomised closures"
+        },
+        {
+          "path": "data/w33_no_vacuum_suppresses_mu.json",
+          "added": 60,
+          "removed": 0,
+          "bytes": 3164,
+          "sha256": "fb358092d7b851c8ab5ceb8aa21dfc8bcb926e420477c6502dcbc6eabbf9059a",
+          "parse": "PASS",
+          "schema": null,
+          "claimed_status": "aggregate coupling/search measurements imported from the orbifolder run; the logical no-go follows from those measurements, but this committed file does NOT independently replay the 26273-case search because the raw hyperedges are absent"
+        },
+        {
+          "path": "data/w33_pauli_centre_reverse_orbifold.json",
+          "added": 77,
+          "removed": 0,
+          "bytes": 2050,
+          "sha256": "b0643880aadbc8c5d06e4aead21b0ecfe1ad1feb052c4d4e1a449f4498b0422e",
+          "parse": "PASS",
+          "schema": null,
+          "claimed_status": "exact glue-code computation with standard orbifold duality; no claim about the full non-cyclic orbifold"
+        },
+        {
+          "path": "data/w33_s3_route_costs_the_su5.json",
+          "added": 51,
+          "removed": 0,
+          "bytes": 2539,
+          "sha256": "7cb75b1e222705fc175a3084113f962391d58f81fd580fb640c89d2866d74a08",
+          "parse": "PASS",
+          "schema": null,
+          "claimed_status": "exact root-system and representation-theory computation; the symmetric-pair classification is classical and cited"
+        },
+        {
+          "path": "data/w33_sm_gate_preserves_readout_moves_magic.json",
+          "added": 67,
+          "removed": 0,
+          "bytes": 3348,
+          "sha256": "eee895ef7a5b87ccff5d73721a63cedda963cbc0c2f1f71511205e991e312438",
+          "parse": "PASS",
+          "schema": null,
+          "claimed_status": true
+        },
+        {
+          "path": "data/w33_sm_is_joint_stabiliser_and_mu_universal.json",
+          "added": 80,
+          "removed": 0,
+          "bytes": 3366,
+          "sha256": "c2a65c9987dea6a69bbcd6a786682b70e10fe6a6108035b5c53f900a4f49e1ab",
+          "parse": "PASS",
+          "schema": null,
+          "claimed_status": "gauge-group mechanism: exact root-system arithmetic plus full background enumeration, with the full SU(9) centraliser scope corrected explicitly; mu counts from the orbifolder coupling engine at label level, validated in 93b34e1"
+        },
+        {
+          "path": "data/w33_standard_model_forces_entangling_branch.json",
+          "added": 140,
+          "removed": 0,
+          "bytes": 3226,
+          "sha256": "065a49f3331e241e51f6ec75bc337f837fa76ac88b66d2dc2b70849b0a275aa0",
+          "parse": "PASS",
+          "schema": null,
+          "claimed_status": "exact root-system arithmetic over the recorded models of 5b3f3ad"
+        },
+        {
+          "path": "data/w33_standard_model_no_go_closed.json",
+          "added": 72,
+          "removed": 0,
+          "bytes": 2068,
+          "sha256": "1fc06af2701c63d300d7711312489ec4181510bb4619343c2a99ffabb167991b",
+          "parse": "PASS",
+          "schema": null,
+          "claimed_status": "reconciliation: enumeration (other track) and proof (this track) describe the same wall"
+        },
+        {
+          "path": "data/w33_standard_models_top_yukawa.json",
+          "added": 61,
+          "removed": 0,
+          "bytes": 2889,
+          "sha256": "7473c4b84650161d307523371e2eb5d5ebd3ff454790bb8a73e5e9d3c342d63c",
+          "parse": "PASS",
+          "schema": null,
+          "claimed_status": "coupling counts from the orbifolder coupling engine (arXiv:1110.5229), validated on the published benchmark; lattice arithmetic exact and computed here"
+        },
+        {
+          "path": "data/w33_su5_breaking_exhaustive.json",
+          "added": 40,
+          "removed": 0,
+          "bytes": 2234,
+          "sha256": "e76de684d000af7d977c2e132d647e7839d5a19f32cb9b5e39938721c51d3b29",
+          "parse": "PASS",
+          "schema": "holotrade.w33_su5_breaking_exhaustive.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_su5_fi_degree12_flatness.json",
+          "added": 37,
+          "removed": 0,
+          "bytes": 2496,
+          "sha256": "682af76ae074257e295d724d5a69ad07778973d0f9c17802881f27c57ac1c5f8",
+          "parse": "PASS",
+          "schema": "holotrade.w33_su5_fi_degree12_flatness.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_su5_singlet_flat_directions.json",
+          "added": 29,
+          "removed": 0,
+          "bytes": 2270,
+          "sha256": "912e4bb5f50c9b62043a9f5262c8a5688dcab7b2511872b9088916cbb1fd0c76",
+          "parse": "PASS",
+          "schema": "holotrade.w33_su5_singlet_flat_directions.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_su5_sm_chiral_exhaustive.json",
+          "added": 28,
+          "removed": 0,
+          "bytes": 1391,
+          "sha256": "62ac9715c4ced03726f986f9ddeb87aa467a0a5725fc1936d7d88048b629a01d",
+          "parse": "PASS",
+          "schema": "holotrade.w33_su5_sm_chiral_exhaustive.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_su9_order3_flagship_entangling_selection.json",
+          "added": 19,
+          "removed": 0,
+          "bytes": 1817,
+          "sha256": "42f7c3b8cc45bfa17665e4d44452a4388966230b8e60f1b08133350f9d11ff53",
+          "parse": "PASS",
+          "schema": "w33.su9_order3_flagship_entangling_selection.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_twist_hosts_sm_in_even_order_orbifold.json",
+          "added": 270,
+          "removed": 0,
+          "bytes": 7564,
+          "sha256": "66b8e18818786ab697a99f6b1e872dcfd59b9d2341c4cc0479b9f657598cb800",
+          "parse": "PASS",
+          "schema": null,
+          "claimed_status": "lattice arithmetic exact and computed here; spectra, family counts and anomaly check from the orbifolder (arXiv:1110.5229), validated on the published BHLR benchmark hep-ph/0511035"
+        },
+        {
+          "path": "data/w33_twisted_sectors_carry_no_ten.json",
+          "added": 61,
+          "removed": 0,
+          "bytes": 1938,
+          "sha256": "17d707a1bacda17c6e49c2ace44aa18d6a2eef4dc214a584ec15dd2b28d6386a",
+          "parse": "PASS",
+          "schema": null,
+          "claimed_status": "budget and floor are arithmetic; the hypothesis is verified on every sampled fixed point"
+        },
+        {
+          "path": "data/w33_two_cartan_hinge_orbits.json",
+          "added": 10,
+          "removed": 0,
+          "bytes": 1592,
+          "sha256": "54f2fc4ed01bcbeb85202e1fc75ef6c40e0cc4d0b89b46c9339832c6db9117e8",
+          "parse": "PASS",
+          "schema": "w33.two_cartan_hinge_orbits.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_two_parities_are_different.json",
+          "added": 53,
+          "removed": 0,
+          "bytes": 2726,
+          "sha256": "47a5887c956c6da6ccc89d8ca163dce056803d90893c24f0c1ca25b54a4fa13d",
+          "parse": "PASS",
+          "schema": null,
+          "claimed_status": "exact root-system arithmetic plus the classical facts that an automorphism inverting the centre of SU(n) is outer, and that outer involutions of su(n) for odd n fix so(n)"
+        },
+        {
+          "path": "data/w33_vacuum_no_standard_model_family.json",
+          "added": 159,
+          "removed": 0,
+          "bytes": 3839,
+          "sha256": "e81b79dea8ce2185d355981b9180d6477955d90ce2c62647919a63dcd7b976d3",
+          "parse": "PASS",
+          "schema": null,
+          "claimed_status": "negative over deterministic samples with an exact conditional law; not a theorem"
+        },
+        {
+          "path": "data/w33_vacuum_three_family_gut.json",
+          "added": 149,
+          "removed": 0,
+          "bytes": 3118,
+          "sha256": "619265f4d4f945432fc78fd5f1445b02cdb5f484c266dae142f5abca99f2604b",
+          "parse": "PASS",
+          "schema": null,
+          "claimed_status": "positive existence over deterministic samples; the completeness pattern is measured, not proved"
+        },
+        {
+          "path": "data/w33_vacuum_wilson_line_families.json",
+          "added": 16,
+          "removed": 16,
+          "bytes": 3781,
+          "sha256": "484d678ff04e7851596650c9049a60cc619fcad71064b055fe5496cb7b8a8250",
+          "parse": "PASS",
+          "schema": null,
+          "claimed_status": "measurement over deterministic samples; localisation law not proved"
+        },
+        {
+          "path": "data/w33_wilson_line_splits_gut_multiplets.json",
+          "added": 71,
+          "removed": 0,
+          "bytes": 2089,
+          "sha256": "c7a87087274b1fd21ea6dbf45381743f326c7b6de09fd2fa729d0e7156a47985",
+          "parse": "PASS",
+          "schema": null,
+          "claimed_status": "lemma proved arithmetically; items verified on this vacuum"
+        },
+        {
+          "path": "data/w33_z6ii_dflat_fflat_first_obstruction.json",
+          "added": 22,
+          "removed": 0,
+          "bytes": 1021,
+          "sha256": "79803b5aa6f01e049eb958969843e4dadf84889f93e0802ddb4ac79203bb9926",
+          "parse": "PASS",
+          "schema": "w33.z6ii_dflat_fflat_first_obstruction.v1",
+          "claimed_status": "PASS_NAIVE_CUBIC_FORBIDDEN__ALL_ORDER_FFLAT_OPEN"
+        },
+        {
+          "path": "data/w33_z6ii_full_spectrum_engine_v1.json",
+          "added": 31,
+          "removed": 0,
+          "bytes": 1804,
+          "sha256": "976400c34def9b7c354522995677a67ad85c8150f3a2094601ac874b24c0d7d7",
+          "parse": "PASS",
+          "schema": "w33.z6ii_full_spectrum_engine_v1",
+          "claimed_status": "PASS_SU3_CUBIC__HYPERCHARGE_SENTINEL_FAIL"
+        },
+        {
+          "path": "data/w33_z6ii_hypercharge_gs_universality_firewall.json",
+          "added": 8,
+          "removed": 0,
+          "bytes": 560,
+          "sha256": "f4cd578c1fc6cb66c45e2bc965cba72785da3e908cbbd033eb5c5da8fdc067dd",
+          "parse": "PASS",
+          "schema": "w33.z6ii_hypercharge_gs_universality_firewall.v1",
+          "claimed_status": "PASS_CURRENT_LEDGER_INCONSISTENT_WITH_UNIVERSAL_GS_RESCUE"
+        },
+        {
+          "path": "data/w33_z6ii_hypercharge_uniqueness_local27.json",
+          "added": 11,
+          "removed": 0,
+          "bytes": 498,
+          "sha256": "8fc675ddc3eed5942b4a8cc7321ee1607f9688516f350eade6688f58853378c1",
+          "parse": "PASS",
+          "schema": "w33.z6ii_hypercharge_uniqueness_local27.v1",
+          "claimed_status": "PASS_UNIQUE_CANONICAL_HYPERCHARGE"
+        },
+        {
+          "path": "data/w33_z6ii_local_vectorlike_cubic_mass_channel.json",
+          "added": 33,
+          "removed": 0,
+          "bytes": 1767,
+          "sha256": "d10d1c8a9d36735822d78471fb9517563a90c1a8aaf8f8a7907ad44909a9c562",
+          "parse": "PASS",
+          "schema": "w33.z6ii_local_vectorlike_cubic_mass_channel.v1",
+          "claimed_status": "PASS_STANDARD_SELECTION_RULES_RULE456_OPEN"
+        },
+        {
+          "path": "data/w33_z6ii_singlet_pair_superpotential_search.json",
+          "added": 21,
+          "removed": 0,
+          "bytes": 858,
+          "sha256": "e4976dce9fc50ea52d3159aa2c8d7b05eaeaf77e99cd1f9d1a20d8517628fbd9",
+          "parse": "PASS",
+          "schema": "w33.z6ii_singlet_pair_superpotential_search.v1",
+          "claimed_status": "PASS_PAIR_SELFCOUPLING_NO_GO__DEG15_EXTERNAL_LIFT_CANDIDATE"
+        },
+        {
+          "path": "data/w33_z6ii_singlet_selection_semigroup_v1.json",
+          "added": 24,
+          "removed": 0,
+          "bytes": 807,
+          "sha256": "61b8317a6c8253814af04f8fec65ee099a3a22b7a5d61599644720a6806ca314",
+          "parse": "PASS",
+          "schema": "w33.z6ii_singlet_selection_semigroup.v1",
+          "claimed_status": "PASS_ENGINE_AND_SEED_FIXTURE"
+        },
+        {
+          "path": "data/w33_z6ii_sm_shape_builder.json",
+          "added": 70,
+          "removed": 0,
+          "bytes": 3713,
+          "sha256": "10a8ac7c784d880f81d1277868d3c33e62f4182fb59b4436ba37134f1f93e2d3",
+          "parse": "PASS",
+          "schema": "w33.z6ii_sm_shape_builder.v1",
+          "claimed_status": "PASS_GAUGE_EMBEDDING_NOT_SPECTRUM"
+        },
+        {
+          "path": "data/w33_z6ii_t1_full_oscillator_ledger.json",
+          "added": 25,
+          "removed": 0,
+          "bytes": 1355,
+          "sha256": "0ede3b9c874968ac05beb2f45f067e065625df54de3284b98fd7b6366e5d0195",
+          "parse": "PASS",
+          "schema": "w33.z6ii_t1_full_oscillator_ledger.v1",
+          "claimed_status": "PASS_CORRECTS_PARTIAL_FRONTIER"
+        },
+        {
+          "path": "data/w33_z6ii_t1_local_e6_shell.json",
+          "added": 44,
+          "removed": 0,
+          "bytes": 2557,
+          "sha256": "73f36282e1dbd39719f2bbdded193b48e89c642d281e13de8613ca7e1b3a0ad6",
+          "parse": "PASS",
+          "schema": "w33.z6ii_t1_local_e6_shell.v1",
+          "claimed_status": "PASS_LOCAL_SHELL_NOT_4D_SPECTRUM"
+        },
+        {
+          "path": "data/w33_z6ii_t1_two_local_27s.json",
+          "added": 37,
+          "removed": 0,
+          "bytes": 1880,
+          "sha256": "5ea9d326b91b81a4d6408907ec0bdb74ce45a0e58919e51411ce9dd24c49fc1f",
+          "parse": "PASS",
+          "schema": "w33.z6ii_t1_two_local_27s.v1",
+          "claimed_status": "PASS_WITH_CLASSICAL_T1_PROJECTION_INPUT"
+        },
+        {
+          "path": "data/w33_z6ii_t1t1t4_rule456_dflat.json",
+          "added": 19,
+          "removed": 0,
+          "bytes": 1244,
+          "sha256": "6ae3c8ccd9c6e69df38d450d28639cbf3897101135d9e5d28488e68e11d8afa9",
+          "parse": "PASS",
+          "schema": "w33.z6ii_t1t1t4_rule456_dflat.v1",
+          "claimed_status": "PASS_RULE456_AND_DFLAT__FFLAT_OPEN"
+        },
+        {
+          "path": "data/w33_z6ii_t2_t4_antifive_nogo.json",
+          "added": 15,
+          "removed": 0,
+          "bytes": 1001,
+          "sha256": "b587782fd7adce6d513dfa52cf221bdba98e2d42758ba27f2137b8d723435ead",
+          "parse": "PASS",
+          "schema": "w33.z6ii_t2_t4_antifive_nogo.v1",
+          "claimed_status": "PASS_TARGETED_NO_GO"
+        },
+        {
+          "path": "data/w33_z6ii_third_family_anomaly_fingerprint.json",
+          "added": 25,
+          "removed": 0,
+          "bytes": 1097,
+          "sha256": "73f8212bc73911565d529f60d65fa0381f316e097c5f4d09d85be0b2c968f869",
+          "parse": "PASS",
+          "schema": "w33.z6ii_third_family_anomaly_fingerprint.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/w33_z6ii_untwisted_split_ten.json",
+          "added": 33,
+          "removed": 0,
+          "bytes": 1742,
+          "sha256": "2fc527a1604dad05775460546ee80e0c0de40530b634fbdf067fbec7b6627610",
+          "parse": "PASS",
+          "schema": "w33.z6ii_untwisted_split_ten.v1",
+          "claimed_status": "PASS"
+        },
+        {
+          "path": "data/z6ii_buchmuller2007_benchmark_regression.json",
+          "added": 38,
+          "removed": 0,
+          "bytes": 1520,
+          "sha256": "a7ae3b3cb5349aa88bf16b6f9c571101ab14b44bca1c457ae06d9962c965ec07",
+          "parse": "PASS",
+          "schema": "holotrade.z6ii_buchmuller2007_benchmark_regression.v1",
+          "claimed_status": "PASS_CORE_EXTERNAL_BENCHMARK"
+        },
+        {
+          "path": "data/z6ii_buchmuller2007_tableD2_visible_fixture.json",
+          "added": 23,
+          "removed": 0,
+          "bytes": 701,
+          "sha256": "cb1d54cd9cf59a3eee91ce17b8e2b50277242fa6747f5aa92155955b7ddec96f",
+          "parse": "PASS",
+          "schema": "holotrade.z6ii_buchmuller2007_tableD2_visible_fixture.v1",
+          "claimed_status": "PASS_PUBLISHED_ROW_FIXTURE"
+        },
+        {
+          "path": "data/z6ii_buchmuller2007_tableD3_row_fixture.json",
+          "added": 8,
+          "removed": 0,
+          "bytes": 470,
+          "sha256": "700e488c01aa7cd1f2340c94d488bb7a6fb1e276797fbea88b64449cf9b00621",
+          "parse": "PASS",
+          "schema": "holotrade.z6ii_buchmuller2007_tableD3_row_fixture.v1",
+          "claimed_status": "PASS_COMPLETE_ROW_IDENTITY_FIXTURE"
+        },
+        {
+          "path": "tests/shape-catalogue.test.js",
+          "added": 198,
+          "removed": 0,
+          "bytes": 451108,
+          "sha256": "23b6ebc1b225272cdb4526853c52845a928b9487a240d5d404811bdc05ef51bb",
+          "coverage": "diff intake; not independent semantic certification"
+        }
+      ]
+    }
+  ]
+}
