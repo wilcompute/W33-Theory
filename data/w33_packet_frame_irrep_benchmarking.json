@@ -295,7 +295,7 @@
       "EndV9_isotypic_rank": 3,
       "present": true,
       "projector_denominator": 72,
-      "projector_class_weight_numerators": [
+      "projector_class_sum_weight_numerators": [
         1,
         1,
         1,
@@ -305,7 +305,32 @@
         1,
         1,
         1
-      ]
+      ],
+      "projector_class_average_weight_numerators": [
+        18,
+        12,
+        12,
+        9,
+        6,
+        6,
+        4,
+        4,
+        1
+      ],
+      "class_average_l1_overhead": "1",
+      "bounded_variance_overhead": "1",
+      "optimal_equal_variance_shot_fractions": [
+        "1/4",
+        "1/6",
+        "1/6",
+        "1/8",
+        "1/12",
+        "1/12",
+        "1/18",
+        "1/18",
+        "1/72"
+      ],
+      "nonzero_character_classes": 9
     },
     {
       "name": "1_alt",
@@ -315,7 +340,7 @@
       "EndV9_isotypic_rank": 1,
       "present": true,
       "projector_denominator": 72,
-      "projector_class_weight_numerators": [
+      "projector_class_sum_weight_numerators": [
         -1,
         -1,
         1,
@@ -325,7 +350,32 @@
         1,
         1,
         1
-      ]
+      ],
+      "projector_class_average_weight_numerators": [
+        -18,
+        -12,
+        12,
+        9,
+        6,
+        -6,
+        4,
+        4,
+        1
+      ],
+      "class_average_l1_overhead": "1",
+      "bounded_variance_overhead": "1",
+      "optimal_equal_variance_shot_fractions": [
+        "1/4",
+        "1/6",
+        "1/6",
+        "1/8",
+        "1/12",
+        "1/12",
+        "1/18",
+        "1/18",
+        "1/72"
+      ],
+      "nonzero_character_classes": 9
     },
     {
       "name": "sgn_sym",
@@ -335,7 +385,7 @@
       "EndV9_isotypic_rank": 1,
       "present": true,
       "projector_denominator": 72,
-      "projector_class_weight_numerators": [
+      "projector_class_sum_weight_numerators": [
         -1,
         1,
         -1,
@@ -345,7 +395,32 @@
         1,
         1,
         1
-      ]
+      ],
+      "projector_class_average_weight_numerators": [
+        -18,
+        12,
+        -12,
+        9,
+        -6,
+        6,
+        4,
+        4,
+        1
+      ],
+      "class_average_l1_overhead": "1",
+      "bounded_variance_overhead": "1",
+      "optimal_equal_variance_shot_fractions": [
+        "1/4",
+        "1/6",
+        "1/6",
+        "1/8",
+        "1/12",
+        "1/12",
+        "1/18",
+        "1/18",
+        "1/72"
+      ],
+      "nonzero_character_classes": 9
     },
     {
       "name": "sgn_alt",
@@ -355,7 +430,7 @@
       "EndV9_isotypic_rank": 0,
       "present": false,
       "projector_denominator": 72,
-      "projector_class_weight_numerators": [
+      "projector_class_sum_weight_numerators": [
         1,
         -1,
         -1,
@@ -365,7 +440,32 @@
         1,
         1,
         1
-      ]
+      ],
+      "projector_class_average_weight_numerators": [
+        18,
+        -12,
+        -12,
+        9,
+        -6,
+        -6,
+        4,
+        4,
+        1
+      ],
+      "class_average_l1_overhead": "1",
+      "bounded_variance_overhead": "1",
+      "optimal_equal_variance_shot_fractions": [
+        "1/4",
+        "1/6",
+        "1/6",
+        "1/8",
+        "1/12",
+        "1/12",
+        "1/18",
+        "1/18",
+        "1/72"
+      ],
+      "nonzero_character_classes": 9
     },
     {
       "name": "std_sym",
@@ -375,7 +475,7 @@
       "EndV9_isotypic_rank": 24,
       "present": true,
       "projector_denominator": 72,
-      "projector_class_weight_numerators": [
+      "projector_class_sum_weight_numerators": [
         0,
         -4,
         0,
@@ -385,7 +485,32 @@
         -8,
         4,
         16
-      ]
+      ],
+      "projector_class_average_weight_numerators": [
+        0,
+        -48,
+        0,
+        0,
+        0,
+        48,
+        -32,
+        16,
+        16
+      ],
+      "class_average_l1_overhead": "20/9",
+      "bounded_variance_overhead": "400/81",
+      "optimal_equal_variance_shot_fractions": [
+        "0",
+        "3/10",
+        "0",
+        "0",
+        "0",
+        "3/10",
+        "1/5",
+        "1/10",
+        "1/10"
+      ],
+      "nonzero_character_classes": 5
     },
     {
       "name": "std_alt",
@@ -395,7 +520,7 @@
       "EndV9_isotypic_rank": 12,
       "present": true,
       "projector_denominator": 72,
-      "projector_class_weight_numerators": [
+      "projector_class_sum_weight_numerators": [
         0,
         4,
         0,
@@ -405,7 +530,32 @@
         -8,
         4,
         16
-      ]
+      ],
+      "projector_class_average_weight_numerators": [
+        0,
+        48,
+        0,
+        0,
+        0,
+        -48,
+        -32,
+        16,
+        16
+      ],
+      "class_average_l1_overhead": "20/9",
+      "bounded_variance_overhead": "400/81",
+      "optimal_equal_variance_shot_fractions": [
+        "0",
+        "3/10",
+        "0",
+        "0",
+        "0",
+        "3/10",
+        "1/5",
+        "1/10",
+        "1/10"
+      ],
+      "nonzero_character_classes": 5
     },
     {
       "name": "1xsgn",
@@ -415,7 +565,7 @@
       "EndV9_isotypic_rank": 4,
       "present": true,
       "projector_denominator": 72,
-      "projector_class_weight_numerators": [
+      "projector_class_sum_weight_numerators": [
         0,
         0,
         0,
@@ -425,7 +575,32 @@
         4,
         4,
         4
-      ]
+      ],
+      "projector_class_average_weight_numerators": [
+        0,
+        0,
+        0,
+        -36,
+        0,
+        0,
+        16,
+        16,
+        4
+      ],
+      "class_average_l1_overhead": "1",
+      "bounded_variance_overhead": "1",
+      "optimal_equal_variance_shot_fractions": [
+        "0",
+        "0",
+        "0",
+        "1/2",
+        "0",
+        "0",
+        "2/9",
+        "2/9",
+        "1/18"
+      ],
+      "nonzero_character_classes": 4
     },
     {
       "name": "1xstd",
@@ -435,7 +610,7 @@
       "EndV9_isotypic_rank": 24,
       "present": true,
       "projector_denominator": 72,
-      "projector_class_weight_numerators": [
+      "projector_class_sum_weight_numerators": [
         0,
         0,
         -4,
@@ -445,7 +620,32 @@
         4,
         -8,
         16
-      ]
+      ],
+      "projector_class_average_weight_numerators": [
+        0,
+        0,
+        -48,
+        0,
+        48,
+        0,
+        16,
+        -32,
+        16
+      ],
+      "class_average_l1_overhead": "20/9",
+      "bounded_variance_overhead": "400/81",
+      "optimal_equal_variance_shot_fractions": [
+        "0",
+        "0",
+        "3/10",
+        "0",
+        "3/10",
+        "0",
+        "1/10",
+        "1/5",
+        "1/10"
+      ],
+      "nonzero_character_classes": 5
     },
     {
       "name": "sgnxstd",
@@ -455,7 +655,7 @@
       "EndV9_isotypic_rank": 12,
       "present": true,
       "projector_denominator": 72,
-      "projector_class_weight_numerators": [
+      "projector_class_sum_weight_numerators": [
         0,
         0,
         4,
@@ -465,16 +665,41 @@
         4,
         -8,
         16
-      ]
+      ],
+      "projector_class_average_weight_numerators": [
+        0,
+        0,
+        48,
+        0,
+        -48,
+        0,
+        16,
+        -32,
+        16
+      ],
+      "class_average_l1_overhead": "20/9",
+      "bounded_variance_overhead": "400/81",
+      "optimal_equal_variance_shot_fractions": [
+        "0",
+        "0",
+        "3/10",
+        "0",
+        "3/10",
+        "0",
+        "1/10",
+        "1/5",
+        "1/10"
+      ],
+      "nonzero_character_classes": 5
     }
   ],
   "protocol": [
     "For each of the nine character classes, average the measured conjugation response over its listed runtime slots.",
-    "For irrep lambda, combine those nine class averages with numerator d_lambda*chi_lambda(C) and common denominator 72.",
+    "For irrep lambda, combine class AVERAGES with numerator d_lambda*|C|*chi_lambda(C) and common denominator 72. (For class SUMS the numerator is d_lambda*chi_lambda(C).)",
     "Fit dynamics inside each present multiplicity block; without an extra depolarizing assumption there can be up to 25 decay eigenvalues, not merely eight.",
     "If randomized compiling/twirling scalarizes each multiplicity block, fit one decay rate per present isotypic sector (eight total)."
   ],
-  "boundary": "Exact finite representation/control compilation. Character-projector coefficients are signed post-processing weights, not probabilities. Laboratory use still requires calibrated or virtual implementations of all listed frame permutations and a SPAM-aware estimator.",
+  "boundary": "Exact finite representation/control compilation. Character-projector coefficients are signed post-processing weights, not probabilities. The variance result is a worst-case bounded-outcome allocation rule, not a device-specific shot prediction. Laboratory use still requires calibrated or virtual implementations and SPAM-aware decay fitting.",
   "parents": [
     "data/w33_packet_frame_symmetry_tomography.json",
     "data/w33_qutrit_hamming_cz_frame_bundle.json"
@@ -488,5 +713,28 @@
     "runtime_classes9": true,
     "present_sectors8": true,
     "max_decays25": true
+  },
+  "sampling": {
+    "bound": "For bounded unit-variance class estimators and a fixed total shot budget N, optimal allocation is proportional to the absolute class-average weights; the variance bound is gamma_lambda^2/N with gamma_lambda=sum_C |d|C|chi(C)|/72.",
+    "present_sector_l1_overheads": {
+      "1_sym": "1",
+      "1_alt": "1",
+      "sgn_sym": "1",
+      "std_sym": "20/9",
+      "std_alt": "20/9",
+      "1xsgn": "1",
+      "1xstd": "20/9",
+      "sgnxstd": "20/9"
+    },
+    "present_sector_variance_overheads": {
+      "1_sym": "1",
+      "1_alt": "1",
+      "sgn_sym": "1",
+      "std_sym": "400/81",
+      "std_alt": "400/81",
+      "1xsgn": "1",
+      "1xstd": "400/81",
+      "sgnxstd": "400/81"
+    }
   }
 }
