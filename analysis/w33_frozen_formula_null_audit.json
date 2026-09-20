@@ -1,10 +1,10 @@
 {
   "status": "PASS",
-  "frozen_universe_sha256": "ccc3462ea8307079abfdd2d68f960cbba7faf9ba888eebd4dc2e378a3edd52dc",
-  "source_file_sha256": "42cebab38181884c632594da0926c5b22a57e194c17edfac3b3d87cdb1633e30",
-  "frozen_repository_head": "b81856277c47cc96c7f76ef0a6450099d8e028ac",
-  "exact_family_count": 51287,
-  "structural_family_count": 49865,
+  "frozen_universe_sha256": "3415ec387023e4b3fee0f052a8b8f84521f983b7f51e1090e538cadcd406560e",
+  "source_file_sha256": "e98acebdc2271b1c1ef9850846a2d506af046a87cf18a9b8e7cd3135cb6cc6a5",
+  "frozen_repository_head": "76f3efe0619027b7d61c785f54ce56f33fdac6e6",
+  "exact_family_count": 51294,
+  "structural_family_count": 49872,
   "tests": [
     {
       "observable": "inverse_alpha",
