@@ -1,0 +1,51 @@
+\subsection{The holonomy group acts on packet18 from the left and right}
+\label{sec:20260919-packet18-external-holonomy}
+
+The packet execution group is
+\[
+G=\mathbb F_3^2\rtimes D_8,\qquad |G|=72,
+\]
+and the eighteen probe blocks are the homogeneous space
+\[
+X=G/H,\qquad H=\langle R\rangle\cong C_4.
+\]
+The earlier subgroup obstruction remains valid: the physical character group
+\[
+K=C_{3,\rho}\times C_{3,a}\times C_{2,b}
+\]
+is not a subgroup of $G$.  Nevertheless the homogeneous space carries one additional symmetry that is invisible if one looks only inside the left runtime action.
+
+For a transitive $G$-set $G/H$,
+\[
+\operatorname{Aut}_G(G/H)\cong N_G(H)/H.
+\]
+Here exhaustive computation gives
+\[
+N_G(H)=\{0\}\times D_8,\qquad N_G(H)/H\cong C_2.
+\]
+The unique nontrivial equivariant automorphism is right multiplication by a reflection.  In the packet coordinates
+\[
+t=(\rho,a)\in\mathbb F_3^2,\qquad b\in\mathbb F_2,
+\]
+it is simply $(t,b)\mapsto(t,b+1)$ and commutes with the entire left $G$-action.
+
+The left translation kernel $T=\mathbb F_3^2$ and this right deck involution therefore generate
+\[
+T_{\rm left}\times C_{2,\rm deck}\cong C_3^2\times C_2,
+\]
+acting regularly on all eighteen packet blocks. Thus the old two-sheet torsor bridge is the restriction of an exact regular action of the full holonomy character group; what remains false is only the stronger claim that this group sits inside the 72-element execution group.
+
+Using $n=4a+3b\pmod 6$, the physical $C_6$ generator $(a,b)=(1,1)$ becomes one ternary translation plus one deck swap. Its packet18 cycle profile is $6^3$.
+The existing control-plane ABI writes
+\[
+h=3\rho+a,\qquad \texttt{tick}=8h+4b+p,
+\]
+where $p\in\mathbb Z_4$ is the probe slot. Hence the same generator compiles lookup-free on the full 72-slot frame as
+\[
+a\mapsto a+1,\qquad b\mapsto b+1,\qquad \rho,p\ \text{fixed}.
+\]
+It has cycle profile $6^{12}$, its cube is the pure deck parity, and its sixth power is the identity.
+
+These statements are control-plane and finite-group theorems. They do not identify an $E_8$ eigenspace with a hardware packet mode, nor do they claim that address mutation alone implements the microscopic holonomy.
+
+Executable witnesses: \texttt{analysis/w33\_packet18\_external\_regular\_holonomy\_action.py} and \texttt{analysis/w33\_packet72\_physical\_c6\_address\_compiler.py}.
