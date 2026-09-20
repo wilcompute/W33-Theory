@@ -1,0 +1,11 @@
+{
+  "schema":"w33.packet72_physical_c6_address_compiler.v1",
+  "status":"PASS_LOOKUP_FREE_CONTROL_PLANE_COMPILER",
+  "headline":"The physical flagship C6 holonomy compiles into the 72-slot packet address as a->a+1 mod3 and b->1-b, with selector rho and probe slot p fixed. The scheduler permutation has order 6 and cycle profile 6^12; g^3 is pure deck parity.",
+  "address_word":{"hesse_bin":"h=3*rho+a","sector":"b in F2","probe":"p in Z4","frame_tick":"8*h+4*b+p"},
+  "compiled_generator":{"rho":"unchanged","a":"a+1 mod3","b":"1-b","p":"unchanged"},
+  "cycle_profiles":{"packet18":{"6_cycles":3},"packet72":{"6_cycles":12}},
+  "power_laws":{"g2":"a->a+2, b fixed","g3":"a fixed, b->1-b","g4":"a->a+1, b fixed","g6":"identity"},
+  "hardware_read":"one ternary increment plus one binary XOR; no lookup table; probe slot untouched",
+  "physical_boundary":"Scheduler/address compiler only; no microscopic E8 unitary implementation is claimed."
+}
