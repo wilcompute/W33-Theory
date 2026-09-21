@@ -1,0 +1,51 @@
+% PASS20260921 distinguish the physical A2 center from the Pass1147 A2 Coxeter C3.
+\subsection*{The external $A_2$ contains two inequivalent order-three $E_8$ actions}
+
+The physical FI grading and the Pass~1147 colour cycle both arise from the
+same external type-$A_2$ factor, but they are not the same inner automorphism.
+
+For
+\[
+248=(78,1)+(1,8)+(27,3)+(\overline{27},\overline3),
+\]
+the physical FI element is the central $SU(3)$ phase $\omega I_3$.  It acts
+trivially on the two adjoint blocks and by $\omega,\omega^2$ on the two
+matter blocks, so its adjoint eigendimensions are
+\[
+\boxed{86+81+81},
+\]
+and its fixed algebra is $E_6+A_2$.
+
+Pass~1147 instead uses the Weyl Coxeter three-cycle of the same $A_2$.  In
+the defining triplet its eigenvalues are $1,\omega,\omega^2$, while on the
+$A_2$ adjoint they occur with multiplicities $2,3,3$.  Hence its full
+$E_8$ adjoint spectrum is
+\[
+\boxed{134+57+57},
+\]
+with fixed reductive algebra $E_7+\mathfrak u(1)$.
+
+An exhaustive affine-Kac sweep in the repository's frozen $E_8$ gauge finds
+exactly four normalized inner order-three spectra,
+\[
+80+84+84,\qquad
+86+81+81,\qquad
+92+78+78,\qquad
+134+57+57.
+\]
+The two actions therefore select distinct conjugacy classes.  Their unique
+Kac coordinates in the repository ordering are respectively
+\[
+(0,0,0,0,0,1,0,0,0),
+\qquad
+(1,0,0,0,0,0,1,0,0).
+\]
+
+The executable witness is
+\texttt{analysis/w33\_e8\_a2\_center\_vs\_coxeter\_order3.py}.
+
+\paragraph{Carrier firewall.}
+The Pass~1147 module $81_-\otimes\mathbb C[C_3]$ has rank $243$ and is not
+the physical $81$-dimensional $E_8$ grade-one root sector.  The two $C_3$
+actions may coexist inside one $A_2$, but they cannot be substituted for one
+another.
