@@ -165,10 +165,14 @@ def main(write=True):
     assert set(element_to_index)==set(elements)
 
     # Entire multiplication table as indices; verify closure and hash table.
+    index_to_element=[None]*648
+    for e,i in element_to_index.items():
+        index_to_element[i]=e
+    assert all(e is not None for e in index_to_element)
     table=[]
-    for e1 in [next(e for e,i in element_to_index.items() if i==k) for k in range(648)]:
+    for e1 in index_to_element:
         row=[]
-        for e2 in [next(e for e,i in element_to_index.items() if i==k) for k in range(648)]:
+        for e2 in index_to_element:
             p=e1*e2
             assert p in element_to_index
             row.append(element_to_index[p])
