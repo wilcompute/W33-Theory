@@ -1,0 +1,43 @@
+{
+  "schema":"w33.matter-parity-dai-freed-firewall.v1",
+  "status":"PASS_QPSI_MATTER_PARITY_ANOMALY_FIREWALL_WITH_MIXED_SYMMETRY_BOUNDARY",
+  "computed":{
+    "branching":"27=16_1+10_-2+1_4",
+    "matter_parity":"(-1)^Qpsi",
+    "odd_dimension":16,
+    "even_dimension":11,
+    "A_gravity_U1psi":0,
+    "A_U1psi_cubed":0,
+    "A_SO10sq_U1psi":0,
+    "dynkin_index_normalization":{"T10":1,"T16":2},
+    "SM_16_sanity":{"SU2_doublets":4,"twice_total_SU3_index":4}
+  },
+  "literature_imports":{
+    "pure_Z2":{
+      "result":"Omega_5^Spin(BZ2)=0",
+      "source":"Davighi, Lohitsiri, Poovuttikul, JHEP 03 (2024) 119, arXiv:2311.18023"
+    },
+    "independent_U1_times_Z2":{
+      "result":"Omega_5^Spin(BU(1) x BZ2)=Z4",
+      "source":"Davighi, Lohitsiri, Poovuttikul, JHEP 03 (2024) 119, arXiv:2311.18023"
+    },
+    "Spin10":{
+      "result":"Spin(10) GUT reported anomaly-free in the Dai-Freed analysis",
+      "source":"Garcia-Etxebarria and Montero, JHEP 08 (2019) 003, arXiv:1808.00009"
+    }
+  },
+  "firewalls":{
+    "not_Z4X":"ordinary matter parity (-1)^Qpsi is not the twisted Spin x_{Z2} Z4_X symmetry with the Z16 anomaly",
+    "mixed_extra_symmetries":"an independent surviving U(1) x Z2 can still have a mixed Z4 anomaly and must be checked separately",
+    "vacuum":"anomaly freedom does not prove a matter-parity-preserving D/F-flat vacuum"
+  },
+  "checks":{
+    "branching_16_10_1":true,
+    "grav_U1psi_zero":true,
+    "cubic_U1psi_zero":true,
+    "SO10sq_U1psi_zero":true,
+    "su2_witten_even_doublets":true,
+    "su3_mixed_index_integral":true,
+    "e8_parity_120_128":true
+  }
+}
