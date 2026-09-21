@@ -1,0 +1,19 @@
+{
+  "schema":"w33.physical_fi_matter_parity_z6_quotient.v1",
+  "status":"PASS_PHYSICAL_FI_MATTER_PARITY_Z6_QUOTIENT_WITH_HOLONOMY_FIREWALL",
+  "joint_Z2xZ3_dimensions":[[54,33,33],[32,48,48]],
+  "Z6":{
+    "dimensions":[54,48,33,32,33,48],
+    "trace_powers":[248,37,5,-8,5,37],
+    "fixed_root_system":"D5+A2",
+    "fixed_reductive_algebra":"so(10)+sl(3)+u(1)",
+    "fixed_dimension":54
+  },
+  "physical_flagship_C6":{
+    "dimensions":[44,40,38,48,38,40],
+    "trace_powers":[248,-2,14,-8,14,-2],
+    "same_order6_element":false,
+    "same_cube_D8_class":true
+  },
+  "boundary":"Exact Z6 quotient/physical interpretation of the prior Z12 theorem; explicitly not the flagship geometric/holonomy Z6."
+}
