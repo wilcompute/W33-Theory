@@ -1,0 +1,109 @@
+{
+  "schema": "w33.qpsi_mod12_unification.v1",
+  "status": "PASS_SINGLE_INTEGER_QPSI_UNIFIES_E8_Z2_Z3_Z4_Z6_Z12",
+  "Qpsi_adjoint_histogram": {
+    "0": 54,
+    "1": 48,
+    "2": 30,
+    "3": 16,
+    "4": 3,
+    "-4": 3,
+    "-3": 16,
+    "-2": 30,
+    "-1": 48
+  },
+  "channel_mod3_certificate": {
+    "g0_e6": {
+      "grade": 0,
+      "charges": {
+        "0": 40,
+        "3": 16,
+        "-3": 16
+      },
+      "all_charges_match_grade_mod3": true
+    },
+    "g0_a2": {
+      "grade": 0,
+      "charges": {
+        "0": 6
+      },
+      "all_charges_match_grade_mod3": true
+    },
+    "g1": {
+      "grade": 1,
+      "charges": {
+        "1": 48,
+        "4": 3,
+        "-2": 30
+      },
+      "all_charges_match_grade_mod3": true
+    },
+    "g2": {
+      "grade": 2,
+      "charges": {
+        "2": 30,
+        "-4": 3,
+        "-1": 48
+      },
+      "all_charges_match_grade_mod3": true
+    }
+  },
+  "residue_dimensions": {
+    "mod2_matter_parity": [
+      120,
+      128
+    ],
+    "mod3_CE2_and_physical_FI": [
+      86,
+      81,
+      81
+    ],
+    "mod4_Kummer": [
+      60,
+      64,
+      60,
+      64
+    ],
+    "mod6_FI_x_matter_parity": [
+      54,
+      48,
+      33,
+      32,
+      33,
+      48
+    ],
+    "mod12_common_refinement": [
+      54,
+      48,
+      30,
+      16,
+      3,
+      0,
+      0,
+      0,
+      3,
+      16,
+      30,
+      48
+    ]
+  },
+  "single_charge_law": {
+    "Z2": "Qpsi mod 2",
+    "Z3": "Qpsi mod 3",
+    "Z4": "Qpsi mod 4",
+    "Z6": "Qpsi mod 6",
+    "Z12": "Qpsi mod 12",
+    "order6_generator": "exp(2*pi*i*Qpsi/6)",
+    "order12_generator": "exp(2*pi*i*Qpsi/12)"
+  },
+  "interpretation": "The FI/family Z3 and matter-parity Z2 are not independent discrete labels on the certified E8 channels: they are the mod-3 and mod-2 shadows of one integral Qpsi charge. The older Kummer Z4 and common Z12 grading are the corresponding mod-4 and mod-12 shadows.",
+  "literature_crosscheck": "The standard E8 -> SO(10) x SU(3) x U(1) adjoint branching carries charges 0, +/-1, +/-2, +/-3, +/-4 with exactly the representation dimensions used here.",
+  "boundary": "This unifies the E8 Lie/representation gradings. It does not identify the E8 Z12 with the independent photonic mu_12 scalar phase group, and it does not prove a matter-parity-preserving D/F-flat heterotic vacuum.",
+  "checks": {
+    "CE2_grade_equals_Qpsi_mod3_channelwise": true,
+    "mod2_matches_matter_parity": true,
+    "mod4_matches_Kummer": true,
+    "mod6_matches_structural_Z6": true,
+    "mod12_matches_common_refinement": true
+  }
+}
