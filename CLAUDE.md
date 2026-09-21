@@ -158,7 +158,7 @@ failed twice, costing ~19 passes.
 parameter that already exists elsewhere, uncited.** Not an anecdote — one file in
 five.
 
-Three artifacts now exist. They only pay off if both agents use them:
+Four artifacts now exist. They only pay off if both agents use them:
 
 1. **`RESULTS_INDEX.md`** — inverted index, result → file. Regenerate with
    `py -3 analysis/build_results_index.py` after adding results. **Grep it before
@@ -168,7 +168,18 @@ Three artifacts now exist. They only pay off if both agents use them:
    blocks**: collisions are candidates, and blocking trains `--no-verify`.
    Calibrated to code parameters only — bare integers flag 97% of files and are
    pure noise (Pass 328 measured every token class before choosing).
-3. **This file** — the five failure modes.
+3. **`KEY_VOCABULARY.md`** — inverted index, *word → the JSON key names the
+   certificates build from it*. Regenerate with `py -3 scripts/build_key_index.py`.
+   `RESULTS_INDEX.md` indexes distinctive **values**; it does **not** index key
+   names, and 88309 distinct keys across 5085 certificates were unindexed. A
+   certificate often states its finding only as a key, which no prose grep reaches
+   because no sentence contains it — that gap cost four consecutive rediscoveries in
+   one session (2026-09-21). **Grep your topic word here, then grep the key names it
+   shows you in `data/`.** Measured: "eisenstein" returns
+   `Eisenstein_W33_leaves` / `eisenstein_W33_leaf_family`, which answer whether
+   W(3,3) is canonical; "bordism" returns nothing, which is what a real gap looks
+   like.
+4. **This file** — the five failure modes.
 
 **If you are the other agent:** these are yours too. The index does not know who
 wrote what; it maps results to files. When the hook flags your commit against my
