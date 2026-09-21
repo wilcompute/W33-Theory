@@ -44,7 +44,7 @@ def row(q:int):
     }
 
 def main():
-    rows=[row(q) for q in range(2,8)]
+    rows=[row(q) for q in [2,3,4,5,7,8,9]]
     checks={
       "collapse_formula":all(r["collapse_pairs_per_line"]==r["formula_pairs_per_line"] for r in rows),
       "free_rank_q4":all(r["free_rank"]==r["q4"] for r in rows),
