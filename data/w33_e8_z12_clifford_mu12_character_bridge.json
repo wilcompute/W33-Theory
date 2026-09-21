@@ -1,0 +1,109 @@
+{
+  "schema": "w33.e8_z12_clifford_mu12_character_bridge.v1",
+  "status": "PASS_EXPLICIT_FAITHFUL_Z12_TO_MU12_CHARACTER_BRIDGE",
+  "character": {
+    "domain": "E8 Qpsi grading group Z/12Z",
+    "codomain": "qutrit-Clifford scalar phase group mu_12",
+    "definition": "chi([q]) = zeta_12^q",
+    "chosen_generator": "chi([1]) = zeta_12",
+    "faithful": true,
+    "surjective": true,
+    "isomorphism": true
+  },
+  "E8_phase_multiplicities_exponents_0_to_11": [
+    54,
+    48,
+    30,
+    16,
+    3,
+    0,
+    0,
+    0,
+    3,
+    16,
+    30,
+    48
+  ],
+  "Qpsi_histogram": {
+    "0": 54,
+    "1": 48,
+    "2": 30,
+    "3": 16,
+    "4": 3,
+    "-4": 3,
+    "-3": 16,
+    "-2": 30,
+    "-1": 48
+  },
+  "cubic_phase_selection": {
+    "patterns": [
+      {
+        "Qpsi": [
+          -2,
+          -2,
+          4
+        ],
+        "count": 5,
+        "character_product": "1"
+      },
+      {
+        "Qpsi": [
+          -2,
+          1,
+          1
+        ],
+        "count": 40,
+        "character_product": "1"
+      }
+    ],
+    "total_cubics": 45,
+    "all_character_products_trivial": true
+  },
+  "subgroup_character_ladder": {
+    "2": {
+      "charge_reduction": "Qpsi mod 2",
+      "phase_power": 6,
+      "generator_exponent_in_mu12": 6,
+      "generator_order": 2
+    },
+    "3": {
+      "charge_reduction": "Qpsi mod 3",
+      "phase_power": 4,
+      "generator_exponent_in_mu12": 4,
+      "generator_order": 3
+    },
+    "4": {
+      "charge_reduction": "Qpsi mod 4",
+      "phase_power": 3,
+      "generator_exponent_in_mu12": 3,
+      "generator_order": 4
+    },
+    "6": {
+      "charge_reduction": "Qpsi mod 6",
+      "phase_power": 2,
+      "generator_exponent_in_mu12": 2,
+      "generator_order": 6
+    },
+    "12": {
+      "charge_reduction": "Qpsi mod 12",
+      "phase_power": 1,
+      "generator_exponent_in_mu12": 1,
+      "generator_order": 12
+    }
+  },
+  "clifford_phase_owner": {
+    "source": "data/PART_W33_PASS2797_2799_MAGIC_ORBITS_AND_MONOTONE.json",
+    "theorem": "phase group = mu_12 for all n; minimal exponent = 3^n mod 12",
+    "zeta12_field_identities_hold": true
+  },
+  "what_is_closed": "The order-12 equality is no longer only cardinality: a concrete faithful generator-preserving cyclotomic character identifies the E8 discrete grading group with the exact Clifford scalar phase group, and E6 cubic charge conservation becomes scalar-phase conservation under that character.",
+  "remaining_intertwiner_boundary": "No Hilbert-space/root-space carrier intertwiner is claimed. Clifford mu_12 is a global scalar center on each qutrit Hilbert space, whereas the E8 action has different eigenphases on different charge sectors. A physical identification still needs an explicit carrier map U with matching relative action, not merely the cyclic-group character proved here.",
+  "checks": {
+    "twelve_distinct_character_values_symbolically": true,
+    "adjoint_phase_multiplicities_match_Z12": true,
+    "all_45_E6_cubics_have_trivial_character_product": true,
+    "Z2_Z3_Z4_Z6_subgroups_embed_in_mu12": true,
+    "clifford_scalar_phase_group_is_mu12_all_n": true,
+    "representation_intertwiner_not_claimed": true
+  }
+}
