@@ -1,0 +1,230 @@
+{
+  "schema": "w33.e8_a2_center_vs_coxeter_order3.v1",
+  "status": "PASS_PHYSICAL_A2_CENTER_AND_PASS1147_COXETER_ARE_DISTINCT_E8_ORDER3_CLASSES",
+  "affine_marks_repo_order": [
+    1,
+    4,
+    6,
+    5,
+    4,
+    3,
+    2,
+    2,
+    3
+  ],
+  "normalized_exact_order3_inner_kac_classes": [
+    {
+      "kac": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "eigendimensions": [
+        80,
+        84,
+        84
+      ],
+      "fixed_root_count": 72,
+      "fixed_semisimple_type": "A8",
+      "fixed_semisimple_rank": 8,
+      "fixed_center_rank": 0,
+      "fixed_lie_dimension": 80
+    },
+    {
+      "kac": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "eigendimensions": [
+        86,
+        81,
+        81
+      ],
+      "fixed_root_count": 78,
+      "fixed_semisimple_type": "A2+E6",
+      "fixed_semisimple_rank": 8,
+      "fixed_center_rank": 0,
+      "fixed_lie_dimension": 86
+    },
+    {
+      "kac": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "eigendimensions": [
+        92,
+        78,
+        78
+      ],
+      "fixed_root_count": 84,
+      "fixed_semisimple_type": "D7",
+      "fixed_semisimple_rank": 7,
+      "fixed_center_rank": 1,
+      "fixed_lie_dimension": 92
+    },
+    {
+      "kac": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "eigendimensions": [
+        134,
+        57,
+        57
+      ],
+      "fixed_root_count": 126,
+      "fixed_semisimple_type": "E7",
+      "fixed_semisimple_rank": 7,
+      "fixed_center_rank": 1,
+      "fixed_lie_dimension": 134
+    }
+  ],
+  "physical_FI_center_Z3": {
+    "action": "central SU(3) element omega*I3 on the external A2 factor",
+    "block_eigendimensions": {
+      "E6_adjoint": [
+        78,
+        0,
+        0
+      ],
+      "A2_adjoint": [
+        8,
+        0,
+        0
+      ],
+      "27x3": [
+        0,
+        81,
+        0
+      ],
+      "27barx3bar": [
+        0,
+        0,
+        81
+      ]
+    },
+    "adjoint_eigendimensions": [
+      86,
+      81,
+      81
+    ],
+    "unique_kac_coordinates": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "fixed_reductive_algebra": "E6+A2",
+    "fixed_dimension": 86,
+    "carrier_reading": "Qpsi mod3 is constant across every E6 27: charges 4,-2,1 are all 1 mod3; the conjugate 27bar is grade2."
+  },
+  "pass1147_A2_coxeter_C3": {
+    "action": "Weyl Coxeter 3-cycle s_alpha s_beta in the external A2",
+    "triplet_eigenvalue_multiplicities": [
+      1,
+      1,
+      1
+    ],
+    "A2_adjoint_eigenvalue_multiplicities": [
+      2,
+      3,
+      3
+    ],
+    "block_eigendimensions": {
+      "E6_adjoint": [
+        78,
+        0,
+        0
+      ],
+      "A2_adjoint": [
+        2,
+        3,
+        3
+      ],
+      "27x3": [
+        27,
+        27,
+        27
+      ],
+      "27barx3bar": [
+        27,
+        27,
+        27
+      ]
+    },
+    "adjoint_eigendimensions": [
+      134,
+      57,
+      57
+    ],
+    "unique_kac_coordinates": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "fixed_reductive_algebra": "E7+u1",
+    "fixed_dimension": 134,
+    "pass1147_color_carrier_rank": 243,
+    "pass1147_color_carrier_complex_sector_ranks": [
+      81,
+      81,
+      81
+    ]
+  },
+  "separation": {
+    "same_abstract_group": "C3",
+    "same_E8_conjugacy_class": false,
+    "same_eigenspectrum": false,
+    "center_vs_coxeter": "the center acts as one scalar on the triplet; the Coxeter element cyclically permutes its three weights",
+    "fixed_algebra_witness": "E6+A2 (dimension86) versus E7+u1 (dimension134)",
+    "carrier_firewall": "Pass1147's 243-dimensional 81_minus tensor C[C3] color carrier is not the 81-dimensional physical E8 grade-one root sector."
+  },
+  "interpretation": "The physical FI/family Z3 is the central phase of the external SU(3), whereas the Pass1147 color C3 is its Weyl Coxeter rotation. They are complementary structures of one A2, not interchangeable realizations of the same E8 automorphism.",
+  "boundary": "This is an exact E8 representation/Kac-class separation. It does not forbid a larger construction containing both actions, and it does not assign Standard Model generations or measured photonic channels.",
+  "checks": {
+    "physical_spectrum_86_81_81": true,
+    "coxeter_spectrum_134_57_57": true,
+    "four_exact_order3_kac_classes_enumerated": true,
+    "physical_unique_E6_A2_class": true,
+    "coxeter_unique_E7_u1_class": true,
+    "pass1147_243_not_physical_81": true
+  }
+}
