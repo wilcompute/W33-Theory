@@ -1,0 +1,114 @@
+{
+  "schema": "w33.address_operator_h27_roles.v1",
+  "status": "PASS_ADDRESS_AND_OPERATOR_H27_ROLES_SEPARATED_AND_EXECUTABLE",
+  "headline": "The regular/Payne H27 and the center-correct trinification H27 are two different exact roles. The address H27 supplies a simply-transitive 27-address space whose five order-three directions have 45 right cosets forming GQ(2,4); after adding an external C3 with slopes +/-1 these become exactly the 270 lifted E8 cubic instructions. The physical Clifford-648 preserves the 45-line geometry with line orbits 9+36 and, with phase labels held fixed, instruction orbits 27+27+216. The operator H27 instead acts on the E6 27 as nine copies of its 3D Schrodinger irrep, giving C81=C9_mult tensor C3_int tensor C3_ext and Pauli algebra I9 tensor M9 with commutant M9 tensor I9.",
+  "address": {
+    "H27_order": 27,
+    "directions": [
+      {
+        "name": "omega",
+        "generator": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "name": "omega X",
+        "generator": [
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "name": "omega Z",
+        "generator": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "name": "Z X",
+        "generator": [
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "name": "omega^2 Z X^2",
+        "generator": [
+          1,
+          2,
+          2
+        ]
+      }
+    ],
+    "right_cosets": 45,
+    "incidence_per_address": 5,
+    "collinearity_SRG": [
+      27,
+      10,
+      1,
+      5
+    ],
+    "identified_geometry": "GQ(2,4) / cubic-surface 45 tritangents",
+    "complete_frame_isomorphism_anchor": "identity address -> complete frame 0",
+    "lifted_group": "H27 x C3_external",
+    "lifted_directions": 10,
+    "lifted_cosets": 270,
+    "lift_rule": "five base directions times slopes +1,-1; every lifted triple uses external phases {0,1,2}",
+    "equals_45_times_3_factorial_lifted_cubics": true,
+    "Clifford648_preserves_45_lines": true,
+    "line_orbit_sizes": [
+      9,
+      36
+    ],
+    "phase_fixed_instruction_orbit_sizes": [
+      27,
+      27,
+      216
+    ],
+    "center_action_on_27_addresses": "fixed-point-free"
+  },
+  "operator": {
+    "trinification_27": "(3,3bar,1)+(1,3,3bar)+(3bar,1,3)",
+    "generators": {
+      "X_int": "(X,X,I)",
+      "Z_int": "(Z^2,Z,I)"
+    },
+    "chart": "(m,q), m in F3^2, q in F3",
+    "X_action": "|m,q> -> |m,q+1>",
+    "Z_action": "|m,q> -> omega^q |m,q>",
+    "matter_tensor_basis": "C^81 ~= C^9_multiplicity tensor C^3_internal tensor C^3_external",
+    "Pauli243_action": "I9 tensor H9(two-qutrit Schrodinger)",
+    "two_qutrit_Pauli_span_rank": 81,
+    "generated_algebra": "I9 tensor M9(C)",
+    "generated_algebra_dimension": 81,
+    "commutant": "M9(C) tensor I9",
+    "commutant_dimension": 81,
+    "multiplicity_noiseless_subsystem_dimension": 9,
+    "center_action_on_basis_rays": "scalar; fixes all 81 projective basis labels",
+    "center_fixed_ray_count": 81
+  },
+  "nonidentification": {
+    "same_permutation_action": false,
+    "witness": "address center fixes 0 of 27 addresses; operator center is scalar and fixes all basis rays projectively",
+    "address_role": "combinatorial/coset address space and cubic instruction support",
+    "operator_role": "noncommutative operator algebra on two active qutrits with 9D multiplicity subsystem"
+  },
+  "open_boundary": "An explicit root-gauge intertwiner from the frozen E8 root coordinates to the displayed trinification tensor basis remains open. No family, Yukawa, vacuum, or hardware claim is made.",
+  "checks": {
+    "five_direction_cosets_are_45_GQ24_lines": true,
+    "address_lines_map_exactly_to_45_complete_frame_tritangents": true,
+    "ten_sloped_directions_give_exactly_270_lifted_cubics": true,
+    "all_648_preserve_address_line_geometry": true,
+    "line_orbits_9_36": true,
+    "instruction_orbits_27_27_216": true,
+    "operator_chart_exact": true,
+    "two_qutrit_paulis_span_M9": true,
+    "address_operator_centers_have_incompatible_permutation_behavior": true
+  }
+}
