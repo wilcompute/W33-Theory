@@ -1,0 +1,56 @@
+{
+  "schema": "w33.e8_pauli243_projective_w33_bridge.v1",
+  "status": "PASS_EXPLICIT_E8_PAULI243_PROJECTIVE_QUOTIENT_IS_CANONICAL_W33",
+  "headline": "The newly constructed E8 subgroup 3_+^(1+4) projects objectwise to the repository's canonical W33 coordinates. In the basis (X_int,X_ext,Z_int,Z_ext), G/Z(G)=F3^4 and the actual parent-group commutator is the standard two-qutrit symplectic form up to an irrelevant global sign. Projectivizing the 80 nonzero quotient elements gives 40 rays; commuting rays form SRG(40,12,2,4) and exactly 40 maximal isotropic 4-point lines. The resulting point and form tables are literally the same as the canonical W33 two-qutrit verifier.",
+  "E8_generators": {
+    "basis_order": [
+      "X_int",
+      "X_ext",
+      "Z_int",
+      "Z_ext"
+    ],
+    "internal_H27": "trinification X_int=(X,X,I), Z_int=(Z^2,Z,I) with center Z(E6)",
+    "external_H27": "physical external-A2 qutrit shift/clock with center FI/Qpsi Z3",
+    "common_center": "identified in (E6 x SU3_ext)/Z3 <= E8"
+  },
+  "projective_quotient": {
+    "group_order": 243,
+    "center_order": 3,
+    "quotient_order": 81,
+    "vector_space": "F3^4",
+    "nonzero_vectors": 80,
+    "projective_rays": 40,
+    "ray_size": 2
+  },
+  "commutator_form": {
+    "coordinates": "(b_int,b_ext,a_int,a_ext)",
+    "omega": "b_int*a_int' - a_int*b_int' + b_ext*a_ext' - a_ext*b_ext' mod 3",
+    "parent_group_commutator": "[g(v),g(w)] = z^(-omega(v,w))",
+    "all_81x81_pairs_checked": true
+  },
+  "W33": {
+    "points": 40,
+    "degree": 12,
+    "lambda": 2,
+    "mu": 4,
+    "isotropic_lines": 40,
+    "points_per_line": 4,
+    "lines_equal_maximal_commuting_4_cliques": true,
+    "literal_point_table_equals_repo_canonical_two_qutrit_W33": true,
+    "literal_symplectic_form_equals_repo_canonical": true
+  },
+  "map": "E8-derived central-product element -> quotient vector (b_int,b_ext,a_int,a_ext) -> projective ray {v,2v} -> W33 point; W33 collinearity iff the original E8 Pauli representatives commute.",
+  "boundary": "This is an exact finite subgroup/projective-incidence bridge. It does not identify individual E8 roots with all Pauli operators, derive dynamics, or prove a heterotic vacuum.",
+  "parents": [
+    "data/w33_e8_trinification_two_qutrit_pauli243.json",
+    "tools/verify_w33_two_qutrit_pauli_geometry.py"
+  ],
+  "checks": {
+    "81_projective_quotient_elements": true,
+    "commutator_matches_symplectic_form": true,
+    "40_projective_rays": true,
+    "SRG_40_12_2_4": true,
+    "40_isotropic_lines": true,
+    "canonical_W33_table_match": true
+  }
+}
