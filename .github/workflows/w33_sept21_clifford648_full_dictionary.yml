@@ -18,7 +18,7 @@ jobs:
         with: {fetch-depth: 0}
       - uses: actions/setup-python@v5
         with: {python-version: '3.12'}
-      - run: python -m pip install --upgrade pip sympy pytest
+      - run: python -m pip install --upgrade pip numpy sympy pytest
       - name: Build all 648 elements and audit all products
         run: PYTHONPATH=analysis:. python analysis/w33_physical_clifford648_full_permutation_dictionary.py
       - name: Focused certificate regression
