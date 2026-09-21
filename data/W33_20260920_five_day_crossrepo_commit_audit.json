@@ -1,0 +1,15 @@
+{
+  "schema":"w33.2026_09_20_five_day_crossrepo_commit_audit.v1",
+  "window":{"start":"2026-09-16T02:29:00Z","end":"2026-09-21T02:29:00Z"},
+  "commits":{"W33-Theory":367,"Holotrade":178,"total":545},
+  "manuscript_bodies":{
+    "w33_paper_body.tex":{"bytes":827488,"lines":16964,"headings":585,"flagged_boundary_lines":205},
+    "photonic_holonet_body.tex":{"bytes":563859,"lines":9753,"headings":159,"flagged_boundary_lines":168},
+    "holonet_machine_blueprint_body.tex":{"bytes":196359,"lines":3986,"headings":73,"flagged_boundary_lines":42}
+  },
+  "W33_message_keyword_counts":{"FI":138,"E8":44,"formula":43,"packet":37,"holonomy":33,"W33":32,"qutrit":25,"correct":21,"hypercharge":13,"heterotic":10,"Higgs":7,"Yukawa":6,"proton":5,"retract":5},
+  "Holotrade_message_keyword_counts":{"FI":115,"freeze":33,"hypercharge":24,"correct":22,"E8":20,"Higgs":16,"qutrit":16,"W33":13,"Yukawa":10,"heterotic":9,"proton":6,"retract":6},
+  "new_theorem":"physical FI Alt(5) prime-shadow torsor",
+  "theorem_certificate":"data/w33_physical_fi_alt5_prime_shadow_torsor.json",
+  "scope":"commit-message census plus full manuscript structural scan and deep read of current correction/physics chains; keyword counts are navigation aids, not theorem counts"
+}
