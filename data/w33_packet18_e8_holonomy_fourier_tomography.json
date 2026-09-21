@@ -1,0 +1,12 @@
+{
+  "schema":"w33.packet18_e8_holonomy_fourier_tomography.v1",
+  "status":"PASS_EXACT_PACKET18_HOLONOMY_FOURIER_DUALITY",
+  "headline":"The 18 physical E8 holonomy-sector dimensions and 18 holonomy traces are exact discrete-Fourier duals on K=C3^2 x C2. Packet18 carries an exact regular K action, so its address Fourier modes compile the same character transform. The physical C6 restriction is (248,-2,14,-8,14,-2).",
+  "group":"C3_rho x C3_a x C2_b",
+  "order":18,
+  "forward_transform":"trace(u,v,e)=sum d(r,a,b) omega^(-ur-va)(-1)^(eb)",
+  "inverse_transform":"18 d(r,a,b)=sum trace(u,v,e) omega^(ur+va)(-1)^(eb)",
+  "parseval":{"sum_trace_squared":62136,"18_times_sum_dimension_squared":62136},
+  "physical_C6":{"generator":"(0,1,1)","power_traces_k0_to5":[248,-2,14,-8,14,-2],"packet_action":"three 6-cycles"},
+  "boundary":"Exact finite character theory and packet-address compilation; no physical E8-to-packet state transducer is claimed."
+}
