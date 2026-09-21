@@ -34,6 +34,35 @@ def factor_integer(n):
     if n>1: out[n]=out.get(n,0)+1
     return out
 
+def perm_order(p):
+    seen=[False]*len(p); ans=1
+    for i in range(len(p)):
+        if seen[i]: continue
+        j=i; n=0
+        while not seen[j]:
+            seen[j]=True; n+=1; j=p[j]
+        ans=math.lcm(ans,n)
+    return ans
+
+# Alt(5) rational character values on the only conjugacy orders needed by the
+# exceptional stabilizers. The two 3-dimensional irreps agree on orders 1,2,3.
+CHAR_BY_ORDER={
+  "1":{1:1,2:1,3:1},
+  "3":{1:3,2:-1,3:0},
+  "3prime":{1:3,2:-1,3:0},
+  "4":{1:4,2:0,3:1},
+  "5":{1:5,2:1,3:-1},
+}
+IRREP_DIMS={"1":1,"3":3,"3prime":3,"4":4,"5":5}
+
+def fixed_multiplicities(H):
+    out={}
+    for name,chi in CHAR_BY_ORDER.items():
+        total=sum(chi[perm_order(g)] for g in H)
+        assert total%len(H)==0
+        out[name]=total//len(H)
+    return out
+
 def main(write=True):
     S5=list(itertools.permutations(range(5)))
     Alt5=[g for g in S5 if parity(g)==0]
@@ -119,13 +148,14 @@ def main(write=True):
         "degree5_mod2":"1 + 4","degree10_mod3":"1 + 4 + 5",
         "degree30_mod5":"1 + 3 + 3' + 2*4 + 3*5",
         "degree20_mod11":"1 + 3 + 3' + 2*4 + 5",
-        "degree60_integral":"regular Alt(5): 1 + 3*3 + 3*3' + 4*4 + 5*5"},
+        "degree60_integral":"regular Alt(5): 1 + 3*3 + 3*3' + 4*4 + 5*5",
+        "machine_checked_multiplicities":True},
       "boundary":"Exact theorem in the hypercharge-orthogonal A4 Abelian charge module. The mod-3 3+2 quotient has the same abstract S5/(S3xS2) combinatorics as an SU(5)->SU(3)xSU(2) block split, but no identification with the non-Abelian SU(5) gauge block is asserted without an explicit intertwiner. The exceptional prime 11 also equals the W33 nonbacktracking branching number k-1; equality alone is not a bridge.",
       "checks":{"physical_vector_zero_sum_and_primitive":True,
         "root_coefficients_match_cross_repo_input":True,"S5_orbit_60_stabilizer_2":True,
         "Alt5_regular_torsor_60":True,"single_Weyl_wall":True,
         "collision_primes_exactly_2_3_5_11":True,"prime_shadow_orbits_and_fibers":True,
-        "mod3_is_3_plus_2_selector":True,"generic_prime_torsor_survives":True}}
+        "mod3_is_3_plus_2_selector":True,"generic_prime_torsor_survives":True,"permutation_character_decompositions":True}}
     if write: OUT.write_text(json.dumps(out,indent=2)+"\n")
     print(json.dumps(out,indent=2)); return out
 
