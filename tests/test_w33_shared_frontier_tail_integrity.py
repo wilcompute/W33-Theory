@@ -28,6 +28,12 @@ def test_shared_frontier_tail_is_linewise_valid_and_unique():
         r"\input{analysis/PASS20260921_e8_z12_clifford_mu12_character_bridge_insert}%",
         r"\input{analysis/PASS20260921_e8_a2_center_vs_coxeter_order3_insert}%",
         r"\input{analysis/PASS20260921_physical_fi_is_h27_center_insert}%",
+        r"\input{analysis/PASS20260921_qutrit_frame_mu12_bundle_carrier_insert}%",
+        r"\input{analysis/PASS20260921_physical_external_a2_h27_insert}%",
+        r"\input{analysis/PASS20260921_e6_internal_h27_center_gluing_nogo_insert}%",
+        r"\input{analysis/PASS20260921_physical_a2_clifford648_w33_bridge_insert}%",
+        r"\input{analysis/PASS20260921_e8_matter81_frame_qutrit_tensor_carrier_insert}%",
+        r"\input{analysis/PASS20260921_e8_trinification_two_qutrit_pauli243_insert}%",
     ]
     for item in expected:
         assert item in lines
