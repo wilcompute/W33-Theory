@@ -1,0 +1,33 @@
+name: W33 Sept21 full Clifford648 dictionary replay
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_physical_clifford648_full_permutation_dictionary.py'
+      - 'tests/test_w33_physical_clifford648_full_permutation_dictionary.py'
+      - '.github/workflows/w33_sept21_clifford648_full_dictionary.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  exact-replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install --upgrade pip sympy pytest
+      - name: Build all 648 elements and audit all products
+        run: PYTHONPATH=analysis:. python analysis/w33_physical_clifford648_full_permutation_dictionary.py
+      - name: Focused certificate regression
+        run: PYTHONPATH=. python -m pytest -q tests/test_w33_physical_clifford648_full_permutation_dictionary.py
+      - name: Freeze certificate
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f -- data/w33_physical_clifford648_full_permutation_dictionary.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Freeze full Clifford648 permutation dictionary [skip ci]'
+          git push origin HEAD:master
