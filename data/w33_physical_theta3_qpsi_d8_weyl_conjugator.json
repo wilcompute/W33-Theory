@@ -1,0 +1,33 @@
+{
+  "schema": "w33.physical_theta3_qpsi_d8_weyl_conjugator.v1",
+  "status": "PASS_EXPLICIT_D8_INVOLUTION_WEYL_CONJUGATOR",
+  "SU9_to_standard_simple_permutation": [
+    5,
+    4,
+    3,
+    2,
+    1,
+    0,
+    6,
+    7
+  ],
+  "preconjugation_even_root_intersection": 56,
+  "word_zero_based": [
+    0,
+    3,
+    2,
+    1,
+    4,
+    3,
+    2,
+    5,
+    4,
+    3
+  ],
+  "word_length": 10,
+  "root_parity_census": [
+    112,
+    128
+  ],
+  "boundary": "The involutions are Weyl-conjugate; their full order-six extensions remain distinct."
+}\n
