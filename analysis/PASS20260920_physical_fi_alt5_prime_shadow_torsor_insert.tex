@@ -1,0 +1,62 @@
+% PASS20260920 physical-FI Alt(5) prime-shadow torsor theorem.
+\subsection*{Physical FI prime shadows: a regular $\operatorname{Alt}(5)$ torsor}
+
+The cross-repository heterotic calculation fixes the physical anomalous-$U(1)$
+direction in the five hypercharge-star coordinates to
+\[
+v=(-5,3,1,-5,6),\qquad \sum_i v_i=0.
+\]
+The coordinate Weyl group is $S_5$.  The only equality among coordinates is
+between the two entries $-5$, so the $S_5$ stabilizer is the order-two
+reflection interchanging those positions.  That reflection is odd.  Hence
+\[
+\operatorname{Stab}_{\operatorname{Alt}(5)}(v)=1,
+\qquad
+|\operatorname{Alt}(5)\cdot v|=60,
+\]
+and the sixty integral FI orientations form a regular
+$\operatorname{Alt}(5)$ torsor.
+
+Factoring out the baseline duplicate value, the four distinct entries are
+$-5,1,3,6$.  Their Vandermonde product is
+\[
+6\cdot8\cdot11\cdot2\cdot5\cdot3
+=15840=2^5 3^2 5\,11.
+\]
+These are exactly the primes at which extra coordinate collisions occur.
+Direct exhaustive enumeration gives
+\[
+\begin{array}{c|c|c|c|c}
+p&\text{multiplicities}&\operatorname{Stab}_{\operatorname{Alt}(5)}
+&\text{orbit}&\text{integral fibre}\\ \hline
+2&4+1&A_4&5&12\\
+3&3+2&S_3&10&6\\
+5&2+2+1&C_2&30&2\\
+11&3+1+1&C_3&20&3
+\end{array}
+\]
+while primes outside this collision set preserve the free sixty-state action.
+In particular,
+\[
+v\bmod3=(1,0,1,1,0)
+\]
+is a literal $3+2$ partition of the five star coordinates, with ten possible
+images:
+\[
+10=\binom53=[S_5:S_3\times S_2].
+\]
+Each such mod-$3$ selector has six integral FI lifts.
+
+\paragraph{Scope firewall.}
+This theorem lives in the hypercharge-orthogonal \emph{Abelian} $A_4$ charge
+module inside the $u(1)^5$ center.  The flagship Wilson-line analysis also
+contains a non-Abelian $SU(5)$ block, but those are distinct certified objects.
+The common $S_5/(S_3\times S_2)$ combinatorics is therefore an intertwiner
+target, not a proved gauge-breaking identification.  Likewise the occurrence
+of $11=k-1$, the W33 nonbacktracking branching number, is recorded only as an
+exact arithmetic coincidence until an operator-level bridge is constructed.
+
+The executable witness is
+\texttt{analysis/w33\_physical\_fi\_alt5\_prime\_shadow\_torsor.py},
+with frozen certificate
+\texttt{data/w33\_physical\_fi\_alt5\_prime\_shadow\_torsor.json}.
