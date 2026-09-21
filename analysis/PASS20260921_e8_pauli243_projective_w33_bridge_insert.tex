@@ -1,0 +1,30 @@
+% PASS20260921 explicit E8 Pauli243 projective W33 bridge.
+\subsection*{The explicit $E_8$ Pauli subgroup projectivizes to canonical $W(3,3)$}
+The trinification/external-$A_2$ construction gives
+\[
+G=H_{27}^{\rm int}\circ H_{27}^{\rm ext}=3_+^{1+4}\subset E_8.
+\]
+In the basis
+\[
+v=(b_{\rm int},b_{\rm ext},a_{\rm int},a_{\rm ext})\in\mathbb F_3^4
+\]
+of \(G/Z(G)\), direct commutator evaluation gives
+\[
+[g(v),g(w)]=z^{-\omega(v,w)},
+\]
+where
+\[
+\omega(v,w)=b_{\rm int}a'_{\rm int}-a_{\rm int}b'_{\rm int}
++b_{\rm ext}a'_{\rm ext}-a_{\rm ext}b'_{\rm ext}.
+\]
+Projectivizing the \(80\) nonzero quotient vectors gives \(40\) rays. Two rays are collinear exactly when their original Pauli representatives commute. The resulting graph is
+\[
+\operatorname{SRG}(40,12,2,4)
+\]
+and its maximal commuting classes are exactly \(40\) isotropic lines of size four. The point table and form agree literally with the repository's canonical two-qutrit W33 verifier.
+
+Hence
+\[
+\boxed{E_8\supset3_+^{1+4}\to\mathbb F_3^4\to W(3,3)}
+\]
+is now objectwise in an \(E_8\)-derived generator gauge.
