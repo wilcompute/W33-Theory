@@ -1,0 +1,7 @@
+{
+  "schema":"w33.ledger.audit-deficiency80-invariance.v1",
+  "status":"DEFICIENCY80_IS_NOT_W33_BUILDING_MODULE",
+  "audit":{"A2_rank":649,"deficiency":80,"operator_dimension":729},
+  "symmetry_test":{"element":"local qutrit SUM |a,b,c> -> |a,a+b,c>","basis_vectors_outside_A2":564,"rank_A2_plus_conjugate_A2":729},
+  "checks":{"A2_rank_649":true,"deficiency_80":true,"building_vertices_80":true,"not_invariant":true,"one_clifford_image_closes_full":true}
+}

@@ -1,0 +1,9 @@
+{
+  "schema":"w33.ledger.dark-bond-route-census.v1",
+  "status":"NO_INTERACTION_FREE_DYNAMIC_BOND_FOUND_AUXILIARY_ROUTE_TREE_LEVEL_ONLY",
+  "moving_factorization":{"interaction_frobenius_norm":0.7203055136823555},
+  "modular_only":{"max_entropy_drift":1.1102230246251565e-16,"max_schmidt_drift":2.220446049250313e-16},
+  "constraint":{"logical_offdiag":-0.12800000000000003,"ZZ_penalty_coefficient":-5.0},
+  "auxiliary":{"C5_y2_over_M":0.03},
+  "checks":{"moving_frame_has_interaction":true,"modular_entropy_invariant":true,"modular_schmidt_invariant":true,"constraint_induces_operator":true,"constraint_formula":true,"constraint_nonfactorizing":true,"auxiliary_c5_nonzero":true}
+}

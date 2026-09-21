@@ -1,0 +1,6 @@
+{
+  "schema":"w33.ledger.tomita-mirror-fold.v1",
+  "status":"PASS_TOMITA_TO_W33_MIRROR_AFTER_COMMUTANT_FOLD",
+  "w33":{"psp_order":25920,"clifford_frame_orbit":540},
+  "checks":{"tomita_identity":true,"fold_is_complex_conjugation":true,"weyl_label_mirror":true,"anti_symplectic":true,"psp_25920":true,"mirror_orbit_540":true,"base_in_orbit":true}
+}

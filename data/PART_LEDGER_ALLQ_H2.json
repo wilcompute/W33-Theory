@@ -1,0 +1,8 @@
+{
+  "schema":"w33.ledger.allq-h2.v1",
+  "status":"THEOREM_ALL_W3Q_H2_ZERO",
+  "closed_form":{"H1":"Z^(q^4)","Hk_k_ge_2":0,"H2_Z":0,"euler":"1-q^4"},
+  "q3_control":{"simplex_counts":{"0":40,"1":240,"2":160,"3":40},"boundary_ranks":{"1":39,"2":120,"3":40},"b1":81},
+  "q4":{"points":85,"b1":256},"q5":{"points":156,"b1":625},
+  "checks":{"q3_counts":true,"q3_ranks":true,"b1_q4":true,"higher_zero":true}
+}

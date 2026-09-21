@@ -1,0 +1,8 @@
+{
+  "schema":"w33.ledger.audit-depth-three-allq.v1",
+  "status":"DEPTH_Q_CONJECTURE_KILLED_DEPTH3_OPEN_FAMILY",
+  "q3":{"operator_dimension":729,"min_rho_eigenvalue":0.022222222222222233,"depth3_labels":729},
+  "q4":{"operator_dimension":4096,"min_rho_eigenvalue":0.009375000000000007,"A2_count_bound":3025,"depth3_labels":4096},
+  "q5":{"operator_dimension":15625,"min_rho_eigenvalue":0.0048000000000000004,"A2_count_bound":7225,"depth3_labels":15625},
+  "checks":{"faithful":true,"exact_marginals":true,"nondegenerate_pair_books":true,"depth3_full_q345":true,"depth2_impossible_q45":true}
+}
