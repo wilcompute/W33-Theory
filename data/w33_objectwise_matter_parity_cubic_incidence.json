@@ -1,0 +1,15 @@
+{
+  "schema": "w33.objectwise_matter_parity_cubic_incidence.v1",
+  "status": "PASS_W33_ONLY_OBJECTWISE_MATTER_PARITY_CUBIC",
+  "partition": {
+    "1": 1,
+    "10": 10,
+    "16": 16
+  },
+  "tritangent_census": {
+    "1+10+10": 5,
+    "10+16+16": 40
+  },
+  "all_cubics_parity_even": true,
+  "boundary": "W33-only cubic incidence proof; reference line is an SO(10)-embedding gauge choice."
+}\n
