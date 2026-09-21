@@ -1,0 +1,64 @@
+{
+  "schema": "w33.e8_trinification_two_qutrit_pauli243.v1",
+  "status": "PASS_E8_CONTAINS_TRINIFICATION_CENTRAL_PRODUCT_TWO_QUTRIT_PAULI243",
+  "headline": "A new internal trinification H27, distinct from the rejected Pass369 Weyl H27, has center exactly Z(E6). In E6 >= (SU3^3)/DeltaZ3 take X_int=(X,X,I), Z_int=(Z^2,Z,I); with ZX=omegaXZ their commutator is (omega^2,omega,1), which acts as scalar omega on all three nonets of the E6 27. The physical external-A2 H27 has center the measured FI/Qpsi Z3. The kernel of (E6 x SU3_ext)->E8 identifies these two centers, so the commuting H27 factors form their central product of order 243, exponent 3: the two-qutrit Pauli group 3_+^(1+4).",
+  "trinification": {
+    "subgroup": "(SU3_1 x SU3_2 x SU3_3)/Delta Z3 <= E6",
+    "27_branching": "(3,3bar,1)+(1,3,3bar)+(3bar,1,3)",
+    "diagonal_kernel_exponents": [
+      1,
+      1,
+      1
+    ],
+    "E6_center_representative_exponents": [
+      2,
+      1,
+      0
+    ],
+    "E6_center_action_on_three_nonets": [
+      1,
+      1,
+      1
+    ],
+    "internal_shift": "(X,X,I)",
+    "internal_clock": "(Z^2,Z,I)",
+    "commutator": "(omega^2 I, omega I, I) = z_E6"
+  },
+  "external": {
+    "group": "physical external-A2 H27",
+    "center": "z_FI = exp(2*pi*i Qpsi/3)",
+    "order": 27
+  },
+  "E8_gluing": {
+    "subgroup": "(E6 x SU3_ext)/< (z_E6,z_ext^-1) >",
+    "centers_identified": true,
+    "factors_commute_before_quotient": true,
+    "central_product_order": 243
+  },
+  "two_qutrit_pauli": {
+    "structure": "3_+^(1+4) = H27 o H27",
+    "order": 243,
+    "exponent": 3,
+    "center_order": 3,
+    "derived_order": 3,
+    "projective_quotient": "F3^4",
+    "projective_order": 81
+  },
+  "hostile_control_resolution": "The Pass369 regular Weyl H27 still cannot glue because its center is not Z(E6). The trinification H27 constructed here is a different subgroup specifically engineered and checked to have commutator center Z(E6).",
+  "boundary": "Exact finite subgroup/representation theorem. It does not prove a D/F-flat heterotic vacuum, observed family identification, Standard Model dynamics, or photonic implementation.",
+  "parents": [
+    "data/w33_physical_external_a2_h27.json",
+    "data/w33_e6_internal_h27_center_gluing_nogo.json",
+    "analysis/w33_standard_model_from_trinification.py"
+  ],
+  "checks": {
+    "trinification_delta_center_is_kernel_on_27": true,
+    "new_internal_commutator_is_ZE6": true,
+    "two_H27_centers_identified_in_E8_quotient": true,
+    "central_product_order243": true,
+    "exponent3": true,
+    "center_order3": true,
+    "derived_order3": true,
+    "projective_F3_4_order81": true
+  }
+}
