@@ -1,0 +1,34 @@
+% PASS20260921 physical FI center equals the qutrit Heisenberg center character.
+\subsection*{The measured FI $Z_3$ is the center character of the qutrit $H_{27}$}
+
+Passes~5727/5730 already realize on the $E_8$ family multiplicity factor the
+qutrit Schr\"odinger pair
+\[
+X\ket j=\ket{j+1},\qquad Z\ket j=\omega^j\ket j,
+\qquad ZX=\omega XZ,
+\]
+so $\langle X,Z\rangle=H_{27}$ and
+\[
+[Z,X]=\omega I_3
+\]
+generates its order-three center.
+
+The physical-FI theorem independently proves that the measured organizer-$E_8$
+FI projection acts on
+\[
+248=(78,1)+(1,8)+(27,3)+(\overline{27},\overline3)
+\]
+as $1,1,\omega,\omega^2$.  The single-charge theorem identifies the same
+grading with $Q_\psi\bmod3$.  Hence, on the certified family multiplicity
+factor and its conjugate,
+\[
+\boxed{z_{H_{27}}=z_{\rm FI}=\exp(2\pi iQ_\psi/3).}
+\]
+
+The executable witness is
+\texttt{analysis/w33\_physical\_fi\_is\_h27\_center.py}.
+
+\paragraph{Scope firewall.}
+This identifies the finite central character only.  It does not identify the
+older affine Lie $su(3)$ construction with the full physical family $SU(3)$
+Lie algebra, prove a D/F-flat vacuum, or assign observed generations.
