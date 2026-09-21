@@ -1,0 +1,30 @@
+{
+  "schema": "w33.qpsi_matter_parity_e8_d8_bridge.v1",
+  "status": "PASS_QPSI_MATTER_PARITY_EXTENDS_TO_E8_D8_INVOLUTION",
+  "E6_27": {
+    "branching": "27 = 16_1 + 10_-2 + 1_4",
+    "matter_parity": "(-1)^Qpsi",
+    "odd_dimension": 16,
+    "even_dimension": 11
+  },
+  "E6_cubic": {
+    "patterns": [
+      {"Qpsi": [-2,1,1], "count": 40, "firewall_forbidden": 8},
+      {"Qpsi": [-2,-2,4], "count": 5, "firewall_forbidden": 1}
+    ],
+    "all_cubics_matter_parity_even": true
+  },
+  "E8_Qpsi_mod2": {
+    "even_roots": 112,
+    "odd_roots": 128,
+    "fixed_cartan": 8,
+    "fixed_lie_dimension": 120,
+    "branching": "248 = 120_even + 128_odd"
+  },
+  "standard_E8_crosscheck": {
+    "even_root_system": "D8",
+    "odd_shell": "half-spinor",
+    "root_split": [112,128]
+  },
+  "boundary": "Exact algebraic consequence of source-locked Qpsi spectra plus an independent standard E8 root construction; no coordinatewise Weyl map to the archived E8 metadata basis is claimed."
+}
