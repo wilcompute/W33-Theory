@@ -1,0 +1,48 @@
+% PASS20260920 physical twin-A4 index-5 E8 gluing theorem.
+\subsection*{The physical twin-$A_4$ factors and the index-five $E_8$ gluing}
+
+The recorded flagship bases contain two distinct type-$A_4$ root systems in the
+same physical $E_8$: the Wilson-line $SU(5)$ root system and the
+hypercharge-orthogonal $A_4$ organizing the four extra Abelian directions.
+Their Gram matrices are both $C_{A_4}$ and their cross Gram matrix vanishes.
+The combined rank is eight, hence
+\[
+\det(C_{A_4}\oplus C_{A_4})=25
+\]
+and, because $E_8$ is unimodular,
+\[
+\boxed{[E_8:A_4\oplus A_4]=5.}
+\]
+Thus the full-rank overlattice quotient is cyclic of order five.
+
+The executable verifier enumerates all $240$ $E_8$ roots and computes their
+orthogonal projection norms and discriminant classes $(c_C,c_G)$ in the two
+$A_4$ factors.  The census is
+\[
+20+20+50+50+50+50=240,
+\]
+with mixed class pairs
+\[
+(1,3),\quad(2,1),\quad(3,4),\quad(4,2),
+\]
+so the gluing is the graph
+\[
+\boxed{c_G=3c_C\pmod5.}
+\]
+Since the nonzero $A_4$ weight classes of norms $4/5$ and $6/5$ are the
+$5,\bar5$ and $10,\overline{10}$ Weyl orbits, respectively, the complete
+adjoint branching recovered from the physical roots is
+\[
+\boxed{
+248=(24,1)+(1,24)+(10,5)+(\overline{10},\overline5)
+ +(\overline5,10)+(5,\overline{10}) }.
+\]
+
+\paragraph{Scope firewall.}
+The complementary $A_4$ is used by the flagship as an organizer of Abelian
+charges.  The lattice theorem does not assert an unbroken second $SU(5)$ gauge
+factor, nor does it solve the D/F-flat vacuum equations.  It explains why the
+two physical $S_5$ structures are parallel while remaining orthogonal.
+
+The executable witness is
+\texttt{analysis/w33\_physical\_twin\_a4\_e8\_index5\_gluing.py}.
