@@ -1,0 +1,52 @@
+{
+  "schema": "w33.e6_internal_h27_center_gluing_nogo.v1",
+  "status": "PASS_PASS369_CENTER_CANNOT_GLUE_TO_E6_CENTER",
+  "headline": "The regular Pass369/371 H27 on the E6 minuscule 27 cannot supply the E6-center leg of a two-qutrit Pauli central product. Its central C3 acts fixed-point-freely on the 27 weights and therefore has nontrivial Weyl projection, whereas Z(E6) has trivial Weyl projection and acts by a scalar on the irreducible 27. Hence that center cannot equal Z(E6).",
+  "internal_pass369": {
+    "group": "extraspecial H27 = 3^(1+2)_+",
+    "order": 27,
+    "center_order": 3,
+    "action": "regular on the 27 minuscule weights",
+    "nonidentity_center_fixed_points": 0,
+    "weyl_projection_of_center": "nonidentity"
+  },
+  "global_E6_center": {
+    "group": "Z(E6) ~= C3 for simply connected E6",
+    "weyl_projection": "identity",
+    "action_on_27": "scalar central character; all projective weight lines fixed"
+  },
+  "obstruction": {
+    "Pass369_center_equals_ZE6": false,
+    "reason": "A central E6 element has identity Weyl image, but the nonidentity center of a regular H27 permutes the 27 weights fixed-point-freely.",
+    "central_product_243_via_this_H27": false
+  },
+  "conditional_lift_consequence": {
+    "condition": "choose an honest order-27 lift/complement of the Pass369 Weyl H27 inside an E6 normalizer",
+    "intersection_with_ZE6_order": 1,
+    "external_physical_H27_order": 27,
+    "generated_commuting_product_order_in_E6xSU3_mod_Z3": 729,
+    "structure": "H27 x H27, not H243",
+    "why": "the only possible intersection with the external factor in the quotient comes through Z(E6), and this lifted internal H27 has trivial intersection with Z(E6)"
+  },
+  "hostile_control": {
+    "naive_order_arithmetic": "27*27/3=243",
+    "verdict": "rejected because the required common center is absent",
+    "correct_conditional_order": "27*27=729"
+  },
+  "still_open": "A different H27 subgroup of E6, not the regular Pass369 Weyl torsor, could in principle have center Z(E6). That requires a new explicit subgroup construction and is not supplied by this theorem.",
+  "external_representation_fact": "For an irreducible representation, a group-central element acts as a scalar (Schur). Thus the E6 center cannot induce a nontrivial permutation of the 27 minuscule weights.",
+  "parents": [
+    "data/w33_pass369_the_27_is_a_heisenberg_torsor.json",
+    "data/w33_pass371_naturality_and_the_clifford_match.json",
+    "data/w33_physical_external_a2_h27.json"
+  ],
+  "checks": {
+    "pass369_regular_H27": true,
+    "pass371_center_order3": true,
+    "internal_center_fixed_point_free": true,
+    "E6_center_weyl_trivial": true,
+    "centers_cannot_identify": true,
+    "naive_243_weld_rejected": true,
+    "conditional_product_order_729": true
+  }
+}
