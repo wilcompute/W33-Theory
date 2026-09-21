@@ -24,6 +24,10 @@ def test_shared_frontier_tail_is_linewise_valid_and_unique():
         r"\input{analysis/PASS20260921_execute_all5_constructive_insert}%",
         r"\input{analysis/PASS20260921_e8_order6_kac_classification_insert}%",
         r"\input{analysis/PASS20260921_twin_z6_single_node_difference_insert}%",
+        r"\input{analysis/PASS20260921_qpsi_mod12_unification_insert}%",
+        r"\input{analysis/PASS20260921_e8_z12_clifford_mu12_character_bridge_insert}%",
+        r"\input{analysis/PASS20260921_e8_a2_center_vs_coxeter_order3_insert}%",
+        r"\input{analysis/PASS20260921_physical_fi_is_h27_center_insert}%",
     ]
     for item in expected:
         assert item in lines
