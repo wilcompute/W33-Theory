@@ -1,0 +1,57 @@
+{
+  "schema": "w33.physical_a2_clifford648_w33_stabilizer_bridge.v1",
+  "status": "PASS_PHYSICAL_A2_H27_NORMALIZER_EQUALS_W33_CLIFFORD648_AT_QUOTIENT_ACTION_LEVEL",
+  "headline": "The explicit physical external-A2 H27 in E8 extends by the Pass5730 Fourier and quadratic-phase automorphisms to H27:SL(2,3), order 648. On H27/Z these have matrices F=[[0,2],[1,0]] and P=[[1,0],[1,1]], which generate all 24 elements of SL(2,3). Re-running Pass1054 shows the selected W33 point stabilizer has exactly the same 24-matrix conjugation image on its normal H27 quotient. Thus the physical E8 qutrit normalizer and the W33 point stabilizer are matched with explicit quotient generators.",
+  "physical_E8_side": {
+    "carrier": "external A2 ~= SU(3) in E8 -> E6 x A2",
+    "H27_order": 27,
+    "center": "physical FI/Qpsi Z3",
+    "quotient": "F3^2 with basis (X,Z)",
+    "Fourier_matrix_row_major": [
+      0,
+      2,
+      1,
+      0
+    ],
+    "quadratic_phase_matrix_row_major": [
+      1,
+      0,
+      1,
+      1
+    ],
+    "generated_SL23_order": 24,
+    "normalizer_order": 648,
+    "normalizer_structure": "H27 : SL(2,3)"
+  },
+  "W33_side": {
+    "point_stabilizer_order": 648,
+    "normal_H27_order": 27,
+    "complement_order": 24,
+    "quotient_matrix_count": 24,
+    "contains_physical_F_matrix": true,
+    "contains_physical_P_matrix": true,
+    "quotient_matrix_set_equals_physical_SL23": true
+  },
+  "generator_relations": {
+    "F_order": 4,
+    "F_squared": "-I",
+    "P_order": 3,
+    "det_F": 1,
+    "det_P": 1
+  },
+  "upgrade_over_pass371": "Pass371 already proved the W33 and E6 27-point normalizers are abstract/permutation-isomorphic Clifford-648 groups. The new input is the physical external-A2 H27 root-gauge identification; this bridge pins its standard F,P normalizer generators to the exact SL(2,3) quotient action computed from the W33 point stabilizer.",
+  "boundary": "The equality proved is the finite H27:SL(2,3) normalizer and its exact quotient action. A chosen 3x3 complex matrix conjugator to Pass1054's 27-point permutation model is not serialized here, and no low-energy gauge or hardware claim follows.",
+  "parents": [
+    "data/w33_physical_external_a2_h27.json",
+    "analysis/w33_pass5727_5730_torsion_family_heisenberg.py",
+    "analysis/w33_pass1054_hessian_affine_isomorphism.py",
+    "data/w33_pass371_naturality_and_the_clifford_match.json"
+  ],
+  "checks": {
+    "physical_H27_order27": true,
+    "F_P_generate_SL23_order24": true,
+    "pass1054_matrix_image_order24": true,
+    "literal_matrix_set_equality": true,
+    "normalizer_order648": true
+  }
+}
