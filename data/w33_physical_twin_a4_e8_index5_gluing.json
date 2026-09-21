@@ -1,0 +1,16 @@
+{
+  "schema":"w33.physical_twin_a4_e8_index5_gluing.v1",
+  "status":"PASS_PHYSICAL_TWIN_A4_INDEX5_E8_GLUING",
+  "lattice":{"type":"A4+A4","cross_gram_zero":true,"rank":8,"gram_determinant":25,"index_in_E8":5,"quotient":"Z/5"},
+  "root_census":[
+    {"center_norm2":"2","gauge_norm2":"0","classes":[0,0],"count":20},
+    {"center_norm2":"0","gauge_norm2":"2","classes":[0,0],"count":20},
+    {"center_norm2":"6/5","gauge_norm2":"4/5","classes":[2,1],"count":50},
+    {"center_norm2":"6/5","gauge_norm2":"4/5","classes":[3,4],"count":50},
+    {"center_norm2":"4/5","gauge_norm2":"6/5","classes":[4,2],"count":50},
+    {"center_norm2":"4/5","gauge_norm2":"6/5","classes":[1,3],"count":50}
+  ],
+  "gluing_law":"c_gauge=3*c_center mod 5",
+  "branching":"248=(24,1)+(1,24)+(10,5)+(10bar,5bar)+(5bar,10)+(5,10bar)",
+  "boundary":"Exact E8 lattice theorem; the complementary factor is an organizer, not asserted to be an unbroken second SU(5), and no vacuum theorem follows."
+}
