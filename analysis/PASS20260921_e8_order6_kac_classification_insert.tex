@@ -1,0 +1,56 @@
+% PASS20260921 twin E8 order-six Kac classification.
+\subsection*{The two physicalized order-six actions are distinct affine-$E_8$ Kac classes}
+
+The structural FI $\times$ matter-parity quotient and the flagship physical
+holonomy both define certified inner order-six actions on the $E_8$ adjoint,
+but their eigenspace fingerprints differ:
+\[
+(54,48,33,32,33,48)
+\qquad\hbox{versus}\qquad
+(44,40,38,48,38,40).
+\]
+Using the affine highest-root marks in the repository's frozen simple-root
+ordering,
+\[
+(a_0,\ldots,a_8)=(1,4,6,5,4,3,2,2,3),
+\]
+an exhaustive Cartan--Kac classification of all normalized exact order-six
+inner diagrams finds exactly twenty candidates and selects uniquely
+\[
+\boxed{s_{\rm FI\times P_M}=(2,0,0,0,1,0,0,0,0)}
+\]
+and
+\[
+\boxed{s_{\rm hol}=(0,0,0,0,1,0,0,1,0)}.
+\]
+Their power ladders are therefore
+\[
+\begin{array}{c|ccc}
+ &g&g^2&g^3\\ \hline
+{\rm FI}\times P_M&
+D_5+A_2+\mathfrak u_1&E_6+A_2&D_8\\
+{\rm holonomy}&
+D_4+A_3+\mathfrak u_1&D_7+\mathfrak u_1&D_8 .
+\end{array}
+\]
+The fixed dimensions are respectively
+\[
+(54,86,120)
+\qquad\hbox{and}\qquad
+(44,92,120).
+\]
+Thus the previously certified common $D_8$ cube is the exact intersection of
+the two power ladders, while the square already separates the conjugacy
+classes.  Equivalently, both Kac diagrams use the same mark-four finite node;
+the remaining Kac weight two is carried by the affine node in the structural
+class and by a finite mark-two node in the holonomy class.
+
+This is the standard Cartan--Kac torsion classification (see M.~Reeder,
+\emph{Enseign. Math.} 56 (2010), 3--47).  The executable witness is
+\texttt{analysis/w33\_e8\_order6\_kac\_classification.py}.
+
+\paragraph{Scope firewall.}
+This is an exact conjugacy-class theorem inside complex $E_8$.  It neither
+proves a matter-parity-preserving heterotic D/F-flat vacuum nor identifies the
+two distinct order-six classes with one another or with additional spacetime
+orbifold data.
