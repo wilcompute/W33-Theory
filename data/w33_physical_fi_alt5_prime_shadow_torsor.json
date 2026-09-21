@@ -1,15 +1,148 @@
 {
-  "schema":"w33.physical_fi_alt5_prime_shadow_torsor.v1",
-  "status":"PASS_PHYSICAL_FI_ALT5_PRIME_SHADOW_TORSOR",
-  "physical_vector":{"six_times_star":[-5,3,1,-5,6],"norm2":96,"sum":0},
-  "integral_orbit":{"S5_orbit_size":60,"S5_stabilizer_order":2,"Alt5_orbit_size":60,"Alt5_stabilizer_order":1,"reading":"regular Alt(5) torsor"},
-  "distinct_value_discriminant":{"product":15840,"factorization":{"2":5,"3":2,"5":1,"11":1},"collision_primes":[2,3,5,11]},
-  "prime_shadows":{
-    "2":{"residue":[1,1,1,1,0],"orbit_size":5,"Alt5_stabilizer_order":12,"Alt5_stabilizer_shape":"A4","fiber_size":12},
-    "3":{"residue":[1,0,1,1,0],"orbit_size":10,"Alt5_stabilizer_order":6,"Alt5_stabilizer_shape":"S3","fiber_size":6},
-    "5":{"residue":[0,3,1,0,1],"orbit_size":30,"Alt5_stabilizer_order":2,"Alt5_stabilizer_shape":"C2","fiber_size":2},
-    "11":{"residue":[6,3,1,6,6],"orbit_size":20,"Alt5_stabilizer_order":3,"Alt5_stabilizer_shape":"C3","fiber_size":3}
+  "schema": "w33.physical_fi_alt5_prime_shadow_torsor.v1",
+  "status": "PASS_PHYSICAL_FI_ALT5_PRIME_SHADOW_TORSOR",
+  "physical_vector": {
+    "six_times_star": [
+      -5,
+      3,
+      1,
+      -5,
+      6
+    ],
+    "norm2": 96,
+    "sum": 0
   },
-  "mod3_selector":{"partition":"3+2","selected_three":[0,2,3],"complementary_two":[1,4],"quotient_size":10},
-  "boundary":"Charge-module theorem only; no non-Abelian SU(5) gauge-block identification and no FI/Hashimoto-11 intertwiner is asserted."
+  "integral_orbit": {
+    "S5_orbit_size": 60,
+    "S5_stabilizer_order": 2,
+    "Alt5_orbit_size": 60,
+    "Alt5_stabilizer_order": 1,
+    "reading": "regular Alt(5) torsor"
+  },
+  "distinct_value_discriminant": {
+    "product": 15840,
+    "factorization": {
+      "2": 5,
+      "3": 2,
+      "5": 1,
+      "11": 1
+    },
+    "collision_primes": [
+      2,
+      3,
+      5,
+      11
+    ]
+  },
+  "prime_shadows": {
+    "2": {
+      "residue": [
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "orbit_size": 5,
+      "Alt5_stabilizer_order": 12,
+      "Alt5_stabilizer_shape": "A4",
+      "fiber_size": 12,
+      "Alt5_permutation_character_multiplicities": {
+        "1": 1,
+        "3": 0,
+        "4": 1,
+        "5": 0,
+        "3prime": 0
+      }
+    },
+    "3": {
+      "residue": [
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "orbit_size": 10,
+      "Alt5_stabilizer_order": 6,
+      "Alt5_stabilizer_shape": "S3",
+      "fiber_size": 6,
+      "Alt5_permutation_character_multiplicities": {
+        "1": 1,
+        "3": 0,
+        "4": 1,
+        "5": 1,
+        "3prime": 0
+      }
+    },
+    "5": {
+      "residue": [
+        0,
+        3,
+        1,
+        0,
+        1
+      ],
+      "orbit_size": 30,
+      "Alt5_stabilizer_order": 2,
+      "Alt5_stabilizer_shape": "C2",
+      "fiber_size": 2,
+      "Alt5_permutation_character_multiplicities": {
+        "1": 1,
+        "3": 1,
+        "4": 2,
+        "5": 3,
+        "3prime": 1
+      }
+    },
+    "11": {
+      "residue": [
+        6,
+        3,
+        1,
+        6,
+        6
+      ],
+      "orbit_size": 20,
+      "Alt5_stabilizer_order": 3,
+      "Alt5_stabilizer_shape": "C3",
+      "fiber_size": 3,
+      "Alt5_permutation_character_multiplicities": {
+        "1": 1,
+        "3": 1,
+        "4": 2,
+        "5": 1,
+        "3prime": 1
+      }
+    }
+  },
+  "mod3_selector": {
+    "partition": "3+2",
+    "selected_three": [
+      0,
+      2,
+      3
+    ],
+    "complementary_two": [
+      1,
+      4
+    ],
+    "quotient_size": 10
+  },
+  "boundary": "Charge-module theorem only; no non-Abelian SU(5) gauge-block identification and no FI/Hashimoto-11 intertwiner is asserted.",
+  "representation_reading": {
+    "degree5_mod2": "1 + 4",
+    "degree10_mod3": "1 + 4 + 5",
+    "degree30_mod5": "1 + 3 + 3' + 2*4 + 3*5",
+    "degree20_mod11": "1 + 3 + 3' + 2*4 + 5",
+    "degree60_integral": "regular Alt(5): 1 + 3*3 + 3*3' + 4*4 + 5*5",
+    "machine_checked_multiplicities": true
+  },
+  "checks": {
+    "Alt5_regular_torsor_60": true,
+    "collision_primes_exactly_2_3_5_11": true,
+    "prime_shadow_orbits_and_fibers": true,
+    "mod3_is_3_plus_2_selector": true,
+    "permutation_character_decompositions": true
+  }
 }
