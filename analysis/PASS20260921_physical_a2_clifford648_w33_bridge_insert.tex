@@ -1,0 +1,38 @@
+% PASS20260921 physical external-A2 Clifford normalizer equals the W33 point stabilizer at quotient-action level.
+\subsection*{The physical external-$A_2$ qutrit normalizer is the W33 point stabilizer}
+
+The physical external-$A_2$ theorem supplies
+\[
+H_{27}=\langle X,Z,\omega I\rangle,
+\qquad
+ZX=\omega XZ,
+\qquad
+\omega I=\exp(2\pi iQ_\psi/3).
+\]
+Pass~5730 gives the standard Fourier and quadratic-phase normalizer actions.
+On $H_{27}/Z(H_{27})\cong\mathbb F_3^2$ in the basis $(X,Z)$ they are
+\[
+F=\begin{pmatrix}0&2\\1&0\end{pmatrix},
+\qquad
+P=\begin{pmatrix}1&0\\1&1\end{pmatrix}.
+\]
+They generate all of $SL(2,3)$, of order $24$, so the finite normalizer has
+order
+\[
+27\cdot24=648.
+\]
+
+Pass~1054 independently computes the selected W33 point stabilizer, extracts
+its normal extraspecial $H_{27}$, and records the complete conjugation image of
+an $SL(2,3)$ complement on the quotient.  Re-running that witness yields
+literally the same set of $24$ determinant-one matrices, including the two
+generators above.  Therefore the physical external-$A_2$ qutrit normalizer and
+the W33 point stabilizer agree at the exact quotient-action level:
+\[
+\boxed{\operatorname{Stab}_{W33}(p)\cong H_{27}:SL(2,3).}
+\]
+
+\paragraph{Boundary.}
+No particular $3\times3$ complex conjugating matrix to the W33 permutation
+model is serialized here, and the theorem makes no low-energy gauge or
+hardware claim.
