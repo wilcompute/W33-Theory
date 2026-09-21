@@ -1,0 +1,58 @@
+% PASS20260921 twin Z6 single-node difference.
+\subsection*{The structural and holonomy $Z_6$ classes differ by one mark-two coweight phase}
+
+In the common affine-$E_8$ Kac gauge, let
+\[
+S=(2,0,0,0,1,0,0,0,0)
+\]
+denote the structural FI $\times$ matter-parity class and
+\[
+H=(0,0,0,0,1,0,0,1,0)
+\]
+the flagship holonomy class.  Only the eight finite Kac labels determine root
+phases.  Their quotient is therefore the single finite mark-two node,
+normalized to exact order six as
+\[
+\boxed{R=(4,0,0,0,0,0,0,1,0)}.
+\]
+The full $240$-root census proves
+\[
+\boxed{\deg_H(r)=\deg_S(r)+\deg_R(r)\pmod6}
+\]
+for every root, hence in the common maximal torus
+\[
+\boxed{H=S\,R}.
+\]
+
+The three eigenspace fingerprints are
+\[
+d(S)=(54,48,33,32,33,48),
+\]
+\[
+\boxed{d(R)=(92,64,14,0,14,64)},
+\]
+and
+\[
+d(H)=(44,40,38,48,38,40).
+\]
+The difference element has power ladder
+\[
+R:\ D_7+\mathfrak u_1,qquad
+R^2:\ D_7+\mathfrak u_1,qquad
+R^3:\ D_8,
+\]
+with fixed dimensions $92,92,120$, and adjoint trace powers
+\[
+(248,142,14,-8,14,142).
+\]
+Thus the two physicalized order-six structures share the same mark-four Kac
+component; one additional mark-two fundamental-coweight phase accounts for
+their complete root-space difference.
+
+\paragraph{Scope firewall.}
+This is an exact factorization of inner automorphisms in the common complex
+$E_8$ Cartan gauge.  It does not imply that the heterotic FI dynamics
+generates the compactification holonomy and does not solve D/F flatness.
+
+The executable witness is
+\texttt{analysis/w33\_twin\_z6\_single\_node\_difference.py}.
