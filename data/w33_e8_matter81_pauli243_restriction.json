@@ -1,7 +1,7 @@
 {
   "schema": "w33.e8_matter81_pauli243_restriction.v1",
   "status": "PASS_MATTER81_RESTRICTS_TO_NINE_TWO_QUTRIT_SCHRODINGER_MODULES_NOT_REGULAR_F3_4_SET",
-  "headline": "The E8 matter shell (27,3) restricted to the explicit Pauli243 subgroup is nine copies of the irreducible 9D two-qutrit Schrodinger module with the physical central character. The exact character is 81,81*omega,81*omega^2 on the three center elements and zero on all 240 noncentral elements. On matter weight rays the two shifts generate nine orbits of size 9, whereas G/Z(G)=F3^4 is a regular transitive 81-element translation set. Therefore the two occurrences of 81 are not equivariantly identical sets.",
+  "headline": "The E8 matter shell (27,3) restricted to the explicit Pauli243 subgroup is nine copies of the irreducible 9D two-qutrit Schr\u00f6dinger module with the physical central character. The exact character is 81,81*omega,81*omega^2 on the three center elements and zero on all 240 noncentral elements. On matter weight rays the two shifts generate nine orbits of size 9, whereas G/Z(G)=F3^4 is a regular transitive 81-element translation set. Therefore the two occurrences of 81 are not equivariantly identical sets.",
   "internal_trinification": {
     "basis_rays": 27,
     "X_int_cycle_structure": {
