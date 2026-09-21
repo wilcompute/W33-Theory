@@ -1,0 +1,211 @@
+{
+  "schema": "w33.physical_external_a2_h27.v1",
+  "status": "PASS_EXPLICIT_PHYSICAL_EXTERNAL_A2_HEISENBERG_27_IN_E8",
+  "headline": "The previously abstract qutrit H27 now has an explicit root-level realization in the same external A2 subset of E8 selected by the physical FI theorem. The unique pure external-A2 clock modulo the FI center has toral character fZ=(0,0,0,0,2,2,0,0) mod3. Together with the A2 Coxeter shift X it satisfies XZX^-1=Z_FI Z (or, for the inverse Coxeter orientation, Z X = omega X Z in the Pass5727 convention), and the commutator is exactly the measured FI/Qpsi center. Hence <X,Z> is the order-27 qutrit Heisenberg group inside the physical external SU(3) carrier.",
+  "frozen_root_gauge": {
+    "simple_roots_doubled": [
+      [
+        -2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        -2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -2,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        -2,
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        -2,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        -2,
+        2,
+        0
+      ],
+      [
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      [
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "external_A2_simple_root_indices_zero_based": [
+      4,
+      5
+    ],
+    "FI_character_mod3": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "canonical_clock_character_mod3": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      2,
+      0,
+      0
+    ]
+  },
+  "clock_uniqueness": {
+    "search_space": "all 3^8 toral F3 characters",
+    "constraints": [
+      "trivial on all 72 E6 roots",
+      "Xplus Z Xplus^-1 Z^-1 equals physical FI center"
+    ],
+    "solutions": [
+      [
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        2,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        0,
+        0
+      ]
+    ],
+    "number_of_solutions": 3,
+    "interpretation": "Exactly one clock modulo multiplication by the three FI-center scalars."
+  },
+  "weyl_relations": {
+    "Xplus": "s_alpha s_beta",
+    "Xminus": "s_beta s_alpha = Xplus^-1",
+    "Xplus_commutator": "Xplus Z Xplus^-1 Z^-1 = Z_FI",
+    "Xminus_commutator": "Xminus Z Xminus^-1 Z^-1 = Z_FI^-1",
+    "pass5727_orientation": "Using X=Xminus and Z_FI=omega I gives Z X = omega X Z.",
+    "all_240_roots_checked": true
+  },
+  "spectra": {
+    "clock_adjoint_eigendimensions": [
+      134,
+      57,
+      57
+    ],
+    "clock_fixed_reductive_algebra": "E7+u1 (same E8 order-three class as the A2 Coxeter element)",
+    "FI_grade_by_clock_grade_root_counts": {
+      "0": {
+        "0": 72,
+        "1": 3,
+        "2": 3
+      },
+      "1": {
+        "0": 27,
+        "1": 27,
+        "2": 27
+      },
+      "2": {
+        "0": 27,
+        "1": 27,
+        "2": 27
+      }
+    },
+    "matter_81_split": "Each FI grade-1 and grade-2 matter shell splits exactly 27+27+27 under the clock."
+  },
+  "H27": {
+    "order": 27,
+    "presentation": "X^3=Z^3=Z_FI^3=1; Z_FI central; [X,Z]=Z_FI^(+/-1)",
+    "normal_forms": "Z^a X^b Z_FI^c, a,b,c in F3",
+    "center": "<Z_FI> = <exp(2*pi*i Qpsi/3)>",
+    "quotient": "H27 / center = F3^2"
+  },
+  "bridge_to_old_pass5727": "Pass5727 already proved the qutrit Schrödinger H27 and its Clifford normalizer. The new theorem supplies the missing E8 root-gauge identification: Coxeter shift = X, pure external-A2 toral phase = Z, and measured physical FI/Qpsi Z3 = the commutator center.",
+  "external_context": "This is the standard clock/shift Heisenberg subgroup of SU(3), now located objectwise in the repository's certified E8 -> E6 x A2 embedding.",
+  "boundary": "Finite E8/subgroup/representation theorem only. No D/F-flat vacuum, observed-family assignment, Standard Model derivation, or measured photonic implementation follows from this identification alone.",
+  "parents": [
+    "data/w33_e8_a2_center_vs_coxeter_order3.json",
+    "data/w33_physical_fi_is_h27_center.json",
+    "analysis/w33_pass5727_5730_torsion_family_heisenberg.py"
+  ],
+  "checks": {
+    "physical_neutral_roots_split_E6_A2": true,
+    "pure_clock_unique_mod_FI_center": true,
+    "clock_spectrum_134_57_57": true,
+    "matter_shells_split_27_27_27": true,
+    "rootwise_Heisenberg_commutator": true,
+    "H27_order_27": true
+  }
+}
