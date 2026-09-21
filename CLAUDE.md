@@ -170,7 +170,9 @@ Four artifacts now exist. They only pay off if both agents use them:
    pure noise (Pass 328 measured every token class before choosing).
 3. **`KEY_VOCABULARY.md`** — inverted index, *word → the JSON key names the
    certificates build from it*. Regenerate with `py -3 scripts/build_key_index.py`.
-   `RESULTS_INDEX.md` indexes distinctive **values**; it does **not** index key
+   It complements the curated [`RESULTS_VOCABULARY.md`](RESULTS_VOCABULARY.md)
+   (same result, different words) and `RESULTS_INDEX.md`, which indexes distinctive
+   **values** but **not** key
    names, and 88309 distinct keys across 5085 certificates were unindexed. A
    certificate often states its finding only as a key, which no prose grep reaches
    because no sentence contains it — that gap cost four consecutive rediscoveries in
