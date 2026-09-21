@@ -1,0 +1,14 @@
+{
+  "schema":"w33.difference_R_so14_u1_five_grading.v1",
+  "status":"PASS_INTERNAL_SO14_U1_FIVE_GRADING_WITH_HIGHEST_WEIGHTS",
+  "branching":"248=(91+1)_0+64_-1+64_+1+14_-2+14_+2",
+  "root_histogram":{"-2":14,"-1":64,"0":84,"1":64,"2":14},
+  "dominant_D7_labels":{
+    "-2":[0,0,0,0,0,1,0],
+    "-1":[1,0,0,0,0,0,0],
+    "1":[0,0,0,0,0,0,1],
+    "2":[0,0,0,0,0,1,0]
+  },
+  "cube_parity":{"even":120,"odd":128,"fixed_type":"D8"},
+  "boundary":"Internal E8 root/weight theorem; no low-energy U(1) survival claim."
+}
