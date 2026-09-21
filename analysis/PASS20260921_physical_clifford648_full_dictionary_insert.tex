@@ -1,0 +1,20 @@
+% PASS20260921 complete physical Clifford648 to W33 stabilizer dictionary.
+\subsection*{All $648$ physical qutrit Clifford elements are materialized in the W33 point stabilizer}
+Fix the Heisenberg lift gauge by
+\[
+X_{\rm phys}\mapsto x,\qquad Z_{\rm phys}\mapsto y,\qquad
+z_{\rm phys}\mapsto z_{\rm Hess}^{-1}.
+\]
+For physical normal coordinates \(Z^aX^bz^c\), the exact Pass~1054 Hessian coordinates are
+\[
+\boxed{(a,b,c)\mapsto(b,a,-ab-c)\pmod3}.
+\]
+This map is checked on all \(27^2\) Heisenberg products.
+
+For each of the \(24\) matrices in \(SL(2,3)\), choose the unique element of Pass~1054's deterministic split complement with that quotient action. The resulting \(27\times24=648\) normal forms are mapped bijectively to the selected W33 point stabilizer. For every element the degree-$40$ W33 permutation and degree-$27$ affine Hessian permutation are serialized. The verifier checks all
+\[
+648^2=419904
+\]
+products and hashes the complete multiplication table.
+
+Thus the earlier quotient-action match is upgraded to a complete finite group-element dictionary in a fixed split-complement gauge.
