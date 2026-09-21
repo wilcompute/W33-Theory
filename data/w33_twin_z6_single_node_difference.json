@@ -1,0 +1,21 @@
+{
+  "schema":"w33.twin_z6_single_node_difference.v1",
+  "status":"PASS_TWIN_Z6_DIFFER_BY_ONE_MARK2_COWEIGHT_PHASE",
+  "kac_coordinates":{
+    "structural_S":[2,0,0,0,1,0,0,0,0],
+    "holonomy_H":[0,0,0,0,1,0,0,1,0],
+    "difference_R":[4,0,0,0,0,0,0,1,0]
+  },
+  "root_grade_relation":"grade_H=grade_S+grade_R mod6 on all 240 roots",
+  "spectra":{
+    "S":[54,48,33,32,33,48],
+    "R":[92,64,14,0,14,64],
+    "H":[44,40,38,48,38,40]
+  },
+  "R_power_ladder":{
+    "1":"D7+u1, dim92",
+    "2":"D7+u1, dim92",
+    "3":"D8, dim120"
+  },
+  "boundary":"Common complex-E8 Cartan/Kac factorization only; no FI-to-holonomy dynamics or vacuum claim."
+}
