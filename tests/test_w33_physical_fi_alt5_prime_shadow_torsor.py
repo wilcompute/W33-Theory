@@ -22,3 +22,7 @@ def test_physical_fi_alt5_prime_shadow_torsor():
     assert out["mod3_selector"]["residue"]==[1,0,1,1,0]
     assert len(out["mod3_selector"]["selected_three"])==3
     assert len(out["mod3_selector"]["complementary_two"])==2
+
+    assert out["prime_shadows"]["3"]["Alt5_permutation_character_multiplicities"]=={"1":1,"3":0,"3prime":0,"4":1,"5":1}
+    assert out["prime_shadows"]["11"]["Alt5_permutation_character_multiplicities"]=={"1":1,"3":1,"3prime":1,"4":2,"5":1}
+    assert out["checks"]["permutation_character_decompositions"] is True
