@@ -148,3 +148,53 @@ certificate and regression test. It is also mirrored model-side in Holotrade.
   operator map.
 - No D-flat/F-flat vacuum follows from the prime-shadow theorem.
 - No claim is made that W33 has become an experimentally established TOE.
+
+## Additional exact breakthroughs from the same pass
+
+### Physical twin-A4 index-five E8 gluing
+
+The two physical type-A4 root systems already present in the flagship data are
+the Wilson-line SU(5) root system and the orthogonal A4 organizing the four
+extra hypercharge-orthogonal U(1) directions.  Exact root coordinates show
+that they span rank eight with block Gram matrix
+[
+C_{A_4}oplus C_{A_4},
+qquad
+det=25.
+]
+Hence their direct-sum root lattice has index five in the unimodular E8
+lattice.  Exhaustive enumeration of the 240 E8 roots gives
+[
+20+20+50+50+50+50,
+]
+and the discriminant gluing is
+[
+c_{\rm gauge}=3c_{\rm center}\pmod5.
+]
+The resulting adjoint branching is reconstructed directly from the physical
+bases:
+[
+248=(24,1)+(1,24)+(10,5)+(\bar{10},\bar5)+(\bar5,10)+(5,\bar{10}).
+]
+
+### Physical FI realization of the E6 x A2 Z3 grading
+
+The certified organizer-factor FI projection has standard A4 diagonal
+coordinates
+[
+(-5/3,1,1/3,-5/3,2),
+]
+whose triple is the physical star vector
+[
+(-5,3,1,-5,6).
+]
+Its order-three exponential has a 3+2 spectrum on that organizer A4.  On all
+240 E8 roots the grades are exactly
+[
+78_0+81_{1/3}+81_{2/3}.
+]
+The neutral roots have connected components (72 roots, rank 6) and (6 roots,
+rank 2), so the fixed root system is exactly E6+A2.  This supplies a concrete
+physical-FI Cartan representative for the repository's pre-existing abstract
+E8 -> E6 x A2 grading.
+
