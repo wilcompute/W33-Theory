@@ -1,0 +1,1628 @@
+{
+  "schema": "w33.e8_matter81_frame_qutrit_tensor_carrier.v1",
+  "status": "PASS_E8_MATTER81_EQUALS_27_COMPLETE_FRAMES_X_3_EXTERNAL_QUTRIT_PHASES",
+  "headline": "One frozen E8 matter-81 chart now has a literal bijection root <-> (complete two-qutrit factorisation frame, external A2/qutrit phase). The projected 27 weights map by an anchored graph isomorphism to the independent W33 cubic-line carrier, which the crossrepo theorem identifies with the 27 complete factorisation frames. Each frame has exactly three A2 lifts. The 45 E6 zero-sum tritangents lift to exactly 270 E8 zero-sum triples: six per tritangent, precisely the six permutations using phases 0,1,2 once each. Every one of the 81 roots lies in ten such triples.",
+  "chart": {
+    "coordinate": 0,
+    "sector": "matter_81_coset_1",
+    "root_count": 81,
+    "base_weight_count": 27,
+    "phase_count": 3
+  },
+  "tensor_factorization": {
+    "identity": "81 = 27 complete two-qutrit factorisation frames x 3 external qutrit phases",
+    "root_to_frame_phase_bijective": true,
+    "phase_pairs": [
+      [
+        "-1/3",
+        "-2/3"
+      ],
+      [
+        "-1/3",
+        "1/3"
+      ],
+      [
+        "2/3",
+        "1/3"
+      ]
+    ],
+    "weight_to_complete_frame": {
+      "0": 0,
+      "1": 16,
+      "2": 15,
+      "3": 14,
+      "4": 26,
+      "5": 1,
+      "6": 13,
+      "7": 23,
+      "8": 2,
+      "9": 24,
+      "10": 25,
+      "11": 5,
+      "12": 3,
+      "13": 4,
+      "14": 12,
+      "15": 10,
+      "16": 9,
+      "17": 20,
+      "18": 8,
+      "19": 21,
+      "20": 22,
+      "21": 7,
+      "22": 19,
+      "23": 18,
+      "24": 17,
+      "25": 11,
+      "26": 6
+    }
+  },
+  "cubic_lift": {
+    "base_tritangents": 45,
+    "phase_assignments_tested_per_tritangent": 27,
+    "zero_sum_E8_triples": 270,
+    "zero_sum_lifts_per_base_tritangent": 6,
+    "allowed_phase_multiset": [
+      0,
+      1,
+      2
+    ],
+    "rule": "an E6 zero-sum tritangent lifts to an E8 zero-sum triple iff the three roots use the three distinct external qutrit phases",
+    "triples_per_root": 10,
+    "factorization": "270 = 45 * 3!; 10 = 5 base tritangents per frame * 2 phase completions"
+  },
+  "operational_reading": "The E8 matter shell is a frame register tensored with one external qutrit label at the object-set level. Cubic/root-addition incidence is not arbitrary across the qutrit factor: it is the antisymmetric phase-conservation rule using one of each of the three A2 weights.",
+  "root_records": [
+    {
+      "root": [
+        "2/3",
+        "1/3",
+        "-2/3",
+        "-1/3",
+        "0",
+        "0",
+        "-1/3",
+        "-2/3"
+      ],
+      "weight_index": 0,
+      "complete_frame": 0,
+      "external_qutrit_phase": 2,
+      "a2_phase_pair": [
+        "2/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "1/3",
+        "-2/3",
+        "-1/3",
+        "0",
+        "0",
+        "-1/3",
+        "-2/3"
+      ],
+      "weight_index": 0,
+      "complete_frame": 0,
+      "external_qutrit_phase": 1,
+      "a2_phase_pair": [
+        "-1/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "-2/3",
+        "-2/3",
+        "-1/3",
+        "0",
+        "0",
+        "-1/3",
+        "-2/3"
+      ],
+      "weight_index": 0,
+      "complete_frame": 0,
+      "external_qutrit_phase": 0,
+      "a2_phase_pair": [
+        "-1/3",
+        "-2/3"
+      ]
+    },
+    {
+      "root": [
+        "2/3",
+        "1/3",
+        "-2/3",
+        "-1/3",
+        "0",
+        "0",
+        "-1/3",
+        "1/3"
+      ],
+      "weight_index": 1,
+      "complete_frame": 16,
+      "external_qutrit_phase": 2,
+      "a2_phase_pair": [
+        "2/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "1/3",
+        "-2/3",
+        "-1/3",
+        "0",
+        "0",
+        "-1/3",
+        "1/3"
+      ],
+      "weight_index": 1,
+      "complete_frame": 16,
+      "external_qutrit_phase": 1,
+      "a2_phase_pair": [
+        "-1/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "-2/3",
+        "-2/3",
+        "-1/3",
+        "0",
+        "0",
+        "-1/3",
+        "1/3"
+      ],
+      "weight_index": 1,
+      "complete_frame": 16,
+      "external_qutrit_phase": 0,
+      "a2_phase_pair": [
+        "-1/3",
+        "-2/3"
+      ]
+    },
+    {
+      "root": [
+        "2/3",
+        "1/3",
+        "-2/3",
+        "-1/3",
+        "0",
+        "0",
+        "2/3",
+        "1/3"
+      ],
+      "weight_index": 2,
+      "complete_frame": 15,
+      "external_qutrit_phase": 2,
+      "a2_phase_pair": [
+        "2/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "1/3",
+        "-2/3",
+        "-1/3",
+        "0",
+        "0",
+        "2/3",
+        "1/3"
+      ],
+      "weight_index": 2,
+      "complete_frame": 15,
+      "external_qutrit_phase": 1,
+      "a2_phase_pair": [
+        "-1/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "-2/3",
+        "-2/3",
+        "-1/3",
+        "0",
+        "0",
+        "2/3",
+        "1/3"
+      ],
+      "weight_index": 2,
+      "complete_frame": 15,
+      "external_qutrit_phase": 0,
+      "a2_phase_pair": [
+        "-1/3",
+        "-2/3"
+      ]
+    },
+    {
+      "root": [
+        "2/3",
+        "1/3",
+        "-1/3",
+        "-2/3",
+        "-2/3",
+        "-1/3",
+        "0",
+        "0"
+      ],
+      "weight_index": 3,
+      "complete_frame": 14,
+      "external_qutrit_phase": 2,
+      "a2_phase_pair": [
+        "2/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "1/3",
+        "-1/3",
+        "-2/3",
+        "-2/3",
+        "-1/3",
+        "0",
+        "0"
+      ],
+      "weight_index": 3,
+      "complete_frame": 14,
+      "external_qutrit_phase": 1,
+      "a2_phase_pair": [
+        "-1/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "-2/3",
+        "-1/3",
+        "-2/3",
+        "-2/3",
+        "-1/3",
+        "0",
+        "0"
+      ],
+      "weight_index": 3,
+      "complete_frame": 14,
+      "external_qutrit_phase": 0,
+      "a2_phase_pair": [
+        "-1/3",
+        "-2/3"
+      ]
+    },
+    {
+      "root": [
+        "2/3",
+        "1/3",
+        "-1/3",
+        "-2/3",
+        "1/3",
+        "-1/3",
+        "0",
+        "0"
+      ],
+      "weight_index": 4,
+      "complete_frame": 26,
+      "external_qutrit_phase": 2,
+      "a2_phase_pair": [
+        "2/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "1/3",
+        "-1/3",
+        "-2/3",
+        "1/3",
+        "-1/3",
+        "0",
+        "0"
+      ],
+      "weight_index": 4,
+      "complete_frame": 26,
+      "external_qutrit_phase": 1,
+      "a2_phase_pair": [
+        "-1/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "-2/3",
+        "-1/3",
+        "-2/3",
+        "1/3",
+        "-1/3",
+        "0",
+        "0"
+      ],
+      "weight_index": 4,
+      "complete_frame": 26,
+      "external_qutrit_phase": 0,
+      "a2_phase_pair": [
+        "-1/3",
+        "-2/3"
+      ]
+    },
+    {
+      "root": [
+        "2/3",
+        "1/3",
+        "-1/3",
+        "-2/3",
+        "1/3",
+        "2/3",
+        "0",
+        "0"
+      ],
+      "weight_index": 5,
+      "complete_frame": 1,
+      "external_qutrit_phase": 2,
+      "a2_phase_pair": [
+        "2/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "1/3",
+        "-1/3",
+        "-2/3",
+        "1/3",
+        "2/3",
+        "0",
+        "0"
+      ],
+      "weight_index": 5,
+      "complete_frame": 1,
+      "external_qutrit_phase": 1,
+      "a2_phase_pair": [
+        "-1/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "-2/3",
+        "-1/3",
+        "-2/3",
+        "1/3",
+        "2/3",
+        "0",
+        "0"
+      ],
+      "weight_index": 5,
+      "complete_frame": 1,
+      "external_qutrit_phase": 0,
+      "a2_phase_pair": [
+        "-1/3",
+        "-2/3"
+      ]
+    },
+    {
+      "root": [
+        "2/3",
+        "1/3",
+        "-1/3",
+        "1/3",
+        "-2/3",
+        "-1/3",
+        "0",
+        "0"
+      ],
+      "weight_index": 6,
+      "complete_frame": 13,
+      "external_qutrit_phase": 2,
+      "a2_phase_pair": [
+        "2/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "1/3",
+        "-1/3",
+        "1/3",
+        "-2/3",
+        "-1/3",
+        "0",
+        "0"
+      ],
+      "weight_index": 6,
+      "complete_frame": 13,
+      "external_qutrit_phase": 1,
+      "a2_phase_pair": [
+        "-1/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "-2/3",
+        "-1/3",
+        "1/3",
+        "-2/3",
+        "-1/3",
+        "0",
+        "0"
+      ],
+      "weight_index": 6,
+      "complete_frame": 13,
+      "external_qutrit_phase": 0,
+      "a2_phase_pair": [
+        "-1/3",
+        "-2/3"
+      ]
+    },
+    {
+      "root": [
+        "2/3",
+        "1/3",
+        "-1/3",
+        "1/3",
+        "1/3",
+        "-1/3",
+        "0",
+        "0"
+      ],
+      "weight_index": 7,
+      "complete_frame": 23,
+      "external_qutrit_phase": 2,
+      "a2_phase_pair": [
+        "2/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "1/3",
+        "-1/3",
+        "1/3",
+        "1/3",
+        "-1/3",
+        "0",
+        "0"
+      ],
+      "weight_index": 7,
+      "complete_frame": 23,
+      "external_qutrit_phase": 1,
+      "a2_phase_pair": [
+        "-1/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "-2/3",
+        "-1/3",
+        "1/3",
+        "1/3",
+        "-1/3",
+        "0",
+        "0"
+      ],
+      "weight_index": 7,
+      "complete_frame": 23,
+      "external_qutrit_phase": 0,
+      "a2_phase_pair": [
+        "-1/3",
+        "-2/3"
+      ]
+    },
+    {
+      "root": [
+        "2/3",
+        "1/3",
+        "-1/3",
+        "1/3",
+        "1/3",
+        "2/3",
+        "0",
+        "0"
+      ],
+      "weight_index": 8,
+      "complete_frame": 2,
+      "external_qutrit_phase": 2,
+      "a2_phase_pair": [
+        "2/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "1/3",
+        "-1/3",
+        "1/3",
+        "1/3",
+        "2/3",
+        "0",
+        "0"
+      ],
+      "weight_index": 8,
+      "complete_frame": 2,
+      "external_qutrit_phase": 1,
+      "a2_phase_pair": [
+        "-1/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "-2/3",
+        "-1/3",
+        "1/3",
+        "1/3",
+        "2/3",
+        "0",
+        "0"
+      ],
+      "weight_index": 8,
+      "complete_frame": 2,
+      "external_qutrit_phase": 0,
+      "a2_phase_pair": [
+        "-1/3",
+        "-2/3"
+      ]
+    },
+    {
+      "root": [
+        "2/3",
+        "1/3",
+        "0",
+        "0",
+        "-1/3",
+        "-2/3",
+        "-2/3",
+        "-1/3"
+      ],
+      "weight_index": 9,
+      "complete_frame": 24,
+      "external_qutrit_phase": 2,
+      "a2_phase_pair": [
+        "2/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "1/3",
+        "0",
+        "0",
+        "-1/3",
+        "-2/3",
+        "-2/3",
+        "-1/3"
+      ],
+      "weight_index": 9,
+      "complete_frame": 24,
+      "external_qutrit_phase": 1,
+      "a2_phase_pair": [
+        "-1/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "-2/3",
+        "0",
+        "0",
+        "-1/3",
+        "-2/3",
+        "-2/3",
+        "-1/3"
+      ],
+      "weight_index": 9,
+      "complete_frame": 24,
+      "external_qutrit_phase": 0,
+      "a2_phase_pair": [
+        "-1/3",
+        "-2/3"
+      ]
+    },
+    {
+      "root": [
+        "2/3",
+        "1/3",
+        "0",
+        "0",
+        "-1/3",
+        "-2/3",
+        "1/3",
+        "-1/3"
+      ],
+      "weight_index": 10,
+      "complete_frame": 25,
+      "external_qutrit_phase": 2,
+      "a2_phase_pair": [
+        "2/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "1/3",
+        "0",
+        "0",
+        "-1/3",
+        "-2/3",
+        "1/3",
+        "-1/3"
+      ],
+      "weight_index": 10,
+      "complete_frame": 25,
+      "external_qutrit_phase": 1,
+      "a2_phase_pair": [
+        "-1/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "-2/3",
+        "0",
+        "0",
+        "-1/3",
+        "-2/3",
+        "1/3",
+        "-1/3"
+      ],
+      "weight_index": 10,
+      "complete_frame": 25,
+      "external_qutrit_phase": 0,
+      "a2_phase_pair": [
+        "-1/3",
+        "-2/3"
+      ]
+    },
+    {
+      "root": [
+        "2/3",
+        "1/3",
+        "0",
+        "0",
+        "-1/3",
+        "-2/3",
+        "1/3",
+        "2/3"
+      ],
+      "weight_index": 11,
+      "complete_frame": 5,
+      "external_qutrit_phase": 2,
+      "a2_phase_pair": [
+        "2/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "1/3",
+        "0",
+        "0",
+        "-1/3",
+        "-2/3",
+        "1/3",
+        "2/3"
+      ],
+      "weight_index": 11,
+      "complete_frame": 5,
+      "external_qutrit_phase": 1,
+      "a2_phase_pair": [
+        "-1/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "-2/3",
+        "0",
+        "0",
+        "-1/3",
+        "-2/3",
+        "1/3",
+        "2/3"
+      ],
+      "weight_index": 11,
+      "complete_frame": 5,
+      "external_qutrit_phase": 0,
+      "a2_phase_pair": [
+        "-1/3",
+        "-2/3"
+      ]
+    },
+    {
+      "root": [
+        "2/3",
+        "1/3",
+        "0",
+        "0",
+        "-1/3",
+        "1/3",
+        "-2/3",
+        "-1/3"
+      ],
+      "weight_index": 12,
+      "complete_frame": 3,
+      "external_qutrit_phase": 2,
+      "a2_phase_pair": [
+        "2/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "1/3",
+        "0",
+        "0",
+        "-1/3",
+        "1/3",
+        "-2/3",
+        "-1/3"
+      ],
+      "weight_index": 12,
+      "complete_frame": 3,
+      "external_qutrit_phase": 1,
+      "a2_phase_pair": [
+        "-1/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "-2/3",
+        "0",
+        "0",
+        "-1/3",
+        "1/3",
+        "-2/3",
+        "-1/3"
+      ],
+      "weight_index": 12,
+      "complete_frame": 3,
+      "external_qutrit_phase": 0,
+      "a2_phase_pair": [
+        "-1/3",
+        "-2/3"
+      ]
+    },
+    {
+      "root": [
+        "2/3",
+        "1/3",
+        "0",
+        "0",
+        "-1/3",
+        "1/3",
+        "1/3",
+        "-1/3"
+      ],
+      "weight_index": 13,
+      "complete_frame": 4,
+      "external_qutrit_phase": 2,
+      "a2_phase_pair": [
+        "2/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "1/3",
+        "0",
+        "0",
+        "-1/3",
+        "1/3",
+        "1/3",
+        "-1/3"
+      ],
+      "weight_index": 13,
+      "complete_frame": 4,
+      "external_qutrit_phase": 1,
+      "a2_phase_pair": [
+        "-1/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "-2/3",
+        "0",
+        "0",
+        "-1/3",
+        "1/3",
+        "1/3",
+        "-1/3"
+      ],
+      "weight_index": 13,
+      "complete_frame": 4,
+      "external_qutrit_phase": 0,
+      "a2_phase_pair": [
+        "-1/3",
+        "-2/3"
+      ]
+    },
+    {
+      "root": [
+        "2/3",
+        "1/3",
+        "0",
+        "0",
+        "-1/3",
+        "1/3",
+        "1/3",
+        "2/3"
+      ],
+      "weight_index": 14,
+      "complete_frame": 12,
+      "external_qutrit_phase": 2,
+      "a2_phase_pair": [
+        "2/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "1/3",
+        "0",
+        "0",
+        "-1/3",
+        "1/3",
+        "1/3",
+        "2/3"
+      ],
+      "weight_index": 14,
+      "complete_frame": 12,
+      "external_qutrit_phase": 1,
+      "a2_phase_pair": [
+        "-1/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "-2/3",
+        "0",
+        "0",
+        "-1/3",
+        "1/3",
+        "1/3",
+        "2/3"
+      ],
+      "weight_index": 14,
+      "complete_frame": 12,
+      "external_qutrit_phase": 0,
+      "a2_phase_pair": [
+        "-1/3",
+        "-2/3"
+      ]
+    },
+    {
+      "root": [
+        "2/3",
+        "1/3",
+        "0",
+        "0",
+        "2/3",
+        "1/3",
+        "-2/3",
+        "-1/3"
+      ],
+      "weight_index": 15,
+      "complete_frame": 10,
+      "external_qutrit_phase": 2,
+      "a2_phase_pair": [
+        "2/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "1/3",
+        "0",
+        "0",
+        "2/3",
+        "1/3",
+        "-2/3",
+        "-1/3"
+      ],
+      "weight_index": 15,
+      "complete_frame": 10,
+      "external_qutrit_phase": 1,
+      "a2_phase_pair": [
+        "-1/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "-2/3",
+        "0",
+        "0",
+        "2/3",
+        "1/3",
+        "-2/3",
+        "-1/3"
+      ],
+      "weight_index": 15,
+      "complete_frame": 10,
+      "external_qutrit_phase": 0,
+      "a2_phase_pair": [
+        "-1/3",
+        "-2/3"
+      ]
+    },
+    {
+      "root": [
+        "2/3",
+        "1/3",
+        "0",
+        "0",
+        "2/3",
+        "1/3",
+        "1/3",
+        "-1/3"
+      ],
+      "weight_index": 16,
+      "complete_frame": 9,
+      "external_qutrit_phase": 2,
+      "a2_phase_pair": [
+        "2/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "1/3",
+        "0",
+        "0",
+        "2/3",
+        "1/3",
+        "1/3",
+        "-1/3"
+      ],
+      "weight_index": 16,
+      "complete_frame": 9,
+      "external_qutrit_phase": 1,
+      "a2_phase_pair": [
+        "-1/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "-2/3",
+        "0",
+        "0",
+        "2/3",
+        "1/3",
+        "1/3",
+        "-1/3"
+      ],
+      "weight_index": 16,
+      "complete_frame": 9,
+      "external_qutrit_phase": 0,
+      "a2_phase_pair": [
+        "-1/3",
+        "-2/3"
+      ]
+    },
+    {
+      "root": [
+        "2/3",
+        "1/3",
+        "0",
+        "0",
+        "2/3",
+        "1/3",
+        "1/3",
+        "2/3"
+      ],
+      "weight_index": 17,
+      "complete_frame": 20,
+      "external_qutrit_phase": 2,
+      "a2_phase_pair": [
+        "2/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "1/3",
+        "0",
+        "0",
+        "2/3",
+        "1/3",
+        "1/3",
+        "2/3"
+      ],
+      "weight_index": 17,
+      "complete_frame": 20,
+      "external_qutrit_phase": 1,
+      "a2_phase_pair": [
+        "-1/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "-2/3",
+        "0",
+        "0",
+        "2/3",
+        "1/3",
+        "1/3",
+        "2/3"
+      ],
+      "weight_index": 17,
+      "complete_frame": 20,
+      "external_qutrit_phase": 0,
+      "a2_phase_pair": [
+        "-1/3",
+        "-2/3"
+      ]
+    },
+    {
+      "root": [
+        "2/3",
+        "1/3",
+        "1/3",
+        "-1/3",
+        "0",
+        "0",
+        "-1/3",
+        "-2/3"
+      ],
+      "weight_index": 18,
+      "complete_frame": 8,
+      "external_qutrit_phase": 2,
+      "a2_phase_pair": [
+        "2/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "1/3",
+        "1/3",
+        "-1/3",
+        "0",
+        "0",
+        "-1/3",
+        "-2/3"
+      ],
+      "weight_index": 18,
+      "complete_frame": 8,
+      "external_qutrit_phase": 1,
+      "a2_phase_pair": [
+        "-1/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "-2/3",
+        "1/3",
+        "-1/3",
+        "0",
+        "0",
+        "-1/3",
+        "-2/3"
+      ],
+      "weight_index": 18,
+      "complete_frame": 8,
+      "external_qutrit_phase": 0,
+      "a2_phase_pair": [
+        "-1/3",
+        "-2/3"
+      ]
+    },
+    {
+      "root": [
+        "2/3",
+        "1/3",
+        "1/3",
+        "-1/3",
+        "0",
+        "0",
+        "-1/3",
+        "1/3"
+      ],
+      "weight_index": 19,
+      "complete_frame": 21,
+      "external_qutrit_phase": 2,
+      "a2_phase_pair": [
+        "2/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "1/3",
+        "1/3",
+        "-1/3",
+        "0",
+        "0",
+        "-1/3",
+        "1/3"
+      ],
+      "weight_index": 19,
+      "complete_frame": 21,
+      "external_qutrit_phase": 1,
+      "a2_phase_pair": [
+        "-1/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "-2/3",
+        "1/3",
+        "-1/3",
+        "0",
+        "0",
+        "-1/3",
+        "1/3"
+      ],
+      "weight_index": 19,
+      "complete_frame": 21,
+      "external_qutrit_phase": 0,
+      "a2_phase_pair": [
+        "-1/3",
+        "-2/3"
+      ]
+    },
+    {
+      "root": [
+        "2/3",
+        "1/3",
+        "1/3",
+        "-1/3",
+        "0",
+        "0",
+        "2/3",
+        "1/3"
+      ],
+      "weight_index": 20,
+      "complete_frame": 22,
+      "external_qutrit_phase": 2,
+      "a2_phase_pair": [
+        "2/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "1/3",
+        "1/3",
+        "-1/3",
+        "0",
+        "0",
+        "2/3",
+        "1/3"
+      ],
+      "weight_index": 20,
+      "complete_frame": 22,
+      "external_qutrit_phase": 1,
+      "a2_phase_pair": [
+        "-1/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "-2/3",
+        "1/3",
+        "-1/3",
+        "0",
+        "0",
+        "2/3",
+        "1/3"
+      ],
+      "weight_index": 20,
+      "complete_frame": 22,
+      "external_qutrit_phase": 0,
+      "a2_phase_pair": [
+        "-1/3",
+        "-2/3"
+      ]
+    },
+    {
+      "root": [
+        "2/3",
+        "1/3",
+        "1/3",
+        "2/3",
+        "0",
+        "0",
+        "-1/3",
+        "-2/3"
+      ],
+      "weight_index": 21,
+      "complete_frame": 7,
+      "external_qutrit_phase": 2,
+      "a2_phase_pair": [
+        "2/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "1/3",
+        "1/3",
+        "2/3",
+        "0",
+        "0",
+        "-1/3",
+        "-2/3"
+      ],
+      "weight_index": 21,
+      "complete_frame": 7,
+      "external_qutrit_phase": 1,
+      "a2_phase_pair": [
+        "-1/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "-2/3",
+        "1/3",
+        "2/3",
+        "0",
+        "0",
+        "-1/3",
+        "-2/3"
+      ],
+      "weight_index": 21,
+      "complete_frame": 7,
+      "external_qutrit_phase": 0,
+      "a2_phase_pair": [
+        "-1/3",
+        "-2/3"
+      ]
+    },
+    {
+      "root": [
+        "2/3",
+        "1/3",
+        "1/3",
+        "2/3",
+        "0",
+        "0",
+        "-1/3",
+        "1/3"
+      ],
+      "weight_index": 22,
+      "complete_frame": 19,
+      "external_qutrit_phase": 2,
+      "a2_phase_pair": [
+        "2/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "1/3",
+        "1/3",
+        "2/3",
+        "0",
+        "0",
+        "-1/3",
+        "1/3"
+      ],
+      "weight_index": 22,
+      "complete_frame": 19,
+      "external_qutrit_phase": 1,
+      "a2_phase_pair": [
+        "-1/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "-2/3",
+        "1/3",
+        "2/3",
+        "0",
+        "0",
+        "-1/3",
+        "1/3"
+      ],
+      "weight_index": 22,
+      "complete_frame": 19,
+      "external_qutrit_phase": 0,
+      "a2_phase_pair": [
+        "-1/3",
+        "-2/3"
+      ]
+    },
+    {
+      "root": [
+        "2/3",
+        "1/3",
+        "1/3",
+        "2/3",
+        "0",
+        "0",
+        "2/3",
+        "1/3"
+      ],
+      "weight_index": 23,
+      "complete_frame": 18,
+      "external_qutrit_phase": 2,
+      "a2_phase_pair": [
+        "2/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "1/3",
+        "1/3",
+        "2/3",
+        "0",
+        "0",
+        "2/3",
+        "1/3"
+      ],
+      "weight_index": 23,
+      "complete_frame": 18,
+      "external_qutrit_phase": 1,
+      "a2_phase_pair": [
+        "-1/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "-2/3",
+        "1/3",
+        "2/3",
+        "0",
+        "0",
+        "2/3",
+        "1/3"
+      ],
+      "weight_index": 23,
+      "complete_frame": 18,
+      "external_qutrit_phase": 0,
+      "a2_phase_pair": [
+        "-1/3",
+        "-2/3"
+      ]
+    },
+    {
+      "root": [
+        "2/3",
+        "1/3",
+        "2/3",
+        "1/3",
+        "-2/3",
+        "-1/3",
+        "0",
+        "0"
+      ],
+      "weight_index": 24,
+      "complete_frame": 17,
+      "external_qutrit_phase": 2,
+      "a2_phase_pair": [
+        "2/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "1/3",
+        "2/3",
+        "1/3",
+        "-2/3",
+        "-1/3",
+        "0",
+        "0"
+      ],
+      "weight_index": 24,
+      "complete_frame": 17,
+      "external_qutrit_phase": 1,
+      "a2_phase_pair": [
+        "-1/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "-2/3",
+        "2/3",
+        "1/3",
+        "-2/3",
+        "-1/3",
+        "0",
+        "0"
+      ],
+      "weight_index": 24,
+      "complete_frame": 17,
+      "external_qutrit_phase": 0,
+      "a2_phase_pair": [
+        "-1/3",
+        "-2/3"
+      ]
+    },
+    {
+      "root": [
+        "2/3",
+        "1/3",
+        "2/3",
+        "1/3",
+        "1/3",
+        "-1/3",
+        "0",
+        "0"
+      ],
+      "weight_index": 25,
+      "complete_frame": 11,
+      "external_qutrit_phase": 2,
+      "a2_phase_pair": [
+        "2/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "1/3",
+        "2/3",
+        "1/3",
+        "1/3",
+        "-1/3",
+        "0",
+        "0"
+      ],
+      "weight_index": 25,
+      "complete_frame": 11,
+      "external_qutrit_phase": 1,
+      "a2_phase_pair": [
+        "-1/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "-2/3",
+        "2/3",
+        "1/3",
+        "1/3",
+        "-1/3",
+        "0",
+        "0"
+      ],
+      "weight_index": 25,
+      "complete_frame": 11,
+      "external_qutrit_phase": 0,
+      "a2_phase_pair": [
+        "-1/3",
+        "-2/3"
+      ]
+    },
+    {
+      "root": [
+        "2/3",
+        "1/3",
+        "2/3",
+        "1/3",
+        "1/3",
+        "2/3",
+        "0",
+        "0"
+      ],
+      "weight_index": 26,
+      "complete_frame": 6,
+      "external_qutrit_phase": 2,
+      "a2_phase_pair": [
+        "2/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "1/3",
+        "2/3",
+        "1/3",
+        "1/3",
+        "2/3",
+        "0",
+        "0"
+      ],
+      "weight_index": 26,
+      "complete_frame": 6,
+      "external_qutrit_phase": 1,
+      "a2_phase_pair": [
+        "-1/3",
+        "1/3"
+      ]
+    },
+    {
+      "root": [
+        "-1/3",
+        "-2/3",
+        "2/3",
+        "1/3",
+        "1/3",
+        "2/3",
+        "0",
+        "0"
+      ],
+      "weight_index": 26,
+      "complete_frame": 6,
+      "external_qutrit_phase": 0,
+      "a2_phase_pair": [
+        "-1/3",
+        "-2/3"
+      ]
+    }
+  ],
+  "boundary": "The complete-frame numbering is an anchored coordinate gauge, not a canonical physical generation label. This is a finite root/incidence/tensor-label theorem; it does not provide a Hilbert-space tensor-product factorization of the full E8 adjoint representation, a Yukawa coefficient, or a vacuum.",
+  "parents": [
+    "analysis/w33_e6_minuscule_27_a2_phase_factorization.py",
+    "analysis/w33_e6_45_tritangent_zero_sum_bridge.py",
+    "data/w33_qutrit_frame_mu12_bundle_carrier_crossrepo.json"
+  ],
+  "checks": {
+    "81_to_27x3_bijection": true,
+    "transported_45_tritangents_exact": true,
+    "270_zero_sum_E8_cubic_triples": true,
+    "six_phase_permutations_per_tritangent": true,
+    "ten_cubic_triples_per_root": true
+  }
+}
