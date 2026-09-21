@@ -1,0 +1,36 @@
+{
+  "schema": "w33.fi_family_a2_weyl_intertwiner.v1",
+  "status": "PASS_EXPLICIT_FI_TO_CE2_FAMILY_A2_WEYL_INTERTWINER",
+  "word_zero_based": [
+    2,
+    1,
+    4,
+    6,
+    0,
+    1,
+    2,
+    3,
+    7,
+    1,
+    0,
+    2,
+    1,
+    3,
+    4,
+    5,
+    6,
+    0,
+    7,
+    1,
+    2,
+    3,
+    4
+  ],
+  "word_length": 23,
+  "grade_intertwining": {
+    "0->0": 78,
+    "1->1": 81,
+    "2->2": 81
+  },
+  "boundary": "Maps the physical FI A2 to the canonical CE2/family A2; does not identify the separate affine nine-site su3."
+}\n
