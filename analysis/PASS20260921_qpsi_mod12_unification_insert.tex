@@ -1,0 +1,47 @@
+% PASS20260921 single integral Qpsi charge unifies the E8 discrete gradings.
+\subsection*{One integer $Q_\psi$ charge generates the $E_8$ $Z_2$, $Z_3$, $Z_4$, $Z_6$, and $Z_{12}$ layers}
+
+The certified $E_8$ adjoint charge histogram is
+\[
+Q_\psi:\quad
+(-4)^3,\ (-3)^{16},\ (-2)^{30},\ (-1)^{48},\
+0^{54},\ 1^{48},\ 2^{30},\ 3^{16},\ 4^3,
+\]
+with the eight Cartan generators included in the neutral count.  Reducing this
+single integer charge gives all of the previously separate discrete gradings:
+\[
+\begin{array}{c|c}
+\text{reduction}&\text{adjoint sector dimensions}\\ \hline
+Q_\psi\bmod2&(120,128)\\
+Q_\psi\bmod3&(86,81,81)\\
+Q_\psi\bmod4&(60,64,60,64)\\
+Q_\psi\bmod6&(54,48,33,32,33,48)\\
+Q_\psi\bmod12&(54,48,30,16,3,0,0,0,3,16,30,48).
+\end{array}
+\]
+The mod-three statement is channelwise: the neutral $E_6$ roots have charges
+$0,\pm3$, the external $A_2$ has charge zero, the $81$-dimensional grade-one
+sector has charges $1,-2,4$, and the grade-two sector has charges $-1,2,-4$.
+Hence the canonical $E_6+A_2$ grading is exactly $Q_\psi\bmod3$.  Since the
+physical FI projection is already Weyl-intertwined with that grading, matter
+parity is $Q_\psi\bmod2$, and the Kummer grading is $Q_\psi\bmod4$, the
+Chinese-remainder refinements collapse to one charge law:
+\[
+\boxed{Z_6=Q_\psi\bmod6,\qquad Z_{12}=Q_\psi\bmod12.}
+\]
+Equivalently,
+\[
+g_6=\exp(2\pi i Q_\psi/6),\qquad
+g_{12}=\exp(2\pi i Q_\psi/12).
+\]
+This charge spectrum agrees with the standard
+$E_8\supset SO(10)\times SU(3)\times U(1)$ adjoint branching.
+
+The executable witness is
+\texttt{analysis/w33\_qpsi\_mod12\_unification.py}.
+
+\paragraph{Scope firewall.}
+This unifies the $E_8$ Lie/representation gradings.  It does not by itself
+identify the resulting $Z_{12}$ with the independent photonic $\mu_{12}$
+scalar phase group, and it does not prove a matter-parity-preserving
+heterotic D/F-flat vacuum.
