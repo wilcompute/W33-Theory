@@ -1,0 +1,24 @@
+% PASS20260921 Sp43 representation normalizer of the E8-derived Pauli subgroup.
+\subsection*{The E8-derived Pauli representation has full $Sp(4,3)$ Clifford normalizer}
+
+The explicit central-product Pauli subgroup inherits the projective basis
+\[
+(X_{\rm int},X_{\rm ext},Z_{\rm int},Z_{\rm ext})
+\]
+of $\mathbb F_3^4$. Four exact symplectic transvections generate
+\[
+\boxed{|Sp(4,3)|=51840}.
+\]
+In the same coordinate gauge the phase-specified two-qutrit Clifford lifts satisfy
+\[
+U_TD_xU_T^\dagger=D_{Tx}
+\]
+for all $81$ Weyl labels. The verifier checks all four generators, hence $324$ conjugation identities, and their projective actions preserve the same $40$ rays of the certified E8-to-W33 bridge.
+
+Thus the representation-level normalizer is
+\[
+\boxed{3_+^{1+4}:Sp(4,3)}.
+\]
+
+\paragraph{Embedding firewall.}
+The Pauli subgroup itself is constructed inside $E_8$. The present theorem proves the full $Sp(4,3)$ normalizer of its Schrödinger representation and projective phase space; it does not prove that every Clifford lift lies in compact $E_8$, nor identify $N_{E_8}(3_+^{1+4})$.
