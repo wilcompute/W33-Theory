@@ -1,0 +1,52 @@
+% PASS20260921 execute-all-five constructive continuation.
+\subsection*{Objectwise parity, the physical family $A_2$, and explicit $D_8$ conjugacy}
+
+The native cubic-surface carrier independently realizes the matter-parity split.
+Relative to one cubic line, the other $26$ lines divide into the ten meeting
+lines and sixteen skew lines, hence
+\[
+27=1+10+16.
+\]
+With $Q_\psi(1,10,16)=(4,-2,1)$, matter parity is precisely skewness to the
+reference line.  The $45$ tritangents split objectwise as
+\[
+45=5(1,10,10)+40(10,16,16),
+\]
+so every cubic is parity even.
+
+The physical FI-selected six-root $A_2$ has now been matched to the canonical
+CE2/family $A_2$ by an explicit $E_8$ Weyl element.  In the frozen simple-root
+gauge one reduced word is
+\[
+(3,2,5,7,1,2,3,4,8,2,1,3,2,4,5,6,7,1,8,2,3,4,5),
+\]
+using one-based simple-reflection labels.  It intertwines the complete
+$78+81+81$ root grading grade-for-grade.
+
+The nonzero FI--parity sectors now have objectwise carriers:
+\[
+48=16\times3,\qquad 33=(10+1)\times3=30+3.
+\]
+For the grade-zero odd sector, each of the sixteen $16_1$ minuscule weights
+differs from the unique $1_4$ weight by an actual $E_6$ root of
+$Q_\psi=-3$; adjoining the negative roots gives
+\[
+32=16_{-3}+\overline{16}_{+3}.
+\]
+
+Finally, the physical $\theta^3$ parity and $Q_\psi$ matter parity are not
+merely two involutions with fixed algebra $D_8$.  After an exact
+$SU(9)$-to-standard-$E_8$ root-lattice identification, the Weyl word
+\[
+(1,4,3,2,5,4,3,6,5,4)
+\]
+maps all $112$ physical-even roots to the $112$ $Q_\psi$-even roots and all
+$128$ odd roots to odd roots.  Thus the two involutions are explicitly
+Weyl-conjugate.  Their order-six extensions remain distinct, as proved by the
+different adjoint trace fingerprints already frozen in the preceding section.
+
+Executable witnesses are
+\texttt{analysis/w33\_objectwise\_matter\_parity\_cubic\_incidence.py},
+\texttt{analysis/w33\_fi\_family\_a2\_weyl\_intertwiner.py},
+\texttt{analysis/w33\_z6\_objectwise\_33\_48\_32\_carrier.py}, and
+\texttt{analysis/w33\_physical\_theta3\_qpsi\_d8\_weyl\_conjugator.py}.
