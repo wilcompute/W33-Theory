@@ -1,0 +1,552 @@
+{
+  "schema": "w33.e8_order6_kac_classification.v1",
+  "status": "PASS_UNIQUE_TWIN_ORDER6_E8_KAC_CLASSES_AND_POWER_LADDERS",
+  "affine_highest_root_marks_repo_order": [
+    1,
+    4,
+    6,
+    5,
+    4,
+    3,
+    2,
+    2,
+    3
+  ],
+  "normalized_exact_order6_kac_diagrams_enumerated": 20,
+  "structural_FI_x_matter_parity_Z6": {
+    "eigendimensions": [
+      54,
+      48,
+      33,
+      32,
+      33,
+      48
+    ],
+    "unique_kac_coordinates": [
+      2,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "weighted_order": 6,
+    "power_ladder": {
+      "1": {
+        "root_count": 46,
+        "semisimple_type": "A2+D5",
+        "semisimple_rank": 7,
+        "center_rank": 1,
+        "fixed_lie_dimension": 54
+      },
+      "2": {
+        "root_count": 78,
+        "semisimple_type": "A2+E6",
+        "semisimple_rank": 8,
+        "center_rank": 0,
+        "fixed_lie_dimension": 86
+      },
+      "3": {
+        "root_count": 112,
+        "semisimple_type": "D8",
+        "semisimple_rank": 8,
+        "center_rank": 0,
+        "fixed_lie_dimension": 120
+      }
+    }
+  },
+  "flagship_holonomy_Z6": {
+    "eigendimensions": [
+      44,
+      40,
+      38,
+      48,
+      38,
+      40
+    ],
+    "unique_kac_coordinates": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0
+    ],
+    "weighted_order": 6,
+    "power_ladder": {
+      "1": {
+        "root_count": 36,
+        "semisimple_type": "A3+D4",
+        "semisimple_rank": 7,
+        "center_rank": 1,
+        "fixed_lie_dimension": 44
+      },
+      "2": {
+        "root_count": 84,
+        "semisimple_type": "D7",
+        "semisimple_rank": 7,
+        "center_rank": 1,
+        "fixed_lie_dimension": 92
+      },
+      "3": {
+        "root_count": 112,
+        "semisimple_type": "D8",
+        "semisimple_rank": 8,
+        "center_rank": 0,
+        "fixed_lie_dimension": 120
+      }
+    }
+  },
+  "shared_cube": {
+    "power": 3,
+    "fixed_type": "D8",
+    "fixed_dimension": 120,
+    "interpretation": "the two order-six classes have conjugate matter-parity/D8 involution cubes"
+  },
+  "separation": {
+    "same_order6_class": false,
+    "structural_fixed": "D5+A2+u1",
+    "holonomy_fixed": "D4+A3+u1",
+    "structural_square_fixed": "E6+A2",
+    "holonomy_square_fixed": "D7+u1",
+    "kac_difference": "the remaining Kac weight 2 is affine (s0=2) for FI x parity, but finite mark-2 (s7=1) for the holonomy class"
+  },
+  "candidate_table": [
+    {
+      "kac": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        0
+      ],
+      "eigendimensions": [
+        70,
+        24,
+        33,
+        64,
+        33,
+        24
+      ]
+    },
+    {
+      "kac": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        1,
+        0
+      ],
+      "eigendimensions": [
+        70,
+        32,
+        25,
+        64,
+        25,
+        32
+      ]
+    },
+    {
+      "kac": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "eigendimensions": [
+        44,
+        38,
+        46,
+        36,
+        46,
+        38
+      ]
+    },
+    {
+      "kac": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "eigendimensions": [
+        44,
+        40,
+        38,
+        48,
+        38,
+        40
+      ]
+    },
+    {
+      "kac": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "eigendimensions": [
+        52,
+        36,
+        42,
+        40,
+        42,
+        36
+      ]
+    },
+    {
+      "kac": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "eigendimensions": [
+        46,
+        36,
+        45,
+        40,
+        45,
+        36
+      ]
+    },
+    {
+      "kac": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "eigendimensions": [
+        64,
+        29,
+        28,
+        70,
+        28,
+        29
+      ]
+    },
+    {
+      "kac": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "eigendimensions": [
+        42,
+        42,
+        39,
+        44,
+        39,
+        42
+      ]
+    },
+    {
+      "kac": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "eigendimensions": [
+        50,
+        35,
+        43,
+        42,
+        43,
+        35
+      ]
+    },
+    {
+      "kac": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "eigendimensions": [
+        50,
+        43,
+        35,
+        42,
+        35,
+        43
+      ]
+    },
+    {
+      "kac": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "eigendimensions": [
+        50,
+        38,
+        43,
+        36,
+        43,
+        38
+      ]
+    },
+    {
+      "kac": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "eigendimensions": [
+        80,
+        29,
+        28,
+        54,
+        28,
+        29
+      ]
+    },
+    {
+      "kac": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "eigendimensions": [
+        40,
+        44,
+        40,
+        40,
+        40,
+        44
+      ]
+    },
+    {
+      "kac": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "eigendimensions": [
+        68,
+        44,
+        34,
+        24,
+        34,
+        44
+      ]
+    },
+    {
+      "kac": [
+        2,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "eigendimensions": [
+        54,
+        48,
+        33,
+        32,
+        33,
+        48
+      ]
+    },
+    {
+      "kac": [
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "eigendimensions": [
+        52,
+        42,
+        42,
+        28,
+        42,
+        42
+      ]
+    },
+    {
+      "kac": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "eigendimensions": [
+        64,
+        56,
+        28,
+        16,
+        28,
+        56
+      ]
+    },
+    {
+      "kac": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "eigendimensions": [
+        82,
+        54,
+        27,
+        4,
+        27,
+        54
+      ]
+    },
+    {
+      "kac": [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "eigendimensions": [
+        92,
+        64,
+        14,
+        0,
+        14,
+        64
+      ]
+    },
+    {
+      "kac": [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "eigendimensions": [
+        134,
+        56,
+        1,
+        0,
+        1,
+        56
+      ]
+    }
+  ],
+  "literature_anchor": "Kac/Cartan classification of inner torsion automorphisms by affine Kac coordinates; see M. Reeder, Enseign. Math. 56 (2010), 3-47, Secs. 2.2 and 2.4.",
+  "boundary": "This is an exact conjugacy-class classification inside complex E8. It does not by itself prove a heterotic vacuum preserves matter parity or identify either order-six class with spacetime/orbifold dynamics beyond the separately certified physical inputs.",
+  "checks": {
+    "twenty_order6_inner_kac_classes": true,
+    "structural_spectrum_selects_unique_class": true,
+    "holonomy_spectrum_selects_unique_class": true,
+    "structural_square_is_E6_A2": true,
+    "holonomy_square_is_D7_u1": true,
+    "both_cubes_are_D8": true
+  }
+}
