@@ -1,0 +1,41 @@
+% PASS20260921 explicit E8 Z12 to Clifford mu12 character bridge.
+\subsection*{The $E_8$ $Q_\psi$ grading has an explicit faithful $\mu_{12}$ character}
+
+The old $E_8$ $Z_{12}$ theorem deliberately stopped at equality of orders with
+the independent qutrit-Clifford scalar phase group $\mu_{12}$.  The
+single-charge theorem now closes the character half of that boundary.  Choose
+a primitive twelfth root $\zeta_{12}$ and define
+\[
+\chi:\mathbb Z/12\mathbb Z\longrightarrow\mu_{12},
+\qquad
+\chi([q])=\zeta_{12}^{q}.
+\]
+Because the $E_8$ grading is exactly $Q_\psi\bmod12$, this is a faithful
+generator-preserving isomorphism.  Its adjoint phase multiplicities are
+\[
+(54,48,30,16,3,0,0,0,3,16,30,48),
+\]
+exactly the certified $Z_{12}$ grading dimensions.
+
+The same character turns the exact $E_6$ cubic charge law into scalar-phase
+conservation.  The $45$ cubics occur only with
+\[
+40\times(-2,1,1),\qquad 5\times(-2,-2,4),
+\]
+and both charge triples sum to zero.  Hence every cubic obeys
+\[
+\chi(q_1)\chi(q_2)\chi(q_3)=1.
+\]
+Independently, Pass~2799 proves that the scalar phase group of the
+$n$-qutrit Clifford group is $\mu_{12}$ for every $n$.  Thus the equality of
+orders has been upgraded to an explicit faithful cyclotomic character.
+
+The executable witness is
+\texttt{analysis/w33\_e8\_z12\_clifford\_mu12\_character\_bridge.py}.
+
+\paragraph{Intertwiner firewall.}
+This is not yet a Hilbert-space/root-space representation intertwiner.
+Clifford $\mu_{12}$ acts as a global scalar center on a qutrit Hilbert space,
+whereas the $E_8$ character assigns relative eigenphases to distinct
+$Q_\psi$ sectors.  A physical identification still requires an explicit
+carrier map conjugating the two actions.
