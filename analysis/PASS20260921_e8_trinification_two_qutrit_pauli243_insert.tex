@@ -1,0 +1,54 @@
+% PASS20260921 trinification internal H27 and E8 two-qutrit Pauli central product.
+\subsection*{Trinification supplies the internal $H_{27}$ needed for the two-qutrit Pauli group}
+
+The hostile-control theorem excludes the regular Pass~369 Weyl $H_{27}$ from a center-gluing construction, because its center is not $Z(E_6)$. A different internal Heisenberg group is supplied by trinification:
+\[
+E_6\supset (SU(3)_1\times SU(3)_2\times SU(3)_3)/\Delta Z_3,
+\]
+with
+\[
+27=(3,\bar3,1)\oplus(1,3,\bar3)\oplus(\bar3,1,3).
+\]
+
+For center exponents $(a,b,c)$, the three nonets acquire phases
+\[
+(a-b,\ b-c,\ -a+c)\pmod3.
+\]
+The diagonal $(1,1,1)$ is the quotient kernel, while
+\[
+\boxed{z_{E_6}\sim(2,1,0)}
+\]
+acts as $(1,1,1)$ and therefore as the same scalar $\omega$ on the full $27$.
+
+With the qutrit convention $ZX=\omega XZ$, define
+\[
+X_{\rm int}=(X,X,I),\qquad
+Z_{\rm int}=(Z^2,Z,I).
+\]
+Then
+\[
+[Z_{\rm int},X_{\rm int}]
+=(\omega^2I,\omega I,I)=z_{E_6},
+\]
+so these generate an internal $H_{27}$ whose center is literally $Z(E_6)$.
+
+The physical external-$A_2$ theorem supplies a second $H_{27}$ with center
+\[
+z_{\rm ext}=z_{\rm FI}=\exp(2\pi iQ_\psi/3).
+\]
+The subgroup
+\[
+(E_6\times SU(3)_{\rm ext})/
+\langle(z_{E_6},z_{\rm ext}^{-1})\rangle
+\subset E_8
+\]
+identifies these centers. Since the two factor groups commute before quotienting, their images form
+\[
+\boxed{H_{27}\circ H_{27}=3_+^{1+4}},
+\qquad
+\boxed{|\,\cdot\,|=243}.
+\]
+The explicit quotient verifier checks exponent $3$, center and derived subgroup of order $3$, and projective quotient $\mathbb F_3^4$ of order $81$.
+
+\paragraph{Scope firewall.}
+This is an exact finite subgroup theorem. It does not prove a D/F-flat vacuum, observed family assignment, or hardware implementation.
