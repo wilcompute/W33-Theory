@@ -1,0 +1,8 @@
+{
+  "schema":"w33.physical_fi_factor_routing_e6_a2.v1",
+  "status":"PASS_PHYSICAL_FI_FACTOR_ROUTING",
+  "counts":{"E6_roots":72,"external_A2_roots":6,"organizer_A4_neutral_roots":8,"organizer_A2_roots":6,"organizer_A1_roots":2,"physical_gauge_A4_roots":20},
+  "exact_set_relations":{"organizer_A2_equals_external_A2":true,"organizer_A1_subset_E6":true,"physical_gauge_A4_subset_E6":true,"gauge_A4_orthogonal_to_FI_A1":true,"A4_plus_A1_rank_inside_E6":5},
+  "reading":"FI 3-block -> external A2; FI 2-block A1 + physical SU5 A4 -> E6",
+  "boundary":"Candidate physical family-SU3 realization only; explicit W33/affine-family intertwiner remains open."
+}
