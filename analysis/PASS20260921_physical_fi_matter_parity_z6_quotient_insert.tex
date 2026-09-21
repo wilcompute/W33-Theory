@@ -1,0 +1,56 @@
+% PASS20260921 physical FI x matter-parity Z6 quotient.
+\subsection*{The FI $Z_3$ and matter-parity $Z_2$ form the physicalized $Z_6$ quotient of the old $E_8$ $Z_{12}$}
+
+The certified Kummer $Z_4$ grading restricts to the exact
+$E_6\to SO(10)\times U(1)_\psi$ charge
+\[
+27=16_1+10_{-2}+1_4.
+\]
+Hence its square is
+\[
+(Z_4^{\rm Kummer})^2=(-1)^{Q_\psi}=P_M,
+\]
+the matter-parity involution.  The independently measured heterotic FI
+projection realizes the $E_8\to E_6+A_2$ $Z_3$ factor.  Therefore the old
+$Z_{12}=Z_4\times Z_3$ common refinement has a physically interpreted
+$Z_6=Z_2\times Z_3$ quotient.
+
+Merging the exact $Z_4\times Z_3$ joint table by $Z_4$ parity gives
+\[
+\begin{array}{c|ccc}
+ &0&1&2\\\hline
+P_M=+&54&33&33\\
+P_M=-&32&48&48
+\end{array}
+\]
+and CRT residue order $0,\dots,5$ gives
+\[
+\boxed{248=54+48+33+32+33+48.}
+\]
+The fixed root system is $D_5+A_2$ with one residual Cartan direction, so
+\[
+\boxed{\mathfrak g_0=
+\mathfrak{so}_{10}\oplus\mathfrak{sl}_3\oplus\mathfrak u_1},
+\qquad \dim\mathfrak g_0=54.
+\]
+
+\paragraph{Holonomy firewall.}
+This structural $Z_6$ is not the flagship physical order-six holonomy.  Their
+adjoint eigen-dimensions are respectively
+\[
+(54,48,33,32,33,48)
+\quad\hbox{and}\quad
+(44,40,38,48,38,40),
+\]
+with trace-power fingerprints
+\[
+(248,37,5,-8,5,37)
+\quad\hbox{and}\quad
+(248,-2,14,-8,14,-2).
+\]
+They share only their cube conjugacy class: both cubes are $D_8$ involutions
+of trace $-8$.  Equality of order six is therefore explicitly not an
+identification with the $Z_6$-I compactification holonomy.
+
+The executable witness is
+\texttt{analysis/w33\_physical\_fi\_matter\_parity\_z6\_quotient.py}.
