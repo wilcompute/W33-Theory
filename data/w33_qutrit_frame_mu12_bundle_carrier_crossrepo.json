@@ -1,0 +1,20 @@
+{
+  "schema": "w33.qutrit_frame_mu12_bundle_carrier_crossrepo.v1",
+  "status": "PASS_CROSSREPO_OBJECTWISE_27_FRAME_FIBREWISE_MU12_CARRIER",
+  "holotradeSourceCommits": {
+    "script": "787e9dd4710ceb15f14ec14c9862e8bb03c6044f",
+    "data": "0724b35bc22c8f1831d8d9907d4e44619d5d9516",
+    "test": "f200f3243a3a75a7b595739d373161525b01c72e"
+  },
+  "theorem": [
+    "The E6 minuscule 27 is realized objectwise by the 27 complete two-qutrit factorisation frames.",
+    "Relative to one reference frame, Qpsi is 4 on the singlet frame, -2 on the ten frames sharing one factorisation, and 1 on the sixteen disjoint frames.",
+    "D12|F>=zeta12^{Qpsi(F)}|F> has exact order 12 and every one of the 45 tritangent cubics has phase product one.",
+    "On the formal 27-frame bundle direct_sum_F C^9, each block zeta12^{Qpsi(F)} I9 is an actual two-qutrit Clifford scalar because the scalar phase group is mu12."
+  ],
+  "firewall": [
+    "A single scalar Clifford on one C9 cannot encode three distinct relative frame phases.",
+    "The theorem is a frame-bundle/controlled-phase carrier, not a bare one-C9 intertwiner.",
+    "A noncentral single-two-qutrit Clifford intertwiner remains open."
+  ]
+}
