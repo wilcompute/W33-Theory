@@ -1,0 +1,69 @@
+{
+  "schema": "w33.physical_fi_is_h27_center.v1",
+  "status": "PASS_PHYSICAL_FI_Z3_EQUALS_QUTRIT_HEISENBERG_CENTER_CHARACTER",
+  "headline": "The qutrit H27 center already acting on the E8 family C^3 factor is exactly the newly certified physical FI Z3 central character. In the Pass5727 Schrödinger convention ZX=omega XZ, [Z,X]=omega I; the measured FI action is the same omega I on (27,3), omega^2 I on (27bar,3bar), and identity on E6+A2. Hence z_H27=z_FI=exp(2*pi*i Qpsi/3) as an E8 central-character action.",
+  "H27": {
+    "order": 27,
+    "exponent": 3,
+    "center_order": 3,
+    "normal_form": "Z^a X^b omega^c",
+    "weyl_relation": "Z X = omega X Z",
+    "commutator": "[Z,X]=omega I",
+    "center": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        2
+      ]
+    ],
+    "faithful_schrodinger_dimension": 3
+  },
+  "E8": {
+    "branching": "248=(78,1)+(1,8)+(27,3)+(27bar,3bar)",
+    "center_exponents": {
+      "(78,1)": 0,
+      "(1,8)": 0,
+      "(27,3)": 1,
+      "(27bar,3bar)": 2
+    },
+    "adjoint_eigendimensions": [
+      86,
+      81,
+      81
+    ],
+    "fixed_algebra": "E6+A2"
+  },
+  "identity": {
+    "H27_center_generator": "omega I_3",
+    "physical_FI_generator": "central SU(3) element omega I_3 on the family triplet",
+    "Qpsi_form": "exp(2*pi*i*Qpsi/3)",
+    "same_central_character": true
+  },
+  "what_this_upgrades": "Pass5727 previously proved a finite Heisenberg/projective torsion action on the E8 family multiplicity factor but left its physical family-center interpretation open. The measured FI/Qpsi theorem now identifies its scalar center exactly.",
+  "what_remains_open": "The noncentral H27 generators X and Z are finite qutrit operators. This theorem does not identify the older affine Lie su(3) construction with the full E8 family SU(3) Lie algebra, prove a heterotic vacuum, or assign observed generations.",
+  "parents": [
+    "analysis/w33_pass5727_5730_torsion_family_heisenberg.py",
+    "data/w33_physical_fi_e6_a2_z3_grading.json",
+    "data/w33_qpsi_mod12_unification.json",
+    "data/w33_e8_a2_center_vs_coxeter_order3.json"
+  ],
+  "checks": {
+    "H27_group_law_exact": true,
+    "H27_order_27": true,
+    "H27_center_order_3": true,
+    "commutator_is_center_generator": true,
+    "physical_FI_spectrum_86_81_81": true,
+    "Qpsi_mod3_matches_FI": true,
+    "central_character_identified": true
+  }
+}
