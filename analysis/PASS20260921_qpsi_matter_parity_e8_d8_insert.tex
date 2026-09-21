@@ -1,0 +1,47 @@
+% PASS20260921 Qpsi matter parity and E8 D8/spinor involution.
+\subsection*{$Q_\psi$ matter parity extends to the $E_8\supset D_8$ involution}
+
+The exact $E_6$ charge decomposition
+\[
+27=16_1+10_{-2}+1_4
+\]
+shows that matter parity on the complete $27$ is simply
+\[
+P_M=(-1)^{Q_\psi}.
+\]
+The repository's certified $Q_\psi$ spectrum on all $240$ $E_8$ root
+channels reduces modulo two to
+\[
+240=112_{\rm even}+128_{\rm odd}.
+\]
+With the eight Cartan generators fixed, the even Lie algebra has dimension
+$120$.  An independent standard-coordinate $E_8$ reconstruction identifies
+the $112$ even roots with $D_8$,
+\[
+\{\pm e_i\pm e_j\},
+\]
+and the $128$ odd roots with the chiral half-spinor shell.  Therefore
+\[
+\boxed{248=120+128}
+\]
+is the canonical $E_8\supset SO(16)$ involution branching.
+
+The same parity is respected by every exact $E_6$ cubic.  The $45$ cubic
+triads have only
+\[
+40\times(-2,1,1),\qquad 5\times(-2,-2,4)
+\]
+as $Q_\psi$ patterns, so every cubic is matter-parity even.  This explains
+the cross-repository heterotic observation that a dangerous matter-odd MSSM
+operator can occur in an invariant coupling only after another odd factor,
+such as the measured odd singlet insertion, is included.
+
+\paragraph{Scope firewall.}
+The $240$-channel $Q_\psi$ histograms are owned by the existing E8 metadata
+pipeline.  The lightweight verifier proves the resulting involution class and
+independently reconstructs the standard $D_8$/spinor split; it does not yet
+supply a coordinatewise Weyl map between the archived metadata basis and the
+standard $D_8$ gauge.
+
+The executable witness is
+\texttt{analysis/w33\_qpsi\_matter\_parity\_e8\_d8\_bridge.py}.
