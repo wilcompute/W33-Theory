@@ -1,0 +1,10 @@
+{
+  "schema": "w33.z6_objectwise_33_48_32_carrier.v1",
+  "status": "PASS_OBJECTWISE_Z6_33_48_32_CARRIER",
+  "sectors": {
+    "32": "16_-3 + 16bar_+3 via oriented root differences from the 1_4 weight",
+    "33": "10 x 3 + 1 x 3 = 30+3",
+    "48": "16 x 3"
+  },
+  "boundary": "Anchored Schlaefli/cubic-line coordinate gauge; no observed-generation or mass assignment."
+}\n
