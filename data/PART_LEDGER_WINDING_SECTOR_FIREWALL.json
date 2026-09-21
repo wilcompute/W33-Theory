@@ -1,0 +1,6 @@
+{
+  "schema":"w33.ledger.winding-sector-firewall.v1",
+  "status":"TOPOLOGY_SUPPLIES_Q4_WINDING_GENERATORS_NOT_A_UNIQUE_MATTER_SPECTRUM",
+  "w33":{"free_rank":81,"flat_U1_moduli_dimension":81,"Z3_flat_sector_count":"443426488243037769948249630619149892803","log10_Z3_sector_count":38.64682163229266},
+  "checks":{"q3_rank81":true,"q3_Z3_exact":true,"q3_sector_count_huge":true}
+}

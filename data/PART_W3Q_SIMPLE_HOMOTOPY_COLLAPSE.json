@@ -1,0 +1,14 @@
+{
+  "schema":"w33.w3q.simple-homotopy-collapse.v1",
+  "status":"THEOREM_W3Q_CLIQUE_SIMPLE_HOMOTOPY_WEDGE_Q4_CIRCLES",
+  "prior_art_boundary":"Archived q=3 and all-q bouquet statements predate this certificate; this file adds the explicit elementary-collapse proof.",
+  "examples":[
+    {"q":2,"points":15,"lines":15,"collapse_pairs_per_line":1,"total_elementary_collapses":15,"collapsed_graph_edges":30,"free_rank":16},
+    {"q":3,"points":40,"lines":40,"collapse_pairs_per_line":4,"total_elementary_collapses":160,"collapsed_graph_edges":120,"free_rank":81},
+    {"q":4,"points":85,"lines":85,"collapse_pairs_per_line":11,"total_elementary_collapses":935,"collapsed_graph_edges":340,"free_rank":256},
+    {"q":5,"points":156,"lines":156,"collapse_pairs_per_line":26,"total_elementary_collapses":4056,"collapsed_graph_edges":780,"free_rank":625},
+    {"q":6,"points":259,"lines":259,"collapse_pairs_per_line":57,"total_elementary_collapses":14763,"collapsed_graph_edges":1554,"free_rank":1296},
+    {"q":7,"points":400,"lines":400,"collapse_pairs_per_line":120,"total_elementary_collapses":48000,"collapsed_graph_edges":2800,"free_rank":2401}
+  ],
+  "checks":{"collapse_formula":true,"free_rank_q4":true,"q3_160_collapses":true,"q3_rank81":true}
+}

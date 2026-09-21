@@ -1,0 +1,11 @@
+{
+  "schema":"w33.ledger.auxiliary-radiative-firewall.v1",
+  "status":"AUXILIARY_CONTACT_REMOVES_HEAVY_POLE_THRESHOLD_UV_COMPLETION_STILL_OPEN",
+  "classification":"candidate upgraded from tree-level-only to EFT-radiative-safe through the cited order; UV completion remains OPEN",
+  "examples":[
+    {"M_GeV":1000000.0,"y":0.0001,"C5_GeV_inv":1e-14,"pole_denominator":"none; algebraic inverse is 1/M"},
+    {"M_GeV":1000000000.0,"y":0.001,"C5_GeV_inv":1e-15,"pole_denominator":"none; algebraic inverse is 1/M"},
+    {"M_GeV":1000000000000.0,"y":0.01,"C5_GeV_inv":1e-16,"pole_denominator":"none; algebraic inverse is 1/M"}
+  ],
+  "checks":{"all_contacts_nonzero":true,"no_propagating_denominator":true}
+}

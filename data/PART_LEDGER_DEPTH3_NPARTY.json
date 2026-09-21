@@ -1,0 +1,15 @@
+{
+  "schema":"w33.ledger.depth3-nparty.v1",
+  "status":"THEOREM_DEPTH3_EXISTS_FOR_ALL_N_GE_3_Q_GE_3",
+  "phase_rank_certificates":[
+    {"n":3,"columns":6,"phase_dimension":6,"rank":6},
+    {"n":4,"columns":9,"phase_dimension":8,"rank":8},
+    {"n":5,"columns":12,"phase_dimension":10,"rank":10},
+    {"n":6,"columns":15,"phase_dimension":12,"rank":12},
+    {"n":7,"columns":18,"phase_dimension":14,"rank":14},
+    {"n":8,"columns":21,"phase_dimension":16,"rank":16},
+    {"n":9,"columns":24,"phase_dimension":18,"rank":18},
+    {"n":10,"columns":27,"phase_dimension":20,"rank":20}
+  ],
+  "checks":{"phase_span_full_n3_to_n10":true,"three_books_have_enough_columns":true,"zero_partial_trace_witnesses":true,"nondegenerate_regional_spectra":true}
+}

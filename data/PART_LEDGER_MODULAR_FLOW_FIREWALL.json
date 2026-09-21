@@ -1,0 +1,11 @@
+{
+  "schema":"w33.ledger.modular-flow-firewall.v1",
+  "status":"NO_GO_NONTRIVIAL_CONTINUOUS_MODULAR_FLOW_INSIDE_W33_AUTOMORPHISMS",
+  "numerical_nontracial_witness":[
+    {"t":0.07,"min_projective_pauli_distance":0.11881499535164405},
+    {"t":0.19,"min_projective_pauli_distance":0.32189141619997297},
+    {"t":0.37,"min_projective_pauli_distance":0.6229836092257118},
+    {"t":0.83,"min_projective_pauli_distance":1.346621717446024}
+  ],
+  "checks":{"state_nontracial":true,"generic_modular_flow_exits_pauli_rays":true}
+}
