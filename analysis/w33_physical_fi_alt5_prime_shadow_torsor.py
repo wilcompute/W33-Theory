@@ -114,6 +114,21 @@ def main(write=True):
           "Alt5_stabilizer_shape":e["group"],"orbit_size":len(oA),
           "integral_orbit_fiber_size":e["fiber"]}
 
+    expected_mult={
+      2:{"1":1,"3":0,"3prime":0,"4":1,"5":0},
+      3:{"1":1,"3":0,"3prime":0,"4":1,"5":1},
+      5:{"1":1,"3":1,"3prime":1,"4":2,"5":3},
+      11:{"1":1,"3":1,"3prime":1,"4":2,"5":1},
+    }
+    for p,want in expected_mult.items():
+        H=stabilizer(Alt5,modvec(V,p))
+        got=fixed_multiplicities(H)
+        assert got==want
+        assert sum(IRREP_DIMS[k]*m for k,m in got.items())==shadows[str(p)]["orbit_size"]
+        shadows[str(p)]["Alt5_permutation_character_multiplicities"]=got
+    regular_mult=fixed_multiplicities([tuple(range(5))])
+    assert regular_mult=={"1":1,"3":3,"3prime":3,"4":4,"5":5}
+
     for p in [7,13,17,19,23,29,31]:
         assert discr%p!=0
         r=modvec(V,p)
