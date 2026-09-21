@@ -82,14 +82,26 @@ def main(write=True):
     mod=load(ROOT/"analysis/w33_e8_trinification_two_qutrit_pauli243.py","pauli243_parent")
     H=mod.H; I=mod.I
     z=(0,0,1)
+
+    # Rebuild the central-product quotient operations locally.  The parent
+    # theorem intentionally keeps these inside main(), so the bridge must not
+    # rely on non-exported helpers.
+    kernel=[((0,0,k),(0,0,(-k)%3)) for k in range(3)]
+    def pmul(p,q):
+        return (mod.hmul(p[0],q[0]),mod.hmul(p[1],q[1]))
+    def pinv(p):
+        return (mod.hinv(p[0]),mod.hinv(p[1]))
+    def canonical_coset(p):
+        return min(pmul(p,k) for k in kernel)
+
     # Embed quotient vector v=(b_i,b_e,a_i,a_e) as the central-product class
     # of ((a_i,b_i,0),(a_e,b_e,0)).
     def lift(v):
         bi,be,ai,ae=v
-        return mod.canonical_coset(((ai,bi,0),(ae,be,0)))
+        return canonical_coset(((ai,bi,0),(ae,be,0)))
 
     # Extract central exponent k from a central coset by comparison with z^k.
-    central_reps={mod.canonical_coset(((0,0,k),(0,0,0))):k for k in range(3)}
+    central_reps={canonical_coset(((0,0,k),(0,0,0))):k for k in range(3)}
     assert len(central_reps)==3
 
     vectors=list(itertools.product(range(3),repeat=4))
@@ -99,7 +111,7 @@ def main(write=True):
     for v in vectors:
         for w in vectors:
             gv,gw=lift(v),lift(w)
-            c=mod.canonical_coset(mod.pmul(mod.pmul(mod.pmul(gv,gw),mod.pinv(gv)),mod.pinv(gw)))
+            c=canonical_coset(pmul(pmul(pmul(gv,gw),pinv(gv)),pinv(gw)))
             k=central_reps[c]
             # Parent convention gives the negative of the repository's
             # standard (b,b,a,a) symplectic form; zero locus is identical.
