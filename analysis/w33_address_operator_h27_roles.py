@@ -52,7 +52,6 @@ from collections import Counter
 from pathlib import Path
 
 import networkx as nx
-import numpy as np
 from sympy.combinatorics import Permutation, PermutationGroup
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -60,6 +59,14 @@ for p in (ROOT,ROOT/"analysis"):
     if str(p) not in sys.path: sys.path.insert(0,str(p))
 OUT=ROOT/"data/w33_address_operator_h27_roles.json"
 
+from w33_exact_eisenstein import (
+    ZERO,
+    kronecker,
+    matrix_dagger,
+    matrix_rank,
+    omega_power,
+    zero_matrix,
+)
 from w33_pass1054_1059_core import build_w33_bundle, permutation_images
 
 def load(path:Path,name:str):
@@ -130,11 +137,15 @@ def main(write=True):
     tritangents={frozenset(t) for t in base["tritangents"]}
     assert G27.number_of_nodes()==27 and G27.number_of_edges()==135 and len(tritangents)==45
 
-    # Deterministic gauge: address identity -> frame 0.
+    # Anchored incidence gauge: address identity -> frame 0.  There are 1920
+    # such maps, the order of the W(D5) point stabilizer; choosing the first
+    # map is deterministic bookkeeping, not a canonical physical gauge.
     nx.set_node_attributes(A,{p:(p==ID) for p in A},"anchor")
     nx.set_node_attributes(G27,{i:(i==0) for i in G27},"anchor")
     GM=nx.algorithms.isomorphism.GraphMatcher(A,G27,node_match=lambda x,y:x["anchor"]==y["anchor"])
-    addr_to_frame=next(GM.isomorphisms_iter())
+    anchored_isomorphisms=list(GM.isomorphisms_iter())
+    assert len(anchored_isomorphisms)==1920
+    addr_to_frame=anchored_isomorphisms[0]
     assert addr_to_frame[ID]==0
     transported={frozenset(addr_to_frame[p] for p in L) for L in lines}
     assert transported==tritangents
@@ -293,22 +304,45 @@ def main(write=True):
     # Tensor basis C^9_m x C^3_q x C^3_p.
     matter_basis=[(m,q,p) for m in mlabels for q in range(3) for p in range(3)]
     assert len(matter_basis)==81
-    # Operator center is scalar, so fixes every basis ray/projective label.
-    operator_center_fixed_rays=81
+    # Operator center is scalar.  It fixes all 27 internal E6 rays and, after
+    # adjoining the external qutrit, all 81 matter rays projectively.  The
+    # like-for-like permutation obstruction compares the two 27-point sets.
+    operator_center_fixed_internal_rays=27
+    operator_center_fixed_matter_rays=81
 
-    # Exact two-qutrit Weyl basis spans M9(C).
-    omega=np.exp(2j*np.pi/3)
-    X=np.zeros((3,3),complex); Z=np.zeros((3,3),complex)
-    for j in range(3):
-        X[(j+1)%3,j]=1
-        Z[j,j]=omega**j
+    # Exact two-qutrit Pauli basis over Q(omega).  The earlier certificate used
+    # a floating SVD here even though every entry is cyclotomic.  Work in the
+    # Fraction-pair field model a+b*omega, omega^2+omega+1=0, instead.
+    def qutrit_pauli(a,b):
+        # Z^a X^b |j> = omega^(a(j+b)) |j+b>.
+        W=zero_matrix(3,3)
+        for j in range(3):
+            W[(j+b)%3][j]=omega_power(a*(j+b))
+        return W
+
     paulis=[]
     for aq,bq,ap,bp in itertools.product(range(3),repeat=4):
-        W=np.kron(np.linalg.matrix_power(Z,aq)@np.linalg.matrix_power(X,bq),
-                  np.linalg.matrix_power(Z,ap)@np.linalg.matrix_power(X,bp))
+        W=kronecker(qutrit_pauli(aq,bq),qutrit_pauli(ap,bp))
         paulis.append(W)
-    span=np.stack([W.reshape(-1) for W in paulis],axis=0)
-    pauli_span_rank=int(np.linalg.matrix_rank(span,tol=1e-8))
+
+    # The exact Hilbert-Schmidt Gram is 9 I_81, which already proves linear
+    # independence; exact Gaussian elimination independently returns rank 81.
+    gram=[]
+    for U in paulis:
+        Ud=matrix_dagger(U)
+        gram.append([
+            sum(
+                (Ud[i][j]*V[j][i] for i in range(9) for j in range(9)),
+                ZERO,
+            )
+            for V in paulis
+        ])
+    assert all(
+        gram[i][j]==(9 if i==j else 0)
+        for i in range(81) for j in range(81)
+    )
+    span=[[entry for row in W for entry in row] for W in paulis]
+    pauli_span_rank=matrix_rank(span)
     assert pauli_span_rank==81
 
     out={
@@ -323,6 +357,8 @@ def main(write=True):
         "collinearity_SRG":[27,10,1,5],
         "identified_geometry":"GQ(2,4) / cubic-surface 45 tritangents",
         "complete_frame_isomorphism_anchor":"identity address -> complete frame 0",
+        "anchored_incidence_isomorphism_count":len(anchored_isomorphisms),
+        "anchored_gauge_scope":"the first of 1920 incidence isomorphisms is chosen deterministically; no canonical root-gauge intertwiner is inferred",
         "lifted_group":"H27 x C3_external",
         "lifted_directions":10,
         "lifted_cosets":270,
@@ -342,17 +378,20 @@ def main(write=True):
         "matter_tensor_basis":"C^81 ~= C^9_multiplicity tensor C^3_internal tensor C^3_external",
         "Pauli243_action":"I9 tensor H9(two-qutrit Schrodinger)",
         "two_qutrit_Pauli_span_rank":pauli_span_rank,
+        "Pauli_span_field":"Q(omega), omega^2+omega+1=0, exact Fraction pairs",
+        "Pauli_Hilbert_Schmidt_Gram":"9 I_81 exactly",
         "generated_algebra":"I9 tensor M9(C)",
         "generated_algebra_dimension":81,
         "commutant":"M9(C) tensor I9",
         "commutant_dimension":81,
         "multiplicity_noiseless_subsystem_dimension":9,
-        "center_action_on_basis_rays":"scalar; fixes all 81 projective basis labels",
-        "center_fixed_ray_count":operator_center_fixed_rays
+        "center_action_on_basis_rays":"scalar; fixes all 27 internal E6 rays and all 81 matter rays projectively",
+        "center_fixed_internal_ray_count":operator_center_fixed_internal_rays,
+        "center_fixed_matter_ray_count":operator_center_fixed_matter_rays
       },
       "nonidentification":{
         "same_permutation_action":False,
-        "witness":"address center fixes 0 of 27 addresses; operator center is scalar and fixes all basis rays projectively",
+        "witness":"address center fixes 0 of 27 addresses; operator center is scalar and fixes all 27 internal E6 basis rays projectively",
         "address_role":"combinatorial/coset address space and cubic instruction support",
         "operator_role":"noncommutative operator algebra on two active qutrits with 9D multiplicity subsystem"
       },
@@ -360,12 +399,14 @@ def main(write=True):
       "checks":{
         "five_direction_cosets_are_45_GQ24_lines":True,
         "address_lines_map_exactly_to_45_complete_frame_tritangents":True,
+        "anchored_incidence_gauge_has_1920_choices":True,
         "ten_sloped_directions_give_exactly_270_lifted_cubics":True,
         "all_648_preserve_address_line_geometry":True,
         "line_orbits_9_36":True,
         "instruction_orbits_27_27_216":True,
         "operator_chart_exact":True,
         "two_qutrit_paulis_span_M9":True,
+        "two_qutrit_pauli_gram_is_exactly_9I81":True,
         "address_operator_centers_have_incompatible_permutation_behavior":True
       }
     }

@@ -56,6 +56,8 @@
     ],
     "identified_geometry": "GQ(2,4) / cubic-surface 45 tritangents",
     "complete_frame_isomorphism_anchor": "identity address -> complete frame 0",
+    "anchored_incidence_isomorphism_count": 1920,
+    "anchored_gauge_scope": "the first of 1920 incidence isomorphisms is chosen deterministically; no canonical root-gauge intertwiner is inferred",
     "lifted_group": "H27 x C3_external",
     "lifted_directions": 10,
     "lifted_cosets": 270,
@@ -85,17 +87,20 @@
     "matter_tensor_basis": "C^81 ~= C^9_multiplicity tensor C^3_internal tensor C^3_external",
     "Pauli243_action": "I9 tensor H9(two-qutrit Schrodinger)",
     "two_qutrit_Pauli_span_rank": 81,
+    "Pauli_span_field": "Q(omega), omega^2+omega+1=0, exact Fraction pairs",
+    "Pauli_Hilbert_Schmidt_Gram": "9 I_81 exactly",
     "generated_algebra": "I9 tensor M9(C)",
     "generated_algebra_dimension": 81,
     "commutant": "M9(C) tensor I9",
     "commutant_dimension": 81,
     "multiplicity_noiseless_subsystem_dimension": 9,
-    "center_action_on_basis_rays": "scalar; fixes all 81 projective basis labels",
-    "center_fixed_ray_count": 81
+    "center_action_on_basis_rays": "scalar; fixes all 27 internal E6 rays and all 81 matter rays projectively",
+    "center_fixed_internal_ray_count": 27,
+    "center_fixed_matter_ray_count": 81
   },
   "nonidentification": {
     "same_permutation_action": false,
-    "witness": "address center fixes 0 of 27 addresses; operator center is scalar and fixes all basis rays projectively",
+    "witness": "address center fixes 0 of 27 addresses; operator center is scalar and fixes all 27 internal E6 basis rays projectively",
     "address_role": "combinatorial/coset address space and cubic instruction support",
     "operator_role": "noncommutative operator algebra on two active qutrits with 9D multiplicity subsystem"
   },
@@ -103,12 +108,14 @@
   "checks": {
     "five_direction_cosets_are_45_GQ24_lines": true,
     "address_lines_map_exactly_to_45_complete_frame_tritangents": true,
+    "anchored_incidence_gauge_has_1920_choices": true,
     "ten_sloped_directions_give_exactly_270_lifted_cubics": true,
     "all_648_preserve_address_line_geometry": true,
     "line_orbits_9_36": true,
     "instruction_orbits_27_27_216": true,
     "operator_chart_exact": true,
     "two_qutrit_paulis_span_M9": true,
+    "two_qutrit_pauli_gram_is_exactly_9I81": true,
     "address_operator_centers_have_incompatible_permutation_behavior": true
   }
 }

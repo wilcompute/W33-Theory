@@ -210,9 +210,11 @@
   },
   "unitary_lift": {
     "dimension": 9,
+    "coefficient_field": "Q(omega), omega^2+omega+1=0, exact Fraction pairs",
     "weyl_labels_checked_per_generator": 81,
     "total_conjugation_checks": 324,
-    "max_numerical_matrix_error": 1.5463617361248926e-15,
+    "exact_unitarity_checks": 4,
+    "all_matrix_residuals_exactly_zero": true,
     "rule": "U_T D_x U_T^dagger = D_{T x}",
     "residual_pauli_phase": "none in the certified odd-prime Weyl convention"
   },
@@ -238,6 +240,7 @@
     "four_transvections_generate_Sp43": true,
     "all_generators_preserve_E8_commutator_form": true,
     "all_324_unitary_Weyl_conjugations_checked": true,
+    "all_four_transvection_lifts_exactly_unitary_over_Qomega": true,
     "projective_actions_are_W33_ray_permutations": true,
     "internal_E8_normalizer_overclaim_blocked": true
   }

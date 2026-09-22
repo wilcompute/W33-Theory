@@ -1,0 +1,2880 @@
+{
+  "status": "PASS",
+  "circuits": [
+    [
+      {
+        "gate": "PREPARE_PLUS",
+        "ancilla": 0
+      },
+      {
+        "gate": "CZ",
+        "control": "ancilla0",
+        "target": 0,
+        "power": 1
+      },
+      {
+        "gate": "CZ",
+        "control": "ancilla0",
+        "target": 1,
+        "power": 2
+      },
+      {
+        "gate": "FOURIER_INVERSE",
+        "target": "ancilla0"
+      },
+      {
+        "gate": "MEASURE_Z",
+        "target": "ancilla0"
+      },
+      {
+        "gate": "RESET",
+        "target": "ancilla0"
+      }
+    ],
+    [
+      {
+        "gate": "PREPARE_PLUS",
+        "ancilla": 0
+      },
+      {
+        "gate": "CZ",
+        "control": "ancilla0",
+        "target": 1,
+        "power": 1
+      },
+      {
+        "gate": "CZ",
+        "control": "ancilla0",
+        "target": 2,
+        "power": 2
+      },
+      {
+        "gate": "FOURIER_INVERSE",
+        "target": "ancilla0"
+      },
+      {
+        "gate": "MEASURE_Z",
+        "target": "ancilla0"
+      },
+      {
+        "gate": "RESET",
+        "target": "ancilla0"
+      }
+    ],
+    [
+      {
+        "gate": "PREPARE_PLUS",
+        "ancilla": 0
+      },
+      {
+        "gate": "CZ",
+        "control": "ancilla0",
+        "target": 3,
+        "power": 1
+      },
+      {
+        "gate": "CZ",
+        "control": "ancilla0",
+        "target": 4,
+        "power": 2
+      },
+      {
+        "gate": "FOURIER_INVERSE",
+        "target": "ancilla0"
+      },
+      {
+        "gate": "MEASURE_Z",
+        "target": "ancilla0"
+      },
+      {
+        "gate": "RESET",
+        "target": "ancilla0"
+      }
+    ],
+    [
+      {
+        "gate": "PREPARE_PLUS",
+        "ancilla": 0
+      },
+      {
+        "gate": "CZ",
+        "control": "ancilla0",
+        "target": 4,
+        "power": 1
+      },
+      {
+        "gate": "CZ",
+        "control": "ancilla0",
+        "target": 5,
+        "power": 2
+      },
+      {
+        "gate": "FOURIER_INVERSE",
+        "target": "ancilla0"
+      },
+      {
+        "gate": "MEASURE_Z",
+        "target": "ancilla0"
+      },
+      {
+        "gate": "RESET",
+        "target": "ancilla0"
+      }
+    ],
+    [
+      {
+        "gate": "PREPARE_PLUS",
+        "ancilla": 0
+      },
+      {
+        "gate": "CZ",
+        "control": "ancilla0",
+        "target": 6,
+        "power": 1
+      },
+      {
+        "gate": "CZ",
+        "control": "ancilla0",
+        "target": 7,
+        "power": 2
+      },
+      {
+        "gate": "FOURIER_INVERSE",
+        "target": "ancilla0"
+      },
+      {
+        "gate": "MEASURE_Z",
+        "target": "ancilla0"
+      },
+      {
+        "gate": "RESET",
+        "target": "ancilla0"
+      }
+    ],
+    [
+      {
+        "gate": "PREPARE_PLUS",
+        "ancilla": 0
+      },
+      {
+        "gate": "CZ",
+        "control": "ancilla0",
+        "target": 7,
+        "power": 1
+      },
+      {
+        "gate": "CZ",
+        "control": "ancilla0",
+        "target": 8,
+        "power": 2
+      },
+      {
+        "gate": "FOURIER_INVERSE",
+        "target": "ancilla0"
+      },
+      {
+        "gate": "MEASURE_Z",
+        "target": "ancilla0"
+      },
+      {
+        "gate": "RESET",
+        "target": "ancilla0"
+      }
+    ],
+    [
+      {
+        "gate": "PREPARE_PLUS",
+        "ancilla": 0
+      },
+      {
+        "gate": "SUM",
+        "control": "ancilla0",
+        "target": 0,
+        "power": 1
+      },
+      {
+        "gate": "SUM",
+        "control": "ancilla0",
+        "target": 1,
+        "power": 1
+      },
+      {
+        "gate": "SUM",
+        "control": "ancilla0",
+        "target": 2,
+        "power": 1
+      },
+      {
+        "gate": "SUM",
+        "control": "ancilla0",
+        "target": 3,
+        "power": 2
+      },
+      {
+        "gate": "SUM",
+        "control": "ancilla0",
+        "target": 4,
+        "power": 2
+      },
+      {
+        "gate": "SUM",
+        "control": "ancilla0",
+        "target": 5,
+        "power": 2
+      },
+      {
+        "gate": "FOURIER_INVERSE",
+        "target": "ancilla0"
+      },
+      {
+        "gate": "MEASURE_Z",
+        "target": "ancilla0"
+      },
+      {
+        "gate": "RESET",
+        "target": "ancilla0"
+      }
+    ],
+    [
+      {
+        "gate": "PREPARE_PLUS",
+        "ancilla": 0
+      },
+      {
+        "gate": "SUM",
+        "control": "ancilla0",
+        "target": 3,
+        "power": 1
+      },
+      {
+        "gate": "SUM",
+        "control": "ancilla0",
+        "target": 4,
+        "power": 1
+      },
+      {
+        "gate": "SUM",
+        "control": "ancilla0",
+        "target": 5,
+        "power": 1
+      },
+      {
+        "gate": "SUM",
+        "control": "ancilla0",
+        "target": 6,
+        "power": 2
+      },
+      {
+        "gate": "SUM",
+        "control": "ancilla0",
+        "target": 7,
+        "power": 2
+      },
+      {
+        "gate": "SUM",
+        "control": "ancilla0",
+        "target": 8,
+        "power": 2
+      },
+      {
+        "gate": "FOURIER_INVERSE",
+        "target": "ancilla0"
+      },
+      {
+        "gate": "MEASURE_Z",
+        "target": "ancilla0"
+      },
+      {
+        "gate": "RESET",
+        "target": "ancilla0"
+      }
+    ]
+  ],
+  "measurement_checks": 584,
+  "max_probability_error": 2.220446049250313e-16,
+  "logical_basis_postmeasurement_checks": 24,
+  "maximum_postmeasurement_infidelity": 1.3322676295501878e-15,
+  "outcome_convention": "measured m = -symplectic_pairing(stabilizer,error) mod3",
+  "explicit_sign_checks": {
+    "Z0_Z1inv_against_X0": 1,
+    "weight6_X_against_Z0": 2
+  },
+  "decoder": [
+    {
+      "outcomes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "correction_XZ": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      "correction_XZ": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "correction_XZ": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "correction_XZ": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      "correction_XZ": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "correction_XZ": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "correction_XZ": [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      "correction_XZ": [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "correction_XZ": [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "correction_XZ": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      "correction_XZ": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "correction_XZ": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        1
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        2,
+        1
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        2,
+        1
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        2,
+        1,
+        0,
+        0,
+        1,
+        2
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        2,
+        1,
+        0,
+        0,
+        2,
+        1
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        1,
+        2,
+        0,
+        0,
+        1,
+        2
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        1,
+        2,
+        0,
+        0,
+        2,
+        1
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        1,
+        2
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        2,
+        1
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        2
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        2,
+        1
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        2
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        1
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        2
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        1,
+        0,
+        0
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        1,
+        0,
+        1
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        1,
+        0,
+        2
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        0,
+        0
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        0,
+        1
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        0,
+        2
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        1
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        2
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "outcomes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        2
+      ],
+      "correction_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  ],
+  "two_qutrit_gates_per_block_round": 24,
+  "six_handle_gates_per_round": 144,
+  "bare_ancilla_x_fault_cases": 64,
+  "bare_ancilla_x_malignant_cases": [
+    {
+      "stabilizer": 6,
+      "weight": 6,
+      "completed_couplings": 2,
+      "fault_power": 1,
+      "data_error_XZ": [
+        0,
+        0,
+        1,
+        2,
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "syndrome": [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "decoder_defined": true,
+      "logical_after_single_error_decoder": true
+    },
+    {
+      "stabilizer": 6,
+      "weight": 6,
+      "completed_couplings": 2,
+      "fault_power": 2,
+      "data_error_XZ": [
+        0,
+        0,
+        2,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "syndrome": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "decoder_defined": true,
+      "logical_after_single_error_decoder": true
+    },
+    {
+      "stabilizer": 6,
+      "weight": 6,
+      "completed_couplings": 3,
+      "fault_power": 1,
+      "data_error_XZ": [
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "syndrome": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "decoder_defined": true,
+      "logical_after_single_error_decoder": true
+    },
+    {
+      "stabilizer": 6,
+      "weight": 6,
+      "completed_couplings": 3,
+      "fault_power": 2,
+      "data_error_XZ": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "syndrome": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "decoder_defined": true,
+      "logical_after_single_error_decoder": true
+    },
+    {
+      "stabilizer": 6,
+      "weight": 6,
+      "completed_couplings": 4,
+      "fault_power": 1,
+      "data_error_XZ": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "syndrome": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "decoder_defined": true,
+      "logical_after_single_error_decoder": true
+    },
+    {
+      "stabilizer": 6,
+      "weight": 6,
+      "completed_couplings": 4,
+      "fault_power": 2,
+      "data_error_XZ": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "syndrome": [
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "decoder_defined": true,
+      "logical_after_single_error_decoder": true
+    },
+    {
+      "stabilizer": 7,
+      "weight": 6,
+      "completed_couplings": 2,
+      "fault_power": 1,
+      "data_error_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "syndrome": [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "decoder_defined": true,
+      "logical_after_single_error_decoder": true
+    },
+    {
+      "stabilizer": 7,
+      "weight": 6,
+      "completed_couplings": 2,
+      "fault_power": 2,
+      "data_error_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "syndrome": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "decoder_defined": true,
+      "logical_after_single_error_decoder": true
+    },
+    {
+      "stabilizer": 7,
+      "weight": 6,
+      "completed_couplings": 3,
+      "fault_power": 1,
+      "data_error_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "syndrome": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "decoder_defined": true,
+      "logical_after_single_error_decoder": true
+    },
+    {
+      "stabilizer": 7,
+      "weight": 6,
+      "completed_couplings": 3,
+      "fault_power": 2,
+      "data_error_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "syndrome": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "decoder_defined": true,
+      "logical_after_single_error_decoder": true
+    },
+    {
+      "stabilizer": 7,
+      "weight": 6,
+      "completed_couplings": 4,
+      "fault_power": 1,
+      "data_error_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "syndrome": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "decoder_defined": true,
+      "logical_after_single_error_decoder": true
+    },
+    {
+      "stabilizer": 7,
+      "weight": 6,
+      "completed_couplings": 4,
+      "fault_power": 2,
+      "data_error_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "syndrome": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "decoder_defined": true,
+      "logical_after_single_error_decoder": true
+    }
+  ],
+  "bare_ancilla_x_undetected_logical_cases": [
+    {
+      "stabilizer": 6,
+      "weight": 6,
+      "completed_couplings": 3,
+      "fault_power": 1,
+      "data_error_XZ": [
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "syndrome": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "decoder_defined": true,
+      "logical_after_single_error_decoder": true
+    },
+    {
+      "stabilizer": 6,
+      "weight": 6,
+      "completed_couplings": 3,
+      "fault_power": 2,
+      "data_error_XZ": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "syndrome": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "decoder_defined": true,
+      "logical_after_single_error_decoder": true
+    },
+    {
+      "stabilizer": 7,
+      "weight": 6,
+      "completed_couplings": 3,
+      "fault_power": 1,
+      "data_error_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "syndrome": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "decoder_defined": true,
+      "logical_after_single_error_decoder": true
+    },
+    {
+      "stabilizer": 7,
+      "weight": 6,
+      "completed_couplings": 3,
+      "fault_power": 2,
+      "data_error_XZ": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "syndrome": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "decoder_defined": true,
+      "logical_after_single_error_decoder": true
+    }
+  ],
+  "conditional_cat_single_site_cases": 48,
+  "conditional_cat_scheme": "Assume an independently prepared and verified qutrit cat with one ancilla per support site; each ancilla controls one data Pauli factor, Fourier-basis outcomes are summed mod 3, and each postverification ancilla shift reaches one data site.",
+  "scope": "The serialized ideal extraction circuits are executed exactly and the complete single ancilla-X suffix census is stored. The bare circuit is not fault tolerant. The cat statement is conditional: no cat preparation/verification circuit, ancilla-Z measurement-fault decoder, hardware noise model, repeated rounds, or threshold is claimed.",
+  "prior": [
+    "w33_harmonic_qutrit_redundancy.py",
+    "https://arxiv.org/abs/1807.01863",
+    "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/11/Efficient-Quantum-Circuits-for-Non-Qubit-Quantum-Error-Correcting-Codes.pdf",
+    "https://arxiv.org/abs/2108.02184"
+  ]
+}

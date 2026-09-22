@@ -27,7 +27,7 @@ nor that N_E8(G) equals this full semidirect product.
 """
 from __future__ import annotations
 import importlib.util, json, sys
-from collections import deque
+from fractions import Fraction
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -35,9 +35,57 @@ for p in (ROOT,ROOT/"analysis"):
     if str(p) not in sys.path: sys.path.insert(0,str(p))
 OUT=ROOT/"data/w33_e8_pauli243_sp43_representation_normalizer.json"
 
+from w33_exact_eisenstein import (
+    identity_matrix,
+    matrix_add,
+    matrix_dagger,
+    matrix_multiply,
+    matrix_scale,
+    omega_power,
+    zero_matrix,
+)
+
+Q=3
+HALF=2
+DIM=9
+
 def load(path,name):
     s=importlib.util.spec_from_file_location(name,path); assert s and s.loader
     m=importlib.util.module_from_spec(s); sys.modules[name]=m; s.loader.exec_module(m); return m
+
+def exact_weyl(v):
+    """Odd-prime two-qutrit Weyl matrix over Q(omega), exactly."""
+    q1,q2,p1,p2=(int(x)%Q for x in v)
+    phase=omega_power(HALF*(q1*p1+q2*p2))
+    matrix=zero_matrix(DIM,DIM)
+    for x1 in range(Q):
+        for x2 in range(Q):
+            source=Q*x1+x2
+            target=Q*((x1+q1)%Q)+(x2+q2)%Q
+            matrix[target][source]=phase*omega_power(p1*x1+p2*x2)
+    return matrix
+
+def exact_transvection_unitary(v,lam):
+    """Spectral-projector transvection lift over Q(omega), exactly."""
+    if int(lam) not in (1,2): raise ValueError("lambda must be 1 or 2")
+    displacement=exact_weyl(v)
+    powers=(
+        identity_matrix(DIM),
+        displacement,
+        matrix_multiply(displacement,displacement),
+    )
+    unitary=zero_matrix(DIM,DIM)
+    for k in range(Q):
+        projector=zero_matrix(DIM,DIM)
+        for t in range(Q):
+            projector=matrix_add(
+                projector,
+                matrix_scale(omega_power(-k*t),powers[t]),
+            )
+        projector=matrix_scale(Fraction(1,Q),projector)
+        eigenphase=omega_power(HALF*int(lam)*k*k)
+        unitary=matrix_add(unitary,matrix_scale(eigenphase,projector))
+    return unitary
 
 def main(write=True):
     bridge=json.loads((ROOT/"data/w33_e8_pauli243_projective_w33_bridge.json").read_text())
@@ -70,22 +118,23 @@ def main(write=True):
 
     # Phase-specified unitary lift: use lambda=1 transvection around each axis.
     # BT1228 and the ABI use the same formula I+v(Jv)^T in this coordinate gauge.
-    numerical_max_error=0.0
     unitary_checks=0
+    exact_unitarity_checks=0
     for axis,Mflat in zip(axes,mats):
         M=nested(Mflat)
         Mabi=cliff.transvection(axis,1)
         assert M==Mabi
-        U=cliff.transvection_unitary(axis,1)
-        Ud=cliff.dagger(U)
+        U=exact_transvection_unitary(axis,1)
+        Ud=matrix_dagger(U)
+        assert matrix_multiply(Ud,U)==identity_matrix(DIM)
+        exact_unitarity_checks+=1
         for x in vectors:
-            lhs=cliff.cmatmul(cliff.cmatmul(U,cliff.weyl(x)),Ud)
-            rhs=cliff.weyl(cliff.act(M,x))
-            err=max(abs(lhs[i][j]-rhs[i][j]) for i in range(9) for j in range(9))
-            numerical_max_error=max(numerical_max_error,err)
-            assert err<1e-8
+            lhs=matrix_multiply(matrix_multiply(U,exact_weyl(x)),Ud)
+            rhs=exact_weyl(cliff.act(M,x))
+            assert lhs==rhs
             unitary_checks+=1
     assert unitary_checks==4*81
+    assert exact_unitarity_checks==4
 
     # Projective ray permutations from each generator.
     def norm(v):
@@ -115,9 +164,11 @@ def main(write=True):
       },
       "unitary_lift":{
         "dimension":9,
+        "coefficient_field":"Q(omega), omega^2+omega+1=0, exact Fraction pairs",
         "weyl_labels_checked_per_generator":81,
         "total_conjugation_checks":unitary_checks,
-        "max_numerical_matrix_error":numerical_max_error,
+        "exact_unitarity_checks":exact_unitarity_checks,
+        "all_matrix_residuals_exactly_zero":True,
         "rule":"U_T D_x U_T^dagger = D_{T x}",
         "residual_pauli_phase":"none in the certified odd-prime Weyl convention"
       },
@@ -143,6 +194,7 @@ def main(write=True):
         "four_transvections_generate_Sp43":True,
         "all_generators_preserve_E8_commutator_form":True,
         "all_324_unitary_Weyl_conjugations_checked":True,
+        "all_four_transvection_lifts_exactly_unitary_over_Qomega":True,
         "projective_actions_are_W33_ray_permutations":True,
         "internal_E8_normalizer_overclaim_blocked":True
       }

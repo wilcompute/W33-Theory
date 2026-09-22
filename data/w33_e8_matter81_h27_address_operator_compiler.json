@@ -1,0 +1,2967 @@
+{
+  "schema": "w33.e8_matter81_h27_address_operator_compiler.v2",
+  "status": "PASS_INCREMENTAL_H27_CLIFFORD_UNIQUENESS_AND_QPSI_COMMUTANT_AUDIT",
+  "headline": "The new H27 results form an address/operator pair, not one silently interchangeable group action. The physical Clifford-648 gauge uniquely selects the GQ(2,4) direction lifts on the regular Payne H27; its 45 lines split 9+36 and the phase-labelled instructions split 27+27+216. After adjoining the external C3 shift, ten explicit order-three directions have 270 cosets exactly equal to the E8 matter cubic triples. The center-correct trinification H27 instead acts on the E6 27 as nine copies of a qutrit Schrodinger irrep. With the external A2 H27, the matter 81 is nine copies of the irreducible two-qutrit Pauli representation, so its restricted operator algebra is I9 tensor M9 and its exact commutant is M9 tensor I9.",
+  "address_space": {
+    "H27_order": 27,
+    "H27_center_order": 3,
+    "selected_base_directions": [
+      {
+        "generator": [
+          0,
+          0,
+          1
+        ],
+        "subgroup": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ]
+      },
+      {
+        "generator": [
+          0,
+          1,
+          1
+        ],
+        "subgroup": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            2
+          ]
+        ]
+      },
+      {
+        "generator": [
+          1,
+          0,
+          1
+        ],
+        "subgroup": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            2,
+            0,
+            2
+          ]
+        ]
+      },
+      {
+        "generator": [
+          1,
+          1,
+          0
+        ],
+        "subgroup": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ]
+      },
+      {
+        "generator": [
+          1,
+          2,
+          2
+        ],
+        "subgroup": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            1,
+            2
+          ]
+        ]
+      }
+    ],
+    "base_cosets": 45,
+    "base_points_per_line": 3,
+    "base_lines_per_point": 5,
+    "base_collinearity_srg": [
+      27,
+      10,
+      1,
+      5
+    ],
+    "physical_Clifford648_address_normalizer": {
+      "source": "data/w33_physical_clifford648_full_permutation_dictionary.json",
+      "order": 648,
+      "multiplication_table_digest": "sha256:2bfc6db0f955af48e32c8cc992dba6bcdf5f8f89786bafb84e446d2d463aa74f",
+      "complement_suborbit_sizes": [
+        1,
+        1,
+        1,
+        8,
+        8,
+        8
+      ],
+      "three_eight_orbit_census": [
+        {
+          "eight_orbit": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ],
+          "degree_set": [
+            18
+          ],
+          "adjacent_common_neighbor_set": [
+            9,
+            12
+          ],
+          "nonadjacent_common_neighbor_set": [
+            12
+          ],
+          "is_GQ24_SRG": false
+        },
+        {
+          "eight_orbit": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ],
+          "degree_set": [
+            10
+          ],
+          "adjacent_common_neighbor_set": [
+            1
+          ],
+          "nonadjacent_common_neighbor_set": [
+            5
+          ],
+          "is_GQ24_SRG": true
+        },
+        {
+          "eight_orbit": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ],
+          "degree_set": [
+            18
+          ],
+          "adjacent_common_neighbor_set": [
+            9,
+            12
+          ],
+          "nonadjacent_common_neighbor_set": [
+            12
+          ],
+          "is_GQ24_SRG": false
+        }
+      ],
+      "unique_GQ24_completion": true,
+      "all_648_preserve_45_address_lines": true,
+      "address_line_orbit_sizes": [
+        9,
+        36
+      ],
+      "phase_labels_held_fixed_instruction_orbit_sizes": [
+        27,
+        27,
+        216
+      ],
+      "instruction_stabilizer_orders": [
+        24,
+        24,
+        3
+      ],
+      "boundary": "This is the induced address/scheduler permutation with the external phase label held fixed. It is not the complex qutrit action of a physical Clifford gate on the frozen E8 roots."
+    },
+    "address_to_complete_frame": {
+      "0,0,0": 0,
+      "0,0,1": 22,
+      "0,0,2": 19,
+      "0,1,0": 8,
+      "0,1,1": 18,
+      "0,1,2": 16,
+      "0,2,0": 7,
+      "0,2,1": 15,
+      "0,2,2": 21,
+      "1,0,0": 4,
+      "1,0,1": 5,
+      "1,0,2": 10,
+      "1,1,0": 12,
+      "1,1,1": 24,
+      "1,1,2": 9,
+      "1,2,0": 3,
+      "1,2,1": 25,
+      "1,2,2": 20,
+      "2,0,0": 13,
+      "2,0,1": 26,
+      "2,0,2": 6,
+      "2,1,0": 23,
+      "2,1,1": 1,
+      "2,1,2": 17,
+      "2,2,0": 2,
+      "2,2,1": 14,
+      "2,2,2": 11
+    },
+    "anchored_incidence_isomorphism_count": 1920,
+    "anchored_gauge_scope": "The first of 1920 identity-to-frame-0 incidence isomorphisms is chosen deterministically. This does not construct a canonical root-gauge intertwiner.",
+    "K_structure": "H27_regular x C3_external_shift",
+    "K_order": 81,
+    "lifted_directions": [
+      {
+        "base_direction": 0,
+        "base_generator": [
+          0,
+          0,
+          1
+        ],
+        "external_slope": 1,
+        "generator": [
+          [
+            0,
+            0,
+            1
+          ],
+          1
+        ]
+      },
+      {
+        "base_direction": 0,
+        "base_generator": [
+          0,
+          0,
+          1
+        ],
+        "external_slope": -1,
+        "generator": [
+          [
+            0,
+            0,
+            1
+          ],
+          2
+        ]
+      },
+      {
+        "base_direction": 1,
+        "base_generator": [
+          0,
+          1,
+          1
+        ],
+        "external_slope": 1,
+        "generator": [
+          [
+            0,
+            1,
+            1
+          ],
+          1
+        ]
+      },
+      {
+        "base_direction": 1,
+        "base_generator": [
+          0,
+          1,
+          1
+        ],
+        "external_slope": -1,
+        "generator": [
+          [
+            0,
+            1,
+            1
+          ],
+          2
+        ]
+      },
+      {
+        "base_direction": 2,
+        "base_generator": [
+          1,
+          0,
+          1
+        ],
+        "external_slope": 1,
+        "generator": [
+          [
+            1,
+            0,
+            1
+          ],
+          1
+        ]
+      },
+      {
+        "base_direction": 2,
+        "base_generator": [
+          1,
+          0,
+          1
+        ],
+        "external_slope": -1,
+        "generator": [
+          [
+            1,
+            0,
+            1
+          ],
+          2
+        ]
+      },
+      {
+        "base_direction": 3,
+        "base_generator": [
+          1,
+          1,
+          0
+        ],
+        "external_slope": 1,
+        "generator": [
+          [
+            1,
+            1,
+            0
+          ],
+          1
+        ]
+      },
+      {
+        "base_direction": 3,
+        "base_generator": [
+          1,
+          1,
+          0
+        ],
+        "external_slope": -1,
+        "generator": [
+          [
+            1,
+            1,
+            0
+          ],
+          2
+        ]
+      },
+      {
+        "base_direction": 4,
+        "base_generator": [
+          1,
+          2,
+          2
+        ],
+        "external_slope": 1,
+        "generator": [
+          [
+            1,
+            2,
+            2
+          ],
+          1
+        ]
+      },
+      {
+        "base_direction": 4,
+        "base_generator": [
+          1,
+          2,
+          2
+        ],
+        "external_slope": -1,
+        "generator": [
+          [
+            1,
+            2,
+            2
+          ],
+          2
+        ]
+      }
+    ],
+    "lifted_direction_count": 10,
+    "lifted_cosets": 270,
+    "lifted_lines_per_root": 10,
+    "lifted_pair_multiplicity_max": 1,
+    "equals_E8_270_cubic_triples": true,
+    "root_addresses": [
+      {
+        "root": [
+          "-1/3",
+          "-2/3",
+          "-2/3",
+          "-1/3",
+          "0",
+          "0",
+          "-1/3",
+          "-2/3"
+        ],
+        "complete_frame": 0,
+        "external_qutrit_phase": 0,
+        "regular_H27_address": [
+          0,
+          0,
+          0
+        ],
+        "K_address": [
+          [
+            0,
+            0,
+            0
+          ],
+          0
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "1/3",
+          "-2/3",
+          "-1/3",
+          "0",
+          "0",
+          "-1/3",
+          "-2/3"
+        ],
+        "complete_frame": 0,
+        "external_qutrit_phase": 1,
+        "regular_H27_address": [
+          0,
+          0,
+          0
+        ],
+        "K_address": [
+          [
+            0,
+            0,
+            0
+          ],
+          1
+        ]
+      },
+      {
+        "root": [
+          "2/3",
+          "1/3",
+          "-2/3",
+          "-1/3",
+          "0",
+          "0",
+          "-1/3",
+          "-2/3"
+        ],
+        "complete_frame": 0,
+        "external_qutrit_phase": 2,
+        "regular_H27_address": [
+          0,
+          0,
+          0
+        ],
+        "K_address": [
+          [
+            0,
+            0,
+            0
+          ],
+          2
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "-2/3",
+          "-1/3",
+          "-2/3",
+          "1/3",
+          "2/3",
+          "0",
+          "0"
+        ],
+        "complete_frame": 1,
+        "external_qutrit_phase": 0,
+        "regular_H27_address": [
+          2,
+          1,
+          1
+        ],
+        "K_address": [
+          [
+            2,
+            1,
+            1
+          ],
+          0
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "1/3",
+          "-1/3",
+          "-2/3",
+          "1/3",
+          "2/3",
+          "0",
+          "0"
+        ],
+        "complete_frame": 1,
+        "external_qutrit_phase": 1,
+        "regular_H27_address": [
+          2,
+          1,
+          1
+        ],
+        "K_address": [
+          [
+            2,
+            1,
+            1
+          ],
+          1
+        ]
+      },
+      {
+        "root": [
+          "2/3",
+          "1/3",
+          "-1/3",
+          "-2/3",
+          "1/3",
+          "2/3",
+          "0",
+          "0"
+        ],
+        "complete_frame": 1,
+        "external_qutrit_phase": 2,
+        "regular_H27_address": [
+          2,
+          1,
+          1
+        ],
+        "K_address": [
+          [
+            2,
+            1,
+            1
+          ],
+          2
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "-2/3",
+          "-1/3",
+          "1/3",
+          "1/3",
+          "2/3",
+          "0",
+          "0"
+        ],
+        "complete_frame": 2,
+        "external_qutrit_phase": 0,
+        "regular_H27_address": [
+          2,
+          2,
+          0
+        ],
+        "K_address": [
+          [
+            2,
+            2,
+            0
+          ],
+          0
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "1/3",
+          "-1/3",
+          "1/3",
+          "1/3",
+          "2/3",
+          "0",
+          "0"
+        ],
+        "complete_frame": 2,
+        "external_qutrit_phase": 1,
+        "regular_H27_address": [
+          2,
+          2,
+          0
+        ],
+        "K_address": [
+          [
+            2,
+            2,
+            0
+          ],
+          1
+        ]
+      },
+      {
+        "root": [
+          "2/3",
+          "1/3",
+          "-1/3",
+          "1/3",
+          "1/3",
+          "2/3",
+          "0",
+          "0"
+        ],
+        "complete_frame": 2,
+        "external_qutrit_phase": 2,
+        "regular_H27_address": [
+          2,
+          2,
+          0
+        ],
+        "K_address": [
+          [
+            2,
+            2,
+            0
+          ],
+          2
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "-2/3",
+          "0",
+          "0",
+          "-1/3",
+          "1/3",
+          "-2/3",
+          "-1/3"
+        ],
+        "complete_frame": 3,
+        "external_qutrit_phase": 0,
+        "regular_H27_address": [
+          1,
+          2,
+          0
+        ],
+        "K_address": [
+          [
+            1,
+            2,
+            0
+          ],
+          0
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "1/3",
+          "0",
+          "0",
+          "-1/3",
+          "1/3",
+          "-2/3",
+          "-1/3"
+        ],
+        "complete_frame": 3,
+        "external_qutrit_phase": 1,
+        "regular_H27_address": [
+          1,
+          2,
+          0
+        ],
+        "K_address": [
+          [
+            1,
+            2,
+            0
+          ],
+          1
+        ]
+      },
+      {
+        "root": [
+          "2/3",
+          "1/3",
+          "0",
+          "0",
+          "-1/3",
+          "1/3",
+          "-2/3",
+          "-1/3"
+        ],
+        "complete_frame": 3,
+        "external_qutrit_phase": 2,
+        "regular_H27_address": [
+          1,
+          2,
+          0
+        ],
+        "K_address": [
+          [
+            1,
+            2,
+            0
+          ],
+          2
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "-2/3",
+          "0",
+          "0",
+          "-1/3",
+          "1/3",
+          "1/3",
+          "-1/3"
+        ],
+        "complete_frame": 4,
+        "external_qutrit_phase": 0,
+        "regular_H27_address": [
+          1,
+          0,
+          0
+        ],
+        "K_address": [
+          [
+            1,
+            0,
+            0
+          ],
+          0
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "1/3",
+          "0",
+          "0",
+          "-1/3",
+          "1/3",
+          "1/3",
+          "-1/3"
+        ],
+        "complete_frame": 4,
+        "external_qutrit_phase": 1,
+        "regular_H27_address": [
+          1,
+          0,
+          0
+        ],
+        "K_address": [
+          [
+            1,
+            0,
+            0
+          ],
+          1
+        ]
+      },
+      {
+        "root": [
+          "2/3",
+          "1/3",
+          "0",
+          "0",
+          "-1/3",
+          "1/3",
+          "1/3",
+          "-1/3"
+        ],
+        "complete_frame": 4,
+        "external_qutrit_phase": 2,
+        "regular_H27_address": [
+          1,
+          0,
+          0
+        ],
+        "K_address": [
+          [
+            1,
+            0,
+            0
+          ],
+          2
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "-2/3",
+          "0",
+          "0",
+          "-1/3",
+          "-2/3",
+          "1/3",
+          "2/3"
+        ],
+        "complete_frame": 5,
+        "external_qutrit_phase": 0,
+        "regular_H27_address": [
+          1,
+          0,
+          1
+        ],
+        "K_address": [
+          [
+            1,
+            0,
+            1
+          ],
+          0
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "1/3",
+          "0",
+          "0",
+          "-1/3",
+          "-2/3",
+          "1/3",
+          "2/3"
+        ],
+        "complete_frame": 5,
+        "external_qutrit_phase": 1,
+        "regular_H27_address": [
+          1,
+          0,
+          1
+        ],
+        "K_address": [
+          [
+            1,
+            0,
+            1
+          ],
+          1
+        ]
+      },
+      {
+        "root": [
+          "2/3",
+          "1/3",
+          "0",
+          "0",
+          "-1/3",
+          "-2/3",
+          "1/3",
+          "2/3"
+        ],
+        "complete_frame": 5,
+        "external_qutrit_phase": 2,
+        "regular_H27_address": [
+          1,
+          0,
+          1
+        ],
+        "K_address": [
+          [
+            1,
+            0,
+            1
+          ],
+          2
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "-2/3",
+          "2/3",
+          "1/3",
+          "1/3",
+          "2/3",
+          "0",
+          "0"
+        ],
+        "complete_frame": 6,
+        "external_qutrit_phase": 0,
+        "regular_H27_address": [
+          2,
+          0,
+          2
+        ],
+        "K_address": [
+          [
+            2,
+            0,
+            2
+          ],
+          0
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "1/3",
+          "2/3",
+          "1/3",
+          "1/3",
+          "2/3",
+          "0",
+          "0"
+        ],
+        "complete_frame": 6,
+        "external_qutrit_phase": 1,
+        "regular_H27_address": [
+          2,
+          0,
+          2
+        ],
+        "K_address": [
+          [
+            2,
+            0,
+            2
+          ],
+          1
+        ]
+      },
+      {
+        "root": [
+          "2/3",
+          "1/3",
+          "2/3",
+          "1/3",
+          "1/3",
+          "2/3",
+          "0",
+          "0"
+        ],
+        "complete_frame": 6,
+        "external_qutrit_phase": 2,
+        "regular_H27_address": [
+          2,
+          0,
+          2
+        ],
+        "K_address": [
+          [
+            2,
+            0,
+            2
+          ],
+          2
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "-2/3",
+          "1/3",
+          "2/3",
+          "0",
+          "0",
+          "-1/3",
+          "-2/3"
+        ],
+        "complete_frame": 7,
+        "external_qutrit_phase": 0,
+        "regular_H27_address": [
+          0,
+          2,
+          0
+        ],
+        "K_address": [
+          [
+            0,
+            2,
+            0
+          ],
+          0
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "1/3",
+          "1/3",
+          "2/3",
+          "0",
+          "0",
+          "-1/3",
+          "-2/3"
+        ],
+        "complete_frame": 7,
+        "external_qutrit_phase": 1,
+        "regular_H27_address": [
+          0,
+          2,
+          0
+        ],
+        "K_address": [
+          [
+            0,
+            2,
+            0
+          ],
+          1
+        ]
+      },
+      {
+        "root": [
+          "2/3",
+          "1/3",
+          "1/3",
+          "2/3",
+          "0",
+          "0",
+          "-1/3",
+          "-2/3"
+        ],
+        "complete_frame": 7,
+        "external_qutrit_phase": 2,
+        "regular_H27_address": [
+          0,
+          2,
+          0
+        ],
+        "K_address": [
+          [
+            0,
+            2,
+            0
+          ],
+          2
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "-2/3",
+          "1/3",
+          "-1/3",
+          "0",
+          "0",
+          "-1/3",
+          "-2/3"
+        ],
+        "complete_frame": 8,
+        "external_qutrit_phase": 0,
+        "regular_H27_address": [
+          0,
+          1,
+          0
+        ],
+        "K_address": [
+          [
+            0,
+            1,
+            0
+          ],
+          0
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "1/3",
+          "1/3",
+          "-1/3",
+          "0",
+          "0",
+          "-1/3",
+          "-2/3"
+        ],
+        "complete_frame": 8,
+        "external_qutrit_phase": 1,
+        "regular_H27_address": [
+          0,
+          1,
+          0
+        ],
+        "K_address": [
+          [
+            0,
+            1,
+            0
+          ],
+          1
+        ]
+      },
+      {
+        "root": [
+          "2/3",
+          "1/3",
+          "1/3",
+          "-1/3",
+          "0",
+          "0",
+          "-1/3",
+          "-2/3"
+        ],
+        "complete_frame": 8,
+        "external_qutrit_phase": 2,
+        "regular_H27_address": [
+          0,
+          1,
+          0
+        ],
+        "K_address": [
+          [
+            0,
+            1,
+            0
+          ],
+          2
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "-2/3",
+          "0",
+          "0",
+          "2/3",
+          "1/3",
+          "1/3",
+          "-1/3"
+        ],
+        "complete_frame": 9,
+        "external_qutrit_phase": 0,
+        "regular_H27_address": [
+          1,
+          1,
+          2
+        ],
+        "K_address": [
+          [
+            1,
+            1,
+            2
+          ],
+          0
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "1/3",
+          "0",
+          "0",
+          "2/3",
+          "1/3",
+          "1/3",
+          "-1/3"
+        ],
+        "complete_frame": 9,
+        "external_qutrit_phase": 1,
+        "regular_H27_address": [
+          1,
+          1,
+          2
+        ],
+        "K_address": [
+          [
+            1,
+            1,
+            2
+          ],
+          1
+        ]
+      },
+      {
+        "root": [
+          "2/3",
+          "1/3",
+          "0",
+          "0",
+          "2/3",
+          "1/3",
+          "1/3",
+          "-1/3"
+        ],
+        "complete_frame": 9,
+        "external_qutrit_phase": 2,
+        "regular_H27_address": [
+          1,
+          1,
+          2
+        ],
+        "K_address": [
+          [
+            1,
+            1,
+            2
+          ],
+          2
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "-2/3",
+          "0",
+          "0",
+          "2/3",
+          "1/3",
+          "-2/3",
+          "-1/3"
+        ],
+        "complete_frame": 10,
+        "external_qutrit_phase": 0,
+        "regular_H27_address": [
+          1,
+          0,
+          2
+        ],
+        "K_address": [
+          [
+            1,
+            0,
+            2
+          ],
+          0
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "1/3",
+          "0",
+          "0",
+          "2/3",
+          "1/3",
+          "-2/3",
+          "-1/3"
+        ],
+        "complete_frame": 10,
+        "external_qutrit_phase": 1,
+        "regular_H27_address": [
+          1,
+          0,
+          2
+        ],
+        "K_address": [
+          [
+            1,
+            0,
+            2
+          ],
+          1
+        ]
+      },
+      {
+        "root": [
+          "2/3",
+          "1/3",
+          "0",
+          "0",
+          "2/3",
+          "1/3",
+          "-2/3",
+          "-1/3"
+        ],
+        "complete_frame": 10,
+        "external_qutrit_phase": 2,
+        "regular_H27_address": [
+          1,
+          0,
+          2
+        ],
+        "K_address": [
+          [
+            1,
+            0,
+            2
+          ],
+          2
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "-2/3",
+          "2/3",
+          "1/3",
+          "1/3",
+          "-1/3",
+          "0",
+          "0"
+        ],
+        "complete_frame": 11,
+        "external_qutrit_phase": 0,
+        "regular_H27_address": [
+          2,
+          2,
+          2
+        ],
+        "K_address": [
+          [
+            2,
+            2,
+            2
+          ],
+          0
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "1/3",
+          "2/3",
+          "1/3",
+          "1/3",
+          "-1/3",
+          "0",
+          "0"
+        ],
+        "complete_frame": 11,
+        "external_qutrit_phase": 1,
+        "regular_H27_address": [
+          2,
+          2,
+          2
+        ],
+        "K_address": [
+          [
+            2,
+            2,
+            2
+          ],
+          1
+        ]
+      },
+      {
+        "root": [
+          "2/3",
+          "1/3",
+          "2/3",
+          "1/3",
+          "1/3",
+          "-1/3",
+          "0",
+          "0"
+        ],
+        "complete_frame": 11,
+        "external_qutrit_phase": 2,
+        "regular_H27_address": [
+          2,
+          2,
+          2
+        ],
+        "K_address": [
+          [
+            2,
+            2,
+            2
+          ],
+          2
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "-2/3",
+          "0",
+          "0",
+          "-1/3",
+          "1/3",
+          "1/3",
+          "2/3"
+        ],
+        "complete_frame": 12,
+        "external_qutrit_phase": 0,
+        "regular_H27_address": [
+          1,
+          1,
+          0
+        ],
+        "K_address": [
+          [
+            1,
+            1,
+            0
+          ],
+          0
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "1/3",
+          "0",
+          "0",
+          "-1/3",
+          "1/3",
+          "1/3",
+          "2/3"
+        ],
+        "complete_frame": 12,
+        "external_qutrit_phase": 1,
+        "regular_H27_address": [
+          1,
+          1,
+          0
+        ],
+        "K_address": [
+          [
+            1,
+            1,
+            0
+          ],
+          1
+        ]
+      },
+      {
+        "root": [
+          "2/3",
+          "1/3",
+          "0",
+          "0",
+          "-1/3",
+          "1/3",
+          "1/3",
+          "2/3"
+        ],
+        "complete_frame": 12,
+        "external_qutrit_phase": 2,
+        "regular_H27_address": [
+          1,
+          1,
+          0
+        ],
+        "K_address": [
+          [
+            1,
+            1,
+            0
+          ],
+          2
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "-2/3",
+          "-1/3",
+          "1/3",
+          "-2/3",
+          "-1/3",
+          "0",
+          "0"
+        ],
+        "complete_frame": 13,
+        "external_qutrit_phase": 0,
+        "regular_H27_address": [
+          2,
+          0,
+          0
+        ],
+        "K_address": [
+          [
+            2,
+            0,
+            0
+          ],
+          0
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "1/3",
+          "-1/3",
+          "1/3",
+          "-2/3",
+          "-1/3",
+          "0",
+          "0"
+        ],
+        "complete_frame": 13,
+        "external_qutrit_phase": 1,
+        "regular_H27_address": [
+          2,
+          0,
+          0
+        ],
+        "K_address": [
+          [
+            2,
+            0,
+            0
+          ],
+          1
+        ]
+      },
+      {
+        "root": [
+          "2/3",
+          "1/3",
+          "-1/3",
+          "1/3",
+          "-2/3",
+          "-1/3",
+          "0",
+          "0"
+        ],
+        "complete_frame": 13,
+        "external_qutrit_phase": 2,
+        "regular_H27_address": [
+          2,
+          0,
+          0
+        ],
+        "K_address": [
+          [
+            2,
+            0,
+            0
+          ],
+          2
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "-2/3",
+          "-1/3",
+          "-2/3",
+          "-2/3",
+          "-1/3",
+          "0",
+          "0"
+        ],
+        "complete_frame": 14,
+        "external_qutrit_phase": 0,
+        "regular_H27_address": [
+          2,
+          2,
+          1
+        ],
+        "K_address": [
+          [
+            2,
+            2,
+            1
+          ],
+          0
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "1/3",
+          "-1/3",
+          "-2/3",
+          "-2/3",
+          "-1/3",
+          "0",
+          "0"
+        ],
+        "complete_frame": 14,
+        "external_qutrit_phase": 1,
+        "regular_H27_address": [
+          2,
+          2,
+          1
+        ],
+        "K_address": [
+          [
+            2,
+            2,
+            1
+          ],
+          1
+        ]
+      },
+      {
+        "root": [
+          "2/3",
+          "1/3",
+          "-1/3",
+          "-2/3",
+          "-2/3",
+          "-1/3",
+          "0",
+          "0"
+        ],
+        "complete_frame": 14,
+        "external_qutrit_phase": 2,
+        "regular_H27_address": [
+          2,
+          2,
+          1
+        ],
+        "K_address": [
+          [
+            2,
+            2,
+            1
+          ],
+          2
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "-2/3",
+          "-2/3",
+          "-1/3",
+          "0",
+          "0",
+          "2/3",
+          "1/3"
+        ],
+        "complete_frame": 15,
+        "external_qutrit_phase": 0,
+        "regular_H27_address": [
+          0,
+          2,
+          1
+        ],
+        "K_address": [
+          [
+            0,
+            2,
+            1
+          ],
+          0
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "1/3",
+          "-2/3",
+          "-1/3",
+          "0",
+          "0",
+          "2/3",
+          "1/3"
+        ],
+        "complete_frame": 15,
+        "external_qutrit_phase": 1,
+        "regular_H27_address": [
+          0,
+          2,
+          1
+        ],
+        "K_address": [
+          [
+            0,
+            2,
+            1
+          ],
+          1
+        ]
+      },
+      {
+        "root": [
+          "2/3",
+          "1/3",
+          "-2/3",
+          "-1/3",
+          "0",
+          "0",
+          "2/3",
+          "1/3"
+        ],
+        "complete_frame": 15,
+        "external_qutrit_phase": 2,
+        "regular_H27_address": [
+          0,
+          2,
+          1
+        ],
+        "K_address": [
+          [
+            0,
+            2,
+            1
+          ],
+          2
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "-2/3",
+          "-2/3",
+          "-1/3",
+          "0",
+          "0",
+          "-1/3",
+          "1/3"
+        ],
+        "complete_frame": 16,
+        "external_qutrit_phase": 0,
+        "regular_H27_address": [
+          0,
+          1,
+          2
+        ],
+        "K_address": [
+          [
+            0,
+            1,
+            2
+          ],
+          0
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "1/3",
+          "-2/3",
+          "-1/3",
+          "0",
+          "0",
+          "-1/3",
+          "1/3"
+        ],
+        "complete_frame": 16,
+        "external_qutrit_phase": 1,
+        "regular_H27_address": [
+          0,
+          1,
+          2
+        ],
+        "K_address": [
+          [
+            0,
+            1,
+            2
+          ],
+          1
+        ]
+      },
+      {
+        "root": [
+          "2/3",
+          "1/3",
+          "-2/3",
+          "-1/3",
+          "0",
+          "0",
+          "-1/3",
+          "1/3"
+        ],
+        "complete_frame": 16,
+        "external_qutrit_phase": 2,
+        "regular_H27_address": [
+          0,
+          1,
+          2
+        ],
+        "K_address": [
+          [
+            0,
+            1,
+            2
+          ],
+          2
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "-2/3",
+          "2/3",
+          "1/3",
+          "-2/3",
+          "-1/3",
+          "0",
+          "0"
+        ],
+        "complete_frame": 17,
+        "external_qutrit_phase": 0,
+        "regular_H27_address": [
+          2,
+          1,
+          2
+        ],
+        "K_address": [
+          [
+            2,
+            1,
+            2
+          ],
+          0
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "1/3",
+          "2/3",
+          "1/3",
+          "-2/3",
+          "-1/3",
+          "0",
+          "0"
+        ],
+        "complete_frame": 17,
+        "external_qutrit_phase": 1,
+        "regular_H27_address": [
+          2,
+          1,
+          2
+        ],
+        "K_address": [
+          [
+            2,
+            1,
+            2
+          ],
+          1
+        ]
+      },
+      {
+        "root": [
+          "2/3",
+          "1/3",
+          "2/3",
+          "1/3",
+          "-2/3",
+          "-1/3",
+          "0",
+          "0"
+        ],
+        "complete_frame": 17,
+        "external_qutrit_phase": 2,
+        "regular_H27_address": [
+          2,
+          1,
+          2
+        ],
+        "K_address": [
+          [
+            2,
+            1,
+            2
+          ],
+          2
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "-2/3",
+          "1/3",
+          "2/3",
+          "0",
+          "0",
+          "2/3",
+          "1/3"
+        ],
+        "complete_frame": 18,
+        "external_qutrit_phase": 0,
+        "regular_H27_address": [
+          0,
+          1,
+          1
+        ],
+        "K_address": [
+          [
+            0,
+            1,
+            1
+          ],
+          0
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "1/3",
+          "1/3",
+          "2/3",
+          "0",
+          "0",
+          "2/3",
+          "1/3"
+        ],
+        "complete_frame": 18,
+        "external_qutrit_phase": 1,
+        "regular_H27_address": [
+          0,
+          1,
+          1
+        ],
+        "K_address": [
+          [
+            0,
+            1,
+            1
+          ],
+          1
+        ]
+      },
+      {
+        "root": [
+          "2/3",
+          "1/3",
+          "1/3",
+          "2/3",
+          "0",
+          "0",
+          "2/3",
+          "1/3"
+        ],
+        "complete_frame": 18,
+        "external_qutrit_phase": 2,
+        "regular_H27_address": [
+          0,
+          1,
+          1
+        ],
+        "K_address": [
+          [
+            0,
+            1,
+            1
+          ],
+          2
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "-2/3",
+          "1/3",
+          "2/3",
+          "0",
+          "0",
+          "-1/3",
+          "1/3"
+        ],
+        "complete_frame": 19,
+        "external_qutrit_phase": 0,
+        "regular_H27_address": [
+          0,
+          0,
+          2
+        ],
+        "K_address": [
+          [
+            0,
+            0,
+            2
+          ],
+          0
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "1/3",
+          "1/3",
+          "2/3",
+          "0",
+          "0",
+          "-1/3",
+          "1/3"
+        ],
+        "complete_frame": 19,
+        "external_qutrit_phase": 1,
+        "regular_H27_address": [
+          0,
+          0,
+          2
+        ],
+        "K_address": [
+          [
+            0,
+            0,
+            2
+          ],
+          1
+        ]
+      },
+      {
+        "root": [
+          "2/3",
+          "1/3",
+          "1/3",
+          "2/3",
+          "0",
+          "0",
+          "-1/3",
+          "1/3"
+        ],
+        "complete_frame": 19,
+        "external_qutrit_phase": 2,
+        "regular_H27_address": [
+          0,
+          0,
+          2
+        ],
+        "K_address": [
+          [
+            0,
+            0,
+            2
+          ],
+          2
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "-2/3",
+          "0",
+          "0",
+          "2/3",
+          "1/3",
+          "1/3",
+          "2/3"
+        ],
+        "complete_frame": 20,
+        "external_qutrit_phase": 0,
+        "regular_H27_address": [
+          1,
+          2,
+          2
+        ],
+        "K_address": [
+          [
+            1,
+            2,
+            2
+          ],
+          0
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "1/3",
+          "0",
+          "0",
+          "2/3",
+          "1/3",
+          "1/3",
+          "2/3"
+        ],
+        "complete_frame": 20,
+        "external_qutrit_phase": 1,
+        "regular_H27_address": [
+          1,
+          2,
+          2
+        ],
+        "K_address": [
+          [
+            1,
+            2,
+            2
+          ],
+          1
+        ]
+      },
+      {
+        "root": [
+          "2/3",
+          "1/3",
+          "0",
+          "0",
+          "2/3",
+          "1/3",
+          "1/3",
+          "2/3"
+        ],
+        "complete_frame": 20,
+        "external_qutrit_phase": 2,
+        "regular_H27_address": [
+          1,
+          2,
+          2
+        ],
+        "K_address": [
+          [
+            1,
+            2,
+            2
+          ],
+          2
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "-2/3",
+          "1/3",
+          "-1/3",
+          "0",
+          "0",
+          "-1/3",
+          "1/3"
+        ],
+        "complete_frame": 21,
+        "external_qutrit_phase": 0,
+        "regular_H27_address": [
+          0,
+          2,
+          2
+        ],
+        "K_address": [
+          [
+            0,
+            2,
+            2
+          ],
+          0
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "1/3",
+          "1/3",
+          "-1/3",
+          "0",
+          "0",
+          "-1/3",
+          "1/3"
+        ],
+        "complete_frame": 21,
+        "external_qutrit_phase": 1,
+        "regular_H27_address": [
+          0,
+          2,
+          2
+        ],
+        "K_address": [
+          [
+            0,
+            2,
+            2
+          ],
+          1
+        ]
+      },
+      {
+        "root": [
+          "2/3",
+          "1/3",
+          "1/3",
+          "-1/3",
+          "0",
+          "0",
+          "-1/3",
+          "1/3"
+        ],
+        "complete_frame": 21,
+        "external_qutrit_phase": 2,
+        "regular_H27_address": [
+          0,
+          2,
+          2
+        ],
+        "K_address": [
+          [
+            0,
+            2,
+            2
+          ],
+          2
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "-2/3",
+          "1/3",
+          "-1/3",
+          "0",
+          "0",
+          "2/3",
+          "1/3"
+        ],
+        "complete_frame": 22,
+        "external_qutrit_phase": 0,
+        "regular_H27_address": [
+          0,
+          0,
+          1
+        ],
+        "K_address": [
+          [
+            0,
+            0,
+            1
+          ],
+          0
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "1/3",
+          "1/3",
+          "-1/3",
+          "0",
+          "0",
+          "2/3",
+          "1/3"
+        ],
+        "complete_frame": 22,
+        "external_qutrit_phase": 1,
+        "regular_H27_address": [
+          0,
+          0,
+          1
+        ],
+        "K_address": [
+          [
+            0,
+            0,
+            1
+          ],
+          1
+        ]
+      },
+      {
+        "root": [
+          "2/3",
+          "1/3",
+          "1/3",
+          "-1/3",
+          "0",
+          "0",
+          "2/3",
+          "1/3"
+        ],
+        "complete_frame": 22,
+        "external_qutrit_phase": 2,
+        "regular_H27_address": [
+          0,
+          0,
+          1
+        ],
+        "K_address": [
+          [
+            0,
+            0,
+            1
+          ],
+          2
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "-2/3",
+          "-1/3",
+          "1/3",
+          "1/3",
+          "-1/3",
+          "0",
+          "0"
+        ],
+        "complete_frame": 23,
+        "external_qutrit_phase": 0,
+        "regular_H27_address": [
+          2,
+          1,
+          0
+        ],
+        "K_address": [
+          [
+            2,
+            1,
+            0
+          ],
+          0
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "1/3",
+          "-1/3",
+          "1/3",
+          "1/3",
+          "-1/3",
+          "0",
+          "0"
+        ],
+        "complete_frame": 23,
+        "external_qutrit_phase": 1,
+        "regular_H27_address": [
+          2,
+          1,
+          0
+        ],
+        "K_address": [
+          [
+            2,
+            1,
+            0
+          ],
+          1
+        ]
+      },
+      {
+        "root": [
+          "2/3",
+          "1/3",
+          "-1/3",
+          "1/3",
+          "1/3",
+          "-1/3",
+          "0",
+          "0"
+        ],
+        "complete_frame": 23,
+        "external_qutrit_phase": 2,
+        "regular_H27_address": [
+          2,
+          1,
+          0
+        ],
+        "K_address": [
+          [
+            2,
+            1,
+            0
+          ],
+          2
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "-2/3",
+          "0",
+          "0",
+          "-1/3",
+          "-2/3",
+          "-2/3",
+          "-1/3"
+        ],
+        "complete_frame": 24,
+        "external_qutrit_phase": 0,
+        "regular_H27_address": [
+          1,
+          1,
+          1
+        ],
+        "K_address": [
+          [
+            1,
+            1,
+            1
+          ],
+          0
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "1/3",
+          "0",
+          "0",
+          "-1/3",
+          "-2/3",
+          "-2/3",
+          "-1/3"
+        ],
+        "complete_frame": 24,
+        "external_qutrit_phase": 1,
+        "regular_H27_address": [
+          1,
+          1,
+          1
+        ],
+        "K_address": [
+          [
+            1,
+            1,
+            1
+          ],
+          1
+        ]
+      },
+      {
+        "root": [
+          "2/3",
+          "1/3",
+          "0",
+          "0",
+          "-1/3",
+          "-2/3",
+          "-2/3",
+          "-1/3"
+        ],
+        "complete_frame": 24,
+        "external_qutrit_phase": 2,
+        "regular_H27_address": [
+          1,
+          1,
+          1
+        ],
+        "K_address": [
+          [
+            1,
+            1,
+            1
+          ],
+          2
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "-2/3",
+          "0",
+          "0",
+          "-1/3",
+          "-2/3",
+          "1/3",
+          "-1/3"
+        ],
+        "complete_frame": 25,
+        "external_qutrit_phase": 0,
+        "regular_H27_address": [
+          1,
+          2,
+          1
+        ],
+        "K_address": [
+          [
+            1,
+            2,
+            1
+          ],
+          0
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "1/3",
+          "0",
+          "0",
+          "-1/3",
+          "-2/3",
+          "1/3",
+          "-1/3"
+        ],
+        "complete_frame": 25,
+        "external_qutrit_phase": 1,
+        "regular_H27_address": [
+          1,
+          2,
+          1
+        ],
+        "K_address": [
+          [
+            1,
+            2,
+            1
+          ],
+          1
+        ]
+      },
+      {
+        "root": [
+          "2/3",
+          "1/3",
+          "0",
+          "0",
+          "-1/3",
+          "-2/3",
+          "1/3",
+          "-1/3"
+        ],
+        "complete_frame": 25,
+        "external_qutrit_phase": 2,
+        "regular_H27_address": [
+          1,
+          2,
+          1
+        ],
+        "K_address": [
+          [
+            1,
+            2,
+            1
+          ],
+          2
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "-2/3",
+          "-1/3",
+          "-2/3",
+          "1/3",
+          "-1/3",
+          "0",
+          "0"
+        ],
+        "complete_frame": 26,
+        "external_qutrit_phase": 0,
+        "regular_H27_address": [
+          2,
+          0,
+          1
+        ],
+        "K_address": [
+          [
+            2,
+            0,
+            1
+          ],
+          0
+        ]
+      },
+      {
+        "root": [
+          "-1/3",
+          "1/3",
+          "-1/3",
+          "-2/3",
+          "1/3",
+          "-1/3",
+          "0",
+          "0"
+        ],
+        "complete_frame": 26,
+        "external_qutrit_phase": 1,
+        "regular_H27_address": [
+          2,
+          0,
+          1
+        ],
+        "K_address": [
+          [
+            2,
+            0,
+            1
+          ],
+          1
+        ]
+      },
+      {
+        "root": [
+          "2/3",
+          "1/3",
+          "-1/3",
+          "-2/3",
+          "1/3",
+          "-1/3",
+          "0",
+          "0"
+        ],
+        "complete_frame": 26,
+        "external_qutrit_phase": 2,
+        "regular_H27_address": [
+          2,
+          0,
+          1
+        ],
+        "K_address": [
+          [
+            2,
+            0,
+            1
+          ],
+          2
+        ]
+      }
+    ],
+    "address_center_orbit_size": 3
+  },
+  "operator_space": {
+    "trinification_branching": "27=(3,3bar,1)+(1,3,3bar)+(3bar,1,3)",
+    "internal_basis_count": 27,
+    "explicit_chart": "internal basis <-> (multiplicity m in {0,...,8}, active q in F3)",
+    "multiplicity_dimension": 9,
+    "internal_qutrit_dimension": 3,
+    "external_qutrit_dimension": 3,
+    "matter_factorization": "C^81 ~= C^9_multiplicity tensor C^3_internal tensor C^3_external",
+    "X_internal_orbits_on_basis": 9,
+    "X_internal_orbit_sizes": [
+      [
+        3,
+        9
+      ]
+    ],
+    "trinification_H27_representation": "nine copies of the 3D Schrodinger irrep with central character omega",
+    "two_qutrit_Pauli_representation": "nine copies of the unique 9D faithful irrep of 3_+^(1+4)",
+    "Pauli243_order": 243,
+    "projective_displacement_operators": 81,
+    "operator_algebra": "I_9 tensor M_9(C)",
+    "operator_algebra_dimension": 81,
+    "commutant": "M_9(C) tensor I_9",
+    "commutant_dimension": 81,
+    "Hilbert_Schmidt_Gram": {
+      "diagonal": 81,
+      "off_diagonal": 0,
+      "rank": 81
+    },
+    "character": {
+      "identity": "81",
+      "central_omega": "81*omega",
+      "central_omega_squared": "81*omega^2",
+      "240_noncentral_elements": "0"
+    },
+    "Qpsi_clock_vs_execution_commutant": {
+      "E6_27_charge_multiplicities": {
+        "4": 1,
+        "-2": 10,
+        "1": 16
+      },
+      "matter81_charge_multiplicities": {
+        "4": 3,
+        "-2": 30,
+        "1": 48
+      },
+      "power_census": [
+        {
+          "power": 0,
+          "phase_exponent_multiplicities": {
+            "0": 81
+          },
+          "all_multiplicities_divisible_by_9": true,
+          "scalar": true,
+          "in_Pauli243_commutant": true
+        },
+        {
+          "power": 1,
+          "phase_exponent_multiplicities": {
+            "1": 48,
+            "4": 3,
+            "10": 30
+          },
+          "all_multiplicities_divisible_by_9": false,
+          "scalar": false,
+          "in_Pauli243_commutant": false
+        },
+        {
+          "power": 2,
+          "phase_exponent_multiplicities": {
+            "2": 48,
+            "8": 33
+          },
+          "all_multiplicities_divisible_by_9": false,
+          "scalar": false,
+          "in_Pauli243_commutant": false
+        },
+        {
+          "power": 3,
+          "phase_exponent_multiplicities": {
+            "0": 3,
+            "3": 48,
+            "6": 30
+          },
+          "all_multiplicities_divisible_by_9": false,
+          "scalar": false,
+          "in_Pauli243_commutant": false
+        },
+        {
+          "power": 4,
+          "phase_exponent_multiplicities": {
+            "4": 81
+          },
+          "all_multiplicities_divisible_by_9": true,
+          "scalar": true,
+          "in_Pauli243_commutant": true
+        },
+        {
+          "power": 5,
+          "phase_exponent_multiplicities": {
+            "2": 30,
+            "5": 48,
+            "8": 3
+          },
+          "all_multiplicities_divisible_by_9": false,
+          "scalar": false,
+          "in_Pauli243_commutant": false
+        },
+        {
+          "power": 6,
+          "phase_exponent_multiplicities": {
+            "0": 33,
+            "6": 48
+          },
+          "all_multiplicities_divisible_by_9": false,
+          "scalar": false,
+          "in_Pauli243_commutant": false
+        },
+        {
+          "power": 7,
+          "phase_exponent_multiplicities": {
+            "4": 3,
+            "7": 48,
+            "10": 30
+          },
+          "all_multiplicities_divisible_by_9": false,
+          "scalar": false,
+          "in_Pauli243_commutant": false
+        },
+        {
+          "power": 8,
+          "phase_exponent_multiplicities": {
+            "8": 81
+          },
+          "all_multiplicities_divisible_by_9": true,
+          "scalar": true,
+          "in_Pauli243_commutant": true
+        },
+        {
+          "power": 9,
+          "phase_exponent_multiplicities": {
+            "0": 3,
+            "6": 30,
+            "9": 48
+          },
+          "all_multiplicities_divisible_by_9": false,
+          "scalar": false,
+          "in_Pauli243_commutant": false
+        },
+        {
+          "power": 10,
+          "phase_exponent_multiplicities": {
+            "4": 33,
+            "10": 48
+          },
+          "all_multiplicities_divisible_by_9": false,
+          "scalar": false,
+          "in_Pauli243_commutant": false
+        },
+        {
+          "power": 11,
+          "phase_exponent_multiplicities": {
+            "2": 30,
+            "8": 3,
+            "11": 48
+          },
+          "all_multiplicities_divisible_by_9": false,
+          "scalar": false,
+          "in_Pauli243_commutant": false
+        }
+      ],
+      "commuting_powers_mod12": [
+        0,
+        4,
+        8
+      ],
+      "intersection": "<D12^4> = C3, the FI/common H27 center",
+      "matter_parity_D12_power6_commutes": false,
+      "Kummer_mod4_D12_power3_commutes": false,
+      "meaning": "Only the mod-3 shadow of Qpsi is scalar on the active two-qutrit factor. The Z2 and Z4 shadows are outside the certified execution commutant; deciding whether they normalize it requires the missing coordinate intertwiner."
+    },
+    "operator_center_basis_fixed_points": 27
+  },
+  "nonidentification_witness": {
+    "regular_address_H27_center_orbit_size": 3,
+    "trinification_operator_H27_center_basis_fixed_points": 27,
+    "equivariant_basis_bijection_exists": false,
+    "reason": "The regular center translates three address objects, while the trinification center is scalar and fixes every basis label. Fixed-point counts are invariant under permutation conjugacy."
+  },
+  "virtual_machine_reading": {
+    "scheduler": "K=H27_regular x C3_external_shift addresses all 81 roots and its ten selected C3 coset families are the 270 cubic instructions",
+    "execution_unit": "3_+^(1+4) acts as the two-qutrit Pauli algebra on C3_internal tensor C3_external",
+    "protected_or_latent_register": "the exact C9 multiplicity factor, whose full M9 algebra is the commutant of the execution algebra",
+    "compiler_gap": "construct the explicit frozen-root-gauge change of basis linking the regular address chart to the trinification multiplicity/active-qutrit chart"
+  },
+  "ownership_and_increment": {
+    "broad_theorem_owner": "analysis/w33_address_operator_h27_roles.py and data/w33_address_operator_h27_roles.json",
+    "shared_observables_exactly_replayed": true,
+    "new_checks": [
+      "among the three eight-element complement suborbits, exactly one central completion is SRG(27,10,1,5)",
+      "the anchored address-to-frame incidence gauge has exactly 1920 choices, so the chosen GraphMatcher map is not a canonical root-gauge intertwiner",
+      "the Qpsi C12 clock meets the Pauli243 execution commutant exactly in powers 0,4,8, the scalar FI C3"
+    ],
+    "purpose": "independent regression audit and compiler-facing refinement, not a second ownership claim for the address/operator theorem"
+  },
+  "scope": "Exact finite incidence and restricted-representation theorem. The nine-dimensional commutant is a noiseless subsystem only for errors/operators contained in the certified Pauli243 algebra. It is not a claim of physical noise protection, generations, a vacuum, Yukawa values, or hardware realization.",
+  "parents": [
+    "data/w33_address_operator_h27_roles.json",
+    "data/w33_e6_internal_h27_center_gluing_nogo.json",
+    "data/w33_e8_trinification_two_qutrit_pauli243.json",
+    "data/w33_e8_matter81_frame_qutrit_tensor_carrier.json",
+    "data/w33_qpsi_matter_parity_e8_d8_bridge.json",
+    "data/w33_physical_clifford648_full_permutation_dictionary.json",
+    "data/w33_pass371_naturality_and_the_clifford_match.json",
+    "data/w33_pass386_the_geometric_gap_is_the_phase.json",
+    "analysis/BT858_heisenberg_shell_torsors.md",
+    "analysis/BT865_dual_torsor_steinberg_compiler.md"
+  ],
+  "checks": {
+    "five_H27_directions_give_45_GQ24_cosets": true,
+    "physical_Clifford648_uniquely_selects_GQ24_direction_lifts": true,
+    "Clifford648_address_line_orbits_are_9_plus_36": true,
+    "phase_fixed_instruction_orbits_are_27_plus_27_plus_216": true,
+    "ten_lifted_directions_give_270_E8_cubic_cosets": true,
+    "all_81_frozen_roots_receive_regular_group_addresses": true,
+    "trinification_27_is_nine_qutrit_irreps": true,
+    "matter81_is_nine_two_qutrit_irreps": true,
+    "operator_and_commutant_dimensions_are_81": true,
+    "Qpsi_clock_commutant_intersection_is_exactly_FI_Z3": true,
+    "address_operator_permutation_conflation_refuted": true,
+    "coordinate_intertwiner_left_open": true
+  }
+}

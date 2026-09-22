@@ -1,0 +1,36 @@
+% PASS20260922 Qpsi as an anchored GQ(2,4) parabolic clock.
+\subsection*{The $Q_\psi$ clock is compiled by one $GQ(2,4)$ anchor}
+
+Let $A$ be the adjacency matrix of the $27$-point cubic-surface meet graph.
+For any anchor $a$, define
+\[
+\boxed{q_a(i)=1+3\delta_{ai}-3A_{ai}.}
+\]
+The anchor has charge $4$, its ten neighbours have charge $-2$, and its
+sixteen nonneighbours have charge $1$.  Thus every anchor gives
+\[
+27=1_{4}+10_{-2}+16_{1}.
+\]
+The five tritangents through $a$ have pattern $(-2,-2,4)$.  By the generalized
+quadrangle axiom, each of the other forty tritangents contains exactly one
+neighbour of $a$ and has pattern $(-2,1,1)$.  Hence all $45$ cubics conserve
+$Q_\psi$ directly from incidence.
+
+The six simple reflections generate $W(E_6)$ of order $51840$ and act
+transitively on these $27$ clocks.  The five reflections fixing the
+highest-weight anchor have the $D_5$ Cartan matrix and generate its complete
+order-$1920$ stabilizer:
+\[
+\boxed{W(E_6)/W(D_5)=27.}
+\]
+Consequently, choosing the $SO(10)\times U(1)_\psi$ chart is precisely choosing
+one minuscule weight/cubic-surface line.
+
+On the address register this gives the executable clock
+\[
+D_{12}(a)|i,p\rangle
+=\zeta_{12}^{\,1+3\delta_{ai}-3A_{ai}}|i,p\rangle,
+\]
+using only equality and adjacency predicates.  The formula does not select an
+anchor physically and does not supply the still-missing change of basis to the
+trinification Pauli execution tensor factor.

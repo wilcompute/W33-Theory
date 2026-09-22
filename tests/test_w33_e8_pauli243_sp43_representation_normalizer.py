@@ -1,5 +1,6 @@
 from __future__ import annotations
 import importlib.util
+import json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 def load():
@@ -12,8 +13,14 @@ def test_e8_pauli243_sp43_representation_normalizer():
     assert o["compressed_generators"]["count"]==4
     assert o["compressed_generators"]["generated_Sp43_order"]==51840
     assert o["unitary_lift"]["total_conjugation_checks"]==324
+    assert o["unitary_lift"]["exact_unitarity_checks"]==4
+    assert o["unitary_lift"]["coefficient_field"]=="Q(omega), omega^2+omega+1=0, exact Fraction pairs"
+    assert o["unitary_lift"]["all_matrix_residuals_exactly_zero"] is True
+    assert "max_numerical_matrix_error" not in o["unitary_lift"]
     assert o["normalizer"]["Pauli_order"]==243
     assert o["normalizer"]["Sp43_order"]==51840
     assert o["E8_firewall"]["all_clifford_lifts_proved_inside_compact_E8"] is False
     assert o["E8_firewall"]["N_E8_of_this_specific_Pauli243_identified"] is False
     assert all(o["checks"].values())
+    stored=json.loads((ROOT/"data/w33_e8_pauli243_sp43_representation_normalizer.json").read_text())
+    assert stored==o

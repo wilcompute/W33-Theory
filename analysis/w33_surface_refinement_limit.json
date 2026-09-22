@@ -1,0 +1,192 @@
+{
+  "status": "PASS",
+  "levels_contract": "levels is a nonnegative integer maximum; rows contain levels 0..levels inclusive.",
+  "eigenvalue_count_per_level": 12,
+  "source_sha256": "ca933ca97fa803ed03a6c82a08fd99c64a405abbf59f98d3eb2534bdf9d66c25",
+  "rows": [
+    {
+      "level": 0,
+      "vertices": 12,
+      "edges": 66,
+      "faces": 44,
+      "triangle_side_length": 1.0,
+      "physical_area": 19.05255888325765,
+      "consistent_mass_total": 19.05255888325765,
+      "cone_laplacian_ritz_eigenvalues": [
+        -8.217301096052206e-32,
+        9.599999999999977,
+        9.599999999999994,
+        9.6,
+        9.6,
+        9.600000000000001,
+        9.600000000000001,
+        9.600000000000003,
+        9.600000000000005,
+        9.600000000000009,
+        9.600000000000009,
+        9.600000000000012
+      ],
+      "raw_graph_laplacian_eigenvalues": [
+        -8.881784197001252e-15,
+        11.999999999999973
+      ],
+      "raw_graph_laplacian_gap": 11.999999999999973,
+      "max_generalized_eigenpair_relative_residual": 2.4257166293884893e-15,
+      "has_coarse_galerkin_inclusion": false,
+      "integer_stiffness_galerkin_max_abs_error": null,
+      "integer_mass_galerkin_max_abs_error": null,
+      "physical_stiffness_galerkin_max_abs_error": null,
+      "physical_mass_galerkin_max_abs_error": null
+    },
+    {
+      "level": 1,
+      "vertices": 78,
+      "edges": 264,
+      "faces": 176,
+      "triangle_side_length": 0.5,
+      "physical_area": 19.05255888325765,
+      "consistent_mass_total": 19.052558883257635,
+      "cone_laplacian_ritz_eigenvalues": [
+        -4.368682539747197e-16,
+        5.595565740505952,
+        5.595565740505959,
+        5.679447026637025,
+        5.67944702663703,
+        5.679447026637032,
+        6.715701188302888,
+        6.715701188302891,
+        6.715701188302895,
+        7.631005017282171,
+        7.6310050172821775,
+        7.6310050172821855
+      ],
+      "raw_graph_laplacian_eigenvalues": [
+        3.2342986943949997e-17,
+        1.920311078684805
+      ],
+      "raw_graph_laplacian_gap": 1.920311078684805,
+      "max_generalized_eigenpair_relative_residual": 1.853499947443974e-15,
+      "has_coarse_galerkin_inclusion": true,
+      "integer_stiffness_galerkin_max_abs_error": 0.0,
+      "integer_mass_galerkin_max_abs_error": 0.0,
+      "physical_stiffness_galerkin_max_abs_error": 1.1102230246251565e-16,
+      "physical_mass_galerkin_max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "level": 2,
+      "vertices": 342,
+      "edges": 1056,
+      "faces": 704,
+      "triangle_side_length": 0.25,
+      "physical_area": 19.05255888325765,
+      "consistent_mass_total": 19.052558883257646,
+      "cone_laplacian_ritz_eigenvalues": [
+        -5.703398147454509e-16,
+        4.688232652480181,
+        4.688232652480183,
+        4.819305986807275,
+        4.819305986807276,
+        4.819305986807281,
+        6.028396731774912,
+        6.028396731774924,
+        6.028396731774926,
+        6.867452251169348,
+        6.867452251169353,
+        6.8674522511693565
+      ],
+      "raw_graph_laplacian_eigenvalues": [
+        3.0764511929984046e-16,
+        0.4312655402044597
+      ],
+      "raw_graph_laplacian_gap": 0.4312655402044597,
+      "max_generalized_eigenpair_relative_residual": 3.869855905461493e-15,
+      "has_coarse_galerkin_inclusion": true,
+      "integer_stiffness_galerkin_max_abs_error": 0.0,
+      "integer_mass_galerkin_max_abs_error": 0.0,
+      "physical_stiffness_galerkin_max_abs_error": 1.1102230246251565e-16,
+      "physical_mass_galerkin_max_abs_error": 2.7755575615628914e-17
+    },
+    {
+      "level": 3,
+      "vertices": 1398,
+      "edges": 4224,
+      "faces": 2816,
+      "triangle_side_length": 0.125,
+      "physical_area": 19.05255888325765,
+      "consistent_mass_total": 19.05255888325766,
+      "cone_laplacian_ritz_eigenvalues": [
+        4.693418428112245e-16,
+        4.3748524641478665,
+        4.374852464147875,
+        4.5297171979356,
+        4.529717197935606,
+        4.529717197935608,
+        5.819487526837106,
+        5.819487526837108,
+        5.819487526837116,
+        6.3837144180073775,
+        6.629277030394804,
+        6.6292770303948085
+      ],
+      "raw_graph_laplacian_eigenvalues": [
+        1.223057209971188e-16,
+        0.10208279810270317
+      ],
+      "raw_graph_laplacian_gap": 0.10208279810270317,
+      "max_generalized_eigenpair_relative_residual": 1.1489718848784107e-14,
+      "has_coarse_galerkin_inclusion": true,
+      "integer_stiffness_galerkin_max_abs_error": 0.0,
+      "integer_mass_galerkin_max_abs_error": 0.0,
+      "physical_stiffness_galerkin_max_abs_error": 1.1102230246251565e-16,
+      "physical_mass_galerkin_max_abs_error": 6.938893903907228e-18
+    },
+    {
+      "level": 4,
+      "vertices": 5622,
+      "edges": 16896,
+      "faces": 11264,
+      "triangle_side_length": 0.0625,
+      "physical_area": 19.05255888325765,
+      "consistent_mass_total": 19.052558883257646,
+      "cone_laplacian_ritz_eigenvalues": [
+        1.3154179234147912e-14,
+        4.247567784188486,
+        4.247567784188495,
+        4.413845871734956,
+        4.413845871734957,
+        4.413845871734967,
+        5.744606170653281,
+        5.744606170653283,
+        5.744606170653297,
+        6.124062989233056,
+        6.544846362593571,
+        6.544846362593588
+      ],
+      "raw_graph_laplacian_eigenvalues": [
+        1.4658205584234147e-16,
+        0.024861384212998633
+      ],
+      "raw_graph_laplacian_gap": 0.024861384212998633,
+      "max_generalized_eigenpair_relative_residual": 2.3283565434123726e-14,
+      "has_coarse_galerkin_inclusion": true,
+      "integer_stiffness_galerkin_max_abs_error": 0.0,
+      "integer_mass_galerkin_max_abs_error": 0.0,
+      "physical_stiffness_galerkin_max_abs_error": 1.1102230246251565e-16,
+      "physical_mass_galerkin_max_abs_error": 1.734723475976807e-18
+    }
+  ],
+  "exact_integer_matrix_relations": "P2^T S_f P2=4 S_c; P2^T B_f P2=16 B_c; P2=2P",
+  "physical_galerkin_relations": "P^T K_f P=K_c; P^T M_f P=M_c",
+  "physical_matrix_definitions": "K=S/(2 sqrt(3)); M=sqrt(3) h^2 B/48; P=P2/2",
+  "metric": "Each original triangle has side 1; midpoint refinement preserves this intrinsic piecewise-Euclidean cone metric and all triangle angles pi/3.",
+  "operator": "Scalar Friedrichs Laplacian from the H1 Dirichlet form on this fixed compact cone surface; conforming P1 Ritz approximations.",
+  "convergence_argument": "Nested conforming spaces, exact Galerkin inclusion, meshsize->0 and uniform equilateral shape regularity give density in H1. Compact embedding yields Ritz convergence from above by min-max. Numerical values are approximations, not certified lower bounds or error bars.",
+  "curvature": "Only the 12 original vertices have defect -5pi/3 each; total -20pi=2pi chi. This is a fixed singular surface, not a smoothing or an Einstein solution.",
+  "scope": "Metric choice is additional input. Raw graph-Laplacian eigenvalues collapse under refinement, while mass-weighted Ritz values approximate a fixed operator. Neither yields 4D Lorentz invariance, gravity, or a fundamental mass spectrum.",
+  "prior": [
+    "w33_surface_hodge_transport.py",
+    "w33_metric_taxicab.py",
+    "https://academicworks.cuny.edu/gc_pubs/180/",
+    "https://www.cambridge.org/core/journals/acta-numerica/article/abs/finite-element-approximation-of-eigenvalue-problems/4BD87CC520C7E11CF402981AA58D77E2"
+  ]
+}

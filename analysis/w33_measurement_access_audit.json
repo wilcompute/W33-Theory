@@ -1,0 +1,124 @@
+{
+  "schema": "w33.measurement_access_audit.v2",
+  "status": "AWAITING_IDENTIFIED_INSTRUMENT_AND_CALIBRATION",
+  "checked_utc": "2026-09-21T20:47:43.170508+00:00",
+  "host_context": {
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "wsl_interop_visible": true
+  },
+  "repository_json_candidates": [
+    "analysis/w33_k12_oscillator_source_inventory.json",
+    "analysis/w33_oscillator_calibration_test.json",
+    "data/PART_BT1842_E8_LABELLED_COMPILED_TRACE_SCHEMA_summary.json",
+    "data/PART_BT1848_E8_LABELLED_TRACE_RUNNER_summary.json",
+    "data/PART_BT1863_TRACE_RUNNER_SELECTOR_API_OVERLAY_summary.json",
+    "data/PART_MMCDII_GA7_CALIBRATION_CLASS_COUNTS_results.json",
+    "data/PART_MMCDIV_GA7_HEPTAD_CALIBRATION_LIFT_results.json",
+    "data/PART_W33_PASS4461_LINE_SIGNING_APARTMENT_TRACE.json",
+    "data/PART_W33_PASS4465_GENERAL_GQ_LINE_SIGNING_TRACE.json",
+    "data/PART_W33_PASS5572_5579_RECALIBRATION_BACKFIRED.json",
+    "data/PART_W33_PASS7199_STABILIZER_TRACE.json",
+    "data/PART_W33_PASS7313_7316_PAULI_TRACE_STABILIZER_SCOPE.json",
+    "data/bt1001_full_heat_supertrace_estimator_stack.json",
+    "data/bt1040_higgs_trace_ledger.json",
+    "data/bt1092_trace_free_13_to_12_quotient.json",
+    "data/bt1300_oscillator_instruction_isa.json",
+    "data/bt1412_toroidal_q4_oscillator_boundary.json",
+    "data/bt1502_native_d4_pulse_calibration_ledger.json",
+    "data/bt1505_native_d4_generator_route_traces.json",
+    "data/bt1508_route_trace_css_syndrome_replay.json",
+    "data/bt1511_native_trace_calibration_fixture_schema.json",
+    "data/bt1516_calibration_fixture_validator.json",
+    "data/bt1571_lens_phase_calibration_model.json",
+    "data/bt1574_s_f3_calibration.json",
+    "data/bt1578_full_centered_basis_calibration_matrix.json",
+    "data/bt1650_guard_page_calibration_closure.json",
+    "data/bt1701_holonet_packet_trace_visualizer.json",
+    "data/bt1836_calibration_feedback.json",
+    "data/bt802_oscillator_atlas_verification.json",
+    "data/bt985_edgewise_heat_trace_convergence.json",
+    "data/bt995_edgewise_heat_trace_real_seeds.json",
+    "data/dccxxv_tetrahedron_hinge_oscillator.json",
+    "data/holonet_os_scheduler_trace.json",
+    "data/tomotope_toroidal_markov_trace_generating_function_bridge.json",
+    "data/tomotope_toroidal_markov_trace_recurrence_bridge.json",
+    "data/w33_BREAKTHROUGH_116_spectral_trace_tower_remote.json",
+    "data/w33_BREAKTHROUGH_117_trace_tower_extension.json",
+    "data/w33_BREAKTHROUGH_120_trace_tower_physical.json",
+    "data/w33_BREAKTHROUGH_133_WRF_flow_registers_active_trace.json",
+    "data/w33_BREAKTHROUGH_166_optimal_macro_e6_trace1_receipt.json",
+    "data/w33_MDCCCCIII_MDCCCCXII_oscillator_time_crystal_origami.json",
+    "data/w33_center_quad_tetrahedral_oscillator_bridge_summary.json",
+    "data/w33_exact_trace_identities.json",
+    "data/w33_marcelis_gf4_trace_gauge.json",
+    "data/w33_marcelis_pg34_line_trace_census.json",
+    "data/w33_marcelis_trace_flag_law.json",
+    "data/w33_marcelis_trace_schubert_general.json",
+    "data/w33_monster_supertrace_bridge_summary.json",
+    "data/w33_pass297_oscillator_corpus_reading.json",
+    "data/w33_pass407_sandpile_calibration_memory.json",
+    "data/w33_pass409_nonclaim_calibration.json",
+    "data/w33_pass473_universal_traces_q3_det_law.json",
+    "data/w33_pass804_adversarial_calibration_failclosed.json",
+    "data/w33_tetrahedral_chart_oscillator_bridge_summary.json",
+    "data/w33_tetrahedral_ckm_oscillator_bridge_summary.json",
+    "data/w33_trace_observer_finite_observability.json",
+    "data/w33_trace_tower_number_theory.json",
+    "data/w33_universal_oscillator_stack.json"
+  ],
+  "interface_inventory": {
+    "linux_serial_by_id": [],
+    "linux_usb_bus_nodes": [],
+    "linux_usbtmc_nodes": [],
+    "linux_hidraw_nodes": [],
+    "windows_serial": {
+      "attempted": true,
+      "executable": "/mnt/c/windows/System32/WindowsPowerShell/v1.0/powershell.exe",
+      "command": "Get-CimInstance Win32_SerialPort | Select-Object DeviceID,Name | ConvertTo-Json -Compress",
+      "returncode": 0,
+      "stderr": "",
+      "stdout_parse_error": null,
+      "ports": [
+        {
+          "port": "COM3",
+          "name": "Standard Serial over Bluetooth link (COM3)"
+        },
+        {
+          "port": "COM6",
+          "name": "Standard Serial over Bluetooth link (COM6)"
+        },
+        {
+          "port": "COM5",
+          "name": "Standard Serial over Bluetooth link (COM5)"
+        },
+        {
+          "port": "COM4",
+          "name": "Standard Serial over Bluetooth link (COM4)"
+        }
+      ]
+    },
+    "visa": {
+      "enumerated": false,
+      "reason": "No configured VISA backend/resource name was supplied; no bus query was attempted."
+    },
+    "network_instruments": {
+      "enumerated": false,
+      "reason": "No hostname, IP address, mDNS service, or instrument protocol was supplied."
+    }
+  },
+  "selection": {
+    "identified_instrument": null,
+    "measured_trace": null,
+    "independent_calibration": null
+  },
+  "synthetic_fixture_firewall": {
+    "path": "analysis/w33_oscillator_calibration_test.json",
+    "data_origin": "synthetic seeded Gaussian fixture, not hardware measurements",
+    "may_be_used_as_measurement": false,
+    "mass_stiffness_scale_identified": false
+  },
+  "readiness_predicate": "identified instrument AND existing measured-trace file AND existing independent-calibration file",
+  "actions": "Read-only filesystem and serial-interface inventory. No endpoint was opened and no command was sent to a device.",
+  "scope": "Absence from these visible interfaces is not proof that no laboratory hardware or data exists elsewhere. USBTMC/HID nodes are listed if exposed; VISA and network discovery remain unqueried until an explicit resource is identified."
+}
