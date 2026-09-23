@@ -1,0 +1,90 @@
+{
+  "schema": "w33.extended_clifford_pass408_intertwiner.v1",
+  "status": "PASS_EXTENDED_QUTRIT_CLIFFORD_LIFT_EQUALS_PASS408_HEISENBERG_AUTOMORPHISM_GROUP",
+  "headline": "The previously open 1296-element retained-phase extension is identified by an explicit coordinate/action intertwiner. The gauge (a,b,c)->((a,b),c+2ab) sends the qutrit Pauli H27 law to the Pass-408 Heisenberg voltage law. Under it GL(2,3) acts by (u,z)->(Mu,det(M)z), and left H27 translation reproduces Pass 408's complete graph action point-for-point. Hence the finite retained-phase extended qutrit Clifford lift is H27:GL(2,3) ~= Aut(Gamma_3), order 1296.",
+  "coordinate_intertwiner": {
+    "qutrit_coordinates": "(a,b,c) representing Z^a X^b omega^c",
+    "qutrit_product": "(a,b,c)(A,B,C)=(a+A,b+B,c+C-bA)",
+    "pass408_coordinates": "((a,b),z)",
+    "gauge": "z=c+2ab mod 3",
+    "inverse_gauge": "c=z-2ab mod 3",
+    "voltage_product": "(u,z)(v,w)=(u+v,z+w+omega(u,v))",
+    "pass408_omega": "omega(u,v)=u_1 v_0-u_0 v_1",
+    "pair_checks": 729
+  },
+  "group_structure": {
+    "full_group": "H27 : GL(2,3)",
+    "full_order": 1296,
+    "unitary_subgroup": "H27 : SL(2,3)",
+    "unitary_order": 648,
+    "projective_full_quotient": "AGL(2,3)",
+    "projective_full_order": 432,
+    "projective_unitary_quotient": "ASL(2,3)",
+    "projective_unitary_order": 216,
+    "scalar_C3_kernel_order": 3,
+    "full_center_order": 1,
+    "unitary_center_order": 3,
+    "full_derived_order": 648,
+    "unitary_derived_order": 216,
+    "full_abelianization": "C2",
+    "scalar_C3_is_normal_but_not_central_in_full_group": true,
+    "odd_coset_inverts_scalar_C3": true
+  },
+  "pass408_weld": {
+    "theorem": "Aut(Gamma_q)=H_q semidirect GammaL(2,q), with order q^3(q^2-1)(q^2-q)f for q=p^f",
+    "explicit_action": "(u,z) -> (M u+a, det(M) z-omega(Mu,a)+c)",
+    "q3_exhaustive_full_order": 1296,
+    "q3_no_extras": true,
+    "our_action_permutations": 1296,
+    "pointwise_action_evaluations": 34992,
+    "permutation_sets_equal": true,
+    "conclusion": "retained-phase extended qutrit Clifford lift ~= Aut(Gamma_3) by explicit action equality"
+  },
+  "parity_weld": {
+    "projective_character": "det(M)=spinor_norm(rho(M))",
+    "retained_phase_character": "G -> G/G' ~= C2",
+    "kernel": "H27 : SL(2,3), order 648",
+    "anti_linear_generator": "kappa=diag(-1,1)",
+    "kappa_inverts_Pauli_center": true
+  },
+  "old_648_certificate_match": {
+    "order": 648,
+    "center": "C3",
+    "quotient_order": 216,
+    "derived_order": 216,
+    "center_contained_in_derived": true,
+    "nonsplit": true,
+    "all_invariants_reproduced": true
+  },
+  "literature_context": {
+    "extended_Clifford_definition": "Appleby defines the extended Clifford group as unitary and anti-unitary normalizers of the Weyl-Heisenberg group; the projective action is the extended symplectic/affine action.",
+    "note": "The repo theorem is stronger for this internal comparison because it matches the older Pass-408 27-point graph permutations exactly."
+  },
+  "boundary": "This identifies the specific Pass-408 Heisenberg bulk automorphism carrier with the finite retained-Pauli-phase extended qutrit Clifford lift. It does not identify every unrelated order-1296 subgroup elsewhere in W33/E6, and the C2/spinor-parity character is not continuum spacetime parity, fermion parity, CPT, or a Lorentzian Pin/Spin structure.",
+  "parents": [
+    "data/PART_W33_20260829_CLIFFORD_C3_CIRCUIT_COVER.json",
+    "data/w33_extended_clifford_hesse_null_cone.json",
+    "data/w33_hesse_affine_spinor_parity.json",
+    "data/w33_pass408_full_automorphism_theorem.json"
+  ],
+  "checks": {
+    "qutrit_raw_to_voltage_gauge_all_729_pairs": true,
+    "GL2_similitude_action_all_34992_products": true,
+    "kappa_matches_certified_qutrit_conjugation": true,
+    "retained_phase_extended_group_order_1296": true,
+    "unitary_index_two_subgroup_order_648": true,
+    "action_equals_pass408_all_34992_vertex_evaluations": true,
+    "pass408_permutation_set_exactly_equal": true,
+    "pass408_no_extra_automorphisms_imported": true,
+    "quotient_by_scalar_C3_is_AGL23_order432": true,
+    "unitary_quotient_is_ASL23_order216": true,
+    "full_center_trivial": true,
+    "unitary_center_exact_C3": true,
+    "unitary_derived_order216": true,
+    "unitary_center_contained_in_derived": true,
+    "full_derived_equals_unitary_648": true,
+    "full_abelianization_is_C2": true,
+    "odd_kappa_inverts_scalar_center": true,
+    "spinor_parity_is_full_abelianization_character": true
+  }
+}
