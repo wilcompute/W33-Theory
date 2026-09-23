@@ -6,7 +6,7 @@
     "type": "DARK_STRANGE_Q3_RAW",
     "dimension": 3,
     "state_unnormalized": ["1","-omega","0"],
-    "token_id": "sha256:252cfccfdb0ae699331af84ab73455624a84cc0a87a08c98e8d45dd653a27471",
+    "token_id": "sha256:1b9782b7b686dcf49d0732e55087b02b643a3dbed41e543f100a2463f221421a",
     "evidence_class": "EXACT_H27_DARK_RAY_AND_CLIFFORD_EQUIVALENCE"
   },
   "exact_handoff": {
