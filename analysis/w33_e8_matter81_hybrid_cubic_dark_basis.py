@@ -276,9 +276,14 @@ def main(write=True):
             "rank": 73,
             "selected_pivot_count": 73,
             "selected_pivot_indices_zero_based": pivot_columns,
-            "selected_instruction_records": [
-                instruction_records[j] for j in pivot_columns
-            ],
+            "selected_pivot_histogram_by_direction_and_slope": {
+                "omega:slope1": 27,
+                "omega:slope2": 18,
+                "omega X:slope1": 12,
+                "omega X:slope2": 6,
+                "omega Z:slope1": 8,
+                "omega Z:slope2": 2,
+            },
         },
         "dark_sector": {
             "dimension": 8,
