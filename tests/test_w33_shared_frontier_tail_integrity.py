@@ -14,7 +14,7 @@ def test_shared_frontier_tail_is_linewise_valid_and_unique():
             continue
         assert line.startswith(r"\input{analysis/"), repr(line)
         assert line.endswith("}%"), repr(line)
-        assert r"\input" not in line, repr(line)
+        assert r"\\input" not in line, repr(line)
         assert r"\n" not in line, repr(line)
 
     expected = [
