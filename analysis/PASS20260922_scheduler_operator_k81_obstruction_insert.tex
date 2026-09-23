@@ -1,0 +1,38 @@
+% PASS20260922 full 81-state scheduler/operator equivariance obstruction.
+\subsection*{The full $81$-state scheduler compiler has equivariant rank ceiling $27$}
+
+Let
+\[
+K=H_{27}^{\rm address}\times C_3^{\rm external},
+\qquad |K|=81.
+\]
+The address chart is the regular $K$-module on the frozen labels
+$((a,b,c),p)$.  On the operator side, restricting the landed matter-$81$
+carrier to the internal trinification $H_{27}$ and the external qutrit shift
+gives
+\[
+(9V_\omega)\otimes\operatorname{Reg}(C_3).
+\]
+For each of the three external $C_3$ characters the regular scheduler supplies
+three copies of $V_\omega$, while the operator carrier requires nine.
+Therefore
+\[
+\dim\operatorname{Hom}_{K}=3(3\cdot9)=81,
+\qquad
+\boxed{\operatorname{rank}T\le
+3\bigl(3\min(3,9)\bigr)=27.}
+\]
+No invertible $81\times81$ $K$-equivariant compiler exists.
+
+The same obstruction is visible from the characteristic commutator subgroup
+\[
+[K,K]=Z(H_{27})\times\{0\}\cong C_3.
+\]
+Its nontrivial generator has eigenspaces $27+27+27$ on the regular address
+module but is scalar on the operator matter module.
+
+\paragraph{Consequence.}
+The root-address compiler must change symmetry: it can be non-equivariant,
+equivariant only under a proper common subgroup, or formulated after replacing
+or enlarging one of the two actions.  This theorem does not decide which such
+compiler is physically selected.
