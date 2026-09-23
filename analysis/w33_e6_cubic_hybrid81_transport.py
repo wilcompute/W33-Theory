@@ -145,7 +145,7 @@ def main(write=True):
     out={
       "schema":"w33.e6_cubic_hybrid81_transport.v1",
       "status":"PASS_CANONICAL_SIGNED_E6_CUBIC_TRANSPORTS_OBJECTWISE_TO_HYBRID81_AND_COLLECTIVE_JACOBIANS_SPAN_G2",
-      "headline":"The actual source-locked 45-term signed E6 cubic is transported objectwise into the current H27/K-labelled matter carrier. In the canonical SU(3) phase gauge its root bracket has exactly 810 nonzero unordered g1xg1 channels, 162 on the nine firewall fibers, every g1 root has degree 20, and every g2 root occurs as ten outputs. The Pass1103 object gauge and the newer five-direction address gauge are not conflated: their 45-line sets overlap in only ten triads, while all nine firewall central fibers agree. The complete 73+8 hybrid tensor is the exact conjugation Bbar^-1 T_root (B tensor B).",
+      "headline":"The actual source-locked 45-term signed E6 cubic is transported objectwise into the current H27/K-labelled matter carrier. In the canonical SU(3) phase gauge its root bracket has exactly 810 nonzero unordered g1xg1 channels, 162 on the nine firewall fibers, every g1 root has degree 20, and every g2 root occurs as ten outputs. The Pass1103 object gauge and the newer five-direction address gauge are not conflated: their raw 45-line sets overlap in only ten triads, while all nine firewall central fibers agree. A separate explicit 27-point gauge bridge conjugates the full canonical 45-line system to the current compiler gauge.",
       "source_locks":{
         "canonical_cubic_path":"extracted_v13/W33-Theory-master/artifacts/canonical_su3_gauge_and_cubic.json",
         "canonical_cubic_blob_sha":"3bcc9cdcd572627efe675e1fad4b32b3fe48f649",
@@ -192,7 +192,7 @@ def main(write=True):
         "single_root_background_rank54":False,
         "single_generic_background_rank":"not established in this certificate"
       },
-      "boundary":"This closes the exact signed tensor transport on the object-labelled 81 carrier and the collective tangent-span question. It does not identify the full canonical 45-triad incidence gauge with the newer five-direction address gauge; only the bad-nine center fibers are locked objectwise. It also does not supply a physical vacuum, coupling strength, mass, scattering amplitude, or fault-tolerant implementation.",
+      "boundary":"This closes the exact signed tensor transport on the object-labelled 81 carrier and the collective tangent-span question. It does not identify the raw Pass1103 H27 coordinate table with the newer five-direction address gauge; the explicit bridge is required. It also does not supply a physical vacuum, coupling strength, mass, scattering amplitude, or fault-tolerant implementation.",
       "parents":[
         "data/w33_e8_matter81_hybrid_cubic_dark_basis.json",
         "data/w33_minimal_symmetry_changing_81_compiler.json",
