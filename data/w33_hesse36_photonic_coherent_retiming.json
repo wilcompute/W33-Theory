@@ -1,0 +1,48 @@
+{
+  "schema": "w33.hesse36_photonic_coherent_retiming.v1",
+  "status": "PASS_9_PLUS_3_FOURIER_SCHEDULE_RETIMER_GIVES_UNIFORM_ONE_F3_PLUS_ONE_HOLD_DEPTH",
+  "headline": "The 12-F3 compiler can be serialized on nine tritters without creating a deterministic coherent path-depth bias. Hold the 27 wave-0 output channels after their F3 and the 9 wave-1 input channels before their F3. Every logical channel then sees exactly one tritter and one matched storage interval and all 36 outputs emerge at epoch 1.",
+  "schedule": {
+    "fibers": 12,
+    "channels": 36,
+    "tritter_inventory": 9,
+    "wave_occupancy": [9,3],
+    "output_epoch": 1,
+    "wave0_channels_postheld": 27,
+    "wave1_channels_preheld": 9,
+    "F3_traversals_per_channel": 1,
+    "HOLD_traversals_per_channel": 1,
+    "active_mixer_depth": 1,
+    "storage_depth": 1
+  },
+  "coherent_optical_budget": {
+    "matched_path_loss_expression": "L_TRI + L_HOLD on every channel",
+    "deterministic_interwave_loss_difference_db": "0 in the matched-component model",
+    "unmatched_hold_loss_error": "Delta_L_HOLD remains an engineering calibration input",
+    "unmatched_hold_phase_error": "Delta_phi_HOLD remains an engineering calibration input",
+    "visibility_acceptance": "|delta V(F3)| <= 0.05",
+    "radial_leakage_acceptance": "<= 0.10",
+    "tritter_process_fidelity_min": null,
+    "measured_insertion_loss_db_max": null
+  },
+  "external_prior_art_boundary": "High-fidelity balanced 3x3 frequency-bin tritters have been demonstrated in the literature, but no external fidelity or loss number is assigned to this W33/Holonet schedule.",
+  "magic_boundary": {
+    "compiler_is_Clifford_only": true,
+    "M36_injection_enabled": false,
+    "M36_status": "unchanged: RAW resource remains refused for injection until a proved protocol exists",
+    "reason": "an F3/Clifford compiler cannot supply the missing non-Clifford magic-state protocol"
+  },
+  "physics_reading": "The compiler's 9+3 serialization is compatible with coherent superposition across all 36 channels provided the storage stage is treated as part of the interferometer rather than as a classical queue. Retiming is therefore a phase-calibration problem, not an extra Fourier-depth problem.",
+  "boundary": "Exact scheduling and symbolic path-depth theorem only. No physical delay-line loss, phase stability, source brightness, detector efficiency, or W33 device process fidelity is claimed.",
+  "parents": ["data/w33_hesse36_photonic_fourier_schedule.json"],
+  "checks": {
+    "36_channels": true,
+    "9_plus_3_resource_schedule": true,
+    "one_F3_each": true,
+    "one_HOLD_each": true,
+    "common_output_epoch": true,
+    "uniform_symbolic_path_loss": true,
+    "existing_falsifiers_preserved": true,
+    "unmeasured_hardware_numbers_remain_open": true
+  }
+}
