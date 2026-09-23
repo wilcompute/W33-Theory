@@ -186,7 +186,7 @@ def main(write=True):
         "single_root_background_rank54":False,
         "single_generic_background_rank":"not established in this certificate"
       },
-      "boundary":"This closes the exact tensor transport and the collective tangent-span question. It does not prove that one physical vacuum/background realizes rank 54, nor supply a Hamiltonian coupling strength, VEV, mass, scattering amplitude, or fault-tolerant implementation.",
+      "boundary":"This closes the exact signed tensor transport on the object-labelled 81 carrier and the collective tangent-span question. It does not identify the full canonical 45-triad incidence gauge with the newer five-direction address gauge; only the bad-nine center fibers are locked objectwise. It also does not supply a physical vacuum, coupling strength, mass, scattering amplitude, or fault-tolerant implementation.",
       "parents":[
         "data/w33_e8_matter81_hybrid_cubic_dark_basis.json",
         "data/w33_minimal_symmetry_changing_81_compiler.json",
@@ -195,7 +195,9 @@ def main(write=True):
       "checks":{
         "canonical_45_triads_loaded":True,
         "e6id_to_current_H27_is_bijective":True,
-        "canonical_vs_current_line_overlap10":True,\n        "bad9_center_fibers_match_exactly":True,\n        "full_45_line_gauge_identity_not_claimed":True,
+        "canonical_vs_current_line_overlap10":True,
+        "bad9_center_fibers_match_exactly":True,
+        "full_45_line_gauge_identity_not_claimed":True,
         "root_channels_810":True,
         "firewall_channels_162":True,
         "every_input_degree20":True,
