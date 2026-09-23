@@ -1,0 +1,32 @@
+{
+  "schema": "w33.hesse36_compiler_gauge_selector_audit.v1",
+  "status": "PASS_FULL_CLIFFORD_REDUCES_Q8_GAUGES_TO_CONJUGATE_PAIR_REAL_CUBIC_SIGNS_CANNOT_FINISH_SELECTION",
+  "headline": "The old 1,179,648 Q8-equivariant compiler gauges collapse to six under full Clifford648 covariance: exactly the 3! assignments of the three C3 characters to the three safe center sheets. Requiring the pure external beta=0 sheet to carry the trivial address-center character leaves two, (0,1,2) and (0,2,1), exchanged by complex conjugation. The canonical E6 cubic/Yukawa coefficients are real +/-1 and Qpsi selection data are real integers, so those observables are rigorously blind to the last omega<->omega^2 choice.",
+  "reduction": {
+    "Q8_equivariant_gauges": 1179648,
+    "full_Clifford_character_assignments": 6,
+    "neutral_beta0_trivial_survivors": 2,
+    "survivors": [[0,1,2],[0,2,1]],
+    "relation": "complex conjugation omega <-> omega^2"
+  },
+  "canonical_cubic_signs": {
+    "full45": {"plus":22,"minus":23},
+    "fiber9": {"plus":2,"minus":7},
+    "ordinary36": {"plus":20,"minus":16},
+    "coefficients_real": true
+  },
+  "selector_verdict": {
+    "real_E6_cubic_signs_select_unique_orientation": false,
+    "integer_Qpsi_or_matter_parity_select_unique_orientation": false,
+    "needed_next_observable": "a genuinely mu3-oriented phase/holonomy/chirality datum with a fixed orientation convention"
+  },
+  "boundary": "This does not say the final two gauges are physically equivalent. It says the currently certified real cubic signs and integer charge/parity data cannot distinguish them.",
+  "checks": {
+    "six_full_clifford_assignments": true,
+    "neutral_sheet_leaves_two": true,
+    "two_are_complex_conjugates": true,
+    "ordinary_sign_split_20_16": true,
+    "real_signs_conjugation_blind": true,
+    "Qpsi_data_conjugation_blind": true
+  }
+}
