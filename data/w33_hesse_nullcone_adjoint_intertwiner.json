@@ -1,0 +1,68 @@
+{
+  "schema": "w33.hesse_nullcone_adjoint_intertwiner.v1",
+  "status": "PASS_EXPLICIT_GL23_ADJOINT_LIFT_IDENTIFIES_HESSE_DIRECTIONS_WITH_HULL_NULL_CONE",
+  "headline": "The parent certificate's equality of two S4 permutation actions lifts to an explicit 3-dimensional linear intertwiner.  The traceless-matrix adjoint representation of GL(2,3), transported by P, surjects onto SO(Q_hull) with kernel {+I,-I}.  The nilpotent cone maps point-for-point to the four certified Hesse/hull null rays.",
+  "sl2_model": {
+    "coordinates": "X(a,b,c)=[[a,b],[c,-a]]",
+    "quadratic_form": "q=-det(X)=a^2+b*c",
+    "polar_gram": [[2,0,0],[0,0,1],[0,1,0]],
+    "hull_gram": [[0,1,1],[1,0,1],[1,1,0]],
+    "basis_change_P": [[1,1,0],[1,0,2],[2,0,0]],
+    "basis_change_P_inverse": [[0,0,2],[1,0,1],[0,2,2]],
+    "identity": "P^T Q_hull P = 2 B_sl2"
+  },
+  "null_cone": {
+    "veronese_map": "nu(u,v)=(-u*v,u^2,-v^2)",
+    "direction_to_ray_exact": {
+      "(1, 0)": [1,0,0],
+      "(0, 1)": [0,1,0],
+      "(1, 1)": [0,0,1],
+      "(1, 2)": [1,1,1]
+    },
+    "dictionary_matches_parent_without_relabeling": true
+  },
+  "adjoint_lift": {
+    "formula": "rho(g)=P*Ad(g^{-T})*P^{-1}",
+    "GL2_order": 48,
+    "SL2_order": 24,
+    "rho_image_order": 24,
+    "rho_kernel_order": 2,
+    "rho_kernel": ["+I2","-I2"],
+    "rho_image": "SO(Q_hull)",
+    "SO_Q_order": 24,
+    "O_Q_order": 48,
+    "SL2_image_order": 12,
+    "SL2_projective_image": "PSL(2,3) ~= A4",
+    "GL2_projective_image": "PGL(2,3) ~= S4",
+    "all_48_direction_actions_match_rho_null_ray_actions": true
+  },
+  "antilinear_reflection": {
+    "phase_space_matrix": [[2,0],[0,1]],
+    "phase_space_determinant_mod3": 2,
+    "rho_matrix": [[2,0,1],[0,2,1],[0,0,1]],
+    "rho_determinant_mod3": 1,
+    "null_ray_permutation": [0,1,3,2],
+    "permutation_parity": "odd",
+    "clarification": "The determinant-minus-one phase-space reflection maps into SO(Q_hull). Its oddness is parity on the four-ray S4 set, not determinant -1 in the 3D orthogonal representation."
+  },
+  "parallel_e8_real_form_boundary": "A parallel certificate identifies an anti-linear real structure of the exact 248D compiler with fixed real form E8(8). That characteristic-zero real-form theorem is logically separate from this F3 null-cone theorem; no homomorphism, spacetime interpretation, or physical identification between the two is asserted here.",
+  "theorem_boundary": "This is a finite F3 adjoint/quadratic-form theorem. It supplies an exact linear lift of the Hesse/null-cone S4 dictionary. It does not identify the finite quadratic space with Lorentzian spacetime, nor derive Spin(3,1), CPT, CP violation, a continuum metric, or a physical spin structure.",
+  "parent": "data/w33_extended_clifford_hesse_null_cone.json",
+  "checks": {
+    "hull_form_equivalent_to_sl2_determinant_form": true,
+    "sl2_quadratic_form_equals_minus_determinant_exhaustively": true,
+    "veronese_dictionary_exact": true,
+    "GL2_order_48": true,
+    "SL2_order_24": true,
+    "rho_preserves_Q_for_all_GL2": true,
+    "rho_determinant_one_for_all_GL2": true,
+    "rho_kernel_exactly_plus_minus_identity": true,
+    "rho_surjects_SOQ": true,
+    "SL2_image_A4_order12": true,
+    "GL2_image_S4_order24": true,
+    "all_direction_and_ray_permutations_match": true,
+    "phase_reflection_matches_parent_odd_transposition": true,
+    "phase_reflection_still_has_3d_orthogonal_determinant_one": true,
+    "continuum_physics_not_overclaimed": true
+  }
+}
