@@ -97,6 +97,9 @@ def main(write=True):
     bad_triads={tuple(sorted(x)) for x in fwmod.FIBER_SIGNS}
     assert len(gauge_overlap)==10
     assert bad_triads <= gauge_overlap and len(bad_triads)==9
+    bridge=json.loads((ROOT/"data/w33_e6id_current_h27_gauge_bridge.json").read_text())
+    assert bridge["incidence"]["mapped_full45_equal"] is True
+    assert bridge["incidence"]["mapped_bad9_equal"] is True
 
     # Root-coordinate canonical bracket, with external phase p identified with
     # the canonical SU(3) basis index in this anchored qutrit gauge.
@@ -157,7 +160,10 @@ def main(write=True):
         "line_set_overlap":10,
         "all_nine_firewall_center_fibers_in_overlap":True,
         "full_45_line_gauge_identity":False,
-        "interpretation":"Object labels transport exactly, but the two independently anchored 45-line incidence gauges must not be identified without an additional automorphism/intertwiner."
+        "explicit_current_gauge_bridge_full45":True,
+        "explicit_current_gauge_bridge_bad9":True,
+        "bridge_path":"data/w33_e6id_current_h27_gauge_bridge.json",
+        "interpretation":"Pass1103 object labels transport exactly, but its raw H27 coordinate table is not the current compiler gauge. The separate explicit 27-point gauge bridge conjugates the canonical 45-triad system to the current five-direction H27 coset system while preserving the bad-nine spread."
       },
       "root_tensor":{
         "formula":"[e_(i,a),e_(j,b)] = d_ijk epsilon_abc ebar_(k,c)",
@@ -190,7 +196,8 @@ def main(write=True):
       "parents":[
         "data/w33_e8_matter81_hybrid_cubic_dark_basis.json",
         "data/w33_minimal_symmetry_changing_81_compiler.json",
-        "data/w33_h27_cubic_representation_transducer.json"
+        "data/w33_h27_cubic_representation_transducer.json",
+        "data/w33_e6id_current_h27_gauge_bridge.json"
       ],
       "checks":{
         "canonical_45_triads_loaded":True,
@@ -198,6 +205,7 @@ def main(write=True):
         "canonical_vs_current_line_overlap10":True,
         "bad9_center_fibers_match_exactly":True,
         "full_45_line_gauge_identity_not_claimed":True,
+        "explicit_current_gauge_bridge_full45":True,
         "root_channels_810":True,
         "firewall_channels_162":True,
         "every_input_degree20":True,
