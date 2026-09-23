@@ -1,1 +1,1 @@
-A scoped falsification protocol for the internal C12/FI action. It explicitly separates finite-representation identities from physical-time claims and states which measured control-transfer, phase-stability, and repeated-calibration outcomes would falsify an implementation-specific reading without treating a group-theoretic clock as cosmology.
+Complete Markdown falsification protocol separating internal finite representation claims from experimental implementation claims; defines failure conditions for phase, spectral, reproducibility, and transfer-matrix tests.

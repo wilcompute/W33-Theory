@@ -1,1 +1,1 @@
-Frozen manifest binding the five artifacts to current head a774ef54468af82494cd254598c63c915d8f03c0, listing exact claims, inputs, acceptance conditions, and hard boundaries: no vacuum selection, no physical Hamiltonian, no laboratory data, no single-background rank-54 claim, and no independent-theorem claim from a partial Jacobi sample.
+Complete valid JSON manifest binding all five artifacts to the live predecessor commit a774ef54468af82494cd254598c63c915d8f03c0, their inputs, acceptance conditions, and hard claim boundaries.

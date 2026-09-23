@@ -1,1 +1,1 @@
-Independent, source-driven audit wrapper for the landed E6 cubic hybrid transport. It validates the distinction between family-span coverage of 54 retyped slots and any unsupported single-background rank-54 claim, records the current-gauge source hashes, and fails closed if required certificate fields or rank boundaries are absent.
+Complete Python source: loads data/w33_e6_cubic_hybrid81_transport.json; checks documented 81-root family-span and 54 retyped-slot claims; requires an explicit no-single-rank-54 boundary; emits a deterministic audit certificate.

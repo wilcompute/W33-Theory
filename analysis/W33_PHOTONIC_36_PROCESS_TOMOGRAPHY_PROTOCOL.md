@@ -1,1 +1,1 @@
-A preregistered 36-channel calibration protocol: reconstruct one complete complex transfer matrix, report conditional Hilbert-Schmidt process overlap separately from common insertion loss and detection efficiency, retain delta-V(F3) and radial-leakage falsifiers, give confidence intervals and a no-claim rule unless F_HS >= 0.99.
+Complete Markdown protocol defining transfer-matrix reconstruction, conditional Hilbert-Schmidt process overlap, independent success-probability reporting, uncertainty treatment, controls, 0.99 acceptance condition, and no-claim boundaries.
