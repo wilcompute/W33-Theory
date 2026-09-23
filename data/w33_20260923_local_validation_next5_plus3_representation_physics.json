@@ -1,0 +1,33 @@
+﻿{
+  "schema": "w33.20260923.local_validation.next5_plus3_representation_physics.v1",
+  "device": "TheHeavyCrown",
+  "working_tree": "C:\\Repos\\Theory of Everything",
+  "script": "analysis/w33_20260923_execute_next5_plus3_representation_physics.py",
+  "script_status": "PASS_NEXT5_PLUS3_DIRAC_MODULES_Q3_REALIFICATION_Z3_PAIRING_FI_REFERENCE_ADAPTIVE_CHERNOFF",
+  "script_check_count": 12,
+  "script_all_checks": true,
+  "script_runtime_seconds": 20.13,
+  "nuisance_trials_per_case": 5000,
+  "means": {"q5": 22.8716, "q7": 50.8004, "q9": 17.0438, "q9_drift": 17.0156},
+  "gap": {
+    "engine": "GAP under WSL",
+    "group_order": 25920,
+    "conjugacy_classes": 20,
+    "steinberg_decomposition": "chi_20 only, degree 81",
+    "coexact120_decomposition": "chi_11(deg30)+chi_16(deg45)+chi_17(deg45)",
+    "source": "analysis/w33_20260923_psp43_chain_decomposition.g",
+    "stdout": "data/w33_20260923_psp43_chain_decomposition_gap.txt"
+  },
+  "pytest": {
+    "target": "tests/test_w33_20260923_execute_next5_plus3_representation_physics.py",
+    "result": "3 passed",
+    "runtime_seconds": 25.90
+  },
+  "local_dirty_files_preserved": [
+    ".continuity/SESSION_NOTES.md", ".continuity/decisions.json",
+    ".continuity/decisions.jsonl", ".cursorrules",
+    ".github/copilot-instructions.md", ".mcp.json", "AGENTS.md",
+    "CLAUDE.md", "GEMINI.md"
+  ],
+  "boundary": "Independent local executable/GAP/pytest validation; not GitHub Actions CI or laboratory evidence."
+}

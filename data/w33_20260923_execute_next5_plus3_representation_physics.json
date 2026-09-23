@@ -1,0 +1,749 @@
+{
+  "schema": "w33.20260923.execute_next5_plus3_representation_physics.v1",
+  "status": "PASS_NEXT5_PLUS3_DIRAC_MODULES_Q3_REALIFICATION_Z3_PAIRING_FI_REFERENCE_ADAPTIVE_CHERNOFF",
+  "attack1_dirac_ladder_representation": {
+    "regular_tetrahedron_ratios": {
+      "w1_over_w0": "1/(2 a^2)",
+      "w2_over_w1": "8/a^2",
+      "w3_over_w2": "18/a^2"
+    },
+    "incidence_square_inputs": [
+      16,
+      4,
+      4
+    ],
+    "ladder_general_edge_length": [
+      "8/a^2",
+      "32/a^2",
+      "72/a^2"
+    ],
+    "W33_edge_length_squared": "5/3",
+    "W33_ladder": [
+      "24/5",
+      "96/5",
+      "216/5"
+    ],
+    "W33_identity": "{24/5,96/5,216/5}=(24/5)*{1^2,2^2,3^2}",
+    "GAP_character_degrees": [
+      1,
+      5,
+      5,
+      6,
+      10,
+      10,
+      15,
+      15,
+      20,
+      24,
+      30,
+      30,
+      30,
+      40,
+      40,
+      45,
+      45,
+      60,
+      64,
+      81
+    ],
+    "chain_decomposition_GAP_irrep_indices": {
+      "C0": {
+        "1": 1,
+        "7": 1,
+        "10": 1
+      },
+      "C1": {
+        "7": 1,
+        "10": 1,
+        "11": 1,
+        "16": 1,
+        "17": 1,
+        "20": 1
+      },
+      "C2": {
+        "2": 1,
+        "3": 1,
+        "11": 2,
+        "16": 1,
+        "17": 1
+      },
+      "C3": {
+        "2": 1,
+        "3": 1,
+        "11": 1
+      },
+      "H1": {
+        "20": 1
+      },
+      "coexact120": {
+        "11": 1,
+        "16": 1,
+        "17": 1
+      }
+    },
+    "weighted_bands": {
+      "3": {
+        "multiplicity": 24,
+        "PSp43_module": "chi_10, degree 24"
+      },
+      "24/5": {
+        "multiplicity": 15,
+        "PSp43_module": "chi_7, degree 15"
+      },
+      "96/5": {
+        "multiplicity": 120,
+        "PSp43_module": "chi_11(deg30) + chi_16(deg45) + chi_17(deg45)"
+      },
+      "216/5": {
+        "multiplicity": 40,
+        "PSp43_module": "chi_2(deg5) + chi_3(deg5) + chi_11(deg30)"
+      },
+      "0_H1": {
+        "multiplicity": 81,
+        "PSp43_module": "chi_20, Steinberg degree 81"
+      }
+    },
+    "mechanism": "The 1:4:9 spacing is forced by regular-tetrahedron circumcentric weight ratios multiplied by the three relevant incidence-square eigenvalues. PSp(4,3) representation theory determines band multiplicities, but not the spacing.",
+    "pure_Casimir_explanation_refuted": true,
+    "refutation_witness": "The same PSp(4,3) irrep chi_11 of degree 30 occurs in the 96/5 coexact C1/C2 band and in the 216/5 C2/C3 band."
+  },
+  "attack2_q3_full_character_realification": {
+    "single_sector": {
+      "dimension": 3,
+      "retained_phase_Clifford_order": 648,
+      "scalar_center_order": 3,
+      "character_norm": 0.9999999999999963,
+      "Frobenius_Schur_indicator": [
+        2.2067395921561753e-16,
+        -3.156768399493597e-16
+      ],
+      "type": "complex"
+    },
+    "full_similitude": {
+      "dimension": 6,
+      "order": 1296,
+      "conjugacy_class_count": 18,
+      "character_norm": 0.9999999999999937,
+      "Frobenius_Schur_indicator": [
+        0.9999999999999956,
+        -9.814515432506428e-17
+      ],
+      "type": "real irreducible",
+      "all_determinant_odd_class_traces_zero": true,
+      "classes": [
+        {
+          "order": 1,
+          "class_size": 1,
+          "determinant_even_sector": true,
+          "character": [
+            6.0,
+            0.0
+          ]
+        },
+        {
+          "order": 2,
+          "class_size": 9,
+          "determinant_even_sector": true,
+          "character": [
+            -2.0,
+            0.0
+          ]
+        },
+        {
+          "order": 2,
+          "class_size": 108,
+          "determinant_even_sector": false,
+          "character": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "order": 3,
+          "class_size": 2,
+          "determinant_even_sector": true,
+          "character": [
+            -3.0,
+            0.0
+          ]
+        },
+        {
+          "order": 3,
+          "class_size": 24,
+          "determinant_even_sector": true,
+          "character": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "order": 3,
+          "class_size": 144,
+          "determinant_even_sector": true,
+          "character": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "order": 4,
+          "class_size": 54,
+          "determinant_even_sector": true,
+          "character": [
+            2.0,
+            0.0
+          ]
+        },
+        {
+          "order": 6,
+          "class_size": 18,
+          "determinant_even_sector": true,
+          "character": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "order": 6,
+          "class_size": 216,
+          "determinant_even_sector": false,
+          "character": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "order": 8,
+          "class_size": 162,
+          "determinant_even_sector": false,
+          "character": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "order": 8,
+          "class_size": 162,
+          "determinant_even_sector": false,
+          "character": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "order": 9,
+          "class_size": 24,
+          "determinant_even_sector": true,
+          "character": [
+            -2.2266816,
+            0.0
+          ]
+        },
+        {
+          "order": 9,
+          "class_size": 24,
+          "determinant_even_sector": true,
+          "character": [
+            -1.18479253,
+            0.0
+          ]
+        },
+        {
+          "order": 9,
+          "class_size": 24,
+          "determinant_even_sector": true,
+          "character": [
+            3.41147413,
+            0.0
+          ]
+        },
+        {
+          "order": 12,
+          "class_size": 108,
+          "determinant_even_sector": true,
+          "character": [
+            -1.0,
+            0.0
+          ]
+        },
+        {
+          "order": 18,
+          "class_size": 72,
+          "determinant_even_sector": true,
+          "character": [
+            -1.53208889,
+            0.0
+          ]
+        },
+        {
+          "order": 18,
+          "class_size": 72,
+          "determinant_even_sector": true,
+          "character": [
+            -0.34729636,
+            0.0
+          ]
+        },
+        {
+          "order": 18,
+          "class_size": 72,
+          "determinant_even_sector": true,
+          "character": [
+            1.87938524,
+            0.0
+          ]
+        }
+      ]
+    },
+    "trace_field": {
+      "field": "Q(zeta_9 + zeta_9^-1), real cubic conductor-9 field",
+      "order9_trace_polynomial": "x^3 - 9x - 9",
+      "order9_polynomial_discriminant": 729,
+      "order18_trace_polynomial": "x^3 - 3x - 1",
+      "order18_polynomial_discriminant": 81,
+      "order9_trace_roots": [
+        -2.2266816,
+        -1.18479253,
+        3.41147413
+      ],
+      "order18_trace_roots": [
+        -1.53208889,
+        -0.34729636,
+        1.87938524
+      ]
+    },
+    "fusion": "The 3D retained-phase qutrit Clifford irrep has FS indicator 0 (complex type). Adjoining the determinant-odd sector swap fuses it with its complex conjugate into one 6D irreducible representation of the full 1296 point stabilizer with FS indicator +1."
+  },
+  "attack3_Z3_antiunitary_pairing": {
+    "theorem": "Let C be unitary with C^3=1 and H commute with C. Let T be antiunitary with HT=TH, TC=CT in the semilinear sense, and T^2=C^r for r=1 or 2. If C psi=omega psi, then C(T psi)=omega^2 T psi, so T psi is an orthogonal equal-energy partner in the conjugate grading sector. The same holds with omega and omega^2 exchanged. In the neutral C=1 sector, T^2=1 and no Kramers degeneracy is forced.",
+    "E8_consequence": "For any Hamiltonian obeying the certified E8 grading and one of the order-6 anti-linear symmetries CJ or C^2J, the spectra on g1 and g2 are identical and paired across the 81+81 matter sectors; no even degeneracy is forced on the neutral 86-dimensional sector.",
+    "difference_from_Kramers": "Orthogonality comes from distinct C eigenvalues, not from a T^2=-1 scalar within one sector.",
+    "synthetic_check": {
+      "dimension": 11,
+      "neutral_dimension": 3,
+      "matter_dimensions": [
+        4,
+        4
+      ],
+      "max_T2_minus_C2": 6.497413668604471e-16,
+      "max_HT_minus_TH": 0.0,
+      "matter_partner_overlap": 0.0
+    }
+  },
+  "attack4_FI_reference_arm_calibration": {
+    "existing_Holonet_ABI": {
+      "components": [
+        "comb_or_frequency_bin_source",
+        "pre_eom_frequency_mixer",
+        "line_by_line_pulse_shaper",
+        "post_eom_frequency_mixer",
+        "frequency_or_time_resolved_detector"
+      ],
+      "existing_measurement_fields": [
+        "plus_counts",
+        "minus_counts",
+        "total_counts",
+        "visibility",
+        "phase_error_degrees",
+        "eom_phase_reference"
+      ],
+      "120deg_Hesse_bins": [
+        "H1",
+        "H4",
+        "H7"
+      ],
+      "120deg_probe_opportunities_per_mirror_atlas": 180,
+      "mirror_atlases_per_supercycle": 24,
+      "120deg_probe_opportunities_per_supercycle": 4320
+    },
+    "reference_arm_extension": {
+      "new_primitive": "FI_REFERENCE_ARM_PHASE",
+      "target_relative_phase_deg": 120.0,
+      "analyzer_reference_phases_deg": [
+        0.0,
+        90.0,
+        180.0,
+        270.0
+      ],
+      "estimators": {
+        "X": "(d_0-d_180)/2 = V cos(phi)",
+        "Y": "(d_90-d_270)/2 = V sin(phi)",
+        "visibility": "sqrt(X^2+Y^2)",
+        "phase": "atan2(Y,X)",
+        "d_theta": "(N_plus-N_minus)/(N_plus+N_minus)"
+      }
+    },
+    "fail_closed_admission": {
+      "effective_path_entanglement_fidelity_formula": "Fe=(1+V cos(delta))/2",
+      "required_Fe": 0.99,
+      "max_abs_phase_error_deg": 2.5,
+      "implied_min_visibility": 0.9809336314600535,
+      "nominal_design_visibility": 0.965,
+      "nominal_visibility_passes_99pct_gate": false,
+      "verdict": "FAIL_CLOSED_UNTIL_MEASURED_REFERENCE_ARM_VISIBILITY_AND_PHASE_MEET_GATE"
+    },
+    "shot_budget_Fisher_design": {
+      "phase_sigma_goal": "3 sigma <= 2.5 degrees",
+      "per_shot_phase_Fisher_at_nominal_V": [
+        0.9103551091233472,
+        0.7719520029842705,
+        0.9103551091233472,
+        0.7719520029842705
+      ],
+      "average_phase_Fisher_nominal": 0.8411535560538088,
+      "detected_events_needed_nominal": 5620,
+      "detected_events_needed_at_admission_floor": 5211,
+      "one_supercycle_opportunities": 4320,
+      "supercycles_needed_if_one_detected_event_per_opportunity_nominal": 2,
+      "supercycles_needed_if_one_detected_event_per_opportunity_at_floor": 2
+    },
+    "boundary": "This is an executable calibration/admission design using an existing frequency-bin ABI. It does not report measured reference-arm data."
+  },
+  "attack5_nuisance_adaptive_holonomy": {
+    "nominal_probability_tables": {
+      "5": [
+        [
+          0.647609692788053
+        ],
+        [
+          0.11355280721194705
+        ]
+      ],
+      "7": [
+        [
+          0.7978254911028706
+        ],
+        [
+          0.39370731287241756
+        ],
+        [
+          0.06962969602471203
+        ]
+      ],
+      "9": [
+        [
+          0.26116250000000013,
+          0.977675,
+          0.26116250000000013
+        ],
+        [
+          0.977675,
+          0.26116250000000013,
+          0.26116250000000013
+        ],
+        [
+          0.26116250000000013,
+          0.26116250000000013,
+          0.977675
+        ],
+        [
+          0.26116250000000013,
+          0.26116250000000013,
+          0.26116250000000013
+        ]
+      ]
+    },
+    "Chernoff_controlled_information": {
+      "5": [
+        {
+          "hypothesis": 0,
+          "optimal_setting_weights": [
+            1.0
+          ],
+          "D_star": 0.8024277816463958
+        },
+        {
+          "hypothesis": 1,
+          "optimal_setting_weights": [
+            1.0
+          ],
+          "D_star": 0.6200339963244617
+        }
+      ],
+      "7": [
+        {
+          "hypothesis": 0,
+          "optimal_setting_weights": [
+            1.0
+          ],
+          "D_star": 0.3414554390451519
+        },
+        {
+          "hypothesis": 1,
+          "optimal_setting_weights": [
+            1.0
+          ],
+          "D_star": 0.38778136609290886
+        },
+        {
+          "hypothesis": 2,
+          "optimal_setting_weights": [
+            1.0
+          ],
+          "D_star": 0.27777537169651945
+        }
+      ],
+      "9": [
+        {
+          "hypothesis": 0,
+          "optimal_setting_weights": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "D_star": 1.2124412602852748
+        },
+        {
+          "hypothesis": 1,
+          "optimal_setting_weights": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "D_star": 1.2124412602852748
+        },
+        {
+          "hypothesis": 2,
+          "optimal_setting_weights": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "D_star": 1.2124412602852748
+        },
+        {
+          "hypothesis": 3,
+          "optimal_setting_weights": [
+            0.3333333333333333,
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          "D_star": 0.746907641690824
+        }
+      ]
+    },
+    "asymptotic_logodds_over_Dstar_event_scales": {
+      "5": [
+        18.77427284038849,
+        24.297051769164046
+      ],
+      "7": [
+        44.11995354200527,
+        38.84920582730548,
+        54.23446295950319
+      ],
+      "9": [
+        12.425342654367006,
+        12.425342654367006,
+        12.425342654367006,
+        20.169827253652787
+      ]
+    },
+    "nuisance_marginalized_adaptive": {
+      "nuisance_grid": {
+        "visibility": "0.965 +/- 3*0.005, 5 nodes",
+        "background": "0.010 +/- 3*0.002, 5 nodes",
+        "phase": "0 +/- 3 degrees, 7 nodes",
+        "particle_count": 175,
+        "prior": "truncated Gaussian product on grid"
+      },
+      "target_posterior": 0.9999997133484281,
+      "seed": 20260923,
+      "results": {
+        "5": {
+          "trials": 5000,
+          "mean": 22.8716,
+          "median": 23.0,
+          "p95": 37.0,
+          "p99": 46.0,
+          "maximum": 78,
+          "mean_by_hypothesis": [
+            20.07099636950383,
+            25.625545418484727
+          ],
+          "p95_by_hypothesis": [
+            35.0,
+            37.0
+          ],
+          "observed_errors": 0,
+          "profile_vs_marginal_decision_mismatches": 0,
+          "setting_uses": [
+            114358
+          ]
+        },
+        "7": {
+          "trials": 5000,
+          "mean": 50.8004,
+          "median": 48.0,
+          "p95": 78.0,
+          "p99": 97.0,
+          "maximum": 138,
+          "mean_by_hypothesis": [
+            45.17730061349693,
+            52.03072463768116,
+            55.08206686930091
+          ],
+          "p95_by_hypothesis": [
+            73.0,
+            76.79999999999995,
+            82.0
+          ],
+          "observed_errors": 0,
+          "profile_vs_marginal_decision_mismatches": 0,
+          "setting_uses": [
+            254002
+          ]
+        },
+        "9": {
+          "trials": 5000,
+          "mean": 17.0438,
+          "median": 15.0,
+          "p95": 27.0,
+          "p99": 33.0,
+          "maximum": 48,
+          "mean_by_hypothesis": [
+            14.860688550840672,
+            14.14498432601881,
+            16.00080064051241,
+            23.347471451876018
+          ],
+          "p95_by_hypothesis": [
+            21.0,
+            20.0,
+            21.0,
+            32.0
+          ],
+          "observed_errors": 0,
+          "profile_vs_marginal_decision_mismatches": 0,
+          "setting_uses": [
+            30843,
+            28208,
+            26168
+          ]
+        },
+        "9_with_phase_random_walk_0p05deg_per_shot": {
+          "trials": 5000,
+          "mean": 17.0156,
+          "median": 15.0,
+          "p95": 27.0,
+          "p99": 33.0,
+          "maximum": 45,
+          "mean_by_hypothesis": [
+            14.941747572815533,
+            14.180868167202572,
+            16.02852737085582,
+            23.04170073589534
+          ],
+          "p95_by_hypothesis": [
+            21.0,
+            20.0,
+            21.0,
+            32.0
+          ],
+          "observed_errors": 0,
+          "profile_vs_marginal_decision_mismatches": 0,
+          "setting_uses": [
+            30333,
+            27956,
+            26789
+          ]
+        }
+      }
+    },
+    "q9_projective_geometry": {
+      "quotient": "F9^*/F3^* = P^1(F3)",
+      "three_zero_vs_nonzero_trace_probe_signatures": [
+        "010",
+        "100",
+        "001",
+        "000"
+      ],
+      "interpretation": "Each of three trace functionals has one projective kernel. Cosine collapses trace +/-1 together, giving a binary zero-vs-nonzero probe. Three kernels identify three points one-hot and the fourth point is all-low."
+    },
+    "conclusion": "The nuisance-marginalized experiment preserves the ordering seen in the nominal study: q9 adaptive discrimination is substantially more sample-efficient than q7 despite larger hidden-label entropy. The nominal Chernoff D* values explain this through measurement channel information geometry rather than entropy alone.",
+    "boundary": "Monte Carlo zero-error counts are power diagnostics, not 5-sigma tail estimates."
+  },
+  "outside_box": {
+    "A_finite_McKean_Singer_index": {
+      "Euler_characteristic": "40-240+160-40=-80",
+      "supertrace_identity": "Str exp(-t L) = -80 for every t",
+      "sample_checks": {
+        "0": -80.0,
+        "0.01": -80.0,
+        "0.1": -79.99999999999999,
+        "1": -80.0,
+        "10": -80.0
+      },
+      "mechanism": "Every positive weighted Hodge eigenvalue cancels between adjacent cochain degrees; only 1-81=-80 zero modes remain.",
+      "physics_reading": "metric-independent supersymmetric/Witten-index-style invariant of the finite de Rham complex",
+      "boundary": "finite-complex index identity, not a continuum supersymmetric field theory"
+    },
+    "B_outer_similitude_realification": {
+      "single_qutrit_sector_FS": [
+        2.2067395921561753e-16,
+        -3.156768399493597e-16
+      ],
+      "full_6D_FS": [
+        0.9999999999999956,
+        -9.814515432506428e-17
+      ],
+      "trace_field": {
+        "field": "Q(zeta_9 + zeta_9^-1), real cubic conductor-9 field",
+        "order9_trace_polynomial": "x^3 - 9x - 9",
+        "order9_polynomial_discriminant": 729,
+        "order18_trace_polynomial": "x^3 - 3x - 1",
+        "order18_polynomial_discriminant": 81,
+        "order9_trace_roots": [
+          -2.2266816,
+          -1.18479253,
+          3.41147413
+        ],
+        "order18_trace_roots": [
+          -1.53208889,
+          -0.34729636,
+          1.87938524
+        ]
+      },
+      "statement": "The determinant-odd similitude does more than add states: it realifies the complex qutrit Clifford sector into a real irreducible 6D carrier whose non-rational character values lie in the conductor-9 real cubic field.",
+      "boundary": "character arithmetic, not a measured energy/coupling field"
+    },
+    "C_distributed_FI_phase_frame": {
+      "frame_alphabet": "Z3 = {0,120,240 degrees}",
+      "existing_W33_network_nodes": 80,
+      "optimal_broadcast_ticks": 7,
+      "broadcast_tree_edges": 79,
+      "gather_plus_broadcast_ticks": 14,
+      "connection_to_FI_gate": "After local reference-arm calibration, the FI center phase is exactly one ternary frame symbol, so the already-certified seven-tick frame broadcast can disseminate it without an 80-link central phase bus.",
+      "connection_to_calibration": "The fourteen-tick all-reduce can aggregate ternary phase-residue corrections and rebroadcast a consensus frame symbol.",
+      "boundary": "exact network/control reuse; does not establish optical phase coherence across physical nodes"
+    }
+  },
+  "checks": {
+    "ladder_geometric_not_pure_Casimir": true,
+    "H1_is_Steinberg81": true,
+    "q3_single_sector_order648": true,
+    "q3_full_realification_order1296": true,
+    "q3_full_6D_irreducible_real": true,
+    "Z3_antiunitary_pairing_exact": true,
+    "FI_uses_existing_120deg_slots": true,
+    "FI_reference_arm_fails_closed_without_measurement": true,
+    "q9_nuisance_adaptive_beats_q7": true,
+    "q9_phase_drift_stays_close_nominal": true,
+    "McKean_Singer_minus80": true,
+    "distributed_FI_frame_seven_ticks": true
+  },
+  "boundaries": [
+    "The n^2 ladder is a finite circumcentric/cochain identity; PSp modules explain multiplicity, not a continuum KK spectrum.",
+    "The 6D realification is a finite point-stabilizer representation, not an observed particle multiplet.",
+    "The Z3 pairing theorem applies only to Hamiltonians that actually commute with both C and T.",
+    "The FI reference-arm packet is a preregistered calibration design with no measured counts.",
+    "Sequential Monte Carlo is a power/design calculation; rare-tail significance requires exact or laboratory-calibrated inference.",
+    "Distributed phase-frame reuse is a network theorem, not a physical phase-coherence demonstration."
+  ],
+  "parents": [
+    "data\\w33_20260923_execute_next5_plus3_geometric_semilinear_frozen.json",
+    "data\\w33_extended_clifford1296_point_stabilizer.json",
+    "data\\w33_frequency_bin_hashimoto_compiler.json",
+    "data\\w33_e8_split_real_form_involution.json"
+  ]
+}
