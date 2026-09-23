@@ -1,0 +1,48 @@
+{
+  "schema": "w33.minimal_symmetry_changing_81_compiler.v1",
+  "status": "PASS_EXPLICIT_FOURIER_COORDINATE_COMPILER_REACHES_THE_54D_SYMMETRY_CHANGE_LOWER_BOUND",
+  "headline": "An explicit 81-state address-to-operator compiler exists in K-Fourier coordinates as a permutation matrix. It carries the 27 operator-compatible S1 coordinates identically into the first three multiplicity slots and deterministically retypes the 27 conjugate-Schrodinger plus 27 one-dimensional coordinates into the remaining six multiplicity slots. Exactly 54 coordinates change representation type, which is minimal because every K-equivariant map has rank at most 27.",
+  "source_basis": {
+    "group": "K=H27 x C3_external",
+    "module": "Reg(K)",
+    "coordinates": {"S1": 27, "S2": 27, "L": 27},
+    "dimension": 81
+  },
+  "target_basis": {
+    "module": "9 V_omega tensor Reg(C3_external)",
+    "coordinate": "O(t,m,i), t in F3, m=0..8, i in F3",
+    "dimension": 81
+  },
+  "compiler": {
+    "formula": [
+      "S1(t,r,i) -> O(t,r,i), r=0,1,2",
+      "S2(t,r,i) -> O(t,3+r,i), r=0,1,2",
+      "L(u,v,t) -> O(t,6+u,v)"
+    ],
+    "matrix_type": "81x81 permutation/monomial matrix in Fourier coordinates",
+    "unitary": true,
+    "bijective": true,
+    "mode_counts": {"equivariant":27,"retyped_central":27,"retyped_abelian":27},
+    "symmetry_preserving_coordinates": 27,
+    "symmetry_changing_coordinates": 54,
+    "symmetry_change_lower_bound": 54,
+    "lower_bound_saturated": true,
+    "mapping_digest": "sha256:cb577548c5a894a996a1416d7eda1059bf817a31a0d7f513dd945cd799663aad"
+  },
+  "interpretation": "Linear completeness and representation conversion are now separated cleanly. The group Fourier transform resolves the address module into irreducible coordinates; this minimal monomial compiler then performs exactly the 54 irreducible retypings that no K-equivariant basis change can avoid.",
+  "boundary": "This solves the finite Fourier-coordinate conversion problem, not a microscopic Hamiltonian. The next physics problem is to realize the 54 retypings through a permitted interaction while preserving unitarity/coherence and the frozen FI orientation.",
+  "parents": [
+    "data/w33_hybrid81_operator_equivariance_budget.json",
+    "data/w33_e8_matter81_hybrid_cubic_dark_basis.json",
+    "data/w33_address_operator_h27_roles.json"
+  ],
+  "checks": {
+    "81_source_coordinates_unique": true,
+    "81_target_coordinates_unique": true,
+    "permutation_unitary": true,
+    "27_equivariant_coordinates": true,
+    "54_retyped_coordinates": true,
+    "54_lower_bound_reproduced": true,
+    "lower_bound_saturated": true
+  }
+}
