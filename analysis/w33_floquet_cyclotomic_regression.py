@@ -1,0 +1,1 @@
+Executable regression which reads data/w33_20260923_next5_plus3_physics_frozen.json and derives the C12 cyclotomic decomposition 80 Phi1 + 2 Phi2 + 27 Phi3 + 2 Phi4 + 27 Phi12. It asserts all 12 traces, all fixed spaces, FI U^4 multiplicities (86,81,81), determinant exponent 0 mod 12, and absence of a Phi6 constituent; writes a deterministic JSON certificate.

@@ -1,0 +1,1 @@
+Independent, source-driven audit wrapper for the landed E6 cubic hybrid transport. It validates the distinction between family-span coverage of 54 retyped slots and any unsupported single-background rank-54 claim, records the current-gauge source hashes, and fails closed if required certificate fields or rank boundaries are absent.

@@ -1,0 +1,1 @@
+A separately implemented sparse-bracket audit that checks antisymmetry, all six FI-grade products, basis-transform round trips, and a deterministic stratified sample of Jacobi triples from artifacts/e8_structure_constants_w33_discrete.json. It labels this as an independent implementation audit, not a replacement for the existing full 2,511,496-triple source sweep.
