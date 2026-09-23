@@ -72,7 +72,7 @@ def main(write=True):
       "per_factor_min":0.996655493413,
       "tritter_process_infidelity_max":0.003344506587,
       "hold_phase_rad_max":0.057863994222,
-      "hold_phase_deg_max":3.315362654681,
+      "hold_phase_deg_max":3.31536265468,
       "hold_differential_power_loss_abs_db_max":0.502880974035,
       "hold_differential_power_loss_peak_to_peak_db_max":1.00576194807,
       "sufficient_product_bound":0.99
@@ -98,7 +98,7 @@ def main(write=True):
       "single_device_protocol":[
         "phase-reference all nine physical tritters to one optical clock and characterize each 3x3 complex transfer block; absorb block-global phase into the HOLD phase ledger",
         "calibrate the matched HOLD network on all 36 logical paths; subtract common loss/phase and record per-path delta_L and delta_phi",
-        "verify F_TRI >= 0.996655493413, |delta_phi| <= 3.315362654681 deg, and |delta_L| <= 0.502880974035 dB as sufficient component gates",
+        "verify F_TRI >= 0.996655493413, |delta_phi| <= 3.315362654680 deg, and |delta_L| <= 0.502880974035 dB as sufficient component gates",
         "run the complete coherent 9+3 schedule on the same hardware stack and reconstruct one 36x36 complex transfer matrix M",
         "accept only if normalized F_HS(M) >= 0.99 AND the existing |delta V(F3)|<=0.05 and radial-leakage<=0.10 falsifiers pass",
         "report absolute common insertion loss, source efficiency and detector efficiency separately; never convert them into conditional process fidelity"
