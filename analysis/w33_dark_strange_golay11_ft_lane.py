@@ -116,7 +116,7 @@ def main(write=True):
         "logical_qutrits":1,
         "logical_distance":5,
         "correctable_Pauli_weight":2,
-        "weight5_logical_witness_present":true
+        "weight5_logical_witness_present":True
       },
       "resource_flow":[
         "DARK_STRANGE_Q3_RAW",
@@ -135,7 +135,7 @@ def main(write=True):
         "mathematical_ideal_dark_state_delta":0,
         "published_depolarizing_threshold_approx":0.38715,
         "hardware_rule":"require a calibrated/twirled input-noise upper bound strictly below the applicable published threshold before admitting a physical 11-copy batch",
-        "current_physical_input_delta_bound":null
+        "current_physical_input_delta_bound":None
       },
       "evidence_gates":gates,
       "physical_fault_tolerant_lane_enabled":physical_enabled,
