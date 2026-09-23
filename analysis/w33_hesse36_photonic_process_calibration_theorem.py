@@ -107,14 +107,14 @@ def main(write=True):
       "boundary":"The 0.99 target is an engineering design choice, not a prediction. The multiplicative factor budget is a sufficient model under the stated phase-referenced independent-error assumptions; the decisive experimental test is the directly reconstructed full transfer matrix. No physical device measurement is claimed.",
       "parents":["data/w33_hesse36_photonic_coherent_retiming.json"],
       "checks":{
-        "one_F3_and_one_HOLD_per_channel":true,
-        "target_declared_not_measured":true,
-        "equal_factor_budget_closes_exactly":true,
-        "phase_bound_derived":true,
-        "differential_loss_bound_derived":true,
-        "common_loss_separated_from_conditional_fidelity":true,
-        "single_device_full_matrix_acceptance_defined":true,
-        "existing_falsifiers_retained":true
+        "one_F3_and_one_HOLD_per_channel":True,
+        "target_declared_not_measured":True,
+        "equal_factor_budget_closes_exactly":True,
+        "phase_bound_derived":True,
+        "differential_loss_bound_derived":True,
+        "common_loss_separated_from_conditional_fidelity":True,
+        "single_device_full_matrix_acceptance_defined":True,
+        "existing_falsifiers_retained":True
       }
     }
     if write:OUT.write_text(json.dumps(out,indent=2)+"\n")
