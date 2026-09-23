@@ -184,8 +184,10 @@ All three are scalars. Hence
 
 which is precisely the FI/common-H27 center. Matter parity (D_{12}^{6})
 and the mod-four shadow (D_{12}^{3}) lie outside the certified execution
-commutant. Whether either normalizes the execution algebra is a stronger
-question that needs the missing coordinate intertwiner.
+commutant.  The subsequent complete Steiner/trinification atlas certificate
+also proves that neither shadow normalizes the execution algebra in any of
+the 51,840 Weyl-compatible monomial charts.  Thus changing that finite chart
+cannot rescue either operation.
 
 ## 4. Virtual-machine reading and exact open boundary
 
@@ -197,18 +199,25 @@ The resulting architecture has three distinct layers:
 | execution | (3_+^{1+4}), order 243 | two-qutrit Pauli algebra on the internal and external qutrits |
 | latent/control | (M_9\), the commutant | transformations of the nine-dimensional multiplicity subsystem |
 
-The next mathematical object is now precise: construct the frozen-root-gauge
-change of basis from the regular (((a,b,c),p)) address chart to the
-trinification ((m,q,p)) tensor chart. Such a map would decide whether the
-non-FI Qpsi operations normalize the Pauli algebra and would compile each
-cubic coset instruction into an explicit operator on active and multiplicity
-registers.
+The parallel linear-intertwiner audits now sharpen the remaining object.  On
+the 27-dimensional carriers every H27-equivariant map from the regular
+address module to the operator module has rank at most 9.  On the full
+81-dimensional scheduler/execution carriers every
+K=(H27 x C3)-equivariant map has rank at most 27.  Both bounds are sharp and
+exclude an invertible equivariant basis conjugacy, even after automorphism
+twists.  The frozen-root compiler must therefore be non-equivariant, covariant
+only under a proper common subgroup, or formulated after replacing or
+enlarging one of the actions.  It must record which symmetry it changes.
 
-No such intertwiner is claimed here. In particular, the phase-held-fixed
-Clifford scheduler census does not say that Fourier or quadratic-phase gates
-permute the frozen root basis. The result is finite incidence and restricted
-representation theory; it does not identify generations, compute Yukawa
-coefficients, select a vacuum, or establish hardware protection.
+That compiler would select the physically realized chart and compile each
+cubic coset instruction into an explicit operator on active and multiplicity
+registers.  It is no longer needed for the monomial normalizer yes/no question:
+the all-chart certificate closes that question uniformly and leaves only the
+FI/common-H27 (C_3).  The phase-held-fixed Clifford scheduler census does not
+say that Fourier or quadratic-phase gates permute the frozen root basis. The
+result is finite incidence and restricted representation theory; it does not
+identify generations, compute Yukawa coefficients, select a vacuum, or
+establish hardware protection.
 
 ## External cross-checks
 
@@ -232,4 +241,8 @@ the \(9+36\) and \(27+27+216\) scheduler orbits, and the matter-81
 factorization; older Passes 371 and 386 own the abstract Clifford naturality
 and phase-aware orbital menu. The incremental content here is the exhaustive
 three-candidate uniqueness audit in the fixed Clifford gauge and the exact
-\(Q_\psi\)-commutant intersection.
+\(Q_\psi\)-commutant intersection.  The rank-9 and rank-27 compiler no-goes
+are owned by `w33_address_operator_h27_intertwiner_obstruction.py` and
+`w33_scheduler_operator_k81_intertwiner_obstruction.py`; they are integrated
+here to prevent the older open-boundary wording from inviting an impossible
+equivariant search.

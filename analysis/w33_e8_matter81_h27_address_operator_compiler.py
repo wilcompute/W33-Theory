@@ -54,10 +54,12 @@ commutant is M_9(C) tensor I_9.  Thus the shell contains two active qutrits
 and an exact nine-dimensional multiplicity/noiseless subsystem at this
 restricted-group level.
 
-Boundary: the address and operator charts are not identified.  An explicit
-root-gauge intertwiner from the frozen E8 root coordinates to the displayed
-trinification tensor basis remains open.  No family, Yukawa, vacuum, or
-hardware claim is made.
+Boundary: the address and operator charts are not identified.  The parallel
+rank-obstruction certificates prove that no invertible H27-equivariant change
+of basis exists in dimension 27 (maximum rank 9), and no K-equivariant compiler
+exists in dimension 81 (maximum rank 27).  A non-equivariant,
+proper-subgroup-covariant, or otherwise symmetry-changing root-gauge compiler
+remains open.  No family, Yukawa, vacuum, or hardware claim is made.
 """
 from __future__ import annotations
 
@@ -628,8 +630,11 @@ def operator_geometry():
             "Kummer_mod4_D12_power3_commutes": False,
             "meaning": (
                 "Only the mod-3 shadow of Qpsi is scalar on the active two-qutrit factor. "
-                "The Z2 and Z4 shadows are outside the certified execution commutant; deciding "
-                "whether they normalize it requires the missing coordinate intertwiner."
+                "The Z2 and Z4 shadows are outside the certified execution commutant. "
+                "The complete Steiner/trinification monomial-atlas certificate now also proves "
+                "that neither shadow normalizes the execution algebra in any of its 51840 "
+                "W(E6)-compatible charts. Parallel rank obstructions rule out a full H27- or "
+                "K-equivariant basis conjugacy; only a symmetry-changing compiler remains open."
             ),
         },
         "operator_center_basis_fixed_points": 27,
@@ -650,12 +655,26 @@ def main(write=True):
         "matter81": json.loads(
             (ROOT / "data/w33_e8_matter81_frame_qutrit_tensor_carrier.json").read_text()
         ),
+        "H27_intertwiner_obstruction": json.loads(
+            (ROOT / "data/w33_address_operator_h27_intertwiner_obstruction.json").read_text()
+        ),
+        "K81_intertwiner_obstruction": json.loads(
+            (ROOT / "data/w33_scheduler_operator_k81_intertwiner_obstruction.json").read_text()
+        ),
     }
     landed = parents["landed_address_operator_roles"]
     assert landed["status"] == "PASS_ADDRESS_AND_OPERATOR_H27_ROLES_SEPARATED_AND_EXECUTABLE"
     assert parents["regular_center_nogo"]["status"].startswith("PASS_PASS369_CENTER")
     assert parents["physical_pauli243"]["status"].startswith("PASS_E8_CONTAINS")
     assert parents["matter81"]["status"].startswith("PASS_E8_MATTER81")
+    h27_obstruction = parents["H27_intertwiner_obstruction"]
+    k81_obstruction = parents["K81_intertwiner_obstruction"]
+    assert h27_obstruction["intertwiner"]["maximum_rank"] == 9
+    assert h27_obstruction["intertwiner"]["target_dimension"] == 27
+    assert h27_obstruction["intertwiner"]["invertible_intertwiner_exists"] is False
+    assert k81_obstruction["intertwiner"]["maximum_rank"] == 27
+    assert k81_obstruction["intertwiner"]["target_dimension"] == 81
+    assert k81_obstruction["intertwiner"]["invertible_equivariant_compiler_exists"] is False
 
     address = address_geometry()
     operator = operator_geometry()
@@ -691,7 +710,7 @@ def main(write=True):
     assert operator["commutant"] == landed["operator"]["commutant"].replace("M9", "M_9").replace("I9", "I_9")
 
     out = {
-        "schema": "w33.e8_matter81_h27_address_operator_compiler.v2",
+        "schema": "w33.e8_matter81_h27_address_operator_compiler.v3",
         "status": "PASS_INCREMENTAL_H27_CLIFFORD_UNIQUENESS_AND_QPSI_COMMUTANT_AUDIT",
         "headline": (
             "The new H27 results form an address/operator pair, not one silently interchangeable group action. "
@@ -715,11 +734,27 @@ def main(write=True):
                 "fixes every basis label. Fixed-point counts are invariant under permutation conjugacy."
             ),
         },
+        "equivariant_compiler_obstruction": {
+            "H27_maximum_rank": h27_obstruction["intertwiner"]["maximum_rank"],
+            "H27_target_dimension": h27_obstruction["intertwiner"]["target_dimension"],
+            "invertible_H27_equivariant_intertwiner_exists": h27_obstruction[
+                "intertwiner"
+            ]["invertible_intertwiner_exists"],
+            "K81_maximum_rank": k81_obstruction["intertwiner"]["maximum_rank"],
+            "K81_target_dimension": k81_obstruction["intertwiner"]["target_dimension"],
+            "invertible_K81_equivariant_compiler_exists": k81_obstruction[
+                "intertwiner"
+            ]["invertible_equivariant_compiler_exists"],
+            "surviving_frontier": (
+                "Construct a non-equivariant, proper-subgroup-covariant, or otherwise "
+                "symmetry-changing frozen-root dictionary, and record the symmetry lost."
+            ),
+        },
         "virtual_machine_reading": {
             "scheduler": "K=H27_regular x C3_external_shift addresses all 81 roots and its ten selected C3 coset families are the 270 cubic instructions",
             "execution_unit": "3_+^(1+4) acts as the two-qutrit Pauli algebra on C3_internal tensor C3_external",
             "protected_or_latent_register": "the exact C9 multiplicity factor, whose full M9 algebra is the commutant of the execution algebra",
-            "compiler_gap": "construct the explicit frozen-root-gauge change of basis linking the regular address chart to the trinification multiplicity/active-qutrit chart",
+            "compiler_gap": "construct a symmetry-changing frozen-root dictionary linking the regular address chart to the trinification multiplicity/active-qutrit chart; full H27/K equivariance is impossible",
         },
         "ownership_and_increment": {
             "broad_theorem_owner": "analysis/w33_address_operator_h27_roles.py and data/w33_address_operator_h27_roles.json",
@@ -741,6 +776,8 @@ def main(write=True):
             "data/w33_e6_internal_h27_center_gluing_nogo.json",
             "data/w33_e8_trinification_two_qutrit_pauli243.json",
             "data/w33_e8_matter81_frame_qutrit_tensor_carrier.json",
+            "data/w33_address_operator_h27_intertwiner_obstruction.json",
+            "data/w33_scheduler_operator_k81_intertwiner_obstruction.json",
             "data/w33_qpsi_matter_parity_e8_d8_bridge.json",
             "data/w33_physical_clifford648_full_permutation_dictionary.json",
             "data/w33_pass371_naturality_and_the_clifford_match.json",
@@ -760,7 +797,9 @@ def main(write=True):
             "operator_and_commutant_dimensions_are_81": True,
             "Qpsi_clock_commutant_intersection_is_exactly_FI_Z3": True,
             "address_operator_permutation_conflation_refuted": True,
-            "coordinate_intertwiner_left_open": True,
+            "H27_equivariant_coordinate_intertwiner_exists": False,
+            "full_K_equivariant_compiler_exists": False,
+            "symmetry_changing_coordinate_dictionary_left_open": True,
         },
     }
     if write:

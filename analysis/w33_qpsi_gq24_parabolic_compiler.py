@@ -16,7 +16,9 @@ its order is 1920 and 51840/1920=27.  This turns the familiar branching
 Qpsi chart with choosing one point/weight of the minuscule 27.
 
 The result is coordinate-free after the anchor is chosen.  It does not select
-that anchor physically or construct the address-to-operator intertwiner.
+that anchor physically.  Parallel representation audits prove that a full
+H27- or K-equivariant address-to-operator basis conjugacy cannot exist; the
+remaining compiler problem is explicitly symmetry-changing.
 """
 from __future__ import annotations
 
@@ -49,6 +51,16 @@ def charge(meet: nx.Graph, anchor: int, point: int) -> int:
 
 
 def main(write: bool = True) -> dict:
+    h27_obstruction = json.loads(
+        (ROOT / "data/w33_address_operator_h27_intertwiner_obstruction.json").read_text()
+    )
+    k81_obstruction = json.loads(
+        (ROOT / "data/w33_scheduler_operator_k81_intertwiner_obstruction.json").read_text()
+    )
+    assert h27_obstruction["intertwiner"]["maximum_rank"] == 9
+    assert h27_obstruction["intertwiner"]["invertible_intertwiner_exists"] is False
+    assert k81_obstruction["intertwiner"]["maximum_rank"] == 27
+    assert k81_obstruction["intertwiner"]["invertible_equivariant_compiler_exists"] is False
     prior = load(
         ROOT / "analysis/w33_z6_objectwise_33_48_32_carrier.py",
         "qpsi_objectwise_prior",
@@ -167,7 +179,7 @@ def main(write: bool = True) -> dict:
     )
 
     out = {
-        "schema": "w33.qpsi_gq24_parabolic_compiler.v1",
+        "schema": "w33.qpsi_gq24_parabolic_compiler.v2",
         "status": "PASS_QPSI_IS_AN_ANCHORED_GQ24_PARABOLIC_CLOCK",
         "headline": (
             "On the 27 cubic-surface lines, choosing one anchor a compiles the E6 "
@@ -212,12 +224,31 @@ def main(write: bool = True) -> dict:
             "prior_result": "for one chosen 1_4 anchor, the 10 meeting and 16 far frames carry charges -2 and 1",
             "increment": "closed formula for all 27 anchors, exact W(E6)/W(D5) chart orbit, equivariance, and incidence-only cubic-neutrality compiler",
         },
+        "equivariant_compiler_obstruction": {
+            "H27_maximum_rank": h27_obstruction["intertwiner"]["maximum_rank"],
+            "H27_target_dimension": h27_obstruction["intertwiner"]["target_dimension"],
+            "K81_maximum_rank": k81_obstruction["intertwiner"]["maximum_rank"],
+            "K81_target_dimension": k81_obstruction["intertwiner"]["target_dimension"],
+            "invertible_H27_equivariant_intertwiner_exists": False,
+            "invertible_K81_equivariant_compiler_exists": False,
+            "surviving_frontier": (
+                "Choose and justify a non-equivariant, proper-subgroup-covariant, or "
+                "otherwise symmetry-changing root-coordinate dictionary."
+            ),
+        },
         "boundary": (
             "The theorem identifies the 27 conjugate Qpsi charts and compiles a chosen "
             "clock on frame addresses. It does not physically select an anchor, identify "
-            "observed generations, or construct the frozen-root-to-trinification operator "
-            "intertwiner needed to decide the full Pauli-algebra normalizer question."
+            "observed generations, or select a symmetry-changing frozen-root-to-trinification "
+            "operator dictionary. Full H27/K-equivariant conjugacies are ruled out at maximum "
+            "ranks 9/27 and 27/81. The separate complete Steiner-atlas certificate now decides "
+            "the monomial Pauli-algebra normalizer question uniformly across all 51840 charts."
         ),
+        "parents": [
+            "data/w33_address_operator_h27_intertwiner_obstruction.json",
+            "data/w33_scheduler_operator_k81_intertwiner_obstruction.json",
+            "data/w33_steiner_trinification_qpsi_normalizer.json",
+        ],
         "checks": {
             "conventional_Qpsi_equals_anchor_formula": True,
             "all_27_anchor_charts_have_1_10_16_branching": True,
@@ -226,6 +257,9 @@ def main(write: bool = True) -> dict:
             "five_anchor_fixing_reflections_generate_W_D5": True,
             "chart_orbit_has_27_elements": True,
             "formula_is_W_E6_equivariant": True,
+            "H27_equivariant_intertwiner_is_rank_obstructed": True,
+            "K81_equivariant_compiler_is_rank_obstructed": True,
+            "symmetry_changing_compiler_remains_open": True,
         },
     }
     if write:

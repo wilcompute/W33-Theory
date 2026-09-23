@@ -1,0 +1,678 @@
+{
+  "schema": "w33.steiner_trinification_qpsi_normalizer.v3",
+  "status": "PASS_ALL_WE6_TRINIFICATION_CHARTS_EXCLUDE_NONFI_QPSI_NORMALIZERS",
+  "headline": "The ternary kernel of the 45 Cartan-cubic supports is a [27,6,12]_3 conservation code. Projectivizing it modulo constants gives the objectwise PG(4,3) dictionary 121=36 double-sixes+40 Steiner triads+45 tritangents. The 40 Steiner partitions expand to 51840 tensor charts, exactly one regular W(E6) orbit. Across that complete atlas and all 27 Qpsi anchors, D12^k normalizes I9 tensor M9 exactly for k=0,4,8. Matter parity k=6 is never a normalizer, although 5760 charts reduce it to a separable normalizer times one address-conditioned phase cell.",
+  "ternary_kernel": {
+    "incidence_matrix_shape": [
+      45,
+      27
+    ],
+    "rank_F3": 21,
+    "nullity_F3": 6,
+    "code_parameters": "[27,6,12]_3",
+    "kernel_word_count": 729,
+    "weight_enumerator": {
+      "0": 1,
+      "12": 72,
+      "18": 510,
+      "21": 144,
+      "27": 2
+    },
+    "complete_content_census": {
+      "0,0,27": 1,
+      "0,27,0": 1,
+      "6,6,15": 72,
+      "6,15,6": 72,
+      "9,9,9": 510,
+      "15,6,6": 72,
+      "27,0,0": 1
+    },
+    "balanced_9_9_9_words": 510,
+    "special_labelled_words": 240,
+    "special_support_split": {
+      "monochromatic_determinant_terms": 18,
+      "rainbow_trace_terms": 27
+    },
+    "ordinary_labelled_words": 270,
+    "ordinary_support_split": {
+      "monochromatic_terms": 12,
+      "rainbow_terms": 33
+    },
+    "unlabelled_partitions": 40,
+    "other_unlabelled_partitions": 45,
+    "colourings_per_partition": 6,
+    "kernel_basis": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        0,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        2,
+        0,
+        2,
+        2,
+        1,
+        0,
+        0,
+        2,
+        0,
+        0,
+        1,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        2,
+        2,
+        0,
+        2,
+        1,
+        0,
+        0,
+        0,
+        2,
+        0,
+        1,
+        0,
+        0,
+        0,
+        2,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        0,
+        2,
+        2,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        2,
+        2,
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "partition_digest_sha256": "cda65aaebf513d8bea7530bff6792f1c182600293308c00c4de2e7946bbd8a9e",
+    "line_side_transpose_rank_F3": 21,
+    "line_side_kernel_dimension_F3": 24
+  },
+  "projective_121_dictionary": {
+    "construction": "P(ker_F3(C) / <all-ones>) = PG(4,3)",
+    "quotient_vector_dimension": 5,
+    "projective_ray_count": 121,
+    "codeword_lifts_per_ray": 6,
+    "W_E6_projective_action_order": 51840,
+    "W_E6_projective_orbit_sizes": [
+      36,
+      40,
+      45
+    ],
+    "invariant_quadratic_form_matrix_F3": [
+      [
+        2,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      [
+        0,
+        2,
+        2,
+        1,
+        2
+      ],
+      [
+        0,
+        2,
+        1,
+        2,
+        2
+      ],
+      [
+        1,
+        2,
+        2,
+        2,
+        2
+      ]
+    ],
+    "norm_class_dictionary": {
+      "norm_0": "40 Steiner triads",
+      "norm_1": "45 tritangents",
+      "norm_2": "36 double-sixes"
+    },
+    "objectwise_checks": {
+      "36_weight12_supports_equal_36_prior_double_sixes": true,
+      "40_eighteen_monochromatic_partitions_equal_40_prior_steiner_triads": true,
+      "45_twelve_monochromatic_partitions_equal_45_tritangent_stars": true
+    },
+    "weight12_double_six_digest_sha256": "3dafa45f2ae716b1f43cb3a656dfd41f964cc501d387254cde912cd0e397b4ee",
+    "steiner_partition_digest_sha256": "cda65aaebf513d8bea7530bff6792f1c182600293308c00c4de2e7946bbd8a9e",
+    "tritangent_partition_map_digest_sha256": "00f9d24d77fe92124d82d1bddb1e01bf2ffb92e580d6d545a48c21099ca0dc20",
+    "projective_points_digest_sha256": "29520a33bd7efc56faeb6930525e557f04a337f46322251144a4507412f1c208",
+    "prior_owner_of_abstract_norm_classes": "analysis/PASS4857_4864_EXECUTED_OUTCOMES.md and analysis/w33_pass4863_4864_o5_adjoint_homology.py",
+    "increment": "The cubic-conservation code supplies one objectwise carrier for all three norm classes; Pass4863 previously identified only the 36-class with double-sixes."
+  },
+  "steiner_prior_crosscheck": {
+    "prior_owner": "analysis/w33_e6_120_steiner_trihedral_pairs.py",
+    "prior_steiner_nonets": 120,
+    "prior_triads": 40,
+    "kernel_partitions_equal_prior_40_triads": true,
+    "prior_art_boundary": "The 120 Steiner sets, their 40 triple systems, the A2^3 interpretation, and the index-40 W(E6) orbit are classical and already owned in the repository."
+  },
+  "trinification_atlas": {
+    "partition_block_sizes": [
+      9,
+      9,
+      9
+    ],
+    "cubic_support_split_per_partition": "3*6 determinant + 27 rainbow trace",
+    "charts_per_partition": 1296,
+    "chart_count_factorization": "6 sector assignments * 6^3 shared-factor relabellings",
+    "total_labelled_charts": 51840,
+    "W_E6_order": 51840,
+    "partition_stabilizer_order": 1296,
+    "W_E6_action_on_labelled_atlas": "regular",
+    "atlas_digest_sha256": "fbde44a5503d3b7da943155337dbfa7b64f2dca70bef5492fa94c60ea959e0c3"
+  },
+  "qpsi_nonet_profile": {
+    "distinguished_nonet": {
+      "4": 1,
+      "-2": 4,
+      "1": 4
+    },
+    "other_two_nonets_each": {
+      "-2": 3,
+      "1": 6
+    },
+    "anchor_partition_pairs_checked": 1080
+  },
+  "normalizer_closure": {
+    "execution_algebra": "I9_multiplicity tensor M9_internal_external",
+    "criterion": "A diagonal normalizer must factor across multiplicity versus active registers; equivalently its 9x3 Qpsi exponent table has vanishing additive 2x2 minors mod 12.",
+    "normalizing_chart_counts_by_D12_power": {
+      "0": 51840,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 51840,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 51840,
+      "9": 0,
+      "10": 0,
+      "11": 0
+    },
+    "normalizing_powers_mod12": [
+      0,
+      4,
+      8
+    ],
+    "intersection": "<D12> intersect N(I9 tensor M9) = <D12^4> = C3",
+    "matter_parity_D12_power6_normalizes_in_any_chart": false,
+    "all_27_anchors_follow_by_W_E6_equivariance": true
+  },
+  "minimal_interface_repair": {
+    "separable_binary_phase_tables": 2048,
+    "distinct_matter_parity_tables_over_atlas": 27,
+    "multiplicity_of_each_parity_table": 1920,
+    "hamming_distance_to_separable_table_census": {
+      "1": 5760,
+      "5": 34560,
+      "6": 11520
+    },
+    "relative_anchor_distance_census_in_one_chart": {
+      "1": 3,
+      "5": 18,
+      "6": 6
+    },
+    "minimum_phase_cells": 1,
+    "best_chart_count": 5760,
+    "best_witness": {
+      "anchor": 0,
+      "chart": [
+        {
+          "point": 0,
+          "sector": "A_Bbar",
+          "u": 0,
+          "v": 0,
+          "multiplicity_m": 0,
+          "internal_q": 0
+        },
+        {
+          "point": 1,
+          "sector": "A_Bbar",
+          "u": 0,
+          "v": 1,
+          "multiplicity_m": 2,
+          "internal_q": 2
+        },
+        {
+          "point": 2,
+          "sector": "A_Bbar",
+          "u": 0,
+          "v": 2,
+          "multiplicity_m": 1,
+          "internal_q": 1
+        },
+        {
+          "point": 3,
+          "sector": "Abar_C",
+          "u": 1,
+          "v": 0,
+          "multiplicity_m": 6,
+          "internal_q": 1
+        },
+        {
+          "point": 4,
+          "sector": "Abar_C",
+          "u": 2,
+          "v": 0,
+          "multiplicity_m": 6,
+          "internal_q": 2
+        },
+        {
+          "point": 5,
+          "sector": "Abar_C",
+          "u": 0,
+          "v": 1,
+          "multiplicity_m": 7,
+          "internal_q": 0
+        },
+        {
+          "point": 6,
+          "sector": "B_Cbar",
+          "u": 0,
+          "v": 1,
+          "multiplicity_m": 4,
+          "internal_q": 0
+        },
+        {
+          "point": 7,
+          "sector": "B_Cbar",
+          "u": 1,
+          "v": 1,
+          "multiplicity_m": 4,
+          "internal_q": 1
+        },
+        {
+          "point": 8,
+          "sector": "B_Cbar",
+          "u": 2,
+          "v": 1,
+          "multiplicity_m": 4,
+          "internal_q": 2
+        },
+        {
+          "point": 9,
+          "sector": "Abar_C",
+          "u": 2,
+          "v": 2,
+          "multiplicity_m": 8,
+          "internal_q": 2
+        },
+        {
+          "point": 10,
+          "sector": "Abar_C",
+          "u": 1,
+          "v": 2,
+          "multiplicity_m": 8,
+          "internal_q": 1
+        },
+        {
+          "point": 11,
+          "sector": "Abar_C",
+          "u": 0,
+          "v": 2,
+          "multiplicity_m": 8,
+          "internal_q": 0
+        },
+        {
+          "point": 12,
+          "sector": "B_Cbar",
+          "u": 0,
+          "v": 2,
+          "multiplicity_m": 5,
+          "internal_q": 0
+        },
+        {
+          "point": 13,
+          "sector": "B_Cbar",
+          "u": 1,
+          "v": 2,
+          "multiplicity_m": 5,
+          "internal_q": 1
+        },
+        {
+          "point": 14,
+          "sector": "B_Cbar",
+          "u": 2,
+          "v": 2,
+          "multiplicity_m": 5,
+          "internal_q": 2
+        },
+        {
+          "point": 15,
+          "sector": "Abar_C",
+          "u": 2,
+          "v": 1,
+          "multiplicity_m": 7,
+          "internal_q": 2
+        },
+        {
+          "point": 16,
+          "sector": "Abar_C",
+          "u": 1,
+          "v": 1,
+          "multiplicity_m": 7,
+          "internal_q": 1
+        },
+        {
+          "point": 17,
+          "sector": "Abar_C",
+          "u": 0,
+          "v": 0,
+          "multiplicity_m": 6,
+          "internal_q": 0
+        },
+        {
+          "point": 18,
+          "sector": "A_Bbar",
+          "u": 1,
+          "v": 2,
+          "multiplicity_m": 2,
+          "internal_q": 0
+        },
+        {
+          "point": 19,
+          "sector": "A_Bbar",
+          "u": 2,
+          "v": 2,
+          "multiplicity_m": 0,
+          "internal_q": 2
+        },
+        {
+          "point": 20,
+          "sector": "B_Cbar",
+          "u": 0,
+          "v": 0,
+          "multiplicity_m": 3,
+          "internal_q": 0
+        },
+        {
+          "point": 21,
+          "sector": "A_Bbar",
+          "u": 2,
+          "v": 1,
+          "multiplicity_m": 1,
+          "internal_q": 0
+        },
+        {
+          "point": 22,
+          "sector": "A_Bbar",
+          "u": 1,
+          "v": 1,
+          "multiplicity_m": 0,
+          "internal_q": 1
+        },
+        {
+          "point": 23,
+          "sector": "B_Cbar",
+          "u": 1,
+          "v": 0,
+          "multiplicity_m": 3,
+          "internal_q": 1
+        },
+        {
+          "point": 24,
+          "sector": "A_Bbar",
+          "u": 2,
+          "v": 0,
+          "multiplicity_m": 2,
+          "internal_q": 1
+        },
+        {
+          "point": 25,
+          "sector": "A_Bbar",
+          "u": 1,
+          "v": 0,
+          "multiplicity_m": 1,
+          "internal_q": 2
+        },
+        {
+          "point": 26,
+          "sector": "B_Cbar",
+          "u": 2,
+          "v": 0,
+          "multiplicity_m": 3,
+          "internal_q": 2
+        }
+      ],
+      "separable_alpha_negative_m": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "separable_beta_negative_q": [
+        0
+      ],
+      "single_defect_mq": [
+        0,
+        0
+      ],
+      "matter81_defect_support": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ]
+    },
+    "meaning": "In the best Weyl gauges, matter parity is one internal (m,q) sign cell away from a tensor normalizer. On matter81 that cell is replicated over the three external-qutrit states, so the minimal diagonal interface correction has support 3."
+  },
+  "equivariant_compiler_obstruction": {
+    "H27_maximum_rank": 9,
+    "H27_target_dimension": 27,
+    "K81_maximum_rank": 27,
+    "K81_target_dimension": 81,
+    "invertible_H27_equivariant_intertwiner_exists": false,
+    "invertible_K81_equivariant_compiler_exists": false,
+    "surviving_frontier": "The finite normalizer is closed independently of the root gauge. A physical root-coordinate compiler must be non-equivariant, proper-subgroup-covariant, or otherwise symmetry-changing."
+  },
+  "ownership_and_increment": {
+    "classical_and_repo_prior": [
+      "40 Steiner triple systems / A2^3 subsystems",
+      "120 Steiner trihedral pairs grouped into 40 triads",
+      "W(E6) order 51840 and index-40 A2^3 stabilizer",
+      "abstract PG(4,3) orthogonal norm-class sizes 40,45,36 and the 36-class double-six identification",
+      "the representation-dimension triangle 40+36+45=121"
+    ],
+    "new_executable_composition": [
+      "the ternary [27,6,12] cubic-conservation code and its full weight enumerator",
+      "the objectwise projective dictionary 121=36 double-sixes+40 Steiner triads+45 tritangents",
+      "the dual-kernel bridge between six point charges and 24 line holonomies",
+      "the F3 balanced-kernel census 510=240+270 -> 40+45 partitions",
+      "the complete 51840-chart coordinate atlas as a regular W(E6) torsor",
+      "the all-chart Qpsi normalizer intersection C3",
+      "the exact one-cell/three-matter-state minimal interface repair"
+    ],
+    "external_checks": [
+      "https://arxiv.org/abs/math/0507118",
+      "https://sites.lsa.umich.edu/idolga/wp-content/uploads/sites/1334/2024/08/CAG.21.pdf"
+    ]
+  },
+  "boundary": "This exhausts Weyl-compatible monomial trinification charts and diagonal Qpsi powers. It does not select a physical chart or vacuum, prove that the one-cell repair is dynamically available, select a symmetry-changing root-coordinate compiler, or identify observed particles with individual weights. Full H27/K equivariant basis conjugacies are already excluded by the rank-9/rank-27 obstructions.",
+  "parents": [
+    "data/w33_address_operator_h27_intertwiner_obstruction.json",
+    "data/w33_scheduler_operator_k81_intertwiner_obstruction.json"
+  ],
+  "checks": {
+    "incidence_rank21_nullity6": true,
+    "ternary_code_is_27_6_12_with_frozen_weight_enumerator": true,
+    "kernel_census_729_and_balanced_split_510_equals240_plus270": true,
+    "projective_quotient_has_121_rays_in_36_40_45_orbits": true,
+    "projective_dictionary_is_objectwise_double_six_steiner_tritangent": true,
+    "invariant_O5_norm_classes_are_40_45_36": true,
+    "same_incidence_has_point_nullity6_and_line_nullity24": true,
+    "kernel_partitions_equal_prior_steiner_triads": true,
+    "each_partition_has_18_determinant_27_rainbow_supports": true,
+    "atlas_has_40_times1296_equals51840_charts": true,
+    "atlas_is_one_regular_W_E6_orbit": true,
+    "all_anchor_nonet_profiles_agree": true,
+    "only_D12_powers_0_4_8_normalize": true,
+    "matter_parity_never_normalizes": true,
+    "minimal_interface_repair_is_one_phase_cell": true,
+    "H27_equivariant_intertwiner_is_rank_obstructed": true,
+    "K81_equivariant_compiler_is_rank_obstructed": true,
+    "symmetry_changing_compiler_remains_open": true
+  }
+}

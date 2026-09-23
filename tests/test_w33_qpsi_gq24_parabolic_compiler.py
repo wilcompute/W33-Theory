@@ -40,3 +40,11 @@ def test_qpsi_clock_formula_parabolic_and_scope_are_frozen():
     assert len(out["all_anchor_charts"]) == 27
     assert all(out["checks"].values())
     assert "does not physically select an anchor" in out["boundary"]
+    obstruction = out["equivariant_compiler_obstruction"]
+    assert obstruction["H27_maximum_rank"] == 9
+    assert obstruction["H27_target_dimension"] == 27
+    assert obstruction["K81_maximum_rank"] == 27
+    assert obstruction["K81_target_dimension"] == 81
+    assert obstruction["invertible_H27_equivariant_intertwiner_exists"] is False
+    assert obstruction["invertible_K81_equivariant_compiler_exists"] is False
+    assert "symmetry-changing" in obstruction["surviving_frontier"]

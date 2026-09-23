@@ -75,3 +75,17 @@ def test_address_execution_and_qpsi_firewalls_remain_visible():
     assert witness["regular_address_H27_center_orbit_size"] == 3
     assert witness["trinification_operator_H27_center_basis_fixed_points"] == 27
     assert witness["equivariant_basis_bijection_exists"] is False
+
+    obstruction = checked["equivariant_compiler_obstruction"]
+    assert obstruction["H27_maximum_rank"] == 9
+    assert obstruction["H27_target_dimension"] == 27
+    assert obstruction["invertible_H27_equivariant_intertwiner_exists"] is False
+    assert obstruction["K81_maximum_rank"] == 27
+    assert obstruction["K81_target_dimension"] == 81
+    assert obstruction["invertible_K81_equivariant_compiler_exists"] is False
+    assert "symmetry-changing" in obstruction["surviving_frontier"]
+
+    checks = checked["checks"]
+    assert checks["H27_equivariant_coordinate_intertwiner_exists"] is False
+    assert checks["full_K_equivariant_compiler_exists"] is False
+    assert checks["symmetry_changing_coordinate_dictionary_left_open"] is True

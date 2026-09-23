@@ -1,0 +1,92 @@
+% PASS20260922 -- complete Steiner/trinification atlas and Qpsi normalizer closure.
+\ifdefined\WDDSteinerTrinificationQpsiNormalizerLoaded
+  \expandafter\endinput
+\else
+  \gdef\WDDSteinerTrinificationQpsiNormalizerLoaded{1}%
+\fi
+
+\subsection*{The complete Steiner atlas excludes non-FI $Q_\psi$ normalizers}
+\label{sec:steiner-trinification-qpsi-normalizer}
+
+Let $C$ be the $45\times27$ support matrix of the Cartan cubic.  Exact
+row reduction over $\mathbb F_3$ gives
+\[
+ \operatorname{rank}C=21,
+ \qquad\dim\ker C=6.
+\]
+Thus $\ker C$ is a ternary $[27,6,12]_3$ conservation code, with exact weight
+enumerator
+\[
+ 1+72z^{12}+510z^{18}+144z^{21}+2z^{27}.
+\]
+This is distinct from the earlier binary $[27,6,12]_2$ double-six incidence
+code.  Among its $3^6=729$ words, $510$ have content $9+9+9$.  They split as
+$240$ words with eighteen monochromatic and twenty-seven rainbow cubic terms,
+and $270$ words with twelve monochromatic and thirty-three rainbow terms.
+After the six colour relabellings these give forty and forty-five partitions,
+respectively.
+
+The constant word lies in the code.  Projectivizing its quotient gives
+\[
+ \mathbb P(\ker C/\langle\mathbf1\rangle)=PG(4,3),\qquad
+ \boxed{121=36+40+45}.
+\]
+The induced order-$51840$ $W(E_6)$ action preserves a nondegenerate
+five-dimensional quadratic form.  Direct support comparison identifies its
+norm classes objectwise:
+\[
+ Q=2:\ 36\ {\rm double\!-\!sixes},\qquad
+ Q=0:\ 40\ {\rm Steiner\ triads},\qquad
+ Q=1:\ 45\ {\rm tritangents}.
+\]
+The weight-twelve supports are exactly the double-sixes.  The forty
+eighteen-monochromatic partitions are exactly the classical Steiner triads
+already owned by Part~MCCCXCVI and Pass~4870.  For each of the other forty-five
+partitions, its twelve monochromatic cubics are exactly the star of one
+tritangent.  Pass~4863 already owned the abstract $40,45,36$ norm-class sizes
+and the $36$-class identification; the common code and the objectwise $40$-
+and $45$-class identifications are the increment here.  The transpose has
+nullity $24$, so the point-charge six-space and the prior line-holonomy
+twenty-four-space are the two kernels of the same cubic incidence matrix.
+
+Each partition has six sector assignments and $6^3$ shared-factor coordinate
+labellings.  Hence the complete incidence-defined monomial atlas contains
+\[
+ 40\cdot6\cdot6^3=40\cdot1296=51840
+\]
+distinct trinification charts.  The exact $W(E_6)$ action on one chart has
+this whole atlas as its orbit with trivial chart stabilizer.  Equivalently,
+the atlas is a regular $W(E_6)$-torsor, while an unordered partition has
+stabilizer order $1296$.
+
+In any chart write a weight as $(m,q)$, with nine-valued multiplicity address
+$m$ and internal qutrit $q$; the external qutrit $p$ is unchanged by $Q_\psi$.
+A diagonal normalizer of $I_9\otimes M_9(\mathbb C)$ must factor across its
+multiplicity and active registers.  Therefore $D_{12}^k$ normalizes precisely
+when its $9\times3$ exponent table is additively separable modulo twelve, or
+equivalently when every anchored additive $2\times2$ minor vanishes.  Exhaustion
+of all charts gives, for $k=0,\ldots,11$,
+\[
+ (51840,0,0,0,51840,0,0,0,51840,0,0,0).
+\]
+Thus
+\[
+ \boxed{\langle D_{12}\rangle\cap
+ N(I_9\otimes M_9)=\langle D_{12}^{4}\rangle\cong C_3,}
+\]
+and matter parity $D_{12}^{6}$ is not a normalizer in any compatible monomial
+chart.
+
+The obstruction is nevertheless sharply local.  The Hamming distances of the
+51,840 parity tables to the $2048$ separable binary tables have census
+\[
+ 1^{5760}\,5^{34560}\,6^{11520}.
+\]
+In a best chart only one $(m,q)$ phase cell must be corrected; on Matter81 it
+is repeated over the three values of $p$, so the diagonal correction has
+support three.  This finite theorem neither selects a physical chart or vacuum
+nor proves that the correction is dynamically available.  Separate sharp
+rank bounds exclude an invertible $H_{27}$-equivariant change of basis
+($9<27$) and an invertible $H_{27}\times C_3$-equivariant Matter81 compiler
+($27<81$).  The remaining frozen-root dictionary must be non-equivariant,
+proper-subgroup-covariant, or otherwise symmetry-changing.

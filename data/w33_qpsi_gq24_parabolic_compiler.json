@@ -1,5 +1,5 @@
 {
-  "schema": "w33.qpsi_gq24_parabolic_compiler.v1",
+  "schema": "w33.qpsi_gq24_parabolic_compiler.v2",
   "status": "PASS_QPSI_IS_AN_ANCHORED_GQ24_PARABOLIC_CLOCK",
   "headline": "On the 27 cubic-surface lines, choosing one anchor a compiles the E6 Qpsi charge by q_a(i)=1+3 delta_ai-3 A_ai: the anchor is 1_4, its ten GQ(2,4) neighbours are 10_-2, and its sixteen nonneighbours are 16_1. Every tritangent is automatically neutral, with patterns 5*(-2,-2,4)+40*(-2,1,1). The 27 clocks form one W(E6) orbit and each clock stabilizer is the order-1920 parabolic W(D5).",
   "incidence_clock": {
@@ -441,7 +441,21 @@
     "prior_result": "for one chosen 1_4 anchor, the 10 meeting and 16 far frames carry charges -2 and 1",
     "increment": "closed formula for all 27 anchors, exact W(E6)/W(D5) chart orbit, equivariance, and incidence-only cubic-neutrality compiler"
   },
-  "boundary": "The theorem identifies the 27 conjugate Qpsi charts and compiles a chosen clock on frame addresses. It does not physically select an anchor, identify observed generations, or construct the frozen-root-to-trinification operator intertwiner needed to decide the full Pauli-algebra normalizer question.",
+  "equivariant_compiler_obstruction": {
+    "H27_maximum_rank": 9,
+    "H27_target_dimension": 27,
+    "K81_maximum_rank": 27,
+    "K81_target_dimension": 81,
+    "invertible_H27_equivariant_intertwiner_exists": false,
+    "invertible_K81_equivariant_compiler_exists": false,
+    "surviving_frontier": "Choose and justify a non-equivariant, proper-subgroup-covariant, or otherwise symmetry-changing root-coordinate dictionary."
+  },
+  "boundary": "The theorem identifies the 27 conjugate Qpsi charts and compiles a chosen clock on frame addresses. It does not physically select an anchor, identify observed generations, or select a symmetry-changing frozen-root-to-trinification operator dictionary. Full H27/K-equivariant conjugacies are ruled out at maximum ranks 9/27 and 27/81. The separate complete Steiner-atlas certificate now decides the monomial Pauli-algebra normalizer question uniformly across all 51840 charts.",
+  "parents": [
+    "data/w33_address_operator_h27_intertwiner_obstruction.json",
+    "data/w33_scheduler_operator_k81_intertwiner_obstruction.json",
+    "data/w33_steiner_trinification_qpsi_normalizer.json"
+  ],
   "checks": {
     "conventional_Qpsi_equals_anchor_formula": true,
     "all_27_anchor_charts_have_1_10_16_branching": true,
@@ -449,6 +463,9 @@
     "six_reflections_generate_W_E6": true,
     "five_anchor_fixing_reflections_generate_W_D5": true,
     "chart_orbit_has_27_elements": true,
-    "formula_is_W_E6_equivariant": true
+    "formula_is_W_E6_equivariant": true,
+    "H27_equivariant_intertwiner_is_rank_obstructed": true,
+    "K81_equivariant_compiler_is_rank_obstructed": true,
+    "symmetry_changing_compiler_remains_open": true
   }
 }

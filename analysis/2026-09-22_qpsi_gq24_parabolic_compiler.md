@@ -83,8 +83,14 @@ how that diagonal clock factors in the trinification basis
 \mathbb C^3_{\rm ext}.
 \]
 
-That remaining change of basis is still required to decide whether the
-non-FI powers normalize the Pauli execution algebra.
+The subsequent complete Steiner-atlas certificate exhausts all 51,840
+Weyl-compatible monomial factorizations and proves that only powers (0,4,8)
+normalize the Pauli execution algebra.  Parallel representation audits also
+prove that the missing root-gauge map cannot be an equivariant basis
+conjugacy: the maximum ranks are 9 on the 27-dimensional H27 modules and 27
+on the 81-dimensional K modules.  A physical compiler must instead choose a
+non-equivariant or proper-subgroup-covariant dictionary, but it is no longer
+needed to answer that finite monomial normalizer question.
 
 ## Ownership and external checks
 
@@ -101,4 +107,7 @@ art.  No claim of novelty is made for those ingredients separately.
 
 Scope: this is an exact finite representation/incidence/compiler theorem.  It
 does not physically select an anchor, assign observed generations, determine
-a vacuum, or construct the address-to-operator intertwiner.
+a vacuum, or select the symmetry-changing address-to-operator dictionary.
+Full H27/K equivariance is already ruled out by the rank obstructions.  Its
+formerly open monomial normalizer follow-up is closed by
+\`analysis/w33_steiner_trinification_qpsi_normalizer.py\`.
