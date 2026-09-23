@@ -1,0 +1,187 @@
+{
+  "schema": "w33.20260923.execute_five_post_frontier_attacks.frozen.v1",
+  "status": "PASS_FIVE_EXECUTED_WITH_GEOMETRIC_HODGE_MINIMAL_SIMILITUDE_E8_KRAMERS_NOGO_PULSE_COMPILER_AND_PROFILE_LIKELIHOOD",
+  "attack1_geometric_hodge": {
+    "spherical_embedding_dimension": 24,
+    "exact_gram": "G=(5A+20I-2J)/18",
+    "gram_rank": 24,
+    "adjacent_inner_product": "1/6",
+    "nonadjacent_inner_product": "-1/9",
+    "edge_length_squared": "5/3",
+    "edge_length": 1.2909944487358056,
+    "transvection_edge_orbit_size": 240,
+    "cofaces": {
+      "tetrahedra_per_vertex": 4,
+      "tetrahedra_per_edge": 1,
+      "tetrahedra_per_triangle": 1
+    },
+    "regular_tetra_primal": {
+      "triangle_area": 0.721687836487032,
+      "tetra_volume": 0.25357525810424353
+    },
+    "circumcentric_dual": {
+      "dual3_vertex_volume": 0.25357525810424353,
+      "dual2_edge_area": 0.09820927516479827,
+      "dual1_triangle_length": 0.2635231383473649,
+      "dual0_tetra_measure": 1.0
+    },
+    "hodge_weights_exact_k0_to3": [
+      "5*sqrt(30)/108",
+      "sqrt(30)/72",
+      "sqrt(30)/15",
+      "18*sqrt(30)/25"
+    ],
+    "hodge_weights_numeric_k0_to3": [
+      0.25357525810424353,
+      0.07607257743127308,
+      0.36514837167011077,
+      3.943602414037197
+    ],
+    "result": "Aut(W33)-invariant edge metric is unique up to scale and the 24D spherical normalization makes every clique-line a regular tetrahedron with positive circumcentric weights.",
+    "boundary": "The clique complex is non-manifold: each triangle has one tetrahedral coface and vertex duals are branched. This is a positive piecewise-Euclidean circumcentric Hodge metric, not a smooth 3-manifold triangulation."
+  },
+  "attack2_full_similitude_unitaries": {
+    "minimality": "dim >= q(q-1) because determinant acts transitively on all q-1 nontrivial central characters and Stone-von Neumann gives an inequivalent q-dimensional Schrodinger irrep for each; the construction attains the bound.",
+    "q5": {
+      "dimension": 20,
+      "sectors": 4,
+      "primitive_determinant": "2",
+      "sector_cycle_length": 4,
+      "unitarity_errors": {
+        "S": 6.058102420380722e-16,
+        "N": 2.220446049250313e-16,
+        "D": 0.0
+      },
+      "max_covariance_error": 1.3743915342634358e-15
+    },
+    "q9": {
+      "field_model": "F3[a]/(a^2+1)",
+      "dimension": 72,
+      "sectors": 8,
+      "primitive_determinant": "1+a",
+      "sector_cycle_length": 8,
+      "unitarity_errors": {
+        "S": 3.0655276907685753e-15,
+        "N": 5.438959822042073e-16,
+        "D": 0.0
+      },
+      "max_covariance_error": 5.730837474195779e-15
+    },
+    "generator_actions": {
+      "S": "(u,v,z)->(-v,u,z)",
+      "N": "(u,v,z)->(u,v+u,z)",
+      "D_a": "(u,v,z)->(u,a v,a z)"
+    },
+    "q3_contrast": "q(q-1)=2q only at q=3, so the ordinary conjugate pair is already the full central-character completion only there."
+  },
+  "attack3_kramers_e8": {
+    "proposed_square": "A=T^2 is +I on g0 and -I on g1+g2",
+    "nonzero_g1_g1_pairs": 810,
+    "nonzero_g2_g2_pairs": 810,
+    "automorphism_sign_violations": 1620,
+    "first_exact_witness": {
+      "a": 10,
+      "b": 167,
+      "k": 20,
+      "coefficient": -1,
+      "grades": [1, 1, 2],
+      "A_signs": [-1, -1, -1]
+    },
+    "result": "The doubled T^2=-1 operator cannot be a Lie automorphism or anti-automorphism of the exact E8 bracket. It may only be imposed as a separate state-space/Hamiltonian symmetry. The certified J^2=+1 real involution remains bracket-compatible."
+  },
+  "attack4_fi_pulse_compiler": {
+    "one_tick_right_to_left_physical_sequence": [
+      "phase +120 deg on qutrit label 1 / centered OAM ell=+1",
+      "F3 dagger",
+      "phase +120 deg on qutrit label 0 / ell=0",
+      "F3",
+      "phase +120 deg on qutrit label 2 / ell=-1"
+    ],
+    "four_tick": {
+      "raw_primitives": 20,
+      "F3_or_inverse_traversals": 8,
+      "phase_masks": 12,
+      "hardware_layers_after_adjacent_diagonal_mask_merges": 17
+    },
+    "matrix_errors": {
+      "norm_UF4_minus_omegaI": 1.7189606447666377e-15,
+      "norm_UF12_minus_I": 5.862991401276798e-15
+    },
+    "readout": "UF^4 is a global phase on an isolated qutrit, so use a bypass/reference or controlled-U Ramsey arm; the signal arm must shift by +120 degrees.",
+    "coherent_phase_budget": {
+      "unambiguous_total_error_deg": 60.0,
+      "sufficient_half_budget_per_phase_mask_deg": 2.5,
+      "sufficient_half_budget_per_F3_equivalent_phase_deg": 3.75,
+      "inequality": "12 eps_phase + 8 eps_F3_phase < 60 deg"
+    },
+    "leakage": {
+      "repo_F3_symbolic_bound": 0.1,
+      "repo_Z_phase_symbolic_bound": 0.02,
+      "worst_survival_if_independent_bounds_saturated": 0.33779481870646016,
+      "uniform_per_primitive_leakage_for_90pct_survival": 0.005254174069468931,
+      "F3_only_leakage_for_90pct_survival_if_masks_ideal": 0.013083718633998487,
+      "phase_only_leakage_for_90pct_survival_if_F3_ideal": 0.008741610954696721,
+      "admission": "FAIL_CLOSED_CURRENT_SYMBOLIC_LEAKAGE_ENVELOPES_DO_NOT_CERTIFY_THE_20_PRIMITIVE_SEQUENCE"
+    }
+  },
+  "attack5_profile_likelihood": {
+    "model": "two-port Poisson with common rate profiled out to binomial p=[1+V(1-b)cos(phi+delta)]/2",
+    "nuisance": {
+      "V": "0.965 +/- 0.005, profiled over +/-3 sigma",
+      "background": "0.010 +/- 0.002, profiled over +/-3 sigma",
+      "phase_drift": "0 +/- 1 degree, profiled over +/-3 degrees"
+    },
+    "profile_grid_points": 2873,
+    "three_sigma_probability_ranges": {
+      "allowed": [0.6209720216809183, 0.6748978940960884],
+      "forbidden": [0.09069521601991531, 0.1367619776150118]
+    },
+    "one_sided_5sigma_alpha": 2.866515718791933e-7,
+    "rows": {
+      "64": {
+        "threshold_k_ge": 23,
+        "nominal_errors": [7.354973463325281e-7, 2.483363107374957e-7],
+        "three_sigma_box_worst_errors": [6.514887888626258e-6, 6.43625686312918e-6]
+      },
+      "80": {
+        "threshold_k_ge": 28,
+        "nominal_errors": [1.6571620316553728e-8, 2.5053607580440293e-8],
+        "three_sigma_box_worst_errors": [2.6500839823840566e-7, 1.2348343524817867e-6]
+      },
+      "87": {
+        "threshold_k_ge": 31,
+        "nominal_errors": [8.966481234182546e-9, 2.78751990853822e-9],
+        "three_sigma_box_worst_errors": [1.695719276750009e-7, 2.1544706109308055e-7]
+      },
+      "96": {
+        "threshold_k_ge": 34,
+        "nominal_errors": [1.3692877865246056e-9, 5.884890347611354e-10],
+        "three_sigma_box_worst_errors": [3.535052490156205e-8, 6.785663327728169e-8]
+      },
+      "128": {
+        "threshold_k_ge": 45,
+        "nominal_errors": [2.694503885985875e-12, 1.4596066845181282e-12],
+        "three_sigma_box_worst_errors": [2.026116731902472e-10, 7.47403431554662e-10]
+      }
+    },
+    "minimal_N_for_both_three_sigma_box_tails_below_5sigma_alpha": 87,
+    "monte_carlo_seed": 20260923,
+    "monte_carlo_trials_per_hypothesis": 100000,
+    "monte_carlo_errors": {
+      "32": [33, 12],
+      "48": [2, 0],
+      "64": [0, 0],
+      "87": [0, 0],
+      "128": [0, 0]
+    },
+    "monte_carlo_boundary": "MC validates ordinary power only; zero errors in 100k implies only a rule-of-three ~3e-5 95% upper bound, so the 5-sigma statement comes from exact binomial tails over the profiled nuisance box, not MC extrapolation.",
+    "result": "For the stated nuisance model the earlier N=128 design is conservative; N=87 is the exact first detected-event count in 60..100 where both worst three-sigma-box tails fall below one-sided 5-sigma alpha."
+  },
+  "boundaries": [
+    "piecewise-Euclidean positive Hodge metric is not a smooth-manifold theorem",
+    "full-similitude sectors are finite representation sectors, not observed particles",
+    "Kramers T^2=-1 is ruled out as E8 bracket symmetry",
+    "FI pulse compiler is fail-closed by current sequence-level leakage budget",
+    "profile likelihood is a design calculation, not laboratory significance"
+  ]
+}
