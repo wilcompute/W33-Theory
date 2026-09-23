@@ -1,0 +1,52 @@
+% PASS20260922 comparison of the two 36-state Hesse carriers.
+\subsection*{The two $36=12\times3$ Hesse carriers differ only at order three, and $Q_8$ repairs them}
+
+The ordinary Payne/Hesse $36$ and the maximal compiler-safe $36$ are both
+invariant under the exact common physical split complement
+$SL(2,3)$ of order $24$, but they are not the same $SL(2,3)$-set.  Their orbit
+splits are
+\[
+36_{\rm ordinary}=24+4+4+4,
+\qquad
+36_{\rm safe}=8+8+8+4+4+4.
+\]
+More sharply, their permutation characters agree on every element-order
+stratum except order three:
+\[
+\begin{array}{c|ccccc}
+\operatorname{ord}(g)&1&2&3&4&6\\ \hline
+|C|&1&1&8&6&8\\
+\chi_{\rm ordinary}(g)&36&12&3&0&3\\
+\chi_{\rm safe}(g)&36&12&9&0&3
+\end{array}
+\]
+so the obstruction is concentrated exactly on the qutrit order-three
+shear/transvection class.
+
+Restricting to the normal quaternion subgroup
+\[
+Q_8\triangleleft SL(2,3)
+\]
+removes that class.  Both $36$-sets then decompose as
+\[
+\boxed{8+8+8+4+4+4.}
+\]
+The $8$-orbits are regular $Q_8$ torsors and the $4$-orbits are copies of
+$Q_8/Z(Q_8)$.  Hence an objectwise $Q_8$-equivariant bijection exists.
+One deterministic frozen-gauge bijection is constructed and checked on all
+$8\cdot36=288$ action pairs.
+
+The repair is not canonical:
+\[
+\boxed{
+(3!\,8^3)(3!\,4^3)=1{,}179{,}648
+}
+\]
+distinct $Q_8$-equivariant bijections exist.
+
+\paragraph{Compiler consequence.}
+The address/operator bridge already has an exact quaternionic objectwise core.
+The remaining obstruction is purely the ternary order-three extension.  A
+future compiler should therefore complete a $Q_8$-equivariant seed by an
+order-three phase/shear rule rather than remap the other symmetry sectors.
+No physical selector among the $1{,}179{,}648$ gauges is claimed here.
