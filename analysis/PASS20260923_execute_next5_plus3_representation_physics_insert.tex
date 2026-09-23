@@ -1,0 +1,241 @@
+% 2026-09-23 — representation/physics frontier after geometric metricization.
+\subsection*{Geometric Dirac modules, qutrit realification, and $Z_3$-graded antiunitary pairing}
+
+For a regular tetrahedron of edge length $a$, the circumcentric Hodge ratios are
+\[
+\frac{w_1}{w_0}=\frac{1}{2a^2},\qquad
+\frac{w_2}{w_1}=\frac{8}{a^2},\qquad
+\frac{w_3}{w_2}=\frac{18}{a^2}.
+\]
+Combining these with the relevant unweighted incidence-square eigenvalues
+$16,4,4$ gives
+\[
+\boxed{
+\frac{8}{a^2}\{1,4,9\}.
+}
+\]
+At the W33 spherical normalization $a^2=5/3$ this is exactly
+\[
+\boxed{
+\left\{\frac{24}{5},\frac{96}{5},\frac{216}{5}\right\}
+=
+\frac{24}{5}\{1^2,2^2,3^2\}.
+}
+\]
+A fresh GAP decomposition of the signed simplicial chain action gives
+\[
+C_0=\chi_1+\chi_7+\chi_{10},
+\]
+\[
+C_1=\chi_7+\chi_{10}+\chi_{11}+\chi_{16}+\chi_{17}+\chi_{20},
+\]
+\[
+C_2=\chi_2+\chi_3+2\chi_{11}+\chi_{16}+\chi_{17},
+\qquad
+C_3=\chi_2+\chi_3+\chi_{11},
+\]
+in the frozen GAP character-table order.  Here
+\[
+\boxed{H^1=\chi_{20},\qquad \dim H^1=81,}
+\]
+and the $120$-dimensional coexact carrier is
+\[
+\boxed{
+M_{120}=\chi_{11}\oplus\chi_{16}\oplus\chi_{17},
+\qquad
+30+45+45=120.
+}
+\]
+The same degree-$30$ constituent $\chi_{11}$ occurs in both the $96/5$ and
+$216/5$ bands on different cochain degrees.  Therefore the $1:4:9$ spacing is
+not a function only of a $PSp(4,3)$ Casimir: the finite group controls the
+multiplicities, while the circumcentric/cochain geometry controls the rung
+spacing.
+
+The qutrit full-similitude carrier can also be materialized completely.
+After determinant-one normalization, the standard $3\times3$ qutrit
+Clifford generators close at order
+\[
+\boxed{648}
+\]
+with scalar center $C_3$.  Their irreducible $3$-dimensional character has
+Frobenius--Schur indicator
+\[
+\boxed{\nu_3=0},
+\]
+so it is of complex type.  On
+\[
+\rho_6=\rho_3\oplus\overline{\rho_3},
+\]
+adjoining the determinant-odd sector swap
+\[
+S=\begin{pmatrix}0&I_3\\ I_3&0\end{pmatrix}
+\]
+closes at order
+\[
+\boxed{1296},
+\]
+the already-certified full W33 point stabilizer
+$3_+^{1+2}:GL(2,3)$.  The resulting character is irreducible and has
+\[
+\boxed{\nu_6=+1}.
+\]
+Thus the outer similitude performs the exact realification
+\[
+\boxed{
+3_{\mathbb C}\oplus\overline3_{\mathbb C}
+\longrightarrow
+6_{\mathbb R}\ {\rm irreducible}.
+}
+\]
+Every determinant-odd conjugacy class has character zero.  The non-rational
+order-$9$ traces are the three roots of
+\[
+x^3-9x-9,
+\]
+while the order-$18$ traces are the roots of
+\[
+x^3-3x-1.
+\]
+Both generate the real cubic field
+\[
+\boxed{\mathbb Q(\zeta_9+\zeta_9^{-1}).}
+\]
+
+Let $C=Z_{\rm FI}$ denote the physical $Z_3$ grading and let $T$ be
+antiunitary with
+\[
+[H,C]=0,\qquad HT=TH,\qquad TC=CT,\qquad T^2=C^r,\quad r=1,2.
+\]
+If $C\psi=\omega\psi$, anti-linearity implies
+\[
+C(T\psi)=T(C\psi)=\bar\omega\,T\psi=\omega^2T\psi.
+\]
+Hence $T$ maps the $\omega$ and $\omega^2$ sectors into one another.  These
+sectors are orthogonal because $C$ is unitary, and the two states have equal
+energy because $HT=TH$.  Therefore
+\[
+\boxed{
+\operatorname{Spec}(H|_{\mathfrak g_1})
+=
+\operatorname{Spec}(H|_{\mathfrak g_2})
+}
+\]
+for any Hamiltonian genuinely respecting the certified grading and one of the
+order-six anti-linear symmetries $CJ$ or $C^2J$.  No Kramers degeneracy is
+forced in the neutral $C=1$ sector, where $T^2=1$.  This is a graded pairing
+theorem, not ordinary $T^2=-1$ Kramers theory.
+
+\paragraph{FI reference-arm compiler.}
+The existing frequency-bin packet already contains three $120^\circ$ Hesse
+bins, $H1,H4,H7$.  With $30$ packet frames and two sector sidebands, this
+provides
+\[
+\boxed{180}
+\]
+$120^\circ$ calibration opportunities per mirror atlas and
+\[
+\boxed{4320}
+\]
+per $24$-atlas supercycle.  Introduce one phase-referenced primitive
+\[
+\texttt{FI\_REFERENCE\_ARM\_PHASE}
+\]
+and analyzer phases $0^\circ,90^\circ,180^\circ,270^\circ$.  With
+\[
+d_\theta=\frac{N_+-N_-}{N_++N_-},
+\]
+use
+\[
+X=\frac{d_0-d_{180}}2,\qquad
+Y=\frac{d_{90}-d_{270}}2,
+\]
+\[
+\hat V=\sqrt{X^2+Y^2},\qquad
+\hat\phi=\operatorname{atan2}(Y,X).
+\]
+For the effective two-path phase/dephasing channel,
+\[
+F_e=\frac{1+V\cos\delta}{2}.
+\]
+The fail-closed design gate
+\[
+F_e\ge0.99,\qquad |\delta|\le2.5^\circ
+\]
+requires
+\[
+\boxed{V\ge0.9809336315}.
+\]
+The prior $V=0.965$ benchmark does not meet that gate and is not bench data.
+The Fisher design requires about $5620$ detected events at $V=0.965$, or
+$5211$ at the admission-floor visibility, so one-detection-per-opportunity
+operation requires two supercycles.
+
+\paragraph{Nuisance-adaptive multiplier discrimination.}
+A $175$-particle nuisance grid over visibility, background, and phase was
+marginalized online.  In $5000$ deterministic-seed trials per case, the mean
+stopping counts were
+\[
+\boxed{
+22.8716\ (q=5),\qquad
+50.8004\ (q=7),\qquad
+17.0438\ (q=9).
+}
+\]
+For $q=9$,
+\[
+\mathbb F_9^\times/\mathbb F_3^\times
+=
+\mathbb P^1(\mathbb F_3),
+\]
+and the three trace probes give signatures
+\[
+010,\quad100,\quad001,\quad000.
+\]
+The first three hypotheses each have nominal controlled information
+\[
+D^*=1.2124412603,
+\]
+while the all-low point has
+\[
+D^*=0.7469076417.
+\]
+A $0.05^\circ$ RMS phase random walk per shot changes the simulated mean only
+to
+\[
+17.0156.
+\]
+Thus the q9 advantage over q7 survives this declared drift model: sample cost
+is controlled by the available KL/Chernoff information geometry, not hidden
+label entropy alone.
+
+\paragraph{Three additional finite-physics identities.}
+First, every positive weighted Hodge eigenvalue cancels in the alternating heat
+trace:
+\[
+\boxed{
+\operatorname{Str}(e^{-tL})
+=
+\chi(K)
+=
+40-240+160-40
+=
+-80
+}
+\]
+for every $t$.  Second, the determinant-odd qutrit completion simultaneously
+realifies the complex Clifford irrep and selects the conductor-$9$ real cubic
+character field above.  Third, the FI center is exactly a ternary frame symbol
+$0^\circ,120^\circ,240^\circ$; after local phase calibration it can reuse the
+already-certified optimal $7$-tick W33 frame-broadcast tree over all $80$
+point/line nodes, while the existing gather-plus-broadcast all-reduce costs
+$14$ ticks.
+
+\paragraph{Evidence boundary.}
+The spectral ladder and McKean--Singer identity are finite-complex statements,
+not a continuum Kaluza--Klein or supersymmetric field theory.  The $6$D
+realification is a finite point-stabilizer representation, not an observed
+particle multiplet.  The graded pairing theorem applies only to Hamiltonians
+that actually respect both symmetries.  The FI packet contains no measured
+counts, and the sequential study is a seeded design simulation rather than a
+laboratory significance claim.
