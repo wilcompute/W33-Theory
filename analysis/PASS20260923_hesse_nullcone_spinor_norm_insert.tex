@@ -1,0 +1,50 @@
+% 2026-09-23 — determinant / spinor-norm weld.
+\subsection*{The missing \(C_2\) is the spinor norm}
+
+The explicit adjoint lift resolves the apparent parity mismatch between the
+two-dimensional qutrit phase-space action and the three-dimensional hull
+orthogonal action. For
+\[
+ q(v)=\frac12v^TQv,\qquad
+ Q=\begin{pmatrix}0&1&1\\1&0&1\\1&1&0\end{pmatrix}
+\]
+over \(\mathbf F_3\), enumerate all nine projective orthogonal reflections and
+all \(24\) elements of \(SO(Q)\). Every \(SO(Q)\) element is a product of two
+reflections, and all reflection decompositions give the same spinor
+square-class.
+
+For the explicit lift
+\[
+ \rho:GL(2,3)\longrightarrow SO(Q)
+\]
+from the preceding theorem, the executable certificate proves
+\[
+ \boxed{
+ \theta_{\rm spin}(\rho(g))
+ =
+ \det(g)\pmod{(\mathbf F_3^\times)^2}
+ }
+\]
+for all \(48\) elements \(g\in GL(2,3)\). Consequently
+\[
+ \rho(SL(2,3))=\Omega(Q)\cong A_4,\qquad
+ \rho(GL(2,3))=SO(Q)\cong S_4.
+\]
+
+In particular, the anti-linear qutrit reflection
+\[
+ \kappa=\operatorname{diag}(-1,1)
+\]
+has \(\det\kappa=-1\), while its three-dimensional lift has determinant
+\(+1\) but nontrivial spinor norm. Explicitly,
+\[
+ \rho(\kappa)=r_{(1,1,0)}r_{(1,2,0)},\qquad
+ q(1,1,0)=1,\quad q(1,2,0)=2.
+\]
+Thus the correct finite invariant carried by the factor-two extension is the
+spinor norm, not the determinant of the three-dimensional orthogonal matrix.
+
+\paragraph{Evidence boundary.}
+This is the finite-field spinor norm of an orthogonal group. It does not by
+itself supply physical fermionic spin, a continuum \(Spin/Pin\) structure,
+Lorentz symmetry, CPT, or spacetime parity.
