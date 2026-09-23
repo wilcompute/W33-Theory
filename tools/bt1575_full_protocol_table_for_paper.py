@@ -33,7 +33,7 @@ def main() -> None:
     MD.write_text('\n'.join(md)+'\n', encoding='utf-8')
     tex=['\\begin{tabular}{lllll}','Stage & Operation & Expected & Failure & Tier \\\\','\\hline']
     for r in ROWS:
-        tex.append(f"{r['stage']} & {r['operation']} & {r['expected']} & {r['failure']} & {r['tier']} \\\")
+        tex.append("{} & {} & {} & {} & {} \\\\".format(r['stage'],r['operation'],r['expected'],r['failure'],r['tier']))
     tex.append('\\end{tabular}\n')
     TEX.write_text('\n'.join(tex), encoding='utf-8')
     print(json.dumps({'bt':1575,'verified':result['verified'],'rows':len(ROWS)}, indent=2))
