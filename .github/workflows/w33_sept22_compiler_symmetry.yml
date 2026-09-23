@@ -17,6 +17,8 @@ on:
       - 'analysis/w33_hesse_pappus_45_270_instruction_compiler.py'
       - 'analysis/w33_hesse36_e8_matter81_dark8_decomposition.py'
       - 'analysis/w33_hesse36_physical_fi_orientation_selector.py'
+      - 'analysis/w33_hesse36_dark_schrodinger_strange_state.py'
+      - 'analysis/w33_e8_matter81_hybrid_cubic_dark_basis.py'
       - 'data/w33_address_operator_h27_intertwiner_obstruction.json'
       - 'data/w33_scheduler_operator_k81_intertwiner_obstruction.json'
       - 'data/w33_maximal_compiler_symmetry_pappus.json'
@@ -30,12 +32,15 @@ on:
       - 'data/w33_hesse_pappus_45_270_instruction_compiler.json'
       - 'data/w33_hesse36_e8_matter81_dark8_decomposition.json'
       - 'data/w33_hesse36_physical_fi_orientation_selector.json'
+      - 'data/w33_hesse36_dark_schrodinger_strange_state.json'
+      - 'data/w33_e8_matter81_hybrid_cubic_dark_basis.json'
       - 'analysis/PASS20260922_address_operator_h27_intertwiner_obstruction_insert.tex'
       - 'analysis/PASS20260922_scheduler_operator_k81_obstruction_insert.tex'
       - 'analysis/PASS20260922_maximal_compiler_symmetry_pappus_insert.tex'
       - 'analysis/PASS20260922_hesse36_q8_repair_insert.tex'
       - 'analysis/PASS20260922_hesse36_fourier_twisted_compiler_insert.tex'
       - 'analysis/PASS20260923_execute_all5_hesse_toe_compiler_frontier_insert.tex'
+      - 'analysis/PASS20260923_dark_strange_hybrid81_insert.tex'
       - 'analysis/W33_SHARED_FRONTIER_TAIL.tex'
       - 'tests/test_w33_address_operator_h27_intertwiner_obstruction.py'
       - 'tests/test_w33_scheduler_operator_k81_intertwiner_obstruction.py'
@@ -50,6 +55,8 @@ on:
       - 'tests/test_w33_hesse_pappus_45_270_instruction_compiler.py'
       - 'tests/test_w33_hesse36_e8_matter81_dark8_decomposition.py'
       - 'tests/test_w33_hesse36_physical_fi_orientation_selector.py'
+      - 'tests/test_w33_hesse36_dark_schrodinger_strange_state.py'
+      - 'tests/test_w33_e8_matter81_hybrid_cubic_dark_basis.py'
       - 'tests/test_w33_shared_frontier_tail_integrity.py'
       - '.github/workflows/w33_sept22_compiler_symmetry.yml'
   workflow_dispatch:
@@ -79,6 +86,8 @@ jobs:
           tests/test_w33_hesse_pappus_45_270_instruction_compiler.py
           tests/test_w33_hesse36_e8_matter81_dark8_decomposition.py
           tests/test_w33_hesse36_physical_fi_orientation_selector.py
+          tests/test_w33_hesse36_dark_schrodinger_strange_state.py
+          tests/test_w33_e8_matter81_hybrid_cubic_dark_basis.py
           tests/test_w33_shared_frontier_tail_integrity.py
       - name: frozen certificates unchanged
         run: >-
@@ -96,3 +105,5 @@ jobs:
           data/w33_hesse_pappus_45_270_instruction_compiler.json
           data/w33_hesse36_e8_matter81_dark8_decomposition.json
           data/w33_hesse36_physical_fi_orientation_selector.json
+          data/w33_hesse36_dark_schrodinger_strange_state.json
+          data/w33_e8_matter81_hybrid_cubic_dark_basis.json
