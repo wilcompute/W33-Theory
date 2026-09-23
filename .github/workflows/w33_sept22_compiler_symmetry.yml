@@ -1,0 +1,38 @@
+name: W33 Sept22 compiler symmetry replay
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_address_operator_h27_intertwiner_obstruction.py'
+      - 'analysis/w33_scheduler_operator_k81_intertwiner_obstruction.py'
+      - 'analysis/w33_maximal_compiler_symmetry_pappus.py'
+      - 'data/w33_address_operator_h27_intertwiner_obstruction.json'
+      - 'data/w33_scheduler_operator_k81_intertwiner_obstruction.json'
+      - 'data/w33_maximal_compiler_symmetry_pappus.json'
+      - 'analysis/PASS20260922_address_operator_h27_intertwiner_obstruction_insert.tex'
+      - 'analysis/PASS20260922_scheduler_operator_k81_obstruction_insert.tex'
+      - 'analysis/PASS20260922_maximal_compiler_symmetry_pappus_insert.tex'
+      - 'analysis/W33_SHARED_FRONTIER_TAIL.tex'
+      - 'tests/test_w33_address_operator_h27_intertwiner_obstruction.py'
+      - 'tests/test_w33_scheduler_operator_k81_intertwiner_obstruction.py'
+      - 'tests/test_w33_maximal_compiler_symmetry_pappus.py'
+      - 'tests/test_w33_shared_frontier_tail_integrity.py'
+      - '.github/workflows/w33_sept22_compiler_symmetry.yml'
+  workflow_dispatch:
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --upgrade pip networkx pytest
+      - run: python analysis/w33_address_operator_h27_intertwiner_obstruction.py
+      - run: python analysis/w33_scheduler_operator_k81_intertwiner_obstruction.py
+      - run: python analysis/w33_maximal_compiler_symmetry_pappus.py
+      - run: python -m pytest -q tests/test_w33_address_operator_h27_intertwiner_obstruction.py tests/test_w33_scheduler_operator_k81_intertwiner_obstruction.py tests/test_w33_maximal_compiler_symmetry_pappus.py tests/test_w33_shared_frontier_tail_integrity.py
+      - name: frozen certificates unchanged
+        run: git diff --exit-code -- data/w33_address_operator_h27_intertwiner_obstruction.json data/w33_scheduler_operator_k81_intertwiner_obstruction.json data/w33_maximal_compiler_symmetry_pappus.json
