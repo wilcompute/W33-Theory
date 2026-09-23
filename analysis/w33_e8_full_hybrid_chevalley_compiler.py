@@ -60,7 +60,6 @@ def mm(A,B,zero):
 
 def main(write=True,full_jacobi=True):
     atlasmod=load(ROOT/"analysis/w33_e8_full_graded_hybrid_atlas.py","full_hybrid_atlas_parent")
-    cubicmod=load(ROOT/"analysis/w33_pass1103_hesse_firewall_cubic_transport.py","full_hybrid_h27_parent")
     exact=sys.modules.get("w33_exact_eisenstein")
     assert exact is not None, "hybrid atlas must load canonical w33_exact_eisenstein"
     jac=load(ROOT/"tools/verify_e8_jacobi_from_structure_constants.py","full_hybrid_jacobi")
@@ -84,8 +83,10 @@ def main(write=True,full_jacobi=True):
     g2=[8+i for i,r in enumerate(roots) if byroot[r]["grade"]=="g2"]
     assert [len(g0),len(g1),len(g2)]==[86,81,81]
 
-    # e6id/H27 and external-index maps.
-    e6_to_h={int(i):(int(u[0]),int(u[1]),int(z)) for i,(u,z) in cubicmod.E6_TO_UZ.items()}
+    # e6id/H27 and external-index maps in the CURRENT physical-Clifford address gauge.
+    gauge_bridge=json.loads((ROOT/"data/w33_e6id_current_h27_gauge_bridge.json").read_text())
+    assert gauge_bridge["incidence"]["mapped_full45_equal"] is True
+    e6_to_h={int(i):tuple(map(int,h)) for i,h in gauge_bridge["maps"]["e6id_to_current_H27_address"].items()}
     H=tuple(itertools.product(range(3),repeat=3))
     K=[(h,p) for h in H for p in range(3)]
     kindex={x:i for i,x in enumerate(K)}
@@ -178,6 +179,7 @@ def main(write=True,full_jacobi=True):
       "parents":[
         "data/w33_e8_full_graded_hybrid_atlas.json",
         "data/w33_e6_cubic_hybrid81_transport.json",
+        "data/w33_e6id_current_h27_gauge_bridge.json",
         "artifacts/e8_structure_constants_w33_discrete.json"
       ],
       "checks":{
@@ -185,6 +187,7 @@ def main(write=True,full_jacobi=True):
         "source_grades_86_81_81":True,
         "root_label_permutations_bijective":True,
         "canonical_phase_gauges_loaded":True,
+        "current_H27_gauge_bridge_loaded":True,
         "B81_inverse_exact":True,
         "conjugate_B81_inverse_exact":True,
         "all_bracket_terms_respect_Z3":True,
