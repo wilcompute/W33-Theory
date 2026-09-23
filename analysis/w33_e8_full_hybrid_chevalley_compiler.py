@@ -61,7 +61,8 @@ def mm(A,B,zero):
 def main(write=True,full_jacobi=True):
     atlasmod=load(ROOT/"analysis/w33_e8_full_graded_hybrid_atlas.py","full_hybrid_atlas_parent")
     cubicmod=load(ROOT/"analysis/w33_pass1103_hesse_firewall_cubic_transport.py","full_hybrid_h27_parent")
-    exact=load(ROOT/"analysis/w33_exact_eisenstein.py","full_hybrid_exact")
+    exact=sys.modules.get("w33_exact_eisenstein")
+    assert exact is not None, "hybrid atlas must load canonical w33_exact_eisenstein"
     jac=load(ROOT/"tools/verify_e8_jacobi_from_structure_constants.py","full_hybrid_jacobi")
 
     sc=json.loads((ROOT/"artifacts/e8_structure_constants_w33_discrete.json").read_text())
