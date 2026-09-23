@@ -77,17 +77,17 @@ def main(write=True):
           {"fixed_charge":1,"seven":"1^6 plus omega^2"},
           {"fixed_charge":2,"seven":"1^6 plus omega"}
         ],
-        "C3_scalar_on_seven":false
+        "C3_scalar_on_seven":False
       },
       "obstruction":{
         "required_compatibility":"external C3 commutes with the proposed G2 action, preserving the frozen K=H27 x C3 direct-product symmetry",
         "lemma":"Schur: the commutant of an irreducible complex G2 seven is the scalars",
         "contradiction":"the frozen external C3 is non-scalar on every possible seven complement",
-        "strict_G2_x_C3_extension_exists":false
+        "strict_G2_x_C3_extension_exists":False
       },
       "what_survives":{
-        "G2_branching_shadow_after_forgetting_external_C3":true,
-        "noncommuting_larger_envelope_ruled_out":false,
+        "G2_branching_shadow_after_forgetting_external_C3":True,
+        "noncommuting_larger_envelope_ruled_out":False,
         "possible_next_question":"whether C3_ext can participate noncentrally in a larger exceptional or semilinear envelope rather than commute with G2"
       },
       "boundary":"This is a representation-theoretic no-go for a commuting G2 x C3_ext promotion. It does not rule out a noncommuting larger group/algebra containing both structures, nor infer a G2 gauge boson, dark multiplet, mass, or interaction.",
@@ -96,13 +96,13 @@ def main(write=True):
         "data/w33_hesse36_e8_matter81_dark8_decomposition.json"
       ],
       "checks":{
-        "dark_C3_spectrum_6_1_1":true,
-        "only_H27_invariant_fixed_lines_are_in_singlet_plane":true,
-        "C3_eigenlines_force_two_candidate_G2_fixed_singlets":true,
-        "C3_non_scalar_on_both_candidate_sevens":true,
-        "Schur_obstruction_applies":true,
-        "strict_commuting_extension_rejected":true,
-        "noncommuting_envelope_left_open":true
+        "dark_C3_spectrum_6_1_1":True,
+        "only_H27_invariant_fixed_lines_are_in_singlet_plane":True,
+        "C3_eigenlines_force_two_candidate_G2_fixed_singlets":True,
+        "C3_non_scalar_on_both_candidate_sevens":True,
+        "Schur_obstruction_applies":True,
+        "strict_commuting_extension_rejected":True,
+        "noncommuting_envelope_left_open":True
       }
     }
     if write:OUT.write_text(json.dumps(out,indent=2)+"\n")
