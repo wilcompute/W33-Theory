@@ -44,6 +44,8 @@ def test_shared_frontier_tail_is_linewise_valid_and_unique():
         r"\\input{analysis/PASS20260922_address_operator_h27_intertwiner_obstruction_insert}%",
         r"\\input{analysis/PASS20260922_scheduler_operator_k81_obstruction_insert}%",
         r"\\input{analysis/PASS20260922_maximal_compiler_symmetry_pappus_insert}%",
+        r"\\input{analysis/PASS20260922_hesse36_q8_repair_insert}%",
+        r"\\input{analysis/PASS20260922_hesse36_fourier_twisted_compiler_insert}%",
     ]
     for item in expected:
         assert item in lines
