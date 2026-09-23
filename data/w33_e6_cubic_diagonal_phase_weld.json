@@ -1,0 +1,176 @@
+{
+  "schema": "w33.e6_cubic_diagonal_phase_weld.v1",
+  "status": "PASS_DIAGONAL_H27_CENTER_EXTERNAL_QUTRIT_WELD_UNLOCKS_ALL_54_RETYPE_DIRECTIONS",
+  "headline": "In the explicit current physical-Clifford H27 gauge, the symmetry-changing capacity is genuinely diagonal. Let c be the H27 central normal-form coordinate and p the external qutrit phase. The center-only three-level background has exact cubic Jacobian rank 36 and the external-only background rank 54; both project onto only 36 of the 54 retyped Fourier directions. By contrast either diagonal weld tau=c+p or tau=c-p, lifted to amplitudes 1+tau in {1,2,3}, has exact rank 66 and projects surjectively onto all 54 retyped directions. The quotient-surjectivity survives the corrected gauge bridge exactly.",
+  "address_geometry": {
+    "K": "H27 x C3_external",
+    "H27_normal_form": "(a,b,c)=Z^a X^b omega^c",
+    "pure_central_lift_slope_plus1": {
+      "generator": [
+        [
+          0,
+          0,
+          1
+        ],
+        1
+      ],
+      "invariant_phase": "tau_minus=c-p mod3"
+    },
+    "pure_central_lift_slope_minus1": {
+      "generator": [
+        [
+          0,
+          0,
+          1
+        ],
+        2
+      ],
+      "invariant_phase": "tau_plus=c+p mod3"
+    },
+    "right_cosets_each": 27,
+    "tau_level_multiplicities": {
+      "0": 27,
+      "1": 27,
+      "2": 27
+    },
+    "background_amplitude_levels": {
+      "1": 27,
+      "2": 27,
+      "3": 27
+    }
+  },
+  "rank_and_alignment": {
+    "center": {
+      "background": "1+(c mod3)",
+      "exact_jacobian_rank": 36,
+      "quotient_projection_rank": 36,
+      "split_prime_certificates": [
+        {
+          "prime": 103,
+          "omega_mod_p": 46,
+          "S1_rank": 27,
+          "jacobian_rank": 36,
+          "combined_rank": 63,
+          "quotient_projection_rank": 36,
+          "S1_image_intersection_dimension": 0
+        },
+        {
+          "prime": 109,
+          "omega_mod_p": 45,
+          "S1_rank": 27,
+          "jacobian_rank": 36,
+          "combined_rank": 63,
+          "quotient_projection_rank": 36,
+          "S1_image_intersection_dimension": 0
+        }
+      ]
+    },
+    "external": {
+      "background": "1+(p mod3)",
+      "exact_jacobian_rank": 54,
+      "quotient_projection_rank": 36,
+      "split_prime_certificates": [
+        {
+          "prime": 103,
+          "omega_mod_p": 46,
+          "S1_rank": 27,
+          "jacobian_rank": 54,
+          "combined_rank": 63,
+          "quotient_projection_rank": 36,
+          "S1_image_intersection_dimension": 18
+        },
+        {
+          "prime": 109,
+          "omega_mod_p": 45,
+          "S1_rank": 27,
+          "jacobian_rank": 54,
+          "combined_rank": 63,
+          "quotient_projection_rank": 36,
+          "S1_image_intersection_dimension": 18
+        }
+      ]
+    },
+    "center_plus_external": {
+      "background": "1+((c+p) mod3)",
+      "exact_jacobian_rank": 66,
+      "quotient_projection_rank": 54,
+      "S1_intersection_dimension": 12,
+      "split_prime_certificates": [
+        {
+          "prime": 103,
+          "omega_mod_p": 46,
+          "S1_rank": 27,
+          "jacobian_rank": 66,
+          "combined_rank": 81,
+          "quotient_projection_rank": 54,
+          "S1_image_intersection_dimension": 12
+        },
+        {
+          "prime": 109,
+          "omega_mod_p": 45,
+          "S1_rank": 27,
+          "jacobian_rank": 66,
+          "combined_rank": 81,
+          "quotient_projection_rank": 54,
+          "S1_image_intersection_dimension": 12
+        }
+      ]
+    },
+    "center_minus_external": {
+      "background": "1+((c-p) mod3)",
+      "exact_jacobian_rank": 66,
+      "quotient_projection_rank": 54,
+      "S1_intersection_dimension": 12,
+      "split_prime_certificates": [
+        {
+          "prime": 103,
+          "omega_mod_p": 46,
+          "S1_rank": 27,
+          "jacobian_rank": 66,
+          "combined_rank": 81,
+          "quotient_projection_rank": 54,
+          "S1_image_intersection_dimension": 12
+        },
+        {
+          "prime": 109,
+          "omega_mod_p": 45,
+          "S1_rank": 27,
+          "jacobian_rank": 66,
+          "combined_rank": 81,
+          "quotient_projection_rank": 54,
+          "S1_image_intersection_dimension": 12
+        }
+      ]
+    }
+  },
+  "weld_consequence": {
+    "individual_center_or_external_factor_covers_full_retyped_quotient": false,
+    "diagonal_center_external_weld_covers_full_retyped_quotient": true,
+    "required_retyped_dimension": 54,
+    "diagonal_raw_rank_margin": 12,
+    "mechanism": "the full quotient capacity appears only after correlating the address-center phase with the external qutrit phase"
+  },
+  "orientation_pair": {
+    "two_diagonal_welds_related_by_external_phase_conjugation": true,
+    "matches_two_external_slopes_of_pure_central_lift": true,
+    "physical_FI_orientation_selection_not_inferred": true
+  },
+  "boundary": "This is an exact finite tangent-level address/operator weld. It does not prove either three-level background is a physical field expectation value, a D/F-flat or stable vacuum, a minimum of an action, or a directly implementable unitary pulse. Coupling strength and dynamical selection remain open.",
+  "parents": [
+    "data/w33_e6_cubic_fourier54_alignment.json",
+    "data/w33_e6_cubic_jacobian_rank_stratification.json",
+    "data/w33_e8_matter81_h27_address_operator_compiler.json",
+    "data/w33_e6id_current_h27_gauge_bridge.json"
+  ],
+  "checks": {
+    "three_equal_amplitude_levels": true,
+    "center_exact_rank36_projection36": true,
+    "external_exact_rank54_projection36": true,
+    "center_plus_external_exact_rank66_projection54": true,
+    "center_minus_external_exact_rank66_projection54": true,
+    "tau_minus_constant_on_slope_plus1_central_cosets": true,
+    "tau_plus_constant_on_slope_minus1_central_cosets": true,
+    "both_diagonal_welds_cover_full_retyped_quotient": true,
+    "dynamics_not_overclaimed": true
+  }
+}

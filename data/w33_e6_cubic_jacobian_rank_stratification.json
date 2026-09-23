@@ -1,0 +1,46 @@
+{
+  "schema": "w33.e6_cubic_jacobian_rank_stratification.v1",
+  "status": "PASS_ONE_EXPLICIT_CUBIC_BACKGROUND_HAS_EXACT_RANK78_AND_SPECIAL_COHERENT_BACKGROUNDS_HAVE_RANK54",
+  "headline": "The actual E6 cubic interaction is strong enough at the single-background level: exact integer elimination gives Jacobian ranks 20 for a root vector, 54 for both the uniform and linear coherent backgrounds, and 78 for the quadratic background v_n=(n+1)^2. Every Jacobian is exactly skew-symmetric and kills its own background vector. Therefore the previous 54-dimensional compiler deficit is not blocked by cubic tangent rank: one explicit background already has rank 78. What remains is to align the cubic image with the specific 54 Fourier-retyped operator coordinates.",
+  "coordinate_gauge": {
+    "basis": "(e6id, external qutrit phase) with index n=3*e6id+phase",
+    "dimension": 81,
+    "root_tensor": "canonical signed 45-triad E6 cubic times epsilon_abc"
+  },
+  "exact_rank_strata": {
+    "root0": {"formula":"v=(1,0,...,0)","rank":20,"kernel_dimension":61},
+    "uniform": {"formula":"v_n=1","rank":54,"kernel_dimension":27},
+    "linear": {"formula":"v_n=n+1","rank":54,"kernel_dimension":27},
+    "quadratic": {"formula":"v_n=(n+1)^2","rank":78,"kernel_dimension":3}
+  },
+  "universal_checks": {
+    "jacobian_skew_symmetric_on_tested_backgrounds": true,
+    "background_vector_in_own_kernel": true,
+    "all_tested_ranks_even": true
+  },
+  "compiler_consequence": {
+    "minimal_symmetry_change_dimension": 54,
+    "explicit_single_background_rank": 78,
+    "rank_capacity_margin": 24,
+    "raw_rank_obstruction_to_54_retyping": false,
+    "specific_54_coordinate_alignment_proved": false
+  },
+  "count_collision_firewall": "The uniform/linear Jacobian rank 54 equals the independent representation-theoretic 54-dimensional equivariance deficit. This certificate does not identify their image subspaces; equality of dimensions alone is not an intertwiner.",
+  "external_context": "The ambient representation is the classical Vinberg E8 order-three representation SL3 x E6 on 3 tensor 27. This certificate does not import a generic-orbit classification from that theory.",
+  "boundary": "This is an exact finite tangent-rank theorem for selected algebraic backgrounds. It does not prove the generic rank is 78, select a physical vacuum, align the rank-78 image with the 54 required Fourier retypings, or determine a coupling strength, mass matrix, or stability potential.",
+  "parents": [
+    "data/w33_e6_cubic_hybrid81_transport.json",
+    "data/w33_minimal_symmetry_changing_81_compiler.json"
+  ],
+  "checks": {
+    "canonical_45_signed_triads": true,
+    "ordered_bracket_records_1620": true,
+    "root_rank20": true,
+    "uniform_rank54": true,
+    "linear_rank54": true,
+    "quadratic_rank78": true,
+    "quadratic_kernel3": true,
+    "single_background_exceeds_54_rank_requirement": true,
+    "alignment_not_overclaimed": true
+  }
+}

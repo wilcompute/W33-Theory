@@ -1,0 +1,23 @@
+\subsection{Affine-holonomy hull and a quantum-distance obstruction}
+For the already certified private-triple encoder
+$G=[2A\mid I_{12}\otimes(1,1,1)]$, where $A$ is the line--point incidence
+matrix of $\operatorname{AG}(2,3)$, the ternary Gram matrix is
+\[
+GG^{\mathsf T}=(J_4-I_4)\otimes J_3.
+\]
+Its radical consists of coefficient vectors with equal sums in the four
+parallel classes. The corresponding Euclidean hull is exactly
+$[45,9,12]_3$. Exhaustive enumeration of its $3^9$ words finds twenty-four
+minimum words, precisely the signed differences of parallel-line generators.
+The three-dimensional nondegenerate quotient has four projective isotropic
+points, identified with the four affine directions. The punctured encoder's
+dual is $[21,9,5]_3$, with eighteen signed point-star minimum words.
+
+Using the self-orthogonal hull as both CSS check spaces produces
+$[[45,27,2]]_3$. No hull column is zero, excluding dual weight one, while a
+private-triple difference supplies a dual weight-two word outside the hull.
+Thus this construction detects but does not correct an arbitrary single
+qutrit error. These are finite coding statements; no physical noise threshold
+or spacetime dynamics follows. The witness is
+\texttt{analysis/w33\_affine\_holonomy\_hull.py}; classical Hesse geometry and
+parent-code parameter prior art are cited in its accompanying report.

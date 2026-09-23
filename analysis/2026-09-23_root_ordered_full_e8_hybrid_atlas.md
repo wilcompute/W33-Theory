@@ -46,3 +46,12 @@ Evidence:
 - `analysis/w33_e8_full_graded_hybrid_atlas.py`
 - `data/w33_e8_full_graded_hybrid_atlas.json`
 - `tests/test_w33_e8_full_graded_hybrid_atlas.py`
+
+## Subsequent executable transport
+
+The merged `analysis/w33_e8_full_hybrid_chevalley_compiler.py` now implements
+the bracket in a separately explicit signed current-H27 chart, with source
+Cartan and grade-zero root indices defining its neutral block. The historical
+open statement above concerns this atlas alone. See
+`analysis/2026-09-23_affine_hull_and_executable_e8.md` for the implemented maps
+and the distinction between the two row conventions.

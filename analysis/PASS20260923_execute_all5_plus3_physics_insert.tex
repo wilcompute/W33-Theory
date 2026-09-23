@@ -1,0 +1,97 @@
+% PASS20260923 execute-all-five plus three physics attacks.
+\subsection*{Minimal symmetry change, full $E_8$ atlas, nonlinear cubic transduction, and three physics closures}
+
+The address/operator obstruction now has an explicit optimal finite solution in
+group-Fourier coordinates.  Writing the regular
+\(K=H_{27}\times C_3\) module as
+\[
+27\,L\ \oplus\ 27\,S_{\omega}\ \oplus\ 27\,S_{\omega^2},
+\]
+the operator target is \(9V_\omega\otimes{\rm Reg}(C_3)\).  A deterministic
+permutation of the Fourier coordinates preserves the \(27\)
+\(S_\omega\)-coordinates and retypes the remaining \(54\).  Thus
+\[
+\boxed{81=27_{\rm equivariant}+54_{\rm symmetry\ change}},
+\]
+and the change is minimal because the exact equivariant-rank ceiling is
+\(27\).
+
+The numerical equality with the \(54\) phase-decorated fiber instructions does
+not survive representation theory.  The fiber sector is the sum of two
+\(27\)-point quotient permutation modules and has
+\[
+{\rm tr}_{54_{\rm fiber}}(z)=0,
+\]
+whereas the symmetry-change sector has
+\[
+{\rm tr}_{54_{\rm deficit}}(z)=-27\omega .
+\]
+Their maximum common equivariant rank is only \(27\).
+
+The completed matter chart also extends to the full physical FI grading:
+\[
+\boxed{
+248=86+81+81,\qquad
+A_{248}=I_{86}\oplus B_{81}\oplus\overline{B}_{81}.
+}
+\]
+The FI-center trace is
+\[
+86+81\omega+81\omega^2=5.
+\]
+This is a vector-space atlas; the Chevalley bracket has not yet been transported
+into these hybrid coordinates.
+
+The dark qutrit resource is operationally distinct from both the qutrit
+\(T\)-state and the ququart \(M_{36}\) resource.  With
+\[
+|D\rangle=(1,-\omega,0)^T,\qquad |S\rangle=(0,1,-1)^T,
+\]
+one has exactly
+\[
+|D\rangle=ZX^2|S\rangle,\qquad XZ^2|D\rangle=|S\rangle.
+\]
+The runtime therefore types a separate \cmd{DARK\_STRANGE\_Q3\_RAW} handoff
+and refuses cross-casts to \cmd{HESSE\_T\_RAW} and \cmd{M36\_Q4\_RAW}.
+
+On the photonic side the \(12\) Fourier fibers admit a coherent \(9+3\)
+serialization: wave zero is post-held and wave one is pre-held, so every one
+of the \(36\) channels experiences exactly one \(F_3\) and one matched storage
+interval.  The symbolic coherent path loss is uniformly
+\[
+L_{\rm TRI}+L_{\rm HOLD},
+\]
+while physical insertion loss and hold-phase noise remain calibration inputs.
+
+Three further physics tests sharpen the interpretation.  First, the H27
+representation ring obeys
+\[
+V_\omega\otimes V_{\omega^2}=\bigoplus_{9}\chi,\qquad
+V_{\omega^2}\otimes V_{\omega^2}=3V_\omega,
+\]
+and cubic Schrodinger products contain three singlets precisely when the
+external \(C_3\) charges sum to zero.  Thus the E6 cubic/Yukawa layer is
+representation-theoretically capable of crossing a linear symmetry-type
+boundary, although no nonlinear unitary compiler is yet asserted.
+
+Second, the dark eight is not the external \(A_2\) adjoint: its physical-center
+trace is \(-1\), not \(8\).  After restricting to H27 it is
+\[
+1+1+3+\bar3,
+\]
+which exactly matches the \(SU(3)\) branching of \(1+7\) for a \(G_2\)
+fundamental seven.  This is a branching shadow only, not a constructed
+\(G_2\) action.
+
+Third, the full hybrid \(E_8\) atlas has an exact anti-linear involution
+\[
+C:g_1\leftrightarrow g_2,\qquad \omega\leftrightarrow\omega^2,
+\qquad C^2=1,
+\]
+with
+\[
+CZ_{\rm FI}C^{-1}=Z_{\rm FI}.
+\]
+It exchanges the two compiler orientations and the Strange/conjugate-Strange
+dark rays.  This is a finite charge-conjugation scaffold, not a derivation of
+observed CP violation.

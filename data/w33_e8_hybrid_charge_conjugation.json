@@ -1,0 +1,77 @@
+{
+  "schema": "w33.e8_hybrid_charge_conjugation.v1",
+  "status": "PASS_FULL_HYBRID_E8_ATLAS_HAS_EXACT_ANTILINEAR_GRADE_SWAP_INVOLUTION",
+  "headline": "The full 248-dimensional hybrid E8 atlas carries a canonical anti-linear involution: fix the 86-dimensional neutral grade, exchange the 81-dimensional matter and antimatter grades, and conjugate omega. It squares to one, commutes with the physical FI center, exchanges the two Hesse compiler orientations, and conjugates the dark Strange ray.",
+  "involution": {
+    "carrier_dimension": 248,
+    "grade_action": {
+      "g0": "g0",
+      "g1": "g2",
+      "g2": "g1"
+    },
+    "coefficient_action": "omega -> omega^2",
+    "C_squared": "1 on all 248 basis labels",
+    "fixed_basis_labels": 86,
+    "exchanged_basis_pairs": 81
+  },
+  "FI_center": {
+    "before": {
+      "g0": "1",
+      "g1": "omega",
+      "g2": "omega^2"
+    },
+    "coefficient_conjugation_only": {
+      "g0": "1",
+      "g1": "omega^2",
+      "g2": "omega"
+    },
+    "after_full_antilinear_grade_swap": {
+      "g0": "1",
+      "g1": "omega",
+      "g2": "omega^2"
+    },
+    "law": "C Z_FI C^-1 = Z_FI"
+  },
+  "compiler_orientation": {
+    "selected": [
+      0,
+      1,
+      2
+    ],
+    "conjugate": [
+      0,
+      2,
+      1
+    ],
+    "C_exchanges_them": true
+  },
+  "dark_magic": {
+    "ray": [
+      "1",
+      "-omega",
+      "0"
+    ],
+    "conjugate_ray": [
+      "1",
+      "-omega^2",
+      "0"
+    ],
+    "C_exchanges_Vomega_and_Vomega2": true
+  },
+  "physics_reading": "The frozen FI orientation selects one member of a conjugate compiler pair, while the completed E8 atlas still possesses an exact anti-linear map relating matter and antimatter charts. This is the correct finite place to study whether a later dynamical layer preserves or breaks the conjugation symmetry.",
+  "boundary": "No spatial parity action, CPT theorem, CKM/PMNS phase, electric dipole moment, or spontaneous CP-breaking vacuum is derived. Holotrade's current provenance firewall also prevents promoting this finite involution to a class-wide heterotic vacuum claim.",
+  "parents": [
+    "data/w33_e8_full_graded_hybrid_atlas.json",
+    "data/w33_hesse36_physical_fi_orientation_selector.json",
+    "data/w33_hesse36_dark_schrodinger_strange_state.json"
+  ],
+  "checks": {
+    "248_labels_exhausted": true,
+    "C_squared_identity": true,
+    "g1_g2_exchanged": true,
+    "FI_center_commutes_after_antilinear_grade_swap": true,
+    "compiler_pair_exchanged": true,
+    "dark_magic_pair_exchanged": true,
+    "observed_CP_not_claimed": true
+  }
+}

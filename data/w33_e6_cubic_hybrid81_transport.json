@@ -1,0 +1,78 @@
+{
+  "schema": "w33.e6_cubic_hybrid81_transport.v1",
+  "status": "PASS_CANONICAL_SIGNED_E6_CUBIC_TRANSPORTS_OBJECTWISE_TO_HYBRID81_AND_COLLECTIVE_JACOBIANS_SPAN_G2",
+  "headline": "The actual source-locked 45-term signed E6 cubic is transported objectwise into the current H27/K-labelled matter carrier. In the canonical SU(3) phase gauge its root bracket has exactly 810 nonzero unordered g1xg1 channels, 162 on the nine firewall fibers, every g1 root has degree 20, and every g2 root occurs as ten outputs. The Pass1103 object gauge and the newer five-direction address gauge are not conflated: their raw 45-line sets overlap in only ten triads, while all nine firewall central fibers agree. A separate explicit 27-point gauge bridge conjugates the full canonical 45-line system to the current compiler gauge.",
+  "source_locks": {
+    "canonical_cubic_path": "extracted_v13/W33-Theory-master/artifacts/canonical_su3_gauge_and_cubic.json",
+    "canonical_cubic_blob_sha": "3bcc9cdcd572627efe675e1fad4b32b3fe48f649",
+    "archived_g1g1_path": "extracted_v13/W33-Theory-master/artifacts/e8_g1g1_couplings_cubic_firewall.json",
+    "archived_g1g1_blob_sha": "e5baf485428856a438df04a12b3a6e4d3a2ba5f7",
+    "historical_H27_bridge": "analysis/w33_pass1103_hesse_firewall_cubic_transport.py",
+    "current_H27_bridge": "data/w33_e6id_current_h27_gauge_bridge.json"
+  },
+  "root_tensor": {
+    "formula": "[e_(i,a),e_(j,b)] = d_ijk epsilon_abc ebar_(k,c)",
+    "signed_E6_triads": 45,
+    "d_sign_distribution": {
+      "plus": 22,
+      "minus": 23
+    },
+    "nonzero_unordered_channels": 810,
+    "firewall_bad_channels": 162,
+    "input_degree_each": 20,
+    "output_multiplicity_each": 10,
+    "root_output_span_dimension": 81
+  },
+  "hybrid_tensor": {
+    "g1_basis": "B81 = 73 cubic pivots + 8 Fourier/magic modes",
+    "g2_basis": "conjugate(B81)",
+    "complete_factorized_formula": "T_hyb = conjugate(B81)^(-1) o T_root o (B81 tensor B81)",
+    "materialized_dense_81_cubed": false,
+    "reason": "the factorized exact tensor is complete and avoids a redundant dense 531441-entry artifact",
+    "basis_rank_g1": 81,
+    "basis_rank_g2": 81
+  },
+  "jacobian": {
+    "definition": "D_v(x)=[v,x]: g1 -> g2",
+    "root_basis_background_rank_set": [
+      20
+    ],
+    "collective_image_span_dimension": 81,
+    "collectively_reaches_all_54_retyped_slots": true,
+    "single_root_background_rank54": false,
+    "single_generic_background_rank": "not established in this certificate"
+  },
+  "boundary": "This closes the exact signed tensor transport on the object-labelled 81 carrier and the collective tangent-span question. It does not identify the raw Pass1103 H27 coordinate table with the newer five-direction address gauge; the explicit bridge is required. It also does not supply a physical vacuum, coupling strength, mass, scattering amplitude, or fault-tolerant implementation.",
+  "parents": [
+    "data/w33_e8_matter81_hybrid_cubic_dark_basis.json",
+    "data/w33_minimal_symmetry_changing_81_compiler.json",
+    "data/w33_h27_cubic_representation_transducer.json",
+    "data/w33_e6id_current_h27_gauge_bridge.json"
+  ],
+  "checks": {
+    "canonical_45_triads_loaded": true,
+    "e6id_to_current_H27_is_bijective": true,
+    "root_channels_810": true,
+    "firewall_channels_162": true,
+    "every_input_degree20": true,
+    "every_output_multiplicity10": true,
+    "collective_jacobian_span81": true,
+    "hybrid_change_of_basis_invertible": true,
+    "canonical_vs_current_line_overlap10": true,
+    "bad9_center_fibers_match_exactly": true,
+    "full_45_line_gauge_identity_not_claimed": true,
+    "explicit_current_gauge_bridge_full45": true
+  },
+  "gauge_comparison": {
+    "pass1103_e6id_to_H27_object_map_bijective": true,
+    "canonical_cubic_triads": 45,
+    "newer_address_right_coset_lines": 45,
+    "line_set_overlap": 10,
+    "all_nine_firewall_center_fibers_in_overlap": true,
+    "full_45_line_gauge_identity": false,
+    "explicit_current_gauge_bridge_full45": true,
+    "explicit_current_gauge_bridge_bad9": true,
+    "bridge_path": "data/w33_e6id_current_h27_gauge_bridge.json",
+    "interpretation": "Pass1103 object labels transport exactly, but its raw H27 coordinate table is not the current compiler gauge. The separate explicit 27-point gauge bridge conjugates the canonical 45-triad system to the current five-direction H27 coset system while preserving the bad-nine spread."
+  }
+}

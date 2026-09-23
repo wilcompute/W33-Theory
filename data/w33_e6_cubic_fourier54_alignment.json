@@ -1,0 +1,160 @@
+{
+  "schema": "w33.e6_cubic_fourier54_alignment.v1",
+  "status": "PASS_QUADRATIC_CUBIC_BACKGROUND_SURJECTS_ONTO_THE_FULL_54D_RETYPE_FOURIER_QUOTIENT",
+  "headline": "The remaining alignment gap is closed at the finite tangent level. The 27-dimensional S1 Fourier sector is the operator-compatible part of Reg(H27 x C3). For the explicit quadratic background v_n=(n+1)^2, the cubic Jacobian has exact rank 78 and rank(S1+Im D_v)=81 after reduction at both split Eisenstein primes 103 and 109. Because the entries lie in Z[omega], this proves characteristic-zero combined rank 81. Therefore Im(D_v) projects with rank 54 onto Reg(K)/S1, exactly the full symmetry-retyped quotient required by the minimal compiler.",
+  "Fourier_decomposition": {
+    "source": "Reg(K)=S1(27)+S2(27)+L(27)",
+    "operator_compatible_sector": "S1",
+    "operator_compatible_dimension": 27,
+    "retyped_quotient": "Reg(K)/S1 ~= S2 + L after choosing the canonical Fourier splitting",
+    "retyped_dimension": 54
+  },
+  "background_results": {
+    "root0": {
+      "formula": "v=(1,0,...,0)",
+      "split_prime_certificates": [
+        {
+          "prime": 103,
+          "omega_mod_p": 46,
+          "S1_rank": 27,
+          "jacobian_rank": 20,
+          "combined_rank": 47,
+          "quotient_projection_rank": 20,
+          "S1_image_intersection_dimension": 0
+        },
+        {
+          "prime": 109,
+          "omega_mod_p": 45,
+          "S1_rank": 27,
+          "jacobian_rank": 20,
+          "combined_rank": 47,
+          "quotient_projection_rank": 20,
+          "S1_image_intersection_dimension": 0
+        }
+      ],
+      "characteristic_zero_jacobian_rank": 20,
+      "quotient_projection_rank": 20,
+      "S1_image_intersection_dimension": 0
+    },
+    "uniform": {
+      "formula": "v_n=1",
+      "split_prime_certificates": [
+        {
+          "prime": 103,
+          "omega_mod_p": 46,
+          "S1_rank": 27,
+          "jacobian_rank": 54,
+          "combined_rank": 63,
+          "quotient_projection_rank": 36,
+          "S1_image_intersection_dimension": 18
+        },
+        {
+          "prime": 109,
+          "omega_mod_p": 45,
+          "S1_rank": 27,
+          "jacobian_rank": 54,
+          "combined_rank": 63,
+          "quotient_projection_rank": 36,
+          "S1_image_intersection_dimension": 18
+        }
+      ],
+      "characteristic_zero_jacobian_rank": 54,
+      "quotient_projection_rank": 36,
+      "S1_image_intersection_dimension": 18
+    },
+    "linear": {
+      "formula": "v_n=n+1",
+      "split_prime_certificates": [
+        {
+          "prime": 103,
+          "omega_mod_p": 46,
+          "S1_rank": 27,
+          "jacobian_rank": 54,
+          "combined_rank": 72,
+          "quotient_projection_rank": 45,
+          "S1_image_intersection_dimension": 9
+        },
+        {
+          "prime": 109,
+          "omega_mod_p": 45,
+          "S1_rank": 27,
+          "jacobian_rank": 54,
+          "combined_rank": 72,
+          "quotient_projection_rank": 45,
+          "S1_image_intersection_dimension": 9
+        }
+      ],
+      "characteristic_zero_jacobian_rank": 54,
+      "quotient_projection_rank": 45,
+      "S1_image_intersection_dimension": 9
+    },
+    "quadratic": {
+      "formula": "v_n=(n+1)^2",
+      "split_prime_certificates": [
+        {
+          "prime": 103,
+          "omega_mod_p": 46,
+          "S1_rank": 27,
+          "jacobian_rank": 78,
+          "combined_rank": 81,
+          "quotient_projection_rank": 54,
+          "S1_image_intersection_dimension": 24
+        },
+        {
+          "prime": 109,
+          "omega_mod_p": 45,
+          "S1_rank": 27,
+          "jacobian_rank": 78,
+          "combined_rank": 81,
+          "quotient_projection_rank": 54,
+          "S1_image_intersection_dimension": 24
+        }
+      ],
+      "characteristic_zero_jacobian_rank": 78,
+      "quotient_projection_rank": 54,
+      "S1_image_intersection_dimension": 24
+    }
+  },
+  "exactness_argument": {
+    "coefficient_ring": "Z[omega]",
+    "split_primes": [
+      103,
+      109
+    ],
+    "prime_condition": "p=1 mod 3, so x^2+x+1 splits and omega has an F_p image",
+    "logic": "an 81x81 minor nonzero after reduction modulo either prime ideal was already nonzero in Z[omega], so combined rank 81 holds over Q(omega)",
+    "quadratic_combined_rank_over_Qomega": 81,
+    "quadratic_quotient_projection_rank_over_Qomega": 54
+  },
+  "compiler_consequence": {
+    "required_retyped_dimension": 54,
+    "quadratic_background_covers_all_retyped_quotient_directions": true,
+    "raw_rank_margin": 24,
+    "remaining_finite_linear_alignment_obstruction": false,
+    "image_equals_canonical_S2_plus_L_subspace": false,
+    "projection_to_that_complement_is_surjective": true
+  },
+  "singular_strata": {
+    "uniform_rank54_but_quotient_rank36": true,
+    "linear_rank54_but_quotient_rank45": true,
+    "lesson": "Jacobian rank alone does not measure useful symmetry-changing capacity; orientation relative to S1 matters."
+  },
+  "boundary": "This establishes an exact finite quotient-surjectivity mechanism for one algebraic matter background. It does not select that background dynamically, prove it is a stable or D/F-flat vacuum, determine a coupling coefficient, exponentiate the tangent map into a unitary gate, or certify hardware.",
+  "parents": [
+    "data/w33_e6_cubic_jacobian_rank_stratification.json",
+    "data/w33_minimal_symmetry_changing_81_compiler.json",
+    "analysis/w33_e8_matter81_hybrid_cubic_dark_basis.py",
+    "data/w33_e6id_current_h27_gauge_bridge.json"
+  ],
+  "checks": {
+    "S1_rank27_at_both_split_primes": true,
+    "root_projection20": true,
+    "uniform_projection36": true,
+    "linear_projection45": true,
+    "quadratic_projection54": true,
+    "quadratic_combined_rank81_at_both_split_primes": true,
+    "split_prime_witness_lifts_to_Qomega": true,
+    "all_54_retyped_quotient_directions_covered": true,
+    "subspace_equality_not_overclaimed": true
+  }
+}
