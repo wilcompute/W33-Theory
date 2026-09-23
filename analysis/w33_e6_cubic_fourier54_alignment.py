@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Prove that one explicit E6-cubic background covers the full 54D Fourier-retyped quotient.
 
-The source address module decomposes under K=H27 x C3_external as
+The source address module decomposes under the CURRENT physical-Clifford K=H27 x C3_external gauge as
     Reg(K) = S1(27) + S2(27) + L(27),
 where S1 is the unique 27-dimensional operator-compatible isotypic sector.
 The minimal symmetry-changing compiler must retype the complementary
@@ -14,8 +14,8 @@ rank(D_v)>=54; the relevant condition is
     rank(S1 + Im D_v) = 81.
 Equivalently, the quotient projection Im(D_v) -> Reg(K)/S1 has rank 54.
 
-This producer constructs the 27 canonical S1 matrix coefficients directly from
-the frozen H27 Schrodinger representation and checks the combined rank modulo
+This producer first loads the explicit canonical-e6id -> current-H27 gauge bridge,
+then constructs the 27 S1 matrix coefficients directly from the frozen H27 Schrodinger representation and checks the combined rank modulo
 two split primes p=103,109 of Z[omega].  At each prime omega is sent to a root
 of x^2+x+1.
 
@@ -157,8 +157,10 @@ def prime_rank_certificate(p,v,e6_to_h,records):
     }
 
 def main(write=True):
-    old=load(ROOT/"analysis/w33_pass1103_hesse_firewall_cubic_transport.py","fourier54_old")
-    e6_to_h={int(i):(int(u[0]),int(u[1]),int(z)) for i,(u,z) in old.E6_TO_UZ.items()}
+    bridge=json.loads((ROOT/"data/w33_e6id_current_h27_gauge_bridge.json").read_text())
+    e6_to_h={int(i):tuple(map(int,h)) for i,h in bridge["maps"]["e6id_to_current_H27_address"].items()}
+    assert bridge["incidence"]["mapped_full45_equal"] is True
+    assert bridge["incidence"]["mapped_bad9_equal"] is True
     assert len(set(e6_to_h.values()))==27
     records=ordered_records()
 
@@ -241,7 +243,7 @@ def main(write=True):
         "data/w33_e6_cubic_jacobian_rank_stratification.json",
         "data/w33_minimal_symmetry_changing_81_compiler.json",
         "analysis/w33_e8_matter81_hybrid_cubic_dark_basis.py",
-        "analysis/w33_pass1103_hesse_firewall_cubic_transport.py"
+        "data/w33_e6id_current_h27_gauge_bridge.json"
       ],
       "checks":{
         "S1_rank27_at_both_split_primes":True,
