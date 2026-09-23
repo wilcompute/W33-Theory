@@ -1,0 +1,160 @@
+{
+  "schema": "w33.extended_clifford_hesse_null_cone.v1",
+  "status": "PASS_ANTILINEAR_QUTRIT_CONJUGATION_COMPLETES_HESSIAN216_TO_HESSE432_AND_S4_NULL_CONE",
+  "headline": "The latest anti-linear E8 conjugation and affine-hull certificates close the missing factor-two symmetry. The already-certified physical Clifford central quotient is ASL(2,3) of order 216. Entrywise qutrit conjugation acts on H27/Z by diag(-1,1), determinant -1, so adjoining it extends ASL(2,3) to AGL(2,3) of order 432, exactly the affine/Hesse incidence factor already present in the ramified VM automorphism group. On the four affine direction classes the unitary subgroup gives A4 and conjugation supplies the odd transposition (2 3), completing S4. Independently, the new 3D affine-hull quotient has SO(Q) of order 24 acting faithfully by the same S4 on its four isotropic rays. Thus the Hesse four-direction set is literally the projective null cone of the hull quotient.",
+  "clifford_extension": {
+    "physical_clifford_lift_order": 648,
+    "scalar_center": "C3",
+    "projective_unitary_group": "ASL(2,3)",
+    "projective_unitary_order": 216,
+    "conjugation_on_H27": "(a,b,c)->(-a,b,-c)",
+    "conjugation_on_phase_space": "diag(-1,1)",
+    "phase_space_determinant": -1,
+    "extended_projective_group": "AGL(2,3)",
+    "extended_projective_order": 432,
+    "extended_with_C3_center_order": 1296,
+    "orientation_pair_exchange": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        2,
+        1
+      ]
+    ]
+  },
+  "four_direction_action": {
+    "directions": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "unitary_image": "A4",
+    "unitary_image_order": 12,
+    "extended_image": "S4",
+    "extended_image_order": 24,
+    "common_kernel_order": 18,
+    "conjugation_permutation": [
+      0,
+      1,
+      3,
+      2
+    ],
+    "conjugation_is_odd": true
+  },
+  "affine_hull_null_cone": {
+    "field": "F3",
+    "dimension": 3,
+    "gram": [
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0
+      ]
+    ],
+    "orthogonal_group_order": 48,
+    "special_orthogonal_group_order": 24,
+    "isotropic_projective_rays": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "SO_action_faithful_on_four_rays": true,
+    "SO_ray_permutation_group": "S4",
+    "direction_and_null_ray_permutation_sets_equal": true,
+    "dictionary": {
+      "(1,0)": [
+        1,
+        0,
+        0
+      ],
+      "(0,1)": [
+        0,
+        1,
+        0
+      ],
+      "(1,1)": [
+        0,
+        0,
+        1
+      ],
+      "(1,2)": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "classical_hesse_reading": {
+    "Hesse_configuration": "AG(2,3): 9 points, 12 lines, four parallel classes",
+    "Hessian_group": "G216 = F3^2 : SL(2,3), the determinant-one index-two subgroup of AGL(2,3)",
+    "pencil_action": "G216 acts as A4 on the four singular members; the determinant-minus-one extension supplies the missing odd permutations",
+    "external_reference": "Artebani-Dolgachev, The Hesse pencil of plane cubic curves, arXiv:math/0611590, Proposition 4.1"
+  },
+  "physics_reading": "There is now one exact finite orientation-reversal operation linking three layers: anti-linear matter/antimatter conjugation, determinant-minus-one qutrit phase-space reflection, and odd permutation of the four Hesse/null directions. This is a mathematically exact finite analogue of an orientation reversal, but it is not by itself spatial parity, Lorentz symmetry, CPT, or spontaneous CP breaking.",
+  "boundary": "The phrase null cone refers only to isotropic projective vectors of a nondegenerate quadratic form over F3. No continuum metric signature, causal cone, spacetime dimension, or measured CP observable is inferred. The order-1296 extended-with-center count is not identified with any complex reflection group without a separate matrix intertwiner.",
+  "parents": [
+    "data/PART_W33_20260829_CLIFFORD_C3_CIRCUIT_COVER.json",
+    "data/w33_e8_hybrid_charge_conjugation.json",
+    "data/w33_affine_holonomy_hull.json",
+    "data/w33_affine_holonomy_vm_code_architecture.json",
+    "data/w33_e8_matter81_h27_address_operator_compiler.json"
+  ],
+  "checks": {
+    "H27_conjugation_is_involutive_automorphism": true,
+    "phase_space_reflection_det_minus_one": true,
+    "SL2_direction_image_A4_order12": true,
+    "GL2_direction_image_S4_order24": true,
+    "conjugation_supplies_odd_transposition": true,
+    "projective_unitary_order216": true,
+    "projective_extended_order432": true,
+    "O3_order48_SO3_order24": true,
+    "four_parent_isotropic_rays_exact": true,
+    "SO3_action_on_null_rays_is_faithful_S4": true,
+    "direction_and_null_ray_actions_match": true,
+    "continuum_physics_not_overclaimed": true
+  }
+}
