@@ -1,0 +1,69 @@
+% 2026-09-23 — full W33 point stabilizer as extended qutrit Clifford.
+\subsection*{The \(1296\)-element point stabilizer is the extended qutrit Clifford group}
+
+The central-lift boundary can be closed on the point/Hessian side of the
+\(W(3,3)\) geometry. Adjoin to the native \(PSp(4,3)\) point action the
+multiplier-\(2\) symplectic similitude
+\[
+ D=\operatorname{diag}(2,1,2,1).
+\]
+The resulting projective group has order \(51840\), and the stabilizer of the
+selected W33 point has order \(1296\). Inside it, the certified extraspecial
+Heisenberg subgroup \(H_{27}\cong3_+^{1+2}\) remains normal, and the executable
+witness constructs a disjoint complement of order \(48\) whose conjugation
+action on \(H_{27}/Z(H_{27})\) is the complete \(GL(2,3)\). Every stabilizer
+element has a unique \(H_{27}\cdot GL(2,3)\) normal form. Hence
+\[
+ \boxed{
+ G_{\rm ext}\cong3_+^{1+2}:GL(2,3),
+ \qquad |G_{\rm ext}|=1296.
+ }
+\]
+The determinant-one half is the already certified one-qutrit Clifford group
+\[
+ \boxed{
+ G_{\rm Cliff}\cong3_+^{1+2}:SL(2,3),
+ \qquad |G_{\rm Cliff}|=648.
+ }
+\]
+
+There is an important semantic correction at the phase center. If
+\(Z(H_{27})=\langle z\rangle\cong C_3\), then the \(648\)-group centralizes
+\(z\), whereas every determinant-\(-1\) linear operation acts by
+\[
+ \boxed{z\mapsto z^2=z^{-1}.}
+\]
+Thus this \(C_3\) remains normal in the \(1296\)-group but is not central;
+indeed the full point stabilizer has trivial center.
+
+Quotienting the normal phase subgroup gives the exact affine groups
+\[
+ \boxed{
+ G_{\rm Cliff}/C_3\cong ASL(2,3),\qquad
+ G_{\rm ext}/C_3\cong AGL(2,3).
+ }
+\]
+The second identification is checked permutation-by-permutation on the nine
+phase-space points, not inferred from order.
+
+Finally, the finite spinor-parity character lifts through the phase extension:
+\[
+ \boxed{
+ \chi(n,g)=\det(g)=\theta_{\rm spin}(\rho(g)),
+ \qquad
+ \ker\chi=G_{\rm Cliff}.
+ }
+\]
+Its two fibers have sizes \(648+648=1296\). Thus the same exact \(C_2\)
+separates the unitary and anti-linear halves at the \(216/432\), \(648/1296\),
+and \(A_4/S_4\) levels.
+
+\paragraph{Side-selection guardrail.}
+This is the W33 point/Hessian stabilizer with extraspecial normal \(3^{1+2}\).
+The nonconjugate W33 line/dual stabilizer has elementary-abelian normal
+\(3^3\) and is not identified with the physical qutrit Clifford extension.
+
+\paragraph{Evidence boundary.}
+This closes a finite compiler/group boundary. It does not by itself produce
+physical CPT, continuum parity, a Lorentz \(Pin/Spin\) structure, or particle
+chirality.
