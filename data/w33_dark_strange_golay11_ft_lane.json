@@ -1,0 +1,67 @@
+{
+  "schema": "w33.dark_strange_golay11_ft_lane.v1",
+  "status": "PASS_W33_RECONSTRUCTS_THE_11_QUTRIT_GOLAY_CSS_DISTILLATION_CODE__PHYSICAL_FT_REMAINS_FAIL_CLOSED",
+  "headline": "The W33 local-Golay construction now closes internally to the exact [[11,1,5]]_3 CSS code used by the ternary-Golay Strange-state distillation protocol: G11 has dimension 6 and distance 5, its dual has dimension 5 and lies inside G11, Hx=Hz=G11^perp commute, the code encodes one qutrit, and the minimum logical weight is 5. The dark Strange ray Clifford-decodes directly into this lane. Physical FT scheduling is still refused until calibrated noise and circuit-level evidence gates close.",
+  "w33_code": {
+    "classical": "G11=[11,6,5]_3 perfect ternary Golay",
+    "source": "analysis/w33_pass4806_bonkers_local_ternary_golay.py",
+    "dual_dimension": 5,
+    "dual_contained_in_G11": true,
+    "dual_self_orthogonal": true,
+    "quantum_CSS": "[[11,1,5]]_3",
+    "Hx_rank": 5,
+    "Hz_rank": 5,
+    "logical_qutrits": 1,
+    "logical_distance": 5,
+    "correctable_Pauli_weight": 2,
+    "weight5_logical_witness_present": true
+  },
+  "resource_flow": [
+    "DARK_STRANGE_Q3_RAW",
+    "STRANGE_Q3_RAW via exact Clifford X Z^2",
+    "11-copy Golay CSS projection/decoding",
+    "GOLAY11_STRANGE_LOGICAL (code-level target)",
+    "protected non-Clifford injection (physical gate remains closed)"
+  ],
+  "published_prior_art": {
+    "Prakash_2020": "[[11,1,5]]_3 ternary Golay distills the qutrit Strange state with cubic suppression; depolarizing threshold approximately 0.38715 in the paper's convention",
+    "Prakash_Singhal_2026": "restricted searches through 23 qutrits found no better Strange threshold than Golay; 23-qutrit CSS examples with cubic suppression exist",
+    "Zurel_Jana_deSilva_2026": "the 11-qutrit Golay protocol is unified with quantum quadratic-residue-code distillation; examined qutrit QR examples do not exceed the Golay threshold",
+    "external_not_rederived": true
+  },
+  "admission_rule": {
+    "mathematical_ideal_dark_state_delta": 0,
+    "published_depolarizing_threshold_approx": 0.38715,
+    "hardware_rule": "require a calibrated/twirled input-noise upper bound strictly below the applicable published threshold before admitting a physical 11-copy batch",
+    "current_physical_input_delta_bound": null
+  },
+  "evidence_gates": {
+    "code_algebra_verified": true,
+    "dark_to_Strange_Clifford_decode_verified": true,
+    "published_Strange_distillation_theorem_available": true,
+    "input_depolarizing_noise_bound_measured": false,
+    "eleven_token_correlated_source_model_verified": false,
+    "fault_tolerant_syndrome_extraction_circuit_verified": false,
+    "circuit_level_fault_location_census_verified": false,
+    "mapped_decoder_verified": false,
+    "logical_Strange_injection_to_nonClifford_gate_verified": false,
+    "physical_threshold_certificate_verified": false,
+    "device_calibration_verified": false
+  },
+  "physical_fault_tolerant_lane_enabled": false,
+  "boundary": "This proves that the W33-reconstructed classical Golay object supplies the correct quantum CSS code algebra and that the exact dark Strange token has the right resource type. It does not implement the published distillation polynomial, certify a laboratory source below threshold, make syndrome extraction fault tolerant, or certify a protected non-Clifford injection.",
+  "parents": [
+    "data/PART_W33_PASS4806_LOCAL_TERNARY_GOLAY.json",
+    "data/w33_dark_strange_runtime_adapter.json"
+  ],
+  "checks": {
+    "G11_11_6_5_reconstructed": true,
+    "dual_rank5": true,
+    "dual_containment": true,
+    "CSS_commutation": true,
+    "CSS_encodes1": true,
+    "CSS_distance5": true,
+    "dark_Strange_type_matches_protocol": true,
+    "physical_lane_fail_closed": true
+  }
+}
