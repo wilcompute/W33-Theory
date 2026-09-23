@@ -1,0 +1,95 @@
+% PASS20260923 execute all five continuation.
+\subsection*{Signed cubic transport, full hybrid $E_8$ bracket, Golay Strange lane, $G_2$ no-go, and process calibration}
+
+The canonical signed $E_6$ cubic now transports objectwise into the current
+$H_{27}\times C_3$ matter chart.  In the canonical $SU(3)$ phase gauge,
+\[
+ [e_{i,a},e_{j,b}]=d_{ijk}\epsilon_{abc}\,\bar e_{k,c}.
+\]
+The $45$ signed $E_6$ triads have sign split $22+23$, generate exactly $810$
+nonzero unordered $g_1g_1\to g_2$ root channels, and contain exactly $162$
+channels on the nine firewall fibers.  Every input root has degree $20$ and
+every conjugate-matter root occurs as output ten times.  If $B_{81}$ is the
+completed $73+8$ hybrid basis, the complete cubic tensor is
+\[
+ T_{\rm hyb}=\overline B_{81}^{-1}\,T_{\rm root}\,
+             (B_{81}\otimes B_{81}).
+\]
+Each root-basis tangent map $D_v(x)=[v,x]$ has rank $20$, while the collective
+image span of all $81$ such maps is the full $81$-dimensional $g_2$ block.
+Thus the Jacobian family reaches all $54$ previously identified retyped slots,
+without claiming that a single root background has rank $54$.
+
+The full $248$-dimensional finite Lie-algebra compiler is likewise exact.  With
+the source-locked W33-discrete Chevalley table and the archived root/sign gauge,
+\[
+ A=I_{86}\oplus(P_1G_1B_{81})
+          \oplus(P_2G_2\overline B_{81})
+\]
+is invertible over $\mathbb Q(\omega)$ and
+\[
+ [x,y]_{\rm hyb}=A^{-1}[Ax,Ay]_{E_8}.
+\]
+All six $\mathbb Z_3$ grade products are therefore executable.  The source
+Jacobi verifier exhausts
+\[
+ \binom{248}{3}=2\,511\,496
+\]
+basis triples; exact change of basis transports Jacobi identically to the
+hybrid atlas.
+
+The dark Strange resource also lands on an internally reconstructed quantum
+Golay code.  The W33 local construction gives $G_{11}=[11,6,5]_3$, and
+\[
+ \dim G_{11}^{\perp}=5,\qquad
+ G_{11}^{\perp}\subset G_{11},
+\]
+so $H_X=H_Z=G_{11}^{\perp}$ gives
+\[
+ \boxed{[[11,1,5]]_3}.
+\]
+This is precisely the code type used by the published ternary-Golay
+Strange-state protocol.  The runtime chain is
+\[
+ {\tt DARK\_STRANGE\_Q3\_RAW}
+ \xrightarrow{\,XZ^2\,}
+ {\tt STRANGE\_Q3\_RAW}
+ \longrightarrow [[11,1,5]]_3 .
+\]
+Code algebra is closed, but calibrated input noise, protected syndrome
+extraction, circuit-level fault coverage, decoder integration and protected
+non-Clifford injection remain fail-closed physical gates.
+
+The earlier $G_2$ branching shadow does not extend to a commuting
+$G_2\times C_3^{\rm ext}$ action.  The dark external-$C_3$ spectrum is
+\[
+ 1^6+\omega+\omega^2.
+\]
+After choosing either external-charge singlet as the $G_2$-fixed line, the
+candidate irreducible seven sees either $1^6+\omega$ or
+$1^6+\omega^2$, which is non-scalar.  This contradicts Schur's lemma for the
+irreducible complex $G_2$ seven.  A noncommuting larger envelope is not ruled
+out.
+
+Finally the coherent $9+3$ photonic retimer now has a quantitative design
+target.  For declared normalized process target $F_\star=0.99$, use
+\[
+ F_{\rm model}\ge
+ F_{\rm TRI}\cos^2\phi_{\max}\,
+ {\rm sech}^2\!\left({\ln10\over20}L_{\max}^{\rm dB}\right).
+\]
+Equal allocation gives
+\[
+ F_{\rm TRI}\ge0.996655493413,\qquad
+ |\delta\phi|\le3.315362654681^\circ,\qquad
+ |\delta L|\le0.502880974035\ {\rm dB}.
+\]
+These are sufficient component gates, not measurements.  The final one-device
+acceptance test is the reconstructed $36\times36$ complex transfer matrix
+\[
+ F_{\rm HS}(M)=
+ {|\operatorname{Tr}(U_{\rm ideal}^{\dagger}M)|^2
+  \over36\,\operatorname{Tr}(M^\dagger M)}
+ \ge0.99,
+\]
+together with the previously frozen visibility and radial-leakage falsifiers.
