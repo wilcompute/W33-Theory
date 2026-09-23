@@ -1,0 +1,43 @@
+{
+  "schema": "w33.hesse36_full_clifford648_fourier_compiler.v1",
+  "status": "PASS_FULL_CLIFFORD648_36D_COMPILER_IS_TWELVE_CENTRAL_F3_FOURIER_FIBERS",
+  "headline": "The complement-level Hesse36 Fourier compiler extends exactly to all 648 physical one-qutrit Clifford elements. The ordinary 36 is G/H18; each of the three safe 12-sheets is G/H54 with H18 normal in H54 and quotient C3. The quotient generator is literally the address-center element z. Hence Ind_H18^G(1) is the direct sum of the three character-twisted Ind_H54^G modules, and the full compiler is twelve independent three-point Fourier transforms along central fibers.",
+  "group": {
+    "G": "H27_address : SL(2,3)",
+    "order": 648,
+    "source_stabilizer_order": 18,
+    "target_sheet_stabilizer_order": 54,
+    "quotient": "H54/H18 = C3",
+    "quotient_generator": "address center z=(0,0,1)",
+    "target_permutation_image_order": 216
+  },
+  "orbits": {
+    "ordinary36": [36],
+    "safe36": [12, 12, 12],
+    "aligned_safe_seeds": [1, 14, 25]
+  },
+  "compiler": {
+    "dimension": 36,
+    "field": "Q(omega)",
+    "rank": 36,
+    "nonzero_entries": 108,
+    "column_support_profile": {"3": 36},
+    "gram": "T^*T=3I36",
+    "normalized_unitary": "T/sqrt(3)",
+    "fiber_count": 12,
+    "fiber_size": 3,
+    "matrix_digest": "sha256:e47a3a823d1c0840ec492954c40821ba0ea982e81f6769a041e6aac58fd4ba79"
+  },
+  "checks": {
+    "full_648_source_action": true,
+    "safe_action_image216": true,
+    "H18_normal_in_H54": true,
+    "quotient_is_C3": true,
+    "quotient_generator_is_address_center": true,
+    "rank36": true,
+    "gram_3I": true,
+    "all_648_squared_target_group_law": true,
+    "all_648_intertwining_identities": true
+  },
+  "boundary": "Exact finite Clifford/compiler theorem. It does not identify safe planes with E8 roots and does not by itself choose a heterotic vacuum or laboratory implementation."
+}
