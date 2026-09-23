@@ -116,7 +116,7 @@ def main(write=True):
         "logical_qutrits":1,
         "logical_distance":5,
         "correctable_Pauli_weight":2,
-        "weight5_logical_witness":list(witness)
+        "weight5_logical_witness_present":true
       },
       "resource_flow":[
         "DARK_STRANGE_Q3_RAW",
