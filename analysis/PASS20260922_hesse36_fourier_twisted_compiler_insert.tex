@@ -1,0 +1,56 @@
+% PASS20260922 exact Fourier-twisted Hesse36 compiler.
+\subsection*{The order-three defect closes by a three-character Fourier compiler}
+
+Let $G=SL(2,3)$ be the common physical split complement.  The two
+$36$-state carriers decompose as
+\[
+36_{\rm ordinary}=4+4+4+24,
+\qquad
+36_{\rm safe}=4+4+4+8+8+8.
+\]
+The three $4$-orbits have the same order-six stabilizer and pair objectwise.
+The ordinary $24$-orbit is the regular $G$-set, while all three safe
+$8$-orbits have the same stabilizer $H\cong C_3$.  Hence
+\[
+\boxed{
+\operatorname{Reg}(G)
+\cong
+\bigoplus_{\chi\in\widehat H}\operatorname{Ind}_{H}^{G}\chi .
+}
+\]
+
+The executable compiler realizes this identity directly.  For each of the
+eight right cosets $rH$ and the three characters $j=0,1,2$,
+\[
+|r,j\rangle\longmapsto
+\sum_{k=0}^{2}\omega^{-jk}|rh^k\rangle .
+\]
+The three safe $8$-orbits carry the characters
+$1,\chi,\chi^2$, with monomial phase
+\[
+g|r,j\rangle=\omega^{jm(g,r)}|r',j\rangle,
+\qquad
+gr=r'h^{m(g,r)}.
+\]
+
+The resulting $36\times36$ matrix has entries in $\mathbf Q(\omega)$,
+exact rank $36$, and $84$ nonzero entries.  Its columns are exactly orthogonal,
+with squared norms
+\[
+1^{12}\oplus3^{24}.
+\]
+All $24^2\cdot36=20{,}736$ twisted-target representation-law checks and all
+$24$ intertwining identities pass exactly.  The order-three target trace moves
+from $9$ before twisting to $3$ after twisting, matching the ordinary carrier;
+the order $1,2,4,6$ character strata were already identical.
+
+\paragraph{Architecture reading.}
+Twelve states compile objectwise.  The remaining $24$ are eight $C_3$ fibers
+whose three Fourier modes are the three character-labelled safe sheets.
+Thus the finite $SL(2,3)$ representation-level compiler closes after one
+explicit ternary character twist.
+
+\paragraph{Scope firewall.}
+Multiplying the Fourier columns by $1/\sqrt3$ gives the usual complex-unitary
+normalization.  This finite intertwiner does not prove that E8 dynamics, a
+heterotic vacuum, or a photonic device physically selects the twist.
