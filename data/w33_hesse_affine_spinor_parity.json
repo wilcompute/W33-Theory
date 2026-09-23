@@ -1,0 +1,58 @@
+{
+  "schema": "w33.hesse_affine_spinor_parity.v1",
+  "status": "PASS_FULL_HESSE_AFFINE_EXTENSION_HAS_CANONICAL_SPINOR_PARITY_CHARACTER",
+  "headline": "The complete 432-element Hesse affine group carries a canonical C2 character chi(t,g)=det(g)=spinor_norm(rho(g)). Its kernel is exactly ASL(2,3), order 216, the projective unitary qutrit Clifford/Hessian group. The other 216 elements are the anti-linear/determinant-minus-one coset. Translations are spinor-parity neutral.",
+  "groups": {
+    "translation_group": "F3^2",
+    "translation_order": 9,
+    "linear_group": "GL(2,3)",
+    "linear_order": 48,
+    "special_linear_order": 24,
+    "AGL_order": 432,
+    "ASL_order": 216
+  },
+  "character": {
+    "definition": "chi(t,g)=det(g)=spinor_norm(rho(g)) in F3^*/(F3^*)^2={1,2}",
+    "homomorphism_pairs_checked": 186624,
+    "trivial_class_elements": 216,
+    "nontrivial_class_elements": 216,
+    "surjective_to_C2": true,
+    "kernel_order": 216,
+    "kernel": "ASL(2,3)=F3^2:SL(2,3)",
+    "translation_subgroup_in_kernel": true,
+    "orthogonal_image_fibre_size": 18,
+    "orthogonal_image_order": 24
+  },
+  "compiler_reading": {
+    "unitary_projective_group": "ASL(2,3)",
+    "unitary_order": 216,
+    "extended_affine_group": "AGL(2,3)",
+    "extended_order": 432,
+    "unitary_direction_image": "A4",
+    "extended_direction_image": "S4",
+    "anti_linear_generator": "kappa=diag(-1,1)",
+    "anti_linear_character": 2,
+    "anti_linear_generator_order": 2
+  },
+  "central_lift_boundary": "The upstream Clifford certificate has a nonsplit central C3 lift of ASL(2,3) of order 648 and records an extended-with-center count 1296. This theorem does not identify a particular 1296 permutation stabilizer with that semilinear lift; the repo contains multiple 1296 carriers. An explicit central-extension intertwiner is still required.",
+  "physics_boundary": "chi is a finite compiler/group character. Calling it spinor parity means only that it is pulled back from the finite orthogonal spinor norm. It is not physical spacetime parity, fermion parity, CPT, or a continuum Pin/Spin structure.",
+  "parents": [
+    "data/w33_hesse_nullcone_adjoint_intertwiner.json",
+    "data/w33_hesse_nullcone_spinor_norm.json",
+    "data/w33_extended_clifford_hesse_null_cone.json"
+  ],
+  "checks": {
+    "AGL_order432": true,
+    "ASL_order216": true,
+    "character_balanced_216_216": true,
+    "character_homomorphism_all_186624_pairs": true,
+    "kernel_exactly_ASL": true,
+    "all_translations_character_trivial": true,
+    "orthogonal_fibres_all_size18": true,
+    "anti_linear_generator_nontrivial_character": true,
+    "anti_linear_generator_involution": true,
+    "projective_Clifford_is_character_kernel": true,
+    "central_1296_not_overidentified": true,
+    "physical_parity_not_claimed": true
+  }
+}
