@@ -1,0 +1,57 @@
+{
+  "schema": "w33.extended_clifford_g26_no_go.v1",
+  "status": "PASS_EXTENDED_QUTRIT_1296_IS_NOT_SHEPHARD_TODD_G26",
+  "headline": "The order-1296 coincidence is now resolved negatively. The retained-phase extended qutrit Clifford group H27:GL(2,3) has trivial center, whereas Shephard-Todd G26 is classified as C2 x (3^(1+2).SL(2,3)) and therefore has a central involution. Hence the groups are not isomorphic. Their projective shadows also differ: the qutrit group's normal-C3 quotient is AGL(2,3), order 432, while G26's scalar collineation quotient is the Hessian group of order 216.",
+  "extended_qutrit_group": {
+    "structure": "H27 : GL(2,3)",
+    "order": 1296,
+    "center_order": 1,
+    "derived_order": 648,
+    "abelianization": "C2",
+    "normal_phase_C3_not_central": true,
+    "normal_C3_quotient": "AGL(2,3)",
+    "normal_C3_quotient_order": 432
+  },
+  "G26_classification_input": {
+    "name": "Shephard-Todd G26 = W(M3)",
+    "order": 1296,
+    "structure": "C2 x (3^(1+2).SL(2,3))",
+    "explicit_central_C2_factor": true,
+    "projective_collineation_group": "Hessian group G216",
+    "projective_collineation_order": 216,
+    "multiplicative_character_count_reported_in_literature": 6
+  },
+  "obstructions": {
+    "center": "qutrit group center=1, but G26 contains a direct central C2; therefore no abstract group isomorphism exists",
+    "projective_shadow": "qutrit normal-C3 quotient has order 432, whereas the G26 scalar projective collineation quotient has order 216",
+    "extension_semantics": "the qutrit odd coset inverts the Pauli C3 center; the G26 extra C2 is a central direct factor"
+  },
+  "important_non_no_go": "This theorem does not rule out the separately known relationship between the determinant-one 648 core and the Hessian reflection group G25. It only rules out identifying the full 1296 anti-linear qutrit extension with G26.",
+  "literature": [
+    {
+      "source": "Magma Handbook, Construction of Finite Complex Reflection Groups",
+      "fact": "G26: W(M3)=Z2 x 3^(1+2).SL2(3), order 1296"
+    },
+    {
+      "source": "Semiinvariants of Finite Reflection Groups, Example G26",
+      "fact": "G26 has 1296 complex 3x3 matrices; its collineation group after modding scalar matrices is Hessian order 216; six multiplicative characters are reported"
+    }
+  ],
+  "boundary": "The no-go is an abstract finite-group distinction. It says nothing by itself about physical reflection symmetries, spacetime parity, or which complex representation—if any—should model the photonic hardware.",
+  "parents": [
+    "data/w33_extended_clifford_pass408_intertwiner.json",
+    "data/w33_q3_extended_clifford_saturation.json"
+  ],
+  "checks": {
+    "qutrit_full_order1296": true,
+    "qutrit_full_center_trivial": true,
+    "qutrit_full_derived648": true,
+    "qutrit_abelianization_C2": true,
+    "qutrit_phase_C3_normal_not_central": true,
+    "g26_classification_order1296": true,
+    "g26_has_explicit_central_C2": true,
+    "center_invariant_proves_nonisomorphism": true,
+    "projective_shadow_orders_differ_432_vs216": true,
+    "g25_core_relationship_not_denied": true
+  }
+}
