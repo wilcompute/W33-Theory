@@ -7,7 +7,8 @@
     "canonical_cubic_blob_sha": "3bcc9cdcd572627efe675e1fad4b32b3fe48f649",
     "archived_g1g1_path": "extracted_v13/W33-Theory-master/artifacts/e8_g1g1_couplings_cubic_firewall.json",
     "archived_g1g1_blob_sha": "e5baf485428856a438df04a12b3a6e4d3a2ba5f7",
-    "current_H27_bridge": "analysis/w33_pass1103_hesse_firewall_cubic_transport.py"
+    "historical_H27_bridge": "analysis/w33_pass1103_hesse_firewall_cubic_transport.py",
+    "current_H27_bridge": "data/w33_e6id_current_h27_gauge_bridge.json"
   },
   "root_tensor": {
     "formula": "[e_(i,a),e_(j,b)] = d_ijk epsilon_abc ebar_(k,c)",
