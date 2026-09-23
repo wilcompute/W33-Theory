@@ -101,7 +101,7 @@ def main(write=True):
     bad_triads={tuple(sorted(x)) for x in fwmod.FIBER_SIGNS}
     records=[]
     for aa in range(81):
-        h1,p=index.__class__ and keys[aa]
+        h1,p=keys[aa]
         i=h_to_e6[h1]
         for bb in range(aa+1,81):
             h2,q=keys[bb]; j=h_to_e6[h2]
@@ -159,7 +159,7 @@ def main(write=True):
         "g1_basis":"B81 = 73 cubic pivots + 8 Fourier/magic modes",
         "g2_basis":"conjugate(B81)",
         "complete_factorized_formula":"T_hyb = conjugate(B81)^(-1) o T_root o (B81 tensor B81)",
-        "materialized_dense_81_cubed":false,
+        "materialized_dense_81_cubed":False,
         "reason":"the factorized exact tensor is complete and avoids a redundant dense 531441-entry artifact",
         "basis_rank_g1":81,
         "basis_rank_g2":81
@@ -168,8 +168,8 @@ def main(write=True):
         "definition":"D_v(x)=[v,x]: g1 -> g2",
         "root_basis_background_rank_set":[20],
         "collective_image_span_dimension":81,
-        "collectively_reaches_all_54_retyped_slots":true,
-        "single_root_background_rank54":false,
+        "collectively_reaches_all_54_retyped_slots":True,
+        "single_root_background_rank54":False,
         "single_generic_background_rank":"not established in this certificate"
       },
       "boundary":"This closes the exact tensor transport and the collective tangent-span question. It does not prove that one physical vacuum/background realizes rank 54, nor supply a Hamiltonian coupling strength, VEV, mass, scattering amplitude, or fault-tolerant implementation.",
@@ -179,15 +179,15 @@ def main(write=True):
         "data/w33_h27_cubic_representation_transducer.json"
       ],
       "checks":{
-        "canonical_45_triads_loaded":true,
-        "e6id_to_current_H27_is_bijective":true,
-        "canonical_triads_equal_current_45_H27_lines":true,
-        "root_channels_810":true,
-        "firewall_channels_162":true,
-        "every_input_degree20":true,
-        "every_output_multiplicity10":true,
-        "collective_jacobian_span81":true,
-        "hybrid_change_of_basis_invertible":true
+        "canonical_45_triads_loaded":True,
+        "e6id_to_current_H27_is_bijective":True,
+        "canonical_triads_equal_current_45_H27_lines":True,
+        "root_channels_810":True,
+        "firewall_channels_162":True,
+        "every_input_degree20":True,
+        "every_output_multiplicity10":True,
+        "collective_jacobian_span81":True,
+        "hybrid_change_of_basis_invertible":True
       }
     }
     if write:OUT.write_text(json.dumps(out,indent=2)+"\n")
