@@ -1,0 +1,90 @@
+{
+  "schema": "w33.20260923.execute_all5_plus3_wigner_clifford_physics.v1",
+  "status": "PASS_ALL_FIVE_PLUS_THREE_EXECUTED_WITH_EXACT_FINITE_BOUNDARIES",
+  "headline": "Reversible quantum implementability forces Heisenberg similitude multiplier +/-1, so q=3 is the unique odd prime-power dimension in which every bulk graph automorphism is a unitary/antiunitary quantum symmetry. The Clifford-648 core is explicitly the G25 reflection matrix group in the same qutrit basis; the local anti-linear C2 restricts from the exact E8(8) real structure; the center-character mismatch action is 2(q-3). Three additional probes give a formal Hodge-dual completion, an exact mu12 Floquet clock, and a commutator-holonomy interferometric falsifier.",
+  "five": {
+    "1_wigner_implementability": {
+      "unitary_multiplier": 1,
+      "antiunitary_multiplier": -1,
+      "criterion": "all graph similitudes quantum-implementable iff F_q^*={+1,-1}",
+      "odd_prime_result": "p=3 uniquely"
+    },
+    "2_G25_matrix_dictionary": {
+      "order": 648,
+      "R1": "P=diag(1,1,omega)",
+      "R3": "ZP=diag(1,omega,1)",
+      "R2": "F diag(omega,1,1) F^-1",
+      "F": "(1/(1+2omega))*DFT3",
+      "same_Hilbert_basis": true
+    },
+    "3_E8_C2_lift": {
+      "local_rule": "Z^a X^b Z_FI^c -> Z^-a X^b Z_FI^-c",
+      "global_rule": "J=theta o coefficient_conjugation",
+      "all_parent_brackets_checked": 30628,
+      "J_squared": 1,
+      "real_form": "E8(8)",
+      "matter_exchange": "81 grade-1 roots <-> 81 exact grade-2 negative roots"
+    },
+    "4_character_mismatch_action": {
+      "definition": "center-averaged mean-square phase mismatch to the nearer +/- reversible branch",
+      "single_multiplier": "E(m)=0 for m=+/-1 and E(m)=2 otherwise",
+      "closed_form": "S(q)=2(q-3)",
+      "unique_zero": 3
+    },
+    "5_prime_power_completion": {
+      "Frobenius": "|x> -> |x^p> is a permutation unitary",
+      "physical_group": "H_q : (ESL(2,q) : Gal(F_q/F_p))",
+      "graph_group": "H_q : GammaL(2,q)",
+      "index": "(q-1)/2",
+      "unique_saturation": 3,
+      "cases": {
+        "3": {"full": 1296, "physical": 1296, "index": 1},
+        "5": {"full": 60000, "physical": 30000, "index": 2},
+        "7": {"full": 691488, "physical": 230496, "index": 3},
+        "9": {"full": 8398080, "physical": 2099520, "index": 4},
+        "11": {"full": 17569200, "physical": 3513840, "index": 5},
+        "13": {"full": 57578976, "physical": 9596496, "index": 6},
+        "25": {"full": 11700000000, "physical": 975000000, "index": 12},
+        "27": {"full": 30177345744, "physical": 2321334288, "index": 13},
+        "49": {"full": 1328210150400, "physical": 55342089600, "index": 24}
+      }
+    }
+  },
+  "outside_box": {
+    "1_primal_dual_Hodge_completion": {
+      "original_cells": [40, 240, 160, 40],
+      "original_betti": [1, 81, 0, 0],
+      "dual_cells": [40, 160, 240, 40],
+      "dual_betti": [0, 0, 81, 1],
+      "doubled_cells": [80, 400, 400, 80],
+      "doubled_betti": [1, 81, 81, 1],
+      "doubled_Euler": 0,
+      "reading": "the missing magnetic/Hodge partner can live in a canonical dual sector rather than inside the original clique complex"
+    },
+    "2_G25_mu12_Floquet": {
+      "drive": "U_F=R1 R2 R3",
+      "order": 12,
+      "characteristic_polynomial": "lambda^3-omega lambda^2+omega^2 lambda-1",
+      "eigenphase_fractions": ["1/12", "4/12", "7/12"],
+      "reading": "literal three-kick qutrit control realization of the recurring mu12 frame"
+    },
+    "3_holonomy_interferometer": {
+      "control_dimension": 5,
+      "forbidden_multiplier": 2,
+      "unitary_or_antiunitary_commutator_phase": "zeta5 or zeta5^-1",
+      "forbidden_graph_phase": "zeta5^2",
+      "balanced_reference_probability_allowed": 0.6545084971874737,
+      "balanced_reference_probability_forbidden": 0.09549150281252633,
+      "absolute_contrast": 0.5590169943749475,
+      "status": "proposed falsification protocol; no laboratory data"
+    }
+  },
+  "literature": [
+    "D. M. Appleby, arXiv:0909.5233",
+    "R. Simon, N. Mukunda, S. Chaturvedi, V. Srinivasan, arXiv:0808.0779",
+    "D. M. Appleby, I. Bengtsson, H. B. Dang, arXiv:1409.7987",
+    "M. Artebani, I. Dolgachev, arXiv:math/0611590",
+    "S. Bravyi, M. B. Hastings, F. Verstraete, arXiv:quant-ph/0603121"
+  ],
+  "boundary": "Exact finite group, matrix, Lie-algebra, chain-complex and proposed interferometric results only. No Standard Model, spacetime, gravity, observed generations, masses, couplings or CPT are derived."
+}
