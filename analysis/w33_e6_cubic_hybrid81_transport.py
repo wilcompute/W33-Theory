@@ -70,9 +70,15 @@ def main(write=True):
     sign_hist=Counter(d.values())
     assert sign_hist==Counter({-1:23,1:22})
 
-    # Exact e6id -> H27 address in the SAME Z^a X^b omega^c normal form.
-    e6_to_h={int(i):(int(u[0]),int(u[1]),int(z)) for i,(u,z) in fwmod.E6_TO_UZ.items()}
+    # Two H27 coordinate gauges must be kept distinct.
+    old_e6_to_h={int(i):(int(u[0]),int(u[1]),int(z)) for i,(u,z) in fwmod.E6_TO_UZ.items()}
+    old_h_to_e6={h:i for i,h in old_e6_to_h.items()}
+    assert len(old_e6_to_h)==len(old_h_to_e6)==27
+    bridge=json.loads((ROOT/"data/w33_e6id_current_h27_gauge_bridge.json").read_text())
+    e6_to_h={int(i):tuple(map(int,h)) for i,h in bridge["maps"]["e6id_to_current_H27_address"].items()}
     h_to_e6={h:i for i,h in e6_to_h.items()}
+    assert bridge["incidence"]["mapped_full45_equal"] is True
+    assert bridge["incidence"]["mapped_bad9_equal"] is True
     assert len(e6_to_h)==len(h_to_e6)==27
 
     # Compare, but do NOT identify, the two 45-line gauges.  Pass1103's
@@ -90,18 +96,14 @@ def main(write=True):
     for _name,g in hmod.DIRECTIONS:
         S=frozenset((ID,g,hmod.hmul(g,g)))
         cs=right_cosets_H(S); assert len(cs)==9
-        for C in cs: current_lines.add(tuple(sorted(h_to_e6[x] for x in C)))
+        for C in cs: current_lines.add(tuple(sorted(old_h_to_e6[x] for x in C)))
     canonical_lines=set(d)
     assert len(current_lines)==len(canonical_lines)==45
     gauge_overlap=current_lines & canonical_lines
     bad_triads={tuple(sorted(x)) for x in fwmod.FIBER_SIGNS}
     assert len(gauge_overlap)==10
     assert bad_triads <= gauge_overlap and len(bad_triads)==9
-    bridge=json.loads((ROOT/"data/w33_e6id_current_h27_gauge_bridge.json").read_text())
-    assert bridge["incidence"]["mapped_full45_equal"] is True
-    assert bridge["incidence"]["mapped_bad9_equal"] is True
-
-    # Root-coordinate canonical bracket, with external phase p identified with
+    # Root-coordinate canonical bracket in the CURRENT compiler H27 row gauge, with external phase p identified with
     # the canonical SU(3) basis index in this anchored qutrit gauge.
     keys=[(h,p) for h in H for p in range(3)]
     index={x:i for i,x in enumerate(keys)}
@@ -151,7 +153,8 @@ def main(write=True):
         "canonical_cubic_blob_sha":"3bcc9cdcd572627efe675e1fad4b32b3fe48f649",
         "archived_g1g1_path":"extracted_v13/W33-Theory-master/artifacts/e8_g1g1_couplings_cubic_firewall.json",
         "archived_g1g1_blob_sha":"e5baf485428856a438df04a12b3a6e4d3a2ba5f7",
-        "current_H27_bridge":"analysis/w33_pass1103_hesse_firewall_cubic_transport.py"
+        "historical_H27_bridge":"analysis/w33_pass1103_hesse_firewall_cubic_transport.py",
+        "current_H27_bridge":"data/w33_e6id_current_h27_gauge_bridge.json"
       },
       "gauge_comparison":{
         "pass1103_e6id_to_H27_object_map_bijective":True,
