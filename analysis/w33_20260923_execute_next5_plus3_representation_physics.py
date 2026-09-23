@@ -705,7 +705,7 @@ def main(write=True, trials=5000):
         "parents":[str(p.relative_to(ROOT)) for p in parents],
     }
     if write:
-        OUT.write_text(json.dumps(out,indent=2)+"\n")
+        OUT.write_text(json.dumps(out,indent=2,default=lambda o:o.item() if isinstance(o,np.generic) else str(o))+"\n")
     return out
 
 
@@ -718,4 +718,4 @@ if __name__=="__main__":
         "q5_mean":result["attack5_nuisance_adaptive_holonomy"]["nuisance_marginalized_adaptive"]["results"]["5"]["mean"],
         "q7_mean":result["attack5_nuisance_adaptive_holonomy"]["nuisance_marginalized_adaptive"]["results"]["7"]["mean"],
         "q9_mean":result["attack5_nuisance_adaptive_holonomy"]["nuisance_marginalized_adaptive"]["results"]["9"]["mean"],
-    },indent=2))
+    },indent=2,default=lambda o:o.item() if isinstance(o,np.generic) else str(o)))
