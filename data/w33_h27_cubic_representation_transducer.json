@@ -1,0 +1,35 @@
+{
+  "schema": "w33.h27_cubic_representation_transducer.v1",
+  "status": "PASS_H27_TENSOR_RING_PERMITS_NONLINEAR_TRANSMUTATION_ACROSS_THE_LINEAR_54D_OBSTRUCTION",
+  "headline": "The 54D linear equivariance obstruction is not a nonlinear selection-rule obstruction. Exact H27 tensor products obey V_omega tensor V_omega^2 = all nine one-dimensional characters, V_omega^2 tensor V_omega^2 = 3 V_omega, and V_omega tensor V_omega = 3 V_omega^2. Cubic Schrodinger products contain three singlets exactly when external C3 charges sum to zero.",
+  "tensor_rules": {
+    "S1_t_x_S2_u": "direct sum of all L(a,b,t+u), a,b in F3",
+    "S1_t_x_S1_u": "3 S2_(t+u)",
+    "S2_t_x_S2_u": "3 S1_(t+u)",
+    "dimensions": {"mixed":9,"same":9}
+  },
+  "cubic_invariants": {
+    "rule": "dim Hom_K(1,S(r,t) tensor S(r,u) tensor S(r,v)) = 3 iff t+u+v=0 mod3",
+    "charge_zero_external_triples_per_central_character": 9,
+    "central_characters_tested": [1,2],
+    "nonzero_charge_labeled_cases": 18,
+    "total_singlet_multiplicity_across_all_cases": 54
+  },
+  "compiler_reading": "A linear K-intertwiner cannot fill 54 operator dimensions, but quadratic/cubic couplings can change H27 central character and create exactly the irrep species missing from the linear image. This makes the E6 cubic/Yukawa layer a mathematically type-correct candidate for the symmetry-changing stage.",
+  "physics_hypothesis": "Test the landed E6 cubic coefficients as an explicit nonlinear transducer in the hybrid81 basis: mixed matter/antimatter Schrodinger factors should generate abelian control channels, while conjugate-pair self-couplings can generate V_omega operator channels.",
+  "boundary": "Representation-ring compatibility is necessary but not sufficient for a physical compiler. No unitary nonlinear gate, coupling strength, vacuum expectation value, mass, or scattering amplitude is derived here.",
+  "parents": [
+    "data/w33_hybrid81_operator_equivariance_budget.json",
+    "data/w33_e8_full_graded_hybrid_atlas.json"
+  ],
+  "checks": {
+    "all_9_external_pair_charges_checked": true,
+    "mixed_tensor_dimension9": true,
+    "same_tensor_dimension9": true,
+    "S1S2_gives_all_9_abelian_chars": true,
+    "S2S2_gives_3_S1": true,
+    "S1S1_gives_3_S2": true,
+    "cubic_charge_rule_exhausted": true,
+    "linear_no_go_not_misreported_as_nonlinear_no_go": true
+  }
+}
