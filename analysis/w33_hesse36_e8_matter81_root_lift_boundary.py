@@ -111,7 +111,7 @@ def main(write=True):
     assert carrier["cubic_lift"]["zero_sum_E8_triples"]==270
     assert carrier["cubic_lift"]["allowed_phase_multiset"]==[0,1,2]
     assert qpsi["E6_cubic"]["all_cubics_matter_parity_even"] is True
-    assert all(row["sum_Qpsi"]==0 for row in qpsi["E6_cubic"]["patterns"])
+    assert all(sum(row["Qpsi"])==0 for row in qpsi["E6_cubic"]["patterns"])
     assert pauli["projective_weight_rays"]["orbit_count"]==9
     assert pauli["projective_weight_rays"]["orbit_size"]==9
     assert fullcompiler["compiler"]["rank"]==36
