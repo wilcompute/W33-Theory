@@ -1,0 +1,200 @@
+% 2026-09-23 — execute five post-frontier attacks.
+\subsection*{Geometric Hodge metric, minimal similitude completion, E8 Kramers no-go, FI pulse compiler, and profiled p=5 likelihood}
+
+The formal doubled Hodge carrier can now be given an exact
+\(\operatorname{Aut}(W(3,3))\)-invariant piecewise-Euclidean metric.  For
+adjacency matrix \(A\), the normalized rank-24 spherical Gram matrix is
+\[
+\boxed{
+G=\frac{5A+20I-2J}{18},
+}
+\]
+so adjacent vertices have inner product \(1/6\), nonadjacent vertices
+\(-1/9\), and every edge has
+\[
+\boxed{a^2=\frac53}.
+\]
+The symplectic transvection generators act transitively on all \(240\)
+edges, so an invariant edge metric has one scale.  Every clique-line is a
+regular tetrahedron.  The exact circumcentric Hodge weights at the spherical
+normalization are
+\[
+\boxed{
+\left(
+\frac{5\sqrt{30}}{108},
+\frac{\sqrt{30}}{72},
+\frac{\sqrt{30}}{15},
+\frac{18\sqrt{30}}{25}
+\right),
+}
+\]
+all strictly positive.  The topology nevertheless remains non-manifold:
+every triangle and every edge has only one tetrahedral coface, while each
+vertex lies in four tetrahedra.  Thus the result is a positive
+piecewise-Euclidean circumcentric metric, not a smooth-manifold theorem.
+
+The full Heisenberg similitude group can also be unitarized explicitly once
+all nontrivial central-character sectors are retained.  On
+\[
+\mathcal H_{\rm full}
+=
+\bigoplus_{t\in\mathbb F_q^\times}\mathcal H_t,
+\qquad
+\dim\mathcal H_{\rm full}=q(q-1),
+\]
+the finite Fourier and quadratic-chirp generators act blockwise, while a
+primitive determinant \(a\) is represented by
+\[
+\boxed{
+D_a\ket{t,x}=\ket{a^{-1}t,x}.
+}
+\]
+This gives
+\[
+(u,v,z)\mapsto(u,av,az).
+\]
+The matrices were materialized at \(q=5\) and \(q=9\), in dimensions
+\[
+\boxed{20\quad\text{and}\quad72},
+\]
+with maximum covariance residuals below \(6\times10^{-15}\).  The
+dimensions are minimal: determinant surjectivity makes
+\(\mathbb F_q^\times\) act transitively on the \(q-1\) nontrivial center
+characters, while finite Stone--von Neumann uniqueness assigns each an
+inequivalent \(q\)-dimensional Schr\"odinger irrep.  Hence every full
+similitude unitary extension obeys
+\[
+\boxed{\dim\mathcal H\ge q(q-1)}.
+\]
+The ordinary conjugate pair has dimension \(2q\), so it already saturates
+this completion iff \(q=3\).
+
+The proposed doubled Kramers structure does \emph{not} extend the exact
+\(E_8\) bracket.  Its square would act as \(+I\) on
+\(\mathfrak g_0\) and \(-I\) on both matter grades.  But for nonzero
+\([x,y]\in[\mathfrak g_1,\mathfrak g_1]\subset\mathfrak g_2\),
+\[
+A[x,y]=-[x,y],
+\qquad
+[Ax,Ay]=[-x,-y]=[x,y].
+\]
+The committed structure constants contain
+\[
+\boxed{
+810\ \mathfrak g_1\mathfrak g_1\to\mathfrak g_2
+\quad\text{and}\quad
+810\ \mathfrak g_2\mathfrak g_2\to\mathfrak g_1
+}
+\]
+nonzero source pairs, giving exactly
+\[
+\boxed{1620}
+\]
+sign violations.  Therefore \(T^2=-1\) may only be an independently imposed
+state-space/Hamiltonian symmetry; it cannot be a Lie automorphism or
+anti-automorphism of the certified \(E_8\) bracket.  The existing
+\(J^2=+1\) real involution remains bracket-compatible.
+
+The exact FI fourth-root identity also lowers to the existing Holonet qutrit
+vocabulary.  With
+\[
+R_1=\operatorname{diag}(1,1,\omega),\qquad
+R_3=\operatorname{diag}(1,\omega,1),
+\]
+and
+\[
+R_2=F_3\operatorname{diag}(\omega,1,1)F_3^\dagger,
+\]
+one physical tick of \(U_F=R_1R_2R_3\) is, right-to-left,
+\[
+\text{phase}_{1}(120^\circ),
+\quad
+F_3^\dagger,
+\quad
+\text{phase}_{0}(120^\circ),
+\quad
+F_3,
+\quad
+\text{phase}_{2}(120^\circ).
+\]
+Four ticks therefore require eight \(F_3/F_3^\dagger\) traversals and
+twelve ternary phase masks.  Adjacent diagonal masks merge to give seventeen
+hardware layers.  Exact multiplication verifies
+\[
+\boxed{
+\|U_F^4-\omega I\|<2\times10^{-15},
+\qquad
+\|U_F^{12}-I\|<6\times10^{-15}.
+}
+\]
+Because \(U_F^4\) is an isolated-qutrit global phase, readout requires a
+bypass/reference or controlled-Ramsey arm.  A sufficient nearest-\(Z_3\)
+classification budget is
+\[
+\boxed{
+12\epsilon_{\rm mask}
++
+8\epsilon_{F_3}
+<
+60^\circ.
+}
+\]
+However, the repository's current symbolic leakage envelopes do not certify
+the sequence.  If the \(10\%\) \(F_3\) and \(2\%\) phase-mask bounds
+were independently saturated, four-tick survival would be only
+\[
+\boxed{0.3378}.
+\]
+A uniform twenty-primitive budget giving \(90\%\) survival would require
+per-primitive leakage below approximately
+\[
+\boxed{0.00525}.
+\]
+The hardware admission result is therefore explicitly fail-closed.
+
+Finally, the \(p=5\) holonomy experiment now has a nuisance-profiled count
+likelihood rather than a Gaussian separation proxy.  With
+\[
+p(\phi,V,b,\delta)
+=
+\frac{1+V(1-b)\cos(\phi+\delta)}{2},
+\]
+the two-port Poisson model profiles to a binomial likelihood after the common
+rate is removed.  The nuisance model is
+\[
+V=0.965\pm0.005,
+\qquad
+b=0.010\pm0.002,
+\qquad
+\delta=0\pm1^\circ,
+\]
+profiled over the full \(\pm3\sigma\) box.  An exact search finds the
+first detected-event count for which both worst box tails lie below the
+one-sided \(5\sigma\) level:
+\[
+\boxed{N_{\min}=87}.
+\]
+At \(N=87\), the profile rule is
+\[
+\boxed{k\ge31\Rightarrow H_A},
+\]
+with worst declared nuisance-box misclassification tails
+\[
+\boxed{
+1.70\times10^{-7},
+\qquad
+2.15\times10^{-7}.
+}
+\]
+At \(N=128\) those tails fall below \(10^{-9}\).  A deterministic
+\(10^5\)-trial nuisance-mixture Monte Carlo is retained only as an ordinary
+power cross-check; rare-tail significance comes from the exact binomial
+calculation, not Monte Carlo extrapolation.
+
+\paragraph{Evidence boundary.}
+The Hodge metric is piecewise Euclidean on a non-manifold complex; the added
+similitude sectors are finite representation sectors rather than observed
+particles; the Kramers extension is ruled out as an \(E_8\) bracket
+symmetry; the FI pulse program currently fails accumulated-leakage admission;
+and the \(p=5\) likelihood is a preregisterable design calculation rather
+than laboratory evidence.
