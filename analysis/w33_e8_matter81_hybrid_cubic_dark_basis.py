@@ -35,6 +35,7 @@ import hashlib
 import itertools
 import json
 import sys
+from collections import Counter
 from pathlib import Path
 
 from sympy import Matrix as SympyMatrix
@@ -183,6 +184,26 @@ def main(write=True):
     ]
     assert pivot_columns == expected_pivots
 
+    pivot_histogram_counter = Counter(
+        (
+            instruction_records[j]["direction_name"],
+            instruction_records[j]["external_slope_mod3"],
+        )
+        for j in pivot_columns
+    )
+    pivot_histogram = {
+        f"{name}:slope{slope}": count
+        for (name, slope), count in sorted(pivot_histogram_counter.items())
+    }
+    assert pivot_histogram == {
+        "omega:slope1": 27,
+        "omega:slope2": 18,
+        "omega X:slope1": 12,
+        "omega X:slope2": 6,
+        "omega Z:slope1": 8,
+        "omega Z:slope2": 2,
+    }
+
     # Two external Fourier character columns.
     dark_columns = [
         [omega_power(t * p) for h, p in K]
@@ -276,14 +297,7 @@ def main(write=True):
             "rank": 73,
             "selected_pivot_count": 73,
             "selected_pivot_indices_zero_based": pivot_columns,
-            "selected_pivot_histogram_by_direction_and_slope": {
-                "omega:slope1": 27,
-                "omega:slope2": 18,
-                "omega X:slope1": 12,
-                "omega X:slope2": 6,
-                "omega Z:slope1": 8,
-                "omega Z:slope2": 2,
-            },
+            "selected_pivot_histogram_by_direction_and_slope": pivot_histogram,
         },
         "dark_sector": {
             "dimension": 8,
