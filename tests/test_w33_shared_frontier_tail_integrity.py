@@ -14,7 +14,7 @@ def test_shared_frontier_tail_is_linewise_valid_and_unique():
             continue
         assert line.startswith(r"\input{analysis/"), repr(line)
         assert line.endswith("}%"), repr(line)
-        assert r"\\input" not in line, repr(line)
+        assert r"\input" not in line, repr(line)
         assert r"\n" not in line, repr(line)
 
     expected = [
@@ -41,11 +41,11 @@ def test_shared_frontier_tail_is_linewise_valid_and_unique():
         r"\input{analysis/PASS20260921_address_operator_h27_roles_insert}%",
         r"\input{analysis/PASS20260921_e8_matter81_h27_address_operator_compiler_insert}%",
         r"\input{analysis/PASS20260922_qpsi_gq24_parabolic_compiler_insert}%",
-        r"\\input{analysis/PASS20260922_address_operator_h27_intertwiner_obstruction_insert}%",
-        r"\\input{analysis/PASS20260922_scheduler_operator_k81_obstruction_insert}%",
-        r"\\input{analysis/PASS20260922_maximal_compiler_symmetry_pappus_insert}%",
-        r"\\input{analysis/PASS20260922_hesse36_q8_repair_insert}%",
-        r"\\input{analysis/PASS20260922_hesse36_fourier_twisted_compiler_insert}%",
+        r"\input{analysis/PASS20260922_address_operator_h27_intertwiner_obstruction_insert}%",
+        r"\input{analysis/PASS20260922_scheduler_operator_k81_obstruction_insert}%",
+        r"\input{analysis/PASS20260922_maximal_compiler_symmetry_pappus_insert}%",
+        r"\input{analysis/PASS20260922_hesse36_q8_repair_insert}%",
+        r"\input{analysis/PASS20260922_hesse36_fourier_twisted_compiler_insert}%",
     ]
     for item in expected:
         assert item in lines
