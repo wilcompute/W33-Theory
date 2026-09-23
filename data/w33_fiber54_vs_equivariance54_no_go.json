@@ -1,0 +1,39 @@
+{
+  "schema": "w33.fiber54_vs_equivariance54_no_go.v1",
+  "status": "PASS_FIBER54_AND_EQUIVARIANCE_DEFICIT54_ARE_NONISOMORPHIC_K_MODULES",
+  "headline": "The 54 phase-decorated fiber instructions are not the 54 symmetry-changing coordinates. The fiber sector is the sum of two 27-point quotient permutation modules K/<z*ext^s>, while the compiler deficit is all 27 one-dimensional characters plus the complete conjugate-Schrodinger sector. Their H27-center characters differ and their maximum common equivariant rank is only 27.",
+  "fiber_sector": {
+    "dimension": 54,
+    "slope1_profile": {"L_t0_multiplicity_each":1,"S_1_2":3,"S_2_1":3},
+    "slope2_profile": {"L_t0_multiplicity_each":1,"S_1_1":3,"S_2_2":3},
+    "combined_profile_summary": {"L_u_v_0_multiplicity_each":2,"S_1_1":3,"S_1_2":3,"S_2_1":3,"S_2_2":3},
+    "H27_center_character_Qomega_pair": [0,0]
+  },
+  "equivariance_deficit_sector": {
+    "dimension": 54,
+    "profile_summary": {"all_L_u_v_t_multiplicity_each":1,"S_2_0":3,"S_2_1":3,"S_2_2":3},
+    "H27_center_character_Qomega_pair": [0,-27],
+    "H27_center_character": "-27*omega"
+  },
+  "comparison": {
+    "same_dimension": true,
+    "isomorphic_as_K_modules": false,
+    "maximum_common_equivariant_rank": 27,
+    "unmatched_dimensions_each_side": 27,
+    "center_character_witness": "fiber54 trace(z)=0, deficit54 trace(z)=-27*omega"
+  },
+  "consequence": "The fiber bypass cannot by itself be the missing 54D symmetry-changing compiler. Any relation between the two 54s must include an explicit representation-changing operation; equality of counts supplies no objectwise map.",
+  "parents": [
+    "data/w33_minimal_symmetry_changing_81_compiler.json",
+    "data/w33_hesse_pappus_45_270_instruction_compiler.json",
+    "data/w33_hybrid81_operator_equivariance_budget.json"
+  ],
+  "checks": {
+    "each_fiber_orbit_dimension27": true,
+    "fiber_total_dimension54": true,
+    "deficit_dimension54": true,
+    "center_characters_differ": true,
+    "maximum_common_rank27": true,
+    "count_collision_killed": true
+  }
+}
