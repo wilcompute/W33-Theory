@@ -14,7 +14,7 @@ def test_shared_frontier_tail_is_linewise_valid_and_unique():
             continue
         assert line.startswith(r"\input{analysis/"), repr(line)
         assert line.endswith("}%"), repr(line)
-        assert r"\\input" not in line, repr(line)
+        assert r"\input" not in line, repr(line)
         assert r"\n" not in line, repr(line)
 
     expected = [
@@ -68,27 +68,27 @@ def test_shared_frontier_tail_is_linewise_valid_and_unique():
 
 def test_promoted_next5_plus3_is_in_shared_tail_once():
     lines = TAIL.read_text(encoding="utf-8").splitlines()
-    promoted_next5_plus3 = r"\\input{analysis/PASS20260923_next5_plus3_physics_insert}%"
+    promoted_next5_plus3 = r"\input{analysis/PASS20260923_next5_plus3_physics_insert}%"
     assert promoted_next5_plus3 in lines
     assert lines.count(promoted_next5_plus3) == 1
 
 
 def test_execute_five_post_frontier_is_in_shared_tail_once():
     lines = TAIL.read_text(encoding="utf-8").splitlines()
-    item = r"\\input{analysis/PASS20260923_execute_five_post_frontier_attacks_insert}%"
+    item = r"\input{analysis/PASS20260923_execute_five_post_frontier_attacks_insert}%"
     assert item in lines
     assert lines.count(item) == 1
 
 
 def test_execute_next5_plus3_geometric_semilinear_is_in_shared_tail_once():
     lines = TAIL.read_text(encoding="utf-8").splitlines()
-    item = r"\\input{analysis/PASS20260923_execute_next5_plus3_geometric_semilinear_insert}%"
+    item = r"\input{analysis/PASS20260923_execute_next5_plus3_geometric_semilinear_insert}%"
     assert item in lines
     assert lines.count(item) == 1
 
 
 def test_execute_next5_plus3_representation_physics_is_in_shared_tail_once():
     lines = TAIL.read_text(encoding="utf-8").splitlines()
-    item = r"\\input{analysis/PASS20260923_execute_next5_plus3_representation_physics_insert}%"
+    item = r"\input{analysis/PASS20260923_execute_next5_plus3_representation_physics_insert}%"
     assert item in lines
     assert lines.count(item) == 1
