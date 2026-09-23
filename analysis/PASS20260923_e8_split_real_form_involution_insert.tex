@@ -1,0 +1,75 @@
+% Exact anti-linear real structure of the hybrid E8 compiler.
+\subsection*{The executable hybrid algebra carries the split real form $E_{8(8)}$}
+
+On the committed source Chevalley basis define
+\[
+ \Theta(h_i)=-h_i,\qquad \Theta(e_\alpha)=e_{-\alpha}.
+\]
+The complete root-phase consistency system has $6840$ equations of rank $232$
+on $240$ sign variables, and the all-positive root gauge solves it.  Direct
+evaluation of all
+\[
+ \binom{248}{2}=30628
+\]
+unordered basis-pair brackets verifies
+\[
+ \Theta([x,y])=[\Theta x,\Theta y]
+\]
+exactly.  Since all source structure constants are integral, composing with
+Eisenstein conjugation gives an anti-linear involutive Lie automorphism
+\[
+ J=\Theta\circ\overline{(\cdot)}.
+\]
+
+Put $\delta=1+2\omega$, so that $\bar\delta=-\delta$ and $\delta^2=-3$.
+The $J$-fixed Cartan directions are $\delta h_i$, while each opposite-root
+pair contributes the fixed real plane
+\[
+ e_\alpha+e_{-\alpha},\qquad
+ \delta(e_\alpha-e_{-\alpha}).
+\]
+The exact source Killing form has a positive-definite Cartan block and
+\[
+ K(e_\alpha,e_{-\alpha})=
+ \begin{cases}
+ +60,&64\text{ opposite-root pairs},\\
+ -60,&56\text{ opposite-root pairs}.
+ \end{cases}
+\]
+Consequently the fixed real form has inertia
+\[
+ \boxed{(128_+,120_-)},
+\]
+and Killing signature $+8$.  It is therefore the split real form
+\[
+ \boxed{E_{8(8)}}.
+\]
+
+The dimensions agree with the classical Cartan decomposition
+$\mathfrak e_{8(8)}=\mathfrak{so}(16)\oplus\mathbf{128}$, but the frozen
+Chevalley root gauge must not be confused with the standard $D_8$/spinor root
+partition.  The exact pair census is
+\[
+\begin{array}{c|cc}
+ &K=+60&K=-60\\\hline
+D_8\text{-type}&32&24\\
+\text{half-spinor}&32&32
+\end{array}
+\]
+so the compact $\mathfrak{so}(16)$ appears after taking the fixed real linear
+combinations, not by retaining one coordinate root type.
+
+Transport to the hybrid atlas also corrects the earlier labelwise
+charge-conjugation scaffold.  All $81$ grade-one roots pair with their exact
+grade-two negatives, but $39$ of the frozen row signs differ.  Hence the true
+matter involution is
+\[
+ J_{12}(x)=\bar B^{-1}D\bar B\,\bar x,
+ \qquad D=\operatorname{diag}(s_1s_2),
+\]
+rather than a pointwise grade swap.  The neutral block similarly uses Cartan
+sign reversal and root negation.
+
+This is an exact real-form theorem for the finite Lie-algebra compiler; it
+does not derive a physical $E_{8(8)}$ gauge theory, gravity, spacetime
+signature, vacuum, spectrum, or CP observable.
