@@ -1,0 +1,53 @@
+% Exact Fourier-quotient alignment of the cubic Jacobian.
+\subsection*{The cubic interaction covers all $54$ retyped Fourier directions}
+
+The source regular module decomposes as
+\[
+ \operatorname{Reg}(K)=S_1^{(27)}\oplus S_2^{(27)}\oplus L^{(27)},
+\]
+with $S_1$ the unique operator-compatible isotypic sector.  Thus the minimal
+compiler must access the quotient
+\[
+ \operatorname{Reg}(K)/S_1,
+ \qquad \dim=54.
+\]
+
+For $D_v(x)=[v,x]$, the correct alignment criterion is
+\[
+ \operatorname{rank}\!\left(S_1+\operatorname{Im}D_v\right)=81,
+\]
+not merely $\operatorname{rank}D_v\ge54$.
+
+Constructing the $27$ canonical $S_1$ matrix coefficients from the frozen
+$qutrit$ Schrödinger representation and reducing the resulting
+$\mathbb Z[\omega]$ matrices at both split primes $103$ and $109$ gives
+\[
+\begin{array}{c|c|c|c|c}
+v & \operatorname{rank}D_v &
+\operatorname{rank}(S_1+\operatorname{Im}D_v) &
+\operatorname{rank}_{\rm quotient} &
+\dim(S_1\cap\operatorname{Im}D_v)\\ \hline
+e_0 & 20 & 47 & 20 & 0\\
+(1,\ldots,1) & 54 & 63 & 36 & 18\\
+(1,2,\ldots,81) & 54 & 72 & 45 & 9\\
+(1^2,2^2,\ldots,81^2) & 78 & 81 & 54 & 24
+\end{array}
+\]
+at both primes.
+
+Because an $81\times81$ minor remains nonzero after reduction, it was already
+nonzero over $\mathbb Q(\omega)$.  Hence for the explicit quadratic background
+\[
+ v_n=(n+1)^2
+\]
+the projection
+\[
+ \operatorname{Im}D_v\longrightarrow\operatorname{Reg}(K)/S_1
+\]
+is surjective of rank $54$.  The finite tangent-level alignment obstruction is
+therefore closed: one cubic background accesses every Fourier direction that
+must change representation type.
+
+This does not assert $\operatorname{Im}D_v=S_2\oplus L$; the image intersects
+$S_1$ in dimension $24$.  Nor does it select the quadratic background as a
+physical vacuum or exponentiate the tangent map into a hardware gate.
