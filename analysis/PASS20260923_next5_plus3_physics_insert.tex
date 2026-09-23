@@ -1,0 +1,246 @@
+% 2026-09-23 — next five attacks + three outside-box physics probes.
+\subsection*{Self-dual Hodge completion, information obstruction, and the global \(\mu_{12}\) clock}
+
+The original W33 clique complex still has
+\[
+(C_0,C_1,C_2,C_3)=(40,240,160,40),
+\qquad
+(b_0,b_1,b_2,b_3)=(1,81,0,0),
+\]
+so it does not possess an internal degree-reversing Hodge star.  Adjoining its
+named formal dual gives the self-dual completion
+\[
+\widetilde K=K\oplus K^\vee
+\]
+with
+\[
+\boxed{
+C(\widetilde K)=(80,400,400,80),
+\qquad
+b(\widetilde K)=(1,81,81,1).
+}
+\]
+Giving every paired primal/dual basis cell unit positive weight defines a local
+algebraic star with one nonzero per row and column,
+\[
+*^2=1,
+\]
+and the exact adjoint identity
+\[
+\boxed{
+\delta_k=*^{-1}d^\vee_{3-k}*=B_k=d_{k-1}^{\mathsf T}.
+}
+\]
+This closes the algebraic Hodge carrier but not yet a geometric circumcentric
+DEC metric: physical primal/dual cell volumes remain to be derived.
+
+The proposed multiplier mismatch
+\[
+E(m)=0\quad(m=\pm1),\qquad E(m)=2\quad(m\ne\pm1)
+\]
+does \emph{not} generate the earlier
+\[
+S(q)=2(q-3)
+\]
+as an equilibrium free energy.  Its literal canonical partition function is
+\[
+\boxed{
+Z_q(\beta)=2+(q-3)e^{-2\beta},
+}
+\]
+with
+\[
+U_q(\beta)=
+\frac{2(q-3)e^{-2\beta}}
+     {2+(q-3)e^{-2\beta}},
+\qquad
+F_q(\beta)=-\beta^{-1}\log Z_q(\beta).
+\]
+Instead,
+\[
+\boxed{S(q)=(q-1)U_q(0),}
+\]
+so the linear defect is the unnormalised infinite-temperature mismatch moment.
+The simple equilibrium-free-energy selection hypothesis is therefore
+\emph{refuted}.
+
+A cleaner invariant emerges from the exact group index
+\[
+[G:H]=\frac{q-1}{2},
+\]
+where \(G\) is the full Heisenberg graph symmetry and \(H\) the reversible
+unitary/antiunitary semilinear subgroup.  The uniformly distributed obstruction
+coset has entropy
+\[
+\boxed{
+H_{\rm obs}=\log\frac{q-1}{2}.
+}
+\]
+Equivalently, if \(P_Q\) is uniform on the quantum multipliers \(\{\pm1\}\)
+and \(P_G\) uniform on \(\mathbb F_q^\times\), then
+\[
+\boxed{
+D_{\rm KL}(P_Q\Vert P_G)
+=
+\log\frac{q-1}{2}.
+}
+\]
+Its total-variation distance is \(1-2/(q-1)\), and ideal Landauer erasure of
+the coset label costs
+\[
+\boxed{
+W_{\min}=k_BT\log\frac{q-1}{2}.
+}
+\]
+All four obstruction measures vanish simultaneously iff \(q=3\).
+
+The order-twelve Hessian/qutrit Floquet operator also admits a complete
+\(E_8\) phase census.  Its fundamental qutrit phase exponents are
+\[
+(1,4,7)\pmod{12}.
+\]
+Using
+\[
+248=(78,1)+(1,8)+(27,3)+(\overline{27},\overline3),
+\]
+the full exponent histogram is
+\[
+\boxed{
+0^{80},\;
+1^{27},\;
+3^2,\;
+4^{27},\;
+5^{27},\;
+6^2,\;
+7^{27},\;
+8^{27},\;
+9^2,\;
+11^{27}.
+}
+\]
+The exact trace sequence \(\operatorname{Tr}U^t\), \(t=0,\ldots,11\), is
+\[
+\boxed{
+248,51,105,132,5,51,24,51,5,132,105,51,
+}
+\]
+and the fixed-space dimensions for \(t=1,\ldots,12\) are
+\[
+\boxed{
+80,82,134,86,80,136,80,86,134,82,80,248.
+}
+\]
+Most importantly,
+\[
+\boxed{
+U^4|_{\mathfrak g_0}=1,
+\qquad
+U^4|_{\mathfrak g_1}=\omega,
+\qquad
+U^4|_{\mathfrak g_2}=\omega^2.
+}
+\]
+Thus \(U^4\) is exactly the already-certified physical FI/\(Q_\psi\) center
+action.
+
+\paragraph{A falsifiable \(p=5\) control experiment.}
+A unit-trace Weyl commutator at \(p=5\) produces \(\zeta_5\).  Reversible
+quantum conjugation permits only \(\zeta_5^{\pm1}\), while a determinant-two
+graph similitude demands \(\zeta_5^2\).  In a balanced reference
+interferometer the ideal port probabilities are
+\[
+0.6545084972
+\quad\text{versus}\quad
+0.0954915028.
+\]
+Using a design target of visibility \(0.965\), background \(0.01\), phase
+calibration error \(1^\circ\), visibility uncertainty \(0.005\), and
+background uncertainty \(0.002\), the remaining conservative contrast is
+approximately \(0.51738\).  The worst-binomial-variance normal proxy requires
+\(94\) detected events for \(5\sigma\); a proposed engineering target of
+\(128\) detected events per setting gives a proxy significance about
+\(5.85\sigma\).  These are design calculations, not experimental data.
+
+\paragraph{Outside-box result I: central-character completion.}
+For each nontrivial central character of \(H_q\), finite
+Stone--von Neumann theory supplies one \(q\)-dimensional Schrödinger irrep.
+Inducing the Heisenberg--Weil representation from
+\[
+H_q:SL(2,q)
+\]
+to
+\[
+H_q:GL(2,q)
+\]
+produces a unitary carrier of dimension
+\[
+\boxed{q(q-1)}
+\]
+containing all \(q-1\) nontrivial central-character sectors once.  General
+determinant similitudes are then represented by permutations of these sectors.
+A charge-conjugate matter/antimatter pair contains only \(\chi\) and
+\(\chi^{-1}\), hence dimension \(2q\).  Consequently
+\[
+q(q-1)=2q
+\quad\Longleftrightarrow\quad
+\boxed{q=3}.
+\]
+The qutrit is therefore uniquely the odd field dimension in which ordinary
+charge-conjugate doubling already closes the full similitude orbit.
+
+\paragraph{Outside-box result II: a doubled Kramers structure.}
+An antiunitary \(T=UK\) with \(T^2=-I\) requires
+\[
+U\overline U=-I.
+\]
+Taking determinants makes this impossible in odd complex dimension.  Hence a
+single qutrit and the single \(81\)-dimensional matter grade cannot carry
+such a structure.  On
+\[
+\mathbb C^{81}\oplus\overline{\mathbb C^{81}},
+\]
+however, define
+\[
+\boxed{
+T(v,w)=(-\overline w,\overline v).
+}
+\]
+Its linear part
+\[
+S=
+\begin{pmatrix}
+0&-I\\
+I&0
+\end{pmatrix}
+\]
+is unitary and obeys \(S^2=-I\), so \(T^2=-I\) exactly on dimension
+\(162\).  This is a possible quaternionic/Kramers structure on the doubled
+carrier, not an identification with the already-certified \(E_8\) real
+involution \(J^2=+1\) or with observed physical time reversal.
+
+\paragraph{Outside-box result III: four Floquet ticks equal one FI step.}
+The qutrit Floquet exponents \((1,4,7)\) obey
+\[
+4(1,4,7)\equiv(4,4,4)\pmod{12},
+\]
+hence
+\[
+\boxed{U_F^4=\omega I_3.}
+\]
+On the full \(E_8\) branching,
+\[
+\boxed{
+U_F^4=1^{86}\oplus\omega^{81}\oplus(\omega^2)^{81},
+}
+\]
+exactly reproducing the physical FI/\(Q_\psi\) grading.  Thus four internal
+Floquet ticks equal one finite FI-center step and twelve ticks close.  This is
+an exact internal-control identity, not a derivation of physical time.
+
+\paragraph{Evidence boundary.}
+The self-dual completion is algebraic rather than an embedded circumcentric
+dual; the Landauer reading assumes ideal reversible erasure; the Floquet
+spectrum is an internal finite-order action; the \(p=5\) experiment is a
+design protocol without data; and the Kramers and all-character completions
+are finite representation-theoretic possibilities rather than observed
+particle, spacetime, gravity, or CPT claims.
