@@ -18,7 +18,7 @@ The five attacks are:
 
 Three additional probes:
 A. finite McKean-Singer supertrace / Euler index;
-B. real cubic character field created by qutrit similitude realification;
+B. canonical Weil realification and rational phase-field correction;
 C. distribute the ternary FI phase frame over the already-certified optimal
    seven-tick W33 point-line broadcast tree.
 
@@ -150,12 +150,17 @@ def _matrix_order(A, max_order=100):
 
 
 def attack2_q3_realification():
+    """Canonical retained-phase Weil lift; supersedes the old independent-SU gauge."""
     omega = np.exp(2j*np.pi/3)
     X = np.roll(np.eye(3), 1, axis=0).astype(complex)
     Z = np.diag([omega**x for x in range(3)])
     F = np.array([[omega**(x*y) for x in range(3)] for y in range(3)], complex)/np.sqrt(3)
-    P = np.diag([1,1,omega])
-    base = [_su_normalize(A) for A in (X,Z,F,P)]
+    N = np.diag([1,omega,omega])
+    # The canonical finite Weil section is fixed only up to the physical C3 center.
+    # e^{i pi/6} F is one representative.  Independent SU-normalization is NOT
+    # allowed here: it introduces zeta_9 scalar phases and changes the finite lift.
+    Fw = np.exp(1j*np.pi/6)*F
+    base = [X,Z,Fw,N]
 
     even3 = _closure(base, 3)
     assert len(even3) == 648
@@ -166,107 +171,95 @@ def attack2_q3_realification():
     assert len(scalar_center) == 3
 
     def doubled(A):
-        M = np.zeros((6,6), complex)
-        M[:3,:3] = A
-        M[3:,3:] = A.conj()
+        M=np.zeros((6,6),complex)
+        M[:3,:3]=A
+        M[3:,3:]=A.conj()
         return M
 
-    swap = np.zeros((6,6), complex)
-    swap[:3,3:] = np.eye(3)
-    swap[3:,:3] = np.eye(3)
-    gens = [doubled(A) for A in base] + [swap]
-    full = _closure(gens, 6)
-    assert len(full) == 1296
+    swap=np.zeros((6,6),complex)
+    swap[:3,3:]=np.eye(3)
+    swap[3:,:3]=np.eye(3)
+    gens=[doubled(A) for A in base]+[swap]
+    full=_closure(gens,6)
+    assert len(full)==1296
 
-    # Conjugacy classes under the generating set.
-    inv = [G.conj().T for G in gens]
-    remaining = set(full)
-    classes = []
+    inv=[G.conj().T for G in gens]
+    remaining=set(full); classes=[]
     while remaining:
-        k0 = next(iter(remaining))
-        orbit = {k0}
-        q = deque([full[k0]])
+        k0=next(iter(remaining)); orbit={k0}; q=deque([full[k0]])
         while q:
-            A = q.popleft()
-            for G, Gi in zip(gens, inv):
-                B = G @ A @ Gi
-                kb = _mkey(B)
+            A=q.popleft()
+            for G,Gi in zip(gens,inv):
+                B=G@A@Gi; kb=_mkey(B)
                 if kb not in orbit:
-                    orbit.add(kb)
-                    q.append(full[kb])
-        classes.append(orbit)
-        remaining -= orbit
-    assert len(classes) == 18
+                    orbit.add(kb); q.append(full[kb])
+        classes.append(orbit); remaining-=orbit
+    assert len(classes)==18
 
-    rows = []
+    rows=[]
+    order_hist=Counter()
     for C in classes:
-        A = full[next(iter(C))]
-        even = np.linalg.norm(A[:3,3:]) + np.linalg.norm(A[3:,:3]) < 1e-7
-        tr = np.trace(A)
-        trr = 0.0 if abs(tr.real)<1e-8 else round(float(tr.real), 8)
-        tri = 0.0 if abs(tr.imag)<1e-8 else round(float(tr.imag), 8)
-        rows.append({
-            "order": _matrix_order(A),
-            "class_size": len(C),
-            "determinant_even_sector": bool(even),
-            "character": [trr, tri],
-        })
-    rows.sort(key=lambda r:(r["order"], not r["determinant_even_sector"], r["class_size"], r["character"]))
-    assert sum(r["class_size"] for r in rows) == 1296
-    assert all(abs(r["character"][0])+abs(r["character"][1]) < 1e-8 for r in rows if not r["determinant_even_sector"])
+        A=full[next(iter(C))]
+        even=np.linalg.norm(A[:3,3:])+np.linalg.norm(A[3:,:3])<1e-7
+        tr=np.trace(A)
+        trr=0.0 if abs(tr.real)<1e-8 else round(float(tr.real),8)
+        tri=0.0 if abs(tr.imag)<1e-8 else round(float(tr.imag),8)
+        order=_matrix_order(A)
+        order_hist[order]+=len(C)
+        rows.append({"order":order,"class_size":len(C),
+                     "determinant_even_sector":bool(even),"character":[trr,tri]})
+    rows.sort(key=lambda r:(r["order"],not r["determinant_even_sector"],r["class_size"],r["character"]))
+    target={1:1,2:117,3:98,4:54,6:450,8:324,9:144,12:108}
+    assert dict(sorted(order_hist.items()))==target
+    assert not any(r["order"]==18 for r in rows)
+    assert all(abs(r["character"][0])+abs(r["character"][1])<1e-8
+               for r in rows if not r["determinant_even_sector"])
 
-    chars = np.array([np.trace(A) for A in full.values()])
-    norm = float(np.sum(np.abs(chars)**2)/1296)
-    fs6 = sum(np.trace(A@A) for A in full.values())/1296
-    fs3 = sum(np.trace(A@A) for A in even3.values())/648
-    assert abs(norm-1) < 1e-10
-    assert abs(fs6-1) < 1e-10
-    assert abs(fs3) < 1e-10
-
-    order9 = sorted(r["character"][0] for r in rows if r["order"]==9)
-    order18 = sorted(r["character"][0] for r in rows if r["order"]==18 and r["determinant_even_sector"])
-    assert len(order9)==3 and len(order18)==3
-    p9 = [x**3-9*x-9 for x in order9]
-    p18 = [x**3-3*x-1 for x in order18]
-    assert max(abs(x) for x in p9) < 2e-6
-    assert max(abs(x) for x in p18) < 2e-6
+    chars=np.array([np.trace(A) for A in full.values()])
+    norm=float(np.sum(np.abs(chars)**2)/1296)
+    fs6=sum(np.trace(A@A) for A in full.values())/1296
+    fs3=sum(np.trace(A@A) for A in even3.values())/648
+    assert abs(norm-1)<1e-10 and abs(fs6-1)<1e-10 and abs(fs3)<1e-10
+    char_values=sorted({int(round(float(z.real))) for z in chars})
+    assert max(abs(z.imag) for z in chars)<1e-8
+    assert char_values==[-3,-2,-1,0,1,2,3,6]
 
     return {
-        "single_sector": {
-            "dimension":3,
-            "retained_phase_Clifford_order":648,
+        "single_sector":{
+            "dimension":3,"retained_phase_Clifford_order":648,
             "scalar_center_order":3,
-            "character_norm": float(sum(abs(np.trace(A))**2 for A in even3.values())/648),
-            "Frobenius_Schur_indicator": [float(fs3.real), float(fs3.imag)],
+            "character_norm":float(sum(abs(np.trace(A))**2 for A in even3.values())/648),
+            "Frobenius_Schur_indicator":[float(fs3.real),float(fs3.imag)],
             "type":"complex",
+            "canonical_generators":"X,Z,exp(i*pi/6)F3,N with N=diag(1,omega,omega)",
         },
-        "full_similitude": {
-            "dimension":6,
-            "order":1296,
-            "conjugacy_class_count":18,
+        "full_similitude":{
+            "dimension":6,"order":1296,"conjugacy_class_count":18,
             "character_norm":norm,
             "Frobenius_Schur_indicator":[float(fs6.real),float(fs6.imag)],
-            "type":"real irreducible",
-            "all_determinant_odd_class_traces_zero":True,
+            "type":"real irreducible","all_determinant_odd_class_traces_zero":True,
+            "element_order_histogram":{str(k):v for k,v in sorted(order_hist.items())},
             "classes":rows,
         },
-        "trace_field": {
-            "field":"Q(zeta_9 + zeta_9^-1), real cubic conductor-9 field",
-            "order9_trace_polynomial":"x^3 - 9x - 9",
-            "order9_polynomial_discriminant":729,
-            "order18_trace_polynomial":"x^3 - 3x - 1",
-            "order18_polynomial_discriminant":81,
-            "order9_trace_roots":order9,
-            "order18_trace_roots":order18,
+        "trace_field":{
+            "field":"Q",
+            "character_values":char_values,
+            "order18_elements_absent":True,
+            "rational_real_basis":"For M=A+i*sqrt(3)B, use [[A,-B],[3B,A]].",
+            "invariant_form":"diag(3,3,3,1,1,1), signature (6,0)",
         },
-        "fusion": (
-            "The 3D retained-phase qutrit Clifford irrep has FS indicator 0 "
-            "(complex type). Adjoining the determinant-odd sector swap fuses it "
-            "with its complex conjugate into one 6D irreducible representation "
-            "of the full 1296 point stabilizer with FS indicator +1."
+        "phase_lift_correction":{
+            "supersedes":"independent determinant-one/SU normalization of every Clifford generator",
+            "reason":"cube-root determinant phases can introduce zeta_9 and change the retained-phase central extension",
+            "bad_lift_signature":"contains 216 order-18 elements; true H27:GL(2,3) contains none",
+            "projective_action_unchanged_but_finite_lift_changed":True,
+        },
+        "fusion":(
+            "The canonical 3D retained-phase qutrit Clifford irrep has FS indicator 0. "
+            "Coefficient-conjugation completion gives a 6D irreducible real carrier "
+            "of the certified 1296 H27:GL(2,3) group, with rational character."
         ),
     }
-
 
 def attack3_z3_antiunitary_pairing():
     # Exact theorem is algebraic; the synthetic matrix check makes the pairing
@@ -637,7 +630,7 @@ def outside_box(a1,a2,a4,a5):
             "single_qutrit_sector_FS":a2["single_sector"]["Frobenius_Schur_indicator"],
             "full_6D_FS":a2["full_similitude"]["Frobenius_Schur_indicator"],
             "trace_field":a2["trace_field"],
-            "statement":"The determinant-odd similitude does more than add states: it realifies the complex qutrit Clifford sector into a real irreducible 6D carrier whose non-rational character values lie in the conductor-9 real cubic field.",
+            "statement":"The determinant-odd similitude realifies the complex qutrit Clifford sector into a real irreducible 6D carrier with rational character; the earlier conductor-9 field came from the superseded independent-SU phase lift.",
             "boundary":"character arithmetic, not a measured energy/coupling field",
         },
         "C_distributed_FI_phase_frame":{

@@ -1,0 +1,559 @@
+{
+  "schema": "w33.20260923.corrected_weil_hodge_e6_physics.v1",
+  "status": "PASS_CORRECTED_WEIL6_ALLQ_HODGE_Z3_HAMILTONIAN_FI_ADMISSION_E6_TRIALITY",
+  "attack1_corrected_Weil6": {
+    "single_sector": {
+      "dimension": 3,
+      "retained_phase_Clifford_order": 648,
+      "scalar_center_order": 3,
+      "character_norm": 1.0,
+      "Frobenius_Schur_indicator": [
+        1.1307232201707061e-15,
+        -8.131505733778115e-16
+      ],
+      "type": "complex",
+      "canonical_generators": "X,Z,exp(i*pi/6)F3,N with N=diag(1,omega,omega)"
+    },
+    "full_similitude": {
+      "dimension": 6,
+      "order": 1296,
+      "conjugacy_class_count": 18,
+      "character_norm": 1.0,
+      "Frobenius_Schur_indicator": [
+        1.0,
+        -6.506218654997987e-16
+      ],
+      "type": "real irreducible",
+      "all_determinant_odd_class_traces_zero": true,
+      "element_order_histogram": {
+        "1": 1,
+        "2": 117,
+        "3": 98,
+        "4": 54,
+        "6": 450,
+        "8": 324,
+        "9": 144,
+        "12": 108
+      },
+      "classes": [
+        {
+          "order": 1,
+          "class_size": 1,
+          "determinant_even_sector": true,
+          "character": [
+            6.0,
+            0.0
+          ]
+        },
+        {
+          "order": 2,
+          "class_size": 9,
+          "determinant_even_sector": true,
+          "character": [
+            -2.0,
+            0.0
+          ]
+        },
+        {
+          "order": 2,
+          "class_size": 108,
+          "determinant_even_sector": false,
+          "character": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "order": 3,
+          "class_size": 2,
+          "determinant_even_sector": true,
+          "character": [
+            -3.0,
+            0.0
+          ]
+        },
+        {
+          "order": 3,
+          "class_size": 24,
+          "determinant_even_sector": true,
+          "character": [
+            -3.0,
+            0.0
+          ]
+        },
+        {
+          "order": 3,
+          "class_size": 24,
+          "determinant_even_sector": true,
+          "character": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "order": 3,
+          "class_size": 24,
+          "determinant_even_sector": true,
+          "character": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "order": 3,
+          "class_size": 24,
+          "determinant_even_sector": true,
+          "character": [
+            3.0,
+            0.0
+          ]
+        },
+        {
+          "order": 4,
+          "class_size": 54,
+          "determinant_even_sector": true,
+          "character": [
+            2.0,
+            0.0
+          ]
+        },
+        {
+          "order": 6,
+          "class_size": 18,
+          "determinant_even_sector": true,
+          "character": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "order": 6,
+          "class_size": 72,
+          "determinant_even_sector": true,
+          "character": [
+            -2.0,
+            0.0
+          ]
+        },
+        {
+          "order": 6,
+          "class_size": 72,
+          "determinant_even_sector": true,
+          "character": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "order": 6,
+          "class_size": 72,
+          "determinant_even_sector": true,
+          "character": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "order": 6,
+          "class_size": 216,
+          "determinant_even_sector": false,
+          "character": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "order": 8,
+          "class_size": 162,
+          "determinant_even_sector": false,
+          "character": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "order": 8,
+          "class_size": 162,
+          "determinant_even_sector": false,
+          "character": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "order": 9,
+          "class_size": 144,
+          "determinant_even_sector": true,
+          "character": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "order": 12,
+          "class_size": 108,
+          "determinant_even_sector": true,
+          "character": [
+            -1.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    "trace_field": {
+      "field": "Q",
+      "character_values": [
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        6
+      ],
+      "order18_elements_absent": true,
+      "rational_real_basis": "For M=A+i*sqrt(3)B, use [[A,-B],[3B,A]].",
+      "invariant_form": "diag(3,3,3,1,1,1), signature (6,0)"
+    },
+    "phase_lift_correction": {
+      "supersedes": "independent determinant-one/SU normalization of every Clifford generator",
+      "reason": "cube-root determinant phases can introduce zeta_9 and change the retained-phase central extension",
+      "bad_lift_signature": "contains 216 order-18 elements; true H27:GL(2,3) contains none",
+      "projective_action_unchanged_but_finite_lift_changed": true
+    },
+    "fusion": "The canonical 3D retained-phase qutrit Clifford irrep has FS indicator 0. Coefficient-conjugation completion gives a 6D irreducible real carrier of the certified 1296 H27:GL(2,3) group, with rational character."
+  },
+  "attack2_Z3_Hamiltonian_classification": {
+    "normal_form": "Sym_86(R) direct-sum Herm_81(C) with conjugate Herm_81 block",
+    "characteristic_polynomial": "P_H(E)=P_0(E)*P_+(E)^2",
+    "neutral_levels": 86,
+    "forced_matter_doublets": 81,
+    "real_parameter_count_C_only": 20518,
+    "real_parameter_count_C_and_T": 10302,
+    "synthetic": {
+      "T2_minus_C": 6.473657049138937e-16,
+      "HC_commutator": 4.440892098500626e-16,
+      "HT_semilinear": 4.440892098500626e-16,
+      "pair_spectrum_error": 0.0
+    }
+  },
+  "attack3_allq_weighted_Hodge": {
+    "formula": {
+      "lambda_star": "2(q^2+1)/((q+1)a^2)",
+      "lambda_n": "2(q+1)n^2/a^2, 1<=n<=q",
+      "L0": "0^1 + lambda_star^[q(q+1)^2/2] + lambda_1^[q(q^2+1)/2]",
+      "L1": "0^[q^4] + same L0 positive bands + lambda_2^[v*C(q,2)]",
+      "Lk": "lambda_k^[v*C(q,k)] + lambda_(k+1)^[v*C(q,k+1)], 2<=k<q",
+      "Lq": "lambda_q^v",
+      "v": "(q+1)(q^2+1)"
+    },
+    "prior_boundary": "b1=q^4 and higher homology zero were already proved in analysis/w33_ledger_allq_h2.py; the new result is the circumcentric weighted spectrum.",
+    "graph_replays": [
+      {
+        "q": 2,
+        "vertices": 15,
+        "degree": 6,
+        "spectrum": {
+          "-3.0": 5,
+          "1.0": 9,
+          "6.0": 1
+        }
+      },
+      {
+        "q": 3,
+        "vertices": 40,
+        "degree": 12,
+        "spectrum": {
+          "-4.0": 15,
+          "2.0": 24,
+          "12.0": 1
+        }
+      },
+      {
+        "q": 5,
+        "vertices": 156,
+        "degree": 30,
+        "spectrum": {
+          "-6.0": 65,
+          "4.0": 90,
+          "30.0": 1
+        }
+      },
+      {
+        "q": 7,
+        "vertices": 400,
+        "degree": 56,
+        "spectrum": {
+          "-8.0": 175,
+          "6.0": 224,
+          "56.0": 1
+        }
+      }
+    ],
+    "instances": [
+      {
+        "q": 2,
+        "v": 15,
+        "b1": 16,
+        "lambda_star": 3.3333333333333335,
+        "lambda_n": {
+          "1": 6.0,
+          "2": 24.0
+        },
+        "multiplicities": {
+          "off_graph": 9,
+          "first_ladder": 5
+        },
+        "Lk": {
+          "0": {
+            "0": 1,
+            "lambda_star": 9,
+            "lambda_1": 5
+          },
+          "1": {
+            "0": 16,
+            "lambda_star": 9,
+            "lambda_1": 5,
+            "lambda_2": 15
+          },
+          "2": {
+            "lambda_2": 15
+          }
+        },
+        "supertrace": -15
+      },
+      {
+        "q": 3,
+        "v": 40,
+        "b1": 81,
+        "lambda_star": 3.0,
+        "lambda_n": {
+          "1": 4.8,
+          "2": 19.2,
+          "3": 43.199999999999996
+        },
+        "multiplicities": {
+          "off_graph": 24,
+          "first_ladder": 15
+        },
+        "Lk": {
+          "0": {
+            "0": 1,
+            "lambda_star": 24,
+            "lambda_1": 15
+          },
+          "1": {
+            "0": 81,
+            "lambda_star": 24,
+            "lambda_1": 15,
+            "lambda_2": 120
+          },
+          "2": {
+            "lambda_2": 120,
+            "lambda_3": 40
+          },
+          "3": {
+            "lambda_3": 40
+          }
+        },
+        "supertrace": -80
+      },
+      {
+        "q": 5,
+        "v": 156,
+        "b1": 625,
+        "lambda_star": 8.666666666666666,
+        "lambda_n": {
+          "1": 12.0,
+          "2": 48.0,
+          "3": 108.0,
+          "4": 192.0,
+          "5": 300.0
+        },
+        "multiplicities": {
+          "off_graph": 90,
+          "first_ladder": 65
+        },
+        "Lk": {
+          "0": {
+            "0": 1,
+            "lambda_star": 90,
+            "lambda_1": 65
+          },
+          "1": {
+            "0": 625,
+            "lambda_star": 90,
+            "lambda_1": 65,
+            "lambda_2": 1560
+          },
+          "2": {
+            "lambda_2": 1560,
+            "lambda_3": 1560
+          },
+          "3": {
+            "lambda_3": 1560,
+            "lambda_4": 780
+          },
+          "4": {
+            "lambda_4": 780,
+            "lambda_5": 156
+          },
+          "5": {
+            "lambda_5": 156
+          }
+        },
+        "supertrace": -624
+      },
+      {
+        "q": 7,
+        "v": 400,
+        "b1": 2401,
+        "lambda_star": 12.5,
+        "lambda_n": {
+          "1": 16.0,
+          "2": 64.0,
+          "3": 144.0,
+          "4": 256.0,
+          "5": 400.0,
+          "6": 576.0,
+          "7": 784.0
+        },
+        "multiplicities": {
+          "off_graph": 224,
+          "first_ladder": 175
+        },
+        "Lk": {
+          "0": {
+            "0": 1,
+            "lambda_star": 224,
+            "lambda_1": 175
+          },
+          "1": {
+            "0": 2401,
+            "lambda_star": 224,
+            "lambda_1": 175,
+            "lambda_2": 8400
+          },
+          "2": {
+            "lambda_2": 8400,
+            "lambda_3": 14000
+          },
+          "3": {
+            "lambda_3": 14000,
+            "lambda_4": 14000
+          },
+          "4": {
+            "lambda_4": 14000,
+            "lambda_5": 8400
+          },
+          "5": {
+            "lambda_5": 8400,
+            "lambda_6": 2800
+          },
+          "6": {
+            "lambda_6": 2800,
+            "lambda_7": 400
+          },
+          "7": {
+            "lambda_7": 400
+          }
+        },
+        "supertrace": -2400
+      }
+    ]
+  },
+  "attack4_FI_fail_closed_monte_carlo": {
+    "seed": 20260923,
+    "trials_per_case": 20000,
+    "detected_events_per_quadrature": 80000,
+    "rates": {
+      "good": 0.9969,
+      "badV": 0.0,
+      "badphase": 0.0,
+      "badeff": 0.0,
+      "badloss": 0.0,
+      "baddark": 0.0,
+      "nearV": 0.0002,
+      "nearphase": 0.0,
+      "neareff": 0.00025,
+      "nearloss": 0.00045,
+      "neardark": 0.00045
+    },
+    "launch_opportunities_per_quadrature_good": 85930,
+    "total_launch_opportunities_good": 343720,
+    "candidate_opportunities_per_supercycle": 4320,
+    "supercycles_good": 80,
+    "gate": {
+      "Vmin": 0.9809336314600535,
+      "phase_max_deg": 2.5,
+      "efficiency_min": 0.9,
+      "loss_max": 0.05,
+      "dark_max_hz": 100,
+      "confidence": "3 sigma"
+    }
+  },
+  "attack5_phase_field_correction": {
+    "corrected_field": "Q on the real 6D carrier",
+    "canonical_complex_field": "Q(zeta_12)",
+    "bad_independent_SU_lift_order_histogram": {
+      "1": 1,
+      "2": 117,
+      "3": 170,
+      "4": 54,
+      "6": 234,
+      "8": 324,
+      "9": 72,
+      "12": 108,
+      "18": 216
+    },
+    "bad_lift_order18_count": 216,
+    "mechanism": "SU-normalizing a generator with nontrivial determinant takes a cube root of a mu_3 phase, introducing zeta_9 and changing the retained-phase lift.",
+    "conductor9_status": "separate repo Galois phase-cycle object; not intrinsic to the corrected point-stabilizer character"
+  },
+  "outside_box": {
+    "A_E6_Weil_phase_triality": {
+      "GAP_witness": "analysis/w33_20260923_corrected_weil6_e6_extension.g",
+      "facts": {
+        "matrix_group_order": 1296,
+        "center": 1,
+        "derived": 648,
+        "Aut_order": 3888,
+        "Out_order": 3,
+        "WE6_order": 51840,
+        "WE6_point_stabilizer_order": 1296,
+        "dual_1296_not_isomorphic": true,
+        "6D_character_outer_orbit_size": 3,
+        "WE6_6D_restrictions_in_outer_orbit": true
+      }
+    },
+    "B_allq_McKean_Singer": {
+      "identity": "Str exp(-tL)=1-q^4 for every t",
+      "mechanism": "every positive lambda_star/lambda_n band occurs in adjacent degrees with equal multiplicity and opposite sign"
+    },
+    "C_symmetry_protected_1plus2_crossing": {
+      "statement": "C-preserving perturbations cannot hybridize a neutral grade-0 singlet with a forced matter doublet; equality of their energies is a symmetry-protected 1+2 crossing.",
+      "generic_spectrum": "86 neutral singlets plus 81 matter doublets"
+    }
+  },
+  "checks": {
+    "corrected_Weil_order1296_no_order18": true,
+    "corrected_character_rational": true,
+    "allq_graph_checks_q2_q3_q5_q7": true,
+    "allq_q3_recovers_weighted_spectrum": true,
+    "allq_b1_prior_theorem_q4": true,
+    "hamiltonian_248_semilinear_normal_form": true,
+    "FI_good_accept_gt_0p99": true,
+    "FI_all_declared_bad_cases_lt_0p001": true,
+    "FI_schedule_is_80_supercycles": true,
+    "bad_SU_lift_has_216_order18": true,
+    "GAP_exact_Weil6_E6_witness_path_exists": true,
+    "E6_outer_triality_certificate_declared": true
+  },
+  "boundaries": [
+    "Corrects the previous independent-SU phase-lift identification.",
+    "The E6 extension is after an actual outer automorphism of the point stabilizer; no canonical physical phase-frame choice is inferred.",
+    "The all-q spectrum is a finite DEC theorem, not a continuum KK mass spectrum.",
+    "FI numbers are seeded design simulations, not bench measurements."
+  ]
+}

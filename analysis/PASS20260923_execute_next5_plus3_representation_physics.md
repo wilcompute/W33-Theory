@@ -93,66 +93,38 @@ irrep \(\chi_{11}\) occurs at both \(96/5\) and \(216/5\) on different
 cochain degrees. The group controls degeneracies; the cochain geometry controls
 the rung spacing.
 
-## 2. The qutrit conjugate pair becomes one irreducible real 6D representation
+## 2. Correction — the canonical Weil lift is rational, not conductor-9
 
-After determinant-one normalization of the standard qutrit \(X,Z,F,P\)
-generators, their \(3\times3\) matrix group closes at exactly
-\[
-\boxed{648}
-\]
-elements with scalar center \(C_3\). Its character norm is one and its
-Frobenius--Schur indicator is
-\[
-\boxed{\nu(\chi_3)=0},
-\]
-so the single \(3\)-dimensional sector is irreducible of complex type.
+The original version of this section used independent determinant-one
+normalization of the qutrit Clifford generators. That changes a retained-phase
+finite group: cube roots of determinant phases introduce $\\zeta_9$, even
+though the projective Clifford action is unchanged.
 
-Form
-\[
-\rho_6(g)=\rho_3(g)\oplus\overline{\rho_3(g)}
-\]
-and adjoin the determinant-\(-1\) sector swap
-\[
-S=\begin{pmatrix}0&I_3\\I_3&0\end{pmatrix}.
-\]
-The generated matrix group closes at
-\[
-\boxed{1296},
-\]
-matching the independently certified full W33 point stabilizer
-\(3_+^{1+2}:GL(2,3)\). The full \(6\)-dimensional character has norm one and
-\[
-\boxed{\nu(\chi_6)=+1}.
-\]
-Thus
-\[
-\boxed{
-3_{\mathbb C}\oplus\overline{3}_{\mathbb C}
-\;\xrightarrow{\text{det-odd swap}}\;
-6_{\mathbb R}\text{ irreducible}.
-}
-\]
-
-The full group has \(18\) conjugacy classes, and every determinant-odd class
-has character zero in this induced carrier.
-
-The three order-\(9\) character values are the roots of
-\[
-\boxed{x^3-9x-9}
-\]
-with discriminant \(729\). The three order-\(18\) character values are the
-roots of
-\[
-\boxed{x^3-3x-1}
-\]
-with discriminant \(81\). Both generate
-\[
-\boxed{\mathbb Q(\zeta_9+\zeta_9^{-1})}.
-\]
-
-So the outer similitude simultaneously completes the qutrit central-character
-orbit, fuses a complex-conjugate pair into a real irrep, and leaves a real
-cubic conductor-\(9\) character field.
+Using the canonical finite Weil section
+\\[
+X,\\quad Z,\\quad e^{i\\pi/6}F_3,\\quad
+N=\\operatorname{diag}(1,\\omega,\\omega),
+\\]
+the one-sector matrix group has order $648$ with center $C_3$ and
+Frobenius--Schur indicator $0$. Coefficient conjugation gives the full
+$1296$-element group, with exact element-order census
+\\[
+1^1,2^{117},3^{98},4^{54},6^{450},8^{324},9^{144},12^{108}.
+\\]
+There are no order-$18$ elements. Its irreducible $6$D character has
+Frobenius--Schur indicator $+1$ and rational values
+\\[
+\\{-3,-2,-1,0,1,2,3,6\\}.
+\\]
+Writing $M=A+i\\sqrt3 B$ and $q=\\sqrt3\\operatorname{Im}v$ gives
+\\[
+R(M)=\\begin{pmatrix}A&-B\\\\3B&A\\end{pmatrix}\\in GL_6(\\mathbb Q),
+\\qquad
+Q_6=\\operatorname{diag}(3,3,3,1,1,1).
+\\]
+The former conductor-$9$ cubic trace field was a phase-lift artifact, not a
+character field of the W33 point stabilizer. The correction is independently
+certified by analysis/w33_20260923_corrected_weil6_e6_extension.g.
 
 ## 3. A \(Z_3\)-graded antiunitary pairing theorem replaces ordinary Kramers degeneracy
 
@@ -364,11 +336,7 @@ index theorem, not a claim of continuum supersymmetry.
 
 ## B. Outer similitude as an arithmetic realification operator
 
-The qutrit Clifford sector starts at Frobenius--Schur type \(0\) and the
-determinant completion moves it to type \(+1\), while the non-rational traces
-organize in \(\mathbb Q(\zeta_9+\zeta_9^{-1})\). Thus the outer similitude is
-simultaneously a central-character completion, complex-conjugate sector swap,
-irreducible realification, and real-cubic character-field selector.
+The canonical qutrit Clifford sector starts at Frobenius--Schur type \(0\), and the determinant completion moves it to type \(+1\). In the corrected Weil lift the full six-dimensional character is rational, with values \(-3,-2,-1,0,1,2,3,6\). Thus the outer similitude is simultaneously a central-character completion, complex-conjugate sector swap, and irreducible realification. The conductor-9 cubic field belonged to the superseded independent-SU phase normalization, not to the W33 point stabilizer.
 
 ## C. The FI center can reuse the optimal seven-tick distributed frame network
 

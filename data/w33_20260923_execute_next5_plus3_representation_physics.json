@@ -112,24 +112,35 @@
       "dimension": 3,
       "retained_phase_Clifford_order": 648,
       "scalar_center_order": 3,
-      "character_norm": 0.9999999999999963,
+      "character_norm": 1.0,
       "Frobenius_Schur_indicator": [
-        2.2067395921561753e-16,
-        -3.156768399493597e-16
+        1.1307232201707061e-15,
+        -8.131505733778115e-16
       ],
-      "type": "complex"
+      "type": "complex",
+      "canonical_generators": "X,Z,exp(i*pi/6)F3,N with N=diag(1,omega,omega)"
     },
     "full_similitude": {
       "dimension": 6,
       "order": 1296,
       "conjugacy_class_count": 18,
-      "character_norm": 0.9999999999999937,
+      "character_norm": 1.0,
       "Frobenius_Schur_indicator": [
-        0.9999999999999956,
-        -9.814515432506428e-17
+        1.0,
+        -6.506218654997987e-16
       ],
       "type": "real irreducible",
       "all_determinant_odd_class_traces_zero": true,
+      "element_order_histogram": {
+        "1": 1,
+        "2": 117,
+        "3": 98,
+        "4": 54,
+        "6": 450,
+        "8": 324,
+        "9": 144,
+        "12": 108
+      },
       "classes": [
         {
           "order": 1,
@@ -172,16 +183,34 @@
           "class_size": 24,
           "determinant_even_sector": true,
           "character": [
+            -3.0,
+            0.0
+          ]
+        },
+        {
+          "order": 3,
+          "class_size": 24,
+          "determinant_even_sector": true,
+          "character": [
             0.0,
             0.0
           ]
         },
         {
           "order": 3,
-          "class_size": 144,
+          "class_size": 24,
           "determinant_even_sector": true,
           "character": [
             0.0,
+            0.0
+          ]
+        },
+        {
+          "order": 3,
+          "class_size": 24,
+          "determinant_even_sector": true,
+          "character": [
+            3.0,
             0.0
           ]
         },
@@ -197,6 +226,33 @@
         {
           "order": 6,
           "class_size": 18,
+          "determinant_even_sector": true,
+          "character": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "order": 6,
+          "class_size": 72,
+          "determinant_even_sector": true,
+          "character": [
+            -2.0,
+            0.0
+          ]
+        },
+        {
+          "order": 6,
+          "class_size": 72,
+          "determinant_even_sector": true,
+          "character": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "order": 6,
+          "class_size": 72,
           "determinant_even_sector": true,
           "character": [
             1.0,
@@ -232,28 +288,10 @@
         },
         {
           "order": 9,
-          "class_size": 24,
+          "class_size": 144,
           "determinant_even_sector": true,
           "character": [
-            -2.2266816,
-            0.0
-          ]
-        },
-        {
-          "order": 9,
-          "class_size": 24,
-          "determinant_even_sector": true,
-          "character": [
-            -1.18479253,
-            0.0
-          ]
-        },
-        {
-          "order": 9,
-          "class_size": 24,
-          "determinant_even_sector": true,
-          "character": [
-            3.41147413,
+            0.0,
             0.0
           ]
         },
@@ -265,54 +303,32 @@
             -1.0,
             0.0
           ]
-        },
-        {
-          "order": 18,
-          "class_size": 72,
-          "determinant_even_sector": true,
-          "character": [
-            -1.53208889,
-            0.0
-          ]
-        },
-        {
-          "order": 18,
-          "class_size": 72,
-          "determinant_even_sector": true,
-          "character": [
-            -0.34729636,
-            0.0
-          ]
-        },
-        {
-          "order": 18,
-          "class_size": 72,
-          "determinant_even_sector": true,
-          "character": [
-            1.87938524,
-            0.0
-          ]
         }
       ]
     },
     "trace_field": {
-      "field": "Q(zeta_9 + zeta_9^-1), real cubic conductor-9 field",
-      "order9_trace_polynomial": "x^3 - 9x - 9",
-      "order9_polynomial_discriminant": 729,
-      "order18_trace_polynomial": "x^3 - 3x - 1",
-      "order18_polynomial_discriminant": 81,
-      "order9_trace_roots": [
-        -2.2266816,
-        -1.18479253,
-        3.41147413
+      "field": "Q",
+      "character_values": [
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        6
       ],
-      "order18_trace_roots": [
-        -1.53208889,
-        -0.34729636,
-        1.87938524
-      ]
+      "order18_elements_absent": true,
+      "rational_real_basis": "For M=A+i*sqrt(3)B, use [[A,-B],[3B,A]].",
+      "invariant_form": "diag(3,3,3,1,1,1), signature (6,0)"
     },
-    "fusion": "The 3D retained-phase qutrit Clifford irrep has FS indicator 0 (complex type). Adjoining the determinant-odd sector swap fuses it with its complex conjugate into one 6D irreducible representation of the full 1296 point stabilizer with FS indicator +1."
+    "phase_lift_correction": {
+      "supersedes": "independent determinant-one/SU normalization of every Clifford generator",
+      "reason": "cube-root determinant phases can introduce zeta_9 and change the retained-phase central extension",
+      "bad_lift_signature": "contains 216 order-18 elements; true H27:GL(2,3) contains none",
+      "projective_action_unchanged_but_finite_lift_changed": true
+    },
+    "fusion": "The canonical 3D retained-phase qutrit Clifford irrep has FS indicator 0. Coefficient-conjugation completion gives a 6D irreducible real carrier of the certified 1296 H27:GL(2,3) group, with rational character."
   },
   "attack3_Z3_antiunitary_pairing": {
     "theorem": "Let C be unitary with C^3=1 and H commute with C. Let T be antiunitary with HT=TH, TC=CT in the semilinear sense, and T^2=C^r for r=1 or 2. If C psi=omega psi, then C(T psi)=omega^2 T psi, so T psi is an orthogonal equal-energy partner in the conjugate grading sector. The same holds with omega and omega^2 exchanged. In the neutral C=1 sector, T^2=1 and no Kramers degeneracy is forced.",
@@ -680,31 +696,30 @@
     },
     "B_outer_similitude_realification": {
       "single_qutrit_sector_FS": [
-        2.2067395921561753e-16,
-        -3.156768399493597e-16
+        1.1307232201707061e-15,
+        -8.131505733778115e-16
       ],
       "full_6D_FS": [
-        0.9999999999999956,
-        -9.814515432506428e-17
+        1.0,
+        -6.506218654997987e-16
       ],
       "trace_field": {
-        "field": "Q(zeta_9 + zeta_9^-1), real cubic conductor-9 field",
-        "order9_trace_polynomial": "x^3 - 9x - 9",
-        "order9_polynomial_discriminant": 729,
-        "order18_trace_polynomial": "x^3 - 3x - 1",
-        "order18_polynomial_discriminant": 81,
-        "order9_trace_roots": [
-          -2.2266816,
-          -1.18479253,
-          3.41147413
+        "field": "Q",
+        "character_values": [
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3,
+          6
         ],
-        "order18_trace_roots": [
-          -1.53208889,
-          -0.34729636,
-          1.87938524
-        ]
+        "order18_elements_absent": true,
+        "rational_real_basis": "For M=A+i*sqrt(3)B, use [[A,-B],[3B,A]].",
+        "invariant_form": "diag(3,3,3,1,1,1), signature (6,0)"
       },
-      "statement": "The determinant-odd similitude does more than add states: it realifies the complex qutrit Clifford sector into a real irreducible 6D carrier whose non-rational character values lie in the conductor-9 real cubic field.",
+      "statement": "The determinant-odd similitude realifies the complex qutrit Clifford sector into a real irreducible 6D carrier with rational character; the earlier conductor-9 field came from the superseded independent-SU phase lift.",
       "boundary": "character arithmetic, not a measured energy/coupling field"
     },
     "C_distributed_FI_phase_frame": {

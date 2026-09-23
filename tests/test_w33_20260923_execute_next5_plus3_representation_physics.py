@@ -35,7 +35,8 @@ def test_dirac_module_and_q3_realification():
     assert abs(a2["full_similitude"]["character_norm"]-1) < 1e-10
     assert abs(a2["full_similitude"]["Frobenius_Schur_indicator"][0]-1) < 1e-10
     assert a2["full_similitude"]["all_determinant_odd_class_traces_zero"] is True
-    assert a2["trace_field"]["order18_trace_polynomial"] == "x^3 - 3x - 1"
+    assert a2["trace_field"]["field"] == "Q"
+    assert a2["trace_field"]["order18_elements_absent"] is True
 
 
 def test_z3_pairing_and_FI_reference_arm():
