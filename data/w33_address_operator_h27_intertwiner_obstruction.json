@@ -1,0 +1,54 @@
+{
+  "schema": "w33.address_operator_h27_intertwiner_obstruction.v1",
+  "status": "PASS_ADDRESS_OPERATOR_H27_LINEAR_INTERTWINER_RANK_OBSTRUCTION",
+  "headline": "The regular/address H27 and center-correct trinification/operator H27 are non-isomorphic 27-dimensional complex H27-modules. The address module is regular, containing 3 copies of each 3D Schroedinger central-character irrep; the operator module is 9 copies of one Schroedinger irrep. Every H27-equivariant linear map from address to operator space therefore has rank at most 9, so no invertible root-gauge intertwiner exists for these two landed actions.",
+  "group": {
+    "order": 27,
+    "center_order": 3,
+    "exponent": 3,
+    "irreducible_degree_census": {"1": 9, "3": 2},
+    "degree_square_sum": 27
+  },
+  "address_module": {
+    "dimension": 27,
+    "representation": "regular",
+    "decomposition": "sum_{9 linear chars} chi + 3 V_omega + 3 V_omega2",
+    "center_generator_cycle_structure": {"3": 9},
+    "center_spectrum": {"1": 9, "omega": 9, "omega^2": 9}
+  },
+  "operator_module": {
+    "dimension": 27,
+    "representation": "9 V_omega",
+    "center_spectrum": {"omega": 27},
+    "source": "landed trinification H27 on the E6 27"
+  },
+  "intertwiner": {
+    "Hom_dimension": 27,
+    "maximum_rank": 9,
+    "target_dimension": 27,
+    "invertible_intertwiner_exists": false,
+    "rank_bound_sharp": true,
+    "central_projector_rank": 9,
+    "automorphism_twist_can_remove_obstruction": false,
+    "reason": "Any automorphism maps the central generator to z or z^2. The regular central action always has three eigenspaces of dimension 9, while the operator center is scalar on all 27 dimensions."
+  },
+  "consequence": "The open root-gauge intertwiner cannot be an H27-equivariant basis change between the regular address action and the center-correct operator action. Any viable address-to-operator dictionary must explicitly break or retarget address-H27 equivariance, or compare a different representation/subgroup.",
+  "boundary": "Finite representation-theoretic obstruction only. It does not forbid a non-equivariant coordinate dictionary between the two 27-label sets, a map after changing the group action, or an intertwiner in a larger construction with additional multiplicity data. No particle, vacuum, or hardware claim is made.",
+  "parents": [
+    "analysis/w33_address_operator_h27_roles.py",
+    "analysis/w33_e8_matter81_pauli243_restriction.py",
+    "analysis/w33_e8_trinification_two_qutrit_pauli243.py"
+  ],
+  "checks": {
+    "H27_order_27": true,
+    "center_order_3": true,
+    "exponent_3": true,
+    "regular_center_is_nine_3cycles": true,
+    "irreducible_degree_square_sum_27": true,
+    "operator_module_is_9_Vomega_parent_fact": true,
+    "Hom_dimension_27": true,
+    "maximum_equivariant_rank_9": true,
+    "no_invertible_H27_intertwiner": true,
+    "automorphism_twist_does_not_help": true
+  }
+}
