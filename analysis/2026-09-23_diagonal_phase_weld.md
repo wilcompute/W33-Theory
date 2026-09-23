@@ -1,62 +1,65 @@
 # 2026-09-23 — Diagonal center/external phase weld
 
-The cubic compiler now has a coordinate-native symmetry-changing background.
+The cubic compiler now has a coordinate-native symmetry-changing background in
+the **current physical-Clifford H27 gauge**.
 
-Write the frozen scheduler address as
-[
-K=H_{27}	imes C_3^{m ext},
-qquad
-h=(a,b,c)=Z^aX^bomega^c,
-]
-with external phase (pinmathbb F_3).
+The canonical signed E6 cubic does not use the raw Pass1103 H27 coordinates as
+the compiler gauge.  The explicit bridge in
+\`data/w33_e6id_current_h27_gauge_bridge.json\` first conjugates all 45 canonical
+cubic triads to the current five-direction H27 right-coset system while sending
+all nine firewall fibers to the current pure-center spread.
 
-The pure central H27 direction has two lifted external slopes:
-[
-g_+=((0,0,1),1),qquad g_-=((0,0,1),2).
-]
-Define
-[
-	au_-=c-p,qquad 	au_+=c+ppmod 3.
-]
-Right multiplication by (g_+) fixes (	au_-); right multiplication by
-(g_-) fixes (	au_+).  Thus each diagonal phase is constant on every
-three-point coset of its corresponding lifted central cubic direction.
+Write the current scheduler address as
+\[
+K=H_{27}\times C_3^{\rm ext},\qquad
+h=(a,b,c)=Z^aX^b\omega^c,
+\]
+with external phase \(p\in\mathbb F_3\).  The pure-central H27 direction has
+two lifted external slopes
+\[
+g_+=((0,0,1),1),\qquad g_-=((0,0,1),2).
+\]
+The diagonal coordinates
+\[
+\tau_-=c-p,\qquad \tau_+=c+p\pmod 3
+\]
+are constant on right cosets of \(g_+\) and \(g_-\), respectively.
 
-Use the three-level backgrounds
-[
-v_pm=1+	au_pmin{1,2,3}.
-]
-Each amplitude level occurs exactly 27 times.
+For the three-level backgrounds \(v_\pm=1+\tau_\pm\in\{1,2,3\}\), each
+amplitude occurs exactly 27 times.  Exact rational Jacobian ranks and
+current-gauge Fourier-quotient ranks are:
 
-The exact rational cubic-Jacobian ranks and the Fourier-quotient projection
-ranks are:
-
-| background | exact rank D | quotient rank |
+| background | exact rank \(D_v\) | quotient rank |
 |---|---:|---:|
-| center only (1+c) | 54 | 36 |
-| external only (1+p) | 54 | 36 |
-| diagonal (1+(c+p)) | 72 | 54 |
-| diagonal (1+(c-p)) | 72 | 54 |
+| center only \(1+c\) | 36 | 36 |
+| external only \(1+p\) | 54 | 36 |
+| diagonal \(1+(c+p)\) | 66 | 54 |
+| diagonal \(1+(c-p)\) | 66 | 54 |
 
-The quotient ranks are certified at both split Eisenstein primes 103 and 109.
-For either diagonal weld,
-[
-operatorname{rank}(S_1+operatorname{Im}D_v)=81,
-]
-hence
-[
-operatorname{rank}igl(operatorname{Im}D_v	o
-operatorname{Reg}(K)/S_1igr)=54.
-]
+The quotient ranks are independently certified at split Eisenstein primes 103
+and 109.  For either diagonal weld,
+\[
+\operatorname{rank}(S_1+\operatorname{Im}D_v)=81,
+\]
+so
+\[
+\operatorname{rank}\!\left(
+\operatorname{Im}D_v\to\operatorname{Reg}(K)/S_1
+\right)=54.
+\]
 
-This makes the mechanism sharply interaction-like: the H27 central coordinate
-alone and the external qutrit coordinate alone each miss 18 required retyped
-directions, whereas correlating them diagonally covers the entire 54D quotient.
+This is the structural point: the center factor alone reaches 36 retyped
+directions; the external qutrit factor alone also reaches 36; but correlating
+them diagonally reaches **all 54** directions required by the minimal
+symmetry-changing compiler.  The diagonal raw rank is 66, leaving a
+12-dimensional intersection with the operator-compatible \(S_1\) sector.
 
 The two diagonal choices are the conjugate slope pair already present in the
-lifted cubic geometry.  No physical FI orientation is inferred from this
-finite statement.
+lifted central cubic geometry.  No dynamical preference between them, physical
+VEV, D/F-flat vacuum, or hardware pulse is inferred.
 
 Evidence:
+- analysis/w33_e6id_current_h27_gauge_bridge.py
+- data/w33_e6id_current_h27_gauge_bridge.json
 - analysis/w33_e6_cubic_diagonal_phase_weld.py
 - data/w33_e6_cubic_diagonal_phase_weld.json
