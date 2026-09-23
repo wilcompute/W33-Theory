@@ -92,3 +92,78 @@ The finite architecture now separates cleanly into:
 4. root basis: cubic incidence sees a 73-dimensional quotient and misses exactly chi_ext + chi_ext^2 + V_omega + V_omega^2.
 
 The remaining 81-root problem is therefore not to discover an arbitrary 81x81 matrix. It is to attach exactly those four missing irreducible sectors to the already-closed 73-dimensional cubic channel, while respecting the frozen FI orientation and the Pauli243 execution algebra.
+
+
+## Follow-on closure: Strange dark mode, full 81 chart, and the 54-dimensional representation deficit
+
+The six-dimensional Schrodinger portion of the dark eight is selected by one
+exact right-multiplicity qutrit ray.  The four noncentral Hesse projector
+sums have stacked rank two and unique common kernel
+
+[
+m=(1,-omega,0).
+]
+
+For the repository Strange reference (S=(0,1,-1)),
+
+[
+m=ZX^2S.
+]
+
+Thus the dark (V_omega) multiplicity ray is a single-qutrit Clifford image
+of Strange magic, and the (V_{omega^2}) sector carries its conjugate.
+This is explicitly firewalled from M36_Q4_RAW, which is the separate
+ququart/two-qubit Witting resource.
+
+Using the representation-aware dark modes, a deterministic full root/address
+coordinate basis is now explicit:
+
+[
+oxed{
+81
+=
+73_{m cubic}
++
+2_{m external Fourier}
++
+3_{V_omega}
++
+3_{V_{omega^2}}.
+}
+]
+
+The 73 cubic columns are deterministic pivots of the exact 81x270 incidence
+matrix.  The eight dark columns are orthogonal to all 270 cubic columns and
+have Hermitian Gram diagonal
+
+[
+81, 81, 54, 54, 54, 54, 54, 54.
+]
+
+The resulting 81x81 Q(omega) matrix has exact rank 81 and frozen digest
+sha256:d61fb8e8982a5a394d32a112a150896266ef7ecf0ae9e1806087fc36d834c125.
+
+This completes linear coordinate span but not the address/operator
+intertwiner.  Comparing irreducible multiplicities with the trinification
+operator module gives the exact equivariant rank budget
+
+[
+73_{m visible}	o81_{m op}: 24,qquad
+8_{m dark}	o81_{m op}: 3,qquad
+81_{m full}	o81_{m op}: 27.
+]
+
+Therefore
+
+[
+oxed{81-27=54}
+]
+
+operator dimensions lie outside every K-equivariant image.  The repeated
+number 54 in the fiber-instruction sector is deliberately not identified
+with this representation-theoretic deficit without an objectwise map.
+
+Evidence:
+analysis/w33_hesse36_dark_schrodinger_strange_state.py,
+analysis/w33_e8_matter81_hybrid_cubic_dark_basis.py, and
+analysis/w33_hybrid81_operator_equivariance_budget.py.
