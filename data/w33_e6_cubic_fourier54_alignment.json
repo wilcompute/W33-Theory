@@ -144,7 +144,7 @@
     "data/w33_e6_cubic_jacobian_rank_stratification.json",
     "data/w33_minimal_symmetry_changing_81_compiler.json",
     "analysis/w33_e8_matter81_hybrid_cubic_dark_basis.py",
-    "analysis/w33_pass1103_hesse_firewall_cubic_transport.py"
+    "data/w33_e6id_current_h27_gauge_bridge.json"
   ],
   "checks": {
     "S1_rank27_at_both_split_primes": true,
