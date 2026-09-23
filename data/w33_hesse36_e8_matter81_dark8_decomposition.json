@@ -1,0 +1,53 @@
+{
+  "schema": "w33.hesse36_e8_matter81_dark8_decomposition.v1",
+  "status": "PASS_RANK73_DARK8_DECOMPOSES_AS_TWO_EXTERNAL_CHARS_PLUS_TWO_SCHRODINGER_IRREPS",
+  "headline": "The 8-dimensional kernel left dark by the full 81x270 cubic-incidence transform is an exact K=H27_address x C3_external subrepresentation. Its irreducible decomposition is chi_ext + chi_ext^2 + V_omega + V_omega^2, where the first two are the two nontrivial external-C3 characters and the latter two are the conjugate 3D H27 Schrodinger irreps with trivial external character. Thus the missing root-level information is representation-theoretically localized: 1+1+3+3=8.",
+  "incidence": {
+    "shape": [81, 270],
+    "rank": 73,
+    "dark_dimension": 8,
+    "left_K_invariant": true
+  },
+  "dark_character": {
+    "trace_histogram": {
+      "-4": 4,
+      "-1": 50,
+      "2": 24,
+      "5": 2,
+      "8": 1
+    },
+    "identity_trace": 8,
+    "H27_center_generator_trace": -1,
+    "external_C3_generator_trace": 5
+  },
+  "irreducible_decomposition": {
+    "one_dimensional": [
+      {"label": [0, 0, 1], "multiplicity": 1},
+      {"label": [0, 0, 2], "multiplicity": 1}
+    ],
+    "three_dimensional": [
+      {"central_character_exponent": 1, "external_character_exponent": 0, "multiplicity": 1},
+      {"central_character_exponent": 2, "external_character_exponent": 0, "multiplicity": 1}
+    ],
+    "formula": "chi_ext + chi_ext^2 + V_omega + V_omega^2",
+    "dimension_check": "1+1+3+3=8",
+    "conjugation_closed": true
+  },
+  "compiler_consequence": "Cubic instruction amplitudes span the complementary 73-dimensional root-address subspace. Any invertible 81-root compiler must add target data carrying exactly the two nontrivial external characters and the two conjugate internal Schrodinger sectors; changing cubic signs cannot supply these sectors because nonzero row/column rephasings preserve rank.",
+  "boundary": "The equality dark_dimension=8=rank(E8) is only numerical here. The dark module is nontrivial under K, and no identification with the E8 Cartan subalgebra is asserted.",
+  "parents": [
+    "data/w33_hesse36_e8_matter81_root_lift_boundary.json",
+    "data/w33_e8_matter81_pauli243_restriction.json"
+  ],
+  "checks": {
+    "rank73_replayed": true,
+    "dark_dimension8": true,
+    "dark_space_left_K_invariant": true,
+    "all_81_restricted_traces_exact": true,
+    "trace_histogram_exact": true,
+    "only_two_1d_irreps_present": true,
+    "only_two_3d_irreps_present": true,
+    "dimension_sum8": true,
+    "cartan_identification_firewalled": true
+  }
+}
