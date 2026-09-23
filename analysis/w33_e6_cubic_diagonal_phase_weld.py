@@ -18,10 +18,10 @@ Use the three-level real/integer backgrounds
     v_+(a,b,c,p) = 1 + tau_+(a,b,c,p) in {1,2,3}.
 
 Exact rational cubic-Jacobian ranks:
-    center-only c       : 54
+    center-only c       : 36
     external-only p     : 54
-    diagonal c+p        : 72
-    diagonal c-p        : 72
+    diagonal c+p        : 66
+    diagonal c-p        : 66
 
 Using the canonical 27D S1 Fourier sector, split-prime certificates at
 p=103,109 give quotient projection ranks:
@@ -76,10 +76,11 @@ def lift3(x):return 1+(int(x)%3)
 def main(write=True):
     align=load(ROOT/"analysis/w33_e6_cubic_fourier54_alignment.py","phase_weld_align")
     rankmod=load(ROOT/"analysis/w33_e6_cubic_jacobian_rank_stratification.py","phase_weld_rank")
-    old=load(ROOT/"analysis/w33_pass1103_hesse_firewall_cubic_transport.py","phase_weld_old")
-
-    e6_to_h={int(i):(int(u[0]),int(u[1]),int(z)) for i,(u,z) in old.E6_TO_UZ.items()}
+    bridge=json.loads((ROOT/"data/w33_e6id_current_h27_gauge_bridge.json").read_text())
+    e6_to_h={int(i):tuple(map(int,h)) for i,h in bridge["maps"]["e6id_to_current_H27_address"].items()}
     h_to_e6={h:i for i,h in e6_to_h.items()}
+    assert bridge["incidence"]["mapped_full45_equal"] is True
+    assert bridge["incidence"]["mapped_bad9_equal"] is True
     assert len(e6_to_h)==len(h_to_e6)==27
 
     # Canonical matter-row ordering used by the cubic producers:
@@ -105,10 +106,10 @@ def main(write=True):
         A=rankmod.jacobian(v,records)
         exact_ranks[name]=rankmod.exact_integer_rank(A)
     assert exact_ranks=={
-      "center":54,
+      "center":36,
       "external":54,
-      "center_plus_external":72,
-      "center_minus_external":72,
+      "center_plus_external":66,
+      "center_minus_external":66,
     }
 
     prime_certs={
@@ -116,10 +117,10 @@ def main(write=True):
       for name,v in backgrounds.items()
     }
     expected={
-      "center":(54,63,36,18),
+      "center":(36,63,36,0),
       "external":(54,63,36,18),
-      "center_plus_external":(72,81,54,18),
-      "center_minus_external":(72,81,54,18),
+      "center_plus_external":(66,81,54,12),
+      "center_minus_external":(66,81,54,12),
     }
     for name,(rd,combined,quot,inter) in expected.items():
         for row in prime_certs[name]:
@@ -146,7 +147,7 @@ def main(write=True):
     out={
       "schema":"w33.e6_cubic_diagonal_phase_weld.v1",
       "status":"PASS_DIAGONAL_H27_CENTER_EXTERNAL_QUTRIT_WELD_UNLOCKS_ALL_54_RETYPE_DIRECTIONS",
-      "headline":"A coordinate-native symmetry-changing background now replaces the arbitrary row-polynomial witness. Let c be the H27 central normal-form coordinate and p the external qutrit phase. Center-only and external-only three-level backgrounds each have exact cubic Jacobian rank 54 but project onto only 36 of the 54 retyped Fourier directions. By contrast either diagonal weld tau=c+p or tau=c-p, lifted to amplitudes 1+tau in {1,2,3}, has exact rank 72 and projects surjectively onto all 54 retyped directions. The two tau functions are constant on the cosets of the two pure-central lifted cubic directions with external slopes -1 and +1, respectively.",
+      "headline":"In the explicit current physical-Clifford H27 gauge, the symmetry-changing capacity is genuinely diagonal. Let c be the H27 central normal-form coordinate and p the external qutrit phase. The center-only three-level background has exact cubic Jacobian rank 36 and the external-only background rank 54; both project onto only 36 of the 54 retyped Fourier directions. By contrast either diagonal weld tau=c+p or tau=c-p, lifted to amplitudes 1+tau in {1,2,3}, has exact rank 66 and projects surjectively onto all 54 retyped directions. The quotient-surjectivity survives the corrected gauge bridge exactly.",
       "address_geometry":{
         "K":"H27 x C3_external",
         "H27_normal_form":"(a,b,c)=Z^a X^b omega^c",
@@ -159,7 +160,7 @@ def main(write=True):
       "rank_and_alignment":{
         "center":{
           "background":"1+(c mod3)",
-          "exact_jacobian_rank":54,
+          "exact_jacobian_rank":36,
           "quotient_projection_rank":36,
           "split_prime_certificates":prime_certs["center"]
         },
@@ -171,16 +172,16 @@ def main(write=True):
         },
         "center_plus_external":{
           "background":"1+((c+p) mod3)",
-          "exact_jacobian_rank":72,
+          "exact_jacobian_rank":66,
           "quotient_projection_rank":54,
-          "S1_intersection_dimension":18,
+          "S1_intersection_dimension":12,
           "split_prime_certificates":prime_certs["center_plus_external"]
         },
         "center_minus_external":{
           "background":"1+((c-p) mod3)",
-          "exact_jacobian_rank":72,
+          "exact_jacobian_rank":66,
           "quotient_projection_rank":54,
-          "S1_intersection_dimension":18,
+          "S1_intersection_dimension":12,
           "split_prime_certificates":prime_certs["center_minus_external"]
         }
       },
@@ -188,7 +189,7 @@ def main(write=True):
         "individual_center_or_external_factor_covers_full_retyped_quotient":False,
         "diagonal_center_external_weld_covers_full_retyped_quotient":True,
         "required_retyped_dimension":54,
-        "diagonal_raw_rank_margin":18,
+        "diagonal_raw_rank_margin":12,
         "mechanism":"the full quotient capacity appears only after correlating the address-center phase with the external qutrit phase"
       },
       "orientation_pair":{
@@ -200,14 +201,15 @@ def main(write=True):
       "parents":[
         "data/w33_e6_cubic_fourier54_alignment.json",
         "data/w33_e6_cubic_jacobian_rank_stratification.json",
-        "data/w33_e8_matter81_h27_address_operator_compiler.json"
+        "data/w33_e8_matter81_h27_address_operator_compiler.json",
+        "data/w33_e6id_current_h27_gauge_bridge.json"
       ],
       "checks":{
         "three_equal_amplitude_levels":True,
-        "center_exact_rank54_projection36":True,
+        "center_exact_rank36_projection36":True,
         "external_exact_rank54_projection36":True,
-        "center_plus_external_exact_rank72_projection54":True,
-        "center_minus_external_exact_rank72_projection54":True,
+        "center_plus_external_exact_rank66_projection54":True,
+        "center_minus_external_exact_rank66_projection54":True,
         "tau_minus_constant_on_slope_plus1_central_cosets":True,
         "tau_plus_constant_on_slope_minus1_central_cosets":True,
         "both_diagonal_welds_cover_full_retyped_quotient":True,
