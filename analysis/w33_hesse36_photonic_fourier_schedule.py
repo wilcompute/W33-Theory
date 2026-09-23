@@ -16,7 +16,7 @@ and insertion loss unspecified. M36 injection remains refused because this
 compiler is Clifford-only.
 """
 from __future__ import annotations
-import json,math
+import importlib.util,json,math
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/"data/w33_hesse36_photonic_fourier_schedule.json"
@@ -24,7 +24,15 @@ OUT=ROOT/"data/w33_hesse36_photonic_fourier_schedule.json"
 def main(write=True):
     compiler=json.loads((ROOT/"data/w33_hesse36_full_clifford648_fourier_compiler.json").read_text())
     bom=json.loads((ROOT/"data/w33_pass409_vendor_neutral_bom.json").read_text())
-    proto=json.loads((ROOT/"data/bt1575_full_protocol_table_for_paper.json").read_text())
+    proto_path=ROOT/"data/bt1575_full_protocol_table_for_paper.json"
+    if proto_path.exists():
+        proto=json.loads(proto_path.read_text())
+    else:
+        source=ROOT/"tools/bt1575_full_protocol_table_for_paper.py"
+        spec=importlib.util.spec_from_file_location("bt1575_protocol_source",source)
+        assert spec and spec.loader
+        mod=importlib.util.module_from_spec(spec);spec.loader.exec_module(mod)
+        proto={"rows":mod.ROWS}
     leakage=json.loads((ROOT/"data/bt1581_radial_leakage_pass_fail_simulator.json").read_text())
     hard=json.loads((ROOT/"data/PART_BT2820_BT2824_BLUEPRINT_HARDENING_results.json").read_text())
     assert compiler["compiler"]["fiber_count"]==12
