@@ -1,0 +1,122 @@
+{
+  "schema": "w33.20260923.next5_plus3_physics.frozen.v1",
+  "status": "PASS_NEXT_FIVE_PLUS_THREE_WITH_ONE_FREE_ENERGY_HYPOTHESIS_REFUTED_AND_REPLACED",
+  "attack1_hodge_completion": {
+    "original_cells": [40, 240, 160, 40],
+    "original_boundary_ranks": [0, 39, 120, 40],
+    "original_betti": [1, 81, 0, 0],
+    "dual_cells": [40, 160, 240, 40],
+    "dual_betti": [0, 0, 81, 1],
+    "doubled_cells": [80, 400, 400, 80],
+    "doubled_betti": [1, 81, 81, 1],
+    "metric": "positive unit diagonal counting metric",
+    "star_locality": "one primal basis simplex to one named formal-dual basis cell",
+    "star_squared": "+I",
+    "codifferential": "delta_k=star^-1 d_dual_(3-k) star=B_k=d_(k-1)^T",
+    "geometric_DEC_not_claimed": true
+  },
+  "attack2_free_energy": {
+    "multiplier_energy": "E(m)=0 for m=+/-1; E(m)=2 otherwise",
+    "partition_function": "Z_q(beta)=2+(q-3)e^(-2 beta)",
+    "mean_energy": "U_q(beta)=2(q-3)e^(-2 beta)/Z_q(beta)",
+    "linear_defect": "S(q)=2(q-3)=(q-1)U_q(0)",
+    "canonical_free_energy": "F_q(beta)=-(1/beta)ln Z_q(beta)",
+    "conclusion": "S(q) is not the canonical equilibrium free energy",
+    "replacement": "log-index information/Landauer obstruction from attack5"
+  },
+  "attack3_global_floquet": {
+    "fundamental_exponents_mod12": [1, 4, 7],
+    "order": 12,
+    "phase_histogram_mod12": {
+      "0": 80,
+      "1": 27,
+      "3": 2,
+      "4": 27,
+      "5": 27,
+      "6": 2,
+      "7": 27,
+      "8": 27,
+      "9": 2,
+      "11": 27
+    },
+    "trace_U_power_t_t0_to11": [248, 51, 105, 132, 5, 51, 24, 51, 5, 132, 105, 51],
+    "fixed_dimensions_t1_to12": [80, 82, 134, 86, 80, 136, 80, 86, 134, 82, 80, 248],
+    "U4_grading": {"g0": "1", "g1": "omega", "g2": "omega^2"},
+    "U4_equals_physical_FI_center": true
+  },
+  "attack4_p5_interferometer": {
+    "ideal_allowed_probability": 0.6545084971874737,
+    "ideal_forbidden_probability": 0.09549150281252633,
+    "ideal_contrast": 0.5590169943749475,
+    "design_visibility": 0.965,
+    "background_fraction": 0.01,
+    "phase_error_degrees": 1.0,
+    "visibility_uncertainty": 0.005,
+    "background_uncertainty": 0.002,
+    "contrast_after_visibility_background": 0.5340568855761061,
+    "phase_systematic": 0.012829326139846954,
+    "visibility_systematic": 0.00276713412215599,
+    "background_systematic": 0.0010789027991436487,
+    "conservative_remaining_contrast": 0.5173815225149595,
+    "five_sigma_detected_event_minimum_proxy": 94,
+    "recommended_detected_events_per_test_setting": 128,
+    "sigma_proxy_at_128": 5.8535037284951725,
+    "laboratory_data_claimed": false
+  },
+  "attack5_information_obstruction": {
+    "formula_nats": "H_coset=D_KL=ln((q-1)/2)",
+    "formula_bits": "log2((q-1)/2)",
+    "total_variation": "1-2/(q-1)",
+    "Landauer": "W_min=k_B T ln((q-1)/2)",
+    "cases": {
+      "3": {"index": 1, "bits": 0.0, "nats": 0.0},
+      "5": {"index": 2, "bits": 1.0, "nats": 0.6931471805599453},
+      "7": {"index": 3, "bits": 1.584962500721156, "nats": 1.0986122886681098},
+      "9": {"index": 4, "bits": 2.0, "nats": 1.3862943611198906},
+      "11": {"index": 5, "bits": 2.321928094887362, "nats": 1.6094379124341003},
+      "13": {"index": 6, "bits": 2.584962500721156, "nats": 1.791759469228055},
+      "25": {"index": 12, "bits": 3.584962500721156, "nats": 2.4849066497880004},
+      "27": {"index": 13, "bits": 3.700439718141092, "nats": 2.5649493574615367},
+      "49": {"index": 24, "bits": 4.584962500721156, "nats": 3.1780538303479458}
+    },
+    "zero_only_q3": true
+  },
+  "outside1_central_character_completion": {
+    "construction": "Induce the q-dimensional Heisenberg-Weil representation from H_q:SL(2,q) to H_q:GL(2,q)",
+    "nontrivial_character_sectors": "q-1",
+    "full_carrier_dimension": "q(q-1)",
+    "matter_antimatter_pair_dimension": "2q",
+    "pair_is_full_carrier_iff": "q=3",
+    "cases": {
+      "3": {"full_dimension": 6, "pair_dimension": 6, "complete": true},
+      "5": {"full_dimension": 20, "pair_dimension": 10, "complete": false},
+      "7": {"full_dimension": 42, "pair_dimension": 14, "complete": false},
+      "9": {"full_dimension": 72, "pair_dimension": 18, "complete": false},
+      "25": {"full_dimension": 600, "pair_dimension": 50, "complete": false}
+    }
+  },
+  "outside2_Kramers_doubling": {
+    "single_qutrit_dimension": 3,
+    "single_matter_dimension": 81,
+    "T2_minus1_impossible_on_odd_dimension": true,
+    "doubled_dimension": 162,
+    "construction": "T(v,w)=(-conjugate(w),conjugate(v))",
+    "T_squared": "-I",
+    "physical_time_reversal_claimed": false
+  },
+  "outside3_FI_fourth_root": {
+    "clock_order": 12,
+    "identity": "U_F^4=omega I_3",
+    "E8_action": "U_F^4 has eigenvalue multiplicities 1^86, omega^81, omega^2^81",
+    "equals_certified_physical_FI_Qpsi_center": true,
+    "reading": "four Floquet ticks equal one FI-center step; twelve ticks close",
+    "physical_time_claimed": false
+  },
+  "boundaries": [
+    "formal algebraic dual is not an embedded circumcentric DEC dual",
+    "Landauer reading assumes ideal reversible erasure",
+    "Floquet spectrum is internal finite-order action, not a measured Hamiltonian",
+    "photonic protocol is a design calculation without laboratory data",
+    "Kramers and full-similitude completions are representation-theoretic possibilities"
+  ]
+}
