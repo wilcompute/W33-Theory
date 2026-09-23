@@ -8,7 +8,11 @@
     "root_metadata": "extracted_v13/W33-Theory-master/artifacts/e8_root_metadata_table.json",
     "root_metadata_blob_sha": "8f2bb5f5b5b22eee059bf2bf30de95e73af9c2f1",
     "dimension": 248,
-    "grading_dimensions": [86,81,81],
+    "grading_dimensions": [
+      86,
+      81,
+      81
+    ],
     "all_bracket_terms_checked_for_grading": true
   },
   "hybrid_transform": {
@@ -22,7 +26,14 @@
   },
   "bracket": {
     "definition": "[x,y]_hyb = A^-1 [A x,A y]_Chevalley",
-    "all_grade_products": ["g0g0->g0","g0g1->g1","g0g2->g2","g1g1->g2","g1g2->g0","g2g2->g1"],
+    "all_grade_products": [
+      "g0g0->g0",
+      "g0g1->g1",
+      "g0g2->g2",
+      "g1g1->g2",
+      "g1g2->g0",
+      "g2g2->g1"
+    ],
     "dense_248_cubed_materialized": false,
     "representation": "exact sparse source bracket plus exact block change-of-basis evaluator"
   },
@@ -37,6 +48,7 @@
   "parents": [
     "data/w33_e8_full_graded_hybrid_atlas.json",
     "data/w33_e6_cubic_hybrid81_transport.json",
+    "data/w33_e6id_current_h27_gauge_bridge.json",
     "artifacts/e8_structure_constants_w33_discrete.json"
   ],
   "checks": {
@@ -48,6 +60,7 @@
     "conjugate_B81_inverse_exact": true,
     "all_bracket_terms_respect_Z3": true,
     "all_2511496_source_Jacobi_triples_zero": true,
-    "hybrid_Jacobi_follows_exactly": true
+    "hybrid_Jacobi_follows_exactly": true,
+    "current_H27_gauge_bridge_loaded": true
   }
 }
