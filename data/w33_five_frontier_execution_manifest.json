@@ -1,1 +1,12 @@
-Complete valid JSON manifest binding all five artifacts to the live predecessor commit a774ef54468af82494cd254598c63c915d8f03c0, their inputs, acceptance conditions, and hard claim boundaries.
+{
+  "schema": "w33.five.frontier.execution.manifest.v2",
+  "base_commit": "a774ef54468af82494cd254598c63c915d8f03c0",
+  "frontiers": [
+    {"name": "C12 spectrum regression", "artifact": "analysis/w33_floquet_cyclotomic_regression.py", "acceptance": "all traces and fixed spaces reproduce"},
+    {"name": "E6 collective 54-slot audit", "artifact": "analysis/w33_actual_e6_54_slot_audit.py", "acceptance": "collective span only; no rank-54 background claim"},
+    {"name": "Chevalley certificate integrity audit", "artifact": "analysis/w33_hybrid_chevalley_independent_audit.py", "acceptance": "source and exhaustive certificate present"},
+    {"name": "36-channel tomography protocol", "artifact": "analysis/W33_PHOTONIC_36_PROCESS_TOMOGRAPHY_PROTOCOL.md", "acceptance": "conditional F_HS lower bound at least 0.99"},
+    {"name": "FI-clock falsifier", "artifact": "analysis/W33_FI_CLOCK_FALSIFIER.md", "acceptance": "pre-registered failure conditions"}
+  ],
+  "boundaries": ["no vacuum selection","no physical Hamiltonian","no laboratory data","no physical-time claim","integrity audit is not a second exhaustive theorem proof"]
+}
