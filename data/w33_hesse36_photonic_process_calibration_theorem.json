@@ -15,7 +15,7 @@
     "per_factor_min": 0.996655493413,
     "tritter_process_infidelity_max": 0.003344506587,
     "hold_phase_rad_max": 0.057863994222,
-    "hold_phase_deg_max": 3.315362654681,
+    "hold_phase_deg_max": 3.31536265468,
     "hold_differential_power_loss_abs_db_max": 0.502880974035,
     "hold_differential_power_loss_peak_to_peak_db_max": 1.00576194807,
     "sufficient_product_bound": 0.99
@@ -27,14 +27,16 @@
   "single_device_protocol": [
     "phase-reference all nine physical tritters to one optical clock and characterize each 3x3 complex transfer block; absorb block-global phase into the HOLD phase ledger",
     "calibrate the matched HOLD network on all 36 logical paths; subtract common loss/phase and record per-path delta_L and delta_phi",
-    "verify F_TRI >= 0.996655493413, |delta_phi| <= 3.315362654681 deg, and |delta_L| <= 0.502880974035 dB as sufficient component gates",
+    "verify F_TRI >= 0.996655493413, |delta_phi| <= 3.315362654680 deg, and |delta_L| <= 0.502880974035 dB as sufficient component gates",
     "run the complete coherent 9+3 schedule on the same hardware stack and reconstruct one 36x36 complex transfer matrix M",
     "accept only if normalized F_HS(M) >= 0.99 AND the existing |delta V(F3)|<=0.05 and radial-leakage<=0.10 falsifiers pass",
     "report absolute common insertion loss, source efficiency and detector efficiency separately; never convert them into conditional process fidelity"
   ],
   "prior_art_boundary": "Published balanced frequency-bin tritters demonstrate that high-fidelity 3x3 mixing is feasible, but their reported fidelity is not assigned to this device. This theorem specifies what the W33/Holonet device itself must measure.",
   "boundary": "The 0.99 target is an engineering design choice, not a prediction. The multiplicative factor budget is a sufficient model under the stated phase-referenced independent-error assumptions; the decisive experimental test is the directly reconstructed full transfer matrix. No physical device measurement is claimed.",
-  "parents": ["data/w33_hesse36_photonic_coherent_retiming.json"],
+  "parents": [
+    "data/w33_hesse36_photonic_coherent_retiming.json"
+  ],
   "checks": {
     "one_F3_and_one_HOLD_per_channel": true,
     "target_declared_not_measured": true,
