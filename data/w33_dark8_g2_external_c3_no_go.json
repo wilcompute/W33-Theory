@@ -1,0 +1,45 @@
+{
+  "schema": "w33.dark8_g2_external_c3_no_go.v1",
+  "status": "PASS_STRICT_G2_TIMES_EXTERNAL_C3_PROMOTION_OF_DARK8_IS_IMPOSSIBLE",
+  "headline": "The dark 1+1+3+3bar branching shadow cannot be promoted to a G2 action that commutes with the already-frozen external C3. Any G2-fixed singlet must be one of the two external-charge eigenlines; the complementary irreducible seven then sees C3 spectrum omega^s plus six eigenvalues 1, which is non-scalar and contradicts Schur's lemma for the irreducible G2 seven.",
+  "dark_K_module": {
+    "formula": "chi_ext + chi_ext^2 + V_omega + V_omega^2",
+    "dimension": 8,
+    "C3_ext_exponent_multiplicities": {"0":6,"1":1,"2":1},
+    "H27_restriction": "1 + 1 + 3 + 3bar"
+  },
+  "candidate_G2_branching": {
+    "formula": "1_G2 + 7_G2, with 7 -> 1+3+3bar under SU(3)",
+    "possible_fixed_singlet_external_charges": [1,2],
+    "resulting_seven_C3_spectra": [
+      {"fixed_charge":1,"seven":"1^6 plus omega^2"},
+      {"fixed_charge":2,"seven":"1^6 plus omega"}
+    ],
+    "C3_scalar_on_seven": false
+  },
+  "obstruction": {
+    "required_compatibility": "external C3 commutes with the proposed G2 action, preserving the frozen K=H27 x C3 direct-product symmetry",
+    "lemma": "Schur: the commutant of an irreducible complex G2 seven is the scalars",
+    "contradiction": "the frozen external C3 is non-scalar on every possible seven complement",
+    "strict_G2_x_C3_extension_exists": false
+  },
+  "what_survives": {
+    "G2_branching_shadow_after_forgetting_external_C3": true,
+    "noncommuting_larger_envelope_ruled_out": false,
+    "possible_next_question": "whether C3_ext can participate noncentrally in a larger exceptional or semilinear envelope rather than commute with G2"
+  },
+  "boundary": "This is a representation-theoretic no-go for a commuting G2 x C3_ext promotion. It does not rule out a noncommuting larger group/algebra containing both structures, nor infer a G2 gauge boson, dark multiplet, mass, or interaction.",
+  "parents": [
+    "data/w33_dark8_g2_branching_shadow.json",
+    "data/w33_hesse36_e8_matter81_dark8_decomposition.json"
+  ],
+  "checks": {
+    "dark_C3_spectrum_6_1_1": true,
+    "only_H27_invariant_fixed_lines_are_in_singlet_plane": true,
+    "C3_eigenlines_force_two_candidate_G2_fixed_singlets": true,
+    "C3_non_scalar_on_both_candidate_sevens": true,
+    "Schur_obstruction_applies": true,
+    "strict_commuting_extension_rejected": true,
+    "noncommuting_envelope_left_open": true
+  }
+}
