@@ -35,6 +35,7 @@ on:
       - 'analysis/w33_hesse36_photonic_process_calibration_theorem.py'
       - 'tools/bt1575_full_protocol_table_for_paper.py'
       - 'analysis/w33_e6_cubic_jacobian_rank_stratification.py'
+      - 'analysis/w33_e6_cubic_fourier54_alignment.py'
       - 'data/w33_address_operator_h27_intertwiner_obstruction.json'
       - 'data/w33_scheduler_operator_k81_intertwiner_obstruction.json'
       - 'data/w33_maximal_compiler_symmetry_pappus.json'
@@ -65,6 +66,7 @@ on:
       - 'data/w33_dark8_g2_external_c3_no_go.json'
       - 'data/w33_hesse36_photonic_process_calibration_theorem.json'
       - 'data/w33_e6_cubic_jacobian_rank_stratification.json'
+      - 'data/w33_e6_cubic_fourier54_alignment.json'
       - 'analysis/PASS20260922_address_operator_h27_intertwiner_obstruction_insert.tex'
       - 'analysis/PASS20260922_scheduler_operator_k81_obstruction_insert.tex'
       - 'analysis/PASS20260922_maximal_compiler_symmetry_pappus_insert.tex'
@@ -78,6 +80,8 @@ on:
       - 'analysis/2026-09-23_execute_all5_hybrid_lie_golay_calibration.md'
       - 'analysis/PASS20260923_cubic_jacobian_rank_stratification_insert.tex'
       - 'analysis/2026-09-23_cubic_jacobian_rank_stratification.md'
+      - 'analysis/PASS20260923_cubic_fourier54_alignment_insert.tex'
+      - 'analysis/2026-09-23_cubic_fourier54_alignment.md'
       - 'analysis/W33_SHARED_FRONTIER_TAIL.tex'
       - 'tests/test_w33_address_operator_h27_intertwiner_obstruction.py'
       - 'tests/test_w33_scheduler_operator_k81_intertwiner_obstruction.py'
@@ -109,6 +113,7 @@ on:
       - 'tests/test_w33_dark8_g2_external_c3_no_go.py'
       - 'tests/test_w33_hesse36_photonic_process_calibration_theorem.py'
       - 'tests/test_w33_e6_cubic_jacobian_rank_stratification.py'
+      - 'tests/test_w33_e6_cubic_fourier54_alignment.py'
       - 'tests/test_w33_shared_frontier_tail_integrity.py'
       - '.github/workflows/w33_sept22_compiler_symmetry.yml'
   workflow_dispatch:
@@ -155,6 +160,7 @@ jobs:
           tests/test_w33_dark8_g2_external_c3_no_go.py
           tests/test_w33_hesse36_photonic_process_calibration_theorem.py
           tests/test_w33_e6_cubic_jacobian_rank_stratification.py
+          tests/test_w33_e6_cubic_fourier54_alignment.py
           tests/test_w33_shared_frontier_tail_integrity.py
       - name: full 248D E8 Jacobi sweep
         run: |
@@ -201,3 +207,4 @@ jobs:
           data/w33_dark8_g2_external_c3_no_go.json
           data/w33_hesse36_photonic_process_calibration_theorem.json
           data/w33_e6_cubic_jacobian_rank_stratification.json
+          data/w33_e6_cubic_fourier54_alignment.json
