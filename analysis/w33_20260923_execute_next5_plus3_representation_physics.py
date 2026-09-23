@@ -456,7 +456,7 @@ def _chernoff_rows():
     rows=[]
     for h in range(4):
         if h<3:
-            lam=[0.,0.,0.]; lam[h]=1.
+            lam=[0.,0.,0.]; lam[[1,0,2][h]]=1.
         else:
             lam=[1/3,1/3,1/3]
         ds=[]
