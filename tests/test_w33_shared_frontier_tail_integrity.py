@@ -53,6 +53,7 @@ def test_shared_frontier_tail_is_linewise_valid_and_unique():
         r"\input{analysis/PASS20260923_cubic_jacobian_rank_stratification_insert}%",
         r"\input{analysis/PASS20260923_cubic_fourier54_alignment_insert}%",
         r"\input{analysis/PASS20260923_diagonal_phase_weld_insert}%",
+        r"\input{analysis/PASS20260923_e6id_current_h27_gauge_bridge_insert}%",
     ]
     for item in expected:
         assert item in lines
