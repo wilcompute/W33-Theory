@@ -1,1 +1,7 @@
-Actual locally executed Python source, exactly as run: reconstructs the frozen C12 spectrum; asserts all listed traces, fixed dimensions, and FI split; constructs rank-78 skew-symmetric 81D projection fixtures showing both rank-54 surjection and rank-53 obstruction; computes 36D conditional-overlap fixtures; checks sparse sl2 Jacobi; emits the committed JSON. Scope is explicitly synthetic: no full W33 artifact or laboratory data is loaded.
+#!/usr/bin/env python3
+"""Execute the locally checked E6 normal-form and synthetic frontiers."""
+from w33_e6_normal_form_local import run
+if __name__ == '__main__':
+    result = run()
+    assert result['e6']['exact_rank'] == 78
+    print(result)
