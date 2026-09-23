@@ -149,13 +149,13 @@ def main(write=True,full_jacobi=True):
         "root_metadata_blob_sha":"8f2bb5f5b5b22eee059bf2bf30de95e73af9c2f1",
         "dimension":248,
         "grading_dimensions":[86,81,81],
-        "all_bracket_terms_checked_for_grading":true
+        "all_bracket_terms_checked_for_grading":True
       },
       "hybrid_transform":{
         "formula":"A = I86 direct_sum (P1 G1 B81) direct_sum (P2 G2 conjugate(B81))",
         "field":"Q(omega)",
-        "g1_inverse_verified":true,
-        "g2_inverse_verified":true,
+        "g1_inverse_verified":True,
+        "g2_inverse_verified":True,
         "rank":248,
         "g1_digest":atlas["atlas"]["grade1_digest"],
         "g2_digest":atlas["atlas"]["grade2_conjugate_digest"]
@@ -163,7 +163,7 @@ def main(write=True,full_jacobi=True):
       "bracket":{
         "definition":"[x,y]_hyb = A^-1 [A x,A y]_Chevalley",
         "all_grade_products":["g0g0->g0","g0g1->g1","g0g2->g2","g1g1->g2","g1g2->g0","g2g2->g1"],
-        "dense_248_cubed_materialized":false,
+        "dense_248_cubed_materialized":False,
         "representation":"exact sparse source bracket plus exact block change-of-basis evaluator"
       },
       "jacobi":{
@@ -180,13 +180,13 @@ def main(write=True,full_jacobi=True):
         "artifacts/e8_structure_constants_w33_discrete.json"
       ],
       "checks":{
-        "source_dimension248":true,
-        "source_grades_86_81_81":true,
-        "root_label_permutations_bijective":true,
-        "canonical_phase_gauges_loaded":true,
-        "B81_inverse_exact":true,
-        "conjugate_B81_inverse_exact":true,
-        "all_bracket_terms_respect_Z3":true,
+        "source_dimension248":True,
+        "source_grades_86_81_81":True,
+        "root_label_permutations_bijective":True,
+        "canonical_phase_gauges_loaded":True,
+        "B81_inverse_exact":True,
+        "conjugate_B81_inverse_exact":True,
+        "all_bracket_terms_respect_Z3":True,
         "all_2511496_source_Jacobi_triples_zero":bool(full_jacobi),
         "hybrid_Jacobi_follows_exactly":bool(full_jacobi)
       }
