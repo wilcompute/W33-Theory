@@ -1,0 +1,129 @@
+{
+  "schema": "w33.q3_extended_clifford_saturation.v1",
+  "status": "PASS_Q3_UNIQUE_ODD_PRIME_EXTENDED_CLIFFORD_SYMMETRY_SATURATION",
+  "headline": "For every odd prime p, Pass 408 gives Aut(Gamma_p)=H_p:GL(2,p), while the retained-phase unitary/anti-unitary Clifford normalizer is H_p:ESL(2,p) with ESL={det=+/-1}. Therefore its index in the full Heisenberg graph automorphism group is (p-1)/2. Equality occurs iff p=3. Thus qutrit dimension is uniquely selected among odd prime dimensions by extended-Clifford saturation of the complete unoriented Heisenberg bulk-graph symmetry.",
+  "theorem": {
+    "full_group": "Aut(Gamma_p)=H_p:GL(2,p)",
+    "extended_Clifford_group": "ExtCliff_p=H_p:ESL(2,p)",
+    "ESL_definition": "ESL(2,p)={F in GL(2,p): det(F) in {+1,-1}}",
+    "GL2_order": "(p^2-1)(p^2-p)",
+    "ESL2_order": "2p(p^2-1)",
+    "full_order": "p^3(p^2-1)(p^2-p)",
+    "extended_Clifford_order": "2p^4(p^2-1)",
+    "index": "(p-1)/2",
+    "saturation_condition": "(p-1)/2=1 iff p=3"
+  },
+  "cases": [
+    {
+      "p": 3,
+      "GL2_order": 48,
+      "SL2_order": 24,
+      "ESL2_order": 48,
+      "determinant_fibre_size": 24,
+      "full_Heisenberg_graph_automorphism_order": 1296,
+      "retained_phase_extended_Clifford_order": 1296,
+      "index_full_over_extended_Clifford": 1,
+      "saturates_full_automorphism_group": true
+    },
+    {
+      "p": 5,
+      "GL2_order": 480,
+      "SL2_order": 120,
+      "ESL2_order": 240,
+      "determinant_fibre_size": 120,
+      "full_Heisenberg_graph_automorphism_order": 60000,
+      "retained_phase_extended_Clifford_order": 30000,
+      "index_full_over_extended_Clifford": 2,
+      "saturates_full_automorphism_group": false
+    },
+    {
+      "p": 7,
+      "GL2_order": 2016,
+      "SL2_order": 336,
+      "ESL2_order": 672,
+      "determinant_fibre_size": 336,
+      "full_Heisenberg_graph_automorphism_order": 691488,
+      "retained_phase_extended_Clifford_order": 230496,
+      "index_full_over_extended_Clifford": 3,
+      "saturates_full_automorphism_group": false
+    },
+    {
+      "p": 11,
+      "GL2_order": 13200,
+      "SL2_order": 1320,
+      "ESL2_order": 2640,
+      "determinant_fibre_size": 1320,
+      "full_Heisenberg_graph_automorphism_order": 17569200,
+      "retained_phase_extended_Clifford_order": 3513840,
+      "index_full_over_extended_Clifford": 5,
+      "saturates_full_automorphism_group": false
+    },
+    {
+      "p": 13,
+      "GL2_order": 26208,
+      "SL2_order": 2184,
+      "ESL2_order": 4368,
+      "determinant_fibre_size": 2184,
+      "full_Heisenberg_graph_automorphism_order": 57578976,
+      "retained_phase_extended_Clifford_order": 9596496,
+      "index_full_over_extended_Clifford": 6,
+      "saturates_full_automorphism_group": false
+    }
+  ],
+  "wide_prime_index_scan": {
+    "3": 1,
+    "5": 2,
+    "7": 3,
+    "11": 5,
+    "13": 6,
+    "17": 8,
+    "19": 9,
+    "23": 11,
+    "29": 14,
+    "31": 15,
+    "37": 18,
+    "41": 20,
+    "43": 21,
+    "47": 23
+  },
+  "q3_closure": {
+    "full_group": "H27 : GL(2,3)",
+    "full_order": 1296,
+    "projective_full_group": "AGL(2,3)",
+    "projective_full_order": 432,
+    "reason_ESL_equals_GL": "F3^*={+1,-1}; there are no additional determinant multipliers",
+    "coordinate_action_bridge": "data/w33_extended_clifford_pass408_intertwiner.json"
+  },
+  "q5_contrast": {
+    "full_order": 60000,
+    "extended_Clifford_order": 30000,
+    "index": 2,
+    "missing_determinants": [2,3],
+    "interpretation": "At p=5 the full graph symmetry has four determinant multiplier classes, while unitary/anti-unitary Clifford symmetry retains only the +1 and -1 classes."
+  },
+  "literature_anchor": {
+    "source": "D. M. Appleby, Properties of the extended Clifford group with applications to SIC-POVMs and MUBs, arXiv:0909.5233",
+    "fact_used": "In odd prime-power dimension the extended Clifford construction uses symplectic matrices det=+1 and anti-symplectic matrices det=-1, collectively ESL(2,F_d)."
+  },
+  "novelty_scope": "Pass 408 already proved the full Heisenberg graph automorphism theorem and noted that the multiplier quotient has size p-1. Appleby already gives the extended Clifford ESL group. The contribution here is their explicit comparison and the exact saturation index/uniqueness criterion.",
+  "physics_boundary": "This is a finite symmetry-selection theorem for a Heisenberg graph/Clifford normalizer model. It does not by itself prove that Nature must use qutrits, derive three particle generations, select spacetime dimension, or determine a measured coupling. Any such physical reading requires an independent identification of this saturation criterion with a physical principle.",
+  "parents": [
+    "data/w33_pass408_full_automorphism_theorem.json",
+    "data/w33_extended_clifford_pass408_intertwiner.json",
+    "data/w33_hesse_affine_spinor_parity.json"
+  ],
+  "checks": {
+    "pass408_parent_replayed_structurally": true,
+    "q3_coordinate_bridge_imported": true,
+    "GL2_formula_matches_enumeration_p3_p5_p7_p11_p13": true,
+    "determinant_map_uniform_on_nonzero_fibres": true,
+    "ESL_is_exact_det_plusminus1_preimage": true,
+    "index_formula_is_p_minus_1_over_2": true,
+    "pass408_q3_full_order_match_1296": true,
+    "pass408_q5_full_order_match_60000": true,
+    "q3_extended_Clifford_order_match_1296": true,
+    "q3_saturates_full_graph_automorphisms": true,
+    "p_gt_3_sampled_primes_do_not_saturate": true,
+    "symbolic_equality_condition_for_odd_prime_is_p_equals_3": true
+  }
+}
