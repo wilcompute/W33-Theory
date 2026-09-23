@@ -93,3 +93,9 @@ def test_execute_next5_plus3_representation_physics_is_in_shared_tail_once():
     item = r"\input{analysis/PASS20260923_execute_next5_plus3_representation_physics_insert}%"
     assert item in lines
     assert lines.count(item) == 1
+
+def test_corrected_weil_hodge_e6_physics_is_in_shared_tail_once():
+    lines = TAIL.read_text(encoding="utf-8").splitlines()
+    item = r"\input{analysis/PASS20260923_corrected_weil_hodge_e6_physics_insert}%"
+    assert item in lines
+    assert lines.count(item) == 1
