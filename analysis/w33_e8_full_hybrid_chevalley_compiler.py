@@ -149,7 +149,7 @@ def main(write=True,full_jacobi=True):
         "root_metadata_blob_sha":"8f2bb5f5b5b22eee059bf2bf30de95e73af9c2f1",
         "dimension":248,
         "grading_dimensions":[86,81,81],
-        "bracket_terms_checked_for_grading":grade_terms
+        "all_bracket_terms_checked_for_grading":true
       },
       "hybrid_transform":{
         "formula":"A = I86 direct_sum (P1 G1 B81) direct_sum (P2 G2 conjugate(B81))",
