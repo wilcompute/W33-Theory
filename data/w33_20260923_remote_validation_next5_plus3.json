@@ -1,0 +1,21 @@
+{
+  "schema": "w33.20260923.remote_validation.next5_plus3.v1",
+  "device_name": "TheHeavyCrown",
+  "platform": "Windows x64",
+  "python": "3.13.14",
+  "source": "current master raw files downloaded directly from githubusercontent",
+  "script": "analysis/w33_20260923_execute_next5_plus3_geometric_semilinear.py",
+  "script_result": {
+    "status": "PASS_NEXT5_PLUS3_GEOMETRIC_HODGE_ALLQ_SIMILITUDE_ANTILINEAR_E8_OPTIMAL_FI_SEQUENTIAL_HOLONOMY",
+    "checks": 12,
+    "all": true,
+    "runtime_seconds": 61.74
+  },
+  "pytest": {
+    "target": "tests/test_w33_20260923_execute_next5_plus3_geometric_semilinear.py",
+    "result": "3 passed",
+    "runtime_seconds": 3.04
+  },
+  "initial_remote_state": "device offline at first request; reconnected during the pass and was used for independent replay",
+  "boundary": "This certificate records an independent execution of the committed witness and dedicated regression on the user's connected machine. It is not GitHub Actions CI and does not constitute laboratory validation."
+}
