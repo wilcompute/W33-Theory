@@ -28,6 +28,7 @@ on:
       - 'analysis/w33_h27_cubic_representation_transducer.py'
       - 'analysis/w33_dark8_g2_branching_shadow.py'
       - 'analysis/w33_e8_hybrid_charge_conjugation.py'
+      - 'analysis/w33_e6id_current_h27_gauge_bridge.py'
       - 'analysis/w33_e6_cubic_hybrid81_transport.py'
       - 'analysis/w33_e8_full_hybrid_chevalley_compiler.py'
       - 'analysis/w33_dark_strange_golay11_ft_lane.py'
@@ -61,6 +62,7 @@ on:
       - 'data/w33_h27_cubic_representation_transducer.json'
       - 'data/w33_dark8_g2_branching_shadow.json'
       - 'data/w33_e8_hybrid_charge_conjugation.json'
+      - 'data/w33_e6id_current_h27_gauge_bridge.json'
       - 'data/w33_e6_cubic_hybrid81_transport.json'
       - 'data/w33_e8_full_hybrid_chevalley_compiler.json'
       - 'data/w33_dark_strange_golay11_ft_lane.json'
@@ -80,6 +82,8 @@ on:
       - 'analysis/2026-09-23_execute_all5_plus3_physics_frontier.md'
       - 'analysis/PASS20260923_hybrid_lie_golay_calibration_insert.tex'
       - 'analysis/2026-09-23_execute_all5_hybrid_lie_golay_calibration.md'
+      - 'analysis/PASS20260923_e6id_current_h27_gauge_bridge_insert.tex'
+      - 'analysis/2026-09-23_e6id_current_h27_gauge_bridge.md'
       - 'analysis/PASS20260923_cubic_jacobian_rank_stratification_insert.tex'
       - 'analysis/2026-09-23_cubic_jacobian_rank_stratification.md'
       - 'analysis/PASS20260923_cubic_fourier54_alignment_insert.tex'
@@ -111,6 +115,7 @@ on:
       - 'tests/test_w33_h27_cubic_representation_transducer.py'
       - 'tests/test_w33_dark8_g2_branching_shadow.py'
       - 'tests/test_w33_e8_hybrid_charge_conjugation.py'
+      - 'tests/test_w33_e6id_current_h27_gauge_bridge.py'
       - 'tests/test_w33_e6_cubic_hybrid81_transport.py'
       - 'tests/test_w33_e8_full_hybrid_chevalley_compiler.py'
       - 'tests/test_w33_dark_strange_golay11_ft_lane.py'
@@ -159,6 +164,7 @@ jobs:
           tests/test_w33_h27_cubic_representation_transducer.py
           tests/test_w33_dark8_g2_branching_shadow.py
           tests/test_w33_e8_hybrid_charge_conjugation.py
+          tests/test_w33_e6id_current_h27_gauge_bridge.py
           tests/test_w33_e6_cubic_hybrid81_transport.py
           tests/test_w33_e8_full_hybrid_chevalley_compiler.py
           tests/test_w33_dark_strange_golay11_ft_lane.py
@@ -207,6 +213,7 @@ jobs:
           data/w33_h27_cubic_representation_transducer.json
           data/w33_dark8_g2_branching_shadow.json
           data/w33_e8_hybrid_charge_conjugation.json
+          data/w33_e6id_current_h27_gauge_bridge.json
           data/w33_e6_cubic_hybrid81_transport.json
           data/w33_e8_full_hybrid_chevalley_compiler.json
           data/w33_dark_strange_golay11_ft_lane.json
