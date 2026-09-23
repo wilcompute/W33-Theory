@@ -1,0 +1,53 @@
+{
+  "schema": "w33.dark_strange_runtime_adapter.v1",
+  "status": "PASS_DARK_STRANGE_Q3_HAS_EXACT_CLIFFORD_RUNTIME_HANDOFF_WITH_T_AND_M36_FAIL_CLOSED",
+  "headline": "The rank-73 dark magic ray is now operationally typed. DARK_STRANGE_Q3_RAW decodes exactly to the repository Strange reference by X Z^2, can enter the existing Strange fixed-point audit, and occupies a 24-tick epilogue in the 72-tick packet. Direct qutrit-T reservation is refused because the Strange and T resources are distinct, and M36_Q4_RAW remains a separate ququart/two-qubit resource.",
+  "resource": {
+    "type": "DARK_STRANGE_Q3_RAW",
+    "dimension": 3,
+    "state_unnormalized": ["1","-omega","0"],
+    "token_id": "sha256:252cfccfdb0ae699331af84ab73455624a84cc0a87a08c98e8d45dd653a27471",
+    "evidence_class": "EXACT_H27_DARK_RAY_AND_CLIFFORD_EQUIVALENCE"
+  },
+  "exact_handoff": {
+    "target_type": "STRANGE_Q3_RAW",
+    "reference_state_unnormalized": ["0","1","-1"],
+    "decode_word": "X Z^2",
+    "identity": "X Z^2 (1,-omega,0)^T = (0,1,-1)^T",
+    "Clifford_only": true
+  },
+  "validation": {
+    "five_qutrit_reference_fixed_point": true,
+    "pure_reference_acceptance_probability": "1/36",
+    "meaning": "Pass416 fixed-point sanity check only; not promoted here to a Strange production/distillation threshold"
+  },
+  "packet": {
+    "ticks": 72,
+    "body_ticks": 48,
+    "epilogue_ticks": 24,
+    "epilogue_roles": ["DARK_TO_STRANGE_CLIFFORD_DECODE","STRANGE_FIXED_POINT_AUDIT","RESOURCE_HANDOFF_DECISION"]
+  },
+  "fail_closed": {
+    "can_reserve_as_HESSE_T_RAW": false,
+    "reason_T": "Strange-class magic is not the order-nine qutrit T-state resource used by the T teleportation port",
+    "can_cast_to_M36_Q4_RAW": false,
+    "reason_M36": "M36 is a four-dimensional ququart/two-qubit Witting resource",
+    "fault_tolerant_injection_enabled": false
+  },
+  "physics_bridge": "Published qutrit magic-state literature contains dedicated Strange-state distillation protocols (including the 11-qutrit ternary Golay route), so the exact dark-to-Strange Clifford decode exposes a standard resource-theory handoff. No such external protocol is silently treated as implemented hardware here.",
+  "boundary": "This operationalizes typing, exact Clifford conversion, packet scheduling, and fail-closed handoffs. It does not certify a physical Strange-state factory, a device threshold, or deterministic T-gate injection from the dark state.",
+  "parents": [
+    "data/w33_hesse36_dark_schrodinger_strange_state.json",
+    "data/w33_pass416_qutrit_distillation_search.json",
+    "analysis/w33_magic_resource_scheduler.py"
+  ],
+  "checks": {
+    "dark_to_Strange_decode_exact": true,
+    "decode_is_Clifford": true,
+    "Pass416_Strange_fixed_point_loaded": true,
+    "packet_48_plus_24": true,
+    "T_crosscast_refused": true,
+    "M36_crosscast_refused": true,
+    "FT_injection_remains_disabled": true
+  }
+}
