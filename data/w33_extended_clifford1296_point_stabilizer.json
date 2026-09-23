@@ -1,0 +1,88 @@
+{
+  "schema": "w33.extended_clifford1296_point_stabilizer.v1",
+  "status": "PASS_FULL_W33_POINT_STABILIZER_IS_EXTENDED_QUTRIT_CLIFFORD_3PLUS12_GL23",
+  "headline": "The full PGSp(4,3) stabilizer of a W33 point is explicitly 3_+^{1+2}:GL(2,3), order 1296. Its even PSp subgroup is the certified qutrit Clifford 3_+^{1+2}:SL(2,3), order 648. Quotienting the normal phase C3 gives AGL(2,3) and ASL(2,3), while determinant/spinor parity lifts to the 1296 group with kernel exactly the 648 subgroup.",
+  "ambient": {
+    "PSp43_order": 25920,
+    "PGSp43_order": 51840,
+    "outer_similitude_matrix": [[2,0,0,0],[0,1,0,0],[0,0,2,0],[0,0,0,1]],
+    "similitude_multiplier": 2
+  },
+  "point_stabilizers": {
+    "even_order": 648,
+    "even_structure": "3_+^{1+2}:SL(2,3)",
+    "full_order": 1296,
+    "full_structure": "3_+^{1+2}:GL(2,3)",
+    "full_center_order": 1,
+    "heisenberg_order": 27,
+    "heisenberg_center_order": 3,
+    "SL23_complement_order": 24,
+    "GL23_complement_order": 48,
+    "GL23_complement_center_order": 2,
+    "GL23_complement_derived_order": 24
+  },
+  "phase_center_semantics": {
+    "C3_central_in_even_648": true,
+    "C3_normal_in_full_1296": true,
+    "C3_central_in_full_1296": false,
+    "det_plus_one_action": "z -> z",
+    "det_minus_one_action": "z -> z^2",
+    "correction": "The phrase 'extended with C3 center' is only a counting shorthand. After anti-linear completion the phase C3 is normal but not central."
+  },
+  "quotients": {
+    "even_mod_C3": "ASL(2,3)",
+    "even_mod_C3_order": 216,
+    "full_mod_C3": "AGL(2,3)",
+    "full_mod_C3_order": 432,
+    "full_quotient_degree": 9,
+    "quotient_action_equals_explicit_AGL9": true
+  },
+  "linear_action": {
+    "distinct_GL23_matrices": 48,
+    "det_plus_one": 24,
+    "det_minus_one": 24,
+    "central_offset_pairs": 9,
+    "center_exponent_equals_determinant": true
+  },
+  "spinor_parity_lift": {
+    "character": "chi(n,g)=det(g)=spinor_norm(rho(g))",
+    "trivial_class_size": 648,
+    "nontrivial_class_size": 648,
+    "kernel": "even qutrit Clifford 3_+^{1+2}:SL(2,3)",
+    "translation_phase_extension_does_not_destroy_character": true
+  },
+  "side_selection": {
+    "selected": "W(3,3) point stabilizer / extraspecial 3_+^{1+2} side",
+    "excluded": "W(3,3) line stabilizer / elementary-abelian 3^3 side",
+    "reason": "the physical qutrit Clifford certificate already selects the extraspecial Heisenberg point side"
+  },
+  "boundary": "This closes the finite 648->1296 extended-Clifford group identification. The spinor-parity bit remains a finite group character; no physical CPT, spacetime parity, Lorentz Pin/Spin structure, or continuum dynamics is inferred.",
+  "parents": [
+    "analysis/w33_pass1054_hessian_affine_isomorphism.py",
+    "data/w33_hesse_affine_spinor_parity.json",
+    "data/w33_hesse_nullcone_spinor_norm.json"
+  ],
+  "check_count": 20,
+  "checks": {
+    "PSp43_order25920": true,
+    "PGSp43_order51840": true,
+    "outer_is_multiplier2_similitude": true,
+    "even_point_stabilizer_order648": true,
+    "full_point_stabilizer_order1296": true,
+    "full_point_stabilizer_center_trivial": true,
+    "normal_extraspecial_H27": true,
+    "SL23_complement_order24": true,
+    "GL23_complement_order48": true,
+    "unique_H27_GL23_normal_form_all1296": true,
+    "linear_action_is_all_GL23": true,
+    "center_action_equals_determinant": true,
+    "old_C3_normal_but_not_central_in_full_extension": true,
+    "faithful_degree27_extended_Clifford_action": true,
+    "phase_quotient_kernel_exactly_C3": true,
+    "phase_quotient_is_exact_AGL23_order432": true,
+    "determinant_character_balanced648_648": true,
+    "determinant_character_kernel_exactly_even_Clifford648": true,
+    "spinor_parity_lifts_through_phase_extension": true,
+    "point_side_not_line_side": true
+  }
+}
