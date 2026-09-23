@@ -22,10 +22,13 @@ extracted_v13.  Pass1103 independently supplies an exact e6id -> H27 normal
 form coordinate:
   i -> (u0,u1,z).
 
-Those coordinates are the same H27 normal form used by the current
-K=H27 x C3 address chart.  Transporting all 45 signed E6 cubic triads through
-that bijection reproduces exactly the current five-direction/45-coset H27 line
-set.
+Those Pass1103 coordinates are a valid exact H27 gauge for the canonical cubic,
+but they are not literally the later physical-Clifford address gauge: the two
+raw 45-line label sets overlap in 10 triads, including all nine firewall
+fibers.  A separate anchored 27-point gauge conjugacy is now frozen.  It sends
+e6id 0 to the current H27 identity, maps all nine firewall fibers to the
+current center spread, and carries all 45 canonical cubic triads exactly to
+the current five-direction/45-coset H27 line set.
 
 In the canonical root gauge,
 
@@ -197,7 +200,7 @@ and allocating the 0.99 target equally over three factors gives
 so sufficient component gates are
 
   F_TRI >= 0.996655493413,
-  |delta_phi| <= 0.057863994222 rad = 3.315362654681 degrees,
+  |delta_phi| <= 0.057863994222 rad = 3.31536265468 degrees,
   |delta_L| <= 0.502880974035 dB about the common HOLD loss.
 
 The peak-to-peak differential-loss window is therefore 1.00576194807 dB.
@@ -221,8 +224,9 @@ Evidence:
 
 The finite TOE/compiler stack is materially sharper:
 
-1. the actual signed E6 cubic is objectwise aligned with the hybrid matter
-   carrier, not merely representation-ring compatible;
+1. the actual signed E6 cubic is objectwise connected to the current hybrid
+   matter/address carrier by an explicit full-45 gauge conjugacy, rather than
+   by conflating two independent H27 coordinate gauges;
 2. the 248D hybrid atlas now has an exact complete Chevalley bracket transport;
 3. the dark Strange ray lands on a W33-internally reconstructed quantum Golay
    code of exactly the published [[11,1,5]]_3 type;
