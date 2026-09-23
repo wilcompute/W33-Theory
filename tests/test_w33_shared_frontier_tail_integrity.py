@@ -71,3 +71,10 @@ def test_promoted_next5_plus3_is_in_shared_tail_once():
     promoted_next5_plus3 = r"\\input{analysis/PASS20260923_next5_plus3_physics_insert}%"
     assert promoted_next5_plus3 in lines
     assert lines.count(promoted_next5_plus3) == 1
+
+
+def test_execute_five_post_frontier_is_in_shared_tail_once():
+    lines = TAIL.read_text(encoding="utf-8").splitlines()
+    item = r"\\input{analysis/PASS20260923_execute_five_post_frontier_attacks_insert}%"
+    assert item in lines
+    assert lines.count(item) == 1
