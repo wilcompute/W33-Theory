@@ -1,0 +1,155 @@
+{
+  "schema": "w33.e8_split_real_form_involution.v1",
+  "status": "PASS_TRUE_ANTILINEAR_HYBRID_E8_LIE_INVOLUTION_HAS_SPLIT_REAL_FORM_E8_8",
+  "headline": "The executable 248D hybrid compiler now has an exact anti-linear Lie-algebra real structure, upgrading the previous label-level charge-conjugation scaffold. In the committed source Chevalley gauge theta(h_i)=-h_i and theta(e_alpha)=e_-alpha satisfies every one of the 30,628 unordered basis-pair bracket identities. Since the structure constants are integral, J=theta composed with Eisenstein conjugation is anti-linear and involutive. The exact fixed-form Killing inertia is (128 positive,120 negative), hence signature +8 and real form E8(8), the split form. Transport into hybrid coordinates shows why the former pointwise scaffold was incomplete: all 81 matter roots pair with their exact negatives, but 39 row-gauge signs differ, producing a nontrivial Bbar^-1 D Bbar correction, while the neutral block requires Cartan sign reversal and root negation.",
+  "source_involution": {
+    "cartan_rule": "h_i -> -h_i",
+    "root_rule": "e_alpha -> e_-alpha",
+    "root_phase_sign_solution": "all +1 in the committed Chevalley gauge",
+    "phase_constraint_equations": 6840,
+    "phase_constraint_rank": 232,
+    "phase_constraint_nullity": 8,
+    "unordered_basis_pairs_checked": 30628,
+    "all_brackets_preserved": true,
+    "Eisenstein_semilinear_rule": "J = theta o (omega -> omega^2)",
+    "J_squared": 1
+  },
+  "killing_form": {
+    "cartan_block": [
+      [
+        120,
+        0,
+        -60,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        120,
+        0,
+        -60,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        -60,
+        0,
+        120,
+        -60,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        -60,
+        -60,
+        120,
+        -60,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        -60,
+        120,
+        -60,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        -60,
+        120,
+        -60,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        -60,
+        120,
+        -60
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -60,
+        120
+      ]
+    ],
+    "cartan_LDL_diagonal": [
+      "120",
+      "120",
+      "90",
+      "50",
+      "48",
+      "45",
+      "40",
+      "30"
+    ],
+    "cartan_inertia": {
+      "positive": 8,
+      "negative": 0
+    },
+    "opposite_root_pairing_histogram": {
+      "60": 64,
+      "-60": 56
+    },
+    "fixed_real_form_inertia": {
+      "positive": 128,
+      "negative": 120,
+      "zero": 0
+    },
+    "signature_difference": 8,
+    "real_form": "E8(8), split real form",
+    "fixed_field_basis_note": "delta=1+2omega obeys conjugate(delta)=-delta and delta^2=-3; fixed Cartan directions are delta*h_i"
+  },
+  "hybrid_transport": {
+    "all_81_grade1_roots_pair_with_exact_grade2_negatives": true,
+    "row_sign_ratio_plus": 42,
+    "row_sign_ratio_minus": 39,
+    "matter_formula": "J_12(x)=Bbar^{-1} D Bbar conjugate(x), D=diag(sign_g1*sign_g2)",
+    "matter_identity_swap_is_exact": false,
+    "neutral_formula": "h_i -> -h_i and each of the 78 neutral root vectors -> its opposite root vector",
+    "previous_scaffold_status": "correct as a grade-label/coefficient-conjugation scaffold, but not the full transported Lie involution"
+  },
+  "physics_reading": "The finite E8 compiler carries the split E8(8) real structure exactly. This creates a rigorous algebraic interface to any future dynamics that genuinely uses E8(8), while separating that statement from spacetime, supergravity, vacuum selection, or observed CP physics.",
+  "boundary": "Identifying the real form E8(8) is a Lie-algebra statement from the exact Killing signature. It does not derive an E8(8) gauge theory of nature, exceptional field theory, a spacetime signature, gravity, a Hamiltonian, a vacuum, masses, couplings, or CP violation.",
+  "parents": [
+    "artifacts/e8_structure_constants_w33_discrete.json",
+    "data/w33_e8_full_hybrid_chevalley_compiler.json",
+    "data/w33_e8_hybrid_charge_conjugation.json"
+  ],
+  "checks": {
+    "root_negation_is_bijection": true,
+    "all_plus_phase_solution": true,
+    "all_30628_basis_pair_brackets_preserved": true,
+    "J_antilinear_involutive": true,
+    "killing_signature_128_120": true,
+    "split_real_form_E8_8": true,
+    "all_81_matter_root_negations_aligned": true,
+    "39_hybrid_row_sign_mismatches_expose_nontrivial_correction": true,
+    "neutral_block_not_pointwise_fixed": true,
+    "physics_not_overclaimed": true
+  }
+}
