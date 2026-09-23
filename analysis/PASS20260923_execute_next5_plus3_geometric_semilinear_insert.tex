@@ -1,0 +1,286 @@
+% 2026-09-23 — next five + three geometric/semilinear frontier.
+\subsection*{Metricized Maxwell spectrum, all-prime-power similitudes, and generalized anti-linear $Z_3$ symmetry}
+
+The exact circumcentric Hodge weights obtained from the rank-$24$ spherical
+embedding are
+\[
+w_0=\frac{5\sqrt{30}}{108},\qquad
+w_1=\frac{\sqrt{30}}{72},\qquad
+w_2=\frac{\sqrt{30}}{15},\qquad
+w_3=\frac{18\sqrt{30}}{25}.
+\]
+Their adjoint ratios are
+\[
+\boxed{
+\frac{w_1}{w_0}=\frac3{10},\qquad
+\frac{w_2}{w_1}=\frac{24}{5},\qquad
+\frac{w_3}{w_2}=\frac{54}{5}.
+}
+\]
+Using the already-certified orthogonal Hodge decomposition of the W33 clique
+complex therefore gives the weighted spectra
+\[
+L_0:0^1+3^{24}+(24/5)^{15},
+\]
+\[
+\boxed{
+L_1:0^{81}+3^{24}+(24/5)^{15}+(96/5)^{120},
+}
+\]
+\[
+L_2:(96/5)^{120}+(216/5)^{40},
+\qquad
+L_3:(216/5)^{40}.
+\]
+Across all cochain degrees,
+\[
+\boxed{
+D^2:
+0^{82}+3^{48}+(24/5)^{30}+(96/5)^{240}+(216/5)^{80}.
+}
+\]
+After quotienting the $39$ exact gauge directions in $C^1$, the metricized
+Maxwell carrier consists of $81$ harmonic zero modes and one $120$-fold
+coexact band at
+\[
+\boxed{\lambda_{\rm Maxwell}=96/5}.
+\]
+Thus geometric metricization preserves the $81$-dimensional topological sector
+while separating it from a single finite propagating band.
+
+For every odd prime power $q=p^f$, let $\mathcal H_t$ be the
+$q$-dimensional Schr\"odinger irrep of the finite Heisenberg group with
+nontrivial central character $t\in\mathbb F_q^\times$.  The complete
+similitude carrier is
+\[
+\boxed{
+\mathcal H_{\rm full}
+=
+\bigoplus_{t\in\mathbb F_q^\times}\mathcal H_t,
+\qquad
+\dim\mathcal H_{\rm full}=q(q-1).
+}
+\]
+On basis $\ket{t,x}$,
+\[
+X_u\ket{t,x}=\ket{t,x+u},
+\qquad
+Z_v\ket{t,x}
+=
+\psi\!\left(
+\operatorname{Tr}(tvx)
+\right)\ket{t,x},
+\]
+and a determinant-$a$ similitude is represented by
+\[
+\boxed{
+D_a\ket{t,x}=\ket{a^{-1}t,x}.
+}
+\]
+Frobenius acts by
+\[
+U_\sigma\ket{t,x}=\ket{t^p,x^p},
+\]
+so the same carrier realizes the semilinear
+$H_q:\Gamma L(2,q)$ action.
+
+Restricted to $H_q$, the exact character is
+\[
+\boxed{
+\chi(1)=q(q-1),\qquad
+\chi(0,0,z\ne0)=-q,\qquad
+\chi(u,v,z)=0\ \text{for }(u,v)\ne(0,0).
+}
+\]
+The $q-1$ central-character sectors are pairwise inequivalent and
+multiplicity-free, hence
+\[
+\dim\operatorname{End}_{H_q}(\mathcal H_{\rm full})=q-1.
+\]
+Because determinant similitudes act transitively on those sectors,
+\[
+\boxed{
+\operatorname{End}_{H_q:GL(2,q)}(\mathcal H_{\rm full})
+=
+\operatorname{End}_{H_q:\Gamma L(2,q)}(\mathcal H_{\rm full})
+=
+\mathbb C.
+}
+\]
+Thus the full carrier is irreducible.  Surjectivity of
+$\det:GL(2,q)\to\mathbb F_q^\times$ and finite Stone--von Neumann
+uniqueness force the lower bound
+\[
+\boxed{\dim\mathcal H\ge q(q-1),}
+\]
+which is attained.  Since
+\[
+q(q-1)=2q
+\quad\Longleftrightarrow\quad
+q=3,
+\]
+ordinary charge-conjugate doubling already supplies the entire minimal
+similitude carrier only for the qutrit.
+
+Let
+\[
+C=Z_{\rm FI}
+\]
+be the physical $Z_3$ grading automorphism on
+$\mathfrak g_0\oplus\mathfrak g_1\oplus\mathfrak g_2$.  Coefficient
+conjugation $K$ is anti-linear with
+\[
+K^2=1,
+\qquad
+KCK^{-1}=C^{-1}.
+\]
+The certified root-opposition automorphism $\theta$ obeys
+\[
+\theta^2=1,
+\qquad
+\theta C\theta^{-1}=C^{-1}.
+\]
+Hence the split-real involution
+\[
+J=\theta K
+\]
+commutes with $C$ and has $J^2=1$.
+
+Any anti-linear automorphism normalizing $\langle C\rangle$ lies in one of
+the two cosets
+\[
+\boxed{
+G_0K
+\quad\text{or}\quad
+G_0J,
+}
+\]
+where $G_0$ is the grade-zero complex centralizer.  In the more restrictive
+neutral-fixed scalar-twist subclass, bracket closure gives
+\[
+\beta=\alpha^2,
+\qquad
+\alpha\beta=1,
+\qquad
+\alpha^3=1.
+\]
+Therefore the six canonical maps are
+\[
+K,\ CK,\ C^2K,\ J,\ CJ,\ C^2J.
+\]
+Their squares are
+\[
+\boxed{
+K^2=(CK)^2=(C^2K)^2=J^2=1,
+}
+\]
+and
+\[
+\boxed{
+(CJ)^2=C^2,
+\qquad
+(C^2J)^2=C.
+}
+\]
+The last two are anti-linear order-$6$ symmetries.  Thus the exact
+bracket-compatible replacement for the failed Kramers square $-I$ is an
+anti-linear generator whose square is the physical finite $Z_3$ center.
+
+The FI-center implementation also admits exact constant folding.  Expanding
+four explicit Hessian/Floquet ticks uses eight $F_3/F_3^\dagger$ traversals
+and twelve selective ternary phase masks.  But once the target
+\[
+U_F^4=\omega I_3
+\]
+is certified, its optimal phase-referenced implementation is simply
+\[
+\boxed{
+0\ \text{mixers}
++
+1\ \text{uniform signal-arm }120^\circ\text{ phase}.
+}
+\]
+Zero mixers is the absolute lower bound.  This compression implements the
+certified target; an experiment intended to verify the four-tick identity must
+still compare the original long path against the compressed reference.
+
+Finally, the multiplier-obstruction experiment extends sequentially beyond
+$q=5$.  The hidden label entropy is
+\[
+H_q=\log_2\frac{q-1}{2}.
+\]
+At the nominal visibility/background model used previously, deterministic
+posterior-threshold simulations with $5000$ trials give mean detected-event
+counts approximately
+\[
+\boxed{
+22.58\ (q=5),\qquad
+50.53\ (q=7).
+}
+\]
+For
+\[
+\mathbb F_9=\mathbb F_3[\alpha]/(\alpha^2+1),
+\]
+the quotient
+\[
+\boxed{
+\mathbb F_9^\times/\{\pm1\}
+=
+\mathbb P^1(\mathbb F_3)
+}
+\]
+has four projective directions.  Three trace probes
+$z=1,\alpha,1+\alpha$ assign them the distinct binary signatures
+\[
+LHL,\ HLL,\ LLH,\ LLL.
+\]
+Cycling those probes gives mean stopping count $35.87$, while choosing the
+next probe by maximum expected posterior entropy reduction lowers the mean to
+\[
+\boxed{16.90}.
+\]
+Thus the log-index is the entropy of the hidden symmetry label, not a universal
+photon-count law: experimental sample complexity also depends on the
+measurement-channel KL geometry.
+
+\paragraph{Three outside-box consequences.}
+First, the geometric Dirac-square spectrum contains the exact ladder
+\[
+\boxed{
+\left\{
+\frac{24}{5},
+\frac{96}{5},
+\frac{216}{5}
+\right\}
+=
+\frac{24}{5}\{1^2,2^2,3^2\}.
+}
+\]
+Second, the $E_8$ matter pair has
+\[
+\boxed{
+162=81+81=27\times6
+=27\times[3(3-1)],
+}
+\]
+and its two FI/H27 center characters are exactly $\omega$ and $\omega^2$,
+i.e. every nontrivial qutrit central-character sector required by the minimal
+full-similitude family carrier.  Third, the anti-linear order-$6$ maps
+$CJ$ and $C^2J$ satisfy
+\[
+(CJ)^2=C^2,
+\qquad
+(C^2J)^2=C,
+\]
+providing an exact $Z_3$-valued semilinear square rather than a Kramers
+$-I$ square.
+
+\paragraph{Evidence boundary.}
+The weighted spectrum is finite and dimensionless until a physical scale is
+derived.  The all-character carrier is representation theory, not a particle
+census.  The anti-linear normalizer has continuous $G_0$ dressing; the six
+maps above are the neutral-fixed scalar subclass.  The zero-mixer target
+implementation does not replace experimental certification of the four-tick
+identity.  The sequential results are simulated nominal optical models, not
+laboratory significance.
