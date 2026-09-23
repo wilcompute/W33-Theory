@@ -1,0 +1,174 @@
+{
+  "schema": "w33.20260923.execute_next5_plus3_geometric_semilinear.frozen.v1",
+  "status": "PASS_NEXT5_PLUS3_GEOMETRIC_HODGE_ALLQ_SIMILITUDE_ANTILINEAR_E8_OPTIMAL_FI_SEQUENTIAL_HOLONOMY",
+  "attack1_weighted_DEC_Maxwell": {
+    "adjoint_ratios": {
+      "w1_over_w0": "3/10",
+      "w2_over_w1": "24/5",
+      "w3_over_w2": "54/5"
+    },
+    "L0": {"0": 1, "3": 24, "24/5": 15},
+    "L1": {"0": 81, "3": 24, "24/5": 15, "96/5": 120},
+    "L2": {"96/5": 120, "216/5": 40},
+    "L3": {"216/5": 40},
+    "total_D2": {"0": 82, "3": 48, "24/5": 30, "96/5": 240, "216/5": 80},
+    "dirac": {
+      "0": 82,
+      "+-sqrt(3)": 24,
+      "+-sqrt(24/5)": 15,
+      "+-sqrt(96/5)": 120,
+      "+-sqrt(216/5)": 40
+    },
+    "Maxwell_after_gauge_quotient": {
+      "harmonic_zero_modes": 81,
+      "coexact_modes": 120,
+      "coexact_eigenvalue": "96/5"
+    }
+  },
+  "attack2_all_q_similitudes": {
+    "carrier_dimension": "q(q-1)",
+    "restricted_H_character": {
+      "identity": "q(q-1)",
+      "nontrivial_center": "-q",
+      "noncentral": "0"
+    },
+    "commutants": {
+      "Hq": "dimension q-1",
+      "Hq_semidirect_GL2": "dimension 1",
+      "Hq_semidirect_GammaL2": "dimension 1"
+    },
+    "minimality": "determinant acts transitively on all q-1 nontrivial center characters; Stone-von Neumann forces one q-dimensional irrep per sector",
+    "minimal_sector_content_unique": true,
+    "cases": {
+      "3": {"dimension": 6, "sectors": 2, "conjugate_pair_complete": true},
+      "5": {"dimension": 20, "sectors": 4, "conjugate_pair_complete": false},
+      "7": {"dimension": 42, "sectors": 6, "conjugate_pair_complete": false},
+      "9": {"dimension": 72, "sectors": 8, "conjugate_pair_complete": false},
+      "11": {"dimension": 110, "sectors": 10, "conjugate_pair_complete": false},
+      "13": {"dimension": 156, "sectors": 12, "conjugate_pair_complete": false},
+      "25": {"dimension": 600, "sectors": 24, "conjugate_pair_complete": false},
+      "27": {"dimension": 702, "sectors": 26, "conjugate_pair_complete": false},
+      "49": {"dimension": 2352, "sectors": 48, "conjugate_pair_complete": false},
+      "81": {"dimension": 6480, "sectors": 80, "conjugate_pair_complete": false}
+    }
+  },
+  "attack3_antilinear_E8_Z3": {
+    "full_normalizer": "anti-linear normalizers are G0*K union G0*J; modulo G0 there are two anti-linear cosets",
+    "neutral_fixed_scalar_twist_constraint": "beta=alpha^2, alpha beta=1 => alpha^3=1",
+    "canonical_six": [
+      {"name": "K_0=K", "grade_action": "preserve", "square": "1", "order": 2},
+      {"name": "K_1=C K", "grade_action": "preserve", "square": "1", "order": 2},
+      {"name": "K_2=C^2 K", "grade_action": "preserve", "square": "1", "order": 2},
+      {"name": "J_0=J", "grade_action": "exchange", "square": "1", "order": 2},
+      {"name": "J_1=C J", "grade_action": "exchange", "square": "C^2", "order": 6},
+      {"name": "J_2=C^2 J", "grade_action": "exchange", "square": "C", "order": 6}
+    ],
+    "relations": {
+      "K_C_Kinv": "C^-1",
+      "theta_C_theta_inv": "C^-1",
+      "J_C_Jinv": "C",
+      "J_squared": "1"
+    },
+    "Kramers_square_minus_I": "forbidden by exact E8 bracket"
+  },
+  "attack4_FI_minimized": {
+    "unoptimized_relation_word": {
+      "F3_or_inverse": 8,
+      "selective_phase_masks": 12,
+      "raw_primitives": 20
+    },
+    "optimal_target_implementation": {
+      "F3_or_inverse": 0,
+      "relative_phase_operations": 1,
+      "operation": "uniform +120 degree phase on the signal arm relative to a bypass/control arm"
+    },
+    "full_E8_grade_register": "single diag(1,omega,omega^2) ternary grade-phase latch",
+    "optimality": "zero mixers is the absolute lower bound and is attained because U_F^4 is scalar on the family qutrit",
+    "boundary": "compressed implementation does not test the four-tick identity; identity certification still compares the long path to the compressed reference"
+  },
+  "attack5_sequential_q5_q7_q9": {
+    "visibility": 0.965,
+    "background": 0.01,
+    "target_posterior": 0.9999997133484281,
+    "obstruction_entropy_bits": {
+      "q5": 1.0,
+      "q7": 1.584962500721156,
+      "q9": 2.0
+    },
+    "q9_geometry": {
+      "identity": "F9^*/{+-1}=F9^*/F3^*=P^1(F3)",
+      "trace_probes": ["1", "alpha", "1+alpha"],
+      "cosine_signatures": ["LHL", "HLL", "LLH", "LLL"]
+    },
+    "simulation": {
+      "seed": 20260923,
+      "trials_per_case": 5000,
+      "q5": {
+        "mean": 22.5784,
+        "median": 21.0,
+        "p95": 37.0,
+        "p99": 46.0,
+        "max": 63,
+        "observed_errors": 0
+      },
+      "q7": {
+        "mean": 50.5274,
+        "median": 47.0,
+        "p95": 76.05,
+        "p99": 96.0,
+        "max": 137,
+        "observed_errors": 0
+      },
+      "q9_cyclic": {
+        "mean": 35.8718,
+        "median": 35.0,
+        "p95": 48.0,
+        "p99": 57.0,
+        "max": 81,
+        "observed_errors": 0
+      },
+      "q9_adaptive_information_gain": {
+        "mean": 16.8964,
+        "median": 15.0,
+        "p95": 27.0,
+        "p99": 32.0,
+        "max": 47,
+        "observed_errors": 0
+      }
+    },
+    "conclusion": "experimental shot cost does not scale with obstruction entropy alone; q9 carries more obstruction bits than q7 but is easier in this optical model because adaptive q9 probes have much larger high/low phase contrast"
+  },
+  "outside_box": {
+    "geometric_n_squared_ladder": {
+      "identity": "{24/5,96/5,216/5}=(24/5)*{1^2,2^2,3^2}",
+      "multiplicities_total_D2": {"24/5": 30, "96/5": 240, "216/5": 80}
+    },
+    "E8_minimal_q3_completion": {
+      "identity": "162=81+81=27*6=27*[3*(3-1)]",
+      "center_characters": ["omega", "omega^2"],
+      "statement": "the E8 matter/antimatter pair contains exactly every nontrivial q3 Heisenberg center-character sector needed by the minimal full-similitude family carrier"
+    },
+    "Z3_generalized_antilinear_clock": {
+      "T_plus": "C J",
+      "T_plus_squared": "C^2",
+      "T_minus": "C^2 J",
+      "T_minus_squared": "C",
+      "orders": [6, 6],
+      "C": "Z_FI=exp(2 pi i Qpsi/3)"
+    }
+  },
+  "remote_execution": {
+    "requested": true,
+    "device": "TheHeavyCrown",
+    "status_during_pass": "offline",
+    "note": "Remote Desktop Commander could not execute because no device was online; calculations were executed in the ChatGPT analysis runtime and frozen for later local replay."
+  },
+  "boundaries": [
+    "weighted DEC eigenvalues are dimensionless until a physical scale is supplied",
+    "all-character carrier is a representation-theory theorem, not a particle census",
+    "anti-linear normalizer has continuous G0 dressing; the six listed maps are the neutral-fixed scalar-twist subclass",
+    "zero-mixer synthesis implements the certified target but does not itself certify the long Floquet relation experimentally",
+    "sequential simulations are nominal calibrated models, not laboratory significance",
+    "outside-box interpretations are finite identities with physical readings explicitly firewalled"
+  ]
+}
