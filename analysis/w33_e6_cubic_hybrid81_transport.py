@@ -75,8 +75,9 @@ def main(write=True):
     h_to_e6={h:i for i,h in e6_to_h.items()}
     assert len(e6_to_h)==len(h_to_e6)==27
 
-    # Rebuild the five H27 direction-coset lines and verify that the transported
-    # canonical 45 cubic triads are exactly those lines.
+    # Compare, but do NOT identify, the two 45-line gauges.  Pass1103's
+    # e6id->H27 object map exactly locks the bad-nine central fibers, while the
+    # newer five-direction right-coset chart uses a different anchored gauge.
     H=tuple(itertools.product(range(3),repeat=3)); ID=(0,0,0)
     def right_cosets_H(subgroup):
         unseen=set(H); out=[]
@@ -85,13 +86,17 @@ def main(write=True):
             C=frozenset(hmod.hmul(g,x) for x in subgroup)
             out.append(C); unseen-=C
         return out
-    base_lines=set()
+    current_lines=set()
     for _name,g in hmod.DIRECTIONS:
         S=frozenset((ID,g,hmod.hmul(g,g)))
         cs=right_cosets_H(S); assert len(cs)==9
-        for C in cs: base_lines.add(tuple(sorted(h_to_e6[x] for x in C)))
-    assert len(base_lines)==45
-    assert base_lines==set(d)
+        for C in cs: current_lines.add(tuple(sorted(h_to_e6[x] for x in C)))
+    canonical_lines=set(d)
+    assert len(current_lines)==len(canonical_lines)==45
+    gauge_overlap=current_lines & canonical_lines
+    bad_triads={tuple(sorted(x)) for x in fwmod.FIBER_SIGNS}
+    assert len(gauge_overlap)==10
+    assert bad_triads <= gauge_overlap and len(bad_triads)==9
 
     # Root-coordinate canonical bracket, with external phase p identified with
     # the canonical SU(3) basis index in this anchored qutrit gauge.
@@ -137,13 +142,22 @@ def main(write=True):
     out={
       "schema":"w33.e6_cubic_hybrid81_transport.v1",
       "status":"PASS_CANONICAL_SIGNED_E6_CUBIC_TRANSPORTS_OBJECTWISE_TO_HYBRID81_AND_COLLECTIVE_JACOBIANS_SPAN_G2",
-      "headline":"The actual source-locked 45-term signed E6 cubic is now objectwise aligned with the current H27/K matter chart. In the canonical SU(3) phase gauge its root bracket has exactly 810 nonzero unordered g1xg1 channels, 162 on the nine firewall fibers, every g1 root has degree 20, and every g2 root occurs as ten outputs. The complete 73+8 hybrid tensor is the exact conjugation Bbar^-1 T_root (B tensor B). Root-basis Jacobians individually have rank 20, while their collective image span is all 81 dimensions, so after conjugation/compiler projection the family collectively reaches all 54 required retyped slots.",
+      "headline":"The actual source-locked 45-term signed E6 cubic is transported objectwise into the current H27/K-labelled matter carrier. In the canonical SU(3) phase gauge its root bracket has exactly 810 nonzero unordered g1xg1 channels, 162 on the nine firewall fibers, every g1 root has degree 20, and every g2 root occurs as ten outputs. The Pass1103 object gauge and the newer five-direction address gauge are not conflated: their 45-line sets overlap in only ten triads, while all nine firewall central fibers agree. The complete 73+8 hybrid tensor is the exact conjugation Bbar^-1 T_root (B tensor B).",
       "source_locks":{
         "canonical_cubic_path":"extracted_v13/W33-Theory-master/artifacts/canonical_su3_gauge_and_cubic.json",
         "canonical_cubic_blob_sha":"3bcc9cdcd572627efe675e1fad4b32b3fe48f649",
         "archived_g1g1_path":"extracted_v13/W33-Theory-master/artifacts/e8_g1g1_couplings_cubic_firewall.json",
         "archived_g1g1_blob_sha":"e5baf485428856a438df04a12b3a6e4d3a2ba5f7",
         "current_H27_bridge":"analysis/w33_pass1103_hesse_firewall_cubic_transport.py"
+      },
+      "gauge_comparison":{
+        "pass1103_e6id_to_H27_object_map_bijective":True,
+        "canonical_cubic_triads":45,
+        "newer_address_right_coset_lines":45,
+        "line_set_overlap":10,
+        "all_nine_firewall_center_fibers_in_overlap":True,
+        "full_45_line_gauge_identity":False,
+        "interpretation":"Object labels transport exactly, but the two independently anchored 45-line incidence gauges must not be identified without an additional automorphism/intertwiner."
       },
       "root_tensor":{
         "formula":"[e_(i,a),e_(j,b)] = d_ijk epsilon_abc ebar_(k,c)",
@@ -181,7 +195,7 @@ def main(write=True):
       "checks":{
         "canonical_45_triads_loaded":True,
         "e6id_to_current_H27_is_bijective":True,
-        "canonical_triads_equal_current_45_H27_lines":True,
+        "canonical_vs_current_line_overlap10":True,\n        "bad9_center_fibers_match_exactly":True,\n        "full_45_line_gauge_identity_not_claimed":True,
         "root_channels_810":True,
         "firewall_channels_162":True,
         "every_input_degree20":True,
