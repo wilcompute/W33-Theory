@@ -1,0 +1,53 @@
+{
+  "schema": "w33.e8_full_hybrid_chevalley_compiler.v1",
+  "status": "PASS_COMPLETE_248D_HYBRID_CHEVALLEY_BRACKET_IS_EXACT_TRANSPORT_OF_W33_DISCRETE_E8",
+  "headline": "The 86+81+81 hybrid atlas is now an executable Lie-algebra compiler, not only a vector-space atlas. The committed W33-discrete E8 Chevalley bracket is transported by the exact block change of basis A=I86 plus the signed/permuted B81 and conjugate(B81) matter charts. Every bracket term respects the Z3 grading, both 81x81 matter transforms have exact inverses over Q(omega), and all 2,511,496 source basis Jacobi triples vanish. Therefore the transported hybrid bracket satisfies Jacobi identically.",
+  "source": {
+    "structure_constants": "artifacts/e8_structure_constants_w33_discrete.json",
+    "structure_constants_blob_sha": "c4cd1f603c421423123aebd82a660d1ec00979dd",
+    "root_metadata": "extracted_v13/W33-Theory-master/artifacts/e8_root_metadata_table.json",
+    "root_metadata_blob_sha": "8f2bb5f5b5b22eee059bf2bf30de95e73af9c2f1",
+    "dimension": 248,
+    "grading_dimensions": [86,81,81],
+    "all_bracket_terms_checked_for_grading": true
+  },
+  "hybrid_transform": {
+    "formula": "A = I86 direct_sum (P1 G1 B81) direct_sum (P2 G2 conjugate(B81))",
+    "field": "Q(omega)",
+    "g1_inverse_verified": true,
+    "g2_inverse_verified": true,
+    "rank": 248,
+    "g1_digest": "sha256:d61fb8e8982a5a394d32a112a150896266ef7ecf0ae9e1806087fc36d834c125",
+    "g2_digest": "sha256:c9edf314a841138fc6b401b4423f60fe4d6e7d6ee09151388c2b1a1746bafa0c"
+  },
+  "bracket": {
+    "definition": "[x,y]_hyb = A^-1 [A x,A y]_Chevalley",
+    "all_grade_products": ["g0g0->g0","g0g1->g1","g0g2->g2","g1g1->g2","g1g2->g0","g2g2->g1"],
+    "dense_248_cubed_materialized": false,
+    "representation": "exact sparse source bracket plus exact block change-of-basis evaluator"
+  },
+  "jacobi": {
+    "source_basis_triples_total": 2511496,
+    "source_basis_triples_checked": 2511496,
+    "source_jacobi_exact": true,
+    "hybrid_jacobi_exact": true,
+    "proof": "Jacobi is a polynomial identity preserved by the verified invertible exact change of basis A."
+  },
+  "boundary": "This closes the finite Lie-algebra coordinate compiler. It does not derive a spacetime Hamiltonian, quantum-field vacuum, coupling constants, particle spectrum, scattering amplitudes, or a unitary hardware implementation of every Lie bracket.",
+  "parents": [
+    "data/w33_e8_full_graded_hybrid_atlas.json",
+    "data/w33_e6_cubic_hybrid81_transport.json",
+    "artifacts/e8_structure_constants_w33_discrete.json"
+  ],
+  "checks": {
+    "source_dimension248": true,
+    "source_grades_86_81_81": true,
+    "root_label_permutations_bijective": true,
+    "canonical_phase_gauges_loaded": true,
+    "B81_inverse_exact": true,
+    "conjugate_B81_inverse_exact": true,
+    "all_bracket_terms_respect_Z3": true,
+    "all_2511496_source_Jacobi_triples_zero": true,
+    "hybrid_Jacobi_follows_exactly": true
+  }
+}
