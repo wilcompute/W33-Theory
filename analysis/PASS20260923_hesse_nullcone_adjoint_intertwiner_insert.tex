@@ -1,0 +1,77 @@
+% 2026-09-23 — explicit adjoint lift of the Hesse / hull null cone.
+\subsection*{The Hesse directions are the projective nilpotent cone of an explicit
+\(\mathfrak{sl}_2(\mathbf F_3)\) quadratic module}
+
+The preceding Clifford--Hessian certificate identified the permutation action
+on the four affine/Hesse directions with the \(S_4\)-action on the four
+isotropic rays of the three-dimensional affine-hull quotient. That statement
+now has an explicit linear lift.
+
+Write
+\[
+ X(a,b,c)=\begin{pmatrix}a&b\\c&-a\end{pmatrix},
+ \qquad
+ q_{\mathfrak{sl}_2}(a,b,c)=-\det X=a^2+bc,
+\]
+and let
+\[
+ B=\begin{pmatrix}2&0&0\\0&0&1\\0&1&0\end{pmatrix},\qquad
+ Q=\begin{pmatrix}0&1&1\\1&0&1\\1&1&0\end{pmatrix}.
+\]
+The executable witness finds
+\[
+ P=\begin{pmatrix}1&1&0\\1&0&2\\2&0&0\end{pmatrix},
+ \qquad
+ \boxed{P^TQP=2B}.
+\]
+For \(g\in GL(2,3)\), with affine directions treated in the repository's
+normal-covector convention, define
+\[
+ \boxed{\rho(g)=P\,\operatorname{Ad}(g^{-T})\,P^{-1}}.
+\]
+Exhaustion of all \(48\) elements proves
+\[
+ \rho(g)^TQ\rho(g)=Q,\qquad \det\rho(g)=1,\qquad
+ \ker\rho=\{\pm I_2\},
+\]
+and
+\[
+ \boxed{\operatorname{im}\rho=SO(Q),\qquad |\operatorname{im}\rho|=24.}
+\]
+The \(SL(2,3)\) restriction has image of order \(12\) and induces the existing
+\(A_4\) direction action; the full \(GL(2,3)\) quotient induces the existing
+\(S_4\) action.
+
+More strongly, the nilpotent-cone parametrisation
+\[
+ \nu(u,v)=(-uv,u^2,-v^2)
+\]
+reproduces the certified dictionary without relabeling:
+\[
+ (1,0)\mapsto(1,0,0),\quad
+ (0,1)\mapsto(0,1,0),\quad
+ (1,1)\mapsto(0,0,1),\quad
+ (1,2)\mapsto(1,1,1).
+\]
+Thus the four Hesse directions are concretely the four projective nilpotent
+directions of the determinant form transported to the hull quotient.
+
+There is one useful parity guardrail. The anti-linear phase-space reflection
+\(\kappa=\operatorname{diag}(-1,1)\) has determinant \(-1\) in dimension two
+and induces the odd four-ray transposition already certified, but its adjoint
+lift satisfies \(\det\rho(\kappa)=+1\). Hence odd permutation parity on the
+four null rays is not determinant \(-1\) in the three-dimensional orthogonal
+module.
+
+\paragraph{Parallel real-form boundary.}
+A parallel certificate identifies the exact 248-dimensional anti-linear compiler
+involution with the split real form \(E_{8(8)}\). That characteristic-zero
+Lie-algebra theorem is separate from this finite \(\mathbf F_3\) module; no
+homomorphism or spacetime identification between them is asserted here.
+
+\paragraph{Evidence boundary.}
+This is finite quadratic geometry over \(\mathbf F_3\). It does not identify
+the hull quotient with Lorentzian spacetime or derive a continuum spin
+structure, \(Spin(3,1)\), CPT, CP violation, or a physical metric.
+The executable witness is
+\texttt{analysis/w33\_hesse\_nullcone\_adjoint\_intertwiner.py}.
