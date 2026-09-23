@@ -62,8 +62,8 @@ def main(write=True):
 
     out={
       "schema":"w33.e8_hybrid_charge_conjugation.v1",
-      "status":"PASS_FULL_HYBRID_E8_ATLAS_HAS_EXACT_ANTILINEAR_GRADE_SWAP_INVOLUTION",
-      "headline":"The full 248-dimensional hybrid E8 atlas carries a canonical anti-linear involution: fix the 86-dimensional neutral grade, exchange the 81-dimensional matter and antimatter grades, and conjugate omega. It squares to one, commutes with the physical FI center, exchanges the two Hesse compiler orientations, and conjugates the dark Strange ray.",
+      "status":"PASS_FULL_HYBRID_E8_ATLAS_HAS_ANTILINEAR_GRADE_LABEL_SCAFFOLD",
+      "headline":"The full 248-dimensional hybrid E8 atlas carries an exact anti-linear grade-label scaffold: fix the 86 neutral labels, exchange the 81 matter and antimatter labels, and conjugate omega. It squares to one at the label level, commutes with the physical FI center, exchanges the two Hesse compiler orientations, and conjugates the dark Strange ray. A later executable-bracket audit shows this pointwise label map is not itself the full Lie-algebra involution; the true transported Chevalley real structure is certified separately.",
       "involution":{
         "carrier_dimension":248,
         "grade_action":{"g0":"g0","g1":"g2","g2":"g1"},
@@ -88,8 +88,8 @@ def main(write=True):
         "conjugate_ray":["1","-omega^2","0"],
         "C_exchanges_Vomega_and_Vomega2":True
       },
-      "physics_reading":"The frozen FI orientation selects one member of a conjugate compiler pair, while the completed E8 atlas still possesses an exact anti-linear map relating matter and antimatter charts. This is the correct finite place to study whether a later dynamical layer preserves or breaks the conjugation symmetry.",
-      "boundary":"No spatial parity action, CPT theorem, CKM/PMNS phase, electric dipole moment, or spontaneous CP-breaking vacuum is derived. Holotrade's current provenance firewall also prevents promoting this finite involution to a class-wide heterotic vacuum claim.",
+      "physics_reading":"The frozen FI orientation selects one member of a conjugate compiler pair, and this scaffold records the exact grade/coefficient conjugation bookkeeping. Lie-bracket compatibility belongs to the successor split-real-form certificate rather than to this pointwise label map.",
+      "boundary":"This certificate proves a label-level anti-linear involution, not a Lie-algebra automorphism. The executable successor analysis/w33_e8_split_real_form_involution.py supplies the corrected Chevalley involution and shows the pointwise neutral/matter label map needs nontrivial sign/permutation transport. No spatial parity action, CPT theorem, CKM/PMNS phase, electric dipole moment, or spontaneous CP-breaking vacuum is derived.",
       "parents":[
         "data/w33_e8_full_graded_hybrid_atlas.json",
         "data/w33_hesse36_physical_fi_orientation_selector.json",
@@ -102,6 +102,7 @@ def main(write=True):
         "FI_center_commutes_after_antilinear_grade_swap":True,
         "compiler_pair_exchanged":True,
         "dark_magic_pair_exchanged":True,
+        "Lie_automorphism_not_claimed_here":True,
         "observed_CP_not_claimed":True
       }
     }
