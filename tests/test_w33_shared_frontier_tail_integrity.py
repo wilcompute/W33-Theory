@@ -64,3 +64,10 @@ def test_shared_frontier_tail_is_linewise_valid_and_unique():
     for item in expected:
         assert item in lines
         assert lines.count(item) == 1
+
+
+def test_promoted_next5_plus3_is_in_shared_tail_once():
+    lines = TAIL.read_text(encoding="utf-8").splitlines()
+    promoted_next5_plus3 = r"\\input{analysis/PASS20260923_next5_plus3_physics_insert}%"
+    assert promoted_next5_plus3 in lines
+    assert lines.count(promoted_next5_plus3) == 1
