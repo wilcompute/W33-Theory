@@ -1,0 +1,197 @@
+% 2026-09-23 — five Clifford/Wigner continuations + three outside-box physics probes.
+\subsection*{Reversible-quantum saturation, the literal Hessian qutrit, and three physics probes}
+
+The extended-Clifford saturation criterion now has a direct quantum-mechanical
+derivation.  In a Weyl--Heisenberg representation,
+\[
+ZX=\omega XZ.
+\]
+A graph similitude with central multiplier $m$ sends the commutator phase by
+$\omega I\mapsto\omega^m I$.  Unitary conjugation fixes scalar phases, while
+antiunitary conjugation complex-conjugates them.  Hence reversible
+Hilbert-space implementation forces
+\[
+\boxed{m=\pm1.}
+\]
+Thus the finite saturation principle is precisely that every combinatorial
+automorphism of the Heisenberg information geometry be realizable as a
+unitary or antiunitary quantum symmetry.
+
+For the determinant-one core the remaining Hessian comparison is also
+literal.  In one qutrit Hilbert basis, the standard $G_{25}$ reflections are
+\[
+R_1=P=\operatorname{diag}(1,1,\omega),
+\qquad
+R_3=ZP=\operatorname{diag}(1,\omega,1),
+\]
+and
+\[
+R_2=F\operatorname{diag}(\omega,1,1)F^{-1},
+\]
+where
+\[
+F=
+\frac{1}{1+2\omega}
+\begin{pmatrix}
+1&1&1\\
+1&\omega&\omega^2\\
+1&\omega^2&\omega
+\end{pmatrix}
+\]
+is a global-phase choice of the qutrit Fourier transform.  Exact arithmetic
+gives
+\[
+FXF^{-1}=Z,
+\qquad
+PXP^{-1}=XZ.
+\]
+Together with the existing faithful $G_{25}$ enumeration, this identifies the
+retained-phase Clifford-$648$ realization with the Hessian reflection matrix
+group, not merely with an equal-order abstract group.
+
+The local anti-linear involution
+\[
+Z^aX^bZ_{\rm FI}^c
+\longmapsto
+Z^{-a}X^bZ_{\rm FI}^{-c}
+\]
+also reaches the exact $E_8$ Lie compiler.  The certified anti-linear real
+structure
+\[
+J=\theta\circ(\omega\mapsto\omega^2),
+\qquad
+\theta(h_i)=-h_i,
+\quad
+\theta(e_\alpha)=e_{-\alpha},
+\]
+preserves all $30{,}628$ checked basis-pair brackets and obeys $J^2=1$.
+On the external $A_2$ Heisenberg carrier, root negation leaves Weyl
+reflections unchanged while coefficient conjugation inverts the qutrit clock
+and the FI center.  Hence the local determinant/spinor $C_2$ is the
+restriction of this exact anti-linear $E_8$ involution.  Its fixed real form is
+the already-certified split form $E_{8(8)}$.
+
+A finite mismatch action can then be defined without fitting.  For
+$q=p^f$, let
+\[
+\psi(z)=
+\exp\!\left(
+\frac{2\pi i}{p}
+\operatorname{Tr}_{\mathbb F_q/\mathbb F_p}(z)
+\right).
+\]
+Average the squared phase mismatch of a multiplier $m$ against the nearer of
+the two reversible branches $\psi(z)$ and $\psi(-z)$.  Additive-character
+orthogonality gives
+\[
+E(m)=
+\begin{cases}
+0,&m=\pm1,\\
+2,&m\ne\pm1.
+\end{cases}
+\]
+Therefore
+\[
+\boxed{
+S(q)=\sum_{m\in\mathbb F_q^\times}E(m)=2(q-3),
+}
+\]
+so the action has a unique odd-prime-power zero at $q=3$.
+
+The prime-power extension remains exact after Frobenius is included.  With
+basis states indexed by $x\in\mathbb F_q$,
+\[
+U_\sigma\ket{x}=\ket{x^p}
+\]
+is a permutation unitary, and trace invariance yields
+\[
+U_\sigma X_uU_\sigma^{-1}=X_{u^p},
+\qquad
+U_\sigma Z_vU_\sigma^{-1}=Z_{v^p}.
+\]
+Thus the reversible semilinear quantum group is
+\[
+H_q:
+\bigl(
+ESL(2,q):\operatorname{Gal}(\mathbb F_q/\mathbb F_p)
+\bigr),
+\]
+while the graph has $H_q:\Gamma L(2,q)$.  Their index is still
+\[
+\boxed{\frac{q-1}{2}},
+\]
+and therefore saturation among all odd prime powers occurs only for
+\[
+\boxed{q=3.}
+\]
+
+\paragraph{Outside-box probe 1: a formal Hodge completion.}
+The exact W33 clique complex has cell vector
+\[
+(40,240,160,40)
+\]
+and Betti vector
+\[
+(1,81,0,0),
+\]
+so no internal Hodge star exists.  Adjoining the reversed dual chain complex
+gives
+\[
+K\oplus K^\vee:
+\qquad
+(C_0,C_1,C_2,C_3)=(80,400,400,80)
+\]
+and
+\[
+(b_0,b_1,b_2,b_3)=(1,81,81,1).
+\]
+The Euler characteristic vanishes and the primal/dual sector swap provides a
+formal $C_k\leftrightarrow C_{3-k}$ carrier.  This does not create a physical
+metric star by fiat; it identifies a mathematically clean place where the
+missing electric/magnetic partner sector could live.
+
+\paragraph{Outside-box probe 2: a literal $\mu_{12}$ Floquet qutrit.}
+The three Hessian/qutrit reflections form the stroboscopic drive
+\[
+U_F=R_1R_2R_3.
+\]
+Exact $\mathbb Q(\omega)$ arithmetic gives
+\[
+U_F^{12}=I
+\]
+with no smaller positive period and characteristic polynomial
+\[
+\boxed{
+\lambda^3-\omega\lambda^2+\omega^2\lambda-1.
+}
+\]
+Its eigenphases are
+\[
+\boxed{
+\frac1{12},\quad\frac4{12},\quad\frac7{12}
+}
+\]
+of a full turn.  The recurring $\mu_{12}$ frame therefore has a concrete
+three-kick qutrit Floquet representative.  This is an internal control clock,
+not a derivation of physical time.
+
+\paragraph{Outside-box probe 3: a holonomy falsifier.}
+For $p=5$, a Weyl commutator loop with unit trace phase carries
+$\zeta_5$.  A determinant-$2$ graph similitude predicts $\zeta_5^2$, whereas
+a unitary can only preserve $\zeta_5$ and an antiunitary can only produce
+$\zeta_5^{-1}$.  In a balanced reference interferometer
+\[
+P_0(\phi)=\frac{1+\cos\phi}{2},
+\]
+the reversible branches give approximately $0.654508$, while the forbidden
+multiplier-$2$ branch gives approximately $0.095492$, an absolute contrast
+about $0.559017$.  This supplies a direct experimental falsifier of the
+saturation principle in a higher-dimensional control system.
+
+\paragraph{Evidence boundary.}
+The new results are exact finite group, matrix, Lie-algebra, and chain-complex
+statements plus one proposed interferometric experiment.  They do not derive
+the Standard Model, gravity, spacetime dimension, observed generations,
+masses, couplings, CPT, or a physical vacuum.  The mismatch functional
+$S(q)$ and doubled-Hodge construction are candidate physical principles whose
+necessity remains to be established.
