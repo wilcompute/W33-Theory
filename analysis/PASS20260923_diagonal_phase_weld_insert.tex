@@ -1,0 +1,50 @@
+% Diagonal H27-center/external-qutrit phase weld.
+\subsection*{The diagonal phase weld unlocks the full $54$-dimensional compiler quotient}
+
+Write the frozen scheduler address as
+\[
+ K=H_{27}\times C_3^{\rm ext},
+ \qquad h=(a,b,c)=Z^aX^b\omega^c,
+\]
+with external phase $p\in\mathbb F_3$.  The two external slopes of the pure
+central direction are
+\[
+ g_+=((0,0,1),1),\qquad g_-=((0,0,1),2).
+\]
+The diagonal phases
+\[
+ \tau_-=c-p,\qquad \tau_+=c+p\pmod3
+\]
+are constant on right cosets of $g_+$ and $g_-$, respectively.
+
+For the three-level backgrounds
+\[
+ v_\pm=1+\tau_\pm\in\{1,2,3\},
+\]
+each amplitude occurs $27$ times.  Exact cubic-Jacobian ranks together with the
+$54$-dimensional Fourier-quotient projections are
+\[
+\begin{array}{c|c|c}
+v & \operatorname{rank}D_v &
+\operatorname{rank}(\operatorname{Im}D_v\to\operatorname{Reg}(K)/S_1)
+\\ \hline
+1+c & 54 & 36\\
+1+p & 54 & 36\\
+1+(c+p) & 72 & 54\\
+1+(c-p) & 72 & 54
+\end{array}
+\]
+where the quotient ranks are certified at both split Eisenstein primes
+$103$ and $109$.
+
+Thus neither factor by itself supplies the required representation conversion,
+but either diagonal center--external weld does:
+\[
+ \operatorname{rank}(S_1+\operatorname{Im}D_{v_\pm})=81.
+\]
+The missing compiler capacity therefore appears specifically in the
+\emph{correlation} between the H27 center and the external qutrit phase.
+
+This is a finite tangent-level weld theorem.  It does not select $v_\pm$ as a
+physical vacuum, determine a coupling coefficient, or infer which conjugate
+orientation is dynamically preferred.
