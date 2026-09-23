@@ -54,12 +54,15 @@ commutant is M_9(C) tensor I_9.  Thus the shell contains two active qutrits
 and an exact nine-dimensional multiplicity/noiseless subsystem at this
 restricted-group level.
 
-Boundary: the address and operator charts are not identified.  The parallel
-rank-obstruction certificates prove that no invertible H27-equivariant change
-of basis exists in dimension 27 (maximum rank 9), and no K-equivariant compiler
-exists in dimension 81 (maximum rank 27).  A non-equivariant,
-proper-subgroup-covariant, or otherwise symmetry-changing root-gauge compiler
-remains open.  No family, Yukawa, vacuum, or hardware claim is made.
+Boundary: the address and operator charts are not equivariantly identified.
+The parallel rank-obstruction certificates prove that no invertible
+H27-equivariant change of basis exists in dimension 27 (maximum rank 9), and
+no K-equivariant compiler exists in dimension 81 (maximum rank 27).  An
+explicit K-Fourier-coordinate permutation compiler now saturates the resulting
+54-coordinate symmetry-change lower bound.  What remains is to materialize
+and compose the frozen-root/address-to-K-Fourier analysis transform, and to
+realize the 54 retypings dynamically.  No family, Yukawa, vacuum, or hardware
+claim is made.
 """
 from __future__ import annotations
 
@@ -634,7 +637,8 @@ def operator_geometry():
                 "The complete Steiner/trinification monomial-atlas certificate now also proves "
                 "that neither shadow normalizes the execution algebra in any of its 51840 "
                 "W(E6)-compatible charts. Parallel rank obstructions rule out a full H27- or "
-                "K-equivariant basis conjugacy; only a symmetry-changing compiler remains open."
+                "K-equivariant basis conjugacy. The separate minimal K-Fourier compiler "
+                "closes the finite representation conversion with exactly 54 retypings."
             ),
         },
         "operator_center_basis_fixed_points": 27,
@@ -661,6 +665,9 @@ def main(write=True):
         "K81_intertwiner_obstruction": json.loads(
             (ROOT / "data/w33_scheduler_operator_k81_intertwiner_obstruction.json").read_text()
         ),
+        "minimal_symmetry_changing_compiler": json.loads(
+            (ROOT / "data/w33_minimal_symmetry_changing_81_compiler.json").read_text()
+        ),
     }
     landed = parents["landed_address_operator_roles"]
     assert landed["status"] == "PASS_ADDRESS_AND_OPERATOR_H27_ROLES_SEPARATED_AND_EXECUTABLE"
@@ -675,6 +682,10 @@ def main(write=True):
     assert k81_obstruction["intertwiner"]["maximum_rank"] == 27
     assert k81_obstruction["intertwiner"]["target_dimension"] == 81
     assert k81_obstruction["intertwiner"]["invertible_equivariant_compiler_exists"] is False
+    minimal_compiler = parents["minimal_symmetry_changing_compiler"]
+    assert minimal_compiler["compiler"]["symmetry_changing_coordinates"] == 54
+    assert minimal_compiler["compiler"]["symmetry_change_lower_bound"] == 54
+    assert minimal_compiler["compiler"]["lower_bound_saturated"] is True
 
     address = address_geometry()
     operator = operator_geometry()
@@ -710,7 +721,7 @@ def main(write=True):
     assert operator["commutant"] == landed["operator"]["commutant"].replace("M9", "M_9").replace("I9", "I_9")
 
     out = {
-        "schema": "w33.e8_matter81_h27_address_operator_compiler.v3",
+        "schema": "w33.e8_matter81_h27_address_operator_compiler.v4",
         "status": "PASS_INCREMENTAL_H27_CLIFFORD_UNIQUENESS_AND_QPSI_COMMUTANT_AUDIT",
         "headline": (
             "The new H27 results form an address/operator pair, not one silently interchangeable group action. "
@@ -720,6 +731,8 @@ def main(write=True):
             "trinification H27 instead acts on the E6 27 as nine copies of a qutrit Schrodinger irrep. With the external "
             "A2 H27, the matter 81 is nine copies of the irreducible two-qutrit Pauli representation, so its restricted "
             "operator algebra is I9 tensor M9 and its exact commutant is M9 tensor I9."
+            " The finite K-Fourier-coordinate conversion is now an explicit 81x81 "
+            "permutation with the minimum possible 54 representation retypings."
         ),
         "address_space": address,
         "operator_space": operator,
@@ -746,15 +759,28 @@ def main(write=True):
                 "intertwiner"
             ]["invertible_equivariant_compiler_exists"],
             "surviving_frontier": (
-                "Construct a non-equivariant, proper-subgroup-covariant, or otherwise "
-                "symmetry-changing frozen-root dictionary, and record the symmetry lost."
+                "The no-go remains exact, but the finite conversion is closed in K-Fourier "
+                "coordinates by a permutation preserving 27 coordinates and minimally "
+                "retyping 54. Materialize the frozen-root/address-to-K-Fourier transform, "
+                "compose it with that permutation and the operator chart, and realize the "
+                "54 retypings through a permitted interaction."
             ),
+        },
+        "minimal_symmetry_changing_compiler": {
+            "coordinate_system": "K-Fourier coordinates",
+            "matrix_type": minimal_compiler["compiler"]["matrix_type"],
+            "symmetry_preserving_coordinates": minimal_compiler["compiler"]["symmetry_preserving_coordinates"],
+            "symmetry_changing_coordinates": minimal_compiler["compiler"]["symmetry_changing_coordinates"],
+            "symmetry_change_lower_bound": minimal_compiler["compiler"]["symmetry_change_lower_bound"],
+            "lower_bound_saturated": minimal_compiler["compiler"]["lower_bound_saturated"],
+            "mapping_digest": minimal_compiler["compiler"]["mapping_digest"],
+            "remaining_composition": "frozen E8 root/address basis -> K-Fourier basis -> minimal permutation -> trinification operator basis",
         },
         "virtual_machine_reading": {
             "scheduler": "K=H27_regular x C3_external_shift addresses all 81 roots and its ten selected C3 coset families are the 270 cubic instructions",
             "execution_unit": "3_+^(1+4) acts as the two-qutrit Pauli algebra on C3_internal tensor C3_external",
             "protected_or_latent_register": "the exact C9 multiplicity factor, whose full M9 algebra is the commutant of the execution algebra",
-            "compiler_gap": "construct a symmetry-changing frozen-root dictionary linking the regular address chart to the trinification multiplicity/active-qutrit chart; full H27/K equivariance is impossible",
+            "compiler_gap": "materialize the frozen-root/address-to-K-Fourier analysis matrix, compose it with the explicit minimal 54-retyping permutation and the trinification operator chart, then realize those retypings dynamically; full H27/K equivariance remains impossible",
         },
         "ownership_and_increment": {
             "broad_theorem_owner": "analysis/w33_address_operator_h27_roles.py and data/w33_address_operator_h27_roles.json",
@@ -778,6 +804,7 @@ def main(write=True):
             "data/w33_e8_matter81_frame_qutrit_tensor_carrier.json",
             "data/w33_address_operator_h27_intertwiner_obstruction.json",
             "data/w33_scheduler_operator_k81_intertwiner_obstruction.json",
+            "data/w33_minimal_symmetry_changing_81_compiler.json",
             "data/w33_qpsi_matter_parity_e8_d8_bridge.json",
             "data/w33_physical_clifford648_full_permutation_dictionary.json",
             "data/w33_pass371_naturality_and_the_clifford_match.json",
@@ -799,7 +826,9 @@ def main(write=True):
             "address_operator_permutation_conflation_refuted": True,
             "H27_equivariant_coordinate_intertwiner_exists": False,
             "full_K_equivariant_compiler_exists": False,
-            "symmetry_changing_coordinate_dictionary_left_open": True,
+            "minimal_Fourier_coordinate_compiler_exists": True,
+            "minimal_Fourier_coordinate_compiler_retypes_exactly_54": True,
+            "frozen_root_to_Fourier_composition_remains_frontier": True,
         },
     }
     if write:

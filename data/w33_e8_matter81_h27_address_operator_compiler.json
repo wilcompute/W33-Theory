@@ -1,7 +1,7 @@
 {
-  "schema": "w33.e8_matter81_h27_address_operator_compiler.v3",
+  "schema": "w33.e8_matter81_h27_address_operator_compiler.v4",
   "status": "PASS_INCREMENTAL_H27_CLIFFORD_UNIQUENESS_AND_QPSI_COMMUTANT_AUDIT",
-  "headline": "The new H27 results form an address/operator pair, not one silently interchangeable group action. The physical Clifford-648 gauge uniquely selects the GQ(2,4) direction lifts on the regular Payne H27; its 45 lines split 9+36 and the phase-labelled instructions split 27+27+216. After adjoining the external C3 shift, ten explicit order-three directions have 270 cosets exactly equal to the E8 matter cubic triples. The center-correct trinification H27 instead acts on the E6 27 as nine copies of a qutrit Schrodinger irrep. With the external A2 H27, the matter 81 is nine copies of the irreducible two-qutrit Pauli representation, so its restricted operator algebra is I9 tensor M9 and its exact commutant is M9 tensor I9.",
+  "headline": "The new H27 results form an address/operator pair, not one silently interchangeable group action. The physical Clifford-648 gauge uniquely selects the GQ(2,4) direction lifts on the regular Payne H27; its 45 lines split 9+36 and the phase-labelled instructions split 27+27+216. After adjoining the external C3 shift, ten explicit order-three directions have 270 cosets exactly equal to the E8 matter cubic triples. The center-correct trinification H27 instead acts on the E6 27 as nine copies of a qutrit Schrodinger irrep. With the external A2 H27, the matter 81 is nine copies of the irreducible two-qutrit Pauli representation, so its restricted operator algebra is I9 tensor M9 and its exact commutant is M9 tensor I9. The finite K-Fourier-coordinate conversion is now an explicit 81x81 permutation with the minimum possible 54 representation retypings.",
   "address_space": {
     "H27_order": 27,
     "H27_center_order": 3,
@@ -2911,7 +2911,7 @@
       "intersection": "<D12^4> = C3, the FI/common H27 center",
       "matter_parity_D12_power6_commutes": false,
       "Kummer_mod4_D12_power3_commutes": false,
-      "meaning": "Only the mod-3 shadow of Qpsi is scalar on the active two-qutrit factor. The Z2 and Z4 shadows are outside the certified execution commutant. The complete Steiner/trinification monomial-atlas certificate now also proves that neither shadow normalizes the execution algebra in any of its 51840 W(E6)-compatible charts. Parallel rank obstructions rule out a full H27- or K-equivariant basis conjugacy; only a symmetry-changing compiler remains open."
+      "meaning": "Only the mod-3 shadow of Qpsi is scalar on the active two-qutrit factor. The Z2 and Z4 shadows are outside the certified execution commutant. The complete Steiner/trinification monomial-atlas certificate now also proves that neither shadow normalizes the execution algebra in any of its 51840 W(E6)-compatible charts. Parallel rank obstructions rule out a full H27- or K-equivariant basis conjugacy. The separate minimal K-Fourier compiler closes the finite representation conversion with exactly 54 retypings."
     },
     "operator_center_basis_fixed_points": 27
   },
@@ -2928,13 +2928,23 @@
     "K81_maximum_rank": 27,
     "K81_target_dimension": 81,
     "invertible_K81_equivariant_compiler_exists": false,
-    "surviving_frontier": "Construct a non-equivariant, proper-subgroup-covariant, or otherwise symmetry-changing frozen-root dictionary, and record the symmetry lost."
+    "surviving_frontier": "The no-go remains exact, but the finite conversion is closed in K-Fourier coordinates by a permutation preserving 27 coordinates and minimally retyping 54. Materialize the frozen-root/address-to-K-Fourier transform, compose it with that permutation and the operator chart, and realize the 54 retypings through a permitted interaction."
+  },
+  "minimal_symmetry_changing_compiler": {
+    "coordinate_system": "K-Fourier coordinates",
+    "matrix_type": "81x81 permutation/monomial matrix in Fourier coordinates",
+    "symmetry_preserving_coordinates": 27,
+    "symmetry_changing_coordinates": 54,
+    "symmetry_change_lower_bound": 54,
+    "lower_bound_saturated": true,
+    "mapping_digest": "sha256:cb577548c5a894a996a1416d7eda1059bf817a31a0d7f513dd945cd799663aad",
+    "remaining_composition": "frozen E8 root/address basis -> K-Fourier basis -> minimal permutation -> trinification operator basis"
   },
   "virtual_machine_reading": {
     "scheduler": "K=H27_regular x C3_external_shift addresses all 81 roots and its ten selected C3 coset families are the 270 cubic instructions",
     "execution_unit": "3_+^(1+4) acts as the two-qutrit Pauli algebra on C3_internal tensor C3_external",
     "protected_or_latent_register": "the exact C9 multiplicity factor, whose full M9 algebra is the commutant of the execution algebra",
-    "compiler_gap": "construct a symmetry-changing frozen-root dictionary linking the regular address chart to the trinification multiplicity/active-qutrit chart; full H27/K equivariance is impossible"
+    "compiler_gap": "materialize the frozen-root/address-to-K-Fourier analysis matrix, compose it with the explicit minimal 54-retyping permutation and the trinification operator chart, then realize those retypings dynamically; full H27/K equivariance remains impossible"
   },
   "ownership_and_increment": {
     "broad_theorem_owner": "analysis/w33_address_operator_h27_roles.py and data/w33_address_operator_h27_roles.json",
@@ -2954,6 +2964,7 @@
     "data/w33_e8_matter81_frame_qutrit_tensor_carrier.json",
     "data/w33_address_operator_h27_intertwiner_obstruction.json",
     "data/w33_scheduler_operator_k81_intertwiner_obstruction.json",
+    "data/w33_minimal_symmetry_changing_81_compiler.json",
     "data/w33_qpsi_matter_parity_e8_d8_bridge.json",
     "data/w33_physical_clifford648_full_permutation_dictionary.json",
     "data/w33_pass371_naturality_and_the_clifford_match.json",
@@ -2975,6 +2986,8 @@
     "address_operator_permutation_conflation_refuted": true,
     "H27_equivariant_coordinate_intertwiner_exists": false,
     "full_K_equivariant_compiler_exists": false,
-    "symmetry_changing_coordinate_dictionary_left_open": true
+    "minimal_Fourier_coordinate_compiler_exists": true,
+    "minimal_Fourier_coordinate_compiler_retypes_exactly_54": true,
+    "frozen_root_to_Fourier_composition_remains_frontier": true
   }
 }

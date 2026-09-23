@@ -1,0 +1,157 @@
+{
+  "schema": "w33.hesse36_compiler36_sl23_obstruction.v2",
+  "status": "PASS_HESSE36_COMPILER36_COMMON_SL23_EQUIVARIANT_BIJECTION_OBSTRUCTED_AT_ORDER3",
+  "headline": "The two natural 36=12x3 Hesse carriers are not the same physical SL(2,3)-set. Under the exact common order-24 split complement, the ordinary Payne/Hesse 36 has orbits 24+4+4+4 while the 36 maximal compiler-safe C3^2 planes have orbits 8+8+8+4+4+4. Their permutation characters agree on every element order except 3, where the fixed-point counts are 3 versus 9. Thus no common-SL(2,3)-equivariant objectwise bijection exists; the obstruction is concentrated on both size-four order-three conjugacy classes.",
+  "common_group": {
+    "description": "fixed-center H27 automorphisms preserving the five selected GQ(2,4) directions through the identity",
+    "order": 24,
+    "identification": "SL(2,3), the physical split complement in Clifford648",
+    "parent_fixed_center_automorphism_order": 216
+  },
+  "carriers": {
+    "ordinary36": {
+      "count": 36,
+      "definition": "right cosets of the four selected noncentral H27 directions; the 36 ordinary Payne/Hesse address lines",
+      "orbit_sizes_under_common_SL23": [
+        4,
+        4,
+        4,
+        24
+      ]
+    },
+    "compiler_safe36": {
+      "count": 36,
+      "definition": "maximal order-nine C3^2 subgroups of H27 x C3_external avoiding the characteristic commutator line",
+      "orbit_sizes_under_common_SL23": [
+        4,
+        4,
+        4,
+        8,
+        8,
+        8
+      ]
+    }
+  },
+  "permutation_character_profile": [
+    {
+      "element_order": 1,
+      "element_count": 1,
+      "ordinary36_fixed": 36,
+      "compiler_safe36_fixed": 36
+    },
+    {
+      "element_order": 2,
+      "element_count": 1,
+      "ordinary36_fixed": 12,
+      "compiler_safe36_fixed": 12
+    },
+    {
+      "element_order": 3,
+      "element_count": 8,
+      "ordinary36_fixed": 3,
+      "compiler_safe36_fixed": 9
+    },
+    {
+      "element_order": 4,
+      "element_count": 6,
+      "ordinary36_fixed": 0,
+      "compiler_safe36_fixed": 0
+    },
+    {
+      "element_order": 6,
+      "element_count": 8,
+      "ordinary36_fixed": 3,
+      "compiler_safe36_fixed": 3
+    }
+  ],
+  "conjugacy_class_profile": [
+    {
+      "class_label": "1A",
+      "element_order": 1,
+      "class_size": 1,
+      "ordinary36_fixed": 36,
+      "compiler_safe36_fixed": 36,
+      "character_mismatch": false
+    },
+    {
+      "class_label": "2A",
+      "element_order": 2,
+      "class_size": 1,
+      "ordinary36_fixed": 12,
+      "compiler_safe36_fixed": 12,
+      "character_mismatch": false
+    },
+    {
+      "class_label": "3A",
+      "element_order": 3,
+      "class_size": 4,
+      "ordinary36_fixed": 3,
+      "compiler_safe36_fixed": 9,
+      "character_mismatch": true
+    },
+    {
+      "class_label": "3B",
+      "element_order": 3,
+      "class_size": 4,
+      "ordinary36_fixed": 3,
+      "compiler_safe36_fixed": 9,
+      "character_mismatch": true
+    },
+    {
+      "class_label": "4A",
+      "element_order": 4,
+      "class_size": 6,
+      "ordinary36_fixed": 0,
+      "compiler_safe36_fixed": 0,
+      "character_mismatch": false
+    },
+    {
+      "class_label": "6A",
+      "element_order": 6,
+      "class_size": 4,
+      "ordinary36_fixed": 3,
+      "compiler_safe36_fixed": 3,
+      "character_mismatch": false
+    },
+    {
+      "class_label": "6B",
+      "element_order": 6,
+      "class_size": 4,
+      "ordinary36_fixed": 3,
+      "compiler_safe36_fixed": 3,
+      "character_mismatch": false
+    }
+  ],
+  "obstruction": {
+    "permutation_characters_equal": false,
+    "mismatch_element_orders": [
+      3
+    ],
+    "order3_element_count": 8,
+    "order3_conjugacy_class_sizes": [
+      4,
+      4
+    ],
+    "order3_fixed_points_ordinary36": 3,
+    "order3_fixed_points_compiler_safe36": 9,
+    "equivariant_bijection_exists": false,
+    "interpretation": "the repeated 36=12x3 Hesse factorization survives as a structural parallel, but its phase lift and compiler-center lift respond differently on both qutrit order-three shear/transvection classes"
+  },
+  "boundary": "This is a no-go only for an objectwise bijection equivariant under the exact common physical SL(2,3) complement. It does not rule out a smaller-subgroup pairing, a Fourier/induced transform between the two permutation modules, or a symmetry-changing compiler.",
+  "parents": [
+    "analysis/w33_maximal_compiler_symmetry_pappus.py",
+    "analysis/w33_address_operator_h27_roles.py",
+    "docs/PAYNE_HESSE_PACKET_DICTIONARY.md"
+  ],
+  "checks": {
+    "fixed_center_aut_order216": true,
+    "common_physical_complement_order24": true,
+    "ordinary36_preserved": true,
+    "compiler_safe36_preserved": true,
+    "ordinary_orbits_24_4_4_4": true,
+    "safe_orbits_8_8_8_4_4_4": true,
+    "character_mismatch_only_order3": true,
+    "order3_sector_is_two_classes_of_four": true,
+    "no_SL23_equivariant_bijection": true
+  }
+}

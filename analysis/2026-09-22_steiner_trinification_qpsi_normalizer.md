@@ -245,10 +245,13 @@ repair gate is physically available, or identify observed particles with
 individual minuscule weights.  Parallel representation audits sharpen the
 root-gauge boundary: an H27-equivariant map has maximum rank 9 in dimension
 27, and a full K-equivariant compiler has maximum rank 27 in dimension 81.
-An invertible equivariant conjugacy is therefore impossible; selecting and
-justifying a non-equivariant or proper-subgroup-covariant dictionary remains
-open.  The present theorem exhausts the finite monomial chart family and the
-diagonal powers of the anchored Qpsi clock independently of that choice.
+An invertible equivariant conjugacy is therefore impossible.  The later
+K-Fourier-coordinate compiler closes the finite conversion with exactly 54
+representation retypings, saturating the lower bound.  Materializing its
+composition with the frozen root/address and operator bases, and realizing the
+retypings dynamically, remain open.  The present theorem exhausts the finite
+monomial chart family and the diagonal powers of the anchored Qpsi clock
+independently of that physical realization.
 
 ## Reproducible artifacts
 

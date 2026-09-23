@@ -1,0 +1,43 @@
+{
+  "schema": "w33.hesse36_e8_matter81_root_lift_boundary.v1",
+  "status": "PASS_DIRECT_81_ROOT_LIFT_THROUGH_CUBIC_INCIDENCE_HAS_RANK73_BOUNDARY",
+  "headline": "The exact 36-state Fourier compiler does not become an invertible 81x81 root-coordinate compiler by incidence lifting. The ordinary 27x36 tritangent incidence has rank 21. Its 216 E8 cubic lifts already span rank 73 in the frozen 81-root chart; adding all 54 fiber cubics leaves rank 73, so cubic incidence has an intrinsic 8-dimensional dark complement. Canonical cubic signs and SU3 epsilon parities are nonzero column rescalings and cannot remove that defect.",
+  "incidence": {
+    "base_27x36_rank": 21,
+    "base_27x45_rank": 21,
+    "ordinary_81x216_rank": 73,
+    "fiber_81x54_rank": 45,
+    "full_81x270_rank": 73,
+    "dark_root_dimension": 8,
+    "ordinary_cubics_per_root": 8,
+    "fiber_cubics_per_root": 2,
+    "all_cubics_per_root": 10
+  },
+  "selection_rules": {
+    "all_270_are_zero_sum_E8_root_triples": true,
+    "external_phase_multiset_each_cubic": [
+      0,
+      1,
+      2
+    ],
+    "all_E6_cubics_total_Qpsi_zero": true,
+    "all_E6_cubics_matter_parity_even": true,
+    "canonical_signs_cannot_change_incidence_rank": true
+  },
+  "pauli243_firewall": {
+    "matter_rays": "9 projective orbits of size 9",
+    "compiler_carrier": "36 tritangent/control channels",
+    "direct_objectwise_identification": false
+  },
+  "verdict": "A root-level compiler needs extra target-side root/support data beyond the Hesse36 control transform. The exact finite lift currently closes on cubic instruction amplitudes, not on all 81 root basis vectors.",
+  "boundary": "The numerical coincidence dark dimension 8 = rank(E8) is recorded only as a dimension count; no Cartan identification is asserted.",
+  "checks": {
+    "rank21_base": true,
+    "rank73_ordinary_lift": true,
+    "rank73_full270": true,
+    "eight_plus_two_cubics_per_root": true,
+    "phase_rule": true,
+    "Qpsi_and_parity_selection_rules": true,
+    "direct_81x81_lift_rejected": true
+  }
+}

@@ -41,7 +41,17 @@ def test_shared_frontier_tail_is_linewise_valid_and_unique():
         r"\input{analysis/PASS20260921_address_operator_h27_roles_insert}%",
         r"\input{analysis/PASS20260921_e8_matter81_h27_address_operator_compiler_insert}%",
         r"\input{analysis/PASS20260922_qpsi_gq24_parabolic_compiler_insert}%",
+        r"\input{analysis/PASS20260922_address_operator_h27_intertwiner_obstruction_insert}%",
+        r"\input{analysis/PASS20260922_scheduler_operator_k81_obstruction_insert}%",
         r"\input{analysis/PASS20260922_steiner_trinification_qpsi_normalizer_insert}%",
+        r"\input{analysis/PASS20260922_maximal_compiler_symmetry_pappus_insert}%",
+        r"\input{analysis/PASS20260922_hesse36_q8_repair_insert}%",
+        r"\input{analysis/PASS20260922_hesse36_fourier_twisted_compiler_insert}%",
+        r"\input{analysis/PASS20260923_execute_all5_hesse_toe_compiler_frontier_insert}%",
+        r"\input{analysis/PASS20260923_dark_strange_hybrid81_insert}%",
+        r"\input{analysis/PASS20260923_ramified_hesse_cubic_holonomy_bridge_insert}%",
+        r"\input{analysis/PASS20260923_root_ordered_full_e8_hybrid_atlas_insert}%",
+        r"\input{analysis/PASS20260923_affine_holonomy_vm_code_architecture_insert}%",
     ]
     for item in expected:
         assert item in lines

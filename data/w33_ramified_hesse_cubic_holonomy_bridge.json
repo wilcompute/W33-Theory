@@ -1,0 +1,644 @@
+{
+  "schema": "w33.ramified_hesse_cubic_holonomy_bridge.v2",
+  "status": "PASS_RAMIFIED_CLIFFORD_IMAGE_LIFTS_TO_TERNARY_45_12_6_CUBIC_HOLONOMY_CODE",
+  "headline": "Reducing the exact full-Clifford Hesse36 compiler modulo the ramified Eisenstein prime (1-omega) sends omega to 1 and collapses its twelve three-point Fourier fibers from rank 36 to rank 12. In the frozen Clifford/address-to-cubic gauge, that image is the ordinary-36 projection of twelve uniquely corrected Cartan-cubic line relations. They span an explicit ternary [45,12,6]_3 subcode of the 24-dimensional line-holonomy kernel. Its 24 minimum words are exactly plus/minus the twelve generator hexads, each with three ordinary and three distinguished tritangents.",
+  "ramified_compiler_reduction": {
+    "coefficient_map": "Z[omega] -> Z[omega]/(1-omega) = F3; omega -> 1",
+    "characteristic_zero_rank": 36,
+    "reduced_matrix_shape": [
+      36,
+      36
+    ],
+    "reduced_rank_F3": 12,
+    "right_nullity_safe36_F3": 24,
+    "left_nullity_ordinary36_F3": 24,
+    "distinct_column_supports": 12,
+    "multiplicity_per_support": 3,
+    "support_size": 3,
+    "support_direction_class_sizes": {
+      "0": 3,
+      "1": 3,
+      "2": 3,
+      "3": 3
+    },
+    "ordinary36_partitioned_once_by_supports": true,
+    "reduced_gram": "Tbar^T Tbar = 0 over F3",
+    "reduced_matrix_digest": "sha256:5723ed2435a0a8d0d2f485fda48825035ed05346dc541dd4a06d698613b1dfda"
+  },
+  "cubic_line_holonomy": {
+    "Cartan_incidence_shape": [
+      27,
+      45
+    ],
+    "Cartan_incidence_rank_F3": 21,
+    "full_line_kernel_dimension_F3": 24,
+    "Clifford_line_orbit_split": [
+      9,
+      36
+    ],
+    "fiber9_incidence_rank_F3": 9,
+    "ordinary36_incidence_rank_F3": 21,
+    "ordinary_projection_of_line_kernel_rank_F3": 24,
+    "reduced_compiler_image_contained_in_projection": true,
+    "fiber9_correction_is_unique": true,
+    "fiber9_correction_map_rank_F3": 6,
+    "address_line_to_tritangent_digest": "sha256:550f4ffeb81fdae9958d43ffef5474364cad7b1d66a46af37ce5611c97e1dd16"
+  },
+  "lifted_code": {
+    "parameters": "[45,12,6]_3",
+    "ambient_code": "ker_F3(Cartan 27x45 point-tritangent incidence)",
+    "dimension": 12,
+    "minimum_distance": 6,
+    "word_count": 531441,
+    "weight_enumerator": {
+      "0": 1,
+      "6": 24,
+      "10": 108,
+      "11": 108,
+      "12": 48,
+      "13": 432,
+      "14": 216,
+      "15": 1080,
+      "16": 1404,
+      "17": 1296,
+      "18": 2708,
+      "19": 5832,
+      "20": 4050,
+      "21": 8658,
+      "22": 16524,
+      "23": 11016,
+      "24": 20646,
+      "25": 33048,
+      "26": 19440,
+      "27": 33608,
+      "28": 49248,
+      "29": 26568,
+      "30": 40536,
+      "31": 53136,
+      "32": 25434,
+      "33": 35400,
+      "34": 43416,
+      "35": 18468,
+      "36": 23070,
+      "37": 23544,
+      "38": 8640,
+      "39": 9564,
+      "40": 8640,
+      "41": 2700,
+      "42": 1656,
+      "43": 864,
+      "44": 162,
+      "45": 148
+    },
+    "minimum_word_count": 24,
+    "minimum_words_are_exactly_plus_minus_generators": true,
+    "generator_support_split": "3 ordinary36 + 3 fiber9 tritangents",
+    "ordinary_coordinate_multiplicity_across_generators": 1,
+    "fiber_coordinate_multiplicity_across_generators": 4,
+    "generator_gram_rank_F3": 3,
+    "generator_gram_zero_classes": [
+      [
+        0,
+        10,
+        11
+      ],
+      [
+        1,
+        5,
+        9
+      ],
+      [
+        2,
+        6,
+        7
+      ],
+      [
+        3,
+        4,
+        8
+      ]
+    ],
+    "gram_quotient_on_four_hesse_directions": [
+      [
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0
+      ]
+    ],
+    "gram_description": "After grouping by Hesse direction, Gram=(J4-I4) tensor J3.",
+    "systematic_coordinate_form": "[2*A_AG(2,3) | I12 tensor (1,1,1)]",
+    "systematic_weight_formula": "wt(cG)=3*wt(c)+wt(c*A_AG(2,3))",
+    "fiber9_model": "the nine points H27/Z(H27)=AG(2,3)",
+    "fiber_correction_supports": "all twelve affine lines of AG(2,3)",
+    "fiber_correction_coefficients": "constant 2 on every affine line",
+    "fiber_point_to_tritangent": [
+      {
+        "AG23_point": [
+          0,
+          0
+        ],
+        "tritangent_index": 4
+      },
+      {
+        "AG23_point": [
+          0,
+          1
+        ],
+        "tritangent_index": 36
+      },
+      {
+        "AG23_point": [
+          0,
+          2
+        ],
+        "tritangent_index": 31
+      },
+      {
+        "AG23_point": [
+          1,
+          0
+        ],
+        "tritangent_index": 20
+      },
+      {
+        "AG23_point": [
+          1,
+          1
+        ],
+        "tritangent_index": 37
+      },
+      {
+        "AG23_point": [
+          1,
+          2
+        ],
+        "tritangent_index": 18
+      },
+      {
+        "AG23_point": [
+          2,
+          0
+        ],
+        "tritangent_index": 25
+      },
+      {
+        "AG23_point": [
+          2,
+          1
+        ],
+        "tritangent_index": 7
+      },
+      {
+        "AG23_point": [
+          2,
+          2
+        ],
+        "tritangent_index": 11
+      }
+    ],
+    "relation_records": [
+      {
+        "basis_index": 0,
+        "hesse_direction_class": 0,
+        "fiber_tritangents": [
+          {
+            "tritangent_index": 4,
+            "coefficient_F3": 2
+          },
+          {
+            "tritangent_index": 36,
+            "coefficient_F3": 2
+          },
+          {
+            "tritangent_index": 31,
+            "coefficient_F3": 2
+          }
+        ],
+        "ordinary_tritangents": [
+          {
+            "tritangent_index": 3,
+            "coefficient_F3": 1
+          },
+          {
+            "tritangent_index": 32,
+            "coefficient_F3": 1
+          },
+          {
+            "tritangent_index": 35,
+            "coefficient_F3": 1
+          }
+        ]
+      },
+      {
+        "basis_index": 1,
+        "hesse_direction_class": 1,
+        "fiber_tritangents": [
+          {
+            "tritangent_index": 4,
+            "coefficient_F3": 2
+          },
+          {
+            "tritangent_index": 20,
+            "coefficient_F3": 2
+          },
+          {
+            "tritangent_index": 25,
+            "coefficient_F3": 2
+          }
+        ],
+        "ordinary_tritangents": [
+          {
+            "tritangent_index": 0,
+            "coefficient_F3": 1
+          },
+          {
+            "tritangent_index": 42,
+            "coefficient_F3": 1
+          },
+          {
+            "tritangent_index": 22,
+            "coefficient_F3": 1
+          }
+        ]
+      },
+      {
+        "basis_index": 2,
+        "hesse_direction_class": 2,
+        "fiber_tritangents": [
+          {
+            "tritangent_index": 4,
+            "coefficient_F3": 2
+          },
+          {
+            "tritangent_index": 37,
+            "coefficient_F3": 2
+          },
+          {
+            "tritangent_index": 11,
+            "coefficient_F3": 2
+          }
+        ],
+        "ordinary_tritangents": [
+          {
+            "tritangent_index": 1,
+            "coefficient_F3": 1
+          },
+          {
+            "tritangent_index": 14,
+            "coefficient_F3": 1
+          },
+          {
+            "tritangent_index": 39,
+            "coefficient_F3": 1
+          }
+        ]
+      },
+      {
+        "basis_index": 3,
+        "hesse_direction_class": 3,
+        "fiber_tritangents": [
+          {
+            "tritangent_index": 4,
+            "coefficient_F3": 2
+          },
+          {
+            "tritangent_index": 18,
+            "coefficient_F3": 2
+          },
+          {
+            "tritangent_index": 7,
+            "coefficient_F3": 2
+          }
+        ],
+        "ordinary_tritangents": [
+          {
+            "tritangent_index": 2,
+            "coefficient_F3": 1
+          },
+          {
+            "tritangent_index": 19,
+            "coefficient_F3": 1
+          },
+          {
+            "tritangent_index": 9,
+            "coefficient_F3": 1
+          }
+        ]
+      },
+      {
+        "basis_index": 4,
+        "hesse_direction_class": 3,
+        "fiber_tritangents": [
+          {
+            "tritangent_index": 36,
+            "coefficient_F3": 2
+          },
+          {
+            "tritangent_index": 20,
+            "coefficient_F3": 2
+          },
+          {
+            "tritangent_index": 11,
+            "coefficient_F3": 2
+          }
+        ],
+        "ordinary_tritangents": [
+          {
+            "tritangent_index": 10,
+            "coefficient_F3": 1
+          },
+          {
+            "tritangent_index": 43,
+            "coefficient_F3": 1
+          },
+          {
+            "tritangent_index": 21,
+            "coefficient_F3": 1
+          }
+        ]
+      },
+      {
+        "basis_index": 5,
+        "hesse_direction_class": 1,
+        "fiber_tritangents": [
+          {
+            "tritangent_index": 36,
+            "coefficient_F3": 2
+          },
+          {
+            "tritangent_index": 37,
+            "coefficient_F3": 2
+          },
+          {
+            "tritangent_index": 7,
+            "coefficient_F3": 2
+          }
+        ],
+        "ordinary_tritangents": [
+          {
+            "tritangent_index": 33,
+            "coefficient_F3": 1
+          },
+          {
+            "tritangent_index": 8,
+            "coefficient_F3": 1
+          },
+          {
+            "tritangent_index": 40,
+            "coefficient_F3": 1
+          }
+        ]
+      },
+      {
+        "basis_index": 6,
+        "hesse_direction_class": 2,
+        "fiber_tritangents": [
+          {
+            "tritangent_index": 36,
+            "coefficient_F3": 2
+          },
+          {
+            "tritangent_index": 18,
+            "coefficient_F3": 2
+          },
+          {
+            "tritangent_index": 25,
+            "coefficient_F3": 2
+          }
+        ],
+        "ordinary_tritangents": [
+          {
+            "tritangent_index": 34,
+            "coefficient_F3": 1
+          },
+          {
+            "tritangent_index": 17,
+            "coefficient_F3": 1
+          },
+          {
+            "tritangent_index": 28,
+            "coefficient_F3": 1
+          }
+        ]
+      },
+      {
+        "basis_index": 7,
+        "hesse_direction_class": 2,
+        "fiber_tritangents": [
+          {
+            "tritangent_index": 31,
+            "coefficient_F3": 2
+          },
+          {
+            "tritangent_index": 20,
+            "coefficient_F3": 2
+          },
+          {
+            "tritangent_index": 7,
+            "coefficient_F3": 2
+          }
+        ],
+        "ordinary_tritangents": [
+          {
+            "tritangent_index": 5,
+            "coefficient_F3": 1
+          },
+          {
+            "tritangent_index": 44,
+            "coefficient_F3": 1
+          },
+          {
+            "tritangent_index": 24,
+            "coefficient_F3": 1
+          }
+        ]
+      },
+      {
+        "basis_index": 8,
+        "hesse_direction_class": 3,
+        "fiber_tritangents": [
+          {
+            "tritangent_index": 31,
+            "coefficient_F3": 2
+          },
+          {
+            "tritangent_index": 37,
+            "coefficient_F3": 2
+          },
+          {
+            "tritangent_index": 25,
+            "coefficient_F3": 2
+          }
+        ],
+        "ordinary_tritangents": [
+          {
+            "tritangent_index": 29,
+            "coefficient_F3": 1
+          },
+          {
+            "tritangent_index": 27,
+            "coefficient_F3": 1
+          },
+          {
+            "tritangent_index": 38,
+            "coefficient_F3": 1
+          }
+        ]
+      },
+      {
+        "basis_index": 9,
+        "hesse_direction_class": 1,
+        "fiber_tritangents": [
+          {
+            "tritangent_index": 31,
+            "coefficient_F3": 2
+          },
+          {
+            "tritangent_index": 18,
+            "coefficient_F3": 2
+          },
+          {
+            "tritangent_index": 11,
+            "coefficient_F3": 2
+          }
+        ],
+        "ordinary_tritangents": [
+          {
+            "tritangent_index": 30,
+            "coefficient_F3": 1
+          },
+          {
+            "tritangent_index": 16,
+            "coefficient_F3": 1
+          },
+          {
+            "tritangent_index": 13,
+            "coefficient_F3": 1
+          }
+        ]
+      },
+      {
+        "basis_index": 10,
+        "hesse_direction_class": 0,
+        "fiber_tritangents": [
+          {
+            "tritangent_index": 20,
+            "coefficient_F3": 2
+          },
+          {
+            "tritangent_index": 37,
+            "coefficient_F3": 2
+          },
+          {
+            "tritangent_index": 18,
+            "coefficient_F3": 2
+          }
+        ],
+        "ordinary_tritangents": [
+          {
+            "tritangent_index": 23,
+            "coefficient_F3": 1
+          },
+          {
+            "tritangent_index": 15,
+            "coefficient_F3": 1
+          },
+          {
+            "tritangent_index": 41,
+            "coefficient_F3": 1
+          }
+        ]
+      },
+      {
+        "basis_index": 11,
+        "hesse_direction_class": 0,
+        "fiber_tritangents": [
+          {
+            "tritangent_index": 25,
+            "coefficient_F3": 2
+          },
+          {
+            "tritangent_index": 7,
+            "coefficient_F3": 2
+          },
+          {
+            "tritangent_index": 11,
+            "coefficient_F3": 2
+          }
+        ],
+        "ordinary_tritangents": [
+          {
+            "tritangent_index": 6,
+            "coefficient_F3": 1
+          },
+          {
+            "tritangent_index": 12,
+            "coefficient_F3": 1
+          },
+          {
+            "tritangent_index": 26,
+            "coefficient_F3": 1
+          }
+        ]
+      }
+    ],
+    "relation_basis_digest": "sha256:281fb2ee00d586ca4bd69c4a3fcee470065a3957989164a0d65a6e080902fbc4",
+    "weight_enumerator_digest": "sha256:27b9ec25fecf76801669c86a4b7fdde7258f2cb78c6bc85e821a3349760fc196"
+  },
+  "kernel_firewall": {
+    "compiler_nullity24_coordinates": "safe36 compiler-target coordinates",
+    "cubic_line_nullity24_coordinates": "45 tritangent coordinates",
+    "equal_dimensions_imply_identification": false,
+    "identified_object": "Only the rank-12 reduced compiler image on ordinary36 is lifted, through the unique fiber9 correction, into the cubic line kernel."
+  },
+  "interpretation": "The three complex C3 characters remain distinct over Q(omega), but coalesce at the prime above 3. Their modular residue is not lost arbitrarily: it becomes twelve exact six-tritangent conservation laws organized as four Hesse direction classes. This supplies an arithmetic interface between the Clifford virtual-machine compiler and the Cartan cubic without identifying their unrelated 24-dimensional kernels.",
+  "external_prior_art_audit": {
+    "same_parameters_published": true,
+    "citation": "S. H. Saif and A. A. Alhomaidhi, Cyclic Codes over a Split Local Ring of Type (2,2), Mathematics 14 (2026) 2019",
+    "doi": "https://doi.org/10.3390/math14112019",
+    "published_construction": "a length-45 ternary Gray image from a length-9 cyclic code over a split cube-zero local ring",
+    "equivalence_to_present_code_checked": false,
+    "parameter_novelty_claimed": false,
+    "repository_increment": "the explicit embedding in the Cartan point-tritangent kernel, the ramified Clifford origin, the complete weight enumerator and minimum shell, and the AG(2,3) systematic form"
+  },
+  "boundary": "Exact finite arithmetic in the repository's frozen Clifford gauge. The [45,12,6]_3 code is an explicit subcode, not asserted to be a globally new code or a W(E6)-invariant submodule. Modular reduction is not a physical loss/noise model, and no particle or coupling interpretation is inferred.",
+  "parents": [
+    "data/w33_hesse36_full_clifford648_fourier_compiler.json",
+    "data/w33_e8_matter81_h27_address_operator_compiler.json",
+    "data/w33_steiner_trinification_qpsi_normalizer.json"
+  ],
+  "checks": {
+    "full_compiler_sparse_certificate_consumed": true,
+    "ramified_reduction_rank_is_12_and_nullities_are_24": true,
+    "reduced_gram_is_zero": true,
+    "twelve_support_triples_partition_ordinary36": true,
+    "compiler_image_is_contained_in_projected_cubic_kernel": true,
+    "all_twelve_fiber9_corrections_exist_uniquely": true,
+    "all_lifted_relations_annihilate_Cartan_incidence": true,
+    "lifted_code_is_45_12_6": true,
+    "minimum_shell_is_exactly_plus_minus_twelve_hexads": true,
+    "fiber_corrections_are_all_twelve_AG23_lines": true,
+    "systematic_weight_formula_reproduces_complete_enumerator": true,
+    "four_hesse_direction_gram_quotient_is_K4": true,
+    "two_dimension24_kernels_are_not_identified": true
+  }
+}

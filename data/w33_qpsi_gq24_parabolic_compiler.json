@@ -448,13 +448,21 @@
     "K81_target_dimension": 81,
     "invertible_H27_equivariant_intertwiner_exists": false,
     "invertible_K81_equivariant_compiler_exists": false,
-    "surviving_frontier": "Choose and justify a non-equivariant, proper-subgroup-covariant, or otherwise symmetry-changing root-coordinate dictionary."
+    "surviving_frontier": "The finite K-Fourier conversion is now explicit and minimally retypes 54 coordinates. The remaining task is to compose the frozen-root/address basis with that Fourier compiler and the operator chart, then supply a physical interaction for the retypings."
   },
-  "boundary": "The theorem identifies the 27 conjugate Qpsi charts and compiles a chosen clock on frame addresses. It does not physically select an anchor, identify observed generations, or select a symmetry-changing frozen-root-to-trinification operator dictionary. Full H27/K-equivariant conjugacies are ruled out at maximum ranks 9/27 and 27/81. The separate complete Steiner-atlas certificate now decides the monomial Pauli-algebra normalizer question uniformly across all 51840 charts.",
+  "minimal_symmetry_changing_compiler": {
+    "coordinate_system": "K-Fourier coordinates",
+    "symmetry_preserving_coordinates": 27,
+    "symmetry_changing_coordinates": 54,
+    "lower_bound_saturated": true,
+    "mapping_digest": "sha256:cb577548c5a894a996a1416d7eda1059bf817a31a0d7f513dd945cd799663aad"
+  },
+  "boundary": "The theorem identifies the 27 conjugate Qpsi charts and compiles a chosen clock on frame addresses. It does not physically select an anchor, identify observed generations, materialize the frozen-root-to-K-Fourier analysis map, or realize the 54 representation retypings dynamically. Full H27/K-equivariant conjugacies are ruled out at maximum ranks 9/27 and 27/81. The separate complete Steiner-atlas certificate now decides the monomial Pauli-algebra normalizer question uniformly across all 51840 charts.",
   "parents": [
     "data/w33_address_operator_h27_intertwiner_obstruction.json",
     "data/w33_scheduler_operator_k81_intertwiner_obstruction.json",
-    "data/w33_steiner_trinification_qpsi_normalizer.json"
+    "data/w33_steiner_trinification_qpsi_normalizer.json",
+    "data/w33_minimal_symmetry_changing_81_compiler.json"
   ],
   "checks": {
     "conventional_Qpsi_equals_anchor_formula": true,
@@ -466,6 +474,7 @@
     "formula_is_W_E6_equivariant": true,
     "H27_equivariant_intertwiner_is_rank_obstructed": true,
     "K81_equivariant_compiler_is_rank_obstructed": true,
-    "symmetry_changing_compiler_remains_open": true
+    "minimal_Fourier_coordinate_compiler_exists": true,
+    "minimal_54_retyping_lower_bound_is_saturated": true
   }
 }

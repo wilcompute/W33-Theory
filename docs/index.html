@@ -1874,6 +1874,65 @@
           unchanged and is stated in <a href="#numbers">Core Numbers</a>.</p>
         <div class="card-grid">
           <div class="card">
+            <div class="num">12 &rarr; 9 + 36</div>
+            <div class="label">An affine-holonomy virtual-machine encoder</div>
+            <div class="detail">The ramified cubic code has exact generator
+              <code>[2A | I12&otimes;(1,1,1)]</code>, where <code>A</code> is
+              the line-point matrix of <code>AG(2,3)</code>. Twelve logical
+              line trits produce nine global holonomy checks and twelve
+              private three-copy payloads. The full code is
+              <strong>[45,12,6]<sub>3</sub></strong>; puncturing two private
+              copies gives <strong>[21,12,4]<sub>3</sub></strong>. Its dual
+              splits as <strong>33 = 24 local + 9 global checks</strong> and
+              its hull has dimension 9. Minimum-shell incidence proves the
+              complete coordinate symmetry
+              <strong>S3<sup>12</sup> : AGL(2,3)</strong>, of order
+              940,369,969,152. These are classical Hamming guarantees, with
+              no hardware threshold or quantum-code claim.
+              <a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/2026-09-23_affine_holonomy_vm_code_architecture.md">Report and exact certificate</a>.</div>
+          </div>
+          <div class="card">
+            <div class="num">248 = 86 + 81 + 81</div>
+            <div class="label">Root-ordered E8 atlas and an optimal matter compiler</div>
+            <div class="detail">The matter chart now has an exact basis
+              <strong>81 = 73 cubic + 8 Fourier/magic</strong>. Representation
+              multiplicities bound every fully K-equivariant map to rank 27,
+              and an explicit K-Fourier permutation attains the resulting
+              lower bound: <strong>27 coordinates are preserved and 54 are
+              retyped</strong>. The same chart is embedded in the physical FI
+              grading as <code>I86 &oplus; B81 &oplus; conjugate(B81)</code>.
+              Grade-one rows are tied to the 81 frozen E8 roots and grade-two
+              rows to their ordered negatives, closing the previous formal-copy
+              gap. The atlas has rank 248 and FI trace 5. The explicit
+              root-to-Fourier analysis matrix, physical dynamics for the 54
+              retypings, and Chevalley bracket transport remain the live
+              boundaries.
+              <a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/2026-09-23_root_ordered_full_e8_hybrid_atlas.md">Report and exact certificate</a>.</div>
+          </div>
+          <div class="card">
+            <div class="num">[45,12,6]<sub>3</sub></div>
+            <div class="label">The ramified Clifford compiler becomes cubic holonomy</div>
+            <div class="detail">The exact full-Clifford Hesse compiler is twelve
+              qutrit Fourier blocks over <code>Q(&omega;)</code>. Reducing at
+              <code>(1&minus;&omega;)</code> sends <code>&omega;&rarr;1</code> in
+              <code>F3</code>, drops the rank <strong>36&rarr;12</strong>, and gives
+              zero Gram. In the frozen Clifford gauge, its twelve support
+              triples have unique corrections on the nine distinguished
+              tritangents. The corrected weight-six relations span an explicit
+              ternary <strong>[45,12,6]</strong> subcode of the Cartan-cubic
+              line-holonomy kernel. All <strong>3<sup>12</sup> = 531,441</strong>
+              words were enumerated: the 24 minimum words are exactly
+              &plusmn; the twelve generator hexads. Their Gram law is
+              <code>(J4&minus;I4)&otimes;J3</code>. More sharply, the fiber nine
+              is <code>AG(2,3)</code>, its corrections are all twelve affine
+              lines, and the code has systematic form
+              <code>[2A | I12&otimes;(1,1,1)]</code>. The parameters also occur
+              in a published split-ring Gray-image code, so parameter novelty
+              is not claimed. The two dimension-24 kernels in the
+              construction remain distinct; only the rank-12 image is bridged.
+              <a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/2026-09-23_ramified_hesse_cubic_holonomy_bridge.md">Report and exact certificate</a>.</div>
+          </div>
+          <div class="card">
             <div class="num">121 = 36 + 40 + 45</div>
             <div class="label">One cubic code contains the classical triangle and closes Qpsi normalization</div>
             <div class="detail">The <code>45&times;27</code> Cartan-cubic support
@@ -1892,8 +1951,9 @@
               separable normalizer, a three-state correction on Matter81.
               Full H27/K-equivariant address-to-operator conjugacies are
               excluded by sharp rank bounds <strong>9/27</strong> and
-              <strong>27/81</strong>; physical selection of a symmetry-changing
-              dictionary and gate availability remain open.
+              <strong>27/81</strong>. An explicit K-Fourier permutation now
+              preserves 27 coordinates and minimally retypes 54. Its frozen
+              root/address composition and physical interaction remain open.
               <a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/2026-09-22_steiner_trinification_qpsi_normalizer.md">Report and exact certificate</a>.</div>
           </div>
           <div class="card">
@@ -1911,8 +1971,8 @@
               register, the clock needs only equality and adjacency predicates.
               Full H27/K-equivariant address-to-operator conjugacies are ruled
               out at ranks <strong>9/27</strong> and <strong>27/81</strong>.
-              Physical anchor selection and a symmetry-changing compiler remain
-              open; the complete Steiner-atlas result above closes the finite
+              Physical anchor selection, the frozen-root-to-Fourier composition,
+              and a dynamical realization of the 54 retypings remain open; the complete Steiner-atlas result above closes the finite
               monomial normalizer question.
               <a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/2026-09-22_qpsi_gq24_parabolic_compiler.md">Report and executable certificate</a>.</div>
           </div>
@@ -1932,7 +1992,9 @@
               <code>M9&otimes;I9</code>: exactly the scalar FI C3. The
               sharp representation bounds rule out an equivariant
               address-to-operator change of basis (rank 9 on 27, rank 27 on
-              81). A symmetry-changing compiler remains open, while the complete
+              81). The finite K-Fourier compiler is now explicit and reaches the
+              minimum 54 retypings; composing it with the frozen root/address
+              basis and realizing it physically remain open. The complete
               Steiner atlas proves that no other power enters the normalizer in
               any compatible monomial chart.
               <a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/2026-09-21_e8_matter81_h27_address_operator_compiler.md">Report and executable evidence</a>.</div>

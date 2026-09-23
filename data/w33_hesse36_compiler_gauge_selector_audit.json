@@ -1,0 +1,67 @@
+{
+  "schema": "w33.hesse36_compiler_gauge_selector_audit.v2",
+  "status": "PASS_FULL_CLIFFORD_FOURIER_CHARACTER_SELECTOR_LEAVES_CONJUGATE_PAIR_REAL_CUBIC_SIGNS_CANNOT_FINISH_SELECTION",
+  "headline": "The Q8 bridge's 1,179,648 objectwise equivariant bijections and the full-Clifford Fourier compiler's six character-to-sheet assignments are different object types, not a before/after subset census. The complete full-Clifford intertwiner space has dimension seven. Within the Fourier ansatz there are exactly 3! assignments of the three C3 characters to the certified beta=0,1,2 sheets. Requiring beta=0 to carry the trivial character leaves (0,1,2) and (0,2,1), exchanged by complex conjugation. Real E6 cubic signs and integer Qpsi data cannot distinguish that pair.",
+  "object_type_firewall": {
+    "Q8_objectwise_equivariant_bijections": 1179648,
+    "Q8_objects": "permutation matrices / objectwise bijections",
+    "full_Clifford_intertwiner_space_dimension": 7,
+    "full_Clifford_objects": "linear Fourier intertwiners",
+    "Q8_bijections_contain_Fourier_assignments_as_subset": false,
+    "numeric_collapse_1179648_to_6_claimed": false
+  },
+  "character_assignment_selector": {
+    "safe_sheet_beta_order": [
+      0,
+      1,
+      2
+    ],
+    "Fourier_ansatz_character_assignments": 6,
+    "neutral_beta0_trivial_survivors": 2,
+    "survivors": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        2,
+        1
+      ]
+    ],
+    "relation": "complex conjugation omega <-> omega^2"
+  },
+  "canonical_cubic_signs": {
+    "full45": {
+      "plus": 22,
+      "minus": 23
+    },
+    "fiber9": {
+      "plus": 2,
+      "minus": 7
+    },
+    "ordinary36": {
+      "plus": 20,
+      "minus": 16
+    },
+    "coefficients_real": true
+  },
+  "selector_verdict": {
+    "real_E6_cubic_signs_select_unique_orientation": false,
+    "integer_Qpsi_or_matter_parity_select_unique_orientation": false,
+    "needed_next_observable": "a genuinely mu3-oriented phase/holonomy/chirality datum with a fixed orientation convention"
+  },
+  "boundary": "The six assignments classify a discrete choice inside the induced/Fourier ansatz; they are not the whole seven-dimensional full-Clifford intertwiner space and are not a subset reduction of the Q8 objectwise gauges. The final two assignments need not be physically equivalent; the certified real and integer observables simply cannot distinguish them.",
+  "checks": {
+    "Q8_and_Fourier_objects_are_not_conflated": true,
+    "full_Clifford_intertwiner_space_dimension7": true,
+    "beta_sheet_order_certified_0_1_2": true,
+    "six_Fourier_ansatz_character_assignments": true,
+    "neutral_sheet_leaves_two": true,
+    "two_are_complex_conjugates": true,
+    "ordinary_sign_split_20_16": true,
+    "real_signs_conjugation_blind": true,
+    "Qpsi_data_conjugation_blind": true
+  }
+}

@@ -57,10 +57,15 @@ def main(write: bool = True) -> dict:
     k81_obstruction = json.loads(
         (ROOT / "data/w33_scheduler_operator_k81_intertwiner_obstruction.json").read_text()
     )
+    minimal_compiler = json.loads(
+        (ROOT / "data/w33_minimal_symmetry_changing_81_compiler.json").read_text()
+    )
     assert h27_obstruction["intertwiner"]["maximum_rank"] == 9
     assert h27_obstruction["intertwiner"]["invertible_intertwiner_exists"] is False
     assert k81_obstruction["intertwiner"]["maximum_rank"] == 27
     assert k81_obstruction["intertwiner"]["invertible_equivariant_compiler_exists"] is False
+    assert minimal_compiler["compiler"]["symmetry_changing_coordinates"] == 54
+    assert minimal_compiler["compiler"]["lower_bound_saturated"] is True
     prior = load(
         ROOT / "analysis/w33_z6_objectwise_33_48_32_carrier.py",
         "qpsi_objectwise_prior",
@@ -232,15 +237,24 @@ def main(write: bool = True) -> dict:
             "invertible_H27_equivariant_intertwiner_exists": False,
             "invertible_K81_equivariant_compiler_exists": False,
             "surviving_frontier": (
-                "Choose and justify a non-equivariant, proper-subgroup-covariant, or "
-                "otherwise symmetry-changing root-coordinate dictionary."
+                "The finite K-Fourier conversion is now explicit and minimally retypes 54 "
+                "coordinates. The remaining task is to compose the frozen-root/address "
+                "basis with that Fourier compiler and the operator chart, then supply a "
+                "physical interaction for the retypings."
             ),
+        },
+        "minimal_symmetry_changing_compiler": {
+            "coordinate_system": "K-Fourier coordinates",
+            "symmetry_preserving_coordinates": 27,
+            "symmetry_changing_coordinates": minimal_compiler["compiler"]["symmetry_changing_coordinates"],
+            "lower_bound_saturated": minimal_compiler["compiler"]["lower_bound_saturated"],
+            "mapping_digest": minimal_compiler["compiler"]["mapping_digest"],
         },
         "boundary": (
             "The theorem identifies the 27 conjugate Qpsi charts and compiles a chosen "
             "clock on frame addresses. It does not physically select an anchor, identify "
-            "observed generations, or select a symmetry-changing frozen-root-to-trinification "
-            "operator dictionary. Full H27/K-equivariant conjugacies are ruled out at maximum "
+            "observed generations, materialize the frozen-root-to-K-Fourier analysis map, "
+            "or realize the 54 representation retypings dynamically. Full H27/K-equivariant conjugacies are ruled out at maximum "
             "ranks 9/27 and 27/81. The separate complete Steiner-atlas certificate now decides "
             "the monomial Pauli-algebra normalizer question uniformly across all 51840 charts."
         ),
@@ -248,6 +262,7 @@ def main(write: bool = True) -> dict:
             "data/w33_address_operator_h27_intertwiner_obstruction.json",
             "data/w33_scheduler_operator_k81_intertwiner_obstruction.json",
             "data/w33_steiner_trinification_qpsi_normalizer.json",
+            "data/w33_minimal_symmetry_changing_81_compiler.json",
         ],
         "checks": {
             "conventional_Qpsi_equals_anchor_formula": True,
@@ -259,7 +274,8 @@ def main(write: bool = True) -> dict:
             "formula_is_W_E6_equivariant": True,
             "H27_equivariant_intertwiner_is_rank_obstructed": True,
             "K81_equivariant_compiler_is_rank_obstructed": True,
-            "symmetry_changing_compiler_remains_open": True,
+            "minimal_Fourier_coordinate_compiler_exists": True,
+            "minimal_54_retyping_lower_bound_is_saturated": True,
         },
     }
     if write:

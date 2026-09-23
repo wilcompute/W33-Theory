@@ -409,10 +409,15 @@ def main(write: bool = True) -> dict:
     k81_obstruction = json.loads(
         (ROOT / "data/w33_scheduler_operator_k81_intertwiner_obstruction.json").read_text()
     )
+    minimal_compiler = json.loads(
+        (ROOT / "data/w33_minimal_symmetry_changing_81_compiler.json").read_text()
+    )
     assert h27_obstruction["intertwiner"]["maximum_rank"] == 9
     assert h27_obstruction["intertwiner"]["invertible_intertwiner_exists"] is False
     assert k81_obstruction["intertwiner"]["maximum_rank"] == 27
     assert k81_obstruction["intertwiner"]["invertible_equivariant_compiler_exists"] is False
+    assert minimal_compiler["compiler"]["symmetry_changing_coordinates"] == 54
+    assert minimal_compiler["compiler"]["lower_bound_saturated"] is True
     common = load(
         ROOT / "analysis/w33_pass4992_4999_common.py",
         "steiner_trinification_common",
@@ -928,10 +933,18 @@ def main(write: bool = True) -> dict:
             "invertible_H27_equivariant_intertwiner_exists": False,
             "invertible_K81_equivariant_compiler_exists": False,
             "surviving_frontier": (
-                "The finite normalizer is closed independently of the root gauge. A physical "
-                "root-coordinate compiler must be non-equivariant, proper-subgroup-covariant, "
-                "or otherwise symmetry-changing."
+                "The finite normalizer and the minimal K-Fourier conversion are closed. "
+                "The latter preserves 27 coordinates and retypes the provably minimal 54. "
+                "The remaining frontier is the explicit frozen-root/address-to-Fourier "
+                "composition and a physical interaction realizing those retypings."
             ),
+        },
+        "minimal_symmetry_changing_compiler": {
+            "coordinate_system": "K-Fourier coordinates",
+            "symmetry_preserving_coordinates": 27,
+            "symmetry_changing_coordinates": minimal_compiler["compiler"]["symmetry_changing_coordinates"],
+            "lower_bound_saturated": minimal_compiler["compiler"]["lower_bound_saturated"],
+            "mapping_digest": minimal_compiler["compiler"]["mapping_digest"],
         },
         "ownership_and_increment": {
             "classical_and_repo_prior": [
@@ -958,13 +971,15 @@ def main(write: bool = True) -> dict:
         "boundary": (
             "This exhausts Weyl-compatible monomial trinification charts and diagonal Qpsi "
             "powers. It does not select a physical chart or vacuum, prove that the one-cell "
-            "repair is dynamically available, select a symmetry-changing root-coordinate "
-            "compiler, or identify observed particles with individual weights. Full H27/K "
+            "repair is dynamically available, materialize the frozen-root/address-to-K-Fourier "
+            "analysis matrix, realize the minimal 54 representation retypings dynamically, "
+            "or identify observed particles with individual weights. Full H27/K "
             "equivariant basis conjugacies are already excluded by the rank-9/rank-27 obstructions."
         ),
         "parents": [
             "data/w33_address_operator_h27_intertwiner_obstruction.json",
             "data/w33_scheduler_operator_k81_intertwiner_obstruction.json",
+            "data/w33_minimal_symmetry_changing_81_compiler.json",
         ],
         "checks": {
             "incidence_rank21_nullity6": True,
@@ -984,7 +999,8 @@ def main(write: bool = True) -> dict:
             "minimal_interface_repair_is_one_phase_cell": True,
             "H27_equivariant_intertwiner_is_rank_obstructed": True,
             "K81_equivariant_compiler_is_rank_obstructed": True,
-            "symmetry_changing_compiler_remains_open": True,
+            "minimal_Fourier_coordinate_compiler_exists": True,
+            "minimal_54_retyping_lower_bound_is_saturated": True,
         },
     }
     if write:

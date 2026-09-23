@@ -103,5 +103,10 @@ def test_kernel_atlas_normalizer_and_repair_are_frozen():
     assert obstruction["K81_target_dimension"] == 81
     assert obstruction["invertible_H27_equivariant_intertwiner_exists"] is False
     assert obstruction["invertible_K81_equivariant_compiler_exists"] is False
-    assert "symmetry-changing" in obstruction["surviving_frontier"]
+    assert "54" in obstruction["surviving_frontier"]
+    minimal = out["minimal_symmetry_changing_compiler"]
+    assert minimal["coordinate_system"] == "K-Fourier coordinates"
+    assert minimal["symmetry_preserving_coordinates"] == 27
+    assert minimal["symmetry_changing_coordinates"] == 54
+    assert minimal["lower_bound_saturated"] is True
     assert all(out["checks"].values())

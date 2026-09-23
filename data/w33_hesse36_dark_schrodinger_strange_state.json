@@ -1,0 +1,60 @@
+{
+  "schema": "w33.hesse36_dark_schrodinger_strange_state.v1",
+  "status": "PASS_DARK_SCHRODINGER_MULTIPLICITY_RAY_IS_QUTRIT_STRANGE_CLIFFORD_IMAGE",
+  "headline": "The six-dimensional Schrodinger part of the rank-73 dark complement has a unique qutrit multiplicity ray. The four selected noncentral H27 Hesse directions have eigenvalue-one projectors whose stacked matrix has rank two, and their common kernel is the projective ray (1,-omega,0). Exactly, (1,-omega,0)=Z X^2 (0,1,-1), so this ray is a Clifford image of the repository's qutrit Strange magic state. The conjugate V_omega^2 sector carries the conjugate ray.",
+  "qutrit_convention": {
+    "weyl_relation": "Z X = omega X Z",
+    "selected_noncentral_directions": [
+      {"name": "omega X", "H27_coordinate": [0,1,1]},
+      {"name": "omega Z", "H27_coordinate": [1,0,1]},
+      {"name": "Z X", "H27_coordinate": [1,1,0]},
+      {"name": "omega^2 Z X^2", "H27_coordinate": [1,2,2]}
+    ],
+    "projector_formula": "A_d = I + rho(d) + rho(d)^2",
+    "stacked_projector_rank": 2,
+    "common_kernel_dimension": 1
+  },
+  "dark_multiplicity_ray": {
+    "unnormalized": ["1","-omega","0"],
+    "squared_norm": 2,
+    "annihilated_by_all_four_Hesse_projectors": true,
+    "interpretation": "right/multiplicity qutrit ray selecting the surviving left V_omega copy in the regular H27 module"
+  },
+  "strange_bridge": {
+    "repository_reference_state": "(|1>-|2>)/sqrt(2)",
+    "unnormalized_reference": ["0","1","-1"],
+    "exact_Clifford_word": "Z X^2",
+    "exact_identity": "(1,-omega,0) = Z X^2 (0,1,-1)",
+    "same_projective_Clifford_orbit": true,
+    "repository_strange_mana": "log(5/3)"
+  },
+  "dark8_reading": {
+    "formula": "chi_ext + chi_ext^2 + V_omega + V_omega^2",
+    "one_dimensional_part": "chi_ext + chi_ext^2",
+    "six_dimensional_part": "V_omega + V_omega^2",
+    "six_dimensional_multiplicity_data": "Strange ray plus its complex conjugate in the right qutrit factor"
+  },
+  "M36_firewall": {
+    "same_resource_as_M36_Q4_RAW": false,
+    "M36_carrier": "ququart/two-qubit Witting rays",
+    "this_carrier": "single-qutrit H27 multiplicity ray",
+    "M36_injection_boundary_changed": false
+  },
+  "compiler_consequence": "The root-level dark sector is no longer anonymous: its two 3D pieces are selected by a qutrit Strange/conjugate-Strange multiplicity pair, while its two 1D pieces are the nontrivial external C3 Fourier characters. This gives a natural Fourier-plus-magic basis for the eight modes that cubic incidence misses.",
+  "boundary": "The Clifford equivalence to the qutrit Strange state is exact finite linear algebra. It does not identify the dark ray with the separate M36 ququart resource, prove a physical magic-state injection route, or show that the dark root coordinates are dynamically populated.",
+  "parents": [
+    "data/w33_hesse36_e8_matter81_dark8_decomposition.json",
+    "data/w33_pass416_qutrit_distillation_search.json",
+    "data/w33_magic_economy.json"
+  ],
+  "checks": {
+    "ZX_equals_omega_XZ": true,
+    "four_order3_projectors": true,
+    "stacked_projector_rank2": true,
+    "unique_common_kernel_ray": true,
+    "ray_is_1_minusomega_0": true,
+    "exact_ZX2_strange_identity": true,
+    "strange_reference_certificate_loaded": true,
+    "M36_type_firewall": true
+  }
+}

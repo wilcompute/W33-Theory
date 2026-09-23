@@ -1,0 +1,73 @@
+{
+  "schema": "w33.hybrid81_operator_equivariance_budget.v1",
+  "status": "PASS_COMPLETE_81D_CHART_HAS_EXACT_54D_EQUIVARIANCE_DEFICIT_TO_OPERATOR_MODULE",
+  "headline": "The new 73+8 hybrid chart solves linear coordinate completeness but not the address/operator representation mismatch. Under the abstract K=H27 x C3 identification, the visible73 sector can map equivariantly to at most 24 operator dimensions and the dark8 sector to at most 3. The full maximum is therefore 27, leaving an exact 54-dimensional target equivariance deficit. Of the dark eight, only V_(omega,0) is operator-compatible; chi_ext, chi_ext^2 and V_(omega^2,0) are outside the operator irrep support in the frozen central orientation.",
+  "modules": {
+    "source_address": {
+      "description": "Reg(H27 x C3)",
+      "dimension": 81,
+      "one_dimensional_irreps": 27,
+      "three_dimensional_irreps": 6,
+      "three_dimensional_regular_multiplicity_each": 3
+    },
+    "operator": {
+      "description": "9 V_omega tensor Reg(C3)",
+      "dimension": 81,
+      "nonzero_irrep_multiplicities": {"S_1_0":9,"S_1_1":9,"S_1_2":9}
+    },
+    "visible73": {
+      "dimension": 73,
+      "operator_common_S1_multiplicities": {"S_1_0":2,"S_1_1":3,"S_1_2":3}
+    },
+    "dark8": {
+      "dimension": 8,
+      "profile": {"L_0_0_1":1,"L_0_0_2":1,"S_1_0":1,"S_2_0":1},
+      "operator_compatible": ["S_1_0"],
+      "operator_incompatible": ["L_0_0_1","L_0_0_2","S_2_0"]
+    }
+  },
+  "equivariant_map_budget": {
+    "Hom_dimensions": {
+      "visible73_to_operator81":72,
+      "dark8_to_operator81":9,
+      "full81_to_operator81":81
+    },
+    "maximum_ranks": {
+      "visible73_to_operator81":24,
+      "dark8_to_operator81":3,
+      "full81_to_operator81":27
+    },
+    "target_dimensions_outside_any_equivariant_image": {
+      "visible73":57,
+      "dark8":78,
+      "full81":54
+    },
+    "source_dimensions_forced_into_kernel": {
+      "visible73":49,
+      "dark8":5,
+      "full81":54
+    },
+    "full_equivariance_deficit":54
+  },
+  "compiler_consequence": "The remaining compiler problem is now quantitatively a representation conversion problem. At least 54 target dimensions cannot be reached by any K-equivariant map. Any invertible address-to-operator compiler must therefore use the Hesse/Fourier character twist, a changed group action, or another explicitly symmetry-changing mechanism on that deficit rather than searching for a hidden equivariant basis change.",
+  "count_collision_firewall": "The number 54 also occurs as the phase-decorated fiber-instruction sector in the 270 compiler. No objectwise identification between that instruction carrier and this representation-theoretic deficit is asserted here.",
+  "boundary": "This is an exact finite representation budget under the abstract identification of the two K factors. It does not construct the final symmetry-changing 81x81 address-to-operator matrix or assign particle families, masses, or a vacuum.",
+  "parents": [
+    "data/w33_scheduler_operator_k81_intertwiner_obstruction.json",
+    "data/w33_hesse36_e8_matter81_dark8_decomposition.json",
+    "data/w33_e8_matter81_hybrid_cubic_dark_basis.json",
+    "data/w33_e8_matter81_pauli243_restriction.json"
+  ],
+  "checks": {
+    "source_dimension81":true,
+    "operator_dimension81":true,
+    "visible_dimension73":true,
+    "dark_dimension8":true,
+    "visible_max_rank24":true,
+    "dark_max_rank3":true,
+    "full_max_rank27_reproduced":true,
+    "full_equivariance_deficit54":true,
+    "dark_common_only_Vomega_t0":true,
+    "fiber54_count_collision_firewalled":true
+  }
+}

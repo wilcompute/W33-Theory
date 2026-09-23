@@ -1,0 +1,63 @@
+{
+  "schema": "w33.hesse36_q8_equivariant_repair.v1",
+  "status": "PASS_Q8_RESTORES_OBJECTWISE_EQUIVARIANCE_BUT_LEAVES_1179648_GAUGES",
+  "headline": "The SL(2,3) obstruction is repaired exactly by its normal quaternion subgroup Q8. Restricting the ordinary Payne/Hesse 36 and the maximal compiler-safe 36 to Q8 gives the identical orbit decomposition 8+8+8+4+4+4. The 8-orbits are regular Q8 torsors and the 4-orbits are Q8/Z(Q8), so an objectwise Q8-equivariant bijection exists. One deterministic frozen-gauge bijection is constructed and checked on all 8*36 action pairs. It is not canonical: there are exactly 1,179,648 Q8-equivariant bijections.",
+  "group": {
+    "ambient_common_group": "SL(2,3)",
+    "ambient_order": 24,
+    "repair_subgroup": "Q8",
+    "order": 8,
+    "element_order_profile": {"1": 1, "2": 1, "4": 6},
+    "unique_central_involution": true,
+    "normal_sylow2_in_SL23": true,
+    "maximality_reason": "every element outside Q8 lies in an order-3 or order-6 coset; any subgroup containing an order-3 element sees the known permutation-character mismatch"
+  },
+  "orbit_structure": {
+    "ordinary36": [4, 4, 4, 8, 8, 8],
+    "compiler_safe36": [4, 4, 4, 8, 8, 8],
+    "regular_orbit_count": 3,
+    "regular_orbit_size": 8,
+    "quotient_orbit_count": 3,
+    "quotient_orbit_size": 4,
+    "four_orbit_stabilizer": "Z(Q8), order 2",
+    "eight_orbit_stabilizer": "trivial"
+  },
+  "explicit_bijection": {
+    "ordinary_canonical_index_to_safe_canonical_index": [1, 4, 6, 11, 14, 17, 18, 22, 25, 28, 30, 35, 0, 12, 24, 20, 33, 5, 27, 8, 23, 21, 29, 7, 26, 2, 13, 3, 19, 34, 15, 32, 10, 9, 16, 31],
+    "orbit_pair_records": [
+      {"size": 4, "ordinary_seed": 0, "safe_seed": 1},
+      {"size": 4, "ordinary_seed": 4, "safe_seed": 14},
+      {"size": 4, "ordinary_seed": 8, "safe_seed": 25},
+      {"size": 8, "ordinary_seed": 12, "safe_seed": 0},
+      {"size": 8, "ordinary_seed": 13, "safe_seed": 12},
+      {"size": 8, "ordinary_seed": 14, "safe_seed": 24}
+    ],
+    "all_288_equivariance_checks_pass": true,
+    "gauge_note": "canonical indices are lexicographic frozen-coordinate indices; the chosen orbit pairing and seed pairing are deterministic bookkeeping, not a physical selector"
+  },
+  "gauge_count": {
+    "regular_orbit_pairings": "3! * 8^3",
+    "quotient_orbit_pairings": "3! * 4^3",
+    "total_Q8_equivariant_bijections": 1179648,
+    "factorization": "2^17 * 3^2"
+  },
+  "consequence": "The two 36-state Hesse carriers have a genuine shared objectwise quaternionic core. The only obstruction to extending such a pairing from Q8 to the full physical SL(2,3) is the order-three qutrit sector. A future compiler therefore needs an order-three phase/shear completion of a Q8-equivariant seed, not a wholesale remapping of the 36 states.",
+  "boundary": "Q8 equivariance alone leaves 1,179,648 valid bijections and therefore does not select a physical compiler. The theorem does not claim that the ordinary tritangents and safe planes are the same objects, only that their restricted Q8 actions are objectwise isomorphic.",
+  "parents": [
+    "data/w33_hesse36_compiler36_sl23_obstruction.json",
+    "data/w33_maximal_compiler_symmetry_pappus.json",
+    "analysis/w33_pass371_naturality_and_the_clifford_match.py"
+  ],
+  "checks": {
+    "common_SL23_order24": true,
+    "Q8_order8_and_closed": true,
+    "Q8_order_profile_1_1_6": true,
+    "same_orbit_structure": true,
+    "four_orbits_have_central_stabilizer": true,
+    "eight_orbits_are_free": true,
+    "explicit_bijection_is_bijective": true,
+    "all_8x36_equivariance_checks": true,
+    "equivariant_bijection_count_1179648": true,
+    "order3_is_only_extension_obstruction": true
+  }
+}

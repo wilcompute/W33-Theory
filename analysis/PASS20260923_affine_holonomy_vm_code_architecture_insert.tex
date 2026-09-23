@@ -1,0 +1,42 @@
+% PASS20260923 -- affine-holonomy VM code architecture.
+\subsection*{The ramified cubic code is a $12$-trit affine-holonomy encoder}
+
+Let $A$ be the $12\times9$ line--point incidence matrix of $AG(2,3)$.
+After permuting coordinates, the ramified cubic code has generator
+\[
+\boxed{G_{45}=\left[,2A\ \middle|\
+I_{12}\otimes(1,1,1)\,\right]}.
+\]
+Thus twelve line trits are encoded into nine affine-point holonomy checks and
+twelve private three-copy payload blocks.  For every
+$c\in\mathbf F_3^{12}$,
+\[
+ \operatorname{wt}(cG_{45})
+ =3\operatorname{wt}(c)+\operatorname{wt}(cA).
+\]
+The full code is $[45,12,6]_3$.  Puncturing two copies in each private block
+gives
+\[
+G_{21}=[,2A\mid I_{12}\,],\qquad [21,12,4]_3.
+\]
+The dual code is $[45,33,2]_3$.  Its seventy-two weight-two words generate a
+canonical $24$-dimensional sum of twelve local private-triple difference
+codes; the remaining nine check dimensions are affine point-holonomy checks.
+The Euclidean hull of the full code has dimension nine.
+
+The minimum shell also determines the complete coordinate-permutation group.
+Its coordinate degrees recover the intrinsic $9+36$ split.  Exhaustion of all
+$9!$ point permutations gives the full affine-plane incidence group
+$AGL(2,3)$ of order $432$, while every private triple has an independent
+$S_3$ kernel.  Consequently
+\[
+\boxed{\operatorname{Aut}_{\rm perm}(C)
+\cong S_3^{12}\!:\!AGL(2,3),\qquad
+|\operatorname{Aut}_{\rm perm}(C)|=940369969152.}
+\]
+
+\paragraph{Scope firewall.}
+This is a classical ternary virtual-machine encoder and checker.  Its
+two-error correction and five-error detection statements are exact Hamming
+guarantees, not a stochastic threshold, hardware benchmark, or quantum-code
+claim.

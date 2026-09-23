@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>W33 maximal compiler symmetry: Hesse-Pappus controller</title>
+<style>
+body{font:16px/1.55 system-ui,sans-serif;max-width:960px;margin:40px auto;padding:0 20px}
+code{background:#f2f2f2;padding:.1em .3em;border-radius:4px}
+.exact{border-left:4px solid #198754;padding-left:14px}
+.warn{border-left:4px solid #d39e00;padding-left:14px}
+</style>
+</head>
+<body>
+<h1>Maximal address→operator compiler symmetry</h1>
+<p class="exact"><strong>Exact.</strong> For <code>K=H27_address × C3_external</code>, the address and operator 81-dimensional representations agree on a subgroup exactly when it avoids the characteristic commutator line. The maximal possible subgroup has order <strong>9</strong>, and exactly <strong>36</strong> maximal <code>C3²</code> choices exist.</p>
+<p>Those 36 choices form three 12-element center sheets over the 12 affine Hesse lines. Their incidence with the 36 noncentral <code>C3</code> subgroups has four connected components, each the 18-vertex Pappus graph.</p>
+<p>The coordinate law on each component is <code>c = α + β p</code> over <code>F3</code>, i.e. <code>AG(2,3)</code> with one parallel class removed.</p>
+<p class="warn"><strong>Firewall.</strong> This 36-set is not the classical 36 doily/double-six carrier: its natural order-3-intersection graph is 17-regular, not <code>SRG(36,20,10,12)</code>. The previously known Witting-packet Pappus graph also arises on a different carrier.</p>
+<p>Evidence: <code>analysis/w33_maximal_compiler_symmetry_pappus.py</code>, frozen certificate <code>data/w33_maximal_compiler_symmetry_pappus.json</code>.</p>
+</body>
+</html>

@@ -626,7 +626,14 @@
     "K81_target_dimension": 81,
     "invertible_H27_equivariant_intertwiner_exists": false,
     "invertible_K81_equivariant_compiler_exists": false,
-    "surviving_frontier": "The finite normalizer is closed independently of the root gauge. A physical root-coordinate compiler must be non-equivariant, proper-subgroup-covariant, or otherwise symmetry-changing."
+    "surviving_frontier": "The finite normalizer and the minimal K-Fourier conversion are closed. The latter preserves 27 coordinates and retypes the provably minimal 54. The remaining frontier is the explicit frozen-root/address-to-Fourier composition and a physical interaction realizing those retypings."
+  },
+  "minimal_symmetry_changing_compiler": {
+    "coordinate_system": "K-Fourier coordinates",
+    "symmetry_preserving_coordinates": 27,
+    "symmetry_changing_coordinates": 54,
+    "lower_bound_saturated": true,
+    "mapping_digest": "sha256:cb577548c5a894a996a1416d7eda1059bf817a31a0d7f513dd945cd799663aad"
   },
   "ownership_and_increment": {
     "classical_and_repo_prior": [
@@ -650,10 +657,11 @@
       "https://sites.lsa.umich.edu/idolga/wp-content/uploads/sites/1334/2024/08/CAG.21.pdf"
     ]
   },
-  "boundary": "This exhausts Weyl-compatible monomial trinification charts and diagonal Qpsi powers. It does not select a physical chart or vacuum, prove that the one-cell repair is dynamically available, select a symmetry-changing root-coordinate compiler, or identify observed particles with individual weights. Full H27/K equivariant basis conjugacies are already excluded by the rank-9/rank-27 obstructions.",
+  "boundary": "This exhausts Weyl-compatible monomial trinification charts and diagonal Qpsi powers. It does not select a physical chart or vacuum, prove that the one-cell repair is dynamically available, materialize the frozen-root/address-to-K-Fourier analysis matrix, realize the minimal 54 representation retypings dynamically, or identify observed particles with individual weights. Full H27/K equivariant basis conjugacies are already excluded by the rank-9/rank-27 obstructions.",
   "parents": [
     "data/w33_address_operator_h27_intertwiner_obstruction.json",
-    "data/w33_scheduler_operator_k81_intertwiner_obstruction.json"
+    "data/w33_scheduler_operator_k81_intertwiner_obstruction.json",
+    "data/w33_minimal_symmetry_changing_81_compiler.json"
   ],
   "checks": {
     "incidence_rank21_nullity6": true,
@@ -673,6 +681,7 @@
     "minimal_interface_repair_is_one_phase_cell": true,
     "H27_equivariant_intertwiner_is_rank_obstructed": true,
     "K81_equivariant_compiler_is_rank_obstructed": true,
-    "symmetry_changing_compiler_remains_open": true
+    "minimal_Fourier_coordinate_compiler_exists": true,
+    "minimal_54_retyping_lower_bound_is_saturated": true
   }
 }

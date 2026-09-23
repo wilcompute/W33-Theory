@@ -1,0 +1,88 @@
+{
+  "schema": "w33.maximal_compiler_symmetry_pappus.v1",
+  "status": "PASS_MAXIMAL_COMPILER_SYMMETRY_IS_36_ORDER9_PLANES_WITH_FOUR_PAPPUS_COMPONENTS",
+  "headline": "The full K=H27_address x C3 scheduler cannot act equivariantly on the landed operator carrier, but the maximal symmetry that can survive an invertible compiler is exact: order 9. There are exactly 36 maximal compiler-safe C3^2 planes. In the fixed Clifford gauge they are three sheets over the 12 affine Hesse lines, and their incidence with the 36 noncentral C3 subgroups is four disjoint Pappus configurations.",
+  "group": {
+    "K_order": 81,
+    "K_structure": "H27 x C3_external",
+    "derived_subgroup_order": 3,
+    "derived_subgroup": "Z(H27) x {0}",
+    "center_order": 9,
+    "abelianization": "F3^3"
+  },
+  "restriction_criterion": {
+    "statement": "address and operator 81-dimensional characters restrict identically to L iff L intersects [K,K] trivially",
+    "operator_character_support": "only [K,K]; values 81*omega^c",
+    "regular_character_support": "identity only",
+    "maximal_safe_subgroup_order": 9
+  },
+  "subgroup_census": {
+    "order3_total": 40,
+    "order3_safe": 39,
+    "order3_unsafe": 1,
+    "order9_total": 49,
+    "order9_safe": 36,
+    "order9_containing_derived": 13,
+    "order27_maximal_total": 13,
+    "order27_safe": 0
+  },
+  "safe_plane_geometry": {
+    "count": 36,
+    "structure": "C3^2",
+    "label_factorization": "4 projective H27 directions x 3 central lift phases x 3 complementary center slopes",
+    "center_sheet_sizes": [12, 12, 12],
+    "fixed_center_automorphism_group_order": 216,
+    "fixed_center_automorphism_orbit_sizes": [12, 12, 12],
+    "compiler_plane_order3_intersection_graph_degree": 17,
+    "pair_profile": {
+      "different_sheet_meeting_hesse_lines_intersection1": 324,
+      "same_sheet_meeting_hesse_lines_intersection3": 162,
+      "different_sheet_parallel_hesse_lines_intersection3": 108,
+      "same_sheet_parallel_hesse_lines_intersection3": 36
+    }
+  },
+  "hesse_duality": {
+    "affine_plane": "AG(2,3)",
+    "hesse_line_count": 12,
+    "parallel_classes": 4,
+    "lines_per_parallel_class": 3,
+    "selected_lift_phase_by_direction": {
+      "(0, 1)": 1,
+      "(1, 0)": 1,
+      "(1, 1)": 0,
+      "(1, 2)": 2
+    },
+    "line_formula": "<d,v>_symp = c - c0(d)",
+    "all_12_lines_recovered": true,
+    "interpretation": "the 12 noncentral H27 cyclic lifts are symplectic-dual to the 12 affine Hesse lines in the fixed physical lift gauge"
+  },
+  "pappus_controller": {
+    "noncentral_C3_points": 36,
+    "maximal_safe_planes": 36,
+    "incidence_edges": 108,
+    "point_degree": 3,
+    "plane_degree": 3,
+    "connected_components": 4,
+    "component_sizes": [18, 18, 18, 18],
+    "all_components_isomorphic_to_Pappus_graph": true,
+    "coordinate_law": "for a fixed H27 direction, noncentral C3 labels (c,p) lie on safe-plane blocks c=alpha+beta*p; this is AG(2,3) with one parallel class removed"
+  },
+  "ownership_and_firewalls": {
+    "prior_repo_pappus": "scripts/w33_witting_packet_foliation_incidence_audit.py already owns a different Pappus occurrence from pairwise affine-foliation leaf incidence",
+    "prior_repo_hesse36": "docs/PAYNE_HESSE_PACKET_DICTIONARY.md already owns the ordinary 36 as 12 x 3 phase-decorated Hesse-line lifts",
+    "classical_doily36": "GQ(2,4) has 36 GQ(2,2) hyperplanes in published prior art; no identification is made",
+    "double_six_firewall": "the natural compiler-plane order-3-intersection graph is 17-regular, not the repo's E6/double-six SRG(36,20,10,12), so the repeated count 36 is not an incidence identification"
+  },
+  "consequence": "The missing address-to-operator compiler should be searched as a symmetry-changing transform whose largest exact common control group is C3^2. The 36 maximal choices are organized by a three-sheet Hesse/Pappus controller rather than by the full H27 x C3 scheduler.",
+  "boundary": "Exact finite group/character/incidence theorem. It does not select one of the 36 safe planes physically, identify them with GQ(2,2) hyperplanes, or prove a Standard Model vacuum, continuum limit, or hardware realization.",
+  "checks": {
+    "character_restriction_iff_derived_avoided_on_maximal_candidates": true,
+    "maximal_safe_order_is_9": true,
+    "exactly_36_maximal_safe_planes": true,
+    "three_12_orbits_under_fixed_center_216": true,
+    "twelve_hesse_lines_recovered": true,
+    "safe_plane_intersection_law_checked_all_630_pairs": true,
+    "four_pappus_components": true,
+    "doily_double_six_count_collision_firewalled": true
+  }
+}

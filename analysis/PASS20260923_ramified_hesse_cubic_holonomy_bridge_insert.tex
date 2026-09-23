@@ -1,0 +1,71 @@
+% PASS20260923 -- ramified Hesse compiler / Cartan-cubic holonomy bridge.
+\subsection*{The ramified Clifford compiler lifts to a ternary $[45,12,6]_3$ cubic-holonomy code}
+
+Let $T_{36}$ be the exact full-Clifford Hesse compiler.  Over
+$\mathbf Q(\omega)$ it is a direct sum of twelve three-point Fourier
+transforms and satisfies
+\[
+ T_{36}^{*}T_{36}=3I_{36}.
+\]
+Reduce its Eisenstein coefficients at the ramified prime
+$\pi=1-\omega$.  Since
+\[
+ \mathbf Z[\omega]/(1-\omega)\cong\mathbf F_3,
+ \qquad \omega\longmapsto1,
+\]
+each Fourier block collapses to an all-ones matrix.  The reduced compiler
+$\overline T_{36}$ has
+\[
+ \operatorname{rank}_{\mathbf F_3}\overline T_{36}=12,
+ \qquad
+ \dim\ker\overline T_{36}
+ =\dim\ker\overline T_{36}^{T}=24,
+ \qquad
+ \overline T_{36}^{T}\overline T_{36}=0.
+\]
+Its twelve distinct column supports are triples which partition the ordinary
+$36$ tritangents, three triples in each of the four noncentral Hesse
+directions.
+
+The compiler nullity is on safe-plane coordinates and is not identified with
+the independent $24$-dimensional line kernel of the $27\times45$ Cartan-cubic
+incidence matrix.  The exact bridge uses only
+$\operatorname{im}\overline T_{36}$.  In the frozen Clifford gauge this
+$12$-space lies in the ordinary-$36$ projection of the cubic line kernel.
+The incidence submatrix on the distinguished fiber nine has rank nine, so
+every reduced Fourier triple admits a unique fiber correction.
+
+The twelve corrected relations each contain three ordinary and three fiber
+tritangents.  They span
+\[
+ \boxed{R_{12}\subseteq\ker_{\mathbf F_3}C_{27\times45},
+ \qquad R_{12}\cong[45,12,6]_3.}
+\]
+Exhaustion of all $3^{12}=531441$ words proves that the minimum shell consists
+of exactly the $24$ nonzero scalar multiples of the twelve generator hexads.
+Every ordinary tritangent occurs once across the basis and every fiber
+tritangent occurs four times.  The generator Gram matrix has rank three and,
+after grouping by Hesse direction, is
+\[
+ (J_4-I_4)\otimes J_3.
+\]
+More precisely, the fiber nine is the affine plane
+$H_{27}/Z(H_{27})\cong AG(2,3)$ and the twelve correction supports are all
+twelve affine lines, with coefficient $2$ on each line.  The ordinary parts
+are disjoint triples, so after permuting coordinates
+\[
+ G=\left[,2A_{AG(2,3)}\ \middle|\
+ I_{12}\otimes(1,1,1)\,\right],
+ \qquad
+ \operatorname{wt}(cG)=3\operatorname{wt}(c)
+ +\operatorname{wt}(cA_{AG(2,3)}).
+\]
+This formula independently reproduces the complete enumerator.
+
+\paragraph{Scope firewall.}
+This is a finite arithmetic bridge in a fixed Clifford gauge.  The two
+dimension-$24$ kernels remain different objects; no $W(E_6)$-invariance,
+physical noise process, particle assignment, or global coding-theory novelty
+is claimed.  In particular, the parameters $[45,12,6]_3$ also occur in a
+published split-local-ring Gray-image code; equivalence with that unrelated
+construction has not been tested.

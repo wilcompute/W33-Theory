@@ -83,9 +83,18 @@ def test_address_execution_and_qpsi_firewalls_remain_visible():
     assert obstruction["K81_maximum_rank"] == 27
     assert obstruction["K81_target_dimension"] == 81
     assert obstruction["invertible_K81_equivariant_compiler_exists"] is False
-    assert "symmetry-changing" in obstruction["surviving_frontier"]
+    assert "54" in obstruction["surviving_frontier"]
+
+    minimal = checked["minimal_symmetry_changing_compiler"]
+    assert minimal["coordinate_system"] == "K-Fourier coordinates"
+    assert minimal["symmetry_preserving_coordinates"] == 27
+    assert minimal["symmetry_changing_coordinates"] == 54
+    assert minimal["symmetry_change_lower_bound"] == 54
+    assert minimal["lower_bound_saturated"] is True
 
     checks = checked["checks"]
     assert checks["H27_equivariant_coordinate_intertwiner_exists"] is False
     assert checks["full_K_equivariant_compiler_exists"] is False
-    assert checks["symmetry_changing_coordinate_dictionary_left_open"] is True
+    assert checks["minimal_Fourier_coordinate_compiler_exists"] is True
+    assert checks["minimal_Fourier_coordinate_compiler_retypes_exactly_54"] is True
+    assert checks["frozen_root_to_Fourier_composition_remains_frontier"] is True

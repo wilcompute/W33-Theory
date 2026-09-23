@@ -88,9 +88,12 @@ Weyl-compatible monomial factorizations and proves that only powers (0,4,8)
 normalize the Pauli execution algebra.  Parallel representation audits also
 prove that the missing root-gauge map cannot be an equivariant basis
 conjugacy: the maximum ranks are 9 on the 27-dimensional H27 modules and 27
-on the 81-dimensional K modules.  A physical compiler must instead choose a
-non-equivariant or proper-subgroup-covariant dictionary, but it is no longer
-needed to answer that finite monomial normalizer question.
+on the 81-dimensional K modules.  A later exact construction supplies a
+K-Fourier-coordinate permutation compiler that preserves 27 coordinates and
+retypes the minimum possible 54.  The remaining task is to materialize and
+compose the frozen-root/address-to-Fourier analysis map and to realize those
+retypings physically; neither is needed to answer the finite monomial
+normalizer question.
 
 ## Ownership and external checks
 
@@ -107,7 +110,8 @@ art.  No claim of novelty is made for those ingredients separately.
 
 Scope: this is an exact finite representation/incidence/compiler theorem.  It
 does not physically select an anchor, assign observed generations, determine
-a vacuum, or select the symmetry-changing address-to-operator dictionary.
+a vacuum, materialize the frozen-root-to-Fourier analysis matrix, or realize
+the 54 representation retypings dynamically.
 Full H27/K equivariance is already ruled out by the rank obstructions.  Its
 formerly open monomial normalizer follow-up is closed by
 \`analysis/w33_steiner_trinification_qpsi_normalizer.py\`.

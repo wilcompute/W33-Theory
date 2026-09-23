@@ -205,13 +205,16 @@ address module to the operator module has rank at most 9.  On the full
 81-dimensional scheduler/execution carriers every
 K=(H27 x C3)-equivariant map has rank at most 27.  Both bounds are sharp and
 exclude an invertible equivariant basis conjugacy, even after automorphism
-twists.  The frozen-root compiler must therefore be non-equivariant, covariant
-only under a proper common subgroup, or formulated after replacing or
-enlarging one of the actions.  It must record which symmetry it changes.
+twists.  The subsequent Fourier-coordinate construction closes the finite
+conversion problem: an explicit 81 by 81 permutation preserves the 27
+operator-compatible coordinates and retypes the other 54.  This saturates the
+lower bound 81 minus 27, so no compiler can change fewer representation types.
 
-That compiler would select the physically realized chart and compile each
-cubic coset instruction into an explicit operator on active and multiplicity
-registers.  It is no longer needed for the monomial normalizer yes/no question:
+The remaining construction is narrower: materialize the frozen-root/address
+to K-Fourier analysis matrix, compose it with the minimal permutation and the
+trinification operator chart, then realize those 54 retypings through a
+permitted interaction while preserving coherence and the frozen FI
+orientation.  This composition is no longer needed for the monomial normalizer yes/no question:
 the all-chart certificate closes that question uniformly and leaves only the
 FI/common-H27 (C_3).  The phase-held-fixed Clifford scheduler census does not
 say that Fourier or quadratic-phase gates permute the frozen root basis. The
