@@ -38,7 +38,7 @@ affine directions. The verifier proves:
     parent's odd transposition on null rays.
 
 Important boundary:
-rho lands in SO(3,3) even when det(g)=-1. Therefore "odd" in the four-ray S4
+rho lands in SO_3(F3)=SO(Q_hull) even when det(g)=-1. Therefore "odd" in the four-ray S4
 action is NOT the same notion as determinant -1 in the 3D orthogonal module.
 This is finite quadratic geometry over F3, not a continuum Lorentz/spin
 structure or a physical CPT theorem.
