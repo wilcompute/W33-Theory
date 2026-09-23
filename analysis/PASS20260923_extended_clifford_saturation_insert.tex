@@ -1,0 +1,90 @@
+% 2026-09-23 — q=3 extended-Clifford symmetry saturation.
+\subsection*{Qutrit Clifford symmetry uniquely saturates the Heisenberg bulk at \(p=3\)}
+
+The parallel point-stabilizer theorem identifies the full local W33 stabilizer as
+\[
+3_+^{1+2}:GL(2,3)
+\]
+of order \(1296\), with determinant-one Clifford half
+\[
+3_+^{1+2}:SL(2,3)
+\]
+of order \(648\).  An independent coordinate audit now welds that statement
+directly to the older Pass-408 Heisenberg bulk automorphism theorem.
+
+Write the qutrit Pauli normal form as
+\[
+Z^aX^b\omega^c\leftrightarrow(a,b,c),
+\]
+so that
+\[
+(a,b,c)(A,B,C)=(a+A,b+B,c+C-bA)
+\pmod 3.
+\]
+The gauge
+\[
+\boxed{\quad u=(a,b),\qquad z=c+2ab\quad}
+\]
+turns this into the alternating-voltage Heisenberg law
+\[
+(u,z)(v,w)=(u+v,z+w+\omega(u,v)),
+\]
+with precisely the Pass-408 form
+\[
+\omega((x,y),(x',y'))=yx'-xy'.
+\]
+Consequently every \(M\in GL(2,3)\) acts by
+\[
+(u,z)\longmapsto(Mu,\det(M)z),
+\]
+and composing with left Heisenberg translation gives
+\[
+\boxed{
+(u,z)\longmapsto
+\bigl(Mu+a,\det(M)z-\omega(Mu,a)+c\bigr),
+}
+\]
+exactly the frozen Pass-408 graph-automorphism formula.  The verifier compares
+all \(1296\cdot27=34992\) vertex images and obtains the identical complete
+permutation set.
+
+This comparison exposes an all-odd-prime selection theorem.  Pass 408 gives
+\[
+\operatorname{Aut}(\Gamma_p)=H_p:GL(2,p)
+\]
+for every odd prime \(p\), whereas the unitary/anti-unitary extended Clifford
+normalizer uses
+\[
+ESL(2,p)=\{M\in GL(2,p):\det M=\pm1\}.
+\]
+Thus, retaining the Pauli phase centre,
+\[
+\operatorname{ExtCliff}_p=H_p:ESL(2,p).
+\]
+Because the determinant map onto \(\mathbb F_p^\times\) has equal fibres,
+\[
+\boxed{
+[\operatorname{Aut}(\Gamma_p):\operatorname{ExtCliff}_p]
+=
+\frac{p-1}{2}.
+}
+\]
+Hence
+\[
+\boxed{
+\operatorname{ExtCliff}_p=\operatorname{Aut}(\Gamma_p)
+\quad\Longleftrightarrow\quad p=3.
+}
+\]
+Equivalently, \(\mathbb F_3^\times=\{\pm1\}\), so at the qutrit prime every
+linear similitude is already symplectic or anti-symplectic.  At \(p=5\), for
+example, the determinant classes \(2\) and \(3\) supply genuine graph
+automorphisms outside the extended Clifford group, giving index \(2\).
+
+\paragraph{Evidence boundary.}
+The Pass-408 full graph group and the current qutrit Clifford action are matched
+by an explicit coordinate/permutation intertwiner, not by order alone.  The
+odd-prime saturation criterion is a finite symmetry theorem.  Treating that
+criterion as a physical selection law would be an additional assumption; it
+does not by itself derive particle generations, spacetime dimension, CPT, the
+Standard Model, or a measured coupling.
