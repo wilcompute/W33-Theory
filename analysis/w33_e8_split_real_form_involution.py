@@ -124,6 +124,7 @@ def main(write=True):
     sc=json.loads((ROOT/"artifacts/e8_structure_constants_w33_discrete.json").read_text())
     comp=json.loads((ROOT/"data/w33_e8_full_hybrid_chevalley_compiler.json").read_text())
     charge=json.loads((ROOT/"data/w33_e8_hybrid_charge_conjugation.json").read_text())
+    meta=json.loads((ROOT/"extracted_v13/W33-Theory-master/artifacts/e8_root_metadata_table.json").read_text())
     assert sc["basis"]["n"]==248 and sc["basis"]["cartan_dim"]==8
     roots=[tuple(map(int,r)) for r in sc["basis"]["roots"]]
     rmap={r:8+i for i,r in enumerate(roots)}
@@ -176,6 +177,24 @@ def main(write=True):
         if a<neg[a]:rootK.append(killing(sc,a,neg[a]))
     hist={str(v):rootK.count(v) for v in sorted(set(rootK))}
     assert hist=={"-60":56,"60":64}
+
+    # Firewall a tempting but false objectwise identification with the standard
+    # 112+128 D8/half-spinor root split.  In this frozen Chevalley root-vector
+    # gauge, the sign of K(e_alpha,e_-alpha) mixes both standard root types.
+    byorbit={tuple(map(int,r["root_orbit"])):r for r in meta["rows"]}
+    type_by_K={}
+    for a in range(8,248):
+        if a>neg[a]:continue
+        row=byorbit[roots[a-8]]
+        k2=tuple(map(int,row["root_k2"]))
+        typ="D8_integer" if all(x%2==0 for x in k2) else "half_spinor"
+        kval=killing(sc,a,neg[a])
+        key=f"{typ}|{kval}"
+        type_by_K[key]=type_by_K.get(key,0)+1
+    assert type_by_K=={
+      "D8_integer|60":32,"D8_integer|-60":24,
+      "half_spinor|60":32,"half_spinor|-60":32,
+    }
     # For delta=1+2omega, delta^2=-3.  Fixed Cartan directions delta*h
     # reverse the positive Cartan sign; each fixed root plane retains sign K.
     positive=2*hist["60"]+hneg
@@ -221,7 +240,9 @@ def main(write=True):
         "fixed_real_form_inertia":{"positive":positive,"negative":negative,"zero":0},
         "signature_difference":positive-negative,
         "real_form":"E8(8), split real form",
-        "fixed_field_basis_note":"delta=1+2omega obeys conjugate(delta)=-delta and delta^2=-3; fixed Cartan directions are delta*h_i"
+        "fixed_field_basis_note":"delta=1+2omega obeys conjugate(delta)=-delta and delta^2=-3; fixed Cartan directions are delta*h_i",
+        "root_type_vs_pairing_sign_census":type_by_K,
+        "root_type_firewall":"The 120/128 Cartan decomposition has the standard so(16)+spinor dimensions, but K(e_alpha,e_-alpha) sign is not the objectwise D8/half-spinor selector in this frozen Chevalley gauge."
       },
       "hybrid_transport":{
         "all_81_grade1_roots_pair_with_exact_grade2_negatives":True,
@@ -237,7 +258,8 @@ def main(write=True):
       "parents":[
         "artifacts/e8_structure_constants_w33_discrete.json",
         "data/w33_e8_full_hybrid_chevalley_compiler.json",
-        "data/w33_e8_hybrid_charge_conjugation.json"
+        "data/w33_e8_hybrid_charge_conjugation.json",
+        "extracted_v13/W33-Theory-master/artifacts/e8_root_metadata_table.json"
       ],
       "checks":{
         "root_negation_is_bijection":True,
@@ -249,6 +271,7 @@ def main(write=True):
         "all_81_matter_root_negations_aligned":True,
         "39_hybrid_row_sign_mismatches_expose_nontrivial_correction":True,
         "neutral_block_not_pointwise_fixed":True,
+        "D8_spinor_objectwise_sign_identification_firewalled":True,
         "physics_not_overclaimed":True
       }
     }
