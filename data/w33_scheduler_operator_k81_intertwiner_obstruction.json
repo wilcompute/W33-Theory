@@ -1,0 +1,50 @@
+{
+  "schema": "w33.scheduler_operator_k81_intertwiner_obstruction.v1",
+  "status": "PASS_FULL_81_ADDRESS_OPERATOR_EQUIVARIANT_COMPILER_RANK_OBSTRUCTION",
+  "headline": "The obstruction persists on the full 81-root VM chart. The regular scheduler module for K=H27_address x C3_external_shift and the operator module (9 V_omega) tensor Reg(C3) are non-isomorphic. Every K-equivariant 81x81 address-to-operator map has rank at most 27, so the frozen ((a,b,c),p) -> ((m,q,p)) compiler cannot be an invertible equivariant change of basis.",
+  "group": {
+    "K_order": 81,
+    "structure": "H27 x C3_external_shift",
+    "derived_subgroup_order": 3,
+    "derived_subgroup": "Z(H27) x {0}",
+    "derived_subgroup_characteristic": true
+  },
+  "address_module": {
+    "dimension": 81,
+    "representation": "regular K-module",
+    "derived_center_spectrum": {"1": 27, "omega": 27, "omega^2": 27}
+  },
+  "operator_module": {
+    "dimension": 81,
+    "representation": "(9 V_omega) tensor Reg(C3_external_shift)",
+    "derived_center_spectrum": {"omega": 81},
+    "restriction_source": "matter81 trinification H27 plus physical external qutrit shift"
+  },
+  "intertwiner": {
+    "Hom_dimension": 81,
+    "maximum_rank": 27,
+    "target_dimension": 81,
+    "invertible_equivariant_compiler_exists": false,
+    "rank_bound_sharp": true,
+    "automorphism_twist_can_remove_obstruction": false,
+    "reason": "[K,K]=Z(H27)x{0} is characteristic. Its nontrivial element has 27+27+27 eigenspaces in the regular address module but is scalar on the operator matter81 module."
+  },
+  "consequence": "The 81-root address/operator compiler must be symmetry-changing rather than a K-equivariant basis conjugacy. The external qutrit label does not repair the 27-dimensional H27 mismatch; it lifts the rank ceiling from 9 to 27 while the target dimension lifts from 27 to 81.",
+  "boundary": "This does not forbid a bijective non-equivariant root-coordinate dictionary, a compiler covariant only under a smaller common subgroup, or a larger correspondence that changes the scheduler action. It also does not decide Qpsi normalizer membership by itself.",
+  "parents": [
+    "data/w33_address_operator_h27_intertwiner_obstruction.json",
+    "data/w33_address_operator_h27_roles.json",
+    "data/w33_e8_matter81_pauli243_restriction.json"
+  ],
+  "checks": {
+    "K_order_81": true,
+    "derived_subgroup_order_3": true,
+    "derived_subgroup_is_characteristic": true,
+    "address_derived_center_spectrum_27_27_27": true,
+    "operator_derived_center_is_scalar": true,
+    "Hom_dimension_81": true,
+    "maximum_equivariant_rank_27": true,
+    "no_invertible_81x81_equivariant_compiler": true,
+    "automorphism_twist_does_not_help": true
+  }
+}
