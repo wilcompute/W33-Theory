@@ -1,0 +1,36 @@
+{
+  "schema": "w33.e8_full_graded_hybrid_atlas.v1",
+  "status": "PASS_FULL_E8_VECTOR_ATLAS_IS_I86_PLUS_HYBRID81_PLUS_CONJUGATE_HYBRID81",
+  "headline": "The completed 81-state hybrid chart lifts canonically to both E8 matter grades. The physical FI grading is 248=86+81+81; the grade-1 block uses the landed cubic-plus-dark hybrid basis, the grade-2 block uses its exact Q(omega) conjugate, and the neutral E6+A2 block uses I86. The block atlas has rank 248 and FI-center trace 5.",
+  "grading": {
+    "branching": "248=(78,1)+(1,8)+(27,3)+(27bar,3bar)",
+    "dimensions": {"g0":86,"g1":81,"g2":81,"total":248},
+    "FI_center_eigenvalues": {"g0":"1","g1":"omega","g2":"omega^2"},
+    "FI_center_trace_Qomega_pair": [5,0],
+    "FI_center_trace": "5"
+  },
+  "atlas": {
+    "formula": "I86 direct_sum B81 direct_sum conjugate(B81)",
+    "block_ranks": [86,81,81],
+    "rank": 248,
+    "grade1_digest": "sha256:d61fb8e8982a5a394d32a112a150896266ef7ecf0ae9e1806087fc36d834c125",
+    "grade2_conjugate_digest": "sha256:c9edf314a841138fc6b401b4423f60fe4d6e7d6ee09151388c2b1a1746bafa0c",
+    "atlas_descriptor_digest": "sha256:bd2390b4676d487af40be06317bf7be9a6225048b867e0af77114d924f47652f",
+    "grade2_rule": "field conjugation omega <-> omega^2 of every grade1 hybrid coordinate"
+  },
+  "physics_reading": "The finite matter compiler now has a charge-conjugate partner and sits inside the exact E8 FI grading. Matter and antimatter hybrid coordinates are related by field conjugation, while the E6+A2 gauge-neutral sector remains a separate 86-dimensional block.",
+  "boundary": "This is a full E8 vector-space coordinate atlas, not yet a hybrid-coordinate Chevalley multiplication table. Brackets g1 x g1 -> g2, g2 x g2 -> g1 and g1 x g2 -> g0 remain to be transported explicitly before calling this a full Lie-algebra compiler.",
+  "parents": [
+    "data/w33_physical_fi_e6_a2_z3_grading.json",
+    "data/w33_e8_matter81_hybrid_cubic_dark_basis.json"
+  ],
+  "checks": {
+    "grading_86_81_81": true,
+    "grade1_digest_replayed": true,
+    "grade2_exact_conjugate": true,
+    "conjugation_preserves_rank81": true,
+    "block_rank248": true,
+    "FI_center_trace5": true,
+    "Chevalley_bracket_not_claimed": true
+  }
+}
