@@ -28,6 +28,12 @@ on:
       - 'analysis/w33_h27_cubic_representation_transducer.py'
       - 'analysis/w33_dark8_g2_branching_shadow.py'
       - 'analysis/w33_e8_hybrid_charge_conjugation.py'
+      - 'analysis/w33_e6_cubic_hybrid81_transport.py'
+      - 'analysis/w33_e8_full_hybrid_chevalley_compiler.py'
+      - 'analysis/w33_dark_strange_golay11_ft_lane.py'
+      - 'analysis/w33_dark8_g2_external_c3_no_go.py'
+      - 'analysis/w33_hesse36_photonic_process_calibration_theorem.py'
+      - 'tools/bt1575_full_protocol_table_for_paper.py'
       - 'data/w33_address_operator_h27_intertwiner_obstruction.json'
       - 'data/w33_scheduler_operator_k81_intertwiner_obstruction.json'
       - 'data/w33_maximal_compiler_symmetry_pappus.json'
@@ -52,6 +58,11 @@ on:
       - 'data/w33_h27_cubic_representation_transducer.json'
       - 'data/w33_dark8_g2_branching_shadow.json'
       - 'data/w33_e8_hybrid_charge_conjugation.json'
+      - 'data/w33_e6_cubic_hybrid81_transport.json'
+      - 'data/w33_e8_full_hybrid_chevalley_compiler.json'
+      - 'data/w33_dark_strange_golay11_ft_lane.json'
+      - 'data/w33_dark8_g2_external_c3_no_go.json'
+      - 'data/w33_hesse36_photonic_process_calibration_theorem.json'
       - 'analysis/PASS20260922_address_operator_h27_intertwiner_obstruction_insert.tex'
       - 'analysis/PASS20260922_scheduler_operator_k81_obstruction_insert.tex'
       - 'analysis/PASS20260922_maximal_compiler_symmetry_pappus_insert.tex'
@@ -61,6 +72,8 @@ on:
       - 'analysis/PASS20260923_dark_strange_hybrid81_insert.tex'
       - 'analysis/PASS20260923_execute_all5_plus3_physics_insert.tex'
       - 'analysis/2026-09-23_execute_all5_plus3_physics_frontier.md'
+      - 'analysis/PASS20260923_hybrid_lie_golay_calibration_insert.tex'
+      - 'analysis/2026-09-23_execute_all5_hybrid_lie_golay_calibration.md'
       - 'analysis/W33_SHARED_FRONTIER_TAIL.tex'
       - 'tests/test_w33_address_operator_h27_intertwiner_obstruction.py'
       - 'tests/test_w33_scheduler_operator_k81_intertwiner_obstruction.py'
@@ -86,6 +99,11 @@ on:
       - 'tests/test_w33_h27_cubic_representation_transducer.py'
       - 'tests/test_w33_dark8_g2_branching_shadow.py'
       - 'tests/test_w33_e8_hybrid_charge_conjugation.py'
+      - 'tests/test_w33_e6_cubic_hybrid81_transport.py'
+      - 'tests/test_w33_e8_full_hybrid_chevalley_compiler.py'
+      - 'tests/test_w33_dark_strange_golay11_ft_lane.py'
+      - 'tests/test_w33_dark8_g2_external_c3_no_go.py'
+      - 'tests/test_w33_hesse36_photonic_process_calibration_theorem.py'
       - 'tests/test_w33_shared_frontier_tail_integrity.py'
       - '.github/workflows/w33_sept22_compiler_symmetry.yml'
   workflow_dispatch:
@@ -98,7 +116,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python -m pip install --upgrade pip networkx sympy pytest
+      - run: python -m pip install --upgrade pip networkx sympy numpy pytest
       - name: exact replay suite
         run: >-
           python -m pytest -q
@@ -126,7 +144,24 @@ jobs:
           tests/test_w33_h27_cubic_representation_transducer.py
           tests/test_w33_dark8_g2_branching_shadow.py
           tests/test_w33_e8_hybrid_charge_conjugation.py
+          tests/test_w33_e6_cubic_hybrid81_transport.py
+          tests/test_w33_e8_full_hybrid_chevalley_compiler.py
+          tests/test_w33_dark_strange_golay11_ft_lane.py
+          tests/test_w33_dark8_g2_external_c3_no_go.py
+          tests/test_w33_hesse36_photonic_process_calibration_theorem.py
           tests/test_w33_shared_frontier_tail_integrity.py
+      - name: full 248D E8 Jacobi sweep
+        run: |
+          python tools/verify_e8_jacobi_from_structure_constants.py --mode full --progress-every 0
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("artifacts/verify_e8_jacobi_w33_discrete.json")
+          d=json.loads(p.read_text())
+          assert d["status"]=="ok", d
+          assert d["checked_triples"]==2511496, d
+          assert d["expected_triples"]==2511496, d
+          PY
       - name: frozen certificates unchanged
         run: >-
           git diff --exit-code --
@@ -154,3 +189,8 @@ jobs:
           data/w33_h27_cubic_representation_transducer.json
           data/w33_dark8_g2_branching_shadow.json
           data/w33_e8_hybrid_charge_conjugation.json
+          data/w33_e6_cubic_hybrid81_transport.json
+          data/w33_e8_full_hybrid_chevalley_compiler.json
+          data/w33_dark_strange_golay11_ft_lane.json
+          data/w33_dark8_g2_external_c3_no_go.json
+          data/w33_hesse36_photonic_process_calibration_theorem.json
