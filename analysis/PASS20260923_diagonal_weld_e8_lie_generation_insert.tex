@@ -1,0 +1,47 @@
+% Exact two-generator E8 switch from one diagonal H27 phase correlation.
+% Full report and ownership audit:
+% analysis/2026-09-23_diagonal_weld_e8_lie_generation.md
+% Earlier internal E8/A2/trinification surfaces checked:
+% analysis/2026-09-21_e8_trinification_two_qutrit_pauli243.md
+% analysis/2026-09-21_e8_pauli243_projective_w33_bridge.md
+% analysis/2026-09-21_e8_matter81_h27_address_operator_compiler.md
+% analysis/2026-09-22_qpsi_gq24_parabolic_compiler.md
+% PASS174_DUAL_DISCRIMINANT_FIXED_RAIL_E8_HULL.md
+% PASS7385_7400_EISENSTEIN_E8_W33_BRIDGE.md
+% PASS7401_7408_E8_A2_GLOBAL_GEOMETRY.md
+% photonic_holonet_body.tex
+\subsection*{One diagonal phase correlation switches the Lie closure from 24 dimensions to all of $E_8$}
+
+Lift the four current-H27 three-level backgrounds
+\[
+v_c=1+c,\quad v_p=1+p,\quad
+v_+=1+(c+p\bmod3),\quad v_-=1+(c-p\bmod3)
+\]
+to the signed grade-one and paired signed grade-two root charts of the frozen
+Chevalley $E_8$.  Closing each pair under the two adjoint generators gives
+\[
+\begin{array}{c|cccc}
+g_1\backslash g_2&v_c&v_p&v_+&v_-\\ \hline
+v_c&24&24&248&248\\
+v_p&24&24&248&248\\
+v_+&248&248&248&248\\
+v_-&248&248&248&248
+\end{array}
+\]
+modulo $103$.  Every full-rank entry therefore lifts to dimension $248$ over
+$\mathbb Q$: the independent modular iterated brackets lift to independent
+rational Lie words, and the ambient algebra has dimension $248$.  A matched
+diagonal pair and both one-sided diagonal orientations replay at the independent
+prime $109$.
+
+The four pure center/external controls were closed with exact rational
+arithmetic.  They generate the same $24$-dimensional subalgebra, with inherited
+grading $24=6+9+9$.  Hence a diagonal correlation on either the matter or the
+antimatter generator is sufficient; matching the two diagonal orientations is
+not required.
+
+This is an explicit generating-pair theorem for the rational/complex Chevalley
+algebra.  It is not yet compact-real-form controllability, a physical vacuum or
+a laboratory Hamiltonian pair.  The numerical match $24=\dim A_2^3$ is not
+promoted to a trinification identification without an explicit ideal or root
+decomposition.

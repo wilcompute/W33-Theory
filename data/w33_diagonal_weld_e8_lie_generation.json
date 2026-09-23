@@ -1,0 +1,786 @@
+{
+  "schema": "w33.diagonal_weld_e8_lie_generation.v1",
+  "status": "PASS_ONE_DIAGONAL_H27_PHASE_WELD_SWITCHES_PAIRED_MATTER_GENERATORS_FROM_COMMON_24D_CLOSURE_TO_ALL_E8",
+  "headline": "The diagonal H27-center/external-qutrit correlation is an exact Lie-generation switch. Lift any one of the four three-level backgrounds to signed grade one and any one to paired signed grade two in the frozen W33 Chevalley E8. If neither side is diagonal, all four center/external pairs generate the same exact 24-dimensional subalgebra, graded 6+9+9. If either side uses c+p or c-p, every one of the remaining twelve pairs generates all 248 dimensions, graded 86+81+81. Full generation is certified modulo 103 for all twelve pairs and independently modulo 109 for both one-sided orientations and a matched pair; dimension 248 after reduction proves dimension 248 over Q.",
+  "generators": {
+    "grade1": "signed current-H27 root lift of one three-level background",
+    "grade2": "paired signed current-H27 root lift of one three-level background",
+    "backgrounds": {
+      "center": "1+c",
+      "external": "1+p",
+      "plus": "1+((c+p) mod 3)",
+      "minus": "1+((c-p) mod 3)"
+    },
+    "amplitude_multiplicities_each": {
+      "1": 27,
+      "2": 27,
+      "3": 27
+    }
+  },
+  "generation_method": {
+    "identity": "Lie<x,y> is the smallest vector space containing x,y and invariant under ad_x and ad_y",
+    "algorithm": "incremental row basis closed under the two adjoint generators",
+    "source_bracket": "artifacts/e8_structure_constants_w33_discrete.json",
+    "source_jacobi_basis_triples": 2511496,
+    "rational_full_rank_logic": "248 independent reductions modulo a prime lift to 248 rationally independent iterated Lie words; the ambient rational algebra has dimension 248"
+  },
+  "dimension_grid_mod_103": {
+    "center": {
+      "center": 24,
+      "external": 24,
+      "plus": 248,
+      "minus": 248
+    },
+    "external": {
+      "center": 24,
+      "external": 24,
+      "plus": 248,
+      "minus": 248
+    },
+    "plus": {
+      "center": 248,
+      "external": 248,
+      "plus": 248,
+      "minus": 248
+    },
+    "minus": {
+      "center": 248,
+      "external": 248,
+      "plus": 248,
+      "minus": 248
+    }
+  },
+  "all_cases_mod_103": {
+    "center|center": {
+      "dimension": 24,
+      "grading_dimensions": {
+        "g0": 6,
+        "g1": 9,
+        "g2": 9
+      },
+      "adjoint_generator_evaluations": 48,
+      "maximum_recorded_bracket_depth": 8,
+      "insertion_depth_histogram": {
+        "0": 2,
+        "1": 1,
+        "2": 2,
+        "3": 2,
+        "4": 4,
+        "5": 4,
+        "6": 5,
+        "7": 3,
+        "8": 1
+      },
+      "pivot_digest": "4d078668385f0eae44a019c1565af66f28455bcb79a5717ee40afdd131b7a2fc"
+    },
+    "center|external": {
+      "dimension": 24,
+      "grading_dimensions": {
+        "g0": 6,
+        "g1": 9,
+        "g2": 9
+      },
+      "adjoint_generator_evaluations": 48,
+      "maximum_recorded_bracket_depth": 8,
+      "insertion_depth_histogram": {
+        "0": 2,
+        "1": 1,
+        "2": 2,
+        "3": 2,
+        "4": 4,
+        "5": 4,
+        "6": 5,
+        "7": 3,
+        "8": 1
+      },
+      "pivot_digest": "300a60c51c80df3a77844be38f937f9cc09f2a35f191ebae316af44d423b7c7f"
+    },
+    "center|plus": {
+      "dimension": 248,
+      "grading_dimensions": {
+        "g0": 86,
+        "g1": 81,
+        "g2": 81
+      },
+      "adjoint_generator_evaluations": 496,
+      "maximum_recorded_bracket_depth": 14,
+      "insertion_depth_histogram": {
+        "0": 2,
+        "1": 1,
+        "2": 2,
+        "3": 2,
+        "4": 4,
+        "5": 5,
+        "6": 8,
+        "7": 11,
+        "8": 16,
+        "9": 21,
+        "10": 29,
+        "11": 37,
+        "12": 49,
+        "13": 49,
+        "14": 12
+      },
+      "pivot_digest": "90fb16674917cce80578b562142f45a293d2ed54dfecd9643db97802ef4e3984"
+    },
+    "center|minus": {
+      "dimension": 248,
+      "grading_dimensions": {
+        "g0": 86,
+        "g1": 81,
+        "g2": 81
+      },
+      "adjoint_generator_evaluations": 496,
+      "maximum_recorded_bracket_depth": 14,
+      "insertion_depth_histogram": {
+        "0": 2,
+        "1": 1,
+        "2": 2,
+        "3": 2,
+        "4": 4,
+        "5": 5,
+        "6": 8,
+        "7": 11,
+        "8": 16,
+        "9": 21,
+        "10": 29,
+        "11": 37,
+        "12": 49,
+        "13": 49,
+        "14": 12
+      },
+      "pivot_digest": "90fb16674917cce80578b562142f45a293d2ed54dfecd9643db97802ef4e3984"
+    },
+    "external|center": {
+      "dimension": 24,
+      "grading_dimensions": {
+        "g0": 6,
+        "g1": 9,
+        "g2": 9
+      },
+      "adjoint_generator_evaluations": 48,
+      "maximum_recorded_bracket_depth": 8,
+      "insertion_depth_histogram": {
+        "0": 2,
+        "1": 1,
+        "2": 2,
+        "3": 2,
+        "4": 4,
+        "5": 4,
+        "6": 5,
+        "7": 3,
+        "8": 1
+      },
+      "pivot_digest": "4d078668385f0eae44a019c1565af66f28455bcb79a5717ee40afdd131b7a2fc"
+    },
+    "external|external": {
+      "dimension": 24,
+      "grading_dimensions": {
+        "g0": 6,
+        "g1": 9,
+        "g2": 9
+      },
+      "adjoint_generator_evaluations": 48,
+      "maximum_recorded_bracket_depth": 8,
+      "insertion_depth_histogram": {
+        "0": 2,
+        "1": 1,
+        "2": 2,
+        "3": 2,
+        "4": 4,
+        "5": 4,
+        "6": 5,
+        "7": 3,
+        "8": 1
+      },
+      "pivot_digest": "4d078668385f0eae44a019c1565af66f28455bcb79a5717ee40afdd131b7a2fc"
+    },
+    "external|plus": {
+      "dimension": 248,
+      "grading_dimensions": {
+        "g0": 86,
+        "g1": 81,
+        "g2": 81
+      },
+      "adjoint_generator_evaluations": 496,
+      "maximum_recorded_bracket_depth": 14,
+      "insertion_depth_histogram": {
+        "0": 2,
+        "1": 1,
+        "2": 2,
+        "3": 2,
+        "4": 4,
+        "5": 5,
+        "6": 8,
+        "7": 11,
+        "8": 16,
+        "9": 21,
+        "10": 29,
+        "11": 37,
+        "12": 49,
+        "13": 49,
+        "14": 12
+      },
+      "pivot_digest": "90fb16674917cce80578b562142f45a293d2ed54dfecd9643db97802ef4e3984"
+    },
+    "external|minus": {
+      "dimension": 248,
+      "grading_dimensions": {
+        "g0": 86,
+        "g1": 81,
+        "g2": 81
+      },
+      "adjoint_generator_evaluations": 496,
+      "maximum_recorded_bracket_depth": 14,
+      "insertion_depth_histogram": {
+        "0": 2,
+        "1": 1,
+        "2": 2,
+        "3": 2,
+        "4": 4,
+        "5": 5,
+        "6": 8,
+        "7": 11,
+        "8": 16,
+        "9": 21,
+        "10": 29,
+        "11": 37,
+        "12": 49,
+        "13": 49,
+        "14": 12
+      },
+      "pivot_digest": "90fb16674917cce80578b562142f45a293d2ed54dfecd9643db97802ef4e3984"
+    },
+    "plus|center": {
+      "dimension": 248,
+      "grading_dimensions": {
+        "g0": 86,
+        "g1": 81,
+        "g2": 81
+      },
+      "adjoint_generator_evaluations": 496,
+      "maximum_recorded_bracket_depth": 11,
+      "insertion_depth_histogram": {
+        "0": 2,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 6,
+        "5": 8,
+        "6": 15,
+        "7": 24,
+        "8": 40,
+        "9": 67,
+        "10": 78,
+        "11": 2
+      },
+      "pivot_digest": "90fb16674917cce80578b562142f45a293d2ed54dfecd9643db97802ef4e3984"
+    },
+    "plus|external": {
+      "dimension": 248,
+      "grading_dimensions": {
+        "g0": 86,
+        "g1": 81,
+        "g2": 81
+      },
+      "adjoint_generator_evaluations": 496,
+      "maximum_recorded_bracket_depth": 11,
+      "insertion_depth_histogram": {
+        "0": 2,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 6,
+        "5": 8,
+        "6": 15,
+        "7": 24,
+        "8": 40,
+        "9": 67,
+        "10": 78,
+        "11": 2
+      },
+      "pivot_digest": "90fb16674917cce80578b562142f45a293d2ed54dfecd9643db97802ef4e3984"
+    },
+    "plus|plus": {
+      "dimension": 248,
+      "grading_dimensions": {
+        "g0": 86,
+        "g1": 81,
+        "g2": 81
+      },
+      "adjoint_generator_evaluations": 496,
+      "maximum_recorded_bracket_depth": 10,
+      "insertion_depth_histogram": {
+        "0": 2,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 6,
+        "5": 9,
+        "6": 18,
+        "7": 30,
+        "8": 56,
+        "9": 99,
+        "10": 22
+      },
+      "pivot_digest": "90fb16674917cce80578b562142f45a293d2ed54dfecd9643db97802ef4e3984"
+    },
+    "plus|minus": {
+      "dimension": 248,
+      "grading_dimensions": {
+        "g0": 86,
+        "g1": 81,
+        "g2": 81
+      },
+      "adjoint_generator_evaluations": 496,
+      "maximum_recorded_bracket_depth": 10,
+      "insertion_depth_histogram": {
+        "0": 2,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 6,
+        "5": 9,
+        "6": 18,
+        "7": 30,
+        "8": 56,
+        "9": 99,
+        "10": 22
+      },
+      "pivot_digest": "90fb16674917cce80578b562142f45a293d2ed54dfecd9643db97802ef4e3984"
+    },
+    "minus|center": {
+      "dimension": 248,
+      "grading_dimensions": {
+        "g0": 86,
+        "g1": 81,
+        "g2": 81
+      },
+      "adjoint_generator_evaluations": 496,
+      "maximum_recorded_bracket_depth": 11,
+      "insertion_depth_histogram": {
+        "0": 2,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 6,
+        "5": 8,
+        "6": 15,
+        "7": 24,
+        "8": 40,
+        "9": 67,
+        "10": 78,
+        "11": 2
+      },
+      "pivot_digest": "90fb16674917cce80578b562142f45a293d2ed54dfecd9643db97802ef4e3984"
+    },
+    "minus|external": {
+      "dimension": 248,
+      "grading_dimensions": {
+        "g0": 86,
+        "g1": 81,
+        "g2": 81
+      },
+      "adjoint_generator_evaluations": 496,
+      "maximum_recorded_bracket_depth": 11,
+      "insertion_depth_histogram": {
+        "0": 2,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 6,
+        "5": 8,
+        "6": 15,
+        "7": 24,
+        "8": 40,
+        "9": 67,
+        "10": 78,
+        "11": 2
+      },
+      "pivot_digest": "90fb16674917cce80578b562142f45a293d2ed54dfecd9643db97802ef4e3984"
+    },
+    "minus|plus": {
+      "dimension": 248,
+      "grading_dimensions": {
+        "g0": 86,
+        "g1": 81,
+        "g2": 81
+      },
+      "adjoint_generator_evaluations": 496,
+      "maximum_recorded_bracket_depth": 10,
+      "insertion_depth_histogram": {
+        "0": 2,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 6,
+        "5": 9,
+        "6": 18,
+        "7": 30,
+        "8": 56,
+        "9": 99,
+        "10": 22
+      },
+      "pivot_digest": "90fb16674917cce80578b562142f45a293d2ed54dfecd9643db97802ef4e3984"
+    },
+    "minus|minus": {
+      "dimension": 248,
+      "grading_dimensions": {
+        "g0": 86,
+        "g1": 81,
+        "g2": 81
+      },
+      "adjoint_generator_evaluations": 496,
+      "maximum_recorded_bracket_depth": 10,
+      "insertion_depth_histogram": {
+        "0": 2,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 6,
+        "5": 9,
+        "6": 18,
+        "7": 30,
+        "8": 56,
+        "9": 99,
+        "10": 22
+      },
+      "pivot_digest": "90fb16674917cce80578b562142f45a293d2ed54dfecd9643db97802ef4e3984"
+    }
+  },
+  "orientation_replay_mod_109": {
+    "plus|plus": {
+      "dimension": 248,
+      "grading_dimensions": {
+        "g0": 86,
+        "g1": 81,
+        "g2": 81
+      },
+      "adjoint_generator_evaluations": 496,
+      "maximum_recorded_bracket_depth": 10,
+      "insertion_depth_histogram": {
+        "0": 2,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 6,
+        "5": 9,
+        "6": 18,
+        "7": 30,
+        "8": 56,
+        "9": 99,
+        "10": 22
+      },
+      "pivot_digest": "90fb16674917cce80578b562142f45a293d2ed54dfecd9643db97802ef4e3984"
+    },
+    "plus|center": {
+      "dimension": 248,
+      "grading_dimensions": {
+        "g0": 86,
+        "g1": 81,
+        "g2": 81
+      },
+      "adjoint_generator_evaluations": 496,
+      "maximum_recorded_bracket_depth": 11,
+      "insertion_depth_histogram": {
+        "0": 2,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 6,
+        "5": 8,
+        "6": 15,
+        "7": 24,
+        "8": 40,
+        "9": 67,
+        "10": 78,
+        "11": 2
+      },
+      "pivot_digest": "90fb16674917cce80578b562142f45a293d2ed54dfecd9643db97802ef4e3984"
+    },
+    "center|plus": {
+      "dimension": 248,
+      "grading_dimensions": {
+        "g0": 86,
+        "g1": 81,
+        "g2": 81
+      },
+      "adjoint_generator_evaluations": 496,
+      "maximum_recorded_bracket_depth": 14,
+      "insertion_depth_histogram": {
+        "0": 2,
+        "1": 1,
+        "2": 2,
+        "3": 2,
+        "4": 4,
+        "5": 5,
+        "6": 8,
+        "7": 11,
+        "8": 16,
+        "9": 21,
+        "10": 29,
+        "11": 37,
+        "12": 49,
+        "13": 49,
+        "14": 12
+      },
+      "pivot_digest": "90fb16674917cce80578b562142f45a293d2ed54dfecd9643db97802ef4e3984"
+    },
+    "center|center": {
+      "dimension": 24,
+      "grading_dimensions": {
+        "g0": 6,
+        "g1": 9,
+        "g2": 9
+      },
+      "adjoint_generator_evaluations": 48,
+      "maximum_recorded_bracket_depth": 8,
+      "insertion_depth_histogram": {
+        "0": 2,
+        "1": 1,
+        "2": 2,
+        "3": 2,
+        "4": 4,
+        "5": 4,
+        "6": 5,
+        "7": 3,
+        "8": 1
+      },
+      "pivot_digest": "4d078668385f0eae44a019c1565af66f28455bcb79a5717ee40afdd131b7a2fc"
+    }
+  },
+  "exact_rational_nondiagonal_controls": {
+    "center|center": {
+      "dimension": 24,
+      "grading_dimensions": {
+        "g0": 6,
+        "g1": 9,
+        "g2": 9
+      },
+      "adjoint_generator_evaluations": 48,
+      "maximum_recorded_bracket_depth": 8,
+      "insertion_depth_histogram": {
+        "0": 2,
+        "1": 1,
+        "2": 2,
+        "3": 2,
+        "4": 4,
+        "5": 4,
+        "6": 5,
+        "7": 3,
+        "8": 1
+      },
+      "pivot_digest": "4d078668385f0eae44a019c1565af66f28455bcb79a5717ee40afdd131b7a2fc",
+      "pivots": [
+        0,
+        1,
+        2,
+        7,
+        8,
+        10,
+        11,
+        12,
+        20,
+        27,
+        32,
+        36,
+        39,
+        41,
+        129,
+        132,
+        136,
+        141,
+        147,
+        153,
+        169,
+        191,
+        201,
+        246
+      ]
+    },
+    "center|external": {
+      "dimension": 24,
+      "grading_dimensions": {
+        "g0": 6,
+        "g1": 9,
+        "g2": 9
+      },
+      "adjoint_generator_evaluations": 48,
+      "maximum_recorded_bracket_depth": 8,
+      "insertion_depth_histogram": {
+        "0": 2,
+        "1": 1,
+        "2": 2,
+        "3": 2,
+        "4": 4,
+        "5": 4,
+        "6": 5,
+        "7": 3,
+        "8": 1
+      },
+      "pivot_digest": "4d078668385f0eae44a019c1565af66f28455bcb79a5717ee40afdd131b7a2fc",
+      "pivots": [
+        0,
+        1,
+        2,
+        7,
+        8,
+        10,
+        11,
+        12,
+        20,
+        27,
+        32,
+        36,
+        39,
+        41,
+        129,
+        132,
+        136,
+        141,
+        147,
+        153,
+        169,
+        191,
+        201,
+        246
+      ]
+    },
+    "external|center": {
+      "dimension": 24,
+      "grading_dimensions": {
+        "g0": 6,
+        "g1": 9,
+        "g2": 9
+      },
+      "adjoint_generator_evaluations": 48,
+      "maximum_recorded_bracket_depth": 8,
+      "insertion_depth_histogram": {
+        "0": 2,
+        "1": 1,
+        "2": 2,
+        "3": 2,
+        "4": 4,
+        "5": 4,
+        "6": 5,
+        "7": 3,
+        "8": 1
+      },
+      "pivot_digest": "4d078668385f0eae44a019c1565af66f28455bcb79a5717ee40afdd131b7a2fc",
+      "pivots": [
+        0,
+        1,
+        2,
+        7,
+        8,
+        10,
+        11,
+        12,
+        20,
+        27,
+        32,
+        36,
+        39,
+        41,
+        129,
+        132,
+        136,
+        141,
+        147,
+        153,
+        169,
+        191,
+        201,
+        246
+      ]
+    },
+    "external|external": {
+      "dimension": 24,
+      "grading_dimensions": {
+        "g0": 6,
+        "g1": 9,
+        "g2": 9
+      },
+      "adjoint_generator_evaluations": 48,
+      "maximum_recorded_bracket_depth": 8,
+      "insertion_depth_histogram": {
+        "0": 2,
+        "1": 1,
+        "2": 2,
+        "3": 2,
+        "4": 4,
+        "5": 4,
+        "6": 5,
+        "7": 3,
+        "8": 1
+      },
+      "pivot_digest": "4d078668385f0eae44a019c1565af66f28455bcb79a5717ee40afdd131b7a2fc",
+      "pivots": [
+        0,
+        1,
+        2,
+        7,
+        8,
+        10,
+        11,
+        12,
+        20,
+        27,
+        32,
+        36,
+        39,
+        41,
+        129,
+        132,
+        136,
+        141,
+        147,
+        153,
+        169,
+        191,
+        201,
+        246
+      ]
+    }
+  },
+  "theorem": {
+    "no_diagonal_background_dimension": 24,
+    "no_diagonal_background_grading": [
+      6,
+      9,
+      9
+    ],
+    "all_nondiagonal_pairs_same_subspace": true,
+    "diagonal_on_either_grade_dimension": 248,
+    "diagonal_on_either_grade_grading": [
+      86,
+      81,
+      81
+    ],
+    "matched_diagonal_orientation_required": false,
+    "one_diagonal_correlation_is_sufficient": true
+  },
+  "external_context": {
+    "two_generation_prior_art": "Two-generation is a general theorem for simple Lie algebras; the new finite statement here is that these highly structured current-H27 diagonal backgrounds are explicit generating pairs.",
+    "e8_grading_prior_art": "The E8 decomposition 248=(8,1)+(1,78)+(3,27)+(3bar,27bar) under SL3 x E6 is standard; this certificate resolves generation for the repository's explicit signed address backgrounds."
+  },
+  "boundary": "This is exact generation of the rational/complex Chevalley Lie algebra by two structured algebra elements. It is not a compact-real-form controllability theorem, a pair of anti-Hermitian laboratory Hamiltonians, a vacuum-selection mechanism, an energy scale, a coupling strength, or a claim that the residual 24-dimensional algebra is SU(3)^3. The 24=A2^3 dimension match remains a hypothesis until its ideals or roots are explicitly identified.",
+  "parents": [
+    "data/w33_e6_cubic_diagonal_phase_weld.json",
+    "data/w33_e8_full_hybrid_chevalley_compiler.json",
+    "data/w33_e6id_current_h27_gauge_bridge.json",
+    "artifacts/e8_structure_constants_w33_discrete.json"
+  ],
+  "checks": {
+    "all_16_background_pairs_tested_mod103": true,
+    "all_12_pairs_with_a_diagonal_side_generate_248": true,
+    "both_one_sided_diagonal_orientations_replayed_mod109": true,
+    "matched_diagonal_pair_replayed_mod109": true,
+    "all_4_nondiagonal_pairs_closed_exactly_over_Q": true,
+    "all_4_nondiagonal_pairs_equal_same_24D_subspace": true,
+    "nondiagonal_grading_is_6_9_9": true,
+    "matching_plus_or_minus_orientation_not_required": true,
+    "physical_controllability_not_claimed": true,
+    "trinification_identification_not_claimed": true
+  }
+}

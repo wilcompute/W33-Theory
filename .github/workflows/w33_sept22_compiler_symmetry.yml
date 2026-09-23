@@ -46,6 +46,7 @@ on:
       - 'analysis/w33_e6_cubic_jacobian_rank_stratification.py'
       - 'analysis/w33_e6_cubic_fourier54_alignment.py'
       - 'analysis/w33_e6_cubic_diagonal_phase_weld.py'
+      - 'analysis/w33_diagonal_weld_e8_lie_generation.py'
       - 'data/w33_e8_split_real_form_involution.json'
       - 'data/w33_extended_clifford_hesse_null_cone.json'
       - 'data/w33_address_operator_h27_intertwiner_obstruction.json'
@@ -87,6 +88,7 @@ on:
       - 'data/w33_e6_cubic_jacobian_rank_stratification.json'
       - 'data/w33_e6_cubic_fourier54_alignment.json'
       - 'data/w33_e6_cubic_diagonal_phase_weld.json'
+      - 'data/w33_diagonal_weld_e8_lie_generation.json'
       - 'analysis/PASS20260922_address_operator_h27_intertwiner_obstruction_insert.tex'
       - 'analysis/PASS20260922_scheduler_operator_k81_obstruction_insert.tex'
       - 'analysis/PASS20260922_maximal_compiler_symmetry_pappus_insert.tex'
@@ -109,6 +111,8 @@ on:
       - 'analysis/2026-09-23_cubic_fourier54_alignment.md'
       - 'analysis/PASS20260923_diagonal_phase_weld_insert.tex'
       - 'analysis/2026-09-23_diagonal_phase_weld.md'
+      - 'analysis/PASS20260923_diagonal_weld_e8_lie_generation_insert.tex'
+      - 'analysis/2026-09-23_diagonal_weld_e8_lie_generation.md'
       - 'analysis/PASS20260923_e8_split_real_form_involution_insert.tex'
       - 'analysis/2026-09-23_e8_split_real_form_involution.md'
       - 'analysis/PASS20260923_extended_clifford_hesse_null_cone_insert.tex'
@@ -154,6 +158,7 @@ on:
       - 'tests/test_w33_e6_cubic_jacobian_rank_stratification.py'
       - 'tests/test_w33_e6_cubic_fourier54_alignment.py'
       - 'tests/test_w33_e6_cubic_diagonal_phase_weld.py'
+      - 'tests/test_w33_diagonal_weld_e8_lie_generation.py'
       - 'tests/test_w33_e8_split_real_form_involution.py'
       - 'tests/test_w33_extended_clifford_hesse_null_cone.py'
       - 'tests/test_w33_shared_frontier_tail_integrity.py'
@@ -213,6 +218,7 @@ jobs:
           tests/test_w33_e6_cubic_jacobian_rank_stratification.py
           tests/test_w33_e6_cubic_fourier54_alignment.py
           tests/test_w33_e6_cubic_diagonal_phase_weld.py
+          tests/test_w33_diagonal_weld_e8_lie_generation.py
           tests/test_w33_e8_split_real_form_involution.py
           tests/test_w33_extended_clifford_hesse_null_cone.py
           tests/test_w33_shared_frontier_tail_integrity.py
@@ -272,3 +278,4 @@ jobs:
           data/w33_e6_cubic_jacobian_rank_stratification.json
           data/w33_e6_cubic_fourier54_alignment.json
           data/w33_e6_cubic_diagonal_phase_weld.json
+          data/w33_diagonal_weld_e8_lie_generation.json

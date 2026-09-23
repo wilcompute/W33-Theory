@@ -76,7 +76,12 @@ GLOBS = [
     "AUDIT*.md",
     "BT*.md",
     "PART*.md",
-    "formal/**/*.lean",
+    # Index project-owned Lean sources directly.  `formal/**/*.lean` makes
+    # pathlib descend through formal/.lake/packages before SKIP_DIRS can filter
+    # the yielded paths, which turns a sub-second 49-file scan into a many-minute
+    # NTFS walk over dependency checkouts.
+    "formal/*.lean",
+    "formal/W33/**/*.lean",
     "manuscripts/**/*.tex",
     # BUNDLE DIRECTORIES (Pass 5524).  This repository has ~158 top-level bundle
     # directories -- PG33_OUTER_TWIST_GEOMETRY_BUNDLE_v01, SP43_TO_WE6_TRUE_FIXED_BUNDLE,
