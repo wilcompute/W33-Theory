@@ -99,7 +99,7 @@ def main(write=True):
     assert charge["involution"]["coefficient_action"]=="omega -> omega^2"
     assert charge["compiler_orientation"]["selected"]==[0,1,2]
     assert charge["compiler_orientation"]["conjugate"]==[0,2,1]
-    assert vm["automorphism_group"]["affine_factor_order"]==432
+    assert vm["automorphism_group"]["affine_quotient_order"]==432
 
     # Complex conjugation is an exact H27 automorphism in the frozen
     # normal form Z^a X^b omega^c.
@@ -135,8 +135,17 @@ def main(write=True):
     assert {perm_parity(p) for p in all_dir}=={0,1}
     kappa_perm=direction_perm(phase_reflection)
     assert kappa_perm==(0,1,3,2) and perm_parity(kappa_perm)==1
-    generated={p for p in all_dir if p in det1_dir or True}
-    assert len(generated)==24
+    def compose_perm(p,q):
+        return tuple(p[q[i]] for i in range(4))
+    generated=set(det1_dir)
+    frontier=list(det1_dir)
+    while frontier:
+        p=frontier.pop()
+        for q in (kappa_perm,):
+            for r in (compose_perm(p,q),compose_perm(q,p)):
+                if r not in generated:
+                    generated.add(r);frontier.append(r)
+    assert generated==all_dir and len(generated)==24
 
     # The affine-hull quotient is a 3D orthogonal space over F3.
     Q=tuple(tuple(int(x) for x in row) for row in hull["quotient"]["gram"])
