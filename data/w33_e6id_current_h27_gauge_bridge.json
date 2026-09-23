@@ -1,0 +1,211 @@
+{
+  "schema": "w33.e6id_current_h27_gauge_bridge.v1",
+  "status": "PASS_CANONICAL_E6ID_CUBIC_GAUGE_IS_EXPLICITLY_CONJUGATED_TO_CURRENT_PHYSICAL_CLIFFORD_H27_GAUGE",
+  "headline": "The canonical signed E6 cubic and the current physical-Clifford H27 address chart are now connected by an explicit 27-point permutation. With e6id 0 anchored at H27 identity and the canonical bad-nine spread required to map to the current central spread, deterministic constraint propagation fixes a bijection that sends all 45 canonical cubic triads exactly to the 45 current five-direction right cosets and all nine firewall fibers exactly to the nine current center cosets.",
+  "anchors": {
+    "canonical_e6id": 0,
+    "current_H27_address": [
+      0,
+      0,
+      0
+    ],
+    "complete_frame": 0,
+    "bad9_target": "current pure-center direction <(0,0,1)>"
+  },
+  "search": {
+    "method": "MRV backtracking on the colored GQ(2,4) point graph with fiber-spread preservation",
+    "search_nodes": 27,
+    "deterministic_candidate_order": "lexicographic H27 address order"
+  },
+  "maps": {
+    "e6id_to_current_H27_address": {
+      "0": [
+        0,
+        0,
+        0
+      ],
+      "1": [
+        0,
+        1,
+        2
+      ],
+      "2": [
+        0,
+        2,
+        1
+      ],
+      "3": [
+        2,
+        0,
+        1
+      ],
+      "4": [
+        2,
+        1,
+        0
+      ],
+      "5": [
+        2,
+        2,
+        1
+      ],
+      "6": [
+        2,
+        0,
+        0
+      ],
+      "7": [
+        1,
+        1,
+        1
+      ],
+      "8": [
+        1,
+        2,
+        1
+      ],
+      "9": [
+        2,
+        1,
+        1
+      ],
+      "10": [
+        2,
+        2,
+        0
+      ],
+      "11": [
+        1,
+        0,
+        2
+      ],
+      "12": [
+        1,
+        1,
+        2
+      ],
+      "13": [
+        1,
+        2,
+        0
+      ],
+      "14": [
+        1,
+        0,
+        0
+      ],
+      "15": [
+        0,
+        1,
+        0
+      ],
+      "16": [
+        0,
+        2,
+        0
+      ],
+      "17": [
+        1,
+        0,
+        1
+      ],
+      "18": [
+        1,
+        2,
+        2
+      ],
+      "19": [
+        1,
+        1,
+        0
+      ],
+      "20": [
+        0,
+        2,
+        2
+      ],
+      "21": [
+        0,
+        0,
+        1
+      ],
+      "22": [
+        0,
+        0,
+        2
+      ],
+      "23": [
+        0,
+        1,
+        1
+      ],
+      "24": [
+        2,
+        2,
+        2
+      ],
+      "25": [
+        2,
+        1,
+        2
+      ],
+      "26": [
+        2,
+        0,
+        2
+      ]
+    },
+    "e6id_to_complete_frame": {
+      "0": 0,
+      "1": 16,
+      "2": 15,
+      "3": 26,
+      "4": 23,
+      "5": 14,
+      "6": 13,
+      "7": 24,
+      "8": 25,
+      "9": 1,
+      "10": 2,
+      "11": 10,
+      "12": 9,
+      "13": 3,
+      "14": 4,
+      "15": 8,
+      "16": 7,
+      "17": 5,
+      "18": 20,
+      "19": 12,
+      "20": 21,
+      "21": 22,
+      "22": 19,
+      "23": 18,
+      "24": 11,
+      "25": 17,
+      "26": 6
+    }
+  },
+  "incidence": {
+    "canonical_cubic_triads": 45,
+    "current_address_lines": 45,
+    "mapped_full45_equal": true,
+    "canonical_firewall_fibers": 9,
+    "current_center_cosets": 9,
+    "mapped_bad9_equal": true
+  },
+  "gauge_consequence": "Pass1103's older Heisenberg coordinates remain a valid exact gauge for the canonical cubic, but compiler Fourier coordinates must use this explicit bridge before applying the current physical-Clifford H27 Schrodinger representation.",
+  "boundary": "This is a finite gauge conjugacy fixed by explicit anchors. The anchored incidence isomorphism is a coordinate choice, not a dynamical vacuum selection or an assertion that the two earlier coordinate tables were literally identical.",
+  "parents": [
+    "extracted_v13/W33-Theory-master/artifacts/canonical_su3_gauge_and_cubic.json",
+    "artifacts/e6_cubic_affine_heisenberg_model.json",
+    "data/w33_e8_matter81_h27_address_operator_compiler.json"
+  ],
+  "checks": {
+    "27_point_bijection": true,
+    "anchor_e6id0_to_identity": true,
+    "full45_exact": true,
+    "bad9_to_current_center_exact": true,
+    "complete_frame_map_bijective": true,
+    "old_and_current_gauges_not_identified": true
+  }
+}
