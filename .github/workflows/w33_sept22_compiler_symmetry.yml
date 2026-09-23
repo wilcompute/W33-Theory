@@ -26,6 +26,7 @@ on:
       - 'analysis/w33_ramified_hesse_cubic_holonomy_bridge.py'
       - 'analysis/w33_affine_holonomy_vm_code_architecture.py'
       - 'analysis/w33_affine_holonomy_hull.py'
+      - 'analysis/w33_e8_split_real_form_involution.py'
       - 'analysis/w33_extended_clifford_hesse_null_cone.py'
       - 'analysis/w33_e8_matter81_h27_address_operator_compiler.py'
       - 'analysis/w33_qpsi_gq24_parabolic_compiler.py'
@@ -45,6 +46,7 @@ on:
       - 'analysis/w33_e6_cubic_jacobian_rank_stratification.py'
       - 'analysis/w33_e6_cubic_fourier54_alignment.py'
       - 'analysis/w33_e6_cubic_diagonal_phase_weld.py'
+      - 'data/w33_e8_split_real_form_involution.json'
       - 'data/w33_extended_clifford_hesse_null_cone.json'
       - 'data/w33_address_operator_h27_intertwiner_obstruction.json'
       - 'data/w33_scheduler_operator_k81_intertwiner_obstruction.json'
@@ -107,6 +109,8 @@ on:
       - 'analysis/2026-09-23_cubic_fourier54_alignment.md'
       - 'analysis/PASS20260923_diagonal_phase_weld_insert.tex'
       - 'analysis/2026-09-23_diagonal_phase_weld.md'
+      - 'analysis/PASS20260923_e8_split_real_form_involution_insert.tex'
+      - 'analysis/2026-09-23_e8_split_real_form_involution.md'
       - 'analysis/PASS20260923_extended_clifford_hesse_null_cone_insert.tex'
       - 'analysis/2026-09-23_extended_clifford_hesse_null_cone.md'
       - 'analysis/W33_SHARED_FRONTIER_TAIL.tex'
@@ -150,6 +154,7 @@ on:
       - 'tests/test_w33_e6_cubic_jacobian_rank_stratification.py'
       - 'tests/test_w33_e6_cubic_fourier54_alignment.py'
       - 'tests/test_w33_e6_cubic_diagonal_phase_weld.py'
+      - 'tests/test_w33_e8_split_real_form_involution.py'
       - 'tests/test_w33_extended_clifford_hesse_null_cone.py'
       - 'tests/test_w33_shared_frontier_tail_integrity.py'
       - '.github/workflows/w33_sept22_compiler_symmetry.yml'
@@ -208,6 +213,7 @@ jobs:
           tests/test_w33_e6_cubic_jacobian_rank_stratification.py
           tests/test_w33_e6_cubic_fourier54_alignment.py
           tests/test_w33_e6_cubic_diagonal_phase_weld.py
+          tests/test_w33_e8_split_real_form_involution.py
           tests/test_w33_extended_clifford_hesse_null_cone.py
           tests/test_w33_shared_frontier_tail_integrity.py
       - name: full 248D E8 Jacobi sweep
@@ -247,6 +253,7 @@ jobs:
           data/w33_ramified_hesse_cubic_holonomy_bridge.json
           data/w33_affine_holonomy_vm_code_architecture.json
           data/w33_affine_holonomy_hull.json
+          data/w33_e8_split_real_form_involution.json
           data/w33_extended_clifford_hesse_null_cone.json
           data/w33_e8_matter81_h27_address_operator_compiler.json
           data/w33_qpsi_gq24_parabolic_compiler.json
