@@ -1,0 +1,83 @@
+% PASS20260923 execute-all-five Hesse/TOE compiler frontier.
+\subsection*{The Hesse compiler closes on all 270 cubic instructions, while the $81$-root lift has a classified eight-dimensional complement}
+
+The full physical qutrit Clifford group
+\[
+G=H_{27}^{\rm address}{:}SL(2,3),\qquad |G|=648,
+\]
+acts transitively on the ordinary Hesse $36$ with stabilizer $H_{18}$.
+The safe carrier is three $12$-orbits with common stabilizer $H_{54}$,
+where
+\[
+H_{18}\triangleleft H_{54},
+\qquad H_{54}/H_{18}\cong C_3.
+\]
+The quotient generator is the address center $z=(0,0,1)$.  Hence
+\[
+\operatorname{Ind}_{H_{18}}^G\mathbf1
+\cong
+\bigoplus_{\chi\in\widehat{C_3}}
+\operatorname{Ind}_{H_{54}}^G\chi ,
+\]
+and the exact $36$-state compiler is twelve independent $F_3$ transforms,
+with
+\[
+T_{36}^{*}T_{36}=3I_{36}.
+\]
+
+The full cubic-instruction layer splits as
+\[
+45=9+36,
+\qquad
+270=54+216,
+\]
+and the compiler lifts exactly as
+\[
+\boxed{
+T_{270}
+=
+I_{54}\oplus(T_{36}\otimes I_6)
+}.
+\]
+Thus $\operatorname{rank}T_{270}=270$, its Gram matrix is
+$I_{54}\oplus3I_{216}$, and the four Pappus components lift to twenty-four
+phase-decorated components.
+
+The root-basis lift is different.  The ordinary $81\times216$ cubic-incidence
+matrix has rank $73$, and adding all $54$ fiber cubics leaves
+\[
+\boxed{\operatorname{rank}(81\times270)=73}.
+\]
+Its eight-dimensional left kernel is a $K=H_{27}\times C_3$ submodule with
+exact decomposition
+\[
+\boxed{
+D_8
+\cong
+\chi_{\rm ext}\oplus\chi_{\rm ext}^{\,2}
+\oplus V_{\omega}\oplus V_{\omega^2}
+},
+\qquad
+8=1+1+3+3.
+\]
+Therefore an invertible $81$-root compiler must supply precisely these four
+missing irreducible sectors; cubic rephasings alone cannot do so.
+
+The old $1{,}179{,}648$ $Q_8$-equivariant gauges reduce under full Clifford
+covariance to six character assignments, then to the conjugate pair
+$(0,1,2)$ and $(0,2,1)$ after fixing the neutral sheet.  The physical E8
+root gauge already fixes
+\[
+z=Z_{\rm FI}=\exp(2\pi iQ_\psi/3)=\omega I .
+\]
+Relative to that frozen orientation the compiler assignment is therefore
+$(0,1,2)$; the other survivor is the complex-conjugate/opposite-Coxeter
+convention.  This is gauge-coordinate closure, not a dynamical chirality or
+vacuum-selection theorem.
+
+Finally, the exact Clifford compiler lowers to twelve balanced photonic
+$F_3$ mixers.  With the current inventory of nine tritters it schedules as
+$9+3$ over two waves, with one active mixer traversal per logical channel.
+The existing visibility and leakage falsifiers remain unchanged; insertion
+loss, process fidelity, and the non-Clifford $M_{36}$ injection threshold
+remain open.
