@@ -1,0 +1,57 @@
+{
+  "bell_stabilizer_action": {
+    "ambient_element_order_histogram": {
+      "1": 1,
+      "2": 45,
+      "3": 98,
+      "4": 162,
+      "6": 198,
+      "9": 144
+    },
+    "fixed9_action_image_order": 648,
+    "fixed9_action_kernel_order": 1,
+    "fixed9_character_histogram": {
+      "-1": 72,
+      "-3": 6,
+      "0": 152,
+      "1": 243,
+      "2": 72,
+      "3": 84,
+      "5": 18,
+      "9": 1
+    },
+    "group_order": 648,
+    "order_character_joint": {
+      "1,9": 1,
+      "2,1": 27,
+      "2,5": 18,
+      "3,-3": 6,
+      "3,0": 8,
+      "3,3": 84,
+      "4,1": 162,
+      "6,-1": 72,
+      "6,1": 54,
+      "6,2": 72,
+      "9,0": 144
+    }
+  },
+  "boundary": "An order match would still require an explicit group/intertwiner comparison with the qutrit Clifford conjugation module. A mismatch is already a decisive no-go.",
+  "clock": {
+    "U_cubed_identity": true,
+    "fixed_sector": "A-eigenvalues 8 and -1, dimensions 1+8",
+    "generator": "U=exp(-i (2*pi/9) L)",
+    "phase_dimensions": {
+      "1": 9,
+      "omega": 12,
+      "omega2": 6
+    }
+  },
+  "projective_qutrit_clifford_test": {
+    "image_order_matches_216": false,
+    "kernel_order_would_be_3": false,
+    "target_order": 216,
+    "verdict": "candidate rejected at order/kernel firewall"
+  },
+  "schema": "w33.20260924.spectral_clock_fixed9_group_probe.v1",
+  "status": "PASS_FIXED9_ACTION_AUDIT"
+}

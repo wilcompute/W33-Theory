@@ -1,0 +1,86 @@
+{
+  "boundary_cone": {
+    "induced_degree_histogram": {
+      "3": 12,
+      "12": 1
+    },
+    "nonvertex_points": 12,
+    "points_per_generator_excluding_vertex": 3,
+    "rank_one_projective_directions": 4,
+    "vertex_is_bell_line": true
+  },
+  "correction_to_naive_projective_completion": "The natural Lagrangian/Plucker boundary is not merely a PG(2,3) plane. It is the 13-point tangent-cone section of Q(4,3): 1+4*3. Thus 27+13=40 promotes to geometry specifically on the W33 line side.",
+  "full_line_graph": {
+    "cross_edges_bigcell_boundary": 108,
+    "edges": 240,
+    "srg_parameters": [
+      40,
+      12,
+      2,
+      4
+    ],
+    "vertices": 40
+  },
+  "lagrangian_grassmannian": {
+    "bell_line": [
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        2,
+        0,
+        0
+      ]
+    ],
+    "big_cell_disjoint_from_bell": 27,
+    "boundary_meeting_bell": 13,
+    "history_embedding": "S=(a,b;b,c) -> [1,a,b,c,ac-b^2]",
+    "plucker_coordinates": "[p34,p14,p24,-p23,p12]",
+    "quadric_equation": "x0*x4-x1*x3+x2^2=0 over F3",
+    "total_lagrangian_lines": 40
+  },
+  "null_history_graph": {
+    "adjacency": "det(S-T)=0 for S!=T",
+    "adjacency_spectrum": {
+      "-4": 6,
+      "-1": 8,
+      "2": 12,
+      "8": 1
+    },
+    "cycle_rank": 82,
+    "degree": 8,
+    "edges": 108,
+    "induced_from_Q43_line_intersection_graph": true,
+    "laplacian_spectrum": {
+      "0": 1,
+      "6": 12,
+      "9": 8,
+      "12": 6
+    },
+    "vertices": 27
+  },
+  "schema": "w33.20260924.history_bigcell_q43_compactification.v1",
+  "stabilizer_actions": {
+    "PGSp_bell_line_action_order": 1296,
+    "PSp_bell_line_action_order": 648,
+    "affine_model": "Sym_2(F3) translations semidirect projective congruences; nonsquare scaling doubles 648 to 1296"
+  },
+  "status": "PASS_27_HISTORY_BIG_CELL_COMPACTS_TO_Q43_LINE_CARRIER",
+  "theorem": "The 27 symmetric-matrix histories are exactly the big cell of the finite Lagrangian Grassmannian of W(3,3). Their natural completion is the 40-point parabolic quadric Q(4,3), i.e. the W33 line-side carrier. The 13-point boundary is a quadratic cone with Bell line as vertex and four 3-point generators indexed by the four rank-one/null directions."
+}

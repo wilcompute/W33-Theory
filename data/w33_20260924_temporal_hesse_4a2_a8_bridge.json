@@ -1,0 +1,274 @@
+{
+  "A8_E8_model": {
+    "Lambda3_roots": 84,
+    "Lambda6_roots": 84,
+    "branching": "240 = 72 + 84 + 84",
+    "root_scaling": "all roots multiplied by 3, so squared norm is 18",
+    "sl9_A8_roots": 72,
+    "total_E8_roots": 240
+  },
+  "Hesse_4A2": {
+    "components": 4,
+    "cross_components_orthogonal": true,
+    "negative_exterior_roots": 12,
+    "parallel_class_checks": [
+      {
+        "lines": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "scaled_gram": [
+          [
+            18,
+            -9,
+            -9
+          ],
+          [
+            -9,
+            18,
+            -9
+          ],
+          [
+            -9,
+            -9,
+            18
+          ]
+        ]
+      },
+      {
+        "lines": [
+          [
+            0,
+            3,
+            6
+          ],
+          [
+            1,
+            4,
+            7
+          ],
+          [
+            2,
+            5,
+            8
+          ]
+        ],
+        "scaled_gram": [
+          [
+            18,
+            -9,
+            -9
+          ],
+          [
+            -9,
+            18,
+            -9
+          ],
+          [
+            -9,
+            -9,
+            18
+          ]
+        ]
+      },
+      {
+        "lines": [
+          [
+            0,
+            4,
+            8
+          ],
+          [
+            1,
+            5,
+            6
+          ],
+          [
+            2,
+            3,
+            7
+          ]
+        ],
+        "scaled_gram": [
+          [
+            18,
+            -9,
+            -9
+          ],
+          [
+            -9,
+            18,
+            -9
+          ],
+          [
+            -9,
+            -9,
+            18
+          ]
+        ]
+      },
+      {
+        "lines": [
+          [
+            0,
+            5,
+            7
+          ],
+          [
+            1,
+            3,
+            8
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ],
+        "scaled_gram": [
+          [
+            18,
+            -9,
+            -9
+          ],
+          [
+            -9,
+            18,
+            -9
+          ],
+          [
+            -9,
+            -9,
+            18
+          ]
+        ]
+      }
+    ],
+    "positive_exterior_roots": 12,
+    "rank": 8,
+    "reflection_closed": true,
+    "root_count": 24,
+    "roots_per_component": 6
+  },
+  "history_plane": {
+    "AGL_orbits": {
+      "Hesse_lines": 12,
+      "noncollinear_triangles": 72
+    },
+    "affine_group_order": 432,
+    "cells": 9,
+    "parallel_classes": [
+      [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      [
+        [
+          0,
+          3,
+          6
+        ],
+        [
+          1,
+          4,
+          7
+        ],
+        [
+          2,
+          5,
+          8
+        ]
+      ],
+      [
+        [
+          0,
+          4,
+          8
+        ],
+        [
+          1,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          7
+        ]
+      ],
+      [
+        [
+          0,
+          5,
+          7
+        ],
+        [
+          1,
+          3,
+          8
+        ],
+        [
+          2,
+          4,
+          6
+        ]
+      ]
+    ],
+    "projective_directions": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "unordered_triples": 84
+  },
+  "repo_boundary": "The A8 branching E8=sl9+Lambda3+Lambda6 and the existence/census of E8 4A2 subsystems are prior repository/classical results. The new packet is the explicit identification of the AG(2,3) Hesse 12+12 exterior roots with one 4A2 subsystem in the temporal nine-cell basis.",
+  "root_partition": {
+    "A8_transition_roots": 72,
+    "Hesse_4A2_roots": 24,
+    "Lie_dimension_identity": "248 = 8 Cartan + 72 + 24 + 144 = 80 + 84 + 84",
+    "identity": "240 = 72 + 24 + 144",
+    "noncollinear_temporal_triangle_roots": 144
+  },
+  "schema": "w33.20260924.temporal_hesse_4a2_a8_bridge.v1",
+  "status": "PASS_HESSE_12_IS_4A2_INSIDE_TEMPORAL_A8_E8",
+  "theorem": "In the standard A8 realization of E8, the 84 Lambda^3 roots are indexed by 3-subsets of a nine-cell basis. When the basis is identified with AG(2,3), AGL(2,3) splits those roots into the 12 affine Hesse lines and 72 noncollinear triples. The 12 Hesse roots form four parallel classes of three roots. Within each class the roots have pairwise inner product -1 and sum to zero; different classes are orthogonal. Adding their negatives from Lambda^6 produces a reflection-closed rank-eight 4A2 root subsystem with 24 roots. Hence the temporal/Hesse split refines the E8 root shell exactly as 240=72_A8+24_4A2+144_triangle."
+}

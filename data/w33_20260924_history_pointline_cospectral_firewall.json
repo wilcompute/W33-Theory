@@ -1,0 +1,41 @@
+{
+  "schema": "w33.20260924.history_pointline_cospectral_firewall.v1",
+  "separator": {
+    "complete_induced_four_vertex_profiles_equal": true,
+    "independent_triad_common_neighbor_hist_history": {
+      "0": 405,
+      "1": 216,
+      "2": 324
+    },
+    "independent_triad_common_neighbor_hist_point_H27": {
+      "0": 225,
+      "1": 648,
+      "3": 72
+    },
+    "induced_four_vertex_type_differences": {},
+    "number_of_differing_unlabeled_4vertex_types": 0
+  },
+  "shared": {
+    "adjacency_spectrum": "8^1,2^12,(-1)^8,(-4)^6",
+    "edge_common_neighbor_hist_line": {
+      "1": 108
+    },
+    "edge_common_neighbor_hist_point": {
+      "1": 108
+    },
+    "edges": 108,
+    "filled_clique_b1": 46,
+    "nonedge_common_neighbor_hist_line": {
+      "2": 162,
+      "4": 81
+    },
+    "nonedge_common_neighbor_hist_point": {
+      "0": 27,
+      "3": 216
+    },
+    "triangles": 36,
+    "vertices": 27
+  },
+  "status": "PASS_EXACT_COSPECTRAL_POINT_LINE_FIREWALL",
+  "theorem": "The line-side null-history graph and point-side H27 are a cospectral, same-edge, same-triangle, same-b1 pair and even have identical complete unlabeled induced four-vertex profiles, yet they are nonisomorphic. Their first separator in this audit is the independent-triad common-neighbor law: 0^405 1^216 2^324 versus 0^225 1^648 3^72. Thus the repeated 27/108/36/46 package is a deep point/line dual shadow, not an objectwise identification."
+}

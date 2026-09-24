@@ -1,0 +1,30 @@
+{
+  "comparison": {
+    "character_equal_elements": 648,
+    "characters_identical": true,
+    "elements_checked": 648,
+    "joint_character_value_histogram": {
+      "-1,-1": 162,
+      "-3,-3": 27,
+      "0,0": 440,
+      "81,81": 1,
+      "9,9": 18
+    }
+  },
+  "global_W33_H1": {
+    "character_formula": "1-C0+C1-C2+C3 on the W33 clique complex",
+    "dimension": 81,
+    "restricted_character_norm": 13
+  },
+  "group": "PSp(4,3) Bell-line stabilizer, order 648",
+  "history_null_graph": {
+    "character_norm_cycle_space": 14,
+    "character_norm_reduced81": 13,
+    "cycle_space_dimension": 82,
+    "reduced_dimension": 81,
+    "trivial_multiplicity": 1
+  },
+  "interpretation": "The null-history graph has cycle rank 82 and exactly one invariant cycle under the Bell-line stabilizer, leaving a canonical 81-dimensional augmentation. The character comparison decides whether that 81 is the restriction of the repository's global W33 H1 rather than relying on dimension.",
+  "schema": "w33.20260924.history_cycle81_character_bridge.v1",
+  "status": "PASS_CHARACTER_AUDIT"
+}

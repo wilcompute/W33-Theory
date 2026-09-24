@@ -1,0 +1,168 @@
+{
+  "boundary": "The filtration and relative-homology quotient are canonical. A direct integral complement is a separate splitting choice.",
+  "representation": {
+    "elements_checked": 648,
+    "group": "PSp(4,3) Bell-line stabilizer",
+    "group_order": 648,
+    "relative35_character_histogram": {
+      "-1": 477,
+      "2": 144,
+      "5": 18,
+      "8": 8,
+      "35": 1
+    },
+    "relative35_equals_reduced_signed_triangle35_all_elements": true,
+    "triangle35_character_histogram": {
+      "-1": 477,
+      "2": 144,
+      "5": 18,
+      "8": 8,
+      "35": 1
+    }
+  },
+  "sample_character_rows": [
+    {
+      "chi_core46": 4,
+      "chi_full81": 9,
+      "chi_reduced_triangle35": 5,
+      "chi_relative35": 5
+    },
+    {
+      "chi_core46": 1,
+      "chi_full81": 0,
+      "chi_reduced_triangle35": -1,
+      "chi_relative35": -1
+    },
+    {
+      "chi_core46": 1,
+      "chi_full81": 0,
+      "chi_reduced_triangle35": -1,
+      "chi_relative35": -1
+    },
+    {
+      "chi_core46": 1,
+      "chi_full81": 0,
+      "chi_reduced_triangle35": -1,
+      "chi_relative35": -1
+    },
+    {
+      "chi_core46": -2,
+      "chi_full81": 0,
+      "chi_reduced_triangle35": 2,
+      "chi_relative35": 2
+    },
+    {
+      "chi_core46": -2,
+      "chi_full81": 0,
+      "chi_reduced_triangle35": 2,
+      "chi_relative35": 2
+    },
+    {
+      "chi_core46": 1,
+      "chi_full81": 0,
+      "chi_reduced_triangle35": -1,
+      "chi_relative35": -1
+    },
+    {
+      "chi_core46": -2,
+      "chi_full81": 0,
+      "chi_reduced_triangle35": 2,
+      "chi_relative35": 2
+    },
+    {
+      "chi_core46": -2,
+      "chi_full81": 0,
+      "chi_reduced_triangle35": 2,
+      "chi_relative35": 2
+    },
+    {
+      "chi_core46": 1,
+      "chi_full81": 0,
+      "chi_reduced_triangle35": -1,
+      "chi_relative35": -1
+    },
+    {
+      "chi_core46": 1,
+      "chi_full81": 0,
+      "chi_reduced_triangle35": -1,
+      "chi_relative35": -1
+    },
+    {
+      "chi_core46": 4,
+      "chi_full81": 9,
+      "chi_reduced_triangle35": 5,
+      "chi_relative35": 5
+    },
+    {
+      "chi_core46": -2,
+      "chi_full81": 0,
+      "chi_reduced_triangle35": 2,
+      "chi_relative35": 2
+    },
+    {
+      "chi_core46": -2,
+      "chi_full81": 0,
+      "chi_reduced_triangle35": 2,
+      "chi_relative35": 2
+    },
+    {
+      "chi_core46": 1,
+      "chi_full81": 0,
+      "chi_reduced_triangle35": -1,
+      "chi_relative35": -1
+    },
+    {
+      "chi_core46": -2,
+      "chi_full81": 0,
+      "chi_reduced_triangle35": 2,
+      "chi_relative35": 2
+    },
+    {
+      "chi_core46": -2,
+      "chi_full81": 0,
+      "chi_reduced_triangle35": 2,
+      "chi_relative35": 2
+    },
+    {
+      "chi_core46": 1,
+      "chi_full81": 0,
+      "chi_reduced_triangle35": -1,
+      "chi_relative35": -1
+    },
+    {
+      "chi_core46": 1,
+      "chi_full81": 0,
+      "chi_reduced_triangle35": -1,
+      "chi_relative35": -1
+    },
+    {
+      "chi_core46": 4,
+      "chi_full81": 9,
+      "chi_reduced_triangle35": 5,
+      "chi_relative35": 5
+    }
+  ],
+  "schema": "w33.20260924.relative_levi_35_46_split.v1",
+  "status": "PASS_GLOBAL_H1_SPLITS_AS_HISTORY46_PLUS_BELL_BOUNDARY35",
+  "theorem": "The global W33 H1 decomposition 81=46+35 comes from the canonical inclusion of the temporal incidence core into the full W33 Levi graph. The 46-dimensional summand is core history homology. Restoring the Bell boundary adds 17 vertices and 52 incidences, hence 35 relative cycles. On all 648 stabilizer elements this relative 35 has exactly the character of the reduced oriented 36-triangle module.",
+  "topology": {
+    "boundary_extension": {
+      "added_edges": 52,
+      "added_vertices": 17,
+      "relative_b1": 35,
+      "vertices_detail": "4 Bell points + Bell line + 12 other lines meeting B"
+    },
+    "full_W33_Levi": {
+      "b1": 81,
+      "edges": 160,
+      "vertices": 80
+    },
+    "identity": "81 = 46 + 35 = (108-63+1) + ((160-108)-(80-63))",
+    "temporal_core_Levi": {
+      "b1": 46,
+      "edges": 108,
+      "vertices": 63,
+      "vertices_detail": "36 points off B + 27 lines skew B"
+    }
+  }
+}

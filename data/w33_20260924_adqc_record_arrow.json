@@ -1,0 +1,337 @@
+{
+  "schema": "w33.20260924.adqc_record_arrow.v1",
+  "status": "PASS_REVERSIBLE_LOGICAL_UPDATE_WITH_CLASSICAL_RECORD_ARROW",
+  "exact_gate_fact": {
+    "branch_probabilities": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "branch_entropy_nats": 1.0986122886681096,
+    "branch_entropy_bits": 1.584962500721156,
+    "random_density_trials": [
+      {
+        "probabilities": [
+          0.3333333333333337,
+          0.33333333333333365,
+          0.3333333333333336
+        ],
+        "corrected_channel_error": 8.154492050122278e-16
+      },
+      {
+        "probabilities": [
+          0.33333333333333365,
+          0.3333333333333337,
+          0.3333333333333336
+        ],
+        "corrected_channel_error": 8.467743073339589e-16
+      },
+      {
+        "probabilities": [
+          0.3333333333333337,
+          0.3333333333333334,
+          0.3333333333333336
+        ],
+        "corrected_channel_error": 5.107149725895266e-16
+      },
+      {
+        "probabilities": [
+          0.3333333333333337,
+          0.33333333333333365,
+          0.3333333333333336
+        ],
+        "corrected_channel_error": 5.506428761805506e-16
+      },
+      {
+        "probabilities": [
+          0.33333333333333365,
+          0.3333333333333336,
+          0.3333333333333337
+        ],
+        "corrected_channel_error": 5.415366603333075e-16
+      },
+      {
+        "probabilities": [
+          0.33333333333333376,
+          0.33333333333333376,
+          0.3333333333333336
+        ],
+        "corrected_channel_error": 9.169386158004155e-16
+      },
+      {
+        "probabilities": [
+          0.3333333333333336,
+          0.3333333333333336,
+          0.3333333333333336
+        ],
+        "corrected_channel_error": 5.296371002695369e-16
+      },
+      {
+        "probabilities": [
+          0.3333333333333337,
+          0.3333333333333338,
+          0.3333333333333336
+        ],
+        "corrected_channel_error": 9.364233514057867e-16
+      },
+      {
+        "probabilities": [
+          0.33333333333333376,
+          0.33333333333333365,
+          0.33333333333333376
+        ],
+        "corrected_channel_error": 7.865780283191233e-16
+      },
+      {
+        "probabilities": [
+          0.33333333333333376,
+          0.3333333333333337,
+          0.3333333333333337
+        ],
+        "corrected_channel_error": 6.473774712680765e-16
+      },
+      {
+        "probabilities": [
+          0.3333333333333337,
+          0.33333333333333376,
+          0.3333333333333337
+        ],
+        "corrected_channel_error": 9.402951599778478e-16
+      },
+      {
+        "probabilities": [
+          0.3333333333333338,
+          0.33333333333333376,
+          0.3333333333333338
+        ],
+        "corrected_channel_error": 6.63871217668543e-16
+      },
+      {
+        "probabilities": [
+          0.33333333333333365,
+          0.3333333333333337,
+          0.3333333333333337
+        ],
+        "corrected_channel_error": 8.770337820994219e-16
+      },
+      {
+        "probabilities": [
+          0.3333333333333337,
+          0.33333333333333365,
+          0.33333333333333365
+        ],
+        "corrected_channel_error": 9.744793685936116e-16
+      },
+      {
+        "probabilities": [
+          0.33333333333333376,
+          0.3333333333333336,
+          0.3333333333333336
+        ],
+        "corrected_channel_error": 5.248735480879577e-16
+      },
+      {
+        "probabilities": [
+          0.3333333333333338,
+          0.3333333333333337,
+          0.3333333333333336
+        ],
+        "corrected_channel_error": 6.142728225523107e-16
+      },
+      {
+        "probabilities": [
+          0.3333333333333338,
+          0.3333333333333337,
+          0.33333333333333365
+        ],
+        "corrected_channel_error": 7.041973152169739e-16
+      },
+      {
+        "probabilities": [
+          0.3333333333333336,
+          0.33333333333333354,
+          0.3333333333333336
+        ],
+        "corrected_channel_error": 5.052663170949361e-16
+      },
+      {
+        "probabilities": [
+          0.33333333333333376,
+          0.3333333333333337,
+          0.3333333333333336
+        ],
+        "corrected_channel_error": 5.596573900772924e-16
+      },
+      {
+        "probabilities": [
+          0.33333333333333365,
+          0.3333333333333337,
+          0.3333333333333336
+        ],
+        "corrected_channel_error": 9.776271129445614e-16
+      },
+      {
+        "probabilities": [
+          0.3333333333333337,
+          0.33333333333333354,
+          0.33333333333333354
+        ],
+        "corrected_channel_error": 6.333124750323814e-16
+      },
+      {
+        "probabilities": [
+          0.3333333333333337,
+          0.3333333333333336,
+          0.3333333333333337
+        ],
+        "corrected_channel_error": 6.799142386828642e-16
+      },
+      {
+        "probabilities": [
+          0.33333333333333376,
+          0.3333333333333337,
+          0.3333333333333337
+        ],
+        "corrected_channel_error": 5.149097906926324e-16
+      },
+      {
+        "probabilities": [
+          0.3333333333333337,
+          0.3333333333333337,
+          0.3333333333333337
+        ],
+        "corrected_channel_error": 8.353157377838293e-16
+      },
+      {
+        "probabilities": [
+          0.3333333333333337,
+          0.33333333333333365,
+          0.3333333333333336
+        ],
+        "corrected_channel_error": 6.471989192638562e-16
+      },
+      {
+        "probabilities": [
+          0.33333333333333365,
+          0.3333333333333335,
+          0.33333333333333365
+        ],
+        "corrected_channel_error": 4.468798853787361e-16
+      },
+      {
+        "probabilities": [
+          0.33333333333333376,
+          0.3333333333333336,
+          0.33333333333333365
+        ],
+        "corrected_channel_error": 4.88742754303021e-16
+      },
+      {
+        "probabilities": [
+          0.3333333333333337,
+          0.3333333333333337,
+          0.33333333333333365
+        ],
+        "corrected_channel_error": 6.579909275695134e-16
+      },
+      {
+        "probabilities": [
+          0.3333333333333336,
+          0.33333333333333365,
+          0.33333333333333365
+        ],
+        "corrected_channel_error": 5.19133053785667e-16
+      },
+      {
+        "probabilities": [
+          0.3333333333333336,
+          0.3333333333333336,
+          0.33333333333333365
+        ],
+        "corrected_channel_error": 7.718018493997145e-16
+      },
+      {
+        "probabilities": [
+          0.3333333333333336,
+          0.33333333333333365,
+          0.33333333333333354
+        ],
+        "corrected_channel_error": 1.0480199474351087e-15
+      },
+      {
+        "probabilities": [
+          0.3333333333333337,
+          0.3333333333333337,
+          0.3333333333333336
+        ],
+        "corrected_channel_error": 7.594226301028275e-16
+      }
+    ],
+    "logical_channel_after_frame_correction": "rho -> (F R(theta)) rho (F R(theta))^dagger",
+    "logical_channel_is_unitary": true
+  },
+  "record_thermodynamics": {
+    "temperature_K": 300.0,
+    "k_B_J_per_K": 1.380649e-23,
+    "symmetric_record_reset_floor_per_measurement_J": 4.55039387321201e-21,
+    "formula": "k_B T ln(3) for erasure of one equiprobable trit",
+    "records": [
+      {
+        "adaptive_measurements": 1,
+        "possible_records": 3,
+        "record_entropy_nats": 1.0986122886681096,
+        "record_entropy_bits": 1.584962500721156,
+        "symmetric_erasure_floor_J_at_300K": 4.55039387321201e-21
+      },
+      {
+        "adaptive_measurements": 2,
+        "possible_records": 9,
+        "record_entropy_nats": 2.197224577336219,
+        "record_entropy_bits": 3.169925001442312,
+        "symmetric_erasure_floor_J_at_300K": 9.10078774642402e-21
+      },
+      {
+        "adaptive_measurements": 3,
+        "possible_records": 27,
+        "record_entropy_nats": 3.2958368660043287,
+        "record_entropy_bits": 4.754887502163468,
+        "symmetric_erasure_floor_J_at_300K": 1.3651181619636032e-20
+      },
+      {
+        "adaptive_measurements": 10,
+        "possible_records": 59049,
+        "record_entropy_nats": 10.986122886681095,
+        "record_entropy_bits": 15.84962500721156,
+        "symmetric_erasure_floor_J_at_300K": 4.55039387321201e-20
+      },
+      {
+        "adaptive_measurements": 40,
+        "possible_records": 12157665459056928801,
+        "record_entropy_nats": 43.94449154672438,
+        "record_entropy_bits": 63.39850002884624,
+        "symmetric_erasure_floor_J_at_300K": 1.820157549284804e-19
+      },
+      {
+        "adaptive_measurements": 81,
+        "possible_records": 443426488243037769948249630619149892803,
+        "record_entropy_nats": 88.98759538211688,
+        "record_entropy_bits": 128.38196255841365,
+        "symmetric_erasure_floor_J_at_300K": 3.6858190373017285e-19
+      }
+    ],
+    "measurement_vs_erasure_boundary": "The Landauer floor applies to resetting the classical record."
+  },
+  "temporal_synthesis": {
+    "reversible_update": "The corrected stationary-memory channel is unitary.",
+    "record_arrow": "Adaptive analyzer outcomes create an ordered classical branch record.",
+    "key_separation": "Computation supplies change without requiring an irreversible logical channel; historical bookkeeping can live in the controller."
+  },
+  "holonet_consequence": "A flying photonic qutrit can be the measured program head while stationary qutrit memories carry the reversible logical state.",
+  "literature": [
+    "Proctor et al., arXiv:1510.06462",
+    "Sagawa and Ueda, Phys. Rev. Lett. 102, 250602 (2009)",
+    "Erker et al., Phys. Rev. X 7, 031022 (2017)",
+    "Pearson et al., Phys. Rev. X 11, 021029 (2021)"
+  ],
+  "boundary": "Exact for the ideal ADQC branch model and symmetric record reset; not a complete detector or controller thermodynamic model."
+}

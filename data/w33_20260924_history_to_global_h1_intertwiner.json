@@ -1,0 +1,210 @@
+{
+  "boundary": "Ranks are independently certified modulo 5,7,11,101. The map itself is integral. This proves the finite homology/module bridge, not a continuum proper-time interpretation.",
+  "construction": {
+    "Bell_stabilizer_equivariant_all_648": true,
+    "codomain": "oriented cycles of the 40-point W33 graph",
+    "domain": "oriented edges of the 27-history null graph",
+    "edge_rule": "for L->M meeting at p, sum over the three Bell points b not collinear with p of b->x_L(b)->p->x_M(b)->b",
+    "orientation_reversal": "M->L negates the chain",
+    "quadrilaterals_per_history_edge": [
+      3
+    ]
+  },
+  "homology": {
+    "filled_history_H1_dimension": 46,
+    "global_H1_dimension": 81,
+    "global_triangle_boundary_rank": 120,
+    "history_cycle_dimension": 82,
+    "history_triangle_boundary_rank": 36,
+    "induced_filled_history_H1_map_rank": 46,
+    "induced_rank_mod_primes": {
+      "101": {
+        "boundary_rank": 120,
+        "history_triangle_rank": 36,
+        "induced_history_rank": 46,
+        "triangle_image_extra_rank": 0
+      },
+      "11": {
+        "boundary_rank": 120,
+        "history_triangle_rank": 36,
+        "induced_history_rank": 46,
+        "triangle_image_extra_rank": 0
+      },
+      "5": {
+        "boundary_rank": 120,
+        "history_triangle_rank": 36,
+        "induced_history_rank": 46,
+        "triangle_image_extra_rank": 0
+      },
+      "7": {
+        "boundary_rank": 120,
+        "history_triangle_rank": 36,
+        "induced_history_rank": 46,
+        "triangle_image_extra_rank": 0
+      }
+    },
+    "kernel_dimension_on_history_cycles": 36,
+    "kernel_is_exactly_history_triangle_boundary_space": true
+  },
+  "sample_edges": [
+    {
+      "history_edge": [
+        0,
+        1
+      ],
+      "intersection_point": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "quadrilaterals": 3
+    },
+    {
+      "history_edge": [
+        0,
+        2
+      ],
+      "intersection_point": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "quadrilaterals": 3
+    },
+    {
+      "history_edge": [
+        0,
+        9
+      ],
+      "intersection_point": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "quadrilaterals": 3
+    },
+    {
+      "history_edge": [
+        0,
+        13
+      ],
+      "intersection_point": [
+        0,
+        0,
+        1,
+        2
+      ],
+      "quadrilaterals": 3
+    },
+    {
+      "history_edge": [
+        0,
+        16
+      ],
+      "intersection_point": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "quadrilaterals": 3
+    },
+    {
+      "history_edge": [
+        0,
+        18
+      ],
+      "intersection_point": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "quadrilaterals": 3
+    },
+    {
+      "history_edge": [
+        0,
+        23
+      ],
+      "intersection_point": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "quadrilaterals": 3
+    },
+    {
+      "history_edge": [
+        0,
+        26
+      ],
+      "intersection_point": [
+        0,
+        0,
+        1,
+        2
+      ],
+      "quadrilaterals": 3
+    },
+    {
+      "history_edge": [
+        1,
+        2
+      ],
+      "intersection_point": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "quadrilaterals": 3
+    },
+    {
+      "history_edge": [
+        1,
+        10
+      ],
+      "intersection_point": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "quadrilaterals": 3
+    },
+    {
+      "history_edge": [
+        1,
+        14
+      ],
+      "intersection_point": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "quadrilaterals": 3
+    },
+    {
+      "history_edge": [
+        1,
+        17
+      ],
+      "intersection_point": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "quadrilaterals": 3
+    }
+  ],
+  "schema": "w33.20260924.history_to_global_h1_intertwiner.v1",
+  "status": "PASS_EXPLICIT_TEMPORAL_CYCLES_TO_GLOBAL_W33_H1_INTERTWINER",
+  "theorem": "The Bell line turns every temporal edge into three W33 quadrilateral cycles. This integral chain map is equivariant under all 648 Bell-line stabilizer elements. Its homology rank is 46, and its kernel on the 82-dimensional temporal cycle space is exactly the 36-dimensional span of the filled temporal triangles. It therefore gives an explicit injective map from filled temporal H1 (dimension 46) into global W33 H1."
+}

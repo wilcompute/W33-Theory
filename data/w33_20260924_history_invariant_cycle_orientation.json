@@ -1,0 +1,679 @@
+{
+  "PGSp_outer_action": {
+    "inner_half_preserves_orientation": true,
+    "outer_coset_flips_orientation": true,
+    "sign_histogram": {
+      "-1": 648,
+      "1": 648
+    }
+  },
+  "PSp_invariant_triangle_chain": {
+    "coefficients": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "coefficients_are_all_pm1": true,
+    "triangle_count": 36,
+    "triangle_labels": [
+      {
+        "common_W33_point": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "common_W33_point": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          0,
+          9,
+          18
+        ]
+      },
+      {
+        "common_W33_point": [
+          0,
+          0,
+          1,
+          2
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          0,
+          13,
+          26
+        ]
+      },
+      {
+        "common_W33_point": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          0,
+          16,
+          23
+        ]
+      },
+      {
+        "common_W33_point": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          1,
+          10,
+          19
+        ]
+      },
+      {
+        "common_W33_point": [
+          0,
+          1,
+          2,
+          1
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          1,
+          14,
+          24
+        ]
+      },
+      {
+        "common_W33_point": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          1,
+          17,
+          21
+        ]
+      },
+      {
+        "common_W33_point": [
+          0,
+          1,
+          0,
+          2
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          2,
+          11,
+          20
+        ]
+      },
+      {
+        "common_W33_point": [
+          0,
+          1,
+          1,
+          2
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          2,
+          12,
+          25
+        ]
+      },
+      {
+        "common_W33_point": [
+          0,
+          1,
+          2,
+          2
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          2,
+          15,
+          22
+        ]
+      },
+      {
+        "common_W33_point": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "common_W33_point": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          3,
+          10,
+          26
+        ]
+      },
+      {
+        "common_W33_point": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          3,
+          12,
+          21
+        ]
+      },
+      {
+        "common_W33_point": [
+          1,
+          2,
+          2,
+          1
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          3,
+          16,
+          20
+        ]
+      },
+      {
+        "common_W33_point": [
+          1,
+          2,
+          1,
+          1
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          4,
+          11,
+          24
+        ]
+      },
+      {
+        "common_W33_point": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          4,
+          13,
+          22
+        ]
+      },
+      {
+        "common_W33_point": [
+          1,
+          0,
+          2,
+          1
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          4,
+          17,
+          18
+        ]
+      },
+      {
+        "common_W33_point": [
+          1,
+          0,
+          1,
+          1
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          5,
+          9,
+          25
+        ]
+      },
+      {
+        "common_W33_point": [
+          1,
+          2,
+          0,
+          1
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          5,
+          14,
+          23
+        ]
+      },
+      {
+        "common_W33_point": [
+          1,
+          1,
+          2,
+          1
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          5,
+          15,
+          19
+        ]
+      },
+      {
+        "common_W33_point": [
+          0,
+          1,
+          2,
+          0
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "common_W33_point": [
+          1,
+          2,
+          1,
+          2
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          6,
+          10,
+          23
+        ]
+      },
+      {
+        "common_W33_point": [
+          1,
+          1,
+          2,
+          2
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          6,
+          13,
+          20
+        ]
+      },
+      {
+        "common_W33_point": [
+          1,
+          0,
+          0,
+          2
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          6,
+          15,
+          24
+        ]
+      },
+      {
+        "common_W33_point": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          7,
+          11,
+          21
+        ]
+      },
+      {
+        "common_W33_point": [
+          1,
+          0,
+          2,
+          2
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          7,
+          14,
+          18
+        ]
+      },
+      {
+        "common_W33_point": [
+          1,
+          2,
+          0,
+          2
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          7,
+          16,
+          25
+        ]
+      },
+      {
+        "common_W33_point": [
+          1,
+          0,
+          1,
+          2
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          8,
+          9,
+          22
+        ]
+      },
+      {
+        "common_W33_point": [
+          1,
+          2,
+          2,
+          2
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          8,
+          12,
+          19
+        ]
+      },
+      {
+        "common_W33_point": [
+          1,
+          1,
+          0,
+          2
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          8,
+          17,
+          26
+        ]
+      },
+      {
+        "common_W33_point": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "common_W33_point": [
+          1,
+          1,
+          1,
+          0
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          12,
+          13,
+          14
+        ]
+      },
+      {
+        "common_W33_point": [
+          1,
+          2,
+          1,
+          0
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          15,
+          16,
+          17
+        ]
+      },
+      {
+        "common_W33_point": [
+          1,
+          0,
+          2,
+          0
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          18,
+          19,
+          20
+        ]
+      },
+      {
+        "common_W33_point": [
+          1,
+          2,
+          2,
+          0
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          21,
+          22,
+          23
+        ]
+      },
+      {
+        "common_W33_point": [
+          1,
+          1,
+          2,
+          0
+        ],
+        "orientation_coefficient": 1,
+        "triangle": [
+          24,
+          25,
+          26
+        ]
+      }
+    ]
+  },
+  "interpretation": "This identifies the single dimension removed in 82=1+81 as a concrete global orientation/winding cycle of the Bell temporal chart.",
+  "invariant_cycle": {
+    "PSp_fixed_pointwise": true,
+    "coefficients_are_all_pm1": true,
+    "edge_coefficients": [
+      1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      1
+    ],
+    "edge_count": 108,
+    "support_size": 108,
+    "vertex_boundary_zero": true
+  },
+  "schema": "w33.20260924.history_invariant_cycle_orientation.v1",
+  "status": "PASS_EXPLICIT_UNIQUE_HISTORY_ORIENTATION_CYCLE",
+  "theorem": "The unique PSp(B)-invariant line in the null-history cycle space has a primitive representative supported on all 108 history edges with coefficients +/-1. It is the boundary of a signed sum of all 36 temporal triangles. The inner group fixes it pointwise; the full outer extension acts on its one-dimensional orientation line."
+}

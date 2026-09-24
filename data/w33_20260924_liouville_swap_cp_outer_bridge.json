@@ -1,0 +1,198 @@
+{
+  "schema": "w33.20260924.liouville_swap_cp_outer_bridge.v1",
+  "status": "PASS_LIOUVILLE_SWAP_IS_INTRINSIC_W33_TEMPORAL_OUTER",
+  "forms": {
+    "liouville": "diag(J2,-J2) on (u,v)",
+    "w33": "[[0,I],[-I,0]] on (s,d)",
+    "H_liouville_to_w33": [
+      [
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        2,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        2,
+        0
+      ]
+    ],
+    "H_is_symplectic_isometry": true
+  },
+  "reversal": {
+    "liouville_action": "(u,v)->(v,u)",
+    "w33_action": "(s,d)->(s,-d)",
+    "w33_matrix": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2
+      ]
+    ],
+    "exact_conjugacy": "H Swap H^-1 = diag(I2,-I2)",
+    "fixed_projective_points": 8,
+    "fixed_lines": 2
+  },
+  "channel_line": {
+    "plus_line_points": [
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        2,
+        0,
+        0
+      ]
+    ],
+    "inverse_labels": [
+      {
+        "w33_point": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "u": [
+          0,
+          2
+        ],
+        "v": [
+          0,
+          2
+        ],
+        "u_equals_v": true
+      },
+      {
+        "w33_point": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "u": [
+          2,
+          0
+        ],
+        "v": [
+          2,
+          0
+        ],
+        "u_equals_v": true
+      },
+      {
+        "w33_point": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "u": [
+          2,
+          2
+        ],
+        "v": [
+          2,
+          2
+        ],
+        "u_equals_v": true
+      },
+      {
+        "w33_point": [
+          1,
+          2,
+          0,
+          0
+        ],
+        "u": [
+          2,
+          1
+        ],
+        "v": [
+          2,
+          1
+        ],
+        "u_equals_v": true
+      }
+    ],
+    "meaning": "u=v, so Phi_(u,u)(A)=P_u A P_u^dagger is unitary CPTP"
+  },
+  "mirror_line": {
+    "minus_line_points": [
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        2
+      ]
+    ],
+    "meaning": "u=-v; fixed projectively by reversal but not selected as the CP diagonal"
+  },
+  "theorem": "The canonical one-qutrit Liouville left/right reversal is symplectically conjugate to the W33 anti-symplectic outer matrix used by the intrinsic BT172 construction. Its eight fixed W33 rays split into two Lagrangian lines; the + line is exactly the unitary-channel diagonal u=v.",
+  "boundary": "The minus fixed line is a projective mirror sector; no complete-positivity or physical reverse-channel interpretation is assigned to it here."
+}

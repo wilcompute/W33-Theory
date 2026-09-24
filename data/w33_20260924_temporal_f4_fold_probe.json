@@ -1,0 +1,27 @@
+{
+  "centralizer_action_kernel_order": 1,
+  "centralizer_image_on_26_order": 48,
+  "centralizer_orbits_on_26": [
+    6,
+    12,
+    4,
+    3,
+    1
+  ],
+  "full_centralizer_order": 96,
+  "image_element_order_histogram": {
+    "1": 1,
+    "2": 19,
+    "3": 8,
+    "4": 12,
+    "6": 8
+  },
+  "inner_centralizer_order": 48,
+  "inner_group_order": 25920,
+  "orbit_size_histogram": {
+    "1": 7,
+    "2": 19
+  },
+  "reversal_class_count": 26,
+  "schema": "w33.20260924.temporal_f4_fold_probe.v1"
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "w33.20260924.bell_shell_clifford_cyclotomic_lift.v1",
+  "status": "PASS_BELL_SHELL_IS_QUADRATIC_CLIFFORD_AND_T_IS_MU9_LIFT",
+  "bell_shell_quadratic_group": {
+    "coordinate_space": "Sym_2(F3) ~= F3^3",
+    "order": 27,
+    "law": "U_S U_T = U_(S+T) projectively",
+    "exponent": 3,
+    "phase_field": "mu_3",
+    "all_27_normalize_two_qutrit_paulis": true
+  },
+  "nonclifford_lift": {
+    "gate": "T1 = diag(1,zeta9,zeta9^-1) tensor I3",
+    "zeta9_order": 9,
+    "T1_cubed": "Z1 projectively",
+    "T1_is_Clifford": false,
+    "nearest_quadratic_history_projective_distance": 1.675549665802916,
+    "phase_quotient": "mu_9/mu_3 ~= C3"
+  },
+  "universality_reading": "The 27 quadratic histories form a finite diagonal Clifford group. The ADQC analyzer can carry the required basis-dependent ninth-root phase profile instead of demanding another finite W33 gate.",
+  "relation_to_prior_repo_no_go": "A scalar ninth root is conjugation-trivial. The required resource is the nonuniform computational-basis phase profile of qutrit T.",
+  "boundary": "Exact ideal gate algebra; no protected optical analyzer threshold or laboratory error budget is claimed."
+}

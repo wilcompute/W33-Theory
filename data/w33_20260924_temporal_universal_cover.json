@@ -1,0 +1,275 @@
+{
+  "base_graph": {
+    "cycle_rank": 82,
+    "degree": 8,
+    "edges": 108,
+    "integral_first_homology": "Z^82",
+    "vertices": 27
+  },
+  "boundary": "This is graph topology, not a derivation of continuum proper time. Reduced path depth is an operational/computational history coordinate; a physical clock calibration requires dynamics and a rate scale.",
+  "fundamental_group": {
+    "chord_generators": 82,
+    "example_generator_base_edge_length": 3,
+    "rank": 82,
+    "same_endpoint_winding_examples": [
+      {
+        "base_endpoint": 0,
+        "base_walk_edge_length": 0,
+        "lift_word": [],
+        "reduced_word_length": 0,
+        "winding": 0
+      },
+      {
+        "base_endpoint": 0,
+        "base_walk_edge_length": 3,
+        "lift_word": [
+          "g0"
+        ],
+        "reduced_word_length": 1,
+        "winding": 1
+      },
+      {
+        "base_endpoint": 0,
+        "base_walk_edge_length": 6,
+        "lift_word": [
+          "g0",
+          "g0"
+        ],
+        "reduced_word_length": 2,
+        "winding": 2
+      },
+      {
+        "base_endpoint": 0,
+        "base_walk_edge_length": 9,
+        "lift_word": [
+          "g0",
+          "g0",
+          "g0"
+        ],
+        "reduced_word_length": 3,
+        "winding": 3
+      },
+      {
+        "base_endpoint": 0,
+        "base_walk_edge_length": 30,
+        "lift_word": [
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0"
+        ],
+        "reduced_word_length": 10,
+        "winding": 10
+      },
+      {
+        "base_endpoint": 0,
+        "base_walk_edge_length": 300,
+        "lift_word": [
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0",
+          "g0"
+        ],
+        "reduced_word_length": 100,
+        "winding": 100
+      }
+    ],
+    "spanning_tree_edges": 26,
+    "structure": "free group F_82"
+  },
+  "schema": "w33.20260924.temporal_universal_cover.v1",
+  "status": "PASS_NULL_HISTORY_UNIVERSAL_COVER_UNBOUNDED_PATH_TIME",
+  "temporal_coordinates": {
+    "path_depth": "distance from chosen root lift in the universal-cover tree",
+    "phase": "character H1 -> U(1)",
+    "phase_example_angle": "pi*sqrt(2) on generator g0",
+    "phase_examples": [
+      {
+        "phase_imag": 0.0,
+        "phase_real": 1.0,
+        "winding": 0
+      },
+      {
+        "phase_imag": -0.9639025328498773,
+        "phase_real": -0.26625534204141565,
+        "winding": 1
+      },
+      {
+        "phase_imag": 0.5132883971570619,
+        "phase_real": -0.8582161856688175,
+        "winding": 2
+      },
+      {
+        "phase_imag": 0.6905709773479902,
+        "phase_real": 0.7232646301628758,
+        "winding": 3
+      },
+      {
+        "phase_imag": -0.8810248207123895,
+        "phase_real": 0.4730700426878686,
+        "winding": 4
+      },
+      {
+        "phase_imag": -0.22141584737648196,
+        "phase_real": -0.9751794822136869,
+        "winding": 5
+      }
+    ],
+    "record_word": "nonabelian reduced word in F_82",
+    "winding": "abelianization in Z^82"
+  },
+  "theorem": "Finite recurrence of the 27 instantaneous history labels does not bound history depth. The null-history graph has free fundamental group F_82 and infinite 8-regular universal cover. The same base present can therefore occur after arbitrarily many nontrivial windings, distinguished by path word, homology, phase holonomy, or an explicit record register.",
+  "universal_cover": {
+    "first_shells": [
+      {
+        "radius": 0,
+        "vertices": 1
+      },
+      {
+        "radius": 1,
+        "vertices": 8
+      },
+      {
+        "radius": 2,
+        "vertices": 56
+      },
+      {
+        "radius": 3,
+        "vertices": 392
+      },
+      {
+        "radius": 4,
+        "vertices": 2744
+      },
+      {
+        "radius": 5,
+        "vertices": 19208
+      },
+      {
+        "radius": 6,
+        "vertices": 134456
+      },
+      {
+        "radius": 7,
+        "vertices": 941192
+      },
+      {
+        "radius": 8,
+        "vertices": 6588344
+      },
+      {
+        "radius": 9,
+        "vertices": 46118408
+      },
+      {
+        "radius": 10,
+        "vertices": 322828856
+      }
+    ],
+    "graph": "infinite 8-regular tree",
+    "root_shell_formula": "N_0=1; N_n=8*7^(n-1) for n>=1",
+    "same_base_state_in_infinitely_many_lifts": true
+  }
+}

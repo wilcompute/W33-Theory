@@ -1,0 +1,340 @@
+{
+  "literature_boundary": "Finite Weil/metaplectic representations acquire projective cocycles governed by quadratic Gauss/Maslov data. The executable claim here is the displayed qutrit matrix identity, not a continuum geometric-quantization theorem.",
+  "operator_relation": {
+    "F": "qutrit Fourier",
+    "F_squared": "parity x -> -x",
+    "G": "diag(1,omega,omega), a Bell-shell quadratic chirp",
+    "exact_projective_relation": "(F G)^3 = i F^2",
+    "interpretation": "the order-four phase is produced by composition of finite quadratic kernels"
+  },
+  "phase_group": {
+    "generated_group": "mu_12",
+    "generated_root12_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "maslov_phase_root12_index": 3,
+    "mechanism": "<omega,i> with orders 3 and 4",
+    "weyl_commutator_phase_root12_index": 4
+  },
+  "quadratic_gauss": {
+    "numeric": [
+      2.563950248511419e-16,
+      1.0000000000000002
+    ],
+    "sum": "(1/sqrt(3))*sum_x omega^(x^2)",
+    "value": "i"
+  },
+  "quadratic_history_atlas": {
+    "phase_exponent_histogram_mu12": {
+      "0": 13,
+      "3": 4,
+      "6": 6,
+      "9": 4
+    },
+    "rank_determinant_histogram": {
+      "rank0_det0": 1,
+      "rank1_det0": 8,
+      "rank2_det1": 6,
+      "rank2_det2": 12
+    },
+    "reading": "rank-one histories carry the +/-i orientation pair; rank-two histories carry +/-1",
+    "rows": [
+      {
+        "coords": [
+          0,
+          0,
+          0
+        ],
+        "determinant": 0,
+        "rank": 0,
+        "weil_phase_root12_exponent": 0
+      },
+      {
+        "coords": [
+          0,
+          0,
+          1
+        ],
+        "determinant": 0,
+        "rank": 1,
+        "weil_phase_root12_exponent": 9
+      },
+      {
+        "coords": [
+          0,
+          0,
+          2
+        ],
+        "determinant": 0,
+        "rank": 1,
+        "weil_phase_root12_exponent": 3
+      },
+      {
+        "coords": [
+          0,
+          1,
+          0
+        ],
+        "determinant": 2,
+        "rank": 2,
+        "weil_phase_root12_exponent": 0
+      },
+      {
+        "coords": [
+          0,
+          1,
+          1
+        ],
+        "determinant": 2,
+        "rank": 2,
+        "weil_phase_root12_exponent": 0
+      },
+      {
+        "coords": [
+          0,
+          1,
+          2
+        ],
+        "determinant": 2,
+        "rank": 2,
+        "weil_phase_root12_exponent": 0
+      },
+      {
+        "coords": [
+          0,
+          2,
+          0
+        ],
+        "determinant": 2,
+        "rank": 2,
+        "weil_phase_root12_exponent": 0
+      },
+      {
+        "coords": [
+          0,
+          2,
+          1
+        ],
+        "determinant": 2,
+        "rank": 2,
+        "weil_phase_root12_exponent": 0
+      },
+      {
+        "coords": [
+          0,
+          2,
+          2
+        ],
+        "determinant": 2,
+        "rank": 2,
+        "weil_phase_root12_exponent": 0
+      },
+      {
+        "coords": [
+          1,
+          0,
+          0
+        ],
+        "determinant": 0,
+        "rank": 1,
+        "weil_phase_root12_exponent": 9
+      },
+      {
+        "coords": [
+          1,
+          0,
+          1
+        ],
+        "determinant": 1,
+        "rank": 2,
+        "weil_phase_root12_exponent": 6
+      },
+      {
+        "coords": [
+          1,
+          0,
+          2
+        ],
+        "determinant": 2,
+        "rank": 2,
+        "weil_phase_root12_exponent": 0
+      },
+      {
+        "coords": [
+          1,
+          1,
+          0
+        ],
+        "determinant": 2,
+        "rank": 2,
+        "weil_phase_root12_exponent": 0
+      },
+      {
+        "coords": [
+          1,
+          1,
+          1
+        ],
+        "determinant": 0,
+        "rank": 1,
+        "weil_phase_root12_exponent": 9
+      },
+      {
+        "coords": [
+          1,
+          1,
+          2
+        ],
+        "determinant": 1,
+        "rank": 2,
+        "weil_phase_root12_exponent": 6
+      },
+      {
+        "coords": [
+          1,
+          2,
+          0
+        ],
+        "determinant": 2,
+        "rank": 2,
+        "weil_phase_root12_exponent": 0
+      },
+      {
+        "coords": [
+          1,
+          2,
+          1
+        ],
+        "determinant": 0,
+        "rank": 1,
+        "weil_phase_root12_exponent": 9
+      },
+      {
+        "coords": [
+          1,
+          2,
+          2
+        ],
+        "determinant": 1,
+        "rank": 2,
+        "weil_phase_root12_exponent": 6
+      },
+      {
+        "coords": [
+          2,
+          0,
+          0
+        ],
+        "determinant": 0,
+        "rank": 1,
+        "weil_phase_root12_exponent": 3
+      },
+      {
+        "coords": [
+          2,
+          0,
+          1
+        ],
+        "determinant": 2,
+        "rank": 2,
+        "weil_phase_root12_exponent": 0
+      },
+      {
+        "coords": [
+          2,
+          0,
+          2
+        ],
+        "determinant": 1,
+        "rank": 2,
+        "weil_phase_root12_exponent": 6
+      },
+      {
+        "coords": [
+          2,
+          1,
+          0
+        ],
+        "determinant": 2,
+        "rank": 2,
+        "weil_phase_root12_exponent": 0
+      },
+      {
+        "coords": [
+          2,
+          1,
+          1
+        ],
+        "determinant": 1,
+        "rank": 2,
+        "weil_phase_root12_exponent": 6
+      },
+      {
+        "coords": [
+          2,
+          1,
+          2
+        ],
+        "determinant": 0,
+        "rank": 1,
+        "weil_phase_root12_exponent": 3
+      },
+      {
+        "coords": [
+          2,
+          2,
+          0
+        ],
+        "determinant": 2,
+        "rank": 2,
+        "weil_phase_root12_exponent": 0
+      },
+      {
+        "coords": [
+          2,
+          2,
+          1
+        ],
+        "determinant": 1,
+        "rank": 2,
+        "weil_phase_root12_exponent": 6
+      },
+      {
+        "coords": [
+          2,
+          2,
+          2
+        ],
+        "determinant": 0,
+        "rank": 1,
+        "weil_phase_root12_exponent": 3
+      }
+    ],
+    "size": 27
+  },
+  "repo_relation": {
+    "history_program_parent": "analysis/w33_20260924_bell_shell_quadratic_clifford_programs.py",
+    "new_content": "this packet supplies an explicit quadratic-Gauss/Maslov operator mechanism for the order-four factor inside the Bell-shell/Clifford lane",
+    "prior_mu12": "repo already certified the qutrit Clifford scalar phase group mu_12 and an E8 Z12 character bridge"
+  },
+  "schema": "w33.20260924.temporal_maslov_mu12.v2",
+  "status": "PASS_HISTORY_QUADRATICS_GENERATE_THE_CLIFFORD_MU12_FIELD",
+  "temporal_reversal": {
+    "i_maps_to": "-i",
+    "omega_maps_to": "omega^-1",
+    "operation": "antiunitary complex conjugation",
+    "reading": "coherent orientation is reversed without entropy production",
+    "reversed_relation": "(conj(FG))^3 = -i conj(F)^2"
+  }
+}

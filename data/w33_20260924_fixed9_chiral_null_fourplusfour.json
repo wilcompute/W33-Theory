@@ -1,0 +1,281 @@
+{
+  "PGSp_order1296": {
+    "dual_null_orbits": [
+      [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    ],
+    "interpretation": "the outer nonsquare/temporal reversal extension fuses the two chiral fours",
+    "orbit_sizes": [
+      8
+    ]
+  },
+  "PSp_order648": {
+    "dual_null_orbits": [
+      [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    ],
+    "interpretation": "the two 4-orbits are the +i and -i oriented rank-one cones",
+    "orbit_sizes": [
+      4,
+      4
+    ],
+    "orbit_weil_phases": [
+      [
+        "-i"
+      ],
+      [
+        "i"
+      ]
+    ]
+  },
+  "rows": [
+    {
+      "dual": [
+        0,
+        0,
+        1
+      ],
+      "dual_symmetric_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "phase": "-i",
+      "weil_phase_exp_mu12": 9
+    },
+    {
+      "dual": [
+        0,
+        0,
+        2
+      ],
+      "dual_symmetric_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "phase": "i",
+      "weil_phase_exp_mu12": 3
+    },
+    {
+      "dual": [
+        1,
+        0,
+        0
+      ],
+      "dual_symmetric_matrix": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "phase": "-i",
+      "weil_phase_exp_mu12": 9
+    },
+    {
+      "dual": [
+        1,
+        1,
+        1
+      ],
+      "dual_symmetric_matrix": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "phase": "-i",
+      "weil_phase_exp_mu12": 9
+    },
+    {
+      "dual": [
+        1,
+        2,
+        1
+      ],
+      "dual_symmetric_matrix": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "phase": "-i",
+      "weil_phase_exp_mu12": 9
+    },
+    {
+      "dual": [
+        2,
+        0,
+        0
+      ],
+      "dual_symmetric_matrix": [
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "phase": "i",
+      "weil_phase_exp_mu12": 3
+    },
+    {
+      "dual": [
+        2,
+        1,
+        2
+      ],
+      "dual_symmetric_matrix": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "phase": "i",
+      "weil_phase_exp_mu12": 3
+    },
+    {
+      "dual": [
+        2,
+        2,
+        2
+      ],
+      "dual_symmetric_matrix": [
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "phase": "i",
+      "weil_phase_exp_mu12": 3
+    }
+  ],
+  "schema": "w33.20260924.fixed9_chiral_null_fourplusfour.v1",
+  "spectral_clock_fixed_sector": {
+    "decomposition": "1 + 4_+ + 4_- under PSp Bell-line stabilizer",
+    "dimension": 9,
+    "fourier_condition": "null-history adjacency eigenvalue -1",
+    "nontrivial_fixed_dimension": 8,
+    "vacuum_dimension": 1
+  },
+  "status": "PASS_FIXED9_IS_VACUUM_PLUS_TWO_ORIENTED_NULL_FOURS",
+  "theorem": "The order-three null-history clock has fixed sector 9=1+8. Fourier analysis shows its eight nonconstant modes are exactly rank-one dual quadratic forms. The PSp Bell-line stabilizer has two four-element orbits on them, distinguished by normalized Weil phase +i versus -i. The full PGSp extension fuses those orbits. Thus the fixed clock sector is vacuum plus a pair of temporally conjugate four-dimensional null-orientation sectors, not the qutrit operator module.",
+  "weil_phase_census": {
+    "-i": 4,
+    "i": 4
+  }
+}

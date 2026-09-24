@@ -1,0 +1,106 @@
+{
+  "schema": "w33.20260924.modular_a2_event_clock.v1",
+  "status": "PASS_MODULAR_A2_RELATIONAL_EVENT_CLOCK",
+  "modular_qutrit": {
+    "faithful_probabilities": [
+      0.5,
+      0.3333333333333333,
+      0.16666666666666666
+    ],
+    "log_ratio_coordinates": [
+      0.4054651081081645,
+      0.6931471805599452
+    ],
+    "three_diagonal_zero_modes": true,
+    "six_offdiagonal_frequencies": {
+      "E00": 0.0,
+      "E01": -0.4054651081081645,
+      "E02": -1.0986122886681096,
+      "E10": 0.4054651081081645,
+      "E11": 0.0,
+      "E12": -0.6931471805599452,
+      "E20": 1.0986122886681096,
+      "E21": 0.6931471805599452,
+      "E22": 0.0
+    },
+    "root_pattern": "plus/minus h1, h2, and h1+h2",
+    "tracial_state_all_frequencies_zero": true
+  },
+  "A2_weyl_bridge": {
+    "population_swap_01_on_log_ratios": [
+      [
+        -1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "population_swap_12_on_log_ratios": [
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        -1
+      ]
+    ],
+    "BT943_simple_reflection_1": [
+      [
+        -1,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "BT943_simple_reflection_2": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        -1
+      ]
+    ],
+    "exact_relation": "M01^T=S1 and M12^T=S2",
+    "interpretation": "the qutrit modular log-ratio plane carries the contragredient A2 Weyl representation already used in BT943",
+    "group_order": 6
+  },
+  "relational_history": {
+    "history": "1/sqrt(3) sum_n |n>_C tensor X^n|0>_S",
+    "paired_stationarity": "(X_C tensor X_S)|Psi>=|Psi> for the chosen forward-shift convention",
+    "stationarity_error": 0.0,
+    "conditional_states": [
+      "|0>",
+      "|1>",
+      "|2>"
+    ]
+  },
+  "event_time": {
+    "functional": "sum of pure-state Bures angles along the update path",
+    "idle_three_updates": 0.0,
+    "closed_three_state_cycle": 4.71238898038469,
+    "closed_cycle_endpoint_equals_start": true,
+    "lesson": "elapsed distinguishable change is not endpoint displacement or operation count"
+  },
+  "arrow": {
+    "equilibrium_cycle_affinity": 0.0,
+    "biased_two_to_one_cycle_affinity": 2.0794415416798357,
+    "lesson": "arrow/orientation is separate from reversible event-time"
+  },
+  "boundaries": [
+    "This proves a local qutrit modular/A2 correspondence, not yet the external E8 A2 identification.",
+    "Bures path length is an operational event-time functional, not a derivation of Lorentzian proper time.",
+    "A photon has no rest-frame proper-time clock; laboratory or relational clock variables are required."
+  ],
+  "literature": [
+    "Connes and Rovelli, gr-qc/9406019, thermal time hypothesis",
+    "Page-Wootters relational time and interacting extension, PRL 131, 140202 (2023)",
+    "Deffner and Campbell, J. Phys. A 50, 453001 (2017), quantum speed limits"
+  ]
+}

@@ -1,0 +1,704 @@
+{
+  "action": {
+    "Hesse_AGL23": {
+      "kernel_order_on_P1": 18,
+      "order": 432
+    },
+    "all_24_projective_matrices_checked": true,
+    "common_image": "PGL(2,3) ~= S4",
+    "cycle_type_histogram": {
+      "(1, 1, 1, 1)": 1,
+      "(1, 1, 2)": 6,
+      "(1, 3)": 8,
+      "(2, 2)": 3,
+      "(4,)": 6
+    },
+    "image_order": 24,
+    "permutations_identical_objectwise": true,
+    "temporal_line_parabolic": {
+      "kernel_order_on_P1": 27,
+      "order": 648
+    }
+  },
+  "boundary": "This identifies the finite S4 carrier. It does not identify the entire 648 history parabolic with the 432 Hesse affine group; their kernels over the common S4 have orders 27 and 18 respectively.",
+  "carrier": {
+    "labels": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "set": "P1(F3)",
+    "size": 4,
+    "three_realizations": [
+      "four projective rank-one/null directions in Sym2(F3)",
+      "four parallel classes/striations of AG(2,3)",
+      "four A2 components of the temporal Hesse 4A2 subsystem"
+    ]
+  },
+  "dictionary": [
+    {
+      "A2_component": "the six roots +/-w_L for the three Hesse lines in this class",
+      "Hesse_parallel_class": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "P1_direction": [
+        0,
+        1
+      ],
+      "temporal_null_symmetric_matrix_coords": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "A2_component": "the six roots +/-w_L for the three Hesse lines in this class",
+      "Hesse_parallel_class": [
+        [
+          0,
+          3,
+          6
+        ],
+        [
+          1,
+          4,
+          7
+        ],
+        [
+          2,
+          5,
+          8
+        ]
+      ],
+      "P1_direction": [
+        1,
+        0
+      ],
+      "temporal_null_symmetric_matrix_coords": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "A2_component": "the six roots +/-w_L for the three Hesse lines in this class",
+      "Hesse_parallel_class": [
+        [
+          0,
+          4,
+          8
+        ],
+        [
+          1,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          7
+        ]
+      ],
+      "P1_direction": [
+        1,
+        1
+      ],
+      "temporal_null_symmetric_matrix_coords": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "A2_component": "the six roots +/-w_L for the three Hesse lines in this class",
+      "Hesse_parallel_class": [
+        [
+          0,
+          5,
+          7
+        ],
+        [
+          1,
+          3,
+          8
+        ],
+        [
+          2,
+          4,
+          6
+        ]
+      ],
+      "P1_direction": [
+        1,
+        2
+      ],
+      "temporal_null_symmetric_matrix_coords": [
+        1,
+        2,
+        1
+      ]
+    }
+  ],
+  "projective_action_rows": [
+    {
+      "cycle_type": [
+        1,
+        1,
+        2
+      ],
+      "matrix": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "permutation": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "cycle_type": [
+        4
+      ],
+      "matrix": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "permutation": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "cycle_type": [
+        4
+      ],
+      "matrix": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "permutation": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "cycle_type": [
+        2,
+        2
+      ],
+      "matrix": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "permutation": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "cycle_type": [
+        1,
+        3
+      ],
+      "matrix": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "permutation": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "cycle_type": [
+        1,
+        3
+      ],
+      "matrix": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "permutation": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "cycle_type": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "matrix": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "cycle_type": [
+        1,
+        1,
+        2
+      ],
+      "matrix": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "permutation": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "cycle_type": [
+        1,
+        3
+      ],
+      "matrix": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "permutation": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "cycle_type": [
+        1,
+        1,
+        2
+      ],
+      "matrix": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "permutation": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "cycle_type": [
+        1,
+        3
+      ],
+      "matrix": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "permutation": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "cycle_type": [
+        1,
+        1,
+        2
+      ],
+      "matrix": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "permutation": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "cycle_type": [
+        1,
+        3
+      ],
+      "matrix": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "permutation": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "cycle_type": [
+        1,
+        1,
+        2
+      ],
+      "matrix": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "permutation": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "cycle_type": [
+        4
+      ],
+      "matrix": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "cycle_type": [
+        2,
+        2
+      ],
+      "matrix": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "permutation": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "cycle_type": [
+        1,
+        3
+      ],
+      "matrix": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "permutation": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "cycle_type": [
+        4
+      ],
+      "matrix": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "permutation": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "cycle_type": [
+        1,
+        3
+      ],
+      "matrix": [
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "permutation": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "cycle_type": [
+        1,
+        1,
+        2
+      ],
+      "matrix": [
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "permutation": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "cycle_type": [
+        1,
+        3
+      ],
+      "matrix": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "permutation": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "cycle_type": [
+        4
+      ],
+      "matrix": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "permutation": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "cycle_type": [
+        4
+      ],
+      "matrix": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "permutation": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "cycle_type": [
+        2,
+        2
+      ],
+      "matrix": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "permutation": [
+        2,
+        3,
+        0,
+        1
+      ]
+    }
+  ],
+  "schema": "w33.20260924.null_hesse_4a2_s4_intertwiner.v1",
+  "status": "PASS_NULL_DIRECTIONS_HESSE_STRIATIONS_4A2_SHARE_EXACT_S4",
+  "theorem": "The four null directions of the 27-history Sym2(F3) chart, the four parallel classes of the nine-cell Hesse affine plane, and the four A2 components of the Hesse-selected 4A2 subsystem are the same P1(F3) carrier. For every one of the 24 projective GL2 representatives, the permutation induced on all three realizations is identical. Their common faithful quotient is PGL(2,3) ~= S4. Thus the Bell celestial boundary and the Hesse/E8 striation index are not merely both four-element sets; they are explicitly equivariantly identified."
+}

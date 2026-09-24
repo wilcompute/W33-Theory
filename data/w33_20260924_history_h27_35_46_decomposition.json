@@ -1,0 +1,47 @@
+{
+  "H27_firewall": {
+    "consequence": "The shared 27/108/46 counts do not identify the point-side H27 with the line-side history graph.",
+    "history_adjacency_spectrum": {
+      "-4": 6,
+      "-1": 8,
+      "2": 12,
+      "8": 1
+    },
+    "history_triangle_count": 36,
+    "isomorphic_to_history_null_graph": false,
+    "point_side_H27_adjacency_spectrum": {
+      "-4": 6,
+      "-1": 8,
+      "2": 12,
+      "8": 1
+    },
+    "point_side_H27_triangle_count": 36,
+    "repo_definition": "induced graph on the 27 non-neighbours of a W33 point",
+    "same_edge_count": true,
+    "same_filled_b1_value": true
+  },
+  "bell_stabilizer_character_split": {
+    "filled_history_homology_dimension": 46,
+    "group_order": 648,
+    "history46_character_norm": 6,
+    "identity": "81=(36-1)+46=35+46",
+    "triangle_boundary_dimension": 36,
+    "triangle_character_norm": 6,
+    "triangle_module_trivial_multiplicity": 1,
+    "triangle_reduced_character_norm": 5,
+    "triangle_reduced_dimension": 35
+  },
+  "history_graph": {
+    "cycle_rank_unfilled": 82,
+    "each_edge_in_exactly_one_triangle": true,
+    "edges": 108,
+    "filled_clique_b1": 46,
+    "triangle_index_set": "the 36 W33 points outside the Bell line",
+    "triangles": 36,
+    "vertices": 27
+  },
+  "physics_reading": "The temporal 46 is the history homology that survives after local same-event triangular loops are declared contractible. Its equality in dimension with the old point-side H27 homology is structural but not objectwise; the line-side temporal chart and point-side H27 remain distinct carriers.",
+  "schema": "w33.20260924.history_h27_35_46_decomposition.v1",
+  "status": "PASS_HISTORY_35_46_SPLIT_WITH_POINT_LINE_FIREWALL",
+  "theorem": "The Bell-shell null-history graph has 108 edges partitioned into 36 edge-disjoint triangles indexed by W33 points off the Bell line. Filling those triangles changes graph-cycle rank 82 to b1=46. Under the Bell-line stabilizer, the unique invariant inside the 36-dimensional triangle module leaves a 35-dimensional reduced triangle sector, so the already-certified reduced 81-dimensional history-cycle module splits characterwise as 35+46. The point-side H27 graph shares the 27/108/46 counts but is not isomorphic; this is an exact point/line firewall rather than an identification."
+}

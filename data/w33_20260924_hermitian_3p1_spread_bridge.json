@@ -1,0 +1,97 @@
+{
+  "boundary": "The spread bridge is exact finite geometry. It does not by itself turn the determinant classes into continuum timelike/spacelike sectors or supply a measured Lorentzian spacetime.",
+  "complex_structure_nogo": {
+    "candidate_space_size": 729,
+    "conclusion": "The direct compatibility ansatz Omega=B(J.,.) has no solution. The causal and symplectic geometries meet instead through the elliptic-section/Q43/W33-line duality.",
+    "conditions": [
+      "J^2=-I",
+      "Omega(x,y)=B(Jx,y) alternating"
+    ],
+    "polarization_determinant_mod3": 2,
+    "polarization_matrix": [
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "solutions": 0
+  },
+  "hermitian_space": {
+    "affine_event_count": 81,
+    "affine_norm_counts": {
+      "0": 21,
+      "1": 30,
+      "2": 30
+    },
+    "determinant": "Q_H(a,c,x,y)=a*c-x^2-y^2",
+    "field_model": "F9=F3[u]/(u^2+1), u^2=-1",
+    "matrix": "[[a,z],[conj(z),c]], z=x+u*y",
+    "projective_direction_count": 40,
+    "projective_norm_counts": {
+      "0": 10,
+      "1": 15,
+      "2": 15
+    }
+  },
+  "q43_embedding": {
+    "Q43": "x0*x4-x1*x3+x2^2=0",
+    "elliptic_hyperplane": "x1+x3=0",
+    "hyperplane_section_census": {
+      "elliptic_10": 36,
+      "hyperbolic_16": 45,
+      "tangent_13": 40
+    },
+    "identity": "Q43(Phi(v))=-Q_H(v)",
+    "map": "Phi(a,c,x,y)=[a,x,y,-x,-c]",
+    "null_projective_points": 10
+  },
+  "schema": "w33.20260924.hermitian_3p1_spread_bridge.v1",
+  "spread_bridge": {
+    "covered_W33_points": 40,
+    "elliptic_sections": 36,
+    "independent_exact_cover_spreads": 36,
+    "pairwise_skew": true,
+    "representative_section_hyperplane": [
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    "representative_spread_line_indices": [
+      0,
+      13,
+      18,
+      20,
+      22,
+      27,
+      29,
+      31,
+      36,
+      38
+    ],
+    "section_spreads_equal_all_W33_spreads": true
+  },
+  "status": "PASS_HERMITIAN_3P1_ELLIPTIC_SECTION_SPREAD_WITH_J_NOGO",
+  "theorem": "Herm_2(F9) is a four-dimensional F3 quadratic space with 81 affine events split 21+30+30 by determinant. Its ten projective null directions embed explicitly as the elliptic hyperplane section x1+x3=0 of the already-certified Q(4,3) Lagrangian compactification. Under the Plucker dictionary those ten Q43 points are ten pairwise-skew W33 lines covering all forty W33 points, hence a spread. All 36 elliptic sections reproduce exactly all 36 W33 spreads. The stronger single-complex-structure ansatz Omega=B(J.,.) is impossible: exhaustive search of all 729 B-skew candidates finds no J with J^2=-I."
+}

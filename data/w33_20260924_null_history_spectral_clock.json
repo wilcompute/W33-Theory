@@ -1,0 +1,55 @@
+{
+  "boundary": "Exact finite Fourier/symmetry theorem. The 9-dimensional fixed sector is dynamical and canonical for the null-history Laplacian, but it is not promoted to the physical qutrit operator module without a different common subgroup/intertwiner.",
+  "clock": {
+    "U_cubed_identity": true,
+    "fixed_dimension": 9,
+    "fixed_fourier_support": "{0} union nonzero null cone",
+    "fixed_support_count": "1+8=9",
+    "phase_by_laplacian_eigenvalue": {
+      "0": "1",
+      "12": "omega^2",
+      "6": "omega",
+      "9": "1"
+    },
+    "t_star": "2*pi/9"
+  },
+  "fourier_duality": {
+    "eigenvalue_by_dual_quadratic_type": {
+      "det0_nonzero": -1,
+      "det1": -4,
+      "det2": 2,
+      "zero": 8
+    },
+    "null_connection_set_size": 8,
+    "translation_group": "F3^3"
+  },
+  "graph": {
+    "adjacency_spectrum": {
+      "-4": 6,
+      "-1": 8,
+      "2": 12,
+      "8": 1
+    },
+    "degree": 8,
+    "edges": 108,
+    "laplacian_spectrum": {
+      "0": 1,
+      "6": 12,
+      "9": 8,
+      "12": 6
+    },
+    "vertices": 27
+  },
+  "qutrit_operator_intertwiner_test": {
+    "Bell_S4_orbits_on_eight_nonzero_fixed_modes": [
+      4,
+      4
+    ],
+    "SL23_orbit_on_eight_nonidentity_projective_Paulis": 8,
+    "conclusion": "The nine-dimensional clock-fixed space has the same 1+8 count as M3(C), but its natural Bell-line S4 symmetry splits the eight null modes as 4+4, unlike the transitive SL(2,3) action on nonzero qutrit Pauli labels. A canonical qutrit-operator identification is therefore not supplied by these symmetry actions.",
+    "dimension_match": true,
+    "equivariant_identification_under_these_actions": false
+  },
+  "schema": "w33.20260924.null_history_spectral_clock.v1",
+  "status": "PASS_ORDER3_NULL_HISTORY_CLOCK_WITH_QUTRIT_MODULE_NOGO"
+}

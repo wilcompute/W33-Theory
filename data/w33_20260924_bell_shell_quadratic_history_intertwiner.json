@@ -1,0 +1,706 @@
+{
+  "schema": "w33.20260924.bell_shell_quadratic_history_intertwiner.v1",
+  "status": "PASS_BELL_SHELL_QUADRATIC_HISTORY_INTERTWINER",
+  "bell_line_parabolic": {
+    "order": 648,
+    "structure": "3^3:S4",
+    "translation_kernel_order": 27,
+    "translation_kernel": "F3^3",
+    "shell_size": 27,
+    "repo_parents": [
+      "analysis/bt858_heisenberg_shell_torsors.py",
+      "analysis/bt860_bell_shell_register_arithmetic.py",
+      "analysis/w33_pass196_kernel_flat_shell.py"
+    ]
+  },
+  "quadratic_action_space": {
+    "space": "Sym_2(F3)",
+    "dimension_over_F3": 3,
+    "size": 27,
+    "quotient_group": "PGL(2,3)=S4",
+    "action": "S -> G S G^T",
+    "orbit_types": {
+      "zero": 1,
+      "rank1": 8,
+      "invertible_det1": 6,
+      "invertible_det2": 12
+    }
+  },
+  "intertwiner": {
+    "Q_torsor_to_sym2": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ],
+    "Q_inverse": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "conjugacy": "Q * S4_Bell * Q^-1 = PGL2(3) on Sym_2(F3)",
+    "exact": true
+  },
+  "histories": {
+    "13": {
+      "torsor_address": [
+        0,
+        0,
+        0
+      ],
+      "symmetric_matrix_coordinates": [
+        0,
+        0,
+        0
+      ],
+      "symmetric_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "quadratic_type": "zero"
+    },
+    "14": {
+      "torsor_address": [
+        1,
+        0,
+        0
+      ],
+      "symmetric_matrix_coordinates": [
+        0,
+        0,
+        1
+      ],
+      "symmetric_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "quadratic_type": "rank1"
+    },
+    "15": {
+      "torsor_address": [
+        2,
+        0,
+        0
+      ],
+      "symmetric_matrix_coordinates": [
+        0,
+        0,
+        2
+      ],
+      "symmetric_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "quadratic_type": "rank1"
+    },
+    "16": {
+      "torsor_address": [
+        0,
+        1,
+        0
+      ],
+      "symmetric_matrix_coordinates": [
+        1,
+        0,
+        0
+      ],
+      "symmetric_matrix": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "quadratic_type": "rank1"
+    },
+    "17": {
+      "torsor_address": [
+        1,
+        1,
+        0
+      ],
+      "symmetric_matrix_coordinates": [
+        1,
+        0,
+        1
+      ],
+      "symmetric_matrix": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "quadratic_type": "invertible_det1"
+    },
+    "18": {
+      "torsor_address": [
+        2,
+        1,
+        0
+      ],
+      "symmetric_matrix_coordinates": [
+        1,
+        0,
+        2
+      ],
+      "symmetric_matrix": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "quadratic_type": "invertible_det2"
+    },
+    "19": {
+      "torsor_address": [
+        0,
+        2,
+        0
+      ],
+      "symmetric_matrix_coordinates": [
+        2,
+        0,
+        0
+      ],
+      "symmetric_matrix": [
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "quadratic_type": "rank1"
+    },
+    "20": {
+      "torsor_address": [
+        1,
+        2,
+        0
+      ],
+      "symmetric_matrix_coordinates": [
+        2,
+        0,
+        1
+      ],
+      "symmetric_matrix": [
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "quadratic_type": "invertible_det2"
+    },
+    "21": {
+      "torsor_address": [
+        2,
+        2,
+        0
+      ],
+      "symmetric_matrix_coordinates": [
+        2,
+        0,
+        2
+      ],
+      "symmetric_matrix": [
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "quadratic_type": "invertible_det1"
+    },
+    "22": {
+      "torsor_address": [
+        0,
+        0,
+        1
+      ],
+      "symmetric_matrix_coordinates": [
+        0,
+        1,
+        0
+      ],
+      "symmetric_matrix": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "quadratic_type": "invertible_det2"
+    },
+    "23": {
+      "torsor_address": [
+        1,
+        0,
+        1
+      ],
+      "symmetric_matrix_coordinates": [
+        0,
+        1,
+        1
+      ],
+      "symmetric_matrix": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "quadratic_type": "invertible_det2"
+    },
+    "24": {
+      "torsor_address": [
+        2,
+        0,
+        1
+      ],
+      "symmetric_matrix_coordinates": [
+        0,
+        1,
+        2
+      ],
+      "symmetric_matrix": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "quadratic_type": "invertible_det2"
+    },
+    "25": {
+      "torsor_address": [
+        0,
+        1,
+        1
+      ],
+      "symmetric_matrix_coordinates": [
+        1,
+        1,
+        0
+      ],
+      "symmetric_matrix": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "quadratic_type": "invertible_det2"
+    },
+    "26": {
+      "torsor_address": [
+        1,
+        1,
+        1
+      ],
+      "symmetric_matrix_coordinates": [
+        1,
+        1,
+        1
+      ],
+      "symmetric_matrix": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "quadratic_type": "rank1"
+    },
+    "27": {
+      "torsor_address": [
+        2,
+        1,
+        1
+      ],
+      "symmetric_matrix_coordinates": [
+        1,
+        1,
+        2
+      ],
+      "symmetric_matrix": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "quadratic_type": "invertible_det1"
+    },
+    "28": {
+      "torsor_address": [
+        0,
+        2,
+        1
+      ],
+      "symmetric_matrix_coordinates": [
+        2,
+        1,
+        0
+      ],
+      "symmetric_matrix": [
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "quadratic_type": "invertible_det2"
+    },
+    "29": {
+      "torsor_address": [
+        1,
+        2,
+        1
+      ],
+      "symmetric_matrix_coordinates": [
+        2,
+        1,
+        1
+      ],
+      "symmetric_matrix": [
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "quadratic_type": "invertible_det1"
+    },
+    "30": {
+      "torsor_address": [
+        2,
+        2,
+        1
+      ],
+      "symmetric_matrix_coordinates": [
+        2,
+        1,
+        2
+      ],
+      "symmetric_matrix": [
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "quadratic_type": "rank1"
+    },
+    "31": {
+      "torsor_address": [
+        0,
+        0,
+        2
+      ],
+      "symmetric_matrix_coordinates": [
+        0,
+        2,
+        0
+      ],
+      "symmetric_matrix": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "quadratic_type": "invertible_det2"
+    },
+    "32": {
+      "torsor_address": [
+        1,
+        0,
+        2
+      ],
+      "symmetric_matrix_coordinates": [
+        0,
+        2,
+        1
+      ],
+      "symmetric_matrix": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "quadratic_type": "invertible_det2"
+    },
+    "33": {
+      "torsor_address": [
+        2,
+        0,
+        2
+      ],
+      "symmetric_matrix_coordinates": [
+        0,
+        2,
+        2
+      ],
+      "symmetric_matrix": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "quadratic_type": "invertible_det2"
+    },
+    "34": {
+      "torsor_address": [
+        0,
+        1,
+        2
+      ],
+      "symmetric_matrix_coordinates": [
+        1,
+        2,
+        0
+      ],
+      "symmetric_matrix": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "quadratic_type": "invertible_det2"
+    },
+    "35": {
+      "torsor_address": [
+        1,
+        1,
+        2
+      ],
+      "symmetric_matrix_coordinates": [
+        1,
+        2,
+        1
+      ],
+      "symmetric_matrix": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "quadratic_type": "rank1"
+    },
+    "36": {
+      "torsor_address": [
+        2,
+        1,
+        2
+      ],
+      "symmetric_matrix_coordinates": [
+        1,
+        2,
+        2
+      ],
+      "symmetric_matrix": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "quadratic_type": "invertible_det1"
+    },
+    "37": {
+      "torsor_address": [
+        0,
+        2,
+        2
+      ],
+      "symmetric_matrix_coordinates": [
+        2,
+        2,
+        0
+      ],
+      "symmetric_matrix": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "quadratic_type": "invertible_det2"
+    },
+    "38": {
+      "torsor_address": [
+        1,
+        2,
+        2
+      ],
+      "symmetric_matrix_coordinates": [
+        2,
+        2,
+        1
+      ],
+      "symmetric_matrix": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "quadratic_type": "invertible_det1"
+    },
+    "39": {
+      "torsor_address": [
+        2,
+        2,
+        2
+      ],
+      "symmetric_matrix_coordinates": [
+        2,
+        2,
+        2
+      ],
+      "symmetric_matrix": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "quadratic_type": "rank1"
+    }
+  },
+  "checks": {
+    "PSp43_order": 25920,
+    "Bell_stabilizer_order": 648,
+    "translation_kernel_order": 27,
+    "Bell_shell_size": 27,
+    "Bell_S4_image_order": 24,
+    "PGL2_sym2_image_order": 24,
+    "orbit_census_1_8_6_12": [
+      1,
+      8,
+      6,
+      12
+    ]
+  },
+  "interpretation": "After choosing one Bell-shell context as affine origin, the actual S4 quotient module of the 27 skew contexts is GL(3,3)-conjugate to the congruence action on Sym_2(F3). Each context therefore has an equivariant symmetric quadratic generating-function label.",
+  "boundary": "Exact finite-geometry/module theorem. Physical temporal histories still require a process-tensor implementation and an orientation rule."
+}

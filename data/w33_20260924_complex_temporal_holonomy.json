@@ -1,0 +1,61 @@
+{
+  "schema": "w33.20260924.complex_temporal_holonomy.v1",
+  "status": "PASS_COMPLEX_TEMPORAL_HOLONOMY_SEPARATION",
+  "known_chain_complex_crosscheck": {
+    "vertices": 40,
+    "edges": 240,
+    "triangles": 160,
+    "graph_cycle_dimension": 201,
+    "triangle_boundary_rank": 120,
+    "H1_dimension": 81,
+    "cocycle_dimension": 120,
+    "gradient_dimension": 39,
+    "H1_dual_dimension": 81
+  },
+  "complex_connection": {
+    "definition": "C_xy = 1/2 log(k_xy*pi_x/(k_yx*pi_y)) + i theta_xy",
+    "real_part": "thermodynamic/stochastic affinity coordinate",
+    "imaginary_part": "coherent quantum phase coordinate",
+    "cycle": "oint C = Sigma_C/2 + i Phi_C",
+    "benchmark_triangle": [
+      0,
+      1,
+      2
+    ],
+    "benchmarks": {
+      "flat": {
+        "real_cycle_holonomy": 0.0,
+        "phase_cycle_holonomy": 0.0
+      },
+      "coherent_only": {
+        "real_cycle_holonomy": 0.0,
+        "phase_cycle_holonomy": 1.5707963267948966
+      },
+      "affinity_only": {
+        "real_cycle_holonomy": 1.0397207708399179,
+        "phase_cycle_holonomy": 0.0
+      },
+      "mixed": {
+        "real_cycle_holonomy": 1.0397207708399179,
+        "phase_cycle_holonomy": 1.5707963267948966
+      }
+    },
+    "entropy_production_for_two_to_one_cycle": "Sigma_C = 3 log 2"
+  },
+  "topological_phase_sector": {
+    "field": "F3 phase labels, lifted physically as 2*pi/3 multiples",
+    "triangle_flat": true,
+    "not_a_vertex_gradient": true,
+    "nonzero_periods_on_deterministic_201_cycle_basis": 81,
+    "period_count_is_basis_dependent": true,
+    "gauge_shift_preserves_all_cycle_periods": true,
+    "interpretation": "There are coherent phase memories with zero curvature on every filled W33 triangle but nonzero global holonomy. Local temporal flatness therefore does not imply globally trivial relational phase."
+  },
+  "temporal_classification": {
+    "flat": "no phase holonomy and no entropy-producing affinity on the tested cycle",
+    "reversible_coherent": "phase holonomy nonzero, real affinity zero",
+    "irreversible": "real cycle affinity nonzero; preferred thermodynamic orientation",
+    "driven_quantum": "both real affinity and coherent phase nonzero"
+  },
+  "boundary": "The 201/120/81 chain ranks are prior repo results. The new theorem is the complex connection separation and explicit non-exact triangle-flat F3 phase cocycle. A thermodynamic affinity becomes physical only after rates and a stationary state are specified; no cosmological arrow is inferred."
+}

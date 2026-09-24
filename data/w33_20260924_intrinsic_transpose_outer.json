@@ -1,0 +1,132 @@
+{
+  "boundary": "The conjugator depends on the noncanonical BT169 labeling crosswalk. This proves equality of the outer conjugacy class, not a canonical point-by-point identification without a chosen quotient gauge.",
+  "centerquad_45_action": {
+    "PSp_conjugate": true,
+    "bt172_transported_cycle_histogram": {
+      "1": 7,
+      "2": 19
+    },
+    "bt172_transported_fixed_points": [
+      0,
+      5,
+      8,
+      20,
+      21,
+      40,
+      44
+    ],
+    "exactly_equal_in_frozen_crosswalk_gauge": false,
+    "inner_conjugator_zero_based": [
+      40,
+      42,
+      16,
+      20,
+      9,
+      19,
+      5,
+      29,
+      34,
+      21,
+      12,
+      18,
+      8,
+      35,
+      28,
+      0,
+      23,
+      22,
+      43,
+      37,
+      2,
+      27,
+      33,
+      3,
+      1,
+      26,
+      39,
+      41,
+      24,
+      11,
+      32,
+      6,
+      25,
+      13,
+      38,
+      17,
+      44,
+      31,
+      10,
+      30,
+      36,
+      4,
+      14,
+      7,
+      15
+    ],
+    "intrinsic_cycle_histogram": {
+      "1": 7,
+      "2": 19
+    },
+    "intrinsic_fixed_points": [
+      0,
+      3,
+      6,
+      9,
+      12,
+      15,
+      36
+    ]
+  },
+  "pauli_convention": {
+    "coordinates": "(z1,z2,x1,x2)",
+    "matrix_mod3": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2
+      ]
+    ],
+    "monomial": "X1^x1 Z1^z1 tensor X2^x2 Z2^z2",
+    "transpose_projective_action": "(z1,z2,x1,x2)->(z1,z2,-x1,-x2)"
+  },
+  "schema": "w33.20260924.intrinsic_transpose_outer.v1",
+  "status": "PASS_INTRINSIC_QUTRIT_TRANSPOSE_IS_BT172_OUTER_CLASS",
+  "theorem": "Ordinary transpose of the two-qutrit Pauli algebra induces the canonical W33 anti-symplectic similitude diag(1,1,-1,-1). On the intrinsic center-quad GQ(4,2) quotient its order-two permutation has cycle shape 1^7 2^19 and is conjugate under the inner PSp(4,3) quotient action to the BT171/172 full-W(E6) outer involution. Thus BT172's temporal reversal class has an intrinsic qutrit-transpose construction.",
+  "w33_action": {
+    "anti_symplectic_multiplier": 2,
+    "fixed_w33_points": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      13,
+      22,
+      31
+    ],
+    "point_cycle_histogram": {
+      "1": 8,
+      "2": 16
+    },
+    "squares_to_identity": true
+  }
+}
