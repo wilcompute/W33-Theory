@@ -263,6 +263,124 @@ Therefore this is an exact common quotient/intertwiner, not a group equality.
 This closes a structural loop: the Bell celestial boundary of the 2+1 history
 chart is the same finite S4 carrier that indexes the Hesse/E8 4A2 striations.
 
+## 12. The diagonal phase weld is exactly a Page-Wootters phase-matching constraint
+
+The four existing center/external backgrounds
+
+    c, p, c+p, c-p
+
+are exactly the four projective linear directions of F3^2. Their zero sets are
+two factor axes c=0,p=0 and two correlated graph subgroups p=-c,p=c.
+
+For an order-three qutrit evolution U, the two stationary history conventions
+
+    (X_clock tensor U)|Psi_+> = |Psi_+>,
+    (X_clock tensor U^-1)|Psi_-> = |Psi_->
+
+become, in the clock X-phase basis, exactly c+p=0 and c-p=0.
+
+The existing 4x4 E8 generation grid obeys this distinction without exception:
+axis-only/axis-only pairs close to dimension 24, while a graph-correlated
+background on either side generates all 248 dimensions. The cubic quotient
+similarly jumps from projection rank 36 on either pure axis to rank 54 on
+either diagonal graph.
+
+Thus the diagonal weld has an exact relational-clock interpretation. This is
+not a Wheeler-DeWitt or continuum Hamiltonian derivation.
+
+## 13. Four positive null counters quotient to the 27-state present
+
+Use the four integral rank-one positive-semidefinite null updates
+
+    D0, Dinf, Dplus, Dminus.
+
+Their counter map F3^4 -> Sym_2(F3) has rank three and exact kernel
+
+    <(1,1,1,1)>.
+
+Therefore
+
+    Sym_2(F3) ~= F3^4/<1111>,
+
+so the 27 finite histories are four null-direction pulse counters modulo one
+common mode.
+
+Over the integer positive cover that common mode does not vanish:
+
+    D0 + Dinf + Dplus + Dminus = 3 I2.
+
+Adding one common winding returns to the same finite mod-three history while
+increasing matrix trace by six. Because every positive generator has positive
+trace, there are no nontrivial positive loops upstairs.
+
+## 14. The 27-history chart is the relative mode of the four Hesse A2 factors
+
+Index F3^4 by the four common null/Hesse/A2 directions. Sending each coordinate
+basis vector to its rank-one symmetric matrix gives a surjection
+
+    A : F3^4 -> Sym_2(F3)
+
+with kernel <1111>. For every projective GL(2,3) element,
+
+    R_G A = A P_G mod 3,
+
+where P_G permutes the four directions and R_G is congruence on Sym_2(F3).
+
+Hence the quotient is not only a vector-space identity but an S4-module
+intertwiner:
+
+    Sym_2(F3) ~= F3^{four A2 components}/common mode.
+
+The Bell 27-history atlas is therefore the three relative modes of the four
+Hesse A2 striations. The common mode is precisely the finite direction discarded
+by the quotient and the positive winding retained by the integer lift.
+
+## 15. The nine-cell A8/E8 process brackets are literal packet operations
+
+On the nine history cells, the standard A8 root-support rules become:
+
+- E_ij replaces cell j by i inside a three-history packet;
+- two disjoint Lambda^3 packets bracket to the complementary Lambda^6 root;
+- Lambda^3/Lambda^6 packets differing by one cell contract to E_ij;
+- opposite packets return a Cartan direction.
+
+The exact support counts are uniform: 1512 nonzero sl9-on-Lambda3 actions,
+840 unordered disjoint Lambda3/Lambda3 wedges, 1512 Lambda3/Lambda6 root
+contractions, and 84 opposite-root Cartan pairs.
+
+On the Hesse 12, two lines in the same parallel class bracket to the negative
+root of the third line; all 54 pairs from different striations have zero
+root-sum bracket. This is exactly the four-A2 support closure found above.
+
+Signed Chevalley constants are not rederived here; this packet certifies the
+objectwise root-support compiler and leaves signs to the frozen E8 artifact.
+
+## 16. One qutrit's nine operator histories compile W33, sl9 and E8 support
+
+Vectorize the qutrit matrix units |i><j| as a nine-dimensional history space.
+The 81 two-sided Weyl transformations
+
+    P_(a,b) tensor conjugate(P_(c,d))
+
+form a Hilbert-Schmidt orthogonal basis of End(C^9). The identity accounts for
+one direction; the 80 nonidentity transformations are traceless, independent
+and span exactly sl9.
+
+Their labels x in F3^4 obey the two-sided commutator form
+
+    <x,y> = aB-bA-cD+dC mod 3.
+
+Pairing the 80 nonzero labels by sign gives 40 projective rays; commuting rays
+reproduce SRG(40,12,2,4) with spectrum 12^1,2^24,(-4)^15.
+
+Adding the 84 Lambda^3 history packets and 84 dual Lambda^6 packets gives the
+standard A8 decomposition
+
+    E8 = sl9 + Lambda^3(9) + Lambda^6(9),
+    248 = 80 + 84 + 84,
+
+with the objectwise support brackets certified in the preceding section.
+
 ## Evidence boundary
 
 All promoted statements above are finite incidence, homology, Fourier,
@@ -273,6 +391,8 @@ laboratory thermodynamic arrow. Those physical identifications remain open.
 Primary producers are the 24 September history big-cell, spectral-clock,
 fixed-nine chirality, Maslov-mu12, invariant-orientation, 35+46,
 point/line-firewall, cycle-81, explicit-H1-intertwiner, relative-Levi,
-universal-cover, Hermitian-3+1/spread, temporal-Hesse-4A2, and common-S4
-scripts under analysis/. Focused regression coverage is in
+universal-cover, Hermitian-3+1/spread, temporal-Hesse-4A2, common-S4,
+Page-Wootters weld, positive-null-counter cover, four-A2 quotient, temporal
+A8/E8 process-bracket, and nine-history su9/E8 compiler scripts under analysis/.
+Focused regression coverage is in
 tests/test_w33_20260924_history_compactification_breakthroughs.py.

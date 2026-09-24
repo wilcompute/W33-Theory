@@ -1,0 +1,143 @@
+{
+  "boundary": "This proves equality of finite phase constraints and the existing Lie-generation switch. It does not derive a Wheeler-DeWitt Hamiltonian, physical time evolution, vacuum selection, or continuum clock dynamics.",
+  "cubic_quotient": {
+    "axis_projection_rank": 36,
+    "diagonal_projection_rank": 54,
+    "full_retyped_dimension": 54,
+    "source": "data/w33_e6_cubic_diagonal_phase_weld.json"
+  },
+  "existing_E8_switch_reinterpreted": {
+    "all_16_entries_match_rule": true,
+    "any_correlated_graph_side_dimension": 248,
+    "matched_plus_minus_orientation_required": false,
+    "pure_axis_pair_dimension": 24,
+    "source": "data/w33_diagonal_weld_e8_lie_generation.json"
+  },
+  "page_wootters": {
+    "clock_phase_basis": "X|p>=omega^p|p>",
+    "forward_constraint": "(X_clock tensor U)|Psi_+>=|Psi_+>",
+    "forward_equals_plus_zero_set": true,
+    "forward_phase_support": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "invariant_dimension_each": 3,
+    "reverse_constraint": "(X_clock tensor U^-1)|Psi_->=|Psi_->",
+    "reverse_equals_minus_zero_set": true,
+    "reverse_phase_support": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ]
+    ]
+  },
+  "phase_plane": {
+    "carrier": "F3^2 with coordinates (c,p)",
+    "controls": {
+      "center": [
+        1,
+        0
+      ],
+      "external": [
+        0,
+        1
+      ],
+      "minus": [
+        1,
+        2
+      ],
+      "plus": [
+        1,
+        1
+      ]
+    },
+    "correlated_graphs": [
+      "c+p=0 (p=-c)",
+      "c-p=0 (p=c)"
+    ],
+    "factor_axes": [
+      "c=0",
+      "p=0"
+    ],
+    "projective_control_space": "P1(F3)",
+    "zero_sets": {
+      "center": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "external": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "minus": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "plus": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    }
+  },
+  "schema": "w33.20260924.page_wootters_diagonal_weld.v1",
+  "status": "PASS_PAGE_WOOTTERS_PHASE_MATCHING_IS_THE_DIAGONAL_E8_WELD",
+  "theorem": "The four H27-center/external-qutrit backgrounds c, p, c+p, c-p are exactly the four projective linear directions of F3^2. Their kernels split into two factor axes and two graph subgroups p=+/-c. For an order-three qutrit evolution, the Page-Wootters stationarity constraints X_C tensor U^(+/-1) become precisely these two graph subgroups in the clock-phase basis. The previously certified E8 closure table is exactly controlled by this distinction: pairs using only factor-axis backgrounds close to 24 dimensions, while a graph-correlated background on either side generates all 248 dimensions. Thus the diagonal weld has an exact relational-clock interpretation, not merely a suggestive phase name."
+}

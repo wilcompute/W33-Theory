@@ -1,0 +1,45 @@
+{
+  "E8_A8_completion": {
+    "Hesse_refinement": "84=12 Hesse lines +72 noncollinear triples; the 12+12 Hesse roots are 4A2",
+    "Lambda3_dimension": 84,
+    "Lambda6_dimension": 84,
+    "identity": "248=80+84+84",
+    "process_bracket_certificate": "data/w33_20260924_temporal_a8_e8_process_bracket.json",
+    "root_support_identity": "240=72+84+84 plus 8 Cartan",
+    "sl9_dimension": 80
+  },
+  "W33_projectivization": {
+    "adjacency": "two rays commute iff symplectic pairing is zero",
+    "nonzero_phase_space_labels": 80,
+    "projective_inverse_pairs": 40,
+    "spectrum": {
+      "-4": 15,
+      "12": 1,
+      "2": 24
+    },
+    "srg_parameters": [
+      40,
+      12,
+      2,
+      4
+    ]
+  },
+  "boundary": "The sl9 Weyl basis and the A8 root/Cartan basis are two bases of the same 80-dimensional algebra, not term-by-term identical vectors. The signed E8 structure constants remain owned by the frozen Chevalley artifact. No continuum gauge dynamics or Standard Model identification is inferred from this finite compiler.",
+  "history_space": {
+    "basis": "nine vectorized qutrit matrix units |i><j|",
+    "dimension": 9,
+    "operator_algebra_dimension": 81
+  },
+  "schema": "w33.20260924.temporal_su9_e8_compiler.v1",
+  "status": "PASS_NINE_QUTRIT_HISTORY_AMPLITUDES_COMPILE_W33_SL9_AND_E8_SUPPORT",
+  "theorem": "Vectorizing one qutrit operator history gives a nine-dimensional history-amplitude space. Its 81 two-sided qutrit Weyl transformations are an orthogonal basis of End(C^9); the 80 nonidentity transformations are traceless, linearly independent, and span exactly sl9. Their F3^4 labels carry the two-sided Weyl symplectic commutator form, and pairing nonzero labels by sign gives the 40-ray W(3,3) commutation graph. Adding the 84 three-history and 84 dual six-history exterior sectors gives the standard 80+84+84 A8 decomposition of E8, with the temporal packet bracket supports certified separately. Thus the PDF's nine-history A8-to-E8 route is an explicit finite linear/root-support compiler.",
+  "two_sided_Weyl": {
+    "Hilbert_Schmidt_orthogonal": true,
+    "commutator_form": "aB-bA-cD+dC mod 3",
+    "identity": 1,
+    "nonidentity_span_rank": 80,
+    "nonidentity_traceless": 80,
+    "operators": 81,
+    "same_space_as_standard_sl9_basis": true
+  }
+}

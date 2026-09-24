@@ -23,6 +23,11 @@ SCRIPTS=[
     "w33_20260924_hermitian_3p1_spread_bridge.py",
     "w33_20260924_temporal_hesse_4a2_a8_bridge.py",
     "w33_20260924_null_hesse_4a2_s4_intertwiner.py",
+    "w33_20260924_page_wootters_diagonal_weld.py",
+    "w33_20260924_positive_null_counter_cover.py",
+    "w33_20260924_four_a2_history_quotient.py",
+    "w33_20260924_temporal_a8_e8_process_bracket.py",
+    "w33_20260924_temporal_su9_e8_compiler.py",
 ]
 
 
@@ -175,3 +180,58 @@ def test_null_hesse_and_4a2_share_the_same_s4_carrier():
     assert x["action"]["permutations_identical_objectwise"] is True
     assert x["action"]["temporal_line_parabolic"]["kernel_order_on_P1"]==27
     assert x["action"]["Hesse_AGL23"]["kernel_order_on_P1"]==18
+
+
+def test_page_wootters_phase_matching_is_the_diagonal_weld():
+    x=load("w33_20260924_page_wootters_diagonal_weld.json")
+    assert x["status"]=="PASS_PAGE_WOOTTERS_PHASE_MATCHING_IS_THE_DIAGONAL_E8_WELD"
+    assert x["page_wootters"]["forward_equals_plus_zero_set"] is True
+    assert x["page_wootters"]["reverse_equals_minus_zero_set"] is True
+    assert x["page_wootters"]["invariant_dimension_each"]==3
+    assert x["existing_E8_switch_reinterpreted"]["all_16_entries_match_rule"] is True
+    assert x["existing_E8_switch_reinterpreted"]["pure_axis_pair_dimension"]==24
+    assert x["existing_E8_switch_reinterpreted"]["any_correlated_graph_side_dimension"]==248
+
+
+def test_positive_null_counters_quotient_to_27_histories():
+    x=load("w33_20260924_positive_null_counter_cover.json")
+    assert x["status"]=="PASS_27_HISTORIES_ARE_FOUR_NULL_COUNTERS_MOD_COMMON_WINDING"
+    assert x["finite_quotient"]["rank"]==3
+    assert x["finite_quotient"]["image_size"]==27
+    assert x["finite_quotient"]["kernel_description"]=="span_F3{(1,1,1,1)}"
+    assert x["integer_cover"]["fundamental_winding_matrix"]==[[3,0],[0,3]]
+    assert x["integer_cover"]["positive_loop_upstairs"] is False
+
+
+def test_four_a2_components_quotient_equivariantly_to_history27():
+    x=load("w33_20260924_four_a2_history_quotient.json")
+    assert x["status"]=="PASS_HISTORY_27_IS_RELATIVE_MODE_OF_FOUR_HESSE_A2_COMPONENTS"
+    assert x["linear_map"]["rank"]==3
+    assert x["linear_map"]["image_size"]==27
+    assert x["linear_map"]["kernel"]=="span{(1,1,1,1)}"
+    assert x["representation"]["order"]==24
+    assert x["representation"]["all_24_elements_verified"] is True
+
+
+def test_temporal_a8_e8_process_bracket_counts():
+    x=load("w33_20260924_temporal_a8_e8_process_bracket.json")
+    assert x["status"]=="PASS_NINE_HISTORY_CELLS_COMPILE_THE_A8_E8_ROOT_SUPPORT_BRACKETS"
+    assert x["basis"]["root_total"]==240
+    assert x["exact_counts"]["sl9_Lambda3_nonzero"]==1512
+    assert x["exact_counts"]["Lambda3_Lambda3_nonzero_unordered_pairs"]==840
+    assert x["exact_counts"]["Lambda3_Lambda6_root_contractions"]==1512
+    assert x["exact_counts"]["Lambda3_Lambda6_opposite_Cartan_pairs"]==84
+    assert x["Hesse_process"]["same_parallel_class_nonzero_pairs"]==12
+    assert x["Hesse_process"]["different_direction_zero_pairs"]==54
+
+
+def test_nine_history_compiler_reaches_w33_sl9_and_e8_support():
+    x=load("w33_20260924_temporal_su9_e8_compiler.json")
+    assert x["status"]=="PASS_NINE_QUTRIT_HISTORY_AMPLITUDES_COMPILE_W33_SL9_AND_E8_SUPPORT"
+    assert x["two_sided_Weyl"]["operators"]==81
+    assert x["two_sided_Weyl"]["nonidentity_traceless"]==80
+    assert x["two_sided_Weyl"]["nonidentity_span_rank"]==80
+    assert x["two_sided_Weyl"]["same_space_as_standard_sl9_basis"] is True
+    assert x["W33_projectivization"]["projective_inverse_pairs"]==40
+    assert x["W33_projectivization"]["srg_parameters"]==[40,12,2,4]
+    assert x["E8_A8_completion"]["identity"]=="248=80+84+84"

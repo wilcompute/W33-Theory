@@ -1,0 +1,366 @@
+{
+  "boundary": "Trace is an operational monotone on this chosen positive integer cover, not a derivation of relativistic proper time or thermodynamic entropy. The S4-fixed winding here is not identified with the separate invariant cycle in the 108-edge null-history graph without an explicit chain map.",
+  "finite_quotient": {
+    "domain": "F3^4 null-direction counters",
+    "fibres": 3,
+    "image_size": 27,
+    "kernel": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        2,
+        2,
+        2,
+        2
+      ]
+    ],
+    "kernel_description": "span_F3{(1,1,1,1)}",
+    "linear_map_matrix_F3": [
+      [
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        1,
+        1,
+        1
+      ]
+    ],
+    "quotient": "F3^4/<1111> ~= Sym2(F3)",
+    "rank": 3
+  },
+  "integer_cover": {
+    "fundamental_winding_counts": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "fundamental_winding_matrix": [
+      [
+        3,
+        0
+      ],
+      [
+        0,
+        3
+      ]
+    ],
+    "identity": "D0+Dinf+Dplus+Dminus=3*I2",
+    "positive_loop_upstairs": false,
+    "positive_monoid": "N^4 -> Sym2(Z), n |-> sum_i n_i D_i",
+    "projection_mod3": "fundamental winding projects to zero",
+    "same_finite_history_examples": [
+      {
+        "counters": [
+          2,
+          0,
+          1,
+          4
+        ],
+        "determinant": 26,
+        "finite_history": [
+          1,
+          0,
+          2
+        ],
+        "lift": [
+          [
+            7,
+            -3
+          ],
+          [
+            -3,
+            5
+          ]
+        ],
+        "trace": 12,
+        "winding": 0
+      },
+      {
+        "counters": [
+          3,
+          1,
+          2,
+          5
+        ],
+        "determinant": 71,
+        "finite_history": [
+          1,
+          0,
+          2
+        ],
+        "lift": [
+          [
+            10,
+            -3
+          ],
+          [
+            -3,
+            8
+          ]
+        ],
+        "trace": 18,
+        "winding": 1
+      },
+      {
+        "counters": [
+          4,
+          2,
+          3,
+          6
+        ],
+        "determinant": 134,
+        "finite_history": [
+          1,
+          0,
+          2
+        ],
+        "lift": [
+          [
+            13,
+            -3
+          ],
+          [
+            -3,
+            11
+          ]
+        ],
+        "trace": 24,
+        "winding": 2
+      },
+      {
+        "counters": [
+          5,
+          3,
+          4,
+          7
+        ],
+        "determinant": 215,
+        "finite_history": [
+          1,
+          0,
+          2
+        ],
+        "lift": [
+          [
+            16,
+            -3
+          ],
+          [
+            -3,
+            14
+          ]
+        ],
+        "trace": 30,
+        "winding": 3
+      },
+      {
+        "counters": [
+          6,
+          4,
+          5,
+          8
+        ],
+        "determinant": 314,
+        "finite_history": [
+          1,
+          0,
+          2
+        ],
+        "lift": [
+          [
+            19,
+            -3
+          ],
+          [
+            -3,
+            17
+          ]
+        ],
+        "trace": 36,
+        "winding": 4
+      },
+      {
+        "counters": [
+          7,
+          5,
+          6,
+          9
+        ],
+        "determinant": 431,
+        "finite_history": [
+          1,
+          0,
+          2
+        ],
+        "lift": [
+          [
+            22,
+            -3
+          ],
+          [
+            -3,
+            20
+          ]
+        ],
+        "trace": 42,
+        "winding": 5
+      },
+      {
+        "counters": [
+          8,
+          6,
+          7,
+          10
+        ],
+        "determinant": 566,
+        "finite_history": [
+          1,
+          0,
+          2
+        ],
+        "lift": [
+          [
+            25,
+            -3
+          ],
+          [
+            -3,
+            23
+          ]
+        ],
+        "trace": 48,
+        "winding": 6
+      },
+      {
+        "counters": [
+          9,
+          7,
+          8,
+          11
+        ],
+        "determinant": 719,
+        "finite_history": [
+          1,
+          0,
+          2
+        ],
+        "lift": [
+          [
+            28,
+            -3
+          ],
+          [
+            -3,
+            26
+          ]
+        ],
+        "trace": 54,
+        "winding": 7
+      }
+    ],
+    "trace_increment_per_winding": 6
+  },
+  "null_generators": [
+    {
+      "eigenvalues": [
+        0.0,
+        1.0
+      ],
+      "matrix": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "name": "0",
+      "trace": 1
+    },
+    {
+      "eigenvalues": [
+        0.0,
+        1.0
+      ],
+      "matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "name": "infinity",
+      "trace": 1
+    },
+    {
+      "eigenvalues": [
+        0.0,
+        2.0
+      ],
+      "matrix": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "name": "plus",
+      "trace": 2
+    },
+    {
+      "eigenvalues": [
+        0.0,
+        2.0
+      ],
+      "matrix": [
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "name": "minus",
+      "trace": 2
+    }
+  ],
+  "schema": "w33.20260924.positive_null_counter_cover.v1",
+  "status": "PASS_27_HISTORIES_ARE_FOUR_NULL_COUNTERS_MOD_COMMON_WINDING",
+  "symmetry": {
+    "common_winding_1111_fixed": true,
+    "null_direction_permutation_group": "S4",
+    "order": 24
+  },
+  "theorem": "The four projective null directions give four integral positive-semidefinite rank-one update matrices. Modulo three their counter map F3^4 -> Sym2(F3) has rank three and exact kernel <1111>, hence the 27 finite histories are F3^4/<1111>. Over the integer positive cover the kernel generator does not vanish: one pulse in every null direction adds 3I2. Repeating it returns to the same finite history while trace increases by six each winding. Thus recurrence of the finite state and monotone lifted history are simultaneously exact."
+}

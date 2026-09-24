@@ -1,0 +1,257 @@
+{
+  "Hesse_process": {
+    "Hesse_lines": 12,
+    "different_direction_zero_pairs": 54,
+    "law": "two parallel Hesse lines bracket to the negative root of the third line; different striations have zero root-sum bracket",
+    "noncollinear_triangles": 72,
+    "rows": [
+      {
+        "bracket": "-w_(6, 7, 8)",
+        "line1": [
+          0,
+          1,
+          2
+        ],
+        "line2": [
+          3,
+          4,
+          5
+        ],
+        "third_parallel_line": [
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "bracket": "-w_(3, 4, 5)",
+        "line1": [
+          0,
+          1,
+          2
+        ],
+        "line2": [
+          6,
+          7,
+          8
+        ],
+        "third_parallel_line": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "bracket": "-w_(2, 5, 8)",
+        "line1": [
+          0,
+          3,
+          6
+        ],
+        "line2": [
+          1,
+          4,
+          7
+        ],
+        "third_parallel_line": [
+          2,
+          5,
+          8
+        ]
+      },
+      {
+        "bracket": "-w_(1, 4, 7)",
+        "line1": [
+          0,
+          3,
+          6
+        ],
+        "line2": [
+          2,
+          5,
+          8
+        ],
+        "third_parallel_line": [
+          1,
+          4,
+          7
+        ]
+      },
+      {
+        "bracket": "-w_(2, 3, 7)",
+        "line1": [
+          0,
+          4,
+          8
+        ],
+        "line2": [
+          1,
+          5,
+          6
+        ],
+        "third_parallel_line": [
+          2,
+          3,
+          7
+        ]
+      },
+      {
+        "bracket": "-w_(1, 5, 6)",
+        "line1": [
+          0,
+          4,
+          8
+        ],
+        "line2": [
+          2,
+          3,
+          7
+        ],
+        "third_parallel_line": [
+          1,
+          5,
+          6
+        ]
+      },
+      {
+        "bracket": "-w_(2, 4, 6)",
+        "line1": [
+          0,
+          5,
+          7
+        ],
+        "line2": [
+          1,
+          3,
+          8
+        ],
+        "third_parallel_line": [
+          2,
+          4,
+          6
+        ]
+      },
+      {
+        "bracket": "-w_(1, 3, 8)",
+        "line1": [
+          0,
+          5,
+          7
+        ],
+        "line2": [
+          2,
+          4,
+          6
+        ],
+        "third_parallel_line": [
+          1,
+          3,
+          8
+        ]
+      },
+      {
+        "bracket": "-w_(0, 5, 7)",
+        "line1": [
+          1,
+          3,
+          8
+        ],
+        "line2": [
+          2,
+          4,
+          6
+        ],
+        "third_parallel_line": [
+          0,
+          5,
+          7
+        ]
+      },
+      {
+        "bracket": "-w_(0, 3, 6)",
+        "line1": [
+          1,
+          4,
+          7
+        ],
+        "line2": [
+          2,
+          5,
+          8
+        ],
+        "third_parallel_line": [
+          0,
+          3,
+          6
+        ]
+      },
+      {
+        "bracket": "-w_(0, 4, 8)",
+        "line1": [
+          1,
+          5,
+          6
+        ],
+        "line2": [
+          2,
+          3,
+          7
+        ],
+        "third_parallel_line": [
+          0,
+          4,
+          8
+        ]
+      },
+      {
+        "bracket": "-w_(0, 1, 2)",
+        "line1": [
+          3,
+          4,
+          5
+        ],
+        "line2": [
+          6,
+          7,
+          8
+        ],
+        "third_parallel_line": [
+          0,
+          1,
+          2
+        ]
+      }
+    ],
+    "same_parallel_class_nonzero_pairs": 12
+  },
+  "basis": {
+    "Cartan_dimension": 8,
+    "Lambda3_packets": 84,
+    "Lambda6_dual_packets": 84,
+    "Lie_dimension": 248,
+    "history_cells": 9,
+    "root_total": 240,
+    "sl9_roots": 72
+  },
+  "boundary": "This packet certifies Chevalley root-support incidence, not the signs of every structure constant. Signed Jacobi-normalized brackets remain owned by the repository's frozen E8 structure-constant artifact.",
+  "exact_counts": {
+    "Lambda3_Lambda3_nonzero_unordered_pairs": 840,
+    "Lambda3_Lambda3_preimages_per_output": 10,
+    "Lambda3_Lambda6_opposite_Cartan_pairs": 84,
+    "Lambda3_Lambda6_preimages_per_A8_root": 21,
+    "Lambda3_Lambda6_root_contractions": 1512,
+    "sl9_Lambda3_nonzero": 1512,
+    "sl9_Lambda3_preimages_per_output": 18,
+    "sl9_Lambda6_nonzero": 1512
+  },
+  "schema": "w33.20260924.temporal_a8_e8_process_bracket.v1",
+  "status": "PASS_NINE_HISTORY_CELLS_COMPILE_THE_A8_E8_ROOT_SUPPORT_BRACKETS",
+  "support_rules": {
+    "Lambda3_Lambda3": "disjoint S,T -> -w_complement(S union T)",
+    "Lambda3_Lambda6": "|S intersect T|=2 -> E_(S\\T),(T\\S); S=T -> Cartan",
+    "Lambda6_Lambda6": "disjoint S,T -> +w_complement(S union T)",
+    "sl9_on_Lambda3": "E_ij replaces j by i when j in S and i not in S",
+    "sl9_on_Lambda6": "dual replacement on the complementary 3-subset index"
+  },
+  "theorem": "The standard A8 root support of E8 is a literal process compiler on nine history cells. sl9 roots perform one-cell substitutions on three-history packets; disjoint packets wedge to the complementary dual packet; Lambda3/Lambda6 packets differing in one cell contract to the corresponding sl9 transition; opposite packets return a Cartan update. All output root supports are reached with uniform exact multiplicities. On the Hesse 12, this specializes to four independent A2 bracket triangles, one per temporal/null striation."
+}
