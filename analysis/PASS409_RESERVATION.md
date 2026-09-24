@@ -276,3 +276,75 @@ That is a substantial algebraic/control bridge. It is not yet a theory of
 spacetime dynamics or observed particle parameters. The remaining physical work
 is to derive a Hamiltonian/action and experimentally normalized control map that
 selects this finite structure rather than merely realizing it.
+
+
+## 6. The constraint transducer is an explicit rank-90 matrix
+
+The character-theoretic uniqueness theorem has been strengthened to a literal
+matrix witness.  Over \(\mathrm{GF}(103)\), MeatAxe isolates the common
+degree-90 constituents of the induced qutrit bundle and the signed edge module
+and constructs an invertible \(90\times90\) intertwiner \(T\).  For every
+frozen generator \(g\) of \(W(E_6)\),
+\[
+M_{\rm ind}(g)T=T M_{\rm edge}(g).
+\]
+Thus the local qutrit-to-global-constraint route is an actual equivariant
+transducer, not merely a character overlap.  A characteristic-zero integral
+lift and optical amplitude normalization remain open.
+
+Executables:
+analysis/w33_pass409_qutrit_edge_intertwiner.g,
+analysis/w33_pass409_qutrit_edge_intertwiner.py.
+
+
+## 7. The cubic field has an exact three-prime branch locus
+
+For
+\[
+K=\mathbb Q(\theta),\qquad
+\theta^3-\theta^2-53\theta-120=0,
+\]
+the discriminant is squarefree:
+\[
+\operatorname{Disc}(K)=94557=3\cdot43\cdot733.
+\]
+Hence \(\mathbb Z[\theta]\) is the maximal order and the Galois closure is
+\(S_3\).  The only ramified primes are exactly
+\[
+\boxed{3,43,733}.
+\]
+At each one, two centroid embeddings collide into a dual-number factor
+\(\mathbb F_p[\epsilon]/(\epsilon^2)\); multiplication by \(\epsilon\)
+has rank one on the centroid and induces a canonical three-dimensional
+square-zero ideal \(\epsilon\mathfrak{sl}_2\) in the nine-dimensional Levi
+reduction.  Its Killing rank drops from nine to six.
+
+Executable: analysis/w33_pass409_cubic_ramification_audit.py.
+
+
+## 8. The D4 contact fingerprint and the six-frame control ABI
+
+A self-contained D4 root census using the central simple-root contact grading
+gives root-grade counts
+\[
+1,8,6,8,1
+\]
+for grades \(-2,-1,0,1,2\).  The semisimple grade-zero part is
+\(A_1^3\), and the eight grade-minus-one weights are all sign triples
+\((\pm1,\pm1,\pm1)\), i.e. the \((2,2,2)\) module.  Opposite sign triples
+pair into the one-dimensional grade-minus-two Heisenberg center.  Therefore the
+18D residual core has exactly the derived D4 contact-parabolic fingerprint
+after splitting the cubic centroid field.
+
+The minimum eight-root compact-E8 frame has identical A/B conflict graphs with
+clique number and chromatic number both equal to three.  Thus three commuting
+batches per control are necessary and sufficient:
+\[
+\boxed{6\ \text{microframes}=432\ \text{ticks per }AB\text{ cycle}}.
+\]
+Five such cycles fit one 2160-tick E8 Coxeter bus and 120 fit the 51840-tick
+global window.
+
+Executables:
+analysis/w33_pass409_d4_contact_root_census.py,
+analysis/w33_pass409_sparse8_holonet_schedule.py.

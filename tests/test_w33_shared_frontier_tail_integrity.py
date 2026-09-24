@@ -113,3 +113,10 @@ def test_latest_weil_hodge_surfaces_have_clean_tex_encoding():
         assert not any(ord(char) < 32 and char not in "\n\r\t" for char in text)
         assert not any(line.startswith((r"\\[", r"\\]", r"\\paragraph"))
                        for line in text.splitlines())
+
+
+def test_compact_e8_cubic_jacobi_triality_is_in_shared_tail_once():
+    lines = TAIL.read_text(encoding="utf-8").splitlines()
+    item = r"\input{analysis/PASS20260923_compact_e8_cubic_jacobi_triality_insert}%"
+    assert item in lines
+    assert lines.count(item) == 1
