@@ -1,137 +1,114 @@
-% Pass 409 — compact E8, cubic Jacobi residual, and triality routing.
-\subsection*{Compact-$E_8$ two-control switch and cubic-Jacobi boundary algebra}
+% Pass 409 — compact E8, cubic Jacobi residual, and trialitarian descent.
+\subsection*{Compact-$E_8$ control and the trialitarian cubic-Jacobi boundary}
 
 Let $\sigma_c$ be the compact anti-linear conjugation of the committed
-Chevalley basis, with
+Chevalley basis:
 \[
 \sigma_c(h_i)=-h_i,\qquad
 \sigma_c(e_\alpha)=
 -\operatorname{sgn}K(e_\alpha,e_{-\alpha})e_{-\alpha}.
 \]
-All $30628$ unordered basis-bracket identities are satisfied exactly.  The
-fixed root planes have Killing value $-120$, while the split Cartan Killing
-matrix is positive definite, so the fixed real form is compact.
-
-For either diagonal H27 background $x$, the pair
+All $30628$ unordered basis-bracket identities hold exactly.  For either
+diagonal H27 background $x$, the controls
 \[
 A=x+\sigma_c(x),\qquad B=i(x-\sigma_c(x))
 \]
-generates $\mathfrak e_{8(-248)}$; the equivalent complex pair
-$x,\sigma_c(x)$ closes exactly to all $248$ Chevalley directions over
-$\mathbb Q$.
+generate the compact real form $\mathfrak e_{8(-248)}$.
 
-Moreover, the compact-conjugate architecture has an exact minimum of eight
-root channels.  A witness supported on
+This compact-conjugate architecture needs exactly eight root channels.  The
+support
 \[
 \{16,19,23,31,153,190,216,228\}
 \]
 with amplitudes $(3,2,1,2,1,3,1,1)$ closes to all $248$ dimensions over
-$\mathbb Q$.  Its selected-root matrix has determinant $-1$.  Fewer than eight
-root directions cannot generate rank eight, hence
+$\mathbb Q$, and its root matrix has determinant $-1$.  Fewer than eight
+roots cannot generate Cartan rank eight, so
 \[
 \boxed{k_{\min}=8}.
 \]
 
-The non-diagonal center/external branch instead has a $24$-dimensional perfect
-algebra $L_{24}$ with radical
+The non-diagonal branch is instead
 \[
-\operatorname{rad}L_{24}\cong\mathfrak h_7.
+L_{24}\cong
+\left(\operatorname{Res}_{K/\mathbb Q}\mathfrak{sl}_2(K)\right)
+\ltimes\mathfrak h_7,
 \]
-It contains $\mathfrak h_4\subset\mathfrak h_7$, and the Levi quotient is
-\[
-L_{24}/\mathfrak h_7
-\cong\operatorname{Res}_{K/\mathbb Q}\mathfrak{sl}_2(K),
-\]
-where
+with $\mathfrak h_4\subset\mathfrak h_7$ and
 \[
 K=\mathbb Q(\theta),\qquad
-\theta^3-\theta^2-53\theta-120=0,qquad
-\operatorname{Disc}K=94557.
+\theta^3-\theta^2-53\theta-120=0,\qquad
+\operatorname{Disc}K=94557=3\cdot43\cdot733.
 \]
+This exact Levi--radical structure rules out an $A_2^3$ trinification
+identification.
 
-At the completely split primes $107$ and $151$, the Levi factor separates into
-three commuting $A_1$ factors.  On the nested Heisenberg quotients,
+Writing $W_8=\mathfrak h_4/Z$ and
+$U_6=\mathfrak h_7/\mathfrak h_4$, characteristic-zero commutants and
+associative envelopes give
 \[
-\mathfrak h_4/Z\cong(2,2,2),\qquad
-\mathfrak h_7/\mathfrak h_4
-\cong(2,1,1)\oplus(1,2,1)\oplus(1,1,2).
+U_6\cong\operatorname{Res}_{K/\mathbb Q}(K^2),\qquad
+W_8\cong\operatorname{TensorInd}_{K/\mathbb Q}(K^2).
 \]
-The $(2,2,2)$ sector has no polynomial invariants in degrees $1,2,3$ and a
-one-dimensional invariant space in degree $4$, the Cayley
-$2\times2\times2$ hyperdeterminant line after scalar splitting.
+The latter is the cubic tensor-induction, or Asai-cube, representation.
+The actual bracket form supplies the symplectic orthogonal decomposition
+\[
+\mathfrak h_7/Z
+\cong
+\operatorname{TensorInd}_{K/\mathbb Q}(K^2)
+\;\widehat\oplus\;
+\operatorname{Res}_{K/\mathbb Q}(K^2).
+\]
+All $54$ rational Levi actions preserve the six-dimensional complement
+exactly, every cross-bracket with $W_8$ vanishes, and the resulting
+$15$-vector phase basis has a pivot minor of determinant $-1$.  Hence
+\[
+\mathfrak h_7\cong\mathfrak h_4*_{Z}\mathfrak h_3.
+\]
+This is an exact finite virtual-hardware ABI: the eight-coordinate
+tensor-induction data lane and six-coordinate restricted-standard control lane
+commute while sharing one central phase register.
 
-Finally, for the corrected local Weil carrier $\rho_6$ of the $1296$-element
-W33 point stabilizer $H$,
+Over a splitting field the Levi is $\mathfrak{sl}_2^3$ and
+$W_8=(2,2,2)$.  The $D_4$ contact grading has root counts
+$1,8,6,8,1$, semisimple grade-zero part $A_1^3$, and grade-minus-one
+weights $(\pm1,\pm1,\pm1)$.  Together with the cubic tensor induction
+and its unique invariant alternating form, this identifies the
+$18$-dimensional core as the abstract derived contact parabolic of the
+trialitarian $D_4$ form attached to $K$.  A coordinate conjugating matrix to a
+chosen rational Chevalley presentation remains open.
+
+The squarefree discriminant makes $3,43,733$ the exact bad-reduction locus.
+At each ramified prime, the centroid has a dual-number factor and the
+nine-dimensional Levi reduction acquires a three-dimensional square-zero
+ideal; its Killing rank drops from nine to six.
+
+For the corrected local Weil carrier $\rho_6$ of the W33 point stabilizer,
 \[
 \operatorname{Ind}_{H}^{W(E_6)}\rho_6
 =10\oplus60\oplus80\oplus90,
 \]
-whereas the signed edge chain is
+while the signed edge module is
 \[
 15\oplus24\oplus30\oplus81\oplus90.
 \]
-Thus the equivariant Hom space is one-dimensional and its nonzero image is
-exactly the unique degree-$90$ constraint constituent.  The local qutrit
-carrier therefore routes canonically to the global constraint sector, not to
-the harmonic degree-$81$ logical sector.
-
-
-The $18$-dimensional core has the exact $D_4$ contact-grading fingerprint:
-grading by the central simple root gives root counts $1,8,6,8,1$,
-$g_0^{\mathrm{ss}}=A_1^3$, and the eight $g_{-1}$ weights are all
-$(\pm1,\pm1,\pm1)$.  Thus the derived contact parabolic is
-$\mathfrak{sl}_2^3\ltimes\mathfrak h_4$, matching the split residual core.
-
-The cubic centroid has squarefree discriminant
-$94557=3\cdot43\cdot733$.  At each ramified prime its reduction contains a
-dual-number factor $\mathbb F_p[\epsilon]/(\epsilon^2)$, so the $9$-dimensional
-Levi reduction acquires a canonical $3$-dimensional square-zero ideal and its
-Killing rank drops from $9$ to $6$.
-
-The unique degree-$90$ overlap is realized explicitly over $\mathrm{GF}(103)$
-by an invertible $90\times90$ matrix intertwining all three frozen
-$W(E_6)$ generators.  Finally, the minimum eight-root compact frame has exact
-chromatic number three for each of the two controls, so one full $AB$ cycle
-requires exactly six $72$-tick microframes, or $432$ ticks.  Five such cycles
-fit exactly in the existing $30$-microframe $E_8$ Coxeter bus.
-
-\paragraph{Boundary.}
-These are exact finite Lie-algebra and representation results.  They do not
-derive a continuum action, Standard-Model parameters, black-hole entropy, or
-laboratory control energies.
-
-
-The unique degree-$90$ overlap is realized explicitly over $\mathbf F_{103}$:
-MeatAxe produces an invertible $90\times90$ matrix $T$ satisfying
+Their unique common constituent is realized over $\mathbf F_{103}$ by an
+invertible $90\times90$ matrix $T$ satisfying
 \[
 M_{\rm ind}(g)T=T M_{\rm edge}(g)
 \]
-for every frozen generator of $W(E_6)$.  Thus the qutrit-to-constraint channel
-is a literal equivariant transducer.
+for every frozen $W(E_6)$ generator.  The local qutrit fibre therefore has an
+explicit equivariant route to the global degree-$90$ constraint sector.
 
-The centroid field is ramified only at
-\[
-\boxed{3,43,733},
-\]
-and at each ramified prime the nine-dimensional Levi reduction acquires a
-canonical three-dimensional square-zero ideal while its Killing rank drops
-from nine to six.
-
-
-The central-root contact grading of $D_4$ has root counts
-$1,8,6,8,1$ and semisimple grade-zero part $A_1^3$; its grade-minus-one
-weights are all $(\pm1,\pm1,\pm1)$.  This matches the split residual
-eighteen-dimensional core as the derived $D_4$ contact-parabolic fingerprint.
-
-For the rank-optimal eight-root compact control frame, the exact A and B
-conflict graphs each have clique number and chromatic number three.  Therefore
-the minimum commuting-batch schedule for this frame is
+Finally, the rank-optimal eight-root frame has exact chromatic number three
+for each control.  One full cycle requires
 \[
 \boxed{3A+3B=6\ \text{microframes}=432\ \text{ticks}}.
 \]
-Five complete cycles fit the existing $2160$-tick Coxeter bus.
+Five cycles fill the existing $2160$-tick $E_8$ Coxeter bus.
 
-\paragraph{Additional boundary.}
-The six-frame result is an exact commutation/scheduling theorem for the chosen
-root-plane macro.  It does not calibrate analog pulse amplitude, loss,
-bandwidth, crosstalk, or physical wall-clock time.
+\paragraph{Boundary.}
+These are exact finite Lie-algebra, arithmetic, representation, and scheduling
+results.  The term Asai cube names cubic tensor induction; no automorphic
+$L$-function is asserted to be physically realized.  The packet does not
+derive a continuum action, Standard-Model parameters, black-hole entropy, or
+laboratory pulse calibration.

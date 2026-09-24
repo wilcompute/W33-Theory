@@ -69,7 +69,6 @@ def main(write: bool = True):
             "analysis/w33_20260923_qutrit_edge_triality_transducer.g",
             "analysis/w33_20260923_corrected_weil6_e6_extension.g",
         ],
-        "raw_stdout": run.stdout.splitlines(),
     }
     if write:
         OUT.write_text(json.dumps(out, indent=2) + "\n", encoding="utf-8")

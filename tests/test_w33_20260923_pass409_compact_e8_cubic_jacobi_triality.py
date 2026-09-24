@@ -62,10 +62,12 @@ def test_qutrit_bundle_routes_uniquely_to_constraint90_not_logical81():
 
 def test_pass409_report_keeps_scope_firewalls():
     text=(ROOT/"analysis/PASS409_RESERVATION.md").read_text(encoding="utf-8")
-    assert "trinification identification is therefore false" in text
-    assert "not a derivation of a black-hole" in text
-    assert "not yet a theory of" in text.lower()
+    assert "rules out the" in text and "trinification reading" in text
+    assert "A coordinate conjugating matrix" in text
+    assert "does not derive spacetime dynamics" in text
     assert "continuum action" in text
+    assert text.count("## 7. The qutrit fibre") == 1
+    assert text.count("## 8. The minimal frame") == 1
 
 
 def test_d4_contact_root_census_matches_residual_core():
@@ -96,6 +98,39 @@ def test_explicit_rank90_transducer_is_not_just_character_overlap():
     assert w["intertwiner_rank"]==90
     assert w["all_generator_equations_hold"] is True
     assert d["character_audit"]["unique_common_degree"]==90
+    assert "raw_stdout" not in d
+
+
+def test_trialitarian_asai_cube_descent_is_rational_and_symplectic():
+    d=load("w33_20260924_trialitarian_asai_cube_descent.json")
+    assert d["status"]=="PASS_TRIALITARIAN_D4_ASAI_CUBE_DESCENT"
+    assert d["cubic_field"]["galois_closure"]=="S3"
+    assert d["restricted_standard_U6"]["commutant_dimension"]==3
+    assert d["restricted_standard_U6"]["associative_envelope_Q_dimension"]==12
+    w=d["asai_cube_W8"]
+    assert w["commutant_dimension"]==1
+    assert w["associative_envelope_Q_dimension"]==64
+    assert w["S3_fixed_dimension_eight_highest_weights"]==[[1,1,1]]
+    phase=d["heisenberg_phase_space"]
+    assert phase["W8_symplectic_rank"]==8
+    assert phase["orthogonalized_cross_rank"]==0
+    assert phase["orthogonal_U6_symplectic_rank"]==6
+    assert phase["phase_basis_pivot_minor_determinant"]==-1
+    assert phase["levi_preserves_orthogonal_U6_checks"]==54
+    assert phase["W8_U6orth_cross_brackets_zero"] is True
+    assert phase["central_product"]=="h7 = h4 *_Z h3"
+    assert d["trialitarian_D4_core"]["dimension"]==18
+
+
+def test_pass409_visible_surfaces_are_single_and_clean():
+    insert=(ROOT/"analysis/PASS20260923_compact_e8_cubic_jacobi_triality_insert.tex").read_text(encoding="utf-8")
+    report=(ROOT/"analysis/PASS409_RESERVATION.md").read_text(encoding="utf-8")
+    site=(ROOT/"docs/index.html").read_text(encoding="utf-8")
+    assert insert.count(r"\paragraph{Boundary.}") == 1
+    assert insert.count(r"\operatorname{TensorInd}") == 2
+    assert site.count('href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/PASS20260924_trialitarian_asai_cube_descent.md"') == 1
+    for text in (insert,report):
+        assert not any(ord(char)<32 and char not in "\n\r\t" for char in text)
 
 def test_sparse8_holonet_schedule_is_exactly_six_microframes():
     d=load("w33_pass409_sparse8_holonet_schedule.json")

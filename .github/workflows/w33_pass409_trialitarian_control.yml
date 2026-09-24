@@ -1,0 +1,31 @@
+name: W33 Pass 409 trialitarian control replay
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/PASS409_RESERVATION.md'
+      - 'analysis/PASS20260923_compact_e8_cubic_jacobi_triality_insert.tex'
+      - 'analysis/PASS20260924_trialitarian_asai_cube_descent.md'
+      - 'analysis/w33_20260924_trialitarian_asai_cube_descent.py'
+      - 'analysis/w33_pass409_qutrit_edge_intertwiner.py'
+      - 'data/w33_20260924_trialitarian_asai_cube_descent.json'
+      - 'data/w33_pass409_qutrit_edge_intertwiner.json'
+      - 'docs/index.html'
+      - 'tests/test_w33_20260923_pass409_compact_e8_cubic_jacobi_triality.py'
+      - '.github/workflows/w33_pass409_trialitarian_control.yml'
+  workflow_dispatch:
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --upgrade sympy pytest
+      - name: Replay rational trialitarian descent
+        run: python analysis/w33_20260924_trialitarian_asai_cube_descent.py
+      - name: Run focused Pass 409 regression
+        run: python -m pytest -q tests/test_w33_20260923_pass409_compact_e8_cubic_jacobi_triality.py tests/test_w33_shared_frontier_tail_integrity.py

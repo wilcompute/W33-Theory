@@ -51,13 +51,5 @@
   "parents": [
     "analysis/w33_20260923_qutrit_edge_triality_transducer.g",
     "analysis/w33_20260923_corrected_weil6_e6_extension.g"
-  ],
-  "raw_stdout": [
-    "PASS409_GROUPS 51840 1296 40",
-    "PASS409_CHARACTERS 11 1 90",
-    "PASS409_INDUCED_FACTORS [ 80, 60, 90, 10 ]",
-    "PASS409_EDGE_FACTORS [ 81, 30, 15, 90, 24 ]",
-    "PASS409_INTERTWINER [ 90, 90 ] 90 true",
-    "PASS_QUTRIT_EDGE_EXPLICIT_INTERTWINER true"
   ]
 }
