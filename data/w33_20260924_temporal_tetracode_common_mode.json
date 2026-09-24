@@ -1,0 +1,76 @@
+{
+  "automorphisms": {
+    "action_on_tetracode_history_rays": "fixes the unique null ray and cycles the three anisotropic rays",
+    "common_mode_line_orbit_size": 8,
+    "common_mode_line_stabilizer_order": 6,
+    "fibre_cycle_type_histogram": {
+      "(1, 1, 1, 1, 1, 1, 1, 1)": 1,
+      "(1, 1, 3, 3)": 8,
+      "(2, 2, 2, 2)": 9,
+      "(4, 4)": 6
+    },
+    "projective_S4_fibre_action_order": 24,
+    "projective_S4_fibre_transitive": true,
+    "projective_stabilizer_order": 3,
+    "projective_stabilizer_structure": "C3",
+    "signed_monomial_order": 48
+  },
+  "boundary": "This is an exact finite code/module/orientation-fibre theorem. The C3 selection is not identified here with any measured particle or field, and the one-null-plus-three-anisotropic projective slice is not a continuum 3+1 Lorentz spacetime.",
+  "pass7409_weld": {
+    "interpretation": "A temporal common-mode sign line is one of the same eight orientation classes used for the eight Eisenstein W33 leaves through a fixed A2^4.",
+    "orientation_fibre": "F2^4/<1111> ~= F2^3",
+    "orientation_states": 8,
+    "our_sign_line_classes_equal_all_F2_3_states": true
+  },
+  "schema": "w33.20260924.temporal_tetracode_common_mode.v1",
+  "status": "PASS_TETRACODE_GLUE_AND_TEMPORAL_COMMON_MODE_SELECT_EIGHT_E8_ORIENTATIONS",
+  "tetracode": {
+    "common_mode_intersection": "{0}",
+    "generators": [
+      [
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        2
+      ]
+    ],
+    "history_image_dimension": 2,
+    "history_image_size": 9,
+    "injects_into_history_quotient": true,
+    "projective_determinant_histogram": {
+      "0": 1,
+      "2": 3
+    },
+    "projective_rays": 4,
+    "size": 9,
+    "three_anisotropic_rays": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "unique_null_ray": [
+      0,
+      0,
+      1
+    ]
+  },
+  "theorem": "The ternary tetracode in the four Hesse/A2 coordinates meets the temporal common line <1111> trivially, so its nine words inject as a 2D plane in the 27-history quotient. That projective plane has one null ray and three equal anisotropic rays. The full signed tetracode automorphism group has order 48 and moves <1111> through exactly eight sign lines; converting signs to bits identifies these lines exactly with F2^4/<1111>=F2^3, the Pass-7409 eight-leaf A2^4 orientation fibre. The common-mode stabilizer has order 6, and after central +/-I its C3 quotient fixes the null ray and cycles the three anisotropic rays."
+}

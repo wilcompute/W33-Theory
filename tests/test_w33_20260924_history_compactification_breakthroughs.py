@@ -28,6 +28,7 @@ SCRIPTS=[
     "w33_20260924_four_a2_history_quotient.py",
     "w33_20260924_temporal_a8_e8_process_bracket.py",
     "w33_20260924_temporal_su9_e8_compiler.py",
+    "w33_20260924_temporal_tetracode_common_mode.py",
 ]
 
 
@@ -235,3 +236,18 @@ def test_nine_history_compiler_reaches_w33_sl9_and_e8_support():
     assert x["W33_projectivization"]["projective_inverse_pairs"]==40
     assert x["W33_projectivization"]["srg_parameters"]==[40,12,2,4]
     assert x["E8_A8_completion"]["identity"]=="248=80+84+84"
+
+
+def test_temporal_tetracode_common_mode_hits_eight_leaf_fibre():
+    x=load("w33_20260924_temporal_tetracode_common_mode.json")
+    assert x["status"]=="PASS_TETRACODE_GLUE_AND_TEMPORAL_COMMON_MODE_SELECT_EIGHT_E8_ORIENTATIONS"
+    assert x["tetracode"]["injects_into_history_quotient"] is True
+    assert x["tetracode"]["history_image_dimension"]==2
+    assert x["tetracode"]["projective_determinant_histogram"]=={"0":1,"2":3}
+    assert x["automorphisms"]["signed_monomial_order"]==48
+    assert x["automorphisms"]["common_mode_line_orbit_size"]==8
+    assert x["automorphisms"]["common_mode_line_stabilizer_order"]==6
+    assert x["automorphisms"]["projective_stabilizer_structure"]=="C3"
+    assert x["automorphisms"]["projective_S4_fibre_action_order"]==24
+    assert x["automorphisms"]["projective_S4_fibre_transitive"] is True
+    assert x["pass7409_weld"]["orientation_states"]==8

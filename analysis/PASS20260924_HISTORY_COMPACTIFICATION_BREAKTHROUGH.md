@@ -381,6 +381,38 @@ standard A8 decomposition
 
 with the objectwise support brackets certified in the preceding section.
 
+## 16. Tetracode glue and temporal common mode meet on the eight-leaf A2^4 fibre
+
+The standard ternary tetracode in the four Hesse/A2 coordinates meets the
+temporal common line <1111> trivially. It therefore injects into
+
+    F3^4/<1111> ~= Sym_2(F3)
+
+as a 2D, nine-state history plane. Its four projective rays split by the
+history determinant as
+
+    1 null + 3 equal anisotropic.
+
+The signed monomial tetracode automorphism group has order 48. Its orbit on
+the temporal common-mode line <1111> has size eight and stabilizer order six.
+Turning each sign pattern into four orientation bits modulo simultaneous
+inversion gives exactly
+
+    F2^4/<1111> ~= F2^3,
+
+the Pass-7409 orientation fibre of the eight Eisenstein W33 leaves through one
+fixed A2^4 subsystem.
+
+After quotienting the central +/-I, the common-mode stabilizer is C3. On the
+four tetracode history rays it fixes the unique null ray and cycles the three
+anisotropic rays. The projective order-24 tetracode group acts transitively on
+all eight common-mode/orientation classes, with the cube-rotation cycle census
+1, 9, 8, 6 across the identity, order-two, order-three, and order-four types.
+
+This is a finite code/module/orientation theorem. The C3 is not identified here
+with a measured generation symmetry, and the 1+3 projective slice is not a
+continuum Lorentz spacetime.
+
 ## Evidence boundary
 
 All promoted statements above are finite incidence, homology, Fourier,
@@ -393,6 +425,7 @@ fixed-nine chirality, Maslov-mu12, invariant-orientation, 35+46,
 point/line-firewall, cycle-81, explicit-H1-intertwiner, relative-Levi,
 universal-cover, Hermitian-3+1/spread, temporal-Hesse-4A2, common-S4,
 Page-Wootters weld, positive-null-counter cover, four-A2 quotient, temporal
-A8/E8 process-bracket, and nine-history su9/E8 compiler scripts under analysis/.
+A8/E8 process-bracket, nine-history su9/E8 compiler, and temporal-tetracode
+common-mode scripts under analysis/.
 Focused regression coverage is in
 tests/test_w33_20260924_history_compactification_breakthroughs.py.
