@@ -1,0 +1,98 @@
+{
+  "schema": "w33.20260923.cubic_jacobi_stu_split.v1",
+  "status": "PASS_CUBIC_JACOBI_SPLITS_TO_A1_CUBED_WITH_222_PLUS_LOCAL_DOUBLETS",
+  "runs": [
+    {
+      "prime": 107,
+      "centroid_split_eigenvalues": "(39, 3), (74, 3), (88, 3)",
+      "module_dimensions": {
+        "h15_over_Z": 14,
+        "h9_over_Z": 8,
+        "h15_over_h9": 6
+      },
+      "commutant_dimensions": {
+        "W8": 1,
+        "U6": 3
+      },
+      "associative_algebra_dimensions": {
+        "W8": 64,
+        "U6": 12
+      },
+      "invariant_polynomial_dimensions": {
+        "1": [
+          0,
+          8
+        ],
+        "2": [
+          0,
+          36
+        ],
+        "3": [
+          0,
+          120
+        ],
+        "4": [
+          1,
+          330
+        ]
+      },
+      "factor_derived_dimensions": [
+        3,
+        3,
+        3
+      ],
+      "factor_cross_brackets_zero": true,
+      "stdout": "prime 107\nideal inventory [(9, 10), (15, 6), (19, 11), (24, 0)]\nI15 15 I9 9\ncentdim 3\nsplit (1, 0, 0) [(39, 3), (74, 3), (88, 3)]\nfactor_dims [3, 3, 3]\nmodules 14 8 6\nfactor 0 W_inv 0 W_move 8 U_inv 4 U_move 2\nfactor 1 W_inv 0 W_move 8 U_inv 4 U_move 2\nfactor 2 W_inv 0 W_move 8 U_inv 4 U_move 2\ncommdims 1 3\nU_moved_direct_sum 6 [2, 2, 2]\ncross 0 0 acts True\ncross 0 1 acts False\ncross 0 2 acts False\ncross 1 0 acts False\ncross 1 1 acts True\ncross 1 2 acts False\ncross 2 0 acts False\ncross 2 1 acts False\ncross 2 2 acts True\nfactor 0 assoc W8/U6 4 5\nfactor 1 assoc W8/U6 4 5\nfactor 2 assoc W8/U6 4 5\nfull assoc W8/U6 64 12\nW8 invariant degree 1 (0, 8)\nW8 invariant degree 2 (0, 36)\nW8 invariant degree 3 (0, 120)\nW8 invariant degree 4 (1, 330)\nfactor_perfect_dims [3, 3, 3]\nfactor_cross_zero [True, True, True]\n"
+    },
+    {
+      "prime": 151,
+      "centroid_split_eigenvalues": "(0, 3), (20, 3), (50, 3)",
+      "module_dimensions": {
+        "h15_over_Z": 14,
+        "h9_over_Z": 8,
+        "h15_over_h9": 6
+      },
+      "commutant_dimensions": {
+        "W8": 1,
+        "U6": 3
+      },
+      "associative_algebra_dimensions": {
+        "W8": 64,
+        "U6": 12
+      },
+      "invariant_polynomial_dimensions": {
+        "1": [
+          0,
+          8
+        ],
+        "2": [
+          0,
+          36
+        ],
+        "3": [
+          0,
+          120
+        ],
+        "4": [
+          1,
+          330
+        ]
+      },
+      "factor_derived_dimensions": [
+        3,
+        3,
+        3
+      ],
+      "factor_cross_brackets_zero": true,
+      "stdout": "prime 151\nideal inventory [(9, 10), (15, 6), (24, 0)]\nI15 15 I9 9\ncentdim 3\nsplit (0, 1, 0) [(0, 3), (20, 3), (50, 3)]\nfactor_dims [3, 3, 3]\nmodules 14 8 6\nfactor 0 W_inv 0 W_move 8 U_inv 4 U_move 2\nfactor 1 W_inv 0 W_move 8 U_inv 4 U_move 2\nfactor 2 W_inv 0 W_move 8 U_inv 4 U_move 2\ncommdims 1 3\nU_moved_direct_sum 6 [2, 2, 2]\ncross 0 0 acts True\ncross 0 1 acts False\ncross 0 2 acts False\ncross 1 0 acts False\ncross 1 1 acts True\ncross 1 2 acts False\ncross 2 0 acts False\ncross 2 1 acts False\ncross 2 2 acts True\nfactor 0 assoc W8/U6 4 5\nfactor 1 assoc W8/U6 4 5\nfactor 2 assoc W8/U6 4 5\nfull assoc W8/U6 64 12\nW8 invariant degree 1 (0, 8)\nW8 invariant degree 2 (0, 36)\nW8 invariant degree 3 (0, 120)\nW8 invariant degree 4 (1, 330)\nfactor_perfect_dims [3, 3, 3]\nfactor_cross_zero [True, True, True]\n"
+    }
+  ],
+  "split_representation": {
+    "levi": "sl2^3",
+    "W8": "(2,2,2)",
+    "U6": "(2,1,1) + (1,2,1) + (1,1,2)",
+    "quartic_invariant": "one-dimensional degree-4 invariant space; no invariants in degrees 1,2,3"
+  },
+  "interpretation": "After splitting the totally real cubic centroid field, the nested Heisenberg phase space contains an irreducible three-doublet tensor sector with the classical 2x2x2 quartic-invariant fingerprint.",
+  "boundary": "This identifies the finite representation/invariant package. It does not derive an STU black-hole solution, spacetime dynamics, or physical entropy."
+}

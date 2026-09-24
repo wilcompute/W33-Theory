@@ -1,0 +1,95 @@
+{
+  "schema": "w33.20260923.compact_e8_two_control.v1",
+  "status": "PASS_TWO_FIXED_COMPACT_CONTROLS_GENERATE_E8_MINUS248",
+  "bracket_automorphism_checks": 30628,
+  "root_plane_fixed_killing_values": [
+    -120
+  ],
+  "split_cartan_killing_principal_minors": [
+    120,
+    14400,
+    1296000,
+    64800000,
+    3110400000,
+    139968000000,
+    5598720000000,
+    167961600000000
+  ],
+  "fixed_cartan_killing_principal_minors": [
+    -120,
+    14400,
+    -1296000,
+    64800000,
+    -3110400000,
+    139968000000,
+    -5598720000000,
+    167961600000000
+  ],
+  "modular": {
+    "plus": {
+      "103": {
+        "dimension": 248,
+        "grading": {
+          "g0": 86,
+          "g1": 81,
+          "g2": 81
+        },
+        "depth": 10
+      },
+      "109": {
+        "dimension": 248,
+        "grading": {
+          "g0": 86,
+          "g1": 81,
+          "g2": 81
+        },
+        "depth": 10
+      }
+    },
+    "minus": {
+      "103": {
+        "dimension": 248,
+        "grading": {
+          "g0": 86,
+          "g1": 81,
+          "g2": 81
+        },
+        "depth": 10
+      },
+      "109": {
+        "dimension": 248,
+        "grading": {
+          "g0": 86,
+          "g1": 81,
+          "g2": 81
+        },
+        "depth": 10
+      }
+    }
+  },
+  "exact_Q": {
+    "plus": {
+      "dimension": 248,
+      "grading": {
+        "g0": 86,
+        "g1": 81,
+        "g2": 81
+      },
+      "depth": 10,
+      "events": 496
+    },
+    "minus": {
+      "dimension": 248,
+      "grading": {
+        "g0": 86,
+        "g1": 81,
+        "g2": 81
+      },
+      "depth": 10,
+      "events": 496
+    }
+  },
+  "controls": "A=x+sigma_c(x), B=i(x-sigma_c(x)); both are fixed by the anti-linear compact conjugation.",
+  "proof": "The fixed real form has negative-definite Killing form. The complexification of Lie_R<A,B> contains x and sigma_c(x), whose exact rational closure is E8(C); hence the fixed real algebra has dimension 248 and is the compact real form E8(-248).",
+  "boundary": "Finite Chevalley-algebra controllability; no pulse-energy, drift, bandwidth, stability, or laboratory normalization is inferred."
+}

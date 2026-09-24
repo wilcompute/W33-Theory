@@ -1,0 +1,148 @@
+{
+  "schema": "w33.pass409.cubic_ramification_audit.v1",
+  "status": "PASS_RAMIFIED_PRIMES_ARE_EXACT_TRIALITY_BRANCH_LOCUS",
+  "field": {
+    "polynomial": "x^3 - x^2 - 53*x - 120",
+    "irreducible": true,
+    "signature": [
+      3,
+      0
+    ],
+    "discriminant": 94557,
+    "discriminant_factorization": {
+      "3": 1,
+      "43": 1,
+      "733": 1
+    },
+    "maximal_order": "Z[alpha]; squarefree polynomial discriminant forces index one",
+    "galois_closure_group": "S3, since the irreducible cubic discriminant is not a square",
+    "triality_action": "The S3 Galois group permutes the three A1 factors after splitting, matching the abstract D4 outer-triality permutation.",
+    "integral_trace_gram": [
+      [
+        3,
+        1,
+        107
+      ],
+      [
+        1,
+        107,
+        520
+      ],
+      [
+        107,
+        520,
+        6311
+      ]
+    ]
+  },
+  "ramified_reductions": [
+    {
+      "prime": 3,
+      "factorization": "(x-2)^2 (x-0) over F_3",
+      "double_root": 2,
+      "simple_root": 0,
+      "centroid_algebra": "F_3[epsilon]/(epsilon^2) x F_3",
+      "double_factor_idempotent_coefficients": [
+        0,
+        1,
+        2
+      ],
+      "square_zero_epsilon_coefficients": [
+        0,
+        2,
+        2
+      ],
+      "epsilon_multiplication_rank": 1,
+      "trace_form_rank": 2,
+      "levi_reduction_dimension": 9,
+      "levi_killing_rank": 6,
+      "levi_nilpotent_ideal": "epsilon*sl2, dimension 3, abelian and square-zero",
+      "reduced_semisimple_quotient": "sl2(F_p) + sl2(F_p), dimension 6"
+    },
+    {
+      "prime": 43,
+      "factorization": "(x-6)^2 (x-32) over F_43",
+      "double_root": 6,
+      "simple_root": 32,
+      "centroid_algebra": "F_43[epsilon]/(epsilon^2) x F_43",
+      "double_factor_idempotent_coefficients": [
+        4,
+        42,
+        18
+      ],
+      "square_zero_epsilon_coefficients": [
+        29,
+        18,
+        38
+      ],
+      "epsilon_multiplication_rank": 1,
+      "trace_form_rank": 2,
+      "levi_reduction_dimension": 9,
+      "levi_killing_rank": 6,
+      "levi_nilpotent_ideal": "epsilon*sl2, dimension 3, abelian and square-zero",
+      "reduced_semisimple_quotient": "sl2(F_p) + sl2(F_p), dimension 6"
+    },
+    {
+      "prime": 733,
+      "factorization": "(x-182)^2 (x-370) over F_733",
+      "double_root": 182,
+      "simple_root": 370,
+      "centroid_algebra": "F_733[epsilon]/(epsilon^2) x F_733",
+      "double_factor_idempotent_coefficients": [
+        472,
+        607,
+        536
+      ],
+      "square_zero_epsilon_coefficients": [
+        406,
+        502,
+        347
+      ],
+      "epsilon_multiplication_rank": 1,
+      "trace_form_rank": 2,
+      "levi_reduction_dimension": 9,
+      "levi_killing_rank": 6,
+      "levi_nilpotent_ideal": "epsilon*sl2, dimension 3, abelian and square-zero",
+      "reduced_semisimple_quotient": "sl2(F_p) + sl2(F_p), dimension 6"
+    }
+  ],
+  "good_prime_controls": {
+    "103": {
+      "factorization": "(x - 38)*(x**2 + 37*x + 14)",
+      "trace_form_rank": 3,
+      "etale": true
+    },
+    "107": {
+      "factorization": "(x - 46)*(x - 42)*(x - 20)",
+      "trace_form_rank": 3,
+      "etale": true
+    },
+    "109": {
+      "factorization": "(x - 42)*(x**2 + 41*x + 34)",
+      "trace_form_rank": 3,
+      "etale": true
+    },
+    "151": {
+      "factorization": "(x - 26)*(x + 9)*(x + 16)",
+      "trace_form_rank": 3,
+      "etale": true
+    }
+  },
+  "computational_interpretation": {
+    "generic": "At an unramified prime the centroid is etale and the three A1 channels remain separable after a splitting extension.",
+    "branch_locus": "At 3,43,733 two embeddings collide. The collided component is the dual-number algebra F_p[epsilon]/epsilon^2, creating one exact square-zero tangent or derivative lane.",
+    "virtual_machine": "The induced operator N=multiplication by epsilon on sl2(A_p) has rank 3 and N^2=0. It supplies a mathematically canonical infinitesimal-update register at precisely the ramified primes.",
+    "qutrit_prime_3": "Characteristic 3 is simultaneously the native H27 coefficient field, an E8 bad prime, and a centroid ramification prime. Mod-3 execution therefore conflates triality channels and must not be used to certify characteristic-zero semisimplicity."
+  },
+  "repo_collision_audit": {
+    "43": "The corpus contains unrelated uses of 43, including Heegner and schedule indices, but no objectwise map to this centroid ramification was found.",
+    "733": "The corpus contains BT/pass labels and hashes involving 733, but no prior arithmetic carrier for the centroid prime was found.",
+    "policy": "No phenomenological or anomaly identification is promoted from a shared integer alone."
+  },
+  "theorem": "The exact primes 3,43,733 are not numerology: they are the complete branch locus of the cubic descent that glues the three A1 triality factors. At each one the 9D Levi reduction acquires a canonical 3D square-zero ideal and Killing rank drops from 9 to 6.",
+  "boundary": "Ramification and square-zero tangent channels are exact arithmetic facts. They do not by themselves represent particle generations, gauge anomalies, measured resonances, energy scales, or error thresholds.",
+  "parents": [
+    "data/w33_pass409_jacobi_d4_identification.json",
+    "data/w33_20260923_cubic_jacobi_residual.json"
+  ]
+}

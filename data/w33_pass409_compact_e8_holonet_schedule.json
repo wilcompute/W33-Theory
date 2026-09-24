@@ -1,0 +1,3523 @@
+{
+  "schema": "w33.pass409.compact_e8_holonet_schedule.v1",
+  "status": "PASS_COMPACT_E8_PAIR_FITS_ONE_30_MICROFRAME_COXETER_BUS",
+  "source_control": "plus diagonal H27 compact pair A=x+sigma(x), B=i(x-sigma(x))",
+  "compiler": {
+    "compact_root_plane_atoms_per_control": 81,
+    "commuting_batches_per_control": 15,
+    "microframes_per_AB_cycle": 30,
+    "ticks_per_microframe": 72,
+    "ticks_per_AB_cycle": 2160,
+    "AB_cycles_per_51840_tick_window": 24,
+    "schedule": [
+      {
+        "microframe": 0,
+        "control": "A",
+        "local_batch": 0,
+        "tick_start": 0,
+        "tick_stop_exclusive": 72,
+        "atom_ids": [
+          0,
+          22,
+          37,
+          42,
+          50,
+          57
+        ]
+      },
+      {
+        "microframe": 1,
+        "control": "A",
+        "local_batch": 1,
+        "tick_start": 72,
+        "tick_stop_exclusive": 144,
+        "atom_ids": [
+          10,
+          24,
+          53,
+          56,
+          64,
+          65
+        ]
+      },
+      {
+        "microframe": 2,
+        "control": "A",
+        "local_batch": 2,
+        "tick_start": 144,
+        "tick_stop_exclusive": 216,
+        "atom_ids": [
+          9,
+          18,
+          41,
+          44,
+          66,
+          67
+        ]
+      },
+      {
+        "microframe": 3,
+        "control": "A",
+        "local_batch": 3,
+        "tick_start": 216,
+        "tick_stop_exclusive": 288,
+        "atom_ids": [
+          3,
+          23,
+          43,
+          46,
+          54,
+          55
+        ]
+      },
+      {
+        "microframe": 4,
+        "control": "A",
+        "local_batch": 4,
+        "tick_start": 288,
+        "tick_stop_exclusive": 360,
+        "atom_ids": [
+          5,
+          26,
+          49,
+          52,
+          74,
+          75
+        ]
+      },
+      {
+        "microframe": 5,
+        "control": "A",
+        "local_batch": 5,
+        "tick_start": 360,
+        "tick_stop_exclusive": 432,
+        "atom_ids": [
+          6,
+          20,
+          32,
+          35,
+          73,
+          78
+        ]
+      },
+      {
+        "microframe": 6,
+        "control": "A",
+        "local_batch": 6,
+        "tick_start": 432,
+        "tick_stop_exclusive": 504,
+        "atom_ids": [
+          7,
+          17,
+          29,
+          36,
+          72,
+          77
+        ]
+      },
+      {
+        "microframe": 7,
+        "control": "A",
+        "local_batch": 7,
+        "tick_start": 504,
+        "tick_stop_exclusive": 576,
+        "atom_ids": [
+          2,
+          15,
+          27,
+          30,
+          60,
+          61
+        ]
+      },
+      {
+        "microframe": 8,
+        "control": "A",
+        "local_batch": 8,
+        "tick_start": 576,
+        "tick_stop_exclusive": 648,
+        "atom_ids": [
+          8,
+          31,
+          34,
+          63
+        ]
+      },
+      {
+        "microframe": 9,
+        "control": "A",
+        "local_batch": 9,
+        "tick_start": 648,
+        "tick_stop_exclusive": 720,
+        "atom_ids": [
+          13,
+          19,
+          33,
+          48,
+          76,
+          79
+        ]
+      },
+      {
+        "microframe": 10,
+        "control": "A",
+        "local_batch": 10,
+        "tick_start": 720,
+        "tick_stop_exclusive": 792,
+        "atom_ids": [
+          12,
+          16,
+          28,
+          47,
+          69,
+          80
+        ]
+      },
+      {
+        "microframe": 11,
+        "control": "A",
+        "local_batch": 11,
+        "tick_start": 792,
+        "tick_stop_exclusive": 864,
+        "atom_ids": [
+          1,
+          21,
+          38,
+          39,
+          51,
+          58
+        ]
+      },
+      {
+        "microframe": 12,
+        "control": "A",
+        "local_batch": 12,
+        "tick_start": 864,
+        "tick_stop_exclusive": 936,
+        "atom_ids": [
+          11,
+          25,
+          40,
+          59,
+          71
+        ]
+      },
+      {
+        "microframe": 13,
+        "control": "A",
+        "local_batch": 13,
+        "tick_start": 936,
+        "tick_stop_exclusive": 1008,
+        "atom_ids": [
+          4,
+          14,
+          45,
+          62
+        ]
+      },
+      {
+        "microframe": 14,
+        "control": "A",
+        "local_batch": 14,
+        "tick_start": 1008,
+        "tick_stop_exclusive": 1080,
+        "atom_ids": [
+          68,
+          70
+        ]
+      },
+      {
+        "microframe": 15,
+        "control": "B",
+        "local_batch": 0,
+        "tick_start": 1080,
+        "tick_stop_exclusive": 1152,
+        "atom_ids": [
+          0,
+          22,
+          37,
+          42,
+          50,
+          57
+        ]
+      },
+      {
+        "microframe": 16,
+        "control": "B",
+        "local_batch": 1,
+        "tick_start": 1152,
+        "tick_stop_exclusive": 1224,
+        "atom_ids": [
+          10,
+          24,
+          53,
+          56,
+          64,
+          65
+        ]
+      },
+      {
+        "microframe": 17,
+        "control": "B",
+        "local_batch": 2,
+        "tick_start": 1224,
+        "tick_stop_exclusive": 1296,
+        "atom_ids": [
+          9,
+          18,
+          41,
+          44,
+          66,
+          67
+        ]
+      },
+      {
+        "microframe": 18,
+        "control": "B",
+        "local_batch": 3,
+        "tick_start": 1296,
+        "tick_stop_exclusive": 1368,
+        "atom_ids": [
+          3,
+          23,
+          43,
+          46,
+          54,
+          55
+        ]
+      },
+      {
+        "microframe": 19,
+        "control": "B",
+        "local_batch": 4,
+        "tick_start": 1368,
+        "tick_stop_exclusive": 1440,
+        "atom_ids": [
+          5,
+          26,
+          49,
+          52,
+          74,
+          75
+        ]
+      },
+      {
+        "microframe": 20,
+        "control": "B",
+        "local_batch": 5,
+        "tick_start": 1440,
+        "tick_stop_exclusive": 1512,
+        "atom_ids": [
+          6,
+          20,
+          32,
+          35,
+          73,
+          78
+        ]
+      },
+      {
+        "microframe": 21,
+        "control": "B",
+        "local_batch": 6,
+        "tick_start": 1512,
+        "tick_stop_exclusive": 1584,
+        "atom_ids": [
+          7,
+          17,
+          29,
+          36,
+          72,
+          77
+        ]
+      },
+      {
+        "microframe": 22,
+        "control": "B",
+        "local_batch": 7,
+        "tick_start": 1584,
+        "tick_stop_exclusive": 1656,
+        "atom_ids": [
+          2,
+          15,
+          27,
+          30,
+          60,
+          61
+        ]
+      },
+      {
+        "microframe": 23,
+        "control": "B",
+        "local_batch": 8,
+        "tick_start": 1656,
+        "tick_stop_exclusive": 1728,
+        "atom_ids": [
+          8,
+          31,
+          34,
+          63
+        ]
+      },
+      {
+        "microframe": 24,
+        "control": "B",
+        "local_batch": 9,
+        "tick_start": 1728,
+        "tick_stop_exclusive": 1800,
+        "atom_ids": [
+          13,
+          19,
+          33,
+          48,
+          76,
+          79
+        ]
+      },
+      {
+        "microframe": 25,
+        "control": "B",
+        "local_batch": 10,
+        "tick_start": 1800,
+        "tick_stop_exclusive": 1872,
+        "atom_ids": [
+          12,
+          16,
+          28,
+          47,
+          69,
+          80
+        ]
+      },
+      {
+        "microframe": 26,
+        "control": "B",
+        "local_batch": 11,
+        "tick_start": 1872,
+        "tick_stop_exclusive": 1944,
+        "atom_ids": [
+          1,
+          21,
+          38,
+          39,
+          51,
+          58
+        ]
+      },
+      {
+        "microframe": 27,
+        "control": "B",
+        "local_batch": 12,
+        "tick_start": 1944,
+        "tick_stop_exclusive": 2016,
+        "atom_ids": [
+          11,
+          25,
+          40,
+          59,
+          71
+        ]
+      },
+      {
+        "microframe": 28,
+        "control": "B",
+        "local_batch": 13,
+        "tick_start": 2016,
+        "tick_stop_exclusive": 2088,
+        "atom_ids": [
+          4,
+          14,
+          45,
+          62
+        ]
+      },
+      {
+        "microframe": 29,
+        "control": "B",
+        "local_batch": 14,
+        "tick_start": 2088,
+        "tick_stop_exclusive": 2160,
+        "atom_ids": [
+          68,
+          70
+        ]
+      }
+    ],
+    "A": {
+      "atoms": [
+        {
+          "atom": 32,
+          "row": 32,
+          "e6id": 10,
+          "H27_address": [
+            2,
+            2,
+            0
+          ],
+          "external_trit": 2,
+          "grade1_source": 10,
+          "grade2_source": 245,
+          "grade1_coefficient": 3,
+          "quadrature": "real",
+          "grade2_coefficient": -3
+        },
+        {
+          "atom": 53,
+          "row": 53,
+          "e6id": 17,
+          "H27_address": [
+            1,
+            0,
+            1
+          ],
+          "external_trit": 2,
+          "grade1_source": 11,
+          "grade2_source": 244,
+          "grade1_coefficient": -1,
+          "quadrature": "real",
+          "grade2_coefficient": -1
+        },
+        {
+          "atom": 38,
+          "row": 38,
+          "e6id": 12,
+          "H27_address": [
+            1,
+            1,
+            2
+          ],
+          "external_trit": 2,
+          "grade1_source": 12,
+          "grade2_source": 243,
+          "grade1_coefficient": -2,
+          "quadrature": "real",
+          "grade2_coefficient": 2
+        },
+        {
+          "atom": 26,
+          "row": 26,
+          "e6id": 8,
+          "H27_address": [
+            1,
+            2,
+            1
+          ],
+          "external_trit": 2,
+          "grade1_source": 13,
+          "grade2_source": 242,
+          "grade1_coefficient": 1,
+          "quadrature": "real",
+          "grade2_coefficient": 1
+        },
+        {
+          "atom": 8,
+          "row": 8,
+          "e6id": 2,
+          "H27_address": [
+            0,
+            2,
+            1
+          ],
+          "external_trit": 2,
+          "grade1_source": 14,
+          "grade2_source": 241,
+          "grade1_coefficient": 1,
+          "quadrature": "real",
+          "grade2_coefficient": -1
+        },
+        {
+          "atom": 5,
+          "row": 5,
+          "e6id": 1,
+          "H27_address": [
+            0,
+            1,
+            2
+          ],
+          "external_trit": 2,
+          "grade1_source": 15,
+          "grade2_source": 240,
+          "grade1_coefficient": 2,
+          "quadrature": "real",
+          "grade2_coefficient": -2
+        },
+        {
+          "atom": 14,
+          "row": 14,
+          "e6id": 4,
+          "H27_address": [
+            2,
+            1,
+            0
+          ],
+          "external_trit": 2,
+          "grade1_source": 16,
+          "grade2_source": 239,
+          "grade1_coefficient": 3,
+          "quadrature": "real",
+          "grade2_coefficient": 3
+        },
+        {
+          "atom": 80,
+          "row": 80,
+          "e6id": 26,
+          "H27_address": [
+            2,
+            0,
+            2
+          ],
+          "external_trit": 2,
+          "grade1_source": 17,
+          "grade2_source": 238,
+          "grade1_coefficient": -2,
+          "quadrature": "real",
+          "grade2_coefficient": 2
+        },
+        {
+          "atom": 71,
+          "row": 71,
+          "e6id": 23,
+          "H27_address": [
+            0,
+            1,
+            1
+          ],
+          "external_trit": 2,
+          "grade1_source": 18,
+          "grade2_source": 237,
+          "grade1_coefficient": -1,
+          "quadrature": "real",
+          "grade2_coefficient": -1
+        },
+        {
+          "atom": 62,
+          "row": 62,
+          "e6id": 20,
+          "H27_address": [
+            0,
+            2,
+            2
+          ],
+          "external_trit": 2,
+          "grade1_source": 19,
+          "grade2_source": 236,
+          "grade1_coefficient": 2,
+          "quadrature": "real",
+          "grade2_coefficient": -2
+        },
+        {
+          "atom": 17,
+          "row": 17,
+          "e6id": 5,
+          "H27_address": [
+            2,
+            2,
+            1
+          ],
+          "external_trit": 2,
+          "grade1_source": 22,
+          "grade2_source": 233,
+          "grade1_coefficient": 1,
+          "quadrature": "real",
+          "grade2_coefficient": 1
+        },
+        {
+          "atom": 23,
+          "row": 23,
+          "e6id": 7,
+          "H27_address": [
+            1,
+            1,
+            1
+          ],
+          "external_trit": 2,
+          "grade1_source": 23,
+          "grade2_source": 232,
+          "grade1_coefficient": 1,
+          "quadrature": "real",
+          "grade2_coefficient": -1
+        },
+        {
+          "atom": 59,
+          "row": 59,
+          "e6id": 19,
+          "H27_address": [
+            1,
+            1,
+            0
+          ],
+          "external_trit": 2,
+          "grade1_source": 24,
+          "grade2_source": 231,
+          "grade1_coefficient": -3,
+          "quadrature": "real",
+          "grade2_coefficient": -3
+        },
+        {
+          "atom": 77,
+          "row": 77,
+          "e6id": 25,
+          "H27_address": [
+            2,
+            1,
+            2
+          ],
+          "external_trit": 2,
+          "grade1_source": 25,
+          "grade2_source": 230,
+          "grade1_coefficient": -2,
+          "quadrature": "real",
+          "grade2_coefficient": 2
+        },
+        {
+          "atom": 68,
+          "row": 68,
+          "e6id": 22,
+          "H27_address": [
+            0,
+            0,
+            2
+          ],
+          "external_trit": 2,
+          "grade1_source": 26,
+          "grade2_source": 229,
+          "grade1_coefficient": 2,
+          "quadrature": "real",
+          "grade2_coefficient": 2
+        },
+        {
+          "atom": 65,
+          "row": 65,
+          "e6id": 21,
+          "H27_address": [
+            0,
+            0,
+            1
+          ],
+          "external_trit": 2,
+          "grade1_source": 29,
+          "grade2_source": 226,
+          "grade1_coefficient": -1,
+          "quadrature": "real",
+          "grade2_coefficient": 1
+        },
+        {
+          "atom": 56,
+          "row": 56,
+          "e6id": 18,
+          "H27_address": [
+            1,
+            2,
+            2
+          ],
+          "external_trit": 2,
+          "grade1_source": 30,
+          "grade2_source": 225,
+          "grade1_coefficient": -2,
+          "quadrature": "real",
+          "grade2_coefficient": -2
+        },
+        {
+          "atom": 74,
+          "row": 74,
+          "e6id": 24,
+          "H27_address": [
+            2,
+            2,
+            2
+          ],
+          "external_trit": 2,
+          "grade1_source": 31,
+          "grade2_source": 224,
+          "grade1_coefficient": 2,
+          "quadrature": "real",
+          "grade2_coefficient": -2
+        },
+        {
+          "atom": 41,
+          "row": 41,
+          "e6id": 13,
+          "H27_address": [
+            1,
+            2,
+            0
+          ],
+          "external_trit": 2,
+          "grade1_source": 34,
+          "grade2_source": 221,
+          "grade1_coefficient": 3,
+          "quadrature": "real",
+          "grade2_coefficient": -3
+        },
+        {
+          "atom": 35,
+          "row": 35,
+          "e6id": 11,
+          "H27_address": [
+            1,
+            0,
+            2
+          ],
+          "external_trit": 2,
+          "grade1_source": 35,
+          "grade2_source": 220,
+          "grade1_coefficient": -2,
+          "quadrature": "real",
+          "grade2_coefficient": -2
+        },
+        {
+          "atom": 47,
+          "row": 47,
+          "e6id": 15,
+          "H27_address": [
+            0,
+            1,
+            0
+          ],
+          "external_trit": 2,
+          "grade1_source": 38,
+          "grade2_source": 217,
+          "grade1_coefficient": -3,
+          "quadrature": "real",
+          "grade2_coefficient": 3
+        },
+        {
+          "atom": 50,
+          "row": 50,
+          "e6id": 16,
+          "H27_address": [
+            0,
+            2,
+            0
+          ],
+          "external_trit": 2,
+          "grade1_source": 44,
+          "grade2_source": 211,
+          "grade1_coefficient": 3,
+          "quadrature": "real",
+          "grade2_coefficient": 3
+        },
+        {
+          "atom": 44,
+          "row": 44,
+          "e6id": 14,
+          "H27_address": [
+            1,
+            0,
+            0
+          ],
+          "external_trit": 2,
+          "grade1_source": 45,
+          "grade2_source": 210,
+          "grade1_coefficient": -3,
+          "quadrature": "real",
+          "grade2_coefficient": 3
+        },
+        {
+          "atom": 29,
+          "row": 29,
+          "e6id": 9,
+          "H27_address": [
+            2,
+            1,
+            1
+          ],
+          "external_trit": 2,
+          "grade1_source": 48,
+          "grade2_source": 207,
+          "grade1_coefficient": -1,
+          "quadrature": "real",
+          "grade2_coefficient": -1
+        },
+        {
+          "atom": 11,
+          "row": 11,
+          "e6id": 3,
+          "H27_address": [
+            2,
+            0,
+            1
+          ],
+          "external_trit": 2,
+          "grade1_source": 54,
+          "grade2_source": 201,
+          "grade1_coefficient": 1,
+          "quadrature": "real",
+          "grade2_coefficient": -1
+        },
+        {
+          "atom": 20,
+          "row": 20,
+          "e6id": 6,
+          "H27_address": [
+            2,
+            0,
+            0
+          ],
+          "external_trit": 2,
+          "grade1_source": 64,
+          "grade2_source": 191,
+          "grade1_coefficient": 3,
+          "quadrature": "real",
+          "grade2_coefficient": 3
+        },
+        {
+          "atom": 2,
+          "row": 2,
+          "e6id": 0,
+          "H27_address": [
+            0,
+            0,
+            0
+          ],
+          "external_trit": 2,
+          "grade1_source": 86,
+          "grade2_source": 169,
+          "grade1_coefficient": 3,
+          "quadrature": "real",
+          "grade2_coefficient": -3
+        },
+        {
+          "atom": 31,
+          "row": 31,
+          "e6id": 10,
+          "H27_address": [
+            2,
+            2,
+            0
+          ],
+          "external_trit": 1,
+          "grade1_source": 129,
+          "grade2_source": 126,
+          "grade1_coefficient": 2,
+          "quadrature": "real",
+          "grade2_coefficient": -2
+        },
+        {
+          "atom": 30,
+          "row": 30,
+          "e6id": 10,
+          "H27_address": [
+            2,
+            2,
+            0
+          ],
+          "external_trit": 0,
+          "grade1_source": 130,
+          "grade2_source": 125,
+          "grade1_coefficient": 1,
+          "quadrature": "real",
+          "grade2_coefficient": 1
+        },
+        {
+          "atom": 52,
+          "row": 52,
+          "e6id": 17,
+          "H27_address": [
+            1,
+            0,
+            1
+          ],
+          "external_trit": 1,
+          "grade1_source": 132,
+          "grade2_source": 123,
+          "grade1_coefficient": 3,
+          "quadrature": "real",
+          "grade2_coefficient": 3
+        },
+        {
+          "atom": 51,
+          "row": 51,
+          "e6id": 17,
+          "H27_address": [
+            1,
+            0,
+            1
+          ],
+          "external_trit": 0,
+          "grade1_source": 133,
+          "grade2_source": 122,
+          "grade1_coefficient": 2,
+          "quadrature": "real",
+          "grade2_coefficient": -2
+        },
+        {
+          "atom": 37,
+          "row": 37,
+          "e6id": 12,
+          "H27_address": [
+            1,
+            1,
+            2
+          ],
+          "external_trit": 1,
+          "grade1_source": 136,
+          "grade2_source": 119,
+          "grade1_coefficient": 1,
+          "quadrature": "real",
+          "grade2_coefficient": -1
+        },
+        {
+          "atom": 36,
+          "row": 36,
+          "e6id": 12,
+          "H27_address": [
+            1,
+            1,
+            2
+          ],
+          "external_trit": 0,
+          "grade1_source": 137,
+          "grade2_source": 118,
+          "grade1_coefficient": 3,
+          "quadrature": "real",
+          "grade2_coefficient": 3
+        },
+        {
+          "atom": 25,
+          "row": 25,
+          "e6id": 8,
+          "H27_address": [
+            1,
+            2,
+            1
+          ],
+          "external_trit": 1,
+          "grade1_source": 141,
+          "grade2_source": 114,
+          "grade1_coefficient": 3,
+          "quadrature": "real",
+          "grade2_coefficient": 3
+        },
+        {
+          "atom": 24,
+          "row": 24,
+          "e6id": 8,
+          "H27_address": [
+            1,
+            2,
+            1
+          ],
+          "external_trit": 0,
+          "grade1_source": 142,
+          "grade2_source": 113,
+          "grade1_coefficient": 2,
+          "quadrature": "real",
+          "grade2_coefficient": -2
+        },
+        {
+          "atom": 7,
+          "row": 7,
+          "e6id": 2,
+          "H27_address": [
+            0,
+            2,
+            1
+          ],
+          "external_trit": 1,
+          "grade1_source": 147,
+          "grade2_source": 108,
+          "grade1_coefficient": 3,
+          "quadrature": "real",
+          "grade2_coefficient": -3
+        },
+        {
+          "atom": 6,
+          "row": 6,
+          "e6id": 2,
+          "H27_address": [
+            0,
+            2,
+            1
+          ],
+          "external_trit": 0,
+          "grade1_source": 148,
+          "grade2_source": 107,
+          "grade1_coefficient": 2,
+          "quadrature": "real",
+          "grade2_coefficient": 2
+        },
+        {
+          "atom": 4,
+          "row": 4,
+          "e6id": 1,
+          "H27_address": [
+            0,
+            1,
+            2
+          ],
+          "external_trit": 1,
+          "grade1_source": 153,
+          "grade2_source": 102,
+          "grade1_coefficient": 1,
+          "quadrature": "real",
+          "grade2_coefficient": -1
+        },
+        {
+          "atom": 3,
+          "row": 3,
+          "e6id": 1,
+          "H27_address": [
+            0,
+            1,
+            2
+          ],
+          "external_trit": 0,
+          "grade1_source": 154,
+          "grade2_source": 101,
+          "grade1_coefficient": 3,
+          "quadrature": "real",
+          "grade2_coefficient": 3
+        },
+        {
+          "atom": 13,
+          "row": 13,
+          "e6id": 4,
+          "H27_address": [
+            2,
+            1,
+            0
+          ],
+          "external_trit": 1,
+          "grade1_source": 158,
+          "grade2_source": 97,
+          "grade1_coefficient": 2,
+          "quadrature": "real",
+          "grade2_coefficient": 2
+        },
+        {
+          "atom": 12,
+          "row": 12,
+          "e6id": 4,
+          "H27_address": [
+            2,
+            1,
+            0
+          ],
+          "external_trit": 0,
+          "grade1_source": 159,
+          "grade2_source": 96,
+          "grade1_coefficient": 1,
+          "quadrature": "real",
+          "grade2_coefficient": -1
+        },
+        {
+          "atom": 79,
+          "row": 79,
+          "e6id": 26,
+          "H27_address": [
+            2,
+            0,
+            2
+          ],
+          "external_trit": 1,
+          "grade1_source": 162,
+          "grade2_source": 93,
+          "grade1_coefficient": 1,
+          "quadrature": "real",
+          "grade2_coefficient": -1
+        },
+        {
+          "atom": 78,
+          "row": 78,
+          "e6id": 26,
+          "H27_address": [
+            2,
+            0,
+            2
+          ],
+          "external_trit": 0,
+          "grade1_source": 163,
+          "grade2_source": 92,
+          "grade1_coefficient": 3,
+          "quadrature": "real",
+          "grade2_coefficient": 3
+        },
+        {
+          "atom": 70,
+          "row": 70,
+          "e6id": 23,
+          "H27_address": [
+            0,
+            1,
+            1
+          ],
+          "external_trit": 1,
+          "grade1_source": 165,
+          "grade2_source": 90,
+          "grade1_coefficient": 3,
+          "quadrature": "real",
+          "grade2_coefficient": 3
+        },
+        {
+          "atom": 69,
+          "row": 69,
+          "e6id": 23,
+          "H27_address": [
+            0,
+            1,
+            1
+          ],
+          "external_trit": 0,
+          "grade1_source": 166,
+          "grade2_source": 89,
+          "grade1_coefficient": 2,
+          "quadrature": "real",
+          "grade2_coefficient": -2
+        },
+        {
+          "atom": 61,
+          "row": 61,
+          "e6id": 20,
+          "H27_address": [
+            0,
+            2,
+            2
+          ],
+          "external_trit": 1,
+          "grade1_source": 167,
+          "grade2_source": 88,
+          "grade1_coefficient": 1,
+          "quadrature": "real",
+          "grade2_coefficient": -1
+        },
+        {
+          "atom": 60,
+          "row": 60,
+          "e6id": 20,
+          "H27_address": [
+            0,
+            2,
+            2
+          ],
+          "external_trit": 0,
+          "grade1_source": 168,
+          "grade2_source": 87,
+          "grade1_coefficient": 3,
+          "quadrature": "real",
+          "grade2_coefficient": 3
+        },
+        {
+          "atom": 16,
+          "row": 16,
+          "e6id": 5,
+          "H27_address": [
+            2,
+            2,
+            1
+          ],
+          "external_trit": 1,
+          "grade1_source": 175,
+          "grade2_source": 80,
+          "grade1_coefficient": 3,
+          "quadrature": "real",
+          "grade2_coefficient": 3
+        },
+        {
+          "atom": 15,
+          "row": 15,
+          "e6id": 5,
+          "H27_address": [
+            2,
+            2,
+            1
+          ],
+          "external_trit": 0,
+          "grade1_source": 176,
+          "grade2_source": 79,
+          "grade1_coefficient": 2,
+          "quadrature": "real",
+          "grade2_coefficient": -2
+        },
+        {
+          "atom": 22,
+          "row": 22,
+          "e6id": 7,
+          "H27_address": [
+            1,
+            1,
+            1
+          ],
+          "external_trit": 1,
+          "grade1_source": 180,
+          "grade2_source": 75,
+          "grade1_coefficient": 3,
+          "quadrature": "real",
+          "grade2_coefficient": -3
+        },
+        {
+          "atom": 21,
+          "row": 21,
+          "e6id": 7,
+          "H27_address": [
+            1,
+            1,
+            1
+          ],
+          "external_trit": 0,
+          "grade1_source": 181,
+          "grade2_source": 74,
+          "grade1_coefficient": 2,
+          "quadrature": "real",
+          "grade2_coefficient": 2
+        },
+        {
+          "atom": 58,
+          "row": 58,
+          "e6id": 19,
+          "H27_address": [
+            1,
+            1,
+            0
+          ],
+          "external_trit": 1,
+          "grade1_source": 184,
+          "grade2_source": 71,
+          "grade1_coefficient": 2,
+          "quadrature": "real",
+          "grade2_coefficient": 2
+        },
+        {
+          "atom": 57,
+          "row": 57,
+          "e6id": 19,
+          "H27_address": [
+            1,
+            1,
+            0
+          ],
+          "external_trit": 0,
+          "grade1_source": 185,
+          "grade2_source": 70,
+          "grade1_coefficient": 1,
+          "quadrature": "real",
+          "grade2_coefficient": -1
+        },
+        {
+          "atom": 76,
+          "row": 76,
+          "e6id": 25,
+          "H27_address": [
+            2,
+            1,
+            2
+          ],
+          "external_trit": 1,
+          "grade1_source": 187,
+          "grade2_source": 68,
+          "grade1_coefficient": 1,
+          "quadrature": "real",
+          "grade2_coefficient": -1
+        },
+        {
+          "atom": 75,
+          "row": 75,
+          "e6id": 25,
+          "H27_address": [
+            2,
+            1,
+            2
+          ],
+          "external_trit": 0,
+          "grade1_source": 188,
+          "grade2_source": 67,
+          "grade1_coefficient": 3,
+          "quadrature": "real",
+          "grade2_coefficient": 3
+        },
+        {
+          "atom": 67,
+          "row": 67,
+          "e6id": 22,
+          "H27_address": [
+            0,
+            0,
+            2
+          ],
+          "external_trit": 1,
+          "grade1_source": 189,
+          "grade2_source": 66,
+          "grade1_coefficient": 1,
+          "quadrature": "real",
+          "grade2_coefficient": 1
+        },
+        {
+          "atom": 66,
+          "row": 66,
+          "e6id": 22,
+          "H27_address": [
+            0,
+            0,
+            2
+          ],
+          "external_trit": 0,
+          "grade1_source": 190,
+          "grade2_source": 65,
+          "grade1_coefficient": 3,
+          "quadrature": "real",
+          "grade2_coefficient": -3
+        },
+        {
+          "atom": 64,
+          "row": 64,
+          "e6id": 21,
+          "H27_address": [
+            0,
+            0,
+            1
+          ],
+          "external_trit": 1,
+          "grade1_source": 194,
+          "grade2_source": 61,
+          "grade1_coefficient": 3,
+          "quadrature": "real",
+          "grade2_coefficient": -3
+        },
+        {
+          "atom": 63,
+          "row": 63,
+          "e6id": 21,
+          "H27_address": [
+            0,
+            0,
+            1
+          ],
+          "external_trit": 0,
+          "grade1_source": 195,
+          "grade2_source": 60,
+          "grade1_coefficient": 2,
+          "quadrature": "real",
+          "grade2_coefficient": 2
+        },
+        {
+          "atom": 55,
+          "row": 55,
+          "e6id": 18,
+          "H27_address": [
+            1,
+            2,
+            2
+          ],
+          "external_trit": 1,
+          "grade1_source": 197,
+          "grade2_source": 58,
+          "grade1_coefficient": 1,
+          "quadrature": "real",
+          "grade2_coefficient": 1
+        },
+        {
+          "atom": 54,
+          "row": 54,
+          "e6id": 18,
+          "H27_address": [
+            1,
+            2,
+            2
+          ],
+          "external_trit": 0,
+          "grade1_source": 198,
+          "grade2_source": 57,
+          "grade1_coefficient": 3,
+          "quadrature": "real",
+          "grade2_coefficient": -3
+        },
+        {
+          "atom": 73,
+          "row": 73,
+          "e6id": 24,
+          "H27_address": [
+            2,
+            2,
+            2
+          ],
+          "external_trit": 1,
+          "grade1_source": 199,
+          "grade2_source": 56,
+          "grade1_coefficient": 1,
+          "quadrature": "real",
+          "grade2_coefficient": -1
+        },
+        {
+          "atom": 72,
+          "row": 72,
+          "e6id": 24,
+          "H27_address": [
+            2,
+            2,
+            2
+          ],
+          "external_trit": 0,
+          "grade1_source": 200,
+          "grade2_source": 55,
+          "grade1_coefficient": 3,
+          "quadrature": "real",
+          "grade2_coefficient": 3
+        },
+        {
+          "atom": 40,
+          "row": 40,
+          "e6id": 13,
+          "H27_address": [
+            1,
+            2,
+            0
+          ],
+          "external_trit": 1,
+          "grade1_source": 203,
+          "grade2_source": 52,
+          "grade1_coefficient": 2,
+          "quadrature": "real",
+          "grade2_coefficient": -2
+        },
+        {
+          "atom": 39,
+          "row": 39,
+          "e6id": 13,
+          "H27_address": [
+            1,
+            2,
+            0
+          ],
+          "external_trit": 0,
+          "grade1_source": 204,
+          "grade2_source": 51,
+          "grade1_coefficient": 1,
+          "quadrature": "real",
+          "grade2_coefficient": 1
+        },
+        {
+          "atom": 34,
+          "row": 34,
+          "e6id": 11,
+          "H27_address": [
+            1,
+            0,
+            2
+          ],
+          "external_trit": 1,
+          "grade1_source": 205,
+          "grade2_source": 50,
+          "grade1_coefficient": 1,
+          "quadrature": "real",
+          "grade2_coefficient": 1
+        },
+        {
+          "atom": 33,
+          "row": 33,
+          "e6id": 11,
+          "H27_address": [
+            1,
+            0,
+            2
+          ],
+          "external_trit": 0,
+          "grade1_source": 206,
+          "grade2_source": 49,
+          "grade1_coefficient": 3,
+          "quadrature": "real",
+          "grade2_coefficient": -3
+        },
+        {
+          "atom": 46,
+          "row": 46,
+          "e6id": 15,
+          "H27_address": [
+            0,
+            1,
+            0
+          ],
+          "external_trit": 1,
+          "grade1_source": 208,
+          "grade2_source": 47,
+          "grade1_coefficient": 2,
+          "quadrature": "real",
+          "grade2_coefficient": -2
+        },
+        {
+          "atom": 45,
+          "row": 45,
+          "e6id": 15,
+          "H27_address": [
+            0,
+            1,
+            0
+          ],
+          "external_trit": 0,
+          "grade1_source": 209,
+          "grade2_source": 46,
+          "grade1_coefficient": 1,
+          "quadrature": "real",
+          "grade2_coefficient": 1
+        },
+        {
+          "atom": 49,
+          "row": 49,
+          "e6id": 16,
+          "H27_address": [
+            0,
+            2,
+            0
+          ],
+          "external_trit": 1,
+          "grade1_source": 213,
+          "grade2_source": 42,
+          "grade1_coefficient": 2,
+          "quadrature": "real",
+          "grade2_coefficient": 2
+        },
+        {
+          "atom": 48,
+          "row": 48,
+          "e6id": 16,
+          "H27_address": [
+            0,
+            2,
+            0
+          ],
+          "external_trit": 0,
+          "grade1_source": 214,
+          "grade2_source": 41,
+          "grade1_coefficient": 1,
+          "quadrature": "real",
+          "grade2_coefficient": -1
+        },
+        {
+          "atom": 43,
+          "row": 43,
+          "e6id": 14,
+          "H27_address": [
+            1,
+            0,
+            0
+          ],
+          "external_trit": 1,
+          "grade1_source": 215,
+          "grade2_source": 40,
+          "grade1_coefficient": 2,
+          "quadrature": "real",
+          "grade2_coefficient": -2
+        },
+        {
+          "atom": 42,
+          "row": 42,
+          "e6id": 14,
+          "H27_address": [
+            1,
+            0,
+            0
+          ],
+          "external_trit": 0,
+          "grade1_source": 216,
+          "grade2_source": 39,
+          "grade1_coefficient": 1,
+          "quadrature": "real",
+          "grade2_coefficient": 1
+        },
+        {
+          "atom": 28,
+          "row": 28,
+          "e6id": 9,
+          "H27_address": [
+            2,
+            1,
+            1
+          ],
+          "external_trit": 1,
+          "grade1_source": 218,
+          "grade2_source": 37,
+          "grade1_coefficient": 3,
+          "quadrature": "real",
+          "grade2_coefficient": 3
+        },
+        {
+          "atom": 27,
+          "row": 27,
+          "e6id": 9,
+          "H27_address": [
+            2,
+            1,
+            1
+          ],
+          "external_trit": 0,
+          "grade1_source": 219,
+          "grade2_source": 36,
+          "grade1_coefficient": 2,
+          "quadrature": "real",
+          "grade2_coefficient": -2
+        },
+        {
+          "atom": 10,
+          "row": 10,
+          "e6id": 3,
+          "H27_address": [
+            2,
+            0,
+            1
+          ],
+          "external_trit": 1,
+          "grade1_source": 222,
+          "grade2_source": 33,
+          "grade1_coefficient": 3,
+          "quadrature": "real",
+          "grade2_coefficient": -3
+        },
+        {
+          "atom": 9,
+          "row": 9,
+          "e6id": 3,
+          "H27_address": [
+            2,
+            0,
+            1
+          ],
+          "external_trit": 0,
+          "grade1_source": 223,
+          "grade2_source": 32,
+          "grade1_coefficient": 2,
+          "quadrature": "real",
+          "grade2_coefficient": 2
+        },
+        {
+          "atom": 19,
+          "row": 19,
+          "e6id": 6,
+          "H27_address": [
+            2,
+            0,
+            0
+          ],
+          "external_trit": 1,
+          "grade1_source": 227,
+          "grade2_source": 28,
+          "grade1_coefficient": 2,
+          "quadrature": "real",
+          "grade2_coefficient": 2
+        },
+        {
+          "atom": 18,
+          "row": 18,
+          "e6id": 6,
+          "H27_address": [
+            2,
+            0,
+            0
+          ],
+          "external_trit": 0,
+          "grade1_source": 228,
+          "grade2_source": 27,
+          "grade1_coefficient": 1,
+          "quadrature": "real",
+          "grade2_coefficient": -1
+        },
+        {
+          "atom": 1,
+          "row": 1,
+          "e6id": 0,
+          "H27_address": [
+            0,
+            0,
+            0
+          ],
+          "external_trit": 1,
+          "grade1_source": 234,
+          "grade2_source": 21,
+          "grade1_coefficient": 2,
+          "quadrature": "real",
+          "grade2_coefficient": -2
+        },
+        {
+          "atom": 0,
+          "row": 0,
+          "e6id": 0,
+          "H27_address": [
+            0,
+            0,
+            0
+          ],
+          "external_trit": 0,
+          "grade1_source": 235,
+          "grade2_source": 20,
+          "grade1_coefficient": 1,
+          "quadrature": "real",
+          "grade2_coefficient": 1
+        }
+      ],
+      "conflict_edges": 1539,
+      "exact_clique_lower_bound": 7,
+      "commuting_batch_upper_bound": 15,
+      "chromatic_interval": [
+        7,
+        15
+      ],
+      "batch_sizes": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        4,
+        6,
+        6,
+        6,
+        5,
+        4,
+        2
+      ],
+      "batches": [
+        {
+          "local_batch": 0,
+          "atom_ids": [
+            0,
+            22,
+            37,
+            42,
+            50,
+            57
+          ],
+          "atom_count": 6,
+          "all_atoms_commute_exactly": true,
+          "all_atoms_compact_fixed": true
+        },
+        {
+          "local_batch": 1,
+          "atom_ids": [
+            10,
+            24,
+            53,
+            56,
+            64,
+            65
+          ],
+          "atom_count": 6,
+          "all_atoms_commute_exactly": true,
+          "all_atoms_compact_fixed": true
+        },
+        {
+          "local_batch": 2,
+          "atom_ids": [
+            9,
+            18,
+            41,
+            44,
+            66,
+            67
+          ],
+          "atom_count": 6,
+          "all_atoms_commute_exactly": true,
+          "all_atoms_compact_fixed": true
+        },
+        {
+          "local_batch": 3,
+          "atom_ids": [
+            3,
+            23,
+            43,
+            46,
+            54,
+            55
+          ],
+          "atom_count": 6,
+          "all_atoms_commute_exactly": true,
+          "all_atoms_compact_fixed": true
+        },
+        {
+          "local_batch": 4,
+          "atom_ids": [
+            5,
+            26,
+            49,
+            52,
+            74,
+            75
+          ],
+          "atom_count": 6,
+          "all_atoms_commute_exactly": true,
+          "all_atoms_compact_fixed": true
+        },
+        {
+          "local_batch": 5,
+          "atom_ids": [
+            6,
+            20,
+            32,
+            35,
+            73,
+            78
+          ],
+          "atom_count": 6,
+          "all_atoms_commute_exactly": true,
+          "all_atoms_compact_fixed": true
+        },
+        {
+          "local_batch": 6,
+          "atom_ids": [
+            7,
+            17,
+            29,
+            36,
+            72,
+            77
+          ],
+          "atom_count": 6,
+          "all_atoms_commute_exactly": true,
+          "all_atoms_compact_fixed": true
+        },
+        {
+          "local_batch": 7,
+          "atom_ids": [
+            2,
+            15,
+            27,
+            30,
+            60,
+            61
+          ],
+          "atom_count": 6,
+          "all_atoms_commute_exactly": true,
+          "all_atoms_compact_fixed": true
+        },
+        {
+          "local_batch": 8,
+          "atom_ids": [
+            8,
+            31,
+            34,
+            63
+          ],
+          "atom_count": 4,
+          "all_atoms_commute_exactly": true,
+          "all_atoms_compact_fixed": true
+        },
+        {
+          "local_batch": 9,
+          "atom_ids": [
+            13,
+            19,
+            33,
+            48,
+            76,
+            79
+          ],
+          "atom_count": 6,
+          "all_atoms_commute_exactly": true,
+          "all_atoms_compact_fixed": true
+        },
+        {
+          "local_batch": 10,
+          "atom_ids": [
+            12,
+            16,
+            28,
+            47,
+            69,
+            80
+          ],
+          "atom_count": 6,
+          "all_atoms_commute_exactly": true,
+          "all_atoms_compact_fixed": true
+        },
+        {
+          "local_batch": 11,
+          "atom_ids": [
+            1,
+            21,
+            38,
+            39,
+            51,
+            58
+          ],
+          "atom_count": 6,
+          "all_atoms_commute_exactly": true,
+          "all_atoms_compact_fixed": true
+        },
+        {
+          "local_batch": 12,
+          "atom_ids": [
+            11,
+            25,
+            40,
+            59,
+            71
+          ],
+          "atom_count": 5,
+          "all_atoms_commute_exactly": true,
+          "all_atoms_compact_fixed": true
+        },
+        {
+          "local_batch": 13,
+          "atom_ids": [
+            4,
+            14,
+            45,
+            62
+          ],
+          "atom_count": 4,
+          "all_atoms_commute_exactly": true,
+          "all_atoms_compact_fixed": true
+        },
+        {
+          "local_batch": 14,
+          "atom_ids": [
+            68,
+            70
+          ],
+          "atom_count": 2,
+          "all_atoms_commute_exactly": true,
+          "all_atoms_compact_fixed": true
+        }
+      ]
+    },
+    "B": {
+      "atoms": [
+        {
+          "atom": 32,
+          "row": 32,
+          "e6id": 10,
+          "H27_address": [
+            2,
+            2,
+            0
+          ],
+          "external_trit": 2,
+          "grade1_source": 10,
+          "grade2_source": 245,
+          "grade1_coefficient": 3,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 3
+        },
+        {
+          "atom": 53,
+          "row": 53,
+          "e6id": 17,
+          "H27_address": [
+            1,
+            0,
+            1
+          ],
+          "external_trit": 2,
+          "grade1_source": 11,
+          "grade2_source": 244,
+          "grade1_coefficient": -1,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 1
+        },
+        {
+          "atom": 38,
+          "row": 38,
+          "e6id": 12,
+          "H27_address": [
+            1,
+            1,
+            2
+          ],
+          "external_trit": 2,
+          "grade1_source": 12,
+          "grade2_source": 243,
+          "grade1_coefficient": -2,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -2
+        },
+        {
+          "atom": 26,
+          "row": 26,
+          "e6id": 8,
+          "H27_address": [
+            1,
+            2,
+            1
+          ],
+          "external_trit": 2,
+          "grade1_source": 13,
+          "grade2_source": 242,
+          "grade1_coefficient": 1,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -1
+        },
+        {
+          "atom": 8,
+          "row": 8,
+          "e6id": 2,
+          "H27_address": [
+            0,
+            2,
+            1
+          ],
+          "external_trit": 2,
+          "grade1_source": 14,
+          "grade2_source": 241,
+          "grade1_coefficient": 1,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 1
+        },
+        {
+          "atom": 5,
+          "row": 5,
+          "e6id": 1,
+          "H27_address": [
+            0,
+            1,
+            2
+          ],
+          "external_trit": 2,
+          "grade1_source": 15,
+          "grade2_source": 240,
+          "grade1_coefficient": 2,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 2
+        },
+        {
+          "atom": 14,
+          "row": 14,
+          "e6id": 4,
+          "H27_address": [
+            2,
+            1,
+            0
+          ],
+          "external_trit": 2,
+          "grade1_source": 16,
+          "grade2_source": 239,
+          "grade1_coefficient": 3,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -3
+        },
+        {
+          "atom": 80,
+          "row": 80,
+          "e6id": 26,
+          "H27_address": [
+            2,
+            0,
+            2
+          ],
+          "external_trit": 2,
+          "grade1_source": 17,
+          "grade2_source": 238,
+          "grade1_coefficient": -2,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -2
+        },
+        {
+          "atom": 71,
+          "row": 71,
+          "e6id": 23,
+          "H27_address": [
+            0,
+            1,
+            1
+          ],
+          "external_trit": 2,
+          "grade1_source": 18,
+          "grade2_source": 237,
+          "grade1_coefficient": -1,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 1
+        },
+        {
+          "atom": 62,
+          "row": 62,
+          "e6id": 20,
+          "H27_address": [
+            0,
+            2,
+            2
+          ],
+          "external_trit": 2,
+          "grade1_source": 19,
+          "grade2_source": 236,
+          "grade1_coefficient": 2,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 2
+        },
+        {
+          "atom": 17,
+          "row": 17,
+          "e6id": 5,
+          "H27_address": [
+            2,
+            2,
+            1
+          ],
+          "external_trit": 2,
+          "grade1_source": 22,
+          "grade2_source": 233,
+          "grade1_coefficient": 1,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -1
+        },
+        {
+          "atom": 23,
+          "row": 23,
+          "e6id": 7,
+          "H27_address": [
+            1,
+            1,
+            1
+          ],
+          "external_trit": 2,
+          "grade1_source": 23,
+          "grade2_source": 232,
+          "grade1_coefficient": 1,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 1
+        },
+        {
+          "atom": 59,
+          "row": 59,
+          "e6id": 19,
+          "H27_address": [
+            1,
+            1,
+            0
+          ],
+          "external_trit": 2,
+          "grade1_source": 24,
+          "grade2_source": 231,
+          "grade1_coefficient": -3,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 3
+        },
+        {
+          "atom": 77,
+          "row": 77,
+          "e6id": 25,
+          "H27_address": [
+            2,
+            1,
+            2
+          ],
+          "external_trit": 2,
+          "grade1_source": 25,
+          "grade2_source": 230,
+          "grade1_coefficient": -2,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -2
+        },
+        {
+          "atom": 68,
+          "row": 68,
+          "e6id": 22,
+          "H27_address": [
+            0,
+            0,
+            2
+          ],
+          "external_trit": 2,
+          "grade1_source": 26,
+          "grade2_source": 229,
+          "grade1_coefficient": 2,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -2
+        },
+        {
+          "atom": 65,
+          "row": 65,
+          "e6id": 21,
+          "H27_address": [
+            0,
+            0,
+            1
+          ],
+          "external_trit": 2,
+          "grade1_source": 29,
+          "grade2_source": 226,
+          "grade1_coefficient": -1,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -1
+        },
+        {
+          "atom": 56,
+          "row": 56,
+          "e6id": 18,
+          "H27_address": [
+            1,
+            2,
+            2
+          ],
+          "external_trit": 2,
+          "grade1_source": 30,
+          "grade2_source": 225,
+          "grade1_coefficient": -2,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 2
+        },
+        {
+          "atom": 74,
+          "row": 74,
+          "e6id": 24,
+          "H27_address": [
+            2,
+            2,
+            2
+          ],
+          "external_trit": 2,
+          "grade1_source": 31,
+          "grade2_source": 224,
+          "grade1_coefficient": 2,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 2
+        },
+        {
+          "atom": 41,
+          "row": 41,
+          "e6id": 13,
+          "H27_address": [
+            1,
+            2,
+            0
+          ],
+          "external_trit": 2,
+          "grade1_source": 34,
+          "grade2_source": 221,
+          "grade1_coefficient": 3,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 3
+        },
+        {
+          "atom": 35,
+          "row": 35,
+          "e6id": 11,
+          "H27_address": [
+            1,
+            0,
+            2
+          ],
+          "external_trit": 2,
+          "grade1_source": 35,
+          "grade2_source": 220,
+          "grade1_coefficient": -2,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 2
+        },
+        {
+          "atom": 47,
+          "row": 47,
+          "e6id": 15,
+          "H27_address": [
+            0,
+            1,
+            0
+          ],
+          "external_trit": 2,
+          "grade1_source": 38,
+          "grade2_source": 217,
+          "grade1_coefficient": -3,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -3
+        },
+        {
+          "atom": 50,
+          "row": 50,
+          "e6id": 16,
+          "H27_address": [
+            0,
+            2,
+            0
+          ],
+          "external_trit": 2,
+          "grade1_source": 44,
+          "grade2_source": 211,
+          "grade1_coefficient": 3,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -3
+        },
+        {
+          "atom": 44,
+          "row": 44,
+          "e6id": 14,
+          "H27_address": [
+            1,
+            0,
+            0
+          ],
+          "external_trit": 2,
+          "grade1_source": 45,
+          "grade2_source": 210,
+          "grade1_coefficient": -3,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -3
+        },
+        {
+          "atom": 29,
+          "row": 29,
+          "e6id": 9,
+          "H27_address": [
+            2,
+            1,
+            1
+          ],
+          "external_trit": 2,
+          "grade1_source": 48,
+          "grade2_source": 207,
+          "grade1_coefficient": -1,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 1
+        },
+        {
+          "atom": 11,
+          "row": 11,
+          "e6id": 3,
+          "H27_address": [
+            2,
+            0,
+            1
+          ],
+          "external_trit": 2,
+          "grade1_source": 54,
+          "grade2_source": 201,
+          "grade1_coefficient": 1,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 1
+        },
+        {
+          "atom": 20,
+          "row": 20,
+          "e6id": 6,
+          "H27_address": [
+            2,
+            0,
+            0
+          ],
+          "external_trit": 2,
+          "grade1_source": 64,
+          "grade2_source": 191,
+          "grade1_coefficient": 3,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -3
+        },
+        {
+          "atom": 2,
+          "row": 2,
+          "e6id": 0,
+          "H27_address": [
+            0,
+            0,
+            0
+          ],
+          "external_trit": 2,
+          "grade1_source": 86,
+          "grade2_source": 169,
+          "grade1_coefficient": 3,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 3
+        },
+        {
+          "atom": 31,
+          "row": 31,
+          "e6id": 10,
+          "H27_address": [
+            2,
+            2,
+            0
+          ],
+          "external_trit": 1,
+          "grade1_source": 129,
+          "grade2_source": 126,
+          "grade1_coefficient": 2,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 2
+        },
+        {
+          "atom": 30,
+          "row": 30,
+          "e6id": 10,
+          "H27_address": [
+            2,
+            2,
+            0
+          ],
+          "external_trit": 0,
+          "grade1_source": 130,
+          "grade2_source": 125,
+          "grade1_coefficient": 1,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -1
+        },
+        {
+          "atom": 52,
+          "row": 52,
+          "e6id": 17,
+          "H27_address": [
+            1,
+            0,
+            1
+          ],
+          "external_trit": 1,
+          "grade1_source": 132,
+          "grade2_source": 123,
+          "grade1_coefficient": 3,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -3
+        },
+        {
+          "atom": 51,
+          "row": 51,
+          "e6id": 17,
+          "H27_address": [
+            1,
+            0,
+            1
+          ],
+          "external_trit": 0,
+          "grade1_source": 133,
+          "grade2_source": 122,
+          "grade1_coefficient": 2,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 2
+        },
+        {
+          "atom": 37,
+          "row": 37,
+          "e6id": 12,
+          "H27_address": [
+            1,
+            1,
+            2
+          ],
+          "external_trit": 1,
+          "grade1_source": 136,
+          "grade2_source": 119,
+          "grade1_coefficient": 1,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 1
+        },
+        {
+          "atom": 36,
+          "row": 36,
+          "e6id": 12,
+          "H27_address": [
+            1,
+            1,
+            2
+          ],
+          "external_trit": 0,
+          "grade1_source": 137,
+          "grade2_source": 118,
+          "grade1_coefficient": 3,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -3
+        },
+        {
+          "atom": 25,
+          "row": 25,
+          "e6id": 8,
+          "H27_address": [
+            1,
+            2,
+            1
+          ],
+          "external_trit": 1,
+          "grade1_source": 141,
+          "grade2_source": 114,
+          "grade1_coefficient": 3,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -3
+        },
+        {
+          "atom": 24,
+          "row": 24,
+          "e6id": 8,
+          "H27_address": [
+            1,
+            2,
+            1
+          ],
+          "external_trit": 0,
+          "grade1_source": 142,
+          "grade2_source": 113,
+          "grade1_coefficient": 2,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 2
+        },
+        {
+          "atom": 7,
+          "row": 7,
+          "e6id": 2,
+          "H27_address": [
+            0,
+            2,
+            1
+          ],
+          "external_trit": 1,
+          "grade1_source": 147,
+          "grade2_source": 108,
+          "grade1_coefficient": 3,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 3
+        },
+        {
+          "atom": 6,
+          "row": 6,
+          "e6id": 2,
+          "H27_address": [
+            0,
+            2,
+            1
+          ],
+          "external_trit": 0,
+          "grade1_source": 148,
+          "grade2_source": 107,
+          "grade1_coefficient": 2,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -2
+        },
+        {
+          "atom": 4,
+          "row": 4,
+          "e6id": 1,
+          "H27_address": [
+            0,
+            1,
+            2
+          ],
+          "external_trit": 1,
+          "grade1_source": 153,
+          "grade2_source": 102,
+          "grade1_coefficient": 1,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 1
+        },
+        {
+          "atom": 3,
+          "row": 3,
+          "e6id": 1,
+          "H27_address": [
+            0,
+            1,
+            2
+          ],
+          "external_trit": 0,
+          "grade1_source": 154,
+          "grade2_source": 101,
+          "grade1_coefficient": 3,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -3
+        },
+        {
+          "atom": 13,
+          "row": 13,
+          "e6id": 4,
+          "H27_address": [
+            2,
+            1,
+            0
+          ],
+          "external_trit": 1,
+          "grade1_source": 158,
+          "grade2_source": 97,
+          "grade1_coefficient": 2,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -2
+        },
+        {
+          "atom": 12,
+          "row": 12,
+          "e6id": 4,
+          "H27_address": [
+            2,
+            1,
+            0
+          ],
+          "external_trit": 0,
+          "grade1_source": 159,
+          "grade2_source": 96,
+          "grade1_coefficient": 1,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 1
+        },
+        {
+          "atom": 79,
+          "row": 79,
+          "e6id": 26,
+          "H27_address": [
+            2,
+            0,
+            2
+          ],
+          "external_trit": 1,
+          "grade1_source": 162,
+          "grade2_source": 93,
+          "grade1_coefficient": 1,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 1
+        },
+        {
+          "atom": 78,
+          "row": 78,
+          "e6id": 26,
+          "H27_address": [
+            2,
+            0,
+            2
+          ],
+          "external_trit": 0,
+          "grade1_source": 163,
+          "grade2_source": 92,
+          "grade1_coefficient": 3,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -3
+        },
+        {
+          "atom": 70,
+          "row": 70,
+          "e6id": 23,
+          "H27_address": [
+            0,
+            1,
+            1
+          ],
+          "external_trit": 1,
+          "grade1_source": 165,
+          "grade2_source": 90,
+          "grade1_coefficient": 3,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -3
+        },
+        {
+          "atom": 69,
+          "row": 69,
+          "e6id": 23,
+          "H27_address": [
+            0,
+            1,
+            1
+          ],
+          "external_trit": 0,
+          "grade1_source": 166,
+          "grade2_source": 89,
+          "grade1_coefficient": 2,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 2
+        },
+        {
+          "atom": 61,
+          "row": 61,
+          "e6id": 20,
+          "H27_address": [
+            0,
+            2,
+            2
+          ],
+          "external_trit": 1,
+          "grade1_source": 167,
+          "grade2_source": 88,
+          "grade1_coefficient": 1,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 1
+        },
+        {
+          "atom": 60,
+          "row": 60,
+          "e6id": 20,
+          "H27_address": [
+            0,
+            2,
+            2
+          ],
+          "external_trit": 0,
+          "grade1_source": 168,
+          "grade2_source": 87,
+          "grade1_coefficient": 3,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -3
+        },
+        {
+          "atom": 16,
+          "row": 16,
+          "e6id": 5,
+          "H27_address": [
+            2,
+            2,
+            1
+          ],
+          "external_trit": 1,
+          "grade1_source": 175,
+          "grade2_source": 80,
+          "grade1_coefficient": 3,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -3
+        },
+        {
+          "atom": 15,
+          "row": 15,
+          "e6id": 5,
+          "H27_address": [
+            2,
+            2,
+            1
+          ],
+          "external_trit": 0,
+          "grade1_source": 176,
+          "grade2_source": 79,
+          "grade1_coefficient": 2,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 2
+        },
+        {
+          "atom": 22,
+          "row": 22,
+          "e6id": 7,
+          "H27_address": [
+            1,
+            1,
+            1
+          ],
+          "external_trit": 1,
+          "grade1_source": 180,
+          "grade2_source": 75,
+          "grade1_coefficient": 3,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 3
+        },
+        {
+          "atom": 21,
+          "row": 21,
+          "e6id": 7,
+          "H27_address": [
+            1,
+            1,
+            1
+          ],
+          "external_trit": 0,
+          "grade1_source": 181,
+          "grade2_source": 74,
+          "grade1_coefficient": 2,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -2
+        },
+        {
+          "atom": 58,
+          "row": 58,
+          "e6id": 19,
+          "H27_address": [
+            1,
+            1,
+            0
+          ],
+          "external_trit": 1,
+          "grade1_source": 184,
+          "grade2_source": 71,
+          "grade1_coefficient": 2,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -2
+        },
+        {
+          "atom": 57,
+          "row": 57,
+          "e6id": 19,
+          "H27_address": [
+            1,
+            1,
+            0
+          ],
+          "external_trit": 0,
+          "grade1_source": 185,
+          "grade2_source": 70,
+          "grade1_coefficient": 1,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 1
+        },
+        {
+          "atom": 76,
+          "row": 76,
+          "e6id": 25,
+          "H27_address": [
+            2,
+            1,
+            2
+          ],
+          "external_trit": 1,
+          "grade1_source": 187,
+          "grade2_source": 68,
+          "grade1_coefficient": 1,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 1
+        },
+        {
+          "atom": 75,
+          "row": 75,
+          "e6id": 25,
+          "H27_address": [
+            2,
+            1,
+            2
+          ],
+          "external_trit": 0,
+          "grade1_source": 188,
+          "grade2_source": 67,
+          "grade1_coefficient": 3,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -3
+        },
+        {
+          "atom": 67,
+          "row": 67,
+          "e6id": 22,
+          "H27_address": [
+            0,
+            0,
+            2
+          ],
+          "external_trit": 1,
+          "grade1_source": 189,
+          "grade2_source": 66,
+          "grade1_coefficient": 1,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -1
+        },
+        {
+          "atom": 66,
+          "row": 66,
+          "e6id": 22,
+          "H27_address": [
+            0,
+            0,
+            2
+          ],
+          "external_trit": 0,
+          "grade1_source": 190,
+          "grade2_source": 65,
+          "grade1_coefficient": 3,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 3
+        },
+        {
+          "atom": 64,
+          "row": 64,
+          "e6id": 21,
+          "H27_address": [
+            0,
+            0,
+            1
+          ],
+          "external_trit": 1,
+          "grade1_source": 194,
+          "grade2_source": 61,
+          "grade1_coefficient": 3,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 3
+        },
+        {
+          "atom": 63,
+          "row": 63,
+          "e6id": 21,
+          "H27_address": [
+            0,
+            0,
+            1
+          ],
+          "external_trit": 0,
+          "grade1_source": 195,
+          "grade2_source": 60,
+          "grade1_coefficient": 2,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -2
+        },
+        {
+          "atom": 55,
+          "row": 55,
+          "e6id": 18,
+          "H27_address": [
+            1,
+            2,
+            2
+          ],
+          "external_trit": 1,
+          "grade1_source": 197,
+          "grade2_source": 58,
+          "grade1_coefficient": 1,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -1
+        },
+        {
+          "atom": 54,
+          "row": 54,
+          "e6id": 18,
+          "H27_address": [
+            1,
+            2,
+            2
+          ],
+          "external_trit": 0,
+          "grade1_source": 198,
+          "grade2_source": 57,
+          "grade1_coefficient": 3,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 3
+        },
+        {
+          "atom": 73,
+          "row": 73,
+          "e6id": 24,
+          "H27_address": [
+            2,
+            2,
+            2
+          ],
+          "external_trit": 1,
+          "grade1_source": 199,
+          "grade2_source": 56,
+          "grade1_coefficient": 1,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 1
+        },
+        {
+          "atom": 72,
+          "row": 72,
+          "e6id": 24,
+          "H27_address": [
+            2,
+            2,
+            2
+          ],
+          "external_trit": 0,
+          "grade1_source": 200,
+          "grade2_source": 55,
+          "grade1_coefficient": 3,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -3
+        },
+        {
+          "atom": 40,
+          "row": 40,
+          "e6id": 13,
+          "H27_address": [
+            1,
+            2,
+            0
+          ],
+          "external_trit": 1,
+          "grade1_source": 203,
+          "grade2_source": 52,
+          "grade1_coefficient": 2,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 2
+        },
+        {
+          "atom": 39,
+          "row": 39,
+          "e6id": 13,
+          "H27_address": [
+            1,
+            2,
+            0
+          ],
+          "external_trit": 0,
+          "grade1_source": 204,
+          "grade2_source": 51,
+          "grade1_coefficient": 1,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -1
+        },
+        {
+          "atom": 34,
+          "row": 34,
+          "e6id": 11,
+          "H27_address": [
+            1,
+            0,
+            2
+          ],
+          "external_trit": 1,
+          "grade1_source": 205,
+          "grade2_source": 50,
+          "grade1_coefficient": 1,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -1
+        },
+        {
+          "atom": 33,
+          "row": 33,
+          "e6id": 11,
+          "H27_address": [
+            1,
+            0,
+            2
+          ],
+          "external_trit": 0,
+          "grade1_source": 206,
+          "grade2_source": 49,
+          "grade1_coefficient": 3,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 3
+        },
+        {
+          "atom": 46,
+          "row": 46,
+          "e6id": 15,
+          "H27_address": [
+            0,
+            1,
+            0
+          ],
+          "external_trit": 1,
+          "grade1_source": 208,
+          "grade2_source": 47,
+          "grade1_coefficient": 2,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 2
+        },
+        {
+          "atom": 45,
+          "row": 45,
+          "e6id": 15,
+          "H27_address": [
+            0,
+            1,
+            0
+          ],
+          "external_trit": 0,
+          "grade1_source": 209,
+          "grade2_source": 46,
+          "grade1_coefficient": 1,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -1
+        },
+        {
+          "atom": 49,
+          "row": 49,
+          "e6id": 16,
+          "H27_address": [
+            0,
+            2,
+            0
+          ],
+          "external_trit": 1,
+          "grade1_source": 213,
+          "grade2_source": 42,
+          "grade1_coefficient": 2,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -2
+        },
+        {
+          "atom": 48,
+          "row": 48,
+          "e6id": 16,
+          "H27_address": [
+            0,
+            2,
+            0
+          ],
+          "external_trit": 0,
+          "grade1_source": 214,
+          "grade2_source": 41,
+          "grade1_coefficient": 1,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 1
+        },
+        {
+          "atom": 43,
+          "row": 43,
+          "e6id": 14,
+          "H27_address": [
+            1,
+            0,
+            0
+          ],
+          "external_trit": 1,
+          "grade1_source": 215,
+          "grade2_source": 40,
+          "grade1_coefficient": 2,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 2
+        },
+        {
+          "atom": 42,
+          "row": 42,
+          "e6id": 14,
+          "H27_address": [
+            1,
+            0,
+            0
+          ],
+          "external_trit": 0,
+          "grade1_source": 216,
+          "grade2_source": 39,
+          "grade1_coefficient": 1,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -1
+        },
+        {
+          "atom": 28,
+          "row": 28,
+          "e6id": 9,
+          "H27_address": [
+            2,
+            1,
+            1
+          ],
+          "external_trit": 1,
+          "grade1_source": 218,
+          "grade2_source": 37,
+          "grade1_coefficient": 3,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -3
+        },
+        {
+          "atom": 27,
+          "row": 27,
+          "e6id": 9,
+          "H27_address": [
+            2,
+            1,
+            1
+          ],
+          "external_trit": 0,
+          "grade1_source": 219,
+          "grade2_source": 36,
+          "grade1_coefficient": 2,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 2
+        },
+        {
+          "atom": 10,
+          "row": 10,
+          "e6id": 3,
+          "H27_address": [
+            2,
+            0,
+            1
+          ],
+          "external_trit": 1,
+          "grade1_source": 222,
+          "grade2_source": 33,
+          "grade1_coefficient": 3,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 3
+        },
+        {
+          "atom": 9,
+          "row": 9,
+          "e6id": 3,
+          "H27_address": [
+            2,
+            0,
+            1
+          ],
+          "external_trit": 0,
+          "grade1_source": 223,
+          "grade2_source": 32,
+          "grade1_coefficient": 2,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -2
+        },
+        {
+          "atom": 19,
+          "row": 19,
+          "e6id": 6,
+          "H27_address": [
+            2,
+            0,
+            0
+          ],
+          "external_trit": 1,
+          "grade1_source": 227,
+          "grade2_source": 28,
+          "grade1_coefficient": 2,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -2
+        },
+        {
+          "atom": 18,
+          "row": 18,
+          "e6id": 6,
+          "H27_address": [
+            2,
+            0,
+            0
+          ],
+          "external_trit": 0,
+          "grade1_source": 228,
+          "grade2_source": 27,
+          "grade1_coefficient": 1,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 1
+        },
+        {
+          "atom": 1,
+          "row": 1,
+          "e6id": 0,
+          "H27_address": [
+            0,
+            0,
+            0
+          ],
+          "external_trit": 1,
+          "grade1_source": 234,
+          "grade2_source": 21,
+          "grade1_coefficient": 2,
+          "quadrature": "imaginary",
+          "grade2_coefficient": 2
+        },
+        {
+          "atom": 0,
+          "row": 0,
+          "e6id": 0,
+          "H27_address": [
+            0,
+            0,
+            0
+          ],
+          "external_trit": 0,
+          "grade1_source": 235,
+          "grade2_source": 20,
+          "grade1_coefficient": 1,
+          "quadrature": "imaginary",
+          "grade2_coefficient": -1
+        }
+      ],
+      "conflict_edges": 1539,
+      "exact_clique_lower_bound": 7,
+      "commuting_batch_upper_bound": 15,
+      "chromatic_interval": [
+        7,
+        15
+      ],
+      "batch_sizes": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        4,
+        6,
+        6,
+        6,
+        5,
+        4,
+        2
+      ],
+      "batches": [
+        {
+          "local_batch": 0,
+          "atom_ids": [
+            0,
+            22,
+            37,
+            42,
+            50,
+            57
+          ],
+          "atom_count": 6,
+          "all_atoms_commute_exactly": true,
+          "all_atoms_compact_fixed": true
+        },
+        {
+          "local_batch": 1,
+          "atom_ids": [
+            10,
+            24,
+            53,
+            56,
+            64,
+            65
+          ],
+          "atom_count": 6,
+          "all_atoms_commute_exactly": true,
+          "all_atoms_compact_fixed": true
+        },
+        {
+          "local_batch": 2,
+          "atom_ids": [
+            9,
+            18,
+            41,
+            44,
+            66,
+            67
+          ],
+          "atom_count": 6,
+          "all_atoms_commute_exactly": true,
+          "all_atoms_compact_fixed": true
+        },
+        {
+          "local_batch": 3,
+          "atom_ids": [
+            3,
+            23,
+            43,
+            46,
+            54,
+            55
+          ],
+          "atom_count": 6,
+          "all_atoms_commute_exactly": true,
+          "all_atoms_compact_fixed": true
+        },
+        {
+          "local_batch": 4,
+          "atom_ids": [
+            5,
+            26,
+            49,
+            52,
+            74,
+            75
+          ],
+          "atom_count": 6,
+          "all_atoms_commute_exactly": true,
+          "all_atoms_compact_fixed": true
+        },
+        {
+          "local_batch": 5,
+          "atom_ids": [
+            6,
+            20,
+            32,
+            35,
+            73,
+            78
+          ],
+          "atom_count": 6,
+          "all_atoms_commute_exactly": true,
+          "all_atoms_compact_fixed": true
+        },
+        {
+          "local_batch": 6,
+          "atom_ids": [
+            7,
+            17,
+            29,
+            36,
+            72,
+            77
+          ],
+          "atom_count": 6,
+          "all_atoms_commute_exactly": true,
+          "all_atoms_compact_fixed": true
+        },
+        {
+          "local_batch": 7,
+          "atom_ids": [
+            2,
+            15,
+            27,
+            30,
+            60,
+            61
+          ],
+          "atom_count": 6,
+          "all_atoms_commute_exactly": true,
+          "all_atoms_compact_fixed": true
+        },
+        {
+          "local_batch": 8,
+          "atom_ids": [
+            8,
+            31,
+            34,
+            63
+          ],
+          "atom_count": 4,
+          "all_atoms_commute_exactly": true,
+          "all_atoms_compact_fixed": true
+        },
+        {
+          "local_batch": 9,
+          "atom_ids": [
+            13,
+            19,
+            33,
+            48,
+            76,
+            79
+          ],
+          "atom_count": 6,
+          "all_atoms_commute_exactly": true,
+          "all_atoms_compact_fixed": true
+        },
+        {
+          "local_batch": 10,
+          "atom_ids": [
+            12,
+            16,
+            28,
+            47,
+            69,
+            80
+          ],
+          "atom_count": 6,
+          "all_atoms_commute_exactly": true,
+          "all_atoms_compact_fixed": true
+        },
+        {
+          "local_batch": 11,
+          "atom_ids": [
+            1,
+            21,
+            38,
+            39,
+            51,
+            58
+          ],
+          "atom_count": 6,
+          "all_atoms_commute_exactly": true,
+          "all_atoms_compact_fixed": true
+        },
+        {
+          "local_batch": 12,
+          "atom_ids": [
+            11,
+            25,
+            40,
+            59,
+            71
+          ],
+          "atom_count": 5,
+          "all_atoms_commute_exactly": true,
+          "all_atoms_compact_fixed": true
+        },
+        {
+          "local_batch": 13,
+          "atom_ids": [
+            4,
+            14,
+            45,
+            62
+          ],
+          "atom_count": 4,
+          "all_atoms_commute_exactly": true,
+          "all_atoms_compact_fixed": true
+        },
+        {
+          "local_batch": 14,
+          "atom_ids": [
+            68,
+            70
+          ],
+          "atom_count": 2,
+          "all_atoms_commute_exactly": true,
+          "all_atoms_compact_fixed": true
+        }
+      ]
+    }
+  },
+  "exact_alignment": {
+    "E8_Coxeter_number": 30,
+    "microframes_per_control_cycle": 30,
+    "existing_E8_Coxeter_bus_ticks": 2160,
+    "identity": "15 A batches + 15 B batches = 30 microframes; 30*72=2160; 24*2160=51840"
+  },
+  "robustness": {
+    "compact_form_leakage_per_atom": 0,
+    "compact_form_leakage_per_batch": 0,
+    "reason": "Every scheduled atom is an opposite-root compact fixed-plane generator; every batch is a sum of fixed generators.",
+    "exact_conflict_free_batches": true,
+    "first_order_BCH_l1_coefficient": "24108",
+    "error_statement": "For dimensionless layer duration tau, the formal first-order product error has coefficient at most this value times tau^2 in Chevalley coefficient l1 norm, before higher orders."
+  },
+  "architecture_reading": "The exact compact E8 control pair has a finite address schedule that lands on the pre-existing 30-frame E8 Coxeter bus without padding. This is a control-ABI theorem; it does not yet lower the new root-plane analog macro to calibrated optical components.",
+  "boundary": "BT1493 supplies calibrated finite S4/D4 row actions, not analog exponentials of every E8 root plane. ROOT_PLANE_ANALOG remains a new macro whose amplitude, duration, loss, bandwidth, crosstalk, and laboratory error must be calibrated. The 15-color schedule is a certified upper bound, not a proof of chromatic optimality.",
+  "parents": [
+    "data/w33_pass409_compact_e8_control.json",
+    "data/bt1407_microframe_transaction_composer.json",
+    "data/bt1493_row_action_physical_pulse_compiler.json",
+    "data/bt1603_universal_computation_proof_closure.json"
+  ]
+}

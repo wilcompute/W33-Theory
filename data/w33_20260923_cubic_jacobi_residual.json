@@ -1,0 +1,73 @@
+{
+  "schema": "w33.20260923.cubic_jacobi_residual.v1",
+  "status": "PASS_24D_RESIDUAL_HAS_HEISENBERG15_RADICAL_AND_CUBIC_A1_LEVI_QUOTIENT",
+  "ambient": {
+    "dimension": 24,
+    "grading": [
+      6,
+      9,
+      9
+    ],
+    "source": "center|center nondiagonal H27 pair; all four center/external controls span the same subalgebra",
+    "perfect": true,
+    "derived_dimension_mod103": 24,
+    "center_dimension_mod103": 1
+  },
+  "radical": {
+    "dimension": 15,
+    "type": "Heisenberg h_15",
+    "witness": {
+      "dimension": 15,
+      "center_dimension_mod103": 1,
+      "derived_dimension_mod103": 1,
+      "commutator_form_rank_mod103": 14
+    },
+    "reason": "2-step solvable ideal with center=derived=1 and nondegenerate rank-14 alternating bracket on h_15/Z; quotient has nondegenerate Killing form, hence this ideal is the radical"
+  },
+  "nested_heisenberg": {
+    "dimension": 9,
+    "type": "Heisenberg h_9",
+    "witness": {
+      "dimension": 9,
+      "center_dimension_mod103": 1,
+      "derived_dimension_mod103": 1,
+      "commutator_form_rank_mod103": 8
+    }
+  },
+  "levi_quotient": {
+    "dimension": 9,
+    "killing_rank_over_Q": 9,
+    "centroid_dimension_over_Q": 3,
+    "one_centroid_characteristic_polynomial": "(98100821433*t**3 - 66193822800*t**2 - 3168091150*t + 1512767875)**3/944099856651079508921514825589737",
+    "reduced_centroid_field_polynomial": "x^3 - x^2 - 53*x - 120",
+    "centroid_field_discriminant": 94557,
+    "centroid_field_discriminant_factorization": "3*43*733",
+    "split_nilpotent_coefficients_in_quotient_basis": [
+      0,
+      0,
+      0,
+      -1,
+      -1,
+      -1,
+      0,
+      0,
+      0
+    ],
+    "split_nilpotent_ad_rank": 6,
+    "split_nilpotent_ad2_rank": 3,
+    "split_nilpotent_ad3_zero": true,
+    "classification": "Res_{K/Q} sl2(K): a 9D Q-simple algebra obtained by restriction of scalars from split sl2 over the cubic centroid field K",
+    "split_over_K": "SPLIT_BY_EXACT_NILPOTENT_AD_CUBE_ZERO"
+  },
+  "levi_decomposition": "By Levi-Malcev in characteristic zero, L_24 is a semidirect product s_9 \u22c9 h_15 for some Levi factor s_9 isomorphic to the quotient.",
+  "physics_reading": "Jacobi-type finite control algebra: a cubic A1-form acts by derivations on the 14D symplectic phase space h_15/Z.",
+  "boundaries": [
+    "The residual algebra is NOT A2^3/trinification.",
+    "Splitness over K is certified by the exact nonzero nilpotent with ad^3=0.",
+    "This is an exact finite/rational Lie-algebra statement, not a laboratory Hamiltonian or continuum gauge group."
+  ],
+  "parents": [
+    "data/w33_diagonal_weld_e8_lie_generation.json",
+    "artifacts/e8_structure_constants_w33_discrete.json"
+  ]
+}

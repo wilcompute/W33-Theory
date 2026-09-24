@@ -1,0 +1,63 @@
+{
+  "schema": "w33.pass409.qutrit_edge_explicit_intertwiner.v1",
+  "status": "PASS_EXPLICIT_RANK90_W_E6_INTERTWINER_OVER_GF103",
+  "groups": {
+    "W_E6_order": 51840,
+    "point_stabilizer_order": 1296,
+    "index": 40
+  },
+  "character_audit": {
+    "canonical_local_H6_id": 11,
+    "induced_degrees": [
+      10,
+      60,
+      80,
+      90
+    ],
+    "signed_edge_degrees": [
+      15,
+      24,
+      30,
+      81,
+      90
+    ],
+    "inner_product": 1,
+    "unique_common_degree": 90
+  },
+  "matrix_witness": {
+    "field": "GF(103)",
+    "reason_for_prime": "103 does not divide 51840 and contains primitive cube roots",
+    "induced_module_dimension": 240,
+    "signed_edge_module_dimension": 240,
+    "induced_W90_basis_shape": [
+      90,
+      240
+    ],
+    "edge_W90_basis_shape": [
+      90,
+      240
+    ],
+    "intertwiner_shape": [
+      90,
+      90
+    ],
+    "intertwiner_rank": 90,
+    "generator_equations": "M_ind(g) T = T M_edge(g) for all three frozen W(E6) generators",
+    "all_generator_equations_hold": true,
+    "basis_choice": "MeatAxe may choose different valid bases; the certificate freezes dimensions, rank, and all generator equations rather than a basis-dependent checksum."
+  },
+  "theorem": "The unique common degree-90 constituent is realized by an explicit invertible 90x90 matrix over GF(103) intertwining the three frozen W(E6) generators. Thus the canonical qutrit fibre and orientation-signed W33 edge lane share an actual equivariant transducer, not merely a character overlap.",
+  "boundary": "This is an exact modular representation-theoretic transducer. A characteristic-zero integral lift and optical amplitude normalization are not supplied.",
+  "parents": [
+    "analysis/w33_20260923_qutrit_edge_triality_transducer.g",
+    "analysis/w33_20260923_corrected_weil6_e6_extension.g"
+  ],
+  "raw_stdout": [
+    "PASS409_GROUPS 51840 1296 40",
+    "PASS409_CHARACTERS 11 1 90",
+    "PASS409_INDUCED_FACTORS [ 80, 60, 90, 10 ]",
+    "PASS409_EDGE_FACTORS [ 81, 30, 15, 90, 24 ]",
+    "PASS409_INTERTWINER [ 90, 90 ] 90 true",
+    "PASS_QUTRIT_EDGE_EXPLICIT_INTERTWINER true"
+  ]
+}

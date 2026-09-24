@@ -1,0 +1,586 @@
+{
+  "schema": "w33.pass409.sparse8_holonet_schedule.v1",
+  "status": "PASS_MINIMAL_EIGHT_ROOT_COMPACT_E8_FRAME_HAS_OPTIMAL_SIX_MICROFRAME_AB_CYCLE",
+  "support": [
+    16,
+    19,
+    23,
+    31,
+    153,
+    190,
+    216,
+    228
+  ],
+  "schedules": {
+    "A": {
+      "atoms": [
+        {
+          "source": 16,
+          "partner": 239,
+          "coefficient": 3,
+          "partner_coefficient": 3,
+          "root": [
+            -2,
+            -2,
+            -3,
+            -5,
+            -4,
+            -3,
+            -2,
+            -1
+          ],
+          "H27_address": [
+            2,
+            1,
+            0
+          ],
+          "external_trit": 2,
+          "row": 14
+        },
+        {
+          "source": 19,
+          "partner": 236,
+          "coefficient": 2,
+          "partner_coefficient": -2,
+          "root": [
+            -2,
+            -2,
+            -3,
+            -4,
+            -3,
+            -2,
+            -2,
+            -1
+          ],
+          "H27_address": [
+            0,
+            2,
+            2
+          ],
+          "external_trit": 2,
+          "row": 62
+        },
+        {
+          "source": 23,
+          "partner": 232,
+          "coefficient": 1,
+          "partner_coefficient": -1,
+          "root": [
+            -1,
+            -2,
+            -3,
+            -5,
+            -4,
+            -3,
+            -2,
+            -1
+          ],
+          "H27_address": [
+            1,
+            1,
+            1
+          ],
+          "external_trit": 2,
+          "row": 23
+        },
+        {
+          "source": 31,
+          "partner": 224,
+          "coefficient": 2,
+          "partner_coefficient": -2,
+          "root": [
+            -1,
+            -2,
+            -2,
+            -4,
+            -3,
+            -2,
+            -2,
+            -1
+          ],
+          "H27_address": [
+            2,
+            2,
+            2
+          ],
+          "external_trit": 2,
+          "row": 74
+        },
+        {
+          "source": 153,
+          "partner": 102,
+          "coefficient": 1,
+          "partner_coefficient": -1,
+          "root": [
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "H27_address": [
+            0,
+            1,
+            2
+          ],
+          "external_trit": 1,
+          "row": 4
+        },
+        {
+          "source": 190,
+          "partner": 65,
+          "coefficient": 3,
+          "partner_coefficient": -3,
+          "root": [
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            1,
+            1
+          ],
+          "H27_address": [
+            0,
+            0,
+            2
+          ],
+          "external_trit": 0,
+          "row": 66
+        },
+        {
+          "source": 216,
+          "partner": 39,
+          "coefficient": 1,
+          "partner_coefficient": 1,
+          "root": [
+            1,
+            2,
+            2,
+            3,
+            2,
+            2,
+            1,
+            1
+          ],
+          "H27_address": [
+            1,
+            0,
+            0
+          ],
+          "external_trit": 0,
+          "row": 42
+        },
+        {
+          "source": 228,
+          "partner": 27,
+          "coefficient": 1,
+          "partner_coefficient": -1,
+          "root": [
+            1,
+            2,
+            3,
+            4,
+            3,
+            2,
+            1,
+            1
+          ],
+          "H27_address": [
+            2,
+            0,
+            0
+          ],
+          "external_trit": 0,
+          "row": 18
+        }
+      ],
+      "conflict_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "clique_lower_bound": 3,
+      "chromatic_number": 3,
+      "batches": [
+        {
+          "color": 0,
+          "atom_ids": [
+            0,
+            7
+          ],
+          "sources": [
+            16,
+            228
+          ],
+          "all_commute": true
+        },
+        {
+          "color": 1,
+          "atom_ids": [
+            3,
+            5
+          ],
+          "sources": [
+            31,
+            190
+          ],
+          "all_commute": true
+        },
+        {
+          "color": 2,
+          "atom_ids": [
+            1,
+            2,
+            4,
+            6
+          ],
+          "sources": [
+            19,
+            23,
+            153,
+            216
+          ],
+          "all_commute": true
+        }
+      ]
+    },
+    "B": {
+      "atoms": [
+        {
+          "source": 16,
+          "partner": 239,
+          "coefficient": 3,
+          "partner_coefficient": -3,
+          "root": [
+            -2,
+            -2,
+            -3,
+            -5,
+            -4,
+            -3,
+            -2,
+            -1
+          ],
+          "H27_address": [
+            2,
+            1,
+            0
+          ],
+          "external_trit": 2,
+          "row": 14
+        },
+        {
+          "source": 19,
+          "partner": 236,
+          "coefficient": 2,
+          "partner_coefficient": 2,
+          "root": [
+            -2,
+            -2,
+            -3,
+            -4,
+            -3,
+            -2,
+            -2,
+            -1
+          ],
+          "H27_address": [
+            0,
+            2,
+            2
+          ],
+          "external_trit": 2,
+          "row": 62
+        },
+        {
+          "source": 23,
+          "partner": 232,
+          "coefficient": 1,
+          "partner_coefficient": 1,
+          "root": [
+            -1,
+            -2,
+            -3,
+            -5,
+            -4,
+            -3,
+            -2,
+            -1
+          ],
+          "H27_address": [
+            1,
+            1,
+            1
+          ],
+          "external_trit": 2,
+          "row": 23
+        },
+        {
+          "source": 31,
+          "partner": 224,
+          "coefficient": 2,
+          "partner_coefficient": 2,
+          "root": [
+            -1,
+            -2,
+            -2,
+            -4,
+            -3,
+            -2,
+            -2,
+            -1
+          ],
+          "H27_address": [
+            2,
+            2,
+            2
+          ],
+          "external_trit": 2,
+          "row": 74
+        },
+        {
+          "source": 153,
+          "partner": 102,
+          "coefficient": 1,
+          "partner_coefficient": 1,
+          "root": [
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "H27_address": [
+            0,
+            1,
+            2
+          ],
+          "external_trit": 1,
+          "row": 4
+        },
+        {
+          "source": 190,
+          "partner": 65,
+          "coefficient": 3,
+          "partner_coefficient": 3,
+          "root": [
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            1,
+            1
+          ],
+          "H27_address": [
+            0,
+            0,
+            2
+          ],
+          "external_trit": 0,
+          "row": 66
+        },
+        {
+          "source": 216,
+          "partner": 39,
+          "coefficient": 1,
+          "partner_coefficient": -1,
+          "root": [
+            1,
+            2,
+            2,
+            3,
+            2,
+            2,
+            1,
+            1
+          ],
+          "H27_address": [
+            1,
+            0,
+            0
+          ],
+          "external_trit": 0,
+          "row": 42
+        },
+        {
+          "source": 228,
+          "partner": 27,
+          "coefficient": 1,
+          "partner_coefficient": 1,
+          "root": [
+            1,
+            2,
+            3,
+            4,
+            3,
+            2,
+            1,
+            1
+          ],
+          "H27_address": [
+            2,
+            0,
+            0
+          ],
+          "external_trit": 0,
+          "row": 18
+        }
+      ],
+      "conflict_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "clique_lower_bound": 3,
+      "chromatic_number": 3,
+      "batches": [
+        {
+          "color": 0,
+          "atom_ids": [
+            0,
+            7
+          ],
+          "sources": [
+            16,
+            228
+          ],
+          "all_commute": true
+        },
+        {
+          "color": 1,
+          "atom_ids": [
+            3,
+            5
+          ],
+          "sources": [
+            31,
+            190
+          ],
+          "all_commute": true
+        },
+        {
+          "color": 2,
+          "atom_ids": [
+            1,
+            2,
+            4,
+            6
+          ],
+          "sources": [
+            19,
+            23,
+            153,
+            216
+          ],
+          "all_commute": true
+        }
+      ]
+    }
+  },
+  "microframes_per_AB_cycle": 6,
+  "ticks_per_microframe": 72,
+  "ticks_per_AB_cycle": 432,
+  "AB_cycles_per_30_microframe_Coxeter_bus": 5,
+  "AB_cycles_per_2160_tick_bus": 5,
+  "AB_cycles_per_51840_tick_window": 120,
+  "optimality": "Each control conflict graph contains a 3-clique and admits an explicit 3-coloring, so three commuting batches per control are necessary and sufficient.",
+  "hardware_reduction": {
+    "dense_atoms_per_control": 81,
+    "minimal_atoms_per_control": 8,
+    "dense_microframes_per_AB_cycle": 30,
+    "minimal_microframes_per_AB_cycle": 6
+  },
+  "boundary": "This is an exact scheduling/commutation theorem. ROOT_PLANE_ANALOG amplitudes and optical calibration remain physical implementation requirements."
+}

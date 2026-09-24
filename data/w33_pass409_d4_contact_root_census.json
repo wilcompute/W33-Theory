@@ -1,0 +1,149 @@
+{
+  "schema": "w33.pass409.d4_contact_root_census.v1",
+  "status": "PASS_D4_CONTACT_GRADING_IS_A1_CUBED_ON_222_HEISENBERG",
+  "simple_roots": [
+    [
+      1,
+      -1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      -1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      -1
+    ],
+    [
+      0,
+      0,
+      1,
+      1
+    ]
+  ],
+  "highest_root_simple_coordinates": [
+    1,
+    2,
+    1,
+    1
+  ],
+  "root_grade_counts": {
+    "-2": 1,
+    "-1": 8,
+    "0": 6,
+    "1": 8,
+    "2": 1
+  },
+  "g0_semisimple": "A1^3",
+  "g_minus1_dimension": 8,
+  "g_minus1_weight_set": [
+    [
+      -1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      1
+    ],
+    [
+      -1,
+      1,
+      -1
+    ],
+    [
+      -1,
+      1,
+      1
+    ],
+    [
+      1,
+      -1,
+      -1
+    ],
+    [
+      1,
+      -1,
+      1
+    ],
+    [
+      1,
+      1,
+      -1
+    ],
+    [
+      1,
+      1,
+      1
+    ]
+  ],
+  "g_minus2_dimension": 1,
+  "heisenberg_pairing_weights": [
+    [
+      [
+        -1,
+        -1,
+        -1
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        -1,
+        1,
+        1
+      ],
+      [
+        1,
+        -1,
+        -1
+      ]
+    ],
+    [
+      [
+        -1,
+        1,
+        -1
+      ],
+      [
+        1,
+        -1,
+        1
+      ]
+    ],
+    [
+      [
+        -1,
+        -1,
+        1
+      ],
+      [
+        1,
+        1,
+        -1
+      ]
+    ]
+  ],
+  "derived_contact_parabolic_dimension": 18,
+  "derived_contact_parabolic": "sl2^3 semidirect h9",
+  "comparison_to_repo_core": {
+    "repo_core_dimension": 18,
+    "repo_levi_after_splitting": "sl2^3",
+    "repo_heisenberg": "h9",
+    "repo_W8": "(2,2,2)",
+    "fingerprint_matches": true
+  },
+  "theorem": "The 18D residual core has exactly the D4 derived contact-parabolic root/module fingerprint after splitting the cubic centroid field.",
+  "boundary": "This root census proves the abstract graded fingerprint. It does not supply a single basis-conjugating matrix from the repo core to a conventional D4 Chevalley basis."
+}

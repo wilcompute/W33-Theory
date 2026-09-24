@@ -1,0 +1,41 @@
+{
+  "schema": "w33.20260923.qutrit_edge_triality_transducer.v1",
+  "status": "PASS_UNIQUE_QUTRIT_FIBRE_TO_W90_CONSTRAINT_TRANSDUCER",
+  "W_order": 51840,
+  "H_order": 1296,
+  "index": 40,
+  "canonical_local_Weil6_character_id": 11,
+  "induced_240_degrees": [
+    10,
+    60,
+    80,
+    90
+  ],
+  "signed_edge_240_degrees": [
+    15,
+    24,
+    30,
+    81,
+    90
+  ],
+  "Hom_dimension": 1,
+  "unique_common_degree": 90,
+  "local_six_outer_orbit": [
+    9,
+    10,
+    11
+  ],
+  "outer_group": "C3",
+  "routing": {
+    "global_W6_restricts_to_local_frame": 9,
+    "W90_contains_local_frames": [
+      10,
+      11
+    ],
+    "canonical_frame": 11,
+    "image": "unique degree-90 W(E6) constituent"
+  },
+  "repo_crosscheck": "Prior exact passes identify W90 as the fused constraint block; W81 is the harmonic/logical block.",
+  "boundary": "This is an equivariant finite-module routing theorem, not a dynamical coupling strength or particle identification.",
+  "gap_stdout": "W_ORDER 51840 H_ORDER 1296 INDEX 40\nCANONICAL_H6 11\nIND_DEG 240 IDS [ 5, 19, 22, 25 ] DEGS [ 10, 60, 80, 90 ] MULTS [ 1, 1, 1, 1 ]\nEDGE_DEG 240 IDS [ 6, 14, 15, 24, 25 ] DEGS [ 15, 24, 30, 81, 90 ] MULTS \n[ 1, 1, 1, 1, 1 ]\nINNER 1 COMMON [ 25 ] COMMON_DEGS [ 90 ]\nH6_IDS [ 9, 10, 11 ] OUTER_ORBIT [ 9, 10, 11 ] AUT_ORDER 3888 OUT_ORDER 3\nRESTRICT WID 3 DEG 6 H_IDS [ 9 ] H_DEGS [ 6 ]\nRESTRICT WID 4 DEG 6 H_IDS [ 9 ] H_DEGS [ 6 ]\nRESTRICT WID 25 DEG 90 H_IDS [ 8, 10, 11, 12, 13, 14, 16, 17, 18 ] H_DEGS \n[ 4, 6, 6, 8, 8, 12, 12, 16, 18 ]\nPASS_QUTRIT_EDGE_TRIALITY_TRANSDUCER true\nSyntax warning: Unbound global variable in /mnt/c/Repos/Theory of Everything/a\\\nnalysis/w33_20260923_qutrit_edge_triality_transducer.g:58\n    u:=ClassFunction(tH,List([1..Length(cp)],k->v[cp[k]]));;\n                                                ^\nSyntax warning: Unbound global variable in /mnt/c/Repos/Theory of Everything/a\\\nnalysis/w33_20260923_qutrit_edge_triality_transducer.g:70\n  dec:=List(irrH,x->ScalarProduct(res,x));;\n                                  ^^^\nSyntax warning: Unbound global variable in /mnt/c/Repos/Theory of Everything/a\\\nnalysis/w33_20260923_qutrit_edge_triality_transducer.g:71\n  ids:=Filtered([1..Length(dec)],j->dec[j]<>0);;\n                                    ^^^\n"
+}

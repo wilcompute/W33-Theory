@@ -1,0 +1,181 @@
+{
+  "schema": "w33.20260923.compact_e8_sparse8.v1",
+  "status": "PASS_MINIMAL_EIGHT_ROOT_COMPACT_E8_CONTROL",
+  "architecture": "x plus exact compact-conjugate partner sigma_c(x)",
+  "support": [
+    16,
+    19,
+    23,
+    31,
+    153,
+    190,
+    216,
+    228
+  ],
+  "grade1_positions": [
+    14,
+    62,
+    23,
+    74,
+    4,
+    66,
+    42,
+    18
+  ],
+  "grade2_partner_indices": [
+    239,
+    236,
+    232,
+    224,
+    102,
+    65,
+    39,
+    27
+  ],
+  "amplitudes": [
+    3,
+    2,
+    1,
+    2,
+    1,
+    3,
+    1,
+    1
+  ],
+  "roots": [
+    [
+      -2,
+      -2,
+      -3,
+      -5,
+      -4,
+      -3,
+      -2,
+      -1
+    ],
+    [
+      -2,
+      -2,
+      -3,
+      -4,
+      -3,
+      -2,
+      -2,
+      -1
+    ],
+    [
+      -1,
+      -2,
+      -3,
+      -5,
+      -4,
+      -3,
+      -2,
+      -1
+    ],
+    [
+      -1,
+      -2,
+      -2,
+      -4,
+      -3,
+      -2,
+      -2,
+      -1
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      1,
+      1
+    ],
+    [
+      1,
+      2,
+      2,
+      3,
+      2,
+      2,
+      1,
+      1
+    ],
+    [
+      1,
+      2,
+      3,
+      4,
+      3,
+      2,
+      1,
+      1
+    ]
+  ],
+  "compact_partner_phase_signs": [
+    1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    1,
+    -1
+  ],
+  "selected_root_determinant": -1,
+  "independent_unimodular_witness_determinants": {
+    "16,19,23,31,153,190,216,228": -1,
+    "204,44,176,45,31,26,187,216": 1,
+    "12,132,136,147,189,194,204,219": -1,
+    "15,19,31,38,48,132,200,205": -1,
+    "14,23,159,165,168,190,219,234": 1
+  },
+  "modular_replays": {
+    "103": {
+      "dimension": 248,
+      "grading": {
+        "g0": 86,
+        "g1": 81,
+        "g2": 81
+      },
+      "depth": 11
+    },
+    "109": {
+      "dimension": 248,
+      "grading": {
+        "g0": 86,
+        "g1": 81,
+        "g2": 81
+      },
+      "depth": 11
+    }
+  },
+  "exact_Q": {
+    "dimension": 248,
+    "grading": {
+      "g0": 86,
+      "g1": 81,
+      "g2": 81
+    },
+    "depth": 11,
+    "events": 496
+  },
+  "lower_bound": {
+    "minimum_support": 8,
+    "reason": "With k selected roots and their negatives, every generated root lies in their root-lattice span, so generated Cartan rank is at most k; rank(E8)=8."
+  },
+  "upper_bound": "The displayed 8-root unimodular witness closes exactly to all 248 dimensions over Q.",
+  "boundary": "Minimality is for this root-supported compact-conjugate two-control architecture; it is not a lower bound on arbitrary dense laboratory Hamiltonian parameterizations."
+}
