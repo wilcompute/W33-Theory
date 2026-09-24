@@ -1,0 +1,95 @@
+{
+  "schema": "w33.20260924.triality_class_field_closure.v1",
+  "status": "PASS_TRIALITY_CLASS_FIELD_CLOSURE",
+  "cubic": {
+    "polynomial": "x**3 - x**2 - 53*x - 120",
+    "irreducible": true,
+    "discriminant": 94557,
+    "squarefree": true,
+    "ramified_primes": [
+      3,
+      43,
+      733
+    ],
+    "signature": [
+      3,
+      0
+    ],
+    "local_factorizations_mod_ramified_primes": {
+      "3": "x*(x + 1)**2",
+      "43": "(x - 6)**2*(x + 11)",
+      "733": "(x - 182)**2*(x + 363)"
+    }
+  },
+  "quadratic_resolvent": {
+    "polynomial": "x**2 - x - 23639",
+    "field": "Q(sqrt(94557))",
+    "pell_period": [
+      1,
+      1,
+      204,
+      1,
+      1,
+      614
+    ],
+    "pell_period_length": 6,
+    "fundamental_unit": "252151 + 820*sqrt(94557)",
+    "fundamental_unit_norm": 1,
+    "regulator_float": 13.130930573946339,
+    "L1_chi_float": 0.512424526766276,
+    "class_number_formula_float": 5.999999999999776,
+    "class_number": 6,
+    "class_group": "C6",
+    "three_primary_class_group": "C3"
+  },
+  "normal_closure": {
+    "degree_over_Q": 6,
+    "galois_group_over_Q": "S3",
+    "degree_over_resolvent": 3,
+    "galois_group_over_resolvent": "C3",
+    "field_discriminant": 845436619026693,
+    "relative_discriminant_norm": 1,
+    "everywhere_unramified_over_resolvent": true,
+    "unique_unramified_cyclic_cubic_extension": true,
+    "identification": "Hilbert 3-class field of Q(sqrt(94557))"
+  },
+  "triality": {
+    "exact_sequence": "1 -> C3 -> S3 -> C2 -> 1",
+    "C3_origin": "Artin reciprocity image of the unique 3-primary ideal-class quotient",
+    "C2_origin": "quadratic-resolvent Galois conjugation",
+    "C2_action_on_C3": "inversion",
+    "semidirect_product": "C3 : C2 = S3",
+    "factor_action": "S3 acts on the three embeddings of K and hence the three split A1 factors of Res_{K/Q} SL2"
+  },
+  "lmfdb_crosscheck": {
+    "quadratic": {
+      "label": "2.2.94557.1",
+      "url": "https://www.lmfdb.org/NumberField/2.2.94557.1",
+      "polynomial": "x^2 - x - 23639",
+      "class_number": 6,
+      "class_group": [
+        6
+      ],
+      "grh_assumed": false
+    },
+    "cubic": {
+      "label": "3.3.94557.1",
+      "url": "https://www.lmfdb.org/NumberField/3.3.94557.1",
+      "polynomial": "x^3 - x^2 - 53*x - 120",
+      "class_number": 1,
+      "grh_assumed": false
+    },
+    "normal_closure": {
+      "label": "6.6.845436619026693.1",
+      "url": "https://www.lmfdb.org/NumberField/6.6.845436619026693.1",
+      "polynomial": "x^6 - 320*x^4 + 25600*x^2 - 94557",
+      "field_discriminant": 845436619026693,
+      "signature": [
+        6,
+        0
+      ],
+      "galois_group": "S3"
+    }
+  },
+  "boundary": "Exact arithmetic/descent statement. It identifies the Galois S3 used by trialitarian D4 with a class-field-theoretic C3:C2 mechanism; it does not derive particle generations, spacetime, couplings, or laboratory dynamics."
+}

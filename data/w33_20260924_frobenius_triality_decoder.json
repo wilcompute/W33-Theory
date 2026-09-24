@@ -1,0 +1,426 @@
+{
+  "schema": "w33.20260924.frobenius_triality_decoder.v1",
+  "status": "PASS_FROBENIUS_TRIALITY_DECODER",
+  "field": {
+    "polynomial": "x**3 - x**2 - 53*x - 120",
+    "discriminant": 94557,
+    "galois_group": "S3",
+    "quadratic_resolvent": "Q(sqrt(94557))",
+    "hilbert_3_class_layer": "C3"
+  },
+  "decoder": {
+    "quadratic_bit": "Kronecker symbol (D/p)",
+    "rule_minus_1": "transposition; cubic factorization 1+2",
+    "rule_plus_1_artin_0": "identity; cubic factorization 1+1+1",
+    "rule_plus_1_artin_nonzero": "3-cycle; cubic factorization 3",
+    "orientation_boundary": "factorization sees the two nontrivial C3 elements only as one conjugacy class"
+  },
+  "prime_census_below_10000": {
+    "unramified_prime_count": 1226,
+    "counts": {
+      "transposition": 629,
+      "3-cycle": 394,
+      "identity": 203
+    },
+    "densities": {
+      "identity": 0.16557911908646003,
+      "3-cycle": 0.32137030995106036,
+      "transposition": 0.5130505709624796
+    },
+    "chebotarev_target": {
+      "identity": 0.16666666666666666,
+      "3-cycle": 0.3333333333333333,
+      "transposition": 0.5
+    },
+    "parity_mismatch_count": 0
+  },
+  "examples_below_200": [
+    {
+      "p": 2,
+      "chi_D": -1,
+      "degrees": [
+        1,
+        2
+      ],
+      "frobenius": "transposition"
+    },
+    {
+      "p": 5,
+      "chi_D": -1,
+      "degrees": [
+        1,
+        2
+      ],
+      "frobenius": "transposition"
+    },
+    {
+      "p": 7,
+      "chi_D": 1,
+      "degrees": [
+        3
+      ],
+      "frobenius": "3-cycle"
+    },
+    {
+      "p": 11,
+      "chi_D": 1,
+      "degrees": [
+        3
+      ],
+      "frobenius": "3-cycle"
+    },
+    {
+      "p": 13,
+      "chi_D": -1,
+      "degrees": [
+        1,
+        2
+      ],
+      "frobenius": "transposition"
+    },
+    {
+      "p": 17,
+      "chi_D": -1,
+      "degrees": [
+        1,
+        2
+      ],
+      "frobenius": "transposition"
+    },
+    {
+      "p": 19,
+      "chi_D": -1,
+      "degrees": [
+        1,
+        2
+      ],
+      "frobenius": "transposition"
+    },
+    {
+      "p": 23,
+      "chi_D": 1,
+      "degrees": [
+        1,
+        1,
+        1
+      ],
+      "frobenius": "identity"
+    },
+    {
+      "p": 29,
+      "chi_D": -1,
+      "degrees": [
+        1,
+        2
+      ],
+      "frobenius": "transposition"
+    },
+    {
+      "p": 31,
+      "chi_D": 1,
+      "degrees": [
+        3
+      ],
+      "frobenius": "3-cycle"
+    },
+    {
+      "p": 37,
+      "chi_D": -1,
+      "degrees": [
+        1,
+        2
+      ],
+      "frobenius": "transposition"
+    },
+    {
+      "p": 41,
+      "chi_D": -1,
+      "degrees": [
+        1,
+        2
+      ],
+      "frobenius": "transposition"
+    },
+    {
+      "p": 47,
+      "chi_D": -1,
+      "degrees": [
+        1,
+        2
+      ],
+      "frobenius": "transposition"
+    },
+    {
+      "p": 53,
+      "chi_D": -1,
+      "degrees": [
+        1,
+        2
+      ],
+      "frobenius": "transposition"
+    },
+    {
+      "p": 59,
+      "chi_D": -1,
+      "degrees": [
+        1,
+        2
+      ],
+      "frobenius": "transposition"
+    },
+    {
+      "p": 61,
+      "chi_D": -1,
+      "degrees": [
+        1,
+        2
+      ],
+      "frobenius": "transposition"
+    },
+    {
+      "p": 67,
+      "chi_D": -1,
+      "degrees": [
+        1,
+        2
+      ],
+      "frobenius": "transposition"
+    },
+    {
+      "p": 71,
+      "chi_D": -1,
+      "degrees": [
+        1,
+        2
+      ],
+      "frobenius": "transposition"
+    },
+    {
+      "p": 73,
+      "chi_D": -1,
+      "degrees": [
+        1,
+        2
+      ],
+      "frobenius": "transposition"
+    },
+    {
+      "p": 79,
+      "chi_D": 1,
+      "degrees": [
+        3
+      ],
+      "frobenius": "3-cycle"
+    },
+    {
+      "p": 83,
+      "chi_D": -1,
+      "degrees": [
+        1,
+        2
+      ],
+      "frobenius": "transposition"
+    },
+    {
+      "p": 89,
+      "chi_D": 1,
+      "degrees": [
+        3
+      ],
+      "frobenius": "3-cycle"
+    },
+    {
+      "p": 97,
+      "chi_D": 1,
+      "degrees": [
+        3
+      ],
+      "frobenius": "3-cycle"
+    },
+    {
+      "p": 101,
+      "chi_D": 1,
+      "degrees": [
+        3
+      ],
+      "frobenius": "3-cycle"
+    },
+    {
+      "p": 103,
+      "chi_D": -1,
+      "degrees": [
+        1,
+        2
+      ],
+      "frobenius": "transposition"
+    },
+    {
+      "p": 107,
+      "chi_D": 1,
+      "degrees": [
+        1,
+        1,
+        1
+      ],
+      "frobenius": "identity"
+    },
+    {
+      "p": 109,
+      "chi_D": -1,
+      "degrees": [
+        1,
+        2
+      ],
+      "frobenius": "transposition"
+    },
+    {
+      "p": 113,
+      "chi_D": -1,
+      "degrees": [
+        1,
+        2
+      ],
+      "frobenius": "transposition"
+    },
+    {
+      "p": 127,
+      "chi_D": 1,
+      "degrees": [
+        3
+      ],
+      "frobenius": "3-cycle"
+    },
+    {
+      "p": 131,
+      "chi_D": -1,
+      "degrees": [
+        1,
+        2
+      ],
+      "frobenius": "transposition"
+    },
+    {
+      "p": 137,
+      "chi_D": -1,
+      "degrees": [
+        1,
+        2
+      ],
+      "frobenius": "transposition"
+    },
+    {
+      "p": 139,
+      "chi_D": 1,
+      "degrees": [
+        3
+      ],
+      "frobenius": "3-cycle"
+    },
+    {
+      "p": 149,
+      "chi_D": -1,
+      "degrees": [
+        1,
+        2
+      ],
+      "frobenius": "transposition"
+    },
+    {
+      "p": 151,
+      "chi_D": 1,
+      "degrees": [
+        1,
+        1,
+        1
+      ],
+      "frobenius": "identity"
+    },
+    {
+      "p": 157,
+      "chi_D": -1,
+      "degrees": [
+        1,
+        2
+      ],
+      "frobenius": "transposition"
+    },
+    {
+      "p": 163,
+      "chi_D": -1,
+      "degrees": [
+        1,
+        2
+      ],
+      "frobenius": "transposition"
+    },
+    {
+      "p": 167,
+      "chi_D": -1,
+      "degrees": [
+        1,
+        2
+      ],
+      "frobenius": "transposition"
+    },
+    {
+      "p": 173,
+      "chi_D": -1,
+      "degrees": [
+        1,
+        2
+      ],
+      "frobenius": "transposition"
+    },
+    {
+      "p": 179,
+      "chi_D": 1,
+      "degrees": [
+        3
+      ],
+      "frobenius": "3-cycle"
+    },
+    {
+      "p": 181,
+      "chi_D": 1,
+      "degrees": [
+        3
+      ],
+      "frobenius": "3-cycle"
+    },
+    {
+      "p": 191,
+      "chi_D": 1,
+      "degrees": [
+        3
+      ],
+      "frobenius": "3-cycle"
+    },
+    {
+      "p": 193,
+      "chi_D": -1,
+      "degrees": [
+        1,
+        2
+      ],
+      "frobenius": "transposition"
+    },
+    {
+      "p": 197,
+      "chi_D": -1,
+      "degrees": [
+        1,
+        2
+      ],
+      "frobenius": "transposition"
+    },
+    {
+      "p": 199,
+      "chi_D": 1,
+      "degrees": [
+        3
+      ],
+      "frobenius": "3-cycle"
+    }
+  ],
+  "boundary": "This is an exact arithmetic Frobenius/class-field decoder.  The C2/C3 register language is group-theoretic only; it is not evidence for a physical bit/qutrit register without an additional implemented map."
+}
