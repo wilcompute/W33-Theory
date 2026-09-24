@@ -1,0 +1,249 @@
+{
+  "schema": "w33.20260924.single_photon_multipass_graph_entangler.v1",
+  "status": "PASS_SINGLE_PHOTON_EVEN_SWEEP_GRAPH_ENTANGLER",
+  "theorem": {
+    "setup": "one |+> qutrit ancilla visits memories R1,...,R_2n via the same fixed E_AR, then is measured in Z",
+    "branch": "K_m=(1/sqrt(3)) X_frame(m) F^(tensor 2n) D_G, where D_G is a weighted qutrit graph-phase Clifford",
+    "phase_law": "q_m(r)=sum_{j=1}^n a_j r_(2j) - m a_n mod 3, a_j=sum_{h=1}^j (-1)^(j-h) r_(2h-1)",
+    "graph_edges": "edge (2h-1,2j) has weight (-1)^(j-h) mod 3 for 1<=h<=j<=n",
+    "edge_count": "n(n+1)/2",
+    "outcome_probability": "1/3 independent of the memory input",
+    "odd_sweep_boundary": "An odd number of visited memories does not yield a full-rank unitary branch under the same final computational measurement."
+  },
+  "verified_sweeps": [
+    {
+      "memory_qutrits": 2,
+      "branch_probability": 0.3333333333333333,
+      "verified_random_basis_amplitudes_per_outcome": 120,
+      "max_amplitude_error": 2.3592239273284576e-16,
+      "weighted_edges": [
+        {
+          "u": 0,
+          "v": 1,
+          "weight_mod3": 1
+        }
+      ],
+      "edge_count": 1,
+      "measurement_frames": {
+        "0": [
+          0,
+          0
+        ],
+        "1": [
+          1,
+          0
+        ],
+        "2": [
+          2,
+          0
+        ]
+      }
+    },
+    {
+      "memory_qutrits": 4,
+      "branch_probability": 0.3333333333333333,
+      "verified_random_basis_amplitudes_per_outcome": 120,
+      "max_amplitude_error": 1.193812447098184e-16,
+      "weighted_edges": [
+        {
+          "u": 0,
+          "v": 1,
+          "weight_mod3": 1
+        },
+        {
+          "u": 0,
+          "v": 3,
+          "weight_mod3": 2
+        },
+        {
+          "u": 2,
+          "v": 3,
+          "weight_mod3": 1
+        }
+      ],
+      "edge_count": 3,
+      "measurement_frames": {
+        "0": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "1": [
+          2,
+          0,
+          1,
+          0
+        ],
+        "2": [
+          1,
+          0,
+          2,
+          0
+        ]
+      }
+    },
+    {
+      "memory_qutrits": 6,
+      "branch_probability": 0.3333333333333333,
+      "verified_random_basis_amplitudes_per_outcome": 120,
+      "max_amplitude_error": 5.003707553108401e-17,
+      "weighted_edges": [
+        {
+          "u": 0,
+          "v": 1,
+          "weight_mod3": 1
+        },
+        {
+          "u": 0,
+          "v": 3,
+          "weight_mod3": 2
+        },
+        {
+          "u": 0,
+          "v": 5,
+          "weight_mod3": 1
+        },
+        {
+          "u": 2,
+          "v": 3,
+          "weight_mod3": 1
+        },
+        {
+          "u": 2,
+          "v": 5,
+          "weight_mod3": 2
+        },
+        {
+          "u": 4,
+          "v": 5,
+          "weight_mod3": 1
+        }
+      ],
+      "edge_count": 6,
+      "measurement_frames": {
+        "0": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "1": [
+          1,
+          0,
+          2,
+          0,
+          1,
+          0
+        ],
+        "2": [
+          2,
+          0,
+          1,
+          0,
+          2,
+          0
+        ]
+      }
+    },
+    {
+      "memory_qutrits": 8,
+      "branch_probability": 0.3333333333333333,
+      "verified_random_basis_amplitudes_per_outcome": 120,
+      "max_amplitude_error": 2.3646498659265303e-17,
+      "weighted_edges": [
+        {
+          "u": 0,
+          "v": 1,
+          "weight_mod3": 1
+        },
+        {
+          "u": 0,
+          "v": 3,
+          "weight_mod3": 2
+        },
+        {
+          "u": 0,
+          "v": 5,
+          "weight_mod3": 1
+        },
+        {
+          "u": 0,
+          "v": 7,
+          "weight_mod3": 2
+        },
+        {
+          "u": 2,
+          "v": 3,
+          "weight_mod3": 1
+        },
+        {
+          "u": 2,
+          "v": 5,
+          "weight_mod3": 2
+        },
+        {
+          "u": 2,
+          "v": 7,
+          "weight_mod3": 1
+        },
+        {
+          "u": 4,
+          "v": 5,
+          "weight_mod3": 1
+        },
+        {
+          "u": 4,
+          "v": 7,
+          "weight_mod3": 2
+        },
+        {
+          "u": 6,
+          "v": 7,
+          "weight_mod3": 1
+        }
+      ],
+      "edge_count": 10,
+      "measurement_frames": {
+        "0": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "1": [
+          2,
+          0,
+          1,
+          0,
+          2,
+          0,
+          1,
+          0
+        ],
+        "2": [
+          1,
+          0,
+          2,
+          0,
+          1,
+          0,
+          2,
+          0
+        ]
+      }
+    }
+  ],
+  "network_interpretation": {
+    "result": "A single flying photonic qutrit can compile a nontrivial multi-memory Clifford graph entangler in one coherent sweep, followed only by frame update.",
+    "comparison": "This is structurally analogous to single-photon network-bus proposals where one photon mediates controlled phases across multiple stationary nodes, but the qutrit phase law here is derived directly from the ADQC interaction.",
+    "holonet_opportunity": "Route selection can choose which stationary memories participate in a sweep; the existing routing graph can therefore be studied as a graph-entangler compiler."
+  },
+  "boundary": "Exact circuit algebra only. It does not prove a physical qutrit cavity interaction, photon survival across many nodes, or fault tolerance. The useful branch is Clifford; non-Clifford power still comes from the programmed analyzer of the companion theorem."
+}

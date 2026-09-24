@@ -1,0 +1,321 @@
+{
+  "schema": "w33.20260924.single_photon_adqc_qutrit_universality.v1",
+  "status": "PASS_FIXED_INTERACTION_ADAPTIVE_MEASUREMENT_QUTRIT_UNIVERSALITY",
+  "architecture": {
+    "carrier": "one flying photonic qutrit ancilla active per interaction cycle",
+    "memory": "scalable stationary qutrit register; not encoded solely in photon mode count",
+    "fixed_interaction": "E_AR=(F_A^dagger tensor F_R) CZ_AR",
+    "ancilla_preparation": "|+_0>=F|0>",
+    "programming_surface": "three-outcome ancilla analyzer basis plus classical Pauli frame",
+    "destructive_measurement_boundary": "A detected photon is consumed; 'single photon' means one flying ancilla at a time unless a nondestructive measurement/reset interface is separately supplied."
+  },
+  "local_gate_theorem": {
+    "measurement_basis_ket": "|b_m(theta)>=1/sqrt(3) sum_j omega^(-m j) exp(-i theta_j)|j>",
+    "branch_map": "K_m=(1/sqrt(3)) X^(-m) F R(theta)",
+    "branch_probability": "1/3 for every input state and every m",
+    "phase_trials": [
+      {
+        "phases_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "basis_unitarity_error": 7.783177436167117e-16,
+        "max_gate_error": 8.671027972193812e-16,
+        "max_probability_operator_error": 5.455127213848118e-16
+      },
+      {
+        "phases_rad": [
+          -2.9610417349018907,
+          -0.08352114807684119,
+          -2.851952668140056
+        ],
+        "basis_unitarity_error": 7.278162534419837e-16,
+        "max_gate_error": 8.690046997895855e-16,
+        "max_probability_operator_error": 7.649269682603144e-16
+      },
+      {
+        "phases_rad": [
+          0.015029780577325624,
+          -2.7052856235479816,
+          -2.582830348384032
+        ],
+        "basis_unitarity_error": 8.428399966703241e-16,
+        "max_gate_error": 7.047051238925956e-16,
+        "max_probability_operator_error": 6.928787932477394e-16
+      },
+      {
+        "phases_rad": [
+          -2.0794291018294233,
+          0.5134144371935454,
+          -0.47960053735576214
+        ],
+        "basis_unitarity_error": 6.77599954797753e-16,
+        "max_gate_error": 7.909826653226859e-16,
+        "max_probability_operator_error": 5.396758387775692e-16
+      },
+      {
+        "phases_rad": [
+          2.973228528136448,
+          2.4889129661372076,
+          2.4533485820210235
+        ],
+        "basis_unitarity_error": 5.06871832499358e-16,
+        "max_gate_error": 8.274467325632885e-16,
+        "max_probability_operator_error": 5.285920288295686e-16
+      },
+      {
+        "phases_rad": [
+          2.796399497652839,
+          -0.42797443835948545,
+          2.4067997946622217
+        ],
+        "basis_unitarity_error": 7.486934688601905e-16,
+        "max_gate_error": 8.5863029454558255e-16,
+        "max_probability_operator_error": 8.210295264845878e-16
+      },
+      {
+        "phases_rad": [
+          -1.8509468048999052,
+          -2.775712832382792,
+          -0.6780671486558347
+        ],
+        "basis_unitarity_error": 7.152279827814028e-16,
+        "max_gate_error": 8.494974691909902e-16,
+        "max_probability_operator_error": 7.222050125161878e-16
+      },
+      {
+        "phases_rad": [
+          1.4563441219809015,
+          0.46983874836247796,
+          -0.7036775530901869
+        ],
+        "basis_unitarity_error": 1.0368394472451973e-15,
+        "max_gate_error": 8.228662225404215e-16,
+        "max_probability_operator_error": 8.672095312247651e-16
+      },
+      {
+        "phases_rad": [
+          -0.6749938021677164,
+          0.8905003903583095,
+          -2.8108608553123684
+        ],
+        "basis_unitarity_error": 7.344090692016578e-16,
+        "max_gate_error": 6.564134952970074e-16,
+        "max_probability_operator_error": 6.827187099619124e-16
+      },
+      {
+        "phases_rad": [
+          -2.077519224116797,
+          0.26944698913363796,
+          -2.8299234783598894
+        ],
+        "basis_unitarity_error": 7.982442747057551e-16,
+        "max_gate_error": 8.649992967595067e-16,
+        "max_probability_operator_error": 9.200630569610542e-16
+      },
+      {
+        "phases_rad": [
+          1.7312677572003894,
+          -0.9942140247799092,
+          -1.9054091915485334
+        ],
+        "basis_unitarity_error": 7.841257136107864e-16,
+        "max_gate_error": 7.714352551028867e-16,
+        "max_probability_operator_error": 9.010970876765998e-16
+      },
+      {
+        "phases_rad": [
+          -2.274591564734962,
+          3.0029195569548053,
+          -2.70378583507899
+        ],
+        "basis_unitarity_error": 7.646373005539498e-16,
+        "max_gate_error": 8.77626078127277e-16,
+        "max_probability_operator_error": 4.982563603412612e-16
+      },
+      {
+        "phases_rad": [
+          2.7717254121227075,
+          2.6457152742720176,
+          -1.9116785941725214
+        ],
+        "basis_unitarity_error": 6.733230345894572e-16,
+        "max_gate_error": 8.098483671047973e-16,
+        "max_probability_operator_error": 7.45527449858861e-16
+      },
+      {
+        "phases_rad": [
+          -0.8799954121718123,
+          0.993717157683883,
+          1.6019756630049073
+        ],
+        "basis_unitarity_error": 7.057915982184533e-16,
+        "max_gate_error": 6.961495236790661e-16,
+        "max_probability_operator_error": 7.78284936522351e-16
+      },
+      {
+        "phases_rad": [
+          -0.6808387743539277,
+          -2.089364717863615,
+          3.1016090633593203
+        ],
+        "basis_unitarity_error": 7.808067253980691e-16,
+        "max_gate_error": 7.915261900704006e-16,
+        "max_probability_operator_error": 7.791918049067546e-16
+      },
+      {
+        "phases_rad": [
+          0.5761626755307598,
+          1.2982489207166523,
+          -0.7157188529817602
+        ],
+        "basis_unitarity_error": 7.152784700565712e-16,
+        "max_gate_error": 8.521006918398717e-16,
+        "max_probability_operator_error": 7.536311052042254e-16
+      },
+      {
+        "phases_rad": [
+          0.5368202320648159,
+          2.7009156036135913,
+          2.745985583045629
+        ],
+        "basis_unitarity_error": 7.317819491056547e-16,
+        "max_gate_error": 7.087189354717363e-16,
+        "max_probability_operator_error": 7.499859468499776e-16
+      }
+    ]
+  },
+  "two_memory_entangler": {
+    "protocol": "ancilla interacts with R1 then R2 through the same E_AR; measure ancilla in computational basis",
+    "branch_map": "K_m=(1/sqrt(3))(X^m tensor I)(F tensor F)CZ",
+    "branch_probability": "1/3 for every input state and every m",
+    "max_gate_error": 1.2131698435199709e-15,
+    "max_probability_operator_error": 1.1406329770587745e-15,
+    "recover_CZ_with_local_F_dagger_error": 1.6050521159585916e-15
+  },
+  "non_clifford_gate": {
+    "T": "diag(1,zeta,zeta^8), zeta=exp(2*pi*i/9)",
+    "measurement_phases_rad": [
+      0.0,
+      0.6981317007977318,
+      5.585053606381854
+    ],
+    "implemented_branch": "X^(-m) F T / sqrt(3)",
+    "max_branch_error": 9.328619648004588e-16,
+    "T_X_Tdag_nearest_pauli_projective_distance": 1.5924504340362504,
+    "nearest_pauli_label_X_power_Z_power": [
+      1,
+      2
+    ],
+    "analyzer_max_single_qutrit_stabilizer_fidelity": 0.7123860142010865,
+    "analyzer_resource_statement": "Each T-program analyzer vector is non-stabilizer; the non-Clifford resource has been relocated from a memory-state injection to measurement.",
+    "conclusion": "T is outside the qutrit Clifford group and is available through analyzer programming"
+  },
+  "universal_gate_compiler": {
+    "local_F": "theta=(0,0,0), with tracked X byproduct",
+    "local_T": "apply measured F*T then F^dagger=F^3 using the same primitive",
+    "entangling_CZ": "apply measured (F tensor F)CZ then local F^dagger on both memories",
+    "gate_set": "qutrit Clifford+T with an entangling CZ",
+    "universality_type": "approximate universal quantum computation on the stationary qutrit register",
+    "resource_relocation": "No online magic-state preparation/injection is required by this gate identity. The non-Clifford physical resource is instead the programmed ancilla measurement basis.",
+    "fault_tolerance_boundary": "This does not make non-Clifford fault tolerance free: a protected implementation must still realize the non-Clifford analyzer basis below threshold."
+  },
+  "single_particle_scaling_no_go": {
+    "fact": "n independent qutrits have Hilbert dimension 3^n",
+    "implication": "a lone particle carrying them only as orthogonal mode labels needs at least 3^n modes",
+    "table": [
+      {
+        "logical_qutrits": 1,
+        "minimum_orthogonal_single_particle_modes": 3,
+        "log2_modes": 1.584962500721156
+      },
+      {
+        "logical_qutrits": 2,
+        "minimum_orthogonal_single_particle_modes": 9,
+        "log2_modes": 3.169925001442312
+      },
+      {
+        "logical_qutrits": 3,
+        "minimum_orthogonal_single_particle_modes": 27,
+        "log2_modes": 4.754887502163468
+      },
+      {
+        "logical_qutrits": 4,
+        "minimum_orthogonal_single_particle_modes": 81,
+        "log2_modes": 6.339850002884624
+      },
+      {
+        "logical_qutrits": 5,
+        "minimum_orthogonal_single_particle_modes": 243,
+        "log2_modes": 7.924812503605781
+      },
+      {
+        "logical_qutrits": 6,
+        "minimum_orthogonal_single_particle_modes": 729,
+        "log2_modes": 9.509775004326936
+      },
+      {
+        "logical_qutrits": 7,
+        "minimum_orthogonal_single_particle_modes": 2187,
+        "log2_modes": 11.094737505048093
+      },
+      {
+        "logical_qutrits": 8,
+        "minimum_orthogonal_single_particle_modes": 6561,
+        "log2_modes": 12.679700005769249
+      },
+      {
+        "logical_qutrits": 9,
+        "minimum_orthogonal_single_particle_modes": 19683,
+        "log2_modes": 14.264662506490406
+      },
+      {
+        "logical_qutrits": 10,
+        "minimum_orthogonal_single_particle_modes": 59049,
+        "log2_modes": 15.849625007211563
+      },
+      {
+        "logical_qutrits": 11,
+        "minimum_orthogonal_single_particle_modes": 177147,
+        "log2_modes": 17.43458750793272
+      },
+      {
+        "logical_qutrits": 12,
+        "minimum_orthogonal_single_particle_modes": 531441,
+        "log2_modes": 19.019550008653873
+      }
+    ],
+    "architectural_decision": "use the photon as a mobile head/bus, not as the scalable quantum memory"
+  },
+  "holonet_reinterpretation": {
+    "exact_existing_assets": [
+      "81-state qutrit Pauli frame for feed-forward",
+      "36 spreads furnishing complete stabilizer measurement frames",
+      "finite qutrit Clifford transport and routing machinery",
+      "remote qutrit SUM / entanglement-assisted network primitives"
+    ],
+    "new_mapping_hypothesis": {
+      "W33_points": "candidate stationary memory-node/address layer",
+      "W33_edges": "candidate flying-photon routing/interactions",
+      "spread_frames": "candidate analyzer calibration/program frames",
+      "72_tick_microframe": "candidate interact-measure-frame-update transaction"
+    },
+    "boundary": "The mapping is an architecture proposal; only the gate identities above are proved here."
+  },
+  "checks": {
+    "F_unitary_error": 5.653150914844527e-16,
+    "X_unitary_error": 0.0,
+    "Z_unitary_error": 1.5700924586837752e-16,
+    "CZ_unitary_error": 3.856082273395769e-16,
+    "E_unitary_error": 1.5568589602060428e-15,
+    "F4_error": 2.0416200120739163e-15
+  },
+  "literature": [
+    "Proctor et al., Phys. Rev. A 95, 052317 (2017), ancilla-driven qudit computation",
+    "Glaudell et al., arXiv:2202.09235, qutrit Clifford+T approximate universality",
+    "Cohen & Molmer, Phys. Rev. A 98, 030302(R) (2018), single-photon network bus",
+    "Romanova & Dur, Quantum Sci. Technol. 11 015054 (2026), qudit stabilizer MBQC"
+  ],
+  "boundary": "Exact finite-dimensional circuit theorem and scaling audit, not a hardware demonstration. The memory-photon qutrit interaction, loss, detector/analyzer fidelity, and fault-tolerant measurement implementation require separate physical certificates."
+}
