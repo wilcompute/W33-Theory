@@ -7,6 +7,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = ROOT / "analysis/w33_diagonal_weld_e8_lie_generation.py"
 DATA = ROOT / "data/w33_diagonal_weld_e8_lie_generation.json"
+REPORT = ROOT / "analysis/2026-09-23_diagonal_weld_e8_lie_generation.md"
+INSERT = ROOT / "analysis/PASS20260923_diagonal_weld_e8_lie_generation_insert.tex"
+DOCS = ROOT / "docs/index.html"
 
 
 def load():
@@ -33,3 +36,17 @@ def test_diagonal_phase_is_the_full_generation_switch():
     assert theorem["matched_diagonal_orientation_required"] is False
     assert theorem["one_diagonal_correlation_is_sufficient"] is True
     assert all(out["checks"].values())
+
+
+def test_residual_scope_rejects_stale_a2_cubed_hypothesis():
+    out = json.loads(DATA.read_text())
+    boundary = out["boundary"]
+    assert "not SU(3)^3" in boundary
+    assert "center dimension 1" in boundary
+    assert "Killing rank 9" in boundary
+    assert "15-dimensional two-step nilpotent radical" in boundary
+    for path in (REPORT, INSERT, DOCS):
+        text = path.read_text(encoding="utf-8")
+        normalized = " ".join(text.split())
+        assert "15-dimensional two-step nilpotent radical" in normalized
+        assert "remain a hypothesis" not in text

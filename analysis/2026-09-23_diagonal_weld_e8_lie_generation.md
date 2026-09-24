@@ -53,12 +53,15 @@ The ambient \(SL_3\times E_6\) decomposition is also standard; for an explicit
 published display of \(248=(8,1)+(1,78)+(3,27)+(\bar3,\overline{27})\), see Kan
 and Mizoguchi, [On dimensional reduction of magical supergravity theories](https://doi.org/10.1016/j.physletb.2016.09.010).
 
-The 24-dimensional control closure has the same dimension as
-\(\mathfrak{sl}_3^{\oplus3}\), and its \(6+9+9\) grading is suggestive, but this
-certificate does not identify it with trinification. That requires an explicit
-ideal or root decomposition. Nor is complex/rational Lie generation yet a
-compact-real-form control theorem: anti-Hermitian generators, allowed pulse
-signs, stability, energy scales, and hardware realization remain open.
+The dimension match with \(\mathfrak{sl}_3^{\oplus3}\) is now ruled out rather
+than left as a trinification hypothesis.  An independently replayed exact audit
+finds center dimension one, Killing rank nine, and a 15-dimensional two-step
+nilpotent radical.  Thus the common 24-dimensional control algebra is not
+semisimple.  Its complete Levi and module identification is kept in the
+separate residual-structure packet so this generating-pair certificate remains
+focused on the \(24\to248\) switch.  Compact-real two-control integration is
+also tracked separately; pulse constraints, stability, energy scales, and
+hardware realization remain open.
 
 The internal rediscovery audit read the earlier subgroup, carrier, and global
 root-geometry results end to end:

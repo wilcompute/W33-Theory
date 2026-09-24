@@ -764,7 +764,7 @@
     "two_generation_prior_art": "Two-generation is a general theorem for simple Lie algebras; the new finite statement here is that these highly structured current-H27 diagonal backgrounds are explicit generating pairs.",
     "e8_grading_prior_art": "The E8 decomposition 248=(8,1)+(1,78)+(3,27)+(3bar,27bar) under SL3 x E6 is standard; this certificate resolves generation for the repository's explicit signed address backgrounds."
   },
-  "boundary": "This is exact generation of the rational/complex Chevalley Lie algebra by two structured algebra elements. It is not a compact-real-form controllability theorem, a pair of anti-Hermitian laboratory Hamiltonians, a vacuum-selection mechanism, an energy scale, a coupling strength, or a claim that the residual 24-dimensional algebra is SU(3)^3. The 24=A2^3 dimension match remains a hypothesis until its ideals or roots are explicitly identified.",
+  "boundary": "This certificate proves exact generation of the rational/complex Chevalley Lie algebra by two structured algebra elements. Its residual 24-dimensional branch is not SU(3)^3: an independently replayed exact audit gives center dimension 1, Killing rank 9, and a 15-dimensional two-step nilpotent radical. The full Levi and module identification belongs to the separate residual-structure packet. Compact-real two-control integration, laboratory Hamiltonians, vacuum selection, energy scales, and coupling strengths are outside this certificate.",
   "parents": [
     "data/w33_e6_cubic_diagonal_phase_weld.json",
     "data/w33_e8_full_hybrid_chevalley_compiler.json",
