@@ -12,7 +12,7 @@ Focused regression:
 - \`tests/test_w33_20260923_execute_next5_plus3_representation_physics.py\`
 
 The heavy calculations were replayed in the synchronized local working tree
-\`C:\\Repos\\Theory of Everything\` on \`TheHeavyCrown\`. The user's existing
+\`C:\Repos\Theory of Everything\` on \`TheHeavyCrown\`. The user's existing
 continuity/configuration edits were preserved while the code branch was
 fast-forwarded to live \`master\`.
 
@@ -97,31 +97,31 @@ the rung spacing.
 
 The original version of this section used independent determinant-one
 normalization of the qutrit Clifford generators. That changes a retained-phase
-finite group: cube roots of determinant phases introduce $\\zeta_9$, even
+finite group: cube roots of determinant phases introduce $\zeta_9$, even
 though the projective Clifford action is unchanged.
 
 Using the canonical finite Weil section
-\\[
-X,\\quad Z,\\quad e^{i\\pi/6}F_3,\\quad
-N=\\operatorname{diag}(1,\\omega,\\omega),
-\\]
+\[
+X,\quad Z,\quad e^{i\pi/6}F_3,\quad
+N=\operatorname{diag}(1,\omega,\omega),
+\]
 the one-sector matrix group has order $648$ with center $C_3$ and
 Frobenius--Schur indicator $0$. Coefficient conjugation gives the full
 $1296$-element group, with exact element-order census
-\\[
+\[
 1^1,2^{117},3^{98},4^{54},6^{450},8^{324},9^{144},12^{108}.
-\\]
+\]
 There are no order-$18$ elements. Its irreducible $6$D character has
 Frobenius--Schur indicator $+1$ and rational values
-\\[
-\\{-3,-2,-1,0,1,2,3,6\\}.
-\\]
-Writing $M=A+i\\sqrt3 B$ and $q=\\sqrt3\\operatorname{Im}v$ gives
-\\[
-R(M)=\\begin{pmatrix}A&-B\\\\3B&A\\end{pmatrix}\\in GL_6(\\mathbb Q),
-\\qquad
-Q_6=\\operatorname{diag}(3,3,3,1,1,1).
-\\]
+\[
+\{-3,-2,-1,0,1,2,3,6\}.
+\]
+Writing $M=A+i\sqrt3 B$ and $q=\sqrt3\operatorname{Im}v$ gives
+\[
+R(M)=\begin{pmatrix}A&-B\\3B&A\end{pmatrix}\in GL_6(\mathbb Q),
+\qquad
+Q_6=\operatorname{diag}(3,3,3,1,1,1).
+\]
 The former conductor-$9$ cubic trace field was a phase-lift artifact, not a
 character field of the W33 point stabilizer. The correction is independently
 certified by analysis/w33_20260923_corrected_weil6_e6_extension.g.

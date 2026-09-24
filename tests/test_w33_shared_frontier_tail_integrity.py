@@ -99,3 +99,17 @@ def test_corrected_weil_hodge_e6_physics_is_in_shared_tail_once():
     item = r"\input{analysis/PASS20260923_corrected_weil_hodge_e6_physics_insert}%"
     assert item in lines
     assert lines.count(item) == 1
+
+
+def test_latest_weil_hodge_surfaces_have_clean_tex_encoding():
+    paths = [
+        ROOT / "analysis/PASS20260923_corrected_weil_hodge_e6_physics.md",
+        ROOT / "analysis/PASS20260923_corrected_weil_hodge_e6_physics_insert.tex",
+        ROOT / "analysis/PASS20260923_execute_next5_plus3_representation_physics.md",
+        ROOT / "analysis/PASS20260923_execute_next5_plus3_representation_physics_insert.tex",
+    ]
+    for path in paths:
+        text = path.read_text(encoding="utf-8")
+        assert not any(ord(char) < 32 and char not in "\n\r\t" for char in text)
+        assert not any(line.startswith((r"\\[", r"\\]", r"\\paragraph"))
+                       for line in text.splitlines())
