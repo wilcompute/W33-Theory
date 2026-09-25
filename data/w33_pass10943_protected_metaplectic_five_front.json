@@ -105,6 +105,7 @@
     "maximum_Clifford_correction_length": 4,
     "operation": "use the known ROM family to delete its exactly dark mode and relabel the three active modes as a qutrit",
     "operation_success_probability": 1,
+    "output_coordinate_permutation_checks": 216,
     "physical_boundary": "The exact four-mode ROM and zero dark amplitude make the mode map deterministic in the ideal single-photon model. Loss, imperfect extinction, mode mismatch, and a fabricated reconfigurable four-to-three-mode interface remain unmeasured.",
     "resource_theory_boundary": "The map changes the physical encoding from a two-qubit/ququart stabilizer theory to a single-qutrit stabilizer theory and is conditioned on the known dark-mode family. It is not a two-qubit Clifford operation and therefore does not violate magic monotonicity. A single global C4-to-C3 isometry is impossible; the four family-conditioned three-dimensional coordinate subspaces are essential.",
     "rows": [
@@ -510,6 +511,206 @@
       "expected_M36_states_per_R_injection": 3
     },
     "stabilizer_family": 3,
+    "temporal_control_dictionary": {
+      "clock_parent": "data/w33_20260925_hesse_clock_e8_gradings.json",
+      "control_reading": "One two-bit family selector jointly addresses the optical dark-mode partial isometry, an affine history null direction, one Hesse striation, one temporal E8 A2 component, and six origin/orientation choices of the exact 2+27+54+82+54+27+2 parabolic clock. In the committed canonical ROM gauge, three selector values emit R-orbit qutrits and one emits stabilizers.",
+      "family_resource_split": {
+        "R_magic": 3,
+        "stabilizer": 1
+      },
+      "repo_parent": "data/w33_20260924_m36_null_line_atlas.json",
+      "rows": [
+        {
+          "E8_A2_component": "the six roots +/-w_L for the three Hesse lines in this class",
+          "E8_parabolic_Lie_dimensions": [
+            2,
+            27,
+            54,
+            82,
+            54,
+            27,
+            2
+          ],
+          "Hesse_striation": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              3,
+              4,
+              5
+            ],
+            [
+              6,
+              7,
+              8
+            ]
+          ],
+          "family": 0,
+          "family_name": "A",
+          "history_null_direction": [
+            0,
+            0,
+            1
+          ],
+          "oriented_E8_parabolic_clock_choices": 6,
+          "positive_clock_bracket_growth": [
+            54,
+            81,
+            83
+          ],
+          "projective_null_direction": [
+            0,
+            1
+          ],
+          "qutrit_resource_class_in_canonical_ROM_gauge": "R_magic"
+        },
+        {
+          "E8_A2_component": "the six roots +/-w_L for the three Hesse lines in this class",
+          "E8_parabolic_Lie_dimensions": [
+            2,
+            27,
+            54,
+            82,
+            54,
+            27,
+            2
+          ],
+          "Hesse_striation": [
+            [
+              0,
+              3,
+              6
+            ],
+            [
+              1,
+              4,
+              7
+            ],
+            [
+              2,
+              5,
+              8
+            ]
+          ],
+          "family": 1,
+          "family_name": "B",
+          "history_null_direction": [
+            1,
+            0,
+            0
+          ],
+          "oriented_E8_parabolic_clock_choices": 6,
+          "positive_clock_bracket_growth": [
+            54,
+            81,
+            83
+          ],
+          "projective_null_direction": [
+            1,
+            0
+          ],
+          "qutrit_resource_class_in_canonical_ROM_gauge": "R_magic"
+        },
+        {
+          "E8_A2_component": "the six roots +/-w_L for the three Hesse lines in this class",
+          "E8_parabolic_Lie_dimensions": [
+            2,
+            27,
+            54,
+            82,
+            54,
+            27,
+            2
+          ],
+          "Hesse_striation": [
+            [
+              0,
+              4,
+              8
+            ],
+            [
+              1,
+              5,
+              6
+            ],
+            [
+              2,
+              3,
+              7
+            ]
+          ],
+          "family": 2,
+          "family_name": "C",
+          "history_null_direction": [
+            1,
+            1,
+            1
+          ],
+          "oriented_E8_parabolic_clock_choices": 6,
+          "positive_clock_bracket_growth": [
+            54,
+            81,
+            83
+          ],
+          "projective_null_direction": [
+            1,
+            1
+          ],
+          "qutrit_resource_class_in_canonical_ROM_gauge": "R_magic"
+        },
+        {
+          "E8_A2_component": "the six roots +/-w_L for the three Hesse lines in this class",
+          "E8_parabolic_Lie_dimensions": [
+            2,
+            27,
+            54,
+            82,
+            54,
+            27,
+            2
+          ],
+          "Hesse_striation": [
+            [
+              0,
+              5,
+              7
+            ],
+            [
+              1,
+              3,
+              8
+            ],
+            [
+              2,
+              4,
+              6
+            ]
+          ],
+          "family": 3,
+          "family_name": "D",
+          "history_null_direction": [
+            1,
+            2,
+            1
+          ],
+          "oriented_E8_parabolic_clock_choices": 6,
+          "positive_clock_bracket_growth": [
+            54,
+            81,
+            83
+          ],
+          "projective_null_direction": [
+            1,
+            2
+          ],
+          "qutrit_resource_class_in_canonical_ROM_gauge": "stabilizer"
+        }
+      ],
+      "symmetry_firewall": "AGL(2,3) treats the four Hesse striations equivalently. Therefore the 3+1 magic/stabilizer split is a property of the chosen optical phase gauge and qutrit output encoding, not an intrinsic preferred null direction or a derived arrow of time. It may be used as a programmable resource-versus-calibration lane assignment only after that gauge is fixed."
+    },
     "uniform_unknown_ray_cost": {
       "expected_M36_states_per_R_injection": 4,
       "expected_M36_states_per_R_state": "4/3",

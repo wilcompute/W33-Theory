@@ -1,0 +1,33 @@
+name: W33 Pass 10943 protected metaplectic five-front closure
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass10943_protected_metaplectic_five_front.py'
+      - 'analysis/w33_20260925_hesse_clock_e8_gradings.py'
+      - 'data/w33_20260925_hesse_clock_e8_gradings.json'
+      - 'data/w33_20260924_m36_null_line_atlas.json'
+      - 'analysis/PASS10943_*'
+      - 'analysis/W33_SHARED_FRONTIER_TAIL.tex'
+      - 'data/w33_pass10943_protected_metaplectic_five_front.json'
+      - 'docs/index.html'
+      - 'tests/test_w33_pass10943_protected_metaplectic_five_front.py'
+      - '.github/workflows/w33_pass10943_protected_metaplectic_five_front.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install exact-algebra dependencies
+        run: python -m pip install numpy sympy pytest
+      - name: Replay protected metaplectic five-front certificate
+        run: python analysis/w33_pass10943_protected_metaplectic_five_front.py
+      - name: Run focused regression
+        run: python -m pytest -q tests/test_w33_pass10943_protected_metaplectic_five_front.py

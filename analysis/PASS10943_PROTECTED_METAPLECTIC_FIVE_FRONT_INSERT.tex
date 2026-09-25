@@ -1,0 +1,42 @@
+\subsection{Pass 10943: protected metaplectic supply and a null-direction resource selector}
+
+Composing the ternary-Golay Strange-state map with the exact Pass 10942
+Strange-to-$R$ converter gives
+\[
+ \delta_{\rm out}=\frac{55}{18}\delta^3+O(\delta^4),\qquad
+ q_R(\delta)=\frac{220}{27}\delta^3+O(\delta^4).
+\]
+The first nonzero fixed point of the composite map is
+$\delta_*=0.2715245018525886$. The exact $[[11,1,5]]_3$ replay has
+$|C|=243$, $|C^\perp|=729$, $d(C)=6$, and
+$d(C^\perp\setminus C)=5$, so the logical converter and repeat-until-success
+$R$ injection correct any two physical qutrit errors, subject to a still-open
+circuit-level syndrome and malignant-pair audit.
+
+An independent preparation target uses
+$L_0=\sqrt\gamma|S\rangle\langle0|$ and
+$L_N=\sqrt\gamma|S\rangle\langle N|$. Its unique steady state is
+$|S\rangle\langle S|$ and its Liouvillian gap is $\gamma/2$. This specifies
+the required reservoir; it does not show that the current Holonet hardware
+realizes it.
+
+The four-mode M36 ROM supplies a second exact route. Deleting each ray's known
+dark mode maps 27 of the 36 rays into the qutrit $R$-magic Clifford orbit and
+the remaining nine into the stabilizer set. A selected family therefore costs
+one M36 state per $R$ state and three per successful $R$ injection. The same
+family label is already the affine null direction, Hesse striation, and
+temporal $E_8$ $A_2$-component label. Each family has six origin/orientation
+choices for the exact parabolic dimensions
+$2+27+54+82+54+27+2$, with positive bracket growth $54\to81\to83$.
+In the canonical optical phase gauge
+three selector values are resource lanes and one is a stabilizer calibration
+lane. Since $\operatorname{AGL}(2,3)$ treats the four striations equivalently,
+this $3+1$ split is a programmable gauge assignment rather than an intrinsic
+preferred temporal direction.
+
+Finally, exact Clifford+$R$ is a strict subset of Clifford+$T$. The known
+borrowed-qutrit construction uses 39 $T$ gates for $R\otimes I$, while exact
+$T$ cannot be synthesized from any number of Clifford+$R$ qutrits. The native
+$R$ lane is cheaper precisely when a $T$ resource costs more than $32/13$
+distilled-Strange units. Component noise, a fabricated mode interface, and a
+physical fault-tolerance threshold remain open.
