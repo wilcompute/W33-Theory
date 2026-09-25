@@ -1,0 +1,608 @@
+{
+  "front1_54D_intertwiner": {
+    "H27_multiplicity_obstruction": {
+      "Fourier_quotient_S2_plus_L": {
+        "V_omega": 0,
+        "V_omega2": 9,
+        "linear_each": 3
+      },
+      "explanation": "P is two copies of Reg(H27). The quotient has three copies of each linear character, no V_omega, and nine copies of V_omega2. Their characters differ, so no equivariant change of basis can identify them.",
+      "invertible_H27_intertwiner_exists": false,
+      "maximum_H27_equivariant_rank": 36,
+      "positive_grade1_slice_P": {
+        "V_omega": 6,
+        "V_omega2": 6,
+        "linear_each": 2
+      }
+    },
+    "answer": "No as an H27 module; yes only after an explicit symmetry-changing 36+18 complement.",
+    "constructive_symmetry_changing_isomorphism": {
+      "coefficient_field": "Q(omega), omega^2+omega+1=0",
+      "combined_with_S1_rank": 81,
+      "counts": {
+        "P": 36,
+        "Q": 18
+      },
+      "identity": "54 = 36 from positive grade +1 plus 18 from opposite grade -2",
+      "quotient_basis_from_P": [
+        [
+          "P",
+          0,
+          0
+        ],
+        [
+          "P",
+          0,
+          1
+        ],
+        [
+          "P",
+          1,
+          0
+        ],
+        [
+          "P",
+          1,
+          1
+        ],
+        [
+          "P",
+          2,
+          0
+        ],
+        [
+          "P",
+          2,
+          1
+        ],
+        [
+          "P",
+          3,
+          0
+        ],
+        [
+          "P",
+          3,
+          1
+        ],
+        [
+          "P",
+          4,
+          0
+        ],
+        [
+          "P",
+          4,
+          1
+        ],
+        [
+          "P",
+          5,
+          0
+        ],
+        [
+          "P",
+          5,
+          1
+        ],
+        [
+          "P",
+          6,
+          0
+        ],
+        [
+          "P",
+          6,
+          1
+        ],
+        [
+          "P",
+          7,
+          0
+        ],
+        [
+          "P",
+          7,
+          1
+        ],
+        [
+          "P",
+          8,
+          0
+        ],
+        [
+          "P",
+          8,
+          1
+        ],
+        [
+          "P",
+          9,
+          0
+        ],
+        [
+          "P",
+          9,
+          1
+        ],
+        [
+          "P",
+          10,
+          0
+        ],
+        [
+          "P",
+          10,
+          1
+        ],
+        [
+          "P",
+          11,
+          0
+        ],
+        [
+          "P",
+          11,
+          1
+        ],
+        [
+          "P",
+          12,
+          0
+        ],
+        [
+          "P",
+          12,
+          1
+        ],
+        [
+          "P",
+          13,
+          0
+        ],
+        [
+          "P",
+          13,
+          1
+        ],
+        [
+          "P",
+          14,
+          0
+        ],
+        [
+          "P",
+          14,
+          1
+        ],
+        [
+          "P",
+          15,
+          0
+        ],
+        [
+          "P",
+          15,
+          1
+        ],
+        [
+          "P",
+          16,
+          0
+        ],
+        [
+          "P",
+          16,
+          1
+        ],
+        [
+          "P",
+          21,
+          0
+        ],
+        [
+          "P",
+          21,
+          1
+        ]
+      ],
+      "quotient_basis_from_Q": [
+        [
+          "Q",
+          0,
+          2
+        ],
+        [
+          "Q",
+          1,
+          2
+        ],
+        [
+          "Q",
+          2,
+          2
+        ],
+        [
+          "Q",
+          3,
+          2
+        ],
+        [
+          "Q",
+          4,
+          2
+        ],
+        [
+          "Q",
+          5,
+          2
+        ],
+        [
+          "Q",
+          6,
+          2
+        ],
+        [
+          "Q",
+          7,
+          2
+        ],
+        [
+          "Q",
+          8,
+          2
+        ],
+        [
+          "Q",
+          9,
+          2
+        ],
+        [
+          "Q",
+          10,
+          2
+        ],
+        [
+          "Q",
+          11,
+          2
+        ],
+        [
+          "Q",
+          12,
+          2
+        ],
+        [
+          "Q",
+          13,
+          2
+        ],
+        [
+          "Q",
+          14,
+          2
+        ],
+        [
+          "Q",
+          15,
+          2
+        ],
+        [
+          "Q",
+          16,
+          2
+        ],
+        [
+          "Q",
+          21,
+          2
+        ]
+      ]
+    },
+    "question": "Is the positive parabolic 54 literally the Fourier-retyped quotient?",
+    "theorem": "The previously open 54x54 intertwiner cannot exist with H27 equivariance. The exact character ceiling is rank 36, explaining the repeated 36-rank projection. Exact elimination over Q(omega) constructs the optimal replacement: 36 coordinate directions from P and 18 from Q form a quotient basis modulo S1."
+  },
+  "front2_reversible_cubic_clock": {
+    "boundary": "This is an exact logical permutation/phase compiler. The E8 bracket supplies the support and signs, but no physical Hamiltonian strength or pulse duration is inferred.",
+    "controlled_X_compiler": {
+      "ancillas": [
+        "one clean copy rail initialized to 0",
+        "one fixed rail initialized to 1"
+      ],
+      "chosen_sign_mod3": 2,
+      "chosen_supported_triad": [
+        0,
+        17,
+        26
+      ],
+      "identity": "1-x^2 equals 1 for x=0 and 0 for x=1,2 in F3",
+      "program": [
+        "SUM control into copy rail, producing y=x",
+        "apply X to target",
+        "apply sign-corrected inverse cubic tick, target += -x*y*1",
+        "uncompute the copy rail"
+      ],
+      "result": "|0>-controlled qutrit X with both ancillas returned",
+      "sign_corrected_inverse_direction": 1,
+      "truth_table": [
+        {
+          "control": 0,
+          "output": 1,
+          "target": 0
+        },
+        {
+          "control": 0,
+          "output": 2,
+          "target": 1
+        },
+        {
+          "control": 0,
+          "output": 0,
+          "target": 2
+        },
+        {
+          "control": 1,
+          "output": 0,
+          "target": 0
+        },
+        {
+          "control": 1,
+          "output": 1,
+          "target": 1
+        },
+        {
+          "control": 1,
+          "output": 2,
+          "target": 2
+        },
+        {
+          "control": 2,
+          "output": 0,
+          "target": 0
+        },
+        {
+          "control": 2,
+          "output": 1,
+          "target": 1
+        },
+        {
+          "control": 2,
+          "output": 2,
+          "target": 2
+        }
+      ]
+    },
+    "opcode": {
+      "N": "sum over 45 signed E6 triads d_ijk*x_i*x_j*x_k",
+      "inverse": "negate direction",
+      "local_truth_table_roundtrip_checks": 162,
+      "name": "E6_CUBIC_TICK(direction, history[27], clock)",
+      "reversible": true,
+      "semantics": "clock <- clock + direction*N(history) mod 3",
+      "supported_triads": 45,
+      "triads_per_history_coordinate": 5
+    },
+    "phase_kickback": {
+      "Clifford_hierarchy_level": 3,
+      "factorization": "product of 45 commuting signed qutrit CCZ gates",
+      "global_unitary": "U_N|x> = omega^N(x)|x>",
+      "non_Clifford_witness": "Conjugating X_i produces a diagonal quadratic phase with five pair monomials; this is Clifford but not Pauli, so U_N is not Clifford."
+    },
+    "universality": {
+      "citation": "arXiv:2307.10095",
+      "literature_theorem": "Roy, van de Wetering and Yeh (2023): |0>-controlled X plus Hadamard/Fourier is approximately universal in every odd prime dimension",
+      "repository_increment": "the signed E6 cubic clock exactly synthesizes the theorem's controlled-X primitive",
+      "status": "APPROXIMATELY_UNIVERSAL_WITH_EXISTING_QUTRIT_FOURIER_GATE"
+    }
+  },
+  "front3_AGL_selector_covariance": {
+    "action_on_four_null_directions": {
+      "each_S4_permutation_lifts": 18,
+      "image": "PGL(2,3) ~= S4",
+      "image_order": 24,
+      "kernel_order": 18,
+      "transitive": true
+    },
+    "boundary": "This proves finite label covariance. Implementing a chosen S4 relabeling as a low-loss four-mode optical unitary still requires hardware calibration.",
+    "canonical_three_plus_one_gauge": {
+      "R_magic_families": [
+        0,
+        1,
+        2
+      ],
+      "full_preimage_order": 108,
+      "label_stabilizer_image": "S3",
+      "label_stabilizer_order": 6,
+      "stabilizer_calibration_family": 3
+    },
+    "explicit_linear_relabelings_moving_calibration_family": {
+      "0": {
+        "family_permutation": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "matrix": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "translation": [
+          0,
+          0
+        ]
+      },
+      "1": {
+        "family_permutation": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "matrix": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "translation": [
+          0,
+          0
+        ]
+      },
+      "2": {
+        "family_permutation": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "matrix": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "translation": [
+          0,
+          0
+        ]
+      },
+      "3": {
+        "family_permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "matrix": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "translation": [
+          0,
+          0
+        ]
+      }
+    },
+    "group": "AGL(2,3)=F3^2:GL(2,3)",
+    "group_order": 432,
+    "theorem": "The full affine history group induces all 24 permutations of the four M36/null/Hesse selectors. The canonical 3+1 resource assignment has stabilizer S3 and full preimage order 108. Thus any selector can be designated as the calibration lane at the label level."
+  },
+  "front4_Golay_circuit_fault_model": {
+    "boundary": "The 66-location core and its logical-error curve are explicit. The encoded ancilla preparation/verification factories are represented by q; their own gate-level malignant-set enumeration remains separate and is not hidden.",
+    "circuit": {
+      "active_location_count": 66,
+      "destructive_measurement_banks": [
+        "X_ANCILLA_MEASURE",
+        "Z_ANCILLA_MEASURE",
+        "INJECTION_DATA_MEASURE"
+      ],
+      "locations_per_bank": 11,
+      "propagation_rule": "each physical location touches at most one coordinate of each code block; a two-qutrit fault may damage both blocks but only at that coordinate",
+      "transversal_banks": [
+        "X_SYNDROME_SUM",
+        "Z_SYNDROME_SUM",
+        "R_INJECTION_CX2"
+      ],
+      "verified_inputs": [
+        "accepted encoded |0_L> satisfying the declared clean-block contract",
+        "accepted encoded |+_L> satisfying the declared clean-block contract",
+        "accepted encoded |R_L> satisfying the declared clean-block contract"
+      ]
+    },
+    "exhaustive_support_audit": {
+      "all_correctable_by_distance_five": true,
+      "fault_subsets_of_size_at_most_two": 2212,
+      "maximum_bad_measurement_symbols": 2,
+      "maximum_surviving_block_error_weight": 2
+    },
+    "fault_tolerance_claim": "Conditioned on clean accepted input blocks, the complete transversal syndrome-plus-injection core corrects every set of at most two active location faults. More generally, an input error support of size s and r additional coordinate-local core faults is covered only when s+r<=2.",
+    "independent_stochastic_fault_curve": {
+      "formula": "P_fail <= 1-sum_{j=0}^2 C(66,j)p^j(1-p)^(66-j)",
+      "including_verified_block_rejection_or_bad_block_probability_q": "P_total <= 3*q + P_fail_transversal_core",
+      "leading_coefficient": 45760,
+      "samples": [
+        {
+          "leading_order_bound": 4.576000000000001e-08,
+          "physical_location_error": 0.0001,
+          "transversal_core_failure_upper_bound": 4.55443185387594e-08
+        },
+        {
+          "leading_order_bound": 4.576e-05,
+          "physical_location_error": 0.001,
+          "transversal_core_failure_upper_bound": 4.3650564542585535e-05
+        },
+        {
+          "leading_order_bound": 0.04576000000000001,
+          "physical_location_error": 0.01,
+          "transversal_core_failure_upper_bound": 0.02869769105276143
+        }
+      ]
+    }
+  },
+  "front5_physical_interface": {
+    "boundary": "All tolerances are sufficient engineering targets derived from declared norms, not measurements. Photon loss changes success rate and must be reported separately from conditional fidelity.",
+    "dark_Strange_reservoir": {
+      "bound": "||delta rho_ss||_1 <= 16*epsilon+8*epsilon^2",
+      "conservative_jump_operator_relative_error_at_most": 0.0006248048094750214,
+      "ideal_gap": "gamma/2",
+      "ideal_jumps": [
+        "sqrt(gamma)|S><0|",
+        "sqrt(gamma)|S><N|"
+      ],
+      "one_percent_coherence_settling_gamma_t": 9.210340371976184,
+      "one_percent_population_settling_gamma_t": 4.605170185988092,
+      "pump_falsifier": "perform qutrit state/process tomography versus gamma*t; reject if the steady-state trace distance exceeds 0.01 or the fitted decay is statistically incompatible with the declared gamma/2 ideal-gap model",
+      "resulting_steady_state_trace_distance_bound": 0.01
+    },
+    "four_to_three_mode_interface": {
+      "all_M36_rays_checked": 36,
+      "family_dark_modes": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3
+      },
+      "fidelity_budget": {
+        "conditional_product_bound": 0.9900000000000001,
+        "core_mode_transform_fidelity_at_least": 0.9966554934125964,
+        "differential_loss_dB_at_most": 0.5028809740349482,
+        "equal_three_coherence_factor_allocation": 0.9966554934125964,
+        "residual_phase_radians_at_most": 0.057863994221833394,
+        "target_conditional_fidelity": 0.99
+      },
+      "ideal_success_probability_conditioned_on_photon_survival": 1,
+      "partial_isometry": "W_f deletes dark mode f; W_f W_f^dag=I3 and W_f^dag W_f=I4-|f><f|",
+      "separate_dark_port_budget": {
+        "correct_output_probability_per_surviving_input_lower_bound": 0.98901,
+        "dark_port_extinction_dB_at_least": 30.0,
+        "dark_port_leakage_probability_at_most": 0.001
+      },
+      "tomography_falsifier": "for every family, reconstruct the complex 3x4 transfer matrix and reject if the declared dark column, conditional process fidelity, phase, or loss budget fails"
+    }
+  },
+  "global_boundary": "The packet closes the finite maps, reversible instruction semantics, selector group, transversal-core fault curve, and sufficient interface tolerances. It does not claim a fabricated device, measured rates, or a completed encoded-ancilla factory.",
+  "schema": "w33.pass10944.five_front_computational_closure.v1",
+  "status": "PASS_FIVE_FRONT_COMPUTATIONAL_AND_PHYSICAL_INTERFACE_CLOSURE"
+}

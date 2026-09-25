@@ -1,0 +1,30 @@
+name: W33 Pass 10944 five-front computational closure
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass10944_five_front_computational_closure.py'
+      - 'analysis/PASS10944_*'
+      - 'analysis/W33_SHARED_FRONTIER_TAIL.tex'
+      - 'data/w33_pass10944_five_front_computational_closure.json'
+      - 'docs/index.html'
+      - 'tests/test_w33_pass10944_five_front_computational_closure.py'
+      - '.github/workflows/w33_pass10944_five_front_computational_closure.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: python -m pip install numpy sympy pytest
+      - name: Replay Pass 10944
+        run: python analysis/w33_pass10944_five_front_computational_closure.py
+      - name: Run focused regression
+        run: python -m pytest -q tests/test_w33_pass10944_five_front_computational_closure.py

@@ -1,0 +1,40 @@
+\subsection{Pass 10944: a cubic universal opcode and the exact 54-dimensional obstruction}
+
+The positive parabolic $54$ and the Fourier quotient are not isomorphic
+$H_{27}$-modules.  Their multiplicities are respectively
+\[
+ P: (\chi_{u,v}^{\,2},V_\omega^{\,6},V_{\omega^2}^{\,6}),\qquad
+ S_2+L:(\chi_{u,v}^{\,3},V_\omega^{\,0},V_{\omega^2}^{\,9}),
+\]
+where the exponent denotes multiplicity and $(u,v)$ ranges over nine linear
+characters.  Hence an equivariant map has rank at most
+$9\min(2,3)+3\min(6,0)+3\min(6,9)=36$; an invertible intertwiner is
+impossible.  Exact elimination over $\mathbb Q(\omega)$ constructs the optimal
+symmetry-changing quotient basis from $36$ positive-grade and $18$
+opposite-grade coordinates.
+
+The signed $E_6$ cubic nevertheless supplies a reversible instruction
+\[
+ t\longmapsto t+sN(x)\pmod3,
+ \qquad N(x)=\sum d_{ijk}x_ix_jx_k.
+\]
+Phase kickback is a product of $45$ signed qutrit CCZ gates.  On one supported
+triad, Clifford copying, a fixed trit, and the inverse tick implement
+$t\mapsto t+1-x^2$, the $|0\rangle$-controlled qutrit $X$.  Together with the
+already compiled qutrit Fourier gate this is approximately universal by the
+odd-prime controlled-$X$ universality theorem.
+
+The full $\operatorname{AGL}(2,3)$ acts on the four M36/null/Hesse selectors
+through $\operatorname{PGL}(2,3)\cong S_4$, with kernel $18$.  Thus the
+three-resource/one-calibration assignment is movable rather than geometrically
+preferred.  A $66$-location transversal Golay syndrome-plus-injection core
+corrects all $2212$ fault subsets of size at most two when conditioned on clean
+accepted encoded inputs, giving the independent-noise bound
+$P_{\rm fail}\le 1-\sum_{j=0}^2{66\choose j}p^j(1-p)^{66-j}$.
+
+Finally, the family partial isometries $W_f$ delete the exact dark mode and
+satisfy $W_fW_f^\dagger=I_3$.  A sufficient $99\%$ conditional interface
+budget is core fidelity $0.9966554934$, phase error at most $0.057864$ radians,
+and differential loss at most $0.502881$ dB, with dark-port leakage reported
+separately and bounded by $10^{-3}$ (30 dB extinction).  These are engineering
+falsifiers; no fabricated device or measured rate is asserted.
