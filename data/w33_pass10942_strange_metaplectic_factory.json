@@ -1,0 +1,164 @@
+{
+  "schema": "w33.pass10942.strange_metaplectic_factory.v1",
+  "status": "PASS_DARK_STRANGE_TO_SEVEN_QUTRIT_METAPLECTIC_UNIVERSAL_PORT",
+  "dark_ray_input": {
+    "repository_identity": "(1,-omega,0) = Z X^2 (0,1,-1)",
+    "canonicalization": "apply the inverse Clifford (Z X^2)^-1 to obtain |S>",
+    "physical_boundary": "The Clifford equivalence to the qutrit Strange state is exact finite linear algebra. It does not identify the dark ray with the separate M36 ququart resource, prove a physical magic-state injection route, or show that the dark root coordinates are dynamically populated."
+  },
+  "two_strange_to_norell": {
+    "input": "|S> tensor |S>, |S>=(|1>-|2>)/sqrt(2)",
+    "stabilizer": "Z1 Z2",
+    "logical_Z": "Z2",
+    "logical_X": "X1^2 X2",
+    "decoder_basis": [
+      "|00>",
+      "|21>",
+      "|12>"
+    ],
+    "output": "|N>=(|1>+|2>)/sqrt(2)",
+    "acceptance_probability": {
+      "numerator": 1,
+      "denominator": 2
+    },
+    "projective_output_error": 7.437084071668676e-18
+  },
+  "two_norell_to_reflection_magic": {
+    "input": "|N> tensor |N>",
+    "stabilizer": "omega X1 X2",
+    "logical_X": "X2",
+    "logical_Z": "Z1^2 Z2",
+    "decoded_output": "X^2 |U_Z(pi/3,2*pi/3)>",
+    "acceptance_probability": {
+      "numerator": 1,
+      "denominator": 4
+    },
+    "decoded_output_error": 3.16909782277795e-16,
+    "pauli_correction": "X^2 Z",
+    "corrected_output": "|R>=R|+>=(|0>+|1>-|2>)/sqrt(3)",
+    "corrected_output_error": 2.0638871315956372e-16
+  },
+  "four_strange_factory": {
+    "pure_batch_success_probability": {
+      "numerator": 1,
+      "denominator": 16
+    },
+    "pure_batch_inputs": 4,
+    "naive_restart_expected_Strange_states_per_R": 64,
+    "buffered_expected_Strange_states_per_N": 4,
+    "buffered_expected_Strange_states_per_R": 32,
+    "buffered_expected_Strange_states_per_injected_R_gate": 96,
+    "all_quantum_operations_before_R_injection": "Clifford unitaries and Pauli stabilizer projections"
+  },
+  "reflection_injection": {
+    "resource": "|R>=R|+>, R=diag(1,1,-1)",
+    "controlled_gate": "controlled-X^2 with resource control and data target",
+    "measurement": "computational Z on data qutrit",
+    "branches": [
+      {
+        "outcome": 0,
+        "raw_branch": "R X^-0 / sqrt(3)",
+        "tracked_branch": "X^0 R X^-0",
+        "probability": {
+          "numerator": 1,
+          "denominator": 3
+        },
+        "maximum_error": 1.9229626863835638e-16
+      },
+      {
+        "outcome": 1,
+        "raw_branch": "R X^-1 / sqrt(3)",
+        "tracked_branch": "X^1 R X^-1",
+        "probability": {
+          "numerator": 1,
+          "denominator": 3
+        },
+        "maximum_error": 1.9229626863835638e-16
+      },
+      {
+        "outcome": 2,
+        "raw_branch": "R X^-2 / sqrt(3)",
+        "tracked_branch": "X^2 R X^-2",
+        "probability": {
+          "numerator": 1,
+          "denominator": 3
+        },
+        "maximum_error": 1.9229626863835638e-16
+      }
+    ],
+    "tracked_branch_group_projective_order": 4,
+    "desired_branch_probability_each_round": {
+      "numerator": 1,
+      "denominator": 3
+    },
+    "repeat_until_success_expected_R_resources": 3,
+    "R_is_Clifford": false,
+    "R_magic_maximum_stabilizer_fidelity": {
+      "numerator": 7,
+      "denominator": 9
+    },
+    "universality": "Clifford+R is approximately universal"
+  },
+  "noise_transfer": {
+    "input_family": "rho_S(p)=(1-p)|S><S|+p I/3",
+    "stage1_acceptance": "(p**2 - 2*p + 3)/6",
+    "stage1_N_fidelity": "(5*p**2 - 12*p + 9)/(3*(p**2 - 2*p + 3))",
+    "four_input_total_acceptance": "-(p - 3)*(p + 1)*(5*p**2 - 10*p + 9)/432",
+    "output_R_fidelity": "-(p - 3)*(9*p**2 - 14*p + 9)/(3*(p + 1)*(5*p**2 - 10*p + 9))",
+    "depolarizing_equivalent_output_error": "4*p*(3*p**2 - 7*p + 6)/((p + 1)*(5*p**2 - 10*p + 9))",
+    "output_error_minus_input_error": "-p*(p - 1)*(5*p**2 - 12*p + 15)/((p + 1)*(5*p**2 - 10*p + 9))",
+    "strict_amplification_sign_certificate": {
+      "domain": "0<p<1",
+      "positive_factors": [
+        "p",
+        "1-p",
+        "p+1",
+        "5*p**2-10*p+9"
+      ],
+      "remaining_quadratic": "5*p**2-12*p+15",
+      "remaining_quadratic_discriminant": -156,
+      "remaining_quadratic_leading_coefficient": 5
+    },
+    "strictly_amplifies_depolarizing_error_for_0_lt_p_lt_1": true,
+    "small_p_output_error": "q(p)=8*p/3+O(p^2)",
+    "role": "resource conversion after Strange distillation; not itself a distillation protocol"
+  },
+  "seven_qutrit_vm": {
+    "clifford_target": "Sp(14,3) plus seven-mode Heisenberg translations",
+    "new_opcode": "R_INJECT(mode)",
+    "applicable_modes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "logical_gate_set": "seven-qutrit Clifford+R",
+    "ideal_algebraic_universality": "approximately universal",
+    "relation_to_T_lane": "strictly less expressive exactly, but independently approximately universal"
+  },
+  "cyclotomic_firewall": {
+    "stabilizer_amplitude_field": "K=Q(omega,sqrt(3))=Q(zeta_12)",
+    "field_degree_K_over_Q": 4,
+    "identities": [
+      "omega=zeta_12^4",
+      "sqrt(3)=zeta_12+zeta_12^-1",
+      "i=(2*omega+1)/sqrt(3)"
+    ],
+    "T_magic_required_ratio": "zeta_9",
+    "zeta9_minimal_polynomial": "Phi_9(x)=x^6+x^3+1",
+    "field_degree_Q_zeta9_over_Q": 6,
+    "degree_obstruction": "6 does not divide 4, so zeta_9 is not in K",
+    "finite_stabilizer_protocol_closure": "tensoring, Clifford matrices, Pauli projection, postselection, and decoding preserve projective amplitude ratios in K",
+    "exact_Strange_to_T_by_finite_stabilizer_protocol": false,
+    "interpretation": "The internal Strange lane closes universality through R, not by secretly manufacturing the ninth-root T analyzer. Approximation remains possible because Clifford+R is dense."
+  },
+  "literature_ownership": {
+    "two_stage_reduction": "Anwar-Campbell-Browne (2012), reviewed explicitly by Prakash (2020)",
+    "Clifford_plus_R_universality": "metaplectic qutrit literature; summarized and compared with T by Glaudell et al. (2022)",
+    "repository_increment": "exact current-convention decoders, dark-H27 and seven-mode VM weld, symbolic noise map, resource costs, and cyclotomic separation from the T lane"
+  },
+  "boundary": "This closes an ideal algebraic universal port conditional on preparing the certified dark Strange ray as a physical qutrit state. The conversion amplifies small depolarizing error, so Strange distillation or another protected source must precede it. No dynamical population of the dark ray, fault-tolerance threshold, or laboratory implementation is proved."
+}

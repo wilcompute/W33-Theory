@@ -1,0 +1,42 @@
+\subsection{Pass 10942: the dark Strange ray opens a metaplectic universal port}
+
+The certified dark H27 ray is Clifford-equivalent to the canonical qutrit
+Strange state $|S\rangle=(|1\rangle-|2\rangle)/\sqrt2$.  An exact replay of
+the two stabilizer reductions in the repository's Pauli convention gives
+\[
+ |S\rangle^{\otimes2}\xrightarrow[1/2]{Z_1Z_2=1}|N\rangle,
+ \qquad
+ |N\rangle^{\otimes2}\xrightarrow[1/4]{\omega X_1X_2=1}
+ X^2|U_Z(\pi/3,2\pi/3)\rangle.
+\]
+The Pauli correction $X^2Z$ yields
+$|R\rangle=R|+\rangle=(|0\rangle+|1\rangle-|2\rangle)/\sqrt3$ for
+$R=\operatorname{diag}(1,1,-1)$.  A pure four-Strange batch succeeds with
+probability $1/16$; buffering successful Norell intermediates costs $32$
+Strange states per $R$ state on average.
+
+Controlled-$X^2$ injection has exact branches
+$K_m=3^{-1/2}RX^{-m}$.  Pauli tracking gives the three conjugate reflections
+$X^mRX^{-m}$, whose projective closure has order four.  Repeat until the
+desired branch succeeds consumes three $R$ resources on average.  Hence the
+buffered logical cost is $96$ Strange states per injected $R$ gate.  The gate
+is non-Clifford and $|R\rangle$ has maximum stabilizer fidelity $7/9$.
+Adding \texttt{R\_INJECT(mode)} to the Pass 10941 $F/P/CZ$ compiler gives
+approximately universal seven-qutrit Clifford+$R$ on every mode.
+
+This converter is not a distiller.  For
+$\rho_S(p)=(1-p)|S\rangle\!\langle S|+pI/3$, the exact output-equivalent error is
+\[
+ q(p)=\frac{4p(3p^2-7p+6)}{(p+1)(5p^2-10p+9)}
+     =\frac83p+O(p^2),
+\]
+and $q(p)-p>0$ for $0<p<1$.  A protected or pre-distilled Strange source must
+precede the circuit.
+
+Finally, finite stabilizer processing preserves projective amplitude ratios in
+$\mathbb Q(\zeta_{12})$, of degree four.  The Pass 10941 $T$ state requires
+$\zeta_9$, of degree six, so exact stabilizer-only Strange-to-$T$ conversion is
+impossible.  The internal Strange lane closes algebraic universality through
+$R$ rather than secretly supplying the ninth-root analyzer resource.  Physical
+population of the dark ray, a distillation threshold, and a laboratory
+implementation remain open.

@@ -1873,6 +1873,27 @@
           upgrades a finite result into a physical one &mdash; that boundary is
           unchanged and is stated in <a href="#numbers">Core Numbers</a>.</p>
         <div class="card-grid">
+          <div class="card" id="pass10942-strange-metaplectic-factory">
+            <div class="num">4 Strange &rarr; R &rarr; 7-qutrit universal port</div>
+            <div class="label">Pass 10942 turns the dark H27 ray into an exact metaplectic resource factory</div>
+            <div class="detail">The certified dark ray is Clifford-equivalent to
+              the qutrit Strange state. Two exact stabilizer reductions give
+              Strange<sup>&otimes;2</sup>&rarr;Norell with probability
+              <strong>1/2</strong>, then Norell<sup>&otimes;2</sup>&rarr;
+              <code>|R&rang;=diag(1,1,&minus;1)|+&rang;</code> with probability
+              <strong>1/4</strong>. Buffering costs 32 Strange states per R state;
+              repeat-until-success injection costs 96 per desired logical R gate.
+              Adding <code>R_INJECT(mode)</code> to Pass 10941 gives approximately
+              universal seven-qutrit Clifford+R. The exact noise map has
+              <code>q(p)=8p/3+O(p&sup2;)</code> and satisfies
+              <code>q(p)&gt;p</code> for <code>0&lt;p&lt;1</code>, so this circuit is a
+              converter after Strange distillation, not a distiller. A degree
+              4-versus-6 cyclotomic obstruction proves finite stabilizer processing
+              cannot turn exact Strange into the ninth-root T state; the R and T
+              universal lanes are algebraically distinct. Physical dark-ray
+              preparation and a fault-tolerance threshold remain open.
+              <a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/PASS10942_RESERVATION.md">Report and exact certificate</a>.</div>
+          </div>
           <div class="card" id="pass10941-triality-vm-five-front">
             <div class="num">18D chart &rarr; 7-qutrit ABI &rarr; W<sub>90</sub> lattice</div>
             <div class="label">Pass 10941 closes five triality virtual-machine fronts</div>

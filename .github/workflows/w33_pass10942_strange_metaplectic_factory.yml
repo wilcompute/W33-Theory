@@ -1,0 +1,28 @@
+name: W33 Pass 10942 Strange metaplectic factory
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass10942_strange_metaplectic_factory.py'
+      - 'analysis/PASS10942_*'
+      - 'data/w33_pass10942_strange_metaplectic_factory.json'
+      - 'tests/test_w33_pass10942_strange_metaplectic_factory.py'
+      - '.github/workflows/w33_pass10942_strange_metaplectic_factory.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install exact-algebra dependencies
+        run: python -m pip install numpy sympy pytest
+      - name: Replay exact resource factory
+        run: python analysis/w33_pass10942_strange_metaplectic_factory.py
+      - name: Run focused regression
+        run: python -m pytest -q tests/test_w33_pass10942_strange_metaplectic_factory.py
