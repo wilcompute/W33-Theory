@@ -78,3 +78,10 @@ def test_lorentzian_peirce_slice_only_in_clock_real_form():
     assert j["peirce0_determinant_inertia"] == [1, 9, 0]
     assert j["control_split_cubic_peirce0_inertia"] == [5, 5]
     assert j["tripotent_sign_split"]["committed_split_Theta"] == {"False": 15, "True": 12}
+
+
+def test_visible_surfaces_are_unique():
+    docs = (ROOT / "docs/index.html").read_text(encoding="utf-8")
+    tail = (ROOT / "analysis/W33_SHARED_FRONTIER_TAIL.tex").read_text(encoding="utf-8")
+    assert docs.count('id="pass10949-freudenthal-quasiconformal-clock-cone"') == 1
+    assert tail.count("PASS10949_FREUDENTHAL_QUASICONFORMAL_CLOCK_CONE_INSERT}%") == 1

@@ -49,3 +49,10 @@ def test_matter_parity_is_peirce_symmetry_and_two_pi_rotation():
     assert m["coordinate_idempotents_reproducing_Qpsi_spectrum_and_triad_patterns"] == 27
     assert all(m["peirce_symmetry_U_(2c-e)"].values())
     assert m["two_pi_rotation_equals_U_s_max_error"] < 1e-8
+
+
+def test_visible_surfaces_are_unique():
+    docs = (ROOT / "docs/index.html").read_text(encoding="utf-8")
+    tail = (ROOT / "analysis/W33_SHARED_FRONTIER_TAIL.tex").read_text(encoding="utf-8")
+    assert docs.count('id="pass10950-clock-albert-lorentz-spinor"') == 1
+    assert tail.count("PASS10950_CLOCK_ALBERT_LORENTZ_SPINOR_INSERT}%") == 1
