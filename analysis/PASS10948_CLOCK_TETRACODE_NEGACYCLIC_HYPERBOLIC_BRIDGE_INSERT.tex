@@ -1,0 +1,49 @@
+\subsection{Pass 10948: the clock tetracode is a reciprocal negacyclic hyperbolic pair}
+
+The exact oriented clock code from Pass~10946,
+\[
+ C=\{(a,b,a+b,b-a):a,b\in\mathbb F_3\},
+\]
+is not negacyclic in its frozen orientation.  However, flipping either the
+second or the fourth projective-ray representative gives the two codes
+\[
+ C_+=(x^2+x-1),\qquad C_-=(x^2-x-1)
+ \subset \mathbb F_3[x]/(x^4+1),
+\]
+where
+\[
+ x^4+1=(x^2+x-1)(x^2-x-1).
+\]
+Thus the two standard negacyclic gauges are precisely the two reciprocal
+irreducible factors of $\Phi_8$ modulo $3$.
+
+For the negacyclic shift
+\[
+ N(c_0,c_1,c_2,c_3)=(-c_3,c_0,c_1,c_2)
+\]
+one has $N^4=-I$ and $N^8=I$ on both sectors, so the algebraic clock has
+exact order eight.  Each sector is a self-dual $[4,2,3]_3$ tetracode.
+They meet only at zero and pair perfectly across one another: in polynomial
+bases $(g_+,Ng_+)$ and $(g_-,Ng_-)$ the cross Gram matrix is
+\[
+ \begin{pmatrix}1&1\\2&1\end{pmatrix},
+ \qquad \det=2\pmod3.
+\]
+Cyclotomic inversion $x\mapsto x^{-1}=-x^3$ exchanges the two sectors.
+
+Exhaustive signed-coordinate enumeration gives eight distinct tetracode
+images under the order-$384$ signed permutation group.  Exactly two images
+are standard negacyclic; each has $48$ presentations, hence $96$ of the
+$384$ signed gauges yield negacyclicity.  This $48$ is the same monomial
+stabilizer scale already attached to the clock tetracode.
+
+The mechanism is objectwise compatible with the older Pass~9961--9984
+$\Phi_8$ split branch: that pass uses the same reciprocal factors to obtain
+two conjugate $\mathbb F_9$ spaces with vanishing restricted forms and
+nondegenerate cross-pairing.  Pass~10948 therefore identifies the four-ray
+clock code as the rank-one finite shadow of that reciprocal-prime mechanism,
+not merely a repeated factor count.
+
+This is a reversible coding/cyclotomic statement.  The order-eight
+negacyclic shift is not a thermodynamic arrow and does not by itself promote
+the finite clock to physical time.
