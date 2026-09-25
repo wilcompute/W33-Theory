@@ -1,0 +1,28 @@
+\subsection{Pass 10953: the minimal doubled Pin clock has an exact visibility word}
+
+The order-eight clock of Pass 10952 has a minimal complex-linear unitary
+carrier
+\[
+ \mathcal H_\omega\oplus\mathcal H_{\omega^{-1}},
+ \qquad \dim=3+3=6.
+\]
+Indeed the determinant-odd tick inverts the Heisenberg centre, so a linear
+implementer must biject the three-dimensional $\omega$ and
+$\omega^{-1}$ eigenspaces.  On the minimal carrier
+$\Gamma=\operatorname{diag}(I_3,-I_3)$ anticommutes with the tick $D$,
+so odd powers swap conjugate sectors and even powers preserve them.
+
+The unitary spectrum is
+$\{\zeta_8^k:k=0,1,3,4,5,7\}$ and
+$D^6-D^4+D^2-I=0$. Its normalized trace--Choi visibility is
+\[
+ \frac{|\operatorname{Tr}D^n|}{6}
+   =(1,0,\tfrac13,0,\tfrac13,0,\tfrac13,0).
+\]
+The physical bare-qutrit even subgroup has
+$|\operatorname{Tr}V^n|/3=(1,\tfrac13,\tfrac13,\tfrac13)$; its
+generator is in the order-four Fourier symplectic class and, in the frozen
+lift, Clifford-conjugate to a Pauli-displaced $F_3$.  Thus the clock lands
+objectwise in the repository's existing $1/3$ Bell-qutrit visibility
+calibration. The doubled sector is a conjugate-representation register, not
+an identification with literal past/future or physical chirality.

@@ -1873,6 +1873,25 @@
           upgrades a finite result into a physical one &mdash; that boundary is
           unchanged and is stated in <a href="#numbers">Core Numbers</a>.</p>
         <div class="card-grid">
+          <div class="card" id="pass10953-minimal-pin-clock-visibility">
+            <div class="num">minimal 3+3 carrier &rarr; Z<sub>8</sub> visibility 1,0,1/3,0,1/3,0,1/3,0</div>
+            <div class="label">Pass 10953: determinant parity becomes a minimal conjugate-sector clock register</div>
+            <div class="detail">The determinant-odd tick inverts the qutrit
+              Heisenberg center <code>&omega;&harr;&omega;<sup>&minus;1</sup></code>.
+              Any complex-linear implementer retaining one faithful 3D qutrit sector
+              must therefore carry an equally large conjugate sector:
+              <strong>dimension 6 is minimal</strong>. On
+              <code>H<sub>&omega;</sub>&oplus;H<sub>&omega;&minus;1</sub></code>,
+              <code>&Gamma;=diag(I,&minus;I)</code> anticommutes with one tick, so
+              odd powers swap sectors and even powers preserve them. The unitary
+              spectrum is <code>&zeta;<sub>8</sub><sup>{0,1,3,4,5,7}</sup></code>
+              with minimal polynomial <code>x<sup>6</sup>&minus;x<sup>4</sup>+x<sup>2</sup>&minus;1</code>.
+              Its trace-Choi visibility is <strong>1,0,1/3,0,1/3,0,1/3,0</strong>.
+              The physical even qutrit C<sub>4</sub> is in the Fourier order-four
+              class and has visibility <strong>1,1/3,1/3,1/3</strong>, directly
+              matching the existing Bell-qutrit calibration.
+              <a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/PASS10953_MINIMAL_DOUBLED_PIN_CLOCK_VISIBILITY.md">Report and certificate</a>.</div>
+          </div>
           <div class="card" id="pass10952-clock-complete-positivity">
             <div class="num">odd ticks: Choi (6,3,0) &nbsp;|&nbsp; even ticks: Choi (1,0,8)</div>
             <div class="label">Pass 10952: the order-eight algebraic clock has an exact complete-positivity grading</div>
