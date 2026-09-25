@@ -1,0 +1,41 @@
+\subsection{Pass 10949: the tick line's Freudenthal system, the quasiconformal cone, and the Lorentzian clock form}
+
+% Repo prior art: analysis/w33_magic_square_substrate.py (56=2*27+2 as a count);
+% manuscripts/parts/PART_CCLXXXV_ALBERT_JORDAN_BRIDGE.md; analysis/w33_e8_split_real_form_involution.py;
+% analysis/w33_20260925_e8_parabolic_cubic_clock_lift.py.
+On the committed Chevalley basis, the Hesse striation's $|3|$-grading is the
+$\alpha_7$ coefficient and its positive tick line's contact grading is the
+$\alpha_8$ coefficient.  The contact layer $\mathfrak g_{-1}$ ($56$ roots) sits at
+clock degrees $0,-1,-2,-3$ with sizes $1,27,27,1$, while the clock layer ($54$
+roots) meets it in exactly one $27$: the count $54+2=56$ is not an objectwise
+statement.  The poles are $e_{-\alpha_8}$ (the $A_1$ of the $|3|$ Levi) and
+$e_{-(\theta-\alpha_8)}$ (a clock-doublet vector).
+
+The bracket $[x_i,x_j]=\Omega_{ij}e_{-\theta}$ is a unimodular signed matching
+pairing $X_k$ with $Y_k$ of the same history label.  The quartic
+$Q(x)=\tfrac16\,\mathrm{coeff}_{e_{-\theta}}\,\mathrm{ad}_x^4e_\theta$ has $1036$
+monomials, is exactly $E_7$-invariant, and equals
+\[
+Q=(\alpha\beta+T(X,Y))^2-4\beta N(X)-4\alpha N(Y)+4T(X^\#,Y^\#),
+\]
+where $N$ is the repository's signed $45$-triad $E_6$ cubic, with no sign repair.
+That cubic satisfies $(X^\#)^\#=N(X)X$, and its $45$ triads are exactly the
+strongly orthogonal root triples (coordinate Jordan frames).
+
+With $v_p=\exp(\mathrm{ad}(X+\tau e_{-\theta}))e_\theta$ one has
+$N(X,\tau)=Q(X)/4-\tau^2$, the Heisenberg law
+$(X_1,\tau_1)(X_2,\tau_2)=(X_1+X_2,\tau_1+\tau_2+\tfrac12\Omega(X_1,X_2))$, and the
+Weyl inversion $i$ satisfies $D(i(p),i(p'))=D(p,p')/(N(p)N(p'))$, where
+$D(p,p')=N(X-X',\tau-\tau'-\tfrac12\Omega(X',X))$: the
+G\"unaydin--Koepsell--Nicolai quasiconformal light cone, objectwise.
+
+The Killing form obeys $K(e_\alpha,e_{-\alpha})=-60(-1)^{\mathrm{ht}\,\alpha}$, so the
+certified split involution is the compact one twisted by $\exp(i\pi\rho^\vee)$.
+The three tick lines give three commuting $E_{8(-24)}$ involutions with
+$E_8=80+56+56+56$; the clock twist restricts to $E_{7(-25)}$ on the contact Levi,
+the height twist to $E_{7(7)}$.  In the clock form the Hermitian Jordan triple
+$\{x,y,z\}=-[[x,\sigma_c y],z]$ on $27$ roots yields a Euclidean Jordan algebra
+(trace form $(27,0)$) with Peirce split $1+16+10$ and a Lorentzian $(1,9)$
+Peirce-$0$ determinant; the committed split cubic gives $(5,5)$.  Signature is a
+real-form datum invisible over $\mathbb F_3$.  This is finite Lie and Jordan
+algebra, not a derivation of physical spacetime.

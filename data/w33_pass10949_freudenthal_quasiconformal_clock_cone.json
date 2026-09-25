@@ -1,0 +1,524 @@
+{
+  "schema": "w33.pass10949.freudenthal_quasiconformal_clock_cone.v1",
+  "parents": [
+    "artifacts/e8_structure_constants_w33_discrete.json",
+    "extracted_v13/W33-Theory-master/artifacts/e8_root_metadata_table.json",
+    "extracted_v13/W33-Theory-master/artifacts/canonical_su3_gauge_and_cubic.json",
+    "data/w33_20260925_hesse_clock_e8_gradings.json",
+    "data/w33_20260925_e8_parabolic_cubic_clock_lift.json",
+    "data/w33_e8_split_real_form_involution.json"
+  ],
+  "bigrading": {
+    "root_counts_a8_a7": {
+      "-2,-3": 1,
+      "-1,-3": 1,
+      "-1,-2": 27,
+      "-1,-1": 27,
+      "-1,0": 1,
+      "0,-1": 27,
+      "0,0": 72,
+      "0,1": 27,
+      "1,0": 1,
+      "1,1": 27,
+      "1,2": 27,
+      "1,3": 1,
+      "2,3": 1
+    },
+    "contact_minus1_56_by_clock_degree": {
+      "-3": 1,
+      "-2": 27,
+      "-1": 27,
+      "0": 1
+    },
+    "clock_minus1_54_by_contact_degree": {
+      "-1": 27,
+      "0": 27
+    },
+    "overlap_of_contact56_and_clock54": 27,
+    "poles": {
+      "alpha": {
+        "root": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ],
+        "clock_degree": 0,
+        "reading": "lowering vector of the A1 factor of the |3| Levi"
+      },
+      "beta": {
+        "root": [
+          -2,
+          -3,
+          -4,
+          -6,
+          -5,
+          -4,
+          -3,
+          -1
+        ],
+        "clock_degree": -3,
+        "reading": "one member of the two-dimensional clock doublet"
+      }
+    },
+    "verdict_on_54_plus_2": "REFUTED objectwise: the clock 54 and the contact 56 share exactly one 27. The Freudenthal 56 of the tick line is 1+27+27bar+1 with the pieces at clock degrees 0,-1,-2,-3; its second 27 is the clock's second-order layer and its poles are an A1 root vector and a clock-doublet vector."
+  },
+  "heisenberg": {
+    "omega_values": {
+      "1": 28,
+      "-1": 28
+    },
+    "omega_is_signed_perfect_matching": true,
+    "det_omega": 1,
+    "pairing": "alpha<->beta and X_k<->Y_k with the same canonical i27 history label",
+    "omega_alpha_beta": -1,
+    "g_minus3_is_zero_so_center_is_f": true
+  },
+  "quartic": {
+    "definition": "Q(x) = (1/6) * coefficient of e_{-theta} in ad_x^4 e_theta, x in g_{-1}",
+    "nonzero_ordered_chains": 19768,
+    "content_of_ad4_polynomial": 6,
+    "monomials": 1036,
+    "coefficient_histogram": {
+      "-4": 308,
+      "-2": 210,
+      "1": 28,
+      "2": 168,
+      "4": 322
+    },
+    "all_monomials_have_weight_minus_2_theta": true,
+    "e7_root_generators_checked": 126,
+    "e7_invariance_failures": 0,
+    "monomial_types": {
+      "XXXb": 45,
+      "XXYY": 918,
+      "XYab": 27,
+      "YYYa": 45,
+      "aabb": 1
+    }
+  },
+  "freudenthal_normal_form": {
+    "identity": "Q(alpha,X,Y,beta) = (alpha*beta + T(X,Y))^2 - 4*beta*N(X) - 4*alpha*N(Y) + 4*T(X#,Y#)",
+    "N": "sum over the repository's 45 canonical triads d_ijk x_i x_j x_k (canonical_su3_gauge_and_cubic.json)",
+    "sharp": "X#_k = dN/dX_k",
+    "T": "T(X,Y) = sum_k t_k X_k Y_k with t_k = Omega(X_k,Y_k) Omega(alpha,beta)",
+    "t_k_histogram": {
+      "-1": 15,
+      "1": 12
+    },
+    "sign_repairs_needed": 0,
+    "residual_monomials": 0,
+    "reading": "The contact 56 of the positive Hesse tick line is, coordinate for coordinate, the Freudenthal triple system of the split Albert algebra whose norm is the committed E6 cubic. The cubic history volume N(X) enters the quartic only multiplied by the clock-doublet pole beta."
+  },
+  "albert": {
+    "adjoint_identity_(X#)#=N(X)X_polynomial_failures": 0,
+    "euler_identity_X.X#=3N": true,
+    "index_in_triads": {
+      "5": 27
+    },
+    "pair_in_triads": {
+      "1": 135
+    },
+    "triads_are_strongly_orthogonal_root_triples_in_layers": {
+      "0,1": {
+        "strongly_orthogonal_triples": 45,
+        "equal_to_canonical_triads": true
+      },
+      "1,1": {
+        "strongly_orthogonal_triples": 45,
+        "equal_to_canonical_triads": true
+      },
+      "-1,-1": {
+        "strongly_orthogonal_triples": 45,
+        "equal_to_canonical_triads": true
+      },
+      "-1,-2": {
+        "strongly_orthogonal_triples": 45,
+        "equal_to_canonical_triads": true
+      }
+    },
+    "split_peirce_for_each_coordinate_idempotent": {
+      "J1": 1,
+      "J1/2": 16,
+      "J0": 10,
+      "J0_quadratic_inertia": [
+        5,
+        5
+      ],
+      "reading": "over Q the committed cubic is the split Albert algebra; its Peirce-0 slice is five hyperbolic planes"
+    }
+  },
+  "light_cone_57": {
+    "big_cell": "p=(X,tau) -> v_p = exp(ad(X + tau e_{-theta})) e_theta, X in the 56, tau central",
+    "norm_identity_symbolic": "coeff_{e_-theta}(v_p) = N(X,tau) = Q(X)/4 - tau^2 (exact polynomial identity)",
+    "heisenberg_law": "(X1,t1)(X2,t2) = (X1+X2, t1+t2+Omega(X1,X2)/2); checked at 3 random points (|coords|<=1e4)",
+    "heisenberg_law_checks": 3,
+    "distance": "D(p,p') = coeff_{e_-theta} exp(-ad n')v_p = N(X-X', tau-tau'-Omega(X',X)/2) = B(v_p,v_p')/B(e_-theta,e_theta)",
+    "distance_checks": 3,
+    "weyl_element": "w = exp(ad e) exp(-ad f) exp(ad e): w(e_theta) = -e_-theta, w(e_-theta) = -e_theta",
+    "inversion_points": 6,
+    "inverted_points_in_big_cell": 6,
+    "scale_factor_identity": "w v_p = c_p v_{i(p)} with c_p = -N(p)",
+    "quasiconformal_identity": "D(i(p), i(p')) = D(p,p') / (N(p) N(p'))",
+    "quasiconformal_pairs_checked": 15,
+    "reading": "The Guenaydin-Koepsell-Nicolai quasiconformal realisation of E8 on 57 variables (hep-th/0008063) holds objectwise on the committed basis: the quartic light cone D=0 is E8-invariant, and the central coordinate enters only through the accumulated symplectic area tau-tau'+Omega/2."
+  },
+  "real_forms": {
+    "killing_root_pairs": {
+      "+60": 64,
+      "-60": 56
+    },
+    "killing_sign_law": "K(e_a,e_-a) = -60 (-1)^{ht a}",
+    "compact_conjugation": "sigma_c(e_a) = (-1)^{ht a} conj(e_-a), sigma_c(h) = -conj(h); automorphism on all 30,628 basis pairs",
+    "compact_automorphism_failures": 0,
+    "cartan_killing_inertia": [
+      8,
+      0,
+      0
+    ],
+    "committed_split_Theta_equals": "sigma_c composed with (-1)^{ht} = exp(i pi rho^vee)",
+    "involutions": {
+      "compact(identity twist)": {
+        "E8": {
+          "fixed_dim": 248,
+          "inertia": [
+            0,
+            248
+          ],
+          "signature": -248,
+          "name": "E8 compact"
+        },
+        "contact_levi_E7": {
+          "fixed_dim": 133,
+          "inertia": [
+            0,
+            133
+          ],
+          "signature": -133,
+          "name": "E7 compact"
+        },
+        "E6": {
+          "fixed_dim": 78,
+          "inertia": [
+            0,
+            78
+          ],
+          "signature": -78,
+          "name": "E6 compact"
+        }
+      },
+      "tick line L+ (-1)^a8": {
+        "E8": {
+          "fixed_dim": 136,
+          "inertia": [
+            112,
+            136
+          ],
+          "signature": -24,
+          "name": "E8(-24)"
+        },
+        "contact_levi_E7": {
+          "fixed_dim": 133,
+          "inertia": [
+            0,
+            133
+          ],
+          "signature": -133,
+          "name": "E7 compact"
+        },
+        "E6": {
+          "fixed_dim": 78,
+          "inertia": [
+            0,
+            78
+          ],
+          "signature": -78,
+          "name": "E6 compact"
+        }
+      },
+      "tick line L0 (-1)^a7": {
+        "E8": {
+          "fixed_dim": 136,
+          "inertia": [
+            112,
+            136
+          ],
+          "signature": -24,
+          "name": "E8(-24)"
+        },
+        "contact_levi_E7": {
+          "fixed_dim": 79,
+          "inertia": [
+            54,
+            79
+          ],
+          "signature": -25,
+          "name": "E7(-25)"
+        },
+        "E6": {
+          "fixed_dim": 78,
+          "inertia": [
+            0,
+            78
+          ],
+          "signature": -78,
+          "name": "E6 compact"
+        }
+      },
+      "tick line L- (-1)^(a7+a8)": {
+        "E8": {
+          "fixed_dim": 136,
+          "inertia": [
+            112,
+            136
+          ],
+          "signature": -24,
+          "name": "E8(-24)"
+        },
+        "contact_levi_E7": {
+          "fixed_dim": 79,
+          "inertia": [
+            54,
+            79
+          ],
+          "signature": -25,
+          "name": "E7(-25)"
+        },
+        "E6": {
+          "fixed_dim": 78,
+          "inertia": [
+            0,
+            78
+          ],
+          "signature": -78,
+          "name": "E6 compact"
+        }
+      },
+      "height (-1)^ht = exp(i pi rho_vee) [repo split Theta twist]": {
+        "E8": {
+          "fixed_dim": 120,
+          "inertia": [
+            128,
+            120
+          ],
+          "signature": 8,
+          "name": "E8(8)"
+        },
+        "contact_levi_E7": {
+          "fixed_dim": 63,
+          "inertia": [
+            70,
+            63
+          ],
+          "signature": 7,
+          "name": "E7(7)"
+        },
+        "E6": {
+          "fixed_dim": 38,
+          "inertia": [
+            40,
+            38
+          ],
+          "signature": 2,
+          "name": "E6(2)"
+        }
+      },
+      "height*L+": {
+        "E8": {
+          "fixed_dim": 120,
+          "inertia": [
+            128,
+            120
+          ],
+          "signature": 8,
+          "name": "E8(8)"
+        },
+        "contact_levi_E7": {
+          "fixed_dim": 63,
+          "inertia": [
+            70,
+            63
+          ],
+          "signature": 7,
+          "name": "E7(7)"
+        },
+        "E6": {
+          "fixed_dim": 38,
+          "inertia": [
+            40,
+            38
+          ],
+          "signature": 2,
+          "name": "E6(2)"
+        }
+      },
+      "height*L0": {
+        "E8": {
+          "fixed_dim": 120,
+          "inertia": [
+            128,
+            120
+          ],
+          "signature": 8,
+          "name": "E8(8)"
+        },
+        "contact_levi_E7": {
+          "fixed_dim": 69,
+          "inertia": [
+            64,
+            69
+          ],
+          "signature": -5,
+          "name": "E7(-5)"
+        },
+        "E6": {
+          "fixed_dim": 38,
+          "inertia": [
+            40,
+            38
+          ],
+          "signature": 2,
+          "name": "E6(2)"
+        }
+      },
+      "height*L-": {
+        "E8": {
+          "fixed_dim": 136,
+          "inertia": [
+            112,
+            136
+          ],
+          "signature": -24,
+          "name": "E8(-24)"
+        },
+        "contact_levi_E7": {
+          "fixed_dim": 69,
+          "inertia": [
+            64,
+            69
+          ],
+          "signature": -5,
+          "name": "E7(-5)"
+        },
+        "E6": {
+          "fixed_dim": 38,
+          "inertia": [
+            40,
+            38
+          ],
+          "signature": 2,
+          "name": "E6(2)"
+        }
+      }
+    },
+    "tick_lines": {
+      "roots": {
+        "L+": [
+          2,
+          3,
+          4,
+          6,
+          5,
+          4,
+          3,
+          2
+        ],
+        "L-": [
+          -2,
+          -3,
+          -4,
+          -6,
+          -5,
+          -4,
+          -3,
+          -1
+        ],
+        "L0": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ]
+      },
+      "sum_zero_pairwise_inner_product": -1,
+      "they_span_the_external_A2_orthogonal_to_E6": true,
+      "klein_four_grading": "E8 = 80 + 56 + 56 + 56 (common fixed e6+t2; one Freudenthal 56 per tick line)",
+      "klein_dims": {
+        "(1, -1)": 56,
+        "(-1, -1)": 56,
+        "(-1, 1)": 56,
+        "(1, 1)": 80
+      }
+    }
+  },
+  "euclidean_albert_from_clock": {
+    "jordan_triple": "{x,y,z} = -[[x, sigma_c(y)], z] on p+ = {a8=0, a7=+1} (27 roots of the contact E7)",
+    "tripotent_sign_split": {
+      "clock_E7(-25)": {
+        "True": 27
+      },
+      "committed_split_Theta": {
+        "False": 15,
+        "True": 12
+      }
+    },
+    "frame": {
+      "canonical_triad_i27": [
+        0,
+        17,
+        26
+      ],
+      "tripotent": "e = e_g1 + e_g2 + e_g3, {e,e,e} = 2e"
+    },
+    "jordan_algebra": "A = {x in p+ : {e,x,e}/2 = x}, x o y = {x,e,y}/2",
+    "real_dimension": 27,
+    "jordan_identity_random_checks": 4,
+    "trace_form_inertia": [
+      27,
+      0,
+      0
+    ],
+    "peirce_of_primitive_idempotent": {
+      "0": 10,
+      "1/2": 16,
+      "1": 1
+    },
+    "peirce0_determinant_inertia": [
+      1,
+      9,
+      0
+    ],
+    "control_split_cubic_peirce0_inertia": [
+      5,
+      5
+    ],
+    "reading": "Under the clock real form (E8(-24) restricting to E7(-25) on the contact Levi) the Hermitian Jordan triple of the executable basis produces a 27-dimensional Euclidean (formally real) Jordan algebra of rank 3 - the Albert algebra H3(O). Relative to a primitive idempotent its Peirce-0 slice carries a Lorentzian (1,9) determinant. The committed split conjugation gives only 12 Euclidean tripotent signs out of 27 and the committed cubic's own Peirce slice is (5,5): the Lorentzian signature is a real-form datum selected by the clock involution, invisible to the split Z- or F3-forms."
+  },
+  "status": "PASS_FREUDENTHAL_QUARTIC_QUASICONFORMAL_57_CONE_AND_LORENTZIAN_CLOCK_REAL_FORM",
+  "theorem": "On the committed executable E8 basis, the positive Hesse tick line's contact 56 is the Freudenthal triple system of the split Albert algebra whose cubic norm is the repository's signed 45-triad E6 cubic, with quartic (alpha beta + T)^2 - 4 beta N(X) - 4 alpha N(Y) + 4 T(X#,Y#) and no sign repairs. Its 57-dimensional Heisenberg extension carries the quasiconformal light cone N = Q/4 - tau^2, preserved by E8 up to the factor N(p)N(p') under the Weyl inversion. The three tick lines of the striation give three commuting E8(-24) involutions with E8 = 80+56+56+56; the clock involution restricts to E7(-25) and turns the triad frame into a Euclidean Albert algebra whose Peirce-0 slice is Lorentzian (1,9), whereas the committed split form (twist (-1)^height) gives E7(7) and a (5,5) slice.",
+  "prior_art_and_boundary": {
+    "repo_prior_art": [
+      "analysis/w33_magic_square_substrate.py (56 = 2*27+2 as a dimension identity only)",
+      "manuscripts/parts/PART_CCLXXXV_ALBERT_JORDAN_BRIDGE.md (Albert algebra counts; its 'number of minimal idempotents = 27' is corrected here: 27 is the number of coordinate rank-one directions, frames are the 45 triads)",
+      "analysis/w33_e8_split_real_form_involution.py (E8(8) on the same basis; identified here as the height twist)",
+      "analysis/w33_20260925_e8_parabolic_cubic_clock_lift.py (the 45-triad cubic as |3|-bracket law)"
+    ],
+    "external": [
+      "M. Guenaydin, K. Koepsell, H. Nicolai, Conformal and quasiconformal realizations of exceptional Lie groups, CMP 221 (2001) 57, hep-th/0008063",
+      "H. Freudenthal (1954); S. Krutelevich, J. Algebra 314 (2007) 924 (FTS quartic normal form)",
+      "J. Faraut and A. Koranyi, Analysis on Symmetric Cones (1994): Euclidean Jordan algebras, Peirce decomposition, tube domains",
+      "J. Baez, The Octonions, Bull. AMS 39 (2002): h2(O) Minkowski 9+1 and E6(-26), E7(-25), E8(-24)"
+    ],
+    "novelty_scope": "The classical theorems are cited, not claimed. New here: their objectwise realisation on the committed basis, the Hesse tick-line/Klein-four identification, the refutation of 54+2=56, and the real-form control showing that the Lorentzian slice is selected by the clock involution and absent from the committed split form.",
+    "boundary": "Finite exact Lie and Jordan algebra. No Hamiltonian, no physical spacetime, no dynamics, no CPTP arrow, no energy scale."
+  },
+  "sha256_of_payload": "b1eb41340e90b9e5ebc7bb913b535538d1be7e73255e6a049870dfe9c2ce7835"
+}

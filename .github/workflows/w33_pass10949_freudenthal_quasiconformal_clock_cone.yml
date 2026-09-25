@@ -1,0 +1,28 @@
+name: W33 Pass 10949 Freudenthal quasiconformal clock cone
+
+on:
+  push:
+    paths:
+      - "analysis/w33_pass10949_freudenthal_quasiconformal_clock_cone.py"
+      - "analysis/PASS10949_FREUDENTHAL_QUASICONFORMAL_CLOCK_CONE.md"
+      - "analysis/PASS10949_FREUDENTHAL_QUASICONFORMAL_CLOCK_CONE_INSERT.tex"
+      - "data/w33_pass10949_freudenthal_quasiconformal_clock_cone.json"
+      - "tests/test_w33_pass10949_freudenthal_quasiconformal_clock_cone.py"
+      - ".github/workflows/w33_pass10949_freudenthal_quasiconformal_clock_cone.yml"
+  pull_request:
+    paths:
+      - "analysis/w33_pass10949_freudenthal_quasiconformal_clock_cone.py"
+      - "data/w33_pass10949_freudenthal_quasiconformal_clock_cone.json"
+      - "tests/test_w33_pass10949_freudenthal_quasiconformal_clock_cone.py"
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install numpy sympy pytest
+      - run: python analysis/w33_pass10949_freudenthal_quasiconformal_clock_cone.py
+      - run: python -m pytest -q tests/test_w33_pass10949_freudenthal_quasiconformal_clock_cone.py
