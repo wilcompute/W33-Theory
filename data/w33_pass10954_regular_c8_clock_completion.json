@@ -1,0 +1,141 @@
+{
+  "boundary": "This identifies an exact finite E8/tetracode orientation-cover carrier and a shared determinant character. It does not identify the oriented cover with physical time, the missing deck-even modes with temporal chirality, the two 8-cycles with past/future, or the auxiliary spectral degrees with particles.",
+  "compressed_clock": {
+    "C8_character_exponents": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      7
+    ],
+    "dimension": 6,
+    "eight_orbit_gram_rank": 6,
+    "max_offdiagonal_clock_alias": 0.33333333333333404,
+    "missing_character_exponents": [
+      2,
+      6
+    ],
+    "missing_phase_values": [
+      "+i",
+      "-i"
+    ],
+    "reading": "the 6D Pin clock is a two-frequency compression of the regular C8 clock"
+  },
+  "interpretation": {
+    "completion_effect": "adding that pair cancels every nonzero-tick character overlap and yields perfect eight-step distinguishability",
+    "deck_mode_correction": "the missing +/-i modes are deck-even leaf-descending modes, not orientation-odd modes",
+    "hardware_boundary": "this is a finite representation/reference-frame design target; no current 8D photonic implementation or temporal-Weil intertwiner is asserted",
+    "repo_native_completion": "the required regular C8 already occurs on either oriented eight-cycle above the A2^4 leaf fibre",
+    "spectral_resolution": "the 1/3 residual overlaps of Pass10953 are exactly aliasing caused by omitting the +/-i frequency pair"
+  },
+  "oriented_A2_4_clock_cover": {
+    "clock_cycle_lengths": [
+      8,
+      8
+    ],
+    "compressed_6D_intertwiner_error": 3.817260979715217e-15,
+    "eight_ticks": "identity",
+    "four_ticks": "global complement x -> x+1111",
+    "full_8D_intertwiner_error": 4.364463945539151e-15,
+    "leaf_cycle_lengths": [
+      4,
+      4
+    ],
+    "leaf_cycles_alternate_Fano_parity": true,
+    "leaf_quotient_states": 8,
+    "missing_modes_deck_even": true,
+    "missing_projector_error": 5.38220983634015e-15,
+    "oriented_sign_states": 16,
+    "pin_subspace_deck_even_rank": 2,
+    "pin_subspace_deck_odd_rank": 4,
+    "reading": "each oriented lift of one projective four-cycle is a regular C8 orbit; the six-dimensional Pin clock is exactly the character-deleted subrepresentation with k=2,6 omitted",
+    "regular_C8_orbit_count": 2
+  },
+  "regular_clock": {
+    "normalized_trace_visibility": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "theorem": "the completed carrier is the regular representation of C8 and admits eight mutually orthogonal clock positions",
+    "trace_sequence": [
+      [
+        8.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "uniform_spectral_clock_gram_identity_error": 4.872618079230513e-15
+  },
+  "schema": "w33.pass10954.regular-c8-clock-completion.v1",
+  "shared_determinant_character": {
+    "GL2_3_elements": 48,
+    "all48_exact": true,
+    "channel_weld": "the same determinant C2 distinguishes unitary/antiunitary extended-Clifford actions and, for the clock powers, CP/non-CP operation slots",
+    "det_minus_orientation_flipping": 24,
+    "det_plus_orientation_preserving": 24,
+    "fibre_weld": "determinant +1 preserves the Fano-hinge bipartition; determinant -1 flips it"
+  },
+  "status": "PASS_REGULAR_C8_CLOCK_COMPLETION",
+  "temporal_weil_phase_comparison": {
+    "firewall": "phase-value equality only; no objectwise map from the two Weil orbits to the two auxiliary one-dimensional C8 characters is constructed",
+    "phase_exponent_histogram_mu12": {
+      "0": 13,
+      "3": 4,
+      "6": 6,
+      "9": 4
+    },
+    "rank_one_phase_values": {
+      "mu12_exponent_3": "i",
+      "mu12_exponent_9": "-i"
+    },
+    "source_status": "PASS_HISTORY_QUADRATICS_GENERATE_THE_CLIFFORD_MU12_FIELD",
+    "value_match": "the independently certified temporal rank-one Weil phases +/-i equal the two missing C8 phase values"
+  },
+  "theorem": "The minimal 6D Pin clock is the regular C8 character spectrum with exactly the +/-i characters removed. The completion is not merely formal: the exact Pass10951 clock acts on the 16 pre-quotient A2^4 orientation-sign states as two disjoint 8-cycles, and either cycle carries the regular C8 representation. Four ticks are the global inversion deck transformation and quotient to the existing two 4-cycles on the eight E8 leaves. An explicit unitary intertwiner embeds the 6D Pin clock as the k={0,1,3,4,5,7} subrepresentation; its missing k={2,6} modes are both deck-even. Across all 48 GL(2,3) automorphisms, determinant +1 exactly preserves and determinant -1 exactly flips the Fano-hinge orientation parity, the same C2 used by the extended-Clifford/CP grading. The independent temporal Weil atlas has the same +/-i phase values, but no Weil-orbit intertwiner is claimed.",
+  "unique_minimal_completion": {
+    "added_character_exponents": [
+      2,
+      6
+    ],
+    "all_C8_characters_once": true,
+    "auxiliary_matrix": "diag(+i,-i)",
+    "dimension": 8,
+    "lower_bound_for_eight_orthogonal_clock_positions": 8,
+    "minimal_polynomial": "x^8-1",
+    "power8_identity_error": 2.368406564549309e-15
+  }
+}
