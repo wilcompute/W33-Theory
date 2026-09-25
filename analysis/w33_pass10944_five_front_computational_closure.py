@@ -310,6 +310,17 @@ def front3_agl_selector_covariance():
         }
 
     return {
+        "repo_prior_ownership": {
+            "common_S4_action_and_kernel_18": [
+                "analysis/w33_20260924_null_hesse_4a2_s4_intertwiner.py",
+                "analysis/w33_pass7509_7516_monster_hesse_direction_coupling.py",
+            ],
+            "pass10944_increment": (
+                "transport the existing four-direction S4 action to the M36 "
+                "resource/calibration 3+1 coloring; compute its S3 image stabilizer, "
+                "order-108 affine preimage, and explicit calibration-family movers"
+            ),
+        },
         "group": "AGL(2,3)=F3^2:GL(2,3)",
         "group_order": 432,
         "action_on_four_null_directions": {
@@ -328,10 +339,10 @@ def front3_agl_selector_covariance():
         },
         "explicit_linear_relabelings_moving_calibration_family": movers,
         "theorem": (
-            "The full affine history group induces all 24 permutations of the four "
-            "M36/null/Hesse selectors. The canonical 3+1 resource assignment has "
-            "stabilizer S3 and full preimage order 108. Thus any selector can be "
-            "designated as the calibration lane at the label level."
+            "Using the repo's previously certified AGL(2,3) to S4 direction action, "
+            "the canonical M36 3+1 resource/calibration coloring has stabilizer S3 "
+            "and full affine preimage order 108. Explicit movers show that any "
+            "selector can be designated as the calibration lane at the label level."
         ),
         "boundary": (
             "This proves finite label covariance. Implementing a chosen S4 relabeling as "
@@ -381,6 +392,21 @@ def front4_golay_circuit_fault_model():
         })
 
     return {
+        "repo_prior_ownership": {
+            "code_and_logical_ABI": [
+                "analysis/w33_dark_strange_golay11_ft_lane.py",
+                "analysis/w33_pass10943_protected_metaplectic_five_front.py",
+            ],
+            "pass10944_increment": (
+                "instantiate the previously open syndrome-plus-injection core as six "
+                "transversal 11-location banks, exhaust all 2212 fault subsets of size "
+                "at most two, and expose the separate accepted-input error term q"
+            ),
+            "cross_front_boundary": (
+                "The Golay core and Hesse/M36 selector results are independent fronts; "
+                "Pass10944 asserts no new Golay-Hesse incidence or group coupling."
+            ),
+        },
         "circuit": {
             "verified_inputs": [
                 "accepted encoded |0_L> satisfying the declared clean-block contract",

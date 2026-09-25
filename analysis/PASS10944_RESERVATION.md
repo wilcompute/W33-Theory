@@ -58,23 +58,32 @@ this controlled-X plus the qutrit Fourier gate is approximately universal in
 every odd prime dimension (arXiv:2307.10095). Pass 10944 supplies the exact
 E6-cubic realization of their primitive.
 
-## 3. The four M36 selectors carry the full S4 action
+## 3. The known S4 action controls the M36 resource/calibration gauge
 
-Enumeration of all 432 affine transformations gives
+The common four-direction action and its kernel were already certified in
+`analysis/w33_20260924_null_hesse_4a2_s4_intertwiner.py` and independently
+recovered from the Monster/Hesse restriction in
+`analysis/w33_pass7509_7516_monster_hesse_direction_coupling.py`:
 
 ```text
 AGL(2,3) -> PGL(2,3) ~= S4
 kernel order 18, image order 24.
 ```
 
-Every permutation of the four null/Hesse/M36 families has 18 affine lifts.
-The canonical three-resource/one-calibration assignment has S3 stabilizer and
-full preimage order 108. Explicit GL(2,3) matrices moving family D to each of
-the four selector positions are frozen in the certificate. Thus no family is
-geometrically preferred. This is label covariance; the corresponding optical
-unitaries still require calibration.
+Pass 10944 does not reclaim that S4 theorem. It transports the known action to
+the M36 three-resource/one-calibration coloring. That coloring has S3 image
+stabilizer and full affine preimage order 108. Explicit GL(2,3) matrices moving
+family D to each of the four selector positions are frozen in the certificate.
+Thus no family is geometrically preferred by the coloring. This is label
+covariance; the corresponding optical unitaries still require calibration.
 
 ## 4. Circuit-level Golay syndrome and injection core
+
+The `[[11,1,5]]_3` code and logical injection ABI belong to
+`analysis/w33_dark_strange_golay11_ft_lane.py` and Pass 10943. Pass 10944's
+increment is the explicit six-bank core and its exhaustive fault-support
+census. This front is independent of the Hesse/M36 selector front; no new
+Golay--Hesse incidence or group coupling is claimed.
 
 The executable circuit model contains six transversal eleven-location banks:
 X-syndrome SUM, Z-syndrome SUM, R-injection controlled-X-squared, and three

@@ -44,6 +44,9 @@ def test_cubic_tick_compiles_universal_control_primitive():
 
 def test_selector_covariance_is_full_s4():
     x = load()["front3_AGL_selector_covariance"]
+    ownership = x["repo_prior_ownership"]
+    assert len(ownership["common_S4_action_and_kernel_18"]) == 2
+    assert "order-108" in ownership["pass10944_increment"]
     action = x["action_on_four_null_directions"]
     assert x["group_order"] == 432
     assert action["image_order"] == 24
@@ -57,6 +60,8 @@ def test_selector_covariance_is_full_s4():
 
 def test_golay_transversal_core_fault_curve():
     x = load()["front4_Golay_circuit_fault_model"]
+    assert len(x["repo_prior_ownership"]["code_and_logical_ABI"]) == 2
+    assert "no new Golay-Hesse" in x["repo_prior_ownership"]["cross_front_boundary"]
     assert x["circuit"]["active_location_count"] == 66
     audit = x["exhaustive_support_audit"]
     assert audit["fault_subsets_of_size_at_most_two"] == 2212
