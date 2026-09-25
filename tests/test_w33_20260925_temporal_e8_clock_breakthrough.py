@@ -50,5 +50,14 @@ def test_retyped_54_splits_as_36_plus_18_across_parabolic_slices():
     assert c["quotient_image_P"] == 36
     assert c["quotient_image_Q"] == 18
     assert c["quotient_direct_sum"] == "54 = 36 + 18"
+    e = x["exact_characteristic_zero_certificate"]
+    assert e["field"] == "Q(omega)"
+    assert e["rank_S1_plus_P"] == 63
+    assert e["rank_S1_plus_Q"] == 45
+    assert e["rank_S1_plus_P_plus_Q"] == 81
+    assert e["S1_intersection_P"] == 18
+    assert e["S1_intersection_Q"] == 9
+    assert e["PQ_quotient_rank"] == 54
+    assert e["proof_method"].startswith("exact Gaussian elimination")
     assert x["consequence"]["naive_54_equals_positive_grade1_coordinate_slice"] is False
     assert x["consequence"]["diagonal_weld_adds_all_18_directions_missing_from_P"]

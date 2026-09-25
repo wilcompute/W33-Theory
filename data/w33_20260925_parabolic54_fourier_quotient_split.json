@@ -169,7 +169,7 @@
       }
     ]
   },
-  "boundary": "This is an exact characteristic-zero rank certificate lifted from two split Eisenstein primes. It refutes only the literal coordinate-slice identification. Abstract 54-dimensional modules may still be related by a nontrivial change of symmetry or basis, which requires an explicit intertwiner.",
+  "boundary": "This is an exact characteristic-zero Q(omega) rank certificate with two independent split-Eisenstein-prime replays. It refutes only the literal coordinate-slice identification. Abstract 54-dimensional modules may still be related by a nontrivial change of symmetry or basis, which requires an explicit intertwiner.",
   "consequence": {
     "diagonal_weld_adds_all_18_directions_missing_from_P": true,
     "naive_54_equals_positive_grade1_coordinate_slice": false,
@@ -183,6 +183,23 @@
     "ambient": "CE2 g1 = P direct_sum Q, dimension 81",
     "dim_P": 54,
     "dim_Q": 27
+  },
+  "exact_characteristic_zero_certificate": {
+    "PQ_quotient_rank": 54,
+    "P_quotient_rank": 36,
+    "Q_quotient_rank": 18,
+    "S1_intersection_P": 18,
+    "S1_intersection_Q": 9,
+    "field": "Q(omega)",
+    "modular_role": "the p=103,109 computations are independent split-prime replays, not the characteristic-zero proof",
+    "proof_method": "exact Gaussian elimination on coefficient pairs a+b*omega",
+    "rank_P": 54,
+    "rank_Q": 27,
+    "rank_S1": 27,
+    "rank_S1_plus_P": 63,
+    "rank_S1_plus_P_plus_Q": 81,
+    "rank_S1_plus_Q": 45,
+    "relation": "omega^2+omega+1=0"
   },
   "exact_split_prime_certificate": {
     "S1_intersection_P": 18,
@@ -201,7 +218,7 @@
     "rank_S1_plus_Q": 45,
     "rank_total": 81
   },
-  "schema": "w33.20260925.parabolic54_fourier_quotient_split.v1",
+  "schema": "w33.20260925.parabolic54_fourier_quotient_split.v2",
   "status": "PASS_FOURIER_RETYPE_QUOTIENT_IS_36_PLUS18_ACROSS_PARABOLIC_SLICES",
   "theorem": "The 54-dimensional Fourier-retyped quotient is not the literal positive grade-one coordinate slice of the E8 |3|-grading. The operator-compatible S1 sector meets that 54-space in dimension 18, so only 36 independent quotient directions survive. The complementary 27-coordinate integer grade -2 slice meets S1 in dimension 9 and supplies the remaining 18. Thus the quotient splits relative to the parabolic coordinate decomposition as 54=36+18. Either diagonal center/external weld contributes all 18 directions missing from the positive grade-one slice and reaches rank 54."
 }

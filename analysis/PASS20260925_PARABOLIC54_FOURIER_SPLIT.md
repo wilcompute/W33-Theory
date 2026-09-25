@@ -6,7 +6,8 @@ It is not, in the frozen coordinate gauge.
 
 Let S1 be the 27-dimensional operator-compatible Fourier sector inside the 81-dimensional CE2 grade-one carrier. Let P be the 54 coordinate directions of integer parabolic grade +1 (external labels 0,1), and let Q be the 27 coordinate directions of integer grade -2 (external label 2).
 
-At both split Eisenstein primes 103 and 109:
+Direct Gaussian elimination over `Q(omega)`, represented exactly as coefficient
+pairs `a+b*omega` with `omega^2+omega+1=0`, gives:
 - rank(S1)=27;
 - rank(P)=54 and rank(Q)=27;
 - rank(S1+P)=63, so dim(S1 intersect P)=18;
@@ -17,7 +18,11 @@ Therefore Reg(K)/S1 receives only 36 independent directions from the literal pos
 
 54 = 36 + 18.
 
-Because the certificates are nonzero minors after reduction at split primes, the ranks lift to characteristic zero over Q(omega).
+The same ranks replay independently at split Eisenstein primes 103 and 109.
+Those modular computations certify nonzero minors and lower-bound
+characteristic-zero ranks; the exact `Q(omega)` elimination supplies the
+upper bounds and therefore proves the stated intersections. The earlier
+finite-prime-only wording was insufficient for that last step.
 
 This sharpens the diagonal-weld mechanism. The center-only and external-only backgrounds each project to rank 36 in the retyped quotient. Either diagonal center/external background projects to rank 54 and explicitly adds all 18 directions not already supplied by the positive grade-one coordinate slice.
 

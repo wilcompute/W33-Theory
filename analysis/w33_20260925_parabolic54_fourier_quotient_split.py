@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 import itertools, json, sys
+from fractions import Fraction
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -9,6 +10,78 @@ if str(ROOT) not in sys.path:
 OUT=ROOT/"data/w33_20260925_parabolic54_fourier_quotient_split.json"
 
 from analysis.w33_e6_cubic_fourier54_alignment import ordered_records
+
+# Exact arithmetic in Q(omega), represented as a+b*omega with
+# omega^2+omega+1=0.  The modular replays below are useful independent checks,
+# but cannot by themselves upper-bound characteristic-zero ranks.
+QW_ZERO=(Fraction(0),Fraction(0))
+QW_ONE=(Fraction(1),Fraction(0))
+QW_POWERS=(QW_ONE,(Fraction(0),Fraction(1)),(Fraction(-1),Fraction(-1)))
+
+def qw_sub(x,y):
+    return (x[0]-y[0],x[1]-y[1])
+
+def qw_mul(x,y):
+    a,b=x; c,d=y
+    return (a*c-b*d,a*d+b*c-b*d)
+
+def qw_inv(x):
+    a,b=x; norm=a*a-a*b+b*b
+    assert norm
+    return ((a-b)/norm,-b/norm)
+
+def rank_columns_qomega(columns,nrows=81):
+    if not columns:return 0
+    A=[[columns[j][i] for j in range(len(columns))]
+       for i in range(nrows)]
+    rank=0
+    for col in range(len(columns)):
+        pivot=next((row for row in range(rank,nrows)
+                    if A[row][col]!=QW_ZERO),None)
+        if pivot is None:continue
+        A[rank],A[pivot]=A[pivot],A[rank]
+        scale=qw_inv(A[rank][col])
+        A[rank]=[qw_mul(x,scale) for x in A[rank]]
+        for row in range(rank+1,nrows):
+            scale=A[row][col]
+            if scale!=QW_ZERO:
+                A[row]=[qw_sub(x,qw_mul(scale,y))
+                        for x,y in zip(A[row],A[rank])]
+        rank+=1
+        if rank==nrows:break
+    return rank
+
+def exact_qomega_ranks(e6_to_h):
+    S1=[]
+    for t,r,i in itertools.product(range(3),repeat=3):
+        col=[]
+        for eid in range(27):
+            a,b,c=e6_to_h[eid]
+            for phase in range(3):
+                col.append(
+                    QW_POWERS[(c+a*i+t*phase)%3]
+                    if i==(r+b)%3 else QW_ZERO
+                )
+        S1.append(col)
+    P=[]; Q=[]
+    for eid in range(27):
+        for phase in (0,1):
+            col=[QW_ZERO]*81; col[3*eid+phase]=QW_ONE; P.append(col)
+        col=[QW_ZERO]*81; col[3*eid+2]=QW_ONE; Q.append(col)
+    ranks={
+      "rank_S1":rank_columns_qomega(S1),
+      "rank_P":rank_columns_qomega(P),
+      "rank_Q":rank_columns_qomega(Q),
+      "rank_S1_plus_P":rank_columns_qomega(S1+P),
+      "rank_S1_plus_Q":rank_columns_qomega(S1+Q),
+      "rank_S1_plus_P_plus_Q":rank_columns_qomega(S1+P+Q),
+    }
+    assert ranks=={
+      "rank_S1":27,"rank_P":54,"rank_Q":27,
+      "rank_S1_plus_P":63,"rank_S1_plus_Q":45,
+      "rank_S1_plus_P_plus_Q":81,
+    }
+    return ranks
 
 def mm(A,B,p):
     return [[sum(A[i][k]*B[k][j] for k in range(len(B)))%p
@@ -121,6 +194,7 @@ def main():
 
     cert={name:[build_prime(p,e6_to_h,v) for p in (103,109)]
           for name,v in backgrounds.items()}
+    exact=exact_qomega_ranks(e6_to_h)
 
     for rows in cert.values():
         for row in rows:
@@ -149,7 +223,7 @@ def main():
     }
 
     out={
-      "schema":"w33.20260925.parabolic54_fourier_quotient_split.v1",
+      "schema":"w33.20260925.parabolic54_fourier_quotient_split.v2",
       "status":"PASS_FOURIER_RETYPE_QUOTIENT_IS_36_PLUS18_ACROSS_PARABOLIC_SLICES",
       "coordinate_identification":{
         "P":"positive integer grade +1 slice, external labels 0,1",
@@ -172,6 +246,18 @@ def main():
         "quotient_image_Q":18,
         "quotient_direct_sum":"54 = 36 + 18",
       },
+      "exact_characteristic_zero_certificate":{
+        "field":"Q(omega)",
+        "relation":"omega^2+omega+1=0",
+        **exact,
+        "S1_intersection_P":exact["rank_S1"]+exact["rank_P"]-exact["rank_S1_plus_P"],
+        "S1_intersection_Q":exact["rank_S1"]+exact["rank_Q"]-exact["rank_S1_plus_Q"],
+        "P_quotient_rank":exact["rank_S1_plus_P"]-exact["rank_S1"],
+        "Q_quotient_rank":exact["rank_S1_plus_Q"]-exact["rank_S1"],
+        "PQ_quotient_rank":exact["rank_S1_plus_P_plus_Q"]-exact["rank_S1"],
+        "proof_method":"exact Gaussian elimination on coefficient pairs a+b*omega",
+        "modular_role":"the p=103,109 computations are independent split-prime replays, not the characteristic-zero proof",
+      },
       "backgrounds":cert,
       "consequence":{
         "naive_54_equals_positive_grade1_coordinate_slice":False,
@@ -191,8 +277,8 @@ def main():
         "directions missing from the positive grade-one slice and reaches rank 54."
       ),
       "boundary":(
-        "This is an exact characteristic-zero rank certificate lifted from two "
-        "split Eisenstein primes. It refutes only the literal coordinate-slice "
+        "This is an exact characteristic-zero Q(omega) rank certificate with two "
+        "independent split-Eisenstein-prime replays. It refutes only the literal coordinate-slice "
         "identification. Abstract 54-dimensional modules may still be related by "
         "a nontrivial change of symmetry or basis, which requires an explicit "
         "intertwiner."
