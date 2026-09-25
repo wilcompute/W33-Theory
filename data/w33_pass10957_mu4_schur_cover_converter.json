@@ -1,0 +1,101 @@
+{
+  "albert_cover_bridge": {
+    "clock": "the finite clock starts from the plus cover GL(2,3)",
+    "pass10956": "the natural Spin(9) half-turn exchanging 8_s and 8_c squares to the central -1, i.e. minus-cover-style local lifting",
+    "remaining_gap": "no matrix intertwiner identifies the Pass10954 missing spectral modes with the Albert half-turn; the result is at cocycle/projective-representation level",
+    "resolution": "their Schur cocycles differ by epsilon cup epsilon and are projectively converted by the mu4 determinant-phase cochain"
+  },
+  "boundary": "This is a finite group-cohomology and projective-representation theorem. It does not make the two 48-element groups isomorphic, identify the Pass10954 missing modes with an Albert physical degree of freedom, or construct a full matrix map from the order-eight clock into Spin(9).",
+  "clock_C4_square_root": {
+    "chi_minus_mu4_exponents": [
+      0,
+      3,
+      2,
+      1
+    ],
+    "chi_minus_values": [
+      "1",
+      "-i",
+      "-1",
+      "i"
+    ],
+    "chi_plus_mu4_exponents": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "chi_plus_values": [
+      "1",
+      "i",
+      "-1",
+      "-i"
+    ],
+    "exact_reading": "the two missing C8 characters descend to the two mu4 square roots of sign on the projective clock C4",
+    "pass10954_missing_C8_characters": [
+      2,
+      6
+    ],
+    "pass10954_missing_phase_values": [
+      "+i",
+      "-i"
+    ],
+    "permutation_parity_word": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "projective_clock_order": 4,
+    "square_equals_sign_character": true
+  },
+  "clock_plus_cover": {
+    "center_order": 2,
+    "cocycle_identity_checks": 13824,
+    "cocycle_table_sha256": "4f895548c1b807852466f10bc791a2bc8e26cfa774e825ada7a98189fadc749f",
+    "extension": "GL(2,3)=2^+S4",
+    "involution_count": 13,
+    "objectwise_GL2_3_homomorphism_checks": 2304,
+    "order_spectrum": {
+      "1": 1,
+      "2": 13,
+      "3": 8,
+      "4": 6,
+      "6": 8,
+      "8": 12
+    },
+    "quotient": "S4=PGL(2,3)",
+    "section": "lexicographically minimal matrix in each +/-I pair",
+    "smallgroup_crosscheck": "[48,29]"
+  },
+  "mu4_converter": {
+    "abstract_group_boundary": "the 48-element central extensions remain nonisomorphic as abstract mu2 groups",
+    "all_pair_checks": 576,
+    "coboundary": "delta b = (-1)^(epsilon(sigma)epsilon(tau))",
+    "cochains": {
+      "minus": "b_-(sigma)=(-i)^epsilon(sigma)",
+      "plus": "b_+(sigma)=i^epsilon(sigma)"
+    },
+    "cohomology_statement": "the two distinct mu2 extension cocycles become cohomologous after coefficient inclusion mu2 -> mu4 subset U(1)"
+  },
+  "schema": "w33.pass10957.mu4-schur-cover-converter.v1",
+  "status": "PASS_MU4_SCHUR_COVER_CONVERTER",
+  "theorem": "The section cocycle of the frozen clock extension GL(2,3)->S4 is computed on all 24^2 pairs and verified on all 24^3 cocycle triples. Adding the parity cup-square epsilon(sigma)epsilon(tau) produces a second central extension with one involution and the binary-octahedral 2^-S4 order spectrum, whereas the original has the GL(2,3)=2^+S4 spectrum with 13 involutions. The difference is the coboundary of b(sigma)=i^epsilon(sigma) after enlarging coefficients from mu2 to mu4, so the two nonisomorphic double covers define equivalent complex projective cocycles with that determinant-phase gauge. On the clock's projective C4, the two missing Pass10954 C8 characters k=2,6 are exactly the two mu4 characters taking the clock generator to +i and -i and squaring to permutation sign.",
+  "twisted_minus_cover": {
+    "center_order": 2,
+    "cocycle_formula": "c_minus(s,t)=c_plus(s,t)+epsilon(s)epsilon(t) mod 2",
+    "cocycle_table_sha256": "ac6829f6fc42742dbebbcee1fddf9813545208d8a263e2b413f163125428d0b7",
+    "difference_checks": 576,
+    "identification": "2^-S4 / binary-octahedral cover by one-involution fingerprint",
+    "involution_count": 1,
+    "order_spectrum": {
+      "1": 1,
+      "2": 1,
+      "3": 8,
+      "4": 18,
+      "6": 8,
+      "8": 12
+    },
+    "smallgroup_repo_crosscheck": "[48,28]"
+  }
+}
