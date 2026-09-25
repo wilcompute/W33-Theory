@@ -1873,6 +1873,24 @@
           upgrades a finite result into a physical one &mdash; that boundary is
           unchanged and is stated in <a href="#numbers">Core Numbers</a>.</p>
         <div class="card-grid">
+          <div class="card" id="pass10952-clock-complete-positivity">
+            <div class="num">odd ticks: Choi (6,3,0) &nbsp;|&nbsp; even ticks: Choi (1,0,8)</div>
+            <div class="label">Pass 10952: the order-eight algebraic clock has an exact complete-positivity grading</div>
+            <div class="detail">The Pass-10951 determinant-odd tick lifts to
+              <code>A=U<sub>S</sub>K</code> on one qutrit. On density matrices a
+              single tick is <code>&Theta;(&rho;)=U<sub>S</sub>&rho;<sup>T</sup>U<sub>S</sub>&dagger;</code>:
+              positive and trace preserving, but its Choi operator has
+              <strong>3 negative eigenvalues</strong>, so it is not completely
+              positive. All eight powers alternate exactly: odd powers have Choi
+              inertia <strong>(6,3,0)</strong>; even powers are unitary Clifford
+              channels with inertia <strong>(1,0,8)</strong>. Two algebraic ticks
+              therefore give one physical qutrit step and a projective C<sub>4</sub>.
+              The four-tick qutrit operator is non-scalar
+              (<code>|tr|/3=1/3</code>), firewalling it from the scalar Spin matter
+              sign. A doubled qutrit + conjugate-qutrit carrier restores a unitary
+              order-eight lift.
+              <a href="https://github.com/wilcompute/W33-Theory/blob/master/analysis/PASS10952_CLOCK_COMPLETE_POSITIVITY_FIREWALL.md">Report and certificate</a>.</div>
+          </div>
           <div class="card" id="pass10951-clock-pin-spin">
             <div class="num">4 clock ticks &rarr; &minus;I &rarr; 2&pi; spin sign; 8 ticks &rarr; I</div>
             <div class="label">Pass 10951: the order-eight clock lift separates Pin parity from the central spin sign</div>

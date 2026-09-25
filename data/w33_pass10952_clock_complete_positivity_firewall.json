@@ -1,0 +1,326 @@
+{
+  "boundary": "This is a quantum-channel and representation theorem. It does not identify the algebraic tick with physical time, antiunitarity with a thermodynamic arrow, or the doubled conjugate sector with literal past/future degrees of freedom. Process-tensor use of the result means only that deterministic local operation slots require CP maps.",
+  "complete_positivity_firewall": {
+    "all_eight_powers": [
+      {
+        "choi_eigenvalues": [
+          -0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          3.0
+        ],
+        "choi_inertia_pos_neg_zero": [
+          1,
+          0,
+          8
+        ],
+        "completely_positive": true,
+        "det_mod3": 1,
+        "kind": "unitary_CPTP",
+        "phase_space_action_error": 0.0,
+        "power": 0,
+        "trace_preservation_error": 0.0
+      },
+      {
+        "choi_eigenvalues": [
+          -1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "choi_inertia_pos_neg_zero": [
+          6,
+          3,
+          0
+        ],
+        "completely_positive": false,
+        "det_mod3": 2,
+        "kind": "positive_TP_not_CP",
+        "phase_space_action_error": 1.640629596717089e-15,
+        "power": 1,
+        "trace_preservation_error": 5.057306561942087e-16
+      },
+      {
+        "choi_eigenvalues": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          3.0
+        ],
+        "choi_inertia_pos_neg_zero": [
+          1,
+          0,
+          8
+        ],
+        "completely_positive": true,
+        "det_mod3": 1,
+        "kind": "unitary_CPTP",
+        "phase_space_action_error": 2.1483455143974806e-15,
+        "power": 2,
+        "trace_preservation_error": 7.57149466141794e-16
+      },
+      {
+        "choi_eigenvalues": [
+          -1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "choi_inertia_pos_neg_zero": [
+          6,
+          3,
+          0
+        ],
+        "completely_positive": false,
+        "det_mod3": 2,
+        "kind": "positive_TP_not_CP",
+        "phase_space_action_error": 2.1658485563616462e-15,
+        "power": 3,
+        "trace_preservation_error": 1.2493092599238253e-15
+      },
+      {
+        "choi_eigenvalues": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          3.0
+        ],
+        "choi_inertia_pos_neg_zero": [
+          1,
+          0,
+          8
+        ],
+        "completely_positive": true,
+        "det_mod3": 1,
+        "kind": "unitary_CPTP",
+        "phase_space_action_error": 1.5638192562409943e-15,
+        "power": 4,
+        "trace_preservation_error": 1.3723675632819107e-15
+      },
+      {
+        "choi_eigenvalues": [
+          -1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "choi_inertia_pos_neg_zero": [
+          6,
+          3,
+          0
+        ],
+        "completely_positive": false,
+        "det_mod3": 2,
+        "kind": "positive_TP_not_CP",
+        "phase_space_action_error": 1.933194214049183e-15,
+        "power": 5,
+        "trace_preservation_error": 1.7806883670196607e-15
+      },
+      {
+        "choi_eigenvalues": [
+          -0.0,
+          -0.0,
+          -0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          3.0
+        ],
+        "choi_inertia_pos_neg_zero": [
+          1,
+          0,
+          8
+        ],
+        "completely_positive": true,
+        "det_mod3": 1,
+        "kind": "unitary_CPTP",
+        "phase_space_action_error": 2.1179607902056025e-15,
+        "power": 6,
+        "trace_preservation_error": 2.008046435084415e-15
+      },
+      {
+        "choi_eigenvalues": [
+          -1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "choi_inertia_pos_neg_zero": [
+          6,
+          3,
+          0
+        ],
+        "completely_positive": false,
+        "det_mod3": 2,
+        "kind": "positive_TP_not_CP",
+        "phase_space_action_error": 2.2199167209716055e-15,
+        "power": 7,
+        "trace_preservation_error": 2.2370374086044682e-15
+      }
+    ],
+    "reference_Bell_output_eigenvalues": [
+      -0.333333333333,
+      -0.333333333333,
+      -0.333333333333,
+      0.333333333333,
+      0.333333333333,
+      0.333333333333,
+      0.333333333333,
+      0.333333333333,
+      0.333333333333
+    ],
+    "single_tick_choi_eigenvalues": [
+      -1.0,
+      -1.0,
+      -1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "single_tick_choi_inertia_pos_neg_zero": [
+      6,
+      3,
+      0
+    ],
+    "single_tick_completely_positive": false,
+    "single_tick_density_map": "Theta(rho)=U_S rho^T U_S^dagger",
+    "single_tick_positive": true,
+    "single_tick_trace_preserving": true
+  },
+  "doubled_conjugate_sector_escape": {
+    "carrier_dimension": 6,
+    "closure_phase_imag": 1.7051897503586546e-16,
+    "closure_phase_real": 1.0000000000000009,
+    "matrix_form": "[[0,U],[U*,0]] on H plus conjugate(H)",
+    "projective_order": 8,
+    "reading": "odd clock tick can be linearized unitarily only after retaining a conjugate sector; this is an enlarged carrier, not a qutrit channel",
+    "square": "diag(V,V*) with V=U U* the two-tick unitary",
+    "square_block_error": 1.2719202621569e-16,
+    "unitarity_error": 7.785307816279484e-16
+  },
+  "even_tick_physical_subgroup": {
+    "eight_tick_scalar_identity_error": 1.3486816057079046e-15,
+    "four_tick_is_scalar": false,
+    "four_tick_phase_space_matrix": "-I2",
+    "four_tick_qutrit_action_error": 1.5638192562409943e-15,
+    "four_tick_qutrit_eigenvalues": [
+      [
+        1.0000000000000009,
+        5.55111512312579e-17
+      ],
+      [
+        -0.9999999999999999,
+        -1.665334536937735e-16
+      ],
+      [
+        -0.9999999999999999,
+        -1.1102230246251565e-16
+      ]
+    ],
+    "four_tick_scalarity_abs_trace_over_3": 0.3333333333333331,
+    "operational_clock": "even powers form a C4 of unitary qutrit channels",
+    "two_tick_channel_projective_order": 4,
+    "two_tick_closure_phase_imag": 5.551115123125783e-17,
+    "two_tick_closure_phase_real": 1.0000000000000007,
+    "two_tick_unitary": true
+  },
+  "parents": {
+    "pass10951": "PASS_CLOCK_PIN_SPIN_CENTRAL_SIGN_BRIDGE",
+    "pass5730": "prior producer confirms det-minus-one antiunitary"
+  },
+  "process_consequence": {
+    "coarse_grained_option": "use two algebraic ticks as one physical unitary clock step",
+    "doubled_option": "use the 6D qutrit-plus-conjugate carrier for an order-8 unitary lift",
+    "single_qutrit_slot": "odd tick is excluded from deterministic quantum-channel slots by complete positivity"
+  },
+  "qutrit_extended_clifford": {
+    "SL23_action_max_error": 3.259858567462996e-15,
+    "SL23_representatives": 24,
+    "antiunitary_clock_action_error": 1.640629596717089e-15,
+    "antiunitary_form": "A = U_S K",
+    "clock_det_mod3": 2,
+    "clock_matrix_g": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "clock_order": 8,
+    "factorization_g_equals_SJ": {
+      "J": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "S": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "S_det_mod3": 1
+    }
+  },
+  "representation_firewall": {
+    "abstract_group_fact": "g^4=-I in GL(2,3)",
+    "consequence": "Pass10951 matter-parity weld is a central-character statement, not equality with the 3D qutrit four-tick unitary.",
+    "qutrit_Clifford_representation": "-I maps to a non-scalar parity Clifford (eigenvalues 1,-1,-1)",
+    "spin_representation": "-I maps to scalar -1 in 2T subset Spin(3)"
+  },
+  "schema": "w33.pass10952.clock-complete-positivity-firewall.v1",
+  "status": "PASS_CLOCK_COMPLETE_POSITIVITY_FIREWALL",
+  "theorem": "For the Pass10951 order-eight determinant-odd clock lift, every odd power acts on qutrit density matrices as a unitary-conjugated transpose. Its Choi operator has inertia (6,3,0), so it is positive and trace preserving but not completely positive. Every even power is a unitary Clifford channel with Choi inertia (1,0,8). Thus the operational single-qutrit clock is the even C4 subgroup. A 6D carrier H plus conjugate(H) restores a unitary order-eight lift. The abstract fourth power -I is scalar in the 2T spin representation but non-scalar in the 3D qutrit Clifford representation."
+}
