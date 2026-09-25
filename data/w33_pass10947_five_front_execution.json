@@ -1,0 +1,581 @@
+{
+  "front1_cubic_VM_microcode": {
+    "VM_P7_pair_edges_used": [
+      [
+        0,
+        1
+      ]
+    ],
+    "VM_bridge_generator_used": false,
+    "all_nine_logical_cases_pass": true,
+    "ancillas_returned_to_zero": true,
+    "boundary": "This is exact seven-qutrit logical microcode conditional on one native signed E6 cubic-tick port. It does not synthesize the microscopic four-body Hamiltonian or assign a pulse duration.",
+    "chosen_E6_triad": [
+      0,
+      17,
+      26
+    ],
+    "chosen_triad_sign_mod3": 2,
+    "clean_ancillas": 2,
+    "depth_layers": [
+      [
+        "HX_TRANSLATE(2,+1)",
+        "HX_TRANSLATE(3,+1)",
+        "F(1)"
+      ],
+      [
+        "CZ(0,1)"
+      ],
+      [
+        "F(1)^-1"
+      ],
+      [
+        "E6_CUBIC_LOCAL_TICK(0,1,2->3)"
+      ],
+      [
+        "HX_TRANSLATE(2,-1)",
+        "F(1)^-1"
+      ],
+      [
+        "CZ(0,1)"
+      ],
+      [
+        "F(1)"
+      ]
+    ],
+    "logical_modes_used": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "opcode": "C0X_VM(control=0,target=3,copy=1,fixed=2)",
+    "parallel_depth": 7,
+    "primitive_counts": {
+      "CZ": 2,
+      "E6_cubic_tick": 1,
+      "Heisenberg_X_translations": 3,
+      "local_F_or_inverse": 4,
+      "total": 10
+    },
+    "program": [
+      "HX_TRANSLATE(2,+1)",
+      "F(1)",
+      "CZ(0,1)",
+      "F(1)^-1",
+      "HX_TRANSLATE(3,+1)",
+      "E6_CUBIC_LOCAL_TICK(triad=[0, 17, 26],direction=1; modes=0,1,2 -> 3)",
+      "F(1)^-1",
+      "CZ(0,1)",
+      "F(1)",
+      "HX_TRANSLATE(2,-1)"
+    ],
+    "sign_corrected_tick_direction": 1,
+    "truth_table": [
+      {
+        "control": 0,
+        "target_in": 0,
+        "target_out": 1
+      },
+      {
+        "control": 0,
+        "target_in": 1,
+        "target_out": 2
+      },
+      {
+        "control": 0,
+        "target_in": 2,
+        "target_out": 0
+      },
+      {
+        "control": 1,
+        "target_in": 0,
+        "target_out": 0
+      },
+      {
+        "control": 1,
+        "target_in": 1,
+        "target_out": 1
+      },
+      {
+        "control": 1,
+        "target_in": 2,
+        "target_out": 2
+      },
+      {
+        "control": 2,
+        "target_in": 0,
+        "target_out": 0
+      },
+      {
+        "control": 2,
+        "target_in": 1,
+        "target_out": 1
+      },
+      {
+        "control": 2,
+        "target_in": 2,
+        "target_out": 2
+      }
+    ],
+    "unused_modes": [
+      4,
+      5,
+      6
+    ]
+  },
+  "front2_verified_Golay_factories": {
+    "boundary": "This closes the previously symbolic q inside the declared coordinate-local, postselected verified-cat model. It is not a device threshold: correlated faults, leakage, cat-gadget construction errors outside the stated contract, and acceptance-rate optimization require a hardware noise model.",
+    "encoded_states": {
+      "C_perp_size": 729,
+      "C_size": 243,
+      "PLUS_L": "uniform support on C_perp=C union (C+1) union (C+2)",
+      "R_L": "coset amplitudes proportional to (1,1,-1)",
+      "X_and_Z_stabilizer_checks": 7290,
+      "ZERO_L": "uniform support on C",
+      "all_checks_pass": true,
+      "code": "[[11,1,5]]_3 CSS from C=G11^perp",
+      "logical_coset_sizes": [
+        243,
+        243,
+        243
+      ]
+    },
+    "factory": {
+      "accepted_late_hazard_locations": 279,
+      "blocks": [
+        "ZERO_L",
+        "PLUS_L",
+        "R_L"
+      ],
+      "candidate_prep_locations_per_block": 11,
+      "core_locations": 66,
+      "data_couplings_per_syndrome_round_per_block": 60,
+      "extended_locations": 552,
+      "handoff_locations_per_block": 11,
+      "locations_per_block": 162,
+      "protocol": "candidate encoding; two complete X/Z syndrome rounds using verified weight-six cat gadgets with coordinate-local data coupling; accept only two agreeing zero syndromes; then one coordinate-local handoff",
+      "readouts_per_syndrome_round_per_block": 10,
+      "syndrome_rounds": 2,
+      "three_factory_locations": 486
+    },
+    "fault_model": "Adversarial qutrit-Pauli support with independent uniform location-fault probability p. Verified-cat gadgets enforce one-data-coordinate propagation. A prep/round-one fault needs later syndrome corruption to be accepted, so three total faults can then occupy at most two output coordinates. Only round-two couplings, handoffs, and the 66 core locations are order-three hazards.",
+    "literature_context": "Prakash 2020, arXiv:2003.02717, owns the ternary-Golay Strange distillation map.",
+    "malignant_triples": {
+      "all_location_triples": 27880600,
+      "candidate_late_hazard_triples_enumerated": 3580779,
+      "conservative_bound_crosses_physical_p_at": 0.000531703523611593,
+      "coordinate_triples_covered": 165,
+      "exact_uniform_independent_bound": "M*p^3*(1-p)^(552-3) + Pr[Binomial(552,p)>=4], M=2576205",
+      "leading_failure_coefficient": 2576205,
+      "malignant_distinct_coordinate_triples": 2576205,
+      "replaces_symbolic_q": true,
+      "samples": [
+        {
+          "accepted_extended_gadget_failure_upper_bound": 2.6001739721480195e-09,
+          "physical_location_error": 1e-05
+        },
+        {
+          "accepted_extended_gadget_failure_upper_bound": 2.8048387385017734e-06,
+          "physical_location_error": 0.0001
+        },
+        {
+          "accepted_extended_gadget_failure_upper_bound": 0.0039656239284899105,
+          "physical_location_error": 0.001
+        }
+      ]
+    },
+    "repo_prior_art": [
+      "analysis/w33_dark_strange_golay11_ft_lane.py",
+      "analysis/2026-09-23_execute_all5_hybrid_lie_golay_calibration.md",
+      "analysis/PASS10943_RESERVATION.md",
+      "analysis/PASS10944_RESERVATION.md"
+    ]
+  },
+  "front3_quotient_centralizer": {
+    "channel_dimensions": [
+      18,
+      18,
+      18
+    ],
+    "discrete_carrier_group": {
+      "action": "diagonal H27 address translation and permutation of the three 18D clock channels",
+      "group": "H27 x S3_phase",
+      "order": 162
+    },
+    "full_quotient_H27_multiplicities": {
+      "V_omega": 0,
+      "V_omega2": 9,
+      "linear_character_each": 3
+    },
+    "linear_commutants_over_Qomega": {
+      "End_H27_Q_dimension": 162,
+      "End_H27_structure": "product over nine linear characters of M3, times M9 on V_omega2 multiplicity",
+      "End_H27xC3_Q_dimension": 54,
+      "End_H27xC3_structure": "27 scalar blocks plus three M3 multiplicity blocks"
+    },
+    "no_go_compatibility": "None of these residual commutants changes the H27 irreducible multiplicities. The Pass10944 rank-36 ceiling for an equivariant map from two regular H27 modules therefore remains unchanged.",
+    "parabolic_36_plus_18_projector": {
+      "P_channels": [
+        0,
+        1
+      ],
+      "Q_channel": 2,
+      "S2_role": "swap the two positive channels while fixing the opposite channel",
+      "centralizer_inside_discrete_carrier": "H27 x S2",
+      "centralizer_order": 54
+    },
+    "per_channel_H27_multiplicities": {
+      "V_omega": 0,
+      "V_omega2": 3,
+      "linear_character_each": 1
+    },
+    "quotient": "Q=(ambient 81)/S1 = Q0 direct_sum Q1 direct_sum Q2",
+    "theorem": "The 36+18 split is a projector choice inside the canonical 18+18+18 quotient. Its largest permutation symmetry inherited from the H27-by-channel carrier is H27 x S2 of order 54. The full H27 commutant has dimension 162, while retaining the external C3 clock action cuts it to dimension 54."
+  },
+  "front4_M36_physical_router": {
+    "all_36_M36_rays_checked": 36,
+    "architecture": "four-mode star crossbar with mode 3 as the dump bus",
+    "boundary": "These are exact ideal transfer matrices and sufficient component targets. They are not fabricated-device measurements and do not include off-state thermal crosstalk or wavelength dependence.",
+    "family_program_table": [
+      {
+        "MZI_mixing_angle": 1.5707963267948966,
+        "active_crossbar_pair": [
+          0,
+          3
+        ],
+        "dark_input": 0,
+        "dump_output": 3,
+        "family": 0,
+        "family_name": "A",
+        "local_phase_trim": "cancel the i phases of the swap-state MZI",
+        "logical_W3x4": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ],
+        "transfer_U4": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "MZI_mixing_angle": 1.5707963267948966,
+        "active_crossbar_pair": [
+          1,
+          3
+        ],
+        "dark_input": 1,
+        "dump_output": 3,
+        "family": 1,
+        "family_name": "B",
+        "local_phase_trim": "cancel the i phases of the swap-state MZI",
+        "logical_W3x4": [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ],
+        "transfer_U4": [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "MZI_mixing_angle": 1.5707963267948966,
+        "active_crossbar_pair": [
+          2,
+          3
+        ],
+        "dark_input": 2,
+        "dump_output": 3,
+        "family": 2,
+        "family_name": "C",
+        "local_phase_trim": "cancel the i phases of the swap-state MZI",
+        "logical_W3x4": [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ]
+        ],
+        "transfer_U4": [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "MZI_mixing_angle": 0.0,
+        "active_crossbar_pair": null,
+        "dark_input": 3,
+        "dump_output": 3,
+        "family": 3,
+        "family_name": "D",
+        "local_phase_trim": "cancel the i phases of the swap-state MZI",
+        "logical_W3x4": [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ],
+        "transfer_U4": [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ]
+        ]
+      }
+    ],
+    "installed_pair_switches": [
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "literature_context": "Clements et al., Optica 3 (2016) 1460, DOI 10.1364/OPTICA.3.001460, supplies the standard programmable multiport context; the sparse star optimum here follows from the four committed deletion maps.",
+    "optimization": {
+      "adjacent_chain_active_counts_by_dark_mode": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "adjacent_mean": 1.5,
+      "adjacent_worst": 3,
+      "objective": "lexicographically minimize worst active switches, then mean active switches, at fixed three installed switches",
+      "optimality_witness": "a nontrivial family must change which input reaches the fixed dump, so at least one active switch is necessary; the star attains one",
+      "star_active_counts_by_dark_mode": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "star_mean": 0.75,
+      "star_worst": 1,
+      "winner": "star crossbar"
+    },
+    "per_switch_targets": {
+      "separate_total_dark_leakage": 0.001,
+      "star_crossbar": {
+        "per_active_switch_differential_loss_dB_at_most": 0.5028809740349482,
+        "per_active_switch_extinction_dB_at_least": 30.0,
+        "per_active_switch_leakage_probability_at_most": 0.001,
+        "per_active_switch_phase_radians_at_most": 0.057863994221833394,
+        "per_active_switch_process_fidelity_at_least": 0.9966554934125964
+      },
+      "target_conditional_fidelity": 0.99,
+      "three_stage_adjacent_baseline": {
+        "per_active_switch_differential_loss_dB_at_most": 0.16762699134498274,
+        "per_active_switch_extinction_dB_at_least": 34.771212547196626,
+        "per_active_switch_leakage_probability_at_most": 0.0003333333333333333,
+        "per_active_switch_phase_radians_at_most": 0.019287998073944466,
+        "per_active_switch_process_fidelity_at_least": 0.9988839192981426
+      }
+    },
+    "pump_and_tomography": {
+      "Strange_pump_coherence_settling_gamma_t_at_least": 9.210340371976184,
+      "router_falsifier": "tomographically reconstruct all four 4x4 transfers; reject if the selected input does not reach the dump, if any bright input leaks above 1e-3 into the dump, or if the conditional 3x4 process misses the stated budget",
+      "wrong_family_falsifier": "program every incorrect family on every M36 ray and verify that its known dark input is no longer routed to the dump; failure to distinguish the four settings falsifies selector calibration"
+    }
+  },
+  "front5_coloring_cubic_compatibility": {
+    "VM_consequence": "A selector relabeling must carry a tracked central qutrit phase and one of the certified diagonal sign gauges. Treating the 108 coloring operations as literal unsigned cubic permutations would drop required phase data.",
+    "coloring_group": {
+      "B_order": 12,
+      "affine_group": "F3^2 : B, where B fixes projective family D",
+      "order": 108
+    },
+    "cubic_support_lift": {
+      "central_kernel": "Z(H27)=C3",
+      "group": "H27 : B",
+      "order": 324,
+      "quotient_order": 108,
+      "three_support_lifts_per_coloring_operation": true
+    },
+    "non_split_firewall": {
+      "basis_translation_lift_pairs_checked": 9,
+      "common_commutator": [
+        0,
+        0,
+        1
+      ],
+      "order108_strict_section_exists": false,
+      "reason": "the two affine translation generators commute in F3^2, but every pair of H27 lifts has the same nonidentity central commutator"
+    },
+    "signed_cubic_lift": {
+      "all_324_support_permutations_lift": true,
+      "binary_sign_equation_rank": 21,
+      "diagonal_sign_lifts_per_support_permutation": 64,
+      "full_monomial_signed_lift_order": 20736,
+      "homogeneous_sign_gauge_dimension": 6,
+      "sample_lift_sha256": [
+        "40092093296d6997f7602d6a363f615345806d30e6227e9a4c4c70ccaff4fafc",
+        "2de7e6dc2c4722e839de918fdd841381a5b66a702dcdbacee123c46392995292",
+        "19285b3983f6429759db5357eff3178c32c4bcec929b7ea50d7010cf5d447796",
+        "958e829eecaf926098daac28b4180a61b6dc1024d2d933b0fca68d6745ccdae8",
+        "2224559888002de093713c00f20a8b514f252794ce97d941c579e0e4cb53ac17",
+        "b598e464590aed90caab76a57c3b64e84c9c57c08eeb18012732893bbe3e3551",
+        "7ae7842ce8ae02f1eb653fc6e860f0c8ed3b2363b53b1cc59c72d48ad1142350",
+        "95cf2594526b8842d0a5ea2ab67b21fedd0a59daf68ea8ee2b74199d190562e8",
+        "78a47f13046b48e60b31428e6428c5e25bbf04dba90ff47e9e6e85acf067e22b",
+        "046a1117f55d73a08a7ac86386b2e1f027da8162d0f4ae57e81a9d3a5de513e5",
+        "64057cb1a7c897032993011a46fa61c902518acaa65baf01e929b72ee5bb8efe",
+        "98c4e1b55e75b77bb9aa6c4727ff57f3810eac959bb133d5e8b353988e695e54"
+      ]
+    },
+    "theorem": "The order-108 M36 coloring stabilizer is compatible with the signed E6 cubic only projectively. Its exact cubic-support lift is the order-324 central extension H27:B; every support element has 64 diagonal sign repairs, forming a 20,736-element monomial signed-cubic lift. The central C3 extension does not split, so no strict order-108 subgroup acts on the 27 signed cubic coordinates with the requested affine translation law."
+  },
+  "global_boundary": "The packet proves finite logical, coding, representation, transfer-matrix, and group-extension statements inside explicit models. It does not claim a microscopic cubic interaction, a measured fault threshold, or fabricated photonics.",
+  "schema": "w33.pass10947.five_front_execution.v1",
+  "status": "PASS_CUBIC_VM_GOLAY_FACTORY_QUOTIENT_CENTRALIZER_ROUTER_AND_PROJECTIVE_COMPATIBILITY"
+}

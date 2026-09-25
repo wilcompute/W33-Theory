@@ -1,0 +1,40 @@
+\subsection{Pass 10947: cubic VM lowering and the coloring-phase anomaly}
+
+The signed $E_6$ cubic zero-controlled-$X$ compiler now lowers to four modes
+of the seven-qutrit VM.  With two clean ancillas, the exact word uses three
+Heisenberg translations, four Fourier operations, two controlled phases and
+one native cubic tick.  It has ten operations in seven parallel layers, uses
+only the existing $(0,1)$ pair edge, and returns both ancillas to zero.
+
+Building on the code and logical-core certificates in
+\texttt{analysis/w33\_dark\_strange\_golay11\_ft\_lane.py} and
+\texttt{analysis/PASS10944\_RESERVATION.md}, the ternary Golay
+$[[11,1,5]]_3$ lane's three logical input supports
+are constructed explicitly from the cosets $C,C+\mathbf1,C+2\mathbf1$.
+Two verified syndrome rounds per block plus the $66$-location core give $552$
+locations in the declared coordinate-local model.  Exact enumeration finds
+$2{,}576{,}205$ malignant fault triples and the bound
+\[
+ P_{\rm fail}\le 2{,}576{,}205p^3(1-p)^{549}
+ +\Pr[\operatorname{Bin}(552,p)\ge4],
+\]
+whose conservative crossing with $p$ is $0.000531703523611593$.
+
+The Fourier quotient is canonically $18+18+18$; the parabolic $36+18$
+projector has discrete centralizer $H_{27}\times S_2$ of order $54$ inside
+$H_{27}\times S_3$.  Its linear commutant dimensions are $162$ with only
+$H_{27}$ retained and $54$ with the external clock $C_3$ retained.
+
+The ideal M36 interface is synthesized by a three-switch star with mode $3$
+as dump.  Its four active-switch counts are $(1,1,1,0)$, improving the
+adjacent-chain counts $(3,2,1,0)$ while reproducing all $36$ partial
+isometries exactly.
+
+Finally, the order-$108$ M36 coloring stabilizer lifts to the signed cubic only
+projectively.  Its support lift is $H_{27}{:}B$ of order $324$, with central
+kernel $C_3$; every support permutation has a $2^6$ diagonal-sign torsor, so
+the full monomial signed lift has order $20{,}736$.  The $C_3$ extension is
+non-split: every lift of the two affine translation generators has the same
+nontrivial central commutator.  Selector relabeling must therefore track the
+central qutrit phase and sign gauge.  These are finite logical and engineering
+specifications, not device measurements.

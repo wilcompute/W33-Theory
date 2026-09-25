@@ -1,0 +1,35 @@
+name: W33 Pass 10947 five-front execution
+
+on:
+  push:
+    paths:
+      - "analysis/w33_pass10947_five_front_execution.py"
+      - "analysis/PASS10947_RESERVATION.md"
+      - "analysis/PASS10947_FIVE_FRONT_EXECUTION_INSERT.tex"
+      - "analysis/W33_SHARED_FRONTIER_TAIL.tex"
+      - "data/w33_pass10947_five_front_execution.json"
+      - "docs/index.html"
+      - "tests/test_w33_pass10947_five_front_execution.py"
+      - ".github/workflows/w33_pass10947_five_front_execution.yml"
+  pull_request:
+    paths:
+      - "analysis/w33_pass10947_five_front_execution.py"
+      - "analysis/PASS10947_RESERVATION.md"
+      - "analysis/PASS10947_FIVE_FRONT_EXECUTION_INSERT.tex"
+      - "analysis/W33_SHARED_FRONTIER_TAIL.tex"
+      - "data/w33_pass10947_five_front_execution.json"
+      - "docs/index.html"
+      - "tests/test_w33_pass10947_five_front_execution.py"
+      - ".github/workflows/w33_pass10947_five_front_execution.yml"
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install numpy sympy pytest
+      - run: python analysis/w33_pass10947_five_front_execution.py
+      - run: python -m pytest -q tests/test_w33_pass10947_five_front_execution.py
