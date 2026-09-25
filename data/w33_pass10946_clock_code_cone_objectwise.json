@@ -1,0 +1,438 @@
+{
+  "E8_glue_crosscheck": {
+    "existing_root_identity": "240 = 4*6 + 8*27",
+    "existing_standard_tetracode_certificate": "MCCCLXXXVII",
+    "new_reading": "the four A2 glue coordinates are the four projective clock rays; the eight nonzero glue words are the two oriented linear clock functions vanishing at each of the four rays"
+  },
+  "boundary": "This is finite F3 projective geometry plus a code and null-cone theorem. The orientation scalar is an algebraic sign lift. A thermodynamic arrow still requires open-system irreversibility; the theorem does not promote the finite determinant cone to continuum Lorentz spacetime.",
+  "clock_line": {
+    "orientation_lifts": [
+      {
+        "coordinate": 0,
+        "normalized_projective_rep": [
+          1,
+          0
+        ],
+        "orientation_scalar": 1,
+        "oriented_rep": [
+          1,
+          0
+        ]
+      },
+      {
+        "coordinate": 1,
+        "normalized_projective_rep": [
+          0,
+          1
+        ],
+        "orientation_scalar": 1,
+        "oriented_rep": [
+          0,
+          1
+        ]
+      },
+      {
+        "coordinate": 2,
+        "normalized_projective_rep": [
+          1,
+          1
+        ],
+        "orientation_scalar": 1,
+        "oriented_rep": [
+          1,
+          1
+        ]
+      },
+      {
+        "coordinate": 3,
+        "normalized_projective_rep": [
+          1,
+          2
+        ],
+        "orientation_scalar": 2,
+        "oriented_rep": [
+          2,
+          1
+        ]
+      }
+    ],
+    "oriented_evaluation_representatives": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "projective_rays": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "space": "P1(F3)"
+  },
+  "cone_dictionary": {
+    "M36_family_order_in_tetracode_coordinates": [
+      "B",
+      "A",
+      "C",
+      "D"
+    ],
+    "all_four_images_null": true,
+    "coordinate_to_existing_geometry": [
+      {
+        "Hesse_parallel_class": [
+          [
+            0,
+            3,
+            6
+          ],
+          [
+            1,
+            4,
+            7
+          ],
+          [
+            2,
+            5,
+            8
+          ]
+        ],
+        "M36_family": "B",
+        "M36_family_index": 1,
+        "bell_line_point": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "oriented_clock_rep": [
+          1,
+          0
+        ],
+        "projective_clock_ray": [
+          1,
+          0
+        ],
+        "symmetric_square_null_ray": [
+          1,
+          0,
+          0
+        ],
+        "tetracode_coordinate": 0
+      },
+      {
+        "Hesse_parallel_class": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "M36_family": "A",
+        "M36_family_index": 0,
+        "bell_line_point": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "oriented_clock_rep": [
+          0,
+          1
+        ],
+        "projective_clock_ray": [
+          0,
+          1
+        ],
+        "symmetric_square_null_ray": [
+          0,
+          0,
+          1
+        ],
+        "tetracode_coordinate": 1
+      },
+      {
+        "Hesse_parallel_class": [
+          [
+            0,
+            4,
+            8
+          ],
+          [
+            1,
+            5,
+            6
+          ],
+          [
+            2,
+            3,
+            7
+          ]
+        ],
+        "M36_family": "C",
+        "M36_family_index": 2,
+        "bell_line_point": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "oriented_clock_rep": [
+          1,
+          1
+        ],
+        "projective_clock_ray": [
+          1,
+          1
+        ],
+        "symmetric_square_null_ray": [
+          1,
+          1,
+          1
+        ],
+        "tetracode_coordinate": 2
+      },
+      {
+        "Hesse_parallel_class": [
+          [
+            0,
+            5,
+            7
+          ],
+          [
+            1,
+            3,
+            8
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ],
+        "M36_family": "D",
+        "M36_family_index": 3,
+        "bell_line_point": [
+          1,
+          2,
+          0,
+          0
+        ],
+        "oriented_clock_rep": [
+          2,
+          1
+        ],
+        "projective_clock_ray": [
+          1,
+          2
+        ],
+        "symmetric_square_null_ray": [
+          1,
+          2,
+          1
+        ],
+        "tetracode_coordinate": 3
+      }
+    ],
+    "matches_existing_M36_Hesse_null_atlas_objectwise": true,
+    "quadratic_form": "q(a,b,c)=a*c-b^2",
+    "symmetric_square": "nu(x,y)=(x^2,x*y,y^2)"
+  },
+  "schema": "w33.pass10946.clock_code_cone_objectwise.v1",
+  "status": "PASS_CLOCK_CODE_CONE_OBJECTWISE_THEOREM",
+  "symmetry": {
+    "GL2_order": 48,
+    "calibration_count": "4 frames * 2 orientations * 3 origins = 24",
+    "complete_clock_calibrations": 24,
+    "distinct_monomial_tetracode_actions": 48,
+    "kernel_on_projective_rays": "{+I,-I}",
+    "projective_image": "PGL(2,3) ~= S4",
+    "projective_permutation_image_order": 24,
+    "same_projective_permutation_has_two_global_sign_lifts": true
+  },
+  "tetracode": {
+    "evaluation_code_equals_repo_standard_exactly": true,
+    "evaluation_formula": "(a,b,a+b,2a+b)=(a,b,a+b,b-a)",
+    "evaluation_rule": "ell_(a,b)(x,y)=a*x+b*y",
+    "four_opposite_pairs_by_omitted_clock": [
+      {
+        "clock_coordinate": 0,
+        "oriented_codewords": [
+          [
+            0,
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            2,
+            2
+          ]
+        ],
+        "oriented_forms": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "projective_ray": [
+          1,
+          0
+        ]
+      },
+      {
+        "clock_coordinate": 1,
+        "oriented_codewords": [
+          [
+            1,
+            0,
+            1,
+            2
+          ],
+          [
+            2,
+            0,
+            2,
+            1
+          ]
+        ],
+        "oriented_forms": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "projective_ray": [
+          0,
+          1
+        ]
+      },
+      {
+        "clock_coordinate": 2,
+        "oriented_codewords": [
+          [
+            1,
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            1,
+            0,
+            2
+          ]
+        ],
+        "oriented_forms": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "projective_ray": [
+          1,
+          1
+        ]
+      },
+      {
+        "clock_coordinate": 3,
+        "oriented_codewords": [
+          [
+            1,
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            1,
+            0
+          ]
+        ],
+        "oriented_forms": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "projective_ray": [
+          1,
+          2
+        ]
+      }
+    ],
+    "repo_generators": [
+      [
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        2
+      ]
+    ],
+    "size": 9,
+    "weight_enumerator": {
+      "0": 1,
+      "3": 8
+    }
+  },
+  "theorem": "With oriented projective representatives (1,0),(0,1),(1,1),(2,1), evaluation of all linear forms on P1(F3) is exactly the repository's frozen ternary tetracode, including its fourth-coordinate sign convention. Projectivizing those representatives and applying the symmetric-square Veronese map gives, coordinate by coordinate, the four null directions already attached to M36 families B,A,C,D, their Hesse striations and Bell points. GL(2,3) acts by 48 exact monomial tetracode automorphisms; modulo the global sign lift it induces the same order-24 PGL(2,3)=S4 action on the four clock rays. Thus the code-coordinate sign is not arbitrary: it is an oriented lift of the projective clock/null direction."
+}
