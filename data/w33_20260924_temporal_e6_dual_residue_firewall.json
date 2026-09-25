@@ -1,0 +1,72 @@
+{
+  "E6_point_side": {
+    "diameter": 3,
+    "nonedge_common_neighbor_histogram": {
+      "0": 27,
+      "3": 216
+    },
+    "pair_distance_histogram": {
+      "1": 108,
+      "2": 216,
+      "3": 27
+    },
+    "pass7186_intersection_array": "{8,6,1;1,3,8}",
+    "pass7186_status": "PASS",
+    "source": "W(3,3) H27 / E8 matter-fibre Cayley graph",
+    "zero_common_neighbor_nonedge_pairs": 27
+  },
+  "boundary": "This explicitly blocks the tempting identification temporal-36 = E6-affine-36.  The correct bridge is dual/cospectral, not objectwise. No continuum dynamics or particle assignment is inferred.",
+  "dual_residue_reading": "The two 27-by-36 triangle systems are the point/line-dual residual constructions that the odd-q firewall keeps distinct.  On the E6/W33 point side, 27 remote points support 36 affine line-triads and the nine fiber triads close the 27 distance-three pairs.  On the temporal Q(4,3) line side, 27 lines disjoint from the Bell line support 36 point-triads; their null graph already has diameter two and no zero-common-neighbour nonedges.  They share counts and spectrum but not incidence geometry.",
+  "firewall_completion": {
+    "completed_graph": "SRG(27,10,1,5)",
+    "completed_spectrum": {
+      "-5": 6,
+      "1": 20,
+      "10": 1
+    },
+    "fiber_pairs": 27,
+    "fiber_pairs_equal_all_zero_CN_nonedges": true,
+    "fiber_triads": 9
+  },
+  "no_go": {
+    "E6_affine": "{0:27, 3:216}; diameter 3",
+    "hypergraphs_isomorphic": false,
+    "proof_invariant": "nonedge common-neighbour histogram",
+    "same_spectrum_does_not_identify_the_36_triads": true,
+    "temporal": "{2:162, 4:81}; diameter 2"
+  },
+  "schema": "w33.20260924.temporal_e6_dual_residue_firewall.v1",
+  "shared_shadow": {
+    "adjacent_common_neighbors": {
+      "1": 108
+    },
+    "degree": 8,
+    "each_edge_in_exactly_one_triangle": true,
+    "edges": 108,
+    "spectrum": {
+      "-1": 8,
+      "-4": 6,
+      "2": 12,
+      "8": 1
+    },
+    "triangles": 36,
+    "vertex_triangle_degree": 4,
+    "vertices": 27
+  },
+  "status": "PASS_TEMPORAL_36_AND_E6_AFFINE_36_ARE_COSPECTRAL_NONISOMORPHIC_DUAL_RESIDUES",
+  "temporal_line_side": {
+    "diameter": 2,
+    "nonedge_common_neighbor_histogram": {
+      "2": 162,
+      "4": 81
+    },
+    "pair_distance_histogram": {
+      "1": 108,
+      "2": 243
+    },
+    "producer_status": "PASS_27_HISTORY_BIG_CELL_COMPACTS_TO_Q43_LINE_CARRIER",
+    "source": "Q(4,3) line-side Bell big cell",
+    "zero_common_neighbor_nonedge_pairs": 0
+  },
+  "theorem": "The temporal 36-triangle complex and the E6 affine 36-triad complex are a new exact cospectral firewall pair: both are 8-regular 27-vertex graphs with 108 edges, 36 triangles and spectrum 8^1+2^12+(-1)^8+(-4)^6, yet they are not isomorphic.  The temporal nonedges have 2 or 4 common neighbours, whereas the E6 nonedges have 0 or 3.  The 27 E6 zero-common-neighbour pairs are exactly the nine firewall-fiber triangles; adding them produces SRG(27,10,1,5)."
+}

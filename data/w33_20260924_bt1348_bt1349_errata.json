@@ -1,0 +1,33 @@
+{
+  "BT1348": {
+    "contextual_36_equals_12_plus_27": false,
+    "full_quantum_code_claim": false,
+    "no_factory_inference_from_shell_counts": false,
+    "repetition_subspace": "detects X shifts but not one-site Z phase",
+    "routing_preserves_repetition_subspace": false,
+    "routing_repetition_subspace_weight": "2/3",
+    "routing_unitary": true,
+    "shell_identity": "1+12+27=40",
+    "weyl_relation": "XZ=omega^-1 ZX for the declared X,Z convention"
+  },
+  "BT1349": {
+    "degree": 6,
+    "diameter": 1,
+    "old_3_regular_claim": false,
+    "pair_channels": 21,
+    "point_graph": "K7",
+    "spectrum": {
+      "-1": 6,
+      "6": 1
+    }
+  },
+  "boundary": "These are repairs to legacy witnesses, not a rejection of later exact qutrit QEC or ADQC results.  In particular they reinforce the current resource boundary that non-Clifford magic is not obtained from shell counting alone.",
+  "later_code_boundary": {
+    "distinct_from_BT1348_repetition_basis": true,
+    "knill_laflamme_checks": 27,
+    "valid_code": "BT3715 [[3,1,2]]_3 one-known-erasure code"
+  },
+  "schema": "w33.20260924.bt1348_bt1349_errata.v1",
+  "status": "PASS_BT1348_BT1349_LEGACY_WITNESSES_REPAIRED_WITH_FIREWALLS",
+  "theorem": "BT1348 and BT1349 contained independent legacy overclaims.  With the declared qutrit Pauli convention the Weyl relation has inverse phase; the BT1348 repetition subspace detects shifts but not all one-site Paulis, and BT1340 routing leaks one third of the tested state outside that subspace.  Separately, Fano point adjacency by sharing a line is K7, not a cubic graph.  The later BT3715 erasure code remains a valid [[3,1,2]]_3 construction and is not the BT1348 repetition basis."
+}

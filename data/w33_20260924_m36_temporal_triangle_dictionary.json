@@ -1,0 +1,1601 @@
+{
+  "M36_dictionary": {
+    "family_to_unique_Bell_point": {
+      "0": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "1": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "2": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "3": [
+        1,
+        2,
+        0,
+        0
+      ]
+    },
+    "ray_id_rule": "family*9 + 3*mu + nu",
+    "rows": [
+      {
+        "family": 0,
+        "mu": 0,
+        "nearest_B_point": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "nu": 0,
+        "orientation_coefficient": 1,
+        "ray_id": 0,
+        "temporal_histories": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ],
+        "temporal_triangle_indices": [
+          0,
+          1,
+          2
+        ],
+        "w33_point": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "witting_index": 4
+      },
+      {
+        "family": 0,
+        "mu": 0,
+        "nearest_B_point": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "nu": 1,
+        "orientation_coefficient": 1,
+        "ray_id": 1,
+        "temporal_histories": [
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            2,
+            2
+          ]
+        ],
+        "temporal_triangle_indices": [
+          15,
+          16,
+          17
+        ],
+        "w33_point": [
+          1,
+          2,
+          1,
+          0
+        ],
+        "witting_index": 8
+      },
+      {
+        "family": 0,
+        "mu": 0,
+        "nearest_B_point": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "nu": 2,
+        "orientation_coefficient": 1,
+        "ray_id": 2,
+        "temporal_histories": [
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            2
+          ]
+        ],
+        "temporal_triangle_indices": [
+          21,
+          22,
+          23
+        ],
+        "w33_point": [
+          1,
+          2,
+          2,
+          0
+        ],
+        "witting_index": 12
+      },
+      {
+        "family": 0,
+        "mu": 1,
+        "nearest_B_point": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "nu": 0,
+        "orientation_coefficient": 1,
+        "ray_id": 3,
+        "temporal_histories": [
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ]
+        ],
+        "temporal_triangle_indices": [
+          12,
+          13,
+          14
+        ],
+        "w33_point": [
+          1,
+          1,
+          1,
+          0
+        ],
+        "witting_index": 16
+      },
+      {
+        "family": 0,
+        "mu": 1,
+        "nearest_B_point": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "nu": 1,
+        "orientation_coefficient": 1,
+        "ray_id": 4,
+        "temporal_histories": [
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            0,
+            2
+          ]
+        ],
+        "temporal_triangle_indices": [
+          18,
+          19,
+          20
+        ],
+        "w33_point": [
+          1,
+          0,
+          2,
+          0
+        ],
+        "witting_index": 20
+      },
+      {
+        "family": 0,
+        "mu": 1,
+        "nearest_B_point": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "nu": 2,
+        "orientation_coefficient": 1,
+        "ray_id": 5,
+        "temporal_histories": [
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            2,
+            2
+          ]
+        ],
+        "temporal_triangle_indices": [
+          6,
+          7,
+          8
+        ],
+        "w33_point": [
+          0,
+          1,
+          2,
+          0
+        ],
+        "witting_index": 24
+      },
+      {
+        "family": 0,
+        "mu": 2,
+        "nearest_B_point": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "nu": 0,
+        "orientation_coefficient": 1,
+        "ray_id": 6,
+        "temporal_histories": [
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "temporal_triangle_indices": [
+          24,
+          25,
+          26
+        ],
+        "w33_point": [
+          1,
+          1,
+          2,
+          0
+        ],
+        "witting_index": 28
+      },
+      {
+        "family": 0,
+        "mu": 2,
+        "nearest_B_point": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "nu": 1,
+        "orientation_coefficient": 1,
+        "ray_id": 7,
+        "temporal_histories": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        "temporal_triangle_indices": [
+          3,
+          4,
+          5
+        ],
+        "w33_point": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "witting_index": 32
+      },
+      {
+        "family": 0,
+        "mu": 2,
+        "nearest_B_point": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "nu": 2,
+        "orientation_coefficient": 1,
+        "ray_id": 8,
+        "temporal_histories": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            2
+          ]
+        ],
+        "temporal_triangle_indices": [
+          9,
+          10,
+          11
+        ],
+        "w33_point": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "witting_index": 36
+      },
+      {
+        "family": 1,
+        "mu": 0,
+        "nearest_B_point": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "nu": 0,
+        "orientation_coefficient": 1,
+        "ray_id": 9,
+        "temporal_histories": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0
+          ]
+        ],
+        "temporal_triangle_indices": [
+          0,
+          9,
+          18
+        ],
+        "w33_point": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "witting_index": 5
+      },
+      {
+        "family": 1,
+        "mu": 0,
+        "nearest_B_point": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "nu": 1,
+        "orientation_coefficient": 1,
+        "ray_id": 10,
+        "temporal_histories": [
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ]
+        ],
+        "temporal_triangle_indices": [
+          7,
+          16,
+          25
+        ],
+        "w33_point": [
+          1,
+          2,
+          0,
+          2
+        ],
+        "witting_index": 9
+      },
+      {
+        "family": 1,
+        "mu": 0,
+        "nearest_B_point": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "nu": 2,
+        "orientation_coefficient": 1,
+        "ray_id": 11,
+        "temporal_histories": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            2
+          ]
+        ],
+        "temporal_triangle_indices": [
+          5,
+          14,
+          23
+        ],
+        "w33_point": [
+          1,
+          2,
+          0,
+          1
+        ],
+        "witting_index": 13
+      },
+      {
+        "family": 1,
+        "mu": 1,
+        "nearest_B_point": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "nu": 0,
+        "orientation_coefficient": 1,
+        "ray_id": 12,
+        "temporal_histories": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ]
+        ],
+        "temporal_triangle_indices": [
+          4,
+          13,
+          22
+        ],
+        "w33_point": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "witting_index": 17
+      },
+      {
+        "family": 1,
+        "mu": 1,
+        "nearest_B_point": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "nu": 1,
+        "orientation_coefficient": 1,
+        "ray_id": 13,
+        "temporal_histories": [
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            2,
+            0,
+            2
+          ]
+        ],
+        "temporal_triangle_indices": [
+          2,
+          11,
+          20
+        ],
+        "w33_point": [
+          0,
+          1,
+          0,
+          2
+        ],
+        "witting_index": 21
+      },
+      {
+        "family": 1,
+        "mu": 1,
+        "nearest_B_point": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "nu": 2,
+        "orientation_coefficient": 1,
+        "ray_id": 14,
+        "temporal_histories": [
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ]
+        ],
+        "temporal_triangle_indices": [
+          6,
+          15,
+          24
+        ],
+        "w33_point": [
+          1,
+          0,
+          0,
+          2
+        ],
+        "witting_index": 25
+      },
+      {
+        "family": 1,
+        "mu": 2,
+        "nearest_B_point": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "nu": 0,
+        "orientation_coefficient": 1,
+        "ray_id": 15,
+        "temporal_histories": [
+          [
+            0,
+            2,
+            2
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "temporal_triangle_indices": [
+          8,
+          17,
+          26
+        ],
+        "w33_point": [
+          1,
+          1,
+          0,
+          2
+        ],
+        "witting_index": 29
+      },
+      {
+        "family": 1,
+        "mu": 2,
+        "nearest_B_point": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "nu": 1,
+        "orientation_coefficient": 1,
+        "ray_id": 16,
+        "temporal_histories": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            0
+          ]
+        ],
+        "temporal_triangle_indices": [
+          3,
+          12,
+          21
+        ],
+        "w33_point": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "witting_index": 33
+      },
+      {
+        "family": 1,
+        "mu": 2,
+        "nearest_B_point": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "nu": 2,
+        "orientation_coefficient": 1,
+        "ray_id": 17,
+        "temporal_histories": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            2,
+            0,
+            1
+          ]
+        ],
+        "temporal_triangle_indices": [
+          1,
+          10,
+          19
+        ],
+        "w33_point": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "witting_index": 37
+      },
+      {
+        "family": 2,
+        "mu": 0,
+        "nearest_B_point": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "nu": 0,
+        "orientation_coefficient": 1,
+        "ray_id": 18,
+        "temporal_histories": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "temporal_triangle_indices": [
+          0,
+          13,
+          26
+        ],
+        "w33_point": [
+          0,
+          0,
+          1,
+          2
+        ],
+        "witting_index": 6
+      },
+      {
+        "family": 2,
+        "mu": 0,
+        "nearest_B_point": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "nu": 1,
+        "orientation_coefficient": 1,
+        "ray_id": 19,
+        "temporal_histories": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            0,
+            2
+          ]
+        ],
+        "temporal_triangle_indices": [
+          3,
+          16,
+          20
+        ],
+        "w33_point": [
+          1,
+          2,
+          2,
+          1
+        ],
+        "witting_index": 10
+      },
+      {
+        "family": 2,
+        "mu": 0,
+        "nearest_B_point": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "nu": 2,
+        "orientation_coefficient": 1,
+        "ray_id": 20,
+        "temporal_histories": [
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            2,
+            1,
+            2
+          ]
+        ],
+        "temporal_triangle_indices": [
+          6,
+          10,
+          23
+        ],
+        "w33_point": [
+          1,
+          2,
+          1,
+          2
+        ],
+        "witting_index": 14
+      },
+      {
+        "family": 2,
+        "mu": 1,
+        "nearest_B_point": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "nu": 0,
+        "orientation_coefficient": 1,
+        "ray_id": 21,
+        "temporal_histories": [
+          [
+            0,
+            2,
+            2
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            1
+          ]
+        ],
+        "temporal_triangle_indices": [
+          8,
+          9,
+          22
+        ],
+        "w33_point": [
+          1,
+          0,
+          1,
+          2
+        ],
+        "witting_index": 18
+      },
+      {
+        "family": 2,
+        "mu": 1,
+        "nearest_B_point": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "nu": 1,
+        "orientation_coefficient": 1,
+        "ray_id": 22,
+        "temporal_histories": [
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            2,
+            2,
+            1
+          ]
+        ],
+        "temporal_triangle_indices": [
+          2,
+          12,
+          25
+        ],
+        "w33_point": [
+          0,
+          1,
+          1,
+          2
+        ],
+        "witting_index": 22
+      },
+      {
+        "family": 2,
+        "mu": 1,
+        "nearest_B_point": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "nu": 2,
+        "orientation_coefficient": 1,
+        "ray_id": 23,
+        "temporal_histories": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ]
+        ],
+        "temporal_triangle_indices": [
+          5,
+          15,
+          19
+        ],
+        "w33_point": [
+          1,
+          1,
+          2,
+          1
+        ],
+        "witting_index": 26
+      },
+      {
+        "family": 2,
+        "mu": 2,
+        "nearest_B_point": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "nu": 0,
+        "orientation_coefficient": 1,
+        "ray_id": 24,
+        "temporal_histories": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            0,
+            0
+          ]
+        ],
+        "temporal_triangle_indices": [
+          4,
+          17,
+          18
+        ],
+        "w33_point": [
+          1,
+          0,
+          2,
+          1
+        ],
+        "witting_index": 30
+      },
+      {
+        "family": 2,
+        "mu": 2,
+        "nearest_B_point": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "nu": 1,
+        "orientation_coefficient": 1,
+        "ray_id": 25,
+        "temporal_histories": [
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            2,
+            1,
+            0
+          ]
+        ],
+        "temporal_triangle_indices": [
+          7,
+          11,
+          21
+        ],
+        "w33_point": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "witting_index": 34
+      },
+      {
+        "family": 2,
+        "mu": 2,
+        "nearest_B_point": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "nu": 2,
+        "orientation_coefficient": 1,
+        "ray_id": 26,
+        "temporal_histories": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            0
+          ]
+        ],
+        "temporal_triangle_indices": [
+          1,
+          14,
+          24
+        ],
+        "w33_point": [
+          0,
+          1,
+          2,
+          1
+        ],
+        "witting_index": 38
+      },
+      {
+        "family": 3,
+        "mu": 0,
+        "nearest_B_point": [
+          1,
+          2,
+          0,
+          0
+        ],
+        "nu": 0,
+        "orientation_coefficient": 1,
+        "ray_id": 27,
+        "temporal_histories": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            1,
+            2
+          ]
+        ],
+        "temporal_triangle_indices": [
+          0,
+          16,
+          23
+        ],
+        "w33_point": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "witting_index": 7
+      },
+      {
+        "family": 3,
+        "mu": 0,
+        "nearest_B_point": [
+          1,
+          2,
+          0,
+          0
+        ],
+        "nu": 1,
+        "orientation_coefficient": 1,
+        "ray_id": 28,
+        "temporal_histories": [
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            0,
+            2
+          ]
+        ],
+        "temporal_triangle_indices": [
+          6,
+          13,
+          20
+        ],
+        "w33_point": [
+          1,
+          1,
+          2,
+          2
+        ],
+        "witting_index": 11
+      },
+      {
+        "family": 3,
+        "mu": 0,
+        "nearest_B_point": [
+          1,
+          2,
+          0,
+          0
+        ],
+        "nu": 2,
+        "orientation_coefficient": 1,
+        "ray_id": 29,
+        "temporal_histories": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "temporal_triangle_indices": [
+          3,
+          10,
+          26
+        ],
+        "w33_point": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "witting_index": 15
+      },
+      {
+        "family": 3,
+        "mu": 1,
+        "nearest_B_point": [
+          1,
+          2,
+          0,
+          0
+        ],
+        "nu": 0,
+        "orientation_coefficient": 1,
+        "ray_id": 30,
+        "temporal_histories": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            2,
+            2,
+            1
+          ]
+        ],
+        "temporal_triangle_indices": [
+          5,
+          9,
+          25
+        ],
+        "w33_point": [
+          1,
+          0,
+          1,
+          1
+        ],
+        "witting_index": 19
+      },
+      {
+        "family": 3,
+        "mu": 1,
+        "nearest_B_point": [
+          1,
+          2,
+          0,
+          0
+        ],
+        "nu": 1,
+        "orientation_coefficient": 1,
+        "ray_id": 31,
+        "temporal_histories": [
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            1,
+            1
+          ]
+        ],
+        "temporal_triangle_indices": [
+          2,
+          15,
+          22
+        ],
+        "w33_point": [
+          0,
+          1,
+          2,
+          2
+        ],
+        "witting_index": 23
+      },
+      {
+        "family": 3,
+        "mu": 1,
+        "nearest_B_point": [
+          1,
+          2,
+          0,
+          0
+        ],
+        "nu": 2,
+        "orientation_coefficient": 1,
+        "ray_id": 32,
+        "temporal_histories": [
+          [
+            0,
+            2,
+            2
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ]
+        ],
+        "temporal_triangle_indices": [
+          8,
+          12,
+          19
+        ],
+        "w33_point": [
+          1,
+          2,
+          2,
+          2
+        ],
+        "witting_index": 27
+      },
+      {
+        "family": 3,
+        "mu": 2,
+        "nearest_B_point": [
+          1,
+          2,
+          0,
+          0
+        ],
+        "nu": 0,
+        "orientation_coefficient": 1,
+        "ray_id": 33,
+        "temporal_histories": [
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            0,
+            0
+          ]
+        ],
+        "temporal_triangle_indices": [
+          7,
+          14,
+          18
+        ],
+        "w33_point": [
+          1,
+          0,
+          2,
+          2
+        ],
+        "witting_index": 31
+      },
+      {
+        "family": 3,
+        "mu": 2,
+        "nearest_B_point": [
+          1,
+          2,
+          0,
+          0
+        ],
+        "nu": 1,
+        "orientation_coefficient": 1,
+        "ray_id": 34,
+        "temporal_histories": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            2,
+            2,
+            0
+          ]
+        ],
+        "temporal_triangle_indices": [
+          4,
+          11,
+          24
+        ],
+        "w33_point": [
+          1,
+          2,
+          1,
+          1
+        ],
+        "witting_index": 35
+      },
+      {
+        "family": 3,
+        "mu": 2,
+        "nearest_B_point": [
+          1,
+          2,
+          0,
+          0
+        ],
+        "nu": 2,
+        "orientation_coefficient": 1,
+        "ray_id": 35,
+        "temporal_histories": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            1,
+            0
+          ]
+        ],
+        "temporal_triangle_indices": [
+          1,
+          17,
+          21
+        ],
+        "w33_point": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "witting_index": 39
+      }
+    ],
+    "witting_index_rule": "4 + 4*(3*mu+nu) + family"
+  },
+  "boundary": "This is an exact finite-geometry dictionary.  It does not identify the two-qubit/ququart M36 magic resource with a qutrit magic state, and it does not imply that temporal history itself supplies non-Clifford magic. Those resource theories remain separately typed.",
+  "checks": {
+    "all_36_magic_rays_biject_to_off_Bell_points": true,
+    "all_36_points_biject_to_temporal_triangles": true,
+    "orientation_histogram": {
+      "1": 36
+    },
+    "triangle_is_exactly_three_history_lines_through_point": true,
+    "witting_orthogonality_equals_symplectic_collinearity": true
+  },
+  "gauge_alignment": {
+    "axes_map_exactly_to_Bell_line": true,
+    "source_witting_axes": "indices 0..3 in explicit Witting bridge",
+    "symplectic_rotation": "J:(a,b,c,d)->(c,d,-a,-b)",
+    "target_Bell_line": [
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        2,
+        0,
+        0
+      ]
+    ]
+  },
+  "residual_geometry": {
+    "W33_points_total": 40,
+    "configuration": "36_3,27_4 residual point-line geometry",
+    "deleted_Bell_line_points": 4,
+    "history_line_degree_into_off_line_points": 4,
+    "history_lines_disjoint_from_Bell": 27,
+    "incidences": 108,
+    "off_line_points": 36,
+    "point_degree_into_history_lines": 3,
+    "temporal_triangles": 36
+  },
+  "schema": "w33.20260924.m36_temporal_triangle_dictionary.v1",
+  "status": "PASS_M36_IS_OBJECTWISE_THE_36_ORIENTED_TEMPORAL_TRIANGLES",
+  "theorem": "After one explicit symplectic gauge rotation, the four computational Witting axes are exactly the Bell line B of the temporal W33 chart. Consequently the 36 M36 Witting rays are objectwise the 36 W33 points off B.  Each such point lies on exactly three of the 27 history lines disjoint from B, and those three lines are exactly one temporal triangle. Thus M36 ray_id -> W33 point -> oriented temporal triangle is a certified bijection, not a cardinality match.  The four M36 nine-ray families are the four nearest-point fibres over the four Bell-line points."
+}

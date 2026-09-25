@@ -1,0 +1,150 @@
+{
+  "BT1349_erratum": {
+    "correct_spectrum": "6^1 + (-1)^6",
+    "correct_statement": "every pair of Fano points shares one line, so that adjacency is K7 and degree 6",
+    "old_claim": "Fano point adjacency by sharing a line is 3-regular",
+    "old_script_replay_failed_at_degree_check": true
+  },
+  "Pass10941_VM": {
+    "algebraic_closure": "Sp(14,3) plus seven-mode Heisenberg translations",
+    "existing_pair_coupler_count": 6,
+    "existing_pair_couplers": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "existing_pair_graph": "Hamiltonian path P7",
+    "full_K7_pair_coupler_count": 21,
+    "reading": "Pass10941 already reaches the full seven-qutrit Clifford target using only the six P7 pair couplers.  The 21-edge K7/Fano/Csaszar fabric is therefore a symmetry-completed routing surface, not an algebraic universality requirement.",
+    "status": "PASS_SEVEN_QUTRIT_CLIFFORD_T_ABI_WITH_RESOURCE_CONSERVATION"
+  },
+  "boundary": "The 168 group elements provide a mathematically canonical address set, but this certificate does not claim that the current 168 detector bins are physically wired one-to-one to those group elements without an explicit hardware labeling table.",
+  "coupler_fabric": {
+    "Csaszar_1_skeleton": "K7",
+    "Euler_characteristic": 0,
+    "all_directed_pairs_are_one_GL3_2_orbit": true,
+    "all_pairs_are_one_GL3_2_orbit": true,
+    "directed_pair_latches": 42,
+    "faces_split": "7 standard Fano + 7 complementary Fano",
+    "pair_completion_counts": {
+      "0": 3,
+      "1": 3,
+      "2": 3,
+      "3": 3,
+      "4": 3,
+      "5": 3,
+      "6": 3
+    },
+    "torus_faces": 14,
+    "undirected_CZ_pairs": 21
+  },
+  "mode_codec": {
+    "line_law": "u+v+w=0 over F2^3",
+    "mode_to_nonzero_F2_3": {
+      "0": [
+        1,
+        0,
+        0
+      ],
+      "1": [
+        0,
+        1,
+        0
+      ],
+      "2": [
+        0,
+        0,
+        1
+      ],
+      "3": [
+        1,
+        1,
+        0
+      ],
+      "4": [
+        0,
+        1,
+        1
+      ],
+      "5": [
+        1,
+        1,
+        1
+      ],
+      "6": [
+        1,
+        0,
+        1
+      ]
+    },
+    "seven_modes": "PG(2,2) points = nonzero F2^3 vectors",
+    "standard_Fano_lines": [
+      [
+        0,
+        1,
+        3
+      ],
+      [
+        0,
+        2,
+        6
+      ],
+      [
+        0,
+        4,
+        5
+      ],
+      [
+        1,
+        2,
+        4
+      ],
+      [
+        1,
+        5,
+        6
+      ],
+      [
+        2,
+        3,
+        5
+      ],
+      [
+        3,
+        4,
+        6
+      ]
+    ]
+  },
+  "schema": "w33.20260924.fano_seven_qutrit_vm_fabric.v1",
+  "status": "PASS_SEVEN_QUTRIT_VM_IS_FANO_INDEXED_K7_CSASZAR_FABRIC",
+  "symmetry": {
+    "GL3_2_order": 168,
+    "conjugates_F_P_CZ_primitives_equivariantly": true,
+    "embedded_in_Sp14_3_as_mode_permutations": true,
+    "identification": "GL(3,2)=PSL(2,7), order 168",
+    "natural_168_address_set": "the 168 Fano collineations themselves"
+  },
+  "theorem": "Index the seven qutrit VM registers by the seven nonzero vectors of F2^3.  The 168 Fano collineations become exact symplectic mode permutations inside Sp(14,3), acting transitively on all 21 CZ pairs and all 42 oriented pairs while conjugating F, P and CZ primitives equivariantly.  The complete pair fabric is K7, the Csaszar torus 1-skeleton, whose 14 faces split into the repo's two Fano heptads.  The existing Pass10941 compiler needs only a six-edge Hamiltonian path for full Clifford closure; the remaining edges restore the full Fano routing symmetry."
+}

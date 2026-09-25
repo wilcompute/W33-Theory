@@ -1,0 +1,82 @@
+{
+  "K7_pair_orbits": {
+    "identity": "21 = 3 + 6 + 12",
+    "orbit_sizes": [
+      3,
+      6,
+      12
+    ],
+    "typed_sizes": {
+      "cap_cap": 6,
+      "line_cap": 12,
+      "line_line": 3
+    },
+    "undirected_total": 21
+  },
+  "active_detector_refinement": {
+    "active_total": 168,
+    "identity": "168 = 24 + 48 + 48 + 48",
+    "residues_per_latch": 4,
+    "typed_sizes": {
+      "cap_cap": 48,
+      "cap_to_line": 48,
+      "line_line": 24,
+      "line_to_cap": 48
+    }
+  },
+  "boundary": "The orbit decomposition is exact and the hardware counts are loaded from existing certified artifacts. The matching packet sizes do not by themselves identify detector or guard indices with E8 leaf labels; that still requires an explicit physical labeling convention.",
+  "crosschecks": {
+    "BT1417_hardware_verified": true,
+    "BT1422_fano_bus_verified": true,
+    "Pass_VM_fabric_status": "PASS_SEVEN_QUTRIT_VM_IS_FANO_INDEXED_K7_CSASZAR_FABRIC",
+    "Pass_leaf_metric_status": "PASS_EIGHT_LEAF_TORSOR_AND_SEVEN_QUTRIT_FANO_MODES_SHARE_ONE_F2_3_CODEC"
+  },
+  "oriented_latch_orbits": {
+    "directed_total": 42,
+    "identity": "42 = 6 + 12 + 12 + 12",
+    "orbit_sizes": [
+      6,
+      12,
+      12,
+      12
+    ],
+    "orientation_separates_the_two_cross_orbits": true,
+    "stabilizer_orders": {
+      "cap_cap": 2,
+      "cap_to_line": 2,
+      "line_line": 4,
+      "line_to_cap": 2
+    },
+    "typed_sizes": {
+      "cap_cap": 12,
+      "cap_to_line": 12,
+      "line_line": 6,
+      "line_to_cap": 12
+    }
+  },
+  "schema": "w33.20260924.e8_metric_fano_latch_orbits.v1",
+  "selected_metric_line": {
+    "complement_modes": [
+      0,
+      1,
+      2,
+      5
+    ],
+    "linear_stabilizer": "S4",
+    "linear_stabilizer_order": 24,
+    "modes": [
+      3,
+      4,
+      6
+    ],
+    "source": "E8 eight-leaf overlap metric: 4-overlap directions vs 13-overlap directions"
+  },
+  "status": "PASS_E8_SELECTED_FANO_LINE_STRATIFIES_HOLONET_21_42_168_192_BUS",
+  "theorem": "The E8 leaf-overlap metric selects one Fano line in the seven-qutrit address plane. Its order-24 S4 stabilizer breaks the 21 K7 couplers into exact orbits 3+6+12 and the 42 oriented phase latches into 6+12+12+12: line-internal, cap-internal, line-to-cap, and cap-to-line. Replicating by the four declared detector residues refines the 168 active bins as 24+48+48+48; adjoining the 24 guard apertures gives the 192-slot tomotope bus as 24+24+48+48+48.",
+  "tomotope_bus_refinement": {
+    "active_bins": 168,
+    "guard_apertures": 24,
+    "identity": "192 = 24_guard + 24_line + 48_cap + 48_forward_cross + 48_reverse_cross",
+    "total": 192
+  }
+}

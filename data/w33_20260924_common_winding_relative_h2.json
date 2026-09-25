@@ -1,0 +1,31 @@
+{
+  "boundary": "This is a finite relative-homology statement.  It does not by itself supply a thermodynamic arrow or a continuum time coordinate; it says precisely where the monotone integer winding lives topologically after the finite history graph is filled.",
+  "complex": {
+    "H1_filled_dimension": 46,
+    "H1_one_skeleton_dimension": 82,
+    "H2_filled_dimension": 0,
+    "edges": 108,
+    "rank_d1": 26,
+    "rank_d2": 36,
+    "triangles": 36,
+    "vertices": 27
+  },
+  "distinguished_class": {
+    "boundary_coefficients": "all +/-1",
+    "boundary_equals_unique_invariant_orientation_cycle": true,
+    "boundary_support_edges": 108,
+    "relative_2_cycle": "sum of all 36 oriented temporal triangles",
+    "source_equals_common_four-null_winding_orbit_sum": true
+  },
+  "relative_pair": {
+    "H2_KG_dimension": 36,
+    "connecting_map_kernel_dimension": 0,
+    "connecting_map_rank": 36,
+    "dimension_identity": "82 = 36 + 46",
+    "exact_sequence_dimensions": "0 -> 36 -> 82 -> 46 -> 0",
+    "pair": "(K,G), K=filled 27-history complex, G=its null 1-skeleton"
+  },
+  "schema": "w33.20260924.common_winding_relative_h2.v1",
+  "status": "PASS_COMMON_WINDING_IS_DISTINGUISHED_RELATIVE_H2_BOUNDARY_CLASS",
+  "theorem": "The positive common four-null winding is not lost when the temporal triangles are filled.  It is the connecting-boundary image of the distinguished relative class [sum of all 36 temporal triangles] in H2(K,G).  Because d2 has full column rank 36, H2(K,G) is 36-dimensional and the connecting map injects it into the 82-dimensional cycle space of the null graph; quotienting by that 36-dimensional image leaves the 46-dimensional filled-history H1.  The common winding spans the invariant line inside this relative boundary sector."
+}

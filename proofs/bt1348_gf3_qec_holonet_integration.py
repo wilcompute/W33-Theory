@@ -59,25 +59,25 @@ assert np.allclose(np.linalg.matrix_power(X,3), np.eye(3)), "FAIL: X^3 != I"
 assert np.allclose(np.linalg.matrix_power(Z,3), np.eye(3)), "FAIL: Z^3 != I"
 print("PASS: X^3 = Z^3 = I (qutrit Pauli operators are order-3)")
 
-# Verify Weyl commutation relation: XZ = omega * ZX
+# With X|k>=|k+1> and Z|k>=omega^k|k>, ZX=omega XZ,
+# equivalently XZ=omega^-1 ZX.
 lhs = X @ Z
-rhs = omega * (Z @ X)
-assert np.allclose(lhs, rhs), "FAIL: XZ != omega*ZX"
-print(f"PASS: XZ = omega * ZX  (Weyl relation, omega = e^(2pi*i/3))")
+rhs = (omega**2) * (Z @ X)
+assert np.allclose(lhs, rhs), "FAIL: Weyl convention mismatch"
+print("PASS: XZ = omega^-1 * ZX for the chosen shift/clock convention")
 
 # ---------------------------------------------------------------
-# SECTION 3: [[3,1,2]]_3 qutrit repetition code
+# SECTION 3: three-qutrit repetition subspace
 # ---------------------------------------------------------------
-print("\n--- Section 3: [[3,1,2]]_3 qutrit repetition code ---")
+print("\n--- Section 3: three-qutrit repetition subspace ---")
 """
-The [[n,k,d]]_q notation means:
-  n = physical qutrits used
-  k = logical qutrits encoded
-  d = distance (how many errors can be detected)
-  q = field size (3 for qutrits)
+The span of |000>, |111>, |222> is the ternary repetition subspace.
+The two Z-difference checks below detect single X-type shift errors.
 
-The [[3,1,2]]_3 code encodes 1 logical qutrit into 3 physical qutrits.
-It can detect any single qutrit error.
+It is NOT a full quantum [[3,1,2]]_3 code: a one-site Z phase acts
+nontrivially within this subspace and is therefore an undetected logical
+operation.  The witness is consequently a shift-error repetition code,
+not an arbitrary-single-qutrit-error-correcting quantum code.
 
 Logical basis states:
   |0>_L = |000>
@@ -151,15 +151,25 @@ print(f"Syndrome S1 expectation after X error on qutrit 0: {s1_val.real:.4f} (sh
 assert not np.allclose(s1_val, 1.0), "FAIL: Error not detected by S1"
 print("PASS: Single qutrit X error detected by syndrome measurement")
 
+# A one-site Z phase is an undetected logical operation, proving the full
+# quantum-code distance is not two.
+Z_on_0 = np.kron(np.kron(Z, I3), I3)
+phase_corrupted = Z_on_0 @ psi_L if "psi_L" in globals() else Z_on_0 @ (
+    logical_0 + logical_1 + logical_2
+) / np.sqrt(3)
+assert np.allclose(S1 @ phase_corrupted, phase_corrupted)
+assert np.allclose(S2 @ phase_corrupted, phase_corrupted)
+assert not np.allclose(phase_corrupted, (logical_0+logical_1+logical_2)/np.sqrt(3))
+print("PASS FIREWALL: one-site Z is undetected, so this is X-shift QEC only")
+
 # ---------------------------------------------------------------
-# SECTION 6: Holonet routing + QEC compatibility
+# SECTION 6: Holonet routing versus repetition subspace
 # ---------------------------------------------------------------
-print("\n--- Section 6: Holonet routing + QEC compatibility ---")
+print("\n--- Section 6: Holonet routing versus repetition subspace ---")
 """
-Here we check that the Holonet routing unitary U (from BT1340)
-permutes logical codewords to logical codewords.
-If U maps logical -> logical, then QEC and routing are compatible:
-you can correct errors before AND after routing.
+The BT1340 routing map is unitary, but unitarity alone does not imply that it
+preserves the repetition subspace.  We now test that missing condition
+explicitly rather than calling norm preservation QEC compatibility.
 """
 
 # Reconstruct the Holonet routing unitary from BT1340
@@ -187,24 +197,32 @@ psi_routed = U @ psi_L
 assert abs(np.linalg.norm(psi_routed) - 1.0) < 1e-12, "FAIL: Routing breaks norm"
 print("PASS: Routing preserves norm of logical superposition state")
 
-# The routed state should be in a different logical configuration but still valid
-# Check it is a proper quantum state (norm 1)
-print(f"Routed state norm: {np.linalg.norm(psi_routed):.15f}")
+P_rep = (
+    np.outer(logical_0, logical_0.conj())
+    + np.outer(logical_1, logical_1.conj())
+    + np.outer(logical_2, logical_2.conj())
+)
+inside_weight = float(np.vdot(psi_routed, P_rep @ psi_routed).real)
+assert abs(inside_weight - 2/3) < 1e-12
+assert not np.allclose(P_rep @ psi_routed, psi_routed)
+print(f"PASS FIREWALL: repetition-subspace weight after routing = {inside_weight:.6f}")
+print("Routing is unitary but does not preserve this repetition subspace.")
 
 # ---------------------------------------------------------------
 # SECTION 7: W(3,3) error budget
 # ---------------------------------------------------------------
 print("\n--- Section 7: W(3,3) error budget ---")
 """
-The W(3,3) geometry has 40 points and a KS budget of 36/40 (from BT1341).
-The 27-point matter shell = the magic sector.
-In the QEC context:
-  - Errors in the 12-point gauge shell can be corrected by classical stabilizer methods
-  - Errors in the 27-point matter shell require magic state resources to correct
-    (they are non-Clifford errors in the contextual sector)
+The W(3,3) geometry has 40 points and a shell partition
+1 + 12 + 27 = 40, while the contextual count used by BT1341 is 36 = 12 + 24.
 
-This is the key insight: the W(3,3) geometry directly partitions errors
-into correctable (gauge) and magic-state-requiring (matter) categories.
+The shell counts alone do NOT classify physical errors by correctability and
+do not provide a non-Clifford resource.  Later exact ADQC/Pass10941 certificates
+show that qutrit T remains a genuine magic resource: analyzer programming and
+magic-state injection are two interfaces to the same non-stabilizer resource.
+
+This section therefore certifies only the finite shell arithmetic and leaves
+fault-tolerant recovery and magic supply to their dedicated certificates.
 """
 
 total_points = 40
@@ -214,18 +232,17 @@ matter_shell = 27
 pole = 1
 
 assert pole + gauge_shell + matter_shell == total_points, "FAIL: Shell partition"
-assert ks_contextual == gauge_shell + matter_shell, "FAIL: KS budget partition"
+assert ks_contextual == 36
+assert ks_contextual != gauge_shell + matter_shell
 
 print(f"W(3,3) total points:  {total_points}")
 print(f"  Pole:               {pole}")
-print(f"  Gauge shell:        {gauge_shell}  (classically correctable)")
-print(f"  Matter shell:       {matter_shell}  (magic-state QEC required)")
-print(f"  KS contextual:      {ks_contextual}/40")
-print("PASS: W(3,3) error budget partitions cleanly into gauge + matter sectors")
-print()
-print("Key insight: The Holonet does not need a separate magic-state factory.")
-print("The matter shell IS the magic sector, so error correction resources")
-print("are intrinsic to the geometry of the photon's state space.")
+print(f"  12-shell:           {gauge_shell}")
+print(f"  27-shell:           {matter_shell}")
+print(f"  Separate contextual count: {ks_contextual}/40")
+print("PASS: W(3,3) shell arithmetic 1+12+27=40 is exact")
+print("BOUNDARY: shell membership alone does not certify QEC correctability")
+print("or supply the non-Clifford qutrit-T resource.")
 
 # ---------------------------------------------------------------
 # SUMMARY
@@ -236,11 +253,11 @@ print("BT1348 SUMMARY")
 print("=" * 65)
 print("W1. GF(3) arithmetic verified (mod-3 field)")
 print("W2. Qutrit Pauli operators X, Z satisfy X^3=Z^3=I and Weyl relation")
-print("W3. [[3,1,2]]_3 logical codewords are mutually orthogonal")
+print("W3. Three-qutrit repetition basis states are mutually orthogonal")
 print("W4. Stabilizers S1, S2 fix all logical codewords (zero syndrome)")
 print("W5. Single X error on qutrit 0 detected by syndrome measurement")
 print("W6. Holonet routing preserves norm of logical superposition state")
-print("W7. W(3,3) error budget: gauge shell = classically correctable,")
-print("    matter shell = magic-state QEC, no separate factory required")
+print("W7. W(3,3) shell arithmetic: 1+12+27=40; contextual 36 is separate")
+print("    Magic/QEC resource claims require independent certificates")
 print()
 print("ALL BT1348 WITNESSES PASSED")

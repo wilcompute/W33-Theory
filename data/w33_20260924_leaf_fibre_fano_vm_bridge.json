@@ -1,0 +1,557 @@
+{
+  "E8_metric_on_VM_modes": {
+    "13_overlap_modes": [
+      0,
+      1,
+      2,
+      5
+    ],
+    "13_overlap_vectors": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "4_overlap_modes": [
+      3,
+      4,
+      6
+    ],
+    "4_overlap_vectors": [
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0
+      ]
+    ],
+    "all_base_leaf_rows": [
+      {
+        "base_leaf": [
+          0,
+          0,
+          0
+        ],
+        "mode_to_overlap": {
+          "0": 13,
+          "1": 13,
+          "2": 13,
+          "3": 4,
+          "4": 4,
+          "5": 13,
+          "6": 4
+        },
+        "mode_to_target": {
+          "0": [
+            1,
+            0,
+            0
+          ],
+          "1": [
+            0,
+            1,
+            0
+          ],
+          "2": [
+            0,
+            0,
+            1
+          ],
+          "3": [
+            1,
+            1,
+            0
+          ],
+          "4": [
+            0,
+            1,
+            1
+          ],
+          "5": [
+            1,
+            1,
+            1
+          ],
+          "6": [
+            1,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "base_leaf": [
+          0,
+          0,
+          1
+        ],
+        "mode_to_overlap": {
+          "0": 13,
+          "1": 13,
+          "2": 13,
+          "3": 4,
+          "4": 4,
+          "5": 13,
+          "6": 4
+        },
+        "mode_to_target": {
+          "0": [
+            1,
+            0,
+            1
+          ],
+          "1": [
+            0,
+            1,
+            1
+          ],
+          "2": [
+            0,
+            0,
+            0
+          ],
+          "3": [
+            1,
+            1,
+            1
+          ],
+          "4": [
+            0,
+            1,
+            0
+          ],
+          "5": [
+            1,
+            1,
+            0
+          ],
+          "6": [
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "base_leaf": [
+          0,
+          1,
+          0
+        ],
+        "mode_to_overlap": {
+          "0": 13,
+          "1": 13,
+          "2": 13,
+          "3": 4,
+          "4": 4,
+          "5": 13,
+          "6": 4
+        },
+        "mode_to_target": {
+          "0": [
+            1,
+            1,
+            0
+          ],
+          "1": [
+            0,
+            0,
+            0
+          ],
+          "2": [
+            0,
+            1,
+            1
+          ],
+          "3": [
+            1,
+            0,
+            0
+          ],
+          "4": [
+            0,
+            0,
+            1
+          ],
+          "5": [
+            1,
+            0,
+            1
+          ],
+          "6": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "base_leaf": [
+          0,
+          1,
+          1
+        ],
+        "mode_to_overlap": {
+          "0": 13,
+          "1": 13,
+          "2": 13,
+          "3": 4,
+          "4": 4,
+          "5": 13,
+          "6": 4
+        },
+        "mode_to_target": {
+          "0": [
+            1,
+            1,
+            1
+          ],
+          "1": [
+            0,
+            0,
+            1
+          ],
+          "2": [
+            0,
+            1,
+            0
+          ],
+          "3": [
+            1,
+            0,
+            1
+          ],
+          "4": [
+            0,
+            0,
+            0
+          ],
+          "5": [
+            1,
+            0,
+            0
+          ],
+          "6": [
+            1,
+            1,
+            0
+          ]
+        }
+      },
+      {
+        "base_leaf": [
+          1,
+          0,
+          0
+        ],
+        "mode_to_overlap": {
+          "0": 13,
+          "1": 13,
+          "2": 13,
+          "3": 4,
+          "4": 4,
+          "5": 13,
+          "6": 4
+        },
+        "mode_to_target": {
+          "0": [
+            0,
+            0,
+            0
+          ],
+          "1": [
+            1,
+            1,
+            0
+          ],
+          "2": [
+            1,
+            0,
+            1
+          ],
+          "3": [
+            0,
+            1,
+            0
+          ],
+          "4": [
+            1,
+            1,
+            1
+          ],
+          "5": [
+            0,
+            1,
+            1
+          ],
+          "6": [
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "base_leaf": [
+          1,
+          0,
+          1
+        ],
+        "mode_to_overlap": {
+          "0": 13,
+          "1": 13,
+          "2": 13,
+          "3": 4,
+          "4": 4,
+          "5": 13,
+          "6": 4
+        },
+        "mode_to_target": {
+          "0": [
+            0,
+            0,
+            1
+          ],
+          "1": [
+            1,
+            1,
+            1
+          ],
+          "2": [
+            1,
+            0,
+            0
+          ],
+          "3": [
+            0,
+            1,
+            1
+          ],
+          "4": [
+            1,
+            1,
+            0
+          ],
+          "5": [
+            0,
+            1,
+            0
+          ],
+          "6": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "base_leaf": [
+          1,
+          1,
+          0
+        ],
+        "mode_to_overlap": {
+          "0": 13,
+          "1": 13,
+          "2": 13,
+          "3": 4,
+          "4": 4,
+          "5": 13,
+          "6": 4
+        },
+        "mode_to_target": {
+          "0": [
+            0,
+            1,
+            0
+          ],
+          "1": [
+            1,
+            0,
+            0
+          ],
+          "2": [
+            1,
+            1,
+            1
+          ],
+          "3": [
+            0,
+            0,
+            0
+          ],
+          "4": [
+            1,
+            0,
+            1
+          ],
+          "5": [
+            0,
+            0,
+            1
+          ],
+          "6": [
+            0,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "base_leaf": [
+          1,
+          1,
+          1
+        ],
+        "mode_to_overlap": {
+          "0": 13,
+          "1": 13,
+          "2": 13,
+          "3": 4,
+          "4": 4,
+          "5": 13,
+          "6": 4
+        },
+        "mode_to_target": {
+          "0": [
+            0,
+            1,
+            1
+          ],
+          "1": [
+            1,
+            0,
+            1
+          ],
+          "2": [
+            1,
+            1,
+            0
+          ],
+          "3": [
+            0,
+            0,
+            1
+          ],
+          "4": [
+            1,
+            0,
+            0
+          ],
+          "5": [
+            0,
+            0,
+            0
+          ],
+          "6": [
+            0,
+            1,
+            0
+          ]
+        }
+      }
+    ],
+    "complement_is_four_point_affine_cap": [
+      0,
+      1,
+      2,
+      5
+    ],
+    "distinguished_Fano_line_modes": [
+      3,
+      4,
+      6
+    ],
+    "line_sum_zero": true
+  },
+  "boundary": "This is an exact address/metric/symmetry bridge. It does not identify the seven logical VM modes with particles, generations, or spacetime directions, and it does not supply a physical wiring map.",
+  "objectwise_dictionary": {
+    "VM_modes": 7,
+    "leaf_coordinate_space": "F2^3",
+    "leaf_states": 8,
+    "mode_addresses": {
+      "0": [
+        1,
+        0,
+        0
+      ],
+      "1": [
+        0,
+        1,
+        0
+      ],
+      "2": [
+        0,
+        0,
+        1
+      ],
+      "3": [
+        1,
+        1,
+        0
+      ],
+      "4": [
+        0,
+        1,
+        1
+      ],
+      "5": [
+        1,
+        1,
+        1
+      ],
+      "6": [
+        1,
+        0,
+        1
+      ]
+    },
+    "rule": "from leaf x, VM mode v addresses leaf x+v",
+    "verified_for_all_base_leaves": true
+  },
+  "schema": "w33.20260924.leaf_fibre_fano_vm_bridge.v1",
+  "status": "PASS_EIGHT_LEAF_TORSOR_AND_SEVEN_QUTRIT_FANO_MODES_SHARE_ONE_F2_3_CODEC",
+  "symmetry_reduction": {
+    "S4_element_order_histogram": {
+      "1": 1,
+      "2": 9,
+      "3": 8,
+      "4": 6
+    },
+    "affine_metric_group": "2^3:S4 = W(D4)",
+    "affine_metric_group_order": 192,
+    "affine_translation_order": 8,
+    "distinguished_line_stabilizer": "S4",
+    "distinguished_line_stabilizer_order": 24,
+    "faithful_action_on_four_point_complement": true,
+    "full_Fano_linear_group": "GL(3,2)=PSL(2,7)",
+    "full_Fano_linear_order": 168,
+    "matches_Pass7409_WD4": true
+  },
+  "theorem": "The eight Eisenstein leaves through the temporal Hesse A2^4 are an affine F2^3 torsor, while the seven qutrit VM registers are the seven nonzero F2^3 directions. From every base leaf, adding VM mode m reaches one unique other leaf. The E8 overlap metric selects the Fano line {110,101,011}: those three modes give 4-point overlap, while the four complementary modes give 13-point overlap. Its GL(3,2) stabilizer is S4 of order 24; adjoining eight translations gives 2^3:S4=W(D4)."
+}

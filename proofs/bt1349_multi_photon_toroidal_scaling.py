@@ -10,8 +10,9 @@ What every term means
 Toroidal    : Shaped like a donut (torus). In this context, the routing
               connections wrap around at the boundaries, like a grid where
               the left edge connects to the right edge and the top to the bottom.
-Heptad      : A group of seven. The heptad here is 7 photon nodes arranged
-              so each one connects to 3 others in a specific pattern.
+Heptad      : A group of seven. Here the seven Fano points form the
+              complete pair graph K7: every pair lies on exactly one Fano line.
+              K7 is the 1-skeleton of the seven-vertex Csaszar torus triangulation.
 Q4          : The fourth quadrant of the holonet architecture. Each 'Q' layer
               adds another level of routing complexity and entanglement.
 Bridge      : The inter-quadrant connector that allows quantum information to
@@ -88,22 +89,24 @@ for line in fano_lines:
         A[i, j] = 1
         A[j, i] = 1
 
-# Verify it is 3-regular (each node connects to exactly 3 others)
+# Because every pair of Fano points lies on exactly one line, "share a line"
+# adjacency is the complete graph K7, not a 3-regular graph.  This is precisely
+# the 1-skeleton of the Csaszar torus triangulation.
 degrees = A.sum(axis=1)
-assert np.all(degrees == 3), f"FAIL: adjacency not 3-regular, degrees = {degrees}"
-print("PASS: Toroidal Q4 bridge is 3-regular (each photon node connects to exactly 3 others)")
+assert np.all(degrees == 6), f"FAIL: Fano point graph is not K7, degrees = {degrees}"
+assert np.all(A + np.eye(7, dtype=int) == np.ones((7, 7), dtype=int))
+print("PASS: Fano point adjacency is K7 = Csaszar 1-skeleton (degree 6)")
 
 # Verify symmetry
 assert np.all(A == A.T), "FAIL: adjacency matrix not symmetric"
 print("PASS: Adjacency matrix is symmetric")
 
-# Eigenspectrum of the Fano adjacency
+# Eigenspectrum of K7.
 eigenvalues = np.sort(np.linalg.eigvalsh(A))[::-1]
-print(f"Fano adjacency eigenvalues: {np.round(eigenvalues, 4)}")
-# Fano plane adjacency has eigenvalues: 3 (once), -1 (six times) [strongly regular]
-assert abs(eigenvalues[0] - 3.0) < 1e-10, "FAIL: largest eigenvalue should be 3"
+print(f"Fano/K7 adjacency eigenvalues: {np.round(eigenvalues, 4)}")
+assert abs(eigenvalues[0] - 6.0) < 1e-10, "FAIL: largest eigenvalue should be 6"
 assert np.allclose(eigenvalues[1:], -1.0, atol=1e-10), "FAIL: remaining eigenvalues should be -1"
-print("PASS: Eigenvalues are {3, -1 x6} — signature of the Fano strongly regular graph SRG(7,3,1,1)")
+print("PASS: Eigenvalues are {6, -1 x6} — complete-graph K7 spectrum")
 
 # ---------------------------------------------------------------
 # SECTION 3: Multi-photon state construction
@@ -153,14 +156,18 @@ def cz3_matrix(n_qudits, ctrl, tgt):
         U[idx, idx] = phase
     return U
 
-# Apply CZ_3 to all Fano edges (7 edges)
-print("Applying CZ_3 gates along all 7 Fano edges...")
+# Apply CZ_3 to all 21 unordered pairs.  The seven Fano lines partition
+# those 21 K7 edges into seven triples.
+print("Applying CZ_3 gates along all 21 Fano/K7 pair couplers...")
+seen_edges = set()
 for line in fano_lines:
-    # Each line has 3 nodes; apply CZ_3 to each adjacent pair in the line
-    i, j, k = line
-    for ctrl, tgt in [(i, j), (j, k)]:
+    for ctrl, tgt in combinations(line, 2):
+        edge = tuple(sorted((ctrl, tgt)))
+        assert edge not in seen_edges
+        seen_edges.add(edge)
         CZ = cz3_matrix(7, ctrl, tgt)
         psi = CZ @ psi
+assert len(seen_edges) == 21
 
 assert abs(np.linalg.norm(psi) - 1.0) < 1e-10, "FAIL: cluster state not normalised after CZ gates"
 print("PASS: 7-photon cluster state prepared via Fano CZ_3 gates (norm preserved)")
@@ -210,21 +217,18 @@ This is important for scaling: adding more heptads does not
 create boundary effects that could break the quasicrystal clock.
 """
 
-# Verify all nodes have the same degree (3-regularity already checked)
-# Also verify the adjacency matrix has no isolated subgraph
-from numpy.linalg import matrix_power
-# A^3 should have all diagonal entries > 0 (every node reaches itself in 3 steps)
-A3 = matrix_power(A, 3)
-assert np.all(np.diag(A3) > 0), "FAIL: some nodes cannot reach themselves in 3 steps"
-print("PASS: All nodes reachable from themselves in 3 steps (toroidal connectivity)")
+# K7 is vertex-transitive and is the neighborly 1-skeleton of the minimal
+# seven-vertex torus triangulation.
+assert np.all(degrees == 6)
+print("PASS: All seven nodes have the same six-neighbor environment")
 
-# Diameter of the Fano graph: maximum shortest path
+# Diameter of K7 is one.
 from scipy.sparse.csgraph import shortest_path
 distances = shortest_path(A, method='D')
 diameter = int(distances.max())
 print(f"Graph diameter: {diameter} (max hops between any two photon nodes)")
-assert diameter <= 3, f"FAIL: diameter = {diameter}, expected <= 3 for Fano"
-print(f"PASS: Diameter = {diameter} — compact routing across all 7 nodes")
+assert diameter == 1, f"FAIL: K7 diameter = {diameter}, expected 1"
+print("PASS: Diameter = 1 — every qutrit pair has a direct CZ channel")
 
 # ---------------------------------------------------------------
 # SUMMARY
@@ -234,15 +238,15 @@ print("=" * 65)
 print("BT1349 SUMMARY")
 print("=" * 65)
 print("W1. Fano plane verified: 7 lines, 3 pts each, every pair shares 1 line")
-print("W2. Q4 toroidal bridge is 3-regular and symmetric")
-print("W3. Fano adjacency eigenvalues: {3, -1^6} = SRG(7,3,1,1)")
-print("W4. 7-photon cluster state prepared via Fano CZ_3 gates")
+print("W2. Fano point adjacency is K7 = Csaszar torus 1-skeleton")
+print("W3. K7 adjacency eigenvalues: {6, -1^6}")
+print("W4. 7-photon graph state prepared via all 21 Fano/K7 CZ_3 pair gates")
 print("W5. Schmidt rank = 3 (maximal) across all 7 single-node bipartitions")
-print("W6. Toroidal topology: no boundary effects, diameter = 2")
+print("W6. Complete pair routing: every node has degree 6 and diameter = 1")
 print()
 print("ALL BT1349 WITNESSES PASSED")
 print()
 print("Scaling conclusion:")
-print("  Each additional heptad adds 7 qutrits of maximally entangled state")
-print("  with diameter-2 routing and no boundary lock-in.")
-print("  The toroidal Q4 bridge is a valid multi-photon scaling primitive.")
+print("  Each heptad supplies 7 qutrits on the 21-edge K7/Csaszar pair fabric.")
+print("  The seven Fano lines partition those 21 pair channels into 7 triples.")
+print("  This corrected fabric is vertex-symmetric and has direct one-hop routing.")

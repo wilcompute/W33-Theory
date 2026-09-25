@@ -6,20 +6,24 @@
 Integrates the Pillar-45 GF(3) qutrit QEC primitives with the Photonic Holonet routing layer.
 
 ### Key result
-The W(3,3) geometry directly partitions errors into two categories:
-- **Gauge shell (12 points):** Classically correctable by standard stabilizer methods.
-- **Matter shell (27 points):** Requires magic-state QEC — but since the matter shell *is* the magic sector (BT1341), **no separate magic-state factory is needed**. The photon's geometry is self-correcting in the contextual sector.
+The finite shell arithmetic is exactly **1 + 12 + 27 = 40**, but the old
+inference from those shell sizes to QEC resource classes was too strong.  The
+three-qutrit repetition witness detects X-type shift errors only; a one-site Z
+phase is an undetected logical action.  The BT1340 routing map is unitary but
+does not preserve that repetition subspace (the tested superposition retains
+weight 2/3 in it).  Later ADQC/Pass10941 certificates independently retain
+qutrit T as a genuine non-Clifford resource.
 
 ### Witnesses (7)
 | ID | Claim |
 |----|-------|
 | W1 | GF(3) arithmetic verified |
 | W2 | Qutrit Pauli X, Z are order-3 and satisfy Weyl relation |
-| W3 | [[3,1,2]]_3 logical codewords are orthogonal |
-| W4 | Stabilizers fix all logical codewords |
-| W5 | Single X error detected by syndrome |
-| W6 | Holonet routing preserves logical superposition norm |
-| W7 | W(3,3) error budget = gauge (correctable) + matter (magic) |
+| W3 | Three-qutrit repetition basis states are orthogonal |
+| W4 | Z-difference checks fix the repetition subspace |
+| W5 | Single X shift is detected; single Z phase is not |
+| W6 | Routing is unitary but leaves only 2/3 weight in the repetition subspace |
+| W7 | Shell arithmetic 1+12+27=40; contextual 36 is a separate count |
 
 ---
 
@@ -29,17 +33,22 @@ The W(3,3) geometry directly partitions errors into two categories:
 Extends the single-photon Holonet to a 7-photon cluster state using the Fano plane as the inter-node routing geometry.
 
 ### Key result
-The Fano plane (7 nodes, 7 lines, every pair of nodes shares exactly one line) provides a 3-regular toroidal topology with diameter 2. All 7 single-node Schmidt ranks are 3 (maximal). The architecture scales without boundary effects.
+Because every pair of Fano points lies on one line, point adjacency by
+"sharing a Fano line" is **K7**, not a 3-regular graph.  K7 is the
+1-skeleton of the seven-vertex Csaszar torus triangulation.  The corrected
+witness applies one qutrit CZ to each of the 21 unordered pairs, has adjacency
+spectrum **6^1 + (-1)^6** and diameter 1, and still gives Schmidt rank 3 across
+all seven single-node cuts.
 
 ### Witnesses (6)
 | ID | Claim |
 |----|-------|
 | W1 | Fano plane: 7 lines × 3 pts, every pair shares 1 line |
-| W2 | Q4 toroidal bridge is 3-regular and symmetric |
-| W3 | Eigenvalues {3, -1^6} = SRG(7,3,1,1) |
-| W4 | 7-photon cluster state prepared via Fano CZ_3 gates |
+| W2 | Fano point graph is K7 = Csaszar 1-skeleton, degree 6 |
+| W3 | K7 spectrum is {6, -1^6} |
+| W4 | 7-photon graph state prepared with all 21 pairwise CZ_3 gates |
 | W5 | Schmidt rank 3 across all 7 single-node bipartitions |
-| W6 | Diameter = 2, no boundary lock-in |
+| W6 | Diameter = 1 with complete pair routing |
 
 ---
 

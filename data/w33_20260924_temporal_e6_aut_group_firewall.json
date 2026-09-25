@@ -1,0 +1,71 @@
+{
+  "E6_H27": {
+    "full_automorphism_order": 1296,
+    "full_group_element_orders": {
+      "1": 1,
+      "12": 108,
+      "2": 117,
+      "3": 98,
+      "4": 54,
+      "6": 450,
+      "8": 324,
+      "9": 144
+    },
+    "origin_stabilizer": "GL(2,3)",
+    "origin_stabilizer_order": 48,
+    "regular_translation_group": "H27 (extraspecial Heisenberg group)",
+    "regular_translation_order": 27,
+    "stabilizer_element_orders": {
+      "1": 1,
+      "2": 13,
+      "3": 8,
+      "4": 6,
+      "6": 8,
+      "8": 12
+    },
+    "translation_center_order": 3,
+    "translation_group_abelian": false
+  },
+  "boundary": "Equal orders 1296 and 48 are therefore not group identifications. This is a finite permutation-group theorem; no physical symmetry breaking mechanism is inferred.",
+  "schema": "w33.20260924.temporal_e6_aut_group_firewall.v1",
+  "separators": {
+    "full_group_order8_elements": {
+      "E6_H27": 324,
+      "temporal": 0
+    },
+    "groups_isomorphic": false,
+    "regular_27_kernel": "C3^3 versus H27",
+    "same_full_order": 1296,
+    "same_stabilizer_order": 48,
+    "stabilizer_order8_elements": {
+      "E6_H27": 12,
+      "temporal": 0
+    }
+  },
+  "status": "PASS_SAME_1296_AUT_ORDER_SPLITS_ABELIAN_VS_HEISENBERG_AND_SPLIT_VS_NONSPLIT_48",
+  "temporal": {
+    "full_automorphism_order": 1296,
+    "full_group_element_orders": {
+      "1": 1,
+      "12": 108,
+      "2": 135,
+      "3": 98,
+      "4": 216,
+      "6": 594,
+      "9": 144
+    },
+    "origin_stabilizer": "PGL(2,3) x C2 ~= S4 x C2",
+    "origin_stabilizer_order": 48,
+    "regular_translation_group": "C3^3",
+    "regular_translation_order": 27,
+    "stabilizer_element_orders": {
+      "1": 1,
+      "2": 19,
+      "3": 8,
+      "4": 12,
+      "6": 8
+    },
+    "translation_group_abelian": true
+  },
+  "theorem": "The residue firewall persists one categorical level above the graphs. Both 27-vertex carriers have full automorphism group order 1296 and vertex stabilizer order 48, but the groups are not isomorphic.  The temporal Q-side has an abelian regular C3^3 translation kernel and a split stabilizer PGL(2,3)xC2 ~= S4xC2; the E6 point-side has the nonabelian Heisenberg kernel H27 and stabilizer GL(2,3).  Concretely the temporal full group has no elements of order 8, while the E6 group has 324; already the stabilizers differ 0 versus 12."
+}
