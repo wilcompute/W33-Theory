@@ -38,3 +38,17 @@ def test_frozen_ce2_grading_is_exact_integer_clock_shadow():
     assert x["cubic_clock"]["canonical_E6_triads"] == 45
     assert x["cubic_clock"]["nested_support_equals_canonical_45_E6_cubic_triads"]
     assert x["cubic_clock"]["coefficient_identity_checked_on_all_45_triads"]
+
+def test_retyped_54_splits_as_36_plus_18_across_parabolic_slices():
+    x = load("w33_20260925_parabolic54_fourier_quotient_split.json")
+    assert x["status"] == (
+        "PASS_FOURIER_RETYPE_QUOTIENT_IS_36_PLUS18_ACROSS_PARABOLIC_SLICES"
+    )
+    c = x["exact_split_prime_certificate"]
+    assert c["S1_intersection_P"] == 18
+    assert c["S1_intersection_Q"] == 9
+    assert c["quotient_image_P"] == 36
+    assert c["quotient_image_Q"] == 18
+    assert c["quotient_direct_sum"] == "54 = 36 + 18"
+    assert x["consequence"]["naive_54_equals_positive_grade1_coordinate_slice"] is False
+    assert x["consequence"]["diagonal_weld_adds_all_18_directions_missing_from_P"]
