@@ -1,0 +1,94 @@
+{
+  "schema": "w33.20260925.e8_parabolic_cubic_clock_lift.v1",
+  "status": "PASS_CE2_Z3_IS_MOD3_SHADOW_OF_EXACT_E8_THREE_STEP_CUBIC_CLOCK_GRADING",
+  "grading": {
+    "source_simple_root_coordinate": 6,
+    "integer_root_histogram": {
+      "-3": 2,
+      "-2": 27,
+      "-1": 54,
+      "0": 74,
+      "1": 54,
+      "2": 27,
+      "3": 2
+    },
+    "integer_lie_dimensions": {
+      "-3": 2,
+      "-2": 27,
+      "-1": 54,
+      "0": 82,
+      "1": 54,
+      "2": 27,
+      "3": 2
+    },
+    "mod3_dimensions": {
+      "g0": 86,
+      "g1": 81,
+      "g2": 81
+    },
+    "mod3_split": {
+      "g0": "82_integer_grade0 + 2_grade+3 + 2_grade-3 = 86",
+      "g1": "54_grade+1 + 27_grade-2 = 81",
+      "g2": "54_grade-1 + 27_grade+2 = 81"
+    },
+    "all_committed_structure_constant_terms_respect_integer_grade": true,
+    "structure_constant_terms_checked": 8347
+  },
+  "selected_now_decomposition": {
+    "grade_plus1_dimension": 54,
+    "formula": "54 = 27 histories x 2 remaining external-qutrit labels",
+    "grade_plus1_external_labels": {
+      "0": 27,
+      "1": 27
+    },
+    "grade_plus2_dimension": 27,
+    "grade_plus2_external_label": {
+      "2": 27
+    },
+    "grade_plus3_dimension": 2,
+    "reading": "choosing external label 2 as the selected ray refines 3 -> 2 + 1"
+  },
+  "bracket_growth": {
+    "g1_dimension": 54,
+    "g2_dimension": 27,
+    "g3_dimension": 2,
+    "positive_nilradical_dimension": 83,
+    "nonzero_unordered_g1_g1_pairs": 270,
+    "g2_output_multiplicity_each": 10,
+    "nonzero_g1_g2_pairs": 54,
+    "g3_output_multiplicity_each": 27,
+    "growth_vector": [
+      54,
+      81,
+      83
+    ],
+    "surjective_g1g1_to_g2": true,
+    "surjective_g1g2_to_g3": true
+  },
+  "cubic_clock": {
+    "canonical_E6_triads": 45,
+    "nested_nonzero_channels": 540,
+    "each_E6_triad_nested_multiplicity": 12,
+    "external_patterns": {
+      "001": 270,
+      "011": 270
+    },
+    "each_top_clock_direction_nested_multiplicity": 270,
+    "nested_support_equals_canonical_45_E6_cubic_triads": true,
+    "coefficient_identity": [
+      "[[e_(i,0),e_(j,1)],e_(k,0)] = -d_ijk * T0",
+      "[[e_(i,0),e_(j,1)],e_(k,1)] = -d_ijk * T1",
+      "[[e_(i,1),e_(j,0)],e_(k,0)] = +d_ijk * T0",
+      "[[e_(i,1),e_(j,0)],e_(k,1)] = +d_ijk * T1"
+    ],
+    "coefficient_identity_checked_on_all_45_triads": true
+  },
+  "theorem": "The repository's frozen E6+A2 order-three grading is not merely adjacent to the 54+27+2 temporal grading: it is exactly its reduction modulo three on the same Chevalley E8 basis. Choosing one external-qutrit ray refines the 81-dimensional matter grade into 54 first-order roots and 27 second-order roots, while two external-A2 roots become the top grade. The executable Chevalley bracket then has growth 54 -> 81 -> 83, and its nonzero nested triple support is exactly the 45 signed E6 cubic triads. In the canonical triad ordering the nested coefficients equal the signed cubic coefficient times the external orientation sign.",
+  "boundary": "This is an exact finite Lie-algebra theorem on the committed E8 basis. Calling the top two-dimensional layer physical elapsed time remains an interpretation. No Hamiltonian, vacuum-selection mechanism, CPTP arrow, energy scale, or laboratory clock calibration is derived here.",
+  "parents": [
+    "artifacts/e8_structure_constants_w33_discrete.json",
+    "extracted_v13/W33-Theory-master/artifacts/e8_root_metadata_table.json",
+    "extracted_v13/W33-Theory-master/artifacts/canonical_su3_gauge_and_cubic.json",
+    "data/w33_e6_cubic_diagonal_phase_weld.json"
+  ]
+}

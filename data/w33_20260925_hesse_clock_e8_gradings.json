@@ -1,0 +1,2314 @@
+{
+  "boundary": "This is an exact finite root-system theorem in the committed A8/Hesse coordinate model. The words clock, tick, and orientation refer to the qutrit process/MUB codec. No continuum time metric, thermodynamic arrow, particle spectrum, or physical identification of the 54-dimensional phase-weld quotient is asserted here.",
+  "bridge": {
+    "clock_selection": "A Hesse/MUB striation is one qutrit clock. Choosing which of its three parallel lines is the zero/origin tick and orienting the other two as + and - produces the parabolic grading vector (+1,0,-1).",
+    "contact_vs_cubic": "One tick-line root gives the standard E8 contact five-grading; the full oriented three-tick clock gives the E8 |3|-grading.",
+    "grade_one_reading": "The selected zero tick is the A1 root in the grade-zero Levi. Its orthogonal 72 zero-grade roots are a reflection-closed rank-6 E6 subsystem. The 54 grade-one roots split by A1 weight as 27+27; E6 reflections are transitive on each 27 and the A1 reflection exchanges them. This is the objectwise root realization of the (27,2) module up to the E6 outer 27/bar27 convention. Identifying the separate repository 54-dimensional phase-weld quotient with this grade-one module still requires an explicit intertwiner."
+  },
+  "history_geometry": {
+    "Hesse_lines": 12,
+    "MUB_striations": 4,
+    "cells": 9,
+    "choices_per_clock": "3 origins * 2 orientations = 6",
+    "fully_oriented_clock_choices": 24,
+    "prior_4A2_certificate": "PASS_HESSE_12_IS_4A2_INSIDE_TEMPORAL_A8_E8",
+    "ticks_per_clock": 3
+  },
+  "oriented_three_tick_grading": {
+    "Lie_dimensions": [
+      2,
+      27,
+      54,
+      82,
+      54,
+      27,
+      2
+    ],
+    "all_24_clock_choices_verified": true,
+    "grade_zero_Levi": {
+      "A1_roots": 2,
+      "Cartan_rank": 8,
+      "E6_rank": 6,
+      "E6_roots": 72,
+      "Lie_algebra": "E6 + A1 + C",
+      "all_24_choices_verified": true,
+      "dimension_identity": "82 = 78 + 3 + 1",
+      "zero_roots": 74
+    },
+    "growth_identity": "54 -> 81 -> 83",
+    "identity": "248 = 2 + 27 + 54 + 82 + 54 + 27 + 2",
+    "module_labels_from_A1_weights": {
+      "A1_reflection_exchanges_the_two_g1_27_packets": true,
+      "E6_reflections_transitive_on_each_27_packet": true,
+      "all_24_choices_verified": true,
+      "g1": "27_{-1} + 27_{+1} = minuscule-27 tensor 2 (up to E6 outer convention)",
+      "g2": "27_0 = the opposite minuscule 27/dual-27 orientation",
+      "g3": "1_{-1} + 1_{+1} = 2"
+    },
+    "positive_nilpotent_growth": [
+      54,
+      81,
+      83
+    ],
+    "root_dimensions": [
+      2,
+      27,
+      54,
+      74,
+      54,
+      27,
+      2
+    ],
+    "rows": [
+      {
+        "A1_weight_census_by_positive_grade": {
+          "1": {
+            "-1": 27,
+            "1": 27
+          },
+          "2": {
+            "0": 27
+          },
+          "3": {
+            "-1": 1,
+            "1": 1
+          }
+        },
+        "E6_orthogonal_to_A1": true,
+        "E6_reflection_closed": true,
+        "E6_reflection_orbit_sizes": {
+          "g1_A1weight_-1": 27,
+          "g1_A1weight_1": 27,
+          "g2_A1weight_0": 27
+        },
+        "E6_zero_root_count": 72,
+        "E6_zero_root_rank": 6,
+        "cartan_vector": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1
+        ],
+        "clock": 0,
+        "negative_line": 2,
+        "positive_line": 1,
+        "root_grade_census": {
+          "-1": 54,
+          "-2": 27,
+          "-3": 2,
+          "0": 74,
+          "1": 54,
+          "2": 27,
+          "3": 2
+        },
+        "striation": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "zero_origin_line": 0,
+        "zero_tick_A1_root": [
+          2,
+          2,
+          2,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "A1_weight_census_by_positive_grade": {
+          "1": {
+            "-1": 27,
+            "1": 27
+          },
+          "2": {
+            "0": 27
+          },
+          "3": {
+            "-1": 1,
+            "1": 1
+          }
+        },
+        "E6_orthogonal_to_A1": true,
+        "E6_reflection_closed": true,
+        "E6_reflection_orbit_sizes": {
+          "g1_A1weight_-1": 27,
+          "g1_A1weight_1": 27,
+          "g2_A1weight_0": 27
+        },
+        "E6_zero_root_count": 72,
+        "E6_zero_root_rank": 6,
+        "cartan_vector": [
+          0,
+          0,
+          0,
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          1
+        ],
+        "clock": 0,
+        "negative_line": 1,
+        "positive_line": 2,
+        "root_grade_census": {
+          "-1": 54,
+          "-2": 27,
+          "-3": 2,
+          "0": 74,
+          "1": 54,
+          "2": 27,
+          "3": 2
+        },
+        "striation": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "zero_origin_line": 0,
+        "zero_tick_A1_root": [
+          2,
+          2,
+          2,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "A1_weight_census_by_positive_grade": {
+          "1": {
+            "-1": 27,
+            "1": 27
+          },
+          "2": {
+            "0": 27
+          },
+          "3": {
+            "-1": 1,
+            "1": 1
+          }
+        },
+        "E6_orthogonal_to_A1": true,
+        "E6_reflection_closed": true,
+        "E6_reflection_orbit_sizes": {
+          "g1_A1weight_-1": 27,
+          "g1_A1weight_1": 27,
+          "g2_A1weight_0": 27
+        },
+        "E6_zero_root_count": 72,
+        "E6_zero_root_rank": 6,
+        "cartan_vector": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          -1,
+          -1,
+          -1
+        ],
+        "clock": 0,
+        "negative_line": 2,
+        "positive_line": 0,
+        "root_grade_census": {
+          "-1": 54,
+          "-2": 27,
+          "-3": 2,
+          "0": 74,
+          "1": 54,
+          "2": 27,
+          "3": 2
+        },
+        "striation": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "zero_origin_line": 1,
+        "zero_tick_A1_root": [
+          -1,
+          -1,
+          -1,
+          2,
+          2,
+          2,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "A1_weight_census_by_positive_grade": {
+          "1": {
+            "-1": 27,
+            "1": 27
+          },
+          "2": {
+            "0": 27
+          },
+          "3": {
+            "-1": 1,
+            "1": 1
+          }
+        },
+        "E6_orthogonal_to_A1": true,
+        "E6_reflection_closed": true,
+        "E6_reflection_orbit_sizes": {
+          "g1_A1weight_-1": 27,
+          "g1_A1weight_1": 27,
+          "g2_A1weight_0": 27
+        },
+        "E6_zero_root_count": 72,
+        "E6_zero_root_rank": 6,
+        "cartan_vector": [
+          -1,
+          -1,
+          -1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        "clock": 0,
+        "negative_line": 0,
+        "positive_line": 2,
+        "root_grade_census": {
+          "-1": 54,
+          "-2": 27,
+          "-3": 2,
+          "0": 74,
+          "1": 54,
+          "2": 27,
+          "3": 2
+        },
+        "striation": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "zero_origin_line": 1,
+        "zero_tick_A1_root": [
+          -1,
+          -1,
+          -1,
+          2,
+          2,
+          2,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "A1_weight_census_by_positive_grade": {
+          "1": {
+            "-1": 27,
+            "1": 27
+          },
+          "2": {
+            "0": 27
+          },
+          "3": {
+            "-1": 1,
+            "1": 1
+          }
+        },
+        "E6_orthogonal_to_A1": true,
+        "E6_reflection_closed": true,
+        "E6_reflection_orbit_sizes": {
+          "g1_A1weight_-1": 27,
+          "g1_A1weight_1": 27,
+          "g2_A1weight_0": 27
+        },
+        "E6_zero_root_count": 72,
+        "E6_zero_root_rank": 6,
+        "cartan_vector": [
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          0,
+          0,
+          0
+        ],
+        "clock": 0,
+        "negative_line": 1,
+        "positive_line": 0,
+        "root_grade_census": {
+          "-1": 54,
+          "-2": 27,
+          "-3": 2,
+          "0": 74,
+          "1": 54,
+          "2": 27,
+          "3": 2
+        },
+        "striation": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "zero_origin_line": 2,
+        "zero_tick_A1_root": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "A1_weight_census_by_positive_grade": {
+          "1": {
+            "-1": 27,
+            "1": 27
+          },
+          "2": {
+            "0": 27
+          },
+          "3": {
+            "-1": 1,
+            "1": 1
+          }
+        },
+        "E6_orthogonal_to_A1": true,
+        "E6_reflection_closed": true,
+        "E6_reflection_orbit_sizes": {
+          "g1_A1weight_-1": 27,
+          "g1_A1weight_1": 27,
+          "g2_A1weight_0": 27
+        },
+        "E6_zero_root_count": 72,
+        "E6_zero_root_rank": 6,
+        "cartan_vector": [
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "clock": 0,
+        "negative_line": 0,
+        "positive_line": 1,
+        "root_grade_census": {
+          "-1": 54,
+          "-2": 27,
+          "-3": 2,
+          "0": 74,
+          "1": 54,
+          "2": 27,
+          "3": 2
+        },
+        "striation": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "zero_origin_line": 2,
+        "zero_tick_A1_root": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "A1_weight_census_by_positive_grade": {
+          "1": {
+            "-1": 27,
+            "1": 27
+          },
+          "2": {
+            "0": 27
+          },
+          "3": {
+            "-1": 1,
+            "1": 1
+          }
+        },
+        "E6_orthogonal_to_A1": true,
+        "E6_reflection_closed": true,
+        "E6_reflection_orbit_sizes": {
+          "g1_A1weight_-1": 27,
+          "g1_A1weight_1": 27,
+          "g2_A1weight_0": 27
+        },
+        "E6_zero_root_count": 72,
+        "E6_zero_root_rank": 6,
+        "cartan_vector": [
+          0,
+          1,
+          -1,
+          0,
+          1,
+          -1,
+          0,
+          1,
+          -1
+        ],
+        "clock": 1,
+        "negative_line": 2,
+        "positive_line": 1,
+        "root_grade_census": {
+          "-1": 54,
+          "-2": 27,
+          "-3": 2,
+          "0": 74,
+          "1": 54,
+          "2": 27,
+          "3": 2
+        },
+        "striation": [
+          [
+            0,
+            3,
+            6
+          ],
+          [
+            1,
+            4,
+            7
+          ],
+          [
+            2,
+            5,
+            8
+          ]
+        ],
+        "zero_origin_line": 0,
+        "zero_tick_A1_root": [
+          2,
+          -1,
+          -1,
+          2,
+          -1,
+          -1,
+          2,
+          -1,
+          -1
+        ]
+      },
+      {
+        "A1_weight_census_by_positive_grade": {
+          "1": {
+            "-1": 27,
+            "1": 27
+          },
+          "2": {
+            "0": 27
+          },
+          "3": {
+            "-1": 1,
+            "1": 1
+          }
+        },
+        "E6_orthogonal_to_A1": true,
+        "E6_reflection_closed": true,
+        "E6_reflection_orbit_sizes": {
+          "g1_A1weight_-1": 27,
+          "g1_A1weight_1": 27,
+          "g2_A1weight_0": 27
+        },
+        "E6_zero_root_count": 72,
+        "E6_zero_root_rank": 6,
+        "cartan_vector": [
+          0,
+          -1,
+          1,
+          0,
+          -1,
+          1,
+          0,
+          -1,
+          1
+        ],
+        "clock": 1,
+        "negative_line": 1,
+        "positive_line": 2,
+        "root_grade_census": {
+          "-1": 54,
+          "-2": 27,
+          "-3": 2,
+          "0": 74,
+          "1": 54,
+          "2": 27,
+          "3": 2
+        },
+        "striation": [
+          [
+            0,
+            3,
+            6
+          ],
+          [
+            1,
+            4,
+            7
+          ],
+          [
+            2,
+            5,
+            8
+          ]
+        ],
+        "zero_origin_line": 0,
+        "zero_tick_A1_root": [
+          2,
+          -1,
+          -1,
+          2,
+          -1,
+          -1,
+          2,
+          -1,
+          -1
+        ]
+      },
+      {
+        "A1_weight_census_by_positive_grade": {
+          "1": {
+            "-1": 27,
+            "1": 27
+          },
+          "2": {
+            "0": 27
+          },
+          "3": {
+            "-1": 1,
+            "1": 1
+          }
+        },
+        "E6_orthogonal_to_A1": true,
+        "E6_reflection_closed": true,
+        "E6_reflection_orbit_sizes": {
+          "g1_A1weight_-1": 27,
+          "g1_A1weight_1": 27,
+          "g2_A1weight_0": 27
+        },
+        "E6_zero_root_count": 72,
+        "E6_zero_root_rank": 6,
+        "cartan_vector": [
+          1,
+          0,
+          -1,
+          1,
+          0,
+          -1,
+          1,
+          0,
+          -1
+        ],
+        "clock": 1,
+        "negative_line": 2,
+        "positive_line": 0,
+        "root_grade_census": {
+          "-1": 54,
+          "-2": 27,
+          "-3": 2,
+          "0": 74,
+          "1": 54,
+          "2": 27,
+          "3": 2
+        },
+        "striation": [
+          [
+            0,
+            3,
+            6
+          ],
+          [
+            1,
+            4,
+            7
+          ],
+          [
+            2,
+            5,
+            8
+          ]
+        ],
+        "zero_origin_line": 1,
+        "zero_tick_A1_root": [
+          -1,
+          2,
+          -1,
+          -1,
+          2,
+          -1,
+          -1,
+          2,
+          -1
+        ]
+      },
+      {
+        "A1_weight_census_by_positive_grade": {
+          "1": {
+            "-1": 27,
+            "1": 27
+          },
+          "2": {
+            "0": 27
+          },
+          "3": {
+            "-1": 1,
+            "1": 1
+          }
+        },
+        "E6_orthogonal_to_A1": true,
+        "E6_reflection_closed": true,
+        "E6_reflection_orbit_sizes": {
+          "g1_A1weight_-1": 27,
+          "g1_A1weight_1": 27,
+          "g2_A1weight_0": 27
+        },
+        "E6_zero_root_count": 72,
+        "E6_zero_root_rank": 6,
+        "cartan_vector": [
+          -1,
+          0,
+          1,
+          -1,
+          0,
+          1,
+          -1,
+          0,
+          1
+        ],
+        "clock": 1,
+        "negative_line": 0,
+        "positive_line": 2,
+        "root_grade_census": {
+          "-1": 54,
+          "-2": 27,
+          "-3": 2,
+          "0": 74,
+          "1": 54,
+          "2": 27,
+          "3": 2
+        },
+        "striation": [
+          [
+            0,
+            3,
+            6
+          ],
+          [
+            1,
+            4,
+            7
+          ],
+          [
+            2,
+            5,
+            8
+          ]
+        ],
+        "zero_origin_line": 1,
+        "zero_tick_A1_root": [
+          -1,
+          2,
+          -1,
+          -1,
+          2,
+          -1,
+          -1,
+          2,
+          -1
+        ]
+      },
+      {
+        "A1_weight_census_by_positive_grade": {
+          "1": {
+            "-1": 27,
+            "1": 27
+          },
+          "2": {
+            "0": 27
+          },
+          "3": {
+            "-1": 1,
+            "1": 1
+          }
+        },
+        "E6_orthogonal_to_A1": true,
+        "E6_reflection_closed": true,
+        "E6_reflection_orbit_sizes": {
+          "g1_A1weight_-1": 27,
+          "g1_A1weight_1": 27,
+          "g2_A1weight_0": 27
+        },
+        "E6_zero_root_count": 72,
+        "E6_zero_root_rank": 6,
+        "cartan_vector": [
+          1,
+          -1,
+          0,
+          1,
+          -1,
+          0,
+          1,
+          -1,
+          0
+        ],
+        "clock": 1,
+        "negative_line": 1,
+        "positive_line": 0,
+        "root_grade_census": {
+          "-1": 54,
+          "-2": 27,
+          "-3": 2,
+          "0": 74,
+          "1": 54,
+          "2": 27,
+          "3": 2
+        },
+        "striation": [
+          [
+            0,
+            3,
+            6
+          ],
+          [
+            1,
+            4,
+            7
+          ],
+          [
+            2,
+            5,
+            8
+          ]
+        ],
+        "zero_origin_line": 2,
+        "zero_tick_A1_root": [
+          -1,
+          -1,
+          2,
+          -1,
+          -1,
+          2,
+          -1,
+          -1,
+          2
+        ]
+      },
+      {
+        "A1_weight_census_by_positive_grade": {
+          "1": {
+            "-1": 27,
+            "1": 27
+          },
+          "2": {
+            "0": 27
+          },
+          "3": {
+            "-1": 1,
+            "1": 1
+          }
+        },
+        "E6_orthogonal_to_A1": true,
+        "E6_reflection_closed": true,
+        "E6_reflection_orbit_sizes": {
+          "g1_A1weight_-1": 27,
+          "g1_A1weight_1": 27,
+          "g2_A1weight_0": 27
+        },
+        "E6_zero_root_count": 72,
+        "E6_zero_root_rank": 6,
+        "cartan_vector": [
+          -1,
+          1,
+          0,
+          -1,
+          1,
+          0,
+          -1,
+          1,
+          0
+        ],
+        "clock": 1,
+        "negative_line": 0,
+        "positive_line": 1,
+        "root_grade_census": {
+          "-1": 54,
+          "-2": 27,
+          "-3": 2,
+          "0": 74,
+          "1": 54,
+          "2": 27,
+          "3": 2
+        },
+        "striation": [
+          [
+            0,
+            3,
+            6
+          ],
+          [
+            1,
+            4,
+            7
+          ],
+          [
+            2,
+            5,
+            8
+          ]
+        ],
+        "zero_origin_line": 2,
+        "zero_tick_A1_root": [
+          -1,
+          -1,
+          2,
+          -1,
+          -1,
+          2,
+          -1,
+          -1,
+          2
+        ]
+      },
+      {
+        "A1_weight_census_by_positive_grade": {
+          "1": {
+            "-1": 27,
+            "1": 27
+          },
+          "2": {
+            "0": 27
+          },
+          "3": {
+            "-1": 1,
+            "1": 1
+          }
+        },
+        "E6_orthogonal_to_A1": true,
+        "E6_reflection_closed": true,
+        "E6_reflection_orbit_sizes": {
+          "g1_A1weight_-1": 27,
+          "g1_A1weight_1": 27,
+          "g2_A1weight_0": 27
+        },
+        "E6_zero_root_count": 72,
+        "E6_zero_root_rank": 6,
+        "cartan_vector": [
+          0,
+          1,
+          -1,
+          -1,
+          0,
+          1,
+          1,
+          -1,
+          0
+        ],
+        "clock": 2,
+        "negative_line": 2,
+        "positive_line": 1,
+        "root_grade_census": {
+          "-1": 54,
+          "-2": 27,
+          "-3": 2,
+          "0": 74,
+          "1": 54,
+          "2": 27,
+          "3": 2
+        },
+        "striation": [
+          [
+            0,
+            4,
+            8
+          ],
+          [
+            1,
+            5,
+            6
+          ],
+          [
+            2,
+            3,
+            7
+          ]
+        ],
+        "zero_origin_line": 0,
+        "zero_tick_A1_root": [
+          2,
+          -1,
+          -1,
+          -1,
+          2,
+          -1,
+          -1,
+          -1,
+          2
+        ]
+      },
+      {
+        "A1_weight_census_by_positive_grade": {
+          "1": {
+            "-1": 27,
+            "1": 27
+          },
+          "2": {
+            "0": 27
+          },
+          "3": {
+            "-1": 1,
+            "1": 1
+          }
+        },
+        "E6_orthogonal_to_A1": true,
+        "E6_reflection_closed": true,
+        "E6_reflection_orbit_sizes": {
+          "g1_A1weight_-1": 27,
+          "g1_A1weight_1": 27,
+          "g2_A1weight_0": 27
+        },
+        "E6_zero_root_count": 72,
+        "E6_zero_root_rank": 6,
+        "cartan_vector": [
+          0,
+          -1,
+          1,
+          1,
+          0,
+          -1,
+          -1,
+          1,
+          0
+        ],
+        "clock": 2,
+        "negative_line": 1,
+        "positive_line": 2,
+        "root_grade_census": {
+          "-1": 54,
+          "-2": 27,
+          "-3": 2,
+          "0": 74,
+          "1": 54,
+          "2": 27,
+          "3": 2
+        },
+        "striation": [
+          [
+            0,
+            4,
+            8
+          ],
+          [
+            1,
+            5,
+            6
+          ],
+          [
+            2,
+            3,
+            7
+          ]
+        ],
+        "zero_origin_line": 0,
+        "zero_tick_A1_root": [
+          2,
+          -1,
+          -1,
+          -1,
+          2,
+          -1,
+          -1,
+          -1,
+          2
+        ]
+      },
+      {
+        "A1_weight_census_by_positive_grade": {
+          "1": {
+            "-1": 27,
+            "1": 27
+          },
+          "2": {
+            "0": 27
+          },
+          "3": {
+            "-1": 1,
+            "1": 1
+          }
+        },
+        "E6_orthogonal_to_A1": true,
+        "E6_reflection_closed": true,
+        "E6_reflection_orbit_sizes": {
+          "g1_A1weight_-1": 27,
+          "g1_A1weight_1": 27,
+          "g2_A1weight_0": 27
+        },
+        "E6_zero_root_count": 72,
+        "E6_zero_root_rank": 6,
+        "cartan_vector": [
+          1,
+          0,
+          -1,
+          -1,
+          1,
+          0,
+          0,
+          -1,
+          1
+        ],
+        "clock": 2,
+        "negative_line": 2,
+        "positive_line": 0,
+        "root_grade_census": {
+          "-1": 54,
+          "-2": 27,
+          "-3": 2,
+          "0": 74,
+          "1": 54,
+          "2": 27,
+          "3": 2
+        },
+        "striation": [
+          [
+            0,
+            4,
+            8
+          ],
+          [
+            1,
+            5,
+            6
+          ],
+          [
+            2,
+            3,
+            7
+          ]
+        ],
+        "zero_origin_line": 1,
+        "zero_tick_A1_root": [
+          -1,
+          2,
+          -1,
+          -1,
+          -1,
+          2,
+          2,
+          -1,
+          -1
+        ]
+      },
+      {
+        "A1_weight_census_by_positive_grade": {
+          "1": {
+            "-1": 27,
+            "1": 27
+          },
+          "2": {
+            "0": 27
+          },
+          "3": {
+            "-1": 1,
+            "1": 1
+          }
+        },
+        "E6_orthogonal_to_A1": true,
+        "E6_reflection_closed": true,
+        "E6_reflection_orbit_sizes": {
+          "g1_A1weight_-1": 27,
+          "g1_A1weight_1": 27,
+          "g2_A1weight_0": 27
+        },
+        "E6_zero_root_count": 72,
+        "E6_zero_root_rank": 6,
+        "cartan_vector": [
+          -1,
+          0,
+          1,
+          1,
+          -1,
+          0,
+          0,
+          1,
+          -1
+        ],
+        "clock": 2,
+        "negative_line": 0,
+        "positive_line": 2,
+        "root_grade_census": {
+          "-1": 54,
+          "-2": 27,
+          "-3": 2,
+          "0": 74,
+          "1": 54,
+          "2": 27,
+          "3": 2
+        },
+        "striation": [
+          [
+            0,
+            4,
+            8
+          ],
+          [
+            1,
+            5,
+            6
+          ],
+          [
+            2,
+            3,
+            7
+          ]
+        ],
+        "zero_origin_line": 1,
+        "zero_tick_A1_root": [
+          -1,
+          2,
+          -1,
+          -1,
+          -1,
+          2,
+          2,
+          -1,
+          -1
+        ]
+      },
+      {
+        "A1_weight_census_by_positive_grade": {
+          "1": {
+            "-1": 27,
+            "1": 27
+          },
+          "2": {
+            "0": 27
+          },
+          "3": {
+            "-1": 1,
+            "1": 1
+          }
+        },
+        "E6_orthogonal_to_A1": true,
+        "E6_reflection_closed": true,
+        "E6_reflection_orbit_sizes": {
+          "g1_A1weight_-1": 27,
+          "g1_A1weight_1": 27,
+          "g2_A1weight_0": 27
+        },
+        "E6_zero_root_count": 72,
+        "E6_zero_root_rank": 6,
+        "cartan_vector": [
+          1,
+          -1,
+          0,
+          0,
+          1,
+          -1,
+          -1,
+          0,
+          1
+        ],
+        "clock": 2,
+        "negative_line": 1,
+        "positive_line": 0,
+        "root_grade_census": {
+          "-1": 54,
+          "-2": 27,
+          "-3": 2,
+          "0": 74,
+          "1": 54,
+          "2": 27,
+          "3": 2
+        },
+        "striation": [
+          [
+            0,
+            4,
+            8
+          ],
+          [
+            1,
+            5,
+            6
+          ],
+          [
+            2,
+            3,
+            7
+          ]
+        ],
+        "zero_origin_line": 2,
+        "zero_tick_A1_root": [
+          -1,
+          -1,
+          2,
+          2,
+          -1,
+          -1,
+          -1,
+          2,
+          -1
+        ]
+      },
+      {
+        "A1_weight_census_by_positive_grade": {
+          "1": {
+            "-1": 27,
+            "1": 27
+          },
+          "2": {
+            "0": 27
+          },
+          "3": {
+            "-1": 1,
+            "1": 1
+          }
+        },
+        "E6_orthogonal_to_A1": true,
+        "E6_reflection_closed": true,
+        "E6_reflection_orbit_sizes": {
+          "g1_A1weight_-1": 27,
+          "g1_A1weight_1": 27,
+          "g2_A1weight_0": 27
+        },
+        "E6_zero_root_count": 72,
+        "E6_zero_root_rank": 6,
+        "cartan_vector": [
+          -1,
+          1,
+          0,
+          0,
+          -1,
+          1,
+          1,
+          0,
+          -1
+        ],
+        "clock": 2,
+        "negative_line": 0,
+        "positive_line": 1,
+        "root_grade_census": {
+          "-1": 54,
+          "-2": 27,
+          "-3": 2,
+          "0": 74,
+          "1": 54,
+          "2": 27,
+          "3": 2
+        },
+        "striation": [
+          [
+            0,
+            4,
+            8
+          ],
+          [
+            1,
+            5,
+            6
+          ],
+          [
+            2,
+            3,
+            7
+          ]
+        ],
+        "zero_origin_line": 2,
+        "zero_tick_A1_root": [
+          -1,
+          -1,
+          2,
+          2,
+          -1,
+          -1,
+          -1,
+          2,
+          -1
+        ]
+      },
+      {
+        "A1_weight_census_by_positive_grade": {
+          "1": {
+            "-1": 27,
+            "1": 27
+          },
+          "2": {
+            "0": 27
+          },
+          "3": {
+            "-1": 1,
+            "1": 1
+          }
+        },
+        "E6_orthogonal_to_A1": true,
+        "E6_reflection_closed": true,
+        "E6_reflection_orbit_sizes": {
+          "g1_A1weight_-1": 27,
+          "g1_A1weight_1": 27,
+          "g2_A1weight_0": 27
+        },
+        "E6_zero_root_count": 72,
+        "E6_zero_root_rank": 6,
+        "cartan_vector": [
+          0,
+          1,
+          -1,
+          1,
+          -1,
+          0,
+          -1,
+          0,
+          1
+        ],
+        "clock": 3,
+        "negative_line": 2,
+        "positive_line": 1,
+        "root_grade_census": {
+          "-1": 54,
+          "-2": 27,
+          "-3": 2,
+          "0": 74,
+          "1": 54,
+          "2": 27,
+          "3": 2
+        },
+        "striation": [
+          [
+            0,
+            5,
+            7
+          ],
+          [
+            1,
+            3,
+            8
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ],
+        "zero_origin_line": 0,
+        "zero_tick_A1_root": [
+          2,
+          -1,
+          -1,
+          -1,
+          -1,
+          2,
+          -1,
+          2,
+          -1
+        ]
+      },
+      {
+        "A1_weight_census_by_positive_grade": {
+          "1": {
+            "-1": 27,
+            "1": 27
+          },
+          "2": {
+            "0": 27
+          },
+          "3": {
+            "-1": 1,
+            "1": 1
+          }
+        },
+        "E6_orthogonal_to_A1": true,
+        "E6_reflection_closed": true,
+        "E6_reflection_orbit_sizes": {
+          "g1_A1weight_-1": 27,
+          "g1_A1weight_1": 27,
+          "g2_A1weight_0": 27
+        },
+        "E6_zero_root_count": 72,
+        "E6_zero_root_rank": 6,
+        "cartan_vector": [
+          0,
+          -1,
+          1,
+          -1,
+          1,
+          0,
+          1,
+          0,
+          -1
+        ],
+        "clock": 3,
+        "negative_line": 1,
+        "positive_line": 2,
+        "root_grade_census": {
+          "-1": 54,
+          "-2": 27,
+          "-3": 2,
+          "0": 74,
+          "1": 54,
+          "2": 27,
+          "3": 2
+        },
+        "striation": [
+          [
+            0,
+            5,
+            7
+          ],
+          [
+            1,
+            3,
+            8
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ],
+        "zero_origin_line": 0,
+        "zero_tick_A1_root": [
+          2,
+          -1,
+          -1,
+          -1,
+          -1,
+          2,
+          -1,
+          2,
+          -1
+        ]
+      },
+      {
+        "A1_weight_census_by_positive_grade": {
+          "1": {
+            "-1": 27,
+            "1": 27
+          },
+          "2": {
+            "0": 27
+          },
+          "3": {
+            "-1": 1,
+            "1": 1
+          }
+        },
+        "E6_orthogonal_to_A1": true,
+        "E6_reflection_closed": true,
+        "E6_reflection_orbit_sizes": {
+          "g1_A1weight_-1": 27,
+          "g1_A1weight_1": 27,
+          "g2_A1weight_0": 27
+        },
+        "E6_zero_root_count": 72,
+        "E6_zero_root_rank": 6,
+        "cartan_vector": [
+          1,
+          0,
+          -1,
+          0,
+          -1,
+          1,
+          -1,
+          1,
+          0
+        ],
+        "clock": 3,
+        "negative_line": 2,
+        "positive_line": 0,
+        "root_grade_census": {
+          "-1": 54,
+          "-2": 27,
+          "-3": 2,
+          "0": 74,
+          "1": 54,
+          "2": 27,
+          "3": 2
+        },
+        "striation": [
+          [
+            0,
+            5,
+            7
+          ],
+          [
+            1,
+            3,
+            8
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ],
+        "zero_origin_line": 1,
+        "zero_tick_A1_root": [
+          -1,
+          2,
+          -1,
+          2,
+          -1,
+          -1,
+          -1,
+          -1,
+          2
+        ]
+      },
+      {
+        "A1_weight_census_by_positive_grade": {
+          "1": {
+            "-1": 27,
+            "1": 27
+          },
+          "2": {
+            "0": 27
+          },
+          "3": {
+            "-1": 1,
+            "1": 1
+          }
+        },
+        "E6_orthogonal_to_A1": true,
+        "E6_reflection_closed": true,
+        "E6_reflection_orbit_sizes": {
+          "g1_A1weight_-1": 27,
+          "g1_A1weight_1": 27,
+          "g2_A1weight_0": 27
+        },
+        "E6_zero_root_count": 72,
+        "E6_zero_root_rank": 6,
+        "cartan_vector": [
+          -1,
+          0,
+          1,
+          0,
+          1,
+          -1,
+          1,
+          -1,
+          0
+        ],
+        "clock": 3,
+        "negative_line": 0,
+        "positive_line": 2,
+        "root_grade_census": {
+          "-1": 54,
+          "-2": 27,
+          "-3": 2,
+          "0": 74,
+          "1": 54,
+          "2": 27,
+          "3": 2
+        },
+        "striation": [
+          [
+            0,
+            5,
+            7
+          ],
+          [
+            1,
+            3,
+            8
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ],
+        "zero_origin_line": 1,
+        "zero_tick_A1_root": [
+          -1,
+          2,
+          -1,
+          2,
+          -1,
+          -1,
+          -1,
+          -1,
+          2
+        ]
+      },
+      {
+        "A1_weight_census_by_positive_grade": {
+          "1": {
+            "-1": 27,
+            "1": 27
+          },
+          "2": {
+            "0": 27
+          },
+          "3": {
+            "-1": 1,
+            "1": 1
+          }
+        },
+        "E6_orthogonal_to_A1": true,
+        "E6_reflection_closed": true,
+        "E6_reflection_orbit_sizes": {
+          "g1_A1weight_-1": 27,
+          "g1_A1weight_1": 27,
+          "g2_A1weight_0": 27
+        },
+        "E6_zero_root_count": 72,
+        "E6_zero_root_rank": 6,
+        "cartan_vector": [
+          1,
+          -1,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          1,
+          -1
+        ],
+        "clock": 3,
+        "negative_line": 1,
+        "positive_line": 0,
+        "root_grade_census": {
+          "-1": 54,
+          "-2": 27,
+          "-3": 2,
+          "0": 74,
+          "1": 54,
+          "2": 27,
+          "3": 2
+        },
+        "striation": [
+          [
+            0,
+            5,
+            7
+          ],
+          [
+            1,
+            3,
+            8
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ],
+        "zero_origin_line": 2,
+        "zero_tick_A1_root": [
+          -1,
+          -1,
+          2,
+          -1,
+          2,
+          -1,
+          2,
+          -1,
+          -1
+        ]
+      },
+      {
+        "A1_weight_census_by_positive_grade": {
+          "1": {
+            "-1": 27,
+            "1": 27
+          },
+          "2": {
+            "0": 27
+          },
+          "3": {
+            "-1": 1,
+            "1": 1
+          }
+        },
+        "E6_orthogonal_to_A1": true,
+        "E6_reflection_closed": true,
+        "E6_reflection_orbit_sizes": {
+          "g1_A1weight_-1": 27,
+          "g1_A1weight_1": 27,
+          "g2_A1weight_0": 27
+        },
+        "E6_zero_root_count": 72,
+        "E6_zero_root_rank": 6,
+        "cartan_vector": [
+          -1,
+          1,
+          0,
+          1,
+          0,
+          -1,
+          0,
+          -1,
+          1
+        ],
+        "clock": 3,
+        "negative_line": 0,
+        "positive_line": 1,
+        "root_grade_census": {
+          "-1": 54,
+          "-2": 27,
+          "-3": 2,
+          "0": 74,
+          "1": 54,
+          "2": 27,
+          "3": 2
+        },
+        "striation": [
+          [
+            0,
+            5,
+            7
+          ],
+          [
+            1,
+            3,
+            8
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ],
+        "zero_origin_line": 2,
+        "zero_tick_A1_root": [
+          -1,
+          -1,
+          2,
+          -1,
+          2,
+          -1,
+          2,
+          -1,
+          -1
+        ]
+      }
+    ],
+    "top_grade_family_count": {
+      "A8": 0,
+      "Lambda3": 1,
+      "Lambda6": 1
+    }
+  },
+  "schema": "w33.20260925.hesse_clock_e8_gradings.v1",
+  "single_tick_contact_grading": {
+    "Lie_dimensions": [
+      1,
+      56,
+      134,
+      56,
+      1
+    ],
+    "all_12_lines_verified": true,
+    "identity": "248 = 1 + 56 + 134 + 56 + 1",
+    "root_dimensions": [
+      1,
+      56,
+      126,
+      56,
+      1
+    ],
+    "rows": [
+      {
+        "family_census": {
+          "A8": {
+            "-1": 18,
+            "0": 36,
+            "1": 18
+          },
+          "Lambda3": {
+            "-1": 20,
+            "0": 45,
+            "1": 18,
+            "2": 1
+          },
+          "Lambda6": {
+            "-1": 18,
+            "-2": 1,
+            "0": 45,
+            "1": 20
+          }
+        },
+        "line": [
+          0,
+          1,
+          2
+        ],
+        "root_grade_census": {
+          "-1": 56,
+          "-2": 1,
+          "0": 126,
+          "1": 56,
+          "2": 1
+        }
+      },
+      {
+        "family_census": {
+          "A8": {
+            "-1": 18,
+            "0": 36,
+            "1": 18
+          },
+          "Lambda3": {
+            "-1": 20,
+            "0": 45,
+            "1": 18,
+            "2": 1
+          },
+          "Lambda6": {
+            "-1": 18,
+            "-2": 1,
+            "0": 45,
+            "1": 20
+          }
+        },
+        "line": [
+          0,
+          3,
+          6
+        ],
+        "root_grade_census": {
+          "-1": 56,
+          "-2": 1,
+          "0": 126,
+          "1": 56,
+          "2": 1
+        }
+      },
+      {
+        "family_census": {
+          "A8": {
+            "-1": 18,
+            "0": 36,
+            "1": 18
+          },
+          "Lambda3": {
+            "-1": 20,
+            "0": 45,
+            "1": 18,
+            "2": 1
+          },
+          "Lambda6": {
+            "-1": 18,
+            "-2": 1,
+            "0": 45,
+            "1": 20
+          }
+        },
+        "line": [
+          0,
+          4,
+          8
+        ],
+        "root_grade_census": {
+          "-1": 56,
+          "-2": 1,
+          "0": 126,
+          "1": 56,
+          "2": 1
+        }
+      },
+      {
+        "family_census": {
+          "A8": {
+            "-1": 18,
+            "0": 36,
+            "1": 18
+          },
+          "Lambda3": {
+            "-1": 20,
+            "0": 45,
+            "1": 18,
+            "2": 1
+          },
+          "Lambda6": {
+            "-1": 18,
+            "-2": 1,
+            "0": 45,
+            "1": 20
+          }
+        },
+        "line": [
+          0,
+          5,
+          7
+        ],
+        "root_grade_census": {
+          "-1": 56,
+          "-2": 1,
+          "0": 126,
+          "1": 56,
+          "2": 1
+        }
+      },
+      {
+        "family_census": {
+          "A8": {
+            "-1": 18,
+            "0": 36,
+            "1": 18
+          },
+          "Lambda3": {
+            "-1": 20,
+            "0": 45,
+            "1": 18,
+            "2": 1
+          },
+          "Lambda6": {
+            "-1": 18,
+            "-2": 1,
+            "0": 45,
+            "1": 20
+          }
+        },
+        "line": [
+          1,
+          3,
+          8
+        ],
+        "root_grade_census": {
+          "-1": 56,
+          "-2": 1,
+          "0": 126,
+          "1": 56,
+          "2": 1
+        }
+      },
+      {
+        "family_census": {
+          "A8": {
+            "-1": 18,
+            "0": 36,
+            "1": 18
+          },
+          "Lambda3": {
+            "-1": 20,
+            "0": 45,
+            "1": 18,
+            "2": 1
+          },
+          "Lambda6": {
+            "-1": 18,
+            "-2": 1,
+            "0": 45,
+            "1": 20
+          }
+        },
+        "line": [
+          1,
+          4,
+          7
+        ],
+        "root_grade_census": {
+          "-1": 56,
+          "-2": 1,
+          "0": 126,
+          "1": 56,
+          "2": 1
+        }
+      },
+      {
+        "family_census": {
+          "A8": {
+            "-1": 18,
+            "0": 36,
+            "1": 18
+          },
+          "Lambda3": {
+            "-1": 20,
+            "0": 45,
+            "1": 18,
+            "2": 1
+          },
+          "Lambda6": {
+            "-1": 18,
+            "-2": 1,
+            "0": 45,
+            "1": 20
+          }
+        },
+        "line": [
+          1,
+          5,
+          6
+        ],
+        "root_grade_census": {
+          "-1": 56,
+          "-2": 1,
+          "0": 126,
+          "1": 56,
+          "2": 1
+        }
+      },
+      {
+        "family_census": {
+          "A8": {
+            "-1": 18,
+            "0": 36,
+            "1": 18
+          },
+          "Lambda3": {
+            "-1": 20,
+            "0": 45,
+            "1": 18,
+            "2": 1
+          },
+          "Lambda6": {
+            "-1": 18,
+            "-2": 1,
+            "0": 45,
+            "1": 20
+          }
+        },
+        "line": [
+          2,
+          3,
+          7
+        ],
+        "root_grade_census": {
+          "-1": 56,
+          "-2": 1,
+          "0": 126,
+          "1": 56,
+          "2": 1
+        }
+      },
+      {
+        "family_census": {
+          "A8": {
+            "-1": 18,
+            "0": 36,
+            "1": 18
+          },
+          "Lambda3": {
+            "-1": 20,
+            "0": 45,
+            "1": 18,
+            "2": 1
+          },
+          "Lambda6": {
+            "-1": 18,
+            "-2": 1,
+            "0": 45,
+            "1": 20
+          }
+        },
+        "line": [
+          2,
+          4,
+          6
+        ],
+        "root_grade_census": {
+          "-1": 56,
+          "-2": 1,
+          "0": 126,
+          "1": 56,
+          "2": 1
+        }
+      },
+      {
+        "family_census": {
+          "A8": {
+            "-1": 18,
+            "0": 36,
+            "1": 18
+          },
+          "Lambda3": {
+            "-1": 20,
+            "0": 45,
+            "1": 18,
+            "2": 1
+          },
+          "Lambda6": {
+            "-1": 18,
+            "-2": 1,
+            "0": 45,
+            "1": 20
+          }
+        },
+        "line": [
+          2,
+          5,
+          8
+        ],
+        "root_grade_census": {
+          "-1": 56,
+          "-2": 1,
+          "0": 126,
+          "1": 56,
+          "2": 1
+        }
+      },
+      {
+        "family_census": {
+          "A8": {
+            "-1": 18,
+            "0": 36,
+            "1": 18
+          },
+          "Lambda3": {
+            "-1": 20,
+            "0": 45,
+            "1": 18,
+            "2": 1
+          },
+          "Lambda6": {
+            "-1": 18,
+            "-2": 1,
+            "0": 45,
+            "1": 20
+          }
+        },
+        "line": [
+          3,
+          4,
+          5
+        ],
+        "root_grade_census": {
+          "-1": 56,
+          "-2": 1,
+          "0": 126,
+          "1": 56,
+          "2": 1
+        }
+      },
+      {
+        "family_census": {
+          "A8": {
+            "-1": 18,
+            "0": 36,
+            "1": 18
+          },
+          "Lambda3": {
+            "-1": 20,
+            "0": 45,
+            "1": 18,
+            "2": 1
+          },
+          "Lambda6": {
+            "-1": 18,
+            "-2": 1,
+            "0": 45,
+            "1": 20
+          }
+        },
+        "line": [
+          6,
+          7,
+          8
+        ],
+        "root_grade_census": {
+          "-1": 56,
+          "-2": 1,
+          "0": 126,
+          "1": 56,
+          "2": 1
+        }
+      }
+    ],
+    "zero_algebra": "126 zero roots + rank-8 Cartan = 134 (E7 + C grading line)"
+  },
+  "status": "PASS_HESSE_CLOCK_GENERATES_CONTACT_AND_CUBIC_E8_GRADINGS",
+  "theorem": "In the temporal A8 model E8=sl9+Lambda3+Lambda6, every Hesse line L defines the E8 root h_L=chi_L-(1/3)1. Grading all 240 roots by h_L gives 1,56,126,56,1 root spaces, hence the contact decomposition 1+56+134+56+1 after adjoining the rank-eight Cartan. For any Hesse striation {L0,L1,L2}, assigning its three ticks the values +1,0,-1 gives, for all 24 choices of clock/origin/orientation, root grades 2,27,54,74,54,27,2; adjoining Cartan gives the exact E8 grading 2+27+54+82+54+27+2. For each clock choice the selected zero tick is the A1 root of the Levi, its orthogonal zero-grade roots are an E6 system, and A1 weights refine the positive layers as (27,2), (27bar,1), and (1,2), up to the E6 outer convention. Thus the four Hesse/MUB clocks are not only labels on the A2^4 subsystem: their tick projectors explicitly realize the contact and node-7 parabolic gradings of E8."
+}
