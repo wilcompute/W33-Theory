@@ -1,0 +1,91 @@
+{
+  "D4_minuscule_weight_sets": {
+    "S_minus": "odd number of minus signs",
+    "S_plus": "even number of minus signs",
+    "half_spin_minus_weights": 8,
+    "half_spin_plus_weights": 8,
+    "orientation_bits_map": "x in F2^4 -> ( (-1)^x1,...,(-1)^x4 ) / 2",
+    "vector_weights": 8
+  },
+  "boundary": "Half-spin here is the exact D4 root/weight-system notion. This does not identify the finite sheets with observed fermion chirality, CPT, the Pass10950 Spin(1,9) Weyl field, or a continuum Pin/Spin bundle. A separate representation intertwiner is required for any such claim.",
+  "clock": {
+    "eight_ticks": "identity",
+    "four_ticks": "-I4; negates every D4 vector and half-spin weight",
+    "halfspin_union_cycle_lengths": [
+      8,
+      8
+    ],
+    "matrix_F3": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "one_tick": "S+ <-> S-",
+    "order": 8,
+    "signed_4D_matrix": [
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1,
+        0
+      ]
+    ],
+    "two_ticks": "preserves S+ and S- separately"
+  },
+  "outer_D4_action": {
+    "det_minus_action": "fixes V and swaps S+ <-> S-",
+    "det_minus_count": 24,
+    "det_plus_action": "fixes V, S+, S- as sets",
+    "det_plus_count": 24,
+    "outer_image": "C2 inside Out(D4)=S3",
+    "triality_boundary": "this realizes only the spinor-sheet transposition, not a triality 3-cycle"
+  },
+  "repo_crosscheck": {
+    "pass10954": "the same 16 sign states are the oriented A2^4 clock cover with two C8 orbits",
+    "pass540": "independent full-support sign-word certificate identifies the two demicubes with D4 spinor/conjugate-spinor weights"
+  },
+  "schema": "w33.pass10955.d4-halfspin-clock-bridge.v1",
+  "shared_character": {
+    "determinant": "det=+1 preserves half-spin sheet; det=-1 swaps half-spin sheet",
+    "new_weld": "CP parity, Fano orientation parity and D4 half-spin-sheet parity are the same GL(2,3) character",
+    "pass10952_CP": "even clock powers are CPTP/unitary; odd powers are positive TP but non-CP",
+    "pass10954_Fano": "det=+1 preserves and det=-1 flips the Fano-hinge orientation bipartition"
+  },
+  "signed_permutation_embedding": {
+    "D4_root_count": 24,
+    "all_48_squared_products_checked": true,
+    "all_elements_preserve_D4_roots": true,
+    "ambient_signed_permutation_group": "W(B4)",
+    "det_minus_coset": "odd-sign-flip root automorphisms in W(B4) minus W(D4)",
+    "det_plus_subgroup": "SL(2,3) lies in W(D4)",
+    "dimension": 4,
+    "faithful": true,
+    "group": "GL(2,3)",
+    "order": 48
+  },
+  "status": "PASS_D4_HALFSPIN_CLOCK_DETERMINANT_BRIDGE",
+  "theorem": "The exact clock/tetracode GL(2,3) has a faithful four-dimensional signed-permutation representation preserving the D4 root system. Its determinant-one SL(2,3) subgroup lies in W(D4) and preserves the two half-spin demicubes separately; every determinant-minus-one element lies in the other signed-permutation coset, fixes the vector weight set, and swaps the two half-spin sheets. The Pass10951 clock generator has order eight, alternates S+ and S- each tick, has square inside W(D4), fourth power -I4, and two eight-cycles on S+ union S-. Thus the extended-Clifford/CP grading, the Pass10954 Fano orientation grading, and the D4 half-spin-sheet grading are one and the same determinant character."
+}
