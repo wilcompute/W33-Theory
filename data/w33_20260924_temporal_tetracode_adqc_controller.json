@@ -1,0 +1,1401 @@
+{
+  "analyzer_programs": {
+    "0_F_ID": {
+      "basis_unitarity_error": 7.783177436167117e-16,
+      "max_branch_error": 8.671027972193812e-16,
+      "max_probability_error": 5.455127213848118e-16,
+      "phases_rad": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "1_PW_FORWARD_Z": {
+      "basis_unitarity_error": 8.508301856396778e-16,
+      "max_branch_error": 6.821132754129108e-16,
+      "max_probability_error": 7.012305514575134e-16,
+      "phases_rad": [
+        0.0,
+        2.0943951023931953,
+        4.1887902047863905
+      ]
+    },
+    "2_PW_REVERSE_ZINV": {
+      "basis_unitarity_error": 7.948015655866791e-16,
+      "max_branch_error": 7.776277037580226e-16,
+      "max_probability_error": 5.756954553167322e-16,
+      "phases_rad": [
+        0.0,
+        4.1887902047863905,
+        2.0943951023931953
+      ]
+    },
+    "3_UNIVERSAL_T_MU9": {
+      "basis_unitarity_error": 7.425860774514082e-16,
+      "max_branch_error": 9.328619648004588e-16,
+      "max_probability_error": 8.13948967966116e-16,
+      "phases_rad": [
+        0.0,
+        0.6981317007977318,
+        5.585053606381854
+      ]
+    },
+    "Page_Wootters_forward": "R=Z implements the + orientation finite clock program",
+    "Page_Wootters_reverse": "R=Z^-1 implements the reversed finite clock program",
+    "program_id_width": 2,
+    "universality_boundary": "the tetracode/mu12 sector organizes finite clock and Clifford control; approximate universality still requires the separate mu9 T analyzer program"
+  },
+  "boundary": "This is a verified controller/compiler ABI plus exact finite-dimensional ADQC gate identities, not a fabricated photonic device. Loss, detector efficiency, analog phase fidelity, memory-photon coupling and fault-tolerance thresholds remain physical engineering requirements.",
+  "four_channel_abi": {
+    "channel_order": [
+      "infinity",
+      "zero",
+      "plus",
+      "minus"
+    ],
+    "common_mode_kernel": "<1111>",
+    "counter_domain": "F3^4",
+    "histories": 27,
+    "history_map": [
+      "a=n_zero+n_plus+n_minus",
+      "b=n_plus+2*n_minus",
+      "c=n_infinity+n_plus+n_minus"
+    ],
+    "representatives_per_history": 3
+  },
+  "parallel_pass10941_vm_bridge": {
+    "all_25_vm_generators_lowered_exactly_mod3": true,
+    "maximum_clifford_macro_length": 7,
+    "resource_boundary": "Analyzer programming and T-magic injection are two interfaces to the same basis-dependent mu9 resource; the non-Clifford resource is relocated, not erased.",
+    "same_T_analyzer_Z_orbit": true,
+    "status": "PASS_SEVEN_QUTRIT_CLIFFORD_T_ABI_WITH_RESOURCE_CONSERVATION",
+    "target": "Sp(14,3) plus seven-mode Heisenberg translations"
+  },
+  "rows": [
+    {
+      "common_mode_correction": 0,
+      "counter_word": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "gauge_syndrome": 0,
+      "history": [
+        0,
+        0,
+        0
+      ],
+      "tetracode_plane": true
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gauge_syndrome": 2,
+      "history": [
+        1,
+        2,
+        1
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        0,
+        0,
+        0,
+        2
+      ],
+      "gauge_syndrome": 1,
+      "history": [
+        2,
+        1,
+        2
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "gauge_syndrome": 1,
+      "history": [
+        1,
+        1,
+        1
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "gauge_syndrome": 0,
+      "history": [
+        2,
+        0,
+        2
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": 1,
+      "counter_word": [
+        0,
+        0,
+        1,
+        2
+      ],
+      "gauge_syndrome": 2,
+      "history": [
+        0,
+        2,
+        0
+      ],
+      "tetracode_plane": true
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        0,
+        0,
+        2,
+        0
+      ],
+      "gauge_syndrome": 2,
+      "history": [
+        2,
+        2,
+        2
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": 2,
+      "counter_word": [
+        0,
+        0,
+        2,
+        1
+      ],
+      "gauge_syndrome": 1,
+      "history": [
+        0,
+        1,
+        0
+      ],
+      "tetracode_plane": true
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        0,
+        0,
+        2,
+        2
+      ],
+      "gauge_syndrome": 0,
+      "history": [
+        1,
+        0,
+        1
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "gauge_syndrome": 0,
+      "history": [
+        1,
+        0,
+        0
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "gauge_syndrome": 2,
+      "history": [
+        2,
+        2,
+        1
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": 2,
+      "counter_word": [
+        0,
+        1,
+        0,
+        2
+      ],
+      "gauge_syndrome": 1,
+      "history": [
+        0,
+        1,
+        2
+      ],
+      "tetracode_plane": true
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "gauge_syndrome": 1,
+      "history": [
+        2,
+        1,
+        1
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": 0,
+      "counter_word": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "gauge_syndrome": 0,
+      "history": [
+        0,
+        0,
+        2
+      ],
+      "tetracode_plane": true
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        0,
+        1,
+        1,
+        2
+      ],
+      "gauge_syndrome": 2,
+      "history": [
+        1,
+        2,
+        0
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": 1,
+      "counter_word": [
+        0,
+        1,
+        2,
+        0
+      ],
+      "gauge_syndrome": 2,
+      "history": [
+        0,
+        2,
+        2
+      ],
+      "tetracode_plane": true
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "gauge_syndrome": 1,
+      "history": [
+        1,
+        1,
+        0
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        0,
+        1,
+        2,
+        2
+      ],
+      "gauge_syndrome": 0,
+      "history": [
+        2,
+        0,
+        1
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        0,
+        2,
+        0,
+        0
+      ],
+      "gauge_syndrome": 0,
+      "history": [
+        2,
+        0,
+        0
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": 1,
+      "counter_word": [
+        0,
+        2,
+        0,
+        1
+      ],
+      "gauge_syndrome": 2,
+      "history": [
+        0,
+        2,
+        1
+      ],
+      "tetracode_plane": true
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        0,
+        2,
+        0,
+        2
+      ],
+      "gauge_syndrome": 1,
+      "history": [
+        1,
+        1,
+        2
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": 2,
+      "counter_word": [
+        0,
+        2,
+        1,
+        0
+      ],
+      "gauge_syndrome": 1,
+      "history": [
+        0,
+        1,
+        1
+      ],
+      "tetracode_plane": true
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        0,
+        2,
+        1,
+        1
+      ],
+      "gauge_syndrome": 0,
+      "history": [
+        1,
+        0,
+        2
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        0,
+        2,
+        1,
+        2
+      ],
+      "gauge_syndrome": 2,
+      "history": [
+        2,
+        2,
+        0
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        0,
+        2,
+        2,
+        0
+      ],
+      "gauge_syndrome": 2,
+      "history": [
+        1,
+        2,
+        2
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        0,
+        2,
+        2,
+        1
+      ],
+      "gauge_syndrome": 1,
+      "history": [
+        2,
+        1,
+        0
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": 0,
+      "counter_word": [
+        0,
+        2,
+        2,
+        2
+      ],
+      "gauge_syndrome": 0,
+      "history": [
+        0,
+        0,
+        1
+      ],
+      "tetracode_plane": true
+    },
+    {
+      "common_mode_correction": 2,
+      "counter_word": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "gauge_syndrome": 1,
+      "history": [
+        0,
+        0,
+        1
+      ],
+      "tetracode_plane": true
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "gauge_syndrome": 0,
+      "history": [
+        1,
+        2,
+        2
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        1,
+        0,
+        0,
+        2
+      ],
+      "gauge_syndrome": 2,
+      "history": [
+        2,
+        1,
+        0
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "gauge_syndrome": 2,
+      "history": [
+        1,
+        1,
+        2
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "gauge_syndrome": 1,
+      "history": [
+        2,
+        0,
+        0
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": 0,
+      "counter_word": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "gauge_syndrome": 0,
+      "history": [
+        0,
+        2,
+        1
+      ],
+      "tetracode_plane": true
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        1,
+        0,
+        2,
+        0
+      ],
+      "gauge_syndrome": 0,
+      "history": [
+        2,
+        2,
+        0
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": 1,
+      "counter_word": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "gauge_syndrome": 2,
+      "history": [
+        0,
+        1,
+        1
+      ],
+      "tetracode_plane": true
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        1,
+        0,
+        2,
+        2
+      ],
+      "gauge_syndrome": 1,
+      "history": [
+        1,
+        0,
+        2
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "gauge_syndrome": 1,
+      "history": [
+        1,
+        0,
+        1
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "gauge_syndrome": 0,
+      "history": [
+        2,
+        2,
+        2
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": 1,
+      "counter_word": [
+        1,
+        1,
+        0,
+        2
+      ],
+      "gauge_syndrome": 2,
+      "history": [
+        0,
+        1,
+        0
+      ],
+      "tetracode_plane": true
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "gauge_syndrome": 2,
+      "history": [
+        2,
+        1,
+        2
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": 2,
+      "counter_word": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "gauge_syndrome": 1,
+      "history": [
+        0,
+        0,
+        0
+      ],
+      "tetracode_plane": true
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "gauge_syndrome": 0,
+      "history": [
+        1,
+        2,
+        1
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": 0,
+      "counter_word": [
+        1,
+        1,
+        2,
+        0
+      ],
+      "gauge_syndrome": 0,
+      "history": [
+        0,
+        2,
+        0
+      ],
+      "tetracode_plane": true
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        1,
+        1,
+        2,
+        1
+      ],
+      "gauge_syndrome": 2,
+      "history": [
+        1,
+        1,
+        1
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "gauge_syndrome": 1,
+      "history": [
+        2,
+        0,
+        2
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        1,
+        2,
+        0,
+        0
+      ],
+      "gauge_syndrome": 1,
+      "history": [
+        2,
+        0,
+        1
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": 0,
+      "counter_word": [
+        1,
+        2,
+        0,
+        1
+      ],
+      "gauge_syndrome": 0,
+      "history": [
+        0,
+        2,
+        2
+      ],
+      "tetracode_plane": true
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        1,
+        2,
+        0,
+        2
+      ],
+      "gauge_syndrome": 2,
+      "history": [
+        1,
+        1,
+        0
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": 1,
+      "counter_word": [
+        1,
+        2,
+        1,
+        0
+      ],
+      "gauge_syndrome": 2,
+      "history": [
+        0,
+        1,
+        2
+      ],
+      "tetracode_plane": true
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        1,
+        2,
+        1,
+        1
+      ],
+      "gauge_syndrome": 1,
+      "history": [
+        1,
+        0,
+        0
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        1,
+        2,
+        1,
+        2
+      ],
+      "gauge_syndrome": 0,
+      "history": [
+        2,
+        2,
+        1
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        1,
+        2,
+        2,
+        0
+      ],
+      "gauge_syndrome": 0,
+      "history": [
+        1,
+        2,
+        0
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        1,
+        2,
+        2,
+        1
+      ],
+      "gauge_syndrome": 2,
+      "history": [
+        2,
+        1,
+        1
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": 2,
+      "counter_word": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "gauge_syndrome": 1,
+      "history": [
+        0,
+        0,
+        2
+      ],
+      "tetracode_plane": true
+    },
+    {
+      "common_mode_correction": 1,
+      "counter_word": [
+        2,
+        0,
+        0,
+        0
+      ],
+      "gauge_syndrome": 2,
+      "history": [
+        0,
+        0,
+        2
+      ],
+      "tetracode_plane": true
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        2,
+        0,
+        0,
+        1
+      ],
+      "gauge_syndrome": 1,
+      "history": [
+        1,
+        2,
+        0
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        2,
+        0,
+        0,
+        2
+      ],
+      "gauge_syndrome": 0,
+      "history": [
+        2,
+        1,
+        1
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        2,
+        0,
+        1,
+        0
+      ],
+      "gauge_syndrome": 0,
+      "history": [
+        1,
+        1,
+        0
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        2,
+        0,
+        1,
+        1
+      ],
+      "gauge_syndrome": 2,
+      "history": [
+        2,
+        0,
+        1
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": 2,
+      "counter_word": [
+        2,
+        0,
+        1,
+        2
+      ],
+      "gauge_syndrome": 1,
+      "history": [
+        0,
+        2,
+        2
+      ],
+      "tetracode_plane": true
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        2,
+        0,
+        2,
+        0
+      ],
+      "gauge_syndrome": 1,
+      "history": [
+        2,
+        2,
+        1
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": 0,
+      "counter_word": [
+        2,
+        0,
+        2,
+        1
+      ],
+      "gauge_syndrome": 0,
+      "history": [
+        0,
+        1,
+        2
+      ],
+      "tetracode_plane": true
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        2,
+        0,
+        2,
+        2
+      ],
+      "gauge_syndrome": 2,
+      "history": [
+        1,
+        0,
+        0
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        2,
+        1,
+        0,
+        0
+      ],
+      "gauge_syndrome": 2,
+      "history": [
+        1,
+        0,
+        2
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        2,
+        1,
+        0,
+        1
+      ],
+      "gauge_syndrome": 1,
+      "history": [
+        2,
+        2,
+        0
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": 0,
+      "counter_word": [
+        2,
+        1,
+        0,
+        2
+      ],
+      "gauge_syndrome": 0,
+      "history": [
+        0,
+        1,
+        1
+      ],
+      "tetracode_plane": true
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        2,
+        1,
+        1,
+        0
+      ],
+      "gauge_syndrome": 0,
+      "history": [
+        2,
+        1,
+        0
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": 1,
+      "counter_word": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "gauge_syndrome": 2,
+      "history": [
+        0,
+        0,
+        1
+      ],
+      "tetracode_plane": true
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        2,
+        1,
+        1,
+        2
+      ],
+      "gauge_syndrome": 1,
+      "history": [
+        1,
+        2,
+        2
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": 2,
+      "counter_word": [
+        2,
+        1,
+        2,
+        0
+      ],
+      "gauge_syndrome": 1,
+      "history": [
+        0,
+        2,
+        1
+      ],
+      "tetracode_plane": true
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        2,
+        1,
+        2,
+        1
+      ],
+      "gauge_syndrome": 0,
+      "history": [
+        1,
+        1,
+        2
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "gauge_syndrome": 2,
+      "history": [
+        2,
+        0,
+        0
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        2,
+        2,
+        0,
+        0
+      ],
+      "gauge_syndrome": 2,
+      "history": [
+        2,
+        0,
+        2
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": 2,
+      "counter_word": [
+        2,
+        2,
+        0,
+        1
+      ],
+      "gauge_syndrome": 1,
+      "history": [
+        0,
+        2,
+        0
+      ],
+      "tetracode_plane": true
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        2,
+        2,
+        0,
+        2
+      ],
+      "gauge_syndrome": 0,
+      "history": [
+        1,
+        1,
+        1
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": 0,
+      "counter_word": [
+        2,
+        2,
+        1,
+        0
+      ],
+      "gauge_syndrome": 0,
+      "history": [
+        0,
+        1,
+        0
+      ],
+      "tetracode_plane": true
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "gauge_syndrome": 2,
+      "history": [
+        1,
+        0,
+        1
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        2,
+        2,
+        1,
+        2
+      ],
+      "gauge_syndrome": 1,
+      "history": [
+        2,
+        2,
+        2
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "gauge_syndrome": 1,
+      "history": [
+        1,
+        2,
+        1
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": null,
+      "counter_word": [
+        2,
+        2,
+        2,
+        1
+      ],
+      "gauge_syndrome": 0,
+      "history": [
+        2,
+        1,
+        2
+      ],
+      "tetracode_plane": false
+    },
+    {
+      "common_mode_correction": 1,
+      "counter_word": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "gauge_syndrome": 2,
+      "history": [
+        0,
+        0,
+        0
+      ],
+      "tetracode_plane": true
+    }
+  ],
+  "rtl": {
+    "exhaustive_software_truth_table_cases": 81,
+    "external_verilog_simulator_available": false,
+    "path": "rtl/w33_temporal_tetracode_adqc_controller.v",
+    "rtl_source_sha256": "8247e17ebfe423bff69aa9cb78295f8cd1003352e7f0eaa387f012f815fe7469",
+    "simulation_status": "testbench supplied; no external Verilog simulator was available for this certification",
+    "testbench": "tests/rtl/tb_w33_temporal_tetracode_adqc_controller.v",
+    "testbench_source_sha256": "c12a7786487a8643486f856968842d83cd620b31ec30da053827c4c85bf14c22",
+    "truth_table_sha256": "99fdb2a9bfb154d23aa15fbd4abb7f6637cde10aa3da4554f393960cdbdb4687"
+  },
+  "schema": "w33.20260924.temporal_tetracode_adqc_controller.v1",
+  "status": "PASS_TETRACODE_RELATIVE_MODE_COMPILED_TO_PHOTONIC_ADQC_CONTROLLER",
+  "tetracode_program_plane": {
+    "C3_channel_permutation": [
+      0,
+      2,
+      3,
+      1
+    ],
+    "C3_preserves_plane_and_gauge": true,
+    "all_standard_tetracode_words_recovered": true,
+    "counter_words_over_plane": 27,
+    "gauge_fix": "add -sigma to all four counters; history unchanged",
+    "gauge_syndrome": "sigma=n_infinity+n_plus+2*n_minus",
+    "program_histories": 9,
+    "quotient_condition": "history a=0",
+    "unique_tetracode_representatives": 9
+  },
+  "theorem": "The four null/Hesse/A2 counters compile directly to a hardware-friendly three-trit history address with common mode <1111> removed. The temporal tetracode program sector is exactly the nine quotient histories satisfying a=0. Every one of their three counter gauges has a unique common-mode correction into the standard tetracode, and the tetracode-selected C3 preserves both the plane and that gauge syndrome. The same fixed ADQC interaction realizes F, Page-Wootters Z/Z^-1, and the independent mu9 T program solely by changing the three-outcome analyzer basis."
+}

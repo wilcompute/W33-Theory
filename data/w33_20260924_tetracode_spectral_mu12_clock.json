@@ -1,0 +1,447 @@
+{
+  "C3": {
+    "dual_action": "k -> R^{-T} k",
+    "dual_orbits": [
+      {
+        "L_eigenvalues": [
+          0
+        ],
+        "maslov_exponents": [
+          0
+        ],
+        "points": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "size": 1,
+        "spectral_phases": [
+          "1"
+        ]
+      },
+      {
+        "L_eigenvalues": [
+          9
+        ],
+        "maslov_exponents": [
+          9
+        ],
+        "points": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ]
+        ],
+        "size": 3,
+        "spectral_phases": [
+          "1"
+        ]
+      },
+      {
+        "L_eigenvalues": [
+          9
+        ],
+        "maslov_exponents": [
+          3
+        ],
+        "points": [
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            2,
+            1,
+            2
+          ]
+        ],
+        "size": 3,
+        "spectral_phases": [
+          "1"
+        ]
+      },
+      {
+        "L_eigenvalues": [
+          6
+        ],
+        "maslov_exponents": [
+          0
+        ],
+        "points": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "size": 3,
+        "spectral_phases": [
+          "omega"
+        ]
+      },
+      {
+        "L_eigenvalues": [
+          6
+        ],
+        "maslov_exponents": [
+          0
+        ],
+        "points": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            2,
+            0,
+            1
+          ]
+        ],
+        "size": 3,
+        "spectral_phases": [
+          "omega"
+        ]
+      },
+      {
+        "L_eigenvalues": [
+          6
+        ],
+        "maslov_exponents": [
+          0
+        ],
+        "points": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            0,
+            2,
+            2
+          ]
+        ],
+        "size": 3,
+        "spectral_phases": [
+          "omega"
+        ]
+      },
+      {
+        "L_eigenvalues": [
+          6
+        ],
+        "maslov_exponents": [
+          0
+        ],
+        "points": [
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ]
+        ],
+        "size": 3,
+        "spectral_phases": [
+          "omega"
+        ]
+      },
+      {
+        "L_eigenvalues": [
+          9
+        ],
+        "maslov_exponents": [
+          9
+        ],
+        "points": [
+          [
+            1,
+            0,
+            0
+          ]
+        ],
+        "size": 1,
+        "spectral_phases": [
+          "1"
+        ]
+      },
+      {
+        "L_eigenvalues": [
+          12
+        ],
+        "maslov_exponents": [
+          6
+        ],
+        "points": [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ]
+        ],
+        "size": 3,
+        "spectral_phases": [
+          "omega^2"
+        ]
+      },
+      {
+        "L_eigenvalues": [
+          12
+        ],
+        "maslov_exponents": [
+          6
+        ],
+        "points": [
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            0,
+            2
+          ],
+          [
+            1,
+            2,
+            2
+          ]
+        ],
+        "size": 3,
+        "spectral_phases": [
+          "omega^2"
+        ]
+      },
+      {
+        "L_eigenvalues": [
+          9
+        ],
+        "maslov_exponents": [
+          3
+        ],
+        "points": [
+          [
+            2,
+            0,
+            0
+          ]
+        ],
+        "size": 1,
+        "spectral_phases": [
+          "1"
+        ]
+      }
+    ],
+    "fixes_P_perp_pointwise": true,
+    "history_matrix": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        2,
+        1
+      ]
+    ],
+    "primal_plane_not_preserved_by_dual_action": true
+  },
+  "boundary": "This is a finite Fourier/module statement. The primal nine-history plane must not be conflated with an identically labelled Fourier-mode plane, and the 6D extension is a control/spectral sector rather than a new physical spacetime dimension.",
+  "canonical_fourier_quotient": {
+    "P_perp": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0
+      ]
+    ],
+    "construction": "functions constant on cosets of P; Fourier support P^perp",
+    "dimension": 3,
+    "maslov_exponents": [
+      0,
+      9,
+      3
+    ],
+    "phase_group_inside_fixed_sector": "mu_4 generated by i",
+    "rows": [
+      {
+        "L_eigenvalue": 0,
+        "determinant": 0,
+        "k": [
+          0,
+          0,
+          0
+        ],
+        "maslov_mu12_exponent": 0,
+        "rank": 0,
+        "spectral_phase": "1"
+      },
+      {
+        "L_eigenvalue": 9,
+        "determinant": 0,
+        "k": [
+          1,
+          0,
+          0
+        ],
+        "maslov_mu12_exponent": 9,
+        "rank": 1,
+        "spectral_phase": "1"
+      },
+      {
+        "L_eigenvalue": 9,
+        "determinant": 0,
+        "k": [
+          2,
+          0,
+          0
+        ],
+        "maslov_mu12_exponent": 3,
+        "rank": 1,
+        "spectral_phase": "1"
+      }
+    ],
+    "spectral_clock_action": "identity at t*=2*pi/9"
+  },
+  "minimal_mu12_extension": {
+    "added_C3_orbit": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        2,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0
+      ]
+    ],
+    "added_L_eigenvalue": 6,
+    "added_orbit_size": 3,
+    "added_spectral_phase": "omega",
+    "dimension": 6,
+    "generated_mu12_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "generators_mu12_indices": {
+      "i": 3,
+      "omega": 4
+    },
+    "maslov_histogram": {
+      "0": 4,
+      "3": 1,
+      "9": 1
+    },
+    "minimality": "outside the 3 fixed modes every nontrivial C3 orbit has size 3",
+    "phase_dimensions": {
+      "1": 3,
+      "omega": 3,
+      "omega^2": 0
+    }
+  },
+  "primal_tetracode_plane": {
+    "basis_support_subspace_dynamically_invariant": false,
+    "cross_edges": 54,
+    "description": "P={(0,b,c): b,c in F3}",
+    "external_degree_each": 6,
+    "induced_null_graph": "3 disjoint triangles",
+    "internal_degree": 2,
+    "internal_edges": 9,
+    "states": 9
+  },
+  "schema": "w33.20260924.tetracode_spectral_mu12_clock.v2",
+  "status": "PASS_TETRACODE_CLOCK_DUALITY_FIXED3_WITH_MINIMAL_C3_MU12_EXTENSION",
+  "theorem": "The nine tetracode history addresses form a primal translation subgroup P, but their delta-function basis span is not invariant under the null-history Laplacian. The canonical spectral object is instead the 3D coset-constant quotient with Fourier support P^perp. The order-three clock fixes P^perp pointwise at t*=2*pi/9, and its Maslov phases are 1,+i,-i. The tetracode C3 fixes these three dual modes pointwise. Adding one smallest nontrivial C3 orbit with Laplacian eigenvalue 6 contributes three omega modes, giving a minimal 6D C3-invariant sector containing both i and omega and hence all of mu_12."
+}

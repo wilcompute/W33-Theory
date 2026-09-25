@@ -1,0 +1,797 @@
+{
+  "F2_3_overlap_metric": {
+    "13_overlap_connection_set": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "13_overlap_degree": 4,
+    "13_overlap_graph": "K4,4 between even- and odd-parity F2^3 classes",
+    "4_overlap_connection_set": [
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0
+      ]
+    ],
+    "4_overlap_graph": "K4 disjoint union K4 within the two parity classes",
+    "global_leaf_distance_reading": "13-overlap is distance 1; 4-overlap is distance 2 in the 2240-leaf graph"
+  },
+  "boundary": "This is an exact E8 root-system construction of the eight local leaves. It does not identify an individual leaf with a continuum spacetime or select one leaf dynamically.",
+  "dictionary": [
+    {
+      "W33_stats": {
+        "degree": [
+          12
+        ],
+        "lambda": [
+          2
+        ],
+        "mu": [
+          4
+        ],
+        "spectrum": {
+          "-4": 15,
+          "2": 24,
+          "12": 1
+        },
+        "vertices": 40
+      },
+      "contains_temporal_Hesse_4A2": true,
+      "fibre_F2_3": [
+        0,
+        0,
+        0
+      ],
+      "leaf_sha256": "1dd388b628e32dc5763b0efd480005d8bd34a4b2232fb22c410024bc253e576e",
+      "orientation_bits_gauge_x4_0": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "stable_A2_count": 40,
+      "stable_A2_indices": [
+        16,
+        44,
+        69,
+        87,
+        110,
+        134,
+        153,
+        208,
+        285,
+        301,
+        318,
+        334,
+        354,
+        371,
+        480,
+        496,
+        509,
+        542,
+        557,
+        569,
+        581,
+        595,
+        606,
+        663,
+        675,
+        688,
+        704,
+        715,
+        727,
+        767,
+        777,
+        788,
+        933,
+        954,
+        958,
+        967,
+        977,
+        984,
+        1109,
+        1119
+      ],
+      "ternary_common_mode_sign_line": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "W33_stats": {
+        "degree": [
+          12
+        ],
+        "lambda": [
+          2
+        ],
+        "mu": [
+          4
+        ],
+        "spectrum": {
+          "-4": 15,
+          "2": 24,
+          "12": 1
+        },
+        "vertices": 40
+      },
+      "contains_temporal_Hesse_4A2": true,
+      "fibre_F2_3": [
+        0,
+        0,
+        1
+      ],
+      "leaf_sha256": "b4215d2811e6940335ef1763419d40665b7527128d35dcfb8b5e909297bc2785",
+      "orientation_bits_gauge_x4_0": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "stable_A2_count": 40,
+      "stable_A2_indices": [
+        16,
+        45,
+        57,
+        104,
+        110,
+        169,
+        184,
+        208,
+        240,
+        275,
+        301,
+        319,
+        333,
+        366,
+        371,
+        410,
+        480,
+        501,
+        521,
+        530,
+        569,
+        595,
+        634,
+        663,
+        705,
+        727,
+        744,
+        777,
+        794,
+        820,
+        894,
+        913,
+        933,
+        935,
+        967,
+        986,
+        1021,
+        1055,
+        1072,
+        1087
+      ],
+      "ternary_common_mode_sign_line": [
+        1,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "W33_stats": {
+        "degree": [
+          12
+        ],
+        "lambda": [
+          2
+        ],
+        "mu": [
+          4
+        ],
+        "spectrum": {
+          "-4": 15,
+          "2": 24,
+          "12": 1
+        },
+        "vertices": 40
+      },
+      "contains_temporal_Hesse_4A2": true,
+      "fibre_F2_3": [
+        0,
+        1,
+        0
+      ],
+      "leaf_sha256": "fea7af11ed9f974640212155d7cb24d1b15196d5b216b300d780058133aad83d",
+      "orientation_bits_gauge_x4_0": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "stable_A2_count": 40,
+      "stable_A2_indices": [
+        19,
+        29,
+        69,
+        127,
+        134,
+        167,
+        192,
+        208,
+        221,
+        258,
+        287,
+        318,
+        346,
+        354,
+        368,
+        428,
+        444,
+        480,
+        485,
+        532,
+        569,
+        595,
+        626,
+        670,
+        688,
+        715,
+        751,
+        767,
+        781,
+        847,
+        893,
+        911,
+        949,
+        958,
+        977,
+        997,
+        1008,
+        1052,
+        1068,
+        1095
+      ],
+      "ternary_common_mode_sign_line": [
+        1,
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "W33_stats": {
+        "degree": [
+          12
+        ],
+        "lambda": [
+          2
+        ],
+        "mu": [
+          4
+        ],
+        "spectrum": {
+          "-4": 15,
+          "2": 24,
+          "12": 1
+        },
+        "vertices": 40
+      },
+      "contains_temporal_Hesse_4A2": true,
+      "fibre_F2_3": [
+        0,
+        1,
+        1
+      ],
+      "leaf_sha256": "0c6b1003b4ff30447e269f38233e662e6571224f8c78df9634cd04efd8316bdf",
+      "orientation_bits_gauge_x4_0": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "stable_A2_count": 40,
+      "stable_A2_indices": [
+        19,
+        38,
+        57,
+        91,
+        127,
+        164,
+        187,
+        208,
+        221,
+        244,
+        275,
+        319,
+        366,
+        368,
+        410,
+        422,
+        480,
+        486,
+        521,
+        569,
+        573,
+        595,
+        634,
+        670,
+        679,
+        700,
+        751,
+        781,
+        789,
+        847,
+        864,
+        898,
+        903,
+        908,
+        988,
+        1027,
+        1035,
+        1052,
+        1072,
+        1087
+      ],
+      "ternary_common_mode_sign_line": [
+        1,
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "W33_stats": {
+        "degree": [
+          12
+        ],
+        "lambda": [
+          2
+        ],
+        "mu": [
+          4
+        ],
+        "spectrum": {
+          "-4": 15,
+          "2": 24,
+          "12": 1
+        },
+        "vertices": 40
+      },
+      "contains_temporal_Hesse_4A2": true,
+      "fibre_F2_3": [
+        1,
+        0,
+        0
+      ],
+      "leaf_sha256": "0697b02c2f56b6070eae5ba110bbb15366669658b462bb4f1384f5d80396bd4f",
+      "orientation_bits_gauge_x4_0": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "stable_A2_count": 40,
+      "stable_A2_indices": [
+        12,
+        38,
+        65,
+        91,
+        116,
+        138,
+        153,
+        208,
+        225,
+        244,
+        264,
+        391,
+        408,
+        422,
+        480,
+        496,
+        509,
+        542,
+        557,
+        569,
+        581,
+        595,
+        606,
+        665,
+        679,
+        690,
+        700,
+        713,
+        723,
+        768,
+        780,
+        789,
+        864,
+        873,
+        883,
+        1027,
+        1046,
+        1047,
+        1109,
+        1119
+      ],
+      "ternary_common_mode_sign_line": [
+        2,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "W33_stats": {
+        "degree": [
+          12
+        ],
+        "lambda": [
+          2
+        ],
+        "mu": [
+          4
+        ],
+        "spectrum": {
+          "-4": 15,
+          "2": 24,
+          "12": 1
+        },
+        "vertices": 40
+      },
+      "contains_temporal_Hesse_4A2": true,
+      "fibre_F2_3": [
+        1,
+        0,
+        1
+      ],
+      "leaf_sha256": "3a91eb2a3a96680083840dd4b4669d95201fa72c11391c52cf8685a2adf0c46f",
+      "orientation_bits_gauge_x4_0": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "stable_A2_count": 40,
+      "stable_A2_indices": [
+        12,
+        29,
+        75,
+        116,
+        152,
+        169,
+        184,
+        208,
+        225,
+        258,
+        261,
+        287,
+        346,
+        351,
+        391,
+        428,
+        444,
+        480,
+        501,
+        530,
+        569,
+        595,
+        626,
+        665,
+        692,
+        720,
+        723,
+        780,
+        815,
+        829,
+        873,
+        894,
+        913,
+        935,
+        986,
+        1021,
+        1047,
+        1060,
+        1068,
+        1095
+      ],
+      "ternary_common_mode_sign_line": [
+        2,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "W33_stats": {
+        "degree": [
+          12
+        ],
+        "lambda": [
+          2
+        ],
+        "mu": [
+          4
+        ],
+        "spectrum": {
+          "-4": 15,
+          "2": 24,
+          "12": 1
+        },
+        "vertices": 40
+      },
+      "contains_temporal_Hesse_4A2": true,
+      "fibre_F2_3": [
+        1,
+        1,
+        0
+      ],
+      "leaf_sha256": "3a2f9f82e454f02d65398c07ed767bf90fe0a6c9f2543e71534426c65eaaf21a",
+      "orientation_bits_gauge_x4_0": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "stable_A2_count": 40,
+      "stable_A2_indices": [
+        3,
+        45,
+        65,
+        104,
+        138,
+        167,
+        192,
+        208,
+        237,
+        240,
+        264,
+        307,
+        333,
+        385,
+        393,
+        408,
+        462,
+        480,
+        485,
+        532,
+        569,
+        595,
+        614,
+        690,
+        705,
+        713,
+        744,
+        768,
+        794,
+        820,
+        883,
+        893,
+        911,
+        949,
+        997,
+        1008,
+        1046,
+        1055,
+        1075,
+        1093
+      ],
+      "ternary_common_mode_sign_line": [
+        2,
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "W33_stats": {
+        "degree": [
+          12
+        ],
+        "lambda": [
+          2
+        ],
+        "mu": [
+          4
+        ],
+        "spectrum": {
+          "-4": 15,
+          "2": 24,
+          "12": 1
+        },
+        "vertices": 40
+      },
+      "contains_temporal_Hesse_4A2": true,
+      "fibre_F2_3": [
+        1,
+        1,
+        1
+      ],
+      "leaf_sha256": "34e1fd08303bdc434d5158aa2d469f906fab1bd99bff4ae4b2b615b818048d52",
+      "orientation_bits_gauge_x4_0": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "stable_A2_count": 40,
+      "stable_A2_indices": [
+        3,
+        44,
+        75,
+        87,
+        152,
+        164,
+        187,
+        208,
+        237,
+        261,
+        285,
+        307,
+        334,
+        351,
+        385,
+        393,
+        462,
+        480,
+        486,
+        569,
+        573,
+        595,
+        614,
+        675,
+        692,
+        704,
+        720,
+        788,
+        815,
+        829,
+        898,
+        903,
+        908,
+        954,
+        984,
+        988,
+        1035,
+        1060,
+        1075,
+        1093
+      ],
+      "ternary_common_mode_sign_line": [
+        2,
+        2,
+        2,
+        1
+      ]
+    }
+  ],
+  "fixed_Hesse_4A2": {
+    "component_A2_indices": [
+      208,
+      480,
+      569,
+      595
+    ],
+    "parallel_classes": [
+      [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      [
+        [
+          0,
+          3,
+          6
+        ],
+        [
+          1,
+          4,
+          7
+        ],
+        [
+          2,
+          5,
+          8
+        ]
+      ],
+      [
+        [
+          0,
+          4,
+          8
+        ],
+        [
+          1,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          7
+        ]
+      ],
+      [
+        [
+          0,
+          5,
+          7
+        ],
+        [
+          1,
+          3,
+          8
+        ],
+        [
+          2,
+          4,
+          6
+        ]
+      ]
+    ]
+  },
+  "leaf_model": {
+    "A2_subsystems": 1120,
+    "E8_roots": 240,
+    "all_J_fixed_point_free_on_rank8": true,
+    "all_induced_W33_SRG": [
+      40,
+      12,
+      2,
+      4
+    ],
+    "leaf_count_through_fixed_4A2": 8,
+    "leaf_definition": "A2 subsystems setwise stable under <J_bits>",
+    "leaf_points_each": 40,
+    "pairwise_leaf_intersection_histogram": {
+      "13": 16,
+      "4": 12
+    }
+  },
+  "schema": "w33.20260924.eight_eisenstein_leaves_objectwise.v1",
+  "status": "PASS_OBJECTWISE_COMMON_MODE_TO_EIGHT_EISENSTEIN_W33_LEAVES",
+  "theorem": "The eight F2^3 orientation classes are now represented by eight literal fixed-point-free order-three E8 automorphisms J. For each class, the 40 A2 root subsystems setwise stabilized by <J> form an SRG(40,12,2,4) W33 leaf and contain the same four Hesse A2 components. Global inversion of all four orientation bits replaces J by J^-1 and leaves the object unchanged. Thus the temporal common-mode sign classes are identified objectwise, not merely by count, with the eight Eisenstein leaves through the fixed Hesse A2^4 subsystem. Their inherited global leaf metric is exactly parity on F2^3: odd differences give 13-point overlap and form K4,4, while nonzero even differences give 4-point overlap and two K4s."
+}

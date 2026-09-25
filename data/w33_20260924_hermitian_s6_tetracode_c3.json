@@ -1,0 +1,155 @@
+{
+  "boundary": "The Q_H=1 and Q_H=2 shells are algebraically distinct finite anisotropic classes. Calling them timelike and spacelike requires an additional continuum/signature convention; the finite theorem itself does not make that physical assignment.",
+  "embedding": {
+    "Bell_C3_PGL2_matrix": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "Hermitian_4D_matrix": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1
+      ]
+    ],
+    "conjugated_C3_matrix": [
+      [
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "orthogonal_multiplier": 1,
+    "transporter_PSp4_matrix": [
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ]
+    ]
+  },
+  "exceptional_S6_class_fingerprint": {
+    "QH1_matches_double_3cycle_class": true,
+    "QH2_matches_single_3cycle_class": true,
+    "double_3cycle_on_6_duad_orbits": [
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "reading": "the two 15-point anisotropic shells realize the two outer-related degree-15 S6 actions: the same C3 is seen as 3*1^3 on one shell and 3^2 on the other",
+    "single_3cycle_on_6_duad_orbits": [
+      1,
+      1,
+      1,
+      3,
+      3,
+      3,
+      3
+    ]
+  },
+  "groups": {
+    "C3_fixed_spreads_before_conjugation": 3,
+    "Hermitian_spread_stabilizer_identification": "S6 = PO^-(4,3)",
+    "Hermitian_spread_stabilizer_order": 720,
+    "PSp4_3_order": 25920,
+    "tetracode_C3_order": 3
+  },
+  "orbit_decomposition": {
+    "norm1_QH1_15": [
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "norm2_QH2_15": [
+      1,
+      1,
+      1,
+      3,
+      3,
+      3,
+      3
+    ],
+    "null_QH0_10": [
+      1,
+      3,
+      3,
+      3
+    ],
+    "spread_null_lines": [
+      1,
+      3,
+      3,
+      3
+    ]
+  },
+  "schema": "w33.20260924.hermitian_s6_tetracode_c3.v1",
+  "status": "PASS_TETRACODE_C3_CONJUGATES_INTO_HERMITIAN_SPREAD_S6",
+  "theorem": "The tetracode-selected C3 from the common four-direction S4 does not stabilize the initial Hermitian spread in its Bell gauge, but it fixes exactly three of the 36 W33 spreads. A concrete PSp(4,3) transporter conjugates it into the order-720 stabilizer of the representative Hermitian spread. The induced four-dimensional action is an exact orthogonal isometry of Q_H=ac-x^2-y^2, so its orbit decomposition can be read simultaneously on the 10 null and two 15-point anisotropic projective shells. Those two degree-15 actions fingerprint the two order-three S6 classes exchanged by the exceptional outer automorphism."
+}
