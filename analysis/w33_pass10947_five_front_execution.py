@@ -622,7 +622,7 @@ def front5_coloring_cubic_compatibility() -> dict:
 
     # The 45x27 unsigned incidence matrix has binary rank 21. For each support
     # automorphism, the inhomogeneous sign equation has the same rank and a
-    # six-dimensional solution torsor.
+    # six-dimensional affine solution set.
     sign_rows = []
     for triad in triads:
         row = [0] * 27
