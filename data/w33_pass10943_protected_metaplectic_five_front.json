@@ -1,0 +1,574 @@
+{
+  "front1_protected_Strange_distillation": {
+    "code": "ternary Golay [[11,1,5]]_3",
+    "correction_to_old_no_factory_claim": "An inventory of contextual M36 or dark-H27 rays is not a protected supply. The Strange->R converter amplifies raw depolarizing noise, so a protected source or this explicit distillation stage is required unless the M36 mode transducer certified in front 4 is physically available.",
+    "literature_owned_distillation_map": {
+      "delta_out": "delta**3*(3021*delta**8 - 24816*delta**7 + 92180*delta**6 - 203280*delta**5 + 292710*delta**4 - 283536*delta**3 + 181764*delta**2 - 71280*delta + 13365)/(2*(495*delta**11 - 3960*delta**10 + 13750*delta**9 - 25245*delta**8 + 18810*delta**7 + 23628*delta**6 - 86328*delta**5 + 121770*delta**4 - 102465*delta**3 + 53460*delta**2 - 16038*delta + 2187))",
+      "depolarizing_threshold_approx": 0.38715,
+      "pure_input_acceptance": "1/1728",
+      "pure_limit_expected_raw_inputs_per_output": 19008,
+      "small_error": "delta_out=(55/18)*delta^3+O(delta^4)"
+    },
+    "repository_composition_with_Pass10942": {
+      "R_error_after_distill_then_convert": "4*delta**3*(3021*delta**8 - 24816*delta**7 + 92180*delta**6 - 203280*delta**5 + 292710*delta**4 - 283536*delta**3 + 181764*delta**2 - 71280*delta + 13365)*(12324393*delta**22 - 204445296*delta**21 + 1625265708*delta**20 - 8259326130*delta**19 + 30238450220*delta**18 - 85389480528*delta**17 + 194954653344*delta**16 - 373581890616*delta**15 + 620513796870*delta**14 - 918158955120*delta**13 + 1234422663408*delta**12 - 1520704672236*delta**11 + 1709119567980*delta**10 - 1726835196240*delta**9 + 1536346417320*delta**8 - 1176059932344*delta**7 + 755937168921*delta**6 - 397310015520*delta**5 + 165437583300*delta**4 - 52320366450*delta**3 + 11785235616*delta**2 - 1683605088*delta + 114791256)/((4011*delta**11 - 32736*delta**10 + 119680*delta**9 - 253770*delta**8 + 330330*delta**7 - 236280*delta**6 + 9108*delta**5 + 172260*delta**4 - 191565*delta**3 + 106920*delta**2 - 32076*delta + 4374)*(24545205*delta**22 - 405884160*delta**21 + 3209730480*delta**20 - 16173778500*delta**19 + 58435785100*delta**18 - 161760099600*delta**17 + 358916803740*delta**16 - 661915903440*delta**15 + 1049171406030*delta**14 - 1476644526720*delta**13 + 1898616263544*delta**12 - 2267276281848*delta**11 + 2510278099164*delta**10 - 2530233145440*delta**9 + 2260734442560*delta**8 - 1741206783888*delta**7 + 1125279767205*delta**6 - 593709823872*delta**5 + 247786137720*delta**4 - 78451320420*delta**3 + 17677853424*delta**2 - 2525407632*delta + 172186884))",
+      "end_to_end_error_improvement_threshold": 0.2715245018525886,
+      "sample_delta_0_1": [
+        {
+          "converted_R_error": 0.010087296685622464,
+          "distilled_Strange_error": 0.0037979105369668536,
+          "pure_limit_raw_Strange_per_injected_R": 1824768,
+          "round": 1
+        },
+        {
+          "converted_R_error": 4.497832346683875e-07,
+          "distilled_Strange_error": 1.6866874303029372e-07,
+          "pure_limit_raw_Strange_per_injected_R": 34685190144,
+          "round": 2
+        },
+        {
+          "converted_R_error": 3.909875138996361e-20,
+          "distilled_Strange_error": 1.4662031771236355e-20,
+          "pure_limit_raw_Strange_per_injected_R": 659296094257152,
+          "round": 3
+        }
+      ],
+      "small_error": "q_R=(220/27)*delta^3+O(delta^4)",
+      "threshold_meaning": "q_R(delta)<delta below this root"
+    }
+  },
+  "front2_dark_Strange_dissipative_preparation": {
+    "H27_input_identity": "(1,-omega,0) = Z X^2 (0,1,-1)",
+    "boundary": "This is an exact reservoir-engineering target with a unique dark state and gap. It does not derive gamma, realize the two jumps in the Holonet hardware, or prove that the H27 dark eigenray is dynamically populated by the existing device.",
+    "jump_operators": [
+      "L0=sqrt(gamma)|S><0|",
+      "LN=sqrt(gamma)|S><N|"
+    ],
+    "orthogonal_source_basis": [
+      "|0>",
+      "|N>=(|1>+|2>)/sqrt(2)"
+    ],
+    "parent_hamiltonian": "H_parent=I-|S><S|, spectrum {0^1,1^2}",
+    "preparation_time_bound": "coherences contract as exp(-gamma*t/2); populations outside |S> as exp(-gamma*t)",
+    "spectral_gap": "gamma/2",
+    "target": "|S>=(|1>-|2>)/sqrt(2)",
+    "unique_steady_state": true,
+    "unit_gamma_liouvillian_spectrum": {
+      "-1": 4,
+      "-1/2": 4,
+      "0": 1
+    }
+  },
+  "front3_fault_tolerant_R_injection": {
+    "classical_C_perp_size": 729,
+    "classical_C_size": 243,
+    "classical_dual_generator_rank": 5,
+    "code_parameters": "[[11,1,5]]_3",
+    "correctable_physical_qutrit_errors": 2,
+    "encoded_converter": [
+      "measure Zbar_1 Zbar_2 and decode two encoded Strange blocks to one Norell block",
+      "measure omega Xbar_1 Xbar_2 and decode two Norell blocks to one |R_L> block"
+    ],
+    "fault_tolerance_contract": "Distance five corrects any two physical qutrit errors. Transversal Clifford operations do not spread a single error within a block. Verified logical-Pauli measurement and syndrome extraction are required; their circuit-level malignant pair count and threshold are not supplied by this algebraic ABI.",
+    "logical_injection": {
+      "branches": "3^-1/2 Rbar Xbar^-m",
+      "expected_distilled_Strange_blocks": 96,
+      "expected_encoded_R_blocks": 3,
+      "gate": "controlled-Xbar^2, resource block control and data block target",
+      "measurement": "destructive logical Zbar on data block",
+      "one_Golay_round_pure_limit_raw_Strange_per_injected_R": 1824768
+    },
+    "logical_paulis": {
+      "X_bar": "X^tensor11",
+      "Z_bar_dagger": "Z^tensor11"
+    },
+    "minimum_weight_C": 6,
+    "minimum_weight_C_perp_minus_C": 5,
+    "transversal_layer": "complete logical qutrit Clifford group",
+    "weight_at_most_2_pauli_error_count": 3609
+  },
+  "front4_M36_to_qutrit_transducer": {
+    "R_magic_families": [
+      0,
+      1,
+      2
+    ],
+    "classification": {
+      "R_magic": 27,
+      "stabilizer": 9
+    },
+    "distinct_qutrit_outputs": {
+      "R_magic": 18,
+      "stabilizer": 9
+    },
+    "family_conditioned_partial_isometries": 4,
+    "input_type": "M36_Q4_RAW: one photon in four modes / equivalently a ququart ray",
+    "maximum_Clifford_correction_length": 4,
+    "operation": "use the known ROM family to delete its exactly dark mode and relabel the three active modes as a qutrit",
+    "operation_success_probability": 1,
+    "physical_boundary": "The exact four-mode ROM and zero dark amplitude make the mode map deterministic in the ideal single-photon model. Loss, imperfect extinction, mode mismatch, and a fabricated reconfigurable four-to-three-mode interface remain unmeasured.",
+    "resource_theory_boundary": "The map changes the physical encoding from a two-qubit/ququart stabilizer theory to a single-qutrit stabilizer theory and is conditioned on the known dark-mode family. It is not a two-qubit Clifford operation and therefore does not violate magic monotonicity. A single global C4-to-C3 isometry is impossible; the four family-conditioned three-dimensional coordinate subspaces are essential.",
+    "rows": [
+      {
+        "correction_length": 1,
+        "deleted_dark_mode": 0,
+        "family": 0,
+        "maximum_qutrit_stabilizer_fidelity": 0.7777777777777783,
+        "mu": 0,
+        "nu": 0,
+        "qutrit_resource_class": "R_magic",
+        "ray_id": 0,
+        "shortest_correction_to_R": "X"
+      },
+      {
+        "correction_length": 3,
+        "deleted_dark_mode": 0,
+        "family": 0,
+        "maximum_qutrit_stabilizer_fidelity": 0.7777777777777783,
+        "mu": 0,
+        "nu": 1,
+        "qutrit_resource_class": "R_magic",
+        "ray_id": 1,
+        "shortest_correction_to_R": "XPP"
+      },
+      {
+        "correction_length": 2,
+        "deleted_dark_mode": 0,
+        "family": 0,
+        "maximum_qutrit_stabilizer_fidelity": 0.7777777777777783,
+        "mu": 0,
+        "nu": 2,
+        "qutrit_resource_class": "R_magic",
+        "ray_id": 2,
+        "shortest_correction_to_R": "XP"
+      },
+      {
+        "correction_length": 3,
+        "deleted_dark_mode": 0,
+        "family": 0,
+        "maximum_qutrit_stabilizer_fidelity": 0.7777777777777781,
+        "mu": 1,
+        "nu": 0,
+        "qutrit_resource_class": "R_magic",
+        "ray_id": 3,
+        "shortest_correction_to_R": "PPX"
+      },
+      {
+        "correction_length": 3,
+        "deleted_dark_mode": 0,
+        "family": 0,
+        "maximum_qutrit_stabilizer_fidelity": 0.7777777777777778,
+        "mu": 1,
+        "nu": 1,
+        "qutrit_resource_class": "R_magic",
+        "ray_id": 4,
+        "shortest_correction_to_R": "ZPX"
+      },
+      {
+        "correction_length": 3,
+        "deleted_dark_mode": 0,
+        "family": 0,
+        "maximum_qutrit_stabilizer_fidelity": 0.7777777777777783,
+        "mu": 1,
+        "nu": 2,
+        "qutrit_resource_class": "R_magic",
+        "ray_id": 5,
+        "shortest_correction_to_R": "XZZ"
+      },
+      {
+        "correction_length": 2,
+        "deleted_dark_mode": 0,
+        "family": 0,
+        "maximum_qutrit_stabilizer_fidelity": 0.777777777777778,
+        "mu": 2,
+        "nu": 0,
+        "qutrit_resource_class": "R_magic",
+        "ray_id": 6,
+        "shortest_correction_to_R": "PX"
+      },
+      {
+        "correction_length": 2,
+        "deleted_dark_mode": 0,
+        "family": 0,
+        "maximum_qutrit_stabilizer_fidelity": 0.7777777777777781,
+        "mu": 2,
+        "nu": 1,
+        "qutrit_resource_class": "R_magic",
+        "ray_id": 7,
+        "shortest_correction_to_R": "XZ"
+      },
+      {
+        "correction_length": 3,
+        "deleted_dark_mode": 0,
+        "family": 0,
+        "maximum_qutrit_stabilizer_fidelity": 0.7777777777777781,
+        "mu": 2,
+        "nu": 2,
+        "qutrit_resource_class": "R_magic",
+        "ray_id": 8,
+        "shortest_correction_to_R": "PXP"
+      },
+      {
+        "correction_length": 2,
+        "deleted_dark_mode": 1,
+        "family": 1,
+        "maximum_qutrit_stabilizer_fidelity": 0.7777777777777786,
+        "mu": 0,
+        "nu": 0,
+        "qutrit_resource_class": "R_magic",
+        "ray_id": 9,
+        "shortest_correction_to_R": "XX"
+      },
+      {
+        "correction_length": 4,
+        "deleted_dark_mode": 1,
+        "family": 1,
+        "maximum_qutrit_stabilizer_fidelity": 0.7777777777777786,
+        "mu": 0,
+        "nu": 1,
+        "qutrit_resource_class": "R_magic",
+        "ray_id": 10,
+        "shortest_correction_to_R": "XXPP"
+      },
+      {
+        "correction_length": 3,
+        "deleted_dark_mode": 1,
+        "family": 1,
+        "maximum_qutrit_stabilizer_fidelity": 0.7777777777777786,
+        "mu": 0,
+        "nu": 2,
+        "qutrit_resource_class": "R_magic",
+        "ray_id": 11,
+        "shortest_correction_to_R": "XXP"
+      },
+      {
+        "correction_length": 4,
+        "deleted_dark_mode": 1,
+        "family": 1,
+        "maximum_qutrit_stabilizer_fidelity": 0.7777777777777776,
+        "mu": 1,
+        "nu": 0,
+        "qutrit_resource_class": "R_magic",
+        "ray_id": 12,
+        "shortest_correction_to_R": "XPPX"
+      },
+      {
+        "correction_length": 3,
+        "deleted_dark_mode": 1,
+        "family": 1,
+        "maximum_qutrit_stabilizer_fidelity": 0.7777777777777781,
+        "mu": 1,
+        "nu": 1,
+        "qutrit_resource_class": "R_magic",
+        "ray_id": 13,
+        "shortest_correction_to_R": "PXX"
+      },
+      {
+        "correction_length": 4,
+        "deleted_dark_mode": 1,
+        "family": 1,
+        "maximum_qutrit_stabilizer_fidelity": 0.777777777777778,
+        "mu": 1,
+        "nu": 2,
+        "qutrit_resource_class": "R_magic",
+        "ray_id": 14,
+        "shortest_correction_to_R": "XXZZ"
+      },
+      {
+        "correction_length": 3,
+        "deleted_dark_mode": 1,
+        "family": 1,
+        "maximum_qutrit_stabilizer_fidelity": 0.7777777777777783,
+        "mu": 2,
+        "nu": 0,
+        "qutrit_resource_class": "R_magic",
+        "ray_id": 15,
+        "shortest_correction_to_R": "XPX"
+      },
+      {
+        "correction_length": 3,
+        "deleted_dark_mode": 1,
+        "family": 1,
+        "maximum_qutrit_stabilizer_fidelity": 0.7777777777777783,
+        "mu": 2,
+        "nu": 1,
+        "qutrit_resource_class": "R_magic",
+        "ray_id": 16,
+        "shortest_correction_to_R": "XXZ"
+      },
+      {
+        "correction_length": 4,
+        "deleted_dark_mode": 1,
+        "family": 1,
+        "maximum_qutrit_stabilizer_fidelity": 0.777777777777778,
+        "mu": 2,
+        "nu": 2,
+        "qutrit_resource_class": "R_magic",
+        "ray_id": 17,
+        "shortest_correction_to_R": "XPXP"
+      },
+      {
+        "correction_length": 1,
+        "deleted_dark_mode": 2,
+        "family": 2,
+        "maximum_qutrit_stabilizer_fidelity": 0.7777777777777783,
+        "mu": 0,
+        "nu": 0,
+        "qutrit_resource_class": "R_magic",
+        "ray_id": 18,
+        "shortest_correction_to_R": "X"
+      },
+      {
+        "correction_length": 3,
+        "deleted_dark_mode": 2,
+        "family": 2,
+        "maximum_qutrit_stabilizer_fidelity": 0.7777777777777783,
+        "mu": 0,
+        "nu": 1,
+        "qutrit_resource_class": "R_magic",
+        "ray_id": 19,
+        "shortest_correction_to_R": "XPP"
+      },
+      {
+        "correction_length": 2,
+        "deleted_dark_mode": 2,
+        "family": 2,
+        "maximum_qutrit_stabilizer_fidelity": 0.7777777777777783,
+        "mu": 0,
+        "nu": 2,
+        "qutrit_resource_class": "R_magic",
+        "ray_id": 20,
+        "shortest_correction_to_R": "XP"
+      },
+      {
+        "correction_length": 3,
+        "deleted_dark_mode": 2,
+        "family": 2,
+        "maximum_qutrit_stabilizer_fidelity": 0.7777777777777781,
+        "mu": 1,
+        "nu": 0,
+        "qutrit_resource_class": "R_magic",
+        "ray_id": 21,
+        "shortest_correction_to_R": "PPX"
+      },
+      {
+        "correction_length": 3,
+        "deleted_dark_mode": 2,
+        "family": 2,
+        "maximum_qutrit_stabilizer_fidelity": 0.7777777777777778,
+        "mu": 1,
+        "nu": 1,
+        "qutrit_resource_class": "R_magic",
+        "ray_id": 22,
+        "shortest_correction_to_R": "ZPX"
+      },
+      {
+        "correction_length": 3,
+        "deleted_dark_mode": 2,
+        "family": 2,
+        "maximum_qutrit_stabilizer_fidelity": 0.7777777777777783,
+        "mu": 1,
+        "nu": 2,
+        "qutrit_resource_class": "R_magic",
+        "ray_id": 23,
+        "shortest_correction_to_R": "XZZ"
+      },
+      {
+        "correction_length": 2,
+        "deleted_dark_mode": 2,
+        "family": 2,
+        "maximum_qutrit_stabilizer_fidelity": 0.777777777777778,
+        "mu": 2,
+        "nu": 0,
+        "qutrit_resource_class": "R_magic",
+        "ray_id": 24,
+        "shortest_correction_to_R": "PX"
+      },
+      {
+        "correction_length": 2,
+        "deleted_dark_mode": 2,
+        "family": 2,
+        "maximum_qutrit_stabilizer_fidelity": 0.7777777777777781,
+        "mu": 2,
+        "nu": 1,
+        "qutrit_resource_class": "R_magic",
+        "ray_id": 25,
+        "shortest_correction_to_R": "XZ"
+      },
+      {
+        "correction_length": 3,
+        "deleted_dark_mode": 2,
+        "family": 2,
+        "maximum_qutrit_stabilizer_fidelity": 0.7777777777777781,
+        "mu": 2,
+        "nu": 2,
+        "qutrit_resource_class": "R_magic",
+        "ray_id": 26,
+        "shortest_correction_to_R": "PXP"
+      },
+      {
+        "correction_length": null,
+        "deleted_dark_mode": 3,
+        "family": 3,
+        "maximum_qutrit_stabilizer_fidelity": 1.0,
+        "mu": 0,
+        "nu": 0,
+        "qutrit_resource_class": "stabilizer",
+        "ray_id": 27,
+        "shortest_correction_to_R": null
+      },
+      {
+        "correction_length": null,
+        "deleted_dark_mode": 3,
+        "family": 3,
+        "maximum_qutrit_stabilizer_fidelity": 1.0000000000000004,
+        "mu": 0,
+        "nu": 1,
+        "qutrit_resource_class": "stabilizer",
+        "ray_id": 28,
+        "shortest_correction_to_R": null
+      },
+      {
+        "correction_length": null,
+        "deleted_dark_mode": 3,
+        "family": 3,
+        "maximum_qutrit_stabilizer_fidelity": 1.0000000000000004,
+        "mu": 0,
+        "nu": 2,
+        "qutrit_resource_class": "stabilizer",
+        "ray_id": 29,
+        "shortest_correction_to_R": null
+      },
+      {
+        "correction_length": null,
+        "deleted_dark_mode": 3,
+        "family": 3,
+        "maximum_qutrit_stabilizer_fidelity": 1.0,
+        "mu": 1,
+        "nu": 0,
+        "qutrit_resource_class": "stabilizer",
+        "ray_id": 30,
+        "shortest_correction_to_R": null
+      },
+      {
+        "correction_length": null,
+        "deleted_dark_mode": 3,
+        "family": 3,
+        "maximum_qutrit_stabilizer_fidelity": 1.0000000000000004,
+        "mu": 1,
+        "nu": 1,
+        "qutrit_resource_class": "stabilizer",
+        "ray_id": 31,
+        "shortest_correction_to_R": null
+      },
+      {
+        "correction_length": null,
+        "deleted_dark_mode": 3,
+        "family": 3,
+        "maximum_qutrit_stabilizer_fidelity": 1.0000000000000004,
+        "mu": 1,
+        "nu": 2,
+        "qutrit_resource_class": "stabilizer",
+        "ray_id": 32,
+        "shortest_correction_to_R": null
+      },
+      {
+        "correction_length": null,
+        "deleted_dark_mode": 3,
+        "family": 3,
+        "maximum_qutrit_stabilizer_fidelity": 1.0000000000000004,
+        "mu": 2,
+        "nu": 0,
+        "qutrit_resource_class": "stabilizer",
+        "ray_id": 33,
+        "shortest_correction_to_R": null
+      },
+      {
+        "correction_length": null,
+        "deleted_dark_mode": 3,
+        "family": 3,
+        "maximum_qutrit_stabilizer_fidelity": 1.0,
+        "mu": 2,
+        "nu": 1,
+        "qutrit_resource_class": "stabilizer",
+        "ray_id": 34,
+        "shortest_correction_to_R": null
+      },
+      {
+        "correction_length": null,
+        "deleted_dark_mode": 3,
+        "family": 3,
+        "maximum_qutrit_stabilizer_fidelity": 1.0000000000000004,
+        "mu": 2,
+        "nu": 2,
+        "qutrit_resource_class": "stabilizer",
+        "ray_id": 35,
+        "shortest_correction_to_R": null
+      }
+    ],
+    "selected_factory_cost": {
+      "M36_states_per_R_state": 1,
+      "expected_M36_states_per_R_injection": 3
+    },
+    "stabilizer_family": 3,
+    "uniform_unknown_ray_cost": {
+      "expected_M36_states_per_R_injection": 4,
+      "expected_M36_states_per_R_state": "4/3",
+      "probability_of_R_orbit_output": "3/4"
+    }
+  },
+  "front5_R_T_instruction_economy": {
+    "boundary": "The 39-T exact inclusion and impossibility statements are literature-owned. This certificate verifies the high-level phase-kickback identity and compiles those theorems into the repository resource ledger; it does not reproduce the paper's full 39-T gate word or claim that 39 is T-count optimal.",
+    "exact_expressivity": {
+      "R_from_single_qutrit_Clifford_plus_T": false,
+      "R_tensor_I_from_two_qutrit_Clifford_plus_T": true,
+      "T_from_any_number_of_Clifford_plus_R_qutrits": false,
+      "borrowed_qutrit_returned": true,
+      "known_T_count": 39,
+      "phase_kickback_branch_verified": "(-F^dagger)^2(-F^2)=-I on control state |2>",
+      "strict_inclusion": "Clifford+R is a strict exact subset of Clifford+T"
+    },
+    "resource_ledger_per_logical_R_gate": {
+      "T_emulation": {
+        "T_states_or_analyzer_uses": 39,
+        "borrowed_qutrits": 1
+      },
+      "dark_Strange_converter_then_RUS": {
+        "expected_distilled_Strange_states": 96
+      },
+      "one_Golay_round_then_converter_RUS": {
+        "pure_limit_expected_raw_Strange_states": 1824768
+      },
+      "selected_M36_transducer_then_RUS": {
+        "expected_M36_states": 3
+      }
+    },
+    "scheduler_policy": [
+      "Use selected-family M36 compression when a calibrated four-to-three-mode interface exists.",
+      "Use native R injection when only protected Strange/R resources are internal.",
+      "Use the T lane for exact gates outside Clifford+R or when 39 T resources are cheaper than the native R supply.",
+      "Never route exact T through R: the cyclotomic obstruction applies with arbitrary ancilla count."
+    ],
+    "seven_mode_abi": {
+      "Clifford_primitives": "Pass10941 F/P/CZ lowering on all seven qutrit modes",
+      "native_nonClifford_opcodes": [
+        "R_INJECT(mode)",
+        "T_ANALYZER(mode)"
+      ]
+    },
+    "symbolic_break_even": {
+      "T_emulation_cost": "39*c_T",
+      "c_T_threshold": "32/13",
+      "native_R_is_cheaper_when": "c_T>32/13 distilled-Strange-equivalent units",
+      "native_Strange_units_per_R": 96
+    }
+  },
+  "global_boundary": "The algebraic supply chain is now explicit. Physical closure still requires either realization of the dissipative H27 pump or a calibrated M36 mode transducer, plus verified syndrome extraction and measured component noise.",
+  "literature_ownership": {
+    "Golay_distillation": "Prakash 2020, arXiv:2003.02717",
+    "generic_dissipative_unique_state_construction": "Kraus et al. 2008, arXiv:0803.1463",
+    "metaplectic_subset_and_39T": "Glaudell et al. 2022, arXiv:2202.09235",
+    "repository_increment": "end-to-end Golay->R threshold and overhead; exact H27 Strange pump; Golay code/injection ABI replay; exhaustive 36-ray dark-mode transducer; and seven-mode resource scheduler"
+  },
+  "schema": "w33.pass10943.protected_metaplectic_five_front.v1",
+  "status": "PASS_PROTECTED_METAPLECTIC_VM_FIVE_FRONT_CLOSURE"
+}

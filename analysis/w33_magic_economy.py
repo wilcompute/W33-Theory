@@ -1,14 +1,12 @@
 #!/usr/bin/env python3
 """
-The magic economy: the architecture has no magic-state-distillation factory. In every
-standard fault-tolerant quantum computer the dominant cost is magic-state distillation
--- a separate, expensive resource (10^3-10^6 raw magic states per logical non-Clifford
-gate) feeding the Clifford error-correction layer. In the W(3,3) substrate the
-non-Clifford fuel and the error-correcting matter shell are the SAME object ("matter =
-magic"): 36 of the 40 rays are intrinsically magic, the matter shell IS the magic
-sector, so the magic is structural, not distilled. The contextual fraction
-1/Phi_4 = 1/10 is the standing magic density, replenished by the same cycle that
-maintains the code. This is a qualitatively different magic economy.
+The magic inventory: W(3,3) contains contextual/non-stabilizer rays, but an inventory
+is not yet a protected supply.  Earlier versions of this file over-read "matter =
+magic" as eliminating magic-state distillation.  Passes 10942--10943 correct that
+claim: the exact Strange-to-R converter amplifies raw depolarizing noise, while a
+ternary-Golay stage supplies cubic suppression.  Distillation can instead be bypassed
+conditionally by the Pass 10943 family-controlled M36 four-mode-to-qutrit transducer,
+which sends 27 rays to the R-magic orbit, but that physical interface is unbuilt.
 
 We quantify the magic with the qutrit MANA (the canonical magic monotone), confirm
 the substrate magic states are genuinely magic, and lay out the economy.
@@ -23,21 +21,15 @@ M(rho) = log sum_{x,p} |W_rho(x,p)|. Stabilizer states have mana 0; the qutrit S
 state |S> = (|1>-|2>)/sqrt2 attains the single-qutrit maximum mana log(5/3). We compute
 it here from the phase-point operators to confirm the substrate's resource is real.
 
-THE ECONOMY. Standard FT: cost ~ (code overhead) x (distillation overhead), the latter
-dominant. Substrate: matter = magic, so there is no separate factory -- the same
-matter-shell error-correction that protects the logical data carries the magic, at the
-standing contextual fraction 1/Phi_4 = 1/10. The Kochen-Specker deficit theta - alpha =
-10 - 7 = q = 3 is the magic per measurement round; classicality saturates at the spread
-count 36, never reaching an ovoid (W(3,3) has none), so the magic can never be gauged
-away. The architecture trades the distillation factory for the matter=magic identity.
+THE ECONOMY. Standard FT pays code and resource-purification overhead.  The finite
+geometry certifies candidate raw resources and their contextuality, not their noise,
+preparation rate, or fault-tolerant injection.  Pass 10943 supplies two typed paths:
+Golay distillation followed by Strange-to-R conversion, or a conditional direct M36
+mode transducer.  The latter can remove the factory only when physically realized and
+calibrated.
 
-Honest scope: the mana computation is exact (single-qutrit Strange state). The
-"no distillation factory" claim is structural -- it rests on matter=magic (the 36-ray
-theorem, sec:fuel) and on contextuality being sufficient for qutrit magic (Howard et
-al.); a full resource accounting of a fault-tolerant computation on the substrate code
-is not done here. What is established: the fuel is structural and quantified, and it
-coincides with the code, so the dominant cost of standard FT is reorganised, not paid
-twice.
+Honest scope: the mana computation is exact.  Contextuality establishes resource
+character, not protected availability.  The former no-factory conclusion is withdrawn.
 
 Verifies the 4+36 split, 36=(q!)^2, the grade 8+24+4={2^q,f,mu}, and the Strange-state
 mana = log(5/3) > 0 from the qutrit Wigner function.
@@ -154,50 +146,34 @@ def main():
     print(
         f"    distillation dominant (10^3-10^6 raw magic states per non-Clifford gate)"
     )
-    print(f"  substrate: matter = magic -> NO separate distillation factory; the")
-    print(
-        f"    matter shell (D_4/GKP code) IS the magic; standing density 1/Phi_4=1/10"
-    )
+    print("  substrate: contextual rays are a raw inventory; protected supply requires")
+    print("    Golay distillation or the separately certified M36 mode transducer")
     out["economy"] = {
         "standard": "code overhead x magic-distillation overhead (distillation dominant)",
-        "substrate": "matter=magic: no factory; the code IS the fuel; density 1/Phi_4=1/10",
-        "claim": "the dominant cost of FT (magic distillation) is reorganised, not paid twice",
+        "substrate": "contextual raw inventory; preparation, purification and injection remain typed costs",
+        "claim": "distillation is bypassed only conditionally by a calibrated M36-to-qutrit transducer",
+        "superseded_claim": "matter=magic implies no distillation factory",
     }
 
-    print("\nRESULT: the architecture's magic economy is structural. In standard")
-    print("  fault-tolerant computing the magic-state distillation factory is the")
-    print(
-        "  dominant cost, separate from error correction. In the W(3,3) substrate the"
-    )
-    print("  fuel and the code are one object: 36 of 40 rays are intrinsically magic")
-    print("  (36 = (q!)^2, grading 8+24+4 = {2^q,f,mu}), the matter shell is the magic")
-    print("  sector, and the qutrit magic is real (Strange-state mana = log(5/3),")
-    print(
-        "  computed from the Wigner function). The contextual fraction 1/Phi_4 = 1/10"
-    )
-    print(
-        "  is the standing magic density, the Kochen-Specker deficit theta-alpha = q ="
-    )
-    print(
-        "  3 the magic per round, and W(3,3)'s lack of an ovoid means the magic cannot"
-    )
-    print("  be gauged away. So the substrate trades the magic-distillation factory --")
-    print("  usually the bottleneck of a fault-tolerant quantum computer -- for the")
-    print("  matter=magic identity: the same error-correction cycle that protects the")
-    print("  data carries the fuel. Magic is not distilled here; it is structural.")
+    print("\nRESULT: the architecture has a structural raw magic inventory, not")
+    print("  an automatically protected supply. 36 of 40 rays occupy the non-stabilizer")
+    print("  sector (36=(q!)^2, grading 8+24+4={2^q,f,mu}), and the qutrit")
+    print("  Strange-state witness has exact mana log(5/3). Contextuality and the")
+    print("  absence of an ovoid certify that this resource cannot be globally")
+    print("  re-labelled as stabilizer data, but they do not determine preparation")
+    print("  noise or fault-tolerant injection. Pass 10943 therefore keeps two")
+    print("  explicit resource paths: ternary-Golay distillation followed by the")
+    print("  Strange-to-R converter, or a conditional direct M36-to-qutrit transducer.")
+    print("  The former no-distillation-factory claim is withdrawn unless that direct")
+    print("  transducer is physically realized and calibrated.")
 
     out["summary"] = (
-        "the architecture has NO magic-distillation factory: matter = magic. Standard FT "
-        "pays (code) x (distillation), distillation dominant (10^3-10^6 magic states per "
-        "non-Clifford gate). In W(3,3), 36/40 rays are intrinsically magic (36=(q!)^2, "
-        "grades 8+24+4={2^q,f,mu}), the matter shell (D_4/GKP code) IS the magic sector, "
-        "and the magic is real (qutrit Strange-state mana = log(5/3), from the Wigner "
-        "function). The contextual fraction 1/Phi_4=1/10 is the standing magic density; "
-        "the KS deficit theta-alpha = 10-7 = q = 3 is the magic per round; W(3,3) has no "
-        "ovoid so the magic can't be gauged away. The dominant cost of FT (magic "
-        "distillation) is reorganised into the matter=magic identity -- the code is the "
-        "fuel. Honest: mana exact; the no-factory claim is structural (matter=magic + "
-        "Howard sufficiency), not a full FT resource accounting."
+        "W(3,3) contains a certified contextual/non-stabilizer inventory and the qutrit "
+        "Strange state has exact mana log(5/3). This does not make the inventory a "
+        "protected supply. Passes 10942--10943 replace the former no-factory over-read "
+        "with two explicit paths: ternary-Golay Strange distillation followed by exact "
+        "Strange-to-R conversion, or a conditional family-controlled M36 mode transducer "
+        "sending 27 of 36 rays to the R-magic Clifford orbit."
     )
     out["sources"] = [
         "matter=magic, 4+36 split, 36=(q!)^2, grades 8+24+4, contextual fraction 1/10, "

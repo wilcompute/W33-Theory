@@ -1,0 +1,1735 @@
+{
+  "schema": "w33.20260924.triality_artin_a2_spectrum.v1",
+  "status": "PASS_TRIALITY_ARTIN_A2_SPECTRAL_REALIZATION",
+  "field": {
+    "cubic_polynomial": "x**3 - x**2 - 53*x - 120",
+    "discriminant": 94557,
+    "quadratic_resolvent": "Q(sqrt(94557))",
+    "normal_closure_group": "S3",
+    "hilbert_3_class_field": true
+  },
+  "A2_weyl_realization": {
+    "gram": [
+      [
+        2,
+        -1
+      ],
+      [
+        -1,
+        2
+      ]
+    ],
+    "reflection_s": [
+      [
+        -1,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "rotation_r": [
+      [
+        0,
+        -1
+      ],
+      [
+        1,
+        -1
+      ]
+    ],
+    "relations": [
+      "s^2=1",
+      "r^3=1",
+      "srs=r^-1"
+    ],
+    "group": "W(A2)=C3:C2=S3",
+    "character": {
+      "identity": 2,
+      "transposition": 0,
+      "3-cycle": -1
+    },
+    "determinant": {
+      "identity": 1,
+      "transposition": -1,
+      "3-cycle": 1
+    },
+    "local_characteristic_factors": {
+      "identity": [
+        1,
+        -2,
+        1
+      ],
+      "transposition": [
+        1,
+        0,
+        -1
+      ],
+      "3-cycle": [
+        1,
+        1,
+        1
+      ]
+    },
+    "repo_parent": "analysis/bt943_a2_plane_weyl_lift.py"
+  },
+  "class_field_phase_layer": {
+    "order_three_character": "psi: Cl(F)[3]=C3 -> {1, omega, omega^2}",
+    "quadratic_conjugation": "psi -> psi^-1 (omega <-> omega^2)",
+    "induced_representation": "rho = Ind_{Gal(N/F)}^{Gal(N/Q)} psi",
+    "induced_trace_on_C3": "psi + psi^-1 gives 2 on identity and -1 on nontrivial C3 elements",
+    "orientation_boundary": "the rational S3 conjugacy class does not distinguish omega from omega^2"
+  },
+  "artin_L_function": {
+    "representation_dimension": 2,
+    "conductor": 94557,
+    "root_number": 1,
+    "parity": "even",
+    "identity": "L_Q(s,rho)=zeta_K(s)/zeta_Q(s)=L_F(s,psi)",
+    "normal_closure_identity": "zeta_N(s)=zeta_F(s)*L_Q(s,rho)^2=zeta_F(s)*zeta_K(s)^2/zeta_Q(s)^2",
+    "first_256_dirichlet_coefficients": [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      -1,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      2,
+      0,
+      1,
+      0,
+      1,
+      -1,
+      0,
+      0,
+      -1,
+      0,
+      -1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      -1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      2,
+      -1,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      -1,
+      1,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      1,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      -1,
+      -1,
+      0,
+      0,
+      -1,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      -1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      2,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      -1,
+      -2,
+      0,
+      0,
+      1
+    ],
+    "character_tensor_invariant_moments_1_to_12": {
+      "1": 0,
+      "2": 1,
+      "3": 1,
+      "4": 3,
+      "5": 5,
+      "6": 11,
+      "7": 21,
+      "8": 43,
+      "9": 85,
+      "10": 171,
+      "11": 341,
+      "12": 683
+    }
+  },
+  "frobenius_census_below_10000": {
+    "counts": {
+      "identity": 203,
+      "transposition": 629,
+      "3-cycle": 394
+    },
+    "unramified_prime_count": 1226,
+    "rows_below_250": [
+      {
+        "p": 2,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "p": 5,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "p": 7,
+        "factorization_degrees": [
+          3
+        ],
+        "frobenius_class": "3-cycle",
+        "a_p": -1,
+        "quadratic_character": 1,
+        "A2_matrix": [
+          [
+            0,
+            -1
+          ],
+          [
+            1,
+            -1
+          ]
+        ],
+        "local_factor": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "p": 11,
+        "factorization_degrees": [
+          3
+        ],
+        "frobenius_class": "3-cycle",
+        "a_p": -1,
+        "quadratic_character": 1,
+        "A2_matrix": [
+          [
+            0,
+            -1
+          ],
+          [
+            1,
+            -1
+          ]
+        ],
+        "local_factor": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "p": 13,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "p": 17,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "p": 19,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "p": 23,
+        "factorization_degrees": [
+          1,
+          1,
+          1
+        ],
+        "frobenius_class": "identity",
+        "a_p": 2,
+        "quadratic_character": 1,
+        "A2_matrix": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          -2,
+          1
+        ]
+      },
+      {
+        "p": 29,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "p": 31,
+        "factorization_degrees": [
+          3
+        ],
+        "frobenius_class": "3-cycle",
+        "a_p": -1,
+        "quadratic_character": 1,
+        "A2_matrix": [
+          [
+            0,
+            -1
+          ],
+          [
+            1,
+            -1
+          ]
+        ],
+        "local_factor": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "p": 37,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "p": 41,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "p": 47,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "p": 53,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "p": 59,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "p": 61,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "p": 67,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "p": 71,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "p": 73,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "p": 79,
+        "factorization_degrees": [
+          3
+        ],
+        "frobenius_class": "3-cycle",
+        "a_p": -1,
+        "quadratic_character": 1,
+        "A2_matrix": [
+          [
+            0,
+            -1
+          ],
+          [
+            1,
+            -1
+          ]
+        ],
+        "local_factor": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "p": 83,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "p": 89,
+        "factorization_degrees": [
+          3
+        ],
+        "frobenius_class": "3-cycle",
+        "a_p": -1,
+        "quadratic_character": 1,
+        "A2_matrix": [
+          [
+            0,
+            -1
+          ],
+          [
+            1,
+            -1
+          ]
+        ],
+        "local_factor": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "p": 97,
+        "factorization_degrees": [
+          3
+        ],
+        "frobenius_class": "3-cycle",
+        "a_p": -1,
+        "quadratic_character": 1,
+        "A2_matrix": [
+          [
+            0,
+            -1
+          ],
+          [
+            1,
+            -1
+          ]
+        ],
+        "local_factor": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "p": 101,
+        "factorization_degrees": [
+          3
+        ],
+        "frobenius_class": "3-cycle",
+        "a_p": -1,
+        "quadratic_character": 1,
+        "A2_matrix": [
+          [
+            0,
+            -1
+          ],
+          [
+            1,
+            -1
+          ]
+        ],
+        "local_factor": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "p": 103,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "p": 107,
+        "factorization_degrees": [
+          1,
+          1,
+          1
+        ],
+        "frobenius_class": "identity",
+        "a_p": 2,
+        "quadratic_character": 1,
+        "A2_matrix": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          -2,
+          1
+        ]
+      },
+      {
+        "p": 109,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "p": 113,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "p": 127,
+        "factorization_degrees": [
+          3
+        ],
+        "frobenius_class": "3-cycle",
+        "a_p": -1,
+        "quadratic_character": 1,
+        "A2_matrix": [
+          [
+            0,
+            -1
+          ],
+          [
+            1,
+            -1
+          ]
+        ],
+        "local_factor": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "p": 131,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "p": 137,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "p": 139,
+        "factorization_degrees": [
+          3
+        ],
+        "frobenius_class": "3-cycle",
+        "a_p": -1,
+        "quadratic_character": 1,
+        "A2_matrix": [
+          [
+            0,
+            -1
+          ],
+          [
+            1,
+            -1
+          ]
+        ],
+        "local_factor": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "p": 149,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "p": 151,
+        "factorization_degrees": [
+          1,
+          1,
+          1
+        ],
+        "frobenius_class": "identity",
+        "a_p": 2,
+        "quadratic_character": 1,
+        "A2_matrix": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          -2,
+          1
+        ]
+      },
+      {
+        "p": 157,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "p": 163,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "p": 167,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "p": 173,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "p": 179,
+        "factorization_degrees": [
+          3
+        ],
+        "frobenius_class": "3-cycle",
+        "a_p": -1,
+        "quadratic_character": 1,
+        "A2_matrix": [
+          [
+            0,
+            -1
+          ],
+          [
+            1,
+            -1
+          ]
+        ],
+        "local_factor": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "p": 181,
+        "factorization_degrees": [
+          3
+        ],
+        "frobenius_class": "3-cycle",
+        "a_p": -1,
+        "quadratic_character": 1,
+        "A2_matrix": [
+          [
+            0,
+            -1
+          ],
+          [
+            1,
+            -1
+          ]
+        ],
+        "local_factor": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "p": 191,
+        "factorization_degrees": [
+          3
+        ],
+        "frobenius_class": "3-cycle",
+        "a_p": -1,
+        "quadratic_character": 1,
+        "A2_matrix": [
+          [
+            0,
+            -1
+          ],
+          [
+            1,
+            -1
+          ]
+        ],
+        "local_factor": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "p": 193,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "p": 197,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "p": 199,
+        "factorization_degrees": [
+          3
+        ],
+        "frobenius_class": "3-cycle",
+        "a_p": -1,
+        "quadratic_character": 1,
+        "A2_matrix": [
+          [
+            0,
+            -1
+          ],
+          [
+            1,
+            -1
+          ]
+        ],
+        "local_factor": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "p": 211,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "p": 223,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "p": 227,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "p": 229,
+        "factorization_degrees": [
+          1,
+          1,
+          1
+        ],
+        "frobenius_class": "identity",
+        "a_p": 2,
+        "quadratic_character": 1,
+        "A2_matrix": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          -2,
+          1
+        ]
+      },
+      {
+        "p": 233,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "p": 239,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "p": 241,
+        "factorization_degrees": [
+          1,
+          2
+        ],
+        "frobenius_class": "transposition",
+        "a_p": 0,
+        "quadratic_character": -1,
+        "A2_matrix": [
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "local_factor": [
+          1,
+          0,
+          -1
+        ]
+      }
+    ],
+    "checks": [
+      "a_p = number_of_linear_roots_of_f_mod_p - 1",
+      "det(rho(Frob_p)) = Kronecker(94557/p)",
+      "Euler polynomial = det(I - rho(Frob_p) T) in the BT943 A2 matrices"
+    ]
+  },
+  "ramified_local_layer": {
+    "rows": [
+      {
+        "p": 3,
+        "double_root": 2,
+        "simple_root": 0,
+        "inertia_class": "transposition/reflection",
+        "inertia_invariant_dimension": 1,
+        "local_factor": [
+          1,
+          -1
+        ],
+        "artin_conductor_exponent": 1
+      },
+      {
+        "p": 43,
+        "double_root": 6,
+        "simple_root": 32,
+        "inertia_class": "transposition/reflection",
+        "inertia_invariant_dimension": 1,
+        "local_factor": [
+          1,
+          -1
+        ],
+        "artin_conductor_exponent": 1
+      },
+      {
+        "p": 733,
+        "double_root": 182,
+        "simple_root": 370,
+        "inertia_class": "transposition/reflection",
+        "inertia_invariant_dimension": 1,
+        "local_factor": [
+          1,
+          -1
+        ],
+        "artin_conductor_exponent": 1
+      }
+    ],
+    "common_local_factor": [
+      1,
+      -1
+    ],
+    "conductor_exponents": {
+      "3": 1,
+      "43": 1,
+      "733": 1
+    },
+    "interpretation": "reflection inertia fixes one A2 line, dropping local factor degree from 2 to 1"
+  },
+  "lmfdb_crosscheck": {
+    "label": "2.94557.3t2.a.a",
+    "url": "https://www.lmfdb.org/ArtinRepresentation/2.94557.3t2.a.a",
+    "dimension": 2,
+    "conductor": 94557,
+    "bad_primes": [
+      3,
+      43,
+      733
+    ],
+    "character_values": [
+      2,
+      0,
+      -1
+    ],
+    "parity": "even",
+    "root_number": 1,
+    "local_factors_by_class": [
+      [
+        1,
+        -2,
+        1
+      ],
+      [
+        1,
+        0,
+        -1
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "common_bad_local_factor": [
+      1,
+      -1
+    ]
+  },
+  "boundary": "Exact arithmetic/representation theorem. It identifies the standard Artin representation with the integral A2 Weyl reflection representation and compiles its Euler factors. The qutrit-phase language refers only to the C3 character alphabet; no physical SU(3), particle-generation, or optical identification is asserted."
+}
