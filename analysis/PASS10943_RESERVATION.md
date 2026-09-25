@@ -42,7 +42,13 @@ the current Holonet device implements either jump.
 
 ## 3. Fault-tolerant logical ABI
 
-The committed five-row ternary generator is self-orthogonal, has `|C|=243`,
+The W33-internal Golay code algebra and dark-to-Strange type handoff were
+already established in `analysis/w33_dark_strange_golay11_ft_lane.py` and
+`analysis/2026-09-23_execute_all5_hybrid_lie_golay_calibration.md`. Pass 10943
+does not reclaim that result. Its increment is the independent generator
+replay plus the complete logical converter, injection ABI, error census, and
+end-to-end resource ledger. The committed five-row ternary generator is
+self-orthogonal, has `|C|=243`,
 `|C^perp|=729`, minimum weight six in C, and minimum weight five in
 `C^perp-C`. It therefore replays the `[[11,1,5]]_3` CSS code and corrects any
 two physical qutrit errors. The certificate counts all 3,609 Pauli errors of
