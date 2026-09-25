@@ -1,0 +1,194 @@
+{
+  "schema": "w33.pass10941.ramified_dual_ad.v1",
+  "status": "PASS_RAMIFIED_DUAL_NUMBER_AUTODIFFERENTIATION_ABI",
+  "register": {
+    "word": "(value_at_double_root, tangent, value_at_simple_root)",
+    "algebra": "F_p[epsilon]/epsilon^2 x F_p",
+    "primes": [
+      3,
+      43,
+      733
+    ]
+  },
+  "opcodes": {
+    "DADD": "(a,da,c)+(b,db,d)=(a+b,da+db,c+d)",
+    "DMUL": "(a,da,c)*(b,db,d)=(ab,a*db+da*b,cd)",
+    "DINV": "(a,da,c)^-1=(a^-1,-da*a^-2,c^-1)",
+    "DFMA": "DMUL followed by DADD",
+    "DPOLY": "Horner evaluation returns (P(a),da*P'(a),P(c))",
+    "DCOMPOSE": "tangent lane obeys the exact chain rule"
+  },
+  "prime_charts": [
+    {
+      "prime": 3,
+      "double_root": 2,
+      "simple_root": 0,
+      "coefficient_to_dual_chart": [
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "dual_chart_to_coefficient": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          1
+        ]
+      ],
+      "chart_determinant": 1,
+      "basis_product_checks": 9,
+      "polynomial_AD_checks": 64,
+      "composition_chain_rule_checks": 64,
+      "unit_inverse_checks": 23,
+      "epsilon_chart": [
+        0,
+        1,
+        0
+      ],
+      "double_factor_idempotent_chart": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "prime": 43,
+      "double_root": 6,
+      "simple_root": 32,
+      "coefficient_to_dual_chart": [
+        [
+          1,
+          6,
+          36
+        ],
+        [
+          0,
+          1,
+          12
+        ],
+        [
+          1,
+          32,
+          35
+        ]
+      ],
+      "dual_chart_to_coefficient": [
+        [
+          4,
+          29,
+          40
+        ],
+        [
+          42,
+          18,
+          1
+        ],
+        [
+          18,
+          38,
+          25
+        ]
+      ],
+      "chart_determinant": 31,
+      "basis_product_checks": 9,
+      "polynomial_AD_checks": 64,
+      "composition_chain_rule_checks": 64,
+      "unit_inverse_checks": 61,
+      "epsilon_chart": [
+        0,
+        1,
+        0
+      ],
+      "double_factor_idempotent_chart": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "prime": 733,
+      "double_root": 182,
+      "simple_root": 370,
+      "coefficient_to_dual_chart": [
+        [
+          1,
+          182,
+          139
+        ],
+        [
+          0,
+          1,
+          364
+        ],
+        [
+          1,
+          370,
+          562
+        ]
+      ],
+      "dual_chart_to_coefficient": [
+        [
+          472,
+          406,
+          262
+        ],
+        [
+          607,
+          502,
+          126
+        ],
+        [
+          536,
+          347,
+          197
+        ]
+      ],
+      "chart_determinant": 160,
+      "basis_product_checks": 9,
+      "polynomial_AD_checks": 64,
+      "composition_chain_rule_checks": 64,
+      "unit_inverse_checks": 64,
+      "epsilon_chart": [
+        0,
+        1,
+        0
+      ],
+      "double_factor_idempotent_chart": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "class_field_router": {
+    "unramified": "C2 Kronecker bit plus C3 Artin class route the three etale triality branches",
+    "ramified": "the collided pair is replaced by value+tangent while the simple branch remains a scalar lane",
+    "parents": [
+      "analysis/w33_20260924_triality_class_field_closure.py",
+      "analysis/w33_20260924_frobenius_triality_decoder.py"
+    ]
+  },
+  "boundary": "These are exact finite-field arithmetic opcodes. They implement first-order automatic differentiation in the ramified centroid algebra; they do not supply real-number gradients, analog hardware, or physical dynamics."
+}

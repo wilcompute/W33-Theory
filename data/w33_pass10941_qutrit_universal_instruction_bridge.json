@@ -1,0 +1,496 @@
+{
+  "schema": "w33.pass10941.qutrit_universal_instruction_bridge.v1",
+  "status": "PASS_SEVEN_QUTRIT_CLIFFORD_T_ABI_WITH_RESOURCE_CONSERVATION",
+  "seven_qutrit_clifford_lowering": {
+    "source_vm_status": "PASS_H7_CENTRAL_PRODUCT_TO_SEVEN_QUTRIT_CLIFFORD_ABI",
+    "connected_lie_closure_dimension": 105,
+    "target": "Sp(14,3) plus seven-mode Heisenberg translations",
+    "adqc_primitive_alphabet": [
+      "F_i",
+      "P_i",
+      "CZ_ij"
+    ],
+    "primitive_realization": {
+      "F_i": "ADQC LOCAL(theta=(0,0,0)); track X byproduct",
+      "P_i": "ADQC LOCAL(R=P) followed by F_i^-1",
+      "CZ_ij": "ADQC TWO_NODE(i,j) followed by F_i^-1 tensor F_j^-1",
+      "inverses": "finite-order Clifford powers"
+    },
+    "all_25_vm_generators_lowered_exactly_mod3": true,
+    "maximum_clifford_macro_length": 7,
+    "lowerings": [
+      {
+        "vm_gate": "T_e0",
+        "clifford_macro": [
+          "F0^-1",
+          "P0^-1",
+          "F0"
+        ],
+        "macro_length": 3,
+        "exact_mod3_matrix_match": true
+      },
+      {
+        "vm_gate": "T_f0",
+        "clifford_macro": [
+          "P0^-1"
+        ],
+        "macro_length": 1,
+        "exact_mod3_matrix_match": true
+      },
+      {
+        "vm_gate": "T_e1",
+        "clifford_macro": [
+          "F1^-1",
+          "P1^-1",
+          "F1"
+        ],
+        "macro_length": 3,
+        "exact_mod3_matrix_match": true
+      },
+      {
+        "vm_gate": "T_f1",
+        "clifford_macro": [
+          "P1^-1"
+        ],
+        "macro_length": 1,
+        "exact_mod3_matrix_match": true
+      },
+      {
+        "vm_gate": "T_e2",
+        "clifford_macro": [
+          "F2^-1",
+          "P2^-1",
+          "F2"
+        ],
+        "macro_length": 3,
+        "exact_mod3_matrix_match": true
+      },
+      {
+        "vm_gate": "T_f2",
+        "clifford_macro": [
+          "P2^-1"
+        ],
+        "macro_length": 1,
+        "exact_mod3_matrix_match": true
+      },
+      {
+        "vm_gate": "T_e3",
+        "clifford_macro": [
+          "F3^-1",
+          "P3^-1",
+          "F3"
+        ],
+        "macro_length": 3,
+        "exact_mod3_matrix_match": true
+      },
+      {
+        "vm_gate": "T_f3",
+        "clifford_macro": [
+          "P3^-1"
+        ],
+        "macro_length": 1,
+        "exact_mod3_matrix_match": true
+      },
+      {
+        "vm_gate": "T_e4",
+        "clifford_macro": [
+          "F4^-1",
+          "P4^-1",
+          "F4"
+        ],
+        "macro_length": 3,
+        "exact_mod3_matrix_match": true
+      },
+      {
+        "vm_gate": "T_f4",
+        "clifford_macro": [
+          "P4^-1"
+        ],
+        "macro_length": 1,
+        "exact_mod3_matrix_match": true
+      },
+      {
+        "vm_gate": "T_e5",
+        "clifford_macro": [
+          "F5^-1",
+          "P5^-1",
+          "F5"
+        ],
+        "macro_length": 3,
+        "exact_mod3_matrix_match": true
+      },
+      {
+        "vm_gate": "T_f5",
+        "clifford_macro": [
+          "P5^-1"
+        ],
+        "macro_length": 1,
+        "exact_mod3_matrix_match": true
+      },
+      {
+        "vm_gate": "T_e6",
+        "clifford_macro": [
+          "F6^-1",
+          "P6^-1",
+          "F6"
+        ],
+        "macro_length": 3,
+        "exact_mod3_matrix_match": true
+      },
+      {
+        "vm_gate": "T_f6",
+        "clifford_macro": [
+          "P6^-1"
+        ],
+        "macro_length": 1,
+        "exact_mod3_matrix_match": true
+      },
+      {
+        "vm_gate": "T_e0+e1_data",
+        "clifford_macro": [
+          "F0^-1",
+          "F1^-1",
+          "P0^-1",
+          "P1^-1",
+          "CZ0,1^-1",
+          "F0",
+          "F1"
+        ],
+        "macro_length": 7,
+        "exact_mod3_matrix_match": true
+      },
+      {
+        "vm_gate": "T_f0+f1_data",
+        "clifford_macro": [
+          "P0^-1",
+          "P1^-1",
+          "CZ0,1^-1"
+        ],
+        "macro_length": 3,
+        "exact_mod3_matrix_match": true
+      },
+      {
+        "vm_gate": "T_e1+e2_data",
+        "clifford_macro": [
+          "F1^-1",
+          "F2^-1",
+          "P1^-1",
+          "P2^-1",
+          "CZ1,2^-1",
+          "F1",
+          "F2"
+        ],
+        "macro_length": 7,
+        "exact_mod3_matrix_match": true
+      },
+      {
+        "vm_gate": "T_f1+f2_data",
+        "clifford_macro": [
+          "P1^-1",
+          "P2^-1",
+          "CZ1,2^-1"
+        ],
+        "macro_length": 3,
+        "exact_mod3_matrix_match": true
+      },
+      {
+        "vm_gate": "T_e2+e3_data",
+        "clifford_macro": [
+          "F2^-1",
+          "F3^-1",
+          "P2^-1",
+          "P3^-1",
+          "CZ2,3^-1",
+          "F2",
+          "F3"
+        ],
+        "macro_length": 7,
+        "exact_mod3_matrix_match": true
+      },
+      {
+        "vm_gate": "T_f2+f3_data",
+        "clifford_macro": [
+          "P2^-1",
+          "P3^-1",
+          "CZ2,3^-1"
+        ],
+        "macro_length": 3,
+        "exact_mod3_matrix_match": true
+      },
+      {
+        "vm_gate": "T_e4+e5_control",
+        "clifford_macro": [
+          "F4^-1",
+          "F5^-1",
+          "P4^-1",
+          "P5^-1",
+          "CZ4,5^-1",
+          "F4",
+          "F5"
+        ],
+        "macro_length": 7,
+        "exact_mod3_matrix_match": true
+      },
+      {
+        "vm_gate": "T_f4+f5_control",
+        "clifford_macro": [
+          "P4^-1",
+          "P5^-1",
+          "CZ4,5^-1"
+        ],
+        "macro_length": 3,
+        "exact_mod3_matrix_match": true
+      },
+      {
+        "vm_gate": "T_e5+e6_control",
+        "clifford_macro": [
+          "F5^-1",
+          "F6^-1",
+          "P5^-1",
+          "P6^-1",
+          "CZ5,6^-1",
+          "F5",
+          "F6"
+        ],
+        "macro_length": 7,
+        "exact_mod3_matrix_match": true
+      },
+      {
+        "vm_gate": "T_f5+f6_control",
+        "clifford_macro": [
+          "P5^-1",
+          "P6^-1",
+          "CZ5,6^-1"
+        ],
+        "macro_length": 3,
+        "exact_mod3_matrix_match": true
+      },
+      {
+        "vm_gate": "T_e3+e4_bridge",
+        "clifford_macro": [
+          "F3^-1",
+          "F4^-1",
+          "P3^-1",
+          "P4^-1",
+          "CZ3,4^-1",
+          "F3",
+          "F4"
+        ],
+        "macro_length": 7,
+        "exact_mod3_matrix_match": true
+      }
+    ]
+  },
+  "nonclifford_resource_equivalence": {
+    "gate": "T=diag(1,zeta9,zeta9^-1)",
+    "programmed_analyzer": {
+      "pass411_magic_zeta9_exponents": [
+        0,
+        1,
+        8
+      ],
+      "conjugate_magic_zeta9_exponents": [
+        0,
+        8,
+        1
+      ],
+      "analyzer_vectors": [
+        {
+          "outcome": 0,
+          "zeta9_exponents": [
+            0,
+            8,
+            1
+          ],
+          "exact_identity": "|b_0>=Z^-0|M_T^*>"
+        },
+        {
+          "outcome": 1,
+          "zeta9_exponents": [
+            0,
+            5,
+            4
+          ],
+          "exact_identity": "|b_1>=Z^-1|M_T^*>"
+        },
+        {
+          "outcome": 2,
+          "zeta9_exponents": [
+            0,
+            2,
+            7
+          ],
+          "exact_identity": "|b_2>=Z^-2|M_T^*>"
+        }
+      ],
+      "basis_unitarity_error": 6.191763886932023e-16
+    },
+    "maximum_stabilizer_fidelity": 0.7123860142010865,
+    "identity": "the three T-analyzer kets are the Z orbit of |M_T^*>",
+    "consequence": "Analyzer programming and T-magic injection are two interfaces to the same basis-dependent mu9 resource; the non-Clifford resource is relocated, not erased.",
+    "rank_one_stabilizer_firewall": "No rank-one stabilizer output is used. The resource is independently certified non-stabilizer by maximum stabilizer fidelity 0.712386014201 < 1."
+  },
+  "universal_instruction": {
+    "opcode": "T_ANALYZER(mode)",
+    "ideal_branch": "X_mode^-m F_mode T_mode / sqrt(3), m in F3",
+    "branch_probability": "1/3 independent of input",
+    "determinization": "track X^-m then apply compiled F^-1",
+    "portability": "the opcode may target any of the seven modes",
+    "entangling_support": "the lowered bridge plus local generators closes Sp(14,3)",
+    "gate_set": "seven-qutrit Clifford+T",
+    "universality": "approximate universal quantum computation in the ideal resource model",
+    "literature_basis": "Glaudell-Ross-van de Wetering-Yeh: qutrit Clifford+T is approximately universal"
+  },
+  "alternative_choi_injection": {
+    "opcode": "T_INJECT_CHOIPAIR(mode)",
+    "resource": "Choi magic pair (I tensor T)|Phi_3>",
+    "bell_outcomes": 9,
+    "outcome_probability": "1/9",
+    "all_feedforward_compiles_to_vm": true,
+    "maximum_vm_feedforward_micro_ops": 5,
+    "feedforward": [
+      {
+        "bell_outcome": [
+          0,
+          0
+        ],
+        "clifford_word": "I",
+        "vm_micro_ops": [],
+        "vm_micro_op_count": 0
+      },
+      {
+        "bell_outcome": [
+          0,
+          1
+        ],
+        "clifford_word": "Z",
+        "vm_micro_ops": [
+          "HZ_TRANSLATE(0,+1)"
+        ],
+        "vm_micro_op_count": 1
+      },
+      {
+        "bell_outcome": [
+          0,
+          2
+        ],
+        "clifford_word": "ZZ",
+        "vm_micro_ops": [
+          "HZ_TRANSLATE(0,+1)",
+          "HZ_TRANSLATE(0,+1)"
+        ],
+        "vm_micro_op_count": 2
+      },
+      {
+        "bell_outcome": [
+          1,
+          0
+        ],
+        "clifford_word": "XXP",
+        "vm_micro_ops": [
+          "HX_TRANSLATE(0,+1)",
+          "HX_TRANSLATE(0,+1)",
+          "T_f0",
+          "T_f0"
+        ],
+        "vm_micro_op_count": 4
+      },
+      {
+        "bell_outcome": [
+          1,
+          1
+        ],
+        "clifford_word": "XPX",
+        "vm_micro_ops": [
+          "HX_TRANSLATE(0,+1)",
+          "T_f0",
+          "T_f0",
+          "HX_TRANSLATE(0,+1)"
+        ],
+        "vm_micro_op_count": 4
+      },
+      {
+        "bell_outcome": [
+          1,
+          2
+        ],
+        "clifford_word": "PXX",
+        "vm_micro_ops": [
+          "T_f0",
+          "T_f0",
+          "HX_TRANSLATE(0,+1)",
+          "HX_TRANSLATE(0,+1)"
+        ],
+        "vm_micro_op_count": 4
+      },
+      {
+        "bell_outcome": [
+          2,
+          0
+        ],
+        "clifford_word": "PPX",
+        "vm_micro_ops": [
+          "T_f0",
+          "T_f0",
+          "T_f0",
+          "T_f0",
+          "HX_TRANSLATE(0,+1)"
+        ],
+        "vm_micro_op_count": 5
+      },
+      {
+        "bell_outcome": [
+          2,
+          1
+        ],
+        "clifford_word": "XPP",
+        "vm_micro_ops": [
+          "HX_TRANSLATE(0,+1)",
+          "T_f0",
+          "T_f0",
+          "T_f0",
+          "T_f0"
+        ],
+        "vm_micro_op_count": 5
+      },
+      {
+        "bell_outcome": [
+          2,
+          2
+        ],
+        "clifford_word": "PXP",
+        "vm_micro_ops": [
+          "T_f0",
+          "T_f0",
+          "HX_TRANSLATE(0,+1)",
+          "T_f0",
+          "T_f0"
+        ],
+        "vm_micro_op_count": 5
+      }
+    ]
+  },
+  "claim_lattice": {
+    "bare_pass10941_vm_is_universal": false,
+    "ideal_nonstabilizer_analyzer_or_choi_port_closes_logical_universality": true,
+    "endogenous_fault_tolerant_magic_factory_is_proved": false,
+    "physical_fixed_photon_memory_interaction_is_demonstrated": false,
+    "fault_tolerance_threshold_is_proved": false
+  },
+  "distillation_and_source_boundary": {
+    "pass416_direct_five_qutrit_T_orbit_return_fidelity": 0.918222659014,
+    "pass416_direct_five_qutrit_T_orbit_distills": false,
+    "pass411_five_qutrit_bound_role": "distance-three combinatorial upper bound only; not a selected-code nonlinear map",
+    "dark_strange_ray": "(1,-omega,0) = Z X^2 (0,1,-1)",
+    "dark_strange_boundary": "exact Clifford orbit witness, but no dynamical preparation, conversion to T, or protected injection route",
+    "remaining_physical_frontier": "realize the fixed qutrit photon-memory interaction and a protected non-stabilizer analyzer or magic factory below a measured logical threshold"
+  },
+  "parents": [
+    "data/w33_pass10941_symplectic_vm_gate_compiler.json",
+    "data/w33_20260924_single_photon_adqc_qutrit_universality.json",
+    "data/w33_20260924_bell_shell_clifford_cyclotomic_lift.json",
+    "data/w33_pass411_qutrit_magic_injection.json",
+    "data/w33_pass416_qutrit_distillation_search.json",
+    "data/w33_hesse36_dark_schrodinger_strange_state.json"
+  ]
+}

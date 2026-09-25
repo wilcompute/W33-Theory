@@ -1,0 +1,36 @@
+name: W33 Pass 10941 triality VM five-front packet
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass10941_*'
+      - 'analysis/PASS10941_*'
+      - 'tests/test_w33_pass10941_triality_vm_five_front.py'
+      - '.github/workflows/w33_pass10941_triality_vm_five_front.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install exact-algebra dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gap
+          python -m pip install numpy sympy networkx
+      - name: Replay five producers
+        run: |
+          python analysis/w33_pass10941_rational_triality_coordinate_chart.py
+          python analysis/w33_pass10941_symplectic_vm_gate_compiler.py
+          python analysis/w33_pass10941_qutrit_universal_instruction_bridge.py
+          python analysis/w33_pass10941_w90_integral_lift.py
+          python analysis/w33_pass10941_ramified_dual_ad.py
+          python analysis/w33_pass10941_normalized_root_hamiltonian.py
+      - name: Cross-front regression
+        run: python tests/test_w33_pass10941_triality_vm_five_front.py
