@@ -1,0 +1,212 @@
+{
+  "binary_tetrahedral_certificate": {
+    "C3_cycles_quaternion_axes": true,
+    "C3_generator": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "Q8_generator_a": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "Q8_generator_b_clock_square": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "Q8_size": 8,
+    "center_maps_to_quaternion_minus_one": true,
+    "full_24_squared_homomorphism_check": true,
+    "quaternion_group_size": 24
+  },
+  "boundary": "Finite group and central-character theorem only. GL(2,3) is the plus Schur cover 2^+S4, not the binary octahedral 2^-S4. The shared central -1 does not construct physical time evolution, the action of every clock tick on matter, a continuum Pin bundle, or a chirality-selection mechanism.",
+  "clock_power_ladder": {
+    "g": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "g_eighth": "+I2",
+    "g_fourth": "-I2",
+    "g_fourth_quaternion_image": "-1",
+    "g_fourth_reading": "central 2pi spin rotation",
+    "g_is_pin_odd": true,
+    "g_minimal_polynomial": "x^2-x-1",
+    "g_order": 8,
+    "g_squared": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "g_squared_quaternion_image": "j",
+    "g_squared_reading": "order-4 Spin(3) lift of a pi rotation",
+    "projective_period": 4,
+    "spin_lift_period": 8
+  },
+  "groups": {
+    "GL2_3_order": 48,
+    "SL2_3_order": 24,
+    "center": "-I2",
+    "center_order": 2,
+    "det_minus_coset_order_spectrum": {
+      "2": 12,
+      "8": 12
+    },
+    "projective_image": "PGL(2,3) ~= S4",
+    "projective_image_order": 24,
+    "schur_cover_type": "2^+ S4 = GL(2,3)",
+    "spin_subgroup": "SL(2,3) ~= binary tetrahedral 2T",
+    "spin_subgroup_order_spectrum": {
+      "1": 1,
+      "2": 1,
+      "3": 8,
+      "4": 6,
+      "6": 8
+    }
+  },
+  "lift_order_census": {
+    "det1_order1": 1,
+    "det1_order2": 1,
+    "det1_order3": 8,
+    "det1_order4": 6,
+    "det1_order6": 8,
+    "det2_order2": 12,
+    "det2_order8": 12
+  },
+  "matter_parity_weld": {
+    "central_chain": "-I2 in SL(2,3)=2T subset Spin(3) -> -1 in Spin(9)",
+    "central_character_match": "clock -I2 is the finite spin sign; in Pass10950 the Spin(9) central 2pi sign is matter parity on the Peirce 16",
+    "not_claimed": "No action of the full determinant-minus-one clock lift on the Albert 16 is constructed here.",
+    "pass10950_numerical_error": 2.654024609109889e-15,
+    "pass10950_spin9_2pi_equals_peirce_symmetry": true,
+    "pass10950_status": "PASS_CLOCK_ALBERT_F4_E6M26_SO19_WEYL_SPINOR_AND_MATTER_PARITY_AS_PEIRCE_SYMMETRY"
+  },
+  "negacyclic_clock_lifts": {
+    "minus": {
+      "det_mod3": 2,
+      "matrix": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "minimal_polynomial": "x^2-x-1",
+      "monomial_scales": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "order": 8,
+      "projective_cycles": [
+        [
+          0,
+          3,
+          2,
+          1
+        ]
+      ],
+      "projective_permutation": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "trace_mod3": 1
+    },
+    "plus": {
+      "det_mod3": 2,
+      "matrix": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "minimal_polynomial": "x^2+x-1",
+      "monomial_scales": [
+        2,
+        2,
+        2,
+        1
+      ],
+      "order": 8,
+      "projective_cycles": [
+        [
+          0,
+          3,
+          2,
+          1
+        ]
+      ],
+      "projective_permutation": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "trace_mod3": 2
+    }
+  },
+  "projective_cycle_census": {
+    "(-1, (2,))": 6,
+    "(-1, (4,))": 6,
+    "(1, ())": 1,
+    "(1, (2, 2))": 3,
+    "(1, (3,))": 8
+  },
+  "schema": "w33.pass10951.clock-pin-spin-central-sign-bridge.v1",
+  "status": "PASS_CLOCK_PIN_SPIN_CENTRAL_SIGN_BRIDGE",
+  "theorem": "The Pass10948 negacyclic shift is the unique GL(2,3) lift, in each of two oriented gauges, of one projective 4-cycle. The lifts are central negatives with minimal polynomials x^2+x-1 and x^2-x-1, order 8, determinant -1, common square in the quaternion Q8 inside SL(2,3), and fourth power -I. The determinant-one subgroup is explicitly isomorphic to the 24 Hurwitz units 2T in Spin(3), sending -I to quaternion -1. Thus determinant gives the Pin-component/Hesse spinor-norm bit, while central -I gives the 2pi spin sign. Pass10950 realizes the latter as matter parity on the clock Albert 16.",
+  "two_C2s": {
+    "central_spin_sign": {
+      "clock_code_action": "global sign -1",
+      "determinant": 1,
+      "element": "-I2",
+      "projective_action": "identity",
+      "quaternion_image": "-1 in 2T subset Spin(3)",
+      "spin_reading": "2pi rotation"
+    },
+    "independent_not_conflated": true,
+    "pin_component_character": {
+      "kernel": "SL(2,3)",
+      "map": "det: GL(2,3) -> F3^x = {+1,-1}",
+      "projective_reading": "even/odd permutation of four clock rays",
+      "repo_weld": "finite Hesse orthogonal spinor norm"
+    }
+  }
+}
