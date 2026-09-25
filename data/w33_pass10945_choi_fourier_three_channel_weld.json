@@ -1,0 +1,399 @@
+{
+  "S1_factorization": {
+    "dimension": 27,
+    "external_clock_dimension": 3,
+    "factorization": "Coeff(V_omega) tensor Reg(C3_external)",
+    "localized_phase_basis_formula": "L_{p,r,i}=(1/3) sum_t omega^(-tp) S1(t,r,i)",
+    "localized_phase_basis_verified": true,
+    "matrix_unit_intertwiner": {
+      "exact_field": "Q(omega), omega^2+omega+1=0",
+      "formula": "E_ir=(1/3) sum_{a=0}^2 omega^(-a*i) Z^a X^(i-r)",
+      "rows": [
+        {
+          "formula": "E_ir=(1/3) sum_a omega^(-a*i) Z^a X^(i-r)",
+          "matrix_unit": [
+            0,
+            0
+          ],
+          "terms": [
+            {
+              "a": 0,
+              "coefficient": [
+                "1/3",
+                "0"
+              ]
+            },
+            {
+              "a": 1,
+              "coefficient": [
+                "1/3",
+                "0"
+              ]
+            },
+            {
+              "a": 2,
+              "coefficient": [
+                "1/3",
+                "0"
+              ]
+            }
+          ],
+          "weyl_shift_b": 0
+        },
+        {
+          "formula": "E_ir=(1/3) sum_a omega^(-a*i) Z^a X^(i-r)",
+          "matrix_unit": [
+            0,
+            1
+          ],
+          "terms": [
+            {
+              "a": 0,
+              "coefficient": [
+                "1/3",
+                "0"
+              ]
+            },
+            {
+              "a": 1,
+              "coefficient": [
+                "1/3",
+                "0"
+              ]
+            },
+            {
+              "a": 2,
+              "coefficient": [
+                "1/3",
+                "0"
+              ]
+            }
+          ],
+          "weyl_shift_b": 2
+        },
+        {
+          "formula": "E_ir=(1/3) sum_a omega^(-a*i) Z^a X^(i-r)",
+          "matrix_unit": [
+            0,
+            2
+          ],
+          "terms": [
+            {
+              "a": 0,
+              "coefficient": [
+                "1/3",
+                "0"
+              ]
+            },
+            {
+              "a": 1,
+              "coefficient": [
+                "1/3",
+                "0"
+              ]
+            },
+            {
+              "a": 2,
+              "coefficient": [
+                "1/3",
+                "0"
+              ]
+            }
+          ],
+          "weyl_shift_b": 1
+        },
+        {
+          "formula": "E_ir=(1/3) sum_a omega^(-a*i) Z^a X^(i-r)",
+          "matrix_unit": [
+            1,
+            0
+          ],
+          "terms": [
+            {
+              "a": 0,
+              "coefficient": [
+                "1/3",
+                "0"
+              ]
+            },
+            {
+              "a": 1,
+              "coefficient": [
+                "-1/3",
+                "-1/3"
+              ]
+            },
+            {
+              "a": 2,
+              "coefficient": [
+                "0",
+                "1/3"
+              ]
+            }
+          ],
+          "weyl_shift_b": 1
+        },
+        {
+          "formula": "E_ir=(1/3) sum_a omega^(-a*i) Z^a X^(i-r)",
+          "matrix_unit": [
+            1,
+            1
+          ],
+          "terms": [
+            {
+              "a": 0,
+              "coefficient": [
+                "1/3",
+                "0"
+              ]
+            },
+            {
+              "a": 1,
+              "coefficient": [
+                "-1/3",
+                "-1/3"
+              ]
+            },
+            {
+              "a": 2,
+              "coefficient": [
+                "0",
+                "1/3"
+              ]
+            }
+          ],
+          "weyl_shift_b": 0
+        },
+        {
+          "formula": "E_ir=(1/3) sum_a omega^(-a*i) Z^a X^(i-r)",
+          "matrix_unit": [
+            1,
+            2
+          ],
+          "terms": [
+            {
+              "a": 0,
+              "coefficient": [
+                "1/3",
+                "0"
+              ]
+            },
+            {
+              "a": 1,
+              "coefficient": [
+                "-1/3",
+                "-1/3"
+              ]
+            },
+            {
+              "a": 2,
+              "coefficient": [
+                "0",
+                "1/3"
+              ]
+            }
+          ],
+          "weyl_shift_b": 2
+        },
+        {
+          "formula": "E_ir=(1/3) sum_a omega^(-a*i) Z^a X^(i-r)",
+          "matrix_unit": [
+            2,
+            0
+          ],
+          "terms": [
+            {
+              "a": 0,
+              "coefficient": [
+                "1/3",
+                "0"
+              ]
+            },
+            {
+              "a": 1,
+              "coefficient": [
+                "0",
+                "1/3"
+              ]
+            },
+            {
+              "a": 2,
+              "coefficient": [
+                "-1/3",
+                "-1/3"
+              ]
+            }
+          ],
+          "weyl_shift_b": 2
+        },
+        {
+          "formula": "E_ir=(1/3) sum_a omega^(-a*i) Z^a X^(i-r)",
+          "matrix_unit": [
+            2,
+            1
+          ],
+          "terms": [
+            {
+              "a": 0,
+              "coefficient": [
+                "1/3",
+                "0"
+              ]
+            },
+            {
+              "a": 1,
+              "coefficient": [
+                "0",
+                "1/3"
+              ]
+            },
+            {
+              "a": 2,
+              "coefficient": [
+                "-1/3",
+                "-1/3"
+              ]
+            }
+          ],
+          "weyl_shift_b": 1
+        },
+        {
+          "formula": "E_ir=(1/3) sum_a omega^(-a*i) Z^a X^(i-r)",
+          "matrix_unit": [
+            2,
+            2
+          ],
+          "terms": [
+            {
+              "a": 0,
+              "coefficient": [
+                "1/3",
+                "0"
+              ]
+            },
+            {
+              "a": 1,
+              "coefficient": [
+                "0",
+                "1/3"
+              ]
+            },
+            {
+              "a": 2,
+              "coefficient": [
+                "-1/3",
+                "-1/3"
+              ]
+            }
+          ],
+          "weyl_shift_b": 0
+        }
+      ],
+      "transform": "Weyl/Pauli operator basis <-> qutrit matrix-unit (Choi history) basis",
+      "verified_matrix_units": 9
+    },
+    "qutrit_matrix_coefficient_dimension": 9
+  },
+  "boundary": "All ranks and the Weyl-to-matrix-unit transform are exact over Q(omega). The nine matrix units justify the term Choi/operator histories algebraically. No identification of the 18D channels with spacetime null/non-null events, particle sectors, or thermodynamic irreversibility is made.",
+  "schema": "w33.pass10945.choi_fourier_three_channel_weld.v1",
+  "status": "PASS_CHOI_FOURIER_THREE_CHANNEL_TEMPORAL_WELD",
+  "theorem": "The 27-dimensional operator-compatible Fourier sector is exactly three external-clock copies of the nine-dimensional qutrit matrix-coefficient space. Inverse C3 Fourier transform localizes it as 9+9+9 across the three external phase slices, and the 54-dimensional retyping quotient therefore splits exactly as 18+18+18. Pure center and pure external backgrounds each occupy a 36-dimensional graph subspace with an 18-dimensional intersection and 54-dimensional span; either diagonal background releases the remaining cross-phase relation and reaches all 54.",
+  "three_phase_quotient": {
+    "S1_decomposition": "27 = 9 + 9 + 9 localized matrix-coefficient sectors",
+    "full_quotient_dimension": 54,
+    "identity": "54 = 18 + 18 + 18",
+    "pair_quotient_dimensions": {
+      "01": 36,
+      "02": 36,
+      "12": 36
+    },
+    "parabolic_regrouping": "P=(phase0+phase1) gives 36; Q=phase2 gives 18",
+    "phase_channels": [
+      {
+        "S1_intersection_dimension": 9,
+        "coordinate_slice_dimension": 27,
+        "phase": 0,
+        "quotient_channel_dimension": 18
+      },
+      {
+        "S1_intersection_dimension": 9,
+        "coordinate_slice_dimension": 27,
+        "phase": 1,
+        "quotient_channel_dimension": 18
+      },
+      {
+        "S1_intersection_dimension": 9,
+        "coordinate_slice_dimension": 27,
+        "phase": 2,
+        "quotient_channel_dimension": 18
+      }
+    ]
+  },
+  "weld_geometry": {
+    "backgrounds": {
+      "center": {
+        "any_two_phases_determine_pure_background": true,
+        "single_phase_projection_ranks": {
+          "0": 18,
+          "1": 18,
+          "2": 18
+        },
+        "total_quotient_rank": 36,
+        "two_phase_projection_ranks": {
+          "01": 36,
+          "02": 36,
+          "12": 36
+        }
+      },
+      "center_minus_external": {
+        "any_two_phases_determine_pure_background": false,
+        "single_phase_projection_ranks": {
+          "0": 18,
+          "1": 18,
+          "2": 18
+        },
+        "total_quotient_rank": 54,
+        "two_phase_projection_ranks": {
+          "01": 36,
+          "02": 36,
+          "12": 36
+        }
+      },
+      "center_plus_external": {
+        "any_two_phases_determine_pure_background": false,
+        "single_phase_projection_ranks": {
+          "0": 18,
+          "1": 18,
+          "2": 18
+        },
+        "total_quotient_rank": 54,
+        "two_phase_projection_ranks": {
+          "01": 36,
+          "02": 36,
+          "12": 36
+        }
+      },
+      "external": {
+        "any_two_phases_determine_pure_background": true,
+        "single_phase_projection_ranks": {
+          "0": 18,
+          "1": 18,
+          "2": 18
+        },
+        "total_quotient_rank": 36,
+        "two_phase_projection_ranks": {
+          "01": 36,
+          "02": 36,
+          "12": 36
+        }
+      }
+    },
+    "diagonal_backgrounds_span_full_three_channel_quotient": true,
+    "inclusion_exclusion": "54 = 36 + 36 - 18",
+    "pure_background_projection_property": "each pure 36D weld projects surjectively to every 18D phase channel and every 36D pair of channels, so its missing 18D freedom is a cross-phase relation rather than one absent phase channel",
+    "pure_center_dimension": 36,
+    "pure_center_external_intersection_dimension": 18,
+    "pure_center_external_span_dimension": 54,
+    "pure_external_dimension": 36
+  }
+}
