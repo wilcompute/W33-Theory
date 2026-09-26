@@ -1,0 +1,58 @@
+{
+  "boundary": "This is an exact mean-field statement for the minimal homogeneous Landau polynomial. It is not a theorem about a microscopic W33 Hamiltonian, finite-temperature universe, cosmological phase transition, domain walls, nucleation rate, or fluctuation-corrected critical behavior. Extra fields, nonlocal terms, fluctuations or a different dynamical realization can modify the transition.",
+  "checks": {
+    "barrier_positive": true,
+    "coexistence_inside_metastability_window": true,
+    "coexistence_positive_alpha": true,
+    "finite_jump": true,
+    "native_alpha_coexistence": true,
+    "native_barrier": true,
+    "native_coefficient_minus_2_over_3": true,
+    "native_cubic_projection_nonzero": true,
+    "native_rjump": true,
+    "ordered_curvature_positive": true,
+    "ordered_spinodal": true,
+    "parent_four_tetrahedral_vacua": true
+  },
+  "exact_phase_structure": {
+    "barrier_height_at_coexistence": "gamma^4/(2304 beta^3)",
+    "barrier_radius_at_coexistence": "gamma/(4 sqrt(3) beta)",
+    "coexistence_alpha": "gamma^2/(12 beta)",
+    "coexistence_to_ordered_spinodal_gap": "gamma^2/(96 beta)",
+    "disordered_spinodal_alpha": "0",
+    "goldstone_modes": 0,
+    "metastability_width_alpha": "3 gamma^2/(32 beta)",
+    "nonzero_stationary_discriminant": "3 gamma^2 - 32 alpha beta",
+    "order_parameter_jump": "gamma/(2 sqrt(3) beta)",
+    "ordered_extrema_exist_for": "alpha <= 3 gamma^2/(32 beta)",
+    "ordered_radial_curvature_at_coexistence": "gamma^2/(6 beta)",
+    "ordered_spinodal_alpha": "3 gamma^2/(32 beta)",
+    "reason_no_goldstones": "S4->S3 breaks a finite group",
+    "vacuum_multiplicity_below_transition": "4 for gamma>0; opposite tetrahedron for gamma<0"
+  },
+  "free_energy": {
+    "angular_minimum": "p3=+r^3/sqrt(3), four S4/S3 tetrahedral rays",
+    "assumptions": "beta>0, gamma>0",
+    "functional": "F=alpha*p2 + beta*p2^2 - gamma*p3",
+    "invariants": "p2=sum_i x_i^2, p3=sum_i x_i^3",
+    "order_parameter": "x in A3 augmentation, sum_i x_i=0",
+    "radial_function": "f(r)=alpha r^2 - (gamma/sqrt(3)) r^3 + beta r^4"
+  },
+  "headline": "The nonzero clock cubic forces the minimal homogeneous S4-invariant Landau model to select one of four S4/S3 clock vacua by a first-order mean-field transition. Coexistence, jump, barrier and both spinodals are exact.",
+  "interpretation": "Pass 10975 makes gamma structurally nonzero after projection onto the exact clock symmetry. Therefore the minimal analytic Landau model does not pass continuously through alpha=0: an ordered tetrahedral clock vacuum becomes globally degenerate already at positive alpha and the order parameter jumps discontinuously.",
+  "native_E6_normalization": {
+    "alpha_coexistence": "g_E6**2/(27*beta)",
+    "alpha_ordered_spinodal": "g_E6**2/(24*beta)",
+    "barrier_height": "g_E6**4/(11664*beta**3)",
+    "gamma_eff": "2 g_E6 / 3",
+    "r_jump": "sqrt(3)*g_E6/(9*beta)"
+  },
+  "schema": "w33.pass10976.first-order-clock-selection.v1",
+  "status": "PASS",
+  "temperature_parameterization": {
+    "derivation": "L=T* a r_jump^2",
+    "if": "alpha=a(T-T0), a>0",
+    "latent_heat_at_coexistence": "L=T* a gamma^2/(12 beta^2)",
+    "transition_temperature_shift": "T*-T0 = gamma^2/(12 a beta)"
+  }
+}
