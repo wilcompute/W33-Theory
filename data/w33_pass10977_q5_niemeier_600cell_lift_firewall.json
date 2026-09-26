@@ -1,0 +1,120 @@
+{
+  "boundary": "This is a finite root-system/group-action firewall. It does not deny other correspondences between N(A4^6), H4/600-cell geometry, or modular constructions; it rules out this natural objectwise lift respecting the certified Singer A5/S5 actions. No physical identification follows from the common cardinalities.",
+  "cell600_packet": {
+    "antipodal_quotient": {
+      "derived_subgroup_order": 60,
+      "element_order_histogram": {
+        "1": 1,
+        "2": 15,
+        "3": 20,
+        "5": 24
+      },
+      "identification": "A5",
+      "left_action_order": 60,
+      "regular": true,
+      "vertices": 60
+    },
+    "binary_group": {
+      "center_order": 2,
+      "element_order_histogram": {
+        "1": 1,
+        "10": 24,
+        "2": 1,
+        "3": 20,
+        "4": 30,
+        "5": 24,
+        "6": 20
+      },
+      "identification": "binary icosahedral group 2.A5",
+      "involutions": 1,
+      "order": 120
+    },
+    "closed_under_scaled_quaternion_multiplication": true,
+    "coordinate_source": "Pass 599 exact Z[phi] 600-cell coordinates",
+    "vertices": 120
+  },
+  "checks": {
+    "600_binary_group_unique_involution": true,
+    "600_projective_A5_one_orbit60": true,
+    "600_projective_A5_regular": true,
+    "600_vertices_form_order120_group": true,
+    "full_120_groups_not_isomorphic": true,
+    "pass599_six_axis_transport": true,
+    "projective_root_A5_is_30_plus_30": true,
+    "q5_parent_has_120_roots": true,
+    "q5_parent_is_N_A4_6": true,
+    "root_A5_is_60_plus_60": true,
+    "root_S5_regular": true,
+    "root_packet_6x20": true,
+    "same_six_Singer_carrier": true
+  },
+  "coarse_six_object_bridge": {
+    "600cell_objects": "six fivefold axes in a vertex-figure icosahedron",
+    "group": "A5 on six objects; extended to S5=PGL2(5) on the q=5 code carrier",
+    "niemeier_objects": "six A4 components",
+    "q5_clock_objects": "six P1(F5) coordinates / six Sylow-5 subgroups of S5",
+    "status": "EXACT"
+  },
+  "headline": "The q=5 Niemeier A4^6 shell and the 600-cell share the exact six-object Singer/icosahedral carrier, but their tempting common 120 count does not lift equivariantly. The A4^6 roots carry a regular diagonal S5 action; the exact 600-cell vertices carry the binary icosahedral group 2.A5. After antipodal quotient the root packet is 30+30 under A5, while the 600-cell quotient is one regular 60-orbit.",
+  "lift_firewall": {
+    "cell600_cover_group": "2.A5 under scaled unit-icosian multiplication",
+    "cell600_cover_involutions": 1,
+    "full_120_equivariant_identification": false,
+    "projective_600cell_A5_orbits": [
+      60
+    ],
+    "projective_60_equivariant_identification": false,
+    "projective_root_A5_orbits": [
+      30,
+      30
+    ],
+    "reason": "orbit/stabilizer data already disagree after quotient: projective A4^6 roots have two A5 orbits of size 30 with stabilizer C2, while projective 600-cell vertices are a regular A5-set of size 60",
+    "root_cover_group": "S5 in the diagonal regular model",
+    "root_cover_involutions": 25,
+    "same_cardinality_120": true
+  },
+  "niemeier_root_packet": {
+    "A5_restriction": {
+      "antipode_preserves_each_60_orbit": true,
+      "each_root_orbit_regular": true,
+      "order": 60,
+      "root_orbit_sizes": [
+        60,
+        60
+      ]
+    },
+    "diagonal_S5_action": {
+      "element_order_histogram": {
+        "1": 1,
+        "2": 25,
+        "3": 20,
+        "4": 30,
+        "5": 24,
+        "6": 20
+      },
+      "orbit_size": 120,
+      "order": 120,
+      "regular": true,
+      "stabilizer_order": 1
+    },
+    "fibres": 6,
+    "projective_roots": {
+      "A5_orbit_sizes": [
+        30,
+        30
+      ],
+      "A5_stabilizer_order": 2,
+      "S5_orbit_size": 60,
+      "S5_stabilizer_order": 2,
+      "count": 60
+    },
+    "root_count": 120,
+    "root_model": "six A4 components, roots e_i-e_j labelled (Singer fibre,i,j)",
+    "roots_per_A4": 20,
+    "six_fibre_A5_action_order": 60
+  },
+  "prior_art_boundary": "A4 has 20 roots, N(A4^6) has 120 roots, the 600-cell has 120 vertices, and its unit-icosian realization is classical. The repository increment is the explicit Singer-labelled root action, exact orbit census, and the computational no-go showing the six-object bridge cannot be lifted to either the 120 shells or their 60-point antipodal quotients.",
+  "schema": "w33.pass10977.q5-niemeier-600cell-lift-firewall.v1",
+  "status": "PASS",
+  "what_survives": "The meaningful q=5 weld is the six-coordinate P1(F5) carrier, not a 120-point identification. The shared 120 is a secondary shell count with inequivalent extension data above the same coarse sixfold geometry."
+}
