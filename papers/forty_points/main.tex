@@ -1,0 +1,262 @@
+% =====================================================================
+%  Forty Points: one qutrit, the exceptional algebras, and a light cone
+%  A synthesis of the W(3,3) programme for every reader.
+%  Compile with tectonic (XeTeX):  tectonic -X compile main.tex
+% =====================================================================
+\documentclass[11pt,twoside]{article}
+
+% ---------------------------------------------------------------- fonts
+\usepackage{amsmath,amsthm,mathtools}% must precede unicode-math
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\setmainfont{texgyrepagella}[Extension=.otf,UprightFont=*-regular,BoldFont=*-bold,
+  ItalicFont=*-italic,BoldItalicFont=*-bolditalic]
+\setsansfont{texgyreheros}[Extension=.otf,UprightFont=*-regular,BoldFont=*-bold,
+  ItalicFont=*-italic,BoldItalicFont=*-bolditalic,Scale=0.92]
+\setmonofont{texgyrecursor}[Extension=.otf,UprightFont=*-regular,BoldFont=*-bold,
+  ItalicFont=*-italic,BoldItalicFont=*-bolditalic,Scale=0.95]
+\setmathfont{texgyrepagella-math.otf}
+
+% ---------------------------------------------------------------- layout
+\usepackage[a4paper,inner=30mm,outer=26mm,top=28mm,bottom=30mm,headsep=10mm]{geometry}
+\usepackage{microtype}
+\raggedbottom
+\usepackage{booktabs,array,tabularx,longtable,multirow}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,decorations.pathreplacing,shapes.geometric,backgrounds,fit}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{etoolbox}
+\usepackage{xurl}
+\usepackage[font=small,labelfont={bf,sf,color=ink},labelsep=period,margin=4mm]{caption}
+\newcommand{\computed}{\textcolor{teal!80!black}{\boldmath$\surd$}}
+\usepackage[hidelinks,bookmarksnumbered]{hyperref}
+\setlength{\parskip}{0.45em}
+\setlength{\parindent}{0pt}
+\linespread{1.06}
+\setlist{itemsep=2pt,topsep=4pt}
+
+% ---------------------------------------------------------------- palette
+\definecolor{ink}{HTML}{1B2A41}
+\definecolor{teal}{HTML}{0F7C80}
+\definecolor{tealsoft}{HTML}{E6F4F3}
+\definecolor{gold}{HTML}{B7791F}
+\definecolor{goldsoft}{HTML}{FBF3E4}
+\definecolor{rose}{HTML}{B4415A}
+\definecolor{rosesoft}{HTML}{FBEDEF}
+\definecolor{sky}{HTML}{3C6FB4}
+\definecolor{skysoft}{HTML}{EAF1FA}
+\definecolor{sage}{HTML}{4E8A4A}
+\definecolor{sagesoft}{HTML}{EEF6EC}
+\definecolor{slate}{HTML}{5B6573}
+\definecolor{paper}{HTML}{FFFDF8}
+% figure fills
+\colorlet{orgn}{ink!85}
+\colorlet{nullc}{gold!55}
+\colorlet{plusc}{teal!35}
+\colorlet{minusc}{rose!30}
+
+% ---------------------------------------------------------------- headings
+\titleformat{\section}{\sffamily\Large\bfseries\color{ink}}{\color{teal}\thesection}{0.8em}{}
+  [{\color{teal}\titlerule[0.8pt]}]
+\titleformat{\subsection}{\sffamily\large\bfseries\color{ink}}{\color{teal}\thesubsection}{0.7em}{}
+\titleformat{\subsubsection}{\sffamily\normalsize\bfseries\color{slate}}{\thesubsubsection}{0.6em}{}
+\titlespacing*{\section}{0pt}{2.2em}{1.1em}
+\titlespacing*{\subsection}{0pt}{1.6em}{0.6em}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\sffamily\small\color{slate}\thepage\quad\textbar\quad Forty Points}
+\fancyhead[RO]{\sffamily\small\color{slate}\nouppercase{\leftmark}\quad\textbar\quad\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+
+% ---------------------------------------------------------------- tiers
+\newtcbox{\tierbox}[1][teal]{on line,colback=#1,colframe=#1,coltext=white,
+  boxrule=0pt,arc=2pt,left=2.5pt,right=2.5pt,top=0.5pt,bottom=0.5pt,fontupper=\sffamily\scriptsize\bfseries}
+\newcommand{\tierT}{\tierbox[teal]{THEOREM}}
+\newcommand{\tierC}{\tierbox[sky]{COMPUTATION}}
+\newcommand{\tierB}{\tierbox[gold]{BRIDGE}}
+\newcommand{\tierX}{\tierbox[rose]{REFUTED}}
+\newcommand{\tierO}{\tierbox[slate]{OPEN}}
+
+% ---------------------------------------------------------------- boxes
+\newtcolorbox{plainwords}[1][In plain words]{enhanced,breakable,
+  colback=goldsoft,colframe=gold!70,boxrule=0pt,leftrule=3pt,arc=0pt,
+  left=10pt,right=10pt,top=6pt,bottom=6pt,
+  fonttitle=\sffamily\bfseries\small,coltitle=gold!80!black,
+  attach title to upper={\par\smallskip},title={#1}}
+\newtcolorbox{physical}[1][What it means physically]{enhanced,breakable,
+  colback=tealsoft,colframe=teal,boxrule=0pt,leftrule=3pt,arc=0pt,
+  left=10pt,right=10pt,top=6pt,bottom=6pt,
+  fonttitle=\sffamily\bfseries\small,coltitle=teal!80!black,
+  attach title to upper={\par\smallskip},title={#1}}
+\newtcolorbox{boundary}[1][Where this stops]{enhanced,breakable,
+  colback=rosesoft,colframe=rose,boxrule=0pt,leftrule=3pt,arc=0pt,
+  left=10pt,right=10pt,top=6pt,bottom=6pt,
+  fonttitle=\sffamily\bfseries\small,coltitle=rose!85!black,
+  attach title to upper={\par\smallskip},title={#1}}
+\newtcolorbox{result}[2][]{enhanced,breakable,
+  colback=white,colframe=ink!55,boxrule=0.6pt,arc=2pt,
+  left=10pt,right=10pt,top=7pt,bottom=7pt,
+  colbacktitle=skysoft,coltitle=ink,fonttitle=\sffamily\bfseries\small,
+  title={#2},#1}
+\newtcolorbox{keyidea}{enhanced,colback=ink,colframe=ink,coltext=white,arc=3pt,
+  boxrule=0pt,left=12pt,right=12pt,top=9pt,bottom=9pt,fontupper=\large\itshape}
+
+% ---------------------------------------------------------------- theorems
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+% ---------------------------------------------------------------- notation
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\W}{W(3,3)}
+\newcommand{\e}{\mathfrak{e}}
+\newcommand{\g}{\mathfrak{g}}
+\newcommand{\sll}{\mathfrak{sl}}
+\newcommand{\so}{\mathfrak{so}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\PSp}{\mathrm{PSp}}
+\newcommand{\PGSp}{\mathrm{PGSp}}
+\newcommand{\SRG}{\mathrm{SRG}}
+\newcommand{\End}{\mathrm{End}}
+\newcommand{\ad}{\mathrm{ad}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\ket}[1]{\lvert #1\rangle}
+\newcommand{\bra}[1]{\langle #1\rvert}
+\newcommand{\cert}[1]{\begingroup\ttfamily\small\color{ink!80}%
+  \def\_{\char`\_\penalty0\hskip0pt plus 1pt\relax}#1\endgroup}
+\newcommand{\hgt}{\operatorname{ht}}
+
+\hypersetup{pdftitle={Forty Points: One Qutrit, the Exceptional Algebras, and a Light Cone},
+  pdfauthor={The W(3,3) Theory Programme}}
+
+\begin{document}
+\pagecolor{paper}
+
+% ================================================================= title
+\begin{titlepage}
+\thispagestyle{empty}
+\centering
+\vspace*{8mm}
+\begin{tikzpicture}[scale=1.05]
+  % the 1 + 12 + 27 structure seen from one point of W(3,3)
+  \foreach \k in {0,...,26}{
+    \fill[rose!70] ({360*\k/27+6.6}:3.35) circle (2.1pt);}
+  \draw[rose!35,line width=0.4pt] (0,0) circle (3.35);
+  \foreach \a/\c in {45/teal,135/sky,225/gold,315/sage}{
+    \draw[\c,line width=1.4pt] (0,0) -- (\a:2.45);
+    \foreach \r in {1.0,1.7,2.4}{\fill[\c] (\a:\r) circle (2.6pt);}}
+  \fill[ink] (0,0) circle (3.6pt);
+  \node[font=\sffamily\scriptsize,text=slate] at (0,-3.95) {one point \quad 4 lines \quad 12 neighbours \quad 27 far points};
+\end{tikzpicture}
+
+\vspace{12mm}
+{\sffamily\fontsize{30}{36}\selectfont\bfseries\color{ink} Forty Points\par}
+\vspace{4mm}
+{\Large\itshape\color{teal} One qutrit, the exceptional algebras, and a light cone\par}
+\vspace{9mm}
+{\large An exact and honest account of the $W(3,3)$ programme,\\
+written so that anyone can follow it\par}
+\vspace{12mm}
+{\sffamily\color{slate} The W(3,3) Theory Programme\\[2pt]
+\small repository \texttt{wilcompute/W33-Theory}\quad$\cdot$\quad 25 September 2026\par}
+\vfill
+\begin{minipage}{0.86\textwidth}\small\color{slate}
+Every mathematical statement in this paper carries a status badge and, where it is
+a computation, the path of the committed script and certificate that proves it.
+Interpretations are labelled as interpretations. Things that were believed and later
+shown false are kept on the page, with the measurement that overturned them.
+\end{minipage}
+\vspace{6mm}
+\end{titlepage}
+
+% ================================================================= abstract
+\thispagestyle{empty}
+\section*{Abstract}
+\addcontentsline{toc}{section}{Abstract}
+
+\textbf{For everyone.} Take the smallest quantum system that has three settings
+instead of two --- a \emph{qutrit} --- and let it act on itself. The ways it can be
+transformed, and the ways those transformations do or do not interfere with one
+another, form a finite geometric object with exactly forty points. This paper follows
+that single object as far as exact mathematics can take it. It turns out to contain
+a tiny version of space-time with a light cone; four interlocking ``clocks''; the
+largest exceptional symmetry in mathematics, $E_8$; the octonionic algebra of
+$3\times3$ matrices that physicists have long suspected sits behind particle physics;
+and, inside that algebra, a genuine ten-dimensional Lorentz group whose spinors are
+the matter particles of one generation. We also say, just as clearly, what the
+object does \emph{not} do: it does not by itself produce the masses, the forces, or
+the dynamics of our universe, and it provably cannot decide whether nature is
+left-handed or right-handed.
+
+\medskip
+\textbf{For specialists.} The symplectic generalized quadrangle $\W$ is the projective
+commutation geometry of the two-sided Weyl action on one qutrit's Hilbert--Schmidt
+space; its Bell line is the unitary-channel diagonal. Fixing that line, the
+$27$ transverse Lagrangians form $\mathrm{Sym}_2(\F_3)$ with the finite Minkowski form
+$t^2-x^2-y^2$, whose null relation is context intersection; the four null directions
+are $\mathbb{P}^1(\F_3)$, the tetracode is their evaluation code, and the same four
+labels index the Hesse striations and an $A_2^4\subset E_8$. On the committed
+executable $E_8$ Chevalley basis, a Hesse tick line induces the contact grading
+$1+56+134+56+1$; its $56$ is exactly the Freudenthal triple system of the split Albert
+algebra whose norm is the repository's signed $45$-triad $E_6$ cubic,
+$Q=(\alpha\beta+T)^2-4\beta N(X)-4\alpha N(Y)+4T(X^\#,Y^\#)$, and the $57$-dimensional
+Heisenberg extension carries the quasiconformal cone $N=Q/4-\tau^2$ with the
+G\"unaydin--Koepsell--Nicolai inversion law. The Killing form obeys
+$K(e_\alpha,e_{-\alpha})=-60(-1)^{\operatorname{ht}\alpha}$; the three tick lines give
+commuting $E_{8(-24)}$ involutions with $E_8=80+56+56+56$, restricting to $E_{7(-25)}$,
+whose Hermitian Jordan triple yields a Euclidean Albert algebra with Peirce split
+$1+16+10$, a Lorentzian $(1,9)$ Peirce slice, $\mathrm{Der}=F_{4(-52)}$,
+$\mathrm{str}_0=E_{6(-26)}$, and an $\mathfrak{so}(1,9)$ acting on a Majorana--Weyl $16$.
+The repository's matter-parity charge is $6L_c-2$, and matter parity is the $2\pi$
+rotation of $\mathrm{Spin}(9)$. The committed split real form, by contrast, is the
+height twist $\exp(i\pi\rho^\vee)$ and gives a $(5,5)$ slice: signature is a real-form
+datum, invisible over $\F_3$.
+
+\vspace{6mm}
+\begin{keyidea}
+The forty points are forty views of one thing. Looked at through the right lens, the
+same finite object is a quantum measurement geometry, a finite space-time, a clock, a
+lattice, an exceptional Lie algebra, and a Lorentzian light cone --- and each
+identification in this paper is an exact computation, not an analogy.
+\end{keyidea}
+
+\clearpage
+\tableofcontents
+\clearpage
+
+\input{sec00_reading}
+\input{sec01_prologue}
+\input{sec02_object}
+\input{sec03_selfentangle}
+\input{sec04_time}
+\input{sec05_e8}
+\input{sec06_freudenthal}
+\input{sec07_realforms}
+\input{sec08_lorentz}
+\input{sec09_physics}
+\input{sec10_machine}
+\input{sec11_epilogue}
+\appendix
+\input{appA_ledger}
+\input{appB_glossary}
+\input{appC_references}
+
+\end{document}

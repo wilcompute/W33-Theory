@@ -1,0 +1,209 @@
+\section{The Freudenthal 56 and a 57-dimensional light cone}
+\label{sec:fts}
+
+The contact grading of Theorem~5.4 has a $56$-dimensional layer $\g_{-1}$. In the 1950s
+Hans Freudenthal showed \cite{Freudenthal} that the $56$-dimensional representation of $E_7$ carries a
+remarkable structure --- a symplectic form and a quartic form --- now called a
+\emph{Freudenthal triple system}. It has since turned up in the physics of black holes in
+supergravity and in the entanglement of qubits. This section computes it directly from the
+Hesse clock, on the committed $E_8$ basis, and finds a light cone one dimension larger.
+
+\begin{plainwords}
+Think of the $56$ as the space of ``charges'' of a black hole in a theory with many
+electric and magnetic fields: $28$ electric and $28$ magnetic. The symplectic form pairs
+each electric charge with its magnetic partner. The quartic form is a single number built
+from all $56$ charges; in string theory its square root gives the black hole's entropy.
+What we show is that the forty-point geometry, through its clock, produces exactly this
+structure --- including the right signs, with nothing adjusted by hand.
+\end{plainwords}
+
+\subsection{Two clocks in one table}
+
+Let $\theta$ be the highest root of $E_8$ and $\alpha_8$ the simple root with
+$\theta=\omega_8$. The tick line's contact grading is the $\alpha_8$-coefficient $a_8$ of
+a root; the striation's $|3|$-grading is its $\alpha_7$-coefficient $a_7$. Counting
+roots by both at once gives Figure~\ref{fig:bigrade}.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1.18cm,y=0.86cm,
+   cell/.style={minimum width=11.4mm,minimum height=7.8mm,draw=white,line width=1.2pt,font=\small,inner sep=0pt}]
+  % bigrading of the 240 roots: rows a8 = -2..2, columns a7 = -3..3
+  \foreach \row/\vals [count=\r from 0] in {-2/{1,0,0,0,0,0,0},-1/{1,27,27,1,0,0,0},0/{0,0,27,72,27,0,0},1/{0,0,0,1,27,27,1},2/{0,0,0,0,0,0,1}}{
+     \node[font=\scriptsize,text=slate,anchor=east] at (-0.62,-\r) {$a_8=\row$};
+     \foreach \v [count=\c from 0] in \vals {
+        \pgfmathsetmacro{\shade}{\v==0 ? 0 : (\v==1 ? 16 : (\v==27 ? 34 : 55))}
+        \node[cell,fill=sky!\shade] at (\c,-\r) {\ifnum\v=0 \textcolor{slate!35}{$\cdot$}\else $\v$\fi};
+     }}
+  \foreach \a [count=\c from 0] in {-3,...,3}{\node[font=\scriptsize,text=slate] at (\c,0.72) {$\a$};}
+  \node[font=\scriptsize,text=slate,anchor=east] at (-0.62,0.72) {$a_7=$};
+  \node[font=\tiny,text=ink!70] at (3,-2.3) {(+8 Cartan)};
+  % contact layer (row a8 = -1)
+  \draw[teal,line width=1.7pt,rounded corners=3pt] (-0.5,-0.53) rectangle (3.5,-1.47);
+  % clock layer (column a7 = -1)
+  \draw[rose,line width=1.7pt,rounded corners=3pt,dash pattern=on 3pt off 2pt] (1.53,-0.56) rectangle (2.47,-2.44);
+  % legend
+  \draw[teal,line width=1.7pt] (7.35,-0.6) -- (7.85,-0.6);
+  \node[anchor=west,font=\sffamily\scriptsize,text=teal!80!black,align=left] at (7.9,-0.6) {contact layer $\g_{-1}$\\$1+27+27+1=56$};
+  \draw[rose,line width=1.7pt,dash pattern=on 3pt off 2pt] (7.35,-1.9) -- (7.85,-1.9);
+  \node[anchor=west,font=\sffamily\scriptsize,text=rose!80!black,align=left] at (7.9,-1.9) {clock layer\\$27+27=54$};
+  \node[anchor=west,font=\sffamily\scriptsize,text=ink,align=left] at (7.9,-3.1) {overlap: one $27$};
+\end{tikzpicture}
+\caption{The $240$ roots of $E_8$ counted by contact degree $a_8$ (rows) and clock degree
+$a_7$ (columns). The Freudenthal $56$ (solid outline) and the clock's first-order $54$
+(dashed outline) share exactly one $27$.}
+\label{fig:bigrade}
+\end{figure}
+
+\begin{result}{Theorem 6.1 (the $56$ does not extend the $54$) \hfill \tierC}
+The contact layer $a_8=-1$ sits at clock degrees $0,-1,-2,-3$ with sizes $1,27,27,1$;
+the clock layer $a_7=-1$ sits at contact degrees $0,-1$ with $27$ each. The two share
+exactly one $27$. The second $27$ of the Freudenthal system is the clock's
+\emph{second-order} layer, and its two scalar ``poles'' are
+$\alpha=e_{-\alpha_8}$ (clock degree $0$) and $\beta=e_{-(\theta-\alpha_8)}$ (clock degree
+$-3$, a member of the clock's top doublet).
+\cert{w33\_pass10949\_freudenthal\_quasiconformal\_clock\_cone.py}
+\end{result}
+
+\begin{boundary}[A count that misled]
+A proposal circulating in the programme read the $56$ as ``the clock's $54$ plus the $2$
+top directions''. The dimensions agree ($54+2=56$), but the objects do not: the $56$
+contains only half of the $54$. \tierX\ (as an identification)
+\end{boundary}
+
+\subsection{The symplectic form and the Heisenberg algebra}
+
+Brackets of two elements of the $56$ land in the one-dimensional $\g_{-2}=\C e_{-\theta}$:
+$[x_i,x_j]=\Omega_{ij}\,e_{-\theta}$. On the root basis, $\Omega$ is a signed perfect
+matching: $\alpha\leftrightarrow\beta$, and $X_k\leftrightarrow Y_k$ where $X_k$ and
+$Y_k$ carry the \emph{same} $27$-label. Its determinant is $\pm1$, so it is unimodular
+over $\Z$. Since $e_{-\theta}$ is central in $\g_{-1}\oplus\g_{-2}$, the two together form
+a $57$-dimensional \emph{Heisenberg algebra} --- the same algebra that, in quantum
+mechanics, is generated by positions, momenta and $i\hbar$. \tierC
+
+\subsection{The quartic, in Freudenthal's normal form}
+
+Define $Q(x)=\tfrac16\,\text{coefficient of }e_{-\theta}\text{ in }\ad_x^4\,e_\theta$ for
+$x\in\g_{-1}$.
+
+\begin{result}{Theorem 6.2 (the tick line is a Freudenthal triple system) \hfill \tierC}
+$Q$ is an integral polynomial with $1036$ monomials (primitive coefficients
+$\{1\!:\!28,\;\pm2\!:\!378,\;\pm4\!:\!630\}$), exactly invariant under all $126$ root
+generators of the Levi $E_7$. Writing $x=(\alpha,X,Y,\beta)$ with $X,Y$ in the two $27$'s,
+\[
+\boxed{\;Q=(\alpha\beta+T(X,Y))^2-4\beta\,N(X)-4\alpha\,N(Y)+4\,T(X^\#,Y^\#)\;}
+\]
+where $N$ is the repository's committed $45$-triad $E_6$ cubic, $X^\#_k=\partial N/\partial
+X_k$, and $T(X,Y)=\sum_k t_kX_kY_k$ with $t_k=\Omega(X_k,Y_k)\,\Omega(\alpha,\beta)$. No sign
+has been adjusted by hand. Moreover $(X^\#)^\#=N(X)\,X$ and $X\cdot X^\#=3N(X)$, so $N$ is
+the norm of a cubic Jordan algebra (a split Albert algebra) over $\Q$ \cite{Krutelevich}.
+\cert{w33\_pass10949\_freudenthal\_quasiconformal\_clock\_cone.py}
+\end{result}
+
+The theorem makes one structural point vivid: the cubic ``history volume'' $N(X)$ of
+Section~5 enters the quartic \emph{only} multiplied by a clock pole $\beta$.
+
+\begin{physical}[Black holes and qubits]
+In $\mathcal N=8$ supergravity the $56$ electric and magnetic charges of a black hole
+transform under $E_{7(7)}$, and the Bekenstein--Hawking entropy is
+$S=\pi\sqrt{|Q|}$ with $Q$ Cartan's quartic invariant \cite{KalloshKol}; in the
+``magic'' $\mathcal N=2$ supergravity built on the octonionic Albert algebra the same
+formula holds with $E_{7(-25)}$. Duff and Ferrara showed that the same quartic measures
+the tripartite entanglement of seven qubits \cite{DuffFerrara}, and Borsten, Duff and
+collaborators built a dictionary between black holes and qubit entanglement on it
+\cite{BDDER}. Theorem~6.2 places that quartic, with its signs, inside the forty-point
+geometry's clock. The two real forms named here --- $E_{7(7)}$ and $E_{7(-25)}$ --- are
+exactly the two that appear, for two different reasons, in Section~7. \tierB
+\end{physical}
+
+\subsection{Jordan frames are the forty-five triads}
+
+A \emph{frame} of a cubic Jordan algebra is a decomposition of the identity into three
+orthogonal idempotents. On the committed basis, in each of four $27$-layers, the $45$ triads
+of the cubic are exactly the $45$ strongly orthogonal triples of roots: the coordinate
+frames. (This corrects an older reading of ``$27$ minimal idempotents'': $27$ counts the
+coordinate rank-one directions; the frames are the $45$ triads.) For every coordinate
+idempotent, the Peirce decomposition is $27=1+16+10$. \tierC
+
+\subsection{The 57-dimensional light cone}
+
+Now use the $57$-dimensional Heisenberg algebra as a space of points $p=(X,\tau)$, with
+$X\in\g_{-1}$ and $\tau$ the central coordinate, and move the top vector $e_\theta$ around:
+$v_p=\exp\bigl(\ad(X+\tau e_{-\theta})\bigr)\,e_\theta$.
+
+\begin{result}{Theorem 6.3 (quasiconformal light cone) \hfill \tierC}
+On the committed basis, symbolically:
+\begin{enumerate}[label=(\roman*),leftmargin=1.5em]
+\item the $e_{-\theta}$-component of $v_p$ is $\mathcal N(X,\tau)=\tfrac14Q(X)-\tau^2$;
+\item the points compose by the Heisenberg law
+      $(X_1,\tau_1)(X_2,\tau_2)=(X_1+X_2,\;\tau_1+\tau_2+\tfrac12\Omega(X_1,X_2))$;
+\item the \emph{separation} $D(p,p')=\mathcal N\bigl(X-X',\;\tau-\tau'-\tfrac12\Omega(X',X)\bigr)$
+      equals $B(v_p,v_{p'})/B(e_{-\theta},e_\theta)$ for the Killing form $B$;
+\item the Weyl reflection $w$ exchanging $e_\theta$ and $-e_{-\theta}$ acts as an
+      \emph{inversion} $\iota$, and
+      \[
+      D(\iota p,\iota p')=\frac{D(p,p')}{\mathcal N(p)\,\mathcal N(p')} .
+      \]
+\end{enumerate}
+This is the G\"unaydin--Koepsell--Nicolai quasiconformal realisation of $E_8$
+\cite{GKN}, now computed objectwise on the repository's basis.
+\cert{w33\_pass10949\_freudenthal\_quasiconformal\_clock\_cone.py}
+\end{result}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=1.05,>={Stealth[length=2.2mm]}]
+  % Heisenberg picture: plane = 56, vertical = tau
+  \fill[sky!8] (-0.4,0) -- (4.6,0) -- (5.8,1.5) -- (0.8,1.5) -- cycle;
+  \draw[sky!50] (-0.4,0) -- (4.6,0) -- (5.8,1.5) -- (0.8,1.5) -- cycle;
+  \node[font=\sffamily\scriptsize,text=sky!80!black] at (5.35,0.25) {$\g_{-1}\cong\C^{56}$};
+  % loop in the plane
+  \fill[gold!30] (1.0,0.5) .. controls (1.8,1.35) and (3.4,1.35) .. (3.9,0.75) .. controls (3.2,0.25) and (1.9,0.2) .. (1.0,0.5);
+  \draw[gold!80!black,line width=1pt,->] (1.0,0.5) .. controls (1.8,1.35) and (3.4,1.35) .. (3.9,0.75);
+  \draw[gold!80!black,line width=1pt,->] (3.9,0.75) .. controls (3.2,0.25) and (1.9,0.2) .. (1.0,0.5);
+  \node[font=\scriptsize,text=gold!60!black] at (2.45,0.72) {area $A$};
+  % lifted path
+  \draw[ink,line width=1pt,->] (1.0,0.5) -- ++(0,0.02) .. controls (1.8,1.9) and (3.4,2.3) .. (3.9,1.9);
+  \draw[ink,line width=1pt,->] (3.9,1.9) .. controls (3.2,2.0) and (1.9,2.6) .. (1.0,2.3);
+  \draw[rose,line width=1.2pt,<->] (0.75,0.5) -- node[left,font=\scriptsize,text=rose!85!black]{$\Delta\tau=A$} (0.75,2.3);
+  \fill[ink] (1.0,0.5) circle (1.5pt); \fill[ink] (1.0,2.3) circle (1.5pt);
+  \draw[->,ink!50] (0,0) -- (0,3.0) node[above,font=\scriptsize]{$\tau$ (the $57$th coordinate)};
+  \node[font=\sffamily\scriptsize,text=slate,align=left,anchor=west] at (6.1,1.5)
+    {a closed loop in the $56$\\returns to the same $X$,\\but its lift has moved\\in $\tau$ by the enclosed\\symplectic area: $\tau$\\accumulates \emph{action}};
+\end{tikzpicture}
+\caption{Why the $57$th coordinate matters. In a Heisenberg group the central coordinate
+of a lifted path grows by the symplectic area its projection encloses. The quasiconformal
+separation $D$ depends on $\tau-\tau'$ only through this corrected difference
+$\tau-\tau'-\tfrac12\Omega(X',X)$.}
+\label{fig:heisenberg}
+\end{figure}
+
+\begin{physical}[What it means physically: a light cone, and its inversions]
+Ordinary Minkowski space has a \emph{conformal} symmetry group, $SO(4,2)$, larger than the
+Lorentz group; its most striking element is the inversion $x\mapsto x/x^2$, under which
+the interval between two events transforms as
+\[
+(x'-y')^2=\frac{(x-y)^2}{x^2\,y^2}.
+\]
+Theorem~6.3(iv) is exactly this law, with the Minkowski interval replaced by the quartic
+separation $D$ on a $57$-dimensional space. So $E_8$ acts on the forty-point clock's
+Heisenberg algebra as a group of ``conformal'' symmetries of a quartic light cone.
+The central coordinate $\tau$ plays the role of accumulated action: the same pattern met
+in Section~4, where the finite present forgot a common mode that the lifted history
+remembered. \tierB\ (the reading) \ \tierC\ (the formulas)
+\end{physical}
+
+\begin{keyidea}
+A single tick of a Hesse clock turns $E_8$ into $1+56+134+56+1$. The $56$ is Freudenthal's
+triple system, whose quartic --- computed from the committed brackets with no sign
+adjusted --- is the black-hole and seven-qubit invariant; and with one more coordinate it
+becomes a $57$-dimensional light cone on which $E_8$ acts by conformal-type inversions.
+\end{keyidea}
+
+\begin{boundary}
+The formulas are exact, but they are the formulas of the \emph{complexified} (or split)
+structure. Whether the light cone is Lorentzian --- one time direction, the rest space ---
+depends on a choice of real form, which the finite field cannot see. That is the subject
+of Section~7. Nothing here supplies a black hole, a charge lattice of a physical theory, or
+dynamics. \tierO
+\end{boundary}

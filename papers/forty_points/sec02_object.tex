@@ -1,0 +1,213 @@
+\section{The object: the symplectic quadrangle \texorpdfstring{$W(3,3)$}{W(3,3)}}
+\label{sec:object}
+
+\subsection{Definition}
+
+Let $V=\F_3^4$ with coordinates $x=(x_1,x_2,x_3,x_4)$ and the \emph{symplectic form}
+\[
+\langle x,y\rangle \;=\; x_1y_3+x_2y_4-x_3y_1-x_4y_2 \pmod 3 .
+\]
+It is bilinear, alternating ($\langle x,x\rangle=0$) and nondegenerate (only $x=0$ pairs
+to zero with everything).
+
+\begin{definition}
+The \emph{points} of $\W$ are the one-dimensional subspaces of $V$ ($40$ of them). Two
+distinct points $\langle x\rangle,\langle y\rangle$ are \emph{collinear} if
+$\langle x,y\rangle=0$. The \emph{lines} of $\W$ are the two-dimensional subspaces $L$
+on which the form vanishes identically (\emph{totally isotropic} or \emph{Lagrangian}
+planes); each contains $(9-1)/2=4$ points.
+\end{definition}
+
+\begin{result}{Proposition 2.1 \hfill \tierT}
+$\W$ has $40$ points and $40$ lines. Every line has $4$ points and every point lies on
+$4$ lines. For a point $p$ and a line $L$ not containing it, exactly one point of $L$ is
+collinear with $p$.
+\end{result}
+
+\begin{proof}
+Points: $(3^4-1)/(3-1)=40$. For a point $p=\langle x\rangle$, the set
+$x^\perp=\{y:\langle x,y\rangle=0\}$ is a $3$-dimensional subspace containing $x$; the
+lines through $p$ are the $2$-dimensional subspaces of $x^\perp$ that contain $x$, and
+these correspond to the points of $x^\perp/\langle x\rangle\cong\F_3^2$, of which there
+are $(9-1)/2=4$. Double counting point--line incidences, $40\cdot4=(\#\text{lines})\cdot4$,
+so there are $40$ lines. Finally, if $p\notin L$ then $x^\perp\cap L$ is a subspace of
+$L$ of dimension $1$ (it cannot be all of $L$, since then $\langle x\rangle+L$ would be a
+totally isotropic $3$-space, impossible in a nondegenerate $4$-space), so exactly one
+point of $L$ is collinear with $p$.
+\end{proof}
+
+The last property is the defining axiom of a \emph{generalized quadrangle}: there are no
+triangles made of three lines, but from any point you can always reach any line in one
+step, in exactly one way. With four points per line and four lines per point, $\W$ is
+the generalized quadrangle of order $(3,3)$, usually written $\mathrm{GQ}(3,3)$ \cite{PayneThas}.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=0.95]
+  \fill[ink] (0,0) circle (3pt) node[below left=1pt,font=\small] {$p$};
+  \foreach \a/\c/\n in {90/teal/1,180/sky/2,270/gold/3,0/sage/4}{
+    \draw[\c,line width=1.3pt] (0,0) -- (\a:2.6);
+    \foreach \r in {0.9,1.75,2.6}{\fill[\c] (\a:\r) circle (2.4pt);} }
+  \node[font=\footnotesize,align=center,text=slate] at (0,-3.3)
+     {$1$ point \;+\; $4\times3=12$ neighbours \;+\; $27$ far points \;=\; $40$};
+  \begin{scope}[xshift=6.2cm]
+    \draw[ink!60,line width=1.1pt] (-1.8,1.4) -- (1.8,1.4) node[right,font=\small]{$L$};
+    \foreach \x in {-1.5,-0.5,0.5,1.5}{\fill[ink!70] (\x,1.4) circle (2.4pt);}
+    \fill[rose] (0,-1.3) circle (3pt) node[below,font=\small]{$p\notin L$};
+    \draw[rose,line width=1.2pt,dashed] (0,-1.3) -- (0.5,1.4);
+    \node[font=\footnotesize,text=slate,align=center] at (0,-2.5)
+     {exactly one point of $L$\\is collinear with $p$};
+  \end{scope}
+\end{tikzpicture}
+\caption{Left: the view of $\W$ from one point. Right: the quadrangle axiom.}
+\label{fig:pencil}
+\end{figure}
+
+\subsection{The collinearity graph and its spectrum}
+
+Join two points by an edge when they are collinear. Each point has $4\times3=12$
+neighbours, so the graph has $40\cdot12/2=240$ edges. Two collinear points share exactly
+$2$ further neighbours (the other two points of their line), and two non-collinear points
+share exactly $4$ (the points of $x^\perp\cap y^\perp$, a nondegenerate plane). A graph in
+which these three numbers are constant is called \emph{strongly regular}; this one is
+$\SRG(40,12,2,4)$ \cite{BvM}.
+
+\begin{result}{Proposition 2.2 \hfill \tierT}
+The adjacency matrix $A$ of $\W$ has eigenvalues $12$ (once), $2$ ($24$ times) and $-4$
+($15$ times).
+\end{result}
+
+\begin{proof}
+For $\SRG(v,k,\lambda,\mu)$ one has $A^2=kI+\lambda A+\mu(J-I-A)$, where $J$ is the
+all-ones matrix. On vectors orthogonal to the all-ones vector, $J$ acts as zero, so every
+other eigenvalue $\theta$ satisfies $\theta^2=(\lambda-\mu)\theta+(k-\mu)$, i.e.
+$\theta^2+2\theta-8=0$, giving $\theta\in\{2,-4\}$. Multiplicities $f,g$ satisfy
+$f+g=39$ and $\tr A=12+2f-4g=0$, so $f=24$, $g=15$.
+\end{proof}
+
+Since $|-4|<2\sqrt{11}\approx6.63$, the graph is \emph{Ramanujan}: it is as good an
+expander as a $12$-regular graph can be. This is why the machine of Section~10 can route
+between any two of its forty nodes in two hops, and why the graph's minimum bisection is
+large ($100$ of the $240$ edges, a computed value).
+
+\begin{figure}[p]
+\centering
+\begin{tikzpicture}[scale=1.02,
+   ff/.style={rose!55,line width=0.22pt,opacity=0.55},
+   nf/.style={sky!70,line width=0.28pt,opacity=0.6},
+   nn/.style={ink!70,line width=1.1pt},
+   pn/.style={ink!80,line width=1.1pt}]
+  \input{fig_w33portrait}
+  \node[font=\sffamily\small\bfseries,text=ink] at (0,-4.85) {$W(3,3)$: $40$ points, all $240$ edges};
+\end{tikzpicture}
+
+\medskip
+\begin{tikzpicture}
+  \foreach \c/\t/\x in {ink/{$p$ and its $4$ lines ($12+12$ edges)}/0,
+                        sky/{neighbour to far point ($108$)}/5.4,
+                        rose/{far to far ($108$)}/10.1}{
+    \draw[\c,line width=1.4pt] (\x,0) -- (\x+0.5,0);
+    \node[anchor=west,font=\sffamily\scriptsize] at (\x+0.6,0) {\t};}
+\end{tikzpicture}
+\caption{A portrait of $\W$, computed from the symplectic form and drawn from the point
+of view of one point $p$ (centre). Its $12$ neighbours lie on four lines (four colours,
+three points each); the $27$ far points sit on the outer ring, ordered by which neighbour
+they see on each of the four lines --- by the quadrangle axiom every far point sees exactly
+one. The edge counts $12+12+108+108=240$ are forced by $\SRG(40,12,2,4)$.}
+\label{fig:portrait}
+\end{figure}
+
+\begin{plainwords}
+``Strongly regular'' means that the geometry looks exactly the same from every point, and
+from every pair of points. There is no privileged measurement. The three eigenvalues are
+the geometry's ``vibration frequencies''; that there are only three is the algebraic
+signature of this perfect evenness.
+\end{plainwords}
+
+\subsection{What the points and lines are physically}
+
+Let $W(x)=X^{x_1}Z^{x_3}\otimes X^{x_2}Z^{x_4}$ be the two-qutrit Pauli operator with
+label $x\in\F_3^4$. A direct calculation from $ZX=\omega XZ$ gives
+\begin{equation}\label{eq:commutation}
+W(x)\,W(y)\;=\;\omega^{\langle x,y\rangle}\,W(y)\,W(x).
+\end{equation}
+So the symplectic form is not an arbitrary choice: it \emph{is} the commutation phase of
+two-qutrit measurements.
+
+\begin{physical}[What it means physically: contexts]
+\begin{itemize}[leftmargin=1.2em]
+\item A \textbf{point} is a measurement direction: the cyclic group generated by one
+      Pauli operator, which is the same whether it is run forwards or backwards.
+\item Two points are \textbf{collinear} when their operators commute and can be measured
+      at the same time without disturbing each other.
+\item A \textbf{line} is a maximal set of mutually compatible measurements: an abelian
+      group of $9$ Pauli operators whose common eigenvectors form a basis of the
+      two-qutrit space $\C^9$. Physicists call this a \emph{stabilizer group}, and each
+      of its $9$ joint eigenstates a \emph{stabilizer state}. There are $40$ lines and
+      so $40\times9=360$ stabilizer states --- the standard count for two qutrits.
+\item The \textbf{quadrangle axiom} says: given any measurement and any complete
+      measurement context not containing it, exactly one member of the context is
+      compatible with it.
+\end{itemize}
+\end{physical}
+
+The quantum operations that map Pauli operators to Pauli operators (up to phase) form the
+two-qutrit \emph{Clifford group} \cite{GHW}. Modulo the Paulis themselves and phases, it acts on the
+labels $x$ by exactly the linear maps preserving $\langle\,,\rangle$: the symplectic
+group $\Sp(4,3)$. So the symmetries of the geometry are, literally, the ``cheap'' quantum
+gates.
+
+\subsection{Two groups of order 51,840, which are not the same group}
+
+The symmetry groups that appear around $\W$ are easy to confuse, and confusing them has
+cost this programme real work (Section~\ref{sec:e8-trap}). Adapting the blueprint's
+account:
+\[
+\PSp(4,3)\cong U_4(2)\ (\text{order }25\,920),\qquad
+\Sp(4,3)\cong 2.U_4(2),\qquad
+\PGSp(4,3)\cong U_4(2){:}2\cong W(E_6).
+\]
+The last two both have order $51\,840$ but are \emph{not isomorphic}: $\Sp(4,3)$ has a
+centre of order two (the map $x\mapsto -x$), while $\PGSp(4,3)$ --- the full automorphism
+group of $\W$ --- has trivial centre and is the Weyl group of the exceptional root system
+$E_6$. \tierT
+
+\begin{plainwords}
+The two groups have the same size but different ``shapes''. One of them contains a
+special element that commutes with everything --- a global sign flip. Whether that sign
+is visible or invisible turns out to decide whether the structure can tell left from
+right. This is why the same forty points can \emph{host} a handedness without being able
+to \emph{choose} one (Section~\ref{sec:chirality}).
+\end{plainwords}
+
+\subsection{The dual picture and a firewall}
+
+Swap the roles of points and lines: the $40$ lines of $\W$, with two lines ``adjacent''
+when they meet, form the dual quadrangle, which is the parabolic quadric $Q(4,3)$. For odd
+$q$ the quadrangle $W(3,q)$ is \emph{not} isomorphic to its dual, although both have
+collinearity graph parameters $\SRG(40,12,2,4)$. This distinction matters several times
+below: the finite space-time of Section~4 lives on the \emph{line} side, while the
+qutrit operators live on the \emph{point} side. Repeated coincidences of counts between the
+two sides (for instance $27$ vertices, $108$ edges, $36$ triangles) do not make them the
+same object --- the repository calls this the \emph{point/line firewall}, and it has
+caught several tempting mistakes. \tierC\ (\cert{w33\_20260924\_history\_pointline\_cospectral\_firewall.py})
+
+\subsection{Why three?}
+
+A sceptical reader should ask whether ``three'' was chosen because it works. The
+repository records five equations in which $q$ appears as an unknown integer and each has
+exactly one positive solution, $q=3$. Two can be checked by hand:
+\begin{itemize}
+\item The number of edges of the collinearity graph of $W(3,q)$ is
+      $q(q+1)^2(q^2+1)/2$; the number of elements of $\F_{q^5}$ outside $\F_q$ is $q^5-q$.
+      Setting them equal gives $2(q-1)=q+1$, so $q=3$: both equal $240$.
+\item The number of points not collinear with a given point is $q^3$; it equals $27$,
+      the dimension of the fundamental representation of $E_6$, only for $q=3$.
+\end{itemize}
+
+\begin{boundary}
+These are coincidences of integers, not derivations. They do not prove that three is
+\emph{necessary} for anything physical. They do show that the programme's most unusual
+choice --- three-level systems rather than two-level ones --- is the one value at which
+several independent structures meet. \tierB
+\end{boundary}

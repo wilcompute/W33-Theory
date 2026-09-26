@@ -1,0 +1,231 @@
+\section{The Albert algebra: ten dimensions, a spinor, and matter parity}
+\label{sec:lorentz}
+
+Section~7 produced, from the clock, a $27$-dimensional Euclidean Jordan algebra. By the
+Jordan--von Neumann--Wigner classification there is exactly one such algebra that is
+``exceptional'': the \emph{Albert algebra} $H_3(\mathbb O)$ of $3\times3$ Hermitian matrices
+over the octonions. Since the 1930s it has been suspected of having something to do with
+quantum mechanics and particle physics; this section computes its symmetries on the
+committed basis and finds the Lorentz group of ten-dimensional space-time, a chiral spinor,
+and the repository's own matter parity.
+
+\begin{plainwords}
+The \emph{octonions} are the largest of the four number systems in which you can divide:
+the real numbers, the complex numbers, the quaternions, and the octonions, of dimensions
+$1,2,4,8$. Octonions do not even obey $(ab)c=a(bc)$, yet $3\times3$ ``Hermitian'' matrices of
+them --- real numbers on the diagonal, octonions above it, their conjugates below --- form a
+consistent algebra of dimension $3+3\times8=27$. Its symmetries are the exceptional groups
+$F_4$ and $E_6$ \cite{Baez2002}. Manogue, Dray and Wilson have recently described the
+Standard Model through octonionic $E_8$ structures of this kind \cite{MDW2022}.
+\end{plainwords}
+
+\subsection{Anatomy of a \texorpdfstring{$3\times3$}{3x3} octonionic matrix}
+
+Choose the idempotent $c=E_{11}$ (a $1$ in the top-left corner). Every element of the
+algebra splits by how it behaves under multiplication by $c$ --- its \emph{Peirce
+decomposition}, with eigenvalues $1$, $\tfrac12$, $0$:
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=1.15,
+   cellbox/.style={minimum width=15mm,minimum height=11mm,draw=white,line width=1.5pt,font=\small,align=center}]
+  \node[cellbox,fill=ink,text=white] at (0,0) {$a$\\[-2pt]\tiny real};
+  \node[cellbox,fill=gold!45] at (1.35,0) {$z$\\[-2pt]\tiny $\mathbb O$};
+  \node[cellbox,fill=gold!45] at (2.7,0) {$\bar y$\\[-2pt]\tiny $\mathbb O$};
+  \node[cellbox,fill=gold!45] at (0,-1.0) {$\bar z$};
+  \node[cellbox,fill=teal!40] at (1.35,-1.0) {$b$\\[-2pt]\tiny real};
+  \node[cellbox,fill=teal!40] at (2.7,-1.0) {$x$\\[-2pt]\tiny $\mathbb O$};
+  \node[cellbox,fill=gold!45] at (0,-2.0) {$y$};
+  \node[cellbox,fill=teal!40] at (1.35,-2.0) {$\bar x$};
+  \node[cellbox,fill=teal!40] at (2.7,-2.0) {$c'$\\[-2pt]\tiny real};
+  \draw[ink!60,line width=1pt] (-0.85,0.62) -- (-0.95,0.62) -- (-0.95,-2.62) -- (-0.85,-2.62);
+  \draw[ink!60,line width=1pt] (3.55,0.62) -- (3.65,0.62) -- (3.65,-2.62) -- (3.55,-2.62);
+  % legend
+  \begin{scope}[xshift=5.1cm,yshift=0.1cm]
+    \fill[ink] (0,0) rectangle (0.4,0.3); \node[anchor=west,font=\small] at (0.55,0.15) {$A_1$: \ $1$ dim --- the line through $c$};
+    \fill[gold!45] (0,-0.8) rectangle (0.4,-0.5); \node[anchor=west,font=\small] at (0.55,-0.65) {$A_{1/2}$: \ $16=\mathbb O^2$ --- a spinor};
+    \fill[teal!40] (0,-1.6) rectangle (0.4,-1.3); \node[anchor=west,font=\small] at (0.55,-1.45) {$A_0$: \ $10=H_2(\mathbb O)$ --- a vector};
+    \node[anchor=west,font=\scriptsize,text=slate,align=left] at (0,-2.35)
+      {$\det\begin{psmallmatrix} b & x\\ \bar x & c'\end{psmallmatrix}=bc'-|x|^2$\\
+       has signature $(1,9)$: ten-dimensional\\Minkowski space};
+  \end{scope}
+\end{tikzpicture}
+\caption{The Peirce decomposition $27=1+16+10$ of the Albert algebra with respect to a
+primitive idempotent. The lower-right $2\times2$ block is a copy of ten-dimensional
+Minkowski space; the two octonions in the first row and column form a sixteen-component
+spinor.}
+\label{fig:peirce}
+\end{figure}
+
+That the $2\times2$ Hermitian octonionic matrices form ten-dimensional Minkowski space, with
+the determinant as the Minkowski interval, is a classical observation (Sudbery; Kugo and
+Townsend; Baez and Huerta), and it is the algebraic reason the superstring lives in ten
+dimensions \cite{BaezHuerta,KugoTownsend}. The new content is that the forty-point clock
+reaches it, on the committed basis.
+
+\subsection{The symmetries, computed}
+
+\begin{result}{Theorem 8.1 (the clock Albert algebra) \hfill \tierC}
+For the $27$-dimensional clock algebra $A$ of Theorem~7.2:
+\begin{enumerate}[label=(\roman*),leftmargin=1.5em]
+\item the derivations $\mathrm{Der}(A)=\mathrm{span}\,[L_x,L_y]$ form a $52$-dimensional
+      Lie algebra with negative-definite trace form $(0,52)$: the compact $F_{4(-52)}$;
+\item the reduced structure algebra $\mathrm{str}_0(A)=\mathrm{Der}(A)\oplus L(A_{\mathrm{tr}=0})$
+      is $78$-dimensional, obeys $[D,L_x]=L_{Dx}$ for all $52\times27$ pairs, and has
+      inertia $(26,52)$: $E_{6(-26)}$;
+\item the derivations fixing $c$ form a compact $36$-dimensional $\mathfrak{spin}(9)$;
+      adding the nine ``boosts'' $L_y$ ($y\in A_0$, orthogonal to $e-c$) gives a
+      $45$-dimensional algebra that preserves $A_0$ and its determinant of inertia $(1,9)$,
+      and acts faithfully: it is $\so(1,9)$;
+\item on $A_{1/2}$ the commutant of $\so(1,9)$ is one-dimensional: the $16$ is absolutely
+      irreducible --- the Majorana--Weyl spinor of $\so(1,9)$.
+\end{enumerate}
+\cert{w33\_pass10950\_clock\_albert\_lorentz\_spinor.py}
+\end{result}
+
+\begin{center}
+\begin{tikzpicture}[x=3.25cm,y=0.95cm,
+   hd/.style={font=\sffamily\scriptsize\bfseries,align=center,text=ink},
+   rw/.style={font=\sffamily\scriptsize,align=right,anchor=east,text=slate},
+   cl/.style={draw=#1,fill=#1!10,rounded corners=3pt,minimum width=29mm,minimum height=7.2mm,font=\small,align=center},
+   ok/.style={font=\scriptsize\bfseries,text=teal!80!black}]
+  \node[hd] at (1,0.95) {ordinary space-time\\$H_2(\C)$: \ $4$ dims};
+  \node[hd] at (2,0.95) {superstring space-time\\$H_2(\mathbb O)$: \ $10$ dims};
+  \node[hd] at (3,0.95) {exceptional space-time\\$H_3(\mathbb O)$: \ $27$ dims};
+  \foreach \lab/\y in {{rotations (automorphisms)}/0,{Lorentz (norm-preserving)}/-1,{conformal}/-2,{quasiconformal}/-3}{
+     \node[rw] at (0.45,\y) {\lab};}
+  % column 1
+  \node[cl=slate] at (1,0) {$SO(3)$};
+  \node[cl=slate] at (1,-1) {$SO(1,3)$};
+  \node[cl=slate] at (1,-2) {$SO(2,4)$};
+  \node[font=\scriptsize,text=slate!60] at (1,-3) {---};
+  % column 2
+  \node[cl=sage] at (2,0) {$\mathrm{Spin}(9)$ \ \computed};
+  \node[cl=sage] at (2,-1) {$\mathrm{Spin}(1,9)$ \ \computed};
+  \node[cl=slate] at (2,-2) {$SO(2,10)$};
+  \node[font=\scriptsize,text=slate!60] at (2,-3) {---};
+  % column 3
+  \node[cl=teal] at (3,0) {$F_{4(-52)}$ \ \computed};
+  \node[cl=teal] at (3,-1) {$E_{6(-26)}$ \ \computed};
+  \node[cl=teal] at (3,-2) {$E_{7(-25)}$ \ \computed};
+  \node[cl=ink,text=white,fill=ink] at (3,-3) {$E_{8(-24)}$ \ \computed};
+  \node[font=\sffamily\scriptsize,text=slate,align=left,anchor=west] at (0.55,-4.0)
+    {\computed\ \ computed in this paper on the committed $E_8$ basis, in the real form selected by the Hesse clock\\
+     \phantom{\computed}\ \ (Passes 10949--10950); unmarked cells are classical.};
+\end{tikzpicture}
+\captionof{figure}{The ladder of space-times. A Jordan algebra of Hermitian matrices is a
+space-time; its determinant is the interval. For $2\times2$ complex matrices it is
+ordinary Minkowski space, for $2\times2$ octonionic matrices the ten-dimensional space of the
+superstring, and for $3\times3$ octonionic matrices the $27$-dimensional ``exceptional
+space-time'' of G\"unaydin \cite{Gunaydin1993}. Each has rotations, a Lorentz group, a conformal
+group and (for the last) a quasiconformal group. The Hesse clock's real form of $E_8$ produces
+the whole right-hand column, and the middle column inside it.}
+\label{fig:spacetimes}
+\end{center}
+
+\begin{physical}[What it means physically: the clock picks the division algebra]
+The last row of Freudenthal's ``magic square'' of Lie algebras can be built from the octonions
+in two ways: from the division algebra $\mathbb O$, giving the chain
+$F_{4(-52)}\subset E_{6(-26)}\subset E_{7(-25)}\subset E_{8(-24)}$ of automorphism, Lorentz,
+conformal and quasiconformal groups of $H_3(\mathbb O)$, or from the split octonions, giving
+the split forms. The Hesse clock selects the first: the \emph{division-algebra} octonions, the
+ones with a positive norm, the ones that make $H_2(\mathbb O)$ a genuine Minkowski space. The
+repository's earlier ``split'' choice lands on the other side. \tierC\ (the four real forms)
+\ \tierB\ (the reading)
+\end{physical}
+
+\subsection{Down to four dimensions}
+
+Choose a further splitting of the $10$ into $4+6$: time $u=e-c$, one frame direction, and
+a complex line inside the octonions supplied by the complex structure of $\mathfrak p^+$
+itself. The subalgebra of $\so(1,9)$ preserving the $4$ and the $6$ is $21$-dimensional,
+$\so(1,3)\oplus\so(6)\cong\mathfrak{sl}(2,\C)\oplus\mathfrak{su}(4)$, and its commutant on
+the $16$ is two-dimensional and contains a complex structure. Hence
+\[
+\mathbf{16}\;=\;(\mathbf2,\mathbf4)\;\oplus\;\overline{(\mathbf2,\mathbf4)} .
+\]
+\tierC\ (\cert{w33\_pass10950\_clock\_albert\_lorentz\_spinor.py})
+
+\begin{physical}[Two readings of the same branching]
+A ten-dimensional chiral spinor, seen by a four-dimensional observer, becomes four
+left-handed Weyl spinors transforming as the $\mathbf4$ of $SU(4)$. If $SU(4)$ is read as
+the rotation group of six hidden dimensions, this is the fermion content of maximally
+supersymmetric Yang--Mills theory. If it is read as Pati--Salam colour, with lepton number
+as the fourth colour, it is one generation of quarks and leptons. The branching is exact;
+which reading nature uses is not decided by it. \tierB
+\end{physical}
+
+\subsection{Matter parity is a rotation by \texorpdfstring{$2\pi$}{2 pi}}
+
+The repository carries an independent certificate for a ``matter charge'' $Q_\psi$ on the
+$27$: it splits $27=16_1+10_{-2}+1_4$, and on the $45$ triads the charges fall into the
+pattern $40\times(-2,1,1)+5\times(-2,-2,4)$. Matter parity is $(-1)^{Q_\psi}$: odd on the
+$16$, even on the $10$ and $1$. In the Minimal Supersymmetric Standard Model a parity of
+exactly this kind is what forbids the proton from decaying through dimension-four
+operators.
+
+\begin{result}{Theorem 8.2 (matter parity is the Peirce symmetry) \hfill \tierC}
+For every one of the $27$ coordinate idempotents $c$, the Peirce charge
+\[
+Q=6L_c-2\qquad(\text{eigenvalue }4\text{ on }A_1,\;1\text{ on }A_{1/2},\;-2\text{ on }A_0)
+\]
+reproduces the certified spectrum of $Q_\psi$, is conserved on all $45$ triads, and
+gives exactly the pattern $40\times(-2,1,1)+5\times(-2,-2,4)$. Its parity $(-1)^Q$ is the
+Peirce symmetry $U_{2c-e}$, an automorphism of $A$ that is $+1$ on $A_1\oplus A_0$ and $-1$
+on the spinor $A_{1/2}$. For a single-plane rotation generator $D\in\mathfrak{spin}(9)$,
+$\exp(2\pi D)=U_{2c-e}$ (numerical agreement $2.7\times10^{-15}$).
+\cert{w33\_pass10950\_clock\_albert\_lorentz\_spinor.py}
+\end{result}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[>={Stealth[length=2.2mm]}]
+  % charges
+  \begin{scope}
+    \foreach \lab/\q/\n/\c/\s [count=\i from 0] in {{$A_1$}/4/1/ink/{+},{$A_{1/2}$}/1/16/gold/{-},{$A_0$}/-2/10/teal/{+}}{
+      \node[draw=\c,fill=\c!15,rounded corners=3pt,minimum width=22mm,minimum height=9mm,font=\small,align=center] at (0,-\i*1.15) {\lab: $\n$ dims};
+      \node[font=\small] at (2.1,-\i*1.15) {$Q=\q$};
+      \node[circle,draw=\c,fill=white,font=\small\bfseries,minimum size=6mm,inner sep=0pt] at (3.3,-\i*1.15) {$\s$};}
+    \node[font=\sffamily\scriptsize,text=slate] at (3.3,0.75) {$(-1)^Q$};
+  \end{scope}
+  % 2pi rotation
+  \begin{scope}[xshift=7.4cm,yshift=-1.15cm]
+    \draw[->,rose,line width=1.3pt] (20:1.05) arc[start angle=20,end angle=375,radius=1.05];
+    \node[font=\small,text=rose!80!black] at (0,1.4) {rotate by $2\pi$};
+    \draw[->,teal,line width=1.2pt] (0,0) -- (0.8,0.35);
+    \node[font=\scriptsize,text=teal!80!black,align=center] at (0,-1.55) {vectors and scalars: $+1$};
+    \node[font=\scriptsize,text=gold!70!black,align=center] at (0,-1.95) {spinors: $-1$ \ (the $16$)};
+  \end{scope}
+  \node[font=\sffamily\small] at (4.95,-1.15) {$=$};
+\end{tikzpicture}
+\caption{Matter parity in the clock Albert algebra: the sign that a full turn gives a spinor.}
+\label{fig:parity}
+\end{figure}
+
+\begin{physical}[What it means physically]
+A rotation by $2\pi$ returns every vector to itself, but multiplies every spinor by $-1$:
+the mathematical root of the difference between fermions and bosons. In $SO(10)$ grand
+unification it is known that matter parity can be realised by exactly such a central
+element of $\mathrm{Spin}(10)$, acting as $-1$ on the matter $\mathbf{16}$ and $+1$ on the
+Higgs $\mathbf{10}$ (cf.\ \cite{Martin1992}). Theorem~8.2 is the objectwise version of that fact
+inside the forty-point clock: the repository's matter parity \emph{is} the $2\pi$ rotation
+of the $\mathrm{Spin}(9)$ fixing a primitive idempotent. The same $27=1+10+16$ that a
+GUT reads as singlet, Higgs and matter is, in the clock real form, scalar, Lorentz vector
+and Weyl spinor. \tierB\ (reading) \ \tierC\ (identity)
+\end{physical}
+
+\begin{boundary}
+The $\so(1,9)$ here is the stabiliser of an idempotent inside $E_{6(-26)}$, an
+\emph{internal} symmetry of the algebra; it is not derived to be the Lorentz group of
+physical space-time, and the $2\pi$ rotation is a rotation in that internal $\mathrm{Spin}(9)$.
+The identification of $Q_\psi$ with $6L_c-2$ holds up to the $W(E_6)$-transitive choice of
+coordinate idempotent. Neither chirality selection, masses nor gauge dynamics follow.
+\end{boundary}
+
+\begin{keyidea}
+The exceptional ladder closes: from one qutrit, through $W(3,3)$, $E_8$, a Hesse clock and
+its real form, to the Albert algebra $H_3(\mathbb O)$ --- whose automorphisms are $F_4$,
+whose structure group is $E_{6(-26)}$, and inside which sit ten-dimensional Minkowski space,
+its Lorentz algebra $\so(1,9)$, a Majorana--Weyl spinor, and, as a rotation by $2\pi$, the
+matter parity that protects the proton.
+\end{keyidea}

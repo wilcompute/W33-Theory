@@ -1,0 +1,203 @@
+\section{Real forms: where time's signature comes from}
+\label{sec:real}
+
+Every computation so far could have been done over the complex numbers --- or over
+$\F_3$. But physics needs more: it needs to know which directions are \emph{time-like}
+and which \emph{space-like}. Mathematically, that is the choice of a \emph{real form}.
+
+\begin{plainwords}
+A complex Lie algebra is like a map drawn without saying which way is north. A real form
+chooses, for every direction, whether it behaves like a rotation (you come back to where
+you started --- ``compact'', like space) or like a boost (you never come back ---
+``non-compact'', like the relation between observers moving at different speeds). The
+same complex $E_8$ has three real forms, and they differ precisely in how many directions
+are rotation-like.
+\end{plainwords}
+
+\subsection{Three real forms of \texorpdfstring{$E_8$}{E8}}
+
+A real form is fixed by a \emph{Cartan involution}, which splits the algebra into a
+compact part $\mathfrak k$ (rotations) and a non-compact part $\mathfrak p$ (boosts). The
+difference $\dim\mathfrak p-\dim\mathfrak k$ is the \emph{signature}.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=0.036cm,y=1cm]
+  \foreach \nm/\k/\p/\sig/\lab [count=\i from 0] in
+     {{$E_{8(8)}$}/120/128/8/{split: $\mathfrak k=\so(16)$},
+      {$E_{8(-24)}$}/136/112/-24/{clock: $\mathfrak k=\e_7\oplus\mathfrak{su}_2$},
+      {$E_{8(-248)}$}/248/0/-248/{compact}}{
+    \node[anchor=east,font=\small] at (-4,-\i*0.9) {\nm};
+    \fill[teal!55] (0,-\i*0.9-0.28) rectangle (\k,-\i*0.9+0.28);
+    \ifnum\p>0 \fill[rose!55] (\k,-\i*0.9-0.28) rectangle (\k+\p,-\i*0.9+0.28);\fi
+    \node[font=\scriptsize,text=white] at (\k/2,-\i*0.9) {$\k$};
+    \ifnum\p>0 \node[font=\scriptsize,text=white] at (\k+\p/2,-\i*0.9) {$\p$};\fi
+    \node[anchor=west,font=\scriptsize,text=slate] at (254,-\i*0.9) {\lab; \ signature $\sig$};
+  }
+  \fill[teal!55] (0,-2.85) rectangle (8,-2.6); \node[anchor=west,font=\scriptsize] at (10,-2.72) {compact (rotations)};
+  \fill[rose!55] (80,-2.85) rectangle (88,-2.6); \node[anchor=west,font=\scriptsize] at (90,-2.72) {non-compact (boosts)};
+\end{tikzpicture}
+\caption{The three real forms of $E_8$, drawn as the split $248=\dim\mathfrak k+\dim\mathfrak p$.
+The committed ``split'' form of the repository is $E_{8(8)}$; the Hesse clocks select
+$E_{8(-24)}$.}
+\label{fig:realforms}
+\end{figure}
+
+\subsection{A sign law, and the height twist}
+
+On the committed Chevalley basis the Killing form obeys an exact law,
+\[
+K(e_\alpha,e_{-\alpha})=-60\,(-1)^{\hgt\alpha},
+\]
+where $\hgt\alpha$ is the height of the root (the sum of its simple-root coefficients). From
+it one reads off the \emph{compact} conjugation $\sigma_c(e_\alpha)=(-1)^{\hgt\alpha}\,
+\overline{e_{-\alpha}}$, verified to be an automorphism on all $30\,628$ basis pairs. The
+repository's certified \emph{split} involution $\Theta$ turns out to be $\sigma_c$
+composed with the \emph{height parity} $(-1)^{\hgt}=\exp(i\pi\rho^\vee)$, where $\rho^\vee$
+is the Weyl co-vector. \tierC\ (\cert{w33\_pass10949\_freudenthal\_quasiconformal\_clock\_cone.py};
+prior certificate \cert{w33\_e8\_split\_real\_form\_involution.py})
+
+\subsection{The three tick lines are a Klein four-group}
+
+The three roots $\theta$, $-(\theta-\alpha_8)$ and $-\alpha_8$ that define the tick line
+and its companions sum to zero, have pairwise products $-1$, and are orthogonal to $E_6$:
+they form the \emph{external} $A_2$ of $E_6\times A_2$. Each defines a parity: $(-1)^{a_8}$,
+$(-1)^{a_7}$, $(-1)^{a_7+a_8}$.
+
+\begin{result}{Theorem 7.1 (tick lines give $E_{8(-24)}$) \hfill \tierC}
+Composed with $\sigma_c$, each of the three tick-line parities defines the real form
+$E_{8(-24)}$. The three commute and form a Klein four-group whose simultaneous eigenspaces
+decompose
+\[
+E_8\;=\;\underbrace{80}_{\e_6\oplus\mathfrak t_2}\;+\;56\;+\;56\;+\;56,
+\]
+one Freudenthal $56$ per tick line.
+\cert{w33\_pass10949\_freudenthal\_quasiconformal\_clock\_cone.py}
+\end{result}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=1]
+  \foreach \a/\c/\n in {90/teal/{L_+},210/gold/{L_0},330/sage/{L_-}}{
+    \fill[\c!18,draw=\c,line width=0.9pt] (\a:1.75) circle (0.9);
+    \node[font=\small\bfseries,text=\c!80!black] at (\a:1.75) {$56$};
+    \node[font=\scriptsize,text=\c!80!black] at (\a:3.1) {tick $\n$};
+    \draw[\c,line width=0.9pt] (\a:0.62) -- (\a:0.85);}
+  \fill[ink] (0,0) circle (0.62);
+  \node[text=white,font=\small\bfseries,align=center] at (0,0.07) {$80$};
+  \node[text=white,font=\tiny] at (0,-0.28) {$\e_6{\oplus}\mathfrak t_2$};
+  \node[font=\sffamily\scriptsize,text=slate,align=left,anchor=west] at (3.6,0.2)
+    {$80+56+56+56=248$\\[3pt] each tick's parity is $-1$ on\\the other two $56$'s, and each\\gives $E_{8(-24)}$ with\\$\mathfrak k=80+56=136=\e_7\oplus\mathfrak{su}_2$};
+\end{tikzpicture}
+\caption{The three tick lines of a Hesse clock, and the decomposition of $E_8$ under the
+Klein four-group of their parities.}
+\label{fig:klein}
+\end{figure}
+
+\subsection{What each twist does to \texorpdfstring{$E_7$}{E7} and \texorpdfstring{$E_6$}{E6}}
+
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{twist of $\sigma_c$} & \textbf{$E_8$} & \textbf{contact Levi $E_7$} & \textbf{$E_6$}\\
+\midrule
+tick $L_+$: $(-1)^{a_8}$ & $E_{8(-24)}$ & compact & compact\\
+tick $L_0$: $(-1)^{a_7}$ & $E_{8(-24)}$ & $\mathbf{E_{7(-25)}}$ & compact\\
+tick $L_-$: $(-1)^{a_7+a_8}$ & $E_{8(-24)}$ & $E_{7(-25)}$ & compact\\
+height $(-1)^{\hgt}$ (committed split) & $E_{8(8)}$ & $\mathbf{E_{7(7)}}$ & $E_{6(2)}$\\
+height $\cdot L_+$ / height $\cdot L_0$ & $E_{8(8)}$ & $E_{7(7)}$ / $E_{7(-5)}$ & $E_{6(2)}$\\
+height $\cdot L_-$ & $E_{8(-24)}$ & $E_{7(-5)}$ & $E_{6(2)}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{physical}[Two supergravities in one table]
+$E_{7(7)}$ is the hidden symmetry (``U-duality'') of maximal $\mathcal N=8$ supergravity in
+four dimensions, and $E_{8(8)}$ that of maximal supergravity in three. $E_{7(-25)}$ is the
+duality group of the ``magic'' $\mathcal N=2$ supergravity built on the octonions. The
+committed split form of the repository lands on the first; the Hesse clock lands on the
+second. The black-hole quartic of Section~6 is the entropy formula in both. \tierB
+\end{physical}
+
+\subsection{The Lorentzian slice lives only in the clock real form}
+
+The contact Levi $E_{7(-25)}$ has a Hermitian symmetric structure: on the $27$-dimensional
+space $\mathfrak p^+=\{a_8=0,\;a_7=+1\}$ the triple product
+\[
+\{x,y,z\}=-[[x,\sigma_c\,y],z]
+\]
+makes $\mathfrak p^+$ a Hermitian Jordan triple system. A \emph{tripotent} is an element
+with $\{e,e,e\}=2e$ (the normalisation used here).
+
+\begin{result}{Theorem 7.2 (signature is a real-form datum) \hfill \tierC}
+\begin{enumerate}[label=(\roman*),leftmargin=1.5em]
+\item Under the clock conjugation all $27$ root vectors of $\mathfrak p^+$ are tripotents;
+      under the committed split conjugation only $12$ of $27$ are.
+\item For the tripotent $e$ of a triad frame, $A=\{x:\{e,x,e\}=2x\}$ with
+      $x\circ y=\tfrac12\{x,e,y\}$ is a $27$-dimensional commutative Jordan algebra with
+      \emph{positive-definite} trace form, inertia $(27,0,0)$: a Euclidean Jordan algebra
+      of rank three --- the Albert algebra $H_3(\mathbb O)$ \cite{FarautKoranyi}.
+\item For a primitive idempotent of the frame, the Peirce spaces have dimensions
+      $1+16+10$, and the rank-two determinant on the $10$-dimensional Peirce-$0$ space has
+      inertia $\mathbf{(1,9)}$ --- Lorentzian.
+\item In the committed split form the same construction gives inertia $(5,5)$. Over $\F_3$
+      the two quadrics are both of type $O^+(10,3)$ and cannot be told apart.
+\end{enumerate}
+\cert{w33\_pass10949\_freudenthal\_quasiconformal\_clock\_cone.py}
+\end{result}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=0.95]
+  % Lorentzian cone
+  \begin{scope}
+    \fill[teal!10] (0,0) -- (-1.5,1.9) arc[start angle=180,end angle=360,x radius=1.5,y radius=0.38] -- cycle;
+    \fill[teal!10] (0,0) -- (-1.5,-1.9) arc[start angle=180,end angle=360,x radius=1.5,y radius=0.38] -- cycle;
+    \draw[teal] (-1.5,1.9) -- (1.5,-1.9); \draw[teal] (1.5,1.9) -- (-1.5,-1.9);
+    \draw[teal] (0,1.9) ellipse[x radius=1.5,y radius=0.38];
+    \draw[teal,dashed] (0,-1.9) ellipse[x radius=1.5,y radius=0.38];
+    \draw[->,ink!60] (0,-2.4) -- (0,2.55) node[above,font=\scriptsize]{one time};
+    \node[font=\sffamily\small\bfseries,text=teal!80!black] at (0,-2.95) {clock form: $(1,9)$};
+    \node[font=\sffamily\scriptsize,text=slate,align=center] at (0,-3.55) {a light cone; initial-value\\problems are well posed};
+  \end{scope}
+  % ultrahyperbolic (5,5): a (1,1) slice of the level sets
+  \begin{scope}[xshift=6.2cm]
+    \clip (-2.1,-2.3) rectangle (2.3,2.6);
+    \foreach \c in {0.25,0.7,1.3}{
+      \draw[rose!65,line width=0.6pt] plot[domain=-1.35:1.35,samples=40] ({sqrt(\c)*cosh(\x)},{sqrt(\c)*sinh(\x)});
+      \draw[rose!65,line width=0.6pt] plot[domain=-1.35:1.35,samples=40] ({-sqrt(\c)*cosh(\x)},{sqrt(\c)*sinh(\x)});
+      \draw[sky!65,line width=0.6pt] plot[domain=-1.35:1.35,samples=40] ({sqrt(\c)*sinh(\x)},{sqrt(\c)*cosh(\x)});
+      \draw[sky!65,line width=0.6pt] plot[domain=-1.35:1.35,samples=40] ({sqrt(\c)*sinh(\x)},{-sqrt(\c)*cosh(\x)});}
+    \draw[ink!70,line width=0.9pt] (-2,-2) -- (2,2); \draw[ink!70,line width=0.9pt] (-2,2) -- (2,-2);
+    \draw[->,ink!60] (-2,0) -- (2.1,0) node[right,font=\scriptsize]{$5$ dims};
+    \draw[->,ink!60] (0,-2.1) -- (0,2.3) node[above,font=\scriptsize]{$5$ dims};
+  \end{scope}
+  \begin{scope}[xshift=6.2cm]
+    \node[font=\sffamily\small\bfseries,text=rose!80!black] at (0,-2.95) {split form: $(5,5)$};
+    \node[font=\sffamily\scriptsize,text=slate,align=center] at (0,-3.55) {five ``times'': no\\causal cone};
+  \end{scope}
+  \node[draw=ink!40,rounded corners=3pt,fill=white,font=\sffamily\scriptsize,align=center] at (3.1,-4.55)
+    {over $\F_3$: both are $O^+(10,3)$ --- indistinguishable};
+\end{tikzpicture}
+\caption{The same Peirce-$0$ quadric in two real forms of $E_8$. Only the real form
+selected by the Hesse clock is Lorentzian.}
+\label{fig:signatures}
+\end{figure}
+
+\begin{physical}[What it means physically: one time, not five]
+Tegmark observed that only space-times with exactly one time direction support
+predictable physics: with several, the equations of motion are ultrahyperbolic and
+initial data do not determine the future \cite{Tegmark1997}. Theorem~7.2 says the finite
+geometry does not decide between one time and five --- over $\F_3$ they are the same ---
+but that the real form picked out by its own clock is the one-time, Lorentzian choice. The
+committed split form, chosen earlier for computational convenience, is the other one.
+\tierB
+\end{physical}
+
+\begin{keyidea}
+Signature is not visible over a finite field. It is a choice of real form, and the Hesse
+clock's tick lines make that choice: they select $E_{8(-24)}\supset E_{7(-25)}$, and with it
+a Euclidean Albert algebra whose Peirce slice is a $1+9$ light cone.
+\end{keyidea}

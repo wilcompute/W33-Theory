@@ -1,0 +1,603 @@
+\section{Time: a finite light cone and four clocks}
+\label{sec:time}
+
+Section~3 ended with a qutrit whose operators behave like the before-and-after of a
+process. This section asks what \emph{time} looks like inside $\W$. The answer comes in
+three layers, and keeping them apart is the main lesson of the section:
+\begin{enumerate}[label=\textbf{\arabic*.},leftmargin=1.6em]
+\item a finite \textbf{present}: $27$ ``events'' carrying an exact Minkowski-type form
+      $t^2-x^2-y^2$, with a light cone and four null directions;
+\item an unbounded \textbf{history}: the paths through those events, which never close up
+      and which remember a winding number that the present forgets;
+\item an \textbf{arrow}: the direction of time in the thermodynamic sense, which appears
+      only when information is thrown away.
+\end{enumerate}
+Everything in layers 1 and 2 is reversible. Layer 3 is where irreversibility enters, and
+we shall see exactly what it costs.
+
+% ------------------------------------------------------------------
+\subsection{Choosing a ``now''}
+
+Fix one line $B$ of $\W$ --- the Bell line of Section~3, the unitary channels. The other
+$39$ lines fall into two kinds: $12$ lines meet $B$ (three through each of its four
+points), and $27$ lines miss it entirely. Every line that misses $B$ can be written
+uniquely as
+\[
+L_S=\{(Sy,\,y)\;:\;y\in\F_3^2\},\qquad S=\begin{pmatrix}a&b\\ b&c\end{pmatrix},\quad a,b,c\in\F_3 ,
+\]
+for a \emph{symmetric} $2\times2$ matrix $S$. There are $3^3=27$ such matrices. So the
+lines of $\W$ decompose as
+\[
+40\;=\;\underbrace{1}_{B}\;+\;\underbrace{12}_{\text{meet }B}\;+\;\underbrace{27}_{\text{histories } S}.
+\]
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=1.0,
+   bp/.style={circle,fill=#1,inner sep=0pt,minimum size=7pt},
+   hist/.style={circle,draw=ink!45,fill=white,inner sep=0pt,minimum size=5.2pt}]
+  % Bell line
+  \draw[ink,line width=2.2pt] (-4.2,3.2) -- (4.2,3.2);
+  \node[font=\sffamily\small\bfseries,text=ink,anchor=west] at (4.35,3.2) {$B$};
+  \foreach \x/\c/\lab in {-3/teal/{(1,0)},-1/sky/{(0,1)},1/gold/{(1,1)},3/sage/{(1,2)}}{
+    \node[bp=\c] (b\x) at (\x,3.2) {};
+    \node[font=\scriptsize,text=\c!80!black] at (\x,3.62) {$\lab$};
+    \foreach \d in {-0.55,0,0.55}{
+      \draw[\c,line width=1.1pt] (\x,3.2) -- (\x+\d,1.75);
+      \fill[\c] (\x+\d,1.75) circle (1.7pt);}
+  }
+  \node[font=\sffamily\scriptsize,text=slate,align=center] at (0,1.25)
+     {$12$ lines meeting $B$ \,=\, $4$ null directions $\times$ $3$};
+  % 27 histories
+  \begin{scope}[yshift=-0.55cm]
+  \foreach \i in {0,...,26}{
+     \pgfmathsetmacro{\xx}{-4.0+ (mod(\i,9))*1.0}
+     \pgfmathsetmacro{\yy}{0.3-floor(\i/9)*0.55}
+     \node[hist] at (\xx,\yy) {};}
+  \draw[decorate,decoration={brace,amplitude=5pt,mirror},slate] (-4.2,-1.05) -- (4.2,-1.05);
+  \node[font=\sffamily\scriptsize,text=slate] at (0,-1.5)
+     {$27$ lines skew to $B$ \,=\, $27$ symmetric matrices $S$ \,=\, the finite present};
+  \end{scope}
+  \node[font=\sffamily\scriptsize,text=slate,anchor=west] at (4.35,1.75) {boundary};
+  \node[font=\sffamily\scriptsize,text=slate,anchor=west] at (4.35,-0.25) {big cell};
+\end{tikzpicture}
+\caption{The forty lines of $\W$ seen from the Bell line $B$. The four points of $B$
+are labelled by the four projective directions of $\F_3^2$; they will turn out to be the
+four null directions of a finite light cone. The $1+12=13$ lines touching $B$ form the
+``boundary''; the $27$ others are the events of the finite present.}
+\label{fig:bellview}
+\end{figure}
+
+The $13$ boundary lines are not an arbitrary leftover. In Pl\"ucker coordinates the $40$
+lines of $\W$ lie on the quadric $x_0x_4-x_1x_3+x_2^2=0$ in $\mathbb{P}^4(\F_3)$ ---
+this is the dual quadrangle $Q(4,3)$ of Section~2 --- and the $27$ histories are its
+``big cell'' $x_0\neq0$, reached by $S\mapsto[1:a:b:c:ac-b^2]$. The $13$ points with
+$x_0=0$ form the tangent cone of the quadric at $B$: $B$ itself plus four three-point
+generators, one for each point of $B$. \tierC\ (\cert{w33\_20260924\_history\_bigcell\_q43\_compactification.py})
+
+% ------------------------------------------------------------------
+\subsection{The finite light cone}
+
+Two histories $L_S$ and $L_T$ are either disjoint or they meet in a point. A short
+calculation shows they meet exactly when
+\[
+\det(S-T)=0 .
+\]
+Write $S=\begin{pmatrix} t+x & y\\ y & t-x\end{pmatrix}$ (possible because $2$ is
+invertible mod $3$). Then
+\[
+\boxed{\;\det S \;=\; t^2-x^2-y^2\;}
+\]
+--- the Minkowski form of a space-time with one time and two space dimensions. Two events
+are \emph{null-separated} (``light can travel between them'') exactly when their lines
+meet, i.e.\ when the two contexts share a measurement.
+
+\begin{result}{Theorem 4.1 \hfill \tierT\ \tierC}
+The $27$ histories form the finite Minkowski space $(\F_3^3,\;t^2-x^2-y^2)$. Relative to any
+event, the other $26$ split as $8$ null, $6$ timelike ($\det=1$) and $12$ spacelike
+($\det=-1$). The null directions through an event are the four rank-one matrices
+$vv^{\mathsf T}$, $v\in\mathbb{P}^1(\F_3)$, and they correspond bijectively to the four
+points of $B$.
+\cert{w33\_20260924\_history\_bigcell\_q43\_compactification.py}
+\end{result}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[ev/.style={circle,draw=ink!55,line width=0.4pt,minimum size=8.2mm,inner sep=0pt}]
+\input{fig_minkowski27}
+\begin{scope}[yshift=-1.55cm]
+ \foreach \c/\t/\x in {orgn/{origin (1)}/0.3,nullc/{null (8)}/3.0,plusc/{timelike, $\det=+1$ (6)}/5.6,minusc/{spacelike, $\det=-1$ (12)}/9.0}{
+   \fill[\c,draw=ink!55] (\x,0) circle (1.2mm);
+   \node[anchor=west,font=\sffamily\scriptsize] at (\x+0.18,0) {\t};}
+\end{scope}
+\end{tikzpicture}
+\caption{The $27$ events $S=\begin{psmallmatrix}a&b\\b&c\end{psmallmatrix}$, labelled
+$abc$ and coloured by their separation from the origin $000$. The counts
+$1+8+6+12$ are those of a light cone over the field with three elements.}
+\label{fig:mink27}
+\end{figure}
+
+\begin{plainwords}
+In ordinary relativity, two events are ``null-separated'' if a flash of light could
+connect them. Here there is no light and no distance --- only three possible values of
+each coordinate --- yet the same algebraic form $t^2-x^2-y^2$ organises the $27$ events,
+and ``null'' has a sharp operational meaning: two complete measurement contexts share
+exactly one measurement. The \emph{celestial circle} --- the set of directions light can
+travel --- is in ordinary $2+1$ dimensions a circle of directions; here it is the four
+points of the projective line over $\F_3$.
+\end{plainwords}
+
+\subsection{Four null pulses make one tick}
+
+The four null directions have integer representatives
+\[
+D_0=\begin{pmatrix}1&0\\0&0\end{pmatrix},\quad
+D_\infty=\begin{pmatrix}0&0\\0&1\end{pmatrix},\quad
+D_+=\begin{pmatrix}1&1\\1&1\end{pmatrix},\quad
+D_-=\begin{pmatrix}1&-1\\-1&1\end{pmatrix},
+\]
+each positive semidefinite of rank one. Over $\F_3$ they satisfy a single relation, and
+it is worth staring at:
+
+\begin{result}{Proposition 4.2 (the common mode) \hfill \tierT\ \tierC}
+The counter map $\F_3^4\to\mathrm{Sym}_2(\F_3)$, $(n_0,n_\infty,n_+,n_-)\mapsto
+\sum n_iD_i$, is onto with kernel exactly $\langle(1,1,1,1)\rangle$, so
+\[
+\mathrm{Sym}_2(\F_3)\;\cong\;\F_3^4/\langle 1111\rangle .
+\]
+Over the integers, however,
+\[
+D_0+D_\infty+D_++D_-\;=\;3I ,
+\]
+a strictly timelike matrix of trace $6$.
+\cert{w33\_20260924\_positive\_null\_counter\_cover.py}
+\end{result}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=1.3,>={Stealth[length=2.4mm]}]
+  \input{fig_cone}
+  % back half of the rim (behind the cone)
+  \draw[teal!35,line width=0.6pt,dashed] (0,\conecy) ++(\conetr:\conerx cm and \conery cm)
+      arc[start angle=\conetr-360,end angle=\conetl,x radius=\conerx,y radius=\conery];
+  % cone body
+  \fill[teal!9] (0,0) -- (TL) arc[start angle=\conetl,end angle=\conetr,x radius=\conerx,y radius=\conery] -- cycle;
+  \fill[teal!14,opacity=0.7] (0,\conecy) ellipse[x radius=\conerx,y radius=\conery];
+  \draw[teal!60,line width=0.7pt] (0,0) -- (TL);
+  \draw[teal!60,line width=0.7pt] (0,0) -- (TR);
+  \draw[teal!60,line width=0.7pt] (TL) arc[start angle=\conetl,end angle=\conetr,x radius=\conerx,y radius=\conery];
+  % time axis
+  \draw[ink!45,dashed] (0,0) -- (0,3.75);
+  \node[font=\scriptsize,text=ink!70,anchor=south] at (0,3.75) {time $t=\tfrac12\operatorname{tr}S$};
+  % null rays
+  \draw[teal,line width=1.1pt] (0,0) -- (RD0);
+  \draw[sky,line width=1.1pt] (0,0) -- (RDinf);
+  \draw[gold,line width=1.1pt] (0,0) -- (RDp);
+  \draw[sage,line width=1.1pt] (0,0) -- (RDm);
+  \node[font=\scriptsize,text=teal!80!black,anchor=south] at (RD0) {$D_0$};
+  \node[font=\scriptsize,text=sky!80!black,anchor=west] at (RDinf) {$D_\infty$};
+  \node[font=\scriptsize,text=gold!80!black,anchor=south west] at (RDp) {$D_+$};
+  \node[font=\scriptsize,text=sage!80!black,anchor=east] at (RDm) {$D_-$};
+  % zig-zag of four null pulses
+  \draw[->,ink,line width=1.35pt] (Z0) -- (Z1);
+  \draw[->,ink,line width=1.35pt] (Z1) -- (Z2);
+  \draw[->,ink,line width=1.35pt] (Z2) -- (Z3);
+  \draw[->,ink,line width=1.35pt] (Z3) -- (Z4);
+  \foreach \k/\c in {D0/teal,Dinf/sky,Dp/gold,Dm/sage}{\fill[\c] (P\k) circle (1.5pt);}
+  \fill[rose] (Z4) circle (2.3pt);
+  \node[font=\small,text=rose!85!black,anchor=west] at ($(Z4)+(0.1,0.05)$) {$3I$};
+  \node[font=\tiny,text=ink,anchor=east] at ($(Z1)!0.5!(Z2)+(-0.05,0)$) {$1$};
+  \node[font=\tiny,text=ink,anchor=west] at ($(Z2)!0.5!(Z3)+(0.05,0)$) {$2$};
+  \node[font=\tiny,text=ink,anchor=west] at ($(Z3)!0.5!(Z4)+(0.08,0)$) {$3$};
+  \fill[ink] (0,0) circle (1.7pt);
+  \node[font=\scriptsize,anchor=north] at (0,-0.06) {$0$};
+  \node[font=\sffamily\scriptsize,text=slate,align=left,anchor=west] at (3.55,1.4)
+    {four null pulses, one in\\each direction, add up to\\a pure time step $3I$:\\[3pt]
+     \textcolor{rose!80!black}{invisible mod $3$,}\\\textcolor{teal!80!black}{visible over $\Z$.}};
+\end{tikzpicture}
+\caption{The real light cone of $2\times2$ symmetric matrices, drawn with time
+$t=\tfrac12\tr S$ upward. The four null rays $D_0,D_\infty,D_\pm$ are the lifts of the
+four points of the Bell line. The black zig-zag adds one pulse in each direction:
+it ends on the time axis at $3I$. Modulo three this is the zero matrix --- the finite
+present cannot see it --- but the integer lift records it as elapsed proper time.}
+\label{fig:cone}
+\end{figure}
+
+\begin{physical}[What it means physically: two kinds of time]
+Proposition~4.2 separates two notions that ordinary physics merges. The \emph{state} of
+the finite present is a counter of null pulses modulo their common mode: $27$ values. But
+a history that fires one pulse in every direction returns to the same present while
+advancing by a pure time step upstairs. The finite chart measures \emph{where} you are;
+the lifted history measures \emph{how long} it took. This is the structural shape of the
+Page--Wootters idea that time is a relation between a clock and a system, and of the
+distinction, in relativity, between coordinate position and proper time along a world
+line. \tierB
+\end{physical}
+
+\subsection{Light-like steps: the null graph and its clock}
+
+Join two of the $27$ events when they are null-separated. The resulting graph is
+$8$-regular with $108$ edges, and it can be diagonalised exactly.
+
+\begin{result}{Theorem 4.3 (spectral clock) \hfill \tierC}
+The null graph has adjacency spectrum $8^{1}\,2^{12}\,(-1)^{8}\,(-4)^{6}$ and Laplacian
+spectrum $0^{1}\,6^{12}\,9^{8}\,12^{6}$. At $t^\star=2\pi/9$ the continuous-time walk
+$U=e^{-it^\star L}$ satisfies $U^3=I$, with eigenvalue multiplicities
+$1^{9},\;\omega^{12},\;(\omega^2)^{6}$. The nine fixed modes are the constant mode and
+the eight nonzero dual-null vectors of $\F_3^3$.
+\cert{w33\_20260924\_null\_history\_spectral\_clock.py}
+\end{result}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[>={Stealth[length=2mm]}]
+  % Laplacian spectrum stem plot
+  \begin{scope}
+    \draw[->,ink!60] (-0.2,0) -- (6.9,0) node[right,font=\scriptsize]{$\lambda$};
+    \draw[->,ink!60] (0,-0.1) -- (0,3.25) node[above,font=\scriptsize]{mult.};
+    \foreach \l/\m/\c in {0/1/ink,6/12/teal,9/8/gold,12/6/rose}{
+      \pgfmathsetmacro{\xx}{\l*0.5}
+      \pgfmathsetmacro{\yy}{\m*0.22}
+      \draw[\c,line width=2.4pt] (\xx,0) -- (\xx,\yy);
+      \fill[\c] (\xx,\yy) circle (2.2pt);
+      \node[font=\scriptsize,anchor=south] at (\xx,\yy+0.05) {$\m$};
+      \node[font=\scriptsize,anchor=north] at (\xx,-0.05) {$\l$};}
+    \node[font=\sffamily\scriptsize,text=slate] at (3.2,-0.75) {Laplacian spectrum of the null graph};
+  \end{scope}
+  % phase circle
+  \begin{scope}[xshift=10.2cm,yshift=1.45cm]
+    \draw[ink!35] (0,0) circle (1.35);
+    \draw[ink!25] (-1.6,0) -- (1.6,0); \draw[ink!25] (0,-1.6) -- (0,1.6);
+    \fill[ink] (0:1.35) circle ({sqrt(9)*1.1pt});
+    \fill[teal] (120:1.35) circle ({sqrt(12)*1.1pt});
+    \fill[rose] (240:1.35) circle ({sqrt(6)*1.1pt});
+    \node[font=\scriptsize,anchor=west,align=left] at (0:1.6) {$1$: $9$ modes\\($\lambda=0,9$)};
+    \node[font=\scriptsize,anchor=south,align=center] at (120:1.62) {$\omega$: $12$ modes ($\lambda=6$)};
+    \node[font=\scriptsize,anchor=north,align=center] at (240:1.62) {$\omega^2$: $6$ modes ($\lambda=12$)};
+    \draw[->,teal!70,line width=0.8pt] (15:0.75) arc[start angle=15,end angle=105,radius=0.75];
+    \node[font=\scriptsize,text=teal!80!black] at (60:0.45) {$t^\star$};
+    \node[font=\sffamily\scriptsize,text=slate] at (0,-2.55) {phases of $U=e^{-2\pi iL/9}$; \ $U^3=I$};
+  \end{scope}
+\end{tikzpicture}
+\caption{Left: the four Laplacian frequencies of the null graph. Right: running the
+graph as a quantum walk for time $2\pi/9$ sends every mode to a cube root of unity ---
+the $27$-event present carries an exact qutrit-valued clock.}
+\label{fig:specclock}
+\end{figure}
+
+\begin{boundary}[A tempting identification that fails]
+The nine fixed modes invite the reading ``$9=$ the nine operator histories of one qutrit''
+from Section~3. It is false. The symmetry group acting on the fixed nine is faithful of
+order $648$, whereas the projective qutrit Clifford group has order $216$, and the natural
+Bell-line $S_4$ splits the eight null modes $4+4$ while $SL(2,3)$ is transitive on the
+eight nonidentity qutrit Pauli labels. The count matches; the module does not.
+\tierX\ (as an identification)
+\end{boundary}
+
+\subsection{History is a path, and paths do not close}
+
+The null graph is connected with $27$ vertices and $108$ edges, so its cycle space has
+rank $108-27+1=82$. Its fundamental group is the free group $F_{82}$ and its universal
+cover is the infinite $8$-regular tree.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=0.92,
+   nd/.style={circle,fill=#1,inner sep=0pt,minimum size=5pt}]
+  \node[nd=ink,minimum size=8pt] (r) at (0,0) {};
+  \foreach \k in {0,...,7}{
+     \pgfmathsetmacro{\a}{90+45*\k}
+     \node[nd=teal] (c\k) at (\a:1.55) {};
+     \draw[teal!70,line width=0.9pt] (r) -- (c\k);
+     \foreach \j in {0,...,6}{
+        \pgfmathsetmacro{\b}{\a+ (\j-3)*6.2}
+        \node[nd=gold,minimum size=3.2pt] (g\k\j) at (\b:2.85) {};
+        \draw[gold!70,line width=0.5pt] (c\k) -- (g\k\j);
+        \foreach \m in {-1,0,1}{
+          \pgfmathsetmacro{\cc}{\b+\m*1.9}
+          \draw[rose!45,line width=0.3pt] (g\k\j) -- (\cc:3.55);}
+     }
+  }
+  \draw[ink!15] (0,0) circle (1.55); \draw[ink!15] (0,0) circle (2.85);
+  \node[font=\sffamily\scriptsize,anchor=west,align=left] at (4.2,1.2)
+   {shell $0$: \ $1$\\ shell $1$: \ $8$\\ shell $2$: \ $56$\\ shell $3$: \ $392$\\
+    shell $n$: \ $8\cdot7^{\,n-1}$};
+  \node[font=\sffamily\scriptsize,anchor=west,align=left,text=slate] at (4.2,-1.2)
+   {every vertex upstairs is one of\\the $27$ events downstairs; the\\same present recurs at\\infinitely many lifted places};
+\end{tikzpicture}
+\caption{The universal cover of the null graph (only three grandchildren of each vertex
+are drawn in the outer shell). The present is finite; the history is an unbounded tree.}
+\label{fig:tree}
+\end{figure}
+
+\begin{result}{Theorem 4.4 (orientation and homology) \hfill \tierC}
+\begin{enumerate}[label=(\roman*),leftmargin=1.5em]
+\item The $108$ null edges are partitioned into $36$ edge-disjoint triangles, one for
+      each point of $\W$ off the Bell line.
+\item A signed sum of the $36$ triangle boundaries is a primitive cycle through all $108$
+      edges with coefficients $\pm1$. The index-$2$ subgroup of the Bell stabiliser
+      (order $648$) fixes it, and the other coset negates it: the cycle space splits
+      objectwise as $82=1_{\text{orientation}}+81$.
+\item Filling the $36$ triangles leaves first Betti number $46$, and the reduced
+      $81$-dimensional module splits as $35+46$. The $46$ injects, by an explicit chain
+      map, into $H_1(\W)$, which is itself $81$-dimensional and irreducible --- the
+      Steinberg module of $\PSp(4,3)$.
+\end{enumerate}
+\cert{w33\_20260924\_history\_invariant\_cycle\_orientation.py}, \cert{w33\_20260924\_history\_to\_global\_h1\_intertwiner.py}
+\end{result}
+
+So there is exactly one global orientation of the history graph, and the symmetry group
+of the ``now'' either preserves it or reverses it. This is a \emph{direction} for time,
+but not yet an \emph{arrow}: reversing it is a symmetry of the geometry.
+
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.25}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{3.5cm}X>{\raggedright\arraybackslash}p{3.3cm}@{}}
+\toprule
+\textbf{Temporal observable} & \textbf{Lives on} & \textbf{Reversible?}\\
+\midrule
+position in the present & one of $27$ events & yes\\
+step count & length of a path in the null graph & yes\\
+reduced word & element of the free group $F_{82}$ & yes\\
+winding & homology class in $\Z^{82}$; the common mode of Prop.~4.2 & yes\\
+orientation & the sign of the unique invariant cycle & yes (up to a symmetry)\\
+coherent phase & the Weil phase $\mu_{12}$ below & yes (complex conjugation)\\
+records & classical outcomes kept by an observer & \textbf{no}: discarding them is the arrow\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection{A coherent twist: the twelfth roots of unity}
+
+For the qutrit Fourier transform $F$ and the chirp $G=\mathrm{diag}(1,\omega,\omega)$ one
+has $(FG)^3=i\,F^2$. The metaplectic (Weil) representation that implements the symplectic
+symmetries on quantum states therefore carries phases in $\langle i,\omega\rangle=\mu_{12}$.
+Across the $27$ quadratic forms of the present, the Weil phases occur with census
+$1^{13},\;i^{4},\;(-1)^{6},\;(-i)^{4}$. Complex conjugation --- the quantum-mechanical time
+reversal --- sends $i\mapsto -i$ and $\omega\mapsto\omega^{-1}$. This is a reversible,
+coherent orientation mechanism, distinct from entropy production. \tierC\
+(\cert{w33\_20260924\_temporal\_maslov\_mu12.py})
+
+\subsection{Four clocks: the Hesse striations and the tetracode}
+
+The four points of the Bell line --- the four null directions --- reappear in a second,
+seemingly unrelated place. Identify the nine operator histories $\ket{i}\!\bra{j}$ with the
+nine points of the affine plane $AG(2,3)=\F_3^2$. Its $12$ lines fall into four
+\emph{parallel classes} of three lines each, one class for each direction
+$v\in\mathbb{P}^1(\F_3)$. Each class is a way of reading the nine cells as ``three ticks of
+a clock''; we call the four classes the four \emph{Hesse clocks}.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=0.62,
+    dot/.style={circle,fill=#1,draw=white,line width=0.5pt,inner sep=0pt,minimum size=7.5pt}]
+  \def\panel#1#2#3#4#5{% xshift, title color, title, ray, tetracode
+    \begin{scope}[xshift=#1 cm]
+      \fill[#2!7,rounded corners=4pt] (-0.75,-0.8) rectangle (2.75,2.8);
+      \node[font=\sffamily\small\bfseries,text=#2!80!black] at (1,3.35) {#3};
+      \node[font=\scriptsize,text=slate] at (1,-1.35) {direction $#4$};
+      \node[font=\scriptsize,text=slate] at (1,-1.95) {tetracode: $#5$};
+    \end{scope}}
+  \panel{0}{teal}{clock 1}{(1,0)}{a}
+  \panel{4.6}{sky}{clock 2}{(0,1)}{b}
+  \panel{9.2}{gold}{clock 3}{(1,1)}{a+b}
+  \panel{13.8}{sage}{clock 4}{(1,2)}{b-a}
+  % clock 1: horizontal lines y=const
+  \begin{scope}[xshift=0cm]
+    \foreach \y/\c in {0/rose,1/teal,2/sky}{\draw[\c!60,line width=1.6pt] (0,\y) -- (2,\y);
+      \foreach \x in {0,1,2}{\node[dot=\c] at (\x,\y) {};}}
+  \end{scope}
+  % clock 2: vertical lines
+  \begin{scope}[xshift=4.6cm]
+    \foreach \x/\c in {0/rose,1/teal,2/sky}{\draw[\c!60,line width=1.6pt] (\x,0) -- (\x,2);
+      \foreach \y in {0,1,2}{\node[dot=\c] at (\x,\y) {};}}
+  \end{scope}
+  % clock 3: y - x = const (slope 1): {(0,0),(1,1),(2,2)}, {(0,1),(1,2),(2,0)}, {(0,2),(1,0),(2,1)}
+  \begin{scope}[xshift=9.2cm]
+    \draw[rose!60,line width=1.6pt] (0,0) -- (2,2);
+    \draw[teal!60,line width=1.6pt] plot[smooth,tension=0.9] coordinates {(0,1) (1,2) (2.45,2.35) (2.6,0.6) (2,0)};
+    \draw[sky!60,line width=1.6pt] plot[smooth,tension=0.9] coordinates {(2,1) (1,0) (-0.45,-0.35) (-0.6,1.4) (0,2)};
+    \foreach \p in {(0,0),(1,1),(2,2)}{\node[dot=rose] at \p {};}
+    \foreach \p in {(0,1),(1,2),(2,0)}{\node[dot=teal] at \p {};}
+    \foreach \p in {(0,2),(1,0),(2,1)}{\node[dot=sky] at \p {};}
+  \end{scope}
+  % clock 4: y + x = const (slope 2): {(0,0),(1,2),(2,1)}, {(0,1),(1,0),(2,2)}, {(0,2),(1,1),(2,0)}
+  \begin{scope}[xshift=13.8cm]
+    \draw[rose!60,line width=1.6pt] (0,2) -- (2,0);
+    \draw[teal!60,line width=1.6pt] plot[smooth,tension=0.9] coordinates {(0,1) (1,0) (2.45,-0.35) (2.6,1.4) (2,2)};
+    \draw[sky!60,line width=1.6pt] plot[smooth,tension=0.9] coordinates {(2,1) (1,2) (-0.45,2.35) (-0.6,0.6) (0,0)};
+    \foreach \p in {(0,2),(1,1),(2,0)}{\node[dot=rose] at \p {};}
+    \foreach \p in {(0,1),(1,0),(2,2)}{\node[dot=teal] at \p {};}
+    \foreach \p in {(0,0),(1,2),(2,1)}{\node[dot=sky] at \p {};}
+  \end{scope}
+\end{tikzpicture}
+\caption{The four Hesse clocks. Each panel shows the nine operator histories of one
+qutrit as the affine plane $\F_3^2$, split into three parallel lines (the three ``ticks'').
+Lines of the two diagonal classes wrap around, as on a torus. The four panels are labelled
+by the four points of $\mathbb{P}^1(\F_3)$ --- the same four labels as the null
+directions of Figure~\ref{fig:bellview} --- and by the coordinate of the tetracode they
+read.}
+\label{fig:hesse}
+\end{figure}
+
+\begin{result}{Theorem 4.5 (one $S_4$ for three structures) \hfill \tierC}
+The four projective null directions of the present, the four Hesse clocks, and (Section~5)
+four orthogonal $A_2$ root systems inside $E_8$ are all indexed by
+$\mathbb{P}^1(\F_3)=\{(1,0),(0,1),(1,1),(1,2)\}$. For every one of the $24$ elements of
+$PGL(2,3)\cong S_4$, the induced permutations of the three four-element sets are
+identical. The larger groups differ (the Bell stabiliser acts with kernel $27$, $AGL(2,3)$
+with kernel $18$); the common object is the quotient $S_4$ and its action.
+\cert{w33\_20260924\_null\_hesse\_4a2\_s4\_intertwiner.py}
+\end{result}
+
+The four clocks also carry a code. Evaluate the linear ``clock reading''
+$\ell_{(a,b)}(x,y)=ax+by$ at oriented representatives $(1,0),(0,1),(1,1),(2,1)$ of the four
+directions. The result is
+\[
+(a,\;b,\;a+b,\;b-a)\in\F_3^4 ,
+\]
+and the nine such words are \emph{exactly} the repository's frozen \emph{tetracode}, the
+$[4,2,3]_3$ code at the heart of the ternary Golay code and of the $E_8$ lattice's
+tetracode construction --- no coordinate permutation needed. \tierC\
+(\cert{w33\_pass10946\_clock\_code\_cone\_objectwise.py})
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[cell/.style={minimum width=8.6mm,minimum height=5.2mm,draw=white,line width=0.8pt,font=\scriptsize}]
+  \def\cc#1{\ifcase#1 white\or teal!30\or rose!30\fi}
+  \node[font=\sffamily\scriptsize\bfseries] at (-1.2,0.55) {$(a,b)$};
+  \foreach \j/\t/\c in {0/{(1,0)}/teal,1/{(0,1)}/sky,2/{(1,1)}/gold,3/{(2,1)}/sage}{
+     \node[font=\tiny,text=\c!80!black] at (\j*0.9,0.55) {$\t$};}
+  \foreach \a/\b [count=\r from 0] in {0/0,1/0,2/0,0/1,1/1,2/1,0/2,1/2,2/2}{
+     \pgfmathtruncatemacro{\w}{\a}
+     \pgfmathtruncatemacro{\x}{\b}
+     \pgfmathtruncatemacro{\y}{mod(\a+\b,3)}
+     \pgfmathtruncatemacro{\z}{mod(\b-\a+3,3)}
+     \node[font=\scriptsize] at (-1.1,-\r*0.52) {$(\a,\b)$};
+     \foreach \v [count=\j from 0] in {\w,\x,\y,\z}{
+        \node[cell,fill=\cc{\v}] at (\j*0.9,-\r*0.52) {$\v$};}
+  }
+  \node[font=\sffamily\scriptsize,text=slate,align=left,anchor=west] at (3.4,-1.9)
+   {nine clock readings $\ell_{(a,b)}$ evaluated\\at the four oriented null directions:\\[2pt]
+    every nonzero word vanishes on exactly one\\direction (one clock is ``stopped''),\\[2pt]
+    minimum distance $3$: the tetracode $[4,2,3]_3$.};
+\end{tikzpicture}
+\caption{The tetracode as a table of clock readings (colour: $1$ teal, $2$ rose).}
+\label{fig:tetracode}
+\end{figure}
+
+\begin{physical}[What it means physically: a frame and an orientation]
+A projective direction picks a clock \emph{frame}: which three-way split of the nine
+histories counts as the ticks. Choosing a representative of the direction --- $(1,2)$ or
+its negative $(2,1)$ --- picks an \emph{orientation} of that clock. The tetracode's
+peculiar sign $b-a$ (rather than $a-b$) in its last coordinate is exactly this orientation
+choice. Each nonzero codeword stops exactly one of the four clocks; $4$ stopped clocks
+$\times$ $2$ orientations $\times$ $3$ origins give $24$ complete clock calibrations.
+\end{physical}
+
+The other research track found a further layer (Pass~10948, which we cite rather than
+re-derive). Over $\F_3$, $x^4+1=(x^2+x-1)(x^2-x-1)$, and after flipping the orientation of
+one clock the tetracode becomes the ideal $(x^2\pm x-1)$ in $\F_3[x]/(x^4+1)$: the cyclic
+shift of clock readings with a sign, $N(c_0,c_1,c_2,c_3)=(-c_3,c_0,c_1,c_2)$, preserves it
+and satisfies $N^4=-I$, $N^8=I$. The two orientations give two transverse self-dual
+tetracodes forming a hyperbolic pair; the negacyclic presentation of the tetracode was used
+in a cyclotomic $E_8$ construction by Watanabe \emph{et al.} \cite{WBCV2018}. \tierC\
+(\cert{w33\_pass10948\_clock\_tetracode\_negacyclic\_hyperbolic\_bridge.py}) A clock whose
+fourth tick is a sign flip and whose eighth tick is the identity is the finite shadow of
+something we meet again in Section~8: a rotation by $2\pi$ that acts as $-1$ on spinors.
+
+\subsection{Clocks as relations: the Page--Wootters weld}
+
+Label a clock qutrit's phase by $c\in\F_3$ and a system's phase by $p\in\F_3$. The four
+directions of $\F_3^2$ are $c$, $p$, $c+p$ and $c-p$. For an order-three evolution $U$ of
+the system, the two stationary ``history states''
+\[
+(X_{\text{clock}}\otimes U)\ket{\Psi_+}=\ket{\Psi_+},\qquad
+(X_{\text{clock}}\otimes U^{-1})\ket{\Psi_-}=\ket{\Psi_-}
+\]
+are supported, in the clock's phase basis, exactly on $c+p=0$ and $c-p=0$: the two
+correlated directions. The two remaining directions ($c=0$, $p=0$) are the uncorrelated
+axes. On the committed $E_8$ basis, pairs of axis-only backgrounds generate a subalgebra of
+dimension $24$, whereas any graph-correlated background generates all $248$
+dimensions. \tierC\ (\cert{w33\_20260924\_page\_wootters\_diagonal\_weld.py})
+
+\begin{plainwords}
+In 1983 Don Page and William Wootters proposed \cite{PageWootters} that the universe as a whole might be
+static, with time emerging as a correlation between a ``clock'' part and the rest. The
+finite version above is exact: a state that is globally unchanging, yet in which the
+clock reading and the system's phase are locked together. Only the two
+\emph{correlated} clock directions produce such states --- and only they, in the $E_8$
+computation, generate the whole algebra.
+\end{plainwords}
+
+\subsection{A second light cone: Hermitian $3+1$, and a weld that fails}
+
+Replace real symmetric matrices by Hermitian ones over $\F_9=\F_3(u)$, $u^2=-1$:
+$X=\begin{psmallmatrix} a&z\\ \bar z&c\end{psmallmatrix}$ with $z=x+uy$. Then
+$\det X=ac-x^2-y^2$ is a form in four variables --- a $3+1$-dimensional finite Minkowski
+space.
+
+\begin{result}{Theorem 4.6 (the Hermitian present is a spread) \hfill \tierC}
+The $81$ Hermitian events split $21+30+30$ by determinant, and the $40$ projective
+directions split $10+15+15$. An explicit map sends the Hermitian quadric to the elliptic
+hyperplane section of $Q(4,3)$, and under the line dictionary the ten null directions
+become ten pairwise disjoint lines of $\W$ covering all $40$ points --- a \emph{spread}.
+The $36$ elliptic sections are exactly the $36$ spreads of $\W$.
+\cert{w33\_20260924\_hermitian\_3p1\_spread\_bridge.py}
+\end{result}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=0.9]
+  \foreach \k in {0,...,9}{
+    \pgfmathsetmacro{\hue}{\k*10}
+    \draw[teal!55!sky,line width=1.3pt,rounded corners=2pt] (\k*0.95,0) -- (\k*0.95,2.1);
+    \foreach \j in {0,...,3}{\fill[ink!80] (\k*0.95,\j*0.7) circle (2.3pt);}}
+  \draw[decorate,decoration={brace,amplitude=5pt},slate] (-0.15,2.35) -- (8.7,2.35);
+  \node[font=\sffamily\scriptsize,text=slate] at (4.27,2.85) {ten null directions of the Hermitian $3+1$ present};
+  \node[font=\sffamily\scriptsize,text=slate] at (4.27,-0.55) {$=$ ten disjoint lines of $\W$ covering all $40$ points (a spread)};
+\end{tikzpicture}
+\caption{The Hermitian $3+1$ light cone is a partition of the forty points into ten
+complete measurement contexts --- a complete ``schedule'' for measuring every
+two-qutrit direction exactly once.}
+\label{fig:spread}
+\end{figure}
+
+\begin{boundary}[The complex-structure weld does not exist]
+One might hope to weld the Hermitian light cone to the symplectic geometry through a
+single complex structure $J$ ($J^2=-I$) with $\Omega(x,y)=B(Jx,y)$. Exhausting all
+$729$ candidates finds none. The light cone and the qutrit geometry meet through the
+point/line duality of Section~2, not through one compatible $J$. \tierX\ (for the direct weld)
+\end{boundary}
+
+\subsection{The arrow: forgetting two trits}
+
+Every structure so far is reversible. Where does irreversibility come from? There is a
+sharp answer.
+
+\begin{result}{Theorem 4.7 (the price of an arrow) \hfill \tierT}
+For every qutrit state $\rho$,
+\[
+\frac19\sum_{u\in\F_3^2} P_u\,\rho\,P_u^\dagger \;=\; \tr(\rho)\,\frac{I}{3}.
+\]
+Each map $\rho\mapsto P_u\rho P_u^\dagger$ is unitary and reversible; their average,
+obtained by forgetting which $u$ occurred, is the completely depolarising channel, which
+erases every state to the same fixed point. The forgotten record is two trits, so by
+Landauer's principle \cite{Landauer} making a qutrit clock irreversible in this way dissipates at least
+$2\,k_BT\ln3$ per step.
+\end{result}
+
+\begin{proof}
+The left side, as a function of $\rho$, commutes with conjugation by every $P_v$ (which
+merely permutes the $u$'s up to phases that cancel). Its image $\Sigma$ therefore
+commutes with all nine Paulis, which span $\End(\C^3)$, so $\Sigma$ is a scalar; taking
+traces gives the scalar $\tr(\rho)/3$.
+\end{proof}
+
+\begin{physical}[What it means physically]
+The finite present has a light cone; the history has an orientation; the Weil phase has a
+handedness. None of these is an arrow of time, because each can be reversed by a symmetry.
+The arrow appears exactly when a record is discarded. For a qutrit clock the minimal
+record is the two-trit label of the Pauli step --- the photonic papers' ``two trits per
+cycle'' (\cert{bt823\_the\_closure.py}; see also \cert{w33\_20260924\_adqc\_record\_arrow.py}) --- and discarding it turns a reversible tick into the maximally
+irreversible channel. This is the finite form of the modern view that the thermodynamic
+arrow is information loss, and it is \emph{consistent} with the Connes--Rovelli idea of
+Section~3: a state can orient time, but only forgetting makes it flow one way. \tierB
+\end{physical}
+
+\begin{keyidea}
+Three layers of time, exactly separated: a finite present with a light cone ($27$
+events, $t^2-x^2-y^2$); an unbounded, oriented history (a free group, an $8$-regular tree,
+a winding the present cannot see); and an arrow that costs exactly two trits of forgotten
+record per tick.
+\end{keyidea}
+
+\begin{boundary}
+None of this derives a continuum space-time, a speed of light, a metric that curves, or
+gravity. The light cone here is an algebraic form over a three-element field; ``null''
+means ``shares a measurement''. Whether the present, history and arrow of the finite model
+are the finite shadows of physical time is a bridge hypothesis, and the dynamics that would
+make it testable --- a Hamiltonian, an energy scale --- is not supplied by the geometry.
+\tierO
+\end{boundary}

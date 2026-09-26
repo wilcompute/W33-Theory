@@ -1,0 +1,305 @@
+\section{The Standard Model on forty points}
+\label{sec:physics}
+
+Sections 2--8 established exact structure. This section asks the question the programme
+exists to answer: how much of the actual physics of our universe does that structure
+carry? We give the answer at three levels --- what the finite geometry itself contains,
+what a string compactification built on it produces, and what is still missing --- and we
+end with a scorecard.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+   pill/.style={rounded corners=5pt,font=\sffamily\scriptsize\bfseries,text=white,minimum width=23mm,minimum height=5mm,inner sep=2pt},
+   row/.style={anchor=west,font=\small}]
+  \def\entry#1#2#3#4{%
+    \node[pill,fill=#3] at (1.2,-#1*0.62) {#4};
+    \node[row] at (2.75,-#1*0.62) {#2};}
+  \entry{0}{Quantum measurement structure (qutrit Paulis, contexts, Clifford group)}{teal}{EXACT}
+  \entry{1}{Exceptional algebras $E_6$, $E_7$, $E_8$, $F_4$ and the Albert algebra}{teal}{EXACT}
+  \entry{2}{A finite light cone; clocks; one Lorentzian real form $\so(1,9)$}{teal}{EXACT}
+  \entry{3}{Gauge group $SU(3)\times SU(2)\times U(1)$}{sky}{HOSTED}
+  \entry{4}{Three generations}{sky}{HOSTED}
+  \entry{5}{One chiral generation as a spinor ($16$ of $\mathrm{Spin}(1,9)$)}{teal}{EXACT}
+  \entry{6}{Handedness of the weak force (which chirality)}{rose}{NO-GO}
+  \entry{7}{Proton stability (matter parity)}{gold}{CONDITIONAL}
+  \entry{8}{A supersymmetric, realistic vacuum}{gold}{NOT YET}
+  \entry{9}{Masses, mixing angles, coupling constants}{slate}{OPEN}
+  \entry{10}{Gravity, a dynamical space-time, the cosmological constant}{slate}{OPEN}
+\end{tikzpicture}
+\caption{Scorecard. \textsf{EXACT}: a theorem or exact computation in this paper.
+\textsf{HOSTED}: realised in an explicit construction built on the geometry, not forced by
+it. \textsf{CONDITIONAL}: holds if a named open condition is met. \textsf{NO-GO}: proved
+impossible from inside. \textsf{OPEN}: not addressed by any exact result.}
+\label{fig:scorecard}
+\end{figure}
+
+\subsection{What the finite geometry itself contains}
+
+\paragraph{The anatomy of one symmetry.}
+Pick a point $p_0$ of $\W$ and the \emph{transvection} $R$ centred on it: the symplectic
+map $x\mapsto x+\langle x,v\rangle v$, of order three. It fixes the $13$ points of the plane
+$p_0^\perp$ --- $p_0$ and its $12$ neighbours --- and permutes the other $27$ points in nine
+orbits of three.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=1,>={Stealth[length=1.6mm]}]
+  \fill[ink] (0,0) circle (3pt); \node[font=\scriptsize,anchor=north] at (0,-0.1) {$p_0$};
+  \foreach \k in {0,...,11}{\fill[teal] ({30*\k+15}:1.05) circle (2pt);}
+  \draw[teal!30] (0,0) circle (1.05);
+  \foreach \t in {0,...,8}{
+     \pgfmathsetmacro{\a}{40*\t}
+     \foreach \j in {0,1,2}{
+        \coordinate (q\t\j) at ({\a+(\j-1)*11}:2.35);}
+     \draw[->,rose!70,line width=0.6pt] (q\t0) to[bend left=35] (q\t1);
+     \draw[->,rose!70,line width=0.6pt] (q\t1) to[bend left=35] (q\t2);
+     \draw[->,rose!70,line width=0.6pt] (q\t2) to[bend right=50] (q\t0);
+     \foreach \j in {0,1,2}{\fill[rose] (q\t\j) circle (2pt);}}
+  \node[font=\sffamily\scriptsize,align=left,anchor=west] at (3.1,1.0)
+   {\textcolor{teal!80!black}{\textbf{fixed:}} $p_0$ and its $12$ neighbours};
+  \node[font=\sffamily\scriptsize,align=left,anchor=west] at (3.1,0.4)
+   {\ \ centraliser $C(R)$, order $648$, acts on the\\\ \ $12$ with rank $3$: \ $\C^{12}=\mathbf1\oplus\mathbf3\oplus\mathbf8$};
+  \node[font=\sffamily\scriptsize,align=left,anchor=west] at (3.1,-0.55)
+   {\textcolor{rose!80!black}{\textbf{moved:}} the $27$ far points, in nine $3$-cycles};
+  \node[font=\sffamily\scriptsize,align=left,anchor=west] at (3.1,-1.15)
+   {\ \ eigenspaces of $R$ on $\C^{27}$: \ $9\oplus9\oplus9$};
+  \node[font=\sffamily\scriptsize,align=left,anchor=west] at (3.1,-1.75)
+   {\ \ centre of $C(R)$ $=\langle R\rangle\cong\Z_3$};
+\end{tikzpicture}
+\caption{One transvection of $\W$. Its centraliser acts on the twelve fixed neighbours
+with the dimensions of the Standard Model's gauge algebra, $1+3+8$, and it splits the
+twenty-seven moved points into three equal eigenspaces.}
+\label{fig:transvection}
+\end{figure}
+
+\begin{result}{Proposition 9.1 (the transvection spine) \hfill \tierC}
+The centraliser $C(R)$ of a transvection has order $648$ (it is the point stabiliser
+$3^{1+2}{:}2A_4$) and centre $\langle R\rangle\cong\Z_3$. Its permutation module on the $12$
+neighbours of $p_0$ decomposes as $\mathbf1\oplus\mathbf3\oplus\mathbf8$. On the $27$ far
+points, $R$ has eigenspaces $9\oplus9\oplus9$.
+\cert{bt886\_standard\_model\_spine.py}
+\end{result}
+
+\begin{boundary}[How far this goes]
+The dimensions $1,3,8$ are those of the Lie algebras $\mathfrak u(1)$, $\mathfrak{su}(2)$,
+$\mathfrak{su}(3)$, and the corpus has sometimes read Proposition~9.1 as ``the Standard
+Model gauge group follows with zero free parameters''. That is an over-read. The
+$\mathbf1\oplus\mathbf3\oplus\mathbf8$ here are representations of a \emph{finite} group of
+order $648$; they are not Lie algebras, they do not come with gauge fields, and nothing
+fixes their couplings. The honest statement is that the local symmetry of one point of the
+geometry has the \emph{shape} of the Standard Model's gauge algebra. \tierB
+\end{boundary}
+
+\paragraph{Three from the Steinberg module.}
+The first homology of $\W$ (its $40$ points, $240$ edges and $160$ triangles in lines) is
+$81$-dimensional and irreducible under $\PSp(4,3)$: it is the \emph{Steinberg module}, the
+most rigid representation a group of Lie type has, and the logical space of the
+repository's $[[240,81,3]]_3$ quantum code. \tierC\ (\cert{bt861\_code\_register\_is\_steinberg.py})
+
+\begin{result}{Theorem 9.2 (every order-three symmetry splits matter $27+27+27$) \hfill \tierT}
+Let $g\in\PSp(4,3)$ have order three. Then $g$ acts on the $81$-dimensional Steinberg
+module with eigenvalues $1,\omega,\omega^2$, each with multiplicity exactly $27$.
+\end{result}
+
+\begin{proof}
+The Steinberg character vanishes on every element whose order is divisible by the
+defining characteristic $p=3$ (a theorem of Steinberg; see \cite{Humphreys}). So $\chi(g)=\chi(g^2)=0$, and the
+multiplicity of each eigenvalue $\omega^j$ is
+$\tfrac13\bigl(\chi(1)+\omega^{-j}\chi(g)+\omega^{-2j}\chi(g^2)\bigr)=81/3=27$.
+\end{proof}
+
+\begin{boundary}[Three is forced, but not selected]
+Theorem~9.2 holds for \emph{every} element of order three, so it produces a threefold
+splitting without choosing one. And the string-theory track (below) found that in the
+explicit compactifications the number of families is the number of complex planes of the
+internal torus, not a property of $\W$. We therefore record the Steinberg splitting as a
+structural host for three generations, not a derivation of them. \tierB
+\end{boundary}
+
+\paragraph{The qutrit register is $SU(9)$, not $E_6$.}
+One might hope that the $E_6$ of grand unification acts directly on qutrit registers.
+
+\begin{result}{Theorem 9.3 (no Pauli $E_6$) \hfill \tierT\ \tierC}
+Conjugation by the three-qutrit Pauli group splits $\mathfrak{gl}(27)$ into $729$ distinct
+one-dimensional character spaces, so every conjugation-stable subalgebra is spanned by
+Pauli operators. A simple Pauli-spanned Lie algebra has dimension $3^a-3^b$, i.e.\ one of
+$8,24,72,80,216,240,648,720,728$. Since $\dim\e_6=78$ is not among them, $E_6$ cannot act
+on a qutrit register through Pauli-stable generators.
+\cert{Holotrade 1cde1f1}
+\end{result}
+
+The natural gauge algebra of the qutrit register is instead $\sll_9$ --- the $80$ of
+Section~5 --- which is exactly what appears in the string construction.
+
+\subsection{The string that carries the geometry}
+\label{sec:strings}
+
+The most developed attempt to turn this structure into physics uses the
+$E_8\times E_8$ heterotic string compactified on an orbifold \cite{DHVW}: six extra dimensions curled
+up as three two-dimensional tori, divided by a finite rotation group. Its advantage is
+that everything is computable exactly, with a public tool, the \textsc{orbifolder}
+\cite{Orbifolder}.
+
+\begin{result}{Theorem 9.4 ($\W$ lives in the twisted sector of $E_8$) \hfill \tierC}
+For the $\Z_3$ twist of the $E_8$ lattice vertex algebra, the commutator form of the
+twisted-sector Pauli group equals twice the lattice form on every rung, and the resulting
+commutation geometry is $\W$. The twist is anomalous on a single $E_8$ (ground-state energy
+$\rho=4/9$), consistent exactly when $3\mid k$ on $E_8^{\,k}$; the $E_8^3$ orbifold is the
+Niemeier lattice vertex algebra $V_{A_8^3}$ with algebra $\sll_9^{\,3}$.
+\cert{Holotrade 68df33f}
+\end{result}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[>={Stealth[length=2.3mm]},
+   st/.style={draw=#1,fill=#1!10,rounded corners=4pt,align=center,font=\sffamily\scriptsize,minimum width=31mm,minimum height=13mm},
+   ar/.style={->,thick,ink!55}]
+  \node[st=ink] (a) at (0,0) {$E_8\times E_8$ heterotic string\\\scriptsize the twist of $\W$\\\scriptsize $=$ an $A_8$ shift};
+  \node[st=rose] (b) at (4.3,0) {order $3$: $T^6/\Z_3$\\\scriptsize $SU(9)\times SO(14)\times U(1)$\\\scriptsize \textbf{no complete family}};
+  \node[st=teal] (c) at (8.6,0) {order $6$: $T^6/\Z_6$\\\scriptsize $42$ of $79$ SMs from\\\scriptsize the $\W$ vacuum};
+  \node[st=gold] (d) at (8.6,-2.3) {flagship model\\\scriptsize $SU(3)\times SU(2)\times U(1)_Y$,\\\scriptsize three net families};
+  \node[st=slate] (e) at (4.3,-2.3) {the vacuum problem\\\scriptsize SUSY, $\mu$, proton,\\\scriptsize neutrinos};
+  \draw[ar] (a) -- (b); \draw[ar] (b) -- node[above,font=\tiny]{even order} (c);
+  \draw[ar] (c) -- (d); \draw[ar] (d) -- (e);
+  % three tori
+  \begin{scope}[xshift=0cm,yshift=-2.3cm]
+    \foreach \i/\t/\c in {0/{\tfrac16}/sky,1/{\tfrac16}/sky,2/{-\tfrac13}/gold}{
+       \begin{scope}[xshift=\i*1.25cm-1.25cm]
+       \draw[\c,line width=1pt,fill=\c!10] (0,0) ellipse (0.55 and 0.33);
+       \draw[\c,line width=0.8pt] (-0.25,0.03) .. controls (-0.1,-0.09) and (0.1,-0.09) .. (0.25,0.03);
+       \draw[\c,line width=0.8pt] (-0.17,-0.03) .. controls (-0.05,0.05) and (0.05,0.05) .. (0.17,-0.03);
+       \node[font=\scriptsize] at (0,-0.55) {$\t$};
+       \end{scope}}
+    \node[font=\sffamily\scriptsize,text=gold!70!black,align=center] at (1.25,0.6) {qutrit plane};
+    \node[font=\sffamily\scriptsize,text=slate] at (0,-1.0) {twists of the three tori};
+  \end{scope}
+\end{tikzpicture}
+\caption{The heterotic route. At order three no Wilson-line breaking completes a
+Standard-Model family (a theorem); at even order the $\W$ vacuum is the most productive
+source of Standard Models; the open problem is a realistic vacuum. The third torus, the
+unique order-three plane, is where the Higgs lives.}
+\label{fig:heterotic}
+\end{figure}
+
+\paragraph{Order three fails, for a reason.}
+In the $T^6/\Z_3$ orbifold built on this twist, Wilson lines produce three-family $SU(5)$
+and $SO(10)$ models; but an order-three Wilson line keeps at most one of $Q,u^c,e^c$ in each
+$\mathbf{10}$, so no breaking completes a Standard-Model family. The general law: for a
+$\Z_N$ orbifold, $u^c$ and $e^c$ survive together only when $N$ is even. This explains, from
+first principles, why heterotic model builders moved to even-order orbifolds. An exhaustive
+census of $127\,980$ classes confirms it. \tierT\ \tierC\ (Holotrade \cert{ed1eaca},
+\cert{a6e1c69}, \cert{a779053})
+
+\paragraph{Order six succeeds.}
+Among the $58$ $\Z_6$-I and $61$ $\Z_6$-II shifts, the $\W$ vacuum
+$SU(9)\times SO(14)\times U(1)$ is the most productive class: of $79$ inequivalent Standard
+Models found in it, $42$ come from the $\Z_6$-I $\W$ vacuum. The flagship has gauge group
+$SU(3)_C\times SU(2)_L\times U(1)_Y$ with three net families and no anomalies, and at one
+fixed point the local gauge group is $SU(9)$ with all four simple roots of the
+Standard Model's $SU(5)$ inside it: the Standard Model's unification group descends from the
+twist's own $\sll_9$. \tierC\ (Holotrade \cert{5b3f3ad})
+
+\begin{result}{Measured regularities of the $\W$ Standard Models \hfill \tierC}
+\begin{itemize}[leftmargin=1.2em]
+\item \textbf{The breaking is an entangling gate.} The order-three Wilson line's $\sll_9$
+      holonomy is of two-qutrit controlled-$Z$ type $(5,2,2)$ in $45$ of $45$ $\Z_6$-I models,
+      against a $33\%$ background (chance $\approx2.6\times10^{-22}$).
+      (\cert{d772153})
+\item \textbf{Two commuting holonomies cut out $SU(3)\times SU(2)$}: in all $25$ models with
+      parity-type $\theta^3$, against a $30\%$ background ($\approx8.6\times10^{-14}$).
+      (\cert{94df376})
+\item \textbf{A heavy top is allowed}: $57$ of $60$ models admit a renormalisable top Yukawa
+      coupling. (\cert{93b34e1})
+\item \textbf{The Higgs sits alone in the qutrit plane}: in all $87$ $\Z_6$-I models the weak
+      doublets come only from the third torus (the unique order-three plane) and colour
+      triplets only from the other two; this one fact gives both the top coupling and
+      \textbf{doublet--triplet splitting}, solved in $55$ of $87$ models by a
+      missing-partner mechanism. (\cert{3caf15e}, \cert{a6f1cae})
+\end{itemize}
+\end{result}
+
+\begin{physical}[What it means physically]
+The Standard Model's most puzzling structural feature --- that the Higgs doublet is light
+while its would-be colour-triplet partner, which would make protons decay, is absent --- is
+here a consequence of geometry: the Higgs lives on the one internal plane whose twist has
+order three, the ``qutrit plane'', and that plane carries no colour triplet. And the
+symmetry breaking that produces the Standard Model is, in qutrit language, an entangling
+gate. These are measured regularities of an explicit string construction, with controls;
+they are not theorems about all constructions.
+\end{physical}
+
+\subsection{Where the string route stands}
+
+A model is not a universe until it has a stable vacuum with the right low-energy
+properties. Here the honest record is mixed, and it has been corrected more than once.
+
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{@{}p{3.2cm}Xp{2.3cm}@{}}
+\toprule
+\textbf{Requirement} & \textbf{Current exact status (class of $87$ $\Z_6$-I models)} & \textbf{Badge}\\
+\midrule
+Supersymmetric vacuum & In the doublet--triplet-solving vacuum, $F$- and $D$-flatness conflict:
+one $U(1)$ direction gives every mass singlet a positive charge. Gordan's alternative
+(``$D$-flat or empty superpotential, never both'') verified on all $215$ models. & \tierX\ (that vacuum)\\
+$D$-flat directions & Exist in $23$ of $87$ ($\Z_6$-I) and $105$ of $128$ ($\Z_6$-II), after a
+trace-weighting correction. & \tierC\\
+Proton stability & A $\Z_2$ matter parity from $U(1)_{B-L}$ exists in all $87$; all bare
+dangerous operators are matter-odd, all Yukawas and $\mu$ are even (criterion of
+\cite{Lebedev2008}). Every $D$-flat support
+examined contains a matter-odd singlet (sampled, not exhausted). & \tierO\ (conditional)\\
+The $\mu$ term & Arises at order $3$ or $4$ in every model; none is $\mu$-free through order
+five. Must come from a vacuum symmetry. & \tierO\\
+Neutrino masses & In the splitting-solving models, one to two orders of magnitude too light. & \tierO\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\begin{boundary}[The live question]
+Is there a vacuum of this class that condenses only matter-even singlets and is both $F$-
+and $D$-flat? If yes, the class survives with proton stability; if no, the class is
+excluded. This is a finite, well-posed computation, and it is open.
+\end{boundary}
+
+\subsection{Handedness: host, not select}
+\label{sec:chirality}
+
+The weak force acts only on left-handed particles. Can $\W$ explain why?
+
+\begin{result}{Theorem 9.5 (the chirality no-go) \hfill \tierT\ \tierC}
+The two half-spin representations $S^\pm$ of the $D_5$ structure built on the
+geometry are exchanged by the substrate's own outer controller $T$, which generates
+$\PGSp(4,3)=\PSp(4,3){:}2=W(E_6)$ together with $\PSp(4,3)$ and has $\det T=-1$. Consequently
+no invariant of the full automorphism group of $\W$ can distinguish $S^+$ from $S^-$.
+\cert{w33\_pass346\_the\_chirality\_no\_go.py}
+\end{result}
+
+\begin{plainwords}
+The forty-point geometry is perfectly capable of \emph{carrying} a left-handed world: the
+chiral spinors are there (Section~8). What it cannot do is \emph{choose} left over right,
+because one of its own symmetries swaps them. Any explanation of the handedness of the weak
+force must come from outside the geometry --- from a choice of vacuum, of orientation, or of
+dynamics. This is the same distinction as in Section~2: the two groups of order $51\,840$
+differ precisely by whether that swapping symmetry is present.
+\end{plainwords}
+
+\subsection{What we do not count as evidence}
+
+The older manuscripts contain many numerical coincidences: $1/\alpha\approx137$ written as a
+combination of cyclotomic values of $q=3$, spectral indices of the cosmic microwave
+background, spanning-tree counts read as gravitational entropies. Some are striking. None
+is derived from a dynamical principle with its uncertainties, and a finite geometry with
+many natural integers can match many targets. We therefore do not use any of them as
+evidence in this paper. (The value $\sin^2\theta_W=3/8$ at unification, often quoted
+alongside them, is the standard prediction of any $SU(5)$ or $SO(10)$ grand unification and
+is not specific to $\W$.) \tierB\ at most.
+
+\begin{keyidea}
+The geometry carries the Standard Model's shapes --- its gauge algebra's dimensions, three
+equal matter sectors, a chiral spinor, a matter parity --- and a string compactification
+built on its twist produces genuine three-family Standard Models whose Higgs sits in the
+``qutrit plane''. It cannot choose the handedness of the weak force, and no realistic
+supersymmetric vacuum has yet been exhibited.
+\end{keyidea}

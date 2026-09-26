@@ -1,0 +1,187 @@
+\section{One qutrit, acting on itself}
+\label{sec:self}
+
+Section~2 built $\W$ from \emph{two} qutrits. This section shows that one is enough ---
+provided we look not at the qutrit's states but at the things that can be done to it.
+That shift of viewpoint is the precise content of the phrase the Holonet papers use,
+\emph{self-entanglement}, and it is worth getting exactly right, because the phrase can
+also be read in ways that are not true.
+
+\subsection{Operators are states}
+
+An operator on one qutrit is a $3\times3$ matrix: nine complex numbers. So the space of
+operators $\End(\C^3)$ is itself a nine-dimensional complex vector space, and with the
+Hilbert--Schmidt inner product $\langle A,B\rangle=\tr(A^\dagger B)$ it is a Hilbert
+space. Writing $\ket{A}\!\rangle$ for a matrix regarded as a vector,
+\[
+\End(\C^3)\;\cong\;\C^3\otimes\C^{3*}\;\cong\;\C^9,
+\qquad
+\ket{i}\!\bra{j}\;\longleftrightarrow\;\ket{i}\otimes\ket{j}.
+\]
+Under this identification the identity matrix becomes the maximally entangled
+``Bell'' state of two qutrits,
+\[
+\ket{\Omega}=\tfrac{1}{\sqrt3}\ket{I}\!\rangle=\tfrac1{\sqrt3}\bigl(\ket{00}+\ket{11}+\ket{22}\bigr).
+\]
+This is the Choi--Jamio{\l}kowski correspondence, a standard tool of quantum information:
+every operation on a system is encoded by a state of two copies of it.
+
+\begin{plainwords}
+Imagine describing a machine not by its current setting but by its complete instruction
+table: ``if the input is $j$, produce $i$ with amplitude $A_{ij}$''. That table has nine
+entries. The nine entries behave exactly like the state of two three-way systems --- an
+``input'' and an ``output''. Nothing mystical is happening; it is the same information
+written in a different shape. The ``two qutrits'' of Section~2 can be read as the
+before-and-after of a single qutrit.
+\end{plainwords}
+
+\subsection{The two-sided action and its geometry}
+
+Let $P_u=X^{u_1}Z^{u_2}$ for $u\in\F_3^2$. A qutrit operator $A$ can be multiplied by
+Pauli operators from the left and from the right:
+\[
+\Phi_{u,v}(A)=P_u\,A\,P_v^\dagger ,\qquad (u,v)\in\F_3^2\oplus\F_3^2 .
+\]
+
+\begin{result}{Theorem 3.1 \hfill \tierT\ \tierC}
+The $81$ maps $\Phi_{u,v}$ form an orthogonal basis of $\End(\End(\C^3))\cong M_9(\C)$;
+the $80$ non-identity maps span $\sll_9$. They commute up to the phase
+\[
+\Phi_{u,v}\Phi_{u',v'}=\omega^{[u,u']-[v,v']}\,\Phi_{u',v'}\Phi_{u,v},
+\qquad [u,u']=u_1u'_2-u_2u'_1 .
+\]
+The form $[u,u']-[v,v']$ is symplectic on $\F_3^4$, and the resulting commutation
+geometry on the $40$ projective classes is $\W$, with collinearity graph
+$\SRG(40,12,2,4)$ and spectrum $12^1\,2^{24}\,(-4)^{15}$.
+\cert{w33\_20260924\_temporal\_su9\_e8\_compiler.py}
+\end{result}
+
+\begin{proof}[Proof of the phase]
+$\Phi_{u,v}\Phi_{u',v'}(A)=P_uP_{u'}AP_{v'}^\dagger P_v^\dagger$ and
+$\Phi_{u',v'}\Phi_{u,v}(A)=P_{u'}P_uAP_v^\dagger P_{v'}^\dagger$. Using
+$P_uP_{u'}=\omega^{[u,u']}P_{u'}P_u$ and taking adjoints of
+$P_vP_{v'}=\omega^{[v,v']}P_{v'}P_v$ gives the ratio $\omega^{[u,u']-[v,v']}$.
+\end{proof}
+
+The minus sign is the fingerprint of right multiplication: acting from the right reverses
+the order of products, so the right-hand copy of the qutrit carries the \emph{opposite}
+algebra. The two ``qutrits'' are not two particles, and not even two subsystems in the
+usual sense: they are the algebra of left actions and its commutant, the algebra of right
+actions, on one qutrit's operator space.
+
+\subsection{The Bell line is the set of physical channels}
+
+Among all $\Phi_{u,v}$, which ones are genuine quantum operations? A linear map on
+operators is physically realisable as a quantum channel only if it is \emph{completely
+positive}, which for $\Phi_{u,v}$ means its Choi matrix
+$\ket{P_u}\!\rangle\langle\!\bra{P_v}$ is positive semidefinite. A rank-one matrix
+$\ket{a}\bra{b}$ is positive only when $b$ is a positive multiple of $a$; so up to phase,
+$\Phi_{u,v}$ is completely positive exactly when $u=v$. The diagonal
+$\Delta=\{(u,u)\}$ is totally isotropic ($[u,u']-[u,u']=0$) and its four projective points
+form one line of $\W$.
+
+\begin{result}{Proposition 3.2 \hfill \tierT\ \tierC}
+The unitary channels $A\mapsto P_uAP_u^\dagger$ form a distinguished line of $\W$, the
+\emph{Bell line}; each fixes $\ket{\Omega}$. The left--right exchange
+$(u,v)\mapsto(v,u)$ reverses the symplectic form; its eight fixed rays split into two
+Lagrangian lines, and the $+$ line is exactly the unitary-channel diagonal.
+\cert{w33\_20260924\_liouville\_swap\_cp\_outer\_bridge.py}
+\end{result}
+
+\begin{physical}[What it means physically: a built-in time reversal]
+Exchanging left and right multiplication is the operator version of running a process
+backwards: $A\mapsto P_uAP_v^\dagger$ becomes $A\mapsto P_vAP_u^\dagger$. Because it
+reverses the sign of the commutation form, it is an \emph{anti}-symmetry of $\W$ --- the
+same kind of map as complex conjugation, which is how quantum mechanics implements time
+reversal. The repository shows that ordinary matrix transposition of the Pauli algebra
+induces exactly this class of outer symmetry, the one earlier work had identified
+abstractly (BT172). \tierC\ (\cert{w33\_20260924\_intrinsic\_transpose\_outer.py}, up to a
+labelling gauge.)
+\end{physical}
+
+\subsection{Three different things called ``self-entanglement''}
+
+The phrase can mean three distinct things, and the Holonet programme has, at times, slid
+between them. It is worth separating them once and for all.
+
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{@{}p{3.1cm}Xp{3.6cm}@{}}
+\toprule
+\textbf{Notion} & \textbf{What is entangled} & \textbf{Status here}\\
+\midrule
+Intraparticle & Two independent degrees of freedom of one photon (for example its
+arrival-time bin and its frequency bin). & Standard and experimentally demonstrated.\\
+Operator (Choi) & The input and output legs of one operation, as in \S3.1. & The exact
+algebraic home of $\W$.\\
+Temporal process & Quantum correlations between interventions at different times,
+described by a multi-time \emph{process tensor}. & Needs its own witness (\S3.5).\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\begin{boundary}[A correction the papers needed]
+An earlier draft of the photonic paper described three optical time bins as containing
+``a past qutrit and a future qutrit''. Three orthogonal bins span only $\C^3$, whereas two
+qutrits need $\C^9$; the two-bin subsets it named overlap and cannot be independent tensor
+factors. The architecture now uses two genuinely independent qutrit degrees of freedom
+of one photon --- time bin $\otimes$ frequency bin --- and reads ``past'' and ``future''
+as the input and output legs of a process, not as simultaneously existing copies.
+\tierX\ (the three-bin reading) \quad \tierT\ (the corrected encoding).
+\end{boundary}
+
+\subsection{Memory across a causal break}
+
+What does it take for a system to carry quantum information from one time to a later
+one? The repository's cleanest test is a three-step process with a qutrit memory $M$:
+swap the system $S$ into $M$; discard $S$ and replace it with anything at all (a
+\emph{causal break}); swap back. If the original state reappears, the process had
+memory. But a classical memory that merely records ``$0$, $1$ or $2$'' would pass that
+test too. The decisive witness entangles $S$ with a reference $R$ first.
+
+\begin{result}{Theorem 3.3 \hfill \tierC}
+With $S$ initially maximally entangled with a reference qutrit $R$:
+\begin{itemize}
+\item a coherent memory returns the Bell state exactly (negativity $1$, Bell fidelity $1$);
+\item a classical label memory returns $\tfrac13\sum_j\ket{jj}\!\bra{jj}$ (negativity $0$,
+      Bell fidelity $\tfrac13$), although it passes every basis-state retrieval test;
+\item a depolarizing memory $\rho\mapsto(1-p)\rho+p\,I/3$ returns an isotropic state with
+      Bell fidelity $1-\tfrac{8p}{9}$ and negativity $\max\bigl(0,\tfrac{3-4p}{3}\bigr)$;
+      quantum memory survives exactly while $p<\tfrac34$.
+\end{itemize}
+\cert{w33\_20260924\_temporal\_quantum\_memory\_witness.json}
+\end{result}
+
+\begin{physical}
+The threshold $p=\tfrac34$ is the standard point at which a qutrit depolarizing channel
+becomes entanglement-breaking: beyond it, the link between the earlier and the later
+system can still carry classical information but no longer quantum information. Retrieval
+after a break proves that the past is \emph{remembered}; preserved entanglement with a
+reference proves that it is remembered \emph{quantumly}. Neither involves any influence
+travelling backwards in time.
+\end{physical}
+
+\subsection{A state picks a clock}
+
+A faithful qutrit state $\rho=\mathrm{diag}(p_0,p_1,p_2)$ defines a natural flow on
+operators, the \emph{modular flow} of Tomita--Takesaki theory, with generator
+$K=-\log\rho\otimes1+1\otimes\log\rho$ acting on $\End(\C^3)$. The matrix units are its
+eigenvectors:
+\[
+K\,E_{ij}=\log\!\frac{p_j}{p_i}\,E_{ij}.
+\]
+The three diagonal units have frequency zero; the six off-diagonal units $E_{ij}$
+($i\neq j$) --- the six directed transitions between the three levels --- come in three
+opposite pairs. Their pattern of differences is exactly the root system $A_2$.
+\tierC\ (\cert{w33\_20260924\_modular\_a2\_event\_clock.py})
+
+\begin{plainwords}
+A perfectly balanced qutrit ($p_0=p_1=p_2$) has no preferred direction: every transition
+has zero frequency, and nothing distinguishes ``forward'' from ``backward''. Any imbalance
+gives each of the six transitions a frequency, and pairs each with its reverse at the
+opposite frequency. This is the finite form of an old idea of Connes and Rovelli \cite{ConnesRovelli}: that a
+state of a system can itself define a flow of time. It orients change; it does not by
+itself make change irreversible. That distinction --- between an orientation of time and
+an arrow of time --- returns in Section~4.
+\end{plainwords}

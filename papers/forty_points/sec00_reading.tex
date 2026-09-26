@@ -1,0 +1,86 @@
+\section*{How to read this paper}
+\addcontentsline{toc}{section}{How to read this paper}
+\markboth{How to read this paper}{}
+
+This paper is written for two readers at once. One has never studied algebra beyond
+school and wants to understand what has actually been found. The other wants every
+statement to be precise enough to check. We have tried not to cheat either of them.
+The mathematics is stated in full; next to it, in gold-edged boxes, the same idea is
+explained in ordinary words, and in teal-edged boxes we say what the idea means
+physically. Rose-edged boxes mark the edge of what is known.
+
+\subsection*{The five badges}
+
+Every claim of substance carries one of five labels. They are the most important
+typographical device in the paper, because the whole value of a speculative subject
+lies in being able to tell the proved from the hoped-for.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabularx}{0.95\textwidth}{@{}lX@{}}
+\toprule
+\tierT & A mathematical theorem: proved by an argument in the text, or a standard result
+         with a reference. \\
+\tierC & An exact finite computation, carried out by a committed script whose output
+         certificate is named. ``Exact'' means integer or rational arithmetic, or an
+         exhaustive enumeration --- never a numerical approximation, unless we say so. \\
+\tierB & A bridge: a mathematically true statement \emph{plus} an interpretation of it
+         (for example, calling a mathematical light cone a light cone of time). The
+         mathematics is certain; the interpretation is a proposal. \\
+\tierO & An open question, stated as sharply as we can. \\
+\tierX & Something that was once believed, written down, and then shown false. We keep
+         these, with the reason. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection*{A map of the journey}
+
+The paper follows one chain of exact identifications. Figure~\ref{fig:journey} is the
+whole argument in one picture; each box is a section.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  node distance=5.5mm and 16mm,
+  st/.style={draw=ink!60,rounded corners=3pt,fill=white,align=center,
+    font=\sffamily\footnotesize,text width=50mm,minimum height=10mm,inner sep=3pt},
+  hl/.style={st,fill=tealsoft,draw=teal},
+  ar/.style={-{Stealth[length=2.4mm]},thick,ink!55}]
+  \node[st] (q) {one qutrit $\C^3$\\\scriptsize three settings, with phases};
+  \node[st,below=of q] (h) {9 operator histories $\End(\C^3)$\\\scriptsize the qutrit acting on itself};
+  \node[hl,below=of h] (w) {$\W$: 40 points, 40 lines\\\scriptsize \S2--\S3};
+  \node[st,below=of w] (m) {27-event finite space-time\\\scriptsize light cone $t^2-x^2-y^2$, \S4};
+  \node[st,below=of m] (c) {four clocks $=\mathbb{P}^1(\F_3)$\\\scriptsize tetracode, Hesse striations, \S4};
+  \node[hl,right=of q] (e8) {$E_8$: 248 dimensions\\\scriptsize $80+84+84$ from 9 histories, \S5};
+  \node[st,below=of e8] (gr) {clock gradings of $E_8$\\\scriptsize $1{+}56{+}134{+}56{+}1$; \ cubic ladder $54\to81\to83$};
+  \node[st,below=of gr] (f) {Freudenthal $56$ and quartic\\\scriptsize the $57$-dimensional light cone, \S6};
+  \node[st,below=of f] (r) {real forms: $E_{8(-24)}$ vs $E_{8(8)}$\\\scriptsize where signature comes from, \S7};
+  \node[hl,below=of r] (l) {Albert algebra $\to\mathfrak{so}(1,9)$\\\scriptsize Weyl spinor 16 $=$ matter, \S8};
+  \draw[ar] (q)--(h); \draw[ar] (h)--(w); \draw[ar] (w)--(m); \draw[ar] (m)--(c);
+  \draw[ar] (c.east) -- ++(8mm,0) |- (e8.west);
+  \draw[ar] (e8)--(gr); \draw[ar] (gr)--(f); \draw[ar] (f)--(r); \draw[ar] (r)--(l);
+\end{tikzpicture}
+\caption{The chain of exact identifications followed in this paper. Shaded boxes are the
+three places where the story changes scale: from a qubit-sized object to a finite
+geometry, from the geometry to $E_8$, and from $E_8$ to a Lorentzian algebra.}
+\label{fig:journey}
+\end{figure}
+
+\subsection*{What you will need}
+
+Nothing beyond patience. We introduce every structure before we use it, and the
+glossary in Appendix~B collects the vocabulary. Readers who want only the story can
+read the plain-words boxes and the key-idea panels and skip the displayed mathematics;
+nothing essential will be lost. Readers who want only the mathematics can do the
+reverse.
+
+\subsection*{Where the material comes from}
+
+Everything here is drawn from the public repository \texttt{wilcompute/W33-Theory},
+a record of several thousand numbered ``passes'' by two independent research tracks,
+and from its three long manuscripts --- the $\W$ paper, the photonic Holonet paper and
+the Holonet machine blueprint --- some of whose pages are adapted here. Passes 10949 and
+10950, which supply Sections 6--8, were carried out for this synthesis. A reader who
+wants to check a statement can find its script and certificate in the ledger of
+Appendix~A.

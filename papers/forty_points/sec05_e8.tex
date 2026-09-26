@@ -1,0 +1,327 @@
+\section{\texorpdfstring{$E_8$}{E8} from nine histories}
+\label{sec:e8}
+
+$E_8$ is the largest of the five exceptional simple Lie algebras: $248$ dimensions, $240$
+roots, a symmetry so rigid that it appears, often unexpectedly, in string theory, in the
+densest packing of spheres in eight dimensions, and in the physics of certain magnetic
+materials. This section shows that one qutrit's nine operator histories build $E_8$ in a
+way in which every piece has a meaning in the finite geometry --- and it records
+carefully one famous coincidence that turned out to be a trap.
+
+\begin{plainwords}
+A Lie algebra is the ``infinitesimal'' version of a continuous symmetry: the set of all
+directions in which you can nudge a system while keeping its rules intact, together with
+the rule (the \emph{bracket}) for what happens when two nudges are combined in opposite
+orders. Its \emph{roots} are the special directions that the symmetry's own ``clock''
+(its maximal commuting part) rotates at definite rates. $E_8$ has $240$ of them.
+\end{plainwords}
+
+\subsection{Eighty plus eighty-four plus eighty-four}
+
+Recall from Section~3 that the $80$ non-identity two-sided Weyl maps on one qutrit span
+$\sll_9$, the Lie algebra of traceless $9\times9$ matrices acting on the nine operator
+histories $\ket{i}\!\bra{j}$. Now add \emph{packets}: unordered triples of histories. There
+are $\binom93=84$ of them, forming the representation $\Lambda^3\C^9$; their duals form
+$\Lambda^6\C^9$, another $84$. A classical construction \cite{Adams1996,Baez2002} makes
+\[
+E_8 \;=\; \sll_9\;\oplus\;\Lambda^3\C^9\;\oplus\;\Lambda^6\C^9,\qquad
+248=80+84+84 ,
+\]
+into a Lie algebra. On the nine history cells the brackets are literal packet operations:
+$E_{ij}$ replaces cell $j$ by cell $i$ inside a packet; two disjoint triples bracket to the
+complementary six-set; a triple and a six-set differing by one cell contract to an
+$E_{ij}$; opposite packets return a Cartan direction. \tierC\
+(\cert{w33\_20260924\_temporal\_su9\_e8\_compiler.py},
+\cert{w33\_20260924\_temporal\_a8\_e8\_process\_bracket.py})
+
+\subsection{Hesse lines are copies of \texorpdfstring{$A_2$}{A2}}
+
+Place the nine histories on the affine plane $\F_3^2$ as in Figure~\ref{fig:hesse}. A
+triple $S$ of cells labels the root
+\[
+w_S=\sum_{i\in S}e_i-\tfrac13\sum_{i=1}^9e_i ,\qquad w_S\cdot w_T=|S\cap T|-1 .
+\]
+(Indeed $|w_S|^2=3-2+1=2$.) The $84$ triples fall into two orbits of the affine group
+$AGL(2,3)$ (order $432$): the $12$ \emph{lines} of the plane and the $72$ non-collinear
+\emph{triangles}.
+
+\begin{result}{Theorem 5.1 (four clocks, four $A_2$'s) \hfill \tierT\ \tierC}
+The three lines of one parallel class give three roots with pairwise products $-1$ and
+sum $0$; with their negatives they form a root system $A_2$. Lines of different classes
+meet in exactly one cell, so their roots are orthogonal. The $12$ Hesse lines therefore
+span a reflection-closed subsystem $4A_2\subset E_8$, one $A_2$ per clock, and the root
+shell refines as
+\[
+240\;=\;\underbrace{72}_{A_8}\;+\;\underbrace{24}_{\text{Hesse }4A_2}\;+\;\underbrace{144}_{\text{triangles}} .
+\]
+\cert{w33\_20260924\_temporal\_hesse\_4a2\_a8\_bridge.py}
+\end{result}
+
+\begin{proof}
+Disjoint triples have $|S\cap T|=0$, hence product $-1$; the three lines of a class
+partition the nine cells, so $\sum w_S=\sum_i e_i-3\cdot\frac13\sum_ie_i=0$. Two
+non-parallel lines of an affine plane meet in one point, giving product $1-1=0$.
+\end{proof}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=0.95]
+  % four A2 hexagons, one per clock
+  \foreach \c/\n/\x in {teal/1/0,sky/2/2.6,gold/3/5.2,sage/4/7.8}{
+    \begin{scope}[xshift=\x cm]
+      \foreach \k in {0,...,5}{
+        \draw[\c,line width=0.9pt,-{Stealth[length=1.6mm]}] (0,0) -- (60*\k+30:0.9);}
+      \draw[\c!35,line width=0.5pt] (30:0.9) \foreach \k in {1,...,5}{ -- (60*\k+30:0.9)} -- cycle;
+      \fill[\c] (0,0) circle (1.3pt);
+      \node[font=\sffamily\scriptsize\bfseries,text=\c!80!black] at (0,-1.25) {$A_2$, clock \n};
+    \end{scope}}
+  \node[font=\sffamily\scriptsize,text=slate] at (3.9,-1.85) {$4\times 6=24$ roots: the Hesse subsystem};
+  % glue sectors
+  \begin{scope}[xshift=11.3cm,yshift=0cm]
+    \foreach \k in {0,...,7}{
+      \pgfmathsetmacro{\a}{\k*45+22.5}
+      \fill[rose!18,draw=rose!60] (\a:1.05) circle (0.33);
+      \node[font=\tiny] at (\a:1.05) {$27$};}
+    \node[font=\sffamily\scriptsize,align=center] at (0,0) {tetracode\\glue};
+    \node[font=\sffamily\scriptsize,text=slate,align=center] at (0,-1.85) {$8$ nonzero codewords\\$\times\,27=216$ roots};
+  \end{scope}
+\end{tikzpicture}
+\caption{$E_8$ assembled from four clocks. Each Hesse clock contributes one $A_2$ root
+system (left). The remaining $216$ roots come in eight sectors of $27$, one for each
+nonzero word of the tetracode (right): $240=4\cdot6+8\cdot27$.}
+\label{fig:a24}
+\end{figure}
+
+\subsection{The glue is the tetracode, and the tetracode is the clock}
+
+The lattice $E_8$ contains the sublattice $A_2^4$ with quotient $\F_3^2$, and the
+well-known construction of $E_8$ from the tetracode \cite{ConwaySloane} reads it as
+\[
+E_8=\bigcup_{c\in\mathcal{T}}\bigl(c+A_2^{\,4}\bigr),\qquad
+240=4\cdot6+8\cdot27 ,
+\]
+where $\mathcal{T}\subset\F_3^4$ is the tetracode: each of the eight nonzero codewords has
+weight three, and contributes $3^3=27$ minimal vectors. Combined with Section~4, the
+four glue coordinates are the four clocks and the eight nonzero sectors are the eight
+oriented, nonzero linear clock readings. \tierT\ (classical) \ \tierC\ (the clock reading,
+\cert{w33\_pass10946\_clock\_code\_cone\_objectwise.py})
+
+\subsection{A trap: \texorpdfstring{$240=240$}{240 = 240}}
+\label{sec:e8-trap}
+
+The collinearity graph of $\W$ has $240$ edges, and $E_8$ has $240$ roots. For years the
+repository looked for a natural bijection between them. The question has a precise and
+negative answer.
+
+\begin{result}{Theorem 5.2 (no equivariant bijection) \hfill \tierC}
+The two groups of order $51\,840$ of Section~2 each do only half the job:
+\begin{itemize}
+\item $\PGSp(4,3)\cong W(E_6)$ acts faithfully and transitively on the $240$ edges of $\W$,
+      but \emph{intransitively} on the $240$ roots of $E_8$;
+\item $\Sp(4,3)$ acts faithfully and transitively on the $240$ roots, but its centre acts
+      trivially on the edges, so its edge action is not faithful.
+\end{itemize}
+Hence no bijection between edges and roots is equivariant for a common group.
+\cert{w33\_pass1020\_e8\_transitive\_51840.g}
+\end{result}
+
+What \emph{does} exist is better. The Weyl group of $E_8$ contains a regular element $w$
+of order three. By Springer's theory \cite{Springer} its centraliser is the complex reflection group
+$G_{32}\cong\Z_3\times\Sp(4,3)$ of order $155\,520$ --- the symmetry group of the
+\emph{Witting polytope}, whose $240$ vertices in $\C^4$ are the $E_8$ roots.
+
+\begin{result}{Theorem 5.3 (the $6:1$ fibration) \hfill \tierC}
+The $240$ roots of $E_8$ fall into $40$ complex lines $\{\pm v,\pm\omega v,\pm\omega^2 v\}$,
+each a copy of the six Eisenstein units. $\Sp(4,3)$ permutes the $40$ lines with
+subdegrees $1,12,27$: the quotient is the collinearity graph of $\W$ --- on its
+\emph{points}, not its lines. The fibre group is $\langle c^5\rangle\cong\Z_6$ for a
+Coxeter element $c$ of $W(E_8)$.
+\cert{w33\_pass1021\_e8\_fibration\_over\_forty.g}
+\end{result}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=1]
+  % base: 40 points (sketch: the 1+12+27 view)
+  \begin{scope}
+    \fill[ink] (0,0) circle (2.2pt);
+    \foreach \k in {0,...,11}{\fill[teal] ({30*\k}:0.9) circle (1.6pt);}
+    \foreach \k in {0,...,26}{\fill[rose!70] ({360*\k/27+5}:1.6) circle (1.3pt);}
+    \node[font=\sffamily\scriptsize,text=slate] at (0,-2.15) {base: the $40$ points of $\W$};
+  \end{scope}
+  % fibre over one point
+  \draw[-{Stealth[length=2.5mm]},ink!60,line width=0.9pt] (3.1,1.3) to[bend right=25] node[above,font=\sffamily\scriptsize,pos=0.35]{project} (0.12,0.12);
+  \begin{scope}[xshift=4.2cm,yshift=1.5cm]
+    \foreach \k/\lab in {0/{v},1/{-\omega^2v},2/{\omega v},3/{-v},4/{\omega^2 v},5/{-\omega v}}{
+      \fill[gold] (60*\k:1.0) circle (2.3pt);
+      \node[font=\scriptsize] at (60*\k:1.42) {$\lab$};}
+    \draw[gold!60] (0:1) \foreach \k in {1,...,5}{-- (60*\k:1)} -- cycle;
+    \node[font=\sffamily\scriptsize,text=slate,align=center] at (0,-1.85) {fibre: $6$ roots $=$ one\\Witting diameter, $\Z_6$};
+  \end{scope}
+  \node[font=\sffamily\small,align=left,anchor=west] at (6.4,0.4)
+   {$240\;=\;40\times6$\\[3pt]\scriptsize roots $\to$ points,\\\scriptsize $\Sp(4,3)$-equivariant};
+\end{tikzpicture}
+\caption{The correct relation between $E_8$ and $\W$: not edges to roots, but a
+six-to-one map from roots to points, whose fibres are the Eisenstein unit hexagons.}
+\label{fig:fibration}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\begin{tikzpicture}[scale=1.12]
+  \input{fig_e8coxeter}
+  \fill[ink] (0,0) circle (1.2pt);
+\end{tikzpicture}
+\caption{The $240$ roots of $E_8$ projected to the Coxeter plane of a Coxeter element $c$
+(order $30$), which acts on the plane as a rotation by $12^\circ$. The roots lie on eight
+rings of thirty. The orbits of $c^5$ --- rotation by $60^\circ$ --- are regular hexagons,
+five per ring: these $40$ hexagons are the $40$ fibres of Theorem~5.3, one for each point of
+$\W$. Each hexagon is $\{\pm v,\pm\omega v,\pm\omega^2v\}$, since $c^{15}=-1$ and $c^{10}$ has
+order three. All coordinates computed (\texttt{make\_figures.py}).}
+\label{fig:coxeter}
+\end{figure}
+
+\begin{physical}[What it means physically: a photon's four-dimensional state space]
+The $40$ Witting diameters are $40$ rays in $\C^4$ --- the state space of a photon's path
+and polarisation, or of two qubits. Two rays are orthogonal exactly when the corresponding
+points of $\W$ are collinear. So the same geometry is drawn twice: by \emph{states} of a
+four-level system (the Witting rays) and by \emph{operators} on two qutrits (the Pauli
+classes). The photonic Holonet papers call this operator--operand duality.
+\tierC\ (\cert{bt817\_self\_entangled\_photon\_atlas.py}, \cert{bt821\_operator\_operand\_duality.py})
+\end{physical}
+
+\subsection{\texorpdfstring{$E_6\times A_2$}{E6 x A2}, the twenty-seven, and a cubic}
+
+Under its subalgebra $E_6\oplus A_2$,
+\[
+E_8=(\mathbf{78},\mathbf1)\oplus(\mathbf1,\mathbf8)\oplus(\mathbf{27},\mathbf3)\oplus(\overline{\mathbf{27}},\overline{\mathbf3}),
+\]
+which is a $\Z_3$-grading $248=86+81+81$. The $27$ of $E_6$ carries a unique invariant
+cubic form $N$; in the repository's committed basis it has exactly $45$ signed terms
+(\emph{triads}), each coordinate in $5$ triads and each pair in at most one ---
+precisely the incidence of the $27$ lines and $45$ tritangent planes of a smooth cubic
+surface, whose symmetry group is $W(E_6)$, the automorphism group of $\W$ \cite{Garibaldi}.
+\tierT\ (classical) \ \tierC\ (\cert{canonical\_su3\_gauge\_and\_cubic.json})
+
+\begin{physical}
+In grand unified theories built on $E_6$, the $\mathbf{27}$ holds one generation of
+matter: under $SO(10)$ it splits $\mathbf{27}=\mathbf{16}+\mathbf{10}+\mathbf1$ ---
+sixteen fermions (including a right-handed neutrino), a ten of Higgs-type fields, and a
+singlet. The cubic $N$ is then the unique renormalisable Yukawa coupling
+$\mathbf{27}^3$. Section~8 shows this same split arising as scalar, vector and spinor of a
+ten-dimensional Lorentz group.
+\end{physical}
+
+\subsection{Clock gradings of \texorpdfstring{$E_8$}{E8}}
+
+A clock gives more than a $\Z_3$-grading: once an origin and an orientation are chosen it
+gives an \emph{integer} grading. On the committed Chevalley basis:
+
+\begin{result}{Theorem 5.4 (Hesse clocks grade $E_8$) \hfill \tierC}
+\begin{enumerate}[label=(\roman*),leftmargin=1.5em]
+\item A single Hesse line (a ``tick'') induces the \emph{contact grading}
+      \[ E_8=\g_{-2}\oplus\g_{-1}\oplus\g_0\oplus\g_1\oplus\g_2,\qquad 1+56+134+56+1, \]
+      with $\g_0=E_7\oplus\C$.
+\item An oriented striation (three parallel ticks) induces the \emph{$|3|$-grading}
+      \[ 2+27+54+82+54+27+2, \]
+      with Levi $\g_0=E_6\oplus A_1\oplus\C$, $\g_{\pm1}=\mathbf{27}\otimes\mathbf2$,
+      $\g_{\pm2}=\mathbf{27}$, $\g_{\pm3}=\mathbf2$.
+\item The repository's frozen $\Z_3$-grading $86+81+81$ is exactly this integer grading
+      reduced modulo three; all $8\,347$ nonzero committed structure constants obey the
+      integer degree law.
+\end{enumerate}
+\cert{w33\_20260925\_hesse\_clock\_e8\_gradings.py},
+\cert{w33\_20260925\_e8\_parabolic\_cubic\_clock\_lift.py}
+\end{result}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[yscale=0.028,xscale=1]
+  % contact grading
+  \begin{scope}
+    \foreach \d/\h/\c in {-2/1/ink,-1/56/teal,0/134/gold,1/56/teal,2/1/ink}{
+      \fill[\c!70] (\d*0.9-0.32,0) rectangle (\d*0.9+0.32,\h);
+      \node[font=\scriptsize,anchor=south] at (\d*0.9,\h+2) {$\h$};
+      \node[font=\scriptsize,anchor=north] at (\d*0.9,-3) {$\d$};}
+    \node[font=\sffamily\scriptsize,text=slate] at (0,-22) {contact grading (one tick)};
+    \node[font=\scriptsize,text=white] at (0,40) {$E_7$};
+    \node[font=\scriptsize,text=white] at (0,28) {$+\C$};
+    \node[font=\tiny,text=white,rotate=90] at (-0.9,26) {Freudenthal};
+    \node[font=\tiny,text=white,rotate=90] at (0.9,26) {Freudenthal};
+  \end{scope}
+  % |3| grading
+  \begin{scope}[xshift=7.2cm]
+    \foreach \d/\h/\c in {-3/2/ink,-2/27/rose,-1/54/teal,0/82/gold,1/54/teal,2/27/rose,3/2/ink}{
+      \fill[\c!70] (\d*0.9-0.32,0) rectangle (\d*0.9+0.32,\h);
+      \node[font=\scriptsize,anchor=south] at (\d*0.9,\h+2) {$\h$};
+      \node[font=\scriptsize,anchor=north] at (\d*0.9,-3) {$\d$};}
+    \node[font=\sffamily\scriptsize,text=slate] at (0,-22) {$|3|$-grading (oriented striation)};
+    \node[font=\tiny,text=white,align=center] at (0,33) {$E_6$\\$A_1$\\$\C$};
+  \end{scope}
+\end{tikzpicture}
+\caption{Two ways a clock slices $E_8$. Heights are dimensions. On the left, the
+Freudenthal ``$56$'' of Section~6 appears at degree $\pm1$; on the right, the $27$ of
+$E_6$ appears doubled at degree $\pm1$ and single at degree $\pm2$.}
+\label{fig:gradings}
+\end{figure}
+
+This parabolic spectrum was found independently by Kraft, Regeta and Zimmermann in a
+study of small varieties with group actions \cite{KRZ2020}. What is repository-specific is
+the identification with the Hesse clocks and the committed structure constants.
+
+\subsection{The cubic ladder: three steps to the top}
+
+In the $|3|$-grading, positive degrees form a nilpotent algebra
+$\g_+=\g_1\oplus\g_2\oplus\g_3$ of dimension $54+27+2=83$. It is generated by $\g_1$, and
+the way it fills up is governed by the $E_6$ cubic.
+
+\begin{result}{Theorem 5.5 (the bracket ladder) \hfill \tierC}
+On the committed Chevalley bracket:
+\begin{enumerate}[label=(\roman*),leftmargin=1.5em]
+\item $[\g_1,\g_1]=\g_2$: $270$ nonzero pairs hit all $27$ grade-two roots, each ten times;
+\item $[\g_1,\g_2]=\g_3$: $54$ nonzero pairs hit both top roots, each $27$ times;
+\item the nonzero nested triple brackets exhibit exactly the $45$ triads of the cubic,
+      each $12$ times, and for every signed triad $d_{ijk}$,
+      $[[e_{(i,0)},e_{(j,1)}],e_{(k,a)}]=-d_{ijk}\,T_a$ for $a\in\{0,1\}$.
+\end{enumerate}
+So the positive part grows $54\to81\to83$, and the committed cubic is exactly the rule by
+which three first-order moves reach the two-dimensional top.
+\cert{w33\_20260925\_cubic\_clock\_bracket\_ladder.py}
+\end{result}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[>={Stealth[length=2.3mm]},
+   blk/.style={draw=#1,fill=#1!12,rounded corners=3pt,align=center,font=\sffamily\scriptsize,minimum height=9mm}]
+  \node[blk=teal,minimum width=36mm] (g1) at (0,0) {$\g_1=\mathbf{27}\otimes\mathbf2$\\$54$ first-order moves};
+  \node[blk=rose,minimum width=26mm] (g2) at (4.6,0) {$\g_2=\mathbf{27}$\\$27$ histories};
+  \node[blk=ink,minimum width=18mm] (g3) at (8.3,0) {$\g_3=\mathbf2$\\top doublet};
+  \draw[->,line width=1pt] (g1) -- node[above,font=\scriptsize]{$[\g_1,\g_1]$} node[below,font=\tiny,text=slate]{$270$ pairs, $\times10$} (g2);
+  \draw[->,line width=1pt] (g2) -- node[above,font=\scriptsize]{$[\g_1,\cdot\,]$} node[below,font=\tiny,text=slate]{$54$ pairs, $\times27$} (g3);
+  \node[font=\sffamily\scriptsize,text=slate] at (0,-1.1) {cumulative $54$};
+  \node[font=\sffamily\scriptsize,text=slate] at (4.6,-1.1) {cumulative $81$};
+  \node[font=\sffamily\scriptsize,text=slate] at (8.3,-1.1) {cumulative $83$};
+  \draw[->,gold!80!black,dashed,line width=0.8pt] (g1.north) to[bend left=22] node[above,font=\scriptsize,text=gold!70!black]{three moves reach the top with coefficient $-d_{ijk}$: the $E_6$ cubic} (g3.north);
+\end{tikzpicture}
+\caption{The cubic ladder. First-order moves combine in pairs to histories, and histories
+combine with one more move to reach the two-dimensional top. The only way three moves
+reach the top is through a triad of the cubic.}
+\label{fig:ladder}
+\end{figure}
+
+\begin{physical}[What it means physically: cubic time]
+Read degree as ``order in time''. A first-order move is a state update; two moves compose
+into a second-order \emph{history}; and three reach the top doublet, whose coefficient is
+the cubic volume $N$ spanned by the three moves. In this reading the $E_6$ cubic --- in
+GUT language the Yukawa coupling --- is the rule by which three independent updates
+produce a net displacement of the clock. The algebra is exact; the reading is a bridge,
+and it lacks what would make it physics: a Hamiltonian, a state and an energy scale.
+\tierB
+\end{physical}
+
+\begin{keyidea}
+One qutrit's nine histories build $E_8$ as $80+84+84$. The four Hesse clocks are four
+orthogonal $A_2$'s whose glue is the tetracode; a clock tick grades $E_8$ as
+$1+56+134+56+1$, an oriented clock as $2+27+54+82+54+27+2$; and $E_8$'s roots fibre
+six-to-one over the forty points.
+\end{keyidea}
