@@ -1,0 +1,14 @@
+{
+ "Z6-II|Z6II_23__SM_20260917_2913": {
+  "exact": true,
+  "method": "cdd (GMP) extreme rays of the D-flat cone on the ever-even generator types; each FI-cancelling ray tested for parity realizability over the full B-L freedom by Smith normal form",
+  "generator_types": 54,
+  "ever_even_generator_types": 46,
+  "extreme_rays": 62309,
+  "fi_cancelling_rays": 2846,
+  "realizable": 0,
+  "obstruction_kinds": ["smith_divisibility"],
+  "seconds": 907.6,
+  "cross_check": "scipy.optimize.milp (HiGHS) on the same problem: infeasible"
+ }
+}

@@ -331,14 +331,29 @@ the baryon- and lepton-number-violating couplings that matter parity was protect
 longer forbidden by any symmetry, at the scale of the singlet vacuum values.
 \end{physical}
 
-\begin{boundary}[Scope, and the one loophole]
-The theorem covers every direction built from fields that are singlets of all nonabelian
-groups --- the space specified by the programme's own closure contract. Hidden-sector
-nonabelian directions (for example condensates of hidden $SO(10)$ spinors or $SU(2)$
-doublets, whose parity can be compensated by a hidden centre element) are not covered, and
-are now the only route to a supersymmetric vacuum with matter parity in this class.
-Whether higher-order selection rules suppress the regenerated couplings in a particular
-model is also not addressed. \tierO
+\paragraph{The hidden sector does not rescue it.}
+Theorem~9.6 covers singlets of every nonabelian group. Fields that are Standard-Model
+singlets but charged under the \emph{hidden} gauge group can also condense, and their parity
+can be compensated by a hidden gauge element. Pass~10962 attacks this loophole in tiers:
+\begin{itemize}[leftmargin=1.2em]
+\item \textbf{exact, for every hidden direction:} a parity-preserving vacuum must be $D$-flat for
+      the hidden maximal torus with component-wise parity (up to a hidden torus element);
+      for $32$ of the $88$ models even this relaxation has an exact Farkas certificate;
+\item \textbf{exact over explicit invariant generators:} by the Luty--Taylor and Kempf--Ness
+      correspondence a parity-preserving $D$-flat vacuum exists iff an FI-cancelling product of
+      matter-even hidden-group invariants does; over singlets, all quadratic invariants,
+      $SU(N)$ baryons and $SU(5)$ cubics, the other $55$ models close by exact Farkas vectors,
+      and the last by a parity obstruction;
+\item the four anomaly-free models (no FI term) admit no matter parity at all.
+\end{itemize}
+\tierC\ (\cert{w33\_pass10962\_hidden\_sector\_dflat\_tiers.py})
+
+\begin{boundary}[Scope]
+For the $56$ models not closed at the first tier, completeness of the invariant generators is
+not proved (they contain bi-fundamental, $SU(4)$~$\mathbf6$ or $SU(5)$~$\mathbf{10}$ hidden
+fields), so for them the hidden-sector statement is ``no rescue among the standard
+invariants'' rather than a theorem. Whether higher-order selection rules suppress the
+regenerated couplings in a particular model is not addressed. \tierO
 \end{boundary}
 
 \subsection{Handedness: host, not select}
@@ -367,17 +382,54 @@ differ precisely by whether that swapping symmetry is present.
 Which symmetries do the swapping? For the qutrit, the determinant of a symplectic label map
 decides: determinant $+1$ is a unitary Clifford operation, determinant $-1$ can only be
 implemented antiunitarily (Pass~5730,
-\cert{w33\_pass5727\_5730\_torsion\_family\_heisenberg.py}). The other research track has now shown, on the
-clock itself, that the determinant-odd ticks are exactly those that exchange the two
-half-spin sheets (Pass~10955) and that they are not completely positive --- they are not
-physical operations on a bare qutrit but antiunitary, like time reversal (Pass~10952). So
-the geometry's chirality is invariant under every \emph{unitary} symmetry and exchanged only
-by \emph{antiunitary} ones. That is the structure of a chiral quantum theory obeying CPT:
+\cert{w33\_pass5727\_5730\_torsion\_family\_heisenberg.py}). The decisive statement was
+proved on the $32$ orientations of a complete two-qutrit factorisation frame (Holotrade
+\cert{e92a047}, \cert{frame\_chirality\_is\_reversed\_only\_by\_antiunitaries.py}): they split
+$16+16$ exactly as the two half-spin weight sets of $D_5$, unitary Cliffords preserve each
+half, and antiunitary ones --- and nothing else --- exchange them. The other track has since
+found the same law on the clock: determinant-odd ticks exchange the two $D_4$ half-spin
+sheets (Pass~10955) and are not completely positive (Pass~10952). So the geometry's
+chirality is invariant under every \emph{unitary} symmetry and exchanged only by
+\emph{antiunitary} ones. That is the structure of a chiral quantum theory obeying CPT:
 the mirror of a chiral world is related to it by an antiunitary map, and which of the two is
 called ``left'' is a convention that no internal measurement can fix. The no-go is the
 finite form of this, not a defect peculiar to $\W$. \tierB\
 (\cert{w33\_pass10952\_clock\_complete\_positivity\_firewall.py},
 \cert{w33\_pass10955\_d4\_halfspin\_clock\_bridge.py})
+\end{physical}
+
+\begin{result}{Corollary 9.7 (one coset reverses time, acts antiunitarily, and swaps chirality) \hfill \tierT}
+Fix a ``now'' (the Bell line $B$). Its stabiliser in $\PGSp(4,3)$ has order $1296$, and
+its elements outside $\PSp(4,3)$ form a single coset of size $648$. That coset is exactly
+\begin{enumerate}[label=(\roman*),leftmargin=1.5em]
+\item the set of symmetries that \emph{reverse} the unique global orientation of the
+      history graph (Theorem~4.4);
+\item the set that can only be implemented \emph{antiunitarily} on qutrits (Pass~5730);
+\item the set that \emph{exchange} the two chiral half-spin modules (Theorem~9.5;
+      Holotrade \cert{e92a047}).
+\end{enumerate}
+\end{result}
+
+\begin{proof}
+Each item identifies its set with the complement of $\PSp(4,3)$ in the relevant group:
+(i) is the statement of Theorem~4.4(ii) (the $648$ elements of the Bell stabiliser in
+$\PSp(4,3)$ fix the orientation cycle, the other $648$ negate it); (ii) symplectic similitudes of
+multiplier $+1$ lift to unitary Clifford operations and those of multiplier $-1$ only to
+antiunitary ones; (iii) $\PSp(4,3)$ preserves $S^+$ and $S^-$ (they are inequivalent) while the
+outer element $T$ exchanges them. Intersecting with the stabiliser of $B$ gives the same coset
+in all three cases.
+\end{proof}
+
+\begin{physical}[What it means physically: a finite CPT theorem]
+In quantum field theory, the CPT theorem says that the only way to relate a chiral world to
+its mirror image by a symmetry is antiunitary, and that the same operation reverses the
+direction of time. Corollary~9.7 is that structure, exactly, in the forty-point geometry: the
+operations that reverse time's orientation are the antiunitary ones, and they are precisely
+the ones that exchange left and right. Choosing an orientation of time does not choose a
+chirality --- but it makes chirality a conserved label, and the world of opposite chirality
+is the time-reversed one. This answers, in the finite model, the question of whether the
+datum that fixes the arrow and the datum that fixes handedness are related: they live in the
+same coset. \tierB
 \end{physical}
 
 \subsection{What we do not count as evidence}

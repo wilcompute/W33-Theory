@@ -1,0 +1,30 @@
+name: W33 Pass 10962 hidden-sector D-flat tiers
+
+on:
+  push:
+    paths:
+      - "analysis/w33_pass10962_hidden_sector_dflat_tiers.py"
+      - "analysis/w33_pass10962_tierc_rays.py"
+      - "analysis/PASS10962_HIDDEN_SECTOR_DFLAT_TIERS.md"
+      - "analysis/PASS10962_HIDDEN_SECTOR_DFLAT_TIERS_INSERT.tex"
+      - "data/w33_pass10962_hidden_gauge_ledger.json.gz"
+      - "data/w33_pass10962_hidden_sector_dflat_tiers.json"
+      - "data/w33_pass10962_tierc_rays.json"
+      - "tests/test_w33_pass10962_hidden_sector_dflat_tiers.py"
+      - ".github/workflows/w33_pass10962_hidden_sector_dflat_tiers.yml"
+  pull_request:
+    paths:
+      - "analysis/w33_pass10962_hidden_sector_dflat_tiers.py"
+      - "tests/test_w33_pass10962_hidden_sector_dflat_tiers.py"
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install numpy scipy sympy pytest pycddlib
+      - run: python analysis/w33_pass10962_hidden_sector_dflat_tiers.py
+      - run: python -m pytest -q tests/test_w33_pass10962_hidden_sector_dflat_tiers.py
