@@ -1,0 +1,935 @@
+{
+ "A": {
+  "models": {
+   "Z6-II|Z6II_01__SM_20260917_1058": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_01__SM_20260917_1088": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_01__SM_20260917_1280": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_01__SM_20260917_1388": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_01__SM_20260917_1443": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_01__SM_20260917_1660": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_01__SM_20260917_1933": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_01__SM_20260917_1983": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_01__SM_20260917_2078": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_01__SM_20260917_2151": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_01__SM_20260917_2221": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_01__SM_20260917_2510": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_01__SM_20260917_2696": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_01__SM_20260917_273": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_01__SM_20260917_2855": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_01__SM_20260917_311": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_01__SM_20260917_325": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_01__SM_20260917_42": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_01__SM_20260917_470": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_01__SM_20260917_569": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_01__SM_20260917_615": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_01__SM_20260917_743": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_01__SM_20260917_827": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_01__SM_20260917_86": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_01__SM_20260917_88": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_01__SM_20260917_894": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_03__SM_20260917_1353": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_03__SM_20260917_435": {
+    "anomaly_free": true,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_03__SM_20260917_923": {
+    "anomaly_free": true,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_04__SM_20260917_245": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_04__SM_20260917_904": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_05__SM_20260917_132": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_05__SM_20260917_151": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_05__SM_20260917_58": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_05__SM_20260917_60": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_05__SM_20260917_824": {
+    "anomaly_free": true,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_06__SM_20260917_1188": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_06__SM_20260917_1204": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_06__SM_20260917_1474": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_06__SM_20260917_1487": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_06__SM_20260917_2113": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_06__SM_20260917_2158": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_06__SM_20260917_2215": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_06__SM_20260917_226": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_06__SM_20260917_2496": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_06__SM_20260917_2541": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_06__SM_20260917_2618": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_06__SM_20260917_2647": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_06__SM_20260917_2868": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_06__SM_20260917_691": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_06__SM_20260917_73": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_06__SM_20260917_741": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_06__SM_20260917_744": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_06__SM_20260917_784": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_06__SM_20260917_894": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_06__SM_20260917_998": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_10__SM_20260917_1497": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_10__SM_20260917_271": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_10__SM_20260917_327": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_10__SM_20260917_687": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_10__SM_20260917_818": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_12__SM_20260917_1566": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_12__SM_20260917_1993": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_12__SM_20260917_2184": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_12__SM_20260917_2503": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_12__SM_20260917_400": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_12__SM_20260917_574": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_18__SM_20260917_1116": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_18__SM_20260917_2488": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_18__SM_20260917_656": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_19__SM_20260917_477": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_20__SM_20260917_1383": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_22__SM_20260917_1197": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_22__SM_20260917_399": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_23__SM_20260917_1411": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_23__SM_20260917_2318": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_23__SM_20260917_2678": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_23__SM_20260917_2913": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": 304,
+    "parity_exists": true,
+    "realizable_rays": 0,
+    "verdict": "closed: every FI-cancelling ray obstructed"
+   },
+   "Z6-II|Z6II_24__SM_20260917_2751": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_28__SM_20260917_2298": {
+    "anomaly_free": true,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_28__SM_20260917_2417": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_33__SM_20260917_619": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_34__SM_20260917_1350": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_34__SM_20260917_1558": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_34__SM_20260917_1585": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_34__SM_20260917_1702": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_34__SM_20260917_2056": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_34__SM_20260917_2068": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_34__SM_20260917_2200": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_34__SM_20260917_2229": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_34__SM_20260917_2342": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_34__SM_20260917_2698": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_34__SM_20260917_2722": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_34__SM_20260917_292": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_34__SM_20260917_616": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_34__SM_20260917_617": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_34__SM_20260917_938": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_35__SM_20260917_473": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_39__SM_20260917_478": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_41__SM_20260917_635": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_43__SM_20260917_1867": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_45__SM_20260917_1962": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_49__SM_20260917_145": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_49__SM_20260917_2717": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_49__SM_20260917_423": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_52__SM_20260917_1026": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_52__SM_20260917_1437": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_52__SM_20260917_213": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_52__SM_20260917_2304": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_52__SM_20260917_405": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_52__SM_20260917_570": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_52__SM_20260917_712": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_52__SM_20260917_93": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_53__SM_20260917_1614": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_53__SM_20260917_2368": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_54__SM_20260917_1301": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_54__SM_20260917_265": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_56__SM_20260917_2753": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_57__SM_20260917_1103": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_57__SM_20260917_173": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_57__SM_20260917_2231": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_59__SM_20260917_1105": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_59__SM_20260917_1628": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_59__SM_20260917_2473": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_59__SM_20260917_2533": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_60__SM_20260917_1475": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_60__SM_20260917_2720": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   },
+   "Z6-II|Z6II_60__SM_20260917_810": {
+    "anomaly_free": false,
+    "fi_cancelling_rays": null,
+    "parity_exists": false,
+    "realizable_rays": null,
+    "verdict": null
+   }
+  },
+  "summary": {
+   "closed": 1,
+   "models": 128,
+   "open": 0,
+   "parity_exists": 1
+  }
+ },
+ "B": {
+  "anomaly_free": false,
+  "fi_cancelling_rays": 304,
+  "parity_exists": true,
+  "realizable_rays": 0,
+  "verdict": "closed: every FI-cancelling ray obstructed"
+ },
+ "C": {
+  "Z2xZ6-I": {
+   "models": 29,
+   "open_torus_sg": 0,
+   "open_with_R": 0,
+   "parity_torus_sg": 2,
+   "parity_with_R": 2
+  },
+  "Z3xZ6": {
+   "models": 5,
+   "open_torus_sg": 0,
+   "parity_torus_sg": 0
+  }
+ },
+ "D": {
+  "dead_robust": 5,
+  "undetermined": 9
+ },
+ "ledger_sha256": "dd7a2c8bcb9b233f0db90be5d08c25d5511a760abc9e895af0caf734d1bd0a6a",
+ "pass_id": 10974
+}

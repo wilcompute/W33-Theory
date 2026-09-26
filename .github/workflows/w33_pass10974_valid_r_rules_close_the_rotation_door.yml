@@ -1,0 +1,27 @@
+name: W33 Pass 10974 valid R rules close the rotation door
+
+on:
+  push:
+    paths:
+      - "analysis/w33_pass10974_valid_r_rules_close_the_rotation_door.py"
+      - "analysis/PASS10974_VALID_R_RULES_CLOSE_THE_ROTATION_DOOR.md"
+      - "analysis/PASS10974_VALID_R_RULES_CLOSE_THE_ROTATION_DOOR_INSERT.tex"
+      - "data/w33_pass10974_valid_r_rules_close_the_rotation_door.json"
+      - "tests/test_w33_pass10974_valid_r_rules_close_the_rotation_door.py"
+      - ".github/workflows/w33_pass10974_valid_r_rules_close_the_rotation_door.yml"
+  pull_request:
+    paths:
+      - "analysis/w33_pass10974_valid_r_rules_close_the_rotation_door.py"
+      - "tests/test_w33_pass10974_valid_r_rules_close_the_rotation_door.py"
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install numpy scipy sympy pytest pycddlib
+      - run: python analysis/w33_pass10974_valid_r_rules_close_the_rotation_door.py
+      - run: python -m pytest -q tests/test_w33_pass10974_valid_r_rules_close_the_rotation_door.py

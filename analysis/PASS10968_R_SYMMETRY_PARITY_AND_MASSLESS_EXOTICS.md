@@ -1,5 +1,12 @@
 # Pass 10968 — geometric R-symmetries open matter parity in one model; the same R-symmetry keeps the exotics massless
 
+> **Correction (Pass 10974).** The plane-rotation parity found here uses orbifolder 1.2's per-plane
+> R-rule on the non-prime G2 plane. Bizet et al. (arXiv:1301.2322) show that rule is valid only on prime
+> planes of factorizable orbifolds. With the established R-symmetries (Z3^R, Z2^R, plus the
+> γ-corrected G2-plane charge), Z6II_23 closes: 0/128. Everything below about Z6II_23 is conditional on
+> the superseded rule. The Z12-I 'tentative' verdicts are reclassified as undetermined.
+
+
 Producer: `analysis/w33_pass10968_r_symmetry_parity_and_massless_exotics.py`
 Certificate: `data/w33_pass10968_r_symmetry_parity_and_massless_exotics.json`
 Frozen inputs:
