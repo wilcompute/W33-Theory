@@ -1,0 +1,27 @@
+name: W33 Pass 10968 R-symmetry parity and massless exotics
+
+on:
+  push:
+    paths:
+      - "analysis/w33_pass10968_r_symmetry_parity_and_massless_exotics.py"
+      - "analysis/PASS10968_R_SYMMETRY_PARITY_AND_MASSLESS_EXOTICS.md"
+      - "analysis/PASS10968_R_SYMMETRY_PARITY_AND_MASSLESS_EXOTICS_INSERT.tex"
+      - "data/w33_pass10968_r_symmetry_parity_and_massless_exotics.json"
+      - "tests/test_w33_pass10968_r_symmetry_parity_and_massless_exotics.py"
+      - ".github/workflows/w33_pass10968_r_symmetry_parity_and_massless_exotics.yml"
+  pull_request:
+    paths:
+      - "analysis/w33_pass10968_r_symmetry_parity_and_massless_exotics.py"
+      - "tests/test_w33_pass10968_r_symmetry_parity_and_massless_exotics.py"
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install numpy scipy sympy pytest pycddlib
+      - run: python analysis/w33_pass10968_r_symmetry_parity_and_massless_exotics.py
+      - run: python -m pytest -q tests/test_w33_pass10968_r_symmetry_parity_and_massless_exotics.py tests/test_w33_pass10968_leaf1_vacuum_certificate.py tests/test_w33_pass10968_approxR_vacuum_certificate.py
