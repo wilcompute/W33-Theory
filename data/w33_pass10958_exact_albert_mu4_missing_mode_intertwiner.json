@@ -1,0 +1,68 @@
+{
+  "boundary": "Exact cyclic-module result over Q(i). The larger finite-group representation map remains a separate problem.",
+  "carrier_intertwiner": {
+    "exact_relations": {
+      "Chi_W2_equals_W2_X2": true,
+      "Chi_W_equals_W_X2x8": true,
+      "U_W2_equals_W2_A2": true,
+      "U_W_equals_W_A2x8": true
+    },
+    "field": "Q(i)",
+    "full_change_of_basis_rank": 16,
+    "full_change_of_basis_sha256": "6cd33056ac166fabab68b9a171050b309b55f67d46ef2a6663e8c19c5d8e29f8",
+    "module_isomorphism": "Albert Peirce 16 over Q(i) = 8 copies of the Pass10954 missing C4 module",
+    "two_mode_embedding_rank": 2,
+    "two_mode_embedding_sha256": "8df203bb16a9eda786395ae3e509ab9dec66e6d95f46fbd741282b7dcd964c2a"
+  },
+  "chirality_exchange_reading": {
+    "conclusion": "the +/-i modes are eigenmodes of the chirality-exchanging halfturn, not chirality eigenstates",
+    "exact_anticommutation": "U Chi = - Chi U",
+    "minus_i_intersection_with_chirality_minus": 0,
+    "minus_i_intersection_with_chirality_plus": 0,
+    "paired_basis": "each +i Albert eigenvector is paired with Chi*v in the -i eigenspace",
+    "plus_i_intersection_with_chirality_minus": 0,
+    "plus_i_intersection_with_chirality_plus": 0
+  },
+  "exact_albert_halfturn": {
+    "R_squared": "-4I16",
+    "U_fourth": "+I16",
+    "U_squared": "-I16",
+    "characteristic_polynomial": "(x^2+1)^8",
+    "formula": "U=R/2 over Q",
+    "minimal_polynomial": "x^2+1",
+    "minus_i_eigenspace_dimension": 8,
+    "plus_i_eigenspace_dimension": 8,
+    "trace": 0
+  },
+  "exact_mu4_module": {
+    "A2_fourth": "+I2",
+    "A2_squared": "-I2",
+    "clock_factorization": "the missing sector factors the C8 clock through C4 because A2^4=I",
+    "generator": "A2=diag(i,-i)",
+    "pass10954_missing_C8_exponents": [
+      2,
+      6
+    ],
+    "pass10954_missing_phases": [
+      "+i",
+      "-i"
+    ]
+  },
+  "matter_parity": {
+    "Albert_relation": "U^2=-I16",
+    "missing_module_relation": "A2^2=-I2",
+    "objectwise_weld": "the missing two-mode clock module and the Albert halfturn have the same C4 central-square relation",
+    "pass10950_reading": "-I on the Peirce 16 is the 2pi Spin(9) matter-parity sign"
+  },
+  "pass10957_cover_converter": {
+    "mu4_square_roots": [
+      "+i",
+      "-i"
+    ],
+    "new_upgrade": "Pass10957 matched cocycles/projective phases; Pass10958 supplies an explicit Q(i) carrier embedding for the cyclic missing-mode sector",
+    "remaining_gap": "the intertwiner is for the C4 missing-mode quotient only, not the full GL(2,3) clock or S4 action"
+  },
+  "schema": "w33.pass10958.exact-albert-mu4-missing-mode-intertwiner.v1",
+  "status": "PASS_EXACT_ALBERT_MU4_MISSING_MODE_INTERTWINER",
+  "theorem": "The Pass10956 Albert Spin(9) normalizer halfturn is exactly the rational matrix U=R/2 with R^2=-4I, hence U^2=-I and U^4=I. Over Q(i) its characteristic polynomial is (x^2+1)^8, with eight +i and eight -i eigenvectors. Pairing a +i eigenbasis with its image under the exact Spin(8) chirality involution gives a full change of basis W in which U is eight copies of diag(i,-i) and chirality is eight copies of the swap matrix. Therefore the two missing Pass10954 clock characters k=2,6 are not merely phase-matched to the Albert halfturn: their exact two-dimensional C4 module embeds into the Peirce 16, which is eight copies of that module."
+}
