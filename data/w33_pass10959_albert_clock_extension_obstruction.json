@@ -1,0 +1,129 @@
+{
+  "albert_16_phase_lifts": {
+    "U_spectrum": {
+      "+i": 8,
+      "-i": 8
+    },
+    "allowed_mu8_phase_exponents": [
+      1,
+      3,
+      5,
+      7
+    ],
+    "distinct_C8_spectra": {
+      "zeta8^-1_times_U": {
+        "1": 8,
+        "3": 0,
+        "5": 8,
+        "7": 0
+      },
+      "zeta8_times_U": {
+        "1": 0,
+        "3": 8,
+        "5": 0,
+        "7": 8
+      }
+    },
+    "eighth_power": "+I16",
+    "fourth_power": "-I16"
+  },
+  "boundary": "This is a complex finite-representation theorem. The transported 32D GL(2,3) action is not proved to lie inside Spin(9), preserve the Albert Jordan product, represent physical time, or describe a physical Dirac doubling. The 16D no-go applies only under the stated central-sign and clock-spectrum constraints.",
+  "dimension16_no_go": {
+    "all_exhausted": true,
+    "central_minus_degree16_combinations": 25,
+    "obstruction": "Albert phase lifts violate m1=m3 and m5=m7, forced by every central-odd GL(2,3) character",
+    "scope": "no complex-linear 16D GL(2,3) representation can both send central -I to -I16 and restrict g to any mu8 phase lift of the exact Albert halfturn U",
+    "target_15_extension_exists": false,
+    "target_37_extension_exists": false
+  },
+  "explicit_32D_extension": {
+    "center_maps_to": "-I32",
+    "clock_intertwining_exact": true,
+    "field": "Q(zeta8)=Q(i,sqrt(2))",
+    "homomorphism_reason": "transport of the Pass10955 faithful GL(2,3) representation",
+    "intertwiner_rank": 32,
+    "intertwiner_sha256": "76db6e2e75c67339a6d86887f425401ce27a7e011089241fbfaa962a29493416",
+    "transport_formula": "rho_A(h)=J [R_4(h) direct-sum ... direct-sum R_4(h)] J^-1"
+  },
+  "gap_character_restriction": {
+    "center_minus_irreps": [
+      {
+        "center": -1,
+        "degree": 2,
+        "exponents": [
+          1,
+          3
+        ],
+        "index": 4
+      },
+      {
+        "center": -1,
+        "degree": 2,
+        "exponents": [
+          5,
+          7
+        ],
+        "index": 5
+      },
+      {
+        "center": -1,
+        "degree": 4,
+        "exponents": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "index": 8
+      }
+    ],
+    "central_minus_restriction_law": "m1=m3 and m5=m7 for every representation with center acting as -I",
+    "clock_order": 8,
+    "companion_gap_script": "analysis/w33_pass10959_gl23_character_restriction.g",
+    "group": "GL(2,3)",
+    "irrep_degrees": [
+      1,
+      1,
+      2,
+      2,
+      2,
+      3,
+      3,
+      4
+    ],
+    "order": 48
+  },
+  "minimal_completion": {
+    "combined_C8_multiplicities": {
+      "1": 8,
+      "3": 8,
+      "5": 8,
+      "7": 8
+    },
+    "complement_of_15": {
+      "1": 0,
+      "3": 8,
+      "5": 0,
+      "7": 8
+    },
+    "complement_of_37": {
+      "1": 8,
+      "3": 0,
+      "5": 8,
+      "7": 0
+    },
+    "dimension": 32,
+    "doubled_clock": "diag(zeta8^-1 U, zeta8 U)",
+    "extra_dimension": 16,
+    "faithful": true,
+    "realization": "8 copies of the Pass10955 faithful 4D signed D4 representation"
+  },
+  "parent_welds": {
+    "doubling_reading": "the crossed odd-character pairing forces a second 16D Albert copy at the level of complex finite representation theory",
+    "new_result": "one 16D phase lift cannot extend, but the two conjugate mu8 phase lifts together form the minimal full GL(2,3) carrier",
+    "pass10958": "one Albert 16 is eight copies of the missing diag(i,-i) C4 module"
+  },
+  "schema": "w33.pass10959.albert-clock-extension-obstruction.v1",
+  "status": "PASS_16D_NOGO_AND_MINIMAL_32D_GL23_COMPLETION",
+  "theorem": "The exact Albert halfturn U has two distinct mu8 phase-lift spectra compatible with the clock relation g^4=-I: eight copies of characters {1,5} or eight copies of {3,7}. GAP restriction of every irreducible character of GL(2,3) to the frozen C8 shows that all representations with central -I acting as -1 satisfy m1=m3 and m5=m7. Exhausting all 25 central-odd degree-16 combinations therefore proves that neither Albert spectrum extends to GL(2,3) in 16 dimensions. The minimal completion has dimension 32: adjoining the conjugate Albert phase lift gives multiplicities 8 on each odd C8 character. This is exactly eight copies of the faithful 4D signed D4 representation, and an explicit Q(zeta8) intertwiner transports that full GL(2,3) action onto the doubled Albert carrier."
+}
