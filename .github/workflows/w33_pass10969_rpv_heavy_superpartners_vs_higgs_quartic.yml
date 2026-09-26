@@ -1,0 +1,27 @@
+name: W33 Pass 10969 RPV vs Higgs quartic
+
+on:
+  push:
+    paths:
+      - "analysis/w33_pass10969_rpv_heavy_superpartners_vs_higgs_quartic.py"
+      - "analysis/PASS10969_RPV_HEAVY_SUPERPARTNERS_VS_HIGGS_QUARTIC.md"
+      - "analysis/PASS10969_RPV_HEAVY_SUPERPARTNERS_VS_HIGGS_QUARTIC_INSERT.tex"
+      - "data/w33_pass10969_rpv_heavy_superpartners_vs_higgs_quartic.json"
+      - "tests/test_w33_pass10969_rpv_heavy_superpartners_vs_higgs_quartic.py"
+      - ".github/workflows/w33_pass10969_rpv_heavy_superpartners_vs_higgs_quartic.yml"
+  pull_request:
+    paths:
+      - "analysis/w33_pass10969_rpv_heavy_superpartners_vs_higgs_quartic.py"
+      - "tests/test_w33_pass10969_rpv_heavy_superpartners_vs_higgs_quartic.py"
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install numpy scipy sympy pytest pycddlib
+      - run: python analysis/w33_pass10969_rpv_heavy_superpartners_vs_higgs_quartic.py
+      - run: python -m pytest -q tests/test_w33_pass10969_rpv_heavy_superpartners_vs_higgs_quartic.py
