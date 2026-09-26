@@ -1,0 +1,3895 @@
+{
+ "forced_cubic_relations": {
+  "Z6-II|Z6II_23__SM_20260917_2913": {
+   "n_102": "udd:nbar*op",
+   "n_19": "udd:nbar*op lle:nbar*op",
+   "n_20": "udd:nbar*op lle:nbar*op",
+   "n_25": "udd:nbar*op lle:nbar*op",
+   "n_53": "udd:n*op lle:n*op",
+   "n_54": "udd:n*op lle:n*op",
+   "n_68": "udd:n*op lle:n*op",
+   "n_75": "lle:nbar*op",
+   "n_80": "lle:nbar*op",
+   "n_86": "lle:nbar*op",
+   "n_89": "udd:n*op qld:n*op lle:n*op",
+   "n_92": "lle:nbar*op",
+   "n_95": "udd:n*op qld:n*op lle:n*op",
+   "n_99": "udd:nbar*op"
+  },
+  "Z6-I|Z6I_06__SM_20260917_2": {
+   "n_12": "udd:n*op qld:n*op lle:n*op",
+   "n_27": "udd:n*op qld:n*op lle:n*op",
+   "n_28": "udd:n*op qld:n*op lle:n*op",
+   "n_45": "udd:n*op qld:n*op lle:n*op",
+   "n_46": "udd:n*op qld:n*op lle:n*op",
+   "n_63": "udd:n*op qld:n*op lle:n*op",
+   "n_64": "udd:n*op qld:n*op lle:n*op",
+   "n_81": "udd:n*op qld:n*op lle:n*op",
+   "n_82": "udd:n*op qld:n*op lle:n*op"
+  },
+  "Z6-I|Z6I_17__SM_20260917_35": {
+   "n_12": "udd:n*op qld:n*op lle:n*op",
+   "n_24": "udd:n*op qld:n*op lle:n*op",
+   "n_25": "udd:n*op qld:n*op lle:n*op",
+   "n_42": "udd:n*op qld:n*op lle:n*op",
+   "n_43": "udd:n*op qld:n*op lle:n*op",
+   "n_60": "udd:n*op qld:n*op lle:n*op",
+   "n_61": "udd:n*op qld:n*op lle:n*op",
+   "n_78": "udd:n*op qld:n*op lle:n*op",
+   "n_79": "udd:n*op qld:n*op lle:n*op"
+  },
+  "Z6-I|Z6I_17__SM_20260917_42": {
+   "n_16": "udd:n*op qld:n*op lle:n*op",
+   "n_19": "udd:n*op qld:n*op lle:n*op",
+   "n_34": "udd:n*op qld:n*op lle:n*op",
+   "n_37": "udd:n*op qld:n*op lle:n*op",
+   "n_52": "udd:n*op qld:n*op lle:n*op",
+   "n_55": "udd:n*op qld:n*op lle:n*op",
+   "n_7": "udd:n*op qld:n*op lle:n*op",
+   "n_70": "udd:n*op qld:n*op lle:n*op",
+   "n_73": "udd:n*op qld:n*op lle:n*op"
+  },
+  "Z6-I|Z6I_17__SM_20260917_45": {},
+  "Z6-I|Z6I_17__SM_20260917_66": {
+   "n_12": "udd:n*op qld:n*op lle:n*op",
+   "n_27": "udd:n*op qld:n*op lle:n*op",
+   "n_28": "udd:n*op qld:n*op lle:n*op",
+   "n_48": "udd:n*op qld:n*op lle:n*op",
+   "n_49": "udd:n*op qld:n*op lle:n*op",
+   "n_69": "udd:n*op qld:n*op lle:n*op",
+   "n_70": "udd:n*op qld:n*op lle:n*op",
+   "n_90": "udd:n*op qld:n*op lle:n*op",
+   "n_91": "udd:n*op qld:n*op lle:n*op"
+  },
+  "Z6-I|Z6I_17__SM_20260917_86": {},
+  "Z6-I|Z6I_19__SM_20260917_2": {
+   "n_17": "udd:n*op qld:n*op lle:n*op",
+   "n_33": "udd:n*op qld:n*op lle:n*op",
+   "n_34": "udd:n*op qld:n*op lle:n*op",
+   "n_51": "udd:n*op qld:n*op lle:n*op",
+   "n_52": "udd:n*op qld:n*op lle:n*op",
+   "n_69": "udd:n*op qld:n*op lle:n*op",
+   "n_70": "udd:n*op qld:n*op lle:n*op",
+   "n_87": "udd:n*op qld:n*op lle:n*op",
+   "n_88": "udd:n*op qld:n*op lle:n*op"
+  },
+  "Z6-I|Z6I_19__SM_20260917_2182": {
+   "n_16": "udd:n*op qld:n*op lle:n*op",
+   "n_33": "udd:n*op qld:n*op lle:n*op",
+   "n_34": "udd:n*op qld:n*op lle:n*op",
+   "n_51": "udd:n*op qld:n*op lle:n*op",
+   "n_52": "udd:n*op qld:n*op lle:n*op",
+   "n_69": "udd:n*op qld:n*op lle:n*op",
+   "n_70": "udd:n*op qld:n*op lle:n*op",
+   "n_87": "udd:n*op qld:n*op lle:n*op",
+   "n_88": "udd:n*op qld:n*op lle:n*op"
+  },
+  "Z6-I|Z6I_19__SM_20260917_465": {
+   "n_13": "udd:n*op qld:n*op lle:n*op",
+   "n_28": "udd:n*op qld:n*op lle:n*op",
+   "n_29": "udd:n*op qld:n*op lle:n*op",
+   "n_46": "udd:n*op qld:n*op lle:n*op",
+   "n_47": "udd:n*op qld:n*op lle:n*op",
+   "n_64": "udd:n*op qld:n*op lle:n*op",
+   "n_65": "udd:n*op qld:n*op lle:n*op",
+   "n_82": "udd:n*op qld:n*op lle:n*op",
+   "n_83": "udd:n*op qld:n*op lle:n*op"
+  },
+  "Z6-I|Z6I_21__SM_20260917_21": {
+   "n_104": "udd:n*op qld:n*op lle:n*op",
+   "n_105": "udd:n*op qld:n*op lle:n*op",
+   "n_21": "udd:n*op qld:n*op lle:n*op",
+   "n_41": "udd:n*op qld:n*op lle:n*op",
+   "n_42": "udd:n*op qld:n*op lle:n*op",
+   "n_62": "udd:n*op qld:n*op lle:n*op",
+   "n_63": "udd:n*op qld:n*op lle:n*op",
+   "n_83": "udd:n*op qld:n*op lle:n*op",
+   "n_84": "udd:n*op qld:n*op lle:n*op"
+  },
+  "Z6-I|Z6I_21__SM_20260917_399": {
+   "n_16": "udd:n*op qld:n*op lle:n*op",
+   "n_31": "udd:n*op qld:n*op lle:n*op",
+   "n_32": "udd:n*op qld:n*op lle:n*op",
+   "n_52": "udd:n*op qld:n*op lle:n*op",
+   "n_53": "udd:n*op qld:n*op lle:n*op",
+   "n_73": "udd:n*op qld:n*op lle:n*op",
+   "n_74": "udd:n*op qld:n*op lle:n*op",
+   "n_94": "udd:n*op qld:n*op lle:n*op",
+   "n_95": "udd:n*op qld:n*op lle:n*op"
+  },
+  "Z6-I|Z6I_21__SM_20260917_518": {
+   "n_103": "udd:n*op qld:n*op lle:n*op",
+   "n_104": "udd:n*op qld:n*op lle:n*op",
+   "n_20": "udd:n*op qld:n*op lle:n*op",
+   "n_40": "udd:n*op qld:n*op lle:n*op",
+   "n_41": "udd:n*op qld:n*op lle:n*op",
+   "n_61": "udd:n*op qld:n*op lle:n*op",
+   "n_62": "udd:n*op qld:n*op lle:n*op",
+   "n_82": "udd:n*op qld:n*op lle:n*op",
+   "n_83": "udd:n*op qld:n*op lle:n*op"
+  },
+  "Z6-I|Z6I_26__SM_20260917_242": {},
+  "Z6-I|Z6I_26__SM_20260917_478": {},
+  "Z6-I|Z6I_27__SM_20260917_1078": {
+   "n_15": "udd:n*op qld:n*op lle:n*op",
+   "n_32": "udd:n*op qld:n*op lle:n*op",
+   "n_33": "udd:n*op qld:n*op lle:n*op",
+   "n_50": "udd:n*op qld:n*op lle:n*op",
+   "n_51": "udd:n*op qld:n*op lle:n*op",
+   "n_68": "udd:n*op qld:n*op lle:n*op",
+   "n_69": "udd:n*op qld:n*op lle:n*op",
+   "n_86": "udd:n*op qld:n*op lle:n*op",
+   "n_87": "udd:n*op qld:n*op lle:n*op"
+  },
+  "Z6-I|Z6I_27__SM_20260917_174": {},
+  "Z6-I|Z6I_27__SM_20260917_241": {
+   "n_12": "udd:n*op qld:n*op lle:n*op",
+   "n_25": "udd:n*op qld:n*op lle:n*op",
+   "n_26": "udd:n*op qld:n*op lle:n*op",
+   "n_43": "udd:n*op qld:n*op lle:n*op",
+   "n_44": "udd:n*op qld:n*op lle:n*op",
+   "n_61": "udd:n*op qld:n*op lle:n*op",
+   "n_62": "udd:n*op qld:n*op lle:n*op",
+   "n_79": "udd:n*op qld:n*op lle:n*op",
+   "n_80": "udd:n*op qld:n*op lle:n*op"
+  },
+  "Z6-I|Z6I_27__SM_20260917_287": {
+   "n_15": "udd:n*op qld:n*op lle:n*op",
+   "n_28": "udd:n*op qld:n*op lle:n*op",
+   "n_29": "udd:n*op qld:n*op lle:n*op",
+   "n_46": "udd:n*op qld:n*op lle:n*op",
+   "n_47": "udd:n*op qld:n*op lle:n*op",
+   "n_64": "udd:n*op qld:n*op lle:n*op",
+   "n_65": "udd:n*op qld:n*op lle:n*op",
+   "n_82": "udd:n*op qld:n*op lle:n*op",
+   "n_83": "udd:n*op qld:n*op lle:n*op"
+  },
+  "Z6-I|Z6I_27__SM_20260917_3": {},
+  "Z6-I|Z6I_27__SM_20260917_36": {},
+  "Z6-I|Z6I_27__SM_20260917_55": {},
+  "Z6-I|Z6I_27__SM_20260917_669": {
+   "n_11": "udd:n*op qld:n*op lle:n*op",
+   "n_24": "udd:n*op qld:n*op lle:n*op",
+   "n_25": "udd:n*op qld:n*op lle:n*op",
+   "n_42": "udd:n*op qld:n*op lle:n*op",
+   "n_43": "udd:n*op qld:n*op lle:n*op",
+   "n_60": "udd:n*op qld:n*op lle:n*op",
+   "n_61": "udd:n*op qld:n*op lle:n*op",
+   "n_78": "udd:n*op qld:n*op lle:n*op",
+   "n_79": "udd:n*op qld:n*op lle:n*op"
+  },
+  "Z6-I|Z6I_27__SM_20260917_695": {
+   "n_104": "udd:n*op qld:n*op lle:n*op",
+   "n_105": "udd:n*op qld:n*op lle:n*op",
+   "n_21": "udd:n*op qld:n*op lle:n*op",
+   "n_41": "udd:n*op qld:n*op lle:n*op",
+   "n_42": "udd:n*op qld:n*op lle:n*op",
+   "n_62": "udd:n*op qld:n*op lle:n*op",
+   "n_63": "udd:n*op qld:n*op lle:n*op",
+   "n_83": "udd:n*op qld:n*op lle:n*op",
+   "n_84": "udd:n*op qld:n*op lle:n*op"
+  },
+  "Z6-I|Z6I_27__SM_20260917_73": {},
+  "Z6-I|Z6I_32__SM_20260917_1105": {
+   "n_14": "udd:n*op qld:n*op lle:n*op",
+   "n_25": "udd:n*op qld:n*op lle:n*op",
+   "n_28": "udd:n*op qld:n*op lle:n*op",
+   "n_43": "udd:n*op qld:n*op lle:n*op",
+   "n_46": "udd:n*op qld:n*op lle:n*op",
+   "n_61": "udd:n*op qld:n*op lle:n*op",
+   "n_64": "udd:n*op qld:n*op lle:n*op",
+   "n_79": "udd:n*op qld:n*op lle:n*op",
+   "n_82": "udd:n*op qld:n*op lle:n*op"
+  },
+  "Z6-I|Z6I_32__SM_20260917_129": {},
+  "Z6-I|Z6I_32__SM_20260917_184": {},
+  "Z6-I|Z6I_32__SM_20260917_186": {
+   "n_15": "udd:n*op qld:n*op lle:n*op",
+   "n_32": "udd:n*op qld:n*op lle:n*op",
+   "n_35": "udd:n*op qld:n*op lle:n*op",
+   "n_50": "udd:n*op qld:n*op lle:n*op",
+   "n_53": "udd:n*op qld:n*op lle:n*op",
+   "n_68": "udd:n*op qld:n*op lle:n*op",
+   "n_71": "udd:n*op qld:n*op lle:n*op",
+   "n_86": "udd:n*op qld:n*op lle:n*op",
+   "n_89": "udd:n*op qld:n*op lle:n*op"
+  },
+  "Z6-I|Z6I_32__SM_20260917_2225": {
+   "n_101": "udd:n*op qld:n*op lle:n*op",
+   "n_104": "udd:n*op qld:n*op lle:n*op",
+   "n_20": "udd:n*op qld:n*op lle:n*op",
+   "n_38": "udd:n*op qld:n*op lle:n*op",
+   "n_41": "udd:n*op qld:n*op lle:n*op",
+   "n_59": "udd:n*op qld:n*op lle:n*op",
+   "n_62": "udd:n*op qld:n*op lle:n*op",
+   "n_80": "udd:n*op qld:n*op lle:n*op",
+   "n_83": "udd:n*op qld:n*op lle:n*op"
+  },
+  "Z6-I|Z6I_32__SM_20260917_359": {
+   "n_11": "udd:n*op qld:n*op lle:n*op",
+   "n_25": "udd:n*op qld:n*op lle:n*op",
+   "n_31": "udd:n*op qld:n*op lle:n*op",
+   "n_43": "udd:n*op qld:n*op lle:n*op",
+   "n_49": "udd:n*op qld:n*op lle:n*op",
+   "n_61": "udd:n*op qld:n*op lle:n*op",
+   "n_67": "udd:n*op qld:n*op lle:n*op",
+   "n_79": "udd:n*op qld:n*op lle:n*op",
+   "n_85": "udd:n*op qld:n*op lle:n*op"
+  },
+  "Z6-I|Z6I_32__SM_20260917_407": {
+   "n_100": "udd:n*op qld:n*op lle:n*op",
+   "n_103": "udd:n*op qld:n*op lle:n*op",
+   "n_19": "udd:n*op qld:n*op lle:n*op",
+   "n_37": "udd:n*op qld:n*op lle:n*op",
+   "n_40": "udd:n*op qld:n*op lle:n*op",
+   "n_58": "udd:n*op qld:n*op lle:n*op",
+   "n_61": "udd:n*op qld:n*op lle:n*op",
+   "n_79": "udd:n*op qld:n*op lle:n*op",
+   "n_82": "udd:n*op qld:n*op lle:n*op"
+  },
+  "Z6-I|Z6I_32__SM_20260917_6": {},
+  "Z6-I|Z6I_33__SM_20260917_148": {},
+  "Z6-I|Z6I_33__SM_20260917_151": {},
+  "Z6-I|Z6I_33__SM_20260917_1807": {},
+  "Z6-I|Z6I_33__SM_20260917_384": {},
+  "Z6-I|Z6I_33__SM_20260917_487": {},
+  "Z6-I|Z6I_33__SM_20260917_60": {},
+  "Z6-I|Z6I_33__SM_20260917_604": {},
+  "Z6-I|Z6I_34__SM_20260917_30": {},
+  "Z6-I|Z6I_34__SM_20260917_441": {},
+  "Z6-I|Z6I_34__SM_20260917_71": {},
+  "Z6-I|Z6I_34__SM_20260917_75": {
+   "n_20": "udd:n*op qld:n*op lle:n*op",
+   "n_21": "udd:n*op qld:n*op lle:n*op",
+   "n_38": "udd:n*op qld:n*op lle:n*op",
+   "n_39": "udd:n*op qld:n*op lle:n*op",
+   "n_56": "udd:n*op qld:n*op lle:n*op",
+   "n_57": "udd:n*op qld:n*op lle:n*op",
+   "n_74": "udd:n*op qld:n*op lle:n*op",
+   "n_75": "udd:n*op qld:n*op lle:n*op",
+   "n_9": "udd:n*op qld:n*op lle:n*op"
+  },
+  "Z6-I|Z6I_34__SM_20260917_89": {},
+  "Z6-I|Z6I_36__SM_20260917_42": {},
+  "Z6-I|Z6I_36__SM_20260917_56": {},
+  "Z6-I|Z6I_38__SM_20260917_33": {},
+  "Z6-I|Z6I_38__SM_20260917_4": {},
+  "Z6-I|Z6I_38__SM_20260917_46": {},
+  "Z6-I|Z6I_38__SM_20260917_8": {},
+  "Z6-I|Z6I_40__SM_20260917_10": {},
+  "Z6-I|Z6I_40__SM_20260917_147": {
+   "n_20": "udd:n*op qld:n*op lle:n*op",
+   "n_26": "udd:n*op qld:n*op lle:n*op",
+   "n_38": "udd:n*op qld:n*op lle:n*op",
+   "n_44": "udd:n*op qld:n*op lle:n*op",
+   "n_56": "udd:n*op qld:n*op lle:n*op",
+   "n_62": "udd:n*op qld:n*op lle:n*op",
+   "n_74": "udd:n*op qld:n*op lle:n*op",
+   "n_80": "udd:n*op qld:n*op lle:n*op",
+   "n_9": "udd:n*op qld:n*op lle:n*op"
+  },
+  "Z6-I|Z6I_40__SM_20260917_159": {},
+  "Z6-I|Z6I_40__SM_20260917_165": {},
+  "Z6-I|Z6I_40__SM_20260917_184": {},
+  "Z6-I|Z6I_40__SM_20260917_1938": {
+   "n_11": "udd:n*op qld:n*op lle:n*op",
+   "n_23": "udd:n*op qld:n*op lle:n*op",
+   "n_24": "udd:n*op qld:n*op lle:n*op",
+   "n_41": "udd:n*op qld:n*op lle:n*op",
+   "n_42": "udd:n*op qld:n*op lle:n*op",
+   "n_59": "udd:n*op qld:n*op lle:n*op",
+   "n_60": "udd:n*op qld:n*op lle:n*op",
+   "n_77": "udd:n*op qld:n*op lle:n*op",
+   "n_78": "udd:n*op qld:n*op lle:n*op"
+  },
+  "Z6-I|Z6I_40__SM_20260917_1940": {
+   "n_10": "udd:n*op qld:n*op lle:n*op",
+   "n_17": "udd:n*op qld:n*op lle:n*op",
+   "n_22": "udd:n*op qld:n*op lle:n*op",
+   "n_35": "udd:n*op qld:n*op lle:n*op",
+   "n_40": "udd:n*op qld:n*op lle:n*op",
+   "n_53": "udd:n*op qld:n*op lle:n*op",
+   "n_58": "udd:n*op qld:n*op lle:n*op",
+   "n_71": "udd:n*op qld:n*op lle:n*op",
+   "n_76": "udd:n*op qld:n*op lle:n*op"
+  },
+  "Z6-I|Z6I_40__SM_20260917_2391": {
+   "n_14": "udd:n*op qld:n*op lle:n*op",
+   "n_29": "udd:n*op qld:n*op lle:n*op",
+   "n_30": "udd:n*op qld:n*op lle:n*op",
+   "n_50": "udd:n*op qld:n*op lle:n*op",
+   "n_51": "udd:n*op qld:n*op lle:n*op",
+   "n_71": "udd:n*op qld:n*op lle:n*op",
+   "n_72": "udd:n*op qld:n*op lle:n*op",
+   "n_92": "udd:n*op qld:n*op lle:n*op",
+   "n_93": "udd:n*op qld:n*op lle:n*op"
+  },
+  "Z6-I|Z6I_40__SM_20260917_275": {},
+  "Z6-I|Z6I_40__SM_20260917_2820": {
+   "n_11": "udd:n*op qld:n*op lle:n*op",
+   "n_21": "udd:n*op qld:n*op lle:n*op",
+   "n_23": "udd:n*op qld:n*op lle:n*op",
+   "n_39": "udd:n*op qld:n*op lle:n*op",
+   "n_41": "udd:n*op qld:n*op lle:n*op",
+   "n_57": "udd:n*op qld:n*op lle:n*op",
+   "n_59": "udd:n*op qld:n*op lle:n*op",
+   "n_75": "udd:n*op qld:n*op lle:n*op",
+   "n_77": "udd:n*op qld:n*op lle:n*op"
+  },
+  "Z6-I|Z6I_40__SM_20260917_285": {},
+  "Z6-I|Z6I_40__SM_20260917_360": {},
+  "Z6-I|Z6I_40__SM_20260917_493": {
+   "n_11": "udd:n*op qld:n*op lle:n*op",
+   "n_16": "udd:n*op qld:n*op lle:n*op",
+   "n_20": "udd:n*op qld:n*op lle:n*op",
+   "n_34": "udd:n*op qld:n*op lle:n*op",
+   "n_38": "udd:n*op qld:n*op lle:n*op",
+   "n_52": "udd:n*op qld:n*op lle:n*op",
+   "n_56": "udd:n*op qld:n*op lle:n*op",
+   "n_70": "udd:n*op qld:n*op lle:n*op",
+   "n_74": "udd:n*op qld:n*op lle:n*op"
+  },
+  "Z6-I|Z6I_40__SM_20260917_596": {},
+  "Z6-I|Z6I_40__SM_20260917_63": {},
+  "Z6-I|Z6I_40__SM_20260917_81": {},
+  "Z6-I|Z6I_40__SM_20260917_841": {},
+  "Z6-I|Z6I_42__SM_20260917_45": {},
+  "Z6-I|Z6I_42__SM_20260917_93": {},
+  "Z6-I|Z6I_43__SM_20260917_104": {},
+  "Z6-I|Z6I_43__SM_20260917_1069": {},
+  "Z6-I|Z6I_43__SM_20260917_114": {},
+  "Z6-I|Z6I_43__SM_20260917_1227": {},
+  "Z6-I|Z6I_43__SM_20260917_142": {},
+  "Z6-I|Z6I_43__SM_20260917_20": {},
+  "Z6-I|Z6I_43__SM_20260917_207": {},
+  "Z6-I|Z6I_43__SM_20260917_300": {},
+  "Z6-I|Z6I_43__SM_20260917_519": {},
+  "Z6-I|Z6I_46__SM_20260917_10": {},
+  "Z6-I|Z6I_46__SM_20260917_12": {},
+  "Z6-I|Z6I_46__SM_20260917_126": {},
+  "Z6-I|Z6I_46__SM_20260917_35": {},
+  "Z6-I|Z6I_46__SM_20260917_561": {
+   "n_15": "udd:n*op qld:n*op lle:n*op",
+   "n_27": "udd:n*op qld:n*op lle:n*op",
+   "n_33": "udd:n*op qld:n*op lle:n*op",
+   "n_45": "udd:n*op qld:n*op lle:n*op",
+   "n_51": "udd:n*op qld:n*op lle:n*op",
+   "n_63": "udd:n*op qld:n*op lle:n*op",
+   "n_69": "udd:n*op qld:n*op lle:n*op",
+   "n_81": "udd:n*op qld:n*op lle:n*op",
+   "n_87": "udd:n*op qld:n*op lle:n*op"
+  },
+  "Z6-I|Z6I_55__SM_20260917_179": {
+   "n_12": "udd:n*op qld:n*op lle:n*op",
+   "n_27": "udd:n*op qld:n*op lle:n*op",
+   "n_29": "udd:n*op qld:n*op lle:n*op",
+   "n_45": "udd:n*op qld:n*op lle:n*op",
+   "n_47": "udd:n*op qld:n*op lle:n*op",
+   "n_63": "udd:n*op qld:n*op lle:n*op",
+   "n_65": "udd:n*op qld:n*op lle:n*op",
+   "n_81": "udd:n*op qld:n*op lle:n*op",
+   "n_83": "udd:n*op qld:n*op lle:n*op"
+  },
+  "Z6-I|Z6I_55__SM_20260917_38": {
+   "n_16": "udd:n*op qld:n*op lle:n*op",
+   "n_33": "udd:n*op qld:n*op lle:n*op",
+   "n_35": "udd:n*op qld:n*op lle:n*op",
+   "n_51": "udd:n*op qld:n*op lle:n*op",
+   "n_53": "udd:n*op qld:n*op lle:n*op",
+   "n_69": "udd:n*op qld:n*op lle:n*op",
+   "n_71": "udd:n*op qld:n*op lle:n*op",
+   "n_87": "udd:n*op qld:n*op lle:n*op",
+   "n_89": "udd:n*op qld:n*op lle:n*op"
+  },
+  "Z6-I|Z6I_55__SM_20260917_91": {
+   "n_13": "udd:n*op qld:n*op lle:n*op",
+   "n_26": "udd:n*op qld:n*op lle:n*op",
+   "n_29": "udd:n*op qld:n*op lle:n*op",
+   "n_44": "udd:n*op qld:n*op lle:n*op",
+   "n_47": "udd:n*op qld:n*op lle:n*op",
+   "n_62": "udd:n*op qld:n*op lle:n*op",
+   "n_65": "udd:n*op qld:n*op lle:n*op",
+   "n_80": "udd:n*op qld:n*op lle:n*op",
+   "n_83": "udd:n*op qld:n*op lle:n*op"
+  },
+  "Z6-I|Z6I_56__SM_20260917_215": {
+   "n_14": "udd:n*op qld:n*op lle:n*op",
+   "n_29": "udd:n*op qld:n*op lle:n*op",
+   "n_30": "udd:n*op qld:n*op lle:n*op",
+   "n_47": "udd:n*op qld:n*op lle:n*op",
+   "n_48": "udd:n*op qld:n*op lle:n*op",
+   "n_65": "udd:n*op qld:n*op lle:n*op",
+   "n_66": "udd:n*op qld:n*op lle:n*op",
+   "n_83": "udd:n*op qld:n*op lle:n*op",
+   "n_84": "udd:n*op qld:n*op lle:n*op"
+  }
+ },
+ "general_parity": {
+  "Z6-II|Z6II_01__SM_20260917_1058": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 17,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_01__SM_20260917_1088": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 17,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_01__SM_20260917_1280": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 19,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_01__SM_20260917_1388": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 15,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_01__SM_20260917_1443": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 17,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_01__SM_20260917_1660": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 17,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_01__SM_20260917_1933": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 16,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_01__SM_20260917_1983": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 16,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_01__SM_20260917_2078": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 15,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_01__SM_20260917_2151": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 17,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_01__SM_20260917_2221": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 16,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_01__SM_20260917_2510": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 17,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_01__SM_20260917_2696": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 16,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_01__SM_20260917_273": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 22,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_01__SM_20260917_2855": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 15,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_01__SM_20260917_311": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 14,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_01__SM_20260917_325": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 22,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_01__SM_20260917_42": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 14,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_01__SM_20260917_470": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 22,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_01__SM_20260917_569": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 17,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_01__SM_20260917_615": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 17,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_01__SM_20260917_743": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 17,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_01__SM_20260917_827": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 14,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_01__SM_20260917_86": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 17,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_01__SM_20260917_88": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 17,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_01__SM_20260917_894": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 14,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_03__SM_20260917_1353": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 17,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_03__SM_20260917_435": {
+   "anomaly_free": true,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_03__SM_20260917_923": {
+   "anomaly_free": true,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_04__SM_20260917_245": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 22,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_04__SM_20260917_904": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 14,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_05__SM_20260917_132": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 13,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_05__SM_20260917_151": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_05__SM_20260917_58": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 15,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_05__SM_20260917_60": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_05__SM_20260917_824": {
+   "anomaly_free": true,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 13,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_06__SM_20260917_1188": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_06__SM_20260917_1204": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 19,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_06__SM_20260917_1474": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 16,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_06__SM_20260917_1487": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 19,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_06__SM_20260917_2113": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 17,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_06__SM_20260917_2158": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 17,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_06__SM_20260917_2215": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 20,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_06__SM_20260917_226": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_06__SM_20260917_2496": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 19,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_06__SM_20260917_2541": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_06__SM_20260917_2618": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 19,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_06__SM_20260917_2647": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 15,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_06__SM_20260917_2868": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 20,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_06__SM_20260917_691": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_06__SM_20260917_73": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_06__SM_20260917_741": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 19,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_06__SM_20260917_744": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 19,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_06__SM_20260917_784": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_06__SM_20260917_894": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 19,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_06__SM_20260917_998": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 14,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_10__SM_20260917_1497": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_10__SM_20260917_271": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 16,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_10__SM_20260917_327": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 15,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_10__SM_20260917_687": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_10__SM_20260917_818": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_12__SM_20260917_1566": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 16,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_12__SM_20260917_1993": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 24,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_12__SM_20260917_2184": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 24,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_12__SM_20260917_2503": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 16,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_12__SM_20260917_400": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 17,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_12__SM_20260917_574": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 16,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_18__SM_20260917_1116": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 14,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_18__SM_20260917_2488": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 14,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_18__SM_20260917_656": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_19__SM_20260917_477": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_20__SM_20260917_1383": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 17,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_22__SM_20260917_1197": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 15,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_22__SM_20260917_399": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 15,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_23__SM_20260917_1411": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 16,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_23__SM_20260917_2318": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 16,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_23__SM_20260917_2678": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 17,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_23__SM_20260917_2913": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "ever_even_types": 43,
+   "ever_even_u1_types": 32,
+   "extreme_rays": 3334,
+   "fi_cancelling_rays": 304,
+   "matter_types": 16,
+   "parity_exists": true,
+   "realizable_rays": 0,
+   "singlet_types": 53,
+   "verdict": "closed: every FI-cancelling ray obstructed"
+  },
+  "Z6-II|Z6II_24__SM_20260917_2751": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 12,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_28__SM_20260917_2298": {
+   "anomaly_free": true,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 13,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_28__SM_20260917_2417": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_33__SM_20260917_619": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 15,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_34__SM_20260917_1350": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_34__SM_20260917_1558": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 16,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_34__SM_20260917_1585": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 16,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_34__SM_20260917_1702": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 15,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_34__SM_20260917_2056": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_34__SM_20260917_2068": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 16,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_34__SM_20260917_2200": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_34__SM_20260917_2229": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_34__SM_20260917_2342": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 14,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_34__SM_20260917_2698": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_34__SM_20260917_2722": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 16,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_34__SM_20260917_292": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_34__SM_20260917_616": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_34__SM_20260917_617": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 17,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_34__SM_20260917_938": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 14,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_35__SM_20260917_473": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 14,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_39__SM_20260917_478": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 12,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_41__SM_20260917_635": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 15,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_43__SM_20260917_1867": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 14,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_45__SM_20260917_1962": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 15,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_49__SM_20260917_145": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_49__SM_20260917_2717": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 16,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_49__SM_20260917_423": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 16,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_52__SM_20260917_1026": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_52__SM_20260917_1437": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_52__SM_20260917_213": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_52__SM_20260917_2304": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_52__SM_20260917_405": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_52__SM_20260917_570": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_52__SM_20260917_712": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_52__SM_20260917_93": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_53__SM_20260917_1614": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 14,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_53__SM_20260917_2368": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_54__SM_20260917_1301": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 14,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_54__SM_20260917_265": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 16,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_56__SM_20260917_2753": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 17,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_57__SM_20260917_1103": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 14,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_57__SM_20260917_173": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 16,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_57__SM_20260917_2231": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 14,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_59__SM_20260917_1105": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 16,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_59__SM_20260917_1628": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 15,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_59__SM_20260917_2473": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 16,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_59__SM_20260917_2533": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 18,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_60__SM_20260917_1475": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 22,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_60__SM_20260917_2720": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 19,
+   "parity_exists": false
+  },
+  "Z6-II|Z6II_60__SM_20260917_810": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6,
+    3,
+    2,
+    2
+   ],
+   "matter_types": 17,
+   "parity_exists": false
+  },
+  "Z6-I|Z6I_06__SM_20260917_2": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 13,
+   "ever_even_u1_types": 13,
+   "farkas": [
+    "0",
+    "0",
+    "-8/3",
+    "4",
+    "0",
+    "-4/15"
+   ],
+   "matter_types": 8,
+   "parity_exists": true,
+   "singlet_types": 15,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_17__SM_20260917_35": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 13,
+   "ever_even_u1_types": 13,
+   "farkas": [
+    "0",
+    "0",
+    "4",
+    "-8/3",
+    "4/15",
+    "0"
+   ],
+   "matter_types": 8,
+   "parity_exists": true,
+   "singlet_types": 15,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_17__SM_20260917_42": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 13,
+   "ever_even_u1_types": 13,
+   "farkas": [
+    "0",
+    "-2",
+    "0",
+    "4/3",
+    "-2/15",
+    "0"
+   ],
+   "matter_types": 8,
+   "parity_exists": true,
+   "singlet_types": 15,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_17__SM_20260917_45": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 9,
+   "ever_even_u1_types": 9,
+   "farkas": [
+    "0",
+    "0",
+    "-55/414",
+    "-275/7728",
+    "-715/103824",
+    "47/7416"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 9,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_17__SM_20260917_66": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 21,
+   "ever_even_u1_types": 21,
+   "farkas": [
+    "0",
+    "0",
+    "0",
+    "-4",
+    "0",
+    "0",
+    "4/5"
+   ],
+   "matter_types": 8,
+   "parity_exists": true,
+   "singlet_types": 23,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_17__SM_20260917_86": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 13,
+   "ever_even_u1_types": 13,
+   "farkas": [
+    "0",
+    "14/81",
+    "14/45",
+    "-280/13689",
+    "-164/165789",
+    "7/9810"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 13,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_19__SM_20260917_2": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 13,
+   "ever_even_u1_types": 13,
+   "farkas": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "2",
+    "-7"
+   ],
+   "matter_types": 8,
+   "parity_exists": true,
+   "singlet_types": 15,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_19__SM_20260917_2182": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 13,
+   "ever_even_u1_types": 13,
+   "farkas": [
+    "0",
+    "0",
+    "0",
+    "2",
+    "0",
+    "-6/5"
+   ],
+   "matter_types": 8,
+   "parity_exists": true,
+   "singlet_types": 15,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_19__SM_20260917_465": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 13,
+   "ever_even_u1_types": 13,
+   "farkas": [
+    "0",
+    "0",
+    "0",
+    "2",
+    "-1",
+    "-3/5"
+   ],
+   "matter_types": 8,
+   "parity_exists": true,
+   "singlet_types": 15,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_21__SM_20260917_21": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 21,
+   "ever_even_u1_types": 21,
+   "farkas": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "28/25",
+    "-13/50"
+   ],
+   "matter_types": 8,
+   "parity_exists": true,
+   "singlet_types": 23,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_21__SM_20260917_399": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 21,
+   "ever_even_u1_types": 21,
+   "farkas": [
+    "0",
+    "0",
+    "0",
+    "-2",
+    "0",
+    "0",
+    "2/5"
+   ],
+   "matter_types": 8,
+   "parity_exists": true,
+   "singlet_types": 23,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_21__SM_20260917_518": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 21,
+   "ever_even_u1_types": 21,
+   "farkas": [
+    "0",
+    "0",
+    "-4",
+    "-4/3",
+    "4",
+    "-4/15",
+    "0"
+   ],
+   "matter_types": 8,
+   "parity_exists": true,
+   "singlet_types": 23,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_26__SM_20260917_242": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 11,
+   "ever_even_u1_types": 11,
+   "farkas": [
+    "0",
+    "-145/954",
+    "1682/24327",
+    "-58/25245",
+    "17/495",
+    "-29/63",
+    "-58/315"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 11,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_26__SM_20260917_478": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 9,
+   "ever_even_u1_types": 9,
+   "farkas": [
+    "0",
+    "55/702",
+    "-55/8073",
+    "605/94806",
+    "85/14427",
+    "-11/63"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 9,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_27__SM_20260917_1078": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 13,
+   "ever_even_u1_types": 13,
+   "farkas": [
+    "0",
+    "0",
+    "0",
+    "1",
+    "5/7",
+    "-4/35"
+   ],
+   "matter_types": 8,
+   "parity_exists": true,
+   "singlet_types": 15,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_27__SM_20260917_174": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 9,
+   "ever_even_u1_types": 9,
+   "farkas": [
+    "0",
+    "77/261",
+    "56/5249",
+    "-1400/349149",
+    "-30065/5596029",
+    "-7273/2184453",
+    "1/1506"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 9,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_27__SM_20260917_241": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 13,
+   "ever_even_u1_types": 13,
+   "farkas": [
+    "0",
+    "-4",
+    "4",
+    "-4/3",
+    "0",
+    "-4/15"
+   ],
+   "matter_types": 8,
+   "parity_exists": true,
+   "singlet_types": 15,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_27__SM_20260917_287": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 13,
+   "ever_even_u1_types": 13,
+   "farkas": [
+    "0",
+    "-42/13",
+    "70/117",
+    "5/9",
+    "0",
+    "0",
+    "0"
+   ],
+   "matter_types": 8,
+   "parity_exists": true,
+   "singlet_types": 15,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_27__SM_20260917_3": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 9,
+   "ever_even_u1_types": 9,
+   "farkas": [
+    "0",
+    "-5/243",
+    "125/972",
+    "-475/148068",
+    "515/122019",
+    "17/801"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 9,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_27__SM_20260917_36": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 23,
+   "ever_even_u1_types": 23,
+   "farkas": [
+    "0",
+    "5/3",
+    "10/87",
+    "910/16269",
+    "95/155397",
+    "-20/24099",
+    "190/3219",
+    "-73/6105",
+    "2/165"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 23,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_27__SM_20260917_55": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 9,
+   "ever_even_u1_types": 9,
+   "farkas": [
+    "0",
+    "0",
+    "10/117",
+    "-25/5499",
+    "125/20727",
+    "-265/44541",
+    "-26/909"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 9,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_27__SM_20260917_669": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 13,
+   "ever_even_u1_types": 13,
+   "farkas": [
+    "0",
+    "-195/1028",
+    "143/9766",
+    "-65/15181",
+    "273/8942408",
+    "-29/83940"
+   ],
+   "matter_types": 8,
+   "parity_exists": true,
+   "singlet_types": 15,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_27__SM_20260917_695": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 21,
+   "ever_even_u1_types": 21,
+   "farkas": [
+    "0",
+    "42/13",
+    "-70/117",
+    "-5/9",
+    "0",
+    "0",
+    "0",
+    "0"
+   ],
+   "matter_types": 8,
+   "parity_exists": true,
+   "singlet_types": 23,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_27__SM_20260917_73": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 9,
+   "ever_even_u1_types": 9,
+   "farkas": [
+    "0",
+    "0",
+    "55/414",
+    "275/3864",
+    "2365/51912",
+    "-1/1236"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 9,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_32__SM_20260917_1105": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 13,
+   "ever_even_u1_types": 13,
+   "farkas": [
+    "0",
+    "4",
+    "4/3",
+    "0",
+    "0",
+    "16/15"
+   ],
+   "matter_types": 8,
+   "parity_exists": true,
+   "singlet_types": 15,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_32__SM_20260917_129": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 11,
+   "ever_even_u1_types": 11,
+   "farkas": [
+    "0",
+    "-145/1017",
+    "319/7797",
+    "551/15111",
+    "-145/33507",
+    "-29/135",
+    "-7/306"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 11,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_32__SM_20260917_184": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 11,
+   "ever_even_u1_types": 11,
+   "farkas": [
+    "0",
+    "20/9",
+    "0",
+    "-4/243",
+    "-20/25029",
+    "-145/12978",
+    "1/42"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 11,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_32__SM_20260917_186": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 13,
+   "ever_even_u1_types": 13,
+   "farkas": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "-3",
+    "0"
+   ],
+   "matter_types": 8,
+   "parity_exists": true,
+   "singlet_types": 15,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_32__SM_20260917_2225": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 21,
+   "ever_even_u1_types": 21,
+   "farkas": [
+    "0",
+    "-4",
+    "4",
+    "-4/3",
+    "0",
+    "0",
+    "-4/15"
+   ],
+   "matter_types": 8,
+   "parity_exists": true,
+   "singlet_types": 23,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_32__SM_20260917_359": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 13,
+   "ever_even_u1_types": 13,
+   "farkas": [
+    "0",
+    "2",
+    "0",
+    "0",
+    "-1",
+    "3/5"
+   ],
+   "matter_types": 8,
+   "parity_exists": true,
+   "singlet_types": 15,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_32__SM_20260917_407": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 21,
+   "ever_even_u1_types": 21,
+   "farkas": [
+    "0",
+    "-2",
+    "0",
+    "4/3",
+    "0",
+    "0",
+    "-2/15"
+   ],
+   "matter_types": 8,
+   "parity_exists": true,
+   "singlet_types": 23,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_32__SM_20260917_6": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 21,
+   "ever_even_u1_types": 21,
+   "farkas": [
+    "0",
+    "2/3",
+    "2/35",
+    "484/9051",
+    "286/53013",
+    "-32/8241",
+    "204/52729",
+    "17/23610"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 21,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_33__SM_20260917_148": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 15,
+   "ever_even_u1_types": 15,
+   "farkas": [
+    "0",
+    "-145/3051",
+    "551/350865",
+    "1421/577530",
+    "203/80352",
+    "-377/562464",
+    "13/19530"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 15,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_33__SM_20260917_151": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 9,
+   "ever_even_u1_types": 9,
+   "farkas": [
+    "0",
+    "-140/99",
+    "-490/3597",
+    "3185/1523493",
+    "-10325/4374801",
+    "-182/49767",
+    "1/106"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 9,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_33__SM_20260917_1807": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 9,
+   "ever_even_u1_types": 9,
+   "farkas": [
+    "0",
+    "-125/3051",
+    "5075/2459106",
+    "-253/68913",
+    "-2/2223",
+    "11/234"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 9,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_33__SM_20260917_384": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 13,
+   "ever_even_u1_types": 13,
+   "farkas": [
+    "0",
+    "-140/3051",
+    "2366/1339389",
+    "-56/65411",
+    "98/274905",
+    "17/3690"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 13,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_33__SM_20260917_487": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 9,
+   "ever_even_u1_types": 9,
+   "farkas": [
+    "0",
+    "175/792",
+    "155/9724",
+    "553/43758",
+    "29/1716",
+    "0",
+    "7/312"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 9,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_33__SM_20260917_60": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 11,
+   "ever_even_u1_types": 11,
+   "farkas": [
+    "0",
+    "-5/477",
+    "1975/812331",
+    "1192/3479229",
+    "-1340/267633",
+    "74/22401",
+    "5/114"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 11,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_33__SM_20260917_604": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 15,
+   "ever_even_u1_types": 15,
+   "farkas": [
+    "0",
+    "0",
+    "-6/179",
+    "-69/76433",
+    "225/107177",
+    "153/171935",
+    "5/822"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 15,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_34__SM_20260917_30": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 9,
+   "ever_even_u1_types": 9,
+   "farkas": [
+    "0",
+    "17/18",
+    "55/5202",
+    "-28/18785",
+    "-28/8385",
+    "1379/485685",
+    "1/1506"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 9,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_34__SM_20260917_441": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 9,
+   "ever_even_u1_types": 9,
+   "farkas": [
+    "0",
+    "275/4563",
+    "-100/175929",
+    "-2890/1021221",
+    "-125/7848",
+    "-1/216"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 9,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_34__SM_20260917_71": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 11,
+   "ever_even_u1_types": 11,
+   "farkas": [
+    "0",
+    "0",
+    "20/181",
+    "-2420/353493",
+    "-340/144739",
+    "-32/66033",
+    "-1/198"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 11,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_34__SM_20260917_75": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 13,
+   "ever_even_u1_types": 13,
+   "farkas": [
+    "0",
+    "-13/228",
+    "-2795/208392",
+    "-6643/842708",
+    "7293/2579756",
+    "-29/83940"
+   ],
+   "matter_types": 8,
+   "parity_exists": true,
+   "singlet_types": 15,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_34__SM_20260917_89": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 9,
+   "ever_even_u1_types": 9,
+   "farkas": [
+    "0",
+    "25/24",
+    "0",
+    "0",
+    "175/792",
+    "-35/1584",
+    "-7/144"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 9,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_36__SM_20260917_42": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 11,
+   "ever_even_u1_types": 11,
+   "farkas": [
+    "0",
+    "20/9",
+    "-40/261",
+    "0",
+    "-280/47763",
+    "-268/373869",
+    "1/454"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 11,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_36__SM_20260917_56": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 15,
+   "ever_even_u1_types": 15,
+   "farkas": [
+    "0",
+    "0",
+    "-3/2",
+    "9/418",
+    "0",
+    "51/113905",
+    "-2/327"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 15,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_38__SM_20260917_33": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 21,
+   "ever_even_u1_types": 21,
+   "farkas": [
+    "0",
+    "11/34",
+    "121/459",
+    "110/1647",
+    "55/3111",
+    "44/1003",
+    "11/15",
+    "3/590"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 21,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_38__SM_20260917_4": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 9,
+   "ever_even_u1_types": 9,
+   "farkas": [
+    "0",
+    "0",
+    "55/828",
+    "275/3864",
+    "-2365/51912",
+    "-1/1236"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 9,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_38__SM_20260917_46": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 9,
+   "ever_even_u1_types": 9,
+   "farkas": [
+    "0",
+    "-5/486",
+    "25/1701",
+    "25/171",
+    "670/214263",
+    "11/1074"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 9,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_38__SM_20260917_8": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 9,
+   "ever_even_u1_types": 9,
+   "farkas": [
+    "0",
+    "-350/423",
+    "3080/733059",
+    "2240/3315229",
+    "-11200/35805621",
+    "9541/28187802",
+    "-1/1506"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 9,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_40__SM_20260917_10": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 21,
+   "ever_even_u1_types": 21,
+   "farkas": [
+    "0",
+    "11/18",
+    "11/3114",
+    "2431/187878",
+    "-550/106247",
+    "-3388/1389429",
+    "-847/1053315",
+    "7/890"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 21,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_40__SM_20260917_147": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 13,
+   "ever_even_u1_types": 13,
+   "farkas": [
+    "0",
+    "0",
+    "0",
+    "-28/9",
+    "-5/9",
+    "0",
+    "0"
+   ],
+   "matter_types": 8,
+   "parity_exists": true,
+   "singlet_types": 15,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_40__SM_20260917_159": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 9,
+   "ever_even_u1_types": 9,
+   "farkas": [
+    "0",
+    "25/18",
+    "-5/18",
+    "-55/369",
+    "860/26937",
+    "2/657",
+    "0"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 9,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_40__SM_20260917_165": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 15,
+   "ever_even_u1_types": 15,
+   "farkas": [
+    "0",
+    "68/81",
+    "0",
+    "34/567",
+    "2074/381591",
+    "-1207/2101779",
+    "64/15615"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 15,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_40__SM_20260917_184": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 9,
+   "ever_even_u1_types": 9,
+   "farkas": [
+    "0",
+    "-5/1503",
+    "725/199398",
+    "-125/28656",
+    "25/1872",
+    "11/234"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 9,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_40__SM_20260917_1938": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 13,
+   "ever_even_u1_types": 13,
+   "farkas": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "4/5"
+   ],
+   "matter_types": 8,
+   "parity_exists": true,
+   "singlet_types": 15,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_40__SM_20260917_1940": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 13,
+   "ever_even_u1_types": 13,
+   "farkas": [
+    "0",
+    "-4",
+    "0",
+    "8/3",
+    "0",
+    "-4/15"
+   ],
+   "matter_types": 8,
+   "parity_exists": true,
+   "singlet_types": 15,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_40__SM_20260917_2391": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 21,
+   "ever_even_u1_types": 21,
+   "farkas": [
+    "0",
+    "0",
+    "-42/13",
+    "-70/117",
+    "-5/9",
+    "0",
+    "0",
+    "0"
+   ],
+   "matter_types": 8,
+   "parity_exists": true,
+   "singlet_types": 23,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_40__SM_20260917_275": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 23,
+   "ever_even_u1_types": 23,
+   "farkas": [
+    "0",
+    "5/3",
+    "1/3",
+    "80/1059",
+    "-2290/212859",
+    "-210/9179",
+    "-260/16851",
+    "-166/11439",
+    "-5/186"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 23,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_40__SM_20260917_2820": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 13,
+   "ever_even_u1_types": 13,
+   "farkas": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "21/5",
+    "12/5",
+    "0"
+   ],
+   "matter_types": 8,
+   "parity_exists": true,
+   "singlet_types": 15,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_40__SM_20260917_285": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 13,
+   "ever_even_u1_types": 13,
+   "farkas": [
+    "0",
+    "11/82",
+    "-11/30",
+    "33/5986",
+    "-781/294774",
+    "7/3365"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 13,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_40__SM_20260917_360": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 15,
+   "ever_even_u1_types": 15,
+   "farkas": [
+    "0",
+    "-29/2637",
+    "-2465/1036341",
+    "986/1446633",
+    "-2233/4177935",
+    "-725/257418",
+    "-11/567"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 15,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_40__SM_20260917_493": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 13,
+   "ever_even_u1_types": 13,
+   "farkas": [
+    "0",
+    "0",
+    "-13/904",
+    "819/51302",
+    "7865/725492",
+    "-19/23970"
+   ],
+   "matter_types": 8,
+   "parity_exists": true,
+   "singlet_types": 15,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_40__SM_20260917_596": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 11,
+   "ever_even_u1_types": 11,
+   "farkas": [
+    "0",
+    "50/2493",
+    "-2540/346527",
+    "-38/186399",
+    "-208/44253",
+    "-200/5643",
+    "5/114"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 11,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_40__SM_20260917_63": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 11,
+   "ever_even_u1_types": 11,
+   "farkas": [
+    "0",
+    "29/27",
+    "0",
+    "58/297",
+    "1015/14058",
+    "-580/338031",
+    "143/23805"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 11,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_40__SM_20260917_81": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 9,
+   "ever_even_u1_types": 9,
+   "farkas": [
+    "0",
+    "49/153",
+    "-259/7701",
+    "-1435/19932",
+    "-455/92004",
+    "-203/199342",
+    "2/429"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 9,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_40__SM_20260917_841": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 15,
+   "ever_even_u1_types": 15,
+   "farkas": [
+    "0",
+    "0",
+    "3/5",
+    "3/20",
+    "-9/1708",
+    "-981/310429",
+    "1/21810"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 15,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_42__SM_20260917_45": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 13,
+   "ever_even_u1_types": 13,
+   "farkas": [
+    "0",
+    "-22/4245",
+    "539/69618",
+    "176/7011",
+    "11/684",
+    "-1/180"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 13,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_42__SM_20260917_93": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 9,
+   "ever_even_u1_types": 9,
+   "farkas": [
+    "0",
+    "0",
+    "-275/684",
+    "-605/66348",
+    "935/208647",
+    "-1/239"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 9,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_43__SM_20260917_104": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 11,
+   "ever_even_u1_types": 11,
+   "farkas": [
+    "0",
+    "-145/954",
+    "1682/24327",
+    "58/25245",
+    "-1537/29205",
+    "5/413",
+    "29/315"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 11,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_43__SM_20260917_1069": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 9,
+   "ever_even_u1_types": 9,
+   "farkas": [
+    "0",
+    "25/9",
+    "-25/144",
+    "5/108",
+    "65/12528",
+    "2/261"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 9,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_43__SM_20260917_114": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 15,
+   "ever_even_u1_types": 15,
+   "farkas": [
+    "0",
+    "-29/459",
+    "-1421/138618",
+    "203/72480",
+    "-2407/635040",
+    "319/341334",
+    "8/1935"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 15,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_43__SM_20260917_1227": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 9,
+   "ever_even_u1_types": 9,
+   "farkas": [
+    "0",
+    "-25/9",
+    "25/57",
+    "-89/2052",
+    "7/27",
+    "0",
+    "-1/108"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 9,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_43__SM_20260917_142": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 9,
+   "ever_even_u1_types": 9,
+   "farkas": [
+    "0",
+    "0",
+    "0",
+    "-55/828",
+    "25/414",
+    "-11/18"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 9,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_43__SM_20260917_20": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 13,
+   "ever_even_u1_types": 13,
+   "farkas": [
+    "0",
+    "-28/459",
+    "-7/11475",
+    "-49/4425",
+    "644/432765",
+    "13/7335"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 13,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_43__SM_20260917_207": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 13,
+   "ever_even_u1_types": 13,
+   "farkas": [
+    "0",
+    "13/291",
+    "-53/59655",
+    "-176/7011",
+    "11/1368",
+    "1/360"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 13,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_43__SM_20260917_300": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 15,
+   "ever_even_u1_types": 15,
+   "farkas": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "-2/423",
+    "-659/464877",
+    "61/98910"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 15,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_43__SM_20260917_519": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 9,
+   "ever_even_u1_types": 9,
+   "farkas": [
+    "0",
+    "0",
+    "-980/1557",
+    "175/22836",
+    "-245/41316",
+    "196/71051",
+    "-5/1362"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 9,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_46__SM_20260917_10": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 11,
+   "ever_even_u1_types": 11,
+   "farkas": [
+    "0",
+    "-40/279",
+    "-40/8091",
+    "50/30537",
+    "275/62127",
+    "101/75933",
+    "-3/286"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 11,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_46__SM_20260917_12": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 23,
+   "ever_even_u1_types": 23,
+   "farkas": [
+    "0",
+    "0",
+    "0",
+    "5/432",
+    "5/3",
+    "-5/432",
+    "-5/296",
+    "-91/6105",
+    "-4/165"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 23,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_46__SM_20260917_126": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 9,
+   "ever_even_u1_types": 9,
+   "farkas": [
+    "0",
+    "25/18",
+    "-58/423",
+    "544/28341",
+    "-3937/613854",
+    "8/4581",
+    "0"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 9,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_46__SM_20260917_35": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 11,
+   "ever_even_u1_types": 11,
+   "farkas": [
+    "0",
+    "0",
+    "4/63",
+    "59/4620",
+    "-3074/206415",
+    "-3277/1332315",
+    "17/639"
+   ],
+   "matter_types": 7,
+   "parity_exists": true,
+   "singlet_types": 11,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_46__SM_20260917_561": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 13,
+   "ever_even_u1_types": 13,
+   "farkas": [
+    "0",
+    "-91/240",
+    "13/12",
+    "-65/976",
+    "13/24888",
+    "-1/136"
+   ],
+   "matter_types": 8,
+   "parity_exists": true,
+   "singlet_types": 15,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_55__SM_20260917_179": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 13,
+   "ever_even_u1_types": 13,
+   "farkas": [
+    "0",
+    "-2",
+    "0",
+    "0",
+    "-4/7",
+    "6/35"
+   ],
+   "matter_types": 8,
+   "parity_exists": true,
+   "singlet_types": 15,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_55__SM_20260917_38": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 13,
+   "ever_even_u1_types": 13,
+   "farkas": [
+    "0",
+    "0",
+    "0",
+    "3",
+    "0",
+    "0",
+    "0"
+   ],
+   "matter_types": 8,
+   "parity_exists": true,
+   "singlet_types": 15,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_55__SM_20260917_91": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 13,
+   "ever_even_u1_types": 13,
+   "farkas": [
+    "0",
+    "-13/8",
+    "39/440",
+    "-91/264",
+    "143/804",
+    "-1/1608"
+   ],
+   "matter_types": 8,
+   "parity_exists": true,
+   "singlet_types": 15,
+   "verdict": "closed: Farkas on the even-able singlets"
+  },
+  "Z6-I|Z6I_56__SM_20260917_215": {
+   "anomaly_free": false,
+   "discrete_orders": [
+    6
+   ],
+   "ever_even_types": 13,
+   "ever_even_u1_types": 13,
+   "farkas": [
+    "0",
+    "-13/1160",
+    "-416/21315",
+    "169/3332",
+    "1/136",
+    "-13/60"
+   ],
+   "matter_types": 8,
+   "parity_exists": true,
+   "singlet_types": 15,
+   "verdict": "closed: Farkas on the even-able singlets"
+  }
+ },
+ "ledger_sha256": "dd7a2c8bcb9b233f0db90be5d08c25d5511a760abc9e895af0caf734d1bd0a6a",
+ "pass_id": 10967,
+ "string_couplings": {
+  "Z6-II|Z6II_23__SM_20260917_2913": {
+   "forced_singlets": 14,
+   "lle_forced_in_quartic": 0,
+   "lle_order3": 16,
+   "qld_forced_in_quartic": 0,
+   "qld_order3": 20,
+   "udd_by_order": {
+    "5": 144,
+    "6": 1216
+   },
+   "udd_forced_in_quartic": 0,
+   "udd_order3": 0
+  },
+  "Z6-I|Z6I_06__SM_20260917_2": {
+   "forced_singlets": 9,
+   "lle_forced_in_quartic": 9,
+   "lle_order3": 0,
+   "qld_forced_in_quartic": 9,
+   "qld_order3": 0,
+   "udd_forced_in_quartic": 9,
+   "udd_order3": 0
+  },
+  "Z6-I|Z6I_17__SM_20260917_35": {
+   "forced_singlets": 9,
+   "lle_forced_in_quartic": 9,
+   "lle_order3": 0,
+   "qld_forced_in_quartic": 9,
+   "qld_order3": 0,
+   "udd_forced_in_quartic": 9,
+   "udd_order3": 0
+  },
+  "Z6-I|Z6I_17__SM_20260917_42": {
+   "forced_singlets": 9,
+   "lle_forced_in_quartic": 9,
+   "lle_order3": 0,
+   "qld_forced_in_quartic": 9,
+   "qld_order3": 0,
+   "udd_forced_in_quartic": 9,
+   "udd_order3": 0
+  },
+  "Z6-I|Z6I_17__SM_20260917_66": {
+   "forced_singlets": 9,
+   "lle_forced_in_quartic": 9,
+   "lle_order3": 0,
+   "qld_forced_in_quartic": 9,
+   "qld_order3": 0,
+   "udd_forced_in_quartic": 9,
+   "udd_order3": 0
+  },
+  "Z6-I|Z6I_19__SM_20260917_2182": {
+   "forced_singlets": 9,
+   "lle_forced_in_quartic": 9,
+   "lle_order3": 0,
+   "qld_forced_in_quartic": 9,
+   "qld_order3": 0,
+   "udd_forced_in_quartic": 9,
+   "udd_order3": 0
+  },
+  "Z6-I|Z6I_19__SM_20260917_465": {
+   "forced_singlets": 9,
+   "lle_forced_in_quartic": 9,
+   "lle_order3": 0,
+   "qld_forced_in_quartic": 9,
+   "qld_order3": 0,
+   "udd_forced_in_quartic": 9,
+   "udd_order3": 0
+  },
+  "Z6-I|Z6I_21__SM_20260917_399": {
+   "forced_singlets": 9,
+   "lle_forced_in_quartic": 9,
+   "lle_order3": 0,
+   "qld_forced_in_quartic": 9,
+   "qld_order3": 0,
+   "udd_forced_in_quartic": 9,
+   "udd_order3": 0
+  },
+  "Z6-I|Z6I_21__SM_20260917_518": {
+   "forced_singlets": 9,
+   "lle_forced_in_quartic": 9,
+   "lle_order3": 0,
+   "qld_forced_in_quartic": 9,
+   "qld_order3": 0,
+   "udd_forced_in_quartic": 9,
+   "udd_order3": 0
+  },
+  "Z6-I|Z6I_27__SM_20260917_1078": {
+   "forced_singlets": 9,
+   "lle_forced_in_quartic": 9,
+   "lle_order3": 0,
+   "qld_forced_in_quartic": 9,
+   "qld_order3": 0,
+   "udd_forced_in_quartic": 9,
+   "udd_order3": 0
+  },
+  "Z6-I|Z6I_27__SM_20260917_241": {
+   "forced_singlets": 9,
+   "lle_forced_in_quartic": 9,
+   "lle_order3": 0,
+   "qld_forced_in_quartic": 9,
+   "qld_order3": 0,
+   "udd_forced_in_quartic": 9,
+   "udd_order3": 0
+  },
+  "Z6-I|Z6I_27__SM_20260917_669": {
+   "forced_singlets": 9,
+   "lle_forced_in_quartic": 9,
+   "lle_order3": 0,
+   "qld_forced_in_quartic": 9,
+   "qld_order3": 0,
+   "udd_forced_in_quartic": 9,
+   "udd_order3": 0
+  },
+  "Z6-I|Z6I_32__SM_20260917_1105": {
+   "forced_singlets": 9,
+   "lle_forced_in_quartic": 9,
+   "lle_order3": 0,
+   "qld_forced_in_quartic": 9,
+   "qld_order3": 0,
+   "udd_forced_in_quartic": 9,
+   "udd_order3": 0
+  },
+  "Z6-I|Z6I_32__SM_20260917_2225": {
+   "forced_singlets": 9,
+   "lle_forced_in_quartic": 9,
+   "lle_order3": 0,
+   "qld_forced_in_quartic": 9,
+   "qld_order3": 0,
+   "udd_forced_in_quartic": 9,
+   "udd_order3": 0
+  },
+  "Z6-I|Z6I_32__SM_20260917_359": {
+   "forced_singlets": 9,
+   "lle_forced_in_quartic": 9,
+   "lle_order3": 0,
+   "qld_forced_in_quartic": 9,
+   "qld_order3": 0,
+   "udd_forced_in_quartic": 9,
+   "udd_order3": 0
+  },
+  "Z6-I|Z6I_32__SM_20260917_407": {
+   "forced_singlets": 9,
+   "lle_forced_in_quartic": 9,
+   "lle_order3": 0,
+   "qld_forced_in_quartic": 9,
+   "qld_order3": 0,
+   "udd_forced_in_quartic": 9,
+   "udd_order3": 0
+  },
+  "Z6-I|Z6I_34__SM_20260917_75": {
+   "forced_singlets": 9,
+   "lle_forced_in_quartic": 9,
+   "lle_order3": 0,
+   "qld_forced_in_quartic": 9,
+   "qld_order3": 0,
+   "udd_forced_in_quartic": 9,
+   "udd_order3": 0
+  },
+  "Z6-I|Z6I_40__SM_20260917_1938": {
+   "forced_singlets": 9,
+   "lle_forced_in_quartic": 9,
+   "lle_order3": 0,
+   "qld_forced_in_quartic": 9,
+   "qld_order3": 0,
+   "udd_forced_in_quartic": 9,
+   "udd_order3": 0
+  },
+  "Z6-I|Z6I_40__SM_20260917_1940": {
+   "forced_singlets": 9,
+   "lle_forced_in_quartic": 9,
+   "lle_order3": 0,
+   "qld_forced_in_quartic": 9,
+   "qld_order3": 0,
+   "udd_forced_in_quartic": 9,
+   "udd_order3": 0
+  },
+  "Z6-I|Z6I_40__SM_20260917_493": {
+   "forced_singlets": 9,
+   "lle_forced_in_quartic": 9,
+   "lle_order3": 0,
+   "qld_forced_in_quartic": 9,
+   "qld_order3": 0,
+   "udd_forced_in_quartic": 9,
+   "udd_order3": 0
+  },
+  "Z6-I|Z6I_46__SM_20260917_561": {
+   "forced_singlets": 9,
+   "lle_forced_in_quartic": 9,
+   "lle_order3": 0,
+   "qld_forced_in_quartic": 9,
+   "qld_order3": 0,
+   "udd_forced_in_quartic": 9,
+   "udd_order3": 0
+  },
+  "Z6-I|Z6I_55__SM_20260917_179": {
+   "forced_singlets": 9,
+   "lle_forced_in_quartic": 9,
+   "lle_order3": 0,
+   "qld_forced_in_quartic": 9,
+   "qld_order3": 0,
+   "udd_forced_in_quartic": 9,
+   "udd_order3": 0
+  },
+  "Z6-I|Z6I_55__SM_20260917_91": {
+   "forced_singlets": 9,
+   "lle_forced_in_quartic": 9,
+   "lle_order3": 0,
+   "qld_forced_in_quartic": 9,
+   "qld_order3": 0,
+   "udd_forced_in_quartic": 9,
+   "udd_order3": 0
+  },
+  "Z6-I|Z6I_56__SM_20260917_215": {
+   "forced_singlets": 9,
+   "lle_forced_in_quartic": 9,
+   "lle_order3": 0,
+   "qld_forced_in_quartic": 9,
+   "qld_order3": 0,
+   "udd_forced_in_quartic": 9,
+   "udd_order3": 0
+  }
+ },
+ "summary": {
+  "A": {
+   "closed_farkas": 87,
+   "closed_rays": 1,
+   "counterexamples": 0,
+   "models": 215,
+   "parity_exists": 88
+  },
+  "B": {
+   "bl_models": 88,
+   "forced_singlets": 302,
+   "lle:nbar*op": 4,
+   "udd:n*op lle:n*op": 3,
+   "udd:n*op qld:n*op lle:n*op": 290,
+   "udd:nbar*op": 2,
+   "udd:nbar*op lle:nbar*op": 3
+  },
+  "C": {
+   "Z6-II_dflat_models": 1,
+   "Z6-II_no_cubic_rpv_all_forced_regenerate_all_three": 0,
+   "Z6-I_dflat_models": 23,
+   "Z6-I_no_cubic_rpv_all_forced_regenerate_all_three": 23
+  }
+ }
+}

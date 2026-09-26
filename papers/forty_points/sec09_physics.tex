@@ -423,6 +423,53 @@ Ratz, Ross, Schieren, Schmidt-Hoberg and Vaudrevange --- which in a string orbif
 internal rotation sector rather than in the gauge lattice. That is the one open route.
 \end{plainwords}
 
+\paragraph{The vacuum switches the forbidden couplings back on.}
+Two gaps remained. First, the searches above used the $B-L$ family and $\mathbb{Z}_2$ characters
+that are $\pm1$ on \emph{every} field. A matter parity only has to be $-1$ on quarks and leptons
+and $+1$ on the condensate; exotic fields may carry any phase. Second, the string has discrete
+symmetries of its own, the \emph{space-group selection rules}, and these are not part of the gauge
+lattice. Pass~10967 closes both. It takes the most general candidate: any element of the gauge
+torus times the space-group group (the point-group $\mathbb{Z}_6$, a $\mathbb{Z}_3$, and in
+$\mathbb{Z}_6$-II a further $\mathbb{Z}_2\times\mathbb{Z}_2$ from fixed points). It then decides
+exactly, with a Smith normal form, which singlets such an element can leave even. The answer is
+unchanged: such parities exist in the same $88$ models and survive the FI term in none.
+
+The reason is a single identity. In $290$ of the $302$ forced singlets, single copies of the fields
+satisfy
+\[
+  Q(n)\;=\;-Q(u^cd^cd^c)\;=\;-Q(q\,\ell\,d^c)\;=\;-Q(\ell\,\ell\,e^c),
+\]
+which is the $SO(10)$ quartic invariant $\mathbf{16}^4$ evaluated at $\nu^c$. Each cubic is odd
+under every matter parity, so $n$ is too. The string's own coupling rules then finish the argument
+(Figure~\ref{fig:rpv}). In each of the $23$ $D$-flat $\mathbb{Z}_6$-I models, none of the three
+$R$-parity-violating cubics is allowed at the renormalisable level. Yet all nine forced singlets
+of every model appear in allowed quartics $n\,u^cd^cd^c$, $n\,q\,\ell\,d^c$ and $n\,\ell\,\ell\,e^c$.
+The vacuum that supersymmetry requires turns all three back on, with strength
+$\langle n\rangle/M_s\approx0.2$--$0.4$. Holotrade had noted that its class closure (b81ef8c)
+held only if the vacuum breaks matter parity; this is that vacuum, named field by field.
+\tierC\ (\cert{w33\_pass10967\_fi\_vacuum\_regenerates\_rpv.py})
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[>={Stealth[length=2mm]},
+  bx/.style={draw=#1,fill=#1soft,rounded corners=3pt,font=\sffamily\scriptsize,align=center,
+             minimum height=1.25cm,text width=3.0cm,line width=0.7pt}]
+  \node[bx=gold,text width=2.6cm] (fi) at (0,0) {FI term $\xi\neq0$\\ must be cancelled};
+  \node[bx=rose] (n) at (4.4,0) {forced singlet $n$\\ $Q(n)=-Q(u^cd^cd^c)$\\ odd under every parity};
+  \node[bx=sky] (q) at (9.4,0) {string-allowed quartics\\ $n\,u^cd^cd^c$, $n\,q\ell d^c$, $n\,\ell\ell e^c$};
+  \node[bx=rose,text width=4.2cm] (r) at (4.4,-2.3) {all three RPV couplings, coefficient $\sim\langle n\rangle/M_s$\\ proton decays far too fast};
+  \draw[->,ink!70,line width=0.8pt] (fi) -- node[above,font=\sffamily\tiny]{$\langle n\rangle\neq0$} (n);
+  \draw[->,ink!70,line width=0.8pt] (n) -- node[above,font=\sffamily\tiny]{23/23 models} (q);
+  \draw[->,ink!70,line width=0.8pt] (q.south) |- (r.east);
+  \draw[->,ink!70,line width=0.8pt] (n.south) -- (r.north);
+\end{tikzpicture}
+\caption{Why supersymmetric vacua of the class violate $R$-parity. The only fields that can cancel
+the Fayet--Iliopoulos term carry exactly the conjugate charge of the three dimension-four
+operators. Every string selection rule allows the resulting quartic couplings, so the vacuum turns
+the cubic operators back on.}
+\label{fig:rpv}
+\end{figure}
+
 \subsection{Handedness: host, not select}
 \label{sec:chirality}
 

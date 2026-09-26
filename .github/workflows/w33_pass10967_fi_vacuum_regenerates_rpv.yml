@@ -1,0 +1,27 @@
+name: W33 Pass 10967 FI vacuum regenerates RPV
+
+on:
+  push:
+    paths:
+      - "analysis/w33_pass10967_fi_vacuum_regenerates_rpv.py"
+      - "analysis/PASS10967_FI_VACUUM_REGENERATES_RPV.md"
+      - "analysis/PASS10967_FI_VACUUM_REGENERATES_RPV_INSERT.tex"
+      - "data/w33_pass10967_fi_vacuum_regenerates_rpv.json"
+      - "tests/test_w33_pass10967_fi_vacuum_regenerates_rpv.py"
+      - ".github/workflows/w33_pass10967_fi_vacuum_regenerates_rpv.yml"
+  pull_request:
+    paths:
+      - "analysis/w33_pass10967_fi_vacuum_regenerates_rpv.py"
+      - "tests/test_w33_pass10967_fi_vacuum_regenerates_rpv.py"
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install numpy scipy sympy pytest pycddlib
+      - run: python analysis/w33_pass10967_fi_vacuum_regenerates_rpv.py
+      - run: python -m pytest -q tests/test_w33_pass10967_fi_vacuum_regenerates_rpv.py
