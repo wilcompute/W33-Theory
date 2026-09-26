@@ -1,0 +1,41 @@
+\subsection{Pass 10963: Clifford-grade stabilizers recover the tetrahedral $S_4\to S_3$ chain}
+
+Let $V_{10}$ be the ten-dimensional $Cl(10)$ vector packet from
+Pass~10961 and let $P_{19}$ be its enlargement by the nine mixed
+bivectors $\Gamma_{10}\Gamma_i$.  For the frozen clock
+\[
+g=\begin{pmatrix}0&1\\1&1\end{pmatrix}
+\]
+and the involution
+\[
+b=\begin{pmatrix}1&0\\1&-1\end{pmatrix}
+\]
+in $GL(2,3)$, exact multiplication gives $bgb=g^3$.
+The exact packet stabilizers are
+\[
+\operatorname{Stab}(V_{10})=\langle g^2,b\rangle\cong D_8,
+\qquad
+\operatorname{Stab}(P_{19})=\langle g,b\rangle\cong QD_{16},
+\]
+and $QD_{16}=N_{GL(2,3)}(\langle g\rangle)$ is the clock normalizer.
+Their cores in $GL(2,3)$ are the central $C_2$ and $Q_8$ respectively,
+so the induced packet actions are
+\[
+GL(2,3)/C_2\cong S_4,\qquad GL(2,3)/Q_8\cong S_3.
+\]
+The six conjugate $V_{10}$ packets are equivariantly the six edges of
+the tetrahedron $K_4$, while the three conjugate $P_{19}$ packets are
+the three perfect matchings, or opposite-edge pairings.  Each $P_{19}$
+contains exactly the two $V_{10}$ packets belonging to one opposite
+pair.  Numerically replaying the exact committed matrices gives
+literal intersection dimensions $0^{12},1^3$ for the six vector
+packets and $8^3$ for the three $19$-packets; the corresponding
+cross-Gram ranks are $9^{12},1^3$ and $9^3$.
+Both full packet orbits generate the same $33$-dimensional operator
+hull.  Thus the clock-grade ladder closes through the exact chain
+\[
+D_8< QD_{16}<GL(2,3),
+\]
+with a six-edge $S_4$ cover and a three-matching $S_3$ quotient.
+The resulting $S_3$ has the same permutation degree as $D_4$ triality,
+but no triality intertwiner is asserted here.

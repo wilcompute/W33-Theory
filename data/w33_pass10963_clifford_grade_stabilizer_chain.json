@@ -1,0 +1,227 @@
+{
+  "boundary": "The S4/S3 tetrahedral packet geometry is an exact finite Clifford-grade statement for this transported GL(2,3) action. It is not by itself the D4 triality outer action, a physical gauge symmetry, or a spacetime identification. The intersection dimensions are replayed numerically from exact committed matrices with tolerance 1e-8; the stabilizer groups and quotient actions are certified independently by exact finite-field and symbolic generator checks.",
+  "cores_and_quotients": {
+    "P19_packet_action_image": "S3",
+    "P19_packet_orbit_size": 3,
+    "V10_packet_action_image": "S4",
+    "V10_packet_orbit_size": 6,
+    "core_P19_stabilizer": "Q8",
+    "core_P19_stabilizer_order": 8,
+    "core_V10_stabilizer": "central C2",
+    "core_V10_stabilizer_order": 2,
+    "projective_line_points": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  "external_group_anchor": {
+    "projective_quotient": "GL(2,3)/{+-I}=PGL(2,3)=S4",
+    "sylow2": "GL(2,3) has semidihedral Sylow-2 subgroups of order 16"
+  },
+  "group": {
+    "G": "GL(2,3)",
+    "center": "C2={+I,-I}",
+    "clock_generator": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "clock_order": 8,
+    "determinant_character": "GL(2,3)->C2",
+    "order": 48
+  },
+  "packet_intersections": {
+    "P19_cross_gram_rank_histogram": {
+      "9": 3
+    },
+    "P19_pair_intersection_histogram": {
+      "8": 3
+    },
+    "V10_cross_gram_rank_histogram": {
+      "1": 3,
+      "9": 12
+    },
+    "V10_orbit_hull_equals_P19_orbit_hull": true,
+    "V10_pair_intersection_histogram": {
+      "0": 12,
+      "1": 3
+    },
+    "common_orbit_hull_dimension": 33,
+    "containment_pairs_numeric_orbit_order": [
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        5
+      ]
+    ],
+    "each_P19_contains_exactly_two_V10_packets": true,
+    "numerical_tolerance": 1e-08,
+    "reading_P19": "all three pairs of perfect-matching packets intersect in dimension 8 and have cross-Gram rank 9",
+    "reading_V10": "12 adjacent edge-pairs are transverse (intersection 0) with cross-Gram rank 9; 3 opposite pairs intersect in dimension 1 with cross-Gram rank 1"
+  },
+  "packet_stabilizers": {
+    "P19": {
+      "clock_normalizer": true,
+      "dimension": 19,
+      "exact": true,
+      "generators": [
+        "g",
+        "b"
+      ],
+      "group": "QD16 = SD16",
+      "order": 16,
+      "presentation": "<g,b | g^8=b^2=1, b g b=g^3>",
+      "sylow_2_subgroup": true
+    },
+    "V10": {
+      "dimension": 10,
+      "exact": true,
+      "generators": [
+        "g^2",
+        "b"
+      ],
+      "group": "D8",
+      "order": 8,
+      "presentation": "<r,b | r^4=b^2=1, b r b=r^-1>"
+    },
+    "chain": "C8 < QD16; D8 < QD16 < GL(2,3)"
+  },
+  "schema": "w33.pass10963.clifford-grade-stabilizer-chain.v1",
+  "status": "PASS_CLIFFORD_GRADE_STABILIZER_TETRAHEDRAL_CHAIN",
+  "tetrahedral_dictionary": {
+    "base_edge": [
+      0,
+      3
+    ],
+    "base_matching": [
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "coset_edge_labels": [
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "coset_matching_labels": [
+      [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    ],
+    "coset_pairs": [
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        5
+      ]
+    ],
+    "equivariant": true,
+    "four_vertices": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "six_V10_packets": "six edges of a tetrahedron/K4",
+    "three_P19_packets": "three perfect matchings = three opposite-edge pairs"
+  },
+  "theorem": "The exact stabilizer of the canonical Cl(10) vector packet V10 inside the transported GL(2,3) action is D8=<g^2,b>. The exact stabilizer of the 19D vector-plus-mixed-bivector packet is QD16=<g,b>, the normalizer of the clock C8 and a Sylow-2 subgroup. Their cores are the central C2 and Q8, so the induced packet actions are S4 on six V10 packets and S3 on three P19 packets. These actions are equivariantly the S4 action on the six edges of a tetrahedron and the S3 action on its three perfect matchings. Each P19 packet contains exactly the two V10 packets in one opposite-edge pair. Adjacent V10 packets are transverse but have cross-Gram rank 9; opposite packets meet in a 1D line with cross-Gram rank 1. The six V10 packets and three P19 packets generate the same 33-dimensional operator hull."
+}

@@ -1,0 +1,30 @@
+{
+  "b_preserves_all_10_vectors": true,
+  "b_preserves_all_19_packet_generators": true,
+  "exact_zero_tests": true,
+  "field": "Q(i,sqrt(2))",
+  "involution_b": [
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      2
+    ]
+  ],
+  "outsider_order3": [
+    [
+      1,
+      1
+    ],
+    [
+      0,
+      1
+    ]
+  ],
+  "outsider_preserves_packet_generators": 0,
+  "outsider_preserves_vector_generators": 0,
+  "reading": "b is an exact packet stabilizer; the order-3 witness lies outside both packet stabilizers",
+  "schema": "w33.pass10963.exact-stabilizer-generators.v1"
+}
