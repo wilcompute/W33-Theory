@@ -1,0 +1,62 @@
+{
+  "albert_cl9": {
+    "bivector_span_dimension": 36,
+    "clifford_relation": "{gamma_i,gamma_j}=2 delta_ij I16",
+    "gamma_count": 9,
+    "peirce_spinor_dimension": 16,
+    "reading": "the nine spatial Peirce-0 Jordan multiplications are exact Euclidean Cl(9) gamma matrices on the Albert Peirce 16",
+    "spatial_dimension": 9,
+    "spatial_gram": "2 I9"
+  },
+  "boundary": "This is an exact Clifford/representation theorem for the canonical Cl(10) extension reconstructed from the executable Albert algebra. It rules out identifying the full doubled order-eight clock with a Spin(10) or Pin(10) vector normalizer in this extension. It does not rule out a different larger Clifford module, a grade-mixing Clifford-algebra automorphism, a projective/semilinear realization, or a separate physical Spin(10) embedding.",
+  "clifford_normalizer_obstruction": {
+    "four_ticks": "central -I32, trivial by conjugation",
+    "full_C8_normalizes_vector_space": false,
+    "intersection": "span{Gamma_10}",
+    "intersection_dimension_with_one_tick_image": 1,
+    "two_tick_O10_determinant": -1,
+    "two_tick_operator": "G^2=i Gamma_10",
+    "two_tick_vector_action": "Gamma_i -> -Gamma_i for i=1..9; Gamma_10 -> Gamma_10",
+    "two_ticks_normalize_vector_space": true,
+    "vector_space_dimension": 10,
+    "witness": "the frozen order-eight generator G itself"
+  },
+  "doubled_cl10": {
+    "bivector_span_dimension": 45,
+    "carrier_dimension": 32,
+    "clifford_relation": "{Gamma_a,Gamma_b}=2 delta_ab I32",
+    "construction": "Gamma_i=[[0,gamma_i],[gamma_i,0]] for i=1..9; Gamma_10=diag(I16,-I16)",
+    "mixed_bivectors": "M_i=Gamma_10 Gamma_i, i=1..9",
+    "vector_plus_mixed_span_dimension": 19,
+    "vector_span_dimension": 10
+  },
+  "doubled_clock_generator": {
+    "G_eighth": "+I32",
+    "G_fourth": "-I32",
+    "G_squared": "i Gamma_10",
+    "Gamma10_fixed": true,
+    "formula": "G=diag(zeta8^-1 U,zeta8 U)",
+    "one_tick_target_grade": "the nine spatial Clifford vectors map into the nine mixed bivectors Gamma_10 Gamma_j",
+    "spatial_grade_action": "G Gamma_i G^-1 = -i Gamma_10 sum_j C9[j,i] Gamma_j",
+    "vector_span_plus_image_rank": 19
+  },
+  "parent_welds": {
+    "pass10950": "the same nine Peirce-0 multiplications were the boost half of the certified so(1,9) action",
+    "pass10956": "U=R/2 is the exact Spin(9) halfturn with U^2=-I16",
+    "pass10959": "G is exactly the minimal doubled Albert clock generator used in the faithful 32D GL(2,3) completion"
+  },
+  "schema": "w33.pass10961.albert-clifford10-doubled-clock.v1",
+  "spin9_halfturn": {
+    "C9_determinant": 1,
+    "C9_orthogonal": true,
+    "C9_spectrum": {
+      "+1": 7,
+      "-1": 2
+    },
+    "C9_trace": 5,
+    "reading": "U is a pi rotation on one spatial 2-plane",
+    "vector_action_dimension": 9
+  },
+  "status": "PASS_ALBERT_CL9_CL10_AND_CLOCK_GRADE_OBSTRUCTION",
+  "theorem": "The nine spatial Peirce-0 Jordan multiplication operators act on the Albert Peirce 16 as exact rational Euclidean Cl(9) generators: their Gram form is 2I9 and their anticommutators are 2 delta_ij I16. Doubling the carrier gives an explicit Cl(10) Dirac system with 10 vector generators and a 45-dimensional bivector algebra. For the minimal doubled clock generator G=diag(zeta8^-1 U,zeta8 U), one tick fixes Gamma_10 but sends each of the other nine Clifford vectors to -i times a mixed bivector Gamma_10 Gamma_j, rotated by the exact Spin(9) halfturn matrix C9. Hence the full order-eight clock is not contained in the Clifford vector normalizer for this canonical Albert Cl(10) extension. Two ticks equal i Gamma_10 and do normalize the vector space, acting by -1 on the nine spatial vectors and +1 on Gamma_10."
+}
