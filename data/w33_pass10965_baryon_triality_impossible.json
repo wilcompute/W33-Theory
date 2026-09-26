@@ -1,0 +1,1091 @@
+{
+ "ledger_sha256": "dd7a2c8bcb9b233f0db90be5d08c25d5511a760abc9e895af0caf734d1bd0a6a",
+ "models": {
+  "Z6-II|Z6II_01__SM_20260917_1058": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_01__SM_20260917_1088": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_01__SM_20260917_1280": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_01__SM_20260917_1388": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_01__SM_20260917_1443": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_01__SM_20260917_1660": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_01__SM_20260917_1933": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_01__SM_20260917_1983": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_01__SM_20260917_2078": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_01__SM_20260917_2151": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_01__SM_20260917_2221": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_01__SM_20260917_2510": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_01__SM_20260917_2696": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_01__SM_20260917_273": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_01__SM_20260917_2855": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_01__SM_20260917_311": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_01__SM_20260917_325": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_01__SM_20260917_42": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_01__SM_20260917_470": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_01__SM_20260917_569": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_01__SM_20260917_615": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_01__SM_20260917_743": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_01__SM_20260917_827": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_01__SM_20260917_86": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_01__SM_20260917_88": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_01__SM_20260917_894": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_03__SM_20260917_1353": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_03__SM_20260917_435": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_03__SM_20260917_923": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_04__SM_20260917_245": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_04__SM_20260917_904": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_05__SM_20260917_132": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_05__SM_20260917_151": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_05__SM_20260917_58": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_05__SM_20260917_60": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_05__SM_20260917_824": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_06__SM_20260917_1188": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_06__SM_20260917_1204": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_06__SM_20260917_1474": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_06__SM_20260917_1487": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_06__SM_20260917_2113": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_06__SM_20260917_2158": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_06__SM_20260917_2215": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_06__SM_20260917_226": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_06__SM_20260917_2496": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_06__SM_20260917_2541": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_06__SM_20260917_2618": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_06__SM_20260917_2647": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_06__SM_20260917_2868": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_06__SM_20260917_691": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_06__SM_20260917_73": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_06__SM_20260917_741": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_06__SM_20260917_744": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_06__SM_20260917_784": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_06__SM_20260917_894": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_06__SM_20260917_998": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_10__SM_20260917_1497": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_10__SM_20260917_271": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_10__SM_20260917_327": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_10__SM_20260917_687": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_10__SM_20260917_818": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_12__SM_20260917_1566": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_12__SM_20260917_1993": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_12__SM_20260917_2184": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_12__SM_20260917_2503": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_12__SM_20260917_400": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_12__SM_20260917_574": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_18__SM_20260917_1116": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_18__SM_20260917_2488": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_18__SM_20260917_656": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_19__SM_20260917_477": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_20__SM_20260917_1383": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_22__SM_20260917_1197": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_22__SM_20260917_399": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_23__SM_20260917_1411": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_23__SM_20260917_2318": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_23__SM_20260917_2678": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_23__SM_20260917_2913": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_24__SM_20260917_2751": {
+   "b3_possible": false,
+   "relation_certificate": {
+    "bd_1": -1,
+    "q_1": 2
+   },
+   "su5_single_copy_relation": false
+  },
+  "Z6-II|Z6II_28__SM_20260917_2298": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_28__SM_20260917_2417": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_33__SM_20260917_619": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_34__SM_20260917_1350": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_34__SM_20260917_1558": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_34__SM_20260917_1585": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_34__SM_20260917_1702": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_34__SM_20260917_2056": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_34__SM_20260917_2068": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_34__SM_20260917_2200": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_34__SM_20260917_2229": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_34__SM_20260917_2342": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_34__SM_20260917_2698": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_34__SM_20260917_2722": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_34__SM_20260917_292": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_34__SM_20260917_616": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_34__SM_20260917_617": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_34__SM_20260917_938": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_35__SM_20260917_473": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_39__SM_20260917_478": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_41__SM_20260917_635": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_43__SM_20260917_1867": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_45__SM_20260917_1962": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_49__SM_20260917_145": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_49__SM_20260917_2717": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_49__SM_20260917_423": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_52__SM_20260917_1026": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_52__SM_20260917_1437": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_52__SM_20260917_213": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_52__SM_20260917_2304": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_52__SM_20260917_405": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_52__SM_20260917_570": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_52__SM_20260917_712": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_52__SM_20260917_93": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_53__SM_20260917_1614": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_53__SM_20260917_2368": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_54__SM_20260917_1301": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_54__SM_20260917_265": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_56__SM_20260917_2753": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_57__SM_20260917_1103": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_57__SM_20260917_173": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_57__SM_20260917_2231": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_59__SM_20260917_1105": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_59__SM_20260917_1628": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_59__SM_20260917_2473": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_59__SM_20260917_2533": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_60__SM_20260917_1475": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_60__SM_20260917_2720": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-II|Z6II_60__SM_20260917_810": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_06__SM_20260917_2": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_17__SM_20260917_35": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_17__SM_20260917_42": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_17__SM_20260917_45": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_17__SM_20260917_66": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_17__SM_20260917_86": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_19__SM_20260917_2": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_19__SM_20260917_2182": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_19__SM_20260917_465": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_21__SM_20260917_21": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_21__SM_20260917_399": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_21__SM_20260917_518": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_26__SM_20260917_242": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_26__SM_20260917_478": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_27__SM_20260917_1078": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_27__SM_20260917_174": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_27__SM_20260917_241": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_27__SM_20260917_287": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_27__SM_20260917_3": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_27__SM_20260917_36": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_27__SM_20260917_55": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_27__SM_20260917_669": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_27__SM_20260917_695": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_27__SM_20260917_73": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_32__SM_20260917_1105": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_32__SM_20260917_129": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_32__SM_20260917_184": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_32__SM_20260917_186": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_32__SM_20260917_2225": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_32__SM_20260917_359": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_32__SM_20260917_407": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_32__SM_20260917_6": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_33__SM_20260917_148": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_33__SM_20260917_151": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_33__SM_20260917_1807": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_33__SM_20260917_384": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_33__SM_20260917_487": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_33__SM_20260917_60": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_33__SM_20260917_604": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_34__SM_20260917_30": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_34__SM_20260917_441": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_34__SM_20260917_71": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_34__SM_20260917_75": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_34__SM_20260917_89": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_36__SM_20260917_42": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_36__SM_20260917_56": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_38__SM_20260917_33": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_38__SM_20260917_4": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_38__SM_20260917_46": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_38__SM_20260917_8": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_40__SM_20260917_10": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_40__SM_20260917_147": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_40__SM_20260917_159": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_40__SM_20260917_165": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_40__SM_20260917_184": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_40__SM_20260917_1938": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_40__SM_20260917_1940": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_40__SM_20260917_2391": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_40__SM_20260917_275": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_40__SM_20260917_2820": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_40__SM_20260917_285": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_40__SM_20260917_360": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_40__SM_20260917_493": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_40__SM_20260917_596": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_40__SM_20260917_63": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_40__SM_20260917_81": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_40__SM_20260917_841": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_42__SM_20260917_45": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_42__SM_20260917_93": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_43__SM_20260917_104": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_43__SM_20260917_1069": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_43__SM_20260917_114": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_43__SM_20260917_1227": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_43__SM_20260917_142": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_43__SM_20260917_20": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_43__SM_20260917_207": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_43__SM_20260917_300": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_43__SM_20260917_519": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_46__SM_20260917_10": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_46__SM_20260917_12": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_46__SM_20260917_126": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_46__SM_20260917_35": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_46__SM_20260917_561": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_55__SM_20260917_179": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_55__SM_20260917_38": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_55__SM_20260917_91": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  },
+  "Z6-I|Z6I_56__SM_20260917_215": {
+   "b3_possible": false,
+   "relation_certificate": null,
+   "su5_single_copy_relation": true
+  }
+ },
+ "pass_id": 10965,
+ "summary": {
+  "b3_possible": 0,
+  "models": 215,
+  "relation_certificates": 1,
+  "su5_single_copy_relation": 214,
+  "zero_target_control_ok": 215
+ }
+}

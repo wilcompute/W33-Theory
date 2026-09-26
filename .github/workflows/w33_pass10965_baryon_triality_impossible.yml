@@ -1,0 +1,27 @@
+name: W33 Pass 10965 baryon triality impossible
+
+on:
+  push:
+    paths:
+      - "analysis/w33_pass10965_baryon_triality_impossible.py"
+      - "analysis/PASS10965_BARYON_TRIALITY_IMPOSSIBLE.md"
+      - "analysis/PASS10965_BARYON_TRIALITY_IMPOSSIBLE_INSERT.tex"
+      - "data/w33_pass10965_baryon_triality_impossible.json"
+      - "tests/test_w33_pass10965_baryon_triality_impossible.py"
+      - ".github/workflows/w33_pass10965_baryon_triality_impossible.yml"
+  pull_request:
+    paths:
+      - "analysis/w33_pass10965_baryon_triality_impossible.py"
+      - "tests/test_w33_pass10965_baryon_triality_impossible.py"
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install numpy scipy sympy pytest pycddlib
+      - run: python analysis/w33_pass10965_baryon_triality_impossible.py
+      - run: python -m pytest -q tests/test_w33_pass10965_baryon_triality_impossible.py

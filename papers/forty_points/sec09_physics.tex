@@ -396,6 +396,33 @@ invariants'' rather than a theorem. Whether higher-order selection rules suppres
 regenerated couplings in a particular model is not addressed. \tierO
 \end{boundary}
 
+\paragraph{The other discrete guardian is excluded too.}
+Matter parity is not the only discrete symmetry that can keep the proton alive. \emph{Baryon
+triality} $B_3=\exp\bigl(2\pi i(B-2Y)/3\bigr)$ (Ib\'a\~nez--Ross) forbids the baryon-number
+violating couplings $u^cd^cd^c$ and $qqql$ while allowing the lepton-number violating ones.
+Could the class carry it instead? As a gauge symmetry it would have to be a $\mathbb{Z}_3$
+character of the $U(1)$ charge lattice, equal to $B_3$ on every quark and lepton up to a
+hypercharge rotation. Pass~10965 shows that this linear system over $\mathrm{GF}(3)$ is
+inconsistent in all $215$ models, and names the reason: in $214$ of them single copies obey
+the exact identity
+\[
+  Q(u^c)+Q(e^c)=2\,Q(q)
+\]
+of $U(1)$ charge vectors --- the extra $U(1)$s act on the $SU(5)$ $\mathbf{10}$ through the
+$\mathbf{10}$ itself. On that combination $B_3$ is $1+1-0=2$ while every hypercharge shift is
+$2+0-2=0$ mod $3$, so nothing repairs it; the remaining model has an explicit integer
+relation with the same property. The zero-target control is solvable in all $215$. This is
+the structural reason behind Holotrade's observation that the three dimension-four operators
+are locked together (b81ef8c). \tierC\ (\cert{w33\_pass10965\_baryon\_triality\_impossible.py})
+
+\begin{plainwords}
+Of the two textbook discrete symmetries that protect the proton, the first dies at the
+Fayet--Iliopoulos term and the second is ruled out by the grand-unified shape of the
+charges. What remains is an $R$-symmetry --- the anomaly-free $\mathbb{Z}_4^R$ of Lee, Raby,
+Ratz, Ross, Schieren, Schmidt-Hoberg and Vaudrevange --- which in a string orbifold lives in the
+internal rotation sector rather than in the gauge lattice. That is the one open route.
+\end{plainwords}
+
 \subsection{Handedness: host, not select}
 \label{sec:chirality}
 
