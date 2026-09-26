@@ -1,0 +1,1479 @@
+{
+ "ledger_sha256": "dd7a2c8bcb9b233f0db90be5d08c25d5511a760abc9e895af0caf734d1bd0a6a",
+ "models": {
+  "Z6-I|Z6I_06__SM_20260917_2": {
+   "dflat_models_class": true,
+   "higgs_bl_values_over_mu": [
+    "-48/5",
+    "-8/5"
+   ],
+   "lam": [
+    "0",
+    "0",
+    "-8/3",
+    "4",
+    "0",
+    "-4/15"
+   ],
+   "mu": "1",
+   "negative_singlets_over_mu": [
+    "-8"
+   ],
+   "negatives_subset_of_forced": true,
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "-8",
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_17__SM_20260917_35": {
+   "dflat_models_class": true,
+   "higgs_bl_values_over_mu": [
+    "-48/5",
+    "-8/5"
+   ],
+   "lam": [
+    "0",
+    "0",
+    "4",
+    "-8/3",
+    "4/15",
+    "0"
+   ],
+   "mu": "1",
+   "negative_singlets_over_mu": [
+    "-8"
+   ],
+   "negatives_subset_of_forced": true,
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "-8",
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_17__SM_20260917_42": {
+   "dflat_models_class": true,
+   "higgs_bl_values_over_mu": [
+    "-48/5",
+    "-8/5"
+   ],
+   "lam": [
+    "0",
+    "-2",
+    "0",
+    "4/3",
+    "-2/15",
+    "0"
+   ],
+   "mu": "1/2",
+   "negative_singlets_over_mu": [
+    "-8"
+   ],
+   "negatives_subset_of_forced": true,
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "-8",
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_17__SM_20260917_45": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "0",
+    "-55/414",
+    "-275/7728",
+    "-715/103824",
+    "47/7416"
+   ],
+   "mu": "55/72",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_17__SM_20260917_66": {
+   "dflat_models_class": true,
+   "higgs_bl_values_over_mu": [
+    "-48/5",
+    "-8/5"
+   ],
+   "lam": [
+    "0",
+    "0",
+    "0",
+    "-4",
+    "0",
+    "0",
+    "4/5"
+   ],
+   "mu": "1",
+   "negative_singlets_over_mu": [
+    "-8"
+   ],
+   "negatives_subset_of_forced": true,
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "-8",
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_17__SM_20260917_86": {
+   "dflat_models_class": false,
+   "shaped": false
+  },
+  "Z6-I|Z6I_19__SM_20260917_2": {
+   "dflat_models_class": false,
+   "shaped": false
+  },
+  "Z6-I|Z6I_19__SM_20260917_2182": {
+   "dflat_models_class": true,
+   "higgs_bl_values_over_mu": [
+    "-48/5",
+    "-8/5"
+   ],
+   "lam": [
+    "0",
+    "0",
+    "0",
+    "2",
+    "0",
+    "-6/5"
+   ],
+   "mu": "1",
+   "negative_singlets_over_mu": [
+    "-8"
+   ],
+   "negatives_subset_of_forced": true,
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "-8",
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_19__SM_20260917_465": {
+   "dflat_models_class": true,
+   "higgs_bl_values_over_mu": [
+    "-48/5",
+    "-8/5"
+   ],
+   "lam": [
+    "0",
+    "0",
+    "0",
+    "2",
+    "-1",
+    "-3/5"
+   ],
+   "mu": "1/2",
+   "negative_singlets_over_mu": [
+    "-8"
+   ],
+   "negatives_subset_of_forced": true,
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "-8",
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_21__SM_20260917_21": {
+   "dflat_models_class": false,
+   "shaped": false
+  },
+  "Z6-I|Z6I_21__SM_20260917_399": {
+   "dflat_models_class": true,
+   "higgs_bl_values_over_mu": [
+    "-48/5",
+    "-8/5"
+   ],
+   "lam": [
+    "0",
+    "0",
+    "0",
+    "-2",
+    "0",
+    "0",
+    "2/5"
+   ],
+   "mu": "1/2",
+   "negative_singlets_over_mu": [
+    "-8"
+   ],
+   "negatives_subset_of_forced": true,
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "-8",
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_21__SM_20260917_518": {
+   "dflat_models_class": true,
+   "higgs_bl_values_over_mu": [
+    "-48/5",
+    "-8/5"
+   ],
+   "lam": [
+    "0",
+    "0",
+    "-4",
+    "-4/3",
+    "4",
+    "-4/15",
+    "0"
+   ],
+   "mu": "1",
+   "negative_singlets_over_mu": [
+    "-8"
+   ],
+   "negatives_subset_of_forced": true,
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "-8",
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_26__SM_20260917_242": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "-145/954",
+    "1682/24327",
+    "-58/25245",
+    "17/495",
+    "-29/63",
+    "-58/315"
+   ],
+   "mu": "29/36",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_26__SM_20260917_478": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "55/702",
+    "-55/8073",
+    "605/94806",
+    "85/14427",
+    "-11/63"
+   ],
+   "mu": "55/72",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_27__SM_20260917_1078": {
+   "dflat_models_class": true,
+   "higgs_bl_values_over_mu": [
+    "-48/5",
+    "-8/5"
+   ],
+   "lam": [
+    "0",
+    "0",
+    "0",
+    "1",
+    "5/7",
+    "-4/35"
+   ],
+   "mu": "1/2",
+   "negative_singlets_over_mu": [
+    "-8"
+   ],
+   "negatives_subset_of_forced": true,
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "-8",
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_27__SM_20260917_174": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "-281/1305",
+    "112/26245",
+    "3784/349149",
+    "16447/5596029",
+    "31261/10922265",
+    "-19/7530"
+   ],
+   "mu": "1",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_27__SM_20260917_241": {
+   "dflat_models_class": true,
+   "higgs_bl_values_over_mu": [
+    "-48/5",
+    "-8/5"
+   ],
+   "lam": [
+    "0",
+    "-4",
+    "4",
+    "-4/3",
+    "0",
+    "-4/15"
+   ],
+   "mu": "1",
+   "negative_singlets_over_mu": [
+    "-8"
+   ],
+   "negatives_subset_of_forced": true,
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "-8",
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_27__SM_20260917_287": {
+   "dflat_models_class": false,
+   "shaped": false
+  },
+  "Z6-I|Z6I_27__SM_20260917_3": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "37/27",
+    "11/108",
+    "719/16452",
+    "-629/203365",
+    "-4/1335"
+   ],
+   "mu": "1",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8",
+    "46/3",
+    "70/3"
+   ]
+  },
+  "Z6-I|Z6I_27__SM_20260917_36": {
+   "dflat_models_class": false,
+   "shaped": false
+  },
+  "Z6-I|Z6I_27__SM_20260917_55": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "0",
+    "-24/13",
+    "-179/1222",
+    "1/2303",
+    "-383/24745",
+    "26/1515"
+   ],
+   "mu": "1",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8",
+    "46/3",
+    "70/3"
+   ]
+  },
+  "Z6-I|Z6I_27__SM_20260917_669": {
+   "dflat_models_class": true,
+   "higgs_bl_values_over_mu": [
+    "-48/5",
+    "-8/5"
+   ],
+   "lam": [
+    "0",
+    "-195/1028",
+    "143/9766",
+    "-65/15181",
+    "273/8942408",
+    "-29/83940"
+   ],
+   "mu": "13/16",
+   "negative_singlets_over_mu": [
+    "-8"
+   ],
+   "negatives_subset_of_forced": true,
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "-8",
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_27__SM_20260917_695": {
+   "dflat_models_class": false,
+   "shaped": false
+  },
+  "Z6-I|Z6I_27__SM_20260917_73": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "0",
+    "55/414",
+    "275/3864",
+    "2365/51912",
+    "-1/1236"
+   ],
+   "mu": "55/72",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_32__SM_20260917_1105": {
+   "dflat_models_class": true,
+   "higgs_bl_values_over_mu": [
+    "-48/5",
+    "-8/5"
+   ],
+   "lam": [
+    "0",
+    "4",
+    "4/3",
+    "0",
+    "0",
+    "16/15"
+   ],
+   "mu": "1",
+   "negative_singlets_over_mu": [
+    "-8"
+   ],
+   "negatives_subset_of_forced": true,
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "-8",
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_32__SM_20260917_129": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "-145/1017",
+    "319/7797",
+    "551/15111",
+    "-145/33507",
+    "-29/135",
+    "-7/306"
+   ],
+   "mu": "29/36",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_32__SM_20260917_184": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "0",
+    "5/6",
+    "-8/81",
+    "-40/8343",
+    "-65/8652",
+    "-1/28"
+   ],
+   "mu": "5/12",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_32__SM_20260917_186": {
+   "dflat_models_class": false,
+   "shaped": false
+  },
+  "Z6-I|Z6I_32__SM_20260917_2225": {
+   "dflat_models_class": true,
+   "higgs_bl_values_over_mu": [
+    "-48/5",
+    "-8/5"
+   ],
+   "lam": [
+    "0",
+    "-4",
+    "4",
+    "-4/3",
+    "0",
+    "0",
+    "-4/15"
+   ],
+   "mu": "1",
+   "negative_singlets_over_mu": [
+    "-8"
+   ],
+   "negatives_subset_of_forced": true,
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "-8",
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_32__SM_20260917_359": {
+   "dflat_models_class": true,
+   "higgs_bl_values_over_mu": [
+    "-48/5",
+    "-8/5"
+   ],
+   "lam": [
+    "0",
+    "2",
+    "0",
+    "0",
+    "-1",
+    "3/5"
+   ],
+   "mu": "1/2",
+   "negative_singlets_over_mu": [
+    "-8"
+   ],
+   "negatives_subset_of_forced": true,
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "-8",
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_32__SM_20260917_407": {
+   "dflat_models_class": true,
+   "higgs_bl_values_over_mu": [
+    "-48/5",
+    "-8/5"
+   ],
+   "lam": [
+    "0",
+    "-2",
+    "0",
+    "4/3",
+    "0",
+    "0",
+    "-2/15"
+   ],
+   "mu": "1/2",
+   "negative_singlets_over_mu": [
+    "-8"
+   ],
+   "negatives_subset_of_forced": true,
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "-8",
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_32__SM_20260917_6": {
+   "dflat_models_class": false,
+   "shaped": false
+  },
+  "Z6-I|Z6I_33__SM_20260917_148": {
+   "dflat_models_class": false,
+   "shaped": false
+  },
+  "Z6-I|Z6I_33__SM_20260917_151": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "94/99",
+    "428/3597",
+    "-7687/1523493",
+    "6181/4374801",
+    "914/248835",
+    "-19/530"
+   ],
+   "mu": "1",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_33__SM_20260917_1807": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "85/113",
+    "117/7006",
+    "8/14725",
+    "136/6175",
+    "-5/78"
+   ],
+   "mu": "1",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8",
+    "46/3",
+    "70/3"
+   ]
+  },
+  "Z6-I|Z6I_33__SM_20260917_384": {
+   "dflat_models_class": false,
+   "shaped": false
+  },
+  "Z6-I|Z6I_33__SM_20260917_487": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "157/99",
+    "777/935",
+    "982/42075",
+    "163/825",
+    "0",
+    "1/15"
+   ],
+   "mu": "1",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8",
+    "46/3",
+    "70/3"
+   ]
+  },
+  "Z6-I|Z6I_33__SM_20260917_60": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "65/636",
+    "-235/1083108",
+    "-282/386581",
+    "-665/178422",
+    "-1/786",
+    "0"
+   ],
+   "mu": "5/12",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_33__SM_20260917_604": {
+   "dflat_models_class": false,
+   "shaped": false
+  },
+  "Z6-I|Z6I_34__SM_20260917_30": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "-59/90",
+    "-89/5202",
+    "-404/93925",
+    "1156/41925",
+    "-6623/2428425",
+    "-19/7530"
+   ],
+   "mu": "1",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_34__SM_20260917_441": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "-301/507",
+    "144/58643",
+    "-4168/567345",
+    "43/2180",
+    "-1/4"
+   ],
+   "mu": "1",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8",
+    "46/3",
+    "70/3"
+   ]
+  },
+  "Z6-I|Z6I_34__SM_20260917_71": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "-5/6",
+    "-5/543",
+    "-335/117831",
+    "1585/434217",
+    "-142/286143",
+    "-1/858"
+   ],
+   "mu": "5/12",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_34__SM_20260917_75": {
+   "dflat_models_class": true,
+   "higgs_bl_values_over_mu": [
+    "-48/5",
+    "-8/5"
+   ],
+   "lam": [
+    "0",
+    "-13/228",
+    "-2795/208392",
+    "-6643/842708",
+    "7293/2579756",
+    "-29/83940"
+   ],
+   "mu": "13/16",
+   "negative_singlets_over_mu": [
+    "-8"
+   ],
+   "negatives_subset_of_forced": true,
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "-8",
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_34__SM_20260917_89": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "35/6",
+    "0",
+    "0",
+    "245/198",
+    "257/990",
+    "-59/90"
+   ],
+   "mu": "1",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8",
+    "46/3",
+    "70/3"
+   ]
+  },
+  "Z6-I|Z6I_36__SM_20260917_42": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "0",
+    "-10/87",
+    "-5/6",
+    "220/15921",
+    "289/124623",
+    "1/454"
+   ],
+   "mu": "5/12",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_36__SM_20260917_56": {
+   "dflat_models_class": false,
+   "shaped": false
+  },
+  "Z6-I|Z6I_38__SM_20260917_33": {
+   "dflat_models_class": false,
+   "shaped": false
+  },
+  "Z6-I|Z6I_38__SM_20260917_4": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "0",
+    "55/828",
+    "275/3864",
+    "-2365/51912",
+    "-1/1236"
+   ],
+   "mu": "55/72",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_38__SM_20260917_46": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "37/54",
+    "-17/108",
+    "-23/76",
+    "141/17005",
+    "-19/5370"
+   ],
+   "mu": "1",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8",
+    "46/3",
+    "70/3"
+   ]
+  },
+  "Z6-I|Z6I_38__SM_20260917_8": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "244/423",
+    "-3670/733059",
+    "1112/3315229",
+    "40352/35805621",
+    "-42727/140939010",
+    "19/7530"
+   ],
+   "mu": "1",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_40__SM_20260917_10": {
+   "dflat_models_class": false,
+   "shaped": false
+  },
+  "Z6-I|Z6I_40__SM_20260917_147": {
+   "dflat_models_class": false,
+   "shaped": false
+  },
+  "Z6-I|Z6I_40__SM_20260917_159": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "0",
+    "4/5",
+    "0",
+    "0",
+    "-1/3",
+    "0"
+   ],
+   "mu": "1",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8",
+    "46/3",
+    "70/3"
+   ]
+  },
+  "Z6-I|Z6I_40__SM_20260917_165": {
+   "dflat_models_class": false,
+   "shaped": false
+  },
+  "Z6-I|Z6I_40__SM_20260917_184": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "-187/835",
+    "2575/66466",
+    "155/2786",
+    "-1/182",
+    "-5/78"
+   ],
+   "mu": "1",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8",
+    "46/3",
+    "70/3"
+   ]
+  },
+  "Z6-I|Z6I_40__SM_20260917_1938": {
+   "dflat_models_class": true,
+   "higgs_bl_values_over_mu": [
+    "-48/5",
+    "-8/5"
+   ],
+   "lam": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "4/5"
+   ],
+   "mu": "1/2",
+   "negative_singlets_over_mu": [
+    "-8"
+   ],
+   "negatives_subset_of_forced": true,
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "-8",
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_40__SM_20260917_1940": {
+   "dflat_models_class": true,
+   "higgs_bl_values_over_mu": [
+    "-48/5",
+    "-8/5"
+   ],
+   "lam": [
+    "0",
+    "-4",
+    "0",
+    "8/3",
+    "0",
+    "-4/15"
+   ],
+   "mu": "1",
+   "negative_singlets_over_mu": [
+    "-8"
+   ],
+   "negatives_subset_of_forced": true,
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "-8",
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_40__SM_20260917_2391": {
+   "dflat_models_class": false,
+   "shaped": false
+  },
+  "Z6-I|Z6I_40__SM_20260917_275": {
+   "dflat_models_class": false,
+   "shaped": false
+  },
+  "Z6-I|Z6I_40__SM_20260917_2820": {
+   "dflat_models_class": false,
+   "shaped": false
+  },
+  "Z6-I|Z6I_40__SM_20260917_285": {
+   "dflat_models_class": false,
+   "shaped": false
+  },
+  "Z6-I|Z6I_40__SM_20260917_360": {
+   "dflat_models_class": false,
+   "shaped": false
+  },
+  "Z6-I|Z6I_40__SM_20260917_493": {
+   "dflat_models_class": true,
+   "higgs_bl_values_over_mu": [
+    "-48/5",
+    "-8/5"
+   ],
+   "lam": [
+    "0",
+    "0",
+    "-13/904",
+    "819/51302",
+    "7865/725492",
+    "-19/23970"
+   ],
+   "mu": "13/16",
+   "negative_singlets_over_mu": [
+    "-8"
+   ],
+   "negatives_subset_of_forced": true,
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "-8",
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_40__SM_20260917_596": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "-15/554",
+    "35/115509",
+    "-347/124266",
+    "109/14751",
+    "-5/198",
+    "0"
+   ],
+   "mu": "5/12",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_40__SM_20260917_63": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "29/27",
+    "0",
+    "58/297",
+    "1015/14058",
+    "-580/338031",
+    "143/23805"
+   ],
+   "mu": "29/36",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_40__SM_20260917_81": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "-169/765",
+    "1039/38505",
+    "833/19932",
+    "541/92004",
+    "3137/996710",
+    "-14/2145"
+   ],
+   "mu": "1",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_40__SM_20260917_841": {
+   "dflat_models_class": false,
+   "shaped": false
+  },
+  "Z6-I|Z6I_42__SM_20260917_45": {
+   "dflat_models_class": false,
+   "shaped": false
+  },
+  "Z6-I|Z6I_42__SM_20260917_93": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "0",
+    "-275/684",
+    "-605/66348",
+    "935/208647",
+    "-1/239"
+   ],
+   "mu": "55/72",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_43__SM_20260917_104": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "-145/954",
+    "1682/24327",
+    "58/25245",
+    "-1537/29205",
+    "5/413",
+    "29/315"
+   ],
+   "mu": "29/36",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_43__SM_20260917_1069": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "0",
+    "29/8",
+    "1/5",
+    "21/232",
+    "-8/87"
+   ],
+   "mu": "1",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8",
+    "46/3",
+    "70/3"
+   ]
+  },
+  "Z6-I|Z6I_43__SM_20260917_114": {
+   "dflat_models_class": false,
+   "shaped": false
+  },
+  "Z6-I|Z6I_43__SM_20260917_1227": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "-35/6",
+    "-245/114",
+    "-389/4275",
+    "-169/450",
+    "0",
+    "59/90"
+   ],
+   "mu": "1",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8",
+    "46/3",
+    "70/3"
+   ]
+  },
+  "Z6-I|Z6I_43__SM_20260917_142": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "0",
+    "0",
+    "-55/828",
+    "25/414",
+    "-11/18"
+   ],
+   "mu": "55/72",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_43__SM_20260917_20": {
+   "dflat_models_class": false,
+   "shaped": false
+  },
+  "Z6-I|Z6I_43__SM_20260917_207": {
+   "dflat_models_class": false,
+   "shaped": false
+  },
+  "Z6-I|Z6I_43__SM_20260917_300": {
+   "dflat_models_class": false,
+   "shaped": false
+  },
+  "Z6-I|Z6I_43__SM_20260917_519": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "0",
+    "676/1557",
+    "-269/22836",
+    "535/41316",
+    "-428/71051",
+    "-1/6810"
+   ],
+   "mu": "1",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_46__SM_20260917_10": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "-5/93",
+    "-55/1798",
+    "-265/20358",
+    "5/41418",
+    "19/50622",
+    "1/858"
+   ],
+   "mu": "5/12",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_46__SM_20260917_12": {
+   "dflat_models_class": false,
+   "shaped": false
+  },
+  "Z6-I|Z6I_46__SM_20260917_126": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "0",
+    "239/47",
+    "-232/3149",
+    "36/34103",
+    "64/7635",
+    "0"
+   ],
+   "mu": "1",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8",
+    "46/3",
+    "70/3"
+   ]
+  },
+  "Z6-I|Z6I_46__SM_20260917_35": {
+   "dflat_models_class": false,
+   "higgs_bl_values_over_mu": [
+    "-48/5"
+   ],
+   "lam": [
+    "0",
+    "0",
+    "4/63",
+    "59/4620",
+    "-3074/206415",
+    "-3277/1332315",
+    "17/639"
+   ],
+   "mu": "29/36",
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_46__SM_20260917_561": {
+   "dflat_models_class": true,
+   "higgs_bl_values_over_mu": [
+    "-48/5",
+    "-8/5"
+   ],
+   "lam": [
+    "0",
+    "-91/240",
+    "13/12",
+    "-65/976",
+    "13/24888",
+    "-1/136"
+   ],
+   "mu": "13/16",
+   "negative_singlets_over_mu": [
+    "-8"
+   ],
+   "negatives_subset_of_forced": true,
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "-8",
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_55__SM_20260917_179": {
+   "dflat_models_class": true,
+   "higgs_bl_values_over_mu": [
+    "-48/5",
+    "-8/5"
+   ],
+   "lam": [
+    "0",
+    "-2",
+    "0",
+    "0",
+    "-4/7",
+    "6/35"
+   ],
+   "mu": "1/2",
+   "negative_singlets_over_mu": [
+    "-8"
+   ],
+   "negatives_subset_of_forced": true,
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "-8",
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_55__SM_20260917_38": {
+   "dflat_models_class": false,
+   "shaped": false
+  },
+  "Z6-I|Z6I_55__SM_20260917_91": {
+   "dflat_models_class": true,
+   "higgs_bl_values_over_mu": [
+    "-48/5",
+    "-8/5"
+   ],
+   "lam": [
+    "0",
+    "-13/8",
+    "39/440",
+    "-91/264",
+    "143/804",
+    "-1/1608"
+   ],
+   "mu": "13/16",
+   "negative_singlets_over_mu": [
+    "-8"
+   ],
+   "negatives_subset_of_forced": true,
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "-8",
+    "0",
+    "8"
+   ]
+  },
+  "Z6-I|Z6I_56__SM_20260917_215": {
+   "dflat_models_class": true,
+   "higgs_bl_values_over_mu": [
+    "-48/5",
+    "-8/5"
+   ],
+   "lam": [
+    "0",
+    "-13/1160",
+    "-416/21315",
+    "169/3332",
+    "1/136",
+    "-13/60"
+   ],
+   "mu": "13/16",
+   "negative_singlets_over_mu": [
+    "-8"
+   ],
+   "negatives_subset_of_forced": true,
+   "shaped": true,
+   "singlet_values_over_mu": [
+    "-8",
+    "0",
+    "8"
+   ]
+  }
+ },
+ "pass_id": 10964,
+ "summary": {
+  "D-flat (23) shaped=True": 23,
+  "D-flat models whose f<0 singlets are all forced (B-L=+1) singlets": 23,
+  "D-flat models with f = -8 mu on the forced singlets": 23,
+  "no D-flat (64) shaped=False": 29,
+  "no D-flat (64) shaped=True": 35
+ }
+}

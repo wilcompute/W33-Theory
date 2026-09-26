@@ -331,6 +331,46 @@ the baryon- and lepton-number-violating couplings that matter parity was protect
 longer forbidden by any symmetry, at the scale of the singlet vacuum values.
 \end{physical}
 
+\paragraph{Why: one $E_6$-shaped charge.}
+The obstruction has a single mechanism. In each of the $23$ models there is an exact
+certificate $f$ --- a combination of the anomalous and ordinary $U(1)$ charges --- with a
+prescribed physical shape: $f=\tfrac{24}{5}$ on every $q,u^c,e^c$ and $f=\tfrac85$ on every
+$d^c,\ell$ (in units of a positive scale), and $f\ge0$ on every singlet that could be even.
+On the singlets $f$ takes only the values $-8$, $0$ and $8$, and the negative ones are
+exactly the forced $B-L=+1$ fields. Because $D$-flatness makes the $f$-charge-weighted sum of
+condensates equal the (negative) FI contribution, one of them must condense. On the families
+$f=4Q_\psi-\tfrac45Q_\chi$, the $U(1)$ combination of
+$E_6\supset SO(10)\times U(1)_\psi\supset SU(5)\times U(1)_\chi\times U(1)_\psi$ with
+$Q_\chi=4Y-5(B-L)$; the value $-8$ at $(B-L,Y)=(1,0)$ then identifies the forced field as the
+right-handed-sneutrino direction of the matter-odd $\mathbf{16}_{-3}$ in the adjoint $\mathbf{78}$ of
+$E_6$. \tierC\ (\cert{w33\_pass10964\_e6\_shaped\_fi\_mechanism.py}) \ \tierB\ (the $E_6$ reading)
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=0.62cm,>={Stealth[length=2mm]}]
+  \draw[->,ink!60,line width=0.8pt] (-11,0) -- (10.5,0) node[right,font=\scriptsize]{$f$};
+  \foreach \v in {-10,-8,-6,-4,-2,0,2,4,6,8}{\draw[ink!40] (\v,-0.08) -- (\v,0.08);
+     \node[font=\tiny,text=slate,anchor=north] at (\v,-0.1) {$\v$};}
+  \fill[rosesoft] (-11,0.15) rectangle (0,1.9);
+  \node[font=\sffamily\tiny,text=rose!80!black,anchor=north west] at (-10.9,1.88) {FI side: needs $f<0$};
+  % singlets
+  \foreach \v/\c/\l in {-8/rose/{forced $\nu^c$\\$\mathbf{16}_{-3}\subset\mathbf{78}$},0/slate/{singlets},8/sage/{singlets}}{
+     \fill[\c] (\v,0.55) circle (4pt);
+     \node[font=\sffamily\tiny,align=center,anchor=south] at (\v,0.75) {\l};}
+  % families
+  \fill[teal] (4.8,-0.95) circle (3pt); \node[font=\sffamily\tiny,anchor=north] at (4.8,-1.1) {$q,u^c,e^c$};
+  \fill[teal] (1.6,-0.95) circle (3pt); \node[font=\sffamily\tiny,anchor=north] at (1.6,-1.1) {$d^c,\ell$};
+  % higgs
+  \fill[gold] (-9.6,-0.95) circle (3pt); \node[font=\sffamily\tiny,anchor=north] at (-9.6,-1.1) {$H_u\in\mathbf{10}_{-2}$};
+  \fill[gold] (-1.6,-0.95) circle (3pt); \node[font=\sffamily\tiny,anchor=north] at (-1.6,-1.1) {$H_u$ (other)};
+  \node[font=\sffamily\scriptsize,text=slate] at (0,-2.1) {singlets above the axis, charged fields below (units of $\mu$; all $23$ models)};
+\end{tikzpicture}
+\caption{The canonical certificate $f=4Q_\psi-\tfrac45Q_\chi$ on the families. Among singlets,
+only the right-handed-sneutrino direction of the $E_6$ adjoint's $\mathbf{16}_{-3}$ sits on the
+side that can balance the Fayet--Iliopoulos term.}
+\label{fig:fline}
+\end{figure}
+
 \paragraph{The hidden sector does not rescue it.}
 Theorem~9.6 covers singlets of every nonabelian group. Fields that are Standard-Model
 singlets but charged under the \emph{hidden} gauge group can also condense, and their parity
