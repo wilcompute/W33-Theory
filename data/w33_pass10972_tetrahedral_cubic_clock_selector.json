@@ -1,0 +1,124 @@
+{
+  "boundary": "This constructs the minimal S4-invariant Landau selector on the exact clock augmentation module. It does not derive lambda, g, v, a physical field, or a continuum time dynamics from W33. The new target is whether an already-certified W33/E6/Albert cubic restricts nontrivially to this unique A3 cubic invariant.",
+  "checks": {
+    "S4_order24": true,
+    "clock_orbit_size4": true,
+    "clock_rays_cubic24": true,
+    "clock_rays_norm12": true,
+    "clock_rays_sum_zero": true,
+    "clock_stabilizer_S3_order6": true,
+    "cubic_extrema_are_exactly_tetrahedral": true,
+    "four_clock_rays": true,
+    "normalized_cubic_max_squared_1_over_3": true,
+    "one_three_stationary_has_one_third": true,
+    "parent_selector_no_go_passes": true,
+    "three_one_stationary_has_one_third": true,
+    "two_two_stationary_has_zero_cubic": true
+  },
+  "invariants": {
+    "cubic": "p3=sum_i x_i^3",
+    "cubic_bound_on_p2_1": "|p3| <= 1/sqrt(3)",
+    "negative_minimizers": "their negatives",
+    "positive_maximizers": "four permutations of (3,-1,-1,-1)/sqrt(12)",
+    "quadratic": "p2=sum_i x_i^2",
+    "stationary_classification": [
+      {
+        "a_squared": "3/4",
+        "b_squared": "1/12",
+        "multiplicity_a": 1,
+        "multiplicity_b": 3,
+        "p3_squared": "1/3"
+      },
+      {
+        "a_squared": "1/4",
+        "b_squared": "1/4",
+        "multiplicity_a": 2,
+        "multiplicity_b": 2,
+        "p3_squared": "0"
+      },
+      {
+        "a_squared": "1/12",
+        "b_squared": "3/4",
+        "multiplicity_a": 3,
+        "multiplicity_b": 1,
+        "p3_squared": "1/3"
+      }
+    ]
+  },
+  "landau_selector": {
+    "angular_vacua": "exactly the four positive tetrahedral clock directions",
+    "breaking": "S4 -> S3",
+    "orientation": "sign(g) exchanges the two opposite tetrahedra",
+    "positive_radius": "r*=(sqrt(3)g + sqrt(3g^2+64 lambda^2 v^2))/(8 lambda)",
+    "potential": "V(x)=lambda*(p2(x)-v^2)^2 - g*p3(x), lambda>0,g>0,v>0",
+    "radial_equation": "4 lambda (r^2-v^2) = sqrt(3) g r",
+    "radial_second_derivative_at_rstar": "4 lambda (r*^2+v^2) > 0",
+    "symmetry": "full S4",
+    "vacuum_stabilizer": "S3"
+  },
+  "representation": {
+    "clock_vectors": [
+      {
+        "cubic": 24,
+        "norm_squared": 12,
+        "normalized_cubic_squared": "1/3",
+        "orbit_size": 4,
+        "stabilizer_order": 6,
+        "sum": 0,
+        "vector": [
+          3,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "cubic": 24,
+        "norm_squared": 12,
+        "normalized_cubic_squared": "1/3",
+        "orbit_size": 4,
+        "stabilizer_order": 6,
+        "sum": 0,
+        "vector": [
+          -1,
+          3,
+          -1,
+          -1
+        ]
+      },
+      {
+        "cubic": 24,
+        "norm_squared": 12,
+        "normalized_cubic_squared": "1/3",
+        "orbit_size": 4,
+        "stabilizer_order": 6,
+        "sum": 0,
+        "vector": [
+          -1,
+          -1,
+          3,
+          -1
+        ]
+      },
+      {
+        "cubic": 24,
+        "norm_squared": 12,
+        "normalized_cubic_squared": "1/3",
+        "orbit_size": 4,
+        "stabilizer_order": 6,
+        "sum": 0,
+        "vector": [
+          -1,
+          -1,
+          -1,
+          3
+        ]
+      }
+    ],
+    "dimension": 3,
+    "group": "S4 = PGL(2,3) = W(A3)",
+    "space": "A={x in R^4 : sum_i x_i=0}"
+  },
+  "schema": "w33.pass10972.tetrahedral-cubic-clock-selector.v1",
+  "status": "PASS"
+}

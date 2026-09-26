@@ -1,0 +1,301 @@
+{
+  "boundary": "The projective-line code, even-unimodular gluing, and q=5 Niemeier identification are exact. This does not identify a continuum limit or physical dynamics for W(3,q); nor does it claim the general tower is new in lattice theory. The repo increment is the objectwise weld of the finite null-direction clock coordinates to the known q=3 and Pass-593 q=5 carriers.",
+  "checks": {
+    "q3_E8_240_roots": true,
+    "q3_even_glue": true,
+    "q3_is_unique_root_creating_sample": true,
+    "q3_self_dual": true,
+    "q5_PGL2_5_monomial_code_action": true,
+    "q5_actual_min_norm_4": true,
+    "q5_code_6_3_4": true,
+    "q5_code_size_125": true,
+    "q5_even_glue": true,
+    "q5_repo_P1F5_weld": true,
+    "q5_self_dual": true,
+    "q5_weight_enum": true,
+    "q7_even_glue": true,
+    "q7_self_dual": true,
+    "rank_equals_nonzero_null_q3": true,
+    "rank_equals_nonzero_null_q5": true,
+    "rank_equals_nonzero_null_q7": true
+  },
+  "general_theorem": {
+    "code": "C_q = extended RS[q+1,(q+1)/2,(q+3)/2]_q on P1(F_q)",
+    "evenness": "self-orthogonality makes the discriminant norm integral; q odd makes it even",
+    "glue": "C_q <= (A_{q-1}*/A_{q-1})^(q+1) ~= F_q^(q+1)",
+    "rank": "q^2-1 = number of nonzero determinant-zero vectors in Sym_2(F_q)",
+    "root_boundary": "nonzero glue norm >= ((q+3)/2)*(q-1)/q; equality is 2 only at q=3, so q=3 can enlarge the root system to E8 while q>=5 cannot create norm-2 roots",
+    "self_duality": "power-sum orthogonality; infinity cancels the unique degree q-1 term",
+    "unimodularity": "det(A_{q-1}^{q+1})=q^(q+1), glue index=q^((q+1)/2)"
+  },
+  "headline": "The q=3 tetracode/E8 clock glue extends canonically to odd prime q: the projective Reed-Solomon code on P1(F_q) is self-dual and glues A_{q-1}^{q+1} to an even unimodular rank-(q^2-1) lattice. At q=5 the result is the A4^6 Niemeier lattice on the existing Pass-593 P1(F5) fibre.",
+  "q3": {
+    "base_roots": 24,
+    "glue_roots": 216,
+    "identification": "E8",
+    "minimal_vectors_per_weight3_glue_coset": 27,
+    "nonzero_tetracode_words": 8,
+    "passes_240_root_check": true,
+    "root_lattice": "A2^4",
+    "total_roots": 240,
+    "weight_enumerator": {
+      "0": 1,
+      "3": 8
+    }
+  },
+  "q5": {
+    "PGL2_5_code_action": {
+      "all_monomial_actions_preserve_code": true,
+      "distinct_permutations": 120,
+      "multiplier_values": [
+        1,
+        4
+      ],
+      "pgl2_order": 120
+    },
+    "base_root_count": 120,
+    "glue_code_parameters": [
+      6,
+      3,
+      4
+    ],
+    "glue_code_weight_enumerator": {
+      "0": 1,
+      "4": 60,
+      "5": 24,
+      "6": 40
+    },
+    "identification": "Niemeier lattice N(A4^6)",
+    "new_roots_from_glue": 0,
+    "projective_coordinates": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      "inf"
+    ],
+    "rank": 24,
+    "reason": "minimum nonzero glue coset norm is > 2",
+    "repo_P1F5_weld": {
+      "PGL2_5_order120": true,
+      "S5_action_conjugate_to_PGL2_5": true,
+      "icosahedral_model": "six fivefold rotation axes, equivalently six antipodal vertex pairs",
+      "objects": "six Sylow-5 subgroups of S5",
+      "six_sylow5_subgroups": true,
+      "source": "Pass 593"
+    },
+    "root_lattice": "A4^6"
+  },
+  "q_samples": {
+    "3": {
+      "all_glue_cosets_even": true,
+      "code_size": 9,
+      "expected_code_size": 9,
+      "generator_matrix": [
+        [
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          2,
+          1
+        ]
+      ],
+      "glue_can_create_roots_by_bound": true,
+      "glue_index": "3^2",
+      "glue_norm_lower_bound": "2",
+      "gram_zero": true,
+      "lattice_rank": 8,
+      "minimum_distance": 3,
+      "minimum_nonzero_glue_coset_norm": "2",
+      "null_cone": {
+        "determinant_census": {
+          "0": 9,
+          "1": 6,
+          "2": 12
+        },
+        "events": 27,
+        "expected_nonzero_null_vectors": 8,
+        "nonzero_null_vectors": 8,
+        "projective_null_directions": 4,
+        "vectors_per_null_direction": 2
+      },
+      "null_shell_rank": 8,
+      "parameters": [
+        4,
+        2,
+        3
+      ],
+      "q": 3,
+      "root_lattice_determinant": "3^4",
+      "self_dual_by_dimension": true,
+      "unimodular_determinant": 1,
+      "weight_enumerator": {
+        "0": 1,
+        "3": 8
+      }
+    },
+    "5": {
+      "all_glue_cosets_even": true,
+      "code_size": 125,
+      "expected_code_size": 125,
+      "generator_matrix": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          0
+        ],
+        [
+          0,
+          1,
+          4,
+          4,
+          1,
+          1
+        ]
+      ],
+      "glue_can_create_roots_by_bound": false,
+      "glue_index": "5^3",
+      "glue_norm_lower_bound": "16/5",
+      "gram_zero": true,
+      "lattice_rank": 24,
+      "minimum_distance": 4,
+      "minimum_nonzero_glue_coset_norm": "4",
+      "null_cone": {
+        "determinant_census": {
+          "0": 25,
+          "1": 30,
+          "2": 20,
+          "3": 20,
+          "4": 30
+        },
+        "events": 125,
+        "expected_nonzero_null_vectors": 24,
+        "nonzero_null_vectors": 24,
+        "projective_null_directions": 6,
+        "vectors_per_null_direction": 4
+      },
+      "null_shell_rank": 24,
+      "parameters": [
+        6,
+        3,
+        4
+      ],
+      "q": 5,
+      "root_lattice_determinant": "5^6",
+      "self_dual_by_dimension": true,
+      "unimodular_determinant": 1,
+      "weight_enumerator": {
+        "0": 1,
+        "4": 60,
+        "5": 24,
+        "6": 40
+      }
+    },
+    "7": {
+      "all_glue_cosets_even": true,
+      "code_size": 2401,
+      "expected_code_size": 2401,
+      "generator_matrix": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          0
+        ],
+        [
+          0,
+          1,
+          4,
+          2,
+          2,
+          4,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          6,
+          1,
+          6,
+          6,
+          1
+        ]
+      ],
+      "glue_can_create_roots_by_bound": false,
+      "glue_index": "7^4",
+      "glue_norm_lower_bound": "30/7",
+      "gram_zero": true,
+      "lattice_rank": 48,
+      "minimum_distance": 5,
+      "minimum_nonzero_glue_coset_norm": "6",
+      "null_cone": {
+        "determinant_census": {
+          "0": 49,
+          "1": 42,
+          "2": 42,
+          "3": 56,
+          "4": 42,
+          "5": 56,
+          "6": 56
+        },
+        "events": 343,
+        "expected_nonzero_null_vectors": 48,
+        "nonzero_null_vectors": 48,
+        "projective_null_directions": 8,
+        "vectors_per_null_direction": 6
+      },
+      "null_shell_rank": 48,
+      "parameters": [
+        8,
+        4,
+        5
+      ],
+      "q": 7,
+      "root_lattice_determinant": "7^8",
+      "self_dual_by_dimension": true,
+      "unimodular_determinant": 1,
+      "weight_enumerator": {
+        "0": 1,
+        "5": 336,
+        "6": 336,
+        "7": 1056,
+        "8": 672
+      }
+    }
+  },
+  "schema": "w33.pass10970.projective-clock-code-lattice-tower.v1",
+  "status": "PASS"
+}
