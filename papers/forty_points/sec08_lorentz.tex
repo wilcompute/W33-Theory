@@ -214,6 +214,45 @@ GUT reads as singlet, Higgs and matter is, in the clock real form, scalar, Loren
 and Weyl spinor. \tierB\ (reading) \ \tierC\ (identity)
 \end{physical}
 
+\subsection{The clock's fourth tick is the same sign}
+
+Section~4 met a clock whose fourth tick is a sign flip. The other research track has since
+shown that this is not an analogy but one spin structure, seen at both ends of the ladder.
+We cite their results (certificates named) rather than re-derive them.
+
+\begin{result}{Theorem 8.3 (clock, spin and matter parity; Passes 10951--10959) \hfill \tierC}
+\begin{enumerate}[label=(\roman*),leftmargin=1.5em]
+\item The negacyclic clock tick lifts uniquely to $g=\begin{psmallmatrix}0&1\\1&1\end{psmallmatrix}\in GL(2,3)$
+      of order eight, with $g^4=-I$; under an explicit isomorphism $SL(2,3)\cong 2T\subset
+      \mathrm{Spin}(3)$ the element $-I$ is the quaternion $-1$, the central $2\pi$ spin sign.
+      \cert{w33\_pass10951\_clock\_pin\_spin\_central\_sign\_bridge.py}
+\item As a signed permutation of the four clock coordinates, determinant-odd ticks exchange
+      the two $D_4$ half-spin sheets and determinant-even ticks preserve them.
+      \cert{w33\_pass10955\_d4\_halfspin\_clock\_bridge.py}
+\item On the Albert Peirce $16$, the $\mathrm{Spin}(8)$ fixing a spatial axis splits it as
+      $8_s+8_c$; an exact rational $\mathrm{Spin}(9)$ half-turn $U$ exchanges them, with
+      $U^2=-I_{16}$ --- the matter-parity sign of Theorem~8.2 --- and $U^4=I_{16}$.
+      \cert{w33\_pass10956\_albert\_spin8\_halfspin\_normalizer.py},
+      \cert{w33\_pass10958\_exact\_albert\_mu4\_missing\_mode\_intertwiner.py}
+\item One Albert $16$ cannot carry the whole order-eight clock as a $GL(2,3)$ representation;
+      the minimal carrier is $16\oplus16$.
+      \cert{w33\_pass10959\_albert\_clock\_extension\_obstruction.py}
+\end{enumerate}
+\end{result}
+
+\begin{center}
+\begin{tikzpicture}[>={Stealth[length=2mm]},
+   bx/.style={draw=#1,fill=#1!10,rounded corners=3pt,align=center,font=\sffamily\scriptsize,minimum height=10mm,minimum width=30mm}]
+  \node[bx=teal] (g) at (0,0) {clock tick $g$\\order $8$};
+  \node[bx=ink] (m) at (4.6,0) {$g^4=-I$\\central $2\pi$ sign};
+  \node[bx=gold] (u) at (9.2,0) {Albert half-turn $U$\\$U^2=-I_{16}$};
+  \node[bx=rose] (p) at (4.6,-1.6) {matter parity\\(Theorem 8.2)};
+  \draw[->,thick] (g) -- node[above,font=\tiny]{four ticks} (m);
+  \draw[->,thick] (u) -- node[above,font=\tiny]{two half-turns} (m);
+  \draw[->,thick] (m) -- (p);
+\end{tikzpicture}
+\end{center}
+
 \begin{boundary}
 The $\so(1,9)$ here is the stabiliser of an idempotent inside $E_{6(-26)}$, an
 \emph{internal} symmetry of the algebra; it is not derived to be the Lorentz group of

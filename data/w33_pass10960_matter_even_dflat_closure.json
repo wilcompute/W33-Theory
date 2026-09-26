@@ -1,0 +1,7761 @@
+{
+ "ledger": "data/w33_pass10960_heterotic_left_chiral_ledger.json.gz",
+ "ledger_sha256": "dd7a2c8bcb9b233f0db90be5d08c25d5511a760abc9e895af0caf734d1bd0a6a",
+ "models": {
+  "Z6-II|Z6II_01__SM_20260917_1058": {
+   "bl_direction": false,
+   "dflat_any": false,
+   "farkas_all": [
+    "0",
+    "0",
+    "392/6399",
+    "17/63990"
+   ],
+   "fi_header": "74.66666666666688457",
+   "lattice_rank": 5,
+   "left": 139,
+   "nu1": 5,
+   "singlet_types": 7,
+   "singlets": 23,
+   "trace_anomalous": "224/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_01__SM_20260917_1088": {
+   "bl_direction": false,
+   "dflat_any": false,
+   "farkas_all": [
+    "0",
+    "0",
+    "1/10",
+    "0"
+   ],
+   "fi_header": "47.99999999999998579",
+   "lattice_rank": 5,
+   "left": 119,
+   "nu1": 5,
+   "singlet_types": 7,
+   "singlets": 23,
+   "trace_anomalous": "48",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_01__SM_20260917_1280": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_55": "9/14",
+    "n_64": "9/14",
+    "n_66": "9/14",
+    "n_76": "9/14"
+   },
+   "fi_header": "18.66666666666673891",
+   "lattice_rank": 8,
+   "left": 173,
+   "nu1": 8,
+   "singlet_types": 41,
+   "singlets": 61,
+   "trace_anomalous": "56/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_01__SM_20260917_1388": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_41": "9/38",
+    "n_44": "9/38",
+    "n_50": "15/38",
+    "n_51": "3/38",
+    "n_59": "9/38",
+    "n_65": "9/38"
+   },
+   "fi_header": "50.66666666666672114",
+   "lattice_rank": 8,
+   "left": 130,
+   "nu1": 8,
+   "singlet_types": 37,
+   "singlets": 53,
+   "trace_anomalous": "152/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_01__SM_20260917_1443": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_50": "9/2",
+    "n_57": "9/2",
+    "n_58": "9/2",
+    "n_59": "9/2"
+   },
+   "fi_header": "2.66666666666668295",
+   "lattice_rank": 7,
+   "left": 158,
+   "nu1": 7,
+   "singlet_types": 33,
+   "singlets": 53,
+   "trace_anomalous": "8/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_01__SM_20260917_1660": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_58": "27/28",
+    "n_65": "27/28",
+    "n_68": "9/28",
+    "n_78": "27/28"
+   },
+   "fi_header": "18.66666666666665364",
+   "lattice_rank": 7,
+   "left": 159,
+   "nu1": 7,
+   "singlet_types": 36,
+   "singlets": 57,
+   "trace_anomalous": "56/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_01__SM_20260917_1933": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_23": "1",
+    "n_32": "1",
+    "n_38": "1"
+   },
+   "fi_header": "23.99999999999998579",
+   "lattice_rank": 5,
+   "left": 105,
+   "nu1": 5,
+   "singlet_types": 10,
+   "singlets": 20,
+   "trace_anomalous": "24",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_01__SM_20260917_1983": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_31": "3/7",
+    "n_37": "3/7",
+    "n_45": "3/7"
+   },
+   "fi_header": "18.66666666666679575",
+   "lattice_rank": 5,
+   "left": 136,
+   "nu1": 5,
+   "singlet_types": 12,
+   "singlets": 25,
+   "trace_anomalous": "56/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_01__SM_20260917_2078": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_41": "1/6",
+    "n_44": "1/6",
+    "n_50": "1/6",
+    "n_51": "1/6",
+    "n_58": "1/6",
+    "n_63": "1/6"
+   },
+   "fi_header": "71.99999999999994316",
+   "lattice_rank": 8,
+   "left": 126,
+   "nu1": 8,
+   "singlet_types": 37,
+   "singlets": 53,
+   "trace_anomalous": "72",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_01__SM_20260917_2151": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_46": "6/25",
+    "n_55": "12/25",
+    "n_56": "12/25",
+    "n_57": "6/25",
+    "n_59": "12/25",
+    "n_60": "6/25"
+   },
+   "fi_header": "49.99999999999999289",
+   "lattice_rank": 8,
+   "left": 140,
+   "nu1": 8,
+   "singlet_types": 34,
+   "singlets": 45,
+   "trace_anomalous": "50",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_01__SM_20260917_2221": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_40": "9/14",
+    "n_50": "9/14",
+    "n_52": "9/14",
+    "n_53": "9/14"
+   },
+   "fi_header": "18.66666666666667851",
+   "lattice_rank": 7,
+   "left": 143,
+   "nu1": 7,
+   "singlet_types": 25,
+   "singlets": 45,
+   "trace_anomalous": "56/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_01__SM_20260917_2510": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_52": "45/14",
+    "n_57": "9/14",
+    "n_58": "9/14",
+    "n_60": "27/14",
+    "n_61": "9/7",
+    "n_62": "9/7"
+   },
+   "fi_header": "18.66666666666671404",
+   "lattice_rank": 7,
+   "left": 134,
+   "nu1": 7,
+   "singlet_types": 41,
+   "singlets": 63,
+   "trace_anomalous": "56/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_01__SM_20260917_2696": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_31": "3/7",
+    "n_37": "3/7",
+    "n_45": "3/7"
+   },
+   "fi_header": "18.66666666666666785",
+   "lattice_rank": 5,
+   "left": 130,
+   "nu1": 5,
+   "singlet_types": 12,
+   "singlets": 25,
+   "trace_anomalous": "56/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_01__SM_20260917_273": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_34": "1/4",
+    "n_35": "1/4",
+    "n_36": "1/8",
+    "n_38": "1/8"
+   },
+   "fi_header": "47.99999999999997868",
+   "lattice_rank": 5,
+   "left": 166,
+   "nu1": 5,
+   "singlet_types": 17,
+   "singlets": 45,
+   "trace_anomalous": "48",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_01__SM_20260917_2855": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_27": "18/25"
+   },
+   "fi_header": "16.66666666666670338",
+   "lattice_rank": 7,
+   "left": 124,
+   "nu1": 7,
+   "singlet_types": 18,
+   "singlets": 29,
+   "trace_anomalous": "50/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_01__SM_20260917_311": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_44": "3/14",
+    "n_55": "5/14",
+    "n_56": "2/7"
+   },
+   "fi_header": "56.00000000000024158",
+   "lattice_rank": 8,
+   "left": 161,
+   "nu1": 8,
+   "singlet_types": 32,
+   "singlets": 45,
+   "trace_anomalous": "56",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_01__SM_20260917_325": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_50": "9/44",
+    "n_51": "9/44",
+    "n_53": "27/44",
+    "n_54": "27/44"
+   },
+   "fi_header": "58.66666666666654351",
+   "lattice_rank": 6,
+   "left": 168,
+   "nu1": 6,
+   "singlet_types": 22,
+   "singlets": 53,
+   "trace_anomalous": "176/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_01__SM_20260917_42": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_29": "9/22",
+    "n_30": "9/44",
+    "n_40": "9/44"
+   },
+   "fi_header": "58.66666666666686325",
+   "lattice_rank": 5,
+   "left": 110,
+   "nu1": 5,
+   "singlet_types": 11,
+   "singlets": 21,
+   "trace_anomalous": "176/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_01__SM_20260917_470": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_50": "9/32",
+    "n_51": "9/32",
+    "n_53": "9/32",
+    "n_54": "9/32"
+   },
+   "fi_header": "42.66666666666668561",
+   "lattice_rank": 6,
+   "left": 152,
+   "nu1": 6,
+   "singlet_types": 17,
+   "singlets": 45,
+   "trace_anomalous": "128/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_01__SM_20260917_569": {
+   "bl_direction": false,
+   "dflat_any": false,
+   "farkas_all": [
+    "0",
+    "0",
+    "1/5",
+    "-1/4"
+   ],
+   "fi_header": "48.00000000000023448",
+   "lattice_rank": 5,
+   "left": 125,
+   "nu1": 5,
+   "singlet_types": 12,
+   "singlets": 31,
+   "trace_anomalous": "48",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_01__SM_20260917_615": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_47": "9/14",
+    "n_51": "9/14",
+    "n_54": "9/14",
+    "n_63": "9/14"
+   },
+   "fi_header": "18.66666666666669272",
+   "lattice_rank": 6,
+   "left": 164,
+   "nu1": 6,
+   "singlet_types": 32,
+   "singlets": 51,
+   "trace_anomalous": "56/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_01__SM_20260917_743": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_38": "27/73",
+    "n_45": "27/73",
+    "n_48": "27/73",
+    "n_49": "18/73",
+    "n_51": "27/73",
+    "n_52": "18/73"
+   },
+   "fi_header": "48.66666666666672825",
+   "lattice_rank": 7,
+   "left": 154,
+   "nu1": 7,
+   "singlet_types": 34,
+   "singlets": 45,
+   "trace_anomalous": "146/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_01__SM_20260917_827": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_27": "18/73",
+    "n_30": "12/73",
+    "n_39": "12/73",
+    "n_50": "12/73"
+   },
+   "fi_header": "48.66666666666671404",
+   "lattice_rank": 7,
+   "left": 119,
+   "nu1": 7,
+   "singlet_types": 16,
+   "singlets": 25,
+   "trace_anomalous": "146/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_01__SM_20260917_86": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_46": "3/14",
+    "n_55": "5/14",
+    "n_56": "2/7"
+   },
+   "fi_header": "55.99999999999997158",
+   "lattice_rank": 7,
+   "left": 149,
+   "nu1": 7,
+   "singlet_types": 29,
+   "singlets": 45,
+   "trace_anomalous": "56",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_01__SM_20260917_88": {
+   "bl_direction": false,
+   "dflat_any": false,
+   "farkas_all": [
+    "0",
+    "-1/63",
+    "16/315",
+    "0"
+   ],
+   "fi_header": "42.66666666666677799",
+   "lattice_rank": 5,
+   "left": 121,
+   "nu1": 5,
+   "singlet_types": 7,
+   "singlets": 23,
+   "trace_anomalous": "128/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_01__SM_20260917_894": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_30": "9/44",
+    "n_35": "9/22",
+    "n_36": "9/44"
+   },
+   "fi_header": "58.66666666666687036",
+   "lattice_rank": 5,
+   "left": 123,
+   "nu1": 5,
+   "singlet_types": 11,
+   "singlets": 21,
+   "trace_anomalous": "176/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_03__SM_20260917_1353": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_52": "9/26",
+    "n_53": "9/13",
+    "n_54": "9/26"
+   },
+   "fi_header": "34.66666666666668561",
+   "lattice_rank": 6,
+   "left": 162,
+   "nu1": 6,
+   "singlet_types": 18,
+   "singlets": 43,
+   "trace_anomalous": "104/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_03__SM_20260917_435": {
+   "anomaly_free": true,
+   "fi_header": "0.00000000000000000",
+   "left": 164,
+   "nu1": 7,
+   "singlet_types": 30,
+   "singlets": 45,
+   "trace_anomalous": "0"
+  },
+  "Z6-II|Z6II_03__SM_20260917_923": {
+   "anomaly_free": true,
+   "fi_header": "0.00000000000000000",
+   "left": 130,
+   "nu1": 5,
+   "singlet_types": 19,
+   "singlets": 39,
+   "trace_anomalous": "0"
+  },
+  "Z6-II|Z6II_04__SM_20260917_245": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_34": "1/4",
+    "n_35": "1/4",
+    "n_36": "1/8",
+    "n_38": "1/8"
+   },
+   "fi_header": "48.00000000000006395",
+   "lattice_rank": 5,
+   "left": 166,
+   "nu1": 5,
+   "singlet_types": 17,
+   "singlets": 45,
+   "trace_anomalous": "48",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_04__SM_20260917_904": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_20": "6/25",
+    "n_24": "6/25",
+    "n_41": "6/25"
+   },
+   "fi_header": "50.00000000000004263",
+   "lattice_rank": 6,
+   "left": 130,
+   "nu1": 6,
+   "singlet_types": 16,
+   "singlets": 25,
+   "trace_anomalous": "50",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_05__SM_20260917_132": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_22": "1/2",
+    "n_37": "1/2"
+   },
+   "fi_header": "96.00000000000042633",
+   "lattice_rank": 6,
+   "left": 115,
+   "nu1": 6,
+   "singlet_types": 7,
+   "singlets": 21,
+   "trace_anomalous": "96",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_05__SM_20260917_151": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_31": "9/44",
+    "n_33": "9/22",
+    "n_47": "9/22"
+   },
+   "fi_header": "58.66666666666678509",
+   "lattice_rank": 7,
+   "left": 154,
+   "nu1": 7,
+   "singlet_types": 20,
+   "singlets": 43,
+   "trace_anomalous": "176/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_05__SM_20260917_58": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_36": "9/20",
+    "n_45": "9/10"
+   },
+   "fi_header": "26.66666666666677088",
+   "lattice_rank": 7,
+   "left": 134,
+   "nu1": 7,
+   "singlet_types": 12,
+   "singlets": 29,
+   "trace_anomalous": "80/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_05__SM_20260917_60": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_40": "9/20",
+    "n_54": "9/20",
+    "n_69": "9/20"
+   },
+   "fi_header": "26.66666666666668917",
+   "lattice_rank": 8,
+   "left": 162,
+   "nu1": 8,
+   "singlet_types": 20,
+   "singlets": 43,
+   "trace_anomalous": "80/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_05__SM_20260917_824": {
+   "anomaly_free": true,
+   "fi_header": "0.00000000000000000",
+   "left": 106,
+   "nu1": 5,
+   "singlet_types": 7,
+   "singlets": 21,
+   "trace_anomalous": "0"
+  },
+  "Z6-II|Z6II_06__SM_20260917_1188": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_65": "3/8",
+    "n_76": "3/4",
+    "n_78": "3/8",
+    "n_90": "3/8",
+    "n_92": "3/8"
+   },
+   "fi_header": "32.00000000000001421",
+   "lattice_rank": 8,
+   "left": 187,
+   "nu1": 8,
+   "singlet_types": 31,
+   "singlets": 65,
+   "trace_anomalous": "32",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_06__SM_20260917_1204": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_41": "1/4",
+    "n_53": "1/4",
+    "n_64": "1/4",
+    "n_67": "1/2"
+   },
+   "fi_header": "48.00000000000001421",
+   "lattice_rank": 7,
+   "left": 150,
+   "nu1": 7,
+   "singlet_types": 29,
+   "singlets": 61,
+   "trace_anomalous": "48",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_06__SM_20260917_1474": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_47": "9/25",
+    "n_58": "9/50",
+    "n_61": "9/25",
+    "n_68": "9/50"
+   },
+   "fi_header": "66.66666666666648666",
+   "lattice_rank": 8,
+   "left": 160,
+   "nu1": 8,
+   "singlet_types": 32,
+   "singlets": 67,
+   "trace_anomalous": "200/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_06__SM_20260917_1487": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_38": "45/116",
+    "n_51": "9/58",
+    "n_52": "9/116",
+    "n_64": "9/116",
+    "n_77": "9/58"
+   },
+   "fi_header": "154.66666666666787933",
+   "lattice_rank": 7,
+   "left": 157,
+   "nu1": 7,
+   "singlet_types": 36,
+   "singlets": 81,
+   "trace_anomalous": "464/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_06__SM_20260917_2113": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_58": "3/4",
+    "n_60": "3/4",
+    "n_68": "3/4",
+    "n_69": "3/2",
+    "n_82": "3/4"
+   },
+   "fi_header": "16.00000000000000000",
+   "lattice_rank": 8,
+   "left": 180,
+   "nu1": 8,
+   "singlet_types": 25,
+   "singlets": 57,
+   "trace_anomalous": "16",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_06__SM_20260917_2158": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_10": "3/8",
+    "n_14": "3/8",
+    "n_38": "3/8",
+    "n_65": "3/4"
+   },
+   "fi_header": "31.99999999999999289",
+   "lattice_rank": 7,
+   "left": 162,
+   "nu1": 7,
+   "singlet_types": 22,
+   "singlets": 41,
+   "trace_anomalous": "32",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_06__SM_20260917_2215": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_59": "9/20",
+    "n_69": "9/20",
+    "n_71": "9/20",
+    "n_72": "9/20"
+   },
+   "fi_header": "26.66666666666675312",
+   "lattice_rank": 7,
+   "left": 178,
+   "nu1": 7,
+   "singlet_types": 42,
+   "singlets": 87,
+   "trace_anomalous": "80/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_06__SM_20260917_226": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_67": "27/74",
+    "n_69": "9/74",
+    "n_75": "9/37",
+    "n_78": "9/37",
+    "n_90": "9/37"
+   },
+   "fi_header": "98.66666666666671404",
+   "lattice_rank": 8,
+   "left": 184,
+   "nu1": 8,
+   "singlet_types": 35,
+   "singlets": 75,
+   "trace_anomalous": "296/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_06__SM_20260917_2496": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_3": "9/34",
+    "n_65": "9/68",
+    "n_67": "9/17",
+    "n_81": "27/68"
+   },
+   "fi_header": "90.66666666666610297",
+   "lattice_rank": 9,
+   "left": 175,
+   "nu1": 9,
+   "singlet_types": 39,
+   "singlets": 80,
+   "trace_anomalous": "272/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_06__SM_20260917_2541": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_38": "1/4",
+    "n_50": "1/2",
+    "n_51": "1/4",
+    "n_62": "1/4"
+   },
+   "fi_header": "47.99999999999997868",
+   "lattice_rank": 6,
+   "left": 159,
+   "nu1": 6,
+   "singlet_types": 18,
+   "singlets": 47,
+   "trace_anomalous": "48",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_06__SM_20260917_2618": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_35": "81/356",
+    "n_47": "9/356",
+    "n_48": "27/356",
+    "n_59": "9/356",
+    "n_74": "9/89",
+    "n_77": "9/356"
+   },
+   "fi_header": "474.66666666666253604",
+   "lattice_rank": 7,
+   "left": 202,
+   "nu1": 7,
+   "singlet_types": 36,
+   "singlets": 81,
+   "trace_anomalous": "1424/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_06__SM_20260917_2647": {
+   "bl_direction": false,
+   "dflat_any": false,
+   "farkas_all": [
+    "0",
+    "0",
+    "230/153",
+    "0",
+    "-46/3009",
+    "115/30798",
+    "1/522"
+   ],
+   "fi_header": "122.66666666666699825",
+   "lattice_rank": 8,
+   "left": 186,
+   "nu1": 8,
+   "singlet_types": 18,
+   "singlets": 39,
+   "trace_anomalous": "368/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_06__SM_20260917_2868": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_60": "9/16",
+    "n_62": "9/8",
+    "n_76": "9/16"
+   },
+   "fi_header": "42.66666666666667140",
+   "lattice_rank": 7,
+   "left": 162,
+   "nu1": 7,
+   "singlet_types": 29,
+   "singlets": 61,
+   "trace_anomalous": "128/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_06__SM_20260917_691": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_26": "9/20",
+    "n_50": "9/20"
+   },
+   "fi_header": "26.66666666666677799",
+   "lattice_rank": 6,
+   "left": 192,
+   "nu1": 6,
+   "singlet_types": 18,
+   "singlets": 47,
+   "trace_anomalous": "80/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_06__SM_20260917_73": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_30": "9/25",
+    "n_63": "9/50",
+    "n_70": "27/50",
+    "n_72": "9/25",
+    "n_85": "9/50",
+    "n_87": "9/50"
+   },
+   "fi_header": "66.66666666666651508",
+   "lattice_rank": 8,
+   "left": 166,
+   "nu1": 8,
+   "singlet_types": 33,
+   "singlets": 69,
+   "trace_anomalous": "200/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_06__SM_20260917_741": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_35": "1/4",
+    "n_36": "1/4",
+    "n_39": "1/4",
+    "n_41": "1/4"
+   },
+   "fi_header": "96.00000000000085265",
+   "lattice_rank": 7,
+   "left": 169,
+   "nu1": 7,
+   "singlet_types": 18,
+   "singlets": 39,
+   "trace_anomalous": "96",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_06__SM_20260917_744": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_79": "9/20",
+    "n_80": "9/20",
+    "n_81": "9/20",
+    "n_96": "9/20"
+   },
+   "fi_header": "26.66666666666669983",
+   "lattice_rank": 8,
+   "left": 223,
+   "nu1": 8,
+   "singlet_types": 52,
+   "singlets": 101,
+   "trace_anomalous": "80/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_06__SM_20260917_784": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_33": "9/31",
+    "n_77": "9/31",
+    "n_92": "9/62",
+    "n_93": "9/62"
+   },
+   "fi_header": "82.66666666666672825",
+   "lattice_rank": 8,
+   "left": 182,
+   "nu1": 8,
+   "singlet_types": 35,
+   "singlets": 75,
+   "trace_anomalous": "248/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_06__SM_20260917_894": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_41": "9/116",
+    "n_63": "9/29",
+    "n_76": "9/116",
+    "n_77": "27/116"
+   },
+   "fi_header": "154.66666666666668561",
+   "lattice_rank": 7,
+   "left": 189,
+   "nu1": 7,
+   "singlet_types": 29,
+   "singlets": 61,
+   "trace_anomalous": "464/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_06__SM_20260917_998": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_1": "1/4",
+    "n_18": "1/4",
+    "n_41": "1/2",
+    "n_42": "1/4"
+   },
+   "fi_header": "47.99999999999980815",
+   "lattice_rank": 9,
+   "left": 219,
+   "nu1": 9,
+   "singlet_types": 33,
+   "singlets": 69,
+   "trace_anomalous": "48",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_10__SM_20260917_1497": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_56": "1/4",
+    "n_62": "1/4",
+    "n_74": "1/2",
+    "n_75": "1/4",
+    "n_76": "1/4"
+   },
+   "fi_header": "48.00000000000019895",
+   "lattice_rank": 7,
+   "left": 174,
+   "nu1": 7,
+   "singlet_types": 37,
+   "singlets": 79,
+   "trace_anomalous": "48",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_10__SM_20260917_271": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_46": "1/4",
+    "n_49": "1/4",
+    "n_51": "1/2",
+    "n_52": "1/4",
+    "n_63": "1/4"
+   },
+   "fi_header": "48.00000000000040501",
+   "lattice_rank": 7,
+   "left": 181,
+   "nu1": 7,
+   "singlet_types": 25,
+   "singlets": 55,
+   "trace_anomalous": "48",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_10__SM_20260917_327": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_32": "9/20",
+    "n_50": "9/10",
+    "n_52": "9/20",
+    "n_53": "9/10",
+    "n_65": "9/20"
+   },
+   "fi_header": "26.66666666666668917",
+   "lattice_rank": 6,
+   "left": 140,
+   "nu1": 6,
+   "singlet_types": 21,
+   "singlets": 49,
+   "trace_anomalous": "80/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_10__SM_20260917_687": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_30": "1/4",
+    "n_38": "1/4",
+    "n_40": "1/2",
+    "n_41": "1/4",
+    "n_53": "1/4"
+   },
+   "fi_header": "48.00000000000031264",
+   "lattice_rank": 6,
+   "left": 180,
+   "nu1": 6,
+   "singlet_types": 17,
+   "singlets": 43,
+   "trace_anomalous": "48",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_10__SM_20260917_818": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_56": "9/20",
+    "n_57": "9/20",
+    "n_58": "9/20",
+    "n_66": "9/20",
+    "n_68": "9/10",
+    "n_81": "9/10"
+   },
+   "fi_header": "26.66666666666665719",
+   "lattice_rank": 8,
+   "left": 215,
+   "nu1": 8,
+   "singlet_types": 43,
+   "singlets": 81,
+   "trace_anomalous": "80/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_12__SM_20260917_1566": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_2": "9/68",
+    "n_61": "45/68",
+    "n_73": "9/34",
+    "n_74": "9/34",
+    "n_78": "9/17",
+    "n_80": "9/17"
+   },
+   "fi_header": "90.66666666666704089",
+   "lattice_rank": 7,
+   "left": 166,
+   "nu1": 7,
+   "singlet_types": 27,
+   "singlets": 71,
+   "trace_anomalous": "272/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_12__SM_20260917_1993": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_71": "1/2",
+    "n_82": "1/4",
+    "n_84": "1/2",
+    "n_88": "1/2",
+    "n_90": "1/2",
+    "n_98": "1/4"
+   },
+   "fi_header": "48.00000000000017053",
+   "lattice_rank": 7,
+   "left": 206,
+   "nu1": 7,
+   "singlet_types": 41,
+   "singlets": 103,
+   "trace_anomalous": "48",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_12__SM_20260917_2184": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_68": "9/10",
+    "n_85": "9/20",
+    "n_86": "9/10",
+    "n_95": "9/20"
+   },
+   "fi_header": "26.66666666666654351",
+   "lattice_rank": 8,
+   "left": 235,
+   "nu1": 8,
+   "singlet_types": 47,
+   "singlets": 105,
+   "trace_anomalous": "80/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_12__SM_20260917_2503": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_2": "9/46",
+    "n_51": "45/92",
+    "n_70": "9/92",
+    "n_73": "45/92",
+    "n_84": "9/23"
+   },
+   "fi_header": "122.66666666666682772",
+   "lattice_rank": 7,
+   "left": 173,
+   "nu1": 7,
+   "singlet_types": 19,
+   "singlets": 54,
+   "trace_anomalous": "368/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_12__SM_20260917_400": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_53": "9/38",
+    "n_68": "9/76",
+    "n_72": "9/38",
+    "n_73": "9/38",
+    "n_82": "9/76"
+   },
+   "fi_header": "202.66666666666731089",
+   "lattice_rank": 7,
+   "left": 200,
+   "nu1": 7,
+   "singlet_types": 27,
+   "singlets": 71,
+   "trace_anomalous": "608/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_12__SM_20260917_574": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_56": "45/104",
+    "n_68": "45/104",
+    "n_70": "9/26",
+    "n_84": "9/104"
+   },
+   "fi_header": "138.66666666666708352",
+   "lattice_rank": 7,
+   "left": 185,
+   "nu1": 7,
+   "singlet_types": 20,
+   "singlets": 56,
+   "trace_anomalous": "416/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_18__SM_20260917_1116": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_40": "27/92",
+    "n_42": "9/92",
+    "n_45": "9/46",
+    "n_52": "9/46",
+    "n_65": "9/23",
+    "n_77": "9/46"
+   },
+   "fi_header": "122.66666666666736774",
+   "lattice_rank": 8,
+   "left": 170,
+   "nu1": 8,
+   "singlet_types": 22,
+   "singlets": 43,
+   "trace_anomalous": "368/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_18__SM_20260917_2488": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_54": "9/43",
+    "n_55": "9/43",
+    "n_82": "9/86",
+    "n_95": "9/86"
+   },
+   "fi_header": "114.66666666666647245",
+   "lattice_rank": 9,
+   "left": 179,
+   "nu1": 9,
+   "singlet_types": 39,
+   "singlets": 69,
+   "trace_anomalous": "344/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_18__SM_20260917_656": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_42": "1/4",
+    "n_55": "1/12",
+    "n_56": "1/6"
+   },
+   "fi_header": "287.99999999999869260",
+   "lattice_rank": 5,
+   "left": 190,
+   "nu1": 5,
+   "singlet_types": 19,
+   "singlets": 44,
+   "trace_anomalous": "288",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_19__SM_20260917_477": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_52": "9/44",
+    "n_61": "27/88",
+    "n_62": "9/44",
+    "n_64": "27/176",
+    "n_78": "27/176"
+   },
+   "fi_header": "234.66666666666708352",
+   "lattice_rank": 6,
+   "left": 161,
+   "nu1": 6,
+   "singlet_types": 31,
+   "singlets": 64,
+   "trace_anomalous": "704/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_20__SM_20260917_1383": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_48": "27/74",
+    "n_49": "9/37",
+    "n_50": "9/74",
+    "n_51": "9/37"
+   },
+   "fi_header": "98.66666666666668561",
+   "lattice_rank": 6,
+   "left": 164,
+   "nu1": 6,
+   "singlet_types": 18,
+   "singlets": 43,
+   "trace_anomalous": "296/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_22__SM_20260917_1197": {
+   "bl_direction": false,
+   "dflat_any": false,
+   "farkas_all": [
+    "0",
+    "-32/225",
+    "128/2025",
+    "7/405"
+   ],
+   "fi_header": "384.00000000000216005",
+   "lattice_rank": 5,
+   "left": 121,
+   "nu1": 5,
+   "singlet_types": 11,
+   "singlets": 28,
+   "trace_anomalous": "384",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_22__SM_20260917_399": {
+   "bl_direction": false,
+   "dflat_any": false,
+   "farkas_all": [
+    "0",
+    "-55/918",
+    "451/6426",
+    "1/378"
+   ],
+   "fi_header": "586.66666666666333185",
+   "lattice_rank": 5,
+   "left": 150,
+   "nu1": 5,
+   "singlet_types": 8,
+   "singlets": 21,
+   "trace_anomalous": "1760/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_23__SM_20260917_1411": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_24": "45/68",
+    "n_72": "9/68",
+    "n_78": "9/68",
+    "n_79": "9/68",
+    "n_80": "27/68",
+    "n_87": "9/68"
+   },
+   "fi_header": "90.66666666666647245",
+   "lattice_rank": 8,
+   "left": 201,
+   "nu1": 8,
+   "singlet_types": 31,
+   "singlets": 77,
+   "trace_anomalous": "272/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_23__SM_20260917_2318": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_1": "9/46",
+    "n_58": "45/92",
+    "n_69": "45/92",
+    "n_80": "9/23",
+    "n_86": "9/92"
+   },
+   "fi_header": "122.66666666666729668",
+   "lattice_rank": 7,
+   "left": 173,
+   "nu1": 7,
+   "singlet_types": 19,
+   "singlets": 54,
+   "trace_anomalous": "368/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_23__SM_20260917_2678": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_52": "9/16",
+    "n_79": "9/16",
+    "n_81": "9/16"
+   },
+   "fi_header": "42.66666666666677088",
+   "lattice_rank": 7,
+   "left": 170,
+   "nu1": 7,
+   "singlet_types": 27,
+   "singlets": 71,
+   "trace_anomalous": "128/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_23__SM_20260917_2913": {
+   "anomaly_cancelling_rays": 304,
+   "bl_direction": true,
+   "bl_nullspace_dim": 3,
+   "bl_verdict": "closed: every anomaly-cancelling extreme ray is parity-obstructed",
+   "control_single_type_realizable": true,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_56": "3/22",
+    "n_58": "15/44",
+    "n_85": "3/44",
+    "n_86": "3/11",
+    "n_88": "3/11",
+    "n_99": "3/44"
+   },
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ],
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 32,
+   "extreme_rays": 3334,
+   "fi_header": "176.00000000000127898",
+   "lattice_rank": 9,
+   "left": 201,
+   "never_even_types": [
+    {
+     "fields": [
+      "n_19",
+      "n_20",
+      "n_25"
+     ],
+     "three_BminusL": "-3"
+    },
+    {
+     "fields": [
+      "n_53",
+      "n_54",
+      "n_68"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_75",
+      "n_80"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_86",
+      "n_92"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_89",
+      "n_95"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_99",
+      "n_102"
+     ],
+     "three_BminusL": "-3"
+    }
+   ],
+   "nu1": 9,
+   "ray_obstruction_kinds": [
+    "smith_divisibility"
+   ],
+   "realizable_even_rays": 0,
+   "singlet_types": 38,
+   "singlets": 92,
+   "trace_anomalous": "176",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 8
+  },
+  "Z6-II|Z6II_24__SM_20260917_2751": {
+   "bl_direction": false,
+   "dflat_any": false,
+   "farkas_all": [
+    "0",
+    "-6",
+    "-9/8",
+    "3/40",
+    "0",
+    "-1/10"
+   ],
+   "fi_header": "432.00000000000045475",
+   "lattice_rank": 7,
+   "left": 153,
+   "nu1": 7,
+   "singlet_types": 9,
+   "singlets": 25,
+   "trace_anomalous": "432",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_28__SM_20260917_2298": {
+   "anomaly_free": true,
+   "fi_header": "0.00000000000000000",
+   "left": 106,
+   "nu1": 5,
+   "singlet_types": 7,
+   "singlets": 21,
+   "trace_anomalous": "0"
+  },
+  "Z6-II|Z6II_28__SM_20260917_2417": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_40": "9/20",
+    "n_51": "9/10"
+   },
+   "fi_header": "26.66666666666643337",
+   "lattice_rank": 8,
+   "left": 162,
+   "nu1": 8,
+   "singlet_types": 20,
+   "singlets": 43,
+   "trace_anomalous": "80/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_33__SM_20260917_619": {
+   "bl_direction": false,
+   "dflat_any": false,
+   "farkas_all": [
+    "0",
+    "-4/3",
+    "0",
+    "0",
+    "4/75",
+    "-8/325",
+    "-20/117",
+    "-1/90"
+   ],
+   "fi_header": "96.00000000000036948",
+   "lattice_rank": 9,
+   "left": 172,
+   "nu1": 9,
+   "singlet_types": 30,
+   "singlets": 61,
+   "trace_anomalous": "96",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_34__SM_20260917_1350": {
+   "bl_direction": false,
+   "dflat_any": false,
+   "farkas_all": [
+    "0",
+    "-1519/1872",
+    "-2387/18720",
+    "217/480",
+    "217/4770",
+    "5/1908"
+   ],
+   "fi_header": "578.66666666666765195",
+   "lattice_rank": 7,
+   "left": 174,
+   "nu1": 7,
+   "singlet_types": 37,
+   "singlets": 82,
+   "trace_anomalous": "1736/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_34__SM_20260917_1558": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_50": "9/37",
+    "n_56": "9/74",
+    "n_57": "9/74",
+    "n_70": "9/74",
+    "n_80": "9/37",
+    "n_82": "9/37",
+    "n_93": "9/74"
+   },
+   "fi_header": "98.66666666666719721",
+   "lattice_rank": 9,
+   "left": 176,
+   "nu1": 9,
+   "singlet_types": 34,
+   "singlets": 65,
+   "trace_anomalous": "296/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_34__SM_20260917_1585": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_48": "1/4",
+    "n_60": "1/12",
+    "n_63": "1/12",
+    "n_71": "1/3",
+    "n_72": "1/3",
+    "n_82": "1/6"
+   },
+   "fi_header": "143.99999999999968736",
+   "lattice_rank": 8,
+   "left": 190,
+   "nu1": 8,
+   "singlet_types": 37,
+   "singlets": 71,
+   "trace_anomalous": "144",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_34__SM_20260917_1702": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_17": "1/16",
+    "n_19": "1/16",
+    "n_29": "1/16",
+    "n_31": "3/16",
+    "n_46": "1/8",
+    "n_65": "1/16",
+    "n_68": "1/16"
+   },
+   "fi_header": "192.00000000000011369",
+   "lattice_rank": 9,
+   "left": 172,
+   "nu1": 9,
+   "singlet_types": 26,
+   "singlets": 60,
+   "trace_anomalous": "192",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_34__SM_20260917_2056": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_17": "9/103",
+    "n_45": "27/103",
+    "n_58": "9/103",
+    "n_6": "81/206"
+   },
+   "fi_header": "274.66666666666844776",
+   "lattice_rank": 7,
+   "left": 162,
+   "nu1": 7,
+   "singlet_types": 34,
+   "singlets": 73,
+   "trace_anomalous": "824/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_34__SM_20260917_2068": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_34": "9/37",
+    "n_45": "9/74",
+    "n_47": "9/37",
+    "n_70": "9/37",
+    "n_80": "9/37",
+    "n_81": "27/74",
+    "n_94": "9/74"
+   },
+   "fi_header": "98.66666666666640140",
+   "lattice_rank": 9,
+   "left": 182,
+   "nu1": 9,
+   "singlet_types": 34,
+   "singlets": 65,
+   "trace_anomalous": "296/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_34__SM_20260917_2200": {
+   "bl_direction": false,
+   "dflat_any": false,
+   "farkas_all": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "-6/5"
+   ],
+   "fi_header": "432.00000000000170530",
+   "lattice_rank": 6,
+   "left": 147,
+   "nu1": 6,
+   "singlet_types": 30,
+   "singlets": 63,
+   "trace_anomalous": "432",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_34__SM_20260917_2229": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_10": "51/308",
+    "n_12": "15/308",
+    "n_39": "3/44",
+    "n_50": "3/44"
+   },
+   "fi_header": "1231.99999999998635758",
+   "lattice_rank": 6,
+   "left": 192,
+   "nu1": 6,
+   "singlet_types": 28,
+   "singlets": 67,
+   "trace_anomalous": "1232",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_34__SM_20260917_2342": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_58": "3/10",
+    "n_59": "3/10",
+    "n_73": "3/10",
+    "n_86": "3/10"
+   },
+   "fi_header": "40.00000000000004263",
+   "lattice_rank": 9,
+   "left": 182,
+   "nu1": 9,
+   "singlet_types": 34,
+   "singlets": 61,
+   "trace_anomalous": "40",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_34__SM_20260917_2698": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_41": "9/20",
+    "n_47": "9/20",
+    "n_73": "9/10",
+    "n_76": "9/20",
+    "n_86": "9/20"
+   },
+   "fi_header": "26.66666666666671048",
+   "lattice_rank": 9,
+   "left": 166,
+   "nu1": 9,
+   "singlet_types": 32,
+   "singlets": 62,
+   "trace_anomalous": "80/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_34__SM_20260917_2722": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_45": "9/37",
+    "n_46": "9/37",
+    "n_52": "9/74",
+    "n_54": "9/37",
+    "n_84": "9/37"
+   },
+   "fi_header": "98.66666666666651508",
+   "lattice_rank": 9,
+   "left": 172,
+   "nu1": 9,
+   "singlet_types": 31,
+   "singlets": 53,
+   "trace_anomalous": "296/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_34__SM_20260917_292": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_43": "9/32",
+    "n_56": "9/32",
+    "n_83": "9/32",
+    "n_85": "9/32",
+    "n_86": "9/32",
+    "n_96": "9/32"
+   },
+   "fi_header": "42.66666666666640850",
+   "lattice_rank": 9,
+   "left": 174,
+   "nu1": 9,
+   "singlet_types": 36,
+   "singlets": 71,
+   "trace_anomalous": "128/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_34__SM_20260917_616": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_38": "3/4",
+    "n_46": "3/4",
+    "n_47": "3/4",
+    "n_48": "3/2",
+    "n_49": "3/4"
+   },
+   "fi_header": "7.99999999999992095",
+   "lattice_rank": 6,
+   "left": 126,
+   "nu1": 6,
+   "singlet_types": 30,
+   "singlets": 45,
+   "trace_anomalous": "8",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_34__SM_20260917_617": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_28": "1/4",
+    "n_61": "1/6",
+    "n_66": "1/12",
+    "n_69": "1/3",
+    "n_70": "1/2",
+    "n_82": "1/6"
+   },
+   "fi_header": "144.00000000000002842",
+   "lattice_rank": 8,
+   "left": 162,
+   "nu1": 8,
+   "singlet_types": 30,
+   "singlets": 59,
+   "trace_anomalous": "144",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_34__SM_20260917_938": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_42": "9/34",
+    "n_55": "9/68",
+    "n_59": "9/68",
+    "n_63": "9/34"
+   },
+   "fi_header": "90.66666666666634455",
+   "lattice_rank": 7,
+   "left": 155,
+   "nu1": 7,
+   "singlet_types": 20,
+   "singlets": 43,
+   "trace_anomalous": "272/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_35__SM_20260917_473": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_26": "1/4",
+    "n_3": "1/4",
+    "n_54": "1/4",
+    "n_55": "1/2"
+   },
+   "fi_header": "47.99999999999988631",
+   "lattice_rank": 9,
+   "left": 219,
+   "nu1": 9,
+   "singlet_types": 33,
+   "singlets": 69,
+   "trace_anomalous": "48",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_39__SM_20260917_478": {
+   "bl_direction": false,
+   "dflat_any": false,
+   "farkas_all": [
+    "0",
+    "0",
+    "14/9",
+    "14/2619",
+    "-67/26190"
+   ],
+   "fi_header": "74.66666666666618823",
+   "lattice_rank": 6,
+   "left": 112,
+   "nu1": 6,
+   "singlet_types": 6,
+   "singlets": 13,
+   "trace_anomalous": "224/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_41__SM_20260917_635": {
+   "bl_direction": false,
+   "dflat_any": false,
+   "farkas_all": [
+    "0",
+    "4/3",
+    "20/207",
+    "-1/345"
+   ],
+   "fi_header": "384.00000000000022737",
+   "lattice_rank": 5,
+   "left": 121,
+   "nu1": 5,
+   "singlet_types": 11,
+   "singlets": 28,
+   "trace_anomalous": "384",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_43__SM_20260917_1867": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_47": "3/10",
+    "n_48": "3/10",
+    "n_70": "3/10",
+    "n_94": "3/10"
+   },
+   "fi_header": "39.99999999999991473",
+   "lattice_rank": 9,
+   "left": 182,
+   "nu1": 9,
+   "singlet_types": 34,
+   "singlets": 61,
+   "trace_anomalous": "40",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_45__SM_20260917_1962": {
+   "bl_direction": false,
+   "dflat_any": false,
+   "farkas_all": [
+    "0",
+    "0",
+    "4/3",
+    "0",
+    "-8/15",
+    "-1/3",
+    "4/3",
+    "0"
+   ],
+   "fi_header": "96.00000000000008527",
+   "lattice_rank": 9,
+   "left": 172,
+   "nu1": 9,
+   "singlet_types": 30,
+   "singlets": 61,
+   "trace_anomalous": "96",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_49__SM_20260917_145": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_69": "9/37",
+    "n_70": "9/37",
+    "n_83": "27/74",
+    "n_85": "9/74",
+    "n_90": "9/37"
+   },
+   "fi_header": "98.66666666666606034",
+   "lattice_rank": 8,
+   "left": 184,
+   "nu1": 8,
+   "singlet_types": 35,
+   "singlets": 75,
+   "trace_anomalous": "296/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_49__SM_20260917_2717": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_37": "9/47",
+    "n_44": "27/188",
+    "n_60": "9/188",
+    "n_63": "45/188",
+    "n_71": "9/94",
+    "n_81": "9/47"
+   },
+   "fi_header": "250.66666666666554875",
+   "lattice_rank": 8,
+   "left": 185,
+   "nu1": 8,
+   "singlet_types": 38,
+   "singlets": 73,
+   "trace_anomalous": "752/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_49__SM_20260917_423": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_58": "9/37",
+    "n_65": "27/74",
+    "n_67": "9/74",
+    "n_74": "9/37",
+    "n_76": "9/37"
+   },
+   "fi_header": "98.66666666666657193",
+   "lattice_rank": 8,
+   "left": 172,
+   "nu1": 8,
+   "singlet_types": 32,
+   "singlets": 65,
+   "trace_anomalous": "296/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_52__SM_20260917_1026": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_13": "9/103",
+    "n_6": "81/206",
+    "n_72": "9/103",
+    "n_73": "27/103"
+   },
+   "fi_header": "274.66666666666827723",
+   "lattice_rank": 7,
+   "left": 162,
+   "nu1": 7,
+   "singlet_types": 34,
+   "singlets": 73,
+   "trace_anomalous": "824/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_52__SM_20260917_1437": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_10": "45/116",
+    "n_52": "9/58",
+    "n_53": "9/58",
+    "n_69": "9/58",
+    "n_8": "27/116"
+   },
+   "fi_header": "154.66666666666623087",
+   "lattice_rank": 6,
+   "left": 147,
+   "nu1": 6,
+   "singlet_types": 28,
+   "singlets": 67,
+   "trace_anomalous": "464/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_52__SM_20260917_213": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_43": "9/76",
+    "n_50": "9/76",
+    "n_51": "9/76",
+    "n_70": "9/76",
+    "n_73": "9/76"
+   },
+   "fi_header": "202.66666666666628771",
+   "lattice_rank": 8,
+   "left": 204,
+   "nu1": 8,
+   "singlet_types": 48,
+   "singlets": 93,
+   "trace_anomalous": "608/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_52__SM_20260917_2304": {
+   "bl_direction": false,
+   "dflat_any": false,
+   "farkas_all": [
+    "0",
+    "3/2",
+    "3/2",
+    "3/2",
+    "-3/10"
+   ],
+   "fi_header": "432.00000000000153477",
+   "lattice_rank": 6,
+   "left": 147,
+   "nu1": 6,
+   "singlet_types": 30,
+   "singlets": 63,
+   "trace_anomalous": "432",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_52__SM_20260917_405": {
+   "bl_direction": false,
+   "dflat_any": false,
+   "farkas_all": [
+    "0",
+    "95/72",
+    "19/612",
+    "2603/108936",
+    "2147/115344",
+    "-5/1296"
+   ],
+   "fi_header": "506.66666666666924357",
+   "lattice_rank": 7,
+   "left": 180,
+   "nu1": 7,
+   "singlet_types": 32,
+   "singlets": 65,
+   "trace_anomalous": "1520/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_52__SM_20260917_570": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_38": "27/116",
+    "n_48": "9/58",
+    "n_63": "9/116",
+    "n_71": "9/58",
+    "n_74": "27/116"
+   },
+   "fi_header": "154.66666666666608876",
+   "lattice_rank": 7,
+   "left": 173,
+   "nu1": 7,
+   "singlet_types": 43,
+   "singlets": 91,
+   "trace_anomalous": "464/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_52__SM_20260917_712": {
+   "bl_direction": false,
+   "dflat_any": false,
+   "farkas_all": [
+    "0",
+    "217/72",
+    "-31/7632",
+    "-20615/816624",
+    "24521/1652508",
+    "157/77220"
+   ],
+   "fi_header": "578.66666666666787933",
+   "lattice_rank": 7,
+   "left": 174,
+   "nu1": 7,
+   "singlet_types": 37,
+   "singlets": 82,
+   "trace_anomalous": "1736/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_52__SM_20260917_93": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_11": "27/212",
+    "n_38": "27/424",
+    "n_39": "9/212",
+    "n_67": "9/424",
+    "n_7": "99/424"
+   },
+   "fi_header": "282.66666666666822039",
+   "lattice_rank": 6,
+   "left": 133,
+   "nu1": 6,
+   "singlet_types": 28,
+   "singlets": 67,
+   "trace_anomalous": "848/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_53__SM_20260917_1614": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_101": "9/25",
+    "n_3": "9/50",
+    "n_59": "27/50",
+    "n_78": "9/50",
+    "n_79": "9/25",
+    "n_80": "9/50",
+    "n_99": "18/25"
+   },
+   "fi_header": "66.66666666666671404",
+   "lattice_rank": 9,
+   "left": 192,
+   "nu1": 9,
+   "singlet_types": 38,
+   "singlets": 67,
+   "trace_anomalous": "200/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_53__SM_20260917_2368": {
+   "bl_direction": false,
+   "dflat_any": false,
+   "farkas_all": [
+    "0",
+    "1573/7308",
+    "-121/323292",
+    "1210/1329399",
+    "-242/153117",
+    "-1/5778"
+   ],
+   "fi_header": "322.66666666666776564",
+   "lattice_rank": 7,
+   "left": 174,
+   "nu1": 7,
+   "singlet_types": 34,
+   "singlets": 73,
+   "trace_anomalous": "968/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_54__SM_20260917_1301": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_42": "3/20",
+    "n_51": "3/20",
+    "n_54": "3/10",
+    "n_73": "3/20",
+    "n_83": "3/10",
+    "n_84": "3/20"
+   },
+   "fi_header": "80.00000000000024158",
+   "lattice_rank": 8,
+   "left": 154,
+   "nu1": 8,
+   "singlet_types": 32,
+   "singlets": 63,
+   "trace_anomalous": "80",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_54__SM_20260917_265": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_46": "9/38",
+    "n_62": "9/38",
+    "n_72": "9/19"
+   },
+   "fi_header": "50.66666666666691299",
+   "lattice_rank": 8,
+   "left": 162,
+   "nu1": 8,
+   "singlet_types": 36,
+   "singlets": 65,
+   "trace_anomalous": "152/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_56__SM_20260917_2753": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_13": "1/4",
+    "n_41": "3/8",
+    "n_73": "1/4",
+    "n_74": "1/8",
+    "n_83": "1/8"
+   },
+   "fi_header": "96.00000000000046896",
+   "lattice_rank": 7,
+   "left": 153,
+   "nu1": 7,
+   "singlet_types": 36,
+   "singlets": 87,
+   "trace_anomalous": "96",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_57__SM_20260917_1103": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_56": "3/11",
+    "n_68": "6/11",
+    "n_83": "3/22",
+    "n_85": "3/11",
+    "n_86": "3/22"
+   },
+   "fi_header": "88.00000000000012790",
+   "lattice_rank": 9,
+   "left": 169,
+   "nu1": 9,
+   "singlet_types": 40,
+   "singlets": 69,
+   "trace_anomalous": "88",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_57__SM_20260917_173": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_36": "9/37",
+    "n_41": "9/37",
+    "n_45": "9/74",
+    "n_70": "9/37",
+    "n_71": "27/74",
+    "n_82": "9/74",
+    "n_86": "9/37"
+   },
+   "fi_header": "98.66666666666712615",
+   "lattice_rank": 9,
+   "left": 182,
+   "nu1": 9,
+   "singlet_types": 34,
+   "singlets": 65,
+   "trace_anomalous": "296/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_57__SM_20260917_2231": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_15": "9/28"
+   },
+   "fi_header": "74.66666666666695562",
+   "lattice_rank": 7,
+   "left": 120,
+   "nu1": 7,
+   "singlet_types": 22,
+   "singlets": 39,
+   "trace_anomalous": "224/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_59__SM_20260917_1105": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_60": "9/8",
+    "n_75": "9/8",
+    "n_84": "3/8",
+    "n_89": "3/4"
+   },
+   "fi_header": "32.00000000000002132",
+   "lattice_rank": 7,
+   "left": 169,
+   "nu1": 7,
+   "singlet_types": 20,
+   "singlets": 56,
+   "trace_anomalous": "32",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_59__SM_20260917_1628": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_22": "9/20",
+    "n_43": "9/10",
+    "n_44": "9/20",
+    "n_45": "9/10",
+    "n_57": "9/20"
+   },
+   "fi_header": "26.66666666666665719",
+   "lattice_rank": 6,
+   "left": 140,
+   "nu1": 6,
+   "singlet_types": 21,
+   "singlets": 49,
+   "trace_anomalous": "80/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_59__SM_20260917_2473": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_44": "9/38",
+    "n_58": "9/38",
+    "n_70": "9/38",
+    "n_71": "9/38"
+   },
+   "fi_header": "50.66666666666658614",
+   "lattice_rank": 8,
+   "left": 162,
+   "nu1": 8,
+   "singlet_types": 36,
+   "singlets": 65,
+   "trace_anomalous": "152/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_59__SM_20260917_2533": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_20": "9/20",
+    "n_34": "9/10",
+    "n_35": "9/20",
+    "n_36": "9/10",
+    "n_48": "9/20"
+   },
+   "fi_header": "26.66666666666685614",
+   "lattice_rank": 6,
+   "left": 145,
+   "nu1": 6,
+   "singlet_types": 17,
+   "singlets": 43,
+   "trace_anomalous": "80/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_60__SM_20260917_1475": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_46": "9/32",
+    "n_47": "9/32",
+    "n_49": "9/32",
+    "n_50": "9/32"
+   },
+   "fi_header": "42.66666666666657193",
+   "lattice_rank": 6,
+   "left": 152,
+   "nu1": 6,
+   "singlet_types": 17,
+   "singlets": 45,
+   "trace_anomalous": "128/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_60__SM_20260917_2720": {
+   "bl_direction": false,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_55": "9/14",
+    "n_63": "9/14",
+    "n_66": "9/14",
+    "n_76": "9/14"
+   },
+   "fi_header": "18.66666666666663232",
+   "lattice_rank": 8,
+   "left": 173,
+   "nu1": 8,
+   "singlet_types": 41,
+   "singlets": 61,
+   "trace_anomalous": "56/3",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-II|Z6II_60__SM_20260917_810": {
+   "bl_direction": false,
+   "dflat_any": false,
+   "farkas_all": [
+    "0",
+    "2/19",
+    "-3/190",
+    "-1/2"
+   ],
+   "fi_header": "47.99999999999972999",
+   "lattice_rank": 5,
+   "left": 125,
+   "nu1": 5,
+   "singlet_types": 12,
+   "singlets": 31,
+   "trace_anomalous": "48",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-I|Z6I_06__SM_20260917_2": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 2,
+   "bl_verdict": "closed: ever-even singlets are never D-flat (one Farkas vector)",
+   "control_single_type_realizable": true,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_12": "1/12",
+    "n_15": "1/24",
+    "n_25": "1/24",
+    "n_28": "1/8",
+    "n_31": "1/24",
+    "n_32": "1/24"
+   },
+   "doublet_3BL_bl": [
+    [
+     "-1",
+     [
+      "-6",
+      "0"
+     ]
+    ],
+    [
+     "0",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 13,
+   "farkas_ever_even": [
+    "0",
+    "0",
+    "-8/3",
+    "4",
+    "0",
+    "-4/15"
+   ],
+   "fi_header": "575.99999999999897682",
+   "lattice_rank": 7,
+   "left": 202,
+   "never_even_types": [
+    {
+     "fields": [
+      "n_12",
+      "n_27",
+      "n_45",
+      "n_63",
+      "n_81"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_28",
+      "n_46",
+      "n_64",
+      "n_82"
+     ],
+     "three_BminusL": "3"
+    }
+   ],
+   "nu1": 7,
+   "singlet_types": 15,
+   "singlets": 70,
+   "trace_anomalous": "576",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-I|Z6I_17__SM_20260917_35": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 2,
+   "bl_verdict": "closed: ever-even singlets are never D-flat (one Farkas vector)",
+   "control_single_type_realizable": true,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_17": "1/24",
+    "n_19": "1/24",
+    "n_25": "1/6",
+    "n_27": "1/8",
+    "n_29": "1/8",
+    "n_7": "1/12"
+   },
+   "doublet_3BL_bl": [
+    [
+     "-1",
+     [
+      "0",
+      "6"
+     ]
+    ],
+    [
+     "0",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 13,
+   "farkas_ever_even": [
+    "0",
+    "0",
+    "4",
+    "-8/3",
+    "4/15",
+    "0"
+   ],
+   "fi_header": "576.00000000000090949",
+   "lattice_rank": 7,
+   "left": 202,
+   "never_even_types": [
+    {
+     "fields": [
+      "n_12",
+      "n_24",
+      "n_42",
+      "n_60",
+      "n_78"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_25",
+      "n_43",
+      "n_61",
+      "n_79"
+     ],
+     "three_BminusL": "3"
+    }
+   ],
+   "nu1": 7,
+   "singlet_types": 15,
+   "singlets": 70,
+   "trace_anomalous": "576",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-I|Z6I_17__SM_20260917_42": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 2,
+   "bl_verdict": "closed: ever-even singlets are never D-flat (one Farkas vector)",
+   "control_single_type_realizable": true,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_12": "1/12",
+    "n_16": "1/4",
+    "n_17": "1/6",
+    "n_2": "1/12",
+    "n_23": "1/12",
+    "n_33": "1/6"
+   },
+   "doublet_3BL_bl": [
+    [
+     "-1",
+     [
+      "0",
+      "-6"
+     ]
+    ],
+    [
+     "0",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 13,
+   "farkas_ever_even": [
+    "0",
+    "-2",
+    "0",
+    "4/3",
+    "-2/15",
+    "0"
+   ],
+   "fi_header": "143.99999999999948841",
+   "lattice_rank": 7,
+   "left": 181,
+   "never_even_types": [
+    {
+     "fields": [
+      "n_7",
+      "n_19",
+      "n_37",
+      "n_55",
+      "n_73"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_16",
+      "n_34",
+      "n_52",
+      "n_70"
+     ],
+     "three_BminusL": "3"
+    }
+   ],
+   "nu1": 7,
+   "singlet_types": 15,
+   "singlets": 70,
+   "trace_anomalous": "144",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-I|Z6I_17__SM_20260917_45": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 3,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 9,
+   "farkas_all": [
+    "0",
+    "0",
+    "-55/414",
+    "-275/7728",
+    "-715/103824",
+    "47/7416"
+   ],
+   "fi_header": "439.99999999999971578",
+   "lattice_rank": 7,
+   "left": 144,
+   "never_even_types": [],
+   "nu1": 7,
+   "singlet_types": 9,
+   "singlets": 34,
+   "trace_anomalous": "440",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 8
+  },
+  "Z6-I|Z6I_17__SM_20260917_66": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 3,
+   "bl_verdict": "closed: ever-even singlets are never D-flat (one Farkas vector)",
+   "control_single_type_realizable": true,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_12": "1/8",
+    "n_13": "1/24",
+    "n_19": "1/24",
+    "n_20": "1/24",
+    "n_23": "1/24",
+    "n_28": "1/6",
+    "n_38": "1/24"
+   },
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ],
+    [
+     "0",
+     [
+      "0",
+      "12",
+      "-30"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 21,
+   "farkas_ever_even": [
+    "0",
+    "0",
+    "0",
+    "-4",
+    "0",
+    "0",
+    "4/5"
+   ],
+   "fi_header": "576.00000000000045475",
+   "lattice_rank": 8,
+   "left": 223,
+   "never_even_types": [
+    {
+     "fields": [
+      "n_12",
+      "n_27",
+      "n_48",
+      "n_69",
+      "n_90"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_28",
+      "n_49",
+      "n_70",
+      "n_91"
+     ],
+     "three_BminusL": "3"
+    }
+   ],
+   "nu1": 8,
+   "singlet_types": 23,
+   "singlets": 102,
+   "trace_anomalous": "576",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 8
+  },
+  "Z6-I|Z6I_17__SM_20260917_86": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 3,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 13,
+   "farkas_all": [
+    "0",
+    "14/81",
+    "14/45",
+    "-280/13689",
+    "-164/165789",
+    "7/9810"
+   ],
+   "fi_header": "224.00000000000031264",
+   "lattice_rank": 7,
+   "left": 164,
+   "never_even_types": [],
+   "nu1": 7,
+   "singlet_types": 13,
+   "singlets": 59,
+   "trace_anomalous": "224",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 8
+  },
+  "Z6-I|Z6I_19__SM_20260917_2": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 3,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "-6/5",
+     [
+      "-18",
+      "0",
+      "0"
+     ]
+    ],
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 13,
+   "farkas_all": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "2",
+    "-7"
+   ],
+   "fi_header": "335.99999999999920419",
+   "lattice_rank": 8,
+   "left": 190,
+   "never_even_types": [
+    {
+     "fields": [
+      "n_17",
+      "n_33",
+      "n_51",
+      "n_69",
+      "n_87"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_34",
+      "n_52",
+      "n_70",
+      "n_88"
+     ],
+     "three_BminusL": "3"
+    }
+   ],
+   "nu1": 8,
+   "singlet_types": 15,
+   "singlets": 70,
+   "trace_anomalous": "336",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-I|Z6I_19__SM_20260917_2182": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 2,
+   "bl_verdict": "closed: ever-even singlets are never D-flat (one Farkas vector)",
+   "control_single_type_realizable": true,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_15": "1/24",
+    "n_16": "1/12",
+    "n_19": "1/24",
+    "n_25": "1/24",
+    "n_31": "1/24",
+    "n_33": "1/8"
+   },
+   "doublet_3BL_bl": [
+    [
+     "-1",
+     [
+      "-6",
+      "0"
+     ]
+    ],
+    [
+     "0",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 13,
+   "farkas_ever_even": [
+    "0",
+    "0",
+    "0",
+    "2",
+    "0",
+    "-6/5"
+   ],
+   "fi_header": "575.99999999999954525",
+   "lattice_rank": 7,
+   "left": 202,
+   "never_even_types": [
+    {
+     "fields": [
+      "n_16",
+      "n_34",
+      "n_52",
+      "n_70",
+      "n_88"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_33",
+      "n_51",
+      "n_69",
+      "n_87"
+     ],
+     "three_BminusL": "3"
+    }
+   ],
+   "nu1": 7,
+   "singlet_types": 15,
+   "singlets": 70,
+   "trace_anomalous": "576",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-I|Z6I_19__SM_20260917_465": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 2,
+   "bl_verdict": "closed: ever-even singlets are never D-flat (one Farkas vector)",
+   "control_single_type_realizable": true,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_12": "1/12",
+    "n_13": "1/6",
+    "n_17": "1/12",
+    "n_29": "1/4",
+    "n_30": "1/12",
+    "n_32": "1/12"
+   },
+   "doublet_3BL_bl": [
+    [
+     "-3/2",
+     [
+      "0",
+      "-6"
+     ]
+    ],
+    [
+     "0",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 13,
+   "farkas_ever_even": [
+    "0",
+    "0",
+    "0",
+    "2",
+    "-1",
+    "-3/5"
+   ],
+   "fi_header": "143.99999999999988631",
+   "lattice_rank": 7,
+   "left": 181,
+   "never_even_types": [
+    {
+     "fields": [
+      "n_13",
+      "n_28",
+      "n_46",
+      "n_64",
+      "n_82"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_29",
+      "n_47",
+      "n_65",
+      "n_83"
+     ],
+     "three_BminusL": "3"
+    }
+   ],
+   "nu1": 7,
+   "singlet_types": 15,
+   "singlets": 70,
+   "trace_anomalous": "144",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-I|Z6I_21__SM_20260917_21": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "-6/5",
+     [
+      "6",
+      "12",
+      "0",
+      "0"
+     ]
+    ],
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 21,
+   "farkas_all": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "28/25",
+    "-13/50"
+   ],
+   "fi_header": "335.99999999999954525",
+   "lattice_rank": 9,
+   "left": 212,
+   "never_even_types": [
+    {
+     "fields": [
+      "n_21",
+      "n_42",
+      "n_63",
+      "n_84",
+      "n_105"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_41",
+      "n_62",
+      "n_83",
+      "n_104"
+     ],
+     "three_BminusL": "3"
+    }
+   ],
+   "nu1": 9,
+   "singlet_types": 23,
+   "singlets": 102,
+   "trace_anomalous": "336",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_21__SM_20260917_399": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 3,
+   "bl_verdict": "closed: ever-even singlets are never D-flat (one Farkas vector)",
+   "control_single_type_realizable": true,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_16": "1/4",
+    "n_17": "1/12",
+    "n_18": "1/12",
+    "n_19": "1/12",
+    "n_31": "1/3",
+    "n_33": "1/12",
+    "n_37": "1/12"
+   },
+   "doublet_3BL_bl": [
+    [
+     "-3/5",
+     [
+      "0",
+      "-12",
+      "-12"
+     ]
+    ],
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 21,
+   "farkas_ever_even": [
+    "0",
+    "0",
+    "0",
+    "-2",
+    "0",
+    "0",
+    "2/5"
+   ],
+   "fi_header": "143.99999999999985789",
+   "lattice_rank": 8,
+   "left": 224,
+   "never_even_types": [
+    {
+     "fields": [
+      "n_16",
+      "n_32",
+      "n_53",
+      "n_74",
+      "n_95"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_31",
+      "n_52",
+      "n_73",
+      "n_94"
+     ],
+     "three_BminusL": "3"
+    }
+   ],
+   "nu1": 8,
+   "singlet_types": 23,
+   "singlets": 102,
+   "trace_anomalous": "144",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 8
+  },
+  "Z6-I|Z6I_21__SM_20260917_518": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 3,
+   "bl_verdict": "closed: ever-even singlets are never D-flat (one Farkas vector)",
+   "control_single_type_realizable": true,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_14": "1/24",
+    "n_15": "1/24",
+    "n_18": "1/24",
+    "n_20": "1/12",
+    "n_29": "1/24",
+    "n_40": "1/8"
+   },
+   "doublet_3BL_bl": [
+    [
+     "-6/5",
+     [
+      "-6",
+      "12",
+      "0"
+     ]
+    ],
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 21,
+   "farkas_ever_even": [
+    "0",
+    "0",
+    "-4",
+    "-4/3",
+    "4",
+    "-4/15",
+    "0"
+   ],
+   "fi_header": "575.99999999999863576",
+   "lattice_rank": 8,
+   "left": 223,
+   "never_even_types": [
+    {
+     "fields": [
+      "n_20",
+      "n_41",
+      "n_62",
+      "n_83",
+      "n_104"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_40",
+      "n_61",
+      "n_82",
+      "n_103"
+     ],
+     "three_BminusL": "3"
+    }
+   ],
+   "nu1": 8,
+   "singlet_types": 23,
+   "singlets": 102,
+   "trace_anomalous": "576",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 8
+  },
+  "Z6-I|Z6I_26__SM_20260917_242": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 11,
+   "farkas_all": [
+    "0",
+    "-145/954",
+    "1682/24327",
+    "-58/25245",
+    "17/495",
+    "-29/63",
+    "-58/315"
+   ],
+   "fi_header": "232.00000000000005684",
+   "lattice_rank": 8,
+   "left": 167,
+   "never_even_types": [],
+   "nu1": 8,
+   "singlet_types": 11,
+   "singlets": 40,
+   "trace_anomalous": "232",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_26__SM_20260917_478": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 3,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 9,
+   "farkas_all": [
+    "0",
+    "55/117",
+    "-110/2691",
+    "-220/5267",
+    "-475/9618",
+    "-44/21"
+   ],
+   "fi_header": "439.99999999999988631",
+   "lattice_rank": 7,
+   "left": 144,
+   "never_even_types": [],
+   "nu1": 7,
+   "singlet_types": 9,
+   "singlets": 34,
+   "trace_anomalous": "440",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 8
+  },
+  "Z6-I|Z6I_27__SM_20260917_1078": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 2,
+   "bl_verdict": "closed: ever-even singlets are never D-flat (one Farkas vector)",
+   "control_single_type_realizable": true,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_11": "1/12",
+    "n_15": "1/12",
+    "n_18": "1/12",
+    "n_30": "1/12",
+    "n_32": "1/6"
+   },
+   "doublet_3BL_bl": [
+    [
+     "-1",
+     [
+      "-6",
+      "0"
+     ]
+    ],
+    [
+     "0",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 13,
+   "farkas_ever_even": [
+    "0",
+    "0",
+    "0",
+    "1",
+    "5/7",
+    "-4/35"
+   ],
+   "fi_header": "144.00000000000014211",
+   "lattice_rank": 7,
+   "left": 181,
+   "never_even_types": [
+    {
+     "fields": [
+      "n_15",
+      "n_33",
+      "n_51",
+      "n_69",
+      "n_87"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_32",
+      "n_50",
+      "n_68",
+      "n_86"
+     ],
+     "three_BminusL": "3"
+    }
+   ],
+   "nu1": 7,
+   "singlet_types": 15,
+   "singlets": 70,
+   "trace_anomalous": "144",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-I|Z6I_27__SM_20260917_174": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 9,
+   "farkas_all": [
+    "0",
+    "77/261",
+    "56/5249",
+    "-1400/349149",
+    "-30065/5596029",
+    "-7273/2184453",
+    "1/1506"
+   ],
+   "fi_header": "280.00000000000045475",
+   "lattice_rank": 8,
+   "left": 143,
+   "never_even_types": [],
+   "nu1": 8,
+   "singlet_types": 9,
+   "singlets": 34,
+   "trace_anomalous": "280",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_27__SM_20260917_241": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 2,
+   "bl_verdict": "closed: ever-even singlets are never D-flat (one Farkas vector)",
+   "control_single_type_realizable": true,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_12": "1/24",
+    "n_18": "1/12",
+    "n_19": "1/24",
+    "n_23": "1/12",
+    "n_26": "1/8",
+    "n_7": "1/24"
+   },
+   "doublet_3BL_bl": [
+    [
+     "-1",
+     [
+      "6",
+      "0"
+     ]
+    ],
+    [
+     "0",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 13,
+   "farkas_ever_even": [
+    "0",
+    "-4",
+    "4",
+    "-4/3",
+    "0",
+    "-4/15"
+   ],
+   "fi_header": "576.00000000000568434",
+   "lattice_rank": 7,
+   "left": 202,
+   "never_even_types": [
+    {
+     "fields": [
+      "n_12",
+      "n_25",
+      "n_43",
+      "n_61",
+      "n_79"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_26",
+      "n_44",
+      "n_62",
+      "n_80"
+     ],
+     "three_BminusL": "3"
+    }
+   ],
+   "nu1": 7,
+   "singlet_types": 15,
+   "singlets": 70,
+   "trace_anomalous": "576",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-I|Z6I_27__SM_20260917_287": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 3,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "-3/5",
+     [
+      "0",
+      "0",
+      "84"
+     ]
+    ],
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 13,
+   "farkas_all": [
+    "0",
+    "-42/13",
+    "70/117",
+    "5/9",
+    "0",
+    "0",
+    "0"
+   ],
+   "fi_header": "336.00000000000090949",
+   "lattice_rank": 8,
+   "left": 190,
+   "never_even_types": [
+    {
+     "fields": [
+      "n_15",
+      "n_28",
+      "n_46",
+      "n_64",
+      "n_82"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_29",
+      "n_47",
+      "n_65",
+      "n_83"
+     ],
+     "three_BminusL": "3"
+    }
+   ],
+   "nu1": 8,
+   "singlet_types": 15,
+   "singlets": 70,
+   "trace_anomalous": "336",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-I|Z6I_27__SM_20260917_3": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 3,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 9,
+   "farkas_all": [
+    "0",
+    "-5/243",
+    "-25/243",
+    "-325/37017",
+    "-635/122019",
+    "-8/801"
+   ],
+   "fi_header": "200.00000000000062528",
+   "lattice_rank": 7,
+   "left": 127,
+   "never_even_types": [],
+   "nu1": 7,
+   "singlet_types": 9,
+   "singlets": 34,
+   "trace_anomalous": "200",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 8
+  },
+  "Z6-I|Z6I_27__SM_20260917_36": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 6,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 23,
+   "farkas_all": [
+    "0",
+    "5/3",
+    "-40/87",
+    "-160/16269",
+    "265/51799",
+    "90/8033",
+    "190/3219",
+    "-73/6105",
+    "2/165"
+   ],
+   "fi_header": "240.00000000000045475",
+   "lattice_rank": 10,
+   "left": 186,
+   "never_even_types": [],
+   "nu1": 10,
+   "singlet_types": 23,
+   "singlets": 90,
+   "trace_anomalous": "240",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 64
+  },
+  "Z6-I|Z6I_27__SM_20260917_55": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 9,
+   "farkas_all": [
+    "0",
+    "0",
+    "-35/156",
+    "175/14664",
+    "25/4606",
+    "-55/14847",
+    "7/1212"
+   ],
+   "fi_header": "200.00000000000034106",
+   "lattice_rank": 8,
+   "left": 147,
+   "never_even_types": [],
+   "nu1": 8,
+   "singlet_types": 9,
+   "singlets": 34,
+   "trace_anomalous": "200",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_27__SM_20260917_669": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 2,
+   "bl_verdict": "closed: ever-even singlets are never D-flat (one Farkas vector)",
+   "control_single_type_realizable": true,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_11": "1/26",
+    "n_14": "1/26",
+    "n_17": "1/26",
+    "n_23": "1/13",
+    "n_25": "3/26"
+   },
+   "doublet_3BL_bl": [
+    [
+     "-54/79",
+     [
+      "373932/79",
+      "-23400/79"
+     ]
+    ],
+    [
+     "0",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 13,
+   "farkas_ever_even": [
+    "0",
+    "-195/1028",
+    "143/9766",
+    "-65/15181",
+    "273/8942408",
+    "-29/83940"
+   ],
+   "fi_header": "312.00000000000028422",
+   "lattice_rank": 7,
+   "left": 160,
+   "never_even_types": [
+    {
+     "fields": [
+      "n_11",
+      "n_24",
+      "n_42",
+      "n_60",
+      "n_78"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_25",
+      "n_43",
+      "n_61",
+      "n_79"
+     ],
+     "three_BminusL": "3"
+    }
+   ],
+   "nu1": 7,
+   "singlet_types": 15,
+   "singlets": 70,
+   "trace_anomalous": "312",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-I|Z6I_27__SM_20260917_695": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "-6/5",
+     [
+      "0",
+      "0",
+      "-6",
+      "12"
+     ]
+    ],
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 21,
+   "farkas_all": [
+    "0",
+    "42/13",
+    "-70/117",
+    "-5/9",
+    "0",
+    "0",
+    "0",
+    "0"
+   ],
+   "fi_header": "336.00000000000051159",
+   "lattice_rank": 9,
+   "left": 212,
+   "never_even_types": [
+    {
+     "fields": [
+      "n_21",
+      "n_42",
+      "n_63",
+      "n_84",
+      "n_105"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_41",
+      "n_62",
+      "n_83",
+      "n_104"
+     ],
+     "three_BminusL": "3"
+    }
+   ],
+   "nu1": 9,
+   "singlet_types": 23,
+   "singlets": 102,
+   "trace_anomalous": "336",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_27__SM_20260917_73": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 3,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 9,
+   "farkas_all": [
+    "0",
+    "0",
+    "165/23",
+    "-55/644",
+    "-55/2884",
+    "5/618"
+   ],
+   "fi_header": "440.00000000000034106",
+   "lattice_rank": 7,
+   "left": 144,
+   "never_even_types": [],
+   "nu1": 7,
+   "singlet_types": 9,
+   "singlets": 34,
+   "trace_anomalous": "440",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 8
+  },
+  "Z6-I|Z6I_32__SM_20260917_1105": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 2,
+   "bl_verdict": "closed: ever-even singlets are never D-flat (one Farkas vector)",
+   "control_single_type_realizable": true,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_19": "1/8",
+    "n_24": "1/24",
+    "n_25": "1/6",
+    "n_27": "1/24",
+    "n_29": "1/8",
+    "n_7": "1/12"
+   },
+   "doublet_3BL_bl": [
+    [
+     "-9/5",
+     [
+      "0",
+      "18"
+     ]
+    ],
+    [
+     "0",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 13,
+   "farkas_ever_even": [
+    "0",
+    "4",
+    "4/3",
+    "0",
+    "0",
+    "16/15"
+   ],
+   "fi_header": "576.00000000000193268",
+   "lattice_rank": 7,
+   "left": 202,
+   "never_even_types": [
+    {
+     "fields": [
+      "n_14",
+      "n_28",
+      "n_46",
+      "n_64",
+      "n_82"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_25",
+      "n_43",
+      "n_61",
+      "n_79"
+     ],
+     "three_BminusL": "3"
+    }
+   ],
+   "nu1": 7,
+   "singlet_types": 15,
+   "singlets": 70,
+   "trace_anomalous": "576",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-I|Z6I_32__SM_20260917_129": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 11,
+   "farkas_all": [
+    "0",
+    "-145/1017",
+    "319/7797",
+    "551/15111",
+    "-145/33507",
+    "-29/135",
+    "-7/306"
+   ],
+   "fi_header": "232.00000000000062528",
+   "lattice_rank": 8,
+   "left": 167,
+   "never_even_types": [],
+   "nu1": 8,
+   "singlet_types": 11,
+   "singlets": 40,
+   "trace_anomalous": "232",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_32__SM_20260917_184": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 11,
+   "farkas_all": [
+    "0",
+    "0",
+    "5/6",
+    "-8/81",
+    "-40/8343",
+    "-65/8652",
+    "-1/28"
+   ],
+   "fi_header": "160.00000000000034106",
+   "lattice_rank": 8,
+   "left": 151,
+   "never_even_types": [],
+   "nu1": 8,
+   "singlet_types": 11,
+   "singlets": 40,
+   "trace_anomalous": "160",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_32__SM_20260917_186": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 3,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "-1",
+     [
+      "-6",
+      "0",
+      "0"
+     ]
+    ],
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 13,
+   "farkas_all": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "-3",
+    "0"
+   ],
+   "fi_header": "336.00000000000000000",
+   "lattice_rank": 8,
+   "left": 190,
+   "never_even_types": [
+    {
+     "fields": [
+      "n_15",
+      "n_32",
+      "n_50",
+      "n_68",
+      "n_86"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_35",
+      "n_53",
+      "n_71",
+      "n_89"
+     ],
+     "three_BminusL": "3"
+    }
+   ],
+   "nu1": 8,
+   "singlet_types": 15,
+   "singlets": 70,
+   "trace_anomalous": "336",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-I|Z6I_32__SM_20260917_2225": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 3,
+   "bl_verdict": "closed: ever-even singlets are never D-flat (one Farkas vector)",
+   "control_single_type_realizable": true,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_19": "1/24",
+    "n_20": "1/6",
+    "n_22": "1/24",
+    "n_23": "1/24",
+    "n_33": "1/24",
+    "n_38": "1/8",
+    "n_9": "1/24"
+   },
+   "doublet_3BL_bl": [
+    [
+     "-1",
+     [
+      "-3",
+      "-3",
+      "0"
+     ]
+    ],
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 21,
+   "farkas_ever_even": [
+    "0",
+    "-4",
+    "4",
+    "-4/3",
+    "0",
+    "0",
+    "-4/15"
+   ],
+   "fi_header": "576.00000000000000000",
+   "lattice_rank": 8,
+   "left": 223,
+   "never_even_types": [
+    {
+     "fields": [
+      "n_20",
+      "n_41",
+      "n_62",
+      "n_83",
+      "n_104"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_38",
+      "n_59",
+      "n_80",
+      "n_101"
+     ],
+     "three_BminusL": "3"
+    }
+   ],
+   "nu1": 8,
+   "singlet_types": 23,
+   "singlets": 102,
+   "trace_anomalous": "576",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 8
+  },
+  "Z6-I|Z6I_32__SM_20260917_359": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 2,
+   "bl_verdict": "closed: ever-even singlets are never D-flat (one Farkas vector)",
+   "control_single_type_realizable": true,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_14": "1/12",
+    "n_17": "1/6",
+    "n_20": "1/6",
+    "n_29": "1/12",
+    "n_31": "1/4",
+    "n_6": "1/12"
+   },
+   "doublet_3BL_bl": [
+    [
+     "-3/2",
+     [
+      "0",
+      "-6"
+     ]
+    ],
+    [
+     "0",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 13,
+   "farkas_ever_even": [
+    "0",
+    "2",
+    "0",
+    "0",
+    "-1",
+    "3/5"
+   ],
+   "fi_header": "143.99999999999971578",
+   "lattice_rank": 7,
+   "left": 181,
+   "never_even_types": [
+    {
+     "fields": [
+      "n_11",
+      "n_25",
+      "n_43",
+      "n_61",
+      "n_79"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_31",
+      "n_49",
+      "n_67",
+      "n_85"
+     ],
+     "three_BminusL": "3"
+    }
+   ],
+   "nu1": 7,
+   "singlet_types": 15,
+   "singlets": 70,
+   "trace_anomalous": "144",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-I|Z6I_32__SM_20260917_407": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 3,
+   "bl_verdict": "closed: ever-even singlets are never D-flat (one Farkas vector)",
+   "control_single_type_realizable": true,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_18": "1/12",
+    "n_19": "1/3",
+    "n_21": "1/12",
+    "n_22": "1/12",
+    "n_36": "1/12",
+    "n_37": "1/4",
+    "n_8": "1/12"
+   },
+   "doublet_3BL_bl": [
+    [
+     "-1",
+     [
+      "-3",
+      "3",
+      "0"
+     ]
+    ],
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 21,
+   "farkas_ever_even": [
+    "0",
+    "-2",
+    "0",
+    "4/3",
+    "0",
+    "0",
+    "-2/15"
+   ],
+   "fi_header": "143.99999999999994316",
+   "lattice_rank": 8,
+   "left": 224,
+   "never_even_types": [
+    {
+     "fields": [
+      "n_19",
+      "n_40",
+      "n_61",
+      "n_82",
+      "n_103"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_37",
+      "n_58",
+      "n_79",
+      "n_100"
+     ],
+     "three_BminusL": "3"
+    }
+   ],
+   "nu1": 8,
+   "singlet_types": 23,
+   "singlets": 102,
+   "trace_anomalous": "144",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 8
+  },
+  "Z6-I|Z6I_32__SM_20260917_6": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 5,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 21,
+   "farkas_all": [
+    "0",
+    "2/3",
+    "2/35",
+    "-286/9051",
+    "803/424104",
+    "481/65928",
+    "204/52729",
+    "17/23610"
+   ],
+   "fi_header": "264.00000000000034106",
+   "lattice_rank": 9,
+   "left": 182,
+   "never_even_types": [],
+   "nu1": 9,
+   "singlet_types": 21,
+   "singlets": 83,
+   "trace_anomalous": "264",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 32
+  },
+  "Z6-I|Z6I_33__SM_20260917_148": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 15,
+   "farkas_all": [
+    "0",
+    "-145/3051",
+    "551/350865",
+    "1421/577530",
+    "203/80352",
+    "-377/562464",
+    "13/19530"
+   ],
+   "fi_header": "231.99999999999988631",
+   "lattice_rank": 8,
+   "left": 157,
+   "never_even_types": [],
+   "nu1": 8,
+   "singlet_types": 15,
+   "singlets": 62,
+   "trace_anomalous": "232",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_33__SM_20260917_151": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 9,
+   "farkas_all": [
+    "0",
+    "-140/99",
+    "-490/3597",
+    "3185/1523493",
+    "-10325/4374801",
+    "-182/49767",
+    "1/106"
+   ],
+   "fi_header": "280.00000000000136424",
+   "lattice_rank": 8,
+   "left": 143,
+   "never_even_types": [],
+   "nu1": 8,
+   "singlet_types": 9,
+   "singlets": 34,
+   "trace_anomalous": "280",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_33__SM_20260917_1807": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 3,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 9,
+   "farkas_all": [
+    "0",
+    "25/339",
+    "1025/1092936",
+    "35/15314",
+    "15/1976",
+    "1/104"
+   ],
+   "fi_header": "200.00000000000000000",
+   "lattice_rank": 7,
+   "left": 127,
+   "never_even_types": [],
+   "nu1": 7,
+   "singlet_types": 9,
+   "singlets": 34,
+   "trace_anomalous": "200",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 8
+  },
+  "Z6-I|Z6I_33__SM_20260917_384": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 3,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 13,
+   "farkas_all": [
+    "0",
+    "-140/3051",
+    "2366/1339389",
+    "-56/65411",
+    "98/274905",
+    "17/3690"
+   ],
+   "fi_header": "224.00000000000028422",
+   "lattice_rank": 7,
+   "left": 164,
+   "never_even_types": [],
+   "nu1": 7,
+   "singlet_types": 13,
+   "singlets": 59,
+   "trace_anomalous": "224",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 8
+  },
+  "Z6-I|Z6I_33__SM_20260917_487": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 9,
+   "farkas_all": [
+    "0",
+    "175/792",
+    "155/9724",
+    "553/43758",
+    "29/1716",
+    "0",
+    "7/312"
+   ],
+   "fi_header": "200.00000000000014211",
+   "lattice_rank": 8,
+   "left": 147,
+   "never_even_types": [],
+   "nu1": 8,
+   "singlet_types": 9,
+   "singlets": 34,
+   "trace_anomalous": "200",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_33__SM_20260917_60": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 11,
+   "farkas_all": [
+    "0",
+    "65/636",
+    "-235/1083108",
+    "-282/386581",
+    "-665/178422",
+    "-1/786",
+    "0"
+   ],
+   "fi_header": "159.99999999999994316",
+   "lattice_rank": 8,
+   "left": 151,
+   "never_even_types": [],
+   "nu1": 8,
+   "singlet_types": 11,
+   "singlets": 40,
+   "trace_anomalous": "160",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_33__SM_20260917_604": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 15,
+   "farkas_all": [
+    "0",
+    "0",
+    "-6/179",
+    "-69/76433",
+    "225/107177",
+    "153/171935",
+    "5/822"
+   ],
+   "fi_header": "216.00000000000017053",
+   "lattice_rank": 8,
+   "left": 168,
+   "never_even_types": [],
+   "nu1": 8,
+   "singlet_types": 15,
+   "singlets": 66,
+   "trace_anomalous": "216",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_34__SM_20260917_30": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 9,
+   "farkas_all": [
+    "0",
+    "17/18",
+    "55/5202",
+    "-28/18785",
+    "-28/8385",
+    "1379/485685",
+    "1/1506"
+   ],
+   "fi_header": "280.00000000000011369",
+   "lattice_rank": 8,
+   "left": 143,
+   "never_even_types": [],
+   "nu1": 8,
+   "singlet_types": 9,
+   "singlets": 34,
+   "trace_anomalous": "280",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_34__SM_20260917_441": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 3,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 9,
+   "farkas_all": [
+    "0",
+    "-25/507",
+    "-275/234572",
+    "-625/453876",
+    "55/3488",
+    "-1/96"
+   ],
+   "fi_header": "200.00000000000034106",
+   "lattice_rank": 7,
+   "left": 127,
+   "never_even_types": [],
+   "nu1": 7,
+   "singlet_types": 9,
+   "singlets": 34,
+   "trace_anomalous": "200",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 8
+  },
+  "Z6-I|Z6I_34__SM_20260917_71": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 11,
+   "farkas_all": [
+    "0",
+    "-5/6",
+    "-5/543",
+    "-335/117831",
+    "1585/434217",
+    "-142/286143",
+    "-1/858"
+   ],
+   "fi_header": "160.00000000000005684",
+   "lattice_rank": 8,
+   "left": 151,
+   "never_even_types": [],
+   "nu1": 8,
+   "singlet_types": 11,
+   "singlets": 40,
+   "trace_anomalous": "160",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_34__SM_20260917_75": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 2,
+   "bl_verdict": "closed: ever-even singlets are never D-flat (one Farkas vector)",
+   "control_single_type_realizable": true,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_17": "2/13",
+    "n_20": "5/26",
+    "n_26": "1/26",
+    "n_31": "3/26",
+    "n_33": "1/26",
+    "n_6": "1/13"
+   },
+   "doublet_3BL_bl": [
+    [
+     "-162/185",
+     [
+      "-107874/37",
+      "110682/37"
+     ]
+    ],
+    [
+     "0",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 13,
+   "farkas_ever_even": [
+    "0",
+    "-13/228",
+    "-2795/208392",
+    "-6643/842708",
+    "7293/2579756",
+    "-29/83940"
+   ],
+   "fi_header": "311.99999999999971578",
+   "lattice_rank": 7,
+   "left": 160,
+   "never_even_types": [
+    {
+     "fields": [
+      "n_9",
+      "n_21",
+      "n_39",
+      "n_57",
+      "n_75"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_20",
+      "n_38",
+      "n_56",
+      "n_74"
+     ],
+     "three_BminusL": "3"
+    }
+   ],
+   "nu1": 7,
+   "singlet_types": 15,
+   "singlets": 70,
+   "trace_anomalous": "312",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-I|Z6I_34__SM_20260917_89": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 9,
+   "farkas_all": [
+    "0",
+    "25/24",
+    "0",
+    "0",
+    "175/792",
+    "-35/1584",
+    "-7/144"
+   ],
+   "fi_header": "200.00000000000022737",
+   "lattice_rank": 8,
+   "left": 147,
+   "never_even_types": [],
+   "nu1": 8,
+   "singlet_types": 9,
+   "singlets": 34,
+   "trace_anomalous": "200",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_36__SM_20260917_42": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 11,
+   "farkas_all": [
+    "0",
+    "0",
+    "-10/87",
+    "-5/6",
+    "220/15921",
+    "289/124623",
+    "1/454"
+   ],
+   "fi_header": "160.00000000000000000",
+   "lattice_rank": 8,
+   "left": 151,
+   "never_even_types": [],
+   "nu1": 8,
+   "singlet_types": 11,
+   "singlets": 40,
+   "trace_anomalous": "160",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_36__SM_20260917_56": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 15,
+   "farkas_all": [
+    "0",
+    "0",
+    "-3/2",
+    "9/418",
+    "0",
+    "51/113905",
+    "-2/327"
+   ],
+   "fi_header": "216.00000000000008527",
+   "lattice_rank": 8,
+   "left": 168,
+   "never_even_types": [],
+   "nu1": 8,
+   "singlet_types": 15,
+   "singlets": 66,
+   "trace_anomalous": "216",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_38__SM_20260917_33": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 5,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 21,
+   "farkas_all": [
+    "0",
+    "11/34",
+    "121/459",
+    "-88/1647",
+    "407/18666",
+    "-385/6018",
+    "-22/45",
+    "3/590"
+   ],
+   "fi_header": "264.00000000000079581",
+   "lattice_rank": 9,
+   "left": 182,
+   "never_even_types": [],
+   "nu1": 9,
+   "singlet_types": 21,
+   "singlets": 83,
+   "trace_anomalous": "264",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 32
+  },
+  "Z6-I|Z6I_38__SM_20260917_4": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 3,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 9,
+   "farkas_all": [
+    "0",
+    "0",
+    "165/46",
+    "-55/644",
+    "55/2884",
+    "5/618"
+   ],
+   "fi_header": "440.00000000000034106",
+   "lattice_rank": 7,
+   "left": 144,
+   "never_even_types": [],
+   "nu1": 7,
+   "singlet_types": 9,
+   "singlets": 34,
+   "trace_anomalous": "440",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 8
+  },
+  "Z6-I|Z6I_38__SM_20260917_46": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 3,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 9,
+   "farkas_all": [
+    "0",
+    "5/108",
+    "-25/378",
+    "0",
+    "5/5012",
+    "-1/716"
+   ],
+   "fi_header": "200.00000000000062528",
+   "lattice_rank": 7,
+   "left": 127,
+   "never_even_types": [],
+   "nu1": 7,
+   "singlet_types": 9,
+   "singlets": 34,
+   "trace_anomalous": "200",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 8
+  },
+  "Z6-I|Z6I_38__SM_20260917_8": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 9,
+   "farkas_all": [
+    "0",
+    "-350/423",
+    "3080/733059",
+    "2240/3315229",
+    "-11200/35805621",
+    "9541/28187802",
+    "-1/1506"
+   ],
+   "fi_header": "280.00000000000090949",
+   "lattice_rank": 8,
+   "left": 143,
+   "never_even_types": [],
+   "nu1": 8,
+   "singlet_types": 9,
+   "singlets": 34,
+   "trace_anomalous": "280",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_40__SM_20260917_10": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 5,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 21,
+   "farkas_all": [
+    "0",
+    "-11/18",
+    "-143/3114",
+    "2651/187878",
+    "-484/318741",
+    "9416/4168287",
+    "2354/3159945",
+    "7/890"
+   ],
+   "fi_header": "263.99999999999954525",
+   "lattice_rank": 9,
+   "left": 182,
+   "never_even_types": [],
+   "nu1": 9,
+   "singlet_types": 21,
+   "singlets": 83,
+   "trace_anomalous": "264",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 32
+  },
+  "Z6-I|Z6I_40__SM_20260917_147": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 3,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "-3/2",
+     [
+      "0",
+      "0",
+      "-6"
+     ]
+    ],
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 13,
+   "farkas_all": [
+    "0",
+    "0",
+    "0",
+    "-28/9",
+    "-5/9",
+    "0",
+    "0"
+   ],
+   "fi_header": "336.00000000000079581",
+   "lattice_rank": 8,
+   "left": 190,
+   "never_even_types": [
+    {
+     "fields": [
+      "n_9",
+      "n_20",
+      "n_38",
+      "n_56",
+      "n_74"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_26",
+      "n_44",
+      "n_62",
+      "n_80"
+     ],
+     "three_BminusL": "3"
+    }
+   ],
+   "nu1": 8,
+   "singlet_types": 15,
+   "singlets": 70,
+   "trace_anomalous": "336",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-I|Z6I_40__SM_20260917_159": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 9,
+   "farkas_all": [
+    "0",
+    "0",
+    "0",
+    "20/41",
+    "60/2993",
+    "14/219",
+    "0"
+   ],
+   "fi_header": "199.99999999999988631",
+   "lattice_rank": 8,
+   "left": 147,
+   "never_even_types": [],
+   "nu1": 8,
+   "singlet_types": 9,
+   "singlets": 34,
+   "trace_anomalous": "200",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_40__SM_20260917_165": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 15,
+   "farkas_all": [
+    "0",
+    "68/81",
+    "0",
+    "34/567",
+    "2074/381591",
+    "-1207/2101779",
+    "64/15615"
+   ],
+   "fi_header": "272.00000000000022737",
+   "lattice_rank": 8,
+   "left": 180,
+   "never_even_types": [],
+   "nu1": 8,
+   "singlet_types": 15,
+   "singlets": 66,
+   "trace_anomalous": "272",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_40__SM_20260917_184": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 3,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 9,
+   "farkas_all": [
+    "0",
+    "-15/334",
+    "525/265864",
+    "475/89152",
+    "-55/5824",
+    "1/104"
+   ],
+   "fi_header": "199.99999999999988631",
+   "lattice_rank": 7,
+   "left": 127,
+   "never_even_types": [],
+   "nu1": 7,
+   "singlet_types": 9,
+   "singlets": 34,
+   "trace_anomalous": "200",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 8
+  },
+  "Z6-I|Z6I_40__SM_20260917_1938": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 2,
+   "bl_verdict": "closed: ever-even singlets are never D-flat (one Farkas vector)",
+   "control_single_type_realizable": true,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_10": "1/12",
+    "n_24": "1/3",
+    "n_26": "1/4",
+    "n_32": "1/4",
+    "n_5": "1/6",
+    "n_8": "1/12"
+   },
+   "doublet_3BL_bl": [
+    [
+     "-1",
+     [
+      "0",
+      "-6"
+     ]
+    ],
+    [
+     "0",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 13,
+   "farkas_ever_even": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "4/5"
+   ],
+   "fi_header": "143.99999999999974420",
+   "lattice_rank": 7,
+   "left": 181,
+   "never_even_types": [
+    {
+     "fields": [
+      "n_11",
+      "n_23",
+      "n_41",
+      "n_59",
+      "n_77"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_24",
+      "n_42",
+      "n_60",
+      "n_78"
+     ],
+     "three_BminusL": "3"
+    }
+   ],
+   "nu1": 7,
+   "singlet_types": 15,
+   "singlets": 70,
+   "trace_anomalous": "144",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-I|Z6I_40__SM_20260917_1940": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 2,
+   "bl_verdict": "closed: ever-even singlets are never D-flat (one Farkas vector)",
+   "control_single_type_realizable": true,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_17": "1/6",
+    "n_19": "1/8",
+    "n_24": "1/24",
+    "n_26": "1/8",
+    "n_31": "1/24",
+    "n_7": "1/12"
+   },
+   "doublet_3BL_bl": [
+    [
+     "-1",
+     [
+      "6",
+      "0"
+     ]
+    ],
+    [
+     "0",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 13,
+   "farkas_ever_even": [
+    "0",
+    "-4",
+    "0",
+    "8/3",
+    "0",
+    "-4/15"
+   ],
+   "fi_header": "575.99999999999931788",
+   "lattice_rank": 7,
+   "left": 202,
+   "never_even_types": [
+    {
+     "fields": [
+      "n_10",
+      "n_22",
+      "n_40",
+      "n_58",
+      "n_76"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_17",
+      "n_35",
+      "n_53",
+      "n_71"
+     ],
+     "three_BminusL": "3"
+    }
+   ],
+   "nu1": 7,
+   "singlet_types": 15,
+   "singlets": 70,
+   "trace_anomalous": "576",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-I|Z6I_40__SM_20260917_2391": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "-1",
+     [
+      "10",
+      "-28",
+      "-28",
+      "0"
+     ]
+    ],
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 21,
+   "farkas_all": [
+    "0",
+    "0",
+    "-42/13",
+    "-70/117",
+    "-5/9",
+    "0",
+    "0",
+    "0"
+   ],
+   "fi_header": "336.00000000000000000",
+   "lattice_rank": 9,
+   "left": 212,
+   "never_even_types": [
+    {
+     "fields": [
+      "n_14",
+      "n_29",
+      "n_50",
+      "n_71",
+      "n_92"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_30",
+      "n_51",
+      "n_72",
+      "n_93"
+     ],
+     "three_BminusL": "3"
+    }
+   ],
+   "nu1": 9,
+   "singlet_types": 23,
+   "singlets": 102,
+   "trace_anomalous": "336",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_40__SM_20260917_275": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 6,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 23,
+   "farkas_all": [
+    "0",
+    "5/3",
+    "1/3",
+    "80/1059",
+    "-2290/212859",
+    "-210/9179",
+    "-260/16851",
+    "-166/11439",
+    "-5/186"
+   ],
+   "fi_header": "240.00000000000022737",
+   "lattice_rank": 10,
+   "left": 186,
+   "never_even_types": [],
+   "nu1": 10,
+   "singlet_types": 23,
+   "singlets": 90,
+   "trace_anomalous": "240",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 64
+  },
+  "Z6-I|Z6I_40__SM_20260917_2820": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 3,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "-1",
+     [
+      "8",
+      "-14",
+      "0"
+     ]
+    ],
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 13,
+   "farkas_all": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "21/5",
+    "12/5",
+    "0"
+   ],
+   "fi_header": "336.00000000000022737",
+   "lattice_rank": 8,
+   "left": 190,
+   "never_even_types": [
+    {
+     "fields": [
+      "n_11",
+      "n_23",
+      "n_41",
+      "n_59",
+      "n_77"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_21",
+      "n_39",
+      "n_57",
+      "n_75"
+     ],
+     "three_BminusL": "3"
+    }
+   ],
+   "nu1": 8,
+   "singlet_types": 15,
+   "singlets": 70,
+   "trace_anomalous": "336",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-I|Z6I_40__SM_20260917_285": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 3,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 13,
+   "farkas_all": [
+    "0",
+    "11/82",
+    "-11/30",
+    "33/5986",
+    "-781/294774",
+    "7/3365"
+   ],
+   "fi_header": "264.00000000000011369",
+   "lattice_rank": 7,
+   "left": 152,
+   "never_even_types": [],
+   "nu1": 7,
+   "singlet_types": 13,
+   "singlets": 59,
+   "trace_anomalous": "264",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 8
+  },
+  "Z6-I|Z6I_40__SM_20260917_360": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 15,
+   "farkas_all": [
+    "0",
+    "-29/2637",
+    "-2465/1036341",
+    "986/1446633",
+    "-2233/4177935",
+    "-725/257418",
+    "-11/567"
+   ],
+   "fi_header": "231.99999999999985789",
+   "lattice_rank": 8,
+   "left": 157,
+   "never_even_types": [],
+   "nu1": 8,
+   "singlet_types": 15,
+   "singlets": 62,
+   "trace_anomalous": "232",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_40__SM_20260917_493": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 2,
+   "bl_verdict": "closed: ever-even singlets are never D-flat (one Farkas vector)",
+   "control_single_type_realizable": true,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_12": "1/26",
+    "n_16": "5/26",
+    "n_26": "2/13",
+    "n_32": "3/26",
+    "n_4": "1/13",
+    "n_9": "1/26"
+   },
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0"
+     ]
+    ],
+    [
+     "63/235",
+     [
+      "0",
+      "3978"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 13,
+   "farkas_ever_even": [
+    "0",
+    "0",
+    "-13/904",
+    "819/51302",
+    "7865/725492",
+    "-19/23970"
+   ],
+   "fi_header": "312.00000000000034106",
+   "lattice_rank": 7,
+   "left": 160,
+   "never_even_types": [
+    {
+     "fields": [
+      "n_11",
+      "n_20",
+      "n_38",
+      "n_56",
+      "n_74"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_16",
+      "n_34",
+      "n_52",
+      "n_70"
+     ],
+     "three_BminusL": "3"
+    }
+   ],
+   "nu1": 7,
+   "singlet_types": 15,
+   "singlets": 70,
+   "trace_anomalous": "312",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-I|Z6I_40__SM_20260917_596": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 11,
+   "farkas_all": [
+    "0",
+    "-15/554",
+    "35/115509",
+    "-347/124266",
+    "109/14751",
+    "-5/198",
+    "0"
+   ],
+   "fi_header": "159.99999999999994316",
+   "lattice_rank": 8,
+   "left": 151,
+   "never_even_types": [],
+   "nu1": 8,
+   "singlet_types": 11,
+   "singlets": 40,
+   "trace_anomalous": "160",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_40__SM_20260917_63": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 11,
+   "farkas_all": [
+    "0",
+    "29/27",
+    "0",
+    "58/297",
+    "1015/14058",
+    "-580/338031",
+    "143/23805"
+   ],
+   "fi_header": "232.00000000000068212",
+   "lattice_rank": 8,
+   "left": 167,
+   "never_even_types": [],
+   "nu1": 8,
+   "singlet_types": 11,
+   "singlets": 40,
+   "trace_anomalous": "232",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_40__SM_20260917_81": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 9,
+   "farkas_all": [
+    "0",
+    "49/153",
+    "-259/7701",
+    "-1435/19932",
+    "-455/92004",
+    "-203/199342",
+    "2/429"
+   ],
+   "fi_header": "280.00000000000005684",
+   "lattice_rank": 8,
+   "left": 143,
+   "never_even_types": [],
+   "nu1": 8,
+   "singlet_types": 9,
+   "singlets": 34,
+   "trace_anomalous": "280",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_40__SM_20260917_841": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 15,
+   "farkas_all": [
+    "0",
+    "0",
+    "3/5",
+    "3/20",
+    "-9/1708",
+    "-981/310429",
+    "1/21810"
+   ],
+   "fi_header": "216.00000000000076739",
+   "lattice_rank": 8,
+   "left": 168,
+   "never_even_types": [],
+   "nu1": 8,
+   "singlet_types": 15,
+   "singlets": 66,
+   "trace_anomalous": "216",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_42__SM_20260917_45": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 3,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 13,
+   "farkas_all": [
+    "0",
+    "-22/4245",
+    "539/69618",
+    "176/7011",
+    "11/684",
+    "-1/180"
+   ],
+   "fi_header": "264.00000000000022737",
+   "lattice_rank": 7,
+   "left": 152,
+   "never_even_types": [],
+   "nu1": 7,
+   "singlet_types": 13,
+   "singlets": 59,
+   "trace_anomalous": "264",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 8
+  },
+  "Z6-I|Z6I_42__SM_20260917_93": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 3,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 9,
+   "farkas_all": [
+    "0",
+    "0",
+    "385/114",
+    "-275/3686",
+    "-7150/69549",
+    "-17/1434"
+   ],
+   "fi_header": "439.99999999999931788",
+   "lattice_rank": 7,
+   "left": 144,
+   "never_even_types": [],
+   "nu1": 7,
+   "singlet_types": 9,
+   "singlets": 34,
+   "trace_anomalous": "440",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 8
+  },
+  "Z6-I|Z6I_43__SM_20260917_104": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 11,
+   "farkas_all": [
+    "0",
+    "-145/954",
+    "1682/24327",
+    "58/25245",
+    "-1537/29205",
+    "5/413",
+    "29/315"
+   ],
+   "fi_header": "231.99999999999994316",
+   "lattice_rank": 8,
+   "left": 167,
+   "never_even_types": [],
+   "nu1": 8,
+   "singlet_types": 11,
+   "singlets": 40,
+   "trace_anomalous": "232",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_43__SM_20260917_1069": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 3,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 9,
+   "farkas_all": [
+    "0",
+    "0",
+    "25/64",
+    "5/48",
+    "-25/5568",
+    "-3/116"
+   ],
+   "fi_header": "200.00000000000011369",
+   "lattice_rank": 7,
+   "left": 127,
+   "never_even_types": [],
+   "nu1": 7,
+   "singlet_types": 9,
+   "singlets": 34,
+   "trace_anomalous": "200",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 8
+  },
+  "Z6-I|Z6I_43__SM_20260917_114": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 15,
+   "farkas_all": [
+    "0",
+    "-29/459",
+    "-1421/138618",
+    "203/72480",
+    "-2407/635040",
+    "319/341334",
+    "8/1935"
+   ],
+   "fi_header": "232.00000000000017053",
+   "lattice_rank": 8,
+   "left": 157,
+   "never_even_types": [],
+   "nu1": 8,
+   "singlet_types": 15,
+   "singlets": 62,
+   "trace_anomalous": "232",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_43__SM_20260917_1227": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 9,
+   "farkas_all": [
+    "0",
+    "-5/3",
+    "25/57",
+    "1/342",
+    "-1/9",
+    "0",
+    "-1/18"
+   ],
+   "fi_header": "200.00000000000014211",
+   "lattice_rank": 8,
+   "left": 147,
+   "never_even_types": [],
+   "nu1": 8,
+   "singlet_types": 9,
+   "singlets": 34,
+   "trace_anomalous": "200",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_43__SM_20260917_142": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 3,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 9,
+   "farkas_all": [
+    "0",
+    "0",
+    "0",
+    "-55/828",
+    "25/414",
+    "-11/18"
+   ],
+   "fi_header": "440.00000000000079581",
+   "lattice_rank": 7,
+   "left": 144,
+   "never_even_types": [],
+   "nu1": 7,
+   "singlet_types": 9,
+   "singlets": 34,
+   "trace_anomalous": "440",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 8
+  },
+  "Z6-I|Z6I_43__SM_20260917_20": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 3,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 13,
+   "farkas_all": [
+    "0",
+    "-28/459",
+    "-7/11475",
+    "-49/4425",
+    "644/432765",
+    "13/7335"
+   ],
+   "fi_header": "223.99999999999988631",
+   "lattice_rank": 7,
+   "left": 164,
+   "never_even_types": [],
+   "nu1": 7,
+   "singlet_types": 13,
+   "singlets": 59,
+   "trace_anomalous": "224",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 8
+  },
+  "Z6-I|Z6I_43__SM_20260917_207": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 3,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 13,
+   "farkas_all": [
+    "0",
+    "13/291",
+    "-53/59655",
+    "-176/7011",
+    "11/1368",
+    "1/360"
+   ],
+   "fi_header": "264.00000000000011369",
+   "lattice_rank": 7,
+   "left": 152,
+   "never_even_types": [],
+   "nu1": 7,
+   "singlet_types": 13,
+   "singlets": 59,
+   "trace_anomalous": "264",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 8
+  },
+  "Z6-I|Z6I_43__SM_20260917_300": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 15,
+   "farkas_all": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "-2/423",
+    "-659/464877",
+    "61/98910"
+   ],
+   "fi_header": "272.00000000000000000",
+   "lattice_rank": 8,
+   "left": 180,
+   "never_even_types": [],
+   "nu1": 8,
+   "singlet_types": 15,
+   "singlets": 66,
+   "trace_anomalous": "272",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_43__SM_20260917_519": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 9,
+   "farkas_all": [
+    "0",
+    "0",
+    "-980/1557",
+    "175/22836",
+    "-245/41316",
+    "196/71051",
+    "-5/1362"
+   ],
+   "fi_header": "279.99999999999931788",
+   "lattice_rank": 8,
+   "left": 143,
+   "never_even_types": [],
+   "nu1": 8,
+   "singlet_types": 9,
+   "singlets": 34,
+   "trace_anomalous": "280",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_46__SM_20260917_10": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 11,
+   "farkas_all": [
+    "0",
+    "-5/93",
+    "-55/1798",
+    "-265/20358",
+    "5/41418",
+    "19/50622",
+    "1/858"
+   ],
+   "fi_header": "160.00000000000039790",
+   "lattice_rank": 8,
+   "left": 151,
+   "never_even_types": [],
+   "nu1": 8,
+   "singlet_types": 11,
+   "singlets": 40,
+   "trace_anomalous": "160",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_46__SM_20260917_12": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 6,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 23,
+   "farkas_all": [
+    "0",
+    "0",
+    "0",
+    "5/432",
+    "-5/3",
+    "245/9936",
+    "-325/20424",
+    "-1/6105",
+    "2/55"
+   ],
+   "fi_header": "240.00000000000059686",
+   "lattice_rank": 10,
+   "left": 186,
+   "never_even_types": [],
+   "nu1": 10,
+   "singlet_types": 23,
+   "singlets": 90,
+   "trace_anomalous": "240",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 64
+  },
+  "Z6-I|Z6I_46__SM_20260917_126": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 9,
+   "farkas_all": [
+    "0",
+    "0",
+    "-2/47",
+    "116/3149",
+    "116/34103",
+    "-4/1527",
+    "0"
+   ],
+   "fi_header": "200.00000000000039790",
+   "lattice_rank": 8,
+   "left": 147,
+   "never_even_types": [],
+   "nu1": 8,
+   "singlet_types": 9,
+   "singlets": 34,
+   "trace_anomalous": "200",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_46__SM_20260917_35": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 4,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 11,
+   "farkas_all": [
+    "0",
+    "0",
+    "4/63",
+    "59/4620",
+    "-3074/206415",
+    "-3277/1332315",
+    "17/639"
+   ],
+   "fi_header": "232.00000000000051159",
+   "lattice_rank": 8,
+   "left": 167,
+   "never_even_types": [],
+   "nu1": 8,
+   "singlet_types": 11,
+   "singlets": 40,
+   "trace_anomalous": "232",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 16
+  },
+  "Z6-I|Z6I_46__SM_20260917_561": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 2,
+   "bl_verdict": "closed: ever-even singlets are never D-flat (one Farkas vector)",
+   "control_single_type_realizable": true,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_14": "1/26",
+    "n_15": "1/13",
+    "n_18": "1/26",
+    "n_20": "1/13",
+    "n_27": "2/13",
+    "n_32": "1/26"
+   },
+   "doublet_3BL_bl": [
+    [
+     "-36/31",
+     [
+      "-28548/31",
+      "-7488/155"
+     ]
+    ],
+    [
+     "0",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 13,
+   "farkas_ever_even": [
+    "0",
+    "-91/240",
+    "13/12",
+    "-65/976",
+    "13/24888",
+    "-1/136"
+   ],
+   "fi_header": "311.99999999999977263",
+   "lattice_rank": 7,
+   "left": 160,
+   "never_even_types": [
+    {
+     "fields": [
+      "n_15",
+      "n_33",
+      "n_51",
+      "n_69",
+      "n_87"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_27",
+      "n_45",
+      "n_63",
+      "n_81"
+     ],
+     "three_BminusL": "3"
+    }
+   ],
+   "nu1": 7,
+   "singlet_types": 15,
+   "singlets": 70,
+   "trace_anomalous": "312",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-I|Z6I_55__SM_20260917_179": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 2,
+   "bl_verdict": "closed: ever-even singlets are never D-flat (one Farkas vector)",
+   "control_single_type_realizable": true,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_12": "1/6",
+    "n_14": "1/12",
+    "n_25": "1/12",
+    "n_29": "1/4",
+    "n_30": "1/12",
+    "n_31": "1/12"
+   },
+   "doublet_3BL_bl": [
+    [
+     "-3/5",
+     [
+      "12",
+      "12"
+     ]
+    ],
+    [
+     "0",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 13,
+   "farkas_ever_even": [
+    "0",
+    "-2",
+    "0",
+    "0",
+    "-4/7",
+    "6/35"
+   ],
+   "fi_header": "144.00000000000014211",
+   "lattice_rank": 7,
+   "left": 181,
+   "never_even_types": [
+    {
+     "fields": [
+      "n_12",
+      "n_27",
+      "n_45",
+      "n_63",
+      "n_81"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_29",
+      "n_47",
+      "n_65",
+      "n_83"
+     ],
+     "three_BminusL": "3"
+    }
+   ],
+   "nu1": 7,
+   "singlet_types": 15,
+   "singlets": 70,
+   "trace_anomalous": "144",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-I|Z6I_55__SM_20260917_38": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 3,
+   "bl_verdict": "closed: no D-flat direction at all",
+   "control_single_type_realizable": true,
+   "dflat_any": false,
+   "doublet_3BL_bl": [
+    [
+     "-3/5",
+     [
+      "0",
+      "12",
+      "12"
+     ]
+    ],
+    [
+     "0",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 13,
+   "farkas_all": [
+    "0",
+    "0",
+    "0",
+    "3",
+    "0",
+    "0",
+    "0"
+   ],
+   "fi_header": "336.00000000000187583",
+   "lattice_rank": 8,
+   "left": 190,
+   "never_even_types": [
+    {
+     "fields": [
+      "n_16",
+      "n_33",
+      "n_51",
+      "n_69",
+      "n_87"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_35",
+      "n_53",
+      "n_71",
+      "n_89"
+     ],
+     "three_BminusL": "3"
+    }
+   ],
+   "nu1": 8,
+   "singlet_types": 15,
+   "singlets": 70,
+   "trace_anomalous": "336",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-I|Z6I_55__SM_20260917_91": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 2,
+   "bl_verdict": "closed: ever-even singlets are never D-flat (one Farkas vector)",
+   "control_single_type_realizable": true,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_13": "1/13",
+    "n_14": "1/26",
+    "n_25": "1/13",
+    "n_26": "2/13",
+    "n_32": "1/26",
+    "n_33": "1/26"
+   },
+   "doublet_3BL_bl": [
+    [
+     "-54/79",
+     [
+      "0",
+      "-31356/79"
+     ]
+    ],
+    [
+     "0",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 13,
+   "farkas_ever_even": [
+    "0",
+    "-13/8",
+    "39/440",
+    "-91/264",
+    "143/804",
+    "-1/1608"
+   ],
+   "fi_header": "311.99999999999948841",
+   "lattice_rank": 7,
+   "left": 160,
+   "never_even_types": [
+    {
+     "fields": [
+      "n_13",
+      "n_29",
+      "n_47",
+      "n_65",
+      "n_83"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_26",
+      "n_44",
+      "n_62",
+      "n_80"
+     ],
+     "three_BminusL": "3"
+    }
+   ],
+   "nu1": 7,
+   "singlet_types": 15,
+   "singlets": 70,
+   "trace_anomalous": "312",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  },
+  "Z6-I|Z6I_56__SM_20260917_215": {
+   "bl_direction": true,
+   "bl_nullspace_dim": 2,
+   "bl_verdict": "closed: ever-even singlets are never D-flat (one Farkas vector)",
+   "control_single_type_realizable": true,
+   "dflat_any": true,
+   "dflat_witness": {
+    "n_13": "1/26",
+    "n_14": "1/26",
+    "n_16": "1/13",
+    "n_30": "3/26",
+    "n_32": "1/26"
+   },
+   "doublet_3BL_bl": [
+    [
+     "-6/5",
+     [
+      "0",
+      "-18"
+     ]
+    ],
+    [
+     "0",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "doublet_3BL_l": [
+    [
+     "-3",
+     [
+      "0",
+      "0"
+     ]
+    ]
+   ],
+   "ever_even_types": 13,
+   "farkas_ever_even": [
+    "0",
+    "-13/1160",
+    "-416/21315",
+    "169/3332",
+    "1/136",
+    "-13/60"
+   ],
+   "fi_header": "311.99999999999988631",
+   "lattice_rank": 7,
+   "left": 160,
+   "never_even_types": [
+    {
+     "fields": [
+      "n_14",
+      "n_29",
+      "n_47",
+      "n_65",
+      "n_83"
+     ],
+     "three_BminusL": "3"
+    },
+    {
+     "fields": [
+      "n_30",
+      "n_48",
+      "n_66",
+      "n_84"
+     ],
+     "three_BminusL": "3"
+    }
+   ],
+   "nu1": 7,
+   "singlet_types": 15,
+   "singlets": 70,
+   "trace_anomalous": "312",
+   "z2_even_dflat": 0,
+   "z2_matter_parities": 0
+  }
+ },
+ "pass_id": 10960,
+ "summary": {
+  "anomaly_free": 4,
+  "bl_closed_by_rays": 1,
+  "bl_closed_farkas_union": 23,
+  "bl_closed_no_dflat": 64,
+  "bl_counterexamples": 0,
+  "bl_direction": 88,
+  "dflat_any_Z6I": 23,
+  "dflat_any_Z6II": 105,
+  "models": 215,
+  "z2_characters": 1024,
+  "z2_even_dflat": 0,
+  "z2_models_with_parity": 64
+ }
+}

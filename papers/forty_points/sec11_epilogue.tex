@@ -25,7 +25,8 @@ three-family Standard Models, and the same geometry specifies a quantum computer
      $\bullet$ clock real form $\Rightarrow(1,9)$\\
      $\bullet$ $F_4$, $E_{6(-26)}$, $\so(1,9)$, $16$\\
      $\bullet$ matter parity $=2\pi$ rotation\\
-     $\bullet$ chirality no-go\\
+     $\bullet$ chirality no-go (antiunitary swap)\\
+     $\bullet$ no matter parity in SUSY\\ \phantom{$\bullet$} singlet vacua (all 215 models)\\
      $\bullet$ ISA, memory, magic census};
   \node[col=gold] at (5.0,0) {}; \node[hd=gold] at (5.0,-0.35) {bridge / hosted};
   \node[it] at (2.9,-0.75) {$\bullet$ ``null'' $=$ shared measurement\\
@@ -42,7 +43,7 @@ three-family Standard Models, and the same geometry specifies a quantum computer
   \node[it] at (7.9,-0.75) {$\bullet$ a dynamical principle\\
      $\bullet$ a continuum limit; gravity\\
      $\bullet$ which chirality, and why\\
-     $\bullet$ a realistic SUSY vacuum\\
+     $\bullet$ SUSY vacuum via hidden\\ \phantom{$\bullet$} nonabelian condensates\\
      $\bullet$ masses, mixings, couplings\\
      $\bullet$ the $54$ Fourier intertwiner\\
      $\bullet$ magic-state injection\\
@@ -55,9 +56,12 @@ three-family Standard Models, and the same geometry specifies a quantum computer
 \subsection{Seven open problems, stated sharply}
 
 \begin{enumerate}[label=\textbf{\arabic*.},leftmargin=1.6em,itemsep=5pt]
-\item \textbf{A realistic vacuum.} Find, or exclude, an $F$- and $D$-flat vacuum of the
-      $\Z_6$-I $\W$ class that condenses only matter-even singlets. It is a finite
-      computation over explicit charge matrices and superpotential terms.
+\item \textbf{A realistic vacuum.} In singlet directions this is now settled negatively
+      (Theorem~9.6): the FI term forces a $B-L=\pm1$ condensate in every model. What remains is
+      the hidden nonabelian sector: is there a $D$-flat direction built from hidden $SO(10)$ or
+      $SU(2)$ condensates whose parity is compensated by a hidden centre element --- or must the
+      programme move to other orbifold groups ($\Z_{12}$, $\Z_2\times\Z_4$, \dots) of the same
+      twist? Both are finite computations on the frozen ledger.
 \item \textbf{A dynamical principle.} Every result in this paper is kinematics. What
       action, Hamiltonian or spectral principle on $\W$ has the structures found here as its
       symmetries, and what does it predict? In particular: does such a principle select the
@@ -68,8 +72,9 @@ three-family Standard Models, and the same geometry specifies a quantum computer
       lattice construction, in which one of them becomes a smooth Lorentzian manifold with
       dynamical curvature?
 \item \textbf{Chirality from outside.} Theorem~9.5 proves that handedness cannot be selected
-      from inside. What minimal external datum --- an orientation of the history cycle, a Weil
-      phase, a vacuum --- selects it, and is it the \emph{same} datum in each case?
+      from inside, and the swap is antiunitary. Is the external datum that fixes it the same as
+      the one that fixes the arrow of time (Section~4.10) --- the choice of the unitary,
+      completely positive half of the symmetry group?
 \item \textbf{The $54$ intertwiner.} The diagonal clock/phase weld projects onto $54$
       Fourier directions, while the clock grading supplies a canonical $\mathbf{27}\otimes
       \mathbf2$ at degree one. Is there an explicit equivariant isomorphism?
@@ -101,6 +106,7 @@ the $9$ fixed modes of the spectral clock are the qutrit's $9$ histories & same 
 the independence number of $\W$ is $10$ (an ovoid) & it is $7$; $\W$ has no ovoid (\S10.3)\\
 at most $34$ of $40$ contexts are classically satisfiable & exactly $36$ (\S10.3)\\
 the $\Z_6$-I class is excluded unconditionally & excluded only if matter parity is broken (\S9.3)\\
+every $D$-flat support contains a matter-odd singlet (from $60$ samples) & exhaustively true, and the odd singlet always has $B-L=\pm1$ (\S9.4)\\
 the three families come from $\W$ & in the orbifolds they come from the three tori (\S9.1)\\
 \bottomrule
 \end{tabularx}

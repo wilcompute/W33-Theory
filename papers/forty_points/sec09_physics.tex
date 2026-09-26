@@ -21,16 +21,16 @@ end with a scorecard.
   \entry{3}{Gauge group $SU(3)\times SU(2)\times U(1)$}{sky}{HOSTED}
   \entry{4}{Three generations}{sky}{HOSTED}
   \entry{5}{One chiral generation as a spinor ($16$ of $\mathrm{Spin}(1,9)$)}{teal}{EXACT}
-  \entry{6}{Handedness of the weak force (which chirality)}{rose}{NO-GO}
-  \entry{7}{Proton stability (matter parity)}{gold}{CONDITIONAL}
-  \entry{8}{A supersymmetric, realistic vacuum}{gold}{NOT YET}
+  \entry{6}{Which chirality: exchanged only by antiunitary (CPT-type) symmetries}{rose}{NO-GO}
+  \entry{7}{Matter parity in a supersymmetric singlet vacuum (heterotic class)}{rose}{EXCLUDED}
+  \entry{8}{A supersymmetric, realistic vacuum (nonabelian directions)}{gold}{NOT YET}
   \entry{9}{Masses, mixing angles, coupling constants}{slate}{OPEN}
   \entry{10}{Gravity, a dynamical space-time, the cosmological constant}{slate}{OPEN}
 \end{tikzpicture}
 \caption{Scorecard. \textsf{EXACT}: a theorem or exact computation in this paper.
 \textsf{HOSTED}: realised in an explicit construction built on the geometry, not forced by
-it. \textsf{CONDITIONAL}: holds if a named open condition is met. \textsf{NO-GO}: proved
-impossible from inside. \textsf{OPEN}: not addressed by any exact result.}
+it. \textsf{EXCLUDED}: exhaustively ruled out in a stated scope (Section~\ref{sec:sneutrino}).
+\textsf{NO-GO}: proved impossible from inside. \textsf{OPEN}: not addressed by any exact result.}
 \label{fig:scorecard}
 \end{figure}
 
@@ -237,19 +237,17 @@ properties. Here the honest record is mixed, and it has been corrected more than
 \begin{center}
 \small
 \renewcommand{\arraystretch}{1.3}
-\begin{tabularx}{\textwidth}{@{}p{3.2cm}Xp{2.3cm}@{}}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{3.0cm}X>{\raggedright\arraybackslash}p{2.4cm}@{}}
 \toprule
-\textbf{Requirement} & \textbf{Current exact status (class of $87$ $\Z_6$-I models)} & \textbf{Badge}\\
+\textbf{Requirement} & \textbf{Current exact status} & \textbf{Badge}\\
 \midrule
 Supersymmetric vacuum & In the doublet--triplet-solving vacuum, $F$- and $D$-flatness conflict:
 one $U(1)$ direction gives every mass singlet a positive charge. Gordan's alternative
 (``$D$-flat or empty superpotential, never both'') verified on all $215$ models. & \tierX\ (that vacuum)\\
-$D$-flat directions & Exist in $23$ of $87$ ($\Z_6$-I) and $105$ of $128$ ($\Z_6$-II), after a
-trace-weighting correction. & \tierC\\
-Proton stability & A $\Z_2$ matter parity from $U(1)_{B-L}$ exists in all $87$; all bare
-dangerous operators are matter-odd, all Yukawas and $\mu$ are even (criterion of
-\cite{Lebedev2008}). Every $D$-flat support
-examined contains a matter-odd singlet (sampled, not exhausted). & \tierO\ (conditional)\\
+$D$-flat directions & Exist in $23$ of $87$ ($\Z_6$-I) and $105$ of $128$ ($\Z_6$-II); $83$ of
+the $211$ anomalous models have none. & \tierC\\
+Proton stability & No supersymmetric singlet vacuum preserves a matter parity: $0$ of $88$
+models over the full $B-L$ freedom, $0$ of $1024$ $\Z_2$ parities (Section~\ref{sec:sneutrino}). & \tierC\ (excluded)\\
 The $\mu$ term & Arises at order $3$ or $4$ in every model; none is $\mu$-free through order
 five. Must come from a vacuum symmetry. & \tierO\\
 Neutrino masses & In the splitting-solving models, one to two orders of magnitude too light. & \tierO\\
@@ -257,10 +255,90 @@ Neutrino masses & In the splitting-solving models, one to two orders of magnitud
 \end{tabularx}
 \end{center}
 
-\begin{boundary}[The live question]
-Is there a vacuum of this class that condenses only matter-even singlets and is both $F$-
-and $D$-flat? If yes, the class survives with proton stability; if no, the class is
-excluded. This is a finite, well-posed computation, and it is open.
+\subsection{The Fayet--Iliopoulos term forces a right-handed sneutrino}
+\label{sec:sneutrino}
+
+Every model of the class has an anomalous $U(1)$, whose Fayet--Iliopoulos term must be
+cancelled by giving vacuum values to some singlet fields ($D$-flatness), with $\langle
+n\rangle/M_s\approx0.2$--$0.4$. Proton stability needs a \emph{matter parity} --- a $\Z_2$
+under which quarks and leptons are odd and Higgs fields even --- to survive that
+condensation, so the fields that condense must all be even. The earlier record found every
+tested $D$-flat direction contained an odd singlet, but it had \emph{sampled} $60$ choices of
+$B-L$ per model and said explicitly that this was not a proof; the raw spectra needed to
+finish it were in no repository. They were recovered for this paper from the original scan
+and frozen as an exact-rational ledger of all $215$ models.
+
+\begin{result}{Theorem 9.6 (no matter parity survives the FI term) \hfill \tierC}
+Over the \emph{entire} rational solution set $B-L=x_0+Nt$ of each model:
+\begin{enumerate}[label=(\roman*),leftmargin=1.5em]
+\item $64$ of the $88$ models with a $B-L$ direction have no $D$-flat singlet direction at all
+      (an exact Farkas vector certifies that the FI term cannot be cancelled);
+\item in the other $23$ $\Z_6$-I models, the singlets that are even for \emph{some} choice of
+      $B-L$ are never $D$-flat (one exact Farkas vector each); the only singlets that are
+      never even carry $3(B-L)=3$, i.e.\ $B-L=+1$, fixed by the Standard Model itself, and every
+      $D$-flat direction uses one;
+\item in the one remaining ($\Z_6$-II) model, all $304$ FI-cancelling extreme rays of the $D$-flat
+      cone ($3334$ rays, computed exactly) are obstructed by an integer (Smith normal form)
+      parity certificate; its never-even singlets carry $B-L=\pm1$.
+\end{enumerate}
+Independently, all $1024$ $\Z_2$ characters of the charge lattice that are odd on every
+$q,u^c,d^c,e^c$ give no even $D$-flat direction. Controls: the same exact machinery finds
+the $23+105=128$ $D$-flat models and the $88$ $B-L$ models of the earlier record.
+\cert{w33\_pass10960\_matter\_even\_dflat\_closure.py}
+\end{result}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=0.052cm,y=1cm,
+   seg/.style={draw=white,line width=0.8pt},
+   lab/.style={font=\sffamily\scriptsize,text=white}]
+  % row 1: 215 models
+  \node[anchor=east,font=\sffamily\scriptsize] at (-3,0) {$215$ models};
+  \fill[slate!55] (0,-0.3) rectangle (4,0.3);
+  \fill[rose!65] (4,-0.3) rectangle (87,0.3);
+  \fill[teal!60] (87,-0.3) rectangle (215,0.3);
+  \node[lab] at (45.5,0) {83: FI term cannot be cancelled};
+  \node[lab] at (151,0) {128: $D$-flat directions exist};
+  \node[font=\tiny,text=slate,anchor=south] at (2,0.32) {4 anomaly-free};
+  % row 2: 88 with B-L
+  \node[anchor=east,font=\sffamily\scriptsize] at (-3,-1.1) {$88$ with $B-L$};
+  \fill[rose!65] (0,-1.4) rectangle (64,-0.8);
+  \fill[gold!75] (64,-1.4) rectangle (87,-0.8);
+  \fill[ink!80] (87,-1.4) rectangle (88,-0.8);
+  \node[lab] at (32,-1.1) {64: no $D$-flat direction};
+  \node[font=\sffamily\scriptsize,anchor=west] at (90,-1.1) {23 + 1: every $D$-flat vacuum condenses a $B-L=\pm1$ field};
+  % row 3: Z2 characters
+  \node[anchor=east,font=\sffamily\scriptsize] at (-3,-2.2) {$1024$ $\Z_2$ parities};
+  \fill[rose!65] (0,-2.5) rectangle (160,-1.9);
+  \node[lab] at (80,-2.2) {1024: no even $D$-flat direction};
+  % verdict
+  \node[draw=rose,fill=rosesoft,rounded corners=3pt,font=\sffamily\small\bfseries,text=rose!85!black]
+       at (107.5,-3.3) {matter-even supersymmetric singlet vacua: \ $0$};
+\end{tikzpicture}
+\caption{The exhaustive closure of Theorem~9.6. Every one of the $215$ models is accounted for;
+no branch leaves a matter-parity-preserving supersymmetric vacuum in singlet directions.}
+\label{fig:closure}
+\end{figure}
+
+\begin{physical}[What it means physically: the sneutrino that breaks R-parity]
+A singlet with $B-L=+1$ has the quantum numbers of a right-handed (s)neutrino. Theorem~9.6
+says the anomalous $U(1)$ \emph{forces} such a field to condense. Martin's criterion
+\cite{Martin1992} is exactly relevant here: matter parity survives the breaking of $B-L$ only
+if the fields that break it have even $3(B-L)$ --- which is why realistic $SO(10)$ models
+break $B-L$ with $\mathbf{126}$-type fields ($B-L=\pm2$) rather than $\mathbf{16}$-type ones
+($B-L=\pm1$). In this class the FI term leaves no choice: $B-L$ is broken by one unit, and
+the baryon- and lepton-number-violating couplings that matter parity was protecting are no
+longer forbidden by any symmetry, at the scale of the singlet vacuum values.
+\end{physical}
+
+\begin{boundary}[Scope, and the one loophole]
+The theorem covers every direction built from fields that are singlets of all nonabelian
+groups --- the space specified by the programme's own closure contract. Hidden-sector
+nonabelian directions (for example condensates of hidden $SO(10)$ spinors or $SU(2)$
+doublets, whose parity can be compensated by a hidden centre element) are not covered, and
+are now the only route to a supersymmetric vacuum with matter parity in this class.
+Whether higher-order selection rules suppress the regenerated couplings in a particular
+model is also not addressed. \tierO
 \end{boundary}
 
 \subsection{Handedness: host, not select}
@@ -285,6 +363,23 @@ dynamics. This is the same distinction as in Section~2: the two groups of order 
 differ precisely by whether that swapping symmetry is present.
 \end{plainwords}
 
+\begin{physical}[What it means physically: the swap is antiunitary]
+Which symmetries do the swapping? For the qutrit, the determinant of a symplectic label map
+decides: determinant $+1$ is a unitary Clifford operation, determinant $-1$ can only be
+implemented antiunitarily (Pass~5730,
+\cert{w33\_pass5727\_5730\_torsion\_family\_heisenberg.py}). The other research track has now shown, on the
+clock itself, that the determinant-odd ticks are exactly those that exchange the two
+half-spin sheets (Pass~10955) and that they are not completely positive --- they are not
+physical operations on a bare qutrit but antiunitary, like time reversal (Pass~10952). So
+the geometry's chirality is invariant under every \emph{unitary} symmetry and exchanged only
+by \emph{antiunitary} ones. That is the structure of a chiral quantum theory obeying CPT:
+the mirror of a chiral world is related to it by an antiunitary map, and which of the two is
+called ``left'' is a convention that no internal measurement can fix. The no-go is the
+finite form of this, not a defect peculiar to $\W$. \tierB\
+(\cert{w33\_pass10952\_clock\_complete\_positivity\_firewall.py},
+\cert{w33\_pass10955\_d4\_halfspin\_clock\_bridge.py})
+\end{physical}
+
 \subsection{What we do not count as evidence}
 
 The older manuscripts contain many numerical coincidences: $1/\alpha\approx137$ written as a
@@ -300,6 +395,7 @@ is not specific to $\W$.) \tierB\ at most.
 The geometry carries the Standard Model's shapes --- its gauge algebra's dimensions, three
 equal matter sectors, a chiral spinor, a matter parity --- and a string compactification
 built on its twist produces genuine three-family Standard Models whose Higgs sits in the
-``qutrit plane''. It cannot choose the handedness of the weak force, and no realistic
-supersymmetric vacuum has yet been exhibited.
+``qutrit plane''. It cannot choose the handedness of the weak force --- only an antiunitary,
+CPT-type symmetry exchanges the two --- and, exhaustively, none of its supersymmetric singlet
+vacua preserves a matter parity: the anomalous $U(1)$ forces a $B-L=\pm1$ condensate.
 \end{keyidea}

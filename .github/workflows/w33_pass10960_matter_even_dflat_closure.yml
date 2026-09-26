@@ -1,0 +1,30 @@
+name: W33 Pass 10960 matter-even D-flat closure
+
+on:
+  push:
+    paths:
+      - "analysis/w33_pass10960_matter_even_dflat_closure.py"
+      - "analysis/PASS10960_MATTER_EVEN_DFLAT_CLOSURE.md"
+      - "analysis/PASS10960_MATTER_EVEN_DFLAT_CLOSURE_INSERT.tex"
+      - "data/w33_pass10960_heterotic_left_chiral_ledger.json.gz"
+      - "data/w33_pass10960_matter_even_dflat_closure.json"
+      - "data/w33_pass10960_z2_character_certificates.json.gz"
+      - "tests/test_w33_pass10960_matter_even_dflat_closure.py"
+      - ".github/workflows/w33_pass10960_matter_even_dflat_closure.yml"
+  pull_request:
+    paths:
+      - "analysis/w33_pass10960_matter_even_dflat_closure.py"
+      - "data/w33_pass10960_matter_even_dflat_closure.json"
+      - "tests/test_w33_pass10960_matter_even_dflat_closure.py"
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install numpy scipy sympy pytest pycddlib
+      - run: python analysis/w33_pass10960_matter_even_dflat_closure.py
+      - run: python -m pytest -q tests/test_w33_pass10960_matter_even_dflat_closure.py
