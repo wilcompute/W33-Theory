@@ -306,6 +306,11 @@ number is how many models or vacua pass it, and the tag names the computation th
   \node[band=sky,minimum width=3.2cm] (x1) at (-2.55,-8.8) {Standard Models \quad \textbf{5}};
   \node[band=rose,minimum width=2.3cm] (x2) at (0.45,-8.8) {any parity \quad \textbf{0}};
   \draw[->,ink!50,line width=0.7pt] (x1) -- (x2);
+  \node[font=\sffamily\bfseries\small,text=ink] at (6.4,-8.55) {$\Z_6\times\Z_6$ orbifolds};
+  \node[band=sky,minimum width=2.2cm] (w1) at (5.15,-9.3) {SMs \quad \textbf{10}};
+  \node[band=rose,minimum width=2.0cm] (w2) at (7.7,-9.3) {survive \quad \textbf{0}};
+  \draw[->,ink!50,line width=0.7pt] (w1) -- (w2);
+  \node[font=\sffamily\scriptsize,text=slate,align=center] at (3.2,-10.1) {$\Z_2\times\Z_6$-II with the same twist: no Standard Model in $51\,000$ tries};
 \end{tikzpicture}
 \caption[The vacuum gauntlet]{The vacuum gauntlet. Blue: filters passed; red: dead ends; gold: a door that
 looked open and was withdrawn. Every count is exact (Farkas certificates, Smith normal forms, lattice tests and
@@ -594,8 +599,9 @@ points combine. The door of $\mathbb{Z}_6$II$_{23}$ had used the uncorrected rul
 Keeping only the rotation symmetries that are established (the order-$3$ and order-$2$ planes), and
 separately adding the corrected order-six charge, the model closes: all $304$ Fayet--Iliopoulos
 cancelling directions break the parity. The whole $\Z_6$-II class is then excluded, $0$ of $128$, and
-two further orbifold families built on the same twist, $\Z_2\times\Z_6$ ($29$ Standard Models) and
-$\Z_3\times\Z_6$ ($5$), have no surviving parity either. The apparent opening was an artefact of an
+three further orbifold families built on the same twist, $\Z_2\times\Z_6$ ($29$ Standard Models),
+$\Z_3\times\Z_6$ ($5$) and $\Z_6\times\Z_6$ ($10$), have no surviving parity either, and $\Z_2\times\Z_6$-II
+produces no Standard Model at all. The apparent opening was an artefact of an
 incomplete selection rule; it was caught by reading the literature on the rules themselves, not by
 the computation. \tierC\ (\cert{w33\_pass10974\_valid\_r\_rules\_close\_the\_rotation\_door.py};
 the conditional analysis is \cert{w33\_pass10968\_r\_symmetry\_parity\_and\_massless\_exotics.py})

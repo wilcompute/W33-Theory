@@ -46,8 +46,14 @@ Wilson lines randomised):
 | --- | --- | --- | --- |
 | Z2 × Z6-I (Pass 10968) | 29 | 2 | 0 |
 | Z3 × Z6 | 5 | 0 | 0 |
+| Z6 × Z6 | 10 | 1 (established symmetries) | 0 |
+| Z2 × Z6-II | 0 in 51,000 tries | — | — |
 
-Z6 × Z6 and Z2 × Z6-II scans are running and will be added.
+In Z6 × Z6 every plane has order 6 (non-prime), so no R-rule is established there. Two models look
+open only under orbifolder's uncorrected per-plane R-rules. Even with that *largest* symmetry set,
+neither admits an MSSM-viable parity assignment at all (every exotic pair parity-allowed, three odd
+families, even H_u, H_d), independently of any vacuum. Fewer symmetries mean fewer parity elements,
+so both are closed under **any** R-rule.
 
 **D. Z12-I on the E6 lattice.** No R-rule is established for this non-factorizable, non-prime
 lattice (1301.2322 treats Z12-I only on SU(3) × F4). The 9 Pass 10968 exclusions that used
@@ -78,7 +84,7 @@ even on its own terms.
 
 ## Reading
 
-Across Z6-I, Z6-II, Z12-I (where rules are established), Z2 × Z6-I and Z3 × Z6, no W(3,3)-twisted
+Across Z6-I, Z6-II, Z12-I (where rules are established), Z2 × Z6-I, Z3 × Z6 and Z6 × Z6, no W(3,3)-twisted
 heterotic Standard Model has a supersymmetric singlet vacuum that keeps a matter parity, on the
 selection rules the orbifold CFT establishes. The one door that looked open in Pass 10968 was an
 artefact of an incomplete R-rule. It was caught by reading the literature on the rules themselves,
@@ -89,4 +95,5 @@ not by the computation.
 * Singlet (and, in Pass 10968, hidden-composite) vacua.
 * Parities built from the gauge torus, the space group and the established R-symmetries.
 * Z12-I remains partly undetermined.
-* Z6 × Z6 and Z2 × Z6-II are to be added.
+* Every orbifold family carrying the twist that has been scanned (Z6-I, Z6-II, Z12-I, Z2 × Z6-I,
+  Z2 × Z6-II, Z3 × Z6, Z6 × Z6) is now covered.

@@ -20,7 +20,11 @@ def test_gamma_corrected_g2_plane_keeps_it_closed():
 
 def test_families():
     assert C["C"]["Z2xZ6-I"]["models"] == 29 and C["C"]["Z2xZ6-I"]["open_torus_sg"] == 0
-    assert C["C"]["Z2xZ6-I"].get("open_with_R", 0) == 0
+    assert C["C"]["Z2xZ6-I"].get("open_with_uncorrected_R", 0) == 0
+    z = C["C"]["Z6xZ6"]
+    assert z["models"] == 10 and z["open_torus_sg"] == 0
+    assert z["open_with_uncorrected_R"] == 2 and z["of_which_MSSM_viable_none"] == 2
+    assert C["C"]["scans"]["z2xz6ii"]["sms"] == 0
     assert C["C"]["Z3xZ6"]["models"] == 5 and C["C"]["Z3xZ6"]["parity_torus_sg"] == 0
 
 

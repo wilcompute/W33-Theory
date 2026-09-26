@@ -916,7 +916,6 @@
   "Z2xZ6-I": {
    "models": 29,
    "open_torus_sg": 0,
-   "open_with_R": 0,
    "parity_torus_sg": 2,
    "parity_with_R": 2
   },
@@ -924,6 +923,31 @@
    "models": 5,
    "open_torus_sg": 0,
    "parity_torus_sg": 0
+  },
+  "Z6xZ6": {
+   "models": 10,
+   "of_which_MSSM_viable_none": 2,
+   "open_torus_sg": 0,
+   "open_with_uncorrected_R": 2,
+   "parity_torus_sg": 1,
+   "parity_with_R": 2
+  },
+  "scans": {
+   "z2xz6ii": {
+    "classes": 17,
+    "sms": 0,
+    "tries": 51000
+   },
+   "z3xz6": {
+    "classes": 2,
+    "sms": 5,
+    "tries": 30000
+   },
+   "z6xz6": {
+    "classes": 22,
+    "sms": 10,
+    "tries": 66000
+   }
   }
  },
  "D": {

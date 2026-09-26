@@ -22,7 +22,7 @@ When two files state the same result in different language, consult the
 human-curated [RESULTS VOCABULARY](RESULTS_VOCABULARY.md) for semantic
 aliases, current status, supersessions, and primary artifacts.
 
-Indexed **10366** files; **14800** distinctive results
+Indexed **10366** files; **14801** distinctive results
 (a token in >25 files identifies a topic and is dropped unless explicitly pinned).
 **6650** appear in exactly one file — the sharpest signal.
 
@@ -8063,6 +8063,7 @@ Indexed **10366** files; **14800** distinctive results
 | `50577` | `analysis/BT2767_BT2771_five_frontiers.md` |
 | `50949` | `analysis/w33_pass629_optical_tolerance_region.py` |
 | `50960` | `scripts/PART_CCCCCXLVI_ac_moment_coupling.py` |
+| `51000` | `analysis/PASS10974_VALID_R_RULES_CLOSE_THE_ROTATION_DOOR.md` · `analysis/w33_pass10974_valid_r_rules_close_the_rotation_door.py` |
 | `51012` | `analysis/2026-07-08_pass74_stabilizers_w33_parent.md` |
 | `51100` | `analysis/w33_pass4013_4018_incidence_link_h1_memory.py` |
 | `51147` | `analysis/w33_pass1147_schlaefli_steinberg_fourier_bridge.g` |

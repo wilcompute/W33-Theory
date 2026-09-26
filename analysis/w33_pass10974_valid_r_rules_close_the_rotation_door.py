@@ -16,8 +16,10 @@ B. Adding the gamma-corrected G2-plane charge R1' = R1 + 6 gamma (gamma = theta-
    combination, component 0 of the orbifolder's centralizer gamma list; frozen from a gamma-phase dump) keeps
    Z6II_23 closed: 304 FI rays, 0 realizable.
 C. Families (frozen ledgers; general parity = torus x space group, + W-invariant R-combinations where the
-   geometry defines R-symmetries):  Z2xZ6-I 29 SMs (from Pass 10968), Z3xZ6 5 SMs -- no parity-preserving
-   FI-cancelling vacuum in either.
+   geometry defines R-symmetries):  Z2xZ6-I 29 SMs (from Pass 10968), Z3xZ6 5 SMs, Z6xZ6 10 SMs -- no
+   parity-preserving FI-cancelling vacuum on established symmetries.  In Z6xZ6 (all planes non-prime) two models
+   open only under orbifolder's uncorrected R-rules; with that LARGEST symmetry set they admit no MSSM-viable
+   parity assignment at all, so they are closed under any R-rule.  Z2xZ6-II: 0 SMs in 51000 tries.
 D. Z12-I on the non-factorizable E6 lattice: no R-rule is established (1301.2322 treats Z12-I on SU(3)xF4);
    the 9 Pass 10968 verdicts that used per-plane rules are reclassified 'undetermined'; the 5 obtained with
    gauge + point-group rules alone stand.
@@ -38,7 +40,46 @@ M = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(M)
 GAMMA = ROOT / "data" / "w33_pass10974_z6ii23_gamma_phases.json.gz"
 FAMILIES = {"Z2xZ6-I": ROOT / "data" / "w33_pass10968_z2xz6_ledger.json.gz",
-            "Z3xZ6": ROOT / "data" / "w33_pass10974_z3xz6_ledger.json.gz"}
+            "Z3xZ6": ROOT / "data" / "w33_pass10974_z3xz6_ledger.json.gz",
+            "Z6xZ6": ROOT / "data" / "w33_pass10974_z6xz6_ledger.json.gz"}
+SPEC8 = importlib.util.spec_from_file_location("p10968", ROOT / "analysis" / "w33_pass10968_r_symmetry_parity_and_massless_exotics.py")
+P8 = importlib.util.module_from_spec(SPEC8)
+SPEC8.loader.exec_module(P8)
+
+
+def viable_with_largest_symmetry_set(name, model, disc):
+    """MSSM-viable parity assignment (vacuum-independent) using torus x space group x uncorrected R-combinations.
+    More symmetries => more parity elements, so 'none' here closes the model under ANY R-rule."""
+    RN = [(int(x.split(":")[0]), Fraction(x.split(":")[1])) for x in disc["R"]]
+    d2 = json.loads(json.dumps(disc))
+    d2["nonR_orders"] = disc["nonR_orders"] + [n for n, _ in RN]
+    for v in d2["fields"].values():
+        v["nonR"] = v["nonR"] + v["R"]
+    orders, left = M.fields(model, d2)
+    nq, nd = len(left[0]["q"]), len(orders)
+    vec = {f["name"]: f["q"] + f["ext"] for f in left}
+    virtual = [[Fraction(0)] * nq + [Fraction(int(i == j)) for j in range(nd)] for i in range(nd)]
+    virtual.append([Fraction(0)] * (nq + len(disc["nonR_orders"])) + [w / n for n, w in RN])
+    raw = {f["name"]: f for f in model["left"]}
+    ab = P8.ab
+    q0 = next(f for f in raw if M.P.base_of(f) == "q")
+    l0 = next(f for f in raw if M.P.base_of(f) == "l")
+    qd, ld = raw[q0]["dim"].split(","), raw[l0]["dim"].split(",")
+    c3 = [i for i, x in enumerate(qd) if ab(x) == 3][0]
+    w2 = [i for i, x in enumerate(ld) if ab(x) == 2 and ab(qd[i]) == 2][0]
+
+    def mult(n):
+        m = 1
+        for i, x in enumerate(raw[n]["dim"].split(",")):
+            if i not in (c3, w2):
+                m *= ab(x)
+        return m
+    ent = lambda p: [(f["name"], vec[f["name"]], mult(f["name"])) for f in left if f["base"] == p]
+    species = [(ent("q"), ent("bq")), (ent("bu"), ent("u")), (ent("bd"), ent("d")), (ent("be"), ent("e"))]
+    real = lambda ev, od: M.realizable([list(v) for v in od] + [list(v) for v in ev] + [list(v) for v in virtual],
+                                       list(range(len(od))))
+    verdict, _ = P8.match_search(real, [], species, (ent("l"), ent("bl")))
+    return verdict
 P10968 = ROOT / "data" / "w33_pass10968_r_symmetry_parity_and_massless_exotics.json"
 OUT = ROOT / "data" / "w33_pass10974_valid_r_rules_close_the_rotation_door.json"
 Z6II23 = "Z6-II|Z6II_23__SM_20260917_2913"
@@ -118,8 +159,13 @@ def main():
                 Rc = {f: [Fraction(x) for x in v["R"]] for f, v in D[b]["fields"].items()}
                 r1 = with_R(name, L[name], D[b], Rc, [n for n, _ in RN], [w for _, w in RN])
                 cs["parity_with_R"] += r1["parity_exists"]
-                cs["open_with_R"] += r1.get("verdict") == "COUNTEREXAMPLE"
+                if r1.get("verdict") == "COUNTEREXAMPLE":
+                    cs["open_with_uncorrected_R"] += 1
+                    v = viable_with_largest_symmetry_set(name, L[name], D[b])
+                    cs["of_which_MSSM_viable_" + v] += 1
         Cres[fam] = dict(cs)
+        if "scan" in blob:
+            Cres["scans"] = blob["scan"]
         print("C", fam, dict(cs), flush=True)
     # ---- D: Z12-I reclassification
     z12 = json.loads(P10968.read_text())["z12_models"]
