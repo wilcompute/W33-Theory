@@ -2,21 +2,14 @@ name: Pass 2820-2824 Blueprint Hardening
 
 on:
   workflow_dispatch:
-  push:
+  pull_request:
     branches: [master]
-    paths:
-      - analysis/bt2820_2824_blueprint_hardening.py
-      - analysis/BT2820_BT2824_blueprint_hardening.md
-      - analysis/BT2820_BT2824_blueprint_hardening_insert.tex
-      - tools/integrate_bt2820_bt2824_blueprint.py
-      - tests/test_bt2820_2824_blueprint_hardening.py
-      - .github/workflows/w33_pass2820_2824_blueprint_hardening.yml
 
 permissions:
   contents: write
 
 concurrency:
-  group: w33-pass2820-2824-blueprint-hardening
+  group: w33-pass2820-2824-blueprint-hardening-${{ github.event.pull_request.number }}
   cancel-in-progress: false
 
 env:
@@ -27,9 +20,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - name: Checkout master
+      - name: Checkout PR head
         uses: actions/checkout@v4
         with:
+          ref: ${{ github.head_ref }}
           fetch-depth: 0
 
       - name: Set up Python
@@ -64,7 +58,7 @@ jobs:
           python analysis/bt2820_2824_blueprint_hardening.py --audit-docs --verify-frozen
           git diff --check
 
-      - name: Publish generated canonical artifacts to master
+      - name: Commit generated canonical artifacts to PR head
         run: |
           git config user.name "w33-blueprint-hardening-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -77,9 +71,8 @@ jobs:
           if git diff --cached --quiet; then
             echo "No generated changes to publish."
           else
-            git commit -m "Passes 2820-2824: integrate and compile blueprint hardening [skip ci]"
-            git pull --rebase origin master
-            git push origin HEAD:master
+            git commit -m "Passes 2820-2824: integrate and compile canonical artifacts [skip ci]"
+            git push origin HEAD:${{ github.head_ref }}
           fi
 
       - name: Upload audit and PDFs
