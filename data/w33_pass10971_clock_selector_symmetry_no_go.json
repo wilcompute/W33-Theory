@@ -1,0 +1,129 @@
+{
+  "checks": {
+    "all_full_symmetry_basis_selectors_forbidden": true,
+    "q3_breaks_S4_to_S3": true,
+    "q3_commutant_dim2": true,
+    "q3_order_parameter_dim3": true,
+    "q3_parent_action_order24": true,
+    "q3_parent_common_S4": true,
+    "q3_two_orbitals": true,
+    "q5_breaking_index6": true,
+    "q5_commutant_dim2": true,
+    "q5_matches_Pass593_PGL": true,
+    "q5_matches_Pass593_augmentation": true,
+    "q5_order_parameter_dim5": true,
+    "q5_two_orbitals": true,
+    "q7_commutant_dim2": true,
+    "q7_two_orbitals": true
+  },
+  "headline": "A Hamiltonian on clock-direction amplitudes that preserves the full PGL(2,q) clock symmetry is aI+bJ and cannot select one clock direction. At q=3 this is the repo's exact S4 null/Hesse/A2 carrier; choosing one clock necessarily breaks S4 to S3, with a three-dimensional augmentation order parameter.",
+  "next_target": "Search the existing W33/Albert/Steinberg modules for a canonical augmentation-valued order parameter whose stabilizer is the clock point stabilizer.",
+  "physical_boundary": "This is a symmetry no-go for linear Hamiltonians on the clock permutation module, not a derivation of a physical Hamiltonian. It says any dynamical theory that picks a preferred clock direction must include explicit or spontaneous clock-symmetry breaking, or act on a larger module where additional invariant operators exist.",
+  "q3": {
+    "PGL2_order": 24,
+    "augmentation_dimension": 3,
+    "augmentation_selector_orbit_size": 4,
+    "basis_clock_can_be_nondegenerate_eigenstate": false,
+    "clock_directions": 4,
+    "commutant_basis": [
+      "I",
+      "J"
+    ],
+    "commutant_dimension": 2,
+    "expected_PGL2_order": 24,
+    "expected_point_stabilizer_order": 6,
+    "ordered_pair_orbit_sizes": [
+      4,
+      12
+    ],
+    "point_stabilizer_order": 6,
+    "q": 3,
+    "rank_one_bias": "-|e_0><e_0|",
+    "rank_one_bias_point_stabilizer_invariant": true,
+    "rank_one_bias_unique_selected_clock": 0,
+    "spectrum": {
+      "augmentation": {
+        "eigenvalue": "a",
+        "multiplicity": 3
+      },
+      "uniform": {
+        "eigenvalue": "a+b(q+1)",
+        "multiplicity": 1
+      }
+    },
+    "symmetric_H_form": "H=a I + b J",
+    "symmetry_breaking_index": 4
+  },
+  "q5": {
+    "PGL2_order": 120,
+    "augmentation_dimension": 5,
+    "augmentation_selector_orbit_size": 6,
+    "basis_clock_can_be_nondegenerate_eigenstate": false,
+    "clock_directions": 6,
+    "commutant_basis": [
+      "I",
+      "J"
+    ],
+    "commutant_dimension": 2,
+    "expected_PGL2_order": 120,
+    "expected_point_stabilizer_order": 20,
+    "ordered_pair_orbit_sizes": [
+      6,
+      30
+    ],
+    "point_stabilizer_order": 20,
+    "q": 5,
+    "rank_one_bias": "-|e_0><e_0|",
+    "rank_one_bias_point_stabilizer_invariant": true,
+    "rank_one_bias_unique_selected_clock": 0,
+    "spectrum": {
+      "augmentation": {
+        "eigenvalue": "a",
+        "multiplicity": 5
+      },
+      "uniform": {
+        "eigenvalue": "a+b(q+1)",
+        "multiplicity": 1
+      }
+    },
+    "symmetric_H_form": "H=a I + b J",
+    "symmetry_breaking_index": 6
+  },
+  "q7": {
+    "PGL2_order": 336,
+    "augmentation_dimension": 7,
+    "augmentation_selector_orbit_size": 8,
+    "basis_clock_can_be_nondegenerate_eigenstate": false,
+    "clock_directions": 8,
+    "commutant_basis": [
+      "I",
+      "J"
+    ],
+    "commutant_dimension": 2,
+    "expected_PGL2_order": 336,
+    "expected_point_stabilizer_order": 42,
+    "ordered_pair_orbit_sizes": [
+      8,
+      56
+    ],
+    "point_stabilizer_order": 42,
+    "q": 7,
+    "rank_one_bias": "-|e_0><e_0|",
+    "rank_one_bias_point_stabilizer_invariant": true,
+    "rank_one_bias_unique_selected_clock": 0,
+    "spectrum": {
+      "augmentation": {
+        "eigenvalue": "a",
+        "multiplicity": 7
+      },
+      "uniform": {
+        "eigenvalue": "a+b(q+1)",
+        "multiplicity": 1
+      }
+    },
+    "symmetric_H_form": "H=a I + b J",
+    "symmetry_breaking_index": 8
+  },
+  "schema": "w33.pass10971.clock-selector-symmetry-no-go.v1",
+  "status": "PASS"
+}
