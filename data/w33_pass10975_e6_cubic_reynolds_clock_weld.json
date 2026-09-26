@@ -1,0 +1,111 @@
+{
+  "boundary": "The Reynolds operator is a canonical finite-group invariant-theory projection, not a derived physical averaging mechanism. The raw signed E6 cubic does not itself equal the clock Landau cubic on the fibre-constant subspace. A physical theory must explain why the S4-invariant component is dynamically selected, or supply a larger signed-equivariant field.",
+  "checks": {
+    "all_48_have_64_sign_repairs": true,
+    "augmentation_dimension3": true,
+    "center_class_is_firewall_bad9": true,
+    "clock_PGL23_image_S4": true,
+    "fibre_module_is_equivariant": true,
+    "five_direction_classes_9_each": true,
+    "four_six_point_coordinate_fibres": true,
+    "full_GL23_support_lift_order48": true,
+    "pass10972_selector_is_p3": true,
+    "raw_signed_gauge_breaks_bare_support_symmetry": true,
+    "reynolds_projection_nonzero": true,
+    "reynolds_to_selector_coefficient_minus_2_over_3": true,
+    "three_central_coordinates": true
+  },
+  "clock_restriction": {
+    "augmentation_constraint": "sum_i y_i = 0",
+    "augmentation_identity": "R(D)|_A = -(2/3) p3",
+    "coefficient": "-2/3",
+    "embedding": "x_h = y_[h mod Z(H27)] for the four nonzero projective quotient directions; x_h=0 on the three central addresses",
+    "nonzero_projection": true,
+    "raw_is_S4_invariant": false,
+    "raw_monomial_coefficients": {
+      "(0, 0, 0)": 0,
+      "(0, 1, 2)": -2,
+      "(0, 1, 3)": 4,
+      "(0, 2, 3)": -2,
+      "(1, 1, 1)": -2,
+      "(1, 2, 3)": 4,
+      "(2, 2, 2)": 0,
+      "(3, 3, 3)": -2
+    },
+    "reynolds_operator": "(1/24) sum_{sigma in S4} sigma",
+    "reynolds_polynomial": "-sum_i y_i^3 + sum_{i<j<k} y_i y_j y_k",
+    "selector_cubic": "p3=sum_i y_i^3",
+    "surviving_signed_triads": 32
+  },
+  "coordinate_module": {
+    "all_48_GL23_lifts_equivariant_on_fibres": true,
+    "augmentation_dimension": 3,
+    "center_size": 3,
+    "central_minus_I_support_cycle_shape": "1^3 2^12",
+    "central_minus_I_trivial_on_four_fibre_module": true,
+    "four_fibres_size": 6,
+    "module": "R^4 permutation module = 1 + standard_3",
+    "projective_image": "PGL(2,3) ~= S4"
+  },
+  "headline": "The four P1(F3) clock directions embed objectwise as four six-point fibres inside the current 27-coordinate E6/H27 cubic carrier. Their zero-sum span is the exact 3D S4 clock augmentation module. The raw signed cubic is not S4-invariant in the frozen coordinate gauge, but its canonical Reynolds projection is nonzero and restricts to -2/3 times the Pass-10972 tetrahedral selector p3.",
+  "physical_reading": "If an effective dynamics projects or equilibrates the native cubic over the exact clock support symmetry, the only cubic anisotropy on the clock augmentation field is already the tetrahedral selector, with fixed relative coefficient -2/3 in this normalization.",
+  "prior_art_boundary": "Finite-group Reynolds averaging and the S4/A3 invariant cubic are classical invariant theory. The repo increment is the explicit objectwise H27/E6 fibre embedding, the signed-gauge obstruction census, and the computed nonzero -2/3 projection onto the already-certified clock selector.",
+  "schema": "w33.pass10975.e6-cubic-reynolds-clock-weld.v1",
+  "signed_gauge_firewall": {
+    "GL23_support_operations_checked": 48,
+    "all_support_operations_have_sign_repairs": true,
+    "binary_sign_equation_rank": 21,
+    "homogeneous_sign_gauge_dimension": 6,
+    "pure_coordinate_permutations_preserving_signed_cubic": 1,
+    "raw_sign_counts_by_direction": {
+      "(0, 1)": {
+        "-1": 2,
+        "1": 7
+      },
+      "(1, 0)": {
+        "-1": 6,
+        "1": 3
+      },
+      "(1, 1)": {
+        "-1": 2,
+        "1": 7
+      },
+      "(1, 2)": {
+        "-1": 6,
+        "1": 3
+      },
+      "center": {
+        "-1": 7,
+        "1": 2
+      }
+    },
+    "reading": "the clock S4 is exact on cubic support, but the frozen signed gauge does not realize it by bare coordinate permutations",
+    "repairs_per_support_operation": 64
+  },
+  "status": "PASS",
+  "support_geometry": {
+    "center_direction": "the existing firewall bad-nine spread",
+    "cubic_triads": 45,
+    "direction_classes": 5,
+    "noncentral_directions": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "triads_per_direction": 9
+  },
+  "what_changed": "Pass 10972 left open an objectwise S4-equivariant embedding of the clock augmentation module into the cubic carrier. This pass supplies that embedding at the 27-coordinate support level and computes the native cubic's exact invariant component on it."
+}
