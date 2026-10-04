@@ -1,0 +1,113 @@
+name: Passes 3003-3011 Seven-Front Optimal Information
+
+on:
+  push:
+    branches: [agent/pass3003-3011-seven-front-optimal-information-closure]
+    paths:
+      - 'analysis/bt3003_*'
+      - 'analysis/bt3004_*'
+      - 'analysis/bt3005_*'
+      - 'analysis/bt3006_*'
+      - 'analysis/bt3007_*'
+      - 'analysis/bt3008_*'
+      - 'analysis/bt3009_*'
+      - 'analysis/BT3003_BT3011*'
+      - 'rtl/*3005*'
+      - 'tests/test_bt3003_bt3011*'
+      - 'tools/integrate_bt3003_bt3011.py'
+      - 'data/w33_pass_namespace_registry_v2.d/3003-3011.json'
+      - '.github/workflows/w33_pass3003_3011_seven_front.yml'
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pass3003-3011-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  exact-rtl-manuscript:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    env:
+      PYTHONUNBUFFERED: '1'
+      SOURCE_DATE_EPOCH: '1785715200'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
+          fetch-depth: 0
+      - name: Reconcile current master
+        run: |
+          git config user.name 'W33 seven-front evidence bot'
+          git config user.email 'noreply@github.com'
+          git fetch origin master
+          git merge --no-edit origin/master
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact dependencies
+        run: python -m pip install --upgrade pip numpy pytest
+      - name: Regenerate all seven certificates
+        run: |
+          python analysis/bt3003_m36_symmetry_orbit.py > data/PART_BT3003_M36_SYMMETRY_ORBIT_results.json
+          python analysis/bt3004_d4_two_edge_schedule.py > data/PART_BT3004_D4_TWO_EDGE_SCHEDULE_results.json
+          python analysis/bt3005_golden_a4_shell_model.py > data/PART_BT3005_GOLDEN_A4_SHELL_results.json
+          python analysis/bt3006_clock_flag_bridge.py > data/PART_BT3006_CLOCK_FLAG_BRIDGE_results.json
+          python analysis/bt3007_component_sequential_chirality.py --output data/PART_BT3007_COMPONENT_SEQUENTIAL_CHIRALITY_results.json
+          python analysis/bt3008_tetrahedral_a4_sic.py > data/PART_BT3008_TETRAHEDRAL_A4_SIC_results.json
+          python analysis/bt3009_cut_project_calendar.py > data/PART_BT3009_D12_STURMIAN_CALENDAR_results.json
+          pytest -q tests/test_bt3003_bt3011_seven_front.py
+      - name: Install and exhaust RTL tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog yosys
+          mkdir -p analysis/evidence/pass3003_3011
+          iverilog -g2012 -s tb_w33_pass3005_golden_a4_shell -o /tmp/a4.vvp rtl/w33_pass3005_golden_a4_shell.sv rtl/tb_w33_pass3005_golden_a4_shell.sv
+          vvp /tmp/a4.vvp | tee analysis/evidence/pass3003_3011/a4_shell_sim.log
+          grep -F 'PASS A4 shell, D4 barrier, and 89/233 scheduler' analysis/evidence/pass3003_3011/a4_shell_sim.log
+          yosys -p 'read_verilog -sv rtl/w33_pass3005_golden_a4_shell.sv; synth_ice40 -top w33_pass3005_golden_a4_shell; stat' 2>&1 | tee analysis/evidence/pass3003_3011/a4_shell_yosys.log
+      - name: Integrate all front doors idempotently
+        run: |
+          python tools/integrate_bt3003_bt3011.py
+          python tools/integrate_bt3003_bt3011.py --check
+          git diff --check
+      - uses: tectonic-typesetting/setup-tectonic@v1
+      - name: Compile current papers and blueprint
+        shell: bash
+        run: |
+          set -o pipefail
+          for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
+            stem="${source%.tex}"
+            tectonic --keep-logs "$source" 2>&1 | tee "analysis/evidence/pass3003_3011/${stem}.build.log"
+            test -s "${stem}.pdf"
+            if grep -E 'Undefined control sequence|LaTeX Error|Emergency stop|Fatal error' "${stem}.log"; then exit 1; fi
+          done
+      - name: Freeze exact evidence and generated front doors
+        if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+        env:
+          TARGET_BRANCH: ${{ github.event.pull_request.head.ref || github.ref_name }}
+        run: |
+          git add data/PART_BT3003_*.json data/PART_BT3004_*.json data/PART_BT3005_*.json data/PART_BT3006_*.json data/PART_BT3007_*.json data/PART_BT3008_*.json data/PART_BT3009_*.json
+          git add w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html
+          git add analysis/evidence/pass3003_3011/
+          if ! git diff --cached --quiet; then git commit -m 'Passes 3003-3011: freeze exact evidence and front doors'; fi
+          git push origin "HEAD:${TARGET_BRANCH}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3003-3011-seven-front-evidence
+          path: |
+            data/PART_BT3003_*.json
+            data/PART_BT3004_*.json
+            data/PART_BT3005_*.json
+            data/PART_BT3006_*.json
+            data/PART_BT3007_*.json
+            data/PART_BT3008_*.json
+            data/PART_BT3009_*.json
+            analysis/evidence/pass3003_3011/
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
