@@ -1,0 +1,15 @@
+{
+  "pass":5154,
+  "status":"THEOREM_THETA_TWO_STEP_MARKOV_CURVATURE",
+  "one_step_stay":"1/2 for every nonzero codeword support",
+  "two_step_bound":"P2 >= 1/4 + 1/[8(q-1)]",
+  "exact_excess":"P2-(1/4+1/D)=Delta_2/(D^2|S|)",
+  "anchors":[
+    {"q":2,"D":8,"minimum_P2":"3/8"},
+    {"q":3,"D":16,"minimum_P2":"5/16"},
+    {"q":4,"D":24,"minimum_P2":"7/24"},
+    {"q":5,"D":32,"minimum_P2":"9/32"}
+  ],
+  "q2_complete":"Exactly 45 nonzero words attain equality; all have weight 16.",
+  "boundary":"Finite theta random-walk theorem only."
+}
