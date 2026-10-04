@@ -1,0 +1,33 @@
+{
+  "accepted_outputs_per_raw_input": "P_succ/2",
+  "check_count": 6,
+  "checks": {
+    "fixed_basin_direction": true,
+    "limiting_cost_four": true,
+    "limiting_success_one_half": true,
+    "overhead_exponent": true,
+    "sample_targets_reached": true,
+    "small_error_slope_2_over_3": true
+  },
+  "claim_boundary": "Repeated use of one explicit iid-depolarizing branch; not an optimized protocol, a lower bound, or a fault-tolerant factory estimate.",
+  "expected_raw_input_factor_per_round": "2/P_succ = 8/(p^2-2p+2)",
+  "purifying_basin": "0<p<2/3",
+  "recurrence": "p(4-p)/(3(p^2-2p+2))",
+  "repeated_branch_overhead_exponent": {
+    "formula": "log(4)/log(3/2)",
+    "value": 3.4190225827029095
+  },
+  "samples": [
+    {"expected_raw_inputs_per_accepted_output": 430140885142018.75, "p0": 0.5, "rounds": 22, "target": 0.001},
+    {"expected_raw_inputs_per_accepted_output": 7.405070481044543e+24, "p0": 0.5, "rounds": 39, "target": 1e-06},
+    {"expected_raw_inputs_per_accepted_output": 304359260401.6637, "p0": 0.3333333333333333, "rounds": 18, "target": 0.001},
+    {"expected_raw_inputs_per_accepted_output": 5.239504012108995e+21, "p0": 0.3333333333333333, "rounds": 35, "target": 1e-06},
+    {"expected_raw_inputs_per_accepted_output": 23278100.558792837, "p0": 0.1, "rounds": 12, "target": 0.001},
+    {"expected_raw_inputs_per_accepted_output": 1.6043920554886994e+18, "p0": 0.1, "rounds": 30, "target": 1e-06}
+  ],
+  "schema": "w33.pass2839.m36_repeated_branch_cost.v1",
+  "small_error_contraction": "p_next = (2/3)p + O(p^2)",
+  "small_error_cost_factor": "2/P_succ = 4 + O(p)",
+  "status": "EXACT_LOCAL_ASYMPTOTIC_AND_NUMERICAL_TRAJECTORIES",
+  "success_probability": "(p^2-2p+2)/4"
+}
