@@ -10,7 +10,7 @@ to guess: `grep -i gow TOPICAL_ALIASES.md` reaches
 `2026-07-15_pass355_sp43_frobenius_schur.md`, which no search for
 "phase" or "complex structure" ever would.
 
-Files scanned: **5184** · distinct tokens: **977**
+Files scanned: **5187** · distinct tokens: **978**
 
 Tokens marked ⚠ appear ONLY in topically opaque filenames (dated or
 numbered), so they are invisible to any topic search — read those first.
@@ -773,6 +773,7 @@ numbered), so they are invisible to any topic search — read those first.
 - `named:Langlands` ⚠ — [PASS20260924_trialitarian_asai_cube_descent.md](analysis/PASS20260924_trialitarian_asai_cube_descent.md), [PASS20260924_triality_class_field_closure.md](analysis/PASS20260924_triality_class_field_closure.md), [PASS409_RESERVATION.md](analysis/PASS409_RESERVATION.md)
 - `named:Laplacian` — [PART_CCCCCLXV_QFT_EXTRACTION.md](docs/PART_CCCCCLXV_QFT_EXTRACTION.md), [PART_MCLXII_YM_DEFORMATION_ENVELOPE.md](manuscripts/parts/PART_MCLXII_YM_DEFORMATION_ENVELOPE.md)
 - `named:Latin` ⚠ — [PASS5776_5783_reye_latin_common_core_insert.tex](analysis/PASS5776_5783_reye_latin_common_core_insert.tex)
+- `named:Leibniz` ⚠ — [PASS11615_11619_PARENT_PAIRS_CONSTRAINTS.md](analysis/PASS11615_11619_PARENT_PAIRS_CONSTRAINTS.md)
 - `named:Levi` ⚠ — [2026-07-10_levi_next5_v3.md](analysis/2026-07-10_levi_next5_v3.md)
 - `named:Levitin` ⚠ — [BT3957_BT3964_exact_algebra_mesh_code_photon.md](analysis/BT3957_BT3964_exact_algebra_mesh_code_photon.md)
 - `named:Lifting` ⚠ — [BT7154_BT7162_nine_front_e8_audit.md](analysis/BT7154_BT7162_nine_front_e8_audit.md)
