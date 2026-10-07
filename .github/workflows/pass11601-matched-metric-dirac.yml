@@ -1,0 +1,27 @@
+name: Pass 11601 matched metric Dirac calibration
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analysis/w33_pass11601_matched_metric_dirac.py'
+      - 'tests/test_w33_pass11601_matched_metric_dirac.py'
+      - 'data/w33_pass11601_matched_metric_dirac.json'
+      - '.github/workflows/pass11601-matched-metric-dirac.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy scipy sympy pytest
+      - name: Regenerate source-bound benchmark certificate
+        run: python -u analysis/w33_pass11601_matched_metric_dirac.py
+      - name: Independent geometry and heat regressions
+        run: python -m pytest --noconftest -q tests/test_w33_pass11601_matched_metric_dirac.py

@@ -1,8 +1,9 @@
-# Session Notes - 2026-10-06
+# Session Notes - 2026-10-07
 
 > **Collaborative workspace for you and AI**
 
 ## 🎯 Session Goals
+- Current: publish reserved11601 (`5c1c6e4ae`), exact matched-metric gravity audit and supplied-geometry calibration. Nine final independent regressions PASS; original parallel checkout and shared decision stores remain preserved.
 - Current: publish reserved11600 (`3db837b54`), an independently designed dynamical Hesse flavor EFT and its exact restricted degree16 obstruction. Preserve the original parallel checkout and shared decision stores; historical goals below are retained as history.
 - Publish reserved11526–11530 (`057834b58`): nine validated investigations across native vacuum, physical symmetry, compatible coherent parent, EW/flavor, local frames, constrained spin history, nonlinear anomaly and coherent QEC. Preserve the original parallel workspace and mixed decision stores.
 - Remote11511–11515 science,11531–11538 reservation and formula-search freeze through `b565d2817` integrated by GitKraken fast-forward. The cubed-phase counterexample reinforces word/general-unitary scope separation.
@@ -2020,3 +2021,12 @@ Independent follow-up targets: compatible SM and CP phase selection; dynamic mix
 - Science commit5def8dc5a pushed to W33 master and independently verified by fresh GitKraken fetch/log/status. Nine owned files published, including both JSON artifacts and regenerated result/alias indexes. Mixed decision stores remain unstaged; original parallel checkout preserved.
 - Four producer sections PASS, nine focused tests PASS in48.13s, four-file batch intake clean. Rediscovery candidates were read and cross-cited; primary Hesse and discrete-flavor CP literature credited. No measured flavor, radiatively protected UV model or gravity claim.
 - Independent next targets: protection/UV completion of allowed low-order invariants; dynamical Higgs/10/126 alignment; CP/discriminant relation to the Weyl selector; universal continuum curvature across independent frame refinements; a complete chiral measure/anomaly matching audit.
+
+### 2026-10-07 — Pass11601 metric diagnosis and geometric calibration
+
+- Read the351-line ChatNext.txt handoff in full as evidence. Three remote commits through5e2c7b33d and six changed paths were reviewed and fast-forwarded via GitKraken; scientific11594 values remain unchanged after runtime-field removal. The initially omitted integration log was recovered retroactively.
+- Exact native Clifford symbols expose11594's coframe/inverse-frame mismatch. Strict Cauchy-Schwarz proves a nonzero leading spectral-volume mismatch after coframe-volume normalization; the actual determinant quadratures give5.411249214347001 extra volume. Prior finite FIREWALL certificate preserved.
+- Separate half-density spectral Dirac on supplied conformal metrics uses inverse frame and no lattice species doubling. Two amplitudes and three resolutions recover the standard a2 coefficient; independently integrated a4 subtraction agrees within10ppm. A nonconformal zero-integrated-R metric follows the predicted a4 contribution. Exact Clifford/time-circle product gives a static4D benchmark.
+- All final producer sections PASS. Nine independent regressions PASS in35.55s, including full3D matrix versus shell reduction and independent Christoffel/spin-curvature calculations. Initial symbolic structural-equality and boundary-wording failures were resolved and are not counted as successful runs.
+- Standard heat geometry and prior native/Cartan/variation owners credited. No general convergence theorem, native locality, dynamical frame selection, Lorentzian gravity, Newton scale or residual CC is claimed. Dedicated CI definition added; remote run status remains separate from local validation. Final index/intake and publication in progress.
+- Independent targets: native local inverse-frame/Wilson refinement; nonstatic4D coframes and constraint health; full-inventory induced EH/CC coefficients; holomorphic Hesse invariants/protection; dynamical126/Higgs seesaw alignment.

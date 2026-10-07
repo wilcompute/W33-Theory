@@ -1,0 +1,388 @@
+{
+  "status": "PASS",
+  "pass_number": 11601,
+  "reservation": "5c1c6e4ae",
+  "times": [
+    0.05,
+    0.025,
+    0.0125,
+    0.00625
+  ],
+  "expected_a2_rank4_d3": -0.007482796755215274,
+  "geometric_operator": "For coframe E use inverse frame, Levi-Civita spin connection and density map U=det(E)^(1/2). In conformal3D Dhat=f^(1/2) Dflat f^(1/2). No Wilson term or doubled finite-difference derivative is used in this separate spectral benchmark.",
+  "literature": "Vassilevich hep-th/0306138 equations3.26-3.27 and4.13-4.14: E=-R/4, a2=(4pi)^(-d/2) integral tr(E+R/6)=-rank/12 (4pi)^(-d/2) integral R. Standard geometry, not a new coefficient theorem.",
+  "scope": "Finite spectral convergence controls on supplied external smooth metrics, not a theorem of convergence for arbitrary frames or a W33 derivation of physical gravity. Spectral differentiation is nonlocal at finite cutoff; native finite-range implementation is open.",
+  "symbol": {
+    "coframe_sample": [
+      [
+        "2",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "1"
+      ],
+      [
+        "0",
+        "0",
+        "1"
+      ]
+    ],
+    "covariant_metric": [
+      [
+        "4",
+        "2",
+        "0"
+      ],
+      [
+        "2",
+        "2",
+        "1"
+      ],
+      [
+        "0",
+        "1",
+        "2"
+      ]
+    ],
+    "old_contravariant_symbol": [
+      [
+        "4",
+        "2",
+        "0"
+      ],
+      [
+        "2",
+        "2",
+        "1"
+      ],
+      [
+        "0",
+        "1",
+        "2"
+      ]
+    ],
+    "matched_contravariant_symbol": [
+      [
+        "3/4",
+        "-1",
+        "1/2"
+      ],
+      [
+        "-1",
+        "2",
+        "-1"
+      ],
+      [
+        "1/2",
+        "-1",
+        "1"
+      ]
+    ],
+    "theorem": "For coframe E[a,i], g=E^T E but the Clifford derivative must use e_a^i=(E^-1)[i,a]. The11594 derivative uses E[a,i]; its principal inverse metric is E^T E rather than (E^T E)^-1.",
+    "old_certificate_boundary": "The11594 finite heat/curvature values remain valid values of its specified operator. This audit identifies a continuum geometric mismatch, not a replacement of those numbers.",
+    "orthogonal_frame_check": true
+  },
+  "old_volume": {
+    "eps": 0.12,
+    "rows": [
+      {
+        "L": 16,
+        "coframe_volume": 248.05021344239853,
+        "spectral_volume": 253.46146265674554,
+        "unmatched_volume": 5.411249214347009
+      },
+      {
+        "L": 32,
+        "coframe_volume": 248.05021344239853,
+        "spectral_volume": 253.46146265674554,
+        "unmatched_volume": 5.411249214347009
+      },
+      {
+        "L": 64,
+        "coframe_volume": 248.05021344239853,
+        "spectral_volume": 253.46146265674554,
+        "unmatched_volume": 5.411249214347009
+      }
+    ],
+    "proof": "For normalized positive coframe density J with mean(J)=1, mean(1/J)>1 whenever J is nonconstant, by Cauchy-Schwarz. Thus geometric volume V and old principal-symbol volume integral dx/J cannot both match the flat reference.",
+    "leading_mismatch": "Delta a0=4/(4pi)^(3/2) [integral dx/J-V], yielding a t^-3/2 continuum heat term. A scalar-curvature term is t^-1/2. Wilson terms and finite cutoff errors are additional issues; this does not fully explain the old finite table."
+  },
+  "conformal_rows": [
+    {
+      "eps": 0.12,
+      "L": 81,
+      "transverse_cutoff": 80,
+      "scale": 0.9893434288647586,
+      "integrated_R": 3.5402233844781565,
+      "heat": [
+        1992.0665149126605,
+        5634.583782459324,
+        15937.247376562278,
+        45076.709918905224
+      ],
+      "flat": [
+        1992.185587508949,
+        5634.751753238734,
+        15937.484697756008,
+        45077.7486339963
+      ],
+      "delta_heat": [
+        -0.11907259628856082,
+        -0.16797077941009775,
+        -0.23732119373016758,
+        -1.0387150910755736
+      ],
+      "normalized_a2": [
+        -0.007520836699909494,
+        -0.007501931172175447,
+        -0.007494814084454645,
+        -0.023195609224756795
+      ]
+    },
+    {
+      "eps": 0.12,
+      "L": 121,
+      "transverse_cutoff": 80,
+      "scale": 0.9893434288647586,
+      "integrated_R": 3.5402233844781565,
+      "heat": [
+        1992.0665149126623,
+        5634.583782459328,
+        15937.247455549352,
+        45077.67869978682
+      ],
+      "flat": [
+        1992.185587508949,
+        5634.751753238734,
+        15937.48470007157,
+        45078.014025319484
+      ],
+      "delta_heat": [
+        -0.11907259628674183,
+        -0.16797077940555027,
+        -0.23724452221904357,
+        -0.3353255326655926
+      ],
+      "normalized_a2": [
+        -0.007520836699794602,
+        -0.007501931171972348,
+        -0.007492392730034433,
+        -0.007488174655035023
+      ]
+    },
+    {
+      "eps": 0.12,
+      "L": 161,
+      "transverse_cutoff": 80,
+      "scale": 0.9893434288647586,
+      "integrated_R": 3.5402233844781565,
+      "heat": [
+        1992.0665149126605,
+        5634.583782459327,
+        15937.247455549363,
+        45077.67872602307
+      ],
+      "flat": [
+        1992.1855875089489,
+        5634.751753238732,
+        15937.484700071567,
+        45078.014025909855
+      ],
+      "delta_heat": [
+        -0.11907259628833344,
+        -0.16797077940464078,
+        -0.23724452220449166,
+        -0.33529988678492373
+      ],
+      "normalized_a2": [
+        -0.007520836699895131,
+        -0.007501931171931727,
+        -0.00749239272957487,
+        -0.00748760195533004
+      ],
+      "curvature_squared_prediction": {
+        "integrated_R2_minus_3Ric2": -3.6429262177533555,
+        "predicted_a4": -0.002725927648169346,
+        "formula": "a4_rank4_d3=(4pi)^(-3/2)/30 integral sqrt(g)(R^2-3 Ric_ij Ric^ij); standard Dirac heat coefficient, independently integrated, not fitted."
+      },
+      "a4_subtracted_a2": [
+        -0.00748233732637931,
+        -0.0074826814851738175,
+        -0.007482767886195915,
+        -0.007482789533640562
+      ]
+    },
+    {
+      "eps": 0.2,
+      "L": 81,
+      "transverse_cutoff": 80,
+      "scale": 0.9710757452257631,
+      "integrated_R": 9.683277302845832,
+      "heat": [
+        1991.8598181486857,
+        5634.292258382932,
+        15936.835108979778,
+        45074.38552592775
+      ],
+      "flat": [
+        1992.185587508949,
+        5634.751753238734,
+        15937.484697756008,
+        45077.7486339963
+      ],
+      "delta_heat": [
+        -0.32576936026339354,
+        -0.45949485580149485,
+        -0.6495887762303028,
+        -3.36310806855181
+      ],
+      "normalized_a2": [
+        -0.00752268484887326,
+        -0.007502884984179473,
+        -0.0075001707358157135,
+        -0.027457340064989816
+      ]
+    },
+    {
+      "eps": 0.2,
+      "L": 121,
+      "transverse_cutoff": 80,
+      "scale": 0.9710757452257631,
+      "integrated_R": 9.683277302845832,
+      "heat": [
+        1991.8598181486848,
+        5634.292258383284,
+        15936.83574298511,
+        45077.09662375052
+      ],
+      "flat": [
+        1992.185587508949,
+        5634.751753238734,
+        15937.48470007157,
+        45078.014025319484
+      ],
+      "delta_heat": [
+        -0.32576936026430303,
+        -0.4594948554495204,
+        -0.6489570864614507,
+        -0.9174015689641237
+      ],
+      "normalized_a2": [
+        -0.007522684848894263,
+        -0.007502884978432241,
+        -0.007492877227535054,
+        -0.007489918950493308
+      ]
+    },
+    {
+      "eps": 0.2,
+      "L": 161,
+      "transverse_cutoff": 80,
+      "scale": 0.9710757452257631,
+      "integrated_R": 9.683277302845832,
+      "heat": [
+        1991.859818148688,
+        5634.292258383291,
+        15936.835742985138,
+        45077.09687822929
+      ],
+      "flat": [
+        1992.1855875089489,
+        5634.751753238732,
+        15937.484700071567,
+        45078.014025909855
+      ],
+      "delta_heat": [
+        -0.3257693602608924,
+        -0.45949485544133495,
+        -0.6489570864287089,
+        -0.917147680564085
+      ],
+      "normalized_a2": [
+        -0.007522684848815505,
+        -0.007502884978298583,
+        -0.007492877227157017,
+        -0.007487846135705225
+      ],
+      "curvature_squared_prediction": {
+        "integrated_R2_minus_3Ric2": -10.47374918805832,
+        "predicted_a4": -0.00783729364393414,
+        "formula": "a4_rank4_d3=(4pi)^(-3/2)/30 integral sqrt(g)(R^2-3 Ric_ij Ric^ij); standard Dirac heat coefficient, independently integrated, not fitted."
+      },
+      "a4_subtracted_a2": [
+        -0.007482216661244181,
+        -0.007482650884512922,
+        -0.007482760180264186,
+        -0.00748278761225881
+      ]
+    }
+  ],
+  "warped_rows": [
+    {
+      "eps": 0.2,
+      "L": 81,
+      "transverse_cutoff": 80,
+      "integrated_R": 0,
+      "curvature_identity": "R=-2 f-doubleprime/(scale^2 f); integral sqrt(g)R=-2scale(2pi)^2 integral f-doubleprime dx=0.",
+      "delta_heat": [
+        -0.0016945032550665928,
+        -0.0012027611182929832,
+        -0.0008509816161677008,
+        0.03595026065886486
+      ],
+      "sqrt_t_delta": [
+        -0.00037890244664235664,
+        -0.0001901732307448519,
+        -9.514263706768065e-05,
+        0.002842117653968963
+      ]
+    },
+    {
+      "eps": 0.2,
+      "L": 161,
+      "transverse_cutoff": 80,
+      "integrated_R": 0,
+      "curvature_identity": "R=-2 f-doubleprime/(scale^2 f); integral sqrt(g)R=-2scale(2pi)^2 integral f-doubleprime dx=0.",
+      "delta_heat": [
+        -0.0016945032557487139,
+        -0.0012027611182929832,
+        -0.0008521010149706854,
+        -0.0006031012599123642
+      ],
+      "sqrt_t_delta": [
+        -0.00037890244679488356,
+        -0.0001901732307448519,
+        -9.526778965855092e-05,
+        -4.767934102600681e-05
+      ],
+      "curvature_squared_prediction": {
+        "integrated_R2_minus_3Ric2": -10.204678381404342,
+        "predicted_a4": -0.007635953428038787,
+        "formula": "a4_rank4_d3=(4pi)^(-3/2)/30 integral sqrt(g)(R^2-3 Ric_ij Ric^ij); standard Dirac heat coefficient, independently integrated, not fitted."
+      }
+    }
+  ],
+  "four_dimensional": {
+    "time_circle_length": "2pi",
+    "expected_a2": -0.0021108579925487037,
+    "normalized_a2": [
+      -0.0021221102160071175,
+      -0.002116524775656497,
+      -0.0021137016411820917,
+      -0.002112282396486603
+    ],
+    "Clifford_map": "gamma_i=tau1 tensor sigma_i; gamma_time=tau2 tensor I. D4=D3+gamma_time p_time; D4^2=D3^2+p_time^2.",
+    "trace_factorization": "K4(t)=sum_n exp(-t n^2) K3(t); integral_R4=2pi integral_R3.",
+    "boundary": "Static Riemannian product benchmark only, not generic4D dynamics, Lorentzian gravity, a selected frame, Newton constant or cosmological constant."
+  },
+  "source_sha256": {
+    "analysis/w33_pass11594_refined_gravity_firewall.py": "bc6f9067929285025df15ff57d8b2927ef51c742caf8bc14958d8c4a2fc387d7",
+    "data/PART_W33_PASS11594_REFINED_GRAVITY_FIREWALL.json": "0f5d0e206f2d0c54d4b47161dd0b50600f20328c9225660a1c51e0666434f190",
+    "analysis/w33_pass11559_fixed_dimension_gauge_frame_refinement.py": "e7e32e8d47bded65b621473c8939295359e5d30566538260345a659f420ca14c",
+    "analysis/w33_pass11557_pin_equivariant_event_dirac.py": "6d0307511f1560f19042267409b02919b6f707c50ee8d42ed50e0a03cb10e148"
+  },
+  "producer_sha256": "13954bd43f55be20e44dce190707442f99dd4b1250c5596959baafa95b341bf2"
+}
