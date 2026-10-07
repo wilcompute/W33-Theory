@@ -1,0 +1,23 @@
+name: Pass 11607 Hesse CP Weyl selector
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analysis/w33_pass11607_hesse_cp_weyl_selector.py'
+      - 'analysis/PASS11607_HESSE_CP_WEYL_SELECTOR.md'
+      - 'data/PART_W33_PASS11607_HESSE_CP_WEYL_SELECTOR.json'
+      - 'tests/test_w33_pass11607_hesse_cp_weyl_selector.py'
+      - '.github/workflows/pass11607-hesse-cp-weyl-selector.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --upgrade pip sympy pytest
+      - run: python analysis/w33_pass11607_hesse_cp_weyl_selector.py
+      - run: pytest -q tests/test_w33_pass11607_hesse_cp_weyl_selector.py
