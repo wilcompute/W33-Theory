@@ -1,0 +1,192 @@
+{
+ "pass_id": 11641,
+ "equivariance": {
+  "R_Fourier_equals_11600_normalized_F": true,
+  "R_phase_equals_11600_normalized_P": true,
+  "R_X_is_identity": true,
+  "R_Z_is_identity": true,
+  "B_is_real": "conj(u(psi)) = u(conj psi): complex conjugation of the state is Pass 11600's coefficient CP",
+  "Bloch_actions_match_11600_(10_checks)": 10
+ },
+ "theorem": {
+  "labels": [
+   "Z",
+   "X",
+   "XZ",
+   "XZ2"
+  ],
+  "mub_unit_vectors_11600_axes": {
+   "Z": [
+    "sqrt(3)/3",
+    "sqrt(3)/3",
+    "sqrt(3)/3"
+   ],
+   "X": [
+    "sqrt(3)/3",
+    "-sqrt(3)/3",
+    "-sqrt(3)/3"
+   ],
+   "XZ": [
+    "-sqrt(3)/3",
+    "sqrt(3)/3",
+    "-sqrt(3)/3"
+   ],
+   "XZ2": [
+    "-sqrt(3)/3",
+    "-sqrt(3)/3",
+    "sqrt(3)/3"
+   ]
+  },
+  "mub_gram": [
+   [
+    "1",
+    "-1/3",
+    "-1/3",
+    "-1/3"
+   ],
+   [
+    "-1/3",
+    "1",
+    "-1/3",
+    "-1/3"
+   ],
+   [
+    "-1/3",
+    "-1/3",
+    "1",
+    "-1/3"
+   ],
+   [
+    "-1/3",
+    "-1/3",
+    "-1/3",
+    "1"
+   ]
+  ],
+  "theorem_rho_equals_3_sum_Pi": true,
+  "theorem_r_equals_minus9_sum_Pi_m": true,
+  "cone_identity_sumPi2_eq_3sumPi2sq": true,
+  "rho_equals_M3_minus_M1cubed": true,
+  "W_equals_c_times_Vandermonde": true,
+  "c": "-1259712",
+  "xyz_in_Pi": "-81*sqrt(3)*(q0 - q1 - q2 + q3)*(q0 - q1 + q2 - q3)*(q0 + q1 - q2 - q3)",
+  "p4_in_Pi": "729*(3*q0**4 - 4*q0**3*q1 - 4*q0**3*q2 - 4*q0**3*q3 + 18*q0**2*q1**2 - 12*q0**2*q1*q2 - 12*q0**2*q1*q3 + 18*q0**2*q2**2 - 12*q0**2*q2*q3 + 18*q0**2*q3**2 - 4*q0*q1**3 - 12*q0*q1**2*q2 - 12*q0*q1**2*q3 - 12*q0*q1*q2**2 + 72*q0*q1*q2*q3 - 12*q0*q1*q3**2 - 4*q0*q2**3 - 12*q0*q2**2*q3 - 12*q0*q2*q3**2 - 4*q0*q3**3 + 3*q1**4 - 4*q1**3*q2 - 4*q1**3*q3 + 18*q1**2*q2**2 - 12*q1**2*q2*q3 + 18*q1**2*q3**2 - 4*q1*q2**3 - 12*q1*q2**2*q3 - 12*q1*q2*q3**2 - 4*q1*q3**3 + 3*q2**4 - 4*q2**3*q3 + 18*q2**2*q3**2 - 4*q2*q3**3 + 3*q3**4)",
+  "sign_of_xyz_at_the_four_MUB_vertices": [
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ "numeric": {
+  "mub_permutation_Fourier": [
+   "X",
+   "Z",
+   "XZ2",
+   "XZ"
+  ],
+  "mub_permutation_phase": [
+   "Z",
+   "XZ",
+   "XZ2",
+   "X"
+  ],
+  "mub_permutation_conjugation": [
+   "Z",
+   "X",
+   "XZ2",
+   "XZ"
+  ],
+  "random_states": 2000,
+  "CP_flips_sign_W": 2000,
+  "T_plus_state": {
+   "Pi": [
+    3.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "Pi_units": "1/81",
+   "rho": 0.222222222222,
+   "direction_dot_minus_mZ": 1.0
+  },
+  "strange_state_rho": 0.0,
+  "vacuum_11600_(1,2,3)/sqrt14": {
+   "Pi_over_rho": [
+    0.006181658352287382,
+    0.1347677833206973,
+    0.10905055832701531,
+    0.08333333333333333
+   ],
+   "MUB_order_by_Pi": [
+    "X",
+    "XZ",
+    "XZ2",
+    "Z"
+   ],
+   "W": 0.04373177842565598
+  },
+  "vacuum_11600_realised_by_states_(1,1,t)": [
+   {
+    "t": [
+     1.242767358347578,
+     4.514305618534454
+    ],
+    "rho": 0.2590200037971912,
+    "direction_error": 3.3306690738754696e-16,
+    "Pi_times_81": [
+     0.12969502676047545,
+     2.8275116915447476,
+     2.2879483585878897,
+     1.7483850256310416
+    ],
+    "MUB_order_by_Pi": [
+     "X",
+     "XZ",
+     "XZ2",
+     "Z"
+    ]
+   },
+   {
+    "t": [
+     -1.162625629263087,
+     -4.468078071059252
+    ],
+    "rho": 0.27205653723037676,
+    "direction_error": 5.551115123125783e-16,
+    "Pi_times_81": [
+     0.1362226058188274,
+     2.9698209732958456,
+     2.403101299800442,
+     1.8363816263050448
+    ],
+    "MUB_order_by_Pi": [
+     "X",
+     "XZ",
+     "XZ2",
+     "Z"
+    ]
+   },
+   {
+    "t": [
+     -0.08014172908449249,
+     -0.046227547475203544
+    ],
+    "rho": 0.17088284018952865,
+    "direction_error": 1.5700924586837752e-16,
+    "Pi_times_81": [
+     0.0855634862419353,
+     1.8653896279709037,
+     1.5094243996251115,
+     1.153459171279316
+    ],
+    "MUB_order_by_Pi": [
+     "X",
+     "XZ",
+     "XZ2",
+     "Z"
+    ]
+   }
+  ]
+ }
+}
