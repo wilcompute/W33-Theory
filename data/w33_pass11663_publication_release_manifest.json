@@ -1,0 +1,20 @@
+{
+  "science_commit": "6a731dc34825430a6aa2b5febc1ecf59fd89c9f7",
+  "run_id": 37695673409,
+  "job_id": 113046676993,
+  "conclusion": "success",
+  "frozen_tests": "7 passed in4.40s",
+  "regenerated_tests": "7 passed in4.09s",
+  "producer_status": "PASS",
+  "actual_job_log": ".continuity/receipts/PASS11663_CI.log",
+  "sha256": {
+    "analysis/w33_pass11663_odd_weil_normal_map.py": "e98c3acb55e27b3836925958fa5fe2d0ce18597c0de582610d17dab662d3b6ca",
+    "analysis/PASS11663_ODD_WEIL_NORMAL_MAP.md": "3cf7e7c86dfa3dbb1fb98bceb93472f4a248dc70de774df9c60a0973bb585ba9",
+    "tests/test_w33_pass11663_odd_weil_normal_map.py": "5fb304de2820e45dfaa87f851ac9ca5dba610e5073227e3eb4456b7499126113",
+    "tests/test_w33_pass11649_radial_scope.py": "a853fbffdc8f0b3344f9ae423c08ca8159f81ecc530c8a4be926d8367c7dbc56",
+    "analysis/w33_pass11649_maximal_arrow_state.py": "6c44667cf02c59f3672efa898a26038940e8f04a01b18a23d3e72920d80b846f",
+    "analysis/PASS11649_MAXIMAL_ARROW_STATE.md": "ea3833887a6bd3416ad6d60b4da1509b5c2321267c5e818a73e22e5b571cf572",
+    ".github/workflows/pass11663-odd-weil-normal-map.yml": "2c9cc00f7d433833bf0824313b93bc423b05e78360899190cf20ae4770b132cb",
+    "data/w33_pass11663_odd_weil_normal_map.json": "cc4d9f41a7045c85b86fc869a699baa91abc7d37b92a505fef437960515f9eab"
+  }
+}
