@@ -2187,3 +2187,18 @@ budget; sigma-dependent physical Yukawa CP invariants; selected E8-D4 versus
 C^5 phase quotient with preserved contexts; all264normal one-loop stability;
 and native propagating gravity with an independently tested vacuum-energy
 selection mechanism. None is implied solved by the finite quantum resource.
+
+
+## 2026-10-07 Passes11631–11635: execute all five physical interfaces
+
+User asked to execute the previous five independent targets. Reservation420ab9140 is pushed to master. Prior11630 science01a6ebab547ddaa05e0d93763377a9d41604fc2e and CI37644947958 are verified, merged with the parallel formula-only refresh into ba6a85ed6b17d2091b3ef47e53897c949eefb22c. Fresh fetch shows no later parallel commits at current reservation.
+
+-11631: explicit ancilla-filter Hamiltonian and two-system-qubit polar pulse, actual noisy preparation controls and a coherent norm bound. Supplied spin couplings; no native hardware derivation.
+-11632: joint-sector little-group census4752free/432order3; physical symmetric seed Yukawas and216+216CP-covariant mass-squared map, invariant6480epsilon(epsilon²+34). Coefficients and UV parent action/selection remain supplied/open.
+-11633: old selectedD4/oldCoxeter combination collapses24roots to10rays; an explicit18reflection Weyl word and inverse-adjoint cell map give a full exact240root/40ray projection with12selectedD4rays. All exact minors and C^5 fibers checked; not a canonical physical selection.
+-11634: full297coordinate finite-shell Hessian; corrected tangent projection33gauge/264normal, gradient7.54e-11, HG3.13e-10, gap0.001613149468. Independent32/64quadrature operator-norm difference5.14e-16. A discarded transpose error and an invalid misnamed temporary32file comparison were caught before acceptance; neither is published as a result. Float64 finite Landau shell, not physical pole masses or interval proof.
+-11635: explicit conserved native-tree register with80continuum metrics and79native pair couplings per branch; imported regular tree ghost theorem conditional. Exact adjacent covariance-729/25600 and vertex degree variance1053/1600 induce nontrivial quartic ensemble cumulants. Common vacuum shift changes unequal-volume odds; finite detailed-balance flux chain has no smallest-positive absorbing state. Native spacetime emergence and vacuum selection remain open.
+
+Both final producers passed; final independent tests, intake/index refresh and normal-hook science publication are in progress. Mixed decision stores and the original dirty/diverged checkout are preserved. Each deliberate owned change was logged with Continuity.
+
+Final11631–11635 local validation: both final producers PASS;10independent regressions PASS46.69s; source/certificate hashes bind correctly; strict264normal positivity and Ward controls pass; syntax and forced-arithmetic selftest pass. Seven-file full intake returned clean/no forced arithmetic/no contradictions, with an advisory hesse+levi candidate that was subsequently read/credited; the final independent rediscovery guard is now silent. RESULTS_INDEX11174files/15783distinctive results and TOPICAL_ALIASES5191files/1090tokens refreshed. Fresh GitKraken fetch/log shows no commits after our420ab9140reservation. Scientific publication follows, then exact-SHA CI and receipt. Mixed decision stores remain unstaged.

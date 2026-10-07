@@ -10,7 +10,7 @@ to guess: `grep -i gow TOPICAL_ALIASES.md` reaches
 `2026-07-15_pass355_sp43_frobenius_schur.md`, which no search for
 "phase" or "complex structure" ever would.
 
-Files scanned: **5190** · distinct tokens: **1089**
+Files scanned: **5191** · distinct tokens: **1090**
 
 Tokens marked ⚠ appear ONLY in topically opaque filenames (dated or
 numbered), so they are invisible to any topic search — read those first.
@@ -233,6 +233,7 @@ numbered), so they are invisible to any topic search — read those first.
 - `code:[1,2,6]` — [NOVEL_CONNECTIONS_2026_02_10.md](docs/NOVEL_CONNECTIONS_2026_02_10.md), [README_EXTENSION_ONLINE_FINDINGS_2026_02_10.md](docs/README_EXTENSION_ONLINE_FINDINGS_2026_02_10.md), [README_LIVING_PAPER_2026_02_11.md](docs/README_LIVING_PAPER_2026_02_11.md)
 - `code:[1,2,9]` ⚠ — [BT4177_BT4184_af_nogo_twobody_hodge_pdk_interval_bonkers.md](analysis/BT4177_BT4184_af_nogo_twobody_hodge_pdk_interval_bonkers.md), [BT876_gauge_sector_centralizer.md](analysis/BT876_gauge_sector_centralizer.md)
 - `code:[1,24,15]` — [PART_CCLXXXVI_KREIN_QPOLY_BRIDGE.md](manuscripts/parts/PART_CCLXXXVI_KREIN_QPOLY_BRIDGE.md)
+- `code:[1,3,1]` ⚠ — [PASS11631_11635_PHYSICAL_INTERFACES.md](analysis/PASS11631_11635_PHYSICAL_INTERFACES.md)
 - `code:[1,3,2]` — [404.html](docs/404.html), [exceptional-geometry-41a8d733.html](docs/exceptional-geometry-41a8d733.html), [full-site-2026-08-06.html](docs/full-site-2026-08-06.html), [index.html](docs/index.html)
 - `code:[1,3,3]` ⚠ — [BT937_tetracode_action_on_chain.md](analysis/BT937_tetracode_action_on_chain.md), [PASS11130_SINGLE_HIGGS_BOTTOM_TAU.md](analysis/PASS11130_SINGLE_HIGGS_BOTTOM_TAU.md)
 - `code:[1,3,8]` ⚠ — [BT1035_ncg_inner_fluctuation_gap_audit.md](analysis/BT1035_ncg_inner_fluctuation_gap_audit.md), [BT1037_inner_fluctuation_test_harness.md](analysis/BT1037_inner_fluctuation_test_harness.md), [BT1038_af_representation_candidate.md](analysis/BT1038_af_representation_candidate.md)
