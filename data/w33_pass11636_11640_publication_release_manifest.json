@@ -1,0 +1,20 @@
+{
+  "science_commit": "3899e211b",
+  "replay_commit": "b167854593c7fc8ec8bacf1d86f866d8c0041c25",
+  "run_id": 37692158927,
+  "job_id": 113034774224,
+  "conclusion": "success",
+  "actual_job_log": ".continuity/receipts/PASS11636_11640_CI.log",
+  "sha256": {
+    "analysis/w33_pass11636_11640_operator_selector_transitions.py": "877dcabfaa4a92aeb5faeb7c5ee60709c789cce7d94d6a4aa176e83950b292ad",
+    "analysis/w33_pass11637_fermion_ir_normals.py": "3541faf130cbc384c61bcf0aef6fbd27b6c66dc3b73b78af804d7848e9282e96",
+    "analysis/PASS11636_11640_OPERATORS_SELECTORS_AND_TRANSITIONS.md": "398ad7f47716c96a880c1f01928cc707d7db7cbdcac1936794c0efb58a689c7d",
+    "tests/test_w33_pass11636_11640_operator_selector_transitions.py": "886ee2c5f90ff9de7202fea0f85936744a213df04508fbc11207a5b5117b9e55",
+    ".github/workflows/pass11636-11640-operators-selectors.yml": "4fc74811b50c91822d485f1680ca6f790009e1b2ef672bb68459fd8b03711e72",
+    "data/w33_pass11636_11640_operator_selector_transitions.json": "bf2ab0a6950b8677dd8d77b2baa3b6d609a597fefa9a9a0de117cb5e1876f53c",
+    "data/w33_pass11637_fermion_ir_normals.json": "8427afdc44af73d367f9bce6c5e601cba39ab9c08918d6c2840f6bdcdcf255fa",
+    "data/w33_pass11636_e6_cubic_inputs.npz": "5b4490796283aaa1519ebe060b48b6de051efb7e0156e57cc0a2abeaac96cc81",
+    "data/w33_pass11637_fermion_ir_normals.npz": "fa11b33fd60d7689924ec483d6eeac23004d52dd0d1c1afc9475efbe1c4ec62f",
+    "data/w33_pass11638_complex_selector.npz": "995ca3365346ed555dded14aff0878fdad12e386a6798cd48e3fa092dea01dff"
+  }
+}

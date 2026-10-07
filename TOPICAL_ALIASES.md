@@ -10,7 +10,7 @@ to guess: `grep -i gow TOPICAL_ALIASES.md` reaches
 `2026-07-15_pass355_sp43_frobenius_schur.md`, which no search for
 "phase" or "complex structure" ever would.
 
-Files scanned: **5192** · distinct tokens: **1090**
+Files scanned: **5208** · distinct tokens: **1092**
 
 Tokens marked ⚠ appear ONLY in topically opaque filenames (dated or
 numbered), so they are invisible to any topic search — read those first.
@@ -165,6 +165,7 @@ numbered), so they are invisible to any topic search — read those first.
 - `cite:Voronov(2022)` — [COMPLETE_M_THEORY_SYNTHESIS.md](docs/archive/COMPLETE_M_THEORY_SYNTHESIS.md)
 - `cite:Wall(1963)` ⚠ — [PASS11217_QUBIT_ARROW_LAW.md](analysis/PASS11217_QUBIT_ARROW_LAW.md)
 - `cite:Walmsley(2019)` — [temporal_spectral_toroidal_computer.html](docs/temporal_spectral_toroidal_computer.html)
+- `cite:Walter(2017)` ⚠ — [PASS11659_BURKHARDT_NODES_ARE_CONCURRENCES.md](analysis/PASS11659_BURKHARDT_NODES_ARE_CONCURRENCES.md)
 - `cite:Weil(1967)` — [404.html](docs/404.html), [exceptional-geometry-41a8d733.html](docs/exceptional-geometry-41a8d733.html), [full-site-2026-08-06.html](docs/full-site-2026-08-06.html), [index.html](docs/index.html)
 - `cite:Weinberg(1974)` — [PART_CCCXXIII_RG_MAP_SIN2_THETA_W.md](manuscripts/parts/PART_CCCXXIII_RG_MAP_SIN2_THETA_W.md)
 - `cite:Weiss(2007)` — [404.html](docs/404.html), [exceptional-geometry-41a8d733.html](docs/exceptional-geometry-41a8d733.html), [full-site-2026-08-06.html](docs/full-site-2026-08-06.html), [index.html](docs/index.html)
@@ -984,6 +985,7 @@ numbered), so they are invisible to any topic search — read those first.
 - `named:Uniqueness` — [PART_CCCXXV_CANONICAL_ACTION_KERNEL.md](manuscripts/parts/PART_CCCXXV_CANONICAL_ACTION_KERNEL.md), [PART_L_ARXIV_MASTER_PAPER.md](manuscripts/parts/PART_L_ARXIV_MASTER_PAPER.md)
 - `named:Universal` ⚠ — [2026-05-21_universal_oscillator_stack.md](analysis/2026-05-21_universal_oscillator_stack.md)
 - `named:Upper` — [2026-07-15_pass356_css_distance_lower_bound.md](analysis/2026-07-15_pass356_css_distance_lower_bound.md), [MILESTONES.md](analysis/MILESTONES.md), [PASS11207_ARROW_THEOREM.md](analysis/PASS11207_ARROW_THEOREM.md), [404.html](docs/404.html), [exceptional-geometry-41a8d733.html](docs/exceptional-geometry-41a8d733.html), [full-site-2026-08-06.html](docs/full-site-2026-08-06.html), [index.html](docs/index.html), [PART_CCCCCLIII_4COLORING_OVOIDS.md](manuscripts/parts/PART_CCCCCLIII_4COLORING_OVOIDS.md), [PART_CCCXIII_LOVASZ_THETA_BRIDGE.md](manuscripts/parts/PART_CCCXIII_LOVASZ_THETA_BRIDGE.md), [PART_DCCXVIII_PINCER_BOUND_THEOREM.md](manuscripts/parts/PART_DCCXVIII_PINCER_BOUND_THEOREM.md)
+- `named:Vandermonde` ⚠ — [PASS11651_N_QUTRIT_HESSE_SPACE.md](analysis/PASS11651_N_QUTRIT_HESSE_SPACE.md)
 - `named:Vandiver` — [PART_CCLVIII_BERNOULLI_RAMANUJAN_BRIDGE.md](manuscripts/parts/PART_CCLVIII_BERNOULLI_RAMANUJAN_BRIDGE.md)
 - `named:Viazovska` — [new_connections_research.md](docs/new_connections_research.md), [PART_DCCLVI_SPHERE_PACKING_DENSITY_TOWER.md](manuscripts/parts/PART_DCCLVI_SPHERE_PACKING_DENSITY_TOWER.md)
 - `named:Vizing` — [PART_CCCIII_MATCHING_POLYNOMIAL_BRIDGE.md](manuscripts/parts/PART_CCCIII_MATCHING_POLYNOMIAL_BRIDGE.md)

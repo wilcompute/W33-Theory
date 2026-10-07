@@ -13,9 +13,10 @@ FOUND HERE.
     cos(pi/8), sin(pi/8); the other three MUBs have IDENTICAL spectra.  Hence at psi*: the Hesse doublet sits at a
     stabiliser vertex (j = infinity), Pass 11600's CP discriminant W = 0, and every label-blind arrow vanishes
     (Pass 11648) -- the strongest arrow of time is invisible to the Hesse CP order parameter and to label-blind data.
-  * PARAMETER-FREE CP VACUUM.  V(psi) = kappa (|psi|^2 - v^2)^2 - lam h6(psi)^2 (kappa, lam > 0) has its global minima
-    exactly on the 144-ray orbit (given the maximiser set above): no target ratios are supplied, unlike Pass 11600's
-    (1,4,9)/14.  The vacuum spontaneously picks a time orientation sign h6 = s.
+  * FIXED-RADIUS CP SELECTOR. On a supplied sphere, -lam h6(psi)^2 selects the candidate144-ray orbit if the
+    global maximizer conjecture holds. The originally proposed quartic radial term cannot stabilize it: h6 has
+    degree12, so its negative square has degree24 and the unrestricted potential is unbounded below.
+    Intake11663 withdraws the radial-vacuum claim while retaining the unit-sphere search and filter algebra.
   * WEYL FILTER (Passes 11593/11607 carrier): h6 is odd exactly under the antiunitary coset, so h6 Chi is invariant
     under the diagonal action, and H_gap = lam [ (sqrt3/62208) |psi|^12 I + h6 Chi ]^2 is positive with
     H_gap = 4 lam (sqrt3/62208)^2 P_s at a vacuum (P_s = (I + s Chi)/2): an exact Weyl kernel Chi = -s.

@@ -14,7 +14,7 @@ group.
 >
 >   **ψ\* = (0, cos π/8, sin π/8·e^{5πi/6}).**
 
-* **Global, not local.** All 200 random BFGS starts converge to this value, and all 200 end points lie in the orbit of ψ\*.
+* **Numerical global-search evidence.** All 200 random BFGS starts converge to this value, and all 200 end points lie in the orbit of ψ\*. This does not prove the global maximizer set.
 * **The orbit has 144 rays.**
   * 72 have h₆ > 0. They form one unitary Clifford orbit, with stabiliser of order 3.
   * Their 72 time reverses have h₆ < 0.
@@ -32,12 +32,13 @@ group.
 > **The strongest arrow of time of a qutrit is invisible both to the Hesse/Coxeter CP order parameter and to every
 > label-blind arrow.** It lives entirely in the outcome labels.
 
-## A parameter-free CP vacuum
+## Fixed-radius CP selector; radial action refuted at intake11663
 
-* **The potential.** V(ψ) = κ(|ψ|² − v²)² − λh₆(ψ)², with κ, λ > 0. Its global minima are exactly the 144-ray orbit.
+* **The originally proposed potential.** V(ψ) = κ(|ψ|² − v²)² − λh₆(ψ)², with κ, λ > 0. This unconstrained radial action is unbounded below: h₆(rψ)=r¹²h₆(ψ), so its negative term grows as r²⁴ against the positive quartic term. Along the displayed unit state, h₆²=1/1289945088 and V(rψ\*) tends to minus infinity. It has no global vacuum.
+* **What survives.** On a supplied fixed-radius sphere, minimizing −h₆² is equivalent to maximizing |h₆|. The 144-ray candidate set has numerical search evidence; its global completeness still needs proof. A stable radial completion is separate physical input. Regression: `tests/test_w33_pass11649_radial_scope.py`.
 * **No supplied data.** No target ratios are supplied, unlike Pass 11600's (1,4,9)/14, and no tensor field is
   introduced: the order parameter is the family state itself.
-* **Spontaneous orientation.** The vacuum picks the time orientation s = sign h₆ spontaneously, and the two signs are
+* **Orientation on the constrained candidate set.** A selected ray has time orientation s = sign h₆, and the two signs are
   exchanged by complex conjugation.
 
 ## Its Weyl filter (Passes 11593, 11607)
