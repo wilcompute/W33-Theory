@@ -129,7 +129,7 @@ def scan():
                 fp = os.path.join(dirpath, fn)
                 try:
                     with open(fp, encoding="utf-8", errors="ignore") as fh:
-                        txt = fh.read(400_000)
+                        txt = fh.read()
                 except OSError:
                     continue
                 nfiles += 1
