@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "science_commit": "2fa850124bb15be8500da28f1034c80d46c7c064",
+  "ci_run": 37700405533,
+  "ci_job": 113062220096,
+  "ci_url": "https://github.com/wilcompute/W33-Theory/actions/runs/37700405533",
+  "local_tests": {
+    "count": 16,
+    "seconds": 42.52
+  },
+  "frozen_CI_tests": {
+    "count": 16,
+    "seconds": 3.77
+  },
+  "regenerated_CI_tests": {
+    "count": 16,
+    "seconds": 3.59
+  },
+  "producer_sections": 8,
+  "hash_convention": "SHA256 of text with CRLF normalized to LF; excludes this manifest and mutable session notes",
+  "artifacts": {
+    "analysis/w33_pass11664_11671_kernel_dynamics.py": "28b54c9464c1ae6f83d920bc8b138b6e92d1280d5e90e474a592bde0eea95839",
+    "analysis/PASS11664_11671_KERNEL_DYNAMICS.md": "7433ada32fe3ea4df5f6c455266263d9a0105b2cac348f180655c1d4e7aa4f35",
+    "tests/test_w33_pass11664_11671_kernel_dynamics.py": "5b9d4062ca812c2e0c81c2bb91b0819f631028b7f63f5ba3bbb4f4871c240517",
+    "data/w33_pass11664_11671_kernel_dynamics.json": "35934078b86cf2be7dc92f8446fe4e8d72daaa274502efbde473cad1280b1901",
+    ".github/workflows/pass11664-11671-kernel-dynamics.yml": "653ec0d26ba4926ea0e6a09ff950cc37edb4a1cacce9e36b4e063c5126f35514",
+    "docs/index.html": "f3073d25586b696693cc5df7de08ea2efbc26c322dc43fc4142c47ee64523d33",
+    "RESULTS_INDEX.md": "5283b8c647150adbe246044f4ad5dc4c9cc6ee5b11574dcf706329174449433f",
+    "TOPICAL_ALIASES.md": "a40e6e5c9ecebdfe06f61896d93cca5c53c4c29e969005e26fbecf82ef975dc4",
+    ".continuity/receipts/PASS11664_11671_LOCAL.log": "4c04a445ad8b99236482253eae7aab0d9ba7b8869ceee759863522fd43ff5042",
+    ".continuity/receipts/PASS11664_11671_CI.log": "d8219f4a5f0cecdd93660bc150e9b9930d1cf978de980602a81a0e448e91f1cf"
+  },
+  "boundaries": "Scoped finite algebra and supplied EFT models; not a full TOE, chiral SM vacuum, observed parameter fit, nonlinear spacetime or selected cosmological constant."
+}
