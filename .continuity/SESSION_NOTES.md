@@ -2014,3 +2014,9 @@ Independent follow-up targets: compatible SM and CP phase selection; dynamic mix
 - Exact positive potential has24 generic CP-breaking rays, two A4 orbits, projective stabilizer18 and one common-phase zero mode. Below canonical degree16, a CP-even single-doublet phase-blind angular potential has Hessian determinant -D² or a flat direction; degree16 attains isolated generic ray minima.
 - Canonical angular masses have leading coefficients181/343 and57600/62083; a supplied real-Higgs alignment gives a nonzero weak-basis CP invariant. These are an added EFT and extra-flavon masses, not observed flavor predictions. Lower-order symmetry-allowed terms are not radiatively protected, and the U1 must extend consistently to interactions.
 - All four producer sections PASS; all nine final independent regressions PASS in48.13s. Index/intake refresh precedes the normal-hook science commit and push to master. Original checkout and mixed stores stay unstaged.
+
+### Pass11600 verified publication receipt
+
+- Science commit5def8dc5a pushed to W33 master and independently verified by fresh GitKraken fetch/log/status. Nine owned files published, including both JSON artifacts and regenerated result/alias indexes. Mixed decision stores remain unstaged; original parallel checkout preserved.
+- Four producer sections PASS, nine focused tests PASS in48.13s, four-file batch intake clean. Rediscovery candidates were read and cross-cited; primary Hesse and discrete-flavor CP literature credited. No measured flavor, radiatively protected UV model or gravity claim.
+- Independent next targets: protection/UV completion of allowed low-order invariants; dynamical Higgs/10/126 alignment; CP/discriminant relation to the Weyl selector; universal continuum curvature across independent frame refinements; a complete chiral measure/anomaly matching audit.
