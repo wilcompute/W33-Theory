@@ -1,0 +1,30 @@
+name: Pass11672-11679 native dynamics index
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analysis/w33_pass11672_11679_native_dynamics_index.py'
+      - 'analysis/PASS11672_11679_NATIVE_DYNAMICS_INDEX.md'
+      - 'tests/test_w33_pass11672_11679_native_dynamics_index.py'
+      - 'data/w33_pass11672_11679_native_dynamics_index.json'
+      - '.github/workflows/pass11672-11679-native-dynamics-index.yml'
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest
+      - name: Check frozen eight-interface certificate
+        run: python -m pytest --noconftest -q tests/test_w33_pass11672_11679_native_dynamics_index.py
+      - name: Replay native dynamics and exact kinetic indices
+        run: python analysis/w33_pass11672_11679_native_dynamics_index.py
+      - name: Audit regenerated certificate
+        run: python -m pytest --noconftest -q tests/test_w33_pass11672_11679_native_dynamics_index.py
