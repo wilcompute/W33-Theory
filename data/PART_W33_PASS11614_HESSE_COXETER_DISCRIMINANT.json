@@ -1,0 +1,65 @@
+{
+  "pass_number": 11614,
+  "producer_sha256": "c49791a124c028a796ede3f616c40633187a08dfd4eec72df0ace786af775d93",
+  "reservation": "1be1b367f",
+  "result": {
+    "boundary": "Exact chamber/order-parameter theorem only; no spacetime texture, tension, anomaly inflow or cosmological chamber selection is derived.",
+    "coxeter": {
+      "W_factorization": "W=-(x-y)(x+y)(x-z)(x+z)(y-z)(y+z)",
+      "anti_invariant": "W(gx)=det(g)W(x)",
+      "group": "W(D3)~=W(A3)~=S4",
+      "order": 24,
+      "positive_root_count": 6,
+      "reflection_arrangement": "W=0 iff x=+/-y or x=+/-z or y=+/-z"
+    },
+    "discriminant": {
+      "cubic": "t^3-p2 t^2+((p2^2-p4)/2)t-p3^2",
+      "identity": "W^2=(1/4)(p2^2-p4)^2(2p4-p2^2)+p2(5p2^2-9p4)p3^2-27p3^4",
+      "roots": "x^2,y^2,z^2"
+    },
+    "physics_weld": {
+      "native_mass": "Pass11610/11557 supply native Gamma_* for an anticommuting Gamma_* W Chi wall, conditional on that physical coupling.",
+      "selector": "Passes11607/11609 leave Chi=-sign(W) and E8 shell C=-sign(W).",
+      "wall": "Every simple reflection crosses W=0 and flips both selected signs."
+    },
+    "status": "PASS_HESSE_CP_ORDER_PARAMETER_IS_D3_COXETER_DISCRIMINANT",
+    "vacuum_chambers": {
+      "W_sign_multiplicities": {
+        "+": 12,
+        "-": 12
+      },
+      "base_ray": "(1,2,3)/sqrt(14)",
+      "distinct_root_signatures": 24,
+      "normalized_W": "15/343",
+      "orbit_size": 24,
+      "theorem": "The generic Hesse orbit has one point in every D3 chamber; sign(W) is its orientation class."
+    },
+    "wall_graph": {
+      "bipartition": [
+        12,
+        12
+      ],
+      "degree": 3,
+      "edges": 36,
+      "euler": 2,
+      "faces_total": 14,
+      "hexagonal_faces": 8,
+      "identification": "simple-reflection Cayley graph of S4: order-4 permutohedron, combinatorially truncated octahedron",
+      "rank2_parabolic_orders": [
+        6,
+        6,
+        4
+      ],
+      "square_faces": 6,
+      "vertices": 24
+    }
+  },
+  "source_sha256": {
+    "analysis/PASS11608_11613_CHIRAL_UNIFICATION.md": "d957753ab15a27eebe715ad2ecd7f14ba0cfff3c802392dccf82e9963f3f7fac",
+    "analysis/w33_pass11557_pin_equivariant_event_dirac.py": "6d0307511f1560f19042267409b02919b6f707c50ee8d42ed50e0a03cb10e148",
+    "analysis/w33_pass11600_dynamical_hesse_flavor.py": "790645d1c5b9bef670becceb65110cad598c6e8c60077098668dae79163f6999",
+    "data/PART_W33_PASS11608_11613_CHIRAL_UNIFICATION.json": "50394dd9deb32bd579ab25d490afc871176184abc1d93e19f5e0db1dec404c36",
+    "data/w33_pass11600_dynamical_hesse_flavor.json": "88ddea3a97f5e3d390abf1b3d8840f2cd91472a9cf3923a9e7b55251c246383c"
+  },
+  "status": "PASS_HESSE_CP_ORDER_PARAMETER_IS_D3_COXETER_DISCRIMINANT"
+}
