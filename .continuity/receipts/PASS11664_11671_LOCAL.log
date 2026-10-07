@@ -1,0 +1,14 @@
+Passes11664-11671 final local validation
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1
+python3 analysis/w33_pass11664_11671_kernel_dynamics.py
+11664 PASS
+11665 PASS
+11666 PASS
+11667 PASS
+11668 PASS
+11669 PASS
+11670 PASS
+11671 PASS
+python3 -m pytest --noconftest -q tests/test_w33_pass11664_11671_kernel_dynamics.py
+................                                                         [100%]
+16 passed in 42.52s

@@ -1,0 +1,663 @@
+{
+  "status": "PASS",
+  "reservation": "830b1835c",
+  "reservation_integration": "85ff2435e",
+  "producer_sha256": "28b54c9464c1ae6f83d920bc8b138b6e92d1280d5e90e474a592bde0eea95839",
+  "sources": {
+    "analysis/w33_pass11663_odd_weil_normal_map.py": "e98c3acb55e27b3836925958fa5fe2d0ce18597c0de582610d17dab662d3b6ca",
+    "analysis/w33_pass1068_chevie_g25_g32_matrices.py": "eb4573bde8f611824baafd77efdbaf59160908addb2db5d297a2d295f66dd151",
+    "analysis/w33_pass11278_symplectic_ring_geometry.py": "ab67cb0eb9d88098d8e4e7d14ad9b386dabd581deb3f89274da9e3a532757865",
+    "analysis/w33_pass11279_history_flux_obstruction.py": "b5a4a2278df4e9a860d3c989f9be0ae4758e08cc3c2f83e8a6b2578ec80f5827",
+    "analysis/w33_pass11636_11640_operator_selector_transitions.py": "877dcabfaa4a92aeb5faeb7c5ee60709c789cce7d94d6a4aa176e83950b292ad",
+    "data/w33_pass11636_e6_cubic_inputs.npz": "5b4490796283aaa1519ebe060b48b6de051efb7e0156e57cc0a2abeaac96cc81",
+    "data/w33_pass11631_11635_physical_interfaces.json": "83db157500f983261293f1eb0d4fbd153d7f2b0aa142bb47d494c6fcd2ef26e9"
+  },
+  "passes": {
+    "11664": {
+      "status": "PASS",
+      "exact_group_order": 648,
+      "literal_prior_G25_generators_present": true,
+      "transverse_odd_equals_even_mass_kernel": true,
+      "generators": [
+        {
+          "name": "D0",
+          "R": [
+            [
+              "-w - 1",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "-w - 1",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "-w - 1"
+            ]
+          ],
+          "odd_axis_character": "1",
+          "determinant": "1"
+        },
+        {
+          "name": "D1",
+          "R": [
+            [
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "-w - 1",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "-w - 1"
+            ]
+          ],
+          "odd_axis_character": "-w - 1",
+          "determinant": "w"
+        },
+        {
+          "name": "F1",
+          "R": [
+            [
+              "-2*w/3 - 1/3",
+              "-2*w/3 - 1/3",
+              "-2*w/3 - 1/3"
+            ],
+            [
+              "-2*w/3 - 1/3",
+              "w/3 + 2/3",
+              "w/3 - 1/3"
+            ],
+            [
+              "-2*w/3 - 1/3",
+              "w/3 - 1/3",
+              "w/3 + 2/3"
+            ]
+          ],
+          "odd_axis_character": "1",
+          "determinant": "1"
+        },
+        {
+          "name": "CZ",
+          "R": [
+            [
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "w",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "-w - 1"
+            ]
+          ],
+          "odd_axis_character": "1",
+          "determinant": "1"
+        },
+        {
+          "name": "SUM01",
+          "R": [
+            [
+              "0",
+              "0",
+              "1"
+            ],
+            [
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "1",
+              "0"
+            ]
+          ],
+          "odd_axis_character": "1",
+          "determinant": "1"
+        }
+      ],
+      "H27_relation": "ZX=omega XZ; center=omega I3",
+      "bilinear_boundary": "Identical triplets have no invariant bare bilinear: the H27 center acts by omega^2. A conjugate Dirac pair admits only a scalar mass under unbroken H27. Chiral field content and broken-family Yukawas are extra data.",
+      "prior_owners": [
+        "analysis/w33_pass1068_chevie_g25_g32_matrices.py",
+        "analysis/w33_pass1077_g32_g25_invariant_restriction.py",
+        "analysis/2026-09-21_physical_external_a2_h27.md"
+      ]
+    },
+    "11665": {
+      "status": "PASS",
+      "real_fields": 38,
+      "full_hessian_rank": 37,
+      "full_auxiliary_covariance": [
+        "F0",
+        "F1",
+        "D0",
+        "D1",
+        "CZ"
+      ],
+      "relaxed_light_hessian": [
+        "8",
+        "0",
+        "8/3",
+        "8/3",
+        "8/3",
+        "8/3",
+        "8/3",
+        "8/3"
+      ],
+      "Q": [
+        "f0**2",
+        "sqrt(2)*f0*f1",
+        "sqrt(2)*f0*f2",
+        "sqrt(2)*f0*f3",
+        "f1**2",
+        "sqrt(2)*f1*f2",
+        "sqrt(2)*f1*f3",
+        "f2**2",
+        "sqrt(2)*f2*f3",
+        "f3**2"
+      ],
+      "P": [
+        "-2*q1*q8 - 2*q2*q6 - 2*q3*q5",
+        "2*q1*q4 + 2*q2*q7 + 2*q3*q9",
+        "-2*q0*q1 - 2*q5*q7 + 2*q6*q9",
+        "-2*q0*q2 + 2*q4*q5 - 2*q8*q9",
+        "-2*q0*q3 - 2*q4*q6 + 2*q7*q8"
+      ],
+      "action": "lambda(||f||^2-1)^2+||M q-Q(f)||^2+||M z-P(q)||^2+m_z^2||z||^2",
+      "frozen_q_matching": "kappa=m_z^2/((M^2+m_z^2) M^4)",
+      "UV_orientation_log": "-y^4 S log(B/A)/(64 pi^2)",
+      "scope": "A supplied positive renormalizable parent, with f4+q10+z5 complex fields; common mass M and input couplings. The source tensors use the native normal map. It is not an E6 UV derivation or a prediction of renormalized kappa. Scalar/gauge loops remain open.",
+      "prior_owners": [
+        "analysis/PASS11615_11619_PARENT_PAIRS_CONSTRAINTS.md"
+      ]
+    },
+    "11666": {
+      "status": "PASS",
+      "embedding": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "selected_config": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          0,
+          5,
+          6
+        ],
+        [
+          0,
+          7,
+          8
+        ],
+        [
+          1,
+          3,
+          9
+        ],
+        [
+          1,
+          6,
+          10
+        ],
+        [
+          1,
+          7,
+          11
+        ],
+        [
+          2,
+          4,
+          9
+        ],
+        [
+          2,
+          5,
+          10
+        ],
+        [
+          2,
+          8,
+          11
+        ],
+        [
+          3,
+          5,
+          11
+        ],
+        [
+          3,
+          8,
+          10
+        ],
+        [
+          4,
+          6,
+          11
+        ],
+        [
+          4,
+          7,
+          10
+        ],
+        [
+          5,
+          7,
+          9
+        ],
+        [
+          6,
+          8,
+          9
+        ]
+      ],
+      "selected_h": 0,
+      "Y1": [
+        [
+          "18",
+          "1/2 - sqrt(3)*I/2",
+          "0"
+        ],
+        [
+          "1/2 - sqrt(3)*I/2",
+          "2/3 + 2*sqrt(3)*I/3",
+          "1/3"
+        ],
+        [
+          "0",
+          "1/3",
+          "-1/3 + sqrt(3)*I/3"
+        ]
+      ],
+      "Y2": [
+        [
+          "437/9",
+          "53/18 - 55*sqrt(3)*I/18",
+          "-1/3 + sqrt(3)*I/3"
+        ],
+        [
+          "53/18 - 55*sqrt(3)*I/18",
+          "40/9 + 35*sqrt(3)*I/9",
+          "41/18 - sqrt(3)*I/18"
+        ],
+        [
+          "-1/3 + sqrt(3)*I/3",
+          "41/18 - sqrt(3)*I/18",
+          "-28/9 + 4*sqrt(3)*I/3"
+        ]
+      ],
+      "exact_light_CP": "-224*sqrt(3)*epsilon**3*(40465783590952*epsilon**3 + 36055395485682*epsilon**2 + 9913797539901*epsilon + 797029207506)/531441",
+      "full5_CP_scaling": "eta^12 times the prior exact light invariant",
+      "antisymmetric_triplet_CP": "Tr([Hu,Hd]^3)=0 for all two bare3x3 skew Yukawas: each H is a scalar minus a rank-one projector; the commutator has rank<=2 and trace0.",
+      "E6_archive": "data/w33_pass11636_e6_cubic_inputs.npz",
+      "E6_archive_sha256": "5b4490796283aaa1519ebe060b48b6de051efb7e0156e57cc0a2abeaac96cc81",
+      "joint_vacuum": {
+        "status": "PASS",
+        "eta": 1e-05,
+        "epsilon": 0.01,
+        "y": 0.2,
+        "kappa": 2.5e-05,
+        "squared_radius": 1.000198672304203,
+        "gradient_norm": 6.168713314748495e-16,
+        "Hessian": [
+          6.175344523934312e-16,
+          0.00022205106282014765,
+          0.00022205106293460498,
+          0.0002220510789085876,
+          0.0002220510795323202,
+          0.00022205108094449684,
+          0.000222051081740727,
+          8.00052048024257
+        ],
+        "quadrature_operator_norm_error": 2.1316282072803006e-14,
+        "light_up": [
+          0.00018051603459954171,
+          1.4375832497378217e-05,
+          7.193131231169841e-06
+        ],
+        "light_down": [
+          0.0001854194845205634,
+          1.5269462139862093e-05,
+          7.5900203915834635e-06
+        ],
+        "scope": "One supplied scalar action with BOTH five-state Dirac operators and fixed symmetric family spurions. The reference-ray saddle has nonzero exact CP, full-rank light masses and seven positive local normal curvatures. Other40-ray degeneracy and the bare global theorem are not inherited. Flavon dynamics, scalar/gauge loops and physical parameter matching remain open."
+      },
+      "scope": "A concrete conditional lift of prior11271/11636 symmetric E6-family operators into the actual Witting kernel at the reference ray. Symmetric additions explicitly change the antisymmetric-only Dirac model. Coefficients, selected Higgs sector and chirality are inputs; measured flavor and a global E6 field embedding are not derived.",
+      "prior_owners": [
+        "analysis/w33_pass11271_chiral_symmetric_yukawa_completion.py",
+        "analysis/PASS11636_11640_OPERATORS_SELECTORS_AND_TRANSITIONS.md"
+      ]
+    },
+    "11667": {
+      "status": "PASS",
+      "native_vertices": 80,
+      "native_edges": 160,
+      "transvection_site_permutation": [
+        0,
+        16,
+        17,
+        18,
+        4,
+        5,
+        6,
+        25,
+        26,
+        27,
+        34,
+        36,
+        35,
+        13,
+        14,
+        15,
+        19,
+        21,
+        20,
+        1,
+        3,
+        2,
+        22,
+        23,
+        24,
+        37,
+        39,
+        38,
+        10,
+        11,
+        12,
+        31,
+        32,
+        33,
+        28,
+        30,
+        29,
+        7,
+        9,
+        8,
+        42,
+        41,
+        43,
+        40,
+        54,
+        57,
+        60,
+        66,
+        63,
+        69,
+        75,
+        78,
+        72,
+        53,
+        55,
+        44,
+        56,
+        58,
+        45,
+        59,
+        61,
+        46,
+        68,
+        76,
+        51,
+        62,
+        79,
+        52,
+        65,
+        73,
+        50,
+        77,
+        67,
+        49,
+        71,
+        70,
+        48,
+        74,
+        64,
+        47
+      ],
+      "tree": [
+        0,
+        4,
+        8,
+        12,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15,
+        16,
+        20,
+        24,
+        28,
+        32,
+        36,
+        40,
+        44,
+        48,
+        53,
+        65,
+        77,
+        89,
+        101,
+        113,
+        125,
+        137,
+        149,
+        57,
+        69,
+        81,
+        93,
+        105,
+        117,
+        129,
+        141,
+        153,
+        61,
+        73,
+        85,
+        97,
+        109,
+        121,
+        133,
+        145,
+        157,
+        17,
+        18,
+        19,
+        21,
+        22,
+        23,
+        25,
+        26,
+        27,
+        29,
+        30,
+        31,
+        33,
+        34,
+        35,
+        37,
+        38,
+        39,
+        41,
+        42,
+        43,
+        45,
+        46,
+        47,
+        49,
+        50,
+        51
+      ],
+      "register_branches": 3,
+      "transported_constraints": 4,
+      "physical_fiber": 2,
+      "flat_connection_equivalence": "diag(Uj)^dag H diag(Uj)=I3 tensor Ltree+Lcycle3 tensor I80",
+      "scope": "An explicit quantum connection on three automorphic native trees, with exact link intertwiners and four supplied commuting projector constraints. It preserves a transported constraint algebra when the reference Hamiltonian already preserves it; a full HR constraint set has not been supplied. Flat links describe frame copies; this does not generate nonlinear Einstein gravity or independent topology dynamics.",
+      "prior_owners": [
+        "analysis/PASS11636_11640_OPERATORS_SELECTORS_AND_TRANSITIONS.md",
+        "analysis/w33_pass11289_cycle_gram_gluing_flux.py"
+      ]
+    },
+    "11668": {
+      "status": "PASS",
+      "fluxes": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "common_shift_phase": "U_C|n>=exp(-i C n q/alpha)|n>",
+      "membrane_covariance": "U_C^dag S U_C=exp(i C q/alpha) S",
+      "unchanged_flux_probabilities": true,
+      "fixed_membrane_reference_changes_coherence": true,
+      "scope": "The fixed-sector affine Ward result gives only a phase in each sector. Across a declared coherent flux superposition, a fixed membrane-reference operator rotates; transforming that reference restores covariance. This is not a violation of local sequestering. Superselection, membrane dynamics, allowed gauge-invariant states and a flux measure remain inputs; no cosmological constant is selected.",
+      "prior_owners": [
+        "analysis/PASS11620_11624_COVARIANT_PAIR_VACUUM.md",
+        "analysis/PASS11625_11629_COMPOSITES_JOINT_VACUA.md"
+      ],
+      "primary_sources": [
+        "https://arxiv.org/abs/1505.01492",
+        "https://arxiv.org/abs/1812.11625"
+      ]
+    },
+    "11669": {
+      "status": "PASS",
+      "benchmark": {
+        "y": 0.2,
+        "shell": [
+          0.01,
+          0.25
+        ],
+        "lambda_": 1.0,
+        "kappa": 1e-05,
+        "squared_radius": 1.0000993295163798,
+        "all_real_hessian": [
+          0.0,
+          8.000260186625015,
+          7.097575885567017e-05,
+          7.097575885567017e-05,
+          7.097575885567017e-05,
+          7.097575885567017e-05,
+          7.097575885567017e-05,
+          7.097575885567017e-05
+        ],
+        "global_kappa_bound": 8.153507714333811e-06,
+        "local_kappa_threshold": 5.5653366816749695e-06
+      },
+      "exact_global_conditions": "kappa>y^4 log(B/A)/(64 pi^2) and 2lambda>y^2(B-A)/(4 pi^2)",
+      "theorem": "Under these sufficient conditions the full radius-free finite-shell one-Dirac-loop potential has exactly the40 Witting projective vacuum rays, one unique positive radius and seven positive real normal curvatures. The common phase remains flat.",
+      "radial_second_bound": "|Vfermion,ss|<=y^2(B-A)/(4 pi^2)",
+      "scope": "Global proof for the supplied scalar+five-species Dirac finite-shell action. No fixed-radius assumption remains. Scalar/gauge loops, renormalized coefficients, physical units and continuum UV matching remain open.",
+      "prior_owners": [
+        "analysis/PASS11663_ODD_WEIL_NORMAL_MAP.md"
+      ]
+    },
+    "11670": {
+      "status": "PASS",
+      "physical_register_spectrum": [
+        0.467911113762044,
+        0.467911113762044,
+        1.6527036446661396,
+        1.65270364466614,
+        3.879385241571817,
+        3.879385241571817
+      ],
+      "exact_gap": "2(1-cos(2pi/9)) times the supplied hopping coefficient",
+      "Wilson_eigenphases": [
+        "2pi/3",
+        "-2pi/3"
+      ],
+      "scope": "A nonflat connection on the two declared free physical polarizations, extended by identity on the four gauge directions. It commutes with their projector constraints and the polarization-independent tree Hamiltonian. This added holonomy cannot be removed by branch frames; it is not an Einstein interaction, a native prediction of its phase or a physical graviton mass.",
+      "prior_owners": [
+        "analysis/PASS11636_11640_OPERATORS_SELECTORS_AND_TRANSITIONS.md"
+      ]
+    },
+    "11671": {
+      "status": "PASS",
+      "projective_line_A": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "projective_line_B": [
+        4,
+        -3,
+        2,
+        -1
+      ],
+      "restricted_Pfaffians": [
+        "-288*z**4 + 840*z**3 + 1476*z**2 - 840*z - 288",
+        "-160*z**4 + 776*z**3 - 36*z**2 + 732*z + 198",
+        "438*z**4 + 140*z**3 + 396*z**2 - 672*z + 144",
+        "-360*z**4 - 564*z**3 - 36*z**2 - 228*z - 342",
+        "58*z**4 - 100*z**3 - 684*z**2 + 588*z + 144"
+      ],
+      "common_polynomial_gcd": 1,
+      "no_base_at_infinity": true,
+      "pullback_zero_line": "O(-4)",
+      "exact_first_Chern_class": -4,
+      "numerical_Berry_charge": -3.999999999999938,
+      "minimum_mesh_overlap": 0.9983093287438378,
+      "exceptional_direction": "At f=(1,b,c,d), the kernel Pfaffian has linear part (0,0,-2b,-2c,-2d). The direction [b:c:d] selects one line in the three-dimensional base-ray kernel.",
+      "scope": "The classical Maschke quartic gives the map and exceptional planes. Here its actual normalized mass zero-mode line is audited as a gapped kernel bundle along a named base-free parameter sphere. This parameter-space Chern class is not electric charge, a particle-family count or a spacetime topological phase.",
+      "primary_sources": [
+        "https://arxiv.org/html/2207.04393v1#S3.SS1"
+      ]
+    }
+  }
+}

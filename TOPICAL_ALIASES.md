@@ -10,7 +10,7 @@ to guess: `grep -i gow TOPICAL_ALIASES.md` reaches
 `2026-07-15_pass355_sp43_frobenius_schur.md`, which no search for
 "phase" or "complex structure" ever would.
 
-Files scanned: **5208** · distinct tokens: **1092**
+Files scanned: **5209** · distinct tokens: **1092**
 
 Tokens marked ⚠ appear ONLY in topically opaque filenames (dated or
 numbered), so they are invisible to any topic search — read those first.
@@ -990,7 +990,7 @@ numbered), so they are invisible to any topic search — read those first.
 - `named:Viazovska` — [new_connections_research.md](docs/new_connections_research.md), [PART_DCCLVI_SPHERE_PACKING_DENSITY_TOWER.md](manuscripts/parts/PART_DCCLVI_SPHERE_PACKING_DENSITY_TOWER.md)
 - `named:Vizing` — [PART_CCCIII_MATCHING_POLYNOMIAL_BRIDGE.md](manuscripts/parts/PART_CCCIII_MATCHING_POLYNOMIAL_BRIDGE.md)
 - `named:Volume` ⚠ — [PASS11122_SIX_POTENTIALS.md](analysis/PASS11122_SIX_POTENTIALS.md)
-- `named:Ward` ⚠ — [PASS11542_11546_FIVE_DYNAMICAL_TARGETS.md](analysis/PASS11542_11546_FIVE_DYNAMICAL_TARGETS.md)
+- `named:Ward` ⚠ — [PASS11542_11546_FIVE_DYNAMICAL_TARGETS.md](analysis/PASS11542_11546_FIVE_DYNAMICAL_TARGETS.md), [PASS11664_11671_KERNEL_DYNAMICS.md](analysis/PASS11664_11671_KERNEL_DYNAMICS.md)
 - `named:Wedderburn` ⚠ — [BT1360_BT1364_gelfand_terwilliger.md](analysis/BT1360_BT1364_gelfand_terwilliger.md), [PASS5356_5361_psl2_pair_steinberg_qmod8_insert.tex](analysis/PASS5356_5361_psl2_pair_steinberg_qmod8_insert.tex)
 - `named:Weil` — [PART_DCMLXVI_CRITICAL_AUDIT.md](manuscripts/parts/PART_DCMLXVI_CRITICAL_AUDIT.md), [PART_MCLIII_IHARA_ZETA.md](manuscripts/parts/PART_MCLIII_IHARA_ZETA.md)
 - `named:Weinberg` — [PART_CCLXIX_GRAVITON_EMERGENCE.md](manuscripts/parts/PART_CCLXIX_GRAVITON_EMERGENCE.md)
