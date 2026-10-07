@@ -2167,3 +2167,23 @@ Original parallel checkout and mixed decision stores are preserved. Fresh
 GitKraken fetch before publication showed no new origin/master commits.
 Next: final eleven-test result, normal-hook GitKraken science commit,
 explicit HEAD:master publication, exact-SHA dedicated CI and receipt.
+
+### Pass11630 verified publication receipt
+
+Science01a6ebab547ddaa05e0d93763377a9d41604fc2e is on W33 master.
+Exact-SHA GitHub run37644947958 succeeded; job112873181225 records eleven
+regressions PASS in3.28s and a complete deterministic producer replay PASS,
+including the added symbolic Steane decoder. Local eleven tests passed39.58s.
+Evidence: https://github.com/wilcompute/W33-Theory/actions/runs/37644947958.
+The actual job log was downloaded and inspected, not inferred from status.
+A fresh source-folder hash check confirms exactly the same19 input files,
+no additions and no changed bytes since intake. The raw malformed JSON remains
+quarantined. Catalogs and public card are committed; every deliberate change
+and publication rationale is logged in Continuity. Unrelated mixed decision
+stores remain excluded, and the original parallel checkout is preserved.
+
+Independent frontier targets: a microscopic Reye instrument with an error
+budget; sigma-dependent physical Yukawa CP invariants; selected E8-D4 versus
+C^5 phase quotient with preserved contexts; all264normal one-loop stability;
+and native propagating gravity with an independently tested vacuum-energy
+selection mechanism. None is implied solved by the finite quantum resource.
