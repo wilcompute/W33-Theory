@@ -3,6 +3,7 @@
 > **Collaborative workspace for you and AI**
 
 ## 🎯 Session Goals
+- Current: publish reserved11602-11606 (`235295388`): all five requested tracks plus four additional probes complete as scoped mathematical/EFT investigations. Nine producer sections PASS, final19 tests PASS in42.74s, clean four-file intake, regenerated indexes. Parallel11607 science/JSON/guards/five tests read and checked; incorporated through ef3f76825. Remote ownCI pending. Original checkout and mixed decision stores remain preserved.
 - Current: publish reserved11601 (`5c1c6e4ae`), exact matched-metric gravity audit and supplied-geometry calibration. Nine final independent regressions PASS; original parallel checkout and shared decision stores remain preserved.
 - Current: publish reserved11600 (`3db837b54`), an independently designed dynamical Hesse flavor EFT and its exact restricted degree16 obstruction. Preserve the original parallel checkout and shared decision stores; historical goals below are retained as history.
 - Publish reserved11526–11530 (`057834b58`): nine validated investigations across native vacuum, physical symmetry, compatible coherent parent, EW/flavor, local frames, constrained spin history, nonlinear anomaly and coherent QEC. Preserve the original parallel workspace and mixed decision stores.

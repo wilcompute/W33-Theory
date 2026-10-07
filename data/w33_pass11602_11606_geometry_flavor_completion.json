@@ -1,0 +1,875 @@
+{
+  "status": "PASS",
+  "reservation": "235295388",
+  "passes": [
+    11602,
+    11603,
+    11604,
+    11605,
+    11606
+  ],
+  "local_geometry": {
+    "status": "PASS",
+    "Hermitian_residual": 0.0,
+    "local_Spin_covariance_residual": 1.3947004136484323e-16,
+    "Wilson_Laplacian_min_eigenvalue": 0.001058293914166447,
+    "refinement": [
+      {
+        "L": 9,
+        "h": 0.6981317007977318,
+        "central_error": 0.08056891226488005,
+        "Wilson_error": 0.14570015401638858
+      },
+      {
+        "L": 15,
+        "h": 0.41887902047863906,
+        "central_error": 0.029503740073741368,
+        "Wilson_error": 0.08048856270339655
+      },
+      {
+        "L": 27,
+        "h": 0.23271056693257727,
+        "central_error": 0.009166957309903441,
+        "Wilson_error": 0.04304229527194441
+      }
+    ],
+    "exact_inverse_metric": [
+      [
+        "19/36",
+        "-5/9",
+        "1/18"
+      ],
+      [
+        "-5/9",
+        "10/9",
+        "-1/9"
+      ],
+      [
+        "1/18",
+        "-1/9",
+        "1/9"
+      ]
+    ],
+    "flat_corner_masses": [
+      {
+        "corner": [
+          0,
+          0,
+          0
+        ],
+        "Wilson_mass_times_h": "0"
+      },
+      {
+        "corner": [
+          0,
+          0,
+          1
+        ],
+        "Wilson_mass_times_h": "1/18"
+      },
+      {
+        "corner": [
+          0,
+          1,
+          0
+        ],
+        "Wilson_mass_times_h": "5/9"
+      },
+      {
+        "corner": [
+          0,
+          1,
+          1
+        ],
+        "Wilson_mass_times_h": "11/18"
+      },
+      {
+        "corner": [
+          1,
+          0,
+          0
+        ],
+        "Wilson_mass_times_h": "19/72"
+      },
+      {
+        "corner": [
+          1,
+          0,
+          1
+        ],
+        "Wilson_mass_times_h": "23/72"
+      },
+      {
+        "corner": [
+          1,
+          1,
+          0
+        ],
+        "Wilson_mass_times_h": "59/72"
+      },
+      {
+        "corner": [
+          1,
+          1,
+          1
+        ],
+        "Wilson_mass_times_h": "7/8"
+      }
+    ],
+    "forward_block": "i(C_i(x) U_xy + U_xy C_i(y))/(4h); reverse is its adjoint",
+    "Wilson": "grade times positive weighted covariant graph Laplacian, r/(2h) per edge; weights average g^{ii}",
+    "continuum_identity": "div C + [Omega_i,C_i] + C_i partial_i log J = 0 implies i/2{C_i,nabla_i}=J^(1/2) D_geometric J^(-1/2)",
+    "scope": "Local construction on supplied periodic refinements including11559 three-power tower rungs; L15 is a separate consistency control with the actual11557 rank-four Clifford fiber. Conformal plane-wave consistency is checked; full non-diagonal heat convergence is not established. Continuous Spin transport and the metric are supplied. Pass11397 already excludes a generic smooth-curvature limit using only the fixed finite rotation group."
+  },
+  "nonstatic_geometry": {
+    "status": "PASS",
+    "metric": "ds_E^2=N(t)^2 dt^2 + sum exp(2q_i(t)) dx_i^2; all q_i may depend on time",
+    "spin_connection": "Omega_0=0; Omega_i=a_i_prime gamma_i gamma_0/(2N)",
+    "geometric_D": "i gamma0/N (partial_t + sum(q_i_prime)/2) + sum i gamma_i/a_i partial_i",
+    "half_density_D": "i gamma0 [N^-1 partial_t - N_prime/(2N^2)] + sum i gamma_i/a_i partial_i",
+    "volume": "J=N exp(sum q_i); half-density spin connection and spatial volume derivatives cancel exactly",
+    "nonstatic_square": "For N=1, Dhat^2=-partial_t^2+sum k_i^2/a_i^2 - i gamma0 sum gamma_i k_i partial_t(1/a_i). The mixed spin term prevents static theta-factorization.",
+    "Lorentzian_ADM_L": "M**2*V*(qdot0*(-qdot1 - qdot2) + qdot1*(-qdot0 - qdot2) + qdot2*(-qdot0 - qdot1))/(2*N) - N*V*rho",
+    "Hamiltonian_constraint": "V*rho + (p0**2 + p1**2 + p2**2 - (p0 + p1 + p2)**2/2)/(2*M**2*V)",
+    "constraints": "p_N=0 and C=0 are first class in the homogeneous supplied ADM action; H_total=N C+lambda p_N. C is lapse-independent and {C,C}=0. There are two homogeneous configuration degrees of freedom.",
+    "Kasner_exponents": [
+      "-2/7",
+      "3/7",
+      "6/7"
+    ],
+    "Kasner_Ricci": "zero",
+    "Kasner_Riemann_squared": "576/343/t^4",
+    "rank4_Dirac_a4_Ricci_flat": "-(4pi)^-2 (7/360) integral sqrtg Riemann^2, up to boundary terms; a2 is zero",
+    "scope": "Exact nonstatic coframe and supplied homogeneous ADM constraints. The ADM mechanism belongs to11482/11528; Kasner and heat coefficients are classical. No full local constraint algebra or W33-selected Einstein action is derived. The native pair-action rotational obstruction11381 remains."
+  },
+  "quantum_inventory": {
+    "status": "PASS",
+    "prior_anomaly_owner": "20261001 chiral decuplet;27*A3+A10bar=0",
+    "determinant_convention": "Gamma_even=-1/2 integral_(Lambda^-2)^infinity dt/t H(t); H=Ns Kscalar-Nw KWeyl+Nv(Kvector-2 Kghost)",
+    "elementary_heat_weights": {
+      "real_scalar": [
+        "1",
+        "1/6-xi"
+      ],
+      "Weyl_rank2": [
+        "2",
+        "-1/6"
+      ],
+      "vector_rank4": [
+        "4",
+        "-1/3"
+      ],
+      "complex_ghost_signed": [
+        "-2",
+        "-1/3"
+      ]
+    },
+    "regulator": "Feynman gauge, common proper-time cutoff, background gauge curvature zero, massless UV coefficients. Power divergences and their signs are regulator/gauge conventions, not observables.",
+    "inventories": [
+      {
+        "inventory": "E6xSU3_family prior anomaly-compatible inventory",
+        "real_scalars": 162,
+        "Weyl_components": 91,
+        "vectors": 86,
+        "signed_a0": 152,
+        "signed_a2_per_R": "-162*xi81 - 91/6"
+      },
+      {
+        "inventory": "Spin10xSU3_family with all prior scalars and Weyls retained",
+        "real_scalars": 162,
+        "Weyl_components": 91,
+        "vectors": 53,
+        "signed_a0": 86,
+        "signed_a2_per_R": "41/6 - 162*xi81"
+      },
+      {
+        "inventory": "Spin10 with finite family group,126bar triplet,Hesse doublet,two neutral triplet flavons",
+        "real_scalars": 934,
+        "Weyl_components": 91,
+        "vectors": 45,
+        "signed_a0": 842,
+        "signed_a2_per_R": "-756*xi126 - 162*xi81 - 16*xiH + 845/6"
+      }
+    ],
+    "minimal_high_energy_curvature_sign": "negative",
+    "xi81_zero_crossing": "-91/972",
+    "induced_terms": "rho_UV=-C0 Lambda^4/[4(4pi)^2]; M_ind^2=CR Lambda^2/(4pi)^2 in Gamma_E=integral sqrtg(rho-M^2 R/2)",
+    "mass_threshold": "Each field heat trace carries exp(-m^2 t); massive vectors require Goldstone and ghost completion. A change in retained dimensions is not a threshold calculation.",
+    "extra_inventory_audit": "The126bar is absent from the original27 scalar branching. A finite-family triplet adds3*126 complex=756 real fields. The Hesse doublet adds4 real fields and two gauge-singlet alignment triplets add12 real fields. The10_H triplet is already inside three27 scalars and is not counted twice. A126-only addition is not a full E6 representation, so it is used only after E6 breaking; a2 rows are not matched across phases.",
+    "vacuum_boundary": "No inventory cancels a0 here. An independent local vacuum-energy counterterm remains symmetry-allowed; scales, xi, mass thresholds and finite matching are inputs. Anomaly cancellation does not fix Newton coupling or the cosmological constant."
+  },
+  "holomorphic_Hesse": {
+    "status": "PASS",
+    "linear_image_order": 48,
+    "scalar_center": "C4; (F P)^3=i I",
+    "classical_group": "complex reflection group G6",
+    "coordinate_map": "unnormalized x=u0,y=sqrt2*u1; canonical norm=|x|^2+|y|^2/2",
+    "f4": "x**4 + x*y**3",
+    "f12": "24*x**12 - 440*x**9*y**3 + 264*x**6*y**6 + y**12",
+    "Molien": "1/((1-t^4)(1-t^12))",
+    "Jacobian": "-12*y**2*(2*x - y)**2*(2*x**2 - 2*x*y - y**2)*(4*x**2 + 2*x*y + y**2)**2*(4*x**4 + 4*x**3*y + 6*x**2*y**2 - 2*x*y**3 + y**4)",
+    "canonical_H4": "u0^4+2sqrt2*u0*u1^3",
+    "canonical_norm_identity": "|H4|^2=3/8(rho^4+p4)+(3sqrt3/2)rho p3",
+    "phase_completion": "Add lambda/M^4 |H4-c4|^2 to11600 positive selector; c4=v^4 sqrt(9/16+9sqrt42/196) is real. Every old minimum ray admits exactly four phases with H4=c4.",
+    "c4_squared_over_v8": "9*sqrt(42)/196 + 9/16",
+    "full_minimum_vectors": 96,
+    "CP_orbits": [
+      48,
+      48
+    ],
+    "gapped_normal_directions": 4,
+    "phase_mass_along_fixed_ray": "16 lambda c4^2/(M^4 v^2); this is curvature along the phase direction, not an eigenvalue after angular mixing",
+    "real_target_obstruction": "Since f4,f12 generate the invariant ring and separate finite complex-group orbits, fixing BOTH to real values puts u and conjugate(u) in the same group orbit. A unique such invariant orbit cannot spontaneously break generalized CP.",
+    "protection_boundary": "This removes the extra common U1 assumption and its Goldstone in a supplied EFT. It does not protect the absence of lower angular operators p3,p4 or derive their coefficients. The phase-blind degree16 theorem11600 retains its original scope. The scalar lift is exactly <RF,RP>; rephasing generators or adding a larger scalar center changes allowed holomorphic degrees.",
+    "novelty": "G6 invariants are classical. The result is their explicit source-bound Hesse-pencil interface and the phase completion/CP obstruction, not discovery of G6."
+  },
+  "Majorana_alignment": {
+    "status": "PASS",
+    "inventory": "Two additional gauge-singlet family-triplet flavons h,r. Actual gauge-charged10_H and126bar_H triplets are aligned with them by positive gauge-invariant projectors; gauge amplitudes/directions remain unselected.",
+    "potential": "(|h|^2-1)^2 + sum_i<j |h_i h_j|^2 + |sum h_i^3-1|^2 + sum_i[(|r_i|^2-1)^2+|r_i^3-1|^2] + |r0 r1 r2-1|^2 + |h-dagger r-1|^2",
+    "potential_properties": "CP-even, Delta54 invariant, coercive polynomial; scales and positive coefficients supplied. Global minima are h=e_i r_i, all r_i^3=1 and product r_i=1:27 vectors in one Delta54 orbit.",
+    "alignment_map": "V_align_H=kH[|h|^2 sum_i ||H_i||^2 - ||sum_i conjugate(h_i) H_i||^2]; the same map with r and126bar R. Cauchy-Schwarz proves positivity; zeros give H_i=h_i H_common and R_i=r_i R_common when h,r are nonzero. Gauge indices are contracted with invariant Hermitian norms.",
+    "family_projectors_at_vacuum": {
+      "10": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "126": [
+        [
+          "2",
+          "-1",
+          "-1"
+        ],
+        [
+          "-1",
+          "2",
+          "-1"
+        ],
+        [
+          "-1",
+          "-1",
+          "2"
+        ]
+      ]
+    },
+    "global_minima": 27,
+    "Hessian_rank": 12,
+    "Hessian_positive_leading_minors": [
+      "28",
+      "560",
+      "2160",
+      "8208",
+      "24320",
+      "71680",
+      "2053632",
+      "42392832",
+      "1181080576",
+      "23392751616",
+      "648825016320",
+      "12743902679040"
+    ],
+    "neutral_flavon_Hessian": [
+      [
+        "28",
+        "0",
+        "2",
+        "0",
+        "2",
+        "0",
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "20",
+        "0",
+        "2",
+        "0",
+        "2",
+        "0",
+        "-2",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "2",
+        "0",
+        "4",
+        "0",
+        "2",
+        "0",
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "2",
+        "0",
+        "4",
+        "0",
+        "2",
+        "0",
+        "-2",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "2",
+        "0",
+        "2",
+        "0",
+        "4",
+        "0",
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "2",
+        "0",
+        "2",
+        "0",
+        "4",
+        "0",
+        "-2",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "2",
+        "0",
+        "2",
+        "0",
+        "2",
+        "0",
+        "30",
+        "0",
+        "2",
+        "0",
+        "2",
+        "0"
+      ],
+      [
+        "0",
+        "-2",
+        "0",
+        "-2",
+        "0",
+        "-2",
+        "0",
+        "22",
+        "0",
+        "2",
+        "0",
+        "2"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "2",
+        "0",
+        "28",
+        "0",
+        "2",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "2",
+        "0",
+        "20",
+        "0",
+        "2"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "2",
+        "0",
+        "2",
+        "0",
+        "28",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "2",
+        "0",
+        "2",
+        "0",
+        "20"
+      ]
+    ],
+    "coupling_inputs": "a10=2,b10=1,a126=4,b126=1; vR removed as overall seesaw scale; v126_down/v10_down=1/10; v126_up=0; typeII term zero",
+    "MD": [
+      [
+        "2",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "0",
+        "1",
+        "0"
+      ]
+    ],
+    "MR": [
+      [
+        "4",
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "4",
+        "1"
+      ],
+      [
+        "1",
+        "1",
+        "4"
+      ]
+    ],
+    "Me": [
+      [
+        "4/5",
+        "-3/10",
+        "-3/10"
+      ],
+      [
+        "-3/10",
+        "-6/5",
+        "7/10"
+      ],
+      [
+        "-3/10",
+        "7/10",
+        "-6/5"
+      ]
+    ],
+    "light_Majorana": [
+      [
+        "-10/9",
+        "1/9",
+        "1/9"
+      ],
+      [
+        "1/9",
+        "-5/18",
+        "1/18"
+      ],
+      [
+        "1/9",
+        "1/18",
+        "-5/18"
+      ]
+    ],
+    "light_masses": [
+      "(2-sqrt2)/3",
+      "1/3",
+      "(2+sqrt2)/3"
+    ],
+    "charged_singular_values": [
+      "(sqrt241-3)/20",
+      "(sqrt241+3)/20",
+      "19/10"
+    ],
+    "mixing": "Up to mass ordering and Majorana/Dirac phases, U_PMNS has one2x2 rotation and one isolated state. Both mass operators commute with the same family exchange; no three-angle mixing.",
+    "tan_twice_mixing": "11*sqrt(2)/64",
+    "sin_squared_mixing": "1/2 - 16*sqrt(482)/723",
+    "sin_squared_mixing_numeric": 0.014146646747437921,
+    "weak_basis_CP": "zero in this real branch",
+    "scope": "Exact gauge-singlet flavon selection, gauge-covariant Higgs-family alignment and conditional seesaw eigenvalues, not measured neutrino predictions. The126 gauge-breaking direction, EW doublet mixing, all coupling values and vR must still be selected. The residual exchange supplies a concrete obstruction to realistic three-angle mixing in this branch."
+  },
+  "additional_matter_parity": {
+    "status": "PASS",
+    "prior_owner": "11595 Majorana channel and11522 composite-Higgs selection",
+    "elementary126_VEV": {
+      "qBL": -6,
+      "r": 2,
+      "sixY": 0,
+      "BL_residual": "Z6 contains matter parity Z2"
+    },
+    "constituent16bar_singlet": {
+      "qBL": -3,
+      "r": 1,
+      "sixY": 0,
+      "BL_residual": "Z3 does not contain matter parity Z2"
+    },
+    "composite_map": "S=Proj_126bar(Sym^2 scalar16bar); its neutral component is (phi_nuc_conjugate)^2",
+    "factorized_boundary": "If <S> is supplied solely by <phi>^2 with <phi>!=0, the constituent VEV is matter odd and breaks matter parity. Identifying its even composite charge does not restore that parity.",
+    "pair_condensate_escape": "A correlated <phi phi>!=0 with <phi>=0 can preserve matter parity; an actual dynamical pair-condensation model and its gap are required. No such phase is proved here.",
+    "unified_boundary": "Removing the elementary126 inventory by a composite changes the scalar heat budget and thresholds. It cannot be done silently while retaining the expanded induced-gravity coefficients."
+  },
+  "additional_spectator_symmetry": {
+    "status": "PASS",
+    "prior_rank10_owners": [
+      "11271 elementary28 Wick tensor",
+      "11276 Sym(F^3) sextet repair"
+    ],
+    "sextic": "sum_i x_i^6+lambda (x0 x1 x2)^2",
+    "canonical_sym3_mass": [
+      [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "lambda/30",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "lambda/30",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "lambda/30",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "lambda/15",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "lambda/30",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "lambda/30",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "lambda/30",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    ],
+    "determinant": "-lambda**7/10935000000",
+    "rank": 10,
+    "Takagi_singular_values": [
+      "1 multiplicity3",
+      "abs(lambda)/30 multiplicity6",
+      "abs(lambda)/15 multiplicity1"
+    ],
+    "symmetry": "The sextic and mass pairing preserve the actual11591 X,Z,R family image, and also the SU3-compatible -R lift. No exact sextic stabilizer identification is claimed.",
+    "sextet_fixed_space_dimension": 0,
+    "comparison": "No nonzero single-sextet cube Sym(F^3) preserves H27: invariance of q_F^3 forces each generator to act on q_F by a cube-root scalar, hence a common invariant line in Sym^2(3); its nontrivial center action forbids that line. The prior full-rank sextet repair remains valid but breaks this finite family subgroup. The elementary28 sextic can retain it.",
+    "ultraviolet_map": "chi_abc chi_def Sigma^{abcdef}, Sigma in SU3(6,0), dim28; a renormalizable Majorana Yukawa. The VEV pattern, coefficient and threshold are inputs.",
+    "inventory_cost": "One complex28 adds56 real scalars and family Dynkin index63. In the prior91-Weyl/81-complex-scalar inventory b_family changes from -15/2 to -57/2; the gauge-running problem worsens.",
+    "heat_cost": "In that E6xSU3 inventory with the extra28 only, C0=208 and CR=-35/6-162xi81-56xiSigma in the declared Feynman/proper-time convention. It still has no minimal-coupling positive induced M^2 or vacuum cancellation.",
+    "anomaly_boundary": "After integrating out anomaly-canceling spectators, broken-family Wess-Zumino matching must remain, as already required by11276. No UV completion or automatic spectator decoupling is asserted."
+  },
+  "additional_unequal_alignment_escape": {
+    "status": "PASS",
+    "potential": "Replace h selection by(p1-14)^2+(p2-49)^2+(p3_abs-36)^2+|sum h_i^3-36|^2+|product h_i-6|^2; keep r selector and replace cross target by|h-dagger r-6|^2. p_k are elementary symmetric polynomials in|h_i|^2.",
+    "exact_global_minima": "54 vectors: permutations of magnitudes(1,2,3), h_i=|h_i| r_i, r_i^3=1, product r_i=1. One actual X,Z,R orbit; all12 neutral-flavon directions have positive Hessian.",
+    "Hessian_positive_leading_minors": [
+      "11820",
+      "1087440",
+      "1643868880",
+      "290107121040",
+      "159658992548352",
+      "101955188146176",
+      "3058562181758976",
+      "61171243635179520",
+      "2128577587158712320",
+      "42145836225742503936",
+      "1662411476079036334080",
+      "32643716257551986196480"
+    ],
+    "degree": 12,
+    "gauge_alignment": "Use the same positive Gram projectors as11606. Unequal h removes the common family exchange of the axis/democratic branch.",
+    "coupling_inputs": "a10=2,b10=i,a126=4,b126=1; down126 ratio1/10, up126=0, typeII=0. Targets and couplings are supplied.",
+    "MD": [
+      [
+        "2",
+        "3*I",
+        "2*I"
+      ],
+      [
+        "3*I",
+        "4",
+        "I"
+      ],
+      [
+        "2*I",
+        "I",
+        "6"
+      ]
+    ],
+    "MR": [
+      [
+        "4",
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "4",
+        "1"
+      ],
+      [
+        "1",
+        "1",
+        "4"
+      ]
+    ],
+    "Me": [
+      [
+        "4/5",
+        "-3/10 + 3*I",
+        "-3/10 + 2*I"
+      ],
+      [
+        "-3/10 + 3*I",
+        "14/5",
+        "-3/10 + I"
+      ],
+      [
+        "-3/10 + 2*I",
+        "-3/10 + I",
+        "24/5"
+      ]
+    ],
+    "light_Majorana": [
+      [
+        "-10/9 + 2*I*(1/9 - 7*I/18) + 3*I*(1/9 - 13*I/18) + 5*I/9",
+        "4/9 - 26*I/9 + 3*I*(-5/9 + 5*I/18) + I*(1/9 - 7*I/18)",
+        "2/3 - 7*I/3 + 2*I*(-5/9 + 5*I/18) + I*(1/9 - 13*I/18)"
+      ],
+      [
+        "4/9 + 3*I*(-10/9 + 2*I/9) - 14*I/9 + 2*I*(2/9 - I/9)",
+        "-40/9 + I*(2/9 - I/9) + 3*I*(2/9 - 7*I/9) + 8*I/9",
+        "4/3 + I*(-10/9 + 2*I/9) - 2*I/3 + 2*I*(2/9 - 7*I/9)"
+      ],
+      [
+        "2/3 + 2*I*(-5/3 + I/6) - I + 3*I*(1/3 - I/6)",
+        "4/3 + I*(-5/3 + I/6) - 2*I/3 + 3*I*(1/3 - I/2)",
+        "-10 + I*(1/3 - I/6) + 2*I*(1/3 - I/2) + I"
+      ]
+    ],
+    "charged_Hermitian_charpoly": "lambda**3 - 3003*lambda**2/50 + 10398969*lambda/10000 - 1287337041/250000",
+    "neutrino_Hermitian_charpoly": "lambda**3 - 14149*lambda**2/81 + 610804*lambda/81 - 652864/9",
+    "CP_invariant": "Im Tr[Me-dagger Me,mnu-dagger mnu]^3",
+    "CP_exact": "-94163140688/5625",
+    "mixing_modulus_squared": [
+      [
+        0.830496645170562,
+        0.13602897721079657,
+        0.033474377618641714
+      ],
+      [
+        0.04964686154929822,
+        0.6626437739724377,
+        0.2877093644782633
+      ],
+      [
+        0.1198564932801397,
+        0.20132724881676567,
+        0.678816257903095
+      ]
+    ],
+    "sin_squared_angles": {
+      "theta13": 0.033474377618641714,
+      "theta12": 0.14074016669691986,
+      "theta23": 0.297673810001431
+    },
+    "Hesse_CP_source": {
+      "u": [
+        "sqrt(2/3)",
+        "-i/sqrt3"
+      ],
+      "b_over_a": "i/2",
+      "Bloch_p3": "sqrt(3)*(-6 + sqrt(3))*(sqrt(3) + 6)/729",
+      "Bloch_p4": "145/243",
+      "CP_odd_W": "-128*sqrt(3)*(-3 + sqrt(3))*(sqrt(3) + 3)/19683",
+      "H4": "4(1+i)/9",
+      "phase_completion_c4": "4sqrt2/9 at v=1"
+    },
+    "scope": "Constructive failure escape: fully mixed nondegenerate conditional seesaw and exact CP witness, with a coercive dynamically aligned family model. Hesse targets can be chosen to select this CP ratio using11600/11605; it is not parameter-independent CP or a physical fit. The126 gauge VEV, EW sector, coefficient selection, UV matching and common parent action remain open."
+  },
+  "parallel_phase_filter_bridge": {
+    "status": "PASS",
+    "owner": "11607 diagonal internal Weyl filter; this packet adds its11605 gapped-phase interface and a separate semilinear-lift audit",
+    "vacuum_rows": [
+      {
+        "W_sign": 1,
+        "kernel_chirality": -1,
+        "kernel_dimension": 16,
+        "gap_coefficient": "900/117649",
+        "phase_completed_vacuum_vectors": 48
+      },
+      {
+        "W_sign": -1,
+        "kernel_chirality": 1,
+        "kernel_dimension": 16,
+        "gap_coefficient": "900/117649",
+        "phase_completed_vacuum_vectors": 48
+      }
+    ],
+    "phase_completion_identity": "The Bloch coordinates and W are invariant under u->exp(i alpha)u. Therefore the11607 finite filter retains its rank16 kernel and exact gap on all96 phase-completed vectors, while all four scalar directions are stabilized.",
+    "lift_comparison": {
+      "unitary_R": "R Chi R^-1=-Chi; R^2=-I, as11607 defines",
+      "conjugation_K": "K Chi K^-1=-Chi in the exported real-gamma basis; K^2=I",
+      "semilinear_RK": "(R K) Chi (R K)^-1=+Chi and(R K)^2=I. Combining BOTH flips cancels them."
+    },
+    "semilinear_filter_identity": "For a coefficient-conjugation lift, K alone pairs W->-W with Chi->-Chi and transports H_+(u) to H_-(conjugate(u)); adding R to K instead preserves Chi and does not supply this same cancellation.",
+    "second_basis": "Under a complex unitary basis S, the linear part of K is S S^T and that of R K is S R S^T. Reusing naive componentwise conjugation after a basis change is incorrect.",
+    "scope": "The defined unitary adjoint action of11607 remains valid. These are distinct finite linear/antilinear lifts, not a retraction or proof of a physical CP/clock identity, relativistic chirality, local decoupling, anomaly measure or E8 shell selection."
+  },
+  "source_sha256": {
+    "analysis/w33_pass11557_pin_equivariant_event_dirac.py": "6d0307511f1560f19042267409b02919b6f707c50ee8d42ed50e0a03cb10e148",
+    "analysis/w33_pass11600_dynamical_hesse_flavor.py": "790645d1c5b9bef670becceb65110cad598c6e8c60077098668dae79163f6999",
+    "data/w33_pass11600_dynamical_hesse_flavor.json": "88ddea3a97f5e3d390abf1b3d8840f2cd91472a9cf3923a9e7b55251c246383c",
+    "data/w33_pass11601_matched_metric_dirac.json": "689c69846646a19e19f92454282288b01e107dd43c3f49cf60a86940a93eed80",
+    "data/w33_20261001_chiral_decuplet_and_condensate_bridge.json": "2e0405e01abe197bdfb7038248f5df3d30a53dcc14a7da4a7bee44499e5e7b6b",
+    "data/PART_W33_PASS11591_SPIN10_DELTA54_HESSE_YUKAWA.json": "02736cfb366a6e6bdf76d01e2d7f7b17a6da298b7119eb822a1cac4a55810984",
+    "data/PART_W33_PASS11595_NEUTRINO_MAJORANA_CHANNEL.json": "5874d0c1b4276cc76b69ae013ef7789933a12b87e358d98228e4d46cc9e9b30a",
+    "data/w33_pass11276_sextet_composite_spectator.json": "38966c3a146c2244c3528686365cf8a79a51e3afe7d0eadecde5c69d9e8ac0cf",
+    "data/PART_W33_PASS11607_HESSE_CP_WEYL_SELECTOR.json": "f97fba374f41575c400d1361613094ba09beb872a5e243c1280957936af05d5d",
+    "data/w33_pass10961_albert_clifford9_gammas.json": "898d864a160798a2470ebc33b10cbce6f25afe0612073238daae7bba204a6df2"
+  },
+  "producer_sha256": "5a9de6aeeb108683f751d6df3b189f216beb7b0fb283e05711a0aa6aee5b8459"
+}
