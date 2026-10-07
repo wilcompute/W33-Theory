@@ -1,0 +1,39 @@
+{
+  "artifacts": {
+    "analysis/w33_pass11631_11635_physical_interfaces.py": "359f4ea22c162c2af0fdc63f64a9ae409b71eea2037096b983fd66a7021620e8",
+    "analysis/w33_pass11634_full_quantum_normals.py": "58ebbadeadfb3b8bbcc61fa4a98ee9cc74420f388939c2f13d62c5a42ccc0a48",
+    "analysis/PASS11631_11635_PHYSICAL_INTERFACES.md": "25ca449f248f5a492eae4a34dd7835c9f0d410a7848aa6a62575f3bc697dc4f9",
+    "tests/test_w33_pass11631_11635_physical_interfaces.py": "32335062303940dc1d64ef1bf1aeeb5a2ebf46d8e623e7e2e04c4708017b84f4",
+    "data/w33_pass11631_11635_physical_interfaces.json": "83db157500f983261293f1eb0d4fbd153d7f2b0aa142bb47d494c6fcd2ef26e9",
+    "data/w33_pass11634_full_quantum_normals.json": "c04d518056a071596fd6f1fdbce7cc7f833057ec3b1c20661eeffb2f5e759230",
+    ".github/workflows/pass11631-11635-physical-interfaces.yml": "cdd9b6ee3e8e92df37f16b9712e97fc3037e83822a6cd8748194ae265b331842"
+  },
+  "local_tests": "10 passed in46.69s",
+  "status": "PASS",
+  "artifact_type": "publication_release_manifest",
+  "science_commit": "c9703e70eeebe1a34e5b9d1f57bc1a656823618b",
+  "reservation_commit": "420ab9140",
+  "github_ci": {
+    "run_id": 37654590352,
+    "job_id": 112906358006,
+    "conclusion": "success",
+    "head_sha": "c9703e70eeebe1a34e5b9d1f57bc1a656823618b",
+    "url": "https://github.com/wilcompute/W33-Theory/actions/runs/37654590352",
+    "committed_tests": "10 passed in10.19s",
+    "regenerated_tests": "10 passed in9.71s",
+    "full_normal_minimum": 0.0016131494680776796,
+    "all_five_producers": "PASS"
+  },
+  "ci_log": {
+    "path": ".continuity/receipts/PASS11631_11635_CI.log",
+    "sha256": "41b82e751b7783616705ceecae2bc5d4d673ca2c0e9b423512f734b8c8693c06"
+  },
+  "scope": "Dedicated packet verification, not repository-wide CI success. Supplied interactions, Yukawa seeds and continuum metrics; no observed masses/couplings, native spacetime derivation or cosmological-constant selection.",
+  "unrelated_workflow_failure": {
+    "run_id": 37654590058,
+    "name": "W33 Pass10947 five-front execution",
+    "cause": "Missing artifacts/canonical_su3_gauge_and_cubic.json",
+    "packet_modifies_this_path": false
+  },
+  "digest_convention": "SHA256 of file bytes after CRLF-to-LF normalization; files are committed with LF"
+}
