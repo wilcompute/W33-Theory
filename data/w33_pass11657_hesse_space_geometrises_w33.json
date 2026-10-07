@@ -1,0 +1,64 @@
+{
+ "pass_id": 11657,
+ "tick_eigenspace_dimensions": {
+  "(2, 3)": 40
+ },
+ "tick_lines_meet_iff_collinear": {
+  "(0, False)": 1080,
+  "(1, True)": 480
+ },
+ "tick_planes_meet_in_line_iff_collinear": {
+  "(1, False)": 1080,
+  "(2, True)": 480
+ },
+ "tick_line_meeting_graph": {
+  "n": 40,
+  "k": [
+   12
+  ],
+  "lam": [
+   2
+  ],
+  "mu": [
+   4
+  ]
+ },
+ "incidence_(p on L, u_L on tick-line of p)": {
+  "(False, False)": 1440,
+  "(True, True)": 160
+ },
+ "hyperbolic_planes": 90,
+ "distinct_mirrors": 45,
+ "each_mirror_from_P_and_P_perp": true,
+ "mirror_overlaps": [
+  0.0,
+  0.25
+ ],
+ "mirror_orthogonality_graph": {
+  "n": 45,
+  "k": [
+   12
+  ],
+  "lam": [
+   3
+  ],
+  "mu": [
+   3
+  ]
+ },
+ "octet_sizes": [
+  8
+ ],
+ "orthogonal_iff_octets_disjoint_(Pass_11177_GQ42)": "1980/1980",
+ "orthogonal_iff_involutions_commute": "1440/1980",
+ "SWAP_is_a_reflection": true,
+ "SWAP_mirror_among_the_45": true,
+ "parity of qutrit 2_is_a_reflection": true,
+ "parity of qutrit 2_mirror_among_the_45": true,
+ "Burkhardt_I4_on_tick_planes_rel_max": 1.845207784031822e-15,
+ "Burkhardt_I4_at_mirror_roots_rel_max": 3.7212202179027713e-16,
+ "Burkhardt_gradI4_at_mirror_roots_rel_max": 8.065973892402445e-12,
+ "tick_planes_are_j_planes": true,
+ "mirror_roots_are_nodes": true,
+ "I4_at_stabiliser_points_rel": 2.462466439396014
+}

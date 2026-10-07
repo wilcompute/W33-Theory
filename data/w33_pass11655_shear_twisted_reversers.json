@@ -1,0 +1,21 @@
+{
+ "pass_id": 11655,
+ "n2": {
+  "Mz1 = z1 | (M,k) pairs | Y: no symplectic Y": 48,
+  "Mz1 = z1 | (M,k) pairs | Y: found": 288,
+  "Mz1 = z1 | k!=0 solutions: A Y is a k=0 solution with N(AY) = N(A): True": 2592,
+  "Mz1 = -z1 | (M,k) pairs | Y: found": 336,
+  "Mz1 = -z1 | k!=0 solutions: A Y is a k=0 solution with N(AY) = N(A): True": 3888
+ },
+ "n3": {
+  "Mz1 = z1 | (M,k) pairs | Y: no symplectic Y": 6,
+  "Mz1 = -z1 | (M,k) pairs | Y: found": 34,
+  "Mz1 = -z1 | k!=0 solutions: A Y is a k=0 solution with N(AY) = N(A): True": 6300,
+  "same line, other | (M,k) pairs | Y: found": 8,
+  "same line, other | k!=0 solutions: A Y is a k=0 solution with N(AY) = N(A): True": 72,
+  "Mz1 = z1 | (M,k) pairs | Y: found": 28,
+  "Mz1 = z1 | k!=0 solutions: A Y is a k=0 solution with N(AY) = N(A): True": 5436,
+  "same line, M^2 z1 = -z1 | (M,k) pairs | Y: found": 4,
+  "same line, M^2 z1 = -z1 | k!=0 solutions: A Y is a k=0 solution with N(AY) = N(A): True": 36
+ }
+}

@@ -1,0 +1,158 @@
+{
+ "pass_id": 11651,
+ "n1": {
+  "dimension": 2,
+  "formula_half_3n_plus_1": 2,
+  "Clifford_preserves_space": true,
+  "spectra_match_even_Weil": 60,
+  "spectra_match_conjugate_even_Weil": 60,
+  "words": 60,
+  "linear_group_order": 48,
+  "scalars_in_group": 4,
+  "reflections": 14,
+  "reflections_by_order": {
+   "2": 6,
+   "3": 8
+  },
+  "reflection_orders": [
+   2,
+   3
+  ],
+  "order_generated_by_reflections": 48,
+  "invariant_dims_by_degree": {
+   "1": 0,
+   "2": 0,
+   "3": 0,
+   "4": 1,
+   "5": 0,
+   "6": 0,
+   "7": 0,
+   "8": 1,
+   "9": 0,
+   "10": 0,
+   "11": 0,
+   "12": 2
+  },
+  "stabiliser_bases": 4,
+  "basis_point_overlaps": [
+   0.33333333
+  ],
+  "overlap_graphs": {
+   "0.33333333": {
+    "degree": [
+     3
+    ],
+    "lam": [
+     2
+    ],
+    "mu": []
+   }
+  },
+  "intersection_size_vs_overlap": [
+   [
+    1,
+    0.333333
+   ]
+  ],
+  "norm_affine_in_M3": {
+   "a": -1.0000000000000002,
+   "b": 0.9999999999999999,
+   "max_residual": 7.827072323607354e-15
+  }
+ },
+ "n2": {
+  "dimension": 5,
+  "formula_half_3n_plus_1": 5,
+  "Clifford_preserves_space": true,
+  "spectra_match_even_Weil": 37,
+  "spectra_match_conjugate_even_Weil": 60,
+  "words": 60,
+  "linear_group_order": 103680,
+  "scalars_in_group": 4,
+  "reflections": 45,
+  "reflections_by_order": {
+   "2": 45
+  },
+  "reflection_orders": [
+   2
+  ],
+  "order_generated_by_reflections": 51840,
+  "invariant_dims_by_degree": {
+   "1": 0,
+   "2": 0,
+   "3": 0,
+   "4": 1,
+   "5": 0,
+   "6": 1,
+   "7": 0,
+   "8": 1,
+   "9": 0,
+   "10": 2,
+   "11": 0,
+   "12": 3
+  },
+  "stabiliser_bases": 40,
+  "basis_point_overlaps": [
+   0.11111111,
+   0.33333333
+  ],
+  "overlap_graphs": {
+   "0.11111111": {
+    "degree": [
+     27
+    ],
+    "lam": [
+     18
+    ],
+    "mu": [
+     18
+    ]
+   },
+   "0.33333333": {
+    "degree": [
+     12
+    ],
+    "lam": [
+     2
+    ],
+    "mu": [
+     4
+    ]
+   }
+  },
+  "regularity_stabiliser_rays": [
+   [
+    4,
+    2
+   ]
+  ],
+  "regularity_W33_point_graph": [
+   [
+    4,
+    4
+   ]
+  ],
+  "which_GQ": "Q(4,3) (antiregular): the lines of W(3,3), NOT the W(3,3) point graph",
+  "intersection_size_vs_overlap": [
+   [
+    1,
+    0.111111
+   ],
+   [
+    3,
+    0.333333
+   ]
+  ],
+  "norm_affine_in_M3": {
+   "a": -0.3333333333333323,
+   "b": 0.16666666666666619,
+   "max_residual": 2.345346139520643e-15
+  },
+  "triple_product_law": {
+   "features": 480,
+   "feature_rank": 480,
+   "max_residual": 0.009405295533570203,
+   "typical_entry": 0.0030784615856152306
+  }
+ }
+}

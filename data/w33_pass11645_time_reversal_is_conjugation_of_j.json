@@ -1,0 +1,29 @@
+{
+ "pass_id": 11645,
+ "exact": {
+  "j_minus_1728_is_27_square_over_cube": true,
+  "j_minus_1728": "27*(mu**2 - 2*mu - 2)**2*(mu**4 + 2*mu**3 + 6*mu**2 - 4*mu + 4)**2/((mu - 1)**3*(mu**2 + mu + 1)**3)",
+  "vacuum_mu": "-sqrt(42)/2 - 3 + I*(sqrt(3) + sqrt(14)/2)",
+  "vacuum_j_numeric": [
+   728.7604514531178,
+   10082.414686165228
+  ],
+  "vacuum_j_minimal_polynomial_over_Q": "5168743489*X**4 - 7753689715968*X**3 + 528945987341869056*X**2 - 23152393432844992512*X + 46085036139193181405184",
+  "vacuum_Re_j_minimal_polynomial": "5168743489*X**2 - 3876844857984*X + 80213948338176",
+  "leading_coefficient_factorisation": "{7: 3, 13: 3, 19: 3}"
+ },
+ "numeric": {
+  "C3_pairings": "3*sqrt(3)",
+  "C3_spread": 2.516049590894909e-10,
+  "states": 20000,
+  "sign_Im_j_equals_sign_W": 20000,
+  "j_Clifford_invariant": 20000,
+  "j_of_conjugate_is_conjugate": 20000,
+  "C1": "27",
+  "C1_spread": 5.208637077203093e-09,
+  "C2": "sqrt(3)/1944",
+  "C2_spread": 5.140527760405522e-15,
+  "j_T_plus_state": 1.006112096661265e-43,
+  "CP_symmetric_states_have_real_j": true
+ }
+}

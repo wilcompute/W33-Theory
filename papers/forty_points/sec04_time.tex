@@ -959,6 +959,59 @@ rules extend to blocks of dimension six (and the regular unipotent blocks of dim
 \cert{w33\_pass11533\_one\_gate\_law.py}, \cert{w33\_pass11534\_time\_arrow\_module\_exact.py}, \cert{w33\_pass11535\_decay\_exact\_data.py},
 \cert{w33\_pass11536\_good\_rules\_dim8.py}, \cert{w33\_pass11537\_union\_law.py})
 
+\emph{The Hesse CP sign is an arrow of time of a qutrit.} The Hesse doublet that carries the flavour CP order parameter of the
+companion track is exactly the projection of $\psi^{\otimes3}$ onto the Hesse pencil: the Clifford generators act on it by the stored
+doublet matrices, complex conjugation of $\psi$ is its coefficient CP, and the Heisenberg group acts trivially. Its Bloch data are the
+four MUB triple products $\Pi_b=\prod_{s\in b}|\langle s|\psi\rangle|^2$, linearly: $\rho=3\sum_b\Pi_b$ and $r=-9\sum_b\Pi_b m_b$ with
+$m_b$ the MUB vertices. Hence $(\sum_b\Pi_b)^2=3\sum_b\Pi_b^2$ for every pure qutrit; $\rho=M_3-1$ lies in $[0,1/3]$, with $1/3$ exactly
+on stabiliser states and $0$ exactly on the nine Hesse SIC states; and the CP-odd discriminant is the Vandermonde
+$W=-108^3\prod_{a<b}(\Pi_a-\Pi_b)$. The $24$ CP chambers are the $24$ orderings of the four MUBs by their triple products, and time
+reversal swaps two MUBs. Equivalently, every qutrit state lies on one Hesse cubic $E_\psi$; time reversal conjugates its $j$-invariant,
+and $\operatorname{sign}W=\operatorname{sign}\operatorname{Im}j(E_\psi)$ (a ramification argument), with $|j|$ and $|j-1728|$ explicit in
+the $\Pi_b$. The time-symmetric invariants of a qutrit are all functions of the four outcome spectra (through degree $20$), but its
+lowest arrows (degrees $6$--$8$) are not: label-blind arrows start at degree $9$. The eight null vectors of the Hamming arrow are the
+eight Clifford transvection ticks: the stored Weil phase is the trace phase of the tick, the outer reversal runs the tick backwards, and
+the arrow is the tick's handedness about its stabiliser vertex on the Hesse sphere. Finally, the open half of the union law reduces to a
+splitting: off the isotropic locus every reversal has $k=0$, the frames of one reversal are $N_Q^\perp$ cut by one explicit affine
+condition, and they equal $N_Q^\perp$ whenever the reverser's order on $K_0+\langle x_Q\rangle$ is prime to $3$. This proves the union law
+for every two-qutrit class outside the two eigenvector cells and for $99.67\%$ of $\mathrm{Sp}(6,3)$.
+\tierT\,\tierC\ (\cert{w33\_pass11641\_hesse\_cp\_is\_mub\_vandermonde.py}, \cert{w33\_pass11642\_label\_blind\_time.py},
+\cert{w33\_pass11643\_hamming\_cube\_is\_transvection\_clock.py}, \cert{w33\_pass11644\_union\_law\_splitting.py},
+\cert{w33\_pass11645\_time\_reversal\_is\_conjugation\_of\_j.py})
+
+\emph{The union law is a theorem.} Every reverser $A$ of a one-gate tick has a semisimple part $A^N$ ($N$ odd) that is again a
+reverser, splits, and reverses at least the frames $A$ does; reversals with a nonzero shear exponent are dominated the same way (their
+cube is shear-free in the eigenvector cells). So the reversible frames are exactly the union of $((1-A^{-1})K_0)^\perp$ over the
+\emph{semisimple} anti-symplectic reversers negating the magic axis --- proved for every two-qutrit class and $99.97\%$ of
+$\mathrm{Sp}(6,3)$, with $108$ same-line reversals at $n=3$ checked individually. A tick has no reversal at all exactly when a linear
+system is unsolvable: $1/40$ of $\mathrm{Sp}(4,3)$, $1/28$ of $\mathrm{Sp}(6,3)$, and about $3.7\%$ at $n=4,5$. The label-sensitive
+arrows of a qutrit are exactly the arrows that survive where two MUBs have equal outcome spectra, with Hilbert series
+$t^6(1+t-t^3)/((1-t)(1-t^2)(1-t^3))$. The strongest arrow is attained at $\psi^*=(0,\cos\frac\pi8,\sin\frac\pi8e^{5\pi i/6})$: $\max|h_6|=\sqrt3/62208$
+on a $144$-ray orbit ($72$ per time orientation), where three MUBs share a spectrum, so the Hesse CP order parameter and every
+label-blind arrow vanish; $-h_6^2$ is a CP potential with no free target ratios and $h_6\,\chi$ a diagonal Weyl selector. Finally, the
+Hesse doublet generalises: the Heisenberg-invariant cubics of $n$ qutrits carry the dual even Weil representation, whose image is the
+reflection group $G_6$ for one qutrit and $G_{33}$ (order $51840$, the Burkhardt group) for two, and the $40$ two-qutrit stabiliser bases
+map to $40$ rays whose overlap-$\frac13$ graph is $\mathrm{SRG}(40,12,2,4)$ in its antiregular $Q(4,3)$ form --- the graph of the lines of $W(3,3)$, dual to (and not isomorphic with) the $W(3,3)$ point graph; the norm is the Gross--Nezami--Walter third moment.
+\tierT\,\tierC\ (\cert{w33\_pass11647\_union\_law\_closed.py}, \cert{w33\_pass11648\_label\_blind\_sigma.py},
+\cert{w33\_pass11649\_maximal\_arrow\_state.py}, \cert{w33\_pass11650\_no\_reversal\_fraction.py},
+\cert{w33\_pass11651\_n\_qutrit\_hesse\_space.py})
+
+\emph{The Burkhardt geometry of two qutrits.} In the two-qutrit Hesse space ($\mathbb P^4$, symmetry $G_{33}$) the whole of $W(3,3)$ becomes
+projective geometry: the $40$ stabiliser bases (lines of $W(3,3)$) are points, the $40$ transvection ticks (points of $W(3,3)$) are the
+eigen-lines and eigen-planes of their gates --- two tick-lines meet iff the points are collinear, a stabiliser point lies on a tick-line
+iff the point lies on the Lagrangian, and the tick-planes are exactly the $40$ planes of the Burkhardt quartic. Each of the $45$ tensor
+factorisations acts by a local parity that is a reflection (SWAP is one); the $45$ mirrors are the Burkhardt nodes, mutually orthogonal
+exactly when the factorisations are collinear in $GQ(4,2)$ (the perfect-gate relation). Each node is a determinant:
+$\langle n_F,u(\psi)\rangle=\det\psi_F$, the qutrit concurrence of the factorisation; the $45$ determinants span only five dimensions, and
+for each of the $27$ factorisation frames $\sum_{F}|\det_F\psi|^2=(M_3-2)/6\le1/9$ --- a monogamy rule allowing at most three of five
+factorisations to be maximally entangled. Two qutrits are the only size at which factorisations act as reflections. The Hesse CP sign of two
+qutrits starts, as for one, at degree $18$, so it misses the lowest arrows; on the equal-spectra locus the label-sensitive arrows are
+generated by the two lowest arrows with one relation, $g_7(4e_s-N^2)=g_6(8Ne_s-2N^3-\Pi_s)$. Shear-twisted reversers reduce to one
+conjugacy $YMY^{-1}=s^kM$ per class, which closes the same-line case of the union law.
+\tierT\,\tierC\ (\cert{w33\_pass11655\_shear\_twisted\_reversers.py}, \cert{w33\_pass11656\_sigma\_module\_two\_arrows.py},
+\cert{w33\_pass11657\_hesse\_space\_geometrises\_w33.py}, \cert{w33\_pass11658\_hesse\_cp\_tower.py},
+\cert{w33\_pass11659\_burkhardt\_nodes\_are\_concurrences.py})
+
 All of this is one law.
 
 \begin{result}{Theorem 4.8 (the intrinsic arrow for every number of qutrits) \hfill \tierT}

@@ -1,0 +1,19 @@
+{
+ "pass_id": 11659,
+ "node_over_det_mean": [
+  1.0,
+  2.6295363507367062e-33
+ ],
+ "node_over_det_spread": 5.273412174885887e-15,
+ "node_kills_products_max": 2.8609792490763984e-17,
+ "det2_maximally_entangled": 0.03703703703703707,
+ "nodes": 45,
+ "rank_of_45_nodes": 5,
+ "linear_relations_among_45_determinants": 40,
+ "frames_(5_mutually_orthogonal_nodes)": 27,
+ "frame_sum_rule_max_error_(27_frames_x_200_states)": 1.3461454173580023e-15,
+ "max_min_det2_3_of_a_frame": 0.03703703703703521,
+ "max_min_det2_4_of_a_frame": 0.015631986933492523,
+ "two_factorisations_orthogonal_nodes": 0.03703703703703625,
+ "two_factorisations_overlap_1/4": 0.037037037037036515
+}

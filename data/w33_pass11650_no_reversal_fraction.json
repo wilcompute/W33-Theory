@@ -1,0 +1,54 @@
+{
+ "pass_id": 11650,
+ "n2": {
+  "counts": {
+   "affine solvable (beyond cap)": 6,
+   "affine True / symplectic True": 50538,
+   "affine False / symplectic False": 1296
+  },
+  "fractions": {
+   "beyond cap": "1/8640",
+   "no reversal: same line, other": "1/40",
+   "no reversal": "1/40"
+  },
+  "affine_decides": true
+ },
+ "n3": {
+  "counts": {
+   "affine solvable (beyond cap)": 191,
+   "affine True / symplectic True": 2071,
+   "affine False / symplectic False": 46
+  },
+  "fractions": {
+   "beyond cap": "8507/28304640",
+   "no reversal: same line, other": "1/52",
+   "no reversal": "1/28",
+   "no reversal: non-collinear": "3/182"
+  },
+  "affine_decides": true
+ },
+ "s4": {
+  "samples": 60000,
+  "no_reversal": 2240,
+  "fraction": 0.037333333333333336,
+  "stderr": 0.0007739461173703197
+ },
+ "s5": {
+  "samples": 30000,
+  "no_reversal": 1129,
+  "fraction": 0.03763333333333333,
+  "stderr": 0.001098742698960279
+ },
+ "s6": {
+  "samples": 30000,
+  "no_reversal": 1194,
+  "fraction": 0.0398,
+  "stderr": 0.001128656428384357
+ },
+ "s7": {
+  "samples": 15000,
+  "no_reversal": 585,
+  "fraction": 0.039,
+  "stderr": 0.0015806960492137634
+ }
+}

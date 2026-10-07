@@ -1,0 +1,393 @@
+{
+ "pass_id": 11643,
+ "summary": {
+  "rows": 8,
+  "weil_phase_equals_trace_phase": 8,
+  "outer_reversal_is_inverse_tick": 8,
+  "rotation_120": 8,
+  "veronese_positive_axis_stabiliser": 4,
+  "negative_positive_axis_magic": 4,
+  "chi_equals_minus_xyz_sign_of_positive_axis": 8,
+  "conj_is_gate_of_reflected_tick": 8,
+  "wigner_reversal_flips_sheet": 8,
+  "shear_class_by_sheet": {
+   "veronese": [
+    1
+   ],
+   "negative": [
+    2
+   ]
+  }
+ },
+ "rows": [
+  {
+   "sheet": "veronese",
+   "S": [
+    0,
+    0,
+    1
+   ],
+   "hamming": [
+    1,
+    1,
+    2
+   ],
+   "chi": -1,
+   "stored_weil_phase": "-i",
+   "transvection": [
+    [
+     1,
+     0
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "shear_class_c": 1,
+   "trace_phase": [
+    -0.0,
+    -1.0
+   ],
+   "trace_phase_matches_stored": true,
+   "inverse_is_gate_of_minus_S": true,
+   "rotation_angle_deg": 120.0,
+   "fixed_MUB_slope": [
+    0,
+    1
+   ],
+   "positive_axis": "+m_v (stabiliser vertex)",
+   "xyz_sign_of_positive_axis": 1,
+   "conj_U_equals_gate_of_J0tJ0": true,
+   "time_reversed_S": [
+    0,
+    0,
+    2
+   ],
+   "time_reversed_sheet_flips": true
+  },
+  {
+   "sheet": "veronese",
+   "S": [
+    1,
+    0,
+    0
+   ],
+   "hamming": [
+    2,
+    2,
+    2
+   ],
+   "chi": -1,
+   "stored_weil_phase": "-i",
+   "transvection": [
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     1
+    ]
+   ],
+   "shear_class_c": 1,
+   "trace_phase": [
+    -0.0,
+    -1.0
+   ],
+   "trace_phase_matches_stored": true,
+   "inverse_is_gate_of_minus_S": true,
+   "rotation_angle_deg": 120.0,
+   "fixed_MUB_slope": [
+    1,
+    0
+   ],
+   "positive_axis": "+m_v (stabiliser vertex)",
+   "xyz_sign_of_positive_axis": 1,
+   "conj_U_equals_gate_of_J0tJ0": true,
+   "time_reversed_S": [
+    2,
+    0,
+    0
+   ],
+   "time_reversed_sheet_flips": true
+  },
+  {
+   "sheet": "veronese",
+   "S": [
+    1,
+    1,
+    1
+   ],
+   "hamming": [
+    1,
+    2,
+    1
+   ],
+   "chi": -1,
+   "stored_weil_phase": "-i",
+   "transvection": [
+    [
+     2,
+     2
+    ],
+    [
+     1,
+     0
+    ]
+   ],
+   "shear_class_c": 1,
+   "trace_phase": [
+    -0.0,
+    -1.0
+   ],
+   "trace_phase_matches_stored": true,
+   "inverse_is_gate_of_minus_S": true,
+   "rotation_angle_deg": 120.0,
+   "fixed_MUB_slope": [
+    1,
+    1
+   ],
+   "positive_axis": "+m_v (stabiliser vertex)",
+   "xyz_sign_of_positive_axis": 1,
+   "conj_U_equals_gate_of_J0tJ0": true,
+   "time_reversed_S": [
+    2,
+    1,
+    2
+   ],
+   "time_reversed_sheet_flips": true
+  },
+  {
+   "sheet": "veronese",
+   "S": [
+    1,
+    2,
+    1
+   ],
+   "hamming": [
+    2,
+    1,
+    1
+   ],
+   "chi": -1,
+   "stored_weil_phase": "-i",
+   "transvection": [
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     2
+    ]
+   ],
+   "shear_class_c": 1,
+   "trace_phase": [
+    -0.0,
+    -1.0
+   ],
+   "trace_phase_matches_stored": true,
+   "inverse_is_gate_of_minus_S": true,
+   "rotation_angle_deg": 120.0,
+   "fixed_MUB_slope": [
+    1,
+    2
+   ],
+   "positive_axis": "+m_v (stabiliser vertex)",
+   "xyz_sign_of_positive_axis": 1,
+   "conj_U_equals_gate_of_J0tJ0": true,
+   "time_reversed_S": [
+    2,
+    2,
+    2
+   ],
+   "time_reversed_sheet_flips": true
+  },
+  {
+   "sheet": "negative",
+   "S": [
+    0,
+    0,
+    2
+   ],
+   "hamming": [
+    2,
+    2,
+    1
+   ],
+   "chi": 1,
+   "stored_weil_phase": "+i",
+   "transvection": [
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "shear_class_c": 2,
+   "trace_phase": [
+    0.0,
+    1.0
+   ],
+   "trace_phase_matches_stored": true,
+   "inverse_is_gate_of_minus_S": true,
+   "rotation_angle_deg": 120.0,
+   "fixed_MUB_slope": [
+    0,
+    1
+   ],
+   "positive_axis": "-m_v (T-magic vertex)",
+   "xyz_sign_of_positive_axis": -1,
+   "conj_U_equals_gate_of_J0tJ0": true,
+   "time_reversed_S": [
+    0,
+    0,
+    1
+   ],
+   "time_reversed_sheet_flips": true
+  },
+  {
+   "sheet": "negative",
+   "S": [
+    2,
+    0,
+    0
+   ],
+   "hamming": [
+    1,
+    1,
+    1
+   ],
+   "chi": 1,
+   "stored_weil_phase": "+i",
+   "transvection": [
+    [
+     1,
+     1
+    ],
+    [
+     0,
+     1
+    ]
+   ],
+   "shear_class_c": 2,
+   "trace_phase": [
+    0.0,
+    1.0
+   ],
+   "trace_phase_matches_stored": true,
+   "inverse_is_gate_of_minus_S": true,
+   "rotation_angle_deg": 120.0,
+   "fixed_MUB_slope": [
+    1,
+    0
+   ],
+   "positive_axis": "-m_v (T-magic vertex)",
+   "xyz_sign_of_positive_axis": -1,
+   "conj_U_equals_gate_of_J0tJ0": true,
+   "time_reversed_S": [
+    1,
+    0,
+    0
+   ],
+   "time_reversed_sheet_flips": true
+  },
+  {
+   "sheet": "negative",
+   "S": [
+    2,
+    1,
+    2
+   ],
+   "hamming": [
+    1,
+    2,
+    2
+   ],
+   "chi": 1,
+   "stored_weil_phase": "+i",
+   "transvection": [
+    [
+     2,
+     1
+    ],
+    [
+     2,
+     0
+    ]
+   ],
+   "shear_class_c": 2,
+   "trace_phase": [
+    0.0,
+    1.0
+   ],
+   "trace_phase_matches_stored": true,
+   "inverse_is_gate_of_minus_S": true,
+   "rotation_angle_deg": 120.0,
+   "fixed_MUB_slope": [
+    1,
+    2
+   ],
+   "positive_axis": "-m_v (T-magic vertex)",
+   "xyz_sign_of_positive_axis": -1,
+   "conj_U_equals_gate_of_J0tJ0": true,
+   "time_reversed_S": [
+    1,
+    1,
+    1
+   ],
+   "time_reversed_sheet_flips": true
+  },
+  {
+   "sheet": "negative",
+   "S": [
+    2,
+    2,
+    2
+   ],
+   "hamming": [
+    2,
+    1,
+    2
+   ],
+   "chi": 1,
+   "stored_weil_phase": "+i",
+   "transvection": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     2
+    ]
+   ],
+   "shear_class_c": 2,
+   "trace_phase": [
+    0.0,
+    1.0
+   ],
+   "trace_phase_matches_stored": true,
+   "inverse_is_gate_of_minus_S": true,
+   "rotation_angle_deg": 120.0,
+   "fixed_MUB_slope": [
+    1,
+    1
+   ],
+   "positive_axis": "-m_v (T-magic vertex)",
+   "xyz_sign_of_positive_axis": -1,
+   "conj_U_equals_gate_of_J0tJ0": true,
+   "time_reversed_S": [
+    1,
+    2,
+    1
+   ],
+   "time_reversed_sheet_flips": true
+  }
+ ],
+ "conventions": "phase space (x, z), W(x,z) = X^x Z^z, Omega = [[0,-1],[1,0]], t_S = I + S Omega, D_c = diag(omega^(2 c j^2)) implements (x,z) -> (x, z + c x); Codex's matrix (a,b,c) is [[a,b],[b,c]] in the same (x, z) order"
+}

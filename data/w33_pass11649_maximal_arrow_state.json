@@ -1,0 +1,38 @@
+{
+ "pass_id": 11649,
+ "h6_at_star": -2.7842894926197078e-05,
+ "equals_minus_sqrt3_over_62208": true,
+ "orbit_size": 144,
+ "orbit_positive": 72,
+ "unitary_stabiliser_order": 3,
+ "random_starts": 200,
+ "starts_reaching_max": 200,
+ "end_points_in_orbit": 200,
+ "max_found": 2.7842894926197593e-05,
+ "mub_spectra_at_star": [
+  [
+   0.0,
+   0.146446609407,
+   0.853553390593
+  ],
+  [
+   0.129209188101,
+   0.333333333333,
+   0.537457478565
+  ],
+  [
+   0.129209188101,
+   0.333333333333,
+   0.537457478565
+  ],
+  [
+   0.129209188101,
+   0.333333333333,
+   0.537457478565
+  ]
+ ],
+ "three_mubs_share_a_spectrum": true,
+ "Pi_Z_at_star": 0.0,
+ "H_gap_equals_4_h6max^2_P_s_(s=1)": true,
+ "H_gap_equals_4_h6max^2_P_s_(s=-1)": true
+}

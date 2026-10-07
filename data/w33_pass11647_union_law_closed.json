@@ -1,0 +1,41 @@
+{
+ "pass_id": 11647,
+ "n2": {
+  "counts": {
+   "k=0 split (Pass 11644 Theorem 3)": 123120,
+   "k!=0, eigenvector cell: Lemma B (A^3 then semisimple part) holds": 7776,
+   "k!=0, eigenvector cell: Lemma B FAILS": 0,
+   "k=0 non-split: Lemma A (A^N semisimple solution, split, dominated) holds": 1296,
+   "k=0 non-split: Lemma A FAILS": 0
+  },
+  "mass": {
+   "union law PROVED (theorem + certificate)": "8639/8640",
+   "beyond cap": "1/8640"
+  },
+  "mass_float": {
+   "union law PROVED (theorem + certificate)": 0.9998842592592593,
+   "beyond cap": 0.00011574074074074075
+  }
+ },
+ "n3": {
+  "counts": {
+   "k=0 split (Pass 11644 Theorem 3)": 75360,
+   "k=0 non-split: Lemma A (A^N semisimple solution, split, dominated) holds": 8046,
+   "k=0 non-split: Lemma A FAILS": 0,
+   "k!=0, eigenvector cell: Lemma B (A^3 then semisimple part) holds": 12600,
+   "k!=0, eigenvector cell: Lemma B FAILS": 0,
+   "k!=0, other cell: dominated by an explicit split k=0 solution": 108,
+   "k!=0, other cell: NOT dominated": 0,
+   "classes needing the explicit k!=0 check (same line, other)": 4,
+   "classes needing the explicit k!=0 check (same line, M^2 z1 = -z1)": 2
+  },
+  "mass": {
+   "union law PROVED (theorem + certificate)": "28296133/28304640",
+   "beyond cap": "8507/28304640"
+  },
+  "mass_float": {
+   "union law PROVED (theorem + certificate)": 0.9996994485709764,
+   "beyond cap": 0.00030055142902365127
+  }
+ }
+}
