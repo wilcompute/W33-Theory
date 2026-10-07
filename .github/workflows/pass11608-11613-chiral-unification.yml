@@ -1,0 +1,23 @@
+name: Passes 11608-11613 chiral unification
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analysis/w33_pass11608_11613_chiral_unification.py'
+      - 'analysis/PASS11608_11613_CHIRAL_UNIFICATION.md'
+      - 'data/PART_W33_PASS11608_11613_CHIRAL_UNIFICATION.json'
+      - 'tests/test_w33_pass11608_11613_chiral_unification.py'
+      - '.github/workflows/pass11608-11613-chiral-unification.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --upgrade pip sympy pytest
+      - run: python analysis/w33_pass11608_11613_chiral_unification.py
+      - run: pytest -q tests/test_w33_pass11608_11613_chiral_unification.py

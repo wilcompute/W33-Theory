@@ -1,0 +1,259 @@
+{
+  "boundary": "The packet closes several algebraic and finite-operator obstructions but does not constitute a Theory of Everything. Lorentzian locality, a chiral functional measure, complete anomaly inflow/cancellation, dynamical Higgs and spectator masses, measured flavor parameters, RG thresholds, gravity, vacuum energy and absolute scales remain open.",
+  "integration": {
+    "cp_link": "The sign lock holds for the original canonical supplied Yukawa pair and also for Pass11606's dynamically selected unequal family alignment and exact seesaw CP invariant.",
+    "domain_wall_requirement": "The internal selector alone is not a topological mass, but Pass11557/11602 already supply a native Clifford grade Gamma_* anticommuting with the spatial kinetic gammas; the remaining requirement is a physical Hesse coupling through Gamma_* Chi.",
+    "single_vacuum_bit": "At W=s*15 rho^6/343, both the internal Weyl filter and the E8 shell filter leave sign -s.",
+    "strongest_architecture": "H_external tensor [one selected E8 matter shell with one compatible Spin10 Weyl sign], supplemented by the minimal SU3-family anomaly spectator if the continuous family SU3 is gauged.",
+    "uv_link": "Exact diagonal reflection symmetry makes W the mandatory factor of every polynomial chirality portal, but does not fix its coefficient or the scalar vacuum."
+  },
+  "passes": [
+    11608,
+    11609,
+    11610,
+    11611,
+    11612,
+    11613
+  ],
+  "producer_sha256": "30eceb25ed1082920752021a0820c881af0f22a190054ae7933f2cec01c5f0f3",
+  "reservation": "ef3f76825",
+  "result": {
+    "pass11608": {
+      "boundary": "This is exact decoupling for the positive kinetic/squared-operator architecture. It does not define a chiral fermion path-integral measure, prove gauge-anomaly cancellation, or derive Delta from dynamics.",
+      "determinant_factorization": "det(H+mu^2)=det(K+mu^2)^16 det(K+mu^2+Delta)^16",
+      "light_projector": "P_light=(I-s Chi)/2",
+      "locality": "The added term is onsite in the external coordinate, so it introduces no new off-diagonal spacetime couplings.",
+      "operator": "H=K_ext tensor I_32 + Delta I_ext tensor P_gapped, P_gapped=(I+s Chi)/2",
+      "parallel11602": "The theorem applies in particular to a positive/squared operator built from Pass11602's local matched-metric covariant Dirac, because its external site/spin operator and the Spin(10) internal selector act on separate tensor factors.",
+      "status": "PASS_EXACT_ONSITE_WEYL_PENALTY_DECOUPLES_ONE_INTERNAL_BLOCK",
+      "theorem": "Because the external kinetic operator acts as the identity on the internal Spin(10) carrier, the light block is exactly K_ext while the heavy block is K_ext+Delta. The projected light Green function is independent of Delta and the heavy resolvent is suppressed by the gap."
+    },
+    "pass11609": {
+      "CP_action": "The antiunitary shell conjugation K_CP=S o complex-conjugation exchanges the two 81-dimensional grade spaces and sends C->-C. Bare entrywise conjugation of the real diagonal C does not.",
+      "boundary": "This is an E6 x SU(3)_ext-covariant representation-level shell filter, not an E8-invariant mass term. Selecting one shell breaks the symmetry that exchanges the two grades and raises the SU(3)_family anomaly issue handled in Pass11613.",
+      "filter": "H_shell=lambda[(15/343) rho^6 M + W C]^2",
+      "grading": "U has eigenvalues 1,omega,omega^2 on 86+(27,3)+(27bar,3bar)",
+      "matter_projector": "M=C^2 with spectrum 0,1,1",
+      "shell_sign": "C=(U-U^dagger)/(i sqrt(3)) with spectrum 0,+1,-1",
+      "status": "PASS_HESSE_SIGN_SELECTS_ONE_E8_MATTER_SHELL_WITH_GAUGE_BLOCK_UNTOUCHED",
+      "theorem": "At W=s(15/343)rho^6 the 86-dimensional gauge block stays exactly at zero, one 81-dimensional matter shell is an exact kernel (C=-s), and the conjugate shell has gap 4 lambda (15/343)^2 rho^12.",
+      "vacuum_rows": [
+        {
+          "W_sign": 1,
+          "blocks": [
+            {
+              "C": 0,
+              "block": "gauge_86",
+              "energy_over_lambda_rho12": "0",
+              "multiplicity": 86
+            },
+            {
+              "C": 1,
+              "block": "matter_plus_81",
+              "energy_over_lambda_rho12": "900/117649",
+              "multiplicity": 81
+            },
+            {
+              "C": -1,
+              "block": "matter_minus_81",
+              "energy_over_lambda_rho12": "0",
+              "multiplicity": 81
+            }
+          ],
+          "zero_blocks": [
+            "gauge_86",
+            "matter_minus_81"
+          ]
+        },
+        {
+          "W_sign": -1,
+          "blocks": [
+            {
+              "C": 0,
+              "block": "gauge_86",
+              "energy_over_lambda_rho12": "0",
+              "multiplicity": 86
+            },
+            {
+              "C": 1,
+              "block": "matter_plus_81",
+              "energy_over_lambda_rho12": "0",
+              "multiplicity": 81
+            },
+            {
+              "C": -1,
+              "block": "matter_minus_81",
+              "energy_over_lambda_rho12": "900/117649",
+              "multiplicity": 81
+            }
+          ],
+          "zero_blocks": [
+            "gauge_86",
+            "matter_plus_81"
+          ]
+        }
+      ],
+      "weld_to_11607": "Pass11607 leaves internal Spin(10) chirality Chi=-s. The shell selector leaves C=-s. Thus the two sign choices are compatible up to the conventional identification of 16 versus 16bar inside the two E6-conjugate shells."
+    },
+    "pass11610": {
+      "boundary": "The required anticommuting matrix is already present in the native rank-four Clifford fiber; what remains unproved is a physical/dynamical coupling that makes the Hesse order parameter multiply Gamma_* Chi, plus the Lorentzian regulator and anomaly-inflow completion.",
+      "kink": "m(x)=m0 tanh(x/xi), f(x)=cosh(x/xi)^(-m0 xi)",
+      "naive_bulk": {
+        "+": "m+k, m-k",
+        "-": "-m+k, -m-k"
+      },
+      "naive_wall": "H=-i alpha d_x + m(x) Chi with Chi on the internal factor",
+      "native_beta": "Pass11557's rank-four Clifford grade Gamma_*=Z tensor I2 obeys Gamma_*^2=I and anticommutes with all three native spatial gammas. Pass11602 already uses the same grade in its covariant Wilson regulator and notes that it commutes with Spin transport.",
+      "no_go": "Because Chi commutes with the spacetime kinetic alpha, each asymptotic bulk sector has E=s m0 +/- k and is gapless. There is no Jackiw-Rebbi bulk gap/topological interface invariant from W(x)Chi alone.",
+      "repair": "H=-i gamma_n d_x + Gamma_* m(x) Chi, using the existing native Clifford grade as the anticommuting mass channel",
+      "repaired_bulk": "E=+/-sqrt(k^2+m0^2)",
+      "status": "PASS_DOMAIN_WALL_COMMUTING_NO_GO_AND_NATIVE_GRADE_REPAIR",
+      "zero_modes": "For each internal Chi=s=+/-1 there is one normalizable zero mode in the corresponding two-generator reduction. Before shell/Weyl selection the wall carries a conjugate pair; after an independent selector removes one internal sector, one interface mode remains."
+    },
+    "pass11611": {
+      "CP_polynomial": "-18000*bi*(bi**2 + br**2 - 1)*(123*bi**8 + 492*bi**6*br**2 + 542*bi**6*br - 85*bi**6 + 738*bi**4*br**4 + 1626*bi**4*br**3 - 235*bi**4*br**2 - 726*bi**4*br - 9*bi**4 + 492*bi**2*br**6 + 1626*bi**2*br**5 - 215*bi**2*br**4 - 1852*bi**2*br**3 - 302*bi**2*br**2 + 248*bi**2*br + 3*bi**2 + 123*br**8 + 542*br**7 - 65*br**6 - 1126*br**5 - 165*br**4 + 520*br**3 + 171*br**2)",
+      "J_canonical_exact": "1125*(-40759807*sqrt(42) - 264153529)/(4*(24532198*sqrt(3) + 11356201*sqrt(14)))",
+      "W_canonical": "15/343 at m=(1,2,3)/sqrt(14)",
+      "boundary": "The family alignment is now dynamically selected in the Pass11606 EFT, but its common gauge-breaking direction, several Yukawa ratios/scales, and the Hesse angular target selecting that particular CP orbit remain supplied. This is still not a measured CKM/PMNS prediction.",
+      "dynamic_alignment_11606": {
+        "CP_sign": -1,
+        "Hesse_field": "u=(sqrt(2/3),-i/sqrt3)",
+        "W_exact": "-128*sqrt(3)*(-3 + sqrt(3))*(sqrt(3) + 3)/19683",
+        "seesaw_CP_exact": "-94163140688/5625",
+        "selected_Chi": -1
+      },
+      "minus_J_over_W": "25725*(264153529 + 40759807*sqrt(42))/(4*(24532198*sqrt(3) + 11356201*sqrt(14)))",
+      "rows": [
+        {
+          "J_sign": -1,
+          "W_sign": 1,
+          "selected_Chi": -1,
+          "vacuum": "canonical"
+        },
+        {
+          "J_sign": 1,
+          "W_sign": -1,
+          "selected_Chi": 1,
+          "vacuum": "CP_conjugate"
+        }
+      ],
+      "status": "PASS_CP_SIGN_LOCK_EXTENDS_TO_11606_DYNAMICAL_SEESAW_ALIGNMENT",
+      "theorem": "For the original Pass11600 canonical CP pair, selected Chi equals the sign of the weak-basis CP witness. The stronger parallel Pass11606 branch dynamically selects the unequal (1,2,3) family alignment; its canonical Hesse field has W=256/(2187 sqrt3)>0 while its exact seesaw invariant is -94163140688/5625<0, so Pass11607 again leaves Chi=-1=sign(J_nu)."
+    },
+    "pass11612": {
+      "boundary": "This protects the absence of lower-degree chirality portals, not the value or smallness of the W Chi coefficient. CP-even p3,p4 scalar operators remain allowed and can move the Hesse vacuum unless an additional mechanism controls them.",
+      "checked_degrees": "0..12 exact projector computation",
+      "hilbert_statement": "anti-invariants = W * invariants; H_anti(t)=t^6/[(1-t^2)(1-t^3)(1-t^4)]",
+      "parallel11605": "Pass11605 independently removes the common scalar U1 Goldstone with the G6 holomorphic H4 completion while preserving W and the 11607 Weyl kernel on all 96 vacuum vectors. It explicitly does not suppress the lower CP-even p3/p4 angular terms, so phase protection and chirality-portal degree protection are complementary rather than redundant.",
+      "radiative_meaning": "If the diagonal W(D3) symmetry is exact and counterterms are polynomial in this Hesse Bloch sector, radiative corrections cannot generate a lower-degree Chi portal. They can renormalize W Chi and generate W times higher invariants.",
+      "status": "PASS_DIAGONAL_S4_FORCES_EVERY_POLYNOMIAL_CHIRAL_PORTAL_TO_CONTAIN_W",
+      "table": [
+        {
+          "anti_dim": 0,
+          "anti_expected_from_degree_minus6": 0,
+          "degree": 0,
+          "invariant_dim": 1
+        },
+        {
+          "anti_dim": 0,
+          "anti_expected_from_degree_minus6": 0,
+          "degree": 1,
+          "invariant_dim": 0
+        },
+        {
+          "anti_dim": 0,
+          "anti_expected_from_degree_minus6": 0,
+          "degree": 2,
+          "invariant_dim": 1
+        },
+        {
+          "anti_dim": 0,
+          "anti_expected_from_degree_minus6": 0,
+          "degree": 3,
+          "invariant_dim": 1
+        },
+        {
+          "anti_dim": 0,
+          "anti_expected_from_degree_minus6": 0,
+          "degree": 4,
+          "invariant_dim": 2
+        },
+        {
+          "anti_dim": 0,
+          "anti_expected_from_degree_minus6": 0,
+          "degree": 5,
+          "invariant_dim": 1
+        },
+        {
+          "anti_dim": 1,
+          "anti_expected_from_degree_minus6": 1,
+          "degree": 6,
+          "invariant_dim": 3
+        },
+        {
+          "anti_dim": 0,
+          "anti_expected_from_degree_minus6": 0,
+          "degree": 7,
+          "invariant_dim": 2
+        },
+        {
+          "anti_dim": 1,
+          "anti_expected_from_degree_minus6": 1,
+          "degree": 8,
+          "invariant_dim": 4
+        },
+        {
+          "anti_dim": 1,
+          "anti_expected_from_degree_minus6": 1,
+          "degree": 9,
+          "invariant_dim": 3
+        },
+        {
+          "anti_dim": 2,
+          "anti_expected_from_degree_minus6": 2,
+          "degree": 10,
+          "invariant_dim": 5
+        },
+        {
+          "anti_dim": 1,
+          "anti_expected_from_degree_minus6": 1,
+          "degree": 11,
+          "invariant_dim": 4
+        },
+        {
+          "anti_dim": 3,
+          "anti_expected_from_degree_minus6": 3,
+          "degree": 12,
+          "invariant_dim": 7
+        }
+      ],
+      "theorem": "Every polynomial coefficient F(x,y,z) for which F Chi is invariant under the diagonal odd action must transform in the sign representation. Through degree12 every such F is exactly divisible by W, with invariant quotient; dimensions match the shifted invariant ring degree by degree. This is the finite computational form of the reflection anti-invariant principal-ideal theorem."
+    },
+    "pass11613": {
+      "boundary": "This closes only the perturbative continuous SU(3)_family cubic anomaly for the shell-selected candidate. It does not generate the spectator mass, prove discrete Delta54 anomaly freedom after breaking, or establish the full Standard Model anomaly/measure problem.",
+      "minimality_check": "Exhaustive additive search over all nontrivial SU3 irreps of dimension<10 finds no spectator content of total dimension<=9 with anomaly -27.",
+      "prior_owner": "The (27,3)+(1,10bar) anomaly cancellation and its A=-27,T=15/2 coefficients were already owned by the 2026-10-01 chiral-decuplet certificate and are reused, not rediscovered here.",
+      "selected_shell": "one Weyl (27,3) contributes A_SU3=27",
+      "spectator": "(1,10bar) with SU3 Dynkin label (0,3), dimension10, A=-27, T=15/2",
+      "status": "PASS_MINIMALITY_CERTIFICATE_FOR_PRIOR_10BAR_FAMILY_ANOMALY_REPAIR",
+      "total_Weyl_dimension": 91,
+      "total_anomaly": "0"
+    }
+  },
+  "source_sha256": {
+    "analysis/2026-09-21_e8_a2_center_vs_coxeter_order3.md": "6a6856c667f04e91c54c2efd4541c4ff1c00935e3617cf3676ce7a06454d650d",
+    "analysis/PASS11590_11599_FAMILIES_FLAVOR_CHIRALITY_GRAVITY.md": "de493b0e484973b1c8a22bfd05600ebe1d2b71e5b89b37ee4e4f8b47b201e94a",
+    "analysis/PASS11602_11606_GEOMETRY_FLAVOR_COMPLETION.md": "864b5458694113fc1acbd1f690c39f4a7f1e119cbc7e92404ca29c89b088eba1",
+    "analysis/PASS11607_HESSE_CP_WEYL_SELECTOR.md": "7648281537aedff1bed7c56474719e9ac7ebf9cd6ee773e4c60606797a74b261",
+    "analysis/PASS20261001_PHASE_CHIRALITY_QUANTUM_GRAVITY_UV.md": "cc0216532b9e143dc62ed45d16fb571c9a43f2ff99e9f087d9907d8f488c2170",
+    "analysis/w33_pass11557_pin_equivariant_event_dirac.py": "6d0307511f1560f19042267409b02919b6f707c50ee8d42ed50e0a03cb10e148",
+    "analysis/w33_pass11592_q6_overlap_admissibility.py": "a566e0bc101605d08c6b23df60835a61179cc413a56ff9032065519d0e82e989",
+    "analysis/w33_pass11597_family_clifford_breaking.py": "69886bd9f89c4f6cafa5ea760878eaa55fc7d340ce9935c8a739bcb9d42c7f11",
+    "analysis/w33_pass11600_dynamical_hesse_flavor.py": "790645d1c5b9bef670becceb65110cad598c6e8c60077098668dae79163f6999",
+    "analysis/w33_pass11602_11606_geometry_flavor_completion.py": "5a9de6aeeb108683f751d6df3b189f216beb7b0fb283e05711a0aa6aee5b8459",
+    "data/PART_W33_PASS11607_HESSE_CP_WEYL_SELECTOR.json": "f97fba374f41575c400d1361613094ba09beb872a5e243c1280957936af05d5d",
+    "data/w33_pass11600_dynamical_hesse_flavor.json": "88ddea3a97f5e3d390abf1b3d8840f2cd91472a9cf3923a9e7b55251c246383c",
+    "data/w33_pass11602_11606_geometry_flavor_completion.json": "58325af24e38998e3cf109ef49f91c5d5710b68910e8862b24520a5183142467"
+  },
+  "status": "PASS_SIX_FRONT_CHIRAL_UNIFICATION_PACKET"
+}
