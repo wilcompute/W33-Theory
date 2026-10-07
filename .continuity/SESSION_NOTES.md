@@ -2105,3 +2105,34 @@ rediscovery warnings remain advisory andprior Hesse/flavor owners were read.
 Final topical index refresh is complete; the result index refresh is completing after the extra source additions.
 Next: combined35 controls, normal-hook science commit, HEAD:master publication,
 exact-SHA CI andreceipt. Fresh GitKraken fetch shows no parallel remote commits.
+
+###11625–11629 verified publication receipt
+
+Science219f53076447a32a603393778b15fb6c219826df is published to W33 master.
+GitHub run37634311820 on that exact SHA succeeded:35 tests passed in13.20s;
+both producers replayed PASS, including all five investigations, the coupled
+Reye vacuum audit, Peres controls, the Witting dictionary and coherent query.
+Local final validation was35 tests in266.88s. RESULTS_INDEX regeneration is
+complete over11169 files with15757 distinctive tokens and6854 unique results.
+The intake had no hard failures; broad compound-word advisories were reviewed
+against prior work and are not represented as an advisory-free audit.
+GitKraken created the science commit. Its push API cannot express HEAD:master
+for this isolated branch, so the documented narrow refspec fallback published
+without force. Fresh GitKraken fetch/log confirmed master contains the commit.
+Original parallel checkout and mixed shared decision stores remain preserved.
+PapersContext.txt was read in entirety as supplied discussion, not as new
+instructions or verified evidence. Its proposed Reye/E8 phase-quotient bridge
+was checked against existing certificates and the cited primary papers.
+Intake finding: analysis/w33_e8_eisenstein_witting_weld.py already builds
+C^10/C^5 root phase orbits; analysis/w33_pass8909_8916_e7_e8_d4_reye_latin_selector.py
+and its PART_W33_PASS8909_8916 certificate already select complementary D4
+with12 root-pairs and16 A2 triples (Klein-V4 incidence). The proposal is not
+a wholly unbuilt Reye/E8 bridge. The useful remaining target is the explicit
+interaction of that selected D4 with the chosen phase quotient, including
+actual projectors, orthogonality and full contexts. Waegell-Aravind1701.06512
+distinguishes real E8 parity proofs from complex Witting non-parity proofs;
+1103.6058 describes the paired24-cell Peres construction. No new embedding
+or transported contextuality theorem is claimed from this intake.
+Physical Yukawa CP, a microscopic coherent-query interaction, all-normal
+quantum stability, native propagating gravity and vacuum-energy selection
+remain open; no complete TOE is claimed.
