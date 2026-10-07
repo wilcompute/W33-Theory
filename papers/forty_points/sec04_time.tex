@@ -979,6 +979,23 @@ for every two-qutrit class outside the two eigenvector cells and for $99.67\%$ o
 \cert{w33\_pass11643\_hamming\_cube\_is\_transvection\_clock.py}, \cert{w33\_pass11644\_union\_law\_splitting.py},
 \cert{w33\_pass11645\_time\_reversal\_is\_conjugation\_of\_j.py})
 
+\emph{The union law is a theorem.} Every reverser $A$ of a one-gate tick has a semisimple part $A^N$ ($N$ odd) that is again a
+reverser, splits, and reverses at least the frames $A$ does; reversals with a nonzero shear exponent are dominated the same way (their
+cube is shear-free in the eigenvector cells). So the reversible frames are exactly the union of $((1-A^{-1})K_0)^\perp$ over the
+\emph{semisimple} anti-symplectic reversers negating the magic axis --- proved for every two-qutrit class and $99.97\%$ of
+$\mathrm{Sp}(6,3)$, with $108$ same-line reversals at $n=3$ checked individually. A tick has no reversal at all exactly when a linear
+system is unsolvable: $1/40$ of $\mathrm{Sp}(4,3)$, $1/28$ of $\mathrm{Sp}(6,3)$, and about $3.7\%$ at $n=4,5$. The label-sensitive
+arrows of a qutrit are exactly the arrows that survive where two MUBs have equal outcome spectra, with Hilbert series
+$t^6(1+t-t^3)/((1-t)(1-t^2)(1-t^3))$. The strongest arrow is attained at $\psi^*=(0,\cos\frac\pi8,\sin\frac\pi8e^{5\pi i/6})$: $\max|h_6|=\sqrt3/62208$
+on a $144$-ray orbit ($72$ per time orientation), where three MUBs share a spectrum, so the Hesse CP order parameter and every
+label-blind arrow vanish; $-h_6^2$ is a CP potential with no free target ratios and $h_6\,\chi$ a diagonal Weyl selector. Finally, the
+Hesse doublet generalises: the Heisenberg-invariant cubics of $n$ qutrits carry the dual even Weil representation, whose image is the
+reflection group $G_6$ for one qutrit and $G_{33}$ (order $51840$, the Burkhardt group) for two, and the $40$ two-qutrit stabiliser bases
+map to $40$ rays whose overlap-$\frac13$ graph is $\mathrm{SRG}(40,12,2,4)$ in its antiregular $Q(4,3)$ form --- the graph of the lines of $W(3,3)$, dual to (and not isomorphic with) the $W(3,3)$ point graph; the norm is the Gross--Nezami--Walter third moment.
+\tierT\,\tierC\ (\cert{w33\_pass11647\_union\_law\_closed.py}, \cert{w33\_pass11648\_label\_blind\_sigma.py},
+\cert{w33\_pass11649\_maximal\_arrow\_state.py}, \cert{w33\_pass11650\_no\_reversal\_fraction.py},
+\cert{w33\_pass11651\_n\_qutrit\_hesse\_space.py})
+
 All of this is one law.
 
 \begin{result}{Theorem 4.8 (the intrinsic arrow for every number of qutrits) \hfill \tierT}

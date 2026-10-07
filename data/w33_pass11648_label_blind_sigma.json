@@ -1,0 +1,216 @@
+{
+ "pass_id": 11648,
+ "sigma_restriction": {
+  "6": {
+   "O_k": 1,
+   "generic_rank": 1,
+   "rank_on_Sigma": 1,
+   "excess": 1,
+   "certified": true,
+   "equal": true
+  },
+  "7": {
+   "O_k": 2,
+   "generic_rank": 2,
+   "rank_on_Sigma": 2,
+   "excess": 2,
+   "certified": true,
+   "equal": true
+  },
+  "8": {
+   "O_k": 3,
+   "generic_rank": 3,
+   "rank_on_Sigma": 3,
+   "excess": 3,
+   "certified": true,
+   "equal": true
+  },
+  "9": {
+   "O_k": 5,
+   "generic_rank": 5,
+   "rank_on_Sigma": 4,
+   "excess": 4,
+   "certified": true,
+   "equal": true
+  },
+  "10": {
+   "O_k": 8,
+   "generic_rank": 8,
+   "rank_on_Sigma": 6,
+   "excess": 6,
+   "certified": true,
+   "equal": true
+  },
+  "11": {
+   "O_k": 11,
+   "generic_rank": 11,
+   "rank_on_Sigma": 7,
+   "excess": 7,
+   "certified": true,
+   "equal": true
+  },
+  "12": {
+   "O_k": 16,
+   "generic_rank": 16,
+   "rank_on_Sigma": 9,
+   "excess": 9,
+   "certified": true,
+   "equal": true
+  },
+  "13": {
+   "O_k": 22,
+   "generic_rank": 22,
+   "rank_on_Sigma": 11,
+   "excess": 11,
+   "certified": true,
+   "equal": true
+  },
+  "14": {
+   "O_k": 29,
+   "generic_rank": 29,
+   "rank_on_Sigma": 13,
+   "excess": 13,
+   "certified": true,
+   "equal": true
+  },
+  "15": {
+   "O_k": 38,
+   "generic_rank": 38,
+   "rank_on_Sigma": 15,
+   "excess": 15,
+   "certified": true,
+   "equal": true
+  },
+  "16": {
+   "O_k": 49,
+   "generic_rank": 48,
+   "rank_on_Sigma": 18,
+   "excess": 18,
+   "certified": false,
+   "equal": true
+  },
+  "17": {
+   "O_k": 61,
+   "generic_rank": 57,
+   "rank_on_Sigma": 20,
+   "excess": 20,
+   "certified": false,
+   "equal": true
+  },
+  "18": {
+   "O_k": 77,
+   "generic_rank": 66,
+   "rank_on_Sigma": 23,
+   "excess": 23,
+   "certified": false,
+   "equal": true
+  }
+ },
+ "label_blind_mod_P": {
+  "rows": {
+   "9": {
+    "O_k": 5,
+    "label_blind": 1
+   },
+   "10": {
+    "O_k": 8,
+    "label_blind": 2
+   },
+   "11": {
+    "O_k": 11,
+    "label_blind": 4
+   },
+   "12": {
+    "O_k": 16,
+    "label_blind": 7
+   },
+   "13": {
+    "O_k": 22,
+    "label_blind": 11
+   },
+   "14": {
+    "O_k": 29,
+    "label_blind": 16
+   },
+   "15": {
+    "O_k": 38,
+    "label_blind": 23
+   },
+   "16": {
+    "O_k": 49,
+    "label_blind": 31
+   },
+   "17": {
+    "O_k": 61,
+    "label_blind": 41
+   },
+   "18": {
+    "O_k": 77,
+    "label_blind": 54
+   },
+   "19": {
+    "O_k": 95,
+    "label_blind": 69
+   },
+   "20": {
+    "O_k": 115,
+    "label_blind": 86
+   },
+   "21": {
+    "O_k": 139,
+    "label_blind": 107
+   },
+   "22": {
+    "O_k": 167,
+    "label_blind": 131
+   },
+   "23": {
+    "O_k": 197,
+    "label_blind": 158
+   },
+   "24": {
+    "O_k": 233,
+    "label_blind": 190
+   },
+   "25": {
+    "O_k": 273,
+    "label_blind": 226
+   }
+  },
+  "distinct_spectral_points": 366
+ },
+ "fits": {
+  "excess_series": "t^6 (1 + t - t^3) / ((1-t)(1-t^2)(1-t^3))",
+  "excess_fit_all_degrees": true,
+  "label_blind_series": "(t^9+t^10+t^11+t^12-t^15-t^16-t^17+t^19)/((1-t)(1-t^2)(1-t^3)(1-t^4)(1-t^6))",
+  "label_blind_fit_all_degrees": true,
+  "degrees": [
+   9,
+   25
+  ]
+ },
+ "lattice_points_on_Sigma": {
+  "range": "a + b omega, |a|, |b| <= 3",
+  "lattice_points": 117648,
+  "on_Sigma_Z_X": 8244,
+  "with_other_spectra_distinct": 1356,
+  "odd_module_rank_mod_P": {
+   "6": 0,
+   "7": 0,
+   "8": 0,
+   "9": 0,
+   "10": 0,
+   "11": 0,
+   "12": 0,
+   "13": 0,
+   "14": 0,
+   "15": 0,
+   "16": 0,
+   "17": 0,
+   "18": 0,
+   "19": 0,
+   "20": 0
+  },
+  "all_time_symmetric": true
+ }
+}

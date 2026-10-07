@@ -78,7 +78,7 @@ k = 0.
 * The 408 silent classes lie in the eigenvector cells. There some solutions do not split, and the union of other
   solutions covers their frames. That is verified frame by frame in Pass 11537, not proved here.
 
-**n = 3 (Pass 11373's orbits, exact weights; Sp(6,3) has 28 304 640 elements).**
+**n = 3 (Pass 11373's orbits, exact weights; |Sp(6,3)| = 9 170 703 360; the counts below are in units of 324, so the total is 28 304 640 units).** *(Unit convention corrected in Pass 11650; the fractions are unchanged.)*
 
 | | mass |
 |---|---|
