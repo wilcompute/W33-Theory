@@ -1,0 +1,1338 @@
+{
+  "kind": "static_changed_path_inventory",
+  "base": "f914b3dee",
+  "reviewed_remote_head": "a2f4475a8",
+  "commit_count": 61,
+  "path_count": 151,
+  "total_snapshot_bytes": 85774463,
+  "scope": "Snapshot at intake before Pass11600 edits; Python syntax and JSON parsing checks only, not a replay or certification of all scientific claims. Original local divergence and dirty files preserved separately.",
+  "paths": [
+    {
+      "path": ".github/workflows/dormant-checkers.yml",
+      "bytes": 4424,
+      "sha256": "cc96ca1a56a01fa1da5ac0b86e70331e2e539e831c07489ea85381be830c6e91"
+    },
+    {
+      "path": ".github/workflows/pass11547-history-hamming.yml",
+      "bytes": 908,
+      "sha256": "00eb07f199f35000eb0e0c62aeea1eddb773482d8f5cb0731fbb7007f5b473ef"
+    },
+    {
+      "path": ".github/workflows/pass11548-history-orientation-correction.yml",
+      "bytes": 970,
+      "sha256": "ff7cfdbd2cc671df6eb8aeed94faa7d0bfcefc0e52080bfb29da7a84cb584502"
+    },
+    {
+      "path": ".github/workflows/pass11549-history-cubic-arrow.yml",
+      "bytes": 892,
+      "sha256": "bf519bb8379d7190c59c7001cfdf018234e6164d25f9645f4eada11233506d03"
+    },
+    {
+      "path": ".github/workflows/pass11550-veronese-weil-hamming.yml",
+      "bytes": 924,
+      "sha256": "f38d8ae2c95af905b011062b7a03cece3b1cf20bc16f43bf37bbe611364bdf72"
+    },
+    {
+      "path": ".github/workflows/pass11551-11555-hamming-arrow.yml",
+      "bytes": 1057,
+      "sha256": "fe6047f257317711c7746dc8f224a6162b61d51cd6027015aa4722fda43791bf"
+    },
+    {
+      "path": ".github/workflows/pass11556-11561-post-deep-audit.yml",
+      "bytes": 1500,
+      "sha256": "59ec8c6b606a1061b5d3d56b8e7073db701e957dc58aa7ceaac06140922b6b96"
+    },
+    {
+      "path": ".github/workflows/pass11562-11569-canonical-spin-gauge.yml",
+      "bytes": 761,
+      "sha256": "efbd9dc3f8e927cf859a139e008e32c6b50ccb09f4b2dfac020f3645264f26e9"
+    },
+    {
+      "path": ".github/workflows/pass11570-11579-executable-frontier.yml",
+      "bytes": 1545,
+      "sha256": "c4568e819cc8c256618285783c6dfc7cbdf8985c6ea2cab9c18833248b4a0379"
+    },
+    {
+      "path": ".github/workflows/pass11580-11589-spin10-sm.yml",
+      "bytes": 2062,
+      "sha256": "e43b2957655f3ff8a86e26555b648aec07c5614f573ccae3ee8d56d071087229"
+    },
+    {
+      "path": ".github/workflows/pass11590-11599-families-flavor.yml",
+      "bytes": 1432,
+      "sha256": "488d31c9c9341cf3b9dd275a59c18e1c4c2e33188cb6df3fb0321e3ce162cff8"
+    },
+    {
+      "path": "analysis/PASS11531_CUBED_TEST_WORDS_VS_PU3.md",
+      "bytes": 3298,
+      "sha256": "2f146a53260da1e090fd3869831d515f1daf9b0a848bbc00636f0829efd89be4"
+    },
+    {
+      "path": "analysis/PASS11532_GOOD_RULES_DIM6.md",
+      "bytes": 3391,
+      "sha256": "55327d5f6223733ab6fbb40e40c131795a7c08a621740988d3832745b714dfff"
+    },
+    {
+      "path": "analysis/PASS11533_ONE_GATE_LAW.md",
+      "bytes": 4548,
+      "sha256": "ab6eb80f32227b04d2a9eaca2ad6379d21e6ba556f6759b8e098530d540e60ff"
+    },
+    {
+      "path": "analysis/PASS11534_TIME_ARROW_MODULE_EXACT.md",
+      "bytes": 3390,
+      "sha256": "ca7422b64e738911d39fbe23af479d81785f3d4495910c163d2903640ae9c714"
+    },
+    {
+      "path": "analysis/PASS11535_DECAY_EXACT_DATA.md",
+      "bytes": 1615,
+      "sha256": "68e852138fbc4be1a8176ccc699e306e88644168eb8e5f7f3a7f02aec249224a"
+    },
+    {
+      "path": "analysis/PASS11536_GOOD_RULES_DIM8.md",
+      "bytes": 1510,
+      "sha256": "5382ec403e2243cad907083ae2c9001275ca0e4b23a3dfec3773cc8b60200414"
+    },
+    {
+      "path": "analysis/PASS11537_UNION_LAW.md",
+      "bytes": 4835,
+      "sha256": "2ca3ca88e64fba618b305d54401506bfc3dc5ebcf64ea4394fae3800bbfcd21a"
+    },
+    {
+      "path": "analysis/PASS11540_HISTORY_VO33_ORIENTATION_SQUARE.md",
+      "bytes": 4490,
+      "sha256": "50a3f5e881d6a56911a1af3195ef964a5a060240a3e2d0e191f96be5ff4b5db3"
+    },
+    {
+      "path": "analysis/PASS11540_RESERVATION.md",
+      "bytes": 1464,
+      "sha256": "27010e92a1e47edf88a54cd0735fad50e8b4b64f63fd52e18be1f4f1552ed5cf"
+    },
+    {
+      "path": "analysis/PASS11547_HISTORY_HAMMING_CANONICAL_CLOCK.md",
+      "bytes": 7468,
+      "sha256": "b36f85e71800f25a302e432eea46e8769516d2cda5c7f66856b60ff89ab81303"
+    },
+    {
+      "path": "analysis/PASS11548_HISTORY_ORIENTATION_SQUARE_CORRECTION.md",
+      "bytes": 6120,
+      "sha256": "c03f3a0b5c9b3831565dd527f7cf47b4cfd0b0bb15927613988ea1ced760c13f"
+    },
+    {
+      "path": "analysis/PASS11548_RESERVATION.md",
+      "bytes": 1004,
+      "sha256": "f0e63aa40d2b0b15865a5a768f8ea7eb36947da9a79c3b0b32f51722ae419924"
+    },
+    {
+      "path": "analysis/PASS11549_HISTORY_ARROW_CUBIC_CHARACTER.md",
+      "bytes": 4590,
+      "sha256": "cd49e9e29cedfaddded22781aab23cc7780012fe539753693cb61e6b32788e00"
+    },
+    {
+      "path": "analysis/PASS11549_RESERVATION.md",
+      "bytes": 963,
+      "sha256": "368883c11890e54dc8dea8e2736beea3f71929b45641c995f6e27c85addee781"
+    },
+    {
+      "path": "analysis/PASS11550_RESERVATION.md",
+      "bytes": 950,
+      "sha256": "e1d92c00823175254569b280d0c68a100dbd863579f99af434ff7ae9cfde7f06"
+    },
+    {
+      "path": "analysis/PASS11550_VERONESE_WEIL_HAMMING_ORIENTATION.md",
+      "bytes": 5431,
+      "sha256": "aceb8de7229b1d770ca0798765cbfdaf98236c976c70512289b914a3bda46fce"
+    },
+    {
+      "path": "analysis/PASS11551_11555_HAMMING_ARROW_FIVE_ATTACKS.md",
+      "bytes": 10040,
+      "sha256": "b16eb794917758bfda6e44fc54abb9c20b057c93c82f398e48eda26915036250"
+    },
+    {
+      "path": "analysis/PASS11551_11555_RESERVATION.md",
+      "bytes": 1886,
+      "sha256": "c23de5f84f2f1d4a163a54f20b1e079de22d8000afd04967c744575ccfc7baf1"
+    },
+    {
+      "path": "analysis/PASS11556_11561_POST_DEEP_AUDIT_BREAKTHROUGHS.md",
+      "bytes": 5337,
+      "sha256": "4eabd82862bfffea4f4fd6e8a30a4e9f0b991d8aea460997b58354cd07885b51"
+    },
+    {
+      "path": "analysis/PASS11556_RESERVATION.md",
+      "bytes": 1132,
+      "sha256": "d33b22d11cc0823064d320dbb0b8b7dd43a49fb444f11cb1593c29d01101ef4c"
+    },
+    {
+      "path": "analysis/PASS11557_11561_RESERVATION.md",
+      "bytes": 1905,
+      "sha256": "264b80ba641cb3fc4d6110b10dc47373c6a1be5ebb8ccfc0d13a12d4ae6e3508"
+    },
+    {
+      "path": "analysis/PASS11562_11569_CANONICAL_SPIN_GAUGE_FRONTIER.md",
+      "bytes": 5561,
+      "sha256": "5d91b24b797732d9c9e0617c6a306c874b7807c71a83ae74bd51d10c26df5077"
+    },
+    {
+      "path": "analysis/PASS11562_11569_RESERVATION.md",
+      "bytes": 2071,
+      "sha256": "77ab28bd666dcdbabc3900a2d805b2f03ff4f457a885fe581df00b283ab721f3"
+    },
+    {
+      "path": "analysis/PASS11570_11579_EXECUTABLE_GAUGE_GRAVITY_OVERLAP.md",
+      "bytes": 5289,
+      "sha256": "443e4b16cd985683fb62fc2b7f03541dc53bd37f1c69cd4c64000882c812e705"
+    },
+    {
+      "path": "analysis/PASS11570_11579_RESERVATION.md",
+      "bytes": 2095,
+      "sha256": "f71047026f886ad24f62fabada70a9ddc1c70aef46de4977743ba123fdf32a1b"
+    },
+    {
+      "path": "analysis/PASS11580_11589_RESERVATION.md",
+      "bytes": 2322,
+      "sha256": "341d82a75ebfae9ef7dcdcf54a99a077cfdfb826d94bef88f615a48f4acf6929"
+    },
+    {
+      "path": "analysis/PASS11580_11589_SPIN10_SM_BREAKTHROUGH.md",
+      "bytes": 6696,
+      "sha256": "3976c186ca2ea054890f7c7d60ab168d992efbfa5fc4cd44a09318e1cfef2242"
+    },
+    {
+      "path": "analysis/PASS11590_11599_FAMILIES_FLAVOR_CHIRALITY_GRAVITY.md",
+      "bytes": 6122,
+      "sha256": "ea884d14d08e80280b5a9b0945227aee80d634c472297cd472f051195733a5a3"
+    },
+    {
+      "path": "analysis/PASS11590_11599_RESERVATION.md",
+      "bytes": 2470,
+      "sha256": "757f1f7fc5d8625385c0cfdc4fa6db80c13d47f1c3aa619a7d27f81957d100f1"
+    },
+    {
+      "path": "analysis/w33_pass11531_cubed_test_words_vs_pu3.py",
+      "bytes": 6128,
+      "sha256": "fbebded1b4f25461d75b74e38b29e1d1ed744a00655e4958cdaee26eeb552c98",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11532_good_rules_dim6.py",
+      "bytes": 7978,
+      "sha256": "d3f2ea6db7320f727bfe1dfa3541d36e7e83f4ad05698c457dee50c23f0fff6d",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11533_one_gate_law.py",
+      "bytes": 7039,
+      "sha256": "e6fb9ac06319f90bc6f92b6f4f6160522cd2c300f60200ce4dff23b43bb39d5a",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11534_time_arrow_module_exact.py",
+      "bytes": 8336,
+      "sha256": "c240ad30cb1dc4e47b2344e51388e833c9ea491027b31ff432980dfb8e1c0e34",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11535_decay_exact_data.py",
+      "bytes": 3073,
+      "sha256": "c4e38a6be0892172cec0509149b6dea748ded77c78fc7539294240fd0e16f2a1",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11536_good_rules_dim8.py",
+      "bytes": 8512,
+      "sha256": "555d3fdcdd2bfa7403b36c2c61e89d11fbffdf0cd3c9fa45d6257272d47cab41",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11537_union_law.py",
+      "bytes": 6646,
+      "sha256": "c9fb46951a3e5fd9fd3ba7cf3cfe731467cfa8decb5b4ed12d20fd349ff98298",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11540_history_vo33_orientation_square.py",
+      "bytes": 7582,
+      "sha256": "68f6186b87176f7cc7381129b36d28c93122054f0fdd973f3c3adf52133b2070",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11547_history_hamming_canonical_clock.py",
+      "bytes": 17019,
+      "sha256": "8d7db428b9cc12ad8b968641e7ec05938aa3bf14fedfbeab79887b4390881bf0",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11548_history_orientation_square_correction.py",
+      "bytes": 13096,
+      "sha256": "13e74903f4ae1ad36314482196f631a259282474795776d568faafbfd20c9d3b",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11549_history_arrow_cubic_character.py",
+      "bytes": 9523,
+      "sha256": "b4e20c4d0e43ba5057f058000648b5ac5083dceafd1fa91544ae3c3afc83ffa3",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11550_veronese_weil_hamming_orientation.py",
+      "bytes": 8561,
+      "sha256": "e353236fe1de638f8e1f4e3de11a1b0360b92fb2e00cd821f89aa90b6505a9cb",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11551_11555_hamming_arrow_five_attacks.py",
+      "bytes": 20823,
+      "sha256": "50be13e1d9b269c08949036f89fb620d673ba66c8d3c82e0bc6e0d1da7570c11",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11551_hamming_arrow_albert_diagonal_cubic.py",
+      "bytes": 2968,
+      "sha256": "a752fe3c3e5e3cd4b969e1d0436981014de55adecea3c68b9c43e03ccfa88e0d",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11552_hamming_refinement_continuum_firewall.py",
+      "bytes": 3090,
+      "sha256": "f30eb1b91c875f5123102e53b5e1ec0df7e8a4f3aa9b709425b2cab3bbca9b78",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11553_history_arrow_equivariant_cohomology.py",
+      "bytes": 6179,
+      "sha256": "50dc9e235a56626208206bdfc2b880e64f99107960965e6e7b290609b184fc22",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11554_tetracode_orientation_double_cover.py",
+      "bytes": 4723,
+      "sha256": "a7b2c6b946e7ea4ec086a6e920fe714056f535f72f031868d21b89fc9e6ed886",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11555_temporal_local_dynamics_dirac.py",
+      "bytes": 5642,
+      "sha256": "86f6e1e23e10101c82f632226b6c2d9c41f6bdfe6420150e4934f54b9ddf164a",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11556_psp_hamming_directed_fission_scheme.py",
+      "bytes": 10673,
+      "sha256": "4a61be49278a28d79fd5e9ebc01420130b5d373b1ced496df71d9ded2e5d3bb2",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11557_pin_equivariant_event_dirac.py",
+      "bytes": 8412,
+      "sha256": "6d0307511f1560f19042267409b02919b6f707c50ee8d42ed50e0a03cb10e148",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11558_albert_pin_event_spinor_embedding.py",
+      "bytes": 7697,
+      "sha256": "0f20a594893d96321b4ac68a055fafc293462ac011f514c6aae1b97b36c27ecb",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11559_fixed_dimension_gauge_frame_refinement.py",
+      "bytes": 5206,
+      "sha256": "e7e32e8d47bded65b621473c8939295359e5d30566538260345a659f420ca14c",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11560_translation_coinvariant_arrow_torsion.py",
+      "bytes": 7572,
+      "sha256": "d699793447e5f340c7a9948a40cc35e45c60493104ecb3f500a207aaf4c65561",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11561_native_e6_hesse_polynomial_law.py",
+      "bytes": 8095,
+      "sha256": "3b2181b08b073494bb808d81ef8076c2168e5754d58fc6829903f528e2045091",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11562_11569_canonical_spin_gauge_frontier.py",
+      "bytes": 23122,
+      "sha256": "1fe0f542b955ebe999b28e9a20273901d5c8b49a68f7cd570f8bc0653311f7f5",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11570_centroid_classifier.py",
+      "bytes": 2352,
+      "sha256": "f1d6906068b6137bd17e72c465566072a3447778948ba17b8d780fbe771df248",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11570_executable_sm_intersection.py",
+      "bytes": 2547,
+      "sha256": "2cfff82577d0ef56eb218e8d868609d2c029e752ebbf0ec75e10ff13a4b37d87",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11571_discrete_curvature.py",
+      "bytes": 2003,
+      "sha256": "b84f360565e698d2e5ea22c97f6a83b0b8c59f0be7d3682d4fc8d096d8df780b",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11573_11578_hamming_overlap.py",
+      "bytes": 1268,
+      "sha256": "643160abd5a9b23f8be0f99097d1cce2cf4b7b6807c8c92e9530a190b9d8bd2b",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11574_event_plane_from_sm.py",
+      "bytes": 4270,
+      "sha256": "1d1c622a0b929dbdcc335b86a43c3a8fee4bcbf38fd8a8cf70c3b07fd393f276",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11575_11576_sm_matter_commutant_anomaly.py",
+      "bytes": 1743,
+      "sha256": "7a554821f9c27f43664887727c7a0533cd6a9226caebd927bd91b61c57a78a66",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11580_spin10_pati_salam_hypercharge.py",
+      "bytes": 5533,
+      "sha256": "a2abe7283e26dfd7b13da368a3659a278fc89c5ec862c1a3fe3133679dffebb6",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11581_global_z6_anomalies.py",
+      "bytes": 1784,
+      "sha256": "f01a4621ee27e9f42ce626ee61a7c5ef037bd54a6f8f89971c2fd042a26ebb47",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11582_overlap_charge_index.py",
+      "bytes": 1325,
+      "sha256": "3a1ef3d8f28b2c6e9ed2042bdacff6666be6c5755afcd3df59be0f419a58d68a",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11583_clock_chirality_quaternion.py",
+      "bytes": 3827,
+      "sha256": "30a572199941e2578e169cf1041d95540e716a7dcc85c67bc4f92c54d1f3c589",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11584_spin10_yukawa_channel.py",
+      "bytes": 2468,
+      "sha256": "ade2225f1a11fe4ebd51b9fc4684dcab93edba90eb8ea4640308016c2cf08480",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11585_variable_frame_spectral_firewall.py",
+      "bytes": 3975,
+      "sha256": "a896ed640f1dd9cd099037a6a7ae58739ae50e313ee307da581f0bce12ac4152",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11586_hypercharge_charge_lattice.py",
+      "bytes": 809,
+      "sha256": "71c462e65ab5007217cded48a5cb05c188775780ba82e499ef8749a0c742f13e",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11587_trinification_family_firewall.py",
+      "bytes": 811,
+      "sha256": "ebc2c3f509420ff58e065260e6e3acdffe14cda63b2234eca0c188fb28950215",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11588_external_internal_product_index.py",
+      "bytes": 1102,
+      "sha256": "2300e282d724a60fdbfdeb8ec5edf66bfeeb859e4e808c1546931b7e36832265",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11589_synthesis.py",
+      "bytes": 903,
+      "sha256": "ae3fe4fe52c01558c7efdf3da437aa4f71db3159692023232204f8a404342ac3",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11590_e8_three_spin10_families.py",
+      "bytes": 2119,
+      "sha256": "399afffd3a2756784992caea265cf7d1caaf0f75cc3327ef0820e41c3124f466",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11591_spin10_delta54_hesse_yukawa.py",
+      "bytes": 2147,
+      "sha256": "61167695eca90503aa2b621b221402fa126d29dfac9b35e86f744a96c6b4d336",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11592_q6_overlap_admissibility.py",
+      "bytes": 1993,
+      "sha256": "a566e0bc101605d08c6b23df60835a61179cc413a56ff9032065519d0e82e989",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11593_unique_weyl_selector.py",
+      "bytes": 2503,
+      "sha256": "852d0d473bcba443f8aad84f3f7b1b0830956457d0d234976aa4801b13c09076",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11594_refined_gravity_firewall.py",
+      "bytes": 4043,
+      "sha256": "5414696b2221db49363552e40703ab31848e7fc79b73eec954e0d19dd4b7b98b",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11595_neutrino_majorana_channel.py",
+      "bytes": 1424,
+      "sha256": "26c9e40a39c0a9c620029ef25e5e6e242f766368d84b06c08fb20d1d2695635c",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11596_spin10_coupling_normalization.py",
+      "bytes": 1208,
+      "sha256": "497656fd1245ad81f53049731b83bc7040d9232a3505862d6833e5957677b7b0",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11597_family_clifford_breaking.py",
+      "bytes": 2153,
+      "sha256": "69886bd9f89c4f6cafa5ea760878eaa55fc7d340ce9935c8a739bcb9d42c7f11",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11598_clock_floquet_chirality.py",
+      "bytes": 1397,
+      "sha256": "1d6c012d18c9ef7355ccd9504024d7c1bad809972bceee92392ca42d208890b0",
+      "syntax": "PASS"
+    },
+    {
+      "path": "analysis/w33_pass11599_synthesis.py",
+      "bytes": 3098,
+      "sha256": "536ad4752093b931639b08ad6a5e0ba0fa5fb6cc57ad2e07e1b2710720347d03",
+      "syntax": "PASS"
+    },
+    {
+      "path": "data/PART_W33_PASS11540_HISTORY_VO33_ORIENTATION_SQUARE.json",
+      "bytes": 3099,
+      "sha256": "c9f4c2f52a3d40e35861f4c87fe0274a14239d05ff32e71f6fac20c2334b8627",
+      "status": "PASS_EXACT_VO33_WITH_CHARACTER_ASSIGNMENT_CORRECTED_BY_11548",
+      "top_level_keys": [
+        "schema",
+        "status",
+        "pass",
+        "correction_notice",
+        "history_graph",
+        "orthogonal_group",
+        "affine_orthogonal_ladder",
+        "repo_stabilizer_ladder",
+        "orientation_square_corrected",
+        "projective_null_boundary",
+        "repo_weld",
+        "boundary"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11547_HISTORY_HAMMING_CANONICAL_CLOCK.json",
+      "bytes": 6411,
+      "sha256": "30771d6a8fc87d0e8e9c119d305c7eb0cabc58374caf8d54cd9a30ab66ab219e",
+      "status": "PASS_EXACT_FINITE_MINKOWSKI_HAMMING_CONJUGACY",
+      "top_level_keys": [
+        "schema",
+        "status",
+        "pass",
+        "linear_conjugacy",
+        "exact_relation_dictionary",
+        "hamming_scheme",
+        "null_graph",
+        "automorphism_group",
+        "canonical_hamming_frame",
+        "clock_factorization",
+        "qutrit_dimension_uniqueness",
+        "literature_boundary",
+        "verification",
+        "boundary"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11548_HISTORY_ORIENTATION_SQUARE_CORRECTION.json",
+      "bytes": 4273,
+      "sha256": "2298b41fce674937c6c1f376b271594e8622af0a9ae8c5085277569fd86a8444",
+      "status": "PASS_OBJECTWISE_CORRECTION_OF_PASS11540_CHARACTER_ASSIGNMENT",
+      "top_level_keys": [
+        "schema",
+        "status",
+        "pass",
+        "supersedes",
+        "hamming_orthogonal_group",
+        "corrected_subgroups",
+        "corrected_orientation_dictionary",
+        "oriented_null_tetrahedra",
+        "spinor_norm_firewall",
+        "verification",
+        "boundary"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11549_HISTORY_ARROW_CUBIC_CHARACTER.json",
+      "bytes": 2734,
+      "sha256": "60147a9a7cfb36376b2ec7699404f91158e6c825d0393fd742e1fbb3ecc13492",
+      "status": "PASS_CLOSED_FORM_HISTORY_ARROW_CUBIC_CHARACTER",
+      "top_level_keys": [
+        "schema",
+        "status",
+        "pass",
+        "hamming_arrow",
+        "triangle_foliation",
+        "symmetry",
+        "old_certificate_weld",
+        "interpretation",
+        "verification",
+        "boundary"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11550_VERONESE_WEIL_HAMMING_ORIENTATION.json",
+      "bytes": 3406,
+      "sha256": "720e34cafdd05caff23b2cb5b80da2cd8606b363babe2fb85063a374c5c897d2",
+      "status": "PASS_VERONESE_WEIL_HAMMING_ORIENTATION_WELD",
+      "top_level_keys": [
+        "schema",
+        "status",
+        "pass",
+        "veronese_sheet",
+        "negative_veronese_sheet",
+        "closed_formula",
+        "cubic_invariant",
+        "tetracode_orientation_firewall",
+        "verification",
+        "interpretation",
+        "boundary"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11551_11555_HAMMING_ARROW_FIVE_ATTACKS.json",
+      "bytes": 16157,
+      "sha256": "6b7c55abc22f9645a5802fb0a86f7507993bcf98a24bb766d8cb7719082d9d3d",
+      "status": "PASS_FIVE_HAMMING_ARROW_ATTACKS",
+      "top_level_keys": [
+        "boundary",
+        "passes",
+        "schema",
+        "status",
+        "upstream"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11551_HAMMING_ARROW_ALBERT_DIAGONAL_CUBIC.json",
+      "bytes": 4860,
+      "sha256": "ccbd66da6260ba2ed246768d3008129702e35a37f046867bfa0914cf1f42fa58",
+      "status": "PASS_HAMMING_ARROW_IS_ALBERT_DIAGONAL_CUBIC",
+      "top_level_keys": [
+        "boundary",
+        "clock_albert_frame",
+        "history_weld",
+        "pass",
+        "rows",
+        "schema",
+        "status",
+        "theorem"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11552_HAMMING_REFINEMENT_CONTINUUM_FIREWALL.json",
+      "bytes": 15204,
+      "sha256": "891e19d5aaa7bbe57fb6c7b363a229119ccc1b764ce4a4988d62bf5c2cc2d0cb",
+      "status": "PASS_NAIVE_FULL_NULL_TOWER_IS_EXPANDER_LIKE",
+      "top_level_keys": [
+        "boundary",
+        "continuum_verdict",
+        "exact_full_null_relation",
+        "nearest_null_distance3",
+        "pass",
+        "rows",
+        "schema",
+        "status"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11553_HISTORY_ARROW_EQUIVARIANT_COHOMOLOGY.json",
+      "bytes": 1688,
+      "sha256": "2925d10435cf6f37aa4beeb02055576a8314fb1a15360fabc7d45fe6918bfb68",
+      "status": "PASS_UNIQUE_PSP_FIXED_MOD3_H1_ARROW_CLASS",
+      "top_level_keys": [
+        "boundary",
+        "chain_side",
+        "cochain_side",
+        "complex",
+        "interpretation",
+        "pass",
+        "schema",
+        "status",
+        "topology_firewall"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11554_TETRACODE_ORIENTATION_DOUBLE_COVER.json",
+      "bytes": 1515,
+      "sha256": "a2e3fd2d1c828410b63841ab3d2ef9acf076f88ecdb7724afca8448f5fd26f3e",
+      "status": "PASS_NON_SPLIT_GL23_TO_S4_ORIENTATION_EXTENSION",
+      "top_level_keys": [
+        "boundary",
+        "cocycle_ones",
+        "determinant_character",
+        "extension",
+        "orientation_obstruction",
+        "pass",
+        "schema",
+        "status",
+        "two_C2_firewall"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11555_TEMPORAL_LOCAL_DYNAMICS_DIRAC.json",
+      "bytes": 2169,
+      "sha256": "1a05c84860608ae324141d2ed34de9e04a8c6760f69ee7eeb9ee4be741349551",
+      "status": "PASS_EXACT_TEMPORAL_LOCAL_OPERATOR_ALGEBRA",
+      "top_level_keys": [
+        "boundary",
+        "fourier_sectors",
+        "general_local_Hermitian_operator",
+        "local_kernel_classification",
+        "operator_D",
+        "pass",
+        "schema",
+        "status",
+        "triangle_foliation"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11556_PSP_HAMMING_DIRECTED_FISSION_SCHEME.json",
+      "bytes": 6355,
+      "sha256": "2061608de3cb8b900894ddbf7b8909963db4dda4f5f575731ad40c95c536783b",
+      "status": "PASS_PSP_ORBITAL_FISSION_OF_H33",
+      "top_level_keys": [
+        "arrow_weil_weld",
+        "boundary",
+        "eigenstructure",
+        "hamming_fusion",
+        "pass",
+        "prior_art",
+        "schema",
+        "scheme",
+        "schurian_orbitals",
+        "status"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11557_PIN_EQUIVARIANT_EVENT_DIRAC.json",
+      "bytes": 2630,
+      "sha256": "6b3af8ad377a10694628150b028f9bca32cd3aa5213806e861d4c93fab305aaf",
+      "status": "PASS_PIN_EQUIVARIANT_FIRST_ORDER_EVENT_DIRAC",
+      "top_level_keys": [
+        "boundary",
+        "covariance",
+        "dirac_operator",
+        "pass",
+        "pin_cover",
+        "schema",
+        "status",
+        "theorem",
+        "two_component_firewall",
+        "vector_differences"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11558_ALBERT_PIN_EVENT_SPINOR_EMBEDDING.json",
+      "bytes": 2397,
+      "sha256": "04e73dd9b241be11e50988371aa528d64ffce7062d7e9abaa728400b54f6bb53",
+      "status": "PASS_EVENT_PIN_CARRIER_EMBEDS_FOURFOLD_IN_ALBERT16",
+      "top_level_keys": [
+        "albert_clifford",
+        "boundary",
+        "clock_no_go_reconciliation",
+        "event_weld",
+        "pass",
+        "pin_action",
+        "schema",
+        "status",
+        "theorem"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11559_FIXED_DIMENSION_GAUGE_FRAME_REFINEMENT.json",
+      "bytes": 5184,
+      "sha256": "f966e54c92f71406b8db1b9e3024dde061f757082300b85cfe784dc4c845be93",
+      "status": "PASS_FIXED_DIMENSION_COVARIANT_DIRAC_PRINCIPAL_SYMBOL",
+      "top_level_keys": [
+        "boundary",
+        "frame_principal_symbol",
+        "gauge_covariance",
+        "pass",
+        "schema",
+        "status",
+        "theorem",
+        "tower",
+        "variable_frame_firewall",
+        "vector_difference_expansion"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11560_TRANSLATION_COINVARIANT_ARROW_TORSION.json",
+      "bytes": 2290,
+      "sha256": "bdff323fb1401da2a311d07ce408d7e532865422bac8936e097703131d6addbf",
+      "status": "PASS_ARROW_FROM_TRANSLATION_COINVARIANT_3_TORSION",
+      "top_level_keys": [
+        "coinvariant_chain_complex",
+        "full_complex",
+        "interpretation",
+        "pass",
+        "physics_firewall",
+        "quotient_firewall",
+        "residual_WD3",
+        "schema",
+        "status",
+        "translation_action"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11561_NATIVE_E6_HESSE_POLYNOMIAL_LAW.json",
+      "bytes": 3004,
+      "sha256": "a7f166604db468d35c5216e640ec6521695a67a9d37c349cf421e90c11b24181",
+      "status": "PASS_NATIVE_E6_HESSE_POLYNOMIAL_LAW_AND_STABILIZER",
+      "top_level_keys": [
+        "boundary",
+        "char3_Hesse",
+        "frame_normalizer",
+        "native_carrier",
+        "pass",
+        "schema",
+        "status",
+        "theorem"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11562_CANONICAL_CL3_INSIDE_ALBERT_CL9.json",
+      "bytes": 1324,
+      "sha256": "50f0e331c92e26159d460d80c20b4ca8d64e81d984c23c2d1ce15c66081bdb25",
+      "status": "PASS_CL3_EMBEDDING_CLASSIFIED_BUT_NOT_CANONIC",
+      "top_level_keys": [
+        "boundary",
+        "clifford",
+        "frame_note",
+        "no_go",
+        "orbit",
+        "pass",
+        "schema",
+        "status",
+        "theorem"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11563_DISCRETE_SPIN_CONNECTION.json",
+      "bytes": 1525,
+      "sha256": "b8d53aa01d44433e3051b3f6b3a801b5a3a3dbaf08deecc532e302cc37309ccb",
+      "status": "PASS_UNIQUE_DISCRETE_TORSION_FREE_METRIC_CONNECTION",
+      "top_level_keys": [
+        "boundary",
+        "curvature_next",
+        "exact_determinant",
+        "exact_sample",
+        "local_system",
+        "pass",
+        "schema",
+        "status",
+        "theorem",
+        "uniqueness"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11564_LHS_ARROW_ORIGIN.json",
+      "bytes": 1223,
+      "sha256": "0b890f41c958ade3a5ec59e1f0dc59c219a4a3918edf5ed9f5ff1f03ddca5457",
+      "status": "PASS_LHS_NO_GROUP_H1_ARROW_AND_RESIDUAL_FIXED_LINE",
+      "top_level_keys": [
+        "boundary",
+        "direction_module",
+        "five_term",
+        "interpretation",
+        "pass",
+        "schema",
+        "status",
+        "theorem"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11565_E6_HESSE_STABILIZER_F4.json",
+      "bytes": 1344,
+      "sha256": "98013189936a413c8e8cde71955302cb1ea800fd7561b68e91ebffaccc304e1e",
+      "status": "PASS_HESSE_TRACE_CUBE_STABILIZER_IS_F4",
+      "top_level_keys": [
+        "boundary",
+        "executable_albert",
+        "pass",
+        "schema",
+        "stabilizer",
+        "status",
+        "theorem",
+        "witness_trace_zero_nonzero_norm"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11566_AXIS_DIRAC_HAMMING_WILSON.json",
+      "bytes": 3123,
+      "sha256": "7aedc9d4e689a0b6522e8a89ac52307648131e0813214084a95750e201d7b299",
+      "status": "PASS_AXIS_DIRAC_AND_HAMMING_WILSON_REGULATOR",
+      "top_level_keys": [
+        "albert_weld",
+        "boundary",
+        "continuum",
+        "correction_to_null_edge_refinement",
+        "finite_N3",
+        "pass",
+        "schema",
+        "status",
+        "theorem"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11567_WILSON_SPECTRAL_ACTION.json",
+      "bytes": 2035,
+      "sha256": "11869050dba7926441766ea42dbf63f61a1bea48c018d8a880bcd142157f2e6f",
+      "status": "PASS_WILSON_SPECTRAL_ACTION_SINGLE_SPECIES_LIMIT",
+      "top_level_keys": [
+        "N81_t1",
+        "asymptotic_reading",
+        "boundary",
+        "continuum_target",
+        "normalization",
+        "pass",
+        "rows",
+        "schema",
+        "status",
+        "theorem"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11568_WILSON_DIRAC_WINDING.json",
+      "bytes": 1779,
+      "sha256": "120bf1b42c9ae7870c41639f4c76937ea09f72e287426d36ef7302b4a18897a5",
+      "status": "PASS_INTEGER_WILSON_DIRAC_WINDING_PHASES",
+      "top_level_keys": [
+        "boundary",
+        "corner_formula",
+        "direct_integral_samples",
+        "map",
+        "pass",
+        "phases",
+        "relation_to_old_4plus4",
+        "schema",
+        "status",
+        "theorem"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11569_EXCEPTIONAL_GAUGE_SUBGROUP_SEARCH.json",
+      "bytes": 2137,
+      "sha256": "4206bf895a3ad7565f35e354662a3ae4b1bbdde6e12a133a5460dcedc47e535c",
+      "status": "PASS_CURRENT_SELECTORS_STOP_AT_SPIN6_NOT_SM",
+      "top_level_keys": [
+        "boundary",
+        "exact_chain",
+        "missing_selector",
+        "no_go",
+        "outside_box_candidate",
+        "pass",
+        "schema",
+        "standard_model_target",
+        "status",
+        "theorem"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11570_11579_EXECUTABLE_GAUGE_GRAVITY_OVERLAP.json",
+      "bytes": 8693,
+      "sha256": "bff6fb1fca050d1cd0939c6339b92d03962e564229ad7520647bd361eb736996",
+      "status": "PASS_WITH_EXPLICIT_FIREWALLS",
+      "top_level_keys": [
+        "schema",
+        "status",
+        "passes",
+        "physical_boundary"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11580_11589_SPIN10_SM_BREAKTHROUGH.json",
+      "bytes": 8212,
+      "sha256": "73bb61cb25c4f3c4423de655ca8ca95e15fc3ac6eacd120f0072fe7f705212d4",
+      "status": "PASS_WITH_EXPLICIT_CONTINUUM_AND_FAMILY_FIREWALLS",
+      "top_level_keys": [
+        "schema",
+        "status",
+        "passes",
+        "physical_boundary"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11590_11599_FAMILIES_FLAVOR_CHIRALITY_GRAVITY.json",
+      "bytes": 11915,
+      "sha256": "9644d0c5eabf73200a0af27f86b67adeed5fe7e30c9d6fe4f463d400c899177f",
+      "status": "PASS_WITH_CHIRALITY_AND_GRAVITY_FIREWALLS",
+      "top_level_keys": [
+        "11599",
+        "passes",
+        "schema",
+        "status"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11590_E8_THREE_SPIN10_FAMILIES.json",
+      "bytes": 922,
+      "sha256": "e2b5ab5bc8a813861bfee5a7bf85c2a53e61e309feedb0d065ee178821953aad",
+      "status": "PASS_E8_EXTERNAL_A2_TRIPLICATES_SPIN10_WEYL16_WITH_MODULE_SEPARATION_FIREWALL",
+      "top_level_keys": [
+        "E6_to_Spin10_U1",
+        "E8_branch",
+        "chosen_matter_shell",
+        "chosen_shell_D5_content",
+        "external_H27_center_trace_on_matter81",
+        "family_factor",
+        "full_E8_firewall",
+        "modules_are_inequivalent",
+        "status",
+        "steinberg_H1_restriction",
+        "steinberg_nonidentity_character",
+        "three_chiral_spin10_16s_dimension"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11591_SPIN10_DELTA54_HESSE_YUKAWA.json",
+      "bytes": 1458,
+      "sha256": "dce825288982630aa03aeb47afbe20306023f9d3e9ee0d88e606babbf8fd6108",
+      "status": "PASS_SPIN10_FAMILY_TRIPLET_HAS_TWO_DELTA54_YUKAWA_TENSORS_AND_HESSE_DETERMINANT",
+      "top_level_keys": [
+        "Hesse_parameter_lambda",
+        "Yukawa_matrix",
+        "basis_supports",
+        "boundary",
+        "cross_track_map",
+        "determinant",
+        "equal_vev_eigenvalues",
+        "pass11114_lambda_cubed_at_rho",
+        "status",
+        "symmetric_family_tensor_dimension"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11592_Q6_OVERLAP_ADMISSIBILITY.json",
+      "bytes": 802,
+      "sha256": "c24c589a23fdf5fee0ea6aece31b2180b5a27bb6dc5af3446027e81544e5ab5d",
+      "status": "PASS_Q6_OVERLAP_INDEX_MINUS36_RESOLVED_ON_L5",
+      "top_level_keys": [
+        "boundary",
+        "scan",
+        "status",
+        "theorem"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11593_UNIQUE_WEYL_SELECTOR.json",
+      "bytes": 1114,
+      "sha256": "384f4ee762b2014091f770cd20f25f5c6ebfc353ded648520c2ebb1a7da18cf4",
+      "status": "PASS_GAUGE_INVARIANT_WEYL_SELECTOR_UNIQUE_UP_TO_IDENTITY",
+      "top_level_keys": [
+        "Weyl_minus_commutant_dim",
+        "Weyl_plus_commutant_dim",
+        "boundary",
+        "clock_firewall",
+        "commutant_basis",
+        "cross_intertwiner_dim",
+        "full_Dirac_commutant_dim",
+        "numerical_rank_gaps",
+        "selector",
+        "status",
+        "theorem"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11594_REFINED_GRAVITY_FIREWALL.json",
+      "bytes": 1910,
+      "sha256": "caf51f2c7acbff39838ffc61455f24918aeb1dd51c36162d17990080ebf29662",
+      "status": "FIREWALL_REFINED_CURVATURE_NONZERO_BUT_EH_SPECTRAL_COEFFICIENT_NOT_STABILIZED_THROUGH_L7",
+      "top_level_keys": [
+        "boundary",
+        "curvature_reading",
+        "frame_family",
+        "rows",
+        "spectral_reading",
+        "status"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11595_NEUTRINO_MAJORANA_CHANNEL.json",
+      "bytes": 817,
+      "sha256": "3adeb19744b9f543cd893072adb18868e429c67bc916c304e6f4e699f1004915",
+      "status": "PASS_UNIQUE_SPIN10_RIGHT_HANDED_NEUTRINO_MAJORANA_CHANNEL",
+      "top_level_keys": [
+        "10H_excluded",
+        "Majorana_channel",
+        "boundary",
+        "nu_c_charges",
+        "nu_c_pair_charges",
+        "required_scalar_vev_charges",
+        "seesaw_reading",
+        "status",
+        "symmetric_square"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11596_SPIN10_COUPLING_NORMALIZATION.json",
+      "bytes": 508,
+      "sha256": "125001b08912b7c2b17250da873465def9a57951ecceb15563d6d24d76d0ea02",
+      "status": "PASS_CANONICAL_SPIN10_HYPERCHARGE_NORMALIZATION",
+      "top_level_keys": [
+        "GUT_normalized_generator",
+        "SU2L_Dynkin_index",
+        "SU3_Dynkin_index",
+        "TrY2_over_T2",
+        "Tr_Y2_on_Weyl16",
+        "boundary",
+        "coupling_relation",
+        "status",
+        "tree_level_unification_sin2thetaW"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11597_FAMILY_CLIFFORD_BREAKING.json",
+      "bytes": 777,
+      "sha256": "fd40af5d563af6356a6e6dd62ffa1df069b3da55b103cab4251c50e723ffa379",
+      "status": "PASS_FULL_QUTRIT_CLIFFORD_FORBIDS_SYMMETRIC_TRIPLET_YUKAWA_DELTA54_RELEASES_HESSE_PAIR",
+      "top_level_keys": [
+        "Clifford648_invariant_dimension",
+        "Delta54_invariant_dimension",
+        "F_on_Hesse_pair",
+        "P_on_Hesse_pair",
+        "boundary",
+        "interpretation",
+        "status"
+      ]
+    },
+    {
+      "path": "data/PART_W33_PASS11598_CLOCK_FLOQUET_CHIRALITY.json",
+      "bytes": 731,
+      "sha256": "38c1abec228549c81e042342702a65a630ac85ca924528f1c0205d43958cd7ff",
+      "status": "PASS_CLOCK_FLOQUET_FOUR_TICK_RETURN_IS_SCALAR_NO_SELECTOR",
+      "top_level_keys": [
+        "G2_equals_i_gamma10_error",
+        "G4_chirality_commutator_error",
+        "G4_equals_minus_identity_error",
+        "G8_equals_identity_error",
+        "no_go",
+        "status",
+        "theorem"
+      ]
+    },
+    {
+      "path": "data/w33_formula_search_universe_v1.json",
+      "bytes": 84090193,
+      "sha256": "494eed39fb5203579474c61e5ec5e783828cbc17f2f906132631b23f024aa84d",
+      "status": null,
+      "top_level_keys": [
+        "exact_families",
+        "frozen_at",
+        "pass",
+        "repository_head",
+        "scanner_policy",
+        "schema",
+        "structural_families",
+        "summary",
+        "title",
+        "universe_sha256"
+      ]
+    },
+    {
+      "path": "data/w33_pass11531_cubed_test_words_vs_pu3.json",
+      "bytes": 1968,
+      "sha256": "522ff2e3c6dc746e3e4d6a4f8a4960a3b9895b821a5112c5974a9d3644a5864a",
+      "status": null,
+      "top_level_keys": [
+        "pass_id",
+        "counterexample_family",
+        "word_relations"
+      ]
+    },
+    {
+      "path": "data/w33_pass11532_good_rules_dim6.json",
+      "bytes": 1093,
+      "sha256": "a62e0091c5e19529bbba6e70f4b32e8d1f2ddc0120594fddeb631f375e297812",
+      "status": null,
+      "top_level_keys": [
+        "pass_id",
+        "samples",
+        "witnessed",
+        "classes_found",
+        "tally"
+      ]
+    },
+    {
+      "path": "data/w33_pass11533_one_gate_law.json",
+      "bytes": 3626,
+      "sha256": "9701c0a0cf65ca1a5ce4d69ffa71deb1be194a18ee150f5b976db93864d68cc8",
+      "status": null,
+      "top_level_keys": [
+        "pass_id",
+        "estimates",
+        "n2",
+        "n3"
+      ]
+    },
+    {
+      "path": "data/w33_pass11534_time_arrow_module_exact.json",
+      "bytes": 8464,
+      "sha256": "e917fccc0dc95fc8013fc0c7d9c75bc1a078755647580a6a50dceb0c1bace2a3",
+      "status": null,
+      "top_level_keys": [
+        "pass_id",
+        "prime",
+        "degree_bound",
+        "points",
+        "even",
+        "odd",
+        "even_generators",
+        "odd_generators"
+      ]
+    },
+    {
+      "path": "data/w33_pass11535_decay_exact_data.json",
+      "bytes": 1344,
+      "sha256": "3a6f26797e3a52fb0ada3d380f695a9af91cf356f97f8331a3301820bd48a1e9",
+      "status": null,
+      "top_level_keys": [
+        "pass_id",
+        "P",
+        "integers",
+        "recurrences_full",
+        "recurrences_odd_k",
+        "recurrences_even_k",
+        "two_step_rates_odd_start",
+        "two_step_rates_even_start",
+        "one_step_ratios",
+        "rho88"
+      ]
+    },
+    {
+      "path": "data/w33_pass11536_good_rules_dim8.json",
+      "bytes": 1427,
+      "sha256": "e821dc42c37bdfd799eeeddbafd222643e2131a507c1a8296cac2c71ca25acab",
+      "status": null,
+      "top_level_keys": [
+        "pass_id",
+        "samples",
+        "witnessed",
+        "classes_found",
+        "tally",
+        "x2_plus_1_type"
+      ]
+    },
+    {
+      "path": "data/w33_pass11537_union_law.json",
+      "bytes": 2079,
+      "sha256": "9ce8ac50e25d8c8e838823ecbb80d556d953b02789fe13e6d9a521e4a137972d",
+      "status": null,
+      "top_level_keys": [
+        "pass_id",
+        "n2",
+        "n3",
+        "n2_per_solution"
+      ]
+    },
+    {
+      "path": "papers/forty_points/appA_ledger.tex",
+      "bytes": 83502,
+      "sha256": "3ab461fd8a8637d2d0c89a5573b35c629453201f2ad7520c26fee27479d9a36a"
+    },
+    {
+      "path": "papers/forty_points/main.pdf",
+      "bytes": 936227,
+      "sha256": "3a41f0c414dd14194ce52a2fefb17ee3ac04b78d09a6a474720ba4e097a6d281"
+    },
+    {
+      "path": "papers/forty_points/sec04_time.tex",
+      "bytes": 82492,
+      "sha256": "5ffa6ace954b59f0fdd747b20991619c1d9c24f560060dd71f1e674603efa7ba"
+    },
+    {
+      "path": "tests/test_w33_pass11531_11538.py",
+      "bytes": 4332,
+      "sha256": "8506c4c762cb27429aa82c09eb87e4c602580e18704ab4cd1313872397024dea",
+      "syntax": "PASS"
+    },
+    {
+      "path": "tests/test_w33_pass11540_history_vo33_orientation_square.py",
+      "bytes": 1454,
+      "sha256": "b4dd00232e4e5f7cd777c970065c20dd1a883136da33610448807275836dda78",
+      "syntax": "PASS"
+    },
+    {
+      "path": "tests/test_w33_pass11547_history_hamming_canonical_clock.py",
+      "bytes": 1665,
+      "sha256": "7dfa2035c2a5f00b810c86d301d54851579ba4b8df31c6929ecc56412010e4d9",
+      "syntax": "PASS"
+    },
+    {
+      "path": "tests/test_w33_pass11548_history_orientation_square_correction.py",
+      "bytes": 1293,
+      "sha256": "b46b2e4ce63902d5aad463bd9bcb8c7cc1f32c439606d42e5a79c6bbb3ae0050",
+      "syntax": "PASS"
+    },
+    {
+      "path": "tests/test_w33_pass11549_history_arrow_cubic_character.py",
+      "bytes": 1112,
+      "sha256": "687d1dc042d6c76c708cbf6105b714696ed94dfa36b216fd67b7f5bddf4dab81",
+      "syntax": "PASS"
+    },
+    {
+      "path": "tests/test_w33_pass11550_veronese_weil_hamming_orientation.py",
+      "bytes": 1061,
+      "sha256": "a174a066cc2d3c0f6215ad0e9823a05002472ffdad0242386ee08eb8f920aa3f",
+      "syntax": "PASS"
+    },
+    {
+      "path": "tests/test_w33_pass11551_11555.py",
+      "bytes": 3472,
+      "sha256": "125748bd0d4840893ec3d2ef6f3ffe572cfff8925936ccc5d1170f1e9215b4e6",
+      "syntax": "PASS"
+    },
+    {
+      "path": "tests/test_w33_pass11556_11561.py",
+      "bytes": 2833,
+      "sha256": "ea1dfd6e13af572b099c5cf1a44b2d3055e3cd224dbe1ce3a0c96190fd5737cf",
+      "syntax": "PASS"
+    },
+    {
+      "path": "tests/test_w33_pass11562_11569.py",
+      "bytes": 2767,
+      "sha256": "300dc2ddb2eb6346729c5c06873b4c9fd6b0800cb1947c06211b405eb3583f98",
+      "syntax": "PASS"
+    },
+    {
+      "path": "tests/test_w33_pass11570_11579.py",
+      "bytes": 1565,
+      "sha256": "88d29b1d05d7c266e42d64906a5fdeac8b4baaaa3c475e85ecab8ca853f24cdb",
+      "syntax": "PASS"
+    },
+    {
+      "path": "tests/test_w33_pass11580_11589.py",
+      "bytes": 2061,
+      "sha256": "3699cd96a00f2c874758cdcf0b24f90931f487dbba3ea3d0271f4a1be311a68a",
+      "syntax": "PASS"
+    },
+    {
+      "path": "tests/test_w33_pass11590_11599.py",
+      "bytes": 1740,
+      "sha256": "9585ae3410fcc2a3b776d4ce83bcde52d35785c2c8636297fdd6e1b42b4140c7",
+      "syntax": "PASS"
+    }
+  ]
+}

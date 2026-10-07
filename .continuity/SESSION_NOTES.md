@@ -1,8 +1,9 @@
-# Session Notes - 2026-10-05
+# Session Notes - 2026-10-06
 
 > **Collaborative workspace for you and AI**
 
 ## 🎯 Session Goals
+- Current: publish reserved11600 (`3db837b54`), an independently designed dynamical Hesse flavor EFT and its exact restricted degree16 obstruction. Preserve the original parallel checkout and shared decision stores; historical goals below are retained as history.
 - Publish reserved11526–11530 (`057834b58`): nine validated investigations across native vacuum, physical symmetry, compatible coherent parent, EW/flavor, local frames, constrained spin history, nonlinear anomaly and coherent QEC. Preserve the original parallel workspace and mixed decision stores.
 - Remote11511–11515 science,11531–11538 reservation and formula-search freeze through `b565d2817` integrated by GitKraken fast-forward. The cubed-phase counterexample reinforces word/general-unitary scope separation.
 
@@ -2005,3 +2006,11 @@ Independent follow-up targets: compatible SM and CP phase selection; dynamic mix
 - All five producer sections PASS,12 final independent tests PASS in50.24s; final intake clean with no collisions/forced arithmetic/contradictions. Source-bound JSON, exact gate witnesses, report, tests, site and refreshed indexes published.
 - Main result: the declared two-body native pair Hamiltonian gives exact sqrtSWAP in7.799699/Delta, and covariant local controls complete a conditional universal encoded gate set. Binding, gaps, exchange actuators, coefficients, observed masses,4D gravity and residual CC remain open.
 - Mixed decision stores remain unstaged; original parallel checkout preserved. Publication receipts are recorded without staging the shared stores.
+
+### 2026-10-06 — Pass11600 independent flavor dynamics
+
+- Reviewed61 remote commits and151 changed paths since f914b3dee through a2f4475a8, read the expanded1588-line Chat.txt as handoff evidence, and preserved original local11342–11349 divergence/dirty work. Static path inventory is saved; no blanket all-producer replay claim.
+- Prior11591/11597 tensor/action,10972/10976 clock Landau work and classical Hesse geometry are credited. Normalized tensor Fourier map is a coordinate conversion, not a prior-result correction.
+- Exact positive potential has24 generic CP-breaking rays, two A4 orbits, projective stabilizer18 and one common-phase zero mode. Below canonical degree16, a CP-even single-doublet phase-blind angular potential has Hessian determinant -D² or a flat direction; degree16 attains isolated generic ray minima.
+- Canonical angular masses have leading coefficients181/343 and57600/62083; a supplied real-Higgs alignment gives a nonzero weak-basis CP invariant. These are an added EFT and extra-flavon masses, not observed flavor predictions. Lower-order symmetry-allowed terms are not radiatively protected, and the U1 must extend consistently to interactions.
+- All four producer sections PASS; all nine final independent regressions PASS in48.13s. Index/intake refresh precedes the normal-hook science commit and push to master. Original checkout and mixed stores stay unstaged.

@@ -1,0 +1,166 @@
+{
+  "status": "PASS",
+  "reservation": "3db837b54",
+  "pass": 11600,
+  "tensor": {
+    "normalized_F": [
+      [
+        "sqrt(3)/3",
+        "sqrt(6)/3"
+      ],
+      [
+        "sqrt(6)/3",
+        "-sqrt(3)/3"
+      ]
+    ],
+    "normalized_P": [
+      [
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "-1/2 + sqrt(3)*I/2"
+      ]
+    ],
+    "tensor_norms": [
+      3,
+      6
+    ],
+    "prior_coordinate_conversion": "C=diag(1,1/sqrt2); C F_old C^-1=F_normalized",
+    "Bloch_axes": [
+      [
+        "sqrt(6)/3",
+        "-sqrt(6)/6",
+        "-sqrt(6)/6"
+      ],
+      [
+        "0",
+        "sqrt(2)/2",
+        "-sqrt(2)/2"
+      ],
+      [
+        "sqrt(3)/3",
+        "sqrt(3)/3",
+        "sqrt(3)/3"
+      ]
+    ],
+    "Bloch_F": [
+      [
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "-1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-1"
+      ]
+    ],
+    "Bloch_P": [
+      [
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0"
+      ]
+    ],
+    "coefficient_CP": "complex conjugation swaps tetrahedral coordinates1 and2",
+    "coupling": "Tensor field Phi transforms in Sym^3(V); Phi-dagger contracted with the symmetric family matter/Higgs tensor is invariant. With normalized components u, a=conjugate(u0)/sqrt3/M and b=conjugate(u1)/sqrt6/M, up to one overall real interaction coefficient."
+  },
+  "dynamics": {
+    "parent_projective_group": "G216",
+    "pencil_quotient": "A4, order12",
+    "generic_projective_stabilizer": "(C3xC3):C2, order18; projective image of Delta54. Exact vector stabilizers depend on the scalar lift and the separate U1 phase.",
+    "model_inventory": "one canonical complex two-component tensor field, an exact common-phase U1, coefficient CP, polynomial scalar potential, no additional order parameters",
+    "invariant_ring": "CP extends A4 to W(D3)=S4. R[x,y,z]^W=R[p2,p3,p4]; degrees2,3,4. At fixed rho=u-dagger u, p2=rho^2.",
+    "minimal_dimension": "16: below field degree16 the generic fixed-radius angular potential has Hessian determinant -D^2 in coordinates(p3,p4), or an exactly flat p4 direction. No strict isolated generic ray minimum is possible in this declared CP-even phase-blind inventory.",
+    "potential": "kappa(rho-v^2)^2 + lambda3/M^8 (xyz-[3/(7sqrt14)]rho^3)^2 + lambda4/M^12 (x^4+y^4+z^4-rho^4/2)^2, with all coefficients positive and M,v>0",
+    "global_minimum_energy": 0,
+    "global_minimum_rays": 24,
+    "A4_orbits": 2,
+    "A4_orbit_sizes": [
+      12,
+      12
+    ],
+    "minimum_squared_Bloch_coordinates": [
+      "rho^2/14",
+      "2rho^2/7",
+      "9rho^2/14"
+    ],
+    "minimum_sign_product": "positive",
+    "CP_odd_invariant_values": [
+      "+15rho^6/343",
+      "-15rho^6/343"
+    ],
+    "CP_breaking": "The24 rays form two A4 orbits exchanged by coefficient conjugation. W is A4 invariant and CP odd, nonzero at every minimum; no generalized parent CP fixes a vacuum ray.",
+    "tangent_Hessian_at_unscaled_point": [
+      [
+        "1314",
+        "4896"
+      ],
+      [
+        "4896",
+        "18944"
+      ]
+    ],
+    "tangent_Hessian_determinant": 921600,
+    "phase_boundary": "The common U1 gives a circle above each ray: one phase Goldstone if global, or a gauge redundancy if separately gauged. Only radial and two angular directions are stabilized; no fully gapped vacuum is claimed.",
+    "UV_boundary": "Dimensions12 and16 operators are supplied EFT terms. Neither their coefficients nor v/M nor this extra tensor field are derived from W33. Holomorphic U1-breaking terms, extra fields and non-polynomial potentials evade the dimension16 bound."
+  },
+  "CP_transfer": {
+    "a": "1 (overall scale removed)",
+    "b": "-(sqrt3+i)/[2(sqrt14+2sqrt3)]",
+    "real_Higgs_directions_up": [
+      1,
+      2,
+      4
+    ],
+    "real_Higgs_directions_down": [
+      3,
+      1,
+      2
+    ],
+    "Im_trace_commutator_cubed": "1125*(-40759807*sqrt(42) - 264153529)/(4*(24532198*sqrt(3) + 11356201*sqrt(14)))",
+    "numeric": -1748.445232175797,
+    "CP_polynomial": "-18000*bi*(bi**2 + br**2 - 1)*(123*bi**8 + 492*bi**6*br**2 + 542*bi**6*br - 85*bi**6 + 738*bi**4*br**4 + 1626*bi**4*br**3 - 235*bi**4*br**2 - 726*bi**4*br - 9*bi**4 + 492*bi**2*br**6 + 1626*bi**2*br**5 - 215*bi**2*br**4 - 1852*bi**2*br**3 - 302*bi**2*br**2 + 248*bi**2*br + 3*bi**2 + 123*br**8 + 542*br**7 - 65*br**6 - 1126*br**5 - 165*br**4 + 520*br**3 + 171*br**2)",
+    "scope": "One exact nonzero weak-basis CP witness at one selected ray and separately supplied real Higgs directions. Conjugating the vacuum reverses its sign. It does not predict CKM/PMNS, measured masses or a Higgs alignment."
+  },
+  "angular_masses": {
+    "gradient_Gram": [
+      [
+        "181/1372",
+        "-3*sqrt(14)/49"
+      ],
+      [
+        "-3*sqrt(14)/49",
+        "216/343"
+      ]
+    ],
+    "canonical_kinetic": "Lkin=partial u-dagger partial u; after phase quotient and rho=v^2 the Bloch kinetic term is v^2/4 |partial m|^2.",
+    "exact_masses": "m_plus/minus^2=2/v^2 [A g3^2+B g4^2 +/- sqrt((A g3^2+B g4^2)^2-4AB detG)], A=lambda3 v^12/M^8, B=lambda4 v^16/M^12",
+    "heavy_leading": "(181/343) lambda3 v^2 (v/M)^8",
+    "light_leading": "(57600/62083) lambda4 v^2 (v/M)^12",
+    "boundary": "These are two extra tensor-field angular masses in the declared EFT, not fermion masses. For positive fixed lambda3,lambda4 and v/M small the hierarchy follows. Symmetry also allows lower-dimension p3 and p4 terms; their absence/correlation is not radiatively protected here. Quantum corrections can change the vacuum and hierarchy. The common phase U1 must extend consistently to the Higgs/interaction sector or be only a scalar-sector assumption."
+  },
+  "source_sha256": {
+    "data/PART_W33_PASS11591_SPIN10_DELTA54_HESSE_YUKAWA.json": "02736cfb366a6e6bdf76d01e2d7f7b17a6da298b7119eb822a1cac4a55810984",
+    "data/PART_W33_PASS11597_FAMILY_CLIFFORD_BREAKING.json": "fa9626b70ea5c3a7440d4a44e0675c60999be6547385ae67a0ee6c4cec98f4c7",
+    "analysis/w33_pass10972_tetrahedral_cubic_clock_selector.py": "3f7939e2ccddd3e150e1b3c49d6b537c5fc07b147c8229a3e3f29e45076cd9f3"
+  },
+  "producer_sha256": "790645d1c5b9bef670becceb65110cad598c6e8c60077098668dae79163f6999"
+}
