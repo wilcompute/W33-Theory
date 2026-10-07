@@ -2136,3 +2136,34 @@ or transported contextuality theorem is claimed from this intake.
 Physical Yukawa CP, a microscopic coherent-query interaction, all-normal
 quantum stability, native propagating gravity and vacuum-energy selection
 remain open; no complete TOE is claimed.
+
+### Pass11630 Perplexity intake and operational completion
+
+Reservation151929231 is published. All19 Desktop/Perplexity inputs were read
+or inspected and both supplied scripts freshly replayed in an isolated output
+directory. Their immutable archive is826497bytes with SHA256
+0e85aef7030468d45048aa14d59fed7c1b2fb5e64ed40d53ef8dc0d7f4bb8659.
+The original batch guard reports HARD FAIL on a147-byte truncated JSON;
+that transport artifact is quarantined, not accepted as a scientific result.
+The independent producer passed every exact instrument/Gram/relative-KS/group
+section, regenerated all25920 permutations and replayed all501 phase updates.
+
+The supplied projective map becomes an optimal heralded instrument with a
+named8x8 unitary, inverse-adjoint partner, weak-Pauli paired channel and fixed
+qubit failure carrier. Its stabilizer-input preparation yields (-1,2)/sqrt5
+with total success5(3-sqrt3)/12. Added a Y conjugation/I-H twirl and explicit
+Steane projection, connecting this output to the published Reichardt decoder.
+The factorized recursion proves the tight v>5/7 threshold only for IID output
+depolarization with perfect stabilizer control; no hardware threshold follows.
+Report: analysis/PASS11630_REYE_WITTING_INSTRUMENT.md. Full regressions include
+the128-dimensional decoder and deliberate phase/coloring corruption controls.
+No complete TOE, microscopic interaction, fault-tolerant synthesis, measured
+flavor, propagating gravity or cosmological-constant selection is claimed.
+
+RESULTS_INDEX refresh:11171files,15772distinctive tokens,6861unique results.
+TOPICAL_ALIASES refresh:5190files,1089tokens. Forced-arithmetic selftest passes;
+broad rediscovery candidates were read in entirety and their owners cited.
+Original parallel checkout and mixed decision stores are preserved. Fresh
+GitKraken fetch before publication showed no new origin/master commits.
+Next: final eleven-test result, normal-hook GitKraken science commit,
+explicit HEAD:master publication, exact-SHA dedicated CI and receipt.

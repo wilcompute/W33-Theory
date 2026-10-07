@@ -1,0 +1,1584 @@
+{
+  "status": "PASS",
+  "pass_number": 11630,
+  "input_archive_sha256": "0e85aef7030468d45048aa14d59fed7c1b2fb5e64ed40d53ef8dc0d7f4bb8659",
+  "source_manifest": [
+    {
+      "name": "ChatNext.txt",
+      "bytes": 12237,
+      "sha256": "2de9bb5315f522f47bea4a06b4047656aac30188a1ee10c94446fa57e85e8332"
+    },
+    {
+      "name": "five_followup_audit.md",
+      "bytes": 2514,
+      "sha256": "4c344afe8f595b8314e9f5324e51502f420779717de1e2a41569665ad70d41ae"
+    },
+    {
+      "name": "five_followup_audit.pdf",
+      "bytes": 103136,
+      "sha256": "a765fa2c6361e096b5504fb803753324550d1935a3fd722c54145d08aed3f957"
+    },
+    {
+      "name": "five_followup_experiments.py",
+      "bytes": 18037,
+      "sha256": "e899ef417e202ed4e525ec72182b509da8b65ba9b85a6ec38d35fa47dd01996f"
+    },
+    {
+      "name": "five_followup_results.json",
+      "bytes": 9386,
+      "sha256": "5eb8d74d05752bfb4eb4bc7aad1ba46a3164204ac53568f0314fa3efc0611f14"
+    },
+    {
+      "name": "gram_reconstruction_certificate.json",
+      "bytes": 118252,
+      "sha256": "6babf94138957ca882a5babb503fb94ab44460aa7bab2dc91bc4692fc5b87b27"
+    },
+    {
+      "name": "reye_embedding.npz",
+      "bytes": 1350,
+      "sha256": "21f5cda882f372578ad29128e0d75ba0c8c330ad98ee80a6bcc7c351b3a2d00d"
+    },
+    {
+      "name": "reye_exact_certificate.json",
+      "bytes": 2187,
+      "sha256": "962d86e1d2b8d8e37e29493033599d1f75585893da6e9fd7dbdfd5c53b0776da"
+    },
+    {
+      "name": "reye_point_correspondence.csv",
+      "bytes": 204,
+      "sha256": "e7c6d17a8e5d5128c62b6b8a4331282b58b1288221794718890229755f818915"
+    },
+    {
+      "name": "su4_structure_constants.csv",
+      "bytes": 74707,
+      "sha256": "955ea36639387420854a797cbed9cdb4faedfc588bbbcb8ab32249d1591ce16e"
+    },
+    {
+      "name": "witting_audit_report.md",
+      "bytes": 2037,
+      "sha256": "e35740d261ee710f906df8064fb08ee45aa83941949d62c417e3b009823ed350"
+    },
+    {
+      "name": "witting_audit_report.pdf",
+      "bytes": 96764,
+      "sha256": "dea659c022d608efc6f2d3751a31a253a6b4e4424b0274807bbf18f5c15a7397"
+    },
+    {
+      "name": "witting_bases.csv",
+      "bytes": 647,
+      "sha256": "915a99c06e3be059e6a8743adb99ec2c6432bf16a99df9d0047a0f41563cebf8"
+    },
+    {
+      "name": "witting_experiment_results.json",
+      "bytes": 147,
+      "sha256": "41734777f022a52f9c661ace81ccccb9ad7826c7efd9b3a96d3028944c3ac639"
+    },
+    {
+      "name": "witting_five_experiments.py",
+      "bytes": 11321,
+      "sha256": "f0ccbd821759961d6e001a07422f649cc925d46f65b5db28b163aaded5869285"
+    },
+    {
+      "name": "witting_operators.npz",
+      "bytes": 15409,
+      "sha256": "26ef8cf736b6527b349792d4579a060c5955d56d943bae343452e14dc1a2f176"
+    },
+    {
+      "name": "witting_sics (1).csv",
+      "bytes": 1445,
+      "sha256": "dc067f23df1e4510867ad6b9f40883363709616232af7bf6a97b2639eb32bb3c"
+    },
+    {
+      "name": "witting_sics.csv",
+      "bytes": 1445,
+      "sha256": "dc067f23df1e4510867ad6b9f40883363709616232af7bf6a97b2639eb32bb3c"
+    },
+    {
+      "name": "witting_symmetry_and_phase_data.npz",
+      "bytes": 613067,
+      "sha256": "4884cf1c8bff71d70cad8b45537b5ea502fb3a1d5e2213ec4b893fb4c26cf5df"
+    }
+  ],
+  "quarantined": [
+    "witting_experiment_results.json: truncated at147 bytes; rejected"
+  ],
+  "external_attribution": "Supplied Perplexity artifacts own the Reye projective map, paired orbit and relative-extension witness. Both supplied scripts freshly replayed in an isolated output directory; first script uses pandas as well as declared numpy/scipy/networkx/sympy. First projective determinant may be -2/3 under a different correspondence/gauge, not an invariant contradiction.",
+  "instrument": {
+    "status": "PASS",
+    "projective_matrix": [
+      [
+        "0",
+        "-1/2 - sqrt(3)*I/6",
+        "1/2 - sqrt(3)*I/6",
+        "sqrt(3)*I/3"
+      ],
+      [
+        "0",
+        "-1/2 + sqrt(3)*I/6",
+        "0",
+        "-1/2 + sqrt(3)*I/6"
+      ],
+      [
+        "1",
+        "0",
+        "-sqrt(3)*I/3",
+        "0"
+      ],
+      [
+        "0",
+        "-1/2 - sqrt(3)*I/6",
+        "-1/2 + sqrt(3)*I/6",
+        "sqrt(3)*I/3"
+      ]
+    ],
+    "primary_map": [
+      2,
+      25,
+      16,
+      28,
+      10,
+      17,
+      31,
+      18,
+      15,
+      33,
+      20,
+      4
+    ],
+    "dual_map": [
+      11,
+      38,
+      13,
+      19,
+      35,
+      6,
+      26,
+      24,
+      22,
+      1,
+      30,
+      23
+    ],
+    "dual_map_rule": "Ldual=(Ldag)^-1; its normalized real-isometric representative is sqrt(2/3)Ldual",
+    "exact_minor_checks": 144,
+    "determinant": "2/3",
+    "pullback_metric": [
+      [
+        "1",
+        "0",
+        "-sqrt(3)*I/3",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0",
+        "-sqrt(3)*I/3"
+      ],
+      [
+        "sqrt(3)*I/3",
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "sqrt(3)*I/3",
+        "0",
+        "1"
+      ]
+    ],
+    "J": [
+      [
+        0,
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        -1
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ]
+    ],
+    "metric_law": "Ldag L=I+iJ/sqrt(3), J^T=-J, J^2=-I; Re(Ldag L)=I",
+    "slant_angle_cosine": "1/sqrt(3)",
+    "success_probability": "3/2 - sqrt(3)/2",
+    "failure_probability": "-1/2 + sqrt(3)/2",
+    "effect_spectrum": {
+      "1": 2,
+      "2 - sqrt(3)": 2
+    },
+    "pure_target_Kraus_constraint_rank": 15,
+    "optimality": "For a completely positive success operation with the specified pure outputs on just the four basis rays and one all-nonzero half-vector, every Kraus operator is a_j L. Trace nonincrease forces sum|a_j|^2 <= 1/(1+1/sqrt(3)). All real-unit input rays have uniform success at this bound, and K saturates it. A deterministic CPTP map with these same pure outputs is impossible since Ldag L is not scalar.",
+    "dilation": [
+      [
+        "(1/2 - sqrt(3)*I/6)*(sqrt(2)*(-1 + sqrt(3))/4 + 1/2)*(-sqrt(2)*I/(2*(-1 + sqrt(3))) + I/2)/sqrt(sqrt(3)/3 + 1) + (1/2 + sqrt(2)/(2*(-1 + sqrt(3))))*(1/2 - sqrt(3)*I/6)*(-sqrt(2)*I*(-1 + sqrt(3))/4 + I/2)/sqrt(sqrt(3)/3 + 1)",
+        "(sqrt(2)*(-1 + sqrt(3))/4 + 1/2)*(sqrt(3)*I*(-sqrt(2)*I/(2*(-1 + sqrt(3))) + I/2)/(3*sqrt(sqrt(3)/3 + 1)) + (-1/2 - sqrt(3)*I/6)*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1)) + (-sqrt(2)*I*(-1 + sqrt(3))/4 + I/2)*((-1/2 - sqrt(3)*I/6)*(-I/2 + sqrt(2)*I/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1) + sqrt(3)*I*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/(3*sqrt(sqrt(3)/3 + 1)))",
+        "(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))*(1/2 - sqrt(3)*I/6)*(sqrt(2)*(-1 + sqrt(3))/4 + 1/2)/sqrt(sqrt(3)/3 + 1) + (1/2 - sqrt(3)*I/6)*(-I/2 + sqrt(2)*I*(-1 + sqrt(3))/4)*(-sqrt(2)*I/(2*(-1 + sqrt(3))) + I/2)/sqrt(sqrt(3)/3 + 1)",
+        "(-I/2 + sqrt(2)*I*(-1 + sqrt(3))/4)*(sqrt(3)*I*(-sqrt(2)*I/(2*(-1 + sqrt(3))) + I/2)/(3*sqrt(sqrt(3)/3 + 1)) + (-1/2 - sqrt(3)*I/6)*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1)) + (sqrt(2)*(-1 + sqrt(3))/4 + 1/2)*((-1/2 - sqrt(3)*I/6)*(-I/2 + sqrt(2)*I/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1) + sqrt(3)*I*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/(3*sqrt(sqrt(3)/3 + 1)))",
+        "-sqrt(-1 + sqrt(3))*(1/2 - sqrt(3)*I/6)*(-sqrt(2)*I/(2*(-1 + sqrt(3))) + I/2)/(2*sqrt(sqrt(3)/3 + 1)) + I*sqrt(-1 + sqrt(3))*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))*(1/2 - sqrt(3)*I/6)/(2*sqrt(sqrt(3)/3 + 1))",
+        "-I*sqrt(-1 + sqrt(3))*(-sqrt(3)*I*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/(3*sqrt(sqrt(3)/3 + 1)) - (-1/2 - sqrt(3)*I/6)*(-I/2 + sqrt(2)*I/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1))/2 + sqrt(-1 + sqrt(3))*(-sqrt(3)*I*(-sqrt(2)*I/(2*(-1 + sqrt(3))) + I/2)/(3*sqrt(sqrt(3)/3 + 1)) - (-1/2 - sqrt(3)*I/6)*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1))/2",
+        "-I*sqrt(-1 + sqrt(3))*(1/2 - sqrt(3)*I/6)*(-sqrt(2)*I/(2*(-1 + sqrt(3))) + I/2)/(2*sqrt(sqrt(3)/3 + 1)) - sqrt(-1 + sqrt(3))*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))*(1/2 - sqrt(3)*I/6)/(2*sqrt(sqrt(3)/3 + 1))",
+        "sqrt(-1 + sqrt(3))*(-sqrt(3)*I*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/(3*sqrt(sqrt(3)/3 + 1)) - (-1/2 - sqrt(3)*I/6)*(-I/2 + sqrt(2)*I/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1))/2 + I*sqrt(-1 + sqrt(3))*(-sqrt(3)*I*(-sqrt(2)*I/(2*(-1 + sqrt(3))) + I/2)/(3*sqrt(sqrt(3)/3 + 1)) - (-1/2 - sqrt(3)*I/6)*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1))/2"
+      ],
+      [
+        "0",
+        "(-sqrt(2)*I*(-1 + sqrt(3))/4 + I/2)*((-1/2 + sqrt(3)*I/6)*(-I/2 + sqrt(2)*I/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1) + (-1/2 + sqrt(3)*I/6)*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1)) + (sqrt(2)*(-1 + sqrt(3))/4 + 1/2)*((-1/2 + sqrt(3)*I/6)*(-sqrt(2)*I/(2*(-1 + sqrt(3))) + I/2)/sqrt(sqrt(3)/3 + 1) + (-1/2 + sqrt(3)*I/6)*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1))",
+        "0",
+        "(sqrt(2)*(-1 + sqrt(3))/4 + 1/2)*((-1/2 + sqrt(3)*I/6)*(-I/2 + sqrt(2)*I/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1) + (-1/2 + sqrt(3)*I/6)*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1)) + (-I/2 + sqrt(2)*I*(-1 + sqrt(3))/4)*((-1/2 + sqrt(3)*I/6)*(-sqrt(2)*I/(2*(-1 + sqrt(3))) + I/2)/sqrt(sqrt(3)/3 + 1) + (-1/2 + sqrt(3)*I/6)*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1))",
+        "0",
+        "-I*sqrt(-1 + sqrt(3))*(-(-1/2 + sqrt(3)*I/6)*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1) - (-1/2 + sqrt(3)*I/6)*(-I/2 + sqrt(2)*I/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1))/2 + sqrt(-1 + sqrt(3))*(-(-1/2 + sqrt(3)*I/6)*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1) - (-1/2 + sqrt(3)*I/6)*(-sqrt(2)*I/(2*(-1 + sqrt(3))) + I/2)/sqrt(sqrt(3)/3 + 1))/2",
+        "0",
+        "sqrt(-1 + sqrt(3))*(-(-1/2 + sqrt(3)*I/6)*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1) - (-1/2 + sqrt(3)*I/6)*(-I/2 + sqrt(2)*I/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1))/2 + I*sqrt(-1 + sqrt(3))*(-(-1/2 + sqrt(3)*I/6)*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1) - (-1/2 + sqrt(3)*I/6)*(-sqrt(2)*I/(2*(-1 + sqrt(3))) + I/2)/sqrt(sqrt(3)/3 + 1))/2"
+      ],
+      [
+        "(-sqrt(2)*I*(-1 + sqrt(3))/4 + I/2)*(-sqrt(3)*I*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/(3*sqrt(sqrt(3)/3 + 1)) + (-I/2 + sqrt(2)*I/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1)) + (sqrt(2)*(-1 + sqrt(3))/4 + 1/2)*(-sqrt(3)*I*(-sqrt(2)*I/(2*(-1 + sqrt(3))) + I/2)/(3*sqrt(sqrt(3)/3 + 1)) + (1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1))",
+        "0",
+        "(sqrt(2)*(-1 + sqrt(3))/4 + 1/2)*(-sqrt(3)*I*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/(3*sqrt(sqrt(3)/3 + 1)) + (-I/2 + sqrt(2)*I/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1)) + (-I/2 + sqrt(2)*I*(-1 + sqrt(3))/4)*(-sqrt(3)*I*(-sqrt(2)*I/(2*(-1 + sqrt(3))) + I/2)/(3*sqrt(sqrt(3)/3 + 1)) + (1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1))",
+        "0",
+        "sqrt(-1 + sqrt(3))*(-(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1) + sqrt(3)*I*(-sqrt(2)*I/(2*(-1 + sqrt(3))) + I/2)/(3*sqrt(sqrt(3)/3 + 1)))/2 - I*sqrt(-1 + sqrt(3))*(-(-I/2 + sqrt(2)*I/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1) + sqrt(3)*I*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/(3*sqrt(sqrt(3)/3 + 1)))/2",
+        "0",
+        "I*sqrt(-1 + sqrt(3))*(-(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1) + sqrt(3)*I*(-sqrt(2)*I/(2*(-1 + sqrt(3))) + I/2)/(3*sqrt(sqrt(3)/3 + 1)))/2 + sqrt(-1 + sqrt(3))*(-(-I/2 + sqrt(2)*I/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1) + sqrt(3)*I*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/(3*sqrt(sqrt(3)/3 + 1)))/2",
+        "0"
+      ],
+      [
+        "(-1/2 + sqrt(3)*I/6)*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))*(-sqrt(2)*I*(-1 + sqrt(3))/4 + I/2)/sqrt(sqrt(3)/3 + 1) + (-1/2 + sqrt(3)*I/6)*(sqrt(2)*(-1 + sqrt(3))/4 + 1/2)*(-sqrt(2)*I/(2*(-1 + sqrt(3))) + I/2)/sqrt(sqrt(3)/3 + 1)",
+        "(sqrt(2)*(-1 + sqrt(3))/4 + 1/2)*(sqrt(3)*I*(-sqrt(2)*I/(2*(-1 + sqrt(3))) + I/2)/(3*sqrt(sqrt(3)/3 + 1)) + (-1/2 - sqrt(3)*I/6)*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1)) + (-sqrt(2)*I*(-1 + sqrt(3))/4 + I/2)*((-1/2 - sqrt(3)*I/6)*(-I/2 + sqrt(2)*I/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1) + sqrt(3)*I*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/(3*sqrt(sqrt(3)/3 + 1)))",
+        "(-1/2 + sqrt(3)*I/6)*(-I/2 + sqrt(2)*I*(-1 + sqrt(3))/4)*(-sqrt(2)*I/(2*(-1 + sqrt(3))) + I/2)/sqrt(sqrt(3)/3 + 1) + (-1/2 + sqrt(3)*I/6)*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))*(sqrt(2)*(-1 + sqrt(3))/4 + 1/2)/sqrt(sqrt(3)/3 + 1)",
+        "(-I/2 + sqrt(2)*I*(-1 + sqrt(3))/4)*(sqrt(3)*I*(-sqrt(2)*I/(2*(-1 + sqrt(3))) + I/2)/(3*sqrt(sqrt(3)/3 + 1)) + (-1/2 - sqrt(3)*I/6)*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1)) + (sqrt(2)*(-1 + sqrt(3))/4 + 1/2)*((-1/2 - sqrt(3)*I/6)*(-I/2 + sqrt(2)*I/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1) + sqrt(3)*I*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/(3*sqrt(sqrt(3)/3 + 1)))",
+        "I*sqrt(-1 + sqrt(3))*(-1/2 + sqrt(3)*I/6)*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/(2*sqrt(sqrt(3)/3 + 1)) - sqrt(-1 + sqrt(3))*(-1/2 + sqrt(3)*I/6)*(-sqrt(2)*I/(2*(-1 + sqrt(3))) + I/2)/(2*sqrt(sqrt(3)/3 + 1))",
+        "-I*sqrt(-1 + sqrt(3))*(-sqrt(3)*I*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/(3*sqrt(sqrt(3)/3 + 1)) - (-1/2 - sqrt(3)*I/6)*(-I/2 + sqrt(2)*I/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1))/2 + sqrt(-1 + sqrt(3))*(-sqrt(3)*I*(-sqrt(2)*I/(2*(-1 + sqrt(3))) + I/2)/(3*sqrt(sqrt(3)/3 + 1)) - (-1/2 - sqrt(3)*I/6)*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1))/2",
+        "-sqrt(-1 + sqrt(3))*(-1/2 + sqrt(3)*I/6)*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/(2*sqrt(sqrt(3)/3 + 1)) - I*sqrt(-1 + sqrt(3))*(-1/2 + sqrt(3)*I/6)*(-sqrt(2)*I/(2*(-1 + sqrt(3))) + I/2)/(2*sqrt(sqrt(3)/3 + 1))",
+        "sqrt(-1 + sqrt(3))*(-sqrt(3)*I*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/(3*sqrt(sqrt(3)/3 + 1)) - (-1/2 - sqrt(3)*I/6)*(-I/2 + sqrt(2)*I/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1))/2 + I*sqrt(-1 + sqrt(3))*(-sqrt(3)*I*(-sqrt(2)*I/(2*(-1 + sqrt(3))) + I/2)/(3*sqrt(sqrt(3)/3 + 1)) - (-1/2 - sqrt(3)*I/6)*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1))/2"
+      ],
+      [
+        "sqrt(-1 + sqrt(3))/2",
+        "0",
+        "I*sqrt(-1 + sqrt(3))/2",
+        "0",
+        "sqrt(2)*(-1 + sqrt(3))/4 + 1/2",
+        "0",
+        "-I/2 + sqrt(2)*I*(-1 + sqrt(3))/4",
+        "0"
+      ],
+      [
+        "0",
+        "sqrt(-1 + sqrt(3))/2",
+        "0",
+        "I*sqrt(-1 + sqrt(3))/2",
+        "0",
+        "sqrt(2)*(-1 + sqrt(3))/4 + 1/2",
+        "0",
+        "-I/2 + sqrt(2)*I*(-1 + sqrt(3))/4"
+      ],
+      [
+        "-I*sqrt(-1 + sqrt(3))/2",
+        "0",
+        "sqrt(-1 + sqrt(3))/2",
+        "0",
+        "-sqrt(2)*I*(-1 + sqrt(3))/4 + I/2",
+        "0",
+        "sqrt(2)*(-1 + sqrt(3))/4 + 1/2",
+        "0"
+      ],
+      [
+        "0",
+        "-I*sqrt(-1 + sqrt(3))/2",
+        "0",
+        "sqrt(-1 + sqrt(3))/2",
+        "0",
+        "-sqrt(2)*I*(-1 + sqrt(3))/4 + I/2",
+        "0",
+        "sqrt(2)*(-1 + sqrt(3))/4 + 1/2"
+      ]
+    ],
+    "failure_qubit_labels": [
+      0,
+      1,
+      0,
+      1,
+      5,
+      3,
+      3,
+      4,
+      2,
+      4,
+      5,
+      2,
+      3,
+      2,
+      0,
+      0,
+      5,
+      4,
+      4,
+      5,
+      1,
+      1,
+      3,
+      2
+    ],
+    "polar_unitary": [
+      [
+        "(1/2 - sqrt(3)*I/6)*(-sqrt(2)*I/(2*(-1 + sqrt(3))) + I/2)/sqrt(sqrt(3)/3 + 1)",
+        "sqrt(3)*I*(-sqrt(2)*I/(2*(-1 + sqrt(3))) + I/2)/(3*sqrt(sqrt(3)/3 + 1)) + (-1/2 - sqrt(3)*I/6)*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1)",
+        "(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))*(1/2 - sqrt(3)*I/6)/sqrt(sqrt(3)/3 + 1)",
+        "(-1/2 - sqrt(3)*I/6)*(-I/2 + sqrt(2)*I/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1) + sqrt(3)*I*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/(3*sqrt(sqrt(3)/3 + 1))"
+      ],
+      [
+        "0",
+        "(-1/2 + sqrt(3)*I/6)*(-sqrt(2)*I/(2*(-1 + sqrt(3))) + I/2)/sqrt(sqrt(3)/3 + 1) + (-1/2 + sqrt(3)*I/6)*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1)",
+        "0",
+        "(-1/2 + sqrt(3)*I/6)*(-I/2 + sqrt(2)*I/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1) + (-1/2 + sqrt(3)*I/6)*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1)"
+      ],
+      [
+        "-sqrt(3)*I*(-sqrt(2)*I/(2*(-1 + sqrt(3))) + I/2)/(3*sqrt(sqrt(3)/3 + 1)) + (1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1)",
+        "0",
+        "-sqrt(3)*I*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/(3*sqrt(sqrt(3)/3 + 1)) + (-I/2 + sqrt(2)*I/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1)",
+        "0"
+      ],
+      [
+        "(-1/2 + sqrt(3)*I/6)*(-sqrt(2)*I/(2*(-1 + sqrt(3))) + I/2)/sqrt(sqrt(3)/3 + 1)",
+        "sqrt(3)*I*(-sqrt(2)*I/(2*(-1 + sqrt(3))) + I/2)/(3*sqrt(sqrt(3)/3 + 1)) + (-1/2 - sqrt(3)*I/6)*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1)",
+        "(-1/2 + sqrt(3)*I/6)*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1)",
+        "(-1/2 - sqrt(3)*I/6)*(-I/2 + sqrt(2)*I/(2*(-1 + sqrt(3))))/sqrt(sqrt(3)/3 + 1) + sqrt(3)*I*(1/2 + sqrt(2)/(2*(-1 + sqrt(3))))/(3*sqrt(sqrt(3)/3 + 1))"
+      ]
+    ],
+    "paired_effect_law": "(Kplusdag Kplus+Kminusdag Kminus)/2=p I for every complex input, p=(3-sqrt(3))/2",
+    "forgotten_branch_channel": "Conditional on success, discard the uniformly chosen branch: U[(1+sqrt(2/3))/2 rho+(1-sqrt(2/3))/2 (Y tensor I)rho(Y tensor I)]Udag. Checked on all16 matrix units.",
+    "paired_frame_law": "Sum of the24 normalized image projectors is6 I; the two complementary pullback metrics cancel the skew part.",
+    "magic_preparation": {
+      "input": "|++>",
+      "heralded_success_ray": 4,
+      "readout": "Measure X on first qubit; keep + outcome",
+      "conditional_readout_probability": "5/6",
+      "magic_ray": [
+        "-1",
+        "2"
+      ],
+      "normalization": "sqrt(5)",
+      "Bloch": [
+        "-4/5",
+        "0",
+        "-3/5"
+      ],
+      "total_success_probability": "5/4 - 5*sqrt(3)/12",
+      "mean_independent_attempts": "2*sqrt(3)/5 + 6/5",
+      "depolarized_nonstabilizer_condition": "Visibility v>5/7 gives Bloch l1=7v/5>1. The separately constructed Y/H twirl and Steane decoder make this a tight IID output-depolarization threshold with perfect stabilizer control.",
+      "Steane_distillation": {
+        "status": "PASS",
+        "source": "Reichardt quant-ph/0411036, SectionII; decoder is published prior art",
+        "noise_model": "IID output qubits rho_v=v|m><m|+(1-v)I/2, 0<=v<=1; perfect stabilizer operations",
+        "preprocessing": "Y conjugation then choose I or H uniformly and forget the choice",
+        "twirled_Bloch": [
+          "7*v/10",
+          "0",
+          "7*v/10"
+        ],
+        "codewords": [
+          "0000000",
+          "0001111",
+          "0110011",
+          "0111100",
+          "1010101",
+          "1011010",
+          "1100110",
+          "1101001"
+        ],
+        "acceptance": "(14*x**4 + 1)/64",
+        "output_coordinate": "x**3*(8*x**4 + 7)/(14*x**4 + 1)",
+        "improvement_factor": "x*(x - 1)*(x + 1)*(2*x - 1)*(2*x + 1)*(2*x**2 - 1)/(14*x**4 + 1)",
+        "initial_coordinate": "7*v/10",
+        "ideal_first_acceptance": "21807/320000",
+        "ideal_first_output": "424977/605750",
+        "threshold": "v>5/7 is necessary and sufficient for this output-state family with perfect stabilizer control. The Steane recursion increases x for1/2<x<1/sqrt(2) and converges to1/sqrt(2); at v<=5/7 the input is a stabilizer mixture.",
+        "free_decomposition": [
+          "(4*v/5)|+X><+X|",
+          "(3*v/5)|+Z><+Z|",
+          "(1-7*v/5)I/2"
+        ],
+        "boundary": "Threshold for IID depolarization AFTER successful preparation, not for noisy K, noisy readout, correlated errors or a fault-tolerant physical machine; acceptance/resource cost is not efficient near threshold."
+      },
+      "universality": "If this K can actually be repeatedly implemented with stabilizer preparation/readout/control, it prepares a pure non-Pauli qubit. Reichardt quant-ph/0411036 then gives conditional computational universality. No free K, error-corrected distiller or microscopic Hamiltonian is supplied."
+    },
+    "failure_Pauli_multiplicities": {
+      "0": 4,
+      "1": 4,
+      "2": 4,
+      "3": 4,
+      "4": 4,
+      "5": 4
+    },
+    "lost_real_orthogonal_pairs": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        4,
+        10
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        7,
+        9
+      ],
+      [
+        8,
+        11
+      ]
+    ],
+    "instrument_boundary": "A supplied exact CP instrument with an ancilla-unitary specification; no microscopic interaction, fault-tolerant synthesis or Clifford-only implementation is derived. Its explicit pure nonstabilizer output cannot be prepared by Clifford/stabilizer operations alone. This is an additional resource, not a free consequence of KS incidence."
+  },
+  "exact_Gram": {
+    "status": "PASS",
+    "edges": 540,
+    "tree_edges": 39,
+    "exact_triangle_updates": 501,
+    "exact_known_oriented_entries": 1120,
+    "field": "Q(omega,sqrt(3))",
+    "scope": "Constructive labeled-Gram rigidity by exact rational field replay, with fixed edge magnitudes and all listed labeled triple products. No support-only rigidity theorem or inference from mod-two homology alone."
+  },
+  "KS": {
+    "status": "PASS",
+    "relative_minimum": 6,
+    "extensions": [
+      [
+        0,
+        3,
+        5,
+        7,
+        12,
+        36
+      ],
+      [
+        0,
+        3,
+        5,
+        7,
+        12,
+        37
+      ],
+      [
+        0,
+        3,
+        8,
+        21,
+        27,
+        36
+      ],
+      [
+        0,
+        3,
+        8,
+        32,
+        34,
+        39
+      ],
+      [
+        0,
+        3,
+        9,
+        14,
+        29,
+        37
+      ],
+      [
+        0,
+        3,
+        9,
+        32,
+        34,
+        39
+      ],
+      [
+        0,
+        5,
+        7,
+        8,
+        12,
+        32
+      ],
+      [
+        0,
+        5,
+        7,
+        8,
+        12,
+        37
+      ],
+      [
+        0,
+        5,
+        7,
+        9,
+        12,
+        32
+      ],
+      [
+        0,
+        5,
+        7,
+        9,
+        12,
+        36
+      ],
+      [
+        0,
+        5,
+        7,
+        12,
+        14,
+        21
+      ],
+      [
+        0,
+        5,
+        7,
+        12,
+        14,
+        34
+      ],
+      [
+        0,
+        5,
+        7,
+        12,
+        21,
+        39
+      ],
+      [
+        0,
+        5,
+        7,
+        12,
+        27,
+        29
+      ],
+      [
+        0,
+        5,
+        7,
+        12,
+        27,
+        34
+      ],
+      [
+        0,
+        5,
+        7,
+        12,
+        29,
+        39
+      ],
+      [
+        0,
+        8,
+        9,
+        14,
+        29,
+        37
+      ],
+      [
+        0,
+        8,
+        9,
+        21,
+        27,
+        36
+      ],
+      [
+        3,
+        5,
+        14,
+        32,
+        34,
+        39
+      ],
+      [
+        3,
+        5,
+        27,
+        32,
+        34,
+        39
+      ],
+      [
+        3,
+        7,
+        32,
+        34,
+        36,
+        39
+      ],
+      [
+        3,
+        7,
+        32,
+        34,
+        37,
+        39
+      ],
+      [
+        3,
+        8,
+        21,
+        27,
+        36,
+        37
+      ],
+      [
+        3,
+        8,
+        32,
+        34,
+        37,
+        39
+      ],
+      [
+        3,
+        9,
+        14,
+        29,
+        36,
+        37
+      ],
+      [
+        3,
+        9,
+        32,
+        34,
+        36,
+        39
+      ],
+      [
+        3,
+        12,
+        21,
+        32,
+        34,
+        39
+      ],
+      [
+        3,
+        12,
+        29,
+        32,
+        34,
+        39
+      ],
+      [
+        3,
+        14,
+        21,
+        32,
+        34,
+        39
+      ],
+      [
+        3,
+        27,
+        29,
+        32,
+        34,
+        39
+      ],
+      [
+        5,
+        8,
+        14,
+        21,
+        27,
+        36
+      ],
+      [
+        5,
+        8,
+        21,
+        27,
+        36,
+        39
+      ],
+      [
+        5,
+        9,
+        14,
+        27,
+        29,
+        37
+      ],
+      [
+        5,
+        9,
+        14,
+        29,
+        37,
+        39
+      ],
+      [
+        7,
+        8,
+        21,
+        27,
+        32,
+        36
+      ],
+      [
+        7,
+        8,
+        21,
+        27,
+        36,
+        37
+      ],
+      [
+        7,
+        9,
+        14,
+        29,
+        32,
+        37
+      ],
+      [
+        7,
+        9,
+        14,
+        29,
+        36,
+        37
+      ],
+      [
+        8,
+        9,
+        14,
+        29,
+        32,
+        37
+      ],
+      [
+        8,
+        9,
+        21,
+        27,
+        32,
+        36
+      ],
+      [
+        8,
+        12,
+        21,
+        27,
+        29,
+        36
+      ],
+      [
+        8,
+        12,
+        21,
+        27,
+        34,
+        36
+      ],
+      [
+        8,
+        14,
+        21,
+        27,
+        34,
+        36
+      ],
+      [
+        8,
+        21,
+        27,
+        29,
+        36,
+        39
+      ],
+      [
+        9,
+        12,
+        14,
+        21,
+        29,
+        37
+      ],
+      [
+        9,
+        12,
+        14,
+        29,
+        34,
+        37
+      ],
+      [
+        9,
+        14,
+        21,
+        29,
+        37,
+        39
+      ],
+      [
+        9,
+        14,
+        27,
+        29,
+        34,
+        37
+      ]
+    ],
+    "candidate_subsets": 14893,
+    "critical_rays": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      10,
+      11,
+      12,
+      13,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      22,
+      23,
+      24,
+      25,
+      26,
+      28,
+      30,
+      31,
+      33,
+      35,
+      36,
+      38
+    ],
+    "tetrads": [
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        0,
+        5,
+        7,
+        12
+      ],
+      [
+        1,
+        13,
+        18,
+        20
+      ],
+      [
+        1,
+        15,
+        17,
+        19
+      ],
+      [
+        2,
+        23,
+        25,
+        30
+      ],
+      [
+        2,
+        24,
+        26,
+        28
+      ],
+      [
+        3,
+        31,
+        36,
+        38
+      ],
+      [
+        6,
+        15,
+        24,
+        31
+      ],
+      [
+        6,
+        16,
+        25,
+        35
+      ],
+      [
+        7,
+        20,
+        26,
+        36
+      ],
+      [
+        10,
+        18,
+        30,
+        38
+      ],
+      [
+        10,
+        19,
+        22,
+        33
+      ],
+      [
+        11,
+        16,
+        28,
+        38
+      ],
+      [
+        11,
+        20,
+        23,
+        33
+      ]
+    ],
+    "orthogonality_edges": 132,
+    "basis_only_coloring": [
+      0,
+      10,
+      13,
+      16,
+      17,
+      23,
+      26,
+      31
+    ],
+    "single_deletion_colorings": {
+      "0": [
+        1,
+        11,
+        22,
+        24,
+        30,
+        35,
+        36
+      ],
+      "1": [
+        0,
+        20,
+        22,
+        24,
+        25,
+        38
+      ],
+      "2": [
+        0,
+        19,
+        20,
+        24,
+        35,
+        38
+      ],
+      "3": [
+        0,
+        16,
+        19,
+        20,
+        24,
+        30
+      ],
+      "5": [
+        1,
+        11,
+        22,
+        24,
+        30,
+        35,
+        36
+      ],
+      "6": [
+        0,
+        13,
+        19,
+        23,
+        26,
+        38
+      ],
+      "7": [
+        0,
+        13,
+        19,
+        23,
+        24,
+        35,
+        38
+      ],
+      "10": [
+        0,
+        17,
+        20,
+        25,
+        28,
+        31
+      ],
+      "11": [
+        1,
+        6,
+        12,
+        22,
+        28,
+        30,
+        36
+      ],
+      "12": [
+        1,
+        11,
+        22,
+        24,
+        30,
+        35,
+        36
+      ],
+      "13": [
+        0,
+        15,
+        25,
+        26,
+        33,
+        38
+      ],
+      "15": [
+        0,
+        20,
+        22,
+        24,
+        25,
+        38
+      ],
+      "16": [
+        0,
+        15,
+        18,
+        22,
+        23,
+        28,
+        36
+      ],
+      "17": [
+        0,
+        20,
+        22,
+        24,
+        25,
+        38
+      ],
+      "18": [
+        0,
+        15,
+        22,
+        23,
+        28,
+        35,
+        36
+      ],
+      "19": [
+        0,
+        20,
+        28,
+        30,
+        31,
+        35
+      ],
+      "20": [
+        0,
+        19,
+        23,
+        24,
+        35,
+        38
+      ],
+      "22": [
+        1,
+        7,
+        23,
+        24,
+        35,
+        38
+      ],
+      "23": [
+        0,
+        19,
+        20,
+        24,
+        35,
+        38
+      ],
+      "24": [
+        0,
+        16,
+        19,
+        20,
+        30,
+        31
+      ],
+      "25": [
+        0,
+        19,
+        20,
+        24,
+        35,
+        38
+      ],
+      "26": [
+        0,
+        16,
+        19,
+        20,
+        30,
+        31
+      ],
+      "28": [
+        0,
+        19,
+        20,
+        30,
+        31,
+        35
+      ],
+      "30": [
+        0,
+        19,
+        20,
+        24,
+        35,
+        38
+      ],
+      "31": [
+        0,
+        16,
+        19,
+        20,
+        24,
+        30
+      ],
+      "33": [
+        0,
+        13,
+        16,
+        17,
+        24,
+        30,
+        36
+      ],
+      "35": [
+        0,
+        15,
+        18,
+        22,
+        23,
+        28,
+        36
+      ],
+      "36": [
+        0,
+        16,
+        19,
+        20,
+        24,
+        30
+      ],
+      "38": [
+        0,
+        19,
+        20,
+        24,
+        30,
+        35
+      ]
+    },
+    "scope": "Minimum extension of this fixed paired-Reye union; no global KS minimum or fourteen-tetrad-only contradiction."
+  },
+  "arrays": {
+    "status": "PASS",
+    "array_files": 3,
+    "embedding_arrays": 1,
+    "csv_structure_rows": 2730,
+    "projective_unitary_group": 25920,
+    "exact_triflection_generators": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        21,
+        19,
+        20,
+        15,
+        13,
+        14,
+        18,
+        16,
+        17,
+        30,
+        28,
+        29,
+        24,
+        22,
+        23,
+        27,
+        25,
+        26,
+        39,
+        37,
+        38,
+        33,
+        31,
+        32,
+        36,
+        34,
+        35
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        12,
+        10,
+        11,
+        6,
+        4,
+        5,
+        9,
+        7,
+        8,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        22,
+        23,
+        24,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        31,
+        32,
+        33
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        4,
+        5,
+        6,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        13,
+        14,
+        15,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        32,
+        33,
+        31,
+        35,
+        36,
+        34,
+        38,
+        39,
+        37
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        4,
+        8,
+        9,
+        7,
+        11,
+        12,
+        10,
+        14,
+        15,
+        13,
+        17,
+        18,
+        16,
+        20,
+        21,
+        19,
+        23,
+        24,
+        22,
+        26,
+        27,
+        25,
+        29,
+        30,
+        28,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      [
+        0,
+        8,
+        10,
+        6,
+        4,
+        3,
+        5,
+        2,
+        12,
+        9,
+        7,
+        11,
+        1,
+        13,
+        36,
+        23,
+        27,
+        17,
+        37,
+        32,
+        28,
+        21,
+        22,
+        38,
+        14,
+        18,
+        26,
+        33,
+        34,
+        19,
+        30,
+        31,
+        29,
+        16,
+        20,
+        35,
+        24,
+        25,
+        15,
+        39
+      ],
+      [
+        17,
+        1,
+        19,
+        15,
+        4,
+        38,
+        23,
+        29,
+        8,
+        35,
+        32,
+        26,
+        12,
+        13,
+        3,
+        14,
+        2,
+        21,
+        18,
+        16,
+        20,
+        0,
+        22,
+        36,
+        5,
+        25,
+        39,
+        10,
+        28,
+        33,
+        9,
+        31,
+        27,
+        7,
+        34,
+        30,
+        6,
+        37,
+        24,
+        11
+      ],
+      [
+        26,
+        28,
+        2,
+        24,
+        4,
+        36,
+        14,
+        7,
+        34,
+        17,
+        10,
+        35,
+        20,
+        13,
+        38,
+        5,
+        16,
+        39,
+        8,
+        19,
+        37,
+        11,
+        22,
+        3,
+        23,
+        1,
+        30,
+        27,
+        25,
+        29,
+        0,
+        31,
+        32,
+        33,
+        18,
+        21,
+        15,
+        12,
+        6,
+        9
+      ],
+      [
+        35,
+        37,
+        33,
+        3,
+        4,
+        5,
+        6,
+        27,
+        25,
+        26,
+        16,
+        17,
+        18,
+        13,
+        14,
+        15,
+        29,
+        30,
+        28,
+        7,
+        8,
+        9,
+        22,
+        23,
+        24,
+        20,
+        21,
+        19,
+        12,
+        10,
+        11,
+        31,
+        2,
+        32,
+        1,
+        39,
+        36,
+        34,
+        38,
+        0
+      ]
+    ],
+    "Reye_orbit": 540,
+    "paired_orbit": 270,
+    "Reye_stabilizer": 48,
+    "pair_stabilizer": 96,
+    "scope": "Every supplied array entry is loaded; ray/projector, algebra, phase, symmetry, embedding and CSV data are checked. Matrix-array checks use declared tolerances; group generation and generator projective matches use exact Eisenstein arithmetic."
+  },
+  "prior_art": [
+    "Pass4963 exact Witting/W33 point graph and Bargmann phase table",
+    "Pass8909-8916 complementary D4/Reye selector",
+    "11625-11629 Peres and coherent-query controls",
+    "Vlasov2208.13644v2 Witting coordinates,90 complex lines,measurement circuits"
+  ],
+  "boundary": "An exact finite-geometry audit and an engineered quantum instrument. No observed masses, mixing, spacetime action, universal hardware or complete TOE is derived.",
+  "producer_sha256": "02ccddd0407145a00bda77e5374c4962f71716bf4a9122b6d732e5cb52e28f45"
+}
