@@ -1,0 +1,17 @@
+{
+  "Weyl_minus_commutant_dim": 1,
+  "Weyl_plus_commutant_dim": 1,
+  "boundary": "Commutant dimensions are certified numerically with a large singular-value gap on the exact rational representation; the algebraic identification is the standard complex Clifford-even decomposition into two inequivalent Weyl irreps.",
+  "clock_firewall": "Because the certified two-tick clock sends Chi to -Chi, any nonzero b breaks that clock symmetry. A clock-even polynomial in Chi is proportional to I and cannot select a Weyl sector.",
+  "commutant_basis": "span{I,Chi}",
+  "cross_intertwiner_dim": 0,
+  "full_Dirac_commutant_dim": 2,
+  "numerical_rank_gaps": {
+    "cross_smallest": 5.9999999999999964,
+    "minus": 7.9999999999999964,
+    "plus": 7.9999999999999964
+  },
+  "selector": "P_plus=(I+Chi)/2 or P_minus=(I-Chi)/2",
+  "status": "PASS_GAUGE_INVARIANT_WEYL_SELECTOR_UNIQUE_UP_TO_IDENTITY",
+  "theorem": "On the executable Spin(10) Dirac carrier, every gauge-invariant Hermitian selector is aI+bChi. There is no independent Hesse/clock/arrow gauge-invariant involution capable of choosing chirality."
+}

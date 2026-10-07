@@ -1,0 +1,28 @@
+{
+  "boundary": "The admissible phase depends on lattice resolution and Wilson mass; this is not a continuum proof by itself.",
+  "scan": [
+    {
+      "L": 5,
+      "gap": 0.008522567363200654,
+      "index": -35,
+      "mass": 1.6,
+      "q": 6
+    },
+    {
+      "L": 5,
+      "gap": 0.03207214275325282,
+      "index": -36,
+      "mass": 1.7,
+      "q": 6
+    },
+    {
+      "L": 5,
+      "gap": 0.08121375196882431,
+      "index": -36,
+      "mass": 1.8,
+      "q": 6
+    }
+  ],
+  "status": "PASS_Q6_OVERLAP_INDEX_MINUS36_RESOLVED_ON_L5",
+  "theorem": "The largest primitive SM hypercharge magnitude q=6 has a well-defined overlap phase on the L=5 background: after the finite-volume spectral-flow crossing, m0=1.7 and 1.8 give index -36=-q^2 with nonzero Wilson gap."
+}

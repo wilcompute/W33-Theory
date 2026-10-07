@@ -1,0 +1,72 @@
+{
+  "Hesse_parameter_lambda": "(a**3 + 2*b**3)/(3*a*b**2)",
+  "Yukawa_matrix": "[[a h0,b h2,b h1],[b h2,a h1,b h0],[b h1,b h0,a h2]]",
+  "basis_supports": [
+    [
+      [
+        [
+          0,
+          1,
+          2
+        ],
+        "1"
+      ],
+      [
+        [
+          0,
+          2,
+          1
+        ],
+        "1"
+      ],
+      [
+        [
+          1,
+          2,
+          0
+        ],
+        "1"
+      ]
+    ],
+    [
+      [
+        [
+          0,
+          0,
+          0
+        ],
+        "1"
+      ],
+      [
+        [
+          1,
+          1,
+          1
+        ],
+        "1"
+      ],
+      [
+        [
+          2,
+          2,
+          2
+        ],
+        "1"
+      ]
+    ]
+  ],
+  "boundary": "Delta(54) fixes the tensor space to two complex coefficients; it does not predict their values or the Higgs alignment.",
+  "cross_track_map": "a=s=Y_same, b=d=Y_dist; this is exactly the Pass11114 Hesse mass matrix, now welded to the Spin(10) 16*16*10_H channel.",
+  "determinant": "a**3*h0*h1*h2 - a*b**2*h0**3 - a*b**2*h1**3 - a*b**2*h2**3 + 2*b**3*h0*h1*h2",
+  "equal_vev_eigenvalues": [
+    "a+2b",
+    "a-b",
+    "a-b"
+  ],
+  "pass11114_lambda_cubed_at_rho": [
+    0.9999999999999992,
+    -2.220446049250313e-16
+  ],
+  "status": "PASS_SPIN10_FAMILY_TRIPLET_HAS_TWO_DELTA54_YUKAWA_TENSORS_AND_HESSE_DETERMINANT",
+  "symmetric_family_tensor_dimension": 2
+}

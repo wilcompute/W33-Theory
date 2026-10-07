@@ -1,0 +1,54 @@
+{
+  "boundary": "This is evidence that the present Wilson/Dirac discretization has not yet reached an EH-dominated spectral regime. It is not a proof that no continuum EH limit exists; improved operator scaling, counterterms or larger L may change the conclusion.",
+  "curvature_reading": "The integrated scalar curvature is nonzero and moves toward a finite negative value under refinement.",
+  "frame_family": "smooth non-diagonal periodic 3-frame on a fixed physical (2pi)^3 torus, volume normalized",
+  "rows": [
+    {
+      "L": 3,
+      "delta_heat": {
+        "0.2": -0.015377512149015615,
+        "0.5": -0.03185160035326362,
+        "1.0": -0.047133166802979076
+      },
+      "intR": -0.034225475687592766,
+      "ratio": {
+        "0.2": 0.44930017304595676,
+        "0.5": 0.9306401069192528,
+        "1.0": 1.3771369383790781
+      },
+      "seconds": 0.04590892791748047
+    },
+    {
+      "L": 5,
+      "delta_heat": {
+        "0.2": -0.32596940803563257,
+        "0.5": -0.4245731166485598,
+        "1.0": -0.25743972106573665
+      },
+      "intR": -0.11589629550826913,
+      "ratio": {
+        "0.2": 2.8125955761232664,
+        "0.5": 3.6633881591001045,
+        "1.0": 2.2212937862830007
+      },
+      "seconds": 1.0905852317810059
+    },
+    {
+      "L": 7,
+      "delta_heat": {
+        "0.2": -1.299230210487167,
+        "0.5": -0.5891474985660352,
+        "1.0": 0.44439225328898146
+      },
+      "intR": -0.1535119045860992,
+      "ratio": {
+        "0.2": 8.463384087313413,
+        "0.5": 3.837796815527124,
+        "1.0": -2.894839032107364
+      },
+      "seconds": 6.194267988204956
+    }
+  ],
+  "spectral_reading": "At fixed heat time, Delta Tr exp(-tD^2) / int(sqrt(g)R) is not lattice-size independent through L=7.",
+  "status": "FIREWALL_REFINED_CURVATURE_NONZERO_BUT_EH_SPECTRAL_COEFFICIENT_NOT_STABILIZED_THROUGH_L7"
+}

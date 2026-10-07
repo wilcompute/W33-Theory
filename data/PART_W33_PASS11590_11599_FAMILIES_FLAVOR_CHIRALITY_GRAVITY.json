@@ -1,0 +1,278 @@
+{
+  "11599": {
+    "architecture": "external A2 family triplet x internal Spin(10) Weyl16 x external 4D overlap spacetime factor",
+    "chirality": "Spin(10)-gauge-invariant selector space is span{I,Chi}; the pure clock cannot select chirality because G^4=-I",
+    "flavor": "Delta(54) permits exactly two symmetric family Yukawa tensors; their Higgs-triplet determinant is a Hesse cubic",
+    "flavor_breaking": "full H27:SL(2,3) forbids that cubic Yukawa entirely, so reduction to Delta(54) is necessary",
+    "gauge_normalization": "Spin(10) Weyl16 gives TrY^2/T_SU2=5/3 and tree-level unification sin^2(theta_W)=3/8",
+    "gravity": "non-diagonal scalar-curvature integrals become nonzero under refinement, but the spectral heat/curvature coefficient is not yet lattice-size independent",
+    "neutrino": "nu^c Majorana mass requires the unique 126-type symmetric channel with a neutral B-L=-2, T3R=+1 scalar VEV",
+    "overlap": "all primitive hypercharge magnitudes 1,2,3,4,6 now have explicitly resolved -q^2 overlap sectors; q=6 is resolved at L=5,m0>=1.7 in the tested background",
+    "physical_boundary": "The packet does not derive the chiral-shell vacuum choice, the Delta54 breaking potential, measured family Yukawa coefficients/mixings, the 126 VEV scale, RG evolution/thresholds, or an Einstein-Hilbert continuum limit.",
+    "status": "PASS_SYNTHESIS_THREE_FAMILY_SPIN10_HESSE_FLAVOR_WITH_EXPLICIT_OPEN_BOUNDARIES",
+    "three_family_matter": "one selected E8 (27,3) shell branches to 3*(16+10+1); the three 16s are the exact family candidate"
+  },
+  "passes": {
+    "11590": {
+      "E6_to_Spin10_U1": "27 = 16_1 + 10_-2 + 1_4",
+      "E8_branch": "248=(78,1)+(1,8)+(27,3)+(27bar,3bar)",
+      "chosen_matter_shell": "(27,3)",
+      "chosen_shell_D5_content": {
+        "Spin10_1": 3,
+        "Spin10_10": 30,
+        "Spin10_16": 48
+      },
+      "external_H27_center_trace_on_matter81": "81*omega (or 81*omega^2 on conjugate shell)",
+      "family_factor": "external SU(3) triplet; its H27 clock/shift is the certified physical external-A2 H27",
+      "full_E8_firewall": "The adjoint contains both (27,3) and (27bar,3bar). Selecting one chiral shell is still a vacuum/chirality problem; the theorem is representation-theoretic, not a completed compactification.",
+      "modules_are_inequivalent": true,
+      "status": "PASS_E8_EXTERNAL_A2_TRIPLICATES_SPIN10_WEYL16_WITH_MODULE_SEPARATION_FIREWALL",
+      "steinberg_H1_restriction": "3 Reg(H27)",
+      "steinberg_nonidentity_character": 0,
+      "three_chiral_spin10_16s_dimension": 48
+    },
+    "11591": {
+      "Hesse_parameter_lambda": "(a**3 + 2*b**3)/(3*a*b**2)",
+      "Yukawa_matrix": "[[a h0,b h2,b h1],[b h2,a h1,b h0],[b h1,b h0,a h2]]",
+      "basis_supports": [
+        [
+          [
+            [
+              0,
+              1,
+              2
+            ],
+            "1"
+          ],
+          [
+            [
+              0,
+              2,
+              1
+            ],
+            "1"
+          ],
+          [
+            [
+              1,
+              2,
+              0
+            ],
+            "1"
+          ]
+        ],
+        [
+          [
+            [
+              0,
+              0,
+              0
+            ],
+            "1"
+          ],
+          [
+            [
+              1,
+              1,
+              1
+            ],
+            "1"
+          ],
+          [
+            [
+              2,
+              2,
+              2
+            ],
+            "1"
+          ]
+        ]
+      ],
+      "boundary": "Delta(54) fixes the tensor space to two complex coefficients; it does not predict their values or the Higgs alignment.",
+      "cross_track_map": "a=s=Y_same, b=d=Y_dist; this is exactly the Pass11114 Hesse mass matrix, now welded to the Spin(10) 16*16*10_H channel.",
+      "determinant": "a**3*h0*h1*h2 - a*b**2*h0**3 - a*b**2*h1**3 - a*b**2*h2**3 + 2*b**3*h0*h1*h2",
+      "equal_vev_eigenvalues": [
+        "a+2b",
+        "a-b",
+        "a-b"
+      ],
+      "pass11114_lambda_cubed_at_rho": [
+        0.9999999999999992,
+        -2.220446049250313e-16
+      ],
+      "status": "PASS_SPIN10_FAMILY_TRIPLET_HAS_TWO_DELTA54_YUKAWA_TENSORS_AND_HESSE_DETERMINANT",
+      "symmetric_family_tensor_dimension": 2
+    },
+    "11592": {
+      "boundary": "The admissible phase depends on lattice resolution and Wilson mass; this is not a continuum proof by itself.",
+      "scan": [
+        {
+          "L": 5,
+          "gap": 0.008522567363200654,
+          "index": -35,
+          "mass": 1.6,
+          "q": 6
+        },
+        {
+          "L": 5,
+          "gap": 0.03207214275325282,
+          "index": -36,
+          "mass": 1.7,
+          "q": 6
+        },
+        {
+          "L": 5,
+          "gap": 0.08121375196882431,
+          "index": -36,
+          "mass": 1.8,
+          "q": 6
+        }
+      ],
+      "status": "PASS_Q6_OVERLAP_INDEX_MINUS36_RESOLVED_ON_L5",
+      "theorem": "The largest primitive SM hypercharge magnitude q=6 has a well-defined overlap phase on the L=5 background: after the finite-volume spectral-flow crossing, m0=1.7 and 1.8 give index -36=-q^2 with nonzero Wilson gap."
+    },
+    "11593": {
+      "Weyl_minus_commutant_dim": 1,
+      "Weyl_plus_commutant_dim": 1,
+      "boundary": "Commutant dimensions are certified numerically with a large singular-value gap on the exact rational representation; the algebraic identification is the standard complex Clifford-even decomposition into two inequivalent Weyl irreps.",
+      "clock_firewall": "Because the certified two-tick clock sends Chi to -Chi, any nonzero b breaks that clock symmetry. A clock-even polynomial in Chi is proportional to I and cannot select a Weyl sector.",
+      "commutant_basis": "span{I,Chi}",
+      "cross_intertwiner_dim": 0,
+      "full_Dirac_commutant_dim": 2,
+      "numerical_rank_gaps": {
+        "cross_smallest": 5.9999999999999964,
+        "minus": 7.9999999999999964,
+        "plus": 7.9999999999999964
+      },
+      "selector": "P_plus=(I+Chi)/2 or P_minus=(I-Chi)/2",
+      "status": "PASS_GAUGE_INVARIANT_WEYL_SELECTOR_UNIQUE_UP_TO_IDENTITY",
+      "theorem": "On the executable Spin(10) Dirac carrier, every gauge-invariant Hermitian selector is aI+bChi. There is no independent Hesse/clock/arrow gauge-invariant involution capable of choosing chirality."
+    },
+    "11594": {
+      "boundary": "This is evidence that the present Wilson/Dirac discretization has not yet reached an EH-dominated spectral regime. It is not a proof that no continuum EH limit exists; improved operator scaling, counterterms or larger L may change the conclusion.",
+      "curvature_reading": "The integrated scalar curvature is nonzero and moves toward a finite negative value under refinement.",
+      "frame_family": "smooth non-diagonal periodic 3-frame on a fixed physical (2pi)^3 torus, volume normalized",
+      "rows": [
+        {
+          "L": 3,
+          "delta_heat": {
+            "0.2": -0.015377512149015615,
+            "0.5": -0.03185160035326362,
+            "1.0": -0.047133166802979076
+          },
+          "intR": -0.034225475687592766,
+          "ratio": {
+            "0.2": 0.44930017304595676,
+            "0.5": 0.9306401069192528,
+            "1.0": 1.3771369383790781
+          },
+          "seconds": 0.04590892791748047
+        },
+        {
+          "L": 5,
+          "delta_heat": {
+            "0.2": -0.32596940803563257,
+            "0.5": -0.4245731166485598,
+            "1.0": -0.25743972106573665
+          },
+          "intR": -0.11589629550826913,
+          "ratio": {
+            "0.2": 2.8125955761232664,
+            "0.5": 3.6633881591001045,
+            "1.0": 2.2212937862830007
+          },
+          "seconds": 1.0905852317810059
+        },
+        {
+          "L": 7,
+          "delta_heat": {
+            "0.2": -1.299230210487167,
+            "0.5": -0.5891474985660352,
+            "1.0": 0.44439225328898146
+          },
+          "intR": -0.1535119045860992,
+          "ratio": {
+            "0.2": 8.463384087313413,
+            "0.5": 3.837796815527124,
+            "1.0": -2.894839032107364
+          },
+          "seconds": 6.194267988204956
+        }
+      ],
+      "spectral_reading": "At fixed heat time, Delta Tr exp(-tD^2) / int(sqrt(g)R) is not lattice-size independent through L=7.",
+      "status": "FIREWALL_REFINED_CURVATURE_NONZERO_BUT_EH_SPECTRAL_COEFFICIENT_NOT_STABILIZED_THROUGH_L7"
+    },
+    "11595": {
+      "10H_excluded": "10_H=(6,1,1)+(1,2,2) under Pati-Salam; it contains no SU(2)_R triplet with r=+2 and qBL=-6.",
+      "Majorana_channel": "the scalar representation conjugate to the unique 126 component of Sym^2(16)",
+      "boundary": "The existence, scale and family texture of the 126-type VEV are not derived here.",
+      "nu_c_charges": {
+        "qBL": 3,
+        "r": -1,
+        "sixY": 0
+      },
+      "nu_c_pair_charges": {
+        "qBL": 6,
+        "r": -2,
+        "sixY": 0
+      },
+      "required_scalar_vev_charges": {
+        "qBL": -6,
+        "r": 2,
+        "sixY": 0
+      },
+      "seesaw_reading": "A neutral B-L=-2, T3R=+1 VEV in that channel gives a Majorana mass to nu^c while preserving U(1)_Y.",
+      "status": "PASS_UNIQUE_SPIN10_RIGHT_HANDED_NEUTRINO_MAJORANA_CHANNEL",
+      "symmetric_square": "Sym^2(16)=10+126, both multiplicity one"
+    },
+    "11596": {
+      "GUT_normalized_generator": "Y1=sqrt(3/5) Y",
+      "SU2L_Dynkin_index": "2",
+      "SU3_Dynkin_index": "2",
+      "TrY2_over_T2": "5/3",
+      "Tr_Y2_on_Weyl16": "10/3",
+      "boundary": "3/8 is the unification-scale normalization prediction. Running and thresholds are required before comparison with low-energy data.",
+      "coupling_relation": "g1=sqrt(5/3) gY; at Spin(10) unification gY^2=(3/5)gU^2",
+      "status": "PASS_CANONICAL_SPIN10_HYPERCHARGE_NORMALIZATION",
+      "tree_level_unification_sin2thetaW": "3/8"
+    },
+    "11597": {
+      "Clifford648_invariant_dimension": 0,
+      "Delta54_invariant_dimension": 2,
+      "F_on_Hesse_pair": [
+        [
+          "sqrt(3)/3",
+          "sqrt(3)/3"
+        ],
+        [
+          "2*sqrt(3)/3",
+          "-sqrt(3)/3"
+        ]
+      ],
+      "P_on_Hesse_pair": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "-1/2 + sqrt(3)*I/2"
+        ]
+      ],
+      "boundary": "This proves symmetry breaking is necessary for this 10_H triplet Yukawa, not the dynamical origin or scale of that breaking.",
+      "interpretation": "The full H27:SL(2,3) family normalizer leaves no symmetric 3x3x3 Yukawa scalar. Reducing to the realized Delta(54)=H27:<-I> releases exactly the two Hesse tensors.",
+      "status": "PASS_FULL_QUTRIT_CLIFFORD_FORBIDS_SYMMETRIC_TRIPLET_YUKAWA_DELTA54_RELEASES_HESSE_PAIR"
+    },
+    "11598": {
+      "G2_equals_i_gamma10_error": 8.88366936042138e-15,
+      "G4_chirality_commutator_error": 5.029679815002691e-15,
+      "G4_equals_minus_identity_error": 1.776733872084276e-14,
+      "G8_equals_identity_error": 3.553467744168553e-14,
+      "no_go": "The pure order-eight clock therefore has no nontrivial chirality-preserving four-tick Floquet dynamics that could select one Weyl sector. A selector requires an additional clock-odd order parameter or explicit symmetry reduction.",
+      "status": "PASS_CLOCK_FLOQUET_FOUR_TICK_RETURN_IS_SCALAR_NO_SELECTOR",
+      "theorem": "Two clock ticks are i*Gamma_10 and exchange Spin(10) Weyl chirality; four ticks return to the same chirality but the Floquet operator is only -I; eight ticks are I."
+    }
+  },
+  "schema": "w33.pass11590-11599.families-flavor-chirality-gravity.v1",
+  "status": "PASS_WITH_CHIRALITY_AND_GRAVITY_FIREWALLS"
+}

@@ -1,0 +1,18 @@
+{
+  "E6_to_Spin10_U1": "27 = 16_1 + 10_-2 + 1_4",
+  "E8_branch": "248=(78,1)+(1,8)+(27,3)+(27bar,3bar)",
+  "chosen_matter_shell": "(27,3)",
+  "chosen_shell_D5_content": {
+    "Spin10_1": 3,
+    "Spin10_10": 30,
+    "Spin10_16": 48
+  },
+  "external_H27_center_trace_on_matter81": "81*omega (or 81*omega^2 on conjugate shell)",
+  "family_factor": "external SU(3) triplet; its H27 clock/shift is the certified physical external-A2 H27",
+  "full_E8_firewall": "The adjoint contains both (27,3) and (27bar,3bar). Selecting one chiral shell is still a vacuum/chirality problem; the theorem is representation-theoretic, not a completed compactification.",
+  "modules_are_inequivalent": true,
+  "status": "PASS_E8_EXTERNAL_A2_TRIPLICATES_SPIN10_WEYL16_WITH_MODULE_SEPARATION_FIREWALL",
+  "steinberg_H1_restriction": "3 Reg(H27)",
+  "steinberg_nonidentity_character": 0,
+  "three_chiral_spin10_16s_dimension": 48
+}

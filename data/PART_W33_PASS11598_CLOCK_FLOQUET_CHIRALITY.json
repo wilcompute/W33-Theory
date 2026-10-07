@@ -1,0 +1,9 @@
+{
+  "G2_equals_i_gamma10_error": 8.88366936042138e-15,
+  "G4_chirality_commutator_error": 5.029679815002691e-15,
+  "G4_equals_minus_identity_error": 1.776733872084276e-14,
+  "G8_equals_identity_error": 3.553467744168553e-14,
+  "no_go": "The pure order-eight clock therefore has no nontrivial chirality-preserving four-tick Floquet dynamics that could select one Weyl sector. A selector requires an additional clock-odd order parameter or explicit symmetry reduction.",
+  "status": "PASS_CLOCK_FLOQUET_FOUR_TICK_RETURN_IS_SCALAR_NO_SELECTOR",
+  "theorem": "Two clock ticks are i*Gamma_10 and exchange Spin(10) Weyl chirality; four ticks return to the same chirality but the Floquet operator is only -I; eight ticks are I."
+}

@@ -1,0 +1,11 @@
+{
+  "GUT_normalized_generator": "Y1=sqrt(3/5) Y",
+  "SU2L_Dynkin_index": "2",
+  "SU3_Dynkin_index": "2",
+  "TrY2_over_T2": "5/3",
+  "Tr_Y2_on_Weyl16": "10/3",
+  "boundary": "3/8 is the unification-scale normalization prediction. Running and thresholds are required before comparison with low-energy data.",
+  "coupling_relation": "g1=sqrt(5/3) gY; at Spin(10) unification gY^2=(3/5)gU^2",
+  "status": "PASS_CANONICAL_SPIN10_HYPERCHARGE_NORMALIZATION",
+  "tree_level_unification_sin2thetaW": "3/8"
+}

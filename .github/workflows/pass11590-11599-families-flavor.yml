@@ -1,0 +1,33 @@
+name: Pass 11590-11599 families flavor chirality gravity
+on:
+  push:
+    paths:
+      - 'analysis/w33_pass1159*.py'
+      - 'analysis/PASS11590_11599_FAMILIES_FLAVOR_CHIRALITY_GRAVITY.md'
+      - 'data/PART_W33_PASS1159*.json'
+      - 'tests/test_w33_pass11590_11599.py'
+      - '.github/workflows/pass11590-11599-families-flavor.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy scipy sympy pytest
+      - name: Run Pass 11590-11599 producers
+        run: |
+          python analysis/w33_pass11590_e8_three_spin10_families.py
+          python analysis/w33_pass11591_spin10_delta54_hesse_yukawa.py
+          python analysis/w33_pass11592_q6_overlap_admissibility.py
+          python analysis/w33_pass11593_unique_weyl_selector.py
+          python analysis/w33_pass11594_refined_gravity_firewall.py
+          python analysis/w33_pass11595_neutrino_majorana_channel.py
+          python analysis/w33_pass11596_spin10_coupling_normalization.py
+          python analysis/w33_pass11597_family_clifford_breaking.py
+          python analysis/w33_pass11598_clock_floquet_chirality.py
+          python analysis/w33_pass11599_synthesis.py
+      - run: python -m pytest -q tests/test_w33_pass11590_11599.py

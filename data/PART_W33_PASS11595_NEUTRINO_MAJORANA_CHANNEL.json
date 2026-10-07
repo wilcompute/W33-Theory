@@ -1,0 +1,23 @@
+{
+  "10H_excluded": "10_H=(6,1,1)+(1,2,2) under Pati-Salam; it contains no SU(2)_R triplet with r=+2 and qBL=-6.",
+  "Majorana_channel": "the scalar representation conjugate to the unique 126 component of Sym^2(16)",
+  "boundary": "The existence, scale and family texture of the 126-type VEV are not derived here.",
+  "nu_c_charges": {
+    "qBL": 3,
+    "r": -1,
+    "sixY": 0
+  },
+  "nu_c_pair_charges": {
+    "qBL": 6,
+    "r": -2,
+    "sixY": 0
+  },
+  "required_scalar_vev_charges": {
+    "qBL": -6,
+    "r": 2,
+    "sixY": 0
+  },
+  "seesaw_reading": "A neutral B-L=-2, T3R=+1 VEV in that channel gives a Majorana mass to nu^c while preserving U(1)_Y.",
+  "status": "PASS_UNIQUE_SPIN10_RIGHT_HANDED_NEUTRINO_MAJORANA_CHANNEL",
+  "symmetric_square": "Sym^2(16)=10+126, both multiplicity one"
+}
