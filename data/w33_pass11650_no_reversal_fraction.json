@@ -38,5 +38,17 @@
   "no_reversal": 1129,
   "fraction": 0.03763333333333333,
   "stderr": 0.001098742698960279
+ },
+ "s6": {
+  "samples": 30000,
+  "no_reversal": 1194,
+  "fraction": 0.0398,
+  "stderr": 0.001128656428384357
+ },
+ "s7": {
+  "samples": 15000,
+  "no_reversal": 585,
+  "fraction": 0.039,
+  "stderr": 0.0015806960492137634
  }
 }

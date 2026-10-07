@@ -54,3 +54,17 @@ The fraction rises from 0.025 to 0.0357 and then **settles near 0.037**. No clos
   not reachable from JMJ by any linear intertwiner fixing the magic axis.
 * That is a cyclic-module condition on the pair (M, z₁), checkable in polynomial time at every n.
 * The fraction of such classes is small and appears to converge, around 3.7%.
+
+## Addendum (Pass 11659 round): larger n
+
+The same producer (stages `s6`, `s7`) gives:
+
+| n | samples | fraction |
+|---|---|---|
+| 6 | 30 000 | 0.0398 ± 0.0011 |
+| 7 | 15 000 | 0.0390 ± 0.0016 |
+
+* **The trend.** 0.025, 0.0357, 0.0373, 0.0376, 0.0398, 0.039. The fraction keeps creeping up slowly and appears to
+  settle near 0.039–0.040.
+* **n = 8 is out of reach** for this decider: its Weyl label table alone has 3¹⁶ rows.
+* **No closed form is claimed.** In particular the closeness to 1/25 is not claimed.

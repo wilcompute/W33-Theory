@@ -98,9 +98,12 @@ not the W33 point graph.** That is natural: a stabiliser basis is a Lagrangian p
   collinearity graph SRG(40, 12, 2, 4). The Burkhardt quartic itself has **45** nodes, matching the 45 reflections of G₃₃
   found here, and 40 j-planes.
 * **What the explicit map adds.** The 40 objects that actually appear here are the 40 stabiliser bases. Their overlap
-  graph is the Q(4,3) form of SRG(40, 12, 2, 4), dual to the W(3,3) point graph. Any "j-planes ~ points of W(3,3)"
-  identification therefore needs this duality made explicit.
+  graph is the Q(4,3) form of SRG(40, 12, 2, 4), dual to the W(3,3) point graph. 
+* **Pass 11657 settles the identification.** BREAKTHROUGH 72's "j-planes ~ points of W(3,3)" is correct. The 40
+  Burkhardt j-planes are the eigen-planes of the 40 transvection ticks, i.e. the W(3,3) points, and two of them meet in
+  a line iff the points are collinear. The stabiliser bases sit on the other, Q(4,3), side.
 
 **Not done here.**
 * The two-qutrit analogue of the CP sign (Im of G₃₃ invariant ratios).
-* An identification of the 40 points with the Burkhardt "j-planes". This is plausible but not checked.
+* The j-planes were identified only later, in Pass 11657: they are the tick eigen-planes (the W(3,3) points), not
+  these 40 stabiliser points.

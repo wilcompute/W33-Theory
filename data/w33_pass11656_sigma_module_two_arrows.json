@@ -1,0 +1,85 @@
+{
+ "pass_id": 11656,
+ "by_degree": {
+  "6": {
+   "listed": 1,
+   "span": 1,
+   "full_on_Sigma": 1,
+   "relations": 0
+  },
+  "7": {
+   "listed": 2,
+   "span": 2,
+   "full_on_Sigma": 2,
+   "relations": 0
+  },
+  "8": {
+   "listed": 3,
+   "span": 3,
+   "full_on_Sigma": 3,
+   "relations": 0
+  },
+  "9": {
+   "listed": 5,
+   "span": 4,
+   "full_on_Sigma": 4,
+   "relations": 1
+  },
+  "10": {
+   "listed": 7,
+   "span": 6,
+   "full_on_Sigma": 6,
+   "relations": 1
+  },
+  "11": {
+   "listed": 9,
+   "span": 7,
+   "full_on_Sigma": 7,
+   "relations": 2
+  },
+  "12": {
+   "listed": 12,
+   "span": 9,
+   "full_on_Sigma": 9,
+   "relations": 3
+  },
+  "13": {
+   "listed": 15,
+   "span": 11,
+   "full_on_Sigma": 11,
+   "relations": 4
+  },
+  "14": {
+   "listed": 18,
+   "span": 13,
+   "full_on_Sigma": 13,
+   "relations": 5
+  },
+  "15": {
+   "listed": 22,
+   "span": 15,
+   "full_on_Sigma": 15,
+   "relations": 7
+  }
+ },
+ "relations_match_t9_over_R": true,
+ "generated_by_g6_g7": true,
+ "degree9_relation": {
+  "terms": [
+   "N^3 g6",
+   "N e_s g6",
+   "Pi_s g6",
+   "N^2 g7",
+   "e_s g7"
+  ],
+  "coefficients": [
+   "-1/4",
+   "1",
+   "-1/8",
+   "1/8",
+   "-1/2"
+  ],
+  "smallest_singular_value_ratio": 1.0000785026041577e-14,
+  "relative_residual_on_fresh_points": 4.5912475148977765e-15
+ }
+}
