@@ -1,0 +1,46 @@
+name: Pass 11590-11599 families flavor chirality gravity
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analysis/w33_pass11590_e8_three_spin10_families.py'
+      - 'analysis/w33_pass11591_spin10_delta54_hesse_yukawa.py'
+      - 'analysis/w33_pass11592_q6_overlap_admissibility.py'
+      - 'analysis/w33_pass11593_unique_weyl_selector.py'
+      - 'analysis/w33_pass11594_refined_gravity_firewall.py'
+      - 'analysis/w33_pass11595_neutrino_majorana_channel.py'
+      - 'analysis/w33_pass11596_spin10_coupling_normalization.py'
+      - 'analysis/w33_pass11597_family_clifford_breaking.py'
+      - 'analysis/w33_pass11598_clock_floquet_chirality.py'
+      - 'analysis/w33_pass11599_synthesis.py'
+      - 'data/PART_W33_PASS11590_11599_FAMILIES_FLAVOR_CHIRALITY_GRAVITY.json'
+      - 'tests/test_w33_pass11590_11599.py'
+      - '.github/workflows/pass11590-11599-families-flavor-gravity.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --upgrade pip numpy scipy sympy pytest
+      - name: Exact family and flavor passes
+        run: |
+          python analysis/w33_pass11590_e8_three_spin10_families.py
+          python analysis/w33_pass11591_spin10_delta54_hesse_yukawa.py
+          python analysis/w33_pass11593_unique_weyl_selector.py
+          python analysis/w33_pass11595_neutrino_majorana_channel.py
+          python analysis/w33_pass11596_spin10_coupling_normalization.py
+          python analysis/w33_pass11597_family_clifford_breaking.py
+          python analysis/w33_pass11598_clock_floquet_chirality.py
+      - name: Lattice overlap and gravity passes
+        run: |
+          python analysis/w33_pass11592_q6_overlap_admissibility.py
+          python analysis/w33_pass11594_refined_gravity_firewall.py
+      - name: Synthesis and focused regression
+        run: |
+          python analysis/w33_pass11599_synthesis.py
+          pytest -q tests/test_w33_pass11590_11599.py

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import itertools,json,sys,time
+import itertools,json,sys
 from pathlib import Path
 import numpy as np
 ROOT=Path(__file__).resolve().parents[1]
@@ -70,8 +70,8 @@ def build(L,eps=.12,r=.25):
  return float(intR),heat
 rows=[]
 for L in (3,5,7):
- t0=time.time();r0,h0=build(L,0.0);r1,h1=build(L,.12)
- row={'L':L,'intR':r1,'delta_heat':{k:h1[k]-h0[k] for k in h0},'ratio':{k:(h1[k]-h0[k])/r1 for k in h0},'seconds':time.time()-t0}
+ r0,h0=build(L,0.0);r1,h1=build(L,.12)
+ row={'L':L,'intR':r1,'delta_heat':{k:h1[k]-h0[k] for k in h0},'ratio':{k:(h1[k]-h0[k])/r1 for k in h0}}
  rows.append(row);print(row,flush=True)
 assert all(abs(r['intR'])>1e-3 for r in rows)
 assert abs(rows[-1]['intR'])>abs(rows[0]['intR'])
