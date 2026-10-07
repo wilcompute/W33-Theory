@@ -2075,3 +2075,33 @@ Publication review also found and repaired the topical scanner400000-character c
 Science commit f6dc49b73d5d83ece2234924103dc0bd3f9f5593 is pushed to W33 master and verified by fresh GitKraken fetch/log and GitHub commit API. Dedicated GitHub CI37614473306 SUCCESS at that exact SHA:21 tests passed in4.49s (20 science controls plus the late-result retrieval regression), followed by all five producer sections PASS. https://github.com/wilcompute/W33-Theory/actions/runs/37614473306 . Normal science hooks completed; report, integer certificates, tests, CI, site and refreshed indexes published. Final rediscovery guard has no uncited candidates after four advisory owners were read and directly credited. The earlier raw-byte JSON check was an inappropriate audit for the canonical JSON binding; all nine portable canonical input hashes and producer hash match. Mixed decision stores and original dirty/diverged checkout remain preserved.
 
 Independent next targets: match the occupation126 to an effective composite scalar with gauge constraints; minimize the full one-loop45/126 vacuum; derive a joint flavor/Higgs potential with counterterm control; test nonlinear/curved gravitational coarse constraints and locality; build a Lorentzian boundary/compact-flux measure with transition and graviton stability. No observed masses/scales, nonlinear native Einstein dynamics or quantum CC prediction has been solved.
+
+### 2026-10-07 — reserved11625–11629
+
+Reservation90099d605 pushed before computation. Execute all five composite/scalar-loop/joint-flavor/nonlinear-gravity/Lorentzian-flux targets and additional Pauli, coarse-structure and charge-lattice controls. No new remote science since1a4abd3ea; shared stores and original checkout preserved. Search prior results before ownership claims; full quantum/global/native physical conclusions require their own evidence.
+
+###11625–11629 completed science; publication validation in flight
+
+Reservation90099d605, source-bound five-section producer and extra Reye audit PASS.
+First main regression run29/29 passed; final combined35-control run passed35/35 in266.88s.
+Owned report, two producers/two certificates/two test files, visible card andCI
+are prepared. Data JSON must be narrowly force-added because data is ignored.
+Do not stage the shared decisions.json/jsonl; they remain unrelated mixed stores.
+
+User Reye hint produced actual432-lift classification andan engineered discrete
+incidence coupling: all5184 classical joint zero sectors break CP ofthe declared
+parent; the original flavor discriminant remainsW=0. No Yukawa CP prediction.
+User Aravind/Peres lead reproduced16 critical18-ray/9-context parity witnesses,
+288 deletion colorings andall24 adaptive Pauli analyzers (established KS result).
+User Vlasov2503.18431 lead gives explicit h->(h,0) embedding ofthe12 joint Higgs
+rays intoone Witting neighborhood.4963 owns its W33 point graph. Every780 pairs
+are checked against exportedF3 commutation labels. Four-dimensional projector
+andnine-dimensional two-qutrit operator realizations are not unitary equivalents.
+Coherent rank-one queries are supplied non-Clifford gates; computational-ray
+query is Toffoli. Contextual destructive measurements do not implement the query.
+
+Intake audit found no hard failures/forced arithmetic; generic compound-keyword
+rediscovery warnings remain advisory andprior Hesse/flavor owners were read.
+Final topical index refresh is complete; the result index refresh is completing after the extra source additions.
+Next: combined35 controls, normal-hook science commit, HEAD:master publication,
+exact-SHA CI andreceipt. Fresh GitKraken fetch shows no parallel remote commits.

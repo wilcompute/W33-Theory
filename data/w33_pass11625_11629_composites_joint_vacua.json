@@ -1,0 +1,1895 @@
+{
+  "status": "PASS",
+  "passes": [
+    11625,
+    11626,
+    11627,
+    11628,
+    11629
+  ],
+  "reservation": "90099d605",
+  "fermion_matching": {
+    "status": "PASS",
+    "spin_singlet_embedding_shape": [
+      496,
+      136
+    ],
+    "singlet_rank": 136,
+    "decomposition": "Lambda2(C2 tensor C16)=Lambda2(C2) tensor Sym2(C16) + Sym2(C2) tensor Lambda2(C16), dimensions136+360=496. Thus10+126 spin-singlet fermion pairs are Pauli-allowed.",
+    "full_Spin10_intertwiner": true,
+    "pair_even_matter_parity": true,
+    "second_order_matrix": [
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "-2*t**2/U",
+        "-2*t**2/U",
+        "0"
+      ],
+      [
+        "0",
+        "-2*t**2/U",
+        "-2*t**2/U",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "conclusion": "Actual attractive fermion hopping does not equal the old swap parent, even in one polarized pair direction. Pair hopping K=2t^2/U is accompanied by the wrong mixed-occupation diagonal energy.",
+    "repair": "Add2K(nL+nR-2nL nR), i.e. a chemical term and attractive neighbor density coupling, to obtain2K(I-Swap)/2 in the polarized pair qubit. This is an added interaction; it does not generate the entire127-color parent.",
+    "center_Gauss_states": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        2
+      ]
+    ],
+    "center_dressed_map": "B_Ldag B_Rdag U_link^2 maps(0,0,0) to(1,1,2), preserving both center Gauss charges. An undressed single charged pair has zero gauge-projected expectation.",
+    "boundary": "Spin labels here are a supplied two-component singlet factor, not a derived relativistic kinetic theory. Full126 elementary/composite effective-action matching and continuous Spin10 Gauss dynamics remain open."
+  },
+  "quantum_vacuum": {
+    "status": "PASS",
+    "scheme": "Declared Landau-background one-loop finite Euclidean momentum shell, k=.1, UV=.5, Vtree=.001 V11621, gauge g^2=.001. No fermions. All297 scalar and45 vector eigenvalues enter; massless gauge constants drop, scalar Goldstones are not deleted.",
+    "definition": "V_k=Vtree+(1/(64pi^2)) integral_{k^2}^{UV^2} x[Tr log(1+Hs/x)+3Tr log(1+Hv/x)] dx.",
+    "tree_point": [
+      1,
+      0,
+      1
+    ],
+    "stationary_SM_slice": [
+      0.9895156147802279,
+      0.009861749485674623,
+      0.8969013598612049
+    ],
+    "three_starts": [
+      [
+        0.989515618173952,
+        0.009861736844751527,
+        0.8969012245348229
+      ],
+      [
+        0.9895156138989828,
+        0.00986173255864201,
+        0.8969013360684821
+      ],
+      [
+        0.9895156147802279,
+        0.009861749485674623,
+        0.8969013598612049
+      ]
+    ],
+    "value": 0.0012051392286899609,
+    "stationarity_gradient": [
+      -2.405844620745334e-11,
+      8.933825901280555e-11,
+      -3.842412499288628e-11
+    ],
+    "slice_Hessian": [
+      [
+        0.10784766291821457,
+        0.010117681464773959,
+        -0.0001501294314559809
+      ],
+      [
+        0.010117681464773959,
+        0.01030903717426368,
+        -8.529414154134773e-05
+      ],
+      [
+        -0.0001501294314559809,
+        -8.529414154134773e-05,
+        0.0063880340687300086
+      ]
+    ],
+    "slice_eigenvalues": [
+      0.006386114815923677,
+      0.009272261563317681,
+      0.1088863577819669
+    ],
+    "quadrature32_64_difference": -7.15573433840433e-18,
+    "full_scalar_tree_gap_at_reference": 0.002,
+    "formal_persistence": "On a gauge-normal slice the tree Hessian is positive definite. A finite shell is smooth near the tree orbit. The implicit-function theorem therefore gives a nearby local minimum modulo gauge for sufficiently small formal loop coefficient, including all264 normals; no explicit all-normal bound at coefficient1 is asserted.",
+    "boundary": "This is a complete one-loop shell determinant inventory, and a numerical minimum in the3-real SM-singlet slice, not a global/all264-mode quantum-stability certificate at the benchmark, physical pole masses, MS vacuum, UV completion or k->0 resummation. Finite matching/cutoff data are inputs."
+  },
+  "joint_flavor": {
+    "status": "PASS",
+    "map": "D(h) columns=(h0^2,h1^2,h2^2) and sqrt2(h1h2,h0h2,h0h1). D(Gh)=conjugate(G) D(h) R^T for the actual normalized11600 Hesse generators.",
+    "action": "u->Ru, h->Gh; D(h)conjugate(u)->conjugate(G) D(h)conjugate(u).",
+    "potential": "V=(u\u2020u-1)^2+(h\u2020h-1)^2+kappa[(u\u2020u)(h\u2020h)^2-||D(h)conjugate(u)||^2], kappa>0. The last term is nonnegative by K=D\u2020D>=0 and TrK=(h\u2020h)^2.",
+    "minimal_degree": "With independent common U1 phases of u and h, every renormalizable parent invariant is a polynomial of their norms: Heisenberg X/Z act trivially on u, irreducibly on h; Sym2(h)=conjugate(h representation) tensor the same irreducible Hesse doublet. Mixed angular alignment first appears at field degree6. No claim is made without the two U1 assumptions.",
+    "global_zero_proof": "At unit norms a zero requires rankD=1 and conjugate(u) in its top eigenspace. If h has zeros, rank1 forces a coordinate ray. If all hi are nonzero, rank1 is equivalent to h0^3=h1^3=h2^3. These are exactly3 coordinate plus9 equal-amplitude cube-root rays. Thus12 joint projective minima, with two continuous U1 phase circles each.",
+    "projective_vacua": [
+      {
+        "h": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "u": [
+          [
+            1.0,
+            -0.0
+          ],
+          [
+            0.0,
+            -0.0
+          ]
+        ]
+      },
+      {
+        "h": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "u": [
+          [
+            1.0,
+            -0.0
+          ],
+          [
+            0.0,
+            -0.0
+          ]
+        ]
+      },
+      {
+        "h": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0
+          ]
+        ],
+        "u": [
+          [
+            1.0,
+            -0.0
+          ],
+          [
+            0.0,
+            -0.0
+          ]
+        ]
+      },
+      {
+        "h": [
+          [
+            0.5773502691896258,
+            0.0
+          ],
+          [
+            0.5773502691896258,
+            0.0
+          ],
+          [
+            0.5773502691896258,
+            0.0
+          ]
+        ],
+        "u": [
+          [
+            0.5773502691896258,
+            -0.0
+          ],
+          [
+            0.8164965809277261,
+            -0.0
+          ]
+        ]
+      },
+      {
+        "h": [
+          [
+            0.5773502691896258,
+            0.0
+          ],
+          [
+            0.5773502691896258,
+            0.0
+          ],
+          [
+            -0.2886751345948129,
+            0.5
+          ]
+        ],
+        "u": [
+          [
+            0.5773502691896258,
+            -0.0
+          ],
+          [
+            -0.408248290463863,
+            0.7071067811865475
+          ]
+        ]
+      },
+      {
+        "h": [
+          [
+            0.5773502691896258,
+            0.0
+          ],
+          [
+            0.5773502691896258,
+            0.0
+          ],
+          [
+            -0.28867513459481287,
+            -0.5
+          ]
+        ],
+        "u": [
+          [
+            0.5773502691896258,
+            -0.0
+          ],
+          [
+            -0.40824829046386324,
+            -0.7071067811865475
+          ]
+        ]
+      },
+      {
+        "h": [
+          [
+            0.5773502691896258,
+            0.0
+          ],
+          [
+            -0.2886751345948129,
+            0.5
+          ],
+          [
+            0.5773502691896258,
+            0.0
+          ]
+        ],
+        "u": [
+          [
+            0.5773502691896258,
+            -0.0
+          ],
+          [
+            -0.408248290463863,
+            0.7071067811865475
+          ]
+        ]
+      },
+      {
+        "h": [
+          [
+            0.5773502691896258,
+            0.0
+          ],
+          [
+            -0.2886751345948129,
+            0.5
+          ],
+          [
+            -0.2886751345948129,
+            0.5
+          ]
+        ],
+        "u": [
+          [
+            0.5773502691896255,
+            -0.0
+          ],
+          [
+            -0.408248290463863,
+            -0.7071067811865477
+          ]
+        ]
+      },
+      {
+        "h": [
+          [
+            0.5773502691896258,
+            0.0
+          ],
+          [
+            -0.2886751345948129,
+            0.5
+          ],
+          [
+            -0.28867513459481287,
+            -0.5
+          ]
+        ],
+        "u": [
+          [
+            -0.5773502691896258,
+            -0.0
+          ],
+          [
+            -0.8164965809277261,
+            1.9785618720931564e-17
+          ]
+        ]
+      },
+      {
+        "h": [
+          [
+            0.5773502691896258,
+            0.0
+          ],
+          [
+            -0.28867513459481287,
+            -0.5
+          ],
+          [
+            0.5773502691896258,
+            0.0
+          ]
+        ],
+        "u": [
+          [
+            0.5773502691896258,
+            -0.0
+          ],
+          [
+            -0.40824829046386324,
+            -0.7071067811865475
+          ]
+        ]
+      },
+      {
+        "h": [
+          [
+            0.5773502691896258,
+            0.0
+          ],
+          [
+            -0.28867513459481287,
+            -0.5
+          ],
+          [
+            -0.2886751345948129,
+            0.5
+          ]
+        ],
+        "u": [
+          [
+            -0.5773502691896258,
+            -0.0
+          ],
+          [
+            -0.8164965809277261,
+            8.625081796643145e-18
+          ]
+        ]
+      },
+      {
+        "h": [
+          [
+            0.5773502691896258,
+            0.0
+          ],
+          [
+            -0.28867513459481287,
+            -0.5
+          ],
+          [
+            -0.28867513459481287,
+            -0.5
+          ]
+        ],
+        "u": [
+          [
+            0.5773502691896255,
+            -0.0
+          ],
+          [
+            -0.408248290463863,
+            0.7071067811865477
+          ]
+        ]
+      }
+    ],
+    "projective_count": 12,
+    "canonical_Hessian": [
+      [
+        4.000000019997459,
+        0.0,
+        0.0,
+        0.0,
+        -6.938893903907228e-10,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0000000250247594,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        2.000000020099037e-08,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -2.7755575615628914e-09,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0000000250247594,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        -6.938893903907228e-10,
+        0.0,
+        0.0,
+        0.0,
+        4.000000019997459,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.000000030049519,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.000000030049519,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -2.7755575615628914e-09,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.1102230447241936e-08,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.000000030049519,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.000000030049519
+      ]
+    ],
+    "exact_mass_squared": [
+      0,
+      0,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      4,
+      4
+    ],
+    "CP_scope": "All12 minima are one parent orbit; every ray has a parent generalized CP. The paired u rays are the4 tetrahedral vertices, so the11600 CP discriminant W vanishes. This degree6 selector aligns fields but does not produce generic CP breaking or observed flavor.",
+    "radiative_boundary": "The parent with both U1 phases forbids angular dimension4 terms in this field inventory, but allows angular degree6 and higher terms. This is a symmetry classification, not all-loop stability or a derivation of target radii/couplings."
+  },
+  "spherical_constraints": {
+    "status": "PASS",
+    "canonical_action": "Integral dt dr [pL Ldot+pR Rdot+p phidot-N H-v D], supplied spherical metric ds3^2=L^2 dr^2+R^2 dOmega2, L,R>0. Compactly supported smearings or vanishing boundary variations.",
+    "Hamiltonian": "A*(L0*pL0**2/(2*R0**2) - pL0*pR0/R0) + B*(-L0/2 + R0*R2/L0 + R1**2/(2*L0) - L1*R0*R1/L0**2) + C*L0*R0**2 + R0**2*beta*phi1**2/(2*L0) + alpha*p0**2/(2*L0*R0**2)",
+    "momentum": "-L0*pL1 + R1*pR0 + p0*phi1",
+    "exact_brackets": "{H[N],H[M]}=D[A B (N Mprime-M Nprime)/L^2] iff alpha beta=A B; {D[v],D[w]}=D[v wprime-w vprime]; {H[N],D[v]}=-H[v Nprime]. All checked modulo total derivatives by Euler jets.",
+    "propagation_mismatch": "p0*phi1*(A*B - alpha*beta)*(M0*N1 - M1*N0)/L0**2",
+    "universal_cone": "The scalar kinetic/gradient product must equal the gravitational product for this same nonlinear spatial metric structure function. Overall gravitational normalization remains input.",
+    "coarse_structure_counterexample": {
+      "fine_mean_inverse_metric": "5/8",
+      "inverse_mean_L_squared": "4/9",
+      "difference": "13/72"
+    },
+    "count": "Three canonical pairs and two first-class constraints leave one local scalar pair. Vacuum spherical gravity has no local graviton polarizations; angular nonspherical modes are omitted.",
+    "boundary": "Classical Kuchar/Einstein-scalar constraint algebra is prior theory, reproduced as an executable nonlinear control. Not a W33-derived action, native finite subdivision algebra, full3D locality or a nonlinear perfect coarse action. Averages require extra subcell/correlation data."
+  },
+  "lorentzian_flux": {
+    "status": "PASS",
+    "canonical_model": "For a supplied compact spatial slice of volumeV and compact three-form holonomytheta, L=thetadot^2/(2N e^2 V)-N V rho. p=thetadot/(N e^2 V) is integerm; H=N V[rho+e^2 m^2/2]. Fixed endpoint holonomy defines the canonical boundary polarization; fixed flux uses its Legendre boundary transform.",
+    "kernel": "K(theta_f,theta_i;T)=(1/(2pi)) sum_m exp[i m(theta_f-theta_i)-i T V(rho+e^2 m^2/2)]. The stored window[-8,8] is an exact unitary restriction of the free flux Hamiltonian, not a cyclic membrane truncation.",
+    "flux_labels": [
+      -8,
+      -7,
+      -6,
+      -5,
+      -4,
+      -3,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "energies": [
+      1.1600000000000006,
+      0.5600000000000003,
+      0.04000000000000048,
+      -0.3999999999999997,
+      -0.7599999999999998,
+      -1.0399999999999998,
+      -1.2399999999999998,
+      -1.3599999999999999,
+      -1.4,
+      -1.3599999999999999,
+      -1.2399999999999998,
+      -1.0399999999999998,
+      -0.7599999999999998,
+      -0.3999999999999997,
+      0.04000000000000048,
+      0.5600000000000003,
+      1.1600000000000006
+    ],
+    "semigroup_and_unitarity": true,
+    "membrane": "exp(i theta) raisesm by1. The finite window shift is only a partial isometry and its edge loss is retained. It cannot be made cyclic without changing the charge physics.",
+    "fixed_background_shift": "rho->rho+C changes every fixed-background amplitude by the common phase exp(-i C V T). If lapse/metric is integrated, C changes the gravitational Hamiltonian constraint throughV C; the phase identity alone does not sequester vacuum energy.",
+    "Euler_charge_law": "At fixed topology a dot n=-chi, a membrane chargeq stays in the sector iff a dot q=0. With one Euler-conjugate form and nonzeroa, every nonzero charge exits. With distinct forms a=(0,1), q=(1,0), the ordinary vacuum flux may jump while the Euler-conjugate flux remains fixed. Neither the new holonomytheta nor its integerm is the old rigid Euler multiplier.",
+    "neutral_charge_example": {
+      "a": [
+        0,
+        1
+      ],
+      "q": [
+        1,
+        0
+      ],
+      "constraint_pairing": 0
+    },
+    "flat_thin_wall": {
+      "action": "-pi**2*Delta*r**4/2 + 2*pi**2*r**3*tau",
+      "radius": "3*tau/Delta",
+      "exponent": "27*pi**2*tau**4/(2*Delta**3)",
+      "radial_second_derivative": "-18*pi**2*tau**2/Delta",
+      "energy_drop": "e^2(m-1/2) for m->m-1"
+    },
+    "graviton_boundary": "Neither the canonical flux rotor nor the fixed-background phase removes the11624 terms a1 M^6/(2K)+a2 M^8/K^2. Full coupled gravity, boundary/corner measures and flux-transition rates with gravitational backreaction remain open.",
+    "boundary": "Compactness, e, tension, volume, rho and topology are supplied. The flat thin-wall bounce has the usual radial negative mode; gravitational bounce and measured CC selection are not computed. Prior11307/11324 own different coupled cap/wall constructions; Brown-Teitelboim mechanism is standard."
+  },
+  "reye_vacuum_audit": {
+    "status": "PASS",
+    "prior_owners": [
+      "BT544",
+      "5580-5585",
+      "BT5776-BT5783",
+      "1089",
+      "11262"
+    ],
+    "Higgs_ray_labels": "0,1,2 are coordinate rays;3+3r+t is(1,omega^r,omega^t)/sqrt3.",
+    "MUB_blocks": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        3,
+        8,
+        10
+      ],
+      [
+        4,
+        6,
+        11
+      ],
+      [
+        5,
+        7,
+        9
+      ]
+    ],
+    "exact_projective_lines": [
+      [
+        0,
+        3,
+        7,
+        11
+      ],
+      [
+        0,
+        4,
+        8,
+        9
+      ],
+      [
+        0,
+        5,
+        6,
+        10
+      ],
+      [
+        1,
+        3,
+        6,
+        9
+      ],
+      [
+        1,
+        4,
+        7,
+        10
+      ],
+      [
+        1,
+        5,
+        8,
+        11
+      ],
+      [
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        2,
+        6,
+        7,
+        8
+      ],
+      [
+        2,
+        9,
+        10,
+        11
+      ]
+    ],
+    "dependent_triples": 36,
+    "projective_geometry": "The vacuum rays are the known dual Hesse12_3,9_4 configuration, not projective Reye12_4,16_3. The four orthogonal triads are independent, so cannot be Reye geometric lines in this realization.",
+    "concrete_Reye_A4_isomorphism": [
+      {
+        "point": [
+          0,
+          0
+        ],
+        "permutation": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "point": [
+          0,
+          1
+        ],
+        "permutation": [
+          3,
+          0,
+          2,
+          1
+        ]
+      },
+      {
+        "point": [
+          0,
+          2
+        ],
+        "permutation": [
+          1,
+          3,
+          2,
+          0
+        ]
+      },
+      {
+        "point": [
+          1,
+          0
+        ],
+        "permutation": [
+          1,
+          2,
+          0,
+          3
+        ]
+      },
+      {
+        "point": [
+          1,
+          1
+        ],
+        "permutation": [
+          3,
+          1,
+          0,
+          2
+        ]
+      },
+      {
+        "point": [
+          1,
+          2
+        ],
+        "permutation": [
+          2,
+          3,
+          0,
+          1
+        ]
+      },
+      {
+        "point": [
+          2,
+          0
+        ],
+        "permutation": [
+          1,
+          0,
+          3,
+          2
+        ]
+      },
+      {
+        "point": [
+          2,
+          1
+        ],
+        "permutation": [
+          2,
+          1,
+          3,
+          0
+        ]
+      },
+      {
+        "point": [
+          2,
+          2
+        ],
+        "permutation": [
+          0,
+          2,
+          3,
+          1
+        ]
+      },
+      {
+        "point": [
+          3,
+          0
+        ],
+        "permutation": [
+          2,
+          0,
+          1,
+          3
+        ]
+      },
+      {
+        "point": [
+          3,
+          1
+        ],
+        "permutation": [
+          3,
+          2,
+          1,
+          0
+        ]
+      },
+      {
+        "point": [
+          3,
+          2
+        ],
+        "permutation": [
+          0,
+          3,
+          1,
+          2
+        ]
+      }
+    ],
+    "Reye_incidence_rank": 10,
+    "Reye_centered_rank": 9,
+    "Reye_automorphisms": 576,
+    "Clifford_ray_group_order": 216,
+    "Clifford_CP_ray_group_order": 432,
+    "Clifford_generators": [
+      [
+        3,
+        8,
+        10,
+        0,
+        5,
+        6,
+        9,
+        11,
+        2,
+        4,
+        1,
+        7
+      ],
+      [
+        0,
+        1,
+        2,
+        4,
+        5,
+        3,
+        7,
+        8,
+        6,
+        10,
+        11,
+        9
+      ],
+      [
+        1,
+        2,
+        0,
+        3,
+        11,
+        7,
+        4,
+        9,
+        8,
+        5,
+        10,
+        6
+      ],
+      [
+        0,
+        1,
+        2,
+        8,
+        6,
+        7,
+        11,
+        9,
+        10,
+        5,
+        3,
+        4
+      ]
+    ],
+    "MUB_preserving_Reye_lifts": 432,
+    "collinearity_histogram": {
+      "6": 144,
+      "3": 288
+    },
+    "unitary_lift_orbits": [
+      {
+        "size": 72,
+        "stabilizer": 3,
+        "collinear_triples": 3,
+        "representative": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            3,
+            4
+          ],
+          [
+            0,
+            5,
+            6
+          ],
+          [
+            0,
+            7,
+            8
+          ],
+          [
+            1,
+            3,
+            9
+          ],
+          [
+            1,
+            6,
+            10
+          ],
+          [
+            1,
+            7,
+            11
+          ],
+          [
+            2,
+            4,
+            9
+          ],
+          [
+            2,
+            5,
+            10
+          ],
+          [
+            2,
+            8,
+            11
+          ],
+          [
+            3,
+            5,
+            11
+          ],
+          [
+            3,
+            8,
+            10
+          ],
+          [
+            4,
+            6,
+            11
+          ],
+          [
+            4,
+            7,
+            10
+          ],
+          [
+            5,
+            7,
+            9
+          ],
+          [
+            6,
+            8,
+            9
+          ]
+        ]
+      },
+      {
+        "size": 72,
+        "stabilizer": 3,
+        "collinear_triples": 3,
+        "representative": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            3,
+            4
+          ],
+          [
+            0,
+            5,
+            6
+          ],
+          [
+            0,
+            7,
+            8
+          ],
+          [
+            1,
+            4,
+            9
+          ],
+          [
+            1,
+            5,
+            10
+          ],
+          [
+            1,
+            8,
+            11
+          ],
+          [
+            2,
+            3,
+            9
+          ],
+          [
+            2,
+            6,
+            10
+          ],
+          [
+            2,
+            7,
+            11
+          ],
+          [
+            3,
+            5,
+            11
+          ],
+          [
+            3,
+            8,
+            10
+          ],
+          [
+            4,
+            6,
+            11
+          ],
+          [
+            4,
+            7,
+            10
+          ],
+          [
+            5,
+            7,
+            9
+          ],
+          [
+            6,
+            8,
+            9
+          ]
+        ]
+      },
+      {
+        "size": 72,
+        "stabilizer": 3,
+        "collinear_triples": 3,
+        "representative": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            3,
+            4
+          ],
+          [
+            0,
+            5,
+            6
+          ],
+          [
+            0,
+            7,
+            10
+          ],
+          [
+            1,
+            4,
+            9
+          ],
+          [
+            1,
+            5,
+            8
+          ],
+          [
+            1,
+            10,
+            11
+          ],
+          [
+            2,
+            3,
+            9
+          ],
+          [
+            2,
+            6,
+            8
+          ],
+          [
+            2,
+            7,
+            11
+          ],
+          [
+            3,
+            5,
+            11
+          ],
+          [
+            3,
+            8,
+            10
+          ],
+          [
+            4,
+            6,
+            11
+          ],
+          [
+            4,
+            7,
+            8
+          ],
+          [
+            5,
+            7,
+            9
+          ],
+          [
+            6,
+            9,
+            10
+          ]
+        ]
+      },
+      {
+        "size": 72,
+        "stabilizer": 3,
+        "collinear_triples": 3,
+        "representative": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            3,
+            4
+          ],
+          [
+            0,
+            5,
+            6
+          ],
+          [
+            0,
+            8,
+            9
+          ],
+          [
+            1,
+            3,
+            7
+          ],
+          [
+            1,
+            6,
+            10
+          ],
+          [
+            1,
+            9,
+            11
+          ],
+          [
+            2,
+            4,
+            7
+          ],
+          [
+            2,
+            5,
+            10
+          ],
+          [
+            2,
+            8,
+            11
+          ],
+          [
+            3,
+            5,
+            11
+          ],
+          [
+            3,
+            8,
+            10
+          ],
+          [
+            4,
+            6,
+            11
+          ],
+          [
+            4,
+            9,
+            10
+          ],
+          [
+            5,
+            7,
+            9
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "size": 72,
+        "stabilizer": 3,
+        "collinear_triples": 6,
+        "representative": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            3,
+            4
+          ],
+          [
+            0,
+            5,
+            6
+          ],
+          [
+            0,
+            8,
+            9
+          ],
+          [
+            1,
+            4,
+            7
+          ],
+          [
+            1,
+            5,
+            10
+          ],
+          [
+            1,
+            8,
+            11
+          ],
+          [
+            2,
+            3,
+            7
+          ],
+          [
+            2,
+            6,
+            10
+          ],
+          [
+            2,
+            9,
+            11
+          ],
+          [
+            3,
+            5,
+            11
+          ],
+          [
+            3,
+            8,
+            10
+          ],
+          [
+            4,
+            6,
+            11
+          ],
+          [
+            4,
+            9,
+            10
+          ],
+          [
+            5,
+            7,
+            9
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "size": 72,
+        "stabilizer": 3,
+        "collinear_triples": 6,
+        "representative": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            3,
+            4
+          ],
+          [
+            0,
+            5,
+            6
+          ],
+          [
+            0,
+            9,
+            10
+          ],
+          [
+            1,
+            4,
+            7
+          ],
+          [
+            1,
+            5,
+            8
+          ],
+          [
+            1,
+            10,
+            11
+          ],
+          [
+            2,
+            3,
+            7
+          ],
+          [
+            2,
+            6,
+            8
+          ],
+          [
+            2,
+            9,
+            11
+          ],
+          [
+            3,
+            5,
+            11
+          ],
+          [
+            3,
+            8,
+            10
+          ],
+          [
+            4,
+            6,
+            11
+          ],
+          [
+            4,
+            8,
+            9
+          ],
+          [
+            5,
+            7,
+            9
+          ],
+          [
+            6,
+            7,
+            10
+          ]
+        ]
+      }
+    ],
+    "CP_extended_lift_orbits": [
+      {
+        "size": 144,
+        "stabilizer": 3,
+        "collinear_triples": 3,
+        "representative": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            3,
+            4
+          ],
+          [
+            0,
+            5,
+            6
+          ],
+          [
+            0,
+            7,
+            8
+          ],
+          [
+            1,
+            3,
+            9
+          ],
+          [
+            1,
+            6,
+            10
+          ],
+          [
+            1,
+            7,
+            11
+          ],
+          [
+            2,
+            4,
+            9
+          ],
+          [
+            2,
+            5,
+            10
+          ],
+          [
+            2,
+            8,
+            11
+          ],
+          [
+            3,
+            5,
+            11
+          ],
+          [
+            3,
+            8,
+            10
+          ],
+          [
+            4,
+            6,
+            11
+          ],
+          [
+            4,
+            7,
+            10
+          ],
+          [
+            5,
+            7,
+            9
+          ],
+          [
+            6,
+            8,
+            9
+          ]
+        ]
+      },
+      {
+        "size": 144,
+        "stabilizer": 3,
+        "collinear_triples": 3,
+        "representative": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            3,
+            4
+          ],
+          [
+            0,
+            5,
+            6
+          ],
+          [
+            0,
+            7,
+            10
+          ],
+          [
+            1,
+            4,
+            9
+          ],
+          [
+            1,
+            5,
+            8
+          ],
+          [
+            1,
+            10,
+            11
+          ],
+          [
+            2,
+            3,
+            9
+          ],
+          [
+            2,
+            6,
+            8
+          ],
+          [
+            2,
+            7,
+            11
+          ],
+          [
+            3,
+            5,
+            11
+          ],
+          [
+            3,
+            8,
+            10
+          ],
+          [
+            4,
+            6,
+            11
+          ],
+          [
+            4,
+            7,
+            8
+          ],
+          [
+            5,
+            7,
+            9
+          ],
+          [
+            6,
+            9,
+            10
+          ]
+        ]
+      },
+      {
+        "size": 144,
+        "stabilizer": 3,
+        "collinear_triples": 6,
+        "representative": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            3,
+            4
+          ],
+          [
+            0,
+            5,
+            6
+          ],
+          [
+            0,
+            8,
+            9
+          ],
+          [
+            1,
+            4,
+            7
+          ],
+          [
+            1,
+            5,
+            10
+          ],
+          [
+            1,
+            8,
+            11
+          ],
+          [
+            2,
+            3,
+            7
+          ],
+          [
+            2,
+            6,
+            10
+          ],
+          [
+            2,
+            9,
+            11
+          ],
+          [
+            3,
+            5,
+            11
+          ],
+          [
+            3,
+            8,
+            10
+          ],
+          [
+            4,
+            6,
+            11
+          ],
+          [
+            4,
+            9,
+            10
+          ],
+          [
+            5,
+            7,
+            9
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ]
+      }
+    ],
+    "symmetry_obstruction": "The faithful216-element induced unitary group cannot preserve any Reye configuration on these12 rays: it would embed in Aut(Reye)=576, but216 does not divide576. Every432 tested MUB-preserving lift has unitary stabilizer3; this432 family is exhaustive only for independent within-triad relabelings of BT544, not every abstract Reye labelling.",
+    "Higgs_projector_Gram_spectrum": {
+      "4": 1,
+      "1": 8,
+      "0": 3
+    },
+    "Higgs_centered_rank": 8,
+    "joint_product_projector_Gram_spectrum": {
+      "2": 1,
+      "2/3": 3,
+      "1": 8
+    },
+    "joint_projector_rank": 12,
+    "coupling": {
+      "definition": "f_i=|u_i\u2020u|^2 |h_i\u2020h|^2, C_sigma=sum_{Reye triples} product_i f_i; addlambda[C_sigma-(11/243)(u\u2020u h\u2020h)^3]^2 toV11627, lambda>0. Sigma is a supplied432-valued discrete incidence field. The additional field polynomial has degree24 and is nonnegative.",
+      "exact_zero_value": "C_sigma=11/243 at each of the12 normalized joint vacua, for every432 lift; exact rational enumeration verifies5184 incidences. The full zero set is432 times12 projective choices, plus the two common phase circles.",
+      "exact_polynomial_separation_inputs": [
+        {
+          "u0": [
+            2,
+            2
+          ],
+          "u1_div_sqrt2": [
+            -1,
+            2
+          ],
+          "h": [
+            [
+              -2,
+              1
+            ],
+            [
+              0,
+              -1
+            ],
+            [
+              1,
+              -2
+            ]
+          ]
+        },
+        {
+          "u0": [
+            0,
+            -1
+          ],
+          "u1_div_sqrt2": [
+            0,
+            -2
+          ],
+          "h": [
+            [
+              -2,
+              -2
+            ],
+            [
+              -1,
+              -1
+            ],
+            [
+              -2,
+              1
+            ]
+          ]
+        },
+        {
+          "u0": [
+            1,
+            -1
+          ],
+          "u1_div_sqrt2": [
+            2,
+            2
+          ],
+          "h": [
+            [
+              1,
+              1
+            ],
+            [
+              -1,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "u0": [
+            1,
+            2
+          ],
+          "u1_div_sqrt2": [
+            2,
+            0
+          ],
+          "h": [
+            [
+              2,
+              -2
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              0
+            ]
+          ]
+        }
+      ],
+      "separated_defect_polynomials": 432,
+      "separated_squared_defect_polynomials": 432,
+      "covariance": "Under the parent unitary/antiunitary ray permutations, sigma andthe12 vacuum projectors are permuted together. This makes C_sigma andthe supplied potential invariant. Four exact Eisenstein evaluations distinguish every432 polynomial, including its squared defect; sigma is not an irrelevant decoupled label.",
+      "CP": "The unitary stabilizer andCP-extended stabilizer of each sigma both have order3. Therefore none ofthe216 antiunitary elements inthis declared parent fixes sigma. Every classical zero sector breaks all generalized CP transformations inthis parent, while the total potential preserves the parent. This does not certify absence of all accidental CP transformations in other field inventories.",
+      "boundary": "This is an engineered finite order-parameter model with an added discrete432-state field anddegree24 coupling, not a derived continuous renormalizable Spin10 theory, a unique flavor phase, a finite-volume quantum symmetry-breaking theorem or a prediction of CKM/PMNS phases."
+    },
+    "connection": "Existing Reye incidence provides a concrete parent-covariant CP-breaking order parameter for the12 existing joint vacua when the supplied discrete field andexplicit coupling are added. The16-dimensional spinor and16 Reye lines still have no identified intertwiner.",
+    "boundary": "This connects existing Hesse vacuum data with existing Reye incidence through explicit maps and enumerated choices; it does not infer masses, gravity, a Spin10 representation or a physical Reye interaction from12/16 counts."
+  },
+  "source_sha256": {
+    "analysis/w33_pass11620_11624_covariant_pair_vacuum.py": "513034dc54fc51252dd329808f069e941b17844df2ed955f0d47f139321b17e0",
+    "data/w33_pass11620_11624_covariant_pair_vacuum.json": "e39f509e6c202c69eac5ff63887fa55d2a91ace01c0430472532d1839c42f05e",
+    "analysis/w33_pass11615_11619_parent_pairs_constraints.py": "6d3f6c27c719f64b81c961e73bf7bb792ad50ce859a59c0321cdcf66aafa841e",
+    "analysis/w33_pass11600_dynamical_hesse_flavor.py": "790645d1c5b9bef670becceb65110cad598c6e8c60077098668dae79163f6999",
+    "analysis/PASS11620_11624_COVARIANT_PAIR_VACUUM.md": "3e7b7dec3026e34c1b4a14400b684301674105dde5896a66c08263d03fbea23e",
+    "analysis/w33_witting_reye_toroidal_tomotope_collapse.py": "60a951cc2b11f507d05ae5a8611611b93ffd82c26b2e70f3e04a0941697256c9",
+    "analysis/PASS5580_5585_reye_psl2_permutation_frame.md": "1599fca735f0d1caa6f17698d5b06f2d1e72ed3d4a678c5a881dc525163353d8",
+    "analysis/BT5776_BT5783_reye_latin_common_core.md": "0b67f696ec24ffb0fa999375707fc067d399005b168f784be3c91bb43e62869e"
+  },
+  "producer_sha256": "ac1571451e274ea6fe3394acd692678d781ff09eb7b9252407c694ba3bdb98e0"
+}

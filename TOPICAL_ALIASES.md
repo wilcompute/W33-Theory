@@ -10,7 +10,7 @@ to guess: `grep -i gow TOPICAL_ALIASES.md` reaches
 `2026-07-15_pass355_sp43_frobenius_schur.md`, which no search for
 "phase" or "complex structure" ever would.
 
-Files scanned: **5188** · distinct tokens: **1088**
+Files scanned: **5189** · distinct tokens: **1089**
 
 Tokens marked ⚠ appear ONLY in topically opaque filenames (dated or
 numbered), so they are invisible to any topic search — read those first.
@@ -945,6 +945,7 @@ numbered), so they are invisible to any topic search — read those first.
 - `named:Smith` — [BT1601_1605_integral_frame_cokernel.md](analysis/BT1601_1605_integral_frame_cokernel.md), [MILESTONES.md](analysis/MILESTONES.md), [PASS434_FIELD_SMITH_PAIRING.md](analysis/PASS434_FIELD_SMITH_PAIRING.md), [PASS436_POLHILL_FULL_TABLE_AUDIT.md](analysis/PASS436_POLHILL_FULL_TABLE_AUDIT.md)
 - `named:Solovay` — [PART_MCDXV_MCDXXVII_UQCA_TQC_UNIFICATION.md](manuscripts/parts/PART_MCDXV_MCDXXVII_UQCA_TQC_UNIFICATION.md)
 - `named:Species` — [404.html](docs/404.html), [exceptional-geometry-41a8d733.html](docs/exceptional-geometry-41a8d733.html), [full-site-2026-08-06.html](docs/full-site-2026-08-06.html), [index.html](docs/index.html)
+- `named:Specker` ⚠ — [PASS11625_11629_COMPOSITES_JOINT_VACUA.md](analysis/PASS11625_11629_COMPOSITES_JOINT_VACUA.md)
 - `named:Split` ⚠ — [BT1907_photonic_holonet_claim_tier_refactor.md](analysis/BT1907_photonic_holonet_claim_tier_refactor.md)
 - `named:Spread` — [404.html](docs/404.html), [exceptional-geometry-41a8d733.html](docs/exceptional-geometry-41a8d733.html), [full-site-2026-08-06.html](docs/full-site-2026-08-06.html), [index.html](docs/index.html)
 - `named:Springer` ⚠ — [PASS9465_9528_eight_front_breakthroughs.md](analysis/PASS9465_9528_eight_front_breakthroughs.md)

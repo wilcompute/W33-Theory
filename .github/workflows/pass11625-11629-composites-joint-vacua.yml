@@ -1,0 +1,33 @@
+name: Passes 11625-11629 composites joint vacua and Reye incidence
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analysis/w33_pass11625_11629_composites_joint_vacua.py'
+      - 'analysis/PASS11625_11629_COMPOSITES_JOINT_VACUA.md'
+      - 'analysis/w33_reye_witting_context_resource_audit.py'
+      - 'data/w33_reye_witting_context_resource_audit.json'
+      - 'tests/test_w33_reye_witting_context_resource_audit.py'
+      - 'data/w33_pass11625_11629_composites_joint_vacua.json'
+      - 'tests/test_w33_pass11625_11629_composites_joint_vacua.py'
+      - '.github/workflows/pass11625-11629-composites-joint-vacua.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy scipy sympy networkx pytest
+      - name: Audit committed witnesses and independent controls
+        run: python -m pytest --noconftest -q tests/test_w33_pass11625_11629_composites_joint_vacua.py tests/test_w33_reye_witting_context_resource_audit.py
+      - name: Regenerate five investigations and the Reye incidence audit
+        run: |
+          python analysis/w33_pass11625_11629_composites_joint_vacua.py
+          python analysis/w33_reye_witting_context_resource_audit.py
