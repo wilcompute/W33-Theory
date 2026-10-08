@@ -10,7 +10,7 @@ to guess: `grep -i gow TOPICAL_ALIASES.md` reaches
 `2026-07-15_pass355_sp43_frobenius_schur.md`, which no search for
 "phase" or "complex structure" ever would.
 
-Files scanned: **5227** · distinct tokens: **1095**
+Files scanned: **5228** · distinct tokens: **1096**
 
 Tokens marked ⚠ appear ONLY in topically opaque filenames (dated or
 numbered), so they are invisible to any topic search — read those first.
@@ -595,6 +595,7 @@ numbered), so they are invisible to any topic search — read those first.
 - `group:L2(4)` — [BT5872_BT5879_coherent_css_rankmetric_clifford_discriminant.md](analysis/BT5872_BT5879_coherent_css_rankmetric_clifford_discriminant.md), [PASS5848_5855_index_insert.html](analysis/PASS5848_5855_index_insert.html), [PASS5856_5863_doily_quadratic_orbit_frontier.md](analysis/PASS5856_5863_doily_quadratic_orbit_frontier.md), [PASS5856_5863_index_insert.html](analysis/PASS5856_5863_index_insert.html), [index.html](docs/index.html)
 - `group:L2(9)` — [404.html](docs/404.html), [exceptional-geometry-41a8d733.html](docs/exceptional-geometry-41a8d733.html), [full-site-2026-08-06.html](docs/full-site-2026-08-06.html), [index.html](docs/index.html)
 - `group:L4(3)` ⚠ — [BT5744_BT5751_quadratic_code_overlays.md](analysis/BT5744_BT5751_quadratic_code_overlays.md), [PASS7701_7740_LEECH_H27_POLARIZATION_CODE_WELD.md](analysis/PASS7701_7740_LEECH_H27_POLARIZATION_CODE_WELD.md)
+- `group:O(0,0` ⚠ — [PASS11742_11749_NONZERO_FLAVOR_AND_FLUX_FRAME.md](analysis/PASS11742_11749_NONZERO_FLAVOR_AND_FLUX_FRAME.md)
 - `group:O(1,1` ⚠ — [PASS11726_11733_DYNAMICAL_BRANCH_AND_CHIRAL_INTERFACE.md](analysis/PASS11726_11733_DYNAMICAL_BRANCH_AND_CHIRAL_INTERFACE.md)
 - `group:O(1,1)` ⚠ — [BT3226_BT3234_port_spiral_closure.md](analysis/BT3226_BT3234_port_spiral_closure.md), [BT3235_port_spiral_index_insert.html](analysis/BT3235_port_spiral_index_insert.html), [BT3235_port_spiral_insert.tex](analysis/BT3235_port_spiral_insert.tex)
 - `group:O(3,3)` ⚠ — [PASS11540_HISTORY_VO33_ORIENTATION_SQUARE.md](analysis/PASS11540_HISTORY_VO33_ORIENTATION_SQUARE.md), [PASS11547_HISTORY_HAMMING_CANONICAL_CLOCK.md](analysis/PASS11547_HISTORY_HAMMING_CANONICAL_CLOCK.md), [PASS11547_RESERVATION.md](analysis/PASS11547_RESERVATION.md), [PASS11548_HISTORY_ORIENTATION_SQUARE_CORRECTION.md](analysis/PASS11548_HISTORY_ORIENTATION_SQUARE_CORRECTION.md), [PASS11548_RESERVATION.md](analysis/PASS11548_RESERVATION.md), [PASS11549_HISTORY_ARROW_CUBIC_CHARACTER.md](analysis/PASS11549_HISTORY_ARROW_CUBIC_CHARACTER.md), [PASS11550_VERONESE_WEIL_HAMMING_ORIENTATION.md](analysis/PASS11550_VERONESE_WEIL_HAMMING_ORIENTATION.md), [PASS11551_11555_HAMMING_ARROW_FIVE_ATTACKS.md](analysis/PASS11551_11555_HAMMING_ARROW_FIVE_ATTACKS.md)

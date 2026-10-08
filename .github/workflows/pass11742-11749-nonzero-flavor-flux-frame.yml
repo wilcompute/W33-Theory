@@ -1,0 +1,24 @@
+name: Pass11742-11749 nonzero flavor and flux frame
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - analysis/w33_pass11742_11749_nonzero_flavor_and_flux_frame.py
+      - tests/test_w33_pass11742_11749_nonzero_flavor_and_flux_frame.py
+      - data/w33_pass11742_11749_nonzero_flavor_and_flux_frame.json
+      - .github/workflows/pass11742-11749-nonzero-flavor-flux-frame.yml
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest
+      - name: Check frozen certificate and previous interface
+        run: OPENBLAS_NUM_THREADS=1 python -m pytest -q tests/test_w33_pass11742_11749_nonzero_flavor_and_flux_frame.py tests/test_w33_pass11734_11741_gauging_and_chiral_quotient.py
+      - name: Replay eight investigations
+        run: OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11742_11749_nonzero_flavor_and_flux_frame.py
+      - name: Check regenerated certificate
+        run: OPENBLAS_NUM_THREADS=1 python -m pytest -q tests/test_w33_pass11742_11749_nonzero_flavor_and_flux_frame.py

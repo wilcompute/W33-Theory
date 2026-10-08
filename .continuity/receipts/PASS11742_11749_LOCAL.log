@@ -1,0 +1,30 @@
+Passes11742-11749 local verification
+Reservation:3b08c1d72
+Main checkout:C:\Repos\Theory of Everything
+Python:3.12.3
+
+Producer
+11742 PASS
+11743 PASS
+11744 PASS
+11745 PASS
+11746 PASS
+11747 PASS
+11748 PASS
+11749 PASS
+/mnt/c/repos/theory of everything/data/w33_pass11742_11749_nonzero_flavor_and_flux_frame.json
+
+Final25 new plus23 prior interface tests
+................................................                         [100%]
+48 passed in 87.93s (0:01:27)
+
+Final intake
+[audit] guard: no collisions
+[audit] forced arithmetic: none
+[audit] intake clean (4 files)
+
+Source/artifact SHA256 (LF normalized):
+910ff3414799bf49b7cf9b894e59f37c6ebcfca0c9bce2d3f1c5fa8f928d8b71  analysis/w33_pass11742_11749_nonzero_flavor_and_flux_frame.py
+ad1baa2f1ce16c9c0e4d789803a282767360907ee9a09728f64244a9f46362ad  tests/test_w33_pass11742_11749_nonzero_flavor_and_flux_frame.py
+8c8c4a07ecca19db05aa258a1ddf013a4e65dc080da007cb620a1c0d55b1d6f0  analysis/PASS11742_11749_NONZERO_FLAVOR_AND_FLUX_FRAME.md
+b15b778de54707931dbb35e4f26a20012c99a98342223a85a2f524ca052c0583  data/w33_pass11742_11749_nonzero_flavor_and_flux_frame.json
