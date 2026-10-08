@@ -54,10 +54,10 @@ The brackets are:
 
 ## What is not established
 
-* **The intertwiner to Codex's rays.**
-  * Codex's Hilbert-space Witting rays (odd parts of Pauli projectors, Pass 11663) form a Witting configuration with the same labels and the same orthogonality.
-  * The naive basis map T_u − T_{−u} ↦ |u⟩ − |−u⟩ matches only 16 of 40 rays.
-  * The representations are complex conjugate, so the two are related by an antilinear intertwiner. That intertwiner is not constructed.
+* **The intertwiner to Codex's rays: corrected in Pass 11690.** The "16 of 40" comparison here used the non-symmetric
+  Paulis XˣZᶻ, which do not give Codex's rank-one odd projectors. With the symmetric Weyl operators τ^{xz}XˣZᶻ, the
+  unique antilinear Clifford intertwiner (no linear one exists) maps **all 40** of Codex's Hilbert-space Witting rays
+  onto the 40 E₈ root rays. It relabels the points by the anti-symplectic swap (x, z) ↦ (z, x).
 * **The full Witting group.** The order-3 complex reflections of G₃₂ = μ₆·PSp(4,3) are E₈ Weyl-group elements outside the Clifford image.
 * **No physics claim.** No Standard Model content is claimed. The three-fermion reading is a reading of the grading, not a dynamical statement.
 
@@ -72,6 +72,7 @@ Both descriptions give the 80 three-cycles, i.e. 3 roots per Pauli degree. What 
 four AG(2,3) parallel classes) and the Witting coordinates, in which W(3,3) appears as root-ray orthogonality.
 
 **Prior art.**
+* In the repo: `analysis/2026-09-21_e8_trinification_two_qutrit_pauli243.md` already found the two-qutrit Pauli group 3^{1+4} inside E₈, via trinification in E₆ × SU(3)_ext. Here the same group is the Pauli group of sl(9) ⊂ E₈.
 * E₈ ⊃ sl(9) with g₁ = Λ³C⁹ (Kac).
 * The Cartan subspace of Λ³C⁹ and its Witting little Weyl group (Vinberg–Elashvili 1978).
 * The Witting polytope as the E₈ roots over Z[ω] (Coxeter).

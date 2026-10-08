@@ -1,0 +1,136 @@
+{
+ "pass_ids": [
+  11687,
+  11688,
+  11689,
+  11690,
+  11691
+ ],
+ "11687": {
+  "point (Z on qutrit 1)": {
+   "roots": 78,
+   "dim": 86,
+   "components": [
+    72,
+    6
+   ]
+  },
+  "hyperplane p^perp": {
+   "roots": 6,
+   "dim": 14,
+   "components": [
+    6
+   ]
+  },
+  "Lagrangian line <Z1,Z2>": {
+   "roots": 24,
+   "dim": 32,
+   "components": [
+    6,
+    6,
+    6,
+    6
+   ]
+  },
+  "qutrit-1 Paulis (tensor factor)": {
+   "roots": 24,
+   "dim": 32,
+   "components": [
+    24
+   ]
+  },
+  "triality": {
+   "D4xD4_roots": 48,
+   "mixed_roots": 192,
+   "coset_sizes": [
+    64,
+    64,
+    64
+   ],
+   "mixed_charges_with_three_distinct_cosets": 64,
+   "mixed_charges": 64,
+   "omega_coset_map": [
+    64,
+    64,
+    64
+   ],
+   "omega_cycles_three_cosets": true
+  }
+ },
+ "11688": {
+  "Z(x)I": {
+   "fixed_dim": 86,
+   "eigenphase_multiplicities_units_2pi_over_9": {
+    "0": 86,
+    "3": 81,
+    "6": 81
+   },
+   "fixed_roots": 78,
+   "root_components": [
+    72,
+    6
+   ]
+  },
+  "T(x)I": {
+   "fixed_dim": 82,
+   "eigenphase_multiplicities_units_2pi_over_9": {
+    "0": 82,
+    "1": 54,
+    "2": 27,
+    "3": 2,
+    "6": 2,
+    "7": 27,
+    "8": 54
+   },
+   "fixed_roots": 74,
+   "root_components": [
+    72,
+    2
+   ]
+  }
+ },
+ "11689": {
+  "eps=+1 unitary (identity)": {
+   "result": "preserves (27,3)",
+   "eps_times_tau": 1
+  },
+  "eps=-1 unitary (F^2 on qutrit 1)": {
+   "result": "swaps to (27bar,3bar)",
+   "eps_times_tau": -1
+  },
+  "eps=-1 antiunitary (K)": {
+   "result": "preserves (27,3)",
+   "eps_times_tau": 1
+  },
+  "eps=+1 antiunitary (F^2 K)": {
+   "result": "swaps to (27bar,3bar)",
+   "eps_times_tau": -1
+  },
+  "character_is_eps_times_tau": true
+ },
+ "11690": {
+  "odd_ranks": [
+   1
+  ],
+  "codex_ray_overlaps": [
+   0.0,
+   0.333333
+  ],
+  "intertwiner_unitary": true,
+  "codex_rays_onto_root_rays": 40,
+  "label_map_is_xz_swap": 40,
+  "intertwiner_solution_space_dims": {
+   "antilinear": [
+    1
+   ],
+   "linear": []
+  }
+ },
+ "11691": {
+  "rule": "Lambda^3 V x Lambda^3 V -> Lambda^6 V = Lambda^(n-6) V*; equals Lambda^3 V* iff n - 6 = 3",
+  "closing_dimensions": [
+   9
+  ],
+  "two_qutrit_dimension": 9
+ }
+}
