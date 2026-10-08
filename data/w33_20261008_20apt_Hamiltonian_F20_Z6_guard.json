@@ -1,0 +1,43 @@
+{
+  "CRT_argument": "H1(Z6)=H1(Z2) x H1(Z3); fixed spaces have sizes2 x1; only (0,0) and (3,3) under a chosen mod2 logical basis.",
+  "CW_cells": [
+    40,
+    60,
+    20
+  ],
+  "Hamiltonian_invariant_under_all_20_F20_permutations": true,
+  "Hamiltonian_unit_coefficients": "H = -sum_v A_v - sum_f B_f",
+  "Pauli_commutators_zero": true,
+  "energy_gap_exact": 4,
+  "full_F20_invariant_flat_Z6_Wilson_line_characters": [
+    [
+      0,
+      0
+    ],
+    [
+      3,
+      3
+    ]
+  ],
+  "full_F20_invariant_flat_Z6_group": "Z2",
+  "full_F20_invariant_flat_Z6_order_six_characters": 0,
+  "full_nonabelian_gauge_fields_derived": false,
+  "ground_energy_exact": -60,
+  "ground_space_dimension_exact": 4,
+  "logical_code_distance": 6,
+  "minimal_excited_energy_exact": -56,
+  "physical_boundary": "Finite commuting projector stabilizer Hamiltonian; no 3+1D spacetime, lapse/shift or ADM hypersurface-deformation bracket, and not a Standard Model matter representation.",
+  "plaquette_relation_all_20_plaquettes_multiply_identity": true,
+  "proton_hexality_cannot_be_entirely_F20_invariant_flat_Z6_holonomy": true,
+  "relativistic_or_Einstein_dynamics_derived": false,
+  "single_X_excitation_face_violations": {
+    "2": 40,
+    "4": 20
+  },
+  "single_Z_excitation_star_violations": {
+    "2": 60
+  },
+  "stabilizer_rank_X": 39,
+  "stabilizer_rank_Z": 19,
+  "star_relation_all_stars_multiply_identity": true
+}

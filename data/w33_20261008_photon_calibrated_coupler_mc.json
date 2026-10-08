@@ -1,0 +1,863 @@
+{
+  "couplers": "two-mode reciprocal 27x27 unitary with normal-distributed phase perturbations; nine nonoverlapping matching layers per Trotter repetition",
+  "detectors": "random uniform efficiency from 1-r to 1+r then renormalize conditional successes",
+  "no_physical_device_measurements": true,
+  "no_worst_case_guarantee_from_monte_carlo": true,
+  "quantitative_error_bounds_use_prior_analytic_telescope_guard": true,
+  "random_seed_policy": "independent reproducible numpy PCG64 per hypothesis and per depth",
+  "samples_per_scenario": 12,
+  "scenarios": [
+    {
+      "calibration_samples": [
+        {
+          "maximum_template_drift_vs_nominal": 7.771561172376096e-16,
+          "perturbed_model_separation": 0.16323248499499676,
+          "seed": 0
+        },
+        {
+          "maximum_template_drift_vs_nominal": 7.771561172376096e-16,
+          "perturbed_model_separation": 0.16323248499499676,
+          "seed": 1
+        },
+        {
+          "maximum_template_drift_vs_nominal": 7.771561172376096e-16,
+          "perturbed_model_separation": 0.16323248499499676,
+          "seed": 2
+        },
+        {
+          "maximum_template_drift_vs_nominal": 7.771561172376096e-16,
+          "perturbed_model_separation": 0.16323248499499676,
+          "seed": 3
+        },
+        {
+          "maximum_template_drift_vs_nominal": 7.771561172376096e-16,
+          "perturbed_model_separation": 0.16323248499499676,
+          "seed": 4
+        },
+        {
+          "maximum_template_drift_vs_nominal": 7.771561172376096e-16,
+          "perturbed_model_separation": 0.16323248499499676,
+          "seed": 5
+        },
+        {
+          "maximum_template_drift_vs_nominal": 7.771561172376096e-16,
+          "perturbed_model_separation": 0.16323248499499676,
+          "seed": 6
+        },
+        {
+          "maximum_template_drift_vs_nominal": 7.771561172376096e-16,
+          "perturbed_model_separation": 0.16323248499499676,
+          "seed": 7
+        },
+        {
+          "maximum_template_drift_vs_nominal": 7.771561172376096e-16,
+          "perturbed_model_separation": 0.16323248499499676,
+          "seed": 8
+        },
+        {
+          "maximum_template_drift_vs_nominal": 7.771561172376096e-16,
+          "perturbed_model_separation": 0.16323248499499676,
+          "seed": 9
+        },
+        {
+          "maximum_template_drift_vs_nominal": 7.771561172376096e-16,
+          "perturbed_model_separation": 0.16323248499499676,
+          "seed": 10
+        },
+        {
+          "maximum_template_drift_vs_nominal": 7.771561172376096e-16,
+          "perturbed_model_separation": 0.16323248499499676,
+          "seed": 11
+        }
+      ],
+      "final_detector_efficiency_max_fractional_error": 0,
+      "nominal_sorted_min_margin": 0.16323248499499649,
+      "phase_noise_std_rad_per_coupler": 0,
+      "sampled_max_template_drift": 7.771561172376096e-16,
+      "sampled_min_calibrated_margin": 0.16323248499499676,
+      "sampled_unconditioned_nominal_margin_minus_twice_max_drift": 0.16323248499499493,
+      "stages": 36
+    },
+    {
+      "calibration_samples": [
+        {
+          "maximum_template_drift_vs_nominal": 0.00039452000351375416,
+          "perturbed_model_separation": 0.16277250801321497,
+          "seed": 0
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0006462735228288663,
+          "perturbed_model_separation": 0.16284899479721943,
+          "seed": 1
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0005400689073937759,
+          "perturbed_model_separation": 0.16305155136759003,
+          "seed": 2
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0006058080087502637,
+          "perturbed_model_separation": 0.1636125422709535,
+          "seed": 3
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0006750660218874105,
+          "perturbed_model_separation": 0.16374112697682985,
+          "seed": 4
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0005136884679284859,
+          "perturbed_model_separation": 0.16326413535600923,
+          "seed": 5
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0005336695384879353,
+          "perturbed_model_separation": 0.16324255225080164,
+          "seed": 6
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0004650817540194918,
+          "perturbed_model_separation": 0.16357930552607314,
+          "seed": 7
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0006318021804576635,
+          "perturbed_model_separation": 0.16297697213366677,
+          "seed": 8
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0005137044236163124,
+          "perturbed_model_separation": 0.16279414716226231,
+          "seed": 9
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0004415122386837722,
+          "perturbed_model_separation": 0.16342765191436365,
+          "seed": 10
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0004926274129928854,
+          "perturbed_model_separation": 0.16309362119194365,
+          "seed": 11
+        }
+      ],
+      "final_detector_efficiency_max_fractional_error": 0.002,
+      "nominal_sorted_min_margin": 0.16323248499499649,
+      "phase_noise_std_rad_per_coupler": 0.0001,
+      "sampled_max_template_drift": 0.0006750660218874105,
+      "sampled_min_calibrated_margin": 0.16277250801321497,
+      "sampled_unconditioned_nominal_margin_minus_twice_max_drift": 0.16188235295122166,
+      "stages": 36
+    },
+    {
+      "calibration_samples": [
+        {
+          "maximum_template_drift_vs_nominal": 0.0010579917091424473,
+          "perturbed_model_separation": 0.16172241464052883,
+          "seed": 0
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0018003350952425778,
+          "perturbed_model_separation": 0.1625896182545276,
+          "seed": 1
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0015164111944629965,
+          "perturbed_model_separation": 0.16285495264795707,
+          "seed": 2
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0016975719865853223,
+          "perturbed_model_separation": 0.16410444843550848,
+          "seed": 3
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.002026668776429208,
+          "perturbed_model_separation": 0.16434432220097578,
+          "seed": 4
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0013993777447838252,
+          "perturbed_model_separation": 0.16309652362611923,
+          "seed": 5
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.001368197110448388,
+          "perturbed_model_separation": 0.16310610245976453,
+          "seed": 6
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0012912270086168354,
+          "perturbed_model_separation": 0.16425366125669266,
+          "seed": 7
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0017001114937391093,
+          "perturbed_model_separation": 0.16283798037284275,
+          "seed": 8
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0012509363607555168,
+          "perturbed_model_separation": 0.16201731702582026,
+          "seed": 9
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.001315748022540142,
+          "perturbed_model_separation": 0.1636936986051906,
+          "seed": 10
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0013887862814425112,
+          "perturbed_model_separation": 0.16296258234641908,
+          "seed": 11
+        }
+      ],
+      "final_detector_efficiency_max_fractional_error": 0.005,
+      "nominal_sorted_min_margin": 0.16323248499499649,
+      "phase_noise_std_rad_per_coupler": 0.0005,
+      "sampled_max_template_drift": 0.002026668776429208,
+      "sampled_min_calibrated_margin": 0.16172241464052883,
+      "sampled_unconditioned_nominal_margin_minus_twice_max_drift": 0.15917914744213807,
+      "stages": 36
+    },
+    {
+      "calibration_samples": [
+        {
+          "maximum_template_drift_vs_nominal": 0.0021090382998190105,
+          "perturbed_model_separation": 0.16020472091992916,
+          "seed": 0
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0035996720281490924,
+          "perturbed_model_separation": 0.1635905015471788,
+          "seed": 1
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0030395456768847473,
+          "perturbed_model_separation": 0.16341737953538124,
+          "seed": 2
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0033908934251319356,
+          "perturbed_model_separation": 0.1649740225628173,
+          "seed": 3
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.004049036750686019,
+          "perturbed_model_separation": 0.16545530775238426,
+          "seed": 4
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.002794813010655761,
+          "perturbed_model_separation": 0.16295763951045553,
+          "seed": 5
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0027361080101588886,
+          "perturbed_model_separation": 0.16402008110825894,
+          "seed": 6
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0025900964433393514,
+          "perturbed_model_separation": 0.16527210605251114,
+          "seed": 7
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0033987083685930175,
+          "perturbed_model_separation": 0.1624375211174132,
+          "seed": 8
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0025033695112814947,
+          "perturbed_model_separation": 0.16090553375531932,
+          "seed": 9
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0026369376755232543,
+          "perturbed_model_separation": 0.16415307800334614,
+          "seed": 10
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0027712855320889407,
+          "perturbed_model_separation": 0.16268863925116278,
+          "seed": 11
+        }
+      ],
+      "final_detector_efficiency_max_fractional_error": 0.01,
+      "nominal_sorted_min_margin": 0.16323248499499649,
+      "phase_noise_std_rad_per_coupler": 0.001,
+      "sampled_max_template_drift": 0.004049036750686019,
+      "sampled_min_calibrated_margin": 0.16020472091992916,
+      "sampled_unconditioned_nominal_margin_minus_twice_max_drift": 0.15513441149362445,
+      "stages": 36
+    },
+    {
+      "calibration_samples": [
+        {
+          "maximum_template_drift_vs_nominal": 1.3322676295501878e-15,
+          "perturbed_model_separation": 0.2279950020459171,
+          "seed": 0
+        },
+        {
+          "maximum_template_drift_vs_nominal": 1.3322676295501878e-15,
+          "perturbed_model_separation": 0.2279950020459171,
+          "seed": 1
+        },
+        {
+          "maximum_template_drift_vs_nominal": 1.3322676295501878e-15,
+          "perturbed_model_separation": 0.2279950020459171,
+          "seed": 2
+        },
+        {
+          "maximum_template_drift_vs_nominal": 1.3322676295501878e-15,
+          "perturbed_model_separation": 0.2279950020459171,
+          "seed": 3
+        },
+        {
+          "maximum_template_drift_vs_nominal": 1.3322676295501878e-15,
+          "perturbed_model_separation": 0.2279950020459171,
+          "seed": 4
+        },
+        {
+          "maximum_template_drift_vs_nominal": 1.3322676295501878e-15,
+          "perturbed_model_separation": 0.2279950020459171,
+          "seed": 5
+        },
+        {
+          "maximum_template_drift_vs_nominal": 1.3322676295501878e-15,
+          "perturbed_model_separation": 0.2279950020459171,
+          "seed": 6
+        },
+        {
+          "maximum_template_drift_vs_nominal": 1.3322676295501878e-15,
+          "perturbed_model_separation": 0.2279950020459171,
+          "seed": 7
+        },
+        {
+          "maximum_template_drift_vs_nominal": 1.3322676295501878e-15,
+          "perturbed_model_separation": 0.2279950020459171,
+          "seed": 8
+        },
+        {
+          "maximum_template_drift_vs_nominal": 1.3322676295501878e-15,
+          "perturbed_model_separation": 0.2279950020459171,
+          "seed": 9
+        },
+        {
+          "maximum_template_drift_vs_nominal": 1.3322676295501878e-15,
+          "perturbed_model_separation": 0.2279950020459171,
+          "seed": 10
+        },
+        {
+          "maximum_template_drift_vs_nominal": 1.3322676295501878e-15,
+          "perturbed_model_separation": 0.2279950020459171,
+          "seed": 11
+        }
+      ],
+      "final_detector_efficiency_max_fractional_error": 0,
+      "nominal_sorted_min_margin": 0.22799500204591777,
+      "phase_noise_std_rad_per_coupler": 0,
+      "sampled_max_template_drift": 1.3322676295501878e-15,
+      "sampled_min_calibrated_margin": 0.2279950020459171,
+      "sampled_unconditioned_nominal_margin_minus_twice_max_drift": 0.2279950020459151,
+      "stages": 72
+    },
+    {
+      "calibration_samples": [
+        {
+          "maximum_template_drift_vs_nominal": 0.0006050191990410458,
+          "perturbed_model_separation": 0.22783251118805747,
+          "seed": 0
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0005385771380765902,
+          "perturbed_model_separation": 0.22829775963064242,
+          "seed": 1
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0004848162973060677,
+          "perturbed_model_separation": 0.2279961177896459,
+          "seed": 2
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0005961123501472265,
+          "perturbed_model_separation": 0.2285152370084114,
+          "seed": 3
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0005534951271297661,
+          "perturbed_model_separation": 0.2282920436053579,
+          "seed": 4
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0006370938839446172,
+          "perturbed_model_separation": 0.22800415805759322,
+          "seed": 5
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0005687597250533805,
+          "perturbed_model_separation": 0.22813616141551868,
+          "seed": 6
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0005866582770131523,
+          "perturbed_model_separation": 0.22778662477307782,
+          "seed": 7
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0004753161496987013,
+          "perturbed_model_separation": 0.22822353764191258,
+          "seed": 8
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0006381930640279587,
+          "perturbed_model_separation": 0.22793061007400497,
+          "seed": 9
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.000493267015770682,
+          "perturbed_model_separation": 0.22811658331986034,
+          "seed": 10
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0006345418961772875,
+          "perturbed_model_separation": 0.22805074552785765,
+          "seed": 11
+        }
+      ],
+      "final_detector_efficiency_max_fractional_error": 0.002,
+      "nominal_sorted_min_margin": 0.22799500204591777,
+      "phase_noise_std_rad_per_coupler": 0.0001,
+      "sampled_max_template_drift": 0.0006381930640279587,
+      "sampled_min_calibrated_margin": 0.22778662477307782,
+      "sampled_unconditioned_nominal_margin_minus_twice_max_drift": 0.22671861591786185,
+      "stages": 72
+    },
+    {
+      "calibration_samples": [
+        {
+          "maximum_template_drift_vs_nominal": 0.0018320932635850218,
+          "perturbed_model_separation": 0.22865309677961032,
+          "seed": 0
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0014580415967015425,
+          "perturbed_model_separation": 0.22889004368126437,
+          "seed": 1
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0014806816149347535,
+          "perturbed_model_separation": 0.22798707814218194,
+          "seed": 2
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0018865786560371967,
+          "perturbed_model_separation": 0.22948252845611786,
+          "seed": 3
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0014820100315631746,
+          "perturbed_model_separation": 0.22882448848684223,
+          "seed": 4
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0016819415343229949,
+          "perturbed_model_separation": 0.22796925215374575,
+          "seed": 5
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.001596205287345831,
+          "perturbed_model_separation": 0.2282731336157638,
+          "seed": 6
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0015518731861588475,
+          "perturbed_model_separation": 0.22794486122290752,
+          "seed": 7
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0013617748901534887,
+          "perturbed_model_separation": 0.2286872412557869,
+          "seed": 8
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.002085910088434395,
+          "perturbed_model_separation": 0.22773983953567678,
+          "seed": 9
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0015141241991379895,
+          "perturbed_model_separation": 0.22845023423607955,
+          "seed": 10
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0017834826354572453,
+          "perturbed_model_separation": 0.2294850122012389,
+          "seed": 11
+        }
+      ],
+      "final_detector_efficiency_max_fractional_error": 0.005,
+      "nominal_sorted_min_margin": 0.22799500204591777,
+      "phase_noise_std_rad_per_coupler": 0.0005,
+      "sampled_max_template_drift": 0.002085910088434395,
+      "sampled_min_calibrated_margin": 0.22773983953567678,
+      "sampled_unconditioned_nominal_margin_minus_twice_max_drift": 0.22382318186904898,
+      "stages": 72
+    },
+    {
+      "calibration_samples": [
+        {
+          "maximum_template_drift_vs_nominal": 0.0036521627583783745,
+          "perturbed_model_separation": 0.22990921060161407,
+          "seed": 0
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0029221970752104087,
+          "perturbed_model_separation": 0.2297785776544371,
+          "seed": 1
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.002960566006103449,
+          "perturbed_model_separation": 0.22797421151789646,
+          "seed": 2
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0037588822367252694,
+          "perturbed_model_separation": 0.23095604698013256,
+          "seed": 3
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0029651196609192243,
+          "perturbed_model_separation": 0.22964245047303922,
+          "seed": 4
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0033559091134874874,
+          "perturbed_model_separation": 0.227940996621905,
+          "seed": 5
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0031791568677175253,
+          "perturbed_model_separation": 0.2285406113781313,
+          "seed": 6
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0028615700321446003,
+          "perturbed_model_separation": 0.2284976008378558,
+          "seed": 7
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0027164594979339207,
+          "perturbed_model_separation": 0.22937030885295284,
+          "seed": 8
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.00417880433128659,
+          "perturbed_model_separation": 0.22808599293702847,
+          "seed": 9
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.003038357891868182,
+          "perturbed_model_separation": 0.22890251123290184,
+          "seed": 10
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0035584027705451438,
+          "perturbed_model_separation": 0.23157696479853707,
+          "seed": 11
+        }
+      ],
+      "final_detector_efficiency_max_fractional_error": 0.01,
+      "nominal_sorted_min_margin": 0.22799500204591777,
+      "phase_noise_std_rad_per_coupler": 0.001,
+      "sampled_max_template_drift": 0.00417880433128659,
+      "sampled_min_calibrated_margin": 0.227940996621905,
+      "sampled_unconditioned_nominal_margin_minus_twice_max_drift": 0.2196373933833446,
+      "stages": 72
+    },
+    {
+      "calibration_samples": [
+        {
+          "maximum_template_drift_vs_nominal": 6.217248937900877e-15,
+          "perturbed_model_separation": 0.25220789509077046,
+          "seed": 0
+        },
+        {
+          "maximum_template_drift_vs_nominal": 6.217248937900877e-15,
+          "perturbed_model_separation": 0.25220789509077046,
+          "seed": 1
+        },
+        {
+          "maximum_template_drift_vs_nominal": 6.217248937900877e-15,
+          "perturbed_model_separation": 0.25220789509077046,
+          "seed": 2
+        },
+        {
+          "maximum_template_drift_vs_nominal": 6.217248937900877e-15,
+          "perturbed_model_separation": 0.25220789509077046,
+          "seed": 3
+        },
+        {
+          "maximum_template_drift_vs_nominal": 6.217248937900877e-15,
+          "perturbed_model_separation": 0.25220789509077046,
+          "seed": 4
+        },
+        {
+          "maximum_template_drift_vs_nominal": 6.217248937900877e-15,
+          "perturbed_model_separation": 0.25220789509077046,
+          "seed": 5
+        },
+        {
+          "maximum_template_drift_vs_nominal": 6.217248937900877e-15,
+          "perturbed_model_separation": 0.25220789509077046,
+          "seed": 6
+        },
+        {
+          "maximum_template_drift_vs_nominal": 6.217248937900877e-15,
+          "perturbed_model_separation": 0.25220789509077046,
+          "seed": 7
+        },
+        {
+          "maximum_template_drift_vs_nominal": 6.217248937900877e-15,
+          "perturbed_model_separation": 0.25220789509077046,
+          "seed": 8
+        },
+        {
+          "maximum_template_drift_vs_nominal": 6.217248937900877e-15,
+          "perturbed_model_separation": 0.25220789509077046,
+          "seed": 9
+        },
+        {
+          "maximum_template_drift_vs_nominal": 6.217248937900877e-15,
+          "perturbed_model_separation": 0.25220789509077046,
+          "seed": 10
+        },
+        {
+          "maximum_template_drift_vs_nominal": 6.217248937900877e-15,
+          "perturbed_model_separation": 0.25220789509077046,
+          "seed": 11
+        }
+      ],
+      "final_detector_efficiency_max_fractional_error": 0,
+      "nominal_sorted_min_margin": 0.25220789509076724,
+      "phase_noise_std_rad_per_coupler": 0,
+      "sampled_max_template_drift": 6.217248937900877e-15,
+      "sampled_min_calibrated_margin": 0.25220789509077046,
+      "sampled_unconditioned_nominal_margin_minus_twice_max_drift": 0.2522078950907548,
+      "stages": 144
+    },
+    {
+      "calibration_samples": [
+        {
+          "maximum_template_drift_vs_nominal": 0.0005678884923753236,
+          "perturbed_model_separation": 0.2519947877336455,
+          "seed": 0
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.00046756672365366736,
+          "perturbed_model_separation": 0.25233915364127907,
+          "seed": 1
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0006291413324925887,
+          "perturbed_model_separation": 0.2520746897840742,
+          "seed": 2
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0006486403060831925,
+          "perturbed_model_separation": 0.2516453591865905,
+          "seed": 3
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0006952198515756125,
+          "perturbed_model_separation": 0.2518617662865938,
+          "seed": 4
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0007691616217570529,
+          "perturbed_model_separation": 0.2521467469531998,
+          "seed": 5
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0006157612240940136,
+          "perturbed_model_separation": 0.25196916158733906,
+          "seed": 6
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.000496614450915811,
+          "perturbed_model_separation": 0.2518281565961794,
+          "seed": 7
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0006044299859975233,
+          "perturbed_model_separation": 0.2518651917976738,
+          "seed": 8
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0007350498754895018,
+          "perturbed_model_separation": 0.2517026433892673,
+          "seed": 9
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0006689116874499246,
+          "perturbed_model_separation": 0.2520494952360785,
+          "seed": 10
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0006393574631342602,
+          "perturbed_model_separation": 0.2522092784343093,
+          "seed": 11
+        }
+      ],
+      "final_detector_efficiency_max_fractional_error": 0.002,
+      "nominal_sorted_min_margin": 0.25220789509076724,
+      "phase_noise_std_rad_per_coupler": 0.0001,
+      "sampled_max_template_drift": 0.0007691616217570529,
+      "sampled_min_calibrated_margin": 0.2516453591865905,
+      "sampled_unconditioned_nominal_margin_minus_twice_max_drift": 0.25066957184725314,
+      "stages": 144
+    },
+    {
+      "calibration_samples": [
+        {
+          "maximum_template_drift_vs_nominal": 0.0019525341185970269,
+          "perturbed_model_separation": 0.251131506640994,
+          "seed": 0
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.001564615406991765,
+          "perturbed_model_separation": 0.2521014788753845,
+          "seed": 1
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0017121907489685007,
+          "perturbed_model_separation": 0.2520362918715818,
+          "seed": 2
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0018694002875316862,
+          "perturbed_model_separation": 0.2516085118066317,
+          "seed": 3
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0020469408919822074,
+          "perturbed_model_separation": 0.2511266292136694,
+          "seed": 4
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0026092442724348075,
+          "perturbed_model_separation": 0.2521550898062479,
+          "seed": 5
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0018049210693428797,
+          "perturbed_model_separation": 0.2517174021939116,
+          "seed": 6
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0015171024254867493,
+          "perturbed_model_separation": 0.2524954105277257,
+          "seed": 7
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0017429484305224174,
+          "perturbed_model_separation": 0.2514360740605126,
+          "seed": 8
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.002127881722579217,
+          "perturbed_model_separation": 0.25122095912831127,
+          "seed": 9
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0019467144667035807,
+          "perturbed_model_separation": 0.25178657346442923,
+          "seed": 10
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0018939613028097213,
+          "perturbed_model_separation": 0.25214861002842376,
+          "seed": 11
+        }
+      ],
+      "final_detector_efficiency_max_fractional_error": 0.005,
+      "nominal_sorted_min_margin": 0.25220789509076724,
+      "phase_noise_std_rad_per_coupler": 0.0005,
+      "sampled_max_template_drift": 0.0026092442724348075,
+      "sampled_min_calibrated_margin": 0.2511266292136694,
+      "sampled_unconditioned_nominal_margin_minus_twice_max_drift": 0.24698940654589763,
+      "stages": 144
+    },
+    {
+      "calibration_samples": [
+        {
+          "maximum_template_drift_vs_nominal": 0.0038720214220830385,
+          "perturbed_model_separation": 0.24994022406235075,
+          "seed": 0
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0031131975895917763,
+          "perturbed_model_separation": 0.2524699410123392,
+          "seed": 1
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0034369786882101905,
+          "perturbed_model_separation": 0.2516416351997006,
+          "seed": 2
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.003531015475345789,
+          "perturbed_model_separation": 0.2522782270659381,
+          "seed": 3
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.004085285094567348,
+          "perturbed_model_separation": 0.2500948305047382,
+          "seed": 4
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.005180513597434211,
+          "perturbed_model_separation": 0.25233505877911083,
+          "seed": 5
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.003590112340685403,
+          "perturbed_model_separation": 0.2511975021893158,
+          "seed": 6
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0030172122662167067,
+          "perturbed_model_separation": 0.2533323016185205,
+          "seed": 7
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0034914133489260535,
+          "perturbed_model_separation": 0.2511122197172052,
+          "seed": 8
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.004229933705806321,
+          "perturbed_model_separation": 0.25010811006421646,
+          "seed": 9
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.003867990438737756,
+          "perturbed_model_separation": 0.2512477027303466,
+          "seed": 10
+        },
+        {
+          "maximum_template_drift_vs_nominal": 0.0038010536352741098,
+          "perturbed_model_separation": 0.25205786818987325,
+          "seed": 11
+        }
+      ],
+      "final_detector_efficiency_max_fractional_error": 0.01,
+      "nominal_sorted_min_margin": 0.25220789509076724,
+      "phase_noise_std_rad_per_coupler": 0.001,
+      "sampled_max_template_drift": 0.005180513597434211,
+      "sampled_min_calibrated_margin": 0.24994022406235075,
+      "sampled_unconditioned_nominal_margin_minus_twice_max_drift": 0.24184686789589882,
+      "stages": 144
+    }
+  ]
+}

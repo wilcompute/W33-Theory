@@ -1,0 +1,96 @@
+{
+  "BC_CSS": {
+    "CSS_distance": 3,
+    "V_E_F": [
+      30,
+      90,
+      60
+    ],
+    "X_distance": 6,
+    "X_witness_boundary_edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        28
+      ],
+      [
+        1,
+        29
+      ],
+      [
+        2,
+        29
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ]
+    ],
+    "Z_distance": 3,
+    "Z_witness_edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "dual_face_adjacency_degree": 3,
+    "k": 2,
+    "n": 90,
+    "primal_graph_degree": 6,
+    "rank_HX": 29,
+    "rank_HZ": 59,
+    "step_spectrum": {
+      "1": {
+        "connected_cycles": 1,
+        "cycle_length": 30,
+        "edges": 30
+      },
+      "2": {
+        "connected_cycles": 2,
+        "cycle_length": 15,
+        "edges": 30
+      },
+      "3": {
+        "connected_cycles": 3,
+        "cycle_length": 10,
+        "edges": 30
+      }
+    }
+  },
+  "BC_boundary_triangle_faces": 60,
+  "BC_face_dual_and_W33_edge_line_graph_isomorphic": false,
+  "BC_face_dual_graph_degree": 3,
+  "BC_full_automorphism_has_order_four": false,
+  "BC_torus_1_skeleton_aut_order": 60,
+  "BC_torus_automorphism_order_histogram": {
+    "1": 1,
+    "2": 31,
+    "3": 2,
+    "5": 4,
+    "6": 2,
+    "10": 4,
+    "15": 8,
+    "30": 8
+  },
+  "F20_order4_elements_in_W33": 10,
+  "W33_CSS_edge_qubits": 60,
+  "W33_edge_line_graph_degree": 4,
+  "W33_selected_CSS": "[[60,2,6]]_2",
+  "hypothesis_boundary": "Same 60 labels not canonical, distinct cellular carriers and qubit counts. Full 600-cell / A5 Clifford antipodal construction may still admit a different action; this rules out simplest individual-BC-ring geometric identification.",
+  "no_full_F20_action_as_BC_ring_geometric_automorphisms": true
+}

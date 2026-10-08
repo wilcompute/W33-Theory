@@ -1,0 +1,48 @@
+{
+  "CSS_parameters": [
+    60,
+    2,
+    6
+  ],
+  "F20_order4_physical_edge_permutation_cycle_lengths": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  "F20_order4_physical_qubit_4cycles": 15,
+  "X_degenerate_same_syndrome_distinct_error_counts": {
+    "2": 240
+  },
+  "X_distinct_syndromes": 1591,
+  "X_error_lookup_weight_bound": 2,
+  "X_errors_exhaustively_corrected": 1831,
+  "Z_degenerate_same_syndrome_distinct_error_counts": {},
+  "Z_distinct_syndromes": 36051,
+  "Z_error_lookup_weight_bound": 3,
+  "Z_errors_exhaustively_corrected": 36051,
+  "all_to_all_transpositions_for_permutation": 45,
+  "average_single_qubit_routing_graph_distance": 3.2666666666666666,
+  "max_single_qubit_routing_graph_distance": 5,
+  "no_circuit_level_fault_tolerance_or_threshold_proven": true,
+  "routing_graph_swaps_not_scheduled": true,
+  "single_qubit_route_distance_histogram": {
+    "2": 16,
+    "3": 16,
+    "4": 24,
+    "5": 4
+  },
+  "support_edge_qubit_line_graph_degree": 4,
+  "three_round_majority_tolerates_one_flipped_bit_per_check": true
+}

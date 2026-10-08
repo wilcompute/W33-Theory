@@ -1,0 +1,93 @@
+{
+  "BC_ring_D30_lacks_order4": true,
+  "F20_C5_integral_H1_action_trivial": "No order5 in GL2(Z); independently generator order5 on torus",
+  "F20_on_integral_H1_image": "C4",
+  "exact_integral_homology_H1": "Z^2",
+  "field_actions": [
+    {
+      "basis_dim": 2,
+      "det_mod_p": 1,
+      "integral_matrix_order4_forced_if_p3": false,
+      "matrix_order4_action": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "matrix_squared": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "p": 2,
+      "trace_mod_p": 0
+    },
+    {
+      "basis_dim": 2,
+      "det_mod_p": 1,
+      "integral_matrix_order4_forced_if_p3": true,
+      "matrix_order4_action": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "matrix_squared": [
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "p": 3,
+      "trace_mod_p": 0
+    },
+    {
+      "basis_dim": 2,
+      "det_mod_p": 1,
+      "integral_matrix_order4_forced_if_p3": false,
+      "matrix_order4_action": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "matrix_squared": [
+        [
+          4,
+          0
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "p": 5,
+      "trace_mod_p": 0
+    }
+  ],
+  "interpretation": "This is a mapping-class/abstract torus homology action, NOT a physical rotation of a geometric square torus, conformal modulus, or spacetime metric.",
+  "mod2_logical_SWAP_is_reduction_of_modular_S": true,
+  "order4_integral_H1_action": "Conjugate over GL2(Z) to J=[[0,-1],[1,0]]",
+  "order4_squared_on_integral_H1": "-Identity"
+}

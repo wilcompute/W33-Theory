@@ -1,0 +1,16 @@
+{
+  "actual_C_singular_points_with_all_four_gradient_zero": [],
+  "hypersurface_points_in_sieve": 576,
+  "no_singular_witness_not_smoothness_proof": true,
+  "particular_sparse_polynomial_proven_singular_over_Qi": false,
+  "polynomial": "prod s+2 prod d+3 prod t",
+  "projective_affine_candidate_coordinates": [
+    "0",
+    "1",
+    "-1",
+    "I",
+    "-I",
+    "inf"
+  ],
+  "total_examined": 1296
+}
