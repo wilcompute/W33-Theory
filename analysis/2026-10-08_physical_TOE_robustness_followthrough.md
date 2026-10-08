@@ -1,0 +1,116 @@
+# 2026-10-08 — Six physical TOE frontier follow-ups: robustness, local algebra, gauge cycles, hexality origin, flavor scales, and flux stabilization
+
+**Status:** executed exact finite calculations, source-bound necessary-condition tests, and supplied controlled models. **Not** a derivation of the actual Standard Model, four-dimensional general relativity, a realistic compactification vacuum or a physical theory of everything.
+
+- Producer: `analysis/w33_20261008_physical_frontiers_robustness.py`
+- Computed certificate: `data/w33_20261008_physical_frontiers_robustness.json`
+- Independently specified checks: `tests/test_w33_20261008_physical_frontiers_robustness.py`
+- Research parent: [seven-frontier follow-through](2026-10-08_seven_TOE_frontier_followthrough.md) (9dccf33c5), alongside the exact [two-27 transport](2026-10-08_dual_27_electrical_transport.md) and [five-frontier guards](2026-10-08_five_physics_frontiers.md).
+
+The material below explicitly distinguishes **already proved in the repository**, **this pass's exact new computation**, **literature established outside this repo**, and **physical ingredients still absent**.
+
+## 1. Photonic coherent-walk discrimination with a conservative disorder margin
+
+**Repo prior:** The two 27-vertex opposite-point and transverse-line graphs are cospectral but nonisomorphic (Sep 24). The October 8 first packet gives exact different resistance distributions; 9dccf33c5 derives their exact coherent continuous-time average-mixing distributions and gives a Szegedy isometry. This pass neither reclaims those as new nor assumes the hardware exists.
+
+For supplied single-photon waveguide Hamiltonians \(H_{\mathrm P}=A_{\mathrm P}\) and \(H_{\mathrm L}=A_{\mathrm L}\), observe **the largest transition probability between distinct physical ports**,
+
+\[
+T(H,t)=\max_{i\ne j}|(e^{-itH})_{ij}|^2.
+\]
+
+This statistic is invariant under reordering the port labels. On the **predeclared grid** \(t=0.10,0.11,\ldots,2.00\), the largest tested value of \(\Delta(t)/(4t)\), where \(\Delta=T(H_{\mathrm P},t)-T(H_{\mathrm L},t)>0\), occurs at \(t=0.78\). Exact real-symmetric diagonalization yields
+
+\[
+T_{\mathrm P}=0.311688802743119,\qquad
+T_{\mathrm L}=0.0422238724321954,\quad
+\Delta=0.269464930310923.
+\]
+
+This is an **experiment-design comparison on a finite grid, not a global optimum over times**. It presupposes the hardware implements the two specified adjacency Hamiltonians with comparable normalized couplings, all 27 ports are addressable, and the output probabilities can be calibrated. The graphs' spectra alone cannot distinguish the two.
+
+**Rigorous robustness:** For Hermitian implementation perturbations \(E_{\mathrm P},E_{\mathrm L}\) with \(\lVert E\rVert_2\le\epsilon\), Duhamel's formula for unitary evolution gives \(\lVert e^{-it(H+E)}-e^{-itH}\rVert_2\le |t|\epsilon\), hence each probability shifts by at most \(2|t|\epsilon\). Both devices together can decrease the gap by at most \(4|t|\epsilon\). Therefore the label-free sign is **guaranteed** if
+
+\[
+\epsilon<\Delta/(4t)=0.0863669648432446
+\]
+
+in the dimensionless coupling units of \(H=A\). This is a deterministic operator-norm sufficient condition, not a measured tolerance. If every on-site detuning and every existing edge's symmetric coupling error is bounded in magnitude by \(\delta\), then \(\lVert E\rVert_2\le9\delta\) by the maximal absolute row sum (eight neighbors plus diagonal). The signed discriminator is therefore certified for \(\delta<0.0095963\) (roughly 0.96% of unit coupling). A **seeded 32-trial** independent static-disorder simulation with \(\delta=0.005\) also retains positive separation in every trial. These trials are only spot checks; the Duhamel bound carries the worst-case guarantee. Distributional assumptions, readout errors, unknown device coupling scale and photon loss need separate budgets.
+
+Established platforms with reconfigurable quantum-walk Hamiltonians and coupled-waveguide evolution exist; **this exact W33 carrier implementation has not been built**. Primary references: [programmable silicon-photonic graph quantum walks](https://pmc.ncbi.nlm.nih.gov/articles/PMC7909884/), [2D waveguide quantum walks](https://pmc.ncbi.nlm.nih.gov/articles/PMC5947980/), [Anderson localization in photonic integrated walks](https://www.nature.com/articles/nphoton.2013.26), [Godsil average mixing](https://arxiv.org/abs/1103.2578).
+
+## 2. Local gravitational-current algebra: derived ideal and center
+
+**Repo prior:** The previous pass constructed a real W33 Levi induced \(C_8\) and showed the eight nearest-edge currents generate a 34-dimensional Lie algebra over \(\mathbb Q\), separately agreeing modulo 101. These are scalar symplectic-bilinear graph currents; no 4D gravitational Hamiltonian or hypersurface deformation representation has been established.
+
+**New finer algebraic signatures, checked modulo 101:** with \(\mathfrak g\) the 34-dimensional matrix Lie algebra generated by \(M_{ij}=(e_i+e_j)(e_i-e_j)^T\), direct row-space closure of all \(34^2\) commutators gives
+
+\[
+\dim_{\mathbb F_{101}}[\mathfrak g,\mathfrak g]=34,\qquad
+\dim_{\mathbb F_{101}}Z(\mathfrak g)=1.
+\]
+
+The center is found by solving the simultaneous kernel of \(X\mapsto[X,M_{ij}]\) on all eight generating matrices. Thus the reduction modulo 101 is **perfect but possesses a one-dimensional center**. Its full abstract decomposition, integer Lie algebra and characteristic-zero center and perfectness remain open; the matrix-span dimension over \(\mathbb Q\) alone does not promote the *modular* center result to characteristic zero. The 48-dimensional invariant-support ceiling and failure of strictly nearest-edge closure from the earlier pass remain valid. No identification with \(\mathfrak{sl}\), an exceptional Lie algebra or the continuum Dirac algebra is made.
+
+External comparator: [Bonzom–Dittrich's actual discrete hypersurface deformation algebras](https://arxiv.org/abs/1304.5983), which require very different geometric and constraint data.
+
+## 3. Chirality/order and gauge holonomy: 81 -> 321 cycles
+
+**Repo prior:** Passes 11697/11698 proved 320 chiral stabilizer vacua grouped into 160 opposite-sign pairs, while the preceding paper modeled a supplied ferromagnet over 160 incidence flags with two symmetric ordered ground states. Nothing here derives which sign nature chooses.
+
+Let \(G\) be the **actual W33 point-line Levi graph**, with 80 vertices of degree 4 and 160 edges. Its first-cycle dimension over \(\mathbb F_2\) is \(\beta_1(G)=160-80+1=81\). The **flag graph** \(L(G)\), the line graph on 160 edges/flags of \(G\), has 480 edges, so
+
+\[
+\beta_1(L(G))=480-160+1=321=81+240.
+\]
+
+Every original degree-4 vertex produces a local \(K_4\) on its four incident flags. Each local \(K_4\) contains exactly four triangles and has cycle rank three. Since the Levi graph is bipartite and triangle-free, *all* triangles of its line graph arise this way. Hence the flag graph has exactly \(80\times4=320\) triangles, and the added \(80\times3=240\) cycle directions account for \(\beta_1(L(G))-\beta_1(G)\).
+
+For ordinary unconstrained \(\mathbb Z_2\) edge-gauge variables modulo vertex gauge on a **one-dimensional graph**, the number of flat (no 2-cells specified) holonomy sectors is \(2^{\beta_1}\): \(2^{81}\) for the Levi complex and \(2^{321}\) for its line graph. This is **not** the two ground states of the Ising vertex spin system, nor do these counts prove new physical photons or fundamental gauge particles. The numerical equality of **320 local triangles** and **320 previously enumerated chiral vacua** is explicitly **not** an established geometric, equivariant or physical bijection. A useful follow-up is to test that equivariance rather than interpret a count coincidence.
+
+## 4. String-vacuum necessary no-go: proton hexality is not just Y + B-L
+
+**Repo prior:** `w33_20261008_six_toe_frontier_followthrough.py` supplied a \(Z_6\) proton-hexality-type residue table \(q_{P_6}(Q,U^c,D^c,L,E^c,N^c,H_u,H_d)=(0,1,5,4,1,3,5,1)\), reproducing the desired Yukawa and the dangerous operator charge vetoes. Actual smooth CY quotient family, three chiral modes, holomorphic Yukawa and existing FI/proton/exotic obstructions were supplied separately by Passes 11742–11757. Neither constitutes an allowed complete physical vacuum.
+
+**This pass's necessary origin check:** can this particular \(Z_6\) be obtained *only* as an integer-linear combination of the appropriately integral hypercharge and baryon-minus-lepton generators? Test all \(a,b\in\mathbb Z_6\) in
+
+\[
+q_{P_6}(\Phi)\equiv a\,[3(B-L)](\Phi)+b\,[6Y](\Phi)\pmod6.
+\]
+
+**Zero solutions.** Already the left-chiral \(Q\) superfield has \((3(B-L),6Y,q_6)=(1,1,0)\), so \(a+b=0\). The \(U^c\) superfield has \((-1,-4,1)\), requiring \(-a-4b=1\), or \(3a=1\pmod6\). This congruence is impossible. Therefore **this fixed P6 assignment is not obtained from the subgroup generated solely by these two integrally normalized generators**. A discrete generator from additional gauge factors, space-group/geometry, or other independent origin is needed. This is **not** a proof that all heterotic realizations of proton hexality are impossible: the repo possesses additional gauge and geometric structures, and no specific field's full bundle/space-group charge was computed here. It also does not replace the full discrete anomaly and string worldsheet selection-rule checks. Primary literature: [Dreiner–Luhn–Thormeier](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.73.075007).
+
+## 5. Real three-mode holomorphic coupling and quantitatively explicit metric ambiguity
+
+**Repo prior:** Pass 11742 proves a **nonzero** holomorphic invariant cup with quotient value \(C=1/2\) in its declared Serre/residue normalization. It identifies the three line bundles \(K_1=(-2,1,1,0)\), \(K_2=(0,-3,0,1)\), \(K_3=(2,2,-1,-1)\), the smooth-free Klein-four quotient family and a positive zero-slope Kähler ray. It explicitly **does not compute** actual Ricci-flat/Hermitian–Yang–Mills kinetic norms or measured masses.
+
+For three one-dimensional normalized matter factors, holding the overall Kähler-supergravity prefactor fixed, the physical cubic amplitude is
+
+\[
+|Y_{\mathrm{phys}}|=\frac{|C|}{\sqrt{Z_1Z_2Z_3}}\times
+(\text{specified universal prefactor}).
+\]
+
+Even if someone *assumes* each unknown positive kinetic coefficient is between 1 and 4 in the **declared coefficient bases**, the allowed value of \(C/\sqrt{Z_1Z_2Z_3}\) is the entire range \([1/16,1/2]\): an **eightfold indeterminacy** before varying complex moduli or universal normalization. This is a conditional sensitivity bound, not a claim that the actual metrics satisfy \([1,4]\). For a supplied full 3x3 matrix, positive kinetic metrics with spectra in [1,4] enforce the singular-value bound \(\sigma_i(Y)/4\le\sigma_i(Y_{\rm norm})\le\sigma_i(Y)\); 64 seeded random positive-metric trials satisfy the inequalities. Invertible normalization preserves matrix rank. Neither this toy matrix nor its sampling substitutes for the actual harmonic bundle forms.
+
+The missing ingredients can in principle be approached using [heteroticyukawas](https://github.com/kitft/heteroticyukawas), which computes approximate Ricci-flat CY metrics, HYM bundle metrics, harmonic cohomology representatives and physical Yukawas on the tetraquadric for supplied geometries and moduli. Its workflow is an established **external resource**, not code already integrated or run in this pass. The related [2025 numerical physical Yukawa study](https://www.sciencedirect.com/science/article/pii/S0550321324003444) reports substantial normalization effects.
+
+## 6. Beyond flux rolling: a sharp eight-radius stabilization geometry
+
+**Repo prior:** Pass 11754 reduces a particular primitive seven-form flux to the 3D Einstein-frame eight-radius potential \(U=A n^2\exp[-2\lambda_1-4\sum_{i=2}^8\lambda_i]\), with strictly negative derivatives in every radius. This does not stabilize the compactification. A 4D gravity model and cosmological constant screening are open.
+
+**Mathematical necessary condition:** For any supplied scalar potential made of positive exponential terms \(U(\lambda)=\sum_{a=1}^m c_a e^{-k_a\cdot\lambda}\), \(c_a>0\), a stationary point needs \(\sum_a p_a k_a=0\) for positive weights \(p_a\), so the origin must lie in the convex hull of its exponent vectors. If all vectors occupy the same strictly positive orthant, no stationary point exists, no matter how many positive terms are added. If \(m\le8\) in eight dimensions, a *positive linear dependence* between vectors makes them linearly dependent; therefore the Hessian \(\sum_a p_a k_ak_a^T\) has rank <8. Consequently a stationary point with a **strictly positive-definite eight-radius Hessian** requires at least **9** positive exponential terms with appropriately balanced exponent directions.
+
+**Explicit nine-term mathematical control** (not physically derived flux): choose \(k_1=e_1,\ldots,k_8=e_8,k_9=-\mathbf1\), all coefficients unity. Then
+
+\[
+U_{\rm toy}=\sum_{i=1}^8e^{-\lambda_i}+e^{\sum_i\lambda_i}
+\]
+
+has a stationary point at \(\lambda=0\) with Hessian \(I_8+\mathbf1\mathbf1^T\), eigenvalues \(1^{\times7},9^{\times1}\). This proves that nine balanced positive terms can locally stabilize eight specified scalar directions in a toy scalar potential, while the **actual** single-flux term cannot. It **does not** show these nine terms arise from allowed E8 flux, satisfy Bianchi identities, form a stationary 11D/heterotic vacuum, yield 4D Einstein gravity, or suppress the cosmological constant: the toy's vacuum energy is actually **9**, strictly positive.
+
+## Research boundaries and immediate implications
+
+The correct standard for promotion from finite exact mathematics to a physical TOE remains: a physically defined and independently measurable field content; an actual Hamiltonian/action with all constraints and anomaly conditions; a stable vacuum with no unwanted massless exotics or proton operators; correctly computed kinetic metrics, normalized couplings and renormalization; and quantified testable predictions. None of those global goals has been silently filled by this packet.
+
+The strongest actionable branches are (i) a 27-port noisy coherent quantum-walk prototype with a measurable label-free discriminator, (ii) classifying the 34D modular and characteristic-zero current Lie algebras and testing the full Levi brackets, (iii) testing whether W33 vacuum data admits any natural symmetry-equivariant map to flag-graph gauge cycles, (iv) deriving rather than postulating the additional proton-hexality generator, and (v) applying the existing tetraquadric physical-Yukawa software to the *actual* three line bundles with fixed explicit moduli and harmonic representatives.

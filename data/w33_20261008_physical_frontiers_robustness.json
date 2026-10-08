@@ -1,0 +1,143 @@
+{
+  "chiral_flag_topology": {
+    "320_warning": "320 local triangles equals prior count of 320 quartic chiral vacua numerically; no natural equivariant identification shown",
+    "distinction": "unconstrained Z2 edge holonomies (2^beta) are NOT the 2 Ising vertex ground states",
+    "extra_flag_graph_cycle_rank": 240,
+    "flag_graph_triangles": 320,
+    "flag_ising_vacua_from_previous": 2,
+    "flag_line_graph_cycle_rank": 321,
+    "flat_Z2_connection_classes_flag_graph": "4271974071841820164790043412339104229205409044713305539894083215644439451561281100045924173873152",
+    "flat_Z2_connection_classes_original": "2417851639229258349412352",
+    "local_K4_cycle_rank_each": 3,
+    "local_K4_sites": 80,
+    "original_levi_cycle_rank": 81
+  },
+  "coherent_photonic": {
+    "analytic_probability_shift_bound": "2 |t| ||E||_2 per probability",
+    "disorder_trials": 32,
+    "edge_and_onsite_uniform_error_delta": 0.005,
+    "guaranteed_operator_norm_epsilon": 0.08636696484324463,
+    "label_free_observable": "largest off-diagonal single-photon output probability",
+    "line_max": 0.04222387243219539,
+    "noisy_gap_max": 0.2699981030655531,
+    "noisy_gap_min": 0.26866024522127796,
+    "operator_norm_bound_via_max_row_sum": 0.045,
+    "point_max": 0.31168880274311866,
+    "probability_gap": 0.2694649303109233,
+    "random_seed": 20261008,
+    "scope": "ideal 27-mode addressability and a known normalized coupling scale; no physical calibration",
+    "separation_survivors": 32,
+    "time": 0.78,
+    "two_device_gap_bound": "Delta - 4 |t| epsilon"
+  },
+  "flux_vacuum": {
+    "actual_flat_torus_flux_exponent": [
+      2,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "counterexample_model": "sum_i exp(-lambda_i) + exp(sum_i lambda_i) (supplied 9-term toy)",
+    "full_Einstein_solution_or_CC_screening_derived": false,
+    "minimal_full_dimensional_positive_balance_terms": 9,
+    "same_orthant_positive_flows_stationary": false,
+    "toy_hessian_eigenvalues": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      9
+    ],
+    "toy_potential_value_at_origin": 9,
+    "toy_stationary_at_origin": true,
+    "warning": "toy exp terms are not verified allowed E8 flux, string compactification or 4D action"
+  },
+  "gravity_lie": {
+    "center_dimension_mod_101": 1,
+    "derived_ideal_dimension_mod_101": 34,
+    "generated_dimension_mod_101": 34,
+    "generated_dimension_over_Q": 34,
+    "matrix_invariant_bound_dimension": 48,
+    "original_generators": 8,
+    "scope": "induced actual W33 Levi C8, not the full hypersurface deformation algebra"
+  },
+  "physical_flavor": {
+    "actual_repo_C_holomorphic": "1/2",
+    "assumed_positive_Z_interval": [
+      "1",
+      "4"
+    ],
+    "conditional_physical_magnitude_interval_eKhalf_fixed": [
+      "1/16",
+      "1/2"
+    ],
+    "full_matrix_singular_value_bounds": "sigma_i(Y)/4 <= sigma_i(physical Y) <= sigma_i(Y) for K1,K2 eigenvalues in [1,4]",
+    "no_physical_prediction": "Z_i, Ricci-flat metric, HYM forms, complex structure vacuum, e^(K/2) and full holomorphic Yukawa not fixed",
+    "normalization_span_factor": 8,
+    "observed_max_singular_ratio": 0.7055053064877599,
+    "observed_min_singular_ratio": 0.2838180279672471,
+    "rank_preserved_by_invertible_kinetic_matrices": true,
+    "seeded_random_metric_trials": 64
+  },
+  "proton_hexality_origin": {
+    "consequence": "Additional discrete/continuous generator is necessary beyond only Y and B-L for this chosen P6 residue set",
+    "known_proton_hexality_assignment": {
+      "Dc": 5,
+      "Ec": 1,
+      "Hd": 1,
+      "Hu": 5,
+      "L": 4,
+      "Nc": 3,
+      "Q": 0,
+      "Sminus2": 0,
+      "Uc": 1
+    },
+    "operator_veto": {
+      "LLE": false,
+      "QLD": false,
+      "QQQL": false,
+      "UDD": false,
+      "UUDE": false,
+      "bilinear_LHu": false,
+      "charged_lepton_yukawa": true,
+      "down_yukawa": true,
+      "majorana": true,
+      "majorana_with_Sminus2": true,
+      "mu": true,
+      "neutrino_yukawa": true,
+      "up_yukawa": true,
+      "weinberg": true
+    },
+    "sixY": {
+      "Dc": 2,
+      "Ec": 6,
+      "Hd": -3,
+      "Hu": 3,
+      "L": -3,
+      "Nc": 0,
+      "Q": 1,
+      "Uc": -4
+    },
+    "solutions_qP6_equals_a3BL_plus_b6Y_mod6": [],
+    "string_vacuum_status": "not constructed, FI/spectrum/worldsheet/anomaly sufficiency unverified",
+    "threeBL": {
+      "Dc": -1,
+      "Ec": 3,
+      "Hd": 0,
+      "Hu": 0,
+      "L": -3,
+      "Nc": 3,
+      "Q": 1,
+      "Uc": -1
+    },
+    "two_multiplet_modular_obstruction": "Q gives a+b=0; Uc then gives 3a=1 (mod 6), impossible"
+  },
+  "scope": "finite / analytic necessary checks, supplied-device/noise and scalar toy models; TOE open"
+}
