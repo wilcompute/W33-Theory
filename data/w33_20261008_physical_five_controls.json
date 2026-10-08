@@ -1,0 +1,262 @@
+{
+  "photonic": {
+    "36_vs_72_stage_survival_threshold_eta": 0.9901977594782718,
+    "loss_per_stage_phase_diagram": {
+      "0.98": {
+        "minimum_expected_launches": 217470,
+        "optimal_tested_stages": 36
+      },
+      "0.99": {
+        "minimum_expected_launches": 150894,
+        "optimal_tested_stages": 36
+      },
+      "0.9902": {
+        "minimum_expected_launches": 149788,
+        "optimal_tested_stages": 72
+      },
+      "0.995": {
+        "minimum_expected_launches": 105747,
+        "optimal_tested_stages": 72
+      },
+      "0.999": {
+        "minimum_expected_launches": 78086,
+        "optimal_tested_stages": 144
+      }
+    },
+    "note": "depth threshold is only for prespecified discrete tested circuits, fixed ideal gap-based detection requirement; not chip-calibrated"
+  },
+  "proton": {
+    "operator_charges": {
+      "LLEc": {
+        "P6": 3,
+        "X3": 0
+      },
+      "QLDc": {
+        "P6": 3,
+        "X3": 0
+      },
+      "QQQL": {
+        "P6": 4,
+        "X3": 2
+      },
+      "UcDcDc": {
+        "P6": 5,
+        "X3": 1
+      },
+      "UcUcDcEc": {
+        "P6": 2,
+        "X3": 1
+      },
+      "charged_lepton_Yukawa": {
+        "P6": 0,
+        "X3": 0
+      },
+      "down_Yukawa": {
+        "P6": 0,
+        "X3": 0
+      },
+      "mu_term": {
+        "P6": 0,
+        "X3": 0
+      },
+      "neutrino_Yukawa": {
+        "P6": 0,
+        "X3": 0
+      },
+      "up_Yukawa": {
+        "P6": 0,
+        "X3": 0
+      }
+    },
+    "warning": "P6 charges are stipulated field assignments; checking charge arithmetic does not derive residual discrete gauge symmetry, full anomalies, instanton or worldsheet selection rules"
+  },
+  "tetraquadric": {
+    "sieve": {
+      "3": {
+        "all_projective_ambient_Fp_points": 256,
+        "hypersurface_Fp_points": 108,
+        "singular_Fp_point_witnesses": [
+          {
+            "coordinates": [
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ]
+          },
+          {
+            "coordinates": [
+              [
+                1,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ]
+          },
+          {
+            "coordinates": [
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          }
+        ],
+        "singular_Fp_points": 8,
+        "what_it_proves": "rational Fp point sieve only, not geometric smoothness over Fpbar or C"
+      },
+      "5": {
+        "all_projective_ambient_Fp_points": 1296,
+        "hypersurface_Fp_points": 236,
+        "singular_Fp_point_witnesses": [
+          {
+            "coordinates": [
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                0,
+                1
+              ]
+            ]
+          },
+          {
+            "coordinates": [
+              [
+                1,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                0
+              ]
+            ]
+          },
+          {
+            "coordinates": [
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          }
+        ],
+        "singular_Fp_points": 12,
+        "what_it_proves": "rational Fp point sieve only, not geometric smoothness over Fpbar or C"
+      },
+      "7": {
+        "all_projective_ambient_Fp_points": 4096,
+        "hypersurface_Fp_points": 570,
+        "singular_Fp_point_witnesses": [
+          {
+            "coordinates": [
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          },
+          {
+            "coordinates": [
+              [
+                1,
+                6
+              ],
+              [
+                1,
+                6
+              ],
+              [
+                1,
+                6
+              ],
+              [
+                1,
+                6
+              ]
+            ]
+          }
+        ],
+        "singular_Fp_points": 2,
+        "what_it_proves": "rational Fp point sieve only, not geometric smoothness over Fpbar or C"
+      }
+    },
+    "smoothness_proved": false
+  }
+}

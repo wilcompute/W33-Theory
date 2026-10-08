@@ -1,0 +1,20 @@
+{
+  "prime": 5,
+  "charts_checked": [
+    {
+      "patch": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "prime": 5,
+      "smooth_geometric_mod_p": false,
+      "groebner_basis_size": 7,
+      "seconds": 62.439
+    }
+  ],
+  "all_chart_representatives_covered": false,
+  "globally_smooth_mod5_certificate": false,
+  "note": "Unit Jacobian ideal implies no singular geometric points on that chart over algebraic closure. Mod-5 smooth specialization implies Q/C smooth generic fiber for chosen integral polynomial."
+}

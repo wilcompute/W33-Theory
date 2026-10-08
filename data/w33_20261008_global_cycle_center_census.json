@@ -1,0 +1,311 @@
+{
+  "Levi_edges": 160,
+  "W33_Levi_vertices": 80,
+  "all_distinct_cycle_pairs": 1311390,
+  "commuting_local_center_pairs": 1048950,
+  "consequence": "Local h13 centers cannot be identified as globally central except on balanced-intersection subatlases; no gravitational action claimed",
+  "exact_criterion": "[C_A,C_B]=0 iff the cycles share equally many point and line vertices, for distinct induced C8 cycles",
+  "induced_C8_total": 1620,
+  "intersection_signature_census": {
+    "p0_l0": 789750,
+    "p0_l1": 84240,
+    "p0_l2": 1620,
+    "p1_l0": 84240,
+    "p1_l1": 233280,
+    "p1_l2": 38880,
+    "p2_l0": 1620,
+    "p2_l1": 38880,
+    "p2_l2": 25920,
+    "p2_l3": 6480,
+    "p3_l2": 6480
+  },
+  "noncommuting_local_center_pairs": 262440,
+  "representative_witnesses": {
+    "p0_l0": {
+      "commutator_rank": 0,
+      "cycles": [
+        [
+          0,
+          40,
+          1,
+          44,
+          4,
+          53,
+          13,
+          41
+        ],
+        [
+          2,
+          47,
+          31,
+          66,
+          8,
+          65,
+          37,
+          48
+        ]
+      ],
+      "imbalance": 0
+    },
+    "p0_l1": {
+      "commutator_rank": 2,
+      "cycles": [
+        [
+          0,
+          40,
+          1,
+          44,
+          4,
+          53,
+          13,
+          41
+        ],
+        [
+          2,
+          40,
+          3,
+          50,
+          22,
+          70,
+          36,
+          48
+        ]
+      ],
+      "imbalance": -1
+    },
+    "p0_l2": {
+      "commutator_rank": 2,
+      "cycles": [
+        [
+          0,
+          40,
+          1,
+          44,
+          4,
+          53,
+          13,
+          41
+        ],
+        [
+          2,
+          40,
+          3,
+          50,
+          22,
+          53,
+          31,
+          47
+        ]
+      ],
+      "imbalance": -2
+    },
+    "p1_l0": {
+      "commutator_rank": 2,
+      "cycles": [
+        [
+          0,
+          40,
+          1,
+          44,
+          4,
+          53,
+          13,
+          41
+        ],
+        [
+          0,
+          42,
+          16,
+          54,
+          25,
+          76,
+          21,
+          43
+        ]
+      ],
+      "imbalance": 1
+    },
+    "p1_l1": {
+      "commutator_rank": 0,
+      "cycles": [
+        [
+          0,
+          40,
+          1,
+          44,
+          4,
+          53,
+          13,
+          41
+        ],
+        [
+          0,
+          40,
+          2,
+          47,
+          31,
+          66,
+          17,
+          42
+        ]
+      ],
+      "imbalance": 0
+    },
+    "p1_l2": {
+      "commutator_rank": 2,
+      "cycles": [
+        [
+          0,
+          40,
+          1,
+          44,
+          4,
+          53,
+          13,
+          41
+        ],
+        [
+          0,
+          40,
+          2,
+          47,
+          35,
+          74,
+          15,
+          41
+        ]
+      ],
+      "imbalance": -1
+    },
+    "p2_l0": {
+      "commutator_rank": 2,
+      "cycles": [
+        [
+          0,
+          40,
+          1,
+          44,
+          4,
+          53,
+          13,
+          41
+        ],
+        [
+          0,
+          42,
+          16,
+          54,
+          4,
+          55,
+          19,
+          43
+        ]
+      ],
+      "imbalance": 2
+    },
+    "p2_l1": {
+      "commutator_rank": 2,
+      "cycles": [
+        [
+          0,
+          40,
+          1,
+          44,
+          4,
+          53,
+          13,
+          41
+        ],
+        [
+          0,
+          40,
+          1,
+          45,
+          5,
+          57,
+          16,
+          42
+        ]
+      ],
+      "imbalance": 1
+    },
+    "p2_l2": {
+      "commutator_rank": 0,
+      "cycles": [
+        [
+          0,
+          40,
+          1,
+          44,
+          4,
+          53,
+          13,
+          41
+        ],
+        [
+          0,
+          40,
+          1,
+          44,
+          7,
+          63,
+          17,
+          42
+        ]
+      ],
+      "imbalance": 0
+    },
+    "p2_l3": {
+      "commutator_rank": 2,
+      "cycles": [
+        [
+          0,
+          40,
+          1,
+          44,
+          4,
+          53,
+          13,
+          41
+        ],
+        [
+          0,
+          40,
+          1,
+          44,
+          7,
+          62,
+          14,
+          41
+        ]
+      ],
+      "imbalance": -1
+    },
+    "p3_l2": {
+      "commutator_rank": 2,
+      "cycles": [
+        [
+          0,
+          40,
+          1,
+          44,
+          4,
+          53,
+          13,
+          41
+        ],
+        [
+          0,
+          40,
+          1,
+          44,
+          4,
+          54,
+          16,
+          42
+        ]
+      ],
+      "imbalance": 1
+    }
+  }
+}
