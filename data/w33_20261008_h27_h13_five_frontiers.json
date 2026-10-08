@@ -1,0 +1,497 @@
+{
+  "address_operator_character": {
+    "no_27x27_representation_intertwiner_for_fixed_central_character": true,
+    "operator_center_eigenvalue_multiplicities_1_omega_omega2": [
+      0,
+      27,
+      0
+    ],
+    "prior_art": "Pass 11043 gives 9D commutant dressing changing the H27 representation to regular; not rederived here",
+    "regular_center_eigenvalue_multiplicities_1_omega_omega2": [
+      9,
+      9,
+      9
+    ],
+    "regular_center_traces": [
+      27,
+      0,
+      0
+    ]
+  },
+  "chirality_signed_cover": {
+    "central_minus_I_action_on_projective_triangles": "trivial",
+    "central_minus_I_action_on_vacuum_fiber": "swaps signs",
+    "equivariant_320_to_projective_320_isomorphism": false,
+    "equivariant_320_to_signed_line_triangle_cover": "yes by transporting sign from exact character torsor, tautological until independent orientation defined",
+    "flags": 160,
+    "forget_sign_fiber_degree": 2,
+    "line_centered_projective_triangles": 160,
+    "physical_lorentz_chirality_selected": false,
+    "point_centered_projective_triangles": 160,
+    "vacua": 320
+  },
+  "flavor_polynomial_candidate": {
+    "Ricci_flat_HYM_kinetic_metrics_computed": false,
+    "all_g_h_gh_fixed_points_avoided": [
+      16,
+      16,
+      16
+    ],
+    "coefficients": [
+      -1,
+      -5,
+      3,
+      -2,
+      -3,
+      -1,
+      -4,
+      -2,
+      -1,
+      -2,
+      2,
+      -4,
+      5,
+      3,
+      -5,
+      2,
+      1,
+      -2,
+      -2,
+      -1,
+      3
+    ],
+    "degree_vectors_in_each_orbit": [
+      [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          2,
+          2,
+          2,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          1,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          2,
+          2,
+          0,
+          2
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1,
+          2
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          1,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          2,
+          2
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          2,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          0,
+          1,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          2,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          2
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          0,
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          2,
+          2,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          1,
+          2
+        ]
+      ],
+      [
+        [
+          1,
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          1,
+          0
+        ]
+      ],
+      [
+        [
+          1,
+          0,
+          2,
+          1
+        ],
+        [
+          1,
+          2,
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          2,
+          2
+        ]
+      ],
+      [
+        [
+          1,
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          1,
+          2,
+          0
+        ]
+      ],
+      [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    ],
+    "explicit_polynomial_status": "invariant and free on the finite ambient fixed-point set, but not certified smooth",
+    "invariant_linear_system_dimension": 21,
+    "smoothness_proved": false
+  },
+  "global_gravity": {
+    "central_commutator_rank": 2,
+    "commutator_nonzero_entries": 126,
+    "cycleA": [
+      0,
+      40,
+      1,
+      44,
+      4,
+      53,
+      13,
+      41
+    ],
+    "cycleB": [
+      0,
+      42,
+      16,
+      54,
+      25,
+      76,
+      21,
+      43
+    ],
+    "interpretation": "local h13 centers are not central under overlapping-chart gluing; full Levi 80D closure not classified",
+    "intersection_size": 1,
+    "local_central_matrices_rank": [
+      1,
+      1
+    ]
+  },
+  "h27_h13": {
+    "13_point_count_vs_13_Lie_dimension": "numerical equality; no Sp4-equivariant natural identification exhibited",
+    "H13_dimension_over_Q": 13,
+    "H13_mod3_extraspecial_order": 1594323,
+    "H13_mod3_six_symplectic_pair_rank": 6,
+    "H27_abstract_vs_representation": "address regular center has no fixed basis vector; operator Schrodinger center acts as scalar omega",
+    "H27_nonabelian_commutator_power": 2,
+    "W33_point_count": 40,
+    "central_fiber_size": 3,
+    "central_fibers": 9,
+    "chosen_H27_subgroup_order": 27,
+    "explicit_W33_elation_to_H13_slice_isomorphism": "U(a,b,c) maps to UT8(a,b,2c-ab) mod 3",
+    "isomorphism_checked_multiplications": 729,
+    "noncollinear_affine_shell_size": 27,
+    "polar_plane_size": 13,
+    "provenance": "W33 13+27 and Payne regular H27 already proved in repo Passes 369-371 and Pass 5105; standard finite GQ prior art",
+    "regular_bulk_orbit_size": 27,
+    "unipotent_H27_order": 27
+  },
+  "photonic_optimization": {
+    "best_Hoeffding_expected_launch_stages": 36,
+    "best_proxy_stages": 36,
+    "confidence_level_for_complete_offdiagonal_scan": 0.95,
+    "loss_assumption": "independent survival 0.99 per stage",
+    "rigorous_conditional_statistical_claim": "Given exact predicted gap and n independent successful samples for each of 54 input configurations, joint Hoeffding error probability <=0.05; all offdiagonal probabilities estimated within Delta/4, so maximum gap sign is positive",
+    "tested_depths": [
+      {
+        "conditional_gap": 0.008400446113942611,
+        "expected_launches_under_independent_loss": 73285750,
+        "launched_information_proxy": 6.446462371497118e-05,
+        "stages": 9,
+        "successful_detections_per_input_setting": 1239774,
+        "survival": 0.9135172474836408,
+        "total_required_successful_detections": 66947796
+      },
+      {
+        "conditional_gap": 0.1127654266047082,
+        "expected_launches_under_independent_loss": 445259,
+        "launched_information_proxy": 0.010611711570631309,
+        "stages": 18,
+        "successful_detections_per_input_setting": 6881,
+        "survival": 0.8345137614500875,
+        "total_required_successful_detections": 371574
+      },
+      {
+        "conditional_gap": 0.21207388550248785,
+        "expected_launches_under_independent_loss": 150894,
+        "launched_information_proxy": 0.031321416326182,
+        "stages": 36,
+        "successful_detections_per_input_setting": 1946,
+        "survival": 0.6964132180495735,
+        "total_required_successful_detections": 105084
+      },
+      {
+        "conditional_gap": 0.2531757900753657,
+        "expected_launches_under_independent_loss": 151983,
+        "launched_information_proxy": 0.03108696748193856,
+        "stages": 72,
+        "successful_detections_per_input_setting": 1365,
+        "survival": 0.48499137027416284,
+        "total_required_successful_detections": 73710
+      },
+      {
+        "conditional_gap": 0.2643609938018161,
+        "expected_launches_under_independent_loss": 287429,
+        "launched_information_proxy": 0.016438522245640005,
+        "stages": 144,
+        "successful_detections_per_input_setting": 1252,
+        "survival": 0.23521662924041012,
+        "total_required_successful_detections": 67608
+      },
+      {
+        "conditional_gap": 0.2676441094298628,
+        "expected_launches_under_independent_loss": 1192694,
+        "launched_information_proxy": 0.003963249586629753,
+        "stages": 288,
+        "successful_detections_per_input_setting": 1222,
+        "survival": 0.05532686267122055,
+        "total_required_successful_detections": 65988
+      },
+      {
+        "conditional_gap": 0.26873257380212634,
+        "expected_launches_under_independent_loss": 21380817,
+        "launched_information_proxy": 0.0002210612958235772,
+        "stages": 576,
+        "successful_detections_per_input_setting": 1212,
+        "survival": 0.003061061733040098,
+        "total_required_successful_detections": 65448
+      }
+    ],
+    "union_bound_observables": 1404,
+    "warning": "Expected launched counts use independent uniform loss; not a 95%-guaranteed launch budget, not device-calibrated and exclude systematic port/coupler and detector errors"
+  },
+  "proton_hexality": {
+    "X3_charges": {
+      "Dc": 2,
+      "Ec": 2,
+      "Hd": 2,
+      "Hu": 1,
+      "L": 2,
+      "Nc": 0,
+      "Q": 2,
+      "Uc": 0
+    },
+    "anomaly_and_string_worldsheet_complete": false,
+    "central_operator_H27_alone_cannot_be_X3_on_Q_and_Uc_within_one_E6_27": true,
+    "central_operator_H27_scalar_on_all_E6_27": true,
+    "conditional": "no-go assumes Q and Uc are embedded in same E6 27 and H27 center unbroken; it is not a no-go for extra gauge factors",
+    "different_Q_Uc": true
+  }
+}
