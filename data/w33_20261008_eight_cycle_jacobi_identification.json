@@ -1,0 +1,144 @@
+{
+  "J_nondegenerate_det": "1",
+  "J_six_by_six": [
+    [
+      "0",
+      "1",
+      "-1",
+      "1",
+      "-1",
+      "1"
+    ],
+    [
+      "-1",
+      "0",
+      "1",
+      "-1",
+      "1",
+      "-1"
+    ],
+    [
+      "1",
+      "-1",
+      "0",
+      "1",
+      "-1",
+      "1"
+    ],
+    [
+      "-1",
+      "1",
+      "-1",
+      "0",
+      "1",
+      "-1"
+    ],
+    [
+      "1",
+      "-1",
+      "1",
+      "-1",
+      "0",
+      "1"
+    ],
+    [
+      "-1",
+      "1",
+      "-1",
+      "1",
+      "-1",
+      "0"
+    ]
+  ],
+  "adapted_basis_determinant": "1",
+  "central_matrix_rational": [
+    [
+      "-1",
+      "1",
+      "-1",
+      "1",
+      "-1",
+      "1",
+      "-1",
+      "1"
+    ],
+    [
+      "-1",
+      "1",
+      "-1",
+      "1",
+      "-1",
+      "1",
+      "-1",
+      "1"
+    ],
+    [
+      "-1",
+      "1",
+      "-1",
+      "1",
+      "-1",
+      "1",
+      "-1",
+      "1"
+    ],
+    [
+      "-1",
+      "1",
+      "-1",
+      "1",
+      "-1",
+      "1",
+      "-1",
+      "1"
+    ],
+    [
+      "-1",
+      "1",
+      "-1",
+      "1",
+      "-1",
+      "1",
+      "-1",
+      "1"
+    ],
+    [
+      "-1",
+      "1",
+      "-1",
+      "1",
+      "-1",
+      "1",
+      "-1",
+      "1"
+    ],
+    [
+      "-1",
+      "1",
+      "-1",
+      "1",
+      "-1",
+      "1",
+      "-1",
+      "1"
+    ],
+    [
+      "-1",
+      "1",
+      "-1",
+      "1",
+      "-1",
+      "1",
+      "-1",
+      "1"
+    ]
+  ],
+  "dimension_over_Q": 34,
+  "invariant_skew_form_kernel_dim": 1,
+  "precise_gravity_boundary": "finite graph-current Lie algebra, no Dirac hypersurface constraints or spacetime limit",
+  "radical_commutator_dim": 1,
+  "radical_kernel_dim": 13,
+  "radical_to_heisenberg_13_det": "1/2",
+  "six_dimensional_symplectic_representation_image_dim": 21,
+  "structure_over_Q": "sp(6,Q) semidirect Heisenberg_13(Q), via rational Levi splitting"
+}

@@ -1,0 +1,167 @@
+{
+  "assumptions": "Each matching is a simultaneous set of disjoint ideal two-port couplers, identical uniform per-layer survival 0.99; no port crosstalk or calibration error",
+  "dimensionless_evolution_time": 0.78,
+  "discriminator_vs_depth": [
+    {
+      "circuit_depth": 9,
+      "discriminator_probability_gap": 0.008400446113942611,
+      "repetitions": 1,
+      "survival_1pct_each": 0.9135172474836408
+    },
+    {
+      "circuit_depth": 18,
+      "discriminator_probability_gap": 0.1127654266047082,
+      "repetitions": 2,
+      "survival_1pct_each": 0.8345137614500875
+    },
+    {
+      "circuit_depth": 36,
+      "discriminator_probability_gap": 0.21207388550248785,
+      "repetitions": 4,
+      "survival_1pct_each": 0.6964132180495735
+    },
+    {
+      "circuit_depth": 72,
+      "discriminator_probability_gap": 0.2531757900753657,
+      "repetitions": 8,
+      "survival_1pct_each": 0.48499137027416284
+    },
+    {
+      "circuit_depth": 144,
+      "discriminator_probability_gap": 0.2643609938018161,
+      "repetitions": 16,
+      "survival_1pct_each": 0.23521662924041012
+    },
+    {
+      "circuit_depth": 288,
+      "discriminator_probability_gap": 0.2676441094298628,
+      "repetitions": 32,
+      "survival_1pct_each": 0.05532686267122055
+    },
+    {
+      "circuit_depth": 576,
+      "discriminator_probability_gap": 0.26873257380212634,
+      "repetitions": 64,
+      "survival_1pct_each": 0.003061061733040098
+    }
+  ],
+  "graphs": {
+    "line_transverse_null": [
+      {
+        "full_unitary_operator_norm_error": 1.8925936600063773,
+        "max_offdiagonal_transfer": 0.22376599901423816,
+        "physical_two_port_stages": 9,
+        "repetitions": 1,
+        "uniform_survival_if_each_layer_has_1pct_loss": 0.9135172474836408,
+        "unitarity_max_entry_residual": 6.66133919520763e-16
+      },
+      {
+        "full_unitary_operator_norm_error": 1.2357299870749443,
+        "max_offdiagonal_transfer": 0.18697906559034863,
+        "physical_two_port_stages": 18,
+        "repetitions": 2,
+        "uniform_survival_if_each_layer_has_1pct_loss": 0.8345137614500875,
+        "unitarity_max_entry_residual": 2.5535162121414533e-15
+      },
+      {
+        "full_unitary_operator_norm_error": 0.6558992136187752,
+        "max_offdiagonal_transfer": 0.11485231402102038,
+        "physical_two_port_stages": 36,
+        "repetitions": 4,
+        "uniform_survival_if_each_layer_has_1pct_loss": 0.6964132180495735,
+        "unitarity_max_entry_residual": 1.9984017350019394e-15
+      },
+      {
+        "full_unitary_operator_norm_error": 0.33008929730122455,
+        "max_offdiagonal_transfer": 0.07509777987930717,
+        "physical_two_port_stages": 72,
+        "repetitions": 8,
+        "uniform_survival_if_each_layer_has_1pct_loss": 0.48499137027416284,
+        "unitarity_max_entry_residual": 4.662937217455606e-15
+      },
+      {
+        "full_unitary_operator_norm_error": 0.16467447437962157,
+        "max_offdiagonal_transfer": 0.05754565621163617,
+        "physical_two_port_stages": 144,
+        "repetitions": 16,
+        "uniform_survival_if_each_layer_has_1pct_loss": 0.23521662924041012,
+        "unitarity_max_entry_residual": 2.02060591047151e-14
+      },
+      {
+        "full_unitary_operator_norm_error": 0.08214495790958602,
+        "max_offdiagonal_transfer": 0.04958462200765612,
+        "physical_two_port_stages": 288,
+        "repetitions": 32,
+        "uniform_survival_if_each_layer_has_1pct_loss": 0.05532686267122055,
+        "unitarity_max_entry_residual": 3.1308290084593537e-14
+      },
+      {
+        "full_unitary_operator_norm_error": 0.04101312597796606,
+        "max_offdiagonal_transfer": 0.045827155046847784,
+        "physical_two_port_stages": 576,
+        "repetitions": 64,
+        "uniform_survival_if_each_layer_has_1pct_loss": 0.003061061733040098,
+        "unitarity_max_entry_residual": 1.576516710652258e-14
+      }
+    ],
+    "point_far_H27": [
+      {
+        "full_unitary_operator_norm_error": 1.8765757732139379,
+        "max_offdiagonal_transfer": 0.23216644512818077,
+        "physical_two_port_stages": 9,
+        "repetitions": 1,
+        "uniform_survival_if_each_layer_has_1pct_loss": 0.9135172474836408,
+        "unitarity_max_entry_residual": 8.881791289296344e-16
+      },
+      {
+        "full_unitary_operator_norm_error": 1.163933012888214,
+        "max_offdiagonal_transfer": 0.29974449219505683,
+        "physical_two_port_stages": 18,
+        "repetitions": 2,
+        "uniform_survival_if_each_layer_has_1pct_loss": 0.8345137614500875,
+        "unitarity_max_entry_residual": 2.664538630622932e-15
+      },
+      {
+        "full_unitary_operator_norm_error": 0.6131919683657088,
+        "max_offdiagonal_transfer": 0.3269261995235082,
+        "physical_two_port_stages": 36,
+        "repetitions": 4,
+        "uniform_survival_if_each_layer_has_1pct_loss": 0.6964132180495735,
+        "unitarity_max_entry_residual": 2.220448859686755e-15
+      },
+      {
+        "full_unitary_operator_norm_error": 0.30933145005777,
+        "max_offdiagonal_transfer": 0.3282735699546729,
+        "physical_two_port_stages": 72,
+        "repetitions": 8,
+        "uniform_survival_if_each_layer_has_1pct_loss": 0.48499137027416284,
+        "unitarity_max_entry_residual": 4.440892154265689e-15
+      },
+      {
+        "full_unitary_operator_norm_error": 0.15470923057284477,
+        "max_offdiagonal_transfer": 0.32190665001345226,
+        "physical_two_port_stages": 144,
+        "repetitions": 16,
+        "uniform_survival_if_each_layer_has_1pct_loss": 0.23521662924041012,
+        "unitarity_max_entry_residual": 1.9539926933427585e-14
+      },
+      {
+        "full_unitary_operator_norm_error": 0.07728972413380765,
+        "max_offdiagonal_transfer": 0.3172287314375189,
+        "physical_two_port_stages": 288,
+        "repetitions": 32,
+        "uniform_survival_if_each_layer_has_1pct_loss": 0.05532686267122055,
+        "unitarity_max_entry_residual": 3.597122603523969e-14
+      },
+      {
+        "full_unitary_operator_norm_error": 0.038619569692164755,
+        "max_offdiagonal_transfer": 0.31455972884897415,
+        "physical_two_port_stages": 576,
+        "repetitions": 64,
+        "uniform_survival_if_each_layer_has_1pct_loss": 0.003061061733040098,
+        "unitarity_max_entry_residual": 2.975397713316607e-14
+      }
+    ]
+  },
+  "scope": "Trotter compilation feasibility and supplied loss toy; not a calibrated integrated photonic circuit"
+}
