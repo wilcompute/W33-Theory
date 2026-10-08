@@ -1,0 +1,49 @@
+Passes11726-11733 local primary verification
+Reservation5470f3255; mathematical interface witnesses, not a solved TOE.
+
+Final eight-section producer
+11726 PASS
+11727 PASS
+11728 PASS
+11729 PASS
+11730 PASS
+11731 PASS
+11732 PASS
+11733 PASS
+/mnt/c/repos/w33-toe-11379/data/w33_pass11726_11733_dynamical_branch_and_chiral_interface.json
+
+Combined19 new+15 prior tests
+..................................                                       [100%]
+34 passed in 122.87s (0:02:02)
+
+Added Sym3 actual-Weyl character control
+.                                                                        [100%]
+1 passed in 58.73s
+
+Final four-file batch and index audit
+[audit] guard: no collisions
+[audit] forced arithmetic: none
+[audit] intake clean (4 files)
+
+Separate final topical aliases
+scanned 5225 files, 1095 tokens
+tokens visible ONLY in opaque filenames: 387
+   cite:Conjecture(1927)  ->  analysis/2026-07-15_pass80_artin_137_uniqueness.md
+   cite:Freudenthal(1954)  ->  analysis/PASS10949_FREUDENTHAL_QUASICONFORMAL_CLOCK_CONE.md
+   cite:Fritz(2010)  ->  analysis/PASS11171_TEMPORAL_CGLMP_LARGE_D.md
+   cite:Heawood(1890)  ->  analysis/w33_pass2045_2049_the_sevens_and_a_numbering_collision.md
+   cite:Hesselink(1980)  ->  analysis/PASS11217_QUBIT_ARROW_LAW.md
+   cite:Huerta(2010)  ->  analysis/PASS10950_CLOCK_ALBERT_LORENTZ_SPINOR.md
+   cite:Kok(2006)  ->  analysis/PASS11556_RESERVATION.md
+   cite:Lam(2008)  ->  analysis/PASS11225_FLAVOUR_FROM_SYMMETRY.md
+   cite:Luo(2018)  ->  analysis/PASS10970_PROJECTIVE_CLOCK_CODE_LATTICE_TOWER.md
+   cite:Mathematics(2022)  ->  analysis/BT2946_BT2952_seven_front_closure.md
+   cite:Mkrtchyan(2025)  ->  analysis/PASS7049_7064_vogel_e6_split_casimir.md
+   cite:Ness(1979)  ->  analysis/PASS10962_HIDDEN_SECTOR_DFLAT_TIERS.md
+wrote TOPICAL_ALIASES.md
+
+Additional checks: normalized source hash, Python compilation, conflict markers, HTML marker/parser and forced-arithmetic selftest PASS.
+analysis/w33_pass11726_11733_dynamical_branch_and_chiral_interface.py sha256(LF)=7e41783a8ba3b45682458ad776d08814b9636942b56ae9f23076104fac858d87
+analysis/PASS11726_11733_DYNAMICAL_BRANCH_AND_CHIRAL_INTERFACE.md sha256(LF)=981ee09e692fd2413cce39616a2a668d90922049228d0369c3d533638d1c6eab
+tests/test_w33_pass11726_11733_dynamical_branch_and_chiral_interface.py sha256(LF)=6ff261813d22bd5148774c5e21f7fec24d05e2c82cb1971be860877562774629
+data/w33_pass11726_11733_dynamical_branch_and_chiral_interface.json sha256(LF)=ebf5d2a56156570ca1716807bf1cb46da756a533443cc06049491da72964c150

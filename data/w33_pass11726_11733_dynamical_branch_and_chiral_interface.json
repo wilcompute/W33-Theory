@@ -1,0 +1,4750 @@
+{
+  "passes": {
+    "11726": {
+      "E8_SU9_base_real_dimension": 168,
+      "KKS_quantization": {
+        "boundary": "Classical compact-orbit geometric quantization at supplied hbar and KKS normalization; this is not a fundamental9, a predicted particle multiplet or a claim that147250 physical states are observed.",
+        "highest_weight": "3rho=(8/3,-1/3,...,-1/3)",
+        "highest_weight_norm_squared": 8,
+        "holomorphic_orbit_quantization_dimension": 147250,
+        "minimal_integral_level": 3,
+        "quadratic_Casimir": 144,
+        "simple_root_Dynkin_labels_sorted": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "SU9_ray_fiber_real_dimension": 16,
+      "associated_bundle": "E8 x_(SU9/Z3) CP8 -> E8/(SU9/Z3)",
+      "compact_transport_norm_residual": 2.220446049250313e-16,
+      "explicit_map": "[g,[psi]] -> Ad_g(psi psi_dagger-I9/9)",
+      "leaves_sl9_slice": true,
+      "projective_center_descent": true,
+      "real_orbit_dimension": 184,
+      "root_charge_multiplicities": {
+        "-1": 8,
+        "-1/3": 56,
+        "-2/3": 28,
+        "0": 56,
+        "1": 8,
+        "1/3": 56,
+        "2/3": 28
+      },
+      "scope": "A well-defined E8-equivariant orbit extension of the density, not an E8 fundamental9. An E8-invariant function on this transitive orbit is constant; the Pauli-dependent S4 selector requires an additional moving frame.",
+      "stabilizer_Lie_algebra": "su8+u1",
+      "stabilizer_dimension": 64,
+      "status": "PASS"
+    },
+    "11727": {
+      "Casimir_projector_ranks": {
+        "P0": 24,
+        "P2": 33
+      },
+      "E8_covariant_clock_contractions": "R=(Tr_ad(P2 AdU)-3)/6; B=Tr_ad(P0 AdU)+1-R^2; V=-a B-b R",
+      "all_SU2_partitions": [
+        {
+          "auxiliary_t": "0",
+          "exact_inverse_Casimir_residual": "5",
+          "inverse_Casimir_residual": 5.000000000000001,
+          "partition": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "auxiliary_t": "4/3",
+          "exact_inverse_Casimir_residual": "3",
+          "inverse_Casimir_residual": 2.9999999999999996,
+          "partition": [
+            1,
+            1,
+            1,
+            2
+          ]
+        },
+        {
+          "auxiliary_t": "1/2",
+          "exact_inverse_Casimir_residual": "2",
+          "inverse_Casimir_residual": 2.0000000000000004,
+          "partition": [
+            1,
+            1,
+            3
+          ]
+        },
+        {
+          "auxiliary_t": "4/3",
+          "exact_inverse_Casimir_residual": "1",
+          "inverse_Casimir_residual": 1.0,
+          "partition": [
+            1,
+            2,
+            2
+          ]
+        },
+        {
+          "auxiliary_t": "4/15",
+          "exact_inverse_Casimir_residual": "1",
+          "inverse_Casimir_residual": 1.0,
+          "partition": [
+            1,
+            4
+          ]
+        },
+        {
+          "auxiliary_t": "4/7",
+          "exact_inverse_Casimir_residual": "5/7",
+          "inverse_Casimir_residual": 0.7142857142857143,
+          "partition": [
+            2,
+            3
+          ]
+        },
+        {
+          "auxiliary_t": "1/6",
+          "exact_inverse_Casimir_residual": "0",
+          "inverse_Casimir_residual": 0.0,
+          "partition": [
+            5
+          ]
+        }
+      ],
+      "all_clock_classes": [
+        {
+          "Im_trace_squared": "27/4",
+          "Re_trace": "-5/2",
+          "centralizer_dimension": 16,
+          "energy_a1_b1": "-17/4",
+          "multiplicities": [
+            0,
+            1,
+            4
+          ]
+        },
+        {
+          "Im_trace_squared": "27/4",
+          "Re_trace": "-5/2",
+          "centralizer_dimension": 16,
+          "energy_a1_b1": "-17/4",
+          "multiplicities": [
+            0,
+            4,
+            1
+          ]
+        },
+        {
+          "Im_trace_squared": "0",
+          "Re_trace": "-1",
+          "centralizer_dimension": 8,
+          "energy_a1_b1": "1",
+          "multiplicities": [
+            1,
+            2,
+            2
+          ]
+        },
+        {
+          "Im_trace_squared": "27/4",
+          "Re_trace": "1/2",
+          "centralizer_dimension": 12,
+          "energy_a1_b1": "-29/4",
+          "multiplicities": [
+            2,
+            0,
+            3
+          ]
+        },
+        {
+          "Im_trace_squared": "27/4",
+          "Re_trace": "1/2",
+          "centralizer_dimension": 12,
+          "energy_a1_b1": "-29/4",
+          "multiplicities": [
+            2,
+            3,
+            0
+          ]
+        },
+        {
+          "Im_trace_squared": "0",
+          "Re_trace": "2",
+          "centralizer_dimension": 10,
+          "energy_a1_b1": "-2",
+          "multiplicities": [
+            3,
+            1,
+            1
+          ]
+        },
+        {
+          "Im_trace_squared": "0",
+          "Re_trace": "5",
+          "centralizer_dimension": 24,
+          "energy_a1_b1": "-5",
+          "multiplicities": [
+            5,
+            0,
+            0
+          ]
+        }
+      ],
+      "branch_action": "sum_ab ||[Phi_a,Phi_b]-i epsilon_abc Phi_c||^2+||t sum_a Phi_a^2-I5||^2, supplied compact auxiliary0<=t<=2",
+      "clock_contraction_max_error": 3.552713678800501e-15,
+      "clock_energy": "-a (Im Tr5 U)^2-b Re Tr5 U, on U in SU5 with U^3=I",
+      "exact_open_selection_wedge": "b>0 and a>2b/3",
+      "scope": "Principal-branch selection in a supplied hidden-SU5 matrix carrier; clock selection on its compact, cubed-identity centralizer sector. This removes the old trace5 target, but the sector constraints, scalar action and coupling wedge are inputs; no full off-constraint E8 polynomial potential is certified.",
+      "selected_Lie_algebra": "su3+su2+u1",
+      "selected_multiplicities": [
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          2,
+          3,
+          0
+        ]
+      ],
+      "status": "PASS",
+      "unbounded_auxiliary_negative_control": "Without the supplied compact t domain, Phi=epsilon J,t=1/(6epsilon^2) has energy60epsilon^2(epsilon-1)^2 ->0 at infinity; unique finite zero does not mean a coercive potential.",
+      "zero_branch": "The unique unitary SU2 representation is the irreducible5; t=1/6 is derived."
+    },
+    "11728": {
+      "Dirac_index": 3,
+      "SU2_doublets_per_family": 4,
+      "SU3_bundle_line_multidegrees": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          -2
+        ],
+        [
+          -2,
+          -2,
+          1
+        ]
+      ],
+      "actual_zero_modes": {
+        "negative": 2,
+        "positive": 5
+      },
+      "cohomology_degree_dimension": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "integral_c3": 6,
+      "one_SM_family_anomalies": {
+        "SU2^2_Y": "0",
+        "SU3^2_Y": "0",
+        "Y": "0",
+        "Y3": "0"
+      },
+      "remaining_positive_modes": 3,
+      "scope": "Exact index/cohomology of a supplied split bundle, with a specified nonlocal finite-rank lift leaving3 complex positive Dirac modes. E6 matter requires an additional compactification interpretation; local interactions, stable bundle, ten-dimensional field equations and observed Yukawa eigenvalues remain absent.",
+      "smoothing_pair_lift_matrix": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "status": "PASS",
+      "supplied_spin_six_manifold": "CP1 x CP1 x CP1; not a Calabi-Yau or solved compactification"
+    },
+    "11729": {
+      "Hessian_gap": 26.248623809618053,
+      "Laplacian_scale_control_solution": [
+        0.932730018457717,
+        0.933080711434428,
+        0.9333236741840073,
+        0.9334603203376585,
+        0.9319563873301849,
+        0.9338420791269322,
+        0.933732724096389,
+        0.9339225107551471,
+        0.9340850427804211,
+        0.9342198138189772,
+        0.934378655124431,
+        0.9344712561590974,
+        0.9345870929686341,
+        0.9338255733795076,
+        0.9348170652008159,
+        0.9350233642001192,
+        0.9351039902686398,
+        0.9352108068444474,
+        0.9353437872281364,
+        0.9354483892232923,
+        0.9355907278515917,
+        0.9357049812993652,
+        0.9356520114190617,
+        0.9359337645594482,
+        0.9361337885071435,
+        0.9362126550821165,
+        0.9363175924363927,
+        0.9364485412053022,
+        0.9365526857379018,
+        0.9366916535715135,
+        0.9368040750617175,
+        0.9374378674762762,
+        0.937028202773353,
+        0.9372293444241733,
+        0.9373043057825651,
+        0.9374062755254542,
+        0.9375351964598383,
+        0.9376374457009692,
+        0.9377744145170802,
+        0.9378850004122368
+      ],
+      "constant_solution_max_error": 0.0,
+      "continuum_dictionary": "b=2 K^2/3-2 Lambda, a=|sigma_TT|^2, conditional on a supplied 3-metric and TT tensor",
+      "edges": 240,
+      "equation": "8 L phi+R phi-a phi^-7+b phi^5=0, phi_i>0",
+      "exceptional_field_theory_section": {
+        "Cartan_extension_constraint_rank": 8,
+        "Yukawa_negative_control": "The11732 pair A30,x013 has P3875 squared norm1/7. A30 is in the displayed section; x013 cannot be added to it as an independent derivative.",
+        "all240_root_extension_audit": [
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "A",
+              0,
+              1
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "A",
+              0,
+              2
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "singlet",
+            "root": [
+              "A",
+              0,
+              3
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "A",
+              0,
+              4
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "A",
+              0,
+              5
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "A",
+              0,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "A",
+              0,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "A",
+              0,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "A",
+              1,
+              0
+            ],
+            "witness": [
+              "A",
+              3,
+              1
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              1,
+              2
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "A",
+              1,
+              3
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              1,
+              4
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              1,
+              5
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              1,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              1,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              1,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              2,
+              0
+            ],
+            "witness": [
+              "A",
+              3,
+              1
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              2,
+              1
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "A",
+              2,
+              3
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              2,
+              4
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              2,
+              5
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              2,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              2,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              2,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              4,
+              0
+            ],
+            "witness": [
+              "A",
+              3,
+              1
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              4,
+              1
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              4,
+              2
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "A",
+              4,
+              3
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              4,
+              5
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              4,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              4,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              4,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              5,
+              0
+            ],
+            "witness": [
+              "A",
+              3,
+              1
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              5,
+              1
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              5,
+              2
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "A",
+              5,
+              3
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              5,
+              4
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              5,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              5,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              5,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              6,
+              0
+            ],
+            "witness": [
+              "A",
+              3,
+              1
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              6,
+              1
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              6,
+              2
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "A",
+              6,
+              3
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              6,
+              4
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              6,
+              5
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              6,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              6,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              7,
+              0
+            ],
+            "witness": [
+              "A",
+              3,
+              1
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              7,
+              1
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              7,
+              2
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "A",
+              7,
+              3
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              7,
+              4
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              7,
+              5
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              7,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              7,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              8,
+              0
+            ],
+            "witness": [
+              "A",
+              3,
+              1
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              8,
+              1
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              8,
+              2
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "A",
+              8,
+              3
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              8,
+              4
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              8,
+              5
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              8,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "A",
+              8,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "x",
+              0,
+              1,
+              2
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              0,
+              1,
+              3
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "x",
+              0,
+              1,
+              4
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "x",
+              0,
+              1,
+              5
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "x",
+              0,
+              1,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "x",
+              0,
+              1,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "x",
+              0,
+              1,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              0,
+              2,
+              3
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "x",
+              0,
+              2,
+              4
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "x",
+              0,
+              2,
+              5
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "x",
+              0,
+              2,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "x",
+              0,
+              2,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "x",
+              0,
+              2,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              0,
+              3,
+              4
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              0,
+              3,
+              5
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              0,
+              3,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              0,
+              3,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              0,
+              3,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "x",
+              0,
+              4,
+              5
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "x",
+              0,
+              4,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "x",
+              0,
+              4,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "x",
+              0,
+              4,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "x",
+              0,
+              5,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "x",
+              0,
+              5,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "x",
+              0,
+              5,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "x",
+              0,
+              6,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "x",
+              0,
+              6,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "x",
+              0,
+              7,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              1,
+              2,
+              3
+            ],
+            "witness": [
+              "A",
+              3,
+              1
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              1,
+              2,
+              4
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              1,
+              2,
+              5
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              1,
+              2,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              1,
+              2,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              1,
+              2,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              1,
+              3,
+              4
+            ],
+            "witness": [
+              "A",
+              3,
+              1
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              1,
+              3,
+              5
+            ],
+            "witness": [
+              "A",
+              3,
+              1
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              1,
+              3,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              1
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              1,
+              3,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              1
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              1,
+              3,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              1
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              1,
+              4,
+              5
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              1,
+              4,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              1,
+              4,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              1,
+              4,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              1,
+              5,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              1,
+              5,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              1,
+              5,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              1,
+              6,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              1,
+              6,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              1,
+              7,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              2,
+              3,
+              4
+            ],
+            "witness": [
+              "A",
+              3,
+              2
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              2,
+              3,
+              5
+            ],
+            "witness": [
+              "A",
+              3,
+              2
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              2,
+              3,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              2
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              2,
+              3,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              2
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              2,
+              3,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              2
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              2,
+              4,
+              5
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              2,
+              4,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              2,
+              4,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              2,
+              4,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              2,
+              5,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              2,
+              5,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              2,
+              5,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              2,
+              6,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              2,
+              6,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              2,
+              7,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              3,
+              4,
+              5
+            ],
+            "witness": [
+              "A",
+              3,
+              4
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              3,
+              4,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              4
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              3,
+              4,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              4
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              3,
+              4,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              4
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              3,
+              5,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              5
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              3,
+              5,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              5
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              3,
+              5,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              5
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              3,
+              6,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              6
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              3,
+              6,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              6
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              3,
+              7,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              7
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              4,
+              5,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              4,
+              5,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              4,
+              5,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              4,
+              6,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              4,
+              6,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              4,
+              7,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              5,
+              6,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              5,
+              6,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              5,
+              7,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "x",
+              6,
+              7,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              0,
+              1,
+              2
+            ],
+            "witness": [
+              "A",
+              3,
+              4
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              0,
+              1,
+              3
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              0,
+              1,
+              4
+            ],
+            "witness": [
+              "A",
+              3,
+              2
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              0,
+              1,
+              5
+            ],
+            "witness": [
+              "A",
+              3,
+              2
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              0,
+              1,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              2
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              0,
+              1,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              2
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              0,
+              1,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              2
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              0,
+              2,
+              3
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              0,
+              2,
+              4
+            ],
+            "witness": [
+              "A",
+              3,
+              1
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              0,
+              2,
+              5
+            ],
+            "witness": [
+              "A",
+              3,
+              1
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              0,
+              2,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              1
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              0,
+              2,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              1
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              0,
+              2,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              1
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              0,
+              3,
+              4
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              0,
+              3,
+              5
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              0,
+              3,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              0,
+              3,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              0,
+              3,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              0,
+              4,
+              5
+            ],
+            "witness": [
+              "A",
+              3,
+              1
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              0,
+              4,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              1
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              0,
+              4,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              1
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              0,
+              4,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              1
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              0,
+              5,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              1
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              0,
+              5,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              1
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              0,
+              5,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              1
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              0,
+              6,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              1
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              0,
+              6,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              1
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              0,
+              7,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              1
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "k",
+              1,
+              2,
+              3
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              1,
+              2,
+              4
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              1,
+              2,
+              5
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              1,
+              2,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              1,
+              2,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              1,
+              2,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "k",
+              1,
+              3,
+              4
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "k",
+              1,
+              3,
+              5
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "k",
+              1,
+              3,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "k",
+              1,
+              3,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "k",
+              1,
+              3,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              1,
+              4,
+              5
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              1,
+              4,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              1,
+              4,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              1,
+              4,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              1,
+              5,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              1,
+              5,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              1,
+              5,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              1,
+              6,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              1,
+              6,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              1,
+              7,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "k",
+              2,
+              3,
+              4
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "k",
+              2,
+              3,
+              5
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "k",
+              2,
+              3,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "k",
+              2,
+              3,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "k",
+              2,
+              3,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              2,
+              4,
+              5
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              2,
+              4,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              2,
+              4,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              2,
+              4,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              2,
+              5,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              2,
+              5,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              2,
+              5,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              2,
+              6,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              2,
+              6,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              2,
+              7,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "k",
+              3,
+              4,
+              5
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "k",
+              3,
+              4,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "k",
+              3,
+              4,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "k",
+              3,
+              4,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "k",
+              3,
+              5,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "k",
+              3,
+              5,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "k",
+              3,
+              5,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "k",
+              3,
+              6,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "k",
+              3,
+              6,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "rejected_by": "adjoint",
+            "root": [
+              "k",
+              3,
+              7,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              4,
+              5,
+              6
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              4,
+              5,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              4,
+              5,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              4,
+              6,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              4,
+              6,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              4,
+              7,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              5,
+              6,
+              7
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              5,
+              6,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              5,
+              7,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          },
+          {
+            "projection_norm_squared": "1/7",
+            "rejected_by": "3875",
+            "root": [
+              "k",
+              6,
+              7,
+              8
+            ],
+            "witness": [
+              "A",
+              3,
+              0
+            ]
+          }
+        ],
+        "all36_symmetric_pair_checks": [
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                0
+              ],
+              [
+                "A",
+                3,
+                0
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                0
+              ],
+              [
+                "A",
+                3,
+                1
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                0
+              ],
+              [
+                "A",
+                3,
+                2
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                0
+              ],
+              [
+                "A",
+                3,
+                4
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                0
+              ],
+              [
+                "A",
+                3,
+                5
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                0
+              ],
+              [
+                "A",
+                3,
+                6
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                0
+              ],
+              [
+                "A",
+                3,
+                7
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                0
+              ],
+              [
+                "A",
+                3,
+                8
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                1
+              ],
+              [
+                "A",
+                3,
+                1
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                1
+              ],
+              [
+                "A",
+                3,
+                2
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                1
+              ],
+              [
+                "A",
+                3,
+                4
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                1
+              ],
+              [
+                "A",
+                3,
+                5
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                1
+              ],
+              [
+                "A",
+                3,
+                6
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                1
+              ],
+              [
+                "A",
+                3,
+                7
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                1
+              ],
+              [
+                "A",
+                3,
+                8
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                2
+              ],
+              [
+                "A",
+                3,
+                2
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                2
+              ],
+              [
+                "A",
+                3,
+                4
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                2
+              ],
+              [
+                "A",
+                3,
+                5
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                2
+              ],
+              [
+                "A",
+                3,
+                6
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                2
+              ],
+              [
+                "A",
+                3,
+                7
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                2
+              ],
+              [
+                "A",
+                3,
+                8
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                4
+              ],
+              [
+                "A",
+                3,
+                4
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                4
+              ],
+              [
+                "A",
+                3,
+                5
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                4
+              ],
+              [
+                "A",
+                3,
+                6
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                4
+              ],
+              [
+                "A",
+                3,
+                7
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                4
+              ],
+              [
+                "A",
+                3,
+                8
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                5
+              ],
+              [
+                "A",
+                3,
+                5
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                5
+              ],
+              [
+                "A",
+                3,
+                6
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                5
+              ],
+              [
+                "A",
+                3,
+                7
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                5
+              ],
+              [
+                "A",
+                3,
+                8
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                6
+              ],
+              [
+                "A",
+                3,
+                6
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                6
+              ],
+              [
+                "A",
+                3,
+                7
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                6
+              ],
+              [
+                "A",
+                3,
+                8
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                7
+              ],
+              [
+                "A",
+                3,
+                7
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                7
+              ],
+              [
+                "A",
+                3,
+                8
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          },
+          {
+            "P3875_zero": true,
+            "pair": [
+              [
+                "A",
+                3,
+                8
+              ],
+              [
+                "A",
+                3,
+                8
+              ]
+            ],
+            "symmetric_weight_sector_dimension": 1
+          }
+        ],
+        "extension_rejections": {
+          "3875": 174,
+          "adjoint": 57,
+          "singlet": 1
+        },
+        "maximal_linear_section": true,
+        "maximality_proof": "All232 external root directions fail a named constraint; distinct root weights cannot cancel for a fixed section generator. The eight Cartan commuting equations have rank8. Hence no further complex adjoint direction can extend this constant linear section.",
+        "one_coordinate_nonlinear_vector_field_commutator_residual": "0",
+        "primary_source": "https://arxiv.org/abs/1406.3348",
+        "ray_dictionary": "For a chosen ray[psi] in CP8, the complex section is span{|psi><v|: <v|psi>=0}; its conjugates satisfy the same algebraic constraints. The displayed real section uses psi=e3, the previous11723 SM-neutral density example.",
+        "real_split_section_generators": [
+          [
+            "A",
+            3,
+            0
+          ],
+          [
+            "A",
+            3,
+            1
+          ],
+          [
+            "A",
+            3,
+            2
+          ],
+          [
+            "A",
+            3,
+            4
+          ],
+          [
+            "A",
+            3,
+            5
+          ],
+          [
+            "A",
+            3,
+            6
+          ],
+          [
+            "A",
+            3,
+            7
+          ],
+          [
+            "A",
+            3,
+            8
+          ]
+        ],
+        "scope": "An explicit section of established E8(8) exceptional field theory in11681 coordinates. The classical EFT action, external Lorentzian3-space, field inventory, scale and section choice are additional input. No EFT action or4D Einstein dynamics is derived from the finite graph; complex SU9 transports need not preserve the chosen split-real form.",
+        "section_dimension": 8,
+        "singlet_and_adjoint_constraints_zero": true,
+        "status": "PASS",
+        "strong_constraint": "P_(1+248+3875)(partial tensor partial)=0; invariant form identifies the displayed root vectors with derivative covectors."
+      },
+      "permutation_control": 3.574918139293004e-14,
+      "positive_solution": [
+        0.928154194182055,
+        0.9290096447226461,
+        0.9296162685207936,
+        0.9299819653995938,
+        0.9266038234315718,
+        0.9309343298932482,
+        0.9307491884571373,
+        0.9312337431938401,
+        0.931653939206959,
+        0.9320073425822284,
+        0.9324064968316614,
+        0.9326707489588311,
+        0.932976374966295,
+        0.9313255182395276,
+        0.9335772479112481,
+        0.9340923932076443,
+        0.9343180448376636,
+        0.9346014690724301,
+        0.9349426820466027,
+        0.9352136068234177,
+        0.9355769520878473,
+        0.9358718535209147,
+        0.9357903771915356,
+        0.9364625672157633,
+        0.9369426894306047,
+        0.9371566675758586,
+        0.9374280954271302,
+        0.9377565789876091,
+        0.9380232857805813,
+        0.9383671471118101,
+        0.9386506408975926,
+        0.9400278113709087,
+        0.9392142070283659,
+        0.9396987321367195,
+        0.9398909155830475,
+        0.9401455077820526,
+        0.9404621503638716,
+        0.9407175499510679,
+        0.9410498556719084,
+        0.9413227042320631
+      ],
+      "residual": 3.552713678800501e-14,
+      "scale_change_norm": 0.015249801097664733,
+      "scope": "A nonlinear graph analogue of the CMC Hamiltonian constraint, not a proof of Lorentzian evolution, TT realizability, momentum constraints, ADM closure or a3D continuum limit. The fixed expander is not silently identified with space.",
+      "source": [
+        1.0,
+        1.025,
+        1.05,
+        1.075,
+        1.1,
+        1.125,
+        1.15,
+        1.175,
+        1.2,
+        1.225,
+        1.25,
+        1.275,
+        1.3,
+        1.325,
+        1.35,
+        1.375,
+        1.4,
+        1.425,
+        1.45,
+        1.475,
+        1.5,
+        1.525,
+        1.55,
+        1.575,
+        1.6,
+        1.625,
+        1.65,
+        1.675,
+        1.7,
+        1.725,
+        1.75,
+        1.775,
+        1.8,
+        1.825,
+        1.85,
+        1.875,
+        1.9,
+        1.925,
+        1.95,
+        1.975
+      ],
+      "status": "PASS",
+      "uniqueness_theorem": "For a_i>0,b>0,R>=0, the energy is coercive with a boundary barrier, and its Hessian8L+diag(R+7a phi^-8+5b phi^4) is positive definite: exactly one positive solution.",
+      "variational_energy": "4 phi^T L phi+(R/2)sum phi^2+sum a/(6 phi^6)+(b/6)sum phi^6",
+      "vertices": 40
+    },
+    "11730": {
+      "continuous_completion": "On L2(R,dLambda), (T_C f)(Lambda)=f(Lambda+C) implements the shift, with translated states. A translation-invariant normalizable state on R does not exist.",
+      "finite_register_obstruction": "A unitary shift U Lambda Udag=Lambda-C I for all realC is impossible in finite dimension by trace; a bounded spectrum cannot be invariant under all real translations either.",
+      "fixed_data_boundary": "H(Lambda,C)=H0+(Lambda+C)V is covariant under Lambda->Lambda-C, but that changes Lambda-state/boundary data. It is not fixed-data screening.",
+      "fixed_volume_state_probabilities_shift_invariant": true,
+      "scope": "An exact quantum Ward/negative-control test of a supplied unimodular-type interface. No cosmological constant value or state-selection mechanism is derived.",
+      "status": "PASS",
+      "translated_Lambda_operator_residual": 1.1732699091047488e-14,
+      "volume_coherent_cross_phase": {
+        "imag": 0.28786813967394304,
+        "real": 0.9576700549566449
+      },
+      "volume_superselection_required_for_fixed_sector_cancellation": true
+    },
+    "11731": {
+      "bundle": "W=V_dual direct_sum O direct_sum O, rank5, c1=0; duality follows from the actual hidden5 Cartan convention",
+      "integral_c3_W": -6,
+      "ordered_global_triplet_obstruction": "A smooth everywhere principal ordered triplet reduces the SU5 bundle to finite Z5; rational positive-degree Chern classes vanish, contradicting integral c3=-6. Conjugating the family convention reverses the sign but not the obstruction.",
+      "ordered_triplet_stabilizer": "Z5, by irreducibility and Schur lemma inside SU5",
+      "possible_escape": "Allow Higgs rank-loss defects or nonprincipal patches, use a different gauge-breaking inventory, or separate the family-index bundle from this hidden-SU5 bundle. None is constructed here.",
+      "rotating_triplet_c3": 0,
+      "rotating_triplet_stabilizer": "principal SU2 image times central Z5 (normalizer, with triplet rotations)",
+      "scope": "A compatibility theorem for the specified same-bundle compactification interface. It does not refute prior finite-point E8 Higgs certificates, which never asserted a global compactification bundle.",
+      "status": "PASS"
+    },
+    "11732": {
+      "E8_covariant_Yukawa": "y H_ab psi^a_alpha psi^b_beta epsilon^(alpha beta), H in real3875 subset Sym2(adj), Weyl psi in adj248",
+      "branching_dimension_sum": 3875,
+      "classical_E6_SU3_branching": "(1,1)+(650,1)+(1,8)+(78,8)+(27,3)+conjugate+(351,3)+conjugate+(27,6bar)+conjugate",
+      "classical_decomposition": "Sym2(248)=1+3875+27000",
+      "commuting_visible_SU5_levels": [
+        0,
+        1,
+        2,
+        7,
+        8
+      ],
+      "cross_Casimir_eigenvalues": {
+        "-12": 1,
+        "2": 6
+      },
+      "cross_Casimir_matrix": [
+        [
+          0,
+          2,
+          -2,
+          -2,
+          -2,
+          -2,
+          -2
+        ],
+        [
+          2,
+          0,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          -2,
+          2,
+          0,
+          -2,
+          -2,
+          -2,
+          -2
+        ],
+        [
+          -2,
+          2,
+          -2,
+          0,
+          -2,
+          -2,
+          -2
+        ],
+        [
+          -2,
+          2,
+          -2,
+          -2,
+          0,
+          -2,
+          -2
+        ],
+        [
+          -2,
+          2,
+          -2,
+          -2,
+          -2,
+          0,
+          -2
+        ],
+        [
+          -2,
+          2,
+          -2,
+          -2,
+          -2,
+          -2,
+          0
+        ]
+      ],
+      "family_SU3_levels": [
+        3,
+        4,
+        5
+      ],
+      "projector": "P3875=-(Omega+60)(Omega-2)/672; on this sector (2-Omega)/14",
+      "projector_matrix": [
+        [
+          "1/7",
+          "-1/7",
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7"
+        ],
+        [
+          "-1/7",
+          "1/7",
+          "-1/7",
+          "-1/7",
+          "-1/7",
+          "-1/7",
+          "-1/7"
+        ],
+        [
+          "1/7",
+          "-1/7",
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7"
+        ],
+        [
+          "1/7",
+          "-1/7",
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7"
+        ],
+        [
+          "1/7",
+          "-1/7",
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7"
+        ],
+        [
+          "1/7",
+          "-1/7",
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7"
+        ],
+        [
+          "1/7",
+          "-1/7",
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7",
+          "1/7"
+        ]
+      ],
+      "projector_rank": 1,
+      "restricted_operator": "The H_(27,6bar) channel gives the prior11271 symmetric d_ABC psi_i^A psi_j^B H^(C,ij). The Lorentz bilinear is symmetric in combined gauge/flavor indices.",
+      "scope": "A nonzero actual E8 projector witness and classical branching completion of11271, not a selected H vev or a chiral248 spectrum. The3875 changes the scalar inventory; local zero-mode overlap integrals and observed fermion masses remain uncomputed.",
+      "seed_index": 0,
+      "seed_projected_norm_squared": "1/7",
+      "seed_roots": [
+        [
+          "A",
+          3,
+          0
+        ],
+        [
+          "x",
+          0,
+          1,
+          3
+        ]
+      ],
+      "selected_weight_times3": [
+        -1,
+        2,
+        -1,
+        5,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "status": "PASS",
+      "symmetric_root_pair_basis": [
+        [
+          [
+            "A",
+            3,
+            0
+          ],
+          [
+            "x",
+            0,
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            "A",
+            3,
+            2
+          ],
+          [
+            "x",
+            1,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            "A",
+            3,
+            4
+          ],
+          [
+            "x",
+            1,
+            3,
+            4
+          ]
+        ],
+        [
+          [
+            "A",
+            3,
+            5
+          ],
+          [
+            "x",
+            1,
+            3,
+            5
+          ]
+        ],
+        [
+          [
+            "A",
+            3,
+            6
+          ],
+          [
+            "x",
+            1,
+            3,
+            6
+          ]
+        ],
+        [
+          [
+            "A",
+            3,
+            7
+          ],
+          [
+            "x",
+            1,
+            3,
+            7
+          ]
+        ],
+        [
+          [
+            "A",
+            3,
+            8
+          ],
+          [
+            "x",
+            1,
+            3,
+            8
+          ]
+        ]
+      ],
+      "tensor_bracket_constants_checked": 168,
+      "tensor_bracket_residual": 0,
+      "weight_sector_dimension": 7
+    },
+    "11733": {
+      "branch_EFT_selector": "eta (I-1304 p2^2)=960 eta (p4-7 p2^2/30), eta>0",
+      "compared_with11725": "The earlier square of this nonnegative selector has zero quadratic curvature. Its unsquared branch restriction gives11 positive shape modes.",
+      "gauge_orbit_zero_modes": 12,
+      "positive_physical_shape_Hessian_eigenvalues": {
+        "19200 eta": 8,
+        "76800 eta": 3
+      },
+      "radial_mode": "Positive if the supplied (p2-30)^2 term is retained; eigenvalue240 in Tr(dSigma^2) metric.",
+      "scope": "An exact low-energy Hessian on the selected SU5 centralizer and principal branch. Nonnegativity is certified on that branch; the unsquared mixed E8 invariant is not asserted nonnegative off branch, so this is not a full E8 UV potential or measured Higgs spectrum.",
+      "status": "PASS"
+    }
+  },
+  "physical_boundary": "No derived Lorentzian spacetime, local chiral vacuum, observed masses/mixing/couplings, or cosmological constant value. These constructions expose and improve specific interfaces.",
+  "reservation": "5470f3255",
+  "schema": "w33-eight-interface-v1",
+  "source_sha256": "7e41783a8ba3b45682458ad776d08814b9636942b56ae9f23076104fac858d87",
+  "status": "PASS"
+}

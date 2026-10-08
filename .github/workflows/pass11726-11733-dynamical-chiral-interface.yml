@@ -1,0 +1,24 @@
+name: Pass11726-11733 dynamical branch and chiral interface
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - analysis/w33_pass11726_11733_dynamical_branch_and_chiral_interface.py
+      - tests/test_w33_pass11726_11733_dynamical_branch_and_chiral_interface.py
+      - data/w33_pass11726_11733_dynamical_branch_and_chiral_interface.json
+      - .github/workflows/pass11726-11733-dynamical-chiral-interface.yml
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest
+      - name: Check frozen eight-interface certificate
+        run: OPENBLAS_NUM_THREADS=1 python -m pytest -q tests/test_w33_pass11726_11733_dynamical_branch_and_chiral_interface.py
+      - name: Replay eight investigations and actual exceptional section
+        run: OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11726_11733_dynamical_branch_and_chiral_interface.py
+      - name: Check regenerated certificate
+        run: OPENBLAS_NUM_THREADS=1 python -m pytest -q tests/test_w33_pass11726_11733_dynamical_branch_and_chiral_interface.py
