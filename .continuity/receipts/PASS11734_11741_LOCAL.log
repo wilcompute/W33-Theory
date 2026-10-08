@@ -1,0 +1,49 @@
+Passes11734-11741 primary local verification
+Main checkout C:\Repos\Theory of Everything; reservation0727bee0d.
+No completed TOE or measured parameter spectrum is claimed.
+
+Final producer including local/all-order vanishing hypotheses
+11734 PASS
+11735 PASS
+11736 PASS
+11737 PASS
+11738 PASS
+11739 PASS
+11740 PASS
+11741 PASS
+/mnt/c/repos/theory of everything/data/w33_pass11734_11741_gauging_and_chiral_quotient.json
+
+Final independent regressions
+.......................                                                  [100%]
+23 passed in 77.26s (0:01:17)
+
+Earlier22-regression baseline
+......................                                                   [100%]
+22 passed in 247.73s (0:04:07)
+
+Final four-file full intake
+[audit] guard: no collisions
+[audit] forced arithmetic: none
+[audit] intake clean (4 files)
+
+Dedicated topical index rebuild
+scanned 5227 files, 1095 tokens
+tokens visible ONLY in opaque filenames: 387
+   cite:Conjecture(1927)  ->  analysis/2026-07-15_pass80_artin_137_uniqueness.md
+   cite:Freudenthal(1954)  ->  analysis/PASS10949_FREUDENTHAL_QUASICONFORMAL_CLOCK_CONE.md
+   cite:Fritz(2010)  ->  analysis/PASS11171_TEMPORAL_CGLMP_LARGE_D.md
+   cite:Heawood(1890)  ->  analysis/w33_pass2045_2049_the_sevens_and_a_numbering_collision.md
+   cite:Hesselink(1980)  ->  analysis/PASS11217_QUBIT_ARROW_LAW.md
+   cite:Huerta(2010)  ->  analysis/PASS10950_CLOCK_ALBERT_LORENTZ_SPINOR.md
+   cite:Kok(2006)  ->  analysis/PASS11556_RESERVATION.md
+   cite:Lam(2008)  ->  analysis/PASS11225_FLAVOUR_FROM_SYMMETRY.md
+   cite:Luo(2018)  ->  analysis/PASS10970_PROJECTIVE_CLOCK_CODE_LATTICE_TOWER.md
+   cite:Mathematics(2022)  ->  analysis/BT2946_BT2952_seven_front_closure.md
+   cite:Mkrtchyan(2025)  ->  analysis/PASS7049_7064_vogel_e6_split_casimir.md
+   cite:Ness(1979)  ->  analysis/PASS10962_HIDDEN_SECTOR_DFLAT_TIERS.md
+wrote TOPICAL_ALIASES.md
+
+RESULTS_INDEX11362files15971distinctive results.
+Local versions numpy2.3.5 scipy1.17.0 sympy1.14.0 pytest8.4.2.
+Source binding, Python AST syntax and conflict-marker checks PASS.
+Primary logs are copied verbatim apart from CRLF normalization.
