@@ -52,6 +52,43 @@ def test_cubic_bundle_product_and_type2_not_fake_ambient_one_form():
     assert N.M.tetraquadric_cohomology(N.K[2])==[0,4,0,0]
 
 
+def test_type2_primitives_are_global_sections_with_correct_dbar():
+    z,b=s.symbols('z b');u=Q.p1_primitives(z,b)
+    for k,p in it.product(range(3),range(2)):
+        assert s.cancel(s.diff(u[k][p],b)-z**k*b**p/(1+z*b)**3)==0
+        south=s.cancel(u[k][p].subs({z:1/z,b:1/b},simultaneous=True)/z)
+        assert s.cancel(south+u[2-k][1-p])==0
+        assert south.subs({z:0,b:0}) in (-s.Rational(1,2),0,s.Rational(1,2))
+
+
+def test_type2_named_forms_connect_to_all_four_independent_classes():
+    z,b,forms=Q.type2_forms();F=Q.reference_polynomial()[1]
+    for (p,q),nu in forms.items():
+        target=F*b[2]**p*b[3]**q/((1+z[2]*b[2])**3*(1+z[3]*b[3])**3)
+        assert s.cancel(s.diff(nu,b[2])-target)==0
+        assert s.diff(nu,b[0])==s.diff(nu,b[1])==0
+    p=frozen()['passes']['11750']['type2_closed_lift']
+    assert p['full_named_polynomial_connecting_checks']==4 and p['harmonic'] is False
+
+
+def test_type2_actual_forms_have_regular_group_action_and_invariant_mode():
+    z,b,forms=Q.type2_forms();allvars=(*z,*b)
+    for (p,q),nu in forms.items():
+        g=-nu.subs(dict(zip(allvars,[-x for x in allvars])),simultaneous=True)
+        h=-z[0]**2*z[1]**2/(z[2]*z[3]*b[3]**2)*nu.subs(dict(zip(allvars,[1/x for x in allvars])),simultaneous=True)
+        assert s.cancel(g-(-1)**(p+q)*nu)==0
+        assert s.cancel(h-forms[1-p,1-q])==0
+
+
+def test_type2_reference_serre_scale_matches_unit_connecting_basis():
+    r=s.symbols('r',positive=True)
+    for p in range(2):
+        radial=s.integrate(r**(2*p+1)/(1+r*r)**3,(r,0,s.oo))
+        assert -2*radial==-s.Rational(1,2)
+    assert frozen()['passes']['11750']['type2_closed_lift']['Serre_normalized_basis_scale']==4
+    assert 4*(-s.Rational(1,2))**2==1
+
+
 def test_cycle_class_and_budget_from_squarefree_chern_polynomials():
     x=s.symbols('x:4');lines=[sum(k*v for k,v in zip(row,x)) for row in N.K]
     c2=sum(a*b for a,b in it.combinations(lines,2))

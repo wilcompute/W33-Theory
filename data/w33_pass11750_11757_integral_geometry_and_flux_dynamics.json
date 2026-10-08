@@ -1,7 +1,7 @@
 {
   "schema": "w33.pass11750_11757.integral_geometry_flux_dynamics.v1",
   "status": "PASS",
-  "source_sha256": "702141b9dfa912f00ee3d29090213411f5671341fa91756ace4f7f5775d4078e",
+  "source_sha256": "4501cb1bb4dba539cff0ecb9c3d29896b8b3400b0d931f4e6aa3f50903e0920b",
   "prior_source_sha256": "910ff3414799bf49b7cf9b894e59f37c6ebcfca0c9bce2d3f1c5fa8f928d8b71",
   "passes": {
     "11750": {
@@ -228,7 +228,33 @@
         "Z_IJ=volume-normalized integral H nu_I star conjugate(nu_J)",
         "Y_phys=e^(K4/2) Y_hol contracted with three inverse square roots of Z"
       ],
-      "exact_type2_input": "K3 comes from H2(A,K3-D), not a restricted ambient harmonic1-form. A closed Cech-to-Dolbeault lift must be supplied before training.",
+      "exact_type2_input": "K3 comes from H2(A,K3-D), not a restricted ambient harmonic1-form. Explicit closed global reference forms and their connecting-map/covariance checks are supplied below; harmonic correction is still required.",
+      "type2_closed_lift": {
+        "primitive_table": [
+          [
+            "b*(b*z + 2)/(2*(b*z + 1)**2)",
+            "b**2/(2*(b*z + 1)**2)"
+          ],
+          [
+            "-1/(2*(b*z + 1)**2)",
+            "b**2*z/(2*(b*z + 1)**2)"
+          ],
+          [
+            "-z/(2*(b*z + 1)**2)",
+            "(-2*b*z - 1)/(2*(b*z + 1)**2)"
+          ]
+        ],
+        "primitive_covariance_checks": 18,
+        "full_named_polynomial_connecting_checks": 4,
+        "recipe": "F=sum_(k=0)^2 f_k(z0,z1,z3) z2^k; nu_pq=sum_k f_k u_kp(z2,barz2) barz3^q/(1+z3 barz3)^3 dbarz3. dbar nu_pq=F omega_pq, so nu restricted to X is closed.",
+        "cohomology": "The Koszul connecting map sends [nu_pq|X] to the four independent H2(A,K3-D) classes omega_pq; both adjacent ambient K3 cohomologies vanish, so these are a basis.",
+        "globality": "u_S=z u_N at z=1/w equals -u_(2-k,1-p)(w). All six are smooth O(-1) sections in both charts. H0(O(-1))=H1(O(-1))=0 makes this inverse unique, so it intertwines the natural projective lifts.",
+        "invariant_mode": "nu_00+nu_11 descends for the prior trivial character; the three other sign/eigencombinations follow the regular cohomology action.",
+        "Serre_normalized_basis_scale": 4,
+        "normalization": "With trace (2pi i)^-1 integral dz wedge nu on each CP1, the displayed H1(O(-3)) basis pairs as -I/2 with (1,z). Two factors give I/4, so4 nu_pq has unit-paired connecting classes. The invariant combination is scaled by the same4; physical metric normalization is still uncomputed.",
+        "harmonic": false,
+        "prior": "These six primitives specialize Blesneag et al.1512.05322 eqs3.22/5.28-5.29 to the particular K3 input. The addition is an explicit checked input for this bundle and polynomial, not new primitive formulas or a new cohomology method."
+      },
       "product_HYM_constraint": "sum beta_i=constant when sum K_i=0, using one Ricci-flat metric",
       "large_flux_rescaling": "K_i -> ell K_i gives net quotient index -3 ell^3. Uniform large-flux localization changes the three-generation inventory; ell=1 is the only positive integer retaining index -3. This excludes this shortcut, not other large-flux bundles.",
       "external_implementation": "https://github.com/kitft/heteroticyukawas",

@@ -51,6 +51,47 @@ def reference_jet(point,t):
                 polynomial_residual=abs(complex(F.subs(sub))),MA_density=eta,HYM_contractions=hym)
 
 
+def p1_primitives(z,bar):
+    den=2*(1+z*bar)**2
+    return ((bar*(2+z*bar)/den,bar**2/den),
+            (-1/den,z*bar**2/den),
+            (-z/den,-(1+2*z*bar)/den))
+
+
+@lru_cache(None)
+def type2_forms():
+    z,F,_,_=reference_polynomial();bar=s.symbols('b:4')
+    coeff=s.Poly(F,z[2]);u=p1_primitives(z[2],bar[2])
+    forms={(p,q):sum(coeff.nth(k)*u[k][p] for k in range(3))*bar[3]**q/(1+z[3]*bar[3])**3
+           for p,q in it.product(range(2),repeat=2)}
+    return z,bar,forms
+
+
+@lru_cache(None)
+def type2_lift_certificate():
+    z,b=s.symbols('z b');u=p1_primitives(z,b);checks=0
+    for k,p in it.product(range(3),range(2)):
+        assert s.cancel(s.diff(u[k][p],b)-z**k*b**p/(1+z*b)**3)==0
+        assert s.cancel(u[k][p].subs({z:1/z,b:1/b},simultaneous=True)/z+u[2-k][1-p])==0
+        assert s.cancel(u[k][p].subs({z:-z,b:-b},simultaneous=True)-(-1)**(k+p+1)*u[k][p])==0
+        checks+=3
+    zz,bb,forms=type2_forms();F=reference_polynomial()[1]
+    for (p,q),nu in forms.items():
+        rhs=F*bb[2]**p*bb[3]**q/((1+zz[2]*bb[2])**3*(1+zz[3]*bb[3])**3)
+        assert s.cancel(s.diff(nu,bb[2])-rhs)==0
+        assert s.diff(nu,bb[0])==s.diff(nu,bb[1])==0
+    return dict(primitive_table=[[str(v) for v in row] for row in u],primitive_covariance_checks=checks,
+        full_named_polynomial_connecting_checks=4,
+        recipe='F=sum_(k=0)^2 f_k(z0,z1,z3) z2^k; nu_pq=sum_k f_k u_kp(z2,barz2) barz3^q/(1+z3 barz3)^3 dbarz3. dbar nu_pq=F omega_pq, so nu restricted to X is closed.',
+        cohomology='The Koszul connecting map sends [nu_pq|X] to the four independent H2(A,K3-D) classes omega_pq; both adjacent ambient K3 cohomologies vanish, so these are a basis.',
+        globality='u_S=z u_N at z=1/w equals -u_(2-k,1-p)(w). All six are smooth O(-1) sections in both charts. H0(O(-1))=H1(O(-1))=0 makes this inverse unique, so it intertwines the natural projective lifts.',
+        invariant_mode='nu_00+nu_11 descends for the prior trivial character; the three other sign/eigencombinations follow the regular cohomology action.',
+        Serre_normalized_basis_scale=4,
+        normalization='With trace (2pi i)^-1 integral dz wedge nu on each CP1, the displayed H1(O(-3)) basis pairs as -I/2 with (1,z). Two factors give I/4, so4 nu_pq has unit-paired connecting classes. The invariant combination is scaled by the same4; physical metric normalization is still uncomputed.',
+        harmonic=False,
+        prior='These six primitives specialize Blesneag et al.1512.05322 eqs3.22/5.28-5.29 to the particular K3 input. The addition is an explicit checked input for this bundle and polynomial, not new primitive formulas or a new cohomology method.')
+
+
 @lru_cache(None)
 def metric_certificate():
     z,F,terms,coefficients=reference_polynomial()
@@ -74,7 +115,8 @@ def metric_certificate():
                    'nu_i=nu_ref_i+dbar sigma_i; dbar_dagger nu_i=0',
                    'Z_IJ=volume-normalized integral H nu_I star conjugate(nu_J)',
                    'Y_phys=e^(K4/2) Y_hol contracted with three inverse square roots of Z'],
-        exact_type2_input='K3 comes from H2(A,K3-D), not a restricted ambient harmonic1-form. A closed Cech-to-Dolbeault lift must be supplied before training.',
+        exact_type2_input='K3 comes from H2(A,K3-D), not a restricted ambient harmonic1-form. Explicit closed global reference forms and their connecting-map/covariance checks are supplied below; harmonic correction is still required.',
+        type2_closed_lift=type2_lift_certificate(),
         product_HYM_constraint='sum beta_i=constant when sum K_i=0, using one Ricci-flat metric',
         large_flux_rescaling='K_i -> ell K_i gives net quotient index -3 ell^3. Uniform large-flux localization changes the three-generation inventory; ell=1 is the only positive integer retaining index -3. This excludes this shortcut, not other large-flux bundles.',
         external_implementation='https://github.com/kitft/heteroticyukawas',

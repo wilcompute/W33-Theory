@@ -12,7 +12,7 @@ Reservation: `bf6d2f6fb`. Scientific parent:11742–11749,
 
 | Requested target | Executed result | Physical boundary |
 |---|---|---|
-| Kinetic metrics and Yukawas | Explicit invariant polynomial, induced metric and bundle-curvature residuals; exact solver inputs and large-flux index obstruction | Ricci-flat/HYM/harmonic training and normalized Yukawa integrals remain undone |
+| Kinetic metrics and Yukawas | Explicit invariant polynomial, induced metric and bundle-curvature residuals; all four closed global type2 reference forms; large-flux index obstruction | Ricci-flat/HYM/harmonic training and normalized Yukawa integrals remain undone |
 | Geometric anomaly and balancing | Named equivariant effective curve; integral quotient descent proved | Backreaction and opposite-charge balancing fields remain absent |
 | Light Higgs and proton safety | All-alignment character-rank theorem; supplied adjoint splitting checked against actual proton sources | Cubic route fails; tested deformation still has proton operator |
 | Global E8 frame and equations | Primitive tensor frame, signed six-form map, integral transitions, flux-induced radius equations | Full quantum consistency and stationary compactification remain open |
@@ -83,7 +83,41 @@ provide an actual computational route for tetraquadric line bundles:
 [heteroticyukawas](https://github.com/kitft/heteroticyukawas).
 In this bundle, `K3` has no ambient cohomology and its four modes arise
 from `H²(A,K3-D)`: treating it as a restricted ambient harmonic1-form
-would feed the wrong object into the solver. Training has **not** run here.
+would feed the wrong object into the solver. The extension below supplies
+the missing closed input; training has **not** run here.
+
+Write `kappa=1+z*barz`. Six global primitives, with columns p=0,1
+and rows k=0,1,2, are
+
+```
+u_kp = 1/(2 kappa^2) *
+ [[barz*(2+z*barz), barz^2],
+  [-1,                 z*barz^2],
+  [-z,                -(1+2*z*barz)]].
+```
+
+They obey `dbar u_kp=z^k barz^p/kappa^3 dbarz`. Under the south chart
+their O(-1) section coefficients transform to `-u_(2-k,1-p)` and remain
+smooth. This is an implementation of the published primitives in
+[Blesneag et al.,1512.05322,eqs3.22/5.28–5.29](https://arxiv.org/abs/1512.05322),
+not a new integration formula.
+
+For `F=sum_(k=0)^2 f_k(z0,z1,z3) z2^k`, set
+
+```
+nu_pq = sum_k f_k u_kp(z2,barz2) * barz3^q/(1+z3*barz3)^3 dbarz3.
+```
+
+Exactly, `dbar nu_pq=F omega_pq`. Restricting to X gives four closed
+reference forms representing the four independent connecting-map classes.
+Full rational pullbacks under g and h are checked: g gives
+`(-1)^(p+q)nu_pq` and h gives `nu_(1-p,1-q)`. Thus `nu_00+nu_11`
+is an explicit invariant mode. These are global reference forms, **not
+harmonic** forms for an uncomputed Ricci-flat/HYM metric.
+For the trace convention `(2pi i)^-1 integral dz wedge nu`, each displayed
+H1(O(-3)) basis pairs as `-I/2` with `(1,z)`. Two factors pair as `I/4`;
+the unit-Serre connecting basis is therefore `4 nu_pq`. An independent
+radial-integral test checks this factor before it can enter normalization.
 
 Another potential shortcut was checked rather than assumed.
 [Blesneag's thesis2204.01165](https://arxiv.org/abs/2204.01165) treats
@@ -383,8 +417,8 @@ Independent regressions:
 `tests/test_w33_pass11750_11757_integral_geometry_and_flux_dynamics.py`.
 Run with `OPENBLAS_NUM_THREADS=1 python3`; source hashes normalize CRLF.
 
-Final local validation:22 new regressions plus25 previous-interface regressions,
-**47 passed in135.45s**; all eight producer sections PASS. Four-file corpus
+Final local validation:26 new regressions plus25 previous-interface regressions,
+**51 passed in147.44s**; all eight producer sections PASS. Four-file corpus
 intake is clean, with no collisions or forced arithmetic. Exact-commit hosted
 replay and publication receipts are recorded separately after execution.
 A PASS certificate means
