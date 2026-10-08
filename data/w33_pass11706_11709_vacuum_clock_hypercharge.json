@@ -1,0 +1,470 @@
+{
+ "pass_ids": [
+  11706,
+  11707,
+  11708,
+  11709
+ ],
+ "p11706": {
+  "line_su3": {
+   "(0, 1)": {
+    "kinds": {
+     "L": 3,
+     "Ld": 3
+    },
+    "triples": [
+     [
+      [
+       0,
+       0
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       2,
+       0
+      ]
+     ],
+     [
+      [
+       0,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       2,
+       1
+      ]
+     ],
+     [
+      [
+       0,
+       2
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       2,
+       2
+      ]
+     ]
+    ],
+    "triples_are_eigenspaces_of_D_q": true
+   },
+   "(1, 0)": {
+    "kinds": {
+     "L": 3,
+     "Ld": 3
+    },
+    "triples": [
+     [
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       1
+      ],
+      [
+       0,
+       2
+      ]
+     ],
+     [
+      [
+       1,
+       0
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ]
+     ],
+     [
+      [
+       2,
+       0
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       2,
+       2
+      ]
+     ]
+    ],
+    "triples_are_eigenspaces_of_D_q": true
+   },
+   "(1, 1)": {
+    "kinds": {
+     "L": 3,
+     "Ld": 3
+    },
+    "triples": [
+     [
+      [
+       0,
+       0
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       2,
+       1
+      ]
+     ],
+     [
+      [
+       0,
+       1
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       2,
+       2
+      ]
+     ],
+     [
+      [
+       0,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       2,
+       0
+      ]
+     ]
+    ],
+    "triples_are_eigenspaces_of_D_q": true
+   },
+   "(1, 2)": {
+    "kinds": {
+     "L": 3,
+     "Ld": 3
+    },
+    "triples": [
+     [
+      [
+       0,
+       0
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       2,
+       2
+      ]
+     ],
+     [
+      [
+       0,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       2,
+       0
+      ]
+     ],
+     [
+      [
+       0,
+       2
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       2,
+       1
+      ]
+     ]
+    ],
+    "triples_are_eigenspaces_of_D_q": true
+   }
+  },
+  "pure_state_centraliser": [
+   {
+    "dim": 64,
+    "max_trivector_component": 0.0
+   },
+   {
+    "dim": 64,
+    "max_trivector_component": 0.0
+   },
+   {
+    "dim": 64,
+    "max_trivector_component": 0.0
+   }
+  ],
+  "line_trinification_patterns": 1944,
+  "vacua_leaving_su3_su2_unbroken": 0,
+  "note_full_table": "all 320 vacua x 240 root vectors: commuting-root counts {0: 216, 30: 96, 56: 8}",
+  "clock_hamiltonian_ground_state": {
+   "aligned": 736,
+   "misaligned": 525,
+   "trivial_000": 553,
+   "degenerate": 130,
+   "random_baseline": 0.5
+  }
+ },
+ "p11707": {
+  "operator_type_sm_pattern_pairs": 83592,
+  "example": {
+   "clocks": [
+    "zeta9^(3xy^2) [lift 1]",
+    "zeta9^(x^3 + 3xy + 3x^2y) [lift 1]"
+   ],
+   "type": [
+    "A1",
+    "A2"
+   ],
+   "colour_levels": [
+    "(0, 0)",
+    "(0, 0)",
+    "(0, 1)",
+    "(0, 2)"
+   ],
+   "roots": [
+    [
+     "A",
+     [
+      "(0, 0)",
+      "(0, 1)"
+     ]
+    ],
+    [
+     "A",
+     [
+      "(0, 0)",
+      "(0, 2)"
+     ]
+    ],
+    [
+     "A",
+     [
+      "(0, 1)",
+      "(0, 0)"
+     ]
+    ],
+    [
+     "A",
+     [
+      "(0, 1)",
+      "(0, 2)"
+     ]
+    ],
+    [
+     "A",
+     [
+      "(0, 2)",
+      "(0, 0)"
+     ]
+    ],
+    [
+     "A",
+     [
+      "(0, 2)",
+      "(0, 1)"
+     ]
+    ],
+    [
+     "A",
+     [
+      "(2, 1)",
+      "(2, 2)"
+     ]
+    ],
+    [
+     "A",
+     [
+      "(2, 2)",
+      "(2, 1)"
+     ]
+    ]
+   ],
+   "vacua": {
+    "(0, 1)": {
+     "free": false,
+     "commutes_with_all_SM_roots": false
+    },
+    "(0, 2)": {
+     "free": false,
+     "commutes_with_all_SM_roots": false
+    },
+    "(1, 0)": {
+     "free": true,
+     "commutes_with_all_SM_roots": true
+    },
+    "(1, 1)": {
+     "free": true,
+     "commutes_with_all_SM_roots": true
+    },
+    "(1, 2)": {
+     "free": true,
+     "commutes_with_all_SM_roots": true
+    },
+    "(2, 0)": {
+     "free": true,
+     "commutes_with_all_SM_roots": true
+    },
+    "(2, 1)": {
+     "free": false,
+     "commutes_with_all_SM_roots": false
+    },
+    "(2, 2)": {
+     "free": false,
+     "commutes_with_all_SM_roots": false
+    }
+   },
+   "su5_completions": [
+    {
+     "operator_roots": 20,
+     "Y": [
+      0.3333,
+      0.3333,
+      0.3333,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.5,
+      -0.5
+     ],
+     "standard": true
+    },
+    {
+     "operator_roots": 8,
+     "Y": [
+      -0.3333,
+      -0.3333,
+      -0.3333,
+      0.3333,
+      0.3333,
+      0.3333,
+      0.3333,
+      -0.1667,
+      -0.1667
+     ],
+     "standard": true
+    },
+    {
+     "operator_roots": 8,
+     "Y": [
+      0.0,
+      0.0,
+      -0.0,
+      0.6667,
+      -0.3333,
+      -0.3333,
+      -0.3333,
+      0.1667,
+      0.1667
+     ],
+     "standard": true
+    },
+    {
+     "operator_roots": 8,
+     "Y": [
+      0.0,
+      0.0,
+      -0.0,
+      -0.3333,
+      0.6667,
+      -0.3333,
+      -0.3333,
+      0.1667,
+      0.1667
+     ],
+     "standard": true
+    },
+    {
+     "operator_roots": 8,
+     "Y": [
+      0.0,
+      0.0,
+      0.0,
+      -0.3333,
+      -0.3333,
+      0.6667,
+      -0.3333,
+      0.1667,
+      0.1667
+     ],
+     "standard": true
+    },
+    {
+     "operator_roots": 8,
+     "Y": [
+      0.0,
+      0.0,
+      0.0,
+      -0.3333,
+      -0.3333,
+      -0.3333,
+      0.6667,
+      0.1667,
+      0.1667
+     ],
+     "standard": true
+    }
+   ]
+  },
+  "census": {
+   "completions=6 all_operator=1 standard=True vacuum_disjoint=True": 600
+  }
+ },
+ "census_sample": 600,
+ "p11708": {
+  "line_trinification": "6 completions, 6 distinct axes, all standard (1944/1944; Pass 11706 run)",
+  "chain_picks_one": "E6xSU3 -> SU5xSU2 [zeta9^(x^3+3xy^2) lift 1] -> SM: stage-2 SU(5) is a completion",
+  "vector_criterion": {
+   "1 hypercharge(s), all-operator=[True]": 600
+  },
+  "six_Y_on_SU5_levels": {
+   "[-3, -3, 2, 2, 2]": 305,
+   "[-2, -2, -2, 3, 3]": 295
+  }
+ },
+ "p11709": {
+  "C_partner_structure": {
+   "free=4 with_free_C_partner=2": 207,
+   "free=3 with_free_C_partner=2": 204,
+   "free=4 with_free_C_partner=0": 127,
+   "free=3 with_free_C_partner=0": 62
+  },
+  "clock_hamiltonian_splitting": {
+   "split": 386,
+   "degenerate": 25
+  }
+ }
+}

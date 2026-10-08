@@ -1,0 +1,82 @@
+{
+ "pass_ids": [
+  11710,
+  11711
+ ],
+ "level4_family_size": 2187,
+ "sm_shaped": 648,
+ "e8_orders": {
+  "27": 648
+ },
+ "simplest": [
+  {
+   "c1": 2,
+   "c2": 26,
+   "e": 0,
+   "lift": 1,
+   "e8_order": 27
+  },
+  {
+   "c1": 26,
+   "c2": 2,
+   "e": 0,
+   "lift": 1,
+   "e8_order": 27
+  },
+  {
+   "c1": 1,
+   "c2": 25,
+   "e": 0,
+   "lift": 2,
+   "e8_order": 27
+  },
+  {
+   "c1": 25,
+   "c2": 1,
+   "e": 0,
+   "lift": 2,
+   "e8_order": 27
+  },
+  {
+   "c1": 23,
+   "c2": 26,
+   "e": 0,
+   "lift": 1,
+   "e8_order": 27
+  },
+  {
+   "c1": 26,
+   "c2": 23,
+   "e": 0,
+   "lift": 1,
+   "e8_order": 27
+  }
+ ],
+ "unentangled_sm_shaped": 108,
+ "quartic_vacua": {
+  "n=1": {
+   "bound": 1.125,
+   "stabiliser_value": 1.125,
+   "numerical_max": 1.1249999999999971,
+   "starts": 100,
+   "starts_at_bound": 100,
+   "vacua": 8
+  },
+  "n=2": {
+   "bound": 3.375,
+   "stabiliser_value": 3.3749999999999982,
+   "numerical_max": 3.374999999998093,
+   "starts": 40,
+   "starts_at_bound": 40,
+   "vacua": 320
+  },
+  "n=3": {
+   "bound": 10.125,
+   "stabiliser_value": 10.124999999999993,
+   "numerical_max": 10.124999999859877,
+   "starts": 20,
+   "starts_at_bound": 20,
+   "vacua": 29120
+  }
+ }
+}
