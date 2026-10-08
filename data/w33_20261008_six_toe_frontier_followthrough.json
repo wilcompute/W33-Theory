@@ -1,0 +1,314 @@
+{
+  "chirality_flag_domain_walls": {
+    "degree": 6,
+    "ferromagnetic_ground_state_count": 2,
+    "flag_graph_edges": 480,
+    "flag_states": 160,
+    "minimum_domain_wall_cut_edges": 6,
+    "minimum_domain_wall_energy_over_J": 12,
+    "qualifier": "supplied graph-Ising action, no spacetime domain wall dynamics",
+    "spontaneous_sign_selection": false
+  },
+  "classical_quantum_transport_cross_tab": {
+    "cross_tabulation": {
+      "line_transverse_null": [
+        {
+          "coherent_time_mean": "20/729",
+          "distance": 1,
+          "resistance": "13/54",
+          "unordered_pairs": 108
+        },
+        {
+          "coherent_time_mean": "14/729",
+          "distance": 2,
+          "resistance": "22/81",
+          "unordered_pairs": 162
+        },
+        {
+          "coherent_time_mean": "26/729",
+          "distance": 2,
+          "resistance": "43/162",
+          "unordered_pairs": 81
+        }
+      ],
+      "point_far_H27": [
+        {
+          "coherent_time_mean": "20/729",
+          "distance": 1,
+          "resistance": "13/54",
+          "unordered_pairs": 108
+        },
+        {
+          "coherent_time_mean": "13/1458",
+          "distance": 2,
+          "resistance": "29/108",
+          "unordered_pairs": 216
+        },
+        {
+          "coherent_time_mean": "110/729",
+          "distance": 3,
+          "resistance": "5/18",
+          "unordered_pairs": 27
+        }
+      ]
+    },
+    "point_d3_to_d2_time_mean_ratio": "220/13",
+    "scope": "effective resistance is classical, time-averaged mixing is unitary; neither identifies physical conductances"
+  },
+  "coherent_quantum_walk": {
+    "line_transverse_null": {
+      "exact_infinite_time_average_offdiag": {
+        "14/729": 162,
+        "20/729": 108,
+        "26/729": 81
+      },
+      "hamiltonian": "H=A, U(t)=exp(-i t A), t=0.43 dimensionless supplied",
+      "instantaneous_offdiagonal_prob_classes_rounded12": {
+        "0.017514479493": 162,
+        "0.038293363866": 81,
+        "0.039852522258": 108
+      },
+      "instantaneous_offdiagonal_prob_max": 0.039852522257931684,
+      "instantaneous_offdiagonal_prob_min": 0.017514479492588133,
+      "loss_survival_example_gamma_0p1_at_t_0p43": 0.9579113900670306,
+      "spectrum": {
+        "-1": 8,
+        "-4": 6,
+        "2": 12,
+        "8": 1
+      },
+      "stationary_szegedy_state": "uniform superposition of 216 directed edges",
+      "szegedy_unitary_norm_check": true,
+      "unitarity_error_max": 2.220447046882105e-16
+    },
+    "point_far_H27": {
+      "exact_infinite_time_average_offdiag": {
+        "110/729": 27,
+        "13/1458": 216,
+        "20/729": 108
+      },
+      "hamiltonian": "H=A, U(t)=exp(-i t A), t=0.43 dimensionless supplied",
+      "instantaneous_offdiagonal_prob_classes_rounded12": {
+        "0.021452634898": 216,
+        "0.039852522258": 108,
+        "0.048345889369": 27
+      },
+      "instantaneous_offdiagonal_prob_max": 0.04834588936870169,
+      "instantaneous_offdiagonal_prob_min": 0.021452634898197914,
+      "loss_survival_example_gamma_0p1_at_t_0p43": 0.9579113900670306,
+      "spectrum": {
+        "-1": 8,
+        "-4": 6,
+        "2": 12,
+        "8": 1
+      },
+      "stationary_szegedy_state": "uniform superposition of 216 directed edges",
+      "szegedy_unitary_norm_check": true,
+      "unitarity_error_max": 9.992011456774173e-16
+    }
+  },
+  "heterotic_proton_hexality_filter": {
+    "Nc_vev_breaks_Z6_to_Z3": true,
+    "Sminus2_preserves_Z6_if_vev": true,
+    "allowed_operators": [
+      "charged_lepton_yukawa",
+      "down_yukawa",
+      "majorana",
+      "majorana_with_Sminus2",
+      "mu",
+      "neutrino_yukawa",
+      "up_yukawa",
+      "weinberg"
+    ],
+    "charge_filter_candidate_counts_N2_to_N6": {
+      "2": 0,
+      "3": 0,
+      "4": 8,
+      "5": 0,
+      "6": 24
+    },
+    "known_proton_hexality_Z6": {
+      "Dc": 5,
+      "Ec": 1,
+      "Hd": 1,
+      "Hu": 5,
+      "L": 4,
+      "Nc": 3,
+      "Q": 0,
+      "Sminus2": 0,
+      "Uc": 1
+    },
+    "mixed_mod6_necessary_sums": {
+      "SU2": 18,
+      "SU3": 18,
+      "gravitational": 102
+    },
+    "operator_Z6_residues": {
+      "LLE": 3,
+      "QLD": 3,
+      "QQQL": 4,
+      "UDD": 5,
+      "UUDE": 2,
+      "bilinear_LHu": 3,
+      "charged_lepton_yukawa": 0,
+      "down_yukawa": 0,
+      "majorana": 0,
+      "majorana_with_Sminus2": 0,
+      "mu": 0,
+      "neutrino_yukawa": 0,
+      "up_yukawa": 0,
+      "weinberg": 0
+    },
+    "scope": "operator-level candidate filters only; no compactification constructed or discrete anomaly sufficiency certified",
+    "vetoed_operators": [
+      "LLE",
+      "QLD",
+      "QQQL",
+      "UDD",
+      "UUDE",
+      "bilinear_LHu"
+    ]
+  },
+  "kinetic_normalization_flavor": {
+    "bare_example": {
+      "Jarlskog": -0.000946459149290587,
+      "down_masses": [
+        0.02783544957160859,
+        0.04114548567619984,
+        0.08494843586326983
+      ],
+      "up_masses": [
+        0.05,
+        0.2,
+        0.5
+      ]
+    },
+    "canonically_normalized_example": {
+      "Jarlskog": 3.10439749319838e-05,
+      "down_masses": [
+        0.004928605764651805,
+        0.014248125566685397,
+        0.08163901597716175
+      ],
+      "up_masses": [
+        0.009622504486493762,
+        0.1,
+        0.3535533905932738
+      ]
+    },
+    "not_a_physical_prediction": "kinetic metrics, holomorphic textures and gauge parameters supplied; no actual Ricci-flat/HYM solution",
+    "single_certified_entry_rank_after_invertible_normalization": 1,
+    "supplied_Yd_imag": [
+      [
+        0.0,
+        0.02,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.007
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "supplied_Yd_real": [
+      [
+        0.08,
+        0.0,
+        0.003
+      ],
+      [
+        0.015,
+        0.04,
+        0.0
+      ],
+      [
+        0.001,
+        0.01,
+        0.03
+      ]
+    ],
+    "supplied_Yu": [
+      [
+        0.5,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.2,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.05
+      ]
+    ],
+    "supplied_kinetic_diagonal": {
+      "D": [
+        1,
+        2,
+        4
+      ],
+      "Q": [
+        1,
+        4,
+        9
+      ],
+      "U": [
+        2,
+        1,
+        3
+      ]
+    },
+    "toy_1loop_top_beta_fixed_gauge": {
+      "mu_final_GeV": 1000,
+      "mu_initial_GeV": 173,
+      "supplied_fixed_gauge_couplings": [
+        0.357,
+        0.65,
+        1.16
+      ],
+      "y_final": 0.857586723161091,
+      "y_initial": 0.94
+    },
+    "unitary_left_frame_invariance_error_J": 1.6479873021779667e-17
+  },
+  "local_constraint_lie_algebra": {
+    "characteristic_zero_lie_dimension": 34,
+    "claim_scope": "local induced C8, not a 4D hypersurface deformation algebra",
+    "common_left_null_covector": "point/line alternating signs",
+    "common_right_null_vector": "all-ones",
+    "cycle_lie_closure_dimension_mod_101": 34,
+    "cycle_nearest_edge_generators": 8,
+    "explicit_induced_8_cycle": [
+      0,
+      40,
+      1,
+      44,
+      4,
+      53,
+      13,
+      41
+    ],
+    "maximal_dimension_given_two_annihilators_and_trace": 48,
+    "strict_nearest_neighbor_closure": false,
+    "w33_levi_edges": 160,
+    "w33_levi_vertices": 80
+  },
+  "operational_shot_budget": {
+    "Hoeffding_two_sided_error_target": 0.05,
+    "assumptions": "known discriminating pair, independent trials, exact engineered graph transition, symmetric readout noise and uniform survival",
+    "conditional_detection_gap": "9/640",
+    "depolarizing_eta": "1/10",
+    "sufficient_pre_loss_trials_conservative": 40659,
+    "sufficient_shots_per_known_pair_no_loss": 37308,
+    "two_step_known_pair_gap_no_noise": "1/64"
+  },
+  "scope": "exact finite constructions and supplied toy actions; no complete TOE"
+}
