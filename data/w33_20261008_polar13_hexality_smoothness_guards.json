@@ -1,0 +1,157 @@
+{
+  "discrete_P6": {
+    "P6_anomaly_integer_necessary_ledgers": {
+      "2T_SU2": 18,
+      "2T_SU3": 18,
+      "U1Y2Z": 756,
+      "U1YZ2": 288,
+      "Z3": 1854,
+      "gravity": 102
+    },
+    "P6_charges": {
+      "Dc": 5,
+      "Ec": 1,
+      "Hd": 1,
+      "Hu": 5,
+      "L": 4,
+      "Nc": 3,
+      "Q": 0,
+      "Uc": 1
+    },
+    "P6_mod3_checks": {
+      "2T_SU2": 0,
+      "2T_SU3": 0,
+      "U1Y2Z": 0,
+      "U1YZ2": 0,
+      "Z3": 0,
+      "gravity": 0
+    },
+    "X3_anomaly_integer_necessary_ledgers": {
+      "2T_SU2": 27,
+      "2T_SU3": 18,
+      "U1Y2Z": 486,
+      "U1YZ2": 126,
+      "Z3": 306,
+      "gravity": 78
+    },
+    "X3_charges": {
+      "Dc": 2,
+      "Ec": 2,
+      "Hd": 2,
+      "Hu": 1,
+      "L": 2,
+      "Nc": 0,
+      "Q": 2,
+      "Uc": 0
+    },
+    "X3_mod3_checks": {
+      "2T_SU2": 0,
+      "2T_SU3": 0,
+      "U1Y2Z": 0,
+      "U1YZ2": 0,
+      "Z3": 0,
+      "gravity": 0
+    },
+    "anomaly_boundary": "integer necessary checks only; no Green-Schwarz, thresholds, heavy exotics, discrete instanton or UV charges verified",
+    "dangerous_operators": {
+      "LLEc": {
+        "P6": 3,
+        "P6_mod2": 1,
+        "X3": 0
+      },
+      "QLDc": {
+        "P6": 3,
+        "P6_mod2": 1,
+        "X3": 0
+      },
+      "QQQL": {
+        "P6": 4,
+        "P6_mod2": 0,
+        "X3": 2
+      },
+      "UcDcDc": {
+        "P6": 5,
+        "P6_mod2": 1,
+        "X3": 1
+      }
+    },
+    "fields": [
+      "Q",
+      "Uc",
+      "Dc",
+      "L",
+      "Ec",
+      "Nc",
+      "Hu",
+      "Hd"
+    ],
+    "physical_gauged_Z6_remnant_constructed": false
+  },
+  "polar13": {
+    "12D_non_degenerate_phase_space_from_13D_permutation_module": false,
+    "2D_symplectic_quotient_action": "trivial as the two defining covectors (sum, anchor coordinate) are invariant; not the H27 address symplectic action",
+    "alt_form_radical_dimension": 11,
+    "augmentation_restriction_rank": 0,
+    "canonical_alternating_form": "ones wedge indicator_of_fixed_anchor",
+    "explicit_stabilizer_invariant_alt_form_rank": 2,
+    "polar_points": 13
+  },
+  "tetraquadric_F11": {
+    "ambient_rational_points": 20736,
+    "complex_smoothness_proven": false,
+    "geometric_smooth_mod_p_proven": false,
+    "hypersurface_Fp_points": 1838,
+    "logic": "No Fp-rational Jacobian zero only tests rational points; Fpbar singularities still possible",
+    "p": 11,
+    "singular_Fp_rational_points": 2,
+    "singular_witnesses": [
+      [
+        1,
+        10,
+        1,
+        10
+      ],
+      [
+        10,
+        1,
+        10,
+        1
+      ]
+    ]
+  },
+  "tetraquadric_F13": {
+    "ambient_rational_points": 38416,
+    "complex_smoothness_proven": false,
+    "geometric_smooth_mod_p_proven": false,
+    "hypersurface_Fp_points": 2848,
+    "logic": "No Fp-rational Jacobian zero only tests rational points; Fpbar singularities still possible",
+    "p": 13,
+    "singular_Fp_rational_points": 4,
+    "singular_witnesses": [
+      [
+        1,
+        1,
+        12,
+        12
+      ],
+      [
+        1,
+        12,
+        12,
+        12
+      ],
+      [
+        12,
+        1,
+        1,
+        1
+      ],
+      [
+        12,
+        12,
+        1,
+        1
+      ]
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "adjacency_eigenvalue_multiplicity": {
+    "-1.0": 12,
+    "-10.0": 4,
+    "-2.37228132": 6,
+    "-3.27491722": 6,
+    "-4.0": 18,
+    "0.26794919": 6,
+    "11.0": 4,
+    "2.0": 6,
+    "3.37228132": 6,
+    "3.73205081": 6,
+    "32.0": 1,
+    "4.27491722": 6
+  },
+  "degree_histogram": {
+    "32": 81
+  },
+  "edge_common_neighbor_histogram": {
+    "11": 648,
+    "12": 324,
+    "13": 162,
+    "23": 162
+  },
+  "fixed_chamber_vertices": [
+    0,
+    40
+  ],
+  "intersection_signatures": {
+    "p1_l1": 1458,
+    "p1_l2": 486,
+    "p2_l1": 486,
+    "p2_l2": 486,
+    "p2_l3": 162,
+    "p3_l2": 162
+  },
+  "is_SRG_81_32_13_12": false,
+  "nonedge_common_neighbor_histogram": {
+    "10": 486,
+    "11": 648,
+    "12": 648,
+    "22": 162
+  },
+  "note": "81 apartments through a chamber are a known Steinberg basis (BT744). This is NEW center-commutator adjacency on that carrier; no Cayley-group identification established",
+  "rank81_apartments": 81,
+  "spectral_extrema": [
+    -10.000000000000014,
+    32.000000000000014
+  ]
+}

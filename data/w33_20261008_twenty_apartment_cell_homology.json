@@ -1,0 +1,40 @@
+{
+  "20_signed_faces_boundary_sum_zero": true,
+  "CW_cells_V_E_F": [
+    40,
+    60,
+    20
+  ],
+  "H1_torsion_invariant_factors": [],
+  "chain_boundary_ranks_over_Q": [
+    39,
+    19
+  ],
+  "euler_characteristic": 0,
+  "homology_betti_H0_H1_H2": [
+    1,
+    2,
+    1
+  ],
+  "integral_H0_H1_H2": [
+    "Z",
+    "Z^2",
+    "Z"
+  ],
+  "octagon_edge_face_multiplicity_histogram": {
+    "2": 40,
+    "4": 20
+  },
+  "owner_boundary": "Explicit 20-face relation inside new selected 45-cycle compatible atlas; BT744 owns W33 apartments and Steinberg 81, earlier toroidal Csaszar counts independent",
+  "skeleton_vertex_degree_histogram": {
+    "3": 40
+  },
+  "smith_d1_nonzero_diagonal_histogram": {
+    "1": 39
+  },
+  "smith_d2_nonzero_diagonal_histogram": {
+    "1": 19
+  },
+  "topological_type": "Integral homology of T2, but non-manifold (20 edges incident to four 2-cells), not homeomorphic to ordinary torus",
+  "underlying_graph_components": 1
+}
