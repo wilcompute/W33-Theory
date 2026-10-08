@@ -1,0 +1,24 @@
+name: Pass11750-11757 integral geometry and flux dynamics
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - analysis/w33_pass11750_11757_integral_geometry_and_flux_dynamics.py
+      - tests/test_w33_pass11750_11757_integral_geometry_and_flux_dynamics.py
+      - data/w33_pass11750_11757_integral_geometry_and_flux_dynamics.json
+      - .github/workflows/pass11750-11757-integral-geometry-flux-dynamics.yml
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest
+      - name: Check frozen certificate and previous interface
+        run: OPENBLAS_NUM_THREADS=1 python -m pytest -q tests/test_w33_pass11750_11757_integral_geometry_and_flux_dynamics.py tests/test_w33_pass11742_11749_nonzero_flavor_and_flux_frame.py
+      - name: Replay eight investigations
+        run: OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11750_11757_integral_geometry_and_flux_dynamics.py
+      - name: Check regenerated certificate
+        run: OPENBLAS_NUM_THREADS=1 python -m pytest -q tests/test_w33_pass11750_11757_integral_geometry_and_flux_dynamics.py

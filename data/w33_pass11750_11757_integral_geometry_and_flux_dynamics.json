@@ -1,0 +1,1080 @@
+{
+  "schema": "w33.pass11750_11757.integral_geometry_flux_dynamics.v1",
+  "status": "PASS",
+  "source_sha256": "702141b9dfa912f00ee3d29090213411f5671341fa91756ace4f7f5775d4078e",
+  "prior_source_sha256": "910ff3414799bf49b7cf9b894e59f37c6ebcfca0c9bce2d3f1c5fa8f928d8b71",
+  "passes": {
+    "11750": {
+      "status": "PASS",
+      "invariant_section_indices": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          2,
+          2
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          2
+        ],
+        [
+          0,
+          2,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          2,
+          2
+        ],
+        [
+          1,
+          2,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          0,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          2,
+          0
+        ],
+        [
+          2,
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "coefficients": [
+        2,
+        3,
+        5,
+        7,
+        11,
+        13,
+        17,
+        19,
+        23,
+        29,
+        31,
+        37,
+        41,
+        43,
+        47,
+        53,
+        59,
+        61,
+        67,
+        71,
+        73
+      ],
+      "affine_polynomial": "125*z0**2*z1**2*z2**2*z3**2 + 5*z0**2*z1**2*z2**2 + 168*z0**2*z1**2*z2*z3 - 11*z0**2*z1**2*z3**2 + 5*z0**2*z1**2 + 216*z0**2*z1*z2**2*z3 + 240*z0**2*z1*z2*z3**2 - 104*z0**2*z1*z2 - 112*z0**2*z1*z3 - 31*z0**2*z2**2*z3**2 + z0**2*z2**2 - 128*z0**2*z2*z3 + z0**2*z3**2 - 79*z0**2 + 424*z0*z1**2*z2**2*z3 + 456*z0*z1**2*z2*z3**2 - 32*z0*z1**2*z2 - 48*z0*z1**2*z3 + 552*z0*z1*z2**2*z3**2 - 16*z0*z1*z2**2 + 1168*z0*z1*z2*z3 - 16*z0*z1*z3**2 + 552*z0*z1 - 48*z0*z2**2*z3 - 32*z0*z2*z3**2 + 456*z0*z2 + 424*z0*z3 - 79*z1**2*z2**2*z3**2 + z1**2*z2**2 - 128*z1**2*z2*z3 + z1**2*z3**2 - 31*z1**2 - 112*z1*z2**2*z3 - 104*z1*z2*z3**2 + 240*z1*z2 + 216*z1*z3 + 5*z2**2*z3**2 - 11*z2**2 + 168*z2*z3 + 5*z3**2 + 125",
+      "Kahler_point": [
+        1.0,
+        2.377014558021669,
+        0.5,
+        0.5701159637850006
+      ],
+      "reference_samples": [
+        {
+          "point": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              -0.0,
+              5.0
+            ]
+          ],
+          "polynomial_residual": 0.0,
+          "MA_density": 9382.583666278473,
+          "HYM_contractions": [
+            1.0574027440241685,
+            0.0026382340469279786,
+            -1.0600409780710967
+          ]
+        },
+        {
+          "point": [
+            [
+              0.3333333333333333,
+              0.0
+            ],
+            [
+              0.5,
+              0.0
+            ],
+            [
+              0.6666666666666666,
+              0.0
+            ],
+            [
+              -14.265495169523904,
+              0.0
+            ]
+          ],
+          "polynomial_residual": 9.094947017729282e-13,
+          "MA_density": 55089.599703384054,
+          "HYM_contractions": [
+            0.4966425641930421,
+            -0.9277016292687434,
+            0.43105906507570135
+          ]
+        }
+      ],
+      "MA_density_ratio": 5.8714743894455355,
+      "equations": [
+        "det(g_ref+ddbar phi)/Omega_density=constant",
+        "Delta_g beta_i=-Lambda_g F_ref_i; integral source=0 by slope",
+        "nu_i=nu_ref_i+dbar sigma_i; dbar_dagger nu_i=0",
+        "Z_IJ=volume-normalized integral H nu_I star conjugate(nu_J)",
+        "Y_phys=e^(K4/2) Y_hol contracted with three inverse square roots of Z"
+      ],
+      "exact_type2_input": "K3 comes from H2(A,K3-D), not a restricted ambient harmonic1-form. A closed Cech-to-Dolbeault lift must be supplied before training.",
+      "product_HYM_constraint": "sum beta_i=constant when sum K_i=0, using one Ricci-flat metric",
+      "large_flux_rescaling": "K_i -> ell K_i gives net quotient index -3 ell^3. Uniform large-flux localization changes the three-generation inventory; ell=1 is the only positive integer retaining index -3. This excludes this shortcut, not other large-flux bundles.",
+      "external_implementation": "https://github.com/kitft/heteroticyukawas",
+      "training_executed": false,
+      "physical_normalized_Yukawa_computed": false,
+      "scope": "Executed local induced-Fubini-Study/HYM residual calculation on a named invariant polynomial. Global smoothness of this numeric snapshot is not certified. The generic smooth/free family is prior11742. No Ricci-flat metric, harmonic lift, physical kinetic integral or observed mass is claimed."
+    },
+    "11751": {
+      "status": "PASS",
+      "pair_order": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "budget": [
+        6,
+        0,
+        2,
+        3,
+        -1,
+        5
+      ],
+      "connected_curve_equations": [
+        "u0*u1+v0*v1=0",
+        "u0*u2+v0*v2=0",
+        "F_tetraquadric=0"
+      ],
+      "parameterization": "[u1:v1]=[u2:v2]=[-v0:u0]; factor3 free",
+      "connected_curve_class": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "restricted_bidegree": [
+        6,
+        2
+      ],
+      "cover_genus": 5,
+      "quotient_genus": 2,
+      "orbit_pair_curves": [
+        {
+          "factors": [
+            0,
+            1
+          ],
+          "multiplicity": 2,
+          "cover_class_multiplicity": 2,
+          "cover_components": 2,
+          "component_genus": 1,
+          "quotient_genus": 1
+        },
+        {
+          "factors": [
+            0,
+            3
+          ],
+          "multiplicity": 1,
+          "cover_class_multiplicity": 2,
+          "cover_components": 2,
+          "component_genus": 1,
+          "quotient_genus": 1
+        },
+        {
+          "factors": [
+            1,
+            2
+          ],
+          "multiplicity": 1,
+          "cover_class_multiplicity": 2,
+          "cover_components": 2,
+          "component_genus": 1,
+          "quotient_genus": 1
+        },
+        {
+          "factors": [
+            2,
+            3
+          ],
+          "multiplicity": 2,
+          "cover_class_multiplicity": 2,
+          "cover_components": 2,
+          "component_genus": 1,
+          "quotient_genus": 1
+        }
+      ],
+      "orbit_construction": "Fix factors i,j to [1:0],[1:0] and include its h-image [0:1],[0:1]. Each residual (2,2) elliptic curve is g-stable; g acts freely since X is free. The union descends with pullback2 Ji Jj. Repeated components are effective cycles with multiplicity.",
+      "residual_even_class": [
+        4,
+        0,
+        2,
+        2,
+        0,
+        4
+      ],
+      "difference_relation": [
+        1,
+        -1,
+        0,
+        0,
+        -1,
+        1
+      ],
+      "quotient_divisor_degrees": [
+        7,
+        7,
+        7,
+        9
+      ],
+      "quotient_divisors": "descents of O_X(2 J_i), not non-equivariant O_X(J_i)",
+      "existence_proof": "The21 invariant tetraquadric sections are basepoint-free on the ambient space and its graph surface. Bertini and connectedness of ample (6,2) curves give generic smooth connected C. Simultaneously choose smooth residual elliptic curves and avoid all48 ambient fixed points. All are open conditions on one common invariant family.",
+      "scope": "An explicitly named effective Gamma-invariant curve cycle with the required pullback Bianchi class. With11755 injectivity this closes the integral quotient topological anomaly budget for trivial second E8 bundle. Corrected heterotic field equations, fivebrane dynamics and backreaction are not solved."
+    },
+    "11752": {
+      "status": "PASS",
+      "symbolic_VEVs": [
+        "s0",
+        "t0",
+        "s1",
+        "t1",
+        "s2",
+        "t2"
+      ],
+      "reference_mass": [
+        [
+          "0",
+          "t2/2",
+          "t1/2",
+          "0",
+          "-s2/2",
+          "-s1/2"
+        ],
+        [
+          "t2/2",
+          "0",
+          "t0/2",
+          "-s2/2",
+          "0",
+          "-s0/2"
+        ],
+        [
+          "t1/2",
+          "t0/2",
+          "0",
+          "-s1/2",
+          "-s0/2",
+          "0"
+        ]
+      ],
+      "character_rephasings": [
+        {
+          "character": [
+            1,
+            1
+          ],
+          "coefficients": [
+            "1/2",
+            "1/2",
+            "1/2"
+          ],
+          "rephasing": [
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "character": [
+            1,
+            -1
+          ],
+          "coefficients": [
+            "-1/2",
+            "-1/2",
+            "1/2"
+          ],
+          "rephasing": [
+            "1",
+            "1",
+            "-1"
+          ]
+        },
+        {
+          "character": [
+            -1,
+            1
+          ],
+          "coefficients": [
+            "1/2",
+            "1/2",
+            "1/2"
+          ],
+          "rephasing": [
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "character": [
+            -1,
+            -1
+          ],
+          "coefficients": [
+            "-1/2",
+            "1/2",
+            "1/2"
+          ],
+          "rephasing": [
+            "I",
+            "-I",
+            "-I"
+          ]
+        }
+      ],
+      "symbolic_checks": 72,
+      "conclusion": "For all six complex singlet VEV components, every Wilson-character mass matrix has the same rank. Rank3 color lifting forces rank3 weak lifting in this cubic-only inventory.",
+      "scope": "An all-alignment strengthening of11747 equal-VEV obstruction, for the declared invariant singlets, line linearizations and cubic. Extra fields, higher operators, different Wilson embeddings or changed bundles are outside this theorem."
+    },
+    "11753": {
+      "status": "PASS",
+      "primitive_basis_checks": 1736,
+      "integral_monodromy_and_inverse_checks": 3472,
+      "actual_SL8_sixform_dictionary_checks": 1568,
+      "root_subgroup_polynomial_degree": 2,
+      "simple_coroot_weights_times3": [
+        [
+          0,
+          3,
+          -3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          -3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          3,
+          -3,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          3,
+          -3,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          -3,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          -3,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          -3
+        ],
+        [
+          1,
+          -2,
+          -2,
+          -2,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "simple_coroot_Gram": [
+        [
+          2,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          -1,
+          2,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          2,
+          -1,
+          0,
+          0,
+          0,
+          -1
+        ],
+        [
+          0,
+          0,
+          -1,
+          2,
+          -1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          -1,
+          2,
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          -1,
+          2,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      ],
+      "Gram_determinant": 1,
+      "local_potential": "Choose any i !=1,3: C_i=y_i R_i, E_a=exp(ad C_i)a, Sigma sharp=-B(R_i,a)S_i. Product is exp(ad C_i)[Tsharp(a),b].",
+      "seven_form": "Physical8 coords are0,1,2,4,5,6,7,8. Omega8 oriented; alpha7=i_1 Omega8; beta_i=i_i alpha7; C6_i=n*y_i*beta_i, dC6_i=n*alpha7.",
+      "overlaps": "C6_i-C6_j=d(n*y_i*y_j*i_j*i_i alpha7); coordinate y_i -> y_i+1 shifts C6 by n*beta_i.",
+      "lattice": "All240 root vectors plus8 simple coroots; exp(+-ad R_i) and their integer powers preserve this E8 Chevalley lattice. Ancillaries remain section-constrained and constant under these commuting patches.",
+      "scope": "A primitive local frame for T, with integral nilpotent torus transition functions and an integral six-form gerbe flux class in the chosen units. This is classical global patching with an adjoint integral-lattice check, not a proof of full quantum M-theory consistency, a stationary compactification or an identification with the CY gauge bundle."
+    },
+    "11754": {
+      "status": "PASS",
+      "dimensions": {
+        "parent": 11,
+        "external": 3,
+        "torus": 8
+      },
+      "Einstein_ansatz": "ds11^2=exp(-2 sum lambda_i) ds3_E^2 + sum exp(2 lambda_i)dy_i^2",
+      "action": "S=(1/(2 kappa3^2)) integral sqrt(-g)[R-G_ij d lambda_i d lambda_j-U]",
+      "kinetic_matrix": [
+        [
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2
+        ]
+      ],
+      "flux_exponents": [
+        4,
+        2,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "flux_potential": "U=A*n^2 exp(-2 lambda_1-4 sum_(i!=1)lambda_i), A>0; isotropic restriction A*n^2*R^-30",
+      "isotropic_scalar": "phi=12 log R gives kinetic -1/2(dphi)^2 inside the displayed action; anisotropic flux does not give a consistent isotropic-only truncation",
+      "stationary_point": "Every logarithmic-radius derivative of the flux potential is strictly negative for n!=0. No finite-radius stationary bare flat-torus vacuum in this sector.",
+      "minisuperspace_constraint": "2H^2=v^T G v+U; Hdot=-v^T G v; lambdaddot=-2Hv-(1/2)G^-1 grad U",
+      "lapse_Hamiltonian": "H_lapse=N[-p_a^2/8+p_lambda^T G^-1 p_lambda/(4 a^2)+a^2 U]=0",
+      "exponential_slope_squared": 16,
+      "flat_FRW_scaling": {
+        "p": "1/4",
+        "required_U0": "-1/8",
+        "positive_flux_solution": false
+      },
+      "trajectory_controls": [
+        {
+          "added_vacuum_energy": 0,
+          "H_initial": 0.7071067811865476,
+          "end_log_radii": [
+            0.0761777850779228,
+            -0.1523555701558456,
+            0.0761777850779228,
+            0.07617778507792279,
+            0.0761777850779228,
+            0.07617778507792279,
+            0.0761777850779228,
+            0.07617778507792282
+          ],
+          "end_volume": 1.4635850292439636,
+          "max_constraint_residual": 1.0794221072529808e-10
+        },
+        {
+          "added_vacuum_energy": 1,
+          "H_initial": 1.0,
+          "end_log_radii": [
+            0.08560457214327166,
+            -0.09408810355525188,
+            0.08560457214327166,
+            0.08560457214327168,
+            0.08560457214327168,
+            0.08560457214327169,
+            0.08560457214327168,
+            0.08560457214327168
+          ],
+          "end_volume": 1.6572239802329214,
+          "max_constraint_residual": 1.5588907942287733e-10
+        }
+      ],
+      "scope": "A supplied Lorentzian3D gravitational torus sector, positive kinetic energy, lapse constraint and integrated rolling trajectories for the primitive flux. All8 radii are retained. Volume evolves and common higher-dimensional vacuum energy changes dynamics; fixed-occupation cancellation does not screen it. This is not4D Einstein gravity or a stabilized TOE vacuum."
+    },
+    "11755": {
+      "status": "PASS",
+      "Gamma": "C2 x C2, acting trivially on H2(X,Z)=Z4",
+      "projective_lift_cocycle": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          1
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          1
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          1
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          1
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            0
+          ],
+          1
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          1
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          -1
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          -1
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          1
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          1
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          1
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          1
+        ],
+        [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            0
+          ],
+          1
+        ],
+        [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          1
+        ],
+        [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          -1
+        ],
+        [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          -1
+        ]
+      ],
+      "cocycle_identity_checks": 64,
+      "obstruction": "O(J_i) has anticommuting lifts. Its H2(Gamma,U1)=H3(Gamma,Z)=C2 class is nonzero: coboundaries on an abelian group are symmetric, this cocycle is not.",
+      "transgression": "d3: H2(X,Z)^Gamma -> H3(Gamma,Z)=C2 is (n0,n1,n2,n3) -> sum n_i mod2, hence surjective.",
+      "total_degree3_terms": {
+        "E2_3_0": "C2 killed by d3",
+        "E2_2_1": "0 since H1(X,Z)=0",
+        "E2_1_2": "Hom(Gamma,Z4)=0",
+        "E2_0_3": "subgroup of free H3(X,Z)"
+      },
+      "argument": "Lefschetz gives pi1(X)=0 and H2(X,Z)_hom=Z4. UCT gives torsion-free H3(X,Z). The Cartan-Leray filtration in total degree3 then has only a free subgroup remaining. Thus H3(Y,Z) is torsion-free; UCT implies H2(Y,Z)_hom torsion-free; oriented6D Poincare duality implies H4(Y,Z) torsion-free. Transfer kills ker(pi*) by4, so pi*:H4(Y,Z)->H4(X,Z) is injective.",
+      "H4_quotient_torsion_order": 1,
+      "pullback_H4_injective": true,
+      "pullback_H4_image_index": 128,
+      "pullback_H4_image_basis_in_J_pairings": [
+        [
+          2,
+          4,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          4,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          4
+        ],
+        [
+          2,
+          0,
+          0,
+          0
+        ]
+      ],
+      "budget_integral_image_coordinates": [
+        9,
+        -1,
+        -1,
+        -1
+      ],
+      "image_lattice_proof": "The free Picard pullback is the index2 even-total-degree sublattice L of Z4. Perfect quotient Poincare pairing gives pi*H4(Y)=4L_dual: pairing vectors have all entries congruent modulo4 and all even. Its index is128; the actual budget (14,14,14,18) belongs to it.",
+      "consequence": "All equivariant lifts of the named bundle have the same c2 in H4(Y,Z). The explicit11751 effective quotient cycle equals c2(TY)-c2(VY) integrally, since their pullbacks agree and pi* is injective.",
+      "scope": "An integral topological descent proof for this precise free diagonal Klein-four action, using the classical spectral sequence and line-linearization obstruction. It does not apply to arbitrary CY quotients or nonfree actions, nor solve the differential Bianchi identity/backreaction."
+    },
+    "11756": {
+      "status": "PASS",
+      "supplied_family_mass": "Matrix([[0, 1/2 - y/6, 1/2], [1/2 - y/6, 0, 1/2], [1/2, 1/2, 0]])",
+      "hypercharge_generator": "Y6=diag(-2,-2,-2,3,3)",
+      "weak_rank": 2,
+      "color_rank": 3,
+      "weak_nullvector": [
+        "-1",
+        "1",
+        "0"
+      ],
+      "color_determinant": "5/12",
+      "actual_previous_proton_component": "-a*b*c*d/4",
+      "origin": "Supply a family-selective SU5-adjoint mass deformation with coefficients lambda3+eta3*y, eta3=-lambda3/3. This tuned operator is not present in the certified cubic; no massless adjoint is available because H1(X,O)=0.",
+      "prior": "Doublet-triplet adjoint tuning and sliding-singlet mechanisms are classical; see Maekawa--Yamashita hep-ph/0305116 for E6 extensions.",
+      "scope": "A conditional algebraic escape from the equal-rank theorem using an extra tuned coupling, independently checked against the actual cubic proton sources. It retains one weak5/bar5 pair and lifts the corresponding colored5s, but still generates a nonzero10^3 bar5 operator. It is not a protected or geometrically realized Higgs/proton solution."
+    },
+    "11757": {
+      "status": "PASS",
+      "positive_X_singlet_roots": [
+        [
+          "A",
+          3,
+          6
+        ],
+        [
+          "k",
+          4,
+          5,
+          6
+        ]
+      ],
+      "visible_singlet_branch": "24_hidden=(8,1)_0+(1,3)_0+(1,1)_0+(3,2)_{+5}+(bar3,2)_{-5}",
+      "positive_X_cover_H1": 24,
+      "negative_X_cover_H1": 0,
+      "positive_X_quotient_H1": 6,
+      "negative_X_quotient_H1": 0,
+      "family_neutral_nonzero_X_adjoint_generators": 0,
+      "geometric_repair": "Fivebrane cycles close the topological anomaly budget without importing P,Q. They do not add elementary family-neutral opposite-X bundle zero modes. Fivebrane worldvolume matter, bundle deformations or higher-level sectors require a separate calculation.",
+      "scope": "Exact representation and bundle-cohomology exclusion of the imported family-neutral P,Q pair in this smooth adjoint zero-mode inventory. Opposite-chirality KK modes or nonperturbative extra sectors are not excluded. No claim that anomaly cancellation fixes the D-flat or Higgs obstruction."
+    }
+  },
+  "physical_boundary": "Observed masses, protected proton-safe Higgs sector, backreacted heterotic vacuum,4D Lorentzian gravity and a completed TOE remain unproved."
+}

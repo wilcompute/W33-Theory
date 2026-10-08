@@ -1,0 +1,23 @@
+Pass11750-11757 local evidence; normalized-LF hashes
+{
+  "analysis/w33_pass11750_11757_integral_geometry_and_flux_dynamics.py": "702141b9dfa912f00ee3d29090213411f5671341fa91756ace4f7f5775d4078e",
+  "analysis/PASS11750_11757_INTEGRAL_GEOMETRY_AND_FLUX_DYNAMICS.md": "1844971ebe871daea398b70fafae5c19f44662cf1cac49358aef86a06e1300a9",
+  "tests/test_w33_pass11750_11757_integral_geometry_and_flux_dynamics.py": "210df85f8e60c002bd60c5ee3b6ef4a2d1054993a00c7a3d7904807ea5f18c68",
+  "data/w33_pass11750_11757_integral_geometry_and_flux_dynamics.json": "8adc5695cdbc5160d3f340d77502012f95b6d968b2c0436ec60a131db1e14cc6",
+  ".github/workflows/pass11750-11757-integral-geometry-flux-dynamics.yml": "b8dd320c49f2a19a95072c8c11758b937daac5b7f1cfda014ee337ab30bf298b"
+}
+Python 3.12.3
+11750 PASS
+11751 PASS
+11752 PASS
+11753 PASS
+11754 PASS
+11755 PASS
+11756 PASS
+11757 PASS
+/mnt/c/repos/theory of everything/data/w33_pass11750_11757_integral_geometry_and_flux_dynamics.json
+...............................................                          [100%]
+47 passed in 135.45s (0:02:15)
+[audit] guard: no collisions
+[audit] forced arithmetic: none
+[audit] intake clean (4 files)
