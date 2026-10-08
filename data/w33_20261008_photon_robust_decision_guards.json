@@ -1,0 +1,935 @@
+{
+  "assumptions": "Calibration difference is bounded in infinity norm for both candidate distributions and uniform dark background known; coherent correlations and unknown error bounds excluded",
+  "guarantee_definition": "With n independent successful detections, nominal class-set margin Delta>2epsilon, Hoeffding ensures >=95% correct using exact baseline templates. Expected launches n/eta^depth only, not a guaranteed number of launches.",
+  "guarded_rows": [
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0,
+      "expected_launches_under_independent_loss": 3013,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.16323248499499649,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.16323248499499649,
+      "stages": 36,
+      "successful_detections_sufficient_for_95pct": 2098,
+      "uniform_conditional_dark_count_fraction": 0
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.005,
+      "expected_launches_under_independent_loss": 3418,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.16323248499499649,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.15323248499499648,
+      "stages": 36,
+      "successful_detections_sufficient_for_95pct": 2380,
+      "uniform_conditional_dark_count_fraction": 0
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.01,
+      "expected_launches_under_independent_loss": 3912,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.16323248499499649,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.1432324849949965,
+      "stages": 36,
+      "successful_detections_sufficient_for_95pct": 2724,
+      "uniform_conditional_dark_count_fraction": 0
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.02,
+      "expected_launches_under_independent_loss": 5285,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.16323248499499649,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.12323248499499648,
+      "stages": 36,
+      "successful_detections_sufficient_for_95pct": 3680,
+      "uniform_conditional_dark_count_fraction": 0
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.05,
+      "expected_launches_under_independent_loss": 20069,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.16323248499499649,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.06323248499499648,
+      "stages": 36,
+      "successful_detections_sufficient_for_95pct": 13976,
+      "uniform_conditional_dark_count_fraction": 0
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0,
+      "expected_launches_under_independent_loss": 3073,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.16323248499499649,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.16160016014504652,
+      "stages": 36,
+      "successful_detections_sufficient_for_95pct": 2140,
+      "uniform_conditional_dark_count_fraction": 0.01
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.005,
+      "expected_launches_under_independent_loss": 3493,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.16323248499499649,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.15160016014504651,
+      "stages": 36,
+      "successful_detections_sufficient_for_95pct": 2432,
+      "uniform_conditional_dark_count_fraction": 0.01
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.01,
+      "expected_launches_under_independent_loss": 4002,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.16323248499499649,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.14160016014504653,
+      "stages": 36,
+      "successful_detections_sufficient_for_95pct": 2787,
+      "uniform_conditional_dark_count_fraction": 0.01
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.02,
+      "expected_launches_under_independent_loss": 5427,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.16323248499499649,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.12160016014504652,
+      "stages": 36,
+      "successful_detections_sufficient_for_95pct": 3779,
+      "uniform_conditional_dark_count_fraction": 0.01
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.05,
+      "expected_launches_under_independent_loss": 21146,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.16323248499499649,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.06160016014504652,
+      "stages": 36,
+      "successful_detections_sufficient_for_95pct": 14726,
+      "uniform_conditional_dark_count_fraction": 0.01
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0,
+      "expected_launches_under_independent_loss": 3338,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.16323248499499649,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.15507086074524665,
+      "stages": 36,
+      "successful_detections_sufficient_for_95pct": 2324,
+      "uniform_conditional_dark_count_fraction": 0.05
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.005,
+      "expected_launches_under_independent_loss": 3814,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.16323248499499649,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.14507086074524664,
+      "stages": 36,
+      "successful_detections_sufficient_for_95pct": 2656,
+      "uniform_conditional_dark_count_fraction": 0.05
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.01,
+      "expected_launches_under_independent_loss": 4399,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.16323248499499649,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.13507086074524666,
+      "stages": 36,
+      "successful_detections_sufficient_for_95pct": 3063,
+      "uniform_conditional_dark_count_fraction": 0.05
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.02,
+      "expected_launches_under_independent_loss": 6060,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.16323248499499649,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.11507086074524664,
+      "stages": 36,
+      "successful_detections_sufficient_for_95pct": 4220,
+      "uniform_conditional_dark_count_fraction": 0.05
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.05,
+      "expected_launches_under_independent_loss": 26457,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.16323248499499649,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.05507086074524664,
+      "stages": 36,
+      "successful_detections_sufficient_for_95pct": 18425,
+      "uniform_conditional_dark_count_fraction": 0.05
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0,
+      "expected_launches_under_independent_loss": 3720,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.16323248499499649,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.14690923649549684,
+      "stages": 36,
+      "successful_detections_sufficient_for_95pct": 2590,
+      "uniform_conditional_dark_count_fraction": 0.1
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.005,
+      "expected_launches_under_independent_loss": 4282,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.16323248499499649,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.13690923649549683,
+      "stages": 36,
+      "successful_detections_sufficient_for_95pct": 2982,
+      "uniform_conditional_dark_count_fraction": 0.1
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.01,
+      "expected_launches_under_independent_loss": 4983,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.16323248499499649,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.12690923649549685,
+      "stages": 36,
+      "successful_detections_sufficient_for_95pct": 3470,
+      "uniform_conditional_dark_count_fraction": 0.1
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.02,
+      "expected_launches_under_independent_loss": 7021,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.16323248499499649,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.10690923649549683,
+      "stages": 36,
+      "successful_detections_sufficient_for_95pct": 4889,
+      "uniform_conditional_dark_count_fraction": 0.1
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.05,
+      "expected_launches_under_independent_loss": 36464,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.16323248499499649,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.04690923649549683,
+      "stages": 36,
+      "successful_detections_sufficient_for_95pct": 25394,
+      "uniform_conditional_dark_count_fraction": 0.1
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0,
+      "expected_launches_under_independent_loss": 4706,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.16323248499499649,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.1305859879959972,
+      "stages": 36,
+      "successful_detections_sufficient_for_95pct": 3277,
+      "uniform_conditional_dark_count_fraction": 0.2
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.005,
+      "expected_launches_under_independent_loss": 5519,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.16323248499499649,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.1205859879959972,
+      "stages": 36,
+      "successful_detections_sufficient_for_95pct": 3843,
+      "uniform_conditional_dark_count_fraction": 0.2
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.01,
+      "expected_launches_under_independent_loss": 6563,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.16323248499499649,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.11058598799599718,
+      "stages": 36,
+      "successful_detections_sufficient_for_95pct": 4570,
+      "uniform_conditional_dark_count_fraction": 0.2
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.02,
+      "expected_launches_under_independent_loss": 9779,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.16323248499499649,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.09058598799599718,
+      "stages": 36,
+      "successful_detections_sufficient_for_95pct": 6810,
+      "uniform_conditional_dark_count_fraction": 0.2
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.05,
+      "expected_launches_under_independent_loss": 85770,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.16323248499499649,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.030585987995997183,
+      "stages": 36,
+      "successful_detections_sufficient_for_95pct": 59731,
+      "uniform_conditional_dark_count_fraction": 0.2
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0,
+      "expected_launches_under_independent_loss": 2217,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.22799500204591777,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.22799500204591777,
+      "stages": 72,
+      "successful_detections_sufficient_for_95pct": 1075,
+      "uniform_conditional_dark_count_fraction": 0
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.005,
+      "expected_launches_under_independent_loss": 2425,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.22799500204591777,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.21799500204591776,
+      "stages": 72,
+      "successful_detections_sufficient_for_95pct": 1176,
+      "uniform_conditional_dark_count_fraction": 0
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.01,
+      "expected_launches_under_independent_loss": 2664,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.22799500204591777,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.20799500204591778,
+      "stages": 72,
+      "successful_detections_sufficient_for_95pct": 1292,
+      "uniform_conditional_dark_count_fraction": 0
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.02,
+      "expected_launches_under_independent_loss": 3262,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.22799500204591777,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.18799500204591776,
+      "stages": 72,
+      "successful_detections_sufficient_for_95pct": 1582,
+      "uniform_conditional_dark_count_fraction": 0
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.05,
+      "expected_launches_under_independent_loss": 7034,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.22799500204591777,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.12799500204591777,
+      "stages": 72,
+      "successful_detections_sufficient_for_95pct": 3411,
+      "uniform_conditional_dark_count_fraction": 0
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0,
+      "expected_launches_under_independent_loss": 2262,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.22799500204591777,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.22571505202545858,
+      "stages": 72,
+      "successful_detections_sufficient_for_95pct": 1097,
+      "uniform_conditional_dark_count_fraction": 0.01
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.005,
+      "expected_launches_under_independent_loss": 2477,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.22799500204591777,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.21571505202545857,
+      "stages": 72,
+      "successful_detections_sufficient_for_95pct": 1201,
+      "uniform_conditional_dark_count_fraction": 0.01
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.01,
+      "expected_launches_under_independent_loss": 2724,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.22799500204591777,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.2057150520254586,
+      "stages": 72,
+      "successful_detections_sufficient_for_95pct": 1321,
+      "uniform_conditional_dark_count_fraction": 0.01
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.02,
+      "expected_launches_under_independent_loss": 3343,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.22799500204591777,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.18571505202545857,
+      "stages": 72,
+      "successful_detections_sufficient_for_95pct": 1621,
+      "uniform_conditional_dark_count_fraction": 0.01
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.05,
+      "expected_launches_under_independent_loss": 7291,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.22799500204591777,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.12571505202545857,
+      "stages": 72,
+      "successful_detections_sufficient_for_95pct": 3536,
+      "uniform_conditional_dark_count_fraction": 0.01
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0,
+      "expected_launches_under_independent_loss": 2458,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.22799500204591777,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.21659525194362186,
+      "stages": 72,
+      "successful_detections_sufficient_for_95pct": 1192,
+      "uniform_conditional_dark_count_fraction": 0.05
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.005,
+      "expected_launches_under_independent_loss": 2702,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.22799500204591777,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.20659525194362185,
+      "stages": 72,
+      "successful_detections_sufficient_for_95pct": 1310,
+      "uniform_conditional_dark_count_fraction": 0.05
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.01,
+      "expected_launches_under_independent_loss": 2982,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.22799500204591777,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.19659525194362187,
+      "stages": 72,
+      "successful_detections_sufficient_for_95pct": 1446,
+      "uniform_conditional_dark_count_fraction": 0.05
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.02,
+      "expected_launches_under_independent_loss": 3695,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.22799500204591777,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.17659525194362186,
+      "stages": 72,
+      "successful_detections_sufficient_for_95pct": 1792,
+      "uniform_conditional_dark_count_fraction": 0.05
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.05,
+      "expected_launches_under_independent_loss": 8477,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.22799500204591777,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.11659525194362186,
+      "stages": 72,
+      "successful_detections_sufficient_for_95pct": 4111,
+      "uniform_conditional_dark_count_fraction": 0.05
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0,
+      "expected_launches_under_independent_loss": 2739,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.22799500204591777,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.205195501841326,
+      "stages": 72,
+      "successful_detections_sufficient_for_95pct": 1328,
+      "uniform_conditional_dark_count_fraction": 0.1
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.005,
+      "expected_launches_under_independent_loss": 3025,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.22799500204591777,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.195195501841326,
+      "stages": 72,
+      "successful_detections_sufficient_for_95pct": 1467,
+      "uniform_conditional_dark_count_fraction": 0.1
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.01,
+      "expected_launches_under_independent_loss": 3361,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.22799500204591777,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.18519550184132602,
+      "stages": 72,
+      "successful_detections_sufficient_for_95pct": 1630,
+      "uniform_conditional_dark_count_fraction": 0.1
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.02,
+      "expected_launches_under_independent_loss": 4223,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.22799500204591777,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.165195501841326,
+      "stages": 72,
+      "successful_detections_sufficient_for_95pct": 2048,
+      "uniform_conditional_dark_count_fraction": 0.1
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.05,
+      "expected_launches_under_independent_loss": 10413,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.22799500204591777,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.105195501841326,
+      "stages": 72,
+      "successful_detections_sufficient_for_95pct": 5050,
+      "uniform_conditional_dark_count_fraction": 0.1
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0,
+      "expected_launches_under_independent_loss": 3464,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.22799500204591777,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.18239600163673422,
+      "stages": 72,
+      "successful_detections_sufficient_for_95pct": 1680,
+      "uniform_conditional_dark_count_fraction": 0.2
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.005,
+      "expected_launches_under_independent_loss": 3879,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.22799500204591777,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.17239600163673421,
+      "stages": 72,
+      "successful_detections_sufficient_for_95pct": 1881,
+      "uniform_conditional_dark_count_fraction": 0.2
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.01,
+      "expected_launches_under_independent_loss": 4370,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.22799500204591777,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.16239600163673423,
+      "stages": 72,
+      "successful_detections_sufficient_for_95pct": 2119,
+      "uniform_conditional_dark_count_fraction": 0.2
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.02,
+      "expected_launches_under_independent_loss": 5683,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.22799500204591777,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.14239600163673422,
+      "stages": 72,
+      "successful_detections_sufficient_for_95pct": 2756,
+      "uniform_conditional_dark_count_fraction": 0.2
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.05,
+      "expected_launches_under_independent_loss": 16972,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.22799500204591777,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.08239600163673422,
+      "stages": 72,
+      "successful_detections_sufficient_for_95pct": 8231,
+      "uniform_conditional_dark_count_fraction": 0.2
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0,
+      "expected_launches_under_independent_loss": 3737,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.25220789509076724,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.25220789509076724,
+      "stages": 144,
+      "successful_detections_sufficient_for_95pct": 879,
+      "uniform_conditional_dark_count_fraction": 0
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.005,
+      "expected_launches_under_independent_loss": 4052,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.25220789509076724,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.24220789509076723,
+      "stages": 144,
+      "successful_detections_sufficient_for_95pct": 953,
+      "uniform_conditional_dark_count_fraction": 0
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.01,
+      "expected_launches_under_independent_loss": 4409,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.25220789509076724,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.23220789509076725,
+      "stages": 144,
+      "successful_detections_sufficient_for_95pct": 1037,
+      "uniform_conditional_dark_count_fraction": 0
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.02,
+      "expected_launches_under_independent_loss": 5276,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.25220789509076724,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.21220789509076723,
+      "stages": 144,
+      "successful_detections_sufficient_for_95pct": 1241,
+      "uniform_conditional_dark_count_fraction": 0
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.05,
+      "expected_launches_under_independent_loss": 10255,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.25220789509076724,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.15220789509076724,
+      "stages": 144,
+      "successful_detections_sufficient_for_95pct": 2412,
+      "uniform_conditional_dark_count_fraction": 0
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0,
+      "expected_launches_under_independent_loss": 3814,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.25220789509076724,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.24968581613985957,
+      "stages": 144,
+      "successful_detections_sufficient_for_95pct": 897,
+      "uniform_conditional_dark_count_fraction": 0.01
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.005,
+      "expected_launches_under_independent_loss": 4137,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.25220789509076724,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.23968581613985956,
+      "stages": 144,
+      "successful_detections_sufficient_for_95pct": 973,
+      "uniform_conditional_dark_count_fraction": 0.01
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.01,
+      "expected_launches_under_independent_loss": 4507,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.25220789509076724,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.22968581613985958,
+      "stages": 144,
+      "successful_detections_sufficient_for_95pct": 1060,
+      "uniform_conditional_dark_count_fraction": 0.01
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.02,
+      "expected_launches_under_independent_loss": 5404,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.25220789509076724,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.20968581613985957,
+      "stages": 144,
+      "successful_detections_sufficient_for_95pct": 1271,
+      "uniform_conditional_dark_count_fraction": 0.01
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.05,
+      "expected_launches_under_independent_loss": 10603,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.25220789509076724,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.14968581613985957,
+      "stages": 144,
+      "successful_detections_sufficient_for_95pct": 2494,
+      "uniform_conditional_dark_count_fraction": 0.01
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0,
+      "expected_launches_under_independent_loss": 4141,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.25220789509076724,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.23959750033622887,
+      "stages": 144,
+      "successful_detections_sufficient_for_95pct": 974,
+      "uniform_conditional_dark_count_fraction": 0.05
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.005,
+      "expected_launches_under_independent_loss": 4507,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.25220789509076724,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.22959750033622886,
+      "stages": 144,
+      "successful_detections_sufficient_for_95pct": 1060,
+      "uniform_conditional_dark_count_fraction": 0.05
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.01,
+      "expected_launches_under_independent_loss": 4928,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.25220789509076724,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.21959750033622888,
+      "stages": 144,
+      "successful_detections_sufficient_for_95pct": 1159,
+      "uniform_conditional_dark_count_fraction": 0.05
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.02,
+      "expected_launches_under_independent_loss": 5965,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.25220789509076724,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.19959750033622886,
+      "stages": 144,
+      "successful_detections_sufficient_for_95pct": 1403,
+      "uniform_conditional_dark_count_fraction": 0.05
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.05,
+      "expected_launches_under_independent_loss": 12194,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.25220789509076724,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.13959750033622886,
+      "stages": 144,
+      "successful_detections_sufficient_for_95pct": 2868,
+      "uniform_conditional_dark_count_fraction": 0.05
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0,
+      "expected_launches_under_independent_loss": 4613,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.25220789509076724,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.22698710558169052,
+      "stages": 144,
+      "successful_detections_sufficient_for_95pct": 1085,
+      "uniform_conditional_dark_count_fraction": 0.1
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.005,
+      "expected_launches_under_independent_loss": 5047,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.25220789509076724,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.21698710558169051,
+      "stages": 144,
+      "successful_detections_sufficient_for_95pct": 1187,
+      "uniform_conditional_dark_count_fraction": 0.1
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.01,
+      "expected_launches_under_independent_loss": 5549,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.25220789509076724,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.20698710558169053,
+      "stages": 144,
+      "successful_detections_sufficient_for_95pct": 1305,
+      "uniform_conditional_dark_count_fraction": 0.1
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.02,
+      "expected_launches_under_independent_loss": 6798,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.25220789509076724,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.18698710558169052,
+      "stages": 144,
+      "successful_detections_sufficient_for_95pct": 1599,
+      "uniform_conditional_dark_count_fraction": 0.1
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.05,
+      "expected_launches_under_independent_loss": 14736,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.25220789509076724,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.12698710558169052,
+      "stages": 144,
+      "successful_detections_sufficient_for_95pct": 3466,
+      "uniform_conditional_dark_count_fraction": 0.1
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0,
+      "expected_launches_under_independent_loss": 5838,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.25220789509076724,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.2017663160726138,
+      "stages": 144,
+      "successful_detections_sufficient_for_95pct": 1373,
+      "uniform_conditional_dark_count_fraction": 0.2
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.005,
+      "expected_launches_under_independent_loss": 6463,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.25220789509076724,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.1917663160726138,
+      "stages": 144,
+      "successful_detections_sufficient_for_95pct": 1520,
+      "uniform_conditional_dark_count_fraction": 0.2
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.01,
+      "expected_launches_under_independent_loss": 7194,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.25220789509076724,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.18176631607261381,
+      "stages": 144,
+      "successful_detections_sufficient_for_95pct": 1692,
+      "uniform_conditional_dark_count_fraction": 0.2
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.02,
+      "expected_launches_under_independent_loss": 9081,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.25220789509076724,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.1617663160726138,
+      "stages": 144,
+      "successful_detections_sufficient_for_95pct": 2136,
+      "uniform_conditional_dark_count_fraction": 0.2
+    },
+    {
+      "bounded_adversarial_conditional_probability_error_each_hypothesis": 0.05,
+      "expected_launches_under_independent_loss": 22941,
+      "guarantee_applicable": true,
+      "nominal_sorted_linf_margin": 0.25220789509076724,
+      "per_layer_survival": 0.99,
+      "provable_observed_cross_class_margin_lower_bound": 0.1017663160726138,
+      "stages": 144,
+      "successful_detections_sufficient_for_95pct": 5396,
+      "uniform_conditional_dark_count_fraction": 0.2
+    }
+  ],
+  "hardware_realized": false,
+  "model": "sorted source-port and detector-permutation-invariant binary classification under uniform dark-count mixing and arbitrary bounded per-outcome calibration errors",
+  "optimal_among_three_tested_depths": {
+    "dark0.01_sys0": {
+      "best_stages": 72,
+      "min_expected_launches": 2262
+    },
+    "dark0.01_sys0.005": {
+      "best_stages": 72,
+      "min_expected_launches": 2477
+    },
+    "dark0.01_sys0.01": {
+      "best_stages": 72,
+      "min_expected_launches": 2724
+    },
+    "dark0.01_sys0.02": {
+      "best_stages": 72,
+      "min_expected_launches": 3343
+    },
+    "dark0.01_sys0.05": {
+      "best_stages": 72,
+      "min_expected_launches": 7291
+    },
+    "dark0.05_sys0": {
+      "best_stages": 72,
+      "min_expected_launches": 2458
+    },
+    "dark0.05_sys0.005": {
+      "best_stages": 72,
+      "min_expected_launches": 2702
+    },
+    "dark0.05_sys0.01": {
+      "best_stages": 72,
+      "min_expected_launches": 2982
+    },
+    "dark0.05_sys0.02": {
+      "best_stages": 72,
+      "min_expected_launches": 3695
+    },
+    "dark0.05_sys0.05": {
+      "best_stages": 72,
+      "min_expected_launches": 8477
+    },
+    "dark0.1_sys0": {
+      "best_stages": 72,
+      "min_expected_launches": 2739
+    },
+    "dark0.1_sys0.005": {
+      "best_stages": 72,
+      "min_expected_launches": 3025
+    },
+    "dark0.1_sys0.01": {
+      "best_stages": 72,
+      "min_expected_launches": 3361
+    },
+    "dark0.1_sys0.02": {
+      "best_stages": 72,
+      "min_expected_launches": 4223
+    },
+    "dark0.1_sys0.05": {
+      "best_stages": 72,
+      "min_expected_launches": 10413
+    },
+    "dark0.2_sys0": {
+      "best_stages": 72,
+      "min_expected_launches": 3464
+    },
+    "dark0.2_sys0.005": {
+      "best_stages": 72,
+      "min_expected_launches": 3879
+    },
+    "dark0.2_sys0.01": {
+      "best_stages": 72,
+      "min_expected_launches": 4370
+    },
+    "dark0.2_sys0.02": {
+      "best_stages": 72,
+      "min_expected_launches": 5683
+    },
+    "dark0.2_sys0.05": {
+      "best_stages": 72,
+      "min_expected_launches": 16972
+    },
+    "dark0_sys0": {
+      "best_stages": 72,
+      "min_expected_launches": 2217
+    },
+    "dark0_sys0.005": {
+      "best_stages": 72,
+      "min_expected_launches": 2425
+    },
+    "dark0_sys0.01": {
+      "best_stages": 72,
+      "min_expected_launches": 2664
+    },
+    "dark0_sys0.02": {
+      "best_stages": 72,
+      "min_expected_launches": 3262
+    },
+    "dark0_sys0.05": {
+      "best_stages": 72,
+      "min_expected_launches": 7034
+    }
+  }
+}

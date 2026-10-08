@@ -1,0 +1,389 @@
+{
+  "CW_V_E_F": [
+    40,
+    60,
+    20
+  ],
+  "CW_simple_homotopy_to_standard_torus_via_19_Tietze_generator_relator_pairs": true,
+  "Tietze_eliminations": 19,
+  "Tietze_transcript_complete": [
+    {
+      "eliminate": 8,
+      "relation": [
+        -18,
+        17,
+        -19,
+        20,
+        8
+      ],
+      "replacement": [
+        -20,
+        19,
+        -17,
+        18
+      ]
+    },
+    {
+      "eliminate": 17,
+      "relation": [
+        -18,
+        17,
+        21
+      ],
+      "replacement": [
+        18,
+        -21
+      ]
+    },
+    {
+      "eliminate": 10,
+      "relation": [
+        -10,
+        -13,
+        14
+      ],
+      "replacement": [
+        -13,
+        14
+      ]
+    },
+    {
+      "eliminate": 1,
+      "relation": [
+        1,
+        -13,
+        14,
+        -21,
+        -19,
+        20,
+        -2
+      ],
+      "replacement": [
+        2,
+        -20,
+        19,
+        21,
+        -14,
+        13
+      ]
+    },
+    {
+      "eliminate": 2,
+      "relation": [
+        2,
+        -20,
+        19,
+        21,
+        -7,
+        11
+      ],
+      "replacement": [
+        -11,
+        7,
+        -21,
+        -19,
+        20
+      ]
+    },
+    {
+      "eliminate": 7,
+      "relation": [
+        19,
+        21,
+        -7
+      ],
+      "replacement": [
+        19,
+        21
+      ]
+    },
+    {
+      "eliminate": 3,
+      "relation": [
+        3,
+        -6,
+        14,
+        -4
+      ],
+      "replacement": [
+        4,
+        -14,
+        6
+      ]
+    },
+    {
+      "eliminate": 6,
+      "relation": [
+        4,
+        -14,
+        6,
+        -13,
+        14,
+        -4
+      ],
+      "replacement": [
+        13
+      ]
+    },
+    {
+      "eliminate": 4,
+      "relation": [
+        4,
+        -14,
+        11,
+        9
+      ],
+      "replacement": [
+        -9,
+        -11,
+        14
+      ]
+    },
+    {
+      "eliminate": 11,
+      "relation": [
+        -9,
+        -11,
+        13,
+        9
+      ],
+      "replacement": [
+        13
+      ]
+    },
+    {
+      "eliminate": 21,
+      "relation": [
+        21
+      ],
+      "replacement": []
+    },
+    {
+      "eliminate": 14,
+      "relation": [
+        14
+      ],
+      "replacement": []
+    },
+    {
+      "eliminate": 9,
+      "relation": [
+        9
+      ],
+      "replacement": []
+    },
+    {
+      "eliminate": 20,
+      "relation": [
+        20
+      ],
+      "replacement": []
+    },
+    {
+      "eliminate": 12,
+      "relation": [
+        -12,
+        13
+      ],
+      "replacement": [
+        13
+      ]
+    },
+    {
+      "eliminate": 18,
+      "relation": [
+        18,
+        -19
+      ],
+      "replacement": [
+        19
+      ]
+    },
+    {
+      "eliminate": 5,
+      "relation": [
+        -16,
+        -5
+      ],
+      "replacement": [
+        -16
+      ]
+    },
+    {
+      "eliminate": 15,
+      "relation": [
+        -13,
+        19,
+        13,
+        -16,
+        15,
+        13
+      ],
+      "replacement": [
+        16,
+        -13,
+        -19
+      ]
+    },
+    {
+      "eliminate": 16,
+      "relation": [
+        16,
+        -19
+      ],
+      "replacement": [
+        19
+      ]
+    }
+  ],
+  "Tietze_transcript_digest": "28778de340ae518ce42c111c09ed7411ed54bcafea7724c716dcc3dae0fe765d",
+  "Tietze_transcript_examples": [
+    {
+      "eliminate": 8,
+      "relation": [
+        -18,
+        17,
+        -19,
+        20,
+        8
+      ],
+      "replacement": [
+        -20,
+        19,
+        -17,
+        18
+      ]
+    },
+    {
+      "eliminate": 17,
+      "relation": [
+        -18,
+        17,
+        21
+      ],
+      "replacement": [
+        18,
+        -21
+      ]
+    },
+    {
+      "eliminate": 10,
+      "relation": [
+        -10,
+        -13,
+        14
+      ],
+      "replacement": [
+        -13,
+        14
+      ]
+    },
+    {
+      "eliminate": 1,
+      "relation": [
+        1,
+        -13,
+        14,
+        -21,
+        -19,
+        20,
+        -2
+      ],
+      "replacement": [
+        2,
+        -20,
+        19,
+        21,
+        -14,
+        13
+      ]
+    },
+    {
+      "eliminate": 2,
+      "relation": [
+        2,
+        -20,
+        19,
+        21,
+        -7,
+        11
+      ],
+      "replacement": [
+        -11,
+        7,
+        -21,
+        -19,
+        20
+      ]
+    },
+    {
+      "eliminate": 7,
+      "relation": [
+        19,
+        21,
+        -7
+      ],
+      "replacement": [
+        19,
+        21
+      ]
+    },
+    {
+      "eliminate": 3,
+      "relation": [
+        3,
+        -6,
+        14,
+        -4
+      ],
+      "replacement": [
+        4,
+        -14,
+        6
+      ]
+    },
+    {
+      "eliminate": 6,
+      "relation": [
+        4,
+        -14,
+        6,
+        -13,
+        14,
+        -4
+      ],
+      "replacement": [
+        13
+      ]
+    }
+  ],
+  "abelianization": "Z^2 (previous exact cellular SNF)",
+  "face_relators_before_Tietze": 20,
+  "final_relator_is_commutator": true,
+  "generators_after_Tietze": 2,
+  "generators_before_Tietze": 21,
+  "max_remaining_relator_length": 4,
+  "pi1_equals_Z2_proved": true,
+  "relator_length_histogram": {
+    "1": 4,
+    "2": 1,
+    "3": 7,
+    "4": 7,
+    "5": 1
+  },
+  "relators_after_Tietze": 1,
+  "remaining_generator_ids": [
+    13,
+    19
+  ],
+  "remaining_relators_as_signed_word_lists": [
+    [
+      -13,
+      19,
+      13,
+      -19
+    ]
+  ],
+  "scope": "Exact 21-generator 20-face presentation, 19 explicit generator/face eliminations leaving two generators and a commutator. The presentation 2-complex is simple-homotopy equivalent to the standard one-vertex CW torus under these elementary generator/relator cancellations. Not homeomorphic as original branched CW topology.",
+  "spanning_tree_edge_count": 39
+}

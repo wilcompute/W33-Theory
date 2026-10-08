@@ -1,0 +1,24 @@
+{
+  "H1_mod3": "F3\u00b2",
+  "H27_commutator_flux_formula": "2*(a*e-b*d) mod3 for torus cycles (a,b),(d,e)",
+  "H27_group_order": 27,
+  "Z3_flat_line_bundle_characters": 9,
+  "all_ordered_H27_holonomy_pairs": 729,
+  "cup_product_pairing": "standard nondegenerate determinant after 19 elementary CW generator-relator eliminations to one-cell torus model",
+  "flat_H27_holonomy_conjugacy_classes": 105,
+  "flat_H27_ordered_holonomy_pairs": 297,
+  "flat_conjugacy_orbit_length_histogram": {
+    "1": 9,
+    "3": 96
+  },
+  "nonflat_H27_ordered_holonomy_pairs": 432,
+  "nontrivial_Z3_flat_characters": 8,
+  "ordered_holonomy_pair_center_commutator_flux_histogram": {
+    "0": 297,
+    "1": 216,
+    "2": 216
+  },
+  "physical_flux_quantization_or_SM_gauge_derived": false,
+  "physics_boundary": "The F3 symplectic intersection/cup form can support Heisenberg magnetic translation phases; flat torus H27 bundles require determinant zero, nonzero central phase signals flux/twisting and cannot be represented as an ordinary flat H27 holonomy pair.",
+  "pi1": "Z\u00b2"
+}

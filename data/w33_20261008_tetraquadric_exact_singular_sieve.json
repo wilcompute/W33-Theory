@@ -1,0 +1,58 @@
+{
+  "exact_char0_singular_witnesses": [],
+  "hypersurface_rational_points_encountered": 246,
+  "interpretation": "Positive exact zero of polynomial and chart derivatives is rigorous complex singularity witness; absence would be an inconclusive bounded search",
+  "sample_projective_P1_coordinates": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      -1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      -2
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      -1
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      -3
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      3,
+      -1
+    ]
+  ],
+  "sampled_ambient_points": 20736,
+  "singular_over_C_certified": false,
+  "smooth_over_C_certified": false
+}

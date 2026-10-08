@@ -1,0 +1,27 @@
+{
+  "45_tritangent_planes_canonical_equivalence_proven": false,
+  "ambient_1620_apartments_one_orbit": "previous BT744, not new",
+  "constructed_20_cycle_relation_support_setwise_stabilizer": 20,
+  "constructed_45_cycle_setwise_stabilizer": 1,
+  "full_PSp4_3_normalizer_order": 20,
+  "no_Z3_character_of_support_stabilizer": true,
+  "note": "Exact subgroup stabilizers of chosen combinatorial subsets, not E6 action intertwiners. A 45-object count alone is not equivalence.",
+  "orbit_size_of_20_cycle_support": 1296,
+  "orbit_size_of_45_selected_atlas": 25920,
+  "prior_repo_identification": "Pass2474: Sylow-5 normalizer in PSp4(3) is F20, full symplectic lift is nonsplit 5:8; this pass proves chosen torus support stabilizer is exactly that type of normalizer in PSp, not a shared-order guess.",
+  "projective_symplectic_group_order": 25920,
+  "support_stabilizer_abelian": false,
+  "support_stabilizer_abelianization": "C4",
+  "support_stabilizer_derived_subgroup_is_C5": true,
+  "support_stabilizer_derived_subgroup_order": 5,
+  "support_stabilizer_element_order_distribution": {
+    "1": 1,
+    "2": 5,
+    "4": 10,
+    "5": 4
+  },
+  "support_stabilizer_face_orbit_of_selected_face": 10,
+  "support_stabilizer_is_affine_F20_C5_semidirect_C4": true,
+  "support_stabilizer_is_normalizer_of_its_Sylow5_in_PSp4_3": true,
+  "tetraquadric_Klein_four_is_subgroup_of_support_stabilizer": false
+}
