@@ -1,0 +1,57 @@
+{
+  "attestation": "Exact-science-SHA scoped producer and regression verification",
+  "ci": {
+    "additional_maximal_section": true,
+    "conclusion": "success",
+    "frozen_seconds": 18.12,
+    "frozen_tests": 19,
+    "head_sha": "32a90e48560ef9ee1a27951fbb12813d33c7067b",
+    "job_id": 113158597983,
+    "producer_sections": 8,
+    "regenerated_seconds": 17.99,
+    "regenerated_tests": 19,
+    "run_id": 37730598453,
+    "url": "https://github.com/wilcompute/W33-Theory/actions/runs/37730598453"
+  },
+  "direct_imports": {
+    "analysis/w33_pass11681_e8_from_two_qutrits.py": "fa594309eb321a5e1bd90bcba7bf37ae70cc85885c66cc16f37373fe0424da7e",
+    "analysis/w33_pass11721_11725_coherent_vacuum_gauge_bridge.py": "6a0858323145beac689ec756aed92461dd726adf3f957b825b0dceb2e646152e"
+  },
+  "hosted_primary_log": {
+    "path": ".continuity/receipts/PASS11726_11733_CI.log",
+    "sha256_LF": "6c824997802b6447f29704f1e6aaefac2dc5ece8655e641d4a3859b637775200"
+  },
+  "legacy_CI_limit": {
+    "also_failed_before_this_packet": [
+      37727188615,
+      37704856494
+    ],
+    "current_run": 37730598234,
+    "failure": "FileNotFoundError: artifacts/canonical_su3_gauge_and_cubic.json",
+    "global_CI_green_claim": false,
+    "workflow": "W33 Pass10947 five-front execution"
+  },
+  "local": {
+    "added_character_test": 1,
+    "audit": "four-file intake clean; no rediscovery/forced-arithmetic/certified contradiction",
+    "character_seconds": 58.73,
+    "combined_new_and_prior_tests": 34,
+    "seconds": 122.87
+  },
+  "normalization": "CRLF -> LF",
+  "physics_boundary": "No derived local chiral vacuum, observed flavor/couplings, physical Lorentzian4D dynamics, full E8 scalar parent or fixed-state cosmological constant screening. Compact gauge and split exceptional duality are not identified.",
+  "science_artifacts": {
+    ".continuity/SESSION_NOTES.md": "ab8e2790e94060d118387f924cf857f3b210b23b4a25fde6924cea378b2285ae",
+    ".continuity/receipts/PASS11726_11733_LOCAL.log": "9ee98efa0c79a85d904cebc1c2a6a80e7fa990331fc8aa53b2fd703d78a8545f",
+    ".github/workflows/pass11726-11733-dynamical-chiral-interface.yml": "8bb0bf9a1547a3afbcfe42a8dd6eb7b4bd7d9c31537e1160e51a3b82ff7cf3b4",
+    "RESULTS_INDEX.md": "236aa7316d9cd4bc465ff1f72fc9212f8e3ac79aac50f04b5d68821f77402d70",
+    "TOPICAL_ALIASES.md": "5e68a3bb4337349fc573f8a200e5667ec977ce07a00599c70d9934d2bf4590fc",
+    "analysis/PASS11726_11733_DYNAMICAL_BRANCH_AND_CHIRAL_INTERFACE.md": "981ee09e692fd2413cce39616a2a668d90922049228d0369c3d533638d1c6eab",
+    "analysis/w33_pass11726_11733_dynamical_branch_and_chiral_interface.py": "7e41783a8ba3b45682458ad776d08814b9636942b56ae9f23076104fac858d87",
+    "data/w33_pass11726_11733_dynamical_branch_and_chiral_interface.json": "ebf5d2a56156570ca1716807bf1cb46da756a533443cc06049491da72964c150",
+    "docs/index.html": "0ff130cd09eb45bdf1f5e978ab2b2b9c83614744ce0bd8d1245d98d3e5c3c18d",
+    "tests/test_w33_pass11726_11733_dynamical_branch_and_chiral_interface.py": "6ff261813d22bd5148774c5e21f7fec24d05e2c82cb1971be860877562774629"
+  },
+  "science_commit": "32a90e48560ef9ee1a27951fbb12813d33c7067b",
+  "status": "PASS"
+}
