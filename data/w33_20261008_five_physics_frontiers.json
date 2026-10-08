@@ -1,0 +1,168 @@
+{
+  "chirality": {
+    "anomaly_checks": {
+      "SU2_squared_Y": "0",
+      "SU3_squared_Y": "0",
+      "cubic_BL_with_Nc": "0",
+      "cubic_BL_without_Nc": "-1",
+      "cubic_Y": "0",
+      "gravitational_BL_with_Nc": "0",
+      "gravitational_BL_without_Nc": "-1",
+      "gravitational_Y": "0"
+    },
+    "conjugate_sign_pairs": 160,
+    "isotropic_lines": 40,
+    "nontrivial_line_characters_each": 8,
+    "quartic_chiral_vacua": 320,
+    "scope": "Standard Model plus one right-handed neutrino per family; no vacuum dynamics derived",
+    "unique_handedness_from_even_potential": false
+  },
+  "gravity_constraint": {
+    "first_witness_vertices": [
+      40,
+      0,
+      41
+    ],
+    "induced_length_two_wedges": 480,
+    "levi_edges": 160,
+    "levi_vertices": 80,
+    "local_edge_current_bracket": "-p0*q1 + p0*q2 - p1*q0 + p1*q2 - p2*q0 + p2*q1",
+    "naive_nearest_edge_current_algebra_closes": false,
+    "nonedge_p0_q2_coefficient": 1,
+    "nonedge_p2_q0_coefficient": -1
+  },
+  "heterotic_operator_filter": {
+    "boundary": "SU(3)xSU(2) contractions require suitable family indices; string selection rules, FI D flatness and actual vacuum spectra NOT checked",
+    "consequence": "Nc VEV can regenerate three RPV operators; matter parity does not exclude QQQL/UcUcDcEc",
+    "operator_checks": {
+      "LLEc": {
+        "BL": "-1",
+        "BL_neutral": false,
+        "Y": "0",
+        "hypercharge_neutral": true,
+        "matter_parity": -1
+      },
+      "NcLLEc": {
+        "BL": "0",
+        "BL_neutral": true,
+        "Y": "0",
+        "hypercharge_neutral": true,
+        "matter_parity": 1
+      },
+      "NcQLDc": {
+        "BL": "0",
+        "BL_neutral": true,
+        "Y": "0",
+        "hypercharge_neutral": true,
+        "matter_parity": 1
+      },
+      "NcUcDcDc": {
+        "BL": "0",
+        "BL_neutral": true,
+        "Y": "0",
+        "hypercharge_neutral": true,
+        "matter_parity": 1
+      },
+      "QLDc": {
+        "BL": "-1",
+        "BL_neutral": false,
+        "Y": "0",
+        "hypercharge_neutral": true,
+        "matter_parity": -1
+      },
+      "QQQL": {
+        "BL": "0",
+        "BL_neutral": true,
+        "Y": "0",
+        "hypercharge_neutral": true,
+        "matter_parity": 1
+      },
+      "UcDcDc": {
+        "BL": "-1",
+        "BL_neutral": false,
+        "Y": "0",
+        "hypercharge_neutral": true,
+        "matter_parity": -1
+      },
+      "UcUcDcEc": {
+        "BL": "0",
+        "BL_neutral": true,
+        "Y": "0",
+        "hypercharge_neutral": true,
+        "matter_parity": 1
+      }
+    }
+  },
+  "normalization": {
+    "conditional_excitation_gap_ratio": "2",
+    "conditional_mode_omega_squared": {
+      "0": "3/5",
+      "12": "27/5",
+      "6": "3",
+      "9": "21/5"
+    },
+    "graph_side_identifiable_from_mode_spectrum": false,
+    "laplacian_spectrum_multiplicity": {
+      "0": 1,
+      "12": 6,
+      "6": 12,
+      "9": 8
+    },
+    "mass2_scaled_by_seven": {
+      "0": "21/5",
+      "12": "189/5",
+      "6": "21",
+      "9": "147/5"
+    },
+    "physical_absolute_scale_derived": false,
+    "rescaling_degeneracy_example": "(a,b,Z)->(7a,7b,7Z) leaves every omega^2 unchanged",
+    "supplied_coefficients": {
+      "Z": "5",
+      "a": "3",
+      "b": "2"
+    },
+    "variable_physical_spectrum_example": "(a,b,Z)->(7a,7b,Z) multiplies every omega^2 by seven"
+  },
+  "prior": {
+    "CP": "w33_pass10952_clock_complete_positivity_firewall.py / w33_pass11038_spread_instrument_cp_firewall.py",
+    "chirality": "w33_pass11697_11698_chirality_vacuum.py",
+    "gravity": "w33_pass11672_11679_native_dynamics_index.py / w33_pass11639 metric-cycle obstruction",
+    "normalization": "PASS11734_11741_GAUGING_AND_CHIRAL_QUOTIENT.md",
+    "point_line": "w33_20260924_history_pointline_cospectral_firewall.py",
+    "transport": "w33_20261008_dual_27_electrical_transport.py",
+    "vacuum": "PASS11750_11757_INTEGRAL_GEOMETRY_AND_FLUX_DYNAMICS.md"
+  },
+  "quantum_channel": {
+    "line_transverse_null": {
+      "choi_positive_eigenvalue": "1/8",
+      "choi_positive_multiplicity": 216,
+      "choi_zero_multiplicity": 513,
+      "entanglement_breaking": true,
+      "kraus_count": 216,
+      "probability_unit": "1/64",
+      "trace_preserving": true,
+      "two_step_numerator_histogram": {
+        "1": 216,
+        "2": 324,
+        "4": 162
+      },
+      "two_step_ordered_offdiagonal_zero_count": 0
+    },
+    "point_far_H27": {
+      "choi_positive_eigenvalue": "1/8",
+      "choi_positive_multiplicity": 216,
+      "choi_zero_multiplicity": 513,
+      "entanglement_breaking": true,
+      "kraus_count": 216,
+      "probability_unit": "1/64",
+      "trace_preserving": true,
+      "two_step_numerator_histogram": {
+        "0": 54,
+        "1": 216,
+        "3": 432
+      },
+      "two_step_ordered_offdiagonal_zero_count": 54
+    }
+  },
+  "status": "Exact finite checks/necessary conditions; NO physical TOE completion"
+}
