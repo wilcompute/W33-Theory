@@ -1,0 +1,310 @@
+﻿2026-10-08T15:39:08.6659474Z Current runner version: '2.337.0'
+2026-10-08T15:39:08.6685705Z ##[group]Runner Image Provisioner
+2026-10-08T15:39:08.6686613Z Hosted Compute Agent
+2026-10-08T15:39:08.6687299Z Version: 20261002.596
+2026-10-08T15:39:08.6687943Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-08T15:39:08.6689242Z Build Date: 2026-10-02T22:28:27Z
+2026-10-08T15:39:08.6690020Z Worker ID: {9a602a5c-0bf0-4608-b4be-a0cbbd78594b}
+2026-10-08T15:39:08.6690781Z Region: centralus
+2026-10-08T15:39:08.6691409Z Cloud: Azure
+2026-10-08T15:39:08.6691951Z ##[endgroup]
+2026-10-08T15:39:08.6693581Z ##[group]Operating System
+2026-10-08T15:39:08.6694331Z Ubuntu
+2026-10-08T15:39:08.6694894Z 24.04.5
+2026-10-08T15:39:08.6695450Z LTS
+2026-10-08T15:39:08.6695994Z ##[endgroup]
+2026-10-08T15:39:08.6696575Z ##[group]Runner Image
+2026-10-08T15:39:08.6697238Z Image: ubuntu-24.04
+2026-10-08T15:39:08.6697843Z Version: 20261004.327.1
+2026-10-08T15:39:08.6699393Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-08T15:39:08.6700950Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-08T15:39:08.6702038Z ##[endgroup]
+2026-10-08T15:39:08.6703256Z ##[group]GITHUB_TOKEN Permissions
+2026-10-08T15:39:08.6706530Z Contents: read
+2026-10-08T15:39:08.6707159Z Metadata: read
+2026-10-08T15:39:08.6707830Z Packages: read
+2026-10-08T15:39:08.6708768Z ##[endgroup]
+2026-10-08T15:39:08.6711176Z Secret source: Actions
+2026-10-08T15:39:08.6712237Z Cache mode: write
+2026-10-08T15:39:08.6713193Z Prepare workflow directory
+2026-10-08T15:39:08.7063942Z Prepare all required actions
+2026-10-08T15:39:08.7115230Z Getting action download info
+2026-10-08T15:39:08.9854088Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-08T15:39:09.1014762Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-10-08T15:39:09.3105879Z Complete job name: verify
+2026-10-08T15:39:09.3919129Z ##[group]Run actions/checkout@v4
+2026-10-08T15:39:09.3920107Z with:
+2026-10-08T15:39:09.3920573Z   repository: wilcompute/W33-Theory
+2026-10-08T15:39:09.3924281Z   token: ***
+2026-10-08T15:39:09.3924728Z   ssh-strict: true
+2026-10-08T15:39:09.3925168Z   ssh-user: git
+2026-10-08T15:39:09.3925620Z   persist-credentials: true
+2026-10-08T15:39:09.3926118Z   clean: true
+2026-10-08T15:39:09.3926560Z   sparse-checkout-cone-mode: true
+2026-10-08T15:39:09.3927088Z   fetch-depth: 1
+2026-10-08T15:39:09.3927528Z   fetch-tags: false
+2026-10-08T15:39:09.3927981Z   show-progress: true
+2026-10-08T15:39:09.3928661Z   lfs: false
+2026-10-08T15:39:09.3929086Z   submodules: false
+2026-10-08T15:39:09.3929536Z   set-safe-directory: true
+2026-10-08T15:39:09.3930057Z   allow-unsafe-pr-checkout: false
+2026-10-08T15:39:09.3930831Z ##[endgroup]
+2026-10-08T15:39:09.4967171Z Syncing repository: wilcompute/W33-Theory
+2026-10-08T15:39:09.4969598Z ##[group]Getting Git version info
+2026-10-08T15:39:09.4970556Z Working directory is '/home/runner/work/W33-Theory/W33-Theory'
+2026-10-08T15:39:09.4971930Z [command]/usr/bin/git version
+2026-10-08T15:39:09.5059064Z git version 2.55.0
+2026-10-08T15:39:09.5086516Z ##[endgroup]
+2026-10-08T15:39:09.5114189Z Temporarily overriding HOME='/home/runner/work/_temp/529a4346-797b-483d-b337-7c116f22d2fb' before making global git config changes
+2026-10-08T15:39:09.5116609Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T15:39:09.5121680Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/W33-Theory/W33-Theory
+2026-10-08T15:39:09.5181686Z Deleting the contents of '/home/runner/work/W33-Theory/W33-Theory'
+2026-10-08T15:39:09.5186502Z ##[group]Initializing the repository
+2026-10-08T15:39:09.5193065Z [command]/usr/bin/git init /home/runner/work/W33-Theory/W33-Theory
+2026-10-08T15:39:09.5335778Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-08T15:39:09.5337894Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-08T15:39:09.5340224Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-08T15:39:09.5341754Z hint: call:
+2026-10-08T15:39:09.5342889Z hint:
+2026-10-08T15:39:09.5343990Z hint: 	git config --global init.defaultBranch <name>
+2026-10-08T15:39:09.5345149Z hint:
+2026-10-08T15:39:09.5346221Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-08T15:39:09.5347983Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-08T15:39:09.5349611Z hint:
+2026-10-08T15:39:09.5350325Z hint: 	git branch -m <name>
+2026-10-08T15:39:09.5351123Z hint:
+2026-10-08T15:39:09.5352190Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-08T15:39:09.5354126Z Initialized empty Git repository in /home/runner/work/W33-Theory/W33-Theory/.git/
+2026-10-08T15:39:09.5357196Z [command]/usr/bin/git remote add origin https://github.com/wilcompute/W33-Theory
+2026-10-08T15:39:09.5416493Z ##[endgroup]
+2026-10-08T15:39:09.5417833Z ##[group]Disabling automatic garbage collection
+2026-10-08T15:39:09.5422133Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-08T15:39:09.5458018Z ##[endgroup]
+2026-10-08T15:39:09.5459724Z ##[group]Setting up auth
+2026-10-08T15:39:09.5468120Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T15:39:09.5503076Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T15:39:09.5915861Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T15:39:09.5960213Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T15:39:09.6244974Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T15:39:09.6283379Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T15:39:09.6533466Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-08T15:39:09.6577390Z ##[endgroup]
+2026-10-08T15:39:09.6578680Z ##[group]Fetching the repository
+2026-10-08T15:39:09.6588254Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +9af1eaddfcf0c0233f8eb0a1852f6a2c5fbe571a:refs/remotes/origin/master
+2026-10-08T15:39:34.1126907Z From https://github.com/wilcompute/W33-Theory
+2026-10-08T15:39:34.1128572Z  * [new ref]           9af1eaddfcf0c0233f8eb0a1852f6a2c5fbe571a -> origin/master
+2026-10-08T15:39:34.1132663Z ##[endgroup]
+2026-10-08T15:39:34.1133451Z ##[group]Determining the checkout info
+2026-10-08T15:39:34.1135966Z ##[endgroup]
+2026-10-08T15:39:34.1142133Z [command]/usr/bin/git sparse-checkout disable
+2026-10-08T15:39:34.1204100Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-08T15:39:34.1239213Z ##[group]Checking out the ref
+2026-10-08T15:39:34.1243676Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2026-10-08T15:39:35.1603925Z Updating files:  31% (10607/33602)
+2026-10-08T15:39:35.1840214Z Updating files:  32% (10753/33602)
+2026-10-08T15:39:35.2141236Z Updating files:  33% (11089/33602)
+2026-10-08T15:39:35.3179749Z Updating files:  34% (11425/33602)
+2026-10-08T15:39:35.3696490Z Updating files:  35% (11761/33602)
+2026-10-08T15:39:35.4227578Z Updating files:  36% (12097/33602)
+2026-10-08T15:39:35.4487153Z Updating files:  37% (12433/33602)
+2026-10-08T15:39:35.4741530Z Updating files:  38% (12769/33602)
+2026-10-08T15:39:35.5950382Z Updating files:  39% (13105/33602)
+2026-10-08T15:39:35.6322410Z Updating files:  40% (13441/33602)
+2026-10-08T15:39:36.2759338Z Updating files:  41% (13777/33602)
+2026-10-08T15:39:36.3016830Z Updating files:  41% (13785/33602)
+2026-10-08T15:39:36.3140796Z Updating files:  42% (14113/33602)
+2026-10-08T15:39:36.3339598Z Updating files:  43% (14449/33602)
+2026-10-08T15:39:36.3497555Z Updating files:  44% (14785/33602)
+2026-10-08T15:39:36.3659043Z Updating files:  45% (15121/33602)
+2026-10-08T15:39:36.3812380Z Updating files:  46% (15457/33602)
+2026-10-08T15:39:36.3955281Z Updating files:  47% (15793/33602)
+2026-10-08T15:39:36.4127244Z Updating files:  48% (16129/33602)
+2026-10-08T15:39:36.4312697Z Updating files:  49% (16465/33602)
+2026-10-08T15:39:36.4504641Z Updating files:  50% (16801/33602)
+2026-10-08T15:39:36.4648974Z Updating files:  51% (17138/33602)
+2026-10-08T15:39:36.4936713Z Updating files:  52% (17474/33602)
+2026-10-08T15:39:36.5130767Z Updating files:  53% (17810/33602)
+2026-10-08T15:39:36.5335720Z Updating files:  54% (18146/33602)
+2026-10-08T15:39:36.7645265Z Updating files:  55% (18482/33602)
+2026-10-08T15:39:36.8038199Z Updating files:  56% (18818/33602)
+2026-10-08T15:39:37.0012537Z Updating files:  57% (19154/33602)
+2026-10-08T15:39:37.0180907Z Updating files:  58% (19490/33602)
+2026-10-08T15:39:37.0385659Z Updating files:  59% (19826/33602)
+2026-10-08T15:39:37.0595977Z Updating files:  60% (20162/33602)
+2026-10-08T15:39:37.0744191Z Updating files:  61% (20498/33602)
+2026-10-08T15:39:37.0931412Z Updating files:  62% (20834/33602)
+2026-10-08T15:39:37.1182543Z Updating files:  63% (21170/33602)
+2026-10-08T15:39:37.1536098Z Updating files:  64% (21506/33602)
+2026-10-08T15:39:37.1556136Z Updating files:  64% (21819/33602)
+2026-10-08T15:39:37.1894094Z Updating files:  65% (21842/33602)
+2026-10-08T15:39:37.2169008Z Updating files:  66% (22178/33602)
+2026-10-08T15:39:37.2489636Z Updating files:  67% (22514/33602)
+2026-10-08T15:39:37.2720376Z Updating files:  68% (22850/33602)
+2026-10-08T15:39:37.4949018Z Updating files:  69% (23186/33602)
+2026-10-08T15:39:37.5260395Z Updating files:  70% (23522/33602)
+2026-10-08T15:39:37.5449018Z Updating files:  71% (23858/33602)
+2026-10-08T15:39:37.5641014Z Updating files:  72% (24194/33602)
+2026-10-08T15:39:37.5813227Z Updating files:  73% (24530/33602)
+2026-10-08T15:39:37.5977227Z Updating files:  74% (24866/33602)
+2026-10-08T15:39:37.6145936Z Updating files:  75% (25202/33602)
+2026-10-08T15:39:37.6357048Z Updating files:  76% (25538/33602)
+2026-10-08T15:39:37.6860181Z Updating files:  77% (25874/33602)
+2026-10-08T15:39:37.7106130Z Updating files:  78% (26210/33602)
+2026-10-08T15:39:37.7306239Z Updating files:  79% (26546/33602)
+2026-10-08T15:39:37.7492379Z Updating files:  80% (26882/33602)
+2026-10-08T15:39:37.7765683Z Updating files:  81% (27218/33602)
+2026-10-08T15:39:37.7998762Z Updating files:  82% (27554/33602)
+2026-10-08T15:39:37.8168911Z Updating files:  83% (27890/33602)
+2026-10-08T15:39:37.8351523Z Updating files:  84% (28226/33602)
+2026-10-08T15:39:37.8581024Z Updating files:  85% (28562/33602)
+2026-10-08T15:39:37.8802441Z Updating files:  86% (28898/33602)
+2026-10-08T15:39:37.8995833Z Updating files:  87% (29234/33602)
+2026-10-08T15:39:37.9209780Z Updating files:  88% (29570/33602)
+2026-10-08T15:39:37.9383941Z Updating files:  89% (29906/33602)
+2026-10-08T15:39:37.9544502Z Updating files:  90% (30242/33602)
+2026-10-08T15:39:37.9700582Z Updating files:  91% (30578/33602)
+2026-10-08T15:39:37.9862536Z Updating files:  92% (30914/33602)
+2026-10-08T15:39:38.0037246Z Updating files:  93% (31250/33602)
+2026-10-08T15:39:38.0282811Z Updating files:  94% (31586/33602)
+2026-10-08T15:39:38.0483770Z Updating files:  95% (31922/33602)
+2026-10-08T15:39:38.0675807Z Updating files:  96% (32258/33602)
+2026-10-08T15:39:38.0853955Z Updating files:  97% (32594/33602)
+2026-10-08T15:39:38.1094080Z Updating files:  98% (32930/33602)
+2026-10-08T15:39:38.1535737Z Updating files:  99% (33266/33602)
+2026-10-08T15:39:38.1636215Z Updating files:  99% (33488/33602)
+2026-10-08T15:39:38.1636861Z Updating files: 100% (33602/33602)
+2026-10-08T15:39:38.1637395Z Updating files: 100% (33602/33602), done.
+2026-10-08T15:39:38.1943076Z Reset branch 'master'
+2026-10-08T15:39:38.1948671Z branch 'master' set up to track 'origin/master'.
+2026-10-08T15:39:38.2923120Z ##[endgroup]
+2026-10-08T15:39:38.2974009Z [command]/usr/bin/git log -1 --format=%H
+2026-10-08T15:39:38.3004714Z 9af1eaddfcf0c0233f8eb0a1852f6a2c5fbe571a
+2026-10-08T15:39:38.3292611Z ##[group]Run actions/setup-python@v5
+2026-10-08T15:39:38.3292928Z with:
+2026-10-08T15:39:38.3293127Z   python-version: 3.12
+2026-10-08T15:39:38.3293367Z   check-latest: false
+2026-10-08T15:39:38.3295755Z   token: ***
+2026-10-08T15:39:38.3295970Z   update-environment: true
+2026-10-08T15:39:38.3296221Z   allow-prereleases: false
+2026-10-08T15:39:38.3296454Z   freethreaded: false
+2026-10-08T15:39:38.3362985Z ##[endgroup]
+2026-10-08T15:39:38.4792836Z ##[group]Installed versions
+2026-10-08T15:39:38.4890749Z (node:2425) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-08T15:39:38.4892064Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-08T15:39:38.4892899Z Successfully set up CPython (3.12.15)
+2026-10-08T15:39:38.4893726Z ##[endgroup]
+2026-10-08T15:39:38.5112279Z ##[group]Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest
+2026-10-08T15:39:38.5113001Z [36;1mpython -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest[0m
+2026-10-08T15:39:38.5452338Z shell: /usr/bin/bash -e {0}
+2026-10-08T15:39:38.5452736Z env:
+2026-10-08T15:39:38.5453125Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T15:39:38.5453777Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-08T15:39:38.5454580Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T15:39:38.5455273Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T15:39:38.5455829Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T15:39:38.5456392Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-08T15:39:38.5456882Z ##[endgroup]
+2026-10-08T15:39:39.7602629Z Collecting numpy==2.5.3
+2026-10-08T15:39:39.8618137Z   Downloading numpy-2.5.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+2026-10-08T15:39:39.9988894Z Collecting scipy==1.18.1
+2026-10-08T15:39:40.0156048Z   Downloading scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+2026-10-08T15:39:40.0722063Z Collecting sympy==1.14.0
+2026-10-08T15:39:40.0882263Z   Downloading sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+2026-10-08T15:39:40.1173412Z Collecting networkx==3.6.1
+2026-10-08T15:39:40.1336489Z   Downloading networkx-3.6.1-py3-none-any.whl.metadata (6.8 kB)
+2026-10-08T15:39:40.1759960Z Collecting pytest
+2026-10-08T15:39:40.1922185Z   Downloading pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+2026-10-08T15:39:40.2168774Z Collecting mpmath<1.4,>=1.1.0 (from sympy==1.14.0)
+2026-10-08T15:39:40.2329200Z   Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+2026-10-08T15:39:40.2540573Z Collecting iniconfig>=1.0.1 (from pytest)
+2026-10-08T15:39:40.2699870Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+2026-10-08T15:39:40.2927106Z Collecting packaging>=22 (from pytest)
+2026-10-08T15:39:40.3089147Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+2026-10-08T15:39:40.3287120Z Collecting pluggy<2,>=1.5 (from pytest)
+2026-10-08T15:39:40.3447138Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+2026-10-08T15:39:40.3701105Z Collecting pygments>=2.7.2 (from pytest)
+2026-10-08T15:39:40.3870868Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+2026-10-08T15:39:40.4085357Z Downloading numpy-2.5.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+2026-10-08T15:39:41.1430070Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 24.0 MB/s  0:00:00
+2026-10-08T15:39:41.1591749Z Downloading scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+2026-10-08T15:39:41.5101967Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 101.2 MB/s  0:00:00
+2026-10-08T15:39:41.5270750Z Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+2026-10-08T15:39:41.5684227Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 155.7 MB/s  0:00:00
+2026-10-08T15:39:41.5844471Z Downloading networkx-3.6.1-py3-none-any.whl (2.1 MB)
+2026-10-08T15:39:41.5972525Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 174.3 MB/s  0:00:00
+2026-10-08T15:39:41.6134412Z Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+2026-10-08T15:39:41.6190094Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 93.1 MB/s  0:00:00
+2026-10-08T15:39:41.6352231Z Downloading pytest-9.1.1-py3-none-any.whl (386 kB)
+2026-10-08T15:39:41.6563974Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+2026-10-08T15:39:41.6742223Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+2026-10-08T15:39:41.6918208Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+2026-10-08T15:39:41.7095708Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+2026-10-08T15:39:41.7184286Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 152.5 MB/s  0:00:00
+2026-10-08T15:39:41.9053598Z Installing collected packages: mpmath, sympy, pygments, pluggy, packaging, numpy, networkx, iniconfig, scipy, pytest
+2026-10-08T15:39:57.3980147Z 
+2026-10-08T15:39:57.3996568Z Successfully installed iniconfig-2.3.1 mpmath-1.3.0 networkx-3.6.1 numpy-2.5.3 packaging-26.3 pluggy-1.6.0 pygments-2.21.0 pytest-9.1.1 scipy-1.18.1 sympy-1.14.0
+2026-10-08T15:39:57.4890435Z ##[group]Run OPENBLAS_NUM_THREADS=1 python -m pytest -q tests/test_w33_pass11742_11749_nonzero_flavor_and_flux_frame.py tests/test_w33_pass11734_11741_gauging_and_chiral_quotient.py
+2026-10-08T15:39:57.4891695Z [36;1mOPENBLAS_NUM_THREADS=1 python -m pytest -q tests/test_w33_pass11742_11749_nonzero_flavor_and_flux_frame.py tests/test_w33_pass11734_11741_gauging_and_chiral_quotient.py[0m
+2026-10-08T15:39:57.4958507Z shell: /usr/bin/bash -e {0}
+2026-10-08T15:39:57.4958779Z env:
+2026-10-08T15:39:57.4959067Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T15:39:57.4959564Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-08T15:39:57.4960050Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T15:39:57.4960461Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T15:39:57.4960864Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T15:39:57.4961320Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-08T15:39:57.4961662Z ##[endgroup]
+2026-10-08T15:40:22.7720299Z ................................................                         [100%]
+2026-10-08T15:40:22.7720838Z 48 passed in 24.84s
+2026-10-08T15:40:22.9903036Z ##[group]Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11742_11749_nonzero_flavor_and_flux_frame.py
+2026-10-08T15:40:22.9903786Z [36;1mOPENBLAS_NUM_THREADS=1 python analysis/w33_pass11742_11749_nonzero_flavor_and_flux_frame.py[0m
+2026-10-08T15:40:22.9967250Z shell: /usr/bin/bash -e {0}
+2026-10-08T15:40:22.9967536Z env:
+2026-10-08T15:40:22.9967822Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T15:40:22.9968546Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-08T15:40:22.9969026Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T15:40:22.9969447Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T15:40:22.9969879Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T15:40:22.9970310Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-08T15:40:22.9970668Z ##[endgroup]
+2026-10-08T15:40:24.8060851Z 11742 PASS
+2026-10-08T15:40:24.9380352Z 11743 PASS
+2026-10-08T15:40:25.0998080Z 11744 PASS
+2026-10-08T15:40:25.1871058Z 11745 PASS
+2026-10-08T15:40:25.2701077Z 11746 PASS
+2026-10-08T15:40:25.3781785Z 11747 PASS
+2026-10-08T15:40:25.3844433Z 11748 PASS
+2026-10-08T15:40:25.4378027Z 11749 PASS
+2026-10-08T15:40:25.4399516Z /home/runner/work/W33-Theory/W33-Theory/data/w33_pass11742_11749_nonzero_flavor_and_flux_frame.json
+2026-10-08T15:40:25.6220313Z ##[group]Run OPENBLAS_NUM_THREADS=1 python -m pytest -q tests/test_w33_pass11742_11749_nonzero_flavor_and_flux_frame.py
+2026-10-08T15:40:25.6221162Z [36;1mOPENBLAS_NUM_THREADS=1 python -m pytest -q tests/test_w33_pass11742_11749_nonzero_flavor_and_flux_frame.py[0m
+2026-10-08T15:40:25.6285259Z shell: /usr/bin/bash -e {0}
+2026-10-08T15:40:25.6285518Z env:
+2026-10-08T15:40:25.6285791Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T15:40:25.6286253Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-08T15:40:25.6286691Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T15:40:25.6287065Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T15:40:25.6287448Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-08T15:40:25.6287831Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-08T15:40:25.6288150Z ##[endgroup]
+2026-10-08T15:40:46.8719681Z .........................                                                [100%]
+2026-10-08T15:40:46.8720302Z 25 passed in 20.92s
+2026-10-08T15:40:47.1035231Z Post job cleanup.
+2026-10-08T15:40:47.2253674Z (node:2486) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-08T15:40:47.2254950Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-08T15:40:47.2477667Z Post job cleanup.
+2026-10-08T15:40:47.3427132Z [command]/usr/bin/git version
+2026-10-08T15:40:47.3469991Z git version 2.55.0
+2026-10-08T15:40:47.3511527Z Temporarily overriding HOME='/home/runner/work/_temp/61a796bf-a418-4612-b70f-53dd87b75a1f' before making global git config changes
+2026-10-08T15:40:47.3512862Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T15:40:47.3516811Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/W33-Theory/W33-Theory
+2026-10-08T15:40:47.3559358Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T15:40:47.3597021Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T15:40:47.3876765Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T15:40:47.3910929Z http.https://github.com/.extraheader
+2026-10-08T15:40:47.3929349Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-08T15:40:47.3965443Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T15:40:47.4245805Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T15:40:47.4295749Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T15:40:47.4726777Z Cleaning up orphan processes
+2026-10-08T15:40:47.5039227Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

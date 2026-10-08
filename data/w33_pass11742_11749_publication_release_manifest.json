@@ -1,0 +1,62 @@
+{
+  "attestation": "Exact-science-SHA scoped producer and regression verification",
+  "ci": {
+    "conclusion": "success",
+    "frozen_and_previous_interface_tests": 48,
+    "frozen_seconds": 24.84,
+    "head_sha": "9af1eaddfcf0c0233f8eb0a1852f6a2c5fbe571a",
+    "job_id": 113398093736,
+    "producer_sections": 8,
+    "regenerated_seconds": 20.92,
+    "regenerated_tests": 25,
+    "run_id": 37802503678,
+    "url": "https://github.com/wilcompute/W33-Theory/actions/runs/37802503678"
+  },
+  "continuity_recovery": "Push journal entry survived transient derived-JSON EPERM; normal subsequent write regenerated the cache and the entry was verified there.",
+  "hosted_primary_log": {
+    "path": ".continuity/receipts/PASS11742_11749_CI.log",
+    "sha256_LF": "00670926ccea03de1d4e5173642ac3495f4aa8b0d03ce2c82045f9b3553d7ee6"
+  },
+  "imported_interfaces_sha256_LF": {
+    "analysis/w33_pass11681_e8_from_two_qutrits.py": "fa594309eb321a5e1bd90bcba7bf37ae70cc85885c66cc16f37373fe0424da7e",
+    "analysis/w33_pass11721_11725_coherent_vacuum_gauge_bridge.py": "6a0858323145beac689ec756aed92461dd726adf3f957b825b0dceb2e646152e",
+    "analysis/w33_pass11726_11733_dynamical_branch_and_chiral_interface.py": "7e41783a8ba3b45682458ad776d08814b9636942b56ae9f23076104fac858d87",
+    "analysis/w33_pass11734_11741_gauging_and_chiral_quotient.py": "f749f27fd5b9cff8e92b139b0c938425dd0216e6979907cb8ff6660f2e5ecc04"
+  },
+  "local": {
+    "audit": "no collisions; no forced arithmetic; intake clean (4 files)",
+    "direct_frozen_field_checks": "PASS, including stored full-SU2 D matrices and kinetic counterexamples",
+    "new_tests": 25,
+    "previous_interface_tests": 23,
+    "producer_sections": 8,
+    "receipt": ".continuity/receipts/PASS11742_11749_LOCAL.log",
+    "receipt_sha256_LF": "ad9f66cb9cc9a3b3bdcbbb9b818345bd760ea1bf1d61b8b84a263b1a43de601d",
+    "seconds": 87.93,
+    "tests": 48
+  },
+  "main_checkout": "C:\\Repos\\Theory of Everything",
+  "preserved_unrelated_raw_sha256": {
+    ".mcp.json": "88ca5e03b5be02bef6603b9a74758638a4eec5f0a910677154d20f506d9a3cfa",
+    "analysis/w33_pass10956_albert_spin8_halfspin_normalizer.py": "970484379ebad8825a7782fa58458988b9925862b05eb7f5dfbf723d763e5aef",
+    "data/w33_pass10956_albert_spin8_halfspin_normalizer.json": "38f9662ad9d4b179d97c02a3ab72a0c3ccd90b5e9bb7910e092776350e93db5d"
+  },
+  "reservation": "3b08c1d724ee38999140643e453a5dffedd508ae",
+  "schema": "w33-nonzero-flavor-flux-publication-v1",
+  "science_artifact_sha256_LF": {
+    "analysis/PASS11742_11749_NONZERO_FLAVOR_AND_FLUX_FRAME.md": "8c8c4a07ecca19db05aa258a1ddf013a4e65dc080da007cb620a1c0d55b1d6f0",
+    "analysis/w33_pass11742_11749_nonzero_flavor_and_flux_frame.py": "910ff3414799bf49b7cf9b894e59f37c6ebcfca0c9bce2d3f1c5fa8f928d8b71",
+    "data/w33_pass11742_11749_nonzero_flavor_and_flux_frame.json": "b15b778de54707931dbb35e4f26a20012c99a98342223a85a2f524ca052c0583",
+    "tests/test_w33_pass11742_11749_nonzero_flavor_and_flux_frame.py": "ad1baa2f1ce16c9c0e4d789803a282767360907ee9a09728f64244a9f46362ad"
+  },
+  "science_commit": "9af1eaddfcf0c0233f8eb0a1852f6a2c5fbe571a",
+  "scope": {
+    "conditional_exotic_repair_is_realistic_model": false,
+    "global_compact_frame_uplift_derived": false,
+    "global_repository_CI_green_claim": false,
+    "gravitational_vacuum_energy_screening_derived": false,
+    "joint_geometry_Higgs_clock_selection_derived": false,
+    "physical_TOE_completed_claim": false,
+    "physical_Yukawa_normalization_derived": false,
+    "quotient_anomaly_vacuum_completed": false
+  }
+}
