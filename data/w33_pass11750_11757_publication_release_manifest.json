@@ -1,0 +1,69 @@
+{
+  "schema": "w33.pass11750_11757.release_manifest.v1",
+  "attestation": true,
+  "status": "PASS",
+  "validated_science_commit": "6ee35accef11338d41ff80bbdbc56db565a2d591",
+  "initial_science_commit": "8fda5be88440605e0c455f06acfcbdf506840c1b",
+  "reservation_commit": "bf6d2f6fb",
+  "integrated_parallel_commit": "286dee0ac",
+  "artifacts_LF_sha256": {
+    "analysis/w33_pass11750_11757_integral_geometry_and_flux_dynamics.py": "4501cb1bb4dba539cff0ecb9c3d29896b8b3400b0d931f4e6aa3f50903e0920b",
+    "analysis/PASS11750_11757_INTEGRAL_GEOMETRY_AND_FLUX_DYNAMICS.md": "29dff9ac0cc97d19966e4c633af61979e6bff6b971668d352ea30fb5439c00fe",
+    "tests/test_w33_pass11750_11757_integral_geometry_and_flux_dynamics.py": "6f5d06c4e399ef1cf249ba2922ba191fb95ba5e668b29fb383749121782d2562",
+    "data/w33_pass11750_11757_integral_geometry_and_flux_dynamics.json": "a3cb79852a9d2a7d662e30367c570dd9ed4e65078d0407f82de5dfe427f713f6",
+    ".github/workflows/pass11750-11757-integral-geometry-flux-dynamics.yml": "b8dd320c49f2a19a95072c8c11758b937daac5b7f1cfda014ee337ab30bf298b",
+    "docs/index.html": "9d4110f5c29d09819cd44f0545452b2c598547b8c9c14cd62f5a00fe18439f17",
+    "RESULTS_INDEX.md": "7e383398c151067b1381aba91ad87ec4e2caf74c81e302003e476b5c5023db61",
+    "TOPICAL_ALIASES.md": "80d8978aeb3d49e1824b20cd76e79defdd0a38c01b866cdc953bcb2180164227",
+    ".continuity/receipts/PASS11750_11757_LOCAL.log": "5f1ce5abfe8a4b8126e8e82b6b3439dadf9bb144fe0d977718574c23799ffa24",
+    ".continuity/receipts/PASS11750_11757_BASELINE_CI.log": "22a4b39df86aa3028b9e62fc331714e294945d74f441560a2ec6d1bd05084d4b",
+    ".continuity/receipts/PASS11750_11757_CI.log": "c5b8326adb209c34c140ac18fb465e6e46ce0549b5ba4b95ffbe7a391d41a125"
+  },
+  "local_validation": {
+    "tests": 51,
+    "seconds": 147.44,
+    "eight_sections": "PASS",
+    "four_file_intake": "clean"
+  },
+  "hosted_validation": {
+    "run_id": 37811353834,
+    "job_id": 113428717108,
+    "url": "https://github.com/wilcompute/W33-Theory/actions/runs/37811353834",
+    "conclusion": "success",
+    "frozen_tests": 51,
+    "frozen_seconds": 20.12,
+    "regenerated_tests": 26,
+    "regenerated_seconds": 5.45,
+    "producer_sections": [
+      11750,
+      11751,
+      11752,
+      11753,
+      11754,
+      11755,
+      11756,
+      11757
+    ]
+  },
+  "preserved_unrelated_raw_sha256": {
+    "analysis/w33_pass10956_albert_spin8_halfspin_normalizer.py": "970484379ebad8825a7782fa58458988b9925862b05eb7f5dfbf723d763e5aef",
+    "data/w33_pass10956_albert_spin8_halfspin_normalizer.json": "38f9662ad9d4b179d97c02a3ab72a0c3ccd90b5e9bb7910e092776350e93db5d",
+    ".mcp.json": "88ca5e03b5be02bef6603b9a74758638a4eec5f0a910677154d20f506d9a3cfa"
+  },
+  "scope": {
+    "integral_quotient_topological_anomaly_cycle": true,
+    "primitive_classical_integral_E8_patching": true,
+    "explicit_closed_type2_reference_forms": true,
+    "physical_normalized_Yukawas_computed": false,
+    "protected_proton_safe_Higgs_solution": false,
+    "backreacted_heterotic_solution": false,
+    "full_quantum_M_theory_consistency": false,
+    "four_dimensional_gravity_derived": false,
+    "TOE_completed": false,
+    "whole_repository_CI_claim": false
+  },
+  "integrated_parallel_commits": [
+    "286dee0ac",
+    "649b331a2"
+  ]
+}

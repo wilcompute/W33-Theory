@@ -1,0 +1,305 @@
+Final science 6ee35accef11338d41ff80bbdbc56db565a2d591 hosted run37811353834/job113428717108 SUCCESS
+verify	Set up job	﻿2026-10-08T16:46:49.1665442Z Current runner version: '2.337.0'
+verify	Set up job	2026-10-08T16:46:49.1688330Z ##[group]Runner Image Provisioner
+verify	Set up job	2026-10-08T16:46:49.1689441Z Hosted Compute Agent
+verify	Set up job	2026-10-08T16:46:49.1689940Z Version: 20261002.596
+verify	Set up job	2026-10-08T16:46:49.1690444Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+verify	Set up job	2026-10-08T16:46:49.1691108Z Build Date: 2026-10-02T22:28:27Z
+verify	Set up job	2026-10-08T16:46:49.1691686Z Worker ID: {f781da0b-a0d7-4056-9317-b680210e2526}
+verify	Set up job	2026-10-08T16:46:49.1692281Z Region: westus3
+verify	Set up job	2026-10-08T16:46:49.1692751Z Cloud: Azure
+verify	Set up job	2026-10-08T16:46:49.1693188Z ##[endgroup]
+verify	Set up job	2026-10-08T16:46:49.1694466Z ##[group]Operating System
+verify	Set up job	2026-10-08T16:46:49.1695008Z Ubuntu
+verify	Set up job	2026-10-08T16:46:49.1695490Z 24.04.5
+verify	Set up job	2026-10-08T16:46:49.1695937Z LTS
+verify	Set up job	2026-10-08T16:46:49.1696372Z ##[endgroup]
+verify	Set up job	2026-10-08T16:46:49.1696869Z ##[group]Runner Image
+verify	Set up job	2026-10-08T16:46:49.1697393Z Image: ubuntu-24.04
+verify	Set up job	2026-10-08T16:46:49.1697884Z Version: 20261004.327.1
+verify	Set up job	2026-10-08T16:46:49.1698800Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+verify	Set up job	2026-10-08T16:46:49.1700378Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+verify	Set up job	2026-10-08T16:46:49.1701220Z ##[endgroup]
+verify	Set up job	2026-10-08T16:46:49.1702228Z ##[group]GITHUB_TOKEN Permissions
+verify	Set up job	2026-10-08T16:46:49.1703726Z Contents: read
+verify	Set up job	2026-10-08T16:46:49.1704639Z Metadata: read
+verify	Set up job	2026-10-08T16:46:49.1705148Z Packages: read
+verify	Set up job	2026-10-08T16:46:49.1705606Z ##[endgroup]
+verify	Set up job	2026-10-08T16:46:49.1707340Z Secret source: Actions
+verify	Set up job	2026-10-08T16:46:49.1708086Z Cache mode: write
+verify	Set up job	2026-10-08T16:46:49.1708907Z Prepare workflow directory
+verify	Set up job	2026-10-08T16:46:49.1976224Z Prepare all required actions
+verify	Set up job	2026-10-08T16:46:49.2016113Z Getting action download info
+verify	Set up job	2026-10-08T16:46:49.4888953Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+verify	Set up job	2026-10-08T16:46:49.8005882Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+verify	Set up job	2026-10-08T16:46:50.0565462Z Complete job name: verify
+verify	Run actions/checkout@v4	﻿2026-10-08T16:46:50.1168413Z ##[group]Run actions/checkout@v4
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.1169235Z with:
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.1169597Z   repository: wilcompute/W33-Theory
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.1172949Z   token: ***
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.1173299Z   ssh-strict: true
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.1173653Z   ssh-user: git
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.1174004Z   persist-credentials: true
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.1174387Z   clean: true
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.1174740Z   sparse-checkout-cone-mode: true
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.1175146Z   fetch-depth: 1
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.1175487Z   fetch-tags: false
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.1175841Z   show-progress: true
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.1176194Z   lfs: false
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.1176518Z   submodules: false
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.1176869Z   set-safe-directory: true
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.1177265Z   allow-unsafe-pr-checkout: false
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.1177817Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2045694Z Syncing repository: wilcompute/W33-Theory
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2048015Z ##[group]Getting Git version info
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2048968Z Working directory is '/home/runner/work/W33-Theory/W33-Theory'
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2050557Z [command]/usr/bin/git version
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2333078Z git version 2.55.0
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2387263Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2406249Z Temporarily overriding HOME='/home/runner/work/_temp/21969b7a-b12f-46c0-b24e-956d4c4bc19d' before making global git config changes
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2408315Z Adding repository directory to the temporary git global config as a safe directory
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2410234Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/W33-Theory/W33-Theory
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2469324Z Deleting the contents of '/home/runner/work/W33-Theory/W33-Theory'
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2470974Z ##[group]Initializing the repository
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2477282Z [command]/usr/bin/git init /home/runner/work/W33-Theory/W33-Theory
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2544481Z hint: Using 'master' as the name for the initial branch. This default branch name
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2566605Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2579419Z hint: to use in all of your new repositories, which will suppress this warning,
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2580728Z hint: call:
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2581420Z hint:
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2582262Z hint: 	git config --global init.defaultBranch <name>
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2583248Z hint:
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2584215Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2585616Z hint: 'development'. The just-created branch can be renamed via this command:
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2586759Z hint:
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2590496Z hint: 	git branch -m <name>
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2591365Z hint:
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2592324Z hint: Disable this message with "git config set advice.defaultBranchName false"
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2593688Z Initialized empty Git repository in /home/runner/work/W33-Theory/W33-Theory/.git/
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2596360Z [command]/usr/bin/git remote add origin https://github.com/wilcompute/W33-Theory
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2640486Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2641705Z ##[group]Disabling automatic garbage collection
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2642776Z [command]/usr/bin/git config --local gc.auto 0
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2682347Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2683321Z ##[group]Setting up auth
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2684321Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.2730425Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.3013147Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.3044501Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.3236694Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.3267514Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.3456099Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.3491333Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.3492069Z ##[group]Fetching the repository
+verify	Run actions/checkout@v4	2026-10-08T16:46:50.3500758Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +6ee35accef11338d41ff80bbdbc56db565a2d591:refs/remotes/origin/master
+verify	Run actions/checkout@v4	2026-10-08T16:46:59.1378159Z From https://github.com/wilcompute/W33-Theory
+verify	Run actions/checkout@v4	2026-10-08T16:46:59.1379636Z  * [new ref]           6ee35accef11338d41ff80bbdbc56db565a2d591 -> origin/master
+verify	Run actions/checkout@v4	2026-10-08T16:46:59.1381826Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-08T16:46:59.1382689Z ##[group]Determining the checkout info
+verify	Run actions/checkout@v4	2026-10-08T16:46:59.1383649Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-08T16:46:59.1384296Z [command]/usr/bin/git sparse-checkout disable
+verify	Run actions/checkout@v4	2026-10-08T16:46:59.1416057Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+verify	Run actions/checkout@v4	2026-10-08T16:46:59.1445564Z ##[group]Checking out the ref
+verify	Run actions/checkout@v4	2026-10-08T16:46:59.1449420Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+verify	Run actions/checkout@v4	2026-10-08T16:47:00.1951123Z Updating files:  36% (12161/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:00.2139270Z Updating files:  37% (12437/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:00.2315318Z Updating files:  38% (12773/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:00.3330459Z Updating files:  39% (13109/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:00.3636378Z Updating files:  40% (13445/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:00.9860567Z Updating files:  41% (13781/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:00.9984722Z Updating files:  42% (14117/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:01.0143058Z Updating files:  43% (14453/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:01.0267183Z Updating files:  44% (14789/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:01.0396022Z Updating files:  45% (15125/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:01.0516096Z Updating files:  46% (15462/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:01.0630539Z Updating files:  47% (15798/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:01.0766176Z Updating files:  48% (16134/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:01.0891265Z Updating files:  49% (16470/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:01.1044281Z Updating files:  50% (16806/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:01.1170075Z Updating files:  51% (17142/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:01.1381766Z Updating files:  52% (17478/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:01.1546117Z Updating files:  53% (17814/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:01.1655424Z Updating files:  54% (18150/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:01.1708943Z Updating files:  54% (18374/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:01.3616242Z Updating files:  55% (18487/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:01.3963433Z Updating files:  56% (18823/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:01.5572587Z Updating files:  57% (19159/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:01.5704008Z Updating files:  58% (19495/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:01.5862383Z Updating files:  59% (19831/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:01.6024028Z Updating files:  60% (20167/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:01.6137349Z Updating files:  61% (20503/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:01.6283246Z Updating files:  62% (20839/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:01.6479780Z Updating files:  63% (21175/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:01.6783490Z Updating files:  64% (21512/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:01.7057732Z Updating files:  65% (21848/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:01.7277533Z Updating files:  66% (22184/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:01.7495460Z Updating files:  67% (22520/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:01.7675642Z Updating files:  68% (22856/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:01.9561377Z Updating files:  69% (23192/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:01.9812469Z Updating files:  70% (23528/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:01.9962707Z Updating files:  71% (23864/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.0115764Z Updating files:  72% (24200/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.0253036Z Updating files:  73% (24537/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.0381340Z Updating files:  74% (24873/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.0509971Z Updating files:  75% (25209/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.0669699Z Updating files:  76% (25545/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.1094613Z Updating files:  77% (25881/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.1284802Z Updating files:  78% (26217/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.1440601Z Updating files:  79% (26553/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.1584340Z Updating files:  80% (26889/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.1656301Z Updating files:  81% (27225/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.1806484Z Updating files:  81% (27345/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.1992132Z Updating files:  82% (27562/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.2124891Z Updating files:  83% (27898/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.2266922Z Updating files:  84% (28234/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.2452411Z Updating files:  85% (28570/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.2631061Z Updating files:  86% (28906/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.2783819Z Updating files:  87% (29242/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.2955936Z Updating files:  88% (29578/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.3093775Z Updating files:  89% (29914/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.3219520Z Updating files:  90% (30250/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.3340946Z Updating files:  91% (30587/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.3468682Z Updating files:  92% (30923/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.3603836Z Updating files:  93% (31259/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.3797018Z Updating files:  94% (31595/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.3962760Z Updating files:  95% (31931/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.4115167Z Updating files:  96% (32267/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.4255535Z Updating files:  97% (32603/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.4446419Z Updating files:  98% (32939/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.4897801Z Updating files:  99% (33275/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.4898225Z Updating files: 100% (33611/33611)
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.4898476Z Updating files: 100% (33611/33611), done.
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.5140533Z Reset branch 'master'
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.5144319Z branch 'master' set up to track 'origin/master'.
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.5880034Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.5931225Z [command]/usr/bin/git log -1 --format=%H
+verify	Run actions/checkout@v4	2026-10-08T16:47:02.5954082Z 6ee35accef11338d41ff80bbdbc56db565a2d591
+verify	Run actions/setup-python@v5	﻿2026-10-08T16:47:02.6173657Z ##[group]Run actions/setup-python@v5
+verify	Run actions/setup-python@v5	2026-10-08T16:47:02.6173893Z with:
+verify	Run actions/setup-python@v5	2026-10-08T16:47:02.6174217Z   python-version: 3.12
+verify	Run actions/setup-python@v5	2026-10-08T16:47:02.6174412Z   check-latest: false
+verify	Run actions/setup-python@v5	2026-10-08T16:47:02.6176629Z   token: ***
+verify	Run actions/setup-python@v5	2026-10-08T16:47:02.6176804Z   update-environment: true
+verify	Run actions/setup-python@v5	2026-10-08T16:47:02.6176999Z   allow-prereleases: false
+verify	Run actions/setup-python@v5	2026-10-08T16:47:02.6177178Z   freethreaded: false
+verify	Run actions/setup-python@v5	2026-10-08T16:47:02.6177353Z ##[endgroup]
+verify	Run actions/setup-python@v5	2026-10-08T16:47:02.7320358Z ##[group]Installed versions
+verify	Run actions/setup-python@v5	2026-10-08T16:47:02.7387378Z (node:2132) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify	Run actions/setup-python@v5	2026-10-08T16:47:02.7387946Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify	Run actions/setup-python@v5	2026-10-08T16:47:02.7388656Z Successfully set up CPython (3.12.15)
+verify	Run actions/setup-python@v5	2026-10-08T16:47:02.7389324Z ##[endgroup]
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	﻿2026-10-08T16:47:02.7558043Z ##[group]Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:02.7558616Z [36;1mpython -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest[0m
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:02.7809654Z shell: /usr/bin/bash -e {0}
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:02.7809926Z env:
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:02.7810170Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:02.7810525Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:02.7810879Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:02.7811181Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:02.7811474Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:02.7811770Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:02.7812029Z ##[endgroup]
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:03.7620723Z Collecting numpy==2.5.3
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:03.8011094Z   Downloading numpy-2.5.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:03.8881411Z Collecting scipy==1.18.1
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:03.8915171Z   Downloading scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:03.9212852Z Collecting sympy==1.14.0
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:03.9240463Z   Downloading sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:03.9399616Z Collecting networkx==3.6.1
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:03.9427279Z   Downloading networkx-3.6.1-py3-none-any.whl.metadata (6.8 kB)
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:03.9676170Z Collecting pytest
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:03.9708848Z   Downloading pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:03.9842936Z Collecting mpmath<1.4,>=1.1.0 (from sympy==1.14.0)
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:03.9872941Z   Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:03.9972079Z Collecting iniconfig>=1.0.1 (from pytest)
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:04.0002542Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:04.0118601Z Collecting packaging>=22 (from pytest)
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:04.0147651Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:04.0238386Z Collecting pluggy<2,>=1.5 (from pytest)
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:04.0268902Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:04.0399443Z Collecting pygments>=2.7.2 (from pytest)
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:04.0428592Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:04.0493406Z Downloading numpy-2.5.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:04.1806971Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 131.3 MB/s  0:00:00
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:04.1868250Z Downloading scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:04.4470337Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 136.0 MB/s  0:00:00
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:04.4503148Z Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:04.4936375Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 145.6 MB/s  0:00:00
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:04.4966643Z Downloading networkx-3.6.1-py3-none-any.whl (2.1 MB)
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:04.5147410Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 111.2 MB/s  0:00:00
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:04.5178500Z Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:04.5240347Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 63.1 MB/s  0:00:00
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:04.5271190Z Downloading pytest-9.1.1-py3-none-any.whl (386 kB)
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:04.5350308Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:04.5395185Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:04.5439190Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:04.5490941Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:04.5597122Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 110.2 MB/s  0:00:00
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:04.7316977Z Installing collected packages: mpmath, sympy, pygments, pluggy, packaging, numpy, networkx, iniconfig, scipy, pytest
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:17.1915361Z 
+verify	Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest	2026-10-08T16:47:17.1927500Z Successfully installed iniconfig-2.3.1 mpmath-1.3.0 networkx-3.6.1 numpy-2.5.3 packaging-26.3 pluggy-1.6.0 pygments-2.21.0 pytest-9.1.1 scipy-1.18.1 sympy-1.14.0
+verify	Check frozen certificate and previous interface	﻿2026-10-08T16:47:17.2617371Z ##[group]Run OPENBLAS_NUM_THREADS=1 python -m pytest -q tests/test_w33_pass11750_11757_integral_geometry_and_flux_dynamics.py tests/test_w33_pass11742_11749_nonzero_flavor_and_flux_frame.py
+verify	Check frozen certificate and previous interface	2026-10-08T16:47:17.2618313Z [36;1mOPENBLAS_NUM_THREADS=1 python -m pytest -q tests/test_w33_pass11750_11757_integral_geometry_and_flux_dynamics.py tests/test_w33_pass11742_11749_nonzero_flavor_and_flux_frame.py[0m
+verify	Check frozen certificate and previous interface	2026-10-08T16:47:17.2677856Z shell: /usr/bin/bash -e {0}
+verify	Check frozen certificate and previous interface	2026-10-08T16:47:17.2678075Z env:
+verify	Check frozen certificate and previous interface	2026-10-08T16:47:17.2678299Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	Check frozen certificate and previous interface	2026-10-08T16:47:17.2678646Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+verify	Check frozen certificate and previous interface	2026-10-08T16:47:17.2678977Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	Check frozen certificate and previous interface	2026-10-08T16:47:17.2679408Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	Check frozen certificate and previous interface	2026-10-08T16:47:17.2679698Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	Check frozen certificate and previous interface	2026-10-08T16:47:17.2680004Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+verify	Check frozen certificate and previous interface	2026-10-08T16:47:17.2680297Z ##[endgroup]
+verify	Check frozen certificate and previous interface	2026-10-08T16:47:38.3086291Z ...................................................                      [100%]
+verify	Check frozen certificate and previous interface	2026-10-08T16:47:38.3086800Z 51 passed in 20.12s
+verify	Replay eight investigations	﻿2026-10-08T16:47:38.5139499Z ##[group]Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11750_11757_integral_geometry_and_flux_dynamics.py
+verify	Replay eight investigations	2026-10-08T16:47:38.5140109Z [36;1mOPENBLAS_NUM_THREADS=1 python analysis/w33_pass11750_11757_integral_geometry_and_flux_dynamics.py[0m
+verify	Replay eight investigations	2026-10-08T16:47:38.5196268Z shell: /usr/bin/bash -e {0}
+verify	Replay eight investigations	2026-10-08T16:47:38.5196494Z env:
+verify	Replay eight investigations	2026-10-08T16:47:38.5196714Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	Replay eight investigations	2026-10-08T16:47:38.5197070Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+verify	Replay eight investigations	2026-10-08T16:47:38.5197407Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	Replay eight investigations	2026-10-08T16:47:38.5197699Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	Replay eight investigations	2026-10-08T16:47:38.5198005Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	Replay eight investigations	2026-10-08T16:47:38.5198330Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+verify	Replay eight investigations	2026-10-08T16:47:38.5198582Z ##[endgroup]
+verify	Replay eight investigations	2026-10-08T16:47:41.9819709Z 11750 PASS
+verify	Replay eight investigations	2026-10-08T16:47:41.9820060Z 11751 PASS
+verify	Replay eight investigations	2026-10-08T16:47:41.9820313Z 11752 PASS
+verify	Replay eight investigations	2026-10-08T16:47:41.9820468Z 11753 PASS
+verify	Replay eight investigations	2026-10-08T16:47:41.9820613Z 11754 PASS
+verify	Replay eight investigations	2026-10-08T16:47:41.9820749Z 11755 PASS
+verify	Replay eight investigations	2026-10-08T16:47:41.9820889Z 11756 PASS
+verify	Replay eight investigations	2026-10-08T16:47:41.9821035Z 11757 PASS
+verify	Replay eight investigations	2026-10-08T16:47:41.9821409Z /home/runner/work/W33-Theory/W33-Theory/data/w33_pass11750_11757_integral_geometry_and_flux_dynamics.json
+verify	Check regenerated certificate	﻿2026-10-08T16:47:42.1387171Z ##[group]Run OPENBLAS_NUM_THREADS=1 python -m pytest -q tests/test_w33_pass11750_11757_integral_geometry_and_flux_dynamics.py
+verify	Check regenerated certificate	2026-10-08T16:47:42.1387832Z [36;1mOPENBLAS_NUM_THREADS=1 python -m pytest -q tests/test_w33_pass11750_11757_integral_geometry_and_flux_dynamics.py[0m
+verify	Check regenerated certificate	2026-10-08T16:47:42.1444895Z shell: /usr/bin/bash -e {0}
+verify	Check regenerated certificate	2026-10-08T16:47:42.1445127Z env:
+verify	Check regenerated certificate	2026-10-08T16:47:42.1445341Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	Check regenerated certificate	2026-10-08T16:47:42.1445687Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+verify	Check regenerated certificate	2026-10-08T16:47:42.1446033Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	Check regenerated certificate	2026-10-08T16:47:42.1446327Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	Check regenerated certificate	2026-10-08T16:47:42.1446615Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	Check regenerated certificate	2026-10-08T16:47:42.1446907Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+verify	Check regenerated certificate	2026-10-08T16:47:42.1447158Z ##[endgroup]
+verify	Check regenerated certificate	2026-10-08T16:47:47.8632453Z ..........................                                               [100%]
+verify	Check regenerated certificate	2026-10-08T16:47:47.8633055Z 26 passed in 5.45s
+verify	Post Run actions/setup-python@v5	﻿2026-10-08T16:47:48.0903981Z Post job cleanup.
+verify	Post Run actions/setup-python@v5	2026-10-08T16:47:48.1892843Z (node:2183) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify	Post Run actions/setup-python@v5	2026-10-08T16:47:48.1893768Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify	Post Run actions/checkout@v4	﻿2026-10-08T16:47:48.2078848Z Post job cleanup.
+verify	Post Run actions/checkout@v4	2026-10-08T16:47:48.2791863Z [command]/usr/bin/git version
+verify	Post Run actions/checkout@v4	2026-10-08T16:47:48.2830044Z git version 2.55.0
+verify	Post Run actions/checkout@v4	2026-10-08T16:47:48.2863704Z Temporarily overriding HOME='/home/runner/work/_temp/0ccce880-ac22-44fd-b5fb-bc727b64a8ce' before making global git config changes
+verify	Post Run actions/checkout@v4	2026-10-08T16:47:48.2864691Z Adding repository directory to the temporary git global config as a safe directory
+verify	Post Run actions/checkout@v4	2026-10-08T16:47:48.2868896Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/W33-Theory/W33-Theory
+verify	Post Run actions/checkout@v4	2026-10-08T16:47:48.2904090Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify	Post Run actions/checkout@v4	2026-10-08T16:47:48.2960324Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify	Post Run actions/checkout@v4	2026-10-08T16:47:48.3169442Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify	Post Run actions/checkout@v4	2026-10-08T16:47:48.3195720Z http.https://github.com/.extraheader
+verify	Post Run actions/checkout@v4	2026-10-08T16:47:48.3204847Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+verify	Post Run actions/checkout@v4	2026-10-08T16:47:48.3236940Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify	Post Run actions/checkout@v4	2026-10-08T16:47:48.3490970Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify	Post Run actions/checkout@v4	2026-10-08T16:47:48.3518336Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify	Complete job	﻿2026-10-08T16:47:48.3886155Z Cleaning up orphan processes
+verify	Complete job	2026-10-08T16:47:48.4120271Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
