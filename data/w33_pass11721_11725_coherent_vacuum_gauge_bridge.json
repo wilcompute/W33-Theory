@@ -1,0 +1,3931 @@
+{
+  "pass_ids": [
+    11721,
+    11722,
+    11723,
+    11724,
+    11725
+  ],
+  "schema": "w33.coherent-vacuum-gauge-bridge.v1",
+  "11721": {
+    "status": "PASS",
+    "field": "Z[omega], omega^2+omega+1=0; projectors scaled by9 or18",
+    "chirality_vacua": 320,
+    "odd_rays": 40,
+    "odd_fiber": 8,
+    "even_rays": 160,
+    "even_fiber": 2,
+    "tetrahedra": 40,
+    "tetrahedron_squared_overlap": "1/3",
+    "tetrahedron_frame_sum": "2 Q_p",
+    "coherent_lift": "psi=(e+o)/sqrt2; Pi psi=(e-o)/sqrt2, with phases inherited from the full projector",
+    "rows": [
+      {
+        "point": 0,
+        "line": 0,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 0,
+        "even_ray": 0,
+        "projector9_sha256": "e2a869e8e90ceab721b8ce2fbd6aff8739c38060515a6f785c93c4c52b3dd676"
+      },
+      {
+        "point": 0,
+        "line": 0,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 0,
+        "even_ray": 0,
+        "projector9_sha256": "88e4ba20cd9e0d9280e00e7dfea4f59c5d65758f52b40ecef80b982bceffd578"
+      },
+      {
+        "point": 4,
+        "line": 0,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 1,
+        "even_ray": 1,
+        "projector9_sha256": "9bbafb9855f8695bfb28ebfa77190c901760b30d8bda3681bfb74af5f79cedbc"
+      },
+      {
+        "point": 6,
+        "line": 0,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 2,
+        "even_ray": 2,
+        "projector9_sha256": "d6aef68f3c592f71e95bfad5a8f181d54159b5cede12f997c322b415f2d12254"
+      },
+      {
+        "point": 5,
+        "line": 0,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 3,
+        "even_ray": 3,
+        "projector9_sha256": "1da01fcfb85e9ccd4961a29fb542a8184b8683725a51543d974a4bdaaa3aa13e"
+      },
+      {
+        "point": 4,
+        "line": 0,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 1,
+        "even_ray": 1,
+        "projector9_sha256": "10ea1d9dc3f556c68e86b048a320292779f11607273ff14fe82ee0a38a4dca5c"
+      },
+      {
+        "point": 5,
+        "line": 0,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 3,
+        "even_ray": 3,
+        "projector9_sha256": "6ed04f39835359826bf06eeff8c501c38d10d42ed4a508b149b3d27325bf160f"
+      },
+      {
+        "point": 6,
+        "line": 0,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 2,
+        "even_ray": 2,
+        "projector9_sha256": "fcaef22a2aa525d38735577c0de53d34ff969dbb58e3f663b973a89ab4d4ee91"
+      },
+      {
+        "point": 0,
+        "line": 1,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 0,
+        "even_ray": 4,
+        "projector9_sha256": "f94fc54d0686adb8ad44b742bd9304c92dde9034039cf98dac8cec36ea045c13"
+      },
+      {
+        "point": 0,
+        "line": 1,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 0,
+        "even_ray": 4,
+        "projector9_sha256": "fbfeed071da818bd069009ba836d8b69f7c759109ef778af8c0524e9c5d77fd9"
+      },
+      {
+        "point": 13,
+        "line": 1,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 4,
+        "even_ray": 5,
+        "projector9_sha256": "10e58232febaa19866be900d05b6fec766e109903bf2b0e53756b40f48bb308c"
+      },
+      {
+        "point": 15,
+        "line": 1,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 5,
+        "even_ray": 6,
+        "projector9_sha256": "1799373c5ebe38d5d8c44a0c92eafe4affff5d1af2a6bbb7ecd341f4c626c64a"
+      },
+      {
+        "point": 14,
+        "line": 1,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 6,
+        "even_ray": 7,
+        "projector9_sha256": "28a04a07f79c187c9b8d65fb36204302f7673b6ec06244cce1e264b294bdaabb"
+      },
+      {
+        "point": 13,
+        "line": 1,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 4,
+        "even_ray": 5,
+        "projector9_sha256": "cd984a269f7bf1c8533026a8180b62618f56cd4781af9570c76b8ff8f04c988b"
+      },
+      {
+        "point": 14,
+        "line": 1,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 6,
+        "even_ray": 7,
+        "projector9_sha256": "c9d84703a04dc269adf4e90dcf96c58af22ee6ce4aba6b3b9f0bda6439092714"
+      },
+      {
+        "point": 15,
+        "line": 1,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 5,
+        "even_ray": 6,
+        "projector9_sha256": "b3b6273081afff4fd8f52b6a6221bbd8367d40319e3df64c1fd4df39ebd48473"
+      },
+      {
+        "point": 0,
+        "line": 2,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 0,
+        "even_ray": 8,
+        "projector9_sha256": "f1d3dc7f1d8c89454739a98ee04e5e206e53df265b6102ac1c6c62fc34e8c102"
+      },
+      {
+        "point": 0,
+        "line": 2,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 0,
+        "even_ray": 8,
+        "projector9_sha256": "6f79139e9434681594dc28e92ca763f656bdb505b76b4b40eb5a957a3ffecda7"
+      },
+      {
+        "point": 22,
+        "line": 2,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 7,
+        "even_ray": 9,
+        "projector9_sha256": "04bd40c88d6d8f131d1ea7daeb7af457baa33765cfd8de2eb2dfffbacf31cc96"
+      },
+      {
+        "point": 24,
+        "line": 2,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 8,
+        "even_ray": 10,
+        "projector9_sha256": "8a8ec3752b22814a8d19ef2d88f5e4f3659986a5bdac8bb3373cbc474ffe33ec"
+      },
+      {
+        "point": 23,
+        "line": 2,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 9,
+        "even_ray": 11,
+        "projector9_sha256": "1e7bc603a34f24e3c0a08a262aef17953559c277b6a142e48e58f69012f832fa"
+      },
+      {
+        "point": 22,
+        "line": 2,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 7,
+        "even_ray": 9,
+        "projector9_sha256": "43ca8d87158a4ea82a3f765ad428a2ffdc45d23a88652cceac833d4b6b5c7fb1"
+      },
+      {
+        "point": 23,
+        "line": 2,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 9,
+        "even_ray": 11,
+        "projector9_sha256": "eb3bc9801b202ae59e57287301fb94e2035671436a9f5df23bcd2dcce0ac6dcd"
+      },
+      {
+        "point": 24,
+        "line": 2,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 8,
+        "even_ray": 10,
+        "projector9_sha256": "bbbfbed88a6d04eb7d94ba87fa3e468713a08bd0c19a5b0b29abeb3fb06784fb"
+      },
+      {
+        "point": 0,
+        "line": 3,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 0,
+        "even_ray": 12,
+        "projector9_sha256": "910773532fc8ca02075a410424df77280b4f5aeedd05e46318aaf48455bfefd7"
+      },
+      {
+        "point": 0,
+        "line": 3,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 0,
+        "even_ray": 12,
+        "projector9_sha256": "048302dbe2c33196f740b39a36fd9f098fa22ec455248683ceb97d586f6e2433"
+      },
+      {
+        "point": 31,
+        "line": 3,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 10,
+        "even_ray": 13,
+        "projector9_sha256": "f649f2b8e13398508ddbf45c4ab5744f1c05dd7f23db8b83abb9600439411718"
+      },
+      {
+        "point": 33,
+        "line": 3,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 11,
+        "even_ray": 14,
+        "projector9_sha256": "2bf8dd0f89d7fc45f6e084e609c8d1b55d87ade9df5a6733b14ca7035c0cdf0b"
+      },
+      {
+        "point": 32,
+        "line": 3,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 12,
+        "even_ray": 15,
+        "projector9_sha256": "8fbb5c3873350b5ab3ebd2d85d55deefa3f265a221fadacce70ed3c7d8c14937"
+      },
+      {
+        "point": 31,
+        "line": 3,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 10,
+        "even_ray": 13,
+        "projector9_sha256": "06cc17208aef48c4b30d4655a1f94c406e8ff7fbfcb1cf3578d7941db839ac71"
+      },
+      {
+        "point": 32,
+        "line": 3,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 12,
+        "even_ray": 15,
+        "projector9_sha256": "8d573b5f7df391819527be97b625720c85bb20181dbbc5c0d6198007e4ac08fb"
+      },
+      {
+        "point": 33,
+        "line": 3,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 11,
+        "even_ray": 14,
+        "projector9_sha256": "789178d26f5758a321fdbd81406517d699901335aeb8ab87c70cbf5ea0350bb2"
+      },
+      {
+        "point": 1,
+        "line": 4,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 13,
+        "even_ray": 16,
+        "projector9_sha256": "b30cd70b516f124db762ef8866827044c17f86b00c4c1dd21c4b0c7b642b6f44"
+      },
+      {
+        "point": 1,
+        "line": 4,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 13,
+        "even_ray": 16,
+        "projector9_sha256": "a2705589d3897518fb8ce0e55fc20da199d54dae40c0bcde24dac3fa59991a33"
+      },
+      {
+        "point": 4,
+        "line": 4,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 1,
+        "even_ray": 17,
+        "projector9_sha256": "ce29613f9b8067236c71f8b8a2da2559999d439e479fbc5e0b8ee1fff8ab45c9"
+      },
+      {
+        "point": 10,
+        "line": 4,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 14,
+        "even_ray": 18,
+        "projector9_sha256": "44a02e3eea17eb7b193505a9311344c81b56b3304c9e9aab8ddb1e78d817a307"
+      },
+      {
+        "point": 7,
+        "line": 4,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 15,
+        "even_ray": 19,
+        "projector9_sha256": "73e854eb0f84dcc90f64a4744082acb319311c7c212c8c762537037e386faaa3"
+      },
+      {
+        "point": 4,
+        "line": 4,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 1,
+        "even_ray": 17,
+        "projector9_sha256": "f572c93eaf3fe64d056bb60c4b978aa31a866182c7867996383cb0c4cf9313ab"
+      },
+      {
+        "point": 7,
+        "line": 4,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 15,
+        "even_ray": 19,
+        "projector9_sha256": "6390b2837b0b25d0c0bd1aded106ce446528f06e60dfd0c47511bc12bb3115d3"
+      },
+      {
+        "point": 10,
+        "line": 4,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 14,
+        "even_ray": 18,
+        "projector9_sha256": "265e87b6426dff50e1fd5a324918151be95b6925e259a804e072499d31411832"
+      },
+      {
+        "point": 1,
+        "line": 5,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 13,
+        "even_ray": 20,
+        "projector9_sha256": "64e33e6a1be13701c8332a4afb21166a7f81007a8021835bd690ea6e1e1b8a69"
+      },
+      {
+        "point": 1,
+        "line": 5,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 13,
+        "even_ray": 20,
+        "projector9_sha256": "b3e0c590b3ac41dccbfef152eb94348e2c04eb447395604295f2af579e3a4936"
+      },
+      {
+        "point": 13,
+        "line": 5,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 4,
+        "even_ray": 21,
+        "projector9_sha256": "246592924ec08892929c39fa1054b4fa4895b7811bd5bc7e8c82f95acbccb3a0"
+      },
+      {
+        "point": 19,
+        "line": 5,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 16,
+        "even_ray": 22,
+        "projector9_sha256": "fe219d1db0ec7754bb02808b6539d9a3802a53ec8000c32cd12261757e1b288a"
+      },
+      {
+        "point": 16,
+        "line": 5,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 17,
+        "even_ray": 23,
+        "projector9_sha256": "2881f8cdaf2b89dcb344c6ccd92012dc2aa20e9096d5d8f7120df1fb6d5ea7b3"
+      },
+      {
+        "point": 13,
+        "line": 5,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 4,
+        "even_ray": 21,
+        "projector9_sha256": "f28f53fdd09234d8b8d797e239aaf34efbeb46339cc6d87543d198ac7dc6de2e"
+      },
+      {
+        "point": 16,
+        "line": 5,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 17,
+        "even_ray": 23,
+        "projector9_sha256": "4115af0ab28aa144bd635af1845a0b37dbd26e55bf745d71ff1bafd59e2eb37a"
+      },
+      {
+        "point": 19,
+        "line": 5,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 16,
+        "even_ray": 22,
+        "projector9_sha256": "dd83bd0ef50ee912ae4b826d2c0fda231b698fba86f1da0f6231a2885002b45f"
+      },
+      {
+        "point": 1,
+        "line": 6,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 13,
+        "even_ray": 24,
+        "projector9_sha256": "cb4fc9b9c9d19f1cd0dea72ea6e753e2d41f3600759d44f65551be95df0e440a"
+      },
+      {
+        "point": 1,
+        "line": 6,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 13,
+        "even_ray": 24,
+        "projector9_sha256": "68b1b94c1b41a614e1fa07d29b1e76b4be478bac821aa9c10bac81655a092fb0"
+      },
+      {
+        "point": 22,
+        "line": 6,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 7,
+        "even_ray": 25,
+        "projector9_sha256": "2bb6f36c1d890ed4f6fa8e795e97c71b37bcf6694c9847d80fb834b2c855a026"
+      },
+      {
+        "point": 28,
+        "line": 6,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 18,
+        "even_ray": 26,
+        "projector9_sha256": "0b762dabcdfc7e0abf6e4b54a0d752a4e58b2bbb410b7dc3720eee9274fa4c77"
+      },
+      {
+        "point": 25,
+        "line": 6,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 19,
+        "even_ray": 27,
+        "projector9_sha256": "f602f2c873cd13a798f5d0be912cd8d8ec862010a98833623b74cd0626c339e2"
+      },
+      {
+        "point": 22,
+        "line": 6,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 7,
+        "even_ray": 25,
+        "projector9_sha256": "c5d103da9d5e482b4a01cae3b99dfc1d35f54a2f46a6524dd4f8d9358c1461ab"
+      },
+      {
+        "point": 25,
+        "line": 6,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 19,
+        "even_ray": 27,
+        "projector9_sha256": "e1fbf97f860fea3fc9dc48f12f4d5a82b032ea69c8eb5c99adff5dd509de65d5"
+      },
+      {
+        "point": 28,
+        "line": 6,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 18,
+        "even_ray": 26,
+        "projector9_sha256": "eafb8ded04d9dddc94eb8e64b5d143c2bb7e7703f6da2c7073d21173584db7d5"
+      },
+      {
+        "point": 1,
+        "line": 7,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 13,
+        "even_ray": 28,
+        "projector9_sha256": "c6771d48490eda0b37f4191d0fc50d610616fabddbb9573a29a355a2efac8cfd"
+      },
+      {
+        "point": 1,
+        "line": 7,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 13,
+        "even_ray": 28,
+        "projector9_sha256": "c6a7387391fc5bf9aa9f39cabb968f593c55c3fcf6fb00b167aaf95f280c7812"
+      },
+      {
+        "point": 31,
+        "line": 7,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 10,
+        "even_ray": 29,
+        "projector9_sha256": "37cdd67640bcfcc7f42200f9d2ed01c87beb1682328001fc3e726102030dd5a2"
+      },
+      {
+        "point": 37,
+        "line": 7,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 20,
+        "even_ray": 30,
+        "projector9_sha256": "c69b229658396a9eb295df5288bcd4d1553001daae4cfe9eacb2ebf1248e4dd6"
+      },
+      {
+        "point": 34,
+        "line": 7,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 21,
+        "even_ray": 31,
+        "projector9_sha256": "9b2a989f38d2b173853cdc7b19bdcadf7a2f2aa5f43fb35a5a27b9af915b950b"
+      },
+      {
+        "point": 31,
+        "line": 7,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 10,
+        "even_ray": 29,
+        "projector9_sha256": "f07cce7c61ced5f96a48f2eeda59037b1e55549106c919f1d017cb59a52e7abc"
+      },
+      {
+        "point": 34,
+        "line": 7,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 21,
+        "even_ray": 31,
+        "projector9_sha256": "f1e340ef294960a546734f096c815e1cbfaed5b27bd974f1fc2d8cd3e78e2fbd"
+      },
+      {
+        "point": 37,
+        "line": 7,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 20,
+        "even_ray": 30,
+        "projector9_sha256": "74077d167d24fae25419917b0a328a01042a87ac0b7aefe837a317ceba567eca"
+      },
+      {
+        "point": 2,
+        "line": 8,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 22,
+        "even_ray": 32,
+        "projector9_sha256": "7b43cce9ede939341dec78d670535b393325794d0fe2b7db5eeef2abf84bcdea"
+      },
+      {
+        "point": 2,
+        "line": 8,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 22,
+        "even_ray": 32,
+        "projector9_sha256": "aed62ad665122af7f841a46d50349f4ebd52437f30fbe4125ff373919cf68238"
+      },
+      {
+        "point": 4,
+        "line": 8,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 1,
+        "even_ray": 33,
+        "projector9_sha256": "01d7359a7f90cd3424722368c84da0793409f1d39a354845030900a2f80f0fc4"
+      },
+      {
+        "point": 12,
+        "line": 8,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 23,
+        "even_ray": 34,
+        "projector9_sha256": "33e594f8b5d35804509e5753edf03f1689240b922ba77e0344f202333752d202"
+      },
+      {
+        "point": 8,
+        "line": 8,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 24,
+        "even_ray": 35,
+        "projector9_sha256": "178f215db0bf3fac454166c409a7322718792151bb0df0bc733b1d042ea4edc8"
+      },
+      {
+        "point": 4,
+        "line": 8,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 1,
+        "even_ray": 33,
+        "projector9_sha256": "721ad4cfb077c819570e1a020a2e47471818df877b7617640dd8188eeb9ec564"
+      },
+      {
+        "point": 8,
+        "line": 8,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 24,
+        "even_ray": 35,
+        "projector9_sha256": "c32b8ce2cc601a3ee8ad1e5a573c76afc9a45168de0efbf3d49b73b08422c746"
+      },
+      {
+        "point": 12,
+        "line": 8,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 23,
+        "even_ray": 34,
+        "projector9_sha256": "73c23ca614d02aa4b49e4d8c2c03efea1d1399571abb1114c5226ea2b7f94d61"
+      },
+      {
+        "point": 2,
+        "line": 9,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 22,
+        "even_ray": 36,
+        "projector9_sha256": "2e28ef2216912b14c91e76259ec017e7a5313aec22dab571d205ba8aebf4695c"
+      },
+      {
+        "point": 2,
+        "line": 9,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 22,
+        "even_ray": 36,
+        "projector9_sha256": "9f58163a57cdf62a460249c286bc6a7e23d1aea1c053874767f23d7505d2fcd5"
+      },
+      {
+        "point": 13,
+        "line": 9,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 4,
+        "even_ray": 37,
+        "projector9_sha256": "dc21481ae777ac5f572e0b4adf95990846d71b5d3ee767030eaa950ad66f454b"
+      },
+      {
+        "point": 21,
+        "line": 9,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 25,
+        "even_ray": 38,
+        "projector9_sha256": "e05ffaa09d0fc202256a875cb906abbeecc37ada370b393420df8aad21ce5233"
+      },
+      {
+        "point": 17,
+        "line": 9,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 26,
+        "even_ray": 39,
+        "projector9_sha256": "b9e00411e16d02e7cda64b889b2330758a28807da70ed3eb24a66f2b4b99b058"
+      },
+      {
+        "point": 13,
+        "line": 9,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 4,
+        "even_ray": 37,
+        "projector9_sha256": "433b7a817a0b6222cb17e16d3a8cc95af14b49ecc433aa571ed5e82cf689ff99"
+      },
+      {
+        "point": 17,
+        "line": 9,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 26,
+        "even_ray": 39,
+        "projector9_sha256": "71cbbf3e559ab6b3b9c47c6225ccde6fa032e461ba142d04f22650ba7ad13f1b"
+      },
+      {
+        "point": 21,
+        "line": 9,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 25,
+        "even_ray": 38,
+        "projector9_sha256": "995c7912bc92419be263691e47cfe65c750e9a9e6e1fdb169b733fb7bbbd8d0e"
+      },
+      {
+        "point": 2,
+        "line": 10,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 22,
+        "even_ray": 40,
+        "projector9_sha256": "542c1ed18de910ae44ae1dac876b8b07e82ca45c79321b3c53c5f39021827486"
+      },
+      {
+        "point": 2,
+        "line": 10,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 22,
+        "even_ray": 40,
+        "projector9_sha256": "b1ba85d03e960c3fe6580618fc67de79800a0fb224dea25babfbd38709003daf"
+      },
+      {
+        "point": 22,
+        "line": 10,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 7,
+        "even_ray": 41,
+        "projector9_sha256": "83ffc3bf7a1b76571ba5af2a645ee6990b16de7fd4e2da7a61c0bf7ec45b80e1"
+      },
+      {
+        "point": 30,
+        "line": 10,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 27,
+        "even_ray": 42,
+        "projector9_sha256": "f902e8815868e5140dc7aa24a6885d2ab2beceadff1d81d410d7dffc5c60f4da"
+      },
+      {
+        "point": 26,
+        "line": 10,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 28,
+        "even_ray": 43,
+        "projector9_sha256": "50d53efe60db8600c4edba3c796d7770b3d71eee0f42202a1bdc9e8bac542702"
+      },
+      {
+        "point": 22,
+        "line": 10,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 7,
+        "even_ray": 41,
+        "projector9_sha256": "72c40d84bde2c8f1f00e12f525de62985a41b643def23c66bac8dd1684035741"
+      },
+      {
+        "point": 26,
+        "line": 10,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 28,
+        "even_ray": 43,
+        "projector9_sha256": "acfdb6f81adfd3a8c37b06a76170a4282d90af338dcd59faf07a766d0d48b551"
+      },
+      {
+        "point": 30,
+        "line": 10,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 27,
+        "even_ray": 42,
+        "projector9_sha256": "56ed9007bfb4fcb3ea2397c067f537f8abb2dcf40176449144e4c4f30124a910"
+      },
+      {
+        "point": 2,
+        "line": 11,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 22,
+        "even_ray": 44,
+        "projector9_sha256": "ea6cbf0a4648d540997a2346f938aa100a9b4179fb5ff4f7dc6bc23145aee5ec"
+      },
+      {
+        "point": 2,
+        "line": 11,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 22,
+        "even_ray": 44,
+        "projector9_sha256": "17784402b3141cd37d3728bfd577d15e2a7a62e25693c9e1a703fc04c0b63c0b"
+      },
+      {
+        "point": 31,
+        "line": 11,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 10,
+        "even_ray": 45,
+        "projector9_sha256": "63903b6fb885ae60f6541f3d338b0b02dc9d4a7105828ce927212b98d8cf70f4"
+      },
+      {
+        "point": 39,
+        "line": 11,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 29,
+        "even_ray": 46,
+        "projector9_sha256": "c4b2d8504cba50be87488116f78b858d86ea9649357e9a6b5b6923fbf627fc96"
+      },
+      {
+        "point": 35,
+        "line": 11,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 30,
+        "even_ray": 47,
+        "projector9_sha256": "623b980438bd88845b2ebc048a28037496e098ec24acecb71e16f8d3bbd4acaa"
+      },
+      {
+        "point": 31,
+        "line": 11,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 10,
+        "even_ray": 45,
+        "projector9_sha256": "46a752acc30c3e75af276a9b399bc541196128bd9be8a246f3901f29b9d7f0de"
+      },
+      {
+        "point": 35,
+        "line": 11,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 30,
+        "even_ray": 47,
+        "projector9_sha256": "4fffa42648df8df08159cb48d87238df9ac3ad1b9b5ff8889e6af57279c98322"
+      },
+      {
+        "point": 39,
+        "line": 11,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 29,
+        "even_ray": 46,
+        "projector9_sha256": "901d2ecc35870616c393fdc8b66989d3a053a2618cb600a7e5d6ba43786580f4"
+      },
+      {
+        "point": 3,
+        "line": 12,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 31,
+        "even_ray": 48,
+        "projector9_sha256": "473a9d723b57853f6257aa723477fe20ddbb4ab01ea43005611f60fdcbff407a"
+      },
+      {
+        "point": 3,
+        "line": 12,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 31,
+        "even_ray": 48,
+        "projector9_sha256": "6ec7033eccf123026eec9eadcdb1c19792d2d689cf5434557c56252e1d4e5409"
+      },
+      {
+        "point": 4,
+        "line": 12,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 1,
+        "even_ray": 49,
+        "projector9_sha256": "ec10441eb0658de0c861f16ae5c4c139f8e9c5068dc10194b3937b3960d19bbb"
+      },
+      {
+        "point": 11,
+        "line": 12,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 32,
+        "even_ray": 50,
+        "projector9_sha256": "2a14e3173d38ec9acb66471b1b7a791debbcbbd0cee4570018e1ca4b282a8363"
+      },
+      {
+        "point": 9,
+        "line": 12,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 33,
+        "even_ray": 51,
+        "projector9_sha256": "10a16d7f3f175ca28a222c416677536a8ef03a88d307c9355b9e5e2ca5d3ce77"
+      },
+      {
+        "point": 4,
+        "line": 12,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 1,
+        "even_ray": 49,
+        "projector9_sha256": "100a045f7a3aeddf7e1c9fa29187e0b5d4d0d07dca0ea217fb132ba8958b3bdd"
+      },
+      {
+        "point": 9,
+        "line": 12,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 33,
+        "even_ray": 51,
+        "projector9_sha256": "71479fbaf5782089d157217b19bba8d48a1d7f017ef4b1b96d9c4d4898cfa409"
+      },
+      {
+        "point": 11,
+        "line": 12,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 32,
+        "even_ray": 50,
+        "projector9_sha256": "3a5eb801b7d2ae82aea0476ca9620aa554810ceafdcfed0bc5fd27a895234eec"
+      },
+      {
+        "point": 3,
+        "line": 13,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 31,
+        "even_ray": 52,
+        "projector9_sha256": "32f422d1036aa147848699b5e97295d53334e95ed49469e0e963d3694f2b046b"
+      },
+      {
+        "point": 3,
+        "line": 13,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 31,
+        "even_ray": 52,
+        "projector9_sha256": "cb3485779decc379fef45d5e424a7e31bf4a91054331efe081dc251d12a3b1ef"
+      },
+      {
+        "point": 13,
+        "line": 13,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 4,
+        "even_ray": 53,
+        "projector9_sha256": "bd5367fae3c3db4db57b9fa75b33cbdb258977272b25d604baa67e28c97e71ef"
+      },
+      {
+        "point": 20,
+        "line": 13,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 34,
+        "even_ray": 54,
+        "projector9_sha256": "3239c6f0adfcd244b34adde8d73c29bb44e0a4155c3bd96fab1dc2eaa542473b"
+      },
+      {
+        "point": 18,
+        "line": 13,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 35,
+        "even_ray": 55,
+        "projector9_sha256": "8e2cce22fa95663aff7e0e337a993f5d6e49da11f376174aa72db195053f991e"
+      },
+      {
+        "point": 13,
+        "line": 13,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 4,
+        "even_ray": 53,
+        "projector9_sha256": "87e83fd78cde04ba6b7ea7c31cb2aa373b188ee360c6132231754e3f0c3958de"
+      },
+      {
+        "point": 18,
+        "line": 13,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 35,
+        "even_ray": 55,
+        "projector9_sha256": "f76fcc2f9cd504e7d4e5e362c1785c2af0354223bc1419759b7856e5f980a82b"
+      },
+      {
+        "point": 20,
+        "line": 13,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 34,
+        "even_ray": 54,
+        "projector9_sha256": "fa3b297853d5f2d47d1ff86499ebd0e44660d10c499d4b1c036c090baaada867"
+      },
+      {
+        "point": 3,
+        "line": 14,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 31,
+        "even_ray": 56,
+        "projector9_sha256": "63dd43ed5cc3db41a884d857519a0e60c2099b394c7be138ed8e09ff936a96f3"
+      },
+      {
+        "point": 3,
+        "line": 14,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 31,
+        "even_ray": 56,
+        "projector9_sha256": "5efcb72bc5945446842b4e92f7c8048debde20d952956aff827babc7cdac9b8e"
+      },
+      {
+        "point": 22,
+        "line": 14,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 7,
+        "even_ray": 57,
+        "projector9_sha256": "bf5c5647e387cba57c5f8a7193ec81f7f8379d21e6ab03b2eaf5d246d3acb395"
+      },
+      {
+        "point": 29,
+        "line": 14,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 36,
+        "even_ray": 58,
+        "projector9_sha256": "85521ee9af5ba6c8f18bed1afd78ab4b50b79d71f1a6d5d19f1a305c418f634f"
+      },
+      {
+        "point": 27,
+        "line": 14,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 37,
+        "even_ray": 59,
+        "projector9_sha256": "8da00f293633bc13b056b76b6b8504cc25408ac8224b2a0036a68faa60f1e1f7"
+      },
+      {
+        "point": 22,
+        "line": 14,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 7,
+        "even_ray": 57,
+        "projector9_sha256": "9e6e226fbb0fce49f61ce61466e54068e146090f8cfe6079176e8a8ee9c3fc8d"
+      },
+      {
+        "point": 27,
+        "line": 14,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 37,
+        "even_ray": 59,
+        "projector9_sha256": "73a318907288cd7fdae15cfc0dd6475ee84fce413466399acf5ec3f7ebae5862"
+      },
+      {
+        "point": 29,
+        "line": 14,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 36,
+        "even_ray": 58,
+        "projector9_sha256": "2a159bbec660676f03f87d787dab91a4b69b7875de9b22f0f422c7c1ed595934"
+      },
+      {
+        "point": 3,
+        "line": 15,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 31,
+        "even_ray": 60,
+        "projector9_sha256": "aedc74bb51b4935548e0cfdd23f0e1a3454eccddcd4ea0b51f9023ca1068877b"
+      },
+      {
+        "point": 3,
+        "line": 15,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 31,
+        "even_ray": 60,
+        "projector9_sha256": "d432d69e142a25622d4051ad29b0b914d610cd5ac185f6c1a02a0187ad28e7f1"
+      },
+      {
+        "point": 31,
+        "line": 15,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 10,
+        "even_ray": 61,
+        "projector9_sha256": "bafd2009ab71c43af7557efaf63dfdcc79b980c5e9bb9b4dbee80f534816cbfb"
+      },
+      {
+        "point": 38,
+        "line": 15,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 38,
+        "even_ray": 62,
+        "projector9_sha256": "c658a9ad6ae2b724c10c6cd7e1585ad4a8834045f0db5963dfc68db304f2355f"
+      },
+      {
+        "point": 36,
+        "line": 15,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 39,
+        "even_ray": 63,
+        "projector9_sha256": "30d908841fd1cdcdf89b4bcf742c3bbe9a29c67e6b6b5a704fe8e9ae60b5d278"
+      },
+      {
+        "point": 31,
+        "line": 15,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 10,
+        "even_ray": 61,
+        "projector9_sha256": "0783929cfc13ce60817132ef05750478bbcede8ecb8b9f0d758e03bf67142567"
+      },
+      {
+        "point": 36,
+        "line": 15,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 39,
+        "even_ray": 63,
+        "projector9_sha256": "212c1394eb21319ede1a77d4598d438d96558a3b39204f1d2d0826df0b2a3476"
+      },
+      {
+        "point": 38,
+        "line": 15,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 38,
+        "even_ray": 62,
+        "projector9_sha256": "4b642b16772243ff4b9431dbc028018933b03aff01dd20d011295be859801c7b"
+      },
+      {
+        "point": 5,
+        "line": 16,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 3,
+        "even_ray": 64,
+        "projector9_sha256": "c00f45a206f01c0cfe1a02159012dffdffccb75691fbaa78539fbd8f1fcabd3b"
+      },
+      {
+        "point": 5,
+        "line": 16,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 3,
+        "even_ray": 64,
+        "projector9_sha256": "b48427981d76083cbd2806f2de73a439bb7a58a3b092db17e1a7d632d6f1e18c"
+      },
+      {
+        "point": 19,
+        "line": 16,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 16,
+        "even_ray": 65,
+        "projector9_sha256": "64250746f205b781f3303ee7378f3b60ba491bc316bd2cc37e53e997078d0786"
+      },
+      {
+        "point": 39,
+        "line": 16,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 29,
+        "even_ray": 66,
+        "projector9_sha256": "790dfaf8f98f7e906f3484d2c2688c1eb90af9c4361bbf86e2fcb5bbc6e99f83"
+      },
+      {
+        "point": 29,
+        "line": 16,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 36,
+        "even_ray": 67,
+        "projector9_sha256": "7a7feb32c8c9adc861bdbc574145fcaceb95e34cfb7aa26e60f3f38d994a0354"
+      },
+      {
+        "point": 19,
+        "line": 16,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 16,
+        "even_ray": 65,
+        "projector9_sha256": "ce0bea28bb5a795a31f5028163d70b04ed6a73e947a77beef7c6135af69c0de3"
+      },
+      {
+        "point": 29,
+        "line": 16,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 36,
+        "even_ray": 67,
+        "projector9_sha256": "2ee769904d672424912e8b57629d03e0bd80c6b2c33229765b657218b110ec2e"
+      },
+      {
+        "point": 39,
+        "line": 16,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 29,
+        "even_ray": 66,
+        "projector9_sha256": "4c8871f82ca47685746796125bc1825e52d50f48cfec63deac4f5a40fef98373"
+      },
+      {
+        "point": 5,
+        "line": 17,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 3,
+        "even_ray": 68,
+        "projector9_sha256": "2fc3c8d5a80b46346ebffbbd3bf07119edbd37645f7472c83ce121a061995509"
+      },
+      {
+        "point": 5,
+        "line": 17,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 3,
+        "even_ray": 68,
+        "projector9_sha256": "9d2df686a8a3c90a21d36cae28a1425f43c413aa9bdd514189ad5fccc6225bd4"
+      },
+      {
+        "point": 20,
+        "line": 17,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 34,
+        "even_ray": 69,
+        "projector9_sha256": "13a0a2382b71e2142aeecfa7948e25b9e4ed692bd7539ea81cc197085223bbca"
+      },
+      {
+        "point": 37,
+        "line": 17,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 20,
+        "even_ray": 70,
+        "projector9_sha256": "021428224405e5222365e9aa8603cfc9197aebd95f6b7e04bea65e633afb380e"
+      },
+      {
+        "point": 30,
+        "line": 17,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 27,
+        "even_ray": 71,
+        "projector9_sha256": "2d6a3dd59295691ff3a746223284601e95755a4623df7cd22352bd4a91290c34"
+      },
+      {
+        "point": 20,
+        "line": 17,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 34,
+        "even_ray": 69,
+        "projector9_sha256": "f9631f39c677c8aee0c297b9a94dc8c8bed4f17eaf105695fa8773ab1f2a0490"
+      },
+      {
+        "point": 30,
+        "line": 17,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 27,
+        "even_ray": 71,
+        "projector9_sha256": "890dfd4fcbdd50ba347a3fcd11f03a2714313e0401e81aa4a8dd46111c0b257d"
+      },
+      {
+        "point": 37,
+        "line": 17,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 20,
+        "even_ray": 70,
+        "projector9_sha256": "480bab2ab7a86a6fee1a5448a6215b5090b89f3451806e58331d3567b2e3f905"
+      },
+      {
+        "point": 5,
+        "line": 18,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 3,
+        "even_ray": 72,
+        "projector9_sha256": "3198e3bb65eb08f640d96c2f8fb6a47a8016b840429dfecd2426ac9050e3cdf2"
+      },
+      {
+        "point": 5,
+        "line": 18,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 3,
+        "even_ray": 72,
+        "projector9_sha256": "b21c41b8608a4dc2f98ae4a6005df30e3592a64922c6aedbd0e858718d72fd94"
+      },
+      {
+        "point": 21,
+        "line": 18,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 25,
+        "even_ray": 73,
+        "projector9_sha256": "ce5f748abe10740164d188599f1ebe0092e82531db566c059a6a2b54b3ae3425"
+      },
+      {
+        "point": 38,
+        "line": 18,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 38,
+        "even_ray": 74,
+        "projector9_sha256": "e8fb0f8ef74b5e16e83ad01e251fbbc03f017c4c9909f2e124f57ef9ffe504ed"
+      },
+      {
+        "point": 28,
+        "line": 18,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 18,
+        "even_ray": 75,
+        "projector9_sha256": "c102f7397c4bdbdad7fa8c23ddff2cf7c6757d0593cf0e2a85b223d37f92359d"
+      },
+      {
+        "point": 21,
+        "line": 18,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 25,
+        "even_ray": 73,
+        "projector9_sha256": "7e9a26f4d0c09be6b6ee19d99399129af7bc1c95ff984930fcf52c8d9a82c084"
+      },
+      {
+        "point": 28,
+        "line": 18,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 18,
+        "even_ray": 75,
+        "projector9_sha256": "c453ccfea6438646d0914188c68e1489883141e1784536fe7b601387c5a91236"
+      },
+      {
+        "point": 38,
+        "line": 18,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 38,
+        "even_ray": 74,
+        "projector9_sha256": "366708d12eb49623d54fd6410087f46486c7c8f38178aaaf672d1d0424a4bf20"
+      },
+      {
+        "point": 6,
+        "line": 19,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 2,
+        "even_ray": 76,
+        "projector9_sha256": "7187dceac6f2e76210dcb3abb8698fb7f1a5d433a5c81968d57cc7b38fdac1ef"
+      },
+      {
+        "point": 6,
+        "line": 19,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 2,
+        "even_ray": 76,
+        "projector9_sha256": "b4de2d0c6e19dc1e5b4025a45d1b4afbb7f41aef106566462459ffaa5d9042f9"
+      },
+      {
+        "point": 16,
+        "line": 19,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 17,
+        "even_ray": 77,
+        "projector9_sha256": "9dbc5ae6dc8957fac81079f4a1ac1cc6cfa3dbbf8924d80735b0d5348e479d8a"
+      },
+      {
+        "point": 35,
+        "line": 19,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 30,
+        "even_ray": 78,
+        "projector9_sha256": "5464f6d9ec41951fb3c26b05d3a537d36095f496e8d244a453277a24ae8ee4dd"
+      },
+      {
+        "point": 27,
+        "line": 19,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 37,
+        "even_ray": 79,
+        "projector9_sha256": "c7572a68105c247aa581425aa4bce1bcbd73698bda706fb67e6ea838611c47c4"
+      },
+      {
+        "point": 16,
+        "line": 19,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 17,
+        "even_ray": 77,
+        "projector9_sha256": "f6e554ae8cc713357742ba53911bbc5e49db6190ca4975a466048f41ef69c171"
+      },
+      {
+        "point": 27,
+        "line": 19,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 37,
+        "even_ray": 79,
+        "projector9_sha256": "1cf50f6a3d6efd3909cbb4b376c99f116a4231389cf3a23a88b66c9b32afe1ec"
+      },
+      {
+        "point": 35,
+        "line": 19,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 30,
+        "even_ray": 78,
+        "projector9_sha256": "c5724bf33fd399464a25e8fadd1755988c89d9254a87cfa13f51e9ae52ccfb67"
+      },
+      {
+        "point": 6,
+        "line": 20,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 2,
+        "even_ray": 80,
+        "projector9_sha256": "14e90e44639018f73ed312b191e54c73207cced02d84a5bec8829bf30d7d41c9"
+      },
+      {
+        "point": 6,
+        "line": 20,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 2,
+        "even_ray": 80,
+        "projector9_sha256": "304afe3858e0a6046ceb523768708b1ec4fff1fa1a74bf2e2c6fae7e4e7e0a86"
+      },
+      {
+        "point": 17,
+        "line": 20,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 26,
+        "even_ray": 81,
+        "projector9_sha256": "ad7d8e62967deb602c3181ded52c4a180ef76fe3e35b7870aa25dae609244486"
+      },
+      {
+        "point": 36,
+        "line": 20,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 39,
+        "even_ray": 82,
+        "projector9_sha256": "8752682af2c492a143649da110a16a441646e9981dc475875c1565a7176f107b"
+      },
+      {
+        "point": 25,
+        "line": 20,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 19,
+        "even_ray": 83,
+        "projector9_sha256": "c115ef4b2048d4d34fca0070cca1031ec74fd63cc5fb07bd8abcb8f7a7b2abba"
+      },
+      {
+        "point": 17,
+        "line": 20,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 26,
+        "even_ray": 81,
+        "projector9_sha256": "f572164aedfecb872dfc18cd5985c8e5e15d12d8f9aa997f4d7bf643010eeb9c"
+      },
+      {
+        "point": 25,
+        "line": 20,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 19,
+        "even_ray": 83,
+        "projector9_sha256": "0e2675cfee99d373c4d20a9ec45cb24ffaa5df492f6ae01390f584aa497f7d8f"
+      },
+      {
+        "point": 36,
+        "line": 20,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 39,
+        "even_ray": 82,
+        "projector9_sha256": "7052c0e4b7464888edf6993e9c86e98011cf931735d348c27a305313929a36ef"
+      },
+      {
+        "point": 6,
+        "line": 21,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 2,
+        "even_ray": 84,
+        "projector9_sha256": "2b237bef4ad664c6786654a06b9896a11ea7976311cbfbf2b11a9a2dfc9a6c75"
+      },
+      {
+        "point": 6,
+        "line": 21,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 2,
+        "even_ray": 84,
+        "projector9_sha256": "ae98ecfcaefc18f2a2c7a76e1788ff35639c3213a395731008a81521aca73768"
+      },
+      {
+        "point": 18,
+        "line": 21,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 35,
+        "even_ray": 85,
+        "projector9_sha256": "aa45a57755d34258ba26e5514cbdc354f0551721ef919ac80d352b3e6bada9cc"
+      },
+      {
+        "point": 34,
+        "line": 21,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 21,
+        "even_ray": 86,
+        "projector9_sha256": "8559c63fec93f5df02c32f45bd12a47cc7cfca158c293b88781d0ce221d8d1f2"
+      },
+      {
+        "point": 26,
+        "line": 21,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 28,
+        "even_ray": 87,
+        "projector9_sha256": "d7fae864a81c8a695ff5d3dd222ad44dbf819a6ba683c592d95053de6a7a4909"
+      },
+      {
+        "point": 18,
+        "line": 21,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 35,
+        "even_ray": 85,
+        "projector9_sha256": "7f20b65ae3e8702acf39d8ffdaa56943f61edc47203e24161e4eddd56ce87878"
+      },
+      {
+        "point": 26,
+        "line": 21,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 28,
+        "even_ray": 87,
+        "projector9_sha256": "f818f1774c8131edfdef5c3933104b829418d9ca6c5c11fa0552a2e19d03b543"
+      },
+      {
+        "point": 34,
+        "line": 21,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 21,
+        "even_ray": 86,
+        "projector9_sha256": "3b2392add064fc08324c40d0500882a0ce5d9517efacebc9146b423666f0fe14"
+      },
+      {
+        "point": 7,
+        "line": 22,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 15,
+        "even_ray": 88,
+        "projector9_sha256": "0f915a8aaa6d633dbfb3b72cecf63fa6c88332c3c7ee4513f3964fc3716ca471"
+      },
+      {
+        "point": 7,
+        "line": 22,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 15,
+        "even_ray": 88,
+        "projector9_sha256": "7c5b8c177cc5baff5e56399c507ad6b3663552774b36fe873528887417529a4f"
+      },
+      {
+        "point": 14,
+        "line": 22,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 6,
+        "even_ray": 89,
+        "projector9_sha256": "90a30b9dfdfc2a7b028f8cc7c73593dc921ed6fa29d7abd9593a06049ae29949"
+      },
+      {
+        "point": 38,
+        "line": 22,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 38,
+        "even_ray": 90,
+        "projector9_sha256": "8901e3ce08d8463563093a5f497da0cd10aa7bbab266369089987083e3b38964"
+      },
+      {
+        "point": 26,
+        "line": 22,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 28,
+        "even_ray": 91,
+        "projector9_sha256": "54fc7457e9816d0c7e256ac5b2229cd0d29a089d4db59f3826d7210ac0316c44"
+      },
+      {
+        "point": 14,
+        "line": 22,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 6,
+        "even_ray": 89,
+        "projector9_sha256": "30d0172d8e532833362b5b3f3e1714bf9c36e6212a4e7b17ab76b8d3bce9cc87"
+      },
+      {
+        "point": 26,
+        "line": 22,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 28,
+        "even_ray": 91,
+        "projector9_sha256": "2a5c027f4a429e2aad8258cb59ef3f90707db305d98336877427e6b905dd216e"
+      },
+      {
+        "point": 38,
+        "line": 22,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 38,
+        "even_ray": 90,
+        "projector9_sha256": "76606e804102ee5a76782e03b1aa1956587a03ae0883c38deb41b26d4885868c"
+      },
+      {
+        "point": 7,
+        "line": 23,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 15,
+        "even_ray": 92,
+        "projector9_sha256": "e3201f1fcfc6c864d7c2f1c141a9cfbacff96022248bcae0ef5dfd32331df58d"
+      },
+      {
+        "point": 7,
+        "line": 23,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 15,
+        "even_ray": 92,
+        "projector9_sha256": "19f8336723b4f45aa0f3a9f65facad382c5a56b3433a6ffa451c36ad602edb46"
+      },
+      {
+        "point": 17,
+        "line": 23,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 26,
+        "even_ray": 93,
+        "projector9_sha256": "9b9fbb30cccc5926b612e6ca489044be4593bb3a5d4537dd32135bdd92845b6b"
+      },
+      {
+        "point": 32,
+        "line": 23,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 12,
+        "even_ray": 94,
+        "projector9_sha256": "44ebded69bc9aab089cbe1ab4a02f99665e46b4691ecc46c091bfc1dc2b3d3ce"
+      },
+      {
+        "point": 29,
+        "line": 23,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 36,
+        "even_ray": 95,
+        "projector9_sha256": "dcf4638cb4057ae11f798dde917259d518a6b28980a3515eef622c768b648e80"
+      },
+      {
+        "point": 17,
+        "line": 23,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 26,
+        "even_ray": 93,
+        "projector9_sha256": "94a1de14806de5a1cd88d7b287d92d9d2a8d398f89e3afcb40037a0dfbca1cc4"
+      },
+      {
+        "point": 29,
+        "line": 23,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 36,
+        "even_ray": 95,
+        "projector9_sha256": "b155048a369d701e92f183b7ed80e0d7aee9c6f2b140bd4226127e6a94e50b07"
+      },
+      {
+        "point": 32,
+        "line": 23,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 12,
+        "even_ray": 94,
+        "projector9_sha256": "c61903b2771423e8db3557740715f5ebe872b08676a9d31cac3a746e52320b28"
+      },
+      {
+        "point": 7,
+        "line": 24,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 15,
+        "even_ray": 96,
+        "projector9_sha256": "4a0cc680bd1f55301b8fa6d286158182732f57ec22a17885bf2c10b47da5e960"
+      },
+      {
+        "point": 7,
+        "line": 24,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 15,
+        "even_ray": 96,
+        "projector9_sha256": "0d4d0c6a0511d42b93bb7936592d419fc2044c5f25152fd838fb4249e420cfe5"
+      },
+      {
+        "point": 20,
+        "line": 24,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 34,
+        "even_ray": 97,
+        "projector9_sha256": "8722467547fe66d856a96338d86897f2dc9a492932b4c96cbf802582ea650b9b"
+      },
+      {
+        "point": 35,
+        "line": 24,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 30,
+        "even_ray": 98,
+        "projector9_sha256": "6e411eaf1ea92c07d8b1fa16900d281cd4640ba8e065c911b35f8308db274a51"
+      },
+      {
+        "point": 23,
+        "line": 24,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 9,
+        "even_ray": 99,
+        "projector9_sha256": "5b2c91f53ae4db158c08cc8f520ad1326473a482b60291901a095c7434dbc27d"
+      },
+      {
+        "point": 20,
+        "line": 24,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 34,
+        "even_ray": 97,
+        "projector9_sha256": "088b2b05e1a00a1f7b4b2c41d259af13bfc1e1036e9b6ed1e88b6e1e389a2d0b"
+      },
+      {
+        "point": 23,
+        "line": 24,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 9,
+        "even_ray": 99,
+        "projector9_sha256": "3a28ade22fc50fb39e92bf747b928d75fb3358e7faa0763c97883df4ea0b2676"
+      },
+      {
+        "point": 35,
+        "line": 24,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 30,
+        "even_ray": 98,
+        "projector9_sha256": "d76a5d6eda155513a3eb61f703bb63023cc11aafc05cb06291ea192d96a8b8e7"
+      },
+      {
+        "point": 8,
+        "line": 25,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 24,
+        "even_ray": 100,
+        "projector9_sha256": "04701c2cdf5b055e43d3554a3e18ee8cbb5de0df93fd5ed4979b0b29026b0a82"
+      },
+      {
+        "point": 8,
+        "line": 25,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 24,
+        "even_ray": 100,
+        "projector9_sha256": "a182c5f8f9bcf08bc52fc3951dbf6fce8a5f7271320254cf0d3401f2146a5f97"
+      },
+      {
+        "point": 14,
+        "line": 25,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 6,
+        "even_ray": 101,
+        "projector9_sha256": "ad1a9e02804dcfe551d342395131bcdf4af187b3df939cef467e059926008e20"
+      },
+      {
+        "point": 37,
+        "line": 25,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 20,
+        "even_ray": 102,
+        "projector9_sha256": "0bffca9c2c0d46077ff1b4e1fdee6417a1aeaff18889258fe68d44d807324903"
+      },
+      {
+        "point": 27,
+        "line": 25,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 37,
+        "even_ray": 103,
+        "projector9_sha256": "977f894a9873b5c96917ffd41052fa7192868838ecdda1e5718a4e7813c90fb1"
+      },
+      {
+        "point": 14,
+        "line": 25,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 6,
+        "even_ray": 101,
+        "projector9_sha256": "5893c00ed80f63d8f9914400b2ff0340c3866cd2b54b682dd529814e1e92f7b3"
+      },
+      {
+        "point": 27,
+        "line": 25,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 37,
+        "even_ray": 103,
+        "projector9_sha256": "bc42d203392dd04ac9e55e8bf56a97627ab546cefe8fd36bdfe0b0f06cf665a3"
+      },
+      {
+        "point": 37,
+        "line": 25,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 20,
+        "even_ray": 102,
+        "projector9_sha256": "cb40843039b2d67dea50fa37142a7d28b5e4df0259dbd323c776a6593d863eae"
+      },
+      {
+        "point": 8,
+        "line": 26,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 24,
+        "even_ray": 104,
+        "projector9_sha256": "76cff80e693f1fbeab79bcc682815bdaa6dbed08a8a74cf6f3283b58f1640d46"
+      },
+      {
+        "point": 8,
+        "line": 26,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 24,
+        "even_ray": 104,
+        "projector9_sha256": "f796d04ae29b8e5a22d64852f6389b391c4db4810516594b751d656333f097e3"
+      },
+      {
+        "point": 18,
+        "line": 26,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 35,
+        "even_ray": 105,
+        "projector9_sha256": "98dfee19c32ac0a07c66a33332b5c910b247f4b3328c893859dd466db12eb638"
+      },
+      {
+        "point": 32,
+        "line": 26,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 12,
+        "even_ray": 106,
+        "projector9_sha256": "390473a665881c716fe3185d59d8bb9e635ca75ab1cfdb79d859fdcf017c8938"
+      },
+      {
+        "point": 28,
+        "line": 26,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 18,
+        "even_ray": 107,
+        "projector9_sha256": "e55beb554503e093b9188e42cba81258d72e3b282a1e8f9359a995f0de1843ef"
+      },
+      {
+        "point": 18,
+        "line": 26,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 35,
+        "even_ray": 105,
+        "projector9_sha256": "946386a5b7cdb4c9c1b285a19015579544a83a276556e642a714cfee48be39d2"
+      },
+      {
+        "point": 28,
+        "line": 26,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 18,
+        "even_ray": 107,
+        "projector9_sha256": "3c1003658d01eb2942091ac37d5c914fc96cf5983ba381cfc9ae836326da54ba"
+      },
+      {
+        "point": 32,
+        "line": 26,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 12,
+        "even_ray": 106,
+        "projector9_sha256": "17f4df3f7148b3e2bbea0ccc14650a47d27b2cf7a3baee8b35c72c1d0c65ed2f"
+      },
+      {
+        "point": 8,
+        "line": 27,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 24,
+        "even_ray": 108,
+        "projector9_sha256": "ef9193f4913ff3b949d12be39c2b799821b8d2c83397b1ba96498317652e22db"
+      },
+      {
+        "point": 8,
+        "line": 27,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 24,
+        "even_ray": 108,
+        "projector9_sha256": "4a18ed207b012cbf7b3151ed057c00773249934b85a4cd1e77df6c577dae4d6c"
+      },
+      {
+        "point": 19,
+        "line": 27,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 16,
+        "even_ray": 109,
+        "projector9_sha256": "30ada0fe937bc812dc29fb5b442a9543c8fc7853485e670c7666b3c1ceba4d2d"
+      },
+      {
+        "point": 36,
+        "line": 27,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 39,
+        "even_ray": 110,
+        "projector9_sha256": "34643abc8e33d410896d23beced1b35723e5347132f7d30f22972bd53d33bc02"
+      },
+      {
+        "point": 23,
+        "line": 27,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 9,
+        "even_ray": 111,
+        "projector9_sha256": "9506945c6a2d7de7fe37b01ebcf58123964fcde225121d2a7bf87e19e463940d"
+      },
+      {
+        "point": 19,
+        "line": 27,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 16,
+        "even_ray": 109,
+        "projector9_sha256": "2a7a08f8f4ac305df81872d398ba18badfaff225cd9315369311327db16c966e"
+      },
+      {
+        "point": 23,
+        "line": 27,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 9,
+        "even_ray": 111,
+        "projector9_sha256": "9654be592225cf2d31322e4757f2beea58a6295c3e8eb82b7f00f4985559d027"
+      },
+      {
+        "point": 36,
+        "line": 27,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 39,
+        "even_ray": 110,
+        "projector9_sha256": "77071b50754aa7d4ef34552f56aa5617cce6ee57e8990d90a306bbea248a14ff"
+      },
+      {
+        "point": 9,
+        "line": 28,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 33,
+        "even_ray": 112,
+        "projector9_sha256": "067fba7b9d5128f3a2169e1af114d957a9ac77d3a9f7ba5e6c209c1d3e395a6b"
+      },
+      {
+        "point": 9,
+        "line": 28,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 33,
+        "even_ray": 112,
+        "projector9_sha256": "661eaf3a761394feb4b04a99c478bdd1322ae9066f2c515643407b5634c1adef"
+      },
+      {
+        "point": 14,
+        "line": 28,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 6,
+        "even_ray": 113,
+        "projector9_sha256": "a7c51b3a7e7a5c31f0a63ca423f0fe2ceeb34210656e8119bfc37c7b4907bded"
+      },
+      {
+        "point": 39,
+        "line": 28,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 29,
+        "even_ray": 114,
+        "projector9_sha256": "9bc137379b785e4f0ccbd28ecf0ccff034cb9fa7fd2775f29431f2b5ca89c510"
+      },
+      {
+        "point": 25,
+        "line": 28,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 19,
+        "even_ray": 115,
+        "projector9_sha256": "783385c61c32dac7fb8d4197b9d325891967217c45467e3c2ffe9b44bd8d98a4"
+      },
+      {
+        "point": 14,
+        "line": 28,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 6,
+        "even_ray": 113,
+        "projector9_sha256": "0609e719d0757facd7a16eea3533438c07b1b29438e0760bf5d42bc98f3a081e"
+      },
+      {
+        "point": 25,
+        "line": 28,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 19,
+        "even_ray": 115,
+        "projector9_sha256": "7053c3e51adadb9f1ef72cc74c0b48abf31016ed395663e5de77731ad4369028"
+      },
+      {
+        "point": 39,
+        "line": 28,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 29,
+        "even_ray": 114,
+        "projector9_sha256": "bd7f22cdd9d1338e110285116a1ec2be97575c6cf86ee0e0b8f596710cf06bf8"
+      },
+      {
+        "point": 9,
+        "line": 29,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 33,
+        "even_ray": 116,
+        "projector9_sha256": "ebbac37807b97e437ac5469b3fec5f26cc6c8b850a465348d34cb2b88092de17"
+      },
+      {
+        "point": 9,
+        "line": 29,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 33,
+        "even_ray": 116,
+        "projector9_sha256": "9535de19b3142b60dd7627dec037e82ca8c9ac6bf6f37ac23a4ab15c3a461908"
+      },
+      {
+        "point": 16,
+        "line": 29,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 17,
+        "even_ray": 117,
+        "projector9_sha256": "b2849e03b7ba0239b5c99d1e09e4bbf7ec9099a73e876a03147636c1f5231f60"
+      },
+      {
+        "point": 32,
+        "line": 29,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 12,
+        "even_ray": 118,
+        "projector9_sha256": "9cf7f320a59900045623f8dfbb18d8b33b14a06b2bd988d240c5a199530f084c"
+      },
+      {
+        "point": 30,
+        "line": 29,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 27,
+        "even_ray": 119,
+        "projector9_sha256": "c00d4476adaab3ee86cc29ffaedce11a0d4d70f9a33fd74f297966e78725b746"
+      },
+      {
+        "point": 16,
+        "line": 29,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 17,
+        "even_ray": 117,
+        "projector9_sha256": "146f38712df79641b004f46f0f40e693ebb18d8b1865b7e73d43cb74dfec06e3"
+      },
+      {
+        "point": 30,
+        "line": 29,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 27,
+        "even_ray": 119,
+        "projector9_sha256": "f99af99efc8d8a5ad6b8c3169462303e141b66c8f0b3f5007ff67b2af7630170"
+      },
+      {
+        "point": 32,
+        "line": 29,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 12,
+        "even_ray": 118,
+        "projector9_sha256": "acd9f8dcab8a74a02dbbfc2e864bb322165d3bd58d80703f050cc2a66f952a74"
+      },
+      {
+        "point": 9,
+        "line": 30,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 33,
+        "even_ray": 120,
+        "projector9_sha256": "faa0351d3c5eaa4d8b3e1f6e808afe6c8b19dbcec77588099ed0afccfd70d6af"
+      },
+      {
+        "point": 9,
+        "line": 30,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 33,
+        "even_ray": 120,
+        "projector9_sha256": "a4b6bd33fab3d7d94c6479d90cbfd19deecd4705ec585b50ccafe5131971bb2b"
+      },
+      {
+        "point": 21,
+        "line": 30,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 25,
+        "even_ray": 121,
+        "projector9_sha256": "a17934343fbdf6e53b28f7302b1675b3418176ddffbc96f36e6c409fd0ccdc01"
+      },
+      {
+        "point": 34,
+        "line": 30,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 21,
+        "even_ray": 122,
+        "projector9_sha256": "ea6faace7c397e1c418a4bad82c040b2cd0a626637967f1ec3a1d428d86443e5"
+      },
+      {
+        "point": 23,
+        "line": 30,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 9,
+        "even_ray": 123,
+        "projector9_sha256": "397a4a67e9ce9f7fe97a17f82de486ca6f8d91b756a8d9330c40a2744c8ac83f"
+      },
+      {
+        "point": 21,
+        "line": 30,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 25,
+        "even_ray": 121,
+        "projector9_sha256": "bda3ff59e879a7a18149752a00fa2f3aaeb9d63dd374face1747859be24634b2"
+      },
+      {
+        "point": 23,
+        "line": 30,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 9,
+        "even_ray": 123,
+        "projector9_sha256": "6d3d7ce596c3dc524af724873325add0bdf73ddf4f52627b8e0e6b7794a3821b"
+      },
+      {
+        "point": 34,
+        "line": 30,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 21,
+        "even_ray": 122,
+        "projector9_sha256": "ce7416ab68d137b95664a24d4fc76ff188d6761e533c3a151e43f73e0d93a3a0"
+      },
+      {
+        "point": 10,
+        "line": 31,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 14,
+        "even_ray": 124,
+        "projector9_sha256": "90f042c9a4a3f2dc68f13fa7a47c67e73778ddc878fd19f3ff5526f34b6aa428"
+      },
+      {
+        "point": 10,
+        "line": 31,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 14,
+        "even_ray": 124,
+        "projector9_sha256": "75ea691b9ca9374c4d1659df7a28fc97dabccc55084a5f0c0e5167ca00da5474"
+      },
+      {
+        "point": 15,
+        "line": 31,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 5,
+        "even_ray": 125,
+        "projector9_sha256": "1dcf9ccad6da199fa236cbd3ed2b94379a66dec6fce2cd9909a00682af0f6f16"
+      },
+      {
+        "point": 36,
+        "line": 31,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 39,
+        "even_ray": 126,
+        "projector9_sha256": "3833cae309687b1e4fe18bab4996a6dfd79e9f83608d948d5f7a3c30982c1923"
+      },
+      {
+        "point": 30,
+        "line": 31,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 27,
+        "even_ray": 127,
+        "projector9_sha256": "05668af7fad1a8fd81a0a8ec8a261827d49794b19c83955115a61a7e82a0de2f"
+      },
+      {
+        "point": 15,
+        "line": 31,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 5,
+        "even_ray": 125,
+        "projector9_sha256": "c77e67896cf72257cf306f8a8946e26faee13ff686dde9616bf91d90fe77e907"
+      },
+      {
+        "point": 30,
+        "line": 31,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 27,
+        "even_ray": 127,
+        "projector9_sha256": "ab875152e39ba6b6fb337dc0a271cd77e9f9879b1cfaffcb21760b638ae9ad0b"
+      },
+      {
+        "point": 36,
+        "line": 31,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 39,
+        "even_ray": 126,
+        "projector9_sha256": "917f09c94083365fb0a6db8404ef325d01fc06341080ef38376236f036fbf160"
+      },
+      {
+        "point": 10,
+        "line": 32,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 14,
+        "even_ray": 128,
+        "projector9_sha256": "417970df05bf2c1dedfbd6185bcdd31efd3df9ac45d0c8632b72c4a28bb33f98"
+      },
+      {
+        "point": 10,
+        "line": 32,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 14,
+        "even_ray": 128,
+        "projector9_sha256": "c7b34bfc7985f196b55a457f490d1e6b4e975136692f84cd8f64951f5700150a"
+      },
+      {
+        "point": 18,
+        "line": 32,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 35,
+        "even_ray": 129,
+        "projector9_sha256": "7493efabecf4625aab958645a747eb9aaed94695adce9169469c91fd9fc95134"
+      },
+      {
+        "point": 39,
+        "line": 32,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 29,
+        "even_ray": 130,
+        "projector9_sha256": "e941cc6d12969ecd48ce5204092814943e14478cf44bb195c72cb52e3a09b53a"
+      },
+      {
+        "point": 24,
+        "line": 32,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 8,
+        "even_ray": 131,
+        "projector9_sha256": "4060fe49eacf58d78d190c83617b6663c5500dc2e57dbfe511e7394e1ed1784f"
+      },
+      {
+        "point": 18,
+        "line": 32,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 35,
+        "even_ray": 129,
+        "projector9_sha256": "34d4c183e795abfb5320b7e4107f0f067568e4b68bd3436ec99675e6fdbbf61f"
+      },
+      {
+        "point": 24,
+        "line": 32,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 8,
+        "even_ray": 131,
+        "projector9_sha256": "9651bea8a3f44a6486e6bd92f1f6fd8724b36e7c0a749eca4c3c8c65e8a5bb63"
+      },
+      {
+        "point": 39,
+        "line": 32,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 29,
+        "even_ray": 130,
+        "projector9_sha256": "d1d7203be41070fda7f1d5f67a09083e472f5a05f413a903f8aaf3e1b128411e"
+      },
+      {
+        "point": 10,
+        "line": 33,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 14,
+        "even_ray": 132,
+        "projector9_sha256": "ae75c4c3cf0a9ab7efaa1b6978e5b15812a1bf454d4a0cb4e071002c07eb1a22"
+      },
+      {
+        "point": 10,
+        "line": 33,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 14,
+        "even_ray": 132,
+        "projector9_sha256": "e9fea1788cfbe950174ff1d6a5bdbe0fa7e87fe0aa98311094c6de6f8b803397"
+      },
+      {
+        "point": 21,
+        "line": 33,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 25,
+        "even_ray": 133,
+        "projector9_sha256": "c796b20d22fb82420041592c10d5c1c9335086f3224b3bd59f2dc68289b9828a"
+      },
+      {
+        "point": 33,
+        "line": 33,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 11,
+        "even_ray": 134,
+        "projector9_sha256": "f828dd6905efb7387a50cadef751c4841decd7d68f485eb485e87f0ab16f5d87"
+      },
+      {
+        "point": 27,
+        "line": 33,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 37,
+        "even_ray": 135,
+        "projector9_sha256": "751c99a49f181ec59bd18d84ce11468c58185c22d358f656fbee146a85b752a8"
+      },
+      {
+        "point": 21,
+        "line": 33,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 25,
+        "even_ray": 133,
+        "projector9_sha256": "832b47ce7796ec54797bdcb369f41cfa4702f36c5ec84abc0626b7d4c00a4f77"
+      },
+      {
+        "point": 27,
+        "line": 33,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 37,
+        "even_ray": 135,
+        "projector9_sha256": "5318957a8668f83e57123e2316533a6501019ba89e7faebfd1b487158a9a90e2"
+      },
+      {
+        "point": 33,
+        "line": 33,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 11,
+        "even_ray": 134,
+        "projector9_sha256": "86fca52600f1d379d84c4f9d62f3480f9b19b0e3b05f4eadc14fe61e7d73bd49"
+      },
+      {
+        "point": 11,
+        "line": 34,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 32,
+        "even_ray": 136,
+        "projector9_sha256": "9e8c3b8af06c5d6fcabc78d45b9b7480935aaae8c490beb7383b881d92456192"
+      },
+      {
+        "point": 11,
+        "line": 34,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 32,
+        "even_ray": 136,
+        "projector9_sha256": "451c9791dd49da93bbbd3810a074c6e9b78941d376ed6a52d4a3f52576ffb9c3"
+      },
+      {
+        "point": 15,
+        "line": 34,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 5,
+        "even_ray": 137,
+        "projector9_sha256": "f94588beb1ca129cf40ae18da74d08e73834df85c5e577597fbc612d2d561145"
+      },
+      {
+        "point": 35,
+        "line": 34,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 30,
+        "even_ray": 138,
+        "projector9_sha256": "1fc491ed02b7afbd84ecee4c9797f20d5f6be41ead2ac19e37b26fbe83234e0f"
+      },
+      {
+        "point": 28,
+        "line": 34,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 18,
+        "even_ray": 139,
+        "projector9_sha256": "a47bf2d0fe2d57de41498e46ed3bd0366dcfb4c22e6cc5d59dbd727d0be289ba"
+      },
+      {
+        "point": 15,
+        "line": 34,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 5,
+        "even_ray": 137,
+        "projector9_sha256": "78146b5aafcd6a63430a1cd306ac795b7f57ea8b7472577f0ef368f44a0eed32"
+      },
+      {
+        "point": 28,
+        "line": 34,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 18,
+        "even_ray": 139,
+        "projector9_sha256": "8e2cb0fa427114229f1c87ba8408a49bab8300b3cd3194afbf8a86cda0b5cc8b"
+      },
+      {
+        "point": 35,
+        "line": 34,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 30,
+        "even_ray": 138,
+        "projector9_sha256": "cec37bea4c6c2dd3176e4661f5c27a93a17023306317286c36a5e5a30a1555fa"
+      },
+      {
+        "point": 11,
+        "line": 35,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 32,
+        "even_ray": 140,
+        "projector9_sha256": "5f20b2b820fd89e30006c01af4d09a88a50e74be2edd59c24b43fc8692f4fde3"
+      },
+      {
+        "point": 11,
+        "line": 35,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 32,
+        "even_ray": 140,
+        "projector9_sha256": "ce8c1de9c8c6af8214863d612d5f980569b636aff21b0ba29f596e0d5b0936d0"
+      },
+      {
+        "point": 17,
+        "line": 35,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 26,
+        "even_ray": 141,
+        "projector9_sha256": "bc5bff07a2df1bc8626315b6253349c81e5e4c86c0a18b5a4f1a7f0860ee44f9"
+      },
+      {
+        "point": 37,
+        "line": 35,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 20,
+        "even_ray": 142,
+        "projector9_sha256": "b993697a992f3dc39039f279e8cfb2494ec0d2ff9a2daa8681e06e4e0eac52cc"
+      },
+      {
+        "point": 24,
+        "line": 35,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 8,
+        "even_ray": 143,
+        "projector9_sha256": "6cb4d838a976a400f7232078f3ee45e77d7c5f7d6fca5a13451ab520d77a6174"
+      },
+      {
+        "point": 17,
+        "line": 35,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 26,
+        "even_ray": 141,
+        "projector9_sha256": "8cefe3d9671ef2004ef5c514b3fb49ed1770e0d3357b319b6be9dbe262d4dbbf"
+      },
+      {
+        "point": 24,
+        "line": 35,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 8,
+        "even_ray": 143,
+        "projector9_sha256": "e4fdd5877e2076b2a4485dd06cd7b8539b590a577a42231706e4c6a5500de87a"
+      },
+      {
+        "point": 37,
+        "line": 35,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 20,
+        "even_ray": 142,
+        "projector9_sha256": "cf182e685127f35fc917bd43d7ed50f491efaccc1ac8e19fbf275229193d5d73"
+      },
+      {
+        "point": 11,
+        "line": 36,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 32,
+        "even_ray": 144,
+        "projector9_sha256": "b6a6f383b24a5ea3c470136067329a33c033b94f40a9fe2a3d8fc37280eb2581"
+      },
+      {
+        "point": 11,
+        "line": 36,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 32,
+        "even_ray": 144,
+        "projector9_sha256": "ecb22d84bf6ba58569c4e349e5c0096d7e2b391365b89b629b08e7a8839558c7"
+      },
+      {
+        "point": 19,
+        "line": 36,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 16,
+        "even_ray": 145,
+        "projector9_sha256": "09d7458271279482adc6ac49b97320b055a80e1e595843f5452475003076cb07"
+      },
+      {
+        "point": 33,
+        "line": 36,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 11,
+        "even_ray": 146,
+        "projector9_sha256": "ca75e182070abf8bd693387e57ccdc56422c899ec51b7b4acceec7655a6053f8"
+      },
+      {
+        "point": 26,
+        "line": 36,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 28,
+        "even_ray": 147,
+        "projector9_sha256": "e280fb189741aaf9093957ad66d0094aa96447f9b2f2f891e76b674383fe4159"
+      },
+      {
+        "point": 19,
+        "line": 36,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 16,
+        "even_ray": 145,
+        "projector9_sha256": "359f4cb2c0ae7a81d87de4ca19770a6fda254c2172a2923790289329c3962354"
+      },
+      {
+        "point": 26,
+        "line": 36,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 28,
+        "even_ray": 147,
+        "projector9_sha256": "87c462953725a63b44a166a57dfce93c1b353a44f74d641c6777f5bd82134e92"
+      },
+      {
+        "point": 33,
+        "line": 36,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 11,
+        "even_ray": 146,
+        "projector9_sha256": "ca0b3cc413894c503665ddb3804de99993cffb400a4458c6b3522459497ade2b"
+      },
+      {
+        "point": 12,
+        "line": 37,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 23,
+        "even_ray": 148,
+        "projector9_sha256": "b44d909c2f4fadfc28c153d2ab26b7a10e1584704333825141fd56bb3a72600a"
+      },
+      {
+        "point": 12,
+        "line": 37,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 23,
+        "even_ray": 148,
+        "projector9_sha256": "191a8188f570543455e1d40039a4ef4a91eebcc2901745be4d9c6dbad00dd96b"
+      },
+      {
+        "point": 15,
+        "line": 37,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 5,
+        "even_ray": 149,
+        "projector9_sha256": "533e9d2f6cfec8dcf28483d5997149ce1b9bda017c9b04e9bba2910cc3d85669"
+      },
+      {
+        "point": 34,
+        "line": 37,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 21,
+        "even_ray": 150,
+        "projector9_sha256": "73720102a38a8e5c530b1af0434f6684598164b0287d6946c78287dd50818df9"
+      },
+      {
+        "point": 29,
+        "line": 37,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 36,
+        "even_ray": 151,
+        "projector9_sha256": "fa4cbac107816f8d10a6be9995bf41a1f5be8fcbd554d86a02f8a50c9c0529ac"
+      },
+      {
+        "point": 15,
+        "line": 37,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 5,
+        "even_ray": 149,
+        "projector9_sha256": "19639e3c06b2616aa239d1c95bd232e0ddb2b8e9aca941eeea9797374d4f4955"
+      },
+      {
+        "point": 29,
+        "line": 37,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 36,
+        "even_ray": 151,
+        "projector9_sha256": "31802efed87b9e16695051bf4d7f78e176bf3a9b41872ac40e15ec3ea32f1db6"
+      },
+      {
+        "point": 34,
+        "line": 37,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 21,
+        "even_ray": 150,
+        "projector9_sha256": "8c9af17118d655089233d4975fdf193caae4cb7bb3d141153d1df07afac05c5b"
+      },
+      {
+        "point": 12,
+        "line": 38,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 23,
+        "even_ray": 152,
+        "projector9_sha256": "530f361f6e4ac355477d9ccc0ae57b161b8a8eb416124b011f32f3e3b8441b8f"
+      },
+      {
+        "point": 12,
+        "line": 38,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 23,
+        "even_ray": 152,
+        "projector9_sha256": "00ba6773f250d0425388d2f6b2c1eb12f9f872fe125afe5e5f8683be9e0cbcec"
+      },
+      {
+        "point": 16,
+        "line": 38,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 17,
+        "even_ray": 153,
+        "projector9_sha256": "80b20d4db78f295ab9dec7a7ad04ab874846e81729ed89bd57e7c5b01bc7f9ab"
+      },
+      {
+        "point": 38,
+        "line": 38,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 38,
+        "even_ray": 154,
+        "projector9_sha256": "aaa25f9315d466d953f3e4cdcc3d1d6bc60b496776adc65fa958f395814d797c"
+      },
+      {
+        "point": 24,
+        "line": 38,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 8,
+        "even_ray": 155,
+        "projector9_sha256": "0a9974ebba96880ae8b88aacc28034ef6e10ad6a9738061dcd47ed64266c3560"
+      },
+      {
+        "point": 16,
+        "line": 38,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 17,
+        "even_ray": 153,
+        "projector9_sha256": "3ff5ecfaaa8d8ab2364b3516240690dd24c0cd193f22e13d6f17b4941a1b2dca"
+      },
+      {
+        "point": 24,
+        "line": 38,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 8,
+        "even_ray": 155,
+        "projector9_sha256": "37a5265b9d72a01e3db1162c97f524b51364ee8bba2ba1fae1b6641ec8da6053"
+      },
+      {
+        "point": 38,
+        "line": 38,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 38,
+        "even_ray": 154,
+        "projector9_sha256": "a169f7633d09e40fbf3ff5d01e59a1fbd526c770d9cd05efec6ba83319e3facc"
+      },
+      {
+        "point": 12,
+        "line": 39,
+        "character": [
+          0,
+          1
+        ],
+        "odd_ray": 23,
+        "even_ray": 156,
+        "projector9_sha256": "56e02ef490b1dd4fca49e4996dc2dfe3f394e0731338f4be4fcbf8b09b77312b"
+      },
+      {
+        "point": 12,
+        "line": 39,
+        "character": [
+          0,
+          2
+        ],
+        "odd_ray": 23,
+        "even_ray": 156,
+        "projector9_sha256": "1ca35ea37b826fac9469b4ea62f733df7c1589fb90f7a42f1335e18c8ae17c35"
+      },
+      {
+        "point": 20,
+        "line": 39,
+        "character": [
+          1,
+          0
+        ],
+        "odd_ray": 34,
+        "even_ray": 157,
+        "projector9_sha256": "985d9e6eb7413fc2a379dd25265030e6b4c016a91cf370a28342c8ccd9df6151"
+      },
+      {
+        "point": 33,
+        "line": 39,
+        "character": [
+          1,
+          1
+        ],
+        "odd_ray": 11,
+        "even_ray": 158,
+        "projector9_sha256": "2c7e54523c6527d90af84a4195429115d9ebfc282070de4d8fd0f3f370f01827"
+      },
+      {
+        "point": 25,
+        "line": 39,
+        "character": [
+          1,
+          2
+        ],
+        "odd_ray": 19,
+        "even_ray": 159,
+        "projector9_sha256": "d9482ac7bee3d1767cd2cd4be59f37250dd2d3f62dfa0f06357b3a5c5168258e"
+      },
+      {
+        "point": 20,
+        "line": 39,
+        "character": [
+          2,
+          0
+        ],
+        "odd_ray": 34,
+        "even_ray": 157,
+        "projector9_sha256": "5fefd496e1ccb529bcd7983d5060d3bc3c88adea8c890c97489312bb1daaaa90"
+      },
+      {
+        "point": 25,
+        "line": 39,
+        "character": [
+          2,
+          1
+        ],
+        "odd_ray": 19,
+        "even_ray": 159,
+        "projector9_sha256": "2abe5d7a760a8877249b511934bcd805293a24e2c5d70160458f3508ac926b09"
+      },
+      {
+        "point": 33,
+        "line": 39,
+        "character": [
+          2,
+          2
+        ],
+        "odd_ray": 11,
+        "even_ray": 158,
+        "projector9_sha256": "63f807460e8edb620f49389c3058606e3645bb47717674f8804f0f0fdc4afb00"
+      }
+    ],
+    "scope": "Exact projective flag-to-parity-projection map, not three chiral fermion generations."
+  },
+  "11722": {
+    "status": "PASS",
+    "potential": "Vparent+23/8+(||psi||^2-1)^2+(27/8)||psi||^8-S4(psi)+||f-sqrt3 Odag psi||^2",
+    "global_minimum": 0,
+    "all320_exact_projective_chirality_vacua_lift": true,
+    "numeric_zero_control": 6.661338147750939e-15,
+    "pure_odd_maximum_S4": 6.105053341547435e-59,
+    "odd_projection_max_Maschke_norm": 1.0918600212701822e-15,
+    "phase_law": "S4((e+exp(i theta)o)/sqrt2)=(27 cos(theta)^4+9 sin(theta)^4)/8",
+    "fields_real": 56,
+    "charges": "f1,q2,z4,psi1; the even companion is new and has charge1",
+    "hessian": [
+      -2.352598641881573e-14,
+      -1.2557525734462594e-14,
+      -6.048809740641682e-15,
+      5.9726963756508466e-15,
+      1.4638540772657338e-14,
+      0.04990723205167843,
+      0.04990723205168538,
+      0.7910728847398141,
+      0.7910728847398212,
+      0.9999999999999799,
+      1.0000000000000102,
+      1.000000000000015,
+      1.0000000000000402,
+      1.9194687581902945,
+      1.9276709427510892,
+      1.9280984932983936,
+      1.9280984932983982,
+      1.9483295292302303,
+      1.9483295292302307,
+      2.6833892602790805,
+      3.9999999999999964,
+      4.000000000000013,
+      4.000000000000017,
+      4.0000000000000275,
+      4.341797043343548,
+      5.471523767692442,
+      6.543677412718332,
+      6.543677412718334,
+      10.544849751527675,
+      13.180330379178098,
+      13.635771941349297,
+      13.635771941349315,
+      19.478783726288558,
+      26.99999999999997,
+      26.99999999999998,
+      26.999999999999982,
+      27.000000000000004,
+      27.00000000000001,
+      27.000000000000014,
+      27.000000000000018,
+      27.00000000000003,
+      27.198811567355534,
+      33.431041304646186,
+      33.43594284380213,
+      33.43594284380218,
+      33.59879601245825,
+      33.60862407891383,
+      33.60862407891384,
+      57.33782701343231,
+      57.414541637773326,
+      58.77759825438676,
+      58.7775982543868,
+      59.29320266561264,
+      60.28097732950946,
+      60.280977329509504,
+      61.17796616947116
+    ],
+    "positive_directions": 51,
+    "zero_directions": 5,
+    "old_z_cannot_be_even_companion": "The old even5 z has charge4; mixing it directly with charge1 f is not a common-charge quantum state.",
+    "scope": "Global tree minimum of a supplied degree8 EFT; projection is discrete, auxiliary q minima can remain continuous. No inherited full-loop stability or physical Weyl index."
+  },
+  "11723": {
+    "status": "PASS",
+    "joint_root_count": 8,
+    "Cartan_dimension": 8,
+    "unbroken_dimension": 16,
+    "center_rank": 5,
+    "density_matrix_leaves_all_five_U1s": true,
+    "extra_U1_beyond_hypercharge": 4,
+    "vector_criterion": "Y psi=0 is a specified charged-vector criterion, stronger than [Y,rho]=0.",
+    "global_group_obstruction": "omega I9 acts trivially on E8=sl9+Lambda3+dual but nontrivially on C9; the9 does not descend to SU9/Z3.",
+    "distinction": "A quantum Hilbert-space state or projective ray need not be an E8 Higgs field. The density matrix is an adjoint element, but the rank1 SU9 orbit is not a full E8 orbit.",
+    "scope": "An additive physical-interface audit; preserves11708 conditional hypercharge enumeration and the prior holonomy-centralizer scope correction."
+  },
+  "11724": {
+    "status": "PASS",
+    "hidden_levels": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "visible_SU5_levels": [
+      0,
+      1,
+      2,
+      7,
+      8
+    ],
+    "hidden_SU5_generators": "E_i4=trivector of R4 minus i; E_4i=star(E_i4); E_ij=[E_i4,E_4j]",
+    "all625_matrix_unit_relations_residual": 0,
+    "all625_scaled_integer_relations_exact": true,
+    "compact_invariant_norm": "||a||^2=Tr(A dagger A)+x dagger x+k dagger k; star(A,x,k)=(A dagger,-conj(k),-conj(x))",
+    "principal_Jz_diagonal": [
+      "-2/3",
+      "-2/3",
+      "-2/3",
+      "-2/3",
+      "1/3",
+      "4/3",
+      "7/3",
+      "-2/3",
+      "-2/3"
+    ],
+    "principal_SU2_centralizer_dimension": 24,
+    "with_Y6_centralizer_dimension": 12,
+    "hypercharge_Y6": [
+      -2,
+      -2,
+      -2,
+      0,
+      0,
+      0,
+      0,
+      3,
+      3
+    ],
+    "gauge_mass_operator": "sum_a ad(J_a)^2+ad(Y6)^2; overall gauge coupling and vev scales set to1",
+    "exact_gauge_mass_squared_multiplicities": {
+      "0": 12,
+      "2": 3,
+      "6": 23,
+      "7": 60,
+      "11": 12,
+      "12": 7,
+      "16": 42,
+      "20": 9,
+      "21": 28,
+      "22": 30,
+      "25": 12,
+      "42": 10
+    },
+    "exact_spin_and_charge_modules": [
+      {
+        "spin": 2,
+        "Y6": -6,
+        "copies": 1
+      },
+      {
+        "spin": 0,
+        "Y6": -5,
+        "copies": 6
+      },
+      {
+        "spin": 2,
+        "Y6": -4,
+        "copies": 3
+      },
+      {
+        "spin": 1,
+        "Y6": -3,
+        "copies": 2
+      },
+      {
+        "spin": 3,
+        "Y6": -3,
+        "copies": 2
+      },
+      {
+        "spin": 1,
+        "Y6": -2,
+        "copies": 3
+      },
+      {
+        "spin": 3,
+        "Y6": -2,
+        "copies": 3
+      },
+      {
+        "spin": 2,
+        "Y6": -1,
+        "copies": 6
+      },
+      {
+        "spin": 0,
+        "Y6": 0,
+        "copies": 12
+      },
+      {
+        "spin": 1,
+        "Y6": 0,
+        "copies": 1
+      },
+      {
+        "spin": 2,
+        "Y6": 0,
+        "copies": 1
+      },
+      {
+        "spin": 3,
+        "Y6": 0,
+        "copies": 1
+      },
+      {
+        "spin": 4,
+        "Y6": 0,
+        "copies": 1
+      },
+      {
+        "spin": 2,
+        "Y6": 1,
+        "copies": 6
+      },
+      {
+        "spin": 1,
+        "Y6": 2,
+        "copies": 3
+      },
+      {
+        "spin": 3,
+        "Y6": 2,
+        "copies": 3
+      },
+      {
+        "spin": 1,
+        "Y6": 3,
+        "copies": 2
+      },
+      {
+        "spin": 3,
+        "Y6": 3,
+        "copies": 2
+      },
+      {
+        "spin": 2,
+        "Y6": 4,
+        "copies": 3
+      },
+      {
+        "spin": 0,
+        "Y6": 5,
+        "copies": 6
+      },
+      {
+        "spin": 2,
+        "Y6": 6,
+        "copies": 1
+      }
+    ],
+    "numeric_248_spectrum_max_error": 2.842170943040401e-14,
+    "compatible_native_clock": "U=diag(omega on the three colour levels,1 elsewhere)=omega D0; the scalar omega is E8-trivial",
+    "clock_fixed_E8_dimension": 86,
+    "clock_E8_adjoint_trace": 5,
+    "clock_Higgs_mass_operator": "C_J+(AdU-I)dag(AdU-I)",
+    "clock_Higgs_mass_squared_multiplicities": {
+      "0": 12,
+      "2": 15,
+      "3": 12,
+      "5": 18,
+      "6": 15,
+      "9": 90,
+      "12": 35,
+      "15": 42,
+      "20": 9
+    },
+    "exact_clock_mass_law": "j(j+1)+3 when Y6 is nonzero mod3, otherwise j(j+1)",
+    "all_SU5_cubed_identity_clock_classes": [
+      {
+        "SU5_cube_root_multiplicities": [
+          0,
+          1,
+          4
+        ],
+        "E8_adjoint_trace": -4
+      },
+      {
+        "SU5_cube_root_multiplicities": [
+          0,
+          4,
+          1
+        ],
+        "E8_adjoint_trace": -4
+      },
+      {
+        "SU5_cube_root_multiplicities": [
+          1,
+          2,
+          2
+        ],
+        "E8_adjoint_trace": 14
+      },
+      {
+        "SU5_cube_root_multiplicities": [
+          2,
+          0,
+          3
+        ],
+        "E8_adjoint_trace": 5
+      },
+      {
+        "SU5_cube_root_multiplicities": [
+          2,
+          3,
+          0
+        ],
+        "E8_adjoint_trace": 5
+      },
+      {
+        "SU5_cube_root_multiplicities": [
+          3,
+          1,
+          1
+        ],
+        "E8_adjoint_trace": 77
+      },
+      {
+        "SU5_cube_root_multiplicities": [
+          5,
+          0,
+          0
+        ],
+        "E8_adjoint_trace": 248
+      }
+    ],
+    "bounded_clock_Higgs_action": "Vfuzzy+sum_a||AdU Phi_a-Phi_a||^2+||Ad(U^3)-I||^2+|Tr_ad U-5|^2",
+    "exact_clock_branch_selection": "On the principal-SU2 branch and the identity component of its centralizerSU5, the zero conditions force clock multiplicities2+3 and exactly the SM Lie algebra. The conjugacy-class targettrace5 is supplied, not dynamically derived from W33.",
+    "commuting_clocks_only_boundary": "For the original SM-shaped pair, every clock-invariant SM-singlet adjoint lies in its five-dimensional abelian center; such vevs cannot lift any of those U1s. The compatible native clock above has a larger86-dimensional fixed algebra before the Higgs is added.",
+    "scope": "Explicit E8-adjoint rank reduction to the SM Lie algebra, using supplied principal SU2 with Y6 or a compatible native clock. Branch and class selection inputs remain; no chirality, observed masses or spacetime derivation."
+  },
+  "11725": {
+    "status": "PASS",
+    "supplied_nonnegative_renormalizable_action": "sum_ab ||[Phi_a,Phi_b]-i epsilon_abc Phi_c||^2 + sum_a ||[Sigma,Phi_a]||^2 + (||Sigma||^2-30)^2",
+    "zero_energy_configuration": "Phi_a=J_a in hidden SU5; Sigma=Y6 in visible SU5",
+    "exact_flat_family": "Every Sigma in visible su5 with ||Sigma||^2=30 has zero energy at the same Phi.",
+    "Sigma_sphere_dimension": 23,
+    "GG_gauge_orbit_dimension": 12,
+    "GG_extra_Hessian_flat_directions": 11,
+    "generic_Cartan_shape_moduli": 3,
+    "primitive_E8_invariant_degrees": [
+      2,
+      8,
+      12,
+      14,
+      18,
+      20,
+      24,
+      30
+    ],
+    "normalized_Cartan_traces_GG": {
+      "2": "1800",
+      "4": "32400",
+      "6": "810000",
+      "8": "23727600"
+    },
+    "normalized_Cartan_traces_other": {
+      "2": "1800",
+      "4": "32400",
+      "6": "810000",
+      "8": "23862600"
+    },
+    "primitive_trace8_control": "Pure Tr_ad Sigma^8 does distinguish shapes but is not a GG minimizer: the normalized2+2+1 shape has23085000, below GG23727600.",
+    "mixed_degree8_invariant": "I(Phi,Sigma)=Tr_ad[(sum_a ad(Phi_a)^2)^2 ad(Sigma)^4]",
+    "exact_principal_branch_reduction": "I=1080(Tr5 Sigma^2)^2+960 Tr5 Sigma^4",
+    "exact_quartic_shape_bound": "Tr5 Sigma^4 >= (7/30)(Tr5 Sigma^2)^2, equality precisely2+3 eigenvalues",
+    "stationary_two_value_ratios": {
+      "1": "13/20",
+      "2": "7/30"
+    },
+    "stationary_three_value_ratios": [
+      "1/4",
+      "1/2"
+    ],
+    "mixed_minimum_at_norm30": 1173600,
+    "numeric_adjoint_trace_control": 1173600.0,
+    "bounded_completion": "V16=Vren+eta*(I-1304||Sigma||^4)^2, eta>0; every term is nonnegative and the explicit J,Y6 configuration is a zero.",
+    "exact_branch_selection": "On the supplied principal-SU2 branch with [Sigma,J]=0, V16=0 iff Sigma is SU5-conjugate to +/-Y6. Thus this branch has exactly the SM Lie algebra.",
+    "scalar_shape_softness": "The squared selector starts at fourth order in the11 former physical flat directions; it selects the orbit without giving those modes positive quadratic masses.",
+    "remaining_input": "The principal-SU2 embedding branch, scales, coefficients and the added higher-degree interaction are supplied. Other SU2 embedding branches are not excluded; loops, chiral kinetic matter, gravity and vacuum energy remain open.",
+    "scope": "Constructive globally nonnegative degree16 E8xSO3-invariant EFT with exact3+2 selection on its specified principal branch. No UV renormalizability or globally unique physical vacuum is claimed."
+  },
+  "status": "PASS",
+  "source_sha256": "6a0858323145beac689ec756aed92461dd726adf3f957b825b0dceb2e646152e"
+}

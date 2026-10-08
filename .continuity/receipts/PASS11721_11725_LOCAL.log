@@ -1,0 +1,93 @@
+Pass11721-11725 final local verification; no blanket repository-CI or novelty claim.
+Final producer:
+11721 PASS
+11722 PASS
+11723 PASS
+11724 PASS
+11725 PASS
+Final15 regressions:
+...............                                                          [100%]
+15 passed in 73.29s (0:01:13)
+Incoming Claude11680-11712 suites:
+.......................                                                  [100%]
+23 passed in 336.27s (0:05:36)
+Five-file intake; advisory compounds were separately triaged and cited:
+
+========================================================================
+[rediscovery guard] results that already exist elsewhere
+========================================================================
+  analysis/w33_pass11721_11725_coherent_vacuum_gauge_bridge.py
+    a2+weil  ->  PASS214_218_SOURCE_TORSOR_DUAL_OVOID_WEIL_SYNTHESIS.md W33_FOR_EVERYONE.tex analysis/PASS10954_REGULAR_C8_CLOCK_COMPLETION.md (+1)
+  analysis/w33_pass11721_11725_coherent_vacuum_gauge_bridge.py
+    weil+witting  ->  W33_FOR_EVERYONE.tex analysis/PASS11663_ODD_WEIL_NORMAL_MAP.md analysis/PASS11664_11671_KERNEL_DYNAMICS.md (+1)
+  analysis/PASS11721_11725_COHERENT_VACUUM_GAUGE_BRIDGE.md
+    levi+weil  ->  PASS2300_2305_FIVE_FRONTIERS_RELEASE.md W33_FOR_EVERYONE.tex analysis/BT2300_BT2305_five_frontiers.md (+1)
+  analysis/PASS11721_11725_COHERENT_VACUUM_GAUGE_BRIDGE.md
+    levi+witting  ->  PASS1030_EIGHTY_CARRIER_ORIENTATION_OBSTRUCTION.md W33_FOR_EVERYONE.tex analysis/BT1741_BT1744_execution_summary.md (+1)
+  analysis/PASS11721_11725_COHERENT_VACUUM_GAUGE_BRIDGE.md
+    weil+witting  ->  W33_FOR_EVERYONE.tex analysis/PASS11663_ODD_WEIL_NORMAL_MAP.md analysis/PASS11664_11671_KERNEL_DYNAMICS.md (+1)
+
+  These are CANDIDATES, not verdicts -- the same integer recurs
+  legitimately. But Passes 322/323 lost ~19 passes to exactly this,
+  so: open the prior file and READ it (end to end -- Pass 286 shows
+  shallow reads cause retractions) before asserting novelty.
+  Cite the prior art in the file and this warning goes away.
+
+
+[audit] forced arithmetic: none
+[audit] intake clean (5 files)
+Forced arithmetic selftest:
+  selftest -- forced SRG multiplicities and encoding language
+
+    the Aug 18 moonshine claim                       got=True  want=True  ok
+    same SRG, multiplicities stated without interpretation got=True  want=True  ok
+    SRG parameters with no multiplicities recorded   got=False want=False ok
+    multiplicities that do NOT match the closed form got=False want=False ok
+    no SRG data at all                               got=False want=False ok
+    general test is OFF by default (13.91% firing rate, not actionable) got=False want=False ok
+    multiplicities hidden in KEY NAMES, as BT1645 does got=True  want=True  ok
+
+  THE SECOND CASE IS DELIBERATE. Multiplicities matching the closed form are flagged even
+  when the prose is silent, because the flag is about the NUMBERS BEING DERIVED, not about
+  the wording. A later reader is the one at risk of reading meaning into them.
+Final guard; surviving compound candidates remain advisory and their focused owners were inspected:
+
+========================================================================
+[rediscovery guard] results that already exist elsewhere
+========================================================================
+  analysis/w33_pass11721_11725_coherent_vacuum_gauge_bridge.py
+    a2+weil  ->  PASS214_218_SOURCE_TORSOR_DUAL_OVOID_WEIL_SYNTHESIS.md W33_FOR_EVERYONE.tex analysis/PASS10954_REGULAR_C8_CLOCK_COMPLETION.md (+1)
+  analysis/w33_pass11721_11725_coherent_vacuum_gauge_bridge.py
+    weil+witting  ->  W33_FOR_EVERYONE.tex analysis/PASS11663_ODD_WEIL_NORMAL_MAP.md analysis/PASS11664_11671_KERNEL_DYNAMICS.md (+1)
+  analysis/PASS11721_11725_COHERENT_VACUUM_GAUGE_BRIDGE.md
+    levi+weil  ->  analysis/PASS11562_11569_RESERVATION.md
+  analysis/PASS11721_11725_COHERENT_VACUUM_GAUGE_BRIDGE.md
+    levi+witting  ->  analysis/BT4049_BT4056_five_front_outside_box.md
+  analysis/PASS11721_11725_COHERENT_VACUUM_GAUGE_BRIDGE.md
+    weil+witting  ->  analysis/PASS11663_ODD_WEIL_NORMAL_MAP.md analysis/PASS11664_11671_KERNEL_DYNAMICS.md analysis/PASS11672_11679_NATIVE_DYNAMICS_INDEX.md
+
+  These are CANDIDATES, not verdicts -- the same integer recurs
+  legitimately. But Passes 322/323 lost ~19 passes to exactly this,
+  so: open the prior file and READ it (end to end -- Pass 286 shows
+  shallow reads cause retractions) before asserting novelty.
+  Cite the prior art in the file and this warning goes away.
+
+Additional checks: syntax, normalized source binding,248 clock modes, no conflict markers PASS.
+Catalog:11239 files /15870 distinctive results; topical aliases5210files /1092tokens.
+Scope: supplied scalar and E8 gauge models; principal branch and trace5 target input. No physical chirality, observed flavor, spacetime or CC selection.
+Explicit topical alias refresh:
+scanned 5224 files, 1094 tokens
+tokens visible ONLY in opaque filenames: 386
+   cite:Conjecture(1927)  ->  analysis/2026-07-15_pass80_artin_137_uniqueness.md
+   cite:Freudenthal(1954)  ->  analysis/PASS10949_FREUDENTHAL_QUASICONFORMAL_CLOCK_CONE.md
+   cite:Fritz(2010)  ->  analysis/PASS11171_TEMPORAL_CGLMP_LARGE_D.md
+   cite:Heawood(1890)  ->  analysis/w33_pass2045_2049_the_sevens_and_a_numbering_collision.md
+   cite:Hesselink(1980)  ->  analysis/PASS11217_QUBIT_ARROW_LAW.md
+   cite:Huerta(2010)  ->  analysis/PASS10950_CLOCK_ALBERT_LORENTZ_SPINOR.md
+   cite:Kok(2006)  ->  analysis/PASS11556_RESERVATION.md
+   cite:Lam(2008)  ->  analysis/PASS11225_FLAVOUR_FROM_SYMMETRY.md
+   cite:Luo(2018)  ->  analysis/PASS10970_PROJECTIVE_CLOCK_CODE_LATTICE_TOWER.md
+   cite:Mathematics(2022)  ->  analysis/BT2946_BT2952_seven_front_closure.md
+   cite:Mkrtchyan(2025)  ->  analysis/PASS7049_7064_vogel_e6_split_casimir.md
+   cite:Ness(1979)  ->  analysis/PASS10962_HIDDEN_SECTOR_DFLAT_TIERS.md
+wrote TOPICAL_ALIASES.md

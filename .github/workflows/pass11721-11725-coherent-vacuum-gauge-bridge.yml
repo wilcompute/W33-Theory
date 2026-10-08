@@ -1,0 +1,24 @@
+name: Pass11721-11725 coherent vacuum gauge bridge
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - analysis/w33_pass11721_11725_coherent_vacuum_gauge_bridge.py
+      - tests/test_w33_pass11721_11725_coherent_vacuum_gauge_bridge.py
+      - data/w33_pass11721_11725_coherent_vacuum_gauge_bridge.json
+      - .github/workflows/pass11721-11725-coherent-vacuum-gauge-bridge.yml
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest
+      - name: Check frozen coherent and gauge certificate
+        run: OPENBLAS_NUM_THREADS=1 python -m pytest -q tests/test_w33_pass11721_11725_coherent_vacuum_gauge_bridge.py
+      - name: Replay five exact and constructive investigations
+        run: OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11721_11725_coherent_vacuum_gauge_bridge.py
+      - name: Check regenerated coherent and gauge certificate
+        run: OPENBLAS_NUM_THREADS=1 python -m pytest -q tests/test_w33_pass11721_11725_coherent_vacuum_gauge_bridge.py

@@ -10,7 +10,7 @@ to guess: `grep -i gow TOPICAL_ALIASES.md` reaches
 `2026-07-15_pass355_sp43_frobenius_schur.md`, which no search for
 "phase" or "complex structure" ever would.
 
-Files scanned: **5210** · distinct tokens: **1092**
+Files scanned: **5224** · distinct tokens: **1094**
 
 Tokens marked ⚠ appear ONLY in topically opaque filenames (dated or
 numbered), so they are invisible to any topic search — read those first.
@@ -656,6 +656,7 @@ numbered), so they are invisible to any topic search — read those first.
 - `group:SL(4,2)` — [S12_PG32_GRAND_SYNTHESIS.md](docs/archive/S12_PG32_GRAND_SYNTHESIS.md)
 - `group:SU(2,32)` ⚠ — [PASS4950_FALSE_SRG33_W33_QUARANTINE.md](analysis/PASS4950_FALSE_SRG33_W33_QUARANTINE.md)
 - `group:SU(3,3)` — [EXTERNAL_READING_NOTES_JAN28_2026.md](docs/archive/EXTERNAL_READING_NOTES_JAN28_2026.md), [FINAL_TOE_PROOF.md](docs/archive/FINAL_TOE_PROOF.md), [UNIFIED_THEORY_SYNTHESIS.md](docs/archive/UNIFIED_THEORY_SYNTHESIS.md)
+- `group:SU5,p` — [index.html](docs/index.html)
 - `group:Sp(1,1)` ⚠ — [BT1435_BT1437_holonet_insert.tex](analysis/BT1435_BT1437_holonet_insert.tex), [BT1435_BT1437_radius4_quaternionic_electron_audit.md](analysis/BT1435_BT1437_radius4_quaternionic_electron_audit.md)
 - `group:Sp(10,2)` — [PASS11208_ARROW_UNIVERSALITY.md](analysis/PASS11208_ARROW_UNIVERSALITY.md), [404.html](docs/404.html), [exceptional-geometry-41a8d733.html](docs/exceptional-geometry-41a8d733.html), [full-site-2026-08-06.html](docs/full-site-2026-08-06.html), [index.html](docs/index.html)
 - `group:Sp(10,3)` ⚠ — [PASS11170_PERFECT_GATE_LADDER.md](analysis/PASS11170_PERFECT_GATE_LADDER.md), [PASS11175_FIVE_QUTRIT_PATTERNS.md](analysis/PASS11175_FIVE_QUTRIT_PATTERNS.md)
@@ -840,6 +841,7 @@ numbered), so they are invisible to any topic search — read those first.
 - `named:Interlacing` — [PART_CCCXII_EQUITABLE_PARTITION_BRIDGE.md](manuscripts/parts/PART_CCCXII_EQUITABLE_PARTITION_BRIDGE.md)
 - `named:Irrational` — [PART_CCCXIV_RAMANUJAN_BRIDGE.md](manuscripts/parts/PART_CCCXIV_RAMANUJAN_BRIDGE.md)
 - `named:Jordan` — [BT616_620_five_frontier_release.md](analysis/BT616_620_five_frontier_release.md), [PART_2026_07_10_LEVI_FIVE_FRONTIERS_insert.tex](analysis/PART_2026_07_10_LEVI_FIVE_FRONTIERS_insert.tex), [PART_DCLXXXVII_HOLONOMY_SELECTOR_BUNDLE_BRIDGE.md](manuscripts/parts/PART_DCLXXXVII_HOLONOMY_SELECTOR_BUNDLE_BRIDGE.md)
+- `named:Kac` ⚠ — [PASS11701_11702_CLOCK_SYMMETRY_BREAKING.md](analysis/PASS11701_11702_CLOCK_SYMMETRY_BREAKING.md), [PASS11710_11711_SINGLE_TICK_AND_N_QUTRIT_VACUA.md](analysis/PASS11710_11711_SINGLE_TICK_AND_N_QUTRIT_VACUA.md), [PASS11712_A_CONSISTENT_STANDARD_MODEL_CONFIGURATION.md](analysis/PASS11712_A_CONSISTENT_STANDARD_MODEL_CONFIGURATION.md)
 - `named:Kemeny` ⚠ — [BT2809_BT2815_seven_frontiers.md](analysis/BT2809_BT2815_seven_frontiers.md)
 - `named:Kepler` — [PART_DCCLVI_SPHERE_PACKING_DENSITY_TOWER.md](manuscripts/parts/PART_DCCLVI_SPHERE_PACKING_DENSITY_TOWER.md)
 - `named:Kerr` — [PART_CCXIX_BLACK_HOLE_ENTROPY_BRIDGE.md](manuscripts/parts/PART_CCXIX_BLACK_HOLE_ENTROPY_BRIDGE.md)
