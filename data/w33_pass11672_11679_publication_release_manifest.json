@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "science_commit": "2a26d487e61384a6fcf6a3cc6f9e2c2997200772",
+  "ci_run": 37704856747,
+  "ci_job": 113076666514,
+  "ci_url": "https://github.com/wilcompute/W33-Theory/actions/runs/37704856747",
+  "local_tests": {
+    "count": 16,
+    "seconds": 42.44
+  },
+  "frozen_CI_tests": {
+    "count": 16,
+    "seconds": 4.86
+  },
+  "regenerated_CI_tests": {
+    "count": 16,
+    "seconds": 4.46
+  },
+  "producer_sections": 8,
+  "hash_convention": "SHA256 of text with CRLF normalized to LF at the science commit; excludes manifest and mutable session notes. RESULTS_INDEX.md has since advanced with incoming Claude11680-11712 results; its recorded science-commit hash is retained.",
+  "artifacts": {
+    "analysis/w33_pass11672_11679_native_dynamics_index.py": "805fb48b62a6d33c84fea760901a6e6f01e2607bf69fa483231cbe3c03fc1c55",
+    "analysis/PASS11672_11679_NATIVE_DYNAMICS_INDEX.md": "3261bec89281cb995231e4ab506877076d6f23e06cf1d25f574b2cf817543012",
+    "tests/test_w33_pass11672_11679_native_dynamics_index.py": "03f2d820cb5bf60942ed528f8cb667d72ba0334901cd203aa1fbe338e3500a1e",
+    "data/w33_pass11672_11679_native_dynamics_index.json": "b63bf0b3e35bdd4c0c12e8a917ff7be8d977711e8e533e4c6d7d847e438a3b3e",
+    ".github/workflows/pass11672-11679-native-dynamics-index.yml": "95899072711d650ea375263ca113919702f5002e9910854713e5d9551a713005",
+    "docs/index.html": "51c33d040176cb007ba1b1231f8c81cb044dc912e2091290b284687c384376a6",
+    "RESULTS_INDEX.md": "b825e1b94097763a7af17fd76eab60b455829411941a11bf03b8952f7b803006",
+    "TOPICAL_ALIASES.md": "39ce5213f4300b2d79066a1837ac33a6a4460eced153fce160a6dfd82c2ca8e9",
+    ".continuity/receipts/PASS11672_11679_LOCAL.log": "968a3d00500a99fd62a33a8d6ebe424a0c49e80216ff7d3e804a45dfa92ee5c9",
+    ".continuity/receipts/PASS11672_11679_CI.log": "005c8c4e0d8cece2957e490df7b268c8219275c101851e3903fe3e4b985ecb4d"
+  },
+  "boundaries": "Supplied native bosonic EFT has an exact global tree vacuum and a numerically stable local finite-shell quantum vacuum. Exceptional spin-c index3 requires selected defect and twisting; bulk index is -10. No observed flavor, anomaly-complete chiral UV theory, Einstein constraint algebra or vacuum-energy selection is established."
+}
