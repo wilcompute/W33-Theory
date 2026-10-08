@@ -1,0 +1,770 @@
+{
+  "all_layers_are_two_mode_reciprocal_beamsplitters": true,
+  "angle_offsets_rad": [
+    -0.002,
+    -0.001,
+    -0.0005,
+    0,
+    0.0005,
+    0.001,
+    0.002
+  ],
+  "future_lab_measurands": [
+    "2-mode phase coupling per stage",
+    "27x27 transfer-probability matrix",
+    "frequency dependent insertion loss",
+    "per-detector efficiency stability",
+    "coherent common-mode pump detuning"
+  ],
+  "grid": [
+    {
+      "CNOTlike_2mode_optical_layers": 36,
+      "Trotter_repetitions": 4,
+      "couplers_per_nine_layer_pattern": {
+        "line_transverse_null": [
+          12,
+          12,
+          13,
+          13,
+          10,
+          12,
+          13,
+          12,
+          11
+        ],
+        "point_far_H27": [
+          12,
+          12,
+          12,
+          12,
+          13,
+          12,
+          12,
+          11,
+          12
+        ]
+      },
+      "expected_launches_at_eta_point99_per_layer": 3355,
+      "ideal_source_anonymous_min_supnorm_separation": 0.16323248499499649,
+      "max_sorted_nominal_template_drift": 0.004283006141405421,
+      "nominal_classifier_separation_lower_bound_for_this_synthetic_miscalibration": 0.15466647271218564,
+      "nominal_template_95pct_successful_samples_sufficient_if_positive": 2336,
+      "perturbed_models_min_separation": 0.16067377756851875,
+      "systematic_angle_offset_per_active_2mode_coupler_rad": -0.002
+    },
+    {
+      "CNOTlike_2mode_optical_layers": 36,
+      "Trotter_repetitions": 4,
+      "couplers_per_nine_layer_pattern": {
+        "line_transverse_null": [
+          12,
+          12,
+          13,
+          13,
+          10,
+          12,
+          13,
+          12,
+          11
+        ],
+        "point_far_H27": [
+          12,
+          12,
+          12,
+          12,
+          13,
+          12,
+          12,
+          11,
+          12
+        ]
+      },
+      "expected_launches_at_eta_point99_per_layer": 3175,
+      "ideal_source_anonymous_min_supnorm_separation": 0.16323248499499649,
+      "max_sorted_nominal_template_drift": 0.0021127514718167206,
+      "nominal_classifier_separation_lower_bound_for_this_synthetic_miscalibration": 0.15900698205136304,
+      "nominal_template_95pct_successful_samples_sufficient_if_positive": 2211,
+      "perturbed_models_min_separation": 0.16196393199463643,
+      "systematic_angle_offset_per_active_2mode_coupler_rad": -0.001
+    },
+    {
+      "CNOTlike_2mode_optical_layers": 36,
+      "Trotter_repetitions": 4,
+      "couplers_per_nine_layer_pattern": {
+        "line_transverse_null": [
+          12,
+          12,
+          13,
+          13,
+          10,
+          12,
+          13,
+          12,
+          11
+        ],
+        "point_far_H27": [
+          12,
+          12,
+          12,
+          12,
+          13,
+          12,
+          12,
+          11,
+          12
+        ]
+      },
+      "expected_launches_at_eta_point99_per_layer": 3092,
+      "ideal_source_anonymous_min_supnorm_separation": 0.16323248499499649,
+      "max_sorted_nominal_template_drift": 0.0010491556001907543,
+      "nominal_classifier_separation_lower_bound_for_this_synthetic_miscalibration": 0.16113417379461498,
+      "nominal_template_95pct_successful_samples_sufficient_if_positive": 2153,
+      "perturbed_models_min_separation": 0.1626008745273754,
+      "systematic_angle_offset_per_active_2mode_coupler_rad": -0.0005
+    },
+    {
+      "CNOTlike_2mode_optical_layers": 36,
+      "Trotter_repetitions": 4,
+      "couplers_per_nine_layer_pattern": {
+        "line_transverse_null": [
+          12,
+          12,
+          13,
+          13,
+          10,
+          12,
+          13,
+          12,
+          11
+        ],
+        "point_far_H27": [
+          12,
+          12,
+          12,
+          12,
+          13,
+          12,
+          12,
+          11,
+          12
+        ]
+      },
+      "expected_launches_at_eta_point99_per_layer": 3013,
+      "ideal_source_anonymous_min_supnorm_separation": 0.16323248499499649,
+      "max_sorted_nominal_template_drift": 4.440892098500626e-16,
+      "nominal_classifier_separation_lower_bound_for_this_synthetic_miscalibration": 0.1632324849949956,
+      "nominal_template_95pct_successful_samples_sufficient_if_positive": 2098,
+      "perturbed_models_min_separation": 0.16323248499499662,
+      "systematic_angle_offset_per_active_2mode_coupler_rad": 0
+    },
+    {
+      "CNOTlike_2mode_optical_layers": 36,
+      "Trotter_repetitions": 4,
+      "couplers_per_nine_layer_pattern": {
+        "line_transverse_null": [
+          12,
+          12,
+          13,
+          13,
+          10,
+          12,
+          13,
+          12,
+          11
+        ],
+        "point_far_H27": [
+          12,
+          12,
+          12,
+          12,
+          13,
+          12,
+          12,
+          11,
+          12
+        ]
+      },
+      "expected_launches_at_eta_point99_per_layer": 3091,
+      "ideal_source_anonymous_min_supnorm_separation": 0.16323248499499649,
+      "max_sorted_nominal_template_drift": 0.0010346560417743844,
+      "nominal_classifier_separation_lower_bound_for_this_synthetic_miscalibration": 0.16116317291144772,
+      "nominal_template_95pct_successful_samples_sufficient_if_positive": 2152,
+      "perturbed_models_min_separation": 0.16385883342880778,
+      "systematic_angle_offset_per_active_2mode_coupler_rad": 0.0005
+    },
+    {
+      "CNOTlike_2mode_optical_layers": 36,
+      "Trotter_repetitions": 4,
+      "couplers_per_nine_layer_pattern": {
+        "line_transverse_null": [
+          12,
+          12,
+          13,
+          13,
+          10,
+          12,
+          13,
+          12,
+          11
+        ],
+        "point_far_H27": [
+          12,
+          12,
+          12,
+          12,
+          13,
+          12,
+          12,
+          11,
+          12
+        ]
+      },
+      "expected_launches_at_eta_point99_per_layer": 3170,
+      "ideal_source_anonymous_min_supnorm_separation": 0.16323248499499649,
+      "max_sorted_nominal_template_drift": 0.0020547573959498466,
+      "nominal_classifier_separation_lower_bound_for_this_synthetic_miscalibration": 0.1591229702030968,
+      "nominal_template_95pct_successful_samples_sufficient_if_positive": 2207,
+      "perturbed_models_min_separation": 0.16447999119795714,
+      "systematic_angle_offset_per_active_2mode_coupler_rad": 0.001
+    },
+    {
+      "CNOTlike_2mode_optical_layers": 36,
+      "Trotter_repetitions": 4,
+      "couplers_per_nine_layer_pattern": {
+        "line_transverse_null": [
+          12,
+          12,
+          13,
+          13,
+          10,
+          12,
+          13,
+          12,
+          11
+        ],
+        "point_far_H27": [
+          12,
+          12,
+          12,
+          12,
+          13,
+          12,
+          12,
+          11,
+          12
+        ]
+      },
+      "expected_launches_at_eta_point99_per_layer": 3335,
+      "ideal_source_anonymous_min_supnorm_separation": 0.16323248499499649,
+      "max_sorted_nominal_template_drift": 0.00405109634837697,
+      "nominal_classifier_separation_lower_bound_for_this_synthetic_miscalibration": 0.15513029229824254,
+      "nominal_template_95pct_successful_samples_sufficient_if_positive": 2322,
+      "perturbed_models_min_separation": 0.16570702663336123,
+      "systematic_angle_offset_per_active_2mode_coupler_rad": 0.002
+    },
+    {
+      "CNOTlike_2mode_optical_layers": 72,
+      "Trotter_repetitions": 8,
+      "couplers_per_nine_layer_pattern": {
+        "line_transverse_null": [
+          12,
+          12,
+          13,
+          13,
+          10,
+          12,
+          13,
+          12,
+          11
+        ],
+        "point_far_H27": [
+          12,
+          12,
+          12,
+          12,
+          13,
+          12,
+          12,
+          11,
+          12
+        ]
+      },
+      "expected_launches_at_eta_point99_per_layer": 2625,
+      "ideal_source_anonymous_min_supnorm_separation": 0.22799500204591777,
+      "max_sorted_nominal_template_drift": 0.00920306538357929,
+      "nominal_classifier_separation_lower_bound_for_this_synthetic_miscalibration": 0.2095888712787592,
+      "nominal_template_95pct_successful_samples_sufficient_if_positive": 1273,
+      "perturbed_models_min_separation": 0.22473943768667343,
+      "systematic_angle_offset_per_active_2mode_coupler_rad": -0.002
+    },
+    {
+      "CNOTlike_2mode_optical_layers": 72,
+      "Trotter_repetitions": 8,
+      "couplers_per_nine_layer_pattern": {
+        "line_transverse_null": [
+          12,
+          12,
+          13,
+          13,
+          10,
+          12,
+          13,
+          12,
+          11
+        ],
+        "point_far_H27": [
+          12,
+          12,
+          12,
+          12,
+          13,
+          12,
+          12,
+          11,
+          12
+        ]
+      },
+      "expected_launches_at_eta_point99_per_layer": 2403,
+      "ideal_source_anonymous_min_supnorm_separation": 0.22799500204591777,
+      "max_sorted_nominal_template_drift": 0.004486699743585176,
+      "nominal_classifier_separation_lower_bound_for_this_synthetic_miscalibration": 0.21902160255874742,
+      "nominal_template_95pct_successful_samples_sufficient_if_positive": 1165,
+      "perturbed_models_min_separation": 0.2275764442598827,
+      "systematic_angle_offset_per_active_2mode_coupler_rad": -0.001
+    },
+    {
+      "CNOTlike_2mode_optical_layers": 72,
+      "Trotter_repetitions": 8,
+      "couplers_per_nine_layer_pattern": {
+        "line_transverse_null": [
+          12,
+          12,
+          13,
+          13,
+          10,
+          12,
+          13,
+          12,
+          11
+        ],
+        "point_far_H27": [
+          12,
+          12,
+          12,
+          12,
+          13,
+          12,
+          12,
+          11,
+          12
+        ]
+      },
+      "expected_launches_at_eta_point99_per_layer": 2306,
+      "ideal_source_anonymous_min_supnorm_separation": 0.22799500204591777,
+      "max_sorted_nominal_template_drift": 0.0022144306943787107,
+      "nominal_classifier_separation_lower_bound_for_this_synthetic_miscalibration": 0.22356614065716035,
+      "nominal_template_95pct_successful_samples_sufficient_if_positive": 1118,
+      "perturbed_models_min_separation": 0.22784767367743025,
+      "systematic_angle_offset_per_active_2mode_coupler_rad": -0.0005
+    },
+    {
+      "CNOTlike_2mode_optical_layers": 72,
+      "Trotter_repetitions": 8,
+      "couplers_per_nine_layer_pattern": {
+        "line_transverse_null": [
+          12,
+          12,
+          13,
+          13,
+          10,
+          12,
+          13,
+          12,
+          11
+        ],
+        "point_far_H27": [
+          12,
+          12,
+          12,
+          12,
+          13,
+          12,
+          12,
+          11,
+          12
+        ]
+      },
+      "expected_launches_at_eta_point99_per_layer": 2217,
+      "ideal_source_anonymous_min_supnorm_separation": 0.22799500204591777,
+      "max_sorted_nominal_template_drift": 6.106226635438361e-16,
+      "nominal_classifier_separation_lower_bound_for_this_synthetic_miscalibration": 0.22799500204591655,
+      "nominal_template_95pct_successful_samples_sufficient_if_positive": 1075,
+      "perturbed_models_min_separation": 0.22799500204591772,
+      "systematic_angle_offset_per_active_2mode_coupler_rad": 0
+    },
+    {
+      "CNOTlike_2mode_optical_layers": 72,
+      "Trotter_repetitions": 8,
+      "couplers_per_nine_layer_pattern": {
+        "line_transverse_null": [
+          12,
+          12,
+          13,
+          13,
+          10,
+          12,
+          13,
+          12,
+          11
+        ],
+        "point_far_H27": [
+          12,
+          12,
+          12,
+          12,
+          13,
+          12,
+          12,
+          11,
+          12
+        ]
+      },
+      "expected_launches_at_eta_point99_per_layer": 2304,
+      "ideal_source_anonymous_min_supnorm_separation": 0.22799500204591777,
+      "max_sorted_nominal_template_drift": 0.0021562586174800336,
+      "nominal_classifier_separation_lower_bound_for_this_synthetic_miscalibration": 0.2236824848109577,
+      "nominal_template_95pct_successful_samples_sufficient_if_positive": 1117,
+      "perturbed_models_min_separation": 0.22851618189856254,
+      "systematic_angle_offset_per_active_2mode_coupler_rad": 0.0005
+    },
+    {
+      "CNOTlike_2mode_optical_layers": 72,
+      "Trotter_repetitions": 8,
+      "couplers_per_nine_layer_pattern": {
+        "line_transverse_null": [
+          12,
+          12,
+          13,
+          13,
+          10,
+          12,
+          13,
+          12,
+          11
+        ],
+        "point_far_H27": [
+          12,
+          12,
+          12,
+          12,
+          13,
+          12,
+          12,
+          11,
+          12
+        ]
+      },
+      "expected_launches_at_eta_point99_per_layer": 2392,
+      "ideal_source_anonymous_min_supnorm_separation": 0.22799500204591777,
+      "max_sorted_nominal_template_drift": 0.004254081976800939,
+      "nominal_classifier_separation_lower_bound_for_this_synthetic_miscalibration": 0.2194868380923159,
+      "nominal_template_95pct_successful_samples_sufficient_if_positive": 1160,
+      "perturbed_models_min_separation": 0.22956292248574633,
+      "systematic_angle_offset_per_active_2mode_coupler_rad": 0.001
+    },
+    {
+      "CNOTlike_2mode_optical_layers": 72,
+      "Trotter_repetitions": 8,
+      "couplers_per_nine_layer_pattern": {
+        "line_transverse_null": [
+          12,
+          12,
+          13,
+          13,
+          10,
+          12,
+          13,
+          12,
+          11
+        ],
+        "point_far_H27": [
+          12,
+          12,
+          12,
+          12,
+          13,
+          12,
+          12,
+          11,
+          12
+        ]
+      },
+      "expected_launches_at_eta_point99_per_layer": 2578,
+      "ideal_source_anonymous_min_supnorm_separation": 0.22799500204591777,
+      "max_sorted_nominal_template_drift": 0.00827372194691428,
+      "nominal_classifier_separation_lower_bound_for_this_synthetic_miscalibration": 0.2114475581520892,
+      "nominal_template_95pct_successful_samples_sufficient_if_positive": 1250,
+      "perturbed_models_min_separation": 0.23141761655193055,
+      "systematic_angle_offset_per_active_2mode_coupler_rad": 0.002
+    },
+    {
+      "CNOTlike_2mode_optical_layers": 144,
+      "Trotter_repetitions": 16,
+      "couplers_per_nine_layer_pattern": {
+        "line_transverse_null": [
+          12,
+          12,
+          13,
+          13,
+          10,
+          12,
+          13,
+          12,
+          11
+        ],
+        "point_far_H27": [
+          12,
+          12,
+          12,
+          12,
+          13,
+          12,
+          12,
+          11,
+          12
+        ]
+      },
+      "expected_launches_at_eta_point99_per_layer": 5166,
+      "ideal_source_anonymous_min_supnorm_separation": 0.25220789509076724,
+      "max_sorted_nominal_template_drift": 0.018839244875315353,
+      "nominal_classifier_separation_lower_bound_for_this_synthetic_miscalibration": 0.21452940534013654,
+      "nominal_template_95pct_successful_samples_sufficient_if_positive": 1215,
+      "perturbed_models_min_separation": 0.24087960033004258,
+      "systematic_angle_offset_per_active_2mode_coupler_rad": -0.002
+    },
+    {
+      "CNOTlike_2mode_optical_layers": 144,
+      "Trotter_repetitions": 16,
+      "couplers_per_nine_layer_pattern": {
+        "line_transverse_null": [
+          12,
+          12,
+          13,
+          13,
+          10,
+          12,
+          13,
+          12,
+          11
+        ],
+        "point_far_H27": [
+          12,
+          12,
+          12,
+          12,
+          13,
+          12,
+          12,
+          11,
+          12
+        ]
+      },
+      "expected_launches_at_eta_point99_per_layer": 4333,
+      "ideal_source_anonymous_min_supnorm_separation": 0.25220789509076724,
+      "max_sorted_nominal_template_drift": 0.008963160316907748,
+      "nominal_classifier_separation_lower_bound_for_this_synthetic_miscalibration": 0.23428157445695175,
+      "nominal_template_95pct_successful_samples_sufficient_if_positive": 1019,
+      "perturbed_models_min_separation": 0.24807419752406523,
+      "systematic_angle_offset_per_active_2mode_coupler_rad": -0.001
+    },
+    {
+      "CNOTlike_2mode_optical_layers": 144,
+      "Trotter_repetitions": 16,
+      "couplers_per_nine_layer_pattern": {
+        "line_transverse_null": [
+          12,
+          12,
+          13,
+          13,
+          10,
+          12,
+          13,
+          12,
+          11
+        ],
+        "point_far_H27": [
+          12,
+          12,
+          12,
+          12,
+          13,
+          12,
+          12,
+          11,
+          12
+        ]
+      },
+      "expected_launches_at_eta_point99_per_layer": 4010,
+      "ideal_source_anonymous_min_supnorm_separation": 0.25220789509076724,
+      "max_sorted_nominal_template_drift": 0.004365691781775205,
+      "nominal_classifier_separation_lower_bound_for_this_synthetic_miscalibration": 0.24347651152721683,
+      "nominal_template_95pct_successful_samples_sufficient_if_positive": 943,
+      "perturbed_models_min_separation": 0.24952970513625908,
+      "systematic_angle_offset_per_active_2mode_coupler_rad": -0.0005
+    },
+    {
+      "CNOTlike_2mode_optical_layers": 144,
+      "Trotter_repetitions": 16,
+      "couplers_per_nine_layer_pattern": {
+        "line_transverse_null": [
+          12,
+          12,
+          13,
+          13,
+          10,
+          12,
+          13,
+          12,
+          11
+        ],
+        "point_far_H27": [
+          12,
+          12,
+          12,
+          12,
+          13,
+          12,
+          12,
+          11,
+          12
+        ]
+      },
+      "expected_launches_at_eta_point99_per_layer": 3737,
+      "ideal_source_anonymous_min_supnorm_separation": 0.25220789509076724,
+      "max_sorted_nominal_template_drift": 1.4988010832439613e-15,
+      "nominal_classifier_separation_lower_bound_for_this_synthetic_miscalibration": 0.25220789509076424,
+      "nominal_template_95pct_successful_samples_sufficient_if_positive": 879,
+      "perturbed_models_min_separation": 0.2522078950907669,
+      "systematic_angle_offset_per_active_2mode_coupler_rad": 0
+    },
+    {
+      "CNOTlike_2mode_optical_layers": 144,
+      "Trotter_repetitions": 16,
+      "couplers_per_nine_layer_pattern": {
+        "line_transverse_null": [
+          12,
+          12,
+          13,
+          13,
+          10,
+          12,
+          13,
+          12,
+          11
+        ],
+        "point_far_H27": [
+          12,
+          12,
+          12,
+          12,
+          13,
+          12,
+          12,
+          11,
+          12
+        ]
+      },
+      "expected_launches_at_eta_point99_per_layer": 3993,
+      "ideal_source_anonymous_min_supnorm_separation": 0.25220789509076724,
+      "max_sorted_nominal_template_drift": 0.004131814346288953,
+      "nominal_classifier_separation_lower_bound_for_this_synthetic_miscalibration": 0.24394426639818934,
+      "nominal_template_95pct_successful_samples_sufficient_if_positive": 939,
+      "perturbed_models_min_separation": 0.25356706900165404,
+      "systematic_angle_offset_per_active_2mode_coupler_rad": 0.0005
+    },
+    {
+      "CNOTlike_2mode_optical_layers": 144,
+      "Trotter_repetitions": 16,
+      "couplers_per_nine_layer_pattern": {
+        "line_transverse_null": [
+          12,
+          12,
+          13,
+          13,
+          10,
+          12,
+          13,
+          12,
+          11
+        ],
+        "point_far_H27": [
+          12,
+          12,
+          12,
+          12,
+          13,
+          12,
+          12,
+          11,
+          12
+        ]
+      },
+      "expected_launches_at_eta_point99_per_layer": 4260,
+      "ideal_source_anonymous_min_supnorm_separation": 0.25220789509076724,
+      "max_sorted_nominal_template_drift": 0.008028803443194121,
+      "nominal_classifier_separation_lower_bound_for_this_synthetic_miscalibration": 0.236150288204379,
+      "nominal_template_95pct_successful_samples_sufficient_if_positive": 1002,
+      "perturbed_models_min_separation": 0.2550172952996203,
+      "systematic_angle_offset_per_active_2mode_coupler_rad": 0.001
+    },
+    {
+      "CNOTlike_2mode_optical_layers": 144,
+      "Trotter_repetitions": 16,
+      "couplers_per_nine_layer_pattern": {
+        "line_transverse_null": [
+          12,
+          12,
+          13,
+          13,
+          10,
+          12,
+          13,
+          12,
+          11
+        ],
+        "point_far_H27": [
+          12,
+          12,
+          12,
+          12,
+          13,
+          12,
+          12,
+          11,
+          12
+        ]
+      },
+      "expected_launches_at_eta_point99_per_layer": 4826,
+      "ideal_source_anonymous_min_supnorm_separation": 0.25220789509076724,
+      "max_sorted_nominal_template_drift": 0.015120195602530584,
+      "nominal_classifier_separation_lower_bound_for_this_synthetic_miscalibration": 0.22196750388570607,
+      "nominal_template_95pct_successful_samples_sufficient_if_positive": 1135,
+      "perturbed_models_min_separation": 0.2560274122117676,
+      "systematic_angle_offset_per_active_2mode_coupler_rad": 0.002
+    }
+  ],
+  "no_real_photon_device_calibration": true,
+  "nominal_template_sufficient_bound_is_model_conditional_not_device_certification": true,
+  "previous_independent_coupler_randomization_is_distinct": true,
+  "repetitions": [
+    4,
+    8,
+    16
+  ],
+  "shared_phase_offset_same_for_each_gate_and_repetition": true,
+  "two_graph_hypotheses": [
+    "line_transverse_null",
+    "point_far_H27"
+  ],
+  "unknown_output_labels_are_handled_by_sorted_template": true
+}

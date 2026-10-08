@@ -1,0 +1,34 @@
+{
+  "a2_b0_avoids_all_48_ambient_fixed_points": true,
+  "a2_b0_geometrically_singular_over_Qi": true,
+  "a2_b3_avoids_all_48_ambient_fixed_points": true,
+  "a2_b3_smooth_over_C_proven": false,
+  "b0_family_singular_for_all_a": true,
+  "exact_global_singular_witness_P1_coordinates": [
+    "i",
+    "-i",
+    "1",
+    "-1"
+  ],
+  "family": "F_ab=prod S_i+a*prod D_i+b*prod T_i, S=x^2+y^2, D=x^2-y^2, T=2xy",
+  "fixed_point_value_profiles": {
+    "g_simultaneous_sign": [
+      "1 - a",
+      "a + 1"
+    ],
+    "gh_simultaneous_swap_sign": [
+      "16*a + 16*b",
+      "16*a - 16*b"
+    ],
+    "h_simultaneous_swap": [
+      "16 - 16*b",
+      "16*b + 16"
+    ]
+  },
+  "fixed_points_per_nonidentity_element": 16,
+  "free_Klein_four_action_iff_conditions_over_complex": "a != +/-1, b != +/-1, a != +/-b",
+  "global_defining_equation_and_all_four_affine_partials_zero_at_witness": true,
+  "interpretation": "Avoiding every group fixed point proves any smooth quotient would be free, but does not establish smoothness. Two-term free-action invariant tetraquadric pencil is singular at an explicit Gaussian-rational point.",
+  "normalized_Yukawa_or_anomaly_free_UV_vacuum_constructed": false,
+  "total_ambient_fixed_points": 48
+}

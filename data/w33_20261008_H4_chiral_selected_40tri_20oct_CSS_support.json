@@ -1,0 +1,731 @@
+{
+  "F20_chiral_order4_exchanges_all_adjacency_edge_colors": true,
+  "GF2_commutation_verified": true,
+  "GF2_rank_X": 39,
+  "GF2_rank_Z": 19,
+  "H4_antipodal_qubit_addresses": 60,
+  "H4_native_tetrahedral_faces_identified_with_W33_20_octagons": false,
+  "W33_CSS_X_checks_as_selected_H4_chiral_triangle_supports": 40,
+  "W33_CSS_Z_checks_as_selected_H4_chiral_octagon_supports": 20,
+  "X_check_chiral_plus_degree_hist": {
+    "0": 10,
+    "1": 10,
+    "2": 10,
+    "3": 10
+  },
+  "X_check_records": [
+    {
+      "CW_vertex": 0,
+      "H4_600cell_antipodal_addresses": [
+        7,
+        59,
+        32
+      ],
+      "edge_colors": "+-+",
+      "plus_count": 2
+    },
+    {
+      "CW_vertex": 3,
+      "H4_600cell_antipodal_addresses": [
+        5,
+        48,
+        36
+      ],
+      "edge_colors": "-++",
+      "plus_count": 2
+    },
+    {
+      "CW_vertex": 5,
+      "H4_600cell_antipodal_addresses": [
+        23,
+        29,
+        9
+      ],
+      "edge_colors": "+--",
+      "plus_count": 1
+    },
+    {
+      "CW_vertex": 8,
+      "H4_600cell_antipodal_addresses": [
+        19,
+        21,
+        11
+      ],
+      "edge_colors": "++-",
+      "plus_count": 2
+    },
+    {
+      "CW_vertex": 11,
+      "H4_600cell_antipodal_addresses": [
+        15,
+        30,
+        14
+      ],
+      "edge_colors": "-++",
+      "plus_count": 2
+    },
+    {
+      "CW_vertex": 14,
+      "H4_600cell_antipodal_addresses": [
+        16,
+        1,
+        26
+      ],
+      "edge_colors": "--+",
+      "plus_count": 1
+    },
+    {
+      "CW_vertex": 15,
+      "H4_600cell_antipodal_addresses": [
+        43,
+        31,
+        58
+      ],
+      "edge_colors": "-+-",
+      "plus_count": 1
+    },
+    {
+      "CW_vertex": 16,
+      "H4_600cell_antipodal_addresses": [
+        44,
+        28,
+        41
+      ],
+      "edge_colors": "+--",
+      "plus_count": 1
+    },
+    {
+      "CW_vertex": 17,
+      "H4_600cell_antipodal_addresses": [
+        56,
+        35,
+        17
+      ],
+      "edge_colors": "+-+",
+      "plus_count": 2
+    },
+    {
+      "CW_vertex": 19,
+      "H4_600cell_antipodal_addresses": [
+        20,
+        12,
+        51
+      ],
+      "edge_colors": "+--",
+      "plus_count": 1
+    },
+    {
+      "CW_vertex": 21,
+      "H4_600cell_antipodal_addresses": [
+        8,
+        55,
+        18
+      ],
+      "edge_colors": "++-",
+      "plus_count": 2
+    },
+    {
+      "CW_vertex": 25,
+      "H4_600cell_antipodal_addresses": [
+        13,
+        38,
+        0
+      ],
+      "edge_colors": "-+-",
+      "plus_count": 1
+    },
+    {
+      "CW_vertex": 26,
+      "H4_600cell_antipodal_addresses": [
+        25,
+        40,
+        24
+      ],
+      "edge_colors": "-++",
+      "plus_count": 2
+    },
+    {
+      "CW_vertex": 27,
+      "H4_600cell_antipodal_addresses": [
+        57,
+        52,
+        3
+      ],
+      "edge_colors": "-+-",
+      "plus_count": 1
+    },
+    {
+      "CW_vertex": 28,
+      "H4_600cell_antipodal_addresses": [
+        49,
+        4,
+        42
+      ],
+      "edge_colors": "-+-",
+      "plus_count": 1
+    },
+    {
+      "CW_vertex": 29,
+      "H4_600cell_antipodal_addresses": [
+        53,
+        39,
+        45
+      ],
+      "edge_colors": "++-",
+      "plus_count": 2
+    },
+    {
+      "CW_vertex": 30,
+      "H4_600cell_antipodal_addresses": [
+        33,
+        2,
+        47
+      ],
+      "edge_colors": "--+",
+      "plus_count": 1
+    },
+    {
+      "CW_vertex": 33,
+      "H4_600cell_antipodal_addresses": [
+        50,
+        27,
+        22
+      ],
+      "edge_colors": "+--",
+      "plus_count": 1
+    },
+    {
+      "CW_vertex": 34,
+      "H4_600cell_antipodal_addresses": [
+        54,
+        10,
+        46
+      ],
+      "edge_colors": "-++",
+      "plus_count": 2
+    },
+    {
+      "CW_vertex": 38,
+      "H4_600cell_antipodal_addresses": [
+        6,
+        34,
+        37
+      ],
+      "edge_colors": "++-",
+      "plus_count": 2
+    },
+    {
+      "CW_vertex": 41,
+      "H4_600cell_antipodal_addresses": [
+        7,
+        16,
+        43
+      ],
+      "edge_colors": "---",
+      "plus_count": 0
+    },
+    {
+      "CW_vertex": 42,
+      "H4_600cell_antipodal_addresses": [
+        59,
+        44,
+        56
+      ],
+      "edge_colors": "+++",
+      "plus_count": 3
+    },
+    {
+      "CW_vertex": 43,
+      "H4_600cell_antipodal_addresses": [
+        32,
+        20,
+        8
+      ],
+      "edge_colors": "+++",
+      "plus_count": 3
+    },
+    {
+      "CW_vertex": 45,
+      "H4_600cell_antipodal_addresses": [
+        23,
+        19,
+        15
+      ],
+      "edge_colors": "+++",
+      "plus_count": 3
+    },
+    {
+      "CW_vertex": 49,
+      "H4_600cell_antipodal_addresses": [
+        50,
+        54,
+        6
+      ],
+      "edge_colors": "+++",
+      "plus_count": 3
+    },
+    {
+      "CW_vertex": 50,
+      "H4_600cell_antipodal_addresses": [
+        5,
+        57,
+        53
+      ],
+      "edge_colors": "+++",
+      "plus_count": 3
+    },
+    {
+      "CW_vertex": 51,
+      "H4_600cell_antipodal_addresses": [
+        48,
+        13,
+        33
+      ],
+      "edge_colors": "---",
+      "plus_count": 0
+    },
+    {
+      "CW_vertex": 52,
+      "H4_600cell_antipodal_addresses": [
+        36,
+        25,
+        49
+      ],
+      "edge_colors": "+++",
+      "plus_count": 3
+    },
+    {
+      "CW_vertex": 54,
+      "H4_600cell_antipodal_addresses": [
+        28,
+        38,
+        10
+      ],
+      "edge_colors": "---",
+      "plus_count": 0
+    },
+    {
+      "CW_vertex": 57,
+      "H4_600cell_antipodal_addresses": [
+        29,
+        41,
+        40
+      ],
+      "edge_colors": "---",
+      "plus_count": 0
+    },
+    {
+      "CW_vertex": 58,
+      "H4_600cell_antipodal_addresses": [
+        9,
+        12,
+        39
+      ],
+      "edge_colors": "---",
+      "plus_count": 0
+    },
+    {
+      "CW_vertex": 61,
+      "H4_600cell_antipodal_addresses": [
+        51,
+        2,
+        34
+      ],
+      "edge_colors": "---",
+      "plus_count": 0
+    },
+    {
+      "CW_vertex": 62,
+      "H4_600cell_antipodal_addresses": [
+        1,
+        24,
+        37
+      ],
+      "edge_colors": "+++",
+      "plus_count": 3
+    },
+    {
+      "CW_vertex": 65,
+      "H4_600cell_antipodal_addresses": [
+        21,
+        26,
+        52
+      ],
+      "edge_colors": "---",
+      "plus_count": 0
+    },
+    {
+      "CW_vertex": 66,
+      "H4_600cell_antipodal_addresses": [
+        11,
+        35,
+        47
+      ],
+      "edge_colors": "+++",
+      "plus_count": 3
+    },
+    {
+      "CW_vertex": 69,
+      "H4_600cell_antipodal_addresses": [
+        17,
+        4,
+        27
+      ],
+      "edge_colors": "---",
+      "plus_count": 0
+    },
+    {
+      "CW_vertex": 73,
+      "H4_600cell_antipodal_addresses": [
+        55,
+        3,
+        22
+      ],
+      "edge_colors": "---",
+      "plus_count": 0
+    },
+    {
+      "CW_vertex": 74,
+      "H4_600cell_antipodal_addresses": [
+        30,
+        31,
+        42
+      ],
+      "edge_colors": "---",
+      "plus_count": 0
+    },
+    {
+      "CW_vertex": 76,
+      "H4_600cell_antipodal_addresses": [
+        14,
+        18,
+        0
+      ],
+      "edge_colors": "+++",
+      "plus_count": 3
+    },
+    {
+      "CW_vertex": 77,
+      "H4_600cell_antipodal_addresses": [
+        58,
+        45,
+        46
+      ],
+      "edge_colors": "+++",
+      "plus_count": 3
+    }
+  ],
+  "X_checks_all_three_H4_union_adjacencies_verified": true,
+  "Z_check_cycle_chiral_plus_edge_hist": {
+    "2": 5,
+    "4": 10,
+    "6": 5
+  },
+  "Z_check_records": [
+    {
+      "CW_face": 0,
+      "H4_600cell_antipodal_addresses": [
+        55,
+        22,
+        50,
+        54,
+        10,
+        38,
+        0,
+        18
+      ],
+      "edge_colors": "--+---+-",
+      "plus_count": 2
+    },
+    {
+      "CW_face": 1,
+      "H4_600cell_antipodal_addresses": [
+        20,
+        8,
+        55,
+        22,
+        50,
+        6,
+        34,
+        51
+      ],
+      "edge_colors": "++--++--",
+      "plus_count": 4
+    },
+    {
+      "CW_face": 2,
+      "H4_600cell_antipodal_addresses": [
+        20,
+        8,
+        55,
+        3,
+        57,
+        53,
+        39,
+        12
+      ],
+      "edge_colors": "++-+++-+",
+      "plus_count": 6
+    },
+    {
+      "CW_face": 3,
+      "H4_600cell_antipodal_addresses": [
+        5,
+        57,
+        3,
+        55,
+        18,
+        0,
+        13,
+        48
+      ],
+      "edge_colors": "++--++--",
+      "plus_count": 4
+    },
+    {
+      "CW_face": 4,
+      "H4_600cell_antipodal_addresses": [
+        48,
+        13,
+        0,
+        14,
+        30,
+        42,
+        49,
+        36
+      ],
+      "edge_colors": "-+++-+++",
+      "plus_count": 6
+    },
+    {
+      "CW_face": 5,
+      "H4_600cell_antipodal_addresses": [
+        30,
+        31,
+        58,
+        46,
+        10,
+        38,
+        0,
+        14
+      ],
+      "edge_colors": "--++--++",
+      "plus_count": 4
+    },
+    {
+      "CW_face": 6,
+      "H4_600cell_antipodal_addresses": [
+        23,
+        15,
+        30,
+        31,
+        58,
+        45,
+        39,
+        9
+      ],
+      "edge_colors": "+---+---",
+      "plus_count": 2
+    },
+    {
+      "CW_face": 7,
+      "H4_600cell_antipodal_addresses": [
+        23,
+        19,
+        21,
+        52,
+        57,
+        53,
+        39,
+        9
+      ],
+      "edge_colors": "++--++--",
+      "plus_count": 4
+    },
+    {
+      "CW_face": 8,
+      "H4_600cell_antipodal_addresses": [
+        23,
+        15,
+        30,
+        42,
+        49,
+        25,
+        40,
+        29
+      ],
+      "edge_colors": "+--++--+",
+      "plus_count": 4
+    },
+    {
+      "CW_face": 9,
+      "H4_600cell_antipodal_addresses": [
+        23,
+        19,
+        21,
+        26,
+        1,
+        24,
+        40,
+        29
+      ],
+      "edge_colors": "++-+++-+",
+      "plus_count": 6
+    },
+    {
+      "CW_face": 10,
+      "H4_600cell_antipodal_addresses": [
+        7,
+        16,
+        1,
+        37,
+        34,
+        51,
+        20,
+        32
+      ],
+      "edge_colors": "--+---+-",
+      "plus_count": 2
+    },
+    {
+      "CW_face": 11,
+      "H4_600cell_antipodal_addresses": [
+        7,
+        43,
+        58,
+        45,
+        39,
+        12,
+        20,
+        32
+      ],
+      "edge_colors": "-++--++-",
+      "plus_count": 4
+    },
+    {
+      "CW_face": 12,
+      "H4_600cell_antipodal_addresses": [
+        7,
+        16,
+        1,
+        24,
+        40,
+        41,
+        44,
+        59
+      ],
+      "edge_colors": "--++--++",
+      "plus_count": 4
+    },
+    {
+      "CW_face": 13,
+      "H4_600cell_antipodal_addresses": [
+        7,
+        43,
+        58,
+        46,
+        10,
+        28,
+        44,
+        59
+      ],
+      "edge_colors": "-+++-+++",
+      "plus_count": 6
+    },
+    {
+      "CW_face": 14,
+      "H4_600cell_antipodal_addresses": [
+        44,
+        56,
+        17,
+        4,
+        49,
+        25,
+        40,
+        41
+      ],
+      "edge_colors": "+---+---",
+      "plus_count": 2
+    },
+    {
+      "CW_face": 15,
+      "H4_600cell_antipodal_addresses": [
+        44,
+        56,
+        17,
+        27,
+        50,
+        54,
+        10,
+        28
+      ],
+      "edge_colors": "+--++--+",
+      "plus_count": 4
+    },
+    {
+      "CW_face": 16,
+      "H4_600cell_antipodal_addresses": [
+        21,
+        26,
+        1,
+        37,
+        34,
+        2,
+        47,
+        11
+      ],
+      "edge_colors": "-++--++-",
+      "plus_count": 4
+    },
+    {
+      "CW_face": 17,
+      "H4_600cell_antipodal_addresses": [
+        5,
+        57,
+        52,
+        21,
+        11,
+        47,
+        33,
+        48
+      ],
+      "edge_colors": "+---+---",
+      "plus_count": 2
+    },
+    {
+      "CW_face": 18,
+      "H4_600cell_antipodal_addresses": [
+        35,
+        47,
+        2,
+        34,
+        6,
+        50,
+        27,
+        17
+      ],
+      "edge_colors": "++-+++-+",
+      "plus_count": 6
+    },
+    {
+      "CW_face": 19,
+      "H4_600cell_antipodal_addresses": [
+        48,
+        33,
+        47,
+        35,
+        17,
+        4,
+        49,
+        36
+      ],
+      "edge_colors": "--++--++",
+      "plus_count": 4
+    }
+  ],
+  "Z_checks_all_eight_H4_union_adjacencies_verified": true,
+  "all_check_supports_transport_via_actual_60_address_embedding": true,
+  "distance": 6,
+  "encoded_qubits": 2,
+  "locality_boundary": "All check SUPPORTS have paths/cycles in the paired H4 chiral union. This is not a physical hardware layout or a proof that native 600-cell tetrahedron 2-cells equal the selected CW octagons."
+}

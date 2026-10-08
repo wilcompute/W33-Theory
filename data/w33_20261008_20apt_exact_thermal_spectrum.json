@@ -1,0 +1,81 @@
+{
+  "E_to_degeneracy": {
+    "-12": 72104775372949540,
+    "-16": 28308559756908080,
+    "-20": 8383689329844956,
+    "-24": 1850059044052840,
+    "-28": 299216741951220,
+    "-32": 34691815258400,
+    "-36": 2798711181500,
+    "-4": 207439889803704140,
+    "-40": 150788878136,
+    "-44": 5117360820,
+    "-48": 100081360,
+    "-52": 977740,
+    "-56": 3880,
+    "-60": 4,
+    "-8": 139772333307748920,
+    "0": 236529164825043904,
+    "12": 72104775372949540,
+    "16": 28308559756908080,
+    "20": 8383689329844956,
+    "24": 1850059044052840,
+    "28": 299216741951220,
+    "32": 34691815258400,
+    "36": 2798711181500,
+    "4": 207439889803704140,
+    "40": 150788878136,
+    "44": 5117360820,
+    "48": 100081360,
+    "52": 977740,
+    "56": 3880,
+    "60": 4,
+    "8": 139772333307748920
+  },
+  "Hilbert_dimension_exact": 1152921504606846976,
+  "all_spectrum_accounted_for": true,
+  "energy_levels": 31,
+  "fault_tolerance_not_inferred_from_energy_gap": true,
+  "finite_system_free_energy_analytic_for_all_finite_real_beta": true,
+  "first_excited_degeneracy": 3880,
+  "first_excited_energy": -56,
+  "gap": 4,
+  "ground_degeneracy": 4,
+  "lowest_energy": -60,
+  "no_Einstein_hypersurface_deformation_algebra_derived": true,
+  "no_finite_size_thermodynamic_phase_transition": true,
+  "partition_exact": "Z(beta) = 4 exp(60 beta) E_40(exp(-2 beta)) E_20(exp(-2 beta)); E_n(t)=((1+t)^n+(1-t)^n)/2",
+  "qubits": 60,
+  "temperature_points": [
+    {
+      "average_energy": 0.0,
+      "beta": 0,
+      "ground_state_fraction": 3.469446951953614e-18,
+      "partition_rescaled_exp_minus_60beta": 1.152921504606847e+18
+    },
+    {
+      "average_energy": -11.84251921349503,
+      "beta": 0.2,
+      "ground_state_fraction": 1.7142667292124974e-13,
+      "partition_rescaled_exp_minus_60beta": 23333591744136.145
+    },
+    {
+      "average_energy": -27.727036149730104,
+      "beta": 0.5,
+      "ground_state_fraction": 2.7491001960982e-08,
+      "partition_rescaled_exp_minus_60beta": 145502153.9657668
+    },
+    {
+      "average_energy": -45.74338875130669,
+      "beta": 1,
+      "ground_state_fraction": 0.001962167471419373,
+      "partition_rescaled_exp_minus_60beta": 2038.5619771316055
+    },
+    {
+      "average_energy": -58.8675016616032,
+      "beta": 2,
+      "ground_state_fraction": 0.7386248819633383,
+      "partition_rescaled_exp_minus_60beta": 5.415468795699926
+    }
+  ]
+}
