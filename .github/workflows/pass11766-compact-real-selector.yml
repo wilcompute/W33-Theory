@@ -1,0 +1,25 @@
+name: Pass 11766 compact-real selector firewall
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analysis/w33_pass11766_compact_real_selector.py'
+      - 'analysis/PASS11766_COMPACT_REAL_SELECTOR.md'
+      - 'analysis/PASS11766_RESERVATION.md'
+      - 'data/PART_W33_PASS11766_COMPACT_REAL_SELECTOR.json'
+      - 'tests/test_w33_pass11766_compact_real_selector.py'
+      - '.github/workflows/pass11766-compact-real-selector.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --upgrade pip sympy pytest
+      - run: python -m pytest -q tests/test_w33_pass11766_compact_real_selector.py
+      - run: python analysis/w33_pass11766_compact_real_selector.py
+      - run: python -m pytest -q tests/test_w33_pass11766_compact_real_selector.py

@@ -1,0 +1,73 @@
+{
+  "E8": {
+    "boundary": "The repaired 162-real-dimensional light matter space can be endowed with the auxiliary complex structure to count as 81 complex coordinates, but this requires an independent complex-field/spectator structure and is NOT obtained by projecting the original real E8 adjoint alone. Full E8 covariance is not asserted (only its E6 x SU3 grading centralizer); chiral fermion measure and anomalies remain open.",
+    "compact_real_E8_adj_dimension": 248,
+    "compact_real_branching": "86 fixed real + 81 real rotation planes",
+    "complexified_branching": "86 + 81_(omega) + 81_(omega^2)",
+    "doubled_matter_dimension": 324,
+    "doubled_neutral_dimension": 172,
+    "extra_input": "one independent real 2-plane carrying J_aux^2=-I",
+    "minimal_real_commutant": "End_R(R^2) commuting with order-3 rotation = R[I,J]; symmetric part = R I; no rank-one real symmetric grading projector",
+    "one_shell_complex_projector": "P_plus=(M+C)/2, P_minus=(M-C)/2; conjugation interchanges them",
+    "original_filter_reality": "Fixed-vacuum H_shell=(c M+W C)^2 is Hermitian on V_C but fails to map the compact real V_R into itself whenever cW != 0",
+    "real_filter": "H_real=lambda[c rho^6 (M tensor I) + W S]^2 with c=15/343",
+    "real_kernel_obstruction": "(ker P_plus) intersect real grade-plane = {0}, likewise for ker P_minus; selecting only one 81-dimensional complex shell cannot act on a nonzero real adjoint matter vector",
+    "real_total_dimension": 496,
+    "repair": "S=J_E8 tensor J_aux; S is real symmetric, S^2=M tensor I, commutes with the grading, and flips under CP reflection of J_E8",
+    "status": "PASS_REAL_FORM_OBSTRUCTION_AND_AUXILIARY_PLANE_REPAIR",
+    "vacuum_rows": [
+      {
+        "W_sign": 1,
+        "matter_gap_over_lambda_rho12": "900/117649",
+        "matter_gapped_real_dimension": 162,
+        "matter_kernel_real_dimension": 162,
+        "neutral_kernel_real_dimension": 172
+      },
+      {
+        "W_sign": -1,
+        "matter_gap_over_lambda_rho12": "900/117649",
+        "matter_gapped_real_dimension": 162,
+        "matter_kernel_real_dimension": 162,
+        "neutral_kernel_real_dimension": 172
+      }
+    ]
+  },
+  "Spin10": {
+    "Clifford_volume": "V=Gamma_1...Gamma_10, real skew, V^2=-I",
+    "actual_gamma_count": 10,
+    "caution": "Conjugation by the REAL Gamma_10 has the same adjoint action on Chi as the complex two-tick clock i Gamma_10, but is not the same spinor operator. The doubled structure introduces extra real degrees of freedom and is not a derived physical chiral fermion measure.",
+    "chirality": "Chi=i V, purely imaginary Hermitian involution",
+    "compact_real_obstruction": "Neither complex Weyl-16 projector preserves the 32-real-dimensional Clifford carrier; its image intersects that original real space trivially when considered as a single pure Weyl eigenspace",
+    "conjugate_Weyl_spaces": "ordinary complex conjugation exchanges Chi=+1 and Chi=-1",
+    "gauge_invariance": "V commutes with all 45 Spin10 bivectors",
+    "repaired_real_involution": "S=V tensor J_aux, real symmetric with S^2=I on R^64; commutes with the bivector gauge action",
+    "repaired_vacuum_rows": [
+      {
+        "W_sign": 1,
+        "gap_over_lambda_rho12": "900/117649",
+        "heavy_real_dimension": 32,
+        "light_complex_dimension_given_aux_structure": 16,
+        "light_real_dimension": 32
+      },
+      {
+        "W_sign": -1,
+        "gap_over_lambda_rho12": "900/117649",
+        "heavy_real_dimension": 32,
+        "light_complex_dimension_given_aux_structure": 16,
+        "light_real_dimension": 32
+      }
+    ],
+    "status": "PASS_REAL_CLIFFORD32_WEYL_PROJECTOR_REQUIRES_COMPLEX_STRUCTURE"
+  },
+  "pass_number": 11766,
+  "producer_sha256": "6a12c5f4007924f7a6f58bc7fcee2ae045cf75c07be11936e6d35b4c015d685b",
+  "reservation": "7a8a13721d4f7ae45d6776b458b822b2bf82f71a",
+  "source_sha256": {
+    "analysis/2026-09-21_e8_a2_center_vs_coxeter_order3.md": "6a6856c667f04e91c54c2efd4541c4ff1c00935e3617cf3676ce7a06454d650d",
+    "analysis/w33_pass11593_unique_weyl_selector.py": "852d0d473bcba443f8aad84f3f7b1b0830956457d0d234976aa4801b13c09076",
+    "analysis/w33_pass11607_hesse_cp_weyl_selector.py": "2d1931f4a1a78df0cee1de2caf266fa8c3f79fa93829f92d85d15fbf4a51b9ff",
+    "analysis/w33_pass11608_11613_chiral_unification.py": "30eceb25ed1082920752021a0820c881af0f22a190054ae7933f2cec01c5f0f3",
+    "data/w33_pass10961_albert_clifford9_gammas.json": "898d864a160798a2470ebc33b10cbce6f25afe0612073238daae7bba204a6df2"
+  },
+  "status": "PASS11766_REALITY_FIREWALL_WITH_MINIMAL_AUXILIARY_COMPLEX_STRUCTURE"
+}
