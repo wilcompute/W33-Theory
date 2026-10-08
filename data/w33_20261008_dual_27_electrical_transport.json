@@ -1,0 +1,68 @@
+{
+  "boundaries": [
+    "Existing repo already establishes cospectrality and nonisomorphism.",
+    "Unit-edge electrical networks are mathematical probes, not calibrated physical propagation or spacetime."
+  ],
+  "claim": "Cospectral nonisomorphic 27-state pair has equal global resistance but unequal exact pairwise resistance and distance-resistance profiles.",
+  "graphs": {
+    "line_transverse_null": {
+      "distance_histogram": {
+        "1": 108,
+        "2": 243
+      },
+      "distance_resistance_pairs": {
+        "1|13/54": 108,
+        "2|22/81": 162,
+        "2|43/162": 81
+      },
+      "edges": 108,
+      "kirchhoff_index": "183/2",
+      "laplacian_pseudoinverse_polynomial": "L*(13*L^2-315*L+2070)/23328",
+      "pseudoinverse_diagonal": "61/486",
+      "resistance_histogram": {
+        "13/54": 108,
+        "22/81": 162,
+        "43/162": 81
+      },
+      "spectrum": {
+        "-1": 8,
+        "-4": 6,
+        "2": 12,
+        "8": 1
+      },
+      "triangles": 36,
+      "vertices": 27
+    },
+    "point_far_H27": {
+      "distance_histogram": {
+        "1": 108,
+        "2": 216,
+        "3": 27
+      },
+      "distance_resistance_pairs": {
+        "1|13/54": 108,
+        "2|29/108": 216,
+        "3|5/18": 27
+      },
+      "edges": 108,
+      "kirchhoff_index": "183/2",
+      "laplacian_pseudoinverse_polynomial": "L*(13*L^2-315*L+2070)/23328",
+      "pseudoinverse_diagonal": "61/486",
+      "resistance_histogram": {
+        "13/54": 108,
+        "29/108": 216,
+        "5/18": 27
+      },
+      "spectrum": {
+        "-1": 8,
+        "-4": 6,
+        "2": 12,
+        "8": 1
+      },
+      "triangles": 36,
+      "vertices": 27
+    }
+  },
+  "prior_art": "analysis/w33_20260924_history_pointline_cospectral_firewall.py",
+  "status": "PASS_EXACT_POINT_LINE_ELECTRICAL_TRANSPORT_DEFECT"
+}
