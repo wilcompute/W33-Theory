@@ -1,0 +1,177 @@
+{
+ "pass_id": 11703,
+ "su3_of_line_points_union_is_line_centraliser": true,
+ "sm_shaped_pairs_with_Z_x_I": 1944,
+ "colour_or_weak_outside_line": 0,
+ "ordered_colour_weak_pairs": {
+  "colour (0, 1) weak (1, 1)": {
+   "count": 216,
+   "simplest_second_clock": "zeta9^(1x^3 + 1y^3 + 3*1y2 + 3*1x2y + 3*1xy2) [lift 0]"
+  },
+  "colour (0, 1) weak (1, 2)": {
+   "count": 216,
+   "simplest_second_clock": "zeta9^(1x^3 + 2y^3 + 3*1y2 + 3*2x2y + 3*1xy2) [lift 0]"
+  },
+  "colour (1, 0) weak (0, 1)": {
+   "count": 216,
+   "simplest_second_clock": "zeta9^(1y^3 + 3*1xy) [lift 0]"
+  },
+  "colour (1, 0) weak (1, 1)": {
+   "count": 216,
+   "simplest_second_clock": "zeta9^(1x^3 + 1y^3 + 3*1x2 + 3*1x2y + 3*1xy2) [lift 0]"
+  },
+  "colour (1, 0) weak (1, 2)": {
+   "count": 216,
+   "simplest_second_clock": "zeta9^(1x^3 + 2y^3 + 3*1x2 + 3*2x2y + 3*1xy2) [lift 0]"
+  },
+  "colour (1, 1) weak (0, 1)": {
+   "count": 216,
+   "simplest_second_clock": "zeta9^(1y^3 + 3*1xy) [lift 2]"
+  },
+  "colour (1, 1) weak (1, 2)": {
+   "count": 216,
+   "simplest_second_clock": "zeta9^(1x^3 + 2y^3 + 3*1xy + 3*2x2y + 3*1xy2) [lift 2]"
+  },
+  "colour (1, 2) weak (0, 1)": {
+   "count": 216,
+   "simplest_second_clock": "zeta9^(1y^3 + 3*1xy) [lift 1]"
+  },
+  "colour (1, 2) weak (1, 1)": {
+   "count": 216,
+   "simplest_second_clock": "zeta9^(1x^3 + 1y^3 + 3*1xy + 3*1x2y + 3*1xy2) [lift 1]"
+  }
+ },
+ "line_vacua": [
+  {
+   "state": "|01>",
+   "kernel": [
+    [
+     1,
+     0
+    ]
+   ],
+   "signs": {
+    "(0, 1)": 1,
+    "(1, 0)": 0,
+    "(1, 1)": 1,
+    "(1, 2)": -1
+   }
+  },
+  {
+   "state": "|02>",
+   "kernel": [
+    [
+     1,
+     0
+    ]
+   ],
+   "signs": {
+    "(0, 1)": -1,
+    "(1, 0)": 0,
+    "(1, 1)": -1,
+    "(1, 2)": 1
+   }
+  },
+  {
+   "state": "|10>",
+   "kernel": [
+    [
+     0,
+     1
+    ]
+   ],
+   "signs": {
+    "(0, 1)": 0,
+    "(1, 0)": 1,
+    "(1, 1)": 1,
+    "(1, 2)": 1
+   }
+  },
+  {
+   "state": "|11>",
+   "kernel": [
+    [
+     1,
+     2
+    ]
+   ],
+   "signs": {
+    "(0, 1)": 1,
+    "(1, 0)": 1,
+    "(1, 1)": -1,
+    "(1, 2)": 0
+   }
+  },
+  {
+   "state": "|12>",
+   "kernel": [
+    [
+     1,
+     1
+    ]
+   ],
+   "signs": {
+    "(0, 1)": -1,
+    "(1, 0)": 1,
+    "(1, 1)": 0,
+    "(1, 2)": -1
+   }
+  },
+  {
+   "state": "|20>",
+   "kernel": [
+    [
+     0,
+     1
+    ]
+   ],
+   "signs": {
+    "(0, 1)": 0,
+    "(1, 0)": -1,
+    "(1, 1)": -1,
+    "(1, 2)": -1
+   }
+  },
+  {
+   "state": "|21>",
+   "kernel": [
+    [
+     1,
+     1
+    ]
+   ],
+   "signs": {
+    "(0, 1)": 1,
+    "(1, 0)": -1,
+    "(1, 1)": 0,
+    "(1, 2)": 1
+   }
+  },
+  {
+   "state": "|22>",
+   "kernel": [
+    [
+     1,
+     2
+    ]
+   ],
+   "signs": {
+    "(0, 1)": -1,
+    "(1, 0)": -1,
+    "(1, 1)": 1,
+    "(1, 2)": 0
+   }
+  }
+ ],
+ "vacua_with_colour_and_weak_points_chiral": {
+  "colour (1, 0) weak (0, 1)": 4,
+  "colour (1, 2) weak (0, 1)": 4,
+  "colour (1, 1) weak (0, 1)": 4,
+  "colour (0, 1) weak (1, 1)": 4,
+  "colour (1, 2) weak (1, 1)": 4,
+  "colour (1, 0) weak (1, 1)": 4,
+  "colour (0, 1) weak (1, 2)": 4,
+  "colour (1, 1) weak (1, 2)": 4,
+  "colour (1, 0) weak (1, 2)": 4
+ }
+}

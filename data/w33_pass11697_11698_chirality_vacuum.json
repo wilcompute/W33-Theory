@@ -1,0 +1,40 @@
+{
+ "pass_ids": [
+  11697,
+  11698
+ ],
+ "p11697": {
+  "n=1": {
+   "d": 3,
+   "operator_identity_residual": 5.000081936982152e-15,
+   "max_residual_S_vs_parity_formula": 1.1102230246251565e-15,
+   "max_S": 1.5
+  },
+  "n=2": {
+   "d": 9,
+   "operator_identity_residual": 3.00004916218929e-14,
+   "max_residual_S_vs_parity_formula": 4.440892098500626e-15,
+   "max_S": 4.5
+  },
+  "n=3": {
+   "d": 27,
+   "operator_identity_residual": null,
+   "max_residual_S_vs_parity_formula": 1.4210854715202004e-14,
+   "max_S": 13.5
+  }
+ },
+ "p11698": {
+  "starts": 400,
+  "max_S4": 3.3749999999999867,
+  "exact": 3.375,
+  "all_starts_reach_max": true,
+  "lagrangian_lines": 40,
+  "stabiliser_state_S4_census": {
+   "0.0": 40,
+   "3.375": 320
+  },
+  "vacuum_carrier_points": 3,
+  "carriers_pairwise_collinear": true,
+  "vacuum_parity_expectation": -1.6501787221401276e-08
+ }
+}

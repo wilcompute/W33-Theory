@@ -1,0 +1,414 @@
+{
+ "pass_ids": [
+  11701,
+  11702
+ ],
+ "kac": {
+  "min_order_sm_shaped": 16,
+  "min_order_regular": 30,
+  "by_order": {
+   "1": {
+    "classes": 1,
+    "sm_shaped": false,
+    "regular": false
+   },
+   "2": {
+    "classes": 2,
+    "sm_shaped": false,
+    "regular": false
+   },
+   "3": {
+    "classes": 4,
+    "sm_shaped": false,
+    "regular": false
+   },
+   "4": {
+    "classes": 7,
+    "sm_shaped": false,
+    "regular": false
+   },
+   "5": {
+    "classes": 8,
+    "sm_shaped": false,
+    "regular": false
+   },
+   "6": {
+    "classes": 17,
+    "sm_shaped": false,
+    "regular": false
+   },
+   "7": {
+    "classes": 14,
+    "sm_shaped": false,
+    "regular": false
+   },
+   "8": {
+    "classes": 26,
+    "sm_shaped": false,
+    "regular": false
+   },
+   "9": {
+    "classes": 24,
+    "sm_shaped": false,
+    "regular": false
+   },
+   "10": {
+    "classes": 31,
+    "sm_shaped": false,
+    "regular": false
+   },
+   "11": {
+    "classes": 26,
+    "sm_shaped": false,
+    "regular": false
+   },
+   "12": {
+    "classes": 42,
+    "sm_shaped": false,
+    "regular": false
+   },
+   "13": {
+    "classes": 31,
+    "sm_shaped": false,
+    "regular": false
+   },
+   "14": {
+    "classes": 41,
+    "sm_shaped": false,
+    "regular": false
+   },
+   "15": {
+    "classes": 37,
+    "sm_shaped": false,
+    "regular": false
+   },
+   "16": {
+    "classes": 45,
+    "sm_shaped": true,
+    "regular": false
+   },
+   "17": {
+    "classes": 35,
+    "sm_shaped": true,
+    "regular": false
+   },
+   "18": {
+    "classes": 48,
+    "sm_shaped": true,
+    "regular": false
+   },
+   "19": {
+    "classes": 37,
+    "sm_shaped": true,
+    "regular": false
+   },
+   "20": {
+    "classes": 48,
+    "sm_shaped": true,
+    "regular": false
+   },
+   "21": {
+    "classes": 41,
+    "sm_shaped": true,
+    "regular": false
+   },
+   "22": {
+    "classes": 47,
+    "sm_shaped": true,
+    "regular": false
+   },
+   "23": {
+    "classes": 38,
+    "sm_shaped": true,
+    "regular": false
+   },
+   "24": {
+    "classes": 52,
+    "sm_shaped": true,
+    "regular": false
+   },
+   "25": {
+    "classes": 39,
+    "sm_shaped": true,
+    "regular": false
+   },
+   "26": {
+    "classes": 48,
+    "sm_shaped": true,
+    "regular": false
+   },
+   "27": {
+    "classes": 42,
+    "sm_shaped": true,
+    "regular": false
+   },
+   "28": {
+    "classes": 49,
+    "sm_shaped": true,
+    "regular": false
+   },
+   "29": {
+    "classes": 39,
+    "sm_shaped": true,
+    "regular": false
+   },
+   "30": {
+    "classes": 52,
+    "sm_shaped": true,
+    "regular": true
+   }
+  }
+ },
+ "third_level": {
+  "gates": 19683,
+  "elements": 59049,
+  "e8_orders": {
+   "1": 1,
+   "3": 6560,
+   "9": 52488
+  },
+  "sm_shaped": 0,
+  "types": {
+   "A1+A1+A4": {
+    "count": 15552,
+    "simplest": "zeta9^(1y^3 + 3*2x2y) [lift 1]"
+   },
+   "A1+A4": {
+    "count": 10368,
+    "simplest": "zeta9^(1y^3 + 3*1x2y) [lift 1]"
+   },
+   "A1+D4": {
+    "count": 6480,
+    "simplest": "zeta9^(1y^3 + 3*1xy2) [lift 0]"
+   },
+   "A1+A2+A2+A2": {
+    "count": 5760,
+    "simplest": "zeta9^(1y^3) [lift 1]"
+   },
+   "A1+A2+A4": {
+    "count": 5184,
+    "simplest": "zeta9^(1x^3 + 2y^3) [lift 0]"
+   },
+   "A1+A5": {
+    "count": 5184,
+    "simplest": "zeta9^(1y^3 + 3*1x2) [lift 1]"
+   },
+   "A2+E6": {
+    "count": 2240,
+    "simplest": "zeta9^(3*1xy2) [lift 1]"
+   },
+   "D7": {
+    "count": 2160,
+    "simplest": "zeta9^(3*1xy2) [lift 0]"
+   },
+   "A1+D5": {
+    "count": 1944,
+    "simplest": "zeta9^(1y^3 + 3*2x2y) [lift 0]"
+   },
+   "A8": {
+    "count": 1920,
+    "simplest": "zeta9^(0) [lift 1]"
+   },
+   "D5": {
+    "count": 1296,
+    "simplest": "zeta9^(1y^3 + 3*1y2 + 3*1x2y) [lift 1]"
+   },
+   "A2+D5": {
+    "count": 648,
+    "simplest": "zeta9^(1y^3 + 3*1x2y) [lift 0]"
+   },
+   "E7": {
+    "count": 240,
+    "simplest": "zeta9^(3*1y2) [lift 1]"
+   },
+   "A1+E6": {
+    "count": 72,
+    "simplest": "zeta9^(1y^3) [lift 0]"
+   },
+   "E8": {
+    "count": 1,
+    "simplest": "zeta9^(0) [lift 0]"
+   }
+  }
+ },
+ "fourth_level_samples": {
+  "random_diagonal_sm_fraction": 0.095,
+  "product_clock_sm_fraction": 0.030166666666666668,
+  "full_product_family_count": "50544 of 1594323 (27^4 x 3 lifts; exhaustive run)"
+ },
+ "distinct_centraliser_patterns": 9605,
+ "with_Z_x_I": {
+  "A1+A1+A4": {
+   "count": 2592,
+   "simplest_second_clock": "zeta9^(3*1xy2) [lift 1]"
+  },
+  "A1+A1+A1": {
+   "count": 1458,
+   "simplest_second_clock": "zeta9^(1y^3 + 3*2x2y) [lift 1]"
+  },
+  "A1+A1+A1+A1": {
+   "count": 729,
+   "simplest_second_clock": "zeta9^(1y^3 + 3*1xy2) [lift 0]"
+  },
+  "A1+A1+A1+A2": {
+   "count": 729,
+   "simplest_second_clock": "zeta9^(1y^3 + 3*2x2y) [lift 0]"
+  },
+  "A1+A1+A2": {
+   "count": 729,
+   "simplest_second_clock": "zeta9^(1y^3 + 3*1y2 + 3*1x2y) [lift 0]"
+  },
+  "A1+A1": {
+   "count": 486,
+   "simplest_second_clock": "zeta9^(1y^3 + 3*1x2y) [lift 1]"
+  },
+  "A1+D5": {
+   "count": 324,
+   "simplest_second_clock": "zeta9^(3*1xy2) [lift 0]"
+  },
+  "D4": {
+   "count": 270,
+   "simplest_second_clock": "zeta9^(3*1x2y) [lift 1]"
+  },
+  "A1+A1+A2+A2": {
+   "count": 243,
+   "simplest_second_clock": "zeta9^(1y^3 + 3*1x2y) [lift 0]"
+  },
+  "A2+A2+A2": {
+   "count": 240,
+   "simplest_second_clock": "zeta9^(0) [lift 1]"
+  },
+  "A5": {
+   "count": 216,
+   "simplest_second_clock": "zeta9^(3*1y2 + 3*1x2y) [lift 0]"
+  },
+  "A1+A4": {
+   "count": 216,
+   "simplest_second_clock": "zeta9^(1x^3 + 3*1xy2) [lift 1]"
+  },
+  "A1+A2+A4": {
+   "count": 216,
+   "simplest_second_clock": "zeta9^(1x^3 + 3*1y2 + 3*1xy2) [lift 1]"
+  },
+  "A1+A2": {
+   "count": 162,
+   "simplest_second_clock": "zeta9^(1y^3 + 3*1xy) [lift 0]"
+  },
+  "A1+A2+A2+A2": {
+   "count": 138,
+   "simplest_second_clock": "zeta9^(1y^3) [lift 0]"
+  },
+  "A2+D4": {
+   "count": 135,
+   "simplest_second_clock": "zeta9^(3*1x2y) [lift 0]"
+  },
+  "A1+D4": {
+   "count": 135,
+   "simplest_second_clock": "zeta9^(1x^3 + 3*1x2y) [lift 0]"
+  },
+  "A2+A2+A2+A2": {
+   "count": 120,
+   "simplest_second_clock": "zeta9^(3*1x2) [lift 0]"
+  },
+  "A2+A5": {
+   "count": 108,
+   "simplest_second_clock": "zeta9^(3*1y2) [lift 1]"
+  },
+  "A1": {
+   "count": 108,
+   "simplest_second_clock": "zeta9^(1y^3) [lift 1]"
+  },
+  "A1+A5": {
+   "count": 108,
+   "simplest_second_clock": "zeta9^(1x^3 + 3*1y2) [lift 1]"
+  },
+  "A1+A2+A2": {
+   "count": 81,
+   "simplest_second_clock": "zeta9^(1y^3 + 3*1x2) [lift 1]"
+  },
+  "A2+D5": {
+   "count": 27,
+   "simplest_second_clock": "zeta9^(1x^3 + 3*1xy2) [lift 0]"
+  },
+  "D5": {
+   "count": 27,
+   "simplest_second_clock": "zeta9^(1x^3 + 3*1y2 + 3*1xy2) [lift 0]"
+  },
+  "E6": {
+   "count": 3,
+   "simplest_second_clock": "zeta9^(3*1x2) [lift 1]"
+  },
+  "A1+E6": {
+   "count": 3,
+   "simplest_second_clock": "zeta9^(1x^3) [lift 0]"
+  },
+  "A2+E6": {
+   "count": 2,
+   "simplest_second_clock": "zeta9^(0) [lift 0]"
+  }
+ },
+ "chains_from_E6xSU3": {
+  "A1+D5": {
+   "second": "zeta9^(3*1xy2) [lift 0]",
+   "third": "zeta9^(1y^3 + 3*1xy + 3*1x2y) [lift 0]",
+   "third_clocks": 264,
+   "sm_multiplet_sizes": {
+    "1": 30,
+    "2": 20,
+    "3": 30,
+    "6": 12
+   }
+  },
+  "D5": {
+   "second": "zeta9^(1x^3 + 3*1y2 + 3*1xy2) [lift 0]",
+   "third": "zeta9^(1y^3 + 3*1x2y + 3*1xy2) [lift 0]",
+   "third_clocks": 272,
+   "sm_multiplet_sizes": {
+    "1": 30,
+    "2": 20,
+    "3": 30,
+    "6": 12
+   }
+  },
+  "A2+D5": {
+   "second": "zeta9^(1x^3 + 3*1xy2) [lift 0]",
+   "third": "zeta9^(1y^3 + 3*1xy) [lift 0]",
+   "third_clocks": 426,
+   "sm_multiplet_sizes": {
+    "1": 30,
+    "2": 20,
+    "3": 30,
+    "6": 12
+   }
+  },
+  "A1+A4": {
+   "second": "zeta9^(1x^3 + 3*1xy2) [lift 1]",
+   "third": "zeta9^(3*1y2 + 3*1x2y) [lift 0]",
+   "third_clocks": 1200,
+   "sm_multiplet_sizes": {
+    "1": 30,
+    "2": 20,
+    "3": 30,
+    "6": 12
+   }
+  },
+  "A1+A1+A4": {
+   "second": "zeta9^(3*1xy2) [lift 1]",
+   "third": "zeta9^(3*1x2y) [lift 0]",
+   "third_clocks": 1060,
+   "sm_multiplet_sizes": {
+    "1": 30,
+    "2": 20,
+    "3": 30,
+    "6": 12
+   }
+  }
+ },
+ "pairs": {
+  "pairs_with_8_joint_roots": 6346944,
+  "types": {
+   "A1+A2": 5037660,
+   "A1+A1+A1+A1": 1309284
+  }
+ }
+}

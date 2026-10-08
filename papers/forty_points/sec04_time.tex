@@ -1037,6 +1037,24 @@ $\mathfrak{su}(3)\oplus\mathfrak{su}(2)$ unbroken in about $0.2\%$ of magic tick
 dynamics: the finite geometry is the symmetric skeleton, and every physical selection remains a symmetry breaking still to be derived.
 \tierT\,\tierC\ (\cert{w33\_pass11687\_11691\_two\_qutrit\_e8\_dictionary.py}, \cert{w33\_pass11692\_tick\_symmetry\_in\_e8.py})
 
+\emph{The vacuum and the clock.} The quadratic intensity of the chirality order parameter is fixed by the Weil parity: for every
+$n$-qutrit state $\sum_{v\neq0}(\operatorname{Im}\langle D_v\rangle)^2=\tfrac d2(1-\langle\Pi\rangle^2)$, so it cannot select anything. Its quartic can: for
+two qutrits $\sum_{v\neq0}(\operatorname{Im}\langle D_v\rangle)^4\le27/8$, with equality exactly on the $320$ stabiliser states of a line with a
+nontrivial character (the proof uses that $W(3,3)$ has no triangles). The bounded potential built from it therefore has vacua that choose
+a line, a point on it and a sign of the $C\times T$-odd order parameter, spontaneously. Symmetry breaking to the Standard-Model shape needs
+the opposite resource. By Kac's theorem an $E_8$ element with unbroken $\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1)^5$ has order at
+least $16$, and every third-level diagonal two-qutrit clock has order at most $9$. A single such clock thus stops at the grand-unified
+algebras $E_7$, $E_6\times SU(3)$, $Spin(10)$ and $SU(5)\times SU(2)$; the Standard-Model shape needs a fourth-level clock or two commuting
+third-level clocks, the simplest being $Z\otimes I$ with $(I\otimes T)\,CZ$, and $E_8\to E_6\times SU(3)\to Spin(10)\times SU(2)\to$ SM shape is
+realised by commuting clocks. Every such breaking from $Z\otimes I$ is trinification breaking on a single line: colour is the $SU(3)$ of one
+point, the weak $SU(2)$ sits in the $SU(3)$ of another, and the clocks fix that line's chirality vacua. On the Burkhardt side, the
+Gruson--Sam--Weyman Coble covariant of the $E_8$ Cartan is $-2$ times the Maschke quartic, the unique equivariant one. No two-qutrit gate
+exchanges $8_s$ and $8_c$; the only triality realised is the central $\mathbb Z_3$. These are compatible selections, not a dynamics that forces
+them.
+\tierT\,\tierC\ (\cert{w33\_pass11697\_11698\_chirality\_vacuum.py}, \cert{w33\_pass11699\_coble\_covariant\_is\_maschke\_map.py},
+\cert{w33\_pass11700\_triality\_is\_central.py}, \cert{w33\_pass11701\_11702\_clock\_symmetry\_breaking.py},
+\cert{w33\_pass11703\_vacuum\_and\_clock\_share\_a\_line.py})
+
 All of this is one law.
 
 \begin{result}{Theorem 4.8 (the intrinsic arrow for every number of qutrits) \hfill \tierT}

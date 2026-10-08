@@ -1,0 +1,244 @@
+{
+ "pass_id": 11700,
+ "coset_sizes": [
+  64,
+  64,
+  64
+ ],
+ "gates": {
+  "F(x)I": [
+   {
+    "lift": 0,
+    "coset_map": [
+     1,
+     2,
+     0
+    ],
+    "kind": "cyclic"
+   },
+   {
+    "lift": 1,
+    "coset_map": [
+     0,
+     1,
+     2
+    ],
+    "kind": "identity"
+   },
+   {
+    "lift": 2,
+    "coset_map": [
+     2,
+     0,
+     1
+    ],
+    "kind": "cyclic"
+   }
+  ],
+  "S(x)I": [
+   {
+    "lift": 0,
+    "coset_map": [
+     2,
+     0,
+     1
+    ],
+    "kind": "cyclic"
+   },
+   {
+    "lift": 1,
+    "coset_map": [
+     1,
+     2,
+     0
+    ],
+    "kind": "cyclic"
+   },
+   {
+    "lift": 2,
+    "coset_map": [
+     0,
+     1,
+     2
+    ],
+    "kind": "identity"
+   }
+  ],
+  "Z(x)I": [
+   {
+    "lift": 0,
+    "coset_map": [
+     0,
+     1,
+     2
+    ],
+    "kind": "identity"
+   },
+   {
+    "lift": 1,
+    "coset_map": [
+     2,
+     0,
+     1
+    ],
+    "kind": "cyclic"
+   },
+   {
+    "lift": 2,
+    "coset_map": [
+     1,
+     2,
+     0
+    ],
+    "kind": "cyclic"
+   }
+  ],
+  "X(x)I": [
+   {
+    "lift": 0,
+    "coset_map": [
+     0,
+     1,
+     2
+    ],
+    "kind": "identity"
+   },
+   {
+    "lift": 1,
+    "coset_map": [
+     2,
+     0,
+     1
+    ],
+    "kind": "cyclic"
+   },
+   {
+    "lift": 2,
+    "coset_map": [
+     1,
+     2,
+     0
+    ],
+    "kind": "cyclic"
+   }
+  ],
+  "I(x)F": [
+   {
+    "lift": 0,
+    "coset_map": [
+     1,
+     2,
+     0
+    ],
+    "kind": "cyclic"
+   },
+   {
+    "lift": 1,
+    "coset_map": [
+     0,
+     1,
+     2
+    ],
+    "kind": "identity"
+   },
+   {
+    "lift": 2,
+    "coset_map": [
+     2,
+     0,
+     1
+    ],
+    "kind": "cyclic"
+   }
+  ],
+  "I(x)S": [
+   {
+    "lift": 0,
+    "coset_map": [
+     2,
+     0,
+     1
+    ],
+    "kind": "cyclic"
+   },
+   {
+    "lift": 1,
+    "coset_map": [
+     1,
+     2,
+     0
+    ],
+    "kind": "cyclic"
+   },
+   {
+    "lift": 2,
+    "coset_map": [
+     0,
+     1,
+     2
+    ],
+    "kind": "identity"
+   }
+  ],
+  "SWAP": [
+   {
+    "lift": 0,
+    "coset_map": [
+     2,
+     0,
+     1
+    ],
+    "kind": "cyclic"
+   },
+   {
+    "lift": 1,
+    "coset_map": [
+     1,
+     2,
+     0
+    ],
+    "kind": "cyclic"
+   },
+   {
+    "lift": 2,
+    "coset_map": [
+     0,
+     1,
+     2
+    ],
+    "kind": "identity"
+   }
+  ],
+  "K": [
+   {
+    "lift": 0,
+    "coset_map": [
+     0,
+     1,
+     2
+    ],
+    "kind": "identity"
+   },
+   {
+    "lift": 1,
+    "coset_map": [
+     2,
+     0,
+     1
+    ],
+    "kind": "cyclic"
+   },
+   {
+    "lift": 2,
+    "coset_map": [
+     1,
+     2,
+     0
+    ],
+    "kind": "cyclic"
+   }
+  ]
+ },
+ "any_transposition": false,
+ "every_gate_has_one_identity_lift": true
+}
