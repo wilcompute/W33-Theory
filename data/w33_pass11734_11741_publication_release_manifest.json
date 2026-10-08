@@ -1,0 +1,57 @@
+{
+  "attestation": "Exact-science-SHA scoped producer and regression verification",
+  "ci": {
+    "conclusion": "success",
+    "frozen_seconds": 14.87,
+    "frozen_tests": 23,
+    "head_sha": "4b3e067622890b32dad576619949f77a1619c3b8",
+    "job_id": 113336462677,
+    "producer_sections": 8,
+    "regenerated_seconds": 14.35,
+    "regenerated_tests": 23,
+    "run_id": 37784733528,
+    "url": "https://github.com/wilcompute/W33-Theory/actions/runs/37784733528"
+  },
+  "hosted_primary_log": {
+    "path": ".continuity/receipts/PASS11734_11741_CI.log",
+    "sha256_LF": "9850c7cfb19c908ada415b277a21ef274e0467d29584eb4def03642a63acbfb8"
+  },
+  "imported_interfaces": {
+    "analysis/w33_pass11681_e8_from_two_qutrits.py": "fa594309eb321a5e1bd90bcba7bf37ae70cc85885c66cc16f37373fe0424da7e",
+    "analysis/w33_pass11721_11725_coherent_vacuum_gauge_bridge.py": "6a0858323145beac689ec756aed92461dd726adf3f957b825b0dceb2e646152e",
+    "analysis/w33_pass11726_11733_dynamical_branch_and_chiral_interface.py": "7e41783a8ba3b45682458ad776d08814b9636942b56ae9f23076104fac858d87"
+  },
+  "legacy_CI_limit": {
+    "conclusion": "failure",
+    "current_run": 37784733155,
+    "failure": "FileNotFoundError: artifacts/canonical_su3_gauge_and_cubic.json",
+    "global_CI_green_claim": false,
+    "same_failure_recorded_in_prior_packet": "data/w33_pass11726_11733_publication_release_manifest.json",
+    "workflow": "W33 Pass 10947 five-front execution"
+  },
+  "local": {
+    "audit": "final four-file intake clean; no rediscovery collisions, forced arithmetic or certified contradictions",
+    "earlier_baseline_seconds": 247.73,
+    "earlier_baseline_tests": 22,
+    "final_seconds": 77.26,
+    "final_tests": 23,
+    "producer_sections": 8
+  },
+  "normalization": "CRLF -> LF",
+  "physics_boundary": "Supplied CY quotient and alternative Higgs branch; no observed flavor/couplings, complete anomaly/backreaction vacuum, nonlinear Lorentzian4D dynamics or CC screening. Published ambient vanishing criteria prevent perturbative flavor repair in the scoped type1 bundle sector.",
+  "science_artifacts": {
+    ".continuity/SESSION_NOTES.md": "4483fe87fb7e45fefd15c6c189776076d2f7103d521e6cfeca9028ba72479585",
+    ".continuity/receipts/PASS11734_11741_LOCAL.log": "0df19452941e3d48fb548d8706931ad1cee633fe1b3db57221918e5ef550e267",
+    ".github/workflows/pass11734-11741-gauging-chiral-quotient.yml": "257d3293a7224be5828bb9c1c9fd47ab820151ff8421b37f99bc9d779ed1a94d",
+    "RESULTS_INDEX.md": "31ed9982ab1e87ba46262649216ff55b303b58a018ef71a360f64d8458dd5079",
+    "TOPICAL_ALIASES.md": "15a8140139ac366b570dcb51d67c275b3598927b0b6d2214562360fffe82225f",
+    "analysis/PASS11734_11741_GAUGING_AND_CHIRAL_QUOTIENT.md": "b2815e8997e63c2e53cb6e3fd22c88a66398b41d43131b0d9877962b3d16b387",
+    "analysis/w33_pass11734_11741_gauging_and_chiral_quotient.py": "f749f27fd5b9cff8e92b139b0c938425dd0216e6979907cb8ff6660f2e5ecc04",
+    "data/w33_pass11734_11741_gauging_and_chiral_quotient.json": "661b25e9557269fda8b8dd7627629f6b424bf23ba141f7e2a25cd68e62499a56",
+    "docs/index.html": "34e551ef597b69604bede9ad2c24e99cc81912efaee2f3c72efd130adafee6c5",
+    "tests/test_w33_pass11734_11741_gauging_and_chiral_quotient.py": "f4c913c832bf1e0ef818856b35d6c3bd374a4baeec6e1acdd7fc024dcb4be879"
+  },
+  "science_commit": "4b3e067622890b32dad576619949f77a1619c3b8",
+  "snapshot_boundary": "science_artifacts hashes bind the named science commit before subsequent session/receipt edits; imported_interfaces are named scientific dependencies, not a complete environment lock",
+  "status": "PASS"
+}
