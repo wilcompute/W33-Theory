@@ -1,0 +1,41 @@
+{
+ "pass_id": 11681,
+ "gamma_from_jacobi": [
+  -1.0,
+  2.8220516768585165e-17
+ ],
+ "jacobi_max_residual_27_type_triples": 1.2868476258827026e-13,
+ "cartan_brackets_max": 0.0,
+ "ad_h_zero_eigenvalues": 8,
+ "roots": 240,
+ "distinct_roots": 240,
+ "trivector_restriction_norms": [
+  1.732051
+ ],
+ "witting_rays": 40,
+ "ray_overlaps": [
+  0.0,
+  0.333333
+ ],
+ "roots_per_pauli_degree": [
+  3
+ ],
+ "pauli_degrees_carrying_roots": 80,
+ "each_ray_one_w33_point": true,
+ "distinct_w33_points": 40,
+ "orthogonal_iff_paulis_commute": 1560,
+ "phases_per_ray_units_pi_over_3": {
+  "0": 40,
+  "1": 40,
+  "2": 40,
+  "3": 40,
+  "4": 40,
+  "5": 40
+ },
+ "clifford_image_order_on_trivector_cartan": 103680,
+ "clifford_image_scalars": 4,
+ "clifford_image_reflections": 0,
+ "codex_rays_matching_root_rays_naive_map": 16,
+ "conjugation_is_antilinear_automorphism_max_residual": 0.0,
+ "real_form_signature_of_invariant_form": "(44 + 84, 36 + 84) = (128, 120): split E8(8)"
+}

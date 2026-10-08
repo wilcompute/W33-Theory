@@ -1,0 +1,46 @@
+{
+ "pass_id": 11680,
+ "n1": {
+  "dim_invariants": 3,
+  "all_T_u_invariant": true,
+  "three_cycles_fix_T_u": true,
+  "transposition_sends_T_u_to_T_minus_u": true,
+  "sym_dim": 2,
+  "alt_dim": 1,
+  "mixed_dim": 0,
+  "formula_sym": 2,
+  "formula_alt": 1,
+  "clifford_spectra": {
+   "sym_conj_even": 40,
+   "alt_conj_odd": 40,
+   "words": 40
+  }
+ },
+ "n2": {
+  "dim_invariants": 9,
+  "all_T_u_invariant": true,
+  "three_cycles_fix_T_u": true,
+  "transposition_sends_T_u_to_T_minus_u": true,
+  "sym_dim": 5,
+  "alt_dim": 4,
+  "mixed_dim": 0,
+  "formula_sym": 5,
+  "formula_alt": 4,
+  "clifford_spectra": {
+   "sym_conj_even": 40,
+   "alt_conj_odd": 40,
+   "words": 40
+  }
+ },
+ "n3": {
+  "dim_invariants": 27,
+  "all_T_u_invariant": true,
+  "three_cycles_fix_T_u": true,
+  "transposition_sends_T_u_to_T_minus_u": true,
+  "sym_dim": 14,
+  "alt_dim": 13,
+  "mixed_dim": 0,
+  "formula_sym": 14,
+  "formula_alt": 13
+ }
+}
