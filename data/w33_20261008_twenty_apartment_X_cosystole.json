@@ -1,0 +1,40 @@
+{
+  "exact_X_minimum_proven": true,
+  "logical_operators": [
+    {
+      "MILP_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "MILP_status": 0,
+      "MIP_gap": 0.0,
+      "X_operator_support_edge_indices": [
+        25,
+        30,
+        40,
+        45,
+        48,
+        57
+      ],
+      "dual_bound": 6.0,
+      "logical_Z_index": 0,
+      "minimum_X_operator_weight_if_proven": 6,
+      "upper_bound_witness_weight": 6
+    },
+    {
+      "MILP_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "MILP_status": 0,
+      "MIP_gap": 0.0,
+      "X_operator_support_edge_indices": [
+        1,
+        15,
+        29,
+        34,
+        53,
+        56
+      ],
+      "dual_bound": 5.999999999999998,
+      "logical_Z_index": 1,
+      "minimum_X_operator_weight_if_proven": 6,
+      "upper_bound_witness_weight": 6
+    }
+  ],
+  "minimal_X_weight": 6
+}

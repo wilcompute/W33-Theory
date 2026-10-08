@@ -1,0 +1,52 @@
+{
+  "Z2xZ2_invariant": true,
+  "all_16_projective_charts_unit_Jacobian_ideal_mod7": false,
+  "all_48_ambient_fixed_points_avoided_mod7": true,
+  "all_48_ambient_fixed_points_avoided_over_Q": true,
+  "coefficient_triple_s_d_t": [
+    1,
+    2,
+    3
+  ],
+  "complex_smoothness_proven": false,
+  "elapsed_seconds": 1.5236994000006234,
+  "fixed_point_audit": {
+    "fixed_points_checked": 48,
+    "nonzero_values": [
+      "-1",
+      "-16",
+      "-32",
+      "3",
+      "64",
+      "80"
+    ]
+  },
+  "fixed_point_nonzero_checks": {
+    "g_values": [
+      "1+2",
+      "1-2"
+    ],
+    "gh_values": [
+      "16*(2+3)",
+      "16*(2-3)"
+    ],
+    "h_values": [
+      "16*(1+3)",
+      "16*(1-3)"
+    ]
+  },
+  "nonunit_chart": {
+    "basis_len": 12,
+    "chart_bits": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "interpretation": "Nonunit modular Jacobian cannot certify this candidate's smoothness over C"
+  },
+  "polynomial": "prod_i(x_i^2+y_i^2)+2*prod_i(x_i^2-y_i^2)+3*prod_i(2*x_i*y_i)",
+  "prime": 7,
+  "smooth_free_quotient_constructed": false,
+  "unit_jacobian_chart_representatives": []
+}

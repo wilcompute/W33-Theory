@@ -1,0 +1,109 @@
+{
+  "F20_symmetry_binary_class_exists_but_no_matter_rep_assigned": true,
+  "UV_prior_art": "Pass10967 all 215 heterotic models 0/215 FI-compatible non-R parity; Pass10968 R-symmetry alleged loophole explicitly corrected by Pass10974 nonprime-plane rule. Do not resurrect retracted claim.",
+  "all_possible_nonR_Z2_assignments": 256,
+  "allowed_operators": [
+    "up_Yukawa",
+    "down_Yukawa",
+    "lepton_Yukawa",
+    "neutrino_Dirac",
+    "mu"
+  ],
+  "allowing_all_five_standard_Yukawa_mu_constraints": 8,
+  "dangerous_operators": [
+    "QLDc",
+    "LLEc",
+    "UcDcDc",
+    "QQQL",
+    "UcUcDcEc"
+  ],
+  "field_order": [
+    "Q",
+    "Uc",
+    "Dc",
+    "L",
+    "Ec",
+    "Nc",
+    "Hu",
+    "Hd"
+  ],
+  "limitations": "Assumes non-R Z2, all Yukawa and mu operators neutral. If mu forbidden or R-charge of superpotential nonzero, conclusion must be reformulated.",
+  "maximum_dangerous_operators_simultaneously_vetoed_by_these_Z2": 4,
+  "physical_P6_constructed": false,
+  "single_nonR_Z2_can_veto_all_5": false,
+  "supplied_P6_charge_operator_table": [
+    {
+      "P6_mod2": 0,
+      "P6_mod3": 0,
+      "P6_mod6": 0,
+      "X3_mod3": 0,
+      "operator": "up_Yukawa"
+    },
+    {
+      "P6_mod2": 0,
+      "P6_mod3": 0,
+      "P6_mod6": 0,
+      "X3_mod3": 0,
+      "operator": "down_Yukawa"
+    },
+    {
+      "P6_mod2": 0,
+      "P6_mod3": 0,
+      "P6_mod6": 0,
+      "X3_mod3": 0,
+      "operator": "lepton_Yukawa"
+    },
+    {
+      "P6_mod2": 0,
+      "P6_mod3": 0,
+      "P6_mod6": 0,
+      "X3_mod3": 0,
+      "operator": "neutrino_Dirac"
+    },
+    {
+      "P6_mod2": 0,
+      "P6_mod3": 0,
+      "P6_mod6": 0,
+      "X3_mod3": 0,
+      "operator": "mu"
+    },
+    {
+      "P6_mod2": 1,
+      "P6_mod3": 0,
+      "P6_mod6": 3,
+      "X3_mod3": 0,
+      "operator": "QLDc"
+    },
+    {
+      "P6_mod2": 1,
+      "P6_mod3": 0,
+      "P6_mod6": 3,
+      "X3_mod3": 0,
+      "operator": "LLEc"
+    },
+    {
+      "P6_mod2": 1,
+      "P6_mod3": 2,
+      "P6_mod6": 5,
+      "X3_mod3": 1,
+      "operator": "UcDcDc"
+    },
+    {
+      "P6_mod2": 0,
+      "P6_mod3": 1,
+      "P6_mod6": 4,
+      "X3_mod3": 2,
+      "operator": "QQQL"
+    },
+    {
+      "P6_mod2": 0,
+      "P6_mod3": 2,
+      "P6_mod6": 2,
+      "X3_mod3": 1,
+      "operator": "UcUcDcEc"
+    }
+  ],
+  "symbolic_Z2_QLD_equals_LLE": true,
+  "symbolic_Z2_QQQL_equals_UUD_E": true,
+  "symbolic_Z2_UDD_xor_QLD_xor_QQQL": 0
+}

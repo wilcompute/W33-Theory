@@ -1,0 +1,596 @@
+{
+  "attempts": [
+    {
+      "seed": 20261008,
+      "skip": "mod3 F3-rational singularity",
+      "witness": [
+        1,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 20261009,
+      "skip": "mod3 F3-rational singularity",
+      "witness": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "seed": 20261010,
+      "skip": "mod3 F3-rational singularity",
+      "witness": [
+        1,
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 20261011,
+      "skip": "mod3 F3-rational singularity",
+      "witness": [
+        1,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 20261012,
+      "skip": "mod3 F3-rational singularity",
+      "witness": [
+        1,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 20261013,
+      "skip": "mod3 F3-rational singularity",
+      "witness": [
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 20261014,
+      "skip": "mod3 F3-rational singularity",
+      "witness": [
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 20261015,
+      "skip": "mod3 F3-rational singularity",
+      "witness": [
+        1,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 20261016,
+      "skip": "mod3 F3-rational singularity",
+      "witness": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "seed": 20261017,
+      "skip": "mod3 F3-rational singularity",
+      "witness": [
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 20261018,
+      "skip": "mod3 F3-rational singularity",
+      "witness": [
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 20261019,
+      "skip": "mod3 F3-rational singularity",
+      "witness": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 20261020,
+      "skip": "mod3 F3-rational singularity",
+      "witness": [
+        1,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 20261021,
+      "skip": "mod3 F3-rational singularity",
+      "witness": [
+        0,
+        1,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 20261022,
+      "skip": "mod3 F3-rational singularity",
+      "witness": [
+        1,
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "seed": 20261023,
+      "skip": "mod3 F3-rational singularity",
+      "witness": [
+        1,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 20261024,
+      "skip": "mod3 F3-rational singularity",
+      "witness": [
+        1,
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "seed": 20261025,
+      "skip": "mod3 F3-rational singularity",
+      "witness": [
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 20261026,
+      "skip": "mod3 F3-rational singularity",
+      "witness": [
+        1,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 20261027,
+      "skip": "mod3 F3-rational singularity",
+      "witness": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "seed": 20261028,
+      "skip": "mod3 F3-rational singularity",
+      "witness": [
+        1,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 20261029,
+      "skip": "mod3 F3-rational singularity",
+      "witness": [
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 20261030,
+      "skip": "mod3 F3-rational singularity",
+      "witness": [
+        1,
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "seed": 20261031,
+      "skip": "mod3 F3-rational singularity",
+      "witness": [
+        1,
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "seed": 20261032,
+      "skip": "mod3 F3-rational singularity",
+      "witness": [
+        1,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 20261033,
+      "skip": "mod3 F3-rational singularity",
+      "witness": [
+        1,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 20261034,
+      "skip": "mod3 F3-rational singularity",
+      "witness": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "seed": 20261035,
+      "skip": "mod3 F3-rational singularity",
+      "witness": [
+        1,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 20261036,
+      "skip": "mod3 F3-rational singularity",
+      "witness": [
+        1,
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "seed": 20261037,
+      "skip": "mod3 F3-rational singularity",
+      "witness": [
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "basis_orbits": [
+    [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        2,
+        2,
+        2
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        2,
+        2,
+        2,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        2,
+        2,
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        2,
+        2,
+        0,
+        2
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        2,
+        2
+      ],
+      [
+        2,
+        2,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        2,
+        1,
+        2,
+        1
+      ]
+    ],
+    [
+      [
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        2,
+        1,
+        1,
+        2
+      ]
+    ],
+    [
+      [
+        0,
+        1,
+        1,
+        2
+      ],
+      [
+        2,
+        1,
+        1,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        1,
+        2,
+        1
+      ],
+      [
+        2,
+        1,
+        0,
+        1
+      ]
+    ],
+    [
+      [
+        0,
+        2,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        2,
+        2
+      ]
+    ],
+    [
+      [
+        0,
+        2,
+        0,
+        2
+      ],
+      [
+        2,
+        0,
+        2,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        2,
+        1,
+        1
+      ],
+      [
+        2,
+        0,
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        0,
+        2,
+        2,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        2
+      ]
+    ],
+    [
+      [
+        0,
+        2,
+        2,
+        2
+      ],
+      [
+        2,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        2,
+        2,
+        1
+      ]
+    ],
+    [
+      [
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        2,
+        1,
+        2
+      ]
+    ],
+    [
+      [
+        1,
+        0,
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        1,
+        0
+      ]
+    ],
+    [
+      [
+        1,
+        0,
+        2,
+        1
+      ],
+      [
+        1,
+        2,
+        0,
+        1
+      ]
+    ],
+    [
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        2,
+        2
+      ]
+    ],
+    [
+      [
+        1,
+        1,
+        0,
+        2
+      ],
+      [
+        1,
+        1,
+        2,
+        0
+      ]
+    ],
+    [
+      [
+        1,
+        1,
+        1,
+        1
+      ]
+    ]
+  ],
+  "char0_smooth_polynomial_certified": false,
+  "geometry_scope": "If all eight h-paired affine Jacobian ideals are unit over F3, smooth mod3 implies smooth characteristic zero. Need separately certify avoiding all 48 Klein fixed points for free quotient."
+}

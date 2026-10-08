@@ -1,0 +1,162 @@
+{
+  "F20_element_order_counts": {
+    "1": 1,
+    "2": 5,
+    "4": 10,
+    "5": 4
+  },
+  "F20_logical_action_by_element_order": {
+    "1": "identity",
+    "2": "identity",
+    "4": "SWAP",
+    "5": "identity"
+  },
+  "X_Z_dual_basis_pairing": [
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      1
+    ]
+  ],
+  "all_vertex_X_and_face_Z_stabilizers_preserved": true,
+  "code": "[[60,2,6]]_2",
+  "hardware_cost_and_fault_tolerance_unknown": true,
+  "logical_SWAP_implemented_by_edge_permutation": true,
+  "not_an_entangling_gate": true,
+  "physical_wire_permutation_witness": {
+    "X_logical_supports": [
+      [
+        0,
+        23,
+        28,
+        35,
+        37,
+        38,
+        41,
+        44,
+        49,
+        53,
+        56,
+        58
+      ],
+      [
+        9,
+        23,
+        38,
+        40,
+        43,
+        49,
+        50
+      ]
+    ],
+    "Z_logical_supports": [
+      [
+        0,
+        2,
+        18,
+        20,
+        30,
+        32,
+        34,
+        35,
+        55,
+        56
+      ],
+      [
+        0,
+        2,
+        3,
+        5,
+        18,
+        20,
+        30,
+        32,
+        34,
+        35,
+        42,
+        43,
+        45,
+        47,
+        51,
+        52,
+        54,
+        55
+      ]
+    ],
+    "automorphism_order": 4,
+    "edge_permutation": [
+      20,
+      19,
+      18,
+      49,
+      50,
+      48,
+      31,
+      32,
+      30,
+      53,
+      51,
+      52,
+      41,
+      39,
+      40,
+      56,
+      55,
+      54,
+      47,
+      45,
+      46,
+      13,
+      12,
+      14,
+      44,
+      43,
+      42,
+      0,
+      2,
+      1,
+      15,
+      16,
+      17,
+      11,
+      9,
+      10,
+      33,
+      35,
+      34,
+      58,
+      57,
+      59,
+      4,
+      5,
+      3,
+      29,
+      27,
+      28,
+      25,
+      24,
+      26,
+      37,
+      36,
+      38,
+      7,
+      6,
+      8,
+      23,
+      21,
+      22
+    ],
+    "logical_X_image": [
+      2,
+      1
+    ],
+    "logical_Z_image": [
+      2,
+      1
+    ]
+  },
+  "representation_boundary": "Induced Pauli symplectic action is logical SWAP in chosen dual basis, up to phases/Pauli-frame choices; no implemented photonic hardware or logical universal gate set inferred."
+}

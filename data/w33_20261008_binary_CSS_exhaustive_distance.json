@@ -1,0 +1,30 @@
+{
+  "X_weight6_witness_indices": [
+    25,
+    30,
+    40,
+    45,
+    48,
+    57
+  ],
+  "X_weight6_witness_nonzero_logical_pairing": 3,
+  "all_X_cocycles_weight_below_six_are_stabilizer_or_zero": true,
+  "distance_X_exact": 6,
+  "distance_Z_exact": 8,
+  "k": 2,
+  "method": "all weights 1-3 direct, weight4=2+2 and weight5=3+2 syndrome meet-in-middle; MILP independent weight6 witness and length8 lifted-cover BFS from prior producer",
+  "n": 60,
+  "no_claim_on_technical_fault_tolerance_threshold": true,
+  "overall_css_distance_exact": 6,
+  "two_logical_cycle_basis_weights": [
+    10,
+    10
+  ],
+  "weight_le_three_direct_enumerated": {
+    "1": 60,
+    "2": 1770,
+    "3": 34220,
+    "4_via_2plus2": 1770,
+    "5_via_3plus2": 34220
+  }
+}
