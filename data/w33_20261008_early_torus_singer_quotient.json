@@ -1,0 +1,194 @@
+{
+  "C5_orbit_representative_edges": [
+    [
+      16,
+      42
+    ],
+    [
+      28,
+      52
+    ],
+    [
+      0,
+      42
+    ],
+    [
+      17,
+      42
+    ],
+    [
+      27,
+      65
+    ],
+    [
+      28,
+      74
+    ],
+    [
+      25,
+      54
+    ],
+    [
+      25,
+      51
+    ],
+    [
+      3,
+      52
+    ],
+    [
+      38,
+      61
+    ],
+    [
+      34,
+      49
+    ],
+    [
+      11,
+      74
+    ]
+  ],
+  "C5_orbit_representative_vertices": [
+    0,
+    34,
+    5,
+    33,
+    65,
+    66,
+    77,
+    51
+  ],
+  "C5_quotient_1_skeleton_is_three_cube_Q3": false,
+  "C5_quotient_C8_face_vertex_walks": [
+    [
+      2,
+      5,
+      0,
+      4,
+      3,
+      6,
+      1,
+      7
+    ],
+    [
+      0,
+      4,
+      3,
+      6,
+      1,
+      7,
+      2,
+      5
+    ],
+    [
+      1,
+      6,
+      3,
+      4,
+      0,
+      5,
+      2,
+      7
+    ],
+    [
+      2,
+      5,
+      0,
+      4,
+      3,
+      6,
+      1,
+      7
+    ]
+  ],
+  "C5_quotient_attaching_words": [
+    [
+      -2,
+      4,
+      -3
+    ],
+    [
+      -5,
+      4,
+      -1
+    ],
+    [
+      5,
+      2,
+      1,
+      3,
+      -4
+    ],
+    [
+      4
+    ]
+  ],
+  "C5_quotient_cells": [
+    8,
+    12,
+    4
+  ],
+  "C5_quotient_double_edges_form_perfect_matching_on_C8": true,
+  "C5_quotient_euler": 0,
+  "C5_quotient_four_octagon_attaching_cycles_are_Hamiltonian_on_Q3": false,
+  "C5_quotient_octagon_edge_face_multiplicities": {
+    "4": 8
+  },
+  "C5_quotient_parallel_edge_multiplicity_histogram": {
+    "1": 4,
+    "2": 4
+  },
+  "C5_quotient_simple_graph_edges": 8,
+  "C5_quotient_simple_underlying_graph_is_C8": true,
+  "CW_physical_geometry_claim": "Finite topological quotient, no length metric, no explicit geometric embedding or spacetime action",
+  "context": {
+    "BT796_June_2026_5400_skew_line_cells": "different carrier: seven mutually skew W33 lines, not Levi 20-apartment CW complex",
+    "Csaszar_Szilassi_edge_parser": "a2c43a398 (2026-05-18)",
+    "earliest_external_torus_refinement_commit": "589d3069f (2026-03-09)"
+  },
+  "original_CW_cells": [
+    40,
+    60,
+    20
+  ],
+  "quotient_H1_torsion_invariants": [],
+  "quotient_integral_betti": [
+    1,
+    2,
+    1
+  ],
+  "quotient_is_Csaszar_or_Szilassi": false,
+  "quotient_pi1_post_elimination_generators": 2,
+  "quotient_pi1_post_elimination_relators": [
+    [
+      5,
+      -3,
+      -5,
+      3
+    ]
+  ],
+  "quotient_pi1_presentation_initial_generators": 5,
+  "quotient_pi1_presentation_initial_relators": 4,
+  "quotient_pi1_remaining_generator_ids": [
+    3,
+    5
+  ],
+  "quotient_smith_d1": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "quotient_smith_d2": [
+    1,
+    1,
+    1
+  ],
+  "quotient_tietze_eliminations": 3,
+  "quotient_tietze_sha256": "9ecb563a1354c9f16e79ba5c52953d7beffa5d354c71a2ec16825dcf8899cef9",
+  "singer_C5_free_cell_action": true
+}

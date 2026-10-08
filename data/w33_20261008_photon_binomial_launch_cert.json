@@ -1,0 +1,185 @@
+{
+  "no_claim_of_actual_hardware": true,
+  "not_physically_calibrated": true,
+  "proof": "Union bound: collection failure <=0.025 using exact Binomial tail, conditional classifier error <=0.025 using Hoeffding of sorted empirical frequencies. Hence overall failure <=0.05. Assumes i.i.d. launched-photon survival and successful detections drawn independently from fixed model with known uniform background and bounded mismatch.",
+  "rows": [
+    {
+      "binomial_collection_probability_at_launches": 0.9763156120555438,
+      "binomial_collection_probability_one_fewer": 0.9748550873259185,
+      "dark_count_fraction": 0,
+      "exact_minimal_launches_for_collection_probability_at_least_0.975": 3387,
+      "expected_launches_to_collect_n": 3312,
+      "joint_success_probability_lower_bound": 0.95,
+      "observed_margin_lower_bound": 0.16323248499499649,
+      "per_launch_success_probability": 0.6964132180495735,
+      "per_output_systematic_error_bound": 0,
+      "stages": 36,
+      "successful_detections_for_conditional_error_at_most_0.025": 2306
+    },
+    {
+      "binomial_collection_probability_at_launches": 0.9751832215652303,
+      "binomial_collection_probability_one_fewer": 0.9740648108349923,
+      "dark_count_fraction": 0,
+      "exact_minimal_launches_for_collection_probability_at_least_0.975": 2538,
+      "expected_launches_to_collect_n": 2438,
+      "joint_success_probability_lower_bound": 0.95,
+      "observed_margin_lower_bound": 0.22799500204591777,
+      "per_launch_success_probability": 0.48499137027416284,
+      "per_output_systematic_error_bound": 0,
+      "stages": 72,
+      "successful_detections_for_conditional_error_at_most_0.025": 1182
+    },
+    {
+      "binomial_collection_probability_at_launches": 0.9753051931767885,
+      "binomial_collection_probability_one_fewer": 0.9748211017693194,
+      "dark_count_fraction": 0,
+      "exact_minimal_launches_for_collection_probability_at_least_0.975": 4337,
+      "expected_launches_to_collect_n": 4107,
+      "joint_success_probability_lower_bound": 0.95,
+      "observed_margin_lower_bound": 0.25220789509076724,
+      "per_launch_success_probability": 0.23521662924041012,
+      "per_output_systematic_error_bound": 0,
+      "stages": 144,
+      "successful_detections_for_conditional_error_at_most_0.025": 966
+    },
+    {
+      "binomial_collection_probability_at_launches": 0.9760551605980324,
+      "binomial_collection_probability_one_fewer": 0.9748339127801334,
+      "dark_count_fraction": 0.05,
+      "exact_minimal_launches_for_collection_probability_at_least_0.975": 4926,
+      "expected_launches_to_collect_n": 4835,
+      "joint_success_probability_lower_bound": 0.95,
+      "observed_margin_lower_bound": 0.13507086074524666,
+      "per_launch_success_probability": 0.6964132180495735,
+      "per_output_systematic_error_bound": 0.01,
+      "stages": 36,
+      "successful_detections_for_conditional_error_at_most_0.025": 3367
+    },
+    {
+      "binomial_collection_probability_at_launches": 0.975921390631462,
+      "binomial_collection_probability_one_fewer": 0.9749786776922347,
+      "dark_count_fraction": 0.05,
+      "exact_minimal_launches_for_collection_probability_at_least_0.975": 3396,
+      "expected_launches_to_collect_n": 3279,
+      "joint_success_probability_lower_bound": 0.95,
+      "observed_margin_lower_bound": 0.19659525194362187,
+      "per_launch_success_probability": 0.48499137027416284,
+      "per_output_systematic_error_bound": 0.01,
+      "stages": 72,
+      "successful_detections_for_conditional_error_at_most_0.025": 1590
+    },
+    {
+      "binomial_collection_probability_at_launches": 0.9752479126784047,
+      "binomial_collection_probability_one_fewer": 0.974823744304941,
+      "dark_count_fraction": 0.05,
+      "exact_minimal_launches_for_collection_probability_at_least_0.975": 5680,
+      "expected_launches_to_collect_n": 5417,
+      "joint_success_probability_lower_bound": 0.95,
+      "observed_margin_lower_bound": 0.21959750033622888,
+      "per_launch_success_probability": 0.23521662924041012,
+      "per_output_systematic_error_bound": 0.01,
+      "stages": 144,
+      "successful_detections_for_conditional_error_at_most_0.025": 1274
+    },
+    {
+      "binomial_collection_probability_at_launches": 0.9757905305944827,
+      "binomial_collection_probability_one_fewer": 0.9748138835146898,
+      "dark_count_fraction": 0.1,
+      "exact_minimal_launches_for_collection_probability_at_least_0.975": 7833,
+      "expected_launches_to_collect_n": 7719,
+      "joint_success_probability_lower_bound": 0.95,
+      "observed_margin_lower_bound": 0.10690923649549683,
+      "per_launch_success_probability": 0.6964132180495735,
+      "per_output_systematic_error_bound": 0.02,
+      "stages": 36,
+      "successful_detections_for_conditional_error_at_most_0.025": 5375
+    },
+    {
+      "binomial_collection_probability_at_launches": 0.9750901014730355,
+      "binomial_collection_probability_one_fewer": 0.9742724859296561,
+      "dark_count_fraction": 0.1,
+      "exact_minimal_launches_for_collection_probability_at_least_0.975": 4780,
+      "expected_launches_to_collect_n": 4642,
+      "joint_success_probability_lower_bound": 0.95,
+      "observed_margin_lower_bound": 0.165195501841326,
+      "per_launch_success_probability": 0.48499137027416284,
+      "per_output_systematic_error_bound": 0.02,
+      "stages": 72,
+      "successful_detections_for_conditional_error_at_most_0.025": 2251
+    },
+    {
+      "binomial_collection_probability_at_launches": 0.9752918643179678,
+      "binomial_collection_probability_one_fewer": 0.9749296637859809,
+      "dark_count_fraction": 0.1,
+      "exact_minimal_launches_for_collection_probability_at_least_0.975": 7779,
+      "expected_launches_to_collect_n": 7470,
+      "joint_success_probability_lower_bound": 0.95,
+      "observed_margin_lower_bound": 0.18698710558169052,
+      "per_launch_success_probability": 0.23521662924041012,
+      "per_output_systematic_error_bound": 0.02,
+      "stages": 144,
+      "successful_detections_for_conditional_error_at_most_0.025": 1757
+    },
+    {
+      "binomial_collection_probability_at_launches": 0.9750111168830153,
+      "binomial_collection_probability_one_fewer": 0.9747232797487886,
+      "dark_count_fraction": 0.2,
+      "exact_minimal_launches_for_collection_probability_at_least_0.975": 94678,
+      "expected_launches_to_collect_n": 94281,
+      "joint_success_probability_lower_bound": 0.95,
+      "observed_margin_lower_bound": 0.030585987995997183,
+      "per_launch_success_probability": 0.6964132180495735,
+      "per_output_systematic_error_bound": 0.05,
+      "stages": 36,
+      "successful_detections_for_conditional_error_at_most_0.025": 65658
+    },
+    {
+      "binomial_collection_probability_at_launches": 0.9750640887042824,
+      "binomial_collection_probability_one_fewer": 0.97465284461431,
+      "dark_count_fraction": 0.2,
+      "exact_minimal_launches_for_collection_probability_at_least_0.975": 18933,
+      "expected_launches_to_collect_n": 18657,
+      "joint_success_probability_lower_bound": 0.95,
+      "observed_margin_lower_bound": 0.08239600163673422,
+      "per_launch_success_probability": 0.48499137027416284,
+      "per_output_systematic_error_bound": 0.05,
+      "stages": 72,
+      "successful_detections_for_conditional_error_at_most_0.025": 9048
+    },
+    {
+      "binomial_collection_probability_at_launches": 0.9751416378030643,
+      "binomial_collection_probability_one_fewer": 0.9749412393711225,
+      "dark_count_fraction": 0.2,
+      "exact_minimal_launches_for_collection_probability_at_least_0.975": 25780,
+      "expected_launches_to_collect_n": 25216,
+      "joint_success_probability_lower_bound": 0.95,
+      "observed_margin_lower_bound": 0.1017663160726138,
+      "per_launch_success_probability": 0.23521662924041012,
+      "per_output_systematic_error_bound": 0.05,
+      "stages": 144,
+      "successful_detections_for_conditional_error_at_most_0.025": 5931
+    }
+  ],
+  "winners": {
+    "dark0.05_eps0.01": {
+      "minimum_95pct_joint_launch_budget": 3396,
+      "required_successful_detections": 1590,
+      "stages": 72
+    },
+    "dark0.1_eps0.02": {
+      "minimum_95pct_joint_launch_budget": 4780,
+      "required_successful_detections": 2251,
+      "stages": 72
+    },
+    "dark0.2_eps0.05": {
+      "minimum_95pct_joint_launch_budget": 18933,
+      "required_successful_detections": 9048,
+      "stages": 72
+    },
+    "dark0_eps0": {
+      "minimum_95pct_joint_launch_budget": 2538,
+      "required_successful_detections": 1182,
+      "stages": 72
+    }
+  }
+}

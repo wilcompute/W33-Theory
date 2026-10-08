@@ -1,0 +1,154 @@
+{
+  "boundary_support_patterns_verified": 80,
+  "explicit_interior_two_ones_section_witnesses": [
+    {
+      "nonvanishing_two_ones_section_positions": [
+        2,
+        3
+      ],
+      "remaining_quadratic_indices": [
+        0,
+        1
+      ],
+      "t_signs": [
+        -1,
+        -1,
+        -1,
+        1
+      ]
+    },
+    {
+      "nonvanishing_two_ones_section_positions": [
+        2,
+        3
+      ],
+      "remaining_quadratic_indices": [
+        0,
+        1
+      ],
+      "t_signs": [
+        -1,
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "nonvanishing_two_ones_section_positions": [
+        1,
+        3
+      ],
+      "remaining_quadratic_indices": [
+        0,
+        2
+      ],
+      "t_signs": [
+        -1,
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "nonvanishing_two_ones_section_positions": [
+        0,
+        3
+      ],
+      "remaining_quadratic_indices": [
+        1,
+        2
+      ],
+      "t_signs": [
+        -1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "nonvanishing_two_ones_section_positions": [
+        0,
+        3
+      ],
+      "remaining_quadratic_indices": [
+        1,
+        2
+      ],
+      "t_signs": [
+        1,
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "nonvanishing_two_ones_section_positions": [
+        1,
+        3
+      ],
+      "remaining_quadratic_indices": [
+        0,
+        2
+      ],
+      "t_signs": [
+        1,
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "nonvanishing_two_ones_section_positions": [
+        2,
+        3
+      ],
+      "remaining_quadratic_indices": [
+        0,
+        1
+      ],
+      "t_signs": [
+        1,
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "nonvanishing_two_ones_section_positions": [
+        2,
+        3
+      ],
+      "remaining_quadratic_indices": [
+        0,
+        1
+      ],
+      "t_signs": [
+        1,
+        1,
+        1,
+        -1
+      ]
+    }
+  ],
+  "explicit_previous_integer_coefficient_polynomial_smoothness_proven": false,
+  "generic_Klein_four_free_smooth_tetraquadric_exists": true,
+  "generic_invariant_member_avoids_all_48_fixed_points": true,
+  "generic_smooth_member_exists_by_Bertini": true,
+  "interior_potential_base_locus_sign_patterns_dispatched": 8,
+  "invariant_basis_by_number_of_linear_xiyi_factors": {
+    "0": 8,
+    "2": 12,
+    "4": 1
+  },
+  "invariant_basis_dim": 21,
+  "invariant_linear_system_basepoint_free_over_C": true,
+  "nonidentity_Klein_four_ambient_fixed_points_total": 48,
+  "physics_boundary": "Existence and free quotient only. A particular exact smooth polynomial, a CY holomorphic volume-form invariance verification, line-bundle/HYM data and physical normalized Yukawas remain open.",
+  "section_multidegree": [
+    2,
+    2,
+    2,
+    2
+  ],
+  "smoothness_proof": "The 8 paired pure-square orbit sections exclude all boundary support patterns. In the dense torus, simultaneous vanishing forces P=-1 and all t_i=+-1; an odd number of minus signs gives a pair with product +1, making a two-ones invariant section nonzero. Thus the 21D system is basepoint-free over C; Bertini yields generic smoothness, and a generic member avoids the finite 48 fixed points."
+}

@@ -1,0 +1,64 @@
+{
+  "C5": {
+    "dim_H1_F3_invariant_under_group": 2,
+    "dim_invariant_C0": 8,
+    "dim_invariant_C1": 12,
+    "edge_orbit_sizes": [
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ],
+    "face_orbit_sizes": [
+      5,
+      5,
+      5,
+      5
+    ],
+    "rank_coboundary_C1inv_to_C2": 3,
+    "vertex_orbit_sizes": [
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ]
+  },
+  "F20": {
+    "dim_H1_F3_invariant_under_group": 0,
+    "dim_invariant_C0": 2,
+    "dim_invariant_C1": 3,
+    "edge_orbit_sizes": [
+      20,
+      20,
+      20
+    ],
+    "face_orbit_sizes": [
+      5,
+      5,
+      10
+    ],
+    "rank_coboundary_C1inv_to_C2": 2,
+    "vertex_orbit_sizes": [
+      20,
+      20
+    ]
+  },
+  "F20_H1_no_order_three_character_if_zero": true,
+  "F20_invariant_H2_F3_dimension": 1,
+  "H2_Z_orientation_character_element_histogram": {
+    "1": 20
+  },
+  "physics_boundary": "Only topological cohomology and invariants under selected exact point-symplectic subgroup; no Standard Model matter charge or anomaly derived."
+}
