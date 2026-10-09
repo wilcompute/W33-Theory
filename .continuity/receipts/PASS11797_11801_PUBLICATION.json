@@ -1,0 +1,63 @@
+{
+  "schema": "w33.pass11797_11801.publication.v1",
+  "status": "PASS",
+  "science_commit": "6f84cf5bc34834a165616e6bd9a0d7b21e796604",
+  "github_run_id": 37972616626,
+  "github_job_id": 113962811162,
+  "github_conclusion": "success",
+  "github_url": "https://github.com/wilcompute/W33-Theory/actions/runs/37972616626",
+  "frozen_tests": {
+    "passed": 34,
+    "seconds": 16.97
+  },
+  "regenerated_tests": {
+    "passed": 19,
+    "seconds": 7.36
+  },
+  "all_five_producers": "PASS",
+  "local_combined": {
+    "passed": 45,
+    "seconds": 47.12
+  },
+  "local_round6": {
+    "passed": 5,
+    "seconds": 17.1
+  },
+  "artifacts_normalized_sha256": {
+    "analysis/w33_pass11797_11801_five_physical_fronts.py": "2908bf4d84e7c5295a350ce80821d4fb610b3a1f72540cbf019d375c0178f225",
+    "analysis/w33_pass11797_orbifolder_probe.cpp": "0528b25393b2758812fe2f7a84147cd38eacd931557958157a2a9ede85f21050",
+    "analysis/w33_pass11797_build_probe.py": "99fc031223e54fbfea48c71b0888c868a04c61f981c3dd41ae461958a7f57b77",
+    "analysis/PASS11797_11801_FIVE_PHYSICAL_FRONTS.md": "78c3ecc389b47abbc1d7dc6f25db9b12f3ebcb7711bbb2aa61ca0ab8683356c8",
+    "tests/test_w33_pass11797_11801_five_physical_fronts.py": "3ec4b95643020aaf511732e24b2aaf67906d17cc3c5fc5dfaef4f3c6001c3ba6",
+    ".github/workflows/pass11797-11801-five-physical-fronts.yml": "5ab2972d9159c47017f956b6560aff8463efc0f49768d2c60ce31c0420cfae73",
+    "data/w33_pass11797_full_benchmark_metadata.json.gz": "48eb514315636dc36b7d70c4bf280ac9922cf3bd7ab77401a9d72b7a21363b5c",
+    "data/w33_pass11797_corrected_named_coupling_checks.json": "a964e2155701d3b5ee042a19920657ba49b1b7685f78622e1e64679eb13b458f",
+    "data/w33_pass11797_11801_five_physical_fronts.json": "22f947618e1a045142a941f8c7ce68a5965c0b84eadb794b1cd1c3fb779b6fc6",
+    "docs/index.html": "696f06e470b03b8b04b92b6bc36d71da145b2ced41c2fd565d7975614a78a89b"
+  },
+  "local_and_CI_receipts_sha256": {
+    ".continuity/receipts/PASS11797_11801_LOCAL.log": "8a1c5589826540c66b8f092cecf3cfe8f436a7288c96341be93d45cab0cd29fe",
+    ".continuity/receipts/PASS11797_11801_CI.log": "a619ff8efe870f4f6965a2175508e95998925a9831efb40eb8ee6459b2705bf0"
+  },
+  "result_index": {
+    "files_indexed": 11592,
+    "distinctive_results": 16215,
+    "normalized_sha256": "50c0adf41c06aacbde3560b4406cdc03f8e60774b06a84aaf9d1e36edd3d3e08"
+  },
+  "preserved_unrelated_raw_sha256": {
+    "analysis/w33_pass10956_albert_spin8_halfspin_normalizer.py": "970484379ebad8825a7782fa58458988b9925862b05eb7f5dfbf723d763e5aef",
+    "data/w33_pass10956_albert_spin8_halfspin_normalizer.json": "38f9662ad9d4b179d97c02a3ab72a0c3ccd90b5e9bb7910e092776350e93db5d",
+    ".mcp.json": "88ca5e03b5be02bef6603b9a74758638a4eec5f0a910677154d20f506d9a3cfa"
+  },
+  "scope": "Hosted replay verifies frozen original-model/probe inputs, all five mathematical producers and independent regenerated controls. External orbifolder rebuild/worldsheet amplitudes, global model-dependent axions, physical MSSM/TOE, lower spectrum and Einstein dynamics are not inferred.",
+  "local_round7": {
+    "passed": 5,
+    "seconds": 18.39
+  },
+  "local_unique_controls": 55,
+  "latest_peer_intake": {
+    "science_commit": "1dccbd5bb",
+    "catalog_commit": "50afa1b86",
+    "all_five_sources_reports_certificates_read": true
+  }
+}

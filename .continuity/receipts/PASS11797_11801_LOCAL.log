@@ -1,0 +1,21 @@
+Science:6f84cf5bc34834a165616e6bd9a0d7b21e796604
+Five-front producer: pass11797 PASS;pass11798 PASS;pass11799 PASS;pass11800 PASS;pass11801 PASS
+Final combined pytest with --noconftest --ignore-glob=tests/test_*.py:
+ tests/test_w33_pass11797_11801_five_physical_fronts.py
+ tests/test_w33_pass11796_parity_complete_abelian_higgs.py
+ tests/test_w33_pass11794_hidden_center_vacuum.py
+ tests/test_w33_20261009_toe_breakthrough_round4.py
+ tests/test_w33_20261009_toe_followon_round5.py
+Actual completion:45 passed in47.12s
+New round6 peer controls:tests/test_w33_20261009_five_fronts_round6.py
+Actual completion:5 passed in17.10s
+All11 peer anchor fields independently match the complete176-field metadata.
+Batch harness:guard no collisions; forced arithmetic none; intake clean(5files); exit0.
+Final explicit rediscovery guard after fractional-exotic additions:exit0 with no output.
+Result index:11592 files;16215 distinctive results.
+Hosted verification is recorded separately from local validation.
+New round7 peer controls:tests/test_w33_20261009_five_fronts_round7.py
+Actual completion:5 passed in18.39s
+All five round7 sources, report and certificates read in full at1dccbd5bb; catalog50afa1b86 reviewed.
+Total unique local controls across combined, round6 and round7:55.
+Round7 disproves uniform ellipticity and constructs10 single/20 double matched SU4 D-flat extensions; neither establishes a spectral gap or F-flat mass repair.
