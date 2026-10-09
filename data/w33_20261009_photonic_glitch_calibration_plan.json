@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "target_optical_shots": 240000,
+  "max_unbounded_glitches": 40,
+  "calibration_confidence": 0.999,
+  "calibration_failure_allocation": 0.001,
+  "future_count_exceedance_allocation": 0.001,
+  "randomized_clipped_test_failure_allocation": 0.008,
+  "combined_false_positive_limit": 0.01,
+  "largest_certifiable_single_shot_bernoulli_glitch_probability": 0.00010007768881615537,
+  "minimum_zero_glitch_calibration_samples": 69021,
+  "independent_calibration_designs": [
+    {
+      "calibration_shots": 25000,
+      "observed_calibration_glitches": 0,
+      "exact_p_upper99p9": 0.00027627204100857174,
+      "worst_prospective_count_tail": 0.9996579650849857,
+      "three_component_aggregate_fpr_upper": 1.0086579650849856,
+      "count_budget_approved": false
+    },
+    {
+      "calibration_shots": 50000,
+      "observed_calibration_glitches": 0,
+      "exact_p_upper99p9": 0.00013814556260251926,
+      "worst_prospective_count_tail": 0.10373826147547023,
+      "three_component_aggregate_fpr_upper": 0.11273826147547023,
+      "count_budget_approved": false
+    },
+    {
+      "calibration_shots": 75000,
+      "observed_calibration_glitches": 0,
+      "exact_p_upper99p9": 9.209916233148987e-05,
+      "worst_prospective_count_tail": 0.00020536142505579792,
+      "three_component_aggregate_fpr_upper": 0.009205361425055798,
+      "count_budget_approved": true
+    },
+    {
+      "calibration_shots": 100000,
+      "observed_calibration_glitches": 0,
+      "exact_p_upper99p9": 6.907516699060702e-05,
+      "worst_prospective_count_tail": 3.091787818184765e-07,
+      "three_component_aggregate_fpr_upper": 0.009000309178781819,
+      "count_budget_approved": true
+    },
+    {
+      "calibration_shots": 250000,
+      "observed_calibration_glitches": 0,
+      "exact_p_upper99p9": 2.7630639382780494e-05,
+      "worst_prospective_count_tail": 2.2622424084880506e-19,
+      "three_component_aggregate_fpr_upper": 0.009000000000000001,
+      "count_budget_approved": true
+    },
+    {
+      "calibration_shots": 1000000,
+      "observed_calibration_glitches": 0,
+      "exact_p_upper99p9": 6.907731420495576e-06,
+      "worst_prospective_count_tail": 5.930545446989864e-42,
+      "three_component_aggregate_fpr_upper": 0.009000000000000001,
+      "count_budget_approved": true
+    },
+    {
+      "calibration_shots": 69021,
+      "observed_calibration_glitches": 0,
+      "exact_p_upper99p9": 0.0001000769275981812,
+      "worst_prospective_count_tail": 0.0009998617706700546,
+      "three_component_aggregate_fpr_upper": 0.009999861770670054,
+      "count_budget_approved": true
+    }
+  ],
+  "deterministic_clipped_score_penalty_for_40_outliers_at_T2": 160.0,
+  "statistical_theorem": "Given independent identically distributed per-shot Bernoulli glitch flags with fixed unknown rate p, zero flags among M calibration shots is an exact one-sided (1-alpha_cal) event of p<=1-alpha_cal^(1/M). Conditional on this bound, prospective count X~Binomial(N,p) obeys P(X>m)<=P(Bin(N,p_upper)>m). Combining the prior conditional clipped sharp-null randomization test at alpha_test via a union bound gives a joint calibration-and-test Type-I error <=alpha_cal+alpha_count+alpha_test. Apply the optical test only after observing no calibration glitches.",
+  "strong_limitation": "The result is NOT valid for correlated glitches, adversarial bursts, unobservable electronic corruption not captured by calibration labels, instrument drift between calibration and experimental runs, compromised Q-weights, or systematic good-shot detector-reference mismatch beyond d. A hardware watchdog or burst model must separately address these."
+}

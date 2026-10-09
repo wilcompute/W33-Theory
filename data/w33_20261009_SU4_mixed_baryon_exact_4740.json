@@ -1,0 +1,852 @@
+{
+  "status": "PASS",
+  "exact_fraction_vertex_checks": 4740,
+  "precomputed_nonsingular_vertex_triples": 1292,
+  "complete_agreement_with_independent_scipy_masks": true,
+  "maximum_up_rank": 3,
+  "maximum_colored_rank": 5,
+  "rank3_up_candidates": 42,
+  "theorem": "All 60*79 real-cone feasibility decisions independently certified by exact Fraction inequalities via exhaustive rational 3-variable basic feasible vertices. The 7x10 colored mass matching graph never exceeds rank5, even for simultaneous 2 mesons and epsilon antibaryon. Necessary condition only: no actual couplings, integer exponents, F-flatness, or physical masses certified.",
+  "results": [
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_66",
+        "n_68"
+      ],
+      "fundamental_anti": [
+        "n_44",
+        "n_55"
+      ],
+      "up_rank": 1,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_66",
+        "n_68"
+      ],
+      "fundamental_anti": [
+        "n_44",
+        "n_66"
+      ],
+      "up_rank": 1,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_66",
+        "n_68"
+      ],
+      "fundamental_anti": [
+        "n_44",
+        "n_68"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_66",
+        "n_68"
+      ],
+      "fundamental_anti": [
+        "n_55",
+        "n_44"
+      ],
+      "up_rank": 1,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_66",
+        "n_68"
+      ],
+      "fundamental_anti": [
+        "n_55",
+        "n_66"
+      ],
+      "up_rank": 1,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_66",
+        "n_68"
+      ],
+      "fundamental_anti": [
+        "n_55",
+        "n_68"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_66",
+        "n_68"
+      ],
+      "fundamental_anti": [
+        "n_66",
+        "n_44"
+      ],
+      "up_rank": 1,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_66",
+        "n_68"
+      ],
+      "fundamental_anti": [
+        "n_66",
+        "n_55"
+      ],
+      "up_rank": 1,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_66",
+        "n_68"
+      ],
+      "fundamental_anti": [
+        "n_66",
+        "n_68"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_66",
+        "n_68"
+      ],
+      "fundamental_anti": [
+        "n_68",
+        "n_44"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_66",
+        "n_68"
+      ],
+      "fundamental_anti": [
+        "n_68",
+        "n_55"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_66",
+        "n_68"
+      ],
+      "fundamental_anti": [
+        "n_68",
+        "n_66"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_66",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_44",
+        "n_55"
+      ],
+      "up_rank": 1,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_66",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_44",
+        "n_66"
+      ],
+      "up_rank": 1,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_66",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_44",
+        "n_73"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_66",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_55",
+        "n_44"
+      ],
+      "up_rank": 1,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_66",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_55",
+        "n_66"
+      ],
+      "up_rank": 1,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_66",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_55",
+        "n_73"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_66",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_66",
+        "n_44"
+      ],
+      "up_rank": 1,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_66",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_66",
+        "n_55"
+      ],
+      "up_rank": 1,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_66",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_66",
+        "n_73"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_66",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_73",
+        "n_44"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_66",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_73",
+        "n_55"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_66",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_73",
+        "n_66"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_44",
+        "n_55"
+      ],
+      "up_rank": 1,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_44",
+        "n_68"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_44",
+        "n_73"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_55",
+        "n_44"
+      ],
+      "up_rank": 1,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_55",
+        "n_68"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_55",
+        "n_73"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_68",
+        "n_44"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_68",
+        "n_55"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_68",
+        "n_73"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_73",
+        "n_44"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_73",
+        "n_55"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_55",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_73",
+        "n_68"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_66",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_44",
+        "n_66"
+      ],
+      "up_rank": 1,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_66",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_44",
+        "n_68"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_66",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_44",
+        "n_73"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_66",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_66",
+        "n_44"
+      ],
+      "up_rank": 1,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_66",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_66",
+        "n_68"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_66",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_66",
+        "n_73"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_66",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_68",
+        "n_44"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_66",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_68",
+        "n_66"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_66",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_68",
+        "n_73"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_66",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_73",
+        "n_44"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_66",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_73",
+        "n_66"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_44",
+        "n_66",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_73",
+        "n_68"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_55",
+        "n_66",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_55",
+        "n_66"
+      ],
+      "up_rank": 1,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_55",
+        "n_66",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_55",
+        "n_68"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_55",
+        "n_66",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_55",
+        "n_73"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_55",
+        "n_66",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_66",
+        "n_55"
+      ],
+      "up_rank": 1,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_55",
+        "n_66",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_66",
+        "n_68"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_55",
+        "n_66",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_66",
+        "n_73"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_55",
+        "n_66",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_68",
+        "n_55"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_55",
+        "n_66",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_68",
+        "n_66"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_55",
+        "n_66",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_68",
+        "n_73"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_55",
+        "n_66",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_73",
+        "n_55"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_55",
+        "n_66",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_73",
+        "n_66"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    },
+    {
+      "four_anti": [
+        "n_55",
+        "n_66",
+        "n_68",
+        "n_73"
+      ],
+      "fundamental_anti": [
+        "n_73",
+        "n_68"
+      ],
+      "up_rank": 3,
+      "colored_rank": 5
+    }
+  ]
+}

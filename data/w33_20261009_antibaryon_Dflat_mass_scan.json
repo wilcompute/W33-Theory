@@ -1,0 +1,694 @@
+{
+  "status": "PASS",
+  "parity_even_SU4_antifundamental_fields": [
+    "n_44",
+    "n_55",
+    "n_66",
+    "n_68",
+    "n_73"
+  ],
+  "antibaryon_supports": 5,
+  "exact_mass_entries_screened": 395,
+  "worst_colored_mass_rank": 5,
+  "best_up_rank": 1,
+  "results": [
+    {
+      "antibaryon_fields": [
+        "n_44",
+        "n_55",
+        "n_66",
+        "n_68"
+      ],
+      "baryon_FI5_charge_coordinates": [
+        "0",
+        "-1",
+        "0",
+        "-2",
+        "1"
+      ],
+      "FI_support_shift": {
+        "n_17": "0",
+        "n_47": "1",
+        "n_50": "0",
+        "n_80": "2",
+        "n_82": "-1",
+        "n_9": "-1",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      },
+      "up_mask": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "up_real_cone_matching_rank": 1,
+      "colored_mask": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      ],
+      "colored_real_cone_matching_rank": 5
+    },
+    {
+      "antibaryon_fields": [
+        "n_44",
+        "n_55",
+        "n_66",
+        "n_73"
+      ],
+      "baryon_FI5_charge_coordinates": [
+        "0",
+        "-1",
+        "0",
+        "-2",
+        "1"
+      ],
+      "FI_support_shift": {
+        "n_17": "0",
+        "n_47": "1",
+        "n_50": "0",
+        "n_80": "2",
+        "n_82": "-1",
+        "n_9": "-1",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      },
+      "up_mask": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "up_real_cone_matching_rank": 1,
+      "colored_mask": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      ],
+      "colored_real_cone_matching_rank": 5
+    },
+    {
+      "antibaryon_fields": [
+        "n_44",
+        "n_55",
+        "n_68",
+        "n_73"
+      ],
+      "baryon_FI5_charge_coordinates": [
+        "0",
+        "-2",
+        "1",
+        "-2",
+        "0"
+      ],
+      "FI_support_shift": {
+        "n_17": "0",
+        "n_47": "2",
+        "n_50": "-1",
+        "n_80": "2",
+        "n_82": "0",
+        "n_9": "-1",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      },
+      "up_mask": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "up_real_cone_matching_rank": 1,
+      "colored_mask": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      ],
+      "colored_real_cone_matching_rank": 5
+    },
+    {
+      "antibaryon_fields": [
+        "n_44",
+        "n_66",
+        "n_68",
+        "n_73"
+      ],
+      "baryon_FI5_charge_coordinates": [
+        "0",
+        "-2",
+        "1",
+        "-2",
+        "0"
+      ],
+      "FI_support_shift": {
+        "n_17": "0",
+        "n_47": "2",
+        "n_50": "-1",
+        "n_80": "2",
+        "n_82": "0",
+        "n_9": "-1",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      },
+      "up_mask": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "up_real_cone_matching_rank": 1,
+      "colored_mask": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      ],
+      "colored_real_cone_matching_rank": 5
+    },
+    {
+      "antibaryon_fields": [
+        "n_55",
+        "n_66",
+        "n_68",
+        "n_73"
+      ],
+      "baryon_FI5_charge_coordinates": [
+        "0",
+        "-1",
+        "0",
+        "-2",
+        "0"
+      ],
+      "FI_support_shift": {
+        "n_17": "0",
+        "n_47": "1",
+        "n_50": "0",
+        "n_80": "2",
+        "n_82": "0",
+        "n_9": "-1",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      },
+      "up_mask": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "up_real_cone_matching_rank": 1,
+      "colored_mask": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      ],
+      "colored_real_cone_matching_rank": 5
+    }
+  ],
+  "math_result": "Each quadruple is a local exact Abelian+hidden-SU4 D-flat deformation of original FI-positive support for sufficiently small t>0: turn on four independent -4 color vectors sqrt(t)*unit basis e1..e4; their total hidden-SU4 moment map is t I4, and compensate 9 U1 charges by exact rational first-order shifts on original support. All fields even under full-field parity.",
+  "string_boundary": "Color-baryon epsilon tensor exists for four distinct -4 fields. The screening ignores quantization/integer exponents, exact worldsheet string rules, mass coefficients and all F terms. Candidates need not remain true supersymmetric vacua or solve rank deficits.",
+  "subtlety": "SU4 is hidden gauge; a nonzero anti-baryon with all four color directions fully breaks SU4, and the corresponding new matter spectrum must be recomputed."
+}

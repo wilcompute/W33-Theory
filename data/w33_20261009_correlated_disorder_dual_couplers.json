@@ -1,0 +1,99 @@
+{
+  "status": "PASS",
+  "existing_line_coupler_degree": 6,
+  "second_triple_coupler_degree": 30,
+  "protected_H1_dimension": 81,
+  "local_weight_disorder": [
+    {
+      "weight_min": 1.0,
+      "weight_max": 1.0,
+      "numerical_first_above_flat_band_gap": 1.5505102572168192,
+      "rigorous_weighted_lower_gap": 1.5505102572168221,
+      "onsite_shift_range": [
+        0.0,
+        0.0
+      ],
+      "exact_H_on_cycles": "-2*I"
+    },
+    {
+      "weight_min": 0.6091017172243581,
+      "weight_max": 1.39122209650988,
+      "numerical_first_above_flat_band_gap": 1.1333054960390476,
+      "rigorous_weighted_lower_gap": 0.9444184602447476,
+      "onsite_shift_range": [
+        -0.7054505203771027,
+        0.7765432292074586
+      ],
+      "exact_H_on_cycles": "-2*I"
+    },
+    {
+      "weight_min": 0.5,
+      "weight_max": 1.5,
+      "numerical_first_above_flat_band_gap": 0.806233072077545,
+      "rigorous_weighted_lower_gap": 0.7752551286084111,
+      "onsite_shift_range": [
+        -1.0,
+        1.0
+      ],
+      "exact_H_on_cycles": "-2*I"
+    }
+  ],
+  "guaranteed_gap_bound": "H(w)=B^T diag(w)B-2I has E0=-2 with multiplicity81, next energy >= -2+min(w)*(4-sqrt6), for ALL w_i>0. In particular all1620 BT4019 apartment states remain exact eigenvectors even after correlated disorder.",
+  "interpolation_min_generalized_eigenvalue": -1.0000000000000044,
+  "interpolation_numeric_H1_ground_phase_endpoint": 0.4999999999999989,
+  "conservative_analytic_sufficient_endpoint": 0.2793455349804705,
+  "interpolation_samples": [
+    {
+      "t": 0.0,
+      "minimum_complement_energy_above_minus2": 1.550510257216815,
+      "H1_is_ground": true
+    },
+    {
+      "t": 0.05,
+      "minimum_complement_energy_above_minus2": 1.8728942548679857,
+      "H1_is_ground": true
+    },
+    {
+      "t": 0.1,
+      "minimum_complement_energy_above_minus2": 2.140873971802594,
+      "H1_is_ground": true
+    },
+    {
+      "t": 0.2,
+      "minimum_complement_energy_above_minus2": 2.3999999999999937,
+      "H1_is_ground": true
+    },
+    {
+      "t": 0.25,
+      "minimum_complement_energy_above_minus2": 1.9999999999999951,
+      "H1_is_ground": true
+    },
+    {
+      "t": 0.4999899999999989,
+      "minimum_complement_energy_above_minus2": 8.000000000436837e-05,
+      "H1_is_ground": true
+    },
+    {
+      "t": 0.5000099999999988,
+      "minimum_complement_energy_above_minus2": -7.999999999787998e-05,
+      "H1_is_ground": false
+    },
+    {
+      "t": 0.5,
+      "minimum_complement_energy_above_minus2": -4.717105682860212e-15,
+      "H1_is_ground": true
+    },
+    {
+      "t": 1.0,
+      "minimum_complement_energy_above_minus2": -4.000000000000012,
+      "H1_is_ground": false
+    }
+  ],
+  "exact_ground_transition": "The interpolation A(t)=(1-t)A6+t*A30 has A(t)+2I=(1-t)M^TM+(1-2t)D^TD+tP^TP. For 0<=t<1/2 it is PSD and has kernel exactly ker[M;D] of dimension81 (t=0 follows directly too). At t=1/2 it equals (M^TM+P^TP)/2 and the kernel has exact rank-deficiency 160-64=96, hence 15 extra ground states. For t>1/2, choose x in ker(M,P) but Dx!=0; its Rayleigh form is (1-2t)||Dx||\u00b2<0, proving that the H1 -2 band is NO LONGER the ground band.",
+  "exact_midpoint_rank64": true,
+  "ground_crossing_exact_fraction": "1/2",
+  "ground_degeneracy_at_crossing": 96,
+  "additional_zero_modes_at_crossing": 15,
+  "interpolation_exact_H1_identity": "[(1-t)A6+t*A30]c=-2c for every c in H1, all real t. Ground-band status is lost after a computable positive critical t; continuity of flat band does NOT imply ground protection for all t.",
+  "critical_boundary": "The critical interpolation is proved EXACTLY t=1/2 by factorization and rational rank. The 0.2793 gap bound is only a conservative separate estimate. Coupler onsite terms must covary with shared-vertex hopping weights; independent onsite disorder generically splits H1 (Pass4019 prior result)."
+}

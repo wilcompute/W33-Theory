@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "underlying_full_H": "160 W33 current-square Hamiltonian in 78 physical real coordinates",
+  "active_current_indices": [
+    0,
+    4,
+    8,
+    12
+  ],
+  "U_min_nonzero_eigenvalue": "4-sqrt(6)",
+  "eigenspace_multiplicity": 24,
+  "intersection_with_active_transport_null_dimension_at_least": 20,
+  "normV_square": "39/20",
+  "normU_square": "39/20",
+  "sum_b_squared_at_q0": "320",
+  "leading_gaussian_coefficients": {
+    "A": "39/10 - 39*sqrt(6)/40",
+    "B": "312",
+    "variance_delta_squared": "c/Lambda",
+    "c_star": "2*sqrt(78)/sqrt(39/10 - 39*sqrt(6)/40)"
+  },
+  "optimized_critical_halfSobolev_constant_upper_formula": "78*sqrt(20 - 5*sqrt(6))/5",
+  "optimized_critical_halfSobolev_constant_upper_numeric": 43.43570974418893,
+  "theorem": "If H>=c*(1+P\u00b2)^1/2-C holds globally on the Schwartz core with c>0 and finite C, then necessarily c<=2 sqrt(A B), with A=(1/2)||V_e||\u00b2(4-sqrt6), B=(1/2)||U_e||\u00b2 sum_e (V_e.q0+a)\u00b2. The lower spectral calculation is NOT established.",
+  "asymptotic_packet": "Take any unit k in the >=20-dimensional intersection E_{4-sqrt6}(U^TU) and ker(U_active). Gaussian delta\u00b2=c*/Lambda. Then <H>/Lambda ->2sqrt(A B), <(1+P\u00b2)^1/2>/Lambda ->1.",
+  "physical_boundary": "A necessary upper ceiling on possible critical-order coercivity; not a proof that critical-order coercivity exists or that a physical mass gap is present."
+}

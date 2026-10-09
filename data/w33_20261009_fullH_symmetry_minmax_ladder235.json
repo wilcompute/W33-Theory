@@ -1,0 +1,245 @@
+{
+  "status": "PASS",
+  "independent_symmetry_trial_dimensions": {
+    "trivial": 1,
+    "24": 144,
+    "15_p": 45,
+    "15_l": 45
+  },
+  "exact_Gershgorin_certificates": {
+    "24": [
+      {
+        "rank": 1,
+        "upper": "142434059/1000000",
+        "matrix_dimension": 6,
+        "gershgorin_min_margin": 1.0245241333560567e-05,
+        "bound_on_each_projected_entry_error": "189163737/12500000000000000000000000000000000",
+        "floating_reference_eigenvalue": 142.43404875475863,
+        "certificate": "B*Gram-V*H*V is strictly diagonally dominant with exact rational componentwise offdiagonal 1-norm; interval uncertainty budget <=r*4*d^2*max(original interval width). Implies positive definite for ALL exact Wick block matrices."
+      },
+      {
+        "rank": 2,
+        "upper": "14486837/100000",
+        "matrix_dimension": 6,
+        "gershgorin_min_margin": 1.0618153958899314e-05,
+        "bound_on_each_projected_entry_error": "189163737/12500000000000000000000000000000000",
+        "floating_reference_eigenvalue": 144.8683593818365,
+        "certificate": "B*Gram-V*H*V is strictly diagonally dominant with exact rational componentwise offdiagonal 1-norm; interval uncertainty budget <=r*4*d^2*max(original interval width). Implies positive definite for ALL exact Wick block matrices."
+      },
+      {
+        "rank": 3,
+        "upper": "80826953/500000",
+        "matrix_dimension": 6,
+        "gershgorin_min_margin": 1.0845417945029105e-05,
+        "bound_on_each_projected_entry_error": "189163737/12500000000000000000000000000000000",
+        "floating_reference_eigenvalue": 161.6538951544742,
+        "certificate": "B*Gram-V*H*V is strictly diagonally dominant with exact rational componentwise offdiagonal 1-norm; interval uncertainty budget <=r*4*d^2*max(original interval width). Implies positive definite for ALL exact Wick block matrices."
+      },
+      {
+        "rank": 4,
+        "upper": "161653971/1000000",
+        "matrix_dimension": 6,
+        "gershgorin_min_margin": 1.000489912709975e-05,
+        "bound_on_each_projected_entry_error": "189163737/12500000000000000000000000000000000",
+        "floating_reference_eigenvalue": 161.65396099487296,
+        "certificate": "B*Gram-V*H*V is strictly diagonally dominant with exact rational componentwise offdiagonal 1-norm; interval uncertainty budget <=r*4*d^2*max(original interval width). Implies positive definite for ALL exact Wick block matrices."
+      },
+      {
+        "rank": 5,
+        "upper": "182149631/1000000",
+        "matrix_dimension": 6,
+        "gershgorin_min_margin": 1.0661957381675195e-05,
+        "bound_on_each_projected_entry_error": "189163737/12500000000000000000000000000000000",
+        "floating_reference_eigenvalue": 182.14962033768114,
+        "certificate": "B*Gram-V*H*V is strictly diagonally dominant with exact rational componentwise offdiagonal 1-norm; interval uncertainty budget <=r*4*d^2*max(original interval width). Implies positive definite for ALL exact Wick block matrices."
+      },
+      {
+        "rank": 6,
+        "upper": "182168373/1000000",
+        "matrix_dimension": 6,
+        "gershgorin_min_margin": 1.0266176232266408e-05,
+        "bound_on_each_projected_entry_error": "189163737/12500000000000000000000000000000000",
+        "floating_reference_eigenvalue": 182.16836273325592,
+        "certificate": "B*Gram-V*H*V is strictly diagonally dominant with exact rational componentwise offdiagonal 1-norm; interval uncertainty budget <=r*4*d^2*max(original interval width). Implies positive definite for ALL exact Wick block matrices."
+      }
+    ],
+    "15_p": [
+      {
+        "rank": 1,
+        "upper": "71731493/500000",
+        "matrix_dimension": 3,
+        "gershgorin_min_margin": 1.0522272634336966e-05,
+        "bound_on_each_projected_entry_error": "1156540491/250000000000000000000000000000000000",
+        "floating_reference_eigenvalue": 143.46297547772735,
+        "certificate": "B*Gram-V*H*V is strictly diagonally dominant with exact rational componentwise offdiagonal 1-norm; interval uncertainty budget <=r*4*d^2*max(original interval width). Implies positive definite for ALL exact Wick block matrices."
+      },
+      {
+        "rank": 2,
+        "upper": "80668493/500000",
+        "matrix_dimension": 3,
+        "gershgorin_min_margin": 1.0992908961234423e-05,
+        "bound_on_each_projected_entry_error": "1156540491/250000000000000000000000000000000000",
+        "floating_reference_eigenvalue": 161.33697500699984,
+        "certificate": "B*Gram-V*H*V is strictly diagonally dominant with exact rational componentwise offdiagonal 1-norm; interval uncertainty budget <=r*4*d^2*max(original interval width). Implies positive definite for ALL exact Wick block matrices."
+      },
+      {
+        "rank": 3,
+        "upper": "7276801/40000",
+        "matrix_dimension": 3,
+        "gershgorin_min_margin": 1.0657215678837345e-05,
+        "bound_on_each_projected_entry_error": "1156540491/250000000000000000000000000000000000",
+        "floating_reference_eigenvalue": 181.9200143424922,
+        "certificate": "B*Gram-V*H*V is strictly diagonally dominant with exact rational componentwise offdiagonal 1-norm; interval uncertainty budget <=r*4*d^2*max(original interval width). Implies positive definite for ALL exact Wick block matrices."
+      }
+    ],
+    "15_l": [
+      {
+        "rank": 1,
+        "upper": "71731493/500000",
+        "matrix_dimension": 3,
+        "gershgorin_min_margin": 1.0522272634336966e-05,
+        "bound_on_each_projected_entry_error": "1156540491/250000000000000000000000000000000000",
+        "floating_reference_eigenvalue": 143.46297547772735,
+        "certificate": "B*Gram-V*H*V is strictly diagonally dominant with exact rational componentwise offdiagonal 1-norm; interval uncertainty budget <=r*4*d^2*max(original interval width). Implies positive definite for ALL exact Wick block matrices."
+      },
+      {
+        "rank": 2,
+        "upper": "80668493/500000",
+        "matrix_dimension": 3,
+        "gershgorin_min_margin": 1.0992908961234423e-05,
+        "bound_on_each_projected_entry_error": "1156540491/250000000000000000000000000000000000",
+        "floating_reference_eigenvalue": 161.33697500699984,
+        "certificate": "B*Gram-V*H*V is strictly diagonally dominant with exact rational componentwise offdiagonal 1-norm; interval uncertainty budget <=r*4*d^2*max(original interval width). Implies positive definite for ALL exact Wick block matrices."
+      },
+      {
+        "rank": 3,
+        "upper": "7276801/40000",
+        "matrix_dimension": 3,
+        "gershgorin_min_margin": 1.0657215678837345e-05,
+        "bound_on_each_projected_entry_error": "1156540491/250000000000000000000000000000000000",
+        "floating_reference_eigenvalue": 181.9200143424922,
+        "certificate": "B*Gram-V*H*V is strictly diagonally dominant with exact rational componentwise offdiagonal 1-norm; interval uncertainty budget <=r*4*d^2*max(original interval width). Implies positive definite for ALL exact Wick block matrices."
+      }
+    ]
+  },
+  "fullH_minmax_ladder": [
+    {
+      "fullH_ordered_eigenvalue_index": 1,
+      "certified_upper": "127595507/1000000",
+      "active_trial_multiplicity": {
+        "trivial": 1
+      }
+    },
+    {
+      "fullH_ordered_eigenvalue_index": 25,
+      "certified_upper": "142434059/1000000",
+      "active_trial_multiplicity": {
+        "24": 1,
+        "15_p": 0,
+        "15_l": 0
+      }
+    },
+    {
+      "fullH_ordered_eigenvalue_index": 40,
+      "certified_upper": "71731493/500000",
+      "active_trial_multiplicity": {
+        "24": 1,
+        "15_p": 0,
+        "15_l": 1
+      }
+    },
+    {
+      "fullH_ordered_eigenvalue_index": 55,
+      "certified_upper": "71731493/500000",
+      "active_trial_multiplicity": {
+        "24": 1,
+        "15_p": 1,
+        "15_l": 1
+      }
+    },
+    {
+      "fullH_ordered_eigenvalue_index": 79,
+      "certified_upper": "14486837/100000",
+      "active_trial_multiplicity": {
+        "24": 2,
+        "15_p": 1,
+        "15_l": 1
+      }
+    },
+    {
+      "fullH_ordered_eigenvalue_index": 94,
+      "certified_upper": "80668493/500000",
+      "active_trial_multiplicity": {
+        "24": 2,
+        "15_p": 1,
+        "15_l": 2
+      }
+    },
+    {
+      "fullH_ordered_eigenvalue_index": 109,
+      "certified_upper": "80668493/500000",
+      "active_trial_multiplicity": {
+        "24": 2,
+        "15_p": 2,
+        "15_l": 2
+      }
+    },
+    {
+      "fullH_ordered_eigenvalue_index": 133,
+      "certified_upper": "80826953/500000",
+      "active_trial_multiplicity": {
+        "24": 3,
+        "15_p": 2,
+        "15_l": 2
+      }
+    },
+    {
+      "fullH_ordered_eigenvalue_index": 157,
+      "certified_upper": "161653971/1000000",
+      "active_trial_multiplicity": {
+        "24": 4,
+        "15_p": 2,
+        "15_l": 2
+      }
+    },
+    {
+      "fullH_ordered_eigenvalue_index": 172,
+      "certified_upper": "7276801/40000",
+      "active_trial_multiplicity": {
+        "24": 4,
+        "15_p": 2,
+        "15_l": 3
+      }
+    },
+    {
+      "fullH_ordered_eigenvalue_index": 187,
+      "certified_upper": "7276801/40000",
+      "active_trial_multiplicity": {
+        "24": 4,
+        "15_p": 3,
+        "15_l": 3
+      }
+    },
+    {
+      "fullH_ordered_eigenvalue_index": 211,
+      "certified_upper": "182149631/1000000",
+      "active_trial_multiplicity": {
+        "24": 5,
+        "15_p": 3,
+        "15_l": 3
+      }
+    },
+    {
+      "fullH_ordered_eigenvalue_index": 235,
+      "certified_upper": "182168373/1000000",
+      "active_trial_multiplicity": {
+        "24": 6,
+        "15_p": 3,
+        "15_l": 3
+      }
+    }
+  ],
+  "fullH_E235_upper": "182168373/1000000",
+  "theorem": "Each rationalized projected Ritz subspace V of size r has a certified exact positive-definite B*V*V-V*H*V by rational strict diagonal dominance and explicit original Wick enclosure error. PSp covariance supplies 24 or 15 isotypic orthonormal copies. Min-max gives real full infinite-H eigenvalue-count UPPER bounds up to E235. All certificates are from above and do not decide true ground symmetry, lower energies or first distinct physical gap.",
+  "limitation": "Orthogonality of 24 vs 15 vs trivial follows from PSp representation; point/line 15 cross Gram and Hamiltonian blocks vanish by 0 singular-value line-point incidence association scheme, already proved in earlier He24 pass."
+}
