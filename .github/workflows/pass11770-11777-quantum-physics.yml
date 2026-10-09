@@ -1,0 +1,45 @@
+name: Pass11770-11777 vacuum cone constraints fermions modular physics
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - analysis/w33_pass11769_quantized_current_vacuum.py
+      - analysis/w33_pass11770_11774_11776_vacuum_constraints_modular.py
+      - analysis/w33_pass11771_11773_11777_cones_fermions_propagation.py
+      - analysis/w33_pass11775_symmetric_non_gaussian_vacuum.py
+      - analysis/PASS11770_11777_VACUUM_CONE_CONSTRAINTS_FERMIONS_MODULAR.md
+      - tests/test_w33_pass11770_11777_quantum_physics.py
+      - tests/test_w33_pass11769_quantized_current_vacuum.py
+      - .github/workflows/pass11770-11777-quantum-physics.yml
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest
+      - name: Frozen current quantum physics regressions
+        run: >-
+          python -m pytest --noconftest --ignore-glob='tests/test_*.py' -q
+          tests/test_w33_pass11770_11777_quantum_physics.py
+          tests/test_w33_pass11769_quantized_current_vacuum.py
+          tests/test_w33_20261008_current_time_reversal_firewall.py
+          tests/test_w33_20261008_dressed_current_antiunitary.py
+      - name: Replay positive floor constraints modular and principal geometry
+        run: python analysis/w33_pass11770_11774_11776_vacuum_constraints_modular.py
+      - name: Replay common cone Clifford curvature and bounded regulator
+        run: python analysis/w33_pass11771_11773_11777_cones_fermions_propagation.py
+      - name: Replay symmetric non-Gaussian trial and antiunitary fixed ray
+        run: python analysis/w33_pass11775_symmetric_non_gaussian_vacuum.py
+      - name: Check regenerated current quantum physics
+        run: >-
+          python -m pytest --noconftest --ignore-glob='tests/test_*.py' -q
+          tests/test_w33_pass11770_11777_quantum_physics.py
+          tests/test_w33_pass11769_quantized_current_vacuum.py
+          tests/test_w33_20261008_current_time_reversal_firewall.py
+          tests/test_w33_20261008_dressed_current_antiunitary.py

@@ -1,0 +1,174 @@
+{
+  "schema": "w33.pass11771_11773_11777.v1",
+  "source_sha256": "056c81e118a588cc79250260fc672aa22b4105877bf598a224fb34b3580dfcf7",
+  "pass11771": {
+    "status": "PASS",
+    "covariance_moments": {
+      "vx": 0.8499706008617945,
+      "vy": 0.8499706008617942,
+      "cross": -0.032692285946645326
+    },
+    "alpha": 3.234995418210114,
+    "frequency_squared_48": 32.34995418210114,
+    "frequency_squared_30": 51.75992669136183,
+    "exact_frequency_ratio": "sqrt(16/10)",
+    "hessian": "Q=2(vy+b)(4P-A); Pmom=2(vx+b)(4P+A); R=4(c+b)*Bsum^T; b=1/20.",
+    "interpretation": "Fixed-covariance Gaussian displacement variational dynamics; not the exact many-body excitation spectrum.",
+    "naive_gradient": "Adding kappa*lattice_Laplacian*I to Q gives squared speed proportional to the kinetic eigenvalues2(vx+b)*(4+lambda), lambda=+sqrt6,-sqrt6,0. It generally produces different cones.",
+    "matched_gradient": "Add kappa*lattice_Laplacian*Pmom^-1 to Q. The exact phase-space flow square then shifts by -kappa*lattice_Laplacian*I in every internal sector.",
+    "inverse_exact": "Pmom^-1=(P/4-A/10+A^2/40)/(2(vx+b)); only distance<=2 internal adjacency is needed.",
+    "matched_checks": [
+      {
+        "lattice_laplacian": 0.0,
+        "error": 1.2789769243681803e-13
+      },
+      {
+        "lattice_laplacian": 0.2,
+        "error": 1.0658141036401503e-13
+      },
+      {
+        "lattice_laplacian": 1.3,
+        "error": 1.3500311979441904e-13
+      },
+      {
+        "lattice_laplacian": 4.0,
+        "error": 1.6342482922482304e-13
+      }
+    ],
+    "continuum": "On a supplied cubic3D lattice with spacing ell, choose kappa=c0^2/ell^2; omega_j(k)^2=omega_j(0)^2+(4c0^2/ell^2)*sum_i sin(k_i*ell/2)^2. At fixed k, ell->0 gives omega_j(0)^2+c0^2*|k|^2.",
+    "boundary": "Spatial dimension, c0, the lattice, spring law and covariance restriction are supplied. Common Lorentz-like quadratic dispersion is not a derivation of3+1 spacetime, interacting Lorentz symmetry, GR or particle masses."
+  },
+  "pass11773": {
+    "status": "PASS",
+    "adjacent_curvature_pairs": 480,
+    "proposed_supercharge": "Dslash=sum_e gamma_e tensor J_e; {gamma_e,gamma_f}=2delta_ef.",
+    "square_identity": "Dslash^2=I tensor H+sum_(e<f) gamma_e gamma_f tensor [J_e,J_f].",
+    "spinor_complex_dimension": "2^80",
+    "chirality": "Gamma_star anticommutes with all160 gamma_e and hence with Dslash.",
+    "locality": "Only480 pairs of adjacent incidence edges contribute curvature; all disjoint-pair commutators vanish.",
+    "square_check_error": 0.0,
+    "supersymmetry_boundary": "The spin-curvature term can cancel positive bosonic energy. The11770 floor for H does not automatically bound Dslash^2. No Fredholm index or normalizable supersymmetric vacuum is proved.",
+    "lattice_control": {
+      "operator": "h(k)=sum_i sigma_i sin(k_i)",
+      "zeros": [
+        {
+          "corner_pi_units": [
+            0,
+            0,
+            0
+          ],
+          "chirality": 1,
+          "wilson_mass": 0
+        },
+        {
+          "corner_pi_units": [
+            0,
+            0,
+            1
+          ],
+          "chirality": -1,
+          "wilson_mass": 2
+        },
+        {
+          "corner_pi_units": [
+            0,
+            1,
+            0
+          ],
+          "chirality": -1,
+          "wilson_mass": 2
+        },
+        {
+          "corner_pi_units": [
+            0,
+            1,
+            1
+          ],
+          "chirality": 1,
+          "wilson_mass": 4
+        },
+        {
+          "corner_pi_units": [
+            1,
+            0,
+            0
+          ],
+          "chirality": -1,
+          "wilson_mass": 2
+        },
+        {
+          "corner_pi_units": [
+            1,
+            0,
+            1
+          ],
+          "chirality": 1,
+          "wilson_mass": 4
+        },
+        {
+          "corner_pi_units": [
+            1,
+            1,
+            0
+          ],
+          "chirality": 1,
+          "wilson_mass": 4
+        },
+        {
+          "corner_pi_units": [
+            1,
+            1,
+            1
+          ],
+          "chirality": -1,
+          "wilson_mass": 6
+        }
+      ],
+      "net_chirality": 0,
+      "prior": "BT4057_BT4064 already supplies the4D Wilson/16-corner control; BT4105_BT4112 and later packets supply overlap operators. This3D eight-corner replay is a control, not a new no-go theorem."
+    },
+    "interaction_boundary": "This supplies a CAR/Clifford sector and explicit boson-spin interactions. It does not identify the160 Clifford labels with SM fermions, establish Weyl chirality in spacetime or construct the E6 Yukawa map.",
+    "literature": "https://maggiexheuw.github.io/pdf/nielsen19812.pdf"
+  },
+  "pass11777": {
+    "status": "PASS",
+    "regularized_hamiltonian": "H_tau=(2/tau^2)*sum_e(I-cos(tau*J_e)); each edge term has norm<=4/tau^2.",
+    "form_control": "0<=<H-H_tau>_psi<=tau^2/12*sum_e||J_e^2 psi||^2 on Schwartz space. This supplies controlled form convergence for each such vector, not automatically spectral-gap convergence.",
+    "gaussian_fourth_current_moment_sum": 922.4407018528934,
+    "trial_records": [
+      {
+        "tau": 0.01,
+        "trial_energy": 128.8797049134871,
+        "error": 0.007686502040030518,
+        "fourth_moment_error_bound": 0.007687005848774113,
+        "term_norm_bound": 40000.0
+      },
+      {
+        "tau": 0.05,
+        "trial_energy": 128.69553090074245,
+        "error": 0.19186051478467903,
+        "fourth_moment_error_bound": 0.19217514621935283,
+        "term_norm_bound": 1599.9999999999998
+      },
+      {
+        "tau": 0.1,
+        "trial_energy": 128.12369931664233,
+        "error": 0.7636920988848033,
+        "fourth_moment_error_bound": 0.7687005848774113,
+        "term_norm_bound": 399.99999999999994
+      },
+      {
+        "tau": 0.2,
+        "trial_energy": 125.89112708457681,
+        "error": 2.996264330950325,
+        "fourth_moment_error_bound": 3.0748023395096453,
+        "term_norm_bound": 99.99999999999999
+      }
+    ],
+    "locality": "Bounded functions of disjoint currents commute, so fixed-tau interactions form a bounded local current net.",
+    "finite_graph_bound": "For A supported on edge e, B on f, the formal support theorem and bounded H_tau give ||[alpha_t(A),B]|| <=2||A||||B|| sum_(k>=max(0,d(e,f)-1)) (2||H_tau||*abs(t))^k/k!, with ||H_tau||<=640/tau^2.",
+    "LR_scope": "Bounded commuting local algebras admit the usual Lieb-Robinson commutator iteration; a conservative weighted-interaction estimate at degree4 has velocity parameter<=64*exp(mu)/(mu*tau^2). This diverges as tau->0. No regulator-uniform causal speed for H is established.",
+    "boundary": "A bounded regularization is a changed energy law. Its positive floor cannot be inferred from H_tau<=H. Neither finite Fock cutoffs nor bounded velocities at fixed tau prove a causal continuum for the unregularized model.",
+    "literature": "https://arxiv.org/abs/math-ph/0506030"
+  }
+}
