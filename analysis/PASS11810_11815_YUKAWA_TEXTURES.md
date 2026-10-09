@@ -89,6 +89,20 @@ It also checks named couplings with orbifolder's own gauge and space-group filte
 | 11807 | 9!/(3!)³ = 1680 ordered partitions of the nine levels |
 | 11714 | the SU(9) anomaly A(Λ³C⁹) = 9, and 3 · 9 = 27 = 3³ |
 
+
+## Relation to Holotrade 82f8d66 / 2fa6596 / b81ef8c, and a correction
+
+**Down and lepton zeros (prior art).** Holotrade 82f8d66 found the down-quark and charged-lepton Yukawas absent in exactly the 55 doublet–triplet solvers. Holotrade 2fa6596 corrected the reason: those models have a single doublet charge class, i.e. no Higgs-type doublet. That is prior art. Pass 11811 adds:
+* an all-order statement (MILP over every insertion degree);
+* the hidden-composite channel, which first appears at degree 15–24.
+
+**Correction of the up texture.** Holotrade 82f8d66 reported the flagship's order-three q u^c H_u couplings at plane entries (3,3), (1,1), (1,2), (2,1), (2,2): a "2+1 block", read as qualitatively CKM-like.
+* The entries (1,1), (2,2) and (3,3) pair Q and u^c from the **same** untwisted plane.
+* The untwisted cubic superpotential is g ε_ijk f_abc Uⁱ Uʲ Uᵏ, with one field per plane, so the exact untwisted H-momentum rule forbids them.
+* Orbifolder's `AddCoupling` admits them because it does not apply the R rule (calibration, Pass 11813).
+
+The cubic up texture is therefore **only** the ε pair (1,2), (2,1): two degenerate tree-level masses, top = charm. The block-diagonal CKM reading of 82f8d66 does not survive, and its "heavy top from a cubic" becomes "a degenerate heavy top–charm pair from a cubic".
+
 ## Scope
 
 **Necessary rules only.**
