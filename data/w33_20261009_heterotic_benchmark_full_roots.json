@@ -1,0 +1,145 @@
+{
+  "status": "PASS",
+  "benchmark_root_counts": {
+    "model1": [
+      8,
+      14
+    ],
+    "model2": [
+      8,
+      26
+    ]
+  },
+  "candidate_models": 15,
+  "candidate_model_results": {
+    "Z6II_34__SM_20260917_1350": {
+      "unbroken_e8_root_counts": [
+        8,
+        42
+      ],
+      "raw_sha256": "f31414c95b8d6316ee3c38df91b2376438a39d7279433348f65c8e6907ffaf96",
+      "nonzero_wilson_rows": 3
+    },
+    "Z6II_34__SM_20260917_1558": {
+      "unbroken_e8_root_counts": [
+        8,
+        14
+      ],
+      "raw_sha256": "a395b6806c2244470df1833553337e58fed6e20a93568c6f8b1212cb6868127e",
+      "nonzero_wilson_rows": 3
+    },
+    "Z6II_34__SM_20260917_1585": {
+      "unbroken_e8_root_counts": [
+        8,
+        30
+      ],
+      "raw_sha256": "8c0aaf4be108e00843b77ff78b7b830d6903b9d36a0ffc0f0457acf6df90f739",
+      "nonzero_wilson_rows": 3
+    },
+    "Z6II_34__SM_20260917_1702": {
+      "unbroken_e8_root_counts": [
+        8,
+        12
+      ],
+      "raw_sha256": "1bfff1fa7fe7d8ff60ab328520918a081e78374e0641af9929e69fc33d89eb21",
+      "nonzero_wilson_rows": 3
+    },
+    "Z6II_34__SM_20260917_2056": {
+      "unbroken_e8_root_counts": [
+        8,
+        42
+      ],
+      "raw_sha256": "e81d07303fc020353fa3071b28f164bc6bcad66b004eb95d7c06a54a2c42fca6",
+      "nonzero_wilson_rows": 3
+    },
+    "Z6II_34__SM_20260917_2068": {
+      "unbroken_e8_root_counts": [
+        8,
+        14
+      ],
+      "raw_sha256": "19503d3c195e20dcd36225289689d48c278a4b5782a3d99adbcd17f584082645",
+      "nonzero_wilson_rows": 3
+    },
+    "Z6II_34__SM_20260917_2200": {
+      "unbroken_e8_root_counts": [
+        8,
+        44
+      ],
+      "raw_sha256": "37a7283fc810027f40fd7317389f13b2cc46e5d67556bfa731d640c5c217306e",
+      "nonzero_wilson_rows": 3
+    },
+    "Z6II_34__SM_20260917_2229": {
+      "unbroken_e8_root_counts": [
+        8,
+        84
+      ],
+      "raw_sha256": "d1979901826425d87222c34179b60ec219c7261b8e2044073388f657f245eb78",
+      "nonzero_wilson_rows": 3
+    },
+    "Z6II_34__SM_20260917_2342": {
+      "unbroken_e8_root_counts": [
+        8,
+        10
+      ],
+      "raw_sha256": "773e02c6ab257e2837ba5d7ed8e7439cffedb87dae7b836e4d763c4463aa2e16",
+      "nonzero_wilson_rows": 3
+    },
+    "Z6II_34__SM_20260917_2698": {
+      "unbroken_e8_root_counts": [
+        8,
+        12
+      ],
+      "raw_sha256": "c5b3bd6db58b75ffedb0f1fe33f64ca145317a13db1d3332b2718dd5dcd6940e",
+      "nonzero_wilson_rows": 3
+    },
+    "Z6II_34__SM_20260917_2722": {
+      "unbroken_e8_root_counts": [
+        8,
+        10
+      ],
+      "raw_sha256": "02116c8bf2af8415279a2d3fcda07bfb5e7c93d0883c0d2c4b395214305e81a8",
+      "nonzero_wilson_rows": 3
+    },
+    "Z6II_34__SM_20260917_292": {
+      "unbroken_e8_root_counts": [
+        8,
+        14
+      ],
+      "raw_sha256": "21d27410d36b4f03f16b13750beff31628489834e2eaf693627560fe9b590d54",
+      "nonzero_wilson_rows": 3
+    },
+    "Z6II_34__SM_20260917_616": {
+      "unbroken_e8_root_counts": [
+        8,
+        20
+      ],
+      "raw_sha256": "f27413573af5fcee7c24caced1b0fefdb4f7072e898d1b62caaf22fe9a286a89",
+      "nonzero_wilson_rows": 4
+    },
+    "Z6II_34__SM_20260917_617": {
+      "unbroken_e8_root_counts": [
+        8,
+        22
+      ],
+      "raw_sha256": "c4d4ec2e509600ae37928fab7450b64ad711b1490e8c010aef9e9149d9dd1fec",
+      "nonzero_wilson_rows": 3
+    },
+    "Z6II_34__SM_20260917_938": {
+      "unbroken_e8_root_counts": [
+        8,
+        30
+      ],
+      "raw_sha256": "c7b8d0f12ee4b77efd69cf05a155fa1b91cda86943b39cf34ba57773d6bd57f1",
+      "nonzero_wilson_rows": 3
+    }
+  },
+  "necessary_root_count_matches": {
+    "model1": [
+      "Z6II_34__SM_20260917_1558",
+      "Z6II_34__SM_20260917_2068",
+      "Z6II_34__SM_20260917_292"
+    ],
+    "model2": []
+  },
+  "caveat": "Strict necessary full gauge-algebra root-count sieve under same E8xE8 factor embedding; not a Wilson equivalence proof or comprehensive orbifold equivalence."
+}

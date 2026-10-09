@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "joint_matches": {
+    "model1": [],
+    "model2": []
+  },
+  "shift_profile_matches": [
+    "Z6II_34__SM_20260917_1350",
+    "Z6II_34__SM_20260917_1558",
+    "Z6II_34__SM_20260917_1585",
+    "Z6II_34__SM_20260917_1702",
+    "Z6II_34__SM_20260917_2056",
+    "Z6II_34__SM_20260917_2068",
+    "Z6II_34__SM_20260917_2200",
+    "Z6II_34__SM_20260917_2229",
+    "Z6II_34__SM_20260917_2342",
+    "Z6II_34__SM_20260917_2698",
+    "Z6II_34__SM_20260917_2722",
+    "Z6II_34__SM_20260917_292",
+    "Z6II_34__SM_20260917_616",
+    "Z6II_34__SM_20260917_617",
+    "Z6II_34__SM_20260917_938"
+  ],
+  "individual": {
+    "Z6II_34__SM_20260917_1350": {
+      "shift_phase_histogram_matches": true,
+      "joint_phase_histogram_matches": []
+    },
+    "Z6II_34__SM_20260917_1558": {
+      "shift_phase_histogram_matches": true,
+      "joint_phase_histogram_matches": []
+    },
+    "Z6II_34__SM_20260917_1585": {
+      "shift_phase_histogram_matches": true,
+      "joint_phase_histogram_matches": []
+    },
+    "Z6II_34__SM_20260917_1702": {
+      "shift_phase_histogram_matches": true,
+      "joint_phase_histogram_matches": []
+    },
+    "Z6II_34__SM_20260917_2056": {
+      "shift_phase_histogram_matches": true,
+      "joint_phase_histogram_matches": []
+    },
+    "Z6II_34__SM_20260917_2068": {
+      "shift_phase_histogram_matches": true,
+      "joint_phase_histogram_matches": []
+    },
+    "Z6II_34__SM_20260917_2200": {
+      "shift_phase_histogram_matches": true,
+      "joint_phase_histogram_matches": []
+    },
+    "Z6II_34__SM_20260917_2229": {
+      "shift_phase_histogram_matches": true,
+      "joint_phase_histogram_matches": []
+    },
+    "Z6II_34__SM_20260917_2342": {
+      "shift_phase_histogram_matches": true,
+      "joint_phase_histogram_matches": []
+    },
+    "Z6II_34__SM_20260917_2698": {
+      "shift_phase_histogram_matches": true,
+      "joint_phase_histogram_matches": []
+    },
+    "Z6II_34__SM_20260917_2722": {
+      "shift_phase_histogram_matches": true,
+      "joint_phase_histogram_matches": []
+    },
+    "Z6II_34__SM_20260917_292": {
+      "shift_phase_histogram_matches": true,
+      "joint_phase_histogram_matches": []
+    },
+    "Z6II_34__SM_20260917_616": {
+      "shift_phase_histogram_matches": true,
+      "joint_phase_histogram_matches": []
+    },
+    "Z6II_34__SM_20260917_617": {
+      "shift_phase_histogram_matches": true,
+      "joint_phase_histogram_matches": []
+    },
+    "Z6II_34__SM_20260917_938": {
+      "shift_phase_histogram_matches": true,
+      "joint_phase_histogram_matches": []
+    }
+  },
+  "scope": "Necessary equivalence for fixed ordered (V,W2,W3) phase characters on all 240 roots of each E8; NO exhaustive orbifold generator/gauge automorphism classification."
+}

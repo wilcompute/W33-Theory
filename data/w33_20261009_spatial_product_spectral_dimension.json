@@ -1,0 +1,252 @@
+{
+  "status": "PASS",
+  "schema": "w33.20261009.spatial_product_heat.v1",
+  "graph": "W33 Levi 80-vertex connected 4-regular graph x Z^d",
+  "finite_internal_laplacian_eigenvalues": "0^1,(4-sqrt6)^24,4^30,(4+sqrt6)^24,8^1",
+  "formula": "P(t)=(1+24e^(-(4-sqrt6)t)+30e^(-4t)+24e^(-(4+sqrt6)t)+e^(-8t))/80 * [e^(-2t) I0(2t)]^d",
+  "asymptotic": "P(t) ~ 1/[80*(4*pi*t)^(d/2)]; d_s -> d as t -> infinity; dimension d is a supplied product parameter.",
+  "speed": "Long-wave dispersion of weighted Z^d lattice is sum c_i^2 k_i^2, with c_i supplied, not selected by native W33.",
+  "samples": [
+    {
+      "d": 0,
+      "t": 0.1,
+      "return_probability": 0.6838048673559689,
+      "native_spectral_dimension": 0.7206588945794433,
+      "supplied_lattice_spectral_dimension": 0.0,
+      "total_spectral_dimension": 0.7206588945794433
+    },
+    {
+      "d": 0,
+      "t": 1,
+      "return_probability": 0.0834888666380372,
+      "native_spectral_dimension": 3.096079117636466,
+      "supplied_lattice_spectral_dimension": 0.0,
+      "total_spectral_dimension": 3.096079117636466
+    },
+    {
+      "d": 0,
+      "t": 5,
+      "return_probability": 0.012628894271075372,
+      "native_spectral_dimension": 0.15825121219172344,
+      "supplied_lattice_spectral_dimension": 0.0,
+      "total_spectral_dimension": 0.15825121219172344
+    },
+    {
+      "d": 0,
+      "t": 20,
+      "return_probability": 0.012500000000010222,
+      "native_spectral_dimension": 5.0720660423633307e-11,
+      "supplied_lattice_spectral_dimension": 0.0,
+      "total_spectral_dimension": 5.0720660423633307e-11
+    },
+    {
+      "d": 0,
+      "t": 100,
+      "return_probability": 0.0125,
+      "native_spectral_dimension": 3.419093651580865e-64,
+      "supplied_lattice_spectral_dimension": 0.0,
+      "total_spectral_dimension": 3.419093651580865e-64
+    },
+    {
+      "d": 0,
+      "t": 500,
+      "return_probability": 0.0125,
+      "native_spectral_dimension": 0.0,
+      "supplied_lattice_spectral_dimension": 0.0,
+      "total_spectral_dimension": 0.0
+    },
+    {
+      "d": 1,
+      "t": 0.1,
+      "return_probability": 0.5654646066118494,
+      "native_spectral_dimension": 0.7206588945794433,
+      "supplied_lattice_spectral_dimension": 0.36019867577043496,
+      "total_spectral_dimension": 1.0808575703498784
+    },
+    {
+      "d": 1,
+      "t": 1,
+      "return_probability": 0.025757010198408002,
+      "native_spectral_dimension": 3.096079117636466,
+      "supplied_lattice_spectral_dimension": 1.2089013681439673,
+      "total_spectral_dimension": 4.304980485780433
+    },
+    {
+      "d": 1,
+      "t": 5,
+      "return_probability": 0.00161439369935567,
+      "native_spectral_dimension": 0.15825121219172344,
+      "supplied_lattice_spectral_dimension": 1.0280034809030814,
+      "total_spectral_dimension": 1.1862546930948048
+    },
+    {
+      "d": 1,
+      "t": 20,
+      "return_probability": 0.0007909784984410883,
+      "native_spectral_dimension": 5.0720660423633307e-11,
+      "supplied_lattice_spectral_dimension": 1.0064126930919404,
+      "total_spectral_dimension": 1.0064126931426611
+    },
+    {
+      "d": 1,
+      "t": 100,
+      "return_probability": 0.00035283949936389895,
+      "native_spectral_dimension": 3.419093651580865e-64,
+      "supplied_lattice_spectral_dimension": 1.0012562993425789,
+      "total_spectral_dimension": 1.0012562993425789
+    },
+    {
+      "d": 1,
+      "t": 500,
+      "return_probability": 0.00015771550569864074,
+      "native_spectral_dimension": 0.0,
+      "supplied_lattice_spectral_dimension": 1.0002502503914101,
+      "total_spectral_dimension": 1.0002502503914101
+    },
+    {
+      "d": 2,
+      "t": 0.1,
+      "return_probability": 0.4676044827920784,
+      "native_spectral_dimension": 0.7206588945794433,
+      "supplied_lattice_spectral_dimension": 0.7203973515408699,
+      "total_spectral_dimension": 1.4410562461203131
+    },
+    {
+      "d": 2,
+      "t": 1,
+      "return_probability": 0.00794625201030865,
+      "native_spectral_dimension": 3.096079117636466,
+      "supplied_lattice_spectral_dimension": 2.4178027362879346,
+      "total_spectral_dimension": 5.513881853924401
+    },
+    {
+      "d": 2,
+      "t": 5,
+      "return_probability": 0.00020637333408424812,
+      "native_spectral_dimension": 0.15825121219172344,
+      "supplied_lattice_spectral_dimension": 2.0560069618061627,
+      "total_spectral_dimension": 2.2142581739978864
+    },
+    {
+      "d": 2,
+      "t": 20,
+      "return_probability": 5.0051758799648575e-05,
+      "native_spectral_dimension": 5.0720660423633307e-11,
+      "supplied_lattice_spectral_dimension": 2.0128253861838807,
+      "total_spectral_dimension": 2.0128253862346015
+    },
+    {
+      "d": 2,
+      "t": 100,
+      "return_probability": 9.959656984909345e-06,
+      "native_spectral_dimension": 3.419093651580865e-64,
+      "supplied_lattice_spectral_dimension": 2.0025125986851577,
+      "total_spectral_dimension": 2.0025125986851577
+    },
+    {
+      "d": 2,
+      "t": 500,
+      "return_probability": 1.989934459022238e-06,
+      "native_spectral_dimension": 0.0,
+      "supplied_lattice_spectral_dimension": 2.0005005007828203,
+      "total_spectral_dimension": 2.0005005007828203
+    },
+    {
+      "d": 3,
+      "t": 0.1,
+      "return_probability": 0.38668017373780084,
+      "native_spectral_dimension": 0.7206588945794433,
+      "supplied_lattice_spectral_dimension": 1.0805960273113049,
+      "total_spectral_dimension": 1.8012549218907483
+    },
+    {
+      "d": 3,
+      "t": 1,
+      "return_probability": 0.0024514848782890577,
+      "native_spectral_dimension": 3.096079117636466,
+      "supplied_lattice_spectral_dimension": 3.626704104431902,
+      "total_spectral_dimension": 6.722783222068368
+    },
+    {
+      "d": 3,
+      "t": 5,
+      "return_probability": 2.638139199753258e-05,
+      "native_spectral_dimension": 0.15825121219172344,
+      "supplied_lattice_spectral_dimension": 3.084010442709244,
+      "total_spectral_dimension": 3.2422616549009673
+    },
+    {
+      "d": 3,
+      "t": 20,
+      "return_probability": 3.167189201571935e-06,
+      "native_spectral_dimension": 5.0720660423633307e-11,
+      "supplied_lattice_spectral_dimension": 3.019238079275821,
+      "total_spectral_dimension": 3.019238079326542
+    },
+    {
+      "d": 3,
+      "t": 100,
+      "return_probability": 2.811328307513258e-07,
+      "native_spectral_dimension": 3.419093651580865e-64,
+      "supplied_lattice_spectral_dimension": 3.0037688980277366,
+      "total_spectral_dimension": 3.0037688980277366
+    },
+    {
+      "d": 3,
+      "t": 500,
+      "return_probability": 2.5107481560947462e-08,
+      "native_spectral_dimension": 0.0,
+      "supplied_lattice_spectral_dimension": 3.0007507511742304,
+      "total_spectral_dimension": 3.0007507511742304
+    },
+    {
+      "d": 4,
+      "t": 0.1,
+      "return_probability": 0.3197607428164478,
+      "native_spectral_dimension": 0.7206588945794433,
+      "supplied_lattice_spectral_dimension": 1.4407947030817398,
+      "total_spectral_dimension": 2.161453597661183
+    },
+    {
+      "d": 4,
+      "t": 1,
+      "return_probability": 0.0007563034875666474,
+      "native_spectral_dimension": 3.096079117636466,
+      "supplied_lattice_spectral_dimension": 4.835605472575869,
+      "total_spectral_dimension": 7.931684590212335
+    },
+    {
+      "d": 4,
+      "t": 5,
+      "return_probability": 3.3724213780611595e-06,
+      "native_spectral_dimension": 0.15825121219172344,
+      "supplied_lattice_spectral_dimension": 4.112013923612325,
+      "total_spectral_dimension": 4.270265135804049
+    },
+    {
+      "d": 4,
+      "t": 20,
+      "return_probability": 2.0041428471489198e-07,
+      "native_spectral_dimension": 5.0720660423633307e-11,
+      "supplied_lattice_spectral_dimension": 4.0256507723677615,
+      "total_spectral_dimension": 4.025650772418482
+    },
+    {
+      "d": 4,
+      "t": 100,
+      "return_probability": 7.935581380564281e-09,
+      "native_spectral_dimension": 3.419093651580865e-64,
+      "supplied_lattice_spectral_dimension": 4.0050251973703155,
+      "total_spectral_dimension": 4.0050251973703155
+    },
+    {
+      "d": 4,
+      "t": 500,
+      "return_probability": 3.167871320963301e-10,
+      "native_spectral_dimension": 0.0,
+      "supplied_lattice_spectral_dimension": 4.0010010015656405,
+      "total_spectral_dimension": 4.0010010015656405
+    }
+  ],
+  "boundary": "Does not derive 3+1 dimensions, physical c, continuum dynamics or Einstein equations."
+}

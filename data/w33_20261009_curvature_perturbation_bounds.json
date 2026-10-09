@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "relative_form_bound": 1,
+  "compact_resolvent_for": "-1 < eps < 1",
+  "ordered_eigenvalue_bounds": "(1-|eps|)*E_j(0) <= E_j(eps) <= (1+|eps|)*E_j(0)",
+  "reflection": "T H(eps) T^-1 = H(-eps), spectra equal for +/-eps",
+  "no_kramers": "T^2=+1 does not force ground degeneracy",
+  "two_level_control_spectrum": [
+    "-sqrt(2)*sqrt(8*eps**2 + 1)/2 + 17/8",
+    "sqrt(2)*sqrt(8*eps**2 + 1)/2 + 17/8"
+  ],
+  "real_ground_rule": "For a one-dimensional ground eigenspace, curvature expectation at eps=0 vanishes.",
+  "limitation": "Does not compute W33 ground multiplicity, numerical gap, or physically identify T with CP."
+}

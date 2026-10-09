@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "input": "Independent P_X and X minimum-uncertainty Gaussians; Z=P_Y+1/sqrt39.",
+  "method": "Exact rational eighth moments and plug-in excess-kurtosis influence-function asymptotics.",
+  "cases": {
+    "vacuum_ideal": {
+      "excess_kurtosis": 0.3883520461881722,
+      "null_if_variance": 24.0,
+      "alternative_if_variance": 514.3503040250496,
+      "optimistic_gaussian_null_N5": 3978.323130974768,
+      "alternative_asymptotic_N5": 85260.4879969483,
+      "var_measured": 0.5618738046875,
+      "kappa4_measured": 0.12260358463526368,
+      "relative_error_variance_ratio": 21.431262667710403,
+      "scope": "Alternative asymptotic delta method, not validated 5-sigma power under time-correlated drift."
+    },
+    "squeezed_eta_1": {
+      "excess_kurtosis": 0.03027947755624149,
+      "null_if_variance": 24.0,
+      "alternative_if_variance": 30.851265297668032,
+      "optimistic_gaussian_null_N5": 654416.8834647228,
+      "alternative_asymptotic_N5": 841232.8702934694,
+      "var_measured": 1.04195882421875,
+      "kappa4_measured": 0.03287376842880762,
+      "relative_error_variance_ratio": 1.2854693874028347,
+      "scope": "Alternative asymptotic delta method, not validated 5-sigma power under time-correlated drift."
+    },
+    "squeezed_eta_1/4": {
+      "excess_kurtosis": 0.004969600395482514,
+      "null_if_variance": 24.0,
+      "alternative_if_variance": 24.5820750373616,
+      "optimistic_gaussian_null_N5": 24294519.455802135,
+      "alternative_asymptotic_N5": 24883737.510798723,
+      "var_measured": 0.6429897060546875,
+      "kappa4_measured": 0.002054610526800476,
+      "relative_error_variance_ratio": 1.0242531265567334,
+      "scope": "Alternative asymptotic delta method, not validated 5-sigma power under time-correlated drift."
+    },
+    "squeezed_eta_1/25": {
+      "excess_kurtosis": 0.0001863482130280054,
+      "null_if_variance": 24.0,
+      "alternative_if_variance": 24.01469858027574,
+      "optimistic_gaussian_null_N5": 17278291053.242672,
+      "alternative_asymptotic_N5": 17288872984.41241,
+      "var_measured": 0.53127835296875,
+      "kappa4_measured": 5.259802948609219e-05,
+      "relative_error_variance_ratio": 1.0006124408448225,
+      "scope": "Alternative asymptotic delta method, not validated 5-sigma power under time-correlated drift."
+    }
+  },
+  "warning": "No photonic hardware gate, no Monte Carlo false-positive rate, no finite-N confidence interval."
+}

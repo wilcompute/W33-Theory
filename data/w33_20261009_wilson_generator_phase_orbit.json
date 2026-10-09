@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "matches": {
+    "model1": [
+      "Z6II_34__SM_20260917_1558"
+    ],
+    "model2": []
+  },
+  "models": 15,
+  "redefinitions_per_model": 48,
+  "scope": "Fixed E8 bases plus +/- generator signs and W2+=3V, W3+=2bV; not a complete Z6-II space-group automorphism or gauge equivalence classification."
+}
